@@ -6,18 +6,18 @@ helpviewer_keywords:
 - binary operators [C++]
 - expressions [C++], binary operators
 ms.assetid: 6dea3df4-a4bd-42c3-9807-4a27c120ac9a
-ms.openlocfilehash: d3a966a7922c1888defbebf970ac409872fe18ec
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2dbda1759dcb37a1f2a8cbe87f24adbb979ca085
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154305"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188984"
 ---
 # <a name="expressions-with-binary-operators"></a>Výrazy s binárními operátory
 
 Binární operátory pracují ve výrazu na dvou operandech. Binární operátory jsou:
 
-- [Operátory násobení](../cpp/multiplicative-operators-and-the-modulus-operator.md)
+- [Multiplikativní operátory](../cpp/multiplicative-operators-and-the-modulus-operator.md)
 
    - Násobení (*)
 
@@ -33,9 +33,9 @@ Binární operátory pracují ve výrazu na dvou operandech. Binární operátor
 
 - [Operátory posunutí](../cpp/left-shift-and-right-shift-operators-input-and-output.md)
 
-   - Posunutí doprava (>>)
+   - Posun doprava (> >)
 
-   - Operátor posunu vlevo (<<)
+   - Levý SHIFT (< <)
 
 - [Relační operátory a operátory rovnosti](../cpp/relational-operators-equal-and-equal.md)
 
@@ -43,9 +43,9 @@ Binární operátory pracují ve výrazu na dvou operandech. Binární operátor
 
    - Větší než (>)
 
-   - Menší než nebo rovno (\<=)
+   - Je menší nebo rovno (\<=).
 
-   - Větší než nebo rovno (> =)
+   - Větší nebo rovno (>=)
 
    - Je rovno (==)
 
@@ -57,13 +57,13 @@ Binární operátory pracují ve výrazu na dvou operandech. Binární operátor
 
    - [Bitový exkluzivní operátor OR (^)](../cpp/bitwise-exclusive-or-operator-hat.md)
 
-   - [Bitový inkluzivní OR (&#124;)](../cpp/bitwise-inclusive-or-operator-pipe.md)
+   - [Bitový operátor OR (&#124;)](../cpp/bitwise-inclusive-or-operator-pipe.md)
 
 - Logické operátory
 
    - [Logický operátor AND (& &)](../cpp/logical-and-operator-amp-amp.md)
 
-   - [Logický operátor OR (&#124;&#124;)](../cpp/logical-or-operator-pipe-pipe.md)
+   - [Logický operátor OR&#124;&#124;()](../cpp/logical-or-operator-pipe-pipe.md)
 
 - [Operátory přiřazení](../cpp/assignment-operators.md)
 
@@ -71,7 +71,7 @@ Binární operátory pracují ve výrazu na dvou operandech. Binární operátor
 
    - Přiřazení sčítání (+=)
 
-   - Přiřazení odčítání (-)
+   - Přiřazení odčítání (-=)
 
    - Přiřazení násobení (*=)
 
@@ -79,18 +79,18 @@ Binární operátory pracují ve výrazu na dvou operandech. Binární operátor
 
    - Přiřazení modulus (%=)
 
-   - Operátor posunutí doleva (<\<=)
+   - Přiřazení posunutí doleva (<\<=)
 
-   - Operátor posunutí doprava (>> =)
+   - Přiřazení posunutí doprava (> > =)
 
-   - Přiřazení bitového operátoru AND (& =)
+   - Bitový operátor AND přiřazení (& =)
 
    - Přiřazení bez bitového operátoru OR (^=)
 
-   - Bitový inkluzivní OR přiřazení (&#124;=)
+   - Bitové a přiřazení (&#124;=)
 
 - [Operátor čárka](../cpp/comma-operator.md) (,)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Typy výrazů](../cpp/types-of-expressions.md)

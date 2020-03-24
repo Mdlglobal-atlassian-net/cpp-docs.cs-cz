@@ -6,12 +6,12 @@ helpviewer_keywords:
 - constants, literals
 - literals [C++]
 ms.assetid: 17c09fc3-3ad7-47e2-8b48-ba8ae994edc8
-ms.openlocfilehash: 467300501ffbbf8063e203d4c7395af34a954ed0
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 21685af5fc4f2dcf042698e054430e50531163b7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301363"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80177739"
 ---
 # <a name="numeric-boolean-and-pointer-literals"></a>Číselné, logické a literály ukazatele
 
@@ -103,7 +103,7 @@ I když má **dlouhá dvojitá** a **dvojnásobná** reprezentace stejnou reprez
 void func( double );
 ```
 
-and
+a
 
 ```cpp
 void func( long double );
@@ -137,7 +137,7 @@ if (num < 100)
 
 V předchozím příkladu může být lepší použít pojmenovanou konstantu, která vyjadřuje jasný význam, například "MAXIMUM_ERROR_THRESHOLD". A Pokud koncoví uživatelé uvidí návratovou hodnotu "úspěch", může být lepší použít pojmenovanou řetězcovou konstantu, která může být uložena v jednom umístění v souboru, ze kterého může být lokalizována do jiných jazyků. Použití pojmenovaných konstant pomáhá ostatním uživatelům a pochopit záměr kódu.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Lexikální konvence](../cpp/lexical-conventions.md)<br/>
 [C++Řetězcové literály](../cpp/string-and-character-literals-cpp.md)<br/>

@@ -7,19 +7,19 @@ helpviewer_keywords:
 - CAN0055
 - CXX0055
 ms.assetid: bb2a81f9-35ea-4b02-a49e-6b2c7023aebd
-ms.openlocfilehash: 7584516f55af51107f2765b57986cf6ea4700fc5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 62197741ada96240e628b95b520bf94396bba5f7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62299514"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80184707"
 ---
 # <a name="expression-evaluator-error-cxx0055"></a>Chyba při vyhodnocování výrazu CXX0055
 
-nejednoznačný symbol v kontextovém operátoru
+dvojznačný symbol v kontextovém operátoru
 
-Symbol v kontextovém operátoru (**{}**) uvedené více než jeden symbol v programu.
+Symbol v operátoru kontextu ( **{}** ) odkazuje na více než jeden symbol v programu.
 
-Operátor rozlišení oboru (`::`) pravděpodobně možné vyřešit nejednoznačnost.
+Operátor rozlišení oboru (`::`) může být schopný vyřešit nejednoznačnost.
 
-Tato chyba se shoduje s CAN0055.
+Tato chyba je shodná s CAN0055.

@@ -35,12 +35,12 @@ helpviewer_keywords:
 - long int keyword [C++]
 - unsigned long int [C++]
 ms.assetid: 3691ceca-05fb-4b82-b1ae-5c4618cda91a
-ms.openlocfilehash: 43eb5f34bc587e3ce86532c56d393da3e07c1b03
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 8b4031eccccb432342790fef4da809542e77d669
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301558"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80180261"
 ---
 # <a name="data-type-ranges"></a>Rozsahy datového typu
 
@@ -66,7 +66,7 @@ Pokud název začíná dvěma podtržítky (`__`), datový typ je nestandardní.
 
 Rozsahy, které jsou uvedeny v následující tabulce, jsou zahrnuté (včetně).
 
-|Název typu|Přijaté|Jiné názvy|Rozsah hodnot|
+|Název typu|Bajty|Jiné názvy|Rozsah hodnot|
 |---------------|-----------|-----------------|---------------------|
 |**int**|4|**podpisy**|-2 147 483 648 až 2 147 483 647|
 |**unsigned int**|4|**celé**|0 až 4 294 967 295|
@@ -78,20 +78,20 @@ Rozsahy, které jsou uvedeny v následující tabulce, jsou zahrnuté (včetně)
 |**Nepodepsaný __int32**|4|**unsigned**, **unsigned int**|0 až 4 294 967 295|
 |**__int64**|8|**Long**Long, **Podepsáno dlouhou dobu**|– 9223372036854775808 na 9 223 372 036 854 775 807|
 |**Nepodepsaný __int64**|8|**dlouhý unsigned long**|0 až 18446744073709551615|
-|**bool**|1|žádná|**false** nebo **true**|
-|**char**|1|žádná|-128 až 127 ve výchozím nastavení<br /><br /> 0 až 255 při kompilování pomocí [/j](../build/reference/j-default-char-type-is-unsigned.md)|
-|**signed char**|1|žádná|-128 až 127|
-|**znak bez znaménka**|1|žádná|0 až 255|
+|**bool**|1|Žádná|**false** nebo **true**|
+|**char**|1|Žádná|-128 až 127 ve výchozím nastavení<br /><br /> 0 až 255 při kompilování pomocí [/j](../build/reference/j-default-char-type-is-unsigned.md)|
+|**signed char**|1|Žádná|-128 až 127|
+|**znak bez znaménka**|1|Žádná|0 až 255|
 |**short**|2|**short int**, **signed short int**|-32 768 až 32 767|
 |**krátký unsigned**|2|**krátké celé číslo bez znaménka**|0 až 65 535|
 |**long**|4|**Long int**, **signed long int**|-2 147 483 648 až 2 147 483 647|
 |**unsigned long**|4|**dlouhé celé číslo bez znaménka**|0 až 4 294 967 295|
 |**Long Long**|8|žádný (ale ekvivalentní **__int64**)|– 9223372036854775808 na 9 223 372 036 854 775 807|
 |**dlouhý unsigned long**|8|žádný (ale ekvivalentní k **nepodepsanému __int64**)|0 až 18446744073709551615|
-|**enum**|se liší|žádná| |
-|**float**|4|žádná|3.4 e +/-38 (7 číslic)|
-|**double**|8|žádná|1.7 e +/-308 (15 číslic)|
-|**Long Double**|stejné jako **Double**|žádná|Stejné jako **Double**|
+|**enum**|se liší|Žádná| |
+|**float**|4|Žádná|3.4 e +/-38 (7 číslic)|
+|**double**|8|Žádná|1.7 e +/-308 (15 číslic)|
+|**Long Double**|stejné jako **Double**|Žádná|stejné jako **Double**|
 |**wchar_t**|2|**__wchar_t**|0 až 65 535|
 
 V závislosti na tom, jak se používá, proměnná **__wchar_t** určí buď typ s typem vícebajtového znaku, nebo typ vícebajtového znaku. Použijte předponu `L` před znak nebo řetězcovou konstantou pro určení konstanty typu s velkým znakem.
@@ -106,7 +106,7 @@ Další informace o omezení velikosti jednotlivých typů naleznete v tématu [
 
 Rozsah výčtových typů se liší v závislosti na kontextu jazyka a zadaných příznaků kompilátoru. Další informace naleznete v tématu deklarace a [výčty](../cpp/enumerations-cpp.md) [výčtu jazyka C](../c-language/c-enumeration-declarations.md) .
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Klíčová slova](../cpp/keywords-cpp.md)<br/>
 [Předdefinované typy](../cpp/fundamental-types-cpp.md)

@@ -2,44 +2,44 @@
 title: Tři tečky a variadické šablony
 ms.date: 11/04/2016
 ms.assetid: f20967d9-c967-4fd2-b902-2bb1d5ed87e3
-ms.openlocfilehash: 387cf4478192cb9470804c219eee8046f8e47abe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9c9294089b9f0a144946b7f6b81da2a71ca710bc
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392216"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80189257"
 ---
 # <a name="ellipses-and-variadic-templates"></a>Tři tečky a variadické šablony
 
-Tento článek ukazuje, jak použít tři tečky (`...`) s šablonami variadic jazyka C++. Tři tečky měly celou řadu uplatnění v jazyce C a C++. Patří sem variabilní seznamy proměnných pro funkce. `printf()` Funkce běhové knihovny jazyka C je jedním z nejlépe známých příkladů.
+Tento článek ukazuje, jak používat tři tečky (`...`) C++ s šablonami variadické. Tři tečky mají mnoho použití v C a C++. Mezi ně patří seznamy argumentů proměnných pro funkce. `printf()` funkce z běhové knihovny jazyka C je jedním z nejznámých příkladů.
 
-A *variadické šablony* je šablona třídy nebo funkce, která podporuje libovolný počet argumentů. Tento mechanismus je užitečné zejména pro vývojáře knihovny C++, protože platí pro šablony třídy i šablon funkcí a tím poskytnout širokou škálu zajišťující bezpečnost typů a nejsou v netriviálních funkcí a flexibility.
+*Šablona variadické* je šablona třídy nebo funkce, která podporuje libovolný počet argumentů. Tento mechanismus je zvláště užitečný pro C++ vývojáře knihoven, protože ho můžete použít jak pro šablony třídy, tak pro šablony funkcí a poskytujeme tak široké spektrum netriviálních funkcí a flexibility.
 
 ## <a name="syntax"></a>Syntaxe
 
-Variadické šablony používá dvě možnosti, jak tři tečky. Nalevo od názvu parametru, označuje *balíček parametrů*, a napravo od názvu parametru rozšiřuje sady parametrů na oddělené názvy.
+Tři způsoby používají tři tečky pro variadické šablony. Vlevo od názvu parametru znamená *balíček parametrů*a napravo od názvu parametru rozšiřuje balíčky parametrů na samostatné názvy.
 
-Tady je příklad základní *variadické šablony třídy* syntaxe definice:
+Tady je základní příklad syntaxe definice *třídy variadické šablony* :
 
 ```cpp
 template<typename... Arguments> class classname;
 ```
 
-Sadami parametrů a rozšíření můžete přidat mezery kolem se třemi tečkami, podle dáváte přednost, jak je znázorněno v těchto příkladech:
+Pro balíčky parametrů i rozšíření můžete přidat prázdné znaky kolem tří teček na základě předvolby, jak je znázorněno v těchto příkladech:
 
 ```cpp
 template<typename ...Arguments> class classname;
 ```
 
-Nebo to:
+Nebo:
 
 ```cpp
 template<typename ... Arguments> class classname;
 ```
 
-Všimněte si, že tento článek používá konvenci, která se zobrazí v prvním příkladu (tři tečky je připojen k `typename`).
+Všimněte si, že tento článek používá konvenci, která je zobrazená v prvním příkladu (tři tečky jsou připojené k `typename`).
 
-V předchozích ukázkách *argumenty* je balíčkem parametrů. Třída `classname` může přijímat proměnný počet argumentů, jako v těchto příkladech:
+V předchozích příkladech jsou *argumenty* sadou parametrů. Třída `classname` může přijmout proměnlivý počet argumentů, jako v těchto příkladech:
 
 ```cpp
 template<typename... Arguments> class vtclass;
@@ -50,21 +50,21 @@ vtclass<float, bool> vtinstance3;
 vtclass<long, std::vector<int>, std::string> vtinstance4;
 ```
 
-Pomocí definice tříd variadických šablon můžete také vyžadovat nejméně jeden parametr:
+Pomocí definice třídy šablony variadické můžete také vyžadovat alespoň jeden parametr:
 
 ```cpp
 template <typename First, typename... Rest> class classname;
 ```
 
-Tady je příklad základní *variadické šablony funkce* syntaxi:
+Zde je základní příklad syntaxe *funkce variadické Template* :
 
 ```cpp
 template <typename... Arguments> returntype functionname(Arguments... args);
 ```
 
-*Argumenty* balíček parametrů je pak rozšířen pro potřeby použití, jak je znázorněno v následující části **Princip variadických šablon**.
+Sada parametrů *arguments* se pak rozbalí pro použití, jak je znázorněno v další části **Principy šablon variadické**.
 
-Jiné formy syntaxe variadických funkcí šablon jsou možné – včetně, ale nikoli výhradně, tyto příklady:
+Je možné použít i jiné formy syntaxe variadické šablony funkce – včetně, ale ne omezení na, tyto příklady:
 
 ```cpp
 template <typename... Arguments> returntype functionname(Arguments&... args);
@@ -72,19 +72,19 @@ template <typename... Arguments> returntype functionname(Arguments&&... args);
 template <typename... Arguments> returntype functionname(Arguments*... args);
 ```
 
-Specifikátory jako **const** jsou také povoleny:
+Jsou povolené taky specifikátory, jako je **const** :
 
 ```cpp
 template <typename... Arguments> returntype functionname(const Arguments&... args);
 ```
 
-Jako s definicí tříd variadických šablon, můžete vytvořit funkce, které vyžadují nejméně jeden parametr:
+Stejně jako u definicí třídy šablon variadické můžete vytvořit funkce, které vyžadují aspoň jeden parametr:
 
 ```cpp
 template <typename First, typename... Rest> returntype functionname(const First& first, const Rest&... args);
 ```
 
-Variadické šablony používají `sizeof...()` – operátor (nesouvisející se starším `sizeof()` operátor):
+Šablony variadické používají operátor `sizeof...()` (nesouvisí se starším operátorem `sizeof()`):
 
 ```cpp
 template<typename... Arguments>
@@ -98,13 +98,13 @@ void tfunc(const Arguments&... args)
 }
 ```
 
-## <a name="more-about-ellipsis-placement"></a>Další informace o umístění tlačítko se třemi tečkami
+## <a name="more-about-ellipsis-placement"></a>Další informace o umístění tří teček
 
-Dříve, tento článek popisuje tři tečky umístění, která definuje sadami parametrů a rozšíření jako "nalevo od názvu parametru, označuje sadu parametrů a napravo od názvu parametru rozšiřuje sady parametrů na oddělené názvy". To je technicky hodnotu true, ale může být matoucí, v překladu do kódu. Vezměte v úvahu:
+Dříve Tento článek popisuje umístění se třemi tečkami, které definuje balíčky parametrů a rozšíření jako nalevo od názvu parametru, označuje balíček parametrů a napravo od názvu parametru rozšiřuje balíčky parametrů na samostatné názvy. Jedná se o technicky true, ale může být matoucí v překladu na kód. Rozmyslete si:
 
-- V šabloně parameter-list (`template <parameter-list>`), `typename...` zavádí balíček parametrů šablony.
+- V seznamu Template-Parameter-list (`template <parameter-list>`) `typename...` zavádí balíček parametrů šablony.
 
-- V parametru deklarace – klauzule (`func(parameter-list)`), balíček parametrů funkce zavádí "nejvyšší úrovně" tři tečky a tlačítko se třemi tečkami umístění je důležité:
+- V klauzuli Parameter-Declaration-klauzule (`func(parameter-list)`) zavádí tři tečky na nejvyšší úrovni balíček parametrů funkce a umístění tří teček je důležité:
 
     ```cpp
     // v1 is NOT a function parameter pack:
@@ -114,11 +114,11 @@ Dříve, tento článek popisuje tři tečky umístění, která definuje sadami
     template <typename... Types> void func2(std::vector<Types>... v2);
     ```
 
-- Pokud na symbol tří teček se zobrazí okamžitě po názvu parametru, je nutné rozšíření balíčku parametrů.
+- Kde se tři tečky zobrazují hned za názvem parametru, máte rozšíření sady parametrů.
 
 ## <a name="example"></a>Příklad
 
-Dobrým způsobem ke znázornění mechanismu funkce variadické šablony je jeho použití v přepsání některých funkcí `printf`:
+Dobrým způsobem, jak znázornit mechanizmus variadické funkce, je použít ho v novém zápisu některých funkcí `printf`:
 
 ```cpp
 #include <iostream>
@@ -161,4 +161,4 @@ first, 2, third, 3.14159
 ```
 
 > [!NOTE]
->  Většina implementací, které funkce variadické šablony pomocí rekurze některé formuláře, ale se mírně liší od tradičních rekurze.  Tradiční rekurze zahrnuje funkci volající sama sebe pomocí stejného podpisu. (To může být přetížené nebo bez vizuálního vzhledu, ale je vybrána stejná signatura pokaždé, když.) Variadická rekurze zahrnuje volání šablony variadické funkce pomocí odlišných (téměř vždy snížení) počtu argumentů a tím orazítkování jiného podpisu při každém. "Základní případ" je nutné použít, ale povaha rekurze se liší.
+>  Většina implementací, které obsahují funkce šablon variadické, používá rekurzi nějakého formuláře, ale je mírně odlišná od tradiční rekurze.  Tradiční rekurze zahrnuje funkci, která volá sebe sama pomocí stejného podpisu. (Může být přetížený nebo v šabloně, ale stejný podpis se vybere pokaždé, když.) Rekurze variadické zahrnuje volání šablony funkce variadické pomocí odlišného (téměř vždy klesajícího) počtu argumentů a tím pokaždé, když se pokaždé označí za jiný podpis. Základní případ je stále vyžadován, ale povaha rekurze je odlišná.

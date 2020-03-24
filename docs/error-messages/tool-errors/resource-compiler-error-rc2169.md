@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - RC2169
 ms.assetid: 832c19ad-a2e2-4f50-b493-26b791877600
-ms.openlocfilehash: 6669a85899922554b264e05c4b83f7b18cfa3157
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1906f8c8e795f6aa05987152ca4901deae62bb46
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396844"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80190908"
 ---
 # <a name="resource-compiler-error-rc2169"></a>Chyba kompilátoru prostředků RC2169
 
-Název souboru prostředků není ve formátu 2.03
+název souboru prostředku není ve formátu 2,03.
 
-Zadaný prostředek používá formát starší než verze 2.03 nástroje MkTypLib.exe. Soubor prostředků musí být převeden nebo znovu vytvořit pomocí formátu pro verze 3.00 nebo novější.
+Zadaný prostředek používal formát starší verze než 2,03. Soubor prostředků musí být převeden nebo znovu vytvořen pomocí formátu verze 3,00 nebo novější.

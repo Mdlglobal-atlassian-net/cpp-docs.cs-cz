@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - reinterpret_cast keyword [C++]
 ms.assetid: eb3283c7-7f88-467e-affd-407d37b46d6c
-ms.openlocfilehash: 421a1fdce6834f800cd33a55d75c9dc4f88ffc93
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 34c2fcb0e1f7f4df4e207d1737afc9c42e011feb
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403422"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188282"
 ---
-# <a name="reinterpretcast-operator"></a>reinterpret_cast – operátor
+# <a name="reinterpret_cast-operator"></a>reinterpret_cast – operátor
 
 Umožňuje převod všech ukazatelů na jiný typ ukazatele. Umožňuje také převést libovolný integrální typ na libovolný typ ukazatele a naopak.
 
@@ -25,17 +25,17 @@ reinterpret_cast < type-id > ( expression )
 
 ## <a name="remarks"></a>Poznámky
 
-Zneužití **reinterpret_cast** operátor může být snadno nebezpečné. Pokud není požadovaný převod ze své podstaty nižší úrovně, měly by být použity ostatní operátory přetypování.
+Zneužití operátoru **reinterpret_cast** může být snadno nebezpečné. Pokud není požadovaný převod ze své podstaty nižší úrovně, měly by být použity ostatní operátory přetypování.
 
-**Reinterpret_cast** lze použít operátor pro převody, jako `char*` k `int*`, nebo `One_class*` k `Unrelated_class*`, které jsou ze své podstaty nebezpečné.
+Operátor **reinterpret_cast** lze použít pro převody jako `char*` na `int*`nebo `One_class*` na `Unrelated_class*`, které jsou v podstatě nebezpečné.
 
-Výsledek **reinterpret_cast** nelze bezpečně používat pro nic jiného než zpětné přetypování do původního stavu. Jiná použití jsou v nejlepším případě nepřenositelná.
+Výsledek **reinterpret_cast** nelze bezpečně použít pro cokoli jiného než při přetypování zpět na původní typ. Jiná použití jsou v nejlepším případě nepřenositelná.
 
-**Reinterpret_cast** operátor nemůže přetypovat **const**, **volatile**, nebo **__unaligned** atributy. Zobrazit [operátor const_cast](../cpp/const-cast-operator.md) informace o odebírání těchto atributů.
+Operátor **reinterpret_cast** nemůže přetypovat na atributy **const**, **volatile**nebo **__unaligned** . Informace o odebírání těchto atributů najdete v tématu [operátor const_cast](../cpp/const-cast-operator.md) .
 
-**Reinterpret_cast** operátor převede hodnotu ukazatele null na hodnotu ukazatele null cílového typu.
+Operátor **reinterpret_cast** převede hodnotu ukazatele null na hodnotu ukazatele null cílového typu.
 
-Jedno praktické použití **reinterpret_cast** je ve funkci hash, která mapuje hodnotu na index takovým způsobem, že dvě odlišné hodnoty zřídkakdy skončí se stejným indexem.
+Jedním z praktických způsobů použití **reinterpret_cast** je funkce hash, která mapuje hodnotu na index takovým způsobem, že dvě odlišné hodnoty jsou zřídka zakončené stejným indexem.
 
 ```cpp
 #include <iostream>
@@ -77,9 +77,9 @@ Output:
 64829
 ```
 
-**Reinterpret_cast** umožňuje zacházet jako s integrálním typem ukazatele. Výsledek je následně bitově posunutý a je na něj použita logická funkce XOR, aby se vytvořil jedinečný index (jedinečný s vysokým stupněm pravděpodobnosti). Index je následně zkrácen standardem přetypování ve stylu jazyka C na návratový typ funkce.
+**Reinterpret_cast** umožňuje, aby byl ukazatel považován za integrální typ. Výsledek je následně bitově posunutý a je na něj použita logická funkce XOR, aby se vytvořil jedinečný index (jedinečný s vysokým stupněm pravděpodobnosti). Index je následně zkrácen standardem přetypování ve stylu jazyka C na návratový typ funkce.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Operátory přetypování](../cpp/casting-operators.md)<br/>
 [Klíčová slova](../cpp/keywords-cpp.md)

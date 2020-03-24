@@ -8,12 +8,12 @@ helpviewer_keywords:
 - hardware exceptions [C++]
 - low level errors
 ms.assetid: 06ac6f01-a8cf-4426-bb12-1688315ae1cd
-ms.openlocfilehash: 59b74f47cd86d94b50ab9213b3e517c2b08db696
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: 8adfd59eab0960ab14b2becb8d9864c77196c909
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74246553"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188673"
 ---
 # <a name="hardware-exceptions"></a>Výjimky hardwaru
 
@@ -40,7 +40,7 @@ Hardwarové výjimky rozpoznávané systémem Windows jsou shrnuty v následují
 
 Mnoho výjimek uvedených v předchozí tabulce by mělo být zpracováno ladicími programy, operačním systémem a jiným kódem nízké úrovně. S výjimkou chyb celých čísel a čísel s plovoucí desetinnou čárkou by váš kód neměl tyto chyby zpracovávat. Proto by měl být obvykle použit filtr pro zpracování výjimek, který výjimky ignoruje (vyhodnotí na hodnotu 0). V opačném případě může být mechanismům nižší úrovně zabráněno reagovat odpovídajícím způsobem. Můžete však přijmout vhodná opatření proti potenciálnímu účinku těchto chyb nízké úrovně, a to pomocí [obslužných rutin ukončení](../cpp/writing-a-termination-handler.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Zápis obslužné rutiny výjimky](../cpp/writing-an-exception-handler.md)<br/>
 [Strukturované zpracování výjimek (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

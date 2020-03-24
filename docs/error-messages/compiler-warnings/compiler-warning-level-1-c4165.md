@@ -1,23 +1,23 @@
 ---
-title: Kompilátor upozornění (úroveň 1) C4165
+title: Upozornění kompilátoru (úroveň 1) C4165
 ms.date: 11/04/2016
 f1_keywords:
 - C4165
 helpviewer_keywords:
 - C4165
 ms.assetid: f5bed515-2290-4f88-8dab-b45d95fe26ef
-ms.openlocfilehash: 4d6377730e262efafb38f5e714989e9075a77a04
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bb036f7672a074e859d3e19083e256bd80c93578
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391735"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80176093"
 ---
-# <a name="compiler-warning-level-1-c4165"></a>Kompilátor upozornění (úroveň 1) C4165
+# <a name="compiler-warning-level-1-c4165"></a>Upozornění kompilátoru (úroveň 1) C4165
 
-"HRESULT" je převáděn na 'bool'; jste si jisti, že je to, co chcete?
+Hodnota HRESULT se převádí na bool; Opravdu to chcete?
 
-Při použití HRESULT v [Pokud](../../cpp/if-else-statement-cpp.md) příkaz, hodnota HRESULT se převedou na [bool](../../cpp/bool-cpp.md) Pokud explicitně test pro proměnnou jako HRESULT. Toto upozornění je vypnuto ve výchozím nastavení.
+Při použití HRESULT v příkazu [if](../../cpp/if-else-statement-cpp.md) se hodnota HRESULT převede na [bool](../../cpp/bool-cpp.md) , pokud explicitně netestujete proměnnou jako HRESULT. Toto upozornění je ve výchozím nastavení vypnuté.
 
 ## <a name="example"></a>Příklad
 

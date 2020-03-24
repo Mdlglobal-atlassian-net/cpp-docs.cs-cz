@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3733
 ms.assetid: 0cc1a9fe-1400-4be3-b35a-16435cba7a5a
-ms.openlocfilehash: 006f87691c6e0839115e2c02ab0d922aa95eaa93
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 961aa0caf31d49917f6df67305bc01d465884b68
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62327974"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80165896"
 ---
 # <a name="compiler-error-c3733"></a>Chyba kompilátoru C3733
 
-'událost': nesprávná syntaxe pro zadání události COM; Nezapomněli jste zadat '__interface'?
+' Event ': Nesprávná syntaxe pro určení události COM; Zapomněli jste __interface?
 
-Pro události COM byl použit chybnou syntaxi. Pokud chcete tuto chybu opravit, změnit typ události opravte syntaxi pro dosažení souladu s pravidly událostí modelu COM
+Pro událost COM byla použita nesprávná syntaxe. Chcete-li tuto chybu opravit, změňte typ události nebo opravte syntaxi tak, aby odpovídala pravidlům událostí modelu COM.
 
 Následující ukázka generuje C3733:
 

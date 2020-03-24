@@ -8,12 +8,12 @@ helpviewer_keywords:
 - attributes [C#], default attribute
 - defaults, default attribute
 ms.assetid: 0cdca716-1ba8-46d7-9399-167e55492870
-ms.openlocfilehash: 291e16ad0967acd1869874fcc9fa6eb5529e4b44
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: b789f82f4b5a09b86d72dfde5d783665cf2e918a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501685"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167183"
 ---
 # <a name="default-c"></a>default (C++)
 
@@ -27,13 +27,13 @@ Indikuje, že vlastní nebo odesílající pole definované v rámci třídy typ
 
 ### <a name="parameters"></a>Parametry
 
-*interface1*<br/>
+*rozhraní interface1*<br/>
 Výchozí rozhraní, které bude zpřístupněno pro skriptovací prostředí, která vytvoří objekt na základě třídy definované s **výchozím** atributem.
 
 Pokud není zadáno žádné výchozí rozhraní, jako výchozí se použije první výskyt nezdrojového rozhraní.
 
 *interface2*<br/>
-Volitelné Výchozí zdrojové rozhraní. Musíte také zadat toto rozhraní se zdrojovým [](source-cpp.md) atributem.
+Volitelné Výchozí zdrojové rozhraní. Musíte také zadat toto rozhraní se [zdrojovým](source-cpp.md) atributem.
 
 Pokud není zadané žádné výchozí zdrojové rozhraní, použije se jako výchozí první zdrojové rozhraní.
 
@@ -43,7 +43,7 @@ Pokud není zadané žádné výchozí zdrojové rozhraní, použije se jako vý
 
 ## <a name="example"></a>Příklad
 
-Následující kód ukazuje, jak se používá **výchozí** pro definici třídy typu coclass k určení `ICustomDispatch` jako výchozího rozhraní programovatelnosti:
+Následující kód ukazuje, jak se používá **Výchozí hodnota** v definici třídy typu coclass k určení `ICustomDispatch` jako výchozího rozhraní programovatelnosti:
 
 ```cpp
 // cpp_attr_ref_default.cpp
@@ -101,12 +101,12 @@ int main() {
 |-|-|
 |**Platí pro**|**Třída**, **Struktura**, datový člen|
 |**REPEATABLE**|Ne|
-|**Požadované atributy**|**Coclass – třída** (při použití u **třídy** nebo **struktury**)|
+|**Požadované atributy**|**Coclass – třída** (při použití pro **třídu** nebo **strukturu**)|
 |**Neplatné atributy**|Žádné|
 
 Další informace naleznete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [IDL – atributy](idl-attributes.md)<br/>
 [Atributy třídy](class-attributes.md)<br/>

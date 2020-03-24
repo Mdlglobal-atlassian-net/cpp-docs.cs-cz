@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - RC2147
 ms.assetid: 09974f06-1731-4e70-b373-f9218e0ee8d9
-ms.openlocfilehash: 9b4555d819bfcf30debc6a4dc9261999648e3e95
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f76c61ace4e0e1d8eea9a33669b66021861c36f9
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399886"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80191142"
 ---
 # <a name="resource-compiler-error-rc2147"></a>Chyba kompilátoru prostředků RC2147
 
-ID DÍLČÍHO není číslo
+ID podjazyka není číslo.
 
-Hodnota ID DÍLČÍHO musí být číslo.
+Hodnota ID podjazyka musí být číslo.
 
-**Jazyk** příkaz musíte použít následující syntaxi:
+Příkaz **jazyka** musí používat následující syntaxi:
 
-**JAZYK** *primary_language_ID*,*secondary_language_ID*
+**LANGUAGE** *Primary_language_ID*jazyka,*secondary_language_ID*
 
-Platné ID DÍLČÍHO jsou definované jako **SUBLANG_** konstanty v souboru WINNT.h souboru.
+Platná ID podjazyku jsou definována jako **SUBLANG_** konstanty v souboru Winnt. h.

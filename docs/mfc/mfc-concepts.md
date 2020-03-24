@@ -3,12 +3,12 @@ title: MFC – koncepce
 ms.date: 01/09/2018
 f1_keywords:
 - Concepts
-ms.openlocfilehash: 5617051dc700bb1dd594a13627c9e3d01ef9caa9
-ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.openlocfilehash: 3273538e4fdffbf68fbe01c7f912584380505d1b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70927907"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178519"
 ---
 # <a name="mfc-concepts"></a>MFC – koncepce
 
@@ -20,7 +20,7 @@ Tato část obsahuje koncepční témata a témata založená na úlohách, kter
 Popisuje technické podrobnosti knihovny MFC.
 
 [Použití objektů CObject](../mfc/using-cobject.md)<br/>
-Obsahuje odkazy na použití `CObject`, základní třídu pro většinu tříd v knihovně MFC.
+Obsahuje odkazy na použití `CObject`, základní třídy pro většinu tříd v knihovně MFC.
 
 [Kolekce](../mfc/collections.md)<br/>
 Popisuje třídy kolekcí vytvořené z a nevytvořené z C++ šablon.
@@ -29,7 +29,7 @@ Popisuje třídy kolekcí vytvořené z a nevytvořené z C++ šablon.
 Obsahuje odkazy na témata, která pojednávají s použitím data a času s knihovnou MFC.
 
 [Soubory](../mfc/files-in-mfc.md)<br/>
-Popisuje `CFile` a postup zpracování souborů v knihovně MFC.
+Popisuje `CFile` a zpracování souborů v knihovně MFC.
 
 [Správa paměti (MFC)](../mfc/memory-management.md)<br/>
 Popisuje, jak využít služby pro obecné účely související se správou paměti.
@@ -66,5 +66,5 @@ Pokrývá implementaci rozhraní Windows Sockets knihovny MFC.
 [MFC – referenční informace](../mfc/mfc-desktop-applications.md)<br/>
 Poskytuje referenční materiál pro knihovnu MFC, sadu tříd, které tvoří aplikační rozhraní, což je rozhraní aplikace napsané pro rozhraní API systému Windows.
 
-[Ukázky knihovny MFC](../overview/visual-cpp-samples.md)<br/>
+[Ukázky knihovny MFC](../overview/visual-cpp-samples.md#mfc-samples)<br/>
 Obsahuje odkazy na ukázky, které ukazují, jak používat knihovnu MFC v aplikacích klasické pracovní plochy, knihovnách DLL, databázových aplikacích, ovládacích prvcích, webových aplikacích a dalších.

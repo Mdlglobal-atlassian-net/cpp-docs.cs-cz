@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - __raise keyword [C++]
 ms.assetid: 6f1ae418-5f0f-48b6-9f6e-8ea7e66b239a
-ms.openlocfilehash: c5703c87945667f4ac65647019a72b304363bee2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9238e8e3e2fcd2c2f8b6431cfb0a79d452c5adf3
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62244501"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179169"
 ---
-# <a name="raise"></a>__raise
+# <a name="__raise"></a>__raise
 
 Zvýrazní stranu volání události.
 
@@ -26,9 +26,9 @@ __raise method-declarator;
 
 ## <a name="remarks"></a>Poznámky
 
-Ze spravovaného kódu lze událost vyvolat pouze ze třídy, ve které je definována. Zobrazit [události](../extensions/event-cpp-component-extensions.md) Další informace.
+Ze spravovaného kódu lze událost vyvolat pouze ze třídy, ve které je definována. Další informace najdete v [události](../extensions/event-cpp-component-extensions.md) .
 
-Klíčové slovo **__raise** způsobí chybu, pokud zavoláte cokoli jiného než událost.
+Klíčové slovo **__raise** způsobí, že dojde k chybě, pokud voláte událost bez události.
 
 > [!NOTE]
 >  Třída šablony nebo struktura nemohou obsahovat události.
@@ -59,7 +59,7 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Klíčová slova](../cpp/keywords-cpp.md)<br/>
 [Zpracování událostí](../cpp/event-handling.md)<br/>

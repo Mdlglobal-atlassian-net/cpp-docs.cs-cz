@@ -5,12 +5,12 @@ helpviewer_keywords:
 - cast operators [C++]
 - () cast operator
 ms.assetid: 4c99eb92-1b19-4a5d-9840-5d8c29b8453e
-ms.openlocfilehash: 54345637665736085d812b88f5822a94014eaa74
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 491e8ea3bc3ff81e88825700de6a549324a0d5af
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345085"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80190154"
 ---
 # <a name="cast-operator-"></a>Operátor přetypování: ()
 
@@ -24,9 +24,9 @@ unary-expression ( type-name ) cast-expression
 
 ## <a name="remarks"></a>Poznámky
 
-Libovolný výraz unární se považuje za výraz přetypování.
+Libovolný unární výraz je považován za výraz přetypování.
 
-Kompilátor zpracovává *výrazem přetypování* jako typ *název typu* po přetypování. Přetypování lze použít k převodu objektů libovolného skalárního typu na jiný skalární typ a zpět. Explicitní přetypování jsou omezena stejnými pravidly, která určují účinky implicitních převodů. Při přetypování mohou být uplatněna další omezení vyplývající ze skutečných velikostí nebo reprezentací konkrétních typů.
+Kompilátor zpracovává *přetypování – výraz* jako typ Type *-Name* po přetypování typu. Přetypování lze použít k převodu objektů libovolného skalárního typu na jiný skalární typ a zpět. Explicitní přetypování jsou omezená stejnými pravidly, která určují účinky implicitních převodů. Při přetypování mohou být uplatněna další omezení vyplývající ze skutečných velikostí nebo reprezentací konkrétních typů.
 
 ## <a name="example"></a>Příklad
 
@@ -118,7 +118,7 @@ Note that the cast changed the raw internal string
 Raw Bytes after cast:   Exciting
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Výrazy s unárními operátory](../cpp/expressions-with-unary-operators.md)<br/>
 [Integrované operátory C++, jejich priorita a asociativita](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>

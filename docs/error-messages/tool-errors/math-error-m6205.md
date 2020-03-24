@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - M6205
 ms.assetid: fd28e7c9-a463-4a9c-a863-cc9e75315550
-ms.openlocfilehash: cdcaa714836f77d6238cc790457a5422cc825889
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eb9c646329a4db224b853bea91e69576bee04be6
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393204"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80173631"
 ---
 # <a name="math-error-m6205"></a>Chyba matematické operace M6205
 
-'function': Chyba _TLOSS
+' function ': Chyba _TLOSS
 
-Celkový počet ke ztrátě významu (přesnost) došlo k chybě.
+Došlo k celkové ztrátě významnosti (přesnosti).
 
-Tato chyba může být způsobeno tím, že velmi velké množství jako operand sin, cos, nebo tan, protože operand musí být snížena na číslo v rozsahu od 0 do 2 * pí.
+Tato chyba může být způsobena tím, že poskytuje velmi velké číslo jako operandy Sin, cos nebo Tan, protože operand musí být snížen na číslo mezi 0 a 2 × PI.

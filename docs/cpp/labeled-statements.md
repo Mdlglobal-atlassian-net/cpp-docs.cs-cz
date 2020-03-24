@@ -5,16 +5,16 @@ helpviewer_keywords:
 - labeled statement
 - statements, labeled
 ms.assetid: 456a26d5-0fcc-4d1a-b71f-fa9ff3d73b91
-ms.openlocfilehash: 030f1d74cf8a6c6686fcebd10559b5bd7b5d964c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d971a0e9864aeada1db5f004ef70577512e78c76
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62368744"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179689"
 ---
 # <a name="labeled-statements"></a>Příkaz s popiskem
 
-Popisky lze převést řízení programu přímo na zadaný příkaz.
+Popisky slouží k přenosu řízení programu přímo do zadaného příkazu.
 
 ```
 identifier :  statement
@@ -22,11 +22,11 @@ case constant-expression :  statement
 default :  statement
 ```
 
-Rozsah popisku je celou funkci, ve kterém je deklarována.
+Rozsah popisku je celá funkce, ve které je deklarována.
 
 ## <a name="remarks"></a>Poznámky
 
-Existují tři typy příkazů s popisky. Všechny používají k oddělení nějakého typu popisku od příkazu dvojtečku. Popisky case a default jsou specifické pro příkazy case.
+Existují tři typy příkazů s popisky. Všechny používají k oddělení nějakého typu popisku od příkazu dvojtečku. Popisky case a Default jsou specifické pro příkazy Case.
 
 ```cpp
 #include <iostream>
@@ -54,9 +54,9 @@ int main() {
 }
 ```
 
-**Goto – příkaz**
+**Příkaz goto**
 
-Vzhled *identifikátor* popisek ve zdrojovém programu deklaruje popisek. Pouze [goto](../cpp/goto-statement-cpp.md) příkaz může přenést řízení k *identifikátor* popisek. Následující fragment kódu ukazuje použití **goto** příkazu a *identifikátor* popisku:
+Vzhled popisku *identifikátoru* ve zdrojovém programu deklaruje popisek. Pouze příkaz [goto](../cpp/goto-statement-cpp.md) může přenášet řízení na popisek *identifikátoru* . Následující fragment kódu ilustruje použití příkazu **goto** a popisku *identifikátoru* :
 
 Popisek se nemůže objevit samostatně, ale musí být vždy připojen k příkazu. Pokud je potřebný samotný popisek, umístěte za tento popisek příkaz null.
 
@@ -79,9 +79,9 @@ int main() {
 //Output: At Test2 label.
 ```
 
-**Case – příkaz**
+**Příkaz Case**
 
-Popisky, které se zobrazí po **případ** – klíčové slovo nemohou zobrazit také mimo **přepnout** příkazu. (Toto omezení platí také pro **výchozí** – klíčové slovo.) Následující fragment kódu ukazuje správné použití **případ** popisků:
+Popisky, které se zobrazí po klíčovém slově **case** , se nemohou objevit i vně příkazu **Switch** . (Toto omezení platí také pro klíčové slovo **Default** .) Následující fragment kódu ukazuje správné použití popisků **case** :
 
 ```cpp
 // Sample Microsoft Windows message processing loop.
@@ -109,9 +109,9 @@ switch( msg )
 }
 ```
 
-## <a name="labels-in-the-case-statement"></a>Popisky case – příkaz
+## <a name="labels-in-the-case-statement"></a>Popisky v příkazu case
 
-Popisky, které se zobrazí po **případ** – klíčové slovo nemohou zobrazit také mimo **přepnout** příkazu. (Toto omezení platí také pro **výchozí** – klíčové slovo.) Následující fragment kódu ukazuje správné použití **případ** popisků:
+Popisky, které se zobrazí po klíčovém slově **case** , se nemohou objevit i vně příkazu **Switch** . (Toto omezení platí také pro klíčové slovo **Default** .) Následující fragment kódu ukazuje správné použití popisků **case** :
 
 ```cpp
 // Sample Microsoft Windows message processing loop.
@@ -154,9 +154,9 @@ switch( msg )
 }
 ```
 
-## <a name="labels-in-the-goto-statement"></a>Popisků v příkazu goto
+## <a name="labels-in-the-goto-statement"></a>Popisky v příkazu goto
 
-Vzhled *identifikátor* popisek ve zdrojovém programu deklaruje popisek. Pouze [goto](../cpp/goto-statement-cpp.md) příkaz může přenést řízení k *identifikátor* popisek. Následující fragment kódu ukazuje použití **goto** příkazu a *identifikátor* popisku:
+Vzhled popisku *identifikátoru* ve zdrojovém programu deklaruje popisek. Pouze příkaz [goto](../cpp/goto-statement-cpp.md) může přenášet řízení na popisek *identifikátoru* . Následující fragment kódu ilustruje použití příkazu **goto** a popisku *identifikátoru* :
 
 Popisek se nemůže objevit samostatně, ale musí být vždy připojen k příkazu. Pokud je potřebný samotný popisek, umístěte za tento popisek příkaz null.
 
@@ -178,7 +178,7 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Přehled příkazů jazyka C++](../cpp/overview-of-cpp-statements.md)<br/>
 [switch – příkaz (C++)](../cpp/switch-statement-cpp.md)

@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - ErrorInfo method [C++]
 ms.assetid: 071b446c-4395-4fb8-bd3d-300a8b25f5cd
-ms.openlocfilehash: 59ada8a7e098e57cca5641a439365851bbae2485
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cedb9ccadc63166c43d980333d93a195254700d8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155069"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80180703"
 ---
-# <a name="comerrorerrorinfo"></a>_com_error::ErrorInfo
+# <a name="_com_errorerrorinfo"></a>_com_error::ErrorInfo
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
-Načte `IErrorInfo` objekt předaný konstruktoru.
+Načte objekt `IErrorInfo` předaný konstruktoru.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -31,10 +31,10 @@ Nezpracovaná položka `IErrorInfo` předaná do konstruktoru.
 
 ## <a name="remarks"></a>Poznámky
 
-Načítá zapouzdřenou `IErrorInfo` položky v `_com_error` objektu, nebo hodnota NULL, pokud žádné `IErrorInfo` zaznamenává se položek. Volající musí volat `Release` pro vrácený objekt po dokončení jeho použití.
+Načte zapouzdřenou `IErrorInfo` položku v objektu `_com_error` nebo hodnotu NULL, pokud není zaznamenána žádná `IErrorInfo` položka. Volající musí volat `Release` vráceného objektu po jeho dokončení pomocí.
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [_com_error – třída](../cpp/com-error-class.md)

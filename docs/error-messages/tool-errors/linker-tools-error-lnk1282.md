@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1282
 ms.assetid: 99c13f52-eb80-46ce-a5b9-4537583e32a9
-ms.openlocfilehash: 79bfdd9920cbd17af85705530e819316017b0db1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bfe4edc95eb08e23d8acd0cab5acee4b4dde5683
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160533"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80183628"
 ---
 # <a name="linker-tools-error-lnk1282"></a>Chyba linkerů LNK1282
 
-Nepodařilo se soubor /REBASE; bylo provedeno
+Nepovedlo se/REBASEovat soubor; byl podepsán
 
-Jste se pokusili získat změnit základní adresa podepsané sestavení s možností /REBASE pro [editbin](../../build/reference/editbin-reference.md). Chcete-li to provést, nejprve změňte základní adresu a pak se přihlaste sestavení.
+Pokusili jste se změnit základní adresu podepsaného sestavení s možností/REBASE pro [nástroje EDITBIN](../../build/reference/editbin-reference.md). K tomu je třeba nejprve změnit základní adresu a pak podepsat sestavení.

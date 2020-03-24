@@ -1,21 +1,21 @@
 ---
-title: 'Postupy: PIN kód ukazatelů a polí'
+title: 'Postupy: Připnutí ukazatelů a polí'
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
 - pointers, pinning
 - arrays [C++], pinning
 ms.assetid: ee783260-e676-46b8-a38e-11a06f1d57b0
-ms.openlocfilehash: ae8c1da79f41cf9209f2765ce5aa2f7ca3d34aea
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8dc42690f0f56b97b2af3ed54dfb17d49b081695
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62254556"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172214"
 ---
-# <a name="how-to-pin-pointers-and-arrays"></a>Postupy: PIN kód ukazatelů a polí
+# <a name="how-to-pin-pointers-and-arrays"></a>Postupy: Připnutí ukazatelů a polí
 
-Připnutí dílčí objekt definovaný v spravovaný objekt má za následek Připnutí celý objekt.  Například pokud je připnutý libovolný prvek pole, pak celé pole je také připnout. Nejsou žádná rozšíření jazyka pro deklarování připnuté pole. Chcete-li připnout pole, deklarujte ukazatel Připnutí a jeho typ elementu, Připne jeden z jeho prvků.
+Připnutí dílčího objektu definovaného ve spravovaném objektu má vliv na připnutí celého objektu.  Například pokud je připnuté nějaký prvek pole, je také připnuté celé pole. Neexistují žádná rozšíření k jazyku pro deklaraci připnutého pole. Chcete-li připnout pole, deklarovat ukazatel připnutí na jeho typ prvku a připnout jeden z jeho prvků.
 
 ## <a name="example"></a>Příklad
 
@@ -45,6 +45,6 @@ int main() {
 ++
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [pin_ptr (C++/CLI)](pin-ptr-cpp-cli.md)

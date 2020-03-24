@@ -7,16 +7,16 @@ helpviewer_keywords:
 - Copy method [C++]
 - BSTR object [C++], copy
 ms.assetid: 00ba7311-e82e-4a79-8106-5329fa2f869a
-ms.openlocfilehash: 13ddf57e0bdbdbcc0c5b487e879e14b000de3ad0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1fe8cfb5b644b3c7c34cf3325a91ebdf23a04946
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393932"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80190323"
 ---
-# <a name="bstrtcopy"></a>_bstr_t::copy
+# <a name="_bstr_tcopy"></a>_bstr_t::copy
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
 Vytvoří kopii zapouzdřeného `BSTR`.
 
@@ -29,7 +29,7 @@ BSTR copy( bool fCopy = true ) const;
 #### <a name="parameters"></a>Parametry
 
 *fCopy*<br/>
-Při hodnotě TRUE se **kopírování** vrátí kopii obsaženého objektu `BSTR`, jinak **kopírování** vrátí skutečný objekt BSTR.
+Je-li nastavena hodnota TRUE, funkce **copy** vrátí kopii obsažené `BSTR`, jinak **Kopírovat** vrátí skutečný objekt BSTR.
 
 ## <a name="remarks"></a>Poznámky
 
@@ -43,8 +43,8 @@ STDMETHODIMP CAlertMsg::get_ConnectionStr(BSTR *pVal){ //  m_bsConStr is _bstr_t
 }
 ```
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [_bstr_t – třída](../cpp/bstr-t-class.md)

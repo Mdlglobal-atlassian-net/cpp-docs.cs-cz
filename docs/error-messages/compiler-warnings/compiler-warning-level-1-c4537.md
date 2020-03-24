@@ -1,29 +1,29 @@
 ---
-title: Kompilátor upozornění (úroveň 1) C4537
+title: Upozornění kompilátoru (úroveň 1) C4537
 ms.date: 08/27/2018
 f1_keywords:
 - C4537
 helpviewer_keywords:
 - C4537
 ms.assetid: 9454493c-d419-475e-8f35-9c00233c9329
-ms.openlocfilehash: 2f97be4e1aaa5143df685cb95935d350e6f02534
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 81058f153228d3d8fbf4097c140962d0cb9677e5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62161079"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80186358"
 ---
-# <a name="compiler-warning-level-1-c4537"></a>Kompilátor upozornění (úroveň 1) C4537
+# <a name="compiler-warning-level-1-c4537"></a>Upozornění kompilátoru (úroveň 1) C4537
 
-> "*objekt*": "*operátor*" použitý pro typ není UDT
+> '*Object*': '*operátor*' použit pro typ, který není typu UDT
 
 ## <a name="remarks"></a>Poznámky
 
-Odkaz byl předán, kde byl očekáván objekt (uživatelem definovaný typ). Odkaz není objekt, ale není schopen provést rozdíl vloženého kódu assembleru. Kompilátor generuje kód, jako by *objektu* byly instance.
+Byl předán odkaz na místo, kde byl očekáván objekt (uživatelem definovaný typ). Odkaz není objekt, ale vložený kód assembleru není schopný rozlišovat. Kompilátor generuje kód, jako by byl *objekt* instance.
 
 ## <a name="example"></a>Příklad
 
-Následující ukázka generuje C4537 a ukazuje, jak ho opravit:
+Následující ukázka generuje C4537 a ukazuje, jak ji opravit:
 
 ```cpp
 // C4537.cpp

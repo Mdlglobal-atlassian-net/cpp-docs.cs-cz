@@ -6,20 +6,20 @@ helpviewer_keywords:
 - function overloading
 - declaring functions [C++], overloading
 ms.assetid: 3c9884cb-1d5e-42e8-9a49-6f46141f929e
-ms.openlocfilehash: 6cc432e404a7a66de63cf87f0fe87f0ccdcb5d70
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fe390ae190f422f7951f7101a7c08808b1c6a526
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154263"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179780"
 ---
 # <a name="function-overloading"></a>Přetížení funkcí
 
-Jazyk C++ umožňuje zadat více než jednu funkci stejného názvu ve stejném oboru. Tyto funkce jsou volány *přetížené* funkce. Přetížené funkce umožňují poskytnout různé sémantiky funkce, v závislosti na typech a počtu argumentů.
+Jazyk C++ umožňuje zadat více než jednu funkci stejného názvu ve stejném oboru. Tyto funkce se nazývají *přetížené* funkce. Přetížené funkce umožňují poskytovat různé sémantiky pro funkci v závislosti na typech a počtu argumentů.
 
-Například `print` funkci, která přijímá `std::string` argument může provádět velmi odlišný úkol od funkce přijímající argument typu **double**. Přetížení uloží nebudou muset použít názvy například `print_string` nebo `print_double`. V době kompilace kompilátor volí, která přetížení pro použití na základě typu argumentů předaných v volajícím.  Při volání `print(42.0)`, pak bude `void print(double d)` funkce se vyvolala. Při volání `print("hello world")`, pak bude `void print(std::string)` přetížení, který bude vyvolán.
+Například funkce `print`, která přebírá `std::string` argument může provádět velmi odlišné úlohy než ta, která přebírá argument typu **Double**. Přetížení šetří, že nemusíte používat názvy, například `print_string` nebo `print_double`. V době kompilace kompilátor zvolí, které přetížení se má použít, na základě typu argumentů předaných volajícím.  Pokud zavoláte `print(42.0)`, bude vyvolána funkce `void print(double d)`. Pokud zavoláte `print("hello world")`, bude vyvoláno přetížení `void print(std::string)`.
 
-Přetížit lze členské funkce a nečlenské funkce. Následující tabulka ukazuje, které části deklarace funkce používá jazyk C++ k rozlišení skupin funkcí stejného názvu ve stejném oboru.
+Můžete přetížit jak členské funkce, tak i nečlenské funkce. Následující tabulka ukazuje, které části deklarace funkce používá jazyk C++ k rozlišení skupin funkcí stejného názvu ve stejném oboru.
 
 ### <a name="overloading-considerations"></a>Okolnosti přetížení
 
@@ -29,10 +29,10 @@ Přetížit lze členské funkce a nečlenské funkce. Následující tabulka uk
 |Počet argumentů|Ano|
 |Typ argumentů|Ano|
 |Přítomnost nebo absence tří teček|Ano|
-|Použití **typedef** názvy|Ne|
+|Použití názvů **typedef**|Ne|
 |Nespecifikované hranice pole|Ne|
-|**Const** nebo **volatile**|Ano, při použití na celou funkci|
-|[Kvalifikátory REF a kvalifikátory](#ref-qualifiers)|Ano|
+|**const** nebo **volatile**|Ano, při použití na celou funkci|
+|[Kvalifikátory ref](#ref-qualifiers)|Ano|
 
 ## <a name="example"></a>Příklad
 
@@ -113,31 +113,31 @@ int print(double dvalue, int prec)
 
 Předchozí kód ukazuje přetížení funkce `print` v oboru souboru.
 
-Výchozí argument není považován za součást typu funkce. Proto není použit při výběru přetížených funkcí. Dvě funkce, které se liší pouze v jejich výchozích argumentech, jsou považovány za vícenásobné definice spíše než za přetížené funkce.
+Výchozí argument není považován za součást typu funkce. Proto se nepoužívá při výběru přetížených funkcí. Dvě funkce, které se liší pouze v jejich výchozích argumentech, jsou považovány za vícenásobné definice spíše než za přetížené funkce.
 
 Pro přetížené operátory nelze zadat výchozí argumenty.
 
 ## <a name="argument-matching"></a>Porovnávání argumentů
 
-Přetížené funkce jsou vybrány pro nejlepší shodu deklarace funkcí v aktuálním oboru na argumenty zadané ve volání funkce. Pokud se nenajde vhodné funkce, tato funkce je volána. V tomto kontextu "vhodná" znamená, že buď:
+Přetížené funkce jsou vybrány pro nejlepší shodu deklarací funkcí v aktuálním rozsahu s argumenty dodanými ve volání funkce. Pokud je nalezena vhodná funkce, je volána Tato funkce. "Vhodné" v tomto kontextu znamená:
 
-- Byla nalezena přesná shoda.
+- Našla se přesná shoda.
 
-- Triviální převod byla provedena.
+- Byl proveden triviální převod.
 
-- Integrální propagace se provedla.
+- Byla provedena celočíselná propagace.
 
-- Existuje standardní převod na typ požadovaného argumentu.
+- Existuje standardní převod na požadovaný typ argumentu.
 
-- Existuje uživatelem definovaný převod (operátor conversion nebo konstruktor) na typ požadovaného argumentu.
+- Uživatelem definovaný převod (buď operátor převodu, nebo konstruktor) na požadovaný typ argumentu existuje.
 
-- Argumenty, které jsou reprezentovány pomocí tři teček nebyly nalezeny.
+- Byly nalezeny argumenty reprezentované třemi tečkami.
 
-Kompilátor vytvoří sadu Release candidate funkce pro každý argument. Funkce Release Candidate jsou funkce, ve kterých je skutečný argument na této pozici lze převést na typ formálního argumentu.
+Kompilátor vytvoří sadu kandidátních funkcí pro každý argument. Kandidátské funkce jsou funkce, ve kterých lze aktuální argument na této pozici převést na typ formálního argumentu.
 
-Sadu "nejlépe odpovídající funkce" je vytvořená pro každý argument a vybrané funkce je určena průsečíkem všechny sady. Pokud je určena průsečíkem obsahuje více než jednu funkci, přetížení je nejednoznačný a dojde k chybě. Funkce, která je nakonec vybraná vždy je lepší shody než všechny ostatní funkce ve skupině pro alespoň jeden argument. Pokud neexistuje žádný jasný Vítěz, volání funkce vygeneruje chybu.
+Sada "nejlépe vyhovující funkce" je sestavena pro každý argument a vybraná funkce je průnik všech sad. Pokud průnik obsahuje více než jednu funkci, přetížení je nejednoznačné a generuje chybu. Funkce, která je nakonec vybraná, je vždy lepší, než každá jiná funkce ve skupině pro alespoň jeden argument. Pokud neexistuje žádný jasný vítěz, volání funkce vygeneruje chybu.
 
-Vezměte v úvahu následující deklarace (funkce jsou označeny `Variant 1`, `Variant 2`, a `Variant 3`, k identifikaci následující diskuse):
+Vezměte v úvahu následující deklarace (funkce jsou označené `Variant 1`, `Variant 2`a `Variant 3`pro identifikaci v následující diskuzi):
 
 ```cpp
 Fraction &Add( Fraction &f, long l );       // Variant 1
@@ -155,14 +155,14 @@ F1 = Add( F2, 23 );
 
 Předchozí příkaz vytvoří dvě sady:
 
-|Sada 1: Funkce Release Candidate, které mají první Argument typu zlomku|Sada 2: Release Candidate funkce jejichž druhý Argument může být převeden na typ **int**|
+|Set 1: kandidátské funkce, které mají první argument typu zlomek|Set 2: kandidátské funkce, jejichž druhý argument lze převést na typ **int**|
 |--------------------------------------------------------------------------|-----------------------------------------------------------------------------------|
-|Varianty 1|Varianty 1 (**int** lze převést na **dlouhé** pomocí standardního převodu)|
-|Varianty 3||
+|Varianta 1|Varianta 1 (**int** se dá převést na **Long** pomocí standardního převodu)|
+|Varianta 3||
 
-Funkce v nastavení 2 jsou funkce, pro kterou jsou implicitní převody z typ skutečného parametru na typ formálního parametru a mezi takové funkce je funkce, pro kterou je "cost" konverze typ skutečného parametru na typ formálního parametru nejmenší.
+Funkce v množině 2 jsou funkce, pro které existují implicitní převody ze skutečného typu parametru na formální typ parametru a mezi těmito funkcemi je funkce, pro kterou je převedená cena za převod skutečného typu parametru na jeho formální typ parametru je nejúspornější.
 
-Je určena průsečíkem těmito dvěma sadami je Variant 1. Je například volání rozhraní nejednoznačnou funkci:
+Průnik těchto dvou sad je variantou 1. Příkladem nejednoznačného volání funkce je:
 
 ```cpp
 F1 = Add( 3, 6 );
@@ -170,26 +170,26 @@ F1 = Add( 3, 6 );
 
 Předchozí volání funkce vytvoří následující sady:
 
-|Sada 1: Release Candidate funkce, že jste první Argument typu **int**|Sada 2: Release Candidate funkce, že máte druhý Argument typu **int**|
+|Set 1: kandidátské funkce, které mají první argument typu **int**|Set 2: kandidátské funkce, které mají druhý argument typu **int**|
 |---------------------------------------------------------------------|----------------------------------------------------------------------|
-|Varianty 2 (**int** lze převést na **dlouhé** pomocí standardního převodu)|Varianty 1 (**int** lze převést na **dlouhé** pomocí standardního převodu)|
+|Variant 2 (**int** se dá převést na **Long** pomocí standardního převodu)|Varianta 1 (**int** se dá převést na **Long** pomocí standardního převodu)|
 
-Protože je určena průsečíkem těmito dvěma sadami je prázdný, kompilátor vygeneruje chybovou zprávu.
+Vzhledem k tomu, že průnik těchto dvou sad je prázdný, kompilátor vygeneruje chybovou zprávu.
 
-Pro argument odpovídající funkce s *n* výchozích argumentů je považován za *n*+ 1 samostatné funkce, každý s různým počtem argumentů.
+Pro porovnání argumentů je funkce s *n* výchozími argumenty považována za *n*+ 1 samostatné funkce, každý s jiným počtem argumentů.
 
-Tlačítko se třemi tečkami (...) slouží jako zástupný znak; odpovídá jakékoli skutečným argumentem. To může vést k mnoha sadách nejednoznačný, pokud nenavrhujte sady přetížené funkce extreme opatrně.
+Tři tečky (...) fungují jako zástupný znak; odpovídá jakémukoli skutečnému argumentu. Může vést k mnoha nejednoznačným sadám, pokud nenavrhnete vaše přetížené sady funkcí s mimořádnou péčí.
 
 > [!NOTE]
->  Nejednoznačnosti přetížených funkcí nelze určit, dokud nebude nalezen volání funkce. Od tohoto okamžiku sady jsou vytvořeny pro každý argument ve volání funkce a můžete určit, zda existuje jednoznačný přetížení. To znamená, že nejednoznačnosti může zůstat ve vašem kódu, dokud jsou evoked podle volání určité funkce.
+>  Nejednoznačnost přetížených funkcí se nedá určit, dokud nezjistíte volání funkce. V tomto okamžiku jsou sady vytvořeny pro každý argument ve volání funkce a můžete určit, zda existuje jednoznačné přetížení. To znamená, že nejednoznačnosti mohou zůstat ve vašem kódu, dokud nejsou evoked pomocí konkrétního volání funkce.
 
 ## <a name="argument-type-differences"></a>Rozdíly typu argumentů
 
 Přetížené funkce rozlišují mezi typy argumentů přijímajícími různé inicializátory. Proto argument daného typu a reference na tento typ jsou pro účely přetížení považovány za totéž. Za shodné jsou považovány, protože přijímají stejné inicializátory. Například zápis `max( double, double )` je považován za shodný se zápisem `max( double &, double & )`. Deklarace dvou takových funkcí způsobí chybu.
 
-Ze stejného důvodu argumenty typu upravil funkce **const** nebo **volatile** nejsou pro účely přetížení zpracovány jinak než jejich základní typy.
+Ze stejného důvodu nejsou argumenty funkce typu upraveného pomocí **const** nebo **volatile** pro účely přetížení zpracovány jinak než základní typ.
 
-Však můžete mechanismus přetěžování funkcí rozlišit mezi referencemi kvalifikovanými **const** a **volatile** a odkazy na základní typy. Umožňuje například následujícího kódu:
+Mechanismus přetěžování funkcí však může rozlišovat mezi odkazy, které jsou kvalifikovány **const** a **volatile** a odkazy na základní typ. K tomu je možné použít následující kód:
 
 ```cpp
 // argument_type_differences.cpp
@@ -227,80 +227,80 @@ Over default constructor
 volatile Over&
 ```
 
-Ukazatele na **const** a **volatile** objekty jsou také považovány za odlišné od ukazatelů na základní typ pro účely přetížení.
+Ukazatele na objekty **const** a **volatile** se také považují za odlišné od ukazatelů na základní typ pro účely přetížení.
 
-## <a name="argument-matching-and-conversions"></a>Porovnávání a převody argumentů
+## <a name="argument-matching-and-conversions"></a>Porovnání argumentů a převody
 
-Kompilátor se pokusí tak, aby odpovídala skutečné argumenty s argumenty v deklaracích funkcí, ho můžete zadat standardní nebo uživatelem definované převody na získat správný typ, pokud může být nenašla se přesná shoda. Aplikace převody se vztahují tato pravidla:
+Když se kompilátor pokusí vyhledat skutečné argumenty proti argumentům v deklaracích funkcí, může zadat standardní nebo uživatelsky definované převody, aby získal správný typ, pokud nelze najít přesnou shodu. Pro aplikaci převodů se vztahují tato pravidla:
 
-- Nejsou považovány za posloupností převody, které obsahují více než jeden uživatelsky definovaný převod.
+- Sekvence převodů, které obsahují více než jeden uživatelsky definovaný převod, se nepovažují za.
 
-- Pořadí převody, které lze zkrátit tak, že odeberete zprostředkující převodů nepovažují.
+- Sekvence převodů, které lze zkrátit odebráním mezilehlého převodu, se nepovažují za.
 
-Výsledné pořadí převody, pokud existuje, se nazývá nejvhodnější pořadí. Existuje několik způsobů, jak převést objekt typu **int** na typ **unsigned long** pomocí standardní převody (popsané v [standardní převody](../cpp/standard-conversions.md)):
+Výsledná sekvence převodů (pokud existuje) se označuje jako nejvhodnější sekvence. Existuje několik způsobů, jak převést objekt typu **int** na typ **unsigned long** pomocí standardních převodů (popsaných v tématu [standardní převody](../cpp/standard-conversions.md)):
 
-- Převod z **int** k **dlouhé** a potom z **dlouhé** k **unsigned long**.
+- Převeďte z **int** na **Long** a pak z **Long** na **unsigned long**.
 
-- Převod z **int** k **unsigned long**.
+- Převod z typu **int** na **unsigned long**.
 
-První pořadí, i když dosahuje požadovaný cíl není nejvhodnější pořadí – existuje kratší pořadí.
+První sekvence, i když dosahuje požadovaného cíle, není nejlepší odpovídající sekvence – existuje kratší sekvence.
 
-V následující tabulce jsou uvedeny skupiny převodů, volá triviální převody, které mají omezenou platnost určující, které pořadí je nejlepší shody. Instance, ve kterých triviální převody mít vliv na výběr pořadí jsou popsány v následující tabulce seznamu.
+Následující tabulka ukazuje skupinu převodů označované jako triviální převody, které mají omezený vliv na určení, která sekvence je nejlepší shodě. Instance, ve kterých jsou možnosti triviálních převodů ovlivněny volbou sekvence, jsou popsány v seznamu následujícím v tabulce.
 
 ### <a name="trivial-conversions"></a>Triviální převody
 
-|Převod z typu|Převést na typ|
+|Převést z typu|Převést na typ|
 |-----------------------|---------------------|
-|*Název typu*|*Název typu* **&**|
-|*Název typu* **&**|*Název typu*|
-|*Název typu* **[] č.**|*Název typu* __\*__|
-|*Název typu* **(** *seznam argumentů* **)**|**(** __\*__ *název typu* **) (** *seznam argumentů* **)**|
-|*Název typu*|**Const** *název typu*|
-|*Název typu*|**volatile** *název typu*|
-|*Název typu* __\*__|**Const** *název typu* __\*__|
-|*Název typu* __\*__|**volatile** *název typu* __\*__|
+|*název typu*|*název typu* **&**|
+|*název typu* **&**|*název typu*|
+|*název typu* **[]**|*název typu* __\*__|
+|*název typu* **(** *argument-seznam* **)**|**(** __\*__ *název typu* **) (** *seznam argumentů* **)**|
+|*název typu*|typ **const** *– název*|
+|*název typu*|typ **volatile** *– název*|
+|*název typu* __\*__|typ **const** *– název* __\*__|
+|*název typu* __\*__|typ **volatile** *– název* __\*__|
 
-Pořadí, ve kterém nedochází k pokusům o převody vypadá takto:
+Pořadí, ve kterém se zkouší převody, je následující:
 
-1. Přesná shoda. Přesná shoda mezi typy, se kterými je volána funkce a typy deklarované v prototypu funkce se vždy nejlepší shodu. Pořadí triviální převody jsou klasifikovány jako přesné shody. Nicméně sekvence, které nechcete provádět tyto převody jsou považovány za lepší než pořadí, které provádějí převod:
+1. Přesná shoda. Přesná shoda mezi typy, se kterými je funkce volána, a typy deklarované v prototypu funkce jsou vždy nejlepší shody. Sekvence triviálních převodů jsou klasifikovány jako přesné shody. Nicméně sekvence, které nevytvářejí žádný z těchto převodů, jsou považovány za lepší než sekvence, které převádějí:
 
-   - Z ukazatele na ukazatel na **const** (`type` <strong>\*</strong> k **const** `type` <strong>\*</strong> ).
+   - Z ukazatele na ukazatel na **const** (`type` <strong>\*</strong> na **const** `type` <strong>\*</strong>).
 
-   - Z ukazatele na ukazatel na **volatile** (`type` <strong>\*</strong> k **volatile** `type` <strong>\*</strong>).
+   - Z ukazatele na ukazatel na **volatile** (`type` <strong>\*</strong> na **volatili** `type` <strong>\*</strong>).
 
-   - Z odkazu, odkaz na **const** (`type` **&** k **const** `type` **&**).
+   - Z odkazu na odkaz na **const** (`type` **&** na **const** `type` **&** ).
 
-   - Z odkazu, odkaz na **volatile** (`type` **&** k **volatile** `type` **&**).
+   - Z reference na odkaz na **volatili** (`type` **&** na **volatili** `type` **&** ).
 
-1. Shodovat s využitím propagační akce. Jakékoli sekvenci není jsou klasifikovány jako obsahující pouze celočíselné povýšení, převody z přesnou shodu **float** k **double**, a jednoduchého dotazu převody klasifikovaný jako shoda pomocí propagačních akcí. I když ne dobře shodu jako jakékoli přesná shoda, je lepší než shoda pomocí standardních převodů shoda pomocí propagačních akcí.
+1. Porovnávání pomocí propagačních akcí. Jakákoli sekvence není klasifikována jako přesná shoda, která obsahuje pouze integrální propagační akce, převody z **typu float** na hodnotu **Double**a triviální převody jsou klasifikovány jako shoda pomocí propagačních akcí. I když není stejně vyhovující porovnávání jako jakákoli přesná shoda, porovnávání pomocí propagačních akcí je lepší než porovnávání pomocí standardních převodů.
 
-1. Porovná pomocí standardních převodů. Všechny sekvence nejsou klasifikovány jako přesnou shodu nebo shodou pomocí propagačních akcí, která obsahuje jenom standardní převody a převody jednoduchého dotazu je klasifikován tak shoda pomocí standardních převodů. V rámci této kategorie se použijí následující pravidla:
+1. Porovnávání pomocí standardních převodů. Jakákoli sekvence, která není klasifikována jako přesná shoda, nebo jako shoda pomocí propagačních akcí, které obsahují pouze standardní převody a triviální převody, jsou klasifikovány jako shoda pomocí standardních převodů. V rámci této kategorie platí následující pravidla:
 
-   - Převod z ukazatele na odvozenou třídu na ukazatel na přímou nebo nepřímou základní třídou je vhodnější pro převod na `void *` nebo `const void *`.
+   - Převod z ukazatele na odvozenou třídu, na ukazatel na přímou nebo nepřímou základní třídu, je vhodnější pro převod na `void *` nebo `const void *`.
 
-   - Převod z ukazatele na odvozenou třídu na ukazatel na základní třídu vytváří lepší shodu, čím blíž je základní třídou přímou základní třídu. Předpokládejme, že hierarchie tříd je, jak je znázorněno na následujícím obrázku.
+   - Převod z ukazatele na odvozenou třídu, na ukazatel na základní třídu, vytvoří lepší shodu s bližším základem základní třídy je přímá základní třída. Předpokládejme, že hierarchie třídy je znázorněna na následujícím obrázku.
 
-![Graf upřednostňované převody](../cpp/media/vc391t1.gif "grafu upřednostňované převody") <br/>
-Graf s informacemi o upřednostňovaný převody
+![Graf upřednostňovaných převodů](../cpp/media/vc391t1.gif "Graf upřednostňovaných převodů") <br/>
+Graf znázorňující preferované převody
 
-Převod z typu `D*` na typ `C*` je vhodnější pro převod z typu `D*` na typ `B*`. Podobně, převod z typu `D*` na typ `B*` je vhodnější pro převod z typu `D*` na typ `A*`.
+Převod typu `D*` na typ `C*` je vhodnější pro převod z typu `D*` na typ `B*`. Podobně převod typu `D*` na typ `B*` je vhodnější pro převod z typu `D*` na typ `A*`.
 
-Tato stejná pravidla platí pro převody odkazů. Převod z typu `D&` na typ `C&` je vhodnější pro převod z typu `D&` na typ `B&`, a tak dále.
+Toto pravidlo se vztahuje na převody odkazů. Převod typu `D&` na typ `C&` je vhodnější pro převod z typu `D&` na typ `B&`a tak dále.
 
-Tato stejná pravidla platí pro převody ukazatele na člena. Převod z typu `T D::*` na typ `T C::*` je vhodnější pro převod z typu `T D::*` na typ `T B::*`, a tak dále (kde `T` je typ člena).
+Toto pravidlo se vztahuje na převody ukazatele na člena. Převod typu `T D::*` na typ `T C::*` je vhodnější pro převod z typu `T D::*` na typ `T B::*`a tak dále (kde `T` je typ členu).
 
-Předchozí pravidlo se vztahuje pouze na dané cestě odvození. Vezměte v úvahu graf je znázorněno na následujícím obrázku.
+Předchozí pravidlo se vztahuje pouze na danou cestu odvození. Vezměte v úvahu graf uvedený na následujícím obrázku.
 
-![Více&#45;dědičnosti, který zobrazuje upřednostňované převody](../cpp/media/vc391t2.gif "více&#45;dědičnosti, který zobrazuje upřednostňované převody") <br/>
-Graf vícenásobné dědičnosti, který zobrazuje upřednostňované převody
+![Vícenásobná&#45;dědičnost, která zobrazuje preferované převody](../cpp/media/vc391t2.gif "Vícenásobná&#45;dědičnost, která zobrazuje preferované převody") <br/>
+Graf vícenásobné dědičnosti, který zobrazuje preferované převody
 
-Převod z typu `C*` na typ `B*` je vhodnější pro převod z typu `C*` na typ `A*`. Důvodem je, že jsou na stejné cestě a `B*` nejblíže. Ale převod z typu `C*` na typ `D*` není vhodnější pro převod na typ `A*`; není žádná předvolba, protože převody podle různých cest.
+Převod typu `C*` na typ `B*` je vhodnější pro převod z typu `C*` na typ `A*`. Důvodem je, že jsou na stejné cestě a `B*` je blíž. Převod typu `C*` na typ `D*` však není vhodnější pro převod na typ `A*`; k dispozici není žádná preference, protože převody následují jiné cesty.
 
-1. Porovná s uživatelem definovaných převodů. Toto pořadí nelze zařadit jako přesná shoda, shoda pomocí propagační akce nebo shodou pomocí standardních převodů. Sekvence musí obsahovat pouze uživatelem definované převody, standardní převody nebo triviální převody na se považoval za shodu s uživatelem definovaných převodů. Shoda s uživatelem definované převody se považuje za lepší shody než shody s třemi tečkami, ale ne dobře shoda jako shoda s standardní převody.
+1. Porovnává s uživatelem definovanými převody. Tato sekvence nemůže být klasifikována jako přesná shoda, porovnávání pomocí propagačních akcí, nebo porovnávání pomocí standardních převodů. Sekvence musí obsahovat pouze uživatelsky definované převody, standardní převody nebo triviální převody, které mají být klasifikovány jako shoda s uživatelem definovanými převody. Porovnávání s uživatelsky definovanými převody se považuje za lepší shodu než shoda se třemi tečkami, ale ne jako vyhovující porovnávání se standardními převody.
 
-1. Porovná se třemi tečkami. Všechny sekvence, která odpovídá tři tečky v deklaraci je klasifikován tak shody s třemi tečkami. Má se za to, které nejslabší shoda.
+1. Porovnává se třemi tečkami. Libovolná sekvence, která odpovídá třem teček v deklaraci, je klasifikována jako shoda se třemi tečkami. Je považována za slabou shodu.
 
-Uživatelem definované konverze se použijí, pokud neexistuje žádný převod ani integrovanou podporu. Tyto převody jsou vybrána na základě typu argumentu je nalezena shoda. Vezměte v úvahu následující kód:
+Uživatelem definované převody jsou aplikovány, pokud neexistuje žádná předdefinovaná propagace nebo převod. Tyto převody jsou vybrány na základě typu argumentu, který odpovídá. Vezměte v úvahu následující kód:
 
 ```cpp
 // argument_matching1.cpp
@@ -326,9 +326,9 @@ int main()
 }
 ```
 
-K dispozici uživatelem definované převody pro třídu `UDC` jsou z typu **int** a typ **dlouhé**. Proto kompilátor považuje převody pro typ objektu je nalezena shoda: `UDC`. Převod na **int** existuje, a že je vybraná.
+Dostupné uživatelsky definované převody pro třídu `UDC` jsou typu **int** a typu **Long**. Proto kompilátor považuje převody pro typ objektu, který odpovídá: `UDC`. Existuje převod na **int** a je vybrán.
 
-Během procesu porovnávání argumentů lze použít standardní převody na argument a výsledkem uživatelsky definovaný převod. Proto následující kód funguje:
+Během procesu porovnání argumentů lze standardní převody použít jak pro argument, tak pro výsledek uživatelsky definovaného převodu. Proto následující kód funguje:
 
 ```cpp
 void LogToFile( long l );
@@ -337,9 +337,9 @@ UDC udc;
 LogToFile( udc );
 ```
 
-V předchozím příkladu, uživatelem definovaný převod **operátor long**, je vyvolána k převodu `udc` na typ **dlouhé**. Pokud žádný uživatelem definovaný převod na typ **dlouhé** byla definována, převod bude pokračovat následujícím způsobem: Typ `UDC` by byl převeden na typ **int** pomocí uživatelsky definovaný převod. Potom standardní převod z typu **int** na typ **dlouhé** by se použily tak, aby odpovídaly argument v deklaraci.
+V předchozím příkladu je vyvolán uživatelem definovaný převod **operátor Long**, který převede `udc` na typ **Long**. Pokud nebyl definován uživatelsky definovaný převod na typ **Long** , převod by byl proveden takto: typ `UDC` by byl převeden na typ **int** pomocí uživatelem definovaného převodu. Pak bude standardní převod z typu **int** na typ **Long** použit tak, aby odpovídal argumentu v deklaraci.
 
-Pokud jsou všechny uživatelem definované převody vyžadovaný pro shodu argument, nejsou standardní převody použitý při vyhodnocení nejlepší shodu. I v případě, že více než jednu funkci Release candidate vyžaduje uživatelsky definovaný převod, funkce jsou považovány za stejné. Příklad:
+Pokud jsou vyžadovány uživatelsky definované převody, které odpovídají argumentu, nejsou standardní převody použity při vyhodnocování nejlepší shody. I v případě, že více než jedna kandidátská funkce vyžaduje uživatelem definovaný převod, jsou funkce považovány za stejné. Příklad:
 
 ```cpp
 // argument_matching2.cpp
@@ -365,26 +365,26 @@ int main()
 }
 ```
 
-Obě verze `Func` vyžadují uživatelsky definovaný převod na typ převést **int** na argument typu třídy. Je to možné převody jsou:
+Obě verze `Func` vyžadují uživatelem definovaný převod na převod typu **int** na argument typu třídy. Možné převody:
 
-- Převod z typu **int** na typ `UDC1` (uživatelem definovaný převod).
+- Převést typ **int** na typ `UDC1` (uživatelem definovaný převod).
 
-- Převod z typu **int** na typ **dlouhé**; potom převést na typ `UDC2` (dvoustupňové převod).
+- Převést typ **int** na typ **Long**; pak proveďte převod na typ `UDC2` (převod na dva kroky).
 
-I když je druhý řádek vyžaduje standardní převod a uživatelsky definovaný převod, dva převody jsou stále považovány za shodné.
+I když druhá z nich vyžaduje standardní převod i uživatelsky definovaný převod, jsou tyto dva převody stále považovány za stejné.
 
 > [!NOTE]
->  Uživatelem definované převody jsou považovány za převod konstrukce nebo převod pomocí inicializace (funkce pro převod). Obě metody jsou považovány za shodné při zvažování nejlepší shodu.
+>  Uživatelsky definované převody se považují za převod pomocí konstrukce nebo převodu inicializací (funkce pro převod). Obě metody jsou považovány za stejné při zvažování nejlepší shody.
 
-## <a name="argument-matching-and-the-this-pointer"></a>Porovnávání argumentů a tento ukazatel
+## <a name="argument-matching-and-the-this-pointer"></a>Shoda argumentů a ukazatel this
 
-Členské funkce tříd jsou zpracovávány jinak v závislosti na tom, zda jsou deklarovány jako **statické**. Protože mají nestatické funkce implicitní argument, který poskytuje **to** ukazatel myši, funkce jsou považovány za jeden argument více oproti statickým funkcím; v opačném případě jsou deklarovány shodně.
+Členské funkce třídy jsou zpracovány odlišně v závislosti na tom, zda jsou deklarovány jako **statické**. Vzhledem k tomu, že nestatické funkce mají implicitní argument, který poskytuje **Tento** ukazatel, nestatické funkce jsou považovány za jeden argument než statické funkce; v opačném případě jsou deklarovány stejným způsobem.
 
-Tyto nestatické členské funkce vyžadují, aby implicitní **to** ukazatel odpovídat typu objektu, jejímž prostřednictvím je funkce volána, nebo pro přetížené operátory, vyžadují, že první argument shodoval s objektem, na kterém operátor použit. (Další informace o přetížených operátorech naleznete v tématu [přetížené operátory](../cpp/operator-overloading.md).)
+Tyto nestatické členské funkce vyžadují, aby **Tento** ukazatel odpovídal typu objektu, pomocí kterého je funkce volána, nebo pro přetížené operátory vyžadují, aby se první argument shodoval s objektem, ve kterém je operátor použit. (Další informace o přetížených operátorech naleznete v tématu [přetížené operátory](../cpp/operator-overloading.md).)
 
-Na rozdíl od ostatních argumentů v přetížených funkcí jsou zavedeny žádné dočasné objekty a žádné převody nedochází k pokusům o při pokusu o shodu **to** argument typu ukazatel.
+Na rozdíl od jiných argumentů v přetížených funkcích nejsou zavedeny žádné dočasné objekty a při pokusu o shodu s **tímto** argumentem ukazatele se nezkouší žádné převody.
 
-Když `->` operátoru výběru členů se používá pro přístup k členské funkce třídy `class_name`, **to** má argument ukazatele typu `class_name * const`. Pokud členů jsou deklarovány jako **const** nebo **volatile**, jsou tyto typy `const class_name * const` a `volatile class_name * const`v uvedeném pořadí.
+Když je pro přístup k členské funkci třídy `class_name`použit operátor výběru členů `->`, má **Tento** argument ukazatele typ `class_name * const`. Pokud jsou členy deklarovány jako **const** nebo **volatile**, typy jsou `const class_name * const` a `volatile class_name * const`, v uvedeném pořadí.
 
 Operátor volby členu `.` funguje přesně stejným způsobem s výjimkou, že je před název objektu přidán implicitní operátor `&` (adresa). Následující příklad ukazuje tuto funkci:
 
@@ -396,11 +396,11 @@ obj.name
 (&obj)->name
 ```
 
-Levý operand `->*` a `.*` operátory (ukazatel na člen) jsou zpracovány stejně jako `.` a `->` operátory (volba členu) s ohledem na odpovídající argument.
+Levý operand operátorů `->*` a `.*` (ukazatel na člen) se zpracovává stejným způsobem jako operátory `.` a `->` (člen výběru členů) s ohledem na shodu argumentů.
 
-## <a name="ref-qualifiers"></a> Kvalifikátory REF pro členské funkce
+## <a name="ref-qualifiers-on-member-functions"></a><a name="ref-qualifiers"></a>Kvalifikátory ref pro členské funkce
 
-Kvalifikátory REF umožňují přetížit členskou funkci na základě Určuje, zda objekt, na který podle **to** rvalue nebo l-hodnota.  Tato funkce umožňuje vyhnout se zbytečnému kopírování ve scénářích kde rozhodnete poskytnout ukazatel přístup k datům. Předpokládejme například, třída `C` inicializuje některá data ve svých konstruktorech a vrátí kopii těchto dat v členské funkci `get_data()`. Pokud objekt typu `C` je r-hodnota, která se chystá zničeny, a kompilátor zvolí `get_data() &&` přetížení, které se provádí přesun dat, spíše než zkopírovat.
+Kvalifikátory ref umožňují přetížit členskou funkci na základě toho, zda objekt, na který odkazuje **, je rvalue** nebo lvalue.  Tato funkce se dá použít k tomu, aby nedocházelo k zbytečným operacím kopírování ve scénářích, kdy se rozhodnete neposkytovat přístup k datům pomocí ukazatele. Předpokládejme například, že třída `C` inicializuje některá data v konstruktoru a vrátí kopii těchto dat v rámci členské funkce `get_data()`. Pokud je objekt typu `C` rvalue, který má být zničen, pak kompilátor zvolí `get_data() &&` přetížení, které přesune data namísto kopírování.
 
 ```cpp
 #include <iostream>
@@ -437,23 +437,23 @@ int main()
 }
 ```
 
-## <a name="restrictions-on-overloading"></a>Omezení přetížení
+## <a name="restrictions-on-overloading"></a>Omezení při přetížení
 
-Několik omezení řízení přijatelné sadu přetížených funkcí:
+Několik omezení řídí přijatelnou sadu přetížených funkcí:
 
-- Jakékoli dvě funkce sadu přetížených funkcí musí mít seznamy argumentů s jinou.
+- Všechny dvě funkce v sadě přetížených funkcí musí mít různé seznamy argumentů.
 
-- Přetížení funkce se seznamy argumentů stejné typy založené na návratový typ samostatně, je chybou.
+- Přetížení funkcí se seznamy argumentů stejného typu, na základě samotného návratového typu, je chyba.
 
-     **Microsoft Specific**
+     **Specifické pro společnost Microsoft**
 
-Můžete použít přetížení **operátor new** výhradně na základě těchto návratový typ – konkrétně na základě modelu paměti modifikátor zadán.
+Můžete přetížit **operátor New** výhradně na základě návratového typu – konkrétně na základě určeného modifikátoru paměťového modelu.
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
-- Členské funkce nemohou být přetíženy pouze na základě jeden je statická a dalších nestatické.
+- Členské funkce nemohou být přetíženy pouze na základě statické a jiné nestatické.
 
-- **Definice TypeDef** deklarace nemá definován nové typy; přinášejí synonyma pro existující typy. Neovlivňují mechanismu přetížení. Vezměte v úvahu následující kód:
+- deklarace **typedef** nedefinují nové typy; představují synonyma pro existující typy. Neovlivňují mechanismus přetížení. Vezměte v úvahu následující kód:
 
     ```cpp
     typedef char * PSTR;
@@ -462,18 +462,18 @@ Můžete použít přetížení **operátor new** výhradně na základě těcht
     void Print( PSTR szToPrint );
     ```
 
-   Předchozí dvě funkce mít seznamy argumentů identické. `PSTR` je synonymum pro typ `char *`. Tento kód v oboru člena, vygeneruje chybu.
+   Předchozí dvě funkce mají stejné seznamy argumentů. `PSTR` je synonymum pro typ `char *`. V oboru člena tento kód vygeneruje chybu.
 
-- Výčtové typy jsou různé typy a slouží k rozlišení mezi přetížených funkcí.
+- Výčtové typy jsou odlišné typy a lze je použít k rozlišení mezi přetíženými funkcemi.
 
-- Typy "pole" a "ukazatel na" jsou považovány za shodné pro rozlišování mezi přetížených funkcí, ale pouze pro účely jednotlivě dimenzovanými pole. To je důvod, proč jsou v konfliktu těchto přetížených funkcí a generovat chybovou zprávu:
+- Typy "pole typu" a "ukazatel na" jsou považovány za identické pro účely rozlišování mezi přetíženými funkcemi, ale pouze pro pole s dimenzemi v jednom poli. To je důvod, proč tyto přetížené funkce kolidují a generují chybovou zprávu:
 
     ```cpp
     void Print( char *szToPrint );
     void Print( char szToPrint[] );
     ```
 
-   Pro vícenásobně rozměry pole dimenze druhé a všechny následné jsou považovány za součást typu. Proto jsou použity v přetížené funkce rozlišování:
+   Pro násobení polí dimenzí se sekunda a všechny následující dimenze považují za součást typu. Proto se používají při odlišení mezi přetíženými funkcemi:
 
     ```cpp
     void Print( char szToPrint[] );
@@ -481,15 +481,15 @@ Můžete použít přetížení **operátor new** výhradně na základě těcht
     void Print( char szToPrint[][9][42] );
     ```
 
-## <a name="overloading-overriding-and-hiding"></a>Přetížení, přepisování a skrývání
+## <a name="overloading-overriding-and-hiding"></a>Přetížení, přepsání a skrytí
 
 Jakékoli dvě deklarace funkcí se stejným názvem ve stejném oboru mohou odkazovat na stejnou funkci nebo na dvě samostatné funkce, které jsou přetížené. Pokud seznam deklarací argumentu obsahuje argumenty ekvivalentních typů (jak je popsáno v předchozí části), deklarace funkce odkazují na stejnou funkci. V opačném případě odkazují na dvě různé funkce, které jsou vybrány pomocí přetížení.
 
-Obor třídy je přísně pozorované; Proto se funkce deklarovaná v základní třídě není ve stejném oboru jako funkce deklarovaná v odvozené třídě. Pokud je funkce v odvozené třídě deklarována se stejným názvem jako virtuální funkce v základní třídě, funkce odvozené třídy *přepíše* funkci základní třídy. Další informace najdete v tématu [virtuální funkce](../cpp/virtual-functions.md).
+Obor třídy je striktně pozorován; Proto funkce deklarovaná v základní třídě není ve stejném oboru jako funkce deklarovaná v odvozené třídě. Je-li funkce v odvozené třídě deklarována se stejným názvem jako virtuální funkce v základní třídě, *přepíše* funkce odvozené třídy funkci základní třídy. Další informace najdete v tématu [virtuální funkce](../cpp/virtual-functions.md).
 
-Pokud není deklarován jako virtuální funkce základní třídy, pak funkce odvozené třídy se říká, že *skrýt* ho. Jak přepisování a skrývání se liší od přetížení.
+Pokud není funkce základní třídy deklarována jako ' Virtual ', pak funkce odvozené třídy je pro její *skrytí* uvedena. Přepisování i skrývání se liší od přetížení.
 
-Obor bloku je přísně pozorované; Proto se funkce deklarovaná v rozsahu souboru není ve stejném oboru jako funkce deklarovaná místně. Pokud má funkce deklarovaná místně stejný název jako funkce deklarovaná v rozsahu souboru, funkce deklarovaná místně skryje funkci s rozsahem souboru místo toho, aby způsobila přetížení. Příklad:
+Rozsah bloku je striktně pozorován; Proto funkce deklarovaná v rozsahu souboru není ve stejném oboru jako funkce deklarovaná místně. Pokud má funkce deklarovaná místně stejný název jako funkce deklarovaná v rozsahu souboru, funkce deklarovaná místně skryje funkci s rozsahem souboru místo toho, aby způsobila přetížení. Příklad:
 
 ```cpp
 // declaration_matching1.cpp
@@ -517,13 +517,13 @@ int main()
 }
 ```
 
-Předchozí kód zobrazí dvě definice z funkce `func`. Definice, která přebírá argument typu `char *` je lokální vzhledem k `main` z důvodu **extern** příkazu. Proto je definice, která přebírá argument typu **int** je skrytá a při prvním volání do `func` došlo k chybě.
+Předchozí kód zobrazí dvě definice z funkce `func`. Definice, která přebírá argument typu `char *`, je místní pro `main` v důsledku příkazu **extern** . Proto je definice, která přebírá argument typu **int** , skrytá a první volání `func` je chyba.
 
 U přetížených členských funkcí lze různým verzím funkce předat různá přístupová oprávnění. Tyto jsou stále považovány za součást oboru nadřazené třídy, a jsou tedy přetíženými funkcemi. Uvažujme následující kód, ve kterém je členská funkce `Deposit` přetížena. Jedna verze je veřejná, druhá soukromá.
 
-Záměrem tohoto příkladu je poskytnout třídu `Account`, ve které je požadováno správné heslo pro provedení vkladů. To se provádí pomocí přetížení.
+Záměrem tohoto příkladu je poskytnout třídu `Account`, ve které je požadováno správné heslo pro provedení vkladů. Provádí se pomocí přetížení.
 
-Volání `Deposit` v `Account::Deposit` volá funkci soukromého členu. Toto volání je správné protože `Account::Deposit` je členská funkce, a má přístup k soukromým členům třídy.
+Volání `Deposit` v `Account::Deposit` volá soukromou členskou funkci. Toto volání je správné, protože `Account::Deposit` je členskou funkcí a má přístup k soukromým členům třídy.
 
 ```cpp
 // declaration_matching2.cpp
@@ -569,6 +569,6 @@ double Account::Deposit( double dAmount, char *szPassword )
 }
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Funkce (C++)](../cpp/functions-cpp.md)

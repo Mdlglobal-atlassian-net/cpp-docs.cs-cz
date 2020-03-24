@@ -1,25 +1,25 @@
 ---
-title: Organizace zdrojového kódu (šablony C++)
+title: Organizace zdrojového kódu (C++ šablony)
 ms.date: 04/22/2019
 ms.assetid: 50569c5d-0219-4966-9bcf-a8689074ad1d
-ms.openlocfilehash: 1933758e47f2fcc0b63f0d16809591b932501854
-ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
+ms.openlocfilehash: 76898d04e5f9f0576898eb40945b7718c650d71a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65611390"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178727"
 ---
-# <a name="source-code-organization-c-templates"></a>Organizace zdrojového kódu (šablony C++)
+# <a name="source-code-organization-c-templates"></a>Organizace zdrojového kódu (C++ šablony)
 
-Při definování šablony třídy, musí organizovat zdrojový kód tak, že definice členů jsou viditelné pro kompilátor, když je nutné je.   Máte na výběr mezi používáním *zahrnutí modelu* nebo *explicitní vytváření instancí* modelu. V zařazení modelu zahrnete definice členů do každého souboru, který používá šablonu. Tento přístup je nejjednodušší a poskytuje maximální flexibilitu z hlediska konkrétní typy lze použít s vaší šablony. Jeho nevýhodou je, že můžete zvýšit dobu kompilace. Může být důležité, pokud projekt dopad a/nebo jsou velké zahrnuté soubory sami. S tímto přístupem explicitní vytváření instancí samotné šablony vytvoří instance konkrétní třídy nebo členy třídy pro konkrétní typy.  Tento přístup může zrychlit dobu kompilace, ale omezuje využití a pouze třídy, které šablony implementátora povolila předem. Obecně platí doporučujeme vám použít model zařazení, pokud časy kompilace stane problém.
+Při definování šablony třídy je nutné organizovat zdrojový kód takovým způsobem, že definice členů jsou pro kompilátor viditelné, když je potřebuje.   Můžete zvolit použití *modelu zahrnutí* nebo *explicitního modelu vytváření instancí* . V modelu zahrnutí zahrnete definice členů do každého souboru, který používá šablonu. Tento přístup je nejjednodušší a poskytuje maximální flexibilitu z hlediska toho, jaké konkrétní typy lze s vaší šablonou použít. Nevýhodou je, že může prodloužit dobu kompilace. Dopad může být významný v případě, že projekt nebo samotné vložené soubory jsou velké. Pomocí explicitního přístupu k vytváření instancí vlastní šablona vytváří instance konkrétních tříd nebo členů třídy pro konkrétní typy.  Tento přístup může zrychlit dobu kompilace, ale omezuje využití jenom na ty třídy, které implementátora šablony povolil před časem. Obecně doporučujeme, abyste používali model zahrnutí, pokud se neobjeví Chyba kompilace.
 
-## <a name="background"></a>Pozadí
+## <a name="background"></a>Podrobnosti
 
-Šablony nejsou stejně jako běžné třídy v tom smyslu, že kompilátor negeneruje objektový kód pro šablony nebo kterýkoli z jejích členů. Není nutné nic generovat dokud šablona není vytvořena s konkrétní typy. Když kompilátor narazí vytváření instancí šablon, jako `MyClass<int> mc;` a žádná třída s podpisu ještě neexistuje, vytvoří novou třídu. Pokusí se také pro generování kódu pro všechny členské funkce, které se používají. Pokud jsou tyto definice v souboru, který není #included, přímo nebo nepřímo, soubor .cpp, který je kompilován, kompilátor nemůže zobrazit.  Z kompilátoru tato akce není nutně chybu protože funkce může být definován v jiné jednotce překladu, ve kterém bude případ linker je najít.  Pokud linker nenajde, že kód, vyvolá **nevyřešené externí** chyby.
+Šablony nejsou jako běžné třídy v tom smyslu, že kompilátor negeneruje kód objektu pro šablonu nebo žádné z jejích členů. Není nic k vygenerování, dokud není vytvořena instance šablony se konkrétními typy. Když kompilátor narazí na instanci šablony, jako je `MyClass<int> mc;`, a zatím neexistuje žádná třída s tímto podpisem, vygeneruje novou třídu. Také se pokusí vygenerovat kód pro jakékoli členské funkce, které jsou použity. Pokud jsou tyto definice v souboru, který není #included, přímo nebo nepřímo, v souboru. cpp, který je kompilován, kompilátor je nemůže zobrazit.  Z pohledu kompilátoru není to nutně chyba, protože funkce mohou být definovány v jiné jednotce překladu, v takovém případě je linker nalezne.  Pokud linker tento kód nenajde, vyvolá **nevyřešenou externí** chybu.
 
-## <a name="the-inclusion-model"></a>Zahrnutí modelu
+## <a name="the-inclusion-model"></a>Model zahrnutí
 
-Nejběžnější a nejjednodušší způsob, jak zviditelnit definice šablon v celé jednotky převodu, je umístění definice v samotném souboru záhlaví.  Libovolný soubor .cpp, který používá šablonu jednoduše musí #include záhlaví. Toto je metoda použitá ve standardní knihovně.
+Nejjednodušší a nejběžnější způsob, jak vytvořit definice šablon v rámci jednotky překladu, je umístit definice do samotného souboru hlaviček.  Libovolný soubor. cpp, který používá šablonu, má jednoduše #include hlavičce. Toto je přístup, který se používá ve standardní knihovně.
 
 ```cpp
 #ifndef MYARRAY
@@ -49,13 +49,13 @@ public:
 #endif
 ```
 
-S tímto přístupem kompilátor má přístup k definici úplnou šablonu a lze vytvořit instanci šablony na žádost pro libovolného typu. Je to jednoduché a je poměrně snadné ho spravovat. Model zahrnutí však mají svou cenu z hlediska časy kompilace.   Tyto náklady můžou být významné v velkých programech, zejména v případě záhlaví šablony #includes jiné záhlaví. Každý .cpp soubor, který #includes záhlaví získá vlastní kopii šablony funkce a všech definic. Linker obecně budou moci seřadí věci tak, že není skončit s více definic pro funkci, ale může zabrat určitý čas provést tuto práci. Programy menší čas navíc kompilace je pravděpodobně není důležité.
+S tímto přístupem má kompilátor přístup k kompletní definici šablony a může vytvářet instance šablon na vyžádání pro libovolný typ. Údržba je jednoduchá a poměrně snadná. Model zahrnutí ale má za následek náklady na období kompilace.   Tyto náklady mohou být významné ve velkých programech, zejména pokud záhlaví samotné šablony #includes jiné hlavičky. Každý soubor. cpp, který #includes hlavičce, získá svoji vlastní kopii šablon funkcí a všech definic. Linker bude obecně schopný řadit objekty tak, že nekončí více definicí funkce, ale tato práce trvá déle. V menších programech, které ještě delší dobu kompilace pravděpodobně nejsou významné.
 
-## <a name="the-explicit-instantiation-model"></a>Explicitní vytváření instancí modelu
+## <a name="the-explicit-instantiation-model"></a>Model explicitního vytváření instancí
 
-Pokud model zařazení není vhodným pro váš projekt a konečně víte sadu typů, které se použije k vytvoření instance šablony, můžete oddělit kód šablony do souboru .h a .cpp a v souboru .cpp explicitně vytvořit instanci šablony. To způsobí vygenerování objektový kód, které kompilátor uvidí, když zjistí uživatele instancí.
+Pokud model zahrnutí není pro váš projekt životaschopný a znáte konečně sadu typů, které budou použity k vytvoření instance šablony, můžete oddělit kód šablony do souboru. h a. cpp a v souboru. cpp explicitně vytvořit instanci šablon. Tím dojde k vygenerování kódu objektu, který bude kompilátor zobrazovat, když dojde k vytváření instancí uživatele.
 
-Explicitní vytváření instancí vytvoříte pomocí šablony – klíčové slovo, za nímž následuje podpis metody, kterou chcete vytvořit instanci entity. To může být typ nebo člen. Pokud explicitně vytvořit instanci typu, jsou všechny členy instance.
+Explicitní vytváření instancí vytvoříte pomocí šablony klíčového slova následovaný signaturou entity, kterou chcete vytvořit. Může to být typ nebo člen. Je-li explicitně vytvořena instance typu, jsou vytvořeny instance všech členů.
 
 ```cpp
 template MyArray<double, 5>;
@@ -99,7 +99,7 @@ void MyArray<T,N>::Print()
 template MyArray<double, 5>;template MyArray<string, 5>;
 ```
 
-V předchozím příkladu jsou i explicitní vytváření instancí v dolní části souboru .cpp. A `MyArray` slouží pouze pro **double** nebo `String` typy.
+V předchozím příkladu jsou explicitní vytváření instancí na konci souboru. cpp. `MyArray` lze použít pouze pro typ **Double** nebo `String`.
 
 > [!NOTE]
-> V C ++ 11 **exportovat** – klíčové slovo se přestala nabízet v rámci definice šablony. V praxi má malý vliv, protože většina kompilátorů nikdy podporována.
+> V jazyce C++ 11 bylo klíčové slovo **Export** zastaralé v kontextu definic šablon. V praktických výrazech má tento malý dopad, protože většina kompilátorů ji nikdy nepodporuje.

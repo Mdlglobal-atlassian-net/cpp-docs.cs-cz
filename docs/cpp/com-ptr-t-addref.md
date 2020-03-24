@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - AddRef method [C++], interface pointers
 ms.assetid: c104dac3-aad3-40bb-a298-75c6cd0e63a2
-ms.openlocfilehash: 7408b5c174f76673b56caffd56aaa87895bd08d4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 51182b461aeac83c12bb18a573a49b2d4347a190
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154939"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80189923"
 ---
-# <a name="comptrtaddref"></a>_com_ptr_t::AddRef
+# <a name="_com_ptr_taddref"></a>_com_ptr_t::AddRef
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
-Volání `AddRef` členskou funkci `IUnknown` na zapouzdřený ukazatel rozhraní.
+Volá `AddRef` členskou funkci `IUnknown` na ukazatel zapouzdřeného rozhraní.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -27,10 +27,10 @@ void AddRef( );
 
 ## <a name="remarks"></a>Poznámky
 
-Volání `IUnknown::AddRef` na zapouzdřený ukazatel rozhraní, vyvolání `E_POINTER` chyby, pokud je ukazatel NULL.
+Volá `IUnknown::AddRef` na ukazatel zapouzdřeného rozhraní a vyvolává chybu `E_POINTER`, pokud má ukazatel hodnotu NULL.
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [_com_ptr_t – třída](../cpp/com-ptr-t-class.md)

@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3771
 ms.assetid: 68c23b25-7f21-4eaa-8f7e-38fda1130a69
-ms.openlocfilehash: 6b15d867bbaf66f511cbda200d692f5db4371ab3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6c29ad6007d33c43ae1e4758ae05caa9109053e3
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400159"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80165727"
 ---
 # <a name="compiler-error-c3771"></a>Chyba kompilátoru C3771
 
-"identifikátor": deklarace typu friend se nenašel v nejbližším oboru oborů
+identifikátor: deklarace typu Friend se v nejbližším oboru oboru názvů nedá najít.
 
-Deklarace šablony třídy pro zadanou šablonu *identifikátor* nebyl nalezen v aktuálním oboru názvů.
+V aktuálním oboru názvů nelze nalézt deklaraci šablony třídy pro zadaný *identifikátor* šablony.
 
 ### <a name="to-correct-this-error"></a>Oprava této chyby
 
@@ -25,7 +25,7 @@ Deklarace šablony třídy pro zadanou šablonu *identifikátor* nebyl nalezen v
 
 ## <a name="example"></a>Příklad
 
-Následující příklad kódu deklaruje šablony třídy a funkce v oboru názvů `NA`, pokusí se deklarace typu friend šablony funkce v oboru názvů, ale `NB`.
+Následující příklad kódu deklaruje šablonu třídy a funkci v oboru názvů `NA`, ale pokusí se deklarovat šablonu funkce Friend v oboru názvů `NB`.
 
 ```cpp
 // C3771.cpp
@@ -47,6 +47,6 @@ namespace NB {
 }
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Šablony](../../cpp/templates-cpp.md)

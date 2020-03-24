@@ -10,16 +10,16 @@ helpviewer_keywords:
 - arguments [C++], default
 - defaults [C++], arguments
 ms.assetid: d32cf516-05cb-4d4d-b169-92f5649fdfa2
-ms.openlocfilehash: 5ffc0301e7a89a379a2ea1eda9a113276df7a88e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0202aaca47964f8923aa57d84515dc70ae8c8a2d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154513"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80189543"
 ---
 # <a name="default-arguments"></a>Výchozí argumenty
 
-V mnoha případech obsahují funkce argumenty, které jsou tak zřídka používané, že bude stačit výchozí hodnota. Zařízení výchozího argumentu umožňuje zadání pouze těch argumentů funkce, které mají v daném volání význam. Pro ilustraci tohoto konceptu Uvažujme příklad uvedený v [přetížení funkce](../cpp/function-overloading.md).
+V mnoha případech obsahují funkce argumenty, které jsou tak zřídka používané, že bude stačit výchozí hodnota. Zařízení výchozího argumentu umožňuje zadání pouze těch argumentů funkce, které mají v daném volání význam. Pro ilustraci tohoto konceptu zvažte příklad uvedený v části [přetížení funkce](../cpp/function-overloading.md).
 
 ```cpp
 // Prototype three print functions.
@@ -38,7 +38,7 @@ int print( double dvalue, int prec=2 );  // Print a double with a
 //  given precision.
 ```
 
-Provádění `print` funkce se mírně změní tak, aby odrážely skutečnost, že existuje pouze jedna funkce pro typ **double**:
+Implementace funkce `print` se mírně změnila tak, aby odrážela skutečnost, že existuje pouze jedna taková funkce pro typ **Double**:
 
 ```cpp
 // default_arguments.cpp

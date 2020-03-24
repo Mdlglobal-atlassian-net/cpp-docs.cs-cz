@@ -20,12 +20,12 @@ helpviewer_keywords:
 - MAX_DIR constant
 - MAX_EXT constant
 ms.assetid: 2b5d0e43-1347-45b4-8397-24a8a45c444e
-ms.openlocfilehash: 89609de3fc5584a960480bff83566f5e38c8be1f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8db9961bd2d5b5b3ea9d3addad3c26737b4f5199
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62342481"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171395"
 ---
 # <a name="path-field-limits"></a>Omezení pole cesty
 
@@ -37,19 +37,19 @@ ms.locfileid: "62342481"
 
 ## <a name="remarks"></a>Poznámky
 
-Tyto konstanty určit maximální délku pro cestu a pro jednotlivá pole v této cestě.
+Tyto konstanty definují maximální délku cesty a pro jednotlivá pole v rámci cesty.
 
-|Konstanta|Význam|
+|Trvalé|Význam|
 |--------------|-------------|
 |`_MAX_DIR`|Maximální délka součásti adresáře|
 |`_MAX_DRIVE`|Maximální délka součásti jednotky|
 |`_MAX_EXT`|Maximální délka součásti rozšíření|
-|`_MAX_FNAME`|Maximální délka názvu souboru součásti|
+|`_MAX_FNAME`|Maximální délka součásti filename|
 |`_MAX_PATH`|Maximální délka úplné cesty|
 
 > [!NOTE]
-> Modul Runtime jazyka C podporuje délky cesty až 32768 znaků dlouhé, ale je operační systém, konkrétně systému souborů, pro podporu těchto cest delší dobu. Součet z polí by neměly být delší než `_MAX_PATH` úplného zpětnou kompatibilitu s FAT32 systémů souborů. Systém souborů Windows NTFS podporuje cesty až 32768 znaků délku, ale jenom při použití rozhraní API pro kódování Unicode. Při použití dlouhé názvy cest, předponová cesta se znaky \\ \\? \ a používat Unicode verze funkce C Runtime.
+> Modul runtime jazyka C podporuje délku cesty až 32768 znaků, ale je až do operačního systému, konkrétně do systému souborů, aby podporoval tyto delší cesty. Součet polí by neměl překročit `_MAX_PATH` pro úplnou zpětnou kompatibilitu se systémy souborů FAT32. Systém souborů NTFS systému Windows podporuje cesty dlouhé až 32768 znaků, ale pouze při použití rozhraní Unicode API. Při použití dlouhých názvů cest použijte předponu cesty se znaky \\\\? \ a používejte verze Unicode běhových funkcí jazyka C.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Globální konstanty](../c-runtime-library/global-constants.md)

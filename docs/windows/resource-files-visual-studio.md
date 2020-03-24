@@ -24,12 +24,12 @@ helpviewer_keywords:
 - files [C++], editable types
 - resource editing
 ms.assetid: 4d2b6fcc-07cf-4289-be87-83a60f69533c
-ms.openlocfilehash: b66a207766962856cc4d7181607868c2a48ebe84
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 087cd613fa0dfd9cb6e07ac47a6a38d63bba004e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69513656"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167872"
 ---
 # <a name="resource-files-c"></a>Zdrojové soubory (C++)
 
@@ -46,11 +46,11 @@ Termínový *soubor prostředků* může odkazovat na určitý počet typů soub
 
 - Jednotlivý prostředek existuje jako samostatný soubor. Tento typ zahrnuje rastrový obrázek, ikonu nebo soubor kurzoru, který je odkazován ze souboru. rc.
 
-- Hlavičkový soubor generovaný vývojovým prostředím. Tento typ zahrnuje `Resource.h`, je odkazováno ze souboru. rc.
+- Hlavičkový soubor generovaný vývojovým prostředím. Tento typ zahrnuje `Resource.h`, na které se odkazuje ze souboru. rc.
 
 Prostředky nalezené v jiných typech souborů, jako je například. exe,. dll nebo soubory. res, jsou označovány jako *prostředky*.
 
-Můžete pracovat se *soubory prostředků* a *prostředky* v rámci projektu. Můžete také pracovat s těmi, které nejsou součástí aktuálního projektu nebo byly vytvořeny mimo vývojové prostředí sady Visual Studio. Můžete například:
+Můžete pracovat se *soubory prostředků* a *prostředky* v rámci projektu. Můžete také pracovat s těmi, které nejsou součástí aktuálního projektu nebo byly vytvořeny mimo vývojové prostředí sady Visual Studio. Můžete například provést následující věci:
 
 - Pracujte s vnořenými a podmíněně zahrnutými soubory prostředků.
 
@@ -108,7 +108,7 @@ V C++ desktopových projektech jsou prostředky MANIFESTU soubory XML, které po
 </dependency>
 ```
 
-V případě aplikace systému Windows XP nebo Windows Vista by měl prostředek manifestu určovat nejaktuálnější verzi běžných ovládacích prvků systému Windows, které má aplikace používat. Výše uvedený příklad používá verzi `6.0.0.0`, která podporuje [ovládací prvek Syslink](/windows/win32/Controls/syslink-overview).
+V případě aplikace systému Windows XP nebo Windows Vista by měl prostředek manifestu určovat nejaktuálnější verzi běžných ovládacích prvků systému Windows, které má aplikace používat. Výše uvedený příklad používá `6.0.0.0`verze, která podporuje [ovládací prvek Syslink](/windows/win32/Controls/syslink-overview).
 
 > [!NOTE]
 > Pro každý modul můžete mít jenom jeden prostředek manifestu.
@@ -129,7 +129,7 @@ Chcete-li zobrazit verzi a informace o typu obsažené v prostředku manifestu, 
 
 Win32
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Práce se zdrojovými soubory](../windows/working-with-resource-files.md)<br/>
 [Identifikátory prostředků (symboly)](../windows/symbols-resource-identifiers.md)<br/>

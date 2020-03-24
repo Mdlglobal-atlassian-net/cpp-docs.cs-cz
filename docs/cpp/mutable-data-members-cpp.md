@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - mutable keyword [C++]
 ms.assetid: ebe89746-3d36-43a8-8d69-f426af23f551
-ms.openlocfilehash: 8d592eb97f70bfc26c075317c57ec4d5c78e3956
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: db3a9594a77a9ada971213eaea74a9842bd96a54
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62301588"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179338"
 ---
 # <a name="mutable-data-members-c"></a>Proměnlivé datové členy (C++)
 
-Toto klíčové slovo lze použít pouze na nestatické a nekonstantní datové členy třídy. Pokud je datový člen deklarován **proměnlivé**, je pro přiřazení k tomuto datovému členu z hodnoty **const** členskou funkci.
+Toto klíčové slovo lze použít pouze na nestatické a nekonstantní datové členy třídy. Pokud je datový člen deklarovaný jako **mutable**, je právnímu tomuto datovému členovi přiřazena hodnota z **konstantní** členské funkce.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -25,7 +25,7 @@ mutable member-variable-declaration;
 
 ## <a name="remarks"></a>Poznámky
 
-Například následující kód se zkompiluje bez chyb protože `m_accessCount` byl deklarován jako **proměnlivé**a proto je možné upravovat prostřednictvím `GetFlag` i v případě, `GetFlag` je konstantní členskou funkci.
+Například následující kód bude zkompilován bez chyby, protože `m_accessCount` byl deklarován jako **proměnlivý**, a lze jej proto upravit pomocí `GetFlag`, i když `GetFlag` je členská funkce const.
 
 ```cpp
 // mutable.cpp
@@ -47,6 +47,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Klíčová slova](../cpp/keywords-cpp.md)

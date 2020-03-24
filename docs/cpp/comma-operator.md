@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - comma operator
 ms.assetid: 38e0238e-19da-42ba-ae62-277bfdab6090
-ms.openlocfilehash: 8c6757f402cc7422824f1b701d3d1e4ae2566074
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6ea2bd5c0e7653ba7f81531a5c39df2da41662a9
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399210"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80189764"
 ---
 # <a name="comma-operator-"></a>Operátor čárky: ,
 
@@ -25,11 +25,11 @@ expression , expression
 
 ## <a name="remarks"></a>Poznámky
 
-Operátor čárka je asociativní zleva doprava. Dva příkazy oddělené čárkou jsou vyhodnoceny zleva doprava. Levý operand je vyhodnocen vždy a před vyhodnocením pravého operandu jsou dokončeny všechny vedlejší účinky.
+Operátor čárky má asociativita zleva doprava. Dva příkazy oddělené čárkou jsou vyhodnoceny zleva doprava. Levý operand je vyhodnocen vždy a před vyhodnocením pravého operandu jsou dokončeny všechny vedlejší účinky.
 
 V některých kontextech, například v seznamech argumentů funkcí, mohou být čárky použity jako oddělovače. Nezaměňujte použití čárky jako oddělovače s jejím použitím jako operátoru. Tato dvě použití jsou zcela odlišná.
 
-Vezměte v úvahu výraz `e1, e2`. Typ a hodnota výrazu jsou typu a hodnoty *e2*; výsledek vyhodnocení výrazu *e1* se zahodí. Je-li pravý operand l-hodnotou, je i tento výsledek l-hodnotou.
+Vezměte v úvahu výraz `e1, e2`. Typ a hodnota výrazu jsou typ a hodnota *E2*; výsledek vyhodnocení *E1* je zahozen. Je-li pravý operand l-hodnotou, je i tento výsledek l-hodnotou.
 
 Na místech, kde se čárka obvykle používá jako oddělovač (například ve vlastních argumentech funkcí nebo v inicializátorech agregace), musí být operátor čárky a jeho operandy uzavřeny do závorek. Příklad:
 
@@ -60,7 +60,7 @@ int main () {
 30
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Výrazy s binárními operátory](../cpp/expressions-with-binary-operators.md)<br/>
 [Integrované operátory C++, jejich priorita a asociativita](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>

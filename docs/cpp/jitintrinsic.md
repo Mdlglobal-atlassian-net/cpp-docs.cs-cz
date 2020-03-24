@@ -8,12 +8,12 @@ helpviewer_keywords:
 - __declspec keyword [C++], jitintrinsic
 - jitintrinsic __declspec modifier
 ms.assetid: 23dbe416-7ef6-442b-b16d-9a81aab04fa6
-ms.openlocfilehash: 9e726413f0bbfbd9d6affa348777c995c51283a5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4626ba82d1d24582951bbffd8e6be687007d390f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62245510"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178175"
 ---
 # <a name="jitintrinsic"></a>jitintrinsic
 
@@ -27,11 +27,11 @@ __declspec(jitintrinsic)
 
 ## <a name="remarks"></a>Poznámky
 
-**jitintrinsic** přidá klíčové slovo MODOPT (<xref:System.Runtime.CompilerServices.IsJitIntrinsic>) k signatuře funkce.
+**jitintrinsic** přidá k podpisu funkce MODOPT (<xref:System.Runtime.CompilerServices.IsJitIntrinsic>).
 
-Není doporučeno použití této funkce **__declspec** modifikátor, jako výsledky neočekávané situace může nastat.
+Používání tohoto modifikátoru **__declspec** se uživatelům nedoporučuje, protože může dojít k neočekávaným výsledkům.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [__declspec](../cpp/declspec.md)<br/>
 [Klíčová slova](../cpp/keywords-cpp.md)

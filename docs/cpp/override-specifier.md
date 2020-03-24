@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - override Identifier
 ms.assetid: b286fb46-9374-4ad8-b2e7-4607119b6133
-ms.openlocfilehash: 71505f8b9b4dc2800e80a78a64f0ca6984af1349
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 82837ae34ab786e607df54038493b14350574a15
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345872"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188477"
 ---
 # <a name="override-specifier"></a>override – specifikátor
 
-Můžete použít **přepsat** – klíčové slovo k určení členských funkcí, které přepíšou virtuální funkci v základní třídě.
+Můžete použít klíčové slovo **override** k určení členských funkcí, které přepíší virtuální funkci v základní třídě.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -23,11 +23,11 @@ function-declaration override;
 
 ## <a name="remarks"></a>Poznámky
 
-**Přepsat** je kontextový a má zvláštní význam pouze tehdy, když se používá po deklaraci členské funkce; v opačném případě to není rezervované klíčové slovo.
+**přepsání** je kontextově závislé a má zvláštní význam pouze v případě, že se používá po deklaraci členské funkce; jinak se nejedná o rezervované klíčové slovo.
 
 ## <a name="example"></a>Příklad
 
-Použití **přepsat** zabránit neúmyslnému chování dědičnosti ve vašem kódu. Následující příklad ukazuje, kde bez použití **přepsat**, nemusí je žádoucí chování členské funkce odvozené třídy. Kompilátor nebude posílat žádné chyby pro tento kód.
+Pomocí **přepsání** můžete zabránit nechtěnému chování dědění ve vašem kódu. Následující příklad ukazuje, kde bez použití **override**není chování členské funkce odvozené třídy zamýšlené. Kompilátor negeneruje žádné chyby pro tento kód.
 
 ```cpp
 class BaseClass
@@ -51,7 +51,7 @@ class DerivedClass: public BaseClass
 };
 ```
 
-Při použití **přepsat**, kompilátor vygeneruje chyby tichého vytváření nové členské funkce.
+Při použití **override**kompilátor generuje chyby namísto tichého vytváření nových členských funkcí.
 
 ```cpp
 class BaseClass
@@ -78,9 +78,9 @@ class DerivedClass: public BaseClass
 };
 ```
 
-Chcete-li určit, že funkce nelze přepsat a že nelze dědit třídy, použijte [konečné](../cpp/final-specifier.md) – klíčové slovo.
+Chcete-li určit, že funkce nelze přepsat a že třídy nelze dědit, použijte klíčové slovo [Final](../cpp/final-specifier.md) .
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [final – specifikátor](../cpp/final-specifier.md)<br/>
 [Klíčová slova](../cpp/keywords-cpp.md)

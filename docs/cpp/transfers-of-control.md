@@ -5,18 +5,18 @@ helpviewer_keywords:
 - control flow, branching
 - control flow, transferring control
 ms.assetid: aa51e7f2-060f-4106-b0fe-331f04357423
-ms.openlocfilehash: 1fc487628f26dcac097109bc71fa960e501d0797
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c9a46ccb1cf519080c5105855e41ecd3ebc23f77
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62266813"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188048"
 ---
 # <a name="transfers-of-control"></a>Přenosy ovládacích prvků
 
-Můžete použít **goto** příkazu nebo **případ** popisku v **přepnout** příkaz k určení programu, která je rozvětvena kolem inicializátoru. Takový kód je neplatný, dokud není deklarace, která obsahuje inicializátor v bloku, ohraničená blokem, v němž se nachází příkaz jump.
+Pomocí příkazu **goto** nebo popisku **case** v příkazu **Switch** můžete určit program, který se větví za inicializátorem. Takový kód je neplatný, dokud není deklarace, která obsahuje inicializátor v bloku, ohraničená blokem, v němž se nachází příkaz jump.
 
-Následující příklad zobrazuje smyčku, která deklaruje a inicializuje objekty `total`, `ch` a `i`. Je zde také chybný **goto** příkaz, který předává řízení kolem inicializátoru.
+Následující příklad zobrazuje smyčku, která deklaruje a inicializuje objekty `total`, `ch` a `i`. K dispozici je také chybný příkaz **goto** , který přenáší kontrolu za inicializátorem.
 
 ```cpp
 // transfers_of_control.cpp
@@ -48,6 +48,6 @@ int main()
 }
 ```
 
-V předchozím příkladu **goto** příkaz se pokusí přenést řízení kolem inicializace `i`. Pokud však byly `i` deklarovány, ale nebyly inicializovány, byl by převod platný.
+V předchozím příkladu se příkaz **goto** pokusí přenést řízení po inicializaci `i`. Pokud však byly `i` deklarovány, ale nebyly inicializovány, byl by převod platný.
 
-Objekty `total` a `ch`, které jsou deklarovány v bloku, která slouží jako *příkaz* z **při** prohlášení, jsou zničeny, když tento blok ukončen pomocí  **Konec** příkazu.
+Objekty `total` a `ch`deklarované v bloku, který slouží jako *příkaz* příkazu **while** , jsou zničeny, pokud je tento blok ukončen pomocí příkazu **Break** .

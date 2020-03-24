@@ -7,18 +7,18 @@ helpviewer_keywords:
 - inline functions [C++], treating member functions as
 - member functions [C++], definition in class declaration
 ms.assetid: 9f77a438-500e-40bb-a6c6-544678f3f4c8
-ms.openlocfilehash: faa7d016c8f48e9a5ee57c8efa4ce3dfd3f3eb01
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: d1c3e069325363276e58a617d6ba21cb0b6e4ff0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345858"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188464"
 ---
 # <a name="overview-of-member-functions"></a>Přehled členských funkcí
 
-Členské funkce jsou statické nebo nestatické. Chování statických členských funkcí se liší od jiných členských funkcí, protože statické členské funkce nemají žádný implicitní ukazatel **to** argument. Nestatické členské funkce mají **to** ukazatele. Členské funkce, statické i nestatické, lze definovat v deklaraci třídy nebo mimo ni.
+Členské funkce jsou statické nebo nestatické. Chování statických členských funkcí se liší od ostatních členských funkcí, protože statické členské funkce nemají žádný implicitní **Tento** argument. Nestatické členské funkce mají **Tento** ukazatel. Členské funkce, statické i nestatické, lze definovat v deklaraci třídy nebo mimo ni.
 
-Pokud je členská funkce definována uvnitř deklarace třídy, považuje se za vloženou funkci a není potřeba kvalifikovat název funkce pomocí názvu třídy. Přestože funkce definované uvnitř deklarací tříd jsou již považovány za vložené funkce, můžete použít **vložené** – klíčové slovo pro zdokumentování kódu.
+Pokud je členská funkce definována uvnitř deklarace třídy, považuje se za vloženou funkci a není potřeba kvalifikovat název funkce pomocí názvu třídy. I když funkce definované uvnitř deklarací tříd jsou již zpracovány jako vložené funkce, můžete použít klíčové slovo **inline** k dokumentu kódu.
 
 Následuje příklad deklarování funkce v deklaraci třídy:
 
@@ -43,7 +43,7 @@ int main()
 }
 ```
 
-Pokud je definice členské funkce mimo deklaraci třídy, je považován za vloženou funkci pouze v případě, že je explicitně deklarována jako **vložené**. Kromě toho musí být název funkce v definici kvalifikován názvem třídy pomocí operátoru rozlišení oboru (`::`).
+Pokud je definice členské funkce mimo deklaraci třídy, je považována za vloženou funkci pouze v případě, že je explicitně deklarována jako **inline**. Kromě toho musí být název funkce v definici kvalifikován názvem třídy pomocí operátoru rozlišení oboru (`::`).
 
 V následujícím příkladu je deklarace třídy `Account` stejná jako předchozí deklarace této třídy s tím rozdílem, že je funkce `Deposit` definována mimo deklaraci třídy:
 

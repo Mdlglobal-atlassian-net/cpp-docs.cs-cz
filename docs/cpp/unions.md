@@ -7,12 +7,12 @@ helpviewer_keywords:
 - class types [C++], unions as
 - union keyword [C++]
 ms.assetid: 25c4e219-fcbb-4b7b-9b64-83f3252a92ca
-ms.openlocfilehash: 8a4ea3ae325eb5882c2f8b2524bbc156d12ffcc6
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 74e215204ef334bb67e8f044622d35f4e76fe401
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79418368"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80187957"
 ---
 # <a name="unions"></a>Sjednocení
 
@@ -636,7 +636,7 @@ Sjednocení `NumericType` je v paměti uspořádáno (obecně) tak, jak ukazuje 
 ![Úložiště dat v rámci sjednocení číselného typu](../cpp/media/vc38ul1.png "Ukládání dat v NumericType sjednocení") <br/>
 Uložení dat ve sjednocení NumericType
 
-## <a name="anonymous_unions"></a>Anonymní sjednocení
+## <a name="anonymous-unions"></a><a name="anonymous_unions"></a>Anonymní sjednocení
 
 Anonymní sjednocení jsou sjednocení, která jsou deklarována bez *názvu třídy* nebo *deklarátor-list*.
 

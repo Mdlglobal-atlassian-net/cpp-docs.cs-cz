@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3808
 ms.assetid: 2ee8ac97-3ea4-417a-8710-be73a7f98cf4
-ms.openlocfilehash: 0a1b0b82241c6e48d2c1941ff8122697d11492eb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e854764dc3f8d3ede79965302b62055b91df0a4c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62352985"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80165623"
 ---
 # <a name="compiler-error-c3808"></a>Chyba kompilátoru C3808
 
-> "*typ*': třída s atributem ComImport nemůže definovat člen"*člen*' jsou povoleny funkce dllimport, nebo pouze abstraktní
+> '*Type*': třída s atributem atributem ComImport nemůže definovat člen '*Member*', jsou povoleny pouze funkce abstract nebo dllimport
 
 ## <a name="remarks"></a>Poznámky
 
-Typ, který je odvozen z <xref:System.Runtime.InteropServices.ComImportAttribute> nelze definovat *člen*.
+Typ, který je odvozen z <xref:System.Runtime.InteropServices.ComImportAttribute> nemůže definovat *člen*.
 
-**/CLR: pure** a **/CLR: safe** – možnosti kompilátoru jsou zastaralé v sadě Visual Studio 2015 a není podporována v sadě Visual Studio 2017.
+Možnosti **/clr: Pure** a **/clr: Safe** jsou zastaralé v aplikaci Visual Studio 2015 a nejsou podporovány v aplikaci Visual Studio 2017.
 
 ## <a name="example"></a>Příklad
 

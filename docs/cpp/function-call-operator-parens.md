@@ -10,12 +10,12 @@ helpviewer_keywords:
 - functions [C++], function-call operator
 - function call operator ()
 ms.assetid: 50c92e59-a4bf-415a-a6ab-d66c679ee80a
-ms.openlocfilehash: 3194c34bacfe7b2ed758ab245c5858eadb18e64e
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 08c60ff261e944ed5b54b51a013a6d331f212154
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301519"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179767"
 ---
 # <a name="function-call-operator-"></a>Operátor volání funkce: ()
 
@@ -176,7 +176,7 @@ int main() {
 
 Funkce lze volat rekurzivně. Další informace o deklaracích funkcí naleznete v tématu [Functions](functions-cpp.md). Související materiál je v [jednotkách překladu a propojení](../cpp/program-and-linkage-cpp.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Výrazy přípony](../cpp/postfix-expressions.md)<br/>
 [Integrované operátory C++, jejich priorita a asociativita](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>

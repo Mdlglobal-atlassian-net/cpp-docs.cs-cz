@@ -6,16 +6,16 @@ helpviewer_keywords:
 - helper functions, calling conventions
 - helper functions, return types
 ms.assetid: 0ffa4558-6005-4803-be95-7a8ec8837660
-ms.openlocfilehash: a85825eb49b1f8faab7862e902b226c1c1fb6d58
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 90767141337512b053bb06a40823c4a22a8a4823
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62294704"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169744"
 ---
 # <a name="calling-conventions-parameters-and-return-type"></a>Konvence volání, parametry a návratový typ
 
-Pomocná rutina prototypem je:
+Prototyp rutiny pomocné rutiny:
 
 ```
 FARPROC WINAPI __delayLoadHelper2(
@@ -27,36 +27,36 @@ FARPROC WINAPI __delayLoadHelper2(
 ### <a name="parameters"></a>Parametry
 
 *pidd*<br/>
-A `const` ukazatel `ImgDelayDescr` posuny různých dat týkajících se importu, časové razítko pro informace o vazbě a sadu atributů, které poskytují další informace o obsahu, popisovač, který obsahuje. V současné době neexistuje pouze jeden atribut `dlattrRva`, což znamená, že jsou adresy v popisovači relativních virtuálních adres. Další informace najdete v tématu deklarace v *delayimp.h*.
+`const` ukazatel na `ImgDelayDescr`, který obsahuje posun různých dat týkajících se importu, časové razítko pro informace o vazbě a sadu atributů, které poskytují další informace o obsahu deskriptoru. V současné době existuje pouze jeden atribut `dlattrRva`, který označuje, že adresy v popisovači jsou relativní virtuální adresy. Další informace najdete v tématu deklarace v *delayimp. h*.
 
-Pro definici `PCImgDelayDescr` struktury, přečtěte si téma [struktura a definice konstant](structure-and-constant-definitions.md).
+Definice `PCImgDelayDescr` struktury viz [Definice struktury a konstanty](structure-and-constant-definitions.md).
 
 *ppfnIATEntry*<br/>
-Ukazatel pozice v zpoždění načtení tabulky importních adres (IAT), který se aktualizuje s adresou importované funkce. Pomocná rutina musí ukládat stejnou hodnotu, která se vrátí do tohoto umístění.
+Ukazatel na slot v tabulce adres importu zpožděného načtení (IAT), která je aktualizována adresou importované funkce. Pomocná rutina potřebuje Uložit stejnou hodnotu, kterou vrátí do tohoto umístění.
 
-## <a name="expected-return-values"></a>Byl očekáván návratové hodnoty
+## <a name="expected-return-values"></a>Očekávané návratové hodnoty
 
 Pokud je funkce úspěšná, vrátí adresu importované funkce.
 
-Pokud funkce selže, vyvolá výjimku a vrátí hodnotu 0. Může být vyvolána oznámením tři druhy výjimek:
+Pokud funkce dojde k chybě, vyvolá výjimku a vrátí hodnotu 0. Je možné vyhodnotit tři typy výjimek:
 
-- Neplatný parametr, který se stane, když na atributy v `pidd` nejsou zadané správně.
+- Neplatný parametr, který se stane, pokud nejsou správně zadány atributy v `pidd`.
 
-- `LoadLibrary` v zadané knihovně DLL se nezdařilo.
+- v zadané knihovně DLL se `LoadLibrary` nezdařila.
 
 - Selhání `GetProcAddress`.
 
-Je vaší odpovědností, abyste tyto výjimky zpracovat.
+Je vaše zodpovědnost za zpracování těchto výjimek.
 
 ## <a name="remarks"></a>Poznámky
 
-Je konvence volání pro pomocnou funkci `__stdcall`. Typ vrácené hodnoty není relevantní, a proto se používá FARPROC. Tato funkce má C-linkage.
+Konvence volání pomocné funkce je `__stdcall`. Typ návratové hodnoty není relevantní, takže se použije FARPROC. Tato funkce má propojení jazyka C.
 
-Návratová hodnota pomocné rutiny zatížení zpoždění musí být uložen v umístění ukazatel předaný funkci, pokud chcete, aby vaše pomocná rutina má být použit jako hák oznámení. V takovém případě je odpovědný za vyhledání procesoru příslušnou funkci ukazatel k vrácení kódu. Převodní rutina kód, který generuje propojovací program poté přebírá tento návratovou hodnotu jako skutečné cíl importu a přejde přímo do ní.
+Pokud nechcete, aby se rutina pomocníka použila jako zavěšení oznámení, musí být vrácená hodnota pomocníka pro odložené načítání uložená v umístění ukazatele na předané funkce. V takovém případě váš kód zodpovídá za nalezení vhodného ukazatele funkce, který se má vrátit. Kód zpětného volání, který linker vygeneruje, pak převezme tuto návratovou hodnotu jako skutečný cíl importu a přejde přímo na něj.
 
 ## <a name="sample"></a>Ukázka
 
-Následující kód ukazuje, jak implementovat funkci jednoduchých připojení.
+Následující kód ukazuje, jak implementovat jednoduchou funkci zavěšení.
 
 ```C
 FARPROC WINAPI delayHook(unsigned dliNotify, PDelayLoadInfo pdli)
@@ -135,6 +135,6 @@ const PfnDliHook __pfnDliNotifyHook2 = delayHook;
 */
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Základní informace o podpůrné funkci](understanding-the-helper-function.md)

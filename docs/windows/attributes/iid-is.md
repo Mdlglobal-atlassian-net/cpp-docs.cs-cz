@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - iid_is attribute
 ms.assetid: 2f9b42a9-7130-4b08-9b1e-0d5d360e10ff
-ms.openlocfilehash: 8bfa20f55afd85019795fdd40548158c2f49e126
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 627ecff4835386dc70a9f3dfac0500404a84eefe
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514668"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167989"
 ---
 # <a name="iid_is"></a>iid_is
 
@@ -64,7 +64,7 @@ __interface IFireTabCtrl : IDispatch
 
 Další informace naleznete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [IDL – atributy](idl-attributes.md)<br/>
 [Atributy parametru](parameter-attributes.md)

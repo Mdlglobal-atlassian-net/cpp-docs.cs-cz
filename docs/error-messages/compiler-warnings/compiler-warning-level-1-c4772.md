@@ -1,31 +1,31 @@
 ---
-title: Kompilátor upozornění (úroveň 1) C4772
+title: Upozornění kompilátoru (úroveň 1) C4772
 ms.date: 11/04/2016
 f1_keywords:
 - C4772
 helpviewer_keywords:
 - C4772
 ms.assetid: dafe6fd8-9faf-41f5-9d66-a55838742c14
-ms.openlocfilehash: 95243ab66d5d0296e1c316ff8dde7add75a030cd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 89156b2f29fd21160e6abddc3ecb21efaee6dde1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385456"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80175127"
 ---
-# <a name="compiler-warning-level-1-c4772"></a>Kompilátor upozornění (úroveň 1) C4772
+# <a name="compiler-warning-level-1-c4772"></a>Upozornění kompilátoru (úroveň 1) C4772
 
-> \#Import odkazovala na typ z chybějící knihovny typů; "*chybí typ*se používá jako zástupný symbol
+> \#import odkazoval na typ z chybějící knihovny typů; '*chybějící-Type*' použitý jako zástupný text
 
-Knihovnu typů se odkazovalo se [#import](../../preprocessor/hash-import-directive-cpp.md) směrnice. Nicméně knihovny typů obsahovala odkaz na jinou knihovnu typů, na který se odkazuje pomocí `#import`. Tento .tlb soubor nebyl nalezen kompilátorem.
+Na knihovnu typů se odkazuje direktiva [#import](../../preprocessor/hash-import-directive-cpp.md) . Knihovna typů však obsahovala odkaz na jinou knihovnu typů, na kterou neodkazuje `#import`. Tento jiný soubor. tlb nebyl kompilátorem nalezen.
 
-Všimněte si, že kompilátor nebude najít knihovny typů v různých adresářích, pokud použijete [/I (další vložené adresáře)](../../build/reference/i-additional-include-directories.md) – možnost kompilátoru k určení těchto adresářů. Pokud chcete, aby kompilátor k nalezení knihovny typů v různých adresářích, přidejte do proměnné prostředí PATH v těchto adresářích.
+Všimněte si, že kompilátor nenajde knihovny typů v různých adresářích, pokud použijete možnost kompilátoru [/i (další adresáře include)](../../build/reference/i-additional-include-directories.md) k určení těchto adresářů. Pokud chcete, aby kompilátor hledal knihovny typů v různých adresářích, přidejte tyto adresáře do proměnné prostředí PATH.
 
-Ve výchozím nastavení se objeví toto upozornění za chybu. C4772 nelze potlačit s /W0.
+Ve výchozím nastavení se toto upozornění vydá jako chyba. C4772 se nedá potlačit s/W0.
 
 ## <a name="example"></a>Příklad
 
-Toto je první potřebnými k zopakování C4772 knihovny typů.
+Toto je první knihovna typů, která se potřebuje k reprodukování C4772.
 
 ```IDL
 // c4772a.idl
@@ -40,7 +40,7 @@ library C4772aLib
 };
 ```
 
-Toto je druhý potřebnými k zopakování C4772 knihovny typů.
+Toto je druhá knihovna typů, která se potřebuje k reprodukování C4772.
 
 ```IDL
 // c4772b.idl

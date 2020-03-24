@@ -8,18 +8,18 @@ helpviewer_keywords:
 - += operator [C++], appending strings
 - + operator [C++], _bstr_t objects
 ms.assetid: d28316ce-c2c8-4a38-bdb3-44fa4e582c44
-ms.openlocfilehash: 0a2c374fc160a0575e0a17cc85ab51c65fa9392a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b9eddca85d66f4978e1b33299ca655cd880cf45e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390826"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181145"
 ---
-# <a name="bstrtoperator--"></a>_bstr_t::operator +=, +
+# <a name="_bstr_toperator--"></a>_bstr_t::operator +=, +
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
-Připojí znaky na konec objektu `_bstr_t` objektu nebo spojuje dva řetězce.
+Připojí znaky na konec objektu `_bstr_t` nebo zřetězí dva řetězce.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -32,29 +32,29 @@ friend _bstr_t operator+( const wchar_t* s3, const _bstr_t& s1);
 
 #### <a name="parameters"></a>Parametry
 
-*s1*<br/>
-A `_bstr_t` objektu.
+*S1*<br/>
+Objekt `_bstr_t`.
 
-*s2*<br/>
+*S2*<br/>
 Vícebajtový řetězec.
 
-*s3*<br/>
-Řetězec znaků Unicode.
+*stavu*<br/>
+Řetězec Unicode.
 
 ## <a name="remarks"></a>Poznámky
 
 Tyto operátory provádějí zřetězení řetězců:
 
-- **+= – operátor (**  *s1*  **)** připojí znaky v zapouzdřeného `BSTR` z *s1* na konec tohoto objektu zapouzdřený `BSTR`.
+- **operator + = (**  *S1*  **)** – operátor Připojí znaky v zapouzdřených `BSTR` *S1* na konec zapouzdřené `BSTR`tohoto objektu.
 
-- **Operator + (**   *s1*  **)** vrátí nový `_bstr_t` zřetězením tento objekt, který je vytvořen `BSTR` se specifikací *s1*.
+- **operator + (**  *S1*  **)** – operátor Vrátí novou `_bstr_t` vytvořenou zřetězením `BSTR` tohoto objektu s vlastností *S1*.
 
-- **Operator + (**  *s2*  **&#124;**  *s1*  **)** vrátí nový `_bstr_t` , který je vytvořený zřetězením vícebajtový řetězec *s2*, převedeno na kódování Unicode, se `BSTR` zapouzdřena v *s1*.
+- **operator + (**  *S2*  **&#124;**  *S1*  **)** Vrátí novou `_bstr_t` vytvořenou zřetězením vícebajtového řetězce *S2*, převedeného do kódování Unicode s `BSTR` zapouzdřenou v *S1*.
 
-- **Operator + (**  *s3* **,**  *s1*  **)** vrátí nový `_bstr_t` , který je vytvořen pomocí zřetězení řetězců kódování Unicode *s3* s `BSTR` zapouzdřena v *s1*.
+- **operator + (**  *S3* **,**  *S1*  **)** Vrátí nový `_bstr_t`, který se vytvoří tak, že zřetězí řetězec *S3* ve formátu Unicode s `BSTR` zapouzdřeným ve *S1*.
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [_bstr_t – třída](../cpp/bstr-t-class.md)

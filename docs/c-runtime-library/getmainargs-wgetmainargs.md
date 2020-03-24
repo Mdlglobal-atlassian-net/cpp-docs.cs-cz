@@ -23,16 +23,16 @@ helpviewer_keywords:
 - __wgetmainargs
 - __getmainargs
 ms.assetid: f72f54eb-9509-4bdf-8752-40fc49055439
-ms.openlocfilehash: dbf186fa699e8faf85385fd322482a4373b3fd60
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 01658c6146706d8ea7bfd70d002efcfff88031b0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70940352"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171590"
 ---
 # <a name="__getmainargs-__wgetmainargs"></a>__getmainargs, __wgetmainargs
 
-Vyvolá analýzu příkazového řádku a zkopíruje argumenty pro `main()` zpět předanými ukazateli.
+Vyvolá analýzu příkazového řádku a zkopíruje argumenty pro `main()` zpět prostřednictvím předaných ukazatelů.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -55,10 +55,10 @@ int __wgetmainargs (
 #### <a name="parameters"></a>Parametry
 
 `_Argc`<br/>
-Celé číslo, které obsahuje počet argumentů, které následují `argv`v. Parametr `argc` je vždy větší nebo roven 1.
+Celé číslo, které obsahuje počet argumentů, které následují v `argv`. Parametr `argc` je vždy větší nebo roven 1.
 
 `_Argv`<br/>
-Pole řetězců zakončených znakem null představující argumenty příkazového řádku zadané uživatelem programu. Podle konvence `argv[0]` je příkaz, se kterým se program vyvolá, argv [1] je první argument příkazového řádku a tak dále, dokud argv [argc], které je vždycky **null**. První argument příkazového řádku je vždycky `argv[1]` a ten je `argv[argc - 1]`poslední.
+Pole řetězců zakončených znakem null představující argumenty příkazového řádku zadané uživatelem programu. Podle konvence `argv[0]` je příkaz, se kterým se program vyvolá, argv [1] je první argument příkazového řádku a tak dále, dokud argv [argc], které je vždycky **null**. První argument příkazového řádku je vždycky `argv[1]` a poslední z nich je `argv[argc - 1]`.
 
 `_Env`<br/>
 Pole řetězců, které reprezentují proměnné nastavené v uživatelském prostředí. Toto pole je ukončeno položkou **null** .
@@ -75,7 +75,7 @@ Další informace, které mají být předány knihovně DLL CRT.
 
 ## <a name="remarks"></a>Poznámky
 
-Používejte `__getmainargs` na jiných než různých znakových platformách `__wgetmainargs` a na platformách s velkým znakem (Unicode).
+Používejte `__getmainargs` na jiných než různých znakových platformách a `__wgetmainargs` na platformách s velkým znakem (Unicode).
 
 ## <a name="requirements"></a>Požadavky
 

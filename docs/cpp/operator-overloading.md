@@ -11,81 +11,81 @@ helpviewer_keywords:
 - operators [C++], overloading
 - operator overloading
 ms.assetid: 56ad4c4f-dd0c-45e0-adaa-08fe98cb1f8e
-ms.openlocfilehash: d6a294af3ea7ef6085eae0f7069ea2d1fdbb30e4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a16f68088ffffd6c3cf38f5ae3adda5f2d59fb57
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62377358"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188568"
 ---
-# <a name="operator-overloading"></a>Přetížení operátoru
+# <a name="operator-overloading"></a>Přetěžování operátoru
 
-**Operátor** – klíčové slovo deklaruje funkci určíte, co *symbol operátoru* znamená, že při použití u instance třídy. Operátor, který poskytuje více než jeden význam, nebo "přetížení" ho. Kompilátor rozlišuje mezi různé významy operátor prozkoumáním typy jeho operandů.
+Klíčové slovo **Operator** deklaruje funkci určující, který *symbol operátora* znamená při použití na instance třídy. To dává operátor více než jeden význam nebo "přetížení". Kompilátor rozlišuje různé významy operátoru zkoumáním typů jeho operandů.
 
 ## <a name="syntax"></a>Syntaxe
 
-> *typ* **operátor** *symbol operátoru* **(** *seznam parametrů* **)**
+> *type* **operátor** typu operátor *– symbol* **(** *parametr-list* **)**
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce nejvíce integrovaných operátory možné předefinovat globálně nebo na základě třídy třídy. Přetížené operátory jsou implementovány jako funkce.
+Funkci většiny předdefinovaných operátorů můžete znovu definovat globálně nebo na základě třídy podle třídy. Přetížené operátory jsou implementovány jako funkce.
 
-Název přetíženého operátoru je **operátor** *x*, kde *x* je operátor, který se zobrazí v následující tabulce. Pro přetížení operátoru sčítání, můžete definovat funkci s názvem **operátor +**. Podobně, přetížení operátoru sčítání/přiřazení **+=**, definovat funkci s názvem **operator +=**.
+Název přetíženého operátoru je **operátor** *x*, kde *x* je operátor, jak je uveden v následující tabulce. Chcete-li například přetížit operátor sčítání, definujete funkci s názvem **Operator +** . Podobně pro přetížení operátoru sčítání/přiřazení **+=** definujte funkci s názvem **Operator + =** .
 
-### <a name="redefinable-operators"></a>Které lze znovu definovat operátory
+### <a name="redefinable-operators"></a>Znovu definovatelné operátory
 
-|Operátor|Název|Type|
+|Operátor|Název|Typ|
 |--------------|----------|----------|
-|**,**|Čárka|binární|
-|**\!**|Logický operátor NOT|Unární|
-|**\!=**|Nerovnost|binární|
-|**%**|Modulus|binární|
-|**%=**|Přiřazení modulus|binární|
-|**&**|Bitový operátor AND|binární|
+|**,**|Čárka|Binární hodnota|
+|**!**|Logický operátor NOT|Unární|
+|**!=**|Nerovnost|Binární hodnota|
+|**%**|Modulus|Binární hodnota|
+|**%=**|Přiřazení modulus|Binární hodnota|
+|**&**|Bitový operátor AND|Binární hodnota|
 |**&**|Adresa|Unární|
-|**&&**|Logický operátor AND|binární|
-|**&=**|Přiřazení bitového operátoru AND|binární|
+|**&&**|Logický operátor AND|Binární hodnota|
+|**&=**|Přiřazení bitového operátoru AND|Binární hodnota|
 |**( )**|Volání funkce|—|
 |**( )**|Operátor přetypování|Unární|
-|**&#42;**|Násobení|binární|
-|**&#42;**|Přesměrování ukazatele|Unární|
-|**&#42;=**|Přiřazení násobení|binární|
-|**+**|Sčítání|binární|
-|**+**|Unární Plus|Unární|
+|**&#42;**|Násobení|Binární hodnota|
+|**&#42;**|Ukazatel na odkaz|Unární|
+|**&#42;=**|Přiřazení násobení|Binární hodnota|
+|**+**|Sčítání|Binární hodnota|
+|**+**|Unární plus|Unární|
 |**++**|Přírůstek <sup>1</sup>|Unární|
-|**+=**|Přiřazení sčítání|binární|
-|**-**|Odčítání|binární|
+|**+=**|Přiřazení sčítání|Binární hodnota|
+|**-**|Odčítání|Binární hodnota|
 |**-**|Unární negace|Unární|
 |**--**|Snížení <sup>1</sup>|Unární|
-|**-=**|Přiřazení odčítání|binární|
-|**->**|Výběr členů|binární|
-|**->&#42;**|Výběr pointer-to-member|binární|
-|**/**|Dělení|binární|
-|**/=**|Přiřazení dělení|binární|
-|**\<**|Menší než|binární|
-|**<<**|Posun doleva|binární|
-|**<<=**|Přiřazení posunutí doleva|binární|
-|**<=**|Menší nebo rovno|binární|
-|**=**|Přiřazení|binární|
-|**==**|Rovnost|binární|
-|**>**|Větší než|binární|
-|**>=**|Větší nebo rovno|binární|
-|**>>**|Posun doprava|binární|
-|**>>=**|Operátor posunutí doprava|binární|
+|**-=**|Přiřazení odčítání|Binární hodnota|
+|**->**|Výběr členů|Binární hodnota|
+|**->&#42;**|Výběr ukazatele na člena|Binární hodnota|
+|**/**|Dělení|Binární hodnota|
+|**/=**|Přiřazení dělení|Binární hodnota|
+|**\<**|Je menší než|Binární hodnota|
+|**<<**|Posun doleva|Binární hodnota|
+|**<<=**|Přiřazení posunutí doleva|Binární hodnota|
+|**<=**|Je menší nebo rovno|Binární hodnota|
+|**=**|Přiřazení|Binární hodnota|
+|**==**|Rovnost|Binární hodnota|
+|**>**|Větší než|Binární hodnota|
+|**>=**|Je větší nebo rovno|Binární hodnota|
+|**>>**|Posun doprava|Binární hodnota|
+|**>>=**|Přiřazení posunutí doprava|Binární hodnota|
 |**[ ]**|Dolní index pole|—|
-|**^**|Exkluzivní operátor OR|binární|
-|**^=**|Exkluzivní OR přiřazení|binární|
-|**&#124;**|Bitový inkluzivní operátor OR|binární|
-|**&#124;=**|Přiřazení s bitovým operátorem OR|binární|
-|**&#124;&#124;**|Logický operátor OR|binární|
+|**^**|Exkluzivní nebo|Binární hodnota|
+|**^=**|Exkluzivní nebo přiřazení|Binární hodnota|
+|**&#124;**|Bitový inkluzivní operátor OR|Binární hodnota|
+|**&#124;=**|Přiřazení s bitovým operátorem OR|Binární hodnota|
+|**&#124;&#124;**|Logický operátor OR|Binární hodnota|
 |**~**|Doplněk|Unární|
-|**delete**|Odstranit|—|
+|**odstranění**|Odstranit|—|
 |**new**|Nový|—|
 |operátory převodu|operátory převodu|Unární|
 
-<sup>1</sup> zvýšit dvě verze Unární a operátory snížení existovat: preinkrement a postinkrement.
+existuje <sup>1</sup> dvě verze unárních operátorů přírůstek a snížení: postinkrement a Increment.
 
-Zobrazit [obecná pravidla přetížení operátoru](../cpp/general-rules-for-operator-overloading.md) Další informace. Omezení pro různé kategorie přetížené operátory jsou popsány v následujících tématech:
+Další informace najdete v tématu [Obecná pravidla přetížení operátoru](../cpp/general-rules-for-operator-overloading.md) . Omezení pro různé kategorie přetížených operátorů jsou popsána v následujících tématech:
 
 - [Unární operátory](../cpp/overloading-unary-operators.md)
 
@@ -97,26 +97,26 @@ Zobrazit [obecná pravidla přetížení operátoru](../cpp/general-rules-for-op
 
 - [Podskripty](../cpp/subscripting.md)
 
-- [Přístup ke členům třídy](../cpp/member-access.md)
+- [Přístup ke členu třídy](../cpp/member-access.md)
 
-- [Inkrementace a dekrementace](../cpp/increment-and-decrement-operator-overloading-cpp.md).
+- [Zvýšení a snížení](../cpp/increment-and-decrement-operator-overloading-cpp.md)
 
 - [Převody typů definovaných uživatelem](../cpp/user-defined-type-conversions-cpp.md)
 
-Nemohou být přetíženy operátory uvedené v následující tabulce. Tabulka obsahuje symboly preprocesoru **#** a **##**.
+Operátory zobrazené v následující tabulce nelze přečítat. Tabulka obsahuje symboly preprocesoru **#** a **##** .
 
-### <a name="nonredefinable-operators"></a>Operátory Nonredefinable
+### <a name="nonredefinable-operators"></a>Nonredefinable operátory
 
 |Operátor|Název|
 |-|-|
 |**.**|Výběr členů|
-|**.&#42;**|Výběr pointer-to-member|
+|**.&#42;**|Výběr ukazatele na člena|
 |**::**|Rozlišení rozsahu|
-|**? :**|Podmiňovací operátor|
-|**#**|Preprocesoru převést na řetězec|
-|**##**|Zřetězit preprocesoru|
+|**? :**|Podmíněné|
+|**#**|Preprocesor převedený na řetězec|
+|**##**|Zřetězení preprocesoru|
 
-I když přetížené operátory jsou obvykle nevolá implicitně kompilátorem vyskytne v kódu, mohou být volány explicitně stejným způsobem jako člen nebo nečlenské funkce se volá:
+I když jsou přetížené operátory obvykle volány kompilátorem, když jsou zjištěny v kódu, mohou být vyvolány explicitně stejným způsobem jako jakýkoli člen nebo nečlenská funkce, která je volána:
 
 ```cpp
 Point pt;
@@ -125,7 +125,7 @@ pt.operator+( 3 );  // Call addition operator to add 3 to pt.
 
 ## <a name="example"></a>Příklad
 
-Následující příklad přetížení **+** operátor přidáte komplexní dvě čísla a vrátí výsledek.
+Následující příklad převede operátor **+** pro přidání dvou komplexních čísel a vrátí výsledek.
 
 ```cpp
 // operator_overloading.cpp
@@ -176,7 +176,7 @@ int main() {
 
 - [Přístup ke členu](../cpp/member-access.md)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Integrované operátory C++, jejich priorita a asociativita](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
 [Klíčová slova](../cpp/keywords-cpp.md)

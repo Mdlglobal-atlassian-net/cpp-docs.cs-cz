@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C2670
 ms.assetid: 4b3b74c7-a750-4b0d-abd3-216d1234461f
-ms.openlocfilehash: c75c9f68b44dfb3d687942811d3a175f34dc9910
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 41da2d246bbabd9301f9ac03e46c213b137d82de
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62367938"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80177141"
 ---
 # <a name="compiler-error-c2670"></a>Chyba kompilátoru C2670
 
-'identifier': Šablona funkce číslo parametru nelze převést z typu 'type'
+' identifier ': Šablona funkce nemůže převést číslo parametru z typu ' type '
 
 Parametr nelze převést na požadovaný typ.
 
-Pokud vytvoříte explicitní převod, může tuto chybu opravit.
+Tato chyba se může opravit, pokud vytvoříte explicitní převod.

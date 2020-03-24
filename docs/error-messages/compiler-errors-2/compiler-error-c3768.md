@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3768
 ms.assetid: 091f0d53-1dff-43fd-813d-5c43c85b6ab0
-ms.openlocfilehash: e9c385fd178dc967e72f5e0ca7fab27b28ad962f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 534be9e3873276313335ca921264be92c9259b93
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400211"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80165740"
 ---
 # <a name="compiler-error-c3768"></a>Chyba kompilátoru C3768
 
@@ -19,9 +19,9 @@ ms.locfileid: "62400211"
 
 ## <a name="remarks"></a>Poznámky
 
-**/CLR: pure** – možnost kompilátoru je zastaralé v sadě Visual Studio 2015 a není podporována v sadě Visual Studio 2017.
+Možnost **/clr: Pure** Compiler je v aplikaci visual Studio 2015 zastaralá a není podporovaná v rámci sady visual Studio 2017.
 
-Při kompilaci s **/CLR: pure**, nelze převzít adresu proměnné virtuální `vararg` funkce.
+Při kompilaci s možností **/clr: Pure**nelze přebírat adresu funkce Virtual `vararg`.
 
 ## <a name="example"></a>Příklad
 

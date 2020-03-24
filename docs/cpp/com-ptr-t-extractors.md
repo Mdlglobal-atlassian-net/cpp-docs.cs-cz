@@ -20,16 +20,16 @@ helpviewer_keywords:
 - extractors, _com_ptr_t class
 - extractors [C++]
 ms.assetid: 194b9e0e-123c-49ff-a187-0a7fcd68145a
-ms.openlocfilehash: bac1f9a139d2fb0092ef0869587ae8b54342fe82
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 31ac39104c041d1d119f6cd06de5f9c4a620dac0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399327"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80190024"
 ---
-# <a name="comptrt-extractors"></a>_com_ptr_t – extraktory
+# <a name="_com_ptr_t-extractors"></a>_com_ptr_t – extraktory
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
 Extrahuje zapouzdřený ukazatel rozhraní COM.
 
@@ -46,20 +46,20 @@ operator bool( ) const throw( );
 
 ## <a name="remarks"></a>Poznámky
 
-- **operátor Interface** <strong>\*</strong> vrátí zapouzdřený ukazatel rozhraní, což může mít hodnotu NULL.
+- **operátor rozhraní** <strong>\*</strong> vrátí zapouzdřený ukazatel rozhraní, který může mít hodnotu null.
 
-- **operátor Interface &** vrátí odkaz na zapouzdřený ukazatel rozhraní a vyvolá chybu, pokud ukazatel na hodnotu NULL.
+- **operátor & rozhraní** Vrátí odkaz na zapouzdřený ukazatel rozhraní a vydá chybu, pokud má ukazatel hodnotu NULL.
 
-- **operátor** <strong>\*</strong> umožní objektu inteligentního ukazatele tak, aby fungoval jako by šlo o skutečné zapouzdřené rozhraní při dereferenci.
+- **operátor** <strong>\*</strong> umožňuje objektu inteligentního ukazatele chovat, jako by se jednalo o skutečné zapouzdřené rozhraní, když se na něj odkazuje.
 
-- **Operator ->** umožní objektu inteligentního ukazatele tak, aby fungoval jako by šlo o skutečné zapouzdřené rozhraní při dereferenci.
+- **operátor->** Umožňuje objektu inteligentního ukazatele chovat, jako by se jednalo o skutečné zapouzdřené rozhraní, když se na něj odkazuje.
 
-- **operátor &** uvolní všechny zapouzdřený ukazatel rozhraní, nahraďte ho hodnotou NULL a vrátí adresu zapouzdřený ukazatel. To umožňuje inteligentní ukazatel adresou předat funkci, která má *si* parametr, jehož pomocí funkce vrátí ukazatel rozhraní.
+- **operátor &** Uvolní libovolný zapouzdřený ukazatel rozhraní a nahradí ho hodnotou NULL a vrátí adresu zapouzdřeného ukazatele. To umožňuje, aby byl inteligentní ukazatel předán pomocí adresy funkci, která má *výstupní* parametr, prostřednictvím kterého vrací ukazatel rozhraní.
 
-- **Operator bool** umožní objektu inteligentního ukazatele se použije v podmíněných výrazech. Tento operátor vrátí hodnotu PRAVDA, pokud ukazatel není NULL.
+- **operátor bool** Povoluje použití objektu inteligentního ukazatele v podmíněném výrazu. Tento operátor vrátí hodnotu TRUE, pokud ukazatel nemá hodnotu NULL.
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [_com_ptr_t – třída](../cpp/com-ptr-t-class.md)

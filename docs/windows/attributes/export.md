@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - export attribute
 ms.assetid: 70b3e848-fad6-4e09-8c72-be60ca72a4df
-ms.openlocfilehash: 771bfdfe4eab2acf31e97a606795066e8938a8a1
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 6264db037069f5fc6b858bdd466ce6c68b814a84
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501606"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167041"
 ---
 # <a name="export"></a>export
 
@@ -29,7 +29,7 @@ Atribut **Export** C++ způsobí, že datová struktura bude umístěna v soubor
 
 Atribut **exportu** nelze použít pro třídu, i když má třída pouze veřejné členy (ekvivalent **struktury**).
 
-Pokud exportujete nepojmenované **výčty** nebo **struktury**, bude mu přidělen název začínající na **__unnamed**<em>x</em>, kde *x* je sekvenční číslo.
+Pokud exportujete nepojmenované **výčty** nebo **struktury**, bude mu přidělen název začínající **__unnamed**<em>x</em>, kde *x* je sekvenční číslo.
 
 Definice typedef platný pro export jsou základní typy, struktury, sjednocení, výčty nebo identifikátory typů.  Další informace naleznete v tématu [typedef](/windows/win32/Midl/typedef) .
 
@@ -61,7 +61,7 @@ struct MyStruct {
 
 Další informace naleznete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Atributy kompilátoru](compiler-attributes.md)<br/>
 [Atributy klíčových slov typedef, enum, union a struct](typedef-enum-union-and-struct-attributes.md)

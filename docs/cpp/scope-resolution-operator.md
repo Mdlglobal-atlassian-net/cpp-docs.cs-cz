@@ -9,16 +9,16 @@ helpviewer_keywords:
 - scope resolution operator
 - ':: operator'
 ms.assetid: fd5de9d3-c716-4e12-bae9-03a16fd79a50
-ms.openlocfilehash: e601bed976009a72a43545d8d38a38d75e93a137
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 07c2884ed0ba114c22a0c71bbaf7268d6f6931a4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62267364"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178883"
 ---
 # <a name="scope-resolution-operator-"></a>Operátor řešení rozsahu: ::
 
-Operátor rozlišení rozsahu **::** slouží k identifikaci a rozlišení identifikátory použitými v různých rozsazích. Další informace o oboru, naleznete v tématu [oboru](../cpp/scope-visual-cpp.md).
+Operátor rozlišení oboru **::** slouží k identifikaci a jednoznačnému použití identifikátorů používaných v různých oborech. Další informace o oboru naleznete v tématu [Scope](../cpp/scope-visual-cpp.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -32,11 +32,11 @@ enum struct :: identifier
 
 ## <a name="remarks"></a>Poznámky
 
-`identifier` Může být proměnné, funkce nebo hodnoty výčtu.
+`identifier` může být proměnná, funkce nebo hodnota výčtu.
 
-## <a name="with-classes-and-namespaces"></a>Pomocí třídy a obory názvů
+## <a name="with-classes-and-namespaces"></a>S třídami a obory názvů
 
-Následující příklad ukazuje, jak se operátor rozlišení rozsahu používá obory názvů a třídy:
+Následující příklad ukazuje, jak se operátor rozlišení oboru používá s obory názvů a třídami:
 
 ```cpp
 namespace NamespaceA{
@@ -58,7 +58,7 @@ int main() {
 }
 ```
 
-Operátor rozlišení rozsahu bez kvalifikátoru oboru odkazuje na globální obor názvů.
+Operátor rozlišení oboru bez kvalifikátoru oboru odkazuje na globální obor názvů.
 
 ```cpp
 namespace NamespaceA{
@@ -80,7 +80,7 @@ int main() {
 }
 ```
 
-Operátor rozlišení rozsahu můžete použít k identifikaci členem oboru názvů, nebo k identifikaci oboru názvů, který se jmenuje člena oboru názvů pomocí směrnice. V následujícím příkladu můžete použít `NamespaceC` kvalifikovat `ClassB`, i když `ClassB` byl deklarován v oboru názvů `NamespaceB`, protože `NamespaceB` byl jmenovaný v `NamespaceC` pomocí směrnice.
+Můžete použít operátor rozlišení oboru k identifikaci člena oboru názvů nebo k identifikaci oboru názvů, který je jmenován v oboru názvů člena v direktivě using. V následujícím příkladu můžete použít `NamespaceC` k získání `ClassB`, i když `ClassB` byl deklarován v oboru názvů `NamespaceB`, protože `NamespaceB` byl jmenován `NamespaceC` pomocí direktivy using.
 
 ```cpp
 namespace NamespaceB {
@@ -102,7 +102,7 @@ int main() {
 }
 ```
 
-Můžete použít řetězy operátory oboru rozlišení. V následujícím příkladu `NamespaceD::NamespaceD1` identifikuje vnořené obory názvů `NamespaceD1`, a `NamespaceE::ClassE::ClassE1` identifikuje vnořené třídy `ClassE1`.
+Můžete použít řetězce operátorů rozlišení oboru. V následujícím příkladu `NamespaceD::NamespaceD1` identifikuje vnořený obor názvů `NamespaceD1`a `NamespaceE::ClassE::ClassE1` identifikuje `ClassE1`vnořené třídy.
 
 ```cpp
 namespace NamespaceD{
@@ -130,7 +130,7 @@ int main() {
 
 ## <a name="with-static-members"></a>Se statickými členy
 
-Operátor rozlišení oboru musí použít k volání statické členy třídy.
+Je nutné použít operátor rozlišení oboru pro volání statických členů třídy.
 
 ```cpp
 class ClassG {
@@ -148,9 +148,9 @@ int main() {
 }
 ```
 
-## <a name="with-scoped-enumerations"></a>S výčty s vymezeným oborem
+## <a name="with-scoped-enumerations"></a>S vymezenými výčty
 
-Operátoru rozsahu rozlišení slouží také s hodnotami výčet s oborem [deklarace výčtů](../cpp/enumerations-cpp.md), jako v následujícím příkladu:
+Operátor rozlišení s oborem se používá také s hodnotami [deklarací](../cpp/enumerations-cpp.md)výčtu výčtu s vymezeným oborem, jak je uvedeno v následujícím příkladu:
 
 ```cpp
 enum class EnumA{
@@ -164,7 +164,7 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Integrované operátory C++, jejich priorita a asociativita](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
 [Obory názvů](../cpp/namespaces-cpp.md)
