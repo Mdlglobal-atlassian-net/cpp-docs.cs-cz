@@ -9,16 +9,16 @@ f1_keywords:
 helpviewer_keywords:
 - GetActivationFactory function
 ms.assetid: 5736d285-6beb-42aa-8788-e261c0010afe
-ms.openlocfilehash: 3e138eee9e5bc02971cd1eb34c78f2be4ad5c9a0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 430b4ed3f6a02fd3db2bcab05fbb7f21f5367b5c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398417"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213977"
 ---
 # <a name="getactivationfactory-function"></a>GetActivationFactory – funkce
 
-Načte objekt factory pro aktivaci pro typ zadaný v parametru šablony.
+Načte objekt pro vytváření aktivace pro typ určený parametrem šablony.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -32,25 +32,25 @@ inline HRESULT GetActivationFactory(
 
 ### <a name="parameters"></a>Parametry
 
-*T*<br/>
-Parametr šablony určující typ objektu factory pro aktivaci.
+*Š*<br/>
+Parametr šablony, který určuje typ továrny aktivace.
 
 *activatableClassId*<br/>
-Název třídy, která může vytvářet objektu factory pro aktivaci.
+Název třídy, kterou může továrna aktivace vyvolat.
 
-*objekt pro vytváření*<br/>
-Když tato operace dokončí, odkaz na objekt pro vytváření aktivace pro typ *T*.
+*instalací*<br/>
+Po dokončení této operace se vytvoří odkaz na objekt pro vytváření aktivace pro typ *T*.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-S_OK v případě úspěchu; v opačném případě chybu HRESULT, která označuje, proč tato operace se nezdařila.
+S_OK v případě úspěchu; v opačném případě se jedná o chybu HRESULT, která indikuje, proč tato operace selhala.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** client.h
+**Záhlaví:** Client. h
 
-**Namespace:** Windows::Foundation
+**Obor názvů:** Windows:: Foundation
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Windows::Foundation – obor názvů](windows-foundation-namespace.md)

@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0035
 ms.assetid: 0667116d-338c-40a4-972c-da875f778cb5
-ms.openlocfilehash: e221fd85f1260ed04d49b43dea3d13407f504847
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 8486c4f62f637f6f7e9826a289c21f8f194eb9f3
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345299"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80192169"
 ---
 # <a name="project-build-error-prj0035"></a>Chyba sestavení projektu PRJ0035
 
-> Soubor XML "*souboru*' obsahuje znaky Unicode, které se nepodařilo přeložit na uživatelovu ANSI znakovou stránku.
+> Soubor XML '*File*' obsahuje obsah v kódování Unicode, který nelze přeložit na znakovou stránku ANSI uživatele.
 >
-> *Kódování UNICODE obsah souboru*
+> *Obsah UNICODE souboru*
 
-*soubor* je soubor XML, který je vytvořen jako příkazový řádek pro nástroj nasazení webu.
+*soubor* je soubor XML vytvořený jako příkazový řádek pro nástroj pro nasazení webu.
 
-Na stránce vlastností nasazení webu, který nelze správně převést na ANSI nalezen systém projektu znaky znakové sady Unicode v některé vlastnosti.
+Systém projektu našel v některé vlastnosti na stránce vlastností nasazení webu znaky Unicode, které se nedají správně přeložit do ANSI.
 
-Řešení této chyby je aktualizovat obsah vlastnosti použijte ANSI nebo nainstalujte znakovou stránku ve vašem počítači a nastavte jej jako výchozí systémové hodnoty.
+Řešením této chyby je aktualizovat obsah vlastnosti tak, aby používal ANSI nebo nainstalovat znakovou stránku do počítače a nastavit ji jako výchozí systém.

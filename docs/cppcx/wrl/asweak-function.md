@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - AsWeak function
 ms.assetid: a6f10cfc-c1d6-4761-adb9-1a119cc99913
-ms.openlocfilehash: 45df6332fccb2a22284eb6478c7554d87318ca78
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d11f55d57f4053fd6d46b727a8ed91b340d1764b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398846"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214172"
 ---
 # <a name="asweak-function"></a>AsWeak – funkce
 
-Získá nestálý odkaz pro zadanou instanci.
+Načte slabý odkaz na zadanou instanci.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -30,25 +30,25 @@ HRESULT AsWeak(
 
 ### <a name="parameters"></a>Parametry
 
-*T*<br/>
+*Š*<br/>
 Ukazatel na typ parametru *p*.
 
-*p*<br/>
+*trub*<br/>
 Instance typu.
 
 *pWeak*<br/>
-Když tato operace dokončí, ukazatel na Slabý odkaz na parametr *p*.
+Po dokončení této operace bude ukazatel na slabý odkaz na parametr *p*.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-S_OK, pokud je tato operace úspěšná; v opačném případě chybu HRESULT určující příčinu selhání.
+S_OK, pokud je tato operace úspěšná; v opačném případě se jedná o chybu HRESULT, která indikuje příčinu selhání.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** client.h
+**Záhlaví:** Client. h
 
-**Namespace:** Microsoft::WRL
+**Obor názvů:** Microsoft:: WRL
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Microsoft::WRL – obor názvů](microsoft-wrl-namespace.md)

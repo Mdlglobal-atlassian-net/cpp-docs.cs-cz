@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - requestedit attribute
 ms.assetid: b3c24790-3c4a-4646-8722-03d7b51172ee
-ms.openlocfilehash: e90506619d4f13d4e5627f9c06b997d7034b5f49
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: ec9e516157f2b6ea2a64875f30d2b03412c6eb46
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514089"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214562"
 ---
 # <a name="requestedit"></a>requestedit
 
-Označuje, že vlastnost podporuje `OnRequestEdit` oznámení.
+Označuje, že vlastnost podporuje oznámení `OnRequestEdit`.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -42,9 +42,9 @@ Podívejte se na příklad pro [vytvoření vazby](bindable.md) pro ukázkové p
 |**Požadované atributy**|Žádné|
 |**Neplatné atributy**|Žádné|
 
-Další informace o kontextech atributů naleznete v tématu kontexty [atributů](cpp-attributes-com-net.md#contexts).
+Další informace o kontextech atributů naleznete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [IDL – atributy](idl-attributes.md)<br/>
 [Atributy metody](method-attributes.md)<br/>

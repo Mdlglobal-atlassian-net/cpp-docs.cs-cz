@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - LNK2008
 ms.assetid: bbcd83c5-c8ae-439e-a033-63643a5bb373
-ms.openlocfilehash: 97bb2be18da5d166d1d5fba42e4ec8ce1f0439fe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c7794d09f7eeb9dceba7098ca7af90ccf2eeccad
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386522"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80194821"
 ---
 # <a name="linker-tools-error-lnk2008"></a>Chyba linkerů LNK2008
 
-Cíl opravy není zarovnaný "symbol_name.
+Cíl opravy není zarovnaný symbol_name.
 
-ODKAZ nalezen cíl opravy v souboru objektu, který nebyl správně zarovnány.
+ODKAZ nalezl v souboru objektu cíl opravy, který nebyl správně zarovnán.
 
-Tuto chybu může způsobovat zarovnání vlastní bodu (například #pragma [pack](../../preprocessor/pack.md)), [zarovnat](../../cpp/align-cpp.md) modifikátor, nebo pomocí kódu sestavení jazyka, který upravuje bodu zarovnání.
+Tato chyba může být způsobena vlastním zarovnáním secton (například #pragma [Pack](../../preprocessor/pack.md)), modifikátorem [Zarovnání](../../cpp/align-cpp.md) nebo pomocí kódu jazyka sestavení, který upravuje secton zarovnání.
 
-Pokud váš kód nepoužívá žádné z výše uvedeného, to může být způsobeno kompilátorem.
+Pokud váš kód nepoužívá žádný z výše uvedených, může to být způsobeno kompilátorem.

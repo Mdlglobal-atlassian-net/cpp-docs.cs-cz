@@ -9,16 +9,16 @@ helpviewer_keywords:
 - databases [C++], MFC programming model
 - Windows programming MFC symbols [C++]
 ms.assetid: c1e689c4-45d7-40a3-8ee9-f47676cc3bbb
-ms.openlocfilehash: e9e4f9f62a3004e171eea9e3552d8a0f58923075
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 76279b24002460b51bc2f67d4395ff271752d964
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62376455"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80215173"
 ---
 # <a name="mfc-predefined-symbols"></a>Předdefinované symboly MFC
 
-Projekty MFC vždy zahrnovat několik hlavičkové soubory, které podporují windows. Tyto budou přidány prostřednictvím `#include` příkazů v `StdAfx.h` souboru:
+Projekty knihovny MFC vždy obsahují několik hlavičkových souborů, které podporují systém Windows. Ty se přidávají prostřednictvím příkazů `#include` v souboru `StdAfx.h`:
 
 ```cpp
 #include <afxwin.h>      //MFC core and standard components
@@ -28,7 +28,7 @@ Projekty MFC vždy zahrnovat několik hlavičkové soubory, které podporují wi
 #include <afxcmn.h>      //MFC support for Windows common controls.
 ```
 
-Soubory hlaviček zahrnují ID hodnoty symbolů pro běžné knihovny MFC hodnoty. Tyto symboly jsou k dispozici pouze při práci v projektu knihovny MFC. `AFX_` Předponou následuje název předpony standardní symbolu.
+Hlavičkové soubory obsahují hodnoty ID symbolů pro společné hodnoty knihovny MFC. Tyto symboly jsou k dispozici pouze při práci v projektu MFC. Předpona `AFX_` je následována standardními předponami názvů symbolů.
 
 |||
 |-|-|
@@ -152,7 +152,7 @@ Soubory hlaviček zahrnují ID hodnoty symbolů pro běžné knihovny MFC hodnot
 |AFX_IDS_BOLD|AFX_IDS_BOLDITALIC|
 |AFX_IDS_BORDERSTYLE_0|AFX_IDS_BORDERSTYLE_1|
 |AFX_IDS_CHANGE_LINK|AFX_IDS_CHECKLISTBOX_CHECK|
-|AFX_IDS_CHECKLISTBOX_MIXED|ZRUŠTE ZAŠKRTNUTÍ POLÍČKA AFX_IDS_CHECKLISTBOX_|
+|AFX_IDS_CHECKLISTBOX_MIXED|AFX_IDS_CHECKLISTBOX_ ZRUŠIT KONTROLU|
 |AFX_IDS_COLOR_ACTIVEBAR|AFX_IDS_COLOR_ACTIVEBORDER|
 |AFX_IDS_COLOR_ACTIVETEXT|AFX_IDS_COLOR_APPWORKSPACE|
 |AFX_IDS_COLOR_BTNFACE|AFX_IDS_COLOR_BTNHIGHLIGHT|
@@ -181,7 +181,7 @@ Soubory hlaviček zahrnují ID hodnoty symbolů pro běžné knihovny MFC hodnot
 |AFX_IDS_LINKSOURCE_FORMAT|AFX_IDS_MANUAL|
 |AFX_IDS_MDICHILD|AFX_IDS_MEMORY_EXCEPTION|
 |AFX_IDS_METAFILE_FORMAT|AFX_IDS_MINI-FONT|
-|AFX_IDS_NOT_DOCOBJECT|AFX_IDS_NOT_SUPPORTED_ EXCEPTION|
+|AFX_IDS_NOT_DOCOBJECT|VÝJIMKA AFX_IDS_NOT_SUPPORTED_|
 |AFX_IDS_OBJ_TITLE_INPLACE|AFX_IDS_OBJECT_MENUITEM|
 |AFX_IDS_OCC_SCALEUNITS_PIXELS|AFX_IDS_ONEPAGE|
 |AFX_IDS_OPENFILE|AFX_IDS_PASTELINKEDTYPE|
@@ -211,9 +211,9 @@ Soubory hlaviček zahrnují ID hodnoty symbolů pro běžné knihovny MFC hodnot
 |AFX_IDS_UPDATING_ITEMS|AFX_IDS_USER_EXCEPTION|
 |AFX_IDS_VERB_EDIT|AFX_IDS_VERB_PROPERTIES|
 
-## <a name="mfc-database-programming"></a>MFC databáze programování
+## <a name="mfc-database-programming"></a>Programování databáze knihovny MFC
 
-Symboly v této tabulce zobrazí jenom v projektu knihovny MFC při byla přidána podpora databáze. Podporují taky MFC připojení k SQL serverům a programování databáze.
+Symboly v této tabulce se zobrazí pouze v projektu knihovny MFC, pokud byla přidána podpora databáze. Podporují připojení MFC k serverům SQL a programování databáze.
 
 |||
 |-|-|
@@ -232,20 +232,20 @@ Symboly v této tabulce zobrazí jenom v projektu knihovny MFC při byla přidá
 |AFX_IDP_SQL_SNAPSHOT_ NOT_SUPPORTED|AFX_IDP_SQL_SQL_CONFORMANCE|
 |AFX_IDP_SQL_SQL_NO_TOTAL|AFX_IDP_SQL_UPDATE_DELETE_FAILED|
 
-## <a name="mfc-windows-programming"></a>MFC – programování Windows
+## <a name="mfc-windows-programming"></a>MFC – programování v systému Windows
 
-Tyto symboly jsou taky součástí soubory podpory knihovny MFC, ale podporují standardní funkce aplikace Windows a akce. Tyto symboly se používají s nabídkami.
+Tyto symboly jsou také součástí souborů podpory knihovny MFC, ale podporují standardní funkce a akce aplikace systému Windows. Tyto symboly jsou používány v nabídkách.
 
-Pokud pracujete s nabídkami v **Editor nabídek**, tyto symboly se zobrazí v **vlastnost** přidružené k běžné příkazy nabídky okna. Například pokud má vaše aplikace **souboru** nabídky s **ukončovací** příkazu, že bude spojená s symbol id_app_exit – příkaz v [okno vlastností](/visualstudio/ide/reference/properties-window).
+Když pracujete s nabídkami v **editoru nabídek**, tyto symboly se zobrazí v okně **vlastností** přidruženém k běžným příkazům nabídky. Například pokud má vaše aplikace nabídku **soubor** s příkazem **Exit** , tento příkaz bude přidružen k symbolu ID_APP_EXIT v [okno Vlastnosti](/visualstudio/ide/reference/properties-window).
 
 ||||
 |-|-|-|
 |ID_APP_ABOUT|ID_APP_EXIT|ID_APPLY_NOW|
 |ID_CONTEXT_HELP|ID_DEFAULT_HELP|ID_EDIT_CLEAR|
 |ID_EDIT_CLEAR_ALL|ID_EDIT_COPY|ID_EDIT_CUT|
-|ID_EDIT_FIND|ID_EDIT_PASTE –|ID_EDIT_PASTE_LINK –|
+|ID_EDIT_FIND|ID_EDIT_PASTE|ID_EDIT_PASTE_LINK|
 |ID_EDIT_PASTE_SPECIAL|ID_EDIT_REDO|ID_EDIT_REPEAT|
-|ID_EDIT_REPLACE –|ID_EDIT_SELECT_ALL|ID_EDIT_UNDO|
+|ID_EDIT_REPLACE|ID_EDIT_SELECT_ALL|ID_EDIT_UNDO|
 |ID_FILE_CLOSE|ID_FILE_MRU_FILE1|ID_FILE_MRU_FILE10|
 |ID_FILE_MRU_FILE11|ID_FILE_MRU_FILE12|ID_FILE_MRU_FILE13|
 |ID_FILE_MRU_FILE14|ID_FILE_MRU_FILE15|ID_FILE_MRU_FILE16|
@@ -263,7 +263,7 @@ Pokud pracujete s nabídkami v **Editor nabídek**, tyto symboly se zobrazí v *
 |ID_INDICATOR_REC|ID_INDICATOR_SCRL|ID_NEXT_PANE|
 |ID_OLE_EDIT_CHANGE_ICON|ID_OLE_EDIT_CONVERT|ID_OLE_EDIT_LINKS|
 |ID_OLE_EDIT_PROPERTIES|ID_OLE_INSERT_NEW|ID_OLE_VERB_FIRST|
-|ID_PREV_PANE –|ID_REC_FIRST|ID_RECORD_LAST|
+|ID_PREV_PANE|ID_REC_FIRST|ID_RECORD_LAST|
 |ID_RECORD_NEXT|ID_RECORD_PREV|ID_SEPARATOR|
 |ID_VIEW_AUTOARRANGE|ID_VIEW_BYNAME|ID_VIEW_DETAILS|
 |ID_VIEW_LARGEICON|ID_VIEW_LINEUP|ID_VIEW_LIST|
@@ -280,7 +280,7 @@ Pokud pracujete s nabídkami v **Editor nabídek**, tyto symboly se zobrazí v *
 
 MFC
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [ID předdefinovaných symbolů](../windows/predefined-symbol-ids.md)<br/>
 [Předdefinované symboly ATL](../windows/atl-predefined-symbols.md)<br/>

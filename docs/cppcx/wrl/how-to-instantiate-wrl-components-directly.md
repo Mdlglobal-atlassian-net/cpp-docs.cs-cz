@@ -1,52 +1,52 @@
 ---
-title: 'Postupy: Přímo přímé vytváření instancí komponent knihovny WRL'
+title: 'Postupy: Přímé vytváření instancí komponent knihovny WRL'
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 1a9fa011-0cee-4abf-bf83-49adf53ff906
-ms.openlocfilehash: 3f622a79aed6a1e42feccb92e1a01b3bc1277151
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f291e982d7f77c63821e5943a5867662ccd1b4fa
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398300"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213899"
 ---
-# <a name="how-to-instantiate-wrl-components-directly"></a>Postupy: Přímo přímé vytváření instancí komponent knihovny WRL
+# <a name="how-to-instantiate-wrl-components-directly"></a>Postupy: Přímé vytváření instancí komponent knihovny WRL
 
-Další informace o použití Windows Runtime C++ šablony knihovny (WRL)[Microsoft::WRL:: Make](make-function.md) a [Microsoft::WRL::Details::MakeAndInitialize](makeandinitialize-function.md) pro vytvoření instance komponenty z modulu, který ji definuje.
+Naučte se používat knihovnu šablon C++ prostředí Windows Runtime (WRL)[Microsoft:: WRL:: Make](make-function.md) a [Microsoft:: WRL::D etails:: MakeAndInitialize](makeandinitialize-function.md) pro vytvoření instance komponenty z modulu, který ji definuje.
 
-Pokud není zapotřebí používat továrny tříd nebo jiné mechanismy, je možné přímým vytvořením instance komponenty snížit režii. Můžete vytvořit instanci komponenty přímo v obou aplikací pro univerzální platformu Windows a v aplikacích klasické pracovní plochy.
+Pokud není zapotřebí používat továrny tříd nebo jiné mechanismy, je možné přímým vytvořením instance komponenty snížit režii. Komponentu lze vytvořit přímo v aplikacích Univerzální platforma Windows i v aplikacích klasické pracovní plochy.
 
-Další informace o použití knihovny šablon jazyka C++ Windows Runtime k vytvoření klasické komponenty COM a vytvoření instance z externí aplikace pracovní plochy, najdete v článku [jak: Vytvoření klasické komponenty COM](how-to-create-a-classic-com-component-using-wrl.md).
+Další informace o tom, jak C++ pomocí knihovny šablon prostředí Windows Runtime vytvořit klasickou komponentu modelu COM a vytvořit její instanci z externí desktopové aplikace, najdete v tématu [How to: Create a Classic komponent modelu COM](how-to-create-a-classic-com-component-using-wrl.md).
 
-Tento dokument popisuje dva příklady. První příklad používá pro vytvoření instance komponenty funkci `Make`. V druhém příkladu se pro vytvoření instance komponenty, která může v průběhu vytváření selhat, používá funkce `MakeAndInitialize`. (Protože komponenta COM obvykle používá hodnoty HRESULT, místo výjimek, k označení chyby, typu modelu COM nevyvolá ze svého konstruktoru. `MakeAndInitialize` povoluje komponentě ověření argumentů při vytváření skrze `RuntimeClassInitialize` metoda.) Oba příklady definují rozhraní pro základní nástroj pro protokolování a implementují rozhraní definicí třídy, které zapisuje zprávy do konzoly.
+Tento dokument popisuje dva příklady. První příklad používá pro vytvoření instance komponenty funkci `Make`. V druhém příkladu se pro vytvoření instance komponenty, která může v průběhu vytváření selhat, používá funkce `MakeAndInitialize`. (Vzhledem k tomu, že model COM obvykle používá hodnoty HRESULT namísto výjimek, k indikaci chyb, typ modelu COM obvykle nevyvolává z jeho konstruktoru. `MakeAndInitialize` umožňuje komponentě ověřit argumenty konstrukce pomocí metody `RuntimeClassInitialize`.) Oba příklady definují základní rozhraní pro protokolovací nástroj a implementují toto rozhraní definováním třídy, která zapisuje zprávy do konzoly.
 
 > [!IMPORTANT]
-> Nelze použít `new` operátor přímé vytváření instancí komponent knihovny šablon jazyka C++ Windows Runtime. Proto je doporučeno pro přímé vytvoření instance komponenty vždy používat `Make` nebo `MakeAndInitialize`.
+> Operátor `new` nelze použít k vytvoření instance prostředí Windows Runtime C++ součástí knihovny šablon. Proto je doporučeno pro přímé vytvoření instance komponenty vždy používat `Make` nebo `MakeAndInitialize`.
 
 ### <a name="to-create-and-instantiate-a-basic-logger-component"></a>Vytvoření instance komponenty pro základní nástroj pro protokolování
 
-1. V sadě Visual Studio, vytvořit **Konzolová aplikace Win32** projektu. Název projektu, například *WRLLogger*.
+1. V aplikaci Visual Studio vytvořte projekt **konzolové aplikace Win32** . Pojmenujte projekt, například *WRLLogger*.
 
-2. Přidat **soubor Midl (.idl)** do projektu, zadejte název souboru `ILogger.idl`a následně přidejte následující kód:
+2. Do projektu přidejte soubor **MIDL (. idl)** , pojmenujte soubor `ILogger.idl`a pak přidejte tento kód:
 
    [!code-cpp[wrl-logger-make#1](../codesnippet/CPP/how-to-instantiate-wrl-components-directly_1.idl)]
 
-3. Pomocí následujícího kódu nahraďte obsah `WRLLogger.cpp`.
+3. K nahrazení obsahu `WRLLogger.cpp`použijte následující kód.
 
    [!code-cpp[wrl-logger-make#2](../codesnippet/CPP/how-to-instantiate-wrl-components-directly_2.cpp)]
 
 ### <a name="to-handle-construction-failure-for-the-basic-logger-component"></a>Zpracování chyby při vytváření komponenty základního nástroje pro protokolování
 
-1. Pro nahrazení definice třídy `CConsoleWriter` použijte následující kód. Tato verze obsahuje členskou proměnnou soukromého řetězce a přepisuje metodu `RuntimeClass::RuntimeClassInitialize`. `RuntimeClassInitialize` Pokud selže volání `SHStrDup` selže.
+1. Pro nahrazení definice třídy `CConsoleWriter` použijte následující kód. Tato verze obsahuje členskou proměnnou soukromého řetězce a přepisuje metodu `RuntimeClass::RuntimeClassInitialize`. `RuntimeClassInitialize` dojde k chybě, pokud volání `SHStrDup` neproběhne úspěšně.
 
    [!code-cpp[wrl-logger-makeandinitialize#1](../codesnippet/CPP/how-to-instantiate-wrl-components-directly_3.cpp)]
 
-2. Pro nahrazení definice `wmain` použijte následující kód. Tato verze používá `MakeAndInitialize` pro vytvoření instance `CConsoleWriter` objektu a ověří výsledek HRESULT.
+2. Pro nahrazení definice `wmain` použijte následující kód. Tato verze používá `MakeAndInitialize` k vytvoření instance `CConsoleWriter` objektu a kontroluje výsledek HRESULT.
 
    [!code-cpp[wrl-logger-makeandinitialize#2](../codesnippet/CPP/how-to-instantiate-wrl-components-directly_4.cpp)]
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Knihovna šablon C++ prostředí Windows Runtime (WRL)](windows-runtime-cpp-template-library-wrl.md)<br/>
-[Microsoft::WRL::Make](make-function.md)<br/>
-[Microsoft::WRL::Details::MakeAndInitialize](makeandinitialize-function.md)
+[Microsoft:: WRL:: make](make-function.md)<br/>
+[Microsoft:: WRL::D etails:: MakeAndInitialize](makeandinitialize-function.md)

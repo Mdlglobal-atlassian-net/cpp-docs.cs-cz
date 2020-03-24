@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0021
 ms.assetid: bcab794d-4a6d-4b4d-aaca-73676c0cec75
-ms.openlocfilehash: c815e821b4049a0fc35a04cab284bf9b6e80864b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2f838bc2fdf03b2e1056e76caa7a06155f5535e2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62359329"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80192390"
 ---
 # <a name="project-build-error-prj0021"></a>Chyba sestavení projektu PRJ0021
 
-> Nástroj "*nástroj*", vlastnost '*vlastnost*' obsahuje neplatný název souboru.
+> Nástroj Tool *,* vlastnost '*Property*' obsahuje neplatný název souboru.
 
-Název souboru zadaný ve vlastnosti *vlastnost* pro nástroj *nástroj* byl neplatný.
+Název souboru, který byl zadán ve *vlastnosti* Property *nástroje* nástroje, byl neplatný.
 
-Možná jste použili neznámému nebo neplatnému – makro.
+Možná jste použili neznámé nebo neplatné makro.
 
-Zobrazit [nastavení vlastností projektu Visual C++](../../build/working-with-project-properties.md) informace o tom, jak přistupovat k vlastnosti projektu.
+Informace o tom, jak získat přístup k vlastnostem projektu, naleznete v tématu [Nastavení vlastností projektu Visual C++ ](../../build/working-with-project-properties.md) .

@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - Foundation namespace
 ms.assetid: 96a6b5e0-ddee-4b21-ae4e-da5feeb945c3
-ms.openlocfilehash: cd16a888594e928214ef45cbdddb1e0fdac7c82a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4c8bc578fd9657fb964bc6148e3acc24b0cb5328
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396047"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213522"
 ---
 # <a name="windowsfoundation-namespace"></a>Windows::Foundation – obor názvů
 
-Umožňuje základní funkce Windows Runtime, jako je vytvoření objektu a objektu pro vytváření.
+Umožňuje základní funkce prostředí Windows Runtime, jako je vytvoření objektu a vytváření továrny.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -31,15 +31,15 @@ namespace Windows::Foundation;
 
 |Název|Popis|
 |----------|-----------------|
-|[ActivateInstance – funkce](activateinstance-function.md)|Zaregistruje a načte instanci zadaného typu definované v ID zadané třídy.|
-|[GetActivationFactory – funkce](getactivationfactory-function.md)|Načte objekt factory pro aktivaci pro typ zadaný v parametru šablony.|
+|[ActivateInstance – funkce](activateinstance-function.md)|Zaregistruje a načte instanci zadaného typu definovaného v zadaném ID třídy.|
+|[GetActivationFactory – funkce](getactivationfactory-function.md)|Načte objekt pro vytváření aktivace pro typ určený parametrem šablony.|
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** client.h
+**Záhlaví:** Client. h
 
-**Namespace:** Windows
+**Obor názvů:** Systému
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Obory názvů Windows UPW](/uwp/api/)
+[Windows UWP – obory názvů](/uwp/api/)

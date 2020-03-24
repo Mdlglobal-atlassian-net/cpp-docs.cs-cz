@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - U4004
 ms.assetid: 5086bbcb-42d7-4677-a877-1a02202a86a2
-ms.openlocfilehash: 882f6c98b31d23d283f5e8b32b46a46c543b1a76
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d59b5656d76025fa56bfc76bad800659f25acf53
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62298149"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80193196"
 ---
 # <a name="nmake-warning-u4004"></a>Upozornění nástroje NMAKE U4004
 
-příliš mnoho pravidel pro cíl targetname
+příliš mnoho pravidel pro cíl ' TargetName '
 
-Byla zadána více než jeden blok popis pro danou cílovou pomocí jednoho dvojtečky (**:**) jako oddělovače. NMAKE spouští příkazy v první blok popis a novější bloky ignorovat.
+Pro daný cíl byl zadán více než jeden blok popisu pomocí jednoduchých dvojtečk ( **:** ) jako oddělovačů. NMAKE provedl příkazy v bloku prvního popisu a ignoruje později bloky.
 
-K určení stejného cíle ve více závislostí, použijte dvojité dvojtečky (`::`) jako oddělovač v každém řádku závislostí.
+Chcete-li zadat stejný cíl v několika závislostech, použijte jako oddělovač v každé čáře závislosti dvojité dvojtečky (`::`).

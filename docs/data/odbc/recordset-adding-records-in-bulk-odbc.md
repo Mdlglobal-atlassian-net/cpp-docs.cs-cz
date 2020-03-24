@@ -1,38 +1,38 @@
 ---
-title: 'Recordset: Záznamy hromadné přidávání (ODBC)'
+title: 'Sada záznamů: Hromadné přidávání záznamů (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ODBC recordsets, adding records
 - recordsets, adding records
 - bulk record additions to recordsets
 ms.assetid: 4685f656-14b9-4f10-a1c5-147b2b89a0b4
-ms.openlocfilehash: a2c3eab8bb4c0e8db76fceb5a2dafd16a4a07079
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f561cb0275933a973e97ef0518148e81e14a0234
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395661"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213015"
 ---
-# <a name="recordset-adding-records-in-bulk-odbc"></a>Recordset: Záznamy hromadné přidávání (ODBC)
+# <a name="recordset-adding-records-in-bulk-odbc"></a>Sada záznamů: Hromadné přidávání záznamů (ODBC)
 
-Toto téma platí pro třídy knihovny MFC rozhraní ODBC.
+Toto téma se vztahuje na třídy knihovny MFC rozhraní ODBC.
 
-MFC [CRecordset](../../mfc/reference/crecordset-class.md) třída má nové optimalizace, které zvyšuje efektivitu při přidávání nových záznamů hromadné do tabulky.
+Třída knihovny MFC [CRecordset](../../mfc/reference/crecordset-class.md) má novou optimalizaci, která zvyšuje efektivitu při hromadném přidávání nových záznamů do tabulky.
 
 > [!NOTE]
-> Toto téma se vztahuje na objekty odvozené z `CRecordset` v který řádek hromadné načítání není implementovaná. Pokud používáte hromadné načítání řádků, přečtěte si téma [sada záznamů: Načítání záznamů (ODBC) hromadné](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+> Toto téma se vztahuje na objekty odvozené od `CRecordset`, ve kterých nebylo implementováno hromadné načítání řádků. Používáte-li hromadné načítání řádků, přečtěte si téma [Sada záznamů: hromadné načítání záznamů (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
-Nová možnost pro *dwOptions* parametr [CRecordset::Open](../../mfc/reference/crecordset-class.md#open) členskou funkci `optimizeBulkAdd`, zlepšuje výkon při přidávání více záznamů za sebou bez volání `Requery` nebo `Close`. Pouze pole, které jsou změny před první `Update` volání jsou označeny jako neaktualizovaní pro následné `AddNew` / `Update` volání.
+Nová možnost pro parametr *dwoptionss* členské funkce [CRecordset:: Open](../../mfc/reference/crecordset-class.md#open) , `optimizeBulkAdd`, zlepšuje výkon při přidávání více záznamů po sobě, aniž by bylo nutné volat `Requery` nebo `Close`. Pouze ta pole, která jsou zapsaná před prvním `Update` volání, jsou označena jako nečistá pro následná `AddNew`/`Update` volání.
 
-Pokud používáte databázové třídy výhod `::SQLSetPos` rozhraní API ODBC funkce pro přidání, úpravy a odstranění záznamů, tato optimalizace je zbytečné.
+Pokud používáte databázové třídy k využití funkce `::SQLSetPos` ODBC API k přidávání, úpravám a odstraňování záznamů, tato optimalizace není nutná.
 
-Pokud je načtena knihovna kurzorů rozhraní ODBC nebo ovladač ODBC nepodporuje přidávání, úpravy a odstranění prostřednictvím `::SQLSetPos`, tyto optimalizace měl vylepšit hromadné přidání výkonu. Chcete-li na této optimalizace, nastavte *dwOptions* parametr `Open` volání pro sady záznamů pro následující:
+Pokud je načtena knihovna kurzorů rozhraní ODBC nebo ovladač ODBC nepodporuje přidávání, úpravy a odstraňování prostřednictvím `::SQLSetPos`, měla by tato optimalizace zvýšit výkon hromadného přidání. Pro zapnutí této optimalizace nastavte parametr *dwOptions* ve `Open` volání vaší sady záznamů do následujících možností:
 
 ```
 appendOnly | optimizeBulkAdd
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Sada záznamů (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
 [Sada záznamů: Přidávání, aktualizace a odstranění záznamů (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)<br/>

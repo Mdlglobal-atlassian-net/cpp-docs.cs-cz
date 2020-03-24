@@ -9,16 +9,16 @@ f1_keywords:
 helpviewer_keywords:
 - CancelTransitionPolicy Enumeration
 ms.assetid: 5de49f7d-e5e3-43e9-bbca-666caf226cef
-ms.openlocfilehash: cb07f28794d466dde08719057a21ebf62f989e85
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e820b3fffb4a00e95a1210a5c0beb3229c6d1657
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398755"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214120"
 ---
 # <a name="canceltransitionpolicy-enumeration"></a>CancelTransitionPolicy – výčet
 
-Určuje, jak asynchronní operace je pokus o přechod do konečný stav Dokončeno nebo chyba by se měly chovat s ohledem na klient vyžádal zrušeném stavu.
+Určuje, jak se má při pokusu o přechod asynchronní operace přejít do stavu terminálu dokončeno nebo chyba, vzhledem k zrušenému stavu požadovanému klientem.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -32,15 +32,15 @@ enum CancelTransitionPolicy;
 
 |Název|Popis|
 |----------|-----------------|
-|`RemainCanceled`|Pokud asynchronní operace je aktuálně ve zrušeném stavu klient vyžádal, to znamená, že zůstanou ve zrušeném stavu na rozdíl od přechod k dokončení terminálu nebo v chybovém stavu.|
-|`TransitionFromCanceled`|Pokud asynchronní operace je aktuálně ve zrušeném stavu klient vyžádal, to znamená, že stav by měl přejít od zrušeném stavu na konečný stav Dokončeno nebo chyba, počítáno od volání, které používá tento příznak.|
+|`RemainCanceled`|Pokud je asynchronní operace aktuálně ve zrušeném stavu, který byl vyžádán klientem, znamená to, že zůstane ve zrušeném stavu, nikoli při přechodu do terminálu dokončeného nebo chybového stavu.|
+|`TransitionFromCanceled`|Pokud je asynchronní operace aktuálně ve zrušeném stavu, který byl vyžádán klientem, znamená to, že stav by měl přejít z stavu zrušeno do stavu terminálu dokončeno nebo chyba podle volání, které využívá tento příznak.|
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** async.h
+**Hlavička:** Async. h
 
-**Namespace:** Microsoft::WRL
+**Obor názvů:** Microsoft:: WRL
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Microsoft::WRL – obor názvů](microsoft-wrl-namespace.md)

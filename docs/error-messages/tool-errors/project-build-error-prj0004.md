@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0004
 ms.assetid: 1858769f-0be4-40ed-ab70-2cee550488c7
-ms.openlocfilehash: ad11e5b81ec31e1ac8a47a0a0ffa31a443f1a107
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 66fccc0d5095373d44b823334402f3188dd1777e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62359758"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80192910"
 ---
 # <a name="project-build-error-prj0004"></a>Chyba sestavení projektu PRJ0004
 
-> Nepovedlo se vygenerovat příkazový řádek, "*nástroj*" nástroj.
+> Nebylo možné vygenerovat příkazový řádek pro nástroj*nástrojů*.
 
-Jeden nebo více vlastností byly zadány v tak, aby syntaxe volání *nástroj* neplatné:
+Jedna nebo více vlastností bylo specifikováno takovým způsobem, aby bylo možné vyvolat neplatnou syntaxi volání *nástroje* :
 
-- Možná jste zadali chybně vytvořený nebo neznámá makra.
+- Možná jste zadali nesprávně vytvořená nebo neznámá makra.
 
-- V počítači může není dostatek volného místa na disku.
+- Počítač může mít nedostatek volného místa na disku.
 
-Můžete chtít zkontrolovat nastavení nástroje pro jejich prohlížením [stránky vlastností příkazového řádku](../../build/reference/command-line-property-pages.md).
+Nastavení nástroje můžete zkontrolovat na [stránce vlastností příkazového řádku](../../build/reference/command-line-property-pages.md).

@@ -51,12 +51,12 @@ helpviewer_keywords:
 - m_bCancelWhenExecuting
 - m_bIsExecuting
 ms.assetid: ef285fef-0d66-45e6-a762-b03357098e3b
-ms.openlocfilehash: 6e095e01d3131f98b44935705b2564291fb13844
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: f04885ef61841ac20f87ab07ce73d3c9342fe39c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447058"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212159"
 ---
 # <a name="icommandimpl-class"></a>ICommandImpl – třída
 
@@ -106,7 +106,7 @@ Rozhraní příkazu. Výchozí formát je `ICommand`.
 
 Povinné rozhraní objektu Command.
 
-## <a name="cancel"></a>ICommandImpl:: Cancel
+## <a name="icommandimplcancel"></a><a name="cancel"></a>ICommandImpl:: Cancel
 
 Zruší aktuální spuštění příkazu.
 
@@ -120,7 +120,7 @@ STDMETHOD(Cancel)();
 
 Viz [ICommand:: Cancel](/previous-versions/windows/desktop/ms714402(v=vs.85)) v *referenci programátora OLE DB*.
 
-## <a name="cancelexecution"></a>ICommandImpl:: CancelExecution
+## <a name="icommandimplcancelexecution"></a><a name="cancelexecution"></a>ICommandImpl:: CancelExecution
 
 Zruší aktuální spuštění příkazu.
 
@@ -130,7 +130,7 @@ Zruší aktuální spuštění příkazu.
 HRESULT CancelExecution();
 ```
 
-## <a name="createrowset"></a>ICommandImpl:: CreateRowset
+## <a name="icommandimplcreaterowset"></a><a name="createrowset"></a>ICommandImpl:: CreateRowset
 
 Volá se [spuštěním, aby](../../data/oledb/icommandimpl-execute.md) se vytvořila jediná sada řádků.
 
@@ -179,7 +179,7 @@ Chcete-li vytvořit více než jednu sadu řádků nebo zadat vlastní podmínky
 
 Viz [ICommand:: Execute](/previous-versions/windows/desktop/ms718095(v=vs.85)) v *referenci programátora OLE DB.*
 
-## <a name="execute"></a>ICommandImpl:: Execute
+## <a name="icommandimplexecute"></a><a name="execute"></a>ICommandImpl:: Execute
 
 Provede příkaz.
 
@@ -203,7 +203,7 @@ Požadované odchozí rozhraní bude rozhraní získaná z objektu sady řádků
 
 `Execute` volá [CreateRowset](../../data/oledb/icommandimpl-createrowset.md). Přepsat výchozí implementaci pro vytvoření více než jedné sady řádků nebo pro poskytnutí vlastních podmínek pro vytváření různých sad řádků.
 
-## <a name="getdbsession"></a>ICommandImpl:: GetDBSession
+## <a name="icommandimplgetdbsession"></a><a name="getdbsession"></a>ICommandImpl:: GetDBSession
 
 Vrátí ukazatel rozhraní na relaci, která vytvořila příkaz.
 
@@ -222,7 +222,7 @@ Viz [ICommand:: GetDBSession](/previous-versions/windows/desktop/ms719622(v=vs.8
 
 Užitečné pro načítání vlastností z relace.
 
-## <a name="icommandimpl"></a>ICommandImpl:: ICommandImpl
+## <a name="icommandimplicommandimpl"></a><a name="icommandimpl"></a>ICommandImpl:: ICommandImpl
 
 Konstruktor
 
@@ -232,7 +232,7 @@ Konstruktor
 ICommandImpl();
 ```
 
-## <a name="bcancel"></a>ICommandImpl:: m_bCancel
+## <a name="icommandimplm_bcancel"></a><a name="bcancel"></a>ICommandImpl:: m_bCancel
 
 Určuje, zda je příkaz zrušen.
 
@@ -246,7 +246,7 @@ unsigned m_bCancel:1;
 
 Tuto proměnnou můžete načíst v metodě `Execute` třídy Command a zrušit podle potřeby.
 
-## <a name="bcancelwhenexecuting"></a>ICommandImpl:: m_bCancelWhenExecuting
+## <a name="icommandimplm_bcancelwhenexecuting"></a><a name="bcancelwhenexecuting"></a>ICommandImpl:: m_bCancelWhenExecuting
 
 Určuje, zda lze příkaz Zrušit při spuštění.
 
@@ -260,7 +260,7 @@ unsigned m_bCancelWhenExecuting:1;
 
 Výchozí **hodnota je true** (lze zrušit).
 
-## <a name="bisexecuting"></a>ICommandImpl:: m_bIsExecuting
+## <a name="icommandimplm_bisexecuting"></a><a name="bisexecuting"></a>ICommandImpl:: m_bIsExecuting
 
 Určuje, zda je příkaz aktuálně spuštěn.
 

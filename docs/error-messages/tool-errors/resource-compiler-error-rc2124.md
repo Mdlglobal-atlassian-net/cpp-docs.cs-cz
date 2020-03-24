@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - RC2124
 ms.assetid: 4eb5c4ec-ca9b-46a0-805b-35e040e9ed41
-ms.openlocfilehash: b61c76c96430ab39a6225ab16b4851b20303f5a6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: da83601c8a4e99118bb7301da39c5bf9957e10eb
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62219844"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80191350"
 ---
 # <a name="resource-compiler-error-rc2124"></a>Chyba kompilátoru prostředků RC2124
 
-prázdné nabídky není povolená.
+prázdné nabídky nejsou povoleny
 
-**END** – klíčové slovo se nachází před všechny položky nabídky jsou definovány v **nabídky** příkazu. Nástroj Resource Compiler neumožňuje prázdné nabídky. Ujistěte se, že nemáte žádné otevřené uvozovek v rámci **nabídky** příkazu.
+Klíčové slovo **End** se zobrazí před definováním položek nabídky v příkazu **nabídky** . Kompilátor prostředků nepovoluje prázdné nabídky. Ujistěte se, že v příkazu **nabídky** nejsou žádné otevřené uvozovky.

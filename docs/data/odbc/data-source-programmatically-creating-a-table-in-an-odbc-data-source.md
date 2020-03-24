@@ -7,31 +7,31 @@ helpviewer_keywords:
 - ODBC data sources, creating tables in
 - tables [C++], creating programmatically
 ms.assetid: 9ca68fb5-c3df-424a-a75c-e3fb01cc1b18
-ms.openlocfilehash: 61d3f3e39362db27d1e3abc00fa3cb9ea82b86e2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 25c975560d6a73ce67294d97830b2f5bec9cd635
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395926"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213275"
 ---
 # <a name="data-source-programmatically-creating-a-table-in-an-odbc-data-source"></a>Zdroj dat: Programové vytvoření tabulky ve zdroji dat rozhraní ODBC
 
-Toto téma vysvětluje, jak vytvořit tabulku pro vaše data zdroj, pomocí `ExecuteSQL` členské funkce třídy `CDatabase`, předáním funkci, která obsahuje řetězec **CREATE TABLE** příkaz jazyka SQL.
+Toto téma vysvětluje, jak vytvořit tabulku pro zdroj dat pomocí `ExecuteSQL` členské funkce třídy `CDatabase`a předáním funkce řetězec, který obsahuje **Create Table** příkaz SQL.
 
-Obecné informace o zdrojích dat rozhraní ODBC v prostředí MFC naleznete v tématu [datové zdroje (ODBC)](../../data/odbc/data-source-odbc.md). Téma [zdroj dat: Programová konfigurace zdroje dat ODBC](../../data/odbc/data-source-programmatically-configuring-an-odbc-data-source.md) popisuje vytváření datového zdroje.
+Obecné informace o zdrojích dat ODBC v knihovně MFC naleznete v tématu [zdroj dat (ODBC)](../../data/odbc/data-source-odbc.md). Téma [zdroj dat: programové nakonfigurování zdroje dat ODBC](../../data/odbc/data-source-programmatically-configuring-an-odbc-data-source.md) popisuje vytváření zdrojů dat.
 
-Až budete mít zdroj dat navázat, můžete snadno vytvářet tabulky pomocí `ExecuteSQL` členské funkce a **CREATE TABLE** příkaz jazyka SQL. Pokud jste měli třeba `CDatabase` objektu s názvem `myDB`, můžete použít následující kód knihovny MFC vytvořte tabulku:
+Pokud máte vytvořený zdroj dat, můžete snadno vytvořit tabulky pomocí členské funkce `ExecuteSQL` a příkazu **Create Table** SQL. Pokud jste například `CDatabase` objekt nazvaný `myDB`, mohli byste pomocí následujícího kódu knihovny MFC vytvořit tabulku:
 
 ```
 myDB.ExecuteSQL("CREATE TABLE OFFICES (OfficeID TEXT(4)" ",
                          OfficeName TEXT(10))");
 ```
 
-Tento příklad kódu vytvoří tabulky nazvané "Pobočky" ve zdroji dat Microsoft Access ve `myDB`; tabulka obsahuje dvě pole "OfficeID" a "OfficeName."
+V tomto příkladu kódu se vytvoří tabulka s názvem "pobočky" v připojení ke zdroji dat Microsoft Access udržované nástrojem `myDB`; tabulka obsahuje dvě pole "OfficeID" a "Office".
 
 > [!NOTE]
->  Pole typů uvedených v **CREATE TABLE** příkaz SQL se může lišit podle ovladač rozhraní ODBC, kterou používáte. Program Microsoft Query (distribuovat s jazykem Visual C++ 1.5) je jeden způsob, jak zjistit, jaké typy pole jsou k dispozici pro zdroj dat. V aplikaci Microsoft Query, klikněte na tlačítko **souboru**, klikněte na tlačítko **Table_Definition**, vyberte tabulku ze zdroje dat a podívejte se na typ, který ukazuje **typ** – pole se seznamem. Syntaxe SQL existuje také k vytváření indexů.
+>  Typy polí zadané v příkazu jazyka SQL **Create Table** se mohou lišit podle ovladače ODBC, který používáte. Microsoft Query program (distribuováno se sadou C++ Visual 1,5) je jedním ze způsobů, jak zjistit, jaké typy polí jsou k dispozici pro zdroj dat. V Microsoft Query klikněte na **soubor**, klikněte na **Table_Definition**, vyberte tabulku ze zdroje dat a podívejte se na typ uvedený v poli se seznamem **typ** . Syntaxe SQL existuje také k vytváření indexů.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Zdroj dat (ODBC)](../../data/odbc/data-source-odbc.md)

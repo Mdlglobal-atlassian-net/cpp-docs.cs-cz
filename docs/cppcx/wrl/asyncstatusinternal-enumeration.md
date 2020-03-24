@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - AsyncStatusInternal enumeration
 ms.assetid: b783923f-3f1c-4487-9384-be572cbc62d7
-ms.openlocfilehash: f12bf4aafc87e44a6e2fb15ba79de4a9744bea58
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0eadd1e3a287feecd36b00b231b42c31218352c1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398781"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214146"
 ---
 # <a name="asyncstatusinternal-enumeration"></a>AsyncStatusInternal – výčet
 
-Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.
+Podporuje infrastrukturu WRL a není určena pro použití přímo v kódu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -26,7 +26,7 @@ enum AsyncStatusInternal;
 
 ## <a name="remarks"></a>Poznámky
 
-Určuje mapování mezi interní výčty pro stav asynchronní operace a `Windows::Foundation::AsyncStatus` výčtu.
+Určuje mapování mezi interními výčty pro stav asynchronních operací a výčet `Windows::Foundation::AsyncStatus`.
 
 ## <a name="members"></a>Členové
 
@@ -47,10 +47,10 @@ Ekvivalent `::Windows::Foundation::AsyncStatus::Error`
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** async.h
+**Hlavička:** Async. h
 
-**Namespace:** Microsoft::WRL::Details
+**Obor názvů:** Microsoft:: WRL::D etails
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Microsoft::WRL::Details – obor názvů](microsoft-wrl-details-namespace.md)

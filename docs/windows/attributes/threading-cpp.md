@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - threading attribute
 ms.assetid: 9b558cd6-fbf0-4602-aed5-31c068550ce3
-ms.openlocfilehash: db2940ec3536ae8ea29ba40db84ea869ecb3d0ac
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: b249eaf61266ed9964e44f6f0ad1c2f12a1b1067
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69513927"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214497"
 ---
 # <a name="threading-c"></a>threading (C++)
 
@@ -25,32 +25,32 @@ Určuje model dělení na vlákna pro objekt modelu COM.
 
 ### <a name="parameters"></a>Parametry
 
-*model*<br/>
+*vzorový*<br/>
 Volitelné Jeden z následujících modelů vláken:
 
-- `apartment`(dělení na vlákna)
+- `apartment` (dělení na vlákna)
 
-- `neutral`(.NET Framework komponenty bez uživatelského rozhraní)
+- `neutral` (součásti .NET Framework bez uživatelského rozhraní)
 
-- `single`(jednoduché zřetězení)
+- `single` (jednoduché zřetězení)
 
-- `free`(bezplatné dělení na vlákna)
+- `free` (bezplatné dělení na vlákna)
 
-- `both`(vícevláknové a bezplatné podprocesy)
+- `both` (vícevláknové a bezplatné podprocesy)
 
 Výchozí hodnota je `apartment`.
 
 ## <a name="remarks"></a>Poznámky
 
-Atribut Threading se nezobrazí v generovaném souboru IDL, ale bude použit v implementaci objektu com. C++
+C++ Atribut **Threading** se nezobrazí v generovaném souboru IDL, ale bude použit v implementaci objektu com.
 
-V projektech ATL, pokud je současně atribut [Coclass](coclass.md) , je model vláken určený modelem předán jako parametr šablony `coclass` třídě [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md) , vloženou atributem.
+V projektech ATL, pokud je současně atribut [Coclass](coclass.md) , je model vláken určený *modelem* předán jako parametr šablony třídě [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md) , vloženou atributem `coclass`.
 
 Atribut **vlákna** také chrání přístup k [event_source](event-source.md).
 
 ## <a name="example"></a>Příklad
 
-Podívejte se [](licensed.md) na Vzorový příklad použití **vlákna**.
+Podívejte se na [Vzorový příklad použití](licensed.md) **vlákna**.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -63,9 +63,9 @@ Podívejte se [](licensed.md) na Vzorový příklad použití **vlákna**.
 |**Požadované atributy**|**coclass**|
 |**Neplatné atributy**|Žádné|
 
-Další informace o kontextech atributů naleznete v tématu kontexty [atributů](cpp-attributes-com-net.md#contexts).
+Další informace o kontextech atributů naleznete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [COM – atributy](com-attributes.md)<br/>
 [Atributy klíčových slov typedef, enum, union a struct](typedef-enum-union-and-struct-attributes.md)<br/>

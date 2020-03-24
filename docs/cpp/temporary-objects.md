@@ -5,18 +5,18 @@ helpviewer_keywords:
 - temporary objects
 - objects [C++], temporary
 ms.assetid: 4c8cec02-391e-4225-9bc6-06d150201412
-ms.openlocfilehash: 19fd21da09149e730aac9bd0fb2cde066043e030
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b298872a688c3b8e383a04ea4d82753859cbb2e6
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62266800"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80160746"
 ---
 # <a name="temporary-objects"></a>Dočasné objekty
 
 V některých případech je pro kompilátor nezbytné vytvořit dočasné objekty. Tyto dočasné objekty mohou být vytvořeny z následujících důvodů:
 
-- Inicializace **const** odkaz s inicializátorem typu odlišného od základního typu inicializovaného odkazu.
+- Pro inicializaci odkazu **const** s inicializátorem jiného typu než v nadřazeném typu odkazu, který se má inicializovat.
 
 - Uložení návratové hodnoty funkce, která vrací uživatelský typ. Tyto dočasné objekty jsou vytvořeny pouze v případě, že program nekopíruje hodnotu vrácenou objektu. Příklad:
 
@@ -33,7 +33,7 @@ V některých případech je pro kompilátor nezbytné vytvořit dočasné objek
 
    Protože vrácená hodnota není do jiného objektu zkopírována, je vytvořen dočasný objekt. Častější případ, kdy jsou dočasné objekty vytvořeny, je při vyhodnocení výrazu, kde musí být volány funkce přetíženého operátoru. Tyto funkce přetíženého operátoru vrátí uživatelský typ, který často není zkopírován do jiného objektu.
 
-   Vezměte v úvahu výraz `ComplexResult = Complex1 + Complex2 + Complex3`. Výraz `Complex1 + Complex2` je vyhodnocen a výsledek je uložen v dočasném objektu. Další, výraz *dočasné* `+ Complex3` je vyhodnocen a výsledek je zkopírován do `ComplexResult` (za předpokladu, že operátor přiřazení není přetížen).
+   Vezměte v úvahu výraz `ComplexResult = Complex1 + Complex2 + Complex3`. Výraz `Complex1 + Complex2` je vyhodnocen a výsledek je uložen v dočasném objektu. Dále je vyhodnocen *dočasný* `+ Complex3` výrazu a výsledek je zkopírován do `ComplexResult` (za předpokladu, že operátor přiřazení není přetížený).
 
 - Uložení výsledku přetypování do uživatelského typu. Když je objekt daného typu explicitně převeden na uživatelský typ, tento nový objekt je zkonstruován jako dočasný objekt.
 
@@ -43,5 +43,5 @@ Dočasné objekty mají dobu života, která je definována bodem jejich vytvoř
 
 |Důvod vytvoření dočasného objektu|Bod zničení|
 |------------------------------|-----------------------|
-|Výsledek vyhodnocení výrazu|Všechny dočasné objekty vytvořené jako výsledek vyhodnocení výrazu jsou zničeny na konci příkazu výrazu (to znamená, že v místě středníku), nebo na konci řídicích výrazů **pro**, **Pokud**, **při**, **proveďte**, a **přepnout** příkazy.|
-|Inicializace **const** odkazy|Pokud není inicializátorem l-hodnota stejného typu jako inicializovaný odkaz, je vytvořen dočasný objekt základního typu objektu a inicializován inicializačním výrazem. Tento dočasný objekt je zničen okamžitě po zničení odkazu na objekt, ke kterému je vázán.|
+|Výsledek vyhodnocení výrazu|Všechny dočasné objekty vytvořené v důsledku vyhodnocení výrazu jsou zničeny na konci příkazu výrazu (tj. středníkem) nebo na konci řídicích výrazů pro příkazy **for**, **if** **,** **while**a **Switch** .|
+|Inicializace odkazů **const**|Pokud není inicializátorem l-hodnota stejného typu jako inicializovaný odkaz, je vytvořen dočasný objekt základního typu objektu a inicializován inicializačním výrazem. Tento dočasný objekt je zničen okamžitě po zničení odkazu na objekt, ke kterému je vázán.|

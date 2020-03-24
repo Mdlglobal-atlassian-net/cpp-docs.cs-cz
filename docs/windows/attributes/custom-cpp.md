@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - custom attributes, defining
 ms.assetid: 3abac928-4d55-4ea6-8cf6-8427a4ad79f1
-ms.openlocfilehash: 19f28963a18abf42c6f629ac0f6491628387aa6d
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: f51b0210fff4db5be359fa94237f4d7c77b4fef2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69491002"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214887"
 ---
 # <a name="custom-c"></a>custom (C++)
 
@@ -46,14 +46,14 @@ Hodnota, která může být vložena do proměnné typu variant.
 
 |||
 |-|-|
-|**Platí pro**|**Rozhraní**, **třídy**, výčtové typy `idl_module` , metody, členy rozhraní, parametry rozhraní, **definice**typu a sjednocení, **struktury**s|
+|**Platí pro**|**Rozhraní**, **třídy**, **výčtové**typy, `idl_module` metody, členy rozhraní, parametry rozhraní, **definice**typu, **sjednocení**, **Struktura**s|
 |**REPEATABLE**|Ano|
-|**Požadované atributy**|**Coclass – třída** (při použití ve třídě)|
+|**Požadované atributy**|**Coclass** (při použití ve třídě)|
 |**Neplatné atributy**|Žádné|
 
-Další informace o kontextech atributů naleznete v tématu kontexty [atributů](cpp-attributes-com-net.md#contexts).
+Další informace o kontextech atributů naleznete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [IDL – atributy](idl-attributes.md)<br/>
 [Samostatné atributy](stand-alone-attributes.md)<br/>

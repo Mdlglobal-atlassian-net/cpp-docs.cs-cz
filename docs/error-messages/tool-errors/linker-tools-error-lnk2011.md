@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - LNK2011
 ms.assetid: 04991ef5-49d5-46c7-8eee-a9d1d3fc541e
-ms.openlocfilehash: c8c62da6c1b4ea856f7a0854b998946893f2be63
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e08f068099af68375523eae0f0cc4d63960f3261
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62299087"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80194808"
 ---
 # <a name="linker-tools-error-lnk2011"></a>Chyba linkerů LNK2011
 
-předkompilovaný objekt není odkazovaný; bitové kopie se možná nespustí.
+předkompilovaný objekt není propojen. Image se možná nespustí.
 
-Použití předkompilovaných hlaviček vyžaduje odkaz, že všechny soubory objektů, které jsou vytvořené pomocí předkompilovaných hlaviček je potřeba propojit v. Pokud máte zdrojový soubor, který slouží k vytvoření předkompilovaných hlaviček pro použití s jiných zdrojových souborech, teď musíte zahrnout soubor objektu společně předkompilované hlavičky.
+Použijete-li předkompilované hlavičky, odkaz vyžaduje, aby všechny soubory objektů vytvořené pomocí předkompilovaných hlaviček měly být propojeny v. Máte-li zdrojový soubor, který použijete k vygenerování předkompilované hlavičky pro použití s jinými zdrojovými soubory, je nyní nutné zahrnout soubor objektů vytvořený společně s předkompilovanou hlavičkou.
 
-Pokud kompilujete soubor s názvem STUB.cpp k vytvoření předkompilovaných hlaviček pro použití s jiných zdrojových souborech, je třeba propojit s STUB.obj nebo tato chyba se zobrazí. V následujících příkazových řádků řádek jedna slouží k vytvoření předkompilovaných hlaviček, COMMON.pch, která se používá s PROG1.cpp a PROG2.cpp v řádcích, dva a tři. Soubor obsahuje pouze STUB.cpp `#include` řádky (stejné `#include` řádcích jako v PROG1.cpp a PROG2.cpp) a slouží jenom ke generování předkompilovaných hlaviček. Na posledním řádku STUB.obj je potřeba propojit v vyhnout LNK2011.
+Například pokud kompilujete soubor s názvem STUB. cpp pro vytvoření předkompilované hlavičky pro použití s jinými zdrojovými soubory, musíte propojit se zástupným procedurou. obj nebo se zobrazí tato chyba. Na následujících příkazových řádcích se jeden řádek používá k vytvoření předkompilované hlavičky COMMON. pch, která se používá s PROG1. cpp a PROG2. cpp na řádcích dva a tři. Soubor STUB. cpp obsahuje pouze `#include` řádky (stejné `#include` řádky jako v PROG1. cpp a PROG2. cpp) a slouží pouze ke generování předkompilovaných hlaviček. V posledním řádku musí být objekt STUB. obj propojen, aby nedošlo k LINKERŮ LNK2011.
 
 ```
 cl /c /Yccommon.h stub.cpp

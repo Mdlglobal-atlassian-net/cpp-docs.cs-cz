@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - CreateClassFactory function
 ms.assetid: 772d5d1b-8872-4745-81ca-521a39564713
-ms.openlocfilehash: 323fce053707d6d00d1e17b641613d15607ab6f8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0467a9a1341e29a61a3b32d999769b01385f641f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398651"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214055"
 ---
 # <a name="createclassfactory-function"></a>CreateClassFactory – funkce
 
-Vytvoří objekt factory, který vytvoří instance dané třídy.
+Vytvoří objekt pro vytváření, který vytváří instance zadané třídy.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -32,32 +32,32 @@ inline HRESULT STDMETHODCALLTYPE CreateClassFactory(
 
 ### <a name="parameters"></a>Parametry
 
-*příznaky*<br/>
-Kombinace jedné nebo více [runtimeclasstype –](runtimeclasstype-enumeration.md) hodnot výčtu.
+*Flag*<br/>
+Kombinace jedné nebo více hodnot výčtu [RuntimeClassType –](runtimeclasstype-enumeration.md) .
 
 *entry*<br/>
-Ukazatel [creatormap –](creatormap-structure.md) , který obsahuje informace o parametru inicializace a registraci *riid*.
+Ukazatel na [CreatorMap](creatormap-structure.md) , který obsahuje inicializační a registrační informace o parametru *riid*.
 
 *riid*<br/>
-Odkaz na identifikátor rozhraní.
+Odkaz na ID rozhraní.
 
 *ppFactory*<br/>
-Pokud se tato operace dokončí úspěšně, ukazatel na objekt pro vytváření tříd.
+Pokud se tato operace úspěšně dokončí, ukazatel na objekt pro vytváření tříd.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-S_OK v případě úspěchu; v opačném případě HRESULT, která označuje chybu.
+S_OK v případě úspěchu; v opačném případě hodnota HRESULT, která označuje chybu.
 
 ## <a name="remarks"></a>Poznámky
 
-Chyba vyhodnocení je vygenerován, pokud parametr šablony *Factory* není odvozen z rozhraní `IClassFactory`.
+Pokud *objekt pro vytváření* parametrů není odvozen od rozhraní `IClassFactory`, je vyvolána chyba kontrolního výrazu.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** module.h
+**Záhlaví:** modul. h
 
-**Namespace:** Microsoft::WRL
+**Obor názvů:** Microsoft:: WRL
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Microsoft::WRL::Wrappers::Details – obor názvů](microsoft-wrl-wrappers-details-namespace.md)

@@ -1,21 +1,21 @@
 ---
-title: RDX (atribut C++ COM)
+title: RDX (C++ atribut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.rdx
 helpviewer_keywords:
 - rdx attribute
 ms.assetid: ff8e4312-c1ad-4934-bdaa-86f54409651e
-ms.openlocfilehash: 2790c3de01d21242daee73fc442ad22d88739355
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f0140b759b1d78eb1284213a0dc47d9600b2a83b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407494"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214627"
 ---
 # <a name="rdx"></a>rdx
 
-Vytvoří klíč registru nebo upraví stávající klíč registru.
+Vytvoří klíč registru nebo upraví existující klíč registru.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -28,34 +28,34 @@ Vytvoří klíč registru nebo upraví stávající klíč registru.
 *key*<br/>
 Název klíče, který má být vytvořen nebo otevřen.
 
-*Název hodnoty*<br/>
-(Volitelné) Určuje pole hodnoty nastavení. Pokud hodnota pole s tímto názvem již neexistuje v klíči, je přidána.
+*hodnoty*<br/>
+Volitelné Určuje pole hodnoty, které se má nastavit. Pokud pole hodnota s tímto názvem ještě v klíči neexistuje, přidá se.
 
 *regtype*<br/>
-Typ přidávaný klíč registru. Může být jedna z následujících akcí: `text`, `dword`, `binary`, nebo `CString`.
+Typ přidávaného klíče registru. Může to být jedna z následujících: `text`, `dword`, `binary`nebo `CString`.
 
 ## <a name="remarks"></a>Poznámky
 
-**Rdx** C++ atribut vytvoří nebo upraví stávající klíč registru pro komponenty modelu COM. Atribut přidá makro BEGIN_RDX_MAP na objekt, který implementuje cílový člen. `RegistryDataExchange`, funkce vloženy jako výsledek BEGIN_RDX_MAP makra lze použít k přenosu dat mezi registru a datové členy
+Atribut **RDX** C++ vytvoří nebo upraví existující klíč registru pro komponentu com. Atribut přidá makro BEGIN_RDX_MAP do objektu, který implementuje cílový člen. `RegistryDataExchange`, funkce vložená jako výsledek makra BEGIN_RDX_MAP, se dá použít k přenosu dat mezi registrem a datovými členy.
 
-Tento atribut lze použít ve spojení s [coclass](coclass.md), [progid](progid.md), nebo [vi_progid –](vi-progid.md) atributy nebo jiné atributy, které zahrnuje jeden z nich.
+Tento atribut lze použít ve spojení s atributy [Coclass](coclass.md), [ProgID](progid.md)nebo [vi_progid](vi-progid.md) nebo s jinými atributy, které implikují jednu z nich.
 
 ## <a name="requirements"></a>Požadavky
 
-### <a name="attribute-context"></a>Atribut kontextu
+### <a name="attribute-context"></a>Kontext atributu
 
 |||
 |-|-|
-|**Platí pro**|**Třída** nebo **struktura** člena|
-|**Opakovatelné**|Ne|
-|**Vyžadované atributy**|Žádné|
-|**Neplatné atributy**|Žádný|
+|**Platí pro**|člen **třídy** nebo **struktury**|
+|**REPEATABLE**|Ne|
+|**Požadované atributy**|Žádné|
+|**Neplatné atributy**|Žádné|
 
-Další informace o kontexty atributů najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
+Další informace o kontextech atributů naleznete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
 
 ## <a name="example"></a>Příklad
 
-Následující kód přidá klíč registru s názvem MyValue popisující komponenty modelu COM CMyClass systému.
+Následující kód přidá do systému klíč registru s názvem hodnota, který popisuje komponentu CMyClass COM.
 
 ```cpp
 // cpp_attr_ref_rdx.cpp
@@ -76,7 +76,7 @@ public:
 };
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [COM – atributy](com-attributes.md)<br/>
 [registration_script](registration-script.md)

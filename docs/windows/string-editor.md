@@ -32,12 +32,12 @@ helpviewer_keywords:
 - strings [C++], formatting
 - strings [C++], special characters
 ms.assetid: f71ab8de-3068-4e29-8e28-5a33d18dd416
-ms.openlocfilehash: 996e5f132e5cfa33c39c4cc3ddbeb692f41925bc
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 1f9b21893bd361d02b3446360b24a97f4d1d1365
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514713"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214406"
 ---
 # <a name="string-editor-c"></a>Editor řetězců (C++)
 
@@ -50,7 +50,7 @@ Tabulky řetězců usnadňují lokalizaci vaší aplikace do různých jazyků. 
 > [!NOTE]
 > Windows neumožňuje vytváření prázdných tabulek řetězců. Pokud vytvoříte tabulku řetězců bez zadání, při uložení souboru prostředků se odstraní automaticky.
 
-## <a name="how-to"></a>Postupy
+## <a name="how-to"></a>Postup
 
 **Editor řetězců** vám umožní:
 
@@ -58,7 +58,7 @@ Tabulky řetězců usnadňují lokalizaci vaší aplikace do různých jazyků. 
 
 1. Otevřete tabulku řetězců dvojitým kliknutím na její ikonu v [prostředky](how-to-create-a-resource-script-file.md#create-resources).
 
-1. Přejděte do nabídky **Upravit** > **Najít a nahradit** a vyberte **Najít**.
+1. Přejděte na nabídku **upravit** > **Najít a nahradit** a vyberte **Najít**.
 
 1. V rozevíracím seznamu **Najít** vyberte předchozí hledaný řetězec nebo zadejte text titulku nebo identifikátor prostředku řetězce, který chcete najít.
 
@@ -69,13 +69,13 @@ Tabulky řetězců usnadňují lokalizaci vaší aplikace do různých jazyků. 
 >
 > Zadejte regulární výraz, který bude odpovídat vzoru, nebo vyberte tlačítko napravo od pole **Najít** , chcete-li zobrazit seznam regulárních výrazů hledání. Když vyberete výraz z tohoto seznamu, nahradí se jako hledaný text v poli **Najít** .
 >
-> Pokud používáte regulární výrazy, ujistěte se, že **používáte: Zaškrtávací políčko** regulární výrazy je zaškrtnuto.
+> Pokud používáte regulární výrazy, ujistěte se, že je zaškrtnuto políčko **použít: regulární výrazy** .
 
 ### <a name="to-add-or-delete-a-string-resource"></a>Přidání nebo odstranění prostředku řetězce
 
 Můžete rychle vložit nebo odstranit položky do tabulky řetězců pomocí **editoru řetězců**. Nové řetězce jsou umístěny na konci tabulky a mají k dispozici další dostupný identifikátor. Podle potřeby můžete upravit vlastnosti **ID**, **hodnoty**nebo **popisku** v [okno Vlastnosti](/visualstudio/ide/reference/properties-window) .
 
-**Editor řetězců** zajišťuje, že nepoužíváte ID, které se už používá. Pokud vyberete ID, které se už používá, **Editor řetězců** vás upozorní a pak přiřadí obecné jedinečné ID, `IDS_STRING58113`například.
+**Editor řetězců** zajišťuje, že nepoužíváte ID, které se už používá. Pokud vyberete ID, které se už používá, **Editor řetězců** vás upozorní a pak mu přiřadí obecné jedinečné ID, například `IDS_STRING58113`.
 
 #### <a name="to-add-a-string-table-entry"></a>Přidání položky tabulky řetězců
 
@@ -96,7 +96,7 @@ Můžete rychle vložit nebo odstranit položky do tabulky řetězců pomocí **
 
 Vyberte položku, kterou chcete odstranit, a proveďte jednu z následujících akcí:
 
-- Přejděte na nabídku **Upravit** > **odstranění**.
+- Přejděte na nabídku **upravit** > **Odstranit**.
 
 - Klikněte pravým tlačítkem na řetězec, který chcete odstranit, a vyberte **Odstranit**.
 
@@ -132,7 +132,7 @@ Pomocí místních úprav můžete změnit vlastnosti **ID**, **hodnoty**a **tit
 
    - Do sloupce **hodnota** zadejte jiné číslo.
 
-   - Do sloupce titulku zadejte úpravy.
+   - Do sloupce **titulku** zadejte úpravy.
 
 #### <a name="to-change-the-caption-property-of-multiple-string-resources"></a>Změna vlastnosti titulku prostředků s více řetězci
 
@@ -142,7 +142,7 @@ Pomocí místních úprav můžete změnit vlastnosti **ID**, **hodnoty**a **tit
 
 1. V [okně Vlastnosti](/visualstudio/ide/reference/properties-window)zadejte novou hodnotu vlastnosti, kterou chcete změnit.
 
-1. Stisknutím klávesy **zadejte**.
+1. Stiskněte klávesu **Enter**.
 
 ### <a name="to-add-formatting-or-special-characters-to-a-string-resource"></a>Přidání formátování nebo speciálních znaků do prostředku řetězce
 
@@ -156,10 +156,10 @@ Pomocí místních úprav můžete změnit vlastnosti **ID**, **hodnoty**a **tit
    |-----------------|---------------|
    | Nový řádek | \\n |
    | Návrat na začátek řádku | \\r |
-   | Karta | \\t |
-   | Zpětné lomítko\\() | \\\\ |
+   | Tabulátor | \\t |
+   | Zpětné lomítko (\\) | \\\\ |
    | Znak ASCII | \\DDD (osmičkový zápis) |
-   | Upozornění (zvonek) | \\a |
+   | Upozornění (zvonek) | \\ |
 
    > [!NOTE]
    > **Editor řetězce** nepodporuje úplnou sadu řídicích asci znaků. Můžete použít jenom ty, které jsou uvedené výše.
@@ -168,9 +168,9 @@ Pomocí místních úprav můžete změnit vlastnosti **ID**, **hodnoty**a **tit
 
 Win32
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[](../windows/resource-editors.md)
-[Řetězce](/windows/win32/menurc/strings) editorů prostředků<br/>
+[Editory prostředků](../windows/resource-editors.md)
+[řetězců](/windows/win32/menurc/strings)<br/>
 [O řetězcích](/windows/win32/menurc/about-strings)<br/>
 [Přizpůsobení rozložení oken](/visualstudio/ide/customizing-window-layouts-in-visual-studio)

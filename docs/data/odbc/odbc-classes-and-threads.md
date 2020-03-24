@@ -6,27 +6,27 @@ helpviewer_keywords:
 - ODBC, multithreaded applications
 - threading [MFC], ODBC support
 ms.assetid: 16543926-7331-41a6-ba50-72288f2a61b7
-ms.openlocfilehash: 2d11cdab632e916f548011462f9738bc267fc730
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8cb5df605bef31e177e976798f975bb4ca14ced7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395817"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213160"
 ---
 # <a name="odbc-classes-and-threads"></a>ODBC – třídy a vlákna
 
-Od verze 4.2 knihovny MFC, je podpora více vláken ve třídách knihovny MFC rozhraní ODBC. Upozorňujeme však, že MFC neposkytuje podpora více vláken pro třídy DAO.
+Počínaje knihovnou MFC 4,2 existuje podpora více vláken pro třídy knihovny MFC rozhraní ODBC. Upozorňujeme však, že knihovna MFC neposkytuje podporu multithreadingu pro třídy DAO.
 
-Multithreading podpora ODBC – třídy má určitá omezení. Protože tyto třídy zabalení rozhraní ODBC API, jsou omezeny na podpoře multithreadingu komponenty, na kterých jsou vytvořeny. Například mnoho ovladačů ODBC nejsou bezpečné pro vlákna; třídy knihovny MFC rozhraní ODBC proto nejsou bezpečné pro vlákna je-li použít s jednou z těchto ovladačů. Měli byste ověřit, jestli konkrétní ovladač je bezpečná pro vlákno.
+Podpora multithreadingu pro třídy rozhraní ODBC má určitá omezení. Vzhledem k tomu, že tyto třídy zabalí rozhraní API rozhraní ODBC, jsou omezeny na podporu multithreadingu komponent, na kterých jsou sestaveny. Například mnohé ovladače ODBC nejsou bezpečné pro přístup z více vláken; Proto třídy knihovny MFC rozhraní ODBC nejsou bezpečné pro přístup z více vláken, pokud je použijete s jedním z těchto ovladačů. Měli byste ověřit, jestli je váš konkrétní ovladač bezpečný pro přístup z více vláken.
 
-Při vytváření aplikace s více vlákny, byste měli být opatrní při použití více vláken k manipulaci s na stejný objekt. Například pomocí stejných `CRecordset` objektu ve dvou vláken může způsobit problémy při načítání dat; operaci načtení v jednom vlákně může přepsat dat načtené v jiném vlákně. Běžnější použití tříd knihovny MFC rozhraní ODBC v samostatných vláknech je sdílet otevřenou `CDatabase` objektu napříč vlákny pomocí stejného připojení rozhraní ODBC se samostatným `CRecordset` objektu v každém vlákně. Všimněte si, že by neměla předat neotevřených `CDatabase` do objektu `CRecordset` objektu v jiném vlákně.
+Při vytváření vícevláknové aplikace byste měli být velmi opatrní v používání více vláken pro manipulaci se stejným objektem. Například použití stejného objektu `CRecordset` ve dvou vláknech může způsobit problémy při načítání dat; operace načtení v jednom vlákně může přepsat data načtená v jiném vlákně. Častěji použití tříd knihovny MFC rozhraní ODBC v samostatných vláknech je sdílení otevřeného objektu `CDatabase` napříč vlákny pro použití stejného připojení rozhraní ODBC, se samostatným objektem `CRecordset` v každém vlákně. Všimněte si, že byste neměli předávat neotevřený `CDatabase` objekt objektu `CRecordset` v jiném vlákně.
 
 > [!NOTE]
->  Pokud potřebujete více vláken, manipulaci s na stejný objekt, měli byste implementovat mechanismy příslušné synchronizace, jako je například kritické oddíly. Mějte na paměti, který některé operace, jako například `Open`, nejsou chráněné. Měli byste si být jisti, že tyto operace nebudou současně volat ze samostatných vláknech.
+>  Pokud potřebujete více vláken manipulovat se stejným objektem, měli byste implementovat příslušné synchronizační mechanismy, například důležité oddíly. Uvědomte si, že některé operace, například `Open`, nejsou chráněné. Měli byste se ujistit, že tyto operace nebudou volány souběžně z různých vláken.
 
-Další informace o vytváření aplikací s více vlákny, naleznete v tématu [Témata multithreadingu](../../parallel/multithreading-support-for-older-code-visual-cpp.md).
+Další informace o vytváření vícevláknových aplikací naleznete v tématu témata s více [vlákny](../../parallel/multithreading-support-for-older-code-visual-cpp.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)<br/>
-[Přístup k datům programování knihovny MFC nebo ATL)](../../data/data-access-programming-mfc-atl.md)
+[Programování přístupu k datům (MFC/ATL)](../../data/data-access-programming-mfc-atl.md)

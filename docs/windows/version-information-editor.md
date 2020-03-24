@@ -23,12 +23,12 @@ helpviewer_keywords:
 - GetFileVersionInfo
 - version information
 ms.assetid: 772e6f19-f765-4cec-9521-0ad3eeb99f9b
-ms.openlocfilehash: e68e1480d2cd9a8d8a4d862252e6eb4384a5cd68
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: b083ed27b6b1f471dbec9b96e7be7a6165f8d125
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69513638"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214367"
 ---
 # <a name="version-information-editor-c"></a>Editor informací o verziC++()
 
@@ -42,7 +42,7 @@ Prostředek informací o verzi má horní blok a jeden nebo více dolních blok�
 > [!NOTE]
 > Při použití **editoru informací o verzi**můžete v mnoha případech kliknout pravým tlačítkem myši a zobrazit místní nabídku příkazů specifických pro prostředky. Například pokud vyberete při přechodu na položku hlavičky bloku, místní nabídka zobrazí **nové příkazy blokovat informace o verzi** a **Odstranit informace o blokování verzí** .
 
-## <a name="how-to"></a>Postupy
+## <a name="how-to"></a>Postup
 
 **Editor informací o verzi** vám umožní:
 
@@ -50,11 +50,11 @@ Prostředek informací o verzi má horní blok a jeden nebo více dolních blok�
 
 Vyberte položku jednou a zvolte ji a pak ji znovu začněte upravovat. Změny proveďte přímo v tabulce **informací o verzi** nebo v [okno Vlastnosti](/visualstudio/ide/reference/properties-window). Změny, které provedete, se projeví na obou místech.
 
-Při úpravách `FILEFLAGS` klíče v **editoru informací o verzi**si všimněte, že nemůžete nastavit vlastnosti **ladění**, **privátní sestavení**nebo **speciální sestavení** v okně **vlastnosti** pro soubory. rc:
+Při úpravách `FILEFLAGS` klíče v **editoru informací o verzi**si všimněte, že v okně **vlastnosti** pro soubory. RC nemůžete nastavit vlastnosti **ladění**, **privátního sestavení**nebo **speciálního sestavení** :
 
-   - **Editor informací o verzi** nastaví `#ifdef` vlastnost **ladění** pomocí ve skriptu `_DEBUG` prostředků na základě příznaku sestavení.
+- **Editor informací o verzi** nastavuje vlastnost **ladění** pomocí `#ifdef` ve skriptu prostředků na základě příznaku sestavení `_DEBUG`.
 
-  - `FILEFLAGS` Pokud má klíčnastavenouhodnotuvtabulceinformacíoverzi,budetrue.odpovídajícíprivátnívlastnostsestavenívokněVlastnostitohotoklíče.`Private Build` Pokud je **hodnota** prázdná, vlastnost bude NEPRAVDA. Podobně platí, že **speciální klíč sestavení** v tabulce **informací o verzi** je svázán se **speciální** vlastností `FILEFLAGS` sestavení pro klíč.
+- Pokud má `Private Build` klíč nastavenou **hodnotu** v tabulce **informace o verzi** , bude **true**hodnota odpovídající **privátní vlastnosti sestavení** v okně **vlastnosti** pro `FILEFLAGS` klíč. Pokud je **hodnota** prázdná, vlastnost bude **NEPRAVDA**. Podobně platí, že **speciální klíč sestavení** v tabulce **informací o verzi** je svázán se **speciální vlastností sestavení** pro `FILEFLAGS` klíč.
 
 Můžete seřadit informační sekvenci bloku řetězce tak, že vyberete buď **klíč** , nebo záhlaví sloupců **hodnot** . Tyto nadpisy automaticky změní uspořádání informací do vybrané sekvence.
 
@@ -84,7 +84,7 @@ Chcete-li získat přístup k informacím o verzi v rámci programu, použijte f
 
 Win32
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Editory prostředků](../windows/resource-editors.md)<br/>
 [Nabídky a další prostředky](/windows/win32/menurc/resources)<br/>

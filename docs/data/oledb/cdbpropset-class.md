@@ -32,12 +32,12 @@ helpviewer_keywords:
 - SetGUID method
 - AddProperty method
 ms.assetid: 54190149-c277-4679-b81a-ef484d4d1c00
-ms.openlocfilehash: 08cab967fbfbd4b3207e96a4fdbd2d2dbc6da793
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: e2bb01e6acb9298b08fddc3117ec93dd7c0c2417
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447450"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212013"
 ---
 # <a name="cdbpropset-class"></a>CDBPropSet – třída
 
@@ -73,7 +73,7 @@ class CDBPropSet : public tagDBPROPSET
 
 OLE DB poskytovatelé a spotřebitelé používají `DBPROPSET` struktury k předání polí `DBPROP` struktury. Každá struktura `DBPROP` představuje jednu vlastnost, kterou lze nastavit.
 
-## <a name="addproperty"></a>CDBPropSet:: AddProperty
+## <a name="cdbpropsetaddproperty"></a><a name="addproperty"></a>CDBPropSet:: AddProperty
 
 Přidá vlastnost do sady vlastností.
 
@@ -124,7 +124,7 @@ pro Hodnota měny CY použitá pro inicializaci hodnoty vlastnosti `DBPROP` stru
 
 **hodnota true** , pokud byla vlastnost úspěšně přidána. V opačném případě **false**.
 
-## <a name="cdbpropset"></a>CDBPropSet:: CDBPropSet
+## <a name="cdbpropsetcdbpropset"></a><a name="cdbpropset"></a>CDBPropSet:: CDBPropSet
 
 Konstruktor Inicializuje pole `rgProperties`, `cProperties`a `guidPropertySet` struktury [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) .
 
@@ -146,7 +146,7 @@ pro Identifikátor GUID použitý k inicializaci pole `guidPropertySet`.
 *propset*<br/>
 pro Jiný objekt `CDBPropSet` pro konstrukci kopírování.
 
-## <a name="setguid"></a>CDBPropSet:: SetGUID
+## <a name="cdbpropsetsetguid"></a><a name="setguid"></a>CDBPropSet:: SetGUID
 
 Nastaví pole `guidPropertySet` ve struktuře `DBPROPSET`.
 
@@ -165,7 +165,7 @@ pro Identifikátor GUID, který slouží k nastavení `guidPropertySet` pole str
 
 Toto pole lze také nastavit pomocí [konstruktoru](../../data/oledb/cdbpropset-cdbpropset.md) .
 
-## <a name="op_equal"></a>CDBPropSet:: operator =
+## <a name="cdbpropsetoperator-"></a><a name="op_equal"></a>CDBPropSet:: operator =
 
 Přiřadí obsah jedné vlastnosti nastavené na jinou sadu vlastností.
 

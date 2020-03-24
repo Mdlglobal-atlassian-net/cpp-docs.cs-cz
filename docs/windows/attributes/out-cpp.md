@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - out attribute
 ms.assetid: 5051b1bf-4949-4bf1-b82f-35e14f0f244b
-ms.openlocfilehash: 11c8e4473f0b849fab7846a825b90da3ed9f036f
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 6ab8fdf691e2220087f5c5d64bb70c5deb27675c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514283"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214656"
 ---
 # <a name="out-c"></a>out (C++)
 
@@ -29,7 +29,7 @@ Atribut **out** C++ má stejné funkce jako atribut [out](/windows/win32/Midl/ou
 
 ## <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [vázání](bindable.md) pro použití ukázkového použití.
+Podívejte se na příklad pro [vázání](bindable.md) pro použití ukázkového použití **.**
 
 ## <a name="requirements"></a>Požadavky
 
@@ -42,9 +42,9 @@ Podívejte se na příklad pro [vázání](bindable.md) pro použití ukázkové
 |**Požadované atributy**|Žádné|
 |**Neplatné atributy**|Žádné|
 
-Další informace o kontextech atributů naleznete v tématu kontexty [atributů](cpp-attributes-com-net.md#contexts).
+Další informace o kontextech atributů naleznete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [IDL – atributy](idl-attributes.md)<br/>
 [Atributy parametru](parameter-attributes.md)<br/>

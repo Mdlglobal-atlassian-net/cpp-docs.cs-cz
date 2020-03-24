@@ -18,16 +18,16 @@ helpviewer_keywords:
 - derived classes [C++], declaring
 - inheritance, keywords
 ms.assetid: bb810f56-7720-4fea-b8b6-9499edd141df
-ms.openlocfilehash: 656ee7ed38c24c9f3b8881f84d8e33ca81e3d936
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 781673582cb2c3086677b05abc6a7eb73eeabdb4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62183489"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178178"
 ---
 # <a name="inheritance-keywords"></a>Klíčová slova dědičnosti
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
 ```
 class [__single_inheritance] class-name;
@@ -37,7 +37,7 @@ class [__virtual_inheritance] class-name;
 
 kde:
 
-*class-name*<br/>
+*název třídy*<br/>
 Název deklarované třídy.
 
 Jazyk C++ umožňuje deklarovat ukazatel na člen třídy před definicí třídy. Příklad:
@@ -47,15 +47,15 @@ class S;
 int S::*p;
 ```
 
-Ve výše uvedeném kódu `p` je deklarováno jako ukazatel na celočíselný člen třídy S. Ale `class S` má ještě není definována v tomto kódu; to je pouze deklarována. Když kompilátor na takový ukazatel narazí, musí vytvořit obecné rozlišení ukazatele. Velikost rozlišení je závislá na zadaném modelu dědičnosti. Pro určení modelu dědičnosti existují čtyři způsoby:
+V kódu výše je `p` deklarován jako ukazatel na celočíselný člen třídy S. Nicméně `class S` ještě není v tomto kódu definován; byl deklarován pouze. Když kompilátor na takový ukazatel narazí, musí vytvořit obecné rozlišení ukazatele. Velikost rozlišení je závislá na zadaném modelu dědičnosti. Pro určení modelu dědičnosti existují čtyři způsoby:
 
-- V integrovaném vývojovém prostředí v rámci **reprezentace ukazatele na člena**
+- V integrovaném vývojovém prostředí (IDE) v rámci **reprezentace ukazatele na člena**
 
-- Pomocí příkazového řádku [/vmg](../build/reference/vmb-vmg-representation-method.md) přepnout
+- Na příkazovém řádku pomocí přepínače [/VMG](../build/reference/vmb-vmg-representation-method.md)
 
-- Použití [pointers_to_members](../preprocessor/pointers-to-members.md) – Direktiva pragma
+- Použití direktivy pragma [pointers_to_members](../preprocessor/pointers-to-members.md)
 
-- Pomocí klíčových slov dědičnosti **__single_inheritance**, **__multiple_inheritance**, a **__virtual_inheritance**. Tento postup řídí model dědičnosti na základě každé třídy.
+- Pomocí klíčových slov dědičnosti **__single_inheritance**, **__multiple_inheritance**a **__virtual_inheritance**. Tento postup řídí model dědičnosti na základě každé třídy.
 
     > [!NOTE]
     >  Je-li vždy po definování třídy deklarován ukazatel na člen třídy, není třeba použít žádnou z těchto možností.
@@ -74,10 +74,10 @@ ukazatelé na členy třídy `class S` budou používat nejmenší možnou repre
 > [!NOTE]
 >  Stejná dopředná deklarace reprezentace ukazatele na člen třídy by se měla nacházet v každé jednotce překladu, která deklaruje ukazatele na členy této třídy, a deklarace by se měla objevit před deklarací ukazatelů na členy.
 
-Z důvodu kompatibility s předchozími verzemi **_single_inheritance**, **_multiple_inheritance**, a **_virtual_inheritance** jsou synonyma pro **__ single_inheritance**, **__multiple_inheritance**, a **__virtual_inheritance** Pokud – možnost kompilátoru [/Za \(zakázat jazyka rozšíření)](../build/reference/za-ze-disable-language-extensions.md) určena.
+Z důvodu kompatibility s předchozími verzemi jsou **_single_inheritance**, **_multiple_inheritance**a **_virtual_inheritance** synonyma pro **__single_inheritance**, **__multiple_inheritance**a **__virtual_inheritance** , pokud je zadána možnost kompilátoru [/za \(Disable Language Extensions)](../build/reference/za-ze-disable-language-extensions.md) .
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Klíčová slova](../cpp/keywords-cpp.md)

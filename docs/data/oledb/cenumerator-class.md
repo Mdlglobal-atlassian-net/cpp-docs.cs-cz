@@ -22,16 +22,16 @@ helpviewer_keywords:
 - GetMoniker method
 - Open method
 ms.assetid: 25805f1b-26e3-402f-af83-1b5fe5ddebf7
-ms.openlocfilehash: 23467caf46d38175a74dab061f60e11009f1f481
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d0fa5f381dba4f67934007d59dbdaf4450bcfb60
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62230837"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211793"
 ---
 # <a name="cenumerator-class"></a>CEnumerator – třída
 
-Používá objekt enumerátoru OLE DB, která zveřejní [ISourcesRowset](/previous-versions/windows/desktop/ms715969(v=vs.85)) rozhraní vrátit sadu řádků s popisem všechny zdroje dat a enumerátory.
+Používá objekt čítače OLE DB, který zpřístupňuje rozhraní [ISourcesRowset](/previous-versions/windows/desktop/ms715969(v=vs.85)) , aby vrátil sadu řádků popisující všechny zdroje dat a enumerátory.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -42,7 +42,7 @@ class CEnumerator :
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** také atldbcli.h
+**Záhlaví:** atldbcli. h
 
 ## <a name="members"></a>Členové
 
@@ -50,17 +50,17 @@ class CEnumerator :
 
 |||
 |-|-|
-|[Najít](#find)|Hledá v rámci (zdroje dat) dostupných poskytovatelů vyhledávání pro jeden se zadaným názvem.|
-|[GetMoniker](#getmoniker)|Načte `IMoniker` rozhraní pro požadovaný aktuální záznam.|
-|[Otevřít](#open)|Otevře se enumerátor.|
+|[Hledání](#find)|Vyhledá přes dostupné zprostředkovatele (zdroje dat), který hledá jeden se zadaným názvem.|
+|[GetMoniker](#getmoniker)|Načte rozhraní `IMoniker` pro aktuální záznam.|
+|[Otevírají](#open)|Otevře enumerátor.|
 
 ## <a name="remarks"></a>Poznámky
 
-Můžete načíst `ISourcesRowset` data nepřímo z této třídy.
+Data `ISourcesRowset` můžete načíst nepřímo z této třídy.
 
-## <a name="find"></a> CEnumerator::Find
+## <a name="cenumeratorfind"></a><a name="find"></a>CEnumerator –:: Find
 
-Vyhledá zadaný název mezi dostupných zprostředkovatelů.
+Vyhledá zadaný název mezi dostupnými poskytovateli.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -71,19 +71,19 @@ bool Find(TCHAR* szSearchName) throw();
 #### <a name="parameters"></a>Parametry
 
 *szSearchName*<br/>
-[in] Název, který se má hledat.
+pro Název, který chcete vyhledat.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** Pokud název nebyl nalezen. V opačném případě **false**.
+**hodnota true** , pokud byl nalezen název. V opačném případě **false**.
 
 ### <a name="remarks"></a>Poznámky
 
-Tento název se mapuje `SOURCES_NAME` člena [ISourcesRowset](/previous-versions/windows/desktop/ms715969(v=vs.85)) rozhraní.
+Tento název se mapuje na `SOURCES_NAME` člen rozhraní [ISourcesRowset](/previous-versions/windows/desktop/ms715969(v=vs.85)) .
 
-## <a name="getmoniker"></a> CEnumerator::GetMoniker
+## <a name="cenumeratorgetmoniker"></a><a name="getmoniker"></a>CEnumerator –:: GetMoniker
 
-Analyzuje zobrazovaný název na extrahuje komponentu řetězec, který lze převést na moniker.
+Analyzuje zobrazovaný název pro extrakci komponenty řetězce, který lze převést na moniker.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -97,18 +97,18 @@ HRESULT GetMoniker(LPMONIKER* ppMoniker,
 #### <a name="parameters"></a>Parametry
 
 *ppMoniker*<br/>
-[out] Moniker služby byl analyzován ze zobrazovaného jména ([CEnumeratorAccessor::m_szParseName](../../data/oledb/cenumeratoraccessor-m-szparsename.md)) aktuálního řádku.
+mimo Moniker se analyzuje z zobrazovaného názvu ([CEnumeratorAccessor:: m_szParseName](../../data/oledb/cenumeratoraccessor-m-szparsename.md)) aktuálního řádku.
 
 *lpszDisplayName*<br/>
-[in] Zobrazovaný název analyzovat.
+pro Zobrazovaný název, který se má analyzovat
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Standardní HRESULT.
+Standardní hodnota HRESULT.
 
-## <a name="open"></a> CEnumerator::Open
+## <a name="cenumeratoropen"></a><a name="open"></a>CEnumerator –:: Open
 
-Vazeb zástupný název čítače, pokud jeden je zadán, pak načte sada řádků pro enumerátor voláním [ISourcesRowset::GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85)).
+Váže moniker pro enumerátor, pokud je zadán, a načte sadu řádků pro enumerátor voláním [ISourcesRowset:: GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85)).
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -123,20 +123,20 @@ HRESULT Open(const CEnumerator& enumerator) throw();
 #### <a name="parameters"></a>Parametry
 
 *pMoniker*<br/>
-[in] Ukazatel na moniker enumerátor.
+pro Ukazatel na moniker pro enumerátor.
 
 *pClsid*<br/>
-[in] Ukazatel `CLSID` čítače.
+pro Ukazatel na `CLSID` výčtu.
 
-*Enumerátor*<br/>
-[in] Odkaz na enumerátor.
+*čítače*<br/>
+pro Odkaz na enumerátor.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Standardní HRESULT.
+Standardní hodnota HRESULT.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [DBViewer](../../overview/visual-cpp-samples.md)<br/>
-[OLE DB – šablony příjemce](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Šablony OLE DB příjemců](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Referenční dokumentace k šablonám příjemců OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

@@ -2,12 +2,12 @@
 title: Přehled potenciálních problémů s upgradem (Visual C++)
 ms.date: 05/03/2019
 ms.assetid: 2c99a8cb-098f-4a9d-bf2c-b80fd06ace43
-ms.openlocfilehash: 2b310760b1a6623a18a00e36e3bd5378d2ebb76e
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: ef088f4881dfbd9967f90a009e4a8e397a70b134
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73627243"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214978"
 ---
 # <a name="overview-of-potential-upgrade-issues-visual-c"></a>Přehled potenciálních problémů s upgradem (Visual C++)
 
@@ -88,7 +88,7 @@ dumpbin.exe /LINKERMEMBER somelibrary.lib
 
 ### <a name="zcwchar_t-wchar_t-is-native-type"></a>/Zc:wchar_t (wchar_t je nativní typ)
 
-(V jazyce Microsoft C++ Visual 6,0 a starším **wchar_t** nebyla implementována jako vestavěný typ, ale byla deklarována v WCHAR. h jako definice pro short bez znaménka.) Standard vyžaduje, aby se wchar_t předdefinovaným typem. C++ Použití verze typedef může způsobit problémy s přenositelností. Pokud upgradujete z dřívějších verzí sady Visual Studio a dojde k chybě kompilátoru upozornění C2664, protože kód se snaží implicitně převést **wchar_t** na **unsigned short**, doporučujeme, abyste změnili kód pro opravu chyby namísto nastavení `/Zc:wchar_t-`. Další informace naleznete v tématu [/Zc: wchar_t (Wchar_t je nativní typ)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md).
+(V jazyce Microsoft C++ Visual 6,0 a starším **wchar_t** nebyla implementována jako vestavěný typ, ale byla deklarována v WCHAR. h jako definice pro short bez znaménka.) Standard vyžaduje, aby se wchar_t předdefinovaným typem. **wchar_t** C++ Použití verze typedef může způsobit problémy s přenositelností. Pokud upgradujete z dřívějších verzí sady Visual Studio a dojde k chybě kompilátoru upozornění C2664, protože kód se snaží implicitně převést **wchar_t** na **unsigned short**, doporučujeme, abyste změnili kód pro opravu chyby namísto nastavení `/Zc:wchar_t-`. Další informace naleznete v tématu [/Zc: wchar_t (Wchar_t je nativní typ)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md).
 
 ### <a name="upgrading-with-the-linker-options-nodefaultlib-entry-and-noentry"></a>Upgrade pomocí možností linkeru/NODEFAULTLIB,/ENTRY a/NOENTRY
 
@@ -184,7 +184,7 @@ Předtím, než byl kód Unicode standardizován, mnoho programů použil víceb
 
 Další informace najdete v tématu [přenos ze znakové sady MBCS do kódování Unicode](porting-guide-spy-increment.md#porting_to_unicode). Obecné informace o znakové sadě MBCS vs. Unicode naleznete [v tématu text a řetězce C++ v jazyce vizuálů](../text/text-and-strings-in-visual-cpp.md) a [mezinárodní](../c-runtime-library/internationalization.md) .
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Upgrade projektů z dřívějších verzí sady VisualC++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
 [Vylepšení shody C++ se sadou Visual Studio](../overview/cpp-conformance-improvements.md)

@@ -6,12 +6,12 @@ f1_keywords:
 - event/Microsoft::WRL::AgileEventSource
 helpviewer_keywords:
 - AgileEventSource class
-ms.openlocfilehash: 7a919c0b2aa778ba1db19c3bfc3871542e8f9569
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 71a70f783d8f8967d755bb788f4aae4861340d64
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79441264"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214185"
 ---
 # <a name="agileeventsource-class"></a>AgileEventSource – třída
 
@@ -61,7 +61,7 @@ Velká většina komponent v prostředí Windows Runtime je agilní komponenty. 
 |----------|-----------------|
 |[AgileEventSource:: Add – metoda](#add)|Připojí událost agilní události reprezentované zadaným rozhraním delegáta k sadě obslužných rutin událostí pro aktuální objekt **AgileEventSource** .|
 
-## <a name="add"></a>AgileEventSource:: Add – metoda
+## <a name="agileeventsourceadd-method"></a><a name="add"></a>AgileEventSource:: Add – metoda
 
 Připojí obslužnou rutinu události reprezentované zadaným rozhraním delegáta k sadě obslužných rutin událostí pro aktuální objekt [EventSource](eventsource-class.md) .
 

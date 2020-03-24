@@ -11,39 +11,39 @@ helpviewer_keywords:
 - paint messages in view class [MFC]
 - device contexts, screen drawings
 ms.assetid: e3761db6-0f19-4482-a4cd-ac38ef7c4d3a
-ms.openlocfilehash: bc461347b56379976cdf62014507e3a15529f081
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 227c4614bad42706893301c69882c3f40af12e2f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408017"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214341"
 ---
 # <a name="drawing-in-a-view"></a>Kreslení v zobrazení
 
-Téměř všechny kreslení ve vaší aplikaci dochází v zobrazení `OnDraw` členská funkce, které je nutné přepsat ve třídě zobrazení. (Výjimkou je myši kreslení, popsané v [interpretace vstupu uživatele prostřednictvím zobrazení](../mfc/interpreting-user-input-through-a-view.md).) Vaše `OnDraw` přepsat:
+Téměř všechny kresby v aplikaci jsou k dis`OnDraw` členské funkce zobrazení, které je nutné přepsat ve vaší třídě zobrazení. (Výjimkou je vykreslování myší, popsané v tématu [Interpretace vstupu uživatele prostřednictvím zobrazení](../mfc/interpreting-user-input-through-a-view.md).) Vaše `OnDraw` přepsat:
 
-1. Získá data voláním členské funkce, které poskytnete dokumentu.
+1. Načte data voláním členských funkcí dokumentu, které zadáte.
 
-1. Zobrazí data voláním členské funkce objektu kontextu zařízení, která se předá rozhraní framework `OnDraw`.
+1. Zobrazí data voláním členských funkcí objektu kontextu zařízení, který rozhraní předává `OnDraw`.
 
-Při změně dat dokumentu nějakým způsobem, musí být vystavena zobrazení tak, aby odrážely změny. Obvykle se to stane, když uživatel provede změny prostřednictvím zobrazení v dokumentu. V takovém případě volá zobrazení dokumentu [UpdateAllViews](../mfc/reference/cdocument-class.md#updateallviews) členskou funkci oznámit všechna zobrazení na stejný dokument aktualizovat sami. `UpdateAllViews` každé zobrazení volá [OnUpdate](../mfc/reference/cview-class.md#onupdate) členskou funkci. Výchozí implementace `OnUpdate` zruší platnost celou klientskou oblast zobrazení. Můžete přepsat tak zneplatnit pouze ty oblasti od klientské oblasti, které mapují na změněné části dokumentu.
+Když se změní data dokumentu nějakým způsobem, je nutné zobrazení překreslit, aby odráželo změny. K tomu obvykle dochází, když uživatel provede změnu zobrazení dokumentu. V tomto případě zobrazení volá členskou funkci [UpdateAllViews](../mfc/reference/cdocument-class.md#updateallviews) dokumentu, aby upozornila všechna zobrazení na stejný dokument, aby se aktualizovala. `UpdateAllViews` volá členskou funkci [Update](../mfc/reference/cview-class.md#onupdate) jednotlivých zobrazení. Výchozí implementace `OnUpdate` neověřuje celou klientskou oblast zobrazení. Můžete ji přepsat tak, aby zrušila platnost pouze těch oblastí klientské oblasti, které jsou mapovány na upravené části dokumentu.
 
-`UpdateAllViews` Členské funkce třídy `CDocument` a `OnUpdate` členské funkce třídy `CView` umožňují předat informace, které popisují, které části dokumentu byly upraveny. Tento mechanismus "Nápověda" umožňuje omezit oblasti, která musí ho překreslit zobrazení. `OnUpdate` přebírá dva argumenty "Nápověda". První s názvem *lHint*, typu **LPARAM**, vám umožní předat žádná data, která vám vyhovuje, zatímco druhý *pHint*, typu `CObject`*, vám umožní předat ukazatel na libovolný objekt, odvozený z `CObject`.
+Členská funkce `UpdateAllViews` třídy `CDocument` a členská funkce `OnUpdate` třídy `CView` vám umožní předat informace popisující, které části dokumentu byly změněny. Tento mechanismus "Hint" umožňuje omezit oblast, kterou musí být zobrazení překreslit. `OnUpdate` přebírají dva argumenty "Hint". První *lHint*typu **lParam**umožňuje předat libovolná data, která se vám líbí, zatímco druhá *pHint*typu `CObject`* vám umožní předat ukazatel na libovolný objekt odvozený od `CObject`.
 
-Při zobrazení níže uvedených situací, Windows odešle ji **WM_PAINT** zprávy. Zobrazení [OnPaint](../mfc/reference/cwnd-class.md#onpaint) funkci obslužné rutiny reaguje na zprávy tak, že vytvoříte objekt kontextu zařízení třídy [cpaintdc –](../mfc/reference/cpaintdc-class.md) a volá do zobrazení `OnDraw` členskou funkci. Obvykle nemáte pro zápis přepsání `OnPaint` funkci obslužné rutiny.
+Když bude zobrazení neplatné, Windows pošle **WM_PAINT** zprávu. Obslužná rutina funkce [Propainta](../mfc/reference/cwnd-class.md#onpaint) pro zobrazení reaguje na zprávu vytvořením objektu kontextu zařízení třídy [CPaintDC –](../mfc/reference/cpaintdc-class.md) a voláním členské funkce zobrazení `OnDraw`. Nemusíte normálně psát překrytou funkci `OnPaint` obslužných rutin.
 
-A [kontextu zařízení](../mfc/device-contexts.md) je datová struktura Windows, který obsahuje informace o vykreslování atributy zařízení, jako je například tiskárnu nebo zobrazení. Všechna volání kreslení probíhají prostřednictvím objektů kontextu zařízení. Pro kreslení na obrazovce `OnDraw` je předán `CPaintDC` objektu. Pro kreslení na tiskárně, je předán [CDC](../mfc/reference/cdc-class.md) objekt nastavení pro aktuální tiskárny.
+[Kontext zařízení](../mfc/device-contexts.md) je datová struktura systému Windows, která obsahuje informace o atributech kreslení zařízení, jako je například displej nebo tiskárna. Všechna volání vykreslování jsou vytvořena pomocí objektu kontextu zařízení. Pro kreslení na obrazovce `OnDraw` k předanému objektu `CPaintDC`. Pro kreslení na tiskárně je předán objekt [CDC](../mfc/reference/cdc-class.md) nastavený pro aktuální tiskárnu.
 
-Váš kód pro kreslení v zobrazení nejprve načte ukazatel na dokument, pak provede volání kreslení pomocí kontextu zařízení. Následující jednoduchý `OnDraw` příklad znázorňuje proces:
+Váš kód pro kreslení v zobrazení nejprve načte ukazatel na dokument a pak provede vykreslování v kontextu zařízení. Následující příklad jednoduchého `OnDraw` ilustruje proces:
 
 [!code-cpp[NVC_MFCDocView#1](../mfc/codesnippet/cpp/drawing-in-a-view_1.cpp)]
 
-V tomto příkladu byste definovali `GetData` fungovat jako člen třídy odvozené dokumentu.
+V tomto příkladu byste definovali funkci `GetData` jako člen odvozené třídy dokumentu.
 
-Tento příklad vytiskne jakýkoli řetězec získá z dokumentu, zarovnání na střed v zobrazení. Pokud `OnDraw` volání je pro vykreslování obrazovky `CDC` objekt předaný v *primárního řadiče domény* je `CPaintDC` jejíž konstruktor již volána `BeginPaint`. Volání funkce vykreslování se provádějí přes ukazatel kontextu zařízení. Informace o volání kreslení a kontexty zařízení najdete v tématu třídy [CDC](../mfc/reference/cdc-class.md) v *odkaz knihovny MFC* a [práce s objekty oken](../mfc/working-with-window-objects.md).
+Tento příklad vytiskne libovolný řetězec, který získá z dokumentu, na střed v zobrazení. Pokud je volání `OnDraw` pro kreslení obrazovky, předaný objekt `CDC` v *primárním řadiči domény* je `CPaintDC` jehož konstruktor již byl volán `BeginPaint`. Volání funkcí kreslení se provádí přes ukazatel kontextu zařízení. Informace o kontextech zařízení a kreslení voláních naleznete v tématu Class [CDC](../mfc/reference/cdc-class.md) v *Referenci knihovny MFC* a [práce s objekty okna](../mfc/working-with-window-objects.md).
 
-Další příklady o tom, jak psát `OnDraw`, najdete v článku [ukázky knihovny MFC](../overview/visual-cpp-samples.md).
+Další příklady, jak zapisovat `OnDraw`, naleznete v tématu [MFC Samples](../overview/visual-cpp-samples.md#mfc-samples).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Použití zobrazení](../mfc/using-views.md)

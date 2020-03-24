@@ -25,16 +25,16 @@ helpviewer_keywords:
 - IsAutoAccessor method
 - ReleaseAccessors method
 ms.assetid: 389b65be-11ca-4ae0-9290-60c621c4982b
-ms.openlocfilehash: 34c92f9057f2273d57b69bdb42c49a81923c3d2a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8aef8a04d7adff903e21491a91014d55aab769da
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62284056"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212289"
 ---
 # <a name="caccessorbase-class"></a>CAccessorBase – třída
 
-Všechny přistupující objekty v šablonách technologie OLE DB odvozovat z této třídy. `CAccessorBase` Umožňuje spravovat několik přístupových objektů jedné sady řádků. Také poskytuje vazby pro parametry a výstupní sloupce.
+Všechny přistupující objekty v šablonách OLE DB jsou odvozeny z této třídy. `CAccessorBase` umožňuje jedné sadě řádků spravovat více přístupových objektů. Poskytuje také vazbu pro oba parametry i výstupní sloupce.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -48,19 +48,19 @@ Všechny přistupující objekty v šablonách technologie OLE DB odvozovat z t�
 
 |||
 |-|-|
-|[Zavřít](#close)|Zavře přístupové objekty.|
+|[Uzavírací](#close)|Zavře přistupující objekty.|
 |[GetHAccessor](#geth)|Načte popisovač přistupujícího objektu.|
-|[GetNumAccessors](#getnum)|Získá počet přistupující objekty vytvořené třídy.|
-|[IsAutoAccessor](#isauto)|Ověřuje, zda je zadaný přistupující objekt automaticky přistupující objekt.|
-|[ReleaseAccessors](#release)|Uvolní přístupové objekty.|
+|[GetNumAccessors](#getnum)|Načte počet přístupových objektů vytvořených třídou.|
+|[IsAutoAccessor](#isauto)|Testuje, zda je zadaný přístupový objekt autoaccess.|
+|[ReleaseAccessors](#release)|Uvolňuje přistupující objekty.|
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** také atldbcli.h
+**Záhlaví:** atldbcli. h
 
-## <a name="close"></a> CAccessorBase::Close
+## <a name="caccessorbaseclose"></a><a name="close"></a>CAccessorBase:: Close
 
-Zavře přístupové objekty.
+Zavře přistupující objekty.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -70,9 +70,9 @@ void Close();
 
 ### <a name="remarks"></a>Poznámky
 
-Je nutné volat [releaseaccessors –](../../data/oledb/caccessorbase-releaseaccessors.md) první.
+Nejdříve je nutné volat [ReleaseAccessors](../../data/oledb/caccessorbase-releaseaccessors.md) .
 
-## <a name="geth"></a> CAccessorBase::GetHAccessor
+## <a name="caccessorbasegethaccessor"></a><a name="geth"></a>CAccessorBase:: GetHAccessor
 
 Načte popisovač přistupujícího objektu zadaného přístupového objektu.
 
@@ -85,15 +85,15 @@ HACCESSOR GetHAccessor(ULONG nAccessor) const;
 #### <a name="parameters"></a>Parametry
 
 *nAccessor*<br/>
-[in] Číslo nula posun pro přistupující objekt.
+pro Číslo nulového posunu pro přistupující objekt.
 
 ### <a name="return-value"></a>Návratová hodnota
 
 Popisovač přistupujícího objektu.
 
-## <a name="getnum"></a> CAccessorBase::GetNumAccessors
+## <a name="caccessorbasegetnumaccessors"></a><a name="getnum"></a>CAccessorBase:: GetNumAccessors
 
-Získá počet přistupující objekty vytvořené třídy.
+Načte počet přístupových objektů vytvořených třídou.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -103,11 +103,11 @@ ULONG GetNumAccessors() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Počet přistupující objekty vytvořené třídy.
+Počet přístupových objektů vytvořených třídou.
 
-## <a name="isauto"></a> CAccessorBase::IsAutoAccessor
+## <a name="caccessorbaseisautoaccessor"></a><a name="isauto"></a>CAccessorBase:: IsAutoAccessor
 
-Vrátí true, pokud je během operace přesunu automaticky načíst data pro přistupující objekt.
+Vrátí hodnotu true, pokud jsou data automaticky načtena pro přistupující objekt během operace přesunutí.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -118,15 +118,15 @@ bool IsAutoAccessor(ULONG nAccessor) const;
 #### <a name="parameters"></a>Parametry
 
 *nAccessor*<br/>
-[in] Číslo nula posun pro přistupující objekt.
+pro Číslo nulového posunu pro přistupující objekt.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí **true** Pokud je přistupující objekt automaticky přistupující objekt. V opačném případě vrátí **false**.
+Vrátí **hodnotu true** , pokud je přistupující objekt autoaccess. V opačném případě vrátí **hodnotu false**.
 
-## <a name="release"></a> CAccessorBase::ReleaseAccessors
+## <a name="caccessorbasereleaseaccessors"></a><a name="release"></a>CAccessorBase:: ReleaseAccessors
 
-Uvolní přistupující objekty vytvořené třídy.
+Uvolňuje přistupující objekty vytvořené třídou.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -137,18 +137,18 @@ HRESULT ReleaseAccessors(IUnknown* pUnk);
 #### <a name="parameters"></a>Parametry
 
 *pUnk*<br/>
-[in] Ukazatel `IUnknown` rozhraní pro objekt modelu COM, pro kterou byly vytvořeny přístupové objekty.
+pro Ukazatel na rozhraní `IUnknown` pro objekt COM, pro který byly vytvořeny přistupující objekty.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Standardní HRESULT.
+Standardní hodnota HRESULT.
 
 ### <a name="remarks"></a>Poznámky
 
-Volá se z [CAccessorRowset::Close](../../data/oledb/caccessorrowset-close.md).
+Volá se z [CAccessorRowset –:: Close](../../data/oledb/caccessorrowset-close.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[OLE DB – šablony příjemce](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Šablony OLE DB příjemců](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Referenční dokumentace k šablonám příjemců OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [CAccessorBase – třída](../../data/oledb/caccessorbase-class.md)

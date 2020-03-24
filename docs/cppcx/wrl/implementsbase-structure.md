@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - ImplementsBase structure
 ms.assetid: f898eb17-136d-4c87-b3ea-771319314641
-ms.openlocfilehash: 5e1d0376a8b2646f12064105af7bcf555f4a8e31
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ffc006521d4f5131d7e387c1b2df79a358ad7def
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398237"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213886"
 ---
 # <a name="implementsbase-structure"></a>ImplementsBase – struktura
 
-Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.
+Podporuje infrastrukturu WRL a není určena pro použití přímo v kódu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -26,9 +26,9 @@ struct ImplementsBase;
 
 ## <a name="remarks"></a>Poznámky
 
-Používá se k ověření typy parametrů šablony v [Implements – struktura](implements-structure.md).
+Slouží k ověření typů parametrů šablony v [implementaci struktury](implements-structure.md).
 
-**Implementsbase –** struktura je prázdná záměrně.
+Struktura **implementsbase –** je v návrhu prázdná.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -36,10 +36,10 @@ Používá se k ověření typy parametrů šablony v [Implements – struktura]
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** implements.h
+**Hlavička:** Implements. h
 
-**Namespace:** Microsoft::WRL::Details
+**Obor názvů:** Microsoft:: WRL::D etails
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Microsoft::WRL::Details – obor názvů](microsoft-wrl-details-namespace.md)

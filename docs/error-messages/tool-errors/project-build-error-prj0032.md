@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0032
 ms.assetid: bc6acbea-4041-4237-8b5a-f0434705d89f
-ms.openlocfilehash: f1f292f3979c993a8fa8cb8ff44653ac7124b121
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 62efa0e72c6fbe4bd38983ff0507923392427c04
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344344"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80192481"
 ---
 # <a name="project-build-error-prj0032"></a>Chyba sestavení projektu PRJ0032
 
-Vlastnost "Výstupy" kroku vlastního sestavení na úrovni projektu obsahovala "makra", která je vyhodnocena na "macro_expansion".
+Vlastnost Outputs vlastního kroku sestavení na úrovni projektu obsahovala ' Macro ', která je vyhodnocena na hodnotu ' macro_expansion '.
 
-Vlastní krok sestavení na projektu má chybný výstup pravděpodobně z důvodu problému vyhodnocení makra. Tato chyba může také znamenat, že cesta je chybně vytvořený kód, obsahující znaky nebo kombinace znaků, které jsou neplatné v cestě k souboru.
+Vlastní krok sestavení v projektu má pravděpodobně špatný výstup z důvodu problému s vyhodnocením makra. Tato chyba by mohla také znamenat, že cesta je chybně vytvořená, obsahuje znaky nebo kombinace znaků, které jsou v cestě k souboru neplatné.
 
-Chcete-li tuto chybu vyřešit, opravte makro nebo odstraňte specifikaci cesty. Vyhodnocená cesta je absolutní cesta z adresáře projektu.
+Chcete-li tuto chybu vyřešit, opravte makro nebo opravte specifikaci cesty. Vyhodnocená cesta je absolutní cesta z adresáře projektu.

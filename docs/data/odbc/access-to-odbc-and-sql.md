@@ -9,21 +9,21 @@ helpviewer_keywords:
 - SQL [C++], calling ODBC API functions
 - ODBC [C++], API functions
 ms.assetid: 5613d7dc-00b7-4646-99ae-1116c05c52b4
-ms.openlocfilehash: 7a539d911bbf4f4d9582da0ebedaeffaa0d8fa7b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0b590ce9309cbbe95285001cc5befe70a1d1961f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395999"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213327"
 ---
 # <a name="access-to-odbc-and-sql"></a>Přístup k rozhraní ODBC a jazyku SQL
 
-Knihovny Microsoft Foundation Class zapouzdřuje mnoho volání Windows API a stále umožňuje přímo volat jakékoli funkce rozhraní Windows API. Databázové třídy poskytují stejné flexibilitu z hlediska rozhraní API ODBC. Zatímco databázové třídy vás chrání před mnoho složitostí rozhraní ODBC, bude možné volat funkce rozhraní API ODBC přímo z libovolného místa v programu.
+Knihovna Microsoft Foundation Class zapouzdřuje mnoho volání rozhraní API systému Windows a stále umožňuje volat libovolné funkce rozhraní API systému Windows přímo. Třídy databáze poskytují stejnou flexibilitu s ohledem na rozhraní ODBC API. I když třídy databáze chráníte z velké části složitosti rozhraní ODBC, můžete volat funkce rozhraní ODBC API přímo z libovolného místa v programu.
 
-Obdobně databázové třídy vás chrání před nutností pracovat s příliš [SQL](../../data/odbc/sql.md), ale pokud chcete, můžete můžete přímo použít. Můžete přizpůsobit objekty sady záznamů předáním vlastní příkaz jazyka SQL (ani jeho části Nastavení výchozího příkazu) při otevření sady záznamů. Můžete provést také přímo pomocí volání SQL [ExecuteSQL](../../mfc/reference/cdatabase-class.md#executesql) členské funkce třídy [CDatabase](../../mfc/reference/cdatabase-class.md).
+Podobně se třídy databází chrání před tím, než jsou v [SQL](../../data/odbc/sql.md)fungovat mnohem, ale pokud chcete, můžete SQL použít přímo. Můžete přizpůsobit objekty sady záznamů předáním vlastního příkazu SQL (nebo nastavením částí výchozího příkazu) při otevření sady záznamů. Můžete také volat SQL přímo pomocí členské funkce [ExecuteSQL](../../mfc/reference/cdatabase-class.md#executesql) třídy [CDatabase](../../mfc/reference/cdatabase-class.md).
 
-Další informace najdete v tématu [ODBC: Funkce volání rozhraní API ODBC přímo](../../data/odbc/odbc-calling-odbc-api-functions-directly.md) a [SQL: Přímá volání SQL (ODBC)](../../data/odbc/sql-making-direct-sql-calls-odbc.md).
+Další informace najdete v tématu [rozhraní ODBC: přímé volání funkcí rozhraní API ODBC](../../data/odbc/odbc-calling-odbc-api-functions-directly.md) a [SQL: vytváření přímých volání SQL (ODBC)](../../data/odbc/sql-making-direct-sql-calls-odbc.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Rozhraní ODBC a knihovna MFC](../../data/odbc/odbc-and-mfc.md)

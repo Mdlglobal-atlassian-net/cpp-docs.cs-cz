@@ -1,5 +1,5 @@
 ---
-title: 'MFC: Použití databázových tříd bez dokumentů a zobrazení'
+title: 'MFC: Použití databázových tříd bez objektů Document a View'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ODBC applications [C++], without views
@@ -17,108 +17,108 @@ helpviewer_keywords:
 - database applications [C++], without documents
 - user interface [C++], drawing information
 ms.assetid: 15bf52d4-91cf-4b1d-8b37-87c3ae70123a
-ms.openlocfilehash: ab9946609fa20c4644873a684a754cbc8a41742f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 57a7abd89bc9bfb465912a35c21f9780668f4466
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396012"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213353"
 ---
-# <a name="mfc-using-database-classes-without-documents-and-views"></a>MFC: Použití databázových tříd bez dokumentů a zobrazení
+# <a name="mfc-using-database-classes-without-documents-and-views"></a>MFC: Použití databázových tříd bez objektů Document a View
 
-Někdy není vhodné používat v rámci architektury dokumentu/zobrazení v databázových aplikacích. Toto téma vysvětluje:
+Někdy možná nebudete chtít v databázových aplikacích použít architekturu dokument/zobrazení rozhraní. Toto téma vysvětluje:
 
-- [Pokud není potřeba používat dokumenty](#_core_when_you_don.92.t_need_documents) například serializace dokumentu.
+- [Pokud nepotřebujete používat dokumenty](#_core_when_you_don.92.t_need_documents) , jako je například serializace dokumentu.
 
-- [Možnosti Průvodce aplikací](#_core_appwizard_options_for_documents_and_views) pro podporu aplikací bez serializace a související dokument **souboru** příkazy nabídky, jako **nový**, **otevřít** , **Uložit**, a **uložit jako**.
+- [Možnosti Průvodce aplikací](#_core_appwizard_options_for_documents_and_views) pro podporu aplikací bez serializace a bez příkazů nabídky **souborů** souvisejících s dokumentem, jako je například **Nový**, **otevřít**, **Uložit**a **Uložit jako**.
 
-- [Jak pracovat s aplikací, který používá minimální dokument](#_core_applications_with_minimal_documents).
+- [Jak pracovat s aplikací, která používá minimální dokument](#_core_applications_with_minimal_documents).
 
-- [Jak strukturovat aplikace bez dokumentů a zobrazení](#_core_applications_with_no_document).
+- [Postup strukturování aplikace bez dokumentu nebo zobrazení](#_core_applications_with_no_document)
 
-##  <a name="_core_when_you_don.92.t_need_documents"></a> Pokud nepotřebujete dokumentů
+##  <a name="when-you-do-not-need-documents"></a><a name="_core_when_you_don.92.t_need_documents"></a>Pokud nepotřebujete dokumenty
 
-Některé aplikace používají odlišné koncept dokumentu. Tyto aplikace obvykle načtení všech nebo většiny souboru z úložiště do paměti **otevřít soubor** příkazu. Aktualizovaný soubor zapisovaly zpět do úložiště najednou pomocí **uložit soubor** nebo **uložit jako** příkazu. To, co uživatel uvidí je soubor datovým souborem.
+Některé aplikace mají jedinečný koncept dokumentu. Tyto aplikace obvykle načtou do paměti všechny soubory nebo většinu souborů z úložiště pomocí příkazu pro **otevření souboru** . Napíší aktualizovaný soubor zpátky do úložiště pomocí příkazu **soubor uložit** nebo **Uložit jako** . To, co uživatel vidí, je datový soubor.
 
-Některé kategorie aplikací, ale nevyžadují dokumentu. Databázové aplikace pracují z hlediska počtu transakcí. Aplikace vybírá záznamy z databáze a zobrazí uživateli, často jeden po druhém. To, co uživatel uvidí je obvykle jednu aktuální záznam, který může být pouze jednou v paměti.
+Některé kategorie aplikací ale nevyžadují dokument. Databázové aplikace fungují v souvislosti s transakcemi. Aplikace vybere záznamy z databáze a prezentuje je uživateli, často v jednom okamžiku. To, co uživatel vidí, je obvykle jediný aktuální záznam, který může být jediným z nich v paměti.
 
-Pokud vaše aplikace nevyžaduje dokumentu pro ukládání dat, můžete obejít bez některé nebo všechny architektury dokument/zobrazení rozhraní framework. Kolik upustí závisí na přístup, kterému dáváte přednost. Mohli byste:
+Pokud vaše aplikace nevyžaduje dokument pro ukládání dat, můžete s architekturou dokumentu/zobrazení architektury obejít. Záleží na tom, kolik máte přístup k vašemu přístupu. Možná:
 
-- Použijte minimální dokument jako místo k uložení připojení ke zdroji dat, ale štítků s normální dokument funkce, jako je serializace. To je užitečné, když má několik zobrazení dat a chcete synchronizovat všechna zobrazení, aktualizovat je všechny najednou a tak dále.
+- Použijte minimální dokument jako místo pro uložení připojení ke zdroji dat, ale s využitím normálních funkcí dokumentů, jako je například serializace. To je užitečné, když chcete několik zobrazení dat a chcete synchronizovat všechna zobrazení, aktualizovat je všechny najednou a tak dále.
 
-- Použijte okno rámce, do které nakreslíte přímo, namísto použití zobrazení. V tomto případě vynechat dokumentu a uloží data ani připojení dat v objektu oken s rámečkem.
+- Použijte okno rámce, do kterého přímo nakreslíte místo použití zobrazení. V tomto případě vynecháte dokument a uložíte všechna data nebo datová připojení v objektu Frame-Window.
 
-##  <a name="_core_appwizard_options_for_documents_and_views"></a> Možnosti Průvodce aplikací pro dokumenty a zobrazeními
+##  <a name="application-wizard-options-for-documents-and-views"></a><a name="_core_appwizard_options_for_documents_and_views"></a>Možnosti Průvodce aplikací pro dokumenty a zobrazení
 
-Průvodce aplikací MFC obsahuje celou řadu možností **vyberte Podpora databáze**, které jsou uvedeny v následující tabulce. Pokud používáte Průvodce aplikací knihovny MFC k vytvoření aplikace, tyto možnosti vytvářet aplikace s dokumenty a zobrazeními. Některé možnosti poskytují dokumentů a zobrazení, které vynechat nepotřebné funkce dokumentu. Další informace najdete v tématu [Podpora databáze, Průvodce aplikací knihovny MFC](../mfc/reference/database-support-mfc-application-wizard.md).
+Průvodce aplikací knihovny MFC má několik možností v rámci **podpory výběru databáze**, které jsou uvedeny v následující tabulce. Použijete-li Průvodce aplikací knihovny MFC k vytvoření aplikace, všechny tyto možnosti vytvoří aplikace s dokumenty a zobrazeními. Některé možnosti poskytují dokumenty a zobrazení, které vynechávají nepotřebnou funkci dokumentu. Další informace naleznete v tématu [Podpora databáze, Průvodce aplikací MFC](../mfc/reference/database-support-mfc-application-wizard.md).
 
 |Možnost|Zobrazit|Dokument|
 |------------|----------|--------------|
-|**Žádné**|Odvozené od `CView`.|Poskytuje podporu žádné databáze. Toto je výchozí možnost.<br /><br /> Pokud vyberete **podpora architektury Document/view** možnost [typ aplikace, Průvodce aplikací knihovny MFC](../mfc/reference/application-type-mfc-application-wizard.md) stránky, získáte plnou podporu dokumentu včetně serializace a **nový** , **Otevřít**, **Uložit**, a **uložit jako** příkazy na **souboru** nabídky. Zobrazit [aplikace bez dokumentu](#_core_applications_with_no_document).|
-|**Jenom hlavičkové soubory**|Odvozené od `CView`.|Poskytuje základní úroveň podpory databáze pro vaši aplikaci.<br /><br /> Obsahuje Afxdb.h. Přidá knihoven, ale nevytvoří všechny třídy specifické pro databázi. Můžete vytvořit později sady záznamů a použít k prozkoumání a aktualizaci záznamů.|
-|**Zobrazení databází bez podpory souborů**|Odvozený z `CRecordView`|Poskytuje podporu dokumentu, ale nepodporuje serializaci. Dokument můžete ukládat sady záznamů a koordinaci více zobrazení; nepodporuje serializaci nebo **nový**, **otevřít**, **Uložit**, a **uložit jako** příkazy. Zobrazit [aplikace s minimálními dokumenty](#_core_applications_with_minimal_documents). Pokud zahrnete zobrazení databáze, musíte zadat zdroj dat.<br /><br /> Obsahuje databázové soubory hlaviček, knihovnách, zobrazení záznamů a záznamů. (K dispozici pouze pro aplikace s **podpora architektury Document/view** možnosti vybrané v [typ aplikace, Průvodce aplikací knihovny MFC](../mfc/reference/application-type-mfc-application-wizard.md) stránky.)|
-|**Zobrazení databází s podporou souborů**|Odvozený z `CRecordView`|Poskytuje plnou podporu dokumentu, včetně serializace a související dokument **souboru** příkazů nabídky. Databázové aplikace je obvykle fungují na základě jednotlivé záznamy, nikoli na jednotlivé – soubor základ a proto není nutné serializace. Může však mít speciální použití pro serializaci. Zobrazit [aplikace s minimálními dokumenty](#_core_applications_with_minimal_documents). Pokud zahrnete zobrazení databáze, musíte zadat zdroj dat.<br /><br /> Obsahuje databázové soubory hlaviček, knihovnách, zobrazení záznamů a záznamů. (K dispozici pouze pro aplikace s **podpora architektury Document/view** možnosti vybrané v [typ aplikace, Průvodce aplikací knihovny MFC](../mfc/reference/application-type-mfc-application-wizard.md) stránky.)|
+|**NTato**|Odvozeno z `CView`.|Neposkytuje žádnou podporu databáze. Toto je výchozí možnost.<br /><br /> Vyberete-li možnost **Podpora architektury dokument/zobrazení** na stránce [Typ aplikace, Průvodce aplikací knihovny MFC](../mfc/reference/application-type-mfc-application-wizard.md) , získáte úplnou podporu dokumentu včetně serializace a **nových**, **otevřených**, **ukládání**a **ukládání jako** příkazů v nabídce **soubor** . Viz [aplikace bez dokumentu](#_core_applications_with_no_document).|
+|**Pouze hlavičkové soubory**|Odvozeno z `CView`.|Poskytuje základní úroveň podpory databáze pro vaši aplikaci.<br /><br /> Zahrnuje AFXDB. h. Přidá knihovny odkazů, ale nevytváří žádné třídy specifické pro databázi. Můžete vytvořit sady záznamů později a použít je ke kontrole a aktualizaci záznamů.|
+|**Zobrazení databáze bez podpory souborů**|Odvozeno od `CRecordView`|Poskytuje podporu dokumentu, ale nepodporuje serializaci. Dokument může ukládat sady záznamů a koordinovat více zobrazení; nepodporuje serializace ani příkazy **New**, **Open**, **Save**a **Save jako** . Zobrazit [aplikace s minimálními dokumenty](#_core_applications_with_minimal_documents) Pokud zahrnete zobrazení databáze, musíte zadat zdroj dat.<br /><br /> Zahrnuje hlavičkové soubory databáze, propojení knihoven, zobrazení záznamů a sadu záznamů. (K dispozici pouze pro aplikace s možností **Podpora architektury dokument/zobrazení** , která je vybrána na stránce [Typ aplikace, Průvodce aplikací knihovny MFC](../mfc/reference/application-type-mfc-application-wizard.md) .)|
+|**Zobrazení databáze s podporou souborů**|Odvozeno od `CRecordView`|Poskytuje úplnou podporu dokumentu, včetně serializace a příkazů nabídky **souborů** souvisejících s dokumentem. Databázové aplikace obvykle pracují na jednotlivých záznamech, nikoli na základě jednotlivých souborů a nepotřebují serializaci. Je však možné, že máte speciální použití pro serializaci. Zobrazit [aplikace s minimálními dokumenty](#_core_applications_with_minimal_documents) Pokud zahrnete zobrazení databáze, musíte zadat zdroj dat.<br /><br /> Zahrnuje hlavičkové soubory databáze, propojení knihoven, zobrazení záznamů a sadu záznamů. (K dispozici pouze pro aplikace s možností **Podpora architektury dokument/zobrazení** , která je vybrána na stránce [Typ aplikace, Průvodce aplikací knihovny MFC](../mfc/reference/application-type-mfc-application-wizard.md) .)|
 
-Diskuzi o alternativy k serializaci a alternativní možnosti použití serializace naleznete v tématu [serializace: Serializace a zpracování Databáze vstupní a výstupní](../mfc/serialization-serialization-vs-database-input-output.md).
+Diskuzi o alternativách k serializaci a alternativním použití pro serializaci naleznete v tématu [serializace: serializace vs. vstup/výstup databáze](../mfc/serialization-serialization-vs-database-input-output.md).
 
-##  <a name="_core_applications_with_minimal_documents"></a> Aplikace s minimálními dokumenty
+##  <a name="applications-with-minimal-documents"></a><a name="_core_applications_with_minimal_documents"></a>Aplikace s minimálními dokumenty
 
-Průvodce aplikací MFC má dvě možnosti, které podporují přístup aplikace založené na formulářích data. Každá možnost vytvoří `CRecordView`-odvozené třídy zobrazení a dokumentu. Se liší v nechají z dokumentu.
+Průvodce aplikací knihovny MFC má dvě možnosti, které podporují aplikace pro přístup k datům založené na formulářích. Každá možnost vytvoří třídu zobrazení odvozené `CRecordView`a dokument. Liší se v tom, co z dokumentu odejdou.
 
-###  <a name="_core_a_document_without_file_support"></a> Dokument bez podpory souborů
+###  <a name="document-without-file-support"></a><a name="_core_a_document_without_file_support"></a>Dokument bez podpory souborů
 
-Vyberte možnost aplikace Průvodce databáze **databáze zobrazení bez podpory souborů** Pokud nepotřebujete serializace dokumentu. Dokument slouží k následujícím účelům:
+Pokud nepotřebujete serializaci dokumentu, vyberte možnost databáze Průvodce aplikací v **zobrazení databáze bez podpory souborů** . Dokument slouží jako užitečné pro následující účely:
 
-- Je vhodné místo pro ukládání `CRecordset` objektu.
+- Je to vhodné místo pro uložení objektu `CRecordset`.
 
-   Toto použití parallels dokumentu běžné koncepty: dokument uloží data (nebo v tomto případě sadu záznamů) a zobrazení je zobrazení dokumentu.
+   Toto využití paralelně využívá běžné koncepty dokumentů: dokument ukládá data (nebo v tomto případě sadu záznamů) a zobrazení je zobrazení dokumentu.
 
-- Pokud vaše aplikace představuje více zobrazení (například jako zobrazení více záznamů), dokument podporuje koordinaci zobrazení.
+- Pokud vaše aplikace prezentuje více zobrazení (například více zobrazení záznamů), dokument podporuje koordinaci zobrazení.
 
-   Pokud více zobrazení zobrazit stejná data, můžete použít `CDocument::UpdateAllViews` členskou funkci koordinovat aktualizace pro všechna zobrazení při libovolné zobrazení změní data.
+   Pokud více zobrazení zobrazuje stejná data, můžete použít členskou funkci `CDocument::UpdateAllViews` k koordinaci aktualizací všech zobrazení, když jakékoli zobrazení změní data.
 
-Obvykle použijete tuto možnost pro jednoduché aplikace založené na formulářích. Průvodce aplikací podporuje vhodnou strukturu pro tyto aplikace automaticky.
+Tuto možnost obvykle používáte pro jednoduché aplikace založené na formulářích. Průvodce aplikací podporuje pro tyto aplikace pohodlný strukturu automaticky.
 
-###  <a name="_core_a_document_with_file_support"></a> Dokument s podporou souborů
+###  <a name="document-with-file-support"></a><a name="_core_a_document_with_file_support"></a>Dokument s podporou souborů
 
-Vyberte možnost aplikace Průvodce databáze **databáze zobrazení s podporou souborů** Pokud máte alternativní použití pro související dokument **souboru** příkazů nabídky a serializace dokumentu. Pro přístup k datům je součástí programu, můžete použít dokumentu stejným způsobem, jak je popsáno v [dokumentu bez podpory souborů](#_core_a_document_without_file_support). Možnost serializace dokumentu, můžete použít třeba ke čtení a zápis dokumentu serializované uživatelské profil, který ukládá předvolby uživatele a další užitečné informace. Další informace najdete v článku [serializace: Serializace a zpracování Databáze vstupní a výstupní](../mfc/serialization-serialization-vs-database-input-output.md).
+Pokud máte alternativní použití pro příkazy nabídky **soubor** souvisejících s dokumentem a serializaci dokumentu, vyberte možnost databáze Průvodce aplikace **s podporou souborů** . Pro datovou část programu můžete dokument použít stejným způsobem, jaký je popsaný v [dokumentu bez podpory souborů](#_core_a_document_without_file_support). Můžete použít funkci serializace dokumentu, například ke čtení a zápisu serializovaného dokumentu profilu uživatele, který ukládá předvolby uživatele nebo jiné užitečné informace. Další nápady najdete v tématu [serializace: serializace vs. vstup/výstup databáze](../mfc/serialization-serialization-vs-database-input-output.md).
 
-Průvodce aplikací podporuje tuto možnost, ale je nutné napsat kód, který serializuje dokumentu. Serializované informace Store v dokumentu datové členy.
+Průvodce aplikací podporuje tuto možnost, ale je nutné napsat kód, který dokument serializovat. Uložit serializované informace do datových členů dokumentu.
 
-##  <a name="_core_applications_with_no_document"></a> Aplikace bez dokumentu
+##  <a name="applications-with-no-document"></a><a name="_core_applications_with_no_document"></a>Aplikace bez dokumentu
 
-Někdy můžete chtít napsat aplikaci, která nepoužívá dokumenty a zobrazení. Bez dokumentů, ukládat data (například `CRecordset` objektu) ve vaší třídy oken s rámečkem nebo ve třídě aplikace. Veškeré další požadavky závisí na tom, jestli aplikace představuje uživatelské rozhraní.
+Někdy můžete chtít napsat aplikaci, která nepoužívá dokumenty ani zobrazení. Bez dokumentů ukládáte vaše data (například `CRecordset` objekt) do vaší třídy oken s rámečkem nebo vaší třídy aplikace. Jakékoli další požadavky závisí na tom, zda aplikace prezentuje uživatelské rozhraní.
 
-###  <a name="_core_database_support_with_a_user_interface"></a> Podpora databáze s uživatelským rozhraním
+###  <a name="database-support-with-a-user-interface"></a><a name="_core_database_support_with_a_user_interface"></a>Podpora databáze s uživatelským rozhraním
 
-Pokud máte uživatelské rozhraní (jiné než, například rozhraní příkazového řádku konzoly), vaše aplikace kreslení přímo do klientské oblasti okna rámce, nikoli do zobrazení. Takovou aplikaci nepoužívá `CRecordView`, `CFormView`, nebo `CDialog` pro jeho hlavní uživatelské rozhraní, ale obvykle použít `CDialog` pro běžná dialogová okna.
+Pokud máte uživatelské rozhraní (například rozhraní příkazového řádku konzoly), aplikace se přímo nakreslí do klientské oblasti okna rámce, nikoli do zobrazení. Taková aplikace nepoužívá `CRecordView`, `CFormView`nebo `CDialog` pro své hlavní uživatelské rozhraní, ale normálně používá `CDialog` pro běžná dialogová okna.
 
-###  <a name="_core_writing_applications_without_documents"></a> Psaní aplikací bez dokumentů
+###  <a name="writing-applications-without-documents"></a><a name="_core_writing_applications_without_documents"></a>Psaní aplikací bez dokumentů
 
-Protože Průvodce aplikací nepodporuje vytváření aplikací bez dokumenty, musíte napsat vlastní `CWinApp`-odvozené třídy a v případě potřeby také vytvořit `CFrameWnd` nebo `CMDIFrameWnd` třídy. Přepsat `CWinApp::InitInstance` a deklarovat objekt aplikace jako:
+Vzhledem k tomu, že Průvodce aplikací nepodporuje vytváření aplikací bez dokumentů, je nutné napsat vlastní třídu odvozenou od `CWinApp`a v případě potřeby také vytvořit třídu `CFrameWnd` nebo `CMDIFrameWnd`. Přepsat `CWinApp::InitInstance` a deklarovat objekt aplikace jako:
 
 ```cpp
 CYourNameApp theApp;
 ```
 
-Architektura dodává stále mechanismu mapování zpráv a mnoho dalších funkcí.
+Rozhraní stále poskytuje mechanismus mapování zpráv a mnoho dalších funkcí.
 
-###  <a name="_core_database_support_separate_from_the_user_interface"></a> Podpora databáze oddělená od uživatelského rozhraní
+###  <a name="database-support-separate-from-the-user-interface"></a><a name="_core_database_support_separate_from_the_user_interface"></a>Podpora databáze oddělená od uživatelského rozhraní
 
-Některé aplikace potřebují žádné uživatelské rozhraní nebo pouze minimální verzi. Předpokládejme například, že píšete:
+Některé aplikace nepotřebují žádné uživatelské rozhraní ani pouze minimálně jeden. Předpokládejme například, že píšete:
 
-- Jiné aplikace (klienty) vyžadují zvláštní zpracování dat mezi aplikací a zdroj dat objekt zprostředkující přístup k datům.
+- Zprostředkující objekt pro přístup k datům, který zavolá jiné aplikace (klienty) pro speciální zpracování dat mezi aplikací a zdrojem dat.
 
-- Aplikace, která zpracovává data bez zásahu uživatele, například aplikace, který přesouvá data z jednoho databázového formátu do jiného, nebo ten, který provede výpočty a provádí dávkové aktualizace.
+- Aplikace, která zpracovává data bez zásahu uživatele, jako je například aplikace, která přesouvá data z jednoho databázového formátu do jiného, nebo je používá k výpočtům a provádí aktualizace služby Batch.
 
-Protože vlastní žádný dokument `CRecordset` objektu, budete pravděpodobně chtít uložit jako vložený datový člen v vaše `CWinApp`-odvozené třídy aplikace. Mezi ně patří:
+Vzhledem k tomu, že objekt `CRecordset` nevlastní žádný dokument, pravděpodobně ho budete chtít uložit jako vložený datový člen do vaší třídy aplikace odvozené od `CWinApp`. K alternativám patří:
 
-- Není udržování trvalou `CRecordset` objektu. Konstruktorům třídy sady záznamů můžete předat hodnotu NULL. V takovém případě rozhraní vytvoří dočasnou `CDatabase` pomocí informací v sadě záznamů `GetDefaultConnect` členskou funkci. Toto je nejpravděpodobnější alternativním přístupem.
+- Neuchování trvalého objektu `CRecordset`. Konstruktorům třídy sady záznamů můžete předat hodnotu NULL. V takovém případě rozhraní vytvoří dočasný objekt `CDatabase` pomocí informací v `GetDefaultConnect` členské funkci sady záznamů. Toto je nejpravděpodobnější alternativní přístup.
 
-- Provádění `CRecordset` objektu globální proměnné. Tato proměnná musí být ukazatel na objekt sady záznamů, který vytvoříte dynamicky ve vašich `CWinApp::InitInstance` přepsat. Tím se vyhnete pokusu o vytvoření objektu před dokončením inicializace rozhraní framework.
+- Vytvoření objektu `CRecordset` globální proměnnou. Tato proměnná by měla být ukazatel na objekt sady záznamů, který vytvoříte dynamicky v přepsání `CWinApp::InitInstance`. Tím se vyhnete pokusu o vytvoření objektu před inicializací rozhraní.
 
-- Použití objektů sady záznamů, stejně jako v rámci dokumentu, nebo v náhledu. Vytvoření sady záznamů v člen funkce svou aplikaci nebo objekty oken s rámečkem.
+- Použití objektů sady záznamů jako v kontextu dokumentu nebo zobrazení. Vytvořte sady záznamů v členských funkcích objektu aplikace nebo okna s rámečkem.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [MFC – databázové třídy](../data/mfc-database-classes-odbc-and-dao.md)

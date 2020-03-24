@@ -1,32 +1,32 @@
 ---
-title: 'Transakce: Provádění transakcí v sadě záznamů (ODBC)'
+title: 'Transakce: Provádění transakcí v sadě záznamů (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - transactions, updating recordsets
 ms.assetid: cf1d6b48-7fb8-4903-84f7-a1822054534d
-ms.openlocfilehash: 9e06d61d3d86233e136b0b3fe78f149a6778649b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 94177a27a1f99a8c9c37b7fce3f697fd0088b7c6
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62329826"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212586"
 ---
-# <a name="transaction-performing-a-transaction-in-a-recordset-odbc"></a>Transakce: Provádění transakcí v sadě záznamů (ODBC)
+# <a name="transaction-performing-a-transaction-in-a-recordset-odbc"></a>Transakce: Provádění transakcí v sadě záznamů (ODBC)
 
-Toto téma vysvětluje, jak k provádění transakcí v sadě záznamů.
+Toto téma vysvětluje, jak provést transakci v sadě záznamů.
 
 > [!NOTE]
->  Je podporován pouze jednu úroveň transakce; nelze vnořovat transakce.
+>  Je podporována pouze jedna úroveň transakcí; Nemůžete vnořovat transakce.
 
-#### <a name="to-perform-a-transaction-in-a-recordset"></a>K provedení transakcí v sadě záznamů
+#### <a name="to-perform-a-transaction-in-a-recordset"></a>Provedení transakce v sadě záznamů
 
-1. Volání `CDatabase` objektu `BeginTrans` členskou funkci.
+1. Zavolejte členskou funkci objektu `CDatabase` `BeginTrans`.
 
-1. Pokud jste neimplementovali hromadné načítání řádků, zavolejte `AddNew/Update`, `Edit/Update`, a `Delete` členské funkce jeden nebo více objektů sady záznamů ze stejné databáze tolikrát, kolikrát podle potřeby. Další informace najdete v tématu [sada záznamů: Přidání, aktualizace nebo odstranění záznamů (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md). Pokud jste implementovali hromadné načítání řádků, musíte napsat vlastní funkce k aktualizaci zdroje dat.
+1. Pokud jste neimplementovali hromadné načítání řádků, zavolejte `AddNew/Update`, `Edit/Update`a `Delete` členské funkce jednoho nebo více objektů sady záznamů ve stejné databázi, kolikrát je potřeba. Další informace naleznete v tématu [Sada záznamů: Přidání, aktualizace a odstranění záznamů (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md). Pokud jste implementovali hromadné načítání řádků, musíte napsat vlastní funkce pro aktualizaci zdroje dat.
 
-1. Nakonec proveďte volání `CDatabase` objektu `CommitTrans` členskou funkci. Pokud dojde k chybě v jedné aktualizace nebo se rozhodnete zrušit změny, zavolejte jeho `Rollback` členskou funkci.
+1. Nakonec zavolejte členskou funkci `CommitTrans` objektu `CDatabase`. Pokud dojde k chybě v jedné z aktualizací nebo se rozhodnete změny zrušit, zavolejte její členskou funkci `Rollback`.
 
-Dvě sady záznamů z registrační databáze školy, odebrání všechny třídy, ve kterých se zaregistruje studenta studenta odstranit registrace student získal v následujícím příkladu. Vzhledem k tomu, `Delete` volání v obou sadách záznamů musí proběhnout úspěšně, je požadována transakce. Příklad předpokládá existenci `m_dbStudentReg`, členské proměnné typu `CDatabase` již připojen ke zdroji dat a tříd sady záznamů `CEnrollmentSet` a `CStudentSet`. `strStudentID` Proměnná obsahuje hodnotu získaný od uživatele.
+Následující příklad používá dvě sady záznamů k odstranění registrace studenta z registrační databáze školy a odebírá studenta ze všech tříd, ve kterých je student zaregistrovaný. Protože volání `Delete` v obou sadách záznamů musí být úspěšné, je požadována transakce. Příklad předpokládá existenci `m_dbStudentReg`, členská proměnná typu `CDatabase` již připojená ke zdroji dat a třídy sady záznamů `CEnrollmentSet` a `CStudentSet`. Proměnná `strStudentID` obsahuje hodnotu získanou od uživatele.
 
 ```
 BOOL CEnrollDoc::RemoveStudent( CString strStudentID )
@@ -79,9 +79,9 @@ BOOL CEnrollDoc::RemoveStudent( CString strStudentID )
 ```
 
 > [!NOTE]
->  Volání `BeginTrans` znovu bez volání `CommitTrans` nebo `Rollback` chybu.
+>  Volání `BeginTrans` bez volání `CommitTrans` nebo `Rollback` je chyba.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Transakce (ODBC)](../../data/odbc/transaction-odbc.md)<br/>
 [Transakce: Vliv transakcí na aktualizace (ODBC)](../../data/odbc/transaction-how-transactions-affect-updates-odbc.md)<br/>

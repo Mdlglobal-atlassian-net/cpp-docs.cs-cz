@@ -66,12 +66,12 @@ helpviewer_keywords:
 - operator =, bookmarks
 - operator=, bookmarks
 ms.assetid: bc942f95-6f93-41d9-bb6e-bcdae4ae0b7a
-ms.openlocfilehash: 89c7e62e51adbe96bee870b4baa8a35784b61ac0
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: e15be3342b32b432c438b65ec57765cb135f5316
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447252"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212235"
 ---
 # <a name="cbookmark-class"></a>CBookmark – třída
 
@@ -117,7 +117,7 @@ Velikost vyrovnávací paměti pro záložky v bajtech Pokud je *nSize* nula, vy
 
 `CBookmark<0>` je specializace šablony `CBookmark`; jeho vyrovnávací paměť je dynamicky vytvořena v době běhu.
 
-## <a name="cbookmark"></a>CBookmark:: CBookmark
+## <a name="cbookmarkcbookmark"></a><a name="cbookmark"></a>CBookmark:: CBookmark
 
 Konstruktor
 
@@ -140,7 +140,7 @@ První funkce nastaví vyrovnávací paměť na NULL a velikost vyrovnávací pa
 > [!NOTE]
 >  Tato funkce je k dispozici pouze v `CBookmark<0>`.
 
-## <a name="getbuffer"></a>CBookmark:: GetBuffer
+## <a name="cbookmarkgetbuffer"></a><a name="getbuffer"></a>CBookmark:: GetBuffer
 
 Načte ukazatel na vyrovnávací paměť záložky.
 
@@ -154,7 +154,7 @@ virtual BYTE* GetBuffer() const throw();
 
 Ukazatel na vyrovnávací paměť záložky.
 
-## <a name="getsize"></a>CBookmark:: GetSize
+## <a name="cbookmarkgetsize"></a><a name="getsize"></a>CBookmark:: GetSize
 
 Načte velikost vyrovnávací paměti záložky.
 
@@ -168,7 +168,7 @@ virtual DBLENGTH GetSize() const throw();
 
 Velikost vyrovnávací paměti v bajtech.
 
-## <a name="setbookmark"></a>CBookmark:: SetBookmark
+## <a name="cbookmarksetbookmark"></a><a name="setbookmark"></a>CBookmark:: SetBookmark
 
 Zkopíruje hodnotu záložky, na kterou odkazuje *pBuffer* , do vyrovnávací paměti `CBookmark` a nastaví velikost vyrovnávací paměti na *nSize*.
 
@@ -194,7 +194,7 @@ Standardní hodnota HRESULT.
 
 Tato funkce je k dispozici pouze v `CBookmark<0>`.
 
-## <a name="operator"></a>CBookmark:: operator =
+## <a name="cbookmarkoperator-"></a><a name="operator"></a>CBookmark:: operator =
 
 Přiřadí objekt `CBookmark` k druhému.
 

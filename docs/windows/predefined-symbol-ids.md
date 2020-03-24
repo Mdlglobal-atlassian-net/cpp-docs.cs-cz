@@ -5,20 +5,20 @@ helpviewer_keywords:
 - symbols [C++], predefined IDs
 - predefined symbol IDs
 ms.assetid: 91a5d610-1a04-47e8-b8a4-63ad650a90df
-ms.openlocfilehash: 5acaf9d470ce3d1cccad65bc8235cacfd7a56427
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8f7fcba864f4e1a47d217d684b87c257503aeb13
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62362293"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80215160"
 ---
 # <a name="predefined-symbol-ids"></a>ID předdefinovaných symbolů
 
-Když začnete nový projekt, v závislosti na typu projektu pro použití předdefinovaných některé ID symbolů. Tyto identifikátory symbol podporují různé typy projektů, jako je například knihovny MFC a knihovny. Představují běžné úkoly, které jsou obvykle zahrnuta v jakékoli aplikaci nebo akce položek hardwaru, jako jsou tiskárny a myši.
+Když zahájíte nový projekt, v závislosti na typu projektu, jsou některá ID symbolů předdefinovaná pro vaše použití. Tato ID symbolů podporují různé knihovny a typy projektů, jako je například MFC. Představují běžné úkoly, které jsou obvykle součástí libovolné aplikace, nebo akce hardwarových položek, jako je myš nebo tiskárna.
 
-Tyto identifikátory symbol významu nabývají při práci s prostředky. Jsou k dispozici při úpravách tabulek akcelerátorů a některé z nich jsou už přidružené virtuální klávesy. Jsou to také k dispozici, až [okno vlastností](/visualstudio/ide/reference/properties-window). Žádné ID předdefinovaných symbolů můžete přiřadit nové prostředky, nebo můžete přiřadit klávesy akcelerátoru je a jejich funkce přidružené k symbolu, který automaticky přiřadí ID klíče kombinaci.
+Tato ID symbolů se při práci s prostředky stanou důležitou. Jsou k dispozici při úpravách tabulek akcelerátoru a některé z nich jsou již přidruženy k virtuálním klíčům. Jsou k dispozici také pro vás prostřednictvím [okno Vlastnosti](/visualstudio/ide/reference/properties-window). K novým prostředkům můžete přiřadit všechna předdefinovaná ID symbolů nebo jim přiřadit klávesové zkratky a funkce přidružené k ID symbolu se automaticky přidruží k této kombinaci kláves.
 
-Knihovny obsahuje předdefinované symboly, které se zobrazí jako součást projektu:
+Knihovny mají předdefinované symboly, které se zobrazí v rámci projektu:
 
 - [Předdefinované symboly ATL](../windows/atl-predefined-symbols.md)
 
@@ -33,8 +33,8 @@ Knihovny obsahuje předdefinované symboly, které se zobrazí jako součást pr
 
 Win32, MFC nebo ATL
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Identifikátory prostředků (symboly)](../windows/symbols-resource-identifiers.md)<br/>
-[Postupy: Vytváření symbolů](../windows/creating-new-symbols.md)<br/>
+[Postupy: vytváření symbolů](../windows/creating-new-symbols.md)<br/>
 [Postupy: Správa symbolů](../windows/changing-a-symbol-or-symbol-name-id.md)<br/>

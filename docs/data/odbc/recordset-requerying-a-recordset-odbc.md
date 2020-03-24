@@ -1,5 +1,5 @@
 ---
-title: 'Recordset: Opětovné spuštění dotazu na sadu záznamů (ODBC)'
+title: 'Sada záznamů: Opětovné spuštění dotazu na sadu záznamů (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - recordsets, requerying
@@ -8,54 +8,54 @@ helpviewer_keywords:
 - ODBC recordsets, requerying
 - refreshing recordsets
 ms.assetid: 4ebc3b5b-5b91-4f51-a967-245223c6b8e1
-ms.openlocfilehash: 7edc1c04da617f96165b25a47ce169b266ae0003
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b7cf40ca3b0c8e415368772063aee61008a52764
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397702"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212781"
 ---
-# <a name="recordset-requerying-a-recordset-odbc"></a>Recordset: Opětovné spuštění dotazu na sadu záznamů (ODBC)
+# <a name="recordset-requerying-a-recordset-odbc"></a>Sada záznamů: Opětovné spuštění dotazu na sadu záznamů (ODBC)
 
-Toto téma platí pro třídy knihovny MFC rozhraní ODBC.
+Toto téma se vztahuje na třídy knihovny MFC rozhraní ODBC.
 
-Toto téma vysvětluje, jak můžete pomocí objektu sady záznamů requery (to znamená, aktualizujte) z databáze a můžete to udělat takto [Requery](../../mfc/reference/crecordset-class.md#requery) členskou funkci.
+Toto téma vysvětluje, jak můžete použít objekt sady záznamů k opakovanému spuštění dotazu (to znamená aktualizace) z databáze a kdy to můžete udělat pomocí členské funkce [Requery](../../mfc/reference/crecordset-class.md#requery) .
 
-Hlavní důvody pro opětovné spuštění dotazu na sadu záznamů jsou:
+Hlavní důvody pro dotazování sady záznamů:
 
-- Používání sady záznamů aktuální s ohledem na přidání vámi nebo jiným uživatelům a záznamy odstraněné jinými uživateli (ty, které se při odstranění se už projeví v sadě záznamů).
+- Přiveďte sadu záznamů v aktuálním stavu s ohledem na záznamy přidané vámi nebo jinými uživateli a záznamy odstraněné jinými uživateli (ty, které odstraníte, se už v sadě záznamů odrážejí).
 
-- Aktualizujte sadu záznamů na základě změny hodnot parametrů.
+- Aktualizuje sadu záznamů na základě změn hodnot parametrů.
 
-##  <a name="_core_bringing_the_recordset_up_to_date"></a> K datu aktualizování sady záznamů
+##  <a name="bringing-the-recordset-up-to-date"></a><a name="_core_bringing_the_recordset_up_to_date"></a>Uvedení sady záznamů do aktuálního stavu
 
-Často budete chtít requery objektu sady záznamů, abyste je připojili k aktuální. V prostředí s více uživateli databáze, další uživatelé můžete provádět změny dat během existence vaší sady záznamů. Další informace o při sady záznamů odráží změny provedené jinými uživateli, a pokud provedené změny se sady záznamů jiných uživatelů najdete v tématu [sada záznamů: Jak sady záznamů aktualizují záznamy (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md) a [dynamická sada](../../data/odbc/dynaset.md).
+Často budete chtít znovu spustit dotaz na svůj objekt sady záznamů, abyste ho mohli uvést v aktuálním stavu. V prostředí databáze s více uživateli může další uživatelé provádět změny dat během životnosti vaší sady záznamů. Další informace o tom, zda vaše sada záznamů odráží změny provedené jinými uživateli a pokud sady záznamů jiných uživatelů odráží vaše změny, naleznete v tématu [Sada záznamů: Jak sady záznamů aktualizují záznamy (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md) a [dynamické sady](../../data/odbc/dynaset.md).
 
-##  <a name="_core_requerying_based_on_new_parameters"></a> Opětovné spuštění dotazu na základě nových parametrů
+##  <a name="requerying-based-on-new-parameters"></a><a name="_core_requerying_based_on_new_parameters"></a>Dotazování na základě nových parametrů
 
-Další časté – a stejně důležité – použití [Requery](../../mfc/reference/crecordset-class.md#requery) je vybrat novou sadu záznamů na základě změny hodnot parametrů.
-
-> [!TIP]
->  Rychlost dotazu je pravděpodobně výrazně rychlejší při volání `Requery` se změnou hodnoty parametrů, než pokud zavoláte `Open` znovu.
-
-##  <a name="_core_requerying_dynasets_vs.._snapshots"></a> Opětovné spuštění dotazu dynamické sady vs. Snímky
-
-Protože dynamické sady jsou určené k vytvoření sady záznamů s dynamickými daty aktuální, budete chtít requery dynamické sady často potřebujete tak, aby odrážely přidání dalších uživatelů. Snímky, na druhé straně jsou užitečné, protože můžete bezpečně spolehnout na jejich statický obsah připravit sestavy, vypočítá celkový počet položek a tak dále. I nadále můžete někdy chtít requery také snímek. V prostředí data snímku může dojít ke ztrátě synchronizace se zdrojem dat jiným uživatelům změnit databázi.
-
-#### <a name="to-requery-a-recordset-object"></a>Chcete-li requery objekt sady záznamů
-
-1. Volání [Requery](../../mfc/reference/crecordset-class.md#requery) členské funkce objektu.
-
-Alternativně můžete zavřete a znovu původní sadu záznamů. V obou případech se nová sada záznamů představuje aktuální stav datového zdroje.
-
-Příklad najdete v tématu [zobrazení záznamů: Naplnění seznamu druhou sadou záznamů](../../data/filling-a-list-box-from-a-second-recordset-mfc-data-access.md).
+Další časté – a stejně důležité – použití [dotazu Requery](../../mfc/reference/crecordset-class.md#requery) je výběr nové sady záznamů na základě změny hodnot parametrů.
 
 > [!TIP]
->  K optimalizaci `Requery` výkonu, neměňte sady záznamů [filtr](../../data/odbc/recordset-filtering-records-odbc.md) nebo [řazení](../../data/odbc/recordset-sorting-records-odbc.md). Změňte hodnotu parametru pouze před voláním `Requery`.
+>  Rychlost dotazu je pravděpodobně výrazně rychlejší, pokud zavoláte `Requery` se změnou hodnot parametrů, než Pokud zavoláte `Open` znovu.
 
-Pokud `Requery` volání selže, můžete opakovat volání; v opačném případě by měla řádně ukončit aplikaci. Volání `Requery` nebo `Open` může selhat z mnoha důvodů. Pravděpodobně dojde k chybě sítě; nebo během volání, po vydání existující data, ale předtím, než je získat nová data, získat jiný uživatel možná výhradní přístup; nebo v tabulce, na kterém závisí sady záznamů není možné odstranit.
+##  <a name="requerying-dynasets-vs-snapshots"></a><a name="_core_requerying_dynasets_vs.._snapshots"></a>Dotazování na dynamické sady vs. snímky
 
-## <a name="see-also"></a>Viz také:
+Vzhledem k tomu, že dynamické sady mají představovat sadu záznamů s dynamickými aktuálními daty, chcete dynamické opakované dotazování znovu spustit, pokud chcete odrážet přidané uživatele. Snímky na druhé straně jsou užitečné, protože se můžete bezpečně spoléhat na jejich statický obsah, zatímco budete připravovat sestavy, počítat souhrny a tak dále. Stále můžete chtít znovu spustit dotaz i na snímek. Ve víceuživatelském prostředí může data snímku přijít o synchronizaci se zdrojem dat, protože ostatní uživatelé databázi změnili.
+
+#### <a name="to-requery-a-recordset-object"></a>Opakované spuštění objektu sady záznamů
+
+1. Zavolejte členskou funkci [ZnovuSpustitDotaz](../../mfc/reference/crecordset-class.md#requery) objektu.
+
+Alternativně můžete zavřít a znovu otevřít původní sadu záznamů. V obou případech nová sada záznamů představuje aktuální stav zdroje dat.
+
+Příklad naleznete v tématu [zobrazení záznamů: vyplnění seznamu z druhé sady záznamů](../../data/filling-a-list-box-from-a-second-recordset-mfc-data-access.md).
+
+> [!TIP]
+>  Pro optimalizaci výkonu `Requery` neměňte [Filtr](../../data/odbc/recordset-filtering-records-odbc.md) nebo [řazení](../../data/odbc/recordset-sorting-records-odbc.md)sady záznamů. Před voláním `Requery`změňte pouze hodnotu parametru.
+
+Pokud se `Requery` volání nepovede, můžete volání opakovat; v opačném případě by aplikace měla skončit řádným způsobem. Volání `Requery` nebo `Open` může z několika důvodů selhat. Možná dojde k chybě sítě; nebo během hovoru, po vydání stávajících dat, ale před získáním nových dat, může získat výhradní přístup jiný uživatel. nebo tabulka, na které vaše sada záznamů závisí, by mohla být odstraněna.
+
+## <a name="see-also"></a>Viz také
 
 [Sada záznamů (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
 [Sada záznamů: Dynamické vazby datových sloupců (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)<br/>

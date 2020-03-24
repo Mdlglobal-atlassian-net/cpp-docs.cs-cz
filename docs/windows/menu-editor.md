@@ -39,12 +39,12 @@ helpviewer_keywords:
 - commands [C++], deleting from menus
 - menus [C++], deleting
 ms.assetid: 421fb215-6e12-4ec9-a3af-82d77f87bfa6
-ms.openlocfilehash: a21ff3ba736bd345e4b8399a761b5a8d9db531ac
-ms.sourcegitcommit: 9aab425662a66825772f091112986952f341f7c8
+ms.openlocfilehash: 3671dbe33b2d6e373e2df3d54267c6aac5bbf20d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72444984"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214445"
 ---
 # <a name="menu-editor-c"></a>Editor nabídek (C++)
 
@@ -53,13 +53,13 @@ Nabídky umožňují uspořádat příkazy v logickém a snadno čitelném způs
 > [!TIP]
 > Při použití **editoru nabídek**můžete v mnoha případech kliknout pravým tlačítkem myši a zobrazit místní nabídku často používaných příkazů. Dostupné příkazy závisí na tom, na čemu ukazatel odkazuje.
 
-## <a name="how-to"></a>Postupy
+## <a name="how-to"></a>Postup
 
 **Editor nabídek** vám umožní:
 
 ### <a name="to-create-a-standard-menu"></a>Vytvoření standardní nabídky
 
-1. Přejděte na **zobrazení**nabídky  > **ostatní Windows** > **prostředky** a klikněte pravým tlačítkem myši na záhlaví **nabídky** . Zvolte **Přidat prostředek**a pak **Nabídka**.
+1. Přejděte na **zobrazení** nabídky > **jiných** > Windows **prostředky** a klikněte pravým tlačítkem myši na záhlaví **nabídky** . Zvolte **Přidat prostředek**a pak **Nabídka**.
 
 1. V řádku nabídek vyberte pole **Nová položka** (v tomto poli obsahuje *text*).
 
@@ -194,7 +194,7 @@ Když pracujete v **editoru nabídek**normálně, zobrazí se jako panel nabíde
 
 Win32
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Editory prostředků](../windows/resource-editors.md)<br/>
 [Příkazy nabídky](../windows/menu-command-properties.md)<br/>

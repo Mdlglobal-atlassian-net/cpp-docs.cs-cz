@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0029
 ms.assetid: f02c09c6-09f3-4d44-8cd4-9a25336be1ea
-ms.openlocfilehash: 1daac3435bc8f1b4bd4ed8462caf3b8eaa397e22
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 16a9e7dd31f3aa80cdb73f48c37215deca45113d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62298032"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80191948"
 ---
 # <a name="project-build-warning-prj0029"></a>Upozornění sestavení projektu PRJ0029
 
-Není nastavena vlastnost "Výstupy" na úrovni projektu vlastního kroku sestavení. Vlastní krok sestavení bude přeskočen.
+Vlastnost Outputs vlastního kroku sestavení na úrovni projektu není nastavena. Vlastní krok sestavení bude přeskočen.
 
-Vlastní krok sestavení nebyla spuštěna, protože nebyl zadán žádný výstup.
+Vlastní krok sestavení nebyl proveden, protože nebyl zadán žádný výstup.
 
-Chcete-li vyřešit tuto chybu, proveďte následující:
+Chcete-li vyřešit tuto chybu, proveďte jednu z následujících akcí:
 
-- Vyloučení vlastního kroku sestavení ze sestavení.
+- Vylučte vlastní krok sestavení ze sestavení.
 
-- Přidáte výstup.
+- Přidejte výstup.
 
-- Odstraňte obsah příkaz kroku vlastního sestavení.
+- Odstraňte obsah příkazu vlastního kroku sestavení.

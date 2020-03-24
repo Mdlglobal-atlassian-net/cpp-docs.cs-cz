@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - switch_is attribute
 ms.assetid: f1fffe5d-12d2-4e0f-8803-ccb715177d2d
-ms.openlocfilehash: b72052f4cbd7f94b170ea58b8f7b284b85d7ab00
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 05759250ac6c2f382e569feefda9575fddbecac2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69513978"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214536"
 ---
 # <a name="switch_is"></a>switch_is
 
@@ -29,7 +29,7 @@ Atribut **switch_is** C++ má stejné funkce jako atribut [switch_is](/windows/w
 
 ## <a name="example"></a>Příklad
 
-Podívejte se na příklad použití **switch_is**pomocí ukázkového [případu](case-cpp.md) .
+Ukázkové použití **switch_is**najdete v příkladech tohoto [případu](case-cpp.md) .
 
 ## <a name="requirements"></a>Požadavky
 
@@ -42,9 +42,9 @@ Podívejte se na příklad použití **switch_is**pomocí ukázkového [případ
 |**Požadované atributy**|Žádné|
 |**Neplatné atributy**|Žádné|
 
-Další informace o kontextech atributů naleznete v tématu kontexty [atributů](cpp-attributes-com-net.md#contexts).
+Další informace o kontextech atributů naleznete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [IDL – atributy](idl-attributes.md)<br/>
 [Atributy klíčových slov typedef, enum, union a struct](typedef-enum-union-and-struct-attributes.md)<br/>

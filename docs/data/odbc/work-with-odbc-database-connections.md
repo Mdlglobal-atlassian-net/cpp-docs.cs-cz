@@ -9,23 +9,23 @@ helpviewer_keywords:
 - databases [C++], connecting to
 - ODBC connections [C++], databases
 ms.assetid: f41a67c7-168d-4657-9999-257535e44c87
-ms.openlocfilehash: 3dc6706f945a5a7b0aa21c9ced8017d0a9905fb1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 29626d9ce98ac5bcd3889ee9417298ddfe3d7f1d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62329761"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212482"
 ---
 # <a name="work-with-odbc-database-connections"></a>Práce s databázovým připojením ODBC
 
-Následující témata popisují, jak se připojit ke zdrojům dat ODBC.
+Následující témata vysvětlují, jak se připojit ke zdrojům dat ODBC.
 
 ## <a name="in-this-section"></a>V tomto oddílu
 
-- [Správa databázovým připojením ODBC](../../data/odbc/data-source-managing-connections-odbc.md)
+- [Správa připojení k databázi ODBC](../../data/odbc/data-source-managing-connections-odbc.md)
 
-- [Programová konfigurace zdroje dat ODBC](../../data/odbc/data-source-programmatically-configuring-an-odbc-data-source.md)
+- [Programové nakonfigurování zdroje dat ODBC](../../data/odbc/data-source-programmatically-configuring-an-odbc-data-source.md)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)

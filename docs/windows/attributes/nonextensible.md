@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - nonextensible attribute
 ms.assetid: c7ef1554-809f-4ea0-a7cd-dc7786d40c3e
-ms.openlocfilehash: f2947e223d068ea6cc92a41abe19cb7f920112b2
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 2a1cd4d685e2fd141c6e11feaea488f44a884c80
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514395"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214658"
 ---
 # <a name="nonextensible"></a>nonextensible
 
-Určuje, že `IDispatch` implementace zahrnuje pouze vlastnosti a metody uvedené v popisu rozhraní a nelze je rozšířit o další členy za běhu.
+Určuje, že implementace `IDispatch` zahrnuje pouze vlastnosti a metody uvedené v popisu rozhraní a nelze je rozšířit o další členy v době běhu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -25,13 +25,13 @@ Určuje, že `IDispatch` implementace zahrnuje pouze vlastnosti a metody uveden�
 
 ## <a name="remarks"></a>Poznámky
 
-Nerozšiřitelný C++ atribut má stejné funkce jako nerozšiřitelný atribut MIDL. [](/windows/win32/Midl/nonextensible)
+**Nerozšiřitelný** C++ atribut má stejné funkce jako [nerozšiřitelný](/windows/win32/Midl/nonextensible) atribut MIDL.
 
-Použití nerozšiřitelného také vyžaduje atribut [oleautomation](oleautomation.md) .
+Použití **nerozšiřitelného** také vyžaduje atribut [oleautomation](oleautomation.md) .
 
 ## <a name="example"></a>Příklad
 
-Následující kód ukazuje jedno použití nerozšiřitelného atributu:
+Následující kód ukazuje jedno použití **nerozšiřitelného** atributu:
 
 ```cpp
 // cpp_attr_ref_nonextensible.cpp
@@ -56,12 +56,12 @@ __interface IFireTabCtrl
 |-|-|
 |**Platí pro**|**interface**|
 |**REPEATABLE**|Ne|
-|**Požadované atributy**|`dual`a `oleautomation`, nebo`dispinterface`|
+|**Požadované atributy**|`dual` a `oleautomation`nebo `dispinterface`|
 |**Neplatné atributy**|Žádné|
 
-Další informace o kontextech atributů naleznete v tématu kontexty [atributů](cpp-attributes-com-net.md#contexts).
+Další informace o kontextech atributů naleznete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [IDL – atributy](idl-attributes.md)<br/>
 [Atributy rozhraní](interface-attributes.md)

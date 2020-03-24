@@ -3,12 +3,12 @@ title: 'Postupy: Vytváření souborů .h z metadat Windows pomocí nástrojů 
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 4be8ba11-c223-44ad-9256-7e1edae9a7bc
-ms.openlocfilehash: 3aa7cd28a37ec7187cc3c87927a83e45eeda2a4e
-ms.sourcegitcommit: 5f276064779d90a4cfda758f89e0c0f1e4d1a188
+ms.openlocfilehash: bceb4aff22f6ebba9c8705b3b5a55d0478f244c9
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/09/2020
-ms.locfileid: "75791667"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213535"
 ---
 # <a name="how-to-use-winmdidlexe-and-midlrtexe-to-create-h-files-from-windows-metadata"></a>Postupy: Vytváření souborů .h z metadat Windows pomocí nástrojů winmdidl.exe a midlrt.exe
 
@@ -50,7 +50,7 @@ Určuje soubor, který obsahuje vlastní text, který se má předřadit do výc
 **/utf8**<br/>
 Způsobí, že se soubor zformátuje jako UTF-8.
 
-*Winmdfile*<br/>
+*WINMDFILE*<br/>
 Název souboru. winmd k analýze. Pokud cesta obsahuje mezery, použijte uvozovky.
 
 ## <a name="midlrt-command-line-arguments"></a>Argumenty příkazového řádku midlrt

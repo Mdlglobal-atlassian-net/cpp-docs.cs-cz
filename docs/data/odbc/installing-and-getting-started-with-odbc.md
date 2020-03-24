@@ -5,23 +5,23 @@ helpviewer_keywords:
 - installing ODBC
 - ODBC, installing
 ms.assetid: 6b473481-1d68-468f-89f6-82b0fd7716fd
-ms.openlocfilehash: 112593aac74a15279f605c75a52fb3eec6750576
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7e4c9bc1e4ba418ec588e054654e544b6fd3e239
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395856"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213157"
 ---
 # <a name="installing-and-getting-started-with-odbc"></a>Instalace a úvod do rozhraní ODBC
 
-Následující témata vám pomůžou nainstalovat součásti, které potřebujete, abyste mohli začít pracovat s připojením ODBC (Open Database).
+Následující témata vám pomůžou nainstalovat komponenty, které potřebujete, abyste mohli začít pracovat s rozhraním ODBC (Open Database Connectivity).
 
 ## <a name="in-this-section"></a>V tomto oddílu
 
-- [Instalace ovladačů rozhraní ODBC, které se dodávají s jazykem Visual C++](../../data/odbc/odbc-administrator.md)
+- [Nainstalovat ovladače rozhraní ODBC dodávané s jazykem VisualC++](../../data/odbc/odbc-administrator.md)
 
-- [Redistribuce součástí rozhraní ODBC vašim zákazníkům](../../data/odbc/odbc-basics.md)
+- [Opětovné distribuce součástí rozhraní ODBC vašim zákazníkům](../../data/odbc/odbc-basics.md)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)

@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - RC2164
 ms.assetid: 23d7691d-80f3-4979-a519-378e5498d2d1
-ms.openlocfilehash: d9da84f6f59782f93d7a13d0e9aa46b1a88cc064
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b6e01dabb2f6b13ea38de833fcd0a3e271e05c76
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396902"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80191207"
 ---
 # <a name="resource-compiler-error-rc2164"></a>Chyba kompilátoru prostředků RC2164
 
 Neočekávaná hodnota v RCDATA
 
-*Nezpracovaná data* hodnoty v **RCDATA** příkaz musí být celá čísla nebo řetězce, každé oddělené čárkou. Ujistěte se, že jste nepřešly vynechte čárku nebo vynechte uvozovky kolem řetězec.
+Hodnoty *nezpracovaných dat* v příkazu **RCDATA** musí být celá čísla nebo řetězce, z nichž každá je oddělena čárkou. Ujistěte se, že jste nenechali čárku nebo jste ponechali znak uvozovek kolem řetězce.

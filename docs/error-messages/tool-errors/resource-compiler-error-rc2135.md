@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - RC2135
 ms.assetid: 1509a0fa-1cb7-4654-bcb3-ad5ac973e659
-ms.openlocfilehash: 0ceb6e4207142fc1f8a374ab8669475c9867a000
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a2cc1f431618cd4cf20df76f2012a212eaf63d23
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62347974"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80191246"
 ---
 # <a name="resource-compiler-error-rc2135"></a>Chyba kompilátoru prostředků RC2135
 
-Soubor nebyl nalezen: název souboru
+soubor nebyl nalezen: název souboru
 
-Nebyl nalezen zadaný soubor na příkazovém řádku pro kompilátor prostředků. Zkontrolujte, zda soubor byl přesunut do jiného adresáře a určuje, zda název souboru a cesta jsou zadány správně.
+Soubor zadaný v příkazovém řádku kompilátoru prostředků se nenašel. Zkontrolujte, zda byl soubor přesunut do jiného adresáře a zda je správně zadán název souboru a cesta.
 
-Soubory se vyhledávají pomocí **zahrnout** proměnné prostředí nebo Visual C++ **zahrnout** nastavení.
+Soubory jsou prohledány pomocí proměnné prostředí **include** nebo nastavení C++ **zahrnutí** vizuálu.

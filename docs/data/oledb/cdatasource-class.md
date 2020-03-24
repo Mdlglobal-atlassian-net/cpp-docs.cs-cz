@@ -56,12 +56,12 @@ helpviewer_keywords:
 - OpenWithPromptFileName method
 - OpenWithServiceComponents method
 ms.assetid: 99bf862c-9d5c-4117-9501-aa0e2672085c
-ms.openlocfilehash: d97138b548a3e303898ee2bafde88af38aa78f40
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 646d4b3548a1c5ee1bdfaf64f7823fa584abaac5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79445300"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212010"
 ---
 # <a name="cdatasource-class"></a>CDataSource – třída
 
@@ -99,7 +99,7 @@ Jednu nebo více relací databáze lze vytvořit pro jedno připojení. Tyto rel
 
 Příklad použití `CDataSource`naleznete v ukázce [CatDB](../../overview/visual-cpp-samples.md) .
 
-## <a name="close"></a>CDataSource:: Close
+## <a name="cdatasourceclose"></a><a name="close"></a>CDataSource:: Close
 
 Ukončí připojení uvolněním ukazatele `m_spInit`.
 
@@ -109,7 +109,7 @@ Ukončí připojení uvolněním ukazatele `m_spInit`.
 void Close() throw();
 ```
 
-## <a name="getinitializationstring"></a>CDataSource:: GetInitializationString
+## <a name="cdatasourcegetinitializationstring"></a><a name="getinitializationstring"></a>CDataSource:: GetInitializationString
 
 Načte inicializační řetězec aktuálně otevřeného zdroje dat.
 
@@ -136,7 +136,7 @@ Standardní hodnota HRESULT.
 
 Výsledný inicializační řetězec lze použít pro pozdější opětovné otevření tohoto připojení ke zdroji dat.
 
-## <a name="getproperties"></a>CDataSource:: GetProperties
+## <a name="cdatasourcegetproperties"></a><a name="getproperties"></a>CDataSource:: GetProperties
 
 Vrátí informace o vlastnosti požadované pro objekt připojeného zdroje dat.
 
@@ -161,7 +161,7 @@ Standardní hodnota HRESULT.
 
 Chcete-li získat jedinou vlastnost, použijte [GetProperty](../../data/oledb/cdatasource-getproperty.md).
 
-## <a name="getproperty"></a>CDataSource:: GetProperty
+## <a name="cdatasourcegetproperty"></a><a name="getproperty"></a>CDataSource:: GetProperty
 
 Vrátí hodnotu zadané vlastnosti pro objekt připojeného zdroje dat.
 
@@ -192,7 +192,7 @@ Standardní hodnota HRESULT.
 
 K získání více vlastností použijte [GetProperties](../../data/oledb/cdatasource-getproperties.md).
 
-## <a name="open"></a>CDataSource:: Open
+## <a name="cdatasourceopen"></a><a name="open"></a>CDataSource:: Open
 
 Otevře připojení ke zdroji dat pomocí `CLSID`, `ProgID`nebo `CEnumerator` monikeru nebo vyzve uživatele k zadání pole lokátor.
 
@@ -288,7 +288,7 @@ Následující kód ukazuje, jak otevřít zdroj dat Jet 4,0 pomocí šablon OLE
 
 [!code-cpp[NVC_OLEDB_Consumer#7](../../data/oledb/codesnippet/cpp/cdatasource-open_1.cpp)]
 
-## <a name="openfromfilename"></a>CDataSource:: OpenFromFileName
+## <a name="cdatasourceopenfromfilename"></a><a name="openfromfilename"></a>CDataSource:: OpenFromFileName
 
 Otevře zdroj dat ze souboru zadaného uživatelem zadaným názvem souboru.
 
@@ -313,7 +313,7 @@ Standardní hodnota HRESULT.
 
 Tato metoda otevře objekt zdroje dat pomocí součástí služby v Oledb32. dll; Tato knihovna DLL obsahuje implementaci funkcí součástí služby, jako je sdružování prostředků, automatické zařazení transakce atd. Další informace najdete v referenčních informacích k OLE DB v [příručce OLE DB programátor](/previous-versions/windows/desktop/ms713643(v=vs.85)).
 
-## <a name="openfrominitializationstring"></a>CDataSource:: OpenFromInitializationString
+## <a name="cdatasourceopenfrominitializationstring"></a><a name="openfrominitializationstring"></a>CDataSource:: OpenFromInitializationString
 
 Otevře zdroj dat určený inicializačním řetězcem zadaným uživatelem.
 
@@ -342,7 +342,7 @@ Standardní hodnota HRESULT.
 
 Tato metoda otevře objekt zdroje dat pomocí součástí služby v Oledb32. dll; Tato knihovna DLL obsahuje implementaci funkcí součástí služby, jako je sdružování prostředků, automatické zařazení transakce atd.
 
-## <a name="openwithpromptfilename"></a>CDataSource:: OpenWithPromptFileName
+## <a name="cdatasourceopenwithpromptfilename"></a><a name="openwithpromptfilename"></a>CDataSource:: OpenWithPromptFileName
 
 Tato metoda vyzve uživatele k zadání dialogového okna a pak otevře zdroj dat pomocí souboru zadaného uživatelem.
 
@@ -373,7 +373,7 @@ Standardní hodnota HRESULT.
 
 Tato metoda otevře objekt zdroje dat pomocí součástí služby v Oledb32. dll; Tato knihovna DLL obsahuje implementaci funkcí součástí služby, jako je sdružování prostředků, automatické zařazení transakce atd. Další informace najdete v referenčních informacích k OLE DB v [příručce OLE DB programátor](/previous-versions/windows/desktop/ms713643(v=vs.85)).
 
-## <a name="openwithservicecomponents"></a>CDataSource:: OpenWithServiceComponents
+## <a name="cdatasourceopenwithservicecomponents"></a><a name="openwithservicecomponents"></a>CDataSource:: OpenWithServiceComponents
 
 Otevře objekt zdroje dat pomocí součástí služby v Oledb32. dll.
 

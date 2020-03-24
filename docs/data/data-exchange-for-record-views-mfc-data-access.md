@@ -8,27 +8,27 @@ helpviewer_keywords:
 - DDX (dialog data exchange), record views
 - RFX (record field exchange)
 ms.assetid: abc52ca7-6997-47a7-98f3-f347f52b1f72
-ms.openlocfilehash: a7c6714218b5891e078e750a974faed274e113c9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f9f460305b55a2313b64effdf4d1dbbfd9823def
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397985"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213466"
 ---
 # <a name="data-exchange-for-record-views---mfc-data-access"></a>Výměna dat pro zobrazení záznamů (přístup k datům MFC)
 
-Při použití [přidat třídu](../mfc/reference/adding-an-mfc-odbc-consumer.md) do mapování ovládacích prvků v prostředku šablony dialogového okna zobrazení záznamu na pole sady záznamů, že rozhraní spravuje výměny dat v obou směrech – ze záznamů pro ovládací prvky a z ovládacích prvků do sady záznamů. Pomocí mechanismu DDX znamená, že není potřeba psát kód pro přenos dat vpřed a zpět, sami.
+Použijete-li [Přidat třídu](../mfc/reference/adding-an-mfc-odbc-consumer.md) pro mapování ovládacích prvků v dialogovém okně šablony zobrazení záznamu na pole sady záznamů, rozhraní spravuje výměnu dat v obou směrech – ze sady záznamů do ovládacích prvků a z ovládacích prvků do sady záznamů. Použití DDX mechanismu znamená, že nemusíte psát kód pro přenos dat sami a zpátky.
 
-DDX pro zobrazení záznamu funguje ve spojení s [RFX](../data/odbc/record-field-exchange-rfx.md) pro sady záznamů třídy `CRecordset` (ODBC).  RFX přesouvá data mezi aktuální záznam zdroje dat a datové členy polí objektu sady záznamů. DDX přesouvá data z datové členy polí na ovládací prvky ve formuláři. Tato kombinace vyplní ovládací prvky formuláře zpočátku a jak se uživatel přesune mezi záznamy. Může to také přesunout aktualizovaná data zpět do sady záznamů a poté ke zdroji dat.
+DDX pro zobrazení záznamů funguje ve spojení s [RFX](../data/odbc/record-field-exchange-rfx.md) pro sady záznamů třídy `CRecordset` (ODBC).  RFX přesouvá data mezi aktuálním záznamem zdroje dat a poli datových členů objektu sady záznamů. DDX přesune data z datových členů pole do ovládacích prvků ve formuláři. Tato kombinace zpočátku naplní ovládací prvky formuláře a uživatel přejde ze záznamu na záznam. Může také přesunout aktualizovaná data zpět do sady záznamů a následně do zdroje dat.
 
-Následující obrázek ukazuje vztah mezi DDX a funkce RFX pro zobrazení záznamů.
+Následující obrázek znázorňuje vztah mezi DDX a RFX pro zobrazení záznamů.
 
-![Dialogové okno&#45;výměny dat a záznam&#45;pole exchange](../data/media/vc37xt1.gif "dialogové okno&#45;výměny dat a záznam&#45;pole exchange")<br/>
+![Výměna&#45;dat dialogových oken&#45;a výměna pole záznamu](../data/media/vc37xt1.gif "Výměna&#45;dat dialogových oken&#45;a výměna pole záznamu")<br/>
 Výměna dat dialogových oken a výměna pole záznamu
 
-Další informace o rozhraní DDX najdete v tématu [výměna dat dialogových oken a ověření](../mfc/dialog-data-exchange-and-validation.md). Další informace o RFX najdete v tématu [výměna pole záznamu (RFX)](../data/odbc/record-field-exchange-rfx.md).
+Další informace o DDX naleznete v tématu [Výměna a ověřování dat dialogových oken](../mfc/dialog-data-exchange-and-validation.md). Další informace o RFX naleznete v tématu [Výměna pole záznamu (RFX)](../data/odbc/record-field-exchange-rfx.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Zobrazení záznamů (přístup k datům MFC)](../data/record-views-mfc-data-access.md)<br/>
 [Seznam ovladačů ODBC](../data/odbc/odbc-driver-list.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - cpp_quote attribute
 ms.assetid: f75327ff-42bd-498b-9177-7ffa25427e1f
-ms.openlocfilehash: 905c9fc41b1b42dffe9c7b39fae0b096cdc24950
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 451313b5bd1eb5011f1175de5c3bcfe6fb054299
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501764"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214913"
 ---
 # <a name="cpp_quote"></a>cpp_quote
 
@@ -38,7 +38,7 @@ Atribut **cpp_quote** má stejné funkce jako atribut [cpp_quote](/windows/win32
 
 ## <a name="example"></a>Příklad
 
-Viz příklad pro [duální](dual.md) použití pro příklad použití **cpp_quote**.
+V příkladu pro [duální](dual.md) pro příklad použijte použití **cpp_quote**.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -51,9 +51,9 @@ Viz příklad pro [duální](dual.md) použití pro příklad použití **cpp_qu
 |**Požadované atributy**|Žádné|
 |**Neplatné atributy**|Žádné|
 
-Další informace o kontextech atributů naleznete v tématu kontexty [atributů](cpp-attributes-com-net.md#contexts).
+Další informace o kontextech atributů naleznete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [IDL – atributy](idl-attributes.md)<br/>
 [Samostatné atributy](stand-alone-attributes.md)

@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0041
 ms.assetid: dc9f4cf9-6bd5-4222-89e8-7802a59bb96b
-ms.openlocfilehash: b0fceff05ffe35515965b7e0a880c8b4c941b07e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bb6469b1daf193223a9b3361cc3e4bfb96d0c751
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62297720"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80191926"
 ---
 # <a name="project-build-warning-prj0041"></a>Upozornění sestavení projektu PRJ0041
 
-Nelze najít chybějící závislost 'závislosti' pro soubor 'file'. Projektu stále možné sestavit, ale může se jevit jako zastaralý dokud tento soubor není nalezen.
+Nelze najít chybějící závislost ' Dependency ' pro soubor ' file '. Projekt se může stále sestavit, ale může se i nadále zobrazovat bez aktuálního stavu, dokud se tento soubor nenajde.
 
-Soubor (soubor prostředků nebo.idl/.odl souboru, například obsažené příkazu zahrnout, který systém projektu nebylo možné přeložit.
+Soubor (soubor prostředků nebo soubor. idl/. odl jako příklad obsahuje příkaz include, který systém projektu nemohl vyřešit.
 
-Protože systém projektu nezpracovává příkazy preprocesoru (například #if), nemusí být problematický příkaz ve skutečnosti součástí sestavení.
+Vzhledem k tomu, že systém projektu nezpracovává příkazy preprocesoru (například #if), problematický příkaz nemusí být ve skutečnosti součástí sestavení.
 
-Pokud chcete vyřešit toto upozornění, odstraňte všechny nepotřebné kód v souborech .rc nebo přidejte zástupné soubory odpovídající název.
+Chcete-li vyřešit toto upozornění, odstraňte veškerý nepotřebný kód v souborech. RC nebo přidejte zástupné soubory příslušného názvu.

@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - RC2148
 ms.assetid: 0290065c-35d3-4815-80c5-40bf7132ae1d
-ms.openlocfilehash: 6d9946c20705fa14046823104455c2819fac353f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e2394dbb93dd2d203d65760d805e09f60a692ba4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62173207"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80191324"
 ---
 # <a name="resource-compiler-error-rc2148"></a>Chyba kompilátoru prostředků RC2148
 
-ID DÍLČÍHO moc velká
+ID podjazyka je moc velké.
 
-ID DÍLČÍHO hodnot byla mimo rozsah.
+Hodnota ID dílčího jazyka byla mimo rozsah.
 
-**Jazyk** příkaz musíte použít následující syntaxi:
+Příkaz **jazyka** musí používat následující syntaxi:
 
-**JAZYK** *primary_language_ID*,*secondary_language_ID*
+**LANGUAGE** *Primary_language_ID*jazyka,*secondary_language_ID*
 
-Platné ID DÍLČÍHO jsou definované jako **SUBLANG_** konstanty v souboru WINNT.h souboru.
+Platná ID podjazyku jsou definována jako **SUBLANG_** konstanty v souboru Winnt. h.

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - oleautomation attribute
 ms.assetid: c1086c91-260b-4dc3-b244-662852d09906
-ms.openlocfilehash: 56970d8b1067e1ac38230b6995074210ddc5549b
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 201916eeb235d48473d21188da42d19cafb93bce
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514359"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214655"
 ---
 # <a name="oleautomation"></a>oleautomation
 
@@ -29,7 +29,7 @@ Atribut **oleautomation** C++ má stejné funkce jako atribut [oleautomation](/w
 
 ## <a name="example"></a>Příklad
 
-Ukázkové použití **oleautomation**najdete v příkladech pro [DefaultValue](defaultvalue.md) a nerozšiřitelné. [](nonextensible.md)
+Ukázkové použití **oleautomation**najdete v příkladech pro [DefaultValue](defaultvalue.md) a [nerozšiřitelné](nonextensible.md) .
 
 ## <a name="requirements"></a>Požadavky
 
@@ -42,9 +42,9 @@ Ukázkové použití **oleautomation**najdete v příkladech pro [DefaultValue](
 |**Požadované atributy**|Žádné|
 |**Neplatné atributy**|**dispinterface**|
 
-Další informace o kontextech atributů naleznete v tématu kontexty [atributů](cpp-attributes-com-net.md#contexts).
+Další informace o kontextech atributů naleznete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [IDL – atributy](idl-attributes.md)<br/>
 [Atributy rozhraní](interface-attributes.md)

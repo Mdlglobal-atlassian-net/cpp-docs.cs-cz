@@ -30,12 +30,12 @@ helpviewer_keywords:
 - cursors [C++], importing and exporting
 - images [C++], exporting
 ms.assetid: 65f523e8-017f-4fc6-82d1-083c56d9131f
-ms.openlocfilehash: 718de310bc4fb0cb0072065bc4e7b7adadb182aa
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 0af4e8faeb3d8606fb351b193364a2748fbc944e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79421196"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80215210"
 ---
 # <a name="how-to-manage-resources-c"></a>Postupy: Správa prostředků (C++)
 
@@ -46,7 +46,7 @@ Můžete kopírovat prostředky z jednoho souboru do druhého, aniž byste je zm
 Do aktuálního souboru prostředků můžete snadno kopírovat prostředky z existujícího prostředku nebo spustitelného souboru. Pokud chcete kopírovat prostředky, otevřete oba soubory, které obsahují prostředky, a přetáhněte položky z jednoho souboru na jiný nebo je zkopírujte a vložte mezi tyto dva soubory. Tato metoda se používá pro soubory skriptu prostředků (. RC) a soubory šablony prostředků (. RCT) a jako spustitelné soubory (. exe).
 
 > [!NOTE]
-> Vizuál C++ obsahuje ukázkové soubory prostředků, které můžete použít ve své vlastní aplikaci. Další informace najdete v tématu věnovaném [klipartům: běžné prostředky](https://github.com/Microsoft/VCSamples).
+> Vizuál C++ obsahuje ukázkové soubory prostředků, které můžete použít ve své vlastní aplikaci. Další informace najdete v tématu věnovaném [klipartům: běžné prostředky](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/general).
 
 Nemůžete přetahovat, kopírovat, vyjmout ani vkládat soubory prostředků v projektu (**prostředky**) a samostatné soubory. RC otevřené v dokumentu okna. To můžete provést v předchozích verzích produktu. Použijte pouze metodu přetažení mezi soubory. RC, které jsou otevřeny mimo projekt.
 
@@ -130,4 +130,4 @@ Win32
 
 [Soubory prostředků](../windows/resource-files-visual-studio.md)<br/>
 [Postupy: vytváření prostředků](../windows/how-to-create-a-resource-script-file.md)<br/>
-[Postupy: Zahrnutí prostředků v čase kompilace](../windows/how-to-include-resources-at-compile-time.md)<br/>
+[Postupy: Zahrnutí prostředků v čase kompilace](../windows/how-to-include-resources-at-compile-time.md)

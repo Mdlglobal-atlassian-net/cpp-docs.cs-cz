@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - CreateActivationFactory function
 ms.assetid: a1a53e04-6757-4faf-a4c8-ecf06e43b959
-ms.openlocfilehash: ca3469128cf3d412138d5d39a1587cbc20150699
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ab03b15a968c6aba3fa6df8c975fb98e873f8e23
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398625"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214068"
 ---
 # <a name="createactivationfactory-function"></a>CreateActivationFactory – funkce
 
-Vytvoří objekt factory, který vytvoří instance dané třídy, které mohou být aktivovány modulem Windows Runtime.
+Vytvoří objekt pro vytváření, který vytváří instance zadané třídy, které mohou být aktivovány prostředí Windows Runtime.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -30,32 +30,32 @@ template<typename Factory>
 
 ### <a name="parameters"></a>Parametry
 
-*příznaky*<br/>
-Kombinace jedné nebo více [runtimeclasstype –](runtimeclasstype-enumeration.md) hodnot výčtu.
+*Flag*<br/>
+Kombinace jedné nebo více hodnot výčtu [RuntimeClassType –](runtimeclasstype-enumeration.md) .
 
 *entry*<br/>
-Ukazatel [creatormap –](creatormap-structure.md) , který obsahuje informace o parametru inicializace a registraci *riid*.
+Ukazatel na [CreatorMap](creatormap-structure.md) , který obsahuje inicializační a registrační informace o parametru *riid*.
 
 *riid*<br/>
-Odkaz na identifikátor rozhraní.
+Odkaz na ID rozhraní.
 
 *ppFactory*<br/>
-Pokud se tato operace dokončí úspěšně, ukazatel na objekt factory pro aktivaci.
+Pokud se tato operace úspěšně dokončí, ukazatel na továrnu aktivace.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-S_OK v případě úspěchu; v opačném případě HRESULT, která označuje chybu.
+S_OK v případě úspěchu; v opačném případě hodnota HRESULT, která označuje chybu.
 
 ## <a name="remarks"></a>Poznámky
 
-Chyba vyhodnocení je vygenerován, pokud parametr šablony *Factory* není odvozen z rozhraní `IActivationFactory`.
+Pokud *objekt pro vytváření* parametrů není odvozen od rozhraní `IActivationFactory`, je vyvolána chyba kontrolního výrazu.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** module.h
+**Záhlaví:** modul. h
 
-**Namespace:** Microsoft::WRL
+**Obor názvů:** Microsoft:: WRL
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Microsoft::WRL::Wrappers::Details – obor názvů](microsoft-wrl-wrappers-details-namespace.md)

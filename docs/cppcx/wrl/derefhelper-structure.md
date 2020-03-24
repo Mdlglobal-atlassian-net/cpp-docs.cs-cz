@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - DerefHelper structure
 ms.assetid: 86ded58b-c3ee-4a4f-bb86-4f67b895d427
-ms.openlocfilehash: 96b7e83a854765fb872b87d062928311731cfd26
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 43453d3162de697fa1cfcf0581953c91bbe3934f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398560"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214042"
 ---
 # <a name="derefhelper-structure"></a>DerefHelper – struktura
 
-Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.
+Podporuje infrastrukturu WRL a není určena pro použití přímo v kódu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -30,22 +30,22 @@ struct DerefHelper<T*>;
 
 ### <a name="parameters"></a>Parametry
 
-*T*<br/>
+*Š*<br/>
 Parametr šablony.
 
 ## <a name="remarks"></a>Poznámky
 
-Představuje ukazatel přes ukazatel `T*` parametr šablony.
+Reprezentuje ukazatel s odkazem na `T*` parametr šablony.
 
-**Derefhelper –** , jako je použít ve výrazu: `ComPtr<Details::DerefHelper<ProgressTraits::Arg1Type>::DerefType> operationInterface;`.
+**DerefHelper –** se používá ve výrazu jako: `ComPtr<Details::DerefHelper<ProgressTraits::Arg1Type>::DerefType> operationInterface;`.
 
 ## <a name="members"></a>Členové
 
-### <a name="public-typedefs"></a>Veřejné definice TypeDef
+### <a name="public-typedefs"></a>Veřejné definice typedef
 
 |Název|Popis|
 |----------|-----------------|
-|`DerefType`|Identifikátor pro parametr šablony přes ukazatel `T*`.|
+|`DerefType`|Identifikátor parametru neodkazované šablony `T*`.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -53,10 +53,10 @@ Představuje ukazatel přes ukazatel `T*` parametr šablony.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** async.h
+**Hlavička:** Async. h
 
-**Namespace:** Microsoft::WRL::Details
+**Obor názvů:** Microsoft:: WRL::D etails
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Microsoft::WRL::Details – obor názvů](microsoft-wrl-details-namespace.md)

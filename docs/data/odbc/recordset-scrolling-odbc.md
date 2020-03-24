@@ -1,5 +1,5 @@
 ---
-title: 'Recordset: Posouvání (ODBC)'
+title: 'Sada záznamů: Posouvání (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - recordsets [C++], end of
@@ -11,55 +11,55 @@ helpviewer_keywords:
 - scrolling [C++], recordsets
 - Move method (recordsets)
 ms.assetid: f38d2dcb-1e88-4e41-af25-98b00c276be4
-ms.openlocfilehash: 5df8151664bd7e726087cb5323c1e4622264ad23
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8a8305d2acacc79f5d7fe395087a0bd13dcbd196
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397716"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212768"
 ---
-# <a name="recordset-scrolling-odbc"></a>Recordset: Posouvání (ODBC)
+# <a name="recordset-scrolling-odbc"></a>Sada záznamů: Posouvání (ODBC)
 
-Toto téma platí pro třídy knihovny MFC rozhraní ODBC.
+Toto téma se vztahuje na třídy knihovny MFC rozhraní ODBC.
 
-Po otevření sady záznamů, budete potřebovat přístup k záznamům k zobrazení hodnoty, provádět výpočty, generování sestav a tak dále. Posouvání umožňuje přesouvat mezi záznamy v rámci sady záznamů.
+Po otevření sady záznamů budete potřebovat přístup k záznamům pro zobrazení hodnot, výpočtů, generování sestav atd. Posouvání umožňuje přesunout záznam ze záznamu na záznam v rámci vaší sady záznamů.
 
 Toto téma vysvětluje:
 
-- [Jak přejít z jednoho záznamu do druhého v sadě záznamů](#_core_scrolling_from_one_record_to_another).
+- [Jak přejít z jednoho záznamu na jiný v sadě záznamů](#_core_scrolling_from_one_record_to_another).
 
-- [Za jakých okolností posouvání je a nepodporuje](#_core_when_scrolling_is_supported).
+- [Za jakých okolností je posouvání a není podporováno](#_core_when_scrolling_is_supported).
 
-##  <a name="_core_scrolling_from_one_record_to_another"></a> Posunutí z jednoho záznamu
+##  <a name="scrolling-from-one-record-to-another"></a><a name="_core_scrolling_from_one_record_to_another"></a>Posouvání z jednoho záznamu na jiný
 
-Třída `CRecordset` poskytuje `Move` členské funkce pro posouvání v rámci sady záznamů. Tyto funkce přesunout aktuální záznam sady řádků. Pokud jste implementovali hromadné načítání řádků, `Move` operace přemístí sadu záznamů na velikosti dané sadě řádků. Pokud jste neimplementovali hromadné načítání, volání řádků `Move` funkce přemístí záznamů podle jednoho záznamu pokaždé, když. Další informace o hromadném načítání řádků naleznete v tématu [sada záznamů: Načítání záznamů (ODBC) hromadné](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+Třída `CRecordset` poskytuje `Move` členské funkce pro posouvání v rámci sady záznamů. Tyto funkce přesunou aktuální záznam pomocí sad řádků. Pokud jste implementovali hromadné načítání řádků, operace `Move` přemístí sadu záznamů o velikost sady řádků. Pokud jste neimplementovali hromadné načítání řádků, volání funkce `Move` přemístí sadu záznamů o jeden záznam pokaždé. Další informace o hromadném načítání řádků naleznete v tématu [Sada záznamů: hromadné načítání záznamů (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 > [!NOTE]
->  Při procházení záznamů, nemusí být přeskočeny odstraněné záznamy. Další informace najdete v tématu [IsDeleted](../../mfc/reference/crecordset-class.md#isdeleted) členskou funkci.
+>  Při přesunu pomocí sady záznamů nemusí být odstraněné záznamy vynechány. Další informace naleznete v tématu členská funkce [IsDeleted](../../mfc/reference/crecordset-class.md#isdeleted) .
 
-Kromě `Move` funkce, `CRecordset` poskytuje členské funkce pro kontrolu, jestli jste přešli za koncem nebo náskok před začátkem sady záznamů.
+Kromě funkcí `Move` poskytuje `CRecordset` členské funkce pro kontrolu, zda jste se přesunuli za konec nebo před začátek vaší sady záznamů.
 
-Chcete-li zjistit, jestli je možné ve vaší sadě záznamů posouvání, zavolejte `CanScroll` členskou funkci.
+Chcete-li určit, zda je možné ve vaší sadě záznamů použít posouvání, zavolejte členskou funkci `CanScroll`.
 
-#### <a name="to-scroll"></a>Posun
+#### <a name="to-scroll"></a>Pro posouvání
 
-1. Dál jeden záznam nebo jedné sady řádků: volání [MoveNext](../../mfc/reference/crecordset-class.md#movenext) členskou funkci.
+1. Předejte jeden záznam nebo jednu sadu řádků: volejte členskou funkci [MoveNext](../../mfc/reference/crecordset-class.md#movenext) .
 
-1. Zpětně jeden záznam nebo jedné sady řádků: volání [MovePrev](../../mfc/reference/crecordset-class.md#moveprev) členskou funkci.
+1. Zpět jeden záznam nebo jedna sada řádků: volejte členskou funkci [MovePrev](../../mfc/reference/crecordset-class.md#moveprev) .
 
-1. Na první záznam v sadě záznamů: volání [MoveFirst](../../mfc/reference/crecordset-class.md#movefirst) členskou funkci.
+1. Na první záznam v sadě záznamů: Zavolejte členskou funkci [MoveFirst](../../mfc/reference/crecordset-class.md#movefirst) .
 
-1. Poslední záznam v sadě záznamů nebo poslední sadu řádků: volání [MoveLast](../../mfc/reference/crecordset-class.md#movelast) členskou funkci.
+1. Na poslední záznam v sadě záznamů nebo na poslední sadu řádků: volejte členskou funkci [MoveLast](../../mfc/reference/crecordset-class.md#movelast) .
 
-1. *N* záznamy vzhledem k aktuální pozici: volání [přesunout](../../mfc/reference/crecordset-class.md#move) členskou funkci.
+1. *N* záznamů relativních k aktuální pozici: Zavolejte členskou funkci [Move](../../mfc/reference/crecordset-class.md#move) .
 
-#### <a name="to-test-for-the-end-or-the-beginning-of-the-recordset"></a>K otestování konec nebo začátek sady záznamů
+#### <a name="to-test-for-the-end-or-the-beginning-of-the-recordset"></a>Testování pro konec nebo začátek sady záznamů
 
-1. Přesunuli za poslední záznam? Volání [IsEOF](../../mfc/reference/crecordset-class.md#iseof) členskou funkci.
+1. Přesunuli jste se za poslední záznam? Zavolejte členskou funkci [IsEOF](../../mfc/reference/crecordset-class.md#iseof) .
 
-1. Přesunuli náskok před první záznam (Přechod zpět)? Volání [IsBOF](../../mfc/reference/crecordset-class.md#isbof) členskou funkci.
+1. Přesunuli jste se před první záznam (Přesun zpět)? Zavolejte členskou funkci [IsBOF](../../mfc/reference/crecordset-class.md#isbof) .
 
-Následující příklad kódu používá `IsBOF` a `IsEOF` k rozpoznání omezení sady záznamů při posouvání v obou směrech.
+Následující příklad kódu používá `IsBOF` a `IsEOF` k detekci omezení sady záznamů při posouvání v obou směrech.
 
 ```
 // Open a recordset; first record is current
@@ -87,23 +87,23 @@ while( !rsCustSet.IsBOF( ) )
 rsCustSet.MoveFirst( );
 ```
 
-`IsEOF` vrací nenulovou hodnotu, pokud sada záznamů je umístěn za poslední záznam. `IsBOF` vrací nenulovou hodnotu, pokud sada záznamů je umístěn před první záznam (před všechny záznamy). V obou případech neexistuje aktuální záznam se má operace provést. Při volání `MovePrev` při `IsBOF` je již hodnotu TRUE nebo volání `MoveNext` při `IsEOF` už je hodnota TRUE, rozhraní vyvolá `CDBException`. Můžete také použít `IsBOF` a `IsEOF` ke kontrole prázdnou sadu záznamů.
+`IsEOF` vrátí nenulovou hodnotu, pokud je sada záznamů umístěna za poslední záznam. `IsBOF` vrátí nenulovou hodnotu, pokud je sada záznamů umístěna před první záznam (před všemi záznamy). V obou případech není k dispozici žádný aktuální záznam k provozu. Pokud zavoláte `MovePrev`, když je `IsBOF` již TRUE, nebo volání `MoveNext`, pokud `IsEOF` již má hodnotu TRUE, rozhraní vyvolá `CDBException`. K vyhledání prázdné sady záznamů můžete také použít `IsBOF` a `IsEOF`.
 
-Další informace o navigaci v sadě záznamů najdete v tématu [sada záznamů: Záložky a absolutní umístění (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md).
+Další informace o navigaci v sadě záznamů naleznete v tématu [Sada záznamů: záložky a absolutní umístění (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md).
 
-##  <a name="_core_when_scrolling_is_supported"></a> Když se podporuje posouvání.
+##  <a name="when-scrolling-is-supported"></a><a name="_core_when_scrolling_is_supported"></a>Když se podporuje posouvání
 
-Jako původně navržený SQL k dispozici posouváním pouze vpřed, ale ODBC rozšiřuje možnosti posouvání. Dostupná úroveň podpory pro posouvání, závisí na ovladače rozhraní ODBC, vaše aplikace funguje s úroveň dodržování standardu váš ovladač rozhraní ODBC API, a zda je knihovna kurzorů rozhraní ODBC načten do paměti. Další informace najdete v tématu [ODBC](../../data/odbc/odbc-basics.md) a [ODBC: Knihovna kurzorů rozhraní ODBC](../../data/odbc/odbc-the-odbc-cursor-library.md).
+Jak jsme původně navrhli, SQL nabízí jenom přecházení, ale rozhraní ODBC rozšiřuje možnosti posouvání. Dostupná úroveň podpory pro posouvání závisí na ovladačích rozhraní ODBC, ve kterém vaše aplikace pracuje, na úrovni shody rozhraní ODBC API vašeho ovladače a na tom, zda je knihovna kurzorů rozhraní ODBC načtena do paměti. Další informace najdete v tématu [ODBC](../../data/odbc/odbc-basics.md) a [ODBC: Knihovna kurzorů rozhraní ODBC](../../data/odbc/odbc-the-odbc-cursor-library.md).
 
 > [!TIP]
->  Můžete řídit, jestli se používá knihovna kurzorů rozhraní. Zobrazit *bUseCursorLib* a *dwOptions* parametry [CDatabase::Open](../../mfc/reference/cdatabase-class.md#open).
+>  Můžete určit, zda je použita knihovna kurzorů. Podívejte se na parametry *bUseCursorLib* a *dwOptions* pro [CDatabase:: Open](../../mfc/reference/cdatabase-class.md#open).
 
 > [!NOTE]
->  Na rozdíl od tříd DAO knihovny MFC, třídy knihovny MFC rozhraní ODBC se neposkytuje sadu `Find` funkce pro vyhledání záznam další (nebo staršího), splňující zadaná kritéria.
+>  Na rozdíl od tříd MFC rozhraní DAO neposkytují třídy knihovny MFC rozhraní ODBC sadu funkcí `Find` pro vyhledání dalšího (nebo předchozího) záznamu, který splňuje zadaná kritéria.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Sada záznamů (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[CRecordset::CanScroll](../../mfc/reference/crecordset-class.md#canscroll)<br/>
-[CRecordset::CheckRowsetError](../../mfc/reference/crecordset-class.md#checkrowseterror)<br/>
+[CRecordset:: CanScroll](../../mfc/reference/crecordset-class.md#canscroll)<br/>
+[CRecordset:: CheckRowsetError](../../mfc/reference/crecordset-class.md#checkrowseterror)<br/>
 [Sada záznamů: Filtrování záznamů (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md)

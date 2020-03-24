@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - Wrappers namespace
 ms.assetid: 36ac38c7-1fc3-42da-a879-5c68661dc9e1
-ms.openlocfilehash: 4b88ad0da31321a696c1238f1c9838d3b3a1c927
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ece26b3f9928d44a593de830cf8a25c57e4c2d89
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391995"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213743"
 ---
 # <a name="microsoftwrlwrappers-namespace"></a>Microsoft::WRL::Wrappers – obor názvů
 
-Definuje typy prostředků pořízení je inicializace (RAII) obálky, které zjednodušují správu životnosti objektů, řetězce a obslužné rutiny.
+Definuje typy obálky získávání prostředků je inicializace (RAII), které zjednodušují správu životního cyklu objektů, řetězců a popisovačů.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -36,22 +36,22 @@ namespace Microsoft::WRL::Wrappers;
 
 |Název|Popis|
 |----------|-----------------|
-|[CriticalSection – třída](criticalsection-class.md)|Představuje objekt kritický oddíl.|
+|[CriticalSection – třída](criticalsection-class.md)|Představuje objekt kritického oddílu.|
 |[Event – třída (WRL)](event-class-wrl.md)|Představuje událost.|
-|[HandleT – třída](handlet-class.md)|Reprezentuje popisovač objektu.|
-|[HString – třída](hstring-class.md)|Poskytuje podporu pro práci s popisovači HSTRING.|
-|[HStringReference – třída](hstringreference-class.md)|Představuje HSTRING, který je vytvořený z existujícího řetězce.|
-|[Mutex – třída](mutex-class.md)|Představuje objekt synchronizace, který řídí výhradně sdíleného prostředku.|
-|[RoInitializeWrapper – třída](roinitializewrapper-class.md)|Inicializuje modul Windows Runtime.|
-|[Semaphore – třída](semaphore-class.md)|Představuje objekt synchronizace, který řídí sdíleného prostředku, který podporuje omezený počet uživatelů.|
-|[SRWLock – třída](srwlock-class.md)|Představuje zámek tenký čtení/zápis.|
+|[HandleT – třída](handlet-class.md)|Představuje popisovač objektu.|
+|[HString – třída](hstring-class.md)|Poskytuje podporu pro manipulaci s HSTRING popisovači.|
+|[HStringReference – třída](hstringreference-class.md)|Představuje HSTRING, který je vytvořen z existujícího řetězce.|
+|[Mutex – třída](mutex-class.md)|Představuje synchronizační objekt, který ovládá výhradně sdílený prostředek.|
+|[RoInitializeWrapper – třída](roinitializewrapper-class.md)|Inicializuje prostředí Windows Runtime.|
+|[Semaphore – třída](semaphore-class.md)|Představuje synchronizační objekt, který řídí sdílený prostředek, který může podporovat omezený počet uživatelů.|
+|[SRWLock – třída](srwlock-class.md)|Představuje zámek pro čtení/zápis na tenkém zařízení.|
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** corewrappers.h
+**Záhlaví:** corewrappers. h
 
-**Namespace:** Microsoft::WRL::Wrappers
+**Obor názvů:** Microsoft:: WRL:: Wrappers
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Microsoft::WRL – obor názvů](microsoft-wrl-namespace.md)

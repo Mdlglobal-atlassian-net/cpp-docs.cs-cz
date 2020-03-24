@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - M6201
 ms.assetid: 4041c331-d9aa-4dd4-b565-7dbe0218538c
-ms.openlocfilehash: 6d3f107de7e45653374036ecafaa864cb3eff5b0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0b1cd0d3fcd86a2174b19da41176dd97f547a295
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393243"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80193703"
 ---
 # <a name="math-error-m6201"></a>Chyba matematické operace M6201
 
-'function': Chyba _domény
+' function ': Chyba _DOMAIN
 
-Argument pro danou funkci bylo mimo doménu platné vstupní hodnoty pro tuto funkci.
+Argument dané funkce byl mimo doménu platných vstupních hodnot pro danou funkci.
 
 ## <a name="example"></a>Příklad
 
@@ -26,4 +26,4 @@ result = sqrt(-1.0)   // C statement
 result = SQRT(-1.0)   !  FORTRAN statement
 ```
 
-Tato chyba volání `_matherr` funkce s názvem funkce, argumentů a typ chyby. Je možné přepsat `_matherr` přizpůsobit zpracování některých chyb za běhu s plovoucí desetinnou čárkou matematické funkce.
+Tato chyba volá funkci `_matherr` s názvem funkce, jejími argumenty a typem chyby. Můžete přepsat funkci `_matherr` a přizpůsobit tak zpracování určitých matematických chyb s plovoucí desetinnou čárkou v době běhu.

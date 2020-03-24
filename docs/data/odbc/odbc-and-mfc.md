@@ -10,19 +10,19 @@ helpviewer_keywords:
 - MFC [C++], ODBC and
 - database connections [C++], MFC ODBC classes
 ms.assetid: 98f02fd7-1235-437b-89a9-edfd0fc797f7
-ms.openlocfilehash: 9b7d04e2eb8bbb1adf96e05282861ef33e20434a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 94a3455324a52b789bcfcf192b698a3c42b37c00
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395869"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213161"
 ---
 # <a name="odbc-and-mfc"></a>Rozhraní ODBC a knihovna MFC
 
 > [!NOTE]
->  Pokud chcete použít databázové třídy knihovny MFC, musí mít odpovídající ovladač ODBC pro zdroj dat. Nejnovější ovladač Microsoft ODBC pro SQL Server je [13 ovladač Microsoft ODBC pro SQL Server](https://www.microsoft.com/download/details.aspx?id=50420). Většina dodavatelů databáze poskytuje ovladač rozhraní ODBC pro Windows.
+>  Chcete-li použít třídy databáze knihovny MFC, je nutné mít vhodný ovladač ODBC pro váš zdroj dat. Poslední ovladač Microsoft ODBC pro SQL Server je [ovladač Microsoft ODBC Driver 13 pro SQL Server](https://www.microsoft.com/download/details.aspx?id=50420). Většina dodavatelů databáze poskytuje ovladač ODBC pro Windows.
 
-Toto téma představuje hlavní koncepty tříd databázi založenou na ODBC knihovny Microsoft Foundation Classes (MFC) a poskytuje přehled o fungování třídy dohromady. Další informace o rozhraní ODBC a MFC naleznete v následujících tématech:
+Toto téma představuje hlavní koncepty databázových tříd založených na rozhraní ODBC knihovny MFC (Microsoft Foundation Classes) a poskytuje přehled o tom, jak třídy spolupracují. Další informace o rozhraní ODBC a knihovně MFC naleznete v následujících tématech:
 
 - [Připojení ke zdroji dat](connecting-to-a-data-source.md)
 
@@ -36,8 +36,8 @@ Toto téma představuje hlavní koncepty tříd databázi založenou na ODBC kni
 
 - [Další výklad o třídách knihovny MFC rozhraní ODBC](further-reading-about-the-mfc-odbc-classes.md)
 
-Databázových tříd MFC založených na rozhraní ODBC jsou navržené pro poskytování přístupu k jakékoli databázi, pro který je k dispozici ovladač rozhraní ODBC. Protože třídy použití rozhraní ODBC, vaše aplikace můžou k datům v mnoha různých datových formátů a různé konfigurace místní/vzdálené. Není nutné napsat kód zvláštní případy zpracovat různé systémy správy databáze (DBMS). Tak dlouho, dokud mají vaši uživatelé příslušný ovladač ODBC pro data, která chtějí získat přístup, použitím programu pro manipulaci s daty v tabulkách v ní uloženy.
+Databázové třídy knihovny MFC založené na rozhraní ODBC jsou navržené tak, aby poskytovaly přístup k libovolné databázi, pro kterou je k dispozici ovladač ODBC. Vzhledem k tomu, že třídy používají rozhraní ODBC, může vaše aplikace přistupovat k datům v mnoha různých datových formátech a v různých místních/vzdálených konfiguracích. Nemusíte psát speciální kód pro zpracování různých systémů správy databáze (DBMS). Pokud mají vaši uživatelé vhodný ovladač ODBC pro data, ke kterým chtějí získat přístup, můžou pomocí programu manipulovat s daty v tabulkách, které jsou tam uložené.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Open Database Connectivity (ODBC)](open-database-connectivity-odbc.md)

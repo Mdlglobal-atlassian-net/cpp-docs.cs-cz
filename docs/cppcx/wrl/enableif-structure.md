@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - EnableIf structure
 ms.assetid: 7825b283-e6b2-4f39-a4b9-c03bcd431b8e
-ms.openlocfilehash: daaba919acaa35615af56831f9458831c3d35427
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 44c6293b56e9e03c23d0d8cebf2a112e6fcf3664
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398521"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214029"
 ---
 # <a name="enableif-structure"></a>EnableIf – struktura
 
-Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.
+Podporuje infrastrukturu WRL a není určena pro použití přímo v kódu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -30,7 +30,7 @@ struct EnableIf<true, T>;
 
 ### <a name="parameters"></a>Parametry
 
-*T*<br/>
+*Š*<br/>
 Typ.
 
 *b*<br/>
@@ -38,15 +38,15 @@ Logický výraz.
 
 ## <a name="remarks"></a>Poznámky
 
-Datový člen typu určené druhý parametr šablony, pokud je vyhodnocen jako první parametr šablony definuje **true**.
+Definuje datový člen typu určeného druhým parametrem šablony, pokud je první parametr šablony vyhodnocen jako **true**.
 
 ## <a name="members"></a>Členové
 
-### <a name="public-typedefs"></a>Veřejné definice TypeDef
+### <a name="public-typedefs"></a>Veřejné definice typedef
 
 |Název|Popis|
 |----------|-----------------|
-|`type`|Pokud parametr šablony *b* vyhodnotí jako **true**, částečná specializace definuje datový člen `type` typu `T`.|
+|`type`|Pokud je parametr šablony *b* vyhodnocen jako **true**, Částečná specializace definuje datový člen `type` být typu `T`.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -54,10 +54,10 @@ Datový člen typu určené druhý parametr šablony, pokud je vyhodnocen jako p
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** internal.h
+**Záhlaví:** interní. h
 
-**Namespace:** Microsoft::WRL::Details
+**Obor názvů:** Microsoft:: WRL::D etails
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Microsoft::WRL::Details – obor názvů](microsoft-wrl-details-namespace.md)

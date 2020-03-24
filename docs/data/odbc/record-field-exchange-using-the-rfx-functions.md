@@ -10,12 +10,12 @@ helpviewer_keywords:
 - RFX (ODBC) [C++], data types
 - function calls, RFX functions
 ms.assetid: c594300b-5a29-4119-a68b-e7ca32def696
-ms.openlocfilehash: a54dbc10e80e19f744bb58c23639a4376156d2e7
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: d281f801349527a065f4975b7cc3d88888f88367
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80077097"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213028"
 ---
 # <a name="record-field-exchange-using-the-rfx-functions"></a>Výměna polí záznamu: Použití funkcí RFX
 
@@ -46,7 +46,7 @@ Další informace naleznete v tématu funkce RFX v části [makra a globální](
 
 Knihovna tříd poskytuje funkce RFX pro přenos mnoha různých typů dat mezi zdrojem dat a vašimi sadami záznamů. Následující seznam shrnuje funkce RFX podle datového typu. V případech, kdy je nutné napsat vlastní volání funkce RFX, vyberte z těchto funkcí podle datového typu.
 
-|Funkce|Datový typ|
+|Funkce|Typ dat|
 |--------------|---------------|
 |`RFX_Bool`|**LOGICK**|
 |`RFX_Byte`|**BYTOVÉ**|

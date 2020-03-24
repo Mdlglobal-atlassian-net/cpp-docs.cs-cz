@@ -6,12 +6,12 @@ ms.topic: conceptual
 helpviewer_keywords:
 - attributes [C++/CLI], reference topics
 ms.assetid: 613a3611-b3eb-4347-aa38-99b654600e1c
-ms.openlocfilehash: 4885edf57988d5f83b56ba6a71da85877354d3ce
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 734d82a30df3e143a6f47cb1b3eca2cd778830bd
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79421315"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214926"
 ---
 # <a name="c-attributes-for-com-and-net"></a>Atributy C++ pro COM a .NET
 
@@ -78,7 +78,7 @@ Některé projekty obsahují více nezávislých souborů. idl. Slouží k vytvo
 
 Kromě toho vizuální C++ linker vypíše všechny informace o atributu související s IDL do jediného souboru MIDL. Neexistuje žádný způsob, jak vygenerovat dvě knihovny typů z jednoho projektu.
 
-## <a name="contexts"></a>Kontexty atributů
+## <a name="attribute-contexts"></a><a name="contexts"></a>Kontexty atributů
 
 C++atributy je možné popsat pomocí čtyř základních polí: cíl, na který se dá použít (**platí pro**), pokud se dají opakovat nebo ne (**Opakovat**), požadované přítomnosti ostatních atributů (**povinné atributy**) a nekompatibility s jinými atributy (**neplatné atributy**). Tato pole jsou uvedena v doprovodné tabulce v referenčním tématu každého atributu. Každé z těchto polí je popsáno níže.
 

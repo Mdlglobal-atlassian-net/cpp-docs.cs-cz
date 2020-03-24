@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - RaiseException function
 ms.assetid: f9c74f6d-112a-4d2e-900f-622f795d5dbf
-ms.openlocfilehash: 08305c5d59d7e272aac87ad9aa183c8e82588632
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3270057bf5b1b27a98bef1ab236291eab15d27ab
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62231350"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213626"
 ---
 # <a name="raiseexception-function"></a>RaiseException – funkce
 
-Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.
+Podporuje infrastrukturu WRL a není určena pro použití přímo v kódu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -28,24 +28,24 @@ inline void __declspec(noreturn)   RaiseException(
 
 ### <a name="parameters"></a>Parametry
 
-*hr*<br/>
-Kód výjimky výjimek vyvolaných; To znamená, HRESULT neúspěšnou operaci.
+*oddělení*<br/>
+Kód výjimky vyvolané výjimky; To znamená, že HRESULT operace, která selhala.
 
 *dwExceptionFlags*<br/>
-Příznak, který označuje výjimce (hodnota příznaku je nula), nebo noncontinuable výjimky (hodnota příznaku je nenulová). Výjimkou je ve výchozím nastavení, co vznikla nevykonatelná.
+Příznak, který označuje kontinuitnou výjimku (hodnota příznaku je nula) nebo nespojitelné výjimky (hodnota příznaku je nenulová). Ve výchozím nastavení je výjimka nenepřetržitá.
 
 ## <a name="remarks"></a>Poznámky
 
-Vyvolá výjimku v volajícího vlákna.
+Vyvolá výjimku ve volajícím vlákně.
 
-Další informace najdete v článku Windows `RaiseException` funkce.
+Další informace najdete v tématu funkce Windows `RaiseException`.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** internal.h
+**Záhlaví:** interní. h
 
-**Namespace:** Microsoft::WRL::Details
+**Obor názvů:** Microsoft:: WRL::D etails
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Microsoft::WRL::Details – obor názvů](microsoft-wrl-details-namespace.md)

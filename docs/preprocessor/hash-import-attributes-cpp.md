@@ -1,23 +1,23 @@
 ---
-title: '#Import atributů (C++)'
+title: '#import – atributy (C++)'
 ms.date: 08/29/2019
 helpviewer_keywords:
 - '#import directive, attributes'
 ms.assetid: 2a5085e3-82ee-4f83-892b-0aa6cc13863b
-ms.openlocfilehash: 7e0de241bd27269d7d758c49bc54c4bf435cf383
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: fc2af69025d47a9ea6cea0e2c9e1423151b01606
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70220103"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80215290"
 ---
 # <a name="import-attributes-c"></a>Atributy #import (C++)
 
-Obsahuje odkazy na atributy používané s `#import` direktivou.
+Obsahuje odkazy na atributy používané s direktivou `#import`.
 
 **Specifické pro společnost Microsoft**
 
-Následující atributy jsou k dispozici pro `#import` direktivu.
+Následující atributy jsou k dispozici pro direktivu `#import`.
 
 |Atribut|Popis|
 |---------------|-----------------|
@@ -30,7 +30,7 @@ Následující atributy jsou k dispozici pro `#import` direktivu.
 |[implementation_only](../preprocessor/implementation-only.md)|Potlačí generování hlavičkového souboru. tlh (primární hlavičkový soubor).|
 |[include()](../preprocessor/include-parens.md)|Zakáže automatické vyloučení.|
 |[inject_statement](../preprocessor/inject-statement.md)|Vloží svůj argument jako zdrojový text do hlavičky knihovny typů.|
-|[named_guids](../preprocessor/named-guids.md)|Instruuje kompilátor, aby definoval a inicializoval proměnné GUID `LIBID_MyLib`ve starém stylu formuláře, `CLSID_MyCoClass`, `IID_MyInterface`a `DIID_MyDispInterface`.|
+|[named_guids](../preprocessor/named-guids.md)|Instruuje kompilátor, aby definoval a inicializoval proměnné GUID ve starém stylu formuláře `LIBID_MyLib`, `CLSID_MyCoClass`, `IID_MyInterface`a `DIID_MyDispInterface`.|
 |[no_auto_exclude](../preprocessor/no-auto-exclude.md)|Zakáže automatické vyloučení.|
 |[no_dual_interfaces](../preprocessor/no-dual-interfaces.md)|Mění způsob, jakým kompilátor generuje obálkové funkce pro metody duálního rozhraní.|
 |[no_implementation](../preprocessor/no-implementation.md)|Potlačí generování hlavičky. tli, která obsahuje implementace členských funkcí obálky.|
@@ -38,7 +38,7 @@ Následující atributy jsou k dispozici pro `#import` direktivu.
 |[no_registry](../preprocessor/no-registry.md)|Instruuje kompilátor, aby nehledal v registru knihovny typů.|
 |[no_search_namespace](../preprocessor/no-search-namespace.md)|Má stejné funkce jako atribut [no_namespace](../preprocessor/no-namespace.md) , ale používá se pro knihovny typů, které používají direktivu #import s atributem [auto_search](../preprocessor/auto-search.md) .|
 |[no_smart_pointers](../preprocessor/no-smart-pointers.md)|Potlačí vytváření inteligentních ukazatelů pro všechna rozhraní v knihovně typů.|
-|[raw_dispinterfaces](../preprocessor/raw-dispinterfaces.md)|Instruuje kompilátor, aby vygeneroval funkce obálky nízké úrovně pro metody a vlastnosti pro vyvolání `IDispatch::Invoke` a vrátí kód chyby HRESULT.|
+|[raw_dispinterfaces](../preprocessor/raw-dispinterfaces.md)|Instruuje kompilátor, aby vygeneroval funkce obálky nízké úrovně pro metody a vlastnosti odesílajícího rozhraní, které volají `IDispatch::Invoke` a vrátí kód chyby HRESULT.|
 |[raw_interfaces_only](../preprocessor/raw-interfaces-only.md)|Potlačí generování obálkových funkcí zpracování chyb a deklarací [vlastností](../cpp/property-cpp.md) , které používají tyto funkce obálky.|
 |[raw_method_prefix](../preprocessor/raw-method-prefix.md)|Určuje jinou předponu, aby se předešlo kolizím názvů.|
 |[raw_native_types](../preprocessor/raw-native-types.md)|Zakáže použití tříd podpory modelu COM v obálkových funkcích vysoké úrovně a vynutí místo toho použití datových typů nízké úrovně.|
@@ -50,6 +50,6 @@ Následující atributy jsou k dispozici pro `#import` direktivu.
 
 **Specifické pro konec Microsoftu**
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [#import direktiva](../preprocessor/hash-import-directive-cpp.md)

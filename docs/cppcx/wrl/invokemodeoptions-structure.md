@@ -1,5 +1,5 @@
 ---
-title: Invokemodeoptions – struktura
+title: Struktura InvokeModeOptions
 ms.date: 03/22/2018
 ms.topic: reference
 f1_keywords:
@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - InvokeModeOptions structure
 - InvokeMode enum
-ms.openlocfilehash: 0e5b45042c9959b87ad5db97ab755e49de469149
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9bca49479d97ee371f6728f90a9aa96da0387f54
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386041"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213834"
 ---
-# <a name="invokemodeoptions-structure"></a>Invokemodeoptions – struktura
+# <a name="invokemodeoptions-structure"></a>Struktura InvokeModeOptions
 
-Určuje, jestli chcete-li vyvolat všech událostí ve frontě delegáta nebo zastavit ohlásí, jakmile dojde k chybě. Přípustné hodnoty jsou uvedeny v `InvokeMode` výčtu.
+Určuje, zda se mají aktivovat všechny události ve frontě delegátů nebo zastavit aktivaci po vyvolání chyby. Přípustné hodnoty jsou zadány ve výčtu `InvokeMode`.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -35,11 +35,11 @@ struct InvokeModeOptions
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** event.h
+**Záhlaví:** Event. h
 
-**Namespace:** Microsoft::WRL
+**Obor názvů:** Microsoft:: WRL
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Microsoft::WRL – obor názvů](microsoft-wrl-namespace.md)<br/>
-[Třída Microsoft::WRL::AgileEventSource](agileeventsource-class.md)
+[Microsoft:: WRL:: AgileEventSource – třída](agileeventsource-class.md)

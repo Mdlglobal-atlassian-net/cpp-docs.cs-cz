@@ -1,21 +1,21 @@
 ---
-title: db_accessor (C++ atributů COM)
+title: db_accessor (C++ atribut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.db_accessor
 helpviewer_keywords:
 - db_accessor attribute
 ms.assetid: ec407a9f-24d7-4822-96d4-7cc6a0301815
-ms.openlocfilehash: bfb287261fce4ebf189801c308f57513f2c9f113
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1e9725dad39974b828d87bd8b4cdeac623f4e12f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148247"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214861"
 ---
-# <a name="dbaccessor"></a>db_accessor
+# <a name="db_accessor"></a>db_accessor
 
-Skupiny `db_column` atributy, které jsou součástí `IAccessor`– na základě vazby.
+Skupiny `db_column` atributy, které se účastní vazby založené na `IAccessor`.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -26,24 +26,24 @@ Skupiny `db_column` atributy, které jsou součástí `IAccessor`– na základ�
 #### <a name="parameters"></a>Parametry
 
 *počet*<br/>
-Určuje, kolik přístupového objektu (založený na nule celočíselný index). Je nutné zadat přístupový objekt čísla ve vzestupném pořadí podle celých čísel nebo definované hodnoty.
+Určuje číslo přistupujícího objektu (celočíselný index založený na nule). Je nutné zadat přístupová čísla ve vzestupném pořadí, pomocí celých čísel nebo definovaných hodnot.
 
 *auto*<br/>
-Logická hodnota určující, zda přistupujícím objektu je automaticky načte (TRUE) nebo nebyla načtena (FALSE).
+Logická hodnota, která určuje, zda je přistupující objekt automaticky načten (TRUE) nebo nenačten (FALSE).
 
 ## <a name="remarks"></a>Poznámky
 
-**db_accessor** definuje základní přístupový objekt OLE DB pro následné `db_column` a `db_param` atributů v rámci stejné třídy nebo funkce. **db_accessor** je použitelný na úrovni člena a používá se ke skupině `db_column` atributy, které jsou součástí technologie OLE DB `IAccessor`– na základě vazby. Používá se ve spojení s buď `db_table` nebo `db_command` atributy. Volání tohoto atributu je podobná volání [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md) a [END_ACCESSOR](../../data/oledb/end-accessor.md) makra.
+**db_accessor** definuje podkladový přístupový objekt OLE DB pro následné `db_column` a `db_param` atributy v rámci stejné třídy nebo funkce. **db_accessor** lze použít na úrovni členů a používá se k seskupení `db_column` atributů, které se účastní OLE DB `IAccessor`vazbách. Používá se ve spojení s atributy `db_table` nebo `db_command`. Volání tohoto atributu je podobné volání [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md) a [END_ACCESSOR](../../data/oledb/end-accessor.md) maker.
 
-**db_accessor** generuje sadu řádků a sváže s odpovídající přístupového objektu map. Pokud není volána **db_accessor**, bude vygenerována automaticky přistupujícího objektu 0 a všechny vazby sloupce se namapují na tento blok přistupující objekt.
+**db_accessor** generuje sadu řádků a váže ji k odpovídajícím mapám přistupujícímu objektu. Pokud nevoláte **db_accessor**, přistupující objekt 0 se automaticky vygeneruje a všechny vazby sloupce budou namapovány na tento přístupový blok.
 
-**db_accessor** skupiny databáze vazeb sloupců do jednoho nebo více přístupových objektů. Informace o scénářích, ve kterých je potřeba použít několik přístupových objektů, naleznete v tématu [použití více přístupových objektů pro sadu řádků](../../data/oledb/using-multiple-accessors-on-a-rowset.md). Viz také "Uživatel záznam podporu pro několik přístupových objektů" v [uživatelských záznamů](../../data/oledb/user-records.md).
+**db_accessor** seskupuje vazby sloupců databáze do jednoho nebo více přístupových objektů. Diskuzi o scénářích, ve kterých potřebujete použít více přístupových objektů, najdete v tématu [použití více přístupových objektů pro sadu řádků](../../data/oledb/using-multiple-accessors-on-a-rowset.md). Viz také "podpora uživatelského záznamu pro více přístupových objektů" v [záznamech uživatelů](../../data/oledb/user-records.md).
 
-Když příjemce atribut poskytovatel použije tento atribut na třídu, kompilátor bude přejmenujte třídu na \_ *YourClassName*přístupový objekt, kde *YourClassName* je název, který jste zadali třídy a kompilátor vytvoří také třídu s názvem *YourClassName*, která je odvozena z \_ *YourClassName*přistupujícího objektu.  V zobrazení tříd zobrazí se obě třídy.
+Pokud poskytovatel atributu příjemce použije tento atribut pro třídu, kompilátor přejmenuje třídu na \_přistupující objekt *YourClassName*, kde *YourClassName* je název, který jste přiřadili třídě, a kompilátor vytvoří také třídu s názvem *YourClassName*, která je odvozena z \_přístupového objektu *YourClassName*.  V Zobrazení tříd se zobrazí obě třídy.
 
 ## <a name="example"></a>Příklad
 
-Následující příklad používá **db_accessor** do skupiny sloupců v tabulce objednávky z databáze Northwind do dvou přístupových objektů. Přistupující objekt 0 je automatické přistupující objekt a přístupového objektu 1 není.
+Následující příklad používá **db_accessor** k seskupení sloupců v tabulce Orders z databáze Northwind do dvou přístupových objektů. Přistupující objekt 0 je automatický přistupující objekt a přístupový objekt 1 není.
 
 ```cpp
 // cpp_attr_ref_db_accessor.cpp
@@ -67,17 +67,17 @@ public:
 
 ## <a name="requirements"></a>Požadavky
 
-### <a name="attribute-context"></a>Atribut kontextu
+### <a name="attribute-context"></a>Kontext atributu
 
 |||
 |-|-|
 |**Platí pro**|Bloky atributů|
-|**Opakovatelné**|Ne|
-|**Vyžadované atributy**|Žádné|
+|**REPEATABLE**|Ne|
+|**Požadované atributy**|Žádné|
 |**Neplatné atributy**|Žádné|
 
-Další informace o kontexty atributů najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
+Další informace o kontextech atributů naleznete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Atributy příjemce technologie OLE DB](ole-db-consumer-attributes.md)

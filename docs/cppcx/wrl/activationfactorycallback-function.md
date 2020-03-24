@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - ActivationFactoryCallback function
 ms.assetid: dd40c79b-1273-4f2a-8c24-ae9926fb4fd9
-ms.openlocfilehash: 4743e7724c5aba4171cb017654267afaac676f24
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0be4bebcc561cdf1df3f2502c8cc1927bdc65564
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62303874"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214211"
 ---
 # <a name="activationfactorycallback-function"></a>ActivationFactoryCallback – funkce
 
-Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.
+Podporuje infrastrukturu WRL a není určena pro použití přímo v kódu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -29,28 +29,28 @@ inline HRESULT STDAPICALLTYPE ActivationFactoryCallback(
 
 ### <a name="parameters"></a>Parametry
 
-*activationId*<br/>
-Zpracování na řetězec, který určuje název třídy runtime.
+*activationId –*<br/>
+Popisovač na řetězec, který určuje název běhové třídy.
 
 *ppFactory*<br/>
-Pokud tato operace dokončí, objekt factory pro aktivaci, který odpovídá parametru *activationid –*.
+Po dokončení této operace bude továrna aktivace, která odpovídá parametru *activationId –* .
 
 ## <a name="return-value"></a>Návratová hodnota
 
-S_OK v případě úspěchu; v opačném případě HRESULT s popisem chyby. HRESULT – selhání pravděpodobně jsou CLASS_E_CLASSNOTAVAILABLE a E_INVALIDARG.
+S_OK v případě úspěchu; v opačném případě HRESULT, který popisuje chybu. Pravděpodobná selhání: HRESULTs CLASS_E_CLASSNOTAVAILABLE a E_INVALIDARG.
 
 ## <a name="remarks"></a>Poznámky
 
-Získá objekt factory aktivace pro ID zadaná aktivace.
+Získá továrnu aktivace pro zadané ID aktivace.
 
-Modul Windows Runtime volá tuto funkci zpětného volání pro žádost o objekt, který má název třídy runtime.
+Prostředí Windows Runtime volá tuto funkci zpětného volání, aby požadovala objekt určený jeho názvem běhové třídy.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** module.h
+**Záhlaví:** modul. h
 
-**Namespace:** Microsoft::WRL::Details
+**Obor názvů:** Microsoft:: WRL::D etails
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Microsoft::WRL::Details – obor názvů](microsoft-wrl-details-namespace.md)

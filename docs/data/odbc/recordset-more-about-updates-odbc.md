@@ -1,5 +1,5 @@
 ---
-title: 'Recordset: Informace o aktualizacích (ODBC)'
+title: 'Sada záznamů: Další informace o aktualizacích (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - records, updating
@@ -10,99 +10,99 @@ helpviewer_keywords:
 - updating recordsets
 - recordsets, updating
 ms.assetid: 0353a742-d226-4fe2-8881-a7daeffe86cd
-ms.openlocfilehash: c29ff110fc507c4e449b2f3d082d98c159a35107
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f11c723e4589cb28a3f38100050a69a78fc0809e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397767"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212846"
 ---
-# <a name="recordset-more-about-updates-odbc"></a>Recordset: Informace o aktualizacích (ODBC)
+# <a name="recordset-more-about-updates-odbc"></a>Sada záznamů: Další informace o aktualizacích (ODBC)
 
-Toto téma platí pro třídy knihovny MFC rozhraní ODBC.
+Toto téma se vztahuje na třídy knihovny MFC rozhraní ODBC.
 
 Toto téma vysvětluje:
 
-- [Vliv na jiné operace, jako je například transakce, aktualizace](#_core_how_transactions_affect_updates).
+- [Jak jiné operace, například transakce, ovlivňují aktualizace](#_core_how_transactions_affect_updates).
 
-- [Vaše aktualizace i u jiných uživatelů](#_core_your_updates_and_the_updates_of_other_users).
+- [Vaše aktualizace a jiní uživatelé](#_core_your_updates_and_the_updates_of_other_users).
 
-- [Další informace o členské funkce Update a Delete](#_core_more_about_update_and_delete).
+- [Další informace o funkcích aktualizace a odstranění členů](#_core_more_about_update_and_delete).
 
 > [!NOTE]
->  Toto téma se vztahuje na objekty odvozené z `CRecordset` v který řádek hromadné načítání není implementovaná. Pokud jste implementovali hromadné načítání řádků, některé informace se nevztahují. Například nelze volat `AddNew`, `Edit`, `Delete`, a `Update` členské funkce; však může provádět transakce. Další informace o hromadném načítání řádků naleznete v tématu [sada záznamů: Načítání záznamů (ODBC) hromadné](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+>  Toto téma se vztahuje na objekty odvozené od `CRecordset`, ve kterých nebylo implementováno hromadné načítání řádků. Pokud jste implementovali hromadné načítání řádků, některé informace se nevztahují. Například nemůžete volat `AddNew`, `Edit`, `Delete`a `Update` členské funkce; Můžete však provádět transakce. Další informace o hromadném načítání řádků naleznete v tématu [Sada záznamů: hromadné načítání záznamů (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
-##  <a name="_core_how_other_operations_affect_updates"></a> Vliv na ostatní operace aktualizace
+##  <a name="how-other-operations-affect-updates"></a><a name="_core_how_other_operations_affect_updates"></a>Jak jiné operace ovlivňují aktualizace
 
-Vaše aktualizace jsou ovlivněny transakce v platnosti v době aktualizace po zavření sady záznamů před dokončením transakce a posuňte před dokončením transakce.
+Aktualizace jsou ovlivněny transakcemi platnými v době aktualizace, zavřením sady záznamů před dokončením transakce a posouváním před dokončením transakce.
 
-###  <a name="_core_how_transactions_affect_updates"></a> Vliv transakcí na aktualizace
+###  <a name="how-transactions-affect-updates"></a><a name="_core_how_transactions_affect_updates"></a>Jak transakce ovlivňují aktualizace
 
-Kromě pochopení jak `AddNew`, `Edit`, a `Delete` práce, je důležité pochopit, jak `BeginTrans`, `CommitTrans`, a `Rollback` členské funkce [CDatabase](../../mfc/reference/cdatabase-class.md) fungují s aktualizace funkcí [CRecordset](../../mfc/reference/crecordset-class.md).
+Nad rámec pochopení, jak `AddNew`, `Edit`a `Delete` fungují, je důležité pochopit, jak `BeginTrans`, `CommitTrans`a `Rollback` členské funkce [CDatabase](../../mfc/reference/cdatabase-class.md) pracují s funkcemi Update v [CRecordset](../../mfc/reference/crecordset-class.md).
 
-Ve výchozím nastavení, volání `AddNew` a `Edit` ovlivní zdroj dat okamžitě při volání `Update`. `Delete` volání se projeví okamžitě. Ale můžete vytvořit transakci a spusťte dávku těchto volání. Aktualizace nejsou trvalé, dokud je nepotvrdíte. Pokud změníte své rozhodnutí, můžete místo potvrzení transakce vrátit zpět.
+Ve výchozím nastavení volání `AddNew` a `Edit` ovlivňují zdroj dat okamžitě při volání `Update`. `Delete` volání se projeví okamžitě. Můžete ale vytvořit transakci a spustit dávku takových volání. Aktualizace nejsou trvalé, dokud je nepotvrdíte. Pokud si to rozmyslíte, můžete transakci místo potvrzení vrátit zpátky.
 
-Další informace o transakcích najdete v tématu [transakce (ODBC)](../../data/odbc/transaction-odbc.md).
+Další informace o transakcích naleznete v tématu [Transaction (ODBC)](../../data/odbc/transaction-odbc.md).
 
-###  <a name="_core_how_closing_the_recordset_affects_updates"></a> Uzavření sady záznamů vliv aktualizace
+###  <a name="how-closing-the-recordset-affects-updates"></a><a name="_core_how_closing_the_recordset_affects_updates"></a>Jak zavírání sady záznamů ovlivňuje aktualizace
 
-Pokud zavřete sadě záznamů nebo jeho přidružené `CDatabase` objektu s transakcí v průběhu (nebyla volána [CDatabase::CommitTrans](../../mfc/reference/cdatabase-class.md#committrans) nebo [CDatabase::Rollback](../../mfc/reference/cdatabase-class.md#rollback)), transakce je vrácena. jenom automaticky (Pokud back-endu databáze je databázový stroj Microsoft Jet).
+Pokud zavřete sadu záznamů nebo její přidružený `CDatabase` objekt s probíhající transakcí (nevolali jste volání [CDatabase:: CommitTrans](../../mfc/reference/cdatabase-class.md#committrans) nebo [CDatabase:: Rollback](../../mfc/reference/cdatabase-class.md#rollback)), transakce je vrácena zpět automaticky (Pokud je back-end databáze strojem Microsoft Jet).
 
 > [!CAUTION]
->  Pokud používáte databázový stroj Microsoft Jet, zavření sady záznamů v explicitní transakci nemá za následek uvolnění všech řádků, které byly změněny na zámků, které byly umístěny, dokud je explicitní transakce potvrzena nebo vrácena zpět. Doporučujeme tuto je vždy otevřít i zavřít sady záznamů uvnitř nebo vně explicitní Jet transakce.
+>  Pokud používáte databázový stroj Microsoft Jet, ukončení sady záznamů uvnitř explicitní transakce nevede k uvolnění žádného z řádků, které byly upraveny nebo uzamčeny, dokud se explicitní transakce nepotvrdí nebo nevrátí zpět. Doporučuje se, abyste vždy otevírali i zavřeli sady záznamů uvnitř nebo vně explicitní transakce jet.
 
-###  <a name="_core_how_scrolling_affects_updates"></a> Posouvání vliv aktualizace
+###  <a name="how-scrolling-affects-updates"></a><a name="_core_how_scrolling_affects_updates"></a>Jak posouvání ovlivňuje aktualizace
 
-Pokud jste [sada záznamů: Posouvání (ODBC)](../../data/odbc/recordset-scrolling-odbc.md) v sadě záznamů vyrovnávací paměť pro úpravu zaplněný s každým novým záznamem (předchozí záznam není uložen). Posouvání přeskakuje dříve odstraněné záznamy. Pokud se posunete za `AddNew` nebo `Edit` volání bez volání `Update`, `CommitTrans`, nebo `Rollback` nejprve, všechny změny budou ztraceny (bez upozornění) jako nový záznam přenese do vyrovnávací paměti pro úpravy. Vyrovnávací paměť pro úpravu je vyplněn záznam přechod na uložený záznam je uvolněn a nedošlo k žádné změně ve zdroji dat. To platí pro obě `AddNew` a `Edit`.
+Při [záznamu sady záznamů: posouvání (ODBC)](../../data/odbc/recordset-scrolling-odbc.md) v sadě záznamů je vyrovnávací paměť pro úpravy vyplněna každým novým záznamem (předchozí záznam není uložen jako první). Posouvání přeskočí dříve odstraněné záznamy. Pokud se posunete po `AddNew` nebo `Edit` volání bez volání `Update`, `CommitTrans`nebo `Rollback` jako první, všechny změny se ztratí (bez upozornění), protože nový záznam se načte do vyrovnávací paměti úprav. Upravená vyrovnávací paměť je vyplněna záznamem, na který se přechází, uložený záznam je uvolněn a ve zdroji dat nedochází k žádné změně. To platí pro `AddNew` i `Edit`.
 
-##  <a name="_core_your_updates_and_the_updates_of_other_users"></a> Vaše aktualizace a aktualizace jiných uživatelů
+##  <a name="your-updates-and-the-updates-of-other-users"></a><a name="_core_your_updates_and_the_updates_of_other_users"></a>Vaše aktualizace a aktualizace dalších uživatelů
 
-Pokud používáte sadu záznamů k aktualizaci dat, vaše aktualizace ovlivnit jiné uživatele. Podobně aktualizací po celou dobu životnosti sady záznamů jiných uživatelů vás týkají.
+Při použití sady záznamů k aktualizaci dat mají aktualizace vliv na ostatní uživatele. Podobně budou aktualizace dalších uživatelů během života vaší sady záznamů ovlivněny.
 
-V prostředí ostatní uživatelé mohou otevřít sady záznamů, které obsahují některé stejné záznamy, které jste vybrali ve vaší sadě záznamů. Změny v záznamu před jeho načtení se projeví v sady záznamů. Protože dynamické sady načíst záznam pokaždé, když posunutí, dynamické změny projeví pokaždé, když přejděte k záznamu. Snímky načíst záznam poprvé posun, tak snímky odrážejí pouze ty změny, ke kterým dojde před přejděte na tento záznam původně.
+Ve víceuživatelském prostředí mohou jiní uživatelé otevřít sady záznamů, které obsahují některé ze stejných záznamů, které jste vybrali v sadě záznamů. Změny záznamu před jeho načtením se projeví ve vaší sadě záznamů. Vzhledem k tomu, že dynamické sady načítají záznam pokaždé, když se na něj posouvají, dynamické sady odrážejí změny pokaždé, když se posunete na záznam. Snímky načtou záznam při prvním procházení, takže snímky odrážejí pouze ty změny, ke kterým došlo před přechodem na záznam na začátku.
 
-Záznamy přidané další uživatele po otevření sady záznamů se nezobrazí ve vaší sadě záznamů, není-li se znovu spustí dotaz. Pokud sady záznamů je dynamická sada, úpravy existujících záznamů jinými uživateli zobrazí ve vašich dynamických sad při posouvání na daný záznam. Pokud sady záznamů je snímek, úpravy se nezobrazí, dokud requery snímku. Pokud chcete zobrazit záznamy přidali nebo volání odstraněné jinými uživateli ve vaší snímku, nebo přidat jinými uživateli ve vaší dynamických sad záznamů [CRecordset::Requery](../../mfc/reference/crecordset-class.md#requery) znovu vytvořit sadu záznamů. (Všimněte si, že odstranění ostatním uživatelům zobrazit na vaší dynamických sad.) Můžete také volat `Requery` zobrazíte záznamy přidáte, ale nejsou vidět vaše odstranění.
+Záznamy přidané ostatními uživateli po otevření sady záznamů se nezobrazí ve vaší sadě záznamů, pokud se znovu nespustí dotaz. Pokud vaše sada záznamů je dynamická sada, úpravy stávajících záznamů ostatními uživateli se zobrazí ve vaší dynamické sadě při posouvání na ovlivněný záznam. Pokud je vaše sada záznamů snímkem, úpravy se neprojeví, dokud se snímek znovu nespustí. Chcete-li zobrazit záznamy přidané nebo odstraněné jinými uživateli ve vašem snímku nebo záznamy přidané ostatními uživateli v dynamické sadě, zavolejte metodu [CRecordset:: Requery](../../mfc/reference/crecordset-class.md#requery) pro opětovné sestavení sady záznamů. (Všimněte si, že odstranění dalších uživatelů se zobrazí ve vaší dynamické sadě.) Můžete také volat `Requery` pro zobrazení záznamů, které přidáte, ale ne k zobrazení vašich odstranění.
 
 > [!TIP]
->  Chcete-li vynutit, ukládání do mezipaměti pro celou najednou snímku, zavolejte `MoveLast` okamžitě po otevření snímku. Poté zavolejte `MoveFirst` začít pracovat s záznamy. `MoveLast` je ekvivalentní k posouvání přes všechny záznamy, ale získává je všechny najednou. Upozorňujeme, že to může snížit výkon a nemusí být nutná pro některé ovladače.
+>  Chcete-li vynutit ukládání celého snímku do mezipaměti, zavolejte `MoveLast` hned po otevření snímku. Potom zavolejte `MoveFirst` pro zahájení práce se záznamy. `MoveLast` je ekvivalentní posouvání všech záznamů, ale načítá je všechny najednou. Upozorňujeme ale, že to může snížit výkon a nemusí být pro některé ovladače nutné.
 
-Účinky aktualizace pro ostatní uživatele jsou podobné jejich dopadu na vás.
+Účinky vašich aktualizací na jiné uživatele se podobají jejich efektům.
 
-##  <a name="_core_more_about_update_and_delete"></a> Další informace o aktualizace a odstranění
+##  <a name="more-about-update-and-delete"></a><a name="_core_more_about_update_and_delete"></a>Další informace o Update a DELETE
 
-Tato část obsahuje další informace, které vám pomohou při práci s `Update` a `Delete`.
+V této části najdete další informace, které vám pomůžou pracovat s `Update` a `Delete`.
 
-### <a name="update-success-and-failure"></a>Aktualizace úspěchy a chyby
+### <a name="update-success-and-failure"></a>Úspěšná aktualizace a chyba
 
-Pokud `Update` proběhne úspěšně, `AddNew` nebo `Edit` ukončením režimu. Chcete-li začít `AddNew` nebo `Edit` režimu znovu, volání `AddNew` nebo `Edit`.
+Pokud `Update` úspěšné, `AddNew` nebo `Edit` režim skončí. Chcete-li spustit `AddNew` nebo režim `Edit` znovu, zavolejte `AddNew` nebo `Edit`.
 
-Pokud `Update` selže (vrátí hodnotu FALSE nebo vyvolá výjimku), zůstanou v `AddNew` nebo `Edit` režim, v závislosti na funkci, která jste volali poslední. Potom můžete provést jednu z následujících:
+Pokud `Update` selžou (vrátí hodnotu FALSE nebo vyvolá výjimku), zůstanete v režimu `AddNew` nebo `Edit`, a to v závislosti na funkci, kterou jste volali jako poslední. Pak můžete provést jednu z následujících akcí:
 
-- Upravit pole datového člena a zkuste `Update` znovu.
+- Upravte datový člen pole a zkuste `Update` znovu.
 
-- Volání `AddNew` obnovit datové členy polí na hodnotu Null, nastavte hodnoty datové členy polí a poté zavolejte `Update` znovu.
+- Zavolejte `AddNew` pro resetování datových členů pole na hodnotu null, nastavte hodnoty datových členů pole a poté zavolejte `Update` znovu.
 
-- Volání `Edit` k opětovnému načtení hodnoty, které byly v sadě záznamů před prvním volání `AddNew` nebo `Edit`, nastavte hodnoty datové členy polí a poté zavolejte `Update` znovu. Po úspěšném `Update` volání (s výjimkou po `AddNew` volání), datové členy polí zachovat nové hodnoty.
+- Zavolejte `Edit` pro opětovné načtení hodnot, které byly v sadě záznamů před prvním voláním `AddNew` nebo `Edit`, nastavte hodnoty datových členů pole a poté zavolejte `Update` znovu. Po úspěšném `Update` volání (kromě po volání `AddNew`) pole datové členy uchovávají své nové hodnoty.
 
-- Volání `Move` (včetně `Move` s parametrem AFX_MOVE_REFRESH nebo 0), která vyprázdní všechny změny a ukončí všechny `AddNew` nebo `Edit` režimu platná.
+- Zavolejte `Move` (včetně `Move` s parametrem AFX_MOVE_REFRESH nebo 0), který vyprázdní všechny změny a ukončí jakýkoli `AddNew` nebo `Edit` režim.
 
-### <a name="update-and-delete"></a>Update a Delete
+### <a name="update-and-delete"></a>Aktualizovat a odstranit
 
-Tato část se týká obou `Update` a `Delete`.
+Tato část se týká `Update` i `Delete`.
 
-Na `Update` nebo `Delete` operace, je třeba aktualizovat jenom jeden záznam. Tento záznam je aktuální záznam, který odpovídá datových hodnot v polích záznamů. Pokud z nějakého důvodu nejsou ovlivněny žádné záznamy vliv na jeden nebo více než jeden záznam je, je vyvolána výjimka, obsahující jednu z následujících **RETCODE** hodnoty:
+U operace `Update` nebo `Delete` by se měl aktualizovat jeden a jenom jeden záznam. Tento záznam je aktuální záznam, který odpovídá hodnotám dat v polích sady záznamů. Pokud z nějakého důvodu nejsou ovlivněny žádné záznamy nebo je ovlivněn více než jeden záznam, je vyvolána výjimka obsahující jednu z následujících hodnot **RETCODE** :
 
 - AFX_SQL_ERROR_NO_ROWS_AFFECTED
 
 - AFX_SQL_ERROR_MULTIPLE_ROWS_AFFECTED
 
-Při vyvolání těchto výjimek, zůstanou v `AddNew` nebo `Edit` stavu byly jste volali `Update` nebo `Delete`. Tady jsou nejběžnějších scénářů, ve kterých uvidíte tyto výjimky. Budete nejpravděpodobněji naleznete v tématu:
+Pokud jsou tyto výjimky vyvolány, zůstanete ve `AddNew` nebo `Edit` stavu, ke kterému jste byli při volání `Update` nebo `Delete`. Tady jsou nejběžnější scénáře, ve kterých tyto výjimky vidíte. Pravděpodobně se zobrazí:
 
-- AFX_SQL_ERROR_NO_ROWS_AFFECTED při použití režimu optimistického zamykání a jiný uživatel upravil záznam způsobem, který brání rozhraní identifikace správný záznam, aktualizovat nebo odstranit.
+- AFX_SQL_ERROR_NO_ROWS_AFFECTED, když používáte režim optimistického zamykání a jiný uživatel změnil záznam způsobem, který brání architektuře v identifikaci správného záznamu, který se má aktualizovat nebo odstranit.
 
-- Při aktualizaci tabulky AFX_SQL_ERROR_MULTIPLE_ROWS_AFFECTED, která nemá primární klíč nebo jedinečný index a nemáte dostatek sloupců v sadě záznamů k jedinečné identifikaci řádků tabulky.
+- AFX_SQL_ERROR_MULTIPLE_ROWS_AFFECTED, když tabulka, kterou aktualizujete, nemá žádný primární klíč nebo jedinečný index a v sadě záznamů nemáte dost sloupců k jednoznačné identifikaci řádku tabulky.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Sada záznamů (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
 [Sada záznamů: Jak sady záznamů vybírají záznamy (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)<br/>

@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0034
 ms.assetid: 1da4a55b-231b-4476-8545-6997628fbc00
-ms.openlocfilehash: 7c078a3d2aef24df9151cb10f81c1b7423809e68
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bcb7e22d6a09e3435eb2236532101a1836c08a03
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62347584"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80192183"
 ---
 # <a name="project-build-error-prj0034"></a>Chyba sestavení projektu PRJ0034
 
-Vlastnost "Additional Dependencies" vlastního na úrovni projektu sestavení krok obsažené "makra" která je vyhodnocena na "macro_expansion".
+Vlastnost ' Další závislosti ' pro vlastní krok sestavení na úrovni projektu obsahovala ' makro ', která je vyhodnocena na hodnotu ' macro_expansion '.
 
-Vlastní krok sestavení na projektu obsahovala chybu v jeho další závislosti, pravděpodobně z důvodu problému vyhodnocení makra. Tato chyba může také znamenat, že cesta je chybně vytvořený kód, obsahující znaky nebo kombinace znaků, které jsou neplatné v cestě k souboru.
+Vlastní krok sestavení v projektu obsahoval chybu v jeho další závislosti, pravděpodobně v důsledku problému s vyhodnocením makra. Tato chyba by mohla také znamenat, že cesta je chybně vytvořená, obsahuje znaky nebo kombinace znaků, které jsou v cestě k souboru neplatné.
 
-Chcete-li tuto chybu vyřešit, opravte makro nebo odstraňte specifikaci cesty. Vyhodnocená cesta je absolutní cesta z adresáře projektu.
+Chcete-li tuto chybu vyřešit, opravte makro nebo opravte specifikaci cesty. Vyhodnocená cesta je absolutní cesta z adresáře projektu.

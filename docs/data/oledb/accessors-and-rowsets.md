@@ -17,39 +17,39 @@ helpviewer_keywords:
 - accessors [C++], rowsets
 - rowsets [C++], supported types
 ms.assetid: edc9c8b3-1a2d-4c2d-869f-7e058c631042
-ms.openlocfilehash: 21043e22b37084fa543bf6b8a0fc176c3b8be788
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 45180b3ac2647c9f4f5d25a1322794552bd79004
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384914"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212378"
 ---
 # <a name="accessors-and-rowsets"></a>Přístupové objekty a sady řádků
 
-K nastavení a načtení dat, použijte šablony technologie OLE DB přístupový objekt a sady řádků prostřednictvím [CAccessorRowset](../../data/oledb/caccessorrowset-class.md) třídy. Tato třída dokáže zpracovat víc přístupových objektů různých typů.
+Chcete-li nastavit a načíst data, OLE DB šablony používají přistupující objekt a sadu řádků prostřednictvím třídy [CAccessorRowset –](../../data/oledb/caccessorrowset-class.md) . Tato třída může zpracovávat více přístupových objektů různých typů.
 
-## <a name="accessor-types"></a>Typy přístupového objektu
+## <a name="accessor-types"></a>Přístupové typy
 
-Všechny přistupující objekty jsou odvozeny z [CAccessorBase](../../data/oledb/caccessorbase-class.md). `CAccessorBase` poskytuje parametr a vazba sloupce.
+Všechny přistupující objekty jsou odvozeny z [CAccessorBase](../../data/oledb/caccessorbase-class.md). `CAccessorBase` poskytuje parametry i vazby sloupců.
 
-Následující obrázek znázorňuje typy přístupového objektu.
+Následující obrázek ukazuje typy přistupujícího objektu.
 
-![Typy přístupového objektu](../../data/oledb/media/vcaccessortypes.gif "typy přístupového objektu")<br/>
-Přístupový objekt třídy
+![Přístupové typy](../../data/oledb/media/vcaccessortypes.gif "Přístupové typy")<br/>
+Přístupové třídy
 
-- [CAccessor –](../../data/oledb/caccessor-class.md) použijte tento přistupující objekt, když víte struktury zdroje databáze v době návrhu. `CAccessor` staticky váže záznam v databázi, která obsahuje vyrovnávací paměti, ke zdroji dat.
+- [CAccessor –](../../data/oledb/caccessor-class.md) Tento přistupující objekt použijte, když znáte strukturu zdroje databáze v době návrhu. `CAccessor` staticky váže záznam databáze, který obsahuje vyrovnávací paměť, ke zdroji dat.
 
-- [CDynamicAccessor –](../../data/oledb/cdynamicaccessor-class.md) použijte tento přistupující objekt, pokud neznáte struktura databáze v době návrhu. `CDynamicAccessor` volání `IColumnsInfo::GetColumnInfo` zobrazíte informace o sloupci databáze. Vytvoří a spravuje přistupující objekt a vyrovnávací paměti.
+- [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) Tento přistupující objekt použijte, pokud neznáte strukturu databáze v době návrhu. `CDynamicAccessor` volá `IColumnsInfo::GetColumnInfo` k získání informací o sloupci databáze. Vytváří a spravuje přistupující objekt a vyrovnávací paměť.
 
-- [CDynamicParameterAccessor –](../../data/oledb/cdynamicparameteraccessor-class.md) použijte tento přistupující objekt zpracovat Neznámý příkaz typy. Při přípravě příkazy `CDynamicParameterAccessor` můžete získat informace o parametru od `ICommandWithParameters` rozhraní, pokud zprostředkovatel podporuje `ICommandWithParameters`.
+- [CDynamicParameterAccessor](../../data/oledb/cdynamicparameteraccessor-class.md) Pomocí tohoto přístupového objektu můžete zpracovat neznámé typy příkazů. Při přípravě příkazů může `CDynamicParameterAccessor` získat informace o parametrech z rozhraní `ICommandWithParameters`, pokud poskytovatel podporuje `ICommandWithParameters`.
 
-- [CDynamicStringAccessor –](../../data/oledb/cdynamicstringaccessor-class.md), [CDynamicStringAccessorA](../../data/oledb/cdynamicstringaccessora-class.md), a [CDynamicStringAccessorW](../../data/oledb/cdynamicstringaccessorw-class.md) použití těchto tříd, když nemají žádné informace o schématu databáze. `CDynamicStringAccessorA` načte data jako řetězce ANSI; `CDynamicStringAccessorW` načte data jako řetězce Unicode.
+- [CDynamicStringAccessor](../../data/oledb/cdynamicstringaccessor-class.md), [CDynamicStringAccessorA –](../../data/oledb/cdynamicstringaccessora-class.md)a [CDynamicStringAccessorW –](../../data/oledb/cdynamicstringaccessorw-class.md) používají tyto třídy, pokud neznáte žádné znalosti schématu databáze. `CDynamicStringAccessorA` načítá data jako řetězce ANSI; `CDynamicStringAccessorW` načítá data jako řetězce Unicode.
 
-- [CManualAccessor –](../../data/oledb/cmanualaccessor-class.md) pomocí této třídy, můžete použít libovolné datové typy, je-li poskytovatele můžete převést typ. Zpracovává sloupce výsledku a parametry příkazu.
+- [CManualAccessor](../../data/oledb/cmanualaccessor-class.md) S touto třídou můžete použít libovolné typy dat, které chcete, pokud poskytovatel může typ převést. Zpracovává jak sloupce výsledků, tak parametry příkazu.
 
-Následující tabulka shrnuje podporu typy přístupového objektu šablony technologie OLE DB.
+Následující tabulka shrnuje podporu v OLE DB typy přistupujícího objektu šablony.
 
-|Typ přístupového objektu|Dynamické|Zpracovává parametry|Vyrovnávací paměti|Několik přístupových objektů|
+|Typ přístupového objektu|Dynamické|Zpracovává parametry.|Buffer|Více přístupových objektů|
 |-------------------|-------------|--------------------|------------|------------------------|
 |`CAccessor`|Ne|Ano|Uživatel|Ano|
 |`CDynamicAccessor`|Ano|Ne|Šablony OLE DB|Ne|
@@ -59,15 +59,15 @@ Následující tabulka shrnuje podporu typy přístupového objektu šablony tec
 
 ## <a name="rowset-types"></a>Typy sady řádků
 
-Šablony technologie OLE DB podporují tři druhy sad řádků (viz předchozí obrázek): jednoduché sady řádků (implementované [CRowset](../../data/oledb/crowset-class.md)), hromadné sady řádků (implementované [CBulkRowset](../../data/oledb/cbulkrowset-class.md)) a pole (implementováno sady řádků podle [CArrayRowset](../../data/oledb/carrayrowset-class.md)). Jeden řádek zpracování při načtení jednoduché sady řádků `MoveNext` je volána. Hromadné sady řádků můžete načíst více popisovačů řádků. Sady řádků v polích jsou sady řádků, které lze přistupovat pomocí syntaxe pole.
+Šablony OLE DB podporují tři druhy sad řádků (viz předchozí obrázek): jednoduché sady řádků (implementované pomocí [CRowset](../../data/oledb/crowset-class.md)), hromadné sady řádků (implementované pomocí [CBulkRowset](../../data/oledb/cbulkrowset-class.md)) a sady řádků pole (implementované [CArrayRowset](../../data/oledb/carrayrowset-class.md)). Jednoduché sady řádků načítají jeden popisovač řádku při volání `MoveNext`. Hromadné sady řádků mohou načíst více popisovačů řádků. Sady řádků pole jsou sady řádků, ke kterým lze přistupovat pomocí syntaxe pole.
 
-Následující obrázek znázorňuje typy sady řádků.
+Následující obrázek ukazuje typy sady řádků.
 
-![Obrázek %{rowsettype/](../../data/oledb/media/vcrowsettypes.gif "%{rowsettype/ grafiky")<br/>
+![Obrázek RowsetType](../../data/oledb/media/vcrowsettypes.gif "Obrázek RowsetType")<br/>
 Třídy sady řádků
 
-[Sady řádků schématu](../../data/oledb/obtaining-metadata-with-schema-rowsets.md) nemáte přístup k datům v data ukládat, ale místo toho přístup k informacím o úložišti dat označovaném jako metadata. Sady řádků schématu se obvykle používá v situacích, ve kterých struktura databáze není v době kompilace znám a musí být získány v době běhu.
+[Sady řádků schématu](../../data/oledb/obtaining-metadata-with-schema-rowsets.md) přistupují k datům v úložišti dat, ale místo toho mají přístup k informacím o úložišti dat, nazývaném metadata. Sady řádků schématu jsou obvykle používány v situacích, ve kterých není struktura databáze známá v době kompilace a musí být získána za běhu.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[OLE DB – šablony příjemce](../../data/oledb/ole-db-consumer-templates-cpp.md)
+[Šablony OLE DB příjemců](../../data/oledb/ole-db-consumer-templates-cpp.md)

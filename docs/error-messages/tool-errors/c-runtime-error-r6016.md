@@ -6,32 +6,32 @@ f1_keywords:
 helpviewer_keywords:
 - R6016
 ms.assetid: 7bd3f274-d9c4-4bc4-8252-80bf168c4c3a
-ms.openlocfilehash: b617e3cf6d48a24b01479ef7ef3fb6ac425b3996
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 22bf4b7e8951215d1a013edb29af1ebff7517ffc
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62279280"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80197337"
 ---
 # <a name="c-runtime-error-r6016"></a>Chyba modulu C runtime R6016
 
 Nedostatek místa pro data vlákna
 
 > [!NOTE]
-> Pokud k této chybě dojde při spuštění aplikace, aplikace se vypnout, protože má problému s interní pamětí. Existuje mnoho možných příčin této chyby, ale často je způsobeno podmínku velmi málo paměti chybu v aplikaci, nebo chybu v add-in nebo rozšíření, které aplikace používá.
+> Pokud se zobrazí tato chybová zpráva při spuštění aplikace, aplikace se vypnula, protože má problém interní paměti. Tato chyba má mnoho možných důvodů, ale často je způsobena extrémně nízkou podmínkou paměti, chybou v aplikaci nebo chybou v doplňku nebo rozšíření používaném aplikací.
 >
 > Zkuste chybu odstranit pomocí tohoto postupu:
 >
-> - Ukončete ostatní spuštěné aplikace nebo restartovat počítač pro uvolnění paměti.
-> - Použití **aplikace a funkce** nebo **programy a funkce** stránku **ovládací panely** opravte nebo přeinstalujte aplikaci.
-> - Použití **aplikace a funkce** nebo **programy a funkce** stránku **ovládací panely** odebrat, opravte nebo přeinstalujte doplňky nebo rozšíření používané v aplikaci.
-> - Zkontrolujte **Windows Update** v **ovládací panely** pro aktualizace softwaru.
-> - Vyhledat aktualizovanou verzi aplikace. Pokud se problém nevyřeší, obraťte se na dodavatele aplikace.
+> - Ukončete ostatní spuštěné aplikace nebo restartujte počítač pro uvolnění paměti.
+> - K opravě nebo opětovné instalaci aplikace použijte stránku **aplikace a funkce** nebo **programy a funkce** v **Ovládacích panelech** .
+> - Pomocí stránky **aplikace a funkce** nebo **programy a funkce** v **Ovládacích panelech** můžete odebrat, opravit nebo znovu nainstalovat doplňky nebo rozšíření používané aplikací.
+> - Ověřte **web Windows Update** v **Ovládacích panelech** pro aktualizace softwaru.
+> - Vyhledejte aktualizovanou verzi aplikace. Pokud potíže potrvají, obraťte se na dodavatele aplikace.
 
 **Informace pro programátory**
 
-K této chybě dochází, protože program nedostal od operačního systému pro dokončení dostatek paměti [_beginthread](../../c-runtime-library/reference/beginthread-beginthreadex.md) nebo `_beginthreadex` volání nebo místní úložiště nebyla inicializována pomocí vlákna `_beginthread` nebo `_beginthreadex`.
+K této chybě dochází, protože program nedostal dostatek paměti z operačního systému k dokončení [_beginthread](../../c-runtime-library/reference/beginthread-beginthreadex.md) nebo volání `_beginthreadex` nebo Thread Local úložiště nebylo inicializováno `_beginthread` nebo `_beginthreadex`.
 
 Při spuštění nového vlákna musí knihovna vytvořit pro toto vlákno interní databázi. Pokud databázi nelze rozšířit pomocí paměti poskytované operačním systémem, vlákno se nespustí a volající proces se zastaví. K tomu může dojít, pokud proces vytvořil příliš mnoho vláken, nebo při vyčerpání místního úložiště vláken.
 
-Doporučujeme vám, že by pomocí spustitelného souboru, který volá běhové knihovny jazyka C (CRT) `_beginthreadex` pro vytvoření vlákna spíše než rozhraní Windows API `CreateThread`. `_beginthreadex` Inicializuje interní statické úložiště používané mnoha funkcemi CRT v místním úložišti vláken. Pokud používáte `CreateThread` k vytvoření vlákna, CRT může proces ukončit s chybou R6016 při volání funkce CRT, které vyžaduje inicializované interní statické úložiště.
+Doporučujeme, aby spustitelný soubor, který volá běhovou knihovnu jazyka C (CRT), měl místo `CreateThread`rozhraní API pro Windows použít `_beginthreadex` pro vytvoření vlákna. `_beginthreadex` inicializuje interní statické úložiště, které používá mnoho funkcí CRT v thread localm úložišti. Použijete-li `CreateThread` k vytvoření vlákna, může CRT ukončit proces s R6016, když je provedeno volání funkce CRT, která vyžaduje inicializované interní statické úložiště.

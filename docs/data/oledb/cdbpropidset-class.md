@@ -31,12 +31,12 @@ helpviewer_keywords:
 - operator=, property sets
 - SetGUID method
 ms.assetid: 52bb806c-9581-494d-9af7-50d8a4834805
-ms.openlocfilehash: e2fced2ed0e32af15e75c7290733fdc2b4b34dc9
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: a52d7443ab335e8546a4bcce03cf68c3b1d60e3d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447461"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212011"
 ---
 # <a name="cdbpropidset-class"></a>CDBPropIDSet – třída
 
@@ -72,7 +72,7 @@ class CDBPropIDSet : public tagDBPROPIDSET
 
 OLE DB spotřebitelé používají `DBPROPIDSET` struktury k předání pole ID vlastností, pro které chce příjemce získat informace o vlastnostech. Vlastnosti identifikované v jedné struktuře [DBPROPIDSET](/previous-versions/windows/desktop/ms717981(v=vs.85)) patří do jedné sady vlastností.
 
-## <a name="addpropertyid"></a>CDBPropIDSet:: AddPropertyID
+## <a name="cdbpropidsetaddpropertyid"></a><a name="addpropertyid"></a>CDBPropIDSet:: AddPropertyID
 
 Přidá ID vlastnosti do nastaveného ID vlastnosti.
 
@@ -87,7 +87,7 @@ bool AddPropertyID(DBPROPID propid) throw();
 *propid*<br/>
 pro ID vlastnosti, která se má přidat do nastaveného ID vlastnosti
 
-## <a name="cdbpropidset"></a>CDBPropIDSet:: CDBPropIDSet
+## <a name="cdbpropidsetcdbpropidset"></a><a name="cdbpropidset"></a>CDBPropIDSet:: CDBPropIDSet
 
 Konstruktor Inicializuje pole `rgProperties`, `cProperties`a (volitelně) `guidPropertySet` struktuře struktury [DBPROPIDSET](/previous-versions/windows/desktop/ms717981(v=vs.85)) .
 
@@ -109,7 +109,7 @@ pro Identifikátor GUID použitý k inicializaci pole `guidPropertySet`.
 *propidset*<br/>
 pro Jiný objekt `CDBPropIDSet` pro konstrukci kopírování.
 
-## <a name="setguid"></a>CDBPropIDSet:: SetGUID
+## <a name="cdbpropidsetsetguid"></a><a name="setguid"></a>CDBPropIDSet:: SetGUID
 
 Nastaví pole GUID ve struktuře `DBPROPIDSET`.
 
@@ -128,7 +128,7 @@ pro Identifikátor GUID, který slouží k nastavení `guidPropertySet` pole str
 
 Toto pole lze také nastavit pomocí [konstruktoru](../../data/oledb/cdbpropidset-cdbpropidset.md) . Tuto funkci volejte, pokud použijete výchozí konstruktor pro tuto třídu.
 
-## <a name="op_equal"></a>CDBPropIDSet:: operator =
+## <a name="cdbpropidsetoperator-"></a><a name="op_equal"></a>CDBPropIDSet:: operator =
 
 Přiřadí obsah jednoho ID vlastnosti nastaven na jinou nastavenou vlastnost ID.
 

@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0026
 ms.assetid: c52bc9b5-8b22-4015-b477-8645ae56c489
-ms.openlocfilehash: 7450d655e4cc8cc073940ef13f8bd57db2ad5219
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9193d91d6abd3b1c9a4fbac1e3c50c045658ddff
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384015"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80192273"
 ---
 # <a name="project-build-error-prj0026"></a>Chyba sestavení projektu PRJ0026
 
-> Soubor odpovědí '*souboru*' obsahuje znaky Unicode, které se nepodařilo přeložit na uživatelovu ANSI znakovou stránku.
+> Soubor odezvy*File*obsahuje obsah Unicode, který nebylo možné přeložit na znakovou stránku ANSI uživatele.
 >
-> *Kódování UNICODE obsah souboru*
+> *Obsah UNICODE souboru*
 
-Systém projektu nalezen znaky Unicode v souboru odpovědí, který nelze správně přeloženy na uživatele aktuální znakovou stránku ANSI.
+Systém projektu našel obsah v kódu Unicode v souboru odpovědí, který nelze správně přeložit na aktuální znakovou stránku ANSI uživatele.
 
-Řešení této chyby je aktualizovat obsah souboru odpovědí použití ANSI nebo k instalaci na znakovou stránku ve vašem počítači a nastavte jej jako výchozí systémové hodnoty.
+Řešením této chyby je aktualizovat obsah souboru odpovědí na používání ANSI nebo nainstalovat znakovou stránku do vašeho počítače a nastavit ji jako výchozí systém.

@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - RW1009
 ms.assetid: c11aceaf-3527-4509-867d-e7b22254e276
-ms.openlocfilehash: 77fe8e69d5357e61ab6863e4557ed9a0ed714080
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e54037144763c6c1a0d8563fac3714d68887403e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62374250"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172788"
 ---
 # <a name="resource-compiler-fatal-error-rw1009"></a>Závažná chyba kompilátoru prostředků RW1009
 
-Chyba při vytváření název prostředku
+Chyba při vytváření prostředku – název
 
-Nelze vytvořit soubor .res zadané. Ujistěte se, že se vytváří na disku jen pro čtení. /V můžete zjistit, zda je soubor vytvořen.
+Nelze vytvořit zadaný soubor. res. Ujistěte se, že se nevytváří na jednotce, která je jen pro čtení. Chcete-li zjistit, zda je soubor vytvářen, použijte/V.

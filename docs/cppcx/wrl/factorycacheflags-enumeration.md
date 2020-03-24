@@ -5,16 +5,16 @@ ms.topic: reference
 f1_keywords:
 - module/Microsoft::WRL::FactoryCacheFlags
 ms.assetid: 6f54258f-0144-4264-9608-414e5905f6fb
-ms.openlocfilehash: 8cf4af2ac0b4557fc6b175b84c47f83dd8a6e4ba
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 250c8c8e7ade72bd1a9cd63f0b515774058f0723
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398456"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214003"
 ---
 # <a name="factorycacheflags-enumeration"></a>FactoryCacheFlags – výčet
 
-Určuje, zda jsou uložené v mezipaměti objekt pro vytváření objektů.
+Určuje, zda jsou objekty factory ukládány do mezipaměti.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -24,20 +24,20 @@ enum FactoryCacheFlags;
 
 ## <a name="remarks"></a>Poznámky
 
-Ve výchozím nastavení, je zadán objekt pro vytváření zásady ukládání do mezipaměti, jako [ModuleType](moduletype-enumeration.md) parametru šablony při vytváření [modulu](module-class.md) objektu. Chcete-li přepsat tyto zásady, zadejte **factorycacheflags –** hodnotu při vytváření objektu factory.
+Ve výchozím nastavení jsou zásady ukládání do mezipaměti továrny při vytváření objektu [modulu](module-class.md) určeny jako parametr šablony [ModuleType](moduletype-enumeration.md) . Pokud chcete tuto zásadu přepsat, zadejte hodnotu **FactoryCacheFlags –** při vytváření objektu factory.
 
 |||
 |-|-|
-|`FactoryCacheDefault`|Zásady ukládání do mezipaměti `Module` objekt se používá.|
-|`FactoryCacheEnabled`|Nastaví objekt pro vytváření, ukládání do mezipaměti bez ohledu na to `ModuleType` parametr šablony, který se používá k vytvoření `Module` objektu.|
-|`FactoryCacheDisabled`|Zakáže ukládání do mezipaměti objekt pro vytváření bez ohledu na to `ModuleType` parametr šablony, který se používá k vytvoření `Module` objektu.|
+|`FactoryCacheDefault`|Je použita zásada ukládání do mezipaměti objektu `Module`.|
+|`FactoryCacheEnabled`|Povolí ukládání do mezipaměti objektu Factory bez ohledu na parametr šablony `ModuleType`, který se používá k vytvoření objektu `Module`.|
+|`FactoryCacheDisabled`|Zakáže ukládání do mezipaměti objektu Factory bez ohledu na parametr šablony `ModuleType`, který se používá k vytvoření objektu `Module`.|
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** implements.h
+**Hlavička:** Implements. h
 
-**Namespace:** Microsoft::WRL
+**Obor názvů:** Microsoft:: WRL
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Microsoft::WRL – obor názvů](microsoft-wrl-namespace.md)

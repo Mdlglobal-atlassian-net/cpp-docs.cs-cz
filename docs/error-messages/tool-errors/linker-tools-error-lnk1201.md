@@ -6,27 +6,27 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1201
 ms.assetid: 64c3f496-a428-4b54-981e-faa82ef9c8a1
-ms.openlocfilehash: c5cbb9a7159a976ad0f96f46462669cff7b19f26
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8d02743333c02c7cdff3b75e4a16bfecda442fa9
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62213261"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80195107"
 ---
 # <a name="linker-tools-error-lnk1201"></a>Chyba linkerů LNK1201
 
-Chyba při zápisu do databáze programu 'filename'; kontrolovat nedostatek místa na disku, cesta je neplatná nebo nemáte dostatečná oprávnění
+Chyba při zápisu do databáze programu filename; kontrolovat nedostatek místa na disku, neplatná cesta nebo nedostatečné oprávnění
 
-Odkaz nemůže zapisovat do databáze programu (PDB) pro výstupní soubor.
+ODKAZ nemůže zapisovat do databáze programu (PDB) pro výstupní soubor.
 
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Chcete-li vyřešit tak, že zkontrolujete následující možné příčiny
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Opravu provedete kontrolou následujících možných příčin.
 
-1. Soubor je poškozený. Odstraňte soubor PDB a znovu připojit.
+1. Soubor je poškozen. Odstraňte soubor PDB a znovu ho připojte.
 
-1. Není dostatek místa na disku pro zápis souboru.
+1. Nedostatek místa na disku pro zápis souboru.
 
-1. Jednotka není k dispozici, pravděpodobně z důvodu potíží se sítí.
+1. Jednotka není k dispozici, pravděpodobně v důsledku problému se sítí.
 
-1. Ladicí program je aktivní na aplikaci, kterou se snažíte propojit.
+1. Ladicí program je aktivní v programu, který se pokoušíte propojit.
 
-1. Nedostatek prostoru v haldě.  Zobrazit [C1060](../../error-messages/compiler-errors-1/fatal-error-c1060.md) Další informace.
+1. Nedostatek prostoru v haldě.  Další informace najdete v tématu [C1060](../../error-messages/compiler-errors-1/fatal-error-c1060.md) .

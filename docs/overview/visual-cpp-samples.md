@@ -1,37 +1,559 @@
 ---
-title: Visual C++ – ukázky
-ms.date: 11/30/2017
+title: Ukázky sady C++ Visual Studio
+description: Souhrnný popis ukázek dostupných v archivovaném úložišti ukázek sady Visual C++ Studio na GitHubu.
+ms.date: 03/23/2020
 ms.technology: cpp-language
 ms.assetid: 76798022-5886-48e7-a7f2-f99352b15cbf
-ms.openlocfilehash: 6db6c21d6bc6772eb05642db1eca95bfe36eba28
-ms.sourcegitcommit: 5f276064779d90a4cfda758f89e0c0f1e4d1a188
+ms.openlocfilehash: 0862f6b512f7278f878ade53b320ad5298bccf68
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/09/2020
-ms.locfileid: "75793853"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80215095"
 ---
-# <a name="visual-c-samples"></a>Visual C++ – ukázky
+# <a name="visual-studio-c-samples"></a>Ukázky sady C++ Visual Studio
 
-Ukázky kódu jazyka Visual C++ uvedené níže ukazují různé funkce napříč různými technologiemi.
+Ukázky pro Visual Studio C++ jsou k dispozici na webu. Společnost Microsoft vytvořila C++ mnoho ukázek, které ukazují různé funkce napříč různými technologiemi. Tady je několik míst, kde najdete další ukázky:
 
-[Ukázky C++ vizuálů](https://github.com/Microsoft/vcsamples)
+- [Ukázky Microsoft Docs –C++](https://docs.microsoft.com/samples/browse/?term=c%2B%2B)
 
-[Ukázky sady Visual Studio](https://code.msdn.microsoft.com/vstudio/site/search?f%5B0%5D.Type=ProgrammingLanguage&f%5B0%5D.Value=C%2B%2B)
+- [Ukázky Windows na GitHubu](https://microsoft.github.io/windows/)
 
-[Windows na GitHubu](https://microsoft.github.io/windows/)
+- [Ukázky kódu pro Windows Dev Center](https://developer.microsoft.com/windows/samples)
 
-[Ukázky univerzálních aplikací pro Windows](https://code.msdn.microsoft.com/windowsapps/Universal-Windows-app-cb3248c3)
+- [Příklad archivu CodePlex](https://archive.codeplex.com/)
 
-[Rozhraní kódu All-in-One](https://1code.codeplex.com/)
+- [Ukázky kódu ADO](/office/client-developer/access/desktop-database-reference/ado-code-examples-in-microsoft-visual-c)
 
-[Ukázky kódu pro stolní počítače Windows](https://code.msdn.microsoft.com/windowsdesktop/site/search?f%5B0%5D.Type=ProgrammingLanguage&f%5B0%5D.Value=C%2B%2B&f%5B0%5D.Text=C%2B%2B)
+- [Ukázky vývoje hardwaru systému Windows](https://docs.microsoft.com/samples/browse/?products=windows-wdk)
 
-[Ukázky knihovny MFC](https://code.msdn.microsoft.com/site/search?query=mfc&f%5B0%5D.Value=mfc&f%5B0%5D.Type=SearchText&ac=4)
+## <a name="archived-c-samples-on-github"></a>Archivované C++ ukázky na GitHubu
 
-[Ukázky CodePlex](https://archive.codeplex.com/)
-
-[Ukázky kódu ADO](/office/client-developer/access/desktop-database-reference/ado-code-examples-in-microsoft-visual-c)
-
-[Ukázky vývoje hardwaru systému Windows](https://code.msdn.microsoft.com/windowshardware/)
+Visual Studio zahrnovalo C++ vzorový kód v předchozích verzích. Vzorový kód byl buď nainstalován se sadou Visual Studio, nebo byl k dispozici jako samostatné stažení. Mnoho článků v naší dokumentaci najdete v těchto ukázkách. Visual Studio už je neinstaluje. Místo toho je úložiště k dispozici na GitHubu. Následující tabulky obsahují popisy pro jednotlivé ukázky a odkazy na adresář ukázek v úložišti.
 
 [!INCLUDE[note_security_samplecode](includes/note_security_samplecode_md.md)]
+
+## <a name="atl-samples"></a>Ukázky knihovny ATL
+
+### <a name="atl-samples---advanced"></a>Ukázky knihovny ATL – rozšířené
+
+| Ukázkový název | Popis |
+|--|--|
+| [ActiveDoc](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/Advanced) | Ukazuje, jak implementovat aktivní server dokumentů. |
+| [Async](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/Advanced) | Asynchronně stahuje data z adresy URL. |
+| [ATLButton](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/Advanced) | Vytvoří tlačítko, které se zobrazí se třemi různými rastrovými obrázky v závislosti na jeho stavu. |
+| [ATLDuck](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/Advanced) | Ukazuje použití spojovacích bodů s ovládacími prvky ATL. |
+| [ATLSecurity](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/Advanced) | Ukazuje, jak použít třídy zabezpečení knihovny ATL pro kontrolu nastavení zabezpečení. |
+| [ATLTraceTool](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/Advanced) | Zobrazí výstup generovaný makrem `ATLTRACE2`. |
+| [Připojení](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/Advanced) | Ukazuje implementaci a použití spojovacích bodů (rozhraní IConnectionPointContainer a IConnectionPoint) ve vícevláknovém prostředí. |
+| [CThreadPool](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/Advanced) | Ukazuje, jak použít fond vláken v aplikaci a jak implementace fondu vláken může zlepšit výkon aplikace. |
+| [DCOM](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/Advanced) | Ukazuje, jak volat objekt modelu COM (implementovaný ve službě systému Windows) z více klientů spouštěných v různých počítačích. |
+| [MFCATL](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/Advanced) | Ukazuje, jak lze objekty ATL COM použít v souboru EXE serveru knihovny MFC. |
+
+### <a name="atl-samples---controls"></a>Ukázky ATL – ovládací prvky
+
+| Ukázkový název | Popis |
+|--|--|
+| [ATLFire](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/Controls) | Ukazuje, jak vytvořit ovládací prvek s oknem pomocí knihovny ATL. |
+| [CDInfo](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/Controls) | Přehrává zvukové stopy na CD a zobrazuje informace o stopách v popiscích a zobrazení výsečového grafu. |
+| [Str](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/Controls) | Vytvoří ovládací prvek, který ukazuje stránky vlastností a nakreslí kruh. |
+| [Mnohoúhelník](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/Controls) | Vytvoří ovládací prvek, který implementuje vlastní vlastnosti, události, stránky vlastností a zabezpečení objektů. |
+| [SubEdit](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/Controls) | Vytvoří setříděný ovládací prvek systému Windows. |
+
+### <a name="atl-samples---general"></a>Ukázky knihovny ATL – obecné
+
+| Ukázkový název | Popis |
+|--|--|
+| [ATLCollections](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/General) | Demonstruje použití `ICollectionOnSTLImpl` a `CComEnumOnSTL`a implementaci vlastních tříd zásad kopírování. |
+| [ATLCon](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/General) | Ukazuje jednoduchý kontejner ovládacího prvku. |
+| [ATLSafeArray](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/General) | Ukazuje, jak vytvořit a udržovat `SAFEARRAY`s pomocí `CComSafeArray`; také postup předání `SAFEARRAY`s ze součásti do skriptu. |
+| [Autothread](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/General) | Ukazuje použití třídy `CComAutoThreadModule`. |
+| [ZvukovýSignál](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/General) | Implementuje odtrhnoutelné rozhraní kolekce nebo výčtu `BSTR`s. |
+| [CircColl](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/General) | Implementuje kolekci/výčet objektů pomocí knihovny ATL a standardní C++ knihovny. |
+| [COMMap](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/General) | Znázorňuje makra položky mapování rozhraní modelu COM s podporou kompilátoru COM. |
+| [CustomString](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/General) | Ukazuje, jak používat vlastní přidělování paměti pro `CStringT` pro zlepšení výkonu v aplikaci s více vlákny. |
+| [DispSink](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/General) | Ukazuje použití spojovacího bodu na odesílajících rozhraních. |
+
+### <a name="atl-samples---oledb---consumer"></a>Ukázky knihovny ATL – OLEDB-Consumer
+
+| Ukázkový název | Popis |
+|--|--|
+| [CatDB](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Consumer) | Zobrazí informace o schématu, jako jsou tabulky a sloupce OLE DB poskytovatelé. |
+| [DBViewer](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Consumer) | Ukazuje aplikaci střední úrovně, která spoléhá na `CManualAccessor` třídu pro úplné řízení datových vazeb pro vaše aplikace. |
+| [DynamicConsumer](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Consumer) | Ukazuje použití dynamického přístupového objektu a třídy sady řádků schématu pro čtení metadat z databáze. |
+| [Více čtení](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Consumer) | Čte tabulku v databázi pomocí více vláken. |
+
+### <a name="atl-samples---oledb---provider"></a>Ukázky knihovny ATL – poskytovatel OLEDB
+
+| Ukázkový název | Popis |
+|--|--|
+| [AdvancedPV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider) | Implementuje aktualizovatelného poskytovatele OLE DB. Ukazuje některé pokročilé techniky. |
+| [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider) | Implementuje aktualizovatelného zprostředkovatele OLE DB (pro čtení a zápis). |
+
+## <a name="clr-and-language-samples---windows-forms"></a>CLR a jazykové ukázky – model Windows Forms
+
+| Ukázkový název | Popis |
+|--|--|
+| [BirthdayPicker](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/Language/Windows%20Forms) | Ukazuje, jak lze použít mechanismus prostředků .NET Framework v C++ aplikacích. Ukazuje také některé běžné součásti Windows Forms. |
+| [Zobrazené](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/Language/Windows%20Forms) | Implementuje jednoduchou kapesní kalkulačku pomocí C++ a .NET Framework model Windows Forms třídy. |
+| Klikyháky (pomocí MFC) | Implementace prostředí MFC ukázky Klikyháky, aktualizovaná a rozšířená tak, aby obsahovala nové funkce rozhraní .NET. |
+| [Klikyháky (model Windows Forms)](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/Language/General) | Model Windows Forms implementaci technologie Klikyháky, aktualizovaná a rozšířená tak, aby obsahovala nové funkce rozhraní .NET. |
+| [STLCLR](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/CLR/stlclr/StlClr%20Sample) | Ukazuje některé z možností, které jsou k dispozici při použití knihovny STL/CLR. |
+
+## <a name="com-events-samples"></a>Ukázky událostí modelu COM
+
+| Ukázkový název | Popis |
+|--|--|
+| [COMEvents](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples) | Ukazuje zpracování událostí pomocí modelu COM. |
+
+## <a name="comtypelibfor7-samples"></a>Ukázky ComTypeLibfor7
+
+| Ukázkový název | Popis |
+|--|--|
+| [ACDual](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ComTypeLibfor7) | Přidá duální rozhraní do aplikace automatizace. |
+| [ADOSamp](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ComTypeLibfor7) | Implementuje aplikaci se třemi vrstvami pro klientské/serverové aplikace. |
+| [AllInOne](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ComTypeLibfor7) | Implementuje Server pomocí knihovny ATL, vystavuje kolekce STL a je řízen podporou kompilátoru COM v aplikaci MFC. |
+| [COMMap](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ComTypeLibfor7) | Znázorňuje makra položky mapování rozhraní modelu COM s podporou kompilátoru COM. |
+| [Připojení](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ComTypeLibfor7) | Znázorňuje použití a implementaci spojovacích bodů (rozhraní `IConnectionPointContainer` a `IConnectionPoint`) ve vícevláknovém prostředí. |
+| [DCOM](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ComTypeLibfor7) | Ukazuje, jak volat objekt modelu COM (implementovaný ve službě systému Windows) z více klientů spouštěných v různých počítačích. |
+| [FreeThrd](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ComTypeLibfor7) | Ukazuje vícevláknového klienta a server s volnými vlákny s podporou kompilátoru COM. |
+| [InProc](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ComTypeLibfor7) | Ukazuje aplikaci automatizačního serveru v procesu s podporou kompilátoru COM. |
+| [Labrador](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ComTypeLibfor7) | Implementuje EXE Server, který nemá žádné uživatelské rozhraní. |
+| [MFCCalc](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ComTypeLibfor7) | Ukazuje aplikaci automatizačního serveru s podporou kompilátoru COM. |
+
+## <a name="compiler-samples"></a>Ukázky kompilátoru
+
+### <a name="compiler-samples---general"></a>Ukázky kompilátoru – obecné
+
+| Ukázkový název | Popis |
+|--|--|
+| [ccWrapper](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/Compiler) | Ukazuje, jak mapovat příznaky jazykaC++ C/kompilátor z jiných kompilátorů na vizuální C++ kompilátor (CL. exe). |
+
+### <a name="compiler-samples---masm"></a>Ukázky kompilátoru – MASM
+
+| Ukázkový název | Popis |
+|--|--|
+| [EuclidStep1](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/Compiler/MASM) | Čistý projekt jazyka C, který ukazuje euklidovského algoritmus pro nalezení největšího společného dělitele. |
+| [EuclidStep2](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/Compiler/MASM) | Rozšíření EuclidStep1, které je smíšený projekt jazyka C a MASM. Jádro algoritmu euklidovského je přesunuto z *`.c`* souboru do *`.asm`* souboru, kde *`.c`* soubor volá do *`.asm`* souboru. |
+| [PrimesStep1](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/Compiler/MASM) | Čistý projekt v jazyce C, který ukazuje síto Eratosthenovo a hledá hlavní čísla. |
+| [PrimesStep2](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/Compiler/MASM) | Rozšíření PrimesStep1, které je smíšený projekt jazyka C a MASM, který přesouvá základní algoritmus do souboru *`.asm`* . |
+| [PrimesStep3](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/Compiler/MASM) | Rozšíření PrimesStep2, které přidá samostatný hlavičkový soubor jazyka C a soubor include *`.asm`* k deklaraci externí funkce a globální struktury dat. |
+
+## <a name="crt-samples"></a>Ukázky CRT
+
+| Ukázkový název | Popis |
+|--|--|
+| [CPUID](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/crt) | Určuje možnosti procesoru, který se spouští. |
+| [CRT_Dbg1](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/crt) | Znázorňuje základní funkce ladění knihoven run-time jazyka C. |
+| [CRT_Dbg2](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/crt) | Ukazuje funkce zavěšení ladění jazyka C v době běhu. |
+| [DFACObjs](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/crt) | Ukazuje, jak _CrtDoForAllClientObjects použít funkci run-time jazyka C k iterování v propojeném seznamu objektů klienta. |
+| [Slouží](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/crt) | Znázorňuje funkce sestav ladění v jazyce C za běhu. |
+| [RTC](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/crt) | Ukazuje funkci kontroly chyb za běhu. |
+| [SecureCRT](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/crt) | Tato ukázka předvádí, jak upgradovat kód, který používá zastaralé funkce CRT ke zvýšení zabezpečení kódu. |
+
+## <a name="debugging-samples"></a>Ukázky ladění
+
+| Ukázkový název | Popis |
+|--|--|
+| [EEAddIn](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples) | Používá rozhraní API doplňku pro vyhodnocení výrazu pro rozšiřování filtru výrazu nativního ladicího programu. |
+
+## <a name="fusion-samples"></a>Ukázky Fusion
+
+| Ukázkový název | Popis |
+|--|--|
+| [Trasovat](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples) | Poskytuje informace o sestaveních závislých na aplikaci a o stavu sestavení v nativní mezipaměti pro syntézu ve formě čitelné pro člověka. |
+
+## <a name="hilo-sample"></a>Ukázka Hilo
+
+| Ukázkový název | Popis |
+|--|--|
+| [Hilo](https://github.com/Microsoft/VCSamples/tree/master/VC2013Samples/Hilo) | Hilo je série článků a ukázkových aplikací. Ukazují výkon Windows 7, Visual Studio a C++ sestavování vysokého výkonu, reagujících klientských aplikací. Hilo poskytuje zdrojový kód i doprovodné materiály, které vám pomůžou navrhovat a vyvíjet působivé aplikace systému Windows, které jsou ve vaší práci.<br/><br/>Tato ukázka byla aktualizována pro Visual Studio 2013. Zahrnuje opravu hotfix pro soubor *AsyncLoaderMemoryManager. cpp* (na řádcích 36 a 37), který řeší běžný problém při selhání. |
+
+## <a name="international-samples"></a>Mezinárodní ukázky
+
+| Ukázkový název | Popis |
+|--|--|
+| [REŽIM](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/International) | Ukazuje, jak řídit režim editoru vstupní metody a jak implementovat editor IME úrovně 3. |
+| [SatDLL](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/International) | Demonstruje doporučený způsob implementace vícejazyčných prostředků v aplikaci Win32. |
+| [UniRes](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/International) | Ukazuje použití souborů prostředků Unicode. |
+
+## <a name="language-samples---general"></a>Jazykové ukázky – obecné
+
+| Ukázkový název | Popis |
+|--|--|
+| [Data](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/Language) | Ukazuje jednoduchý přístup k SQL Database. |
+| [MEDriver](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/Language) | Ukazuje použití událostí modelu COM (vyvolaných z nespravovaného serveru COM) prostřednictvím obálky .NET Framework automaticky generované z knihovny typů serveru COM. |
+| [Nile](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/Language) | Ukazuje webové formuláře ASP.NET a webové služby ASP.NET. |
+| [QStat](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/Language/General) | Ukazuje, jak vytvořit knihovnu DLL, která zabalí přístup k objektu COM a zpřístupňuje její funkci pro .NET Framework klientů. |
+| [Scribble](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/Language/General) | Ukazuje, jak vyvíjet model Windows Forms aplikaci MDI pomocí C++/cli a .NET Framework třídy. |
+| [TilePuzzle](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/Language/General) | Ukazuje interoperabilitu mezi spravovanými komponentami C++ ( C#napsanými pomocí a) a C++ nativními součástmi (napsanými pomocí atributů com). |
+
+## <a name="mfc-samples"></a>Ukázky knihovny MFC
+
+### <a name="mfc-samples---advanced"></a>Ukázky knihovny MFC – rozšířené
+
+| Ukázkový název | Popis |
+|--|--|
+| [Shromáždění](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/advanced) | Ukazuje třídy C++ kolekcí založené na šablonách MFC a standardní předem připravené třídy kolekcí. |
+| [Datov](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/advanced) | Aplikace OpenGL používající kontexty zařízení MFC spolu s kontexty prostředků OpenGL. |
+| [DLLHusk](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/advanced) | Sdílení verze knihovny DLL třídy Foundation s aplikací a vlastní knihovnou DLL. |
+| [DLLScreenCap](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/advanced) | Běžná knihovna DLL, která může být staticky nebo dynamicky propojena s knihovna Microsoft Foundation Class. |
+| [MTGDI](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/advanced) | Ukázka sdílení prostředků GDI mezi více vlákny pomocí podpory rozhraní SDI (Single Document Interface) v rámci dokumentů a zobrazení. |
+| [MTMDI](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/advanced) | Ilustrace s více vlákny, kde jsou události uživatelského rozhraní zpracovávány v samostatném vlákně uživatelského rozhraní. |
+| [MTRecalc](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/advanced) | Ilustrace s více vlákny, kde se přepočty provádějí v pracovním vlákně. |
+| [Mutex – třídy](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/advanced) | Dialogová aplikace, která vytvoří dva objekty `CWinThread` a použije je k provedení úkolu v rámci ovládacího prvku uživatele. |
+| [Speakn](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/advanced) | Ukazuje multimediální zvuk pomocí uživatelsky definovaných prostředků. |
+
+### <a name="mfc-samples---controls"></a>Ukázky knihovny MFC – ovládací prvky
+
+| Ukázkový název | Popis |
+|--|--|
+| [Tlačítko](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls) | Ukazuje použití místní aktivní nabídky, stránky vlastností akcií a možnosti ovládacího prvku box. |
+| [Str](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls) | Ukazuje základy ovládacího prvku ActiveX. Mezi ně patří Malování ovládacích prvků, burzovní a vlastní vlastnosti, burzovní a vlastní události, použití barev a písem, základní stránka vlastností písma, výchozí stránka vlastností a správa verzí. |
+| [CmnCtrl](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls) | Ukazuje některé nové ovládací prvky, které jsou k dispozici v prostředí MFC ve službě wiprlhext: tlačítko odkaz na příkaz (`CButton`), ovládací prvek stránkování (`CPagerCtrl`), tlačítko rozdělení (`CSplitButton`) a ovládací prvek síťové adresy (`CNetAddressCtrl`). |
+| [Uzavírací](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls) | Ukazuje aplikaci s vizuální úpravou kontejneru. |
+| [Image](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls) | Ukazuje, jak použít MFC k vytvoření ovládacího prvku ActiveX, který asynchronně stahuje data. |
+| [Získává](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls) | Ovládací prvek, který vynutil použití licence pro dobu návrhu a doby běhu. |
+| [Lokalizovat](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls) | Ovládací prvek s lokalizovaným uživatelským rozhraním, který ukazuje použití samostatných knihoven typů a dynamických knihoven DLL (Dynamic Link Library) pro lokalizaci. |
+| [NetAddr](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls) | Ukazuje použití ovládacího prvku "NET Address Verifier" systému Windows Vista. |
+| [Kamarád](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls) | Ovládací prvek, který zobrazuje barvy palety. Ukazuje vlastnosti jen pro čtení, trvalé vlastnosti get/set, trvalé parametrizované vlastnosti a vlastnosti obrázku. |
+| [Replik](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls) | Řízení podtříd z ovládacího prvku tlačítko vykresleného vlastníkem systému Windows Ukazuje základní vlastnosti, vlastní události a držitele obrázků. |
+| [RegSvr](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls) | Ukazuje vyvolání kódu pro samostatnou registraci. |
+| [SpinDial](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls) | Ovládací prvek s vizuálním vzhledem k vytočení číselníku, který ukazuje ověření dat stránky vlastností. |
+| [TestHelp](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls) | Ovládací prvek ActiveX, který má vlastní soubor nápovědy a popisy tlačítek. |
+| [Interval](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls) | Ovládací prvek, který je neviditelný v době běhu a aktivuje událost časovače v nastavených intervalech. Znázorňuje funkce oznámení a ambientních vlastností. |
+| [XList](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls) | Ovládací prvek, který je podtřídou ze seznamu systému Windows, který zobrazuje položky textu nebo rastrového obrázku. |
+
+### <a name="mfc-samples---general"></a>Ukázky knihovny MFC – Obecné
+
+| Ukázkový název | Popis |
+|--|--|
+| [Automatické](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/general) | Adresář klipartů obsahuje ukázkové prostředky, které lze použít k přizpůsobení vzhledu aplikace. |
+| [CmnCtrl1](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/general) | Ukazuje, jak vytvořit a změnit styly běžných ovládacích prvků Windows pomocí tříd MFC (část 1). |
+| [CmnCtrl2](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/general) | Ukazuje, jak vytvořit a změnit styly běžných ovládacích prvků Windows pomocí tříd MFC (část 2). |
+| [Objektu CTaskDialog](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/general) | Ukazuje různé funkce `CTaskDialog` třídy. |
+| [CtrlBars](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/general) | Vlastní panel nástrojů a stavový řádek, panel dialogového okna a plovoucí paleta. |
+| [CtrlTest](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/general) | Vlastník – vykreslení seznamu a nabídky, vlastní ovládací prvek, tlačítko rastrový obrázek, číselník. |
+| [DBVList](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/general) | Používá třídy `CListView` a `CDaoRecordset` k implementaci funkcí zobrazení virtuálního seznamu, které jsou k dispozici pro běžný ovládací prvek zobrazení seznamu. |
+| [DIBLook](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/general) | Ukazuje použití DIB a barevných palet. |
+| [DlgCbr32](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/general) | Přidání panelu nástrojů a stavového řádku do aplikace založené na dialogu. |
+| [DlgTempl](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/general) | Ukazuje dynamické vytvoření šablon dialogového okna. |
+| [DockTool](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/general) | Přetahování a plovoucí panely nástrojů, které jsou ukotvit. |
+| [Dynamenu](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/general) | Dynamické úpravy seznamu položek v nabídkách; zpracování příkazů, které nejsou známy v době kompilace; a aktualizace příkazového řádku stavového řádku pro tyto příkazy. |
+| [FileDlgWatcher](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/general) | Vytvoří vlastní dialogové okno, které ukazuje, jaké události se generují při vytváření `CFileDialog`. |
+| [Dobrý den](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/general) | Znázorňuje jedno okno aplikace s nabídkou a o box. |
+| [HelloApp](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/general) | Minimální ukázka knihovny MFC, která znázorňuje, že některé řádky kódu jsou požadovány k zobrazení okna na obrazovce. |
+| [ListHdr](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/general) | Ukazuje, jak použít knihovny MFC společného ovládacího prvku `CListCtrl` a `CHeaderCtrl`. |
+| [MDI](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/general) | Aplikace MDI, která nepoužívá dokumenty a zobrazení |
+| [MDIDocVw](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/general) | Aktualizovaná verze ukázky MDI, která používá architekturu document/view. |
+| [MMXSwarm](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/general) | Ukazuje, jak použít `CImage`, `__m64` datový typ a rastrové obrázky nezávislé na zařízení (DIB). |
+| [Modální](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/general) | Ukazuje použití objektu `CDialog` knihovny MFC jako nemodálního dialogového okna. |
+| [Multipad](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/general) | Jednoduchý textový editor, který umožňuje uživateli otevřít a upravit více textových souborů najednou. |
+| [Npp](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/general) | Ukazuje, jak implementovat aplikaci rozhraní (SDI) podobnou poznámkovému bloku. Umožňuje upravit textové zprávy a odeslat je ostatním uživatelům nebo jiným systémům prostřednictvím rozhraní API pro zasílání zpráv systému Windows nebo rozhraní MAPI. |
+| [PropDlg](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/general) | Seznamy vlastností (dialogy). |
+| [RowList](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/general) | Znázorňuje plný výběr řádku v běžném ovládacím prvku List-View. |
+| [Scribble](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/general) | Poskytuje jednoduché ilustrace pro širokou škálu funkcí MFC. |
+| [SimpleImage](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/general) | Ukazuje načítání, změnu velikosti, převod a ukládání imagí. |
+| [SnapVw](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/general) | Ukazuje, jak používat stránky vlastností v okně podřízeného rámce MDI. |
+| [Spiro](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/general) | Hra, která ukazuje použití `CImageList` a použití kontextů zobrazení paměti v aplikacích vyžadujících efekty animace. |
+| [Přehled](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/general) | Ukazuje různé styly `CRectTracker` a možnosti. |
+| [VariantUse](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/general) | Ukazuje použití datového typu variant. |
+| [ViewEx](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/general) | Více zobrazení, zobrazení posuvníku, okna s oddělovači. |
+
+### <a name="mfc-samples---internet"></a>Ukázky knihovny MFC – Internet
+
+| Ukázkový název | Popis |
+|--|--|
+| [DHTMLExplore](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/internet) | Ukazuje zpracování událostí DHTML a použití jazyka DHTML DDX. |
+| [HTMLEdit](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/internet) | Zabalí ovládací prvek pro úpravy v aplikaci Internet Explorer MSHTML. |
+| [MFCIE](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/internet) | Ukazuje třídu MFC `CHtmlView` a `CReBar`. |
+| [Scheduler](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/internet) | Ukazuje, jak vytvořit dialogové okno založené na jazyce HTML pomocí tříd knihovny C++ vizuálů. |
+
+### <a name="mfc-samples---ole"></a>Ukázky knihovny MFC – OLE
+
+| Ukázkový název | Popis |
+|--|--|
+| [ACDual](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/ole) | Ukazuje, jak přidat podporu duálního rozhraní do automatizačního serveru založeného na knihovně MFC. |
+| [AutoClik](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/ole) | Znázorňuje funkce automatizace. Zahrnuje AUTODRIV, jednoduchou klientskou aplikaci automatizace, která řídí ukázkovou aplikaci AUTOCLIK. |
+| [CalcDriv](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/ole) | Klient automatizace. |
+| [DrawCli](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/ole) | Plně vybavená objektově orientovaná aplikace pro kreslení, která je také kontejnerem pro úpravy vizuálního prostředí ActiveX. |
+| [HierSvr](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/ole) | Ukazuje serverovou aplikaci s přetahováním OLE. |
+| [InProc](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/ole) | Automatizační server v procesu, který se dá načíst jako knihovna DLL v adresním prostoru klienta. |
+| [IPDrive](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/ole) | Jednoduchá klientská aplikace automatizace, která řídí ukázkovou aplikaci INPROC. |
+| [MFCBind](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/ole) | Ukazuje, jak vytvořit aktivní dokument (dříve označovaný jako DocObject) kontejner. |
+| [MFCCalc](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/ole) | Automatizační server, který implementuje jednoduchou kalkulačku. |
+| [OClient](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/ole) | Aplikace kontejneru vizuální úpravy ActiveX s přetahováním |
+| [OLEView](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/ole) | Implementace prohlížeče objektů OLE prostřednictvím vlastních rozhraní OLE. |
+| [SuperPad](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/ole) | Ukazuje server pro vizuální úpravu, který upravuje text pomocí CEditView. |
+| [TstCon](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/ole) | Implementuje kontejner ovládacího prvku ActiveX pomocí podpory MFC pro vkládání OLE. Pomocí TSTCON můžete testovat ovládací prvky ActiveX, měnit jejich vlastnosti a vyvolat jejich metody. |
+| [Editor](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/ole) | Používá podporu knihovny MFC pro formátované ovládací prvky pro úpravy k vytvoření základního textového procesoru. |
+
+### <a name="mfc-samples---utility"></a>Ukázky knihovny MFC – nástroj
+
+| Ukázkový název | Popis |
+|--|--|
+| [GUIDGen](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/utility) | Jednoduchá aplikace MFC založená na dialogových oknech, která generuje globálně jedinečné identifikátory. |
+| [Makehm](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/utility) | Konzolová aplikace, která vytváří mapování mezi identifikacemi prostředků a kontexty pomocníka. |
+
+### <a name="mfc-samples---visual-c-2008-feature-pack"></a>Ukázky knihovny MFC – C++ sada funkcí Visual 2008
+
+| Ukázkový název | Popis |
+|--|--|
+| [CustomPages](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/Visual%20C%2B%2B%202008%20Feature%20Pack) | Ukazuje, jak přidat vlastní stránku do dialogového okna přizpůsobení panelu nástrojů. |
+| [DesktopAlertDemo](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/Visual%20C%2B%2B%202008%20Feature%20Pack) | Ukazuje, jak implementovat dialogové okno s upozorněním na plochu (podobně jako v dialogovém okně aplikace pro zasílání zpráv). |
+| [DlgToolTips](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/Visual%20C%2B%2B%202008%20Feature%20Pack) | Ukazuje, jak implementovat pokročilé popisy tlačítek pro ovládací prvky dialogového okna. |
+| [DrawClient](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/Visual%20C%2B%2B%202008%20Feature%20Pack) | Ukazuje, jak integrovat podporu pásu karet do aplikace pro kreslení s podporou úprav kontejneru. |
+| [DynamicMenu](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/Visual%20C%2B%2B%202008%20Feature%20Pack) | Ukazuje, jak dynamicky aktualizovat nabídku na řádku nabídek a místní nabídce za běhu. |
+| [Prohlížeč](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/Visual%20C%2B%2B%202008%20Feature%20Pack) | Ukazuje, jak implementovat Průzkumník systému souborů, který se podobá Průzkumníku souborů. Má podobné prvky uživatelského rozhraní a možnosti. |
+| [IEDemo](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/Visual%20C%2B%2B%202008%20Feature%20Pack) | Ukazuje, jak implementovat aplikaci, která je podobná aplikaci Internet Explorer, s podobnými prvky uživatelského rozhraní a funkcemi. |
+| [MDITabsDemo](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/Visual%20C%2B%2B%202008%20Feature%20Pack) | Ukazuje, jak vytvořit aplikaci, která používá nové rozhraní dokumentů s kartami, nikoli tradiční podřízená okna MDI. |
+| [MenuSubSet](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/Visual%20C%2B%2B%202008%20Feature%20Pack) | Ukazuje, jak dynamicky odebrat konkrétní položky nabídky a podnabídky při spuštění aplikace. |
+| [MSMoneyDemo](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/Visual%20C%2B%2B%202008%20Feature%20Pack) | Ukazuje, jak použít MFC k vytvoření uživatelského rozhraní podobného jako Microsoft Money. |
+| [MSOffice2007Demo](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/Visual%20C%2B%2B%202008%20Feature%20Pack) | Ukazuje, jak implementovat aplikaci editoru podobnou aplikaci Office 2007 s podobnými prvky uživatelského rozhraní a omezenými podobnými funkcemi. Ukázka MSOffice2007Demo implementuje celé uživatelské rozhraní pásu karet, podobně jako aplikace Office 2007. Některé prvky pásu karet jsou připojeny k funkcím v aplikaci. |
+| [NewControls](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/Visual%20C%2B%2B%202008%20Feature%20Pack) | Ukazuje možnosti mnoha ovládacích prvků implementovaných v knihovně MFC. Tyto ovládací prvky obsahují přizpůsobitelná tlačítka, ovládací prvky pro výběr barvy a palety, výběr písma, editor obrázků, mřížku vlastností, ovládací prvek s maskou editování a seznam prostředí a ovládací prvky stromu. |
+| [OutlookDemo](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/Visual%20C%2B%2B%202008%20Feature%20Pack) | Ukazuje, jak vytvořit aplikaci, která je podobná aplikaci Outlook 2003/2007. |
+| [OutlookMultiViews](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/Visual%20C%2B%2B%202008%20Feature%20Pack) | Ukazuje, jak přepínat mezi několika zobrazeními v jednom dokumentu v aplikaci SDI. Ukázka používá ovládací prvek panelu aplikace Outlook k vypsání dostupných zobrazení a přepínání mezi nimi. |
+| [OwnerDrawMenu](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/Visual%20C%2B%2B%202008%20Feature%20Pack) | Ukazuje, jak dynamicky nakreslit položky místní nabídky. |
+| [PaletteDemo](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/Visual%20C%2B%2B%202008%20Feature%20Pack) | Ukazuje, jak vytvořit panel nástrojů s více sloupci pomocí informační oblasti pro vykreslení vlastníka. Kliknutím na 2, 3 nebo 4 na panelu nástrojů Standardní se můžete změnit za běhu. počet sloupců vlastního panelu nástrojů. |
+| [PropSheetDemo](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/Visual%20C%2B%2B%202008%20Feature%20Pack) | Znázorňuje následující typy ovládacího prvku seznam vlastností: jednoduchý, s kartami na levé straně, se stromovou strukturou na levé straně, na kartách ve stylu OneNotu a na levé straně seznamu položek. |
+| [RebarTest](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/Visual%20C%2B%2B%202008%20Feature%20Pack) | Ukazuje přizpůsobitelný ovládací prvek matrice, který je hostitelem panelu nástrojů. |
+| [RibbonGadgets](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/Visual%20C%2B%2B%202008%20Feature%20Pack) | Znázorňuje různé ovládací prvky, které lze hostovat v ovládacím prvku pásu karet. V dolní části hlavního rámce můžete najít okno zdrojového kódu s textem zdrojového kódu, který popisuje, jak vytvořit konkrétní miniaplikaci. |
+| [RibbonMDI](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/Visual%20C%2B%2B%202008%20Feature%20Pack) | Ukazuje použití ovládacího prvku pásu karet s rozhraním multi Document Interface. |
+| [RollupPane](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/Visual%20C%2B%2B%202008%20Feature%20Pack) | Ukazuje plovoucí podokno "informace", které se automaticky shrnuje. Můžete stisknout tlačítko Připnout na titulek plovoucího podokna a zapnout nebo vypnout vypínání. |
+| [SetPaneSize](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/Visual%20C%2B%2B%202008%20Feature%20Pack) | Ukazuje, jak programově nastavit velikost ukotveného podokna. |
+| [Posuvník](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/Visual%20C%2B%2B%202008%20Feature%20Pack) | Ukazuje, jak implementovat tlačítko panelu nástrojů, které je hostitelem externího ovládacího prvku. |
+| [Stavová](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/Visual%20C%2B%2B%202008%20Feature%20Pack) | Ukazuje, jak implementovat aplikaci, která ukládá a načítá různé stavy pro panel nabídek, panely nástrojů a ukotvení oken. |
+| [StatusBarDemo](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/Visual%20C%2B%2B%202008%20Feature%20Pack) | Ukazuje, jak přidat do stavového řádku různé rozšířené ovládací prvky. |
+| [TabbedView](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/Visual%20C%2B%2B%202008%20Feature%20Pack) | Ukazuje, jak vytvořit zobrazení, které obsahuje více zobrazení s kartami, například karty v excelovém sešitu. |
+| [TabControl](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/Visual%20C%2B%2B%202008%20Feature%20Pack) | Ukazuje ovládací prvek karty MFC a různé vzhledy, které používají různé vlastnosti a vizuální správce. |
+| [TasksPane](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/Visual%20C%2B%2B%202008%20Feature%20Pack) | Znázorňuje třídy podokna úloh knihovny MFC a jejich různé vzhledy pomocí různých vlastností a vizuálních manažerů. |
+| [ToolbarDateTimePicker](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/Visual%20C%2B%2B%202008%20Feature%20Pack) | Ukazuje, jak integrovat ovládací prvek pro výběr data a času pomocí panelu nástrojů. |
+| [ToolTipDemo](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/Visual%20C%2B%2B%202008%20Feature%20Pack) | Ukazuje, jak používat pokročilé funkce popisku knihovny MFC. |
+| [TrayMenu](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/Visual%20C%2B%2B%202008%20Feature%20Pack) | Ukazuje možnost použít nabídky ovládacího panelu MFC s ikonou na hlavním panelu systému. Je podobný ikonám oznámení v pravém dolním rohu displeje. |
+| [VisualStudioDemo](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/Visual%20C%2B%2B%202008%20Feature%20Pack) | Ukazuje, jak implementovat aplikaci s mnoha stejnými funkcemi a možnostmi uživatelského rozhraní sady Visual Studio. Je znázorněno mnoho prvků uživatelského rozhraní sady Visual Studio, včetně přizpůsobitelné ukotvení nabídek, panelů nástrojů a oken. |
+| [Editor](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/Visual%20C%2B%2B%202008%20Feature%20Pack) | Ukazuje, jak implementovat aplikaci, která napodobuje funkci programu WordPad, včetně prvků uživatelského rozhraní a některých funkcí. |
+| [WorkSpaceToolBar](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/Visual%20C%2B%2B%202008%20Feature%20Pack) | Ukazuje, jak přidat panel nástrojů do ukotveného podokna. Podobá se panelu nástrojů v Průzkumník řešení v sadě Visual Studio. |
+
+### <a name="mfc-samples---windows-touch"></a>Ukázky knihovny MFC – dotykové ovládání Windows
+
+| Ukázkový název | Popis |
+|--|--|
+| [GestureDemo](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/WindowsTouch) | Ukazuje podporu dotykového ovládání Windows v knihovně MFC (vyžaduje dotykový hardware). |
+| [TouchDemo](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/WindowsTouch) | Ukazuje podporu dotykového ovládání Windows v knihovně MFC (vyžaduje dotykový hardware). |
+
+## <a name="odbc-samples"></a>Ukázky ODBC
+
+| Ukázkový název | Popis |
+|--|--|
+| [odbcsql](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/ODBC%20Database%20sample) | Tato ukázka předvádí, jak použít rozhraní API ODBC pro připojení k databázi a přístup k ní. |
+
+## <a name="os-samples"></a>Ukázky operačního systému
+
+| Ukázkový název | Popis |
+|--|--|
+| [GetImage](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples) | Ukazuje rozhraní API (Application Programming Interface) pro získání imagí (Windows Image Acquisition). |
+
+## <a name="unix-samples"></a>Ukázky systému UNIX
+
+| Ukázkový název | Popis |
+|--|--|
+| [UNIX – ccWrapper](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples) | Demonstruje obálku, která mapuje příznaky z kompilátorů Sun Forte a RSZ na kompilátor C++ Microsoft Visual (CL. exe). |
+
+## <a name="windows-8-samples"></a>Ukázky pro Windows 8
+
+Vzorový balíček Windows 8 obsahuje všechny příklady kódu aplikace, které byly vytvořeny a aktualizovány pro systém Windows 8. Vzorový balíček nabízí pohodlný způsob, jak stáhnout všechny ukázky najednou. Ukázky v tomto ukázkovém balíčku jsou k C#dispozici C++v,, VB.NET a JavaScriptu. Galerie ukázek systému Windows obsahuje ukázky kódu, které využívají různé nové programovací modely, platformy, funkce a součásti dostupné v systémech Windows 8 a Windows Server 2012. Tyto ukázky ke stažení obsahují soubor řešení sady Visual Studio (*sln*), zdrojové soubory, prostředky, prostředky a metadata nezbytné pro zkompilování a spuštění.
+
+Další informace jsou k dispozici o programovacích modelech, platformách, jazycích a rozhraní API, které jsou znázorněny v jednotlivých příkladech. Projděte si doprovodné materiály, kurzy a referenční materiály uvedené v dokumentaci k systému Windows 8, které jsou k dispozici v centru pro vývojáře v systému Windows. Tyto ukázky jsou k dispozici tak, jak jsou, k předvedení funkcí programovacích modelů a rozhraní API funkcí pro systémy Windows 8 a Windows Server 2012.
+
+| Ukázkový název | Popis |
+|--|--|
+| [Ukázka přenosu na pozadí (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tato ukázka předvádí uživatelsky přívětivé a flexibilní chování rozhraní API pro přenos na pozadí pro aplikace prostředí Windows Runtime. Uvedené ukázkové scénáře zahrnují stahování souborů a nahrávání. |
+| [Ukázka CryptoWinRT (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | V této ukázce se dozvíte, jak používat nová kryptografická rozhraní API. |
+| [Ukázka tisku (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tato ukázka předvádí, jak můžou aplikace integrovat prostředí pro tisk v systému Windows. Mezi scénáře popsané v této ukázce patří: tisk z aplikace pomocí panelu ovládací tlačítka a tiskového kontraktu, tisk z prostředí aplikace a dalších. |
+| [Ukázka HttpClient (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tato ukázka demonstruje použití třídy HttpClient a rozhraní IXMLHTTPRequest2 k nahrávání a stahování různých typů obsahu ze serveru HTTP pomocí síťových funkcí poskytovaných prostředí Windows Runtime. |
+| [Ukázka snímače akcelerometr (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | V této ukázce se dozvíte, jak používat rozhraní `Windows.Devices.Sensors.Accelerometer` API. Tato ukázka umožňuje uživateli zobrazit síly zrychlení podél osy X, Y a Z pro akcelerometr s 3 osami. Můžete vybrat jeden ze tří scénářů. |
+| [Ukázka názvu obrázku účtu (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tento příklad ukazuje různé způsoby získání jména aktuálně přihlášeného uživatele. Také ukazuje, jak získat a nastavit obrázek, který se používá pro dlaždici uživatele. |
+| [Ukázka nastavení aplikace (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tato ukázka předvádí, jak použít rozhraní API ApplicationSettings a nastavení flyouts k integraci uživatelského rozhraní nastavení aplikace s nastavením ovládací tlačítko. Ukázka používá obor názvů `Windows.UI.ApplicationSettings` a `WinJS.UI.SettingsFlyout`. |
+| [Ukázka aplikace pro zařízení s Windows Store pro kameru (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tato ukázka předvádí, jak vytvořit aplikaci pro Windows Store pro fotoaparát. Aplikace pro Windows Store je poskytována NEZÁVISLÝm výrobcům softwaru nebo výrobci OEM, aby mohla odlišit možnosti zachycení konkrétní kamery. |
+| [Ukázka začátku C++ jednoduchého čtečky blogů (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Ukázka ukazuje některé základní principy vývoje aplikací pro Windows Store v nativním C++ formátu pomocí jazyka XAML k definování uživatelského rozhraní. Je to kompletní funkční verze aplikace, která je popsána v centru pro vývojáře v systému Windows. |
+| [Ukázka čtení a zápisu dat (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tento příklad ukazuje, jak použít třídy datawrite a datawrite pro ukládání a načítání dat. |
+| [Ukázka dat aplikací (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | V této ukázce se dozvíte, jak ukládat a načítat data specifická pro jednotlivé uživatele a aplikace pro Windows Store pomocí rozhraní API pro prostředí Windows Runtime aplikací pro data aplikací. Data aplikací zahrnují stav relace, předvolby uživatele a další nastavení. |
+| [Ukázka přístupu vlastních ovladačů (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | V této ukázce se dozvíte, jak používat CreateDeviceAccessInstance a IDeviceIoControl pro přístup k specializovanému zařízení. |
+| [Ukázka XAML a GridView Essentials (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tato ukázka předvádí, jak použít ovládací prvky GridView a ListView. |
+| [Ukázka metriky animace (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | V této ukázce se dozvíte, jak používat rozhraní API metriky animace v `Windows.UI.Core`. AnimationMetrics pro přístup k nezpracovaným parametrům, které definují animace v knihovně animací Windows. |
+| [Ukázka msAudioCategory správce přehrávání (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tato ukázka předvádí, jak vybrat správnou kategorii msAudioCategory pro datový proud zvukového videa (AV) pro konfiguraci jako datový proud přehrávání zvuku. |
+| [Ukázka XAML DirectX 3D pro hry (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tato ukázka předvádí implementaci jednoduché hry pro první osobu 3-D s použitím rozhraní DirectX (Direct3D 11,1, Direct2D, XInput a XAudio2) a XAML v C++ aplikaci. XAML se používá pro zprávy o stavu zobrazení a stavu hry. |
+| [Ukázka posouvání, posouvání a přiblížení XAML (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tato ukázka předvádí, jak použít ovládací prvek ScrollViewer k posouvání a přiblížení. |
+| [Ukázka ovládacího prvku FlipView v jazyce XAML (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tato ukázka demonstruje použití ovládacího prvku FlipView, který uživatelům umožňuje překlopit kolekci. |
+| [Ukázka senzoru Gyrometer (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | V této ukázce se dozvíte, jak používat rozhraní `Windows.Devices.Sensors.Gyrometer` API. Tato ukázka umožňuje uživateli zobrazit úhlovou rychlost podél osy X-, Y-a Z pro gyrometer na 3 ose. |
+| [Ukázka sady SDK pro tiskárny pro aplikace zařízení (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | V této ukázce se dozvíte, jak vytvořit aplikaci zařízení pro tiskárny, které se dají aktivovat ze strany smlouvy, smlouvy printTaskSettings a ze zpráv zobrazených v backgroundTask v reakci na událost ovladače tisku. |
+| [Ukázka úlohy na pozadí (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | V této ukázce se dozvíte, jak vytvořit a zaregistrovat úlohy na pozadí pomocí rozhraní API pro úlohy na pozadí prostředí Windows Runtime. Úloha na pozadí je aktivována systémem nebo časovou událostí a může být omezena jednou nebo více podmínkami. |
+| [Ukázka StreamSocket (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tato ukázka demonstruje základy třídy StreamSocket pomocí síťových funkcí poskytovaných prostředí Windows Runtime. Součást klienta Sample vytvoří soket TCP pro připojení k síti, použije soket k posílání dat a další. |
+| [Ukázka naplánovaných oznámení (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | V této ukázce se dozvíte, jak používat plánované a opakované aktualizace dlaždic a oznámení informačních zpráv pro aplikaci. Tato možnost umožňuje zadat přesný čas pro doručení oznámení, a to i v případě, že aplikace neběží. |
+| [Doprovodná Ukázka správce přehrávání (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tato ukázka demonstruje, jak vybrat správnou kategorii msAudioCategory pro datový proud zvukového videa a nakonfigurovat ho jako datový proud přehrávání zvuku. |
+| [Ukázka OrientationSensor (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | V této ukázce se dozvíte, jak používat rozhraní `Windows.Devices.Sensors.OrientationSensor` API. Umožňuje uživateli Zobrazit matici otočení a Quaternion hodnoty, které odpovídají aktuální orientaci zařízení. |
+| [Ukázka přístupu k souborům (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | V této ukázce se dozvíte, jak vytvořit, číst, zapsat, zkopírovat a odstranit soubor, jak načíst vlastnosti souboru a jak sledovat soubor nebo složku, aby k nim mohla aplikace získat přístup znovu. Tato ukázka používá rozhraní API `Windows.Storage` a `Windows.Storage.AccessCache`. |
+| [Ukázka vyměnitelného úložiště (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Ukázka vyměnitelného úložiště ukazuje, jak přenést soubory do a ze vyměnitelných úložných zařízení. Tato ukázka vyžaduje vyměnitelná úložná zařízení připojená k systému, jako je třeba fotoaparát, Media Player, mobilní telefon nebo USB flash disk. |
+| [Ukázka spolupráce v jazyce XAML SurfaceImageSource pro rozhraní DirectX (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tato ukázka předvádí, jak použít `SurfaceImageSource` k zahrnutí obsahu rozhraní DirectX do aplikace XAML. Tato ukázka používá i C++ C#. |
+| [Ukázka připojení pomocí WebSockets (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tato ukázka předvádí, jak používat objekty WebSocket v připojené aplikaci pro Windows Store. Ukázka zahrnuje základní funkce, jako je například vytvoření připojení, odeslání a příjem dat a ukončení připojení. |
+| [Konfigurace kláves pro ukázku multimédií (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tato ukázka předvádí, jak nakonfigurovat hardwarové mediální klíče na klávesnici. Pak můžete pomocí nakonfigurovaných klíčů ovládat datový proud zvukového videa stisknutím nebo kliknutím na tlačítko Přehrát, pozastavit, zastavit a tak dále. |
+| [Ukázka animací preference XAML (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tato ukázka předvádí, jak používat vestavěné vlastní animace ve vaší aplikaci. |
+| [Ukázka oznámení informační zprávy (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | V této ukázce se dozvíte, jak používat informační oznámení: ty, které se zobrazují jako místní oznámení v pravém horním rohu obrazovky. Uživatel může vybrat informační zprávy (dotykové ovládání nebo kliknout na tlačítko) a spustit přidruženou aplikaci. |
+| [Ukázka aplikace pro výběr kontaktů (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tato ukázka předvádí, jak použít výběr kontaktů k výběru jednoho nebo více kontaktů. Obsahuje také základní implementaci rozhraní API pro výběr kontaktů, která ukazuje, jak zobrazit seznam kontaktů pro uživatele. |
+| [Ukázka hry rozhraní DirectX mramor bludiště (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tato ukázka předvádí, jak vytvořit základní 3D herní zařízení pomocí rozhraní DirectX. Tato hra je jednoduchá labyrinthá hra, kde je hráč vyzván, aby provedl mramor z bludiště nástrah pomocí ovládacích prvků náklonu. |
+| [Ukázka aplikace pro pohlednici DirectX (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tato ukázka předvádí implementaci jednoduché aplikace pro Windows Store využívající rozhraní DirectX C++ pro vytváření pohlednic pomocí zprostředkovatele komunikace s rozhraním DirectX a XAML. |
+| [Ukázka DirectX 3D hry (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tato ukázka předvádí implementaci jednoduché hry pro první osobu 3-D s použitím rozhraní DirectX (Direct3D 11,1, Direct2D, XInput a XAudio2) v C++ aplikaci. |
+| [Ukázka ovládacího prvku AppBar v jazyce XAML (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tato ukázka předvádí, jak použít ovládací prvek AppBar k zobrazení navigace, příkazů a nástrojů uživatelům. Panel aplikace je ve výchozím nastavení skrytý a zobrazí se, když uživatel přetáhne prst z horního nebo dolního okraje obrazovky. |
+| [Ukázka formátování data a času (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tato ukázka předvádí, jak použít třídu DateTimeFormatter v oboru názvů `Windows.Globalization.DateTimeFormatting` k zobrazení dat a časů podle preferencí uživatele. |
+| [Ukázka sekundárních dlaždic (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tento příklad ukazuje, jak připnout a použít sekundární dlaždici. To je dlaždice, která přímo přistupuje ke konkrétnímu nevýchozímu oddílu nebo prostředí v rámci aplikace, jako je uložená hra nebo konkrétní přítel v rámci aplikace sociální sítě. |
+| [Ukázka testu úspěšnosti vstupu dotyku (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | V této ukázce se používá analytická skládanka tvarů k předvedení toho, jak zpracovávat vstup ukazatele, implementovat vlastní testování přístupů pro dotykové vstupy a zpracovávat manipulace v aplikaci pro C++ Windows Store pomocí rozhraní a DirectX. |
+| [Ukázka informací o síti (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tato ukázka demonstruje, jak používat rozhraní prostředí Windows Runtime rozhraní API pro informace o síti. |
+| [Ukázka zjednodušené rukopisu Input (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tato ukázka předvádí, jak používat funkci rukopisu v aplikacích pro Windows Store. |
+| [Ukázka StorageDataSource a GetVirtualizedFilesVector (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tento příklad ukazuje, jak načíst a zobrazit obrázky v knihovně obrázků uživatele. |
+| [Ukázka vyvolání gesta na základě okrajů (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tento příklad ukazuje, jak naslouchat událostem, ke kterým dochází v uživatelském rozhraní založeném na Edge, pomocí třídy `EdgeGesture`. |
+| [Ověřit, zda je aktuální relace vzdálená ukázka (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tato ukázka demonstruje použití rozhraní `Windows.System.RemoteDesktop` API. |
+| [Ukázka prostředků a lokalizace aplikací (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tento příklad ukazuje, jak pomocí prostředků aplikace oddělit Lokalizovatelný obsah od kódu aplikace. Ukázka používá obory názvů `Windows.ApplicationModel.Resources.Core` a `Windows.Globalization` a `WinJS.Resources`. |
+| [Ukázka kontextové nabídky (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tento příklad ukazuje, jak vytvořit kontextovou nabídku a jak nahradit výchozí kontextovou nabídku pro text. Tato ukázka používá rozhraní `Windows.UI.Popups` API, včetně PopupMenu a události při vybírání. |
+| [Ukázka geografického umístění (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Ukázka geografického umístění ukazuje, jak použít rozhraní API pro geografické umístění k získání geografického umístění počítače uživatele. Aplikace může použít rozhraní API pro geografickou polohu k tomu, aby získala místo jednou, nebo může toto umístění průběžně sledovat. |
+| [Ukázka dialogu zprávy (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tato ukázka předvádí, jak použít MessageDialog pro zobrazení dialogů, nastavení příkazů a jejich akcí a změnu výchozího tlačítka. Obor názvů `Windows.UI.Popups` obsahuje třídu MessageDialog. |
+| [Ukázka rozšíření MediaStreamSource Media Extension (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | V této ukázce se dozvíte, jak podpořit koncept MediaStreamSource Microsoft Silverlightu v aplikaci pro Windows Store. |
+| [Ukázka DirectWrite svislého textu (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tato ukázka používá DirectWrite a Direct2D ke správnému zobrazení svislého textu ve vlastním obrazovém prvku. |
+| [Ukázka rotace řetězu DXGI prohození (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tato ukázka demonstruje metodu IDXGISwapChain1:: SetRotation a způsob, jakým lze použít metodu ve spojení s předotočeným obsahem pro zlepšení výkonu prezentace. |
+| [Ukázka vlastních obrázků Direct2D (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tato ukázka předvádí, jak implementovat vlastní Direct2D efekty pomocí standardních shaderů v pixelech, vrcholech a výpočetních shaderech. |
+| [Ukázka DirectX dotykové vstupu (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tato ukázka znázorňuje dotykovou a pohybovou navigaci v prostředí 3D v C++ aplikaci s využitím Direct3D. |
+| [Ukázka herního kontroleru XInput (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tato ukázka demonstruje použití rozhraní API XInput v C++ aplikaci. Přečte vstup z herního kontroleru Xbox a zobrazí data o pohybech analogového vstupu a stisku tlačítek. |
+| [Ukázka interoperability Direct3D-Direct2D (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | V této ukázce se dozvíte, jak pracovat s Direct2D a DirectWrite pro zápis textu do cíle vykreslování Direct3D. Je to efektivní způsob, jak vytvořit hlavice a readouts na základě textu, jako jsou například vyhodnocování panelů ve hrách nebo v 3D aplikacích. |
+| [Ukázka syndikace (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tato ukázka předvádí základní aplikaci pro Windows Store pro systém Windows 8, která může načítat informační kanály z webové služby. Tato ukázka je aktuálně k dispozici v programovacích jazycích JavaScript, C#, C++a VB. |
+| [Ukázka dlaždic aplikace a označení znaku (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | V této ukázce se dozvíte, jak používat dlaždici aplikace, což je reprezentace a spouštěcí bod vaší aplikace na obrazovce Start. Také ukazuje, jak na této dlaždici použít badge. Jedná se o metodu, kterou aplikaci přenáší informace o stavu uživatele, když aplikace není spuštěná. |
+| [Ukázka uživatelských a vlastních ovládacích prvků XAML (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tento příklad ukazuje, jak vytvořit a použít prvky XAML `UserControl` a vytvořit vlastní ovládací prvky pro vaše projekty. |
+| [Ukázka načítání prostředků Direct3D (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tato ukázka demonstruje načítání prostředků C++ Direct3D pro aplikace s rozhraním DirectX. |
+| [Ukázka interaktivního přizpůsobení interaktivity XAML a GridView (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tato ukázka demonstruje model interakce ovládacího prvku `ListView`. |
+| [Ukázka ovládacího prvku WebView v XAML (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tato ukázka předvádí, jak použít ovládací prvek `WebView` k zobrazení adresy URL, načtení HTML, interakci se skriptem v rámci `WebView`a použití `WebViewBrush`. |
+| [Ukázka glóbusového senzoru (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tato ukázka předvádí, jak používat rozhraní `Windows.Devices.Sensors.Compass` API. Tato ukázka umožňuje uživateli zobrazit kompas čtení jako magnetické-sever a v závislosti na nainstalovaném senzoru hodnota true-sever. |
+| [Ukázka orientace displeje (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tento příklad ukazuje, jak použít třídu `DisplayProperties` pro nastavení orientace zobrazení v aplikaci. |
+| [Ukázka Direct2D interpolace režimu (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tato ukázka ukazuje různé režimy interpolace používané nástrojem Direct2D. |
+| [Ukázka předvolbách globalizace (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tento příklad ukazuje, jak použít třídu `Windows.System.UserProfile.GlobalizationPreferences` pro získání předvoleb pro globalizaci uživatele. Také ukazuje, jak použít třídy `GeographicRegion` a `Language`. |
+| [Ukázka Direct2D geometrie realing (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tento příklad ukazuje, jak teselace geometrie ve více jádrech může přispět k omezení času vykreslování geometrie. Použití masek neprůhlednosti a sítí je alternativou k tradičnímu vykreslování geometrie, které může být v některých situacích lepší. |
+| [Ukázka mapování písma jazyka (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tento příklad ukazuje, jak získat doporučení pro písma konkrétního jazyka pomocí třídy `LanguageFontGroup` v oboru názvů `Windows.Globalization.Fonts`. |
+| [Ukázka senzoru Inclinometer (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | V této ukázce se dozvíte, jak používat rozhraní `Windows.Devices.Sensors.Inclinometer` API. Tato ukázka umožňuje uživateli zobrazit úhly naklonování kolem osy X, Y a Z na 3 ose inclinometer. |
+| [Ukázka stylu s vysokým kontrastem v jazyce XAML (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tato ukázka předvádí různé techniky pro implementaci podpory pro režim vysokého kontrastu ve vaší aplikaci. Podpora režimu vysokého kontrastu je důležitá, aby byla aplikace přístupná uživatelům s problémy zraku. |
+| [Ukázka možností vstupního zařízení (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tato ukázka předvádí, jak zadat dotaz na vstupní zařízení, která jsou připojená k zařízení uživatele. A, jak podporovat vstupní režimy ukazatele, dotykového ovládání, pera a pera, myši a klávesnice pro aplikace pro Windows Store. |
+| [Ukázka zásad EAS pro poštovní klienty (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | V této ukázce se dozvíte, jak poštovní klienti můžou načítat informace o zařízení a pracovat s dodanými zásadami Exchange Active Sync (EAS). Aplikace pro Windows Store můžou nakonfigurovat své e-mailové klienty tak, aby zůstaly v souladu s danými zásadami EAS. |
+| [Ukázka DatagramSocket (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tato ukázka demonstruje základy `DatagramSocket` třídy pomocí síťových funkcí poskytovaných prostředí Windows Runtime. Součást klienta Sample vytvoří soket UDP, používá soket k posílání a přijímání dat a zavírá soket. |
+| [Ukázka DirectWrite Hello World (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tato ukázka ukazuje, jak použít DirectWrite a Direct2D k vykreslení textu "Hello World" do `CoreWindow`. |
+| [Ukázka komprese (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tato ukázka předvádí, jak číst strukturovaná data ze souboru a zapisovat komprimovaná data do nového souboru a jak číst komprimovaná data a zapisovat dekomprimovaná data do nového souboru. Mnohé aplikace potřebují komprimovat a dekomprimovat data. |
+| [Ukázka na pozadí stavu sítě (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tato ukázka demonstruje, jak určit změnu v profilu připojení k Internetu, registrací obslužné rutiny úlohy na pozadí pro událost změny stavu sítě s použitím podmínky pro přítomnost Internetu. |
+| [Ukázka informací o balíčku aplikace (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | V této ukázce se dozvíte, jak získat informace o balíčku pomocí rozhraní prostředí Windows Runtime API pro balení. Uživatelé získají aplikaci pro Windows Store jako balíček aplikace. Systém Windows používá informace v balíčku aplikace k instalaci aplikace na základě jednotlivých uživatelů. |
+| [Ukázka LightSensor (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | V této ukázce se dozvíte, jak používat rozhraní `Windows.Devices.Sensors.LightSensor` API. Tato ukázka umožňuje uživateli zobrazit okolní světlo čtený jako hodnotu LUX. Můžete zvolit jeden ze dvou scénářů: LightSensor události dat, aktuální čtení světelných senzorů a další. |
+| [Ukázka zřizování účtu pro mobilní širokopásmové připojení (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | V této ukázce se dozvíte, jak pomocí rozhraní API Windows 8 Mobile Broadband zřizovacího agenta (`Windows.Networking.NetworkOperators.ProvisioningAgent`) nakonfigurovat systém Windows 8 s požadovanými informacemi o připojení a zřizováním přístupu. |
+| [Ukázka přehrání média (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tato ukázka demonstruje přehrávání rozhraní API. Ukazuje, jak můžete rozšířit mediální aplikaci pro streamování videa, zvuku a obrázků do jiných zařízení v místní síti. |
+| [Ukázka vstupní dotykové klávesnice (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tato ukázka předvádí, jak spustit dotykovou klávesnici automaticky ve vlastních ovládacích prvcích, které nejsou odvozeny z ovládacích prvků Platform. Ukázka implementuje vlastní ovládací prvky, které vyžadují vstup z klávesnice a nejsou odvozeny ze standardních ovládacích prvků XAML. |
+| [Ukázka knihovny animací XAML (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tato ukázka předvádí, jak animovat prvky a použít funkce náběh a doběh pro animace k dosažení různých efektů. |
+| [Ukázka přichycení (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Přichycený stav je jeden ze čtyř možných stavů zobrazení aplikace. Přichycení aplikace změní velikost aplikace na 320 pixelů na šířku, což umožňuje sdílení obrazovky s jinou aplikací. Přitahování umožňuje zobrazit dvě aplikace ve stejnou dobu. |
+| [Ukázka kódování média (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tato ukázka předvádí, jak použít rozhraní `Windows.Media.Transcoding` API k překódování videosouboru v aplikaci pro Windows Store. Překódování je převod digitálního mediálního souboru, například videosoubor nebo zvukového souboru, z jednoho formátu do druhého. |
+| [Ukázka dvojrozměrné transformace XAML (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tato ukázka předvádí, jak použít dvourozměrné transformace pro úpravu způsobu zobrazení prvků v aplikaci. Transformace definuje, jak namapovat nebo Transformovat body z jednoho souřadnicového prostoru na jiný prostor souřadnic. |
+| [Ukázka zápisu dat IXmlReader a IXmlWriter XML pro čtení (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tato ukázka předvádí, jak použít `IXmlReader` a `IXmlWriter` v aplikaci pro Windows Store C++s. Slouží ke čtení a zápisu dat XML z plochého textového souboru ve formátu XML. Tato rozhraní jsou součástí rozhraní API Windows Win32 a COM, ale jsou podporována prostředí Windows Runtime. |
+| [Ukázka zachycení média pomocí digitalizačního zařízení (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tato ukázka předvádí, jak používat rozhraní `MediaCapture` API k zachycení videa, zvuku a obrázků ze digitalizačního zařízení, jako je třeba webová kamera. |
+| [Ukázka místní nabídky XAML (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tento příklad ukazuje, jak vytvořit a použít místní ovládací prvek XAML v projektech. |
+| [Ukázka CameraCaptureUI (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tato ukázka předvádí, jak používat rozhraní `Windows.Media.Capture.CameraCaptureUI` API, které zobrazuje uživatelské rozhraní na celé obrazovce pro zachytávání fotek a videí. Uživatelské rozhraní pro zachycení kamery poskytuje ovládací prvky pro přepínání z fotky na video, časovač pro pořizování fotografií s časem zpoždění a další. |
+| [Ukázka přehrávání zvukového souboru XAudio2 (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tato ukázka demonstruje použití XAudio2 v aplikaci. |
+| [Ukázka C++ Hilo (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tato ukázka předvádí, jak sestavit kompletní aplikaci pro Windows Store C++ pomocí jazyka a XAML. Ukázka fotky Hilo obsahuje pokyny pro C++ vývojáře, kteří chtějí vytvořit aplikaci pro Windows 8 pomocí moderních C++, XAML a prostředí Windows Runtime. |
+| [Ukázka vlastního vykreslovacího modulu textu DirectWrite (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tento příklad ukazuje, jak implementovat vlastní vykreslovací modul textu pro DirectWrite. |
+| [Ukázka výčtu písem DirectWrite (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tato ukázka ukazuje, jak použít DirectWrite k zobrazení seznamu písem v systémové kolekci písem na zařízení uživatele. |
+| [Ukázka transformace perspektivy Direct2D (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tento příklad ukazuje, jak použít rozhraní `DrawBitmap` API k zobrazení obrázku s použitou transformací perspektivy. |
+| [Ukázka CameraOptionsUI (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tato ukázka demonstruje použití možností kamery v aplikaci zařízení. Rozhraní `CameraOptionsUI` API zobrazuje uživatelské rozhraní pro úpravu nastavení kamery. Tato ukázka vyžaduje webovou kameru. |
+| [Ukázka přehrávání zvukového kontroleru XInput (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tato ukázka demonstruje přehrávání XAudio2 do zařízení XInput, jako je například náhlavní souprava v aplikaci. |
+| [Ukázka efektu Direct2D 3D transformace (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tato ukázka demonstruje různé metody pro transformaci obrázku v trojrozměrném prostoru. |
+| [Ukázka autorizace účtu systému Windows (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tato ukázka předvádí, jak použít členy oboru názvů `Windows.Security.Authentication.OnlineId` k ověření uživatele s účtem Microsoft v režimu delegování. A jak odesílat získané tokeny do rozhraní API pro živé připojení pomocí protokolu REST. |
+| [Ukázka formátování a analýzy čísel (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tato ukázka předvádí, jak použít třídy `DecimalFormatter`, `CurrencyFormatter`, `PercentFormatter`a `PermilleFormatter` v oboru názvů `Windows.Globalization.NumberFormatting`. Slouží k zobrazení a analýze čísel, měn a procentuálních hodnot. |
+| [Ukázka nabídky DXGI a uvolnění prostředků (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tato ukázka demonstruje použití rozhraní API DXGI `IDXGIDevice2::OfferResources` a `IDXGIDevice2::ReclaimResources` v C++ aplikaci s rozhraním DirectX. |
+| [Ukázka zprostředkovatele webu ověřování (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tato ukázka demonstruje rozhraní API WinRT zprostředkovatele webového ověřování. Umožňuje povolit připojení jednotného přihlašování k poskytovatelům OAuth, jako je Facebook, Google, Microsoft a Twitter. |
+| [Ukázka efektu zvukového streamu XAudio2 (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tato ukázka předvádí streamování zvuku C++ v aplikaci s použitím rozhraní API XAudio2 a Media Foundation. |
+| [Ukázka úvodní obrazovky (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | V této ukázce se dozvíte, jak napodobovat úvodní obrazovku, kterou systém Windows pro vaši aplikaci zobrazuje, a to tak, že systém Windows zobrazí úvodní obrazovku, kterou zobrazuje. |
+| [Ukázka úlohy na pozadí SMS (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | V této ukázce se dozvíte, jak pomocí rozhraní API pro úlohy na pozadí (`Windows.ApplicationModel.Background`) používat rozhraní API pro mobilní širokopásmové zařízení (`Windows.Devices.Sms`) systému Windows 8 k odesílání a příjmu textových zpráv SMS. |
+| [Ukázka odeslání, přijetí a správy SIM zprávy serveru SMS (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | V této ukázce se dozvíte, jak používat rozhraní SMS API Windows 8 Mobile Broadband (`Windows.Devices.Sms`). |
+| [Zkušební verze aplikace a ukázka nákupu v aplikaci (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | V této ukázce se dozvíte, jak pomocí rozhraní API pro licencování poskytovaného Windows Storu zjistit stav licence aplikace nebo funkci povolenou při nákupu v aplikaci. |
+| [Ukázka vstupu textu vstupní dotykové klávesnice (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | V této ukázce se dozvíte, jak povolit optimalizovaná zobrazení na dotykové klávesnici. Funguje pomocí vstupních oborů a typů vstupu s ovládacími prvky v oboru názvů `WinJS.UI` a s ovládacími prvky jazyka XAML `TextBox` a `RichEdit`. |
+| [Ukázka úpravy textu XAML (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tato ukázka předvádí, jak použít ovládací prvky textové zadání ve vaší aplikaci. |
+| [Ukázka fondu vláken (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | V této ukázce se dozvíte, jak spouštět pracovní položky asynchronně pomocí prostředí Windows Runtime rozhraní API fondu vláken. |
+| [Ukázka zprostředkovatele uživatelského rozhraní pro automatizaci uživatelského rozhraní (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tato ukázka předvádí, jak vytvořit zprostředkovatele automatizace uživatelského rozhraní společnosti Microsoft. Zpřístupňuje programové informace o aplikaci pro Windows Store přístupným technologiím, jako jsou čtečky obrazovky. Ukázka je Direct2D aplikace. |
+| [Ukázka přístupnosti XAML (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | V této ukázce se dozvíte, jak do vaší aplikace přidat základní podporu usnadnění. |
+| [Ukázka seznamu testů (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tato ukázka předvádí, jak vytvořit, uložit, zobrazit a upravit seznam skladeb zvukových souborů. Tato ukázka používá třídy, které jsou v oboru názvů `Windows.Media.Playlists`. |
+| [Ukázka klienta multimediálního serveru (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tato ukázka předvádí, jak vytvořit klienta multimediálního serveru pomocí rozhraní API pro multimediální server. Ukázka mediálního serveru ukazuje, jak pomocí programu v místní síti Procházet server digitálního média a zobrazit všechny jeho videosoubory. |
+| [Ukázka aplikace Direct2D Magazine (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | V této ukázce se dozvíte, jak používat Direct2D, DirectWrite, komponentu Windows Imaging Component (WIC) a XAML k sestavení aplikace s prezentací typu Magazine. |
+| [Ukázka účtu mobilního širokopásmového připojení a správy zařízení (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | V této ukázce se dozvíte, jak používat rozhraní API pro mobilní širokopásmové připojení Windows 8 (`Windows.Networking.NetworkOperators`) používané operátory pro mobilní sítě (MNO). Ukazuje, jak používat rozhraní API MobileBroadbandAccount k načítání a zobrazování dostupných účtů pro mobilní širokopásmové připojení. |
+| [Ukázka blízkosti (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tato ukázka předvádí, jak použít třídy `PeerFinder` a `ProximityDevice` ke komunikaci s okolními počítači. Rozhraní `Proximity` API můžete použít k výměně malých zpráv během gesta klepnutí nebo k nastavení připojení soketu mezi partnerskými aplikacemi. |
+| [Vytvoření ukázkové součásti prostředí Windows Runtime v procesu (C + + CX) (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tento příklad ukazuje, jak vytvořit komponentu v C++/CX, která se používá v C++/CX, JavaScriptu a C# kódu klienta. Projekt OvenServer obsahuje běhovou třídu s názvem `Oven`, která implementuje rozhraní `IOven` a rozhraní `IAppliance`. |
+| [Ukázka automatických otočení pro zařízení (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tento příklad ukazuje, jak použít třídu `DisplayProperties` k zpracování a ověření událostí rotace zařízení. |
+| [Ukázka komunikace v reálném čase (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tato ukázka předvádí, jak používat funkci s nízkou latencí k povolení aplikací pro komunikaci v reálném čase. |
+| [Ukázka sdílení zdrojového obsahu aplikace (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tato ukázka předvádí, jak může aplikace sdílet obsah s jinou aplikací. Tato ukázka používá třídy z oboru názvů `Windows.ApplicationModel.DataTransfer`. |
+| [Hledat v ukázce smlouvy (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | V této ukázce se dozvíte, jak umožnit uživatelům hledat v aplikaci, když vyberou ovládací tlačítko hledání a otevřou podokno hledání. A jak používat podokno hledání k zobrazení návrhů pro dotazy uživatelů. |
+| [Ukázka nezpracovaných oznámení (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | V této ukázce se dozvíte, jak používat nezpracované oznámení, která jsou nabízená oznámení bez přidruženého uživatelského rozhraní, které pro aplikaci provádí úlohu na pozadí. |
+| [Ukázka základních obrázků Direct2D (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tato ukázka ukazuje, jak načíst obrázek, použít na něj efekt Gaussovské rozostření a pak jej zobrazit v `Windows::UI::Core::CoreWindow`. |
+| [Ukázka efektů Direct2D na primitivních příkladech (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tato ukázka ukazuje, jak použít efekty obrázků pro Direct2D primitivní prvky. Tato ukázka kreslí zaoblené obdélníky pomocí Direct2D a potom vykresluje DirectWrite text uprostřed obdélníků. Pak se na něj aplikuje graf efektu. |
+| [Ukázka ControlChannelTrigger StreamSocket (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Ukázka ukazuje, jak použít třídu `ControlChannelTrigger` v aplikaci pro Windows Store. Používá `StreamSocket`protokolu TCP, takže je aplikace vždy připojená a vždy dostupná. Tato ukázka demonstruje použití oznámení sítě na pozadí. |
+| [Ukázka ControlChannelTrigger StreamWebSocket (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Ukázka ukazuje, jak použít třídu `ControlChannelTrigger` k povolení aplikace pro Windows Store, která používá StreamWebSocket, aby byla vždy připojená a vždy dosažitelná. Tato ukázka demonstruje použití oznámení sítě na pozadí. |
+| [Ukázka spuštění přidružení (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | V této ukázce se dozvíte, jak spustit výchozí aplikaci uživatele pro typ souboru nebo protokol. Můžete se také dozvědět, jak povolit, aby byla aplikace výchozí aplikací pro typ souboru nebo protokol. |
+| [Ukázka AtomPub (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | V této ukázce se dozvíte, jak získat přístup k publikovaným kanálům obsahu z webu a jak ho vytvořit, aktualizovat a odebrat. Používá prostředí Windows Runtime implementaci standardu publikování Atom. |
+| [Ukázka zápisu certifikátů (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tato ukázka předvádí, jak vytvořit a zaregistrovat certifikát v hierarchii certifikace. Zkušební kopii Windows 8 získáte, když přejdete na Windows 8. Chcete-li získat zkušební kopii Microsoft Visual Studio 2012, navštivte sadu Visual Studio 2012. |
+| [Ukázka aplikace ve schránce (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tato ukázka předvádí, jak může aplikace používat příkazy schránky, včetně kopírování, vkládání, vyjmutí a přesunutí. Tato ukázka používá třídy z oboru názvů `Windows.ApplicationModel.DataTransfer`. |
+| [Ukázka režimů složeného efektu Direct2D (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tato ukázka znázorňuje široké spektrum kombinovaných a blendových režimů dostupných z Direct2D. |
+| [Ukázka mapování nárazníku Direct3D (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tato ukázka demonstruje mapování mezi nárazníky pomocí normálního rozložení a osvětlení po jednotlivých pixelech. |
+| [Podrobnosti kalendáře a matematický vzorek (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tato ukázka předvádí, jak použít třídu `Calendar` v oboru názvů `Windows.Globalization` k manipulaci s daty a jejich zpracování na základě kalendářního systému a předvolbách globalizace uživatele. |
+| [Ukázka výčtu zařízení (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | V této ukázce se dozvíte, jak používat rozhraní API pro výčet zařízení k vyhledání dostupných zařízení a vyhledání informací o zařízení. Ukázka nabízí dva scénáře: v prvním scénáři se rozhraní API pro výčet zařízení používá k vyhledání specifických rozhraní zařízení. |
+| [Ukázka textu odstavce DirectWrite (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tento příklad ukazuje, jak použít DirectWrite a Direct2D k vykreslení textu odstavce na `CoreWindow`. A k rozložení použijte zarovnání a mezery znaků. |
+| [Reakce na vzhled ukázky klávesnice na obrazovce (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | [Tato dokumentace je předběžná a může se změnit.] V této ukázce se dozvíte, jak naslouchat a reagovat na vzhled měkké klávesnice na obrazovce. Když se fokus předává prvku, který vyžaduje textové zadání na zařízení, které nemá klávesnici. |
+| [Ukázka datových vazeb XAML (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tento příklad znázorňuje základní techniky vázání dat pomocí třídy vazby a rozšíření značek vazby. |
+| [Ukázka kurzu Direct3D (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tato ukázka je kurz o pěti lekcích. Poskytuje Úvod do rozhraní Direct3D API a zavádí koncepty a kód používaný v mnoha dalších ukázkách rozhraní DirectX. |
+| [Ukázka aplikace pro úpravu fotek Direct2D Effects (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tento příklad znázorňuje různé techniky manipulace s fotografiemi pomocí Direct2D efektů. Tato ukázka je rozdělena do několika částí. Lekce 1: zobrazuje základy načítání a vykreslování obrázku pomocí Direct2D efektů. |
+| [Ukázka relace zvukového systému Windows (WASAPI) (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Ukazuje, jak provádět různé úlohy související s audio pomocí rozhraní API zvukové relace systému Windows (WASAPI). |
+| [Ukázka názvu domény uživatele (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tato ukázka demonstruje funkce související s doménou, které poskytuje třída `UserInformation` `Windows.System.UserProfile` oboru názvů. Třída UserInformation umožňuje aplikaci získávat a nastavovat informace o uživateli. |
+| [Ukázka správy zpráv USSD (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tato ukázka demonstruje správu účtů sítě pomocí protokolu USSD s mobilními zařízeními s podporou systému GSM. USSD se obvykle používá pro správu účtů mobilního širokopásmového profilu pomocí operátoru mobilní sítě (MNO). |
+| [Ukázka optimalizace cest Bing Maps (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Ukázka ukazuje, jak použít JavaScript a vizuál C++ a vytvořit aplikaci pro nástroj pro optimalizaci cest Bing Maps v systému Windows 8. Optimalizátor cest ke službě Bing Maps používá JavaScript k definování uživatelského rozhraní a C++ souběžně náročného algoritmu. |
+| [Direct2D a DirectWrite animovaný text na cestě ukázka (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tento příklad ukazuje, jak použít Direct2D a DirectWrite k vykreslení řetězce textu kolem animované, nelineární geometrické cesty. Aplikace vykreslí "Hello, World!" opakuje se několikrát v různých jazycích podél Bézierovy křivky. |
+| [Ukázka ověřování hotspotů Wi-Fi (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tato ukázka předvádí, jak používat rozhraní API pro mobilní širokopásmové připojení systému Windows 8 (`Windows.Networking.NetworkOperators`) pro ověřování hotspotů Wi-Fi. Tento mechanismus použijte jako alternativu ke konfiguraci statických přihlašovacích údajů pro hotspot Wi-Fi. |
+| [Ukázka obrázků XAML (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tento příklad ukazuje různé techniky pro zobrazení a manipulaci s obrázky ve vaší aplikaci pomocí ovládacího prvku obrázek a třídy BitmapImage. |
+| [Ukázka aplikace v domácí skupině (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tato ukázka předvádí, jak použít `HomeGroup` k otevření, hledání a sdílení souborů. Tato ukázka používá některé z `HomeGroup` možností, které se nacházejí v `Windows.Storage.Pickers` a `Windows.Storage.KnownFolders`. |
+| [Ukázka kontrastu uživatelského rozhraní a nastavení (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | V této ukázce se dozvíte, jak používat rozhraní API nastavení uživatelského C# rozhraní v aplikaci Basic nebo JavaScript. |
+| [Ukázka výčtu složek (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tento příklad ukazuje, jak zobrazit seznam souborů a složek nejvyšší úrovně v rámci umístění. (Například složka, zařízení nebo síťové umístění.) A použití dotazů k zobrazení seznamu všech souborů v umístění jejich řazením do skupin souborů. |
+| [Ukázka výběru souboru (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | V této ukázce se dozvíte, jak získat přístup k souborům a složkám tím, že je uživatel vybere prostřednictvím nástroje pro výběr souborů. A, jak uložit soubor tak, aby uživatel mohl zadat název, typ souboru a umístění souboru, který se má uložit. |
+| [Ukázka smluv pro výběr souborů (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | V této ukázce se dozvíte, jak může aplikace poskytnout soubory, umístění pro uložení a aktualizace souborů v reálném čase ostatním aplikacím prostřednictvím výběru souborů. To se provádí v rámci smlouvy pro výběr otevření souboru, smlouvy pro výběr uložení souboru a smlouvy nástroje pro aktualizace souborů uložených v mezipaměti. |
+| [Ukázka hledání programového souboru (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | V této ukázce se dozvíte, jak zadávat dotazy na soubory v umístěních, jako je složka, knihovna, zařízení nebo síťové umístění. Používá rozhraní `Windows.Storage.Search` API. Důležité rozhraní API v této ukázce zahrnují: `QueryOptions` třídy, `StorageFileQueryResult` třídy a další. |
+| [Ukázka miniatury souborů a složek (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | V této ukázce se dozvíte, jak načíst miniatury pro soubory a složky. Používá rozhraní `Windows.Storage.FileProperties` API. |
+| [Ukázka manipulace s vstupy a gestaC++() (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tato ukázka předvádí, jak zpracovat vstupy a manipulace s ukazateli a gesta s rozhraními API `GestureRecognizer` v aplikaci pro Windows C++ Store pomocí rozhraní a DirectX. |
+| [Ukázka generátoru Direct3D HLSL Fractal (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tato ukázka demonstruje použití výpočetních shaderů Direct3D HLSL a DirectCompute k vytváření imagí Fractal. |
+| [Ukázka světelných efektů XAML Direct2D (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tato ukázka demonstruje světelné efekty dostupné v Direct2Dch efektech. Vlastnosti světelného efektu jsou ovládány ovládacími prvky rozhraní XAML a pak se zobrazují pomocí Direct2D prostřednictvím jazyka XAML SwapChainBackgroundPanel. |
+| [Ukázka tisku Direct2Dapp (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tato ukázka předvádí, jak přidat podporu tisku Direct2D do aplikace pro Windows Store. V této ukázce se dozvíte, jak pomocí funkcí Direct2D vykreslit obsah aplikace pro Windows Store pro tisk. A, jak odeslat vykreslený obsah do tiskárny. |
+| [Ukázka tiskových obrázků a efektů Direct2D (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tato ukázka předvádí, jak tisknout Direct2D image a Direct2D efekty v aplikaci pro Windows Store. |
+| [Ukázka animovaného textu Direct2D (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tato ukázka ukazuje, jak rychle vykreslit text pomocí metody Direct2D `FillOpacityMask`. Ukázka také reaguje na dotykové ovládání. Ke zvětšení nebo zmenšení textu lze použít dva prsty gesto roztažení prstů. |
+| [Ukázka efektů po zpracování Direct3D (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tato ukázka demonstruje následné zpracování rozhraní Direct3D 11,1 pro jednoduchou scénu rotující krychli, která využívá mezilehlé vyrovnávací paměti v poměru dolů. |
+| [Ukázka rozšířené jazykové služby (ELS) (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tato ukázka demonstruje použití rozšířených lingvistických služeb (ELS) v aplikaci pro Windows Store. Ukázka implementuje scénáře, které demonstrují použití tří dostupných služeb ELS Services. Scénáře ukazují, jak požádat o konkrétní službu. |
+| [Ukázka testování přístupů DirectWrite (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tato ukázka ukazuje, jak používat funkce testování přístupů v DirectWrite. Používají se k určení, která část zobrazeného textu se právě kliknula nebo se dotýká. |
+| [Ukázka vloženého objektu DirectWrite (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tento příklad ukazuje, jak vložit vložený objekt do rozložení textu, jako je například obrázek. |
+| [Ukázka vykreslování vektoru XAML (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tato ukázka předvádí, jak kreslit vektorové grafiky do aplikace. |
+| [Ukázka ovládání volání Bluetooth (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Ukázka Bluetooth CallControl ukazuje, jak nakonfigurovat výchozí komunikační zařízení Bluetooth pro zpracování volání. V této ukázce jsou C#k C++dispozici verze jazyka JavaScript,, a VB.NET. Tato ukázka vyžaduje znalost událostí systému Windows a zpracování událostí. |
+| [Ukázka seznamu příkazů Direct2D (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tato ukázka demonstruje použití seznamu příkazů. Používá se k nahrávání sady vektorových příkazů, vytvoření štětce obrázků ze seznamu příkazů a následnému naplnění geometrie obdélníku. Seznam příkazů zachovává nezávisle na rozlišení pro vektor. |
+| [Ukázka ControlChannelTrigger XMLHTTPRequest (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Ukázka ukazuje, jak použít třídu `ControlChannelTrigger` k povolení aplikace pro Windows Store, která používá `IXMLHTTPRequest2`, aby byla vždy připojená a vždy dosažitelná. Tato ukázka demonstruje použití oznámení v síti na pozadí v aplikaci pro Windows Store. |
+| [Ukázka nákresu XInput a JavaScriptu Controller (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tato ukázka předvádí, jak zabalit rozhraní API XInput C++ do komponenty prostředí Windows Runtime. Pak ji volá z aplikace pro Windows Store pomocí JavaScriptu. Tato ukázka implementuje aplikaci skici, která umožňuje použít herní herní zařízení Xbox k výběru tloušťky čáry a dalších. |
+| [Ukázka efektu matice Direct2D convolve (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tato ukázka demonstruje efekt matice Direct2D Effects convolve. Tato ukázka obsahuje příklad matric jádra konvoluce: průchozí (No-OP), rozostření pole (šířka 5), jednoduchá detekce hran, jednoduché zostření, reliéf, vertikální rozmazává (výška 10) následujících a další. |
+| [Ukázka implementace řetězce přepnutí rozhraní DirectX (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tento příklad ukazuje, jak přijímat události `CoreWindow` v nativní aplikaci a jak připojit řetěz přepnutí rozhraní DirectX k zobrazení aplikace. |
+| [Ukázka výběru přihlašovacích údajů (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tento příklad ukazuje, jak použít třídu `Windows.Security.Credentials.UI.CredentialPicker` k načtení přihlašovacích údajů. Tyto přihlašovací údaje mohou být předány rozhraním API, která je vyžadují, například `HttpClient`. |
+| [Ukázka animace Direct2D (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | V této ukázce se dozvíte, jak pomocí Direct2D vykreslovat a animovat primitivní Direct2D podél dráhy spirály. |
+| [Ukázka sdílení cílového obsahu aplikace (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tato ukázka předvádí, jak může aplikace přijímat obsah sdílený z jiné aplikace. Tato ukázka používá třídy z oboru názvů `Windows.ApplicationModel.DataTransfer` a `Windows.ApplicationModel.DataTransfer.Share`. |
+| [Ukázka Direct2D Uložit do souboru obrázku (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tato ukázka ukazuje, jak vykreslit na obrazovku pomocí Direct2D a DirectWrite. A jak uložit vykreslenou bitovou kopii na disk pomocí rozhraní API pro WIC. |
+| [Změna velikosti podle vzorku DPI (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tato ukázka popisuje, jak vytvořit aplikaci, která se škáluje podle hustoty pixelů obrazovky. Načte obrázky správného měřítka nebo přepíše výchozí měřítko. Tato ukázka používá rozhraní `Windows.Graphics.Display` API. |
+| [Vytvoření prostředí Windows Runtime ukázka komponenty v procesu (C#) (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tento příklad ukazuje, jak vytvořit komponentu v C# , která se používá v C++/CX, JavaScriptu a C# kódu klienta. Projekt OvenServer obsahuje běhovou třídu s názvem `Oven`, která implementuje rozhraní `IOven` a rozhraní `IAppliance`. |
+| [Ukázka oznámení a pravidelného oznamování na straně klienta (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | V této ukázce se dozvíte, jak může klientská aplikace registrovat a naslouchat nabízená oznámení odeslaná z webového serveru. Nabízená oznámení lze použít k aktualizaci znaku nebo dlaždice, vyvolání informačního oznámení nebo spuštění úlohy na pozadí. |
+| [Ukázka rozhraní API přenosného zařízení (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | V této ukázce se dozvíte, jak získat přístup k `IPortableDevice` C++ rozhraní API modelu COM z aplikace. Informace o tom, jak získat přístup k `IPortableDevice` rozhraní API modelu C++ com z desktopové aplikace, najdete v ukázce rozhraní API pro přenosné zařízení. |
+| [Ukázka PlayToReceiver (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tato ukázka předvádí, jak vytvořit software, který se hraje na přijímače. Pokud chcete, aby se software hrál jako přijímač, klikněte na tlačítko spustit příjemce. Pro zastavení přijímače klikněte na tlačítko Zastavit příjemce. |
+| [Ukázka přizpůsobení uzamčené obrazovky (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tato ukázka předvádí, jak použít rozhraní `LockScreen` API k nastavení obrázku zamykací obrazovky aktuálního uživatele. Tato ukázka používá třídy z oboru názvů `Windows.System.UserProfile`. |
+| [Ukázka odblokování přihlašovacích údajů (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tato ukázka předvádí, jak použít rozhraní API WinRT `PasswordVault` a jak používat zámek přihlašovacích údajů k ukládání přihlašovacích údajů webu. Konkrétní scénáře zahrnují jediného uživatele s jedním prostředkem a více uživatelů s jedním prostředkem. |
+| [Ukázka přehrávání nativního C++ videa v modulu Media Engine (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tato ukázka demonstruje přehrávání videa pomocí rozhraní `MediaEngine` API v C++ nativní aplikaci. |
+| [Ukázka rozšíření médií (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tato ukázka předvádí, jak používat rozšíření médií. Můžete použít efekty pro video, dekódovat video a vytvářet streamy médií pomocí obslužných rutin schématu. |
+| [Ukázka aplikací zamykací obrazovky (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | V této ukázce se dozvíte, jak může aplikace mít přítomnost na zamykací obrazovce – obrazovka, která se zobrazí, když je počítač zamčený – pomocí znaku, který poskytne základní informace o stavu nebo dlaždici k poskytnutí podrobnějšího stavu. |
+| [Ukázka zobrazení textu XAML (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tato ukázka předvádí, jak ovládat vzhled textu ve vaší aplikaci. |
+| [Ukázka SimpleOrientationSensor (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | V této ukázce se dozvíte, jak používat rozhraní `Windows.Devices.Sensors.SimpleOrientationSensor` API. |
+| [Ukázka Direct3D Sprite (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tato ukázka poskytuje implementaci rozhraní Direct3D pro chování dávky Sprite, podobně jako rozhraní XNA `SpriteBatch` API. Sprite jsou 2D bitmapy, které je možné transformovat a spravovat nezávisle na 3D scéně, obvykle se používá ve dvou D hrách. |
+| [Ukázka Direct3D stereoscopic 3D (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tato ukázka předvádí, jak do C++ aplikací přidat stereoscopic 3D efekt pomocí technologie Direct3D. Také ukazuje, jak reagovat na systémové stereo změny v Direct3D. Stereoscopic prostorový efekt vyžaduje zobrazení, které podporuje stereo 3-D. |
+| [Vytvoření komponenty prostředí Windows Runtime DLL s C++ ukázkou (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | Tento příklad ukazuje, jak vytvořit vnitroprocesové komponentu knihovny DLL v jazyce Microsoft Visual C++. Používá se v C++/CX, JavaScriptu a C# kódu klienta. Projekt OvenServer obsahuje běhovou třídu s názvem `Oven`, která implementuje rozhraní `IOven`. |
+| [Vytvoření komponenty prostředí Windows Runtime EXE s C++ ukázkou (Windows 8)](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples) | V této ukázce se dozvíte, jak vytvořit součást nezpracovaného spustitelného souboru EXE C++v Microsoft Visual. Používá se v C++/CX, JavaScriptu a C# kódu klienta. Projekt OvenServer obsahuje běhovou třídu s názvem `Oven`, která implementuje rozhraní `IOven`. |

@@ -1,5 +1,5 @@
 ---
-title: Platform::callbackcontext – výčet
+title: 'Platform:: CallbackContext – výčet'
 ms.date: 12/30/2016
 ms.topic: reference
 f1_keywords:
@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::CallbackContext Enumeration
 ms.assetid: 60e0c7cb-5d8f-482a-bdca-ca9335ae4899
-ms.openlocfilehash: 7f4e020ab0b1e377456c27d3b4666e15b5a4f7a1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1daa3988fcb985dab9d3083233a3703a20cc2fdb
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62161663"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214257"
 ---
-# <a name="platformcallbackcontext-enumeration"></a>Platform::callbackcontext – výčet
+# <a name="platformcallbackcontext-enumeration"></a>Platform:: CallbackContext – výčet
 
-Určuje kontext vlákna, ve kterém se spustí funkce zpětného volání (Obslužná rutina události).
+Určuje kontext vlákna, ve kterém se spustí funkce zpětného volání (obslužná rutina události).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -26,17 +26,17 @@ enum class CallbackContext {};
 
 ### <a name="members"></a>Členové
 
-|Typ kódu|Popis|
+|Kód typu|Popis|
 |---------------|-----------------|
-|Jakýkoli|Funkce zpětného volání lze spustit v libovolném kontextu vlákna.|
-|Stejné|Funkce zpětného volání lze spustit na pouze kontext vlákna, který spustil asynchronní operace.|
+|Vše|Funkce zpětného volání může být spuštěna v jakémkoli kontextu vlákna.|
+|Jedné|Funkce zpětného volání může být spuštěna pouze v kontextu vlákna, který spustil asynchronní operaci.|
 
 ### <a name="requirements"></a>Požadavky
 
-**Minimální podporovaná klienta:** Windows 8
+**Minimální podporovaný klient:** Systém Windows 8
 
-**Minimální podporovaná serveru:** Windows Server 2012
+**Minimální podporovaný Server:** Windows Server 2012
 
-**Namespace:** Platforma
+**Obor názvů:** Platformy
 
-**Metadata:** platform.winmd
+**Metadata:** Platform. winmd

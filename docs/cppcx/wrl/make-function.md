@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - Make function
 ms.assetid: 66704143-df99-4a95-904d-ed99607e1034
-ms.openlocfilehash: b45337ef773f93968570f62ab73c02d11fae88ff
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ffd0967b741475b260eef80ec24d56874a6bcb1f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398187"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213808"
 ---
 # <a name="make-function"></a>Make – funkce
 
-Inicializuje zadanou třídu Windows Runtime. Tato funkce slouží k vytvoření instance komponenty, který je definován ve stejném modulu.
+Inicializuje určenou třídu prostředí Windows Runtime. Pomocí této funkce lze vytvořit instanci komponenty, která je definována ve stejném modulu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -164,77 +164,77 @@ ComPtr<T> Make();
 
 ### <a name="parameters"></a>Parametry
 
-*T*<br/>
-Uživatel zadal třídu, která dědí z `WRL::RuntimeClass`.
+*Š*<br/>
+Uživatelem zadaná třída, která dědí z `WRL::RuntimeClass`.
 
 *TArg1*<br/>
-Typ argumentu 1, který je předán do třídy zadaného modulu runtime.
+Typ argumentu 1, který je předán zadané třídě modulu runtime.
 
 *TArg2*<br/>
-Typ argumentu 2, který je předán do třídy zadaného modulu runtime.
+Typ argumentu 2, který je předán zadané třídě modulu runtime.
 
 *TArg3*<br/>
-Typ argumentu 3, který je předán do třídy zadaného modulu runtime.
+Typ argumentu 3, který se předává zadané třídě modulu runtime.
 
 *TArg4*<br/>
-Typ argumentu 4, který je předán do třídy zadaného modulu runtime.
+Typ argumentu 4, který je předán zadané třídě modulu runtime.
 
 *TArg5*<br/>
-Typ argumentu 5, který je předán do třídy zadaného modulu runtime.
+Typ argumentu 5, který je předán zadané třídě modulu runtime.
 
 *TArg6*<br/>
-Typ argumentu 6, který je předán do třídy zadaného modulu runtime.
+Typ argumentu 6, který je předán zadané třídě modulu runtime.
 
 *TArg7*<br/>
-Typ argumentu 7, který je předán do třídy zadaného modulu runtime.
+Typ argumentu 7, který je předán zadané třídě modulu runtime.
 
 *TArg8*<br/>
-Typ argumentu 8, který je předán do třídy zadaného modulu runtime.
+Typ argumentu 8, který je předán zadané třídě modulu runtime.
 
 *TArg9*<br/>
-Typ argumentu 9, který je předán do třídy zadaného modulu runtime.
+Typ argumentu 9, který je předán zadané třídě modulu runtime.
 
 *arg1*<br/>
-Argument 1, který je předán do třídy zadaného modulu runtime.
+Argument 1, který je předán zadané třídě modulu runtime.
 
 *arg2*<br/>
-Argument 2, který je předán do třídy zadaného modulu runtime.
+Argument 2, který je předán zadané třídě modulu runtime.
 
 *arg3*<br/>
-Argument 3, který je předán do třídy zadaného modulu runtime.
+Argument 3, který je předán zadané třídě modulu runtime.
 
 *arg4*<br/>
-Argument 4, který je předán do třídy zadaného modulu runtime.
+Argument 4, který je předán zadané třídě modulu runtime.
 
 *arg5*<br/>
-Argument 5, který je předán do třídy zadaného modulu runtime.
+Argument 5, který je předán zadané třídě modulu runtime.
 
 *arg6*<br/>
-Argument 6, který je předán do třídy zadaného modulu runtime.
+Argument 6, který je předán zadané třídě modulu runtime.
 
 *arg7*<br/>
-Argument 7, který je předán do třídy zadaného modulu runtime.
+Argument 7, který je předán zadané třídě modulu runtime.
 
 *arg8*<br/>
-Argument 8, který je předán do třídy zadaného modulu runtime.
+Argument 8, který je předán zadané třídě modulu runtime.
 
 *arg9*<br/>
-Argument 9, který je předán do třídy zadaného modulu runtime.
+Argument 9, který je předán zadané třídě modulu runtime.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-A `ComPtr<T>` objektu v případě úspěchu; jinak, `nullptr`.
+Objekt `ComPtr<T>` v případě úspěchu; v opačném případě `nullptr`.
 
 ## <a name="remarks"></a>Poznámky
 
-Zobrazit [jak: Vytvoření instance komponenty přímo ke knihovně WRL](how-to-instantiate-wrl-components-directly.md) další rozdíly mezi touto funkcí a [Microsoft::WRL::Details::MakeAndInitialize](makeandinitialize-function.md)a pro příklad.
+Informace o rozdílech mezi touto funkcí a [Microsoft:: WRL::D etails:: MakeAndInitialize](makeandinitialize-function.md)a příkladem naleznete v tématu [How to: instance WRL Components přímo](how-to-instantiate-wrl-components-directly.md) .
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** implements.h
+**Hlavička:** Implements. h
 
-**Namespace:** Microsoft::WRL
+**Obor názvů:** Microsoft:: WRL
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Microsoft::WRL – obor názvů](microsoft-wrl-namespace.md)

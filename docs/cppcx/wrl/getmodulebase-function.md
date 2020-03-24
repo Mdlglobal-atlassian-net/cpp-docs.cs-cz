@@ -5,16 +5,16 @@ ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::GetModuleBase
 ms.assetid: 123d3b14-2eaf-4e02-8dcd-b6567917c6a6
-ms.openlocfilehash: 4d8c8467b7aeb9c21bf5f4ee19c60e6e60880688
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0d130fffa9fad9ae327d03eaa01d84742094cc67
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398391"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213964"
 ---
-# <a name="getmodulebase-function"></a>Getmodulebase – funkce
+# <a name="getmodulebase-function"></a>GetModuleBase – funkce
 
-Načte [ModuleBase](modulebase-class.md) ukazatel, který umožňuje zvyšování a dekrementace počet odkazů [RuntimeClass](runtimeclass-class.md) objektu.
+Načte ukazatel [ModuleBase](modulebase-class.md) , který umožňuje zvýšit a snížit počet odkazů objektu [RuntimeClass](runtimeclass-class.md) .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -24,20 +24,20 @@ inline Details::ModuleBase* GetModuleBase() throw()
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Ukazatel `ModuleBase` objektu.
+Ukazatel na objekt `ModuleBase`.
 
 ## <a name="remarks"></a>Poznámky
 
-Tato funkce se používá interně ke addref() vrátí odkaz na objekt.
+Tato funkce se interně používá ke zvýšení a snížení počtu odkazů na objekty.
 
-Tuto funkci můžete použít k řízení počty odkazů voláním [modulebase::incrementobjectcount –](modulebase-class.md#incrementobjectcount) a [modulebase::decrementobjectcount –](modulebase-class.md#decrementobjectcount).
+Pomocí této funkce lze řídit počty odkazů voláním [ModuleBase:: IncrementObjectCount –](modulebase-class.md#incrementobjectcount) a [ModuleBase::D ecrementobjectcount](modulebase-class.md#decrementobjectcount).
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** implements.h
+**Hlavička:** Implements. h
 
-**Namespace:** Microsoft::WRL
+**Obor názvů:** Microsoft:: WRL
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Microsoft::WRL – obor názvů](microsoft-wrl-namespace.md)
