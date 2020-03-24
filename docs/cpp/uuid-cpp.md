@@ -7,12 +7,12 @@ helpviewer_keywords:
 - __declspec keyword [C++], uuid
 - uuid __declspec keyword
 ms.assetid: 9d004621-09bc-4a8d-871b-648f5d5102d7
-ms.openlocfilehash: c121ad99dfbe0021a263f324ccdb9a95441bba33
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.openlocfilehash: 09e40d38382bea0f902fda03d15d24e0cf1a627d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70740465"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80187801"
 ---
 # <a name="uuid-c"></a>uuid (C++)
 
@@ -35,13 +35,13 @@ struct __declspec(uuid("00000000-0000-0000-c000-000000000046")) IUnknown;
 struct __declspec(uuid("{00020400-0000-0000-c000-000000000046}")) IDispatch;
 ```
 
-Tento atribut lze použít v opětovné deklaraci. To umožňuje systémovým hlavičkám dodat definice rozhraní `IUnknown`, jako je a změna deklarace v některé jiné hlavičce ( \<například Comdef. h >) k poskytnutí identifikátoru GUID.
+Tento atribut lze použít v opětovné deklaraci. To umožňuje systémovým hlavičkám dodat definice rozhraní, jako je `IUnknown`, a opětovnou deklaraci v některých dalších hlavičkách (například \<Comdef. h >) k poskytnutí identifikátoru GUID.
 
 Klíčové slovo [__uuidof](../cpp/uuidof-operator.md) lze použít k načtení KONSTANTNÍho identifikátoru GUID připojeného k uživatelsky definovanému typu.
 
 **Specifické pro konec Microsoftu**
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [__declspec](../cpp/declspec.md)<br/>
 [Klíčová slova](../cpp/keywords-cpp.md)

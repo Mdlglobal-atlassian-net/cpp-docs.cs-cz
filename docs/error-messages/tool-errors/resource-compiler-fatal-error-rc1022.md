@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - RC1022
 ms.assetid: 30a0f3c7-08a8-4c40-b0de-46ee5feb789d
-ms.openlocfilehash: 6ee09105822ea7dd4243741ed00ce36978f09583
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: db3e8522f132f9a65e39934ad95d2f9a9cb1b48f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62297278"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80182614"
 ---
 # <a name="resource-compiler-fatal-error-rc1022"></a>Závažná chyba kompilátoru prostředků RC1022
 
-očekávané "#endif.
+byl očekáván příkaz ' #endif '
 
-`#if`, **#Ifdef**, nebo **#ifndef** direktivy nebyl ukončen s `#endif` směrnice.
+Direktiva `#if`, **#ifdef**nebo **#ifndef** nebyla ukončena direktivou `#endif`.
 
-Ujistěte se, že dochází `#if`, **#ifdef**, nebo **#ifndef** v platnosti než tento příkaz.
+Ujistěte se, že je před tímto příkazem k dispozici `#if`, **#ifdef**nebo příkaz **#ifndef** .

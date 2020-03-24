@@ -1,25 +1,25 @@
 ---
-title: Kompilátor upozornění (úroveň 3) C4161
+title: Upozornění kompilátoru (úroveň 3) C4161
 ms.date: 08/27/2018
 f1_keywords:
 - C4161
 helpviewer_keywords:
 - C4161
 ms.assetid: 03d3be61-83f1-4009-8310-8758ab67055f
-ms.openlocfilehash: e1bbc949c298a7cfb6c3a3a061616db3dc4730f4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 94ff4b645ec704c1b17d3c74aba434cf3ac7f05e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402265"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80199001"
 ---
-# <a name="compiler-warning-level-3-c4161"></a>Kompilátor upozornění (úroveň 3) C4161
+# <a name="compiler-warning-level-3-c4161"></a>Upozornění kompilátoru (úroveň 3) C4161
 
-> #<a name="pragma-pragmapop--more-pops-than-pushes"></a>direktivy pragma *– Direktiva pragma*(protokolem POP služby služby..): Další POP než push
+> #<a name="pragma-pragmapop--more-pops-than-pushes"></a>pragma *pragma*(pop...): více bodů POP než push
 
 ## <a name="remarks"></a>Poznámky
 
-Protože váš zdrojový kód obsahuje jeden další pop než push pro direktivu pragma *– Direktiva pragma*, zásobníku nemusí fungovat podle očekávání. Vyhněte se upozornění, ujistěte se, že počet bodů POP, nesmí překročit počet nabízených oznámení.
+Vzhledem k tomu, že váš zdrojový kód obsahuje další pop než push *pro direktivu pragma pragma, zásobník*se nemusí chovat, jak očekáváte. Abyste se vyhnuli upozornění, ujistěte se, že počet bodů POP nepřekračuje počet nabízených oznámení.
 
 ## <a name="example"></a>Příklad
 

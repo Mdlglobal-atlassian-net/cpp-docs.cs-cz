@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - BK1503
 ms.assetid: e6582344-b91e-486f-baf3-4f9028d83c3b
-ms.openlocfilehash: c81e955b912e03b322c0429097410fae74713b9d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e0f05b3979024cb053394c51fa9337197b5de7bf
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62280136"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80197857"
 ---
 # <a name="bscmake-error-bk1503"></a>Chyba nástroje BSCMAKE BK1503
 
-Nelze zapisovat do souboru 'filename' [: z důvodu]
+do souboru filename [: důvod] nejde zapisovat.
 
-BscMake – kombinuje soubory .sbr vygenerované při kompilaci do jedné databáze prohlížeče. Pokud výsledná databáze prohlížeče přesáhne 64 MB, nebo pokud vstup (.sbr) souborů překračuje 4092, tato chyba bude vygenerován.
+BSCMAKE kombinuje soubory. sbr generované během kompilace do jedné databáze prohlížeče. Pokud výsledná databáze prohlížeče překračuje 64 MB nebo pokud počet vstupních (. SBR) souborů překročí 4092, bude tato chyba vyvolána.
 
-Je-li tento problém je více než 4092 soubory .sbr, je třeba zmenšit počet vstupních souborů. Z Visual Studia to můžete udělat [/FR](../../build/reference/fr-fr-create-dot-sbr-file.md) celý projekt a potom znovu zkontroluje každý soubor po souboru.
+Pokud problém způsobuje více než 4092 souborů. SBR, musíte snížit počet vstupních souborů. V rámci sady Visual Studio můžete to provést [/fr](../../build/reference/fr-fr-create-dot-sbr-file.md) celým projektem a pak znovu kontrolovat soubor podle souborů.
 
-Je-li tento problém souboru .BSC nástrojem, který je větší než 64MB, snížení počtu soubory .sbr jako vstup se zmenší velikost výsledného souboru .bsc. Kromě toho množství informací o procházení, může být snížena prostřednictvím /Em (vyloučit – makro rozšířit symboly), /El (vyloučit lokální proměnné) a /Es (soubory vyloučit).
+Pokud je problém způsobený souborem. BSC větším než 64 MB, zmenšuje se počet souborů. sbr jako vstup, čímž se zmenší velikost výsledného souboru. BSC. Kromě toho může být množství informací o procházení zmenšeno pomocí/em (vyloučit rozšířené symboly makra),/El (vyloučení místních proměnných) a/ES (vyloučit systémové soubory).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [BSCMAKEE – možnosti](../../build/reference/bscmake-options.md)

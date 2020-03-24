@@ -1,20 +1,20 @@
 ---
-title: Kompilátor upozornění (úroveň 1) C4379
+title: Upozornění kompilátoru (úroveň 1) C4379
 ms.date: 11/04/2016
 f1_keywords:
 - C4379
 helpviewer_keywords:
 - C4379
 ms.assetid: b23e8132-69aa-4649-9c1e-09813b9fb5b7
-ms.openlocfilehash: 110d45749bcfd219b38bf7a4e57a3263bffc5c65
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1163364778edd2dd34487fb7cd109e968006d937
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410392"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80186982"
 ---
-# <a name="compiler-warning-level-1-c4379"></a>Kompilátor upozornění (úroveň 1) C4379
+# <a name="compiler-warning-level-1-c4379"></a>Upozornění kompilátoru (úroveň 1) C4379
 
-Tento kompilátor nepodporuje verzi modulu common language runtime. Pomocí této verze může způsobit neočekávané výsledky.
+Verze verze modulu CLR (Common Language Runtime) není podporována tímto kompilátorem. Použití této verze může způsobit neočekávané výsledky.
 
-Máte předchozí verzi common language runtime na vašem počítači, ale ne aktuální verzi. C4379 vyřešíte instalací verze common language runtime, dodávané s kompilátoru.
+Na vašem počítači máte předchozí verzi modulu CLR (Common Language Runtime), ale ne aktuální verzi. Chcete-li vyřešit C4379, nainstalujte verzi modulu CLR (Common Language Runtime), který byl dodán s vaším kompilátorem.
