@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - const keyword [C++]
 ms.assetid: b21c0271-1ad0-40a0-b21c-5e812bba0318
-ms.openlocfilehash: 759ee503acb12f6c1a30fbbfaf87a8f66433e571
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cc1f117cc5f26edf9cd85461281b925c97fa5225
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154747"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80180301"
 ---
 # <a name="const-c"></a>const (C++)
 
-Při úpravách deklarace dat, **const** – klíčové slovo určuje, že objekt nebo proměnnou není možné upravit.
+Při úpravách deklarace dat určuje klíčové slovo **const** , že objekt nebo proměnnou nelze upravovat.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -26,7 +26,7 @@ member-function const ;
 
 ## <a name="const-values"></a>konstantní hodnoty
 
-**Const** – klíčové slovo určuje, že hodnota proměnné je konstantní a instruuje kompilátor, aby zabránil programátorovi v úpravách.
+Klíčové slovo **const** určuje, že hodnota proměnné je konstantní a instruuje kompilátor, aby zabránil programátorovi v úpravách.
 
 ```cpp
 // constant_values1.cpp
@@ -37,7 +37,7 @@ int main() {
 }
 ```
 
-V jazyce C++, můžete použít **const** – klíčové slovo místo [#define](../preprocessor/hash-define-directive-c-cpp.md) direktivy preprocesoru pro definování hodnot konstanty. Hodnoty definované pomocí **const** jsou předmětem kontroly typu a dá se použít místo konstantních výrazů. V jazyce C++ můžete zadat velikost pole **const** proměnné následujícím způsobem:
+V C++aplikaci můžete použít klíčové slovo **const** namísto [#define](../preprocessor/hash-define-directive-c-cpp.md) direktivy preprocesoru k definování konstantních hodnot. Hodnoty definované pomocí **const** jsou předmětem kontroly typu a lze je použít místo konstantních výrazů. V C++aplikaci můžete určit velikost pole s **konstantní** proměnnou následujícím způsobem:
 
 ```cpp
 // constant_values2.cpp
@@ -48,7 +48,7 @@ char store_char[maxarray];  // allowed in C++; not allowed in C
 
 V jazyce C směřují výchozí hodnoty konstant na externí propojení tak, aby se mohly zobrazit pouze ve zdrojových souborech. V jazyce C++ směřují výchozí hodnoty konstant na vnitřní propojení tak, aby se mohly zobrazit pouze v rámci souborů hlaviček.
 
-**Const** – klíčové slovo lze také použít v deklaracích ukazatelů.
+Klíčové slovo **const** lze také použít v deklaracích ukazatelů.
 
 ```cpp
 // constant_values3.cpp
@@ -60,7 +60,7 @@ int main() {
 }
 ```
 
-Ukazatel na proměnnou definovaný jako **const** lze přiřadit pouze k ukazatel, který je také deklarován jako **const**.
+Ukazatel na proměnnou deklarovaný jako **const** lze přiřadit pouze k ukazateli, který je také deklarován jako **const**.
 
 ```cpp
 // constant_values4.cpp
@@ -86,13 +86,13 @@ birthday.getMonth();    // Okay
 birthday.setMonth( 4 ); // Error
 ```
 
-Pro nekonstantní objekt lze volat konstantní nebo nekonstantní členské funkce. Můžete také přetížit pomocí členské funkce **const** – klíčové slovo; to umožňuje funkce, která se pro konstantním a nekonstantním objektům volat jinou verzi.
+Pro nekonstantní objekt lze volat konstantní nebo nekonstantní členské funkce. Můžete také přetížit členskou funkci pomocí klíčového slova **const** ; To umožňuje volání jiné verze funkce pro konstantní a nekonstantní objekty.
 
-Konstruktory a destruktory nelze deklarovat **const** – klíčové slovo.
+Nelze deklarovat konstruktory nebo destruktory pomocí klíčového slova **const** .
 
-## <a name="const-member-functions"></a>konstantní členské funkce
+## <a name="const-member-functions"></a>const členské funkce
 
-Deklarování členské funkce s **const** – klíčové slovo určuje, že je funkce, která neprovádí úpravy objektu, pro kterou je volána funkce "jen pro čtení". Konstantní členské funkce nelze měnit jakékoli nestatické datové členy ani volat jakékoli členské funkce, které nejsou konstantní. Pro deklarování konstantní členské funkce, umístěte **const** – klíčové slovo za pravou závorku seznamu argumentů. **Const** – klíčové slovo je požadováno v deklaraci a definici.
+Deklarace členské funkce pomocí klíčového slova **const** určuje, že funkce je funkce jen pro čtení, která nemění objekt, pro který je volána. Konstantní členská funkce nemůže změnit žádné nestatické datové členy ani volat žádné členské funkce, které nejsou konstantní. Chcete-li deklarovat konstantní členskou funkci, umístěte klíčové slovo **const** za pravou závorku seznamu argumentů. Klíčové slovo **const** je vyžadováno v deklaraci i v definici.
 
 ```cpp
 // constant_member_function.cpp
@@ -124,9 +124,9 @@ int main()
 }
 ```
 
-## <a name="c-and-c-const-differences"></a>Rozdíly u konstant C a C++
+## <a name="c-and-c-const-differences"></a>Rozdíly v C++ jazyce C a const
 
-Pokud deklarujete proměnnou pro tu **const** v souboru zdrojového kódu jazyka C, takto:
+Pokud deklarujete proměnnou jako **const** v souboru zdrojového kódu jazyka C, uděláte to takto:
 
 ```cpp
 const int i = 2;
@@ -138,13 +138,13 @@ Následně je možné tuto proměnnou použít v jiném modulu takto:
 extern const int i;
 ```
 
-Chcete-li získat stejné chování v jazyce C++, je třeba deklarovat, ale vaše **const** proměnné jako:
+Ale chcete-li získat stejné chování C++v nástroji, musíte deklarovat proměnnou **const** jako:
 
 ```cpp
 extern const int i = 2;
 ```
 
-Pokud chcete deklarovat **extern** proměnné v souboru zdrojového kódu jazyka C++ pro použití v jazyce C soubor zdrojového kódu, použijte:
+Pokud chcete deklarovat **externou** proměnnou v souboru C++ zdrojového kódu pro použití v souboru zdrojového kódu jazyka C, použijte:
 
 ```cpp
 extern "C" const int x=10;
@@ -154,18 +154,18 @@ pro zabránění v úpravě názvu kompilátorem jazyka C++.
 
 ## <a name="remarks"></a>Poznámky
 
-Když po seznamu parametrů členské funkce, **const** – klíčové slovo určuje, že funkce neprovádí úpravy objektu, pro kterou je vyvolána.
+Pokud je použit seznam parametrů členské funkce, klíčové slovo **const** určuje, že funkce neupraví objekt, pro který je vyvolán.
 
-Další informace o **const**, naleznete v následujících tématech:
+Další informace o **const**naleznete v následujících tématech:
 
 - [Ukazatelé const a volatile](../cpp/const-and-volatile-pointers.md)
 
-- [Kvalifikátory typu (referenční dokumentace jazyka C)](../c-language/type-qualifiers.md)
+- [Kvalifikátory typu (Referenční dokumentace jazyka C)](../c-language/type-qualifiers.md)
 
 - [volatile](../cpp/volatile-cpp.md)
 
 - [#define](../preprocessor/hash-define-directive-c-cpp.md)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Klíčová slova](../cpp/keywords-cpp.md)

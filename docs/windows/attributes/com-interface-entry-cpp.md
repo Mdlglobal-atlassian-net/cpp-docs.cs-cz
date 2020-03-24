@@ -1,21 +1,21 @@
 ---
-title: COM_INTERFACE_ENTRY (C++ atributů COM)
+title: com_interface_entry (C++ atribut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.com_interface_entry
 helpviewer_keywords:
 - com_interface_entry attribute
 ms.assetid: 10368f81-b99b-4a0f-ba4f-a142e6911a5c
-ms.openlocfilehash: 65d174679f851613e064568b071cfcbdad8f0f06
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d7b378baedd3f8c2720c7ab17698e8b416304061
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148260"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168301"
 ---
-# <a name="cominterfaceentry-c"></a>com_interface_entry (C++)
+# <a name="com_interface_entry-c"></a>com_interface_entry (C++)
 
-Přidá položku do rozhraní do mapy modelu COM cílové třídy.
+Přidá položku rozhraní do mapy modelu COM cílové třídy.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -27,15 +27,15 @@ Přidá položku do rozhraní do mapy modelu COM cílové třídy.
 ### <a name="parameters"></a>Parametry
 
 *com_interface_entry*<br/>
-Řetězec obsahující vlastní text položky. Seznam možných hodnot najdete v tématu [makra COM_INTERFACE_ENTRY](../../atl/reference/com-interface-entry-macros.md).
+Řetězec obsahující skutečný text položky. Seznam možných hodnot naleznete v tématu [COM_INTERFACE_ENTRY maker](../../atl/reference/com-interface-entry-macros.md).
 
 ## <a name="remarks"></a>Poznámky
 
-**Com_interface_entry** C++ atribut vloží nekrácený obsah řetězce znaků do objektu map rozhraní COM cílového objektu. Pokud se atribut používá jednou k cílovému objektu svého, položka je vložen do začátku existující mapování rozhraní. Pokud se atribut používá opakovaně stejný cílový objekt, položky jsou vloženy na začátku mapování rozhraní v pořadí, ve kterém jsou přijímány.
+Atribut **COM_INTERFACE_ENTRY** C++ vloží do mapování rozhraní modelu COM cílového objektu nezkrácený obsah řetězce znaků. Pokud je atribut použit pouze jednou pro cílový objekt, položka je vložena do začátku existující mapy rozhraní. Pokud je atribut použit opakovaně u stejného cílového objektu, položky jsou vloženy na začátek mapy rozhraní v pořadí, v jakém byly přijaty.
 
-Tento atribut vyžaduje, aby [coclass](coclass.md), [progid](progid.md), nebo [vi_progid –](vi-progid.md) atribut (nebo jiný atribut, který zahrnuje jednu z těchto) také použít u stejného elementu. Pokud se používá jakékoli jeden atribut, další dvě automaticky použity. Například pokud `progid` se použije, `vi_progid` a `coclass` jsou použita také.
+Tento atribut vyžaduje, aby atribut [Coclass](coclass.md), [ProgID](progid.md)nebo [vi_progid](vi-progid.md) (nebo jiný atribut, který implikuje jednu z nich) byl také použit pro stejný prvek. Je-li použit libovolný atribut, budou automaticky použity ostatní dva. Například pokud je použita `progid`, jsou použita také `vi_progid` a `coclass`.
 
-Protože první použití **com_interface_entry** způsobí, že nové rozhraní má být vložen na začátek mapu rozhraní, musí být jedna z následujících typů COM_INTERFACE_ENTRY:
+Vzhledem k tomu, že první použití **COM_INTERFACE_ENTRY** způsobí vložení nového rozhraní na začátek mapy rozhraní, musí být jedním z následujících typů COM_INTERFACE_ENTRY:
 
 - COM_INTERFACE_ENTRY
 
@@ -45,9 +45,9 @@ Protože první použití **com_interface_entry** způsobí, že nové rozhraní
 
 - COM_INTERFACE_ENTRY2_IID
 
-Další použití **com_interface_entry** atribut můžete používat všechny podporované typy COM_INTERFACE_ENTRY.
+Další použití atributu **COM_INTERFACE_ENTRY** může používat všechny podporované typy COM_INTERFACE_ENTRY.
 
-Toto omezení je nezbytné, protože ATL použije první položku v mapě rozhraní jako identita `IUnknown`; proto položka musí být platné rozhraní. Například následující ukázka kódu je neplatný, protože první položka v mapě rozhraní neurčuje skutečné rozhraní modelu COM.
+Toto omezení je nezbytné, protože knihovna ATL používá první položku v mapě rozhraní jako `IUnknown`identity. Proto musí být položka platné rozhraní. Například následující příklad kódu je neplatný, protože první položka v mapě rozhraní neurčuje skutečné rozhraní COM.
 
 ```cpp
 [ coclass, com_interface_entry =
@@ -60,7 +60,7 @@ Toto omezení je nezbytné, protože ATL použije první položku v mapě rozhra
 
 ## <a name="example"></a>Příklad
 
-Následující kód přidá dvě položky do existující mapování rozhraní modelu COM z `CMyBaseClass`. Standardní rozhraní je první a druhý skryje `IDebugTest` rozhraní.
+Následující kód přidá dvě položky do existující mapy rozhraní modelu COM `CMyBaseClass`. První je standardní rozhraní a druhý skrývá `IDebugTest` rozhraní.
 
 ```cpp
 // cpp_attr_ref_com_interface_entry.cpp
@@ -90,7 +90,7 @@ class CMyClass: public IMyClass, public IDebugTest
 };
 ```
 
-Výsledný objekt mapy modelu COM pro `CMyBaseClass` vypadá takto:
+Výsledná mapa objektů modelu COM pro `CMyBaseClass` je následující:
 
 ```cpp
 BEGIN_COM_MAP(CMyClass)
@@ -105,18 +105,18 @@ END_COM_MAP()
 
 ## <a name="requirements"></a>Požadavky
 
-### <a name="attribute-context"></a>Atribut kontextu
+### <a name="attribute-context"></a>Kontext atributu
 
 |||
 |-|-|
-|**Platí pro**|**Třída**, **– struktura**|
-|**Opakovatelné**|Ano|
-|**Vyžadované atributy**|Jeden nebo více z následujících akcí: `coclass`, `progid`, nebo `vi_progid`.|
+|**Platí pro**|**Třída**, **Struktura**|
+|**REPEATABLE**|Ano|
+|**Požadované atributy**|Jednu nebo více následujících možností: `coclass`, `progid`nebo `vi_progid`.|
 |**Neplatné atributy**|Žádné|
 
-Další informace o kontexty atributů najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
+Další informace o kontextech atributů naleznete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [COM – atributy](com-attributes.md)<br/>
 [Atributy třídy](class-attributes.md)<br/>

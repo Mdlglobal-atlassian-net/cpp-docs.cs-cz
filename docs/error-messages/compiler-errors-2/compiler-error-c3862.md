@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3862
 ms.assetid: ba547366-4189-4077-8c00-ab45e08a9533
-ms.openlocfilehash: 2ba130862b1debbe2991ca7cbcae50192f900cd8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0b9c1e1213949d7d700094caa6687232df881ce6
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62302311"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80165480"
 ---
 # <a name="compiler-error-c3862"></a>Chyba kompilátoru C3862
 
-> "*funkce*': nejde zkompilovat nespravovanou funkci s parametrem/CLR: pure nebo/CLR: safe
+> '*Function*': nespravovanou funkci nelze zkompilovat s možností/CLR: pure nebo/CLR: Safe
 
 ## <a name="remarks"></a>Poznámky
 
-**/CLR: pure** a **/CLR: safe** – možnosti kompilátoru jsou zastaralé v sadě Visual Studio 2015 a není podporována v sadě Visual Studio 2017.
+Možnosti **/clr: Pure** a **/clr: Safe** jsou zastaralé v aplikaci Visual Studio 2015 a nejsou podporovány v aplikaci Visual Studio 2017.
 
-Kompilace s **/CLR: pure** nebo **/CLR: safe** vytvoří bitové kopie pouze jazyk MSIL, bitovou kopii s bez nativního (nespravovaného) kódu.  Proto je nelze použít `unmanaged` direktivy pragma v **/CLR: pure** nebo **/CLR: safe** kompilace.
+Kompilace s možností **/clr: Pure** nebo **/clr: Safe** vytvoří obrázek pouze v jazyce MSIL, obrázek bez nativního (nespravovaného) kódu.  Proto nemůžete použít direktivu pragma `unmanaged` v kompilaci **/clr: Pure** nebo **/clr: Safe** .
 
-Další informace najdete v tématu [/CLR (kompilace Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) a [spravované, nespravované](../../preprocessor/managed-unmanaged.md).
+Další informace naleznete v tématu [/CLR (Common Language Runtime Compilation)](../../build/reference/clr-common-language-runtime-compilation.md) a [Managed, unmanaged](../../preprocessor/managed-unmanaged.md).
 
 ## <a name="example"></a>Příklad
 

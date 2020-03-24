@@ -7,12 +7,12 @@ helpviewer_keywords:
 - expression evaluation
 - expression evaluation, about expression evaluation
 ms.assetid: 4a792154-533b-48b9-8709-31bfc170f0a7
-ms.openlocfilehash: 6770d3fb314222c7c58b6b97fa42d74cbc1e9b33
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 5213fc7972f3a2590ceac5038a7b5e07495df594
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857317"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178846"
 ---
 # <a name="semantics-of-expressions"></a>Sémantika výrazů
 
@@ -116,6 +116,6 @@ Definice jazyka C++ aktuálně nespecifikuje body sekvence. Jazyk C++ společnos
 
 - Výraz v příkazu return. Výraz je vyhodnocován úplně a všechny vedlejší účinky jsou dokončeny před návratem řízení do funkce volání.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Výrazy](../cpp/expressions-cpp.md)

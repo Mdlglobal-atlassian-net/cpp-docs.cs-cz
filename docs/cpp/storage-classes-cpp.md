@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - storage classes [C++], basic concepts
 ms.assetid: f10e1c56-6249-4eb6-b08f-09ab1eef1992
-ms.openlocfilehash: 5b30fe7bc6665da9172f093f8ea6a2130cb900b2
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: d4fe1e7f14ef2a11e5e7ac32b4ffb0247aab3c84
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447316"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178538"
 ---
 # <a name="storage-classes"></a>Třídy úložiště
 
@@ -30,7 +30,7 @@ ms.locfileid: "79447316"
    register int val; // warning C5033: 'register' is no longer a supported storage class
 ```
 
-## <a name="static"></a>tras
+## <a name="static"></a><a name="static"></a>tras
 
 Klíčové slovo **static** lze použít k deklarování proměnných a funkcí v globálním oboru, oboru názvů a oboru třídy. Statické proměnné lze také deklarovat v místním oboru.
 
@@ -155,11 +155,11 @@ var == value
 
 Počínaje verzí C++ 11 je statická místní proměnná inicializaci zaručena jako bezpečná pro přístup z více vláken. Tato funkce se někdy nazývá *Magic static*. V aplikaci s více vlákny je však nutné synchronizovat všechna další přiřazení. Statickou inicializační funkci bezpečnou pro přístup z více vláken lze zakázat pomocí příznaku [/Zc: threadSafeInit-](../build/reference/zc-threadsafeinit-thread-safe-local-static-initialization.md) Flag, aby nedošlo k závislosti na CRT.
 
-## <a name="extern"></a>extern
+## <a name="extern"></a><a name="extern"></a>extern
 
 Objekty a proměnné deklarované jako **extern** deklarují objekt, který je definován v jiné jednotce překladu nebo v nadřazeném oboru jako s vnějším propojením. Další informace naleznete v tématu [externí](extern-cpp.md) a [jednotky překladu a propojení](program-and-linkage-cpp.md).
 
-## <a name="thread_local"></a>thread_local (C++ 11)
+## <a name="thread_local-c11"></a><a name="thread_local"></a>thread_local (C++ 11)
 
 Proměnná deklarovaná pomocí specifikátoru **thread_local** je přístupná pouze ve vlákně, ve kterém je vytvořena. Proměnná je vytvořena při vytvoření vlákna a zničena při zničení vlákna. Každé vlákno má svou vlastní kopii proměnné. V systému Windows je **thread_local** funkčně ekvivalentní s atributem __declspec specifickým pro Microsoft [(vlákno)](../cpp/thread.md) .
 
@@ -194,7 +194,7 @@ Co je třeba si uvědomit o specifikátoru **thread_local** :
 
 Ve Windows je **thread_local** funkčně ekvivalentní [__declspec (vlákno)](../cpp/thread.md) s tím rozdílem, že **__declspec (vlákno)** lze použít pro definici typu a je platný v kódu jazyka C. Kdykoli je to možné, použijte **thread_local** , protože je součástí C++ standardu a je proto lépe přenosná.
 
-##  <a name="register"></a>Registrace
+##  <a name="register"></a><a name="register"></a>Registrace
 
 **Visual Studio 2017 verze 15,3 a novější** (k dispozici v [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)): klíčové slovo **Register** již není podporovanou třídou úložiště. Klíčové slovo je stále rezervované ve standardu pro budoucí použití.
 

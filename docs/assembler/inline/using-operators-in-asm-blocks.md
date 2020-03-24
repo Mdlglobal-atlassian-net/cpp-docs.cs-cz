@@ -9,18 +9,18 @@ helpviewer_keywords:
 - operators [C++], using in __asm blocks
 - square brackets [ ]
 ms.assetid: a26ccfd4-40ae-4a61-952f-c417982aa8dd
-ms.openlocfilehash: a871c19942252bf6a1a4901f8854b7b759700cd9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b6ac9f7174baf1e0ebe41181c6a6f43e7bb3f5d1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62166500"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169094"
 ---
-# <a name="using-operators-in-asm-blocks"></a>Používání operátorů v blocích __asm
+# <a name="using-operators-in-__asm-blocks"></a>Používání operátorů v blocích __asm
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
-`__asm` Block nemůže používat konkrétní operátory jazyka C nebo C++, jako **<<** operátor. Ale operátory sdílí C a MASM, například \* operátoru, jsou interpretovány jako operátory jazyka sestavení. Například mimo `__asm` blokovat, hranaté závorky (**[] č.**) jsou interpretovány jako vnější subscripty pole, které C automaticky škáluje, aby velikost prvku v poli. Uvnitř `__asm` bloku, že se zobrazují jako MASM operátoru indexu, který dává za bajtovým posunem. z jakéhokoli datového objektu nebo popisek (ne jenom pole). Následující kód ukazuje rozdíl:
+Blok `__asm` nemůže používat operátory jazyka C C++ nebo specifického typu, jako je například operátor **<<** . Nicméně operátory sdílené pomocí jazyka C a MASM, jako je například operátor \*, jsou interpretovány jako operátory pro sestavení jazyka. Například mimo blok `__asm`, jsou hranaté závorky ( **[]** ) interpretovány jako ohraničující podindexy pole, které jazyk C automaticky škáluje na velikost prvku v poli. Uvnitř bloku `__asm` se zobrazují jako operátor indexu MASM, který vydává posun bajt bez měřítka z libovolného datového objektu nebo popisku (nikoli pouze pole). Rozdíl je znázorněn v následujícím kódu:
 
 ```cpp
 int array[10];
@@ -30,7 +30,7 @@ __asm mov array[6], bx ;  Store BX at array+6 (not scaled)
 array[6] = 0;         /* Store 0 at array+24 (scaled) */
 ```
 
-První odkaz na `array` nezmění, ale druhá. Všimněte si, že můžete použít **typ** operátor k dosažení škálování podle konstantu. Například následující příkazy jsou ekvivalentní:
+První odkaz na `array` není škálovaná, ale druhým je. Všimněte si, že operátor **Type** můžete použít k dosažení škálování na základě konstanty. Například následující příkazy jsou ekvivalentní:
 
 ```cpp
 __asm mov array[6 * TYPE int], 0 ; Store 0 at array + 24
@@ -38,8 +38,8 @@ __asm mov array[6 * TYPE int], 0 ; Store 0 at array + 24
 array[6] = 0;                   /* Store 0 at array + 24 */
 ```
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Použití jazyka C nebo C++ v blocích __asm](../../assembler/inline/using-c-or-cpp-in-asm-blocks.md)<br/>

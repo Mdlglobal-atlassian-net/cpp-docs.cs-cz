@@ -2,12 +2,12 @@
 title: Přenos aplikací do Univerzální platformy Windows (C++)
 ms.date: 10/23/2019
 ms.assetid: f662d2e4-8940-418d-8109-cb76cb8f8569
-ms.openlocfilehash: 0013d85ad8c27c06560c9f9e541691f4335252d1
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 7663fbac62687562f09a3a1ed66b8c09b75c51fd
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80076864"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167638"
 ---
 # <a name="porting-to-the-universal-windows-platform-c"></a>Přenos aplikací do Univerzální platformy Windows (C++)
 
@@ -82,7 +82,7 @@ Máte-li knihovnu DLL nebo komponentu prostředí Windows Runtime, která již s
 
 1. Sestavujte a vyřešte všechny chyby z důvodu zásadních změn mezi různými verzemi Windows SDK.
 
-## <a name="troubleshooting"></a>Řešení potíží
+## <a name="troubleshooting"></a>Odstraňování potíží
 
 Během procesu přenosu kódu do UWP může dojít k různým chybám. Zde jsou některé možné problémy, se kterými se můžete setkat.
 

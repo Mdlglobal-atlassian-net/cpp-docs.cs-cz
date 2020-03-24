@@ -7,18 +7,18 @@ helpviewer_keywords:
 - COM interfaces, attach pointer
 - Attach method [C++]
 ms.assetid: 94c18e0a-06be-4ca7-bdaf-cd54ec0a645e
-ms.openlocfilehash: 4b4b7a21d12cc645c486dd93d555510c1e716563
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 870e3580ed23ce994d832f7c59b951680d725e41
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154887"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80180495"
 ---
-# <a name="comptrtattach"></a>_com_ptr_t::Attach
+# <a name="_com_ptr_tattach"></a>_com_ptr_t::Attach
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
-Zapouzdřuje nezpracovaný ukazatel rozhraní tohoto inteligentního ukazatele typu.
+Zapouzdřuje nezpracovaný ukazatel rozhraní tohoto typu inteligentního ukazatele.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,16 +33,16 @@ void Attach( Interface* pInterface, bool fAddRef ) throw( );
 Nezpracovaný ukazatel rozhraní.
 
 *fAddRef*<br/>
-Pokud je hodnota TRUE, pak `AddRef` je volána. Pokud má hodnotu FALSE, `_com_ptr_t` objekt převezme vlastnictví nezpracovaného ukazatele rozhraní bez volání `AddRef`.
+Pokud má hodnotu TRUE, je volána `AddRef`. Pokud je hodnota FALSE, objekt `_com_ptr_t` převezme vlastnictví ukazatele nezpracovaného rozhraní bez volání `AddRef`.
 
 ## <a name="remarks"></a>Poznámky
 
-- **Připojení (** *pInterface* **)** `AddRef` není volána. To je předáno vlastnictví rozhraní `_com_ptr_t` objektu. `Release` nazývá se sníží počet odkazů na dříve zapouzdřený ukazatel.
+- **Připojení (**  *pInterface*  **)** `AddRef` není voláno. Vlastnictví rozhraní je předáno tomuto objektu `_com_ptr_t`. je volána `Release` pro snížení počtu odkazů pro dříve zapouzdřený ukazatel.
 
-- **Připojení (** *pInterface* **,** *fAddRef* **)** Pokud *fAddRef* má hodnotu TRUE, `AddRef`nazývá se zvýší počet odkazů pro zapouzdřený ukazatel rozhraní. Pokud *fAddRef* má hodnotu FALSE, to `_com_ptr_t` objekt převezme vlastnictví nezpracovaného ukazatele rozhraní bez volání `AddRef`. `Release` nazývá se sníží počet odkazů na dříve zapouzdřený ukazatel.
+- **Připojit (**  *pInterface* **,**  *fAddRef*  **)** Pokud má *fAddRef* hodnotu true, je volána `AddRef` k zvýšení počtu odkazů pro zapouzdřený ukazatel rozhraní. Pokud je *FADDREF* false, tento objekt `_com_ptr_t` převezme vlastnictví ukazatele nezpracovaného rozhraní bez volání `AddRef`. je volána `Release` pro snížení počtu odkazů pro dříve zapouzdřený ukazatel.
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [_com_ptr_t – třída](../cpp/com-ptr-t-class.md)

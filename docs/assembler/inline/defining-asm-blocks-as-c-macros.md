@@ -6,26 +6,26 @@ helpviewer_keywords:
 - Visual C, macros
 - __asm keyword [C++], as C macros
 ms.assetid: 677ba11c-21c8-4609-bba7-cd47312243b0
-ms.openlocfilehash: c48298cf802600995dbbf68885896b6feccb807d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 46f0a23fcfd949843e3548354f52970b10b6d63b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62167023"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169484"
 ---
-# <a name="defining-asm-blocks-as-c-macros"></a>Definování bloků __asm jako maker v jazyce C
+# <a name="defining-__asm-blocks-as-c-macros"></a>Definování bloků __asm jako maker v jazyce C
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
-Nabízí pohodlný způsob, jak vložit sestavení kódu do zdrojového kódu maker v jazyce C, ale vyžadují zvláštní pozornost vzhledem k tomu makro rozšíří na jednoho logického řádku. Chcete-li vytvořit bezproblémovou makra, postupovat podle těchto pravidel:
+Makra jazyka C nabízejí pohodlný způsob, jak vložit kód sestavení do zdrojového kódu, ale vyžadují další péči, protože makro se rozšíří na jednu logickou čáru. Chcete-li vytvořit makra bez problémů, postupujte podle těchto pravidel:
 
-- Uzavřete `__asm` blokovat ve složených závorkách.
+- Uzavřete blok `__asm` do složených závorek.
 
-- Vložit `__asm` – klíčové slovo před každou instrukci sestavení.
+- Před každou instrukci sestavení vložte klíčové slovo `__asm`.
 
-- Použití starého typu komentáře v jazyce C ( `/* comment */`) místo sestavení – vizuální styl komentáře ( `; comment`) nebo Jednořádkové komentáře v jazyce C ( `// comment`).
+- Místo komentářů ve stylu sestavení (`; comment`) nebo jednořádkových komentářů jazyka C (`// comment`) použijte původní styl komentáře jazyka C (`/* comment */`).
 
-Pro ilustraci, následující příklad definuje jednoduchý makra:
+Pro ilustraci následující příklad definuje jednoduché makro:
 
 ```cpp
 #define PORTIO __asm      \
@@ -37,24 +37,24 @@ Pro ilustraci, následující příklad definuje jednoduchý makra:
 }
 ```
 
-Na první pohled, poslední tři `__asm` klíčových slov se zdá, že nadbytečný. Nejsou potřeba, ale vzhledem k tomu, že se makro rozbalí do jednoho řádku:
+Na první pohled se poslední tři klíčová slova `__asm` zdají být nadbytečných. Jsou však potřeba, protože se makro rozšíří na jeden řádek:
 
 ```cpp
 __asm /* Port output */ { __asm mov al, 2  __asm mov dx, 0xD007 __asm out dx, al }
 ```
 
-Třetí a čtvrtý `__asm` klíčová slova jsou nutné jako oddělovače příkazu. Jediným příkazem oddělovače rozpoznán v `__asm` bloky jsou znak nového řádku a `__asm` – klíčové slovo. Protože bloku definovány jako makra je jeden logický řádek, třeba oddělit každou instrukci s `__asm`.
+Třetí a čtvrté `__asm` klíčová slova jsou potřeba jako oddělovače příkazů. Jedinými oddělovači příkazů rozpoznanými v `__asm` blocích jsou znak nového řádku a klíčové slovo `__asm`. Vzhledem k tomu, že blok definovaný jako makro je jedna logická čára, je nutné jednotlivé instrukce oddělit pomocí `__asm`.
 
-Složené závorky jsou také nezbytné. Vynecháte-li je, kompilátor může být matoucí příkazy jazyka C nebo C++ na stejném řádku napravo od volání makra. Bez pravé složené závorce, kompilátor nemůže určit, kde zastaví sestavení kódu a jeho příkazy jazyka C nebo C++ se zobrazí `__asm` bloku jako pokyny k sestavení.
+Složené závorky jsou také podstatné. Pokud je vynecháte, kompilátor může být zaměněn pomocí jazyka C++ C nebo příkazy na stejném řádku napravo od vyvolání makra. Bez uzavírací složené závorky nemůže kompilátor sdělit, kde se zastaví kód sestavení, a vidí příkazy jazyka C C++ nebo za `__asm` blok jako pokyny pro sestavení.
 
-Sestavení – vizuální styl poznámky, které začínají středník (**;**) dál konci řádku. To způsobí, že problémy v makrech vzhledem k tomu, že kompilátor ignoruje všechno, co za komentář, až na konec logického řádku. Totéž platí o Jednořádkové komentáře jazyka C nebo C++ ( `// comment`). Chcete-li zabránit chybám, použijte komentáře v jazyce C starého typu ( `/* comment */`) v `__asm` bloky, které jsou definovány jako makra.
+Komentáře ve stylu sestavení začínající středníkem ( **;** ) pokračují na konci řádku. To způsobuje problémy v makrech, protože kompilátor ignoruje vše po komentáři, a to vše jako na konci logického řádku. Totéž platí pro jednořádkový řádek C nebo C++ komentáře (`// comment`). Chcete-li zabránit chybám, použijte staré komentáře jazyka C (`/* comment */`) v `__asm` blocích definovaných jako makra.
 
-`__asm` Bloku zapisují jako maker jazyka C, můžete převzít argumenty. Na rozdíl od běžných C makru, ale `__asm` – makro nemůže vracet hodnotu. Proto tato makra nelze použít ve výrazech jazyka C nebo C++.
+Blok `__asm` zapsaný jako makro jazyka C může přebírat argumenty. Na rozdíl od obyčejného makra jazyka C však makro `__asm` nemůže vracet hodnotu. Takže taková makra nemůžete použít ve výrazech jazyka C nebo C++ .
 
-Dejte pozor, abyste bez vyvolání makra tohoto typu. Například volání makru jazyk sestavení ve funkci deklarována s `__fastcall` vytváření názvů může vést k neočekávaným výsledkům. (Viz [použití a zachování registrů ve vloženém sestavení](../../assembler/inline/using-and-preserving-registers-in-inline-assembly.md).)
+Dejte pozor, abyste nevolali makra tohoto typu v nerozlišeném znění. Například volání makra jazyka sestavení ve funkci deklarované s konvencí `__fastcall` může způsobit neočekávané výsledky. (Viz [použití a zachování registrů ve vloženém sestavení](../../assembler/inline/using-and-preserving-registers-in-inline-assembly.md).)
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Vkládaný assembler](../../assembler/inline/inline-assembler.md)<br/>

@@ -9,27 +9,27 @@ helpviewer_keywords:
 - debugging [C++], inline assembly code
 - inline assembly, debugging
 ms.assetid: 69266930-6f9a-433d-b704-f4f44e7b2583
-ms.openlocfilehash: 1b2ec146daf450c4302be9fea8fdd117ec6398da
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3254fb6b750466de0a38230c5e1cfa067c476f5e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62167203"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169510"
 ---
 # <a name="debugging-and-listings-for-inline-assembly"></a>Ladění a naslouchání vloženého sestavení
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
-Programy, který obsahuje vložený kód sestavení lze ladit pomocí ladicího programu úrovni zdroje, pokud kompilujete s [/zi](../../build/reference/z7-zi-zi-debug-information-format.md) možnost.
+Programy obsahující kód vloženého sestavení lze ladit pomocí ladicího programu na úrovni zdroje, pokud kompilujete pomocí možnosti [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md) .
 
-V rámci ladicího programu můžete nastavit zarážky v jazyce C nebo C++ a jazyk sestavení řádcích. Pokud povolíte smíšená sestavení a režim zdroje, můžete zobrazit zdroj a zpětně přeložený formu kódu sestavení.
+V rámci ladicího programu můžete nastavit zarážky na řádcích jazyka C C++ nebo i. Pokud povolíte smíšené sestavení a režim zdroje, můžete zobrazit zdrojovou i nepřeloženou formu kódu sestavení.
 
-Všimněte si, že umístění na jednom řádku více pokyny k sestavení nebo příkazy zdrojového jazyka může zabránit spuštění ladění. V režimu zdroje můžete nastavit zarážky na jednom řádku, ale nikoli na jednotlivé příkazy na stejném řádku ladicí program. Stejný princip platí pro `__asm` bloku definována jako C – makro rozbalí do jednoho logického řádku.
+Všimněte si, že vložení několika instrukcí sestavení nebo příkazů zdrojového jazyka na jeden řádek může zabránit ladění. V režimu zdroje můžete použít ladicí program k nastavení zarážek na jednom řádku, ale ne na jednotlivých příkazech na stejném řádku. Stejný princip platí pro `__asm` blok definovaný jako makro jazyka C, které se rozšíří na jednu logickou čáru.
 
-Pokud vytvoříte smíšené zdroje a výpis s sestavení [/FAS](../../build/reference/fa-fa-listing-file.md) – možnost kompilátoru, výpis obsahuje zdroje a sestavení formulářů každého řádku jazyka sestavení. Makra nejsou rozbalení ve výpisech, ale jsou rozbaleny během kompilace.
+Vytvoříte-li smíšený seznam zdrojů a sestavení s možností kompilátoru [/FAS](../../build/reference/fa-fa-listing-file.md) , obsahuje seznam zdrojové i montážní formuláře každého sestavení-jazyka. Makra nejsou rozbalena v seznamech, ale během kompilace jsou rozbaleny.
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Použití assembleru v blocích __asm](../../assembler/inline/using-assembly-language-in-asm-blocks.md)<br/>

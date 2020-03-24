@@ -1,20 +1,20 @@
 ---
-title: C2122 chyby kompilátoru
+title: Chyba kompilátoru C2122
 ms.date: 11/04/2016
 f1_keywords:
 - C2122
 helpviewer_keywords:
 - C2122
 ms.assetid: bc060002-cd38-481b-a144-65af035ce851
-ms.openlocfilehash: eb292dfd36f5bd2200886c929ba7ee3ecfacd7f0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2117d5fe2195a67d411f368273264225da00faf0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397663"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80207412"
 ---
-# <a name="compiler-error-c2122"></a>C2122 chyby kompilátoru
+# <a name="compiler-error-c2122"></a>Chyba kompilátoru C2122
 
-'identifier': Parametr prototype v seznamu názvů je neplatný
+' identifier ': parametr Prototype v seznamu názvů je neplatný
 
-Parametr není platný typ. ANSI C nepodporuje uživatelem definované typy.
+Parametr není platným typem. ANSI C nepodporuje uživatelsky definované typy.

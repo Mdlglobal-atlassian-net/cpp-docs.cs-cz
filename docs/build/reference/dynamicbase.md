@@ -8,28 +8,28 @@ helpviewer_keywords:
 - DYNAMICBASE editbin option
 - /DYNAMICBASE editbin option
 ms.assetid: edb3df90-7b07-42fb-a94a-f5a4c1d325d6
-ms.openlocfilehash: 13987b4ba9c25db0f5417da562ff86f4230937d7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ab7682c8344d6fc36ded03e7ef885c83d2f19ab7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62271824"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169042"
 ---
 # <a name="dynamicbase"></a>/DYNAMICBASE
 
-Určuje, jestli se má generovat spustitelnou bitovou kopii, která lze náhodně změnit základ v okamžiku načtení pomocí funkce adresu místo rozložení náhodné (technologie ASLR) z Windows, která byla poprvé dostupná ve Windows Vista.
+Určuje, jestli se má generovat spustitelná image, která se dá náhodně využít při načítání, pomocí funkce ASLR (Address Space layouting Layout) systému Windows, která byla poprvé dostupná v systému Windows Vista.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **/ DYNAMICBASE**[**: NO**]
+> **/DYNAMICBASE**[ **: No**]
 
 ## <a name="remarks"></a>Poznámky
 
-**Možnost/DynamicBase** možnost změní záhlaví *spustitelné bitové kopie*, soubor .dll nebo .exe, označuje, zda by měl být náhodně změnit základ v okamžiku načtení aplikace a umožňuje virtuální adresa náhodné přidělování, který má vliv na umístění virtuální paměti haldy, zásobníků a další přidělení operačního systému. **Možnost/DynamicBase** možnost se vztahuje na 32bitové i 64bitové obrazy. Technologie ASLR je podporován v systémech Windows Vista a novějších operačních systémech. Tato možnost je ignorována ve starších operačních systémech.
+Možnost **/DYNAMICBASE** upraví hlavičku *spustitelné bitové kopie*, soubor. dll nebo. exe, aby označovala, zda by měla být aplikace náhodně založena během načítání, a umožňuje náhodné vyřazení virtuálních adres, což ovlivňuje umístění virtuálních paměti hald, zásobníků a dalších přidělení operačního systému. Možnost **/DYNAMICBASE** se vztahuje na 32 bitové i 64 bitové kopie. ASLR je podporován v systému Windows Vista a novějších operačních systémech. Možnost ignoruje starší operační systémy.
 
-Ve výchozím nastavení **možnost/DynamicBase** je povolená. Chcete-li tuto možnost zakázat, použijte **kopii**. **Možnost/DynamicBase** možnost je vyžadována pro [/highentropyva](highentropyva-support-64-bit-aslr.md) možnost mají nějaký efekt.
+Ve výchozím nastavení je povolená možnost **/DYNAMICBASE** . Pokud chcete tuto možnost zakázat, použijte **/DYNAMICBASE: No**. Možnost **/DYNAMICBASE** je vyžadována, pokud má možnost [/HIGHENTROPYVA](highentropyva-support-64-bit-aslr.md) efekt.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [EDITBIN – možnosti](editbin-options.md)
-- [Obrana zabezpečení ISV softwaru Windows](https://msdn.microsoft.com/library/bb430720.aspx)
+- [Obrana zabezpečení softwaru Windows ISV](https://msdn.microsoft.com/library/bb430720.aspx)

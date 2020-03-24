@@ -6,26 +6,26 @@ helpviewer_keywords:
 - references, to properties in providers
 - referencing properties in providers
 ms.assetid: bfbb3851-5eed-467a-a179-4a97a9515525
-ms.openlocfilehash: c3e620cd760aa04df7d7d2209ef009a606675276
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d70a1901c457d9fbdbe8712d84999e256a54d0c2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62282917"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209763"
 ---
 # <a name="referencing-a-property-in-your-provider"></a>Odkazování na vlastnost ve zprostředkovateli
 
-Najdete skupinu vlastností a vlastnost ID pro požadovanou vlastnost. Další informace najdete v tématu [vlastnosti technologie OLE DB](/previous-versions/windows/desktop/ms722734(v=vs.85)) v **OLE DB referenční informace pro programátory**.
+Vyhledejte skupinu vlastností a ID vlastnosti požadované vlastnosti. Další informace najdete v tématu [OLE DB vlastnosti](/previous-versions/windows/desktop/ms722734(v=vs.85)) v **referenci programátora OLE DB**.
 
-V následujícím příkladu se předpokládá, že se pokoušíte získat vlastnosti ze sady řádků. Kód pro použití relace nebo příkazu je podobné, ale používá jiné rozhraní.
+Následující příklad předpokládá, že se pokoušíte získat vlastnost ze sady řádků. Kód pro použití relace nebo příkazu je podobný, ale používá jiné rozhraní.
 
-Vytvoření [CDBPropSet](../../data/oledb/cdbpropset-class.md) pomocí vlastnosti skupiny jako parametr do konstruktoru. Příklad:
+Vytvořte objekt [CDBPropSet](../../data/oledb/cdbpropset-class.md) pomocí skupiny vlastností jako parametru konstruktoru. Příklad:
 
 ```cpp
 CDBPropSet propset(DBPROPSET_ROWSET);
 ```
 
-Volání [AddProperty](../../data/oledb/cdbpropset-addproperty.md), předejte ID vlastnosti a hodnotu pro přiřazení k vlastnosti. Typ hodnoty závisí na vlastnost, kterou používáte.
+Zavolejte [AddProperty](../../data/oledb/cdbpropset-addproperty.md)a předejte jí ID vlastnosti a hodnotu, která má být přiřazena vlastnosti. Typ hodnoty závisí na vlastnosti, kterou používáte.
 
 ```cpp
 CDBPropSet propset(DBPROPSET_ROWSET);
@@ -35,7 +35,7 @@ propset.AddProperty(DBPROP_IRowsetChange, true);
 propset.AddProperty(DBPROP_UPDATABILITY, DBPROPVAL_UP_INSERT | DBPROPVAL_UP_CHANGE | DBPROPVAL_UP_DELETE);
 ```
 
-Použití `IRowset` rozhraní volat `GetProperties`. Předejte vlastnost nastavit jako parametr. Tady je konečný kód:
+K volání `GetProperties`použijte rozhraní `IRowset`. Předat sadu vlastností jako parametr. Zde je konečný kód:
 
 ```cpp
 CAgentRowset<CCustomCommand>* pRowset = (CAgentRowset<CCustomCommand>*) pThis;
@@ -66,6 +66,6 @@ if (pPropSet)
 }
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Práce s šablonami zprostředkovatele OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)

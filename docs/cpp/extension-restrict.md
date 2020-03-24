@@ -8,31 +8,31 @@ f1_keywords:
 helpviewer_keywords:
 - __restrict keyword [C++]
 ms.assetid: 2d151b4d-f930-49df-bd16-d8757ec7fa83
-ms.openlocfilehash: 76cdf9424e6eab33a3a92b3f98d9c2b0b04ff667
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cb340554bc20516175400c4d14a5d0dba934a313
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62183749"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188958"
 ---
-# <a name="restrict"></a>__restrict
+# <a name="__restrict"></a>__restrict
 
-Podobně jako **__declspec ( [omezit](../cpp/restrict.md) )** modifikátor, **kvalifikátor __restrict** – klíčové slovo určuje, že symbol nemá v aktuálním oboru alias. **Kvalifikátor __restrict** – klíčové slovo se liší od `__declspec ( restrict )` modifikátor následujícími způsoby:
+Podobně jako u modifikátoru **__declspec ( [omezit](../cpp/restrict.md) )** označuje klíčové slovo **__restrict** , že v aktuálním oboru není uveden alias. Klíčové slovo **__restrict** se od modifikátoru `__declspec ( restrict )` liší následujícími způsoby:
 
-- **Kvalifikátor __restrict** – klíčové slovo je platný pouze pro proměnné, a `__declspec ( restrict )` je platný jenom pro deklarace a definice funkcí.
+- Klíčové slovo **__restrict** je platné pouze pro proměnné a `__declspec ( restrict )` je platné pouze pro deklarace a definice funkcí.
 
-- **Kvalifikátor __restrict** je podobný **omezit** od specifikace C99, ale **kvalifikátor __restrict** lze použít v C++ nebo programů jazyka C.
+- **__restrict** se podobá **omezení** ze specifikace C99, ale **__restrict** je možné použít v programech C++ nebo v C.
 
-- Když **kvalifikátor __restrict** se používá, kompilátor nebude šířit vlastnost no-alias proměnné. To znamená Pokud přiřadíte **kvalifikátor __restrict** proměnné non-**kvalifikátor __restrict** proměnné, kompilátor bude stále umožňují jiných __restrict proměnné mít alias. Tím se liší od chování **omezit** – klíčové slovo z dle specifikace C99.
+- Při použití **__restrict** kompilátor nerozšíří vlastnost No-alias proměnné. To znamená, že pokud přiřadíte **__restrict** proměnnou k proměnné, která není **__restrict** , kompilátor přesto umožní aliasovat proměnnou bez __restrict. To se liší od chování klíčového slova **restrict** ze specifikace C99.
 
-Obecně při ovlivňování chování celé funkce, je vhodnější použít `__declspec ( restrict )` než toto klíčové slovo.
+Obecně platí, že pokud máte vliv na chování celé funkce, je lepší použít `__declspec ( restrict )` než klíčové slovo.
 
-Z důvodu kompatibility s předchozími verzemi **_restrict** je synonymum pro **kvalifikátor __restrict** Pokud – možnost kompilátoru [/Za \(zakázat jazyková rozšíření)](../build/reference/za-ze-disable-language-extensions.md) je zadat.
+Z důvodu kompatibility s předchozími verzemi je **_restrict** synonymem pro **__restrict** , pokud je zadána možnost kompilátoru [/za \(Disable Language Extensions)](../build/reference/za-ze-disable-language-extensions.md) .
 
-V sadě Visual Studio 2015 a novější **kvalifikátor __restrict** jde použít na C++ odkazy.
+V aplikaci Visual Studio 2015 a novějších lze **__restrict** použít na C++ odkazech.
 
 > [!NOTE]
->  Při použití na proměnnou, která má také [volatile](../cpp/volatile-cpp.md) – klíčové slovo, **volatile** bude mít přednost.
+>  Při použití pro proměnnou, která má také klíčové slovo [volatile](../cpp/volatile-cpp.md) , bude mít **volatile** přednost.
 
 ## <a name="example"></a>Příklad
 
@@ -58,6 +58,6 @@ union z {
 };
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Klíčová slova](../cpp/keywords-cpp.md)

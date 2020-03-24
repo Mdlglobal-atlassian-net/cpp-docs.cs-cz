@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4694
 ms.assetid: 5ca122bb-34f3-43ee-a21f-95802cd515f7
-ms.openlocfilehash: 6164fd2e19e35233ba67feb84d117f1e4e01f20d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: daf5423588d08260239c3cff5a68532a358d07b2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62311044"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80165116"
 ---
 # <a name="compiler-warning-c4694"></a>Upozornění kompilátoru C4694
 
-> "*třídy*': zapečetěná abstraktní třída nemůže mít je třídou base *$base_class*.
+> '*Class*': zapečetěná abstraktní třída nemůže mít základní třídu '*BASE_CLASS*'
 
-Abstraktní a uzavřené třídy nemůže dědit z typu odkazu uzavřený a abstraktní třída může implementovat funkce základní třídy ani mohl použít jako základní třídu.
+Abstraktní a zapečetěná třída nemůže dědit z typu odkazu; zapečetěná a abstraktní třída nemůže implementovat funkce základní třídy ani nemůže být použita jako základní třída.
 
-Další informace najdete v tématu [abstraktní](../../extensions/abstract-cpp-component-extensions.md), [zapečetěné](../../extensions/sealed-cpp-component-extensions.md), a [třídy a struktury](../../extensions/classes-and-structs-cpp-component-extensions.md).
+Další informace naleznete v tématu [abstraktní](../../extensions/abstract-cpp-component-extensions.md), [zapečetěné](../../extensions/sealed-cpp-component-extensions.md)a [třídy a struktury](../../extensions/classes-and-structs-cpp-component-extensions.md).
 
-Toto upozornění je automaticky povýšen na chybu. Pokud chcete toto chování upravit, použijte [varování #pragma](../../preprocessor/warning.md).
+Toto upozornění je automaticky povýšeno na chybu. Pokud chcete toto chování změnit, použijte [#pragma upozornění](../../preprocessor/warning.md).
 
 ## <a name="example"></a>Příklad
 

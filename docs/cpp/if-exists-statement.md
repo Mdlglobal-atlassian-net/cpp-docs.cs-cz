@@ -8,16 +8,16 @@ helpviewer_keywords:
 - symbols, testing for existence
 - __if_exists keyword [C++]
 ms.assetid: d3eb34b6-f3a9-4063-a286-b62a28c0c7fa
-ms.openlocfilehash: 9d5a0b24bb08a9485b2d212058fa8f0bd82e5842
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ea136ac0312b78519fe2d8ea88ace4d8b0d69946
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62183671"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178415"
 ---
-# <a name="ifexists-statement"></a>__if_exists – příkaz
+# <a name="__if_exists-statement"></a>__if_exists – příkaz
 
-**__If_exists** příkaz testuje, jestli existuje zadaný identifikátor. Pokud identifikátor neexistuje, je spuštěn zadaný blok příkazů.
+Příkaz **__if_exists** testuje, zda zadaný identifikátor existuje. Pokud identifikátor existuje, je spuštěn blok zadaného příkazu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -31,27 +31,27 @@ statements
 
 |Parametr|Popis|
 |---------------|-----------------|
-|*identifier*|Identifikátor, jehož existence bude testována.|
-|*Příkazy*|Jeden nebo více příkazů, které budou spuštěny, pokud *identifikátor* existuje.|
+|*RID*|Identifikátor, jehož existence bude testována.|
+|*učiněn*|Jeden nebo více příkazů, které se mají provést, pokud existuje *identifikátor* .|
 
 ## <a name="remarks"></a>Poznámky
 
 > [!CAUTION]
->  K dosažení nejspolehlivějších výsledků, použít **__if_exists** příkaz následujícími omezeními.
+>  Chcete-li dosáhnout nejspolehlivějších výsledků, použijte příkaz **__if_exists** v následujících omezeních.
 
-- Použít **__if_exists** příkazu pouze jednoduché typy, nikoli na šablony.
+- Použijte příkaz **__if_exists** pouze na jednoduché typy, nikoli na šablony.
 
-- Použít **__if_exists** příkaz na identifikátory uvnitř i vně třídy. Se nevztahují **__if_exists** příkaz pro lokální proměnné.
+- Použijte příkaz **__if_exists** pro identifikátory uvnitř nebo vně třídy. Neaplikujte příkaz **__if_exists** na lokální proměnné.
 
-- Použití **__if_exists** příkaz jenom v těle funkce. Mimo tělo funkce **__if_exists** příkazu můžete testovat pouze plně definované typy.
+- Použijte příkaz **__if_exists** pouze v těle funkce. Mimo tělo funkce může příkaz **__if_exists** testovat pouze plně definované typy.
 
 - Při testování přetížených funkcí nelze testovat konkrétní formu přetížení.
 
-Doplněk k **__if_exists** příkaz je [__if_not_exists](../cpp/if-not-exists-statement.md) příkazu.
+Příplatek k příkazu **__if_exists** je příkaz [__if_not_exists](../cpp/if-not-exists-statement.md) .
 
 ## <a name="example"></a>Příklad
 
-Všimněte si, že v tomto příkladu šablony, které se nedoporučuje.
+Všimněte si, že tento příklad používá šablony, což není doporučeno.
 
 ```cpp
 // the__if_exists_statement.cpp
@@ -121,7 +121,7 @@ g_bFlag = 1
 C::f exists
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Příkazy výběru](../cpp/selection-statements-cpp.md)<br/>
 [Klíčová slova](../cpp/keywords-cpp.md)<br/>

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - named constants, enumeration declarations
 - declaring enumerations
 ms.assetid: 081829db-5dca-411e-a53c-bffef315bcb3
-ms.openlocfilehash: caec9ea7ac5482ff23b73676a3fd7b3d25ad293f
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 67b03256390d5447ae5accc28dd450a7f60f485c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79418452"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80180183"
 ---
 # <a name="enumerations-c"></a>Výčty (C++)
 
@@ -143,7 +143,7 @@ namespace ScopedEnumConversions
 
 Všimněte si, že řádek `hand = account_num;` stále způsobuje chybu, ke které dochází v rámci výčtů bez oboru, jak je uvedeno výše. Je povolená s explicitním přetypováním. Nicméně s vymezenými výčty, pokus o převod v dalším příkazu `account_num = Suit::Hearts;`, již není povolen bez explicitního přetypování.
 
-## <a name="no_enumerators"></a>Výčty bez enumerátorů
+## <a name="enums-with-no-enumerators"></a><a name="no_enumerators"></a>Výčty bez enumerátorů
 
 **Visual Studio 2017 verze 15,3 a novější** (k dispozici s [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)): definováním výčtu (pravidelný nebo vymezený) pomocí explicitního základního typu a žádného enumerátoru v tomto efektu můžete zavést nový integrální typ, který nemá implicitní převod na žádný jiný typ. Pomocí tohoto typu namísto předdefinovaného základního typu můžete eliminovat potenciál drobných chyb způsobených neúmyslnými implicitními převody.
 

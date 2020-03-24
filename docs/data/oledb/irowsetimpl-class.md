@@ -88,12 +88,12 @@ helpviewer_keywords:
 - m_iRowset
 - m_rgRowHandles
 ms.assetid: 6a9189af-7556-45b1-adcb-9d62bb36704c
-ms.openlocfilehash: 2fbe461bfc812c5ac9b9a09aa3ed31c0a2a638e1
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: db12af1aecc094e6c04ab37b5a70a0acd97e39e9
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447356"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210415"
 ---
 # <a name="irowsetimpl-class"></a>IRowsetImpl – třída
 
@@ -161,7 +161,7 @@ Jednotka úložiště pro všechny obsluhy řádků držené zprostředkovatelem
 
 [IRowset](/previous-versions/windows/desktop/ms720986(v=vs.85)) je základní rozhraní sady řádků.
 
-## <a name="addrefrows"></a>IRowsetImpl:: AddRefRows
+## <a name="irowsetimpladdrefrows"></a><a name="addrefrows"></a>IRowsetImpl:: AddRefRows
 
 Přidá počet odkazů do existujícího popisovače řádku.
 
@@ -178,7 +178,7 @@ STDMETHOD(AddRefRows )(DBCOUNTITEM cRows,
 
 Viz [IRowset:: AddRefRows](/previous-versions/windows/desktop/ms719619(v=vs.85)) v *referenci programátora OLE DB*.
 
-## <a name="createrow"></a>IRowsetImpl:: CreateRow
+## <a name="irowsetimplcreaterow"></a><a name="createrow"></a>IRowsetImpl:: CreateRow
 
 Pomocná metoda, kterou volá [GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md) k přidělení nového `HROW`.
 
@@ -205,7 +205,7 @@ Do volajícího bylo vráceno pole `HROW`s nově vytvořenými obslužnými ruti
 
 Pokud řádek existuje, tato metoda volá [AddRefRows](../../data/oledb/irowsetimpl-addrefrows.md) a vrátí. V opačném případě přidělí novou instanci proměnné šablony RowClass a přidá ji do [m_rgRowHandles](../../data/oledb/irowsetimpl-m-rgrowhandles.md).
 
-## <a name="getdata"></a>IRowsetImpl:: GetData
+## <a name="irowsetimplgetdata"></a><a name="getdata"></a>IRowsetImpl:: GetData
 
 Načte data z kopie řádku sady řádků.
 
@@ -231,7 +231,7 @@ Některé parametry odpovídají *OLE DB referenční parametry programátora* r
 
 Také zpracovává převod dat pomocí OLE DB DLL pro převod dat.
 
-## <a name="getdbstatus"></a>IRowsetImpl:: GetDBStatus
+## <a name="irowsetimplgetdbstatus"></a><a name="getdbstatus"></a>IRowsetImpl:: GetDBStatus
 
 Vrátí příznak stavu DBSTATUS pro zadané pole.
 
@@ -254,7 +254,7 @@ pro Sloupec, pro který se požaduje stav
 
 Příznaky [DBSTATUS](/previous-versions/windows/desktop/ms722617(v=vs.85)) pro sloupec.
 
-## <a name="getnextrows"></a>IRowsetImpl:: GetNextRows
+## <a name="irowsetimplgetnextrows"></a><a name="getnextrows"></a>IRowsetImpl:: GetNextRows
 
 Načte řádky postupně a pamatuje předchozí pozici.
 
@@ -272,7 +272,7 @@ STDMETHOD(GetNextRows )(HCHAPTER hReserved,
 
 Viz [IRowset:: GetNextRows](/previous-versions/windows/desktop/ms709827(v=vs.85)) v *referenci programátora OLE DB*.
 
-## <a name="irowsetimpl"></a>IRowsetImpl:: IRowsetImpl
+## <a name="irowsetimplirowsetimpl"></a><a name="irowsetimpl"></a>IRowsetImpl:: IRowsetImpl
 
 Konstruktor
 
@@ -286,7 +286,7 @@ IRowsetImpl();
 
 Tuto metodu obvykle nemusíte volat přímo.
 
-## <a name="refrows"></a>IRowsetImpl:: RefRows
+## <a name="irowsetimplrefrows"></a><a name="refrows"></a>IRowsetImpl:: RefRows
 
 Volá se [AddRefRows](../../data/oledb/irowsetimpl-addrefrows.md) a [ReleaseRows](../../data/oledb/irowsetimpl-releaserows.md) pro zvýšení nebo uvolnění počtu odkazů na existující popisovač řádku.
 
@@ -308,7 +308,7 @@ Viz [IRowset:: AddRefRows](/previous-versions/windows/desktop/ms719619(v=vs.85))
 
 Standardní hodnota HRESULT.
 
-## <a name="releaserows"></a>IRowsetImpl:: ReleaseRows
+## <a name="irowsetimplreleaserows"></a><a name="releaserows"></a>IRowsetImpl:: ReleaseRows
 
 Uvolní řádky.
 
@@ -326,7 +326,7 @@ STDMETHOD(ReleaseRows )(DBCOUNTITEM cRows,
 
 Viz [IRowset:: ReleaseRows](/previous-versions/windows/desktop/ms719771(v=vs.85)) v *referenci programátora OLE DB*.
 
-## <a name="restartposition"></a>IRowsetImpl:: volání metody RestartPosition
+## <a name="irowsetimplrestartposition"></a><a name="restartposition"></a>IRowsetImpl:: volání metody RestartPosition
 
 Přemístí další pozici načtení na počáteční pozici; To znamená, že při prvním vytvoření sady řádků.
 
@@ -344,7 +344,7 @@ Viz [IRowset:: volání metody RestartPosition](/previous-versions/windows/deskt
 
 Pozice sady řádků je nedefinovaná, dokud není volána `GetNextRow`. Zpětně můžete přejít v rowet voláním `RestartPosition` a následným načtením nebo posouváním zpět.
 
-## <a name="setdbstatus"></a>IRowsetImpl:: SetDBStatus
+## <a name="irowsetimplsetdbstatus"></a><a name="setdbstatus"></a>IRowsetImpl:: SetDBStatus
 
 Nastaví příznak stavu DBSTATUS pro zadané pole.
 
@@ -375,7 +375,7 @@ Standardní hodnota HRESULT.
 
 Zprostředkovatel Přepisuje tuto funkci, aby poskytoval zvláštní zpracování pro DBSTATUS_S_ISNULL a DBSTATUS_S_DEFAULT.
 
-## <a name="bcanfetchback"></a>IRowsetImpl:: m_bCanFetchBack
+## <a name="irowsetimplm_bcanfetchback"></a><a name="bcanfetchback"></a>IRowsetImpl:: m_bCanFetchBack
 
 Určuje, zda zprostředkovatel podporuje zpětné načítání.
 
@@ -389,7 +389,7 @@ unsigned m_bCanFetchBack:1;
 
 Odkazuje na vlastnost `DBPROP_CANFETCHBACKWARDS` ve skupině `DBPROPSET_ROWSET`. Poskytovatel musí podporovat `DBPROP_CANFETCHBACKWARDS`, aby `m_bCanFetchBackwards` na **hodnotu true**.
 
-## <a name="bcanscrollback"></a>IRowsetImpl:: m_bCanScrollBack
+## <a name="irowsetimplm_bcanscrollback"></a><a name="bcanscrollback"></a>IRowsetImpl:: m_bCanScrollBack
 
 Označuje, zda může být u poskytovatele posunuto kurzor zpět.
 
@@ -403,7 +403,7 @@ unsigned  m_bCanScrollBack:1;
 
 Odkazuje na vlastnost `DBPROP_CANSCROLLBACKWARDS` ve skupině `DBPROPSET_ROWSET`. Poskytovatel musí podporovat `DBPROP_CANSCROLLBACKWARDS`, aby `m_bCanFetchBackwards` na **hodnotu true**.
 
-## <a name="breset"></a>IRowsetImpl:: m_bReset
+## <a name="irowsetimplm_breset"></a><a name="breset"></a>IRowsetImpl:: m_bReset
 
 Bitový příznak, pomocí kterého lze určit, zda je pozice kurzoru definována v sadě řádků.
 
@@ -417,7 +417,7 @@ unsigned m_bReset:1;
 
 Pokud příjemce volá [GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md) se záporným `lOffset` nebo *rozvětvení* a `m_bReset` je true, `GetNextRows` přesune na konec sady řádků. Pokud je `m_bReset` false, příjemce obdrží kód chyby v souladu se specifikací OLE DB. Příznak `m_bReset` se nastaví na **hodnotu true** při prvním vytvoření sady řádků a když příjemce volá [IRowsetImpl:: volání metody RestartPosition](../../data/oledb/irowsetimpl-restartposition.md). Je nastavena na **hodnotu false** při volání `GetNextRows`.
 
-## <a name="irowset"></a>IRowsetImpl:: m_iRowset
+## <a name="irowsetimplm_irowset"></a><a name="irowset"></a>IRowsetImpl:: m_iRowset
 
 Index sady řádků představující kurzor.
 
@@ -427,7 +427,7 @@ Index sady řádků představující kurzor.
 DBROWOFFSET m_iRowset;
 ```
 
-## <a name="rgrowhandles"></a>IRowsetImpl:: m_rgRowHandles
+## <a name="irowsetimplm_rgrowhandles"></a><a name="rgrowhandles"></a>IRowsetImpl:: m_rgRowHandles
 
 Mapa popisovačů řádků aktuálně obsažených poskytovatelem v reakci na `GetNextRows`.
 

@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C4958
 ms.assetid: e79b9e9c-d572-4a3a-a3b6-60962b70864a
-ms.openlocfilehash: 96b73975f391493340dd01d85ad30a8c888b44c0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 63371d91367902c1eab539cb370e55440fcbf917
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62208067"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80164882"
 ---
 # <a name="compiler-warning-c4958"></a>Upozornění kompilátoru C4958
 
-> "*operace*': není možné ověřit aritmetiku ukazatele
+> '*Operation*': aritmetický ukazatel nelze ověřit
 
 ## <a name="remarks"></a>Poznámky
 
-Použití aritmetické operace ukazatele vytvoří bitovou kopii nelze ověřit.
+Použití aritmetického ukazatele vytvoří neověřitelný obrázek.
 
-Další informace najdete v tématu [prázdná a ověřitelný kód (C++vyhodnocovací)](../../dotnet/pure-and-verifiable-code-cpp-cli.md).
+Další informace najdete v tématu [čistý a ověřitelný kódC++(/CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md).
 
-**/CLR: safe** – možnost kompilátoru je zastaralé v sadě Visual Studio 2015 a není podporována v sadě Visual Studio 2017.
+Možnost **/clr: Safe** je v aplikaci visual Studio 2015 zastaralá a nepodporovaná ve visual studiu 2017.
 
-Toto upozornění je vyvoláno jako chyba a pomocí se dají zakázat [upozornění](../../preprocessor/warning.md) – Direktiva pragma nebo [/wd](../../build/reference/compiler-option-warning-level.md) – možnost kompilátoru.
+Toto upozornění je vystaveno jako chyba a může být zakázáno pomocí direktivy pragma [Warning](../../preprocessor/warning.md) nebo [/WD](../../build/reference/compiler-option-warning-level.md) kompilátoru.
 
 ## <a name="example"></a>Příklad
 
@@ -44,7 +44,7 @@ int main( ) {
 }
 ```
 
-Kompilátor implementuje operace pole s aritmetiku ukazatele. Proto nativní pole nejsou ověřitelný; Místo toho použijte pole CLR. Další informace najdete v tématu [pole](../../extensions/arrays-cpp-component-extensions.md).
+Kompilátor implementuje operace pole s aritmetickým ukazatelem. Proto nativní pole nelze ověřit; místo toho použijte pole CLR. Další informace naleznete v tématu [Array](../../extensions/arrays-cpp-component-extensions.md).
 
 Následující ukázka generuje C4958:
 

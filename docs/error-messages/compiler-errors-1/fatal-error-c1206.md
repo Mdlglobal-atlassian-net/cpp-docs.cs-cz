@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - C1206
 ms.assetid: 2211428f-ad86-4f7b-82eb-f1ba89b0510e
-ms.openlocfilehash: 7dfc5f52dff281a95b81d992e70c9849e918c7d2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 522e5a78d6616ef7ff1152e85dc0b816ee85a2eb
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62228610"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80203421"
 ---
 # <a name="fatal-error-c1206"></a>Závažná chyba C1206
 
-Data na úrovni appdomain není podporovaná ve verzi modulu runtime nainstalovaného
+Data pro každou doménu AppDomain nejsou podporovaná ve verzi nainstalovaného modulu runtime.
 
-Některé funkce, například podle data domény aplikace, jsou podporovány pouze modul common language runtime, který podporuje funkce.
+Některé funkce, například data domény aplikace, jsou podporovány pouze modulem CLR (Common Language Runtime), který funkci podporuje.
 
-C1206 označuje, že ve vašem počítači není nainstalována nejnovější verze modulu runtime. Instalace verze společného běhového jazykového, která je určena pro použití s kompilátoru.
+C1206 označuje, že na vašem počítači není nainstalovaná nejnovější verze modulu runtime. Nainstalujte verzi modulu CLR (Common Language Runtime), která je určena pro použití s vaším kompilátorem.
 
-Zobrazit [appdomain](../../cpp/appdomain.md) Další informace.
+Další informace naleznete v tématu [AppDomain](../../cpp/appdomain.md) .

@@ -6,52 +6,52 @@ helpviewer_keywords:
 - notifications [MFC], socket
 - sockets [MFC], notifications
 ms.assetid: 87d5bf70-6e77-49a9-9a64-aaadee2ad018
-ms.openlocfilehash: df7bfe8a95221682d0f7f4ebb123bd15b79144d5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 10dbe6c0e1f486257c50efc4acf917cd9d596630
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62358187"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167768"
 ---
 # <a name="windows-sockets-socket-notifications"></a>Windows Sockets: Oznámení soketů
 
-Tento článek popisuje funkce oznámení ve třídách soketu. Tyto členské funkce jsou funkce zpětného volání, které volá framework oznámit objekt soketu o důležitých událostech. Funkce oznámení jsou:
+Tento článek popisuje funkce oznámení ve třídách soketu. Tyto členské funkce jsou funkce zpětného volání, které rozhraní volá, aby upozornilo váš objekt soketu o důležitých událostech. Funkce oznámení jsou:
 
-- [Události OnReceive](../mfc/reference/casyncsocket-class.md#onreceive): Upozorní tento soket má data ve vyrovnávací paměti, aby se načíst voláním [Receive](../mfc/reference/casyncsocket-class.md#receive).
+- [Inreceive](../mfc/reference/casyncsocket-class.md#onreceive): upozorní tento soket na to, že data jsou ve vyrovnávací paměti, aby je bylo možné načíst voláním [Receive](../mfc/reference/casyncsocket-class.md#receive).
 
-- [OnSend](../mfc/reference/casyncsocket-class.md#onsend): Upozorní tento soket, aby ho teď může odesílat data voláním [odeslat](../mfc/reference/casyncsocket-class.md#send).
+- [Send](../mfc/reference/casyncsocket-class.md#onsend): upozorní tento soket, že nyní může odesílat data voláním [Send](../mfc/reference/casyncsocket-class.md#send).
 
-- [OnAccept](../mfc/reference/casyncsocket-class.md#onaccept): Upozorní tento naslouchání soketu, ve kterém lze přijmout čekající žádosti o připojení pomocí volání [přijmout](../mfc/reference/casyncsocket-class.md#accept).
+- [Přijmout](../mfc/reference/casyncsocket-class.md#onaccept): oznámí tomuto naslouchajícímu soketu, že může přijmout žádosti o připojení nedokončené voláním [Accept](../mfc/reference/casyncsocket-class.md#accept).
 
-- [OnConnect](../mfc/reference/casyncsocket-class.md#onconnect): Upozorní tento připojování soketu došlo k pokusu o jeho dokončení: možná úspěšně, nebo možná chybu.
+- [Connect](../mfc/reference/casyncsocket-class.md#onconnect): oznámí tomuto soketu připojení, že se dokončil pokus o připojení: možná úspěšně nebo možná došlo k chybě.
 
-- [Při zavření](../mfc/reference/casyncsocket-class.md#onclose): Upozorní tento soket, který má uzavřený soket, ke kterému je připojený k.
+- [Close](../mfc/reference/casyncsocket-class.md#onclose): upozorní tento soket, že soket, ke kterému je připojen, je uzavřený.
 
     > [!NOTE]
-    >  Je další oznamovací funkci [OnOutOfBandData](../mfc/reference/casyncsocket-class.md#onoutofbanddata). Toto oznámení informuje příjmu soketu, že odesílání soket má "out-of-band" data k odeslání. Out-of-band data jsou logicky nezávislý channel spojené s každou dvojici sokety datového proudu připojené. Out-of-band kanálu se obvykle používá k odesílání dat "urgentní". MFC podporuje out-of-band data. Zkušení uživatelé pracovat s třídou [CAsyncSocket](../mfc/reference/casyncsocket-class.md) může být potřeba použít out-of-band kanálu, ale uživatelé třídy [csocket –](../mfc/reference/csocket-class.md) se nedoporučuje používat. Vytvořit druhý soket pro předávání těchto dat je jednodušší způsob. Další informace o datech out-of-band najdete v tématu Specifikace rozhraní Windows Sockets k dispozici v sadě Windows SDK.
+    >  Další funkcí oznámení je [OnOutOfBandData](../mfc/reference/casyncsocket-class.md#onoutofbanddata). Toto oznámení oznamuje přijímacímu soketu, že odesílající zásuvka má "vzdáleně nacházející" data k odeslání. Data mimo IP síť jsou logicky nezávislý kanál spojený s každou dvojicí soketů připojených datových proudů. Pro posílání "naléhavých" dat se obvykle používá integrovaný kanál. Knihovna MFC podporuje data mimo IP síť. Pokročilí uživatelé, kteří pracují s třídou [CAsyncSocket](../mfc/reference/casyncsocket-class.md) , můžou potřebovat používat mimo IP síť, ale uživatelé třídy [CSocket –](../mfc/reference/csocket-class.md) se nedoporučuje používat. Jednodušším způsobem je vytvořit druhý soket pro předávání těchto dat. Další informace o datech mimo IP síť najdete v tématu specifikace rozhraní Windows Sockets, která je dostupná ve Windows SDK.
 
-Pokud odvozujete od třídy `CAsyncSocket`, je nutné přepsat funkce oznámení pro tyto síťové událostí, které vás zajímají do vaší aplikace. Pokud odvodíte třídu od třídy `CSocket`, je podle vašeho výběru, jestli se má přepsat funkce oznámení, které vás zajímají. Můžete také použít `CSocket` samostatně, v takovém případě oznámení funkce výchozí nicneděláním.
+Pokud je odvozeno od třídy `CAsyncSocket`, je nutné přepsat funkce oznámení pro tyto události sítě, které mají zájem na vaši aplikaci. Je-li Třída odvozena od třídy `CSocket`, je zvolena bez ohledu na to, jestli chcete přepsat funkce oznámení, které vás zajímají. Můžete také použít `CSocket` sám sebe. v takovém případě funkce oznámení neprovádí žádnou akci.
 
-Tyto funkce jsou overridable zpětného volání funkce. `CAsyncSocket` a `CSocket` převést zprávy pro oznámení, ale je nutné implementovat funkci reakce na oznámení Pokud budete chtít využít. Funkce oznámení jsou volány v době, kdy vaše soketu obdrží oznámení události, které vás zajímají, jako je například přítomnosti dat pro čtení.
+Tyto funkce jsou přepsatelné funkce zpětného volání. `CAsyncSocket` a `CSocket` převádějí zprávy na oznámení, ale musíte implementovat způsob, jakým funkce oznámení reagují, pokud je chcete použít. Funkce oznámení jsou volány v době, kdy je váš soket upozorněn na událost zájmu, jako je například přítomnost dat ke čtení.
 
-MFC volá funkce oznámení umožňuje přizpůsobit chování k soketu. v době, kdy je upozornění. Například můžete volat `Receive` z vaší `OnReceive` funkce oznámení, tedy na vrácení oznámeno data ke čtení, můžete volat `Receive` k jeho čtení. Tento přístup není nezbytné, ale je platný scénář. Jako alternativu můžete použít funkci oznámení můžete sledovat postup prací, vytisknout **trasování** zprávy a tak dále.
+Knihovna MFC volá funkce oznámení, aby bylo možné přizpůsobit chování soketu v okamžiku oznámení. Například můžete volat `Receive` z funkce pro oznamování `OnReceive`, to znamená, že při oznámení, že je potřeba číst data, zavoláte `Receive` pro jeho čtení. Tento přístup není nutný, ale jedná se o platný scénář. Alternativně můžete použít vaši funkci oznámení ke sledování průběhu, tisku **trasovacích** zpráv atd.
 
-Můžete využít tato oznámení podle přepsání funkce oznámení v třídě odvozené soketu a zajistit pomocí implementace.
+Tato oznámení můžete využít přepsáním funkcí oznámení v odvozené třídě soketu a poskytnutím implementace.
 
-Během operace, jako je příjem a odesílání dat `CSocket` objekt se stane synchronní. Během synchronního stavu jsou všechna naše oznámení určená pro jinými sokety ve frontě době aktuální soketu čeká na oznámení, které chce. (Například během `Receive` volání, soketu chce, aby se oznámení ke čtení.) Jakmile soketu synchronní operaci dokončí a opět asynchronní, můžete začít jinými sokety ve frontě oznámení.
+Během operace, jako je například přijímání nebo posílání dat, se objekt `CSocket` bude synchronní. Během synchronního stavu se všechna oznámení určená pro jiné sokety zařadí do fronty, zatímco aktuální soket počká na oznámení, které chce. (Například během volání `Receive` vyžaduje soket oznámení ke čtení.) Jakmile soket dokončí svou synchronní operaci a bude znovu asynchronní, ostatní sokety mohou začít přijímat oznámení ve frontě.
 
 > [!NOTE]
->  V `CSocket`, `OnConnect` nebude nikdy volána funkce oznámení. Pro připojení, můžete volat `Connect`, která vrátí po dokončení připojení (ať už úspěšně nebo s chybou). Zpracování oznámení připojení je podrobnosti implementace MFC.
+> V `CSocket`není funkce oznamování `OnConnect` nikdy volána. U připojení zavoláte `Connect`, které vrátí po dokončení připojení (buď úspěšně, nebo v případě chyby). Jak jsou zpracovávána oznámení o připojení, je podrobnostmi implementace knihovny MFC.
 
-Podrobnosti o jednotlivých funkcích notification, najdete v části funkce v rámci třídy `CAsyncSocket` v *odkaz knihovny MFC*. Zdrojový kód a informace o ukázky knihovny MFC naleznete v tématu [ukázky knihovny MFC](../overview/visual-cpp-samples.md).
+Podrobnosti o jednotlivých funkcích oznámení naleznete v části Class `CAsyncSocket` v *Referenci knihovny MFC*. Zdrojový kód a informace o ukázkách MFC naleznete v tématu [MFC Samples](../overview/visual-cpp-samples.md#mfc-samples).
 
-Další informace naleznete v tématu:
+Další informace naleznete v tématu:
 
-- [Windows Sockets: Použití třídy CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
+- [Windows Sockets – Použití třídy CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
 
-- [Windows Sockets: Odvozování z tříd soketů](../mfc/windows-sockets-deriving-from-socket-classes.md)
+- [Windows Sockets: Odvozování z tříd soketů](../mfc/windows-sockets-deriving-from-socket-classes.md)
 
-- [Windows Sockets: Jak pracují sokety s archivy](../mfc/windows-sockets-how-sockets-with-archives-work.md)
+- [Windows Sockets: Jak pracují sokety s archivy](../mfc/windows-sockets-how-sockets-with-archives-work.md)
 
 - [Windows Sockets: Blokování](../mfc/windows-sockets-blocking.md)
 
@@ -59,6 +59,6 @@ Další informace naleznete v tématu:
 
 - [Windows Sockets: Převádění řetězců](../mfc/windows-sockets-converting-strings.md)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Windows Sockets v prostředí MFC](../mfc/windows-sockets-in-mfc.md)

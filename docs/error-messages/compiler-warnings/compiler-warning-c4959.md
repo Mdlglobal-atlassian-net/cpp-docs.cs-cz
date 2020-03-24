@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C4959
 ms.assetid: 3a128f3e-4d8a-4565-ba1a-5d32fdeb5982
-ms.openlocfilehash: 646347dec7bc2bac7fa73c8f754d2f9549cb2ba6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 13d2ed705bff7b42eb3c348692a5829bd54158b0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388656"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80164869"
 ---
 # <a name="compiler-warning-c4959"></a>Upozornění kompilátoru C4959
 
-> nejde definovat nespravovaný struct '*typ*"v/CLR: safe vzhledem k tomu, že přístup k jeho členům vrací neověřitelný kód
+> nejde definovat nespravovanou strukturu*typu*v/CLR: safe, protože přístup k jejím členům poskytuje neověřitelný kód.
 
 ## <a name="remarks"></a>Poznámky
 
-Přístup ke členovi nespravovaným typem vytvoří bitovou kopii nelze ověřit (peverify.exe).
+Přístup k členu nespravovaného typu vytvoří obrázek (Nástroj Peverify. exe), který nelze ověřit.
 
-Další informace najdete v tématu [prázdná a ověřitelný kód (C++vyhodnocovací)](../../dotnet/pure-and-verifiable-code-cpp-cli.md).
+Další informace najdete v tématu [čistý a ověřitelný kódC++(/CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md).
 
-**/CLR: safe** – možnost kompilátoru je zastaralé v sadě Visual Studio 2015 a není podporována v sadě Visual Studio 2017.
+Možnost **/clr: Safe** je v aplikaci visual Studio 2015 zastaralá a nepodporovaná ve visual studiu 2017.
 
-Toto upozornění je vyvoláno jako chyba a pomocí se dají zakázat [upozornění](../../preprocessor/warning.md) – Direktiva pragma nebo [/wd](../../build/reference/compiler-option-warning-level.md) – možnost kompilátoru.
+Toto upozornění je vystaveno jako chyba a může být zakázáno pomocí direktivy pragma [Warning](../../preprocessor/warning.md) nebo [/WD](../../build/reference/compiler-option-warning-level.md) kompilátoru.
 
 ## <a name="example"></a>Příklad
 

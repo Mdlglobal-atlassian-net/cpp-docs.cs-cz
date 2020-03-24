@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - C2170
 ms.assetid: d5c663f0-2459-4e11-a8bf-a52b62f3c71d
-ms.openlocfilehash: 04d41a50bc0d5e811e47e5f9d146362a543f26f9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 828e5bbca0b796864ec8b364ee69c18a3b5eea00
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62174676"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80206946"
 ---
 # <a name="compiler-error-c2170"></a>Chyba kompilátoru C2170
 
-'identifier': není deklarované jako funkce, nemůže jít o vnitřní typ.
+' identifier ': není deklarován jako funkce, nemůže být vnitřní
 
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Chcete-li vyřešit tak, že zkontrolujete následující možné příčiny
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Opravu provedete kontrolou následujících možných příčin.
 
-1. Direktivy pragma `intrinsic` se používá pro položky než funkce.
+1. Direktiva pragma `intrinsic` se používá pro jinou položku než funkci.
 
-1. Direktivy pragma `intrinsic` se používá pro funkce s žádná vnitřní formuláře.
+1. Direktiva pragma `intrinsic` se používá pro funkci bez vnitřní formy.

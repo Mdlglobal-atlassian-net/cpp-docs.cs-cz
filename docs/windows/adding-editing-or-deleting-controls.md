@@ -42,12 +42,12 @@ helpviewer_keywords:
 - RichEdit 1.0 control
 - rich edit controls [C++], RichEdit 1.0
 ms.assetid: 73cef03f-5c8c-456a-87d1-1458dff185cf
-ms.openlocfilehash: a42a64f93d334c0b5c63b0eca1567e6964d0a3ae
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: ad14a0500336bc1ca61e00bcd6d9a6e1088afc81
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447216"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167521"
 ---
 # <a name="how-to-add-edit-or-delete-controls-c"></a>Postupy: Přidání, úpravy nebo odstranění ovládacích prvků (C++)
 
@@ -146,7 +146,7 @@ V dialogovém okně vyberte ovládací prvek a potom stiskněte klávesu **Delet
 
 ## <a name="other-issues"></a>Další problémy
 
-### <a name="troubleshooting"></a>Řešení potíží
+### <a name="troubleshooting"></a>Odstraňování potíží
 
 Po přidání společného ovládacího prvku nebo ovládacího prvku Rich Edit do dialogového okna se nezobrazí při testování dialogového okna. Nebo se dialogové okno nezobrazí. Příklad:
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - operators [C++], binary
 - binary operators [C++]
 ms.assetid: c0e7fbff-bc87-4708-8333-504ac09ee83e
-ms.openlocfilehash: 700d8fd784862c3e9f81fcde839063ff0a4696bb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 030ae71fec7a0d1572804f30d09f6f9b2749e436
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62176652"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181301"
 ---
 # <a name="binary-operators"></a>Binární operátory
 
@@ -22,7 +22,7 @@ Následující tabulka uvádí seznam operátorů, které mohou být přetížen
 |Operátor|Název|
 |--------------|----------|
 |**,**|Čárka|
-|**\!=**|Nerovnost|
+|**!=**|Nerovnost|
 |**%**|Modulus|
 |**%=**|Modulus/přiřazení|
 |**&**|Bitový operátor AND|
@@ -35,20 +35,20 @@ Následující tabulka uvádí seznam operátorů, které mohou být přetížen
 |**-**|Odčítání|
 |**-=**|Odčítání/přiřazení|
 |**->**|Výběr členů|
-|**->&#42;**|Výběr pointer-to-member|
+|**->&#42;**|Výběr ukazatele na člena|
 |**/**|Dělení|
 |**/=**|Dělení/přiřazení|
-|**<**|Menší než|
+|**<**|Je menší než|
 |**<<**|Posun doleva|
 |**<<=**|Posunutí doleva / přiřazení|
-|**<=**|Menší nebo rovno|
+|**<=**|Je menší nebo rovno|
 |**=**|Přiřazení|
 |**==**|Rovnost|
 |**>**|Větší než|
-|**>=**|Větší nebo rovno|
+|**>=**|Je větší nebo rovno|
 |**>>**|Posun doprava|
 |**>>=**|Posunutí doprava / přiřazení|
-|**^**|Exkluzivní operátor OR|
+|**^**|Exkluzivní nebo|
 |**^=**|Exkluzivní operátor OR / přiřazení|
 |**&#124;**|Bitový inkluzivní operátor OR|
 |**&#124;=**|Bitový operátor OR / přiřazení|
@@ -56,19 +56,19 @@ Následující tabulka uvádí seznam operátorů, které mohou být přetížen
 
 Chcete-li deklarovat funkci binárního operátoru jako nestatický člen, musíte ji deklarovat v podobě:
 
-> *RET-type* **operátor** *op* **(** *arg* **)**
+> operátor *ret-Type* **operator** *op* **(** *arg* **)**
 
-kde *ret-type* je návratový typ *op* je jedním z operátorů uvedených v předchozí tabulce a *arg* je argumentem libovolného typu.
+kde *ret-Type* je návratový typ, *op* je jedním z operátorů uvedených v předchozí tabulce a *arg* je argumentem libovolného typu.
 
 Chcete-li deklarovat funkci binárního operátoru jako globální funkci, musíte ji deklarovat v podobě:
 
-> *RET-type* **operátor** *op* **(** _arg1_**,** _arg2_ **)**
+> operátor *ret-Type* **operator** *op* **(** _arg1_ **,** _arg2_ **)**
 
-kde *ret-type* a *op* jsou popsány pro členské funkce operátora a *arg1* a *arg2* jsou argumenty. Alespoň jeden z argumentů musí být typu třídy.
+kde *ret-Type* a *op* jsou popsány pro funkce operátoru member a hodnota *arg1* a *arg2* jsou argumenty. Alespoň jeden z argumentů musí být typu třídy.
 
 > [!NOTE]
 > Neexistuje žádné omezení na návratové typy binárních operátorů. Většina binárních operátorů definovaných uživatelem však vrátí typ třídy nebo odkaz na typ třídy.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Přetížení operátoru](../cpp/operator-overloading.md)

@@ -31,12 +31,12 @@ helpviewer_keywords:
 - SetData method
 - FlushData method
 ms.assetid: 1e9fee15-ed9e-4387-af8f-215569beca6c
-ms.openlocfilehash: 1e07289a2d0fb283a20657797db5f915c06a39ad
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: b069cd08814855a0528806ac6d19ed8f5beb6f37
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79446324"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210454"
 ---
 # <a name="irowsetchangeimpl-class"></a>IRowsetChangeImpl – třída
 
@@ -59,7 +59,7 @@ class ATL_NO_VTABLE IRowsetChangeImpl : public BaseInterface
 *Š*<br/>
 Třída odvozená od `IRowsetChangeImpl`.
 
-*Storage*<br/>
+*Úložiště*<br/>
 Záznam uživatele.
 
 *BaseInterface*<br/>
@@ -108,7 +108,7 @@ Implementace šablon OLE DB podporuje všechny základní metody (`SetData`, `In
 
 - Viz také způsob použití třídy `RUpdateRowset` v ukázce [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV) .
 
-## <a name="deleterows"></a>IRowsetChangeImpl::D eleteRows
+## <a name="irowsetchangeimpldeleterows"></a><a name="deleterows"></a>IRowsetChangeImpl::D eleteRows
 
 Odstraní řádky ze sady řádků.
 
@@ -125,7 +125,7 @@ STDMETHOD (DeleteRows )(HCHAPTER /* hReserved */,
 
 Viz [IRowsetChange::D eleterows](/previous-versions/windows/desktop/ms724362(v=vs.85)) v *referenci programátora OLE DB*.
 
-## <a name="insertrow"></a>IRowsetChangeImpl:: InsertRow
+## <a name="irowsetchangeimplinsertrow"></a><a name="insertrow"></a>IRowsetChangeImpl:: InsertRow
 
 Vytvoří a inicializuje nový řádek v sadě řádků.
 
@@ -142,7 +142,7 @@ STDMETHOD (InsertRow )(HCHAPTER /* hReserved */,
 
 Viz [IRowsetChange:: InsertRow](/previous-versions/windows/desktop/ms716921(v=vs.85)) v *referenci programátora OLE DB*.
 
-## <a name="setdata"></a>IRowsetChangeImpl:: SetData
+## <a name="irowsetchangeimplsetdata"></a><a name="setdata"></a>IRowsetChangeImpl:: SetData
 
 Nastaví hodnoty dat v jednom nebo více sloupcích.
 
@@ -158,7 +158,7 @@ STDMETHOD (SetData )(HROW hRow,
 
 Viz [IRowsetChange:: SetData](/previous-versions/windows/desktop/ms721232(v=vs.85)) v *referenci programátora OLE DB*.
 
-## <a name="flushdata"></a>IRowsetChangeImpl:: FlushData
+## <a name="irowsetchangeimplflushdata"></a><a name="flushdata"></a>IRowsetChangeImpl:: FlushData
 
 Přepsáno zprostředkovatelem pro zápis dat do svého úložiště.
 

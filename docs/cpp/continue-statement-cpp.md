@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - continue keyword [C++]
 ms.assetid: 3c94ee57-f732-4c1d-8537-d0ce5382bfd4
-ms.openlocfilehash: 6fbc4af6a9a56f3406582ea9ba59f4d5759b88a1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b3790ecfde0af958b3244cfdaa61524ba78d6267
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154630"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80180274"
 ---
 # <a name="continue-statement-c"></a>continue – příkaz (C++)
 
-Vynutí přenos řízení na kontrolní výraz nejmenší nadřazené [proveďte](../cpp/do-while-statement-cpp.md), [pro](../cpp/for-statement-cpp.md), nebo [při](../cpp/while-statement-cpp.md) smyčky.
+Vynutí přenos řízení na řídicí výraz nejmenšího ohraničujícího do [smyčky](../cpp/do-while-statement-cpp.md), [for](../cpp/for-statement-cpp.md)nebo [while](../cpp/while-statement-cpp.md) .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -25,13 +25,13 @@ continue;
 
 ## <a name="remarks"></a>Poznámky
 
-Nebudou provedeny všechny zbývající příkazy v aktuální iteraci. Na další iteraci smyčky je stanoven následujícím způsobem:
+Zbývající příkazy v aktuální iteraci nejsou provedeny. Další iterace smyčky je určena následujícím způsobem:
 
-- V **proveďte** nebo **při** smyčky, začíná další iterace přehodnocením řídicí výraz **proveďte** nebo **při** příkazu.
+- Ve smyčce **do** nebo **while** začíná další iterace přehodnocením řídicího výrazu příkazu **do** nebo **while** .
 
-- V **pro** smyčky (pomocí syntaxe `for`(`init-expr`; `cond-expr`; `loop-expr`)), `loop-expr` provedeny klauzule. Pak bude `cond-expr` klauzule je již znovu a v závislosti na výsledku, buď smyčku ukončí nebo dojde k jiné iterace.
+- Ve smyčce **for** (pomocí `for`syntaxe (`init-expr`; `cond-expr`; `loop-expr`)) se spustí klauzule `loop-expr`. Poté je znovu vyhodnocena klauzule `cond-expr` a v závislosti na výsledku dojde k ukončení smyčky nebo k jiné iteraci.
 
-Následující příklad ukazuje způsob, jakým **pokračovat** příkaz je možné obejít části kódu a zahájí na další iteraci smyčky.
+Následující příklad ukazuje, jak lze pomocí příkazu **Continue** obejít oddíly kódu a zahájit další iteraci smyčky.
 
 ## <a name="example"></a>Příklad
 
@@ -60,7 +60,7 @@ before the continue
 after the do loop
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Jump – příkazy](../cpp/jump-statements-cpp.md)<br/>
 [Klíčová slova](../cpp/keywords-cpp.md)

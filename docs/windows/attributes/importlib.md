@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - importlib attribute
 ms.assetid: f129e459-b8d3-4aca-a0bc-ee53e18b62ed
-ms.openlocfilehash: 92cf335e5c4754595f2c7af2e1aef30d309d2f5f
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 451204aae52d884b9cbc81d7e589028f5cfefae5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514608"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166806"
 ---
 # <a name="importlib"></a>importlib
 
@@ -30,7 +30,7 @@ Název souboru. tlb (v uvozovkách), který chcete importovat do knihovny typů 
 
 ## <a name="remarks"></a>Poznámky
 
-Atribut **importlib** C++ způsobí, že se příkazumístídoblokuknihovnyvygenerovanéhosouboru.idl.`importlib` Atribut **importlib** má stejné funkce jako atribut [importlib](/windows/win32/Midl/importlib) MIDL.
+Atribut **importlib** C++ způsobí, že se příkaz `importlib` umístí do bloku Library generovaného souboru IDL. Atribut **importlib** má stejné funkce jako atribut [importlib](/windows/win32/Midl/importlib) MIDL.
 
 ## <a name="example"></a>Příklad
 
@@ -56,7 +56,7 @@ Následující kód ukazuje příklad použití **importlib**:
 
 Další informace naleznete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Atributy kompilátoru](compiler-attributes.md)<br/>
 [Samostatné atributy](stand-alone-attributes.md)<br/>

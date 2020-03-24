@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - WCodeToHRESULT method [C++]
 ms.assetid: 0ec43a4b-ca91-42d5-b270-3fde9c8412ea
-ms.openlocfilehash: f2fc84be53d95754d21c30eaea8dd981447453d6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f2194e0e54a93d3227b84d893f9d3f208d972d09
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154926"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80180508"
 ---
-# <a name="comerrorwcodetohresult"></a>_com_error::WCodeToHRESULT
+# <a name="_com_errorwcodetohresult"></a>_com_error::WCodeToHRESULT
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
-Mapuje 16bitové *wCode* 32-bit HRESULT.
+Mapuje 16 bitů *wCode* na 32-bit HRESULT.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -30,19 +30,19 @@ static HRESULT WCodeToHRESULT(
 #### <a name="parameters"></a>Parametry
 
 *wCode*<br/>
-16bitové hodnoty *wCode* namapována na 32bitové HRESULT.
+16bitový *wCode* , který má být namapován na 32-bit HRESULT.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Mapovaná z 16bitové hodnoty HRESULT 32-bit *wCode*.
+32. bit HRESULT namapovaný z 16bitové *wCodey*.
 
 ## <a name="remarks"></a>Poznámky
 
-Zobrazit [WCode](../cpp/com-error-wcode.md) členskou funkci.
+Podívejte se na členskou funkci [wCode](../cpp/com-error-wcode.md) .
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [_com_error::WCode](../cpp/com-error-wcode.md)<br/>
 [_com_error::HRESULTToWCode](../cpp/com-error-hresulttowcode.md)<br/>

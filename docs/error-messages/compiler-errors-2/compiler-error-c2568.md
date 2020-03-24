@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2568
 ms.assetid: 140b4dc9-5a88-4032-9aef-a224bb796f72
-ms.openlocfilehash: b94f51c38a4701082a4b6bc7f700cf09114a0d67
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 82bd1e27c41dff34c30eadab5f188402c96eb013
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62257527"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80177440"
 ---
 # <a name="compiler-error-c2568"></a>Chyba kompilátoru C2568
 
-'identifier1': nejde vyřešit přetížení funkce
+' identifier1 ': nejde vyřešit přetížení funkce.
 
-Kompilátor nemůže určit, které přetížené funkce má být volána. Skutečné parametry předané do funkce musí být přetypovat tak, aby odpovídaly formální parametry z jednoho z přetížení funkce, ale neodpovídá jedna je jednoznačně lepší než všechny ostatní.
+Kompilátor nemůže určit, která přetížená funkce má být volána. Vlastní parametry předané funkci musí být přetypování, aby odpovídaly formálním parametrům pro jednu z přetížené funkce, ale žádná jedna shoda není jednoznačně lepší než u všech ostatních.

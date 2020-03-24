@@ -108,12 +108,12 @@ helpviewer_keywords:
 - operator>(list) member [STL/CLR]
 - operator>=(list) member [STL/CLR]
 ms.assetid: a70c45c8-a257-4f6b-8434-b27ff6685bac
-ms.openlocfilehash: 6c8fdab696960b0f3bfbe26ab91b1e1493204e9b
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 7a07f0cc66492c5e0c10c82a7a6971313e13d77b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79446254"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80208556"
 ---
 # <a name="list-stlclr"></a>list (STL/CLR)
 
@@ -235,7 +235,7 @@ Při mazání nebo odebírání elementu se volá destruktor pro jeho uloženou 
 
 ## <a name="members"></a>Členové
 
-## <a name="assign"></a>list:: assign (STL/CLR)
+## <a name="listassign-stlclr"></a><a name="assign"></a>list:: assign (STL/CLR)
 
 Nahradí všechny prvky.
 
@@ -317,7 +317,7 @@ a b
 a b c
 ```
 
-## <a name="back"></a>list:: Back (STL/CLR)
+## <a name="listback-stlclr"></a><a name="back"></a>list:: Back (STL/CLR)
 
 Přistupuje k poslednímu prvku.
 
@@ -368,7 +368,7 @@ back() = c
 a b x
 ```
 
-## <a name="back_item"></a>list:: back_item (STL/CLR)
+## <a name="listback_item-stlclr"></a><a name="back_item"></a>list:: back_item (STL/CLR)
 
 Přistupuje k poslednímu prvku.
 
@@ -419,7 +419,7 @@ back_item = c
 a b x
 ```
 
-## <a name="begin"></a>list:: begin (STL/CLR)
+## <a name="listbegin-stlclr"></a><a name="begin"></a>list:: begin (STL/CLR)
 
 Určuje začátek řízené sekvence.
 
@@ -474,7 +474,7 @@ a b c
 x y c
 ```
 
-## <a name="clear"></a>list:: Clear (STL/CLR)
+## <a name="listclear-stlclr"></a><a name="clear"></a>list:: Clear (STL/CLR)
 
 Odebere všechny prvky.
 
@@ -531,7 +531,7 @@ a b
 size() = 0
 ```
 
-## <a name="const_iterator"></a>list:: const_iterator (STL/CLR)
+## <a name="listconst_iterator-stlclr"></a><a name="const_iterator"></a>list:: const_iterator (STL/CLR)
 
 Typ konstantního iterátoru řízené sekvence
 
@@ -572,7 +572,7 @@ int main()
 a b c
 ```
 
-## <a name="const_reference"></a>list:: const_reference (STL/CLR)
+## <a name="listconst_reference-stlclr"></a><a name="const_reference"></a>list:: const_reference (STL/CLR)
 
 Typ konstantního odkazu na prvek
 
@@ -616,7 +616,7 @@ int main()
 a b c
 ```
 
-## <a name="const_reverse_iterator"></a>list:: const_reverse_iterator (STL/CLR)
+## <a name="listconst_reverse_iterator-stlclr"></a><a name="const_reverse_iterator"></a>list:: const_reverse_iterator (STL/CLR)
 
 Typ konstantního reverzního iterátoru řízené sekvence.
 
@@ -658,7 +658,7 @@ int main()
 c b a
 ```
 
-## <a name="difference_type"></a>list::d ifference_type (STL/CLR)
+## <a name="listdifference_type-stlclr"></a><a name="difference_type"></a>list::d ifference_type (STL/CLR)
 
 Typy podepsané vzdálenosti mezi dvěma prvky.
 
@@ -712,7 +712,7 @@ end()-begin() = 3
 begin()-end() = -3
 ```
 
-## <a name="empty"></a>list:: Empty (STL/CLR)
+## <a name="listempty-stlclr"></a><a name="empty"></a>list:: Empty (STL/CLR)
 
 Zkouší, zda nejsou přítomny žádné prvky.
 
@@ -763,7 +763,7 @@ size() = 0
 empty() = True
 ```
 
-## <a name="end"></a>list:: end (STL/CLR)
+## <a name="listend-stlclr"></a><a name="end"></a>list:: end (STL/CLR)
 
 Určuje konec řízené sekvence.
 
@@ -819,7 +819,7 @@ a b c
 a x y
 ```
 
-## <a name="erase"></a>list:: Erase (STL/CLR)
+## <a name="listerase-stlclr"></a><a name="erase"></a>list:: Erase (STL/CLR)
 
 Odebere prvky v určených pozicích.
 
@@ -898,7 +898,7 @@ erase(begin(), end()-1) = e
 size() = 1
 ```
 
-## <a name="front"></a>list:: front (STL/CLR)
+## <a name="listfront-stlclr"></a><a name="front"></a>list:: front (STL/CLR)
 
 Přistupuje k prvnímu prvku.
 
@@ -949,7 +949,7 @@ front() = a
 x b c
 ```
 
-## <a name="front_item"></a>list:: front_item (STL/CLR)
+## <a name="listfront_item-stlclr"></a><a name="front_item"></a>list:: front_item (STL/CLR)
 
 Přistupuje k prvnímu prvku.
 
@@ -1000,7 +1000,7 @@ front_item = a
 x b c
 ```
 
-## <a name="generic_container"></a>list:: generic_container (STL/CLR)
+## <a name="listgeneric_container-stlclr"></a><a name="generic_container"></a>list:: generic_container (STL/CLR)
 
 Typ obecného rozhraní pro kontejner.
 
@@ -1066,7 +1066,7 @@ a b c d
 a b c d e
 ```
 
-## <a name="generic_iterator"></a>list:: generic_iterator (STL/CLR)
+## <a name="listgeneric_iterator-stlclr"></a><a name="generic_iterator"></a>list:: generic_iterator (STL/CLR)
 
 Typ iterátoru pro použití s obecným rozhraním pro kontejner.
 
@@ -1124,7 +1124,7 @@ a b c
 a a c
 ```
 
-## <a name="generic_reverse_iterator"></a>list:: generic_reverse_iterator (STL/CLR)
+## <a name="listgeneric_reverse_iterator-stlclr"></a><a name="generic_reverse_iterator"></a>list:: generic_reverse_iterator (STL/CLR)
 
 Typ reverzního iterátoru pro použití s obecným rozhraním pro kontejner.
 
@@ -1181,7 +1181,7 @@ a b c
 a c c
 ```
 
-## <a name="generic_value"></a>list:: generic_value (STL/CLR)
+## <a name="listgeneric_value-stlclr"></a><a name="generic_value"></a>list:: generic_value (STL/CLR)
 
 Typ elementu pro použití s obecným rozhraním pro kontejner.
 
@@ -1237,7 +1237,7 @@ a b c
 a a c
 ```
 
-## <a name="insert"></a>list:: Insert (STL/CLR)
+## <a name="listinsert-stlclr"></a><a name="insert"></a>list:: Insert (STL/CLR)
 
 Přidá prvky na zadanou pozici.
 
@@ -1355,7 +1355,7 @@ y y a x b
 a x b c y y a x b
 ```
 
-## <a name="iterator"></a>list:: iterátor (STL/CLR)
+## <a name="listiterator-stlclr"></a><a name="iterator"></a>list:: iterátor (STL/CLR)
 
 Typ iterátoru řízené sekvence
 
@@ -1404,7 +1404,7 @@ a b c
 x b c
 ```
 
-## <a name="list"></a>list:: list (STL/CLR)
+## <a name="listlist-stlclr"></a><a name="list"></a>list:: list (STL/CLR)
 
 Sestaví objekt kontejneru.
 
@@ -1549,7 +1549,7 @@ x x x x x x
 x x x x x x
 ```
 
-## <a name="merge"></a>list:: merge (STL/CLR)
+## <a name="listmerge-stlclr"></a><a name="merge"></a>list:: merge (STL/CLR)
 
 Sloučí dvě uspořádané řízené sekvence.
 
@@ -1646,7 +1646,7 @@ f e e d c c b a a
 c1.size() = 0
 ```
 
-## <a name="op_as"></a>list:: operator = – operátor (STL/CLR)
+## <a name="listoperator-stlclr"></a><a name="op_as"></a>list:: operator = – operátor (STL/CLR)
 
 Nahradí řízenou sekvenci.
 
@@ -1699,7 +1699,7 @@ a b c
 a b c
 ```
 
-## <a name="pop_back"></a>list::p op_back (STL/CLR)
+## <a name="listpop_back-stlclr"></a><a name="pop_back"></a>list::p op_back (STL/CLR)
 
 Odstraní poslední prvek.
 
@@ -1746,7 +1746,7 @@ a b c
 a b
 ```
 
-## <a name="pop_front"></a>list::p op_front (STL/CLR)
+## <a name="listpop_front-stlclr"></a><a name="pop_front"></a>list::p op_front (STL/CLR)
 
 Odstraní první prvek.
 
@@ -1793,7 +1793,7 @@ a b c
 b c
 ```
 
-## <a name="push_back"></a>list::p ush_back (STL/CLR)
+## <a name="listpush_back-stlclr"></a><a name="push_back"></a>list::p ush_back (STL/CLR)
 
 Přidá nový poslední prvek.
 
@@ -1833,7 +1833,7 @@ int main()
 a b c
 ```
 
-## <a name="push_front"></a>list::p ush_front (STL/CLR)
+## <a name="listpush_front-stlclr"></a><a name="push_front"></a>list::p ush_front (STL/CLR)
 
 Přidá nový první prvek.
 
@@ -1873,7 +1873,7 @@ int main()
 c b a
 ```
 
-## <a name="rbegin"></a>list:: rbegin (STL/CLR)
+## <a name="listrbegin-stlclr"></a><a name="rbegin"></a>list:: rbegin (STL/CLR)
 
 Určuje začátek obrácené kontrolované sekvence.
 
@@ -1928,7 +1928,7 @@ a b c
 a y x
 ```
 
-## <a name="reference"></a>list:: Reference (STL/CLR)
+## <a name="listreference-stlclr"></a><a name="reference"></a>list:: Reference (STL/CLR)
 
 Typ odkazu na prvek
 
@@ -1983,7 +1983,7 @@ a b c
 A B C
 ```
 
-## <a name="remove"></a>list:: Remove (STL/CLR)
+## <a name="listremove-stlclr"></a><a name="remove"></a>list:: Remove (STL/CLR)
 
 Odebere prvek se zadanou hodnotou.
 
@@ -2042,7 +2042,7 @@ a b c
 a c
 ```
 
-## <a name="remove_if"></a>list:: remove_if (STL/CLR)
+## <a name="listremove_if-stlclr"></a><a name="remove_if"></a>list:: remove_if (STL/CLR)
 
 Odebere prvky, které přejdou na zadaný test.
 
@@ -2106,7 +2106,7 @@ a b b b c
 b b b
 ```
 
-## <a name="rend"></a>list:: rend (STL/CLR)
+## <a name="listrend-stlclr"></a><a name="rend"></a>list:: rend (STL/CLR)
 
 Určuje konec reverzní kontrolované sekvence.
 
@@ -2162,7 +2162,7 @@ a b c
 y x c
 ```
 
-## <a name="resize"></a>list:: Resize (STL/CLR)
+## <a name="listresize-stlclr"></a><a name="resize"></a>list:: Resize (STL/CLR)
 
 Změní počet prvků.
 
@@ -2222,7 +2222,7 @@ size() = 0
 x x x x x
 ```
 
-## <a name="reverse"></a>list:: Reverse (STL/CLR)
+## <a name="listreverse-stlclr"></a><a name="reverse"></a>list:: Reverse (STL/CLR)
 
 Obrátí řízenou sekvenci.
 
@@ -2269,7 +2269,7 @@ a b c
 c b a
 ```
 
-## <a name="reverse_iterator"></a>list:: reverse_iterator (STL/CLR)
+## <a name="listreverse_iterator-stlclr"></a><a name="reverse_iterator"></a>list:: reverse_iterator (STL/CLR)
 
 Typ reverzního iterátoru řízené sekvence.
 
@@ -2318,7 +2318,7 @@ c b a
 x b a
 ```
 
-## <a name="size"></a>list:: Size (STL/CLR)
+## <a name="listsize-stlclr"></a><a name="size"></a>list:: Size (STL/CLR)
 
 Spočítá počet prvků.
 
@@ -2371,7 +2371,7 @@ size() = 0 after clearing
 size() = 2 after adding 2
 ```
 
-## <a name="size_type"></a>list:: size_type (STL/CLR)
+## <a name="listsize_type-stlclr"></a><a name="size_type"></a>list:: size_type (STL/CLR)
 
 Typ podepsané vzdálenosti mezi dvěma prvky.
 
@@ -2419,7 +2419,7 @@ a b c
 end()-begin() = 3
 ```
 
-## <a name="sort"></a>list:: Sort (STL/CLR)
+## <a name="listsort-stlclr"></a><a name="sort"></a>list:: Sort (STL/CLR)
 
 Seřadí řízené sekvence.
 
@@ -2484,7 +2484,7 @@ c b a
 a b c
 ```
 
-## <a name="splice"></a>list:: splice (STL/CLR)
+## <a name="listsplice-stlclr"></a><a name="splice"></a>list:: splice (STL/CLR)
 
 Propojování propojení mezi uzly.
 
@@ -2577,7 +2577,7 @@ b c a
 c2.size() = 0
 ```
 
-## <a name="swap"></a>list:: swap (STL/CLR)
+## <a name="listswap-stlclr"></a><a name="swap"></a>list:: swap (STL/CLR)
 
 Zamění obsah dvou kontejnerů.
 
@@ -2641,7 +2641,7 @@ x x x x x
 a b c
 ```
 
-## <a name="to_array"></a>list:: to_array (STL/CLR)
+## <a name="listto_array-stlclr"></a><a name="to_array"></a>list:: to_array (STL/CLR)
 
 Zkopíruje řízenou sekvenci do nového pole.
 
@@ -2690,7 +2690,7 @@ a b c d
 a b c
 ```
 
-## <a name="unique"></a>list:: Unique (STL/CLR)
+## <a name="listunique-stlclr"></a><a name="unique"></a>list:: Unique (STL/CLR)
 
 Odebere sousední prvky, které přejdou na zadaný test.
 
@@ -2756,7 +2756,7 @@ a b c
 a a
 ```
 
-## <a name="value_type"></a>list:: value_type (STL/CLR)
+## <a name="listvalue_type-stlclr"></a><a name="value_type"></a>list:: value_type (STL/CLR)
 
 Typ prvku
 
@@ -2801,7 +2801,7 @@ int main()
 a b c
 ```
 
-## <a name="op_neq"></a>operator! = (list) – operátor (STL/CLR)
+## <a name="operator-list-stlclr"></a><a name="op_neq"></a>operator! = (list) – operátor (STL/CLR)
 
 Seznam se neshoduje s porovnáním.
 
@@ -2870,7 +2870,7 @@ a b d
 [a b c] != [a b d] is True
 ```
 
-## <a name="op_lt"></a>operator&lt; (list) – operátor (STL/CLR)
+## <a name="operatorlt-list-stlclr"></a><a name="op_lt"></a>operator&lt; (list) – operátor (STL/CLR)
 
 Seznam je menší než porovnání.
 
@@ -2939,7 +2939,7 @@ a b d
 [a b c] < [a b d] is True
 ```
 
-## <a name="op_lteq"></a>operator&lt;= (list) – operátor (STL/CLR)
+## <a name="operatorlt-list-stlclr"></a><a name="op_lteq"></a>operator&lt;= (list) – operátor (STL/CLR)
 
 Seznam je menší nebo roven hodnotě porovnání.
 
@@ -3008,7 +3008,7 @@ a b d
 [a b d] <= [a b c] is False
 ```
 
-## <a name="op_eq"></a>operator = = (list) – operátor (STL/CLR)
+## <a name="operator-list-stlclr"></a><a name="op_eq"></a>operator = = (list) – operátor (STL/CLR)
 
 Seznam se stejným porovnáním
 
@@ -3077,7 +3077,7 @@ a b d
 [a b c] == [a b d] is False
 ```
 
-## <a name="op_gt"></a>operator&gt; (list) – operátor (STL/CLR)
+## <a name="operatorgt-list-stlclr"></a><a name="op_gt"></a>operator&gt; (list) – operátor (STL/CLR)
 
 Seznam je větší než porovnání.
 
@@ -3146,7 +3146,7 @@ a b d
 [a b d] > [a b c] is True
 ```
 
-## <a name="op_gteq"></a>operator&gt;= (list) – operátor (STL/CLR)
+## <a name="operatorgt-list-stlclr"></a><a name="op_gteq"></a>operator&gt;= (list) – operátor (STL/CLR)
 
 Seznam je větší než nebo rovno porovnání.
 

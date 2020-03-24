@@ -1,5 +1,5 @@
 ---
-title: Speciální členské funkce
+title: Zvláštní členské funkce
 ms.date: 12/06/2016
 helpviewer_keywords:
 - special member functions [C++]
@@ -9,27 +9,27 @@ helpviewer_keywords:
 - move operators [C++]
 - assignment operators [C++]
 ms.assetid: 017d6817-b012-44f0-b153-f3076c251ea7
-ms.openlocfilehash: 3b26628fd18749bd19819fe787888fd3264a79d1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b15a0e50774bbc4e70912a31f9a57ea0439f2c12
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62330977"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178688"
 ---
-# <a name="special-member-functions"></a>Speciální členské funkce
+# <a name="special-member-functions"></a>Zvláštní členské funkce
 
-*Speciálních členských funkcí* se, že v některých případech kompilátor automaticky generuje můžete členské funkce třídy (nebo struct). Tyto funkce jsou [výchozí konstruktor](constructors-cpp.md#default_constructors), [destruktor](destructors-cpp.md), [konstruktor kopie a operátor přiřazení kopie](copy-constructors-and-copy-assignment-operators-cpp.md)a [konstruktor přesunu a operátor Move assignment](move-constructors-and-move-assignment-operators-cpp.md). Pokud vaše třída nedefinuje jeden nebo více zvláštních členských funkcí, pak kompilátor může implicitně deklarace a definice funkce, které se používají. Implementace vygenerovaný kompilátorem jsou volány *výchozí* speciálních členských funkcí. Kompilátor negeneruje funkce, pokud nejsou potřeba.
+*Zvláštní členské funkce* jsou členské funkce třídy (nebo struktury), které v některých případech kompilátor automaticky generuje za vás. Tyto funkce jsou [výchozí konstruktor](constructors-cpp.md#default_constructors), [destruktor](destructors-cpp.md), [kopírovací konstruktor a operátor přiřazení kopie](copy-constructors-and-copy-assignment-operators-cpp.md)a [konstruktor Move a operátor přiřazení přesunutí](move-constructors-and-move-assignment-operators-cpp.md). Pokud vaše třída nedefinuje jednu nebo více speciálních členských funkcí, kompilátor může implicitně deklarovat a definovat používané funkce. Implementace generované kompilátorem se nazývají *výchozí* speciální členské funkce. Kompilátor negeneruje funkce, pokud nejsou potřeba.
 
-Výchozí zvláštní členské funkce lze explicitně deklarovat s použitím **= default** – klíčové slovo. To způsobí, že kompilátor definovat funkci pouze v případě potřeby stejným způsobem, jako kdyby byly funkce nebyla vůbec deklarovány.
+Výchozí speciální členskou funkci můžete explicitně deklarovat pomocí klíčového slova **= Default** . To způsobí, že kompilátor definuje funkci pouze v případě potřeby, stejným způsobem jako, pokud nebyla funkce deklarována vůbec.
 
-V některých případech může kompilátor generovat *odstranit* speciálních členských funkcí, které nejsou definované a proto nelze volat. K tomu může dojít v případech, kdy volání konkrétní zvláštní členské funkce třídy nedává smysl, uvedeny další vlastnosti třídy. Explicitně zabránit automatické generování speciálních členských funkcí, je možné deklarovat ho jako odstraněný pomocí **= delete** – klíčové slovo.
+V některých případech může kompilátor generovat *odstraněné* speciální členské funkce, které nejsou definovány, a proto nelze volat. K tomu může dojít v případech, kdy volání konkrétní zvláštní členské funkce na třídu nemá smysl, s ohledem na jiné vlastnosti třídy. Chcete-li explicitně zabránit automatické generaci speciální členské funkce, můžete ji deklarovat jako odstraněnou pomocí klíčového slova **= Delete** .
 
-Kompilátor generuje *výchozí konstruktor*, konstruktor, který nepřijímá žádné argumenty, pouze v případě, že nebyly deklarovány jiných konstruktoru. Pokud je deklarován pouze konstruktor, který používá parametry, kód, který se pokusí o volání výchozího konstruktoru způsobí, že kompilátor vytvoří chybová zpráva. Vygenerovaný kompilátorem výchozí konstruktor provádí jednoduché member-wise [výchozí inicializace](initializers.md#default_initialization) objektu. Výchozí inicializace zůstanou všechny proměnné členů v neurčitém stavu.
+Kompilátor generuje *výchozí konstruktor*, který nepřijímá žádné argumenty, pouze v případě, že jste nedeklarovali žádný jiný konstruktor. Pokud jste deklarovali pouze konstruktor, který přebírá parametry, kód, který se pokusí volat výchozí konstruktor, způsobí, že kompilátor vytvoří chybovou zprávu. Výchozí konstruktor generovaný kompilátorem provádí jednoduchou [výchozí inicializaci](initializers.md#default_initialization) objektu. Výchozí inicializace opustí všechny členské proměnné v neurčitém stavu.
 
-Výchozí destruktor provádí požadování zničení objektu. Je virtuální pouze v případě, že je virtuální destruktor základní třídy.
+Výchozí destruktor provádí likvidaci objektu. Je virtuální pouze v případě, že je destruktor základní třídy virtuální.
 
-Výchozí kopírování a přesun konstrukce a operací přiřazení provádět požadování bitový vzor kopíruje nebo přesouvá nestatických datových členů. Přesun operace jsou generovány pouze, pokud žádný destruktor nebo operací přesunutí nebo kopírování jsou deklarovány. Výchozí konstruktor kopie se vygeneruje pouze tehdy, když je deklarován žádný kopírovací konstruktor. Se implicitně odstranila, pokud je deklarována operace přesunu. Výchozí operátor přiřazení kopie se vygeneruje pouze v případě, že je explicitně deklarován žádný operátor přiřazení kopie. Se implicitně odstranila, pokud je deklarována operace přesunu.
+Výchozí operace kopírování a přesunutí a operace přiřazení provádějí kopie bitových vzorů, které jsou k dispozici, a přesouvá nestatické datové členy. Operace přesunu jsou generovány pouze v případě, že nejsou deklarovány žádné operace destruktoru nebo přesunutí nebo kopírování. Výchozí kopírovací konstruktor je vygenerován pouze v případě, že není deklarován žádný kopírovací konstruktor. Implicitně se odstraní, pokud je deklarována operace přesunutí. Výchozí operátor přiřazení kopie je vygenerován pouze v případě, že není explicitně deklarován žádný operátor přiřazení kopie. Implicitně se odstraní, pokud je deklarována operace přesunutí.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Referenční dokumentace jazyka C++](cpp-language-reference.md)

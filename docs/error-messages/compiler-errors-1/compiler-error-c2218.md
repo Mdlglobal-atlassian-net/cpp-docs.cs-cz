@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C2218
 ms.assetid: b0f55da4-8edb-4b45-b298-1a091981bd7b
-ms.openlocfilehash: 5a9d897686fc915c9892fa2bcd51fa3ca3c8b05e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: db14c37992fc1e2dd409c653d622d3419fcae4f3
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62165668"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80206645"
 ---
 # <a name="compiler-error-c2218"></a>Chyba kompilátoru C2218
 
-'__vectorcall' nelze použít s "/ arch: IA32.
+' __vectorcall ' nelze použít s '/arch: IA32 '
 
-`__vectorcall` Konvence volání je podporována pouze v nativním kódu x86 a x64 procesorů, které obsahují Streaming SIMD Extensions 2 (SSE2) a vyšší. Další informace najdete v tématu [__vectorcall](../../cpp/vectorcall.md).
+Konvence volání `__vectorcall` je podporována pouze v nativním kódu u procesorů x86 a x64, které zahrnují Streaming SIMD Extensions 2 (SSE2) a vyšší. Další informace najdete v tématu [__vectorcall](../../cpp/vectorcall.md).
 
-Chcete-li vyřešit tuto chybu, změňte možnosti kompilátoru na cíl SSE2, AVX a AVX2 instrukční sadu. Další informace najdete v tématu [/arch (x86)](../../build/reference/arch-x86.md).
+Chcete-li tuto chybu opravit, změňte možnosti kompilátoru na cílové sady instrukcí SSE2, AVX nebo AVX2. Další informace najdete v tématu [/arch (x86)](../../build/reference/arch-x86.md).

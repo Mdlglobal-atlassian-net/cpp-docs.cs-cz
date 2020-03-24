@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - C2827
 ms.assetid: cb3e5814-0c92-40e4-b620-98578ae3003a
-ms.openlocfilehash: 7f1f19b91580bffa1133ae11ab91f2243153a389
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8da60b895ad5dab0713d736142225053d14301c1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406870"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80201939"
 ---
 # <a name="compiler-error-c2827"></a>Chyba kompilátoru C2827
 
-'operator operátor' nedá globálně přepsat jeho unární podobou.
+operátor operator se nedá globálně přepsat s unárním formulářem.
 
-Operátor nemůže mít unární formulářů mimo objektu.
+Operátor nemůže mít unární tvar mimo objekt.
 
-### <a name="to-fix-by-using-the-following-possible-solutions"></a>Chcete-li vyřešit pomocí následujících možná řešení
+### <a name="to-fix-by-using-the-following-possible-solutions"></a>Oprava pomocí následujících možných řešení
 
-1. Proveďte přetíženého operátoru místní objekt.
+1. Nastaví přetížený operátor místně objektu.
 
-1. Zvolte odpovídající unární operátor přetížení.
+1. Vyberte vhodný unární operátor k přetížení.

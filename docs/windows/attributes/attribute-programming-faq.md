@@ -7,56 +7,56 @@ helpviewer_keywords:
 - attributes [C++/CLI], frequently asked questions
 - FAQs (frequently asked questions), attributed programming [C++]
 ms.assetid: a1b8349f-7f51-43c4-95ea-4edb6e5f243f
-ms.openlocfilehash: fd4c24e3933738d128dffd41018466c33b419de8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4191704da2fdac849ac1ce97692c2421ba7cda41
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148364"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168380"
 ---
 # <a name="attribute-programming-faq"></a>Nejčastější dotazy k programování s atributy
 
-Toto téma poskytuje odpovědi na následující nejčastější dotazy:
+Toto téma obsahuje odpovědi na následující Nejčastější dotazy:
 
 - [Co je HRESULT?](#vcconattributeprogrammmingfaqanchor1)
 
-- [Když je nutné zadat název parametru atributu](#vcconattributeprogrammmingfaqanchor2)
+- [Kdy je nutné zadat název parametru pro atribut?](#vcconattributeprogrammmingfaqanchor2)
 
-- [Můžete použít komentáře v bloku atributu?](#vcconattributeprogrammmingfaqanchor3)
+- [Můžu použít komentáře v bloku atributu?](#vcconattributeprogrammmingfaqanchor3)
 
-- [Jak atributy komunikovat s dědičnosti?](#vcconattributeprogrammmingfaqanchor4)
+- [Jak atributy komunikují s děděním?](#vcconattributeprogrammmingfaqanchor4)
 
-- [Jak můžete použít atributy v bez atributové projekt knihovny ATL?](#vcconattributeprogrammmingfaqanchor5)
+- [Jak můžu použít atributy v projektu ATL bez atributu?](#vcconattributeprogrammmingfaqanchor5)
 
-- [Použití souboru v projektu s atributy IDL](#vcconattributeprogrammmingfaqanchor6)
+- [Jak můžu použít soubor. IDL v projektu s atributy?](#vcconattributeprogrammmingfaqanchor6)
 
-- [Můžete upravit kód, který se vloží atributem?](#vcconattributeprogrammmingfaqanchor7)
+- [Můžu upravit kód, který je vložený atributem?](#vcconattributeprogrammmingfaqanchor7)
 
-- [Jak můžu vpřed deklarovat s atributy rozhraní?](#vcconattributeprogrammmingfaqhowcaniforwarddeclareanattributedinterface)
+- [Jak můžu dopředt deklaraci rozhraní s atributy?](#vcconattributeprogrammmingfaqhowcaniforwarddeclareanattributedinterface)
 
-- [Můžete použít atributy na třídu odvozenou z třídy, která rovněž používá atributy?](#vcconcaniuseattributesonclassderivedfromclassthatalsousesattributesanchor)
+- [Lze použít atributy u třídy odvozené ze třídy, která také používá atributy?](#vcconcaniuseattributesonclassderivedfromclassthatalsousesattributesanchor)
 
-##  <a name="vcconattributeprogrammmingfaqanchor1"></a> Co je HRESULT?
+##  <a name="what-is-an-hresult"></a><a name="vcconattributeprogrammmingfaqanchor1"></a>Co je HRESULT?
 
-HRESULT je jednoduchý datový typ, který se často používá jako návratovou hodnotu tak, že atributy a knihovny ATL obecně. Následující tabulka popisuje různé hodnoty. Další hodnoty jsou obsaženy v souboru winerror.h záhlaví.
+HRESULT je jednoduchý datový typ, který se často používá jako návratová hodnota atributů a ATL obecně. Různé hodnoty jsou popsány v následující tabulce. Další hodnoty jsou obsaženy v hlavičkovém souboru WinError. h.
 
-|Název|Popis|Value|
+|Název|Popis|Hodnota|
 |----------|-----------------|-----------|
 |S_OK|Operace byla úspěšná.|0x00000000|
-|E_UNEXPECTED, JE-|Došlo k neočekávané chybě|0x8000FFFF|
+|E_UNEXPECTED|Neočekávaná chyba|0x8000FFFF|
 |E_NOTIMPL|Není implementováno|0x80004001|
-|E_OUTOFMEMORY|Nepovedlo se přidělit dost paměti|0x8007000E|
-|E_INVALIDARG|Jeden nebo více argumentů jsou neplatné|0x80070057|
-|E_NOINTERFACE|Rozhraní není podporováno|0x80004002|
+|E_OUTOFMEMORY|Nepovedlo se přidělit potřebnou paměť.|0x8007000E|
+|E_INVALIDARG|Jeden nebo více argumentů je neplatných.|0x80070057|
+|E_NOINTERFACE|Žádné takové rozhraní není podporováno.|0x80004002|
 |E_POINTER|Neplatný ukazatel|0x80004003|
 |E_HANDLE|Neplatný popisovač|0x80070006|
 |E_ABORT|Operace byla přerušena.|0x80004004|
-|E_FAIL|Neurčená chyba|0x80004005|
-|E_ACCESSDENIED|Obecná chyba odepření přístupu|0x80070005|
+|E_FAIL|Nespecifikovaná chyba|0x80004005|
+|E_ACCESSDENIED|Chyba obecného přístupu k odepření|0x80070005|
 
-##  <a name="vcconattributeprogrammmingfaqanchor2"></a> Když je nutné zadat název parametru atributu
+##  <a name="when-do-i-have-to-specify-the-parameter-name-for-an-attribute"></a><a name="vcconattributeprogrammmingfaqanchor2"></a>Kdy je nutné zadat název parametru pro atribut?
 
-Ve většině případů, pokud atribut má jeden parametr, tento parametr je pojmenován. Tento název se nevyžaduje při vkládání atribut ve vašem kódu. Například následující použití příkazu [agregovatelné](aggregatable.md) atribut:
+Ve většině případů platí, že pokud má atribut jeden parametr, je tento parametr pojmenován. Tento název není požadován při vkládání atributu do kódu. Například následující použití [agregovatelné](aggregatable.md) atributu:
 
 ```cpp
 [coclass, aggregatable(value=allowed)]
@@ -76,7 +76,7 @@ class CMyClass
 };
 ```
 
-Následující atributy však máte jeden, nepojmenované parametry:
+Následující atributy ale mají jeden nepojmenovaný parametr:
 
 ||||
 |-|-|-|
@@ -92,11 +92,11 @@ Následující atributy však máte jeden, nepojmenované parametry:
 |[size_is](size-is.md)|[source](source-cpp.md)|[switch_is](switch-is.md)|
 |[switch_type](switch-type.md)|[transmit_as](transmit-as.md)|[wire_marshal](wire-marshal.md)|
 
-##  <a name="vcconattributeprogrammmingfaqanchor3"></a> Můžete použít komentáře v bloku atributu?
+##  <a name="can-i-use-comments-in-an-attribute-block"></a><a name="vcconattributeprogrammmingfaqanchor3"></a>Můžu použít komentáře v bloku atributu?
 
-Můžete použít jeden řádek a více řádků komentáře v bloku atributu. Však nelze použít buď styl komentář mezi kulaté závorky obsahující parametry atributu.
+V rámci bloku atributu lze použít jednořádkový i Víceřádkový komentář. V závorkách, které mají parametry atributu, však nelze použít buď styl komentáře.
 
-Je povoleno následující:
+Jsou povoleny následující:
 
 ```cpp
 [ coclass, progid("MyClass.CMyClass.1"), /* Multiple-line
@@ -105,30 +105,30 @@ Je povoleno následující:
 ]
 ```
 
-Je zakázáno následující:
+Toto není povolené:
 
 ```cpp
 [ coclass, progid("MyClass.CMyClass.1" /* Multiple-line comment */ ), threading("both" // Single-line comment)
 ]
 ```
 
-##  <a name="vcconattributeprogrammmingfaqanchor4"></a> Jak atributy komunikovat s dědičnosti?
+##  <a name="how-do-attributes-interact-with-inheritance"></a><a name="vcconattributeprogrammmingfaqanchor4"></a>Jak atributy komunikují s děděním?
 
-S atributy a zjednodušeně třídy můžete dědit z jiné třídy, které pravděpodobně samy přiřadit nebo ne. Odvozování z třídy s atributy výsledek je stejný jako odvození z této třídy po zprostředkovatele atribut má transformaci jeho kód. Atributy nejsou přenášeny do odvozené třídy prostřednictvím dědičnosti jazyka C++. Poskytovatele atributu transformuje pouze kód pixelům jeho atributy.
+Třídy můžete zdědit pomocí atributů i bez atributů z jiných tříd, které mohou samy být atributy nebo nikoli. Výsledek odvození z třídy s atributem je stejný jako odvozený od této třídy poté, co poskytovatel atributu transformuje svůj kód. Atributy nejsou přenášeny do odvozených tříd C++ prostřednictvím dědičnosti. Zprostředkovatel atributů transformuje pouze kód v okolí jeho atributů.
 
-##  <a name="vcconattributeprogrammmingfaqanchor5"></a> Jak můžete použít atributy v bez atributové projekt knihovny ATL?
+##  <a name="how-can-i-use-attributes-in-a-nonattributed-atl-project"></a><a name="vcconattributeprogrammmingfaqanchor5"></a>Jak můžu použít atributy v projektu ATL bez atributu?
 
-Možná bude bez atributové projekt knihovny ATL, který má soubor .idl, a můžete začít přidávat s atributy objektů. V takovém případě použijte **Průvodce přidáním třídy** poskytnout kód.
+Můžete mít neatributový projekt ATL, který má soubor. idl a můžete chtít začít přidávat objekty s atributy. V takovém případě použijte **Průvodce přidáním třídy** k poskytnutí kódu.
 
-##  <a name="vcconattributeprogrammmingfaqanchor6"></a> Použití souboru v projektu s atributy IDL
+##  <a name="how-can-i-use-an-idl-file-in-an-attributed-project"></a><a name="vcconattributeprogrammmingfaqanchor6"></a>Jak můžu použít soubor. IDL v projektu s atributy?
 
-Může mít soubor .idl, který chcete použít v projektu ATL s atributy. V takovém případě byste použili [importidl –](importidl.md) atribut, zkompilujte soubor .idl do souboru .h (najdete v článku [MIDL – stránky vlastností](../../build/reference/midl-property-pages.md) v projektu **stránky vlastností** dialogové okno), a soubor .h pak zahrňte do projektu.
+Je možné, že máte soubor. idl, který chcete použít v projektu s atributy ATL. V tomto případě použijte atribut [importidl](importidl.md) , zkompilujte soubor. idl do souboru. h (viz [stránky vlastností MIDL](../../build/reference/midl-property-pages.md) v dialogovém okně **stránky vlastností** projektu) a potom do projektu zahrňte soubor. h.
 
-##  <a name="vcconattributeprogrammmingfaqanchor7"></a> Můžete upravit kód, který se vloží atributem?
+##  <a name="can-i-modify-code-that-is-injected-by-an-attribute"></a><a name="vcconattributeprogrammmingfaqanchor7"></a>Můžu upravit kód, který je vložený atributem?
 
-Některé atributy vloží kód do vašeho projektu. Vložený kód můžete zobrazit pomocí [/Fx](../../build/reference/fx-merge-injected-code.md) – možnost kompilátoru. Je také možné zkopírovat kód z vloženého souboru a vložit do zdrojového kódu. To umožňuje upravovat chování atribut. Ale budete muset upravit jiných částí kódu také.
+Některé atributy vloží kód do vašeho projektu. Vložený kód můžete zobrazit pomocí možnosti kompilátoru [/FX](../../build/reference/fx-merge-injected-code.md) . Je také možné zkopírovat kód ze vloženého souboru a vložit jej do zdrojového kódu. To umožňuje změnit chování atributu. Je však možné, že budete muset upravit i jiné části kódu.
 
-Následující příklad je výsledkem kopírování kódu injektovaného do souboru zdrojového kódu:
+Následující ukázka je výsledkem zkopírování vloženého kódu do souboru zdrojového kódu:
 
 ```cpp
 // attr_injected.cpp
@@ -234,14 +234,14 @@ public:
 int main() {}
 ```
 
-##  <a name="vcconattributeprogrammmingfaqhowcaniforwarddeclareanattributedinterface"></a> Jak můžu vpřed deklarovat s atributy rozhraní?
+##  <a name="how-can-i-forward-declare-an-attributed-interface"></a><a name="vcconattributeprogrammmingfaqhowcaniforwarddeclareanattributedinterface"></a>Jak můžu dopředt deklaraci rozhraní s atributy?
 
-Pokud se chystáte provést Dopředná deklarace s atributy rozhraní, musíte použít stejné atributy pro dopřednou deklarací, které platí pro deklaraci skutečné rozhraní. Musíte taky použít [exportovat](export.md) atribut Dopředná deklarace.
+Pokud chcete vytvořit dopřednou deklaraci rozhraní s atributem, je nutné použít stejné atributy na dopřednou deklaraci, kterou použijete na skutečnou deklaraci rozhraní. Také je nutné použít atribut [exportu](export.md) pro vaši dopřednou deklaraci.
 
-##  <a name="vcconcaniuseattributesonclassderivedfromclassthatalsousesattributesanchor"></a> Můžete použít atributy na třídu odvozenou z třídy, která rovněž používá atributy?
+##  <a name="can-i-use-attributes-on-a-class-derived-from-a-class-that-also-uses-attributes"></a><a name="vcconcaniuseattributesonclassderivedfromclassthatalsousesattributesanchor"></a>Lze použít atributy u třídy odvozené ze třídy, která také používá atributy?
 
-Ne, použití atributů na třídy odvozené z třídy, která rovněž používá atributy není podporováno.
+Ne, použití atributů u třídy odvozené od třídy, která také používá atributy, není podporováno.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Atributy C++ pro COM a .NET](cpp-attributes-com-net.md)
