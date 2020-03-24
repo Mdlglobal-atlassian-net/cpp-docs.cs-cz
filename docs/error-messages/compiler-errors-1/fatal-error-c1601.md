@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C1601
 ms.assetid: 25797c39-f085-4d75-9eab-159ecd36ef49
-ms.openlocfilehash: cade1c216053e61b14bd9ccdd0b50e0325bb5cc7
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 22dfdd47fca596282762873ea86b9382c4d8f997
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344770"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80202914"
 ---
 # <a name="fatal-error-c1601"></a>Závažná chyba C1601
 
-operační kód nepodporované vloženého sestavení
+nepodporované opcode vloženého sestavení
 
-Tato chyba označuje neshody soubory .exe kompilátoru, které mohlo dojít z důvodu nekompletní instalaci. Například může instalaci aktualizace service pack, ale ne Pack procesoru. Nainstalujte všechny požadované produkty.
+Tato chyba označuje neshodu v souborech Compiler. exe, k nimž mohlo dojít kvůli nekompletní instalaci. Například je možné, že jste nainstalovali aktualizaci Service Pack, ale ne sadu procesorů. Nainstalujte všechny požadované produkty.

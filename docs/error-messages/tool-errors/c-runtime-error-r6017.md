@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - R6017
 ms.assetid: df3ec5f5-6771-4648-ba06-0e26c6a1cc6a
-ms.openlocfilehash: 45f3b07f540cb72a955b19420130a5a806b750d7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2d868939425c11f13dffd84e28c1afee45e3b11a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62299657"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80197299"
 ---
 # <a name="c-runtime-error-r6017"></a>Chyba modulu C runtime R6017
 
-Chyba uzamčení neočekávané s více vlákny
+Neočekávaná chyba zámku s více vlákny
 
 > [!NOTE]
-> Pokud k této chybě dojde při spuštění aplikace, aplikace se vypnout, protože má vnitřní problém. Existuje několik příčin této chyby, ale často je způsobena závadou v kódu aplikace.
+> Pokud se zobrazí tato chybová zpráva při spuštění aplikace, aplikace byla vypnuta, protože došlo k vnitřnímu problému. Tato chyba může mít několik možných důvodů, ale často je způsobena nedostatkem kódu aplikace.
 >
 > Zkuste chybu odstranit pomocí tohoto postupu:
 >
-> - Použití **aplikace a funkce** nebo **programy a funkce** stránku **ovládací panely** opravte nebo přeinstalujte program.
-> - Zkontrolujte **Windows Update** v **ovládací panely** pro aktualizace softwaru.
-> - Vyhledat aktualizovanou verzi aplikace. Pokud se problém nevyřeší, obraťte se na dodavatele aplikace.
+> - K opravě nebo přeinstalaci programu použijte stránku **aplikace a funkce** nebo **programy a funkce** v **Ovládacích panelech** .
+> - Ověřte **web Windows Update** v **Ovládacích panelech** pro aktualizace softwaru.
+> - Vyhledejte aktualizovanou verzi aplikace. Pokud potíže potrvají, obraťte se na dodavatele aplikace.
 
 **Informace pro programátory**
 
-Procesu došlo k neočekávané chybě při pokusu o přístup k modulu runtime jazyka C s více vlákny zámek na systémový prostředek. K této chybě obvykle dochází, pokud proces neúmyslně mění haldy dat získaných za běhu. Však to může taky způsobovat vnitřní chybu v knihovně modulu runtime nebo operačního systému kódu.
+Proces obdržel neočekávanou chybu při pokusu o přístup k zámku s více vlákny v modulu C runtime na prostředku systému. K této chybě obvykle dochází, pokud proces neúmyslně změní data haldy modulu runtime. Může to ale být způsobeno také vnitřní chybou v běhové knihovně nebo kódu operačního systému.
 
-Chcete-li vyřešit tento problém, zkontrolujte chyby poškození haldy ve vašem kódu. Další informace a příklady najdete v tématu [podrobnosti haldy ladění CRT](/visualstudio/debugger/crt-debug-heap-details). Dále zkontrolujte, že používáte nejnovější distribuovatelné součásti pro nasazení aplikace. Informace najdete v tématu [nasazení v jazyce Visual C++](../../windows/deployment-in-visual-cpp.md).
+Pokud chcete tento problém vyřešit, vyhledejte v kódu chyby poškození haldy. Další informace a příklady najdete v [podrobnostech o haldě ladění CRT](/visualstudio/debugger/crt-debug-heap-details). Dále ověřte, že používáte nejnovější distribuovatelné součásti pro nasazení aplikace. Informace najdete v tématu [nasazení v vizuálu C++ ](../../windows/deployment-in-visual-cpp.md).

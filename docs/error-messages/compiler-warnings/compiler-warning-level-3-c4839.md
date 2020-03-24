@@ -1,25 +1,25 @@
 ---
-title: Kompilátor upozornění (úroveň 3) C4839
+title: Upozornění kompilátoru (úroveň 3) C4839
 ms.date: 09/13/2018
 f1_keywords:
 - C4839
 helpviewer_keywords:
 - C4839
 ms.assetid: f4f99066-9258-4330-81a8-f4a75a1d95ee
-ms.openlocfilehash: 09b6e5b8dc984b35df7de96f5cf8610f2b0f16af
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2c238dc16359583bf55f7590d2ce7c0363d66df7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401524"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80198572"
 ---
-# <a name="compiler-warning-level-3-c4839"></a>Kompilátor upozornění (úroveň 3) C4839
+# <a name="compiler-warning-level-3-c4839"></a>Upozornění kompilátoru (úroveň 3) C4839
 
-> nestandardní použití třídy*typ*"jako argumentu variadické funkce
+> nestandardní použití třídy*Type*jako argumentu funkce variadické
 
-Třídy nebo struktury, které jsou předány variadické funkce, jako například `printf` musí být snadno kopírovatelná. Při předávání těchto objektů, kompilátor jednoduše vytvoří bitové kopie a nevolá konstruktor nebo destruktor.
+Třídy nebo struktury, které jsou předány funkci variadické, například `printf`, musí být triviálním kopírováním. Při předání takových objektů kompilátor jednoduše vytvoří bitovou kopii a nevolá konstruktor nebo destruktor.
 
-Toto upozornění je k dispozici od verze Visual Studio 2017.
+Toto upozornění je k dispozici od začátku v aplikaci Visual Studio 2017.
 
 ## <a name="example"></a>Příklad
 
@@ -44,14 +44,14 @@ int main()
 }
 ```
 
-Chcete-li opravit chybu, můžete volat členské funkce, která vrací triviálně kopírovatelné typu
+Chcete-li chybu opravit, můžete zavolat členskou funkci, která vrací triviální kopírovací typ,
 
 ```cpp
     std::atomic<int> i(0);
     printf("%i\n", i.load());
 ```
 
-Pro řetězce vytvořené a spravují s použitím `CStringW`, poskytnutého `operator LPCWSTR()` by měla sloužit k přetypování `CStringW` objektu na ukazatel C očekává formátovacím řetězcem.
+Pro řetězce sestavené a spravované pomocí `operator LPCWSTR()` `CStringW`by měly být použity k přetypování `CStringW` objektu na ukazatel jazyka C očekávaný řetězcem formátu.
 
 ```cpp
     CStringW str1;

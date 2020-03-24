@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - U1087
 ms.assetid: 5236ab54-e117-484d-99c3-852b061fd3d0
-ms.openlocfilehash: 47015443114404de2e5f9edfdb1100c324d5e18b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ad6f422f42b2ba284a2886065b6181b879e7c7fc
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62298448"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80193509"
 ---
 # <a name="nmake-fatal-error-u1087"></a>Závažná chyba nástroje NMAKE U1087
 
-nemůže mít: a:: závislé položky pro stejný cíl
+nemůžou mít: a:: závislé prvky pro stejný cíl.
 
-Cíl nejde zadat v obou single dvojtečkou (**:**) a dvěma dvojtečkami (`::`) závislostí.
+Cíl nelze zadat v závislosti s dvojtečkou ( **:** ) a dvěma dvojtečkami (`::`).
 
-Chcete-li určit cíle ve více blocích popisů, použijte `::` na každém řádku závislostí.
+Chcete-li určit cíl v blocích s více popisy, použijte `::` v každé řádce závislosti.

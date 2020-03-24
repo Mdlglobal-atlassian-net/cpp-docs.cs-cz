@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - BK1507
 ms.assetid: 3c5220d7-ccb3-45b4-9da0-cb06147311f6
-ms.openlocfilehash: 35e21ce2db086506d06bb3ea40781d1c68c7a75f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6f4a642c712f9973b8d7c696dd981a00777c8641
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62279772"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80197727"
 ---
 # <a name="bscmake-error-bk1507"></a>Chyba nástroje BSCMAKE BK1507
 
-Nelze otevřít dočasný soubor 'filename' [: z důvodu]
+nejde otevřít dočasný soubor filename [: důvod].
 
-BscMake – nelze otevřít dočasný soubor.
+BSCMAKE nemůže otevřít dočasný soubor.
 
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Chcete-li vyřešit tak, že zkontrolujete následující možné příčiny
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Opravu provedete kontrolou následujících možných příčin.
 
-1. **TMP** proměnná prostředí není nastavená na platnou jednotku a adresáře.
+1. Proměnná prostředí **TMP** není nastavená na platnou jednotku a adresář.
 
-1. Celého disku.
+1. Celý disk.

@@ -8,20 +8,20 @@ helpviewer_keywords:
 - names [C++], class
 - scope [C++], class names
 ms.assetid: 47e26482-0111-466f-b857-598c15d05105
-ms.openlocfilehash: af708fd72904fb775ff1088948972bec159816c6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1f8b79c637662d79051b72e6aabefc99c450bdc5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62266904"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80160876"
 ---
 # <a name="summary-of-scope-rules"></a>Souhrn pravidel rozsahu
 
-Použití názvu musí být v daném oboru jednoznačné (až do místa, kde je určeno přetížení). Pokud název označuje funkci, musí být funkce jednoznačná vzhledem k počtu a typu parametrů. Pokud název zůstává jednoznačným, [přístup ke členu](../cpp/member-access-control-cpp.md) pravidla se použijí.
+Použití názvu musí být v daném oboru jednoznačné (až do místa, kde je určeno přetížení). Pokud název označuje funkci, funkce musí být jednoznačná s ohledem na počet a typ parametrů. Pokud název zůstává nejednoznačný, používají se pravidla [přístupu členů](../cpp/member-access-control-cpp.md) .
 
 ## <a name="constructor-initializers"></a>Inicializátory konstruktoru
 
-[Inicializátory konstruktoru](constructors-cpp.md#member_init_list) jsou vyhodnoceny v rozsahu vnějšího bloku konstruktoru, pro které jsou určeny. Proto může používat názvy parametrů konstruktoru.
+[Inicializátory konstruktoru](constructors-cpp.md#member_init_list) jsou vyhodnocovány v rozsahu vnějšího bloku konstruktoru, pro který jsou určeny. Proto mohou použít názvy parametrů konstruktoru.
 
 ## <a name="global-names"></a>Globální názvy
 
@@ -29,21 +29,21 @@ Název objektu, funkce nebo enumerátoru je globální, pokud je zaveden mimo ja
 
 - Rozlišení oboru (`::`)
 
-- Výběr členů objektů a odkazů (**.**)
+- Výběr členů pro objekty a odkazy ( **.** )
 
-- Výběr členů ukazatelů (**->**)
+- Výběr členů pro ukazatele ( **->** )
 
 ## <a name="qualified-names"></a>Kvalifikované názvy
 
 Názvy použité s binárním operátorem rozlišení oboru (`::`) jsou označovány jako „kvalifikované názvy“. Název zadaný po binárním operátoru rozlišení oboru musí být členem třídy uvedené na levé straně operátoru nebo členem její základní třídy.
 
-Názvy zadané po operátoru výběru členů (**.** nebo **->**) musí být členy typu třídy objektu uvedeného na levé straně operátoru nebo členy její základní třídy. Názvy zadané na pravé straně operátoru výběru členů (**->**) mohou být také objekty jiného typu třídy, za předpokladu, že levá strana příkazu **->** je objekt třídy a třídy definující operátora přetíženého výběru členů (**->**), který je vyhodnocen jako ukazatel na jiný typ třídy. (Toto ustanovení je podrobněji popsána podrobněji [přístup ke členům třídy](../cpp/member-access.md).)
+Názvy zadané po operátoru výběru členů ( **.** nebo **->** ) musí být členy typu třídy objektu zadaného na levé straně operátoru nebo členy své základní třídy (ES). Názvy zadané na pravé straně operátoru výběru členů ( **->** ) mohou být také objekty jiného typu třídy za předpokladu, že levá strana **->** je objekt třídy a že třída definuje přetížený operátor výběru členů ( **->** ), který je vyhodnocen jako ukazatel na jiný typ třídy. (Toto ustanovení je podrobněji popsáno v tématu [přístup ke členům třídy](../cpp/member-access.md).)
 
 Kompilátor vyhledá názvy v následujícím pořadí a toto hledání zastaví, když je název nalezen:
 
 1. Rozsah aktuálního bloku, pokud je název použit uvnitř funkce, v opačném případě globální rozsah.
 
-1. Směrem ven přes každý nadřazený blok rozsahu včetně rozsahu vnější funkce (která zahrnuje parametry funkce).
+1. Ven přes každý rozsah ohraničujícího bloku, včetně vnějšího oboru funkce (včetně parametrů funkce).
 
 1. Pokud je název použit uvnitř členské funkce, je název vyhledán v rozsahu třídy.
 
@@ -57,20 +57,20 @@ Avšak toto pořadí hledání lze upravit následujícím způsobem:
 
 1. Názvy začínající `::` vynutí, aby hledání začalo v globálním rozsahu.
 
-1. Názvy začínající **třídy**, **struktura**, a **sjednocení** klíčová slova vynutí, aby kompilátor prohledával pouze **třídy**,  **Struktura**, nebo **sjednocení** názvy.
+1. Názvy předcházejí klíčová slova **Třída**, **Struktura**a **sjednocení** vynutí, aby kompilátor hledal pouze názvy **tříd**, **struktur**nebo **sjednocení** .
 
-1. Názvy na levé straně operátoru rozlišení oboru (`::`) může být pouze **třídy**, **struktura**, **obor názvů**, nebo **sjednocení**názvy.
+1. Názvy na levé straně operátoru rozlišení oboru (`::`) mohou být pouze názvy **třídy**, **struktury**, **oboru názvů**nebo **sjednocení** .
 
-Pokud název odkazuje na nestatický člen, ale je použit ve statické členské funkci, je vygenerována chybová zpráva. Podobně, pokud se název vztahuje k jakémukoli nestatickému členu v nadřazené třídě, chybová zpráva je generována, protože vnořené třídy nemají nadřazené třídu **to** ukazatele.
+Pokud název odkazuje na nestatický člen, ale je použit ve statické členské funkci, je vygenerována chybová zpráva. Podobně platí, že pokud název odkazuje na nestatického člena v nadřazené třídě, je vygenerována chybová zpráva, protože uzavřené třídy nemají **tyto** ukazatele nadřazené třídě.
 
-## <a name="function-parameter-names"></a>Názvy parametrů – funkce
+## <a name="function-parameter-names"></a>Názvy parametrů funkce
 
 Názvy parametrů funkce v definicích funkce jsou považovány za v rozsahu vnějšího bloku funkce. Proto jsou místními názvy a dostanou se mimo rozsah, když funkce skončí.
 
-Názvy parametrů funkce v deklaracích funkce (prototypy) jsou v místním rozsahu deklarace a dostanou se mimo rozsah na konci této deklarace.
+Názvy parametrů funkcí v deklaracích funkcí (prototypy) jsou v místním oboru deklarace a na konci deklarace se přejdou mimo rozsah.
 
-Výchozí parametry jsou v oboru parametr, pro který jsou výchozí, jak je popsáno v předchozích dvou odstavcích. Avšak nemají přístup k lokálním proměnným nebo nestatickým členům třídy. Výchozí parametry jsou vyhodnoceny v okamžiku volání funkce, ale jsou vyhodnocovány v původním rozsahu deklarace funkce. Proto výchozí parametry pro členské funkce jsou vždy vyhodnoceny v oboru třídy.
+Výchozí parametry jsou v oboru parametru, pro který jsou výchozí, jak je popsáno v předchozích dvou odstavcích. Avšak nemají přístup k lokálním proměnným nebo nestatickým členům třídy. Výchozí parametry jsou vyhodnocovány v místě volání funkce, ale jsou vyhodnocovány v původním rozsahu deklarace funkce. Proto jsou výchozí parametry pro členské funkce vždy vyhodnocovány v oboru třídy.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Dědičnost](../cpp/inheritance-cpp.md)

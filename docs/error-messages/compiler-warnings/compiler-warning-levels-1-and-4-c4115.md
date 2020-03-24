@@ -1,26 +1,26 @@
 ---
-title: Kompilátor upozornění (úrovně 1 a 4) C4115
+title: Upozornění kompilátoru (úrovně 1 a 4) C4115
 ms.date: 11/04/2016
 f1_keywords:
 - C4115
 helpviewer_keywords:
 - C4115
 ms.assetid: f3f94e72-fc49-4d09-b3e7-23d68e61152f
-ms.openlocfilehash: 20e44eba3b6f6079e6f37b7cf33fa530a996e829
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7e39e8c837d94776a804da2bf38643b453edb949
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62360018"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80198039"
 ---
-# <a name="compiler-warning-levels-1-and-4-c4115"></a>Kompilátor upozornění (úrovně 1 a 4) C4115
+# <a name="compiler-warning-levels-1-and-4-c4115"></a>Upozornění kompilátoru (úrovně 1 a 4) C4115
 
-'type': Pojmenovaná definice typu v závorkách
+' type ': definice pojmenovaného typu v závorkách
 
-Daný symbol se používá k definování struktury, sjednocení nebo výčtového typu uvnitř výraz v závorkách. Rozsahu této definice mohou neočekávané.
+Daný symbol slouží k definování struktury, sjednocení nebo výčtového typu uvnitř výrazu v závorce. Rozsah definice může být neočekávaný.
 
-Definici ve volání funkce jazyka C, má globální obor. Ve volání jazyka C++ má tato definice ve stejném rozsahu jako volané funkce.
+Ve volání funkce jazyka C má definice globální rozsah. V C++ volání má definice stejný obor jako volání funkce.
 
-Toto upozornění může být také způsobeno deklarátory mezi kulaté závorky (například prototypů), které nejsou výrazy se závorkami.
+Toto upozornění může být také způsobeno deklarátory v závorkách (například prototypy), které nejsou výrazy v závorkách.
 
-Toto je upozornění úrovně 1 s programy v jazyce C++ a C programech zkompilovaných pod kompatibility ANSI (/Za). V opačném případě je úroveň 3.
+Toto je upozornění úrovně 1 s C++ programy a programy jazyka C zkompilované v rámci kompatibility ANSI (/za). V opačném případě je to úroveň 3.

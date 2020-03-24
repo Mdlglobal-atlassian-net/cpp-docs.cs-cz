@@ -7,17 +7,17 @@ helpviewer_keywords:
 - CXX0007
 - CAN0007
 ms.assetid: 270a6d2d-ea6b-4a94-9871-841a6a133292
-ms.openlocfilehash: 5aba07517e924f0ae0b044466b43a4a8d7364578
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b4c2ce8812c7eb8be1b4eb9fd47267db5e6f20f1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406094"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80196284"
 ---
 # <a name="expression-evaluator-error-cxx0007"></a>Chyba při vyhodnocování výrazu CXX0007
 
-chybí pravá závorka
+chybí pravá závorka.
 
-Nenašly se nevyváženou závorky ve výrazu. Znovu zadejte výraz s vyvážené závorky.
+Ve výrazu byly nalezeny nevyvážené závorky. Znovu zadejte výraz s vyrovnanými závorkami.
 
-Tato chyba se shoduje s CAN0007.
+Tato chyba je shodná s CAN0007.

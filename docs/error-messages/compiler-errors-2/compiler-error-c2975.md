@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2975
 ms.assetid: 526f6b9d-6c76-4c12-9252-1b1d7c1e06c7
-ms.openlocfilehash: 66b7c0d61cbc8141b9ed3e5f6eb329b68eb00477
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 70fc648de8bcf4f1e85edf3a12cc0b7d3d70625f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344691"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80201562"
 ---
 # <a name="compiler-error-c2975"></a>Chyba kompilátoru C2975
 
-> "*argument*': Neplatný argument šablony pro"*typ*", očekával se konstantní výraz za kompilace
+> '*argument*': neplatný argument šablony pro '*Type*', byl očekáván výraz konstanty při kompilaci
 
-Argument šablony se neshoduje s deklarace šablony; konstantní výraz by se zobrazit v lomených závorkách. Jako argumenty šablony nejsou povoleny proměnné. Zkontrolujte definici šablony se najít správné typy.
+Argument šablony neodpovídá deklaraci šablony; v lomených závorkách by se měl objevit konstantní výraz. Proměnné nejsou povoleny jako skutečné argumenty šablony. Ověřte definici šablony a vyhledejte správné typy.
 
 ## <a name="example"></a>Příklad
 
-Následující ukázka generuje C2975 a také ukazuje správné použití:
+Následující ukázka vygeneruje C2975 a také zobrazí správné použití:
 
 ```cpp
 // C2975.cpp
@@ -35,7 +35,7 @@ int main() {
 }
 ```
 
-C2975 vyvolá také při použití &#95; &#95;řádku&#95; &#95; jako konstantu kompilace s [/zi](../../build/reference/z7-zi-zi-debug-information-format.md). Jedním řešením může být pro kompilaci pomocí [/zi](../../build/reference/z7-zi-zi-debug-information-format.md) místo **/zi**.
+K C2975 dochází také při použití &#95; &#95;řádku&#95; &#95; jako konstanty při kompilaci s [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md). Jedno řešení by bylo zkompilováno pomocí [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md) namísto **/Zi**.
 
 ```cpp
 // C2975b.cpp

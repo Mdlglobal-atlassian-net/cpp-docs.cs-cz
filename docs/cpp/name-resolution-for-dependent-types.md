@@ -2,16 +2,16 @@
 title: Rozlišení názvů u závislých typů
 ms.date: 11/04/2016
 ms.assetid: 34066bb4-0c79-4fd8-bda7-539a60a277ab
-ms.openlocfilehash: 798cc7067967e8992c32d7c0ced9f647e4877110
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: e9954eab2793f9adf0de75775563df0ae6f063f3
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65222401"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80161150"
 ---
 # <a name="name-resolution-for-dependent-types"></a>Rozlišení názvů u závislých typů
 
-Použití **typename** pro kvalifikované názvy v definicích šablon pro oznámení kompilátoru, že daný kvalifikovaný název identifikuje typ. Další informace najdete v tématu [typename](../cpp/typename.md).
+Použijte **TypeName** pro kvalifikované názvy v definicích šablon a sdělte tak kompilátoru, že daný kvalifikovaný název identifikuje typ. Další informace naleznete v tématu [TypeName](../cpp/typename.md).
 
 ```cpp
 // template_name_resolution1.cpp
@@ -40,7 +40,7 @@ int main()
 Name resolved by using typename keyword.
 ```
 
-Název vyhledávání nezávislých názvů zkontroluje názvy pro kontext definice šablony — v následujícím příkladu by tento kontext nalezl `myFunction(char)`– a kontext vytvoření instance šablony. V následujícím příkladu je vytvořena šablona instance ve funkci main. Proto `MyNamespace::myFunction` viditelná z místa vytvoření instance a je zvolena jako vhodnější shoda. Pokud by byla funkce `MyNamespace::myFunction` přejmenována, došlo by k zavolání funkce `myFunction(char)`.
+Vyhledávání názvů pro závislé názvy prověřuje názvy z kontextu definice šablony – v následujícím příkladu by tento kontext byl `myFunction(char)`– a kontext instance šablony. V následujícím příkladu je vytvořena instance šablony v Main; Proto je `MyNamespace::myFunction` viditelná z bodu vytváření instancí a je vyzvednuta jako lepší shoda. Pokud by byla funkce `MyNamespace::myFunction` přejmenována, došlo by k zavolání funkce `myFunction(char)`.
 
 Všechny názvy jsou vyhodnoceny jako závislé názvy. Přesto je doporučeno používat plně kvalifikované názvy, může-li dojít k jakýmkoli konfliktům.
 
@@ -90,7 +90,7 @@ Int MyNamespace::myFunction
 
 ### <a name="template-disambiguation"></a>Odstraňování mnohoznačnosti šablon
 
-Visual Studio 2012 vynutí pravidla C ++ 98/03/11 standard pro odstraňování mnohoznačnosti s klíčovým slovem "template". V následujícím příkladu Visual Studio 2010 bude přijímat neodpovídající řádky a odpovídající řádky.  Visual Studio 2012 přijímá pouze odpovídající řádky.
+Visual Studio 2012 vynutil standardní pravidla C++ 98/03/11 pro nejednoznačnost pomocí klíčového slova Template. V následujícím příkladu bude Visual Studio 2010 akceptovat řádky, které nedodržují podmínky, i řádky pro vyhovující.  Visual Studio 2012 přijímá pouze vyhovující řádky.
 
 ```cpp
 #include <iostream>
@@ -121,6 +121,6 @@ int main() {
 
 Shoda s pravidly odstraňování mnohoznačnosti je požadována, protože jazyk C++ standardně předpokládá, že typ `AY::Rebind` není šablona, proto kompilátor interpretuje následující znak „`<`“ jako znak „menší než“. Pro správnou analýzu znaku „`Rebind`“ jako ostré závorky musí kompilátor vědět, že typ `<` je šablona.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Překlad názvů](../cpp/templates-and-name-resolution.md)

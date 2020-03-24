@@ -1,29 +1,29 @@
 ---
-title: Kompilátor upozornění (úroveň 4) C4754
+title: Upozornění kompilátoru (úroveň 4) C4754
 ms.date: 11/04/2016
 f1_keywords:
 - C4754
 helpviewer_keywords:
 - C4754
 ms.assetid: e0e4606a-754a-4f42-a274-21a34978d21d
-ms.openlocfilehash: 203f2b97547c7ff8b1d68e3640e62d531b2600e9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f55d40044fef58275ad0e1fbd281b5f1af43c243
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388576"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80198130"
 ---
-# <a name="compiler-warning-level-4-c4754"></a>Kompilátor upozornění (úroveň 4) C4754
+# <a name="compiler-warning-level-4-c4754"></a>Upozornění kompilátoru (úroveň 4) C4754
 
-Pravidla převodu pro aritmetické operace v porovnání se rozumí, že jednu větev nejde provést.
+Pravidla převodu pro aritmetické operace v porovnání znamenají, že jednu větev nelze provést.
 
-Objeví se upozornění C4754, protože výsledkem porovnání je vždy stejný. To znamená, že jeden z větve podmínka není nikdy proveden, pravděpodobně protože přidružené celočíselný výraz není správná. Tato vada kódu často dochází v kontroly přetečení celých nesprávné na 64bitové architektury.
+Upozornění C4754 je vystaveno, protože výsledek porovnání je vždy stejný. To znamená, že jedna z větví podmínky není nikdy provedena, pravděpodobně proto, že přidružený celočíselný výraz není správný. Tato vada kódu často probíhá v nesprávných kontrolách přetečení celých čísel v 64 bitových architekturách.
 
-Pravidla převodu celého čísla jsou komplexní a existuje mnoho drobným nástrahy. Jako alternativu k opravě každý C4754 upozornění, můžete aktualizovat kód, který použije [SafeInt – knihovna](../../safeint/safeint-library.md).
+Pravidla převodu celého čísla jsou složitá a existuje mnoho drobných nástrah. Jako alternativu k opravě každého upozornění C4754 můžete kód aktualizovat tak, aby používal [knihovnu SafeInt](../../safeint/safeint-library.md).
 
 ## <a name="example"></a>Příklad
 
-Tato ukázka vygeneruje C4754:
+Tato ukázka generuje C4754:
 
 ```cpp
 // C4754a.cpp
@@ -43,13 +43,13 @@ int sum_overflow(unsigned long a, unsigned long b)
 }
 ```
 
-Přidání `a + b` předtím, než je přetypování nahoru na 64 bitů hodnotu výsledku by mohlo způsobit aritmetické přetečení a přiřazená k proměnné 64-bit `x`. To znamená, že kontrola `x` je redundantní a nikdy catch přetečení. V tomto případě kompilátor vydá toto varování:
+`a + b` sčítání by mohlo způsobit přetečení aritmetické operace před tím, než je výsledek převeden na 64ovou hodnotu a přiřazeno k proměnné 64-bit `x`. To znamená, že `x` kontrole je redundantní a nebude nikdy zachytit přetečení. V tomto případě kompilátor vygeneruje toto upozornění:
 
 ```Output
 Warning C4754: Conversion rules for arithmetic operations in the comparison at C4754a.cpp (7) mean that one branch cannot be executed. Cast '(a + ...)' to 'ULONG64' (or similar type of 8 bytes).
 ```
 
-Chcete-li upozornění odstranit, můžete změnit příkazu přiřazení k přetypování operandy na 8 bajtů hodnoty:
+Chcete-li odstranit upozornění, můžete změnit příkaz přiřazení pro přetypování operandů na 8bitové hodnoty:
 
 ```cpp
 // Casting one operand is sufficient to force all the operands in
@@ -61,7 +61,7 @@ unsigned long long x =
 
 ## <a name="example"></a>Příklad
 
-Následující ukázka generuje také C4754.
+Další ukázka také generuje C4754.
 
 ```cpp
 // C4754b.cpp
@@ -79,15 +79,15 @@ int wrap_overflow(unsigned long a)
 }
 ```
 
-`sizeof()` Operátor vrátí `size_t`, jejíž velikost je závislé na architekturu. Ukázkový kód funguje na 32bitové architektury kde `size_t` je typem 32-bit. Ale na 64bitové architektury `size_t` je 64bitového typu. Pravidla převodu pro celá čísla znamenají, že `a` je přetypování nahoru na 64 bitů hodnotu ve výrazu `a + b < a` jakoby byly napsány `(size_t)a + (size_t)b < (size_t)a`. Když `a` a `b` jsou 32bitová celá čísla, nikdy přetečení operace sčítání 64bitovým kompilátorem a omezení nikdy neudržuje. V důsledku toho kód nikdy zjistí přetečení celého čísla na 64bitové architektury. Tento příklad způsobí, že kompilátor generuje toto upozornění:
+Operátor `sizeof()` vrátí `size_t`, jehož velikost je závislá na architektuře. Vzorový kód funguje v 32ch architekturách, kde `size_t` je 32-bit typu. Nicméně v 64ch architekturách `size_t` je 64 typ. Pravidla převodu pro celá čísla znamenají, že `a` je přetypování na 64ovou hodnotu ve výrazu `a + b < a`, jako kdyby byla napsána `(size_t)a + (size_t)b < (size_t)a`. Když `a` a `b` jsou 32 celých čísel, operace sčítání 64 nemůže nikdy přetečení a omezení nikdy nedrží. V důsledku toho kód nikdy nezjistí podmínku přetečení celého čísla na 64 bitových architekturách. Tento příklad způsobí, že kompilátor vygeneruje toto upozornění:
 
 ```Output
 Warning C4754: Conversion rules for arithmetic operations in the comparison at C4754b.cpp (7) mean that one branch cannot be executed. Cast '4' to 'ULONG' (or similar type of 4 bytes).
 ```
 
-Všimněte si, že upozornění explicitně obsahuje konstantní hodnotu 4 namísto původní zdrojový řetězec – době upozornění analýzy zaznamená problematický kód `sizeof(unsigned long)` již byl převeden na konstantu. Proto bude pravděpodobně nutné sledovat dolů výrazu, který ve zdrojovém kódu souvisí s konstantní hodnotou v upozornění. Nejběžnějšími zdroji kód přeložit konstanty v C4754 varovné zprávy, jako jsou výrazy `sizeof(TYPE)` a `strlen(szConstantString)`.
+Všimněte si, že zpráva s upozorněním explicitně vypíše konstantní hodnotu 4 namísto původního zdrojového řetězce – v době, kdy při analýze výstrahy dojde k problematickému kódu, `sizeof(unsigned long)` již byl převeden na konstantu. Proto může být nutné sledovat, který výraz ve zdrojovém kódu je přidružen k hodnotě konstanty ve zprávě upozornění. Nejběžnější zdroje kódu se přeložily na konstanty ve zprávách upozornění C4754 jsou výrazy, jako `sizeof(TYPE)` a `strlen(szConstantString)`.
 
-Oprava kódu v tomto případě by vypadat takto:
+V tomto případě by pevný kód vypadal takto:
 
 ```cpp
 // Casting the result of sizeof() to unsigned long ensures
@@ -96,7 +96,7 @@ Oprava kódu v tomto případě by vypadat takto:
 if (a + (unsigned long)sizeof(unsigned long) < a)
 ```
 
-**Poznámka:** uvedená v upozornění kompilátoru číslo řádku je poslední řádek příkazu. Ve zprávě s upozorněním o komplexní podmíněném příkazu, která je rozdělena do více řádků řádek, který je závadný kód může být Víceřádkový před řádek, který se použije v hlášení. Příklad:
+**Poznámka:** Číslo řádku uvedené v upozorněních kompilátoru je poslední řádek příkazu. Ve zprávě s upozorněním na komplexní podmíněný příkaz, který je rozložen na více řádků, může být řádek, který má vadu kódu, několik řádků před nahlášeným řádkem. Příklad:
 
 ```cpp
 unsigned long a;

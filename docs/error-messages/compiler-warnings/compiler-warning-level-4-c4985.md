@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4985
 ms.assetid: 832f001c-afe7-403d-a8b4-02334724c79e
-ms.openlocfilehash: 75feda6fb2c88b663aa6ade0efdfffc7def1568f
-ms.sourcegitcommit: 8762a3f9b5476b4dee03f0ee8064ea606550986e
+ms.openlocfilehash: 82adb80310fb43c848c253f9bf5e436c8c379f35
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74810734"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80198092"
 ---
 # <a name="compiler-warning-level-4-c4985"></a>Upozornění kompilátoru (úroveň 4) C4985
 
@@ -27,6 +27,6 @@ Všimněte si, že makra SAL se nebudou rozšiřovat, pokud projekt nemá zadan�
 
 1. Používejte stejné poznámky SAL na definici metody a všech jejích deklaracích.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Poznámky SAL](../../c-runtime-library/sal-annotations.md)

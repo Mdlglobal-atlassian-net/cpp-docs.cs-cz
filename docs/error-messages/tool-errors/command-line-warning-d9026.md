@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - D9026
 ms.assetid: 149fe5e3-5329-4be8-b871-49dfd423aaba
-ms.openlocfilehash: 3fd8d442dfabaf2f03d8b564c9fdfb1537f6ff28
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 59dfcdc97fb9caf60a018cb20583ee6fca3dcb27
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62214204"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80196700"
 ---
 # <a name="command-line-warning-d9026"></a>Upozornění příkazového řádku D9026
 
-možnosti platí pro celý příkazový řádek.
+možnosti se vztahují na celý příkazový řádek.
 
-Možnost zadaná v příkazu po byl zadán název souboru. Možnost byla použita k souboru, který ním.
+Po zadání názvu souboru se v příkazu zadala možnost. Možnost byla použita na soubor, který mu předchází.
 
 Například v příkazu
 
@@ -25,6 +25,6 @@ Například v příkazu
 CL verdi.c /G5 puccini.c
 ```
 
-soubor VERDI.c bude zkompilován pomocí možnosti /G5, nikoli ve výchozím /G4.
+soubor VERDI. c se zkompiluje pomocí možnosti/G5, nikoli výchozí/G4.
 
-Toto chování se liší od některých předchozích verzí, které platí pouze pro kompilaci pomocí volby zadané před název souboru, což vede k VERDI.c/G4 a PUCCINI.c kompilovaná pomocí /G5.
+Toto chování se liší od předchozích verzí, které používaly pouze možnosti určené před názvem souboru, výsledkem je VERDI. c kompilovány pomocí/G4 a PUCCINI. c kompilovány pomocí/G5.

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - value struct keyword [C++]
 - ref struct keyword [C++]
 ms.assetid: 5c360764-b229-49c6-9357-66213afbc372
-ms.openlocfilehash: dd58f32d031068785cd6020549f9eea4b2182786
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 78cf7cf16c4ccf29f72038fd79c5d7a1689c05ac
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69509813"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172565"
 ---
 # <a name="ref-class-and-ref-struct--ccli-and-ccx"></a>ref class a ref struct (C++/CLI a C++/CX)
 
@@ -41,16 +41,16 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
 ### <a name="parameters"></a>Parametry
 
 *class_access*<br/>
-Volitelné Přístupnost třídy nebo struktury mimo sestavení. Možné hodnoty jsou **veřejné** a **privátní** (výchozí hodnota je**Private** ). Vnořené třídy nebo struktury nemůžou mít *class_access* specifikátor.
+Volitelné Přístupnost třídy nebo struktury mimo sestavení. Možné hodnoty jsou **veřejné** a **privátní** (výchozí hodnota je**Private** ). Vnořené třídy nebo struktury nemůžou mít specifikátor *class_access* .
 
-*name*<br/>
+*Jméno*<br/>
 Název třídy nebo struktury.
 
 *upravující*<br/>
 Volitelné [abstraktní](abstract-cpp-component-extensions.md) a [zapečetěné](sealed-cpp-component-extensions.md) jsou platné modifikátory.
 
 *inherit_access*<br/>
-Volitelné Přístupnost pro *base_type*. Jediná povolená přístupnost je **Veřejná** ( výchozí).
+Volitelné Přístupnost *base_type*. Jediná povolená přístupnost je **Veřejná** (**výchozí** ).
 
 *base_type*<br/>
 Volitelné Základní typ. Typ hodnoty však nemůže fungovat jako základní typ.
@@ -59,11 +59,11 @@ Další informace naleznete v části jazykově specifické popisy tohoto parame
 
 ### <a name="remarks"></a>Poznámky
 
-Výchozí přístupnost člena objektu deklarovaného s parametrem **ref class** nebo **Value Class** je **soukromá**. A výchozí přístupnost člena objektu deklarovaného se strukturou **ref struct** nebo **value struct** je **Veřejná**.
+Výchozí přístupnost člena objektu deklarovaného s **parametrem ref class** nebo **Value Class** je **soukromá**. A výchozí přístupnost člena objektu deklarovaného se strukturou **ref struct** nebo **value struct** je **Veřejná**.
 
 Pokud typ odkazu dědí z jiného typu odkazu, musí být virtuální funkce v základní třídě explicitně přepsány (s [přepsáním](override-cpp-component-extensions.md)) nebo skryté (s [New (New slot v tabulce vtable)](new-new-slot-in-vtable-cpp-component-extensions.md)). Funkce odvozené třídy musí být také explicitně označeny jako **virtuální**.
 
-Pro detekci v době kompilace, zda je typ **ref class** nebo **ref struct**, nebo **Třída hodnoty** nebo **Struktura hodnot**, `__is_ref_class (type)`použijte, `__is_value_class (type)`nebo `__is_simple_value_class (type)`. Další informace naleznete v tématu [Podpora kompilátoru pro typové vlastnosti](compiler-support-for-type-traits-cpp-component-extensions.md).
+Pro detekci v době kompilace, zda je typ **ref class** nebo **ref struct**nebo **Třída hodnoty** nebo **Struktura hodnoty**, použijte `__is_ref_class (type)`, `__is_value_class (type)`nebo `__is_simple_value_class (type)`. Další informace naleznete v tématu [Podpora kompilátoru pro typové vlastnosti](compiler-support-for-type-traits-cpp-component-extensions.md).
 
 Další informace o třídách a strukturách naleznete v tématu.
 
@@ -73,7 +73,7 @@ Další informace o třídách a strukturách naleznete v tématu.
 
 - [Třídy, struktury a sjednocení](../cpp/classes-and-structs-cpp.md)
 
-- [Destruktory a finalizační metody v tom, jak: Definování a využívání tříd a struktur (C++/CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)
+- [Destruktory a finalizační metody v Postupy: definování a využívání tříd a struktur (C++/CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)
 
 - [Uživatelem definované operátory (C++/CLI)](../dotnet/user-defined-operators-cpp-cli.md)
 
@@ -100,7 +100,7 @@ Při deklaraci objektu pomocí klíčových slov **třídy Value** nebo **value 
 
 ### <a name="requirements"></a>Požadavky
 
-Možnost kompilátoru:`/ZW`
+Možnost kompilátoru: `/ZW`
 
 ## <a name="common-language-runtime"></a>CLR (Common Language Runtime)
 
@@ -119,8 +119,8 @@ Klíčová slova **Třída hodnoty** a **Struktura hodnoty** označují kompilá
 
 ### <a name="requirements"></a>Požadavky
 
-Možnost kompilátoru:`/clr`
+Možnost kompilátoru: `/clr`
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Přípony komponent pro .NET a UPW](component-extensions-for-runtime-platforms.md)

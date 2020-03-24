@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C1192
 ms.assetid: 54cff717-a3eb-471d-9bd4-1c2e673dbbef
-ms.openlocfilehash: 5fc5e0a17fb3fedca5719065ae426ac8c05db61f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1a15a808c1aff46ba6e63b3e86c0745c8ed7711a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62228953"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80203664"
 ---
 # <a name="fatal-error-c1192"></a>Závažná chyba C1192
 
-\#selhalo na 'file'
+\#použití neúspěšného souboru
 
-Pouze soubor ve formátu Microsoft Intermediate Language (MSIL) mohou být předány [#using](../../preprocessor/hash-using-directive-cpp.md) směrnice. [/CLR](../../build/reference/clr-common-language-runtime-compilation.md) – možnost kompilátoru umožňuje vytvořit výstupní soubor jazyka MSIL. Další jazyky sady Visual Studio také vytvářejí soubory MSIL.
+Do direktivy [#using](../../preprocessor/hash-using-directive-cpp.md) lze předat pouze soubor ve formátu MSIL (Microsoft Intermediate Language). Možnost kompilátoru [/CLR](../../build/reference/clr-common-language-runtime-compilation.md) umožňuje vytvořit výstupní soubor MSIL. Jiné jazyky sady Visual Studio také poskytují soubory MSIL.

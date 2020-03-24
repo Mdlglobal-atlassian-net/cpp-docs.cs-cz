@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1313
 ms.assetid: 5df0b72e-bb3f-428c-8d84-6084238f9827
-ms.openlocfilehash: 380df2bff305acc47e423d69ea702d77c4eafdfd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a2314f160dc6add45547082c7804ec5e2c8f2349
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160429"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80194860"
 ---
 # <a name="linker-tools-error-lnk1313"></a>Chyba linkerů LNK1313
 
-> zjištěno; IJW nebo nativní modul nejde propojit s čisté moduly
+> zjistil se modul IJW/Native. nejde propojit s čistými moduly.
 
 ## <a name="remarks"></a>Poznámky
 
-Aktuální verze aplikace Visual C++ nepodporuje propojování souborů .obj nativní nebo smíšené spravované/nativní se soubory .obj zkompilovaná **/CLR: pure**.
+Aktuální verze vizuálu C++ nepodporuje propojování nativních nebo smíšených spravovaných a nativních souborů. obj pomocí souborů. obj kompilovaných pomocí **/clr: Pure**.
 
-**/CLR: pure** – možnost kompilátoru je zastaralé v sadě Visual Studio 2015 a není podporována v sadě Visual Studio 2017.
+Možnost **/clr: Pure** Compiler je v aplikaci visual Studio 2015 zastaralá a není podporovaná v rámci sady visual Studio 2017.
 
 ## <a name="example"></a>Příklad
 
@@ -43,7 +43,7 @@ void test(){}
 
 ## <a name="example"></a>Příklad
 
-Následující ukázka vygeneruje LNK1313.
+Následující ukázka vygeneruje LINKERŮ LNK1313.
 
 ```cpp
 // LNK1313_c.cpp

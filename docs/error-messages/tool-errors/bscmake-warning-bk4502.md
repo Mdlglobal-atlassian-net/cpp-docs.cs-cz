@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - BK4502
 ms.assetid: ee412ec8-df03-4cdb-91ee-5d609ded8691
-ms.openlocfilehash: 47bb81827bb6ae1f580ff907be6c0acf7139a29a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1c5204239909e579fa93006e245e3841b7fb64eb
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62299735"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80197454"
 ---
 # <a name="bscmake-warning-bk4502"></a>Upozornění nástroje BSCMAKE BK4502
 
-zkrácen. SBR soubor 'filename' není v názvu souboru
+zkrácen. Soubor SBR ' filename ' není v názvu souboru
 
-Během aktualizace byl zadán soubor .sbr nulové délky, které původně nebyly součástí souboru .bsc.
+Během aktualizace byl zadán soubor. SBR s nulovou délkou, který nebyl původně součástí souboru. BSC.
 
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Chcete-li vyřešit tak, že zkontrolujete následující možné příčiny
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Opravu provedete kontrolou následujících možných příčin.
 
-1. Zadán chybný název souboru.
+1. Byl zadán nesprávný název souboru.
 
-1. Soubor byl odstraněn. (Chyba [nástroje BK1513](../../error-messages/tool-errors/bscmake-error-bk1513.md) výsledky.)
+1. Soubor byl odstraněn. (Error [BK1513](../../error-messages/tool-errors/bscmake-error-bk1513.md) Results.)
 
-1. Soubor poškozený, vyžadování BSCMAKE provést úplné sestavení.
+1. Soubor je poškozený, vyžadování BSCMAKE k úplnému sestavení.

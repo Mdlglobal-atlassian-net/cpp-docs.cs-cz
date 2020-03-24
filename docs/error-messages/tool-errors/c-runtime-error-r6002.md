@@ -6,34 +6,34 @@ f1_keywords:
 helpviewer_keywords:
 - R6002
 ms.assetid: 8fbbe65a-9c43-459e-8342-e1f6d1cef7d0
-ms.openlocfilehash: f8b5fe69c9fd688f4d0a181176cda247cde9ac11
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b2e617b6f7841f1aa7e6fd2f6962c0e117fab6c8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62380536"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80197415"
 ---
 # <a name="c-runtime-error-r6002"></a>Chyba modulu C runtime R6002
 
-podpora plovoucí desetinné čárky není načtená.
+Podpora plovoucí desetinné čárky není načtena
 
-Nepropojil potřebné knihovny s plovoucí desetinnou čárkou.
+Nutná knihovna plovoucí desetinné čárky nebyla propojena.
 
 > [!NOTE]
-> Pokud k této chybě dojde při spuštění aplikace, aplikace se vypnout, protože má vnitřní problém. Existuje několik příčin této chyby, ale často je způsobena závadou v kódu aplikace nebo pokusem o spuštění aplikace, který nebyl vytvořen pro procesor konkrétní počítače.
+> Pokud se zobrazí tato chybová zpráva při spuštění aplikace, aplikace byla vypnuta, protože došlo k vnitřnímu problému. Tato chyba může mít několik příčin, ale často je způsobena nedostatkem kódu aplikace nebo pokusem o spuštění aplikace, která nebyla sestavena pro konkrétní procesor počítače.
 >
 > Zkuste chybu odstranit pomocí tohoto postupu:
 >
-> - Použití **aplikace a funkce** nebo **programy a funkce** stránku **ovládací panely** opravte nebo přeinstalujte program.
-> - Zkontrolujte **Windows Update** v **ovládací panely** pro aktualizace softwaru.
-> - Vyhledat aktualizovanou verzi aplikace. Pokud se problém nevyřeší, obraťte se na dodavatele aplikace.
+> - K opravě nebo přeinstalaci programu použijte stránku **aplikace a funkce** nebo **programy a funkce** v **Ovládacích panelech** .
+> - Ověřte **web Windows Update** v **Ovládacích panelech** pro aktualizace softwaru.
+> - Vyhledejte aktualizovanou verzi aplikace. Pokud potíže potrvají, obraťte se na dodavatele aplikace.
 
 **Informace pro programátory**
 
-Této chybě může dojít ve vaší aplikaci, když nebyl propojený s plovoucí desetinnou čárkou knihovny. Zkontrolujte, že pro jednu z těchto příčin:
+K této chybě může dojít v aplikaci, když nebyla propojena knihovna plovoucí desetinné čárky. Vyhledejte jeden z těchto příčin:
 
-- Řetězec formátu pro `printf_s` nebo `scanf_s` funkce obsažené specifikace formátu s plovoucí desetinnou čárkou a program neobsahuje žádné hodnoty s plovoucí desetinnou čárkou nebo proměnné. Chcete tento problém vyřešit, použijte argument typu s plovoucí desetinnou čárkou tak, aby odpovídaly specifikace formátu s plovoucí desetinnou čárkou nebo provést s plovoucí desetinnou čárkou přiřazení jinde v programu. To způsobí, že podpora plovoucí desetinné čárky, který se má načíst.
+- Formátovací řetězec pro funkci `printf_s` nebo `scanf_s` obsahoval specifikaci formátu s plovoucí desetinnou čárkou a program neobsahoval žádné hodnoty nebo proměnné s plovoucí desetinnou čárkou. Chcete-li tento problém vyřešit, použijte argument s plovoucí desetinnou čárkou, který bude odpovídat specifikaci formátu s plovoucí desetinnou čárkou, nebo můžete provést přiřazení plovoucí desetinné čárky jinde v programu. To způsobuje, že se načte podpora plovoucí desetinné čárky.
 
-- Kompilátor minimalizuje velikost programu načtením podpora plovoucí desetinné čárky pouze v případě potřeby. Kompilátor nemůže zjistit, operace s plovoucí desetinnou čárkou nebo specifikace formátu s plovoucí desetinnou čárkou v řetězcích formátu, takže nenačte nezbytné rutiny s plovoucí desetinnou čárkou. Chcete-li vyřešit tento problém, použijte specifikace formátu s plovoucí desetinnou čárkou a zadat jako argument s plovoucí desetinnou čárkou nebo provést s plovoucí desetinnou čárkou přiřazení jinde v programu. To způsobí, že podpora plovoucí desetinné čárky, který se má načíst.
+- Kompilátor minimalizuje velikost programu načtením podpory plovoucí desetinné čárky, pouze pokud je to nutné. Kompilátor nemůže detekovat operace s plovoucí desetinnou čárkou nebo specifikace formátu s plovoucí desetinnou čárkou ve formátovacích řetězcích, takže nenačte potřebné rutiny s plovoucí desetinnou čárkou. Chcete-li tento problém vyřešit, použijte specifikaci formátu s plovoucí desetinnou čárkou a zadejte argument s plovoucí desetinnou čárkou, nebo v programu proveďte jiné přiřazení s plovoucí desetinnou čárkou. To způsobuje, že se načte podpora plovoucí desetinné čárky.
 
-- V programu jazyků knihovny jazyka C byla zadána před knihovny až po FORTRAN při propojený program. Znovu připojit a určete knihovny jazyka C poslední.
+- V programu se smíšeným jazykem byla před knihovnou FORTRAN při propojení programu zadána knihovna jazyka C. Znovu propojte a zadejte poslední knihovnu jazyka C.

@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1200
 ms.assetid: 55771145-915e-4006-ac6c-ac702041eb2f
-ms.openlocfilehash: c99b25a83836f1ee0bc6ba622e42ea382c377172
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9dcc37bd74a25e29726529346b1578bb8b18ac3e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62213547"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80195133"
 ---
 # <a name="linker-tools-error-lnk1200"></a>Chyba linkerů LNK1200
 
-Chyba při čtení databáze programu: filename.
+Chyba při čtení databáze programu filename
 
-Nelze načíst databázi programu (PDB).
+Nebylo možné přečíst programovou databázi (PDB).
 
-Tuto chybu může způsobovat poškození souborů.
+Tato chyba může být způsobena poškozením souboru.
 
-Pokud `filename` je do souboru PDB soubor objektu znovu zkompilujte soubor objektu pomocí [/zi](../../build/reference/z7-zi-zi-debug-information-format.md).
+Pokud je `filename` PDB pro soubor objektu, překompilujte soubor objektu pomocí [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md).
 
-Pokud `filename` je soubor PDB pro hlavního výstupního souboru a k této chybě došlo během přírůstkového propojení, odstraňte soubor PDB a znovu připojit.
+Pokud je `filename` PDB pro hlavní výstupní soubor a k této chybě došlo během přírůstkového propojení, odstraňte soubor PDB a znovu propojte.

@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4022
 ms.assetid: 890f487e-db98-45dd-a226-c7ccead82b1e
-ms.openlocfilehash: 1c9ccfe6ca201ae4deed69c7d01429c67cce4bda
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9b9ce09a7133c0bdc18957f6ade213583e9540eb
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62298462"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80194184"
 ---
 # <a name="linker-tools-warning-lnk4022"></a>Upozornění linkerů LNK4022
 
-nejde najít unikátní shoda pro symbol 'symbol'
+Nejde najít jedinečnou shodu pro symbol symbol.
 
-ODKAZ nebo LIB nalezeno více odpovídá dané nedekorovaných symbolů a nepovedlo se vyřešit nejednoznačnost. Není vytvořen žádný výstupní soubor (.exe, .dll, .exp nebo .lib). Toto upozornění je následována jedno upozornění [LNK4002](../../error-messages/tool-errors/linker-tools-warning-lnk4002.md) pro každou duplicitní symbol a nakonec následuje závažná chyba [LNK1152](../../error-messages/tool-errors/linker-tools-error-lnk1152.md).
+ODKAZ nebo LIB nalezl více shod pro daný nedekorovaný symbol a nemohl vyřešit nejednoznačnost. Není vytvořen žádný výstupní soubor (. exe,. dll,. exp nebo. lib). Toto upozornění je následováno jedním upozorněním [linkerů LNK4002](../../error-messages/tool-errors/linker-tools-warning-lnk4002.md) pro každý duplicitní symbol a je nakonec následováno závažnou chybou [linkerů LNK1152](../../error-messages/tool-errors/linker-tools-error-lnk1152.md).
 
-Pokud chcete zabránit toto upozornění, zadejte symbolu v upravené podobě. Spustit [DUMPBIN](../../build/reference/dumpbin-options.md) na objekt, který chcete zobrazit dekorované názvy.
+Chcete-li zabránit tomuto upozornění, zadejte symbol v upravené podobě. Pokud chcete zobrazit dekorované názvy, spusťte na objektu [DUMPBIN](../../build/reference/dumpbin-options.md) .

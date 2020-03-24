@@ -7,23 +7,23 @@ helpviewer_keywords:
 - CXX0015
 - CAN0015
 ms.assetid: 35efaf77-d578-48d8-bfc5-fdeb2a46a8b5
-ms.openlocfilehash: f73aef18563426d28a81b92b3c37d1b7e345d0d3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 19cf47d6b7b718eb19b987bcc16854af3266069b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397143"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80196063"
 ---
 # <a name="expression-evaluator-error-cxx0015"></a>Chyba při vyhodnocování výrazu CXX0015
 
-výraz je příliš složitý (přetečení zásobníku)
+výraz je moc složitý (přetečení zásobníku).
 
-Výraz zadaný byla příliš složité nebo jsou vnořené moc hluboko množství úložiště k dispozici pro vyhodnocování výrazů C.
+Zadaný výraz byl příliš složitý nebo příliš hluboko pro velikost úložiště, která je k dispozici pro vyhodnocení výrazu C.
 
-Přetečení obvykle dochází z důvodu příliš mnoha čekající výpočtů.
+K přetečení obvykle dochází z důvodu příliš mnoha nedokončených výpočtů.
 
-Změna uspořádání výraz tak, aby jednotlivé komponenty výraz lze vyhodnotit, jako je došlo k, namísto nutnosti čekání na ostatní části výraz, který má být vypočtena.
+Přeuspořádejte výraz tak, aby každá komponenta výrazu mohla být vyhodnocena při jeho výskytu, a ne čekat na vypočítané další části výrazu.
 
-Výraz rozdělte do více příkazů.
+Rozdělit výraz na více příkazů
 
-Tato chyba se shoduje s CAN0015.
+Tato chyba je shodná s CAN0015.

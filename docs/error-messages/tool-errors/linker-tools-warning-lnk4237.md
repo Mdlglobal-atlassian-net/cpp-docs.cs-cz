@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4237
 ms.assetid: 87bfec39-5241-464f-9feb-517b49f352ea
-ms.openlocfilehash: 62ce0a0edc7f15bc5a19e4630133976f413da35a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aaa26393f1ce76d3e1bc40e5ba4978d1bcdb4fc9
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62352655"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80193755"
 ---
 # <a name="linker-tools-warning-lnk4237"></a>Upozornění linkerů LNK4237
 
-Souboru zadat při importu z 'dll'; Použijte/Subsystem: Console nebo/Subsystem: Windows.
+/SUBSYSTEM: při importu z knihovny DLL byl zadán NATIVNÍ parametr. Použijte/SUBSYSTEM: CONSOLE nebo/SUBSYSTEM: WINDOWS.
 
-[Souboru](../../build/reference/subsystem-specify-subsystem.md) byl zadán při sestavování aplikace systému windows (Win32), který přímo používá jeden nebo více z následujících akcí:
+[/SUBSYSTEM: nativní](../../build/reference/subsystem-specify-subsystem.md) byl zadán při vytváření aplikace pro Windows (Win32), která přímo používá jednu nebo více z následujících možností:
 
 - kernel32.dll
 
@@ -25,6 +25,6 @@ Souboru zadat při importu z 'dll'; Použijte/Subsystem: Console nebo/Subsystem:
 
 - user32.dll
 
-- jeden z msvcrt\* knihovny DLL.
+- jedna z\* knihoven DLL knihovny Msvcrt.
 
-Vyřešit tato upozornění tak, že bez zadání **souboru**.
+Vyřešit toto upozornění tím, že neurčíte **/SUBSYSTEM: Native**.

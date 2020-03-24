@@ -7,17 +7,17 @@ helpviewer_keywords:
 - CAN0010
 - CXX0010
 ms.assetid: 8bd474b0-da12-4990-8569-6392f09f05f6
-ms.openlocfilehash: d7d8de32bd62e0c92ea293f151376d9faa6cb9b6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: afcce2405d487a2d88399ea28a95e63fd47f7106
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397208"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80196141"
 ---
 # <a name="expression-evaluator-error-cxx0010"></a>Chyba při vyhodnocování výrazu CXX0010
 
-chybějící levá závorka
+chybějící levá hranatá závorka
 
-Výraz obsahuje nevyváženou hranaté závorky. Znovu zadejte výraz do vyváženého složených závorek.
+Výraz obsahuje nevyvážené hranaté závorky. Znovu zadejte výraz s vyrovnanými hranatými závorkami.
 
-Tato chyba se shoduje s CAN0010.
+Tato chyba je shodná s CAN0010.

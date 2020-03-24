@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - U1077
 ms.assetid: 70d989f8-ef34-4ad7-8fe0-5b800556b2a1
-ms.openlocfilehash: 6b0e7b13628c9f38231f4a8772e9babadaf90636
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: da50af5a1dc0fc6086629d1f26ebe949a25d6faf
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62366950"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80193496"
 ---
 # <a name="nmake-fatal-error-u1077"></a>Závažná chyba nástroje NMAKE U1077
 
-'program': návratový kód 'value'
+' program ': návratový kód ' value '
 
-Zadaný příkaz nebo program volá NMAKE se nezdařila a vrátila dané ukončovací kód.
+Daný příkaz nebo program, který byl volán nástrojem NMAKE, se nezdařil a vrátil daný ukončovací kód.
 
-Pro potlačení této chyby a pokračovat v relaci NMAKE, použijte možnost /I **. Ignorovat** direktivy s tečkou nebo pomlčku (**-**) příkaz modifikátor. Chcete-li pokračovat v relaci NMAKE nesouvisejících částí stromu závislostí, použijte možnost /K.
+Chcete-li tuto chybu potlačit a pokračovat v relaci nástroje NMAKE, použijte možnost/I **. IGNORUJte** direktivu tečka nebo modifikátor příkazu pomlčka ( **-** ). Chcete-li pokračovat v relaci nástroje NMAKE pro nesouvisející části stromu závislostí, použijte možnost/K.

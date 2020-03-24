@@ -5,37 +5,37 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - expressions [C++], types
 ms.assetid: 1e7540b0-8fdb-49ab-b3e1-6ec439ff473a
-ms.openlocfilehash: f67f7c2ce8872f3a88549259a82d9869f32b6f56
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 587715cd1fd38bf6481ba833b1532f5e492d4803
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62364503"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80160655"
 ---
 # <a name="types-of-expressions"></a>Typy výrazů
 
-Výrazy jazyka C++ jsou rozděleny do několika kategorií:
+C++výrazy jsou rozdělené do několika kategorií:
 
-- [Primární výrazy](../cpp/primary-expressions.md). Toto jsou stavební bloky, z nichž jsou vytvářena jiných výrazech.
+- [Primární výrazy](../cpp/primary-expressions.md). Jedná se o stavební bloky, ze kterých jsou vytvořeny všechny ostatní výrazy.
 
-- [Výrazy přípony](../cpp/postfix-expressions.md). Toto jsou primární výrazy, za nímž následuje operátor – například pole dolní index nebo příponový operátor Inkrementace.
+- [Výrazy přípony](../cpp/postfix-expressions.md) Jedná se o primární výrazy následované operátorem, například operátor pole nebo operátor přírůstek přípony.
 
-- [Vytvořený výrazy s unárními operátory](../cpp/expressions-with-unary-operators.md). Unární operátory pracují na pouze jeden operand ve výrazu.
+- [Výrazy vytvořené s unárními operátory](../cpp/expressions-with-unary-operators.md) Unární operátory pracují pouze s jedním operandem ve výrazu.
 
-- [Vytvořený výrazy s binárními operátory](../cpp/expressions-with-binary-operators.md). Binární operátory pracují ve výrazu na dvou operandech.
+- [Výrazy vytvořené pomocí binárních operátorů](../cpp/expressions-with-binary-operators.md) Binární operátory pracují ve výrazu na dvou operandech.
 
-- [Výrazy s podmíněným operátorem](../cpp/conditional-operator-q.md). Podmíněný operátor je tříhodnotový operátor – pouze takové operátor v jazyce C++ – a má tři operandy.
+- [Výrazy s podmíněným operátorem](../cpp/conditional-operator-q.md). Podmíněný operátor je Ternární operátor – jediný takový operátor v C++ jazyce – a přijímá tři operandy.
 
-- [Výrazy konstant](../cpp/cpp-constant-expressions.md). Konstantní výrazy jsou vytvářena konstantní údajů.
+- [Konstantní výrazy](../cpp/cpp-constant-expressions.md). Konstantní výrazy jsou tvořeny výhradně s konstantními daty.
 
-- [Výrazy s explicitními převody typu](explicit-type-conversion-operator-parens.md). Explicitní převody typu, nebo "přetypování", můžete použít ve výrazech.
+- [Výrazy s explicitními převody typu](explicit-type-conversion-operator-parens.md) V výrazech lze použít explicitní převody typu nebo "přetypování".
 
-- [Výrazy s operátory pointer-to-member](../cpp/pointer-to-member-operators-dot-star-and-star.md).
+- [Výrazy s operátory s ukazateli na členy](../cpp/pointer-to-member-operators-dot-star-and-star.md).
 
-- [Přetypování](../cpp/casting.md). Typově bezpečný "přetypování" lze použít ve výrazech.
+- [Přetypování](../cpp/casting.md). Typ – typově bezpečné "přetypování" lze použít ve výrazech.
 
-- [Informace běhového typu](../cpp/run-time-type-information.md). Určete typ objektu při provádění programu.
+- [Běhové informace o typu](../cpp/run-time-type-information.md). Určete typ objektu během provádění programu.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Výrazy](../cpp/expressions-cpp.md)

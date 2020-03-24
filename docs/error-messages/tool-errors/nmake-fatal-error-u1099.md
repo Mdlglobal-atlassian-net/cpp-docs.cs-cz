@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - U1099
 ms.assetid: 6688a805-43e6-4247-a2d0-14be082f0b13
-ms.openlocfilehash: 395f25d8d27bc5e9b6132c87390c8c3bc19b6cc4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c963180059a48d9aa0b09103df1ed54f82b8a2f1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62298240"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80193391"
 ---
 # <a name="nmake-fatal-error-u1099"></a>Závažná chyba nástroje NMAKE U1099
 
 přetečení zásobníku
 
-Zpracování souboru pravidel byla příliš složitý pro aktuální přidělení zásobníku v nástroji NMAKE. NMAKE má přidělený objem 0x3000 (12 kb / s).
+Zpracování souboru pravidel bylo pro aktuální přidělení zásobníku v nástroji NMAKE příliš složité. NMAKE má přidělení 0x3000 (12K).
 
-Pro zvýšení přidělení zásobníku v NMAKE, spusťte [/Stack editbin](../../build/reference/stack.md) nástroj s větší možností zásobníku:
+Chcete-li zvýšit alokaci zásobníku nástroje NMAKE, spusťte nástroj [nástroje EDITBIN/Stack](../../build/reference/stack.md) s větší možností zásobníku:
 
-**Editbin – /STACK:reserve NMAKE. SOUBOR EXE**
+**nástroje EDITBIN/STACK: vyhradit NMAKE PROGRAMU**
 
-kde *rezervovat* je větší než aktuální přidělení zásobníku v nástroji NMAKE číslo.
+kde *rezerva* je číslo větší než aktuální přidělení zásobníku v nástroji NMAKE.

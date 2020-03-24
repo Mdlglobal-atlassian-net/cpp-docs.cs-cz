@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4204
 ms.assetid: 14adda20-0cbe-407b-90f6-9f81c93530e2
-ms.openlocfilehash: 790b0fa25bbf41c38b843e1a2ea757fdc0d10b9a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 98c53c9b998e9bd544c1cc72bd2b0c3fd2b0a418
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395102"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80193859"
 ---
 # <a name="linker-tools-warning-lnk4204"></a>Upozornění linkerů LNK4204
 
-'filename' neobsahuje ladicí informace pro odkazující modul objekt se propojí, jako by nebyly dostupné žádné ladicí informace
+v názvu souboru chybí ladicí informace pro odkazující modul. propojování objektu, jako by nebyly žádné ladicí informace
 
-Soubor PDB má chybný podpis. Propojovací program bude pokračovat k propojení objektu bez ladicích informací. Možná budete chtít znovu zkompilovat pomocí souboru objektu [/zi](../../build/reference/z7-zi-zi-debug-information-format.md) možnost.
+Soubor. pdb má chybný podpis. Linker bude pokračovat v propojení tohoto objektu bez ladicích informací. Je možné, že budete chtít znovu zkompilovat soubor objektu pomocí možnosti [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md) .
 
-LNK4204 může dojít, pokud některé objekty v knihovně odkazovat na soubor, který již existuje. Tato situace může nastat například při opětovném sestavování řešení objektový soubor může být odstraněn a nelze znovu sestavit kvůli chybě při kompilaci. V takovém případě buď kompilací s **/Z7**, nebo **/Fd**, aktualizovat objekty, které chcete odkazovat na jeden soubor na knihovnu (který není výchozí název souboru PDB).  Další informace najdete v tématu [/Fd (název souboru databáze programu)](../../build/reference/fd-program-database-file-name.md).  Ujistěte se, že PDB je uložen s knihovnou pokaždé, když se aktualizuje v systému správy zdrojového kódu.
+K LINKERŮ LNK4204 může dojít, pokud některé objekty v knihovně odkazují na soubor, který již neexistuje. K tomu může dojít při opakovaném sestavování řešení, například. soubor objektu může být odstraněn a nebude znovu sestaven z důvodu chyby kompilace. V tomto případě buď zkompilujte s **/Z7**nebo **/FD**, aby se objekty aktualizovaly tak, aby odkazovaly na jeden soubor pro knihovnu (což není výchozí název souboru. pdb).  Další informace najdete v tématu [/FD (název souboru databáze programu)](../../build/reference/fd-program-database-file-name.md).  Zajistěte, aby byl soubor. pdb uložen spolu s knihovnou pokaždé, když se aktualizuje v systému správy zdrojového kódu.

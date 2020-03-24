@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - C1209
 ms.assetid: aa9ee10f-abe3-4683-9792-adca4cbbabb5
-ms.openlocfilehash: 8b23ae3459178937c6af7ccb5c8ee882dd508c93
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0948debc2573ace269419641ca8facd495792341
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375064"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80203434"
 ---
 # <a name="fatal-error-c1209"></a>Závažná chyba C1209
 
-Sestavení Friend nejsou podporovaná ve verzi modulu runtime nainstalovaný
+Sestavení Friend nejsou podporovaná nainstalovanou verzí modulu runtime.
 
-C1208 nastane, pokud máte pro aktuální verzi, ale společného jazykového modulu runtime z předchozí verze kompilátoru.
+K C1208 dojde, když máte kompilátor pro aktuální vydání, ale modul CLR (Common Language Runtime) z předchozí verze.
 
-Některé funkce kompilátoru nemusí fungovat v době běhu předchozí verze.
+Některé funkce kompilátoru nemusí fungovat v předchozí verzi doby běhu.
 
-Pokud chcete vyřešit C1209, nainstalujte modul common language runtime, dodávané s kompilátorem, který používáte.
+Chcete-li vyřešit C1209, nainstalujte modul CLR (Common Language Runtime), který byl dodán s vámi použitým kompilátorem.
 
-Další informace najdete v tématu [přátelská sestavení (C++)](../../dotnet/friend-assemblies-cpp.md).
+Další informace naleznete v tématu [Friend Assemblies (C++)](../../dotnet/friend-assemblies-cpp.md).

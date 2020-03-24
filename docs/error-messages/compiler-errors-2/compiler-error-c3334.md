@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C3334
 ms.assetid: e972c625-77e7-4022-8aba-e1db01d7a0d7
-ms.openlocfilehash: 4562ddda90e31fdde50369b97875186b002eebc3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: da7bebbb925a71189fc692bda0bce8eb41ad1499
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62300671"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80201225"
 ---
 # <a name="compiler-error-c3334"></a>Chyba kompilátoru C3334
 
-nelze #import poškozená knihovna typů.
+nelze #import poškozenou knihovnu typů.
 
-Soubor knihovny v `#import` příkaz je poškozený a nejde je využívat kompilátorem.  Poškození můžou pocházet z chybný generování modulu poškození disku, nebo pokud binárního souboru byla nějakým způsobem upravit a změnit.
+Soubor knihovny v příkazu `#import` je poškozen a kompilátor jej nemůže spotřebovat.  Poškození může pocházet z chybné generace modulu, poškození disku nebo v případě, že byl binární soubor nějakým způsobem upravován a upravován.
 
-Další informace najdete v tématu [#import Directive](../../preprocessor/hash-import-directive-cpp.md).
+Další informace najdete v tématu [direktiva #import](../../preprocessor/hash-import-directive-cpp.md).

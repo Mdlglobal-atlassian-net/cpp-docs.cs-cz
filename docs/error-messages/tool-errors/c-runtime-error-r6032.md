@@ -6,27 +6,27 @@ f1_keywords:
 helpviewer_keywords:
 - R6032
 ms.assetid: 52092a63-cc51-444a-bfc3-fad965a3558e
-ms.openlocfilehash: e0ae3acc491658840d74e262f3ab2719e613d60e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b29b946d08cff903cf0ca398ba0d7589cb5d54ea
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399990"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80197090"
 ---
 # <a name="c-runtime-error-r6032"></a>Chyba modulu C runtime R6032
 
-Není dostatek místa pro informace o národním prostředí
+Nedostatek místa pro informace o národním prostředí
 
 > [!NOTE]
-> Pokud k této chybě dojde při spuštění aplikace, aplikace se vypnout, protože má problému s interní pamětí. Existuje několik příčin této chyby, ale často je způsobeno podmínku velmi málo paměti, nebo chybu v programu.
+> Pokud se zobrazí tato chybová zpráva při spuštění aplikace, aplikace se vypnula, protože má problém interní paměti. Tato chyba může mít několik příčin, ale často je způsobena extrémně nedostatkem paměti nebo chybou v programu.
 >
 > Zkuste chybu odstranit pomocí tohoto postupu:
 >
-> - Ukončete ostatní spuštěné aplikace nebo restartovat počítač pro uvolnění paměti.
-> - Použití **aplikace a funkce** nebo **programy a funkce** stránku **ovládací panely** opravte nebo přeinstalujte program.
-> - Zkontrolujte **Windows Update** v **ovládací panely** pro aktualizace softwaru.
-> - Vyhledat aktualizovanou verzi aplikace. Pokud se problém nevyřeší, obraťte se na dodavatele aplikace.
+> - Ukončete ostatní spuštěné aplikace nebo restartujte počítač pro uvolnění paměti.
+> - K opravě nebo přeinstalaci programu použijte stránku **aplikace a funkce** nebo **programy a funkce** v **Ovládacích panelech** .
+> - Ověřte **web Windows Update** v **Ovládacích panelech** pro aktualizace softwaru.
+> - Vyhledejte aktualizovanou verzi aplikace. Pokud potíže potrvají, obraťte se na dodavatele aplikace.
 
 **Informace pro programátory**
 
-Modul runtime uchovává informace o národním prostředí v každém vláknu tak, že dokáže zpracovat volání funkcí citlivé na národní prostředí. Selhání přidělení paměti pro tyto informace je modul runtime nemůže pokračovat, protože na ní závisí příliš mnoho jeho základní funkce.
+Modul runtime uchovává informace o národním prostředí v každém vlákně, aby mohl zpracovávat volání funkcí závislých na národním prostředí. Pokud přidělení paměti pro tyto informace neproběhne úspěšně, modul runtime nemůže pokračovat, protože na něm závisí příliš mnoho základních funkcí.

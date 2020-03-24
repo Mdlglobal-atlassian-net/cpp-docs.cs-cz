@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3457
 ms.assetid: 5c1e366a-fa75-4cca-b9a3-86d4ebe4090e
-ms.openlocfilehash: 813b1c085cb0464880cb400b6200f9574220bd71
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1481bd1d430aff74bff8140941b0ab218acbe364
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62363723"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80200878"
 ---
 # <a name="compiler-error-c3457"></a>Chyba kompilátoru C3457
 
-'attribute': atribut nepodporuje nepojmenované argumenty
+' Attribute ': atribut nepodporuje nepojmenované argumenty
 
-Atributy zdroje poznámky, na rozdíl od CLR vlastní atribut nebo atributy kompilátoru podporují pouze pojmenované argumenty.
+Atributy zdrojového anotace, na rozdíl od vlastního atributu CLR nebo atributů kompilátoru, podporují pouze pojmenované argumenty.
 
 ## <a name="example"></a>Příklad
 

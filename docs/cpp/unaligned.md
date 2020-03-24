@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - __unaligned keyword [C++]
 ms.assetid: 0cd83aad-1840-47e3-ad33-59bfcbe6375b
-ms.openlocfilehash: 1090a0f3345f749a2afbd80566a9af7b9ea32d53
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 5f93aaa79fd7c3664ecf80d5007d5954002bce4a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857252"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80160642"
 ---
 # <a name="__unaligned"></a>__unaligned
 
@@ -39,6 +39,6 @@ Další informace o zarovnání naleznete v následujících tématech:
 
 - [Příklady zarovnání struktur](../build/x64-software-conventions.md#examples-of-structure-alignment)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Klíčová slova](../cpp/keywords-cpp.md)

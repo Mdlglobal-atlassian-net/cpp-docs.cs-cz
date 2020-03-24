@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - CVT1100
 ms.assetid: 886e88dd-5818-4b5f-84f2-d2a3d75f0aaf
-ms.openlocfilehash: c7e65ccc79852ec99dd2406398fe1b3cdecacde7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b7e67df24d41b1e8826673146fcc27fd93d143fd
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406272"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80196544"
 ---
 # <a name="cvtres-fatal-error-cvt1100"></a>Závažná chyba nástroje CVTRES CVT1100
 
-duplicitní prostředek – typu: typ, název: název, jazyk: jazyk, příznaky: příznaky, size: velikost
+duplicitní prostředek – typ: typ, název: název, jazyk: jazyk, příznaky: příznaky, velikost: velikost
 
-Daný prostředek byl zadán více než jednou.
+Zadaný prostředek byl zadán více než jednou.
 
-Této chybě může dojít, pokud linker vytváří knihovnu typů a nezadali jste [/TLBID](../../build/reference/tlbid-specify-resource-id-for-typelib.md) a prostředků v projektu již používá 1. V takovém případě zadejte /TLBID a zadejte jiné číslo až 65535.
+Tato chyba se může zobrazit, pokud linker vytváří knihovnu typů a neurčili jste [/TLBID](../../build/reference/tlbid-specify-resource-id-for-typelib.md) a prostředek v projektu už používá 1. V takovém případě zadejte/TLBID a zadejte jiné číslo až 65535.

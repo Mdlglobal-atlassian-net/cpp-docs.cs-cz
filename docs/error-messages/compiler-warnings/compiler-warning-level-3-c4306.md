@@ -1,22 +1,22 @@
 ---
-title: Kompilátor upozornění (úroveň 3) C4306
+title: Upozornění kompilátoru (úroveň 3) C4306
 ms.date: 08/27/2018
 f1_keywords:
 - C4306
 helpviewer_keywords:
 - C4306
 ms.assetid: 5b2192d7-402d-4b6d-8619-08105e7dcac7
-ms.openlocfilehash: 78ec291b555838b1af63287e3d24fdb809afd7c4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d200253d304500e10f5fceeade1c8228acde874d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402057"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80198884"
 ---
-# <a name="compiler-warning-level-3-c4306"></a>Kompilátor upozornění (úroveň 3) C4306
+# <a name="compiler-warning-level-3-c4306"></a>Upozornění kompilátoru (úroveň 3) C4306
 
-> "*identifikátor*': převod z '*type1*"do"*type2*' větší velikosti
+> '*Identifier*': převod z '*typ1*' na '*typ2*' větší velikosti
 
-Identifikátor je typ přetypování na ukazatel na větší. Nevyplněným bitů nového typu se nulami.
+Identifikátor je typu přetypování na větší ukazatel. Nevyplnitelné horní bity nového typu budou vyplněny nulou.
 
-Toto upozornění může znamenat nežádoucí převodu. Výsledný ukazatel nemusí být platný.
+Toto upozornění může ukazovat na nechtěný převod. Výsledný ukazatel nemusí být platný.

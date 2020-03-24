@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - U1083
 ms.assetid: b09bc34d-35d5-4676-b000-fd7d434400d9
-ms.openlocfilehash: 304c70e7fe9a7eca4ee56beab2c62494233da55b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e005142e40e1e7e2fc4a75ffd45e0d3aa4a164ce
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62366872"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80193365"
 ---
 # <a name="nmake-fatal-error-u1083"></a>Závažná chyba nástroje NMAKE U1083
 
-cílové makro 'target' se rozbaluje prázdné.
+cílové makro ' Target ' se rozšíří na Nothing
 
-Daný cíl je vyvolání makra, která nebyla definována nebo má hodnotu null. NMAKE nemůže zpracovat cíle hodnotu null.
+Daný cíl je vyvolání makra, které nebylo definováno, nebo má hodnotu null. NMAKE nemůže zpracovat cíl s hodnotou null.

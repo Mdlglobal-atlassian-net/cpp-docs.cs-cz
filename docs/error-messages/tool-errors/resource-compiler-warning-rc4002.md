@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - RC4002
 ms.assetid: a157bc55-1a75-4337-aee4-e2ba61ff8cfa
-ms.openlocfilehash: ddb16a5ea810d272db5f1d2b7473a6e5d49d69bf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dfe4d75214ed5329d5949f4133e70a01c5283343
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62346233"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172695"
 ---
 # <a name="resource-compiler-warning-rc4002"></a>Upozornění kompilátoru prostředků RC4002
 
-moc velký počet skutečných parametrů pro – makro 'identifier'
+moc velký počet skutečných parametrů pro makro Identifier
 
-Počet skutečných parametrů zadán s daným identifikátorem byla větší než číslo zadané v definici makra identifikátoru formálních parametrů.
+Počet skutečných parametrů zadaných v zadaném identifikátoru je větší než počet formálních parametrů uvedených v definici makra identifikátoru.
 
-Další skutečných parametrů byly shromažďovány ale ignorovat během rozšiřování makra.
+Dodatečné skutečné parametry byly shromážděny, ale během rozšiřování makra byly ignorovány.

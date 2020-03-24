@@ -1,25 +1,25 @@
 ---
-title: Kompilátor upozornění (úroveň 1) C4917
+title: Upozornění kompilátoru (úroveň 1) C4917
 ms.date: 11/04/2016
 f1_keywords:
 - C4917
 helpviewer_keywords:
 - C4917
 ms.assetid: c05e2610-4a5d-4f4b-a99b-c15fd7f1d5f1
-ms.openlocfilehash: 97f6f0a08c8ef292d81471cb5d0d94e359466933
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c7a2d72b429f762e476286093c7f273a9a546cb6
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393490"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80174671"
 ---
-# <a name="compiler-warning-level-1-c4917"></a>Kompilátor upozornění (úroveň 1) C4917
+# <a name="compiler-warning-level-1-c4917"></a>Upozornění kompilátoru (úroveň 1) C4917
 
-'declarator': identifikátor GUID lze přidružit pouze pomocí třídy, rozhraní nebo oboru názvů
+' deklarátor ': identifikátor GUID lze přidružit pouze k třídě, rozhraní nebo oboru názvů.
 
-Struktury definované uživatelem jiných než [třídy](../../cpp/class-cpp.md), [rozhraní](../../cpp/interface.md), nebo [obor názvů](../../cpp/namespaces-cpp.md) nemůže mít identifikátor GUID.
+Uživatelsky definovaná struktura jiná než [Třída](../../cpp/class-cpp.md), [rozhraní](../../cpp/interface.md)nebo [obor názvů](../../cpp/namespaces-cpp.md) nemůže mít identifikátor GUID.
 
-Toto upozornění je vypnuto ve výchozím nastavení. Zobrazit [kompilátoru upozornění, že je vypnuto ve výchozím nastavení](../../preprocessor/compiler-warnings-that-are-off-by-default.md) Další informace.
+Toto upozornění je ve výchozím nastavení vypnuté. Další informace najdete v tématu [Upozornění kompilátoru, která jsou ve výchozím nastavení vypnutá](../../preprocessor/compiler-warnings-that-are-off-by-default.md) .
 
 ## <a name="example"></a>Příklad
 

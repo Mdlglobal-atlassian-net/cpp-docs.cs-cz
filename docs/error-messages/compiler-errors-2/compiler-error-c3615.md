@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3615
 ms.assetid: 5ce96ba9-3d31-49f3-9aa8-24e5cdf6dcfc
-ms.openlocfilehash: e966295b5ab63350828ddb73d6791a9e30bb5c59
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c1a5b6edbc87e14de267cf962dc2b1a71dd6be12
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404101"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80200535"
 ---
 # <a name="compiler-error-c3615"></a>Chyba kompilátoru C3615
 
-> Funkce constexpr '*funkce*' nemůže mít v konstantním výrazu
+> výsledkem funkce constexpr '*Function*' nemůže být konstantní výraz.
 
-Funkce *funkce* nemůže být vyhodnocena jako `constexpr` v době kompilace. Chcete-li být `constexpr`, funkce může volat pouze jiné `constexpr` funkce.
+*Funkce Function nemohla být* vyhodnocena jako `constexpr` v době kompilace. Aby bylo možné `constexpr`, funkce může volat pouze jiné funkce `constexpr`.
 
 ## <a name="example"></a>Příklad
 
-Visual Studio 2017 správně vyvolá chybu, pokud operand na levé straně podmíněně vyhodnocování operace není platná v `constexpr` kontextu. Následující kód se zkompiluje ve Visual Studiu 2015 ale není v sadě Visual Studio 2017.
+Pokud je levý operand podmíněného vyhodnocení operace v kontextu `constexpr` neplatný, Visual Studio 2017 správně vyvolá chybu. Následující kód je zkompilován v aplikaci Visual Studio 2015, ale ne v aplikaci Visual Studio 2017.
 
 ```cpp
 // C3615.cpp
@@ -39,4 +39,4 @@ constexpr bool f(const myarray<1> &arr)
 }
 ```
 
-Chcete-li tento problém vyřešit, buď deklarovat `array::size()` fungovat jako `constexpr` nebo odebrat `constexpr` kvalifikátor z `f`.
+Chcete-li tento problém vyřešit, buď Deklarujte funkci `array::size()` jako `constexpr` nebo odeberte kvalifikátor `constexpr` ze `f`.

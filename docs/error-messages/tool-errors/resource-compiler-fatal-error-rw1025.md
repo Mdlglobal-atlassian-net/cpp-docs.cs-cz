@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - RW1025
 ms.assetid: 561a02af-e7e0-442a-8ad3-a00b2ca1b62e
-ms.openlocfilehash: 8ecfc11f5cc991294d966a4b6c75d8da6669d5b1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9b6697dff0a445cc342f30d08bd79822b02df7b8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62347204"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172721"
 ---
 # <a name="resource-compiler-fatal-error-rw1025"></a>Závažná chyba kompilátoru prostředků RW1025
 
-Nedostatek paměti úplně haldy
+Nedostatek paměti haldy
 
-Zkontrolujte rezidentní software, který může být zabíraly příliš velkého prostoru. Použijte CHKDSK program a zjistěte, kolik paměti máte.
+Vyhledejte rezidentní software v paměti, který může zabírat příliš mnoho místa. Zjistěte, kolik paměti máte, pomocí programu CHKDSK.
 
-Pokud vytváříte velkého souboru prostředků, rozdělte do dvou souborů skriptu prostředků. Po vytvoření dva soubory res, použijte příkazový řádek systému MS-DOS k nim dohromady:
+Pokud vytváříte rozsáhlý soubor prostředků, rozdělte skript prostředků do dvou souborů. Po vytvoření dvou souborů. res použijte příkazový řádek MS-DOS k jejich vzájemnému připojení:
 
 ```
 copy first.res /b + second.res /b full.res

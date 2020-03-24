@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - LNK2004
 ms.assetid: 07645371-e67b-4a2c-b0e0-dde24c94ef7e
-ms.openlocfilehash: 8088494106aa702fda0497fa431e48267167a185
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0d26ab12c5b82d52b7dcbb176d9bfa033d7ddfee
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160416"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80194834"
 ---
 # <a name="linker-tools-error-lnk2004"></a>Chyba linkerů LNK2004
 
-přetečení relativní opravy GP na "cíl"; krátký ' sekce ' je příliš velká nebo je mimo rozsah.
+přetečení relativní opravy GP na target; krátký oddíl ' Section ' je příliš velký nebo mimo rozsah.
 
-Část byla moc velká.
+Oddíl je moc velký.
 
-Chcete-li vyřešit tuto chybu, zmenšete velikost krátký oddíl, buď explicitně ukládání dat v části dlouhé prostřednictvím #pragma část (".sectionname", čtení, zápisu, long) a použitím `__declspec(allocate(".sectionname"))` na data definice a deklarace.  Například
+Chcete-li tuto chybu vyřešit, zmenšete velikost krátkého oddílu, buď explicitním vložením dat do dlouhých oddílů, pomocí #pragma oddílu (". sectionGroup", čtení, zápisu, Long) a použití `__declspec(allocate(".sectionname"))` v definicích a deklaracích dat.  Například:
 
 ```
 #pragma section(".data$mylong", read, write, long)
@@ -32,7 +32,7 @@ char    rg4[16] = { 1 };
 char    rg5[32] = { 1 };
 ```
 
-Logicky seskupeny data můžete také přesunout do vlastní struktury, které se bude kolekce dat větší než 8 bajtů, které kompilátor přidělí dlouhé datové části.  Například
+Můžete také přesunout logicky seskupená data do vlastní struktury, která bude kolekcí dat větší než 8 bajtů, které kompilátor bude přidělovat v sekci s dlouhými daty.  Například:
 
 ```
 // from this...
@@ -50,4 +50,4 @@ struct X {
 } x  = { 23, 23*2, 23*3, 23*4 };
 ```
 
-Tato chyba je následována závažná chyba `LNK1165`.
+Tato chyba je následována závažnou chybou `LNK1165`.

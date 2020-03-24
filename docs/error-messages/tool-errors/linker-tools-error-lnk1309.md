@@ -6,25 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1309
 ms.assetid: 10146071-883f-4849-97d1-c7468f90efbb
-ms.openlocfilehash: ea675ca835dfc3fe4881e5fabbea746a4442b10a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 88b05512fd45adb6dc96a6c130ceccb74f3ab14e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62187440"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80194899"
 ---
 # <a name="linker-tools-error-lnk1309"></a>Chyba linkerů LNK1309
 
-> *Type1* modulu detekoval se neplatný pomocí přepínače/CLRIMAGETYPE:*typ2*
+> byl zjištěn modul *typ1* ; neplatné s přepínačem/CLRIMAGETYPE:*typ2*
 
 ## <a name="remarks"></a>Poznámky
 
-Typ bitové kopie CLR byl vyžádán pomocí **/CLRIMAGETYPE** ale linkeru nelze vytvořit bitovou kopii tohoto typu, protože jeden nebo více modulů byly kompatibilní s tímto typem.
+Typ bitové kopie CLR byl požadován s **/CLRIMAGETYPE** , ale linker nemohl vytvořit obrázek tohoto typu, protože jeden nebo více modulů byl s tímto typem nekompatibilní.
 
-Například uvidíte LNK1309, pokud zadáte **safe** a předáte moduly sestavené s **/CLR: pure**.
+Například se zobrazí LINKERŮ LNK1309 Pokud zadáte **/CLRIMAGETYPE: Safe** a předáte modul sestavený pomocí **/clr: Pure**.
 
-**/CLR: pure** a **/CLR: safe** knihovny kompilátoru možnosti a možnosti podpory jsou zastaralé v sadě Visual Studio 2015 a není podporován v sadě Visual Studio 2017.
+Možnosti **/clr: Pure** a **/clr: Safe** a podpůrné knihovny jsou zastaralé v aplikaci Visual Studio 2015 a nejsou podporovány v aplikaci Visual Studio 2017.
 
-Zobrazí se také LNK1309 při pokusu o vytvoření částečně důvěryhodné aplikace čistě CLR pomocí lib ptrustu [d]. Informace o tom, jak vytvořit částečně důvěryhodné aplikace najdete v tématu [jak: Vytvoření částečně důvěryhodné aplikace odebráním závislosti na knihovně DLL knihovny CRT](../../dotnet/create-a-partially-trusted-application.md).
+LINKERŮ LNK1309 se zobrazí také v případě, že se pokusíte vytvořit částečně důvěryhodnou čistě aplikaci CLR pomocí ptrustu [d]. lib. Informace o tom, jak vytvořit částečně důvěryhodnou aplikaci, naleznete v tématu [How to: Create a částečně důvěryhodné aplikace odebráním závislosti v knihovně DLL knihovny CRT](../../dotnet/create-a-partially-trusted-application.md).
 
-Další informace najdete v tématu [/CLR (kompilace Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) a [/CLRIMAGETYPE (zadat typ z bitové kopie modulu CLR)](../../build/reference/clrimagetype-specify-type-of-clr-image.md).
+Další informace naleznete v tématu [/CLR (Common Language Runtime Compilation)](../../build/reference/clr-common-language-runtime-compilation.md) a [/CLRIMAGETYPE (určení typu image CLR)](../../build/reference/clrimagetype-specify-type-of-clr-image.md).

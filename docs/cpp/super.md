@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - __super keyword [C++]
 ms.assetid: f0957c31-9256-405b-b402-cad182404b5f
-ms.openlocfilehash: a69d177bb83ce404a18d50c8f966be5d81f5fa72
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b6f6a7e108224ab4c97893104c5d6c38d325fa42
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62330528"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80160824"
 ---
-# <a name="super"></a>__super
+# <a name="__super"></a>__super
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
 Umožňuje explicitně uvést, že je pro funkci, u které je prováděno přetížení, volána implementace základní funkce.
 
@@ -29,11 +29,11 @@ __super::member_function();
 
 Všechny dostupné metody základní třídy jsou ve fázi řešení přetížení zváženy a funkce, jež poskytne nejlepší výsledek, je ta, která je volána.
 
-**__super** může být použit pouze v těle členské funkce.
+**__super** se může vyskytovat jenom v těle členské funkce.
 
-**__super** nelze použít pomocí deklarace. Zobrazit [using – deklarace](../cpp/using-declaration.md) Další informace.
+**__super** nelze použít s deklarací using. Další informace najdete v tématu [použití deklarace](../cpp/using-declaration.md) .
 
-Se zavedením [atributy](../windows/attributes/attributes-alphabetical-reference.md) , které vkládají kód, může kód obsahovat jednu nebo více základních tříd, jejichž názvy nemusí být známy, ale které obsahují metody, které chcete volat.
+Při zavedení [atributů](../windows/attributes/attributes-alphabetical-reference.md) , které vkládají kód, může váš kód obsahovat jednu nebo více základních tříd, jejichž názvy neznáte, ale obsahují metody, které chcete volat.
 
 ## <a name="example"></a>Příklad
 
@@ -58,8 +58,8 @@ struct D : B1, B2 {
 };
 ```
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Klíčová slova](../cpp/keywords-cpp.md)

@@ -5,18 +5,18 @@ helpviewer_keywords:
 - global constants
 - constants, global
 ms.assetid: df5a9bd4-d0a8-4c1c-956e-b481d0bded7d
-ms.openlocfilehash: 2f0621f52fe445f8f2058ef902824ddc1f5e2bb5
-ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.openlocfilehash: cabe5e92a496181d60536d7274eca388aba5c068
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64856107"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80195471"
 ---
 # <a name="global-constants-in-c"></a>Globální konstanty v jazyku C++
 
-Globální konstanty jazyka C++ mají statické propojení. To se liší od C. Pokud se pokusíte použít globální konstanty v jazyce C++ ve více souborech získáte nevyřešené externí chyby. Kompilátor optimalizuje globální konstanty, nezbývá místo vyhrazena pro proměnnou.
+C++globální konstanty mají statické propojení. To se liší od jazyka C. Pokud se pokusíte použít globální konstantu v C++ v několika souborech, získáte nevyřešenou externí chybu. Kompilátor optimalizuje globální konstanty a zachová místo vyhrazené pro proměnnou.
 
-Jedním ze způsobů pro vyřešení této chyby je zahrnout soubor hlaviček const inicializace a včetně této hlavičky v rámci souborů CPP, pokud je to nezbytné, tak, jako kdyby byla prototypu funkce. Další možností je vytvořit proměnnou, která není konstantní a použití konstantní odkaz při posuzování ho.
+Jedním ze způsobů, jak tuto chybu vyřešit, je zahrnout inicializace const do hlavičkového souboru a zahrnout tuto hlavičku do souborů CPP v případě potřeby, stejně jako v případě prototypu funkce. Další možností je nastavit proměnnou jako nekonstantní a použít konstantní odkaz při jejich vyhodnocování.
 
 Následující ukázka generuje C2019:
 
@@ -31,7 +31,7 @@ int main() {
 }
 ```
 
-a pak,
+a potom
 
 ```cpp
 // global_constants_2.cpp
@@ -43,6 +43,6 @@ void test() {
 }
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Chyba linkerů LNK2019](../../error-messages/tool-errors/linker-tools-error-lnk2019.md)

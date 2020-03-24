@@ -8,14 +8,14 @@ helpviewer_keywords:
 - event handlers [C++], dissociating events
 - __unhook keyword [C++]
 ms.assetid: 953a14f3-5199-459d-81e5-fcf015a19878
-ms.openlocfilehash: e8f42c35024995c026ae10fc7f0ab3db77d1e5dc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2a259b80b941e37e0c3040ad55894c114fe4bc82
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62312151"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80160525"
 ---
-# <a name="unhook"></a>__unhook
+# <a name="__unhook"></a>__unhook
 
 Dissociates metodu obslužné rutiny z události.
 
@@ -39,66 +39,66 @@ long  __unhook(
 
 #### <a name="parameters"></a>Parametry
 
-**&** *SourceClass* `::` *EventMethod* ukazatel na metodu události, ze kterého vyjmutí metodu obslužné rutiny události:
+**&** *SourceClass* `::` *EventMethod* ukazatel na metodu události, ze které odřadíte metodu obslužné rutiny události:
 
-- Nativní C++ události: *SourceClass* je třídě zdroje události a *EventMethod* je událost.
+- Nativní C++ události: *SourceClass* je třída zdroje události a *EventMethod* je událost.
 
-- Události modelu COM: *SourceClass* je rozhraní zdroje událostí a *EventMethod* je jedna z jeho metod.
+- Události COM: *SourceClass* je zdrojové rozhraní události a *EventMethod* je jednou z jeho metod.
 
-- Spravované události: *SourceClass* je třídě zdroje události a *EventMethod* je událost.
+- Spravované události: *SourceClass* je třída zdroje události a *EventMethod* je událost.
 
 *interface*<br/>
-Název rozhraní se unhooked z *příjemce*, pouze pro přijímače událostí modelu COM, ve kterém *layout_dependent* parametr [event_receiver](../windows/attributes/event-receiver.md) atribut je **true**.
+Název rozhraní, který je odhlášený od *příjemce*, jenom pro přijímače událostí com, ve kterých je *layout_dependent* parametrem [event_receiver](../windows/attributes/event-receiver.md) atributu **true**.
 
 *source*<br/>
-Ukazatel na instanci zdroje událostí. V závislosti na kód `type` zadané v poli `event_receiver`, *zdroj* může být jedna z následujících akcí:
+Ukazatel na instanci zdroje události. V závislosti na kódu `type` zadaného v `event_receiver`může být *zdrojem* jedna z následujících:
 
-- Ukazatel objektu zdroje nativní události.
+- Zdrojový ukazatel objektu zdroje nativní události.
 
-- `IUnknown`– Na základě ukazatel (zdroj COM).
+- Ukazatel založený na `IUnknown`(zdroj COM).
 
-- Spravovaný objekt ukazatele (pro spravované události).
+- Ukazatel spravovaného objektu (pro spravované události).
 
-**&** *ReceiverClass* `::` `HandlerMethod` ukazatel na metodu obslužné rutiny události bude unhooked z události. Obslužná rutina je zadán jako metoda třídy nebo odkaz na stejné. Pokud není zadán název třídy **__unhook** předpokládá třídě může být, ve kterém je volána.
+**&** *ReceiverClass* `::` `HandlerMethod` ukazatel na metodu obslužné rutiny události, která má být odpojování od události. Obslužná rutina je určena jako metoda třídy nebo odkaz na stejný; Pokud nezadáte název třídy, **__unhook** předpokládá, že třída bude volána.
 
-- Nativní C++ události: *ReceiverClass* je přijímače událostí a `HandlerMethod` je obslužná rutina.
+- Nativní C++ události: *ReceiverClass* je třída přijímače událostí a `HandlerMethod` je obslužná rutina.
 
-- Události modelu COM: *ReceiverClass* je rozhraní příjemce události a `HandlerMethod` je jedním z jeho obslužné rutiny.
+- Události COM: *ReceiverClass* je rozhraní přijímače událostí a `HandlerMethod` je jedním z jeho obslužných rutin.
 
-- Spravované události: *ReceiverClass* je přijímače událostí a `HandlerMethod` je obslužná rutina.
+- Spravované události: *ReceiverClass* je třída přijímače událostí a `HandlerMethod` je obslužná rutina.
 
-*příjemce*(volitelné) ukazatel na instanci třídy příjemce událostí. Pokud nezadáte příjemce, výchozí hodnota je příjemce třídu nebo strukturu, ve kterém **__unhook** je volána.
+*přijímač*(volitelné) ukazatel na instanci třídy přijímače událostí. Pokud nezadáte přijímač, výchozí hodnota je třída přijímače nebo struktura, ve které je volána **__unhook** .
 
-## <a name="usage"></a>Použití
+## <a name="usage"></a>Využití
 
-Je možné použít v jakékoli oboru funkce, včetně hlavní mimo třídu příjemce událostí.
+Dá se použít v jakémkoli oboru funkce, včetně Main, mimo třídu přijímače událostí.
 
 ## <a name="remarks"></a>Poznámky
 
-Použít vnitřní funkci **__unhook** v příjemci události zrušit přidružení nebo "vyjmutí" metodu obslužné rutiny z metody událostí.
+Pomocí vnitřní funkce **__unhook** v přijímači událostí oddělit nebo odpojte metodu obslužné rutiny od metody události.
 
-Existují tři formy **__unhook**. Ve většině případů můžete použít první formulář (4 argumenty). Můžete použít druhý tvar (dvěma argumenty) **__unhook** pouze pro příjemce události COM; to unhooks rozhraní celá událost. Třetí formuláře (jednoargumentové) můžete použít k vyjmutí Všichni delegáti ze zadaného zdroje.
+Existují tři formy **__unhook**. Ve většině případů můžete použít první formulář (se čtyřmi argumenty). Druhý (se dvěma argumenty) **__unhook** můžete použít jenom pro přijímač událostí com; tím odzavěsí celé rozhraní událostí. Třetí formulář (s jedním argumentem) můžete použít k odpojování všech delegátů ze zadaného zdroje.
 
-Nenulový návratová hodnota označuje, že došlo k chybě (spravované události vyvolá výjimku).
+Nenulová návratová hodnota označuje, že došlo k chybě (spravované události vyvolávají výjimku).
 
-Při volání **__unhook** na události a obslužná rutina události, které již nejsou připojeny, to nebude mít žádný efekt.
+Pokud zavoláte **__unhook** u obslužné rutiny události a události, které ještě nejsou háčkované, nebude to mít žádný vliv.
 
-V době kompilace kompilátor ověří, jestli událost existuje, nemá parametr kontrolu typu zadaného popisovače.
+V době kompilace kompilátor ověřuje, zda událost existuje a provede kontrolu typu parametru pomocí zadané obslužné rutiny.
 
-S výjimkou událostí modelu COM **__hook** a **__unhook** lze volat mimo příjemce událostí.
+S výjimkou událostí COM mohou být **__hook** a **__unhook** volány vně přijímače událostí.
 
-O alternativu k použití **__unhook** je použití operátoru-=.
+Alternativou k použití **__unhook** je použití operátoru-=.
 
-Informace týkající se kódování spravované události v nové syntaxi naleznete v tématu [události](../extensions/event-cpp-component-extensions.md).
+Informace o kódování spravovaných událostí v nové syntaxi naleznete v tématu [Event](../extensions/event-cpp-component-extensions.md).
 
 > [!NOTE]
 >  Třída šablony nebo struktura nemohou obsahovat události.
 
 ## <a name="example"></a>Příklad
 
-Zobrazit [zpracování událostí v nativním kódu C++](../cpp/event-handling-in-native-cpp.md) a [zpracování událostí v modulu COM](../cpp/event-handling-in-com.md) ukázek.
+Ukázky najdete v tématu [zpracování C++ událostí v nativním](../cpp/event-handling-in-native-cpp.md) a [zpracování událostí v modelu COM](../cpp/event-handling-in-com.md) .
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Klíčová slova](../cpp/keywords-cpp.md)<br/>
 [event_source](../windows/attributes/event-source.md)<br/>

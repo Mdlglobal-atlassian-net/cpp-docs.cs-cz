@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4070
 ms.assetid: f95f179a-fff9-427e-bd51-466b3934517f
-ms.openlocfilehash: e7139b21f053ea8633356c7194cd719a6a4aef35
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 391a477625b51fd37eacc5d455801ce90d2abbc2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410262"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80194002"
 ---
 # <a name="linker-tools-warning-lnk4070"></a>Upozornění linkerů LNK4070
 
-/ Out: název_souboru – direktiva v. EXP se liší od názvu výstupního souboru 'filename'; Direktiva se ignoruje
+/OUT: filename – direktiva v. EXP se liší od výstupního názvu souboru filename; ignoruje se direktiva.
 
-`filename` Zadané v poli [název](../../build/reference/name-c-cpp.md) nebo [KNIHOVNY](../../build/reference/library.md) při vytvoření souboru .exp se liší od výstupu `filename` , která byla ve výchozím nastavení předpokládá nebo zadaný [/OUT](../../build/reference/out-output-file-name.md) možnost.
+`filename` zadaná v příkazu [název](../../build/reference/name-c-cpp.md) nebo [Knihovna](../../build/reference/library.md) , když se vytvoří soubor. exp, se liší od výstupního `filename`, který byl buď ve výchozím nastavení předpokládaný, nebo zadaný pomocí možnosti [/out](../../build/reference/out-output-file-name.md) .
 
-Toto upozornění se zobrazí, pokud změníte název výstupního souboru ve vývojovém prostředí a ve kterém nebyla aktualizována v souboru .def projektu. Ručně aktualizujte soubor .def vyřešit tato upozornění.
+Toto upozornění se zobrazí, pokud změníte název výstupního souboru ve vývojovém prostředí a tam, kde se soubor. def projektu neaktualizoval. Chcete-li vyřešit toto upozornění, ručně aktualizujte soubor. def.
 
-Klientský program, který používá výslednou knihovnu DLL může dojít k potížím.
+Může dojít k potížím v klientském programu, který používá výslednou knihovnu DLL.

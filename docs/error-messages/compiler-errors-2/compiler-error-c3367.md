@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C3367
 ms.assetid: e675d42b-f5b0-4d43-aab1-1f5024233102
-ms.openlocfilehash: f53312fa9225270ef79d50d2ad351adce790d6fa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bedc94039f8621a93672c0dfa0cad5a54aad796e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62300530"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80201159"
 ---
 # <a name="compiler-error-c3367"></a>Chyba kompilátoru C3367
 
-'static_member_function': statické funkce nelze použít k vytvoření delegáta bez vazby
+' static_member_function ': funkci Static nelze použít k vytvoření delegáta bez vazby
 
-Při volání delegáta bez vazby, musíte předat instanci objektu. Protože statické členské funkce je volána pomocí názvu třídy, můžete vytvořit pouze instanci delegáta bez vazby s členskou funkci instance.
+Při volání delegáta bez vazby je nutné předat instanci objektu. Vzhledem k tomu, že statická členská funkce je volána prostřednictvím názvu třídy, lze vytvořit instanci nevázaného delegáta s členskou funkcí instance.
 
-Další informace o nevázaní delegáti najdete v tématu [jak: Definice a používání delegátů (C++vyhodnocovací)](../../dotnet/how-to-define-and-use-delegates-cpp-cli.md).
+Další informace o nevázaných delegátech naleznete v tématu [How to: Define andC++use Delegates (/CLI)](../../dotnet/how-to-define-and-use-delegates-cpp-cli.md).
 
 ## <a name="example"></a>Příklad
 

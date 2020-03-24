@@ -2,12 +2,12 @@
 title: Rozlišení šablon a názvů
 ms.date: 11/04/2016
 ms.assetid: 519ba7b5-cd25-4549-865a-9a7b9dffdc28
-ms.openlocfilehash: e4a53df0a192c1d7b7f376e4401eb99fcbf7d481
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 693a2e69446410531d6a02047e8f230542362033
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62266748"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80160798"
 ---
 # <a name="templates-and-name-resolution"></a>Rozlišení šablon a názvů
 
@@ -73,6 +73,6 @@ Názvy a výrazy, které jsou závislé na parametru šablony, se dělí na záv
 
 Výrazy závislosti na typu nebo závislosti na hodnotě jsou výrazy zahrnující proměnné, které jsou závislé na typu nebo závislé na hodnotě. Tyto výrazy mohou mít sémantiku, která se liší v závislosti na parametrech použitých v šabloně.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Šablony](../cpp/templates-cpp.md)

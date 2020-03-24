@@ -7,17 +7,17 @@ helpviewer_keywords:
 - CAN0011
 - CXX0011
 ms.assetid: c2252e89-ad66-43fc-93e4-b886dcbd3f19
-ms.openlocfilehash: b22b7e39fc2d7436d83bc4fa7cfec49a42ddf06a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 68b6087d28b9b3ac5dbaf833cbd544ca4ea22132
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397195"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80196154"
 ---
 # <a name="expression-evaluator-error-cxx0011"></a>Chyba při vyhodnocování výrazu CXX0011
 
-chybí pravá hranatá závorka
+chybí pravá hranatá závorka.
 
-Výraz obsahuje nevyváženou hranaté závorky. Znovu zadejte výraz do vyváženého složených závorek.
+Výraz obsahuje nevyvážené hranaté závorky. Znovu zadejte výraz s vyrovnanými hranatými závorkami.
 
-Tato chyba se shoduje s CAN0011.
+Tato chyba je shodná s CAN0011.

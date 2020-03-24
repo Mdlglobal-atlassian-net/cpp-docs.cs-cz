@@ -1,24 +1,24 @@
 ---
-title: Kompilátor upozornění (úroveň 1) C4651
+title: Upozornění kompilátoru (úroveň 1) C4651
 ms.date: 11/04/2016
 f1_keywords:
 - C4651
 helpviewer_keywords:
 - C4651
 ms.assetid: f1ea82aa-4dc1-4972-b55a-57fdb962f0dd
-ms.openlocfilehash: 01e2472a547e73eda5fcc56952949a0d9611029f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bc8131665c970c3b86bb1e84e39636ae8f93897b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393516"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80199539"
 ---
-# <a name="compiler-warning-level-1-c4651"></a>Kompilátor upozornění (úroveň 1) C4651
+# <a name="compiler-warning-level-1-c4651"></a>Upozornění kompilátoru (úroveň 1) C4651
 
-zadaná pro předkompilovanou hlavičku, ale ne pro aktuální kompilaci definice
+' definice ' zadaná pro předkompilovanou hlavičku, ale ne pro aktuální kompilaci
 
-Definice byl zadán při generování předkompilované hlavičky, ale není v této kompilaci.
+Definice byla určena při vygenerování předkompilované hlavičky, ale ne v této kompilaci.
 
-Definice, nebudou platit uvnitř předkompilované hlavičky, ale ne ve zbývající části kódu.
+Definice bude platit v předkompilované hlavičce, ale ne ve zbytku kódu.
 
-Předkompilované hlavičky byl sestaven s /DSYMBOL, kompilátor vygeneruje toto upozornění v případě kompilace/YU nemá /DSYMBOL.  Přidání do příkazového řádku/YU /DSYMBOL řeší toto upozornění.
+Pokud byla Předkompilovaná hlavička sestavena pomocí/DSYMBOL, kompilátor vygeneruje toto upozornění, pokud/Yu kompilace nemá/DSYMBOL.  Toto upozornění se vyřeší přidáním/DSYMBOL do příkazového řádku/Yu.

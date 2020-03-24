@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C2797
 ms.assetid: 9fb26d35-eb5c-46fc-9ff5-756fba5bdaff
-ms.openlocfilehash: ccd007bf193bd6529748004a96745fafcb9f3226
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 9973ddcccc69e85bdf79e0623fa4bcc1d6689032
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447822"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80202073"
 ---
 # <a name="compiler-error-c2797"></a>Chyba kompilátoru C2797
 
-(Zastaralé) Inicializace seznamu je uvnitř seznamu inicializátoru členů nebo nestatický datový člen inicializátor není implementována.
+Zastaralé Inicializace seznamu uvnitř seznamu inicializátoru členů nebo inicializátor nestatických datových členů není implementována.
 
-Toto upozornění je zastaralé v sadě Visual Studio 2015. V sadě Visual Studio 2013 a předchozími verzemi, Microsoft C++ kompilátoru neimplementuje Inicializace seznamu je uvnitř seznamu inicializátoru členů nebo inicializátoru nestatický datový člen. Před Visual Studio 2013 Update 3 Tento byl text tiše převeden na volání funkce, které by mohlo vést k generování chybného kódu. Visual Studio 2013 Update 3 sestavy to za chybu.
+Toto upozornění je zastaralé v aplikaci Visual Studio 2015. V Visual Studio 2013 a starších verzích kompilátor společnosti Microsoft C++ neimplementuje inicializaci seznamu uvnitř seznamu inicializátoru členů ani inicializátoru nestatických datových členů. Před Visual Studio 2013 aktualizace 3 se tato činnost v tichém režimu převedla na volání funkce, což by mohlo vést k chybnému generování kódu. Visual Studio 2013 Update 3 hlásí chybu.
 
-Tento příklad vygeneruje C2797:
+Tento příklad generuje C2797:
 
 ```
 #include <vector>
@@ -31,7 +31,7 @@ struct S {
 };
 ```
 
-Tento příklad také vygeneruje C2797:
+Tento příklad také generuje C2797:
 
 ```
 struct S1 {
@@ -45,7 +45,7 @@ struct S2 {
 };
 ```
 
-Chcete-li vyřešit tento problém, můžete použít explicitní konstrukce vnitřní seznamy. Příklad:
+Chcete-li tento problém vyřešit, můžete použít explicitní konstrukci vnitřních seznamů. Příklad:
 
 ```
 #include <vector>
@@ -58,7 +58,7 @@ struct S {
 };
 ```
 
-Pokud nechcete, aby Inicializace seznamu:
+Pokud nepožadujete inicializaci seznamu:
 
 ```
 struct S {
@@ -69,4 +69,4 @@ struct S {
 };
 ```
 
-(Kompilátor v sadě Visual Studio 2013 to dělá proto implicitně před Visual Studio 2013 Update 3.)
+(Kompilátor v Visual Studio 2013 implicitně před Visual Studio 2013 aktualizaci 3.)

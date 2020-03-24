@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4206
 ms.assetid: 6c108e33-00cf-4c5a-830d-d65d470930a7
-ms.openlocfilehash: dc81df89609f59834c8a3271dd64f3b99b281f90
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1758fffb72e183e8a186d115b2b3f3b30c32e047
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395076"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80193873"
 ---
 # <a name="linker-tools-warning-lnk4206"></a>Upozornění linkerů LNK4206
 
-> Předkompilované informace o typu nebyl nalezen. "*filename*" není propojený nebo přepsat; objekt se propojí, jako by nebyly dostupné žádné ladicí informace
+> předkompilované informace o typu se nenašly. *název souboru*není propojený nebo přepsaný; propojování objektu, jako by nebyly žádné ladicí informace
 
-*Filename* soubor objektu zkompilován s použitím [/Yc](../../build/reference/yc-create-precompiled-header-file.md), buď v příkazu LINK nebyl zadán nebo byl přepsán.
+Soubor objektu *filename* kompilovaný pomocí [/YC](../../build/reference/yc-create-precompiled-header-file.md)nebyl v příkazu odkazu zadán nebo byl přepsán.
 
-Běžný scénář pro toto upozornění je při .obj, který byl kompilován s možností/Yc je uložený v knihovně, a pokud neexistují žádné odkazy na symboly do tohoto .obj z vašeho kódu.  V takovém případě linkeru nebude používat (nebo dokonce vidět) souboru .obj.  V takovém případě by měl váš kód znovu zkompilovat a použít [/Yl](../../build/reference/yl-inject-pch-reference-for-debug-library.md) pro objekty zkompilovanými s použitím [/Yu](../../build/reference/yu-use-precompiled-header-file.md).
+Běžným scénářem tohoto upozornění je, že objekt. obj, který byl zkompilován s/Yc, je v knihovně a kde nejsou žádné odkazy na symboly na objekt. obj z vašeho kódu.  V takovém případě linker nebude používat (nebo dokonce ani vidět) soubor. obj.  V takovém případě byste měli kód znovu kompilovat a používat [/yl](../../build/reference/yl-inject-pch-reference-for-debug-library.md) pro objekty zkompilované pomocí [/Yu](../../build/reference/yu-use-precompiled-header-file.md).

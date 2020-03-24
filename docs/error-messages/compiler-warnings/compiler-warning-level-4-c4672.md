@@ -1,20 +1,20 @@
 ---
-title: Kompilátor upozornění (úroveň 4) C4672
+title: Upozornění kompilátoru (úroveň 4) C4672
 ms.date: 11/04/2016
 f1_keywords:
 - C4672
 helpviewer_keywords:
 - C4672
 ms.assetid: 3ae1b9cd-e53e-41e7-a330-7238b7aa0679
-ms.openlocfilehash: 3b0622fc4731577b7f98c816c19ed5f1684c0c65
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d9bb79ee664c2874f0b5091f9d2f9db6355d728f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388563"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80198195"
 ---
-# <a name="compiler-warning-level-4-c4672"></a>Kompilátor upozornění (úroveň 4) C4672
+# <a name="compiler-warning-level-4-c4672"></a>Upozornění kompilátoru (úroveň 4) C4672
 
-'identifier1': nejednoznačné. Poprvé zaznamenáno jako "identifier2.
+' identifier1 ': dvojznačný. Poprvé se zobrazilo jako ' identifier2 '
 
-Určený objekt do být vyvolána v **zkuste** blok je nejednoznačný. Objekt nelze jednoznačně rozlišit, pokud je vyvolána.
+Zadaný objekt, který má být vyvolána v bloku **Try** , je dvojznačný. Objekt nemůže být nejednoznačný, pokud je vyvolán.

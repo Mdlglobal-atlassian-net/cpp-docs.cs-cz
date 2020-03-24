@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4010
 ms.assetid: 2824cf99-4174-4b60-a6e2-c01e9f1ee52d
-ms.openlocfilehash: 3f25c9194f48df4064282fb8601928b3ff00f40e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5b2d5bd9b9d2fe0af488dad000638e7ae4f7624d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410317"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80194301"
 ---
 # <a name="linker-tools-warning-lnk4010"></a>Upozornění linkerů LNK4010
 
-Neplatné číslo verze subsystému číslo; předpokládá se výchozí verze subsystému
+neplatné číslo verze subsystému; Předpokládá se výchozí verze subsystému.
 
-Můžete určit verzi podsystému na obrázku ([/Subsystem](../../build/reference/subsystem-specify-subsystem.md)). Každý subsystém má požadavek na minimální verzi. Pokud je nižší než minimální zadaná verze, dojde k toto upozornění a propojovací program použije jenom subsystému výchozí.
+Můžete určit verzi pro podsystém Image ([/Subsystem](../../build/reference/subsystem-specify-subsystem.md)). Každý podsystém má požadavek na minimální verzi. Pokud je zadaná verze nižší než minimum, toto upozornění bude provedeno a linker bude používat pouze výchozí podsystém.

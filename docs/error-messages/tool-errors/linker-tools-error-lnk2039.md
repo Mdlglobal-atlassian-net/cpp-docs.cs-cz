@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - LNK2039
 ms.assetid: eaa296bd-4901-41f6-8410-6d03ee827144
-ms.openlocfilehash: 57d0c101358f84816c8d0cf96eb5137833df0b48
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7712747deb865ec62fa007fcd95ad09630d00cea
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62298737"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80194496"
 ---
 # <a name="linker-tools-error-lnk2039"></a>Chyba linkerů LNK2039
 
-Importuje se referenční třída\<typu > ", která je definována v another.obj; by měla být buď importovaná nebo definovaná, ale ne obojí.
+Import třídy ref class\<typ >, který je definován v jiném objektu. obj; měla by být buď importovaná, nebo definovaná, ale ne obojí.
 
-Třída ref class ' <`type`>' se importují v souboru .obj zadaný, ale je také definováno v jiném souboru .obj. K tomuto stavu může způsobit selhání běhového prostředí nebo jiné neočekávané chování.
+Ref class ' <`type`> ' je importována v zadaném souboru. obj, ale je také definována v jiném souboru. obj. Tato podmínka může způsobit chybu modulu runtime nebo jiné neočekávané chování.
 
 ### <a name="to-correct-this-error"></a>Oprava této chyby
 
-1. Zkontrolujte, zda "`type`' musí být definován v jiném souboru .obj a zkontrolujte, jestli musí být importovány ze souboru .winmd.
+1. Ověřte, zda je nutné v jiném souboru. obj definovat '`type`' a ověřit, zda musí být importován ze souboru. winmd.
 
-1. Odeberte definici nebo importu.
+1. Odeberte buď definici, nebo import.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Chyby a upozornění linkerů](../../error-messages/tool-errors/linker-tools-errors-and-warnings.md)<br/>
 [Chyba linkerů LNK1332](../../error-messages/tool-errors/linker-tools-error-lnk1332.md)

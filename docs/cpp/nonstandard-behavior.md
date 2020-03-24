@@ -6,22 +6,22 @@ helpviewer_keywords:
 - Microsoft-specific, compiler behavior
 - nonstandard behavior, compliance and compatibility
 ms.assetid: a57dea27-dc79-4f64-8a83-017e84841773
-ms.openlocfilehash: 82c5faae68f9da747017119d76578cc88163d8bb
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: d3bb4ca843833cfe9e027f694f25c989895487bb
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65222024"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80161032"
 ---
 # <a name="nonstandard-behavior"></a>Nestandardní chování
 
-V následujících oddílech jsou uvedeny některé z míst, kde implementace Microsoft C++ není v souladu s C++ standard. Čísla oddílů, která jsou uvedena níže, odkazují na čísla oddílů ve standardu C++ (ISO/IEC 14882:2011(E)).
+V následujících oddílech jsou uvedeny některé z míst, kde implementace od C++ společnosti Microsoft nedodržuje C++ Standard. Čísla oddílů, která jsou uvedena níže, odkazují na čísla oddílů ve standardu C++ (ISO/IEC 14882:2011(E)).
 
-Seznam omezení kompilátoru, které se liší od stanovených ve standardu jazyka C++ je uveden v [omezení kompilátoru](../cpp/compiler-limits.md).
+Seznam omezení kompilátoru, která se liší od definic definovaných ve C++ standardu, je uveden v [omezeních kompilátoru](../cpp/compiler-limits.md).
 
 ## <a name="covariant-return-types"></a>Kovariantní návratové typy
 
-Virtuální základní třídy nejsou podporovány jako kovariantní návratové typy, pokud virtuální funkce má proměnný počet argumentů. To není v souladu s oddílem 10.3, odstavcem 7 specifikace C++ ISO. Následující ukázka nezkompiluje, hlásí chybu kompilátoru [C2688](../error-messages/compiler-errors-2/compiler-error-c2688.md)
+Virtuální základní třídy nejsou podporovány jako kovariantní návratové typy, pokud virtuální funkce má proměnný počet argumentů. To není v souladu s oddílem 10.3, odstavcem 7 specifikace C++ ISO. Následující ukázka není zkompilována, čímž se [C2688](../error-messages/compiler-errors-2/compiler-error-c2688.md) Chyba kompilátoru.
 
 ```cpp
 // CovariantReturn.cpp
@@ -38,7 +38,7 @@ class B : virtual A
 
 ## <a name="binding-nondependent-names-in-templates"></a>Názvy nezávislé vazby v šablonách
 
-Microsoft C++ kompilátoru aktuálně nepodporuje názvy nezávislé vazby při počáteční analýze šablony. To není v souladu s oddílem 14.6.3 specifikace C++ ISO. To může způsobit přetížení deklarované poté, co má být šablona (ale předtím, než je vytvořena instance šablony) zobrazena.
+Kompilátor společnosti C++ Microsoft v současné době při prvotní analýze šablony nepodporuje názvy nezávisle na vazbě. To není v souladu s oddílem 14.6.3 specifikace C++ ISO. To může způsobit přetížení deklarované poté, co má být šablona (ale předtím, než je vytvořena instance šablony) zobrazena.
 
 ```cpp
 #include <iostream>
@@ -64,18 +64,18 @@ int main() {
 
 ## <a name="function-exception-specifiers"></a>Specifikátory výjimek funkcí
 
-Specifikátory výjimek funkcí jiné než `throw()` jsou analyzovány, ale nepoužívá se. To není v souladu s oddílem 15.4 specifikace ISO C++. Příklad:
+Specifikátory výjimek funkcí jiné než `throw()` jsou analyzovány, ale nepoužívají se. To není v souladu s oddílem 15.4 specifikace ISO C++. Příklad:
 
 ```cpp
 void f() throw(int); // parsed but not used
 void g() throw();    // parsed and used
 ```
 
-Další informace o specifikacích výjimek naleznete v tématu [specifikace výjimek](../cpp/exception-specifications-throw-cpp.md).
+Další informace o specifikacích výjimek naleznete v tématu [Specifikace výjimek](../cpp/exception-specifications-throw-cpp.md).
 
-## <a name="chartraitseof"></a>char_traits::eof()
+## <a name="char_traitseof"></a>char_traits::eof()
 
-C++ Standard uvádí, že [char_traits::eof](../standard-library/char-traits-struct.md#eof) nesmí odpovídat platné `char_type` hodnotu. Microsoft C++ kompilátor vynucuje toto omezení pro typ **char**, ale ne pro typ **wchar_t**. To není v souladu s požadavky tabulky 62 v oddíle 12.1.1 specifikace C++ ISO. To zachycuje níže uvedený příklad.
+C++ Standardní stavy, které [char_traits:: EOF](../standard-library/char-traits-struct.md#eof) nesmí odpovídat platnému `char_type` hodnotě. Kompilátor Microsoft C++ toto omezení vynutil pro typ **char**, ale ne pro typ **wchar_t**. To není v souladu s požadavky tabulky 62 v oddíle 12.1.1 specifikace C++ ISO. To zachycuje níže uvedený příklad.
 
 ```cpp
 #include <iostream>
@@ -94,4 +94,4 @@ int main()
 
 ## <a name="storage-location-of-objects"></a>Umístění úložiště objektů
 
-Standard C++ (odstavec 6 oddílu 1.8) vyžaduje jedinečná umístění úložiště objektů jazyka C++. Nicméně s Microsoftem C++, existují případy, kde typy bez datových členů budou sdílet umístění úložiště s jinými typy po dobu životnosti objektu.
+Standard C++ (odstavec 6 oddílu 1.8) vyžaduje jedinečná umístění úložiště objektů jazyka C++. Nicméně u společnosti C++Microsoft existují případy, kdy typy bez datových členů budou sdílet umístění úložiště s jinými typy pro dobu života objektu.

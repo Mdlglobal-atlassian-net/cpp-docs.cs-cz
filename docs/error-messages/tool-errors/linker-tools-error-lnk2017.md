@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - LNK2017
 ms.assetid: f7c21733-b0fb-4888-a295-9b453ba6ee77
-ms.openlocfilehash: ce5332c2812740ef0b8c7d8e9c64a095d20a4e2b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 02e80de5c34809a331003f3b0fb28d32e138a531
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62299052"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80194730"
 ---
 # <a name="linker-tools-error-lnk2017"></a>Chyba linkerů LNK2017
 
-'symbol' přemístění "segmentu" bez: No neplatná.
+přemístění ' symbol ' na ' segment ' je neplatné bez/LARGEADDRESSAWARE: NO
 
-Pokoušíte se vytvořit bitovou kopii 64-bit s adresami 32-bit. Chcete-li to provést, musíte mít:
+Pokoušíte se vytvořit 64 bitovou kopii s 32 adresami. K tomu je potřeba:
 
-- Použijte adresu zatížení.
+- Použijte pevnou adresu zatížení.
 
-- Omezte na obrázku 3 GB.
+- Omezí obraz na 3 GB.
 
-- Zadejte [: No](../../build/reference/largeaddressaware-handle-large-addresses.md).
+- Zadejte [/LARGEADDRESSAWARE: No](../../build/reference/largeaddressaware-handle-large-addresses.md).

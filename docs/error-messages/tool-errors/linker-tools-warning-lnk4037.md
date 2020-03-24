@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4037
 ms.assetid: 9ba02fd3-b04f-4679-bab9-26fa82cf09bb
-ms.openlocfilehash: 9a8121617e622fc12efe5bd26aac23faf2530f24
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 43fae7d0f19f96998d2e1a1739bc3e596bbd9ea9
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410301"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80194197"
 ---
 # <a name="linker-tools-warning-lnk4037"></a>Upozornění linkerů LNK4037
 
->"*symbol*' neexistuje; ignoruje se.
+>*symbol ' symbol*' neexistuje; přeskočen
 
-Upravený název *symbol* nelze provést řazení podle pomocí [/ORDER](../../build/reference/order-put-functions-in-order.md) možnost, protože nebyl nalezen v programu. Zkontrolujte si specifikace *symbol* v souboru odpovědí pořadí. Další informace najdete v tématu [/Order (Put funkcí v pořadí)](../../build/reference/order-put-functions-in-order.md) – možnost linkeru.
+Upravený *symbol* názvu nelze seřadit pomocí možnosti [/Order](../../build/reference/order-put-functions-in-order.md) , protože nebyl nalezen v programu. Ověřte specifikaci *symbolu* v souboru odezvy objednávky. Další informace naleznete v tématu [/Order (Put Functions in order)](../../build/reference/order-put-functions-in-order.md) – možnost linkeru.
 
 > [!NOTE]
-> ODKAZ nelze řadit statické funkce, protože názvy statickou funkci nejsou názvy veřejných symbolů. Když **/ORDER** je zadaný, vygeneruje se tento linker upozornění pro každý symbolů v souboru odpovědí pořadí, který je buď statický, nebo nebyl nalezen.
+> ODKAZ nemůže seřadit statické funkce, protože názvy statických funkcí nejsou názvy veřejných symbolů. Při zadání **/Order** se toto upozornění linkeru generuje pro každý symbol v souboru odezvy objednávky, který je buď statický, nebo nebyl nalezen.

@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - U4011
 ms.assetid: e8244514-eba6-4285-8853-7baeefdcd8a4
-ms.openlocfilehash: 3b73e92c929b3dd5924584ab732f731d565d0430
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6b1701ffc83f849d2482bd14b25d65c04c496899
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62359771"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80193144"
 ---
 # <a name="nmake-warning-u4011"></a>Upozornění nástroje NMAKE U4011
 
-'target': Ne všechny položky závislé na k dispozici. Cíl se nesestavil
+' Target ': nejsou k dispozici všechny závislé položky; cíl není sestaven.
 
-Závislé daného cíle neexistuje nebo byl zastaralý a příkaz pro aktualizaci rolích dependent vrátil nenulový ukončovací kód. Možnost /K informaci NMAKE pokračovat ve zpracovávání nesouvisejících částí sestavení a vydání ukončovací kód 1 až po dokončení NMAKE relace.
+Závislá hodnota daného cíle buď neexistuje, nebo byla zastaralá a příkaz pro aktualizaci závislého kódu vrátil nenulový ukončovací kód. Parametr/K přizpůsobuje nástroji NMAKE, aby pokračoval v zpracovávání nesouvisejících částí sestavení a vystavování ukončovacího kódu 1 při dokončení relace NMAKE.
 
-Toto upozornění předchází upozornění [nástroje U4010](../../error-messages/tool-errors/nmake-warning-u4010.md) pro každé závislé, který se má vytvořit nebo aktualizovat.
+Toto upozornění předchází upozornění [U4010](../../error-messages/tool-errors/nmake-warning-u4010.md) pro všechny závislé položky, které se nepodařilo vytvořit nebo aktualizovat.

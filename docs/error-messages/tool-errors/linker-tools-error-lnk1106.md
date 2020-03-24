@@ -6,33 +6,33 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1106
 ms.assetid: 528f7e65-04be-4966-b8af-9276837c7cda
-ms.openlocfilehash: 7551e2f3f1efc90913981feb674f48aadb9ace51
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 091d4e173bfb2eff8ffee2b5c30647f4d5e3bc04
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62255316"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80195367"
 ---
 # <a name="linker-tools-error-lnk1106"></a>Chyba linkerů LNK1106
 
-Neplatný soubor nebo plný disk: Nelze vyhledat umístění
+Neplatný soubor nebo disk je plný: nejde vyhledat umístění.
 
-Nástroj nelze číst nebo zapisovat do `location` v souboru mapovaných do paměti.
+Nástroj nemůže číst nebo zapisovat do `location` v souboru mapované paměti.
 
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Chcete-li vyřešit tak, že zkontrolujete následující možné příčiny
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Opravu provedete kontrolou následujících možných příčin.
 
 1. Disk je plný.
 
-   Uvolněte místo na disku a znovu propojit.
+   Uvolněte místo a znovu propojte.
 
-1. Chcete propojit přes síť.
+1. Probíhá pokus o připojení přes síť.
 
-   Některé sítě plně nepodporuje soubory mapované paměti používané linkeru. Zkuste propojení na místním disku.
+   Některé sítě plně nepodporují soubory mapované paměti používané linkerem. Zkuste propojit místní disk.
 
 1. Chybný blok na disku.
 
-   I když operační systém a hardware disku by měl mít tyto došlo k chybě, můžete chtít spustit program kontroly disku.
+   I když by se u operačního systému a disku zjistila taková chyba, možná budete chtít spustit program pro kontrolu disků.
 
 1. Nedostatek prostoru v haldě.
 
-   Zobrazit [C1060](../../error-messages/compiler-errors-1/fatal-error-c1060.md) Další informace.
+   Další informace najdete v tématu [C1060](../../error-messages/compiler-errors-1/fatal-error-c1060.md) .

@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - BK1512
 ms.assetid: 0a626ff3-63db-4797-abe4-31545ce2c2c1
-ms.openlocfilehash: 46a6a144e5820e243cf4bdeecf13f2b851b4bf75
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d3fed3d0de6a96f49df8bd8fdeed1c0148b1fe24
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62279370"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80197649"
 ---
 # <a name="bscmake-error-bk1512"></a>Chyba nástroje BSCMAKE BK1512
 
-Název souboru: kapacita je Překročená.
+název souboru: překročila se kapacita.
 
-BSCMAKE nemůže vytvořit soubor informací o procházení, protože překračuje limit počtu definic, odkazy, moduly nebo dalších informací.
+BSCMAKE nemůže vytvořit soubor s informacemi o procházení, protože počet definic, odkazů, modulů nebo jiných informací překračuje limit.
 
-### <a name="to-fix-by-using-the-following-possible-solutions"></a>Chcete-li vyřešit pomocí následujících možná řešení
+### <a name="to-fix-by-using-the-following-possible-solutions"></a>Oprava pomocí následujících možných řešení
 
-1. Vylučte některé informace pomocí /Em, /Es nebo /Ei.
+1. Vyloučení některých informací pomocí/em,/ES nebo/EI.
 
-1. Možnost /Iu vynechte.
+1. Vynechejte možnost/IU.

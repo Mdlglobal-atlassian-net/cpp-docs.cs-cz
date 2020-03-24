@@ -6,27 +6,27 @@ f1_keywords:
 helpviewer_keywords:
 - R6033
 ms.assetid: f9cffdc9-81bd-4a64-a698-02762cbd82c9
-ms.openlocfilehash: 39d8a20dacb0cdeb2a767529e9716bd476f406dc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 86ac98a2635975b811c7b50020e4d4782675ae4d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400003"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80197014"
 ---
 # <a name="c-runtime-error-r6033"></a>Chyba modulu C runtime R6033
 
-Pokus o použití kód jazyka MSIL z tohoto sestavení během inicializace nativního kódu. To znamená chybu ve vaší aplikaci. Pravděpodobně je výsledek volání jazyka MSIL kompilována (/ clr) funkce z nativní konstruktoru nebo funkce DllMain.
+Došlo k pokusu o použití kódu jazyka MSIL z tohoto sestavení při inicializaci nativního kódu. To označuje chybu ve vaší aplikaci. Je pravděpodobně výsledkem volání funkce zkompilovaného jazyka MSIL (/CLR) z nativního konstruktoru nebo z DllMain.
 
 > [!NOTE]
-> Pokud k této chybě dojde při spuštění aplikace, aplikace se vypnout, protože má vnitřní problém. Tato chyba může být způsobena chybu v aplikaci nebo chybu v add-in nebo rozšíření, které používá.
+> Pokud se zobrazí tato chybová zpráva při spuštění aplikace, aplikace byla vypnuta, protože došlo k vnitřnímu problému. Tato chyba může být způsobena chybou v aplikaci nebo chybou v doplňku nebo rozšíření, které používá.
 >
 > Zkuste chybu odstranit pomocí tohoto postupu:
 >
-> - Použití **aplikace a funkce** nebo **programy a funkce** stránku **ovládací panely** opravte nebo přeinstalujte program.
-> - Použití **aplikace a funkce** nebo **programy a funkce** stránku **ovládací panely** odebrat, opravte nebo přeinstalujte všechny přípony nebo doplňky.
-> - Zkontrolujte **Windows Update** v **ovládací panely** pro aktualizace softwaru.
-> - Vyhledat aktualizovanou verzi aplikace. Pokud se problém nevyřeší, obraťte se na dodavatele aplikace.
+> - K opravě nebo přeinstalaci programu použijte stránku **aplikace a funkce** nebo **programy a funkce** v **Ovládacích panelech** .
+> - Na stránce **aplikace a funkce** nebo **programy a funkce** v **Ovládacích panelech** můžete odebrat, opravit nebo přeinstalovat jakákoli rozšíření nebo doplňky.
+> - Ověřte **web Windows Update** v **Ovládacích panelech** pro aktualizace softwaru.
+> - Vyhledejte aktualizovanou verzi aplikace. Pokud potíže potrvají, obraťte se na dodavatele aplikace.
 
 **Informace pro programátory**
 
-Tato Diagnostika Určuje, že byly během zámek zavaděče spouštění instrukcí jazyka MSIL. Tato situace může nastat, pokud jste zkompilovali nativní kód C++ pomocí příznaku/CLR. Pouze pomocí příznaku/CLR na moduly, které obsahují spravovaného kódu. Další informace najdete v tématu [inicializace smíšených sestavení](../../dotnet/initialization-of-mixed-assemblies.md).
+Tato diagnostika indikuje, že instrukce jazyka MSIL byly spuštěny během zámku zavaděče. K této chybě může dojít, pokud jste C++ nakompilováni nativní pomocí příznaku/CLR. Pro moduly, které obsahují spravovaný kód, použijte pouze příznak/CLR. Další informace naleznete v tématu [inicializace smíšených sestavení](../../dotnet/initialization-of-mixed-assemblies.md).

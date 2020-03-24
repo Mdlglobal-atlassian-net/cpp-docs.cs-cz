@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - U1052
 ms.assetid: b19b3691-e60b-46bd-8822-8426740a9bc7
-ms.openlocfilehash: 58b4a7f8a87658db72048902230e6b4ec3e2eb18
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 34e047bf02c51cf226b29bf291aa8fe0e08f5ee4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395050"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80193547"
 ---
 # <a name="nmake-fatal-error-u1052"></a>Závažná chyba nástroje NMAKE U1052
 
-> Soubor '*filename*' nebyl nalezen
+> soubor*filename*se nenašel.
 
-NMAKE nelze nalézt zadaný soubor s jedním z následujících akcí:
+NMAKE nemůže najít zadaný soubor s jedním z následujících způsobů:
 
-- **/F** možnost
+- **/F** – možnost
 
-- **! ZAHRNOUT** direktiva předzpracování
+- **! ZAHRNUTÍ** direktivy předzpracování
 
-- Zavináč (**\@**) specifikátor pro soubor odpovědí
+- Specifikátor na znaménko ( **\@** ) pro soubor odezvy
 
-Zkontrolujte, zda soubor existuje a název souboru je napsán správně.
+Ověřte, zda soubor existuje a zda je název souboru zadán správně.

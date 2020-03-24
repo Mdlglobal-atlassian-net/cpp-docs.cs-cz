@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C3251
 ms.assetid: 541c163e-5ee9-457c-a1e5-da860788b10d
-ms.openlocfilehash: 1340efb50b492a7f0d9fdf159b20f5e12bf112a8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 52f7766601a06385577a0093883b85d9432d1a89
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62382343"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80201471"
 ---
 # <a name="compiler-error-c3251"></a>Chyba kompilátoru C3251
 
-Nelze vyvolat metodu základní třídy na instanci hodnotového typu.
+nejde vyvolat metodu základní třídy pro instanci typu hodnoty.
 
-Vzhledem k tomu dojde k následující chybě `GetClass` je členem skupiny `Microsoft.Runtime.Object`, ne `Microsoft.Runtime.Integer4`.
+K následující chybě dochází, protože `GetClass` je členem `Microsoft.Runtime.Object`, nikoli `Microsoft.Runtime.Integer4`.

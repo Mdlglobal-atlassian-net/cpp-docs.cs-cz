@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - U1078
 ms.assetid: 24087955-9362-4ddf-9966-e0de43ea4647
-ms.openlocfilehash: cfccb9139fc1081a2651c2f54381517dce765ca8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d1529e98f851accee071f4f233cc9bf518c70324
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62366885"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80193651"
 ---
 # <a name="nmake-fatal-error-u1078"></a>Závažná chyba nástroje NMAKE U1078
 
-přetečení konstanty na pozici "výraz"
+přetečení konstanty ve výrazu
 
-Tento výraz obsažená je konstanta, která překročila rozsah - 2 147 483 648 do 2 147 483 647. Konstanta se objevil v jednom z následujících situací:
+Daný výraz obsahoval konstantu, která překročila rozsah-2 147 483 648 až 2 147 483 647. Konstanta se objevila v jedné z následujících situací:
 
-- Výraz zadaný direktiva předzpracování
+- Výraz zadaný pomocí direktivy předzpracování
 
-- Úrovně chyby zadaným pomlčku (**-**) příkaz modifikátor
+- Úroveň chyby zadaná s modifikátorem příkazu pomlčkou ( **-** )

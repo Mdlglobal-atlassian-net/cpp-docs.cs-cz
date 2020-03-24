@@ -9,18 +9,18 @@ helpviewer_keywords:
 - VARIANT object [C++], ChangeType
 - VARIANT object
 ms.assetid: 829d2eeb-3338-4a88-9dce-0ca145f47aac
-ms.openlocfilehash: 319c4fde808932e86021ee59b051261c43ca2edd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b0692c9befaa6b7e787ada624dcbb56b074c9f9d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62166201"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80160460"
 ---
-# <a name="varianttchangetype"></a>_variant_t::ChangeType
+# <a name="_variant_tchangetype"></a>_variant_t::ChangeType
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
-Typ se změní `_variant_t` objekt označený `VARTYPE`.
+Změní typ objektu `_variant_t` na uvedený `VARTYPE`.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,18 +33,18 @@ void ChangeType(
 
 #### <a name="parameters"></a>Parametry
 
-*vartype*<br/>
-`VARTYPE` To `_variant_t` objektu.
+*VARTYPE*<br/>
+`VARTYPE` pro tento objekt `_variant_t`
 
 *pSrc*<br/>
-Ukazatel na objekt `_variant_t`, který má být převeden. Pokud je tato hodnota NULL, převod se provádí na místě.
+Ukazatel na objekt `_variant_t`, který má být převeden. Pokud je tato hodnota NULL, převod je proveden na místě.
 
 ## <a name="remarks"></a>Poznámky
 
-Tato členská funkce převede `_variant_t` na zadaný objekt `VARTYPE`. Pokud *pSrc* má hodnotu NULL, převod se provede na místě, jinak to `_variant_t` objekt zkopírován z *pSrc* a poté převeden.
+Tato členská funkce převede objekt `_variant_t` na uvedený `VARTYPE`. Pokud má *pSrc* hodnotu null, provede se převod na místě, jinak se tento objekt `_variant_t` zkopíruje z *pSrc* a pak se převede.
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [_variant_t – třída](../cpp/variant-t-class.md)

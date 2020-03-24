@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - U1097
 ms.assetid: dc6868b3-8425-4920-858a-774ad0c4c5f1
-ms.openlocfilehash: 52339a00511c8d41270fff8c9ca532ac193d8df9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0f42d63ada85c2f27fc9681e6168c9f80e7f96cb
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62298323"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80193404"
 ---
 # <a name="nmake-fatal-error-u1097"></a>Závažná chyba nástroje NMAKE U1097
 
-Syntaxe částí názvu souboru vyžaduje závislou položku.
+Syntaxe částí názvu souboru vyžaduje závislou vlastnost.
 
-Aktuální závislostí nemá závislé na explicitní nebo implicitní závislé. Syntaxe částí názvu souboru, který používá procento (`%`) specifikátor, představuje komponenty první závislé na aktuálním cíli.
+Aktuální závislost neobsahuje explicitní závislou funkci ani implicitní závislou položku. Syntaxe částí názvu souboru, která používá specifikátor Percent (`%`), představuje komponenty první závislosti aktuálního cíle.

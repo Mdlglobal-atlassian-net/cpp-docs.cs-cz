@@ -6,12 +6,12 @@ helpviewer_keywords:
 - L-values [C++]
 - conversions, standard
 ms.assetid: ce7ac8d3-5c99-4674-8229-0672de05528d
-ms.openlocfilehash: c51a5ea5aaabb27babb9e4cd355721742088d31e
-ms.sourcegitcommit: c51b2c665849479fa995bc3323a22ebe79d9d7ce
+ms.openlocfilehash: 41ad348b7109451f519c44f685cea0a271f71925
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71998895"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80161007"
 ---
 # <a name="standard-conversions"></a>Standardní převody
 
@@ -147,7 +147,7 @@ Mnoho binárních operátorů (popsaných v tématu [výrazy s binárními oper�
 
 ### <a name="conditions-for-type-conversion"></a>Podmínky pro převod typu
 
-|Splněné podmínky|Konverze|
+|Splněné podmínky|Převod|
 |--------------------|----------------|
 |Buď je operand typu **Long Double**.|Další operand je převeden na typ **Long Double**.|
 |Předchozí podmínka není splněna a jeden operand je typu **Double**.|Další operand je převeden na typ **Double**.|
@@ -189,21 +189,21 @@ První případ je v případě, že je zadaná základní třída přístupná 
 
 Zda je základní třída přístupná, závisí na druhu dědičnosti použitých v odvození. Zvažte dědění na následujícím obrázku.
 
-![Graf dědičnosti znázorňující&#45;]přístupnost základní třídy(../cpp/media/vc38xa1.gif "zobrazení grafu dědičnosti základní&#45;třídy") <br/>
+![Graf dědičnosti zobrazující&#45;přístupnost základní třídy](../cpp/media/vc38xa1.gif "Graf dědičnosti zobrazující&#45;přístupnost základní třídy") <br/>
 Graf dědičnosti pro ilustraci usnadnění základní třídy
 
 Následující tabulka ukazuje přístupnost základní třídy pro situaci, která je znázorněna na obrázku.
 
 |Typ funkce|Odvození|Převod z<br /><br /> B * do\* legální?|
 |----------------------|----------------|-------------------------------------------|
-|Externí funkce (není v oboru tříd)|Soukromé|Ne|
-||chráněný|Ne|
+|Externí funkce (není v oboru tříd)|Privátní|Ne|
+||Chráněno|Ne|
 ||Public|Ano|
-|B – členská funkce (v oboru B)|Soukromé|Ano|
-||chráněný|Ano|
+|B – členská funkce (v oboru B)|Privátní|Ano|
+||Chráněno|Ano|
 ||Public|Ano|
-|Členská funkce jazyka c (v oboru C)|Soukromé|Ne|
-||chráněný|Ano|
+|Členská funkce jazyka c (v oboru C)|Privátní|Ne|
+||Chráněno|Ano|
 ||Public|Ano|
 
 Druhý případ, ve kterém může být ukazatel na třídu převeden na ukazatel na základní třídu, je při použití explicitní konverze typu. Další informace o explicitních převodech typů naleznete v tématu [operátor převodu explicitního typu](explicit-type-conversion-operator-parens.md).
@@ -327,6 +327,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [C++Referenční dokumentace jazyka](../cpp/cpp-language-reference.md)

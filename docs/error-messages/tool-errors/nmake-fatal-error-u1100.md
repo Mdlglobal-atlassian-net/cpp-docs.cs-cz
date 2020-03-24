@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - U1100
 ms.assetid: c71910a7-c581-4d9c-a38c-d2d557d56289
-ms.openlocfilehash: a1474acab4ca4929fb4db4b7b78d7a96637a0745
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d5c62c1465bbb6463afbac2bc9ad5f4290473471
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62298279"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80193261"
 ---
 # <a name="nmake-fatal-error-u1100"></a>Závažná chyba nástroje NMAKE U1100
 
-makra "makro" je neplatný v kontextu pravidla dávky "pravidlo.
+makro ' název_makra ' je v kontextu pravidla dávky ' Rule ' neplatné.
 
-NMAKE vygeneruje tuto chybu, pokud blok příkazu pravidla dávkového režimu přímo nebo nepřímo odkazuje makro zvláštní soubor, který není $<.
+NMAKE vygeneruje tuto chybu, pokud blok příkazu pravidla dávkového režimu přímo nebo nepřímo odkazuje na speciální makro souboru, které není $ <.
 
-$< je jediným povoleným názvem makra pro pravidla dávkového režimu.
+$ < je jediné povolené makro pro pravidla dávkového režimu.

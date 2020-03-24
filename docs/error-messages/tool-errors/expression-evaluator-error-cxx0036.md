@@ -7,35 +7,35 @@ helpviewer_keywords:
 - CXX0036
 - CAN0036
 ms.assetid: 383404be-df5b-4eec-b113-df21bb5d269d
-ms.openlocfilehash: d7961d92760cc5ac325b4bc9f187d4ee2298479a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 164fd9ee00071e218e5bb4f3ab00febc618725a7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397026"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80195497"
 ---
 # <a name="expression-evaluator-error-cxx0036"></a>Chyba při vyhodnocování výrazu CXX0036
 
-špatný kontext {...} specifikace
+Chybný kontext {...} specifikace
 
-Tato zpráva se může objevit některou z několika chyb používá operátor kontextu (**{}**).
+Tato zpráva může být generována některou z několika chyb v použití operátoru kontextu ( **{}** ).
 
-- Syntaxe operátor kontextu (**{}**) byl nesprávně zadán.
+- Syntaxe operátoru kontextu ( **{}** ) byla nesprávně zadána.
 
-   Syntaxe operátor kontextu je následující:
+   Syntaxe operátoru kontextu je:
 
-     {*funkce*,*modulu*,*dll*}*výraz*
+     {*Function*,*Module*,*DLL*} *výraz*
 
-   Určuje kontext *výraz*. Operátor kontextu má stejnou prioritu a použití jako přetypování.
+   Určuje kontext *výrazu*. Operátor kontextu má stejnou prioritu a využití jako přetypování typu.
 
-   Na konci čárky lze vynechat. Pokud je libovolná z *funkce*, *modulu*, nebo *dll* obsahuje čárku literálu celý název je nutné uzavřít do závorek.
+   Koncové čárky lze vynechat. Pokud některá z *funkcí*, *modulů*nebo *knihoven DLL* obsahuje literální čárku, musíte uzavřít celý název do závorek.
 
-- Název funkce napsaný správně nebo neexistuje v zadaném modulu nebo knihovny DLL.
+- Název funkce byl nesprávně zadán nebo neexistuje v zadaném modulu nebo v knihovně DLL.
 
-   Protože je velká a malá písmena jazyka C *funkce* musí být uvedené v rozlišovat velikost písmen, jak jsou definovány ve zdroji.
+   Vzhledem k tomu, že C je jazyk citlivý na velká a malá písmena, musí být *funkce* uvedena v přesném případě, jak je definována ve zdroji.
 
-- Modul nebo knihovny DLL se nenašel.
+- Modul nebo knihovna DLL se nepodařilo najít.
 
-   Zkontrolujte úplný název cesty zadaném modulu nebo knihovny DLL.
+   Zkontroluje úplný název cesty zadaného modulu nebo knihovny DLL.
 
-Tato chyba se shoduje s CAN0036.
+Tato chyba je shodná s CAN0036.

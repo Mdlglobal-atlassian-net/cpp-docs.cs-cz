@@ -7,23 +7,23 @@ helpviewer_keywords:
 - CAN0033
 - CXX0033
 ms.assetid: 0bd62c5b-de89-481f-9b12-88fe84805afe
-ms.openlocfilehash: 8563eb2fbc24c6ad8db639d2e227802412a16090
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2916808d98f1fabc2157fbedc96d76e196661279
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397052"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80195510"
 ---
 # <a name="expression-evaluator-error-cxx0033"></a>Chyba při vyhodnocování výrazu CXX0033
 
-Chyba v omf – informace o typu
+Chyba v informacích o typu OMF
 
-Spustitelný soubor nemá formát modulu platný objekt (omf –) pro ladění.
+Spustitelný soubor neměl pro ladění platný formát modulu objektů (OMF).
 
-Tato chyba se shoduje s CAN0033.
+Tato chyba je shodná s CAN0033.
 
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Chcete-li vyřešit tak, že zkontrolujete následující možné příčiny
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Opravu provedete kontrolou následujících možných příčin.
 
-1. Spustitelný soubor nebyl vytvořen pomocí linkeru vydané s touto verzí sady Visual C++. Znovu propojit objektový kód v aktuální verzi LINK.exe.
+1. Spustitelný soubor nebyl vytvořen pomocí linkeru, který byl vydán v této verzi vizuálu C++. Znovu propojte kód objektu pomocí aktuální verze souboru LINK. exe.
 
-1. Tento soubor .exe je poškozený. Znovu zkompilovat a znovu propojit do programu.
+1. Soubor. exe byl pravděpodobně poškozen. Zkompilujte program znovu a znovu propojte.

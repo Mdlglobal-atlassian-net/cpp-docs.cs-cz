@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1296
 ms.assetid: f94a3d18-5411-456b-966f-89810fdcfe60
-ms.openlocfilehash: 072ebee25f112ac0bcc6f795e86f4eb5099fdc2f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7fada5a0372703d12f4f53617533ccaa047b7ff7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160598"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80194951"
 ---
 # <a name="linker-tools-error-lnk1296"></a>Chyba linkerů LNK1296
 
-nepovedlo se načíst název souboru
+Nepovedlo se načíst název souboru.
 
-Zadanou knihovnu DLL nebylo k dispozici.
+Daná knihovna DLL nebyla k dispozici.
 
-Je to možné umístění pro knihovnu DLL jsou aktuální adresář, systémový adresář, adresáři Windows a adresáře určené v proměnné prostředí PATH.
+Možná umístění pro knihovnu DLL jsou aktuální adresář, systémový adresář, adresář systému Windows a adresáře zadané v proměnné prostředí PATH.

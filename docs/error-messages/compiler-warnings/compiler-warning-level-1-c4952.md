@@ -1,24 +1,24 @@
 ---
-title: Kompilátor upozornění (úroveň 1) C4952
+title: Upozornění kompilátoru (úroveň 1) C4952
 ms.date: 08/27/2018
 f1_keywords:
 - C4952
 helpviewer_keywords:
 - C4952
 ms.assetid: 593324f0-5cfe-42fb-b221-2f71308765dd
-ms.openlocfilehash: c2e9b88125655d9ea0abe3e65500b149289ba83b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 560705edeb0bbdd6be760736a8d4a19d914133d2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393282"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80174567"
 ---
-# <a name="compiler-warning-level-1-c4952"></a>Kompilátor upozornění (úroveň 1) C4952
+# <a name="compiler-warning-level-1-c4952"></a>Upozornění kompilátoru (úroveň 1) C4952
 
-> "*funkce*': nenašla se žádná data profilu v databázi programu"*pgd_file*.
+> '*Function*': v databázi programu '*pgd_file*' nebyla nalezena žádná data profilu
 
-Při použití [/LTCG:PGUPDATE](../../build/reference/ltcg-link-time-code-generation.md), kompilátor zjistil vstupní modul, který byl znovu zkompilovat po `/LTCG:PGINSTRUMENT` a obsahuje novou funkci (*funkce*) k dispozici.
+Při použití [/LTCG: PGUPDATE](../../build/reference/ltcg-link-time-code-generation.md)Kompilátor zjistil vstupní modul, který byl znovu zkompilován po `/LTCG:PGINSTRUMENT` a má k dispozici novou funkci (*Function*).
 
-Toto upozornění je informační. Pokud chcete vyřešit toto upozornění, spusťte `/LTCG:PGINSTRUMENT`, znovu všech testů běží a spusťte `/LTCG:PGOPTIMIZE`.
+Toto upozornění je informativní. Chcete-li vyřešit toto upozornění, spusťte `/LTCG:PGINSTRUMENT`, znovu proveďte všechny testovací běhy a spusťte `/LTCG:PGOPTIMIZE`.
 
-Toto upozornění by měl být nahrazen chybu, pokud `/LTCG:PGOPTIMIZE` nepoužilo.
+Toto upozornění by bylo nahrazeno chybou, pokud byla `/LTCG:PGOPTIMIZE` použita.

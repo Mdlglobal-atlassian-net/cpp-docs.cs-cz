@@ -7,17 +7,17 @@ helpviewer_keywords:
 - CXX0009
 - CAN0009
 ms.assetid: b6f26a46-56f3-430f-a6db-b42934ddf331
-ms.openlocfilehash: 761bc5562802a6834f3a2953b6361009f0635dbb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9fb325b317b92c1d6420aba42f1fc033549723d6
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406038"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80196184"
 ---
 # <a name="expression-evaluator-error-cxx0009"></a>Chyba při vyhodnocování výrazu CXX0009
 
-Chybí "po Znaková konstanta
+chybějící znak po konstantě
 
-Jednoduché uvozovky na konci Znaková konstanta je očekáván nebyl nalezen. Znovu zadejte výraz uzavření Znaková konstanta do jednoduchých uvozovek.
+Na konci znakové konstanty chyběla jediná uvozovka. Znovu zadejte výraz, ohraničující znaková konstanta v jednoduchých uvozovkách.
 
-Tato chyba se shoduje s CAN0009.
+Tato chyba je shodná s CAN0009.

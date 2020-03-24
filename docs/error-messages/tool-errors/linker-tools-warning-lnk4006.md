@@ -6,29 +6,29 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4006
 ms.assetid: 3a637d17-1676-4ea6-bd8b-290137d28d3b
-ms.openlocfilehash: c81c93a6df8c7eef809f243e3dc56164ea548371
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d949ba259de8e131f6191e757119b4c42effc3d4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62187138"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80194314"
 ---
 # <a name="linker-tools-warning-lnk4006"></a>Upozornění linkerů LNK4006
 
 symbol už je definovaný v objektu. Druhá definice se ignoruje.
 
-Dané `symbol`, zobrazí v upravené podobě, byl definován vícekrát. Když je zjištěna toto upozornění, `symbol` dvakrát se přidají, ale použije se jenom jeho první formulář.
+Zadaný `symbol`, zobrazený v jeho upraveném formuláři, byl definován pro násobení. Když se objeví toto upozornění, `symbol` se přidá dvakrát, ale použije se jenom první formulář.
 
-Toto upozornění můžete získat, při pokusu sloučit do větve dvě knihovny importu.
+Toto upozornění můžete zobrazit, pokud se pokusíte sloučit dva knihovny importu do jednoho.
 
-Pokud bude probíhat opětovné sestavení knihovny run-time jazyka C, můžete tuto zprávu ignorovat.
+Při opětovném sestavování knihovny run-time jazyka C můžete tuto zprávu ignorovat.
 
-### <a name="to-fix-by-using-the-following-possible-solutions"></a>Chcete-li vyřešit pomocí následujících možná řešení
+### <a name="to-fix-by-using-the-following-possible-solutions"></a>Oprava pomocí následujících možných řešení
 
-1. Dané `symbol` může být zabalené funkce, vytvořené kompilací s [/Gy](../../build/reference/gy-enable-function-level-linking.md). Tento symbol je zahrnutý ve více než jeden soubor, ale byl změněn mezi kompilacemi. Znovu zkompilovat všechny soubory, které zahrnují `symbol`.
+1. Daný `symbol` může být zabalená funkce vytvořená kompilací s [/Gy](../../build/reference/gy-enable-function-level-linking.md). Tento symbol byl zahrnut ve více než jednom souboru, ale byl změněn mezi kompilacemi. Překompilujte všechny soubory, které obsahují `symbol`.
 
-1. Dané `symbol` může byly definovány rozdílně v dva členské objekty v jiných knihovnách.
+1. Daná `symbol` mohla být definována jinak ve dvou členských objektech v různých knihovnách.
 
-1. Absolutní je pravděpodobně definována dvakrát, s jinou hodnotou v každé definici.
+1. Absolutní hodnota mohla být definována dvakrát s jinou hodnotou v každé definici.
 
-1. Pokud chybová zpráva při kombinování knihovny, `symbol` již existuje v knihovně se přidávají do.
+1. Pokud je chybová zpráva přijata při kombinování knihoven, `symbol` již v knihovně, do které se přidávají, existuje.

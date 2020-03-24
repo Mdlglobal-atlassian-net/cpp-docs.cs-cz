@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1223
 ms.assetid: c4728c36-daee-462f-a1c7-8733dcdec88e
-ms.openlocfilehash: 331521c357389c2f7c1aa786969154a2b747ffe5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9c9d4c7224a7e65775354a86bd34fa9ea1b074af
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62242822"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80195029"
 ---
 # <a name="linker-tools-error-lnk1223"></a>Chyba linkerů LNK1223
 
-soubor je neplatný nebo poškozený: soubor obsahuje neplatný .pdata příspěvky
+soubor je neplatný nebo poškozený: soubor obsahuje neplatné. pdata příspěvky
 
-Pro RISC platformy, které používají pdata tato chyba nastane, pokud kompilátor generované .pdata oddílu s seřazená položky.
+V případě platforem RISC, které používají PDATA, k této chybě dojde, pokud kompilátor vygeneroval oddíl. pdata s neseřazenými položkami.
 
-Chcete-li vyřešit tento problém, pokuste se zkompilovat bez [/GL (optimalizace celého programu)](../../error-messages/tool-errors/linker-tools-error-lnk1223.md) povolena. Prázdných těl funkcí může také v některých případech způsobit k této chybě.
+Chcete-li tento problém vyřešit, zkuste kompilovat bez [/GL (celková optimalizace programu)](../../error-messages/tool-errors/linker-tools-error-lnk1223.md) , která je povolena. V některých případech může tato chyba způsobovat i prázdné tělo funkce.

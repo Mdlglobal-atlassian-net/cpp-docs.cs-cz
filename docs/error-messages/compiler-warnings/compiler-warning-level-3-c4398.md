@@ -1,29 +1,29 @@
 ---
-title: Kompilátor upozornění (úroveň 3) C4398
+title: Upozornění kompilátoru (úroveň 3) C4398
 ms.date: 11/04/2016
 f1_keywords:
 - C4398
 helpviewer_keywords:
 - C4398
 ms.assetid: b6221432-9fed-4272-a547-a73f587904e6
-ms.openlocfilehash: 4126a1267b41cdf9c0161c7e85a9057b2a301d77
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 041bf9f6bfce17b16f301604bb8706be30095c13
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401966"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80198663"
 ---
-# <a name="compiler-warning-level-3-c4398"></a>Kompilátor upozornění (úroveň 3) C4398
+# <a name="compiler-warning-level-3-c4398"></a>Upozornění kompilátoru (úroveň 3) C4398
 
-> "*proměnnou*': globální objekt na úrovni jednotlivého procesu nemusí fungovat správně s více objektů třídy appdomains; zvažte použití možnosti __declspec(appdomain)
+> '*Variable*': globální objekt na úrovni procesu nemusí fungovat správně s několika doménami AppDomains; Zvažte použití __declspec (AppDomain)
 
 ## <a name="remarks"></a>Poznámky
 
-Virtuální funkce s [__clrcall](../../cpp/clrcall.md) konvence volání v nativním typu způsobí vytvoření za vtable domény aplikace. Tato proměnná nemusí opravte správně při použití ve více doménách aplikace.
+Virtuální funkce s konvencí volání [__clrcall](../../cpp/clrcall.md) v nativním typu způsobí vytvoření domény vtable pro doménu aplikace. Tato proměnná se nemusí správně opravovat při použití ve více doménách aplikace.
 
-Toto upozornění můžete vyřešit explicitní označení proměnné `__declspec(appdomain)`. Ve verzích sady Visual Studio před Visual Studio 2017, můžete vyřešit tato upozornění kompilace s **/CLR: pure**, který představuje globální proměnné na doménu aplikace ve výchozím nastavení. **/CLR: pure** – možnost kompilátoru je zastaralé v sadě Visual Studio 2015 a není podporována v sadě Visual Studio 2017.
+Toto upozornění můžete vyřešit explicitním označením `__declspec(appdomain)`proměnné. Ve verzích sady Visual Studio před sadou Visual Studio 2017 můžete vyřešit toto upozornění kompilací s možností **/clr: Pure**, která ve výchozím nastavení zpřístupňuje globální proměnné pro aplikaci AppDomain. Možnost **/clr: Pure** Compiler je v aplikaci visual Studio 2015 zastaralá a není podporovaná v rámci sady visual Studio 2017.
 
-Další informace najdete v tématu [appdomain](../../cpp/appdomain.md) a [aplikačních doménách a Visual C++](../../dotnet/application-domains-and-visual-cpp.md).
+Další informace naleznete v tématu [AppDomain](../../cpp/appdomain.md) a [domény aplikace a Visual C++ ](../../dotnet/application-domains-and-visual-cpp.md).
 
 ## <a name="example"></a>Příklad
 
