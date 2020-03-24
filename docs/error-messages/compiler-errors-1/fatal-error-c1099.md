@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C1099
 ms.assetid: c050b074-a06a-4026-9e10-569029cc0739
-ms.openlocfilehash: 673a54f705a8ff46ad94167a4458ab538df69c88
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 630e6212e38c63d1cbc54b063c5557970952cb22
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387003"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80203837"
 ---
 # <a name="fatal-error-c1099"></a>Závažná chyba C1099
 
-Upravit a pokračovat ukončující kompilace modulu
+Ukončovací kompilace modulu upravit a pokračovat
 
-Upravit a pokračovat načíst soubor předkompilované hlavičky v rámci přípravy pro kompilaci změn kódu, ale následné akce (například změn kódu před předkompilované hlavičky `#include` příkazu nebo při zastavení ladicího programu) nemůže upravit a pokračovat z dokončení proveďte kompilaci s tímto procesem. Není nutné provádět žádnou akci, chcete-li vyřešit tuto chybu.
+Upravit a pokračovat načíst soubor předkompilované hlavičky v přípravě pro zkompilování změn kódu, ale následné akce (například změny kódu před předkompilovaným hlavičkou `#include` příkaz nebo zastavení ladicího programu) zabraňují úpravám a pokračování v dokončení kompilace s tímto procesem. K opravě této chyby není nutné provádět žádnou akci.

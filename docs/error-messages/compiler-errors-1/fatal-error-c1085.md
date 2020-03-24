@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - C1085
 ms.assetid: f2766365-d09b-4299-8a98-12e5aca98568
-ms.openlocfilehash: d3060d01beb7ce8fda3890186b1a891fb33e1021
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e9b6cc63894607de94c8da455754f98937e92677
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62208769"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80204058"
 ---
 # <a name="fatal-error-c1085"></a>Závažná chyba C1085
 
-Nelze zapsat soubor filetype: 'file': zpráva
+Nejde zapisovat do souboru typ_souboru: File: Message.
 
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Chcete-li vyřešit tak, že zkontrolujete následující možné příčiny
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Opravu provedete kontrolou následujících možných příčin.
 
-1. Jednotka je jen pro čtení.
+1. Jednotka je určena jen pro čtení.
 
-1. Disk je plný.
+1. Jednotka je plná.
 
 1. Narušení sdílení.
 
-1. Pokud zpráva "Chybné číslo souboru", soubor může mít byla zavření v popředí při kompilaci na pozadí.
+1. Pokud se zobrazí zpráva "chybné číslo souboru", soubor mohl být při kompilování na pozadí při kompilaci v popředí uzavřen.

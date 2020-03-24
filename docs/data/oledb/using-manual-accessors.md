@@ -6,45 +6,45 @@ helpviewer_keywords:
 - manual accessors
 - accessors [C++], manual
 ms.assetid: 29f00a89-0240-482b-8413-4120b9644672
-ms.openlocfilehash: 4a7e2dcde20cdb06a2f4e708149e24ee7144597c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a6c0e5236702229a61a828344ba5d0d288898aee
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62311992"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209323"
 ---
 # <a name="using-manual-accessors"></a>Použití ručních přístupových objektů
 
-Existují čtyři kroky, které při zpracování Neznámý příkaz:
+Při zpracování neznámého příkazu je třeba provést čtyři věci:
 
-- Určuje parametry
+- Určení parametrů
 
-- Spusťte příkaz
+- Provedení příkazu
 
-- Určení výstupní sloupce
+- Určení výstupních sloupců
 
-- Zkontrolujte, jestli více vrácení sad řádků
+- Podívejte se, jestli existují vícenásobné návratové sady řádků.
 
-Chcete-li to všechno s šablony příjemce technologie OLE DB, použijte `CManualAccessor` třídy a postupujte podle těchto kroků:
+Chcete-li provést tyto akce pomocí OLE DBch zákaznických šablon, použijte třídu `CManualAccessor` a postupujte podle těchto kroků:
 
-1. Otevřít `CCommand` objekt s `CManualAccessor` jako parametr šablony.
+1. Otevřete `CCommand` objekt `CManualAccessor` jako parametr šablony.
 
     ```cpp
     CCommand<CManualAccessor, CRowset, CMultipleResults> rs;
     ```
 
-1. Dotaz na relaci `IDBSchemaRowset` rozhraní a používat parametry procedury sady řádků. Pokud `IDBSchemaRowset` rozhraní není k dispozici, dotázat `ICommandWithParameters` rozhraní. Volání `GetParameterInfo` informace. Pokud je k dispozici žádná rozhraní, můžete předpokládat, že neexistují žádné parametry.
+1. Zadejte dotaz na relaci rozhraní `IDBSchemaRowset` a použijte sadu řádků parametrů procedury. Pokud `IDBSchemaRowset` rozhraní není k dispozici, dotaz na rozhraní `ICommandWithParameters`. Pro informace zavolejte `GetParameterInfo`. Pokud není k dispozici žádné rozhraní, můžete předpokládat, že neexistují žádné parametry.
 
-1. Pro každý parametr volání `AddParameterEntry` přidat parametry a jejich nastavení.
+1. Pro každý parametr zavolejte `AddParameterEntry` pro přidání parametrů a jejich nastavení.
 
-1. Otevřít v sadě řádků, ale nastavit vazbu parametru **false**.
+1. Otevřete sadu řádků, ale nastavte parametr vazby na **hodnotu false**.
 
-1. Volání `GetColumnInfo` načíst výstupní sloupce. Použití `AddBindEntry` Přidat výstupní sloupec do vazby.
+1. Voláním `GetColumnInfo` načtěte výstupní sloupce. K přidání výstupního sloupce do vazby použijte `AddBindEntry`.
 
-1. Volání `GetNextResult` k určení, zda jsou k dispozici více sad řádků. Opakujte kroky 2 až 5.
+1. Zavolejte `GetNextResult` k určení, zda jsou k dispozici více sad řádků. Opakujte kroky 2 až 5.
 
-Příklad ruční přistupujícího objektu, najdete v části `CDBListView::CallProcedure` v [DBVIEWER](https://github.com/Microsoft/VCSamples) vzorku.
+Příklad ručního přístupového objektu naleznete v tématu `CDBListView::CallProcedure` v ukázce [DBVIEWER](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Consumer) .
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Použití přístupových objektů](../../data/oledb/using-accessors.md)

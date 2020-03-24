@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - licensed attribute
 ms.assetid: 09cf3b4a-d3f2-43e3-9180-d420333b23bf
-ms.openlocfilehash: 0c637f9e3f6d99b9f197474f49a1a9843744f38b
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 49585a697c7880da27357ebcafce9c5cefd89fd2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514450"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214757"
 ---
 # <a name="licensed"></a>licensed
 
-Označuje, že objekt COM, na který se vztahuje, je licencován a musí se vytvořit instance `IClassFactory2`pomocí.
+Označuje, že objekt COM, na který se vztahuje, je licencovaný a musí se vytvořit instance pomocí `IClassFactory2`.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -61,7 +61,7 @@ public:
 
 Další informace naleznete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [IDL – atributy](idl-attributes.md)<br/>
 [Atributy třídy](class-attributes.md)

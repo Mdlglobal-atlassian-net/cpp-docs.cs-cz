@@ -34,12 +34,12 @@ helpviewer_keywords:
 - m_dwRef
 - m_iRowset
 ms.assetid: 06d9621d-60cc-4508-8b0c-528d1b1a809b
-ms.openlocfilehash: 00d8164425ada573020971f66312b2282cc72c45
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 2b08e0e8f3b5b43f79019c70e3fe32ae9064dee9
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79441137"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211117"
 ---
 # <a name="csimplerow-class"></a>CSimpleRow – třída
 
@@ -77,7 +77,7 @@ class CSimpleRow
 
 Popisovač řádku je logicky jedinečný tag pro řádek výsledku. `IRowsetImpl` vytvoří nový `CSimpleRow` pro každý řádek požadovaný v [IRowsetImpl:: GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md). `CSimpleRow` lze také nahradit vlastní implementací popisovače řádku, protože se jedná o výchozí argument šablony pro `IRowsetImpl`. Jediným požadavkem nahrazení této třídy je, aby třída nahrazení poskytovala konstruktor, který přijímá jeden parametr typu **Long**.
 
-## <a name="addrefrow"></a>CSimpleRow:: AddRefRow
+## <a name="csimplerowaddrefrow"></a><a name="addrefrow"></a>CSimpleRow:: AddRefRow
 
 Přidá počet odkazů na existující popisovač řádku způsobem bezpečným pro přístup z více vláken.
 
@@ -87,7 +87,7 @@ Přidá počet odkazů na existující popisovač řádku způsobem bezpečným 
 DWORD AddRefRow();
 ```
 
-## <a name="compare"></a>CSimpleRow:: Compare
+## <a name="csimplerowcompare"></a><a name="compare"></a>CSimpleRow:: Compare
 
 Porovná dva řádky a zjistí, zda odkazují na stejnou instanci řádku.
 
@@ -106,7 +106,7 @@ Ukazatel na objekt `CSimpleRow`.
 
 Hodnota HRESULT, obvykle S_OK, což znamená, že dva řádky jsou stejné jako instance řádku nebo S_FALSE, což značí, že se dva řádky liší. Další možné návratové hodnoty naleznete v tématu [IRowsetIdentity:: IsSameRow](/previous-versions/windows/desktop/ms719629(v=vs.85)) v *referenci programátora OLE DB* .
 
-## <a name="csimplerow"></a>CSimpleRow:: CSimpleRow
+## <a name="csimplerowcsimplerow"></a><a name="csimplerow"></a>CSimpleRow:: CSimpleRow
 
 Konstruktor
 
@@ -125,7 +125,7 @@ pro Index na aktuální sadu řádků.
 
 Nastaví [m_iRowset](../../data/oledb/csimplerow-m-irowset.md) na *iRowsetCur*.
 
-## <a name="releaserow"></a>CSimpleRow:: ReleaseRow
+## <a name="csimplerowreleaserow"></a><a name="releaserow"></a>CSimpleRow:: ReleaseRow
 
 Uvolní řádky způsobem bezpečným pro přístup z více vláken.
 
@@ -135,7 +135,7 @@ Uvolní řádky způsobem bezpečným pro přístup z více vláken.
 DWORD ReleaseRow();
 ```
 
-## <a name="dwref"></a>CSimpleRow:: m_dwRef
+## <a name="csimplerowm_dwref"></a><a name="dwref"></a>CSimpleRow:: m_dwRef
 
 Počet odkazů na existující popisovač řádku
 
@@ -145,7 +145,7 @@ Počet odkazů na existující popisovač řádku
 DWORD m_dwRef;
 ```
 
-## <a name="irowset"></a>CSimpleRow:: m_iRowset
+## <a name="csimplerowm_irowset"></a><a name="irowset"></a>CSimpleRow:: m_iRowset
 
 Index sady řádků reprezentující kurzor
 

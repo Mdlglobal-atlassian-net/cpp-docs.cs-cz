@@ -38,12 +38,12 @@ helpviewer_keywords:
 - m_dwStatus
 - m_pCUtlPropInfo
 ms.assetid: e4182f81-0443-44f5-a0d3-e7e075d6f883
-ms.openlocfilehash: 1fc60db6db341d0667e24a81ae0f1394f54497ff
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: ff74ae93f01c7e8588a0eff1f48d3f6f0e6d5e81
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447370"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210766"
 ---
 # <a name="idbinitializeimpl-class"></a>IDBInitializeImpl – třída
 
@@ -91,7 +91,7 @@ Vaše třída odvozená od `IDBInitializeImpl`.
 
 Povinné rozhraní pro objekty zdroje dat a volitelné rozhraní pro enumerátory.
 
-## <a name="idbinitializeimpl"></a>IDBInitializeImpl:: IDBInitializeImpl
+## <a name="idbinitializeimplidbinitializeimpl"></a><a name="idbinitializeimpl"></a>IDBInitializeImpl:: IDBInitializeImpl
 
 Konstruktor
 
@@ -105,7 +105,7 @@ IDBInitializeImpl();
 
 Inicializuje všechny datové členy.
 
-## <a name="initialize"></a>IDBInitializeImpl:: Initialize
+## <a name="idbinitializeimplinitialize"></a><a name="initialize"></a>IDBInitializeImpl:: Initialize
 
 Inicializuje objekt zdroje dat přípravou jeho podpory vlastností.
 
@@ -119,7 +119,7 @@ STDMETHOD(Initialize)(void);
 
 Viz [IDBInitialize:: Initialize](/previous-versions/windows/desktop/ms718026(v=vs.85)) v *referenci programátora OLE DB*.
 
-## <a name="uninitialize"></a>IDBInitializeImpl:: Uninitialize
+## <a name="idbinitializeimpluninitialize"></a><a name="uninitialize"></a>IDBInitializeImpl:: Uninitialize
 
 Umístí objekt zdroje dat do neinicializovaného stavu uvolněním interních prostředků, jako je například podpora vlastností.
 
@@ -133,7 +133,7 @@ STDMETHOD(Uninitialize)(void);
 
 Viz [IDBInitialize:: uninitializeed](/previous-versions/windows/desktop/ms719648(v=vs.85)) in *OLE DB Programmer 's Reference*.
 
-## <a name="dwstatus"></a>IDBInitializeImpl:: m_dwStatus
+## <a name="idbinitializeimplm_dwstatus"></a><a name="dwstatus"></a>IDBInitializeImpl:: m_dwStatus
 
 Příznaky zdroje dat.
 
@@ -161,7 +161,7 @@ enum DATASOURCE_FLAGS {
 |`DSF_PERSIST_DIRTY`|Nastaví, zda objekt zdroje dat vyžaduje trvalost (tj. Pokud došlo ke změnám).|
 |`DSF_INITIALIZED`|Nastavit, zda byl zdroj dat inicializován.|
 
-## <a name="pcutlpropinfo"></a>IDBInitializeImpl:: m_pCUtlPropInfo
+## <a name="idbinitializeimplm_pcutlpropinfo"></a><a name="pcutlpropinfo"></a>IDBInitializeImpl:: m_pCUtlPropInfo
 
 Ukazatel na objekt implementace pro informace o vlastnostech databáze.
 

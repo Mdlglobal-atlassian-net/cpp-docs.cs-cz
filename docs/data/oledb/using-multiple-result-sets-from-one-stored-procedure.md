@@ -5,27 +5,27 @@ helpviewer_keywords:
 - stored procedures, returning result sets
 - multiple result sets
 ms.assetid: c450c12c-a76c-4ae4-9675-071a41eeac05
-ms.openlocfilehash: 69e5c956d897e217501cbac9b9b93db868731221
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6163eb8bf18edfc3d205f1d012de0c64c5570693
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403038"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209284"
 ---
 # <a name="using-multiple-result-sets-from-one-stored-procedure"></a>Použití více sad výsledků dotazu z jedné uložené procedury
 
-Většina uložených procedur vrátit několik sad výsledků. Uložená procedura obvykle obsahuje jeden nebo více dotazů select. Spotřebitel musí vzít v úvahu tato zahrnutí pro zpracování všech sadách výsledků dotazu.
+Většina uložených procedur vrací více sad výsledků dotazu. Taková uložená procedura obvykle obsahuje jeden nebo více příkazů SELECT. Spotřebitel musí toto zahrnutí vzít v úvahu, aby zpracovávala všechny sady výsledků.
 
-## <a name="to-handle-multiple-result-sets"></a>Nastaví pro zpracování více výsledků
+## <a name="to-handle-multiple-result-sets"></a>Postup zpracování více sad výsledků
 
-1. Vytvoření `CCommand` třídy s `CMultipleResults` jako argument šablony a s přistupujícím objektu podle vašeho výběru, obvykle dynamická nebo ruční přistupující objekt. Pokud používáte jiný typ přístupového objektu, nemusí být schopní určit, výstupní sloupce pro každou sadu řádků.
+1. Vytvořte třídu `CCommand` s `CMultipleResults` jako argument šablony a pomocí přístupového objektu podle vlastního výběru, obvykle dynamického nebo ručního přístupového objektu. Pokud použijete jiný typ přístupového objektu, možná nebudete moci určit výstupní sloupce pro každou sadu řádků.
 
-1. Spustit uloženou proceduru jako obvykle a vytvořit vazbu sloupce (viz [co a jak načíst Data?](../../data/oledb/fetching-data.md)).
+1. Spusťte uloženou proceduru obvyklým způsobem a navažte sloupce (viz [jak načíst data?](../../data/oledb/fetching-data.md)).
 
-1. Data použijte.
+1. Použijte data.
 
-1. Volání `GetNextResult` na `CCommand` třídy. Pokud je k dispozici, jiný výsledek sady řádků `GetNextResult` vrátí hodnotu S_OK a by měl rebind sloupce, pokud používáte ruční přistupujícího objektu. Pokud `GetNextResult` vrátí chybu, existují sady k dispozici žádné další výsledků.
+1. Volejte `GetNextResult` na `CCommand` třídě. Pokud je k dispozici další sada řádků výsledků, `GetNextResult` vrátí S_OK a pokud používáte ruční přistupující objekt, měli byste znovu vytvořit vazby na sloupce. Pokud `GetNextResult` vrátí chybu, nejsou k dispozici žádné další sady výsledků.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Použití uložených procedur](../../data/oledb/using-stored-procedures.md)

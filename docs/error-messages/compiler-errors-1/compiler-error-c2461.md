@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C2461
 ms.assetid: e64ba651-f441-4fdb-b5cb-4209bbbe4db4
-ms.openlocfilehash: e8f82ed4ce8ad77a22961a42c8e9a256e6f647db
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3d290bd2288f76d0ddefa2057e3e01c9edc3cbc7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62368029"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80205319"
 ---
 # <a name="compiler-error-c2461"></a>Chyba kompilátoru C2461
 
-> "*třídy*': syntaxi konstruktoru chybí formální parametry.
+> '*Class*': v syntaxi konstruktoru chybí formální parametry
 
-Konstruktor pro třídu neurčuje žádné formální parametry. Deklarace konstruktoru musíte zadat seznam formálních parametrů. Seznam může být prázdný.
+Konstruktor třídy neurčuje žádné formální parametry. Deklarace konstruktoru musí určovat formální seznam parametrů. Seznam může být prázdný.
 
-Chcete tento problém vyřešit, přidejte dvojici závorek za deklaraci *třídy*:: **třídy*.
+Chcete-li tento problém vyřešit, přidejte dvojici závorek za deklaraci *třídy*::**Class*.
 
 ## <a name="example"></a>Příklad
 

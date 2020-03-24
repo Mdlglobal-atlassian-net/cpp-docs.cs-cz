@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C1081
 ms.assetid: e58adf17-cbe1-4955-a5c7-80622bbba249
-ms.openlocfilehash: f3c9f9bde5da7fb120accbb9a8d72e5715ab9d2b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b8630a26d14c68a5f1abe45bb0b8d0141d0dedbb
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62229416"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80204188"
 ---
 # <a name="fatal-error-c1081"></a>Závažná chyba C1081
 
-'symbol': název souboru je příliš dlouhý
+' symbol ': název souboru je příliš dlouhý.
 
-Délka cesty souboru přesahuje `_MAX_PATH` (definované STDLIB.h jako 260 znaků). Zkraťte název souboru.
+Délka cesty k souboru přesahuje `_MAX_PATH` (definováno STDLIB. h jako 260 znaků). Zkraťte název souboru.
 
-Při volání CL.exe s krátký název souboru, kompilátor bude pravděpodobně nutné generovat úplnou cestu. Například `cl -c myfile.cpp` může způsobit, že kompilátor vygeneroval:
+Pokud zavoláte CL. exe se stručným názvem souboru, kompilátor bude muset vygenerovat úplnou cestu. Například `cl -c myfile.cpp` může způsobit vygenerování kompilátorem:
 
 ```
 D:\<very-long-directory-path>\myfile.cpp

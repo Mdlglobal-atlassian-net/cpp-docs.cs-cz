@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2175
 ms.assetid: 3a8fa90b-2b29-414a-bb55-cf27c2bf989a
-ms.openlocfilehash: 4c4af877d771d4e45c9336f1eb4a29fd45fa79fd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c7d045accae170f4f7f17835ff535a044ff91219
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62175482"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80206918"
 ---
 # <a name="compiler-error-c2175"></a>Chyba kompilátoru C2175
 
-"národního prostředí": Neplatné národní prostředí
+' locale ': neplatné národní prostředí
 
-Zadané národní prostředí není platná. Zobrazit [jazyka a země/Region Strings](../../c-runtime-library/locale-names-languages-and-country-region-strings.md) v *Run-Time Library Reference* pro podporované národní prostředí.
+Zadané národní prostředí není platné. Pro podporovaná národní prostředí naleznete v tématu [řetězce jazyka a země/oblasti](../../c-runtime-library/locale-names-languages-and-country-region-strings.md) v *Referenční příručce ke knihovně run-time* .

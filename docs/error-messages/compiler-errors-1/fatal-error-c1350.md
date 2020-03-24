@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C1350
 ms.assetid: 8bb47c23-ac9c-4a33-9ede-4d63ed9d4ba8
-ms.openlocfilehash: 292943d5c94673e265bb9cb3d1fe83a1a907d9a0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 57f2bcb4307195cc55a5b072b770f204c9dbbb00
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62228754"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80203174"
 ---
 # <a name="fatal-error-c1350"></a>Závažná chyba C1350
 
-Chyba při načítání knihovny dll 'dll': knihovna dll nebyla nalezena
+Chyba při načítání knihovny DLL DLL: knihovna DLL nebyla nalezena.
 
-Knihovnu DLL, která podporuje pokus o operaci nebyl nalezen.
+Knihovna DLL, která podporuje operaci, která se pokusila najít, nebyla nalezena.
 
-To znamená problém s instalací a měli byste ho nainstalovat knihovny DLL z disku CD produktu.
+To indikuje problém s instalací a měli byste znovu nainstalovat knihovnu DLL z disku CD s produktem.

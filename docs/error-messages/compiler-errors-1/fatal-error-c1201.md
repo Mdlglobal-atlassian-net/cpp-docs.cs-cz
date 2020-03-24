@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C1201
 ms.assetid: e58b9b9a-2c6f-454d-8719-9773aca765d1
-ms.openlocfilehash: 21f429ebffb7cacd6f50b9559d72a63527bfade9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cca16f89b3f6b3053211762dab622d33695d4783
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62229352"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80203486"
 ---
 # <a name="fatal-error-c1201"></a>Závažná chyba C1201
 
 nejde pokračovat po chybě syntaxe v definici šablony třídy.
 
-Došlo k neočekávané chybě při analýze definice šablony třídy.
+Při analýze definice šablony třídy došlo k neočekávané chybě.
 
-Opravte všechny chyby a znovu zkompilovat. Pokud tento selže, Všimněte si okolností chybu, zkuste izolovat daný problém a vytvořit reprodukovatelnou testovací případ, obraťte se na [Microsoft Product Support Services](/visualstudio/ide/talk-to-us).
+Opravte případné další chyby a zkompilujte je znovu. Pokud se to nepovede, poznamenejte si okolnosti chyby, zkuste izolovat problém a vytvořit reprodukovatelný testovací případ a potom kontaktujte [oddělení služeb technické podpory společnosti Microsoft](/visualstudio/ide/talk-to-us).

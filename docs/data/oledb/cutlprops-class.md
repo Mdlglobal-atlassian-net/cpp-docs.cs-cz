@@ -29,12 +29,12 @@ helpviewer_keywords:
 - OnPropertyChanged method
 - SetPropValue method
 ms.assetid: bb525178-765c-4e23-a110-c0fd70c05437
-ms.openlocfilehash: bbeae4faad4d650d8dc44a61a22b1fcc63a0bc15
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 3498ec1250d9443007acb3b12ec25983a71587d0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79441034"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211104"
 ---
 # <a name="cutlprops-class"></a>CUtlProps – třída
 
@@ -76,7 +76,7 @@ Většina této třídy je podrobností implementace.
 
 Další informace o makrech použitých v mapě sady vlastností naleznete v tématu [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md) a [END_PROPSET_MAP](../../data/oledb/end-propset-map.md).
 
-## <a name="getpropvalue"></a>CUtlProps:: GetPropValue
+## <a name="cutlpropsgetpropvalue"></a><a name="getpropvalue"></a>CUtlProps:: GetPropValue
 
 Načte vlastnost ze sady vlastností.
 
@@ -103,7 +103,7 @@ mimo Ukazatel na variantu, která obsahuje novou hodnotu vlastnosti.
 
 `Failure` při selhání a v případě úspěchu S_OK.
 
-## <a name="isvalidvalue"></a>CUtlProps:: IsValidValue
+## <a name="cutlpropsisvalidvalue"></a><a name="isvalidvalue"></a>CUtlProps:: IsValidValue
 
 Slouží k ověření hodnoty před nastavením vlastnosti.
 
@@ -130,7 +130,7 @@ Standardní hodnota HRESULT. Výchozí návratová hodnota je S_OK.
 
 Pokud máte nějaké rutiny ověřování, které chcete spustit na hodnotě, kterou se chystáte použít k nastavení vlastnosti, měli byste tuto funkci přepsat. Můžete například ověřit DBPROP_AUTH_PASSWORD proti tabulce hesel, abyste určili platnou hodnotu.
 
-## <a name="oninterfacerequested"></a>CUtlProps:: OnInterfaceRequested
+## <a name="cutlpropsoninterfacerequested"></a><a name="oninterfacerequested"></a>CUtlProps:: OnInterfaceRequested
 
 Zpracovává požadavky na volitelné rozhraní, když příjemce volá metodu na jednom z rozhraní pro vytvoření objektu.
 
@@ -165,7 +165,7 @@ Pokud příjemce otevře objekt a požádá o volitelné rozhraní, poskytovatel
 
 Pokud chcete zpracovat jiná rozhraní, přepište tuto funkci ve zdroji dat, relaci, příkazu nebo třídě sady řádků pro zpracování funkcí. Vaše přepsání by mělo projít běžnými rozhraními vlastností set/get, aby bylo zajištěno, že vlastnosti nastavení také nastaví všechny zřetězené vlastnosti [(viz](../../data/oledb/cutlprops-onpropertychanged.md)přepsané).
 
-## <a name="onpropertychanged"></a>CUtlProps::-PropertyChanged
+## <a name="cutlpropsonpropertychanged"></a><a name="onpropertychanged"></a>CUtlProps::-PropertyChanged
 
 Volá se po nastavení vlastnosti pro zpracování zřetězených vlastností.
 
@@ -198,7 +198,7 @@ V této funkci uživatel získá ID vlastnosti z parametru `DBPROP*`. Nyní je m
 
 [!code-cpp[NVC_OLEDB_Provider#2](../../data/oledb/codesnippet/cpp/cutlprops-onpropertychanged_1.h)]
 
-## <a name="setpropvalue"></a>CUtlProps:: SetPropValue
+## <a name="cutlpropssetpropvalue"></a><a name="setpropvalue"></a>CUtlProps:: SetPropValue
 
 Nastaví vlastnost v sadě vlastností.
 

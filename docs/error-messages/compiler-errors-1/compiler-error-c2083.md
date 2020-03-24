@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2083
 ms.assetid: 5fc4f931-eab6-4d8d-a3ee-3b8e11e64b18
-ms.openlocfilehash: 5a09d4c1ca294ca082ed9a2fb00b015b2519ef5a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cf3fbde1ce1a79528a11fe6564ccf1604645f718
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391982"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80207715"
 ---
 # <a name="compiler-error-c2083"></a>Chyba kompilátoru C2083
 
-Neplatné porovnání struktury nebo sjednocení.
+porovnání struktury/sjednocení je neplatné.
 
-Struktura nebo sjednocení se porovnává přímo s jiným typem definovaný uživatelem. To není povolené, pokud byla definována relační operátor nebo převod na skalární typ. existuje.
+Struktura nebo sjednocení se porovnávají přímo s jiným uživatelem definovaným typem. To není povoleno, není-li definován relační operátor nebo existuje převod na skalární typ.

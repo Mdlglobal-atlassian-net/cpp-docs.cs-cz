@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - C2471
 ms.assetid: a8928b44-20f6-4cbc-9aa5-7e86052a9c6b
-ms.openlocfilehash: 136e9bd4871889b7b1eaef053daec9dce1c84b84
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4747d13bc9d0c38ab73fc3b2bea09fb947747051
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62243929"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80205176"
 ---
 # <a name="compiler-error-c2471"></a>Chyba kompilátoru C2471
 
-Nelze aktualizovat databázi programu 'file'
+nelze aktualizovat databázi programu ' file '
 
-Kompilátor nemůže zapisovat do souboru databáze.
+Kompilátor nemůže zapisovat do databázového souboru.
 
-### <a name="to-fix-the-problem"></a>Chcete-li vyřešit tento problém
+### <a name="to-fix-the-problem"></a>Řešení problému
 
-- Ujistěte se, že disk obsahuje dostatek volného místa.
+- Ujistěte se, že na disku je dostatek volného místa.
 
 - Ujistěte se, že soubor není jen pro čtení.
 
-- Ujistěte se, že neexistují žádná narušení sdílení.
+- Ujistěte se, že nedochází k narušení sdílení.

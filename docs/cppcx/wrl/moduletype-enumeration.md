@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - ModuleType enumeration
 ms.assetid: 61a763af-a5a4-451d-8b40-815af507fcde
-ms.openlocfilehash: 3c7486cbc761975dd133f229f23dcf0b70e7e3ac
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8425a15d594f7b8b30027d3576ee86015b656130
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403227"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213717"
 ---
 # <a name="moduletype-enumeration"></a>ModuleType – výčet
 
-Určuje, zda modul by měl podporovat v procesový server nebo server mimo proces.
+Určuje, jestli má modul podporovat server v rámci procesu nebo server mimo proces.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -30,18 +30,18 @@ enum ModuleType;
 
 |Název|Popis|
 |----------|-----------------|
-|`InProc`|V procesový server.|
-|`OutOfProc`|Server služby mimo proces.|
-|`DisableCaching`|Zakázání mechanismu ukládání do mezipaměti na modul.|
-|`InProcDisableCaching`|Kombinace `InProc` a `DisableCaching`.|
-|`OutOfProcDisableCaching`|Kombinace `OutOfProc` a `DisableCaching`.|
+|`InProc`|V procesovém serveru.|
+|`OutOfProc`|Mimo procesový Server.|
+|`DisableCaching`|Zakáže mechanismus ukládání do mezipaměti v modulu.|
+|`InProcDisableCaching`|Kombinace `InProc` a `DisableCaching`|
+|`OutOfProcDisableCaching`|Kombinace `OutOfProc` a `DisableCaching`|
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** module.h
+**Záhlaví:** modul. h
 
-**Namespace:** Microsoft::WRL
+**Obor názvů:** Microsoft:: WRL
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Microsoft::WRL – obor názvů](microsoft-wrl-namespace.md)

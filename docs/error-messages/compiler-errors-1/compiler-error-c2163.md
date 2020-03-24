@@ -1,20 +1,20 @@
 ---
-title: Compiler Error C2163
+title: Chyba kompilátoru C2163
 ms.date: 11/04/2016
 f1_keywords:
 - C2163
 helpviewer_keywords:
 - C2163
 ms.assetid: 6428d1e9-1ba1-46fc-bbf6-91d6fef2734c
-ms.openlocfilehash: d5ad39b7deba77069cf4b40ddec852ac2135b37b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: acd86be999ef36666e99281cdffac99802a5699f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62174794"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80207035"
 ---
-# <a name="compiler-error-c2163"></a>Compiler Error C2163
+# <a name="compiler-error-c2163"></a>Chyba kompilátoru C2163
 
-'function': není dostupné jako vnitřní funkce
+' function ': není k dispozici jako vnitřní funkce
 
-`intrinsic` Nebo `function` – Direktiva pragma uvádí není k dispozici v podobě vnitřní funkci. Například některé vnitřní objekty nejsou k dispozici, při kompilaci programu, který používá programování/CLR.
+Direktiva pragma `intrinsic` nebo `function` vypíše funkci, která není k dispozici ve vnitřním formátu. Například některé vnitřní objekty nejsou k dispozici při kompilování programu, který používá/CLR programování.

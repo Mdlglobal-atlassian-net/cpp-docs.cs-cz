@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C2145
 ms.assetid: 158e5809-8adb-4195-8ca5-684501defbc8
-ms.openlocfilehash: b04853ea64c97e386ceb6dfe1fbb0e4325e0074f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d21d631fd5f484e0a99c8c0e5ae3a5ce20e6cb0f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62175521"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80207230"
 ---
 # <a name="compiler-error-c2145"></a>Chyba kompilátoru C2145
 
-Chyba syntaxe: chybí token před identifikátorem
+Chyba syntaxe: před identifikátorem chybí token.
 
-Kompilátor očekává `token` a místo toho našel se identifikátor.
+Kompilátor očekával místo toho `token` a našel identifikátor.
 
-Tato chyba může být způsobeno chybějící středníkem za poslední deklaraci v bloku.
+Tato chyba může být způsobena chybějícím středníkem za poslední deklarací v bloku.

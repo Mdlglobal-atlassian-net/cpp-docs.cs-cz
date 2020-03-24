@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - ptr attribute
 ms.assetid: 95eaea57-a5be-45f6-a612-ba2c9bc4645a
-ms.openlocfilehash: e5f2d694f3525f27e4a8371f04efa28940f21bba
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: e56d4e56135c0f32a1796ac98565a990c7225705
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514153"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166416"
 ---
 # <a name="ptr"></a>ptr
 
@@ -25,7 +25,7 @@ Určí ukazatel jako úplný ukazatel.
 
 ## <a name="remarks"></a>Poznámky
 
-Atribut **PTR** C++ má stejné funkce jako atribut typu MIDL [](/windows/win32/Midl/ptr) .
+Atribut **PTR** C++ má stejné funkce jako atribut [typu MIDL.](/windows/win32/Midl/ptr)
 
 ## <a name="example"></a>Příklad
 
@@ -42,9 +42,9 @@ Podívejte se na příklad pro vlastnost [DefaultValue](defaultvalue.md) pro uk�
 |**Požadované atributy**|Žádné|
 |**Neplatné atributy**|Žádné|
 
-Další informace o kontextech atributů naleznete v tématu kontexty [atributů](cpp-attributes-com-net.md#contexts).
+Další informace o kontextech atributů naleznete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [IDL – atributy](idl-attributes.md)<br/>
 [Atributy rozhraní](interface-attributes.md)<br/>

@@ -9,21 +9,21 @@ helpviewer_keywords:
 - inline assembly, registers
 - registers, inline assembly
 ms.assetid: c63e6bb4-49d9-4fa1-bb22-eea21b5cbc0f
-ms.openlocfilehash: 5c07fa897da23a55f376a20e7588c8c8c269d1a6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 865fc5fac5f46cdc8c55966e9989227d1d671d6f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62167371"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169250"
 ---
 # <a name="segment-references-in-inline-assembly"></a>Odkazy na segmenty ve vloženém sestavení
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
-Musíte odkazovat na segmentů podle registru, nikoli podle názvu (název segmentu `_TEXT` je neplatný, například). Přepsání segmentu používaly registru explicitně, stejně jako v ES: [mx].
+Je nutné, aby se segmenty odkazovaly podle registru, nikoli podle názvu (název segmentu `_TEXT` není platný, například). Přepsání segmentu musí použít registr explicitně, jako v ES: [BX].
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Použití assembleru v blocích __asm](../../assembler/inline/using-assembly-language-in-asm-blocks.md)<br/>

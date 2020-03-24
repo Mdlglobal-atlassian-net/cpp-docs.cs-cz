@@ -12,16 +12,16 @@ helpviewer_keywords:
 - IDBCreateSessionImpl class
 - CreateSession method
 ms.assetid: 48c02c5c-8362-45ac-af8e-bb119cf8c5c7
-ms.openlocfilehash: ae59abc542a4599d289c099801fc34d56b2b13d4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cff1ca374c9489cb9c5df0dad153c4bf7a4cbc9e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409158"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210779"
 ---
 # <a name="idbcreatesessionimpl-class"></a>IDBCreateSessionImpl – třída
 
-Poskytuje implementaci pro [IDBCreateSession](/previous-versions/windows/desktop/ms724076(v=vs.85)) rozhraní.
+Poskytuje implementaci rozhraní [IDBCreateSession](/previous-versions/windows/desktop/ms724076(v=vs.85)) .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,15 +33,15 @@ class ATL_NO_VTABLE IDBCreateSessionImpl
 
 ### <a name="parameters"></a>Parametry
 
-*T*<br/>
-VAŠI TŘÍDU ODVOZENOU Z
+*Š*<br/>
+VAŠE TŘÍDA, KTERÁ JE ODVOZENA Z
 
 *SessionClass*<br/>
-Objekt relace.
+Objekt Session.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atldb.h
+**Záhlaví:** Atldb. h
 
 ## <a name="members"></a>Členové
 
@@ -49,15 +49,15 @@ Objekt relace.
 
 |||
 |-|-|
-|[CreateSession](#createsession)|Vytvoří novou relaci z objektu zdroje dat a vrátí požadované rozhraní na nově vytvořené relace.|
+|[CreateSession](#createsession)|Vytvoří novou relaci z objektu zdroje dat a vrátí požadované rozhraní v nově vytvořené relaci.|
 
 ## <a name="remarks"></a>Poznámky
 
-Povinné rozhraní na objekty zdroje dat
+Povinné rozhraní pro objekty zdroje dat.
 
-## <a name="createsession"></a> IDBCreateSessionImpl::CreateSession
+## <a name="idbcreatesessionimplcreatesession"></a><a name="createsession"></a>IDBCreateSessionImpl –:: CreateSession
 
-Vytvoří novou relaci z objektu zdroje dat a vrátí požadované rozhraní na nově vytvořené relace.
+Vytvoří novou relaci z objektu zdroje dat a vrátí požadované rozhraní v nově vytvořené relaci.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -69,9 +69,9 @@ STDMETHOD(CreateSession)(IUnknown * pUnkOuter,
 
 #### <a name="parameters"></a>Parametry
 
-Zobrazit [IDBCreateSession::CreateSession](/previous-versions/windows/desktop/ms714942(v=vs.85)) v *referenční informace pro OLE DB programátory*.
+Viz [IDBCreateSession:: CreateSession](/previous-versions/windows/desktop/ms714942(v=vs.85)) v *referenci programátora OLE DB*.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Šablony zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Šablony poskytovatele OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architektura šablon zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C1311
 ms.assetid: 6590a06c-ce9d-4f17-8f62-c809343143b8
-ms.openlocfilehash: ba2b797c9bf521533e7c2ccff8d358b6216d392f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e57e4e0899a5f9d81e87a203b1b699cef0884f0d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62266463"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80203265"
 ---
 # <a name="fatal-error-c1311"></a>Závažná chyba C1311
 
-Formát COFF nemůže staticky inicializovat 'var' se číslo b adresy.
+Formát COFF nemůže staticky inicializovat var s počtem bajtů adresy.
 
-Adresa, jehož hodnota není známá v době kompilace nelze přiřadit staticky proměnnou, jejíž typ má úložiště méně než čtyři bajty.
+Adresa, jejíž hodnota není známa v době kompilace, nemůže být staticky přiřazena proměnné, jejíž typ má úložiště menší než čtyři bajty.
 
-Této chybě může dojít v kódu, který je jinak platný C++.
+K této chybě může dojít v kódu, který je C++jinak platný.
 
-Následující příklad ukazuje jednu podmínku, která může způsobit, že C1311.
+Následující příklad ukazuje jednu podmínku, která může způsobit C1311.
 
 ```
 char c = (char)"Hello, world";   // C1311

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C1010
 ms.assetid: dfd035f1-a7a2-40bc-bc92-dc4d7f456767
-ms.openlocfilehash: 0315af63e9fdbbb0b136a85a23cb28936dee6836
-ms.sourcegitcommit: fd0f8839da5c6a3663798a47c6b0bb6e63b518bd
+ms.openlocfilehash: 40a2828ce6b21384ec49c371f23e506d816f1284
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70273564"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80204786"
 ---
 # <a name="fatal-error-c1010"></a>Závažná chyba C1010
 
@@ -37,16 +37,16 @@ Chcete-li vypnout použití předkompilovaných hlaviček v projektu, použijte 
 
 1. V rozevíracím seznamu **Konfigurace** vyberte možnost **všechny konfigurace**.
 
-1. Vyberte stránku vlastností **vlastnosti** > konfigurace**CC++/**  > **Předkompilovaná hlavička** .
+1. Vyberte **Vlastnosti konfigurace** > stránce vlastností **Předkompilovaná hlavička** **C/C++**  > .
 
 1. V seznamu vlastností vyberte rozevírací nabídku pro vlastnost **předkompilované hlavičky** a pak zvolte možnost **Nepoužívat předkompilované hlavičky**. Kliknutím na **tlačítko OK** uložte změny.
 
 1. V okně **Průzkumník řešení** klikněte pravým tlačítkem na zdrojový soubor *PCH. cpp* v projektu. (Ve starších projektech soubor může mít název *stdafx. cpp*.) Chcete-li odebrat ze sestavení, vyberte možnost **vyloučit z projektu** .
 
-1. K odstranění všech souborů *PROJECT_NAME. pch* v zprostředkujících adresářích sestavení použijte příkaz nabídky **sestavit** > **Vyčištění řešení** pro každou vámi sestavenou konfiguraci.
+1. Použijte příkaz nabídky **sestavit** > **Vyčistit řešení** pro každou konfiguraci, kterou sestavíte, abyste v zprostředkujících adresářích sestavení odstranili všechny soubory *PROJECT_NAME. pch* .
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Předkompilované hlavičkové soubory](../../build/creating-precompiled-header-files.md)\
-[/YC (Vytvořit předkompilovaný hlavičkový soubor)](../../build/reference/yc-create-precompiled-header-file.md)\
+[Soubory předkompilovaných hlaviček](../../build/creating-precompiled-header-files.md)\
+[/Yc (vytvoření předkompilovaného hlavičkového souboru)](../../build/reference/yc-create-precompiled-header-file.md)\
 [/Yu (použít předkompilovaný hlavičkový soubor)](../../build/reference/yu-use-precompiled-header-file.md)

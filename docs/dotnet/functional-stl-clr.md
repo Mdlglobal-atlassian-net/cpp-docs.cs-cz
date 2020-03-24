@@ -63,16 +63,16 @@ helpviewer_keywords:
 - unary_delegate_noreturn function [STL/CLR]
 - unary_negate function [STL/CLR]
 ms.assetid: 88738b8c-5d37-4375-970e-a4442bf5efde
-ms.openlocfilehash: f4a99ea972c6d2ea9b9721664cc75dec257fd7b3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2d06a92fea9a702633216e3244879687b66f97d6
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393750"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80208725"
 ---
 # <a name="functional-stlclr"></a>functional (STL/CLR)
 
-Zahrnout záhlaví STL/CLR `<cliext/functional>` definovat počet šablony třídy a delegáti související šablony a funkce.
+Zahrňte hlavičku STL/CLR `<cliext/functional>` k definování počtu tříd šablony a přidružených delegátů a funkcí šablon.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -82,53 +82,53 @@ Zahrnout záhlaví STL/CLR `<cliext/functional>` definovat počet šablony tří
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<cliext – / funkční >
+**Záhlaví:** \<cliext –/funkční >
 
-**Namespace:** cliext –
+**Obor názvů:** cliext –
 
 ## <a name="declarations"></a>Deklarace
 
 |Delegát|Popis|
 |--------------|-----------------|
-|[binary_delegate (STL/CLR)](#binary_delegate)|Delegát dvěma argumenty.|
-|[binary_delegate_noreturn (STL/CLR)](#binary_delegate_noreturn)|Dvěma argumenty delegáta vrací **void**.|
-|[unary_delegate (STL/CLR)](#unary_delegate)|Jednoargumentové delegáta.|
-|[unary_delegate_noreturn (STL/CLR)](#unary_delegate_noreturn)|Jednoargumentové delegáta vrací **void**.|
+|[binary_delegate (STL/CLR)](#binary_delegate)|Delegát dvou argumentů.|
+|[binary_delegate_noreturn (STL/CLR)](#binary_delegate_noreturn)|Delegát dvou argumentů vrací **typ void**.|
+|[unary_delegate (STL/CLR)](#unary_delegate)|Delegát s jedním argumentem.|
+|[unary_delegate_noreturn (STL/CLR)](#unary_delegate_noreturn)|Delegát s jedním argumentem vrací **typ void**.|
 
 |Třída|Popis|
 |-----------|-----------------|
-|[binary_negate (STL/CLR)](#binary_negate)|Funktor, který se má negovat funktor dvěma argumenty.|
-|[binder1st (STL/CLR)](#binder1st)|Funktor k vytvoření vazby prvního argumentu funktor dvěma argumenty.|
-|[binder2nd (STL/CLR)](#binder2nd)|Funktor k vytvoření vazby druhého argumentu funktor dvěma argumenty.|
+|[binary_negate (STL/CLR)](#binary_negate)|Funktor na negaci dvou argumentů funktor.|
+|[binder1st (STL/CLR)](#binder1st)|Funktor k vytvoření vazby prvního argumentu k funktor argumentu se dvěma argumenty.|
+|[binder2nd (STL/CLR)](#binder2nd)|Funktor k vytvoření vazby druhého argumentu k funktor argumentu se dvěma argumenty.|
 |[divides (STL/CLR)](#divides)|Rozdělte funktor.|
-|[equal_to (STL/CLR)](#equal_to)|Porovnání rovna funktor.|
+|[equal_to (STL/CLR)](#equal_to)|Rovná se funktor porovnání.|
 |[greater (STL/CLR)](#greater)|Větší porovnání funktor.|
-|[greater_equal (STL/CLR)](#greater_equal)|Porovnání větší nebo rovna funktor.|
+|[greater_equal (STL/CLR)](#greater_equal)|Větší nebo rovno porovnání funktor.|
 |[less (STL/CLR)](#less)|Méně porovnání funktor.|
-|[less_equal (STL/CLR)](#less_equal)|Menší než nebo rovné porovnání funktor.|
-|[logical_and (STL/CLR)](#logical_and)|Logické a funktor.|
-|[logical_not (STL/CLR)](#logical_not)|Logické ne funktor.|
-|[logical_or (STL/CLR)](#logical_or)|Logický OR funktor.|
-|[minus (STL/CLR)](#minus)|Odečte funktor.|
-|[modulus (STL/CLR)](#modulus)|MODULUS funktor.|
-|[multiplies (STL/CLR)](#multiplies)|Vynásobte funktor.|
-|[negate (STL/CLR)](#negate)|Funktor vrátit argument negovat.|
-|[not_equal_to (STL/CLR)](#not_equal_to)|Není rovno porovnání funktor.|
-|[plus (STL/CLR)](#plus)|Přidáte funktor.|
-|[unary_negate (STL/CLR)](#unary_negate)|Funktor, který se má negovat funktor jedním argumentem.|
+|[less_equal (STL/CLR)](#less_equal)|Funktor porovnání je menší nebo rovno.|
+|[logical_and (STL/CLR)](#logical_and)|Logický a funktor.|
+|[logical_not (STL/CLR)](#logical_not)|Logický operátor NOT funktor.|
+|[logical_or (STL/CLR)](#logical_or)|Logický nebo funktor.|
+|[minus (STL/CLR)](#minus)|Odečíst funktor.|
+|[modulus (STL/CLR)](#modulus)|Modulus funktor.|
+|[multiplies (STL/CLR)](#multiplies)|Vynásobení funktor.|
+|[negate (STL/CLR)](#negate)|Funktor, že se má vrátit argument negace.|
+|[not_equal_to (STL/CLR)](#not_equal_to)|Nerovná se funktor porovnání.|
+|[plus (STL/CLR)](#plus)|Přidat funktor.|
+|[unary_negate (STL/CLR)](#unary_negate)|Funktor na negaci funktor jednoho argumentu.|
 
 |Funkce|Popis|
 |--------------|-----------------|
-|[bind1st (STL/CLR)](#bind1st)|Generuje binder1st – argument a funktor.|
-|[bind2nd (STL/CLR)](#bind2nd)|Generuje binder2nd – argument a funktor.|
-|[not1 (STL/CLR)](#not1)|Generuje unary_negate – pro funktor.|
-|[not2 (STL/CLR)](#not2)|Generuje binary_negate – pro funktor.|
+|[bind1st (STL/CLR)](#bind1st)|Vygeneruje binder1st – pro argument a funktor.|
+|[bind2nd (STL/CLR)](#bind2nd)|Vygeneruje binder2nd – pro argument a funktor.|
+|[not1 (STL/CLR)](#not1)|Vygeneruje unary_negate pro funktor.|
+|[not2 (STL/CLR)](#not2)|Vygeneruje binary_negate pro funktor.|
 
 ## <a name="members"></a>Členové
 
-## <a name="binary_delegate"></a> binary_delegate – (STL/CLR)
+## <a name="binary_delegate-stlclr"></a><a name="binary_delegate"></a>binary_delegate (STL/CLR)
 
-Třída genereic popisuje dvěma argumenty delegáta. Můžete ji použít delegátu, co se týče její argument a návratovým typem.
+Třída genereic popisuje delegáta se dvěma argumenty. Použijete ho k určení delegáta z podmínek jeho argumentů a návratových typů.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -141,13 +141,13 @@ generic<typename Arg1,
 
 #### <a name="parameters"></a>Parametry
 
-*arg1*<br/>
+*Arg1*<br/>
 Typ prvního argumentu.
 
-*arg2*<br/>
+*Arg2*<br/>
 Typ druhého argumentu.
 
-*výsledek*<br/>
+*Vyústit*<br/>
 Návratový typ.
 
 ### <a name="remarks"></a>Poznámky
@@ -202,9 +202,9 @@ compare(L'a', L'b') = True
 compare(L'b', L'a') = False
 ```
 
-## <a name="binary_delegate_noreturn"></a> binary_delegate_noreturn – (STL/CLR)
+## <a name="binary_delegate_noreturn-stlclr"></a><a name="binary_delegate_noreturn"></a>binary_delegate_noreturn (STL/CLR)
 
-Třída genereic popisuje dvěma argumenty delegáta, který vrátí **void**. Můžete ji použít delegátu, co se týče svého argumentu.
+Třída genereic popisuje delegáta se dvěma argumenty, který vrací **typ void**. Použijete ho k zadání delegáta z podmínek svého argumentu.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -216,15 +216,15 @@ generic<typename Arg1,
 
 #### <a name="parameters"></a>Parametry
 
-*arg1*<br/>
+*Arg1*<br/>
 Typ prvního argumentu.
 
-*arg2*<br/>
+*Arg2*<br/>
 Typ druhého argumentu.
 
 ### <a name="remarks"></a>Poznámky
 
-Popisuje dvěma argumenty funkci, která vrací delegáta genereic **void**.
+Delegát genereic popisuje funkci se dvěma argumenty, která vrací **typ void**.
 
 Všimněte si, že pro:
 
@@ -272,9 +272,9 @@ compare(a, b) = True
 compare(b, a) = False
 ```
 
-## <a name="binary_negate"></a> binary_negate – (STL/CLR)
+## <a name="binary_negate-stlclr"></a><a name="binary_negate"></a>binary_negate (STL/CLR)
 
-Třída šablony popisuje funktor, který po zavolání vrátí logické ne z jeho uložených funktor dvěma argumenty. Můžete ji použít, zadejte objekt funkce z hlediska jeho uložené funktor.
+Třída šablony popisuje funktor, který při volání vrátí logickou hodnotu, která není uložená ve dvou argumentech funktor. Použijete ho k zadání objektu funkce z podmínek jeho uložených funktor.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -302,17 +302,17 @@ public:
 
 #### <a name="parameters"></a>Parametry
 
-*Zábava*<br/>
-Typ uložené funktor.
+*Bavit*<br/>
+Typ uloženého funktoru.
 
 ## <a name="member-functions"></a>Členské funkce
 
 |Definice typu|Popis|
 |---------------------|-----------------|
-|delegate_type|Typ obecného delegátu.|
-|first_argument_type|Typ prvního argumentu funktor.|
-|result_type|Typ výsledku funktor.|
-|second_argument_type|Typ druhého argumentu funktor.|
+|delegate_type|Typ obecného delegáta.|
+|first_argument_type|Typ prvního argumentu funktor|
+|result_type|Typ výsledku funktor|
+|second_argument_type|Typ funktor druhého argumentu.|
 |stored_function_type|Typ funktor.|
 
 |Člen|Popis|
@@ -321,14 +321,14 @@ Typ uložené funktor.
 
 |Operátor|Popis|
 |--------------|-----------------|
-|operator()|Vypočítá požadované funkce.|
-|operator delegate_type^()|Přetypování funktor na delegáta.|
+|operator () – operátor|Vypočítá požadovanou funkci.|
+|operator delegate_type^()|Přenese funktor na delegáta.|
 
 ### <a name="remarks"></a>Poznámky
 
-Třída šablony popisuje dvěma argumenty funktor, který ukládá další funktor dvěma argumenty. Definuje členský operátor `operator()` tak, aby při objektu je volána jako funkce, vrátí logické nejsou uložené funktor volat se dvěma argumenty.
+Třída šablony popisuje funktor dvou argumentů, které ukládají další funktor argumentů. Definuje operátor členu `operator()` tak, že při volání objektu jako funkce vrátí logickou hodnotu NOT uloženého funktoru volaného se dvěma argumenty.
 
-Objekt můžete také předat jako argument funkce, jejíž typ je `delegate_type^` a budou převedeny správně.
+Objekt lze také předat jako argument funkce, jehož typ je `delegate_type^` a bude odpovídajícím způsobem převeden.
 
 ### <a name="example"></a>Příklad
 
@@ -386,9 +386,9 @@ int main()
 1 0
 ```
 
-## <a name="bind1st"></a> bind1st – (STL/CLR)
+## <a name="bind1st-stlclr"></a><a name="bind1st"></a>bind1st – (STL/CLR)
 
-Generuje `binder1st` argument a funktor.
+Vygeneruje `binder1st` pro argument a funktor.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -401,23 +401,23 @@ template<typename Fun,
 
 #### <a name="template-parameters"></a>Parametry šablony
 
-*arg*<br/>
+*ARG*<br/>
 Typ argumentu.
 
-*Zábava*<br/>
+*Bavit*<br/>
 Typ funktor.
 
 #### <a name="function-parameters"></a>Parametry funkce
 
 *funktor*<br/>
-Funktor zabalit.
+Funktor, který se má zabalit
 
-*doleva*<br/>
-První argument zabalit.
+*zbývá*<br/>
+První argument, který se má zabalit
 
 ### <a name="remarks"></a>Poznámky
 
-Šablona funkce vrátí [binder1st – (STL/CLR)](../dotnet/binder1st-stl-clr.md)`<Fun>(functor, left)`. Můžete použít jako pohodlný způsob, jak zabalit funktor dvěma argumenty a svůj první argument v jednoargumentové funktor, který ji volá jako druhý argument.
+Funkce šablony vrátí [binder1st – (STL/CLR)](../dotnet/binder1st-stl-clr.md)`<Fun>(functor, left)`. Použijete ho jako pohodlný způsob, jak zabalit funktor dvou argumentů a jeho první argument do funktor s jedním argumentem, který ho volá s druhým argumentem.
 
 ### <a name="example"></a>Příklad
 
@@ -467,9 +467,9 @@ int main()
 -1 0
 ```
 
-## <a name="bind2nd"></a> bind2nd – (STL/CLR)
+## <a name="bind2nd-stlclr"></a><a name="bind2nd"></a>bind2nd – (STL/CLR)
 
-Generuje `binder2nd` argument a funktor.
+Vygeneruje `binder2nd` pro argument a funktor.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -482,23 +482,23 @@ template<typename Fun,
 
 #### <a name="template-parameters"></a>Parametry šablony
 
-*arg*<br/>
+*ARG*<br/>
 Typ argumentu.
 
-*Zábava*<br/>
+*Bavit*<br/>
 Typ funktor.
 
 #### <a name="function-parameters"></a>Parametry funkce
 
 *funktor*<br/>
-Funktor zabalit.
+Funktor, který se má zabalit
 
-*doprava*<br/>
-Druhý argument zabalit.
+*Kliknutím*<br/>
+Druhý argument pro zabalení.
 
 ### <a name="remarks"></a>Poznámky
 
-Šablona funkce vrátí [binder2nd – (STL/CLR)](../dotnet/binder2nd-stl-clr.md)`<Fun>(functor, right)`. Můžete použít jako pohodlný způsob, jak zabalit funktor dvěma argumenty a druhý argument do jednoargumentové funktor, který zavolá se první argument.
+Funkce šablony vrátí [binder2nd – (STL/CLR)](../dotnet/binder2nd-stl-clr.md)`<Fun>(functor, right)`. Použijete ho jako pohodlný způsob, jak zabalit funktor dvou argumentů a druhý argument do funktor s jedním argumentem, který ho volá s prvním argumentem.
 
 ### <a name="example"></a>Příklad
 
@@ -548,9 +548,9 @@ int main()
 0 -1
 ```
 
-## <a name="binder1st"></a> binder1st – (STL/CLR)
+## <a name="binder1st-stlclr"></a><a name="binder1st"></a>binder1st – (STL/CLR)
 
-Třída šablony popisuje jednoargumentové funktor, který po zavolání vrátí jeho uložené funktor dvěma argumenty volat uloženou první argument a druhý zadaný argument. Můžete ji použít, zadejte objekt funkce z hlediska jeho uložené funktor.
+Třída šablony popisuje funktor s jedním argumentem, který při volání vrátí svůj uložený funktor argument s názvem uložený jako první argument a poskytnutý druhý argument. Použijete ho k zadání objektu funkce z podmínek jeho uložených funktor.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -577,17 +577,17 @@ public:
 
 #### <a name="parameters"></a>Parametry
 
-*Zábava*<br/>
-Typ uložené funktor.
+*Bavit*<br/>
+Typ uloženého funktoru.
 
 ### <a name="member-functions"></a>Členské funkce
 
 |Definice typu|Popis|
 |---------------------|-----------------|
-|delegate_type|Typ obecného delegátu.|
-|first_argument_type|Typ prvního argumentu funktor.|
-|result_type|Typ výsledku funktor.|
-|second_argument_type|Typ druhého argumentu funktor.|
+|delegate_type|Typ obecného delegáta.|
+|first_argument_type|Typ prvního argumentu funktor|
+|result_type|Typ výsledku funktor|
+|second_argument_type|Typ funktor druhého argumentu.|
 |stored_function_type|Typ funktor.|
 
 |Člen|Popis|
@@ -596,14 +596,14 @@ Typ uložené funktor.
 
 |Operátor|Popis|
 |--------------|-----------------|
-|operator()|Vypočítá požadované funkce.|
-|operator delegate_type^()|Přetypování funktor na delegáta.|
+|operator () – operátor|Vypočítá požadovanou funkci.|
+|operator delegate_type^()|Přenese funktor na delegáta.|
 
 ### <a name="remarks"></a>Poznámky
 
-Třída šablony popisuje jednoargumentové funktor, který ukládá funktor dvěma argumenty a jako první argument. Definuje členský operátor `operator()` tak, aby při objektu je volána jako funkce, vrátí výsledek volání uložené funktor uložené první argument a druhý zadaný argument.
+Třída šablony popisuje funktor s jedním argumentem, který ukládá funktor a první argument. Definuje operátor členu `operator()` tak, že když je objekt volán jako funkce, vrátí výsledek volání uloženého funktor s uloženým prvním argumentem a zadaným druhým argumentem.
 
-Objekt můžete také předat jako argument funkce, jejíž typ je `delegate_type^` a budou převedeny správně.
+Objekt lze také předat jako argument funkce, jehož typ je `delegate_type^` a bude odpovídajícím způsobem převeden.
 
 ### <a name="example"></a>Příklad
 
@@ -653,9 +653,9 @@ int main()
 -1 0
 ```
 
-## <a name="binder2nd"></a> binder2nd – (STL/CLR)
+## <a name="binder2nd-stlclr"></a><a name="binder2nd"></a>binder2nd – (STL/CLR)
 
-Třída šablony popisuje jednoargumentové funktor, který po zavolání vrátí jeho uložené funktor dvěma argumenty volat s první zadaný argument a jeho uložené druhý argument. Můžete ji použít, zadejte objekt funkce z hlediska jeho uložené funktor.
+Třída šablony popisuje funktor s jedním argumentem, který při volání vrátí svůj uložený funktor argumentu s názvem zadaným prvním argumentem a uloženým druhým argumentem. Použijete ho k zadání objektu funkce z podmínek jeho uložených funktor.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -682,17 +682,17 @@ public:
 
 #### <a name="parameters"></a>Parametry
 
-*Zábava*<br/>
-Typ uložené funktor.
+*Bavit*<br/>
+Typ uloženého funktoru.
 
 ## <a name="member-functions"></a>Členské funkce
 
 |Definice typu|Popis|
 |---------------------|-----------------|
-|delegate_type|Typ obecného delegátu.|
-|first_argument_type|Typ prvního argumentu funktor.|
-|result_type|Typ výsledku funktor.|
-|second_argument_type|Typ druhého argumentu funktor.|
+|delegate_type|Typ obecného delegáta.|
+|first_argument_type|Typ prvního argumentu funktor|
+|result_type|Typ výsledku funktor|
+|second_argument_type|Typ funktor druhého argumentu.|
 |stored_function_type|Typ funktor.|
 
 |Člen|Popis|
@@ -701,14 +701,14 @@ Typ uložené funktor.
 
 |Operátor|Popis|
 |--------------|-----------------|
-|operator()|Vypočítá požadované funkce.|
-|operator delegate_type^()|Přetypování funktor na delegáta.|
+|operator () – operátor|Vypočítá požadovanou funkci.|
+|operator delegate_type^()|Přenese funktor na delegáta.|
 
 ### <a name="remarks"></a>Poznámky
 
-Třída šablony popisuje jednoargumentové funktor, který ukládá funktor dvěma argumenty a druhý argument. Definuje členský operátor `operator()` tak, aby při objektu je volána jako funkce, vrátí výsledek volání uložené funktor zadaný první argument a uložené druhý argument.
+Třída šablony popisuje funktor s jedním argumentem, který ukládá funktor argumentu se dvěma argumenty a druhý argument. Definuje operátor členu `operator()` tak, že když je objekt volán jako funkce, vrátí výsledek volání uloženého funktor se zadaným prvním argumentem a uloženým druhým argumentem.
 
-Objekt můžete také předat jako argument funkce, jejíž typ je `delegate_type^` a budou převedeny správně.
+Objekt lze také předat jako argument funkce, jehož typ je `delegate_type^` a bude odpovídajícím způsobem převeden.
 
 ### <a name="example"></a>Příklad
 
@@ -758,9 +758,9 @@ int main()
 0 -1
 ```
 
-## <a name="divides"></a> vydělí (STL/CLR)
+## <a name="divides-stlclr"></a><a name="divides"></a>dělení (STL/CLR)
 
-Třída šablony popisuje funktor, který, při volání vrátí hodnotu prvního argumentu děleného po sekundách. Můžete ji použít, zadejte objekt funkce z hlediska jeho typ argumentu.
+Třída šablony popisuje funktor, který při volání vrátí první argument dělený druhým. Použijete ho k zadání objektu funkce z podmínek jeho typu argumentu.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -787,17 +787,17 @@ public:
 
 #### <a name="parameters"></a>Parametry
 
-*arg*<br/>
-Typ argumentů a vrácené hodnoty.
+*ARG*<br/>
+Typ argumentů a návratové hodnoty.
 
 ### <a name="member-functions"></a>Členské funkce
 
 |Definice typu|Popis|
 |---------------------|-----------------|
-|delegate_type|Typ obecného delegátu.|
-|first_argument_type|Typ prvního argumentu funktor.|
-|result_type|Typ výsledku funktor.|
-|second_argument_type|Typ druhého argumentu funktor.|
+|delegate_type|Typ obecného delegáta.|
+|first_argument_type|Typ prvního argumentu funktor|
+|result_type|Typ výsledku funktor|
+|second_argument_type|Typ funktor druhého argumentu.|
 
 |Člen|Popis|
 |------------|-----------------|
@@ -805,14 +805,14 @@ Typ argumentů a vrácené hodnoty.
 
 |Operátor|Popis|
 |--------------|-----------------|
-|operator()|Vypočítá požadované funkce.|
-|operator delegate_type^()|Přetypování funktor na delegáta.|
+|operator () – operátor|Vypočítá požadovanou funkci.|
+|operator delegate_type^()|Přenese funktor na delegáta.|
 
 ### <a name="remarks"></a>Poznámky
 
-Třída šablony popisuje funktor dvěma argumenty. Definuje členský operátor `operator()` tak, aby při objektu je volána jako funkce, vrátí prvního argumentu děleného po sekundách.
+Třída šablony popisuje funktor dvou argumentů. Definuje operátor členu `operator()` tak, že při volání objektu jako funkce vrátí první argument dělený druhým.
 
-Objekt můžete také předat jako argument funkce, jejíž typ je `delegate_type^` a budou převedeny správně.
+Objekt lze také předat jako argument funkce, jehož typ je `delegate_type^` a bude odpovídajícím způsobem převeden.
 
 ### <a name="example"></a>Příklad
 
@@ -859,9 +859,9 @@ int main()
 2 3
 ```
 
-## <a name="equal_to"></a> equal_to – (STL/CLR)
+## <a name="equal_to-stlclr"></a><a name="equal_to"></a>equal_to (STL/CLR)
 
-Třída šablony popisuje funktor, že při volání vrátí hodnotu true pouze v případě, že první argument je roven druhému. Můžete ji použít, zadejte objekt funkce z hlediska jeho typ argumentu.
+Třída šablony popisuje funktor, který při volání vrátí hodnotu true pouze v případě, že je první argument roven druhé. Použijete ho k zadání objektu funkce z podmínek jeho typu argumentu.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -888,17 +888,17 @@ public:
 
 #### <a name="parameters"></a>Parametry
 
-*arg*<br/>
+*ARG*<br/>
 Typ argumentů.
 
 ### <a name="member-functions"></a>Členské funkce
 
 |Definice typu|Popis|
 |---------------------|-----------------|
-|delegate_type|Typ obecného delegátu.|
-|first_argument_type|Typ prvního argumentu funktor.|
-|result_type|Typ výsledku funktor.|
-|second_argument_type|Typ druhého argumentu funktor.|
+|delegate_type|Typ obecného delegáta.|
+|first_argument_type|Typ prvního argumentu funktor|
+|result_type|Typ výsledku funktor|
+|second_argument_type|Typ funktor druhého argumentu.|
 
 |Člen|Popis|
 |------------|-----------------|
@@ -906,14 +906,14 @@ Typ argumentů.
 
 |Operátor|Popis|
 |--------------|-----------------|
-|operator()|Vypočítá požadované funkce.|
-|operator delegate_type^()|Přetypování funktor na delegáta.|
+|operator () – operátor|Vypočítá požadovanou funkci.|
+|operator delegate_type^()|Přenese funktor na delegáta.|
 
 ### <a name="remarks"></a>Poznámky
 
-Třída šablony popisuje funktor dvěma argumenty. Definuje členský operátor `operator()` tak, aby při objektu je volána jako funkce, vrátí hodnotu true pouze pokud první argument je roven druhému.
+Třída šablony popisuje funktor dvou argumentů. Definuje operátor členu `operator()` tak, že při volání objektu jako funkce vrátí hodnotu true, pouze pokud je první argument roven druhé.
 
-Objekt můžete také předat jako argument funkce, jejíž typ je `delegate_type^` a budou převedeny správně.
+Objekt lze také předat jako argument funkce, jehož typ je `delegate_type^` a bude odpovídajícím způsobem převeden.
 
 ### <a name="example"></a>Příklad
 
@@ -960,9 +960,9 @@ int main()
 1 0
 ```
 
-## <a name="greater"></a> větší (STL/CLR)
+## <a name="greater-stlclr"></a><a name="greater"></a>větší (STL/CLR)
 
-Třída šablony popisuje funktor, že při volání vrátí hodnotu true, pouze pokud je první argument větší než druhý. Můžete ji použít, zadejte objekt funkce z hlediska jeho typ argumentu.
+Třída šablony popisuje funktor, který při volání vrátí hodnotu true, pouze pokud je první argument větší než druhý. Použijete ho k zadání objektu funkce z podmínek jeho typu argumentu.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -989,17 +989,17 @@ public:
 
 #### <a name="parameters"></a>Parametry
 
-*arg*<br/>
+*ARG*<br/>
 Typ argumentů.
 
 ### <a name="member-functions"></a>Členské funkce
 
 |Definice typu|Popis|
 |---------------------|-----------------|
-|delegate_type|Typ obecného delegátu.|
-|first_argument_type|Typ prvního argumentu funktor.|
-|result_type|Typ výsledku funktor.|
-|second_argument_type|Typ druhého argumentu funktor.|
+|delegate_type|Typ obecného delegáta.|
+|first_argument_type|Typ prvního argumentu funktor|
+|result_type|Typ výsledku funktor|
+|second_argument_type|Typ funktor druhého argumentu.|
 
 |Člen|Popis|
 |------------|-----------------|
@@ -1007,14 +1007,14 @@ Typ argumentů.
 
 |Operátor|Popis|
 |--------------|-----------------|
-|operator()|Vypočítá požadované funkce.|
-|operator delegate_type^|Přetypování funktor na delegáta.|
+|operator () – operátor|Vypočítá požadovanou funkci.|
+|operátor delegate_type ^|Přenese funktor na delegáta.|
 
 ### <a name="remarks"></a>Poznámky
 
-Třída šablony popisuje funktor dvěma argumenty. Definuje členský operátor `operator()` tak, aby při objektu je volána jako funkce, vrátí hodnotu true pouze pokud je první argument větší než druhý.
+Třída šablony popisuje funktor dvou argumentů. Definuje operátor členu `operator()` tak, že při volání objektu jako funkce vrátí hodnotu true, pouze pokud je první argument větší než druhý.
 
-Objekt můžete také předat jako argument funkce, jejíž typ je `delegate_type^` a budou převedeny správně.
+Objekt lze také předat jako argument funkce, jehož typ je `delegate_type^` a bude odpovídajícím způsobem převeden.
 
 ### <a name="example"></a>Příklad
 
@@ -1061,9 +1061,9 @@ int main()
 1 0
 ```
 
-## <a name="greater_equal"></a> greater_equal – (STL/CLR)
+## <a name="greater_equal-stlclr"></a><a name="greater_equal"></a>greater_equal (STL/CLR)
 
-Třída šablony popisuje funktor, který, při volání, vrací hodnotu true, pouze pokud je první argument větší než nebo roven druhému. Můžete ji použít, zadejte objekt funkce z hlediska jeho typ argumentu.
+Třída šablony popisuje funktor, který při volání vrátí hodnotu true pouze v případě, že je první argument větší než nebo roven druhému. Použijete ho k zadání objektu funkce z podmínek jeho typu argumentu.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -1090,17 +1090,17 @@ public:
 
 #### <a name="parameters"></a>Parametry
 
-*arg*<br/>
+*ARG*<br/>
 Typ argumentů.
 
 ### <a name="member-functions"></a>Členské funkce
 
 |Definice typu|Popis|
 |---------------------|-----------------|
-|delegate_type|Typ obecného delegátu.|
-|first_argument_type|Typ prvního argumentu funktor.|
-|result_type|Typ výsledku funktor.|
-|second_argument_type|Typ druhého argumentu funktor.|
+|delegate_type|Typ obecného delegáta.|
+|first_argument_type|Typ prvního argumentu funktor|
+|result_type|Typ výsledku funktor|
+|second_argument_type|Typ funktor druhého argumentu.|
 
 |Člen|Popis|
 |------------|-----------------|
@@ -1108,14 +1108,14 @@ Typ argumentů.
 
 |Operátor|Popis|
 |--------------|-----------------|
-|operator()|Vypočítá požadované funkce.|
-|operator delegate_type^|Přetypování funktor na delegáta.|
+|operator () – operátor|Vypočítá požadovanou funkci.|
+|operátor delegate_type ^|Přenese funktor na delegáta.|
 
 ### <a name="remarks"></a>Poznámky
 
-Třída šablony popisuje funktor dvěma argumenty. Definuje členský operátor `operator()` tak, aby při objektu je volána jako funkce, vrátí hodnotu true pouze pokud je první argument větší než nebo roven druhému.
+Třída šablony popisuje funktor dvou argumentů. Definuje operátor členu `operator()` tak, že při volání objektu jako funkce vrátí hodnotu true, pouze pokud je první argument větší než nebo roven druhému.
 
-Objekt můžete také předat jako argument funkce, jejíž typ je `delegate_type^` a budou převedeny správně.
+Objekt lze také předat jako argument funkce, jehož typ je `delegate_type^` a bude odpovídajícím způsobem převeden.
 
 ### <a name="example"></a>Příklad
 
@@ -1162,9 +1162,9 @@ int main()
 1 0
 ```
 
-## <a name="less"></a> menší (STL/CLR)
+## <a name="less-stlclr"></a><a name="less"></a>less (STL/CLR)
 
-Třída šablony popisuje funktor, že při volání vrátí hodnotu true, pouze pokud je první argument menší než druhý. Můžete ji použít, zadejte objekt funkce z hlediska jeho typ argumentu.
+Třída šablony popisuje funktor, který při volání vrátí hodnotu true pouze v případě, že je první argument menší než druhý. Použijete ho k zadání objektu funkce z podmínek jeho typu argumentu.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -1191,17 +1191,17 @@ public:
 
 #### <a name="parameters"></a>Parametry
 
-*arg*<br/>
+*ARG*<br/>
 Typ argumentů.
 
 ### <a name="member-functions"></a>Členské funkce
 
 |Definice typu|Popis|
 |---------------------|-----------------|
-|delegate_type|Typ obecného delegátu.|
-|first_argument_type|Typ prvního argumentu funktor.|
-|result_type|Typ výsledku funktor.|
-|second_argument_type|Typ druhého argumentu funktor.|
+|delegate_type|Typ obecného delegáta.|
+|first_argument_type|Typ prvního argumentu funktor|
+|result_type|Typ výsledku funktor|
+|second_argument_type|Typ funktor druhého argumentu.|
 
 |Člen|Popis|
 |------------|-----------------|
@@ -1209,14 +1209,14 @@ Typ argumentů.
 
 |Operátor|Popis|
 |--------------|-----------------|
-|operator()|Vypočítá požadované funkce.|
-|operator delegate_type^|Přetypování funktor na delegáta.|
+|operator () – operátor|Vypočítá požadovanou funkci.|
+|operátor delegate_type ^|Přenese funktor na delegáta.|
 
 ### <a name="remarks"></a>Poznámky
 
-Třída šablony popisuje funktor dvěma argumenty. Definuje členský operátor `operator()` tak, aby při objektu je volána jako funkce, vrátí hodnotu true pouze pokud je první argument menší než druhý.
+Třída šablony popisuje funktor dvou argumentů. Definuje operátor členu `operator()` tak, že při volání objektu jako funkce vrátí hodnotu true, pouze pokud je první argument menší než druhý.
 
-Objekt můžete také předat jako argument funkce, jejíž typ je `delegate_type^` a budou převedeny správně.
+Objekt lze také předat jako argument funkce, jehož typ je `delegate_type^` a bude odpovídajícím způsobem převeden.
 
 ### <a name="example"></a>Příklad
 
@@ -1263,9 +1263,9 @@ int main()
 0 1
 ```
 
-## <a name="less_equal"></a> less_equal – (STL/CLR)
+## <a name="less_equal-stlclr"></a><a name="less_equal"></a>less_equal (STL/CLR)
 
-Třída šablony popisuje funktor, který, při volání, vrací hodnotu true, pouze pokud je první argument menší než druhý. Můžete ji použít, zadejte objekt funkce z hlediska jeho typ argumentu.
+Třída šablony popisuje funktor, který při volání vrátí hodnotu true pouze v případě, že je první argument menší nebo roven druhému. Použijete ho k zadání objektu funkce z podmínek jeho typu argumentu.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -1292,17 +1292,17 @@ public:
 
 #### <a name="parameters"></a>Parametry
 
-*arg*<br/>
+*ARG*<br/>
 Typ argumentů.
 
 ### <a name="member-functions"></a>Členské funkce
 
 |Definice typu|Popis|
 |---------------------|-----------------|
-|delegate_type|Typ obecného delegátu.|
-|first_argument_type|Typ prvního argumentu funktor.|
-|result_type|Typ výsledku funktor.|
-|second_argument_type|Typ druhého argumentu funktor.|
+|delegate_type|Typ obecného delegáta.|
+|first_argument_type|Typ prvního argumentu funktor|
+|result_type|Typ výsledku funktor|
+|second_argument_type|Typ funktor druhého argumentu.|
 
 |Člen|Popis|
 |------------|-----------------|
@@ -1310,14 +1310,14 @@ Typ argumentů.
 
 |Operátor|Popis|
 |--------------|-----------------|
-|operator()|Vypočítá požadované funkce.|
-|operator delegate_type^|Přetypování funktor na delegáta.|
+|operator () – operátor|Vypočítá požadovanou funkci.|
+|operátor delegate_type ^|Přenese funktor na delegáta.|
 
 ### <a name="remarks"></a>Poznámky
 
-Třída šablony popisuje funktor dvěma argumenty. Definuje členský operátor `operator()` tak, aby při objektu je volána jako funkce, vrátí hodnotu true pouze pokud je první argument menší než druhý.
+Třída šablony popisuje funktor dvou argumentů. Definuje operátor členu `operator()` tak, že při volání objektu jako funkce vrátí hodnotu true, pouze pokud je první argument menší nebo roven druhému.
 
-Objekt můžete také předat jako argument funkce, jejíž typ je `delegate_type^` a budou převedeny správně.
+Objekt lze také předat jako argument funkce, jehož typ je `delegate_type^` a bude odpovídajícím způsobem převeden.
 
 ### <a name="example"></a>Příklad
 
@@ -1364,9 +1364,9 @@ int main()
 0 1
 ```
 
-## <a name="logical_and"></a> logical_and – (STL/CLR)
+## <a name="logical_and-stlclr"></a><a name="logical_and"></a>logical_and (STL/CLR)
 
-Třída šablony popisuje funktor, že při volání vrátí hodnotu true pouze v případě, že první argument a druhý test jako true. Můžete ji použít, zadejte objekt funkce z hlediska jeho typ argumentu.
+Třída šablony popisuje funktor, který při volání vrátí hodnotu true pouze v případě, že první argument a druhý test jako true. Použijete ho k zadání objektu funkce z podmínek jeho typu argumentu.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -1393,17 +1393,17 @@ public:
 
 #### <a name="parameters"></a>Parametry
 
-*arg*<br/>
+*ARG*<br/>
 Typ argumentů.
 
 ### <a name="member-functions"></a>Členské funkce
 
 |Definice typu|Popis|
 |---------------------|-----------------|
-|delegate_type|Typ obecného delegátu.|
-|first_argument_type|Typ prvního argumentu funktor.|
-|result_type|Typ výsledku funktor.|
-|second_argument_type|Typ druhého argumentu funktor.|
+|delegate_type|Typ obecného delegáta.|
+|first_argument_type|Typ prvního argumentu funktor|
+|result_type|Typ výsledku funktor|
+|second_argument_type|Typ funktor druhého argumentu.|
 
 |Člen|Popis|
 |------------|-----------------|
@@ -1411,14 +1411,14 @@ Typ argumentů.
 
 |Operátor|Popis|
 |--------------|-----------------|
-|operator()|Vypočítá požadované funkce.|
-|operator delegate_type^|Přetypování funktor na delegáta.|
+|operator () – operátor|Vypočítá požadovanou funkci.|
+|operátor delegate_type ^|Přenese funktor na delegáta.|
 
 ### <a name="remarks"></a>Poznámky
 
-Třída šablony popisuje funktor dvěma argumenty. Definuje členský operátor `operator()` tak, aby při objektu je volána jako funkce, vrátí hodnotu true pouze pokud první argument a druhý test jako true.
+Třída šablony popisuje funktor dvou argumentů. Definuje operátor členu `operator()` tak, že při volání objektu jako funkce vrátí hodnotu true pouze v případě, že první argument a druhý test jako true.
 
-Objekt můžete také předat jako argument funkce, jejíž typ je `delegate_type^` a budou převedeny správně.
+Objekt lze také předat jako argument funkce, jehož typ je `delegate_type^` a bude odpovídajícím způsobem převeden.
 
 ### <a name="example"></a>Příklad
 
@@ -1465,9 +1465,9 @@ int main()
 1 0
 ```
 
-## <a name="logical_not"></a> logical_not – (STL/CLR)
+## <a name="logical_not-stlclr"></a><a name="logical_not"></a>logical_not (STL/CLR)
 
-Třída šablony popisuje funktor, že při volání vrátí hodnotu true, pouze pokud její argument testuje hodnotu false. Můžete ji použít, zadejte objekt funkce z hlediska jeho typ argumentu.
+Třída šablony popisuje funktor, který při volání vrátí hodnotu true pouze v případě, že argumenty otestuje jako hodnotu false. Použijete ho k zadání objektu funkce z podmínek jeho typu argumentu.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -1492,16 +1492,16 @@ public:
 
 #### <a name="parameters"></a>Parametry
 
-*arg*<br/>
+*ARG*<br/>
 Typ argumentů.
 
 ### <a name="member-functions"></a>Členské funkce
 
 |Definice typu|Popis|
 |---------------------|-----------------|
-|argument_type|Typ argumentu funktor.|
-|delegate_type|Typ obecného delegátu.|
-|result_type|Typ výsledku funktor.|
+|argument_type|Typ argumentu funktor|
+|delegate_type|Typ obecného delegáta.|
+|result_type|Typ výsledku funktor|
 
 |Člen|Popis|
 |------------|-----------------|
@@ -1509,14 +1509,14 @@ Typ argumentů.
 
 |Operátor|Popis|
 |--------------|-----------------|
-|operator()|Vypočítá požadované funkce.|
-|operator delegate_type^|Přetypování funktor na delegáta.|
+|operator () – operátor|Vypočítá požadovanou funkci.|
+|operátor delegate_type ^|Přenese funktor na delegáta.|
 
 ### <a name="remarks"></a>Poznámky
 
-Třída šablony popisuje funktor jedním argumentem. Definuje členský operátor `operator()` tak, aby při objektu je volána jako funkce, vrátí hodnotu true pouze pokud její argument testuje hodnotu false.
+Třída šablony popisuje funktor s jedním argumentem. Definuje operátor členu `operator()` tak, že při volání objektu jako funkce vrátí hodnotu true pouze v případě, že argument testuje hodnotu false.
 
-Objekt můžete také předat jako argument funkce, jejíž typ je `delegate_type^` a budou převedeny správně.
+Objekt lze také předat jako argument funkce, jehož typ je `delegate_type^` a bude odpovídajícím způsobem převeden.
 
 ### <a name="example"></a>Příklad
 
@@ -1555,9 +1555,9 @@ int main()
 0 1
 ```
 
-## <a name="logical_or"></a> logical_or – (STL/CLR)
+## <a name="logical_or-stlclr"></a><a name="logical_or"></a>logical_or (STL/CLR)
 
-Třída šablony popisuje funktor, že při volání vrátí hodnotu true pouze v případě, že argument první nebo druhé testy jako true. Můžete ji použít, zadejte objekt funkce z hlediska jeho typ argumentu.
+Třída šablony popisuje funktor, který při volání vrátí hodnotu true pouze v případě, že první argument nebo druhý test jako true. Použijete ho k zadání objektu funkce z podmínek jeho typu argumentu.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -1584,17 +1584,17 @@ public:
 
 #### <a name="parameters"></a>Parametry
 
-*arg*<br/>
+*ARG*<br/>
 Typ argumentů.
 
 ### <a name="member-functions"></a>Členské funkce
 
 |Definice typu|Popis|
 |---------------------|-----------------|
-|delegate_type|Typ obecného delegátu.|
-|first_argument_type|Typ prvního argumentu funktor.|
-|result_type|Typ výsledku funktor.|
-|second_argument_type|Typ druhého argumentu funktor.|
+|delegate_type|Typ obecného delegáta.|
+|first_argument_type|Typ prvního argumentu funktor|
+|result_type|Typ výsledku funktor|
+|second_argument_type|Typ funktor druhého argumentu.|
 
 |Člen|Popis|
 |------------|-----------------|
@@ -1602,14 +1602,14 @@ Typ argumentů.
 
 |Operátor|Popis|
 |--------------|-----------------|
-|operator()|Vypočítá požadované funkce.|
-|operator delegate_type^|Přetypování funktor na delegáta.|
+|operator () – operátor|Vypočítá požadovanou funkci.|
+|operátor delegate_type ^|Přenese funktor na delegáta.|
 
 ### <a name="remarks"></a>Poznámky
 
-Třída šablony popisuje funktor dvěma argumenty. Definuje členský operátor `operator()` tak, aby při objektu je volána jako funkce, vrátí hodnotu true pouze pokud první argument nebo druhý testy jako true.
+Třída šablony popisuje funktor dvou argumentů. Definuje operátor členu `operator()` tak, že při volání objektu jako funkce vrátí hodnotu true pouze v případě, že první argument nebo druhý test jako true.
 
-Objekt můžete také předat jako argument funkce, jejíž typ je `delegate_type^` a budou převedeny správně.
+Objekt lze také předat jako argument funkce, jehož typ je `delegate_type^` a bude odpovídajícím způsobem převeden.
 
 ### <a name="example"></a>Příklad
 
@@ -1656,9 +1656,9 @@ int main()
 1 0
 ```
 
-## <a name="minus"></a> minus (STL/CLR)
+## <a name="minus-stlclr"></a><a name="minus"></a>mínus (STL/CLR)
 
-Třída šablony popisuje funktor, který po zavolání vrátí první argument minus druhé. Můžete ji použít, zadejte objekt funkce z hlediska jeho typ argumentu.
+Třída šablony popisuje funktor, který při volání vrátí první argument mínus sekunda. Použijete ho k zadání objektu funkce z podmínek jeho typu argumentu.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -1685,17 +1685,17 @@ public:
 
 #### <a name="parameters"></a>Parametry
 
-*arg*<br/>
-Typ argumentů a vrácené hodnoty.
+*ARG*<br/>
+Typ argumentů a návratové hodnoty.
 
 ### <a name="member-functions"></a>Členské funkce
 
 |Definice typu|Popis|
 |---------------------|-----------------|
-|delegate_type|Typ obecného delegátu.|
-|first_argument_type|Typ prvního argumentu funktor.|
-|result_type|Typ výsledku funktor.|
-|second_argument_type|Typ druhého argumentu funktor.|
+|delegate_type|Typ obecného delegáta.|
+|first_argument_type|Typ prvního argumentu funktor|
+|result_type|Typ výsledku funktor|
+|second_argument_type|Typ funktor druhého argumentu.|
 
 |Člen|Popis|
 |------------|-----------------|
@@ -1703,14 +1703,14 @@ Typ argumentů a vrácené hodnoty.
 
 |Operátor|Popis|
 |--------------|-----------------|
-|operator()|Vypočítá požadované funkce.|
-|operator delegate_type^|Přetypování funktor na delegáta.|
+|operator () – operátor|Vypočítá požadovanou funkci.|
+|operátor delegate_type ^|Přenese funktor na delegáta.|
 
 ### <a name="remarks"></a>Poznámky
 
-Třída šablony popisuje funktor dvěma argumenty. Definuje členský operátor `operator()` tak, aby při objektu je volána jako funkce, vrátí první argument minus druhé.
+Třída šablony popisuje funktor dvou argumentů. Definuje operátor členu `operator()` tak, že při volání objektu jako funkce vrátí první argument mínus sekundu.
 
-Objekt můžete také předat jako argument funkce, jejíž typ je `delegate_type^` a budou převedeny správně.
+Objekt lze také předat jako argument funkce, jehož typ je `delegate_type^` a bude odpovídajícím způsobem převeden.
 
 ### <a name="example"></a>Příklad
 
@@ -1757,9 +1757,9 @@ int main()
 2 2
 ```
 
-## <a name="modulus"></a> modulo (STL/CLR)
+## <a name="modulus-stlclr"></a><a name="modulus"></a>Modulus (STL/CLR)
 
-Třída šablony popisuje funktor, který po zavolání vrátí první argument modulo druhé. Můžete ji použít, zadejte objekt funkce z hlediska jeho typ argumentu.
+Třída šablony popisuje funktor, který při volání vrátí první argument modulo sekundy. Použijete ho k zadání objektu funkce z podmínek jeho typu argumentu.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -1786,17 +1786,17 @@ public:
 
 #### <a name="parameters"></a>Parametry
 
-*arg*<br/>
-Typ argumentů a vrácené hodnoty.
+*ARG*<br/>
+Typ argumentů a návratové hodnoty.
 
 ### <a name="member-functions"></a>Členské funkce
 
 |Definice typu|Popis|
 |---------------------|-----------------|
-|delegate_type|Typ obecného delegátu.|
-|first_argument_type|Typ prvního argumentu funktor.|
-|result_type|Typ výsledku funktor.|
-|second_argument_type|Typ druhého argumentu funktor.|
+|delegate_type|Typ obecného delegáta.|
+|first_argument_type|Typ prvního argumentu funktor|
+|result_type|Typ výsledku funktor|
+|second_argument_type|Typ funktor druhého argumentu.|
 
 |Člen|Popis|
 |------------|-----------------|
@@ -1804,14 +1804,14 @@ Typ argumentů a vrácené hodnoty.
 
 |Operátor|Popis|
 |--------------|-----------------|
-|operator()|Vypočítá požadované funkce.|
-|operator delegate_type^|Přetypování funktor na delegáta.|
+|operator () – operátor|Vypočítá požadovanou funkci.|
+|operátor delegate_type ^|Přenese funktor na delegáta.|
 
 ### <a name="remarks"></a>Poznámky
 
-Třída šablony popisuje funktor dvěma argumenty. Definuje členský operátor `operator()` tak, aby při objektu je volána jako funkce, vrátí první argument modulo druhé.
+Třída šablony popisuje funktor dvou argumentů. Definuje operátor členu `operator()` tak, že při volání objektu jako funkce vrátí první argument modulo sekundy.
 
-Objekt můžete také předat jako argument funkce, jejíž typ je `delegate_type^` a budou převedeny správně.
+Objekt lze také předat jako argument funkce, jehož typ je `delegate_type^` a bude odpovídajícím způsobem převeden.
 
 ### <a name="example"></a>Příklad
 
@@ -1858,9 +1858,9 @@ int main()
 1 0
 ```
 
-## <a name="multiplies"></a> Vynásobí (STL/CLR)
+## <a name="multiplies-stlclr"></a><a name="multiplies"></a>násobení (STL/CLR)
 
-Třída šablony popisuje funktor, který po zavolání vrátí první argument doby druhé. Můžete ji použít, zadejte objekt funkce z hlediska jeho typ argumentu.
+Třída šablony popisuje funktor, který při volání vrátí první argument časy sekundy. Použijete ho k zadání objektu funkce z podmínek jeho typu argumentu.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -1887,17 +1887,17 @@ public:
 
 #### <a name="parameters"></a>Parametry
 
-*arg*<br/>
-Typ argumentů a vrácené hodnoty.
+*ARG*<br/>
+Typ argumentů a návratové hodnoty.
 
 ### <a name="member-functions"></a>Členské funkce
 
 |Definice typu|Popis|
 |---------------------|-----------------|
-|delegate_type|Typ obecného delegátu.|
-|first_argument_type|Typ prvního argumentu funktor.|
-|result_type|Typ výsledku funktor.|
-|second_argument_type|Typ druhého argumentu funktor.|
+|delegate_type|Typ obecného delegáta.|
+|first_argument_type|Typ prvního argumentu funktor|
+|result_type|Typ výsledku funktor|
+|second_argument_type|Typ funktor druhého argumentu.|
 
 |Člen|Popis|
 |------------|-----------------|
@@ -1905,14 +1905,14 @@ Typ argumentů a vrácené hodnoty.
 
 |Operátor|Popis|
 |--------------|-----------------|
-|operator()|Vypočítá požadované funkce.|
-|operator delegate_type^|Přetypování funktor na delegáta.|
+|operator () – operátor|Vypočítá požadovanou funkci.|
+|operátor delegate_type ^|Přenese funktor na delegáta.|
 
 ### <a name="remarks"></a>Poznámky
 
-Třída šablony popisuje funktor dvěma argumenty. Definuje členský operátor `operator()` tak, aby při objektu je volána jako funkce, vrátí první argument doby druhé.
+Třída šablony popisuje funktor dvou argumentů. Definuje operátor členu `operator()` tak, že když je objekt volán jako funkce, vrátí první argument pokaždé, kdy druhý.
 
-Objekt můžete také předat jako argument funkce, jejíž typ je `delegate_type^` a budou převedeny správně.
+Objekt lze také předat jako argument funkce, jehož typ je `delegate_type^` a bude odpovídajícím způsobem převeden.
 
 ### <a name="example"></a>Příklad
 
@@ -1959,9 +1959,9 @@ int main()
 8 3
 ```
 
-## <a name="negate"></a> negate – (STL/CLR)
+## <a name="negate-stlclr"></a><a name="negate"></a>negace (STL/CLR)
 
-Třída šablony popisuje funktor, který po zavolání vrátí svůj argument negovat. Můžete ji použít, zadejte objekt funkce z hlediska jeho typ argumentu.
+Třída šablony popisuje funktor, který při volání vrátí svůj argument negace. Použijete ho k zadání objektu funkce z podmínek jeho typu argumentu.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -1986,16 +1986,16 @@ public:
 
 #### <a name="parameters"></a>Parametry
 
-*arg*<br/>
+*ARG*<br/>
 Typ argumentů.
 
 ### <a name="member-functions"></a>Členské funkce
 
 |Definice typu|Popis|
 |---------------------|-----------------|
-|argument_type|Typ argumentu funktor.|
-|delegate_type|Typ obecného delegátu.|
-|result_type|Typ výsledku funktor.|
+|argument_type|Typ argumentu funktor|
+|delegate_type|Typ obecného delegáta.|
+|result_type|Typ výsledku funktor|
 
 |Člen|Popis|
 |------------|-----------------|
@@ -2003,14 +2003,14 @@ Typ argumentů.
 
 |Operátor|Popis|
 |--------------|-----------------|
-|operator()|Vypočítá požadované funkce.|
-|operator delegate_type^|Přetypování funktor na delegáta.|
+|operator () – operátor|Vypočítá požadovanou funkci.|
+|operátor delegate_type ^|Přenese funktor na delegáta.|
 
 ### <a name="remarks"></a>Poznámky
 
-Třída šablony popisuje funktor jedním argumentem. Definuje členský operátor `operator()` tak, aby při objektu je volána jako funkce, vrátí svůj argument negovat.
+Třída šablony popisuje funktor s jedním argumentem. Definuje operátor členu `operator()` tak, že při volání objektu jako funkce vrátí jeho argument negaci.
 
-Objekt můžete také předat jako argument funkce, jejíž typ je `delegate_type^` a budou převedeny správně.
+Objekt lze také předat jako argument funkce, jehož typ je `delegate_type^` a bude odpovídajícím způsobem převeden.
 
 ### <a name="example"></a>Příklad
 
@@ -2049,9 +2049,9 @@ int main()
 -4 3
 ```
 
-## <a name="not_equal_to"></a> not_equal_to – (STL/CLR)
+## <a name="not_equal_to-stlclr"></a><a name="not_equal_to"></a>not_equal_to (STL/CLR)
 
-Třída šablony popisuje funktor, že při volání vrátí hodnotu true, pouze pokud první argument není roven druhému. Můžete ji použít, zadejte objekt funkce z hlediska jeho typ argumentu.
+Třída šablony popisuje funktor, který při volání vrátí hodnotu true pouze v případě, že první argument není roven druhému. Použijete ho k zadání objektu funkce z podmínek jeho typu argumentu.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -2078,17 +2078,17 @@ public:
 
 #### <a name="parameters"></a>Parametry
 
-*arg*<br/>
+*ARG*<br/>
 Typ argumentů.
 
 ### <a name="member-functions"></a>Členské funkce
 
 |Definice typu|Popis|
 |---------------------|-----------------|
-|delegate_type|Typ obecného delegátu.|
-|first_argument_type|Typ prvního argumentu funktor.|
-|result_type|Typ výsledku funktor.|
-|second_argument_type|Typ druhého argumentu funktor.|
+|delegate_type|Typ obecného delegáta.|
+|first_argument_type|Typ prvního argumentu funktor|
+|result_type|Typ výsledku funktor|
+|second_argument_type|Typ funktor druhého argumentu.|
 
 |Člen|Popis|
 |------------|-----------------|
@@ -2096,14 +2096,14 @@ Typ argumentů.
 
 |Operátor|Popis|
 |--------------|-----------------|
-|operator()|Vypočítá požadované funkce.|
-|operator delegate_type^|Přetypování funktor na delegáta.|
+|operator () – operátor|Vypočítá požadovanou funkci.|
+|operátor delegate_type ^|Přenese funktor na delegáta.|
 
 ### <a name="remarks"></a>Poznámky
 
-Třída šablony popisuje funktor dvěma argumenty. Definuje členský operátor `operator()` tak, aby při objektu je volána jako funkce, vrátí hodnotu true pouze pokud první argument není roven druhému.
+Třída šablony popisuje funktor dvou argumentů. Definuje operátor členu `operator()` tak, že při volání objektu jako funkce vrátí hodnotu true pouze v případě, že první argument není roven druhému.
 
-Objekt můžete také předat jako argument funkce, jejíž typ je `delegate_type^` a budou převedeny správně.
+Objekt lze také předat jako argument funkce, jehož typ je `delegate_type^` a bude odpovídajícím způsobem převeden.
 
 ### <a name="example"></a>Příklad
 
@@ -2150,9 +2150,9 @@ int main()
 0 1
 ```
 
-## <a name="not1"></a> not1 – (STL/CLR)
+## <a name="not1-stlclr"></a><a name="not1"></a>not1 – (STL/CLR)
 
-Generuje `unary_negate` pro funktor.
+Vygeneruje `unary_negate` pro funktor.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -2163,17 +2163,17 @@ template<typename Fun>
 
 #### <a name="template-parameters"></a>Parametry šablony
 
-*Zábava*<br/>
+*Bavit*<br/>
 Typ funktor.
 
 #### <a name="function-parameters"></a>Parametry funkce
 
 *funktor*<br/>
-Funktor zabalit.
+Funktor, který se má zabalit
 
 ### <a name="remarks"></a>Poznámky
 
-Šablona funkce vrátí [unary_negate – (STL/CLR)](../dotnet/unary-negate-stl-clr.md)`<Fun>(functor)`. Můžete použít jako pohodlný způsob, jak zabalit funktor jedním argumentem v funktor, který zajišťuje jeho logický operátor NOT.
+Funkce šablony vrací [unary_negate (STL/CLR)](../dotnet/unary-negate-stl-clr.md)`<Fun>(functor)`. Použijete ho jako pohodlný způsob, jak zabalit funktor s jedním argumentem v funktor, který poskytuje svůj logický operátor NOT.
 
 ### <a name="example"></a>Příklad
 
@@ -2222,9 +2222,9 @@ int main()
 1 0
 ```
 
-## <a name="not2"></a> not2 – (STL/CLR)
+## <a name="not2-stlclr"></a><a name="not2"></a>not2 – (STL/CLR)
 
-Generuje `binary_negate` pro funktor.
+Vygeneruje `binary_negate` pro funktor.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -2235,17 +2235,17 @@ template<typename Fun>
 
 #### <a name="template-parameters"></a>Parametry šablony
 
-*Zábava*<br/>
+*Bavit*<br/>
 Typ funktor.
 
 #### <a name="function-parameters"></a>Parametry funkce
 
 *funktor*<br/>
-Funktor zabalit.
+Funktor, který se má zabalit
 
 ### <a name="remarks"></a>Poznámky
 
-Šablona funkce vrátí [binary_negate – (STL/CLR)](../dotnet/binary-negate-stl-clr.md)`<Fun>(functor)`. Můžete použít jako pohodlný způsob, jak zabalit funktor dvěma argumenty v funktor, který zajišťuje jeho logický operátor NOT.
+Funkce šablony vrací [binary_negate (STL/CLR)](../dotnet/binary-negate-stl-clr.md)`<Fun>(functor)`. Použijete ho jako pohodlný způsob, jak zabalit funktor dvou argumentů v funktor, které poskytuje své logické ne.
 
 ### <a name="example"></a>Příklad
 
@@ -2303,9 +2303,9 @@ int main()
 1 0
 ```
 
-## <a name="plus"></a> plus (STL/CLR)
+## <a name="plus-stlclr"></a><a name="plus"></a>plus (STL/CLR)
 
-Třída šablony popisuje funktor, který po zavolání vrátí první argument a druhý. Můžete ji použít, zadejte objekt funkce z hlediska jeho typ argumentu.
+Třída šablony popisuje funktor, který při volání vrátí první argument a druhý. Použijete ho k zadání objektu funkce z podmínek jeho typu argumentu.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -2332,17 +2332,17 @@ public:
 
 #### <a name="parameters"></a>Parametry
 
-*arg*<br/>
-Typ argumentů a vrácené hodnoty.
+*ARG*<br/>
+Typ argumentů a návratové hodnoty.
 
 ### <a name="member-functions"></a>Členské funkce
 
 |Definice typu|Popis|
 |---------------------|-----------------|
-|delegate_type|Typ obecného delegátu.|
-|first_argument_type|Typ prvního argumentu funktor.|
-|result_type|Typ výsledku funktor.|
-|second_argument_type|Typ druhého argumentu funktor.|
+|delegate_type|Typ obecného delegáta.|
+|first_argument_type|Typ prvního argumentu funktor|
+|result_type|Typ výsledku funktor|
+|second_argument_type|Typ funktor druhého argumentu.|
 
 |Člen|Popis|
 |------------|-----------------|
@@ -2350,14 +2350,14 @@ Typ argumentů a vrácené hodnoty.
 
 |Operátor|Popis|
 |--------------|-----------------|
-|operator()|Vypočítá požadované funkce.|
-|operator delegate_type^|Přetypování funktor na delegáta.|
+|operator () – operátor|Vypočítá požadovanou funkci.|
+|operátor delegate_type ^|Přenese funktor na delegáta.|
 
 ### <a name="remarks"></a>Poznámky
 
-Třída šablony popisuje funktor dvěma argumenty. Definuje členský operátor `operator()` tak, aby při objektu je volána jako funkce, vrátí první argument a druhý.
+Třída šablony popisuje funktor dvou argumentů. Definuje operátor členu `operator()` tak, že při volání objektu jako funkce vrátí první argument a druhý.
 
-Objekt můžete také předat jako argument funkce, jejíž typ je `delegate_type^` a budou převedeny správně.
+Objekt lze také předat jako argument funkce, jehož typ je `delegate_type^` a bude odpovídajícím způsobem převeden.
 
 ### <a name="example"></a>Příklad
 
@@ -2404,9 +2404,9 @@ int main()
 6 4
 ```
 
-## <a name="unary_delegate"></a> unary_delegate – (STL/CLR)
+## <a name="unary_delegate-stlclr"></a><a name="unary_delegate"></a>unary_delegate (STL/CLR)
 
-Třída genereic popisuje jeden argument delegáta. Můžete ji použít delegátu, co se týče její argument a návratovým typem.
+Třída genereic popisuje delegáta s jedním argumentem. Použijete ho k určení delegáta z podmínek jeho argumentů a návratových typů.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -2418,15 +2418,15 @@ generic<typename Arg,
 
 #### <a name="parameters"></a>Parametry
 
-*arg*<br/>
+*ARG*<br/>
 Typ argumentu.
 
-*výsledek*<br/>
+*Vyústit*<br/>
 Návratový typ.
 
 ### <a name="remarks"></a>Poznámky
 
-Delegát genereic popisuje funkci jedním argumentem.
+Genereic delegát popisuje funkci s jedním argumentem.
 
 Všimněte si, že pro:
 
@@ -2470,9 +2470,9 @@ hash(L'a') = 5
 hash(L'b') = 22
 ```
 
-## <a name="unary_delegate_noreturn"></a> unary_delegate_noreturn – (STL/CLR)
+## <a name="unary_delegate_noreturn-stlclr"></a><a name="unary_delegate_noreturn"></a>unary_delegate_noreturn (STL/CLR)
 
-Třída genereic popisuje jeden argument delegáta, který vrátí **void**. Můžete ji použít delegátu, z hlediska jeho typ argumentu.
+Třída genereic popisuje delegáta s jedním argumentem, který vrací **typ void**. Použijete ho k zadání delegáta z podmínek jeho typu argumentu.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -2483,12 +2483,12 @@ generic<typename Arg>
 
 #### <a name="parameters"></a>Parametry
 
-*arg*<br/>
+*ARG*<br/>
 Typ argumentu.
 
 ### <a name="remarks"></a>Poznámky
 
-Popisuje jedním argumentem funkce, která vrací delegáta genereic **void**.
+Delegát genereic popisuje funkci s jedním argumentem, která vrací **typ void**.
 
 Všimněte si, že pro:
 
@@ -2533,9 +2533,9 @@ hash(a) = 5
 hash(b) = 22
 ```
 
-## <a name="unary_negate"></a> unary_negate – (STL/CLR)
+## <a name="unary_negate-stlclr"></a><a name="unary_negate"></a>unary_negate (STL/CLR)
 
-Třída šablony popisuje funktor, který po zavolání vrátí logické ne z jeho uložených funktor jedním argumentem. Můžete ji použít, zadejte objekt funkce z hlediska jeho uložené funktor.
+Třída šablony popisuje funktor, který při volání vrátí logickou hodnotu, která není uložená funktor s jedním argumentem. Použijete ho k zadání objektu funkce z podmínek jeho uložených funktor.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -2561,16 +2561,16 @@ public:
 
 #### <a name="parameters"></a>Parametry
 
-*Zábava*<br/>
-Typ uložené funktor.
+*Bavit*<br/>
+Typ uloženého funktoru.
 
 ### <a name="member-functions"></a>Členské funkce
 
 |Definice typu|Popis|
 |---------------------|-----------------|
-|argument_type|Typ argumentu funktor.|
-|delegate_type|Typ obecného delegátu.|
-|result_type|Typ výsledku funktor.|
+|argument_type|Typ argumentu funktor|
+|delegate_type|Typ obecného delegáta.|
+|result_type|Typ výsledku funktor|
 
 |Člen|Popis|
 |------------|-----------------|
@@ -2578,14 +2578,14 @@ Typ uložené funktor.
 
 |Operátor|Popis|
 |--------------|-----------------|
-|operator()|Vypočítá požadované funkce.|
-|delegate_type^|Přetypování funktor na delegáta.|
+|operator () – operátor|Vypočítá požadovanou funkci.|
+|delegate_type^|Přenese funktor na delegáta.|
 
 ### <a name="remarks"></a>Poznámky
 
-Třída šablony popisuje jednoargumentové funktor, který ukládá další funktor jedním argumentem. Definuje členský operátor `operator()` tak, aby při objektu je volána jako funkce, vrátí logické ne z uložené funktor volána s argumentem.
+Třída šablony popisuje funktor s jedním argumentem, který ukládá další funktor s jedním argumentem. Definuje operátor členu `operator()` tak, že při volání objektu jako funkce vrátí logickou hodnotu NOT uloženého funktoru volaného s argumentem.
 
-Objekt můžete také předat jako argument funkce, jejíž typ je `delegate_type^` a budou převedeny správně.
+Objekt lze také předat jako argument funkce, jehož typ je `delegate_type^` a bude odpovídajícím způsobem převeden.
 
 ### <a name="example"></a>Příklad
 

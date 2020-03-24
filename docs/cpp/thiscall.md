@@ -7,35 +7,35 @@ f1_keywords:
 helpviewer_keywords:
 - __thiscall keyword [C++]
 ms.assetid: a6a22dd2-0101-4885-b33b-22f6057965df
-ms.openlocfilehash: e51879ae62b2881e0adadbe59859605f6cc58947
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 8772159dca71bb7605af5e5919425065423d503d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221909"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188152"
 ---
-# <a name="thiscall"></a>__thiscall
+# <a name="__thiscall"></a>__thiscall
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
-**Klíčové slovo __thiscall** konvence volání se používá pro členské funkce a je jako výchozí konvenci volání C++ členské funkce, které nepoužívají proměnné argumenty. V části **klíčové slovo __thiscall**, volaný vyčistí zásobník, který je možné `vararg` funkce. Argumenty jsou posunuty v zásobníku zprava doleva, se **to** ukazatel předávána prostřednictvím registrace ECX a ne na zásobník, v případě x86 architektury.
+Konvence volání **__thiscall** se používá pro členské funkce a je výchozí konvencí volání používaná C++ členskými funkcemi, které nepoužívají argumenty proměnných. V části **__thiscall**volaný vyčistí zásobník, což není možné pro funkce `vararg`. Argumenty jsou vloženy do zásobníku zprava doleva, s **tímto** ukazatelem předávaným pomocí Register ecx, nikoli v zásobníku, v architektuře x86.
 
-Jedním z důvodů použití **klíčové slovo __thiscall** je do třídy, jejíž členské funkce pomocí `__clrcall` ve výchozím nastavení. V takovém případě můžete použít **klíčové slovo __thiscall** aby jednotliví členové funkce volat z nativního kódu.
+Jedním z důvodů použití **__thiscall** je v třídách, jejichž členské funkce používají `__clrcall` ve výchozím nastavení. V takovém případě můžete použít **__thiscall** k tomu, aby se jednotlivé členské funkce mohly volat z nativního kódu.
 
-Při kompilaci s [/CLR: pure](../build/reference/clr-common-language-runtime-compilation.md), všechny funkce a ukazatelů na funkce jsou `__clrcall` není uvedeno jinak. **/CLR: pure** a **/CLR: safe** – možnosti kompilátoru jsou zastaralé v sadě Visual Studio 2015 a není podporována v sadě Visual Studio 2017.
+Při kompilaci s možností [/clr: Pure](../build/reference/clr-common-language-runtime-compilation.md)jsou všechny funkce a ukazatele funkce `__clrcall`, pokud není uvedeno jinak. Možnosti **/clr: Pure** a **/clr: Safe** jsou zastaralé v aplikaci Visual Studio 2015 a nejsou podporovány v aplikaci Visual Studio 2017.
 
-Ve verzích před Visual Studio 2005 **klíčové slovo __thiscall** konvence volání nelze zadat explicitně v aplikaci, protože **klíčové slovo __thiscall** nebyla klíčové slovo.
+V rámci vydání sady Visual Studio 2005 nebylo možné explicitně zadat konvenci volání **__thiscall** v programu, protože **__thiscall** nebyla klíčovým slovem.
 
-`vararg` Členské funkce použijte **__cdecl** konvence volání. Všechny argumenty funkce jsou vloženy do zásobníku s **to** ukazatel umístěny na zásobník, poslední
+`vararg` členské funkce používají konvenci volání **__cdecl** . Všechny argumenty funkce jsou vloženy do zásobníku s **tímto** ukazatelem umístěným v zásobníku jako poslední.
 
-Protože tato konvence volání se vztahuje pouze na C++, neexistuje žádné schéma dekorace názvu C.
+Vzhledem k tomu, že se tato C++konvence volání vztahuje pouze na, neexistuje žádné schéma dekorace názvu C.
 
-Na ARM a x64 počítače, **klíčové slovo __thiscall** je přijato a ignorováno kompilátory.
+V počítačích s procesorem ARM a x64 je **__thiscall** přijat a ignorován kompilátorem.
 
 U funkcí nestatické třídy platí, že je-li funkce definovaná mimo řádek, modifikátor konvence volání není nutné určit na definici mimo řádek. To znamená, že pro členské nestatické metody třídy se konvence volání zadaná během deklarace přejme během definice.
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Konvence předávání a pojmenování argumentů](../cpp/argument-passing-and-naming-conventions.md)

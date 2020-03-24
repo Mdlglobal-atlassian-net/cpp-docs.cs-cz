@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C1205
 ms.assetid: f855c145-8cf7-4dd1-bb19-257ee38b8382
-ms.openlocfilehash: c6e1fb545af0a069ac7d79957b967eba7659f825
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c37a1ece324971a3c0c68d584c04d78803212476
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62166423"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80203473"
 ---
 # <a name="fatal-error-c1205"></a>Závažná chyba C1205
 
-Obecné typy nejsou podporovány verzí modulu runtime nainstalovaného
+Obecné typy nejsou nainstalovanou verzí modulu runtime podporované.
 
-Verze common language runtime, který kompilátor používá není verze modulu runtime podporována aktuální kompilátorem.  Například funkci obecných typů vyžaduje modul runtime, který je nalezena shoda kompilátoru.
+Verze modulu CLR (Common Language Runtime), kterou kompilátor používá, není verzí modulu runtime podporovaného aktuálním kompilátorem.  Například funkce Generics vyžaduje modul runtime, který se shoduje s kompilátorem.
 
-Zadání cesty možná muset upravit.
+Vaše specifikace cesty může být potřeba upravit.

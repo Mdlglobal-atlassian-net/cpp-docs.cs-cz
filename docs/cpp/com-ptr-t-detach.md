@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - Detach method [C++]
 ms.assetid: 0652053e-af37-44e9-a278-2522212ebfed
-ms.openlocfilehash: affaefd8af4802836733587af62977171ba01410
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8ba42f19e3474cc4a3199771f761b021221f430e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154958"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80190011"
 ---
-# <a name="comptrtdetach"></a>_com_ptr_t::Detach
+# <a name="_com_ptr_tdetach"></a>_com_ptr_t::Detach
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
 Extrahuje a vrátí zapouzdřený ukazatel rozhraní.
 
@@ -27,10 +27,10 @@ Interface* Detach( ) throw( );
 
 ## <a name="remarks"></a>Poznámky
 
-Extrahuje a vrátí zapouzdřený ukazatel rozhraní a poté vyčistí úložiště zapouzdřeného ukazatele na hodnotu NULL. Tím je ukazatel rozhraní vyjmut ze zapouzdření. Je na vás volat `Release` na Vrácený ukazatel rozhraní.
+Extrahuje a vrátí zapouzdřený ukazatel rozhraní a poté vyčistí úložiště zapouzdřeného ukazatele na hodnotu NULL. Tím je ukazatel rozhraní vyjmut ze zapouzdření. Je až na to, abyste volali `Release` na ukazatel vráceného rozhraní.
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [_com_ptr_t – třída](../cpp/com-ptr-t-class.md)

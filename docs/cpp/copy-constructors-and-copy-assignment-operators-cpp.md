@@ -10,21 +10,21 @@ helpviewer_keywords:
 - copying objects
 - assigning values to copy objects
 ms.assetid: a94fe1f9-0289-4fb9-8633-77c654002c0d
-ms.openlocfilehash: 59f463d103e233a1d9b25da3243a16f67263c815
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: beabe4c6219975d33c7af98a94498188c9abfa55
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392294"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80189525"
 ---
 # <a name="copy-constructors-and-copy-assignment-operators-c"></a>Konstruktory a operátory přiřazení pro kopírování (C++)
 
 > [!NOTE]
-> Od verze C ++ 11, dva druhy přiřazení jsou podporovány v jazyce: *zkopírujte přiřazení* a *přesunutí přiřazení*. V tomto článku "přiřazení" znamená přiřazení kopie, pokud není výslovně uvedeno jinak. Informace o přiřazení pro přesun najdete v tématu [konstruktory přesunutí a operátory přiřazení přesunutí (C++)](move-constructors-and-move-assignment-operators-cpp.md).
+> Počínaje jazykem C++ 11 se v jazyce podporují dva druhy přiřazení: *přiřazení kopírování* a *přiřazení přesunutí*. V tomto článku "přiřazení" znamená přiřazení kopírování, pokud není výslovně uvedeno jinak. Informace o přiřazení přesunutí naleznete v tématu [Move konstruktors and Move Assignment OperatorsC++()](move-constructors-and-move-assignment-operators-cpp.md).
 >
 > Operace přiřazení a operace inicializace způsobí, že jsou objekty zkopírovány.
 
-- **Přiřazení**: Pokud je hodnota jednoho objektu přiřazena jiném objektu, první objekt zkopírován do druhého objektu. Proto
+- **Přiřazení**: je-li hodnota jednoho objektu přiřazena jinému objektu, je první objekt zkopírován do druhého objektu. Proto:
 
     ```cpp
     Point a, b;
@@ -34,7 +34,7 @@ ms.locfileid: "62392294"
 
    způsobí, že je hodnota `b` zkopírována do `a`.
 
-- **Inicializace**: Inicializaci dochází při deklaraci nového objektu, kdy jsou argumenty předány funkcím podle hodnoty nebo hodnoty jsou vráceny ve funkcích podle hodnoty.
+- **Inicializace**: inicializace probíhá při deklaraci nového objektu, pokud jsou argumenty předány funkcím podle hodnoty nebo když jsou hodnoty vráceny z funkcí podle hodnoty.
 
 Pro objekty typu třídy lze definovat sémantiku „kopie“. Podívejte se například na tento kód:
 
@@ -47,13 +47,13 @@ b = a;
 
 Předcházející kód může znamenat „kopírovat obsah FILE1.DAT do FILE2.DAT“ nebo může znamenat „ignorovat FILE2.DAT a udělat z `b` druhý popisovač FILE1.DAT“. Následujícím způsobem je ke každé třídě třeba připojit odpovídající sémantiku kopírování.
 
-- Pomocí operátoru přiřazení **operátoru =** spolu s odkazem na typ třídy jako návratový typ a parametrem předaným pomocí **const** odkaz – například `ClassName& operator=(const ClassName& x);`.
+- Pomocí **operátoru** přiřazení operátoru = spolu s odkazem na typ třídy jako návratový typ a parametr předaný odkazem **const** , například `ClassName& operator=(const ClassName& x);`.
 
 - Pomocí konstruktoru kopie.
 
-Pokud není třeba deklarovat kopírovací konstruktor, kompilátor vygeneruje požadování kopírovacího konstruktoru pro vás.  Pokud není třeba deklarovat operátor přiřazení kopie, vygeneruje kompilátor požadování kopírovacího operátoru přiřazení pro vás. Deklarování konstruktoru kopie nepotlačuje operátor přiřazení kopie vygenerovaný kompilátorem a opačně. Je-li jeden implementován, je doporučeno implementovat také druhý, aby byl význam kódu jasný.
+Pokud konstruktor Copy nedeklarujete, kompilátor pro vás vygeneruje konstruktor kopírovacího členu.  Pokud nedeklarujete operátor přiřazení kopie, kompilátor pro vás vygeneruje operátor přiřazení kopie s dalšími členy. Deklarování konstruktoru kopie nepotlačuje operátor přiřazení kopie vygenerovaný kompilátorem a opačně. Je-li jeden implementován, je doporučeno implementovat také druhý, aby byl význam kódu jasný.
 
-Konstruktor kopie přebírá argument typu <em>název třídy</em><strong>&</strong>, kde *název třídy* je název třídy, pro kterou je konstruktor definován. Příklad:
+Kopírovací konstruktor přebírá argument typu <em>class-name</em> <strong>&</strong>, kde *název třídy* je název třídy, pro kterou je konstruktor definovaný. Příklad:
 
 ```cpp
 // spec1_copying_class_objects.cpp
@@ -70,19 +70,19 @@ int main()
 ```
 
 > [!NOTE]
-> Ujistěte se, typ argumentu kopírovacího konstruktoru **const** <em>název třídy</em> <strong>&</strong> kdykoli je to možné. To zabrání konstruktoru kopie v nechtěných úpravách objektu, ze kterého kopíruje. Také umožněno kopírování z **const** objekty.
+> Pokud je to možné, vytvořte typ argumentu **const const** <em>název třídy</em> <strong>&</strong> . To zabrání konstruktoru kopie v nechtěných úpravách objektu, ze kterého kopíruje. Umožňuje také kopírování z objektů **const** .
 
-## <a name="compiler-generated-copy-constructors"></a>Generovaný kompilátorem kopírovací konstruktory
+## <a name="compiler-generated-copy-constructors"></a>Konstruktory pro kopírování generované kompilátorem
 
-Kompilátor kopírovací konstruktory vygenerované kompilátorem, jako je uživatelem definovaný kopírovací konstruktory, mají jediný argument typu "odkaz na *název třídy*." Výjimkou je, když všechny základní a členské třídy musí mít kopírovací konstruktory deklarované, aby přijímaly jediný argument typu **const** <em>název třídy</em><strong>&</strong>. V takovém případě je argument kopírovacího konstruktoru vygenerovaný kompilátorem také **const**.
+Konstruktory pro kopírování generované kompilátorem, jako jsou uživatelsky definované konstruktory, mají jeden argument typu "odkaz na *název třídy*". Výjimkou je, že všechny základní třídy a třídy členů mají kopírovací konstruktory deklarované jako přebírání jednoho argumentu typu **const** <strong>&</strong> <em>název třídy</em> . V takovém případě je argument kopírovacího konstruktoru generovaný kompilátorem také **const**.
 
-Pokud typ argumentu kopírovacího konstruktoru není **const**, inicializace kopírováním **const** vygeneruje chybu. Opak není pravdou: Pokud je argumentem **const**, můžete inicializovat zkopírováním objektu, který není **const**.
+Když typ argumentu kopírovacího konstruktoru není **const**, inicializace zkopírováním objektu **const** vygeneruje chybu. Reverzní není true: Pokud je argument **const**, můžete inicializovat zkopírováním objektu, který není **const**.
 
-Operátory přiřazení vygenerované kompilátorem následují stejný vzor s ohledem na **const.** Přijímají jediný argument typu <em>název třídy</em> <strong>&</strong> dokud operátory přiřazení ve všech základních a členských třídách přijímají argumenty typu **const** <em>název třídy</em><strong>&</strong>. V takovém případě vygenerovaný třídou přijímá operátor přiřazení **const** argument.
+Operátory přiřazení generované kompilátorem dodržují stejný vzor s ohledem na **const.** Přebírají jeden argument typu <em>class-name</em> <strong>&</strong> , pokud operátory přiřazení ve všech základních a členských třídách přebírají argumenty typu **const** <em>Class-Name</em> <strong>&</strong>. V tomto případě operátor přiřazení generované třídy přijímá argument **const** .
 
 > [!NOTE]
 > Pokud jsou virtuální základní třídy inicializovány kopírovacími konstruktory, ať už vygenerovanými kompilátorem nebo definovanými uživatelem, jsou inicializovány pouze jednou v místě, kde jsou vytvořeny.
 
-Důsledky jsou podobné jako u těch, které jsou vygenerovány kopírovacím konstruktorem. Pokud typ argumentu není **const**, přiřazení **const** vygeneruje chybu. Opak není pravdou: Pokud **const** hodnotu, která není přiřazena hodnota **const**, přiřazení uspěje.
+Důsledky jsou podobné jako u těch, které jsou vygenerovány kopírovacím konstruktorem. Pokud typ argumentu není **const**, přiřazení z objektu **const** vygeneruje chybu. Opak není true: Pokud je **konstantní** hodnota přiřazena k hodnotě, která není **const**, přiřazení je úspěšné.
 
 Další informace o přetížených operátorech přiřazení naleznete v tématu [přiřazení](../cpp/assignment.md).

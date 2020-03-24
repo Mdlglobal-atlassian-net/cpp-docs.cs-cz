@@ -10,16 +10,16 @@ helpviewer_keywords:
 - __uuidof keyword [C++]
 - __LIBID_ keyword [C++]
 ms.assetid: badfe709-809b-4b66-ad48-ee35039d25c6
-ms.openlocfilehash: a14ef9043ec2196ff930a37d0eff95e90024d3d5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 09348d061fde4cb09eb6eb351f146404f355e184
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62244153"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80187788"
 ---
-# <a name="uuidof-operator"></a>__uuidof – operátor
+# <a name="__uuidof-operator"></a>__uuidof – operátor
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
 Získá identifikátor GUID připojený k výrazu.
 
@@ -31,20 +31,20 @@ __uuidof (expression)
 
 ## <a name="remarks"></a>Poznámky
 
-*Výraz* může být název typu, ukazatel, odkaz nebo pole tohoto typu, specializovaná šablona pro tyto typy nebo proměnná těchto typů. Argument je platný, pokud jej kompilátor může použít k vyhledání připojeného identifikátoru GUID.
+*Výraz* může být název typu, ukazatel, odkaz nebo pole tohoto typu, šablona specializovaná na tyto typy nebo proměnná těchto typů. Argument je platný, pokud jej kompilátor může použít k vyhledání připojeného identifikátoru GUID.
 
-Zvláštní případ je, když buď **0** nebo je jako argument zadána hodnota NULL. V takovém případě **__uuidof** vrátí identifikátor GUID, který je tvořen nulami.
+Zvláštní případ tohoto vnitřního objektu je v případě, že je jako argument zadán buď **0** , nebo null. V takovém případě **__uuidof** vrátí identifikátor GUID, který je tvořen nulami.
 
 Pomocí tohoto klíčového slova je možné extrahovat identifikátor GUID připojený k:
 
-- Objekt podle [uuid](../cpp/uuid-cpp.md) rozšířeného atributu.
+- Objekt pomocí rozšířeného atributu [UUID](../cpp/uuid-cpp.md) .
 
-- Bloku knihovny vytvořenému s [modulu](../windows/attributes/module-cpp.md) atribut.
+- Blok knihovny vytvořený s atributem [Module](../windows/attributes/module-cpp.md) .
 
 > [!NOTE]
-> V sestavení pro ladění **__uuidof** vždy inicializuje objekt dynamicky (za běhu). V sestavení pro vydání **__uuidof** staticky (v době kompilace) inicializovat objekt.
+> V sestavení pro ladění **__uuidof** vždy dynamicky inicializuje objekt (za běhu). V sestavení pro vydání je **__uuidof** možné staticky (v době kompilace) inicializovat objekt.
 
-Z důvodu kompatibility s předchozími verzemi **_uuidof** je synonymum pro **__uuidof** Pokud – možnost kompilátoru [/Za \(zakázat jazyková rozšíření)](../build/reference/za-ze-disable-language-extensions.md) je zadat.
+Z důvodu kompatibility s předchozími verzemi je **_uuidof** synonymem pro **__uuidof** , pokud je zadána možnost kompilátoru [/za \(Disable Language Extensions)](../build/reference/za-ze-disable-language-extensions.md) .
 
 ## <a name="example"></a>Příklad
 
@@ -73,15 +73,15 @@ int main() {
 
 ## <a name="comments"></a>Komentáře
 
-V případech, kdy knihovnu s názvem je již v oboru, můžete použít `__LIBID_` místo **__uuidof**. Příklad:
+V případech, kdy už název knihovny není v oboru, můžete místo **__uuidof**použít `__LIBID_`. Příklad:
 
 ```cpp
 StringFromCLSID(__LIBID_, &lpolestr);
 ```
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Výrazy s unárními operátory](../cpp/expressions-with-unary-operators.md)<br/>
 [Klíčová slova](../cpp/keywords-cpp.md)

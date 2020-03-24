@@ -5,16 +5,16 @@ helpviewer_keywords:
 - sample applications [C++], OLE DB Templates
 - OLE DB consumer templates, about consumer templates
 ms.assetid: 526aa897-5961-4396-85cb-c84f77113551
-ms.openlocfilehash: 81bb80446ef3df09eaed7a8728e789de67c27122
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f1cc18d2192a42d22e31ee346f1e233cd7615ac0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395544"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209258"
 ---
 # <a name="working-with-ole-db-consumer-templates"></a>Práce s šablonami příjemců OLE DB
 
-Následující témata obsahují příklady, jak používat šablony příjemce technologie OLE DB v běžných scénářů:
+V následujících tématech najdete několik příkladů použití OLE DB šablon spotřebitelů v běžných scénářích:
 
 - [Zjednodušení přístupu k datům s použitím atributů databáze](../../data/oledb/simplifying-data-access-with-database-attributes.md)
 
@@ -48,16 +48,16 @@ Následující témata obsahují příklady, jak používat šablony příjemce 
 
 - [Příjem oznámení](../../data/oledb/receiving-notifications.md)
 
-Příklad vytvoření a implementace příjemce technologie OLE DB najdete v tématu [vytvoření jednoduchého příjemce](../../data/oledb/creating-an-ole-db-consumer.md).
+Příklad vytvoření a implementace OLE DB příjemce najdete v tématu [Vytvoření jednoduchého příjemce](../../data/oledb/creating-an-ole-db-consumer.md).
 
-Můžete také najít příklady použití šablony příjemce technologie OLE DB v následující ukázky:
+Můžete také najít příklady použití šablon příjemce OLE DB v následujících ukázkách:
 
-- [CatDB](https://github.com/Microsoft/VCSamples)
+- [CatDB](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Consumer)
 
-- [DBViewer](https://github.com/Microsoft/VCSamples)
+- [DBViewer](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Consumer)
 
-- [MultiRead](https://github.com/Microsoft/VCSamples)
+- [Více čtení](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Consumer)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[OLE DB – šablony příjemce](../../data/oledb/ole-db-consumer-templates-cpp.md)
+[Šablony OLE DB příjemců](../../data/oledb/ole-db-consumer-templates-cpp.md)

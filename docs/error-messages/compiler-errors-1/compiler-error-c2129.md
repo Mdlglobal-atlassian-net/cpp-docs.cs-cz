@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C2129
 ms.assetid: 21a8223e-1d22-4baa-9ca1-922b7f751dd0
-ms.openlocfilehash: e55107419235420d272c738e9d8ef7cf277c11c9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a3e2268bfc5597668e8689d093a0c2bb7f18e037
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397624"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80207282"
 ---
 # <a name="compiler-error-c2129"></a>Chyba kompilátoru C2129
 
-statické funkce 'function' deklarovaná, ale nedefinovaná.
+statická funkce Function je deklarovaná, ale není definovaná.
 
-Dopředný odkaz provedené `static` funkce, která se nikdy definovaný.
+Je proveden dopředný odkaz na funkci `static`, která není nikdy definována.
 
-A `static` funkce musí být definován v oboru souboru. Pokud funkce je definována v jiném souboru, musí být deklarován `extern`.
+V rámci rozsahu souboru musí být definována funkce `static`. Pokud je funkce definována v jiném souboru, musí být deklarována `extern`.

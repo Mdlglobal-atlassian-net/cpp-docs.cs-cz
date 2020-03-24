@@ -6,18 +6,18 @@ helpviewer_keywords:
 - dynamic accessors
 - overriding, dynamic accessors
 ms.assetid: cbefd156-6da5-490d-b795-c2d7d874f7ce
-ms.openlocfilehash: 01beab80fb8574e0caa4ad3054d174c60106ce94
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d46531f2d4075df98081886dfdfd1f2cf65d9948
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62282933"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209843"
 ---
 # <a name="overriding-a-dynamic-accessor"></a>Přepsání dynamického přístupového objektu
 
-Při použití dynamického přístupového objektu jako `CDynamicAccessor`, příkaz `Open` metoda vytvoří přístupový objekt automaticky, založeného na informace o sloupci otevřené sady řádků. Můžete přepsání dynamického přístupového objektu k řízení, přesně jak jsou vázané sloupce.
+Při použití dynamického přístupového objektu, jako je například `CDynamicAccessor`, metoda `Open` metody vytvoří přistupující objekt automaticky na základě informací o sloupci otevřené sady řádků. Můžete přepsat dynamický přistupující objekt pro řízení přesně tak, jak jsou sloupce svázané.
 
-Přepsání dynamického přístupového objektu, předejte **false** jako poslední parametr `CCommand::Open` metody. To zabraňuje `Open` od vytvoření automaticky přistupujícího objektu. Potom můžete zavolat `GetColumnInfo` a volat `AddBindEntry` pro každý sloupec, který chcete vytvořit vazbu. Následující kód ukazuje, jak to udělat:
+Chcete-li přepsat dynamický přistupující objekt, předejte **hodnotu false** jako poslední parametr metodě `CCommand::Open`. To brání `Open` automatickému vytváření přístupového objektu. Potom můžete volat `GetColumnInfo` a volat `AddBindEntry` pro každý sloupec, který chcete vytvořit. Následující kód ukazuje, jak to provést:
 
 ```cpp
 USES_CONVERSION;
@@ -69,6 +69,6 @@ while (product.MoveNext() == S_OK)
 }
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Použití přístupových objektů](../../data/oledb/using-accessors.md)

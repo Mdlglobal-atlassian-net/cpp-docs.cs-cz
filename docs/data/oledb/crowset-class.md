@@ -228,12 +228,12 @@ helpviewer_keywords:
 - Update method
 - UpdateAll method
 ms.assetid: b0228a90-b8dd-47cc-b397-8d4c15c1e7f4
-ms.openlocfilehash: 689cd3a1f7496ad75bf83e0b1a2a14f7bd1b1f6f
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: e67e385a8ce0eb9a6b041d4a4f0d43e2db551c79
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79441175"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211286"
 ---
 # <a name="crowset-class"></a>CRowset – třída
 
@@ -292,7 +292,7 @@ V OLE DB sada řádků je objekt, pomocí kterého program nastavuje a načítá
 
 Tato třída nemá být vytvořena jako instance, ale místo toho předána jako parametr šablony pro `CTable` nebo `CCommand` (`CRowset` je výchozí).
 
-## <a name="addrefrows"></a>CRowset:: AddRefRows
+## <a name="crowsetaddrefrows"></a><a name="addrefrows"></a>CRowset:: AddRefRows
 
 Volá [IRowset:: AddRefRows](/previous-versions/windows/desktop/ms719619(v=vs.85)) a zvyšuje (po jednom) počet odkazů přidružený k aktuálnímu popisovači řádků.
 
@@ -310,7 +310,7 @@ Standardní hodnota HRESULT.
 
 Tato metoda zvýší počet odkazů pro aktuální popisovač řádku. Zavolejte [ReleaseRows](../../data/oledb/crowset-releaserows.md) pro snížení počtu. Řádky vrácené metodami Move mají počet odkazů na jeden.
 
-## <a name="close"></a>CRowset:: Close
+## <a name="crowsetclose"></a><a name="close"></a>CRowset:: Close
 
 Uvolní řádky a aktuální rozhraní [IRowset](/previous-versions/windows/desktop/ms720986(v=vs.85)) .
 
@@ -324,7 +324,7 @@ void Close() throw();
 
 Tato metoda uvolní všechny řádky, které jsou aktuálně v sadě řádků.
 
-## <a name="compare"></a>CRowset:: Compare
+## <a name="crowsetcompare"></a><a name="compare"></a>CRowset:: Compare
 
 Porovná dvě záložky pomocí [IRowsetLocate:: Compare](/previous-versions/windows/desktop/ms709539(v=vs.85)).
 
@@ -357,7 +357,7 @@ Tato metoda vyžaduje volitelné `IRowsetLocate`rozhraní, které nemusí být p
 
 Informace o používání záložek v příjemce najdete v tématu [použití záložek](../../data/oledb/using-bookmarks.md).
 
-## <a name="crowset"></a>CRowset:: CRowset
+## <a name="crowsetcrowset"></a><a name="crowset"></a>CRowset:: CRowset
 
 Vytvoří nový objekt `CRowset` a (volitelně) přidruží ho k rozhraní [IRowset](/previous-versions/windows/desktop/ms720986(v=vs.85)) dodanému jako parametr.
 
@@ -374,7 +374,7 @@ CRowset(IRowset* pRowset);
 *pRowset*<br/>
 pro Ukazatel na `IRowset` rozhraní, které se má přidružit k této třídě.
 
-## <a name="delete"></a>CRowset::D dstranit
+## <a name="crowsetdelete"></a><a name="delete"></a>CRowset::D dstranit
 
 Volá [IRowsetChange::D eleterows](/previous-versions/windows/desktop/ms724362(v=vs.85)) pro odstranění aktuálního řádku ze sady řádků.
 
@@ -388,7 +388,7 @@ HRESULT Delete() const throw();
 
 Standardní hodnota HRESULT.
 
-## <a name="findnextrow"></a>CRowset:: FindNextRow
+## <a name="crowsetfindnextrow"></a><a name="findnextrow"></a>CRowset:: FindNextRow
 
 Vyhledá další odpovídající řádek po zadané záložce.
 
@@ -441,7 +441,7 @@ Tato metoda vyžaduje volitelné `IRowsetFind`rozhraní, které nemusí být pod
 
 Informace o používání záložek v příjemce najdete v tématu [použití záložek](../../data/oledb/using-bookmarks.md).
 
-## <a name="getapproximateposition"></a>CRowset:: GetApproximatePosition
+## <a name="crowsetgetapproximateposition"></a><a name="getapproximateposition"></a>CRowset:: GetApproximatePosition
 
 Vrátí přibližnou pozici řádku odpovídajícího záložce.
 
@@ -474,7 +474,7 @@ Tato metoda vyžaduje volitelné `IRowsetScroll`rozhraní, které nemusí být p
 
 Informace o používání záložek v příjemce najdete v tématu [použití záložek](../../data/oledb/using-bookmarks.md).
 
-## <a name="getdata"></a>CRowset:: GetData
+## <a name="crowsetgetdata"></a><a name="getdata"></a>CRowset:: GetData
 
 Načte data z kopie řádku sady řádků.
 
@@ -499,7 +499,7 @@ Standardní hodnota HRESULT.
 
 Pokud zadáte přistupující objekt, který není autoaccesser v [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md), použijte tuto metodu k explicitnímu získání dat předáním čísla přistupujícího objektu.
 
-## <a name="getdatahere"></a>CRowset:: GetDataHere
+## <a name="crowsetgetdatahere"></a><a name="getdatahere"></a>CRowset:: GetDataHere
 
 Načte data z aktuálního řádku a umístí je do zadané vyrovnávací paměti.
 
@@ -526,7 +526,7 @@ Standardní hodnota HRESULT.
 
 Příklad použití této funkce naleznete v ukázce s více [čteními](../../overview/visual-cpp-samples.md).
 
-## <a name="getoriginaldata"></a>CRowset:: GetOriginalData
+## <a name="crowsetgetoriginaldata"></a><a name="getoriginaldata"></a>CRowset:: GetOriginalData
 
 Volá `IRowsetUpdate::GetOriginalData`, aby se načetla data, která se v poslední době načetla nebo přenesly do zdroje dat.
 
@@ -546,7 +546,7 @@ Tato metoda načte data, která se v poslední době načítají nebo přenáš�
 
 Tato metoda vyžaduje volitelné `IRowsetUpdate`rozhraní, které nemusí být podporované pro všechny poskytovatele; Pokud se jedná o tento případ, metoda vrátí E_NOINTERFACE. Musíte také nastavit `DBPROP_IRowsetUpdate` na VARIANT_TRUE před voláním `Open` v tabulce nebo příkazu obsahujícím sadu řádků.
 
-## <a name="getrowstatus"></a>CRowset:: GetRowStatus
+## <a name="crowsetgetrowstatus"></a><a name="getrowstatus"></a>CRowset:: GetRowStatus
 
 Vrátí stav všech řádků.
 
@@ -569,7 +569,7 @@ Standardní hodnota HRESULT.
 
 Tato metoda vyžaduje volitelné `IRowsetUpdate`rozhraní, které nemusí být podporované pro všechny poskytovatele; Pokud se jedná o tento případ, metoda vrátí E_NOINTERFACE. Musíte také nastavit `DBPROP_IRowsetUpdate` na VARIANT_TRUE před voláním `Open` v tabulce nebo příkazu obsahujícím sadu řádků.
 
-## <a name="insert"></a>CRowset:: INSERT
+## <a name="crowsetinsert"></a><a name="insert"></a>CRowset:: INSERT
 
 Vytvoří a inicializuje nový řádek pomocí dat z přístupového objektu.
 
@@ -606,7 +606,7 @@ Nejprve vytvořte třídu tabulky vložením nového objektu ATL do projektu. Na
 
 [!code-cpp[NVC_OLEDB_Consumer#10](../../data/oledb/codesnippet/cpp/crowset-insert_1.cpp)]
 
-## <a name="issamerow"></a>CRowset:: IsSameRow
+## <a name="crowsetissamerow"></a><a name="issamerow"></a>CRowset:: IsSameRow
 
 Porovná zadaný řádek s aktuálním řádkem.
 
@@ -625,7 +625,7 @@ pro Popisovač řádku, který má být porovnán s aktuálním řádkem.
 
 Standardní hodnota HRESULT. S_OK určuje, že jsou řádky stejné. Další hodnoty naleznete v tématu [IRowsetIndentity:: IsSameRow](/previous-versions/windows/desktop/ms719629(v=vs.85)) v *odkazu programátora OLE DB* v Windows SDK.
 
-## <a name="movefirst"></a>CRowset:: MoveFirst
+## <a name="crowsetmovefirst"></a><a name="movefirst"></a>CRowset:: MoveFirst
 
 Přesune kurzor na počáteční pozici a načte počáteční řádek.
 
@@ -643,7 +643,7 @@ Standardní hodnota HRESULT.
 
 Volá [IRowset:: volání metody RestartPosition](/previous-versions/windows/desktop/ms712877(v=vs.85)) , aby se přeumístilo umístění dalšího načtení na počáteční pozici (pozice, která byla při vytvoření sady řádků Next-Fetch), a načte počáteční řádek.
 
-## <a name="movelast"></a>CRowset:: MoveLast
+## <a name="crowsetmovelast"></a><a name="movelast"></a>CRowset:: MoveLast
 
 Přesune kurzor na poslední řádek.
 
@@ -663,7 +663,7 @@ Volání [IRowset:: volání metody RestartPosition](/previous-versions/windows/
 
 Tato metoda vyžaduje, abyste nastavili `DBPROP_CANSCROLLBACKWARDS` na VARIANT_TRUE před voláním `Open` v tabulce nebo příkazu, který obsahuje sadu řádků. (Pro lepší výkon je také možné nastavit `DBPROP_QUICKRESTART` VARIANT_TRUE.)
 
-## <a name="movenext"></a>CRowset:: MoveNext
+## <a name="crowsetmovenext"></a><a name="movenext"></a>CRowset:: MoveNext
 
 Přesune kurzor na další záznam.
 
@@ -700,7 +700,7 @@ Tato metoda vyžaduje, abyste před voláním `Open` v tabulce nebo příkazu ob
 
 Jinak (Pokud *lSkip* > = 0 a *bForward* = true), nemusíte nastavovat žádné další vlastnosti.
 
-## <a name="moveprev"></a>CRowset:: MovePrev
+## <a name="crowsetmoveprev"></a><a name="moveprev"></a>CRowset:: MovePrev
 
 Přesune kurzor na předchozí záznam.
 
@@ -718,7 +718,7 @@ Standardní hodnota HRESULT.
 
 Tato metoda vyžaduje, abyste před voláním `Open` v tabulce nebo příkazu, který obsahuje sadu řádků, nastavili buď `DBPROP_CANFETCHBACKWARDS`, nebo `DBPROP_CANSCROLLBACKWARDS` na VARIANT_TRUE.
 
-## <a name="movetobookmark"></a>CRowset:: MoveToBookmark
+## <a name="crowsetmovetobookmark"></a><a name="movetobookmark"></a>CRowset:: MoveToBookmark
 
 Načte řádek označený záložkou nebo řádku v zadaném posunu (*lSkip*) z této záložky.
 
@@ -747,7 +747,7 @@ Tato metoda vyžaduje volitelné `IRowsetLocate`rozhraní, které nemusí být p
 
 Informace o používání záložek v příjemce najdete v tématu [použití záložek](../../data/oledb/using-bookmarks.md).
 
-## <a name="movetoratio"></a>CRowset:: MoveToRatio
+## <a name="crowsetmovetoratio"></a><a name="movetoratio"></a>CRowset:: MoveToRatio
 
 Načte řádky začínající ze zlomkové pozice v sadě řádků.
 
@@ -779,11 +779,11 @@ Standardní hodnota HRESULT.
 
 `(nNumerator *  RowsetSize ) / nDenominator`
 
-kde `RowsetSize` je velikost sady řádků měřenou v řádcích. Přesnost tohoto vzorce závisí na konkrétním zprostředkovateli. Podrobnosti najdete v tématu [IRowsetScroll:: GetRowsAtRatio](/previous-versions/windows/desktop/ms709602(v=vs.85)).
+Kde `RowsetSize` je velikost sady řádků měřenou v řádcích. Přesnost tohoto vzorce závisí na konkrétním zprostředkovateli. Podrobnosti najdete v tématu [IRowsetScroll:: GetRowsAtRatio](/previous-versions/windows/desktop/ms709602(v=vs.85)).
 
 Tato metoda vyžaduje volitelné `IRowsetScroll`rozhraní, které nemusí být podporované pro všechny poskytovatele; Pokud se jedná o tento případ, metoda vrátí E_NOINTERFACE. Musíte také nastavit `DBPROP_IRowsetScroll` na VARIANT_TRUE před voláním `Open` v tabulce nebo příkazu obsahujícím sadu řádků.
 
-## <a name="releaserows"></a>CRowset:: ReleaseRows
+## <a name="crowsetreleaserows"></a><a name="releaserows"></a>CRowset:: ReleaseRows
 
 Volá [IRowset:: ReleaseRows](/previous-versions/windows/desktop/ms719771(v=vs.85)) , aby se uvolnil aktuální popisovač řádku.
 
@@ -797,7 +797,7 @@ HRESULT ReleaseRows() throw();
 
 Standardní hodnota HRESULT.
 
-## <a name="setdata"></a>CRowset:: SetData
+## <a name="crowsetsetdata"></a><a name="setdata"></a>CRowset:: SetData
 
 Nastaví hodnoty dat v jednom nebo více sloupcích řádku.
 
@@ -826,7 +826,7 @@ Tato metoda vyžaduje volitelné `IRowsetChange`rozhraní, které nemusí být p
 
 Operace nastavení může selhat, pokud nelze do jednoho nebo více sloupců zapisovat. Opravte to tak, že upravíte mapu kurzoru.
 
-## <a name="undo"></a>CRowset:: Undo
+## <a name="crowsetundo"></a><a name="undo"></a>CRowset:: Undo
 
 Vrátí všechny změny provedené na řádku od posledního načtení nebo [aktualizace](../../data/oledb/crowset-update.md).
 
@@ -857,7 +857,7 @@ Standardní hodnota HRESULT.
 
 Tato metoda vyžaduje volitelné `IRowsetUpdate`rozhraní, které nemusí být podporované pro všechny poskytovatele; Pokud se jedná o tento případ, metoda vrátí E_NOINTERFACE. Musíte také nastavit `DBPROP_IRowsetUpdate` na VARIANT_TRUE před voláním `Open` v tabulce nebo příkazu obsahujícím sadu řádků.
 
-## <a name="update"></a>CRowset:: Update
+## <a name="crowsetupdate"></a><a name="update"></a>CRowset:: Update
 
 Přenese všechny nedokončené změny provedené na aktuálním řádku od posledního načtení nebo `Update` volání.
 
@@ -890,7 +890,7 @@ Přenese všechny probíhající změny provedené na aktuálním řádku od pos
 
 Tato metoda vyžaduje volitelné `IRowsetUpdate`rozhraní, které nemusí být podporované pro všechny poskytovatele; Pokud se jedná o tento případ, metoda vrátí E_NOINTERFACE. Musíte také nastavit `DBPROP_IRowsetUpdate` na VARIANT_TRUE před voláním `Open` v tabulce nebo příkazu obsahujícím sadu řádků.
 
-## <a name="updateall"></a>CRowset:: UpdateAll
+## <a name="crowsetupdateall"></a><a name="updateall"></a>CRowset:: UpdateAll
 
 Přenese všechny nedokončené změny provedené na všech řádcích od posledního načtení nebo `Update` volání.
 

@@ -95,18 +95,18 @@ helpviewer_keywords:
 - value_compare member [STL/CLR]
 - value_type member [STL/CLR]
 ms.assetid: d110e356-ba3e-4e52-9e2d-d997bf975c96
-ms.openlocfilehash: 3cfd4e97af8b5abf163ce88eb81b438ef4737ed5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 92434a6617e041e4c0ab11499b8eb3535093caad
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62222894"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80208569"
 ---
-# <a name="hashset-stlclr"></a>hash_set (STL/CLR)
+# <a name="hash_set-stlclr"></a>hash_set (STL/CLR)
 
-Třída šablony popisuje objekt, který řídí různé délky sekvence elementů, která má obousměrný přístup. Použití kontejneru `hash_set` spravovat řadu prvků, jako zatřiďovací tabulku, každý záznam tabulky, ukládání obousměrné propojený seznam uzlů a každý uzel ukládání jeden element. Hodnota každého prvku se používá jako klíč, že pořadí řazení.
+Třída šablony popisuje objekt, který ovládá proměnlivou délku posloupnosti prvků, které mají obousměrný přístup. Použijete `hash_set` kontejneru ke správě sekvence prvků jako zatřiďovací tabulky, každý záznam v tabulce, který ukládá obousměrný propojený seznam uzlů, a každý uzel, který ukládá jeden element. Hodnota každého prvku se používá jako klíč pro řazení sekvence.
 
-V popisu níže `GValue` je stejný jako `GKey`, který je stejný jako *klíč* Pokud je typ odkazu, v takovém případě je `Key^`.
+V popisu níže je `GValue` stejné jako `GKey`, která je naopak stejná jako *klíč* , pokud se jedná o typ REF, v takovém případě je to `Key^`.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -126,14 +126,14 @@ template<typename Key>
 
 ### <a name="parameters"></a>Parametry
 
-*Key*<br/>
-Typ klíčovou komponentou elementu v řízené sekvenci.
+*Klíč*<br/>
+Typ klíčové součásti prvku v řízené sekvenci.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<cliext – / hash_set >
+**Záhlaví:** \<cliext –/hash_set >
 
-**Namespace:** cliext –
+**Obor názvů:** cliext –
 
 ## <a name="declarations"></a>Deklarace
 
@@ -141,102 +141,102 @@ Typ klíčovou komponentou elementu v řízené sekvenci.
 |---------------------|-----------------|
 |[hash_set::const_iterator (STL/CLR)](#const_iterator)|Typ konstantního iterátoru řízené sekvence|
 |[hash_set::const_reference (STL/CLR)](#const_reference)|Typ konstantního odkazu na prvek|
-|[hash_set::const_reverse_iterator (STL/CLR)](#const_reverse_iterator)|Typ konstantního zpětného iterátoru řízené sekvence.|
-|[hash_set::difference_type (STL/CLR)](#difference_type)|Typ (může být podepsaná) vzdálenosti mezi dvěma prvky.|
-|[hash_set::generic_container (STL/CLR)](#generic_container)|Typ obecné rozhraní pro kontejner.|
-|[hash_set::generic_iterator (STL/CLR)](#generic_iterator)|Typ iterátoru pro obecné rozhraní pro kontejner.|
-|[hash_set::generic_reverse_iterator (STL/CLR)](#generic_reverse_iterator)|Typ "reverse iterator" pro obecné rozhraní pro kontejner.|
-|[hash_set::generic_value (STL/CLR)](#generic_value)|Typ elementu pro obecné rozhraní pro kontejner.|
-|[hash_set::hasher (STL/CLR)](#hasher)|Hash delegáta pro klíč.|
+|[hash_set::const_reverse_iterator (STL/CLR)](#const_reverse_iterator)|Typ konstantního reverzního iterátoru řízené sekvence.|
+|[hash_set::difference_type (STL/CLR)](#difference_type)|Typ (možná znaménko) vzdálenosti mezi dvěma prvky.|
+|[hash_set::generic_container (STL/CLR)](#generic_container)|Typ obecného rozhraní pro kontejner.|
+|[hash_set::generic_iterator (STL/CLR)](#generic_iterator)|Typ iterátoru pro obecné rozhraní kontejneru.|
+|[hash_set::generic_reverse_iterator (STL/CLR)](#generic_reverse_iterator)|Typ reverzního iterátoru pro obecné rozhraní kontejneru.|
+|[hash_set::generic_value (STL/CLR)](#generic_value)|Typ elementu pro obecné rozhraní kontejneru.|
+|[hash_set::hasher (STL/CLR)](#hasher)|Delegát algoritmu hash pro klíč|
 |[hash_set::iterator (STL/CLR)](#iterator)|Typ iterátoru řízené sekvence|
-|[hash_set::key_compare (STL/CLR)](#key_compare)|Pořadí delegáta pro dva klíče.|
+|[hash_set::key_compare (STL/CLR)](#key_compare)|Delegát řazení pro dva klíče.|
 |[hash_set::key_type (STL/CLR)](#key_type)|Typ klíče řazení|
 |[hash_set::reference (STL/CLR)](#reference)|Typ odkazu na prvek|
-|[hash_set::reverse_iterator (STL/CLR)](#reverse_iterator)|Typ "reverse iterator" pro řízenou sekvenci.|
-|[hash_set::size_type (STL/CLR)](#size_type)|Typ vzdálenosti (nezáporné) mezi dvěma prvky.|
-|[hash_set::value_compare (STL/CLR)](#value_compare)|Pořadí delegáta pro dvě hodnoty prvků.|
+|[hash_set::reverse_iterator (STL/CLR)](#reverse_iterator)|Typ reverzního iterátoru řízené sekvence.|
+|[hash_set::size_type (STL/CLR)](#size_type)|Typ (nezáporné) vzdálenosti mezi dvěma prvky.|
+|[hash_set::value_compare (STL/CLR)](#value_compare)|Delegát řazení pro dvě hodnoty elementu.|
 |[hash_set::value_type (STL/CLR)](#value_type)|Typ prvku|
 
 |Členská funkce|Popis|
 |---------------------|-----------------|
 |[hash_set::begin (STL/CLR)](#begin)|Určuje začátek řízené sekvence.|
-|[hash_set::bucket_count (STL/CLR)](#bucket_count)|Spočítá počet kbelíků.|
+|[hash_set::bucket_count (STL/CLR)](#bucket_count)|Spočítá počet intervalů.|
 |[hash_set::clear (STL/CLR)](#clear)|Odebere všechny prvky.|
-|[hash_set::count (STL/CLR)](#count)|Vrátí počet prvků odpovídající zadanému klíči.|
+|[hash_set::count (STL/CLR)](#count)|Spočítá prvky, které odpovídají zadanému klíči.|
 |[hash_set::empty (STL/CLR)](#empty)|Zkouší, zda nejsou přítomny žádné prvky.|
 |[hash_set::end (STL/CLR)](#end)|Určuje konec řízené sekvence.|
 |[hash_set::equal_range (STL/CLR)](#equal_range)|Najde rozsah, který odpovídá zadanému klíči.|
 |[hash_set::erase (STL/CLR)](#erase)|Odebere prvky v určených pozicích.|
 |[hash_set::find (STL/CLR)](#find)|Vyhledá prvek, který odpovídá zadanému klíči.|
-|[hash_set::hash_delegate (STL/CLR)](#hash_delegate)|Zkopíruje hash delegáta pro klíč.|
+|[hash_set::hash_delegate (STL/CLR)](#hash_delegate)|Zkopíruje delegáta algoritmu hash na klíč.|
 |[hash_set::hash_set (STL/CLR)](#hash_set)|Sestaví objekt kontejneru.|
 |[hash_set::insert (STL/CLR)](#insert)|Přidá prvky.|
-|[hash_set::key_comp (STL/CLR)](#key_comp)|Zkopíruje pořadí delegáta pro dva klíče.|
+|[hash_set::key_comp (STL/CLR)](#key_comp)|Zkopíruje delegáta řazení dvou klíčů.|
 |[hash_set::load_factor (STL/CLR)](#load_factor)|Spočítá průměrný počet prvků na kbelík.|
-|[hash_set::lower_bound (STL/CLR)](#lower_bound)|Vyhledá počátek rozsahu, který odpovídá zadanému klíči.|
+|[hash_set::lower_bound (STL/CLR)](#lower_bound)|Vyhledá začátek rozsahu, který odpovídá zadanému klíči.|
 |[hash_set::make_value (STL/CLR)](#make_value)|Vytvoří objekt hodnoty.|
 |[hash_set::max_load_factor (STL/CLR)](#max_load_factor)|Získá nebo nastaví maximální počet prvků na kbelík.|
-|[hash_set::rbegin (STL/CLR)](#rbegin)|Určuje začátek řízené obrácené sekvenci.|
+|[hash_set::rbegin (STL/CLR)](#rbegin)|Určuje začátek obrácené kontrolované sekvence.|
 |[hash_set::rehash (STL/CLR)](#rehash)|Znovu vytvoří hashovací tabulku.|
-|[hash_set::rend (STL/CLR)](#rend)|Určuje konec řízené obrácené sekvenci.|
+|[hash_set::rend (STL/CLR)](#rend)|Určuje konec reverzní kontrolované sekvence.|
 |[hash_set::size (STL/CLR)](#size)|Spočítá počet prvků.|
 |[hash_set::swap (STL/CLR)](#swap)|Zamění obsah dvou kontejnerů.|
-|[hash_set::to_array (STL/CLR)](#to_array)|Zkopíruje do nového pole řízené sekvence.|
+|[hash_set::to_array (STL/CLR)](#to_array)|Zkopíruje řízenou sekvenci do nového pole.|
 |[hash_set::upper_bound (STL/CLR)](#upper_bound)|Najde konec rozsahu, který odpovídá zadanému klíči.|
-|[hash_set::value_comp (STL/CLR)](#value_comp)|Zkopíruje pořadí delegáta pro dvě hodnoty prvků.|
+|[hash_set::value_comp (STL/CLR)](#value_comp)|Zkopíruje delegáta řazení pro dvě hodnoty elementu.|
 
 |Operátor|Popis|
 |--------------|-----------------|
-|[hash_set::operator= (STL/CLR)](#op)|Nahradí řízené sekvence.|
+|[hash_set::operator= (STL/CLR)](#op)|Nahradí řízenou sekvenci.|
 
 ## <a name="interfaces"></a>Rozhraní
 
 |Rozhraní|Popis|
 |---------------|-----------------|
-|<xref:System.ICloneable>|Duplicitní objektu.|
-|<xref:System.Collections.IEnumerable>|Pořadí mezi prvky.|
-|<xref:System.Collections.ICollection>|Údržba skupiny prvků.|
-|<xref:System.Collections.Generic.IEnumerable%601>|Pořadí pomocí zadané elementy.|
-|<xref:System.Collections.Generic.ICollection%601>|Údržba skupiny zadané elementy.|
-|IHash\<klíč, hodnota >|Udržujte obecný kontejneru.|
+|<xref:System.ICloneable>|Duplikuje objekt.|
+|<xref:System.Collections.IEnumerable>|Sekvence prostřednictvím prvků.|
+|<xref:System.Collections.ICollection>|Udržovat skupinu prvků.|
+|<xref:System.Collections.Generic.IEnumerable%601>|Sekvence prostřednictvím typových elementů.|
+|<xref:System.Collections.Generic.ICollection%601>|Udržovat skupinu typových elementů.|
+|IHash\<klíč, hodnota >|Udržujte obecný kontejner.|
 
 ## <a name="remarks"></a>Poznámky
 
-Objekt přiděluje a uvolňuje úložiště pro ovládací prvky jako jednotlivé uzly v propojeném seznamu obousměrné pořadí. K urychlení přístupu, objekt také uchovává různé délky pole ukazatelů do seznamu (zatřiďovací tabulku), efektivní správa celý seznam jako posloupnost podseznamy, nebo intervalů. Vloží prvky do kontejneru, který udržuje seřazený tím, že změna vazby mezi uzly, nikdy zkopírováním obsah jednoho uzlu do jiného. To znamená, že můžete vložit a odebrat elementy volně bez narušení zbývající prvky.
+Objekt přiděluje a uvolňuje úložiště pro sekvenci, která řídí jako jednotlivé uzly v obousměrném propojeném seznamu. Chcete-li zrychlit přístup, objekt také udržuje pole ukazatelů s proměnlivou délkou v seznamu (zatřiďovací tabulka) a efektivně spravuje celý seznam jako posloupnost podseznamů nebo kontejnerů. Vloží prvky do kontejneru, který je pořízen, změnou propojení mezi uzly, nikdy kopírováním obsahu jednoho uzlu do druhého. To znamená, že můžete vkládat a odebírat prvky volně bez narušování zbývajících prvků.
 
-Objekt seřadí každého kbelíku pomocí volání uloženého delegáta objekt typu [hash_set::key_compare (STL/CLR)](../dotnet/hash-set-key-compare-stl-clr.md). Můžete zadat objekt uložené delegáta při konstrukci hash_set; Pokud chcete zadat žádný objekt. delegát, výchozí hodnota je porovnání `operator<=(key_type, key_type)`.
+Objekt seřadí jednotlivé ovládací prvky IT pomocí volání uloženého objektu delegáta typu [hash_set:: key_compare (STL/CLR)](../dotnet/hash-set-key-compare-stl-clr.md). Uložený objekt delegáta lze zadat při vytváření hash_set; Pokud nezadáte žádný delegovaný objekt, výchozí hodnota je porovnávání `operator<=(key_type, key_type)`.
 
-Přístup k uložené delegáta objektu voláním členské funkce [hash_set::key_comp (STL/CLR)](../dotnet/hash-set-key-comp-stl-clr.md)`()`. Takový objekt delegáta musí definovat stejné pořadí mezi klíči typu [hash_set::key_type (STL/CLR)](../dotnet/hash-set-key-type-stl-clr.md). To znamená pro jakékoli dva klíče `X` a `Y`:
+K uloženému objektu delegáta přistupujete voláním členské funkce [hash_set:: key_comp (STL/CLR)](../dotnet/hash-set-key-comp-stl-clr.md)`()`. Takový objekt delegáta musí definovat ekvivalentní řazení mezi klíči typu [hash_set:: key_type (STL/CLR)](../dotnet/hash-set-key-type-stl-clr.md). To znamená, že pro všechny dva klíče `X` a `Y`:
 
-`key_comp()(X, Y)` Vrátí výsledek stejný datový typ Boolean při každém volání.
+`key_comp()(X, Y)` vrací stejný logický výsledek při každém volání.
 
-Pokud `key_comp()(X, Y) && key_comp()(Y, X)` má hodnotu true, pak `X` a `Y` se říká, že mají ekvivalentní řazení.
+Pokud má `key_comp()(X, Y) && key_comp()(Y, X)` hodnotu true, pak `X` a `Y` se říká, že mají ekvivalentní řazení.
 
-Žádné pořadí pravidlo, který se chová jako `operator<=(key_type, key_type)`, `operator>=(key_type, key_type)` nebo `operator==(key_type, key_type)` definuje eqivalent řazení.
+Každé pravidlo řazení, které se chová jako `operator<=(key_type, key_type)`, `operator>=(key_type, key_type)` nebo `operator==(key_type, key_type)` definuje řazení eqivalent.
 
-Všimněte si, že zajišťuje kontejneru pouze, že elementy jehož klíče mají ekvivalentní řazení (a které hodnotu hash na stejnou hodnotu celého čísla) sousedí v sadě. Na rozdíl od třídy šablony [hash_multiset (STL/CLR)](../dotnet/hash-multiset-stl-clr.md), objekt třídy šablony `hash_set` zajistí, že klíče pro všechny prvky jsou jedinečné. (Žádné dva klíče mají ekvivalentní řazení.)
+Všimněte si, že kontejner zajišťuje pouze prvky, jejichž klíče mají ekvivalentní řazení (a algoritmus hash na stejnou celočíselnou hodnotu) sousedící v rámci intervalu. Na rozdíl od třídy template [hash_multiset (STL/CLR)](../dotnet/hash-multiset-stl-clr.md), objekt třídy šablony `hash_set` zajišťuje jedinečnost klíčů pro všechny elementy. (Žádné dva klíče nemají ekvivalentní řazení.)
 
-Objekt určuje, které sadě by měl obsahovat daného klíče řazení pomocí volání uloženého delegáta objektu typu [hash_set::hasher (STL/CLR)](../dotnet/hash-set-hasher-stl-clr.md). Přístup k tomuto uloženého objektu voláním členské funkce [hash_set::hash_delegate (STL/CLR)](../dotnet/hash-set-hash-delegate-stl-clr.md) `()` získat celočíselnou hodnotu, která závisí na hodnotě klíče. Můžete zadat objekt uložené delegáta při konstrukci hash_set; Pokud chcete zadat žádný objekt. delegát, výchozí hodnota je funkce `System::Object::hash_value(key_type)`. To znamená pro všechny klíče `X` a `Y`:
+Objekt určuje, který kontejner by měl obsahovat daný klíč řazení voláním uloženého objektu delegáta typu [hash_set:: hash (STL/CLR)](../dotnet/hash-set-hasher-stl-clr.md). K tomuto uloženému objektu přistupujete voláním členské funkce [hash_set:: hash_delegate (STL/CLR)](../dotnet/hash-set-hash-delegate-stl-clr.md)`()` k získání celočíselné hodnoty, která závisí na hodnotě klíče. Uložený objekt delegáta lze zadat při vytváření hash_set; Pokud nezadáte žádný delegovaný objekt, výchozí hodnota je funkce `System::Object::hash_value(key_type)`. To znamená, že u všech klíčů `X` a `Y`:
 
-`hash_delegate()(X)` Vrátí při každém volání stejný výsledek celého čísla.
+`hash_delegate()(X)` vrátí stejný celočíselný výsledek při každém volání.
 
-Pokud `X` a `Y` mají ekvivalentní řazení, pak `hash_delegate()(X)` by měla vrátit stejný výsledek celého čísla jako `hash_delegate()(Y)`.
+Pokud `X` a `Y` mají ekvivalentní řazení, `hash_delegate()(X)` by měl vrátit stejný celočíselný výsledek jako `hash_delegate()(Y)`.
 
-Každý prvek slouží jako klíč a hodnotu. Sekvence je reprezentována způsobem, který umožňuje vyhledávání, vkládání a odstranění libovolný prvek s několika operacemi, která je nezávislá počet prvků v sekvenci (konstantní čas) – alespoň v nejlepším případě. Vkládání prvků navíc nezruší platnost žádných iterátorů a odstranění prvku zruší platnost pouze těch iterátorů, které odkazují na odstraněný prvek.
+Každý prvek slouží jako klíč i hodnota. Sekvence je reprezentována způsobem, který umožňuje vyhledávání, vkládání a odebírání libovolného prvku s řadou operací, které jsou nezávislé na počtu prvků v sekvenci (konstantní čas), a to alespoň v nejlepším případě. Vkládání prvků navíc nezruší platnost žádných iterátorů a odstranění prvku zruší platnost pouze těch iterátorů, které odkazují na odstraněný prvek.
 
-Pokud se hodnoty hash nejsou rovnoměrně, ale můžete degenerovanou zatřiďovací tabulku. V krajních – pro funkci hash, která vždy vrátí stejnou hodnotu--je úměrný počtu prvků v sekvenci (lineární čas) vyhledávání, vkládání a odstranění. Kontejner endeavors zvolit přiměřené hashovací funkci, střední kontejneru velikost a velikost tabulky hash (celkový počet kbelíků), ale můžete přepsat některé nebo všechny tyto možnosti. Zobrazit, například funkce [hash_set::max_load_factor (STL/CLR)](../dotnet/hash-set-max-load-factor-stl-clr.md) a [hash_set::rehash (STL/CLR)](../dotnet/hash-set-rehash-stl-clr.md).
+Pokud se hodnoty hash nestejnoměrně distribuují, může se vygenerovat zatřiďovací tabulka. V extrémním – pro funkci hash, která vždy vrací stejnou hodnotu – vyhledávání, vkládání a odebírání, je úměrné počtu prvků v sekvenci (lineární čas). Kontejner budoucna k výběru přiměřené funkce hash, střední velikosti intervalu a velikosti tabulky hash (celkový počet intervalů), ale můžete přepsat všechny nebo všechny tyto možnosti. Podívejte se například na funkce [hash_set:: max_load_factor (STL/CLR)](../dotnet/hash-set-max-load-factor-stl-clr.md) a [hash_set:: rehash (STL/CLR)](../dotnet/hash-set-rehash-stl-clr.md).
 
-Hash_set – podporuje obousměrné iterátory, což znamená, že přejdete na sousedící prvky zadaný iterátor, který určuje elementu v řízené sekvenci. Speciální hlavního uzlu odpovídá iterátorů vrácené [hash_set::end (STL/CLR)](../dotnet/hash-set-end-stl-clr.md)`()`. Tento iterátor, který má přístup po posledním prvku v řízené sekvenci lze snížit, pokud jsou k dispozici. Můžete zvýšit hash_set iterátor pro přístup k hlavnímu uzlu a budou pak porovnat rovna `end()`. Nelze přistoupit přes ukazatel vrátí iterátor, ale `end()`.
+Hash_set podporuje obousměrné iterátory, což znamená, že můžete krokovat s sousedícími prvky daným iterátorem, který určuje prvek v řízené sekvenci. Speciální hlavní uzel odpovídá iterátoru vrácenému funkcí [hash_set:: end (STL/CLR)](../dotnet/hash-set-end-stl-clr.md)`()`. Tento iterátor můžete snížit tak, aby se dosáhlo posledního prvku v řízené sekvenci, pokud je k dispozici. Můžete zvýšit hash_set iterátoru tak, aby se dosáhlo hlavního uzlu, a pak se porovná `end()`. Nemůžete ale odkázat na iterátor vrácený `end()`.
 
-Všimněte si, že nemůže odkazovat na prvek hash_set přímo zadané pozici číselné –, který vyžaduje iterátor náhodného přístupu.
+Všimněte si, že nemůžete odkazovat na hash_set element přímo za jeho číselnou pozici, která vyžaduje iterátor náhodného přístupu.
 
-Hash_set – iterátoru uloží popisovač do přidružené hash_set – uzlu, který je pak uloží popisovač pro jeho přiřazeným kontejnerem. Iterátory lze použít pouze objekty, které přiřazeným kontejnerem. Pokud je jeho přidružené hash_set uzel přidružené nějaké hash_set – iterátor hash_set – zůstává v platnosti. Kromě toho je platný iterátoru přesměrovat – slouží k přístupu nebo změnit hodnotu prvku jmenuje--tak dlouho, dokud se nerovná `end()`.
+Hash_set iterátor ukládá popisovač ke svému přidruženému hash_set uzlu, který zase ukládá popisovač do přidruženého kontejneru. Iterátory lze použít pouze u jejich přidružených objektů kontejneru. Iterátor hash_set zůstává platný, pokud je přidružený hash_set uzel spojen s některými hash_set. Kromě toho je možné, že platný iterátor je deodkazování – můžete ho použít pro přístup k hodnotě prvku, kterou Určuje, a k její změně, pokud to není rovno `end()`.
 
-Smazání nebo odstranění prvku volá destruktor pro jeho uložené hodnotě. Zničení kontejneru vymaže všechny prvky. Kontejner, jehož typ prvku je třídy ref class tak, zajišťuje, že žádné elementy něj kontejneru. Mějte na paměti, ale, že kontejner zpracovává nemá *není* zničit jeho prvků.
+Při mazání nebo odebírání elementu se volá destruktor pro jeho uloženou hodnotu. Zničení kontejneru smaže všechny prvky. Proto kontejner, jehož typ elementu je ref class, zajistí, že kontejner neobsahuje žádné prvky. Upozorňujeme však, že kontejner popisovačů *nezničí své* prvky.
 
 ## <a name="members"></a>Členové
 
-## <a name="begin"></a> hash_set::begin (STL/CLR)
+## <a name="hash_setbegin-stlclr"></a><a name="begin"></a>hash_set:: begin (STL/CLR)
 
 Určuje začátek řízené sekvence.
 
@@ -248,7 +248,7 @@ iterator begin();
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí obousměrný iterátor, který určuje první prvek řízenou sekvenci nebo přesně za konec k prázdné sekvenci. Můžete ji použít k získání iterátor, který určuje `current` začátek řízené sekvence, ale jeho stav můžete změnit, pokud se změní délka řízené sekvence.
+Členská funkce vrátí obousměrný iterátor, který určuje první prvek řízené sekvence nebo těsně za konec prázdné sekvence. Použijete ho k získání iterátoru, který určuje `current` začátek řízené sekvence, ale jeho stav se může změnit, pokud se změní délka kontrolované sekvence.
 
 ### <a name="example"></a>Příklad
 
@@ -278,9 +278,9 @@ int main()
     }
 ```
 
-## <a name="bucket_count"></a> hash_set::bucket_count (STL/CLR)
+## <a name="hash_setbucket_count-stlclr"></a><a name="bucket_count"></a>hash_set:: bucket_count (STL/CLR)
 
-Spočítá počet kbelíků.
+Spočítá počet intervalů.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -290,7 +290,7 @@ int bucket_count();
 
 ### <a name="remarks"></a>Poznámky
 
-Členské funkce vrátí aktuální počet kbelíků. Použijete ji k určení velikosti zatřiďovací tabulku.
+Členské funkce vrátí aktuální počet intervalů. Použijete ji k určení velikosti zatřiďovací tabulky.
 
 ### <a name="example"></a>Příklad
 
@@ -352,7 +352,7 @@ load_factor() = 0.0234375
 max_load_factor() = 0.25
 ```
 
-## <a name="clear"></a> hash_set::clear (STL/CLR)
+## <a name="hash_setclear-stlclr"></a><a name="clear"></a>hash_set:: Clear (STL/CLR)
 
 Odebere všechny prvky.
 
@@ -364,7 +364,7 @@ void clear();
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce efektivně volá [hash_set::erase (STL/CLR)](../dotnet/hash-set-erase-stl-clr.md) `(` [hash_set::begin (STL/CLR)](../dotnet/hash-set-begin-stl-clr.md) `(),` [hash_set::end (STL/CLR)](../dotnet/hash-set-end-stl-clr.md) `())`. Použijete ji k zajištění, že je prázdná řízené sekvence.
+Členská funkce efektivně volá [hash_set:: Erase (STL/CLR)](../dotnet/hash-set-erase-stl-clr.md)`(` [hash_set:: begin (STL/clr)](../dotnet/hash-set-begin-stl-clr.md)`(),` [HASH_SET:: end (STL/CLR)](../dotnet/hash-set-end-stl-clr.md)`())`. Použijete ho k zajištění, aby řízená sekvence byla prázdná.
 
 ### <a name="example"></a>Příklad
 
@@ -410,7 +410,7 @@ a b
 size() = 0
 ```
 
-## <a name="const_iterator"></a> hash_set::const_iterator (STL/CLR)
+## <a name="hash_setconst_iterator-stlclr"></a><a name="const_iterator"></a>hash_set:: const_iterator (STL/CLR)
 
 Typ konstantního iterátoru řízené sekvence
 
@@ -422,7 +422,7 @@ typedef T2 const_iterator;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ popisuje objekt neurčeného typu `T2` , který může sloužit jako konstantní obousměrného iterátoru řízené sekvence.
+Typ popisuje objekt nespecifikovaného typu `T2`, který může sloužit jako konstantní obousměrný iterátor pro řízenou sekvenci.
 
 ### <a name="example"></a>Příklad
 
@@ -452,7 +452,7 @@ int main()
 a b c
 ```
 
-## <a name="const_reference"></a> hash_set::const_reference (STL/CLR)
+## <a name="hash_setconst_reference-stlclr"></a><a name="const_reference"></a>hash_set:: const_reference (STL/CLR)
 
 Typ konstantního odkazu na prvek
 
@@ -464,7 +464,7 @@ typedef value_type% const_reference;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ, který popisuje konstantní odkaz na element.
+Typ popisuje konstantní odkaz na prvek.
 
 ### <a name="example"></a>Příklad
 
@@ -497,9 +497,9 @@ int main()
 a b c
 ```
 
-## <a name="const_reverse_iterator"></a> hash_set::const_reverse_iterator (STL/CLR)
+## <a name="hash_setconst_reverse_iterator-stlclr"></a><a name="const_reverse_iterator"></a>hash_set:: const_reverse_iterator (STL/CLR)
 
-Typ konstantního zpětného iterátoru řízené sekvence...
+Typ konstantního reverzního iterátoru řízené sekvence.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -509,7 +509,7 @@ typedef T4 const_reverse_iterator;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ popisuje objekt neurčeného typu `T4` , který může sloužit jako konstantní zpětného iterátoru řízené sekvence.
+Typ popisuje objekt nespecifikovaného typu `T4`, který může sloužit jako konstantní reverzní iterátor pro řízenou sekvenci.
 
 ### <a name="example"></a>Příklad
 
@@ -539,7 +539,7 @@ int main()
 c b a
 ```
 
-## <a name="count"></a> hash_set::Count (STL/CLR)
+## <a name="hash_setcount-stlclr"></a><a name="count"></a>hash_set:: Count (STL/CLR)
 
 Zjistí počet prvků odpovídající zadanému klíči.
 
@@ -552,11 +552,11 @@ size_type count(key_type key);
 #### <a name="parameters"></a>Parametry
 
 *key*<br/>
-Hodnota klíče pro hledání.
+Hodnota klíče, která se má vyhledat
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí počet prvků v řízené sekvenci, která mají stejné pořadí s *klíč*. Použijete ji k určení počtu prvků v řízené sekvenci aktuálně, které odpovídají zadanému klíči.
+Členská funkce vrátí počet prvků v řízené sekvenci, které mají ekvivalentní řazení s *klíčem*. Použijete ji k určení počtu prvků, které jsou aktuálně v řízené sekvenci, které odpovídají zadanému klíči.
 
 ### <a name="example"></a>Příklad
 
@@ -592,9 +592,9 @@ count(L'b') = 1
 count(L'C') = 0
 ```
 
-## <a name="difference_type"></a> hash_set::difference_type (STL/CLR)
+## <a name="hash_setdifference_type-stlclr"></a><a name="difference_type"></a>hash_set::d ifference_type (STL/CLR)
 
-Typ vzdálenosti se znaménkem mezi dvěma prvky.
+Typy podepsané vzdálenosti mezi dvěma prvky.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -604,7 +604,7 @@ typedef int difference_type;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ, který popisuje element může být záporný počet.
+Typ popisuje pravděpodobně negativní počet prvků.
 
 ### <a name="example"></a>Příklad
 
@@ -647,7 +647,7 @@ end()-begin() = 3
 begin()-end() = -3
 ```
 
-## <a name="empty"></a> hash_set::Empty (STL/CLR)
+## <a name="hash_setempty-stlclr"></a><a name="empty"></a>hash_set:: Empty (STL/CLR)
 
 Zkouší, zda nejsou přítomny žádné prvky.
 
@@ -659,7 +659,7 @@ bool empty();
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí hodnotu true pro prázdnou řízenou sekvenci. Je ekvivalentní [hash_set::size (STL/CLR)](../dotnet/hash-set-size-stl-clr.md)`() == 0`. Použijete ji k ověření, zda hash_set je prázdný.
+Členská funkce vrátí hodnotu true pro prázdnou řízenou sekvenci. Je ekvivalentní [hash_set:: Size (STL/CLR)](../dotnet/hash-set-size-stl-clr.md)`() == 0`. Použijete ho k otestování, jestli je hash_set prázdné.
 
 ### <a name="example"></a>Příklad
 
@@ -699,7 +699,7 @@ size() = 0
 empty() = True
 ```
 
-## <a name="end"></a> hash_set::end (STL/CLR)
+## <a name="hash_setend-stlclr"></a><a name="end"></a>hash_set:: end (STL/CLR)
 
 Určuje konec řízené sekvence.
 
@@ -711,7 +711,7 @@ iterator end();
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí obousměrný iterátor, který ukazuje za konec řízené sekvence. Můžete ji použít k získání iterátor, který určuje konec řízené sekvence; jeho stav kódu ne změnit, pokud se změní délka řízené sekvence.
+Členská funkce vrátí obousměrný iterátor, který odkazuje hned za konec řízené sekvence. Použijete ho k získání iterátoru, který označuje konec řízené sekvence. jeho stav se nemění, pokud se změní délka kontrolované sekvence.
 
 ### <a name="example"></a>Příklad
 
@@ -748,7 +748,7 @@ a b c
 *--end() = c
 ```
 
-## <a name="equal_range"></a> hash_set::equal_range (STL/CLR)
+## <a name="hash_setequal_range-stlclr"></a><a name="equal_range"></a>hash_set:: equal_range (STL/CLR)
 
 Najde rozsah, který odpovídá zadanému klíči.
 
@@ -761,11 +761,11 @@ cliext::pair<iterator, iterator> equal_range(key_type key);
 #### <a name="parameters"></a>Parametry
 
 *key*<br/>
-Hodnota klíče pro hledání.
+Hodnota klíče, která se má vyhledat
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí pár iterátorů `cliext::pair<iterator, iterator>(` [hash_set::lower_bound (STL/CLR)](../dotnet/hash-set-lower-bound-stl-clr.md) `(key),` [hash_set::upper_bound (STL/CLR)](../dotnet/hash-set-upper-bound-stl-clr.md)`(key))`. Použijete ji k určení rozsahu prvků v řízené sekvenci aktuálně, které odpovídají zadanému klíči.
+Členská funkce vrací dvojici iterátorů `cliext::pair<iterator, iterator>(` [hash_set:: lower_bound (STL/CLR)](../dotnet/hash-set-lower-bound-stl-clr.md)`(key),` hash_set [:: Upper_bound (STL/CLR)](../dotnet/hash-set-upper-bound-stl-clr.md)`(key))`. Použijete ji k určení rozsahu prvků, které jsou aktuálně v řízené sekvenci, která odpovídá zadanému klíči.
 
 ### <a name="example"></a>Příklad
 
@@ -808,7 +808,7 @@ equal_range(L'x') empty = True
 b
 ```
 
-## <a name="erase"></a> hash_set::Erase (STL/CLR)
+## <a name="hash_seterase-stlclr"></a><a name="erase"></a>hash_set:: Erase (STL/CLR)
 
 Odebere prvky v určených pozicích.
 
@@ -823,26 +823,26 @@ bool erase(key_type key)
 #### <a name="parameters"></a>Parametry
 
 *první*<br/>
-Začátek rozsahu vymazat.
+Začátek rozsahu, který se má vymazat
 
 *key*<br/>
-Hodnota klíče vymazat.
+Hodnota klíče, která se má vymazat
 
-*last*<br/>
-Konec rozsahu vymazat.
+*posledního*<br/>
+Konec rozsahu, který se má vymazat
 
-*kde*<br/>
-Element vymazat.
+*,*<br/>
+Prvek k vymazání.
 
 ### <a name="remarks"></a>Poznámky
 
-První členská funkce odstraní prvek řízené sekvence, na které odkazuje *kde*a vrátí iterátor, který určuje první prvek zbývající za prvkem, který odebere, nebo [hash_set::end (STL / CLR)](../dotnet/hash-set-end-stl-clr.md) `()` Pokud žádný takový prvek neexistuje. Použijete ji k odebrání jeden element.
+První členská funkce odstraní prvek kontrolované sekvence, na kterou ukazuje, *kde*a vrátí iterátor, který určí první prvek zbývající za odebraný element, nebo [hash_set:: end (STL/CLR)](../dotnet/hash-set-end-stl-clr.md)`()`, pokud žádný takový prvek neexistuje. Použijete ho k odebrání jednoho elementu.
 
-Druhá členská funkce odebere prvky řízené sekvence v rozsahu [`first`, `last`) a vrátí iterátor, který určuje první prvek zbývající za všemi odstraněnými prvky, nebo `end()` Pokud žádný takový prvek existuje... Použijete ji k odebrání nula nebo více souvislých prvků.
+Druhá členská funkce odstraní prvky kontrolované sekvence v rozsahu [`first`, `last`) a vrátí iterátor, který určí první prvek zbývající za odebranými prvky, nebo `end()`, pokud žádný takový prvek neexistuje.. Použijete ho k odebrání nuly nebo více souvislých prvků.
 
-Třetí členská funkce odstraní libovolný prvek řízenou sekvenci, jehož klíč má ekvivalentní řazení na *klíč*a vrátí počet prvků, které jsou odebrány. Použijete ho odebrat a spočítat všechny elementy, které odpovídají zadanému klíči.
+Třetí členská funkce odebere všechny prvky kontrolované sekvence, jejichž klíč má ekvivalentní řazení *klíče*, a vrátí počet odebraných prvků. Použijete ho k odebrání a počítání všech prvků, které odpovídají zadanému klíči.
 
-Každý prvek mazání trvá určitou dobu úměrný logaritmu počtu prvků v řízené sekvenci.
+Každé mazání elementu trvá čas úměrný logaritmu počtu prvků v řízené sekvenci.
 
 ### <a name="example"></a>Příklad
 
@@ -892,7 +892,7 @@ erase(begin(), end()-1) = e
 size() = 1
 ```
 
-## <a name="find"></a> hash_set::Find (STL/CLR)
+## <a name="hash_setfind-stlclr"></a><a name="find"></a>hash_set:: Find (STL/CLR)
 
 Vyhledá prvek, který odpovídá zadanému klíči.
 
@@ -905,11 +905,11 @@ iterator find(key_type key);
 #### <a name="parameters"></a>Parametry
 
 *key*<br/>
-Hodnota klíče pro hledání.
+Hodnota klíče, která se má vyhledat
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud má alespoň jeden element v řízené sekvenci s odpovídající řazení *klíč*, členská funkce vrátí iterátor určit jeden z těchto elementů; v opačném případě vrátí [hash_set::end (STL/CLR)](../dotnet/hash-set-end-stl-clr.md) `()`. Použijete ji k aktuálně vyhledejte elementu v řízené sekvenci, která odpovídá zadanému klíči.
+Pokud alespoň jeden prvek kontrolované sekvence má ekvivalentní řazení s *klíčem*, vrátí členská funkce iterátor s označením jednoho z těchto elementů. v opačném případě vrátí [hash_set:: end (STL/CLR)](../dotnet/hash-set-end-stl-clr.md)`()`. Použijete ji k vyhledání prvku, který je aktuálně v řízené sekvenci, která odpovídá zadanému klíči.
 
 ### <a name="example"></a>Příklad
 
@@ -948,9 +948,9 @@ find b = b
 find C = False
 ```
 
-## <a name="generic_container"></a> hash_set::generic_container (STL/CLR)
+## <a name="hash_setgeneric_container-stlclr"></a><a name="generic_container"></a>hash_set:: generic_container (STL/CLR)
 
-Typ obecné rozhraní pro kontejner.
+Typ obecného rozhraní pro kontejner.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -962,7 +962,7 @@ typedef Microsoft::VisualC::StlClr::
 
 ### <a name="remarks"></a>Poznámky
 
-Typ, který popisuje obecné rozhraní pro tuto třídu šablony kontejneru.
+Typ popisuje obecné rozhraní pro tuto třídu kontejneru šablony.
 
 ### <a name="example"></a>Příklad
 
@@ -1012,9 +1012,9 @@ a b c d
 a b c d e
 ```
 
-## <a name="generic_iterator"></a> hash_set::generic_iterator (STL/CLR)
+## <a name="hash_setgeneric_iterator-stlclr"></a><a name="generic_iterator"></a>hash_set:: generic_iterator (STL/CLR)
 
-Typ iterátoru pro použití s obecné rozhraní pro kontejner.
+Typ iterátoru pro použití s obecným rozhraním pro kontejner.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -1026,7 +1026,7 @@ typedef Microsoft::VisualC::StlClr::Generic::
 
 ### <a name="remarks"></a>Poznámky
 
-Typ, který popisuje obecný iterátoru, který jde použít s obecné rozhraní pro tuto třídu šablony kontejneru.
+Typ popisuje obecný iterátor, který lze použít s obecným rozhraním pro tuto třídu kontejneru šablony.
 
 ### <a name="example"></a>Příklad
 
@@ -1068,9 +1068,9 @@ a b c
 a
 ```
 
-## <a name="generic_reverse_iterator"></a> hash_set::generic_reverse_iterator (STL/CLR)
+## <a name="hash_setgeneric_reverse_iterator-stlclr"></a><a name="generic_reverse_iterator"></a>hash_set:: generic_reverse_iterator (STL/CLR)
 
-Typ "reverse iterator" pro použití s obecné rozhraní pro kontejner.
+Typ reverzního iterátoru pro použití s obecným rozhraním pro kontejner.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -1082,7 +1082,7 @@ typedef Microsoft::VisualC::StlClr::Generic::
 
 ### <a name="remarks"></a>Poznámky
 
-Typ, který popisuje obecný zpětný iterátor, který jde použít s obecné rozhraní pro tuto třídu šablony kontejneru.
+Typ popisuje obecný reverzní iterátor, který lze použít s obecným rozhraním pro tuto třídu kontejneru šablony.
 
 ### <a name="example"></a>Příklad
 
@@ -1124,9 +1124,9 @@ a b c
 c
 ```
 
-## <a name="generic_value"></a> hash_set::generic_value (STL/CLR)
+## <a name="hash_setgeneric_value-stlclr"></a><a name="generic_value"></a>hash_set:: generic_value (STL/CLR)
 
-Typ elementu pro použití s obecné rozhraní pro kontejner.
+Typ elementu pro použití s obecným rozhraním pro kontejner.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -1136,7 +1136,7 @@ typedef GValue generic_value;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ, který popisuje objekt typu `GValue` hodnoty uložené elementu pro použití s obecné rozhraní pro tuto třídu šablony kontejneru, který popisuje.
+Typ popisuje objekt typu `GValue`, který popisuje hodnotu uloženého elementu pro použití s obecným rozhraním pro tuto třídu kontejneru šablony.
 
 ### <a name="example"></a>Příklad
 
@@ -1178,7 +1178,7 @@ a b c
 a
 ```
 
-## <a name="hash_delegate"></a> hash_set::hash_delegate (STL/CLR)
+## <a name="hash_sethash_delegate-stlclr"></a><a name="hash_delegate"></a>hash_set:: hash_delegate (STL/CLR)
 
 Vyhledá prvek, který odpovídá zadanému klíči.
 
@@ -1190,7 +1190,7 @@ hasher^ hash_delegate();
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí delegáta použít pro převod na celé číslo s hodnotou klíče. Použijete ji k vytvoření hodnoty hash klíče.
+Členská funkce vrátí delegáta, který se používá k převodu hodnoty klíče na celé číslo. Použijete ho k vytvoření hodnoty hash klíče.
 
 ### <a name="example"></a>Příklad
 
@@ -1216,7 +1216,7 @@ hash(L'a') = 1616896120
 hash(L'b') = 570892832
 ```
 
-## <a name="hash_set"></a> hash_set::hash_set (STL/CLR)
+## <a name="hash_sethash_set-stlclr"></a><a name="hash_set"></a>hash_set:: hash_set (STL/CLR)
 
 Sestaví objekt kontejneru.
 
@@ -1246,19 +1246,19 @@ hash_set(System::Collections::Generic::IEnumerable<GValue>^ right,
 #### <a name="parameters"></a>Parametry
 
 *první*<br/>
-Začátek rozsahu pro vložení.
+Začátek rozsahu, který se má vložit
 
 *hashfn*<br/>
-Hash – funkce pro mapování klíčů do kontejnerů.
+Funkce hash pro mapování klíčů na intervaly
 
-*last*<br/>
-Konec rozsahu pro vložení.
+*posledního*<br/>
+Konec rozsahu, který má být vložen.
 
-*Před*<br/>
-Řazení predikátu řízené sekvence.
+*čekání*<br/>
+Predikát řazení pro řízenou sekvenci.
 
-*doprava*<br/>
-Objekt nebo rozsahu pro vložení.
+*Kliknutím*<br/>
+Objekt nebo rozsah, který chcete vložit.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1266,67 +1266,67 @@ Konstruktor:
 
 `hash_set();`
 
-Inicializuje výchozí řazení predikátu řízené sekvence bez prvků `key_compare()`a s výchozí funkce hash. Použijete ji k určení prázdnou počáteční řízenou sekvenci, s výchozí řazení predikát a hashovací funkce.
+Inicializuje řízená sekvence bez elementů s výchozím predikátem řazení `key_compare()`a s výchozí funkcí hash. Použijete ji k zadání prázdné počáteční řízené sekvence s výchozím predikátem řazení a funkcí hash.
 
 Konstruktor:
 
 `explicit hash_set(key_compare^ pred);`
 
-Inicializuje řízené sekvence bez prvků pořadí predikátem *před*a s výchozí funkce hash. Použít prázdnou počáteční řízenou sekvenci, určit se zadanou predikát řazení a výchozí funkce hash.
+Inicializuje řízená sekvence bez elementů s predikátem řazení *před*a s výchozí funkcí hash. Použijete ji k zadání prázdné počáteční řízené sekvence se zadaným predikátem řazení a výchozí funkcí hash.
 
 Konstruktor:
 
 `hash_set(key_compare^ pred, hasher^ hashfn);`
 
-Inicializuje řízené sekvence bez prvků pořadí predikátem *před*a hodnotu hash *hashfn*. Použít prázdnou počáteční řízenou sekvenci, určit se zadané pořadí predikát a hashovací funkce.
+Inicializuje řízená sekvence bez elementů s predikátem řazení *před*a s funkcí hash *hashfn*. Použijete ji k zadání prázdné počáteční řízené sekvence se zadaným predikátem řazení a funkcí hash.
 
 Konstruktor:
 
 `hash_set(hash_set<Key>% right);`
 
-Inicializuje řízené sekvence s pořadím [`right.begin()`, `right.end()`), s výchozí řazení predikátu a výchozí funkce hash. Můžete použít k určení počáteční řízené sekvence, který je kopii sekvence řízenou parametrem objektu hash_set – *správné*s výchozí pořadí predikátem a funkce hash.
+Inicializuje řízenou sekvenci pomocí sekvence [`right.begin()`, `right.end()`), s výchozím predikátem řazení a s výchozí funkcí hash. Použijete ji k určení počáteční řízené sekvence, která je kopií sekvence řízené objektem hash_set *vpravo*s výchozím predikátem řazení a funkcí hash.
 
 Konstruktor:
 
 `hash_set(hash_set<Key>^ right);`
 
-Inicializuje řízené sekvence s pořadím [`right->begin()`, `right->end()`), s výchozí řazení predikátu a výchozí funkce hash. Můžete použít k určení počáteční řízené sekvence, který je kopii sekvence řízenou parametrem objektu hash_set – *správné*s výchozí pořadí predikátem a funkce hash.
+Inicializuje řízenou sekvenci pomocí sekvence [`right->begin()`, `right->end()`), s výchozím predikátem řazení a s výchozí funkcí hash. Použijete ji k určení počáteční řízené sekvence, která je kopií sekvence řízené objektem hash_set *vpravo*s výchozím predikátem řazení a funkcí hash.
 
 Konstruktor:
 
 `template<typename InIter> hash_set(InIter first, InIter last);`
 
-Inicializuje řízené sekvence s pořadím [`first`, `last`), s výchozí řazení predikátu a výchozí funkce hash. Používejte aby řízené sekvence kopii jiné pořadí, s výchozí řazení predikát a hashovací funkce.
+Inicializuje řízenou sekvenci pomocí sekvence [`first`, `last`), s výchozím predikátem řazení a s výchozí funkcí hash. Použijete ji k tomu, aby řízená sekvence zkopírovala jinou sekvenci s výchozím predikátem řazení a funkcí hash.
 
 Konstruktor:
 
 `template<typename InIter> hash_set(InIter first, InIter last, key_compare^ pred);`
 
-Inicializuje řízené sekvence s pořadím [`first`, `last`), pořadí predikátem *před*a s výchozí funkce hash. Použijete ji k vytvoření kopie jiné pořadí se zadanou predikát řazení a výchozí funkce hash řízené sekvence.
+Inicializuje řízenou sekvenci pomocí sekvence [`first`, `last`), s predikátem řazení *před*a s výchozí funkcí hash. Použijete ho k tomu, aby řízená sekvence zkopírovala jinou sekvenci, se zadaným predikátem řazení a výchozí funkcí hash.
 
 Konstruktor:
 
 `template<typename InIter> hash_set(InIter first, InIter last, key_compare^ pred, hasher^ hashfn);`
 
-Inicializuje řízené sekvence s pořadím [`first`, `last`), pořadí predikátem *před*a hodnotu hash *hashfn*. Použijte k vytvoření kopie jiné pořadí, pomocí zadané pořadí predikát a hashovací funkce řízené sekvence.
+Inicializuje řízenou sekvenci pomocí sekvence [`first`, `last`), s predikátem řazení *před*a *hashfn*funkcí hash. Použijete ji k tomu, aby řízená sekvence zkopírovala jinou sekvenci, se zadaným predikátem řazení a funkcí hash.
 
 Konstruktor:
 
 `hash_set(System::Collections::Generic::IEnumerable<Key>^ right);`
 
-Inicializuje řízené sekvence s pořadí určeném enumerátor *správné*, s výchozí řazení predikátu a výchozí funkce hash. Použijte k vytvoření kopie jiné pořadí popsal čítače, s výchozí řazení predikát a hashovací funkce řízené sekvence.
+Inicializuje řízenou sekvenci sekvencí, která je určena *přípravou*, s výchozím predikátem řazení a s výchozí funkcí hash. Použijete ho k tomu, aby řízená sekvence zkopírovala jinou sekvenci popsanou enumerátorem s výchozím predikátem řazení a funkcí hash.
 
 Konstruktor:
 
 `hash_set(System::Collections::Generic::IEnumerable<Key>^ right, key_compare^ pred);`
 
-Inicializuje řízené sekvence s pořadí určeném enumerátor *správné*, pořadí predikátem *před*a s výchozí funkce hash. Použijte k vytvoření kopie jiné pořadí popsal enumerátor pomocí zadaného pořadí predikát a výchozí funkce hash řízené sekvence.
+Inicializuje řízenou sekvenci sekvencí, která je určena *přípravou*, s predikátem řazení *před*a s výchozí funkcí hash. Použijete ho k tomu, aby řízená sekvence zkopírovala jinou sekvenci popsanou enumerátorem, se zadaným predikátem řazení a výchozí funkcí hash.
 
 Konstruktor:
 
 `hash_set(System::Collections::Generic::IEnumerable<Key>^ right, key_compare^ pred, hasher^ hashfn);`
 
-Inicializuje řízené sekvence s pořadí určeném enumerátor *správné*, pořadí predikátem *před*a hodnotu hash *hashfn*. Použijte k vytvoření kopie jiné pořadí popsal čítače, pomocí zadané pořadí predikát a hashovací funkce řízené sekvence.
+Inicializuje řízenou sekvenci sekvencí, která je určena *přípravou*, s predikátem řazení *před*a s funkcí hash *hashfn*. Použijete ho k tomu, aby řízená sekvence zkopírovala jinou sekvenci popsanou enumerátorem, se zadaným predikátem řazení a funkcí hash.
 
 ### <a name="example"></a>Příklad
 
@@ -1456,9 +1456,9 @@ a b c
 a b c
 ```
 
-## <a name="hasher"></a> hash_set::hasher (STL/CLR)
+## <a name="hash_sethasher-stlclr"></a><a name="hasher"></a>hash_set:: hash (STL/CLR)
 
-Hash delegáta pro klíč.
+Delegát algoritmu hash pro klíč
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -1469,7 +1469,7 @@ Microsoft::VisualC::StlClr::UnaryDelegate<GKey, int>
 
 ### <a name="remarks"></a>Poznámky
 
-Typ, který popisuje delegáta, který převede hodnotu klíče na celé číslo.
+Typ popisuje delegáta, který převede hodnotu klíče na celé číslo.
 
 ### <a name="example"></a>Příklad
 
@@ -1495,7 +1495,7 @@ hash(L'a') = 1616896120
 hash(L'b') = 570892832
 ```
 
-## <a name="insert"></a> hash_set::Insert (STL/CLR)
+## <a name="hash_setinsert-stlclr"></a><a name="insert"></a>hash_set:: Insert (STL/CLR)
 
 Přidá prvky.
 
@@ -1512,33 +1512,33 @@ void insert(System::Collections::Generic::IEnumerable<value_type>^ right);
 #### <a name="parameters"></a>Parametry
 
 *první*<br/>
-Začátek rozsahu pro vložení.
+Začátek rozsahu, který se má vložit
 
-*last*<br/>
-Konec rozsahu pro vložení.
+*posledního*<br/>
+Konec rozsahu, který má být vložen.
 
-*doprava*<br/>
+*Kliknutím*<br/>
 Výčet pro vložení.
 
-*Val*<br/>
-Hodnota klíče pro vložení.
+*počítává*<br/>
+Hodnota klíče, která se má vložit
 
-*kde*<br/>
-Kde v kontejneru pro vložení (jenom pro pomocný parametr).
+*,*<br/>
+Kam umístit do kontejneru (jenom Nápověda)
 
 ### <a name="remarks"></a>Poznámky
 
-Každá z členské funkce vloží pořadí určeném zbývající operandy.
+Každá z členských funkcí vloží sekvenci určenou zbývajícími operandy.
 
-První členská funkce endeavors vložit element s hodnotou *val*a vrátí dvojice hodnot `X`. Pokud `X.second` má hodnotu true, `X.first` označí nově vložený prvek; v opačném případě `X.first` určuje element s ekvivalentní řazení, která již existuje a je vložen žádný nový prvek. Použijete ji k vložení jeden element.
+První členská funkce budoucna pro vložení elementu s hodnotou *Val*a vrátí dvojici hodnot `X`. Pokud `X.second` má hodnotu true, `X.first` označí nově vložený element; jinak `X.first` určí element s ekvivalentním řazením, které již existuje, a žádný nový prvek není vložen. Použijete ho k vložení jediného elementu.
 
-Druhá členská funkce vloží prvek s hodnotou *val*s použitím *kde* jako Nápověda (ke zlepšení výkonu) a vrátí iterátor, který určuje nově vložený prvek. Použijete ji k vložení jeden element, který může být vedle elementu, které už znáte.
+Druhá členská funkce vloží element s hodnotou *Val*, pomocí *WHERE* jako pomocný parametr (pro zlepšení výkonu) a vrátí iterátor, který určí nově vložený element. Použijete ho k vložení jednoho prvku, který může být sousedící s prvkem, který znáte.
 
-Třetí členská funkce vloží sekvenci [`first`, `last`). Použijete ji k vložení nula nebo více elementů zkopírovaných z jiné pořadí.
+Třetí členská funkce vloží sekvenci [`first`, `last`). Použijete ho k vložení nula nebo více prvků zkopírovaných z jiné sekvence.
 
-Čtvrtá členská funkce vloží pořadí určeném *správné*. Použijete ji k vložení pořadí popsal enumerátor.
+Čtvrtá členská funkce vloží sekvenci určenou *vpravo*. Použijete ho k vložení sekvence popsané enumerátorem.
 
-Každý prvek vložení trvá určitou dobu úměrný logaritmu počtu prvků v řízené sekvenci. Vložení situace může nastat v amortizovaném konstantním času, ale zadaný pomocného parametru, který určuje prvek vedle kurzor.
+Každé vložení elementu trvá čas úměrný logaritmu počtu prvků v řízené sekvenci. Vložení se může objevit v čase konstantního času, avšak s použitím pomocného parametru, který určuje prvek sousedící s bodem vložení.
 
 ### <a name="example"></a>Příklad
 
@@ -1611,7 +1611,7 @@ a b c x
 a b c x y
 ```
 
-## <a name="iterator"></a> hash_set::iterator (STL/CLR)
+## <a name="hash_setiterator-stlclr"></a><a name="iterator"></a>hash_set:: iterátor (STL/CLR)
 
 Typ iterátoru řízené sekvence
 
@@ -1623,7 +1623,7 @@ typedef T1 iterator;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ popisuje objekt neurčeného typu `T1` , který může sloužit jako obousměrný iterátor, který řízené sekvence.
+Typ popisuje objekt nespecifikovaného typu `T1`, který může sloužit jako obousměrný iterátor pro řízenou sekvenci.
 
 ### <a name="example"></a>Příklad
 
@@ -1653,9 +1653,9 @@ int main()
 a b c
 ```
 
-## <a name="key_comp"></a> hash_set::key_comp (STL/CLR)
+## <a name="hash_setkey_comp-stlclr"></a><a name="key_comp"></a>hash_set:: key_comp (STL/CLR)
 
-Zkopíruje pořadí delegáta pro dva klíče.
+Zkopíruje delegáta řazení dvou klíčů.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -1665,7 +1665,7 @@ key_compare^key_comp();
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí pořadí delegáta, který slouží k seřazení řízené sekvence. Použijete ji k porovnat dva klíče.
+Členská funkce vrátí delegáta řazení, který se používá k seřazení řízené sekvence. Použijete ho k porovnání dvou klíčů.
 
 ### <a name="example"></a>Příklad
 
@@ -1712,9 +1712,9 @@ compare(L'a', L'b') = False
 compare(L'b', L'a') = True
 ```
 
-## <a name="key_comp"></a> hash_set::key_comp (STL/CLR)
+## <a name="hash_setkey_comp-stlclr"></a><a name="key_comp"></a>hash_set:: key_comp (STL/CLR)
 
-Zkopíruje pořadí delegáta pro dva klíče.
+Zkopíruje delegáta řazení dvou klíčů.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -1724,7 +1724,7 @@ key_compare^key_comp();
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí pořadí delegáta, který slouží k seřazení řízené sekvence. Použijete ji k porovnat dva klíče.
+Členská funkce vrátí delegáta řazení, který se používá k seřazení řízené sekvence. Použijete ho k porovnání dvou klíčů.
 
 ### <a name="example"></a>Příklad
 
@@ -1771,9 +1771,9 @@ compare(L'a', L'b') = False
 compare(L'b', L'a') = True
 ```
 
-## <a name="key_compare"></a> hash_set::key_compare (STL/CLR)
+## <a name="hash_setkey_compare-stlclr"></a><a name="key_compare"></a>hash_set:: key_compare (STL/CLR)
 
-Pořadí delegáta pro dva klíče.
+Delegát řazení pro dva klíče.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -1784,7 +1784,7 @@ Microsoft::VisualC::StlClr::BinaryDelegate<GKey, GKey, bool>
 
 ### <a name="remarks"></a>Poznámky
 
-Typ je synonymum pro delegáta, který určuje řazení klíče argumenty.
+Typ je synonymum pro delegáta, který určuje pořadí jeho klíčových argumentů.
 
 ### <a name="example"></a>Příklad
 
@@ -1831,7 +1831,7 @@ compare(L'a', L'b') = False
 compare(L'b', L'a') = True
 ```
 
-## <a name="key_type"></a> hash_set::key_type (STL/CLR)
+## <a name="hash_setkey_type-stlclr"></a><a name="key_type"></a>hash_set:: key_type (STL/CLR)
 
 Typ klíče řazení
 
@@ -1843,7 +1843,7 @@ typedef Key key_type;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ je synonymum pro parametr šablony *klíč*.
+Typ je synonymum pro *klíč*parametru šablony.
 
 ### <a name="example"></a>Příklad
 
@@ -1876,7 +1876,7 @@ int main()
 a b c
 ```
 
-## <a name="load_factor"></a> hash_set::load_factor (STL/CLR)
+## <a name="hash_setload_factor-stlclr"></a><a name="load_factor"></a>hash_set:: load_factor (STL/CLR)
 
 Spočítá průměrný počet prvků na kbelík.
 
@@ -1888,7 +1888,7 @@ float load_factor();
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí `(float)` [hash_set::size (STL/CLR)](../dotnet/hash-set-size-stl-clr.md) `() /` [hash_set::bucket_count (STL/CLR)](../dotnet/hash-set-bucket-count-stl-clr.md)`()`. Použijete ji k určení velikosti průměrné intervalu.
+Členská funkce vrací `(float)`[hash_set:: Size (STL/CLR)](../dotnet/hash-set-size-stl-clr.md)`() /` [hash_set:: bucket_count (STL/CLR)](../dotnet/hash-set-bucket-count-stl-clr.md)`()`. Použijete ji k určení průměrné velikosti intervalu.
 
 ### <a name="example"></a>Příklad
 
@@ -1950,9 +1950,9 @@ load_factor() = 0.0234375
 max_load_factor() = 0.25
 ```
 
-## <a name="lower_bound"></a> hash_set::lower_bound (STL/CLR)
+## <a name="hash_setlower_bound-stlclr"></a><a name="lower_bound"></a>hash_set:: lower_bound (STL/CLR)
 
-Vyhledá počátek rozsahu, který odpovídá zadanému klíči.
+Vyhledá začátek rozsahu, který odpovídá zadanému klíči.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -1963,11 +1963,11 @@ iterator lower_bound(key_type key);
 #### <a name="parameters"></a>Parametry
 
 *key*<br/>
-Hodnota klíče pro hledání.
+Hodnota klíče, která se má vyhledat
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce určuje první prvek `X` v řízené sekvenci, který vytvoří hodnotu hash na stejném kontejneru jako *klíč* a má stejné pořadí na *klíč*. Pokud žádný takový prvek neexistuje, vrátí [hash_set::end (STL/CLR)](../dotnet/hash-set-end-stl-clr.md)`()`; v opačném případě vrátí iterátor, který určuje `X`. Použijete ji k aktuálně vyhledejte na začátek pořadí prvků v řízené sekvenci, které odpovídají zadanému klíči.
+Členská funkce určuje první prvek `X` v řízené sekvenci, který vyhodnotí hodnoty hash ke stejnému kontejneru jako *klíč* a má stejné řazení jako *klíč*. Pokud žádný takový prvek neexistuje, vrátí [hash_set:: end (STL/CLR)](../dotnet/hash-set-end-stl-clr.md)`()`; v opačném případě vrátí iterátor, který určí `X`. Použijete ji k vyhledání začátku sekvence prvků, které jsou aktuálně v řízené sekvenci, která odpovídá zadanému klíči.
 
 ### <a name="example"></a>Příklad
 
@@ -2007,7 +2007,7 @@ lower_bound(L'x')==end() = True
 *lower_bound(L'b') = b
 ```
 
-## <a name="make_value"></a> hash_set::make_value (STL/CLR)
+## <a name="hash_setmake_value-stlclr"></a><a name="make_value"></a>hash_set:: make_value (STL/CLR)
 
 Vytvoří objekt hodnoty.
 
@@ -2020,11 +2020,11 @@ static value_type make_value(key_type key);
 #### <a name="parameters"></a>Parametry
 
 *key*<br/>
-Hodnota klíče používat.
+Hodnota klíče, která se má použít
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí `value_type` objekt, jehož klíč je *klíč*. Použijete ji k vytvoření objektu vhodný pro použití s několika další členské funkce.
+Členská funkce vrátí objekt `value_type`, jehož klíč je *klíč*. Použijete ho k vytvoření objektu vhodného pro použití s několika dalšími členskými funkcemi.
 
 ### <a name="example"></a>Příklad
 
@@ -2053,7 +2053,7 @@ int main()
 a b c
 ```
 
-## <a name="max_load_factor"></a> hash_set::max_load_factor (STL/CLR)
+## <a name="hash_setmax_load_factor-stlclr"></a><a name="max_load_factor"></a>hash_set:: max_load_factor (STL/CLR)
 
 Získá nebo nastaví maximální počet prvků na kbelík.
 
@@ -2067,13 +2067,13 @@ void max_load_factor(float new_factor);
 #### <a name="parameters"></a>Parametry
 
 *new_factor*<br/>
-Nové maximální zatížení faktorem, který je ukládat.
+Nový faktor maximálního zatížení, který se má uložit.
 
 ### <a name="remarks"></a>Poznámky
 
-První členská funkce vrátí aktuální faktor maximálního zatížení uložené. Použijete ji k určení velikosti maximální průměrná intervalu.
+První členská funkce vrátí aktuální uložený faktor zatížení. Použijete ji k určení maximální průměrné velikosti intervalu.
 
-Druhá členská funkce se nahradí faktor maximálního zatížení úložiště s *new_factor*. Žádné automatické rehashing dojde až do další vložit.
+Druhá členská funkce nahrazuje faktor maximálního zatížení úložiště *new_factor*. K automatickému opakovanému hashování nedochází až po následném vložení.
 
 ### <a name="example"></a>Příklad
 
@@ -2120,9 +2120,9 @@ int main()
     }
 ```
 
-## <a name="op"></a> hash_set::Operator = (STL/CLR)
+## <a name="hash_setoperator-stlclr"></a><a name="op"></a>hash_set:: operator = (STL/CLR)
 
-Nahradí řízené sekvence.
+Nahradí řízenou sekvenci.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -2132,12 +2132,12 @@ hash_set<Key>% operator=(hash_set<Key>% right);
 
 #### <a name="parameters"></a>Parametry
 
-*doprava*<br/>
-Kontejner pro kopírování.
+*Kliknutím*<br/>
+Kontejner ke zkopírování.
 
 ### <a name="remarks"></a>Poznámky
 
-Kopie členský operátor *správné* na objekt, vrátí `*this`. Můžete použít k nahraďte kopii řízené sekvence v řízené sekvenci *správné*.
+Operátor členu kopíruje *přímo* na objekt a potom vrátí `*this`. Použijete ji k nahrazení kontrolované sekvence kopií kontrolované sekvence *vpravo*.
 
 ### <a name="example"></a>Příklad
 
@@ -2175,9 +2175,9 @@ a b c
 a b c
 ```
 
-## <a name="rbegin"></a> hash_set::rbegin (STL/CLR)
+## <a name="hash_setrbegin-stlclr"></a><a name="rbegin"></a>hash_set:: rbegin (STL/CLR)
 
-Určuje začátek řízené obrácené sekvenci.
+Určuje začátek obrácené kontrolované sekvence.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -2187,7 +2187,7 @@ reverse_iterator rbegin();
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí zpětný iterátor, který určuje poslední prvek řízenou sekvenci nebo hned za začátku k prázdné sekvenci. Proto, označí `beginning` reverzní pořadí. Můžete ji použít k získání iterátor, který určuje `current` začátek řízené sekvence viděli v obráceném pořadí, ale jeho stav můžete změnit, pokud se změní délka řízené sekvence.
+Členská funkce vrátí reverzní iterátor, který určuje poslední prvek řízené sekvence nebo těsně za začátek prázdné sekvence. Proto určuje `beginning` reverzní sekvence. Použijete ho k získání iterátoru, který určí `current` začátkem kontrolované sekvence v obráceném pořadí, ale jeho stav se může změnit, pokud se změní délka kontrolované sekvence.
 
 ### <a name="example"></a>Příklad
 
@@ -2223,7 +2223,7 @@ a b c
 *++rbegin() = b
 ```
 
-## <a name="reference"></a> hash_set::Reference (STL/CLR)
+## <a name="hash_setreference-stlclr"></a><a name="reference"></a>hash_set:: Reference (STL/CLR)
 
 Typ odkazu na prvek
 
@@ -2235,7 +2235,7 @@ typedef value_type% reference;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ, který popisuje odkaz na element.
+Typ popisuje odkaz na prvek.
 
 ### <a name="example"></a>Příklad
 
@@ -2268,7 +2268,7 @@ int main()
 a b c
 ```
 
-## <a name="rehash"></a> hash_set::rehash (STL/CLR)
+## <a name="hash_setrehash-stlclr"></a><a name="rehash"></a>hash_set:: rehash (STL/CLR)
 
 Znovu vytvoří hashovací tabulku.
 
@@ -2280,7 +2280,7 @@ void rehash();
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce znovu vytvoří tabulku hash, zajistit, aby [hash_set::load_factor (STL/CLR)](../dotnet/hash-set-load-factor-stl-clr.md) `() <=` [hash_set::max_load_factor (STL/CLR)](../dotnet/hash-set-max-load-factor-stl-clr.md). V opačném případě zatřiďovací tabulky zvětší velikost, pouze v případě potřeby po vložení. (To zmenšena, nikdy automaticky.) Použít a upravte velikost zatřiďovací tabulku.
+Členská funkce znovu sestaví zatřiďovací tabulku, což zajišťuje, že [hash_set:: load_factor (STL/CLR)](../dotnet/hash-set-load-factor-stl-clr.md)`() <=` [hash_set:: max_load_factor (STL/CLR)](../dotnet/hash-set-max-load-factor-stl-clr.md). V opačném případě se tabulka hash zvětšuje velikost pouze podle potřeby po vložení. (Nikdy se velikost automaticky nezmenší.) Použijete ho k úpravě velikosti zatřiďovací tabulky.
 
 ### <a name="example"></a>Příklad
 
@@ -2342,9 +2342,9 @@ load_factor() = 0.0234375
 max_load_factor() = 0.25
 ```
 
-## <a name="rend"></a> hash_set::rend (STL/CLR)
+## <a name="hash_setrend-stlclr"></a><a name="rend"></a>hash_set:: rend (STL/CLR)
 
-Určuje konec řízené obrácené sekvenci.
+Určuje konec reverzní kontrolované sekvence.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -2354,7 +2354,7 @@ reverse_iterator rend();
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí "reverse iterator", který ukazuje za začátek řízené sekvence. Proto, označí `end` reverzní pořadí. Můžete ji použít k získání iterátor, který určuje `current` konec řízené sekvence viděli v obráceném pořadí, ale jeho stav můžete změnit, pokud se změní délka řízené sekvence.
+Členská funkce vrátí reverzní iterátor, který odkazuje hned za začátek řízené sekvence. Proto určuje `end` reverzní sekvence. Použijete ho k získání iterátoru, který určuje `current` konec řízené sekvence v obráceném pořadí, ale jeho stav se může změnit, pokud se změní délka kontrolované sekvence.
 
 ### <a name="example"></a>Příklad
 
@@ -2391,9 +2391,9 @@ a b c
 *--rend() = a
 ```
 
-## <a name="reverse_iterator"></a> hash_set::reverse_iterator (STL/CLR)
+## <a name="hash_setreverse_iterator-stlclr"></a><a name="reverse_iterator"></a>hash_set:: reverse_iterator (STL/CLR)
 
-Typ "reverse iterator" pro řízenou sekvenci.
+Typ reverzního iterátoru řízené sekvence.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -2403,7 +2403,7 @@ typedef T3 reverse_iterator;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ popisuje objekt neurčeného typu `T3` , který může sloužit jako "reverse iterator" pro řízenou sekvenci.
+Typ popisuje objekt nespecifikovaného typu `T3`, který může sloužit jako reverzní iterátor pro řízenou sekvenci.
 
 ### <a name="example"></a>Příklad
 
@@ -2433,7 +2433,7 @@ int main()
 c b a
 ```
 
-## <a name="size"></a> hash_set::size (STL/CLR)
+## <a name="hash_setsize-stlclr"></a><a name="size"></a>hash_set:: Size (STL/CLR)
 
 Spočítá počet prvků.
 
@@ -2445,7 +2445,7 @@ size_type size();
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí délku objektu řízené sekvence. Použijete ji k určení počtu prvků v řízené sekvenci aktuálně. Pokud vás zajímá, jestli je pořadí má nenulovou velikost, naleznete v tématu [hash_set::empty (STL/CLR)](../dotnet/hash-set-empty-stl-clr.md)`()`.
+Členská funkce vrací délku řízené sekvence. Použijete ji k určení počtu prvků, které jsou aktuálně v řízené sekvenci. Pokud vás zajímá, zda má sekvence nenulovou velikost, přečtěte si téma [hash_set:: Empty (STL/CLR)](../dotnet/hash-set-empty-stl-clr.md)`()`.
 
 ### <a name="example"></a>Příklad
 
@@ -2487,9 +2487,9 @@ size() = 0 after clearing
 size() = 2 after adding 2
 ```
 
-## <a name="size_type"></a> hash_set::size_type (STL/CLR)
+## <a name="hash_setsize_type-stlclr"></a><a name="size_type"></a>hash_set:: size_type (STL/CLR)
 
-Typ vzdálenosti se znaménkem mezi dvěma elementu.
+Typ podepsané vzdálenosti mezi dvěma prvky.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -2499,7 +2499,7 @@ typedef int size_type;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ, který popisuje počet prvků záporná.
+Typ popisuje nezáporný počet prvků.
 
 ### <a name="example"></a>Příklad
 
@@ -2535,7 +2535,7 @@ a b c
 end()-begin() = 3
 ```
 
-## <a name="swap"></a> hash_set::swap (STL/CLR)
+## <a name="hash_setswap-stlclr"></a><a name="swap"></a>hash_set:: swap (STL/CLR)
 
 Zamění obsah dvou kontejnerů.
 
@@ -2547,12 +2547,12 @@ void swap(hash_set<Key>% right);
 
 #### <a name="parameters"></a>Parametry
 
-*doprava*<br/>
-Kontejner pro obsah s.
+*Kliknutím*<br/>
+Kontejner pro prohození obsahu pomocí.
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce Zamění řízené sekvence mezi `this` a *správné*. Provádí se v konstantním času a vyvolá žádné výjimky. Můžete použít jako rychlý způsob, jak Zamění obsah dvou kontejnerů.
+Členská funkce přemění kontrolované sekvence mezi `this` a *pravou*. Provede to v konstantním čase a nevyvolává žádné výjimky. Použijete ho jako rychlý způsob, jak vyměňovat obsah dvou kontejnerů.
 
 ### <a name="example"></a>Příklad
 
@@ -2603,9 +2603,9 @@ d e f
 a b c
 ```
 
-## <a name="to_array"></a> hash_set::to_array (STL/CLR)
+## <a name="hash_setto_array-stlclr"></a><a name="to_array"></a>hash_set:: to_array (STL/CLR)
 
-Zkopíruje do nového pole řízené sekvence.
+Zkopíruje řízenou sekvenci do nového pole.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -2615,7 +2615,7 @@ cli::array<value_type>^ to_array();
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí pole obsahující řízené sekvence. Použijete ji získat kopii řízenou sekvenci pole formuláře.
+Členská funkce vrátí pole obsahující řízenou sekvenci. Použijete ho k získání kopie řízené sekvence ve formuláři Array.
 
 ### <a name="example"></a>Příklad
 
@@ -2653,7 +2653,7 @@ a b c d
 a b c
 ```
 
-## <a name="upper_bound"></a> hash_set::upper_bound (STL/CLR)
+## <a name="hash_setupper_bound-stlclr"></a><a name="upper_bound"></a>hash_set:: upper_bound (STL/CLR)
 
 Najde konec rozsahu, který odpovídá zadanému klíči.
 
@@ -2666,11 +2666,11 @@ iterator upper_bound(key_type key);
 #### <a name="parameters"></a>Parametry
 
 *key*<br/>
-Hodnota klíče pro hledání.
+Hodnota klíče, která se má vyhledat
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce určuje poslední prvek `X` v řízené sekvenci, který vytvoří hodnotu hash na stejném kontejneru jako *klíč* a má stejné pořadí na *klíč*. Pokud žádný takový prvek neexistuje, nebo pokud `X` je po posledním prvku v řízené sekvenci vrátí [hash_set::end (STL/CLR)](../dotnet/hash-set-end-stl-clr.md)`()`; v opačném případě vrátí iterátor, který určuje prvního prvku mimo `X`. Pomocí aktuálně najít konec pořadí prvků v řízené sekvenci, které odpovídají zadanému klíči.
+Členská funkce určuje poslední prvek `X` v řízené sekvenci, který vyhodnotí hodnoty hash ke stejnému kontejneru jako *klíč* a má stejné řazení jako *klíč*. Pokud žádný takový prvek neexistuje nebo pokud `X` je posledním prvkem kontrolované sekvence, vrátí [hash_set:: end (STL/CLR)](../dotnet/hash-set-end-stl-clr.md)`()`; v opačném případě vrátí iterátor, který určí první prvek nad rámec `X`. Použijete ho k vyhledání konce posloupnosti prvků, které jsou aktuálně v řízené sekvenci, která odpovídá zadanému klíči.
 
 ### <a name="example"></a>Příklad
 
@@ -2710,9 +2710,9 @@ upper_bound(L'x')==end() = True
 *upper_bound(L'b') = c
 ```
 
-## <a name="value_comp"></a> hash_set::value_comp (STL/CLR)
+## <a name="hash_setvalue_comp-stlclr"></a><a name="value_comp"></a>hash_set:: value_comp (STL/CLR)
 
-Zkopíruje pořadí delegáta pro dvě hodnoty prvků.
+Zkopíruje delegáta řazení pro dvě hodnoty elementu.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -2722,7 +2722,7 @@ value_compare^ value_comp();
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí pořadí delegáta, který slouží k seřazení řízené sekvence. Použijete ji k porovnat dvě hodnoty prvků.
+Členská funkce vrátí delegáta řazení, který se používá k seřazení řízené sekvence. Použijete ho k porovnání dvou hodnot prvků.
 
 ### <a name="example"></a>Příklad
 
@@ -2754,9 +2754,9 @@ compare(L'a', L'b') = True
 compare(L'b', L'a') = False
 ```
 
-## <a name="value_compare"></a> hash_set::value_compare (STL/CLR)
+## <a name="hash_setvalue_compare-stlclr"></a><a name="value_compare"></a>hash_set:: value_compare (STL/CLR)
 
-Pořadí delegáta pro dvě hodnoty prvků.
+Delegát řazení pro dvě hodnoty elementu.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -2767,7 +2767,7 @@ Microsoft::VisualC::StlClr::BinaryDelegate<generic_value, generic_value, bool>
 
 ### <a name="remarks"></a>Poznámky
 
-Typ je synonymum pro delegáta, který určuje pořadí z argumentů hodnotu.
+Typ je synonymum pro delegáta, který určuje řazení jeho hodnotových argumentů.
 
 ### <a name="example"></a>Příklad
 
@@ -2799,7 +2799,7 @@ compare(L'a', L'b') = True
 compare(L'b', L'a') = False
 ```
 
-## <a name="value_type"></a> hash_set::value_type (STL/CLR)
+## <a name="hash_setvalue_type-stlclr"></a><a name="value_type"></a>hash_set:: value_type (STL/CLR)
 
 Typ prvku
 

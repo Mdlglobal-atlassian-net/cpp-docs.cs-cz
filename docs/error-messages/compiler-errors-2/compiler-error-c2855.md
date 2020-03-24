@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2855
 ms.assetid: bfcd2619-f1e4-4016-95ee-5bdabe26fbad
-ms.openlocfilehash: 0928f3d921c6ac241a3d99b505e0645db7c1d6b1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a385c5df8614a52826c8a167f159dad278865f5a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385794"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80201877"
 ---
 # <a name="compiler-error-c2855"></a>Chyba kompilátoru C2855
 
-možnost příkazového řádku "možnost" konzistentní s předkompilovanou hlavičkou
+parametr příkazového řádku Optional je nekonzistentní s předkompilovanou hlavičkou.
 
-Daný parametr příkazového řádku se liší od možnost použít k vytvoření předkompilovaných hlaviček. Znovu vygenerovat předkompilované hlavičky s danou možnost příkazového řádku.
+Zadaná možnost příkazového řádku se liší od možnosti použité k vytvoření předkompilované hlavičky. Znovu vygenerujte předkompilovanou hlavičku pomocí dané možnosti příkazového řádku.

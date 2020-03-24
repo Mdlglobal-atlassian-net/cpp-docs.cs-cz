@@ -40,16 +40,16 @@ helpviewer_keywords:
 - Open method
 - StartTransaction method
 ms.assetid: 83cd798f-b45d-4f11-a23c-29183390450c
-ms.openlocfilehash: b34a6300473db94621360f1d04fd73ddd7e8bd69
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 72797411b100480a06e27b71b000264070e57e32
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62366456"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211130"
 ---
 # <a name="csession-class"></a>CSession – třída
 
-Představuje relaci izolovanou databázi přístup.
+Představuje jednu relaci přístupu k databázi.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -59,7 +59,7 @@ class CSession
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** také atldbcli.h
+**Záhlaví:** atldbcli. h
 
 ## <a name="members"></a>Členové
 
@@ -67,20 +67,20 @@ class CSession
 
 |||
 |-|-|
-|[Abort](#abort)|Zruší (končí) transakce.|
-|[Zavřít](#close)|Ukončení relace.|
-|[Potvrzení změn](#commit)|potvrzení transakce.|
-|[GetTransactionInfo](#gettransactioninfo)|Vrátí informace o transakci.|
-|[Otevřít](#open)|Otevře se nová relace pro objekt zdroje dat.|
-|[StartTransaction](#starttransaction)|Spustí novou transakci pro tuto relaci.|
+|[Abort](#abort)|Zruší (ukončí) transakci.|
+|[Uzavírací](#close)|Zavře relaci.|
+|[Potvrzuj](#commit)|Potvrdí transakci.|
+|[GetTransactionInfo](#gettransactioninfo)|Vrátí informace týkající se transakce.|
+|[Otevírají](#open)|Otevře novou relaci pro objekt zdroje dat.|
+|[StartTransaction](#starttransaction)|Zahájí novou transakci pro tuto relaci.|
 
 ## <a name="remarks"></a>Poznámky
 
-Jeden nebo více relací může být přidružená k připojení každého poskytovatele (zdroj dat), která je reprezentována [CDataSource](../../data/oledb/cdatasource-class.md) objektu. Chcete-li vytvořit nový `CSession` pro `CDataSource`, volání [CSession::Open](../../data/oledb/csession-open.md). Začněte databázové transakce `CSession` poskytuje `StartTransaction` metody. Po zahájení transakce se mohou zavázat k jeho použití `Commit` metodu, nebo zrušit pomocí `Abort` metody.
+Jednu nebo více relací lze přidružit ke každému připojení zprostředkovatele (zdroji dat), který je reprezentován objektem [CDataSource](../../data/oledb/cdatasource-class.md) . Chcete-li vytvořit nový `CSession` pro `CDataSource`, zavolejte [CSession:: Open](../../data/oledb/csession-open.md). Chcete-li zahájit databázovou transakci, `CSession` poskytuje metodu `StartTransaction`. Po spuštění transakce ji můžete potvrdit pomocí metody `Commit`, nebo ji zrušit pomocí metody `Abort`.
 
-## <a name="abort"></a> CSession::Abort
+## <a name="csessionabort"></a><a name="abort"></a>CSession:: Abort
 
-Ukončí transakce.
+Ukončí transakci.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -92,15 +92,15 @@ HRESULT Abort(BOID* pboidReason = NULL,
 
 #### <a name="parameters"></a>Parametry
 
-Zobrazit [ITransaction::Abort](/previous-versions/windows/desktop/ms709833(v=vs.85)) v *referenční informace pro OLE DB programátory*.
+Viz téma [ITransaction:: Abort](/previous-versions/windows/desktop/ms709833(v=vs.85)) v *referenci programátora OLE DB*.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Standardní HRESULT.
+Standardní hodnota HRESULT.
 
-## <a name="close"></a> CSession::Close
+## <a name="csessionclose"></a><a name="close"></a>CSession:: Close
 
-Ukončí relaci, která byla otevírány [CSession::Open](../../data/oledb/csession-open.md).
+Zavře relaci, která byla otevřena pomocí [CSession:: Open](../../data/oledb/csession-open.md).
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -110,11 +110,11 @@ void Close() throw();
 
 ### <a name="remarks"></a>Poznámky
 
-Verze `m_spOpenRowset` ukazatele.
+Uvolní ukazatel `m_spOpenRowset`.
 
-## <a name="commit"></a> CSession::Commit
+## <a name="csessioncommit"></a><a name="commit"></a>CSession:: Commit
 
-potvrzení transakce.
+Potvrdí transakci.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -126,19 +126,19 @@ HRESULT Commit(BOOL bRetaining = FALSE,
 
 #### <a name="parameters"></a>Parametry
 
-Zobrazit [ITransaction::Commit](/previous-versions/windows/desktop/ms713008(v=vs.85)) v *referenční informace pro OLE DB programátory*.
+Viz [ITransaction:: Commit](/previous-versions/windows/desktop/ms713008(v=vs.85)) v *referenci programátora OLE DB*.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Standardní HRESULT.
+Standardní hodnota HRESULT.
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace najdete v tématu [ITransaction::Commit](/previous-versions/windows/desktop/ms713008(v=vs.85)).
+Další informace naleznete v tématu [ITransaction:: Commit](/previous-versions/windows/desktop/ms713008(v=vs.85)).
 
-## <a name="gettransactioninfo"></a> CSession::GetTransactionInfo
+## <a name="csessiongettransactioninfo"></a><a name="gettransactioninfo"></a>CSession:: GetTransactionInfo
 
-Vrátí informace o transakci.
+Vrátí informace týkající se transakce.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -148,19 +148,19 @@ HRESULT GetTransactionInfo(XACTTRANSINFO* pInfo) const throw();
 
 #### <a name="parameters"></a>Parametry
 
-Zobrazit [ITransaction::GetTransactionInfo](/previous-versions/windows/desktop/ms714975(v=vs.85)) v *referenční informace pro OLE DB programátory*.
+Viz [ITransaction:: GetTransactionInfo](/previous-versions/windows/desktop/ms714975(v=vs.85)) v *referenci programátora OLE DB*.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Standardní HRESULT.
+Standardní hodnota HRESULT.
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace najdete v tématu [ITransaction::GetTransactionInfo](/previous-versions/windows/desktop/ms714975(v=vs.85)) v *OLE DB referenční informace pro programátory*.
+Další informace naleznete v tématu [ITransaction:: GetTransactionInfo](/previous-versions/windows/desktop/ms714975(v=vs.85)) v *Referenční příručce programátora OLE DB*.
 
-## <a name="open"></a> CSession::Open
+## <a name="csessionopen"></a><a name="open"></a>CSession:: Open
 
-Otevře se nová relace pro objekt zdroje dat.
+Otevře novou relaci pro objekt zdroje dat.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -172,26 +172,26 @@ HRESULT Open(const CDataSource& ds,
 
 #### <a name="parameters"></a>Parametry
 
-*ds*<br/>
-[in] Zdroj dat, pro který má být otevřeno relace.
+*služby*<br/>
+pro Zdroj dat, pro který má být relace otevřena.
 
 *pPropSet*<br/>
-[in] Ukazatel na pole [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) struktury obsahující vlastnosti a hodnoty, která se má nastavit. Zobrazit [sady vlastností a vlastností skupiny](/previous-versions/windows/desktop/ms713696(v=vs.85)) v *referenční informace pro OLE DB programátory* ve Windows SDK.
+pro Ukazatel na pole [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) struktury obsahující vlastnosti a hodnoty, které mají být nastaveny. Viz [sady vlastností a skupiny vlastností](/previous-versions/windows/desktop/ms713696(v=vs.85)) v *referenci OLE DB programátora* v Windows SDK.
 
 *ulPropSets*<br/>
-[in] Počet [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) struktury předané *pPropSet* argument.
+pro Počet [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) struktur předaných v argumentu *pPropSet* .
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Standardní HRESULT.
+Standardní hodnota HRESULT.
 
 ### <a name="remarks"></a>Poznámky
 
-Je nutné otevřít objekt zdroje dat pomocí [CDataSource::Open](../../data/oledb/cdatasource-open.md) před předáním do `CSession::Open`.
+Je nutné otevřít objekt zdroje dat pomocí [CDataSource:: Open](../../data/oledb/cdatasource-open.md) před předáním do `CSession::Open`.
 
-## <a name="starttransaction"></a> CSession::StartTransaction
+## <a name="csessionstarttransaction"></a><a name="starttransaction"></a>CSession:: StartTransaction
 
-Spustí novou transakci pro tuto relaci.
+Zahájí novou transakci pro tuto relaci.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -204,18 +204,18 @@ HRESULT StartTransaction(ISOLEVEL isoLevel = ISOLATIONLEVEL_READCOMMITTED,
 
 #### <a name="parameters"></a>Parametry
 
-Zobrazit [ITransactionLocal::StartTransaction](/previous-versions/windows/desktop/ms709786(v=vs.85)) v *referenční informace pro OLE DB programátory*.
+Viz [ITransactionLocal:: StartTransaction](/previous-versions/windows/desktop/ms709786(v=vs.85)) v *referenci programátora OLE DB*.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Standardní HRESULT.
+Standardní hodnota HRESULT.
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace najdete v tématu [ITransactionLocal::StartTransaction](/previous-versions/windows/desktop/ms709786(v=vs.85)) v *OLE DB referenční informace pro programátory*.
+Další informace naleznete v tématu [ITransactionLocal:: StartTransaction](/previous-versions/windows/desktop/ms709786(v=vs.85)) v *referenci programátora OLE DB*.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [CatDB](../../overview/visual-cpp-samples.md)<br/>
-[OLE DB – šablony příjemce](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Šablony OLE DB příjemců](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Referenční dokumentace k šablonám příjemců OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - RC2001
 ms.assetid: 92bfb4c0-1879-4606-bb9f-ef7368707b4a
-ms.openlocfilehash: f4755e04a744d94636b4b37aaf727e0d733008ef
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 35042687b798b53857becdedba57861bd4f41a05
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62346688"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80191717"
 ---
 # <a name="resource-compiler-error-rc2001"></a>Chyba kompilátoru prostředků RC2001
 
-Obsahuje znak nového řádku – konstanta
+nový řádek v konstantě
 
-Řetězcová konstanta pokračuje na druhý řádek bez buď zpětné lomítko (**\\**) nebo zavřením a otevřením dvojitých uvozovek (**"**).
+Řetězcová konstanta pokračovala na druhém řádku bez zpětného lomítka ( **\\** ) nebo zavření a otevření dvojitých uvozovek ( **"** ).
 
-Pro přerušení konstantu řetězce, který je na dva řádky ve zdrojovém souboru, proveďte jednu z následujících akcí:
+Chcete-li přerušit řetězcovou konstantu, která je na dvou řádcích ve zdrojovém souboru, proveďte jednu z následujících akcí:
 
-- Konec řádku prvním znakem pokračování řádku, zpětného lomítka.
+- Ukončí první řádek znakem pokračování řádku, zpětného lomítka.
 
-- Zavřete řetězec na prvním řádku s dvojité uvozovky a otevřete řetězec na další řádek s další uvozovku.
+- Zavřete řetězec na prvním řádku pomocí dvojité uvozovky a otevřete řetězec na dalším řádku s jiným znakem uvozovek.
 
-Není dostatečná k ukončení první řádek s \n řídicí sekvence pro vkládání znak nového řádku do řetězcová konstanta.
+Není dostačující pro ukončení prvního řádku s \n, řídicí sekvence pro vložení znaku nového řádku v řetězcové konstantě.

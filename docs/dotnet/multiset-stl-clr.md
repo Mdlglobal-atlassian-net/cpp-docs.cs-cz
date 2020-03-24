@@ -97,18 +97,18 @@ helpviewer_keywords:
 - operator> member [STL/CLR]
 - operator>= member [STL/CLR]
 ms.assetid: 7c46e2b4-cd88-49b7-a9e6-63ad5ae7feb5
-ms.openlocfilehash: e7a0551c1d75993d588f5dbb369989c42a71d903
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 811b96cca1fbf661def181d16dcb6a02c6c398d8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384774"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80208491"
 ---
 # <a name="multiset-stlclr"></a>multiset (STL/CLR)
 
-Třída šablony popisuje objekt, který řídí různé délky sekvence elementů, která má obousměrný přístup. Použití kontejneru `multiset` , spravovat řadu prvků, jako větve (téměř) s vyrovnáváním seřazených uzlů, každý ukládání jeden element.
+Třída šablony popisuje objekt, který ovládá proměnlivou délku posloupnosti prvků, které mají obousměrný přístup. Pomocí `multiset` kontejnerů můžete spravovat sekvenci prvků jako (skoro) vyvážený uspořádaný strom uzlů, z nichž každý ukládá jeden element.
 
-V popisu níže `GValue` je stejný jako `GKey`, který je stejný jako *klíč* Pokud je typ odkazu, v takovém případě je `Key^`.
+V popisu níže je `GValue` stejné jako `GKey`, která je naopak stejná jako *klíč* , pokud se jedná o typ REF, v takovém případě je to `Key^`.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -128,14 +128,14 @@ template<typename Key>
 
 ### <a name="parameters"></a>Parametry
 
-*Key*<br/>
-Typ klíčovou komponentou elementu v řízené sekvenci.
+*Klíč*<br/>
+Typ klíčové součásti prvku v řízené sekvenci.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<cliext – / set >
+**Záhlaví:** \<cliext –/set >
 
-**Namespace:** cliext –
+**Obor názvů:** cliext –
 
 ## <a name="declarations"></a>Deklarace
 
@@ -143,96 +143,96 @@ Typ klíčovou komponentou elementu v řízené sekvenci.
 |---------------------|-----------------|
 |[multiset::const_iterator (STL/CLR)](#const_iterator)|Typ konstantního iterátoru řízené sekvence|
 |[multiset::const_reference (STL/CLR)](#const_reference)|Typ konstantního odkazu na prvek|
-|[multiset::const_reverse_iterator (STL/CLR)](#const_reverse_iterator)|Typ konstantního zpětného iterátoru řízené sekvence.|
-|[multiset::difference_type (STL/CLR)](#difference_type)|Typ (může být podepsaná) vzdálenosti mezi dvěma prvky.|
-|[multiset::generic_container (STL/CLR)](#generic_container)|Typ obecné rozhraní pro kontejner.|
-|[multiset::generic_iterator (STL/CLR)](#generic_iterator)|Typ iterátoru pro obecné rozhraní pro kontejner.|
-|[multiset::generic_reverse_iterator (STL/CLR)](#generic_reverse_iterator)|Typ "reverse iterator" pro obecné rozhraní pro kontejner.|
-|[multiset::generic_value (STL/CLR)](#generic_value)|Typ elementu pro obecné rozhraní pro kontejner.|
+|[multiset::const_reverse_iterator (STL/CLR)](#const_reverse_iterator)|Typ konstantního reverzního iterátoru řízené sekvence.|
+|[multiset::difference_type (STL/CLR)](#difference_type)|Typ (možná znaménko) vzdálenosti mezi dvěma prvky.|
+|[multiset::generic_container (STL/CLR)](#generic_container)|Typ obecného rozhraní pro kontejner.|
+|[multiset::generic_iterator (STL/CLR)](#generic_iterator)|Typ iterátoru pro obecné rozhraní kontejneru.|
+|[multiset::generic_reverse_iterator (STL/CLR)](#generic_reverse_iterator)|Typ reverzního iterátoru pro obecné rozhraní kontejneru.|
+|[multiset::generic_value (STL/CLR)](#generic_value)|Typ elementu pro obecné rozhraní kontejneru.|
 |[multiset::iterator (STL/CLR)](#iterator)|Typ iterátoru řízené sekvence|
-|[multiset::key_compare (STL/CLR)](#key_compare)|Pořadí delegáta pro dva klíče.|
+|[multiset::key_compare (STL/CLR)](#key_compare)|Delegát řazení pro dva klíče.|
 |[multiset::key_type (STL/CLR)](#key_type)|Typ klíče řazení|
 |[multiset::reference (STL/CLR)](#reference)|Typ odkazu na prvek|
-|[multiset::reverse_iterator (STL/CLR)](#reverse_iterator)|Typ "reverse iterator" pro řízenou sekvenci.|
-|[multiset::size_type (STL/CLR)](#size_type)|Typ vzdálenosti (nezáporné) mezi dvěma prvky.|
-|[multiset::value_compare (STL/CLR)](#value_compare)|Pořadí delegáta pro dvě hodnoty prvků.|
+|[multiset::reverse_iterator (STL/CLR)](#reverse_iterator)|Typ reverzního iterátoru řízené sekvence.|
+|[multiset::size_type (STL/CLR)](#size_type)|Typ (nezáporné) vzdálenosti mezi dvěma prvky.|
+|[multiset::value_compare (STL/CLR)](#value_compare)|Delegát řazení pro dvě hodnoty elementu.|
 |[multiset::value_type (STL/CLR)](#value_type)|Typ prvku|
 
 |Členská funkce|Popis|
 |---------------------|-----------------|
 |[multiset::begin (STL/CLR)](#begin)|Určuje začátek řízené sekvence.|
 |[multiset::clear (STL/CLR)](#clear)|Odebere všechny prvky.|
-|[multiset::count (STL/CLR)](#count)|Vrátí počet prvků odpovídající zadanému klíči.|
+|[multiset::count (STL/CLR)](#count)|Spočítá prvky, které odpovídají zadanému klíči.|
 |[multiset::empty (STL/CLR)](#empty)|Zkouší, zda nejsou přítomny žádné prvky.|
 |[multiset::end (STL/CLR)](#end)|Určuje konec řízené sekvence.|
 |[multiset::equal_range (STL/CLR)](#equal_range)|Najde rozsah, který odpovídá zadanému klíči.|
 |[multiset::erase (STL/CLR)](#erase)|Odebere prvky v určených pozicích.|
 |[multiset::find (STL/CLR)](#find)|Vyhledá prvek, který odpovídá zadanému klíči.|
 |[multiset::insert (STL/CLR)](#insert)|Přidá prvky.|
-|[multiset::key_comp (STL/CLR)](#key_comp)|Zkopíruje pořadí delegáta pro dva klíče.|
-|[multiset::lower_bound (STL/CLR)](#lower_bound)|Vyhledá počátek rozsahu, který odpovídá zadanému klíči.|
+|[multiset::key_comp (STL/CLR)](#key_comp)|Zkopíruje delegáta řazení dvou klíčů.|
+|[multiset::lower_bound (STL/CLR)](#lower_bound)|Vyhledá začátek rozsahu, který odpovídá zadanému klíči.|
 |[multiset::make_value (STL/CLR)](#make_value)|Vytvoří objekt hodnoty.|
 |[multiset::multiset (STL/CLR)](#multiset)|Sestaví objekt kontejneru.|
-|[multiset::rbegin (STL/CLR)](#rbegin)|Určuje začátek řízené obrácené sekvenci.|
-|[multiset::rend (STL/CLR)](#rend)|Určuje konec řízené obrácené sekvenci.|
+|[multiset::rbegin (STL/CLR)](#rbegin)|Určuje začátek obrácené kontrolované sekvence.|
+|[multiset::rend (STL/CLR)](#rend)|Určuje konec reverzní kontrolované sekvence.|
 |[multiset::size (STL/CLR)](#size)|Spočítá počet prvků.|
 |[multiset::swap (STL/CLR)](#swap)|Zamění obsah dvou kontejnerů.|
-|[multiset::to_array (STL/CLR)](#to_array)|Zkopíruje do nového pole řízené sekvence.|
+|[multiset::to_array (STL/CLR)](#to_array)|Zkopíruje řízenou sekvenci do nového pole.|
 |[multiset::upper_bound (STL/CLR)](#upper_bound)|Najde konec rozsahu, který odpovídá zadanému klíči.|
-|[multiset::value_comp (STL/CLR)](#value_comp)|Zkopíruje pořadí delegáta pro dvě hodnoty prvků.|
+|[multiset::value_comp (STL/CLR)](#value_comp)|Zkopíruje delegáta řazení pro dvě hodnoty elementu.|
 
 |Operátor|Popis|
 |--------------|-----------------|
-|[multiset::operator= (STL/CLR)](#op_as)|Nahradí řízené sekvence.|
-|[operator!= (multiset) (STL/CLR)](#op_neq)|Určuje, zda `multiset` není roven jinému objektu `multiset` objektu.|
-|[operator< (multiset) (STL/CLR)](#op_lt)|Určuje, zda `multiset` je menší než jiný objekt `multiset` objektu.|
-|[operator<= (multiset) (STL/CLR)](#op_lteq)|Určuje, zda `multiset` objekt je menší nebo rovna jiné `multiset` objektu.|
-|[operator== (multiset) (STL/CLR)](#op_eq)|Určuje, zda `multiset` je roven jinému objektu `multiset` objektu.|
-|[operator> (multiset) (STL/CLR)](#op_gt)|Určuje, zda `multiset` je větší než jiný objekt `multiset` objektu.|
-|[operator>= (multiset) (STL/CLR)](#op_gteq)|Určuje, zda `multiset` objekt je větší než nebo roven jinému `multiset` objektu.|
+|[multiset::operator= (STL/CLR)](#op_as)|Nahradí řízenou sekvenci.|
+|[operator!= (multiset) (STL/CLR)](#op_neq)|Určuje, zda `multiset` objekt není roven jinému objektu `multiset`.|
+|[operator< (multiset) (STL/CLR)](#op_lt)|Určuje, zda je objekt `multiset` menší než jiný objekt `multiset`.|
+|[operator<= (multiset) (STL/CLR)](#op_lteq)|Určuje, zda je objekt `multiset` menší nebo roven jinému objektu `multiset`.|
+|[operator== (multiset) (STL/CLR)](#op_eq)|Určuje, zda je objekt `multiset` roven jinému objektu `multiset`.|
+|[operator> (multiset) (STL/CLR)](#op_gt)|Určuje, zda je objekt `multiset` větší než jiný objekt `multiset`.|
+|[operator>= (multiset) (STL/CLR)](#op_gteq)|Určuje, zda je objekt `multiset` větší nebo roven jinému objektu `multiset`.|
 
 ## <a name="interfaces"></a>Rozhraní
 
 |Rozhraní|Popis|
 |---------------|-----------------|
-|<xref:System.ICloneable>|Duplicitní objektu.|
-|<xref:System.Collections.IEnumerable>|Pořadí mezi prvky.|
-|<xref:System.Collections.ICollection>|Údržba skupiny prvků.|
-|<xref:System.Collections.Generic.IEnumerable%601>|Pořadí pomocí zadané elementy.|
-|<xref:System.Collections.Generic.ICollection%601>|Údržba skupiny zadané elementy.|
-|ITree\<klíč, hodnota >|Udržujte obecný kontejneru.|
+|<xref:System.ICloneable>|Duplikuje objekt.|
+|<xref:System.Collections.IEnumerable>|Sekvence prostřednictvím prvků.|
+|<xref:System.Collections.ICollection>|Udržovat skupinu prvků.|
+|<xref:System.Collections.Generic.IEnumerable%601>|Sekvence prostřednictvím typových elementů.|
+|<xref:System.Collections.Generic.ICollection%601>|Udržovat skupinu typových elementů.|
+|ITree\<klíč, hodnota >|Udržujte obecný kontejner.|
 
 ## <a name="remarks"></a>Poznámky
 
-Objekt přiděluje a uvolňuje úložiště pro sekvenci, ovládací prvky jako jednotlivé uzly. Vloží prvky do (téměř) s vyrovnáváním strom, který udržuje seřazený tím, že změna vazby mezi uzly, nikdy zkopírováním obsah jednoho uzlu do jiného. To znamená, že můžete vložit a odebrat elementy volně bez narušení zbývající prvky.
+Objekt přiděluje a uvolňuje úložiště pro sekvenci, která ovládá jako jednotlivé uzly. Vloží prvky do (skoro) vyvážené stromové struktury, které jsou uspořádány pomocí změny propojení mezi uzly, nikdy kopírováním obsahu jednoho uzlu do druhého. To znamená, že můžete vkládat a odebírat prvky volně bez narušování zbývajících prvků.
 
-Objekt seřadí sekvence pomocí volání uloženého delegáta objekt typu [multiset::key_compare (STL/CLR)](../dotnet/multiset-key-compare-stl-clr.md). Můžete zadat objekt uložené delegáta při konstrukci multiset; Pokud chcete zadat žádný objekt. delegát, výchozí hodnota je porovnání `operator<(key_type, key_type)`. Přístup k tomuto uloženého objektu voláním členské funkce [multiset::key_comp (STL/CLR)](../dotnet/multiset-key-comp-stl-clr.md)`()`.
+Objekt seřadí sekvenci, kterou ovládá, voláním uloženého objektu delegáta typu [multiset:: key_compare (STL/CLR)](../dotnet/multiset-key-compare-stl-clr.md). Uložený objekt delegáta lze zadat při vytváření multiset; Pokud nezadáte žádný delegovaný objekt, výchozí hodnota je porovnávání `operator<(key_type, key_type)`. K tomuto uloženému objektu přistupujete voláním členské funkce [multiset:: key_comp (STL/CLR)](../dotnet/multiset-key-comp-stl-clr.md)`()`.
 
-Takový objekt delegáta musí uložit přísné slabé seřazení klíčů typu [multiset::key_type (STL/CLR)](../dotnet/multiset-key-type-stl-clr.md). To znamená pro jakékoli dva klíče `X` a `Y`:
+Takový objekt delegáta musí mít přísně slabé řazení klíčů typu [multiset:: key_type (STL/CLR)](../dotnet/multiset-key-type-stl-clr.md). To znamená, že pro všechny dva klíče `X` a `Y`:
 
-`key_comp()(X, Y)` Vrátí výsledek stejný datový typ Boolean při každém volání.
+`key_comp()(X, Y)` vrací stejný logický výsledek při každém volání.
 
-Pokud `key_comp()(X, Y)` má hodnotu true, pak `key_comp()(Y, X)` musí mít hodnotu false.
+Pokud má `key_comp()(X, Y)` hodnotu true, `key_comp()(Y, X)` musí mít hodnotu false.
 
-Pokud `key_comp()(X, Y)` má hodnotu true, pak `X` říká, že je řazen před `Y`.
+Pokud má `key_comp()(X, Y)` hodnotu true, `X` se říká, že se má seřadit před `Y`.
 
-Pokud `!key_comp()(X, Y) && !key_comp()(Y, X)` má hodnotu true, pak `X` a `Y` se říká, že mají ekvivalentní řazení.
+Pokud má `!key_comp()(X, Y) && !key_comp()(Y, X)` hodnotu true, pak `X` a `Y` se říká, že mají ekvivalentní řazení.
 
-Pro libovolný element `X` , která předchází `Y` v řízené sekvenci `key_comp()(Y, X)` má hodnotu false. (Pro výchozí objekt delegáta, klíče nikdy snížení hodnoty.) Na rozdíl od třídy šablony [nastavit (STL/CLR)](../dotnet/set-stl-clr.md), objekt třídy šablony `multiset` nevyžaduje, aby byly jedinečné klíče pro všechny elementy. (Dva nebo více klíčů může mít odpovídající řazení.)
+U všech prvků `X`, které předcházejí `Y` v řízené sekvenci, `key_comp()(Y, X)` má hodnotu false. (Pro výchozí objekt delegáta klíče nikdy nesnižují hodnotu.) Na rozdíl od sady tříd šablon [(STL/CLR)](../dotnet/set-stl-clr.md)objekt třídy šablony `multiset` nevyžaduje, aby klíče pro všechny elementy byly jedinečné. (Dva nebo více klíčů může mít ekvivalentní řazení.)
 
-Každý prvek slouží jako ey a hodnotu. Sekvence je reprezentována způsobem, který umožňuje vyhledávání, vkládání a odstranění libovolný prvek s počtem operací úměrný logaritmu počtu prvků v sekvenci (logaritmické čas). Vkládání prvků navíc nezruší platnost žádných iterátorů a odstranění prvku zruší platnost pouze těch iterátorů, které odkazují na odstraněný prvek.
+Každý prvek slouží jako enalezen i jako hodnota. Sekvence je reprezentována způsobem, který umožňuje vyhledávání, vkládání a odebírání libovolného prvku s řadou operací, které jsou úměrné logaritmu počtu prvků v sekvenci (logaritmický čas). Vkládání prvků navíc nezruší platnost žádných iterátorů a odstranění prvku zruší platnost pouze těch iterátorů, které odkazují na odstraněný prvek.
 
-Použita třída multiset podporuje obousměrné iterátory, což znamená, že přejdete na sousedící prvky zadaný iterátor, který určuje elementu v řízené sekvenci. Speciální hlavního uzlu odpovídá iterátorů vrácené [multiset::end (STL/CLR)](../dotnet/multiset-end-stl-clr.md)`()`. Tento iterátor, který má přístup po posledním prvku v řízené sekvenci lze snížit, pokud jsou k dispozici. Můžete zvýšit multiset – iterátor, který má přístup k hlavnímu uzlu a budou pak porovnat rovna `end()`. Nelze přistoupit přes ukazatel vrátí iterátor, ale `end()`.
+Multiset podporuje obousměrné iterátory, což znamená, že můžete krokovat s sousedícími prvky daným iterátorem, který určuje prvek v řízené sekvenci. Speciální hlavní uzel odpovídá iterátoru vrácenému funkcí [multiset:: end (STL/CLR)](../dotnet/multiset-end-stl-clr.md)`()`. Tento iterátor můžete snížit tak, aby se dosáhlo posledního prvku v řízené sekvenci, pokud je k dispozici. Můžete zvýšit multiset iterátor, abyste dosáhli hlavního uzlu, a pak se porovná `end()`. Nemůžete ale odkázat na iterátor vrácený `end()`.
 
-Všimněte si, že nemůže odkazovat na prvek multiset – přímo zadané pozici číselné –, který vyžaduje iterátor náhodného přístupu.
+Všimněte si, že nemůžete odkazovat na element multiset přímo za jeho číselnou pozici, která vyžaduje iterátor náhodného přístupu.
 
-Multiset – iterátoru uloží popisovač do přidružené multiset – uzlu, který je pak uloží popisovač pro jeho přiřazeným kontejnerem. Iterátory lze použít pouze objekty, které přiřazeným kontejnerem. Pokud je jeho přidružený uzel multiset – přidružené nějaké multiset iterátor multiset – zůstává v platnosti. Kromě toho je platný iterátoru přesměrovat – slouží k přístupu nebo změnit hodnotu prvku jmenuje--tak dlouho, dokud se nerovná `end()`.
+Iterátor multiset ukládá popisovač do přidruženého uzlu multiset, který zase ukládá popisovač do přidruženého kontejneru. Iterátory lze použít pouze u jejich přidružených objektů kontejneru. Iterátor multiset zůstává platný, pokud je přidružený uzel multiset spojen s některými multiset. Kromě toho je možné, že platný iterátor je deodkazování – můžete ho použít pro přístup k hodnotě prvku, kterou Určuje, a k její změně, pokud to není rovno `end()`.
 
-Smazání nebo odstranění prvku volá destruktor pro jeho uložené hodnotě. Zničení kontejneru vymaže všechny prvky. Kontejner, jehož typ prvku je třídy ref class tak, zajišťuje, že žádné elementy něj kontejneru. Mějte na paměti, ale, že kontejner zpracovává nemá *není* zničit jeho prvků.
+Při mazání nebo odebírání elementu se volá destruktor pro jeho uloženou hodnotu. Zničení kontejneru smaže všechny prvky. Proto kontejner, jehož typ elementu je ref class, zajistí, že kontejner neobsahuje žádné prvky. Upozorňujeme však, že kontejner popisovačů *nezničí své* prvky.
 
 ## <a name="members"></a>Členové
 
-## <a name="begin"></a> multiset::begin (STL/CLR)
+## <a name="multisetbegin-stlclr"></a><a name="begin"></a>multiset:: begin (STL/CLR)
 
 Určuje začátek řízené sekvence.
 
@@ -244,7 +244,7 @@ iterator begin();
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí obousměrný iterátor, který určuje první prvek řízenou sekvenci nebo přesně za konec k prázdné sekvenci. Můžete ji použít k získání iterátor, který určuje `current` začátek řízené sekvence, ale jeho stav můžete změnit, pokud se změní délka řízené sekvence.
+Členská funkce vrátí obousměrný iterátor, který určuje první prvek řízené sekvence nebo těsně za konec prázdné sekvence. Použijete ho k získání iterátoru, který určuje `current` začátek řízené sekvence, ale jeho stav se může změnit, pokud se změní délka kontrolované sekvence.
 
 ### <a name="example"></a>Příklad
 
@@ -280,7 +280,7 @@ a b c
 *++begin() = b
 ```
 
-## <a name="clear"></a> multiset::clear (STL/CLR)
+## <a name="multisetclear-stlclr"></a><a name="clear"></a>multiset:: Clear (STL/CLR)
 
 Odebere všechny prvky.
 
@@ -292,7 +292,7 @@ void clear();
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce efektivně volá [multiset::erase (STL/CLR)](../dotnet/multiset-erase-stl-clr.md) `(` [multiset::begin (STL/CLR)](../dotnet/multiset-begin-stl-clr.md) `(),` [multiset::end (STL/CLR)](../dotnet/multiset-end-stl-clr.md) `())`. Použijete ji k zajištění, že je prázdná řízené sekvence.
+Členská funkce efektivně volá [multiset:: Erase (STL/CLR)](../dotnet/multiset-erase-stl-clr.md)`(` [multiset:: begin (STL/CLR)](../dotnet/multiset-begin-stl-clr.md)`(),` [MULTISET:: end (STL/CLR)](../dotnet/multiset-end-stl-clr.md)`())`. Použijete ho k zajištění, aby řízená sekvence byla prázdná.
 
 ### <a name="example"></a>Příklad
 
@@ -338,7 +338,7 @@ a b
 size() = 0
 ```
 
-## <a name="const_iterator"></a> multiset::const_iterator (STL/CLR)
+## <a name="multisetconst_iterator-stlclr"></a><a name="const_iterator"></a>multiset:: const_iterator (STL/CLR)
 
 Typ konstantního iterátoru řízené sekvence
 
@@ -350,7 +350,7 @@ typedef T2 const_iterator;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ popisuje objekt neurčeného typu `T2` , který může sloužit jako konstantní obousměrného iterátoru řízené sekvence.
+Typ popisuje objekt nespecifikovaného typu `T2`, který může sloužit jako konstantní obousměrný iterátor pro řízenou sekvenci.
 
 ### <a name="example"></a>Příklad
 
@@ -380,7 +380,7 @@ int main()
 a b c
 ```
 
-## <a name="const_reference"></a> multiset::const_reference (STL/CLR)
+## <a name="multisetconst_reference-stlclr"></a><a name="const_reference"></a>multiset:: const_reference (STL/CLR)
 
 Typ konstantního odkazu na prvek
 
@@ -392,7 +392,7 @@ typedef value_type% const_reference;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ, který popisuje konstantní odkaz na element.
+Typ popisuje konstantní odkaz na prvek.
 
 ### <a name="example"></a>Příklad
 
@@ -425,9 +425,9 @@ int main()
 a b c
 ```
 
-## <a name="const_reverse_iterator"></a> multiset::const_reverse_iterator (STL/CLR)
+## <a name="multisetconst_reverse_iterator-stlclr"></a><a name="const_reverse_iterator"></a>multiset:: const_reverse_iterator (STL/CLR)
 
-Typ konstantního zpětného iterátoru řízené sekvence...
+Typ konstantního reverzního iterátoru řízené sekvence.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -437,7 +437,7 @@ typedef T4 const_reverse_iterator;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ popisuje objekt neurčeného typu `T4` , který může sloužit jako konstantní zpětného iterátoru řízené sekvence.
+Typ popisuje objekt nespecifikovaného typu `T4`, který může sloužit jako konstantní reverzní iterátor pro řízenou sekvenci.
 
 ### <a name="example"></a>Příklad
 
@@ -467,7 +467,7 @@ int main()
 c b a
 ```
 
-## <a name="count"></a> multiset::Count (STL/CLR)
+## <a name="multisetcount-stlclr"></a><a name="count"></a>multiset:: Count (STL/CLR)
 
 Zjistí počet prvků odpovídající zadanému klíči.
 
@@ -480,11 +480,11 @@ size_type count(key_type key);
 #### <a name="parameters"></a>Parametry
 
 *key*<br/>
-Hodnota klíče pro hledání.
+Hodnota klíče, která se má vyhledat
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí počet prvků v řízené sekvenci, která mají stejné pořadí s *klíč*. Použijete ji k určení počtu prvků v řízené sekvenci aktuálně, které odpovídají zadanému klíči.
+Členská funkce vrátí počet prvků v řízené sekvenci, které mají ekvivalentní řazení s *klíčem*. Použijete ji k určení počtu prvků, které jsou aktuálně v řízené sekvenci, které odpovídají zadanému klíči.
 
 ### <a name="example"></a>Příklad
 
@@ -520,9 +520,9 @@ count(L'b') = 1
 count(L'C') = 0
 ```
 
-## <a name="difference_type"></a> multiset::difference_type (STL/CLR)
+## <a name="multisetdifference_type-stlclr"></a><a name="difference_type"></a>multiset::d ifference_type (STL/CLR)
 
-Typ vzdálenosti se znaménkem mezi dvěma prvky.
+Typy podepsané vzdálenosti mezi dvěma prvky.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -532,7 +532,7 @@ typedef int difference_type;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ, který popisuje element může být záporný počet.
+Typ popisuje pravděpodobně negativní počet prvků.
 
 ### <a name="example"></a>Příklad
 
@@ -575,7 +575,7 @@ end()-begin() = 3
 begin()-end() = -3
 ```
 
-## <a name="empty"></a> multiset::Empty (STL/CLR)
+## <a name="multisetempty-stlclr"></a><a name="empty"></a>multiset:: Empty (STL/CLR)
 
 Zkouší, zda nejsou přítomny žádné prvky.
 
@@ -587,7 +587,7 @@ bool empty();
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí hodnotu true pro prázdnou řízenou sekvenci. Je ekvivalentní [multiset::size (STL/CLR)](../dotnet/multiset-size-stl-clr.md)`() == 0`. Použijete ji k ověření, zda třída multiset je prázdný.
+Členská funkce vrátí hodnotu true pro prázdnou řízenou sekvenci. Je ekvivalentem [multiset:: Size (STL/CLR)](../dotnet/multiset-size-stl-clr.md)`() == 0`. Použijete ho k otestování, jestli je multiset prázdné.
 
 ### <a name="example"></a>Příklad
 
@@ -627,7 +627,7 @@ size() = 0
 empty() = True
 ```
 
-## <a name="end"></a> multiset::end (STL/CLR)
+## <a name="multisetend-stlclr"></a><a name="end"></a>multiset:: end (STL/CLR)
 
 Určuje konec řízené sekvence.
 
@@ -639,7 +639,7 @@ iterator end();
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí obousměrný iterátor, který ukazuje za konec řízené sekvence. Můžete ji použít k získání iterátor, který určuje konec řízené sekvence; jeho stav kódu ne změnit, pokud se změní délka řízené sekvence.
+Členská funkce vrátí obousměrný iterátor, který odkazuje hned za konec řízené sekvence. Použijete ho k získání iterátoru, který označuje konec řízené sekvence. jeho stav se nemění, pokud se změní délka kontrolované sekvence.
 
 ### <a name="example"></a>Příklad
 
@@ -676,7 +676,7 @@ a b c
 *--end() = c
 ```
 
-## <a name="equal_range"></a> multiset::equal_range (STL/CLR)
+## <a name="multisetequal_range-stlclr"></a><a name="equal_range"></a>multiset:: equal_range (STL/CLR)
 
 Najde rozsah, který odpovídá zadanému klíči.
 
@@ -689,11 +689,11 @@ cliext::pair<iterator, iterator> equal_range(key_type key);
 #### <a name="parameters"></a>Parametry
 
 *key*<br/>
-Hodnota klíče pro hledání.
+Hodnota klíče, která se má vyhledat
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí pár iterátorů `cliext::pair<iterator, iterator>(` [multiset::lower_bound (STL/CLR)](../dotnet/multiset-lower-bound-stl-clr.md) `(key),` [multiset::upper_bound (STL/CLR)](../dotnet/multiset-upper-bound-stl-clr.md)`(key))`. Použijete ji k určení rozsahu prvků v řízené sekvenci aktuálně, které odpovídají zadanému klíči.
+Členská funkce vrací dvojici iterátorů `cliext::pair<iterator, iterator>(` [multiset:: lower_bound (STL/CLR)](../dotnet/multiset-lower-bound-stl-clr.md)`(key),` [multiset:: Upper_bound (STL/CLR)](../dotnet/multiset-upper-bound-stl-clr.md)`(key))`. Použijete ji k určení rozsahu prvků, které jsou aktuálně v řízené sekvenci, která odpovídá zadanému klíči.
 
 ### <a name="example"></a>Příklad
 
@@ -736,7 +736,7 @@ equal_range(L'x') empty = True
 b
 ```
 
-## <a name="erase"></a> multiset::Erase (STL/CLR)
+## <a name="multiseterase-stlclr"></a><a name="erase"></a>multiset:: Erase (STL/CLR)
 
 Odebere prvky v určených pozicích.
 
@@ -751,26 +751,26 @@ size_type erase(key_type key)
 #### <a name="parameters"></a>Parametry
 
 *první*<br/>
-Začátek rozsahu vymazat.
+Začátek rozsahu, který se má vymazat
 
 *key*<br/>
-Hodnota klíče vymazat.
+Hodnota klíče, která se má vymazat
 
-*last*<br/>
-Konec rozsahu vymazat.
+*posledního*<br/>
+Konec rozsahu, který se má vymazat
 
-*kde*<br/>
-Element vymazat.
+*,*<br/>
+Prvek k vymazání.
 
 ### <a name="remarks"></a>Poznámky
 
-První členská funkce odstraní prvek řízené sekvence, na které odkazuje *kde*a vrátí iterátor, který určuje první prvek zbývající za prvkem, který odebere, nebo [multiset::end (STL / CLR)](../dotnet/multiset-end-stl-clr.md) `()` Pokud žádný takový prvek neexistuje. Použijete ji k odebrání jeden element.
+První členská funkce odstraní prvek řízené sekvence, na kterou ukazuje, *kde*a vrátí iterátor, který určí první prvek zbývající za odebraný element, nebo [multiset:: end (STL/CLR)](../dotnet/multiset-end-stl-clr.md)`()`, pokud žádný takový prvek neexistuje. Použijete ho k odebrání jednoho elementu.
 
-Druhá členská funkce odebere prvky řízené sekvence v rozsahu [`first`, `last`) a vrátí iterátor, který určuje první prvek zbývající za všemi odstraněnými prvky, nebo `end()` Pokud žádný takový prvek existuje... Použijete ji k odebrání nula nebo více souvislých prvků.
+Druhá členská funkce odstraní prvky kontrolované sekvence v rozsahu [`first`, `last`) a vrátí iterátor, který určí první prvek zbývající za odebranými prvky, nebo `end()`, pokud žádný takový prvek neexistuje.. Použijete ho k odebrání nuly nebo více souvislých prvků.
 
-Třetí členská funkce odstraní libovolný prvek řízenou sekvenci, jehož klíč má ekvivalentní řazení na *klíč*a vrátí počet prvků, které jsou odebrány. Použijete ho odebrat a spočítat všechny elementy, které odpovídají zadanému klíči.
+Třetí členská funkce odebere všechny prvky kontrolované sekvence, jejichž klíč má ekvivalentní řazení *klíče*, a vrátí počet odebraných prvků. Použijete ho k odebrání a počítání všech prvků, které odpovídají zadanému klíči.
 
-Každý prvek mazání trvá určitou dobu úměrný logaritmu počtu prvků v řízené sekvenci.
+Každé mazání elementu trvá čas úměrný logaritmu počtu prvků v řízené sekvenci.
 
 ### <a name="example"></a>Příklad
 
@@ -820,7 +820,7 @@ erase(begin(), end()-1) = e
 size() = 1
 ```
 
-## <a name="find"></a> multiset::Find (STL/CLR)
+## <a name="multisetfind-stlclr"></a><a name="find"></a>multiset:: Find (STL/CLR)
 
 Vyhledá prvek, který odpovídá zadanému klíči.
 
@@ -833,11 +833,11 @@ iterator find(key_type key);
 #### <a name="parameters"></a>Parametry
 
 *key*<br/>
-Hodnota klíče pro hledání.
+Hodnota klíče, která se má vyhledat
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud má alespoň jeden element v řízené sekvenci s odpovídající řazení *klíč*, členská funkce vrátí iterátor určit jeden z těchto elementů; v opačném případě vrátí [multiset::end (STL/CLR)](../dotnet/multiset-end-stl-clr.md) `()`. Použijete ji k aktuálně vyhledejte elementu v řízené sekvenci, která odpovídá zadanému klíči.
+Pokud alespoň jeden prvek kontrolované sekvence má ekvivalentní řazení s *klíčem*, vrátí členská funkce iterátor s označením jednoho z těchto elementů. v opačném případě vrátí [multiset:: end (STL/CLR)](../dotnet/multiset-end-stl-clr.md)`()`. Použijete ji k vyhledání prvku, který je aktuálně v řízené sekvenci, která odpovídá zadanému klíči.
 
 ### <a name="example"></a>Příklad
 
@@ -876,9 +876,9 @@ find b = b
 find C = False
 ```
 
-## <a name="generic_container"></a> multiset::generic_container (STL/CLR)
+## <a name="multisetgeneric_container-stlclr"></a><a name="generic_container"></a>multiset:: generic_container (STL/CLR)
 
-Typ obecné rozhraní pro kontejner.
+Typ obecného rozhraní pro kontejner.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -890,7 +890,7 @@ typedef Microsoft::VisualC::StlClr::
 
 ### <a name="remarks"></a>Poznámky
 
-Typ, který popisuje obecné rozhraní pro tuto třídu šablony kontejneru.
+Typ popisuje obecné rozhraní pro tuto třídu kontejneru šablony.
 
 ### <a name="example"></a>Příklad
 
@@ -940,9 +940,9 @@ a b c d
 a b c d e
 ```
 
-## <a name="generic_iterator"></a> multiset::generic_iterator (STL/CLR)
+## <a name="multisetgeneric_iterator-stlclr"></a><a name="generic_iterator"></a>multiset:: generic_iterator (STL/CLR)
 
-Typ iterátoru pro použití s obecné rozhraní pro kontejner.
+Typ iterátoru pro použití s obecným rozhraním pro kontejner.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -954,7 +954,7 @@ typedef Microsoft::VisualC::StlClr::Generic::
 
 ### <a name="remarks"></a>Poznámky
 
-Typ, který popisuje obecný iterátoru, který jde použít s obecné rozhraní pro tuto třídu šablony kontejneru.
+Typ popisuje obecný iterátor, který lze použít s obecným rozhraním pro tuto třídu kontejneru šablony.
 
 ### <a name="example"></a>Příklad
 
@@ -996,9 +996,9 @@ a b c
 a
 ```
 
-## <a name="generic_reverse_iterator"></a> multiset::generic_reverse_iterator (STL/CLR)
+## <a name="multisetgeneric_reverse_iterator-stlclr"></a><a name="generic_reverse_iterator"></a>multiset:: generic_reverse_iterator (STL/CLR)
 
-Typ "reverse iterator" pro použití s obecné rozhraní pro kontejner.
+Typ reverzního iterátoru pro použití s obecným rozhraním pro kontejner.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -1010,7 +1010,7 @@ typedef Microsoft::VisualC::StlClr::Generic::
 
 ### <a name="remarks"></a>Poznámky
 
-Typ, který popisuje obecný zpětný iterátor, který jde použít s obecné rozhraní pro tuto třídu šablony kontejneru.
+Typ popisuje obecný reverzní iterátor, který lze použít s obecným rozhraním pro tuto třídu kontejneru šablony.
 
 ### <a name="example"></a>Příklad
 
@@ -1052,9 +1052,9 @@ a b c
 c
 ```
 
-## <a name="generic_value"></a> multiset::generic_value (STL/CLR)
+## <a name="multisetgeneric_value-stlclr"></a><a name="generic_value"></a>multiset:: generic_value (STL/CLR)
 
-Typ elementu pro použití s obecné rozhraní pro kontejner.
+Typ elementu pro použití s obecným rozhraním pro kontejner.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -1064,7 +1064,7 @@ typedef GValue generic_value;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ, který popisuje objekt typu `GValue` hodnoty uložené elementu pro použití s obecné rozhraní pro tuto třídu šablony kontejneru, který popisuje.
+Typ popisuje objekt typu `GValue`, který popisuje hodnotu uloženého elementu pro použití s obecným rozhraním pro tuto třídu kontejneru šablony.
 
 ### <a name="example"></a>Příklad
 
@@ -1106,7 +1106,7 @@ a b c
 a
 ```
 
-## <a name="insert"></a> multiset::Insert (STL/CLR)
+## <a name="multisetinsert-stlclr"></a><a name="insert"></a>multiset:: Insert (STL/CLR)
 
 Přidá prvky.
 
@@ -1123,33 +1123,33 @@ void insert(System::Collections::Generic::IEnumerable<value_type>^ right);
 #### <a name="parameters"></a>Parametry
 
 *první*<br/>
-Začátek rozsahu pro vložení.
+Začátek rozsahu, který se má vložit
 
-*last*<br/>
-Konec rozsahu pro vložení.
+*posledního*<br/>
+Konec rozsahu, který má být vložen.
 
-*doprava*<br/>
+*Kliknutím*<br/>
 Výčet pro vložení.
 
-*Val*<br/>
-Hodnota klíče pro vložení.
+*počítává*<br/>
+Hodnota klíče, která se má vložit
 
-*kde*<br/>
-Kde v kontejneru pro vložení (jenom pro pomocný parametr).
+*,*<br/>
+Kam umístit do kontejneru (jenom Nápověda)
 
 ### <a name="remarks"></a>Poznámky
 
-Každá z členské funkce vloží pořadí určeném zbývající operandy.
+Každá z členských funkcí vloží sekvenci určenou zbývajícími operandy.
 
-První členská funkce vloží prvek s hodnotou *val*a vrátí iterátor, který určuje nově vložený prvek. Použijete ji k vložení jeden element.
+První členská funkce vloží element s hodnotou *Val*a vrátí iterátor, který určí nově vložený element. Použijete ho k vložení jediného elementu.
 
-Druhá členská funkce vloží prvek s hodnotou *val*s použitím *kde* jako Nápověda (ke zlepšení výkonu) a vrátí iterátor, který určuje nově vložený prvek. Použijete ji k vložení jeden element, který může být vedle elementu, které už znáte.
+Druhá členská funkce vloží element s hodnotou *Val*, pomocí *WHERE* jako pomocný parametr (pro zlepšení výkonu) a vrátí iterátor, který určí nově vložený element. Použijete ho k vložení jednoho prvku, který může být sousedící s prvkem, který znáte.
 
-Třetí členská funkce vloží sekvenci [`first`, `last`). Použijete ji k vložení nula nebo více elementů zkopírovaných z jiné pořadí.
+Třetí členská funkce vloží sekvenci [`first`, `last`). Použijete ho k vložení nula nebo více prvků zkopírovaných z jiné sekvence.
 
-Čtvrtá členská funkce vloží pořadí určeném *správné*. Použijete ji k vložení pořadí popsal enumerátor.
+Čtvrtá členská funkce vloží sekvenci určenou *vpravo*. Použijete ho k vložení sekvence popsané enumerátorem.
 
-Každý prvek vložení trvá určitou dobu úměrný logaritmu počtu prvků v řízené sekvenci. Vložení situace může nastat v amortizovaném konstantním času, ale zadaný pomocného parametru, který určuje prvek vedle kurzor.
+Každé vložení elementu trvá čas úměrný logaritmu počtu prvků v řízené sekvenci. Vložení se může objevit v čase konstantního času, avšak s použitím pomocného parametru, který určuje prvek sousedící s bodem vložení.
 
 ### <a name="example"></a>Příklad
 
@@ -1219,7 +1219,7 @@ a b b c x
 a b b c x y
 ```
 
-## <a name="iterator"></a> multiset::iterator (STL/CLR)
+## <a name="multisetiterator-stlclr"></a><a name="iterator"></a>multiset:: iterátor (STL/CLR)
 
 Typ iterátoru řízené sekvence
 
@@ -1231,7 +1231,7 @@ typedef T1 iterator;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ popisuje objekt neurčeného typu `T1` , který může sloužit jako obousměrný iterátor, který řízené sekvence.
+Typ popisuje objekt nespecifikovaného typu `T1`, který může sloužit jako obousměrný iterátor pro řízenou sekvenci.
 
 ### <a name="example"></a>Příklad
 
@@ -1261,9 +1261,9 @@ int main()
 a b c
 ```
 
-## <a name="key_comp"></a> multiset::key_comp (STL/CLR)
+## <a name="multisetkey_comp-stlclr"></a><a name="key_comp"></a>multiset:: key_comp (STL/CLR)
 
-Zkopíruje pořadí delegáta pro dva klíče.
+Zkopíruje delegáta řazení dvou klíčů.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -1273,7 +1273,7 @@ key_compare^key_comp();
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí pořadí delegáta, který slouží k seřazení řízené sekvence. Použijete ji k porovnat dva klíče.
+Členská funkce vrátí delegáta řazení, který se používá k seřazení řízené sekvence. Použijete ho k porovnání dvou klíčů.
 
 ### <a name="example"></a>Příklad
 
@@ -1320,9 +1320,9 @@ compare(L'a', L'b') = False
 compare(L'b', L'a') = True
 ```
 
-## <a name="key_compare"></a> multiset::key_compare (STL/CLR)
+## <a name="multisetkey_compare-stlclr"></a><a name="key_compare"></a>multiset:: key_compare (STL/CLR)
 
-Pořadí delegáta pro dva klíče.
+Delegát řazení pro dva klíče.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -1333,7 +1333,7 @@ Microsoft::VisualC::StlClr::BinaryDelegate<GKey, GKey, bool>
 
 ### <a name="remarks"></a>Poznámky
 
-Typ je synonymum pro delegáta, který určuje řazení klíče argumenty.
+Typ je synonymum pro delegáta, který určuje pořadí jeho klíčových argumentů.
 
 ### <a name="example"></a>Příklad
 
@@ -1380,7 +1380,7 @@ compare(L'a', L'b') = False
 compare(L'b', L'a') = True
 ```
 
-## <a name="key_type"></a> multiset::key_type (STL/CLR)
+## <a name="multisetkey_type-stlclr"></a><a name="key_type"></a>multiset:: key_type (STL/CLR)
 
 Typ klíče řazení
 
@@ -1392,7 +1392,7 @@ typedef Key key_type;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ je synonymum pro parametr šablony *klíč*.
+Typ je synonymum pro *klíč*parametru šablony.
 
 ### <a name="example"></a>Příklad
 
@@ -1425,9 +1425,9 @@ int main()
 a b c
 ```
 
-## <a name="lower_bound"></a> multiset::lower_bound (STL/CLR)
+## <a name="multisetlower_bound-stlclr"></a><a name="lower_bound"></a>multiset:: lower_bound (STL/CLR)
 
-Vyhledá počátek rozsahu, který odpovídá zadanému klíči.
+Vyhledá začátek rozsahu, který odpovídá zadanému klíči.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -1438,11 +1438,11 @@ iterator lower_bound(key_type key);
 #### <a name="parameters"></a>Parametry
 
 *key*<br/>
-Hodnota klíče pro hledání.
+Hodnota klíče, která se má vyhledat
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce určuje první prvek `X` v řízené sekvenci, která má stejné pořadí na *klíč*. Pokud žádný takový prvek neexistuje, vrátí [multiset::end (STL/CLR)](../dotnet/multiset-end-stl-clr.md)`()`; v opačném případě vrátí iterátor, který určuje `X`. Použijete ji k aktuálně vyhledejte na začátek pořadí prvků v řízené sekvenci, které odpovídají zadanému klíči.
+Členská funkce určuje první prvek `X` v řízené sekvenci, která má ekvivalentní řazení *klíče*. Pokud žádný takový prvek neexistuje, vrátí [multiset:: end (STL/CLR)](../dotnet/multiset-end-stl-clr.md)`()`; v opačném případě vrátí iterátor, který určí `X`. Použijete ji k vyhledání začátku sekvence prvků, které jsou aktuálně v řízené sekvenci, která odpovídá zadanému klíči.
 
 ### <a name="example"></a>Příklad
 
@@ -1482,7 +1482,7 @@ lower_bound(L'x')==end() = True
 *lower_bound(L'b') = b
 ```
 
-## <a name="make_value"></a> multiset::make_value (STL/CLR)
+## <a name="multisetmake_value-stlclr"></a><a name="make_value"></a>multiset:: make_value (STL/CLR)
 
 Vytvoří objekt hodnoty.
 
@@ -1495,11 +1495,11 @@ static value_type make_value(key_type key);
 #### <a name="parameters"></a>Parametry
 
 *key*<br/>
-Hodnota klíče používat.
+Hodnota klíče, která se má použít
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí `value_type` objekt, jehož klíč je *klíč*. Použijete ji k vytvoření objektu vhodný pro použití s několika další členské funkce.
+Členská funkce vrátí objekt `value_type`, jehož klíč je *klíč*. Použijete ho k vytvoření objektu vhodného pro použití s několika dalšími členskými funkcemi.
 
 ### <a name="example"></a>Příklad
 
@@ -1528,7 +1528,7 @@ int main()
 a b c
 ```
 
-## <a name="multiset"></a> multiset::multiset (STL/CLR)
+## <a name="multisetmultiset-stlclr"></a><a name="multiset"></a>multiset:: multiset (STL/CLR)
 
 Sestaví objekt kontejneru.
 
@@ -1552,16 +1552,16 @@ multiset(System::Collections::Generic::IEnumerable<GValue>^ right,
 #### <a name="parameters"></a>Parametry
 
 *první*<br/>
-Začátek rozsahu pro vložení.
+Začátek rozsahu, který se má vložit
 
-*last*<br/>
-Konec rozsahu pro vložení.
+*posledního*<br/>
+Konec rozsahu, který má být vložen.
 
-*Před*<br/>
-Řazení predikátu řízené sekvence.
+*čekání*<br/>
+Predikát řazení pro řízenou sekvenci.
 
-*doprava*<br/>
-Objekt nebo rozsahu pro vložení.
+*Kliknutím*<br/>
+Objekt nebo rozsah, který chcete vložit.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1569,49 +1569,49 @@ Konstruktor:
 
 `multiset();`
 
-Inicializuje výchozí řazení predikátu řízené sekvence bez prvků `key_compare()`. Použijete ji k určení prázdnou počáteční řízenou sekvenci, s výchozí řazení predikátu.
+Inicializuje řízenou sekvenci bez elementů s výchozím predikátem řazení `key_compare()`. Použijete ji k zadání prázdné počáteční řízené sekvence s výchozím predikátem řazení.
 
 Konstruktor:
 
 `explicit multiset(key_compare^ pred);`
 
-Inicializuje řízené sekvence bez prvků pořadí predikátem *před*. Použít prázdnou počáteční řízenou sekvenci, určit se zadanou predikát pořadí.
+Inicializuje řízená sekvence bez elementů s predikátem řazení *před*. Použijete ji k zadání prázdné počáteční řízené sekvence se zadaným predikátem řazení.
 
 Konstruktor:
 
 `multiset(multiset<Key>% right);`
 
-Inicializuje řízené sekvence s pořadím [`right.begin()`, `right.end()`), s výchozí řazení predikátu. Můžete ji použít k určení počáteční řízené sekvence, který je kopii sekvence řízenou parametrem multiset – objekt *správné*, s výchozí řazení predikátu.
+Inicializuje řízenou sekvenci pomocí sekvence [`right.begin()`, `right.end()`) s výchozím predikátem řazení. Použijete ji k určení počáteční řízené sekvence, která je kopií sekvence *řízené objektem*multiset, s výchozím predikátem řazení.
 
 Konstruktor:
 
 `multiset(multiset<Key>^ right);`
 
-Inicializuje řízené sekvence s pořadím [`right->begin()`, `right->end()`), s výchozí řazení predikátu. Můžete ji použít k určení počáteční řízené sekvence, který je kopii sekvence řízenou parametrem multiset – objekt *správné*, s výchozí řazení predikátu.
+Inicializuje řízenou sekvenci pomocí sekvence [`right->begin()`, `right->end()`) s výchozím predikátem řazení. Použijete ji k určení počáteční řízené sekvence, která je kopií sekvence *řízené objektem*multiset, s výchozím predikátem řazení.
 
 Konstruktor:
 
 `template<typename InIter> multiset(InIter first, InIter last);`
 
-Inicializuje řízené sekvence s pořadím [`first`, `last`), s výchozí řazení predikátu. Používejte aby řízené sekvence kopii jiné pořadí, s výchozí řazení predikátu.
+Inicializuje řízenou sekvenci pomocí sekvence [`first`, `last`) s výchozím predikátem řazení. Použijete ji k tomu, aby řízená sekvence zkopírovala jinou sekvenci s výchozím predikátem řazení.
 
 Konstruktor:
 
 `template<typename InIter> multiset(InIter first, InIter last, key_compare^ pred);`
 
-Inicializuje řízené sekvence s pořadím [`first`, `last`), pořadí predikátem *před*. Použijete ji k vytvoření kopie jiné pořadí se zadanou predikát pořadí řízené sekvence.
+Inicializuje řízenou sekvenci pomocí sekvence [`first`, `last`) s predikátem řazení *před*. Použijete ji k tomu, aby řízená sekvence zkopírovala jinou sekvenci se zadaným predikátem řazení.
 
 Konstruktor:
 
 `multiset(System::Collections::Generic::IEnumerable<Key>^ right);`
 
-Inicializuje řízené sekvence s pořadí určeném enumerátor *správné*, s výchozí řazení predikátu. Použijete ji k vytvoření kopie jiné pořadí popsal čítače, s výchozí řazení predikátu řízené sekvence.
+Inicializuje řízenou sekvenci sekvencí, která je určena *přípravou*, s výchozím predikátem řazení. Použijete ho k tomu, aby řízená sekvence zkopírovala jinou sekvenci popsanou enumerátorem s výchozím predikátem řazení.
 
 Konstruktor:
 
 `multiset(System::Collections::Generic::IEnumerable<Key>^ right, key_compare^ pred);`
 
-Inicializuje řízené sekvence s pořadí určeném enumerátor *správné*, pořadí predikátem *před*. Použijete ji k vytvoření kopie jiné pořadí popsal enumerátor se zadanou predikát pořadí řízené sekvence.
+Inicializuje řízená sekvence sekvencí, která je určena *přípravou*, s predikátem řazení *před*. Použijete ho k tomu, aby řízená sekvence zkopírovala jinou sekvenci popsanou enumerátorem, se zadaným predikátem řazení.
 
 ### <a name="example"></a>Příklad
 
@@ -1699,9 +1699,9 @@ c b a
 a b c
 ```
 
-## <a name="op_as"></a> multiset::Operator = (STL/CLR)
+## <a name="multisetoperator-stlclr"></a><a name="op_as"></a>multiset:: operator = – operátor (STL/CLR)
 
-Nahradí řízené sekvence.
+Nahradí řízenou sekvenci.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -1711,12 +1711,12 @@ multiset<Key>% operator=(multiset<Key>% right);
 
 #### <a name="parameters"></a>Parametry
 
-*doprava*<br/>
-Kontejner pro kopírování.
+*Kliknutím*<br/>
+Kontejner ke zkopírování.
 
 ### <a name="remarks"></a>Poznámky
 
-Kopie členský operátor *správné* na objekt, vrátí `*this`. Můžete použít k nahraďte kopii řízené sekvence v řízené sekvenci *správné*.
+Operátor členu kopíruje *přímo* na objekt a potom vrátí `*this`. Použijete ji k nahrazení kontrolované sekvence kopií kontrolované sekvence *vpravo*.
 
 ### <a name="example"></a>Příklad
 
@@ -1754,9 +1754,9 @@ a b c
 a b c
 ```
 
-## <a name="rbegin"></a> multiset::rbegin (STL/CLR)
+## <a name="multisetrbegin-stlclr"></a><a name="rbegin"></a>multiset:: rbegin (STL/CLR)
 
-Určuje začátek řízené obrácené sekvenci.
+Určuje začátek obrácené kontrolované sekvence.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -1766,7 +1766,7 @@ reverse_iterator rbegin();
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí zpětný iterátor, který určuje poslední prvek řízenou sekvenci nebo hned za začátku k prázdné sekvenci. Proto, označí `beginning` reverzní pořadí. Můžete ji použít k získání iterátor, který určuje `current` začátek řízené sekvence viděli v obráceném pořadí, ale jeho stav můžete změnit, pokud se změní délka řízené sekvence.
+Členská funkce vrátí reverzní iterátor, který určuje poslední prvek řízené sekvence nebo těsně za začátek prázdné sekvence. Proto určuje `beginning` reverzní sekvence. Použijete ho k získání iterátoru, který určí `current` začátkem kontrolované sekvence v obráceném pořadí, ale jeho stav se může změnit, pokud se změní délka kontrolované sekvence.
 
 ### <a name="example"></a>Příklad
 
@@ -1802,7 +1802,7 @@ a b c
 *++rbegin() = b
 ```
 
-## <a name="reference"></a> multiset::Reference (STL/CLR)
+## <a name="multisetreference-stlclr"></a><a name="reference"></a>multiset:: Reference (STL/CLR)
 
 Typ odkazu na prvek
 
@@ -1814,7 +1814,7 @@ typedef value_type% reference;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ, který popisuje odkaz na element.
+Typ popisuje odkaz na prvek.
 
 ### <a name="example"></a>Příklad
 
@@ -1847,9 +1847,9 @@ int main()
 a b c
 ```
 
-## <a name="rend"></a> multiset::rend (STL/CLR)
+## <a name="multisetrend-stlclr"></a><a name="rend"></a>multiset:: rend (STL/CLR)
 
-Určuje konec řízené obrácené sekvenci.
+Určuje konec reverzní kontrolované sekvence.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -1859,7 +1859,7 @@ reverse_iterator rend();
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí "reverse iterator", který ukazuje za začátek řízené sekvence. Proto, označí `end` reverzní pořadí. Můžete ji použít k získání iterátor, který určuje `current` konec řízené sekvence viděli v obráceném pořadí, ale jeho stav můžete změnit, pokud se změní délka řízené sekvence.
+Členská funkce vrátí reverzní iterátor, který odkazuje hned za začátek řízené sekvence. Proto určuje `end` reverzní sekvence. Použijete ho k získání iterátoru, který určuje `current` konec řízené sekvence v obráceném pořadí, ale jeho stav se může změnit, pokud se změní délka kontrolované sekvence.
 
 ### <a name="example"></a>Příklad
 
@@ -1896,9 +1896,9 @@ a b c
 *--rend() = a
 ```
 
-## <a name="reverse_iterator"></a> multiset::reverse_iterator (STL/CLR)
+## <a name="multisetreverse_iterator-stlclr"></a><a name="reverse_iterator"></a>multiset:: reverse_iterator (STL/CLR)
 
-Typ "reverse iterator" pro řízenou sekvenci.
+Typ reverzního iterátoru řízené sekvence.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -1908,7 +1908,7 @@ typedef T3 reverse_iterator;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ popisuje objekt neurčeného typu `T3` , který může sloužit jako "reverse iterator" pro řízenou sekvenci.
+Typ popisuje objekt nespecifikovaného typu `T3`, který může sloužit jako reverzní iterátor pro řízenou sekvenci.
 
 ### <a name="example"></a>Příklad
 
@@ -1938,7 +1938,7 @@ int main()
 c b a
 ```
 
-## <a name="size"></a> multiset::size (STL/CLR)
+## <a name="multisetsize-stlclr"></a><a name="size"></a>multiset:: Size (STL/CLR)
 
 Spočítá počet prvků.
 
@@ -1950,7 +1950,7 @@ size_type size();
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí délku objektu řízené sekvence. Použijete ji k určení počtu prvků v řízené sekvenci aktuálně. Pokud vás zajímá, jestli je pořadí má nenulovou velikost, naleznete v tématu [multiset::empty (STL/CLR)](../dotnet/multiset-empty-stl-clr.md)`()`.
+Členská funkce vrací délku řízené sekvence. Použijete ji k určení počtu prvků, které jsou aktuálně v řízené sekvenci. Pokud vás zajímá, zda má sekvence nenulovou velikost, přečtěte si téma [multiset:: Empty (STL/CLR)](../dotnet/multiset-empty-stl-clr.md)`()`.
 
 ### <a name="example"></a>Příklad
 
@@ -1992,9 +1992,9 @@ size() = 0 after clearing
 size() = 2 after adding 2
 ```
 
-## <a name="size_type"></a> multiset::size_type (STL/CLR)
+## <a name="multisetsize_type-stlclr"></a><a name="size_type"></a>multiset:: size_type (STL/CLR)
 
-Typ vzdálenosti se znaménkem mezi dvěma elementu.
+Typ podepsané vzdálenosti mezi dvěma prvky.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -2004,7 +2004,7 @@ typedef int size_type;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ, který popisuje počet prvků záporná.
+Typ popisuje nezáporný počet prvků.
 
 ### <a name="example"></a>Příklad
 
@@ -2040,7 +2040,7 @@ a b c
 end()-begin() = 3
 ```
 
-## <a name="swap"></a> multiset::swap (STL/CLR)
+## <a name="multisetswap-stlclr"></a><a name="swap"></a>multiset:: swap (STL/CLR)
 
 Zamění obsah dvou kontejnerů.
 
@@ -2052,12 +2052,12 @@ void swap(multiset<Key>% right);
 
 #### <a name="parameters"></a>Parametry
 
-*doprava*<br/>
-Kontejner pro obsah s.
+*Kliknutím*<br/>
+Kontejner pro prohození obsahu pomocí.
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce Zamění řízené sekvence mezi `this` a *správné*. Provádí se v konstantním času a vyvolá žádné výjimky. Můžete použít jako rychlý způsob, jak Zamění obsah dvou kontejnerů.
+Členská funkce přemění kontrolované sekvence mezi `this` a *pravou*. Provede to v konstantním čase a nevyvolává žádné výjimky. Použijete ho jako rychlý způsob, jak vyměňovat obsah dvou kontejnerů.
 
 ### <a name="example"></a>Příklad
 
@@ -2108,9 +2108,9 @@ d e f
 a b c
 ```
 
-## <a name="to_array"></a> multiset::to_array (STL/CLR)
+## <a name="multisetto_array-stlclr"></a><a name="to_array"></a>multiset:: to_array (STL/CLR)
 
-Zkopíruje do nového pole řízené sekvence.
+Zkopíruje řízenou sekvenci do nového pole.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -2120,7 +2120,7 @@ cli::array<value_type>^ to_array();
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí pole obsahující řízené sekvence. Použijete ji získat kopii řízenou sekvenci pole formuláře.
+Členská funkce vrátí pole obsahující řízenou sekvenci. Použijete ho k získání kopie řízené sekvence ve formuláři Array.
 
 ### <a name="example"></a>Příklad
 
@@ -2158,7 +2158,7 @@ a b c d
 a b c
 ```
 
-## <a name="upper_bound"></a> multiset::upper_bound (STL/CLR)
+## <a name="multisetupper_bound-stlclr"></a><a name="upper_bound"></a>multiset:: upper_bound (STL/CLR)
 
 Najde konec rozsahu, který odpovídá zadanému klíči.
 
@@ -2171,11 +2171,11 @@ iterator upper_bound(key_type key);
 #### <a name="parameters"></a>Parametry
 
 *key*<br/>
-Hodnota klíče pro hledání.
+Hodnota klíče, která se má vyhledat
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce určuje poslední prvek `X` v řízené sekvenci, která má stejné pořadí na *klíč*. Pokud žádný takový prvek neexistuje, nebo pokud `X` je po posledním prvku v řízené sekvenci vrátí [multiset::end (STL/CLR)](../dotnet/multiset-end-stl-clr.md)`()`; v opačném případě vrátí iterátor, který určuje prvního prvku mimo `X`. Pomocí aktuálně najít konec pořadí prvků v řízené sekvenci, které odpovídají zadanému klíči.
+Členská funkce určuje poslední prvek `X` v řízené sekvenci, která má ekvivalentní řazení *klíče*. Pokud žádný takový prvek neexistuje nebo pokud `X` je posledním prvkem kontrolované sekvence, vrátí [multiset:: end (STL/CLR)](../dotnet/multiset-end-stl-clr.md)`()`; v opačném případě vrátí iterátor, který určí první prvek nad rámec `X`. Použijete ho k vyhledání konce posloupnosti prvků, které jsou aktuálně v řízené sekvenci, která odpovídá zadanému klíči.
 
 ### <a name="example"></a>Příklad
 
@@ -2215,9 +2215,9 @@ upper_bound(L'x')==end() = True
 *upper_bound(L'b') = c
 ```
 
-## <a name="value_comp"></a> multiset::value_comp (STL/CLR)
+## <a name="multisetvalue_comp-stlclr"></a><a name="value_comp"></a>multiset:: value_comp (STL/CLR)
 
-Zkopíruje pořadí delegáta pro dvě hodnoty prvků.
+Zkopíruje delegáta řazení pro dvě hodnoty elementu.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -2227,7 +2227,7 @@ value_compare^ value_comp();
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí pořadí delegáta, který slouží k seřazení řízené sekvence. Použijete ji k porovnat dvě hodnoty prvků.
+Členská funkce vrátí delegáta řazení, který se používá k seřazení řízené sekvence. Použijete ho k porovnání dvou hodnot prvků.
 
 ### <a name="example"></a>Příklad
 
@@ -2259,9 +2259,9 @@ compare(L'a', L'b') = True
 compare(L'b', L'a') = False
 ```
 
-## <a name="value_compare"></a> multiset::value_compare (STL/CLR)
+## <a name="multisetvalue_compare-stlclr"></a><a name="value_compare"></a>multiset:: value_compare (STL/CLR)
 
-Pořadí delegáta pro dvě hodnoty prvků.
+Delegát řazení pro dvě hodnoty elementu.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -2272,7 +2272,7 @@ Microsoft::VisualC::StlClr::BinaryDelegate<generic_value, generic_value, bool>
 
 ### <a name="remarks"></a>Poznámky
 
-Typ je synonymum pro delegáta, který určuje pořadí z argumentů hodnotu.
+Typ je synonymum pro delegáta, který určuje řazení jeho hodnotových argumentů.
 
 ### <a name="example"></a>Příklad
 
@@ -2304,7 +2304,7 @@ compare(L'a', L'b') = True
 compare(L'b', L'a') = False
 ```
 
-## <a name="value_type"></a> multiset::value_type (STL/CLR)
+## <a name="multisetvalue_type-stlclr"></a><a name="value_type"></a>multiset:: value_type (STL/CLR)
 
 Typ prvku
 
@@ -2349,9 +2349,9 @@ int main()
 a b c
 ```
 
-## <a name="op_neq"></a> Operator! = (multiset) (STL/CLR)
+## <a name="operator-multiset-stlclr"></a><a name="op_neq"></a>operator! = (multiset) – operátor (STL/CLR)
 
-Seznam není rovno porovnání.
+Seznam se neshoduje s porovnáním.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -2363,15 +2363,15 @@ template<typename Key>
 
 #### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
-Levé kontejner k porovnání.
+*zbývá*<br/>
+Levý kontejner, který se má porovnat
 
-*doprava*<br/>
-Správném kontejneru pro porovnání.
+*Kliknutím*<br/>
+Pravý kontejner, který se má porovnat
 
 ### <a name="remarks"></a>Poznámky
 
-Vrátí funkci operátoru `!(left == right)`. Pomocí něho můžete testovat, zda *levé* není stejný jako seřazené *správné* když jsou dvě multisets porovnání elementu pomocí elementu.
+Funkce operátoru vrací `!(left == right)`. Použijete ho k otestování, jestli *vlevo* není seřazené stejně jako *právo* , když se obě množiny porovnají s elementy podle elementu.
 
 ### <a name="example"></a>Příklad
 
@@ -2419,9 +2419,9 @@ a b d
 [a b c] != [a b d] is True
 ```
 
-## <a name="op_lt"></a> operátor&lt; (multiset) (STL/CLR)
+## <a name="operatorlt-multiset-stlclr"></a><a name="op_lt"></a>operator&lt; (multiset) – operátor (STL/CLR)
 
-Seznam menší než porovnání.
+Seznam je menší než porovnání.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -2433,15 +2433,15 @@ template<typename Key>
 
 #### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
-Levé kontejner k porovnání.
+*zbývá*<br/>
+Levý kontejner, který se má porovnat
 
-*doprava*<br/>
-Správném kontejneru pro porovnání.
+*Kliknutím*<br/>
+Pravý kontejner, který se má porovnat
 
 ### <a name="remarks"></a>Poznámky
 
-Operátoru funkce vrátí hodnota true v případě, pro nejnižší pozici `i` pro kterou `!(right[i] < left[i])` je také hodnotu true, který `left[i] < right[i]`. V opačném případě vrátí `left->size() < right->size()` pomocí něho můžete testovat, zda *levé* je řazen před *správné* když jsou dvě multisets porovnání elementu pomocí elementu.
+Funkce operator vrátí hodnotu true, pokud `i` nejnižší pozice, pro kterou `!(right[i] < left[i])` je také true `left[i] < right[i]`. V opačném případě vrátí `left->size() < right->size()` použijete k otestování *, zda je* před *pravou* seřazena druhá množina obou množin podle elementu.
 
 ### <a name="example"></a>Příklad
 
@@ -2489,9 +2489,9 @@ a b d
 [a b c] < [a b d] is True
 ```
 
-## <a name="op_lteq"></a> operátor&lt;= (multiset) (STL/CLR)
+## <a name="operatorlt-multiset-stlclr"></a><a name="op_lteq"></a>operator&lt;= (multiset) – operátor (STL/CLR)
 
-Seznam menší nebo rovna porovnání.
+Seznam je menší nebo roven hodnotě porovnání.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -2503,15 +2503,15 @@ template<typename Key>
 
 #### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
-Levé kontejner k porovnání.
+*zbývá*<br/>
+Levý kontejner, který se má porovnat
 
-*doprava*<br/>
-Správném kontejneru pro porovnání.
+*Kliknutím*<br/>
+Pravý kontejner, který se má porovnat
 
 ### <a name="remarks"></a>Poznámky
 
-Vrátí funkci operátoru `!(right < left)`. Pomocí něho můžete testovat, zda *levé* není seřazené po *správné* když jsou dvě multisets porovnání elementu pomocí elementu.
+Funkce operátoru vrací `!(right < left)`. Použijete ho k otestování *, jestli není* po *pravé straně* při porovnání obou množin podle prvku nařazeno.
 
 ### <a name="example"></a>Příklad
 
@@ -2559,9 +2559,9 @@ a b d
 [a b d] <= [a b c] is False
 ```
 
-## <a name="op_eq"></a> Operator == (multiset) (STL/CLR)
+## <a name="operator-multiset-stlclr"></a><a name="op_eq"></a>operator = = (multiset) – operátor (STL/CLR)
 
-Porovnání rovna seznamu.
+Seznam se stejným porovnáním
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -2573,15 +2573,15 @@ template<typename Key>
 
 #### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
-Levé kontejner k porovnání.
+*zbývá*<br/>
+Levý kontejner, který se má porovnat
 
-*doprava*<br/>
-Správném kontejneru pro porovnání.
+*Kliknutím*<br/>
+Pravý kontejner, který se má porovnat
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce operátoru vrátí hodnotu true pouze v případě, že řídí sekvencí *levé* a *správné* mít stejnou délku a pro každou pozici `i`, `left[i] ==` `right[i]`. Pomocí něho můžete testovat, zda *levé* je stejný jako seřazené *správné* když jsou dvě multisets porovnání elementu pomocí elementu.
+Funkce operator vrátí hodnotu true pouze v případě, že sekvence řízené *levou* a *pravou* mají stejnou délku a pro každou pozici `i``left[i] ==` `right[i]`. Použijete ji k otestování, zda je *levé* řazení stejné jako *pravé* , pokud jsou obě množiny porovnány podle elementu.
 
 ### <a name="example"></a>Příklad
 
@@ -2629,7 +2629,7 @@ a b d
 [a b c] == [a b d] is False
 ```
 
-## <a name="op_gt"></a> operátor&gt; (multiset) (STL/CLR)
+## <a name="operatorgt-multiset-stlclr"></a><a name="op_gt"></a>operator&gt; (multiset) – operátor (STL/CLR)
 
 Seznam je větší než porovnání.
 
@@ -2643,15 +2643,15 @@ template<typename Key>
 
 #### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
-Levé kontejner k porovnání.
+*zbývá*<br/>
+Levý kontejner, který se má porovnat
 
-*doprava*<br/>
-Správném kontejneru pro porovnání.
+*Kliknutím*<br/>
+Pravý kontejner, který se má porovnat
 
 ### <a name="remarks"></a>Poznámky
 
-Vrátí funkci operátoru `right` `<` `left`. Pomocí něho můžete testovat, zda *levé* seřazené po *správné* když jsou dvě multisets porovnání elementu pomocí elementu.
+Funkce operator vrací `right` `<` `left`. Použijete ji k otestování *, zda je* po *pravé straně* při porovnání obou množin podle prvku pořízena druhá.
 
 ### <a name="example"></a>Příklad
 
@@ -2699,9 +2699,9 @@ a b d
 [a b d] > [a b c] is True
 ```
 
-## <a name="op_gteq"></a> operátor&gt;= (multiset) (STL/CLR)
+## <a name="operatorgt-multiset-stlclr"></a><a name="op_gteq"></a>operator&gt;= (multiset) – operátor (STL/CLR)
 
-Seznam větší než nebo rovna porovnání.
+Seznam je větší než nebo rovno porovnání.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -2713,15 +2713,15 @@ template<typename Key>
 
 #### <a name="parameters"></a>Parametry
 
-*doleva*<br/>
-Levé kontejner k porovnání.
+*zbývá*<br/>
+Levý kontejner, který se má porovnat
 
-*doprava*<br/>
-Správném kontejneru pro porovnání.
+*Kliknutím*<br/>
+Pravý kontejner, který se má porovnat
 
 ### <a name="remarks"></a>Poznámky
 
-Vrátí funkci operátoru `!(left < right)`. Pomocí něho můžete testovat, zda *levé* není řazen před *správné* když jsou dvě multisets porovnání elementu pomocí elementu.
+Funkce operátoru vrací `!(left < right)`. Použijete ji k otestování, zda je *ponechána* před *pravou* , pokud obě množiny jsou porovnány s elementy podle elementu.
 
 ### <a name="example"></a>Příklad
 

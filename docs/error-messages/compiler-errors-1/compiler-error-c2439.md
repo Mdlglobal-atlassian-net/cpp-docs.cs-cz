@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - C2439
 ms.assetid: 3c5dbe5c-b7d3-4bb0-8619-92f6e280461e
-ms.openlocfilehash: f71112d3f37f3e4d1a4f41bade95726d7aa0a0bc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 99f3644869f6c5395684643f0e7802f3a01baa62
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62311729"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80205358"
 ---
 # <a name="compiler-error-c2439"></a>Chyba kompilátoru C2439
 
-'identifier': člen nešel inicializovat
+' identifier ': člen nelze inicializovat
 
-Třídy, struktury nebo člen sjednocení nelze inicializovat.
+Člena třídy, struktury nebo sjednocení nelze inicializovat.
 
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Chcete-li vyřešit tak, že zkontrolujete následující možné příčiny
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Opravu provedete kontrolou následujících možných příčin.
 
-1. Došlo k pokusu o inicializaci nepřímá základní třída nebo struktura.
+1. Pokus o inicializaci nepřímé základní třídy nebo struktury.
 
-1. Došlo k pokusu o inicializaci zděděného člena třídy nebo struktury. Zděděný člen musí být inicializován pomocí konstruktoru třídy nebo struktury.
+1. Pokus o inicializaci zděděného člena třídy nebo struktury. Zděděný člen musí být inicializován konstruktorem třídy nebo struktury.

@@ -9,37 +9,37 @@ helpviewer_keywords:
 - __asm keyword [C++], vs. asm blocks
 - __asm keyword [C++]
 ms.assetid: 77ff3bc9-a492-4b5e-85e1-fa4e414e79cd
-ms.openlocfilehash: 43c7ae02e465ce8de2871d78e7ba604221aa7426
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: de28e4c0fad6b89a62b4479c5c32f0b8606cf3af
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65445904"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169628"
 ---
-# <a name="asm"></a>__asm
+# <a name="__asm"></a>__asm
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
-`__asm` – Klíčové slovo vyvolá vložený assembler a může se objevit všude, kde je platný příkaz jazyka C nebo C++. Se nemůže objevit samostatně. Musí následovat instrukce sestavení, skupina pokynů uzavřená v závorkách, nebo přinejmenším, prázdný pár závorek. Termín "`__asm` blok" zde vztahuje na jakoukoli instrukci nebo skupinu instrukcí ve složených závorkách, zda je či není.
+Klíčové slovo `__asm` vyvolá vložený assembler a může se objevit všude, kde je výraz C++ C nebo platný. Nemůže být použit sám sebou. Musí následovat instrukce sestavení, skupina instrukcí uzavřených ve složených závorkách nebo, minimálně prázdný pár složených závorek. Termín "`__asm` blok" tady odkazuje na jakoukoli instrukci nebo skupinu instrukcí, bez ohledu na to, jestli jsou ve složených závorkách.
 
 > [!NOTE]
-> Podpora Visual C++ jazyka Standard C++ `asm` – klíčové slovo je omezena na skutečnost, že kompilátor nevygeneruje chybu pro klíčové slovo. Nicméně `asm` bloku se nevygeneruje jakýkoli smysluplný kód. Použití `__asm` místo `asm`.
+> Podpora C++ vizuálů pro klíčové slovo C++ Standard `asm` je omezena na skutečnost, že kompilátor nevygeneruje chybu pro klíčové slovo. Nicméně blok `asm` nebude generovat žádný smysluplný kód. Místo `asm`použijte `__asm`.
 
 ## <a name="grammar"></a>Gramatika
 
-*asm bloku*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__asm** *instrukci sestavení* **;** <sub>optimalizované</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__asm {** *sestavení seznam instrukcí-* **}** **;** <sub>optimalizované</sub>
+*ASM – blok*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__asm** *sestavení-instrukce* **;** <sub>výslovný souhlas</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__asm {** *Assembly-Instruction-list* **}** **;** <sub>výslovný souhlas</sub>
 
-*sestavení seznam instrukcí-*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*instrukci sestavení* **;** <sub>optimalizované</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*instrukci sestavení* **;** *sestavení seznam instrukcí-* **;** <sub>optimalizované</sub>
+*seznam instrukcí pro sestavení*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*sestavení-instrukce* **;** <sub>výslovný souhlas</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*sestavení-instrukce* **;** *Assembly-instrukces-list* **;** <sub>výslovný souhlas</sub>
 
 ## <a name="remarks"></a>Poznámky
 
-Je-li použito bez závorek, `__asm` – klíčové slovo znamená, že zbytek řádku je příkaz jazyka sestavení. Pokud používáno se závorkami, znamená to, že každý řádek mezi závorkami je příkaz jazyka sestavení. Z důvodu kompatibility s předchozími verzemi `_asm` je synonymum pro `__asm`.
+Pokud se používá bez složených závorek, klíčové slovo `__asm` znamená, že zbytek řádku je příkaz Assembly-Language. Pokud se používá se složenými závorkami, znamená to, že každý řádek mezi složenými závorkami je příkaz Assembly-Language. Pro zajištění kompatibility s předchozími verzemi je `_asm` synonymem pro `__asm`.
 
-Vzhledem k tomu, `__asm` – klíčové slovo představuje oddělovač, můžete umístit pokyny sestavení na stejném řádku.
+Vzhledem k tomu, že klíčové slovo `__asm` je oddělovač příkazů, lze umístit pokyny sestavení na stejný řádek.
 
 Před Visual Studio 2005, instrukce
 
@@ -47,15 +47,15 @@ Před Visual Studio 2005, instrukce
 __asm int 3
 ```
 
-nezpůsobil nativního kódu při kompilaci s vygenerování **/CLR**; kompilátor přeložil pokyn k instrukci CLR break.
+nezpůsobí generování nativního kódu při kompilování s **/CLR**; Kompilátor přeložil instrukci na instrukci ukončení CLR.
 
-`__asm int 3` nyní způsobí generování nativního kódu pro funkci. Pokud chcete, aby funkce způsobila přerušení v kódu a pokud chcete tuto funkci zkompilovat pro jazyk MSIL, použijte [__debugbreak](../../intrinsics/debugbreak.md).
+`__asm int 3` nyní má za následek generování nativního kódu pro funkci. Chcete-li, aby funkce způsobila v kódu bod přerušení, a pokud chcete tuto funkci zkompilovat do jazyka MSIL, použijte [__debugbreak](../../intrinsics/debugbreak.md).
 
-Z důvodu kompatibility s předchozími verzemi **_asm** je synonymum pro **__asm** Pokud – možnost kompilátoru [/Za \(zakázat jazyková rozšíření)](../../build/reference/za-ze-disable-language-extensions.md) určena.
+Z důvodu kompatibility s předchozími verzemi je **_asm** synonymem pro **__asm** , pokud je zadána možnost kompilátoru [/za \(Disable Language Extensions)](../../build/reference/za-ze-disable-language-extensions.md) .
 
 ## <a name="example"></a>Příklad
 
-Následující fragment kódu je jednoduchý `__asm` bloku, které jsou uzavřeny ve složených závorkách:
+Následující fragment kódu je jednoduchý blok `__asm` uzavřený ve složených závorkách:
 
 ```cpp
 __asm {
@@ -73,19 +73,19 @@ __asm mov dx, 0xD007
 __asm out dx, al
 ```
 
-Vzhledem k tomu, `__asm` – klíčové slovo představuje oddělovač, můžete také umístit pokyny sestavení na stejný řádek:
+Protože klíčové slovo `__asm` je oddělovač příkazů, můžete také umístit pokyny sestavení na stejný řádek:
 
 ```cpp
 __asm mov al, 2   __asm mov dx, 0xD007   __asm out dx, al
 ```
 
-Všechny tři příklady vygenerují stejný kód, ale první styl (uzavírající `__asm` blokovat ve složených závorkách) má několik výhod. Složené závorky jasně oddělují kód sestavení od kódu jazyka C nebo C++ a vyhnout se zbytečnému opakování `__asm` – klíčové slovo. Složené závorky také zabraňují nejasnostem. Pokud chcete umístit příkaz C nebo C++ na stejném řádku jako `__asm` bloku, blok je nutné uzavřít do složených závorek. Bez závorek kompilátor nemůže určit, kde zastaví sestavení kódu a příkazy jazyka C nebo C++ začít. A konečně protože text v závorce má stejný formát jako obyčejný text MASM, můžete snadno vyjmout a vložit text z existujících zdrojových souborů MASM.
+Všechny tři příklady generují stejný kód, ale první styl (ohraničující `__asm` blok v závorkách) obsahuje některé výhody. Složené závorky jasně oddělují kód sestavení od jazyka C++ C nebo kódu a zabraňují nutnosti opakování `__asm` klíčového slova. Složené závorky můžou také zabránit nejasnostem. Pokud chcete umístit C nebo C++ příkaz na stejný řádek jako blok `__asm`, je nutné uzavřít blok do složených závorek. Bez složených závorek nemůže kompilátor sdělit, kde se zastaví kód sestavení a C nebo C++ příkazy začnou. Proto vzhledem k tomu, že text v závorkách má stejný formát jako obyčejný MASM text, můžete snadno vyjmout a vložit text z existujících zdrojových souborů MASM.
 
-Na rozdíl od složených závorek v jazyce C a C++, složené závorky uzavírající `__asm` bloku nemají vliv na rozsah proměnné. Lze také vnořit `__asm` bloky; vnoření nemá vliv na rozsah proměnné.
+Na rozdíl od složených závorek v C++C a, složené závorky ohraničující `__asm` blok neovlivňují rozsah proměnné. Můžete také vnořovat bloky `__asm`; Vnořování nemá vliv na rozsah proměnné.
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Klíčová slova](../../cpp/keywords-cpp.md)<br/>
 [Vkládaný assembler](../../assembler/inline/inline-assembler.md)<br/>

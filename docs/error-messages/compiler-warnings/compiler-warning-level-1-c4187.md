@@ -1,20 +1,20 @@
 ---
-title: Kompilátor upozornění (úroveň 1) C4187
+title: Upozornění kompilátoru (úroveň 1) C4187
 ms.date: 11/04/2016
 f1_keywords:
 - C4187
 helpviewer_keywords:
 - C4187
 ms.assetid: 2443d948-ab7b-472c-af43-5d81e09af677
-ms.openlocfilehash: 1f0f513c21be344a02c26afbaf06fcd9eda19222
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b264664b28fd2dd1d43133caecd1675931b18d0e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391592"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80163307"
 ---
-# <a name="compiler-warning-level-1-c4187"></a>Kompilátor upozornění (úroveň 1) C4187
+# <a name="compiler-warning-level-1-c4187"></a>Upozornění kompilátoru (úroveň 1) C4187
 
-\#atributy import "atribut1" a 'atribut2' jsou nekompatibilní. obě ignorovat
+\#import atributů ' attribute1 ' a ' attribute2 ' jsou nekompatibilní; obě se ignorují.
 
-A [#import](../../preprocessor/hash-import-directive-cpp.md) příkaz určený `no_implementation` a `implementation_only` atributy. Obě jsou ignorovány.
+Příkaz [#import](../../preprocessor/hash-import-directive-cpp.md) určil `no_implementation` a atributy `implementation_only`. Obě jsou ignorovány.

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3556
 ms.assetid: 9b002dcc-494e-414f-9587-20c2a0a39333
-ms.openlocfilehash: 7b87f8c57b0d871a577793936ea3cb7dbab7e58d
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: bc5eae58ac453182fd25853edd45e2c45093f5e5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344542"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80200574"
 ---
 # <a name="compiler-error-c3556"></a>Chyba kompilátoru C3556
 
-> "*výraz*': nesprávný argument pro decltype"–"
+> *výraz*: nesprávný argument pro decltype
 
-Kompilátor nemůže odvodit typ výrazu, která je argumentem `decltype(` *výraz* `)` specifikátoru typu.
+Kompilátor nemůže odvodit typ výrazu, který je argumentem *výrazu* `decltype(``)` specifikátoru typu.
 
 ## <a name="example"></a>Příklad
 
-V následujícím příkladu kódu, kompilátor nemůže odvodit typ `myFunction` argument protože `myFunction` je přetížena. Chcete-li vyřešit tento problém, můžete použít `static_cast` k vytvoření instance ukazatele na konkrétní Přetížená funkce. Pokud chcete zadat do `decltype` výrazu.
+V následujícím příkladu kódu kompilátor nemůže odvodit typ argumentu `myFunction`, protože `myFunction` je přetížený. Chcete-li tento problém vyřešit, můžete použít `static_cast` k vytvoření instance ukazatele na určitou přetíženou funkci pro určení ve výrazu `decltype`.
 
 ```cpp
 // C3556.cpp

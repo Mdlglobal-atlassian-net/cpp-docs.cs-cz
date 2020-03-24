@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C1602
 ms.assetid: a9365c58-fe66-49c4-a702-9bb75429cc1a
-ms.openlocfilehash: 71b721e05db5d4ace61774feb83a364c6c828496
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4bb4c6bfa2508afa56fde7c27b08e5446c60ff85
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375025"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80202901"
 ---
 # <a name="fatal-error-c1602"></a>Závažná chyba C1602
 
-Nepodporovaný vnitřní typ
+Nepodporovaný vnitřní
 
-Tato chyba označuje neshody soubory .exe kompilátoru, které mohlo dojít z důvodu nekompletní instalaci. Například může instalaci aktualizace service pack, ale ne Pack procesoru. Nainstalujte všechny požadované produkty.
+Tato chyba označuje neshodu v souborech Compiler. exe, k nimž mohlo dojít kvůli nekompletní instalaci. Například je možné, že jste nainstalovali aktualizaci Service Pack, ale ne sadu procesorů. Nainstalujte všechny požadované produkty.

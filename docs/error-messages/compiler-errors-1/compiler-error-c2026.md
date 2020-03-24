@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2026
 ms.assetid: 8e64b6e1-b967-479b-be97-d12dc4a8e389
-ms.openlocfilehash: da4c03c681f95efaa5edb159869315b41d027e99
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9747b1edadc76ceeb502b2c6fd03496b91769f5a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62303525"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80208062"
 ---
 # <a name="compiler-error-c2026"></a>Chyba kompilátoru C2026
 
-řetězec je moc velký, koncové znaky se oříznou
+řetězec je moc velký, koncové znaky se zkrátily.
 
-Řetězec je delší než limit 16380 jednobajtové znaky.
+Řetězec byl delší než limit 16380 znaků s jedním bajtem.
 
-Před sousední řetězců jsou zřetězeny nemůže být delší než 16380 jednobajtové znaky řetězce.
+Před zřetězením sousedících řetězců nemůže být řetězec delší než 16380 znaků.
 
-Řetězec znaků Unicode přibližně polovina této délky také vygeneruje tuto chybu.
+Tato chyba by vygenerovala řetězec Unicode přibližně o jedné polovině této délky.
 
-Pokud máte řetězec definovaná následujícím způsobem, generuje C2026:
+Pokud máte definován řetězec takto, vygeneruje C2026:
 
 ```
 char sz[] =
@@ -33,7 +33,7 @@ long string here\
 ";
 ```
 
-Vám může jej rozdělte následujícím způsobem:
+Můžete ho rozdělit následujícím způsobem:
 
 ```
 char sz[] =
@@ -43,4 +43,4 @@ imagine a really, really "
 ";
 ```
 
-Můžete ukládat mimořádně velkou řetězcových literálů (32 kB nebo déle) ve vlastní prostředek nebo externí soubor. Zobrazit [vytvoření nového vlastního prostředku nebo prostředku dat](../../windows/creating-a-new-custom-or-data-resource.md) Další informace.
+Můžete chtít ukládat výjimečně velké řetězcové literály (32 a více) do vlastního prostředku nebo externího souboru. Další informace najdete v tématu [Vytvoření nového vlastního prostředku nebo zdroje dat](../../windows/creating-a-new-custom-or-data-resource.md) .

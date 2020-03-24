@@ -8,27 +8,27 @@ helpviewer_keywords:
 - configuring ODBC data sources
 - ODBC data sources, represented by CDatabase
 ms.assetid: b246721f-b9e1-49bd-a6c7-f348b8c3d537
-ms.openlocfilehash: b435c65bab565e109d37e1dd24e051993cbb30c8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ed9eeb8f5ef0d53846761062cf2c6575d2eaf9e6
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397910"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213295"
 ---
 # <a name="data-source-odbc"></a>Zdroj dat (ODBC)
 
-Toto téma platí pro třídy knihovny MFC rozhraní ODBC.
+Toto téma se vztahuje na třídy knihovny MFC rozhraní ODBC.
 
-Zdroj dat v databázi podmínky, je konkrétní sady dat, informace požadované pro přístup k datům a umístění zdroje dat, které mohou být popsány pomocí názvu zdroje dat. Pro práci s třídou [CDatabase](../../mfc/reference/cdatabase-class.md), zdroj dat musí být ten, který jste nakonfigurovali prostřednictvím Správce připojení ODBC (Open Database). Příklady zdrojů dat patří vzdálené databáze, které běží na systému Microsoft SQL Server po síti nebo v místním adresáři souboru aplikace Microsoft Access. Z vaší aplikace můžete použít libovolný zdroj dat, pro který máte ovladač rozhraní ODBC.
+V rámci databázových podmínek je zdrojem dat konkrétní sada dat, informace vyžadované pro přístup k těmto datům a umístění zdroje dat, který lze popsat pomocí názvu zdroje dat. Chcete-li pracovat s třídou [CDatabase](../../mfc/reference/cdatabase-class.md), zdroj dat musí být ten, který jste nakonfigurovali prostřednictvím Správce rozhraní ODBC (Open Database Connectivity). Příklady zdrojů dat zahrnují vzdálenou databázi běžící na Microsoft SQL Server v síti nebo v souboru Microsoft Access v místním adresáři. Z aplikace můžete získat přístup k libovolnému zdroji dat, pro který máte ovladač ODBC.
 
-Můžete mít jednoho nebo více zdrojů dat v aplikaci najednou aktivní, každá `CDatabase` objektu. Také můžete mít více současných připojení k libovolnému zdroji dat. Můžete připojit na vzdálený stejně jako na místní zdroje dat, v závislosti na ovladače, které jste si nainstalovali a možnosti ovladače rozhraní ODBC. Další informace o zdrojích dat a správce rozhraní ODBC naleznete v tématu [ODBC](../../data/odbc/odbc-basics.md) a [správce rozhraní ODBC](../../data/odbc/odbc-administrator.md).
+V aplikaci můžete mít v aplikaci aktivní jeden nebo více zdrojů dat, z nichž každý představuje objekt `CDatabase`. Můžete mít také více současných připojení k jakémukoli zdroji dat. V závislosti na nainstalovaných ovladačích a možnostech ovladačů rozhraní ODBC se můžete připojit ke vzdálenému zdroji dat i k místním zdrojům dat. Další informace o zdrojích dat a správci rozhraní ODBC najdete v tématu Správce [rozhraní](../../data/odbc/odbc-basics.md) ODBC a [rozhraní ODBC](../../data/odbc/odbc-administrator.md).
 
-Následující témata popisují informace o zdrojích dat:
+V následujících tématech se dozvíte více o zdrojích dat:
 
 - [Zdroj dat: Správa připojení (ODBC)](../../data/odbc/data-source-managing-connections-odbc.md)
 
-- [Zdroj dat: Stanovení schématu zdroje dat (ODBC)](../../data/odbc/data-source-determining-the-schema-of-the-data-source-odbc.md)
+- [Zdroj dat: Stanovení schématu zdroje dat (rozhraní ODBC)](../../data/odbc/data-source-determining-the-schema-of-the-data-source-odbc.md)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)

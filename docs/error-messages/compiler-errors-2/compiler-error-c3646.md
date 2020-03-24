@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C3646
 ms.assetid: 4391ead2-9637-4ca3-aeda-5a991b18d66d
-ms.openlocfilehash: 04ff1d026c97c56611f8b786d8a7254db711e4a8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 13a3ebeb6e7783687abc73cd0dcc018abe827809
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385586"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80200470"
 ---
 # <a name="compiler-error-c3646"></a>Chyba kompilátoru C3646
 
-> "specifikátor": Neznámý specifikátor override
+> specifikátor: neznámý specifikátor override
 
 ## <a name="remarks"></a>Poznámky
 
-Kompilátor nalezen token na pozici, kde se očekávalo se nalezení specifikátor přepisu, ale token, který nebyl rozpoznán kompilátorem.
+Kompilátor našel token na pozici, kde se očekává, že najde specifikátor přepsání, ale token nerozpoznal kompilátor.
 
-Například pokud nerozpoznané *specifikátor* je **_NOEXCEPT**, nahraďte ho s klíčovým slovem **noexcept**.
+Například pokud je nerozpoznaný *specifikátor* **_NOEXCEPT**, nahraďte ho klíčovým slovem s **výjimkou**.
 
 Další informace najdete v tématu [specifikátory přepisu](../../extensions/override-specifiers-cpp-component-extensions.md).
 
 ## <a name="example"></a>Příklad
 
-Následující ukázka generuje C3646 a ukazuje způsob, jak ho opravit:
+Následující ukázka generuje C3646 a ukazuje způsob, jak ji opravit:
 
 ```cpp
 // C3646.cpp

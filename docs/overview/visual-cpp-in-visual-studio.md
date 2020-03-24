@@ -5,12 +5,12 @@ ms.date: 07/02/2019
 ms.technology: cpp-ide
 helpviewer_keywords:
 - Visual C++, home page
-ms.openlocfilehash: 0a4093860c7d06e8240e03b1487546f80da24b88
-ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
+ms.openlocfilehash: 1e567f2264fe40e6b386bf8d1758ed866d8f3f38
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77416106"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80215069"
 ---
 # <a name="c-in-visual-studio"></a>C++ v sadě Visual Studio
 
@@ -65,7 +65,7 @@ Získejte informace o jazyce C++, přehled o moderním jazyce C++ a odkazy na kn
 [Naučit se vizuálC++](../build/vscpp-step-1-create.md)<br/>
 Začněte se učit jazyk C++.
 
-[Visual C++ – ukázky](visual-cpp-samples.md)<br/>
+[Ukázky sady C++ Visual Studio](visual-cpp-samples.md)<br/>
 Informace o ukázkách kódu.
 
 ## <a name="c-development-tools"></a>C++vývojové nástroje
@@ -128,7 +128,7 @@ Přečtěte si o práci s různými formáty textu a řetězce a kódování pro
 
 [Referenční dokumentace jazyka C](../c-language/c-language-reference.md)
 
-[Vnitřní funkce kompilátoru a jazyk sestavení](../intrinsics/compiler-intrinsics-and-assembly-language.md)
+[Vnitřní prvky kompilátoru a jazyk sestavení](../intrinsics/compiler-intrinsics-and-assembly-language.md)
 
 ## <a name="c-libraries-in-visual-studio"></a>C++Knihovny v aplikaci Visual Studio
 
@@ -177,4 +177,4 @@ Zjistěte, jak získat nápovědu, oznamovat chyby a posílat návrhy na vylepš
 
 - [Referenční dokumentace jazyka C](../c-language/c-language-reference.md)
 - [Referenční dokumentace knihovny CRT](../c-runtime-library/c-run-time-library-reference.md)
-- [Vnitřní funkce kompilátoru a jazyk sestavení](../intrinsics/compiler-intrinsics-and-assembly-language.md)
+- [Vnitřní prvky kompilátoru a jazyk sestavení](../intrinsics/compiler-intrinsics-and-assembly-language.md)

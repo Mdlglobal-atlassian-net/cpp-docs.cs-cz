@@ -6,38 +6,38 @@ f1_keywords:
 helpviewer_keywords:
 - C2712
 ms.assetid: f7d4ffcc-7ed2-459b-8067-a728ce647071
-ms.openlocfilehash: 19b9c5a54bf405114bd4d596c2a2cc4708aadcc9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a25c59fa5c9ba0102666f6c8922a61b063e7627a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386784"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80202303"
 ---
 # <a name="compiler-error-c2712"></a>Chyba kompilátoru C2712
 
-> nelze použít __try ve funkcích, které vyžadovaly objekt vrácení zpět
+> nejde použít __try ve funkcích, které vyžadují zrušení objektu.
 
 ## <a name="remarks"></a>Poznámky
 
-Chyba C2712 může dojít, pokud používáte [/EHsc](../../build/reference/eh-exception-handling-model.md), a funkce se také zpracování strukturovaných výjimek má objektů, které vyžadují odvíjení (odstranění).
+K chybě C2712 může dojít, pokud používáte [/EHsc](../../build/reference/eh-exception-handling-model.md)a funkce se strukturovaným zpracováním výjimek také obsahuje objekty, které vyžadují unwind (zničení).
 
 Možná řešení:
 
-- Přesunout kód, který vyžaduje SEH do jiné funkce
+- Přesunout kód, který vyžaduje SEH, do jiné funkce
 
-- Přepisování funkcí, které používají SEH vyhnout se použití místních proměnných a parametry, které mají destruktory. Nepoužívejte SEH v konstruktory a destruktory
+- Přepište funkce, které používají SEH, abyste zabránili použití lokálních proměnných a parametrů, které mají destruktory. Nepoužívejte SEH v konstruktorech nebo destruktorech
 
-- Proveďte kompilaci bez/EHsc
+- Kompilovat bez/EHsc
 
-Chyba C2712 může také dojít, pokud volání metody deklarované pomocí [__event](../../cpp/event.md) – klíčové slovo. Vzhledem k tomu, že událost může použít v prostředí s více vlákny, kompilátor generuje kód, který brání manipulaci s základního objektu události a poté uzavře generovaného kódu v SEH [try-finally – příkaz](../../cpp/try-finally-statement.md). V důsledku toho C2712 dojde k chybě Pokud zavoláte metodu události a předat hodnotu argument, jehož typ má destruktor. Předat argument jako konstantní odkaz v tomto případě je jedním z řešení.
+K chybě C2712 může dojít také v případě, že zavoláte metodu deklarovanou pomocí klíčového slova [__event](../../cpp/event.md) . Vzhledem k tomu, že událost může být použita v prostředí s více vlákny, kompilátor vygeneruje kód, který brání manipulaci s podkladovým objektem události, a poté uzavře generovaný kód do [příkazu try-finally](../../cpp/try-finally-statement.md)SEH. V důsledku toho dojde k chybě C2712, pokud zavoláte metodu události a předáte argument, jehož typ má destruktor. Jedním z řešení v tomto případě je předat argument jako konstantní odkaz.
 
-C2712 může také dojít, pokud kompilujete s **/CLR: pure** a deklarujete statického pole ukazatelů na funkce v `__try` bloku. Statického člena, který vyžaduje, aby kompilátor používat dynamická inicializace v rámci **/CLR: pure**, což znamená zpracování výjimek jazyka C++. Nicméně zpracování výjimek jazyka C++ nepovoluje `__try` bloku.
+K C2712 může také dojít, pokud kompilujete pomocí **/clr: Pure** a deklarujete statické pole ukazatelů na funkce v bloku `__try`. Statický člen vyžaduje, aby kompilátor používal dynamickou inicializaci v rámci **/clr: Pure**, který C++ zahrnuje zpracování výjimek. Zpracování C++ výjimek není však v bloku `__try` povoleno.
 
-**/CLR: pure** a **/CLR: safe** – možnosti kompilátoru jsou zastaralé v sadě Visual Studio 2015 a není podporována v sadě Visual Studio 2017.
+Možnosti **/clr: Pure** a **/clr: Safe** jsou zastaralé v aplikaci Visual Studio 2015 a nejsou podporovány v aplikaci Visual Studio 2017.
 
 ## <a name="example"></a>Příklad
 
-Následující ukázka generuje C2712 a ukazuje, jak ho opravit.
+Následující ukázka generuje C2712 a ukazuje, jak ji opravit.
 
 ```cpp
 // C2712.cpp

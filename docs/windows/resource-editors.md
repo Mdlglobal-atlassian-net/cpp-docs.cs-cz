@@ -21,12 +21,12 @@ helpviewer_keywords:
 - properties [C++], resources
 - resources [C++], properties
 ms.assetid: e20a29ec-d6fb-4ead-98f3-431a0e23aaaf
-ms.openlocfilehash: 893ddf3b4d030384572baf77647e09d4d2a9d719
-ms.sourcegitcommit: 9aab425662a66825772f091112986952f341f7c8
+ms.openlocfilehash: 5f12b126db7c0e040f06640d3ecd201007d73968
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72444990"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167885"
 ---
 # <a name="resource-editors-c"></a>Editory prostředkůC++()
 
@@ -44,7 +44,7 @@ Vhodný Editor se automaticky otevře při vytváření nebo otevírání prost�
 |[Editor dialogových oken](../windows/dialog-editor.md)|Dialogová okna v projektech C++ sady Visual Studio.|
 |[Editor obrázků](../windows/image-editor-for-icons.md)|Rastrové obrázky, ikony, kurzory a další soubory obrázků v projektech C++visual, Visual Basic nebo Visual C# .|
 |[Editor nabídek](../windows/menu-editor.md)|Prostředky nabídky v projektech sady C++ Visual Studio.|
-|[Ribbon Editor](../mfc/ribbon-designer-mfc.md)|Prostředky pásu karet v projektech MFC.|
+|[Editor pásu karet](../mfc/ribbon-designer-mfc.md)|Prostředky pásu karet v projektech MFC.|
 |[Editor řetězce](../windows/string-editor.md)|Tabulky řetězců v projektech sady C++ Visual Studio.|
 |[Editor panelu nástrojů](../windows/toolbar-editor.md)|Prostředky panelu nástrojů v projektech C++ sady Visual Studio. **Editor panelu nástrojů** je součástí **editoru obrázků**.|
 |[Editor informací o verzi](../windows/version-information-editor.md)|Informace o verzi v projektech C++ sady Visual Studio.|
@@ -126,7 +126,7 @@ Následující zdroje neposkytují vizuální náhled: akcelerátor, manifest, t
 
 Žádné
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Práce se zdrojovými soubory](../windows/working-with-resource-files.md)<br/>
 [Soubory prostředků](../windows/resource-files-visual-studio.md)<br/>

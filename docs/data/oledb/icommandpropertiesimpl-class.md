@@ -14,12 +14,12 @@ helpviewer_keywords:
 - GetProperties method
 - SetProperties method
 ms.assetid: b3cf6aea-527e-4f0d-96e0-669178b021a2
-ms.openlocfilehash: 165f7124657cbaf0c0f94171eaf9394011796aea
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: cbf2e6d7241d019a00132c10638993d60d78beac
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447047"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210805"
 ---
 # <a name="icommandpropertiesimpl-class"></a>ICommandPropertiesImpl – třída
 
@@ -58,7 +58,7 @@ Vaše třída vlastnosti.
 
 Toto je povinné pro příkazy. Implementace je poskytnuta statickou funkcí definovanou pomocí makra [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md) .
 
-## <a name="getproperties"></a>ICommandPropertiesImpl –:: GetProperties
+## <a name="icommandpropertiesimplgetproperties"></a><a name="getproperties"></a>ICommandPropertiesImpl –:: GetProperties
 
 Vrátí všechny požadované sady vlastností pomocí mapy vlastností příkazu.
 
@@ -79,7 +79,7 @@ Viz [ICommandProperties:: GetProperties](/previous-versions/windows/desktop/ms72
 
 Viz [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).
 
-## <a name="setproperties"></a>ICommandPropertiesImpl –:: SetProperties
+## <a name="icommandpropertiesimplsetproperties"></a><a name="setproperties"></a>ICommandPropertiesImpl –:: SetProperties
 
 Nastaví vlastnosti pro objekt Command.
 

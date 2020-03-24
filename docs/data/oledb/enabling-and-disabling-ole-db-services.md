@@ -5,19 +5,19 @@ helpviewer_keywords:
 - OLE DB services [OLE DB], enabling and disabling
 - service providers [OLE DB]
 ms.assetid: 445f97eb-32a8-41c2-ad26-1169f78a074f
-ms.openlocfilehash: df17a55950b03d4d63dea2199e3bc19bedb8a7e3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3016126d09b39ec74f4acb758a2176be05052648
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62175339"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210961"
 ---
 # <a name="enabling-and-disabling-ole-db-services"></a>Povolení a zákaz služeb OLE DB
 
-OLE DB služby Component Manager porovná příjemce na vlastnostech podporovaných zprostředkovatelem k určení, zda k rozšířené funkce požadoval uživatel může použít jednotlivé komponenty služby byly zadány vlastnosti. Pokud aplikace požaduje posuvný kurzoru a zprostředkovatel podporuje pouze dopředné kurzor, služby Component Manager používá klientský kurzor stroj součást služby posuvný nakonfigurovánu. Pokud aplikace se spoléhá na rozšířené funkce podporované ve výchozím nastavení pro poskytovatele řádků a aplikace nebude explicitně nastavit vlastnosti pro žádost o funkci, funkci nemusí zobrazit v dané sadě řádků vrácených klienta Modul kurzoru. Pokud chcete interoperabilní, by měla aplikace vždy nastavit vlastnosti explicitní žádost o rozšířené funkce místech.
+Služba OLE DB Service Component Manager porovnává vlastnosti zadané uživatelem s vlastnostmi podporovanými poskytovatelem k určení, zda lze jednotlivé součásti služby použít k uspokojení rozšířených funkcí požadovaných příjemcem. Například pokud aplikace požaduje posuvný kurzor a poskytovatel podporuje pouze jenom dopředný kurzor, nástroj Service Component Manager používá komponentu služby Klient Cursor Engine k zajištění rolovací funkce. Pokud se aplikace spoléhá na rozšířené funkce podporované ve výchozím nastavení v sadě řádků poskytovatele a aplikace explicitně nenastaví vlastnosti tak, aby požadovala tuto funkčnost, funkce se nemusí zobrazit na sadě řádků vrácené klientem. Modul kurzoru. Aby bylo možné vzájemně fungovat, aplikace by měly vždy nastavit vlastnosti tak, aby explicitně vyžadovaly rozšířenou funkčnost v případě potřeby.
 
-V některých případech může být potřeba zakázat jednotlivých služeb OLE DB pro práci i se stávajícími aplikacemi, které počítají informace o vlastnosti zprostředkovatele. Služby rozhraní OLE DB poskytují možnost zakázat jednotlivé služby nebo všech služeb, a to na základě připojení pomocí připojení nebo pro všechny aplikace pomocí jednoho zprostředkovatele.
+V některých případech může být nutné zakázat jednotlivé OLE DB služby, aby fungovaly dobře se stávajícími aplikacemi, které vedou k odhadu charakteristik zprostředkovatele. Služba OLE DB Services nabízí možnost zakázat jednotlivé služby nebo všechny služby, a to buď na základě připojení, nebo u všech aplikací, které používají jednoho poskytovatele.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Sdružování prostředků OLE DB a služby](../../data/oledb/ole-db-resource-pooling-and-services.md)

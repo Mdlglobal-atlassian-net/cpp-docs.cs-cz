@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2295
 ms.assetid: faddf446-5924-401e-b719-93390d5cd084
-ms.openlocfilehash: a08b9b95974b0e715397abd1c76ee082697e640d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a3474b280198f7f0defbf62d4720473a6e3e077e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182727"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80206346"
 ---
 # <a name="compiler-error-c2295"></a>Chyba kompilátoru C2295
 
-uvozeny řídicími znaky 'znak': není v definici makra
+řídicí znak ' Character ': v definici makra je neplatný
 
-Řídicí sekvence se zadaný znak nemůže obsahovat definici makra.
+Definice makra nesmí obsahovat řídicí sekvenci se zadaným znakem.

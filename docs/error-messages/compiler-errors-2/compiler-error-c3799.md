@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3799
 ms.assetid: 336a2811-9370-4e6e-b03b-325bda470805
-ms.openlocfilehash: 19ff414bde9bb24fca62fd10cfef6d18109199e8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 980683ebc2e086e4c16180f04466af9dbdd49d02
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400120"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80165649"
 ---
 # <a name="compiler-error-c3799"></a>Chyba kompilátoru C3799
 
-Indexovaná vlastnost nemůže mít prázdný seznam parametrů
+indexovaná vlastnost nemůže mít prázdný seznam parametrů.
 
-Indexovaná vlastnost byl deklarován nesprávně. Další informace najdete v tématu [jak: Pomocí vlastností v C++vyhodnocovací](../../dotnet/how-to-use-properties-in-cpp-cli.md).
+Indexovaná vlastnost byla deklarována nesprávně. Další informace najdete v tématu [Postupy: použití vlastností C++v/CLI](../../dotnet/how-to-use-properties-in-cpp-cli.md).
 
 ## <a name="example"></a>Příklad
 
-Následující ukázka generuje C3799 a ukazuje, jak ho opravit.
+Následující ukázka generuje C3799 a ukazuje, jak ji opravit.
 
 ```cpp
 // C3799.cpp

@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - C1208
 ms.assetid: 4eefd8f0-5c2e-4a11-9e63-293e1139db65
-ms.openlocfilehash: ffa4aae19cc83617363fcfb3536f5a364aeed00f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cf4af072d000e70114ed1723ec802086ca90ba48
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62228793"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80203395"
 ---
 # <a name="fatal-error-c1208"></a>Závažná chyba C1208
 
-Přidělení referenčních tříd pro zásobník není podporovaná ve verzi modulu runtime nainstalovaného
+Přidělení referenčních tříd v zásobníku není podporované nainstalovanou verzí modulu runtime.
 
-C1208 nastane, pokud máte pro aktuální verzi, ale společného jazykového modulu runtime z předchozí verze kompilátoru.
+K C1208 dojde, když máte kompilátor pro aktuální vydání, ale modul CLR (Common Language Runtime) z předchozí verze.
 
-Některé funkce kompilátoru nemusí fungovat v době běhu předchozí verze.
+Některé funkce kompilátoru nemusí fungovat v předchozí verzi doby běhu.
 
-Instalace verze společného běhového jazykového, která je určena pro použití s kompilátoru.
+Nainstalujte verzi modulu CLR (Common Language Runtime), která je určena pro použití s vaším kompilátorem.

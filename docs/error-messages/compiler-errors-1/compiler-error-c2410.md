@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C2410
 ms.assetid: b69b2de1-56f3-4ebc-8913-04ac57ffe8a1
-ms.openlocfilehash: 8b01a2f7b9c55fb57c880df5033538f4e45f76b4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e4d30ff0fbca7428fb1dcf252bcad50bd53488d7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62282323"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80205689"
 ---
 # <a name="compiler-error-c2410"></a>Chyba kompilátoru C2410
 
-'identifier': nejednoznačný název členu "context"
+' identifier ': nejednoznačný název členu v kontextu '
 
-Identifikátor je členem více než jeden struktury nebo sjednocení v tomto kontextu.
+Identifikátor je členem více než jedné struktury nebo sjednocení v tomto kontextu.
 
-Použijte specifikátor struktury nebo sjednocení na operand, který způsobil chybu. Je identifikátor typu struktury nebo sjednocení specifikátor `struct` nebo `union` ( `typedef` název nebo proměnnou stejného typu jako struktury nebo sjednocení, na kterou se odkazuje). Levý operand první operátor výběru členů (.) použít operand musí být specifikátor.
+Pro operand, který způsobil chybu, použijte specifikátor struktury nebo sjednocení. Specifikátor struktury nebo sjednocení je identifikátor typu `struct` nebo `union` (`typedef` název nebo proměnná stejného typu jako odkazovaná struktura nebo sjednocení). Specifikátorem musí být levý operand prvního operátoru výběru členů (.), aby se mohl použít operand.

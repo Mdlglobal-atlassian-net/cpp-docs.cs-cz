@@ -20,16 +20,16 @@ helpviewer_keywords:
 - GetXMLColumnData method
 - GetXMLRowData method
 ms.assetid: c88c082c-ec2f-4351-8947-a330b15e448a
-ms.openlocfilehash: 85fddb9b77cfc089b2236f2ff82944fec6ef9632
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f25fb3635f70ee9a0e38ddcdbcf373fe6b1b84c8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62176067"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211039"
 ---
 # <a name="cxmlaccessor-class"></a>CXMLAccessor – třída
 
-Umožňuje přístup ke zdrojům dat jako řetězce dat, když nemají žádné informace o schématu úložiště dat (podkladová struktura).
+Umožňuje přístup ke zdrojům dat jako řetězcová data, pokud nemáte žádné znalosti schématu úložiště dat (základní struktura).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -39,7 +39,7 @@ class CXMLAccessor : public CDynamicStringAccessorW
 
 ## <a name="requirements"></a>Požadavky
 
-**Hlavička**: také atldbcli.h
+**Záhlaví**: atldbcli. h
 
 ## <a name="members"></a>Členové
 
@@ -48,23 +48,23 @@ class CXMLAccessor : public CDynamicStringAccessorW
 |||
 |-|-|
 |[GetXMLColumnData](#getxmlcolumndata)|Načte informace o sloupci.|
-|[GetXMLRowData](#getxmlrowdata)|Načte celý obsah tabulky po řádcích.|
+|[GetXMLRowData](#getxmlrowdata)|Načte celý obsah tabulky podle řádků.|
 
 ## <a name="remarks"></a>Poznámky
 
-Ale `CXMLAccessor` se liší od `CDynamicStringAccessorW` , převede všechna data z úložiště dat jako ve formátu XML (označené) data. To je užitečné zejména pro výstup do webových stránek s ohledem na XML. Názvy značek XML se co nejpřesněji odpovídají názvy sloupců dat úložiště.
+`CXMLAccessor` se ale liší od `CDynamicStringAccessorW` v tom, že převádí všechna data, která jsou dostupná z úložiště dat, jako data ve formátu XML (označená). To je užitečné hlavně pro výstup na webové stránky podporující XML. Názvy značek XML budou odpovídat názvům sloupců úložiště dat co nejpřesněji.
 
-Použití `CDynamicAccessor` metody získat informace o sloupci. Informace o tomto sloupci použijete k vytvoření přistupující objekt dynamicky za běhu.
+K získání informací o sloupci použijte `CDynamicAccessor` metody. Tyto informace o sloupci slouží k vytvoření přístupového objektu dynamicky v době běhu.
 
-Informace o sloupci je uložená do vyrovnávací paměti, vytvářet a spravovat touto třídou. Získání informací pomocí sloupce [GetXMLColumnData](#getxmlcolumndata) nebo získat sloupce dat podle řádků pomocí [GetXMLRowData](#getxmlrowdata).
+Informace o sloupci jsou uloženy ve vyrovnávací paměti vytvořené a spravované touto třídou. Získat informace o sloupci pomocí [GetXMLColumnData](#getxmlcolumndata) nebo získat data sloupce podle řádků pomocí [GetXMLRowData](#getxmlrowdata).
 
 ## <a name="example"></a>Příklad
 
 [!code-cpp[NVC_OLEDB_Consumer#14](../../data/oledb/codesnippet/cpp/cxmlaccessor-class_1.cpp)]
 
-## <a name="getxmlcolumndata"></a> CXMLAccessor::GetXMLColumnData
+## <a name="cxmlaccessorgetxmlcolumndata"></a><a name="getxmlcolumndata"></a>CXMLAccessor –:: GetXMLColumnData
 
-Načte informace o typu sloupců tabulky jako řetězec ve formátu XML data podle sloupce.
+Načte informace o typu sloupce tabulky jako řetězcová data ve formátu XML, podle sloupce.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -75,15 +75,15 @@ HRESULT GetXMLColumnData(CSimpleStringW& strOutput) throw();
 #### <a name="parameters"></a>Parametry
 
 *strOutput*<br/>
-[out] Odkaz na vyrovnávací paměti řetězce obsahující informace o typu sloupce, který se má načíst. Řetězec je formátováno s názvy značek XML, které odpovídají názvy sloupců dat úložiště.
+mimo Odkaz na vyrovnávací paměť řetězců obsahující informace o typu sloupce, které mají být načteny. Řetězec je formátován názvy značek XML, které odpovídají názvům sloupců v úložišti dat.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Jeden standardní hodnoty HRESULT.
+Jedna ze standardních hodnot HRESULT.
 
 ### <a name="remarks"></a>Poznámky
 
-Následuje ukázka, jak informace o typu sloupce je ve formátu XML. `type` Určuje datový typ sloupce. Všimněte si, že datové typy, které jsou založeny na typech dat OLE DB, nejsou u databáze, ke kterému přistupujete.
+Následující příklad ukazuje, jak jsou informace o typu sloupce formátovány v XML. `type` Určuje datový typ sloupce. Všimněte si, že datové typy jsou založené na OLE DB datových typů, nikoli na tom, jaká databáze je k dispozici.
 
 `<columninfo>`
 
@@ -91,9 +91,9 @@ Následuje ukázka, jak informace o typu sloupce je ve formátu XML. `type` Urč
 
 `</columninfo>`
 
-## <a name="getxmlrowdata"></a> CXMLAccessor::GetXMLRowData
+## <a name="cxmlaccessorgetxmlrowdata"></a><a name="getxmlrowdata"></a>CXMLAccessor –:: GetXMLRowData
 
-Načte celý obsah tabulky jako řetězec ve formátu XML dat po řádku.
+Načte celý obsah tabulky jako řetězcová data ve formátu XML, podle řádku.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -105,18 +105,18 @@ HRESULT GetXMLRowData(CSimpleStringW& strOutput,
 #### <a name="parameters"></a>Parametry
 
 *strOutput*<br/>
-[out] Odkaz na vyrovnávací paměť obsahující data tabulky, který se má načíst. Jeho data formátovaná jako data řetězce s názvy značek XML, které odpovídají názvy sloupců dat úložiště.
+mimo Odkaz na vyrovnávací paměť obsahující data tabulky, která mají být načtena. Data jsou formátována jako řetězcová data s názvy značek XML, které odpovídají názvům sloupců v úložišti dat.
 
 *bAppend*<br/>
-[in] Logická hodnota určující, jestli se má připojit řetězec za účelem výstupní data.
+pro Logická hodnota určující, zda se má řetězec připojit k konci výstupních dat.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Jeden standardní hodnoty HRESULT.
+Jedna ze standardních hodnot HRESULT.
 
 ### <a name="remarks"></a>Poznámky
 
-Následuje ukázka, jak data řádku je ve formátu XML. `DATA` níže představuje data řádku. Použití přesunutí metody pro přechod na požadovaný řádek.
+Následující příklad ukazuje, jak jsou data řádků formátována v jazyce XML. `DATA` níže představuje data řádku. K přesunu na požadovaný řádek použijte metody Move.
 
 `<row>`
 
@@ -124,9 +124,9 @@ Následuje ukázka, jak data řádku je ve formátu XML. `DATA` níže představ
 
 `</row>`
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[OLE DB – šablony příjemce](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Šablony OLE DB příjemců](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Referenční dokumentace k šablonám příjemců OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [CAccessor – třída](../../data/oledb/caccessor-class.md)<br/>
 [CDynamicAccessor – třída](../../data/oledb/cdynamicaccessor-class.md)<br/>

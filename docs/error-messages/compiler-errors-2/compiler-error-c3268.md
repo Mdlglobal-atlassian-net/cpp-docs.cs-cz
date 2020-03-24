@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3268
 ms.assetid: d74a630c-daea-4e29-9759-83efef7fb184
-ms.openlocfilehash: d9954c12fb1065a4aa5e7afbdecd1f96758acaf9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 191456a1e290b568897ba76cd5bdccb8f83c310b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62365660"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80201458"
 ---
 # <a name="compiler-error-c3268"></a>Chyba kompilátoru C3268
 
-> "*funkce*': obecná funkce nebo členská funkce obecné třídy nemůže mít seznam parametrů proměnných
+> '*Function*': Obecná funkce nebo členská funkce obecné třídy nemůže mít seznam parametrů proměnných
 
 ## <a name="remarks"></a>Poznámky
 
-**/CLR: pure** a **/CLR: safe** – možnosti kompilátoru jsou zastaralé v sadě Visual Studio 2015 a není podporována v sadě Visual Studio 2017.
+Možnosti **/clr: Pure** a **/clr: Safe** jsou zastaralé v aplikaci Visual Studio 2015 a nejsou podporovány v aplikaci Visual Studio 2017.
 
-Zobrazit [obecných typů](../../extensions/generics-cpp-component-extensions.md) Další informace.
+Další informace najdete v tématu [Obecné](../../extensions/generics-cpp-component-extensions.md) .
 
 ## <a name="example"></a>Příklad
 

@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3365
 ms.assetid: 875ec3a4-522c-4e3d-9b67-48808b857f6d
-ms.openlocfilehash: fa11ac57205574da29c55344fedb0e996ab30557
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 355c4530fffa89470ac495aff8bc2822278e2da3
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62300567"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80201192"
 ---
 # <a name="compiler-error-c3365"></a>Chyba kompilátoru C3365
 
-operátor 'operator': lišící se operandy typu 'type1' a 'type2'
+operátor ' operator ': lišící se operandy typu ' typ1 ' a ' typ2 '
 
-Došlo pokusu o vytváření delegátů s různými typy.  Zobrazit [jak: Definování a používání delegátů (C++vyhodnocovací)](../../dotnet/how-to-define-and-use-delegates-cpp-cli.md) pro další informace o delegátech.
+Byl proveden pokus o vytvoření delegátů s různými typy.  Další informace o delegátech naleznete v tématu [HowC++to: Define and use Delegates (/CLI)](../../dotnet/how-to-define-and-use-delegates-cpp-cli.md) .
 
 ## <a name="example"></a>Příklad
 

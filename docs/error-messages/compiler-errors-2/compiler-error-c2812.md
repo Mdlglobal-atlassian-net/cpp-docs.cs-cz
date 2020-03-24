@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2812
 ms.assetid: 22aadb8c-7232-489d-a3ad-60662dda30a8
-ms.openlocfilehash: 88b071f38cf41db9c929d25ffd526b3f2b7ca468
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cec92982646c64e6c5b669df328e4836d4f44df8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62382954"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80202095"
 ---
 # <a name="compiler-error-c2812"></a>Chyba kompilátoru C2812
 
-> \#Import není podporován s parametrem/CLR: pure a/CLR: safe
+> Import \#není podporován s možností/CLR: Pure a/CLR: safe.
 
 ## <a name="remarks"></a>Poznámky
 
-**/CLR: pure** a **/CLR: safe** – možnosti kompilátoru jsou zastaralé v sadě Visual Studio 2015 a není podporována v sadě Visual Studio 2017.
+Možnosti **/clr: Pure** a **/clr: Safe** jsou zastaralé v aplikaci Visual Studio 2015 a nejsou podporovány v aplikaci Visual Studio 2017.
 
-[#import – direktiva](../../preprocessor/hash-import-directive-cpp.md) nepodporuje **/CLR: pure** a **/CLR: safe** protože `#import` vyžaduje použití nativního kompilátoru podpůrné knihovny.
+[direktiva #import](../../preprocessor/hash-import-directive-cpp.md) není podporována s možností **/clr: Pure** a **/clr: Safe** , protože `#import` vyžaduje použití nativních knihoven podpory kompilátoru.
 
 ## <a name="example"></a>Příklad
 

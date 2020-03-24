@@ -6,61 +6,61 @@ helpviewer_keywords:
 - OLE DB consumer templates, getting provider metadata
 - metadata, getting (OLE DB Templates)
 ms.assetid: 6b448461-82fb-4acf-816b-3cbb0ca1d186
-ms.openlocfilehash: 12c3de79626411b76a402a7f5407f40a7b054318
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e04b9a335c60cefdc28be2347ef1f0762c424d8e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387562"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210129"
 ---
 # <a name="obtaining-metadata-with-schema-rowsets"></a>Získávání metadat pomocí sad řádků schématu
 
-Někdy potřebujete získat informace o poskytovateli, sady řádků, tabulky, sloupce nebo jiné informace o databázi bez nutnosti otevřít v sadě řádků. Data o struktuře databáze s názvem metadat a je možné načíst podle několika způsoby. Jedním ze způsobů je použít sad řádků schématu.
+Někdy potřebujete získat informace o poskytovateli, sadě řádků, tabulce, sloupcích nebo jiných informacích o databázi, aniž byste museli otevřít sadu řádků. Data o struktuře databáze se nazývají metadata a lze je načíst řadou různých metod. Jednou z metod je použití sad řádků schématu.
 
-Šablony technologie OLE DB poskytují sadu tříd pro načtení informací o schématu; Tyto třídy vytvoří předdefinované sady řádků schématu a jsou uvedeny v [třídy sady řádků schématu a definiční třídy typů](../../data/oledb/schema-rowset-classes-and-typedef-classes.md).
+Šablony OLE DB poskytují sadu tříd pro načtení informací o schématu; Tyto třídy vytvoří předdefinované sady řádků schématu a jsou uvedeny v seznamu [třídy sady řádků schématu a třídy typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md).
 
 > [!NOTE]
-> Pokud používáte OLAP a některé z vašich sady řádků nejsou podporovány třídy sady řádků schématu (například můžete mít proměnný počet sloupců), měli byste zvážit použití `CManualAccessor` nebo `CDynamicAccessor`. Můžete procházet sloupci a používat příkazy case zpracovat všechny možné datové typy pro každý sloupec.
+> Pokud používáte OLAP a některé sady řádků nejsou podporovány třídami sady řádků schématu (například máte proměnlivý počet sloupců), měli byste zvážit použití `CManualAccessor` nebo `CDynamicAccessor`. Můžete procházet sloupci a použít příkazy Case pro zpracování možných datových typů pro každý sloupec.
 
-## <a name="catalogschema-model"></a>Model katalogu nebo schématu
+## <a name="catalogschema-model"></a>Model katalogu/schématu
 
-ANSI SQL definuje model katalogu nebo schématu pro úložiště dat; Tento model používá technologie OLE DB. V tomto modelu katalogy (databáze) mají schémata a schémata mají tabulek.
+ANSI SQL definuje model katalogu/schématu pro úložiště dat; OLE DB používá tento model. V tomto modelu mají katalogy (databáze) schémata a schémata tabulky.
 
-- **Katalog** katalog je jiný název databáze. Jde o kolekci souvisejících schémat. K zobrazení seznamu katalogy (databáze), které patří do daného zdroje dat, použijte [CCatalog](../../data/oledb/ccatalogs-ccataloginfo.md). Protože velký počet databází mít pouze jeden katalog, metadata se někdy označuje jako informace o schématu.
+- **Katalog** Katalog je jiný název databáze. Jedná se o kolekci souvisejících schémat. Chcete-li zobrazit seznam katalogů (databází) patřících k danému zdroji dat, použijte [CCatalog](../../data/oledb/ccatalogs-ccataloginfo.md). Vzhledem k tomu, že mnoho databází má pouze jeden katalog, metadata se někdy označují jako informace o schématu.
 
-- **Schéma** schéma je kolekce databázové objekty, které jsou ve vlastnictví nebo vytvořili konkrétní uživatel. K zobrazení seznamu schémat vlastníkem daného uživatele, použijte [CSchemata](../../data/oledb/cschemata-cschematainfo.md).
+- **Schéma** Schéma je kolekce databázových objektů, které jsou vlastněny nebo byly vytvořeny konkrétním uživatelem. Chcete-li zobrazit seznam schémat vlastněných daným uživatelem, použijte [CSchemata](../../data/oledb/cschemata-cschematainfo.md).
 
-   V systému Microsoft SQL Server a rozhraní ODBC 2.x podmínky, schéma je vlastníkem (třeba dbo je typické schemaname). Také ukládá metadata sadu tabulek systému SQL Server: jedna tabulka obsahuje seznam všech tabulek a jiná tabulka obsahuje seznam všech sloupců. Neexistuje žádný ekvivalent k schématu v databázi Microsoft Access.
+   V rámci podmínek Microsoft SQL Server a ODBC 2. x je schéma vlastníkem (například dbo je typický název schématu). SQL Server také ukládá metadata v sadě tabulek: jedna tabulka obsahuje seznam všech tabulek a další tabulka obsahuje seznam všech sloupců. V databázi aplikace Microsoft Access není ekvivalent schématu.
 
-- **Tabulka** tabulky jsou kolekce sloupců uspořádané do konkrétní objednávky. K zobrazení seznamu tabulek definovaných v daném katalogu (databáze) a informace o těchto tabulkách použijte [CTables](../../data/oledb/ctables-ctableinfo.md)).
+- **Tabulka** Tabulky jsou kolekce sloupců uspořádané do konkrétních objednávek. K vypsání tabulek definovaných v daném katalogu (databáze) a informací o těchto tabulkách použijte [CTable](../../data/oledb/ctables-ctableinfo.md).
 
 ## <a name="restrictions"></a>Omezení
 
-Když odešlete dotaz na informace o schématu, můžete použít omezení k určení typu informací, které vás zajímá. Omezení jako kvalifikátoru v dotazu nebo filtru si můžete představit. Například v dotazu:
+Při dotazování na informace o schématu můžete pomocí omezení určit typ informací, které vás zajímají. Omezení můžete v dotazu představit jako filtr nebo kvalifikátor. Například v dotazu:
 
 ```sql
 SELECT * FROM authors WHERE l_name = 'pivo'
 ```
 
-`l_name` je omezení. Toto je jednoduchý příklad s pouze jedno omezení; třídy sady řádků schématu podporovat několik omezení.
+`l_name` je omezení. Toto je jednoduchý příklad s pouze jedním omezením; třídy sady řádků schématu podporují několik omezení.
 
-[Definice typu třídy sady řádků schématu](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) zapouzdření všechny sady řádků schématu technologie OLE DB tak, aby sada řádků schématu stejně jako ostatní sady řádků se zpřístupní po vytvoření instance a jeho otevřením. Například třída definice typedef [CColumns](../../data/oledb/ccolumns-ccolumnsinfo.md) je definován jako:
+[Třídy typedef sady řádků schématu](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) zapouzdřují všechny sady řádků schématu OLE DB tak, abyste měli přístup k sadě řádků schématu stejně jako všechny jiné sady řádků, a to vytvořením instance a jejím otevřením. Například třída typedef třídy [CColumns](../../data/oledb/ccolumns-ccolumnsinfo.md) je definována jako:
 
 ```cpp
 CRestrictions<CAccessor<CColumnsInfo>
 ```
 
-[CRestrictions](../../data/oledb/crestrictions-class.md) poskytuje podporu omezení třídy. Po vytvoření instance sady řádků schématu volat [CRestrictions::Open](../../data/oledb/crestrictions-open.md). Tato metoda vrátí sadu výsledků dotazu na základě omezení, které zadáte.
+Třída [CRestrictions –](../../data/oledb/crestrictions-class.md) poskytuje podporu omezení. Po vytvoření instance sady řádků schématu zavolejte [CRestrictions –:: Open](../../data/oledb/crestrictions-open.md). Tato metoda vrací sadu výsledků na základě omezení, která zadáte.
 
-Chcete-li zadat omezení, přečtěte si [příloha B: Sady řádků schématu](/previous-versions/windows/desktop/ms712921(v=vs.85)) a vyhledání řádků, které používáte. Například `CColumns` odpovídá [sady řádků sloupců](/previous-versions/windows/desktop/ms723052(v=vs.85)); Toto téma obsahuje seznam sloupců omezení v sadě řádků %{Rowset/ sloupce: TABLE_CATALOG, TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME. Je třeba dodržet toto pořadí v zadání vašeho omezení.
+Chcete-li zadat omezení, přečtěte si [Dodatek B: sady řádků schématu](/previous-versions/windows/desktop/ms712921(v=vs.85)) a vyhledejte sadu řádků, kterou používáte. Například `CColumns` odpovídá [sadě řádků Columns](/previous-versions/windows/desktop/ms723052(v=vs.85)); Toto téma obsahuje sloupce omezení v sadě řádků COLUMNs: TABLE_CATALOG, TABLE_SCHEMA, TABLE_NAME COLUMN_NAME. Musíte postupovat podle tohoto pořadí při určování vašich omezení.
 
-Ano, pokud chcete omezit tím, že název tabulky, TABLE_NAME je například třetí sloupec omezení a poté zavolejte `Open`, zadáte název požadované tabulky jako třetí parametr omezení, jak je znázorněno v následujícím příkladu.
+Pokud například chcete omezit podle názvu tabulky, TABLE_NAME je třetí sloupec omezení a potom zavolejte `Open`a jako třetí parametr omezení zadejte požadovaný název tabulky, jak je znázorněno v následujícím příkladu.
 
 ### <a name="to-use-schema-rowsets"></a>Použití sad řádků schématu
 
-1. Zahrnutím souboru hlaviček `Atldbsch.h` (budete potřebovat `Atldbcli.h` pro podporu příjemce).
+1. Zahrňte do souboru hlaviček `Atldbsch.h` (budete potřebovat `Atldbcli.h` i pro podporu zákazníků).
 
-1. Vytvoření instance objektu sady řádků schématu v paměti spotřebitele nebo dokumentu soubor hlaviček. Pokud chcete informace o tabulce, deklarujte `CTables` objektu; Pokud chcete informace o sloupci, deklarujte `CColumns` objektu. Tento příklad ukazuje, jak načíst sloupce v tabulce Autoři:
+1. Vytvořte instanci objektu sady řádků schématu v souboru hlaviček příjemce nebo dokumentu. Pokud chcete informace o tabulce, deklarujte objekt `CTables`; Pokud chcete informace o sloupci, deklarujte objekt `CColumns`. Tento příklad ukazuje, jak načíst sloupce v tabulce Autoři:
 
     ```cpp
     CDataSource ds;
@@ -78,16 +78,16 @@ Ano, pokud chcete omezit tím, že název tabulky, TABLE_NAME je například tř
     }
     ```
 
-1. Chcete-li načíst informace, například přístup k příslušnému datovému členu objektu sady řádků schématu `ColumnSchemaRowset.m_szColumnName`. COLUMN_NAME odpovídá tomuto datovému členu. Každý datový člen odpovídá sloupec technologie OLE DB najdete v tématu [CColumns](../../data/oledb/ccolumns-ccolumnsinfo.md).
+1. Chcete-li načíst informace, přístup k příslušnému datovému členu objektu sady řádků schématu, například `ColumnSchemaRowset.m_szColumnName`. Tento datový člen odpovídá COLUMN_NAME. Chcete-li zjistit, který OLE DB sloupec každý datový člen odpovídá, přečtěte si téma [CColumns](../../data/oledb/ccolumns-ccolumnsinfo.md).
 
-Pro odkaz na sadu řádků schématu definiční třídy typů součástí šablony technologie OLE DB (viz [třídy sady řádků schématu a definiční třídy typů](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)).
+Pro referenci na sadu řádků schématu, třídy typedef poskytované v šablonách OLE DB (viz [třídy sady řádků schématu a třídy typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)).
 
-Další informace o sad řádků schématu technologie OLE DB, včetně sloupců omezení, najdete v části [příloha B: Sady řádků schématu](/previous-versions/windows/desktop/ms712921(v=vs.85)) v **referenční informace pro OLE DB programátory**.
+Další informace o OLE DB schémat sad řádků, včetně sloupců omezení, naleznete v [příloze B: sady řádků schématu](/previous-versions/windows/desktop/ms712921(v=vs.85)) v **Referenční příručce programátora OLE DB**.
 
-Složitější příklady toho, jak pomocí třídy sady řádků schématu, najdete v článku [CatDB](https://github.com/Microsoft/VCSamples) a [DBViewer](https://github.com/Microsoft/VCSamples) ukázky.
+Složitější příklady použití tříd sady řádků schématu naleznete v ukázkách [CatDB](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Consumer) a [DBVIEWER](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Consumer) .
 
-Informace týkající se podpory zprostředkovatele sady řádků schématu najdete v tématu [Podpora sad řádků schématu](../../data/oledb/supporting-schema-rowsets.md).
+Informace o podpoře poskytovatele pro sady řádků schématu naleznete v tématu [podpůrné sady řádků schématu](../../data/oledb/supporting-schema-rowsets.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Použití přístupových objektů](../../data/oledb/using-accessors.md)

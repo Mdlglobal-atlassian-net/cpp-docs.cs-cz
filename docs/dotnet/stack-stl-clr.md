@@ -53,12 +53,12 @@ helpviewer_keywords:
 - top_item member [STL/CLR]
 - value_type member [STL/CLR]
 ms.assetid: 6ee96b9f-8a33-4cf7-b7e0-6535c24bdefb
-ms.openlocfilehash: 9f1ae182573ca70a6983b9cd23e253ecf30731e4
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 18c94df643371f7b645ac9658a51d133d53f3403
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79441990"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80208322"
 ---
 # <a name="stack-stlclr"></a>stack (STL/CLR)
 
@@ -144,7 +144,7 @@ Objekt přiděluje a uvolňuje úložiště pro sekvenci, kterou ovládá, prost
 
 ## <a name="members"></a>Členové
 
-## <a name="assign"></a>stack:: assign (STL/CLR)
+## <a name="stackassign-stlclr"></a><a name="assign"></a>stack:: assign (STL/CLR)
 
 Nahradí všechny prvky.
 
@@ -198,7 +198,7 @@ a b c
 a b c
 ```
 
-## <a name="const_reference"></a>stack:: const_reference (STL/CLR)
+## <a name="stackconst_reference-stlclr"></a><a name="const_reference"></a>stack:: const_reference (STL/CLR)
 
 Typ konstantního odkazu na prvek
 
@@ -242,7 +242,7 @@ int main()
 c b a
 ```
 
-## <a name="container_type"></a>stack:: container_type (STL/CLR)
+## <a name="stackcontainer_type-stlclr"></a><a name="container_type"></a>stack:: container_type (STL/CLR)
 
 Typ podkladového kontejneru.
 
@@ -284,7 +284,7 @@ int main()
 a b c
 ```
 
-## <a name="difference_type"></a>stack::d ifference_type (STL/CLR)
+## <a name="stackdifference_type-stlclr"></a><a name="difference_type"></a>stack::d ifference_type (STL/CLR)
 
 Typy podepsané vzdálenosti mezi dvěma prvky.
 
@@ -342,7 +342,7 @@ pushing 2 = -2
 popping 3 = 3
 ```
 
-## <a name="empty"></a>stack:: Empty (STL/CLR)
+## <a name="stackempty-stlclr"></a><a name="empty"></a>stack:: Empty (STL/CLR)
 
 Zkouší, zda nejsou přítomny žádné prvky.
 
@@ -396,7 +396,7 @@ size() = 0
 empty() = True
 ```
 
-## <a name="generic_container"></a>stack:: generic_container (STL/CLR)
+## <a name="stackgeneric_container-stlclr"></a><a name="generic_container"></a>stack:: generic_container (STL/CLR)
 
 Typ obecného rozhraní pro adaptér kontejneru.
 
@@ -459,7 +459,7 @@ a b c d
 a b c d e
 ```
 
-## <a name="generic_value"></a>stack:: generic_value (STL/CLR)
+## <a name="stackgeneric_value-stlclr"></a><a name="generic_value"></a>stack:: generic_value (STL/CLR)
 
 Typ elementu pro použití s obecným rozhraním pro kontejner.
 
@@ -517,7 +517,7 @@ a b c
 c b a
 ```
 
-## <a name="get_container"></a>stack:: get_container (STL/CLR)
+## <a name="stackget_container-stlclr"></a><a name="get_container"></a>stack:: get_container (STL/CLR)
 
 Přistupuje k základnímu kontejneru.
 
@@ -559,7 +559,7 @@ int main()
 a b c
 ```
 
-## <a name="op_as"></a>stack:: operator = – operátor (STL/CLR)
+## <a name="stackoperator-stlclr"></a><a name="op_as"></a>stack:: operator = – operátor (STL/CLR)
 
 Nahradí řízenou sekvenci.
 
@@ -613,7 +613,7 @@ a b c
 a b c
 ```
 
-## <a name="pop"></a>stack::p op (STL/CLR)
+## <a name="stackpop-stlclr"></a><a name="pop"></a>stack::p op (STL/CLR)
 
 Odstraní poslední prvek.
 
@@ -661,7 +661,7 @@ a b c
 a b
 ```
 
-## <a name="push"></a>stack::p USH (STL/CLR)
+## <a name="stackpush-stlclr"></a><a name="push"></a>stack::p USH (STL/CLR)
 
 Přidá nový poslední prvek.
 
@@ -702,7 +702,7 @@ int main()
 a b c
 ```
 
-## <a name="reference"></a>stack:: Reference (STL/CLR)
+## <a name="stackreference-stlclr"></a><a name="reference"></a>stack:: Reference (STL/CLR)
 
 Typ odkazu na prvek
 
@@ -751,7 +751,7 @@ a b c
 a b x
 ```
 
-## <a name="size"></a>stack:: Size (STL/CLR)
+## <a name="stacksize-stlclr"></a><a name="size"></a>stack:: Size (STL/CLR)
 
 Spočítá počet prvků.
 
@@ -805,7 +805,7 @@ size() = 2 after popping
 size() = 4 after adding 2
 ```
 
-## <a name="size_type"></a>stack:: size_type (STL/CLR)
+## <a name="stacksize_type-stlclr"></a><a name="size_type"></a>stack:: size_type (STL/CLR)
 
 Typ podepsané vzdálenosti mezi dvěma prvky.
 
@@ -854,7 +854,7 @@ a b c
 size difference = 2
 ```
 
-## <a name="stack"></a>stack:: Stack (STL/CLR)
+## <a name="stackstack-stlclr"></a><a name="stack"></a>stack:: Stack (STL/CLR)
 
 Vytvoří objekt adaptéru kontejneru.
 
@@ -947,7 +947,7 @@ x x x x x
 x x x x x
 ```
 
-## <a name="to_array"></a>stack:: to_array (STL/CLR)
+## <a name="stackto_array-stlclr"></a><a name="to_array"></a>stack:: to_array (STL/CLR)
 
 Zkopíruje řízenou sekvenci do nového pole.
 
@@ -997,7 +997,7 @@ a b c d
 a b c
 ```
 
-## <a name="top"></a>stack:: Top (STL/CLR)
+## <a name="stacktop-stlclr"></a><a name="top"></a>stack:: Top (STL/CLR)
 
 Přistupuje k poslednímu prvku.
 
@@ -1049,7 +1049,7 @@ top() = c
 a b x
 ```
 
-## <a name="top_item"></a>stack:: top_item (STL/CLR)
+## <a name="stacktop_item-stlclr"></a><a name="top_item"></a>stack:: top_item (STL/CLR)
 
 Přistupuje k poslednímu prvku.
 
@@ -1101,7 +1101,7 @@ top_item = c
 a b x
 ```
 
-## <a name="value_type"></a>stack:: value_type (STL/CLR)
+## <a name="stackvalue_type-stlclr"></a><a name="value_type"></a>stack:: value_type (STL/CLR)
 
 Typ prvku
 
@@ -1146,7 +1146,7 @@ int main()
 c b a
 ```
 
-## <a name="op_neq"></a>operator! = (Stack) – operátor (STL/CLR)
+## <a name="operator-stack-stlclr"></a><a name="op_neq"></a>operator! = (Stack) – operátor (STL/CLR)
 
 Neshodné porovnání zásobníku
 
@@ -1217,7 +1217,7 @@ a b d
 [a b c] != [a b d] is True
 ```
 
-## <a name="op_lt"></a>operator&lt; (Stack) – operátor (STL/CLR)
+## <a name="operatorlt-stack-stlclr"></a><a name="op_lt"></a>operator&lt; (Stack) – operátor (STL/CLR)
 
 Zásobník je menší než porovnání.
 
@@ -1288,7 +1288,7 @@ a b d
 [a b c] < [a b d] is True
 ```
 
-## <a name="op_lteq"></a>operator&lt;= (Stack) – operátor (STL/CLR)
+## <a name="operatorlt-stack-stlclr"></a><a name="op_lteq"></a>operator&lt;= (Stack) – operátor (STL/CLR)
 
 Zásobník je menší nebo roven hodnotě porovnání.
 
@@ -1359,7 +1359,7 @@ a b d
 [a b d] <= [a b c] is False
 ```
 
-## <a name="op_eq"></a>operator = = (Stack) – operátor (STL/CLR)
+## <a name="operator-stack-stlclr"></a><a name="op_eq"></a>operator = = (Stack) – operátor (STL/CLR)
 
 Stejné porovnání zásobníku.
 
@@ -1430,7 +1430,7 @@ a b d
 [a b c] == [a b d] is False
 ```
 
-## <a name="op_gt"></a>operator&gt; (Stack) – operátor (STL/CLR)
+## <a name="operatorgt-stack-stlclr"></a><a name="op_gt"></a>operator&gt; (Stack) – operátor (STL/CLR)
 
 Zásobník je větší než porovnání.
 
@@ -1501,7 +1501,7 @@ a b d
 [a b d] > [a b c] is True
 ```
 
-## <a name="op_gteq"></a>operator&gt;= (Stack) – operátor (STL/CLR)
+## <a name="operatorgt-stack-stlclr"></a><a name="op_gteq"></a>operator&gt;= (Stack) – operátor (STL/CLR)
 
 Překrývání je větší nebo rovno porovnání.
 

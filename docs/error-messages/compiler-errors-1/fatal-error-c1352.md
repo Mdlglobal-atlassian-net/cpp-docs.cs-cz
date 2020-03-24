@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - C1352
 ms.assetid: d044e8b0-b6ef-4d57-8eb5-6254071be707
-ms.openlocfilehash: fbba87cea05d666d6dc3a385ca1fe52e143fdb5a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 07bd0f28e35dd2992ca537dbe744d756cc2afe80
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62329722"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80203122"
 ---
 # <a name="fatal-error-c1352"></a>Závažná chyba C1352
 
-Neplatný nebo poškozený kód MSIL ve funkci 'function' z modulu 'file'
+Neplatný nebo poškozený jazyk MSIL ve funkci Function z modulu File
 
-.Netmodule byl předán kompilátoru, ale kompilátor zjistil poškození v souboru.  Požádejte uživatele, který vytváří modul .NET k prozkoumání.
+Do kompilátoru byl předán objekt. netmodule, ale Kompilátor zjistil v souboru poškození.  Požádejte osobu, která vytvořila modul. netmodule k prozkoumání.
 
-Kompilátor nekontroluje souborů .netmodule pro všechny typy poškození.  , Ale zkontrolujte, že všechny cesty ovládacích prvků ve funkci obsahuje příkaz return.
+Kompilátor nekontroluje soubory. netmodule pro všechny typy poškození.  Ale zkontroluje, že všechny cesty k ovládacím prvkům ve funkci obsahují příkaz return.
 
-Další informace najdete v tématu [soubory .netmodule jako vstup Linkeru](../../build/reference/netmodule-files-as-linker-input.md).
+Další informace naleznete v tématu [soubory. netmodule jako vstup linkeru](../../build/reference/netmodule-files-as-linker-input.md).

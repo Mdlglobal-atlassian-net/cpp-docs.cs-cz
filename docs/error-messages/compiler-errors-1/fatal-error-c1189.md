@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C1189
 ms.assetid: 2e5c8a78-edd4-411c-b619-558a96be148a
-ms.openlocfilehash: 06d42316a0109ac063bba43cefebd9aab71c2e72
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2217b865109cc48151e4e96b2d38b88764c0c64f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62229056"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80203625"
 ---
 # <a name="fatal-error-c1189"></a>Závažná chyba C1189
 
-> **\#Chyba:** *uživatelem zadaná chybová zpráva*
+> **chyba\#:** *uživatel zadal chybovou zprávu* .
 
 ## <a name="remarks"></a>Poznámky
 
-Je generován C1189 `#error` směrnice. Vývojář, který kódů direktiva Určuje text chybové zprávy. Další informace najdete v tématu [#error – direktiva (C++)](../../preprocessor/hash-error-directive-c-cpp.md).
+C1189 se generuje pomocí direktivy `#error`. Text chybové zprávy určuje vývojář, který obsahuje kód direktivy. Další informace najdete v tématu [direktiva #error (CC++/)](../../preprocessor/hash-error-directive-c-cpp.md).
 
 ## <a name="example"></a>Příklad
 
-Následující ukázka generuje C1189. V ukázce vývojář vydá vlastní chybovou zprávu vzhledem k tomu, `_WIN32` identifikátor není definován:
+Následující ukázka generuje C1189. V ukázce vývojář vydá vlastní chybovou zprávu, protože `_WIN32` identifikátor není definován:
 
 ```cpp
 // C1189.cpp
@@ -33,6 +33,6 @@ Následující ukázka generuje C1189. V ukázce vývojář vydá vlastní chybo
 #endif
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [#define – direktiva (C++)](../../preprocessor/hash-define-directive-c-cpp.md)

@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1103
 ms.assetid: c8e9bc54-6a71-471c-899e-6f98122ee3c4
-ms.openlocfilehash: 1dc70044113e06b4a19e1bbe1a054c944761214b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 668b354750171daefe0713d32f84f835134f93c7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62255402"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80195380"
 ---
 # <a name="linker-tools-error-lnk1103"></a>Chyba linkerů LNK1103
 
-ladicí informace jsou poškozené; rekompilujte modul
+informace o ladění jsou poškozené; znovu kompilovat modul
 
-Tato chyba může nastat, protože kompilace byla ukončena, než byl vytvořen platný objekt souboru.
+Tato chyba může být způsobena tím, že kompilace byla ukončena před vytvořením platného souboru objektu.
 
-Znovu zkompilujte soubor daného objektu. Pokud rekompilace problém nevyřeší, mějte na paměti okolností chyba, zkuste izolovat daný problém a vytvořit reprodukovatelnou testovacího případu. Pak vyhledejte soubor nápovědy technické podpory, nebo část technické podpory v jednom z vašich příručky.
+Překompilovat daný soubor objektu. Pokud opětovná kompilace problém neopraví, poznamenejte si okolnosti chyby, pokuste se izolovat problém a vytvořit reprodukovatelný testovací případ. Potom si v některém z vašich příruček můžete prostudovat soubor s technickou podporou nebo technickou podporu.

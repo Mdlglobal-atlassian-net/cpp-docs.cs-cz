@@ -1,33 +1,33 @@
 ---
-title: Compiler Error C2144
+title: Chyba kompilátoru C2144
 ms.date: 11/04/2016
 f1_keywords:
 - C2144
 helpviewer_keywords:
 - C2144
 ms.assetid: 49f3959b-324f-4c06-9588-c0ecef5dc5b3
-ms.openlocfilehash: a75330d26b0924e60f7e46d10d617341709d7e23
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b917c0a2c15aeb70222c948bce9a6fb275c91068
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62353492"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80207243"
 ---
-# <a name="compiler-error-c2144"></a>Compiler Error C2144
+# <a name="compiler-error-c2144"></a>Chyba kompilátoru C2144
 
-> Chyba syntaxe: "*typ*"musí předcházet párový příkaz"*token*.
+> Chyba syntaxe: před*typ*by měl být typu "*token*".
 
-Kompilátor očekává *token* a zjistili jsme *typ* místo.
+Kompilátor očekával *token* a našel místo něj *typ* .
 
-Tato chyba může být způsobeno chybí pravá složená závorka, pravá závorka nebo středníkem.
+Tato chyba může být způsobena chybějící pravou závorkou, pravou závorkou nebo středníkem.
 
-C2144 může dojít také při pokusu o vytvoření makra z – klíčové slovo CLR, který obsahuje prázdný znak.
+K C2144 může také dojít při pokusu o vytvoření makra z klíčového slova CLR, které obsahuje prázdný znak.
 
-C2144 také může zobrazit, pokud se pokoušíte předávání typů. Zobrazit [předávání typu (C++vyhodnocovací)](../../extensions/type-forwarding-cpp-cli.md) Další informace.
+Pokud se pokoušíte o předávání typu, můžete také zobrazit C2144. Další informace najdete v tématu [přesměrování typu (C++/CLI)](../../extensions/type-forwarding-cpp-cli.md) .
 
 ## <a name="examples"></a>Příklady
 
-Následující ukázka generuje C2144 a ukazuje způsob, jak ho opravit:
+Následující ukázka generuje C2144 a ukazuje způsob, jak ji opravit:
 
 ```cpp
 // C2144.cpp
@@ -40,7 +40,7 @@ REF struct MyStruct0;   // C2144
 REF1 MyStruct1;
 ```
 
-Následující ukázka generuje C2144 a ukazuje způsob, jak ho opravit:
+Následující ukázka generuje C2144 a ukazuje způsob, jak ji opravit:
 
 ```cpp
 // C2144_2.cpp

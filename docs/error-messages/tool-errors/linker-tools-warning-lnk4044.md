@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4044
 ms.assetid: f3a67a15-98c0-42ed-afcb-f5f9540e2671
-ms.openlocfilehash: c295b0936f5f38cc668f70c95e7bbbd1c5142d5d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ed82176f96633d8915016f9b1ad6656a2aecda75
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410275"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80194158"
 ---
 # <a name="linker-tools-warning-lnk4044"></a>Upozornění linkerů LNK4044
 
-Nerozpoznaná možnost "možnost"; Ignorovat
+Nerozpoznaná možnost Option; přeskočen
 
-Dané možnosti není platná možnost pro tento nástroj. Nástroj ignoruje možnost.
+Daná možnost není platnou možností pro tento nástroj. Tento nástroj ignoruje možnost.
 
-Pokud chcete zobrazit seznam platných, spusťte nástroj žádné argumenty nebo možnosti.
+Chcete-li zobrazit seznam platných možností, spusťte nástroj bez argumentů nebo možností.

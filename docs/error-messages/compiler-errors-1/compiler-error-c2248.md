@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2248
 ms.assetid: 7a3ba0e8-d3b9-4bb9-95db-81ef17e31d23
-ms.openlocfilehash: d9b9a6c04e7e9a5d88df516125280b6b23894a01
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 843676638037aab9544f1fbd8c5c6d56d351e485
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62302550"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80206541"
 ---
 # <a name="compiler-error-c2248"></a>Chyba kompilátoru C2248
 
-"*člen*': Nelze získat přístup k '*access_level*"člen deklarovaný ve třídě"*třídy*"
+*člen*: nejde získat přístup k členu*access_level*deklarovanému ve třídě*Class*.
 
-Nedaří se členy odvozené třídy `private` členy základní třídy. Nejde získat přístup `private` nebo `protected` členů instance třídy.
+Členové odvozené třídy nemají přístup `private` členů základní třídy. Nemůžete získat přístup k `private` nebo `protected` členů instancí třídy.
 
 ## <a name="example"></a>Příklad
 
-Následující ukázka generuje C2248 při soukromé nebo chráněné členy třídy jsou přístupné z mimo třídu. Chcete-li vyřešit tento problém, nemají přístup k těchto členů mimo třídu přímo. Použití dat veřejné členy a členské funkce pro interakci s třídou.
+Následující ukázka generuje C2248, pokud jsou k soukromým nebo chráněným členům třídy přistup z vnějšku třídy. Chcete-li tento problém vyřešit, neprovádějte přístup k těmto členům přímo mimo třídu. Použijte veřejná Členská data a členské funkce pro interakci s třídou.
 
 ```cpp
 // C2248_access.cpp
@@ -51,7 +51,7 @@ int main() {
 }
 ```
 
-Jiný problém shoda, která zveřejňuje C2248 je použití šablona – friends a specializace. Chcete-li vyřešit tento problém, deklarace typu friend šablony funkce pomocí <> seznam parametrů prázdnou šablonu nebo konkrétní šablonu. parametry.
+Další problém s vyhovujícím problémem, který zveřejňuje C2248, je použití šablon a specializace šablon. Chcete-li tento problém vyřešit, Deklarujte funkci Friend Template pomocí prázdného seznamu parametrů šablony < > nebo specifických parametrů šablony.
 
 ```cpp
 // C2248_template.cpp
@@ -79,7 +79,7 @@ int main() {
 }
 ```
 
-Jiný problém shoda, která zveřejňuje C2248 je při pokusu o deklarovat typ friend třídy a třídy není viditelný pro deklarace typu friend v oboru třídy. Chcete-li vyřešit tento problém, udělte Přátelský k nadřazené třídy.
+Další problém s vyhovujícím problémem, který zveřejňuje C2248, je když se pokusíte deklarovat přítele třídy a když třída není viditelná pro deklaraci typu Friend v oboru třídy. Chcete-li tento problém vyřešit, udělte do ohraničující třídy přátelství.
 
 ```cpp
 // C2248_enclose.cpp

@@ -7,16 +7,16 @@ helpviewer_keywords:
 - templates, OLE DB provider
 - OLE DB providers, templates
 ms.assetid: c90b7523-dbff-431c-be06-eed9055710d2
-ms.openlocfilehash: 79b225fb45c05a0b324f441654e63c6ea9f4918f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 21e02f3630b9235ec200452d3b79b04710458823
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62165785"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209239"
 ---
 # <a name="working-with-ole-db-provider-templates"></a>Práce s šablonami zprostředkovatele OLE DB
 
-Další informace o práci s šablonami zprostředkovatele OLE DB, naleznete v následujících tématech:
+Další informace o tom, jak pracovat se šablonami poskytovatele OLE DB, najdete v následujících tématech:
 
 - [Přidání rozhraní ke zprostředkovateli](../../data/oledb/adding-an-interface-to-your-provider.md)
 
@@ -34,7 +34,7 @@ Další informace o práci s šablonami zprostředkovatele OLE DB, naleznete v n
 
 - [Převod dat nepodporovaných zprostředkovatelem](../../data/oledb/converting-data-not-supported-by-the-provider.md)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Referenční dokumentace k šablonám zprostředkovatelů OLE DB](../../data/oledb/ole-db-provider-templates-reference.md)<br/>
-[OLE DB – šablony příjemce](../../data/oledb/ole-db-consumer-templates-cpp.md)
+[Šablony OLE DB příjemců](../../data/oledb/ole-db-consumer-templates-cpp.md)

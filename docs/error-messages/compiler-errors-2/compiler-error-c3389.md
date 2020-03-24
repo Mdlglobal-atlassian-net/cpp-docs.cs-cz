@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3389
 ms.assetid: eaaffe17-23f2-413c-b1ad-f7220cfa1334
-ms.openlocfilehash: 6a9568f3c3be88438eae1f28e12dc780301ead0b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b166096390169939f01bcb976a57612f10f7df2e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402577"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80201133"
 ---
 # <a name="compiler-error-c3389"></a>Chyba kompilátoru C3389
 
-> __declspec (*– klíčové slovo*) nelze použít s/clr: pure nebo/CLR: safe
+> __declspec (*klíčové slovo*) nelze použít s možností/CLR: pure nebo/CLR: safe.
 
 ## <a name="remarks"></a>Poznámky
 
-**/CLR: pure** a **/CLR: safe** – možnosti kompilátoru jsou zastaralé v sadě Visual Studio 2015 a není podporována v sadě Visual Studio 2017.
+Možnosti **/clr: Pure** a **/clr: Safe** jsou zastaralé v aplikaci Visual Studio 2015 a nejsou podporovány v aplikaci Visual Studio 2017.
 
-A [__declspec](../../cpp/declspec.md) předpokládá modifikátor použít stav procesu.  [/ CLR: pure](../../build/reference/clr-common-language-runtime-compilation.md) znamená za [appdomain](../../cpp/appdomain.md) stavu.  Proto deklarace proměnné s `keyword` **__declspec** modifikátor a kompilace s **/CLR: pure** není povolený.
+Použitý modifikátor [__declspec](../../cpp/declspec.md) implikuje stav každého procesu.  [/clr: Pure](../../build/reference/clr-common-language-runtime-compilation.md) implikuje stav na jednu [doménu AppDomain](../../cpp/appdomain.md) .  Proto není povolená deklarace proměnné s modifikátorem `keyword` **__declspec** a kompilování s možností **/clr: Pure** .
 
 ## <a name="example"></a>Příklad
 

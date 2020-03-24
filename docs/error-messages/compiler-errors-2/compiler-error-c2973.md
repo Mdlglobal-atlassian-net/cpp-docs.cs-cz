@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2973
 ms.assetid: 18b4a1c1-0ef6-43af-887a-1b5b1ab88d5b
-ms.openlocfilehash: 993c5187239598a5d379be2a70bf7b8c3d3fd331
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bba90f1bbb0be0eeffbe142602feb63ba8c32751
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62256812"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80201575"
 ---
 # <a name="compiler-error-c2973"></a>Chyba kompilátoru C2973
 
-Neplatný argument šablony 'number'
+Neplatný argument šablony ' Number '
 
-Zkontrolujte definici šablony se najít správné typy.
+Ověřte definici šablony a vyhledejte správné typy.

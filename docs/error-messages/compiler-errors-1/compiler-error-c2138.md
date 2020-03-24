@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2138
 ms.assetid: 59fd1a58-3605-45dd-b9c1-0981e8aab26d
-ms.openlocfilehash: a674e78403656684f9bd878ba31b3306387becd2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 242bbf8386025a1c608fa07b33c66f4a3368acd3
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408495"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80207256"
 ---
 # <a name="compiler-error-c2138"></a>Chyba kompilátoru C2138
 
 definování výčtu bez členů není platné.
 
-Výčet musí mít alespoň jeden člen při /Za (zakázat rozšíření Microsoft) je vybraná.
+Pokud je vybraná možnost/za (zakázat rozšíření Microsoft), musí mít výčet aspoň jeden člen.

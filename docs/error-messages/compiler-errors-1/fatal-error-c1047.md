@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - C1047
 ms.assetid: e1bbbc6b-a5bc-4c23-8203-488120a0ec78
-ms.openlocfilehash: 053c4d828b3583d0e16ab8f4fe03a4b0bbed96f9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5ab98c46d60d15cdcb6de22aa922d62453d41880
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62243748"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80204488"
 ---
 # <a name="fatal-error-c1047"></a>Závažná chyba C1047
 
-Soubor objektu nebo knihovny 'file' byl vytvořen pomocí staršího kompilátoru než jiné objekty; Sestavte starší objekty a knihovny
+Soubor nebo soubor knihovny byl vytvořen pomocí staršího kompilátoru než jiné objekty. znovu sestavit staré objekty a knihovny
 
-C1047 dojde při vytváření souborů objektů nebo knihoven s **parametru/LTCG** jsou spojeny dohromady, ale pokud tyto soubory objektů nebo knihoven sestavují s různými verzemi sady nástrojů Visual C++.
+C1047 je způsobena tím, že soubory objektů nebo knihovny sestavené s **/LTCG** jsou propojeny společně, ale v případě, že jsou tyto soubory objektů nebo C++ knihovny sestaveny s různými verzemi sady nástrojů vizuálu.
 
-To může nastat, pokud začít používat novou verzi kompilátoru, ale proveďte čisté sestavení z existujících souborů objektů nebo knihoven.
+K tomu může dojít, pokud začnete používat novou verzi kompilátoru, ale neprovedete čisté opětovné sestavení stávajících souborů nebo knihoven.
 
-Chcete-li vyřešit C1047, opětovné sestavení všech souborů objektů nebo knihoven.
+Chcete-li vyřešit C1047, znovu sestavte všechny soubory objektů nebo knihovny.

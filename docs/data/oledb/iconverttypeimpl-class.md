@@ -14,16 +14,16 @@ helpviewer_keywords:
 - IConvertTypeImpl class
 - CanConvert method
 ms.assetid: 7f81e79e-7d3f-4cbe-b93c-d632a94b15f6
-ms.openlocfilehash: 546a5a007f9e4c1c2a0e581eff2e7984947bdbb5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e3b76be2a1f1edfcdc1139a3dd396835923c2b4a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408989"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210688"
 ---
 # <a name="iconverttypeimpl-class"></a>IConvertTypeImpl – třída
 
-Poskytuje implementaci [IConvertType](/previous-versions/windows/desktop/ms715926(v=vs.85)) rozhraní.
+Poskytuje implementaci rozhraní [IConvertType](/previous-versions/windows/desktop/ms715926(v=vs.85)) .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -35,12 +35,12 @@ class ATL_NO_VTABLE IConvertTypeImpl
 
 ### <a name="parameters"></a>Parametry
 
-*T*<br/>
-Vaše třída odvozena od `IConvertTypeImpl`.
+*Š*<br/>
+Vaše třída odvozená od `IConvertTypeImpl`.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atldb.h
+**Záhlaví:** Atldb. h
 
 ## <a name="members"></a>Členové
 
@@ -48,15 +48,15 @@ Vaše třída odvozena od `IConvertTypeImpl`.
 
 |||
 |-|-|
-|[CanConvert](#canconvert)|Poskytuje informace o dostupnosti převody typů příkazu nebo pro sadu řádků.|
+|[CanConvert](#canconvert)|Poskytuje informace o dostupnosti převodů typů pro příkaz nebo sadu řádků.|
 
 ## <a name="remarks"></a>Poznámky
 
-Toto rozhraní je povinná pro příkazy sady řádků a index sady řádků. `IConvertTypeImpl` implementuje rozhraní delegováním převodu objektu poskytnutých OLE DB.
+Toto rozhraní je povinné pro příkazy, sady řádků a sady řádků indexu. `IConvertTypeImpl` implementuje rozhraní delegováním do objektu převodu dodaného OLE DB.
 
-## <a name="canconvert"></a> IConvertTypeImpl::CanConvert
+## <a name="iconverttypeimplcanconvert"></a><a name="canconvert"></a>IConvertTypeImpl –:: CanConvert
 
-Poskytuje informace o dostupnosti převody typů příkazu nebo pro sadu řádků.
+Poskytuje informace o dostupnosti převodů typů pro příkaz nebo sadu řádků.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -68,13 +68,13 @@ STDMETHOD(CanConvert)(DBTYPE wFromType,
 
 #### <a name="parameters"></a>Parametry
 
-Zobrazit [IConvertType::CanConvert](/previous-versions/windows/desktop/ms711224(v=vs.85)) v *referenční informace pro OLE DB programátory*.
+Viz [IConvertType:: CanConvert](/previous-versions/windows/desktop/ms711224(v=vs.85)) v *referenci programátora OLE DB*.
 
 ### <a name="remarks"></a>Poznámky
 
-Používá převodu dat OLE DB v `MSADC.DLL`.
+Používá převod dat OLE DB v `MSADC.DLL`.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Šablony zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Šablony poskytovatele OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architektura šablon zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

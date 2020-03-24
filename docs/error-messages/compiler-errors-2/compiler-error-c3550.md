@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - C3550
 ms.assetid: 9f2d5ffc-e429-41a1-89e3-7acc4fd47e14
-ms.openlocfilehash: 106ac93496eebb25ee603251d84680053e1310b7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 17c90aa68b29c9490deb8d49895162e8a6bdefec
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375909"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80200769"
 ---
 # <a name="compiler-error-c3550"></a>Chyba kompilátoru C3550
 
-v tomto kontextu je povolené jenom prosté zadání: decltype(auto).
+v tomto kontextu je povolené jenom jednoduché "decltype (auto)".
 
-Pokud `decltype(auto)` slouží jako zástupný symbol pro návratový typ funkce, musí být použit samostatně. Nelze použít jako součást deklarace ukazatelů (`decltype(auto*)`), deklarace odkazu (`decltype(auto&)`), nebo jakékoli jiné takové kvalifikace.
+Pokud je `decltype(auto)` použito jako zástupný symbol pro návratový typ funkce, musí být použita samostatně. Nelze jej použít jako součást deklarace ukazatele (`decltype(auto*)`), deklaraci odkazu (`decltype(auto&)`) nebo jakékoli jiné takové kvalifikace.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [auto](../../cpp/auto-cpp.md)

@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C2859
 ms.assetid: fcfbc58d-08f6-4752-9688-8aaac517e684
-ms.openlocfilehash: ac86f7411847fa4bca7623bbd821632277e9a5e3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 66aebe58853b5dee0caf3d5f7a44b03ee83c1cef
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62350410"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80201770"
 ---
 # <a name="compiler-error-c2859"></a>Chyba kompilátoru C2859
 
-Název souboru není typ souboru, který byl použit při vytváření této předkompilované hlavičky, znovu vytvořte předkompilované hlavičky.
+název souboru není typ souboru, který se použil při vytváření této předkompilované hlavičky, vytvořte předkompilovanou hlavičku znovu.
 
-Projekt databáze a soubory předkompilovaných hlaviček musí být vytvořeny současně zajistit konzistentní informace. Znovu sestavte projekt znovu vytvořit předkompilované hlavičky.
+Databáze projektu a předkompilované hlavičkové soubory musí být vytvořeny společně, aby bylo zajištěno konzistentní informace. Znovu sestavte projekt, aby se znovu vytvořila Předkompilovaná hlavička.
 
-Informace o předkompilovaných hlaviček, naleznete v tématu [/Y (předkompilované hlavičky)](../../build/reference/y-precompiled-headers.md).
+Informace o předkompilovaných hlavičkách naleznete v tématu [/y (předkompilované hlavičky)](../../build/reference/y-precompiled-headers.md).

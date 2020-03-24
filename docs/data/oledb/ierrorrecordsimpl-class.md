@@ -63,12 +63,12 @@ helpviewer_keywords:
 - GetRecordCount method
 - m_rgErrors
 ms.assetid: dea8e938-c5d8-45ab-86de-eb8fbf534ffb
-ms.openlocfilehash: dd9e1f39d30dc8289b0236bf655c87da04b14de6
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 40ac0b248e1e90dae29a787d59f6ded9581aca70
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447361"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210597"
 ---
 # <a name="ierrorrecordsimpl-class"></a>IErrorRecordsImpl – třída
 
@@ -122,7 +122,7 @@ Třída, která představuje objekt chyby OLE DB.
 |-|-|
 |[m_rgErrors](#rgerrors)|Pole záznamů chyb.|
 
-## <a name="geterrordescriptionstring"></a>IErrorRecordsImpl:: GetErrorDescriptionString
+## <a name="ierrorrecordsimplgeterrordescriptionstring"></a><a name="geterrordescriptionstring"></a>IErrorRecordsImpl:: GetErrorDescriptionString
 
 Získá řetězec s popisem chyby z záznamu chyby.
 
@@ -141,7 +141,7 @@ Záznam `ERRORINFO` v rozhraní `IErrorInfo`.
 
 Ukazatel na řetězec popisující chybu.
 
-## <a name="geterrorguid"></a>IErrorRecordsImpl:: GetErrorGUID
+## <a name="ierrorrecordsimplgeterrorguid"></a><a name="geterrorguid"></a>IErrorRecordsImpl:: GetErrorGUID
 
 Získá identifikátor GUID chyby z záznamu chyby.
 
@@ -160,7 +160,7 @@ Záznam `ERRORINFO` v rozhraní `IErrorInfo`.
 
 Odkaz na identifikátor GUID pro chybu.
 
-## <a name="geterrorhelpcontext"></a>IErrorRecordsImpl:: GetErrorHelpContext
+## <a name="ierrorrecordsimplgeterrorhelpcontext"></a><a name="geterrorhelpcontext"></a>IErrorRecordsImpl:: GetErrorHelpContext
 
 Získá ID kontextu helpu z záznamu chyby.
 
@@ -179,7 +179,7 @@ Záznam `ERRORINFO` v rozhraní `IErrorInfo`.
 
 ID kontextu nápovědu pro chybu.
 
-## <a name="geterrorhelpfile"></a>IErrorRecordsImpl:: GetErrorHelpFile
+## <a name="ierrorrecordsimplgeterrorhelpfile"></a><a name="geterrorhelpfile"></a>IErrorRecordsImpl:: GetErrorHelpFile
 
 Získá název cesty souboru Help z záznamu chyby.
 
@@ -198,7 +198,7 @@ Záznam `ERRORINFO` v rozhraní `IErrorInfo`.
 
 Ukazatel na řetězec, který obsahuje název cesty souboru s nápovědu pro chybu.
 
-## <a name="geterrorsource"></a>IErrorRecordsImpl:: GetErrorSource
+## <a name="ierrorrecordsimplgeterrorsource"></a><a name="geterrorsource"></a>IErrorRecordsImpl:: GetErrorSource
 
 Získá zdrojový kód, který způsobil chybu v záznamu chyby.
 
@@ -217,7 +217,7 @@ Záznam `ERRORINFO` v rozhraní `IErrorInfo`.
 
 Ukazatel na řetězec obsahující zdrojový kód chyby.
 
-## <a name="adderrorrecord"></a>IErrorRecordsImpl:: AddErrorRecord
+## <a name="ierrorrecordsimpladderrorrecord"></a><a name="adderrorrecord"></a>IErrorRecordsImpl:: AddErrorRecord
 
 Přidá záznam do objektu chyby OLE DB.
 
@@ -235,7 +235,7 @@ STDMETHOD(AddErrorRecord )(ERRORINFO *pErrorInfo,
 
 Viz [IErrorRecords:: AddErrorRecord](/previous-versions/windows/desktop/ms725362(v=vs.85)) v *referenci programátora OLE DB*.
 
-## <a name="getbasicerrorinfo"></a>IErrorRecordsImpl:: GetBasicErrorInfo
+## <a name="ierrorrecordsimplgetbasicerrorinfo"></a><a name="getbasicerrorinfo"></a>IErrorRecordsImpl:: GetBasicErrorInfo
 
 Vrátí základní informace o chybě, jako je návratový kód a číslo chyby specifické pro poskytovatele.
 
@@ -250,7 +250,7 @@ STDMETHOD(GetBasicErrorInfo )(ULONG ulRecordNum,
 
 Viz [IErrorRecords:: GetBasicErrorInfo](/previous-versions/windows/desktop/ms723907(v=vs.85)) v *referenci programátora OLE DB*.
 
-## <a name="getcustomerrorobject"></a>IErrorRecordsImpl:: GetCustomErrorObject
+## <a name="ierrorrecordsimplgetcustomerrorobject"></a><a name="getcustomerrorobject"></a>IErrorRecordsImpl:: GetCustomErrorObject
 
 Vrátí ukazatel na rozhraní objektu vlastní chyby.
 
@@ -266,7 +266,7 @@ STDMETHOD(GetCustomErrorObject )(ULONG ulRecordNum,
 
 Viz [IErrorRecords:: GetCustomErrorObject](/previous-versions/windows/desktop/ms725417(v=vs.85)) v *referenci programátora OLE DB*.
 
-## <a name="geterrorinfo"></a>IErrorRecordsImpl:: GetErrorInfo
+## <a name="ierrorrecordsimplgeterrorinfo"></a><a name="geterrorinfo"></a>IErrorRecordsImpl:: GetErrorInfo
 
 Vrátí ukazatel rozhraní [IErrorInfo](/previous-versions/windows/desktop/ms718112(v=vs.85)) na zadaném záznamu.
 
@@ -282,7 +282,7 @@ STDMETHOD(GetErrorInfo )(ULONG ulRecordNum,
 
 Viz [IErrorRecords:: GetErrorInfo](/previous-versions/windows/desktop/ms711230(v=vs.85)) v *referenci programátora OLE DB*.
 
-## <a name="geterrorparameters"></a>IErrorRecordsImpl:: GetErrorParameters
+## <a name="ierrorrecordsimplgeterrorparameters"></a><a name="geterrorparameters"></a>IErrorRecordsImpl:: GetErrorParameters
 
 Vrátí parametry chyby.
 
@@ -297,7 +297,7 @@ STDMETHOD(GetErrorParameters )(ULONG ulRecordNum,
 
 Viz [IErrorRecords:: GetErrorParameters](/previous-versions/windows/desktop/ms715793(v=vs.85)) v *referenci programátora OLE DB*.
 
-## <a name="getrecordcount"></a>IErrorRecordsImpl:: GetRecordCount
+## <a name="ierrorrecordsimplgetrecordcount"></a><a name="getrecordcount"></a>IErrorRecordsImpl:: GetRecordCount
 
 Vrátí počet záznamů v objektu OLE DB záznamu.
 
@@ -311,7 +311,7 @@ STDMETHOD(GetRecordCount )(ULONG *pcRecords);
 
 Viz [IErrorRecords:: GetRecordCount](/previous-versions/windows/desktop/ms722724(v=vs.85)) v *referenci programátora OLE DB*.
 
-## <a name="rgerrors"></a>IErrorRecordsImpl:: m_rgErrors
+## <a name="ierrorrecordsimplm_rgerrors"></a><a name="rgerrors"></a>IErrorRecordsImpl:: m_rgErrors
 
 Pole záznamů chyb.
 

@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C999
 ms.assetid: a3a49a96-a352-4ff2-aa84-84eb6a9a81f1
-ms.openlocfilehash: 767973e3e69734c7d1f813d27e1e402ac2751cd3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e5f02578891664853bf8c2b5f445e69c5d36e0f6
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62165707"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80202617"
 ---
 # <a name="fatal-error-c999"></a>Závažná chyba C999
 
-Neznámá zpráva Zvolte prosím příkaz technická podpora v nabídce Nápověda pro Visual C++, nebo otevřete soubor nápovědy technické podpory pro další informace
+NEZNÁMÁ zpráva Pokud chcete získat další informace, zvolte prosím příkaz C++ technická podpora v nabídce Visual Help, nebo otevřete soubor s podporou technické podpory.
 
-Tato chyba obvykle znamená, že používáte smíšené soubory z různých verzí kompilátoru, kompilátor instalaci je poškozený. Použití **programy a funkce** apletu ovládacího panelu opravte nebo přeinstalujte produkt.
+Tato chyba obvykle znamená, že máte smíšené soubory z různých verzí kompilátoru, nebo je instalace kompilátoru poškozená. Opravte nebo přeinstalujte produkt pomocí apletu **programy a funkce** v Ovládacích panelech.

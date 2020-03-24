@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1302
 ms.assetid: aea3c753-c2c4-4249-bbc3-f2d4f0164b5e
-ms.openlocfilehash: c3b1117b31db4759b385943323a581da7a58f0c4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8323fa234851ce3ba12083adb74d5ee0fba0ac69
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160442"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80194925"
 ---
 # <a name="linker-tools-error-lnk1302"></a>Chyba linkerů LNK1302
 
-podporuje jenom propojování zabezpečených modulů .NET. nedá se propojit soubor .netmodule
+podporuje pouze propojování bezpečných. netmodule; Nepovedlo se propojit soubor. netmodule.
 
-.Netmodule (zkompilovaná **/LN**) byl předán linkeru uživatel pokus o vyvolání jazyka MSIL propojování.  Modulu jazyka C++ je platný pro jazyk MSIL propojení, pokud je kompilován **/CLR: safe**.
+A. netmodule (zkompilovaný s **/ln**) byl předán propojovacímu programu v rámci uživatele, který se pokusil vyvolat propojení MSIL.  C++ Modul je platný pro propojení MSIL, pokud je zkompilován s možností **/clr: Safe**.
 
-Chcete-li opravit tuto chybu, proveďte kompilaci s **/CLR: safe** na povolit propojování na jazyk MSIL, nebo předejte **/CLR** nebo **/CLR: pure** souboru .obj linkeru místo modulu.
+Chcete-li tuto chybu opravit, zkompilujte s možností **/clr: Safe** , pokud chcete povolit propojení MSIL, nebo předejte soubor **/CLR** nebo **/clr: Pure** . obj místo modulu.
 
-Další informace naleznete v tématu
+Další informace najdete v tématu
 
 - [/LN (vytvoření modulu MSIL)](../../build/reference/ln-create-msil-module.md)
 

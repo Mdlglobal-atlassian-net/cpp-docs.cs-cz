@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C1084
 ms.assetid: b2f273ef-3a14-4d5f-8ce0-7a11a0388fe6
-ms.openlocfilehash: b0c8e6a8f8321dccdfd7cee128a4cf06cebda991
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 649686857000b2bee469f0e3ec551d49717c1d7b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501131"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80204071"
 ---
 # <a name="fatal-error-c1084"></a>Závažná chyba C1084
 
 Nedá se přečíst soubor typ_souboru: File: Message.
 
-Tato chyba je obvykle výsledkem neúspěšného volání rozhraní API interního systému provedeného kompilátorem. Zpráva zobrazená v případě výskytu této chyby je často generována buď [_wcserror_s](../../c-runtime-library/reference/strerror-s-strerror-s-wcserror-s-wcserror-s.md) nebo [FormatMessage](/windows/win32/api/winbase/nf-winbase-formatmessage).
+Tato chyba je obvykle výsledkem neúspěšného volání rozhraní API interního systému provedeného kompilátorem. Zpráva zobrazená v případě výskytu této chyby je často generována buď pomocí [_wcserror_s](../../c-runtime-library/reference/strerror-s-strerror-s-wcserror-s-wcserror-s.md) nebo [FormatMessage](/windows/win32/api/winbase/nf-winbase-formatmessage).
 
 Následující kroky vám pomůžou vyřešit C1084:
 

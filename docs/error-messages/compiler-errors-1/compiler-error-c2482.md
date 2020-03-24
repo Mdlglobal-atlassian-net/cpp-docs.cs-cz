@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2482
 ms.assetid: 98c87da2-625c-4cc2-9bf7-78d15921e779
-ms.openlocfilehash: 481920fa2d8c32bc872e7b8805188cc674e6fe28
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5afa81369b2cf329baae02bc1309587015946409
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375051"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80205150"
 ---
 # <a name="compiler-error-c2482"></a>Chyba kompilátoru C2482
 
->"*identifikátor*': dynamická inicializace není povolena v kódu spravované/WinRT data"vlákno"
+>'*Identifier*': Dynamická inicializace dat vlákna není ve spravovaném/WinRT kódu povolena
 
 ## <a name="remarks"></a>Poznámky
 
-Ve spravované nebo WinRT code, proměnné deklarované s použitím [__declspec(thread)](../../cpp/thread.md) atribut Modifikátor třídy úložiště nebo [thread_local](../../cpp/storage-classes-cpp.md#thread_local) specifikátor třídy úložiště se nedá inicializovat pomocí výrazu který vyžaduje vyhodnocení za běhu. Statický výraz je potřeba inicializovat `__declspec(thread)` nebo `thread_local` data v těchto prostředích modulu runtime.
+V spravovaném nebo WinRTovém kódu proměnné deklarované pomocí atributu modifikátoru třídy úložiště [__declspec (thread)](../../cpp/thread.md) nebo specifikátoru třídy úložiště [thread_local](../../cpp/storage-classes-cpp.md#thread_local) nelze inicializovat pomocí výrazu, který vyžaduje vyhodnocení za běhu. Pro inicializaci `__declspec(thread)` nebo `thread_local` dat v těchto běhových prostředích je vyžadován statický výraz.
 
 ## <a name="example"></a>Příklad
 
-Následující ukázka generuje C2482 v managed (**/CLR**) a WinRT (**/ZW**) kódu:
+Následující ukázka generuje C2482 ve spravovaném ( **/CLR**) a v WinRT ( **/ZW**) kódu:
 
 ```cpp
 // C2482.cpp
@@ -36,4 +36,4 @@ int j = j;   // OK in C++; C error
 Thread int tls_i2 = sizeof( tls_i2 );   // Okay in C and C++
 ```
 
-Chcete-li tento problém vyřešit, inicializace úložiště thread-local se pomocí konstantu, **constexpr**, nebo statický výraz. Samostatně můžete udělat všechny inicializace specifické pro vlákno.
+Chcete-li tento problém vyřešit, inicializujte místní úložiště vlákna pomocí konstanty, **constexpr**nebo statického výrazu. Proveďte samostatnou inicializaci specifickou pro vlákno.

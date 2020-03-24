@@ -23,12 +23,12 @@ helpviewer_keywords:
 - Dialog Editor [C++], switching between controls and code
 - Dialog Editor [C++], shortcut keys
 ms.assetid: d94884ef-2cca-49d8-9b58-775f34848134
-ms.openlocfilehash: 40b5d8c8390c638b70bc2c0860ccf3c17872719c
-ms.sourcegitcommit: 9aab425662a66825772f091112986952f341f7c8
+ms.openlocfilehash: 9d0f9993d81c499f67a08e5401c5e56dba7b281c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72445026"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80215251"
 ---
 # <a name="dialog-editor-c"></a>Editor dialogovýchC++oken ()
 
@@ -97,24 +97,24 @@ Níže jsou uvedeny výchozí klávesy akcelerátoru pro příkazy **editoru dia
 |Format.AlignBottoms|**Ctrl** + **SHIFT** + **šipka dolů**|Zarovnává spodní okraje vybraných ovládacích prvků s dominantním ovládacím prvkem.|
 |Format.AlignCenters|**Shift** + **F9**|Zarovnává svislé středy vybraných ovládacích prvků s dominantním ovládacím prvkem.|
 |Format.AlignLefts|**Ctrl** + **SHIFT** + **šipka vlevo**|Zarovná levé okraje vybraných ovládacích prvků s dominantním ovládacím prvkem.|
-|Format.AlignMiddles|**F9**|Zarovná Vodorovné středy vybraných ovládacích prvků s dominantním ovládacím prvkem.|
+|Format.AlignMiddles|**Vede**|Zarovná Vodorovné středy vybraných ovládacích prvků s dominantním ovládacím prvkem.|
 |Format.AlignRights|**Ctrl** + **SHIFT** + **šipka doprava**|Zarovná pravé hrany vybraných ovládacích prvků s dominantním ovládacím prvkem.|
 |Format.AlignTops|**Ctrl** + **SHIFT** + **šipka nahoru**|Zarovná horní okraje vybraných ovládacích prvků s dominantním ovládacím prvkem.|
 |Format.ButtonBottom|**Ctrl** + **B**|Umístí vybraná tlačítka podél dolního středu dialogového okna.|
 |Format.ButtonRight|**Ctrl** + **R**|Umístí vybraná tlačítka do pravého horního rohu dialogového okna.|
-|Format.CenterHorizontal|**Ctrl** + **Shift** + **F9**|Nacentruje ovládací prvky v dialogovém okně vodorovně.|
-|Format.CenterVertical|**CTRL** + **F9**|Nacentruje ovládací prvky v dialogovém okně svisle.|
+|Format.CenterHorizontal|**Ctrl** + **SHIFT** + **F9**|Nacentruje ovládací prvky v dialogovém okně vodorovně.|
+|Format.CenterVertical|**Ctrl** + **F9**|Nacentruje ovládací prvky v dialogovém okně svisle.|
 |Format.CheckMnemonics|**Ctrl** + **M**|Kontroluje jedinečnost symbolických instrukcí.|
 |Format. SizeToContent|**Shift** + **F7**|Změní velikost vybraných ovládacích prvků tak, aby odpovídaly textu titulku.|
 |Format.SpaceAcross|**Alt** + **šipka vlevo**|Rovnoměrně rozmístit vybrané ovládací prvky vodorovně.|
 |Format.SpaceDown|**Alt** + **šipka dolů**|Vybrané ovládací prvky se rovnoměrně rozmístí svisle.|
 |Format.TabOrder|**Ctrl** + **D**|Nastaví pořadí ovládacích prvků v dialogovém okně.|
-|Format.TestDialog|**Ctrl** + **T**|Spustí dialogové okno pro otestování vzhledu a chování.|
+|Format.TestDialog|**Ctrl** + **t**|Spustí dialogové okno pro otestování vzhledu a chování.|
 |Format.ToggleGuides|**Ctrl** + **G**|Cykly mezi žádnou mřížkou, pokyny a mřížkou pro úpravy dialogu.|
 
 - Chcete-li změnit klávesové zkratky, přejděte na **nástroje** nabídky > **Možnosti**a ve složce **prostředí** vyberte možnost **klávesnice** .
 
-   Další informace najdete v tématu [určení a přizpůsobení klávesových zkratek](/visualstudio/ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio).
+   Další informace najdete v tématu [identifikace a přizpůsobení klávesových zkratek](/visualstudio/ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio).
 
 - Pokud chcete změnit nastavení, přejděte na **nástroje** nabídky > **Nastavení importu a exportu**.
 
@@ -124,7 +124,7 @@ Níže jsou uvedeny výchozí klávesy akcelerátoru pro příkazy **editoru dia
 
 Win32
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Editory prostředků](../windows/resource-editors.md)<br/>
 [Postupy: Vytvoření dialogového okna](../windows/creating-a-new-dialog-box.md)<br/>

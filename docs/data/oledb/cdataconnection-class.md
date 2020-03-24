@@ -61,12 +61,12 @@ helpviewer_keywords:
 - operator CSession*
 - CSession* operator
 ms.assetid: 77432d85-4e20-49ec-a0b0-142137828471
-ms.openlocfilehash: e966ce8d0f8b277c0edde2b0b9b345a11c6a964c
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 385445081f84f65ff7030466a238a5a96abd63be
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79442491"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212057"
 ---
 # <a name="cdataconnection-class"></a>CDataConnection – třída
 
@@ -115,7 +115,7 @@ V `CDataConnection`stačí vytvořit objekt připojení, předat ho inicializač
 > [!NOTE]
 >  Pokud vytváříte databázovou aplikaci, která potřebuje zpracovávat více relací, budete muset použít [OpenNewSession](../../data/oledb/cdataconnection-opennewsession.md).
 
-## <a name="cdataconnection"></a>CDataConnection:: CDataConnection
+## <a name="cdataconnectioncdataconnection"></a><a name="cdataconnection"></a>CDataConnection:: CDataConnection
 
 Vytvoří instanci a inicializuje objekt `CDataConnection`.
 
@@ -137,7 +137,7 @@ První přepsání vytvoří nový objekt `CDataConnection` s výchozími nastav
 
 Druhé přepsání vytvoří nový objekt `CDataConnection` s nastavením, který je ekvivalentní objektu datového připojení, který zadáte.
 
-## <a name="copy"></a>CDataConnection:: Copy
+## <a name="cdataconnectioncopy"></a><a name="copy"></a>CDataConnection:: Copy
 
 Vytvoří kopii existujícího datového připojení.
 
@@ -152,7 +152,7 @@ CDataConnection& Copy(const CDataConnection & ds) throw();
 *služby*<br/>
 pro Odkaz na existující datové připojení, které se má zkopírovat
 
-## <a name="open"></a>CDataConnection:: Open
+## <a name="cdataconnectionopen"></a><a name="open"></a>CDataConnection:: Open
 
 Otevře připojení ke zdroji dat pomocí inicializačního řetězce.
 
@@ -171,7 +171,7 @@ pro Inicializační řetězec pro zdroj dat.
 
 Standardní hodnota HRESULT.
 
-## <a name="opennewsession"></a>CDataConnection:: OpenNewSession
+## <a name="cdataconnectionopennewsession"></a><a name="opennewsession"></a>CDataConnection:: OpenNewSession
 
 Otevře novou relaci s použitím zdroje dat aktuálního objektu připojení.
 
@@ -194,7 +194,7 @@ Nová relace používá objekt zdroje dat s aktuálním objektem připojení jak
 
 Standardní hodnota HRESULT.
 
-## <a name="op_bool"></a>CDataConnection:: operator BOOL
+## <a name="cdataconnectionoperator-bool"></a><a name="op_bool"></a>CDataConnection:: operator BOOL
 
 Určuje, zda je aktuální relace otevřena nebo nikoli.
 
@@ -208,7 +208,7 @@ operator BOOL() throw();
 
 Vrací hodnotu **bool** (MFC typedef). **True** znamená, že aktuální relace je otevřená. **False** znamená, že aktuální relace je zavřená.
 
-## <a name="op_bool_ole"></a>CDataConnection:: operator bool (OLE DB)
+## <a name="cdataconnectionoperator-bool-ole-db"></a><a name="op_bool_ole"></a>CDataConnection:: operator bool (OLE DB)
 
 Určuje, zda je aktuální relace otevřena nebo nikoli.
 
@@ -222,7 +222,7 @@ operator bool() throw();
 
 Vrátí hodnotu **bool** (C++ datový typ). **true** znamená, že aktuální relace je otevřená. **false** znamená, že aktuální relace je zavřená.
 
-## <a name="op_cdata_amp"></a>CDataConnection:: operator CDataSource&amp;
+## <a name="cdataconnectionoperator-cdatasourceamp"></a><a name="op_cdata_amp"></a>CDataConnection:: operator CDataSource&amp;
 
 Vrátí odkaz na objekt obsažený `CDataSource`.
 
@@ -244,7 +244,7 @@ Pokud máte funkci (například `func` níže), která přebírá `CDataSource` 
 
 [!code-cpp[NVC_OLEDB_Consumer#4](../../data/oledb/codesnippet/cpp/cdataconnection-operator-cdatasource-amp_2.cpp)]
 
-## <a name="op_cdata_star"></a>CDataConnection:: operator CDataSource *
+## <a name="cdataconnectionoperator-cdatasource"></a><a name="op_cdata_star"></a>CDataConnection:: operator CDataSource *
 
 Vrátí ukazatel na objekt s omezením `CDataSource`.
 
@@ -260,7 +260,7 @@ Tento operátor vrací ukazatel na objekt s omezením `CDataSource`, který umo�
 
 Příklad použití naleznete v tématu [Operator CDataSource &](../../data/oledb/cdataconnection-operator-cdatasource-amp.md) .
 
-## <a name="op_csession_amp"></a>CDataConnection:: operator CSession&amp;
+## <a name="cdataconnectionoperator-csessionamp"></a><a name="op_csession_amp"></a>CDataConnection:: operator CSession&amp;
 
 Vrátí odkaz na objekt obsažený `CSession`.
 
@@ -282,7 +282,7 @@ Pokud máte funkci (například `func` níže), která přebírá `CSession` odk
 
 [!code-cpp[NVC_OLEDB_Consumer#6](../../data/oledb/codesnippet/cpp/cdataconnection-operator-csession-amp_2.cpp)]
 
-## <a name="op_csession_star"></a>CDataConnection:: operator CSession *
+## <a name="cdataconnectionoperator-csession"></a><a name="op_csession_star"></a>CDataConnection:: operator CSession *
 
 Vrátí ukazatel na objekt s omezením `CSession`.
 

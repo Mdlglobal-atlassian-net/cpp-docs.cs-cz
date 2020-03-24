@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2592
 ms.assetid: 833a4d7b-66ef-4d4c-ae83-a533c2b0eb07
-ms.openlocfilehash: 2ea5919f073f2fd608dca332e721be0669760a0a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 914a03772b7c1675f5fee572fe1ca24f469e91f3
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387016"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80177375"
 ---
 # <a name="compiler-error-c2592"></a>Chyba kompilátoru C2592
 
-'class': "base_class_2" je zděděno od "base_class_1" a nejde znova specifikovat
+' class ': ' base_class_2 ' je zděděna z ' base_class_1 ' a nelze ji znovu zadat
 
-Můžete nastavit jenom základní třídy, které nejsou odvozeny z jiných základních tříd. V takovém případě pouze `base_class_1` je potřeba ve specifikaci `class` protože `base_class_1` již dědí `base_class_2`.
+Je možné zadat pouze základní třídy, které nedědí z jiných základních tříd. V takovém případě je potřeba pouze `base_class_1` ve specifikaci `class`, protože `base_class_1` již dědí `base_class_2`.

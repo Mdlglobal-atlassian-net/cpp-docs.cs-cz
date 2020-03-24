@@ -6,19 +6,19 @@ helpviewer_keywords:
 - resources [C++], about resource files
 - resource files [C++], about resource files
 ms.assetid: 2699a539-b369-4b78-80f0-df03eb7b6780
-ms.openlocfilehash: d9f6c6b9798bc708bb5334eafc0585471f25c059
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 142a9120e0b6b95e659fcb47c275653fbefd8cbe
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69513586"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80165883"
 ---
 # <a name="working-with-resource-files"></a>Práce se zdrojovými soubory
 
 > [!WARNING]
 > Tato část se týká aplikací pro stolní počítače se C++systémem Windows napsaných v nástroji.
 >
-> Informace o prostředcích v aplikacích C++Univerzální platforma Windows napsaných v nástroji najdete v tématech [Definování prostředků aplikace](/windows/uwp/app-resources/)nebo C++přidávání zdrojů do projektů/CLI (spravované). v tématu [prostředky v aplikacích klasické pracovní plochy](/dotnet/framework/resources/index) ve službě .NET Framework Developer 's Program.
+> Informace o prostředcích v aplikacích C++Univerzální platforma Windows napsaných v nástroji najdete v tématech [Definování prostředků aplikace](/windows/uwp/app-resources/)nebo C++přidávání prostředků do projektů/CLI (spravované) v tématu [prostředky v aplikacích klasické pracovní plochy](/dotnet/framework/resources/index) v příručce pro vývojáře .NET Framework.
 
 Prostředky se dají skládat z široké škály prvků, jako je:
 
@@ -55,7 +55,7 @@ Obsahuje odkazy na dokumentaci jazyka Visual C++.
 [Kontaktujte nás](/visualstudio/ide/talk-to-us)<br/>
 Obsahuje odkazy na informace o používání sady dokumentace, kontaktování podpory produktu a využití funkcí usnadnění.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Desktopové aplikace pro Windows](../windows/windows-desktop-applications-cpp.md)<br/>
 [Nabídky a další prostředky](/windows/win32/menurc/resources)

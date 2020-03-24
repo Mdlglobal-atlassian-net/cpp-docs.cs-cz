@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - C1509
 ms.assetid: 40dd100d-c6ba-451c-bd26-2c99ec1c36d6
-ms.openlocfilehash: efd5b9dd5cdd7ee174bc786c38d9dd841e2ad6ce
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0d1d7255dd64239a6a76bb15a1f309b43eac0d4b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397481"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80202953"
 ---
 # <a name="fatal-error-c1509"></a>Závažná chyba C1509
 
-limit kompilátoru: moc velký počet stavů obslužné rutiny výjimek v funkce 'function'. zjednodušení – funkce
+limit kompilátoru: ve funkci Function Function je moc velký počet stavů obslužných rutin výjimek. jednodušší funkce
 
-Kód překračuje vnitřní limit o stavech obslužné rutiny výjimek (32 768 státy).
+Kód překračuje interní omezení pro stavy obslužné rutiny výjimek (32 768 stavy).
 
-Nejčastější příčinou je, že funkce obsahuje složitý výraz uživatelsky definované třídy, proměnné a aritmetické operátory.
+Nejběžnější příčinou je, že funkce obsahuje složitý výraz uživatelsky definovaných proměnných třídy a aritmetických operátorů.
 
-### <a name="to-fix-by-using-the-following-possible-solutions"></a>Chcete-li vyřešit pomocí následujících možná řešení
+### <a name="to-fix-by-using-the-following-possible-solutions"></a>Oprava pomocí následujících možných řešení
 
-1. Zjednodušte přiřazování běžné podvýrazy k dočasné proměnné výrazů.
+1. Zjednodušte výrazy přiřazením běžných dílčích výrazů k dočasným proměnným.
 
-1. Funkce rozdělte na menší funkce.
+1. Rozdělení funkce na menší funkce.

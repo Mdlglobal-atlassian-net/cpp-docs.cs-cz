@@ -2,12 +2,12 @@
 title: Problémy migrace s plovoucí desetinnou čárkou
 ms.date: 05/17/2017
 ms.assetid: 36a1b552-2f2b-4919-bc9d-c17f42434954
-ms.openlocfilehash: 0a84b764d395063f38cae299cff75437318b024e
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 40eb08e4f9c7058d6b11700535e1c25f86548a22
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73626982"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80215017"
 ---
 # <a name="floating-point-migration-issues"></a>Problémy migrace s plovoucí desetinnou čárkou
 
@@ -17,7 +17,7 @@ Někdy, když upgradujete projekty na novější verzi sady Visual Studio, můž
 
 Většina matematických funkcí CRT je k dispozici v aplikaci Visual Studio po dobu let, ale počínaje Visual Studio 2013, jsou zahrnuty všechny funkce vyžadované normou ISO C99. Tyto funkce jsou implementovány pro rovnováhu výkonu se správností. Vzhledem k tomu, že výsledkem správného zaokrouhlení výsledku je, že každý případ může být zakazující nákladný, jsou tyto funkce navržené tak, aby se pro správný zaoblený výsledek vytvořila Přibližná aproximace. Ve většině případů se výsledek vygeneroval do +/-1 jednotky s minimální přesností nebo *ULP*se správným zaobleným výsledkem, i když existují případy s větší přesností. Pokud jste k získání těchto funkcí používali jinou knihovnu pro matematiku, mohou být za změnu ve výsledcích implementace rozdíly v implementaci.
 
-V případě, že se matematické funkce přesunuly do univerzálního CRT v aplikaci Visual Studio 2015, byly použity některé nové algoritmy a několik chyb v implementaci funkcí, které byly nové v Visual Studio 2013 byly opraveny. Tyto změny mohou vést ke zjistitelným rozdílům ve výsledcích výpočtů s plovoucí desetinnou čárkou, které tyto funkce používají. Funkce, které byly problémy s chybou, byly ERF, exp2 –, zbytek, remquo –, scalbln a scalbn – a jejich plovoucí a dlouhé dvojité varianty.  Další změny v aplikaci Visual Studio 2015 opravily problémy při zachování stavového slova plovoucí desetinné čárky a informací o stavu výjimky v _clear87, _clearfp, fegetenv, fesetenv a feholdexcept Functions.
+V případě, že se matematické funkce přesunuly do univerzálního CRT v aplikaci Visual Studio 2015, byly použity některé nové algoritmy a několik chyb v implementaci funkcí, které byly nové v Visual Studio 2013 byly opraveny. Tyto změny mohou vést ke zjistitelným rozdílům ve výsledcích výpočtů s plovoucí desetinnou čárkou, které tyto funkce používají. Funkce, které byly problémy s chybou, byly ERF, exp2 –, zbytek, remquo –, scalbln a scalbn – a jejich plovoucí a dlouhé dvojité varianty.  Další změny v aplikaci Visual Studio 2015 opravily problémy při zachování stavového slova plovoucí desetinné čárky a informací o stavu výjimky v _clear87, _clearfp, fegetenv, fesetenv a feholdexcept funkcích.
 
 ## <a name="processor-differences-and-compiler-flags"></a>Rozdíly v procesorech a příznaky kompilátoru
 
@@ -29,7 +29,7 @@ Vylepšení správnosti generování kódu v různých režimech plovoucí deset
 
 Ve většině případů se změny plovoucí desetinné čárky v nejnovějších kompilátorech a knihovnách vyplývají z důvodu rychlejšího nebo více správných chování nebo obojího. V případě, že SSE2 pokyny nahrazují pokyny x87, můžete dokonce sledovat výkon procesoru s vyšším výkonem. Nicméně pokud máte kód, který musí přesně replikovat chování s plovoucí desetinnou čárkou staršího kompilátoru, zvažte použití nativních funkcí cílení na více platforem sady Visual Studio a sestavení ovlivněného projektu pomocí starší sady nástrojů. Další informace naleznete v tématu [použití nativního cílení na více platforem v aplikaci Visual Studio k sestavení starých projektů](use-native-multi-targeting.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Upgrade projektů z dřívějších verzí sady VisualC++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
 [Přehled potenciálních problémů s upgradem (Visual C++)](overview-of-potential-upgrade-issues-visual-cpp.md)<br/>

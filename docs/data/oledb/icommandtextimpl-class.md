@@ -22,16 +22,16 @@ helpviewer_keywords:
 - m_strCommandText
 - SetCommandText method
 ms.assetid: 9c2715cc-1e55-4468-8327-85341617ed46
-ms.openlocfilehash: de9e930056db7b91968ca1ce471a87809693376a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d91221dd509122ebbd6490c2de7fab1ce51eb2f8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408976"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210727"
 ---
 # <a name="icommandtextimpl-class"></a>ICommandTextImpl – třída
 
-Poskytuje implementaci pro [ICommandText](/previous-versions/windows/desktop/ms714914(v=vs.85)) rozhraní.
+Poskytuje implementaci pro rozhraní [ICommandText](/previous-versions/windows/desktop/ms714914(v=vs.85)) .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -43,12 +43,12 @@ class ATL_NO_VTABLE ICommandTextImpl
 
 ### <a name="parameters"></a>Parametry
 
-*T*<br/>
-Příkaz třída odvozená z `ICommandTextImpl`.
+*Š*<br/>
+Třída příkazu odvozená od `ICommandTextImpl`.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** altdb.h
+**Záhlaví:** altdb. h
 
 ## <a name="members"></a>Členové
 
@@ -56,22 +56,22 @@ Příkaz třída odvozená z `ICommandTextImpl`.
 
 |||
 |-|-|
-|[GetCommandText](#getcommandtext)|Vrátí text příkazu nastavil poslední volání [SetCommandText –](../../data/oledb/icommandtextimpl-setcommandtext.md).|
-|[SetCommandText](#setcommandtext)|Nastaví text příkazu, nahraďte existující text příkazu.|
+|[GetCommandText](#getcommandtext)|Vrátí textový příkaz nastavený posledním voláním metody [SetCommandText](../../data/oledb/icommandtextimpl-setcommandtext.md).|
+|[SetCommandText](#setcommandtext)|Nastaví text příkazu a nahradí stávající text příkazu.|
 
 ### <a name="data-members"></a>Datové členy
 
 |||
 |-|-|
-|[m_strCommandText](#strcommandtext)|Slouží k uložení textu příkazu.|
+|[m_strCommandText](#strcommandtext)|Ukládá text příkazu.|
 
 ## <a name="remarks"></a>Poznámky
 
-Povinné rozhraní na příkazy.
+Povinné rozhraní pro příkazy.
 
-## <a name="getcommandtext"></a> ICommandTextImpl::GetCommandText
+## <a name="icommandtextimplgetcommandtext"></a><a name="getcommandtext"></a>ICommandTextImpl:: GetCommandText
 
-Vrátí text příkazu nastavil poslední volání [SetCommandText –](../../data/oledb/icommandtextimpl-setcommandtext.md).
+Vrátí textový příkaz nastavený posledním voláním metody [SetCommandText](../../data/oledb/icommandtextimpl-setcommandtext.md).
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -82,11 +82,11 @@ STDMETHOD(GetCommandText)(GUID * pguidDialect,
 
 #### <a name="parameters"></a>Parametry
 
-Zobrazit [ICommandText::GetCommandText](/previous-versions/windows/desktop/ms709825(v=vs.85)) v *referenční informace pro OLE DB programátory*. *PguidDialect* ve výchozím nastavení je parametr ignorován.
+Viz [ICommandText:: GetCommandText](/previous-versions/windows/desktop/ms709825(v=vs.85)) v *referenci OLE DB programátora*. Parametr *pguidDialect* se ve výchozím nastavení ignoruje.
 
-## <a name="setcommandtext"></a> ICommandTextImpl::SetCommandText
+## <a name="icommandtextimplsetcommandtext"></a><a name="setcommandtext"></a>ICommandTextImpl:: SetCommandText
 
-Nastaví text příkazu, nahraďte existující text příkazu.
+Nastaví text příkazu a nahradí stávající text příkazu.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -97,11 +97,11 @@ STDMETHOD(SetCommandText)(REFGUID rguidDialect,
 
 #### <a name="parameters"></a>Parametry
 
-Zobrazit [ICommandText::SetCommandText](/previous-versions/windows/desktop/ms709757(v=vs.85)) v *referenční informace pro OLE DB programátory*.
+Viz adresu [ICommandText:: SetCommandText](/previous-versions/windows/desktop/ms709757(v=vs.85)) v *referenci programátora OLE DB*.
 
-## <a name="strcommandtext"></a> ICommandTextImpl::m_strCommandText
+## <a name="icommandtextimplm_strcommandtext"></a><a name="strcommandtext"></a>ICommandTextImpl:: m_strCommandText
 
-Ukládá příkaz textový řetězec.
+Ukládá textový řetězec příkazu.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -109,7 +109,7 @@ Ukládá příkaz textový řetězec.
 CComBSTR m_strCommandText;
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Šablony zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Šablony poskytovatele OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architektura šablon zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

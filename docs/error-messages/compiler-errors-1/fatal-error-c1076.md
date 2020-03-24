@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C1076
 ms.assetid: 84ac1180-3e8a-48e8-9f77-7f18a778b964
-ms.openlocfilehash: 91753a49498548b4e523cd8564ee7a7ca7a3b373
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ca5117342d406983e8cba675c2589d2431d09d38
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406948"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80204175"
 ---
 # <a name="fatal-error-c1076"></a>Závažná chyba C1076
 
 > Omezení kompilátoru: bylo dosaženo limitu interní haldy; pomocí parametru /Zm nastavte vyšší limit
 
-Tuto chybu může způsobovat příliš mnoho symbolů nebo příliš mnoho instancí šablony. Spouští se v sadě Visual Studio 2015, může způsobit tuto zprávu z tlaku na paměť virtuálního Windows způsobeno příliš mnoho paralelních sestavení procesů. V takovém případě použijte doporučení **/Zm** možnost mají být ignorovány, pokud nepoužíváte `#pragma hdrstop` – direktiva.
+Tuto chybu může způsobovat příliš mnoho symbolů nebo příliš mnoho instancí šablony. Počínaje verzí sady Visual Studio 2015 Tato zpráva může být způsobena tlakem virtuální paměti Windows způsobeným příliš mnoha paralelními procesy sestavení. V takovém případě by se doporučení k použití možnosti **/zm** mělo ignorovat, pokud nepoužíváte direktivu `#pragma hdrstop`.
 
 Vyřešení této chyby:
 
-1. Pokud používá předkompilovanou hlavičku `#pragma hdrstop` direktiv, použijte [/Zm](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md) možnost nastavit limit paměti kompilátoru na hodnotu zadanou v [C3859](../../error-messages/compiler-errors-2/compiler-error-c3859.md) chybovou zprávu. Další informace o nastavení této hodnoty v sadě Visual Studio, naleznete v části poznámky v [/Zm (zadat předkompilované hlavičky Memory Allocation Limit)](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md).
+1. Pokud Předkompilovaná hlavička používá direktivu `#pragma hdrstop`, nastavte limit paměti kompilátoru na hodnotu zadanou v chybové zprávě [C3859](../../error-messages/compiler-errors-2/compiler-error-c3859.md) pomocí možnosti [/zm](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md) . Další informace, které obsahují informace o tom, jak tuto hodnotu nastavit v sadě Visual Studio, naleznete v části poznámky v [/zm (určení limitu přidělení paměti pro předkompilované hlavičky)](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md).
 
-1. Zvažte snížení počtu paralelní procesy, které jsou určeny pomocí **/maxcpucount** možnost MSBUILD. Soubor EXE ve spojení s **/MP** možnost CL. SOUBOR EXE. Další informace najdete v tématu [předkompilované hlavičky (PCH) problémů a doporučení](https://devblogs.microsoft.com/cppblog/precompiled-header-pch-issues-and-recommendations/).
+1. Zvažte snížení počtu paralelních procesů určených pomocí možnosti **/maxcpucount** na MSBuild. EXE ve spojení s možností **/MP** na CL. Programu. Další informace najdete v tématu [problémy a doporučení k předkompilovaným hlavičkám (PCH)](https://devblogs.microsoft.com/cppblog/precompiled-header-pch-issues-and-recommendations/).
 
-1. Pokud používáte 32bitové hostované kompilátory v 64bitovém operačním systému, použijte místo nich 64bitové hostované kompilátory. Další informace najdete v tématu [jak: Povolit 64bitové sady nástrojů Visual C++ v příkazovém řádku](../../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md).
+1. Pokud používáte 32bitové hostované kompilátory v 64bitovém operačním systému, použijte místo nich 64bitové hostované kompilátory. Další informace naleznete v tématu [How to: Enable a 64-bit Visual C++ sada nástrojů na příkazovém řádku](../../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md).
 
 1. Odstraňte nepotřebné vkládané soubory.
 
@@ -33,4 +33,4 @@ Vyřešení této chyby:
 
 1. Odstraňte nepoužité deklarace.
 
-Pokud C1076 zobrazí okamžitě po zahájení sestavení, je hodnota zadaná u **/Zm** je pravděpodobně příliš vysoká. pro váš program. Omezit **/Zm** hodnotu.
+Pokud k C1076 dojde ihned po zahájení sestavení, hodnota zadaná pro **/zm** je pravděpodobně pro váš program příliš vysoká. Snižte hodnotu **/zm** .

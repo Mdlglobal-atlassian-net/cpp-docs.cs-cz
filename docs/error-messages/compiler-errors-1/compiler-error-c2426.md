@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2426
 ms.assetid: 3428aeed-3f78-4675-9bc4-5b72f50eaaf6
-ms.openlocfilehash: 6fdb539834f26e794970d0e589cb7ed7072f1e0e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cf6fe6c1094920fed6bb625256cbbe519308445a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402850"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80205440"
 ---
 # <a name="compiler-error-c2426"></a>Chyba kompilátoru C2426
 
-"token": neplatný operátor "context"
+token: neplatný operátor v kontextu
 
-Token nelze použít jako operátor v tomto kontextu. Index operátorů, například nemůže být vnořený.
+Token se v tomto kontextu nedá použít jako operátor. Operátory indexu, například nelze vnořovat.

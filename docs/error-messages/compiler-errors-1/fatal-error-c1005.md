@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C1005
 ms.assetid: 150daf8e-a38a-4669-9c1a-a05b5a1f65ef
-ms.openlocfilehash: a84791367656729b1cbd50ca180368f6c01531a4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a8b0fe71dcfb6253327de247d24ef9d90c59181d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383188"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80204864"
 ---
 # <a name="fatal-error-c1005"></a>Závažná chyba C1005
 
-řetězec je moc velký pro vyrovnávací paměť
+řetězec je pro vyrovnávací paměť moc velký.
 
-Řetězec v zprostředkující soubor kompilátoru došlo k přetečení vyrovnávací paměti.
+Řetězec v zprostředkujícím souboru kompilátoru způsobil přetečení vyrovnávací paměti.
 
-Tuto chybu můžete narazit při parametr předat buď [/Fd](../../build/reference/fd-program-database-file-name.md) nebo [/Yl](../../build/reference/yl-inject-pch-reference-for-debug-library.md) – možnosti kompilátoru je větší než 256 bajtů.
+Tato chyba se může zobrazit, když parametr, který předáte do možnosti kompilátoru [/FD](../../build/reference/fd-program-database-file-name.md) nebo [/yl](../../build/reference/yl-inject-pch-reference-for-debug-library.md) , je větší než 256 bajtů.

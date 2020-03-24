@@ -7,16 +7,16 @@ helpviewer_keywords:
 - comments, C++ code
 - white space, C++ comments
 ms.assetid: 6fcb906c-c264-4083-84bc-373800b2e514
-ms.openlocfilehash: a90d9d37e69cb2e8be4ab18f77026fdce1221307
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3326ad7d0b5118182a5d582061fd0c103986f232
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399171"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80189751"
 ---
 # <a name="comments-c"></a>Komentáře (C++)
 
-Komentář je text, který kompilátor ignoruje, ale je užitečný pro programátory. Komentáře se obvykle používají pro popis kódu pro pozdější použití. Kompilátor je zpracovává jako prázdné znaky. Můžete použít komentáře při testování nastavit některé řádky kódu jako neaktivní; ale `#if` / `#endif` direktivy preprocesoru fungují lépe, protože je možné ohraničit kód, který obsahuje komentáře, ale komentáře nelze vnořovat.
+Komentář je text, který kompilátor ignoruje, ale je užitečný pro programátory. Komentáře se obvykle používají pro popis kódu pro pozdější použití. Kompilátor je zpracovává jako prázdné znaky. Můžete použít komentáře v testování, aby byly některé řádky kódu neaktivní; Nicméně `#if`/`#endif` direktivy preprocesoru fungují lépe, protože můžete obklopit kód, který obsahuje komentáře, ale komentáře nelze vnořovat.
 
 Komentář v jazyce C++ je zapsán některým z následujících způsobů:
 
@@ -26,6 +26,6 @@ Komentář v jazyce C++ je zapsán některým z následujících způsobů:
 
 Znaky komentáře (`/*`, `*/` a `//`) nemají žádný zvláštní význam v rámci znakové konstanty, textového literálu ani komentáře. Komentáře zapsané pomocí první syntaxe proto nelze vnořovat.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Lexikální konvence](../cpp/lexical-conventions.md)

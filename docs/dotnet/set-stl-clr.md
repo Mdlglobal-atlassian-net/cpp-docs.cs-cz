@@ -89,12 +89,12 @@ helpviewer_keywords:
 - value_compare member [STL/CLR]
 - value_type member [STL/CLR]
 ms.assetid: 27d3628c-741a-43a7-bef1-5085536f679e
-ms.openlocfilehash: fd23b26b910a8cc8767b4f456cc3bde9f9a40199
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: a5e98a9fe32c71e87f80c2cfc2e733a5d0fe5c94
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447497"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80208335"
 ---
 # <a name="set-stlclr"></a>set (STL/CLR)
 
@@ -224,7 +224,7 @@ Při mazání nebo odebírání elementu se volá destruktor pro jeho uloženou 
 
 ## <a name="members"></a>Členové
 
-## <a name="begin"></a>Set:: begin (STL/CLR)
+## <a name="setbegin-stlclr"></a><a name="begin"></a>Set:: begin (STL/CLR)
 
 Určuje začátek řízené sekvence.
 
@@ -272,7 +272,7 @@ a b c
 *++begin() = b
 ```
 
-## <a name="clear"></a>Set:: Clear (STL/CLR)
+## <a name="setclear-stlclr"></a><a name="clear"></a>Set:: Clear (STL/CLR)
 
 Odebere všechny prvky.
 
@@ -330,7 +330,7 @@ a b
 size() = 0
 ```
 
-## <a name="const_iterator"></a>Set:: const_iterator (STL/CLR)
+## <a name="setconst_iterator-stlclr"></a><a name="const_iterator"></a>Set:: const_iterator (STL/CLR)
 
 Typ konstantního iterátoru řízené sekvence
 
@@ -372,7 +372,7 @@ int main()
 a b c
 ```
 
-## <a name="const_reference"></a>Set:: const_reference (STL/CLR)
+## <a name="setconst_reference-stlclr"></a><a name="const_reference"></a>Set:: const_reference (STL/CLR)
 
 Typ konstantního odkazu na prvek
 
@@ -417,7 +417,7 @@ int main()
 a b c
 ```
 
-## <a name="const_reverse_iterator"></a>Set:: const_reverse_iterator (STL/CLR)
+## <a name="setconst_reverse_iterator-stlclr"></a><a name="const_reverse_iterator"></a>Set:: const_reverse_iterator (STL/CLR)
 
 Typ konstantního reverzního iterátoru řízené sekvence.
 
@@ -459,7 +459,7 @@ int main()
 c b a
 ```
 
-## <a name="count"></a>Set:: Count (STL/CLR)
+## <a name="setcount-stlclr"></a><a name="count"></a>Set:: Count (STL/CLR)
 
 Zjistí počet prvků odpovídající zadanému klíči.
 
@@ -512,7 +512,7 @@ count(L'b') = 1
 count(L'C') = 0
 ```
 
-## <a name="difference_type"></a>Set::d ifference_type (STL/CLR)
+## <a name="setdifference_type-stlclr"></a><a name="difference_type"></a>Set::d ifference_type (STL/CLR)
 
 Typy podepsané vzdálenosti mezi dvěma prvky.
 
@@ -567,7 +567,7 @@ end()-begin() = 3
 begin()-end() = -3
 ```
 
-## <a name="empty"></a>Set:: Empty (STL/CLR)
+## <a name="setempty-stlclr"></a><a name="empty"></a>Set:: Empty (STL/CLR)
 
 Zkouší, zda nejsou přítomny žádné prvky.
 
@@ -619,7 +619,7 @@ size() = 0
 empty() = True
 ```
 
-## <a name="end"></a>Set:: end (STL/CLR)
+## <a name="setend-stlclr"></a><a name="end"></a>Set:: end (STL/CLR)
 
 Určuje konec řízené sekvence.
 
@@ -668,7 +668,7 @@ a b c
 *--end() = c
 ```
 
-## <a name="equal_range"></a>Set:: equal_range (STL/CLR)
+## <a name="setequal_range-stlclr"></a><a name="equal_range"></a>Set:: equal_range (STL/CLR)
 
 Najde rozsah, který odpovídá zadanému klíči.
 
@@ -728,7 +728,7 @@ equal_range(L'x') empty = True
 b
 ```
 
-## <a name="erase"></a>Set:: Erase (STL/CLR)
+## <a name="seterase-stlclr"></a><a name="erase"></a>Set:: Erase (STL/CLR)
 
 Odebere prvky v určených pozicích.
 
@@ -812,7 +812,7 @@ erase(begin(), end()-1) = e
 size() = 1
 ```
 
-## <a name="find"></a>Set:: Find (STL/CLR)
+## <a name="setfind-stlclr"></a><a name="find"></a>Set:: Find (STL/CLR)
 
 Vyhledá prvek, který odpovídá zadanému klíči.
 
@@ -868,7 +868,7 @@ find b = b
 find C = False
 ```
 
-## <a name="generic_container"></a>Set:: generic_container (STL/CLR)
+## <a name="setgeneric_container-stlclr"></a><a name="generic_container"></a>Set:: generic_container (STL/CLR)
 
 Typ obecného rozhraní pro kontejner.
 
@@ -932,7 +932,7 @@ a b c d
 a b c d e
 ```
 
-## <a name="generic_iterator"></a>Set:: generic_iterator (STL/CLR)
+## <a name="setgeneric_iterator-stlclr"></a><a name="generic_iterator"></a>Set:: generic_iterator (STL/CLR)
 
 Typ iterátoru pro použití s obecným rozhraním pro kontejner.
 
@@ -988,7 +988,7 @@ a b c
 a
 ```
 
-## <a name="generic_reverse_iterator"></a>Set:: generic_reverse_iterator (STL/CLR)
+## <a name="setgeneric_reverse_iterator-stlclr"></a><a name="generic_reverse_iterator"></a>Set:: generic_reverse_iterator (STL/CLR)
 
 Typ reverzního iterátoru pro použití s obecným rozhraním pro kontejner.
 
@@ -1044,7 +1044,7 @@ a b c
 c
 ```
 
-## <a name="generic_value"></a>Set:: generic_value (STL/CLR)
+## <a name="setgeneric_value-stlclr"></a><a name="generic_value"></a>Set:: generic_value (STL/CLR)
 
 Typ elementu pro použití s obecným rozhraním pro kontejner.
 
@@ -1098,7 +1098,7 @@ a b c
 a
 ```
 
-## <a name="insert"></a>Set:: Insert (STL/CLR)
+## <a name="setinsert-stlclr"></a><a name="insert"></a>Set:: Insert (STL/CLR)
 
 Přidá prvky.
 
@@ -1214,7 +1214,7 @@ a b c x
 a b c x y
 ```
 
-## <a name="iterator"></a>Set:: iterátor (STL/CLR)
+## <a name="setiterator-stlclr"></a><a name="iterator"></a>Set:: iterátor (STL/CLR)
 
 Typ iterátoru řízené sekvence
 
@@ -1256,7 +1256,7 @@ int main()
 a b c
 ```
 
-## <a name="key_comp"></a>Set:: key_comp (STL/CLR)
+## <a name="setkey_comp-stlclr"></a><a name="key_comp"></a>Set:: key_comp (STL/CLR)
 
 Zkopíruje delegáta řazení dvou klíčů.
 
@@ -1315,7 +1315,7 @@ compare(L'a', L'b') = False
 compare(L'b', L'a') = True
 ```
 
-## <a name="key_compare"></a>Set:: key_compare (STL/CLR)
+## <a name="setkey_compare-stlclr"></a><a name="key_compare"></a>Set:: key_compare (STL/CLR)
 
 Delegát řazení pro dva klíče.
 
@@ -1375,7 +1375,7 @@ compare(L'a', L'b') = False
 compare(L'b', L'a') = True
 ```
 
-## <a name="key_type"></a>Set:: key_type (STL/CLR)
+## <a name="setkey_type-stlclr"></a><a name="key_type"></a>Set:: key_type (STL/CLR)
 
 Typ klíče řazení
 
@@ -1420,7 +1420,7 @@ int main()
 a b c
 ```
 
-## <a name="lower_bound"></a>Set:: lower_bound (STL/CLR)
+## <a name="setlower_bound-stlclr"></a><a name="lower_bound"></a>Set:: lower_bound (STL/CLR)
 
 Vyhledá začátek rozsahu, který odpovídá zadanému klíči.
 
@@ -1477,7 +1477,7 @@ lower_bound(L'x')==end() = True
 *lower_bound(L'b') = b
 ```
 
-## <a name="make_value"></a>Set:: make_value (STL/CLR)
+## <a name="setmake_value-stlclr"></a><a name="make_value"></a>Set:: make_value (STL/CLR)
 
 Vytvoří objekt hodnoty.
 
@@ -1523,7 +1523,7 @@ int main()
 a b c
 ```
 
-## <a name="op_as"></a>Set:: operator = – operátor (STL/CLR)
+## <a name="setoperator-stlclr"></a><a name="op_as"></a>Set:: operator = – operátor (STL/CLR)
 
 Nahradí řízenou sekvenci.
 
@@ -1578,7 +1578,7 @@ a b c
 a b c
 ```
 
-## <a name="rbegin"></a>Set:: rbegin (STL/CLR)
+## <a name="setrbegin-stlclr"></a><a name="rbegin"></a>Set:: rbegin (STL/CLR)
 
 Určuje začátek obrácené kontrolované sekvence.
 
@@ -1626,7 +1626,7 @@ a b c
 *++rbegin() = b
 ```
 
-## <a name="reference"></a>Set:: Reference (STL/CLR)
+## <a name="setreference-stlclr"></a><a name="reference"></a>Set:: Reference (STL/CLR)
 
 Typ odkazu na prvek
 
@@ -1671,7 +1671,7 @@ int main()
 a b c
 ```
 
-## <a name="rend"></a>Set:: rend (STL/CLR)
+## <a name="setrend-stlclr"></a><a name="rend"></a>Set:: rend (STL/CLR)
 
 Určuje konec reverzní kontrolované sekvence.
 
@@ -1720,7 +1720,7 @@ a b c
 *--rend() = a
 ```
 
-## <a name="reverse_iterator"></a>Set:: reverse_iterator (STL/CLR)
+## <a name="setreverse_iterator-stlclr"></a><a name="reverse_iterator"></a>Set:: reverse_iterator (STL/CLR)
 
 Typ reverzního iterátoru řízené sekvence.
 
@@ -1762,7 +1762,7 @@ int main()
 c b a
 ```
 
-## <a name="set"></a>Set:: set (STL/CLR)
+## <a name="setset-stlclr"></a><a name="set"></a>Set:: set (STL/CLR)
 
 Sestaví objekt kontejneru.
 
@@ -1933,7 +1933,7 @@ c b a
 a b c
 ```
 
-## <a name="size"></a>Set:: Size (STL/CLR)
+## <a name="setsize-stlclr"></a><a name="size"></a>Set:: Size (STL/CLR)
 
 Spočítá počet prvků.
 
@@ -1987,7 +1987,7 @@ size() = 0 after clearing
 size() = 2 after adding 2
 ```
 
-## <a name="size_type"></a>Set:: size_type (STL/CLR)
+## <a name="setsize_type-stlclr"></a><a name="size_type"></a>Set:: size_type (STL/CLR)
 
 Typ podepsané vzdálenosti mezi dvěma prvky.
 
@@ -2035,7 +2035,7 @@ a b c
 end()-begin() = 3
 ```
 
-## <a name="swap"></a>Set:: swap (STL/CLR)
+## <a name="setswap-stlclr"></a><a name="swap"></a>Set:: swap (STL/CLR)
 
 Zamění obsah dvou kontejnerů.
 
@@ -2103,7 +2103,7 @@ d e f
 a b c
 ```
 
-## <a name="to_array"></a>Set:: to_array (STL/CLR)
+## <a name="setto_array-stlclr"></a><a name="to_array"></a>Set:: to_array (STL/CLR)
 
 Zkopíruje řízenou sekvenci do nového pole.
 
@@ -2153,7 +2153,7 @@ a b c d
 a b c
 ```
 
-## <a name="upper_bound"></a>Set:: upper_bound (STL/CLR)
+## <a name="setupper_bound-stlclr"></a><a name="upper_bound"></a>Set:: upper_bound (STL/CLR)
 
 Najde konec rozsahu, který odpovídá zadanému klíči.
 
@@ -2210,7 +2210,7 @@ upper_bound(L'x')==end() = True
 *upper_bound(L'b') = c
 ```
 
-## <a name="value_comp"></a>Set:: value_comp (STL/CLR)
+## <a name="setvalue_comp-stlclr"></a><a name="value_comp"></a>Set:: value_comp (STL/CLR)
 
 Zkopíruje delegáta řazení pro dvě hodnoty elementu.
 
@@ -2254,7 +2254,7 @@ compare(L'a', L'b') = True
 compare(L'b', L'a') = False
 ```
 
-## <a name="value_compare"></a>Set:: value_compare (STL/CLR)
+## <a name="setvalue_compare-stlclr"></a><a name="value_compare"></a>Set:: value_compare (STL/CLR)
 
 Delegát řazení pro dvě hodnoty elementu.
 
@@ -2299,7 +2299,7 @@ compare(L'a', L'b') = True
 compare(L'b', L'a') = False
 ```
 
-## <a name="value_type"></a>Set:: value_type (STL/CLR)
+## <a name="setvalue_type-stlclr"></a><a name="value_type"></a>Set:: value_type (STL/CLR)
 
 Typ prvku
 
@@ -2344,7 +2344,7 @@ int main()
 a b c
 ```
 
-## <a name="op_neq"></a>operator! = (set) – operátor (STL/CLR)
+## <a name="operator-set-stlclr"></a><a name="op_neq"></a>operator! = (set) – operátor (STL/CLR)
 
 Seznam se neshoduje s porovnáním.
 
@@ -2414,7 +2414,7 @@ a b d
 [a b c] != [a b d] is True
 ```
 
-## <a name="op_lt"></a>operator&lt; (set) – operátor (STL/CLR)
+## <a name="operatorlt-set-stlclr"></a><a name="op_lt"></a>operator&lt; (set) – operátor (STL/CLR)
 
 Seznam je menší než porovnání.
 
@@ -2484,7 +2484,7 @@ a b d
 [a b c] < [a b d] is True
 ```
 
-## <a name="op_lteq"></a>operator&lt;= (set) – operátor (STL/CLR)
+## <a name="operatorlt-set-stlclr"></a><a name="op_lteq"></a>operator&lt;= (set) – operátor (STL/CLR)
 
 Seznam je menší nebo roven hodnotě porovnání.
 
@@ -2554,7 +2554,7 @@ a b d
 [a b d] <= [a b c] is False
 ```
 
-## <a name="op_eq"></a>operator = = (set) – operátor (STL/CLR)
+## <a name="operator-set-stlclr"></a><a name="op_eq"></a>operator = = (set) – operátor (STL/CLR)
 
 Seznam se stejným porovnáním
 
@@ -2624,7 +2624,7 @@ a b d
 [a b c] == [a b d] is False
 ```
 
-## <a name="op_gt"></a>operator&gt; (set) – operátor (STL/CLR)
+## <a name="operatorgt-set-stlclr"></a><a name="op_gt"></a>operator&gt; (set) – operátor (STL/CLR)
 
 Seznam je větší než porovnání.
 
@@ -2694,7 +2694,7 @@ a b d
 [a b d] > [a b c] is True
 ```
 
-## <a name="op_gteq"></a>operator&gt;= (set) – operátor (STL/CLR)
+## <a name="operatorgt-set-stlclr"></a><a name="op_gteq"></a>operator&gt;= (set) – operátor (STL/CLR)
 
 Seznam je větší než nebo rovno porovnání.
 

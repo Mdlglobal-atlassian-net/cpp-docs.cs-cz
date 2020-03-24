@@ -6,36 +6,36 @@ f1_keywords:
 helpviewer_keywords:
 - C1060
 ms.assetid: feaf305c-c84c-4160-b974-50e283412849
-ms.openlocfilehash: 876ae7a368d2d1a1ee94a04fc9ecf50d0f4b8d78
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f1a7c3ccab716a9281d4520f4c5fce2afff60187
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62364230"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80204435"
 ---
 # <a name="fatal-error-c1060"></a>Závažná chyba C1060
 
-kompilátoru je nedostatek místa v haldě
+Kompilátor má nedostatek prostoru v haldě.
 
-Operační systém nebo knihovny run-time nelze vyplnit žádost o paměti.
+Operační systém nebo knihovna run-time nemůže vyplnit požadavek na paměť.
 
-### <a name="to-fix-this-error-try-the-following-possible-solutions"></a>Chcete-li vyřešit tuto chybu, zkuste následující možná řešení
+### <a name="to-fix-this-error-try-the-following-possible-solutions"></a>Pokud chcete tuto chybu opravit, vyzkoušejte následující možná řešení.
 
-1. Pokud kompilátor vyvolá také chyby [C1076](../../error-messages/compiler-errors-1/fatal-error-c1076.md) a [C3859](../../error-messages/compiler-errors-2/compiler-error-c3859.md), použijte [/Zm](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md) – možnost kompilátoru snížit omezení přidělení paměti. Další místo v haldě je k dispozici pro vaši aplikaci, pokud můžete snížit zbývající přidělení paměti.
+1. Pokud kompilátor také vydá chyby [C1076](../../error-messages/compiler-errors-1/fatal-error-c1076.md) a [C3859](../../error-messages/compiler-errors-2/compiler-error-c3859.md), snižte limit přidělování paměti pomocí možnosti kompilátoru [/zm](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md) . Další prostor haldy je k dispozici pro vaši aplikaci, pokud snížíte zbývající přidělení paměti.
 
-   Pokud [/Zm](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md) volba je již nastavena, zkuste ho odebrat. Vzhledem k tomu, že zadaný v možnosti limit přidělení paměti je příliš vysoká, může dojít k vyčerpání místo v haldě. Kompilátor používá výchozí omezení, pokud odeberete [/Zm](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md) možnost.
+   Pokud je už možnost [/zm](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md) nastavená, zkuste ji odebrat. Je možné, že se vyčerpá prostor haldy, protože limit přidělení paměti zadaný v možnosti je příliš vysoký. Pokud odeberete možnost [/zm](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md) , kompilátor použije výchozí limit.
 
-1. Při kompilaci na 64bitové platformě pomocí sady nástrojů kompilátoru 64-bit. Informace najdete v tématu [jak: Povolit 64bitové sady nástrojů Visual C++ v příkazovém řádku](../../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md).
+1. Pokud kompilujete na 64 platformě, použijte sadu nástrojů kompilátoru 64. Informace naleznete v tématu [How to: Enable a 64-bit Visual C++ sada nástrojů na příkazovém řádku](../../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md).
 
-1. Na Windows 32-bit, zkuste použít [3 GB](https://support.microsoft.com/help/833721/available-switch-options-for-the-windows-xp-and-the-windows-server-200) boot.ini přepínače.
+1. V 32 Windows zkuste použít přepínač [/3gb](https://support.microsoft.com/help/833721/available-switch-options-for-the-windows-xp-and-the-windows-server-200) Boot. ini.
 
-1. Zvětšete velikost odkládacího souboru Windows.
+1. Zvětšete velikost souboru Windows swap-File.
 
-1. Zavřete ostatní spuštěné programy.
+1. Ukončete ostatní spuštěné programy.
 
 1. Odstraňte nepotřebné vkládané soubory.
 
-1. Odstraňte nepotřebné globální proměnné, například podle dynamickým přidělením paměti namísto deklarování velkého pole.
+1. Eliminujte nepotřebné globální proměnné, například tím, že dynamicky přidělujete paměť místo deklarace velkého pole.
 
 1. Odstraňte nepoužité deklarace.
 
