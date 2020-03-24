@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - pointer_default attribute
 ms.assetid: 2d0c7bbc-a1e8-4337-9e54-e304523e2735
-ms.openlocfilehash: c70c372e5f1c3a9c2f620a1fa3505fb9d0436e79
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: d0c5832623c1e418f4c6e8bdb606d1d363503483
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514267"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166533"
 ---
 # <a name="pointer_default"></a>pointer_default
 
@@ -34,7 +34,7 @@ Atribut **pointer_default** C++ má stejné funkce jako atribut [pointer_default
 
 ## <a name="example"></a>Příklad
 
-Ukázkové použití **pointer_default**najdete v příkladu pro vlastnost [DefaultValue](defaultvalue.md) .
+Ukázkové použití **pointer_default**naleznete v příkladu pro vlastnost [DefaultValue](defaultvalue.md) .
 
 ## <a name="requirements"></a>Požadavky
 
@@ -47,9 +47,9 @@ Ukázkové použití **pointer_default**najdete v příkladu pro vlastnost [Defa
 |**Požadované atributy**|Žádné|
 |**Neplatné atributy**|Žádné|
 
-Další informace o kontextech atributů naleznete v tématu kontexty [atributů](cpp-attributes-com-net.md#contexts).
+Další informace o kontextech atributů naleznete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [IDL – atributy](idl-attributes.md)<br/>
 [Atributy rozhraní](interface-attributes.md)

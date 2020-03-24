@@ -5,34 +5,34 @@ helpviewer_keywords:
 - ErrLook tool
 - Error lookup tool
 ms.assetid: 6040ffc1-2355-4a45-8998-84cbcba4ca91
-ms.openlocfilehash: c8afcafa7d1b8cd666eb5b02f09a14782f8621ca
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8d005f37af0c406c45ef2da52fce2b578c6e864a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62271772"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169029"
 ---
 # <a name="errlook-reference"></a>ERRLOOK – odkaz
 
-Errlook – nástroj, který je k dispozici v nabídce nástroje jako **vyhledávání chyby**, získá chybovou zprávu systému nebo modul chybovou zprávu podle zadaná hodnota. Errlook – načte text chybové zprávy automaticky, pokud můžete přetáhnout desítkové nebo šestnáctkové hodnoty z ladicího programu sady Visual Studio do **hodnotu** ovládacích prvků pro úpravy. Můžete také zadat hodnotu buď tak, že ho zadáte **hodnotu** ovládacích prvků pro úpravy nebo tím, že vložení ze schránky a kliknutím na **vyhledat**.
+Nástroj ERRLOOK, který je k dispozici v nabídce nástroje jako **vyhledávání chyb**, načte chybovou zprávu systému nebo chybovou zprávu modulu na základě zadané hodnoty. ERRLOOK načítá text chybové zprávy automaticky, pokud přetáhnete hexadecimální nebo desítkovou hodnotu z ladicího programu sady Visual Studio do ovládacího prvku **Value** Edit. Hodnotu můžete zadat také tak, že ji zadáte do ovládacího prvku pro úpravy **hodnoty** , nebo je vložíte ze schránky a kliknete na **Vyhledat**.
 
-Klíče akcelerátoru pro kopírování (CTRL + C), vyjmutí (CTRL + X) a vložení (CTRL + V) práce pro obě **hodnotu** a **chybová zpráva** ovládacích prvcích pro úpravy Pokud nejprve zvýrazněte text.
+Klávesy akcelerátoru pro kopírování (CTRL + C), vyjmout (CTRL + X) a vložit (CTRL + V) fungují pro ovládací prvky pro úpravu **hodnoty** i **chybové zprávy** , pokud je třeba text nejprve zvýraznit.
 
 ## <a name="in-this-section"></a>V tomto oddílu
 
 [Hodnota – textové pole](value-edit-control.md)<br/>
-Popisuje hodnoty upravit ovládací prvek v aplikaci ERRLOOK.
+Popisuje ovládací prvek pro úpravu hodnoty v ERRLOOK.
 
 [Chybová zpráva – textové pole](error-message-edit-control.md)<br/>
-Popisuje chybová zpráva upravit ovládací prvek v aplikaci ERRLOOK.
+Popisuje ovládací prvek pro úpravu chybové zprávy v ERRLOOK.
 
 [Moduly – tlačítko](modules-button.md)<br/>
-Popisuje moduly – tlačítko v aplikaci ERRLOOK.
+Popisuje tlačítko moduly v ERRLOOK.
 
 [Hledat – tlačítko](look-up-button.md)<br/>
-Popisuje tlačítko Hledat v aplikaci ERRLOOK.
+Popisuje tlačítko vyhledat v ERRLOOK.
 
 ## <a name="related-sections"></a>Související oddíly
 
-[Nástroje pro vytváření dalších MSVC](c-cpp-build-tools.md)<br/>
-Poskytuje odkazy na témata popisující C/C++ sestavení nástrojů sady Visual C++.
+[Další nástroje pro sestavení MSVC](c-cpp-build-tools.md)<br/>
+Obsahuje odkazy na témata, která pojednávají oC++ nástrojích jazyka C/ C++sestavení poskytovaných v jazyce Visual.

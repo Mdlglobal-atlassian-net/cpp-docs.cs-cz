@@ -1,20 +1,20 @@
 ---
-title: Compiler Error C2115
+title: Chyba kompilátoru C2115
 ms.date: 11/04/2016
 f1_keywords:
 - C2115
 helpviewer_keywords:
 - C2115
 ms.assetid: 95d76ab5-ddd7-4e29-8cac-24285dccc490
-ms.openlocfilehash: 89f1d6ae42134a0c533d2d8a2145a48bb889c61d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4da46d84f7d26dab46ba98d79a0411721796d461
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62153590"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80207532"
 ---
-# <a name="compiler-error-c2115"></a>Compiler Error C2115
+# <a name="compiler-error-c2115"></a>Chyba kompilátoru C2115
 
-'identifier': Nekompatibilní typy
+' identifier ': Nekompatibilní typy
 
-Výraz obsahuje nekompatibilní typy.
+Výraz obsahoval nekompatibilní typy.

@@ -6,27 +6,27 @@ f1_keywords:
 helpviewer_keywords:
 - C2220
 ms.assetid: d610802c-64d7-40ad-a2a6-0ed0b6815a6c
-ms.openlocfilehash: 3ff730c6fea7d2c57c4ec3054fc627cdc6227e2d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c4fdac833e69e748dd29b9cf772c167fc1dbbd00
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62311745"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80206658"
 ---
 # <a name="compiler-error-c2220"></a>Chyba kompilátoru C2220
 
-upozornění se zpracovalo jako chyba – nevygeneroval se žádný objekt soubor
+Upozornění se považuje za chybu – negeneroval se žádný soubor objektu.
 
-[/WX](../../build/reference/compiler-option-warning-level.md) instruuje kompilátor, aby považovat všechna upozornění jako chyby. Protože došlo k chybě, byl generován žádný objekt nebo spustitelný soubor.
+[/WX](../../build/reference/compiler-option-warning-level.md) říká kompilátoru, aby považoval všechna upozornění za chyby. Protože došlo k chybě, nebyl vygenerován žádný objekt nebo spustitelný soubor.
 
-Tato chyba se zobrazí, pouze když **/WX** je příznak nastaven a během kompilace dojde k upozornění. Chcete-li tuto chybu opravit, musíte odstranit každé varování v projektu.
+Tato chyba se zobrazí pouze v případě, že je nastaven příznak **/WX** a během kompilace dojde k upozornění. Chcete-li tuto chybu opravit, je nutné eliminovat všechna upozornění v projektu.
 
-### <a name="to-fix-use-one-of-the-following-techniques"></a>Pokud chcete vyřešit, použijte jednu z následujících postupů
+### <a name="to-fix-use-one-of-the-following-techniques"></a>K opravě použijte některý z následujících postupů:
 
-- Opravte problémy, které způsobují upozornění ve vašem projektu.
+- Opravte problémy, které způsobují upozornění v projektu.
 
-- Kompilace na nižší úrovni upozornění – například použít **w3** místo **/W4**.
+- Zkompilujte na nižší úrovni upozornění, například použijte **/w3** namísto **/W4**.
 
-- Použití [upozornění](../../preprocessor/warning.md) – Direktiva pragma pro zakázání nebo potlačení konkrétního upozornění.
+- Použijte direktivu pragma [Upozornění](../../preprocessor/warning.md) k zakázání nebo potlačení konkrétního upozornění.
 
 - Nepoužívejte **/WX** ke kompilaci.

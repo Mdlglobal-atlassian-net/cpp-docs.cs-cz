@@ -35,16 +35,16 @@ f1_keywords:
 - VC.Project.IVCWebSvcDebugPageObject.HttpUrl
 - VC.Project.IVCWebSvcDebugPageObject.DebuggerType
 - VC.Project.IVCWebSvcDebugPageObject.SQLDebugging
-ms.openlocfilehash: 5f7a7bc0e2c696365daa38696fde6f1a480644b4
-ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.openlocfilehash: c2190c4406e165cfec1915234b688c598f228777
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70927727"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169705"
 ---
 # <a name="c-debugging-property-pages"></a>C++Ladění stránek vlastností
 
-Tyto stránky vlastností se nacházejí v části**vlastnosti** >  **projektu** > **Konfigurace** > **ladění**. V rozevíracím seznamu vyberte typ ladicího programu. Další informace o ladění C++ kódu najdete v tématu [kurz: Naučte se C++ ladit kód pomocí sady](/visualstudio/debugger/getting-started-with-the-debugger-cpp) Visual Studio a ladit [nativní kód](/visualstudio/debugger/debugging-native-code).
+Tyto stránky vlastností se nacházejí v části > **vlastností** **projektu** > **Vlastnosti konfigurace** > **ladění**. V rozevíracím seznamu vyberte typ ladicího programu. Další informace o ladění C++ kódu naleznete v tématu [kurz: Naučte se ladit C++ kód pomocí sady Visual Studio](/visualstudio/debugger/getting-started-with-the-debugger-cpp) a ladit [nativní kód](/visualstudio/debugger/debugging-native-code).
 
 ## <a name="local-windows-debugger-property-page"></a>Stránka vlastností místního ladicího programu Windows
 

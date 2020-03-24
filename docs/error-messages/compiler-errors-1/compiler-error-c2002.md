@@ -6,31 +6,31 @@ f1_keywords:
 helpviewer_keywords:
 - C2002
 ms.assetid: 91982314-203a-4de1-b884-94e39a623f61
-ms.openlocfilehash: 30f472aa7a9475a19eea0e92fe5c2ea0d54e382b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c37a9b94be837248c8025a4fc069d8a242128542
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209033"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80208244"
 ---
 # <a name="compiler-error-c2002"></a>Chyba kompilátoru C2002
 
-Neplatná konstanta širokých znaků
+Neplatná konstanta s velkým znakem
 
-Vícebajtová znaková konstanta není platná.
+Konstanta vícebajtových znaků není platná.
 
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Chcete-li vyřešit tak, že zkontrolujete následující možné příčiny
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Opravu provedete kontrolou následujících možných příčin.
 
-1. Konstanta širokého znaku obsahuje více bajtů, než se očekávalo.
+1. Konstanta s velkým znakem obsahuje více bajtů, než se očekávalo.
 
-1. Standardní hlavička STDDEF.h není zahrnut.
+1. Standardní hlavička STDDEF. h není zahrnutá.
 
-1. Široké znaky se nedají zřetězit. s běžným řetězcovými literály.
+1. Pro velké znaky nelze zřetězit pomocí běžných řetězcových literálů.
 
-1. Konstantu širokého znaku musí následovat po znaku "L":
+1. Konstanta s velkým znakem musí předcházet znak L:
 
     ```
     L'mbconst'
     ```
 
-1. Microsoft C++ musí být text argumenty direktivy preprocesoru ASCII. Například směrnice `#pragma message(L"string")`, není platný.
+1. V případě C++Microsoft musí být textové argumenty direktivy preprocesoru znakové sady ASCII. Například Direktiva `#pragma message(L"string")`není platná.

@@ -1,21 +1,21 @@
 ---
-title: idl_quote – (C++ atributů COM)
+title: idl_quote (C++ atribut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.idl_quote
 helpviewer_keywords:
 - idl_quote attribute
 ms.assetid: a370e1b7-948b-4e67-9a25-58facf24e4c9
-ms.openlocfilehash: 3fbec210d973926a312d3e750e806dd9ef13f5f9
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 4b05da6d237d71e0cc645ad0f626f75ecd85c827
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65448526"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168026"
 ---
-# <a name="idlquote"></a>idl_quote
+# <a name="idl_quote"></a>idl_quote
 
-Umožňuje použít IDL konstrukce, které nejsou podporovány v aktuální verzi jazyka Visual C++ a jejich předávání do souboru generovaného IDL.
+Umožňuje použít konstrukce IDL, které nejsou podporovány v aktuální verzi vizuálu C++ a předávat je do generovaného souboru. idl.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -25,16 +25,16 @@ Umožňuje použít IDL konstrukce, které nejsou podporovány v aktuální verz
 
 ### <a name="parameters"></a>Parametry
 
-*text*<br/>
-Název atributu, že máte v úmyslu Microsoft C++ kompilátoru předávání do generovaného souboru bez vrácení chybu kompilátoru.
+*textové*<br/>
+Název atributu, který zamýšlíte, C++ aby kompilátor společnosti Microsoft předával do generovaného souboru IDL bez vrácení chyby kompilátoru.
 
 ## <a name="remarks"></a>Poznámky
 
-Pokud **idl_quote –** C++ atribut se používá jako samostatný atribut (oddělte středníkem. za uzavírací závorku), pak *text* je umístěn v souboru sloučeného IDL je. Pokud **idl_quote –** se používá na symbol, *text* je umístěn v rámci bloku atributu pro tento symbol.
+Pokud je atribut **idl_quote** C++ použit jako samostatný atribut (se středníkem po pravé závorce), pak je *text* umístěn do sloučeného souboru IDL, jak je. Pokud se pro symbol používá **idl_quote** , *text* je umístěn v rámci bloku atributu pro daný symbol.
 
 ## <a name="example"></a>Příklad
 
-Následující kód ukazuje, jak můžete zadat nepodporovaný atribut (pomocí **v**, které jsou podporovány) a jak definovat a používat nedefinované .idl konstrukce:
+Následující kód ukazuje, jak lze zadat nepodporovaný atribut (pomocí **v**, který je podporován) a jak definovat a použít nedefinovanou konstruktor. idl:
 
 ```cpp
 // cpp_attr_ref_idl_quote.cpp
@@ -69,22 +69,22 @@ __interface IStatic{
 };
 ```
 
-Tento kód způsobí, že `MYFLOT` a `MYDUB` a *text* položky budou umístěny v souboru generovaného IDL. *Název* vynutí parametr *text* umístit před cokoli, co odkazuje *název* v souboru generovaného IDL. *Závislosti* vynutí parametr definice seznamu závislostí umístit před *text* v souboru generovaného IDL.
+Tento kód způsobuje `MYFLOT` a `MYDUB` a *textovou* položku, která se má umístit do generovaného souboru IDL. Parametr *Name* vynutí umístění *textu* před cokoli, co odkazuje na *název* ve vygenerovaném souboru IDL. Parametr *závislosti* vynutí, aby byly definice seznamu závislostí umístěny před *textem* v generovaném souboru IDL.
 
 ## <a name="requirements"></a>Požadavky
 
-### <a name="attribute-context"></a>Atribut kontextu
+### <a name="attribute-context"></a>Kontext atributu
 
 |||
 |-|-|
-|**Platí pro**|Kdekoli|
-|**Opakovatelné**|Ne|
-|**Vyžadované atributy**|Žádné|
+|**Platí pro**|Jakékoli|
+|**REPEATABLE**|Ne|
+|**Požadované atributy**|Žádné|
 |**Neplatné atributy**|Žádné|
 
-Další informace najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
+Další informace naleznete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [IDL – atributy](idl-attributes.md)<br/>
 [Samostatné atributy](stand-alone-attributes.md)

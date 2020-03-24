@@ -8,18 +8,18 @@ helpviewer_keywords:
 - interoperability [C++], application domains
 - mixed assemblies [C++], application domains
 ms.assetid: 75a08efc-9b02-40ba-99b7-dcbd71010bbf
-ms.openlocfilehash: 2296654e6935bc40f301226b184cf34f77cb126d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 16c02bb58681ecb241d3552f57e0b05f2d6711b4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62223025"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80208796"
 ---
-# <a name="application-domains-and-visual-c"></a>Aplikační domény a Visual C++
+# <a name="application-domains-and-visual-c"></a>Domény aplikace a jazyk Visual C++
 
-Pokud máte `__clrcall` virtuální funkce, tabulku vtable budou podle domény aplikace (appdomain). Pokud vytvoříte objekt v jedné doméně appdomain, lze volat pouze virtuální funkci z této domény. Ve smíšeném režimu (**/CLR**) bude mít na úrovni jednotlivého procesu vtable, pokud typ nemá žádné `__clrcall` virtuální funkce. **/CLR: pure** a **/CLR: safe** – možnosti kompilátoru jsou zastaralé v sadě Visual Studio 2015 a není podporována v sadě Visual Studio 2017.
+Pokud máte virtuální funkci `__clrcall`, tabulka vtable bude vázaná na doménu aplikace (AppDomain). Vytvoříte-li objekt v jedné doméně aplikace, můžete volat pouze virtuální funkce v rámci této domény AppDomain. Ve smíšeném režimu ( **/CLR**) budete mít k dispozici vtable pro procesy, pokud váš typ nemá žádné `__clrcall` virtuální funkce. Možnosti **/clr: Pure** a **/clr: Safe** jsou zastaralé v aplikaci Visual Studio 2015 a nejsou podporovány v aplikaci Visual Studio 2017.
 
-Další informace naleznete v tématu:
+Další informace naleznete v tématu:
 
 - [appdomain](../cpp/appdomain.md)
 
@@ -27,6 +27,6 @@ Další informace naleznete v tématu:
 
 - [process](../cpp/process.md)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Smíšená (nativní a spravovaná) sestavení](../dotnet/mixed-native-and-managed-assemblies.md)

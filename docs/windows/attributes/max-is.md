@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - max_is attribute
 ms.assetid: 7c851f5c-6649-4d77-a792-247c37d8f560
-ms.openlocfilehash: f2e6db997891817620c1b2c1f70cb310818dd346
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: b4931962febb1e68701aa3fe271e08f3aa8d9238
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514424"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166754"
 ---
 # <a name="max_is"></a>max_is
 
@@ -49,7 +49,7 @@ Další informace naleznete v tématu [kontexty atributů](cpp-attributes-com-ne
 
 Příklad určení oddílu pole naleznete v tématu [first_is](first-is.md) .
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [IDL – atributy](idl-attributes.md)<br/>
 [Atributy klíčových slov typedef, enum, union a struct](typedef-enum-union-and-struct-attributes.md)<br/>

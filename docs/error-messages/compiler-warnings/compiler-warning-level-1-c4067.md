@@ -1,25 +1,25 @@
 ---
-title: Kompilátor upozornění (úroveň 1) C4067
+title: Upozornění kompilátoru (úroveň 1) C4067
 ms.date: 11/04/2016
 f1_keywords:
 - C4067
 helpviewer_keywords:
 - C4067
 ms.assetid: 1d10353e-8cd5-4b01-9184-a06189b965a4
-ms.openlocfilehash: 012866e328433ec9511782c26a39265481ff4940
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8bdd16f5c3182e4217e195475bdb4a9a0f60fa6f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386509"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80164115"
 ---
-# <a name="compiler-warning-level-1-c4067"></a>Kompilátor upozornění (úroveň 1) C4067
+# <a name="compiler-warning-level-1-c4067"></a>Upozornění kompilátoru (úroveň 1) C4067
 
-> neočekávané tokeny direktivě preprocesoru – očekával se nový řádek
+> neočekávané tokeny po direktivě preprocesoru – očekával se nový řádek.
 
 ## <a name="remarks"></a>Poznámky
 
-Kompilátor najít a ignoruje znaky navíc direktivě preprocesoru. To může způsobovat žádné neočekávané znaky, i když běžných příčin je zapomenutý středník za direktivou. Komentáře nezpůsobí toto upozornění. **/Za** – možnost kompilátoru umožňuje toto upozornění pro další direktivy preprocesoru než výchozí hodnotu.
+Kompilátor nalezl a ignoroval nadbytečné znaky po direktivě preprocesoru. To může být způsobeno jakýmkoli neočekávaným znakem, i když běžnou příčinou je osamocený středník za direktivou. Komentáře nezpůsobují toto upozornění. Možnost kompilátoru **/za** umožňuje toto upozornění pro více direktiv preprocesoru, než je výchozí nastavení.
 
 ## <a name="example"></a>Příklad
 
@@ -39,7 +39,7 @@ int main()
 }
 ```
 
-Pokud chcete vyřešit toto upozornění, odstranění zapomenutý znaků nebo jejich přesunutím do blok komentáře. Některé C4067 upozornění, může se zakáže odebráním **/Za** – možnost kompilátoru.
+Chcete-li vyřešit toto upozornění, odstraňte osamocené znaky nebo je přesuňte do bloku komentáře. Některá upozornění C4067 mohou být zakázána odebráním možnosti kompilátoru **/za** .
 
 ```cpp
 // C4067b.cpp

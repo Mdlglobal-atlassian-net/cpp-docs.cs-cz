@@ -11,26 +11,26 @@ helpviewer_keywords:
 - long double
 - real*4 value
 ms.assetid: 537833e8-fe05-49fc-8169-55fd0314b195
-ms.openlocfilehash: de132dcf28747cd866229cff8972e2aed271a047
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.openlocfilehash: bb8523256c05479b303dec66ca79caa28e7cda03
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69630358"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169809"
 ---
 # <a name="ieee-floating-point-representation"></a>Reprezentace plovoucí desetinné čárky IEEE
 
-Microsoft C++ (MSVC) je konzistentní s numerickými standardy standardu IEEE. Standard IEEE-754 popisuje formáty s plovoucí desetinnou čárkou, způsob reprezentace reálných čísel v hardwaru. Existuje alespoň pět interních formátů pro čísla s plovoucí desetinnou čárkou, která jsou reprezentována v hardwaru cíleném kompilátorem MSVC, ale kompilátor používá pouze dva z nich. Formáty s *jednou přesností* (4 bajty) a *dvojitou přesností* (8 bajtů) se používají v MSVC. Jednoduchá přesnost je deklarována pomocí klíčového slova **float**. Dvojitá přesnost je deklarována pomocí klíčového slova **Double**. Standard IEEE také určuje formáty s *poloviční přesností* (2 bajty) a *čtyřnásobné* (16 bajtů), jakož i formát s dvojitou přesností (10 bajt), který některé C a C++ kompilátory implementují jako typ **Long.** datový typ Double. V kompilátoru MSVC je datový typ **Long Double** považován za odlišný typ, ale typ úložiště je mapován na hodnotu **Double**. Nicméně podpora vnitřních a sestavových aplikací pro výpočty používá jiné formáty, včetně formátu Double-Extended-Precision (10 bajtů), pokud to hardware podporuje.
+Microsoft C++ (MSVC) je konzistentní s numerickými standardy standardu IEEE. Standard IEEE-754 popisuje formáty s plovoucí desetinnou čárkou, způsob reprezentace reálných čísel v hardwaru. Existuje alespoň pět interních formátů pro čísla s plovoucí desetinnou čárkou, která jsou reprezentována v hardwaru cíleném kompilátorem MSVC, ale kompilátor používá pouze dva z nich. Formáty s *jednou přesností* (4 bajty) a *dvojitou přesností* (8 bajtů) se používají v MSVC. Jednoduchá přesnost je deklarována pomocí klíčového slova **float**. Dvojitá přesnost je deklarována pomocí klíčového slova **Double**. Standard IEEE také určuje formáty s *poloviční přesností* (2 bajty) a *čtyřnásobné* (16 bajtů), jakož i formát s *dvojitou* přesností (10 bajt), který některé jazyky C a C++ kompilátory implementují jako datový typ **Long Double** . V kompilátoru MSVC je datový typ **Long Double** považován za odlišný typ, ale typ úložiště je mapován na hodnotu **Double**. Nicméně podpora vnitřních a sestavových aplikací pro výpočty používá jiné formáty, včetně formátu Double-Extended-Precision (10 bajtů), pokud to hardware podporuje.
 
 Hodnoty jsou uloženy následujícím způsobem:
 
-|Value|Uloženo jako|
+|Hodnota|Uloženo jako|
 |-----------|---------------|
 |jednoduchá přesnost|bit znaménka, 8bitový exponent, 23 bitů mantisa|
 |Dvojitá přesnost|bit znaménka, 11 exponent, 52-bit mantisa|
 |Dvojitá rozšířená přesnost|bit znaménka, 15 bitů exponent, 64-bit mantisa|
 
-Ve formátech s jednoduchou přesností a dvojitou přesností se předpokládá první 1 část zlomku, která se nazývá *mantisa* (a někdy se označuje jako mantisa), která není uložená v paměti, takže hodnot jsou ve skutečnosti 24 nebo 53. bity, i když jsou uložené jenom 23 nebo 52 bitů. Formát s dvojitou přesností ve skutečnosti ukládá tento bit.
+Ve formátech s jednoduchou přesností a dvojitou přesností se předpokládá počáteční 1 v zlomkové části označované jako *mantisa* (a někdy označované jako *mantisa*), které nejsou uložené v paměti, takže hodnot jsou skutečně 24 nebo 53 bitů, a to i v případě, že jsou uložené jenom 23 nebo 52 bitů. Formát s dvojitou přesností ve skutečnosti ukládá tento bit.
 
 Exponenty jsou posunuty o polovinu možné hodnoty. To znamená, že odečtete tento posun od uloženého exponentu a získáte skutečný exponent. Pokud je uložený exponent menší než posun, je ve skutečnosti záporné exponent.
 
@@ -54,7 +54,7 @@ Formát pro různé velikosti je následující:
 |Dvojitá přesnost|`SXXXXXXX`|`XXXXMMMM`|`MMMMMMMM`|`MMMMMMMM`|...|`MMMMMMMM`|
 |Dvojitá rozšířená přesnost|`SXXXXXXX`|`XXXXXXXX`|`1MMMMMMM`|`MMMMMMMM`|...|`MMMMMMMM`|
 
-`S`představuje bit znaménka, `X`jsou posunutými exponenty `M`a jsou mantisa bity. Všimněte si, že bit nejvíce vlevo se předpokládá ve formátech s jednoduchou přesností a dvojitou přesností, ale je přítomný jako "1" v bajtu 3 ve formátu dvojité rozšířené přesnosti.
+`S` představuje bit znaménka, `X`jsou posunutými exponenty a `M`je mantisa bitů. Všimněte si, že bit nejvíce vlevo se předpokládá ve formátech s jednoduchou přesností a dvojitou přesností, ale je přítomný jako "1" v bajtu 3 ve formátu dvojité rozšířené přesnosti.
 
 Chcete-li binární bod správně posunout, nejprve odsuňte exponent a pak jeho binární bod napravo doprava nebo doleva o příslušný počet bitů.
 
@@ -76,7 +76,7 @@ Je možné vyjádřit čísla menší velikosti než nejmenší normalizované �
 
 ### <a name="nan---not-a-number"></a>NaN – nejedná se o číslo.
 
-Je možné znázornit hodnoty, které nejsou reálné číslo, například 0/0, ve formátu IEEE s plovoucí desetinnou čárkou. Hodnota tohoto druhu se nazývá *NaN*. NaN je reprezentovaná exponentem všech a nenulovým mantisa. Existují dva druhy hodnoty NaN, *quiet* hodnoty NaN, QNaNs a signalizace hodnoty NaN nebo SNaNs. Tiché hodnoty NaN mít v mantisa první, a obecně se šíří prostřednictvím výrazu. Představují neurčitou hodnotu, například výsledek dělení podle nekonečna nebo vynásobení nekonečna nulou. signalizace hodnoty NaN má v mantisa počáteční nulu. Používají se pro operace, které nejsou platné, k signalizaci hardwarové výjimky s plovoucí desetinnou čárkou.
+Je možné znázornit hodnoty, které nejsou reálné číslo, například 0/0, ve formátu IEEE s plovoucí desetinnou čárkou. Hodnota tohoto druhu se nazývá *NaN*. NaN je reprezentovaná exponentem všech a nenulovým mantisa. Existují dva druhy hodnoty NaN, *quiet* hodnoty NaN, QNaNs a *signalizace* hodnoty NaN nebo SNaNs. Tiché hodnoty NaN mít v mantisa první, a obecně se šíří prostřednictvím výrazu. Představují neurčitou hodnotu, například výsledek dělení podle nekonečna nebo vynásobení nekonečna nulou. signalizace hodnoty NaN má v mantisa počáteční nulu. Používají se pro operace, které nejsou platné, k signalizaci hardwarové výjimky s plovoucí desetinnou čárkou.
 
 ## <a name="examples"></a>Příklady
 
@@ -84,58 +84,58 @@ Níže jsou uvedeny některé příklady ve formátu s jednou přesností:
 
 - Pro hodnotu 2 je bit znaménka nula a uložený exponent je 128 nebo 1000 0000 v binárním souboru, což je 127 plus 1. Uložený binární mantisa je (1.) 000 0000 0000 0000 0000 0000, který má implicitní úvodní 1 a binární bod, takže skutečný mantisa je jeden.
 
-   |Value|Receptuře|Binární reprezentace|Šestnáctková hodnota|
+   |Hodnota|Vzorec|Binární reprezentace|Šestnáctková hodnota|
    |-|-|-|-|
    |2|1 * 2<sup>1</sup>|0100 0000 0000 0000 0000 0000 0000 0000|0x40000000|
 
 - Hodnota – 2. Stejné jako + 2 s tím rozdílem, že je bit znaménka nastaven. To platí pro záporné číslo s plovoucí desetinnou čárkou ve formátu IEEE.
 
-   |Value|Receptuře|Binární reprezentace|Šestnáctková hodnota|
+   |Hodnota|Vzorec|Binární reprezentace|Šestnáctková hodnota|
    |-|-|-|-|
    |-2|-1 * 2<sup>1</sup>|1100 0000 0000 0000 0000 0000 0000 0000|0xC0000000|
 
 - Hodnota 4. Stejné mantisa, exponent se zvyšuje o jednu (hodnota s posunutím je 129 nebo 100 0000 1 v binárním souboru.
 
-   |Value|Receptuře|Binární reprezentace|Šestnáctková hodnota|
+   |Hodnota|Vzorec|Binární reprezentace|Šestnáctková hodnota|
    |-|-|-|-|
    |4|1 * 2<sup>2</sup>|0100 0000 1000 0000 0000 0000 0000 0000|0x40800000|
 
-- Hodnota 6. Stejné exponenty, mantisa je větší po polovině – je (1.) 100 0000 ... 0000 0000, což znamená, že se jedná o binární zlomek, který je 1 1/2, protože hodnoty zlomkových číslic jsou 1/2, 1/4, 1/8 a tak dále.
+- Hodnota 6. Stejné exponenty, mantisa je větší po polovině – je (1.) 100 0000... 0000 0000, což znamená, že se jedná o binární zlomek, který je 1 1/2, protože hodnoty zlomkových číslic jsou 1/2, 1/4, 1/8 a tak dále.
 
-   |Value|Receptuře|Binární reprezentace|Šestnáctková hodnota|
+   |Hodnota|Vzorec|Binární reprezentace|Šestnáctková hodnota|
    |-|-|-|-|
    |6|1,5 * 2<sup>2</sup>|0100 0000 1100 0000 0000 0000 0000 0000|0x40C00000|
 
 - Hodnota 1. Stejné mantisa jako jiné mocniny dvou, je nejnižším exponentem jedna méně než dvě v 127 nebo 011 1111 1 v binárním souboru.
 
-   |Value|Receptuře|Binární reprezentace|Šestnáctková hodnota|
+   |Hodnota|Vzorec|Binární reprezentace|Šestnáctková hodnota|
    |-|-|-|-|
    |1|1 * 2<sup>0</sup>|0011 1111 1000 0000 0000 0000 0000 0000|0x3F800000|
 
-- Hodnota 0,75. Posunutý exponent je 126, 011 1111 0 v binárním souboru a mantisa je (1.) 100 0000 ... 0000 0000, což je 1 1/2.
+- Hodnota 0,75. Posunutý exponent je 126, 011 1111 0 v binárním souboru a mantisa je (1.) 100 0000... 0000 0000, což je 1 1/2.
 
-   |Value|Receptuře|Binární reprezentace|Šestnáctková hodnota|
+   |Hodnota|Vzorec|Binární reprezentace|Šestnáctková hodnota|
    |-|-|-|-|
    |0.75|1,5 * 2<sup>– 1</sup>|0011 1111 0100 0000 0000 0000 0000 0000|0x3F400000|
 
 - Hodnota 2,5. Přesně stejný jako u dvou s tím rozdílem, že bit, který představuje 1/4, je nastaven v mantisa.
 
-   |Value|Receptuře|Binární reprezentace|Šestnáctková hodnota|
+   |Hodnota|Vzorec|Binární reprezentace|Šestnáctková hodnota|
    |-|-|-|-|
-   |2.5|1,25 * 2<sup>1</sup>|0100 0000 0010 0000 0000 0000 0000 0000|0x40200000|
+   |2,5|1,25 * 2<sup>1</sup>|0100 0000 0010 0000 0000 0000 0000 0000|0x40200000|
 
 - 1/10 je opakující se zlomky v binárním formátu. Mantisa je pouze nesmělí abyste 1,6 a posunutý exponent říká, že 1,6 má být děleno 16 (v binárním souboru je 011 1101 1, což je 123 v desítkovém formátu). Skutečný exponent je 123-127 =-4, což znamená, že faktor, kterým se má vynásobit, je 2<sup>– 4</sup> = 1/16. Všimněte si, že uložené mantisa se zaokrouhlují nahoru v posledním bitu – pokus vyjádřit co nejblížeelné číslo co nejpřesněji. (Důvod 1/10 a 1/100 není přesně reprezentovatelné v binárním souboru je podobný důvodu, že 1/3 není přesně reprezentovatelné v desítkové soustavě.)
 
-   |Value|Receptuře|Binární reprezentace|Šestnáctková hodnota|
+   |Hodnota|Vzorec|Binární reprezentace|Šestnáctková hodnota|
    |-|-|-|-|
-   |0.1|1,6 * 2<sup>– 4</sup>|0011 1101 1100 1100 1100 1100 1100 1101|0x3DCCCCCD|
+   |0,1|1,6 * 2<sup>– 4</sup>|0011 1101 1100 1100 1100 1100 1100 1101|0x3DCCCCCD|
 
 - Nula je zvláštní případ, který používá vzorec pro minimální možnou reprezentovatelné kladné hodnoty, což je nula.
 
-   |Value|Receptuře|Binární reprezentace|Šestnáctková hodnota|
+   |Hodnota|Vzorec|Binární reprezentace|Šestnáctková hodnota|
    |-|-|-|-|
-   |0|1 * 2<sup>-128</sup>|0000 0000 0000 0000 0000 0000 0000 0000|0x00000000|
+   |0|1 * 2<sup>– 128</sup>|0000 0000 0000 0000 0000 0000 0000 0000|0x00000000|
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Proč čísla s plovoucí desetinnou čárkou můžou ztratit přesnost](why-floating-point-numbers-may-lose-precision.md)

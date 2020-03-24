@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - RC2144
 ms.assetid: 1b3ff39a-92cd-4a04-b1a3-b1fa6a805813
-ms.openlocfilehash: deabd639e04d5b78b398cda9245e9726e2124740
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1b080916642fc1be4b22820668c4cb4137675425
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62173467"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80191194"
 ---
 # <a name="resource-compiler-error-rc2144"></a>Chyba kompilátoru prostředků RC2144
 
-Primární ID jazyka není číslo
+ID primárního jazyka není číslo.
 
-Primární ID jazyka musí být ID šestnáctkové jazyka. Zobrazit [jazyka a země/Region Strings](../../c-runtime-library/locale-names-languages-and-country-region-strings.md) v *Run-Time Library Reference* seznam platných identifikátorů jazyka.
+ID primárního jazyka musí být šestnáctkové ID jazyka. Seznam platných ID jazyků naleznete v tématu [řetězce jazyka a země/oblasti](../../c-runtime-library/locale-names-languages-and-country-region-strings.md) v *Referenční příručce ke knihovně run-time* .
 
-K této chybě může dojít také byl přidán a odstranit ze zdroje. Soubor RC pomocí nástroje. Chcete-li tento problém vyřešit, otevřete. RC souboru v textovém editoru a vyčistit všechny nevyužité prostředky ručně.
+K této chybě může dojít také v případě, že byly prostředky přidány a odstraněny z. RC soubor pomocí nástroje. Chcete-li tento problém vyřešit, otevřete. Soubor RC v textovém editoru a čistě nepoužívané prostředky vyčistěte ručně.

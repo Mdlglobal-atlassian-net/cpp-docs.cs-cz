@@ -1,20 +1,20 @@
 ---
-title: Kompilátor upozornění (úroveň 1) C4410
+title: Upozornění kompilátoru (úroveň 1) C4410
 ms.date: 11/04/2016
 f1_keywords:
 - C4410
 helpviewer_keywords:
 - C4410
 ms.assetid: 7dcdb720-118a-4823-ba73-575f6ad79a71
-ms.openlocfilehash: dfe15dc125a1ca9ca3faec74a5cdb40e27d80c0d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8fe813bfd19f6f7fa3020910d8f2913afd032aaa
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408300"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80162436"
 ---
-# <a name="compiler-warning-level-1-c4410"></a>Kompilátor upozornění (úroveň 1) C4410
+# <a name="compiler-warning-level-1-c4410"></a>Upozornění kompilátoru (úroveň 1) C4410
 
 Neplatná velikost pro operand
 
-Jeden z operandů na instrukci má nesprávnou velikost. Právní nejmenší velikost pro operand byl použit.
+Jeden z operandů instrukce měl nesprávnou velikost. Byla použita nejmenší platná velikost pro operand.

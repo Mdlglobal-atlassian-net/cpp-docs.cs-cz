@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C2095
 ms.assetid: 44f8ada1-974f-4e81-a408-33ac6695aa53
-ms.openlocfilehash: 192e6b4de596ddffb39ba20f60217904cd335c9f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 327f4406be241f3aff89fd357fc103398401ea8f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62377030"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80207659"
 ---
 # <a name="compiler-error-c2095"></a>Chyba kompilátoru C2095
 
-'function': skutečný parametr má typ void: Parametr 'number'
+' function ': skutečný parametr má typ ' void ': parametr ' Number '
 
-Parametr předaný funkci je typ `void`, což není povoleno. Použije ukazatel na void ( `void *`) místo toho.
+Parametr předaný funkci je typu `void`, což není povoleno. Místo toho použijte ukazatel na void (`void *`).
 
-`number` Označuje, který parametr `void`.
+`number` určuje, který parametr je `void`.

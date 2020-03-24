@@ -1,21 +1,21 @@
 ---
-title: support_error_info – (C++ atributů COM)
+title: support_error_info (C++ atribut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.support_error_info
 helpviewer_keywords:
 - support_error_info attribute
 ms.assetid: 20a2b55c-4738-4b35-a71d-e5e9c3a7e3bc
-ms.openlocfilehash: c05b6735c5c29e44f3cc190a150a5efe02025519
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e61ef2efbdc4039f496d7ffbcccc37cc8d111935
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407286"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166143"
 ---
-# <a name="supporterrorinfo"></a>support_error_info
+# <a name="support_error_info"></a>support_error_info
 
-Implementuje podporu pro vracení podrobné chyby.
+Implementuje podporu pro vracení podrobných chyb.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -26,17 +26,17 @@ Implementuje podporu pro vracení podrobné chyby.
 ### <a name="parameters"></a>Parametry
 
 *error_interface*<br/>
-Identifikátor implementace rozhraní `IErrorInfo`.
+Identifikátor rozhraní, které implementuje `IErrorInfo`.
 
 ## <a name="remarks"></a>Poznámky
 
-**Support_error_info –** C++ atribut implementuje podporu pro vracení podrobné, kontextové chyby se tak cílový objekt do klienta. Pro objekt, který má podporovat chyby, metody `IErrorInfo` pomocí objektu musí implementovat rozhraní. Další informace najdete v tématu [podpora IDispatch a IErrorInfo](../../atl/supporting-idispatch-and-ierrorinfo.md).
+Atribut **support_error_info** C++ implementuje podporu pro vracení podrobných kontextových chyb zjištěných cílovým objektem klientovi. Aby objekt podporoval chyby, musí být metody rozhraní `IErrorInfo` implementovány objektem. Další informace najdete v tématu [Podpora rozhraní IDispatch a IErrorInfo](../../atl/supporting-idispatch-and-ierrorinfo.md).
 
-Přidá tento atribut [isupporterrorinfoimpl –](../../atl/reference/isupporterrorinfoimpl-class.md) třídu jako základní třídu na cílový objekt. Výsledkem je výchozí implementace `ISupportErrorInfo` a slouží k tomu jedno rozhraní generuje chyby na objekt.
+Tento atribut přidá třídu [ISupportErrorInfoImpl](../../atl/reference/isupporterrorinfoimpl-class.md) jako základní třídu do cílového objektu. Výsledkem je výchozí implementace `ISupportErrorInfo` a může být použita, pokud jedno rozhraní generuje chyby v objektu.
 
 ## <a name="example"></a>Příklad
 
-Následující kód přidává podporu výchozí `ISupportErrorInfo` rozhraní při `CMyClass` objektu.
+Následující kód přidá výchozí podporu rozhraní `ISupportErrorInfo` do objektu `CMyClass`.
 
 ```cpp
 // cpp_attr_ref_support_error_info.cpp
@@ -60,18 +60,18 @@ class CMyClass
 
 ## <a name="requirements"></a>Požadavky
 
-### <a name="attribute-context"></a>Atribut kontextu
+### <a name="attribute-context"></a>Kontext atributu
 
 |||
 |-|-|
 |**Platí pro**|**class**|
-|**Opakovatelné**|Ano|
-|**Vyžadované atributy**|Žádné|
+|**REPEATABLE**|Ano|
+|**Požadované atributy**|Žádné|
 |**Neplatné atributy**|Žádné|
 
-Další informace o kontexty atributů najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
+Další informace o kontextech atributů naleznete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [COM – atributy](com-attributes.md)<br/>
 [Atributy třídy](class-attributes.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - aggregate objects [C++], aggregates attribute
 - aggregates [C++]
 ms.assetid: 67a084c9-941f-474b-a029-9c93b38ebe9a
-ms.openlocfilehash: c9e3f84fbc781bd5187ae0c3461a6c8d68a29aa0
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 08e623d84553f9fcf556c9cf480c1816c7300460
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501874"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168496"
 ---
 # <a name="aggregates"></a>aggregates
 
@@ -32,13 +32,13 @@ Označuje, že objekt agreguje objekt určený identifikátorem CLSID.
 Určuje identifikátor CLSID agregovatelné objektu.
 
 *variable_name*<br/>
-Název proměnné, která má být vložena. Tato proměnná obsahuje `IUnknown` objekt, který je agregován.
+Název proměnné, která má být vložena. Tato proměnná obsahuje `IUnknown` objektu, který se agreguje.
 
 ## <a name="remarks"></a>Poznámky
 
-Při použití na objekt, **agreguje** C++ atribut implementuje vnější obálku pro objekt, který je agregován (určený parametrem `clsid`).
+Při použití na objekt, **agreguje** C++ atribut implementuje vnější obálku pro objekt, který je agregován (určený pomocí `clsid`).
 
-Tento atribut vyžaduje, aby atribut [Coclass](coclass.md), [ProgID](progid.md)nebo [vi_progid](vi-progid.md) (nebo jiný atribut, který implikuje jeden z nich) byl také použit pro stejný prvek. Je-li použit libovolný atribut, budou automaticky použity ostatní dva. Například pokud `progid` se `vi_progid` používá a `coclass` jsou také aplikovány.
+Tento atribut vyžaduje, aby atribut [Coclass](coclass.md), [ProgID](progid.md)nebo [vi_progid](vi-progid.md) (nebo jiný atribut, který implikuje jednu z nich) byl také použit pro stejný prvek. Je-li použit libovolný atribut, budou automaticky použity ostatní dva. Například pokud je použita `progid`, jsou použita také `vi_progid` a `coclass`.
 
 ### <a name="atl-projects"></a>Projekty ATL
 
@@ -85,12 +85,12 @@ struct CObject : IObject
 |-|-|
 |**Platí pro**|**Třída**, **Struktura**|
 |**REPEATABLE**|Ano|
-|**Požadované atributy**|Jednu nebo více z následujících možností: `coclass`, `progid`, nebo `vi_progid`.|
+|**Požadované atributy**|Jednu nebo více následujících možností: `coclass`, `progid`nebo `vi_progid`.|
 |**Neplatné atributy**|Žádné|
 
-Další informace o kontextech atributů naleznete v tématu kontexty [atributů](cpp-attributes-com-net.md#contexts).
+Další informace o kontextech atributů naleznete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [COM – atributy](com-attributes.md)<br/>
 [Atributy třídy](class-attributes.md)<br/>

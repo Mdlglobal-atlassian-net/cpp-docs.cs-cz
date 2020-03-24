@@ -9,22 +9,22 @@ helpviewer_keywords:
 - labels, in __asm blocks
 - jumping to labels in inline assembly
 ms.assetid: 36c18b97-8981-4631-9dfd-af6c14a04297
-ms.openlocfilehash: 7653dc990e2f4b490bcbe333ed6f7586ac966d2e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 199156a08af13f4a70793609b37c70b0c95bf9ba
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62166903"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169328"
 ---
 # <a name="jumping-to-labels-in-inline-assembly"></a>Přechod na popisky v sestavení inline assemblerem
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
-Běžné jazyka C nebo C++ popisek, popisek v, jako jsou `__asm` bloku rozsahem v rámci funkce, ve kterém je definována (nikoli pouze v bloku). Obě pokyny k sestavení a `goto` příkazy Přejít na popisky uvnitř nebo vně `__asm` bloku.
+Podobně jako běžné označení C C++ nebo Label má popisek v `__asm` bloku rozsah celé funkce, ve které je definován (nikoli pouze v bloku). Příkazy sestavení i příkazy `goto` mohou přejít na popisky uvnitř nebo vně bloku `__asm`.
 
-Návěští definovaná ve `__asm` bloků nejsou malá a velká písmena; obě `goto` prohlášení a pokyny k sestavení mohou odkazovat na tyto popisky bez ohledu na případ. Popisky C a C++ jsou malá a velká písmena pouze při použití `goto` příkazy. Pokyny k sestavení můžete přejít na popisek jazyka C nebo C++ bez ohledu na případ.
+Popisky definované v blocích `__asm` nerozlišují velká a malá písmena. příkazy `goto` a pokyny k sestavení mohou na tyto štítky odkazovat bez ohledu na velikost písmen. Popisky C C++ a rozlišují velká a malá písmena, pokud jsou používány příkazy `goto`. Pokyny k sestavení mohou přejít na označení C C++ nebo Label bez ohledu na velikost písmen.
 
-Následující kód ukazuje všechny permutací:
+Následující kód ukazuje všechny permutace:
 
 ```cpp
 void func( void )
@@ -54,7 +54,7 @@ int main()
 }
 ```
 
-Nepoužívejte názvy funkce knihovny C jako popisky v `__asm` bloky. Například můžete mít tendenci používat `exit` jako popisek, následujícím způsobem:
+Nepoužívejte názvy funkcí knihoven jazyka C jako popisky v `__asm`ch blocích. Můžete například zvážit použití `exit` jako popisku následujícím způsobem:
 
 ```cpp
 ; BAD TECHNIQUE: using library function name as label
@@ -66,9 +66,9 @@ exit:
    ; More __asm code follows
 ```
 
-Protože **ukončit** je název funkce knihovny C, tento kód může způsobit přechod **ukončit** místo funkce do požadovaného umístění.
+Vzhledem k tomu, že funkce **Exit** je názvem funkce knihovny jazyka C, může tento kód způsobit skok na funkci **Exit** místo do požadovaného umístění.
 
-Stejně jako v MASM programy, bude symbol dolaru (`$`) slouží jako aktuální umístění čítače. Popisek pro instrukci aktuálně připojení, přičemž je. V `__asm` bloky, nejčastěji je, aby dlouho podmíněné přeskakování:
+Jako v programech MASM program symbol dolaru (`$`) slouží jako čítač aktuálního umístění. Je to popisek pro instrukci, která se právě sestavuje. V `__asm`ch blocích je hlavním využitím udělat dlouhý podmíněný skok:
 
 ```cpp
    jne $+5 ; next instruction is 5 bytes long
@@ -79,8 +79,8 @@ Stejně jako v MASM programy, bude symbol dolaru (`$`) slouží jako aktuální 
 farlabel:
 ```
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Vkládaný assembler](../../assembler/inline/inline-assembler.md)<br/>

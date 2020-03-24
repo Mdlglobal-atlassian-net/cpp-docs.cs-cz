@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - import attribute
 ms.assetid: ebf07cae-39fb-4047-8b57-54af0a9a83de
-ms.openlocfilehash: f9ed80bdcc04302c0dee85935f377c8e3dbfd37f
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: f2a0aa9a68c081e83a7a5278aa37a7fddac85416
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514617"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166833"
 ---
 # <a name="import"></a>import
 
@@ -32,9 +32,9 @@ Název souboru. idl, který chcete importovat do knihovny typů aktuálního pro
 
 ## <a name="remarks"></a>Poznámky
 
-Atribut **Import** C++ způsobí, že je `import "docobj.idl"` příkaz umístěn pod příkazem v generovaném souboru IDL. `#import` Atribut **Import** má stejné funkce jako atribut [Import](/windows/win32/Midl/import) MIDL.
+Atribut **Import** C++ způsobí, že je příkaz `#import` umístěn pod příkazem `import "docobj.idl"` v generovaném souboru IDL. Atribut **Import** má stejné funkce jako atribut [Import](/windows/win32/Midl/import) MIDL.
 
-Atribut **Import** umístí zadaný soubor pouze do souboru. idl, který bude vytvořen vaším projektem; atribut **Import** neumožňuje volat konstrukce v zadaném souboru ze zdrojového kódu v projektu.  Chcete-li volat konstrukce v zadaném souboru ze zdrojového kódu v projektu, buď použijte [#import](../../preprocessor/hash-import-directive-cpp.md) a `embedded_idl` atribut nebo můžete zahrnout soubor. h pro *idl_file*, pokud existuje soubor. h.
+Atribut **Import** umístí zadaný soubor pouze do souboru. idl, který bude vytvořen vaším projektem; atribut **Import** neumožňuje volat konstrukce v zadaném souboru ze zdrojového kódu v projektu.  Chcete-li volat konstrukce v zadaném souboru ze zdrojového kódu v projektu, buď použijte [#import](../../preprocessor/hash-import-directive-cpp.md) a atribut `embedded_idl` nebo můžete zahrnout soubor. h pro *idl_file*, pokud existuje soubor. h.
 
 ## <a name="example"></a>Příklad
 
@@ -73,7 +73,7 @@ library MyLib {
 
 Další informace naleznete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [IDL – atributy](idl-attributes.md)<br/>
 [Samostatné atributy](stand-alone-attributes.md)<br/>

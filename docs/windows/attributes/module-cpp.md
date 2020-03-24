@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - module attributes
 ms.assetid: 02223b2a-62b5-4262-832f-564b1e11e58e
-ms.openlocfilehash: daa0ae4aea5ff2a1a3312efcf3c39f43b541abf6
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: e93073a1728063038ddd4e28dbb313854ee3c8c5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514921"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166689"
 ---
 # <a name="module-c"></a>module (C++)
 
@@ -28,15 +28,15 @@ Definuje blok knihovny v souboru. idl.
 *type*<br/>
 Volitelné Může to být jedna z následujících:
 
-- `dll`Přidá funkce a třídy, které umožňují výsledné knihovně DLL fungovat jako vnitroprocesové server COM. Jedná se o výchozí hodnotu.
+- `dll` přidává funkce a třídy, které umožňují výsledné knihovně DLL fungovat jako vnitroprocesové server COM. Toto je výchozí hodnota.
 
-- `exe`Přidá funkce a třídy, které umožní výslednému spustitelnému souboru fungovat jako nezpracovaný server COM.
+- `exe` přidává funkce a třídy, které umožňují výslednému spustitelnému souboru fungovat jako nezpracovaný server COM.
 
-- `service`Přidá funkce a třídy, které umožní výslednému spustitelnému souboru fungovat jako služba NT.
+- `service` přidá funkce a třídy, které umožní výslednému spustitelnému souboru fungovat jako služba NT.
 
-- `unspecified`Zakáže vkládání kódu ATL, který souvisí s atributem Module: vložení třídy modulu ATL, globálních instancí _AtlModule a funkcí vstupního bodu. Nezakáže vkládání kódu ATL z důvodu jiných atributů v projektu.
+- `unspecified` zakáže vkládání kódu ATL, který se vztahuje k atributu modulu: vkládání třídy modulu ATL, globální instance _AtlModule a funkce vstupního bodu. Nezakáže vkládání kódu ATL z důvodu jiných atributů v projektu.
 
-*name*<br/>
+*Jméno*<br/>
 Volitelné Název bloku knihovny.
 
 *version*<br/>
@@ -67,10 +67,10 @@ Volitelné **ID nápovědu** pro tuto knihovnu typů
 Volitelné Další informace najdete v tématu [helpstringcontext](helpstringcontext.md) .
 
 *hidden*<br/>
-Volitelné Zabraňuje zobrazení celé knihovny. Toto použití je určeno pro použití s ovládacími prvky. Hostitelé musí vytvořit novou knihovnu typů, která ovládací prvek zabalí pomocí rozšířených vlastností. Další informace [](/windows/win32/Midl/hidden) naleznete u skrytého atributu MIDL.
+Volitelné Zabraňuje zobrazení celé knihovny. Toto použití je určeno pro použití s ovládacími prvky. Hostitelé musí vytvořit novou knihovnu typů, která ovládací prvek zabalí pomocí rozšířených vlastností. Další informace naleznete u [skrytého](/windows/win32/Midl/hidden) atributu MIDL.
 
 *restricted*<br/>
-Volitelné Členy knihovny nelze volat libovolně. Další informace [](/windows/win32/Midl/restricted) naleznete u atributu Restricted MIDL.
+Volitelné Členy knihovny nelze volat libovolně. Další informace naleznete u atributu [Restricted](/windows/win32/Midl/restricted) MIDL.
 
 *custom*<br/>
 Volitelné Jeden nebo více atributů; To se podobá [vlastnímu](custom-cpp.md) atributu. První parametr *vlastní* je identifikátor GUID atributu. Příklad:
@@ -95,7 +95,7 @@ V souboru IDL je povolen jeden blok knihovny. Bude sloučeno více položek modu
 
 Pokud se tento atribut používá v rámci projektu, který používá ATL, chování atributu se změní. Kromě výše uvedeného chování atribut také vloží globální objekt (nazývaný `_AtlModule`) správného typu a další kód podpory. Pokud je atribut samostatný, vloží třídu odvozenou ze správného typu modulu. Pokud je atribut použit pro třídu, přidá základní třídu správného typu modulu. Správný typ je určen hodnotou parametru *typu* :
 
-- `type` = **DLL**
+- **knihovna dll** `type` = 
 
    [CAtlDllModuleT](../../atl/reference/catldllmodulet-class.md) se používá jako základní třída a standardní vstupní body knihovny DLL vyžadované pro server com. Tyto vstupní body jsou [DllMain](/windows/win32/Dlls/dllmain), [DllRegisterServer](/windows/win32/api/olectl/nf-olectl-dllregisterserver), [DLLUnregisterServer](/windows/win32/api/olectl/nf-olectl-dllunregisterserver), [DllCanUnloadNow](/windows/win32/api/combaseapi/nf-combaseapi-dllcanunloadnow)a [DllGetClassObject](/previous-versions//dd797891\(v=vs.85\)).
 
@@ -103,11 +103,11 @@ Pokud se tento atribut používá v rámci projektu, který používá ATL, chov
 
    [CAtlExeModuleT](../../atl/reference/catlexemodulet-class.md) se používá jako základní třída a standardní spustitelný vstupní bod [WinMain](/windows/win32/api/winbase/nf-winbase-winmain).
 
-- `type` = **službám**
+- **služba** `type` = 
 
    [CAtlServiceModuleT](../../atl/reference/catlservicemodulet-class.md) se používá jako základní třída a standardní spustitelný vstupní bod [WinMain](/windows/win32/api/winbase/nf-winbase-winmain).
 
-- `type` = **neurčené**
+- **neurčený** `type` = 
 
    Zakáže vkládání kódu ATL, který souvisí s atributem Module.
 
@@ -159,7 +159,7 @@ BOOL WINAPI DllMain(DWORD dwReason, LPVOID lpReserved) {
 
 Další informace naleznete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [IDL – atributy](idl-attributes.md)<br/>
 [Atributy třídy](class-attributes.md)<br/>

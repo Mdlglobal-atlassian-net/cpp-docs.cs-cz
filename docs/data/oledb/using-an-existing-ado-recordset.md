@@ -6,18 +6,18 @@ helpviewer_keywords:
 - OLE DB consumer templates, ADO recordsets
 - recordsets [C++], using in OLE DB
 ms.assetid: a9b1de8a-d379-49b1-a26e-578741e9f6a8
-ms.openlocfilehash: eb558bb319bb5ddb61d0383846099d708f99c627
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 48f6eb3bac34b37f495b9492e19b4197ed69cca3
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389005"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209349"
 ---
 # <a name="using-an-existing-ado-recordset"></a>Použití existující sady záznamů ADO
 
-Pokud chcete kombinovat technologie OLE DB – šablony příjemce a objekty aktivní Data (ADO), použijte ADO otevřít sadu záznamů (odpovídající sady řádků v šablony příjemce technologie OLE DB). Až budete mít na sadu záznamů, proveďte postup pro připojení sady řádků OLE DB:
+Ke smíchání OLE DBch zákaznických šablon a objektů ADO (Active Data Objects) použijte objekty ADO k otevření sady záznamů (odpovídající sadě řádků v šablonách spotřebitelů OLE DB). Pokud máte sadu záznamů, připojte se k OLE DB sadě řádků následujícím způsobem:
 
-1. Volání `QueryInterface` pro `IRowset` a `IAccessor` ukazatele.
+1. Zavolejte `QueryInterface` pro ukazatele `IRowset` a `IAccessor`.
 
     ```cpp
     IRowset* lpRowset = NULL;
@@ -27,9 +27,9 @@ Pokud chcete kombinovat technologie OLE DB – šablony příjemce a objekty akt
     ```
 
     > [!NOTE]
-    > *lpUnk* odkazuje `IUnknown` objekt sady záznamů ADO.
+    > *lpUnk* odkazuje na objekt `IUnknown` sady záznamů ADO.
 
-1. Připojení k jejich příslušné třídy šablony příjemce technologie OLE DB přistupující objekt a řádků.
+1. Připojte přistupující objekt a sadu řádků ke svým příslušným OLE DB tříd šablon příjemce.
 
     ```cpp
     CRowset rs;
@@ -40,6 +40,6 @@ Pokud chcete kombinovat technologie OLE DB – šablony příjemce a objekty akt
     rs.SetAccessor(accessor);
     ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Použití přístupových objektů](../../data/oledb/using-accessors.md)

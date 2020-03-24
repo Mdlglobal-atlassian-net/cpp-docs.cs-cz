@@ -1,20 +1,20 @@
 ---
-title: Kompilátor upozornění (úroveň 1) C4026
+title: Upozornění kompilátoru (úroveň 1) C4026
 ms.date: 11/04/2016
 f1_keywords:
 - C4026
 helpviewer_keywords:
 - C4026
 ms.assetid: 2c8ff616-8d7f-4784-8037-77f8b6a67698
-ms.openlocfilehash: a81aec1e65322acdbdbf7279c2da89a63ac44eca
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 728f68a62b83a5a5da7c031208f007ee364e41da
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62151809"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80164492"
 ---
-# <a name="compiler-warning-level-1-c4026"></a>Kompilátor upozornění (úroveň 1) C4026
+# <a name="compiler-warning-level-1-c4026"></a>Upozornění kompilátoru (úroveň 1) C4026
 
-funkce deklarovaná pomocí seznamu formálních parametrů.
+funkce deklarovaná pomocí seznamu formálních parametrů
 
-Deklarace funkce má formální parametry, ale nikoli definice funkce. Následných volání této funkce se předpokládá, že funkce nepřebírá žádné parametry.
+Deklarace funkce má formální parametry, ale definice funkce ne. Následná volání této funkce předpokládají, že funkce nepřijímá žádné parametry.

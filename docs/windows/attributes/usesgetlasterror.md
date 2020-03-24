@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - usesgetlasterror attribute
 ms.assetid: d149e33d-35a7-46cb-9137-ae6883d86122
-ms.openlocfilehash: b14316bd929f4b41b13a76c41e94b31b7534e9d8
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: f58929db01a1710e811a973c0559ad29b242b4eb
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69513894"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166130"
 ---
 # <a name="usesgetlasterror"></a>usesgetlasterror
 
-Říká volajícímu, že pokud při volání této funkce dojde k chybě, volající pak může zavolat `GetLastError` , aby získal kód chyby.
+Říká volajícímu, že pokud při volání této funkce dojde k chybě, volající pak může zavolat `GetLastError`, aby získal kód chyby.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -42,8 +42,8 @@ Ukázku použití **usesgetlasterror**najdete v příkladu [idl_module](idl-modu
 |**Požadované atributy**|Žádné|
 |**Neplatné atributy**|Žádné|
 
-Další informace o kontextech atributů naleznete v tématu kontexty [atributů](cpp-attributes-com-net.md#contexts).
+Další informace o kontextech atributů naleznete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [IDL – atributy](idl-attributes.md)

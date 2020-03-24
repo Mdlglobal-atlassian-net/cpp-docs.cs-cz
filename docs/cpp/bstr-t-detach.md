@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - Detach method [C++]
 ms.assetid: cc8284bd-f68b-4fff-b2e6-ce8354dabf8b
-ms.openlocfilehash: 51561c6f7cf5ba49c86f818d925db548438b2981
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e56ad29ae9e7fdcf7e8d354bda570364c7be8901
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386171"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181262"
 ---
-# <a name="bstrtdetach"></a>_bstr_t::Detach
+# <a name="_bstr_tdetach"></a>_bstr_t::Detach
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
-Vrátí `BSTR` uzavřenou `_bstr_t` a odpojí `BSTR` z `_bstr_t`.
+Vrátí `BSTR` zabalenou `_bstr_t` a odpojí `BSTR` od `_bstr_t`.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -31,10 +31,10 @@ BSTR Detach( ) throw;
 
 ## <a name="example"></a>Příklad
 
-Zobrazit [_bstr_t::Assign](../cpp/bstr-t-assign.md) příklad použití **odpojit**.
+Příklad použití operace **detach**naleznete v tématu [_Bstr_t:: Assign](../cpp/bstr-t-assign.md) .
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [_bstr_t – třída](../cpp/bstr-t-class.md)

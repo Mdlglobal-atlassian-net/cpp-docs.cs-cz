@@ -9,12 +9,12 @@ helpviewer_keywords:
 - declaring classes [C++]
 - declarations, nested classes
 ms.assetid: c02e471d-b7f9-41b8-8ef6-2323f006dbd5
-ms.openlocfilehash: 0ffe1077da76d7524ce99d825e97f68a031ca315
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a1464ce9ca8349550160c768265c1c4eada93209
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62301549"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80161160"
 ---
 # <a name="nested-class-declarations"></a>Vnořené deklarace tříd
 
@@ -90,7 +90,7 @@ int main()
 }
 ```
 
-## <a name="access-privilege-in-nested-classes"></a>Přístupová oprávnění ve vnořených třídách
+## <a name="access-privilege-in-nested-classes"></a>Přístupové oprávnění ve vnořených třídách
 
 Vnoření třídy v rámci jiné třídy nedává zvláštní oprávnění k přístupu členským funkcím vnořené třídy. Podobně členské funkce ohraničující třídy nemají zvláštní přístup ke členům vnořené třídy.
 
@@ -134,13 +134,13 @@ int main()
 }
 ```
 
-V předchozím příkladu *qualified-type-name* syntaxe se používá k deklaraci názvu funkce. Deklarace:
+V předchozím příkladu je k deklaraci názvu funkce použita syntaxe *kvalifikovaného typu názvu* . Deklarace:
 
 ```cpp
 BufferedIO::BufferedInput::read()
 ```
 
-znamená „funkce `read`, která je členem třídy `BufferedInput`, jež se nachází v oboru třídy `BufferedIO`“. Protože tato deklarace používá *qualified-type-name* syntaxi, je možné následující formu konstrukcí:
+znamená „funkce `read`, která je členem třídy `BufferedInput`, jež se nachází v oboru třídy `BufferedIO`“. Vzhledem k tomu, že tato deklarace používá syntaxi *kvalifikovaného typu* , jsou možné konstrukce následujícího formuláře:
 
 ```cpp
 typedef BufferedIO::BufferedInput BIO_INPUT;
@@ -148,9 +148,9 @@ typedef BufferedIO::BufferedInput BIO_INPUT;
 int BIO_INPUT::read()
 ```
 
-Předchozí deklarace je ekvivalentní předchozímu, ale používá **typedef** název namísto názvů tříd.
+Předchozí deklarace je ekvivalentní předchozí deklaraci, ale používá namísto názvů tříd název **typedef** .
 
-## <a name="friend-functions-in-nested-classes"></a>Spřátelené funkce ve vnořených třídách
+## <a name="friend-functions-in-nested-classes"></a>Funkce Friend ve vnořených třídách
 
 Spřátelené funkce deklarované ve vnořené třídě jsou považovány za funkce v rozsahu vnořené třídy, nikoli nadřazené třídy. Proto spřátelené funkce nezískají žádná zvláštní přístupová oprávnění ke členům nebo členským funkcím nadřazené třídy. Pokud chcete použít název, který je deklarován ve vnořené třídě ve spřátelené funkci, a tato spřátelená funkce je v rozsahu souboru, použijte kvalifikované názvy typů takto:
 
@@ -206,6 +206,6 @@ int GetExtendedErrorStatus( char *message )
 
 S předchozím rozhraním může několik tříd použít služby této funkce pomocí předání paměťového umístění, kam chtějí zkopírovat chybovou zprávu.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Třídy a struktury](../cpp/classes-and-structs-cpp.md)

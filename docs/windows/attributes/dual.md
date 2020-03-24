@@ -1,21 +1,21 @@
 ---
-title: duální (atribut C++ COM)
+title: Dual (C++ atribut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.dual
 helpviewer_keywords:
 - dual attribute
 ms.assetid: 5d4a9069-d819-42cd-ba56-bbcda17157d9
-ms.openlocfilehash: 8f02f6b69b31f10b41d5c920cfc2ad62dfa1cef2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 66cd6eb9141244397609cc6421ead74d1eb8547e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409678"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168210"
 ---
 # <a name="dual"></a>dual
 
-Umístí rozhraní v souboru IDL jako duální rozhraní.
+Umístí rozhraní do souboru. idl jako duální rozhraní.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -25,11 +25,11 @@ Umístí rozhraní v souboru IDL jako duální rozhraní.
 
 ## <a name="remarks"></a>Poznámky
 
-Když **duální** C++ atribut předchází rozhraní, způsobí, že rozhraní být umístěny uvnitř bloku knihovny v souboru generovaného IDL.
+Pokud **duální** C++ atribut předchází rozhraní, způsobí to, že rozhraní bude umístěno uvnitř bloku knihovny v generovaném souboru IDL.
 
 ## <a name="example"></a>Příklad
 
-Následující kód je blok atribut, který používá **duální** před definice rozhraní:
+Následující kód je blok atributu, který používá **duální** před definicí rozhraní:
 
 ```cpp
 // cpp_attr_ref_dual.cpp
@@ -55,18 +55,18 @@ __interface IStatic : IDispatch
 
 ## <a name="requirements"></a>Požadavky
 
-### <a name="attribute-context"></a>Atribut kontextu
+### <a name="attribute-context"></a>Kontext atributu
 
 |||
 |-|-|
 |**Platí pro**|**interface**|
-|**Opakovatelné**|Ne|
-|**Vyžadované atributy**|Žádné|
+|**REPEATABLE**|Ne|
+|**Požadované atributy**|Žádné|
 |**Neplatné atributy**|`dispinterface`|
 
-Další informace najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
+Další informace naleznete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [IDL – atributy](idl-attributes.md)<br/>
 [Atributy podle použití](attributes-by-usage.md)<br/>

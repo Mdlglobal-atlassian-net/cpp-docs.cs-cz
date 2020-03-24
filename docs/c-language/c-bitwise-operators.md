@@ -12,38 +12,38 @@ helpviewer_keywords:
 - ^ operator
 - '& operator, bitwise operators'
 ms.assetid: e22127b1-9a2d-4876-b01d-c8f72cec3317
-ms.openlocfilehash: 2133aaa5faa0f4bef7391fb5c0e7e0eb51fd4e69
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 50be8ae38f21d0a9f46c180abf179e1358b707cd
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62325790"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168770"
 ---
 # <a name="c-bitwise-operators"></a>Bitové operátory jazyka C
 
-Bitové operátory provádějí operace bitový- a (**&**), bitový exkluzivní OR (**^**) a bitový inkluzivní OR (**&#124;**) operace.
+Bitové operátory provádějí operace bitového operátoru and ( **&** ), bitového operátoru or ( **^** ) a bitových operací ( **&#124;** ).
 
 ## <a name="syntax"></a>Syntaxe
 
-*Výraz AND*: &nbsp; &nbsp; *výrazu rovnosti* &nbsp; &nbsp; *výraz AND* **&** *výrazu rovnosti*
+*And-Expression*: &nbsp;&nbsp;*rovnosti-Expression* &nbsp;&nbsp;*a-* Expression **&** *rovnost-Expression*
 
-*exclusive-OR-expression*: &nbsp;&nbsp;*Výraz AND* &nbsp; &nbsp; *výraz exkluzivní OR* **^** *výraz AND*
+*Exclusive nebo-Expression*: &nbsp;&nbsp;*a-* Expression &nbsp;&nbsp;*exclusive-nebo-* Expression **^** *a-Expression*
 
-*Inkluzivní výraz OR*: &nbsp; &nbsp; *výraz exkluzivní OR* &nbsp; &nbsp; *včetně výraz OR* &#124; *výraz exkluzivní OR*
+*výraz or*: &nbsp;&nbsp;*Exclusive-nebo-Expression* *&nbsp;&nbsp;* &#124; s *výhradním* výrazem or nebo výrazem.
 
-Operandy bitové operátory musí mít integrální typy, ale jejich typy se může lišit. Tyto operátory provádějí obvyklé aritmetické převody Typ výsledku je typ operandu po převodu.
+Operandy bitových operátorů musí mít celočíselné typy, ale jejich typy můžou být odlišné. Tyto operátory provádějí obvyklé aritmetické převody; Typ výsledku je typ operandů po převodu.
 
-Bitové operátory jazyka C jsou popsané níže:
+Bitové operátory jazyka C jsou popsány níže:
 
 |Operátor|Popis|
 |--------------|-----------------|
-|**&**|Bitový – a operátor porovnává každý bit jeho prvního operandu s odpovídajícím bitem jeho druhého operandu. Pokud i službu bits 1, odpovídající bit výsledku je nastavená na 1. V opačném případě je odpovídající výsledek bit nastaven na hodnotu 0.|
-|**^**|Operátor bitového operátoru OR porovnává každý bit jeho prvního operandu s odpovídajícím bitem jeho druhého operandu. Pokud jeden bit na hodnotu 0 a dalších bit na hodnotu 1, odpovídající bit výsledku je nastavená na 1. V opačném případě je odpovídající výsledek bit nastaven na hodnotu 0.|
-|**&#124;**|Operátor bitového operátorem OR porovnává každý bit jeho prvního operandu s odpovídajícím bitem jeho druhého operandu. Pokud buď bit na hodnotu 1, odpovídající bit výsledku je nastavená na 1. V opačném případě je odpovídající výsledek bit nastaven na hodnotu 0.|
+|**&**|Bitový operátor AND porovnává každý bit svého prvního operandu s odpovídajícím bitem jeho druhého operandu. Pokud jsou obě bity 1, odpovídající bit výsledku je nastaven na hodnotu 1. V opačném případě je odpovídající bit výsledek nastaven na hodnotu 0.|
+|**^**|Bitový operátor OR porovnává každý bit jeho prvního operandu s odpovídajícím bitem jeho druhého operandu. Pokud je jeden bit 0 a druhý bit je 1, odpovídající bit výsledku je nastaven na hodnotu 1. V opačném případě je odpovídající bit výsledek nastaven na hodnotu 0.|
+|**&#124;**|Bitový operátor OR porovnává každý bit jeho prvního operandu s odpovídajícím bitem jeho druhého operandu. Pokud má bit hodnotu 1, odpovídající bit výsledku je nastaven na hodnotu 1. V opačném případě je odpovídající bit výsledek nastaven na hodnotu 0.|
 
 ## <a name="examples"></a>Příklady
 
-Následující tři příklady používají tyto deklarace:
+Tyto deklarace se používají v následujících třech příkladech:
 
 ```C
 short i = 0xAB00;
@@ -53,7 +53,7 @@ short n;
 n = i & j;
 ```
 
-Výsledek přiřazená `n` tento první příklad je stejný jako `i` (0xAB00 šestnáctkové).
+Výsledek přiřazený `n` v tomto prvním příkladu je stejný jako `i` (šestnáctkově 0xAB00).
 
 ```C
 n = i | j;
@@ -61,11 +61,11 @@ n = i | j;
 n = i ^ j;
 ```
 
-Bitový inkluzivní OR v druhém příkladu výsledkem hodnota 0xABCD (šestnáctkově), zatímco bitový exkluzivní OR v třetí příklad vytváří 0xCD (šestnáctkově).
+Bitový a v druhém příkladu má za následek hodnotu 0xABCD (šestnáctkový), zatímco bitový-výhradní nebo třetí příklad vytvoří 0xCD (šestnáctkový).
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
-Výsledky bitová operace na celá čísla se znaménkem, je definováno implementací podle standardu ANSI C. Kompilátor Microsoft C bitových operací s celými čísly se znaménkem fungují stejně jako bitové operace s celými čísly bez znaménka. Například `-16 & 99` může být vyjádřena v binárním souboru jako
+Výsledky bitové operace u celých čísel se znaménkem jsou implementovány podle standardu ANSI C. V případě kompilátoru jazyka Microsoft C fungují bitové operace s podepsanými celými čísly stejně jako bitové operace u celých čísel bez znaménka. Například `-16 & 99` lze vyjádřit v binárním formátu jako
 
 ```Expression
   11111111 11110000
@@ -74,12 +74,12 @@ Výsledky bitová operace na celá čísla se znaménkem, je definováno impleme
   00000000 01100000
 ```
 
-Výsledkem bitové operace AND je 96 decimal.
+Výsledek bitového operátoru AND je 96 desetinných míst.
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Bitový operátor AND: &](../cpp/bitwise-and-operator-amp.md)<br/>
 [Bitový exkluzivní operátor OR: ^](../cpp/bitwise-exclusive-or-operator-hat.md)<br/>
-[Bitový inkluzivní operátor OR:&#124;](../cpp/bitwise-inclusive-or-operator-pipe.md)
+[Bitový operátor OR:&#124;](../cpp/bitwise-inclusive-or-operator-pipe.md)

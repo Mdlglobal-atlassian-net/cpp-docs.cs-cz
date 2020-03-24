@@ -1,25 +1,25 @@
 ---
-title: Intel&#39;s sada instrukcí MMX
+title: Sada&#39;instrukcí Intel s MMX
 ms.date: 08/30/2018
 ms.topic: reference
 helpviewer_keywords:
 - MMX instruction set
 ms.assetid: 705deb2d-c3fd-4696-9e22-8bcf25866daf
-ms.openlocfilehash: b8b2697fa106506dadfdaa96149fd6b0b093c844
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 894cd853a294f84cae056b4a917f15cadeceb974
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65445870"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169315"
 ---
-# <a name="intel39s-mmx-instruction-set"></a>Intel&#39;s sada instrukcí MMX
+# <a name="intel39s-mmx-instruction-set"></a>Sada&#39;instrukcí Intel s MMX
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
-Microsoft C++ kompilátoru umožňuje použít nastavení v vložený assembler instrukce MMX (multimediální rozšíření) společnosti Intel. Instrukce MMX také podporují zpětný překlad ladicího programu. Kompilátor generuje upozornění, pokud funkce obsahuje instrukce MMX, ale neobsahuje instrukci EMMS. na prázdnou multimediální stavu. Další informace najdete v článku na webu společnosti Intel.
+Kompilátor společnosti C++ Microsoft umožňuje v inline assembleru použít instrukční sadu s rozšířením Intel MMX (multimédia Extension). Pokyny MMX jsou podporovány také zpětným sestavením ladicího programu. Kompilátor vygeneruje zprávu upozornění, pokud funkce obsahuje instrukce MMX, ale neobsahuje instrukci žádnou Emms k vyprázdnění stavu multimédií. Další informace najdete na webu Intel.
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Použití assembleru v blocích __asm](../../assembler/inline/using-assembly-language-in-asm-blocks.md)<br/>

@@ -9,18 +9,18 @@ helpviewer_keywords:
 - inline assembly, calling functions
 - __asm keyword [C++], calling functions
 ms.assetid: f8a8d568-d175-4e23-9b24-36ef60a4cab3
-ms.openlocfilehash: 4d12321cd90f596c94c2337e100663436d512107
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 94bbfda3a5fd15885f3d8276d506541418a9489f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62167177"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169588"
 ---
 # <a name="calling-c-functions-in-inline-assembly"></a>Volání funkcí jazyka C v sestavení inline assemblerem
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
-`__asm` Bloku může volat funkce jazyka C, včetně rutiny knihoven C. Následující příklad volá `printf` rutina knihovny:
+Blok `__asm` může volat funkce jazyka C, včetně rutin knihovny jazyka C. Následující příklad volá rutinu knihovny `printf`:
 
 ```cpp
 // InlineAssembler_Calling_C_Functions_in_Inline_Assembly.cpp
@@ -50,16 +50,16 @@ int main( void )
 }
 ```
 
-Protože jsou argumenty funkce předány v zásobníku, stačí vložit potřebné argumenty – řetězec ukazatele v předchozím příkladu – před voláním funkce. Argumenty jsou posunuty v obráceném pořadí, které pocházejí ze zásobníku do požadovaného pořadí. Pro emulaci příkazů jazyka C
+Vzhledem k tomu, že argumenty funkce jsou předány v zásobníku, stačí před voláním funkce jednoduše vložit potřebné argumenty – ukazatelé řetězce v předchozím příkladu –. Argumenty jsou vloženy v obráceném pořadí, takže se z zásobníku přidávají v požadovaném pořadí. Emulace příkazu jazyka C
 
 ```cpp
 printf( format, hello, world );
 ```
 
-v příkladu nabízených oznámení ukazatele na `world`, `hello`, a `format`, v tomto pořadí a poté zavolá `printf`.
+příklad vloží ukazatele na `world`, `hello`a `format`v tomto pořadí a potom zavolá `printf`.
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Vkládaný assembler](../../assembler/inline/inline-assembler.md)<br/>

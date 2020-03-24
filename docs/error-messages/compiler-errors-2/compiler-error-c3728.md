@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C3728
 ms.assetid: 6b510cb1-887f-4fcd-9a1f-3bb720417ed1
-ms.openlocfilehash: 68aa23843b0470f15f409b6f3b58624f979ccfae
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8aec3ae1ff629ef7fa000182cde29e306a471315
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62328104"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80165871"
 ---
 # <a name="compiler-error-c3728"></a>Chyba kompilátoru C3728
 
-'událost': událost nemá metodu raise
+' Event ': událost nemá metodu vyvolání
 
-Metadata vytvořené pomocí jazyka, jako je C#, který neumožňuje událost vyvolána z vně třídy, ve kterém byl definován, je součástí [#using](../../preprocessor/hash-using-directive-cpp.md) směrnice a program Visual C++ pomocí CLR programování došlo k pokusu vyvolání události.
+Metadata vytvořená pomocí jazyka, například C#, který neumožňuje vyvolání události mimo třídu, ve které byla definována, byla zahrnuta v direktivě [#using](../../preprocessor/hash-using-directive-cpp.md) a vizuální C++ program používající programování CLR se pokusil vyvolat událost.
 
-K vyvolání události aplikace vyvinuté v jazyce, jako je C#, je potřeba také definovat veřejnou metodu, která vyvolává událost třídy obsahující události.
+Chcete-li vyvolat událost v programu vyvinutém v jazyce C#, jako je, třída obsahující událost musí také definovat veřejnou metodu, která vyvolává událost.

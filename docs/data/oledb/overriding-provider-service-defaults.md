@@ -5,32 +5,32 @@ helpviewer_keywords:
 - service providers [OLE DB]
 - OLE DB services [OLE DB], overriding defaults
 ms.assetid: 08e366c0-74d8-463b-93a6-d58a8dc195f8
-ms.openlocfilehash: 08011f65ca220885e124e5ad6072244e4ad6e80d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4cf3ad1064627f64315822a5045642aa50330d10
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62282946"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209797"
 ---
 # <a name="overriding-provider-service-defaults"></a>Přepsání výchozích hodnot služby zprostředkovatele
 
-Hodnota registru zprostředkovatele pro OLEDB_SERVICES se vrátí jako výchozí hodnota [DBPROP_INIT_OLEDBSERVICES](/previous-versions/windows/desktop/ms716898(v=vs.85)) inicializace vlastnosti na objektu zdroje dat.
+Hodnota registru poskytovatele pro OLEDB_SERVICES je vrácena jako výchozí hodnota pro inicializační vlastnost [DBPROP_INIT_OLEDBSERVICES](/previous-versions/windows/desktop/ms716898(v=vs.85)) objektu zdroje dat.
 
-Za předpokladu, položka registru existuje, je agregován objekty daného zprostředkovatele. Uživatel může přepsat výchozí nastavení pro povolené služby tak, že nastavíte vlastnost DBPROP_INIT_OLEDBSERVICES před inicializací zprostředkovatele. Pokud chcete povolit nebo zakázat určité služby, uživatel získá aktuální hodnotu vlastnosti DBPROP_INIT_OLEDBSERVICES, nastaví nebo vymaže bit pro konkrétní vlastnost, která má být povolena nebo zakázána a obnoví vlastnost. Můžete přímo v OLE DB nebo připojovací řetězec, který je předán ADO nastavit DBPROP_INIT_OLEDBSERVICES nebo `IDataInitialize::GetDatasource`. Odpovídající hodnoty pro povolení nebo zákaz jednotlivé služby jsou uvedené v následující tabulce.
+Pokud existuje položka registru, objekty poskytovatele budou agregovány. Uživatel může přepsat výchozí nastavení poskytovatele pro povolené služby nastavením vlastnosti DBPROP_INIT_OLEDBSERVICES před inicializací. Chcete-li povolit nebo zakázat určitou službu, uživatel získá aktuální hodnotu vlastnosti DBPROP_INIT_OLEDBSERVICES, nastaví nebo zruší bit pro konkrétní vlastnost, která má být povolena nebo zakázána, a obnoví vlastnost. DBPROP_INIT_OLEDBSERVICES lze nastavit přímo v OLE DB nebo v připojovacím řetězci předaných do ADO nebo `IDataInitialize::GetDatasource`. Příslušné hodnoty pro povolení nebo zakázání jednotlivých služeb jsou uvedeny v následující tabulce.
 
-|Povolené výchozí služby|Hodnota vlastnosti DBPROP_INIT_OLEDBSERVICES|Hodnota připojovacího řetězce|
+|Výchozí služby povoleny|Hodnota vlastnosti DBPROP_INIT_OLEDBSERVICES|Hodnota v připojovacím řetězci|
 |------------------------------|------------------------------------------------|--------------------------------|
-|Všechny služby (výchozí)|DBPROPVAL_OS_ENABLEALL|"Služeb OLE DB = -1;"|
-|Všechny s výjimkou sdružování a AutoEnlistment|`DBPROPVAL_OS_ENABLEALL &`<br /><br /> `~DBPROPVAL_OS_RESOURCEPOOLING &`<br /><br /> `~DBPROPVAL_OS_TXNENLISTMENT`|"Služeb OLE DB = -4;"|
-|Všechny s výjimkou klientský kurzor|`DBPROPVAL_OS_ENABLEALL &`<br /><br /> `~DBPROPVAL_OS_CLIENTCURSOR`|"Služeb OLE DB = -5;"|
-|Všechny s výjimkou sdružování AutoEnlistment a klientský kurzor|`DBPROPVAL_OS_ENABLEALL &`<br /><br /> `~DBPROPVAL_OS_TXNENLISTMENT &`<br /><br /> `~DBPROPVAL_OS_CLIENTCURSOR`|"Služeb OLE DB = -7;"|
-|Žádné služby.|`~DBPROPVAL_OS_ENABLEALL`|"Služeb OLE DB = 0;"|
+|Všechny služby (výchozí)|DBPROPVAL_OS_ENABLEALL|"OLE DB Services =-1;"|
+|Vše kromě sdružování a autozařazení|`DBPROPVAL_OS_ENABLEALL &`<br /><br /> `~DBPROPVAL_OS_RESOURCEPOOLING &`<br /><br /> `~DBPROPVAL_OS_TXNENLISTMENT`|"OLE DB Services =-4;"|
+|Vše kromě klientského kurzoru|`DBPROPVAL_OS_ENABLEALL &`<br /><br /> `~DBPROPVAL_OS_CLIENTCURSOR`|"OLE DB Services =-5;"|
+|Vše s výjimkou sdružování, reřazování a klientského kurzoru|`DBPROPVAL_OS_ENABLEALL &`<br /><br /> `~DBPROPVAL_OS_TXNENLISTMENT &`<br /><br /> `~DBPROPVAL_OS_CLIENTCURSOR`|"OLE DB Services =-7;"|
+|Žádné služby|`~DBPROPVAL_OS_ENABLEALL`|"OLE DB Services = 0;"|
 
-Pokud položka registru neexistuje pro zprostředkovatele, správce součástí neshromáždí objekty daného zprostředkovatele. Žádné služby zapne, i v případě, že explicitně požadavku uživatele.
+Pokud položka registru pro poskytovatele neexistuje, správci komponent nebudou shromažďovat objekty poskytovatele. Žádné služby nebudou zapnuté, a to ani v případě, že uživatel výslovně vyžádá.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Sdružování prostředků](/previous-versions/windows/desktop/ms713655(v=vs.85))<br/>
-[Jak zákazníci používají fondy prostředků](/previous-versions/windows/desktop/ms715907(v=vs.85))<br/>
-[Jak poskytovatelů efektivně pracovat s fondy prostředků](/previous-versions/windows/desktop/ms714906(v=vs.85))<br/>
+[Jak spotřebitelé využívají sdružování prostředků](/previous-versions/windows/desktop/ms715907(v=vs.85))<br/>
+[Jak poskytovatelé pracují efektivně s sdružováním prostředků](/previous-versions/windows/desktop/ms714906(v=vs.85))<br/>
 [Povolení a zakázání služeb OLE DB](../../data/oledb/enabling-and-disabling-ole-db-services.md)<br/>

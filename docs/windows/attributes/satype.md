@@ -1,21 +1,21 @@
 ---
-title: satype – (atribut C++ COM)
+title: satype (C++ atribut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.satype
 helpviewer_keywords:
 - satype attribute
 ms.assetid: 1716590b-6bcb-4aba-b1bc-82f7335f02c3
-ms.openlocfilehash: 7588e8d855d648309c46d981898cfbbf7888f4c9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4619deec6d5e4e9083fbc7bcab53caee0101285c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407299"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166273"
 ---
 # <a name="satype"></a>satype
 
-Určuje datový typ `SAFEARRAY` struktury.
+Určuje datový typ struktury `SAFEARRAY`.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -26,25 +26,25 @@ Určuje datový typ `SAFEARRAY` struktury.
 ### <a name="parameters"></a>Parametry
 
 *data_type*<br/>
-Datový typ `SAFEARRAY` datová struktura, která je předána jako parametr metody rozhraní.
+Datový typ pro `SAFEARRAY` datovou strukturu, která je předávána jako parametr metodě rozhraní.
 
 ## <a name="requirements"></a>Požadavky
 
-### <a name="attribute-context"></a>Atribut kontextu
+### <a name="attribute-context"></a>Kontext atributu
 
 |||
 |-|-|
-|**Platí pro**|Rozhraní parametrů, metody rozhraní|
-|**Opakovatelné**|Ne|
-|**Vyžadované atributy**|Žádné|
-|**Neplatné atributy**|Žádný|
+|**Platí pro**|Parametr rozhraní, metoda rozhraní|
+|**REPEATABLE**|Ne|
+|**Požadované atributy**|Žádné|
+|**Neplatné atributy**|Žádné|
 
 ## <a name="remarks"></a>Poznámky
 
-**Satype –** C++ atribut určuje datový typ `SAFEARRAY`.
+Atribut **satype** C++ Určuje datový typ `SAFEARRAY`.
 
 > [!NOTE]
-> Z je vyřadit určitou úroveň dereference `SAFEARRAY` ukazatel v souboru IDL vygenerovaný v tom, jak je deklarován v souboru .cpp.
+> Úroveň indirekce je vyřazena z ukazatele `SAFEARRAY` v generovaném souboru IDL z toho, jak je deklarována v souboru. cpp.
 
 ## <a name="example"></a>Příklad
 
@@ -59,7 +59,7 @@ __interface A {
 };
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Atributy kompilátoru](compiler-attributes.md)<br/>
 [Atributy parametru](parameter-attributes.md)<br/>

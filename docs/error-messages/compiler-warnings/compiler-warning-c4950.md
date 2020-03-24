@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C4950
 ms.assetid: 50226a5c-c664-4d09-ac59-e9e874ca244f
-ms.openlocfilehash: 784179af68ff55ba70c61255c88688105ecb1738
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 52c4de94dfe087b4dcf407295e556c9350b2cb8b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62208093"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80164986"
 ---
 # <a name="compiler-warning-c4950"></a>Upozornění kompilátoru C4950
 
-'typ nebo člen': označené jako zastaralé
+' type_or_member ': označeno jako zastaralé
 
-Člen nebo typ byl označený jako zastaralý s <xref:System.ObsoleteAttribute> atribut.
+Člen nebo typ byl označen jako zastaralý s atributem <xref:System.ObsoleteAttribute>.
 
-C4950 je vždy vyvoláno jako chyba. Toto upozornění můžete vypnout pomocí [upozornění](../../preprocessor/warning.md) – Direktiva pragma nebo [/wd](../../build/reference/compiler-option-warning-level.md) – možnost kompilátoru.
+C4950 se vždy vydá jako chyba. Toto upozornění můžete vypnout pomocí direktivy pragma [Warning](../../preprocessor/warning.md) nebo možnosti kompilátoru [/WD](../../build/reference/compiler-option-warning-level.md) .
 
 ## <a name="example"></a>Příklad
 

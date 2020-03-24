@@ -9,24 +9,24 @@ helpviewer_keywords:
 - OLE DB provider templates, notifications
 - OLE DB providers, notifications
 ms.assetid: 76e875fd-2bfd-4e4e-9f43-dbe5a3fa7382
-ms.openlocfilehash: 52c4313de5017b97a193be1afebc020c9896fe6a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d29f84a0a5b33d55c0a04a4c758050cf9746f72a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62379087"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209541"
 ---
 # <a name="supporting-notifications"></a>Podpora oznámení
 
-## <a name="implementing-connection-point-interfaces-on-the-provider-and-consumer"></a>Implementace rozhraní bod připojení pro zprostředkovatele a spotřebitele
+## <a name="implementing-connection-point-interfaces-on-the-provider-and-consumer"></a>Implementace rozhraní bodu připojení na poskytovateli a příjemci
 
-Pokud chcete implementovat oznámení, třída zprostředkovatele musí dědit z [IRowsetNotifyCP](../../data/oledb/irowsetnotifycp-class.md) a [IConnectionPointContainer](../../atl/reference/iconnectionpointcontainerimpl-class.md).
+Pro implementaci oznámení musí třída poskytovatele dědit z [IRowsetNotifyCP –](../../data/oledb/irowsetnotifycp-class.md) a [IConnectionPointContainer](../../atl/reference/iconnectionpointcontainerimpl-class.md).
 
-`IRowsetNotifyCP` implementuje poskytovatele lokality pro bod připojení rozhraní [IRowsetNotify](/previous-versions/windows/desktop/ms712959(v=vs.85)). `IRowsetNotifyCP` implementuje vysílání funkce radit naslouchacích procesů najdete v bodě připojení `IID_IRowsetNotify` změny obsahu v sadě řádků.
+`IRowsetNotifyCP` implementuje web poskytovatele pro rozhraní připojovacího bodu rozhraní [IRowsetNotify](/previous-versions/windows/desktop/ms712959(v=vs.85)). `IRowsetNotifyCP` implementuje všesměrové funkce pro poradenství naslouchací procesy v bodu připojení `IID_IRowsetNotify` změny obsahu sady řádků.
 
-Musí také implementovat a zaregistrovat `IRowsetNotify` na spotřebitele (označované také jako jímka) pomocí [IRowsetNotifyImpl](../../data/oledb/irowsetnotifyimpl-class.md) tak, aby příjemce může zpracovat oznámení. Informace o implementaci rozhraní bod připojení pro spotřebitele, naleznete v tématu [příjem oznámení](../../data/oledb/receiving-notifications.md).
+Také je nutné implementovat a zaregistrovat `IRowsetNotify` na příjemce (označované také jako jímka) pomocí [IRowsetNotifyImpl –](../../data/oledb/irowsetnotifyimpl-class.md) , aby příjemce mohl zpracovávat oznámení. Informace o implementaci rozhraní bodu připojení na příjemce najdete v tématu [přijímání oznámení](../../data/oledb/receiving-notifications.md).
 
-Třída musí mít také mapu, která definuje vstupní bod připojení, následujícím způsobem:
+Třída musí mít také mapu, která definuje položku bodu připojení, například:
 
 ```cpp
 BEGIN_CONNECTION_POINT_MAP
@@ -34,14 +34,14 @@ BEGIN_CONNECTION_POINT_MAP
 END_CONNECTION_POINT_MAP
 ```
 
-## <a name="adding-irowsetnotify"></a>Přidání IRowsetNotify
+## <a name="adding-irowsetnotify"></a>Přidání rozhraní IRowsetNotify
 
-Chcete-li přidat `IRowsetNotify`, budete muset přidat `IConnectionPointContainerImpl<rowset-name>` a `IRowsetNotifyCP<rowset-name>` do vašeho řetězce dědičnosti.
+Chcete-li přidat `IRowsetNotify`, je nutné přidat `IConnectionPointContainerImpl<rowset-name>` a `IRowsetNotifyCP<rowset-name>` do svého řetězu dědičnosti.
 
-Například tady je řetězec dědičnosti pro `RUpdateRowset` v [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV):
+Zde je například řetězec dědičnosti pro `RUpdateRowset` v [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV):
 
 > [!NOTE]
-> Vzorový kód se mohou lišit od zde; uvedeného vzorový kód by měl považovat za aktuálnější verzi.
+> Vzorový kód se může lišit od toho, co je uvedeno zde. měli byste se považovat za vzorový kód jako aktuálnější verzi.
 
 ```cpp
 ///////////////////////////////////////////////////////////////////////////
@@ -56,20 +56,20 @@ public CRowsetImpl< RUpdateRowset, CAgentMan, CUpdateCommand,
       public IRowsetNotifyCP<RUpdateRowset>
 ```
 
-### <a name="setting-com-map-entries"></a>Nastavení položky mapy modelu COM.
+### <a name="setting-com-map-entries"></a>Nastavení položek map COM
 
-Také je potřeba přidat následující do mapy modelu COM ve vaší sadě řádků:
+Také je nutné přidat následující do mapy modelu COM v sadě řádků:
 
 ```cpp
 COM_INTERFACE_ENTRY(IConnectionPointContainer)
 COM_INTERFACE_ENTRY_IMPL(IConnectionPointContainer)
 ```
 
-Tato makra může kdokoli volání `QueryInterface` pro váš kontejner bodu připojení (základ `IRowsetNotify`) k vyhledání požadovaného rozhraní poskytovatele. Příklad použití spojovací body naleznete v tématu ukázka MNOHOÚHELNÍKU knihovny ATL a kurzu.
+Tato makra umožňují všem uživatelům volat `QueryInterface` pro váš kontejner přípojných bodů (základ `IRowsetNotify`) k vyhledání požadovaného rozhraní na vašem poskytovateli. Příklad použití bodů připojení najdete v tématu Ukázka a kurz pro ATL.
 
-### <a name="setting-connection-point-map-entries"></a>Nastavení připojení položek bodu mapy
+### <a name="setting-connection-point-map-entries"></a>Nastavení položek mapy bodu připojení
 
-Také budete muset přidat mapu bodu připojení. By měl vypadat přibližně jako:
+Také je nutné přidat mapu spojovacího bodu. Měl by vypadat nějak takto:
 
 ```cpp
 BEGIN_CONNECTION_POINT_MAP(rowset-name)
@@ -77,13 +77,13 @@ BEGIN_CONNECTION_POINT_MAP(rowset-name)
 END_CONNECTION_POINT_MAP()
 ```
 
-Toto mapování bodu připojení umožňuje komponentu hledá `IRowsetNotify` rozhraní k vyhledání ve zprostředkovateli.
+Tato mapa spojovacího bodu umožňuje komponentě vyhledat `IRowsetNotify` rozhraní, které se ve vašem poskytovateli najde.
 
-### <a name="setting-properties"></a>Nastavení vlastností
+### <a name="setting-properties"></a>Vlastnosti nastavení
 
-Také musíte přidat následující vlastnosti pro daného poskytovatele. Stačí přidat vlastnosti založené na rozhraních, které podporujete.
+Do poskytovatele také musíte přidat následující vlastnosti. Stačí přidat vlastnosti založené na rozhraních, která podporujete.
 
-|Vlastnost|Přidejte, pokud podporujete|
+|Vlastnost|Přidat, Pokud podporujete|
 |--------------|------------------------|
 |DBPROP_IConnectionPointContainer|Vždy|
 |DBPROP_NOTIFICATIONGRANULARITY|Vždy|
@@ -99,8 +99,8 @@ Také musíte přidat následující vlastnosti pro daného poskytovatele. Stač
 |DBPROP_NOTIFYROWUNDOINSERT|`IRowsetUpdate`|
 |DBPROP_NOTIFYROWUPDATE|`IRowsetUpdate`|
 
-Implementaci pro oznámení je již součástí šablony zprostředkovatele technologie OLE DB. Pokud nepřidáte `IRowsetNotifyCP` do vašeho řetězce dědičnosti kompilátor odebere tento kód z datový proud kompilace, díky čemuž menší velikosti kódu.
+Většina implementace oznámení je již vložena v šablonách poskytovatele OLE DB. Pokud nepřidáte `IRowsetNotifyCP` do svého řetězu dědičnosti, kompilátor odebere veškerý tento kód z datového proudu kompilace, takže velikost vašeho kódu bude menší.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Pokročilé techniky zprostředkování](../../data/oledb/advanced-provider-techniques.md)

@@ -1,35 +1,35 @@
 ---
-title: Kompilátor upozornění (úroveň 2) C4412
+title: Upozornění kompilátoru (úroveň 2) C4412
 ms.date: 11/04/2016
 f1_keywords:
 - C4412
 helpviewer_keywords:
 - C4412
 ms.assetid: f28dc531-1a98-497b-a366-0a13e1bc81c7
-ms.openlocfilehash: 2c9d50fc3433321c0ca92366a512892212545754
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 601b99eec4625e9b598ece4cbb74d0039ad04bf0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402434"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80161786"
 ---
-# <a name="compiler-warning-level-2-c4412"></a>Kompilátor upozornění (úroveň 2) C4412
+# <a name="compiler-warning-level-2-c4412"></a>Upozornění kompilátoru (úroveň 2) C4412
 
-> "*funkce*': podpis funkce obsahuje typ"*typ*'; Jsou objekty C++ není bezpečné předávat mezi čistým kódem a kombinovaným nebo nativním kódem.
+> '*Function*': signatura funkce obsahuje typ '*Type*'; C++ objekty nejsou bezpečné předávat mezi čistým a smíšeným nebo nativním kódem.
 
 ## <a name="remarks"></a>Poznámky
 
-**/CLR: pure** – možnost kompilátoru je zastaralé v sadě Visual Studio 2015 a není podporována v sadě Visual Studio 2017. Pokud máte kód, který má být čistě, doporučujeme port na C#.
+Možnost **/clr: Pure** Compiler je v aplikaci visual Studio 2015 zastaralá a není podporovaná v rámci sady visual Studio 2017. Pokud máte kód, který musí být čistý, doporučujeme vám ho přenést na C#.
 
-Kompilátor zjistil potenciálně nebezpečné situace, které by mohlo způsobit chybu modulu runtime: přišla z **/CLR: pure** kompilantu funkci, která byla importována pomocí příkazů dllimport a signatura funkce obsahuje nezabezpečený typ . Typ nebezpečné, pokud obsahuje členské funkce nebo má datový člen, který je nezabezpečený typ nebo dereferenci nebezpečné typu.
+Kompilátor zjistil potenciálně nebezpečnou situaci, která by mohla způsobit chybu za běhu: volání z **/clr: Pure** kompilantu do funkce, která byla importována prostřednictvím dllimport a signatura funkce obsahuje nezabezpečený typ. Typ je nebezpečný, pokud obsahuje členskou funkci nebo má datový člen, který je nebezpečného typu nebo nepřímý odkaz na nezabezpečený typ.
 
-To nebezpečné kvůli rozdílu ve výchozích konvencí mezi čistě a nativního kódu volání (nebo smíšená nativní a spravovaná). Při importu (prostřednictvím `dllimport`) funkce do **/CLR: pure** kompilace, zajistěte, aby byly stejné jako ty v souboru pro kompilaci, která se exportuje – funkce (dbejte na to hlavně o deklarace každého typu v podpisu rozdíly v implicitní konvence volání).
+To je nebezpečné kvůli rozdílu ve výchozích konvencích volání mezi čistým a nativním kódem (nebo smíšeným nativním a spravovaným). Při importu (prostřednictvím `dllimport`) funkce do **/clr: Pure** kompilantu zajistěte, aby deklarace každého typu v podpisu byly stejné jako v kompilantu, které tuto funkci vyexportují (obzvláště opatrní na rozdíly v implicitních konvencích volání).
 
-Virtuální členská funkce je zvlášť náchylné k chybám, poskytne neočekávané výsledky.  Ale i nevirtuální funkce by měl být testován zajistit, že dostanete správné výsledky. Pokud jste si jistí, že se zobrazuje správné výsledky, můžete toto upozornění ignorovat.
+Virtuální členská funkce je obzvláště náchylná k poskytnutí neočekávaných výsledků.  I nevirtuální funkce by však měly být testovány, aby bylo zajištěno, že získáte správné výsledky. Pokud jste si jisti, že se vám zobrazí správné výsledky, můžete toto upozornění ignorovat.
 
-C4412 je vypnuto ve výchozím nastavení. Zobrazit [kompilátoru upozornění, že je vypnuto ve výchozím nastavení](../../preprocessor/compiler-warnings-that-are-off-by-default.md) a [dllexport, dllimport](../../cpp/dllexport-dllimport.md) Další informace.
+C4412 je ve výchozím nastavení vypnutá. Další informace naleznete v tématu [Upozornění kompilátoru, která jsou vypnuta ve výchozím nastavení](../../preprocessor/compiler-warnings-that-are-off-by-default.md) a [dllexport, dllimport](../../cpp/dllexport-dllimport.md) .
 
-Pokud chcete vyřešit toto upozornění, odeberte všechny funkce z typu.
+Chcete-li vyřešit toto upozornění, odeberte všechny funkce z typu.
 
 ## <a name="example"></a>Příklad
 
@@ -61,7 +61,7 @@ int main() {
 
 ## <a name="example"></a>Příklad
 
-Následující příklad je soubor hlaviček, který deklaruje dva typy. `Unsafe` Typ nebezpečné, protože obsahuje členské funkce.
+Následující ukázka je hlavičkový soubor, který deklaruje dva typy. Typ `Unsafe` je nebezpečný, protože má členskou funkci.
 
 ```cpp
 // C4412.h
@@ -81,7 +81,7 @@ struct Safe {
 
 ## <a name="example"></a>Příklad
 
-Tento příklad exportuje funkce s typy definované v souboru hlaviček.
+Tato ukázka exportuje funkce s typy definovanými v hlavičkovém souboru.
 
 ```cpp
 // C4412_2.cpp
@@ -98,7 +98,7 @@ __declspec(dllexport) Safe * __cdecl func2() { return new Safe; }
 
 ## <a name="example"></a>Příklad
 
-Výchozí konvenci volání **/CLR: pure** kompilace se liší od nativní kompilace.  Když C4412.h je zahrnuta, `Test` výchozí hodnota je `__clrcall`. Pokud kompilace a spuštění tohoto programu (nepoužívejte **/c**), program vyvolá výjimku.
+Výchozí konvence volání v kompilaci **/clr: Pure** se liší od nativní kompilace.  Pokud je součástí C4412. h, `Test` výchozí nastavení `__clrcall`. Pokud tento program zkompilujete a spustíte (nepoužíváte **/c**), program vyvolá výjimku.
 
 Následující ukázka generuje C4412.
 

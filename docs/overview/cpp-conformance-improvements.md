@@ -3,12 +3,12 @@ title: C++vylepšení shody
 ms.date: 03/16/2020
 description: Microsoft C++ v aplikaci Visual Studio pokračuje v plném souladu s jazykem standardu c++ 20.
 ms.technology: cpp-language
-ms.openlocfilehash: d76a6dc4c5ad9cbf83befccfdd470ce755d0603c
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 716b3d6bfd75444d1c701b7301b31f8b56eab3ee
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80077430"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167755"
 ---
 # <a name="c-conformance-improvements-in-visual-studio"></a>Vylepšení shody C++ se sadou Visual Studio
 
@@ -164,7 +164,7 @@ Implementuje se vlastnosti `remove_cvref` a `remove_cvref_t` typu z [P0550](http
 
 ### <a name="char8_t"></a>char8_t
 
-[P0482r6](https://wg21.link/p0482r6). C++ 20 přidá nový typ znaku, který se používá k reprezentaci jednotek kódu v kódování UTF-8. řetězcové literály `u8` v C++ 20 mají typ `const char8_t[N]` namísto `const char[N]`, což byl případ dřív. V [N2231](https://wg14.link/n2231)se navrhly podobné změny pro Standard C. Návrhy na nápravu zpětné kompatibility `char8_t` jsou uvedené v [P1423r0](https://wg21.link/p1423r0). Kompilátor společnosti C++ Microsoft přidává podporu pro `char8_t` v aplikaci Visual Studio 2019 verze 16,1 při zadání možnosti kompilátoru **/Zc: char8_t** . V budoucnu se bude podporovat s [/std: c + + nejnovější](../build/reference/std-specify-language-standard-version.md), což se dá vrátit do chování c++ 17 prostřednictvím parametru **/Zc: char8_t-** . Kompilátor EDG pro technologii IntelliSense ho ještě nepodporuje, takže uvidíte jenom chyby spurious IntelliSense, které nemají vliv na skutečnou kompilaci.
+[P0482r6](https://wg21.link/p0482r6). C++ 20 přidá nový typ znaku, který se používá k reprezentaci jednotek kódu v kódování UTF-8. řetězcové literály `u8` v C++ 20 mají typ `const char8_t[N]` namísto `const char[N]`, což byl případ dřív. V [N2231](https://wg14.link/n2231)se navrhly podobné změny pro Standard C. Návrhy na nápravu zpětné kompatibility `char8_t` jsou uvedené v [P1423r3](https://wg21.link/p1423r3). Kompilátor společnosti C++ Microsoft přidává podporu pro `char8_t` v aplikaci Visual Studio 2019 verze 16,1 při zadání možnosti kompilátoru **/Zc: char8_t** . V budoucnu se bude podporovat s [/std: c + + nejnovější](../build/reference/std-specify-language-standard-version.md), což se dá vrátit do chování c++ 17 prostřednictvím parametru **/Zc: char8_t-** . Kompilátor EDG pro technologii IntelliSense ho ještě nepodporuje, takže uvidíte jenom chyby spurious IntelliSense, které nemají vliv na skutečnou kompilaci.
 
 #### <a name="example"></a>Příklad
 

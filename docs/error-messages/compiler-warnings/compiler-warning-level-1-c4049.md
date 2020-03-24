@@ -1,28 +1,28 @@
 ---
-title: Kompilátor upozornění (úroveň 1) C4049
+title: Upozornění kompilátoru (úroveň 1) C4049
 ms.date: 11/04/2016
 f1_keywords:
 - C4049
 helpviewer_keywords:
 - C4049
 ms.assetid: d11c1870-bcfc-4d71-8945-b87ec6ec3514
-ms.openlocfilehash: a4958bb446b5f7e80ef2eef92b52a0f86cf6a134
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 214ccae5d9835bc4a3b66bbbe1cd5ded4bc651cb
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388758"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80164141"
 ---
-# <a name="compiler-warning-level-1-c4049"></a>Kompilátor upozornění (úroveň 1) C4049
+# <a name="compiler-warning-level-1-c4049"></a>Upozornění kompilátoru (úroveň 1) C4049
 
-limit kompilátoru: ukončuje se emitování čísla řádku
+limit kompilátoru: ukončení emisí čísla řádku
 
-Tento soubor obsahuje více než 16 777 215 (2<sup>24</sup>-1) zdrojové řádky. Kompilátor se zastaví na 16 777 215 číslování.
+Soubor obsahuje více než 16 777 215 (2<sup>24</sup>-1) zdrojové řádky. Kompilátor zastaví číslování v 16 777 215.
 
 Pro kód po řádku 16 777 215:
 
-- Image bude obsahovat žádné informace o ladění pro čísla řádků.
+- Obrázek nebude obsahovat žádné ladicí informace pro čísla řádků.
 
-- Některé diagnostiky může být nahlášeno s čísly řádků nesprávné.
+- Některé diagnostiky mohou být hlášeny s nesprávnými čísly řádků.
 
-- výpisy .asm (/ FAs) může mít nesprávný řádek čísla.
+- výpisy. asm (/FAs) můžou mít nesprávná čísla řádků.

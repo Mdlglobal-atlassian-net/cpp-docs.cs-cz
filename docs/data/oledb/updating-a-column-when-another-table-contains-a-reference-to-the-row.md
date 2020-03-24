@@ -4,17 +4,17 @@ ms.date: 10/24/2018
 helpviewer_keywords:
 - rowsets, column updates
 ms.assetid: abb5db69-055d-431f-b12d-ad2940a661ba
-ms.openlocfilehash: 46de5f54a3ec6525f779a6b55a700429a2a84fef
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 95cddfd5f030c7bd8d1220cf040de4bc5a883226
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389070"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209479"
 ---
 # <a name="updating-a-column-when-another-table-contains-a-reference-to-the-row"></a>Aktualizace sloupce, pokud jiná tabulka obsahuje odkaz na řádek
 
-Někteří poskytovatelé dokáže detekovat sloupce, které při změně řádku, ale nikoli mnoho poskytovatelů. V důsledku toho aktualizace sloupce, může mít za následek chybu, pokud neexistuje odkaz na řádek, který se pokoušíte aktualizovat. Pokud chcete tento problém vyřešit, vytvořte samostatné přístupový objekt obsahující pouze sloupce, které chcete změnit. Předejte počet přistupujícího objektu do `SetData`.
+Někteří poskytovatelé můžou zjistit, které sloupce se v řádku změní, ale mnoho poskytovatelů nedokáže. V důsledku toho může aktualizace sloupce způsobit chybu, pokud existuje odkaz na řádek, který se pokoušíte aktualizovat. Chcete-li tento problém vyřešit, vytvořte samostatný přistupující objekt, který uchovává pouze sloupce, které chcete změnit. Předejte počet přistupujících objektů do `SetData`.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Použití přístupových objektů](../../data/oledb/using-accessors.md)

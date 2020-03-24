@@ -8,21 +8,21 @@ helpviewer_keywords:
 - assembler [C++], instruction set
 - instruction set [C++]
 ms.assetid: a45b5b22-9b5f-4545-81ec-70eb8ea2ef9b
-ms.openlocfilehash: 97794261c0dc77ca41d543aa34a1fc2111c83619
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: e6d2dea1af43b52a7704af58855842075087a221
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65445921"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169354"
 ---
 # <a name="instruction-set-for-inline-assembly"></a>Sada instrukcí pro vložené sestavení
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
-Microsoft C++ kompilátor podporuje všechny operační kódy prostřednictvím procesor Pentium 4 a AMD Athlon. Další pokyny, které podporuje cílový procesor se dají vytvářet pomocí [_emit – pseudoinstrukce](../../assembler/inline/emit-pseudoinstruction.md).
+Kompilátor společnosti C++ Microsoft podporuje všechny operační kódy prostřednictvím Pentium 4 a AMD Athlon. Další pokyny podporované cílovým procesorem můžete vytvořit pomocí [_emit – pseudoinstrukce](../../assembler/inline/emit-pseudoinstruction.md).
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Použití assembleru v blocích __asm](../../assembler/inline/using-assembly-language-in-asm-blocks.md)<br/>

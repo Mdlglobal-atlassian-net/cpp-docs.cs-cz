@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - call_as attribute
 ms.assetid: a09d7f1f-353b-4870-9b45-f0284161695d
-ms.openlocfilehash: f36cf8d1be589cc614a6def583b00af00aabdb61
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 755741faec6c0ba702d372ca8dee486edcb72ef3
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501797"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167329"
 ---
 # <a name="call_as"></a>call_as
 
@@ -34,7 +34,7 @@ Atribut **call_as** C++ má stejné funkce jako atribut [call_as](/windows/win32
 
 ## <a name="example"></a>Příklad
 
-Následující kód ukazuje, jak můžete použít **call_as** k namapování nevzdáleně spustitelné funkce (`f1`) na funkci vzdáleně (`Remf1`):
+Následující kód ukazuje, jak můžete použít **call_as** k namapování nevzdáleně funkce (`f1`) na vzdáleně funkčně (`Remf1`):
 
 ```cpp
 // cpp_attr_ref_call_as.cpp
@@ -59,9 +59,9 @@ __interface IMInterface {
 |**Požadované atributy**|Žádné|
 |**Neplatné atributy**|Žádné|
 
-Další informace o kontextech atributů naleznete v tématu kontexty [atributů](cpp-attributes-com-net.md#contexts).
+Další informace o kontextech atributů naleznete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [IDL – atributy](idl-attributes.md)<br/>
 [Atributy metody](method-attributes.md)<br/>

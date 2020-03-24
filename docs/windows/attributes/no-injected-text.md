@@ -1,21 +1,21 @@
 ---
-title: no_injected_text – (C++ atributů COM)
+title: no_injected_text (C++ atribut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.no_injected_text
 helpviewer_keywords:
 - no_injected_text attribute
 ms.assetid: 5256f808-e41e-4f4a-9ea5-e447919f5696
-ms.openlocfilehash: 354643020e704a87daa2e56e923b6a0a704bf0b5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5f98be3478b2e1eeb4b464f1784f3f4ece22d8a4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409288"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166611"
 ---
-# <a name="noinjectedtext"></a>no_injected_text
+# <a name="no_injected_text"></a>no_injected_text
 
-Zabrání kompilátoru vkládání kódu v důsledku použití atributu.
+Zabraňuje kompilátoru v vkládání kódu v důsledku použití atributu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -25,26 +25,26 @@ Zabrání kompilátoru vkládání kódu v důsledku použití atributu.
 
 ### <a name="parameters"></a>Parametry
 
-*Datový typ Boolean*<br/>
-(Volitelné) **true** žádný kód vložený, chcete-li **false** umožňující kódu vložit. **Hodnota TRUE** je výchozí nastavení.
+*datového*<br/>
+Volitelné **true** , pokud nechcete, aby byl kód vložen, **false** , aby bylo možné vložit kód. výchozí **hodnota je true** .
 
 ## <a name="remarks"></a>Poznámky
 
-Nejběžnější použití nástroje **no_injected_text –** C++ atribut je [/Fx](../../build/reference/fx-merge-injected-code.md) – možnost kompilátoru, která vloží **no_injected_text –** atributu do souboru .mrg.
+Nejběžnějším použitím atributu **No_injected_text** C++ je možnost kompilátoru [/FX](../../build/reference/fx-merge-injected-code.md) , která vloží atribut **No_injected_text** do souboru. mrg.
 
 ## <a name="requirements"></a>Požadavky
 
-### <a name="attribute-context"></a>Atribut kontextu
+### <a name="attribute-context"></a>Kontext atributu
 
 |||
 |-|-|
-|**Platí pro**|Kdekoli|
-|**Opakovatelné**|Ne|
-|**Vyžadované atributy**|Žádné|
+|**Platí pro**|Jakékoli|
+|**REPEATABLE**|Ne|
+|**Požadované atributy**|Žádné|
 |**Neplatné atributy**|Žádné|
 
-Další informace o kontexty atributů najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
+Další informace o kontextech atributů naleznete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Atributy kompilátoru](compiler-attributes.md)

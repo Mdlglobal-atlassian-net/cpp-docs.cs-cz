@@ -35,12 +35,12 @@ helpviewer_keywords:
 - tanf function
 - trigonometric functions
 ms.assetid: 36cc0ce8-9c80-4653-b354-ddb3b378b6bd
-ms.openlocfilehash: c79c56555e04c865b70d52a6b1a6e3da1ce94c87
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 9fc1a75bdc6fddb5134b9db17961ba3c4550bc79
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946892"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168704"
 ---
 # <a name="tan-tanf-tanl"></a>tan, tanf, tanl
 
@@ -61,7 +61,7 @@ long double tan( long double x );  // C++ only
 
 ### <a name="parameters"></a>Parametry
 
-*x*<br/>
+*znak*<br/>
 Úhel v radiánech.
 
 ## <a name="return-value"></a>Návratová hodnota
@@ -70,7 +70,7 @@ Funkce **tan** vrací tangens *x*. Pokud *x* je větší nebo rovno 263 nebo men
 
 |Vstup|Výjimka SEH|**Matherr** Jímka|
 |-----------|-------------------|-------------------------|
-|QNAN, ZASÁHNOUT|žádná|_DOMAIN|
+|QNAN, ZASÁHNOUT|Žádná|_DOMAIN|
 |± INF|**NENÍ**|_DOMAIN|
 
 ## <a name="remarks"></a>Poznámky
@@ -109,7 +109,7 @@ int main( void )
 tan( 0.785398 ) = 1.000000
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)<br/>
 [acos, acosf, acosl](acos-acosf-acosl.md)<br/>

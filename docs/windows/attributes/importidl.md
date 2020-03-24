@@ -1,21 +1,21 @@
 ---
-title: importidl – (atribut C++ COM)
+title: importidl (C++ atribut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.importidl
 helpviewer_keywords:
 - importidl attribute
 ms.assetid: 4b0a4b55-6c57-4e6e-bc7b-a12cc8063941
-ms.openlocfilehash: 9db62d4f2a36b8cc0592c924b113077a758915c0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6e41a98bef079c92b6df6e7eff203301aa9ceae4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409431"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166819"
 ---
 # <a name="importidl"></a>importidl
 
-Vloží zadaný souboru do generovaného souboru.
+Vloží zadaný soubor. idl do vygenerovaného souboru IDL.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -26,13 +26,13 @@ Vloží zadaný souboru do generovaného souboru.
 ### <a name="parameters"></a>Parametry
 
 *idl_file*<br/>
-Určuje název souboru, který chcete sloučit s souboru IDL se vygeneruje pro vaši aplikaci.
+Určuje název souboru. idl, který chcete sloučit se souborem. idl, který bude vygenerován pro vaši aplikaci.
 
 ## <a name="remarks"></a>Poznámky
 
-**Importidl –** C++ atribut umístí části mimo blok knihovny (v *idl_file*) do generovaného souboru váš program a v části library (v *idl_file*) do knihovny část váš program vygeneruje soubor .idl.
+Atribut **importidl** C++ umístí oddíl mimo blok knihovny (v *idl_file*) do generovaného souboru. idl vašeho programu a oddílu knihovny (v idl_file) do části Library (v *idl_file*) generovaného souboru. idl vašeho programu.
 
-Můžete chtít použít **importidl –**, například, pokud chcete použít soubor .idl. ruční pevně zakódované souborem generované IDL.
+Můžete chtít použít **importidl**, například pokud chcete použít ručně kódovaný soubor IDL s vygenerovaným souborem. idl.
 
 ## <a name="example"></a>Příklad
 
@@ -45,18 +45,18 @@ Můžete chtít použít **importidl –**, například, pokud chcete použít s
 
 ## <a name="requirements"></a>Požadavky
 
-### <a name="attribute-context"></a>Atribut kontextu
+### <a name="attribute-context"></a>Kontext atributu
 
 |||
 |-|-|
-|**Platí pro**|Kdekoli|
-|**Opakovatelné**|Ne|
-|**Vyžadované atributy**|Žádné|
-|**Neplatné atributy**|Žádný|
+|**Platí pro**|Jakékoli|
+|**REPEATABLE**|Ne|
+|**Požadované atributy**|Žádné|
+|**Neplatné atributy**|Žádné|
 
-Další informace najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
+Další informace naleznete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Atributy kompilátoru](compiler-attributes.md)<br/>
 [Samostatné atributy](stand-alone-attributes.md)<br/>

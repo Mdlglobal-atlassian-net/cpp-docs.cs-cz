@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - helpfile attribute
 ms.assetid: d75161c1-1363-4019-ae09-e7e3b8a3971e
-ms.openlocfilehash: 538cdbb38ac525cfee03a641f3e62e22a69f8e2b
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 1f928fa281c99630ad52ce1fde184c44e9387263
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501541"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166975"
 ---
 # <a name="helpfile"></a>helpfile
 
@@ -30,7 +30,7 @@ Název souboru, který obsahuje témata nápovědy.
 
 ## <a name="remarks"></a>Poznámky
 
-Atribut C++ s nápovědou má stejné funkce jako atribut [](/windows/win32/Midl/helpfile) s nápovědou.
+Atribut s **nápovědou** C++ má stejné funkce jako atribut s [nápovědou](/windows/win32/Midl/helpfile) .
 
 ## <a name="example"></a>Příklad
 
@@ -49,7 +49,7 @@ Příklad použití funkce soubor **nápovědy**naleznete v příkladu pro [modu
 
 Další informace naleznete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [IDL – atributy](idl-attributes.md)<br/>
 [Atributy rozhraní](interface-attributes.md)<br/>

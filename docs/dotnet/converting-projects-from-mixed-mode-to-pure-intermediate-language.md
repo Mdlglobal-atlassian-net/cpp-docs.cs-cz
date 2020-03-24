@@ -7,12 +7,12 @@ helpviewer_keywords:
 - mixed-mode applications, intermediate language
 - projects [C++], converting to intermediate language
 ms.assetid: 855f9e3c-4f09-4bfe-8eab-a45f68292be9
-ms.openlocfilehash: 05ece23e6d79fc399085099deebcde0aa4a92c64
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.openlocfilehash: 8b22f3aaf706fa096f6c25ab8e9fdab6dc512cd8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69630844"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80208800"
 ---
 # <a name="converting-projects-from-mixed-mode-to-pure-intermediate-language"></a>Převod projektů ze smíšeného režimu do čistého IL (Intermediate Language)
 
@@ -27,18 +27,18 @@ Pokud používáte starší verzi sady nástrojů Microsoft C++ Compiler, která
 
 1. Odeberte odkazy na [knihovny run-time jazyka C](../c-runtime-library/crt-library-features.md) (CRT):
 
-   1. V souboru. cpp definujícím vstupní bod aplikace změňte vstupní bod na `Main()`. Použití `Main()` označuje, že váš projekt neodkazuje na CRT.
+   1. V souboru. cpp definujícím vstupní bod aplikace změňte vstupní bod na `Main()`. Použití `Main()` označuje, že projekt neodkazuje na CRT.
 
    2. V Průzkumník řešení klikněte pravým tlačítkem myši na projekt a v místní nabídce vyberte **vlastnosti** , čímž otevřete stránky vlastností aplikace.
 
    3. Na stránce **Upřesnit** vlastnost projektu pro **linker**vyberte **vstupní bod** a potom do tohoto pole zadejte **Main (hlavní** ).
 
-   4. Pro konzolové aplikace na stránce vlastností projekt **systému** pro **linker**vyberte pole subsystému a změňte to na **Console (/SUBSYSTEM: Console)** .
+   4. Pro konzolové aplikace na stránce vlastností projekt **systému** pro **linker**vyberte pole **subsystému** a změňte to na **Console (/SUBSYSTEM: Console)** .
 
       > [!NOTE]
-      > Tuto vlastnost nemusíte nastavovat pro aplikace model Windows Forms, protože pole subsystému je ve výchozím nastavení nastavené na **Windows (/SUBSYSTEM: Windows)** .
+      > Tuto vlastnost nemusíte nastavovat pro aplikace model Windows Forms, protože pole **subsystému** je ve výchozím nastavení nastavené na **Windows (/SUBSYSTEM: Windows)** .
 
-   5. V *stdafx. h*vykomentujte všechny `#include` příkazy. Například v konzolových aplikacích:
+   5. V souboru *stdafx. h*Odkomentujte všechny příkazy `#include`. Například v konzolových aplikacích:
 
       ```cpp
       // #include <iostream>
@@ -56,7 +56,7 @@ Pokud používáte starší verzi sady nástrojů Microsoft C++ Compiler, která
       // #include <tchar.h>
       ```
 
-   6. V případě aplikací model Windows Forms v poli Form1. cpp přidejte komentář k `#include` příkazu, který odkazuje na Windows. h. Příklad:
+   6. V případě aplikací model Windows Forms v poli Form1. cpp přidejte komentář k příkazu `#include`, který odkazuje na Windows. h. Příklad:
 
       ```cpp
       // #include <windows.h>
@@ -77,7 +77,7 @@ Pokud používáte starší verzi sady nástrojů Microsoft C++ Compiler, která
 
    |Struktura|Popis|
    |---------------|-----------------|
-   |[Datový typ Boolean](/dotnet/api/system.boolean)|Představuje logickou hodnotu.|
+   |[Datového](/dotnet/api/system.boolean)|Představuje logickou hodnotu.|
    |[Bytové](/dotnet/api/system.byte)|Představuje 8 bitů unsigned integer.|
    |[Char](/dotnet/api/system.char)|Představuje znak Unicode.|
    |[Hodnotu](/dotnet/api/system.datetime)|Představuje okamžitý čas, obvykle vyjádřený jako datum a denní dobu.|
@@ -85,7 +85,7 @@ Pokud používáte starší verzi sady nástrojů Microsoft C++ Compiler, která
    |[Klepat](/dotnet/api/system.double)|Představuje číslo s plovoucí desetinnou čárkou a dvojitou přesností.|
    |[Hlavních](/dotnet/api/system.guid)|Představuje globálně jedinečný identifikátor (GUID).|
    |[Int16](/dotnet/api/system.int16)|Představuje 16bitové celé číslo se znaménkem.|
-   |[Int32](/dotnet/api/system.int32)|Představuje 32 celé číslo se znaménkem.|
+   |[Uvedena](/dotnet/api/system.int32)|Představuje 32 celé číslo se znaménkem.|
    |[Int64](/dotnet/api/system.int64)|Představuje 64 celé číslo se znaménkem.|
    |[IntPtr](/dotnet/api/system.intptr)|Typ specifický pro platformu, který se používá k reprezentaci ukazatele nebo popisovače.|
    |[SByte](/dotnet/api/system.byte)|Představuje 8bitové celé číslo se znaménkem.|

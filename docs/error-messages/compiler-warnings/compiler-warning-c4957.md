@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C4957
 ms.assetid: a18c52d4-23e2-44f1-b4b5-f7fa5a7f3987
-ms.openlocfilehash: 79a1b516db1508c755693b67ca2e4070095839da
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 340c26c97d0b5b686eee487cd3fd8b6b05bdf373
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388660"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80164901"
 ---
 # <a name="compiler-warning-c4957"></a>Upozornění kompilátoru C4957
 
-> "*přetypování*': explicitní přetypování z typu '*cast_from*"do"*cast_to*" nejde ověřit
+> '*cast*': explicitní přetypování z '*cast_from*' na '*cast_to*' nelze ověřit
 
 ## <a name="remarks"></a>Poznámky
 
-Přetypování způsobí bitovou kopii nelze ověřit.
+Výsledkem přetypování bude neověřitelný obraz.
 
-Některá přetypování je bezpečné (například `static_cast` , který aktivuje uživatelem definované převody a `const_cast`). A [safe_cast](../../extensions/safe-cast-cpp-component-extensions.md) je zaručeno, že vytvoří ověřitelný kód.
+Některá přetypování jsou bezpečná (například `static_cast`, která aktivuje uživatelsky definované převody a `const_cast`). [Safe_cast](../../extensions/safe-cast-cpp-component-extensions.md) je zaručeno vytvořit ověřitelný kód.
 
-Další informace najdete v tématu [prázdná a ověřitelný kód (C++vyhodnocovací)](../../dotnet/pure-and-verifiable-code-cpp-cli.md).
+Další informace najdete v tématu [čistý a ověřitelný kódC++(/CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md).
 
-**/CLR: safe** – možnost kompilátoru je zastaralé v sadě Visual Studio 2015 a není podporována v sadě Visual Studio 2017.
+Možnost **/clr: Safe** je v aplikaci visual Studio 2015 zastaralá a nepodporovaná ve visual studiu 2017.
 
-Toto upozornění je vyvoláno jako chyba a pomocí se dají zakázat [upozornění](../../preprocessor/warning.md) – Direktiva pragma nebo [/wd](../../build/reference/compiler-option-warning-level.md) – možnost kompilátoru.
+Toto upozornění je vystaveno jako chyba a může být zakázáno pomocí direktivy pragma [Warning](../../preprocessor/warning.md) nebo [/WD](../../build/reference/compiler-option-warning-level.md) kompilátoru.
 
 ## <a name="example"></a>Příklad
 

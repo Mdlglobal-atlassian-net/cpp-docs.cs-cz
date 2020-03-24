@@ -5,78 +5,78 @@ helpviewer_keywords:
 - rowsets, OLE DB object model
 - OLE DB, object model
 ms.assetid: 1a274a25-c310-4430-a1ec-bd2bd8120eff
-ms.openlocfilehash: 303ad4166f0f1126182956fae9c19f513be7cfb3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 192195d02b034546e50b1cb860b1f11c47dc2b65
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62283806"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210116"
 ---
 # <a name="ole-db-object-model"></a>OLE DB – model objektů
 
-Objektový model OLE DB je vytvořen z následujících objektů nebo komponenty. První čtyři objekty nebo součásti (zdrojů dat, relace, příkazy a sady řádků) umožňují připojení ke zdroji dat a jeho zobrazení. Rest, počínaje přístupových objektů, se vztahují na práci s daty, jakmile se zobrazí.
+Model OLE DB objektů je tvořen následujícími objekty nebo komponentami. První čtyři uvedené objekty nebo komponenty (zdroje dat, relace, příkazy a sady řádků) vám umožní připojit se ke zdroji dat a zobrazit ho. Zbytek počínaje přistupujícími objekty se vztahuje na práci s daty, když se zobrazí.
 
 ## <a name="data-sources"></a>Zdroje dat
 
-Objekty zdroje dat vám umožní připojit ke zdroji dat, jako je například soubor nebo DBMS. Objekt zdroje dat vytvoří a spravuje připojení a obsahuje informace o oprávnění a ověřování (například přihlašovací jméno a heslo). Objekt zdroje dat můžete vytvořit jednu nebo více relací.
+Objekty zdroje dat umožňují připojit se ke zdroji dat, například k souboru nebo systému DBMS. Objekt zdroje dat vytvoří a spravuje připojení a obsahuje informace o oprávněních a ověřováních (například přihlašovací jméno a heslo). Objekt zdroje dat může vytvořit jednu nebo více relací.
 
 ## <a name="sessions"></a>Relace
 
-Relace slouží ke správě konkrétní interakce se zdrojem dat pro dotazování a načíst data. Každá relace je jedna transakce. Transakce je nedělitelná jednotka práce definované ACID testem. Definici kyseliny naleznete v tématu [transakce](#vcconoledbcomponents_transactions).
+Relace spravuje konkrétní interakci se zdrojem dat pro dotazování a načítání dat. Každá relace je jediná transakce. Transakce je nedělitelná pracovní jednotka definovaná testem kyseliny. Definici kyseliny najdete v tématu [transakce](#vcconoledbcomponents_transactions).
 
-Relace provádět důležité úkoly, jako je otevření sady řádků a vrátí objekt zdroje dat, který byl vytvořen. Relace můžete také vrátit metadata nebo informace o zdroji dat (například informace o tabulce).
+Relace jsou důležité úlohy, jako je například otevření sad řádků a vrácení objektu zdroje dat, který jej vytvořil. Relace mohou také vracet metadata nebo informace o samotném zdroji dat (například informace o tabulce).
 
-Relaci můžete vytvořit jeden nebo více příkazů.
+Relace může vytvořit jeden nebo více příkazů.
 
 ## <a name="commands"></a>Příkazy
 
-Příkazy spustí text příkazu, jako je příkaz jazyka SQL. Pokud textový příkaz určuje sadu řádků, jako je například SQL **vyberte** příkaz, příkaz vytvoří v sadě řádků.
+Příkazy spouštějí textový příkaz, jako je například příkaz jazyka SQL. Pokud příkaz text určuje sadu řádků, například příkaz SQL **Select** , vytvoří příkaz sadu řádků.
 
-Příkaz je prostě kontejner pro textový příkaz, který je předán z příjemce na objekt zdroje dat pro spuštění podle poskytovatele základnímu úložišti dat. řetězec (například příkaz jazyka SQL). Text příkazu je obvykle SQL **vyberte** – příkaz (v takovém případě, protože SQL **vyberte** určuje sadu řádků, příkaz automaticky vytvoří sadu řádků).
+Příkaz je jednoduše kontejner pro textový příkaz, což je řetězec (například příkaz jazyka SQL) předaný příjemcem do objektu zdroje dat, který může být spuštěný v podkladovém úložišti dat poskytovatele. Textový příkaz je typicky příkaz SQL **Select** (v takovém případě, protože příkaz SQL **Select** určuje sadu řádků, příkaz automaticky vytvoří sadu řádků).
 
 ## <a name="rowsets"></a>Sady řádků
 
-Sady řádků zobrazení dat v tabelárním formátu. Index je zvláštní případ sady řádků. Sady řádků můžete vytvořit z relace nebo příkaz.
+Sady řádků zobrazují data ve formátu tabulky. Index je zvláštní případ sady řádků. Můžete vytvořit sady řádků z relace nebo příkazu.
 
 ### <a name="schema-rowsets"></a>Sady řádků schématu
 
-Schémata mají metadata (strukturální informace) o databázi. Sady řádků schématu jsou sady řádků, které mají informace o schématu. Někteří poskytovatelé OLE DB pro DBMS podporovat rozhraní objektu sady řádků schématu. Další informace o sad řádků schématu najdete v tématu [získávání metadat pomocí sad řádků schématu](../../data/oledb/obtaining-metadata-with-schema-rowsets.md) a [třídy sady řádků schématu a definiční třídy typů](../../data/oledb/schema-rowset-classes-and-typedef-classes.md).
+Schémata mají metadata (strukturální informace) o databázi. Sady řádků schématu jsou sady řádků, které obsahují informace o schématu. Někteří poskytovatelé OLE DB pro DBMS podporují objekty sady řádků schématu. Další informace o sadách řádků schématu naleznete v tématu [Získávání metadat pomocí sad řádků schématu](../../data/oledb/obtaining-metadata-with-schema-rowsets.md) a [tříd sady řádků schématu a tříd typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md).
 
 ### <a name="view-objects"></a>Zobrazit objekty
 
-Objekt zobrazení definuje podmnožinu řádků a sloupců ze sady řádků. Nemá žádná data. Zobrazit objekty nelze kombinovat data z více sad řádků.
+Objekt zobrazení definuje podmnožinu řádků a sloupců ze sady řádků. Nemá žádná vlastní data. Zobrazení objektů nemůže kombinovat data z více sad řádků.
 
 ## <a name="accessors"></a>Přístupové objekty
 
-Pouze technologie OLE DB používá koncept přistupující objekty. Přístupový objekt popisuje způsob uložení dat v příjemce. Obsahuje sadu vazby (označované jako mapování sloupců) mezi řádků polí (sloupců) a datové členy můžete deklarovat v příjemci.
+Pouze OLE DB používá koncept přístupových objektů. Přístupový objekt popisuje, jak jsou data uložená v příjemci. Obsahuje sadu vazeb (nazývaných mapu sloupců) mezi poli sady řádků (sloupce) a datovými členy, které deklarujete v příjemci.
 
-##  <a name="vcconoledbcomponents_transactions"></a> Transakce
+##  <a name="transactions"></a><a name="vcconoledbcomponents_transactions"></a>Převody
 
-Objekty transakce se používají při potvrzení nebo přerušení vnořené transakce na jiné než nejnižší úroveň. Transakce je nedělitelná jednotka práce definované ACID testem. KYSELINY, zkratka pro:
+Transakční objekty jsou používány při potvrzení nebo přerušení vnořených transakcí na jiné, než na nejnižší úrovni. Transakce je nedělitelná pracovní jednotka definovaná testem kyseliny. KYSELost představuje:
 
-- Atomicitu, nelze rozdělit do menších jednotek práce
+- Nedělitelnost nemůže být rozdělená na menší pracovní jednotky.
 
-- Souběžnost, více než jedna transakce může dojít v čase
+- Souběžnosti, může dojít v jednom okamžiku k více transakcím.
 
-- Izolace, jedna transakce má omezené znalosti o změny provedené jiným uživatelem
+- Izolace, jedna transakce má omezené znalosti o změnách provedených jiným
 
-- Odolnost, provede transakce trvalé změny
+- Odolnost, transakce provádí trvalé změny
 
 ## <a name="enumerators"></a>Enumerátory
 
-Enumerátory vyhledat dostupné zdroje dat a další výčty. Příjemce, kteří nejsou přizpůsobená pro určitý zdroj dat pomocí enumerátory vyhledat zdroj dat používat.
+Enumerátory hledají dostupné zdroje dat a další enumerátory. Příjemci, kteří nejsou přizpůsobené pro konkrétní zdroj dat, používají enumerátory k vyhledání zdroje dat, který chcete použít.
 
-Kořenový enumerátor dodáváno v sadě Microsoft Data Access SDK prochází registru, které hledáte, zdroje dat a další výčty. Další výčty procházení registru nebo vyhledávání v podobě specifickým pro zprostředkovatele.
+Kořenový enumerátor, který je dodán v sadě Microsoft Data Access SDK, projde registrem, ve kterém hledají zdroje dat a další enumerátory. Jiné enumerátory přecházejí do registru nebo hledají způsobem specifickým pro konkrétního poskytovatele.
 
 ## <a name="errors"></a>Chyby
 
-Libovolné rozhraní libovolného objektu OLE DB mohou způsobit chyby. Chyby mají další informace o chybě, včetně objektu volitelné vlastních chyb. Tyto informace jsou uloženy v HRESULT.
+Jakékoli rozhraní u libovolného objektu OLE DB může generovat chyby. Chyby obsahují další informace o chybě, včetně volitelného vlastního objektu Error. Tyto informace jsou uloženy v HRESULT.
 
 ## <a name="notifications"></a>Oznámení
 
-Oznámení se používají skupiny spolupracující spotřebitelů sdílení sady řádků (kde sdílení znamená, že příjemci jsou předpokládá, že funguje v rámci jedné transakce). Oznámení povolení spolupracující příjemcům sdílení sadu řádků informován o akcích pro řádků přihlášením svoje konkurenty.
+Oznámení používají skupiny spolupracujících příjemců, které sdílejí sadu řádků (kde sdílení znamená, že se zákazníci považují za fungující v rámci stejné transakce). Oznámení umožňují spolupráci uživatelů sdílejících sadu řádků, aby byli informováni o akcích sady řádků prováděných jejich partnery.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Programování v architektuře OLE DB](../../data/oledb/ole-db-programming.md)<br/>
 [Přehled programování v architektuře OLE DB](../../data/oledb/ole-db-programming-overview.md)
