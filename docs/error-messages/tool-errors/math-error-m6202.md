@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - M6202
 ms.assetid: 4d17045f-c6dc-4705-9512-e9af12c35fb4
-ms.openlocfilehash: c216c4d01513868dd56f47c7d5ca7f8b734d1797
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b8a3a4ab87a410c4cee8f7e4a1a0517c169d0364
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393230"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80173657"
 ---
 # <a name="math-error-m6202"></a>Chyba matematické operace M6202
 
-'function': Chyba
+' function ': Chyba _SING
 
-Argument pro danou funkci bylo singularity hodnotu pro tuto funkci. Funkce není definována pro tento argument.
+Argument dané funkce byl hodnota pro tuto funkci v jednotném formátu. Funkce není definována pro tento argument.
 
-Tato chyba volání `_matherr` funkce s názvem funkce, argumentů a typ chyby. Je možné přepsat `_matherr` přizpůsobit zpracování některých chyb za běhu s plovoucí desetinnou čárkou matematické funkce.
+Tato chyba volá funkci `_matherr` s názvem funkce, jejími argumenty a typem chyby. Můžete přepsat funkci `_matherr` a přizpůsobit tak zpracování určitých matematických chyb s plovoucí desetinnou čárkou v době běhu.

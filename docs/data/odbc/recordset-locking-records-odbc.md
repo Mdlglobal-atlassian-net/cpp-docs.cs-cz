@@ -1,5 +1,5 @@
 ---
-title: 'Recordset: Zamykání záznamů (ODBC)'
+title: 'Sada záznamů: Zamykání záznamů (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - locks [C++], recordsets
@@ -10,61 +10,61 @@ helpviewer_keywords:
 - ODBC recordsets [C++], locking records
 - data [C++], locking
 ms.assetid: 8fe8fcfe-b55a-41a8-9136-94a7cd1e4806
-ms.openlocfilehash: 1265899e7060527d7e586689eb4c3148eebc4080
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d4e80816a131c997e9f5bfaa34f025394b05a358
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397793"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212859"
 ---
-# <a name="recordset-locking-records-odbc"></a>Recordset: Zamykání záznamů (ODBC)
+# <a name="recordset-locking-records-odbc"></a>Sada záznamů: Zamykání záznamů (ODBC)
 
-Toto téma platí pro třídy knihovny MFC rozhraní ODBC.
+Toto téma se vztahuje na třídy knihovny MFC rozhraní ODBC.
 
 Toto téma vysvětluje:
 
-- [Typy záznamu uzamčení k dispozici](#_core_record.2d.locking_modes).
+- [Typy zamykání záznamů k dispozici](#_core_record.2d.locking_modes).
 
-- [Jak uzamknout záznamy ve vaší sadě záznamů při aktualizacích](#_core_locking_records_in_your_recordset).
+- [Jak uzamknout záznamy v sadě záznamů během aktualizací](#_core_locking_records_in_your_recordset).
 
-Při aktualizaci záznamu ve zdroji dat pomocí sady záznamů, aplikace uzamknout záznam, aby žádný jiný uživatel upravovat záznam ve stejnou dobu. Stav záznamu aktualizovat ve stejnou dobu dva uživatele není definováno, pokud systém nemůže zaručit, že dva uživatele nejde aktualizovat záznam současně.
+Použijete-li sadu záznamů k aktualizaci záznamu ve zdroji dat, může aplikace uzamknout záznam, takže žádný jiný uživatel nebude moci současně aktualizovat záznam. Stav záznamu aktualizovaného dvěma uživateli ve stejnou dobu není definován, pokud systém nemůže zaručit, že dva uživatelé nemohou aktualizovat záznam současně.
 
 > [!NOTE]
->  Toto téma se vztahuje na objekty odvozené z `CRecordset` v který řádek hromadné načítání není implementovaná. Pokud jste implementovali hromadné načítání řádků, některé informace se nevztahují. Například nelze volat `Edit` a `Update` členské funkce. Další informace o hromadném načítání řádků naleznete v tématu [sada záznamů: Načítání záznamů (ODBC) hromadné](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+>  Toto téma se vztahuje na objekty odvozené od `CRecordset`, ve kterých nebylo implementováno hromadné načítání řádků. Pokud jste implementovali hromadné načítání řádků, některé informace se nevztahují. Například nemůžete volat `Edit` a `Update` členské funkce. Další informace o hromadném načítání řádků naleznete v tématu [Sada záznamů: hromadné načítání záznamů (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
-##  <a name="_core_record.2d.locking_modes"></a> Režimy zamykání záznamů
+##  <a name="record-locking-modes"></a><a name="_core_record.2d.locking_modes"></a>Režimy zamykání záznamů
 
-Databázové třídy poskytují dvě [režimy zamykání záznamů](../../mfc/reference/crecordset-class.md#setlockingmode):
+Třídy databáze poskytují dva [režimy zamykání záznamů](../../mfc/reference/crecordset-class.md#setlockingmode):
 
-- Optimistické zamykání (výchozí)
+- Optimistické zamykání (výchozí nastavení)
 
 - Pesimistické zamykání
 
-Aktualizace záznamu dojde ve třech krocích:
+Aktualizace záznamu probíhá ve třech krocích:
 
-1. Operace zahájíte volání [upravit](../../mfc/reference/crecordset-class.md#edit) členskou funkci.
+1. Operaci zahájíte voláním funkce [Upravit](../../mfc/reference/crecordset-class.md#edit) členskou funkci.
 
-1. Při změně odpovídající pole z aktuální záznam.
+1. Změníte příslušná pole aktuálního záznamu.
 
-1. Ukončení operace – a obvykle potvrďte aktualizaci – voláním [aktualizovat](../../mfc/reference/crecordset-class.md#update) členskou funkci.
+1. Ukončíte operaci – a obvykle zadáte aktualizaci – voláním členské funkce [Update](../../mfc/reference/crecordset-class.md#update) .
 
-Optimistické uzamykání záznamu ve zdroji dat pouze při uzamčení `Update` volání. Pokud používáte optimistické uzamykání, v prostředí, aplikace by měl zpracovat `Update` chybový stav. Pesimistické zamykání uzamkne záznam, jakmile zavoláte `Edit` a neuvolní ho dokud volání `Update` (chyby jsou označeny pomocí `CDBException` mechanismus, nikoli podle hodnoty false vrácený `Update`). Pesimistické zamykání má potenciální snížení výkonu pro ostatní uživatele, protože souběžný přístup do stejného záznamu muset počkat na dokončení vaší aplikace `Update` procesu.
+Optimistické zamykání uzamkne záznam ve zdroji dat pouze během volání `Update`. Pokud používáte optimistické zamykání ve víceuživatelském prostředí, aplikace by měla zpracovat podmínku selhání `Update`. Pesimistické uzamykání uzamkne záznam hned po volání `Edit` a neuvolní ho, dokud nebudete volat `Update` (selhání jsou uvedena prostřednictvím mechanismu `CDBException`, nikoli hodnotou FALSE vrácenou `Update`). Pesimistické zamykání má potenciální snížení výkonu pro jiné uživatele, protože souběžný přístup ke stejnému záznamu může počkat až do dokončení procesu `Update` vaší aplikace.
 
-##  <a name="_core_locking_records_in_your_recordset"></a> Uzamčení záznamů do sady záznamů
+##  <a name="locking-records-in-your-recordset"></a><a name="_core_locking_records_in_your_recordset"></a>Zamykání záznamů v sadě záznamů
 
-Pokud chcete změnit objekt sady záznamů [režim uzamčení](#_core_record.2d.locking_modes) z výchozí hodnoty, je nutné před voláním změnit režim `Edit`.
+Chcete-li změnit [režim uzamykání](#_core_record.2d.locking_modes) objektu sady záznamů z výchozí hodnoty, je nutné před voláním `Edit`změnit režim.
 
-#### <a name="to-change-the-current-locking-mode-for-your-recordset"></a>Chcete-li změnit aktuální režim uzamčení pro sady záznamů
+#### <a name="to-change-the-current-locking-mode-for-your-recordset"></a>Změna aktuálního režimu uzamykání pro sadu záznamů
 
-1. Volání [SetLockingMode](../../mfc/reference/crecordset-class.md#setlockingmode) členskou funkci, zadat buď `CRecordset::pessimistic` nebo `CRecordset::optimistic`.
+1. Zavolejte členskou funkci [SetLockingMode](../../mfc/reference/crecordset-class.md#setlockingmode) a určete buď `CRecordset::pessimistic`, nebo `CRecordset::optimistic`.
 
-Nový režim uzamčení zůstává v platnosti, dokud nebude znovu změnit nebo sady záznamů je zavřený.
+Nový režim uzamykání zůstane v platnosti, dokud ho znovu nezměníte nebo dokud nebude sada záznamů zavřena.
 
 > [!NOTE]
->  Relativně málo ovladače rozhraní ODBC aktuálně podporují pesimistické zamykání.
+>  Relativně málo ovladačů ODBC aktuálně podporuje pesimistické zamykání.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Sada záznamů (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Sada záznamů: Provedení spojení (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)<br/>
+[Sada záznamů: Provedení spojení (rozhraní ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)<br/>
 [Sada záznamů: Přidávání, aktualizace a odstranění záznamů (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)

@@ -1,26 +1,26 @@
 ---
-title: Atribut cíle (C++vyhodnocovací a C++/CX)
+title: Cíle atributů (C++/CLI a C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
 - custom attributes, targets
 ms.assetid: b4e6e224-da77-4520-b6e6-b96846e0ebc1
-ms.openlocfilehash: 502f5ba2e5bbb5bd5a5fcceca16acaa3987db4bc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fe2c1d27042b51300d01ba70b951b7601d87701e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62346062"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172617"
 ---
-# <a name="attribute-targets-ccli-and-ccx"></a>Atribut cíle (C++vyhodnocovací a C++/CX)
+# <a name="attribute-targets-ccli-and-ccx"></a>Cíle atributů (C++/CLI a C++/CX)
 
-Specifikátory použití atributů umožňují zadat atribut cíle.  Každý atribut je definován použít některé prvky jazyka. Atribut může například definovat pouze pro třídy a struktury.  Následující seznam uvádí možné syntaktické prvky, na kterých je možné vlastní atribut. Kombinace těchto hodnot (pomocí logické nebo) může být použit.
+Specifikátory použití atributu umožňují zadat cíle atributů.  Každý atribut je definován pro použití s některými prvky jazyka. Například atribut může být definován pro použití pouze pro třídy a struktury.  Následující seznam obsahuje možné syntaktické prvky, na kterých lze použít vlastní atribut. Kombinace těchto hodnot (pomocí logického operátoru OR) lze použít.
 
-Chcete-li určit atribut target, předat jeden nebo více <xref:System.AttributeTargets> enumerátory k <xref:System.AttributeUsageAttribute> při definování atributu.
+Chcete-li určit cíl atributu, pro předání jednoho nebo více enumerátorů <xref:System.AttributeTargets> pro <xref:System.AttributeUsageAttribute> při definování atributu.
 
-Následuje seznam platné cíle atributu:
+Následuje seznam platných cílů atributu:
 
-- `All` (platí pro všechny konstruktory)
+- `All` (platí pro všechny konstrukce)
 
     ```cpp
     using namespace System;
@@ -193,23 +193,23 @@ Následuje seznam platné cíle atributu:
     };
     ```
 
-Obvykle atribut přímo předchází prvek jazyka, ke kterému se vztahuje. V některých případech však polohu atribut nestačí k určení zamýšleného cílového atributu. Podívejte se například:
+Obvykle atribut přímo předchází jazykovému prvku, na který se vztahuje. V některých případech však není pozice atributu dostačující k určení zamýšleného cíle atributu. Vezměte v úvahu tento příklad:
 
 ```cpp
 [Attr] int MyFn(double x)...
 ```
 
-Syntakticky, neexistuje žádný způsob, jak zjistit, pokud atribut má použít pro metodu nebo návratovou hodnotu metody (v takovém případě bude výchozí metodu). V takových případech lze specifikátor atributu využití. Například chcete-li atribut platí pro návratovou hodnotu, použijte `returnvalue` specifikátor následujícím způsobem:
+Syntakticky neexistuje žádný způsob, jak zjistit, zda je atribut určen pro použití pro metodu nebo návratovou hodnotu metody (v tomto případě je použita metoda). V takových případech lze použít specifikátor použití atributu. Například chcete-li, aby atribut byl použit pro návratovou hodnotu, použijte specifikátor `returnvalue` následujícím způsobem:
 
 ```cpp
 [returnvalue:Attr] int MyFn(double x)... // applies to return value
 ```
 
-Použití specifikátoru atributu jsou nutné v následujících situacích:
+Specifikátory použití atributu jsou povinné v následujících situacích:
 
-- Chcete-li určit atribut úrovně sestavení nebo modulu.
+- Chcete-li určit atribut na úrovni sestavení nebo modulu.
 
-- Můžete zadat, že atribut platí pro návratovou hodnotu metody, nikoli metodu:
+- Chcete-li určit, že atribut platí pro návratovou hodnotu metody, nikoli metodu:
 
     ```cpp
     [method:Attr] int MyFn(double x)...     // Attr applies to method
@@ -217,7 +217,7 @@ Použití specifikátoru atributu jsou nutné v následujících situacích:
     [Attr] int MyFn(double x)...            // default: method
     ```
 
-- Můžete zadat, že atribut platí pro přistupující objekt vlastnosti, nikoli vlastnost:
+- Chcete-li určit, že atribut se vztahuje na přistupující objekt vlastnosti, nikoli na vlastnost:
 
     ```cpp
     [method:MyAttr(123)] property int Property()
@@ -225,7 +225,7 @@ Použití specifikátoru atributu jsou nutné v následujících situacích:
     [MyAttr(123)] property int get_MyPropy() // default: property
     ```
 
-- Můžete zadat, že atribut platí pro přístupový objekt události, nikoli události:
+- Chcete-li určit, že atribut se vztahuje na přistupující objekt události, nikoli na událost:
 
     ```cpp
     delegate void MyDel();
@@ -236,7 +236,7 @@ Použití specifikátoru atributu jsou nutné v následujících situacích:
     }
     ```
 
-Specifikátor atributu využití platí pouze pro atribut, který následuje. To je
+Specifikátor použití atributu se vztahuje pouze na atribut, který jej bezprostředně následuje. To je
 
 ```cpp
 [returnvalue:Attr1, Attr2]
@@ -252,7 +252,7 @@ se liší od
 
 ### <a name="description"></a>Popis
 
-Tato ukázka předvádí, jak určit více cílů.
+V této ukázce se dozvíte, jak zadat více cílů.
 
 ### <a name="code"></a>Kód
 
@@ -272,6 +272,6 @@ ref class MyClass {};
 value struct MyStruct {};
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Uživatelsky definované atributy](user-defined-attributes-cpp-component-extensions.md)

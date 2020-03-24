@@ -1,60 +1,60 @@
 ---
-title: 'SQL: SQL a datové typy C++ (ODBC)'
+title: 'SQL: SQL a datové typy C++ (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - data types [C++], SQL vs. C++
 - SQL data types [C++]
 - SQL [C++], vs. C++ data types
 ms.assetid: 066e0070-d4da-435c-9c4b-f7cab3352c86
-ms.openlocfilehash: 3efa36342b7d16968113acd818a7a1386e4cefcc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1c1ce908b5c8d345906d49adc79e322225ed49f5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62329880"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212612"
 ---
-# <a name="sql-sql-and-c-data-types-odbc"></a>SQL: SQL a datové typy C++ (ODBC)
+# <a name="sql-sql-and-c-data-types-odbc"></a>SQL: SQL a datové typy C++ (ODBC)
 
 > [!NOTE]
->  Tyto informace platí pro třídy knihovny MFC rozhraní ODBC. Pokud pracujete s tříd DAO knihovny MFC, naleznete v tématu "Porovnání z Microsoft Jet databáze modul SQL a ANSI SQL" v nápovědě k DAO.
+>  Tyto informace se vztahují na třídy knihovny MFC rozhraní ODBC. Pokud pracujete s třídami knihovny MFC DAO, přečtěte si téma "porovnání databáze Microsoft Jet Database Engine SQL a ANSI SQL" v nápovědě rozhraní DAO.
 
-Následující tabulka mapuje datové typy ANSI SQL datových typů jazyka C++. Informace o jazyce C uvedené v dodatku D o těchto argumentech *ODBC SDK* *referenční informace pro programátory* na disku CD knihovny MSDN. Průvodci spravovat většinu mapování datového typu pro vás. Pokud je velmi riskantní používat průvodce, můžete použít informace o mapování můžete napsat kód exchange pole ručně.
+Následující tabulka mapuje datové typy ANSI SQL na C++ datové typy. Tím se rozšiřují informace o jazyce C uvedené v příloze D *Referenční příručce programátora* *sady ODBC SDK* na disku CD knihovny MSDN. Průvodci spravují většinu mapování datových typů za vás. Pokud Průvodce nepoužíváte, můžete použít informace o mapování, které vám pomohou psát kód výměny pole ručně.
 
-### <a name="ansi-sql-data-types-mapped-to-c-data-types"></a>Datové typy ANSI SQL mapované na datové typy C++
+### <a name="ansi-sql-data-types-mapped-to-c-data-types"></a>Datové typy ANSI SQL mapované na C++ datové typy
 
-|ANSI SQL datový typ|Datové typy jazyka C++|
+|ANSI – datový typ SQL|C++datový typ|
 |------------------------|---------------------|
 |**CHAR**|`CString`|
-|**DECIMAL**|`CString` 1|
+|**NOTACI**|`CString` 1|
 |**SMALLINT**|**int**|
-|**REAL**|**float**|
-|**CELÉ ČÍSLO**|**long**|
-|**PLOVOUCÍ DESETINNOU ČÁRKOU**|**double**|
-|**DOUBLE**|**double**|
-|**NUMERIC**|`CString` 1|
+|**NEMOVITOSTÍ**|**float**|
+|**ČÍSLA**|**long**|
+|**Plovák**|**double**|
+|**KLEPAT**|**double**|
+|**ČÍSELNÉ**|`CString` 1|
 |**VARCHAR**|`CString`|
-|**LONGVARCHAR**|`CLongBinary`, `CString` 2|
-|**BIT**|**BOOL**|
-|**TINYINT**|**BYTE**|
+|**LONGVARCHAR**|`CLongBinary``CString` 2|
+|**40BITOVÉHO**|**LOGICK**|
+|**TINYINT**|**BYTOVÉ**|
 |**BIGINT**|`CString` 1|
-|**BINÁRNÍ**|`CByteArray`|
+|**TVARU**|`CByteArray`|
 |**VARBINARY**|`CByteArray`|
-|**LONGVARBINARY**|`CLongBinary`, `CByteArray` 3|
-|**DATUM**|`CTime`, `CString`|
+|**LONGVARBINARY**|`CLongBinary``CByteArray` 3|
+|**DATE** (Datum)|`CTime`, `CString`|
 |**ČAS**|`CTime`, `CString`|
-|**TIMESTAMP**|`CTime`, `CString`|
+|**ČASOVÉ razítko**|`CTime`, `CString`|
 
-1. ANSI **DESÍTKOVÉ** a **číselné** namapovat na `CString` protože **SQL_C_CHAR** je výchozí typ přenosu rozhraní ODBC.
+1. **Desítková** a **Číselná** mapa ANSI pro `CString`, protože **SQL_C_CHAR** je výchozí typ přenosu ODBC.
 
-2. Znak data déle než 255 znaků je oříznutá. ve výchozím nastavení při mapování na `CString`. Zkrácení délky můžete rozšířit tak, že explicitně nastavíte *nMaxLength* argument `RFX_Text`.
+2. Data znaků přesahující 255 znaků se při mapování na `CString`ve výchozím nastavení zkrátí. Délku zkrácení můžete zvětšit explicitním nastavením argumentu *nMaxLength* `RFX_Text`.
 
-3. Binární data déle než 255 znaků je oříznutá. ve výchozím nastavení při mapování na `CByteArray`. Zkrácení délky můžete rozšířit tak, že explicitně nastavíte *nMaxLength* argument `RFX_Binary`.
+3. Binární data přesahující 255 znaků se při mapování na `CByteArray`ve výchozím nastavení zkrátí. Délku zkrácení můžete zvětšit explicitním nastavením argumentu *nMaxLength* `RFX_Binary`.
 
-Pokud nepoužíváte knihovna kurzorů rozhraní ODBC, může dojít k potížím při pokusu o aktualizaci dvou nebo více polí dlouho proměnné délky, pomocí ovladače Microsoft SQL Server ODBC a databázové třídy MFC rozhraní ODBC. Typy rozhraní ODBC **SQL_LONGVARCHAR** a **SQL_LONGVARBINARY**, mapování na text a obrázek typy serveru SQL Server. A `CDBException` je vyvolána při aktualizaci dvou nebo více polí dlouho proměnné délky při volání stejné `CRecordset::Update`. Proto se neaktualizují více sloupců dlouhé současně s `CRecordset::Update`. Více dlouhých sloupců můžete aktualizovat současně s rozhraním ODBC API `SQLPutData`. Můžete také použít knihovna kurzorů rozhraní ODBC, ale to se nedoporučuje pro ovladače, jako jsou ovladače systému SQL Server, které podporují kurzory a není nutné knihovna kurzorů rozhraní.
+Pokud nepoužíváte knihovnu kurzorů rozhraní ODBC, může dojít k potížím při pokusu o aktualizaci dvou nebo více polí s proměnlivou délkou pomocí Microsoft SQL Server ovladače rozhraní ODBC a databázových tříd knihovny MFC rozhraní ODBC. Typy rozhraní ODBC, **SQL_LONGVARCHAR** a **SQL_LONGVARBINARY**, se mapují na typy textu a obrázků SQL Server. `CDBException` je vyvolána, pokud provedete aktualizaci dvou nebo více polí s proměnnou délkou na stejném volání `CRecordset::Update`. Proto neaktualizujte více dlouhých sloupců současně pomocí `CRecordset::Update`. Pomocí `SQLPutData`rozhraní ODBC API můžete aktualizovat víc dlouhých sloupců současně. Můžete také použít knihovnu kurzorů ODBC, ale nedoporučuje se pro ovladače, jako je například ovladač SQL Server, který podporuje kurzory a nepotřebujete knihovnu kurzorů.
 
-Pokud při použití knihovny kurzorů ODBC se databázové třídy MFC rozhraní ODBC a ovladači Microsoft SQL Server ODBC **ASSERT** může dojít k spolu s `CDBException` Pokud volání `CRecordset::Update` následuje volání `CRecordset::Requery`. Namísto toho zavolejte metodu `CRecordset::Close` a `CRecordset::Open` spíše než `CRecordset::Requery`. Jiným řešením je použití knihovny kurzorů ODBC, protože SQL Server a ovladač ODBC systému SQL Server poskytuje nativní podporu pro ukazatele nativně a není potřeba knihovna kurzorů rozhraní ODBC.
+Pokud používáte knihovnu kurzorů ODBC s databázovými třídami MFC rozhraní ODBC a ovladačem Microsoft SQL Server ODBC, může dojít k **vyhodnocení** společně s `CDBException`, pokud volání `CRecordset::Update` sleduje volání `CRecordset::Requery`. Místo toho zavolejte `CRecordset::Close` a `CRecordset::Open` místo `CRecordset::Requery`. Dalším řešením není použití knihovny kurzorů ODBC, protože SQL Server a ovladač SQL Server ODBC poskytují nativní podporu pro kurzory nativně a knihovna kurzorů rozhraní ODBC není potřeba.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [SQL](../../data/odbc/sql.md)<br/>
 [SQL: Přímá volání SQL (ODBC)](../../data/odbc/sql-making-direct-sql-calls-odbc.md)

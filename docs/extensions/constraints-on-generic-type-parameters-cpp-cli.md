@@ -8,18 +8,18 @@ helpviewer_keywords:
 - where keyword [C++]
 - constraints, C++
 ms.assetid: eb828cc9-684f-48a3-a898-b327700c0a63
-ms.openlocfilehash: 6eefb6a7d888a031f6ff7f88d08da4d67a4dc8c3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: be5af8f6b2edaa8f93fef7ae06b2175b54b25396
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62345955"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172475"
 ---
 # <a name="constraints-on-generic-type-parameters-ccli"></a>Omezení obecných parametrů typů (C++/CLI)
 
-V obecném typu nebo deklarace metody se můžete kvalifikovat parametr typu s omezeními. Omezení je požadavek, který musí splňovat typy použité jako argumenty typu. Omezení může být například, že argument typu musí implementovat určité rozhraní nebo dědí určité třídy.
+V deklaracích obecného typu nebo metody můžete kvalifikovat parametr typu s omezeními. Omezení je požadavek, aby typy používané jako argumenty typu splňovaly požadavky. Omezení například může být, že argument typu musí implementovat určité rozhraní nebo zdědit z konkrétní třídy.
 
-Omezení jsou volitelné. bez zadání omezení pro parametr je ekvivalentní k omezení pro tento parametr <xref:System.Object>.
+Omezení jsou volitelná; Nezadání omezení pro parametr je ekvivalentní k omezení tohoto parametru na <xref:System.Object>.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -29,27 +29,27 @@ where type-parameter: constraint list
 
 ### <a name="parameters"></a>Parametry
 
-*parametr typu*<br/>
-Jeden z parametrů typu, chcete-li být omezený.
+*typ – parametr*<br/>
+Jeden z parametrů typu, který má být omezen.
 
 *seznam omezení*<br/>
-*seznam omezení* je čárkou oddělený seznam omezení specifikací. Tento seznam může obsahovat rozhraní k implementaci parametr typu.
+*seznam omezení* je čárkami oddělený seznam specifikací omezení. Seznam může obsahovat rozhraní, která mají být implementována parametrem typu.
 
-Tento seznam může také obsahovat třídu. Pro argument typu pro omezení základní třídy se musí být stejné třídy jako omezení nebo jsou odvozeny z omezení.
+Seznam může obsahovat také třídu. Pro argument typu pro splnění omezení základní třídy musí být stejná třída jako omezení nebo odvozena z omezení.
 
-Můžete také určit **gcnew()** k označení, že argument typu musí mít veřejný konstruktor bez parametrů; nebo **třídy ref class** k označení, že argument typu musí být typ odkazu, včetně všechny třídy, rozhraní, delegáta nebo typ pole; nebo **hodnotu třídy** uvést typ argumentu musí být typem hodnoty. Některá hodnota typu s výjimkou Nullable\<T > je možné zadat.
+Můžete také zadat **gcnew ()** označující, že argument typu musí mít veřejný konstruktor bez parametrů; nebo **ref class** k označení argumentu typu musí být odkazový typ, včetně libovolné třídy, rozhraní, delegáta nebo typu pole; nebo **Třída hodnoty** k označení argumentu typu musí být typ hodnoty. Dá se zadat libovolný typ hodnoty kromě Nullable\<T >.
 
-Můžete také zadat obecný parametr jako omezení. Argument typu zadaný pro typ, že jsou omezení musí být nebo odvozen od typu omezení. Tomu se říká omezení holého typu.
+Můžete také zadat obecný parametr jako omezení. Argument typu zadaný pro typ, který je omezen, musí být nebo odvozen od typu omezení. Toto omezení se nazývá holého typu.
 
 ## <a name="remarks"></a>Poznámky
 
-Klauzule omezení se skládá z **kde** za nímž následuje parametr typu, dvojtečkou (**:**) a omezení, která určuje druh tohoto omezení na parametr typu. **kde** je kontextové klíčové slovo; viz [Context-Sensitive Keywords](context-sensitive-keywords-cpp-component-extensions.md) Další informace. Oddělit více **kde** klauzule mezerou.
+Klauzule omezení se skládá z **WHERE** následovaný parametrem typu, dvojtečkou ( **:** ) a omezením, které určuje povahu omezení u parametru typu. **kde** je klíčové slovo závislé na kontextu; Další informace najdete v tématu [Kontextově závislá klíčová slova](context-sensitive-keywords-cpp-component-extensions.md) . Oddělte více klauzulí **WHERE** s mezerou.
 
-Omezení se použijí k zadání parametrů k umístění omezení na typy, které lze použít jako argumenty obecného typu nebo metody.
+Omezení se použijí pro parametry typu k omezení typů, které lze použít jako argumenty pro obecný typ nebo metodu.
 
-Omezení rozhraní a třídy určit, že typy argumentů musí být nebo dědí z dané třídy nebo implementovat zadané rozhraní.
+Omezení třídy a rozhraní určují, že typy argumentů musí být nebo zděděné ze zadané třídy nebo implementovat zadané rozhraní.
 
-Použití omezení do obecného typu nebo metody umožňuje kódu v tomto typu nebo metodě využívat známé funkce omezené typy. Například můžete deklarovat obecné třídy tak, aby parametr typu implementuje `IComparable<T>` rozhraní:
+Použití omezení na obecný typ nebo metodu umožňuje kódu v tomto typu nebo metodě využít známé funkce omezených typů. Například můžete deklarovat obecnou třídu tak, že parametr typu implementuje rozhraní `IComparable<T>`:
 
 ```cpp
 // generics_constraints_1.cpp
@@ -60,15 +60,15 @@ where T : IComparable<T>
 ref class List {};
 ```
 
-Toto omezení vyžaduje, že argument typu použít pro `T` implementuje `IComparable<T>` v době kompilace. Umožňuje také metody rozhraní, jako například `CompareTo`, která se má volat. Nepoužívat přetypování je potřeba na instanci parametr typu pro volání metody rozhraní.
+Toto omezení vyžaduje, aby argument typu používaného pro `T` implementoval `IComparable<T>` v době kompilace. Umožňuje také volání metod rozhraní, jako je například `CompareTo`. Pro instanci parametru typu pro volání metod rozhraní není vyžadováno žádné přetypování.
 
-Statické metody ve třídě argument typu nelze volat pomocí parametru typu; je možné volat jenom prostřednictvím skutečné pojmenovaného typu.
+Statické metody v třídě argumentu typu nelze volat prostřednictvím parametru typu. mohou být volány pouze pomocí skutečného pojmenovaného typu.
 
-Omezení nemůže být typ hodnoty, včetně předdefinovaných typů, jako například **int** nebo **double**. Protože typy hodnot nemohou mít odvozené třídy, pouze jednu třídu by stále moct omezení. V takovém případě může být přepsán obecné s parametrem typu nahrazuje typ konkrétní hodnoty.
+Omezení nemůže být typ hodnoty, včetně předdefinovaných typů, jako je **int** nebo **Double**. Vzhledem k tomu, že typy hodnot nemohou mít odvozené třídy, může být někdy možné vyhovět pouze jedné třídě. V takovém případě lze obecný typ přepsat parametrem typu nahrazeným konkrétním typem hodnoty.
 
-V některých případech se vyžadují omezení, protože kompilátor nebude povolit použití metod nebo jiné funkce neznámého typu, pokud omezení znamenají, že podporuje Neznámý typ metody nebo rozhraní.
+Omezení jsou vyžadována v některých případech, protože kompilátor nepovoluje použití metod nebo jiných funkcí neznámého typu, pokud omezení nezpůsobí, že neznámý typ podporuje metody nebo rozhraní.
 
-V seznamu odděleném čárkami se dá nastavit několik omezení pro stejný parametr typu
+V seznamu odděleném čárkami se dá zadat víc omezení pro stejný parametr typu.
 
 ```cpp
 // generics_constraints_2.cpp
@@ -80,7 +80,7 @@ where T : List<T>, IComparable<T>
 ref class List {};
 ```
 
-S více typy parametrů, použijte jednu **kde** klauzuli pro každý parametr typu. Příklad:
+S více parametry typu použijte jednu klauzuli **WHERE** pro každý parametr typu. Příklad:
 
 ```cpp
 // generics_constraints_3.cpp
@@ -94,13 +94,13 @@ generic <typename K, typename V>
 ref class Dictionary {};
 ```
 
-Souhrnně řečeno, použijte omezení v kódu podle následujících pravidel:
+Pro Shrnutí použijte omezení v kódu podle následujících pravidel:
 
-- Pokud nejsou uvedeny více omezení, omezení může být uvedena v libovolném pořadí.
+- Pokud je uvedeno více omezení, mohou být omezení uvedena v libovolném pořadí.
 
-- Omezení může být také typy tříd, jako je například abstraktní základní třídy. Omezení nemůže však být typy hodnot nebo zapečetěné třídy.
+- Omezení mohou být také typy třídy, jako jsou abstraktní základní třídy. Omezení ale nemůžou být typy hodnot ani zapečetěné třídy.
 
-- Omezení nemůže být samy parametry typu, ale zahrnují parametry typu v otevřeném typu vytvořený. Příklad:
+- Omezení nemohou být samotnými parametry typu, ale mohou zahrnovat parametry typu v otevřeném konstruovaném typu. Příklad:
 
     ```cpp
     // generics_constraints_4.cpp
@@ -115,7 +115,7 @@ Souhrnně řečeno, použijte omezení v kódu podle následujících pravidel:
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje použití omezení k volání metody instance u parametrů typu.
+Následující příklad ukazuje použití omezení pro volání metod instancí v parametrech typu.
 
 ```cpp
 // generics_constraints_5.cpp
@@ -177,11 +177,11 @@ int main() {
 
 ## <a name="example"></a>Příklad
 
-Je-li parametr obecného typu se používá jako omezení, nazývá základní typ omezení. Základní typ omezení jsou užitečné, pokud členskou funkci s vlastní parametr typu je potřeba omezit tento parametr na parametr typu nadřazeného typu.
+Pokud je parametr obecného typu použit jako omezení, nazývá se omezení holého typu. Omezení holého typu jsou užitečná, pokud členská funkce s vlastním parametrem typu musí omezit tento parametr na parametr typu nadřazeného typu.
 
-V následujícím příkladu `T` je základní typ omezení v kontextu `Add` metody.
+V následujícím příkladu je `T` omezení holého typu v kontextu metody `Add`.
 
-Základní typ omezení lze také v definicích obecnou třídu. Užitečnost holého typu omezení pomocí obecných tříd je omezený, protože kompilátor může převzít nic neříká o omezení neviditelných typu s tím rozdílem, že se odvozuje od <xref:System.Object>. Použijte základní typ omezení u obecných tříd ve scénářích, ve kterých chcete vynutit vztah dědičnosti mezi dvěma parametry typu.
+Omezení holého typu lze také použít v definicích obecných tříd. Užitečnost omezení typu holého typu s obecnými třídami je omezená, protože kompilátor nepředpokládá nic o omezení holého typu s tím rozdílem, že je odvozen z <xref:System.Object>. Používejte omezení holého typu u obecných tříd ve scénářích, ve kterých chcete vynutit vztah dědičnosti mezi dvěma parametry typu.
 
 ```cpp
 // generics_constraints_6.cpp
@@ -198,6 +198,6 @@ where A : C
 ref struct SampleClass {};
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Obecné typy](generics-cpp-component-extensions.md)

@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - RC2109
 ms.assetid: b800aa67-33c0-42f5-81a2-7a64a3b6b824
-ms.openlocfilehash: adfbc32adc9e55f4cc0e1a49d3b5505efead5d25
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 49edd32da192816ba22cb030958f87cd049ec59c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399899"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80191558"
 ---
 # <a name="resource-compiler-error-rc2109"></a>Chyba kompilátoru prostředků RC2109
 
-byl očekáván číselný dialogové okno – konstanta
+Očekávaná konstanta číselných dialogových oken
 
-A **dialogové okno** příkazu vyžaduje celočíselné hodnoty *x, y, šířka*, a *výška* pole. Ujistěte se, že tyto hodnoty jsou zahrnuty po **dialogové okno** – klíčové slovo a že nejsou záporné.
+Příkaz **dialogového okna** vyžaduje celočíselné hodnoty pro pole *x, y, Width*a *Height* . Ujistěte se, že tyto hodnoty jsou zahrnuty po klíčovém slově **dialogového okna** a že nejsou záporné.

@@ -6,29 +6,29 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0009
 ms.assetid: 89291778-cda4-495d-983f-ddcc06dfc98b
-ms.openlocfilehash: 963b7c861f9e8ee7105ebdc23afff08c4be46465
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d02325504b04a13cd15dee0bd70891bf5a63b62e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62359498"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80192957"
 ---
 # <a name="project-build-error-prj0009"></a>Chyba sestavení projektu PRJ0009
 
-Vytvoření protokolu nelze otevřít pro zápis.
+Protokol buildu nelze otevřít pro zápis.
 
-**Ujistěte se, že soubor není otevřen jiným procesem a že není chráněn proti zápisu.**
+**Ujistěte se, že soubor není otevřen jiným procesem a není chráněn proti zápisu.**
 
-Po nastavení **sestavení protokolování** vlastnost **Ano** a provádění sestavení nebo opětovné sestavení, Visual C++ se nepodařilo otevřít protokol sestavení ve výhradním režimu.
+Po nastavení vlastnosti **protokolování sestavení** na **Ano** a provedení sestavení nebo opětovného sestavení se vizuál C++ nepodařilo otevřít protokol sestavení ve výhradním režimu.
 
-Zkontrolujte **sestavení protokolování** nastavení tak, že otevřete **možnosti** dialogové okno (na **nástroje** nabídky, klikněte na tlačítko **možnosti** příkaz) a pak Výběr **sestavení VC ++** v **projekty** složky. Soubor sestavení se nazývá BuildLog.htm a je zapsaný $ zprostředkující adresář (IntDir).
+Zkontrolujte nastavení **protokolování sestavení** otevřením dialogového okna **Možnosti** (v nabídce **nástroje** klikněte na příkaz **Možnosti** ) a potom ve složce **Projects (projekty** ) vyberte **sestavení VC + +** . Soubor buildu se nazývá BuildLog. htm a zapisuje se do zprostředkujícího adresáře $ (IntDir).
 
-Možné důvody této chyby:
+Možné důvody pro tuto chybu:
 
-- Jsou spuštěné dva procesy jazyka Visual C++ a chcete současně vytvořit stejnou konfiguraci stejného projektu v obou.
+- Spouštíte dva procesy vizuálu C++ a snažíte se současně sestavit stejnou konfiguraci stejného projektu.
 
-- Soubor protokolu sestavení je otevřený v procesu, který uzamkne soubor.
+- Soubor protokolu sestavení je otevřen v procesu, který soubor zamkne.
 
 - Uživatel nemá oprávnění k vytvoření souboru.
 
-- Aktuální uživatel nemá oprávnění k zápisu do souboru BuildLog.htm.
+- Aktuální uživatel nemá oprávnění k zápisu do souboru BuildLog. htm.

@@ -7,16 +7,16 @@ helpviewer_keywords:
 - functions [C++], scope
 - scope, declared within functions
 ms.assetid: 6e1a14c2-1fb0-4937-8628-8d963cc35ed4
-ms.openlocfilehash: 60dcfe61be24516b96054532931fb65245ab31d0
-ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.openlocfilehash: ec01f280c9de314ce670cae590c9a6917e9c0f07
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64856693"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80197876"
 ---
 # <a name="automatic-function-scope-variables"></a>Automatické proměnné (rozsah funkce)
 
-Proměnná deklarovaná ve funkci jde použít jenom v rámci oboru dané funkce.
+Proměnnou deklarovanou v rámci funkce lze použít pouze v rámci rozsahu této funkce.
 
 ```cpp
 // LNK2019_AV.cpp
@@ -33,7 +33,7 @@ int main() {
 }
 ```
 
-a pak,
+a potom
 
 ```cpp
 // LNK2019_AV_2.cpp
@@ -53,6 +53,6 @@ void test(void) {
 }
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Chybu nástrojů Linker LNK2019](../../error-messages/tool-errors/linker-tools-error-lnk2019.md)
+[LINKERŮ LNK2019 chyba nástrojů linkeru](../../error-messages/tool-errors/linker-tools-error-lnk2019.md)

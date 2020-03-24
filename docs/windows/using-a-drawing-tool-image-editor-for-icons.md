@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Použití nástroje kreslení'
+title: 'Postupy: použití nástroje pro kreslení'
 ms.date: 02/15/2019
 f1_keywords:
 - vc.editors.image.drawing
@@ -16,132 +16,132 @@ helpviewer_keywords:
 - graphics [C++], custom brushes
 - custom brushes
 ms.assetid: 1f8c6eef-7760-45a9-a5cb-9e15c6f91245
-ms.openlocfilehash: 7b362749c9a5cb1c7ec77e5cac8625aa7eb260f0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 61c06ee3fecac18fb95663c0d13474b8bd3b94f4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387828"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214380"
 ---
-# <a name="how-to-use-a-drawing-tool"></a>Postupy: Použití nástroje kreslení
+# <a name="how-to-use-a-drawing-tool"></a>Postupy: použití nástroje pro kreslení
 
-**Editor obrázků** má kreslení a mazání nástrojů všechny fungují stejně. Vyberte nástroje a v případě potřeby [vyberte barvy popředí a pozadí](../windows/selecting-foreground-or-background-colors-image-editor-for-icons.md) a možnosti velikosti a tvaru. Přesuňte ukazatel myši na obrázku a kliknutí nebo tažením nakreslete a vymazat.
+**Editor obrázků** má kreslení od ruky a mazání nástrojů, které fungují stejným způsobem. Vyberte nástroj a v případě potřeby [Vyberte barvy popředí a pozadí](../windows/selecting-foreground-or-background-colors-image-editor-for-icons.md) a možnosti velikosti a tvaru. Pak přesunete ukazatel na obrázek a kliknete nebo táhnete pro kreslení a mazání.
 
 ## <a name="drawing-tools"></a>Nástroje pro kreslení
 
-Můžete zvolit buď z nástrojů pro kreslení **Editor obrázků** nástrojů nebo **Image** nabídky. Když vyberete **gumy** nástroj, **štětce** nástroje, nebo **rozprašovač** nástroji pro výběr možnosti zobrazí možnosti tohoto nástroje.
+Kreslicí nástroje můžete vybrat buď z panelu nástrojů **editoru obrázků** , nebo z nabídky **Obrázek** . Když vyberete nástroj pro **mazání** , nástroj **štětec** nebo nástroj **rozprašovač** , zobrazí selektor možností tyto možnosti nástroje.
 
 > [!TIP]
->  Popisy tlačítek se zobrazí, když ukazatel myši najedete myší na tlačítka na [panelu nástrojů editoru obrázků](../windows/toolbar-image-editor-for-icons.md). Následující tipy vám umožní identifikovat konkrétní tlačítka uvedeným.
+>  Když najedete kurzorem na tlačítka na [panelu nástrojů editoru obrázků](../windows/toolbar-image-editor-for-icons.md), zobrazí se popisy tlačítek. Tyto tipy vám pomůžou identifikovat konkrétní tlačítka, která jsou tady uvedená.
 
-### <a name="to-select-and-use-a-drawing-tool-from-the-image-editor-toolbar"></a>Vyberte a použijte nástroj pro vykreslování na panelu nástrojů editoru obrázků
+### <a name="to-select-and-use-a-drawing-tool-from-the-image-editor-toolbar"></a>Výběr a použití nástroje pro kreslení z panelu nástrojů Editor obrázků
 
-1. Vyberte tlačítko na **Editor obrázků** nástrojů.
+1. Vyberte tlačítko na panelu nástrojů **editoru obrázků** .
 
-   - **Gumy** nástroj barvy bitová kopie se aktuální barvu pozadí při stisknutí levého tlačítka myši.
+   - Nástroj **Guma** maluje při stisknutí levého tlačítka myši na obrázek s aktuální barvou pozadí.
 
       > [!TIP]
-      > Namísto použití **gumy** tool, pravděpodobně pro vás bude pohodlnější kreslete barvu pozadí s jedním z nástrojů pro kreslení.
+      > Místo použití nástroje pro **mazání** je možné, že je snazší kreslit na pozadí pomocí jednoho z nástrojů pro kreslení.
 
-   - **Tužky** nástroj od ruky nakreslí konstantní šířku jeden pixel.
+   - Nástroj **Tužka** kreslí FreeHand v konstantní šířce v jednom pixelu.
 
-   - **Štětce** nástroj má různých forem a velikostí.
+   - Nástroj **štětec** má různé tvary a velikosti.
 
-   - **Rozprašovač** nástroj náhodně distribuuje barev pixelů kolem středu štětce.
+   - Nástroj **rozprašovač** náhodně distribuuje barvy pixelů kolem středu štětce.
 
-1. V případě potřeby vyberte barvy a štětce:
+1. V případě potřeby vyberte barvy a štětec:
 
-   - V [barvy palety](../windows/colors-window-image-editor-for-icons.md), vyberte levé tlačítko myši pro výběr barev popředí nebo na tlačítko pravým tlačítkem myši a vyberte barvu pozadí.
+   - V [paletě barvy](../windows/colors-window-image-editor-for-icons.md)vyberte levé tlačítko myši a vyberte barvu popředí nebo pravé tlačítko myši a vyberte barvu pozadí.
 
-   - V [výběr možnosti](../windows/toolbar-image-editor-for-icons.md), vyberte prosím obrazec představující štětec, který chcete použít.
+   - V [selektoru možností](../windows/toolbar-image-editor-for-icons.md)vyberte tvar představující štětec, který chcete použít.
 
-1. Přejděte na místo na obrázku, kde chcete spustit, kreslení nebo vykreslování. Tvar ukazatele změny podle nástroj, který jste vybrali.
+1. Umístěte ukazatel na místo na obrázku, kde chcete spustit kreslení nebo malování. Ukazatel se změní na obrazec podle vybraného nástroje.
 
-1. Stiskněte klávesu levé tlačítko myši (Barva popředí) nebo pravým tlačítkem myši (pro barvu pozadí) a podržte ho při vykreslení.
+1. Stiskněte levé tlačítko myši (pro barvu popředí) nebo pravé tlačítko myši (pro barvu pozadí) a při kreslení ho držte.
 
-### <a name="to-select-and-use-a-drawing-tool-from-the-image-menu"></a>Vyberte a používání nástroje kreslení z nabídky Image
+### <a name="to-select-and-use-a-drawing-tool-from-the-image-menu"></a>Výběr a použití nástroje pro kreslení v nabídce obrázek
 
-1. Přejděte do nabídky **Image** > **nástroje**.
+1. Přejít na **Image** nabídky > **nástroje**
 
-1. Kaskádové podnabídce zvolte nástroj, který chcete použít.
+1. V podnabídce kaskádová nabídka vyberte nástroj, který chcete použít.
 
-## <a name="lines-or-closed-figures"></a>Čar nebo uzavřených obrázků
+## <a name="lines-or-closed-figures"></a>Řádky nebo uzavřené hodnoty
 
-**Editor obrázků** nástrojů pro kreslení čar a uzavřených obrázků všechny fungují stejně jako: Umístěte kurzor na jednom místě a přetáhněte ji do jiného. Pro řádky jsou tyto body koncových bodů. Pro uzavřených obrázků jsou tyto body opačné rohů obdélníku ohraničující na obrázku.
+Nástroje **editoru obrázků** pro kreslení čar a uzavřených obrázků fungují stejným způsobem: Umístěte kurzor na jeden bod a přetáhněte ho na jiný. Pro řádky jsou tyto body koncovými body. Pro uzavřené hodnoty jsou tyto body protilehlé rohy obdélníku ohraničujícího obrázek.
 
-Řádky jsou vykreslovány vedle šířku Určuje aktuální výběr stopy a orámované obrázky jsou vykreslovány vedle šířku Určuje aktuální výběr šířku. Řádky a všechny obrázky, uvedeny i vyplněné, jsou vykreslovány v aktuální barvu popředí při stisknutí levého tlačítka myši, nebo aktuální barvu pozadí při stisknutí pravého tlačítka myši.
+Řádky jsou vykresleny na šířku určené pomocí aktuálního výběru štětce a obrázky s rámečkem jsou vykresleny na šířku určené výběrem aktuální šířky. Při stisknutí pravého tlačítka myši nebo při stisknutí pravého tlačítka myši se v aktuální barvě popředí vykreslí řádky a všechny hodnoty, které jsou v rámečcích i vyplněné.
 
-### <a name="to-draw-a-line"></a>Chcete-li nakreslit čáru
+### <a name="to-draw-a-line"></a>Vykreslení čáry
 
-1. Použití [panelu nástrojů editoru obrázků](../windows/toolbar-image-editor-for-icons.md) nebo přejděte do nabídky **Image**> **nástroje** a zvolte **řádku** nástroj.
+1. Použijte [panel nástrojů Editor obrázků](../windows/toolbar-image-editor-for-icons.md) nebo přejděte na **Image** nabídky> **nástroje** a vyberte nástroj **čára** .
 
-1. V případě potřeby vyberte barvy a štětce:
+1. V případě potřeby vyberte barvy a štětec:
 
-   - V [barvy palety](../windows/colors-window-image-editor-for-icons.md), vyberte levé tlačítko myši pro výběr barev popředí nebo na tlačítko pravým tlačítkem myši a vyberte barvu pozadí.
+   - V [paletě barvy](../windows/colors-window-image-editor-for-icons.md)vyberte levé tlačítko myši a vyberte barvu popředí nebo pravé tlačítko myši a vyberte barvu pozadí.
 
-   - V [výběr možnosti](../windows/toolbar-image-editor-for-icons.md), vyberte prosím obrazec představující štětec, který chcete použít.
+   - V [selektoru možností](../windows/toolbar-image-editor-for-icons.md)vyberte tvar představující štětec, který chcete použít.
 
-1. Umístěte ukazatel myši na řádku počáteční bod.
+1. Umístěte ukazatel na počáteční bod řádku.
 
-1. Přetáhněte do koncového bodu čáry.
+1. Přetáhněte na koncový bod čáry.
 
-### <a name="to-draw-a-closed-figure"></a>Chcete-li nakreslit uzavřený útvar
+### <a name="to-draw-a-closed-figure"></a>Vykreslení zavřeného obrázku
 
-1. Použití **Editor obrázků** nástrojů nebo přejděte do nabídky **Image** > **nástroje** a vyberte **kreslení obrázku uzavřeno** nástroj.
+1. Použijte panel nástrojů **Editor obrázků** nebo přejít na **Obrázek** nabídky > **nástroje** a vyberte nástroj pro **Kreslení s uzavřenými titulky** .
 
-   **Kreslení obrázku uzavřeno** nástroje pro vytváření obrázků, jak je uvedeno v jejich příslušných tlačítek.
+   Nástroje pro **Kreslení s uzavřenými** obrázky vytvářejí hodnoty, které jsou uvedeny na příslušných tlačítkách.
 
-1. V případě potřeby vyberte barvy a šířku čáry.
+1. V případě potřeby vyberte barvy a tloušťku čáry.
 
-1. Přesuňte ukazatel na jeden z rohů obdélníkovou oblast, ve kterém chcete nakreslit obrázek.
+1. Přesuňte ukazatel na jeden roh obdélníkové oblasti, ve které chcete obrázek nakreslit.
 
-1. Přetažením ukazatele šikmo protilehlého rohu.
+1. Přetáhněte ukazatel na úhlopříčně opačný roh.
 
 ## <a name="custom-brushes"></a>Vlastní štětce
 
-Vlastní štětce je obdélníkovou část bitovou kopii, která sbírání a používat jako jeden z **Editor obrázků**pro předem připravená stopy. Všechny operace, které můžete provádět na výběr, můžete provádět na vlastní štětce.
+Vlastní štětec je obdélníková část obrázku, kterou jste vybrali, a použijte jako jeden z připravených štětců **editoru obrázků**. Všechny operace, které můžete provádět u výběru, můžete provádět také na vlastním štětce.
 
-### <a name="to-create-a-custom-brush-from-a-portion-of-an-image"></a>Vytvoření vlastního štětce z část obrázku
+### <a name="to-create-a-custom-brush-from-a-portion-of-an-image"></a>Vytvoření vlastního štětce z části obrázku
 
-1. Vyberte část obrázku, který chcete použít pro štětce.
+1. Vyberte část obrázku, kterou chcete použít pro štětec.
 
-1. Uložení **Shift** klíče dolů, vyberte ve výběru a proveďte operaci přetažení přes obrázek nebo přejděte do nabídky **Image** > **použít výběr jako štětce**.
+1. Podržte stisknutou klávesu **SHIFT** , vyberte výběr ve výběru a přetáhněte ho na obrázek nebo přejděte na **Obrázek** nabídky > **použít výběr jako štětec**.
 
-   Váš výběr se změní vlastní štětec, který distribuuje barev ve výběru mezi bitovou kopii. Zkopíruje výběr jsou ponechána na cestě přetahování. Tím pomaleji se při přetahování, jsou provedeny další kopie.
+   Váš výběr se zobrazí jako vlastní štětec, který distribuuje barvy ve výběru napříč obrázkem. Kopie výběru zůstanou podél cesty přetažení. Pomaleji jste přetáhli, tím více kopií provedete.
 
    > [!NOTE]
-   > Výběr **použít výběr jako štětce** bez nejprve vyberete část obrázku použije celého obrázku jako štětce. Výsledek použití vlastního štětce také závisí na tom, zda jste vybrali [neprůhledné nebo průhledné pozadí](../windows/choosing-a-transparent-or-opaque-background-image-editor-for-icons.md).
+   > Výběr možnosti **použít jako štětec** bez předchozího výběru části obrázku bude používat celý obraz jako štětec. Výsledek použití vlastního štětce závisí také na tom, jestli jste vybrali [neprůhledné nebo průhledné pozadí](../windows/choosing-a-transparent-or-opaque-background-image-editor-for-icons.md).
 
-Pixelů vlastního štětce, které odpovídají barvě pozadí jsou obvykle transparentní: není vykreslení přes stávající bitovou kopii. Toto chování můžete změnit tak, aby barvu pozadí pixelů vykreslení přes stávající bitovou kopii.
+Pixely ve vlastním štětci, které odpovídají aktuální barvě pozadí, jsou normálně transparentní: nebudou malovat na stávající obrázek. Toto chování můžete změnit tak, aby v pixelech barva pozadí bylo možné malovat přes existující obrázek.
 
-Vlastní štětce jako razítko nebo vzorníku slouží k vytvoření různých speciální efekty.
+Pomocí vlastního štětce jako razítko nebo vzorníku můžete vytvořit různé speciální efekty.
 
-### <a name="to-draw-custom-brush-shapes-in-the-background-color"></a>Pro kreslení tvarů vlastní štětec pozadí barvou
+### <a name="to-draw-custom-brush-shapes-in-the-background-color"></a>Kreslení vlastních tvarů štětce v barvě pozadí
 
 1. Vyberte neprůhledné nebo průhledné pozadí.
 
-1. Nastavte barvu pozadí na barvu, ve kterém chcete kreslit.
+1. Nastavte barvu pozadí na barvu, ve které chcete kreslit.
 
-1. Pozice vlastního štětce, ve které chcete kreslit.
+1. Umístěte vlastní štětec na místo, kam chcete kreslit.
 
-1. Vyberte pravé tlačítko myši. Jakékoli neprůhledné oblastech vlastního štětce vykresleny barvou pozadí.
+1. Vyberte pravé tlačítko myši. V barvě pozadí jsou vykresleny všechny neprůhledné oblasti vlastního štětce.
 
-### <a name="to-double-or-halve-the-custom-brush-size"></a>Dvakrát nebo polovinu velikost vlastního štětce
+### <a name="to-double-or-halve-the-custom-brush-size"></a>Jak dvojnásobit nebo odpoloviční velikost vlastní velikosti štětce
 
-Stisknutím klávesy **znaménko Plus** (**+**) klíč na dvojnásobek velikosti štětce nebo **znaménko Minus** (**-**) klíč na polovinu ho .
+Stisknutím klávesy **znaménka plus** ( **+** ) Zdvojnásobte velikost štětce nebo stiskněte klávesu **mínus znaménko** ( **-** ), abyste ji mohli rozpoloviční.
 
-### <a name="to-cancel-the-custom-brush"></a>Chcete-li zrušit vlastního štětce
+### <a name="to-cancel-the-custom-brush"></a>Postup zrušení vlastního štětce
 
-Stisknutím klávesy **Esc** nebo zvolte jiný nástroj pro vykreslování.
+Stiskněte klávesu **ESC** nebo zvolte jiný nástroj pro kreslení.
 
 ## <a name="requirements"></a>Požadavky
 
 Žádné
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Editor obrázků pro ikony](../windows/image-editor-for-icons.md)<br/>
-[Postupy: Vytvoření ikony nebo jiného obrázku](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md)<br/>
+[Postupy: vytvoření ikony nebo jiného obrázku](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md)<br/>
 [Postupy: Úprava obrázku](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)<br/>
-[Postupy: Práce s barvou](../windows/working-with-color-image-editor-for-icons.md)<br/>
+[Postupy: práce s barvou](../windows/working-with-color-image-editor-for-icons.md)<br/>
 [Klávesy akcelerátoru](../windows/accelerator-keys-image-editor-for-icons.md)<br/>

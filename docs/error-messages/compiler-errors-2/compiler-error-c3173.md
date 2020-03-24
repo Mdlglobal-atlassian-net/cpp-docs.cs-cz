@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C3173
 ms.assetid: edf79e10-e8cf-4f76-8d33-ab9d05e974e9
-ms.openlocfilehash: aeec64f8e724b92262d322b83de07ccfe57ac2bd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 98b9b1b74bb8b4484026873f5c6052b5624c4f69
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62174130"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80176465"
 ---
 # <a name="compiler-error-c3173"></a>Chyba kompilátoru C3173
 
-Neshoda verzí ve sloučení idl
+Neshoda verzí ve sloučení IDL
 
-Tato chyba nastane, pokud soubor objektu obsahuje vložené idl, který byl vygenerován pomocí předchozí verze kompilátoru. Kompilátor kóduje čísla verze pro, ujistěte se, že kompilátor stejné sloužící ke generování obsah idl, který je vložený v souborech .obj také stejné kompilátoru použitý ke sloučení vložené idl.
+K této chybě dochází, pokud soubor objektu obsahuje vložený IDL, který byl vygenerován s předchozí verzí kompilátoru. Kompilátor zakóduje číslo verze, aby bylo zajištěno, že stejný kompilátor použitý pro generování obsahu IDL, který je vložen do souborů. obj, je také stejným kompilátorem použitým pro sloučení vloženého IDL.
 
-Aktualizujte instalaci Visual C++ tak, že všechny nástroje jsou z nejnovější vydanou verzi.
+Aktualizujte svou C++ vizuální instalaci tak, aby všechny nástroje byly z nejnovější vydané verze.

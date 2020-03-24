@@ -1,25 +1,25 @@
 ---
-title: 'Zdroj dat: Stanovení schématu zdroje dat (ODBC)'
+title: 'Zdroj dat: Stanovení schématu zdroje dat (rozhraní ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ODBC data sources [C++], schema
 - schemas [C++], data sources
 - data sources [C++], determining schema
 ms.assetid: 17284acb-eb10-4f27-9944-ad1d973c0b05
-ms.openlocfilehash: c419a3ac2d870e6a85675492ee6c9b726427a0e9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 60ed77ec8870ba80832d4f8c73a8362062dc9c2a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395973"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213314"
 ---
-# <a name="data-source-determining-the-schema-of-the-data-source-odbc"></a>Zdroj dat: Stanovení schématu zdroje dat (ODBC)
+# <a name="data-source-determining-the-schema-of-the-data-source-odbc"></a>Zdroj dat: Stanovení schématu zdroje dat (rozhraní ODBC)
 
-Toto téma platí pro třídy knihovny MFC rozhraní ODBC.
+Toto téma se vztahuje na třídy knihovny MFC rozhraní ODBC.
 
-K nastavení datové členy ve vaší `CRecordset` objekty, je potřeba vědět schématu zdroje dat, ke kterému se připojujete. Stanovení schématu zdroje dat zahrnuje získání seznamu tabulek ve zdroji dat, seznam sloupců v každé tabulce, datový typ jednotlivých sloupců a existenci žádné indexy.
+Chcete-li nastavit datové členy ve svých `CRecordset`ch objektech, potřebujete znát schéma zdroje dat, ke kterému se připojujete. Určení schématu zdroje dat zahrnuje získání seznamu tabulek ve zdroji dat, seznam sloupců v každé tabulce, datový typ každého sloupce a existenci všech indexů.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Zdroj dat (ODBC)](../../data/odbc/data-source-odbc.md)<br/>
 [Zdroj dat: Správa připojení (ODBC)](../../data/odbc/data-source-managing-connections-odbc.md)

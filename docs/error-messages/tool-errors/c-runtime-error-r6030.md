@@ -6,29 +6,29 @@ f1_keywords:
 helpviewer_keywords:
 - R6030
 ms.assetid: 0238a6c3-a033-4046-8adc-f8f99d961153
-ms.openlocfilehash: 7f5c61d9b39b1d655bcbf3d42ea870370ddf2842
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5d7160623d4e1eb83240c09e637c780fefc0d43d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400016"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80197116"
 ---
 # <a name="c-runtime-error-r6030"></a>Chyba modulu C runtime R6030
 
-CRT nebyla inicializována
+CRT Neinicializováno
 
 > [!NOTE]
-> Pokud k této chybě dojde při spuštění aplikace, aplikace se vypnout, protože má vnitřní problém. Tento problém je nejčastěji způsoben určité softwarové programy zabezpečení, nebo jen zřídka, chyb v programu.
+> Pokud se zobrazí tato chybová zpráva při spuštění aplikace, aplikace byla vypnuta, protože došlo k vnitřnímu problému. Tento problém je nejčastěji způsoben některými softwarovými programy zabezpečení nebo zřídka pomocí chyby v programu.
 >
 > Zkuste chybu odstranit pomocí tohoto postupu:
 >
-> - Váš zabezpečovací software může mít konkrétní pokyny pro zmírnění tohoto problému. Zkontrolujte web dodavatele softwaru zabezpečení podrobnosti. Můžete také zkontrolovat aktualizované verze softwaru zabezpečení, nebo vyzkoušejte jinou zabezpečovací software.
-> - Použití **aplikace a funkce** nebo **programy a funkce** stránku **ovládací panely** opravte nebo přeinstalujte program.
-> - Zkontrolujte **Windows Update** v **ovládací panely** pro aktualizace softwaru.
-> - Vyhledat aktualizovanou verzi aplikace. Pokud se problém nevyřeší, obraťte se na dodavatele aplikace.
+> - Bezpečnostní software může mít konkrétní pokyny pro zmírnění tohoto problému. Podrobnosti najdete na webu dodavatele bezpečnostního softwaru. Případně můžete vyhledat aktualizované verze softwaru zabezpečení nebo vyzkoušet jiný bezpečnostní software.
+> - K opravě nebo přeinstalaci programu použijte stránku **aplikace a funkce** nebo **programy a funkce** v **Ovládacích panelech** .
+> - Ověřte **web Windows Update** v **Ovládacích panelech** pro aktualizace softwaru.
+> - Vyhledejte aktualizovanou verzi aplikace. Pokud potíže potrvají, obraťte se na dodavatele aplikace.
 
 **Informace pro programátory**
 
-K této chybě dochází, pokud používáte C Runtime (CRT), ale nebyla spuštěna spouštěcí kód CRT. Je možné se tato chyba, pokud linker [/Entry](../../build/reference/entry-entry-point-symbol.md) k přepsání výchozí počáteční adresu, obvykle se používá **mainCRTStartup**, **wmainCRTStartup** pro konzole EXE, **WinMainCRTStartup** nebo **wWinMainCRTStartup** pro Windows EXE, nebo **_DllMainCRTStartup** pro knihovnu DLL. Pokud jeden z výše uvedené funkce je volána při spuštění, nelze inicializovat modul Runtime jazyka C. Tyto funkce po spuštění jsou obvykle volány ve výchozím nastavení při propojení ke knihovně modulu runtime jazyka C a použít normální **hlavní**, **wmain**, **WinMain**, nebo  **Zpracování funkce DllMain** vstupní body.
+K této chybě dochází, pokud používáte modul runtime jazyka C (CRT), ale spouštěcí kód CRT nebyl proveden. Tato chyba se může zobrazit v případě, že přepínač linkeru [/entry](../../build/reference/entry-entry-point-symbol.md) slouží k přepsání výchozí počáteční adresy, obvykle **mainCRTStartup**, **wmainCRTStartup** pro konzolový exe, **WinMainCRTStartup** nebo **wWinMainCRTStartup** pro program exe systému Windows nebo **_DllMainCRTStartup** pro knihovnu DLL. Pokud se při spuštění nevolá jedna z výše uvedených funkcí, modul runtime jazyka C se neinicializuje. Tyto spouštěcí funkce jsou obvykle volány ve výchozím nastavení, když propojíte knihovnu prostředí runtime jazyka C a použijete **normální vstupní**body, **wmain**, **WinMain**nebo **DllMain** .
 
-Je také možné získat tuto chybu při jiný program využívá i metody pro injektáž kódu na depeše určitých volání knihovny DLL. Tento postup použít některé programy zabezpečení nežádoucí. Ve verzích Visual C++ před Visual Studio 2015 je možné použít k vyřešení příslušného problému staticky propojené knihovny CRT, ale to se nedoporučuje z důvodů aktualizace zabezpečení a aplikace. Oprava tohoto problému může vyžadovat akce koncového uživatele.
+Tato chyba je také možné získat, pokud jiný program používá techniky vkládání kódu k zachycení některých volání knihoven DLL. Tento postup používají některé rušivé bezpečnostní programy. Ve verzích vizuálu C++ před visual Studio 2015 je možné použít staticky propojenou knihovnu CRT k vyřešení problému, ale nedoporučuje se z důvodů aktualizací zabezpečení a aplikací. Oprava tohoto problému může vyžadovat akci koncového uživatele.

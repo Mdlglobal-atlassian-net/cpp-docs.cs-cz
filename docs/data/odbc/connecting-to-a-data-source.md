@@ -10,29 +10,29 @@ helpviewer_keywords:
 - ODBC data sources [C++], connections
 - database connections [C++], MFC ODBC classes
 ms.assetid: ef6c8c98-5979-43a8-9fb5-5bb06fc59f36
-ms.openlocfilehash: 1740a34036798dac69ffc8b486e03bf6439845a5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 712910aca2622f2678b8b9d06b18a2fdbf9157e4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395986"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213340"
 ---
 # <a name="connecting-to-a-data-source"></a>Připojení ke zdroji dat
 
-Zdroje dat ODBC je konkrétní sady dat, informace požadované pro přístup k datům a umístění zdroje dat, které mohou být popsány pomocí názvu zdroje dat. Z vašeho programu zdroj dat obsahuje data, správce databáze, sítě (pokud existuje) a rozhraní ODBC.
+Zdroj dat ODBC je konkrétní sada dat, informace vyžadované pro přístup k těmto datům a umístění zdroje dat, který lze popsat pomocí názvu zdroje dat. Zdroj dat z pohledu vašeho programu zahrnuje data, systém DBMS, síť (pokud existuje) a rozhraní ODBC.
 
-Pro přístup k datům, které jsou k dispozici ve zdroji dat, musí váš program nejprve navázat připojení ke zdroji dat. Veškerý datový přístup je spravována prostřednictvím tohoto připojení.
+Aby bylo možné získat přístup k datům poskytovaným zdrojem dat, musí nejdřív navázat spojení se zdrojem dat. Veškerý přístup k datům je spravován prostřednictvím tohoto připojení.
 
-Připojení ke zdroji dat jsou zapouzdřena objektem třídy [CDatabase](../../mfc/reference/cdatabase-class.md). Když `CDatabase` objektu je připojený ke zdroji dat, můžete:
+Připojení ke zdroji dat jsou zapouzdřena třídou [CDatabase](../../mfc/reference/cdatabase-class.md). Když je objekt `CDatabase` připojen ke zdroji dat, můžete:
 
-- Vytvořit [sady záznamů](../../mfc/reference/crecordset-class.md), které výběr záznamů z tabulky nebo dotazů.
+- Sestavujte [sady záznamů](../../mfc/reference/crecordset-class.md), které v tabulkách nebo dotazech vybírají záznamy.
 
-- Správa [transakce](../../data/odbc/transaction-odbc.md), proto všechny dávkování aktualizace usilujeme o to ke zdroji dat najednou (nebo celá transakce vrácena zpět, takže se zdrojem dat je beze změny) – Pokud zdroj dat podporuje požadované úrovni transakcí.
+- Spravujte [transakce](../../data/odbc/transaction-odbc.md), dávkové aktualizace tak, aby všechny byly potvrzeny na zdroj dat najednou (nebo celá transakce je vrácena zpět, takže zdroj dat je nezměněný) – Pokud zdroj dat podporuje požadovanou úroveň transakcí.
 
-- Přímé spuštění [SQL](../../data/odbc/sql.md) příkazy.
+- Přímo spustit příkazy [SQL](../../data/odbc/sql.md) .
 
-Po dokončení práce s připojením zdroje dat, zavřete `CDatabase` objektu a odstranit ji nebo ji znovu použít pro nová připojení. Další informace o připojení ke zdroji dat, naleznete v tématu [datové zdroje (ODBC)](../../data/odbc/data-source-odbc.md).
+Po dokončení práce s připojením ke zdroji dat zavřete objekt `CDatabase` a buď jej odstraňte, nebo ho znovu použijte pro nové připojení. Další informace o připojeních ke zdroji dat najdete v tématu [zdroj dat (ODBC)](../../data/odbc/data-source-odbc.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Rozhraní ODBC a knihovna MFC](../../data/odbc/odbc-and-mfc.md)

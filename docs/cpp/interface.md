@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - __interface keyword [C++]
 ms.assetid: ca5d400b-d6d8-4ba2-89af-73f67e5ec056
-ms.openlocfilehash: 7c95e3700b4124c4793e0214ed3b06ecfeee72f1
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 9b265dcbaca9f8fa836795cca990804371813647
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65222077"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178208"
 ---
-# <a name="interface"></a>__interface
+# <a name="__interface"></a>__interface
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
-Microsoft C++ rozhraní lze definovat takto:
+Rozhraní společnosti C++ Microsoft lze definovat následujícím způsobem:
 
 - Může dědit z žádného nebo z více základních rozhraní.
 
@@ -39,7 +39,7 @@ modifier __interface interface-name {interface-definition};
 
 ## <a name="remarks"></a>Poznámky
 
-A C++ [třídy](../cpp/class-cpp.md) nebo [struktura](../cpp/struct-cpp.md) možná implementace s Tato pravidla, ale **__interface** je vynucuje.
+Pomocí těchto pravidel lze implementovat [třídu](../cpp/class-cpp.md) nebo strukturu, ale **__interface** je vynutila. [struct](../cpp/struct-cpp.md) C++
 
 Následuje příklad ukázkové definice rozhraní:
 
@@ -50,7 +50,7 @@ __interface IMyInterface {
 };
 ```
 
-Informace o spravovaných rozhraních naleznete v tématu [třída rozhraní](../extensions/interface-class-cpp-component-extensions.md).
+Informace o spravovaných rozhraních naleznete v tématu [Třída rozhraní](../extensions/interface-class-cpp-component-extensions.md).
 
 Není nutné explicitně určit funkce `CommitX` a `get_X` jako čistě virtuální. Ekvivalentní deklarace první funkce by byla:
 
@@ -58,7 +58,7 @@ Není nutné explicitně určit funkce `CommitX` a `get_X` jako čistě virtuál
 virtual HRESULT CommitX() = 0;
 ```
 
-**__interface** znamená, [novtable](../cpp/novtable.md) **__declspec** modifikátor.
+**__interface** implikuje modifikátor **__declspecu** [vtable](../cpp/novtable.md) .
 
 ## <a name="example"></a>Příklad
 
@@ -142,9 +142,9 @@ p->int_data = 100
 bstr_data = Testing
 ```
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Klíčová slova](../cpp/keywords-cpp.md)<br/>
 [Atributy rozhraní](../windows/attributes/interface-attributes.md)

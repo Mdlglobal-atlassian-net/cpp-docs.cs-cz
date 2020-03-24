@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C2919
 ms.assetid: 140a6db9-eb48-4c5e-84a7-a09d2653605b
-ms.openlocfilehash: ab11226c8cc4629a265dd182d5f882f6b3be7e5d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 624b3ab47ccb1c934b612ec8648b5eee0d233690
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160848"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80176972"
 ---
 # <a name="compiler-error-c2919"></a>Chyba kompilátoru C2919
 
-'type': Operátory nejde používat na publikované ploše typu WinRT
+Type: operátory nejde používat na publikované ploše typu WinRT.
 
-Systém typů prostředí Windows Runtime nepodporuje operátor členské funkce v publikované ploše typu. Je to proto, že ne všechny jazyky můžou využívat funkce členského operátora. Můžete vytvořit privátní nebo interní operátor členské funkce, které lze volat z kódu jazyka C++ ve stejné jednotce třídy nebo kompilace.
+Systém typů prostředí Windows Runtime nepodporuje funkce členů operátoru na publikované ploše typu. Důvodem je, že ne všechny jazyky mohou spotřebovávat členské funkce operátoru. Můžete vytvořit soukromé nebo interní členské funkce operátoru, které mohou být volány z C++ kódu ve stejné třídě nebo kompilační jednotce.
 
-Chcete tento problém vyřešit, odeberte členské funkce operátora z veřejného rozhraní nebo ji změňte na pojmenované členskou funkci. Například namísto z `operator==`, název členské funkce `Equals`.
+Chcete-li tento problém vyřešit, odeberte členskou funkci operátora z veřejného rozhraní nebo ji změňte na pojmenovanou členskou funkci. Například namísto `operator==`název členské funkce `Equals`.

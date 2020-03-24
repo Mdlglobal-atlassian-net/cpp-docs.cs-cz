@@ -6,12 +6,12 @@ helpviewer_keywords:
 - postfix expressions
 - expressions [C++], postfix
 ms.assetid: 7ac62a57-06df-422f-b012-a75b37d7cb9b
-ms.openlocfilehash: eb6e6e8914cf260df09581232066caf3f873c04e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 25dfc6fd8f28f6c78fd5a4e9f76759ac076cae1b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62245060"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80177687"
 ---
 # <a name="postfix-expressions"></a>Výrazy přípony
 
@@ -23,10 +23,10 @@ Výrazy přípony jsou tvořeny primárními výrazy nebo výrazy, ve kterých p
 |-------------------|-----------------------|
 |[Operátor dolního indexu](../cpp/subscript-operator.md)|**[ ]**|
 |[Operátor volání funkce](../cpp/function-call-operator-parens.md)|**( )**|
-|[Operátor převodu explicitního typu](../cpp/explicit-type-conversion-operator-parens.md)|*Název typu* **)**|
-|[Operátor přístupu členů](../cpp/member-access-operators-dot-and.md)|**.** Nebo **->**|
-|[Příponový operátor Inkrementace](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)|**++**|
-|[Příponový operátor dekrementace](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)|**--**|
+|[Operátor převodu explicitního typu](../cpp/explicit-type-conversion-operator-parens.md)|*název typu* **()**|
+|[Operátor přístupu ke členu](../cpp/member-access-operators-dot-and.md)|**.** nebo **->**|
+|[Operátor přírůstku přípony](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)|**++**|
+|[Operátor snížení přípony](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)|**--**|
 
 Následující syntaxe popisuje možné výrazy přípony:
 
@@ -35,13 +35,13 @@ primary-expression
 postfix-expression[expression]postfix-expression(expression-list)simple-type-name(expression-list)postfix-expression.namepostfix-expression->namepostfix-expression++postfix-expression--cast-keyword < typename > (expression )typeid ( typename )
 ```
 
-*Postfix-expression* uvedený výše může být primární výraz nebo jiný výraz přípony.  Zobrazit **primární výrazy**.  Výrazy přípony se seskupují zleva doprava, takže umožňují následující řetězení výrazů:
+Výše uvedený *výraz přípony* může být primární výraz nebo jiný výraz přípony.  Viz **Primary Expressions**.  Výrazy přípony se seskupují zleva doprava, takže umožňují následující řetězení výrazů:
 
 ```cpp
 func(1)->GetValue()++
 ```
 
-Ve výše uvedeném výrazu `func` je primární výraz `func(1)` je výraz přípony funkce `func(1)->GetValue` je výraz přípony určující člena třídy, `func(1)->GetValue()` je jiný výraz přípony funkce a celý výraz je výraz přípony zvyšující návratovou hodnotu GetValue.  Význam výrazu jako celek je volání funkce func předávající hodnotu 1 jako argument a získání ukazatele na třídu jako návratové hodnoty.  Poté zavolejte `GetValue()` dané třídy, poté zvýšení vrácené hodnoty.
+Ve výše uvedeném výrazu je `func` primární výraz, `func(1)` je výraz přípony funkce, `func(1)->GetValue` je výraz přípony určující člena třídy, `func(1)->GetValue()` je další výraz přípony funkce a celý výraz je příponový výraz, který zvyšuje návratovou hodnotu GetValue.  Význam výrazu jako celek je volání funkce func předávající hodnotu 1 jako argument a získání ukazatele na třídu jako návratové hodnoty.  Pak na tuto třídu zavolejte `GetValue()` a pak zvyšte hodnotu vrácenou.
 
 Výrazy uvedené výše jsou výrazy přiřazení, což znamená, že výsledkem těchto výrazů musí být hodnota r-value.
 
@@ -53,11 +53,11 @@ simple-type-name ( expression-list )
 
 označuje volání konstruktoru.  Pokud je simple-type-name základní typ, musí být seznam výrazů jeden výraz a tento výraz označuje přetypování hodnoty výrazu na základní typ.  Tento typ výrazu přetypování napodobuje konstruktor.  Vzhledem k tomu, že tento tvar umožňuje základním typům a třídám, aby byly konstruovány pomocí stejné syntaxe, je tento tvar obzvláště užitečný při definování tříd šablon.
 
-*Cast-keyword* je jedním z **dynamic_cast**, **static_cast** nebo **reinterpret_cast**.  Další informace lze nalézt v **dynamic_cast**, **static_cast** a **reinterpet_cast**.
+*Klíčové slovo cast-* je jedním z **dynamic_cast**, **static_cast** nebo **reinterpret_cast**.  Další informace lze nalézt v **dynamic_cast** **static_cast** a **reinterpet_cast**.
 
-**Typeid** operátor se považuje za výraz přípony.  Zobrazit **operátor typeid**.
+Operátor **typeid** je považován za výraz přípony.  Viz **Operátor typeid**.
 
-## <a name="formal-and-actual-arguments"></a>Formální a aktuální argumenty
+## <a name="formal-and-actual-arguments"></a>Formální a skutečné argumenty
 
 Volání programů předává volaným funkcím informace ve „skutečných argumentech“. Volané funkce přistupují k těmto informacím pomocí odpovídajících „formálních argumentů“.
 
@@ -65,7 +65,7 @@ Při volání funkce jsou provedeny následující úkoly:
 
 - Jsou vyhodnoceny všechny skutečné argumenty (poskytnuté volajícím). Neexistuje žádné předpokládané pořadí, ve kterém jsou tyto argumenty vyhodnoceny, ale před vstupem do této funkce jsou vyhodnoceny všechny argumenty a dokončeny všechny vedlejší účinky.
 
-- Každý formální argument je inicializován s jeho odpovídajícím skutečným argumentem v seznamu výrazů. (Formální argument je argument, který je deklarován v hlavičce funkce a použit v těle funkce.) Jsou provedeny převody jako při inicializaci, jsou provedeny standardní i uživatelem definované převody a skutečný argument je převeden na správný typ. Provedená inicializace je konceptuálně znázorněna následujícím kódem:
+- Každý formální argument je inicializován s jeho odpovídajícím skutečným argumentem v seznamu výrazů. (Formální argument je argument, který je deklarován v hlavičce funkce a použit v těle funkce.) Převody jsou provedeny jako při inicializaci – standardní i uživatelsky definované převody jsou prováděny při převodu skutečného argumentu na správný typ. Provedená inicializace je konceptuálně znázorněna následujícím kódem:
 
     ```cpp
     void Func( int i ); // Function prototype
@@ -80,13 +80,13 @@ Při volání funkce jsou provedeny následující úkoly:
     Func( Temp_i );
     ```
 
-   Inicializace probíhá, jako kdyby byla použita syntaxe znaménka rovnosti namísto syntaxe se závorkami. Před předáním této hodnoty funkci je vytvořena kopie proměnné `i`. (Další informace najdete v tématu [inicializátory](../cpp/initializers.md) a [převody](../cpp/user-defined-type-conversions-cpp.md)).
+   Inicializace probíhá, jako kdyby byla použita syntaxe znaménka rovnosti namísto syntaxe se závorkami. Před předáním této hodnoty funkci je vytvořena kopie proměnné `i`. (Další informace naleznete v tématu [Inicializátory](../cpp/initializers.md) a [převody](../cpp/user-defined-type-conversions-cpp.md)).
 
-   Proto pokud prototyp funkce (deklarace) vyžaduje argument typu **dlouhé**, a pokud volající program poskytne skutečný argument typu **int**, je skutečný argument povýšen pomocí Převod standardního typu na typ **dlouhé** (viz [standardní převody](../cpp/standard-conversions.md)).
+   Proto pokud prototyp funkce (deklarace) volá argument typu **Long**a v případě, že volající program dodá skutečný argument typu **int**, je skutečný argument povýšen pomocí standardního převodu typu na typ **Long** (viz [standardní převody](../cpp/standard-conversions.md)).
 
    Poskytnutí skutečného argumentu, pro který neexistuje žádný standardní nebo uživatelem definovaný převod na typ formálního argumentu, vygeneruje chybu.
 
-   Pro skutečné argumenty typu třídy je formální argument inicializován pomocí volání konstruktoru třídy. (Viz [konstruktory](../cpp/constructors-cpp.md) Další informace o těchto speciálních členských funkcích třídy.)
+   Pro skutečné argumenty typu třídy je formální argument inicializován pomocí volání konstruktoru třídy. (Další informace o těchto speciálních členských funkcích třídy naleznete v tématu [konstruktory](../cpp/constructors-cpp.md) .)
 
 - Je provedeno volání funkce.
 
@@ -111,11 +111,11 @@ void func( long param1, double param2 )
 }
 ```
 
-Když `func` je volána z hlavní, formální parametr `param1` je inicializován s hodnotou `i` (`i` je převeden na typ **dlouhé** tak, aby odpovídaly správný typ použití standardního převod) a formální parametr `param2` je inicializován s hodnotou `j` (`j` je převeden na typ **double** pomocí standardního převodu).
+Když je `func` volána z Main, je formální parametr `param1` inicializován s hodnotou `i` (`i` je převeden na typ **Long** , aby odpovídal správnému typu pomocí standardního převodu), a formální parametr `param2` je inicializován s hodnotou `j` (`j` je převedena na typ **Double** s použitím standardního převodu).
 
-## <a name="treatment-of-argument-types"></a>Zacházení s typy argumentů
+## <a name="treatment-of-argument-types"></a>Zpracování typů argumentů
 
-Formální argumenty deklarované jako typy const nelze v těle funkce změnit. Funkce mohou změnit jakýkoliv argument, který není typu **const**. Ale tato změna je místní pro funkci a nemá vliv skutečnou hodnotu argumentu není-li skutečný argument nebyl odkazem na objekt není typu **const**.
+Formální argumenty deklarované jako typy const nelze v těle funkce změnit. Funkce mohou změnit libovolný argument, který není typu **const**. Tato změna je však místní pro funkci a nemá vliv na hodnotu skutečného argumentu, pokud skutečný argument nebyl odkaz na objekt, který není typu **const**.
 
 Následující funkce znázorňují některé z těchto konceptů:
 
@@ -135,23 +135,23 @@ double& func2( double& d, const char *c ) {
 }
 ```
 
-## <a name="ellipses-and-default-arguments"></a>Výpustky a výchozí argumenty
+## <a name="ellipses-and-default-arguments"></a>Tři tečky a výchozí argumenty
 
-Funkce mohou být deklarovány pro přijmutí méně argumentů, než je určeno v definici funkce, pomocí dvou metod: tři tečky (`...`) nebo výchozí argumenty.
+Funkce mohou být deklarovány pro přijetí menšího počtu argumentů, než je zadáno v definici funkce, pomocí jedné ze dvou metod: tři tečky (`...`) nebo výchozí argumenty.
 
-Symbol tří teček označuje, že argumenty mohou být požadovány, ale že počet a typy nejsou uvedené v deklaraci. Toto je obvykle nedostatečná praxe programování v C++, protože to anuluje jednu z výhod typu jazyka C++: bezpečnost typů. Různé konverze se použijí na funkce deklarované s elipsami spíše než s těmito funkcemi, u kterých formální a skutečné typy argumentů jsou známé:
+Tři tečky označují, že argumenty mohou být požadovány, ale že počet a typy nejsou v deklaraci zadány. To je obvykle špatný C++ způsob programování, protože se tím zachováním jedné z C++výhod: bezpečnost typů. Různé převody jsou aplikovány na funkce deklarované se třemi tečkami než na funkce, pro které jsou známé typy formální a skutečné argumenty:
 
-- Pokud je skutečný argument typu **float**, je povýšen na typ **double** před voláním funkce.
+- Pokud je skutečný argument typu **float**, je povýšen na typ **Double** před voláním funkce.
 
-- Všechny podepsané nebo nepodepsané **char**, **krátký**, výčtový typ nebo bitové pole budou převedeny na podepsaný nebo nepodepsaný **int** pomocí integrální propagace.
+- Jakýkoli podepsaný nebo nepodepsaný **znak**, **krátký**, Výčtový typ nebo bitové pole je převeden na znaménko nebo unsigned **int** pomocí integrálního povýšení.
 
-- Některý argument typu třídy je předán podle hodnoty jako datová struktura; kopie je vytvořena binárním kopírováním namísto vyvoláním konstruktoru třídy kopie (pokud existuje).
+- Libovolný argument typu třídy je předán hodnotou jako datová struktura; kopie je vytvořena binárním kopírováním místo vyvoláním kopírovacího konstruktoru třídy (pokud existuje).
 
-Symbol tří teček, pokud se používá, musí být deklarován poslední v seznamu argumentů. Další informace o předávání proměnný počet argumentů, najdete v diskuzi o [va_arg, va_start a va_list](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md) v *Run-Time Library Reference*.
+Tři tečky, pokud je použita, musí být deklarovány jako poslední v seznamu argumentů. Další informace o předání variabilního počtu argumentů naleznete v diskuzi o [va_arg, va_start a va_list](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md) v tématu *reference ke knihovně run-time*.
 
-Informace o výchozích argumentech v CLR programování naleznete v tématu [seznamy argumentů proměnných (...) (C++Vyhodnocovací) ](../extensions/variable-argument-lists-dot-dot-dot-cpp-cli.md).
+Informace o výchozích argumentech v programování CLR naleznete v tématu [proměnné seznamy argumentů (...)C++(/CLI)](../extensions/variable-argument-lists-dot-dot-dot-cpp-cli.md).
 
-Výchozí argumenty umožňují zadat hodnotu, kterou by měl předpokládat argument, pokud žádná není zadána ve volání funkce. Následující fragment kódu ukazuje, jak pracuje výchozí argument. Další informace o omezeních na určení výchozích argumentů naleznete v tématu [výchozí argumenty](../cpp/default-arguments.md).
+Výchozí argumenty umožňují zadat hodnotu, kterou by měl argument předpokládat, pokud není ve volání funkce žádná. Následující fragment kódu ukazuje, jak fungují výchozí argumenty. Další informace o omezeních zadání výchozích argumentů naleznete v tématu [Default arguments](../cpp/default-arguments.md).
 
 ```cpp
 // expre_Ellipses_and_Default_Arguments.cpp
@@ -184,7 +184,7 @@ void print( const char *string, const char *terminator )
 }
 ```
 
-Předchozí program deklaruje funkci `print`, která přijímá dva argumenty. Nicméně druhý argument, *ukončovací znak*, má výchozí hodnotu, `"\n"`. V `main`, první dvě volání na `print` umožňují výchozímu druhému argumentu dodat novému řádku ukončení tištěného řetězce. Třetí volání určuje explicitní hodnotu pro druhý argument. Zobrazí se výstup z programu
+Předchozí program deklaruje funkci, `print`, která přijímá dva argumenty. Nicméně druhý argument, *ukončovací*znak má výchozí hodnotu, `"\n"`. V `main`první dvě volání `print` umožňují výchozímu druhému argumentu poskytnout nový řádek pro ukončení vytištěného řetězce. Třetí volání určuje explicitní hodnotu pro druhý argument. Výstup programu je
 
 ```Output
 hello,
@@ -192,6 +192,6 @@ world!
 good morning, sunshine.
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Typy výrazů](../cpp/types-of-expressions.md)

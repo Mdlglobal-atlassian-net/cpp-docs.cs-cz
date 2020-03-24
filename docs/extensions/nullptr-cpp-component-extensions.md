@@ -1,33 +1,33 @@
 ---
-title: nullptr (C++vyhodnocovací a C++/CX)
+title: nullptr (C++/CLI a C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
 - __nullptr keyword (C++)
 - nullptr keyword [C++]
 ms.assetid: 594cfbf7-06cb-4366-9ede-c0b703e1d095
-ms.openlocfilehash: 05aaaa8a0d0056e0f5318f5e9329d90824760728
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 02da716959deb7fcffa7a63a8308279a765c4569
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62254446"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172111"
 ---
-# <a name="nullptr--ccli-and-ccx"></a>nullptr (C++vyhodnocovací a C++/CX)
+# <a name="nullptr--ccli-and-ccx"></a>nullptr (C++/CLI a C++/CX)
 
-**Nullptr** – klíčové slovo představuje *hodnota ukazatele s hodnotou null*. Použijte hodnotu ukazatele null k označení, že popisovač objektu, vnitřní ukazatel nebo typ nativní ukazatel neukazuje na objekt.
+Klíčové slovo **nullptr** reprezentuje *hodnotu ukazatele s hodnotou null*. Použijte hodnotu ukazatele s hodnotou null k označení, že popisovač objektu, vnitřní ukazatel nebo nativní typ ukazatele neodkazuje na objekt.
 
-Použití **nullptr** se spravovaným nebo nativním kódem. Kompilátor vydá odpovídající ale mírně se pokyny, jak hodnoty spravovaný a nativní ukazatel s hodnotou null. Informace o používání verze standard C++ ISO klíčového slova, najdete v tématu [nullptr](../cpp/nullptr.md).
+Použijte **nullptr** s buď spravovaným, nebo nativním kódem. Kompilátor vygeneruje vhodné, ale různé pokyny pro spravované a nativní hodnoty nulového ukazatele. Informace o použití standardní C++ verze tohoto klíčového slova ISO naleznete v tématu [nullptr](../cpp/nullptr.md).
 
-**__Nullptr** – klíčové slovo je klíčové slovo specifické pro společnost Microsoft, který má stejný význam jako **nullptr**, ale platí pro pouze nativního kódu. Pokud používáte **nullptr** s nativním C/C++ kódu a poté zkompilovat s [/CLR](../build/reference/clr-common-language-runtime-compilation.md) – možnost kompilátoru, kompilátor nemůže určit, zda **nullptr** označuje nativní nebo spravovaný hodnotou ukazatele null. Aby váš záměr vymazat pro kompilátor použít **nullptr** můžete zadat spravované hodnotu nebo **__nullptr** můžete zadat hodnotu native.
+Klíčové slovo **__nullptr** je klíčové slovo specifické pro společnost Microsoft, které má stejný význam jako **nullptr**, ale platí pouze pro nativní kód. Použijete-li **nullptr** s nativnímC++ C/kódem a potom zkompilujete pomocí možnosti kompilátoru [/CLR](../build/reference/clr-common-language-runtime-compilation.md) , kompilátor nemůže určit, zda **nullptr** označuje nativní nebo spravovaný hodnotu nulového ukazatele. Chcete-li záměr vyjasnit pro kompilátor, použijte **nullptr** k určení spravované hodnoty nebo **__nullptr** k určení nativní hodnoty.
 
-**Nullptr** – klíčové slovo je ekvivalentní **nic** v jazyce Visual Basic a **null** v jazyce C#.
+Klíčové slovo **nullptr** je ekvivalentní **žádnému** v Visual Basic a **null** v C#.
 
-## <a name="usage"></a>Použití
+## <a name="usage"></a>Využití
 
-**Nullptr** – klíčové slovo mohou být použity kdekoli lze použít argument funkce, nativní ukazatel nebo popisovač.
+Klíčové slovo **nullptr** lze použít kdekoli lze použít popisovač, nativní ukazatel nebo argument funkce.
 
-**Nullptr** – klíčové slovo se nejedná o typ a není podporována pro použití se službou:
+Klíčové slovo **nullptr** není typu a není podporováno pro použití s:
 
 - [sizeof](../cpp/sizeof-operator.md)
 
@@ -35,25 +35,25 @@ Použití **nullptr** se spravovaným nebo nativním kódem. Kompilátor vydá o
 
 - `throw nullptr` (i když `throw (Object^)nullptr;` bude fungovat)
 
-**Nullptr** – klíčové slovo lze použít při inicializaci následující typy ukazatelů:
+Klíčové slovo **nullptr** lze použít při inicializaci následujících typů ukazatelů:
 
 - Nativní ukazatel
 
-- Popisovač modulu Windows Runtime
+- prostředí Windows Runtime popisovač
 
-- Spravované popisovač
+- Spravovaný popisovač
 
-- Spravovaná vnitřní ukazatel
+- Spravovaný vnitřní ukazatel
 
-**Nullptr** – klíčové slovo lze použít k testování, pokud ukazatel nebo popisovač odkaz má hodnotu null, před použitím odkazu.
+Klíčové slovo **nullptr** se dá použít k otestování, jestli je odkaz na ukazatel nebo popisovač NULL, než se použije odkaz.
 
-Volání funkcí mezi jazyky, které používají hodnoty ukazatele s hodnotou null pro kontrolu chyb by měl být interpretován správně.
+Volání funkcí mezi jazyky, které používají hodnoty nulového ukazatele pro kontrolu chyb, by měla být interpretována správně.
 
-Nelze inicializovat popisovače na hodnotu nula; pouze **nullptr** lze použít. Vytvoří přiřazení konstanty 0 na popisovač objektu zabalený `Int32` a přetypování na `Object^`.
+Nemůžete inicializovat popisovač na nulu; použít lze pouze **nullptr** . Přiřazení konstanty 0 k popisovači objektu vytvoří zabalený `Int32` a přetypování na `Object^`.
 
 ## <a name="example"></a>Příklad
 
-Následující příklad kódu ukazuje, že **nullptr** – klíčové slovo se dá použít bez ohledu na to popisovač, nativní ukazatele, nebo můžete použít argument funkce. A tento příklad ukazuje, že **nullptr** – klíčové slovo lze použít ke kontrole odkaz, než bude použit.
+Následující příklad kódu ukazuje, že klíčové slovo **nullptr** lze použít všude, kde lze použít argument, nativní ukazatel nebo argument funkce. A příklad ukazuje, že klíčové slovo **nullptr** lze použít ke kontrole odkazu před jeho použitím.
 
 ```cpp
 // mcpp_nullptr.cpp
@@ -82,7 +82,7 @@ int main() {
 
 ## <a name="example"></a>Příklad
 
-Následující příklad kódu ukazuje, že **nullptr** a nula zaměnitelné na nativní ukazatele.
+Následující příklad kódu ukazuje, že **nullptr** a Zero lze v nativních ukazatelích použít zaměnitelné.
 
 ```cpp
 // mcpp_nullptr_1.cpp
@@ -121,7 +121,7 @@ pMyClass == 0
 
 ## <a name="example"></a>Příklad
 
-Následující příklad kódu ukazuje, že **nullptr** je interpretován jako popisovač pro libovolný typ nebo nativní ukazatel na libovolný typ. V případě přetížení funkcí s úchyty pro různé typy, bude vygenerována chyba nejednoznačnost. **Nullptr** musel být explicitně přetypován na typ.
+Následující příklad kódu ukazuje, že **nullptr** je interpretován jako popisovač libovolného typu nebo nativní ukazatel na libovolný typ. V případě přetížení funkce s popisovači na různé typy bude vygenerována chyba nejednoznačnosti. **Nullptr** by musel být explicitně přetypování na typ.
 
 ```cpp
 // mcpp_nullptr_2.cpp
@@ -139,7 +139,7 @@ void f_null() {
 
 ## <a name="example"></a>Příklad
 
-Následující příklad kódu ukazuje, že přetypování **nullptr** je povolen a vrátí ukazatel nebo popisovač, který obsahuje typ přetypování **nullptr** hodnotu.
+Následující příklad kódu ukazuje, že funkce přetypování **nullptr** je povolena a vrací ukazatel nebo popisovač typu přetypování, který obsahuje hodnotu **nullptr** .
 
 ```cpp
 // mcpp_nullptr_3.cpp
@@ -181,7 +181,7 @@ test
 
 ## <a name="example"></a>Příklad
 
-Následující příklad kódu ukazuje, že obslužné rutiny jsou deklarovány a nebyly explicitně inicializovány, jsou inicializovány na výchozí **nullptr**.
+Následující příklad kódu ukazuje, že pokud jsou popisovače deklarovány a nejsou explicitně inicializovány, jsou ve výchozím nastavení inicializovány na **nullptr**.
 
 ```cpp
 // mcpp_nullptr_5.cpp
@@ -208,7 +208,7 @@ NULL
 
 ## <a name="example"></a>Příklad
 
-Následující příklad kódu ukazuje, že **nullptr** je možné přiřadit na nativní ukazatel při kompilaci s `/clr`.
+Následující příklad kódu ukazuje, že **nullptr** lze přiřadit nativnímu ukazateli při kompilaci pomocí `/clr`.
 
 ```cpp
 // mcpp_nullptr_6.cpp
@@ -221,9 +221,9 @@ int main() {
 
 ## <a name="requirements"></a>Požadavky
 
-– Možnost kompilátoru: (Není vyžadováno; podporuje všechny možnosti generování kódu, včetně `/ZW` a `/clr`)
+Možnost kompilátoru: (Nepožadováno; podporováno všemi možnostmi generování kódu, včetně `/ZW` a `/clr`)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Přípony komponent pro .NET a UPW](component-extensions-for-runtime-platforms.md)<br/>
 [nullptr](../cpp/nullptr.md)

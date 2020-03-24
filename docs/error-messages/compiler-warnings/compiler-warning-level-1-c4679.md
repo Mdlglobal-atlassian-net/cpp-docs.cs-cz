@@ -1,22 +1,22 @@
 ---
-title: Kompilátor upozornění (úroveň 1) C4679
+title: Upozornění kompilátoru (úroveň 1) C4679
 ms.date: 08/27/2018
 f1_keywords:
 - C4679
 helpviewer_keywords:
 - C4679
 ms.assetid: 3cc74150-42a8-4116-94cd-4ef0fd6dcf32
-ms.openlocfilehash: a0cba936d725da3af6987aa4666577b4c492e6c8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ee80693a3174c07f7f4f174ec68e3cdc0236ea96
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62374622"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80175504"
 ---
-# <a name="compiler-warning-level-1-c4679"></a>Kompilátor upozornění (úroveň 1) C4679
+# <a name="compiler-warning-level-1-c4679"></a>Upozornění kompilátoru (úroveň 1) C4679
 
-> "*člen*': nepovedlo se naimportovat člen
+> *člen*: nešlo importovat člen.
 
-Kompilátor zjistil konstrukce, které nemůžou podporovat, který nelze importovat z metadat.
+Kompilátor zjistil konstruktor, který nepodporuje, a nelze jej proto importovat z metadat.
 
-Nepokoušejte se použít konstrukce.
+Nepokoušejte se použít konstrukci.

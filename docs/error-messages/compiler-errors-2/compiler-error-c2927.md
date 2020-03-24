@@ -1,20 +1,20 @@
 ---
-title: Compiler Error C2927
+title: Chyba kompilátoru C2927
 ms.date: 11/04/2016
 f1_keywords:
 - C2927
 helpviewer_keywords:
 - C2927
 ms.assetid: 3f75beec-ff5c-44e1-9085-990ecd55198d
-ms.openlocfilehash: acdb33c28021d007c3f1b25ae7b4419ffbbf6bef
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8f7c9ecdc178e98881d519c343372e99f7f03128
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62382928"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80176947"
 ---
-# <a name="compiler-error-c2927"></a>Compiler Error C2927
+# <a name="compiler-error-c2927"></a>Chyba kompilátoru C2927
 
-'function': Šablona funkcí se musí volat s alespoň jeden argument.
+' function ': šablonu funkce musí být volána s alespoň jedním argumentem
 
-Nelze volat bez argumentů šablony funkce. Typ argumentů šablony určuje, jaká verze funkce pro generování.
+Nemůžete volat funkci šablony bez argumentů. Typ argumentů šablony určuje, která verze funkce má být vygenerována.

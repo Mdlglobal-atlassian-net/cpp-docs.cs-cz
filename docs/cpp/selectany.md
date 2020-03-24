@@ -7,16 +7,16 @@ helpviewer_keywords:
 - __declspec keyword [C++], selectany
 - selectany __declspec keyword
 ms.assetid: 9c353017-5a42-4f50-b741-bd13da1ce84d
-ms.openlocfilehash: a6bf4076dfecbd29035716285f52c0a9faf81067
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 38346e41c1e943e9bfda70668a163c630a0b9599
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62267294"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178870"
 ---
 # <a name="selectany"></a>selectany
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
 Říká kompilátoru, že deklarovaná položka globálních dat (proměnná nebo objekt) je vybrána libovolnou sekvencí COMDAT (zabalenou funkcí).
 
@@ -28,20 +28,20 @@ __declspec( selectany ) declarator
 
 ## <a name="remarks"></a>Poznámky
 
-Pokud je v době spojení nalezeno více definic sekvencí COMDAT, linker jednu vybere a zbytek zahodí. Pokud možnost [OPT](../build/reference/opt-optimizations.md) (optimalizace) je vybraná, pak dojde k odstranění sekvence COMDAT odebrat všechny položky neodkazovaná data ve výstupu linkeru.
+Pokud je v době spojení nalezeno více definic sekvencí COMDAT, linker jednu vybere a zbytek zahodí. Pokud je vybrána možnost linkeru [/OPT: ref](../build/reference/opt-optimizations.md) (optimalizace), pak dojde k odstranění všech neodkazovaných datových položek ve výstupu linkeru COMDAT eliminace.
 
 Konstruktory a přiřazení pomocí globálních funkcí nebo statických metod v deklaraci nevytvoří odkaz a nezabrání eliminaci možnosti /OPT:REF. Vedlejší účinky takového kódu by neměly být závislé na tom, zda neexistují žádné odkazy na tato data.
 
-U dynamicky inicializovaných globálních objektů **selectany** neodkazovaná objektový kód inicializace, také dojde ke zrušení.
+Pro dynamicky inicializované globální objekty **selectany** zruší inicializační kód neodkazovaného objektu.
 
-V projektu EXE nebo DLL lze položku globálních dat obvykle inicializovat pouze jednou. **selectany** lze použít při inicializaci globálních dat definovaných hlavičkami, když se stejná hlavička objeví ve více než jednom zdrojovém souboru. **selectany** je k dispozici v kompilátorech jazyka C i C++.
+V projektu EXE nebo DLL lze položku globálních dat obvykle inicializovat pouze jednou. **selectany** lze použít při inicializaci globálních dat definovaných záhlavími, pokud se stejná hlavička zobrazuje ve více než jednom zdrojovém souboru. **selectany** je k dispozici jak v C C++ , tak v kompilátorech.
 
 > [!NOTE]
->  **selectany** jde použít jedině pro vlastní inicializaci položek globálních dat, které jsou externě viditelné.
+>  **selectany** lze použít pouze na skutečnou inicializaci globálních datových položek, které jsou externě viditelné.
 
 ## <a name="example"></a>Příklad
 
-Tento kód ukazuje způsob použití **selectany** atribut:
+Tento kód ukazuje, jak použít atribut **selectany** :
 
 ```cpp
 //Correct - x1 is initialized and externally visible
@@ -75,7 +75,7 @@ __declspec(selectany) X x(1);
 
 ## <a name="example"></a>Příklad
 
-Tento kód ukazuje způsob použití **selectany** atribut zajistit skládání dat sekvence COMDAT při současném použití [/OPT:ICF](../build/reference/opt-optimizations.md) – možnost linkeru. Všimněte si, že data musí být označené **selectany** a umístí se do **const** oddílu (jen pro čtení). Část jen pro čtení je nutné explicitně zadat.
+Tento kód ukazuje, jak použít atribut **selectany** k zajištění skládání dat COMDAT při použití možnosti linkeru [/OPT: ICF](../build/reference/opt-optimizations.md) . Všimněte si, že data musí být označena pomocí **selectany** a umístěna do oddílu **const** (ReadOnly). Část jen pro čtení je nutné explicitně zadat.
 
 ```cpp
 // selectany2.cpp
@@ -88,9 +88,9 @@ int main() {
 }
 ```
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [__declspec](../cpp/declspec.md)<br/>
 [Klíčová slova](../cpp/keywords-cpp.md)

@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2613
 ms.assetid: d8fa7b32-08cb-4bb4-96e7-c04dded0e917
-ms.openlocfilehash: 84595d7cc6d5ee3288f5d979bf22b678b9bd4c9e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 00920937025d5986c71e9ddcb51b22405f63a100
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62378962"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80177271"
 ---
 # <a name="compiler-error-c2613"></a>Chyba kompilátoru C2613
 
-koncové "," neplatné v seznamu základních tříd
+koncové čárky, neplatné v seznamu základních tříd
 
-Čárkou se zobrazí po poslední základ v seznamu základních tříd.
+Za poslední základ v seznamu základních tříd se zobrazí čárka.

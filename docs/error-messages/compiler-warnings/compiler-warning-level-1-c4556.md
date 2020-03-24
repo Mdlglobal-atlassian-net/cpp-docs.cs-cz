@@ -1,25 +1,25 @@
 ---
-title: Kompilátor upozornění (úroveň 1) C4556
+title: Upozornění kompilátoru (úroveň 1) C4556
 ms.date: 08/27/2018
 f1_keywords:
 - C4556
 helpviewer_keywords:
 - C4556
 ms.assetid: e4c0e296-b747-4db1-9608-30b8b74feac2
-ms.openlocfilehash: c31602766261a8d6d0c4f0bb0a880ee34ee1ed45
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 501d79a8a86fcd3e2d8ba08dc2f03488f9abb827
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397312"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80162306"
 ---
-# <a name="compiler-warning-level-1-c4556"></a>Kompilátor upozornění (úroveň 1) C4556
+# <a name="compiler-warning-level-1-c4556"></a>Upozornění kompilátoru (úroveň 1) C4556
 
-> hodnota vnitřního argumentu immediate '*hodnotu*"je mimo rozsah"*dolní hranice* - *horní hranice*.
+> hodnota vnitřního argumentu Immediate '*Value*' je mimo rozsah '*lowerbound* - *UpperBound*'
 
 ## <a name="remarks"></a>Poznámky
 
-Vnitřní objekt odpovídá instrukce hardwaru. Hardware instrukce má pevný počet bitů určený ke kódování konstanty. Pokud *hodnotu* je mimo rozsah, to nebude kódování správně. Kompilátor zkrátí přebytečné bity.
+Vnitřní odpovídá instrukci hardwaru. Instrukce hardware má pevný počet bitů pro kódování konstanty. Pokud je *hodnota* mimo rozsah, nebude správně kódována. Kompilátor zkrátí nadbytečné bity.
 
 ## <a name="example"></a>Příklad
 

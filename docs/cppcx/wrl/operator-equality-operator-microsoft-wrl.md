@@ -5,16 +5,16 @@ ms.topic: reference
 f1_keywords:
 - client/Microsoft::WRL::operator==
 ms.assetid: 94f383a5-17a9-40c7-9d9c-778acdc54b27
-ms.openlocfilehash: b0dfb547904d409399ad1a0d7824f9d4fdeb5f15
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f9a3ea9e33adc8a26f34324a8660c835f08b3007
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62232129"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213678"
 ---
 # <a name="operator-operator-microsoftwrl"></a>operator== – operátor (Microsoft::WRL)
 
-Operátor rovnosti pro [ComPtr](comptr-class.md) a [comptrref –](comptrref-class.md) objekty.
+Operátor rovnosti pro objekty [ComPtr](comptr-class.md) a [ComPtrRef](comptrref-class.md)
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -55,22 +55,22 @@ WRL_NOTHROW bool operator==(
 
 ### <a name="parameters"></a>Parametry
 
-*a*<br/>
-Levý objekt.
+*určitého*<br/>
+Levý objekt
 
 *b*<br/>
 Pravý objekt.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** Pokud jsou objekty stejné; jinak **false**.
+**true** , pokud jsou objekty stejné; v opačném případě **false**.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** client.h
+**Záhlaví:** Client. h
 
-**Namespace:** Microsoft::WRL
+**Obor názvů:** Microsoft:: WRL
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Microsoft::WRL – obor názvů](microsoft-wrl-namespace.md)

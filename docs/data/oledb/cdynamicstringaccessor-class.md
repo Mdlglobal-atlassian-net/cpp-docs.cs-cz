@@ -12,16 +12,16 @@ helpviewer_keywords:
 - GetString method
 - SetString method
 ms.assetid: 138dc4de-c7c3-478c-863e-431e48249027
-ms.openlocfilehash: 6ba56143beb3411734899839a46ab42992dfa4d8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a0590bc015c5487315b8cbd38f0baf91eb3082cc
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62230992"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211861"
 ---
 # <a name="cdynamicstringaccessor-class"></a>CDynamicStringAccessor – třída
 
-Umožňuje přístup ke zdroji dat, když nemají žádné informace o schématu databáze (základní strukturu vaší databáze).
+Umožňuje přístup ke zdroji dat, když nemáte žádné znalosti o schématu databáze (podkladové struktuře databáze).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -32,7 +32,7 @@ class CDynamicStringAccessorT : public CDynamicAccessor
 
 ## <a name="requirements"></a>Požadavky
 
-**Hlavička**: také atldbcli.h
+**Záhlaví**: atldbcli. h
 
 ## <a name="members"></a>Členové
 
@@ -40,24 +40,24 @@ class CDynamicStringAccessorT : public CDynamicAccessor
 
 |||
 |-|-|
-|[GetString](#getstring)|Načte zadaný sloupec data jako řetězec.|
-|[SetString –](#setstring)|Nastaví zadaný sloupec data jako řetězec.|
+|[GetString](#getstring)|Načte zadaná data sloupce jako řetězec.|
+|[SetString](#setstring)|Nastaví zadaná data sloupce jako řetězec.|
 
 ## <a name="remarks"></a>Poznámky
 
-Zatímco [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) vyžádá data v nativním formátu hlášené poskytovatelem, `CDynamicStringAccessor` požadavků, že zprostředkovatel načíst všechna data z úložiště dat jako řetězce dat. To je užitečné zejména pro jednoduché úlohy, které nevyžadují výpočet hodnot v úložišti dat, jako je například zobrazení nebo tisk obsah datového úložiště.
+I když [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) požaduje data v nativním formátu hlášené poskytovatelem, `CDynamicStringAccessor` vyžaduje, aby zprostředkovatel načetl všechna data, ke kterým se přistupovalo z úložiště dat, jako řetězcová data. To je užitečné hlavně při jednoduchých úlohách, které nevyžadují výpočet hodnot v úložišti dat, jako je například zobrazení nebo tisk obsahu úložiště dat.
 
-Nativní typ sloupce dat v úložišti dat, nezáleží; jako poskytovatel může podporovat převod dat, poskytne data ve formátu řetězce. Pokud zprostředkovatel nepodporuje převod z nativního datového typu na řetězec (což není běžné), žádost o volání vrátí hodnotu úspěch DB_S_ERRORSOCCURED a stavu pro odpovídající sloupce budou indikovat problém převod s DBSTATUS_E_CANTCONVERTVALUE.
+Nativní typ dat sloupce v úložišti dat nezáleží na tom, Pokud zprostředkovatel podporuje převod dat, poskytne data ve formátu řetězce. Pokud zprostředkovatel nepodporuje převod z nativního datového typu na řetězec (což není běžné), bude žádající volání vracet hodnotu úspěchu DB_S_ERRORSOCCURED a stav odpovídajícího sloupce bude označovat problém s převodem DBSTATUS_E_CANTCONVERTVALUE.
 
-Použití `CDynamicStringAccessor` metody získat informace o sloupci. Informace o tomto sloupci použijete k vytvoření přistupující objekt dynamicky za běhu.
+K získání informací o sloupci použijte `CDynamicStringAccessor` metody. Tyto informace o sloupci slouží k vytvoření přístupového objektu dynamicky v době běhu.
 
-Informace o sloupci je uložená do vyrovnávací paměti, vytvářet a spravovat touto třídou. Získání dat z vyrovnávací paměti pomocí [GetString](../../data/oledb/cdynamicstringaccessor-getstring.md), nebo je uložit do vyrovnávací paměti pomocí [SetString –](../../data/oledb/cdynamicstringaccessor-setstring.md).
+Informace o sloupci jsou uloženy ve vyrovnávací paměti vytvořené a spravované touto třídou. Získejte data z vyrovnávací paměti pomocí [GetString](../../data/oledb/cdynamicstringaccessor-getstring.md)nebo ji uložte do vyrovnávací paměti pomocí [SetString](../../data/oledb/cdynamicstringaccessor-setstring.md).
 
-Příklady použití tříd dynamického přístupového objektu a diskusi najdete v tématu [použití dynamických přístupových objektů](../../data/oledb/using-dynamic-accessors.md).
+Diskuzi a příklady použití tříd dynamického přistupujícího objektu naleznete v tématu [použití dynamických přístupových objektů](../../data/oledb/using-dynamic-accessors.md).
 
-## <a name="getstring"></a> CDynamicStringAccessor::GetString
+## <a name="cdynamicstringaccessorgetstring"></a><a name="getstring"></a>CDynamicStringAccessor:: GetString
 
-Načte zadaný sloupec data jako řetězec.
+Načte zadaná data sloupce jako řetězec.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -72,22 +72,22 @@ BaseType* GetString(const WCHAR* pColumnName) const throw();
 #### <a name="parameters"></a>Parametry
 
 *nColumn*<br/>
-[in] Číslo sloupce. Sloupec čísel začínající číslem 1. Hodnota 0 odkazuje na sloupec záložku, pokud existuje.
+pro Číslo sloupce Počet sloupců začíná 1. Hodnota 0 odkazuje na sloupec Bookmark, pokud existuje.
 
 *pColumnName*<br/>
-[in] Ukazatel na řetězec znaků, který obsahuje název sloupce.
+pro Ukazatel na řetězec znaků, který obsahuje název sloupce.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na hodnotu řetězce načítání ze zadaného sloupce. Hodnota je typu `BaseType`, která bude **CHAR** nebo **WCHAR** v závislosti na tom, zda je definován _UNICODE nebo ne. Vrátí hodnotu NULL, pokud zadaný sloupec nebyl nalezen.
+Ukazatel na hodnotu řetězce načtený ze zadaného sloupce. Hodnota je typu `BaseType`, což bude **char** nebo **WCHAR** v závislosti na tom, zda je _UNICODE definována nebo nikoli. Vrátí hodnotu NULL, pokud zadaný sloupec nebyl nalezen.
 
 ### <a name="remarks"></a>Poznámky
 
-Druhá přepsat formuláře přebírá název sloupce jako řetězec ANSI. Třetí přepsat formuláře přebírá název sloupce jako řetězce Unicode.
+Druhý formulář pro přepsání převezme název sloupce jako řetězec ANSI. Třetí formulář pro přepsání převezme název sloupce jako řetězec Unicode.
 
-## <a name="setstring"></a> CDynamicStringAccessor::SetString
+## <a name="cdynamicstringaccessorsetstring"></a><a name="setstring"></a>CDynamicStringAccessor:: SetString
 
-Nastaví zadaný sloupec data jako řetězec.
+Nastaví zadaná data sloupce jako řetězec.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -105,27 +105,27 @@ HRESULT SetString(const WCHAR* pColumnName,
 #### <a name="parameters"></a>Parametry
 
 *nColumn*<br/>
-[in] Číslo sloupce. Sloupec čísel začínající číslem 1. Zvláštní hodnota 0 odkazuje na sloupec záložky, pokud existuje.
+pro Číslo sloupce Počet sloupců začíná 1. Speciální hodnota 0 odkazuje na sloupec Bookmark, pokud existuje.
 
 *pColumnName*<br/>
-[in] Ukazatel na řetězec znaků, který obsahuje název sloupce.
+pro Ukazatel na řetězec znaků, který obsahuje název sloupce.
 
-*data*<br/>
-[in] Ukazatel na řetězec data k zápisu do zadaného sloupce.
+*údajů*<br/>
+pro Ukazatel na řetězcová data, která mají být zapsána do zadaného sloupce.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na hodnotu řetězce, na kterou chcete nastavit zadaný sloupec. Hodnota je typu `BaseType`, která bude **CHAR** nebo **WCHAR** v závislosti na tom, zda je definován _UNICODE nebo ne.
+Ukazatel na hodnotu řetězce, na který chcete nastavit zadaný sloupec. Hodnota je typu `BaseType`, což bude **char** nebo **WCHAR** v závislosti na tom, zda je _UNICODE definována nebo nikoli.
 
 ### <a name="remarks"></a>Poznámky
 
-Druhá přepsat formuláře přebírá název sloupce jako řetězec ANSI a třetí přepsat formuláře přebírá název sloupce jako řetězce Unicode.
+Druhý formulář pro přepsání převezme název sloupce jako řetězec ANSI a třetí formulář přepsání převezme název sloupce jako řetězec Unicode.
 
-Pokud je definován _SECURE_ATL s nenulovou hodnotu, bude generována neplatnost kontrolního výrazu modulu runtime, pokud vstupní *data* řetězec je delší než maximální povolená délka sloupce odkazované data. Vstupní řetězec, jinak bude zkrácen, pokud je delší než maximální povolenou délku.
+Pokud je _SECURE_ATL definována tak, aby měla nenulovou hodnotu, vygeneruje se chyba kontrolního výrazu modulu runtime, pokud je vstupní *datový* řetězec delší než maximální povolená délka odkazovaného datového sloupce. V opačném případě se vstupní řetězec zkrátí, pokud je delší než maximální povolená délka.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[OLE DB – šablony příjemce](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Šablony OLE DB příjemců](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Referenční dokumentace k šablonám příjemců OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [CAccessor – třída](../../data/oledb/caccessor-class.md)<br/>
 [CDynamicParameterAccessor – třída](../../data/oledb/cdynamicparameteraccessor-class.md)<br/>

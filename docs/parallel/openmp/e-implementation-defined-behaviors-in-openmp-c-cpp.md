@@ -1,66 +1,66 @@
 ---
-title: E. Chování definované implementací v OpenMP – C/C++
+title: E. Chování definované implementací v jazyce C/C++ v prostředí OpenMP
 ms.date: 01/22/2019
 ms.assetid: b8d660ca-9bb3-4b6b-87af-45c67d43a731
-ms.openlocfilehash: 3d8e9493cad1fce02e5d482cd5e612afb44bb37b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e866eee9c6d85e93388f9f1d086badf948e2600e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62362751"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80215043"
 ---
-# <a name="e-implementation-defined-behaviors-in-openmp-cc"></a>E. Chování definované implementací v OpenMP – C/C++
+# <a name="e-implementation-defined-behaviors-in-openmp-cc"></a>E. Chování definované implementací v jazyce C/C++ v prostředí OpenMP
 
-Tento dodatek shrnuje chování, které jsou popsány jako "definované implementací" v tomto rozhraní API.  Každý chování je zpět do její popis ve specifikaci hlavní křížovými odkazy.
+V tomto dodatku jsou shrnuta chování, která jsou v tomto rozhraní API popsána jako "definovaná implementací".  Každé chování se křížově odkazuje zpátky na jeho popis v hlavní specifikaci.
 
 ## <a name="remarks"></a>Poznámky
 
-Implementace je potřeba definovat a jeho chování v těchto případech dokumentu, ale tento seznam nemusí být úplný.
+Implementace je nutná k definování a dokumentaci jeho chování v těchto případech, ale tento seznam může být neúplný.
 
-- **Počet vláken:** Pokud při dynamické úpravy počtu vláken je zakázaná, a počet vláken, které jsou požadované pro paralelní oblasti je větší než číslo, které můžete zadat systému za běhu je zjištěna paralelní oblasti, je chování programu definované implementací (viz stránka 9).
+- **Počet vláken:** Pokud je k dispozici paralelní oblast v době, kdy je zakázána dynamická úprava počtu vláken, a počet vláken, která jsou požadována pro paralelní oblast, je větší než počet, který může systém run-time dodat, chování programu je definováno (viz stránka 9).
 
-   V jazyce Visual C++ pro nevnořený paralelní oblasti, 64 vlákna (maximum), poskytneme vám.
+   V vizuálu C++se pro nevnořenou paralelní oblast zobrazí 64 vláken (maximum).
 
-- **Počet procesorů:** Počet fyzických procesorů ve skutečnosti hostování vlákna v daném okamžiku je definované implementací (viz stránka 10).
+- **Počet procesorů:** Počet fyzických procesorů, které jsou aktuálně hostiteli vláken v daném čase, je definován implementací (viz stránka 10).
 
-   V jazyce Visual C++ toto číslo není konstantní a řídí operační systém.
+   V jazyce C++Visual není toto číslo konstantní a řídí se operačním systémem.
 
-- **Vytváření týmů vláken:** Počet vláken v týmu, které jsou spuštěny paralelní vnořené oblasti je definované implementací (viz stránka 10).
+- **Vytváření týmů vláken:** Počet vláken v týmu, který spouští vnořenou paralelní oblast, je definován implementací (viz stránka 10).
 
-   V jazyce Visual C++ toto číslo je určeno v operačním systému.
+   V jazyce C++Visual je toto číslo určeno operačním systémem.
 
-- **Schedule(runtime):** Rozhodnutí o plánování je odložena až do doby běhu. Typ a bloků velikosti plán lze vybrat v době běhu tak, že nastavíte `OMP_SCHEDULE` proměnné prostředí. Pokud tato proměnná prostředí není nastavená, výsledný plán je definované implementací (viz stránka 13).
+- **plán (Runtime):** Rozhodnutí o plánování je odloženo až do doby běhu. Typ plánu a velikost bloku lze vybrat za běhu nastavením proměnné prostředí `OMP_SCHEDULE`. Pokud tato proměnná prostředí není nastavena, je výsledný plán definován implementací (viz stránka 13).
 
-   V jazyce Visual C++ je typ plánu `static` s žádná velikost bloku.
+   V jazyce C++Visual je typ plánu `static` bez velikosti bloku.
 
-- **Výchozí plánování:** Chybí klauzule schedule výchozí plán je definované implementací (viz stránka 13).
+- **Výchozí plánování:** V případě absence klauzule Schedule je výchozí plán definován implementací (viz strana 13).
 
-   V jazyce Visual C++, je výchozí typ plánu `static` s žádná velikost bloku.
+   Ve vizuálu C++je výchozí typ plánu `static` bez velikosti bloku.
 
-- **ATOMIC:** Je definováno implementací Určuje, zda implementace nahradí všechny `atomic` direktivy s `critical` direktivy, které mají stejný jedinečný název (viz stránka 20).
+- **Atomická:** Implementace je definovaná bez ohledu na to, jestli implementace nahrazuje všechny direktivy `atomic` `critical` direktivami, které mají stejný jedinečný název (viz stránka 20).
 
-   V jazyce Visual C++, pokud data změnil [atomické](reference/openmp-directives.md#atomic) není na přirozeného zarovnání. nebo pokud je jeden nebo dva bajty dlouhý, všechny atomických operací, které splňují tuto vlastnost použije jeden kritický oddíl. Kritické oddíly, jinak nebudou použity.
+   Pokud se C++v vizuálu data upravená [atomicky](reference/openmp-directives.md#atomic) netýkají přirozeného zarovnání, nebo pokud je jeden nebo dva bajty dlouhé, všechny atomické operace, které tuto vlastnost vyhoví, budou používat jednu kritickou část. V opačném případě se nepoužijí kritické oddíly.
 
-- **[omp_get_num_threads](3-run-time-library-functions.md#312-omp_get_num_threads-function):** Pokud počet vláken není nastavený explicitně uživatelem, výchozí hodnota je definované implementací (viz stránka 9).
+- **[omp_get_num_threads](3-run-time-library-functions.md#312-omp_get_num_threads-function):** Pokud byl počet vláken explicitně nastaven uživatelem, je výchozí hodnota definovaná implementací (viz stránka 9).
 
-   V jazyce Visual C++ se rovná počtu procesorů výchozí počet vláken.
+   Ve vizuálu C++je výchozí počet vláken roven počtu procesorů.
 
-- **[omp_set_dynamic](3-run-time-library-functions.md#317-omp_set_dynamic-function):** Výchozí nastavení pro úpravu dynamické vlákno je definován implementací.
+- **[omp_set_dynamic](3-run-time-library-functions.md#317-omp_set_dynamic-function):** Výchozí hodnota pro úpravu dynamického vlákna je definovaná implementací.
 
-   V jazyce Visual C++, výchozí hodnota je `FALSE`.
+   Ve vizuálu C++je výchozí hodnota `FALSE`.
 
-- **[omp_set_nested](3-run-time-library-functions.md#319-omp_set_nested-function):** Pokud je povoleno vnořené paralelismu, počet podprocesů používaný k provedení vnořených paralelních oblastí je definované implementací.
+- **[omp_set_nested](3-run-time-library-functions.md#319-omp_set_nested-function):** Je-li povolen vnořený paralelismus, je počet vláken použitých k provedení vnořených paralelních oblastí definován implementací.
 
-   V jazyce Visual C++ je určen počet vláken v operačním systému.
+   V jazyce C++Visual je počet vláken určený operačním systémem.
 
-- [OMP_SCHEDULE](4-environment-variables.md#41-omp_schedule) proměnné prostředí: Výchozí hodnota pro tuto proměnnou prostředí je definován implementací.
+- [OMP_SCHEDULE](4-environment-variables.md#41-omp_schedule) proměnná prostředí: výchozí hodnota pro tuto proměnnou prostředí je definovaná implementací.
 
-   V jazyce Visual C++ je typ plánu `static` s žádná velikost bloku.
+   V jazyce C++Visual je typ plánu `static` bez velikosti bloku.
 
-- [OMP_NUM_THREADS](4-environment-variables.md#42-omp_num_threads) proměnné prostředí: Pokud není zadána žádná hodnota pro `OMP_NUM_THREADS` proměnné prostředí, nebo pokud zadaná hodnota není kladné celé číslo, nebo pokud je hodnota větší než maximální počet vláken, může systém podporovat, počet vláken, je definováno implementací.
+- [OMP_NUM_THREADS](4-environment-variables.md#42-omp_num_threads) proměnná prostředí: Pokud není zadána žádná hodnota pro proměnnou prostředí `OMP_NUM_THREADS`, nebo pokud zadaná hodnota není kladné celé číslo, nebo pokud je hodnota větší než maximální počet vláken, která může systém podporovat, je počet vláken, která se mají použít, definovaná implementací.
 
-   V jazyce Visual C++ Pokud zadaná hodnota je nula nebo méně, je počet vláken rovná počtu procesorů.  Pokud je hodnota větší než 64, počet vláken je 64.
+   Pokud je C++hodnota zadaná v vizuálu nula nebo menší, počet vláken se rovná počtu procesorů.  Pokud je hodnota větší než 64, počet vláken je 64.
 
-- [OMP_DYNAMIC](4-environment-variables.md#43-omp_dynamic) proměnné prostředí: Výchozí hodnota je definován implementací.
+- [OMP_DYNAMIC](4-environment-variables.md#43-omp_dynamic) proměnná prostředí: výchozí hodnota je definovaná implementací.
 
-   V jazyce Visual C++, výchozí hodnota je `FALSE`.
+   Ve vizuálu C++je výchozí hodnota `FALSE`.

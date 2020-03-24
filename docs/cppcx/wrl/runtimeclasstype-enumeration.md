@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - RuntimeClassType enumeration
 ms.assetid: d380712d-672e-4ea9-b7c5-cf9fa7dbb770
-ms.openlocfilehash: 80e8a120f7e3666721ff839a2a696388a64d734e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 53f0172968c28762bb1305e274bbd47494cdaf4c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403126"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213574"
 ---
 # <a name="runtimeclasstype-enumeration"></a>RuntimeClassType – výčet
 
-Určuje typ [RuntimeClass](runtimeclass-class.md) instanci, která je podporována.
+Určuje typ instance [RuntimeClass](runtimeclass-class.md) , která je podporována.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -30,19 +30,19 @@ enum RuntimeClassType;
 
 |Název|Popis|
 |----------|-----------------|
-|`ClassicCom`|Klasické třída modelu COM modulu runtime.|
-|`Delegate`|Ekvivalentní `ClassicCom`.|
-|`InhibitFtmBase`|Zakáže `FtmBase` podporu při `__WRL_CONFIGURATION_LEGACY__` není definován.|
-|`InhibitWeakReference`|Zakáže slabou podporu odkazu.|
-|`WinRt`|Třída Windows Runtime.|
+|`ClassicCom`|Třída klasického běhového prostředí modelu COM.|
+|`Delegate`|Ekvivalent `ClassicCom`.|
+|`InhibitFtmBase`|Zakáže podporu `FtmBase`, pokud `__WRL_CONFIGURATION_LEGACY__` není definováno.|
+|`InhibitWeakReference`|Zakáže podporu slabých odkazů.|
+|`WinRt`|Třída prostředí Windows Runtime.|
 |`WinRtClassicComMix`|Kombinace `WinRt` a `ClassicCom`.|
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** implements.h
+**Hlavička:** Implements. h
 
-**Namespace:** Microsoft::WRL
+**Obor názvů:** Microsoft:: WRL
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Microsoft::WRL – obor názvů](microsoft-wrl-namespace.md)

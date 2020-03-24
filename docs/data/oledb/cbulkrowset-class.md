@@ -95,12 +95,12 @@ helpviewer_keywords:
 - ReleaseRows method
 - SetRows method
 ms.assetid: c6bde426-c543-4022-a98a-9519d9e2ae59
-ms.openlocfilehash: a235a38531141f306b33093ac2546ae232830f0e
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: e66a183c7bbafa16b3aefea8da1472255b507468
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79446054"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212120"
 ---
 # <a name="cbulkrowset-class"></a>CBulkRowset – třída
 
@@ -145,7 +145,7 @@ Následující příklad ukazuje použití třídy `CBulkRowset`.
 
 [!code-cpp[NVC_OLEDB_Consumer#1](../../data/oledb/codesnippet/cpp/cbulkrowset-class_1.cpp)]
 
-## <a name="addrefrows"></a>CBulkRowset:: AddRefRows
+## <a name="cbulkrowsetaddrefrows"></a><a name="addrefrows"></a>CBulkRowset:: AddRefRows
 
 Volá [IRowset:: AddRefRows](/previous-versions/windows/desktop/ms719619(v=vs.85)) pro zvýšení počtu odkazů pro všechny řádky, které jsou aktuálně načteny ze sady řádků Bulk.
 
@@ -159,7 +159,7 @@ HRESULT AddRefRows() throw();
 
 Standardní hodnota HRESULT.
 
-## <a name="cbulkrowset"></a>CBulkRowset:: CBulkRowset
+## <a name="cbulkrowsetcbulkrowset"></a><a name="cbulkrowset"></a>CBulkRowset:: CBulkRowset
 
 Vytvoří nový objekt `CBulkRowset` a nastaví výchozí počet řádků na 10.
 
@@ -169,7 +169,7 @@ Vytvoří nový objekt `CBulkRowset` a nastaví výchozí počet řádků na 10.
 CBulkRowset();
 ```
 
-## <a name="movefirst"></a>CBulkRowset:: MoveFirst
+## <a name="cbulkrowsetmovefirst"></a><a name="movefirst"></a>CBulkRowset:: MoveFirst
 
 Načte první řádek dat.
 
@@ -183,7 +183,7 @@ HRESULT MoveFirst() throw();
 
 Standardní hodnota HRESULT.
 
-## <a name="movelast"></a>CBulkRowset:: MoveLast
+## <a name="cbulkrowsetmovelast"></a><a name="movelast"></a>CBulkRowset:: MoveLast
 
 Přesune se na poslední řádek.
 
@@ -197,7 +197,7 @@ HRESULT MoveLast() throw();
 
 Standardní hodnota HRESULT.
 
-## <a name="movenext"></a>CBulkRowset:: MoveNext
+## <a name="cbulkrowsetmovenext"></a><a name="movenext"></a>CBulkRowset:: MoveNext
 
 Načte další řádek dat.
 
@@ -211,7 +211,7 @@ HRESULT MoveNext() throw();
 
 Standardní hodnota HRESULT. Po dosažení konce sady řádků vrátí DB_S_ENDOFROWSET.
 
-## <a name="moveprev"></a>CBulkRowset:: MovePrev
+## <a name="cbulkrowsetmoveprev"></a><a name="moveprev"></a>CBulkRowset:: MovePrev
 
 Přesune se na předchozí řádek.
 
@@ -225,7 +225,7 @@ HRESULT MovePrev() throw();
 
 Standardní hodnota HRESULT.
 
-## <a name="movetobookmark"></a>CBulkRowset:: MoveToBookmark
+## <a name="cbulkrowsetmovetobookmark"></a><a name="movetobookmark"></a>CBulkRowset:: MoveToBookmark
 
 Načte řádek označený záložkou nebo řádku v zadaném posunu (*lSkip*) z této záložky.
 
@@ -248,7 +248,7 @@ pro Počet řádků z záložky na cílový řádek. Pokud je *lSkip* nula, prvn
 
 Viz [IRowset:: GetData](/previous-versions/windows/desktop/ms716988(v=vs.85)) v *referenci programátora OLE DB*.
 
-## <a name="movetoratio"></a>CBulkRowset:: MoveToRatio
+## <a name="cbulkrowsetmovetoratio"></a><a name="movetoratio"></a>CBulkRowset:: MoveToRatio
 
 Načte řádky začínající ze zlomkové pozice v sadě řádků.
 
@@ -279,7 +279,7 @@ Standardní hodnota HRESULT.
 
 Kde `RowsetSize` je velikost sady řádků měřenou v řádcích. Přesnost tohoto vzorce závisí na konkrétním zprostředkovateli. Podrobnosti najdete v tématu [IRowsetScroll:: GetRowsAtRatio](/previous-versions/windows/desktop/ms709602(v=vs.85)) v *referenci programátora OLE DB*.
 
-## <a name="releaserows"></a>CBulkRowset:: ReleaseRows
+## <a name="cbulkrowsetreleaserows"></a><a name="releaserows"></a>CBulkRowset:: ReleaseRows
 
 Volá [IRowset:: ReleaseRows](/previous-versions/windows/desktop/ms719771(v=vs.85)) pro snížení počtu odkazů pro všechny řádky, které jsou aktuálně načteny ze sady řádků Bulk.
 
@@ -293,7 +293,7 @@ HRESULT ReleaseRows() throw();
 
 Standardní hodnota HRESULT.
 
-## <a name="setrows"></a>CBulkRowset:: SetRows
+## <a name="cbulkrowsetsetrows"></a><a name="setrows"></a>CBulkRowset:: SetRows
 
 Nastaví počet obslužných rutin, které jednotlivé hovory načítají.
 

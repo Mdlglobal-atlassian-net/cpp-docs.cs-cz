@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2557
 ms.assetid: 48a33d82-aa16-4658-b346-2311fcb39864
-ms.openlocfilehash: 851ee704fbac85db9173d4fa3d13aa5c53e902e8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9e1103c6ec2db311bbbf8dbaf918ca966a102e5c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62353026"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80177544"
 ---
 # <a name="compiler-error-c2557"></a>Chyba kompilátoru C2557
 
-'identifier': soukromým a chráněným členům nelze inicializovat bez konstruktoru
+identifikátor: privátní a chráněné členy nejde inicializovat bez konstruktoru.
 
-Pouze členové a přátelé přiřadit hodnotu členu soukromé nebo chráněné. Neveřejní Členové by měl inicializována v konstruktoru třídy.
+Pouze členové a přátelé mohou přiřadit hodnotu soukromému nebo chráněnému členu. Členové NonPublic by měli být inicializováni v konstruktoru třídy.

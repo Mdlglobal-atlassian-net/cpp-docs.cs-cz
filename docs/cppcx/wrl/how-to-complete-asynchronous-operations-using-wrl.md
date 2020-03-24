@@ -1,126 +1,126 @@
 ---
-title: 'Postupy: Dokončení asynchronních operací s použitím knihovny WRL'
+title: 'Postupy: Dokončení asynchronních operací s použitím knihovny WRL'
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 02173eae-731b-49bc-b412-f1f69388b99d
-ms.openlocfilehash: 09c341e5e3d4f6007d5d5f66b7c06e1f0af5a65c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8e7e52342cf73a56c6c33d4d1f998f446d632ddd
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398339"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213938"
 ---
-# <a name="how-to-complete-asynchronous-operations-using-wrl"></a>Postupy: Dokončení asynchronních operací s použitím knihovny WRL
+# <a name="how-to-complete-asynchronous-operations-using-wrl"></a>Postupy: Dokončení asynchronních operací s použitím knihovny WRL
 
-Tento dokument ukazuje, jak použít Windows Runtime C++ šablony knihovny (WRL) ke spuštění asynchronních operací a provedení práce po dokončení operací.
+Tento dokument ukazuje, jak použít knihovnu šablon C++ prostředí Windows Runtime (WRL) ke spuštění asynchronních operací a provádění práce po dokončení operací.
 
-Tento dokument popisuje dva příklady. První příklad spustí asynchronní časovač a čeká na časovač vypršení platnosti. V tomto příkladu zadáte asynchronní akce při vytváření objektu časovače. V druhém příkladu spustí pracovní vlákno na pozadí. Tento příklad ukazuje, jak pracovat s metodu Windows Runtime, která vrátí `IAsyncInfo` rozhraní. [Zpětného volání](callback-function-wrl.md) funkce je důležitou součástí obou příkladech, protože umožňuje jim chcete-li určit obslužné rutiny události ke zpracování výsledků asynchronních operací.
+Tento dokument popisuje dva příklady. První příklad spustí asynchronní časovač a počká, až vyprší platnost časovače. V tomto příkladu zadáte asynchronní akci při vytváření objektu Timer. Druhý příklad spustí pracovní vlákno na pozadí. Tento příklad ukazuje, jak pracovat s metodou prostředí Windows Runtime, která vrací rozhraní `IAsyncInfo`. Funkce [zpětného volání](callback-function-wrl.md) je důležitou součástí obou příkladů, protože umožňuje určit obslužnou rutinu události pro zpracování výsledků asynchronních operací.
 
-Informace o jednodušší příklad, který vytvoří instanci komponenty a načte hodnotu vlastnosti, naleznete v tématu [jak: Aktivace a používání komponent prostředí Windows Runtime](how-to-activate-and-use-a-windows-runtime-component-using-wrl.md).
+Další základní příklad, který vytváří instanci komponenty a načítá hodnotu vlastnosti, naleznete v tématu [How to: Activate and use a prostředí Windows Runtime Component](how-to-activate-and-use-a-windows-runtime-component-using-wrl.md).
 
 > [!TIP]
-> Tyto příklady používají k definování tak potřebná zpětná volání výrazů lambda. Můžete použít také funkci objekty (funktory), ukazatele na funkce, nebo [std::function](../../standard-library/function-class.md) objekty. Další informace o výrazech lambda C++ naleznete v tématu [výrazy Lambda](../../cpp/lambda-expressions-in-cpp.md).
+> Tyto příklady používají lambda výrazy k definování zpětných volání. Můžete také použít objekty Functions (funktory), ukazatele na funkce nebo objekty [std:: Function](../../standard-library/function-class.md) . Další informace o C++ výrazech lambda naleznete v tématu [lambda Expressions](../../cpp/lambda-expressions-in-cpp.md).
 
-## <a name="example-working-with-a-timer"></a>Příklad: Práce s časovačem
+## <a name="example-working-with-a-timer"></a>Příklad: práce s časovačem
 
-V následujících krocích spustit asynchronní časovač a čekání na časovač vypršení platnosti. Následuje Úplný příklad.
+Následující kroky spouštějí asynchronní časovač a čekají na vypršení platnosti časovače. Následující příklad následuje.
 
 > [!WARNING]
-> I když používáte obvykle knihovna šablon C++ Windows Runtime v aplikaci pro univerzální platformu Windows (UPW), v tomto příkladu používá konzolovou aplikaci pro ilustraci. Funkce, jako například `wprintf_s` nejsou k dispozici prostřednictvím aplikace pro UPW. Další informace o typech a funkce, které můžete použít v aplikaci UWP, naleznete v tématu [CRT funkce nejsou podporovány v aplikacích pro univerzální platformu Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) a [Win32 a COM pro aplikace pro UPW](/uwp/win32-and-com/win32-and-com-for-uwp-apps).
+> I když obvykle používáte knihovnu šablon C++ prostředí Windows Runtime v aplikaci Univerzální platforma Windows (UWP), v tomto příkladu se pro ilustraci používá aplikace konzoly. Funkce, jako například `wprintf_s`, nejsou k dispozici z aplikace pro UWP. Další informace o typech a funkcích, které můžete použít v aplikaci pro UWP, najdete v tématu [funkce CRT nepodporované v aplikacích Univerzální platforma Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) a [Win32 a com pro aplikace UWP](/uwp/win32-and-com/win32-and-com-for-uwp-apps).
 
-1. Zahrnout (`#include`) veškeré požadované prostředí Windows Runtime, knihovny šablon jazyka C++ Windows Runtime nebo hlavičky standardní knihovny C++.
+1. Zahrnout (`#include`) všechny požadované prostředí Windows Runtime, prostředí Windows Runtime C++ knihovny šablon nebo C++ standardní hlavičky knihovny.
 
    [!code-cpp[wrl-consume-async#2](../codesnippet/CPP/how-to-complete-asynchronous-operations-using-wrl_1.cpp)]
 
-   `Windows.System.Threading.h` deklaruje typy, které jsou nutné k použití asynchronní časovače.
+   `Windows.System.Threading.h` deklaruje typy, které jsou požadovány pro použití asynchronního časovače.
 
-   Doporučujeme využívat `using namespace` direktivy v souboru .cpp, aby byl kód čitelnější.
+   Doporučujeme, abyste v souboru. cpp využili direktivu `using namespace`, abyste mohli kód čitelnější.
 
-2. Inicializujte Windows Runtime.
+2. Inicializujte prostředí Windows Runtime.
 
    [!code-cpp[wrl-consume-async#3](../codesnippet/CPP/how-to-complete-asynchronous-operations-using-wrl_2.cpp)]
 
-3. Vytvořit objekt factory pro aktivaci pro `ABI::Windows::System::Threading::IThreadPoolTimer` rozhraní.
+3. Vytvořte továrnu aktivace pro rozhraní `ABI::Windows::System::Threading::IThreadPoolTimer`.
 
    [!code-cpp[wrl-consume-async#4](../codesnippet/CPP/how-to-complete-asynchronous-operations-using-wrl_3.cpp)]
 
-   Modul Windows Runtime používá k identifikaci typy plně kvalifikovaných názvů. `RuntimeClass_Windows_System_Threading_ThreadPoolTimer` Parametr je řetězec, který je poskytován modulu Windows Runtime a obsahuje název třídy runtime vyžaduje.
+   Prostředí Windows Runtime používá k identifikaci typů plně kvalifikované názvy. Parametr `RuntimeClass_Windows_System_Threading_ThreadPoolTimer` je řetězec, který je poskytován prostředí Windows Runtime a obsahuje požadovaný název běhové třídy.
 
-4. Vytvoření [události](event-class-wrl.md) objekt, který synchronizuje časovače zpětného volání k hlavní aplikaci.
+4. Vytvořte objekt [události](event-class-wrl.md) , který synchronizuje zpětné volání časovače s hlavní aplikací.
 
    [!code-cpp[wrl-consume-async#5](../codesnippet/CPP/how-to-complete-asynchronous-operations-using-wrl_4.cpp)]
 
    > [!NOTE]
-   > Tato událost je pro ukázku pouze jako součást aplikace konzoly. Tento příklad používá události k zajištění, že asynchronní operace nedokončí, před jejím ukončením. Ve většině aplikací je obvykle není počkat na dokončení asynchronních operací.
+   > Tato událost je určena pouze pro účely ukázky jako součást konzolové aplikace. V tomto příkladu se používá událost k zajištění, aby se asynchronní operace dokončila před ukončením aplikace. Ve většině aplikací obvykle nečekáte na dokončení asynchronních operací.
 
-5. Vytvoření `IThreadPoolTimer` objektu, jejíž platnost vyprší po 2 sekundy. Použití `Callback` funkce k vytvoření obslužné rutiny události ( `ABI::Windows::System::Threading::ITimerElapsedHandler` objekt).
+5. Vytvořte objekt `IThreadPoolTimer`, jehož platnost vyprší po dvou sekundách. K vytvoření obslužné rutiny události (objekt `ABI::Windows::System::Threading::ITimerElapsedHandler`) použijte funkci `Callback`.
 
    [!code-cpp[wrl-consume-async#6](../codesnippet/CPP/how-to-complete-asynchronous-operations-using-wrl_5.cpp)]
 
-6. Vytisknout zprávu do konzoly a počkejte časovače zpětného volání k dokončení. Všechny `ComPtr` a objekty RAII ponechte oboru a automaticky se vydávají.
+6. Vytiskněte zprávu do konzoly a počkejte, než se dokončí zpětné volání časovače. Všechny objekty `ComPtr` a RAII připouštějí rozsah a automaticky se vydávají.
 
    [!code-cpp[wrl-consume-async#7](../codesnippet/CPP/how-to-complete-asynchronous-operations-using-wrl_6.cpp)]
 
-Tady je úplný příklad:
+Tady je kompletní příklad:
 
 [!code-cpp[wrl-consume-async#1](../codesnippet/CPP/how-to-complete-asynchronous-operations-using-wrl_7.cpp)]
 
 ### <a name="compiling-the-code"></a>Probíhá kompilace kódu
 
-Chcete-li kód zkompilovat, ho zkopírujte a vložte ho do projektu sady Visual Studio nebo vložit do souboru s názvem `wrl-consume-async.cpp` a pak spusťte následující příkaz v okně Příkazový řádek sady Visual Studio.
+Chcete-li zkompilovat kód, zkopírujte jej a vložte jej do projektu aplikace Visual Studio nebo jej vložte do souboru s názvem `wrl-consume-async.cpp` a poté spusťte následující příkaz v okně příkazového řádku sady Visual Studio.
 
 `cl.exe wrl-consume-async.cpp runtimeobject.lib`
 
-## <a name="example-working-with-a-background-thread"></a>Příklad: Práce s vlákna na pozadí
+## <a name="example-working-with-a-background-thread"></a>Příklad: práce s vláknem na pozadí
 
-V následujících krocích spustit pracovní vlákno a definovat akce, kterou provádí toto vlákno. Následuje Úplný příklad.
+Následující kroky spouštějí pracovní vlákno a definují akci, kterou provede toto vlákno. Následující příklad následuje.
 
 > [!TIP]
-> Tento příklad ukazuje, jak pracovat s `ABI::Windows::Foundation::IAsyncAction` rozhraní. Tento vzor lze použít libovolné rozhraní, která implementuje `IAsyncInfo`: `IAsyncAction`, `IAsyncActionWithProgress`, `IAsyncOperation`, a `IAsyncOperationWithProgress`.
+> Tento příklad ukazuje, jak pracovat s rozhraním `ABI::Windows::Foundation::IAsyncAction`. Tento model můžete použít pro jakékoli rozhraní, které implementuje `IAsyncInfo`: `IAsyncAction`, `IAsyncActionWithProgress`, `IAsyncOperation`a `IAsyncOperationWithProgress`.
 
-1. Zahrnout (`#include`) veškeré požadované prostředí Windows Runtime, knihovny šablon jazyka C++ Windows Runtime nebo hlavičky standardní knihovny C++.
+1. Zahrnout (`#include`) všechny požadované prostředí Windows Runtime, prostředí Windows Runtime C++ knihovny šablon nebo C++ standardní hlavičky knihovny.
 
    [!code-cpp[wrl-consume-asyncOp#2](../codesnippet/CPP/how-to-complete-asynchronous-operations-using-wrl_8.cpp)]
 
-   Windows.System.Threading.h deklaruje typy, které jsou nutné k použití pracovní podproces.
+   Windows. System. Threading. h deklaruje typy, které jsou požadovány pro použití pracovního vlákna.
 
-   Doporučujeme použít `using namespace` direktivy v souboru .cpp, aby byl kód čitelnější.
+   Doporučujeme, abyste v souboru. cpp použili direktivu `using namespace`, abyste mohli kód čitelnější.
 
-2. Inicializujte Windows Runtime.
+2. Inicializujte prostředí Windows Runtime.
 
    [!code-cpp[wrl-consume-asyncOp#3](../codesnippet/CPP/how-to-complete-asynchronous-operations-using-wrl_9.cpp)]
 
-3. Vytvořit objekt factory pro aktivaci pro `ABI::Windows::System::Threading::IThreadPoolStatics` rozhraní.
+3. Vytvořte továrnu aktivace pro rozhraní `ABI::Windows::System::Threading::IThreadPoolStatics`.
 
    [!code-cpp[wrl-consume-asyncOp#4](../codesnippet/CPP/how-to-complete-asynchronous-operations-using-wrl_10.cpp)]
 
-4. Vytvoření [události](event-class-wrl.md) objekt, který synchronizuje ukončení pracovního vlákna k hlavní aplikaci.
+4. Vytvořte objekt [události](event-class-wrl.md) , který synchronizuje dokončení pracovního vlákna s hlavní aplikací.
 
    [!code-cpp[wrl-consume-asyncOp#5](../codesnippet/CPP/how-to-complete-asynchronous-operations-using-wrl_11.cpp)]
 
    > [!NOTE]
-   > Tato událost je pro ukázku pouze jako součást aplikace konzoly. Tento příklad používá události k zajištění, že asynchronní operace nedokončí, před jejím ukončením. Ve většině aplikací je obvykle není počkat na dokončení asynchronních operací.
+   > Tato událost je určena pouze pro účely ukázky jako součást konzolové aplikace. V tomto příkladu se používá událost k zajištění, aby se asynchronní operace dokončila před ukončením aplikace. Ve většině aplikací obvykle nečekáte na dokončení asynchronních operací.
 
-5. Volání `IThreadPoolStatics::RunAsync` metodu pro vytvoření pracovního vlákna. Použití `Callback` funkce definujete akce.
+5. Chcete-li vytvořit pracovní vlákno, zavolejte metodu `IThreadPoolStatics::RunAsync`. Akci definujte pomocí funkce `Callback`.
 
    [!code-cpp[wrl-consume-asyncOp#6](../codesnippet/CPP/how-to-complete-asynchronous-operations-using-wrl_12.cpp)]
 
-   `IsPrime` Funkce je definována v úplném příkladu, který následuje.
+   Funkce `IsPrime` je definována v úplném příkladu, který následuje.
 
-6. Vytisknout zprávu do konzoly a čekání na vlákno k dokončení. Všechny `ComPtr` a objekty RAII ponechte oboru a automaticky se vydávají.
+6. Vytiskněte zprávu do konzoly a počkejte, než se vlákno dokončí. Všechny objekty `ComPtr` a RAII připouštějí rozsah a automaticky se vydávají.
 
    [!code-cpp[wrl-consume-asyncOp#7](../codesnippet/CPP/how-to-complete-asynchronous-operations-using-wrl_13.cpp)]
 
-Tady je úplný příklad:
+Tady je kompletní příklad:
 
 [!code-cpp[wrl-consume-asyncOp#1](../codesnippet/CPP/how-to-complete-asynchronous-operations-using-wrl_14.cpp)]
 
 ### <a name="compiling-the-code"></a>Probíhá kompilace kódu
 
-Chcete-li kód zkompilovat, ho zkopírujte a vložte ho do projektu sady Visual Studio nebo vložit do souboru s názvem `wrl-consume-asyncOp.cpp` a pak spusťte následující příkaz **příkazový řádek sady Visual Studio** okna.
+Chcete-li zkompilovat kód, zkopírujte jej a vložte jej do projektu aplikace Visual Studio nebo jej vložte do souboru s názvem `wrl-consume-asyncOp.cpp` a poté spusťte následující příkaz v okně **příkazového řádku sady Visual Studio** .
 
 `cl.exe wrl-consume-asyncOp.cpp runtimeobject.lib`
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Knihovna šablon C++ prostředí Windows Runtime (WRL)](windows-runtime-cpp-template-library-wrl.md)

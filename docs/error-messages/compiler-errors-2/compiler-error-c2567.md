@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - C2567
 ms.assetid: 9c140ac9-7059-47e6-9ba1-e7939c8c0dc3
-ms.openlocfilehash: eec529f43e23810843651888ef5722c5d0a0b2c9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 921992c678c1de0b74f99f544173478ebe809b2c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62366352"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80177453"
 ---
 # <a name="compiler-error-c2567"></a>Chyba kompilátoru C2567
 
-nejde otevřít metadata v: 'file', soubor může mít byly odstraněny nebo přesunuty
+nejde otevřít metadata v souboru File, soubor je možná odstraněný nebo přesunutý.
 
-Soubor metadat, která byla popsána ve zdroji (s `#using`) nebyl nalezen ve stejném adresáři v procesu kompilátoru back-end jako byl proces front-endu kompilátoru. Zobrazit [# direktiva using](../../preprocessor/hash-using-directive-cpp.md) Další informace.
+Soubor metadat, na který byl odkazován ve zdroji (s `#using`), nebyl nalezen ve stejném adresáři jako proces back-endu kompilátoru, protože byl procesem front-end kompilátoru. Další informace najdete v tématu [direktiva #using](../../preprocessor/hash-using-directive-cpp.md) .
 
-C2567 může nastat, pokud kompilujete s **/c** na jednom počítači a pokusíte se generování kódu při propojování na jiném počítači. Další informace najdete v tématu [parametru/LTCG (generování kódu při propojování odkaz)](../../build/reference/ltcg-link-time-code-generation.md)).
+C2567 může být způsobena tím, že kompilujete pomocí **/c** na jednom počítači a pak pokusíte vytvořit kód při propojování v jiném počítači. Další informace naleznete v tématu [/LTCG (generování kódu při propojování)](../../build/reference/ltcg-link-time-code-generation.md)).
 
-Může také znamenat, že váš počítač měl žádná další paměť.
+Může to také znamenat, že váš počítač neměl k dispozici více paměti.
 
-Chcete-li tuto chybu opravit, ujistěte se, že je ve stejném umístění adresáře souboru metadat pro všechny fáze procesu sestavení.
+Chcete-li opravit tuto chybu, zajistěte, aby byl soubor metadat ve stejném adresáři pro všechny fáze procesu sestavení.

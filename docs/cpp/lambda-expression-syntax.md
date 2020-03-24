@@ -4,28 +4,28 @@ ms.date: 05/07/2019
 helpviewer_keywords:
 - lambda expressions [C++], syntax
 ms.assetid: 5d6154a4-f34d-4a15-970d-7e7de45f54e9
-ms.openlocfilehash: 37e4a512678bf276b5244fd54945f49a37ff8d01
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 9ac2fdea1a8fc8dcf2b03059455c3141daf86aa8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65222397"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179650"
 ---
 # <a name="lambda-expression-syntax"></a>Syntaxe výrazu lambda
 
-Tento článek popisuje syntaxi a konstrukční prvky výrazů lambda. Popis výrazů lambda naleznete v tématu [výrazy Lambda](../cpp/lambda-expressions-in-cpp.md).
+Tento článek ukazuje syntaxi a strukturální prvky výrazů lambda. Popis výrazů lambda naleznete v tématu [lambda Expressions](../cpp/lambda-expressions-in-cpp.md).
 
-## <a name="function-objects-vs-lambdas"></a>Funkce objektů vs. Výrazy lambda
+## <a name="function-objects-vs-lambdas"></a>Objekty funkce vs. výrazy lambda
 
-Při psaní kódu, pravděpodobně používáte ukazatele na funkce a objekty funkce k řešení problémů a provádění výpočtů, zejména v případě, že používáte [algoritmů standardní knihovny C++](../cpp/algorithms-modern-cpp.md). Ukazatele na funkce a objekty funkce mají své výhody a nevýhody, například ukazatele na funkce mají minimální syntaktické nároky, ale nezachovávají si stav v rámci oboru, a objekty funkce můžete zachovat stav, ale vyžadují syntaktickou režii definice třídy.
+Při psaní kódu pravděpodobně použijete ukazatele na funkce a objekty funkce k řešení problémů a provádění výpočtů, zejména při použití [ C++ algoritmů standardní knihovny](../cpp/algorithms-modern-cpp.md). Ukazatele na funkce a objekty funkce mají tyto výhody a nevýhody – například ukazatele na funkce mají minimální syntaktickou režii, ale neuchovávají stav v rámci rozsahu a objekty funkcí mohou udržovat stav, ale vyžadují syntaktickou režii. definice třídy.
 
-Výraz lambda kombinuje výhody ukazatelů na funkce a objektů funkce a předchází jejich nevýhodám. Stejně jako objekt funkce výrazu lambda je flexibilní a udržuje stav, ale na rozdíl od objektu funkce jeho kompaktní syntaxe nevyžaduje definici třídy explicitní. Pomocí výrazů lambda lze napsat kód, který je méně náročný a náchylný k chybám než kód pro ekvivalentní objekt funkce.
+Výraz lambda kombinuje výhody ukazatelů na funkce a objektů funkce a předchází jejich nevýhodám. Podobně jako objekty funkce je výraz lambda flexibilní a může udržovat stav, ale na rozdíl od objektu funkce, jeho syntaxe Compact nevyžaduje explicitní definici třídy. Pomocí výrazů lambda lze napsat kód, který je méně náročný a náchylný k chybám než kód pro ekvivalentní objekt funkce.
 
-Následující příklady porovnávají použití výrazu lambda a objektu funkce. První příklad pomocí výrazu lambda zapisuje do konzole, zda každý prvek `vector` objekt je sudý, nebo lichý. Druhý příklad používá objekt funkce k provedení stejné úlohy.
+Následující příklady porovnávají použití výrazu lambda a objektu funkce. První příklad používá výraz lambda pro tisk do konzoly, zda je každý prvek objektu `vector` sudý nebo lichý. Druhý příklad používá objekt funkce k provedení stejné úlohy.
 
-## <a name="example-1-using-a-lambda"></a>Příklad 1: Použití výrazu Lambda
+## <a name="example-1-using-a-lambda"></a>Příklad 1: Použití výrazu lambda
 
-Tento příklad předává lambda **for_each** funkce. Výraz lambda vytiskne výsledek, který uvádí, zda každý prvek v `vector` objekt je sudý, nebo lichý.
+Tento příklad předává lambda funkci **for_each** . Lambda vytiskne výsledek, který uvádí, zda je každý prvek v objektu `vector` sudý nebo lichý.
 
 ### <a name="code"></a>Kód
 
@@ -79,13 +79,13 @@ There are 4 even numbers in the vector.
 
 ### <a name="comments"></a>Komentáře
 
-V příkladu, třetí argument **for_each** funkce je výraz lambda. `[&evenCount]` Část určuje klauzuli zachycení výrazu, `(int n)` určuje seznam parametrů a zbývající část určuje tělo výrazu.
+V příkladu je třetí argument funkce **for_each** lambda. Část `[&evenCount]` určuje klauzuli zachycení výrazu, `(int n)` určuje seznam parametrů a zbývající část určuje tělo výrazu.
 
 ## <a name="example-2-using-a-function-object"></a>Příklad 2: Použití objektu funkce
 
-Výraz lambda je někdy příliš nepraktické rozšířit více než v předchozím příkladu. Následující příklad používá objekt funkce namísto výrazu lambda, spolu s **for_each** produkuje stejné výsledky jako příklad 1. Oba příklady ukládají počet sudých čísel v `vector` objektu. Pro uchování stavu operace `FunctorClass` třídy úložiště `m_evenCount` proměnné podle odkazu jako členskou proměnnou. K provedení této operace `FunctorClass` implementuje operátor volání funkce **operator()**. Microsoft C++ kompilátor generuje kód, který je srovnatelné velikosti a výkonu jako kód výrazu lambda v příkladu 1. Pro řešení základního problému jako v tomto článku platí, že jednodušší návrh výrazu lambda je pravděpodobně lepší než návrh funkce objektu. Pokud však myslíte, že funkce mohou v budoucnu vyžadovat značné rozšíření, použijte návrh objektu funkce pro snazší údržbu kódu.
+Výraz lambda je někdy příliš nepraktické rozšířit více než v předchozím příkladu. Následující příklad používá objekt funkce namísto lambda společně s funkcí **for_each** , aby vytvořil stejné výsledky jako příklad 1. Oba příklady ukládají počet sudých čísel v objektu `vector`. Chcete-li zachovat stav operace, třída `FunctorClass` ukládá proměnnou `m_evenCount` odkazem jako členskou proměnnou. K provedení této operace `FunctorClass` implementuje operátor volání funkce, **operátor ()** . Kompilátor společnosti C++ Microsoft generuje kód, který je porovnatelný z rozsahu a výkonu pro kód lambda v příkladu 1. Pro řešení základního problému jako v tomto článku platí, že jednodušší návrh výrazu lambda je pravděpodobně lepší než návrh funkce objektu. Pokud však myslíte, že funkce mohou v budoucnu vyžadovat značné rozšíření, použijte návrh objektu funkce pro snazší údržbu kódu.
 
-Další informace o **operator()**, naleznete v tématu [volání funkce](../cpp/function-call-cpp.md). Další informace o **for_each** funkce naleznete v tématu [for_each](../standard-library/algorithm-functions.md#for_each).
+Další informace o **operátoru ()** naleznete v tématu [Call Function](../cpp/function-call-cpp.md). Další informace o funkci **for_each** naleznete v tématu [for_each](../standard-library/algorithm-functions.md#for_each).
 
 ### <a name="code"></a>Kód
 
@@ -157,11 +157,11 @@ int main()
 There are 4 even numbers in the vector.
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Výrazy lambda](../cpp/lambda-expressions-in-cpp.md)<br/>
 [Příklady výrazů lambda](../cpp/examples-of-lambda-expressions.md)<br/>
-[Generovat](../standard-library/algorithm-functions.md#generate)<br/>
+[vytváří](../standard-library/algorithm-functions.md#generate)<br/>
 [generate_n](../standard-library/algorithm-functions.md#generate_n)<br/>
 [for_each](../standard-library/algorithm-functions.md#for_each)<br/>
 [Specifikace výjimek (throw)](../cpp/exception-specifications-throw-cpp.md)<br/>

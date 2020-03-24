@@ -1,5 +1,5 @@
 ---
-title: Přehled obecných typů ve C++vyhodnocovací
+title: Přehled generických typů v C++/CLI
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
@@ -12,46 +12,46 @@ helpviewer_keywords:
 - open constructed types [C++]
 - constructed types, closed [C++]
 ms.assetid: 21f10637-0fce-4916-b925-6c86a126d3aa
-ms.openlocfilehash: 38d33faec3610495e8cc5e97db2e81bd74be8b8b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a1a66b6464bf952a530dbf1ea188bfd681d684d0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62254313"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172071"
 ---
-# <a name="overview-of-generics-in-ccli"></a>Přehled obecných typů ve C++vyhodnocovací
+# <a name="overview-of-generics-in-ccli"></a>Přehled generických typů v C++/CLI
 
-Obecné typy jsou parametrizované typy podporované modulem common language runtime. Parametrizované typ je typ, který je definován s parametrem Neznámý typ, který je zadán, pokud se používá Obecné.
+Obecné typy jsou parametrizované typy podporované modulem CLR (Common Language Runtime). Parametrizovaný typ je typ, který je definován s neznámým parametrem typu, který je určen při použití obecného.
 
-## <a name="why-generics"></a>Proč obecných typů?
+## <a name="why-generics"></a>Proč obecné typy?
 
-Jazyk C++ podporuje šablony a obě šablony a obecné typy podporují parametrizované typy pro vytvoření typu kolekce tříd. Nicméně šablony poskytují Parametrizace za kompilace. Nemůže odkazovat na sestavení obsahující definice šablony a vytvořte nový specializace šablony. Po kompilaci, specializovaná šablona vypadá jiné třídy nebo metody. Naproti tomu jsou emitovány obecné typy v jazyce MSIL jako parametry typu ví, modul runtime typ s parametry; zdrojový kód, který odkazuje na sestavení obsahující obecný typ, můžete vytvořit specializace obecného typu. Další informace o porovnání standard C++ šablony a obecné typy, najdete v části [obecné typy a šablony (C++vyhodnocovací)](generics-and-templates-visual-cpp.md).
+C++podporuje šablony a šablony a obecné typy podporují parametrizované typy pro vytváření typových tříd kolekcí. Šablony však poskytují parametrizace v čase kompilace. Nejde odkazovat na sestavení obsahující definici šablony a vytvořit nové specializace šablony. Po kompilaci bude specializovaná šablona vypadat jako jakákoli jiná třída nebo metoda. Naopak obecné typy jsou vygenerovány v jazyce MSIL jako parametrizovaný typ známý modulem runtime jako parametrizovaný typ; zdrojový kód, který odkazuje na sestavení obsahující obecný typ, může vytvořit specializace obecného typu. Další informace o porovnání standardních C++ šablon a obecných typů naleznete v tématu [generické a šablony (C++/CLI)](generics-and-templates-visual-cpp.md).
 
 ## <a name="generic-functions-and-types"></a>Obecné funkce a typy
 
-Typy tříd, jako jsou spravované typy, může být obecné. Příkladem může být `List` třídy. Typ objektu v seznamu by parametr typu. V případě potřeby můžete `List` třídy pro mnoho různých typů objektů, než jste možná použili obecné typy `List` , která přebírá `System::Object` jako typu položky. Ale pro použití v seznamu, který by umožnilo libovolného objektu (včetně objektů nesprávného typu). Tento seznam by byla volána bez typu kolekce třídy. Nejlépe může kontrola typu za běhu a vyvolají výjimku. Nebo jste možná použili, šablonu, která by dojít ke ztrátě jeho obecné kvality po kompilaci do sestavení. Uživatelé vašeho sestavení nebylo možné vytvořit vlastní specializace šablony. Obecné typy umožňují vytvářet třídy typu kolekce, Dejme tomu, že `List<int>` (Číst jako "Seznam int") a `List<double>` ("seznam pečlivě") který vygeneruje Chyba kompilace, pokud jste se pokusili umístit typ, který byl v kolekci není nastaven na přijímání do zadaného objektu kolekce. Kromě toho zůstat tyto typy Obecné, když jsou zkompilovány.
+Typy tříd, pokud jsou spravované typy, mohou být obecné. Příkladem může být `List` třída. Typ objektu v seznamu by byl parametr typu. Pokud jste potřebovali třídu `List` pro mnoho různých typů objektů, před obecnými typy byste mohli použít `List`, který jako typ položky přebírá `System::Object`. To však umožňuje použít v seznamu libovolný objekt (včetně objektů nesprávného typu). Takový seznam by byl označován jako netypové třídy kolekce. Nejlepší je, že můžete typ ověřit za běhu a vyvolat výjimku. Nebo, možná jste použili šablonu, která by po zkompilování do sestavení ztratila obecnou kvalitu. Příjemci sestavení nemohly vytvořit vlastní specializace šablony. Obecné typy umožňují vytvořit typové třídy kolekcí, vyslovit `List<int>` (číst jako "seznam int") a `List<double>` ("seznam dvojitých hodnot"), které by vygenerovaly chybu při kompilaci, pokud jste se pokusili vložit typ, který kolekce není navržena tak, aby přijímala do typové kolekce. Kromě toho tyto typy zůstanou po zkompilování Obecné.
 
-Popis syntaxe obecné třídy lze nalézt v [obecné třídy (C++vyhodnocovací)](generic-classes-cpp-cli.md). Nový obor názvů, <xref:System.Collections.Generic>, představuje sadu parametrizovaných kolekci typů včetně <xref:System.Collections.Generic.Dictionary%602>, <xref:System.Collections.Generic.List%601> a <xref:System.Collections.Generic.LinkedList%601>.
+Popis syntaxe obecných tříd může být nalezen v [obecných třídách (C++/CLI)](generic-classes-cpp-cli.md). Nový obor názvů <xref:System.Collections.Generic>zavádí sadu parametrizovaných typů kolekce včetně <xref:System.Collections.Generic.Dictionary%602>, <xref:System.Collections.Generic.List%601> a <xref:System.Collections.Generic.LinkedList%601>.
 
-Jak instance a členské funkce statických tříd, delegátů a globální funkce může také být obecné. Obecné funkce může být nutné, pokud jsou parametry funkce neznámého typu, nebo pokud samotné funkce musí pracovat s obecných typů. V mnoha případech, kdy `System::Object` pravděpodobně byl použit v minulosti jako parametr pro neznámý objekt typu, parametr obecného typu může místo toho použít umožňující další kód zajišťující bezpečnost typů. Jakékoli pokusy o předat typ, který funkci nebyl navržen pro by označených jako chyba v době kompilace. Pomocí `System::Object` jako parametr funkce, zvyšuje ochranu před nechtěnými předání objektu by zjistil, že funkce není určen k řešení, a je třeba přetypovat Neznámý typ objektu na určitý typ v těle funkce a pro účet možnost k InvalidCastException. S obecnou kód pokus o předání objektu funkce způsobí konflikt typu, je zaručeno, že tělo funkce správného typu.
+Instance a členské funkce, delegáti a globální funkce třídy mohou být také obecné. Obecné funkce mohou být nezbytné v případě, že parametry funkce jsou neznámého typu nebo pokud funkce sama musí fungovat s obecnými typy. V mnoha případech, kde `System::Object` mohl být použit v minulosti jako parametr pro neznámý typ objektu, lze namísto toho použít parametr obecného typu, což umožňuje více kódu bezpečného typu. Jakýkoli pokus o předání typu, pro který funkce nebyla navržena, by byl v době kompilace označen jako chyba. Použití `System::Object` jako parametru funkce, neúmyslné předání objektu, který není určen k tomu, že by se nezjistilo, a je třeba přetypovat neznámý typ objektu na konkrétní typ v těle funkce a účet pro možnost InvalidCastException. S obecným kódem, který se pokouší předat objekt funkci, by způsobil konflikt typu, takže tělo funkce zaručuje správné zadání.
 
-Stejné výhody platí pro třídy kolekce založená na obecné typy. Třídy kolekcí v minulosti by použít `System::Object` na ukládání prvků v kolekci. Vložení objekty tohoto typu kolekce nebyl navržen pro nebyl označen jako v době kompilace a často není i v případě, že objekty byly vloženy. Objekt by obvykle přetypovat na jiný typ, když se použila v kolekci. Pouze v případě, že se nezdařilo přetypování by neočekávaný typ zjistit. Obecné typy řeší tento problém v době kompilace nalezením veškerý kód, který vloží typ, který neodpovídá (nebo implicitně převést na) parametr typu obecné kolekce.
+Stejné výhody platí pro třídy kolekcí postavené na obecných typech. Třídy kolekce v minulosti by používaly `System::Object` k ukládání prvků v kolekci. Vložení objektů typu, pro který nebyla kolekce navržena, nebyla v době kompilace označena příznakem, a to často i při vložení objektů. Objekt by se obvykle přetypování na jiný typ při použití v kolekci. Pouze v případě neúspěšného přetypování by byl zjištěn neočekávaný typ. Obecné vyřeší tento problém v době kompilace zjištěním kódu, který vloží typ, který neodpovídá (nebo implicitně převede na) parametr typu Obecné kolekce.
 
-Popis syntaxe, naleznete v tématu [obecné funkce (C++vyhodnocovací)](generic-functions-cpp-cli.md).
+Popis syntaxe najdete v tématu [Obecné funkce (C++/CLI)](generic-functions-cpp-cli.md).
 
-## <a name="terminology-used-with-generics"></a>Terminologie použitá s obecnými typy
+## <a name="terminology-used-with-generics"></a>Terminologie používaná s obecnými typy
 
-### <a name="type-parameters"></a>Parametry typu
+### <a name="type-parameters"></a>Parametry typů
 
-Obecná deklarace obsahuje jednu nebo více neznámé typy, které jsou známé jako *parametry typu*. Název, což je zkratka pro typ v těle obecná deklarace jsou uvedeny parametry typu. Parametr typu se používá jako typ v těle obecná deklarace. Obecná deklarace pro `List<T>` obsahuje parametr typu T.
+Obecná deklarace obsahuje jeden nebo více neznámých typů, které jsou známé jako *parametry typu*. Parametrům typu se předává název, který představuje typ v těle Obecné deklarace. Parametr typu se používá jako typ v těle Obecné deklarace. Obecná deklarace pro `List<T>` obsahuje parametr typu T.
 
 ### <a name="type-arguments"></a>Argumenty typu
 
-*Argument typu* je skutečný typ zastoupen parametr typu, když Obecné se specializuje na určitý typ nebo typy. Například **int** je argument typu v `List<int>`. Typy hodnot a popisovače typy jsou pouze typy v povolené jako argument obecného typu.
+*Argument typu* je skutečný typ, který se používá namísto parametru typu, když je obecný pro konkrétní typ nebo typy specializované. Například **int** je argument typu v `List<int>`. Typy hodnot a typy popisovačů jsou jediné typy povolené v jako argument obecného typu.
 
-### <a name="constructed-type"></a>Konstruovaný typ.
+### <a name="constructed-type"></a>Konstruovaný typ
 
-Typ vytvořený z obecného typu se označuje jako *konstruovaný typ*. Zadaný typ není plně, jako například `List<T>` je *otevřete konstruovaný typ*; typ plně zadaný, jako například `List<double>,` je *uzavřený konstruovaný typ* nebo *specializovaný typ* . Otevřené sestavené typy lze použít v definici další obecné typy a metody a nesmí se zadávat plně, dokud uzavírající Obecné je sama o sobě zadat. Následující je příklad, použití otevřít konstruovaný typ jako základní třída pro obecný:
+Typ vytvořený z obecného typu je označován jako *konstruovaný typ*. Typ, který není úplně zadaný, jako je například `List<T>`, je *otevřený konstruovaný typ*; typ, který je plný, jako je například `List<double>,`, je *uzavřený konstruovaný typ* nebo *specializovaný typ*. Otevřené konstruované typy mohou být použity v definici jiných obecných typů nebo metod a nesmí být zcela zadány, dokud je nadřazený obecný typ sám určený. Například následující je použití otevřeného konstruovaného typu jako základní třídy pro obecné:
 
 ```cpp
 // generics_overview.cpp
@@ -65,15 +65,15 @@ generic <typename T>
 ref class Queue : public List<T> {};
 ```
 
-### <a name="constraint"></a>Omezení
+### <a name="constraint"></a>Jedinečn
 
-Omezení je omezení na typy, které může sloužit jako parametr typu. Například dané obecnou třídu může přijímat pouze třídy, které dědí z dané třídy nebo implementovat zadané rozhraní. Další informace najdete v tématu [omezení parametrů obecných typů (C++vyhodnocovací)](constraints-on-generic-type-parameters-cpp-cli.md).
+Omezení je omezení typů, které lze použít jako parametr typu. Například daná obecná třída může přijmout pouze třídy, které dědí ze zadané třídy nebo implementovat zadané rozhraní. Další informace najdete v tématu [omezení parametrů obecného typuC++(/CLI)](constraints-on-generic-type-parameters-cpp-cli.md).
 
-## <a name="reference-types-and-value-types"></a>Typy odkazů a hodnotových typech
+## <a name="reference-types-and-value-types"></a>Typy odkazů a typy hodnot
 
-Popisovače typů a typů hodnot může použít jako argumenty typu. V obecné definici, ve kterém může být používán, syntaxe je to, že odkazových typů. Například `->` operátor se používá pro přístup ke členům typu parametru typu, zda je typ nakonec použít odkazový typ nebo hodnotový typ. Když typ hodnoty se používá jako argument typu, modul runtime generuje kód, který používá typy hodnot přímo bez zabalení typů hodnot.
+Typy a typy hodnot, které mohou být použity jako argumenty typu. V obecné definici, ve kterém lze použít buď typ, je syntaxí odkaz typu odkazu. Například operátor `->` se používá pro přístup ke členům typu parametru typu bez ohledu na to, jestli typ, který se nakonec používá, je odkazový typ nebo typ hodnoty. Když je jako argument typu použit typ hodnoty, modul runtime vygeneruje kód, který používá typy hodnot přímo bez zabalení hodnotových typů.
 
-Při použití typu odkaz jako argument obecného typu, použijte syntaxi popisovač. Při použití typu hodnoty jako argument obecného typu, použijte název typu přímo.
+Při použití typu odkazu jako argumentu obecného typu použijte syntaxi popisovače. Při použití typu hodnoty jako argumentu obecného typu použijte název typu přímo.
 
 ```cpp
 // generics_overview_2.cpp
@@ -91,9 +91,9 @@ int main() {
 }
 ```
 
-## <a name="type-parameters"></a>Parametry typu
+## <a name="type-parameters"></a>Parametry typů
 
-Parametry typu v obecné třídě zachází stejně jako jiné identifikátory. Ale vzhledem k tomu, typ kroku není znám, existují omezení pro jejich použití. Nelze například použít členy a metody parametru typu třídy, pokud parametr typu se označuje pro podporu těchto členů. To znamená, že pro přístup ke členu prostřednictvím parametru typu, je nutné přidat typ, který obsahuje člena do seznamu omezení parametru typu.
+Parametry typu v obecné třídě se zpracují jako jiné identifikátory. Vzhledem k tomu, že tento typ není znám, existují omezení jejich použití. Například nemůžete použít členy a metody třídy parametrů typu, pokud není parametr typu znám pro podporu těchto členů. To znamená, že pro přístup ke členu prostřednictvím parametru typu je nutné přidat typ, který obsahuje člena do seznamu omezení parametru typu.
 
 ```cpp
 // generics_overview_3.cpp
@@ -122,14 +122,14 @@ int main() {
 }
 ```
 
-Tato omezení platí pro operátory také. Nelze použít jako parametr obecného typu bez omezení `==` a `!=` operátoři k porovnání dvou instancí parametru typu, v případě, typ nepodporuje tyto operátory. Tyto kontroly jsou nezbytné pro obecné typy, ale ne pro šablony, protože obecných typů může být specializovaná za běhu s libovolnou třídu, která splňuje omezení, pokud je již příliš pozdě ke kontrole použijte neplatní členové.
+Tato omezení platí i pro operátory. Neomezený parametr obecného typu nesmí používat operátory `==` a `!=` k porovnání dvou instancí parametru typu pro případ, že typ nepodporuje tyto operátory. Tyto kontroly jsou nezbytné pro obecné typy, ale ne pro šablony, protože obecné typy mohou být specializované za běhu s jakoukoliv třídou, která splňuje omezení, pokud je příliš pozdě pro kontrolu použití neplatných členů.
 
-Výchozí instance parametru typu mohou být vytvořeny pomocí `()` operátor. Příklad:
+Výchozí instanci parametru typu lze vytvořit pomocí operátoru `()`. Příklad:
 
 `T t = T();`
 
-kde `T` je parametr typu v definici třídy nebo metody obecného, inicializuje proměnnou na výchozí hodnotu. Pokud `T` je třída ref je ukazatel s hodnotou null; Pokud `T` hodnotová třída je objekt je inicializován na hodnotu nula. Jedná se *výchozí inicializátor*.
+kde `T` je parametr typu v obecné třídě nebo definici metody, inicializuje proměnnou na výchozí hodnotu. Pokud `T` je ref class, bude ukazatel s hodnotou null; Pokud `T` je hodnotovou třídou, je objekt inicializován na hodnotu nula. Nazývá se *výchozí inicializátor*.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Obecné typy](generics-cpp-component-extensions.md)

@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - Description method [C++]
 ms.assetid: 88191e24-4ee8-44a6-8c4c-3758e22e0548
-ms.openlocfilehash: a517c40e9adfbda2d790ce41a48ccf8658bcd3e0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: de2275f096fe2fde96e64cbc3034602a1fde5e88
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155108"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80180768"
 ---
-# <a name="comerrordescription"></a>_com_error::Description
+# <a name="_com_errordescription"></a>_com_error::Description
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
-Volání `IErrorInfo::GetDescription` funkce.
+Volá funkci `IErrorInfo::GetDescription`.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -27,14 +27,14 @@ _bstr_t Description( ) const;
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Vrátí výsledek `IErrorInfo::GetDescription` pro `IErrorInfo` zaznamenaný v rámci `_com_error` objektu. Výsledná `BSTR` zapouzdřena v `_bstr_t` objektu. Pokud ne `IErrorInfo` je zaznamenán, vrátí prázdný `_bstr_t`.
+Vrátí výsledek `IErrorInfo::GetDescription` pro objekt `IErrorInfo` zaznamenaný v rámci objektu `_com_error`. Výsledný `BSTR` je zapouzdřený v objektu `_bstr_t`. Pokud není zaznamenána žádná `IErrorInfo`, vrátí prázdnou `_bstr_t`.
 
 ## <a name="remarks"></a>Poznámky
 
-Volání `IErrorInfo::GetDescription` funkce a načte `IErrorInfo` zaznamenaný v `_com_error` objektu. Jakékoli neúspěchy při volání `IErrorInfo::GetDescription` metoda se ignoruje.
+Zavolá funkci `IErrorInfo::GetDescription` a načte `IErrorInfo` zaznamenanou v rámci objektu `_com_error`. Jakékoli selhání při volání metody `IErrorInfo::GetDescription` je ignorováno.
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [_com_error – třída](../cpp/com-error-class.md)

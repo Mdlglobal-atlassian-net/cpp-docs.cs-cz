@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - U1001
 ms.assetid: 5d7da559-6cbd-44d6-848c-aaf54cae0d1a
-ms.openlocfilehash: bfe2edf9c57eda073826a8c161ae0c358f3a6232
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bb39d9080fdceb1ab26c32e9aedc654323581eb5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62378450"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80173449"
 ---
 # <a name="nmake-fatal-error-u1001"></a>Závažná chyba nástroje NMAKE U1001
 
-Chyba syntaxe: neplatný znak 'znak"– makro
+Chyba syntaxe: v makru je neplatný znak znaku.
 
-Daný znak se objeví v makru, ale není písmenem, číslicí nebo podtržítkem.
+Daný znak se zobrazí v makru, ale není písmeno, číslo nebo podtržítko.
 
-Tuto chybu může způsobovat chybějící dvojtečka v rozšíření makra:
+Tato chyba může být způsobena chybějící dvojtečkou v rozšíření makra:
 
 ```
 syntax error : illegal character '=' in macro

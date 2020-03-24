@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - static_cast keyword [C++]
 ms.assetid: 1f7c0c1c-b288-476c-89d6-0e2ceda5c293
-ms.openlocfilehash: dca6d5297379e6ddc1c70dba80f35f2f55672e49
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 37708bf50b28eb120af8e8a79e770c3121e6f509
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62267125"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178584"
 ---
-# <a name="staticcast-operator"></a>static_cast – operátor
+# <a name="static_cast-operator"></a>static_cast – operátor
 
-Převede *výraz* typu *id typu* pouze na základě typů, které jsou k dispozici ve výrazu.
+Převede *výraz* na typ *typu-ID* založený pouze na typech, které jsou k dispozici ve výrazu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -25,13 +25,13 @@ static_cast <type-id> ( expression )
 
 ## <a name="remarks"></a>Poznámky
 
-Ve standardním jazyce C++ se pro zajištění bezpečnosti převodu neprovádí žádné typové kontroly za běhu. V jazyce C + +/ CX se provádí kontrola během kompilace a za běhu. Další informace najdete v tématu [přetypování](casting.md).
+Ve standardním jazyce C++ se pro zajištění bezpečnosti převodu neprovádí žádné typové kontroly za běhu. V jazyce C + +/ CX se provádí kontrola během kompilace a za běhu. Další informace naleznete v tématu [přetypování](casting.md).
 
-**Static_cast** operátor lze použít pro operace, jako je například převod ukazatele na základní třídu na ukazatel na odvozenou třídu. Tyto převody nejsou vždy bezpečné.
+Operátor **static_cast** lze použít pro operace, jako je například převod ukazatele na základní třídu na ukazatel na odvozenou třídu. Tyto převody nejsou vždy bezpečné.
 
-Obecně můžete použít **static_cast** když chcete převést číselné datové typy, například výčty na čísla nebo čísla na hodnoty float a jsou některé typy dat zapojených do převodu. **static_cast** nejsou tak bezpečné jako převody **dynamic_cast** převody, protože **static_cast** nespouští kontrolu žádný typ za běhu, zatímco **dynamic_cast** nepodporuje. A **dynamic_cast** na nejednoznačný ukazatel se nezdaří, zatímco **static_cast** vrátí, jako kdyby bylo vše; to může být nebezpečné. I když **dynamic_cast** převody jsou bezpečnější, **dynamic_cast** funguje pouze u ukazatelů nebo odkazů a kontrola typu v době spuštění je další režií. Další informace najdete v tématu [dynamic_cast – operátor](../cpp/dynamic-cast-operator.md).
+Obecně se používá **static_cast** , když chcete převést číselné datové typy, například výčty na čísla nebo čísla na hodnoty float, a Vy jste si jisti datovými typy, které jsou součástí převodu. **static_cast** převody nejsou tak bezpečné jako **dynamic_cast** převody, protože **static_cast** neprovádí kontrolu za běhu, zatímco **dynamic_cast** . **Dynamic_cast** k nejednoznačnému ukazateli selže, zatímco **static_cast** se vrátí, jako kdyby nebylo nic chybné; To může být nebezpečné. I když jsou převody **dynamic_cast** bezpečnější, **dynamic_cast** funguje pouze u ukazatelů nebo odkazů a kontrolní typ za běhu je režijní náklady. Další informace najdete v tématu [operátor dynamic_cast](../cpp/dynamic-cast-operator.md).
 
-V příkladu, který následuje, řádek `D* pd2 = static_cast<D*>(pb);` není bezpečné protože `D` může obsahovat pole a metody, které nejsou v `B`. Ale řádku `B* pb2 = static_cast<B*>(pd);` je bezpečný převod, protože `D` vždy obsahuje všechny `B`.
+V následujícím příkladu `D* pd2 = static_cast<D*>(pb);` řádek není bezpečný, protože `D` může obsahovat pole a metody, které nejsou v `B`. Řádková `B* pb2 = static_cast<B*>(pd);` však představuje bezpečný převod, protože `D` vždy obsahuje všechny `B`.
 
 ```cpp
 // static_cast_Operator.cpp
@@ -49,9 +49,9 @@ void f(B* pb, D* pd) {
 }
 ```
 
-Rozdíl od [dynamic_cast](../cpp/dynamic-cast-operator.md), žádná kontrola běhu provedena na **static_cast** převod `pb`. Objekt, který odkazuje `pb` nemusí být objekt typu `D`v takovém případě použití `*pd2` může mít katastrofální důsledky. Například volání funkce, který je členem skupiny `D` třídy, ale ne `B` třídy, může vést k narušení přístupu.
+Na rozdíl od [dynamic_cast](../cpp/dynamic-cast-operator.md)neprovádí žádná kontrolní rutina **static_cast** konverzi `pb`. Objekt, na který ukazuje `pb`, nesmí být objekt typu `D`. v takovém případě by použití `*pd2` mohlo být katastrofální důsledky. Například volání funkce, která je členem třídy `D`, ale ne `B` třídy, může mít za následek porušení přístupu.
 
-**Dynamic_cast** a **static_cast** operátory pohybují ukazatelem v rámci hierarchie tříd. Ale **static_cast** spoléhá výhradně na informace uvedené v prohlášení přetypování a může proto nebezpečný. Příklad:
+Operátory **dynamic_cast** a **static_cast** přesouvají ukazatel v rámci hierarchie tříd. **Static_cast** však spoléhá výhradně na informace uvedené v příkazu cast a může být proto nebezpečná. Příklad:
 
 ```cpp
 // static_cast_Operator_2.cpp
@@ -68,15 +68,15 @@ void f(B* pb) {
 }
 ```
 
-Pokud `pb` ve skutečnosti odkazuje na objekt typu `D`, pak `pd1` a `pd2` dostane stejnou hodnotu. Dostanou také stejnou hodnotu Pokud `pb == 0`.
+Pokud `pb` skutečně odkazuje na objekt typu `D`, pak `pd1` a `pd2` získají stejnou hodnotu. Budou také mít stejnou hodnotu, pokud `pb == 0`.
 
-Pokud `pb` odkazuje na objekt typu `B` a nikoliv na úplnou `D` třídy, a pak **dynamic_cast** bude mít dost informací k vrácení nuly. Ale **static_cast** spoléhá na tvrzení programátora, který `pb` odkazuje na objekt typu `D` a jednoduše vrací ukazatel na tento předpokládaný `D` objektu.
+Pokud `pb` odkazuje na objekt typu `B` a nikoli na úplnou třídu `D`, **dynamic_cast** bude dostatečně známa, aby vracela hodnotu nula. Nicméně **static_cast** spoléhá na tvrzení programátora, že `pb` odkazuje na objekt typu `D` a jednoduše vrátí ukazatel na tento předpokládaný objekt `D`.
 
-V důsledku toho **static_cast** může provést inverzní implicitní převod; v takovém případě nejsou výsledky definovány. Je ponecháno na programátorovi, aby ověřil, zda jsou výsledky **static_cast** převodu jsou bezpečné.
+V důsledku toho **static_cast** možné provést invertování implicitních převodů, v takovém případě nejsou výsledky definovány. Je ponecháno na programátorovi, aby bylo možné ověřit, zda jsou výsledky převodu **static_cast** bezpečné.
 
-Toto chování platí také pro jiné typy než typy tříd. Například **static_cast** je možné převést z int na **char**. Avšak výsledný **char** nemusí mít dostatek bitů k uložení celé **int** hodnotu. Opět je ponecháno na programátorovi, aby ověřte, že výsledky **static_cast** převodu jsou bezpečné.
+Toto chování platí také pro jiné typy než typy tříd. Například **static_cast** lze použít pro převod typu int na typ **char**. Výsledný **znak char** však nemusí mít dostatek bitů pro uložení celé hodnoty **int** . Znovu je ponecháno na programátorovi, aby bylo možné ověřit, zda jsou výsledky převodu **static_cast** bezpečné.
 
-**Static_cast** operátor slouží také k provádění jakýchkoli implicitních převodů, včetně standardních převodů a uživatelem definovaných převodů. Příklad:
+Operátor **static_cast** lze také použít k provedení jakéhokoli implicitního převodu, včetně standardních převodů a uživatelem definovaných převodů. Příklad:
 
 ```cpp
 // static_cast_Operator_3.cpp
@@ -95,17 +95,17 @@ void f() {
 }
 ```
 
-**Static_cast** operátoru lze explicitně převést integrální hodnotu na typ výčtu. Pokud hodnota integrálního typu nespadá do rozsahu hodnot výčtu, výsledná hodnota výčtu není definována.
+Operátor **static_cast** může explicitně převést integrální hodnotu na typ výčtu. Pokud hodnota integrálního typu nespadá do rozsahu hodnot výčtu, výsledná hodnota výčtu není definována.
 
-**Static_cast** operátor převede hodnotu ukazatele null na hodnotu ukazatele null cílového typu.
+Operátor **static_cast** převede hodnotu ukazatele null na hodnotu ukazatele null cílového typu.
 
-Libovolný výraz může být explicitně převeden na typ void **static_cast** operátor. Cílový typ void může volitelně zahrnovat **const**, **volatile**, nebo **__unaligned** atribut.
+Libovolný výraz může být explicitně převeden na typ void operátorem **static_cast** . Cílový typ void může volitelně zahrnovat atribut **const**, **volatile**nebo **__unaligned** .
 
-**Static_cast** operátor nemůže přetypovat **const**, **volatile**, nebo **__unaligned** atributy. Zobrazit [operátor const_cast](../cpp/const-cast-operator.md) informace o odebírání těchto atributů.
+Operátor **static_cast** nemůže přetypovat na atributy **const**, **volatile**nebo **__unaligned** . Informace o odebírání těchto atributů najdete v tématu [operátor const_cast](../cpp/const-cast-operator.md) .
 
-**C++/ CLI:** Z důvodu nebezpečí provádění nekontrolovaného přetypování nad relokačním kolektorem uvolnění paměti, použití **static_cast** by měly být pouze v kód kritickém pro výkon když jste si jisti, že bude správně fungovat. Pokud je nutné použít **static_cast** v režimu vydání, nahraďte ji [safe_cast](../extensions/safe-cast-cpp-component-extensions.md) v sestavení ladění, aby byl zajištěn úspěch.
+**C++/CLI:** Z důvodu nebezpečí provádění nekontrolovaného přetypování nad přemístění systému uvolňování paměti by použití **static_cast** mělo být pouze v kódu kritickém pro výkon, když jste si jisti, že bude správně fungovat. Pokud je nutné použít **static_cast** v režimu vydání, nahraďte ji [safe_cast](../extensions/safe-cast-cpp-component-extensions.md) v sestavení ladění, abyste zajistili úspěch.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Operátory přetypování](../cpp/casting-operators.md)<br/>
 [Klíčová slova](../cpp/keywords-cpp.md)

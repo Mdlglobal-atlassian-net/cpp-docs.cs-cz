@@ -1,21 +1,21 @@
 ---
-title: requires_category – (C++ atributů COM)
+title: requires_category (C++ atribut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.requires_category
 helpviewer_keywords:
 - requires_category attribute
 ms.assetid: a645fdc6-1ef5-414d-8c56-5fe2686d4687
-ms.openlocfilehash: ec35a1958d9fbcf77fef7f498c6c0dba3ab17df9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 19a454a8bfc959d7d97959d765dbf68d0f766ca1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407364"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214549"
 ---
-# <a name="requirescategory"></a>requires_category
+# <a name="requires_category"></a>requires_category
 
-Určuje požadovanou součást kategorie cílové třídy.
+Určuje požadované kategorie součásti cílové třídy.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -27,17 +27,17 @@ Určuje požadovanou součást kategorie cílové třídy.
 ### <a name="parameters"></a>Parametry
 
 *requires_category*<br/>
-ID požadovaná kategorie.
+ID požadované kategorie
 
 ## <a name="remarks"></a>Poznámky
 
-**Requires_category –** C++ atribut určuje kategorie součásti vyžadované cílové třídy. Další informace najdete v tématu [REQUIRED_CATEGORY](../../atl/reference/category-macros.md#required_category).
+Atribut **requires_category** C++ určuje kategorie komponent vyžadované cílovou třídou. Další informace najdete v tématu [REQUIRED_CATEGORY](../../atl/reference/category-macros.md#required_category).
 
-Tento atribut vyžaduje, aby [coclass](coclass.md), [progid](progid.md), nebo [vi_progid –](vi-progid.md) atribut (nebo jiný atribut, který zahrnuje jednu z těchto) také použít u stejného elementu.
+Tento atribut vyžaduje, aby atribut [Coclass](coclass.md), [ProgID](progid.md)nebo [vi_progid](vi-progid.md) (nebo jiný atribut, který implikuje jednu z nich) byl také použit pro stejný prvek.
 
 ## <a name="example"></a>Příklad
 
-Následující kód vyžaduje, že objekt implementovat kategorie ovládacího prvku.
+Následující kód vyžaduje, aby objekt implementoval kategorii ovládacího prvku.
 
 ```cpp
 // cpp_attr_ref_requires_category.cpp
@@ -55,18 +55,18 @@ class CMyClass {};
 
 ## <a name="requirements"></a>Požadavky
 
-### <a name="attribute-context"></a>Atribut kontextu
+### <a name="attribute-context"></a>Kontext atributu
 
 |||
 |-|-|
-|**Platí pro**|**Třída**, **– struktura**|
-|**Opakovatelné**|Ne|
-|**Vyžadované atributy**|Jeden nebo více z následujících akcí: `coclass`, `progid`, nebo `vi_progid`.|
+|**Platí pro**|**Třída**, **Struktura**|
+|**REPEATABLE**|Ne|
+|**Požadované atributy**|Jednu nebo více následujících možností: `coclass`, `progid`nebo `vi_progid`.|
 |**Neplatné atributy**|Žádné|
 
-Další informace o kontexty atributů najdete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
+Další informace o kontextech atributů naleznete v tématu [kontexty atributů](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [COM – atributy](com-attributes.md)<br/>
 [implements_category](implements-category.md)

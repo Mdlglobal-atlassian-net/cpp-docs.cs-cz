@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0028
 ms.assetid: 0a6e0da7-cb3d-40b6-81a6-6196a9c2526b
-ms.openlocfilehash: 9b74c64cee2b5734beab2bf30475b129160e67ab
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 34cfe15d1f2a8f767dfecb11adae362778b3898d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62265409"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80192260"
 ---
 # <a name="project-build-error-prj0028"></a>Chyba sestavení projektu PRJ0028
 
-Dočasný soubor 'file' obsahuje znaky Unicode, které se nepodařilo přeložit na uživatelovu ANSI znakovou stránku.
+Dočasný soubor ' file ' obsahuje obsah v kódování Unicode, který nelze přeložit na znakovou stránku ANSI uživatele.
 
-Byla zadána hodnota s [/MIDL (určení možností příkazového řádku MIDL)](../../build/reference/midl-specify-midl-command-line-options.md) – možnost linkeru, který nemohl být rozeznán znaková stránka systému.
+Byla zadána hodnota s možností linkeru [/MIDL (zadat možnosti příkazového řádku MIDL)](../../build/reference/midl-specify-midl-command-line-options.md) , kterou nelze přeložit pomocí systémové znakové stránky.
 
-Znaková stránka používá při zadání příkazu MIDL (vstupní znaková stránka) musí být stejný jako znaková stránka systému.
+Znaková stránka, která se používá při zadání příkazu MIDL (vstupní znaková stránka), musí být stejná jako systémová znaková stránka.

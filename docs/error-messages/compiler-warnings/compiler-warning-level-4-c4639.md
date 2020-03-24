@@ -1,30 +1,30 @@
 ---
-title: Kompilátor upozornění (úroveň 4) C4639
+title: Upozornění kompilátoru (úroveň 4) C4639
 ms.date: 11/04/2016
 f1_keywords:
 - C4639
 helpviewer_keywords:
 - C4639
 ms.assetid: f94f7392-cdbb-4bf4-8a00-20dc90d3efe9
-ms.openlocfilehash: 4419493c673cb5916be751cc95af19a779086a5b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d379b159cd7fd67629ea74c47a9e55f1167dc74a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408079"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80198247"
 ---
-# <a name="compiler-warning-level-4-c4639"></a>Kompilátor upozornění (úroveň 4) C4639
+# <a name="compiler-warning-level-4-c4639"></a>Upozornění kompilátoru (úroveň 4) C4639
 
-Chyba MSXML; dokumentu XML, který nezpracují se komentáře. Důvod
+Chyba MSXML: komentáře k dokumentu XML nebudou zpracovány. reason
 
-Toto upozornění může dojít z nejrůznějších důvodů.
+K tomuto upozornění může dojít z libovolného počtu důvodů.
 
-Chcete-li vyřešit tato upozornění:
+Řešení tohoto upozornění:
 
-- Znovu zkompilujte.
+- Znovu zkompilovat.
 
-- Znovu nainstalujte MSXML přeinstalací modul common language runtime.
+- Přeinstalujte službu MSXML pomocí přeinstalace modulu CLR (Common Language Runtime).
 
-- Upravit nebo odebrat Dokumentační komentář, který je příčinou upozornění a překompilujte.
+- Upravit nebo odebrat komentář k dokumentaci, který způsobuje upozornění a znovu zkompiluje.
 
-Při vydání C4639 všechny další zpracování Komentář XML je zakázaná a soubor .xdc.
+Při vydání C4639 je veškeré další zpracování komentářů XML zakázáno a soubor. xdc se nevygeneruje.

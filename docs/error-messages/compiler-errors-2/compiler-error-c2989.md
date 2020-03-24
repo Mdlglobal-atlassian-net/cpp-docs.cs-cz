@@ -1,23 +1,23 @@
 ---
-title: Compiler Error C2989
+title: Chyba kompilátoru C2989
 ms.date: 11/04/2016
 f1_keywords:
 - C2989
 helpviewer_keywords:
 - C2989
 ms.assetid: 936303d8-eb3b-4746-82ec-2f18020a6f64
-ms.openlocfilehash: e5f03d644ab6c25b7eb0da0dc1684c7de5c2e6a8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 585823c2114befa3e6d432e3cf8100fa14ed1a7d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62366131"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80176725"
 ---
-# <a name="compiler-error-c2989"></a>Compiler Error C2989
+# <a name="compiler-error-c2989"></a>Chyba kompilátoru C2989
 
-'class': typ třídy je už deklarovaný jako typ bez třídy
+' class ': typ třídy již byl deklarován jako typ, který není třídou třídy.
 
-Obecná třída nebo šablona předefinuje nešablonové nebo neobecná třída. Zkontrolujte soubory hlaviček pro je v konfliktu.
+Třída Generic nebo Template předefinuje nešablonu nebo neobecnou třídu. Ověřte konflikty souborů hlaviček.
 
 Následující ukázka generuje C2989:
 
@@ -31,7 +31,7 @@ class C{};  // C2989
 class C2{};
 ```
 
-C2989 může dojít také při použití obecných typů:
+C2989 může také nastat při použití generických typů:
 
 ```cpp
 // C2989b.cpp

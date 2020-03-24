@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4039
 ms.assetid: ed7b1783-a7b2-4d3e-8afb-ca1648dae2c2
-ms.openlocfilehash: 4716fa316ee8c5f7e8efdf79fdd049c0c8b9d596
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 362e658ad86fb00409645b4ef42650a08b08ad0b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410288"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80194171"
 ---
 # <a name="linker-tools-warning-lnk4039"></a>Upozornění linkerů LNK4039
 
-část "name" zadaný s možností/Section neexistuje.
+oddíl Name zadaný s možností/SECTION neexistuje.
 
-[DUMPBIN](../../build/reference/dumpbin-reference.md) nebo [EDITBIN](../../build/reference/editbin-reference.md) nelze najít část s názvem `name` ve vstupním souboru.
+[DUMPBIN](../../build/reference/dumpbin-reference.md) nebo [nástroje EDITBIN](../../build/reference/editbin-reference.md) ve vstupním souboru se nepovedlo najít oddíl s názvem `name`.
 
-Chcete-li najdete v částech v souboru, spusťte DUMPBIN s [/HEADERS](../../build/reference/headers.md) možnost.
+Pokud chcete zobrazit oddíly v souboru, spusťte DUMPBIN pomocí možnosti [/Headers](../../build/reference/headers.md) .

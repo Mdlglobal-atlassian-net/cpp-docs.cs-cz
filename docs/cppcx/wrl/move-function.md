@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - Move function
 ms.assetid: c9525426-97e8-4d8c-9877-b689d8a0dc67
-ms.openlocfilehash: 8d7c959ecb2d3c06872871ba062d2be603489141
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 65fe85e95453165430c7ef3cfd4c4bb2babd9868
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398170"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213704"
 ---
 # <a name="move-function"></a>Přesunout – funkce
 
-Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.
+Podporuje infrastrukturu WRL a není určena pro použití přímo v kódu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -29,28 +29,28 @@ inline typename RemoveReference<T>::Type&& Move(
 
 ### <a name="parameters"></a>Parametry
 
-*T*<br/>
+*Š*<br/>
 Typ argumentu.
 
-*arg*<br/>
-Argument pro přesunutí.
+*ARG*<br/>
+Argument, který chcete přesunout.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Parametr *arg* po vlastností nebo odkaz rvalue, pokud existuje, se odebraly.
+Parametr *arg* za odkazem nebo vlastnostmi rvalue (pokud existují) byly odebrány.
 
 ## <a name="remarks"></a>Poznámky
 
-Zadaný argument přesune z jednoho umístění do druhého.
+Přesune zadaný argument z jednoho umístění do druhého.
 
-Další informace najdete v tématu **přesunutí sémantiky** část [Rvalue Reference Declarator: & &](../../cpp/rvalue-reference-declarator-amp-amp.md).
+Další informace najdete v části věnované **sémantikě přesunutí** v [odkazu Rvalue deklarátor: & &](../../cpp/rvalue-reference-declarator-amp-amp.md).
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** internal.h
+**Záhlaví:** interní. h
 
-**Namespace:** Microsoft::WRL::Details
+**Obor názvů:** Microsoft:: WRL::D etails
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Microsoft::WRL::Details – obor názvů](microsoft-wrl-details-namespace.md)

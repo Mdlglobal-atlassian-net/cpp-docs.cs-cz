@@ -1,5 +1,5 @@
 ---
-title: Informace katalogu (přístup k datům MFC)
+title: Informace o katalogu (přístup k datům MFC)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - tables [C++], catalog information
@@ -8,19 +8,19 @@ helpviewer_keywords:
 - catalog information database [C++]
 - databases [C++], catalog information database
 ms.assetid: c184e80f-ff17-409f-9df8-05275080bb8d
-ms.openlocfilehash: 5958c530d57672a9574ddd90df8ae6ac0b0b04f6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 18b76f3e9d3e2bf17763d433f388647b0261b12b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398007"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213483"
 ---
-# <a name="catalog-information--mfc-data-access"></a>Informace katalogu (přístup k datům MFC)
+# <a name="catalog-information--mfc-data-access"></a>Informace o katalogu (přístup k datům MFC)
 
-Informace o tabulkách ve zdroji dat můžete zahrnout názvy tabulek a sloupců, oprávnění tabulky, názvy primární a cizí klíče, informace o předdefinované dotazy nebo uložené procedury, informace o u tabulek, indexů a Statistika tabulky.
+Informace o tabulkách ve zdroji dat mohou zahrnovat názvy tabulek a sloupců, oprávnění tabulek, názvy primárních a cizích klíčů, informace o předdefinovaných dotazech nebo uložených procedurách, informace o indexech v tabulkách a statistiky o tabulkách
 
-Další informace najdete v tématu [zdroj dat: Stanovení schématu zdroje dat (ODBC)](../data/odbc/data-source-determining-the-schema-of-the-data-source-odbc.md).
+Další informace najdete v tématu [zdroj dat: určení schématu zdroje dat (ODBC)](../data/odbc/data-source-determining-the-schema-of-the-data-source-odbc.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Přístup k datům programování knihovny MFC nebo ATL)](../data/data-access-programming-mfc-atl.md)
+[Programování přístupu k datům (MFC/ATL)](../data/data-access-programming-mfc-atl.md)

@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - C3888
 ms.assetid: 40820812-79c5-4dcd-a19d-b4164d25fc8a
-ms.openlocfilehash: e4d52946126e7be6c6f2aef34b5eb5a93a0babad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 40156dfaad5965d30a32d3aa2ac574a5f91999ba
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62187376"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80176401"
 ---
 # <a name="compiler-error-c3888"></a>Chyba kompilátoru C3888
 
-"name": nepodporuje výraz const přidružený k tomuto datovému členu literálu C++vyhodnocovací
+' name ': typ const přidružený k tomuto datovému členu literálu není C++podporován na/CLI
 
-*Název* datový člen, který je deklarován s [literálu](../../extensions/literal-cpp-component-extensions.md) – klíčové slovo je inicializovat pomocí hodnoty kompilátor nepodporuje. Kompilátor podporuje pouze konstantní integral, enum nebo typy řetězců. Pravděpodobnou příčinou **C3888** chyby je, že datový člen je inicializován s polem bajtů.
+*Název* datového členu deklarovaný s klíčovým slovem [Literal](../../extensions/literal-cpp-component-extensions.md) je inicializován s hodnotou, kterou kompilátor nepodporuje. Kompilátor podporuje pouze konstanty integrálního, výčtového nebo řetězcového typu. Pravděpodobná příčina chyby **C3888** je, že datový člen je inicializován s polem bajtů.
 
 ### <a name="to-correct-this-error"></a>Oprava této chyby
 
-1. Zkontrolujte, že deklarovaný literální datový člen podporovaného typu.
+1. Ověřte, zda je deklarovaný datový člen deklarovaného literálu podporovaným typem.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [literal](../../extensions/literal-cpp-component-extensions.md)

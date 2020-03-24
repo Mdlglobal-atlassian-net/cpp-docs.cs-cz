@@ -1,39 +1,39 @@
 ---
-title: Kompilátor upozornění (úroveň 2) C4275
+title: Upozornění kompilátoru (úroveň 2) C4275
 ms.date: 02/08/2019
 f1_keywords:
 - C4275
 helpviewer_keywords:
 - C4275
 ms.assetid: 18de967a-0a44-4dbc-a2e8-fc4c067ba909
-ms.openlocfilehash: 6e0e80d465d77bd4fe99fbcaa98e289b8a4c8b63
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ad12c1c27006a57c8339e9dad82e4d8e1a239a6e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62349682"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80161994"
 ---
-# <a name="compiler-warning-level-2-c4275"></a>Kompilátor upozornění (úroveň 2) C4275
+# <a name="compiler-warning-level-2-c4275"></a>Upozornění kompilátoru (úroveň 2) C4275
 
-> jiné – třídu DLL-interface*třída_1*'použít jako základ pro knihovnu DLL-interface class'*třída_2*.
+> Třída rozhraní*class_1*, která není typu DLL, se používá jako základ pro třídu rozhraní dll*class_2*.
 
-Exportované třídy byla odvozena ze třídy, který nebyl exportován.
+Exportovaná třída byla odvozena z třídy, která nebyla exportována.
 
-Aby se minimalizovala možnost poškození dat při exportu třída s atributem [__declspec(dllexport)](../../cpp/dllexport-dllimport.md), ujistěte se, že:
+Chcete-li minimalizovat možnost poškození dat při exportu třídy s [__declspec (dllexport)](../../cpp/dllexport-dllimport.md), ujistěte se, že:
 
-- Všechna statická data se přistupuje prostřednictvím funkce, které jsou exportovány z knihovny DLL.
+- Všechna vaše statická data jsou k dispozici prostřednictvím funkcí, které jsou exportovány z knihovny DLL.
 
-- Žádné vložené metody třídy můžete upravit statická data.
+- Žádné vložené metody třídy nemůžou upravovat statická data.
 
-- Žádné vložené metody třídy pomocí funkce CRT nebo jiné funkce knihovny, které používají statická data.
+- Žádné vložené metody vaší třídy nepoužívají funkce CRT nebo jiné funkce knihovny, které používají statická data.
 
-- Platí pro vložené třídy použijte funkce CRT nebo jiné funkce knihovny, odkud statická data.
+- Žádné vložené funkce třídy nepoužívají funkce CRT nebo jiné funkce knihovny, kde přistupujete ke statickým datům.
 
-- Žádné metody třídy (bez ohledu na to vkládání) můžete použít typy, kde instance v souboru EXE a DLL obsahuje rozdíly ve statická data.
+- Žádné metody vaší třídy (bez ohledu na vkládání) mohou používat typy, kde instance v souboru EXE a DLL mají rozdíly v statických datech.
 
-Export tříd, které knihovny DLL, která definuje třídu s virtuálními funkcemi a funkce, které můžete volat k vytvoření instance definováním a odstranit objekty typu se můžete vyhnout.  Pak můžete pouze volání virtuálních funkcí na typu.
+Exportování tříd se můžete vyhnout definováním knihovny DLL, která definuje třídu s virtuálními funkcemi, a funkcemi, které lze volat pro vytvoření instance a odstranění objektů typu.  Pak můžete volat pouze virtuální funkce typu.
 
-C4275 můžete ignorovat v jazyce Visual C++, pokud je odvozený od typu ve standardní knihovně C++ kompilaci ladění vydání (**/MTD**) a kde se chybová zpráva kompilátoru odkazuje na `_Container_base`.
+C4275 lze v vizuálu C++ ignorovat, pokud se odvozují z typu ve C++ standardní knihovně, kompilování ladicí verze ( **/MTD**) a kde chybová zpráva kompilátoru odkazuje na `_Container_base`.
 
 ```cpp
 // C4275.cpp

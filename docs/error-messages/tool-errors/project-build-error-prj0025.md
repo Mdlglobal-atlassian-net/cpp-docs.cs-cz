@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0025
 ms.assetid: 57725c78-bc63-44f3-9667-2969b2d7c41d
-ms.openlocfilehash: 5f3699dce75a20b9cc6e1d712bc5702543ab7b6c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 30445a3abc2a6ad05c983448f57ed5b93df6e61f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383944"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80192351"
 ---
 # <a name="project-build-error-prj0025"></a>Chyba sestavení projektu PRJ0025
 
-> Dávkový soubor "*souboru*' obsahuje znaky Unicode, které se nepodařilo přeložit na uživatelovu ANSI znakovou stránku.
+> Dávkový soubor '*File*' obsahuje obsah v kódování Unicode, který nelze přeložit na znakovou stránku ANSI uživatele.
 >
-> *Kódování UNICODE obsah souboru*
+> *Obsah UNICODE souboru*
 
-Systém projektu nalezen obsah Unicode ve vlastním sestavení pravidla nebo sestavení událost, která nemůže být správně přeloženy na uživatele aktuální znakovou stránku ANSI.
+Systém projektu našel v pravidle vlastního buildu nebo v události sestavení obsah Unicode, který nelze správně přeložit na aktuální znakovou stránku ANSI uživatele.
 
-Řešení této chyby je pro aktualizaci obsahu pravidlo sestavení nebo sestavení událost použijte ANSI nebo nainstalujte znakovou stránku ve vašem počítači a nastavte ji jako výchozí systémové hodnoty.
+Řešením této chyby je aktualizovat obsah pravidla sestavení nebo události sestavení pro použití ANSI nebo pro instalaci znakové stránky do počítače a nastavit jej jako výchozí systém.
 
-Další informace o vlastní kroky sestavení a události sestavení, naleznete v tématu [Principy vlastní kroky sestavení a události sestavení](../../build/understanding-custom-build-steps-and-build-events.md).
+Další informace o vlastních krocích sestavení a událostech sestavení naleznete v tématu [porozumění vlastním krokům sestavení a událostem sestavení](../../build/understanding-custom-build-steps-and-build-events.md).
