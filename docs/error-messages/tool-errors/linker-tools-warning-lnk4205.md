@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4205
 ms.assetid: d63b9d18-ef3c-4081-9d8d-93077dad13c2
-ms.openlocfilehash: 7c90ec737e6d52fee81bb2a1c5a21a58a49af272
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8b0cef76bf8b351bdf2bb73860906509c9574c46
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395115"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80183160"
 ---
 # <a name="linker-tools-warning-lnk4205"></a>Upozornění linkerů LNK4205
 
-'filename' chybí aktuální ladicí informace pro odkazující modul objekt se propojí, jako by nebyly dostupné žádné ladicí informace
+v názvu souboru chybí aktuální ladicí informace pro odkazující modul. propojování objektu, jako by nebyly žádné ladicí informace
 
-Soubor PDB je zastaralé informace. Propojovací program bude pokračovat k propojení objektu bez ladicích informací. Možná budete chtít znovu zkompilovat pomocí souboru objektu [/zi](../../build/reference/z7-zi-zi-debug-information-format.md) možnost.
+Soubor. pdb obsahuje neaktuální informace. Linker bude pokračovat v propojení objektu bez informací o ladění. Je možné, že budete chtít znovu zkompilovat soubor objektu pomocí možnosti [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md) .

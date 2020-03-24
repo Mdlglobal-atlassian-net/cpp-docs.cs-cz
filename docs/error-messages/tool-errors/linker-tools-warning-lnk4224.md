@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4224
 ms.assetid: 8624b70e-0b93-43cf-b457-834d38632d0b
-ms.openlocfilehash: eb0a019cc80e5218a52697b8bcd5e91b811d04d3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9e52dd533d897e729aba5f2b43ea6c019a024d43
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160390"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80182978"
 ---
 # <a name="linker-tools-warning-lnk4224"></a>Upozornění linkerů LNK4224
 
-> *možnost* se už nepodporuje. ignoruje
+> *možnost* už není podporovaná; přeskočen
 
 ## <a name="remarks"></a>Poznámky
 
-– Možnost linkeru neplatný, zastaralé byl zadán a ignorován.
+Byla zadána neplatná, zastaralá možnost linkeru a ignorována.
 
-Například LNK4224 může dojít, pokud Comment direktiva se zobrazí ve. Knihovna Comment – direktiva by byly přidané prostřednictvím [komentáře (C/C++)](../../preprocessor/comment-c-cpp.md) – Direktiva pragma, pomocí možnosti exestr zastaralé. Pomocí dumpbin [/ALL](../../build/reference/all.md) zobrazíte linkeru direktivy v souboru .obj.
+Například LINKERŮ LNK4224 může nastat, pokud se v. obj objeví direktiva/Comment. Direktiva/Comment by se přidala prostřednictvím direktivy pragma [Comment (C++C/)](../../preprocessor/comment-c-cpp.md) s použitím nepoužívané možnosti exestr. Pomocí nástroje DUMPBIN [/All](../../build/reference/all.md) můžete zobrazit direktivy linkeru v souboru. obj.
 
-Pokud je to možné upravte zdroj .obj a odebrat direktivy pragma. Pokud toto upozornění ignorovat, je možné, že .executable zkompilovaná **/CLR: pure** nebude fungovat podle očekávání. **/CLR: pure** – možnost kompilátoru je zastaralé v sadě Visual Studio 2015 a není podporována v sadě Visual Studio 2017.
+Pokud je to možné, upravte zdroj objektu. obj a odeberte direktivu pragma. Pokud toto upozornění přeskočíte, je možné, že soubor. executable kompilovaný pomocí **/clr: Pure** nebude spuštěn podle očekávání. Možnost **/clr: Pure** Compiler je v aplikaci visual Studio 2015 zastaralá a není podporovaná v rámci sady visual Studio 2017.
 
 ## <a name="example"></a>Příklad
 
-Následující ukázka generuje LNK4224.
+Následující ukázka generuje LINKERŮ LNK4224.
 
 ```cpp
 // LNK4224.cpp

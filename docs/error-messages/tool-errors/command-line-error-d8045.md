@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - D8045
 ms.assetid: 01c8808c-bac1-4b4d-8a90-b595f95e9318
-ms.openlocfilehash: 7964c2539b5358d2d946e530c4ee75110857446d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 05a2d3851e58062e1e326781a223e2f4b0346620
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62214193"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80196843"
 ---
 # <a name="command-line-error-d8045"></a>Chyba příkazového řádku D8045
 
-Soubor C 'file' s možností/CLR nelze zkompilovat.
+soubor C nelze zkompilovat s možností/CLR.
 
-Mohou být předány pouze soubory zdrojového kódu C++ kompilaci, která používá **/CLR**.  Použití **/TP** ke kompilaci souboru .c jako souboru s příponou .cpp, naleznete v tématu [/Tc /Tp /TC, /TP (určení typu zdrojového souboru)](../../build/reference/tc-tp-tc-tp-specify-source-file-type.md) Další informace.
+Do C++ kompilace, která používá **/CLR**, lze předat pouze soubory zdrojového kódu.  Pomocí **/TP** zkompilujte soubor. c jako soubor. cpp; Další informace naleznete v tématu [/TC,/TP,/TC,/TP (zadání typu zdrojového souboru)](../../build/reference/tc-tp-tc-tp-specify-source-file-type.md) .
 
-Další informace najdete v tématu [/CLR (kompilace Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md).
+Další informace naleznete v tématu [/CLR (Common Language Runtime Compilation)](../../build/reference/clr-common-language-runtime-compilation.md).
 
-D8045 může také dojít, pokud kompilujete aplikace ATL s použitím Visual C++. Zobrazit [jak: Přechod na/CLR](../../dotnet/how-to-migrate-to-clr.md) Další informace.
+K D8045 může dojít také v případě, že zkompilujete aplikaci C++ATL pomocí vizuálu. Další informace naleznete v tématu [How to: migruje a/CLR](../../dotnet/how-to-migrate-to-clr.md) .

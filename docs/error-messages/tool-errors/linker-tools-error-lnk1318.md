@@ -5,31 +5,31 @@ f1_keywords:
 - LNK1318
 helpviewer_keywords:
 - LNK1318
-ms.openlocfilehash: 8ed6489a27d4c0e117f7f18281ff188f40936e0a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a61c11a9cbb25fea6fddc0bf1c5c4c2a7af1cf4f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160988"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80183576"
 ---
 # <a name="linker-tools-error-lnk1318"></a>Chyba linkerů LNK1318
 
-> Neočekávaná chyba souboru .pdb; *způsobit* "*podrobnosti*.
+> Neočekávaná chyba PDB; *Příčina* *Podrobnosti*
 
-Linker došlo k neočekávané chybě při otevírání, čtení nebo zápis do souboru PDB.
+V linkeru došlo k neočekávané chybě při otevírání, čtení nebo zápisu do souboru PDB.
 
-Pro běžné problémy v souborech PDB je vytvořen tato chybová zpráva. *Způsobit* a *podrobnosti* představují k dispozici informace o linkeru, kdy došlo k chybě. To nemusí být velmi užitečné, jako běžných chyb při práci se soubory PDB mít samostatné, další chybové zprávy.
+Tato chybová zpráva se vytvoří pro Neběžné problémy v souborech PDB. *Příčina* a *Podrobnosti* reprezentují informace, které jsou k dispozici linkeru v okamžiku, kdy došlo k chybě. To nemusí být velmi užitečné, protože běžné chyby při práci se soubory PDB mají samostatné, více informativní chybové zprávy.
 
-Vzhledem k tomu, že zdroj chyby neobvyklé, je dostupná jenom obecné Rady k řešení tohoto problému:
+Vzhledem k tomu, že zdroj chyby je neobvyklý, je pro vyřešení tohoto problému k dispozici pouze obecná Rada:
 
-- Operace vyčištění v adresáře sestavení a poté proveďte úplné sestavení vašeho řešení.
+- Proveďte čistou operaci v adresářích sestavení a pak proveďte úplné sestavení vašeho řešení.
 
-- Restartování počítače, nebo zkontrolujte mspdbsrv.exe zapomenutý nebo ukončování "zamrzlých" procesů a ukončit v úloh.
+- Restartujte počítač, nebo se podívejte na osamocené nebo nereagující procesy Mspdbsrv. exe a ukončete je v TaskManager.
 
-- Vypněte antivirové kontroly v adresářích projektu.
+- Vypněte kontroly antivirové ochrany v adresářích projektu.
 
-- Použití [/Zf](../../build/reference/zf.md) – možnost kompilátoru při použití [/MP](../../build/reference/mp-build-with-multiple-processes.md) s MSBuild nebo jiné paralelní procesu sestavení.
+- Použijte možnost kompilátoru [/ZF](../../build/reference/zf.md) , pokud používáte [/MP](../../build/reference/mp-build-with-multiple-processes.md) s nástrojem MSBuild nebo jiným paralelním procesem sestavení.
 
-- Vyzkoušejte vytváření s použitím 64bitovou hostovanou sadu nástrojů.
+- Zkuste sestavovat pomocí sady nástrojů hostovaného pro 64.
 
-- Serializace za účelem zmírnění problémů paralelní odkaz v případě potřeby propojení. Tato chyba může nastat, pokud mspdbsrv.exe spustí jednu instanci propojení a je vypnutý předtím, než jiná instance propojení se provádí jeho použití. Nevýhodou této opravy je, že vaše sestavení projektu může trvat výrazně déle.
+- V případě potřeby můžete vyserializovat propojení a zmírnit problémy s paralelním propojením. Tato chyba může být způsobena tím, že Mspdbsrv. exe je spuštěn jednou instancí propojení a je vypnut před tím, než ji bude provedeno pomocí jiné instance propojení. Nevýhodou k této opravě je, že sestavení projektu může trvat mnohem déle.

@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4099
 ms.assetid: 358170a4-07cd-43fe-918f-82c32757ffc5
-ms.openlocfilehash: dcf4d44c3a0b5b10035af763040c2912afc8c6f7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b1f330924b8e47e0649268142106a050c83cb20a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62310887"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80183316"
 ---
 # <a name="linker-tools-warning-lnk4099"></a>Upozornění linkerů LNK4099
 
-Soubor PDB 'filename' nebyl nalezen 'objektu/knihovny' nebo 'path'; objekt se propojí, jako by nebyly dostupné žádné ladicí informace
+Soubor PDB s názvem "Object/Library" nebo "path" nebyl nalezen. propojování objektu, jako by nebyly žádné ladicí informace
 
-Propojovací program nemohl najít soubor .pdb. Zkopírujte do adresáře, který obsahuje `object/library`.
+Linker nemohl najít soubor. pdb. Zkopírujte ho do adresáře, který obsahuje `object/library`.
 
-Chcete-li najít název souboru PDB přidružené k souboru objektu:
+Chcete-li najít název souboru PDB přidruženého k souboru objektu:
 
-1. Extrahujte soubor objektu v knihovně s [lib](../../build/reference/lib-reference.md) **/extrahovat:**`objectname`**.obj** `xyz` **lib**.
+1. Extrahujte soubor objektu z knihovny pomocí [lib](../../build/reference/lib-reference.md) **/Extract:** `objectname` **. obj** `xyz` **. lib**.
 
-1. Zkontrolujte cestu k souboru .pdb s **dumpbin /section:.debug$ T /rawdata** `objectname` **.obj**.
+1. Ověřte cestu k souboru. pdb pomocí **dumpbin/section:. debug $ T/rawdata** `objectname` **. obj**.
 
-Může také kompilovat s [/Z7](../../build/reference/z7-zi-zi-debug-information-format.md), takže se soubor pdb není nutné použít nebo odebrat [/DEBUG](../../build/reference/debug-generate-debug-info.md) – možnost linkeru Pokud nemají soubory .pdb pro objekty, které se připojujete.
+Můžete také kompilovat pomocí [/Z7](../../build/reference/z7-zi-zi-debug-information-format.md), takže soubor PDB není nutné použít, nebo pokud nemáte soubory. PDB pro objekty, které propojujete, odebrat možnost linkeru [/Debug](../../build/reference/debug-generate-debug-info.md) .

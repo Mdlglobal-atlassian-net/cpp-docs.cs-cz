@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 f1_keywords:
 - typedef_cpp
 ms.assetid: af1c24d2-4bfd-408a-acfc-482e264232f5
-ms.openlocfilehash: 155f1868123514dfec89ab448ef22f2da225c4d3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7a45c4570341aca056b9d4c30ea496317a1ac96f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155287"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181561"
 ---
 # <a name="aliases-and-typedefs-c"></a>Aliasy a definice Typedef (C++)
 
-Můžete použít *deklarace aliasu* deklarovat název, který chcete použít jako synonymum pro dřív deklarovaného typu. (Tento mechanismus se také nazývá neformálně *alias typu*). Tento mechanismus lze také použít k vytvoření *šablonu aliasů*, což může být zvláště užitečná pro vlastních alokátorů.
+Můžete použít *deklaraci aliasu* k deklaraci názvu, který se má použít jako synonymum pro dřív deklarovaný typ. (Tento mechanismus je také označován jako neformálněný jako *alias typu*). Tento mechanismus můžete použít také k vytvoření *šablony aliasu*, která může být zvláště užitečná pro vlastní přidělování.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -23,15 +23,15 @@ using identifier = type;
 
 ## <a name="remarks"></a>Poznámky
 
-*identifier*<br/>
+*RID*<br/>
 Název aliasu.
 
 *type*<br/>
-Identifikátor typu, kterou vytváříte alias.
+Identifikátor typu, pro který vytváříte alias.
 
-Alias nezavádí nový typ a nelze změnit význam existujícím názvem typu.
+Alias nezavádí nový typ a nemůže měnit význam stávajícího názvu typu.
 
-Nejjednodušší forma alias je ekvivalentní **typedef** mechanismus z C ++ 03:
+Nejjednodušší forma aliasu je ekvivalentem mechanismu **typedef** z c++ 03:
 
 ```cpp
 // C++11
@@ -41,7 +41,7 @@ using counter = long;
 // typedef long counter;
 ```
 
-Obě tyto umožňují vytvářet proměnné typu informací, že čítač". Něco užitečnější by být alias typu, jako je ten pro `std::ios_base::fmtflags`:
+Obě tyto umožňují vytvoření proměnných typu "čítač". Něco užitečnější by představovalo alias typu, jako je tento alias pro `std::ios_base::fmtflags`:
 
 ```cpp
 // C++11
@@ -56,7 +56,7 @@ fmtfl fl_hex = (fl_orig & ~std::cout.basefield) | std::cout.showbase | std::cout
 std::cout.flags(fl_hex);
 ```
 
-Aliasy také fungovat ukazatelů na funkce, ale jsou mnohem čitelnější než ekvivalentní definice typu:
+Aliasy také fungují s ukazateli na funkce, ale jsou mnohem čitelnější než ekvivalentní definice typedef:
 
 ```cpp
 // C++11
@@ -70,7 +70,7 @@ void actual_function(int arg) { /* some code */ }
 func fptr = &actual_function;
 ```
 
-Omezení **typedef** mechanismu je, že nebude fungovat se šablonami. Syntaxe alias typu v C ++ 11, ale umožňuje vytvářet šablony aliasů:
+Omezením mechanismu **typedef** je, že nefunguje se šablonami. Syntaxe aliasu typu v jazyce C++ 11 však umožňuje vytvoření šablon aliasů:
 
 ```cpp
 template<typename T> using ptr = T*;
@@ -81,7 +81,7 @@ ptr<int> ptr_int;
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak pomocí vlastního alokátoru šabloně aliasů – v takovém případě celé vektorového typu. Můžete použít libovolný typ pro **int** vytvořit alias vhodné skrýt komplexního parametru jsou uvedeny v hlavním funkční kódu. Pomocí vlastního alokátoru v rámci kódu můžete zlepšit čitelnost a snížit riziko zavlečení chyby způsobené překlepy.
+Následující příklad ukazuje, jak použít šablonu aliasu s vlastním přidělováním – v tomto případě typ vektoru Integer. Můžete nahradit libovolný typ pro **int** a vytvořit pohodlný alias pro skrytí seznamů složitých parametrů v hlavním funkčním kódu. Pomocí vlastního přidělování v celém kódu můžete zlepšit čitelnost a snížit riziko zavedení chyb způsobených překlepy.
 
 ```cpp
 #include <stdlib.h>
@@ -141,13 +141,13 @@ int main ()
 
 ## <a name="typedefs"></a>Typedefs
 
-A **typedef** deklarace zavádí název, který v rámci své působnosti stane synonymem pro typ daný *deklarace typu* částí deklarace.
+Deklarace **typedef** zavádí název, který v rámci svého oboru se změní na synonymum pro typ předaný částí deklarace *typu* .
 
 Deklarace typedef je možné použít k vytvoření kratších nebo výstižnějších názvů pro typy, které jsou již definovány jazykem, nebo vlastní deklarované typy. Názvy typedef umožňují zapouzdřit podrobnosti implementace, které se mohou změnit.
 
-Rozdíl od **třídy**, **struktury**, **sjednocení**, a **výčtu** deklarace, **typedef** deklarace nezavádí nové typy – ale zavádí nové názvy pro existující typy.
+Na rozdíl od deklarací **třídy**, **struktury**, **sjednocení**a **výčtu** nezavádí deklarace **typedef** nové typy – zavádí nové názvy pro existující typy.
 
-Názvy deklarované pomocí **typedef** zabírat stejný obor názvů jako jiné identifikátory (kromě popisků příkazů). Proto nemohou používat identifikátor shodný s dříve deklarovaným názvem, vyjma deklarací typů tříd. Vezměte v úvahu v následujícím příkladu:
+Názvy deklarované pomocí **typedef** zabírají stejný obor názvů jako jiné identifikátory (kromě popisků příkazů). Proto nemohou používat identifikátor shodný s dříve deklarovaným názvem, vyjma deklarací typů tříd. Vezměte v úvahu v následujícím příkladu:
 
 ```cpp
 // typedef_names1.cpp
@@ -156,7 +156,7 @@ typedef unsigned long UL;   // Declare a typedef name, UL.
 int UL;                     // C2377: redefined.
 ```
 
-Pravidla skrývání názvů, které se vztahují na jiné identifikátory řídí i viditelnost názvů deklarovaných pomocí **typedef**. Následující příklad je proto v jazyce C++ platný:
+Pravidla skrývání názvů, která se vztahují k jiným identifikátorům, také řídí viditelnost názvů deklarovaných pomocí **typedef**. Následující příklad je proto v jazyce C++ platný:
 
 ```cpp
 // typedef_names2.cpp
@@ -212,7 +212,7 @@ Pomocí typedef je možné deklarovat jakýkoli typ, včetně ukazatele, funkce 
 
 ### <a name="examples"></a>Příklady
 
-Jedno použití **typedef** deklarace je, aby deklarace jednotnějších a kompaktnějších. Příklad:
+Jedním z použití deklarací **typedef** je vytvoření deklarací na základě jednotnosti a komprimace. Příklad:
 
 ```cpp
 typedef char CHAR;          // Character type.
@@ -222,7 +222,7 @@ typedef unsigned long ulong;
 ulong ul;     // Equivalent to "unsigned long ul;"
 ```
 
-Chcete-li použít **typedef** stanovit základních a odvozených typů ve stejné deklaraci je možné oddělit deklarátory čárkami. Příklad:
+Chcete-li použít **typedef** k určení základních a odvozených typů ve stejné deklaraci, můžete oddělit deklarátory čárkami. Příklad:
 
 ```cpp
 typedef char CHAR, *PSTR;
@@ -234,7 +234,7 @@ Následující příklad poskytuje typ `DRAWF` pro funkci nevracející žádnou
 typedef void DRAWF( int, int );
 ```
 
-Po výše uvedeném **typedef** prohlášení, deklarace
+Po výše uvedeném příkazu **typedef** deklarace
 
 ```cpp
 DRAWF box;
@@ -246,7 +246,7 @@ ekvivalentní deklaraci
 void box( int, int );
 ```
 
-**Definice TypeDef** je často v kombinaci s **struktura** pro deklarování a pojmenování uživatelských typů:
+**definice typedef** je často kombinována s **strukturou** pro deklaraci a pojmenování uživatelsky definovaných typů:
 
 ```cpp
 // typedef_specifier2.cpp
@@ -271,9 +271,9 @@ int main()
 10   0.990000
 ```
 
-### <a name="re-declaration-of-typedefs"></a>Opětovná deklarace TypeDef
+### <a name="re-declaration-of-typedefs"></a>Změna deklarace definice typedef
 
-**Typedef** ke změně deklarace stejného názvu k odkazování na stejný typ. je možné deklarace. Příklad:
+Deklaraci **typedef** lze použít k předeklarování stejného názvu pro odkazování na stejný typ. Příklad:
 
 ```cpp
 // FILE1.H
@@ -287,9 +287,9 @@ typedef char CHAR;
 #include "file2.h"   // OK
 ```
 
-Program *ProgID. CPP* obsahuje dva soubory hlaviček, z nichž oba obsahují **typedef** deklarace pro název `CHAR`. Pokud obě tyto deklarace odkazují na stejný typ, je taková změna deklarace přijatelná.
+*Programové programu CPP* obsahuje dva hlavičkové soubory, oba obsahují deklarace **typedef** pro název `CHAR`. Pokud obě tyto deklarace odkazují na stejný typ, je taková změna deklarace přijatelná.
 
-A **typedef** název, který se dřív deklaroval jako jiný typ nejde předefinovat. Proto pokud *FILE2. H* obsahuje
+**Definice typedef** nemůže předefinovat název, který byl dříve deklarován jako jiný typ. Proto, pokud *Soubor2. H* obsahuje
 
 ```cpp
 // FILE2.H
@@ -309,9 +309,9 @@ typedef union REGS      // OK: name REGS redeclared
 } REGS;
 ```
 
-### <a name="typedefs-in-c-vs-c"></a>v sadě Visual Studio C++ – definice TypeDef. C
+### <a name="typedefs-in-c-vs-c"></a>definice typedef v C++ vs. C
 
-Použití **typedef** specifikátor s typy tříd je široce podporováno kvůli ANSI C při deklarování nepojmenovaných struktur u **– typedef** deklarace. Mnoho programátorů v jazyce C používá například následující:
+Použití specifikátoru **typedef** s typy tříd je v podstatě podporováno z důvodu praxe ANSI C při deklaraci nepojmenovaných struktur v deklaracích **typedef** . Mnoho programátorů v jazyce C používá například následující:
 
 ```cpp
 // typedef_with_class_types1.cpp
@@ -335,7 +335,7 @@ místo:
 struct point_t ptOrigin;
 ```
 
-V jazyce C++ je rozdíl mezi **– typedef** názvy a reálnými typy (deklarované pomocí **třídy**, **struktury**, **sjednocení**a **výčtu** klíčových slov) zřetelný. I když deklaraci nepojmenované struktury v praxi C **typedef** příkazu stále funguje, žádné konvenční výhody jako v jazyce C.
+V C++nástroji je rozdíl mezi názvy **typedef** a typy reálných hodnot (deklarovaných pomocí klíčových slov **Class**, **struct**, **Union**a **Enum** ) více jedinečný. I když postupy jazyka C při deklaraci struktury Nameless v příkazu **typedef** stále fungují, neposkytuje žádné nevýhodné výhody jako v jazyce C.
 
 ```cpp
 // typedef_with_class_types2.cpp
@@ -347,9 +347,9 @@ typedef struct {
 } POINT;
 ```
 
-Předchozí příklad deklaruje třídu s názvem `POINT` pomocí Nepojmenovaná třída **typedef** syntaxe. `POINT` je považován za název třídy; na názvy zavedené tímto způsobem se však vztahují následující omezení:
+Předchozí příklad deklaruje třídu s názvem `POINT` pomocí nepojmenované syntaxe **typedef** třídy. `POINT` se považuje za název třídy; následující omezení se ale vztahují na názvy zavedené tímto způsobem:
 
-- Název (synonymum) se nemůže objevit po **třídy**, **struktura**, nebo **sjednocení** předponu.
+- Název (synonymum) se nemůže vyskytovat za předponou **třídy**, **struktury**nebo **sjednocení** .
 
 - Název nelze použít jako název konstruktoru nebo destruktoru v deklaraci třídy.
 

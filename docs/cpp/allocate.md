@@ -7,18 +7,18 @@ helpviewer_keywords:
 - __declspec keyword [C++], allocate
 - allocate __declspec keyword
 ms.assetid: 67828b31-de60-4c0e-b0a6-ef3aab22641d
-ms.openlocfilehash: a2284395b09c34b0d22c4499bf804cfcc3a74c4d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6d9429aa7c079f0f99a936019e5945092dc1f006
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155274"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181522"
 ---
 # <a name="allocate"></a>allocate
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
-**Přidělit** Specifikátor deklarace pojmenuje datový segment, ve kterém bude datová položka přidělena.
+Specifikátor deklarace **allocate** pojmenovává datový segment, ve kterém bude datová položka přidělena.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -28,7 +28,7 @@ ms.locfileid: "62155274"
 
 ## <a name="remarks"></a>Poznámky
 
-Název *segname* musí být deklarován pomocí jedné z následujících direktiv Pragma:
+Název *segname* musí být deklarován pomocí jedné z následujících direktiv pragma:
 
 - [code_seg](../preprocessor/code-seg.md)
 
@@ -51,9 +51,9 @@ int main() {
 }
 ```
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [__declspec](../cpp/declspec.md)<br/>
 [Klíčová slova](../cpp/keywords-cpp.md)

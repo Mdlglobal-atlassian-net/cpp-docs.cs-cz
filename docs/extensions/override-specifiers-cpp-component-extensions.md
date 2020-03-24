@@ -1,21 +1,21 @@
 ---
-title: Override – specifikátory (C++vyhodnocovací a C++/CX)
+title: Override – specifikátoryC++(/CLI C++a/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
 - override specifiers, C++
 - override specifiers
 ms.assetid: 155bbf6f-4722-4654-afb1-9cb52af799fb
-ms.openlocfilehash: c1e8e7db2879b0226eaff562f5b5b826bce14caf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 410fe9ecc48b92c68132f7b1b8057c2549c8afcf
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62254449"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181899"
 ---
-# <a name="override-specifiers--ccli-and-ccx"></a>Override – specifikátory (C++vyhodnocovací a C++/CX)
+# <a name="override-specifiers--ccli-and-ccx"></a>Override – specifikátoryC++(/CLI C++a/CX)
 
-*Override – specifikátory* upravit jak se děděné typy a členy děděných typů chovají v odvozených typech.
+*Specifikátory přepisu* mění způsob, jakým se chovají zděděné typy a členy zděděných typů v odvozených typech.
 
 ## <a name="all-runtimes"></a>Všechny moduly runtime
 
@@ -33,26 +33,26 @@ Další informace o specifikátorech přepisu naleznete v tématu:
 
 - [Specifikátory přepisu a nativní kompilace](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md)
 
-**abstraktní** a **zapečetěné** platí také u deklarací typů, kde nefungují jako specifikátory přepisu.
+**abstraktní** a **zapečetěná** jsou také platná v deklaracích typu, kde nefungují jako specifikátory přepsání.
 
-Informace o explicitním přepsání funkcí základní třídy naleznete v tématu [explicitní přepsání](explicit-overrides-cpp-component-extensions.md).
+Informace o explicitním přepsání funkcí základní třídy naleznete v tématu [Explicit Overrides](explicit-overrides-cpp-component-extensions.md).
 
 ## <a name="windows-runtime"></a>prostředí Windows Runtime
 
-(Neexistují žádné poznámky o této funkci jazyka, které se vztahují jenom Windows Runtime.)
+(Pro tuto funkci jazyka neexistují žádné poznámky, které platí jenom pro prostředí Windows Runtime.)
 
 ### <a name="requirements"></a>Požadavky
 
-– Možnost kompilátoru: `/ZW`
+Možnost kompilátoru: `/ZW`
 
 ## <a name="common-language-runtime"></a>CLR (Common Language Runtime)
 
-(Neexistují žádné poznámky o této funkci jazyka, které se vztahují pouze modul common language runtime.)
+(Neexistují žádné poznámky k této funkci jazyka, které platí pouze pro modul CLR (Common Language Runtime).)
 
 ### <a name="requirements"></a>Požadavky
 
-– Možnost kompilátoru: `/clr`
+Možnost kompilátoru: `/clr`
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Přípony komponent pro .NET a UPW](component-extensions-for-runtime-platforms.md)

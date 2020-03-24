@@ -1,5 +1,5 @@
 ---
-title: Kontextově závislá klíčová slova (C++vyhodnocovací a C++/CX)
+title: Kontextově závislá klíčováC++slova ( C++/CLI a/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 f1_keywords:
@@ -7,22 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - context-sensitive keywords
 ms.assetid: e33da089-f434-44e9-8cce-4668d05a8939
-ms.openlocfilehash: ca289a7ebd4578d5c67bb5d3e403d2a9a2756520
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 53fcaf13eb56ae14841861bffd1a29376304b8d6
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62345832"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80182172"
 ---
-# <a name="context-sensitive-keywords--ccli-and-ccx"></a>Kontextově závislá klíčová slova (C++vyhodnocovací a C++/CX)
+# <a name="context-sensitive-keywords--ccli-and-ccx"></a>Kontextově závislá klíčováC++slova ( C++/CLI a/CX)
 
-*Kontextově závislá klíčová slova* jsou prvky jazyka, které jsou rozpoznány pouze v určitém kontextu. Mimo určitý kontext může být kontextové klíčové slovo symbolem definovaným uživatelem.
+*Kontextově závislá klíčová slova* jsou prvky jazyka, které jsou rozpoznány pouze v konkrétních kontextech. Mimo konkrétní kontext může být kontextové klíčové slovo uživatelsky definovaný symbol.
 
 ## <a name="all-runtimes"></a>Všechny moduly runtime
 
 ### <a name="remarks"></a>Poznámky
 
-Následuje seznam kontextových klíčových slov:
+Následuje seznam klíčových slov, která jsou závislá na kontextu:
 
 - [abstract](abstract-cpp-component-extensions.md)
 
@@ -46,33 +46,33 @@ Následuje seznam kontextových klíčových slov:
 
 - [sealed](sealed-cpp-component-extensions.md)
 
-- `where` (součást [obecných typů](generics-cpp-component-extensions.md))
+- `where` (část [obecných typů](generics-cpp-component-extensions.md))
 
-Pro účely čitelnosti můžete omezit použití kontextových klíčových slov jako uživatelem definované symboly.
+Pro účely čitelnosti můžete chtít omezit použití klíčových slov, která jsou závislá na kontextu, jako uživatelsky definované symboly.
 
 ## <a name="windows-runtime"></a>prostředí Windows Runtime
 
 ### <a name="remarks"></a>Poznámky
 
-(Neexistují žádné poznámky specifické pro platformu pro tuto funkci.)
+(Pro tuto funkci nejsou k dispozici žádné poznámky specifické pro platformu.)
 
 ### <a name="requirements"></a>Požadavky
 
-– Možnost kompilátoru: `/ZW`
+Možnost kompilátoru: `/ZW`
 
 ## <a name="common-language-runtime"></a>CLR (Common Language Runtime)
 
 ### <a name="remarks"></a>Poznámky
 
-(Neexistují žádné poznámky specifické pro platformu pro tuto funkci.)
+(Pro tuto funkci nejsou k dispozici žádné poznámky specifické pro platformu.)
 
 ### <a name="requirements"></a>Požadavky
 
-– Možnost kompilátoru: `/clr`
+Možnost kompilátoru: `/clr`
 
 ### <a name="examples"></a>Příklady
 
-Následující příklad kódu ukazuje, že ve vhodném kontextu **vlastnost** kontextové klíčové slovo je možné definovat vlastnost a proměnnou.
+Následující příklad kódu ukazuje, že v příslušném kontextu lze pomocí klíčového slova s kontextovou **vlastností** definovat vlastnost a proměnnou.
 
 ```cpp
 // context_sensitive_keywords.cpp
@@ -99,6 +99,6 @@ int main() {
 100
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Přípony komponent pro .NET a UPW](component-extensions-for-runtime-platforms.md)

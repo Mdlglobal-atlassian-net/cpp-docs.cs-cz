@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - RC4005
 ms.assetid: 71f03b4a-c9a9-415d-920f-bf2e58507f93
-ms.openlocfilehash: 571c4ac285e9477b017dbc21cf9ff733539759d2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c428fefa90cceed6a8bc9b7f6e4b95ec2db5e039
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62346181"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80182406"
 ---
 # <a name="resource-compiler-warning-rc4005"></a>Upozornění kompilátoru prostředků RC4005
 
-'identifier': předefinování makra
+' identifier ': předefinování makra
 
-Identifikátor je definována dvakrát. Kompilátor používá druhou definici makra.
+Identifikátor je definován dvakrát. Kompilátor použil druhou definici makra.
 
-Toto upozornění může být způsobeno definování makra na příkazovém řádku a v kódu adresou `#define` směrnice. Je také může být způsobeno makra naimportované z vložených souborů.
+Toto upozornění může být způsobeno definováním makra na příkazovém řádku a v kódu s direktivou `#define`. Může to být také způsobeno makry importovanými ze souborů include.
 
-Chcete-li upozornění odstranit, buď odeberte jednu z definic nebo použijte `#undef` direktiv před druhá definice.
+Chcete-li odstranit upozornění, buď odstraňte jednu z definic nebo použijte `#undef` direktivu před druhou definicí.

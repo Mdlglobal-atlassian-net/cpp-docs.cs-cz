@@ -12,12 +12,12 @@ helpviewer_keywords:
 - arithmetic operators [C++], additive operators
 - '- operator [C++], additive operators in C++'
 ms.assetid: d4afafe7-e201-4c69-a649-37f17756e784
-ms.openlocfilehash: be9e1830ea44223aa46ad9a7f5c6cee6734fa9e6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 739132ce1889b7e73b7ae19f5072a1dfec9c066d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385047"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181665"
 ---
 # <a name="additive-operators--and--"></a>Operátory sčítání: + a -
 
@@ -32,39 +32,39 @@ expression - expression
 
 Mezi aditivní operátory patří:
 
-- Sčítání (**+**)
+- Sčítání ( **+** )
 
-- Odčítání (**-**)
+- Odčítání ( **-** )
 
 Tyto binární operátory mají asociativitu zleva doprava.
 
-Aditivní operátory přebírají operandy aritmetických typů nebo typů ukazatele. Výsledek součtu (**+**) operátor je součet operandů. Výsledek odčítání (**-**) – operátor je rozdíl mezi operandy. Jsou-li jeden nebo oba operandy ukazateli, musí být ukazateli na objekt, nikoli na funkce. Jsou-li oba operandy ukazateli, nedávají výsledky smysl, pokud nebudou oba operandy ukazateli na objekty stejného pole.
+Aditivní operátory přebírají operandy aritmetických typů nebo typů ukazatele. Výsledek operátoru sčítání ( **+** ) je součet operandů. Výsledek operátoru odčítání ( **-** ) je rozdíl mezi operandy. Jsou-li jeden nebo oba operandy ukazateli, musí být ukazateli na objekt, nikoli na funkce. Jsou-li oba operandy ukazateli, nedávají výsledky smysl, pokud nebudou oba operandy ukazateli na objekty stejného pole.
 
-Aditivní operátory přebírají operandy *aritmetické*, *integrální*, a *skalární* typy. Ty jsou definovány v následující tabulce.
+Přídavné operátory přebírají operandy *aritmetických*, *celočíselných*a *skalárních* typů. Ty jsou definovány v následující tabulce.
 
 ### <a name="types-used-with-additive-operators"></a>Typy použité spolu s aditivními operátory
 
-|Type|Význam|
+|Typ|Význam|
 |----------|-------------|
-|*Aritmetické operace*|Celočíselné typy a typy s plovoucí desetinnou čárkou se společně nazývají „aritmetické“ typy.|
-|*integral*|Typy char a int všech velikostí (long, short) a výčty jsou „celočíselné“ typy.|
-|*scalar*|Skalární operandy jsou operandy aritmetického typu nebo typu ukazatele.|
+|*průměr*|Celočíselné typy a typy s plovoucí desetinnou čárkou se společně nazývají „aritmetické“ typy.|
+|*integrální*|Typy char a int všech velikostí (long, short) a výčty jsou „celočíselné“ typy.|
+|*dělič*|Skalární operandy jsou operandy aritmetického typu nebo typu ukazatele.|
 
 Platnými kombinacemi pro tyto operátory jsou:
 
-*aritmetické* + *aritmetické*
+*aritmetický + * *aritmetické operace*
 
-*scalar* + *integral*
+*skalární* + *integrál*
 
-*integral* + *scalar*
+*celočíselný* + *skalární*
 
-*aritmetické* - *aritmetické*
+*aritmetický - * *aritmetické operace*
 
-*scalar* - *scalar*
+*skalární* - *skalární*
 
 Všimněte si, že sčítání a odčítání nejsou ekvivalentními operacemi.
 
-Pokud jsou oba operandy aritmetického typu, převody uvedené v [standardní převody](standard-conversions.md) jsou použity na operandy a výsledek je určen převedeným typem.
+Jsou-li oba operandy aritmetického typu, jsou převody pokryté [standardními převody](standard-conversions.md) aplikovány na operandy a výsledek je převedeného typu.
 
 ## <a name="example"></a>Příklad
 
@@ -109,11 +109,11 @@ Přestože je celočíselná hodnota 1 přičtena k ukazateli `pIntArray`, nezna
 
 ## <a name="pointer-subtraction"></a>Odečtení ukazatele
 
-Jsou-li oba operandy ukazateli, výsledek odčítání je rozdíl (v prvcích pole) mezi operandy. Výraz odčítání poskytuje podepsaných integrálních výsledek typu `ptrdiff_t` (definované ve standardním vloženém souboru \<stddef.h >).
+Jsou-li oba operandy ukazateli, výsledek odčítání je rozdíl (v prvcích pole) mezi operandy. Výraz odčítání vrací celočíselný výsledek typu `ptrdiff_t` (definovaný ve standardním souboru include \<STDDEF. h >).
 
-Jeden z operandů může být celočíselného typu, pokud jde o druhý operand. Výsledek odčítání je stejného typu jako původní ukazatel. Hodnota odčítání je ukazatel (*n* - *můžu*) tý prvek pole, ve kterém *n* elementu ukazuje původní ukazatel a *můžu* je celočíselná hodnota druhého operandu.
+Jeden z operandů může být celočíselného typu, pokud jde o druhý operand. Výsledek odčítání je stejného typu jako původní ukazatel. Hodnota odčítání je ukazatel na prvek pole (*n* - *i*), kde *n* je prvek, na který odkazuje původní ukazatel, a *i* je celočíselná hodnota druhého operandu.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Výrazy s binárními operátory](../cpp/expressions-with-binary-operators.md)<br/>
 [Integrované operátory C++, jejich priorita a asociativita](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>

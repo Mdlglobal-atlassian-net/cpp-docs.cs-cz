@@ -7,17 +7,17 @@ helpviewer_keywords:
 - CAN0072
 - CXX0072
 ms.assetid: fd04e197-cfa9-4097-a070-8fa2111e876d
-ms.openlocfilehash: b8896fa2ad9c3d7cae41c79f129c6b8b8aacf20c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fdd4307c4af9696050d2dcfce4c307d39f46edd0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62255653"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80184252"
 ---
 # <a name="expression-evaluator-error-cxx0072"></a>Chyba při vyhodnocování výrazu CXX0072
 
-Chyba: chybí informace o typu nebo neznámá
+Chyba: informace o typu chybí nebo nejsou známy.
 
-Soubor .pch není získat odkazovaný nebo kód obsahuje odkaz na typ, který je v modulu není zkompilována pomocí/zi.
+Soubor. pch se neodkazoval na, nebo má tento kód odkaz na typ, který je v modulu, který není kompilovaný s/ZI.
 
-Tato chyba se shoduje s CAN0067.
+Tato chyba je shodná s CAN0067.

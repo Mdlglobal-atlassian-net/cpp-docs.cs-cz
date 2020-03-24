@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1164
 ms.assetid: da89765c-affa-4f88-b170-6d6b19a577cf
-ms.openlocfilehash: 8685a9e0eb356719eaab129af9df9a1cc0ebb085
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5f32fbd455faff449f57cfb9bb38009b03005913
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62254950"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80184031"
 ---
 # <a name="linker-tools-error-lnk1164"></a>Chyba linkerů LNK1164
 
-část zarovnání oddílu (číslo) větší než hodnota/align.
+zarovnání oddílu oddílu (číslo) je větší než hodnota/ALIGN
 
-Velikost zarovnání pro danou část do souboru objektu nepřekročí hodnotu zadanou pomocí [/ALIGN](../../build/reference/align-section-alignment.md) možnost. **/ALIGN** hodnota musí být mocninou čísla 2 a musí být roven nebo překračují zarovnání oddílů v souboru objektu.
+Velikost zarovnání pro daný oddíl v souboru objektu překračuje hodnotu zadanou pomocí možnosti [/align](../../build/reference/align-section-alignment.md) . Hodnota **/align** musí být mocnina 2 a musí být rovna nebo větší než zarovnání oddílu zadané v souboru objektu.
 
-Buď zkompilujte znovu s menším zarovnání oddílů nebo zvýšení **/ALIGN** hodnotu.
+Buď znovu zkompilujte s menším zarovnáním oddílu, nebo zvyšte hodnotu **/align** .

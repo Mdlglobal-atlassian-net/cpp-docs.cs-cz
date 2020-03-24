@@ -1,21 +1,21 @@
 ---
-title: Obecní delegáti (C++vyhodnocovací)
+title: Obecní delegátiC++(/CLI)
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - generic delegates
 - delegates, generic [C++]
 ms.assetid: 09d430b2-1aef-4fbc-87f9-9d7b8185d798
-ms.openlocfilehash: 449659126f52997d548ebd7785a78c1200038ee6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4c579d0c0ab39a2ddcadfd116bdfed8ba9da2863
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62254927"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80182029"
 ---
-# <a name="generic-delegates-ccli"></a>Obecní delegáti (C++vyhodnocovací)
+# <a name="generic-delegates-ccli"></a>Obecní delegátiC++(/CLI)
 
-Můžete použít parametry obecného typu pomocí delegátů. Další informace o delegátech naleznete v tématu [delegáta (C++vyhodnocovací a C++/CX)](delegate-cpp-component-extensions.md).
+Parametry obecného typu můžete použít s delegáty. Další informace o delegátech naleznete v tématu [DelegateC++(/CLI C++a/CX)](delegate-cpp-component-extensions.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -29,30 +29,30 @@ generic < [class | typename] type-parameter-identifiers>
 
 ### <a name="parameters"></a>Parametry
 
-*Atributy*<br/>
-(Volitelné) Další informace o deklarativní. Další informace o atributu třídy a atributy naleznete v tématu atributy.
+*atribut*<br/>
+Volitelné Další deklarativní informace. Další informace o atributech a třídách atributů naleznete v tématu Attributes.
 
-*Typ – parametr-identifikátory*<br/>
-Čárkou oddělený seznam identifikátorů pro parametry typu.
+*typ – identifikátory parametrů:*<br/>
+Čárkami oddělený seznam identifikátorů pro parametry typu.
 
-*type-parameter-constraints-clauses*<br/>
-Má podobu podle [omezení parametrů obecných typů (C++vyhodnocovací)](constraints-on-generic-type-parameters-cpp-cli.md)
+*Type-Parameter-Constraints – klauzule*<br/>
+Převezme formulář zadaný v [omezeních parametrů obecného typu (C++/CLI)](constraints-on-generic-type-parameters-cpp-cli.md) .
 
-*accessibility-modifiers*<br/>
-(Volitelné) Modifikátory (třeba **veřejné**, **privátní**).
+*usnadnění – modifikátory*<br/>
+Volitelné Modifikátory dostupnosti (například **Public**, **Private**).
 
 *Typ výsledku*<br/>
 Návratový typ delegáta.
 
-*identifier*<br/>
+*RID*<br/>
 Název delegáta.
 
 *formální parametry*<br/>
-(Volitelné) Seznam parametrů delegáta.
+Volitelné Seznam parametrů delegáta.
 
 ## <a name="example"></a>Příklad
 
-V okamžiku, kdy je vytvořen objekt delegáta jsou zadány parametry typu delegát. Delegáta a přidružená metoda musí mít stejný podpis. Následuje příklad deklarace obecného delegáta.
+Parametry typu delegáta jsou zadány v místě, kde je vytvořen objekt delegát. Delegát i metoda, ke kterým je přidružená, musí mít stejnou signaturu. Následuje příklad deklarace obecného delegáta.
 
 ```cpp
 // generics_generic_delegate1.cpp
@@ -65,11 +65,11 @@ delegate ItemType GenDelegate(ItemType p1, ItemType% p2);
 
 Následující příklad ukazuje, že
 
-- Stejný objekt delegáta nelze použít s různými typy vytvořený. Vytvořte různé delegáta pro různé typy objektů.
+- Nemůžete použít stejný objekt delegáta s různými konstruovanými typy. Vytvoření různých objektů delegátů pro různé typy.
 
-- Obecný delegát může být spojeny s obecnou metodou.
+- Obecný delegát může být přidružen k obecné metodě.
 
-- Při volání obecné metody bez zadání argumentů, kompilátor se pokusí odvodit argumenty typu pro volání.
+- Když je obecná metoda volána bez určení argumentů typu, kompilátor se pokusí odvodit argumenty typu pro volání.
 
 ```cpp
 // generics_generic_delegate2.cpp
@@ -107,7 +107,7 @@ int main() {
 
 ## <a name="example"></a>Příklad
 
-Následující příklad deklaruje obecného delegátu `GenDelegate<ItemType>`a poté vytvoří instanci tím, že přidružíte k metodě `MyMethod` , která používá parametr typu `ItemType`. Dvě instance delegáta (celé číslo a typ double) jsou vytvořena a vyvolána.
+Následující příklad deklaruje generický delegáta `GenDelegate<ItemType>`a poté vytvoří instanci tak, že ji přidruží k metodě `MyMethod`, která používá parametr typu `ItemType`. Vytvoří a vyvolají se dvě instance delegáta (celočíselná a Dvojitá).
 
 ```cpp
 // generics_generic_delegate.cpp
@@ -162,6 +162,6 @@ Invoking the integer delegate: i = 123, j = 123
 Invoking the double delegate: m = 0.123, n = 0.123
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Obecné typy](generics-cpp-component-extensions.md)

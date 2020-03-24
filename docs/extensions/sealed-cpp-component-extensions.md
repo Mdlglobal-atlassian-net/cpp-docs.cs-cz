@@ -1,5 +1,5 @@
 ---
-title: sealed (C++vyhodnocovací a C++/CX)
+title: sealed (C++/CLI a C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 f1_keywords:
@@ -8,19 +8,19 @@ f1_keywords:
 helpviewer_keywords:
 - sealed keyword [C++]
 ms.assetid: 3d0d688a-41aa-45f5-a25a-65c44206521e
-ms.openlocfilehash: 493f6597d146480714848b37154cc8bacd37113a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ab5d5b32ceb87a3b1ccf08d170889dd4825f6c17
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62265403"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181795"
 ---
-# <a name="sealed--ccli-and-ccx"></a>sealed (C++vyhodnocovací a C++/CX)
+# <a name="sealed--ccli-and-ccx"></a>sealed (C++/CLI a C++/CX)
 
-**zapečetěné** jako kontextové klíčové slovo pro referenční třídy, která označuje, že virtuální člen nelze přepsat, nebo typ nelze použít jako základní typ.
+**sealed** je kontextové klíčové slovo pro referenční třídy, které označuje, že virtuální člen nelze přepsat nebo že typ nelze použít jako základní typ.
 
 > [!NOTE]
-> C ++ 11 jazyka podle standardu ISO zavedené [konečné](../cpp/final-specifier.md) – klíčové slovo. Použití **konečné** na standardní třídy a **zapečetěné** na referenční třídy.
+> Standardní jazyk ISO C++ 11 zavedl klíčové slovo [Final](../cpp/final-specifier.md) . Použijte **finální** na standardních třídách a **zapečetěné** v referenčních třídách.
 
 ## <a name="all-runtimes"></a>Všechny moduly runtime
 
@@ -33,41 +33,41 @@ virtual return-type identifier() sealed {...};
 
 ### <a name="parameters"></a>Parametry
 
-*identifier*<br/>
-Název třídy nebo funkce.
+*RID*<br/>
+Název funkce nebo třídy.
 
-*Návratový typ*<br/>
-Typ, který je vrácen funkce.
+*návratový typ*<br/>
+Typ, který je vrácen funkcí Function.
 
 ## <a name="remarks"></a>Poznámky
 
-V prvním příkladu syntaxe je zapečetěná třída. V druhém příkladu je zapečetěná virtuální funkce.
+V první ukázce syntaxe je třída zapečetěná. Ve druhém příkladu je virtuální funkce zapečetěná.
 
-Použití **zapečetěné** – klíčové slovo pro referenční třídy a jejich virtuální členské funkce. Další informace najdete v tématu [specifikátory přepisu a nativní kompilace](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md).
+Použijte klíčové slovo **sealed** pro třídy ref a jejich funkce virtuálních členů. Další informace naleznete v tématu [specifikátory přepisu a nativní kompilace](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md).
 
-V době kompilace může zjistit, zda typ je zapečetěný pomocí `__is_sealed(type)` typovou vlastnost. Další informace najdete v tématu [podpora kompilátoru pro typové vlastnosti](compiler-support-for-type-traits-cpp-component-extensions.md).
+Můžete detekovat v době kompilace, zda je typ zapečetěný pomocí vlastnosti typu `__is_sealed(type)`. Další informace naleznete v tématu [Podpora kompilátoru pro typové vlastnosti](compiler-support-for-type-traits-cpp-component-extensions.md).
 
-**zapečetěné** je kontextové klíčové slovo.  Další informace najdete v tématu [Context-Sensitive Keywords](context-sensitive-keywords-cpp-component-extensions.md).
+**sealed** je kontextově závislé klíčové slovo.  Další informace najdete v tématu [Kontextově závislá klíčová slova](context-sensitive-keywords-cpp-component-extensions.md).
 
 ## <a name="windows-runtime"></a>prostředí Windows Runtime
 
-Zobrazit [referenční třídy a struktury](../cppcx/ref-classes-and-structs-c-cx.md).
+Viz [ref Classes a structs](../cppcx/ref-classes-and-structs-c-cx.md).
 
 ### <a name="requirements"></a>Požadavky
 
-– Možnost kompilátoru: `/ZW`
+Možnost kompilátoru: `/ZW`
 
 ## <a name="common-language-runtime"></a>CLR (Common Language Runtime)
 
-(Neexistují žádné poznámky o této funkci jazyka, které se vztahují pouze modul common language runtime.)
+(Neexistují žádné poznámky k této funkci jazyka, které platí pouze pro modul CLR (Common Language Runtime).)
 
 ### <a name="requirements"></a>Požadavky
 
-– Možnost kompilátoru: `/clr`
+Možnost kompilátoru: `/clr`
 
 ### <a name="examples"></a>Příklady
 
-Tento příklad kódu ukazuje účinek **zapečetěné** na člena virtuální.
+Následující příklad kódu ukazuje účinek **zapečetění** ve virtuálním členu.
 
 ```cpp
 // sealed_keyword.cpp
@@ -118,7 +118,7 @@ X::f override of I1::g
 Y::f override of I1::f
 ```
 
-Následující příklad kódu ukazuje, jak označit třídu jako zapečetěný.
+Následující příklad kódu ukazuje, jak označit třídu jako zapečetěnou.
 
 ```cpp
 // sealed_keyword_2.cpp
@@ -138,6 +138,6 @@ public:
 };
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Přípony komponent pro .NET a UPW](component-extensions-for-runtime-platforms.md)

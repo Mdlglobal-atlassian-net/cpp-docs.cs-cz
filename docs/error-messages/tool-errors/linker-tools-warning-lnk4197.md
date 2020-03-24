@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4197
 ms.assetid: 8a976fd7-a74b-4c83-ab66-a9e7d7073c4a
-ms.openlocfilehash: 0abad1b98ff4782f077312752603ec17fd611c12
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 92702864a00455e4b70f00dfc9988bfb754e2e64
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390357"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80183277"
 ---
 # <a name="linker-tools-warning-lnk4197"></a>Upozornění linkerů LNK4197
 
-> Export '*exportname*"zadaný víc než jednou; použije se první specifikace
+> Export příkazu '*Export*' byl zadán několikrát. použití první specifikace
 
-Export je zadán v několika a různými způsoby. Propojovací program použije první specifikace a zbytek ignoruje.
+Export je zadán více a různými způsoby. Linker používá první specifikaci a ignoruje zbytek.
 
-Pokud bude probíhat opětovné sestavení knihovny run-time jazyka C, můžete tuto zprávu ignorovat.
+Při opětovném sestavování knihovny run-time jazyka C můžete tuto zprávu ignorovat.
 
-Pokud export je zadán více než jednou přesně stejným způsobem, nevydá linker upozornění.
+Pokud je export zadán přesně stejným způsobem několikrát, linker nevydá upozornění.
 
-Například následující obsah souboru .def by způsobilo toto upozornění:
+Například následující obsah souboru. def by způsobil toto upozornění:
 
 ```
 EXPORTS
@@ -31,8 +31,8 @@ EXPORTS
    functioname      @10
 ```
 
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Chcete-li vyřešit tak, že zkontrolujete následující možné příčiny
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Opravu provedete kontrolou následujících možných příčin.
 
-1. Stejné export je zadána na příkazovém řádku (prostřednictvím exportu:) a v .def souboru.
+1. Stejný export se zadává na příkazovém řádku (prostřednictvím exportu:). a v souboru. def.
 
-2. Stejné export je uveden v souboru .def s rozdílnými atributy dvakrát.
+2. Stejný export je uveden dvakrát v souboru. def s různými atributy.

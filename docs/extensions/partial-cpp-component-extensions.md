@@ -1,5 +1,5 @@
 ---
-title: částečné (C++vyhodnocovací a C++/CX)
+title: částečný (C++/CLI a C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 f1_keywords:
@@ -8,24 +8,24 @@ helpviewer_keywords:
 - partial
 - C++/CX, partial
 ms.assetid: 43adf1f5-10c5-44aa-a66f-7507e2bdabf8
-ms.openlocfilehash: 37406060c3569c417c14bcc98561f8f52a7c6201
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: ad8faa08a2c85e777cbc8721e5842e708b9e6cb1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66450749"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181847"
 ---
-# <a name="partial--ccli-and-ccx"></a>částečné (C++vyhodnocovací a C++/CX)
+# <a name="partial--ccli-and-ccx"></a>částečný (C++/CLI a C++/CX)
 
-**Částečné** – klíčové slovo umožňuje různé části stejné třídy ref nebylo vytvořeno nezávisle a v různých souborech.
+Klíčové slovo **Partial** umožňuje vytvářet různé části stejné referenční třídy nezávisle na sobě a v různých souborech.
 
 ## <a name="all-runtimes"></a>Všechny moduly runtime
 
-(Tato funkce jazyka platí pouze pro prostředí Windows Runtime.)
+(Tato funkce jazyka se vztahuje pouze na prostředí Windows Runtime.)
 
 ## <a name="windows-runtime"></a>prostředí Windows Runtime
 
-Pro ref class, která má dvě Částečná definice **částečné** – klíčové slovo se použije pro první výskyt definici, a to se obvykle provádí automaticky generovaný kód tak, aby lidské kodér není velmi často používat klíčové slovo. Všechny následné Částečná definice třídy, vynechejte **částečné** modifikátor *klíč třídy* – klíčové slovo a třída identifikátor. Když kompilátor narazí, dříve definovanou ref class a identifikátor třídy, ale ne **částečné** – klíčové slovo, interně kombinuje všechny části definice třídy ref do jednu definici.
+Pro referenční třídu, která má dvě částečné definice, je klíčové slovo **Partial** použito pro první výskyt definice a to je obvykle prováděno automaticky generovaným kódem, aby lidský programátor nepoužíval klíčové slovo velmi často. Pro všechny následné částečné definice třídy vynechejte **částečný** modifikátor z klíčového slova *Class-Key* a identifikátor třídy. Když kompilátor narazí na dříve definovanou referenční třídu a identifikátor třídy, ale žádné **částečné** klíčové slovo, interně kombinuje všechny části definice referenční třídy do jedné definice.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -43,40 +43,40 @@ class-key identifier {
 
 ### <a name="parameters"></a>Parametry
 
-*class-key*<br/>
-Klíčové slovo, který deklaruje třídy nebo struktury, která je podporována modulem Windows Runtime. Buď **třídy ref class**, **hodnotu třídy**, **ref struct**, nebo **hodnotu struktury**.
+*klíč třídy*<br/>
+Klíčové slovo, které deklaruje třídu nebo strukturu, kterou prostředí Windows Runtime podporuje. Buď **ref class**, **Value Class**, **ref struct**nebo **value struct**.
 
-*identifier*<br/>
-Název definovaný typ.
+*RID*<br/>
+Název definovaného typu.
 
 ### <a name="remarks"></a>Poznámky
 
-Částečné třídy podporuje scénáře, kde můžete upravit jednu část definice třídy v jednom souboru a automatické generování kódu softwaru – například Návrhář XAML – upravuje kód ve stejné třídě v jiném souboru. S použitím částečnou třídu, můžete zabránit generátor kódu automatické přepsání kódu. V projektu sady Visual Studio **částečné** modifikátor se použijí automaticky generovaného souboru.
+Částečná třída podporuje scénáře, kdy upravíte jednu část definice třídy v jednom souboru a automatický software pro generování kódu – například Návrhář XAML – upraví kód ve stejné třídě v jiném souboru. Pomocí částečné třídy můžete zabránit automatickému generátoru kódu v přepsání kódu. V projektu sady Visual Studio je **částečný** modifikátor použit automaticky pro vygenerovaný soubor.
 
-Obsah: Se dvěma výjimkami, definicí částečné třídy může obsahovat cokoli, co by mohly obsahovat definici úplné třídy, pokud **částečné** – klíčové slovo byl vynechán. Však nelze zadat třídu přístupnosti (například `public partial class X { ... };`), nebo **declspec**.
+Obsah: se dvěma výjimkami může definice částečné třídy obsahovat cokoli, co definice celé třídy může obsahovat, pokud bylo vynecháno **částečné** klíčové slovo. Nemůžete však zadat přístupnost třídy (například `public partial class X { ... };`) nebo **declspec**.
 
-Přístup k specifikátorů použitých v definici částečné třídy pro *identifikátor* nemají vliv na výchozí dostupnost v definici třídy následné částečné nebo úplné *identifikátor*. Vložená definice členů statických dat jsou povoleny.
+Specifikátory přístupu použité v definici částečné třídy pro *identifikátor* nemají vliv na výchozí přístupnost v následné částečné nebo úplné definici třídy pro *identifikátor*. Vložené definice statických datových členů jsou povoleny.
 
-Deklarace: Částečnou definici třídy *identifikátor* pouze zavádí název *identifikátor*, ale *identifikátor* nelze použít tak, aby vyžaduje definici třídy. Název *identifikátor* nelze zjistit velikost *identifikátor*, nebo použít základní nebo členský z *identifikátor* až poté, co kompilátor narazí kompletní definici *identifikátor*.
+Deklarace: Částečná definice *identifikátoru* třídy zavádí jenom *identifikátor*názvu, ale *identifikátor* se nedá použít způsobem, který vyžaduje definici třídy. *Identifikátor* názvu se nedá použít k zjištění velikosti *identifikátoru*nebo k použití základního nebo členu *identifikátoru* , dokud kompilátor nenalezne úplnou definici *identifikátoru*.
 
-Počet a pořadí: Může být nula nebo více definicí částečné třídy pro *identifikátor*. Každá definice částečné třídy *identifikátor* musí předcházet lexikálně jeden kompletní definici *identifikátor* (Pokud je úplná definice; v opačném případě třídu nelze použít s výjimkou jako dopředně deklarované), ale nemusí předcházet dopředné deklarace *identifikátor*. Všechny klíče třídy se musí shodovat.
+Počet a řazení: pro *identifikátor*může být k dispozici nula nebo více definic dílčí třídy. Každá definice dílčí třídy *identifikátoru* musí být lexikální před jednou úplnou definicí *identifikátoru* (pokud existuje úplná definice), jinak třída nemůže být použita s výjimkou toho, pokud je deklarováno předem, ale nemusí předcházet deklaraci deklarací *identifikátoru*. Všechny klíče třídy se musí shodovat.
 
-Úplná definice: Přejme během úplné definice třídy *identifikátor*, chování je stejné jako definice *identifikátor* měl deklarovat základních tříd, členů, atd., v pořadí, ve kterém se nacházely došlo k a definované v částečné třídy.
+Úplná definice: v bodě úplné definice *identifikátoru*třídy je chování stejné, jako by definice *identifikátoru* měla deklarovat všechny základní třídy, členy atd. v pořadí, ve kterém byly nalezeny a definovány v dílčích třídách.
 
-Šablony: Částečná třída nemůže být šablona.
+Šablony: částečná třída nemůže být šablonou.
 
-Obecné typy: Částečné třídy může být obecný, pokud je úplná definice může být obecný. Ale každý úplné a částečné třídy musí mít přesně stejné obecné parametry, včetně názvy formálních parametrů.
+Obecné typy: částečná třída může být obecná, pokud by byla úplná definice Obecná. Každá částečná a plná třída ale musí mít přesně stejné obecné parametry, včetně formálních názvů parametrů.
 
-Další informace o tom, jak používat **částečné** – klíčové slovo, naleznete v tématu [částečné třídy (C++/CX)](https://go.microsoft.com/fwlink/p/?LinkId=249023).
+Další informace o použití klíčového slova **Partial** naleznete v tématu [Partial Classes (C++/CX)](https://go.microsoft.com/fwlink/p/?LinkId=249023).
 
 ### <a name="requirements"></a>Požadavky
 
-– Možnost kompilátoru: `/ZW`
+Možnost kompilátoru: `/ZW`
 
 ## <a name="common-language-runtime"></a>CLR (Common Language Runtime)
 
-(Této funkci jazyka neplatí pro modul Common Language Runtime.)
+(Tato funkce jazyka se nevztahuje na modul CLR (Common Language Runtime).)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Částečné třídy (C++/CX)](https://go.microsoft.com/fwlink/p/?LinkId=249023)

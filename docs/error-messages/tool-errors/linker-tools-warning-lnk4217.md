@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4217
 ms.assetid: 280dc03e-5933-4e8d-bb8c-891fbe788738
-ms.openlocfilehash: 1301dd53f71c616d7b7af346923a54c42903c9fd
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 1ce410312493b353bb68ea7264fce9cd6a394e0d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450864"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80183108"
 ---
 # <a name="linker-tools-warning-lnk4217"></a>Upozornění linkerů LNK4217
 
-> symbol '*symbol*' definovaný v '*filename_1. obj*' je importován pomocí '*filename_2. obj*' ve funkci '*Function*'.
+> symbol '*symbol*' definovaný v '*filename_1. obj*' je importován '*filename_2. obj*' ve funkci '*Function*'
 
-byl zadán [__declspec (dllimport)](../../cpp/dllexport-dllimport.md) pro symbol, i když je symbol definovaný v souboru objektu ve stejné imagi. Odeberte tento `__declspec(dllimport)` modifikátor pro vyřešení tohoto upozornění.
+[__declspec (dllimport)](../../cpp/dllexport-dllimport.md) byl zadán pro symbol, i když je symbol definován v souboru objektu ve stejné imagi. Odeberte modifikátor `__declspec(dllimport)` pro vyřešení tohoto upozornění.
 
 ## <a name="remarks"></a>Poznámky
 
@@ -39,7 +39,7 @@ int main()
 
 ```
 
-A potom
+a potom
 
 ```cpp
 // tt.cpp
@@ -62,8 +62,8 @@ lib.exe tt.obj /export:func /def
 link.exe main.obj tt.lib
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[LINKERŮ LNK4049 – upozornění nástrojů linkeru](linker-tools-warning-lnk4049.md) \
-[LNK4286 – upozornění nástrojů linkeru](linker-tools-warning-lnk4286.md) \
+[Linkerů lnk4049 \ upozornění na nástroje linkeru](linker-tools-warning-lnk4049.md)
+[LNK4286 \ upozornění na nástroje linkeru](linker-tools-warning-lnk4286.md)
 [dllexport, dllimport](../../cpp/dllexport-dllimport.md)

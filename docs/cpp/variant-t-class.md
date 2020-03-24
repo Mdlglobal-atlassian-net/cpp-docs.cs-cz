@@ -10,51 +10,51 @@ helpviewer_keywords:
 - VARIANT object
 - VARIANT object [C++], COM encapsulation
 ms.assetid: 6a3cbd4e-0ae8-425e-b4cf-ca0df894c93f
-ms.openlocfilehash: 69976cab9caed653a8278f80821569b613f690eb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e11d31904fd8e54049f69ee4f6530d511c8c7f4e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62165943"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80187749"
 ---
-# <a name="variantt-class"></a>_variant_t – třída
+# <a name="_variant_t-class"></a>_variant_t – třída
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
-A **_variant_t** zapouzdřuje objektu `VARIANT` datového typu. Třída spravuje a zrušení přidělení prostředků a volá funkci `VariantInit` a `VariantClear` podle potřeby.
+Objekt **_variant_t** zapouzdřuje datový typ `VARIANT`. Třída spravuje přidělování a navracení prostředků a poskytuje volání funkcí `VariantInit` a `VariantClear` podle potřeby.
 
-### <a name="construction"></a>Konstrukce
+### <a name="construction"></a>Stavbě
 
 |||
 |-|-|
-|[_variant_t](../cpp/variant-t-variant-t.md)|Vytvoří **_variant_t** objektu.|
+|[_variant_t](../cpp/variant-t-variant-t.md)|Vytvoří objekt **_variant_t** .|
 
 ### <a name="operations"></a>Operace
 
 |||
 |-|-|
-|[Attach](../cpp/variant-t-attach.md)|Připojí `VARIANT` objektu do **_variant_t** objektu.|
-|[Vymazat](../cpp/variant-t-clear.md)|Vymaže zapouzdřeného `VARIANT` objektu.|
-|[ChangeType](../cpp/variant-t-changetype.md)|Typ se změní **_variant_t** objekt označený `VARTYPE`.|
-|[Detach](../cpp/variant-t-detach.md)|Odpojí zapouzdřeného `VARIANT` objektu z tohoto **_variant_t** objektu.|
-|[SetString –](../cpp/variant-t-setstring.md)|Přiřadí řetězec tomuto **_variant_t** objektu.|
+|[Attach](../cpp/variant-t-attach.md)|Připojí objekt `VARIANT` k objektu **_variant_t** .|
+|[Jejich](../cpp/variant-t-clear.md)|Vymaže zapouzdřený `VARIANT` objekt.|
+|[ChangeType](../cpp/variant-t-changetype.md)|Změní typ objektu **_variant_t** na uvedený `VARTYPE`.|
+|[Detach](../cpp/variant-t-detach.md)|Odpojí zapouzdřený `VARIANT` objekt od tohoto objektu **_variant_t** .|
+|[SetString](../cpp/variant-t-setstring.md)|Přiřadí k tomuto objektu **_variant_t** řetězec.|
 
 ### <a name="operators"></a>Operátory
 
 |||
 |-|-|
-|[Operator =](../cpp/variant-t-operator-equal.md)|Přiřadí novou hodnotu do existujícího **_variant_t** objektu.|
-|[operátor ==,! =](../cpp/variant-t-relational-operators.md)|Porovnat dva **_variant_t** objekty a zjistí rovnost či nerovnost.|
-|[– Extraktory](../cpp/variant-t-extractors.md)|Extrahovat data z zapouzdřeného `VARIANT` objektu.|
+|[Operátor =](../cpp/variant-t-operator-equal.md)|Přiřadí novou hodnotu existujícímu objektu **_variant_t** .|
+|[operator = =,! =](../cpp/variant-t-relational-operators.md)|Porovná dva objekty **_variant_t** k rovnosti nebo nerovnosti.|
+|[Extraktory](../cpp/variant-t-extractors.md)|Extrahuje data ze zapouzdřeného objektu `VARIANT`.|
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
 ## <a name="requirements"></a>Požadavky
 
-**Header:** \<comutil.h>
+**Záhlaví:** \<comutil. h >
 
-**Lib:** comsuppw.lib nebo comsuppwd.lib (viz [/Zc: wchar_t (wchar_t je nativní typ)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) Další informace)
+**Lib:** comsuppw. lib nebo comsuppwd. lib (viz [/Zc: Wchar_t (Wchar_t je nativní typ)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) , kde najdete další informace.)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Třídy podpory kompilátoru COM](../cpp/compiler-com-support-classes.md)

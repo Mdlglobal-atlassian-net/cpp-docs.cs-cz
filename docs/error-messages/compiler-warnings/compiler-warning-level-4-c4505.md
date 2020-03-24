@@ -1,22 +1,22 @@
 ---
-title: Kompilátor upozornění (úroveň 4) C4505
+title: Upozornění kompilátoru (úroveň 4) C4505
 ms.date: 11/04/2016
 f1_keywords:
 - C4505
 helpviewer_keywords:
 - C4505
 ms.assetid: 068716a0-7dd2-40af-abf4-478f893b48c5
-ms.openlocfilehash: f9096ea8bc1e80e0e632f3e2e60a810ddb395240
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9f80b7c2a1fdafbe8333796e6f6befbfa4ed064a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62311017"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80185318"
 ---
-# <a name="compiler-warning-level-4-c4505"></a>Kompilátor upozornění (úroveň 4) C4505
+# <a name="compiler-warning-level-4-c4505"></a>Upozornění kompilátoru (úroveň 4) C4505
 
-'function': neodkazovaná lokální funkce se odebrala.
+' function ': došlo k odebrání neodkazované místní funkce
 
-Danou funkci je místní a není odkazovaný v těle modul; Proto je funkce mrtvý kód.
+Daná funkce je místní a neodkazuje se na tělo modulu; Proto je funkce mrtvý kód.
 
-Kompilátor negeneruje kód pro tuto funkci neaktivní.
+Kompilátor negeneroval kód pro tuto nedoručenou funkci.

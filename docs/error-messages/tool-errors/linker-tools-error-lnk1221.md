@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1221
 ms.assetid: 70654bf9-1520-4fa3-a063-1219dd88abf7
-ms.openlocfilehash: 99e2354a45b6f0d5cfcd1dece2b705ba1c88ca16
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4a8dc8122b9d97b108bdb14022477ab9df720113
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62242705"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80183940"
 ---
 # <a name="linker-tools-error-lnk1221"></a>Chyba linkerů LNK1221
 
-subsystém nelze odvodit a musí být definován
+podsystém nejde odvodit a musí být definovaný.
 
-Linker nemá dostatek informací k odvození který podsystém, který chcete cílit.
+Linker nemá dostatek informací k odvodit, který podsystém chcete cílit.
 
-Chcete-li tuto chybu vyřešit, použijte [/Subsystem](../../build/reference/subsystem-specify-subsystem.md).
+Chcete-li tuto chybu opravit, použijte [/Subsystem](../../build/reference/subsystem-specify-subsystem.md).

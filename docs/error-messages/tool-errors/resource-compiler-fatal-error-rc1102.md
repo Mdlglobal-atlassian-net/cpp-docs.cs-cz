@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - RC1102
 ms.assetid: bd2091f8-ef5e-4151-a8d6-98043e9422b6
-ms.openlocfilehash: 7e322b96d32e6d531de4081386702767d45f0837
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e614a7e85f508a452f42588fe40054dfcc8a7089
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62374298"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80182477"
 ---
 # <a name="resource-compiler-fatal-error-rc1102"></a>Závažná chyba kompilátoru prostředků RC1102
 
-Vnitřní chyba: příliš mnoho argumentů RCPP
+Vnitřní chyba: příliš mnoho argumentů pro RCPP
 
-Preprocesor kompilátor prostředků bylo předáno příliš mnoho argumentů. Snižte počet symbolů definovaných se definovat symboly (/ d) možnost tak, že definujete ve zdroji. Tato chyba může taky způsobovat zadání příliš mnoho obsahuje vyhledávací cesty k souborům pomocí možností zahrnout cestu vyhledávání (/ i).
+Preprocesoru kompilátoru prostředků bylo předáno příliš mnoho argumentů. Snižte počet symbolů definovaných pomocí možnosti definovat symboly (/d) jejich definováním ve zdroji. Tato chyba může být také způsobena tím, že zadáte příliš mnoho cest hledání souborů include pomocí možnosti cesty hledání include (/i).

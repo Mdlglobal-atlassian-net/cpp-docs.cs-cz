@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - ConvertBSTRToString function
 ms.assetid: ab6ce555-3d75-4e9c-9cb8-ada6d8ce43b1
-ms.openlocfilehash: df123dc218aa770a67536bf1bad7d8bafcf4c318
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1d0ad8727dd4d5ec06a45ec26c67dd3ad268f524
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392320"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80189518"
 ---
 # <a name="convertbstrtostring"></a>ConvertBSTRToString
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
-Převede `BSTR` hodnota, která se `char *`.
+Převede hodnotu `BSTR` na `char *`.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -28,11 +28,11 @@ char* __stdcall ConvertBSTRToString(BSTR pSrc);
 #### <a name="parameters"></a>Parametry
 
 *pSrc*<br/>
-Proměnná BSTR.
+Proměnná typu BSTR
 
 ## <a name="remarks"></a>Poznámky
 
-**Convertbstrtostring –** přiděluje řetězec je nutné odstranit.
+**ConvertBSTRToString** přiděluje řetězec, který je nutné odstranit.
 
 ## <a name="example"></a>Příklad
 
@@ -60,14 +60,14 @@ BSTR text: Test
 char * text: Test
 ```
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
 ## <a name="requirements"></a>Požadavky
 
-**Header:** \<comutil.h>
+**Záhlaví:** \<comutil. h >
 
-**Lib:** comsuppw.lib nebo comsuppwd.lib (viz [/Zc: wchar_t (wchar_t je nativní typ)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) Další informace)
+**Lib:** comsuppw. lib nebo comsuppwd. lib (viz [/Zc: Wchar_t (Wchar_t je nativní typ)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) , kde najdete další informace.)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Globální funkce kompilátoru COM](../cpp/compiler-com-global-functions.md)

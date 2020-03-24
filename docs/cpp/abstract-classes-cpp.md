@@ -7,20 +7,20 @@ helpviewer_keywords:
 - abstract classes [C++]
 - derived classes [C++], abstract classes [C++]
 ms.assetid: f0c5975b-39de-4d68-9640-6ce57f4632e6
-ms.openlocfilehash: a7b41a2cabc2cff2eca24cf50c6c30d5190d39a9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2ea9d3765f65434cb738c2b7c53f9499bba24545
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385086"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181691"
 ---
 # <a name="abstract-classes-c"></a>Abstraktní třídy (C++)
 
-Abstraktní třídy působí jako výrazy obecných konceptů, ze kterých mohou být odvozeny konkrétnější třídy. Nejde vytvořit objekt typu abstraktní třídy; Můžete však použít ukazatele a odkazy na abstraktní typy tříd.
+Abstraktní třídy fungují jako výrazy obecných konceptů, ze kterých lze odvodit více specifických tříd. Nemůžete vytvořit objekt typu abstraktní třídy; Můžete však použít ukazatele a odkazy na abstraktní typy tříd.
 
-Třída, která obsahuje alespoň jednu prázdnou virtuální funkci, je považován za abstraktní třídu. Třídy odvozené od abstraktní třídy musí implementovat čistě virtuální funkce nebo, příliš, jsou abstraktní třídy.
+Třída, která obsahuje alespoň jednu čistě virtuální funkci, je považována za abstraktní třídu. Třídy odvozené od abstraktní třídy musí implementovat čistě virtuální funkci, nebo jsou také abstraktní třídy.
 
-Zvažte příklad uvedený v [virtuální funkce](../cpp/virtual-functions.md). Záměrem třídy `Account` je poskytnout obecné funkce, ale objekty typu `Account` jsou příliš obecné, aby byla užitečná. Proto `Account` , je vhodným kandidátem pro abstraktní třídu:
+Vezměte v úvahu příklad prezentovaný ve [funkcích Virtual Functions](../cpp/virtual-functions.md). Záměrem třídy `Account` je poskytnout obecné funkce, ale objekty typu `Account` jsou příliš obecné, aby byly užitečné. Proto `Account` je dobrým kandidátem na abstraktní třídu:
 
 ```cpp
 // deriv_AbstractClasses.cpp
@@ -35,7 +35,7 @@ private:
 };
 ```
 
-Jediný rozdíl mezi předchozí a touto deklarací je, že `PrintBalance` je deklarován s čistým specifikátorem (`= 0`).
+Jediným rozdílem mezi touto deklarací a předchozí je, že `PrintBalance` je deklarován s čistým specifikátorem (`= 0`).
 
 ## <a name="restrictions-on-abstract-classes"></a>Omezení pro abstraktní třídy
 
@@ -53,7 +53,7 @@ Dalším omezením je skutečnost, že pokud konstruktor abstraktní třídy zav
 
 Čistě virtuální funkce mohou být definovány pro abstraktní třídy, ale mohou být volány pouze pomocí této syntaxe:
 
-*abstract-class-name*::*function-name*()
+*název abstraktní třídy*::*Function-Name*()
 
 Tato vlastnost je výhodná při návrhu hierarchií tříd, jejichž základní třídy zahrnují čistě virtuální destruktory, protože destruktory základních tříd jsou vždy volány během procesu ničení objektu. Vezměte v úvahu v následujícím příkladu:
 
@@ -86,6 +86,6 @@ Je-li objekt, na nějž ukazuje ukazatel `pDerived`, odstraněn, je zavolán des
 > [!NOTE]
 > V předchozím příkladu je čistě virtuální funkce `base::~base` zavolána implicitně z funkce `derived::~derived`. Čistě virtuální funkce lze zavolat i explicitně pomocí plně kvalifikovaného názvu členské funkce.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Dědičnost](../cpp/inheritance-cpp.md)

@@ -1,24 +1,24 @@
 ---
-title: Třída výčtu (C++vyhodnocovací a C++/CX)
+title: Enum – třídaC++(/CLI C++a/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 ms.assetid: 8010fa8c-bad6-45b4-8214-b4db64d7ffe1
-ms.openlocfilehash: da9097a02de08fd1615f5401d08c438c5f64c139
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6305d41febfe4d55b2b84062e76ff62c3ea2b18a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62380329"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80182133"
 ---
-# <a name="enum-class--ccli-and-ccx"></a>Třída výčtu (C++vyhodnocovací a C++/CX)
+# <a name="enum-class--ccli-and-ccx"></a>Enum – třídaC++(/CLI C++a/CX)
 
-Deklaruje výčet v oboru názvů, který je uživatelem definovaný typ tvořený sadou pojmenovaných konstant nazývaných enumerátory.
+Deklaruje výčet v oboru názvů, což je uživatelsky definovaný typ tvořený sadou pojmenovaných konstant nazývaných enumerátory.
 
 ## <a name="all-runtimes"></a>Všechny moduly runtime
 
 ### <a name="remarks"></a>Poznámky
 
-C++/CX a C++/podpora rozhraní příkazového řádku **veřejný výčet tříd** a **soukromý výčet tříd** které jsou podobně jako standardní C++ **výčet tříd** ale přidání specifikátor usnadnění přístupu. V části **/CLR**, C ++ 11 **výčet tříd** typ je povolené, ale bude generovat upozornění C4472, která je určena k zajištění, že Opravdu chcete typ výčtu ISO a ne C++/CX a C++vyhodnocovací typu. Další informace o standardu ISO C++ **výčtu** – klíčové slovo, naleznete v tématu [výčty](../cpp/enumerations-cpp.md).
+C++/CX a C++/CLI podporují **veřejnou třídu enum** a **soukromou třídu enum** , která je podobná C++ standardní **třídě výčtu** , ale s přičtením specifikátoru přístupnosti. V rámci **/CLR**je povolen typ **třídy výčtu** c++ 11, ale generuje upozornění C4472, které má být zajištěno, že skutečně POŽADUJEte typ výčtu ISO, a ne C++typ/CX C++a/CLI. Další informace o klíčovém slově C++ standard **Enum** ISO naleznete v tématu [výčty](../cpp/enumerations-cpp.md).
 
 ## <a name="windows-runtime"></a>prostředí Windows Runtime
 
@@ -34,40 +34,40 @@ accessenum structenumeration-identifier[:underlying-type] { enumerator-list } [v
 
 ### <a name="parameters"></a>Parametry
 
-*access*<br/>
-Usnadnění výčet, který může být **veřejné** nebo **privátní**.
+*stoupit*<br/>
+Přístupnost výčtu, který může být **veřejný** nebo **soukromý**.
 
-*Identifikátor výčtu*<br/>
+*identifikátor výčtu*<br/>
 Název výčtu.
 
-*underlying-type*<br/>
-(Volitelné) Základní typ výčtu.
+*základní typ*<br/>
+Volitelné Základní typ výčtu.
 
-(Volitelné. Pouze Windows Runtime) základní typ výčtu, který může být **bool**, **char**, `char16`, `int16`, `uint16`, **int**, `uint32`, `int64`, nebo `uint64`.
+Volitelné. Pouze prostředí Windows Runtime) nadřízený typ výčtu, což může být **bool**, **char**, `char16`, `int16`, `uint16`, **int**, `uint32`, `int64`nebo `uint64`.
 
-*enumerator-list*<br/>
-Čárkami oddělený seznam názvů enumerátor.
+*enumerátor – seznam*<br/>
+Seznam názvů enumerátorů oddělených čárkami.
 
-Hodnota každého výčtu je konstantní výraz, který je buď definován implicitně kompilátorem, nebo explicitně zápisu, *enumerátor*`=`*konstantní výraz*. Ve výchozím nastavení hodnota první čítače výčtu je nula, pokud je implicitně definovaný. Hodnotu každé následné implicitně definovaný enumerátor je hodnota z předchozího výčtu + 1.
+Hodnota každého enumerátoru je konstantní výraz, který je buď definován implicitně kompilátorem, nebo explicitně zápisem, *enumerátor*`=`*konstantní výraz*. Ve výchozím nastavení je hodnota prvního enumerátoru nula, pokud je implicitně definován. Hodnota každého následného implicitně definovaného enumerátoru je hodnota předchozího výčtu + 1.
 
 *var*<br/>
-(Volitelné) Název proměnné typu výčtu.
+Volitelné Název proměnné typu výčtu.
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace a příklady najdete v tématu [výčty](../cppcx/enums-c-cx.md).
+Další informace a příklady naleznete v tématu [výčty](../cppcx/enums-c-cx.md).
 
-Všimněte si, že kompilátor vydá chybové zprávy, pokud nemůže být reprezentována konstantní výraz, který definuje hodnotu čítače *základní typ*.  Kompilátor nehlásí chybu, která je nevhodná pro základní typ hodnoty. Příklad:
+Všimněte si, že kompilátor generuje chybové zprávy, pokud konstantní výraz definující hodnotu výčtu nemůže být reprezentovaný *podkladovým typem*.  Kompilátor však nehlásí chybu pro hodnotu, která není pro podkladový typ vhodná. Příklad:
 
-- Pokud *základní typ* jsou číselná a enumerátor určuje maximální hodnotu pro daný typ, hodnotu Další implicitně definovaný enumeratoin nejde reprezentovat.
+- Pokud je *základní typ* numerický a enumerátor určuje maximální hodnotu pro tento typ, hodnota další implicitně definovaného enumeratoin nemůže být reprezentovaná.
 
-- Pokud *základní typ* je **bool**, a více než dva čítače jsou implicitně definovaný, enumerátory po první dva nemůže být reprezentovaný.
+- Pokud je *základní typ* **logická**hodnota a více než dva enumerátory jsou implicitně definovány, enumerátory po prvních dvou nelze reprezentovat.
 
-- Pokud *základní typ* je `char16`a hodnota výčtu rozsahu 0xD800 až 0xDFFF, může být reprezentována hodnotu. Však hodnotu logicky nesprávná, protože představuje poloviční Unicode náhradní pár a neměla by se zobrazit v izolaci.
+- Pokud je *základní typ* `char16`a rozsah hodnoty výčtu z 0XD800 až 0xDFFF, může být hodnota reprezentovaná. Hodnota je ale logicky nesprávná, protože představuje poloviční dvojici Unicode a neměla by se zobrazovat v izolaci.
 
 ### <a name="requirements"></a>Požadavky
 
-– Možnost kompilátoru: `/ZW`
+Možnost kompilátoru: `/ZW`
 
 ## <a name="common-language-runtime"></a>CLR (Common Language Runtime)
 
@@ -82,28 +82,28 @@ accessenum structname [:type] { enumerator-list } var;
 
 ### <a name="parameters"></a>Parametry
 
-*access*<br/>
-Přístupnost člena výčtu. Může být buď **veřejné** nebo **privátní**.
+*stoupit*<br/>
+Přístupnost výčtu. Může být buď **Veřejná** , nebo **soukromá**.
 
-*enumerator-list*<br/>
-Čárkou oddělený seznam identifikátorů (enumerátory) ve výčtu.
+*enumerátor – seznam*<br/>
+Čárkami oddělený seznam identifikátorů (výčty) ve výčtu.
 
 *Jméno*<br/>
-Název výčtu. Anonymní výčty spravované nejsou povoleny.
+Název výčtu. Anonymní spravované výčty nejsou povolené.
 
 *type*<br/>
-(Volitelné) Základní typ *identifikátory*. To může být libovolného skalárního typu, jako je například podepsaná nebo nepodepsaná verze z **int**, **krátký**, nebo **dlouhé**.  **BOOL** nebo **char** je také povolena.
+Volitelné Základní typ *identifikátorů*. Může to být jakýkoli skalární typ, například podepsaná nebo nepodepsaná verze **int**, **short**nebo **Long**.  také je povolena **logická** hodnota nebo **znak** .
 
 *var*<br/>
-(Volitelné) Název proměnné typu výčtu.
+Volitelné Název proměnné typu výčtu.
 
 ### <a name="remarks"></a>Poznámky
 
-**Třída výčtu** a **enum struct** jsou ekvivalentní deklarace.
+**enum class** a **Enum struct** jsou ekvivalentní deklarace.
 
-Existují dva typy výčtů: spravované nebo C++/CX a standard.
+Existují dva typy výčtů: spravované nebo C++/CX a Standard.
 
-Spravované nebo C++/CX výčtu může být definovaná následujícím způsobem
+Spravovaný nebo C++/CX enum může být definován následujícím způsobem:
 
 ```cpp
 public enum class day {sun, mon };
@@ -119,7 +119,7 @@ public:
 };
 ```
 
-Standardní výčtu může být definovaná následujícím způsobem:
+Standardní výčet může být definován následujícím způsobem:
 
 ```cpp
 enum day2 { sun, mon };
@@ -132,17 +132,17 @@ static const int sun = 0;
 static const int mon = 1;
 ```
 
-Spravované názvy výčtů (*identifikátory*) se vloží do rozsahu, kde je definován výčet; všechny odkazy na čítačů musí být plně kvalifikovanou (*název* `::` *identifikátor*).  Z tohoto důvodu nejde definovat anonymní spravovaného výčtu.
+Spravované názvy enumerátorů (*identifikátory*) nejsou vloženy do oboru, ve kterém je definován výčet; všechny odkazy na enumerátory musí být plně kvalifikované (*název*`::`*identifikátor*).  Z tohoto důvodu nemůžete definovat anonymní spravovaný výčet.
 
-Enumerátory standardní výčtu jsou silně vloženy do nadřazeného oboru.  To znamená pokud existuje další symbol se stejným názvem jako enumerátor v nadřazeném oboru, kompilátor vygeneruje chybu.
+Enumerátory standardního výčtu jsou silně vloženy do ohraničujícího oboru.  To znamená, že pokud je v ohraničujícím oboru k dispozici jiný symbol se stejným názvem jako enumerátor, kompilátor vygeneruje chybu.
 
-V sadě Visual Studio 2002 a Visual Studio 2003 byly vloženy enumerátory slabě (viditelná v ohraničujícím oboru Pokud byl jiný identifikátor se stejným názvem).
+V aplikaci Visual Studio 2002 a Visual Studio 2003 byly výčty slabě vloženy (viditelné v nadřazeném oboru, pokud neexistuje jiný identifikátor se stejným názvem).
 
-Pokud je definován standardní výčtu C++ (bez **třídy** nebo **struktura**), kompilace s `/clr` způsobí, že výčet se zkompiluje jako spravovaného výčtu.  Výčet má stále sémantiku Nespravovaný výčet.  Mějte na paměti, kompilátor vkládá atribut `Microsoft::VisualC::NativeEnumAttribute` k identifikaci záměr programátora ve výčtu být nativní výčet.  Jiné kompilátory jednoduše zobrazí standardní výčtu jako spravovaného výčtu.
+Pokud je definován C++ standardní výčet (bez **třídy** nebo **struktury**), kompilování s `/clr` způsobí, že se výčet zkompiluje jako spravovaný výčet.  Výčet stále obsahuje sémantiku nespravovaného výčtu.  Všimněte si, že kompilátor vloží atribut, `Microsoft::VisualC::NativeEnumAttribute` pro identifikaci záměru programátora pro výčet jako nativní výčet.  Další kompilátory jednoduše uvidí standardní výčet jako spravovaný výčet.
 
-Objekt s názvem, zkompilovaná standardní výčtu `/clr` se nebude zobrazovat v sestavení spravovaného výčtu a můžou je využívat jiné spravované kompilátoru.   Nepojmenované standardní výčet však nebudou veřejně viditelné ze sestavení.
+Pojmenovaný standardní výčet kompilovaný s `/clr` bude v sestavení viditelný jako spravovaný výčet a může být zpracován jakýmkoli jiným spravovaným kompilátorem.   Nejmenovaný standardní výčet ale nebude veřejně viditelný ze sestavení.
 
-V sadě Visual Studio 2002 a Visual Studio 2003 standard výčtu použít jako typ parametru funkce:
+V aplikaci Visual Studio 2002 a Visual Studio 2003 byl standardní výčet použit jako typ v parametru funkce:
 
 ```cpp
 // mcppv2_enum.cpp
@@ -156,19 +156,19 @@ int main() {
 }
 ```
 
-bude generovat následující do jazyka MSIL pro podpis funkce:
+vygeneruje následující kód v jazyce MSIL pro podpis funkce:
 
 ```cpp
 void f(int32);
 ```
 
-V aktuální verze kompilátoru, ale je standardní výčtu generované jako spravovaného výčtu s [NativeEnumAttribute] a následující podpis funkce v jazyce MSIL:
+V aktuálních verzích kompilátoru se však standardní výčet generuje jako spravovaný výčet s [NativeEnumAttribute] a v jazyce MSIL pro podpis funkce:
 
 ```cpp
 void f(E)
 ```
 
-Další informace o nativních výčtech naleznete v tématu [deklarace výčtu v jazyce C++](../cpp/enumerations-cpp.md).
+Další informace o nativních výčtech naleznete v tématu [ C++ deklarace výčtu](../cpp/enumerations-cpp.md).
 
 Další informace o výčtech CLR naleznete v tématu:
 
@@ -176,7 +176,7 @@ Další informace o výčtech CLR naleznete v tématu:
 
 ### <a name="requirements"></a>Požadavky
 
-– Možnost kompilátoru: `/clr`
+Možnost kompilátoru: `/clr`
 
 ### <a name="examples"></a>Příklady
 
@@ -219,6 +219,6 @@ convert to int: 1
 1
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Přípony komponent pro .NET a UPW](component-extensions-for-runtime-platforms.md)

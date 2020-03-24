@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0002
 ms.assetid: 1c820b1f-9a24-4681-80ed-4fcbfd7caa00
-ms.openlocfilehash: d8e13bcc03a02fd9dbc739566a92025a7b97d598
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 30680f5b26f3be5e7f9b48d18e82fca42ed65493
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62359706"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80192936"
 ---
 # <a name="project-build-error-prj0002"></a>Chyba sestavení projektu PRJ0002
 
-> Chyba výsledek vrácený z "*příkazového řádku*".
+> Výsledek chyby byl vrácen z*příkazového řádku*.
 
-V příkazu *příkazového řádku*, který byl vytvořen ze vstupu uživatele v **stránky vlastností** zobrazí se v dialogovém okně vrátil kód chyby, ale žádné informace o **výstup** okna .
+Příkaz, *příkazový řádek*, který byl vytvořen ze vstupu uživatele v dialogovém okně **stránky vlastností** , vrátil chybový kód, ale v okně **výstup** se nezobrazí žádné informace.
 
-Řešení této chyby závisí na který nástroj vygeneruje chybu. MIDL získáte představu, co došlo k chybě, pokud je definován /o (přesměrovat výstup).
+Řešení této chyby závisí na tom, který nástroj chybu generoval. V případě MIDL získáte představu o tom, co se stalo, pokud je definováno/o (přesměrování výstupu).
 
-Dávkový soubor, jako je například vlastního kroku sestavení nebo události sestavení, který není informativní o podmínky při selhání může být také důvodem této chyby.
+Soubor dávky, jako je například vlastní krok sestavení nebo událost sestavení, který není informativní o podmínkách selhání, může být také důvodem pro tuto chybu.

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0016
 ms.assetid: e9745336-883a-4c70-9c40-7753e02f0325
-ms.openlocfilehash: 6733ef1f390f2ff377356dda3f7cd3ebfe10cc2b
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 0cab1e35a36ab78426923d60acafb5cdf2942469
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69509882"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80192741"
 ---
 # <a name="project-build-error-prj0016"></a>Chyba sestavení projektu PRJ0016
 
@@ -25,6 +25,6 @@ K této chybě může dojít také v případě, že je nastaven následující 
 
 Tuto chybu můžete vyřešit tak, že odstraníte klíč RestrictRun. Pokud je tento klíč registru potřeba, přidejte **VCSpawn. exe** do seznamu položek v klíči.
 
-Další příčinou této chyby je, že nastavení zásad nezahrnuje VCSpawn. exe do klíče registru HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\RestrictRun jako povolený program pro tento uživatelský účet.
+Další příčinou této chyby je, že nastavení zásad nezahrnuje VCSpawn. exe do klíče registru HKEY_CURRENT_USER \Software\Microsoft\Windows\CurrentVersion\Policies\RestrictRun jako povolený program pro tento uživatelský účet.
 
 Další informace najdete v tématu [dodržování nastavení systémových zásad](/previous-versions/windows/desktop/Policy/adhering-to-system-policy-settings)v části "spouštění pouze povolených aplikací systému Windows".

@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - U1059
 ms.assetid: b21d9198-9c63-40d0-b589-80e17294ce24
-ms.openlocfilehash: 3c148bf2feb7ba12686e00b29f5bf90cb9f2f2d7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 33be3312e1f0aaa7f1e8aad64b44ea9aefd25346
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62367288"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80182835"
 ---
 # <a name="nmake-fatal-error-u1059"></a>Závažná chyba nástroje NMAKE U1059
 
-> Chyba syntaxe: "}" u závislé položky chybí
+> Chyba syntaxe: v závislosti chybí znak}.
 
-Cesty pro hledání adresu závislého byl nesprávně zadán. Buď místo existoval v cestě nebo pravou složenou závorku (**}**) byl vynechán.
+Nebyla správně zadána cesta pro hledání závislé položky. Buď existovalo místo v cestě, nebo pravá složená závorka ( **}** ) byla vynechána.
 
-Syntaxe specifikace adresáře pro závislé je
+Syntaxe specifikace adresáře pro závislý je
 
-> **{** *adresáře* **} závislé**
+> závislé na **{** *directories* Directory **}**
 
-kde *adresáře* Určuje jednu nebo více cest, každé oddělené středníkem (**;**). Nejsou povoleny mezery.
+kde *adresářs* Určuje jednu nebo více cest, z nichž každá je oddělena středníkem ( **;** ). Nejsou povoleny žádné mezery.
 
-Pokud makro nahrazuje část nebo všechny cesty pro hledání, ujistěte se, že neexistují žádné mezery v rozšíření makra.
+Pokud je část nebo celá cesta pro hledání nahrazena makrem, ujistěte se, že v rozšíření makra neexistují žádné mezery.

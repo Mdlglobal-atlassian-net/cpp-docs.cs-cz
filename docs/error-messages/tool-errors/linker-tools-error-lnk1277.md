@@ -6,25 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1277
 ms.assetid: afca3de0-50cc-4140-af7a-13493a170835
-ms.openlocfilehash: 137aa15dd9dad4b08d52af55da60a9cdf8b58055
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7c00fb32e4b36eff119195efbb34d536d80df6a9
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160546"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80183654"
 ---
 # <a name="linker-tools-error-lnk1277"></a>Chyba linkerů LNK1277
 
-v pgd (název souboru) se nenašel záznam objektu
+v souboru PGD nebyl nalezen záznam objektu.
 
-Při použití [/LTCG:PGOPTIMZE](../../build/reference/ltcg-link-time-code-generation.md), se liší od cesty, na které se vyskytují během /LTCG:PGINSTRUMENT cestu vstupní soubory .obj, .lib či def. To může vysvětlit změnou v proměnné prostředí LIB po /LTCG:PGINSTRUMENT. Úplná cesta k vstupní soubor je uložen v souboru .pgd.
+Při použití [/LTCG: PGOPTIMZE](../../build/reference/ltcg-link-time-code-generation.md)se cesta jednoho ze vstupních souborů. lib, def nebo. obj liší od cesty, na které byly nalezeny během/LTCG: PGINSTRUMENT. To může být vysvětleno změnou v proměnné prostředí LIB po/LTCG: PGINSTRUMENT. Úplná cesta ke vstupním souborům je uložena v souboru. pgd.
 
-/LTCG:PGOPTIMIZE vyžaduje shodné s fáze /LTCG:PGINSTRUMENT vstupy.
+/LTCG: PGOPTIMIZE vyžaduje, aby byly vstupy stejné jako fáze/LTCG: PGINSTRUMENT.
 
-Pokud chcete vyřešit toto upozornění, proveďte jednu z následujících akcí:
+Chcete-li vyřešit toto upozornění, proveďte jednu z následujících akcí:
 
-- Spusťte /LTCG:PGINSTRUMENT, znovu všechny testovací běhy a spusťte /LTCG:PGOPTIMIZE.
+- Spusťte/LTCG: PGINSTRUMENT, znovu proveďte všechny testovací běhy a spusťte/LTCG: PGOPTIMIZE.
 
-- Na co se při spuštění /LTCG:PGINSTRUMENT změňte proměnné prostředí LIB.
+- Změňte proměnnou prostředí LIB na to, co bylo v době, kdy jste spustili/LTCG: PGINSTRUMENT.
 
-Není doporučeno pomocí /LTCG:PGUPDATE LNK1277 obejít.
+Nedoporučujeme vám pracovat s LINKERŮ LNK1277 pomocí/LTCG: PGUPDATE.

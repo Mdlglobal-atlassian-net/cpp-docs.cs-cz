@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4092
 ms.assetid: d569ec47-a338-40e1-940b-8a8061459acb
-ms.openlocfilehash: 0b18002135d225a90f7e45adc2ff57a64c0a79f4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 706ab843f4b079b507033af76a7f407816fce820
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62279317"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80183355"
 ---
 # <a name="linker-tools-warning-lnk4092"></a>Upozornění linkerů LNK4092
 
-sdílený oddíl s možností zápisu "části" obsahuje přemístění; bitové kopie se možná správně nespustí
+oddíl s možností zápisu oddílu obsahuje přemístění. Image možná nebude správně fungovat.
 
-Linker vydá toto varování, kdykoli budete chtít sdílený oddíl vás potenciálně závažný problém.
+Linker vygeneruje toto upozornění vždy, když máte sdílený oddíl, který vás upozorní na potenciálně vážný problém.
 
-Jedním ze způsobů sdílení dat mezi více procesů je označte části jako "sdílené". Označení oddílu jako sdílené však může způsobit problémy. Například máte knihovnu DLL, která obsahuje deklarace, jako jsou to sdílené datové části:
+Jedním ze způsobů, jak sdílet data mezi více procesy, je označit oddíl jako "Shared". Označení oddílu jako sdíleného může ale způsobit problémy. Máte například knihovnu DLL, která obsahuje deklarace, jako je to v části sdílená data:
 
 ```
 int var = 1;
 int *pvar = &var;
 ```
 
-Linker nemůže vyřešit `pvar` vzhledem k tomu, že jeho hodnota závisí na kde načtení knihovny DLL v paměti, takže uloží záznam přemístění v knihovně DLL. Při načtení knihovny DLL do paměti, adresu `var` lze vyřešit a `pvar` přiřazené. Pokud jiný proces stejnou knihovnu DLL načte, ale nelze načíst ve stejnou adresu, přemístění adresy `var` bude aktualizován pro proces druhé a první proces adresního prostoru bude odkazovat na nesprávnou adresu.
+Linker nemůže vyřešit `pvar`, protože jeho hodnota závisí na tom, kde je knihovna DLL načtena v paměti, takže v knihovně DLL vloží záznam o přemístění. Když je knihovna DLL načtena do paměti, adresa `var` může být vyřešena a `pvar` přiřazena. Pokud jiný proces načte stejnou knihovnu DLL, ale nemůže ji načíst na stejné adrese, přemístění pro adresu `var` bude aktualizováno pro druhý proces a adresní prostor prvního procesu bude ukazovat na špatnou adresu.

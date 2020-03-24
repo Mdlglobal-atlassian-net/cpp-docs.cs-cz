@@ -1,24 +1,24 @@
 ---
-title: 'Postupy: Deklarování a použití vnitřních ukazatelů a spravovaných polí (C++vyhodnocovací)'
+title: 'Postupy: Deklarace a použití vnitřních ukazatelů a spravovaných polí (C++/CLI)'
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
 - pointers, interior
 - arrays [C++], managed
 ms.assetid: e61a2c09-a7d0-4867-91ea-6b8788a01079
-ms.openlocfilehash: 0f7ec6551b09b2125fdb21736a851dae0dadbd4a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 88308e0ba79a8272b2fc323b9219a29e234b25ef
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62349440"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181977"
 ---
-# <a name="how-to-declare-and-use-interior-pointers-and-managed-arrays-ccli"></a>Postupy: Deklarování a použití vnitřních ukazatelů a spravovaných polí (C++vyhodnocovací)
+# <a name="how-to-declare-and-use-interior-pointers-and-managed-arrays-ccli"></a>Postupy: Deklarace a použití vnitřních ukazatelů a spravovaných polí (C++/CLI)
 
-Následující C++/CLI příklad ukazuje, jak deklarovat a použít vnitřní ukazatel na pole.
+Následující C++ukázka/CLI ukazuje, jak můžete deklarovat a použít vnitřní ukazatel na pole.
 
 > [!IMPORTANT]
-> Této funkci jazyka podporuje `/clr` – možnost kompilátoru, ale ne za `/ZW` – možnost kompilátoru.
+> Tato funkce jazyka je podporována možností kompilátoru `/clr`, ale ne pomocí možnosti kompilátoru `/ZW`.
 
 ## <a name="example"></a>Příklad
 
@@ -54,6 +54,6 @@ ipi points to memory address whose value is: 1
 after incrementing ipi, it points to memory address whose value is: 2
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [interior_ptr (C++/CLI)](interior-ptr-cpp-cli.md)
