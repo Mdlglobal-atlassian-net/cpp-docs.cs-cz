@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2934
 ms.assetid: b7f7e7aa-2d4c-4e17-8564-2c005ab81fd5
-ms.openlocfilehash: cd1eaad4023b1ce01f854afb4ad775b8fc2a4fd1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9aef737b9ac7a88e569a6ed7924d05834fb50b22
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62302875"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80176921"
 ---
 # <a name="compiler-error-c2934"></a>Chyba kompilátoru C2934
 
-'class': typ třídy id předefinovalo jako vnořené "položka" "identifikátoru.
+' class ': typ-class-ID se předefinovalo jako vnořená ' Item ' identifikátoru '
 
-Rozvrhy generic nebo šablony třídy nelze použít jako vnořené položky.
+Jako vnořenou položku nelze použít obecnou třídu nebo třídu šablony.

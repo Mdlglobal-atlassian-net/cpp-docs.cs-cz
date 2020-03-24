@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - BK1508
 ms.assetid: 03ea22b8-c7b4-4e73-8553-35b41112e066
-ms.openlocfilehash: 8a7acf943bd4c8180e60748b89a96fdf44a19576
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0195973e7d23baf2f2853bdb00bedcbc841c3549
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62279577"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80197690"
 ---
 # <a name="bscmake-error-bk1508"></a>Chyba nástroje BSCMAKE BK1508
 
-nelze odstranit dočasný soubor 'filename' [: z důvodu]
+nejde odstranit dočasný soubor filename [: důvod].
 
-BscMake – nelze odstranit jeden z jeho dočasné soubory.
+BSCMAKE nemůže odstranit jeden z jeho dočasných souborů.
 
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Chcete-li vyřešit tak, že zkontrolujete následující možné příčiny
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Opravu provedete kontrolou následujících možných příčin.
 
-1. Otevřete soubor má jiný proces.
+1. K otevření souboru byl otevřen jiný proces.
 
 1. Chyba hardwaru.

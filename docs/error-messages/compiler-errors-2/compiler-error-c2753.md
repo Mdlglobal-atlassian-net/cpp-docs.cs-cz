@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2753
 ms.assetid: 92bfeeac-524a-4a8e-9a4f-fb8269055826
-ms.openlocfilehash: e13c45cec99e60d8aec7dcc3db8e5a4813ea7de9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ea2901c998ac1a44ad142779e7ce48bfffff66c2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62228780"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80202147"
 ---
 # <a name="compiler-error-c2753"></a>Chyba kompilátoru C2753
 
-"*šablony*': částečná specializace se nemůže shodovat seznam argumentů pro primární šablonu
+'*template*': Částečná specializace nemůže souhlasit s seznamem argumentů pro primární šablonu
 
-Pokud seznam argumentů šablony odpovídá seznamu parametrů, kompilátor ho považuje za jednu šablonu. Definování stejné šablony dvakrát se nepovoluje.
+Pokud seznam argumentů šablony odpovídá seznamu parametrů, kompilátor ho považuje za stejnou šablonu. Definování stejné šablony dvakrát není povoleno.
 
 ## <a name="example"></a>Příklad
 
-Následující ukázka generuje C2753 a ukazuje způsob, jak ho opravit:
+Následující ukázka generuje C2753 a ukazuje způsob, jak ji opravit:
 
 ```cpp
 // C2753.cpp

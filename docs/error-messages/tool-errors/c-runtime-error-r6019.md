@@ -6,27 +6,27 @@ f1_keywords:
 helpviewer_keywords:
 - R6019
 ms.assetid: 8129923e-7db2-40ee-9602-def9365f8d28
-ms.openlocfilehash: 93d340b2a12a00420a9003429251387b2f04ad37
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b647825b7e856be9dc51a5a652be87a4cc6d0e23
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62214093"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80197259"
 ---
 # <a name="c-runtime-error-r6019"></a>Chyba modulu C runtime R6019
 
-Nelze otevřít konzolu zařízení
+Nepovedlo se otevřít zařízení konzoly.
 
 > [!NOTE]
-> Pokud k této chybě dojde při spuštění aplikace, aplikace se vypnout, protože pokus o přístup ke konzole, ale neměli dostatečná oprávnění. Existuje několik možných důvodů pro tuto chybu, ale je obvykle, protože program musí spustit jako správce, nebo je chyba v programu.
+> Pokud se zobrazí tato chybová zpráva při spuštění aplikace, aplikace se vypnula, protože se pokusila získat přístup ke konzole, ale nemá dostatečná oprávnění. K této chybě může dojít z několika možných důvodů, je to však obvykle proto, že program musí být spuštěn jako správce nebo v programu došlo k chybě.
 >
 > Zkuste chybu odstranit pomocí tohoto postupu:
 >
-> - Spuštění programu jako správce.
-> - Použití **aplikace a funkce** nebo **programy a funkce** stránku **ovládací panely** opravte nebo přeinstalujte program.
-> - Zkontrolujte **Windows Update** v **ovládací panely** pro aktualizace softwaru.
-> - Vyhledat aktualizovanou verzi aplikace. Pokud se problém nevyřeší, obraťte se na dodavatele aplikace.
+> - Spusťte program jako správce.
+> - K opravě nebo přeinstalaci programu použijte stránku **aplikace a funkce** nebo **programy a funkce** v **Ovládacích panelech** .
+> - Ověřte **web Windows Update** v **Ovládacích panelech** pro aktualizace softwaru.
+> - Vyhledejte aktualizovanou verzi aplikace. Pokud potíže potrvají, obraťte se na dodavatele aplikace.
 
 **Informace pro programátory**
 
-K této chybě dochází, protože aplikace volá funkce konzoly, ale operační systém nezajistila přístup ke konzole. S výjimkou v režimu ladění, funkce konzoly nejsou obecně povoleny v aplikacích pro Microsoft Store. Pokud vaše aplikace vyžaduje oprávnění správce pro spuštění, ujistěte se, že je nainstalovaná ve výchozím nastavení Spustit jako správce.
+K této chybě dochází, protože aplikace volala konzolovou funkci, ale operační systém neudělil přístup ke konzole. S výjimkou v režimu ladění nejsou funkce konzoly obecně v aplikacích Microsoft Store povoleny. Pokud vaše aplikace vyžaduje ke spuštění oprávnění správce, ujistěte se, že je ve výchozím nastavení spuštěná jako správce.

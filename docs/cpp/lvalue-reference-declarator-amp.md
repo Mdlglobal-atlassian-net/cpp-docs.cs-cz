@@ -1,5 +1,5 @@
 ---
-title: 'Deklarátor odkazu lvalue: &amp;'
+title: 'Deklarátor odkazu Lvalue: &amp;'
 ms.date: 11/04/2016
 f1_keywords:
 - '&'
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - reference operator
 - '& operator [C++], reference operator'
 ms.assetid: edf0513d-3dcc-4663-b276-1269795dda51
-ms.openlocfilehash: 7710b6f1efc2de770b26ad50923bde2ee5200f61
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 595f2b683d2abb4cdc8a328dc6e86338ab90f214
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209551"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178064"
 ---
-# <a name="lvalue-reference-declarator-amp"></a>Deklarátor odkazu lvalue: &amp;
+# <a name="lvalue-reference-declarator-amp"></a>Deklarátor odkazu Lvalue: &amp;
 
 Uchovává adresu objektu, ale chová se syntakticky stejně jako objekt.
 
@@ -30,7 +30,7 @@ Odkaz l-hodnoty si lze představit jako jiný název objektu. Deklarace odkazu l
 
 Libovolný objekt, jehož adresu lze převést na daný typ ukazatele, lze převést na podobný typ odkazu. Například každý objekt, jehož adresu lze převést na typ `char *`, lze také převést na typ `char &`.
 
-Nepleťte si deklaraci odkazu s využitím [operátoru address-of](../cpp/address-of-operator-amp.md). Když `&` *identifikátor* předcházena typem, jako například **int** nebo **char**, *identifikátor* je deklarován jako odkaz na typ. Když `&` *identifikátor* párový příkaz není typem, využití představuje z operátoru address-of.
+Nezaměňujte reference deklarací pomocí [operátoru address-of](../cpp/address-of-operator-amp.md). Pokud je před *identifikátorem* `&`předcházet typ, například **int** nebo **char**, je *identifikátor* deklarován jako odkaz na typ. Pokud `&`*identifikátor* nepředchází typ, je použití pro operátor address-of.
 
 ## <a name="example"></a>Příklad
 
@@ -71,7 +71,7 @@ int main()
 Bill is 40
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Odkazy](../cpp/references-cpp.md)<br/>
 [Argumenty funkce typu odkazu](../cpp/reference-type-function-arguments.md)<br/>

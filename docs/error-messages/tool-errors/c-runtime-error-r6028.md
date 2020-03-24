@@ -6,30 +6,30 @@ f1_keywords:
 helpviewer_keywords:
 - R6028
 ms.assetid: 81e99079-4388-4244-a4f7-4641c508871c
-ms.openlocfilehash: 4992641c2456f0322b5c52eb907b159904e4c9f0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1c165b7c9351e34ef6316962cd90663f2b6152ab
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62380510"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80197129"
 ---
 # <a name="c-runtime-error-r6028"></a>Chyba modulu C runtime R6028
 
 Nelze inicializovat haldu
 
 > [!NOTE]
-> Pokud k této chybě dojde při spuštění aplikace, aplikace se vypnout, protože má problému s interní pamětí. Existuje mnoho možných příčin této chyby, ale často je způsobeno podmínku velmi málo paměti chyb v programu, nebo hardwarové vadné ovladače.
+> Pokud se zobrazí tato chybová zpráva při spuštění aplikace, aplikace se vypnula, protože má problém interní paměti. Tato chyba má mnoho možných důvodů, ale často je způsobena extrémně nedostatkem paměti, chybou v programu nebo vadnými hardwarovými ovladači.
 >
 > Zkuste chybu odstranit pomocí tohoto postupu:
 >
-> - Ukončete ostatní spuštěné aplikace nebo restartovat počítač pro uvolnění paměti.
-> - Použití **aplikace a funkce** nebo **programy a funkce** stránku **ovládací panely** opravte nebo přeinstalujte program.
-> - Pokud aplikace byla dříve poslední instalace jiné aplikace nebo ovladače funkční, použijte **aplikace a funkce** nebo **programy a funkce** stránku **ovládací panely** odebrat Nová aplikace nebo ovladače a zkuste aplikaci znovu.
-> - Zkontrolujte web dodavatele hardwaru nebo **Windows Update** v **ovládací panely** pro aktualizace softwaru a ovladače.
-> - Vyhledat aktualizovanou verzi aplikace. Pokud se problém nevyřeší, obraťte se na dodavatele aplikace.
+> - Ukončete ostatní spuštěné aplikace nebo restartujte počítač pro uvolnění paměti.
+> - K opravě nebo přeinstalaci programu použijte stránku **aplikace a funkce** nebo **programy a funkce** v **Ovládacích panelech** .
+> - Pokud aplikace pracovala před poslední instalací jiné aplikace nebo ovladače, odeberte novou aplikaci nebo ovladač pomocí stránky **aplikace a funkce** nebo **programy a funkce** v **Ovládacích panelech** a zkuste aplikaci znovu.
+> - Aktualizace softwaru a ovladačů najdete na webu dodavatele hardwaru nebo v **web Windows Update** v **Ovládacích panelech** .
+> - Vyhledejte aktualizovanou verzi aplikace. Pokud potíže potrvají, obraťte se na dodavatele aplikace.
 
 **Informace pro programátory**
 
-K této chybě dojde, když se operačnímu systému nepodaří vytvořit fond paměti pro aplikace. Konkrétně prostředí Runtime jazyka C (CRT) volalo funkci Win32 `HeapCreate`, která vrátila hodnotu NULL označující selhání.
+K této chybě dojde, když se operačnímu systému nepodaří vytvořit fond paměti pro aplikace. Konkrétně modul runtime jazyka C (CRT) volal funkci Win32 `HeapCreate`, která vrátila hodnotu NULL indikující selhání.
 
 Pokud k této chybě dojde během spouštění aplikace, nemusí být systém schopen splnit požadavky haldy, protože jsou načteny vadné ovladače. Pomocí služby Windows Update nebo na webu dodavatele hardwaru vyhledejte aktualizované ovladače.

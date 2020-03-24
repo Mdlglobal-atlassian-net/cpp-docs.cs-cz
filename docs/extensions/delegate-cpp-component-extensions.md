@@ -1,5 +1,5 @@
 ---
-title: Delegate (C++vyhodnocovací a C++/CX)
+title: Delegate (C++/CLI a C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 f1_keywords:
@@ -8,26 +8,26 @@ f1_keywords:
 helpviewer_keywords:
 - delegate keyword [C++]
 ms.assetid: 03caf23d-7873-4a23-9b34-becf42aaf429
-ms.openlocfilehash: 29bf305ed5e4845437b90ed672d1ab0c0de9ced6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 388ccb28c9311b4727199e6b7324771c24c2906d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62374207"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172435"
 ---
-# <a name="delegate--ccli-and-ccx"></a>Delegate (C++vyhodnocovací a C++/CX)
+# <a name="delegate--ccli-and-ccx"></a>Delegate (C++/CLI a C++/CX)
 
-Deklaruje typ, který představuje ukazatel na funkci.
+Deklaruje typ, který reprezentuje ukazatel na funkci.
 
 ## <a name="all-runtimes"></a>Všechny moduly runtime
 
-Prostředí Windows Runtime i modul common language runtime podporuje delegátů.
+Prostředí Windows Runtime i modul Common Language Runtime podporují delegáty.
 
 ### <a name="remarks"></a>Poznámky
 
-**Delegovat** je kontextové klíčové slovo. Další informace najdete v tématu [Context-Sensitive Keywords](context-sensitive-keywords-cpp-component-extensions.md).
+**delegát** je kontextově závislé klíčové slovo. Další informace najdete v tématu [Kontextově závislá klíčová slova](context-sensitive-keywords-cpp-component-extensions.md).
 
-Chcete-li zjistit v době kompilace, pokud typ je delegát, použijte `__is_delegate()` typovou vlastnost. Další informace najdete v tématu [podpora kompilátoru pro typové vlastnosti](compiler-support-for-type-traits-cpp-component-extensions.md).
+Chcete-li zjistit v době kompilace, pokud je typ delegát, použijte vlastnost typu `__is_delegate()`. Další informace naleznete v tématu [Podpora kompilátoru pro typové vlastnosti](compiler-support-for-type-traits-cpp-component-extensions.md).
 
 ## <a name="windows-runtime"></a>prostředí Windows Runtime
 
@@ -47,29 +47,29 @@ delegate-type-identifier
 
 ### <a name="parameters"></a>Parametry
 
-*access*<br/>
-(volitelné) Usnadnění delegáta, který může být **veřejné** (výchozí) nebo **privátní**. Prototyp funkce může také být kvalifikován s **const** nebo **volatile** klíčová slova.
+*stoupit*<br/>
+volitelné Přístupnost delegáta, který může být **veřejný** (výchozí) nebo **soukromý**. Prototyp funkce může být také kvalifikován pomocí klíčových slov **const** nebo **volatile** .
 
-*Návratový typ*<br/>
+*návratový typ*<br/>
 Návratový typ prototypu funkce.
 
-*delegate-type-identifier*<br/>
-Název typu deklarovaného delegáta.
+*Delegate – identifikátor typu*<br/>
+Název deklarovaného typu delegáta.
 
 *parameters*<br/>
-(Volitelné) Typy a identifikátory prototypu funkce.
+Volitelné Typy a identifikátory prototypu funkce.
 
 ### <a name="remarks"></a>Poznámky
 
-Použití *identifikátor typu delegáta* deklarovat událost s stejný prototyp jako delegát. Další informace najdete v tématu [delegátů (C++/CX)](../cppcx/delegates-c-cx.md).
+Pomocí *identifikátoru typu delegáta* deklarujete událost se stejným prototypem jako delegát. Další informace naleznete v tématu [DelegatesC++(/CX)](../cppcx/delegates-c-cx.md).
 
 ### <a name="requirements"></a>Požadavky
 
-– Možnost kompilátoru: `/ZW`
+Možnost kompilátoru: `/ZW`
 
 ## <a name="common-language-runtime"></a>CLR (Common Language Runtime)
 
-Modul common language runtime podporuje delegáty s následující syntaxí.
+Modul CLR (Common Language Runtime) podporuje delegáty s následující syntaxí.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -81,43 +81,43 @@ function_declaration
 
 ### <a name="parameters"></a>Parametry
 
-*access*<br/>
-(volitelné) Usnadnění delegáta mimo sestavení může být veřejné nebo soukromé.  Výchozí hodnota je privátní.  Uvnitř třídy může mít delegáta jakoukoliv přístupností.
+*stoupit*<br/>
+volitelné Přístupnost delegáta mimo sestavení může být veřejná nebo soukromá.  Výchozí hodnota je Private.  V rámci třídy může delegát mít jakoukoli přístupnost.
 
 *function_declaration*<br/>
-Signatura funkce, která může být vázána na delegáta. Návratový typ delegátu, může být jakékoli spravovaného typu. Vzájemná funkční spolupráce z důvodů se doporučuje, návratový typ delegátu být typ kompatibilní se Specifikací.
+Signatura funkce, která může být svázána s delegátem. Návratový typ delegáta může být jakýkoli spravovaný typ. Z důvodů interoperability je doporučeno, aby návratový typ delegáta byl typu CLS.
 
-Chcete-li definovat delegáta bez vazby, první parametr v *function_declaration* by měl být typu **to** ukazatel objektu.
+Chcete-li definovat nevázaný delegát, první parametr v *function_declaration* by měl být typem **tohoto** ukazatele pro objekt.
 
 ### <a name="remarks"></a>Poznámky
 
-Delegáti jsou vícesměrového vysílání: ukazatel"funkce" může být vázaný na jednu nebo více metod v rámci spravované třídy. **Delegovat** – klíčové slovo definuje typ vícesměrového vysílání delegáta s podpisem konkrétní metody.
+Delegáti jsou vícesměrové vysílání: "ukazatel na funkci" může být vázán na jednu nebo více metod v rámci spravované třídy. Klíčové slovo **Delegate** definuje typ delegáta vícesměrového vysílání s konkrétním podpisem metody.
 
-Delegát mohou také být vázány na metodu hodnotová třída, jako je například statické metody.
+Delegát může být také svázán s metodou hodnotové třídy, jako je například statická metoda.
 
 Delegát má následující vlastnosti:
 
 - Dědí z `System::MulticastDelegate`.
 
-- Má konstruktor, který přebírá dva argumenty: ukazatel na spravovanou třídu nebo hodnotu NULL (v případě vazby na statickou metodu) a plně kvalifikovaný metoda zadaného typu.
+- Má konstruktor, který přijímá dva argumenty: ukazatel na spravovanou třídu nebo hodnotu NULL (v případě vazby na statickou metodu) a plně kvalifikovanou metodu zadaného typu.
 
-- Obsahuje metodu nazvanou `Invoke`, jehož předpis odpovídá deklarované signatura delegáta.
+- Obsahuje metodu s názvem `Invoke`, jejíž signatura odpovídá deklarovanému podpisu delegáta.
 
-Při vyvolání delegáta jeho funkce jsou volány v pořadí, ve kterém byla připojena.
+Když je vyvolán delegát, funkce jsou volány v pořadí, v jakém byly připojeny.
 
-Návratový typ delegáta je návratová hodnota z jeho poslední připojené členskou funkci.
+Návratová hodnota delegáta je návratovou hodnotou z poslední připojené členské funkce.
 
-Delegáti nemohou být přetíženy.
+Delegáty nemohou být přetíženy.
 
-Delegáty lze vázané nebo nevázaných.
+Delegáty můžou být vázané nebo nevázané.
 
-Když vytvoříte instanci delegátu vázaný, první argument musí být odkaz na objekt. Druhý argument delegáta instance buď musí, být adresa metoda spravovanou třídu objektu nebo ukazatele na metodu hodnotového typu. Druhý argument delegáta instance musí pojmenujte metodu se syntaxí oboru úplné třídy a použití operátoru address-of.
+Při vytváření instance vázaného delegáta musí být prvním argumentem odkaz na objekt. Druhý argument instance delegáta musí být buď adresa metody objektu spravované třídy, nebo ukazatel na metodu typu hodnoty. Druhý argument instance delegáta musí pojmenovat metodu s úplnou syntaxí oboru třídy a použít operátor address-of.
 
-Při vytváření instance delegáta bez vazby prvního argumentu musí být buď adresa metody spravovanou třídu objektu nebo ukazatele na metodu hodnotového typu. Argument musí pojmenujte metodu se syntaxí oboru úplné třídy a použití operátoru address-of.
+Při vytváření instance nevázaného delegáta musí být prvním argumentem buď adresa metody objektu spravované třídy, nebo ukazatel na metodu typu hodnoty. Argument musí pojmenovat metodu s úplnou syntaxí oboru třídy a použít operátor address-of.
 
-Při vytvoření delegáta, kterého globální nebo statické funkce, se vyžaduje jenom jeden parametr: – funkce (volitelně adresu funkce).
+Při vytváření delegáta statických nebo globálních funkcí je vyžadován pouze jeden parametr: funkce (volitelně adresa funkce).
 
-Další informace o delegátech naleznete v tématu
+Další informace o delegátech naleznete v tématu.
 
 - [Postupy: Definice a používání delegátů (C++/CLI)](../dotnet/how-to-define-and-use-delegates-cpp-cli.md)
 
@@ -125,11 +125,11 @@ Další informace o delegátech naleznete v tématu
 
 ### <a name="requirements"></a>Požadavky
 
-– Možnost kompilátoru: `/clr`
+Možnost kompilátoru: `/clr`
 
 ### <a name="examples"></a>Příklady
 
-Následující příklad ukazuje, jak deklarovat a inicializovat, vyvoláte.
+Následující příklad ukazuje, jak deklarovat, inicializovat a vyvolat delegáty.
 
 ```cpp
 // mcppv2_delegate.cpp
@@ -200,6 +200,6 @@ in func2 10
 in static func3 11
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Přípony komponent pro .NET a UPW](component-extensions-for-runtime-platforms.md)

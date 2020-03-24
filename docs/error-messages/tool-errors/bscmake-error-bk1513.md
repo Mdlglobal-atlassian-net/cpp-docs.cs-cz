@@ -6,25 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - BK1513
 ms.assetid: 9ba87c09-8d82-4c80-b0cf-a8de63dcf9da
-ms.openlocfilehash: c02e9b47b3d32e4d21914188b96913d6dff03127
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3a16163f33814be18a67833995362ee9b13d8118
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62279289"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80197636"
 ---
 # <a name="bscmake-error-bk1513"></a>Chyba nástroje BSCMAKE BK1513
 
-nepřírůstková aktualizace vyžaduje všechny. Soubory SBR
+Nepřírůstková aktualizace vyžaduje vše. Soubory SBR
 
-BscMake – nemůže vytvořit nového procházení (.bsc) souboru, protože nejméně jeden soubor .sbr se zkrátí. Názvy souborů zkrácený .sbr najdete v článku [nástroje BK4502](../../error-messages/tool-errors/bscmake-warning-bk4502.md) upozornění, které nejsou poskytnuty k této chybě.
+BSCMAKE nemůže vytvořit nový soubor s informacemi o procházení (. BSC), protože jeden nebo více souborů. SBR je zkráceno. Pokud chcete najít názvy zkrácených souborů. SBR, přečtěte si upozornění [BK4502](../../error-messages/tool-errors/bscmake-warning-bk4502.md) , která doprovázejí tuto chybu.
 
-BSCMAKE souboru .BSC nástrojem aktualizujte soubor .sbr zkrácený ale nemůže vytvořit nové. BscMake – může sestavení souboru .bsc nového z následujících důvodů:
+BSCMAKE může aktualizovat soubor. BSC se zkráceným souborem. SBR, ale nemůže vytvořit nový. BSCMAKE může vytvořit nový soubor. BSC z následujících důvodů:
 
-- Chybí soubor .bsc.
+- Chybí soubor. BSC.
 
-- Chybný název souboru zadaný pro soubor .bsc.
+- Pro soubor. BSC byl zadán nesprávný název souboru.
 
-- Soubor BSC poškozená.
+- Soubor. BSC je poškozen.
 
-Chcete-li tento problém vyřešit, odstraňte soubory .sbr zkrácený a opětovné sestavení, nebo Vyčistit řešení a znovu sestavit. (V integrovaném vývojovém prostředí, zvolte **sestavení**, **Vyčistit řešení**a klikněte na tlačítko **sestavení**, **znovu sestavit řešení**.)
+Chcete-li tento problém vyřešit, odstraňte zkrácené soubory. sbr a znovu sestavte nebo vyčistěte řešení a znovu sestavte. (V integrovaném vývojovém prostředí zvolte **sestavit**, **Vyčistit řešení**a pak zvolte **sestavit**, znovu **Sestavit řešení**.)

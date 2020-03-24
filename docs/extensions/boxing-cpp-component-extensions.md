@@ -5,16 +5,16 @@ ms.topic: reference
 helpviewer_keywords:
 - boxing, C++
 ms.assetid: b5fd2c98-c578-4f83-8257-6dd663478665
-ms.openlocfilehash: 6221087b60e76e3a2648366c4efebc4105f0ab58
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 709754e8609406f635444937af93488060167ba9
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69509872"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172604"
 ---
 # <a name="boxing--ccli-and-ccx"></a>ZabaleníC++(/CLI C++a/CX)
 
-Převod typů hodnot na objekty se nazývá zabalenía převod objektů na typy hodnot se nazývá rozbalení.
+Převod typů hodnot na objekty se nazývá *zabalení*a převod objektů na typy hodnot se nazývá *rozbalení*.
 
 ## <a name="all-runtimes"></a>Všechny moduly runtime
 
@@ -22,7 +22,7 @@ Převod typů hodnot na objekty se nazývá zabalenía převod objektů na typy 
 
 ## <a name="windows-runtime"></a>prostředí Windows Runtime
 
-C++/CX podporuje zkrácený Syntax pro typy hodnot zabalení a rozbalení typů odkazů. Typ hodnoty je zabalený, když je přiřazen proměnné typu `Object`. `Object` Proměnná je nezabalena, je-li přiřazena proměnné typu hodnoty a nezabalený typ je uveden v závorkách; to znamená, když je proměnná objektu převedena na typ hodnoty.
+C++/CX podporuje zkrácený Syntax pro typy hodnot zabalení a rozbalení typů odkazů. Typ hodnoty je zabalený, když je přiřazen proměnné typu `Object`. `Object` proměnná není zabalena, je-li přiřazena proměnné typu hodnoty a nezabalený typ je uveden v závorkách. To znamená, že když je proměnná objektu převedena na typ hodnoty.
 
 ```cpp
   Platform::Object^
@@ -32,13 +32,13 @@ value_variable = (value_type) object_variable;
 
 ### <a name="requirements"></a>Požadavky
 
-Možnost kompilátoru:`/ZW`
+Možnost kompilátoru: `/ZW`
 
 ### <a name="examples"></a>Příklady
 
-Následující příklad kódu a odkrabici `DateTime` hodnotu. Nejprve příklad získá `DateTime` hodnotu, která představuje aktuální datum a čas a přiřadí ji `DateTime` k proměnné. Pak je zabalené přiřazením `Object` k proměnné. `DateTime` Nakonec je zabalená hodnota nezabalena přiřazením k jiné `DateTime` proměnné.
+Následující příklad kódu a pole `DateTime` hodnotu. Nejprve příklad získá hodnotu `DateTime`, která představuje aktuální datum a čas a přiřadí ji k proměnné `DateTime`. `DateTime` je zabalené přiřazením k proměnné `Object`. Nakonec je zabalená hodnota nezabalena přiřazením k jiné proměnné `DateTime`.
 
-Chcete-li otestovat příklad, vytvořte `BlankApplication` projekt, `BlankPage::OnNavigatedTo()` nahraďte metodu a pak zadejte zarážky na pravé závorce a přiřazení k proměnné `str1`. Když příklad dosáhne uzavírací závorky, Projděte `str1`si.
+Chcete-li otestovat příklad, vytvořte `BlankApplication` projektu, nahraďte metodu `BlankPage::OnNavigatedTo()` a pak zadejte zarážky na pravé závorce a přiřazení k proměnné `str1`. Když příklad dosáhne uzavírací závorky, prověřte `str1`.
 
 ```cpp
 void BlankPage::OnNavigatedTo(NavigationEventArgs^ e)
@@ -76,11 +76,11 @@ Další informace naleznete v tématu [zabaleníC++(/CX)](../cppcx/boxing-c-cx.m
 
 ## <a name="common-language-runtime"></a>CLR (Common Language Runtime)
 
-Hodnoty polí kompilátoru do <xref:System.Object>. To je možné z důvodu převodu typů hodnot na <xref:System.Object>typ, který je definován kompilátorem.
+Hodnoty polí kompilátoru, které se mají <xref:System.Object>. To je možné z důvodu převodu typů hodnot na <xref:System.Object>, které jsou definovány kompilátorem.
 
-Zabalení a rozbalení umožňuje považovat typy hodnot za objekty. Typy hodnot, včetně typů struktury a předdefinovaných typů, jako je například int, lze převést na typ <xref:System.Object>a z něj.
+Zabalení a rozbalení umožňuje považovat typy hodnot za objekty. Typy hodnot, včetně typů struktury a předdefinovaných typů, jako je například int, lze převést na a z typu <xref:System.Object>.
 
-Další informace naleznete v tématu:
+Další informace naleznete v tématu:
 
 - [Postupy: Explicitní žádost o zabalení](../dotnet/how-to-explicitly-request-boxing.md)
 
@@ -92,7 +92,7 @@ Další informace naleznete v tématu:
 
 ### <a name="requirements"></a>Požadavky
 
-Možnost kompilátoru:`/clr`
+Možnost kompilátoru: `/clr`
 
 ### <a name="examples"></a>Příklady
 
@@ -188,6 +188,6 @@ in func2(System::ValueType^)
 in func2(System::ValueType^)
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Přípony komponent pro .NET a UPW](component-extensions-for-runtime-platforms.md)

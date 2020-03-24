@@ -1,30 +1,30 @@
 ---
-title: 'Postupy: Deklarace hodnotových typů s použitím klíčového slova interior_ptr (C++vyhodnocovací)'
+title: 'Postupy: Deklarace hodnotových typů s použitím klíčového slova interior_ptr (C++/CLI)'
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
 - _ptr keyword
 - value types, declaring
 ms.assetid: 49eea66e-eeba-49bd-95b0-ba297be436e3
-ms.openlocfilehash: 2b75f6c4763ddd7d3fd2d802371e21c40d506b16
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 22c0fe4424e4df81ebb0355dfac2168af725b971
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62254853"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172279"
 ---
-# <a name="how-to-declare-value-types-with-the-interiorptr-keyword-ccli"></a>Postupy: Deklarace hodnotových typů s použitím klíčového slova interior_ptr (C++vyhodnocovací)
+# <a name="how-to-declare-value-types-with-the-interior_ptr-keyword-ccli"></a>Postupy: Deklarace hodnotových typů s použitím klíčového slova interior_ptr (C++/CLI)
 
-**Interior_ptr** jde použít s typem hodnoty.
+**Interior_ptr** lze použít s typem hodnoty.
 
 > [!IMPORTANT]
-> Této funkci jazyka podporuje `/clr` – možnost kompilátoru, ale ne za `/ZW` – možnost kompilátoru.
+> Tato funkce jazyka je podporována možností kompilátoru `/clr`, ale ne pomocí možnosti kompilátoru `/ZW`.
 
 ## <a name="example"></a>Příklad
 
 ### <a name="description"></a>Popis
 
-Následující C++/CLI příklad ukazuje, jak používat **interior_ptr** s typem hodnoty.
+Následující C++ukázka/CLI ukazuje, jak použít **interior_ptr** s typem hodnoty.
 
 ### <a name="code"></a>Kód
 
@@ -69,9 +69,9 @@ int main() {
 
 ### <a name="description"></a>Popis
 
-V typu hodnoty **to** interior_ptr vyhodnocen jako ukazatel.
+V typu hodnoty je **Tento** ukazatel vyhodnocen jako interior_ptr.
 
-V těle nestatická členská funkce typu hodnoty `V`, **to** je výraz typu `interior_ptr<V>` jehož hodnota je adresu objektu, pro kterou je tato funkce volána.
+V těle nestatické členské funkce typu hodnoty `V`**Toto** je výraz typu `interior_ptr<V>` jehož hodnota je adresa objektu, pro který je funkce volána.
 
 ### <a name="code"></a>Kód
 
@@ -91,9 +91,9 @@ value struct V {
 
 ### <a name="description"></a>Popis
 
-Následující příklad ukazuje způsob použití operátoru address-of se statickými členy.
+Následující příklad ukazuje, jak použít operátor address-of se statickými členy.
 
-Adresa statického členu typu Visual C++ poskytuje nativní ukazatel.  Adresu člena typu statické hodnoty je spravovaného ukazatele, protože člen typu hodnoty je přidělen na haldě modulu runtime a je možné přesunout pomocí systému uvolňování paměti.
+Adresa statického vizuálního C++ typu má za důsledek nativní ukazatel.  Adresa člena typu statických hodnot je spravovaný ukazatel, protože člen typu hodnoty je přidělen na haldu modulu runtime a může být přesunut systémem uvolňování paměti.
 
 ### <a name="code"></a>Kód
 
@@ -127,6 +127,6 @@ int main() {
 hello
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [interior_ptr (C++/CLI)](interior-ptr-cpp-cli.md)

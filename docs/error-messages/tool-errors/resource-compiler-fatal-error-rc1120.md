@@ -6,25 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - RC1120
 ms.assetid: 4e462931-e42e-42e3-8bfc-847677194286
-ms.openlocfilehash: eff46ddee118c3355e548c73220b407db0561e36
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 855a76ff63145695a7063944701d7acc684e0084
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62374247"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80173007"
 ---
 # <a name="resource-compiler-fatal-error-rc1120"></a>Závažná chyba kompilátoru prostředků RC1120
 
-Nedostatek paměti třeba počet bajtů
+nedostatek paměti, počet potřebných bajtů
 
-Nástroj Resource Compiler nemá dostatek úložiště pro položky, které je uložený v jeho haldy. Obvykle to je výsledkem by bylo příliš mnoho symbolů.
+Kompilátor prostředků má nedostatek úložiště pro položky, které ukládá do své haldy. Obvykle je to výsledek, který má příliš mnoho symbolů.
 
-### <a name="to-fix-by-using-the-following-possible-solutions"></a>Chcete-li vyřešit pomocí následujících možná řešení
+### <a name="to-fix-by-using-the-following-possible-solutions"></a>Oprava pomocí následujících možných řešení
 
-1. Zvětšete místo odkládacího souboru Windows. Další informace o zvětšení místa odkládacího souboru naleznete v tématu virtuální paměti v nápovědě k Windows.
+1. Zvětšete místo ve stránkovacím souboru systému Windows. Další informace o zvětšení místa pro odkládací soubory najdete v tématu virtuální paměť v nápovědě k Windows.
 
-1. Odstraňte nepotřebné vkládané soubory, zejména nepotřebné `#define`prototypy s a funkce.
+1. Eliminujte nepotřebné soubory zahrnutí, zejména nepotřebné `#define`s a prototypy funkcí.
 
-1. Rozdělit do dvou nebo více souborů aktuální soubor a zkompilovat je samostatně.
+1. Rozdělte aktuální soubor na dva nebo více souborů a zkompilujte je samostatně.
 
-1. Odeberte ostatní programy a ovladače spuštěné v systému, který může spotřebovávat značné množství paměti.
+1. Odeberte ostatní programy nebo ovladače běžící v systému, což by mohlo spotřebovat značné množství paměti.

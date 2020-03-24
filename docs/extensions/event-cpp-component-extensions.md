@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - event keyword [C++]
 ms.assetid: c4998e42-883c-4419-bbf4-36cdc979dd27
-ms.openlocfilehash: 8b34a4f146cc7961ee1176580def6319185693e9
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 90682ba699f6316cb6b38a3b78c44e853cd5473f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69509759"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172383"
 ---
 # <a name="event--ccli-and-ccx"></a>událost (C++/CLI a C++/CX)
 
@@ -21,7 +21,7 @@ Klíčové slovo **Event** deklaruje *událost*, což je oznámení registrovan�
 
 ## <a name="all-runtimes"></a>Všechny moduly runtime
 
-C++/CX podporuje deklaraci *členu události* nebo *bloku událostí*. Člen události je zkrácený pro deklaraci bloku události. Ve výchozím nastavení člen události deklaruje `add()`funkce, `remove()`a `raise()` , které jsou deklarovány explicitně v bloku událostí. Chcete-li přizpůsobit funkce v členu události, deklarujte blok události místo toho a potom popište požadované funkce.
+C++/CX podporuje deklaraci *členu události* nebo *bloku událostí*. Člen události je zkrácený pro deklaraci bloku události. Ve výchozím nastavení deklaruje člen události `add()`, `remove()`a `raise()` funkce, které jsou deklarovány explicitně v bloku událostí. Chcete-li přizpůsobit funkce v členu události, deklarujte blok události místo toho a potom popište požadované funkce.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -47,13 +47,13 @@ Modifikátor, který lze použít buď pro deklaraci události, nebo pro metodu 
 [Delegát](delegate-cpp-component-extensions.md), jehož signatura musí být v obslužné rutině události shodná.
 
 *event_name*<br/>
-Název události
+Název události.
 
 *return_value*<br/>
 Návratová hodnota metody přístupového objektu události  Aby bylo možné typ vrácené hodnoty ověřit, musí být návratový typ **void**.
 
 *parameters*<br/>
-volitelné Parametry pro `raise` metodu, která se shoduje s signaturou parametru *delegáta* .
+volitelné Parametry pro metodu `raise`, která se shoduje s signaturou parametru *delegáta* .
 
 ### <a name="remarks"></a>Poznámky
 
@@ -65,9 +65,9 @@ Existují dva druhy deklarací událostí:
 Kompilátor automaticky vytvoří úložiště pro událost ve formě člena typu delegáta a vytvoří interní `add()`, `remove()`a `raise()` členské funkce. Datový člen události musí být deklarovaný uvnitř třídy. Návratový typ návratového typu delegáta musí odpovídat návratový typ obslužné rutiny události.
 
 *blok událostí*<br/>
-Blok událostí umožňuje explicitně deklarovat a přizpůsobit chování `add()` `raise()` metod, `remove()`a.
+Blok událostí umožňuje explicitně deklarovat a přizpůsobit chování metod `add()`, `remove()`a `raise()`.
 
-**Operátory + =** a **-=** můžete použít k přidání a odebrání obslužné rutiny události `add()` nebo k explicitnímu volání metod a. `remove()`
+**Operátory + =** a **-=** můžete použít k přidání a odebrání obslužné rutiny události nebo volání metod `add()` a `remove()` explicitně.
 
 **událost** je kontextově závislé klíčové slovo; Další informace najdete v tématu [Kontextově závislá klíčová slova](context-sensitive-keywords-cpp-component-extensions.md) .
 
@@ -81,7 +81,7 @@ Pokud máte v úmyslu přidat a poté odebrat obslužnou rutinu události, je nu
 
 ### <a name="requirements"></a>Požadavky
 
-Možnost kompilátoru:`/ZW`
+Možnost kompilátoru: `/ZW`
 
 ## <a name="common-language-runtime"></a>CLR (Common Language Runtime)
 
@@ -111,13 +111,13 @@ Modifikátor, který lze použít buď pro deklaraci události, nebo pro metodu 
 [Delegát](delegate-cpp-component-extensions.md), jehož signatura musí být v obslužné rutině události shodná.
 
 *event_name*<br/>
-Název události
+Název události.
 
 *return_value*<br/>
 Návratová hodnota metody přístupového objektu události  Aby bylo možné typ vrácené hodnoty ověřit, musí být návratový typ **void**.
 
 *parameters*<br/>
-volitelné Parametry pro `raise` metodu, která se shoduje s signaturou parametru *delegáta* .
+volitelné Parametry pro metodu `raise`, která se shoduje s signaturou parametru *delegáta* .
 
 ### <a name="remarks"></a>Poznámky
 
@@ -135,7 +135,7 @@ Bloky událostí umožňují přizpůsobit chování metod přidat, odebrat a vy
 
 Návratový typ obslužné rutiny události musí odpovídat návratový typ delegátu.
 
-V .NET Framework můžete s datovým členem zacházet, jako by šlo o metodu samotnou (to znamená `Invoke` metoda příslušného delegáta). Musíte předdefinovat typ delegáta pro deklaraci spravovaného datového člena události. Naproti tomu spravovaná metoda události implicitně definuje odpovídající spravovaný delegát, pokud ještě není definovaný.  Příklad najdete v ukázce kódu na konci tohoto tématu.
+V .NET Framework můžete s datovým členem zacházet, jako by šlo o metodu (to znamená `Invoke` metoda příslušného delegáta). Musíte předdefinovat typ delegáta pro deklaraci spravovaného datového člena události. Naproti tomu spravovaná metoda události implicitně definuje odpovídající spravovaný delegát, pokud ještě není definovaný.  Příklad najdete v ukázce kódu na konci tohoto tématu.
 
 Při deklaraci spravované události můžete zadat přidat a odebrat přistupující objekty, které budou volány při přidání nebo odebrání obslužných rutin událostí pomocí operátorů + = a-=. Metody přidat, odebrat a vyvolat lze explicitně volat.
 
@@ -167,7 +167,7 @@ Další informace o událostech C++/CLI najdete v tématu.
 
 ### <a name="requirements"></a>Požadavky
 
-Možnost kompilátoru:`/clr`
+Možnost kompilátoru: `/clr`
 
 ### <a name="examples"></a>Příklady
 
@@ -230,7 +230,7 @@ OnClick: 7, 3.14159
 OnDblClick: Hello
 ```
 
-Následující příklad kódu ukazuje logiku použitou k vygenerování `raise` metody triviální události: Pokud má událost jednoho nebo více předplatitelů, zavolejte `raise` metodu implicitně nebo explicitně zavoláte delegáta. Pokud návratový typ delegáta není **void** a pokud jsou k dispozici žádná předplatitelé události, `raise` metoda vrátí výchozí hodnotu pro typ delegáta. Pokud neexistují předplatitelé události, volání `raise` metody jednoduše vrátí a není vyvolána žádná výjimka. Pokud typ vrácené hodnoty delegáta není **void**, je vrácen typ delegáta.
+Následující příklad kódu ukazuje logiku použitou k vygenerování `raise` metody triviální události: Pokud má událost jednoho nebo více odběratelů, volání metody `raise` implicitně nebo explicitně volá delegáta. Pokud návratový typ delegáta není **void** a pokud jsou k dispozici odběratelé s nulovými událostmi, metoda `raise` vrátí výchozí hodnotu pro typ delegáta. Pokud neexistují předplatitelé události, volání metody `raise` jednoduše vrátí a není vyvolána žádná výjimka. Pokud typ vrácené hodnoty delegáta není **void**, je vrácen typ delegáta.
 
 ```cpp
 // trivial_events.cpp
@@ -270,6 +270,6 @@ int main() {
 688
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Přípony komponent pro .NET a UPW](component-extensions-for-runtime-platforms.md)

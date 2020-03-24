@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - D9035
 ms.assetid: 6254f933-e37a-45ba-b860-1a870d1bc8e8
-ms.openlocfilehash: 9c0a159dcf193b4ad016069bafd86c557e9e1281
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 778830892bca1cbf3520599eb6e918e56bdf17ea
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62213767"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80196635"
 ---
 # <a name="command-line-warning-d9035"></a>Upozornění příkazového řádku D9035
 
-> možnost "*možnost*' se už nepoužívá a bude v budoucí verzi odebrána
+> možnost*Option*je zastaralá a v budoucí verzi se odebere.
 
 ## <a name="remarks"></a>Poznámky
 
-Jste určili možnost kompilátoru, která bude v budoucí verzi kompilátoru odebrána. Pokud navrhovaná náhrada za *možnost*, toto upozornění je následována upozornění [D9036](../../error-messages/tool-errors/command-line-warning-d9036.md).
+Zadali jste možnost kompilátoru, která bude odebrána v budoucí verzi kompilátoru. Pokud existuje navrhovaná náhrada pro *možnost*, bude toto upozornění následováno upozorněním [D9036](../../error-messages/tool-errors/command-line-warning-d9036.md).
 
-Zadaná možnost stále funguje, ale měli byste aktualizovat konfiguraci sestavení. V důsledku toho projekt je větší pravděpodobnost pokračovat v sestavení, když upgradujete kompilátor.
+Zadaná možnost stále funguje, ale nyní byste měli aktualizovat konfiguraci sestavení. V důsledku toho je pravděpodobnější, že projekt bude pokračovat v sestavení při upgradu kompilátoru.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Možnosti kompilátoru odebrané a zastaralé](../../build/reference/compiler-options-listed-by-category.md#deprecated-and-removed-compiler-options)<br/>
+[Zastaralé a odebrané možnosti kompilátoru](../../build/reference/compiler-options-listed-by-category.md#deprecated-and-removed-compiler-options)<br/>
 [Upozornění příkazového řádku D9036](command-line-warning-d9036.md)

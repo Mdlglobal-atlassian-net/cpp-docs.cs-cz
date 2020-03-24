@@ -6,25 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - BK1506
 ms.assetid: f51f8cea-f8fc-4323-bcf2-b7bd119792ee
-ms.openlocfilehash: d1f74a90657985a87accc13bc2b576c1d7fd5a4e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b272a12e1d729e33794b550c911fd2e56f1af006
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62279811"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80197792"
 ---
 # <a name="bscmake-error-bk1506"></a>Chyba nástroje BSCMAKE BK1506
 
-Nelze otevřít soubor 'filename' [: z důvodu]
+soubor filename [: důvod] se nedá otevřít.
 
-BscMake – soubor nelze otevřít.
+BSCMAKE nemůže otevřít soubor.
 
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Chcete-li vyřešit tak, že zkontrolujete následující možné příčiny
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Opravu provedete kontrolou následujících možných příčin.
 
-1. Soubor je uzamčen jiným procesem. Pokud `reason` říká **oprávnění byla odepřena**, může prohlížeč používat soubor. Zavřete okno Procházet a opakujte sestavení.
+1. Soubor byl uzamčen jiným procesem. Pokud `reason` říká **oprávnění odepřeno**, prohlížeč může tento soubor použít. Zavřete okno procházení a opakujte sestavení.
 
-1. Celého disku.
+1. Celý disk.
 
 1. Chyba hardwaru.
 
-1. Zadaný výstupní soubor má stejný název jako existující podadresáře.
+1. Zadaný výstupní soubor má stejný název jako existující podadresář.
