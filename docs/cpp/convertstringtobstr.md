@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - ConvertStringToBSTR function
 ms.assetid: 071f9b3b-9643-4e06-a1e5-de96ed15bab2
-ms.openlocfilehash: 5e7d8abd29033fc88dae1e83fcc6467fb0ace46f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2065011ee6bbf98ce2c83be494f1e6631af9f7cf
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154617"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170706"
 ---
 # <a name="convertstringtobstr"></a>ConvertStringToBSTR
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
-Převede `char *` hodnota, která se `BSTR`.
+Převede hodnotu `char *` na `BSTR`.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -28,7 +28,7 @@ BSTR __stdcall ConvertStringToBSTR(const char* pSrc)
 #### <a name="parameters"></a>Parametry
 
 *pSrc*<br/>
-A `char *` proměnné.
+Proměnná `char *`.
 
 ## <a name="example"></a>Příklad
 
@@ -56,14 +56,14 @@ char * text: Test
 BSTR text: Test
 ```
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
 ## <a name="requirements"></a>Požadavky
 
-**Header:** \<comutil.h>
+**Záhlaví:** \<comutil. h >
 
-**Lib:** comsuppw.lib nebo comsuppwd.lib (viz [/Zc: wchar_t (wchar_t je nativní typ)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) Další informace)
+**Lib:** comsuppw. lib nebo comsuppwd. lib (viz [/Zc: Wchar_t (Wchar_t je nativní typ)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) , kde najdete další informace.)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Globální funkce kompilátoru COM](../cpp/compiler-com-global-functions.md)

@@ -1,21 +1,21 @@
 ---
-title: 'Postupy: Definovat konstruktory přesunutí a operátory přiřazení přesunutí (C++)'
+title: 'Postupy: definování konstruktorů přesunutí a operátorů přiřazení přesunutí (C++)'
 ms.date: 03/05/2018
 helpviewer_keywords:
 - move constructor [C++]
 ms.assetid: e75efe0e-4b74-47a9-96ed-4e83cfc4378d
-ms.openlocfilehash: b601c53c01940fe110036d569e0be9d43a123a91
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 81f717162e2c7bebc62a9deeb208700380f62cb8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345015"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179364"
 ---
 # <a name="move-constructors-and-move-assignment-operators-c"></a>Konstruktory a operátory přiřazení pro přesunutí (C++)
 
-Toto téma popisuje, jak zapisovat *konstruktor přesunu* a operátor přiřazení přesunu pro třídu jazyka C++. Konstruktor přesunu umožňuje prostředků, které vlastní objektem r-hodnoty k přesunutí do lvalue bez kopírování. Další informace o sémantice pohybu naleznete v tématu [Rvalue Reference Declarator: & &](../cpp/rvalue-reference-declarator-amp-amp.md).
+Toto téma popisuje, jak napsat *konstruktor přesunu* a operátor přiřazení přesunu pro C++ třídu. Konstruktor přesunu umožňuje přesunout prostředky vlastněné objektem rvalue do hodnoty lvalue bez kopírování. Další informace o tom, jak se sémantika přesunutí, najdete v tématu [rvalue reference deklarátor: & &](../cpp/rvalue-reference-declarator-amp-amp.md).
 
-Toto téma staví na následující třídě jazyka C++ `MemoryBlock`, která spravuje vyrovnávací paměti.
+Toto téma se sestaví C++ na následující třídě, `MemoryBlock`, která spravuje vyrovnávací paměť.
 
 ```cpp
 // MemoryBlock.h
@@ -93,11 +93,11 @@ private:
 };
 ```
 
-Následující postupy popisují, jak zapsat konstruktor přesunutí a operátor přiřazení přesunu pro vzorovou třídu C++.
+Následující postupy popisují, jak napsat konstruktor přesunu a operátor přiřazení přesunu pro ukázkovou C++ třídu.
 
-### <a name="to-create-a-move-constructor-for-a-c-class"></a>Vytvoření konstruktoru přesunu pro třídu jazyka C++
+### <a name="to-create-a-move-constructor-for-a-c-class"></a>Vytvoření konstruktoru přesunutí pro C++ třídu
 
-1. Definujte metodu prázdného konstruktoru, který bere odkaz rvalue na typ třídy jako svůj parametr, jak je ukázáno v následujícím příkladu:
+1. Definujte prázdnou metodu konstruktoru, která jako svůj parametr převezme odkaz rvalue na typ třídy, jak je znázorněno v následujícím příkladu:
 
     ```cpp
     MemoryBlock(MemoryBlock&& other)
@@ -107,23 +107,23 @@ Následující postupy popisují, jak zapsat konstruktor přesunutí a operátor
     }
     ```
 
-1. V konstruktoru přesunu přiřaďte datové členy třídy ze zdrojového objektu na objekt, který je vytvářen:
+1. V konstruktoru přesunu přiřaďte datové členy třídy ze zdrojového objektu do objektu, který je sestaven:
 
     ```cpp
     _data = other._data;
     _length = other._length;
     ```
 
-1. Přiřaďte datové členy zdrojového objektu na výchozí hodnoty. Tím se destruktoru zabrání uvolnění prostředků (například paměť) více než jednou:
+1. Přiřaďte datové členy zdrojového objektu k výchozím hodnotám. To brání destruktoru v uvolnění prostředků (například paměti) vícekrát:
 
     ```cpp
     other._data = nullptr;
     other._length = 0;
     ```
 
-### <a name="to-create-a-move-assignment-operator-for-a-c-class"></a>Vytvoření operátora přiřazení přesunu pro třídu jazyka C++
+### <a name="to-create-a-move-assignment-operator-for-a-c-class"></a>Vytvoření operátoru přiřazení přesunutí pro C++ třídu
 
-1. Definujte prázdný operátor přiřazení, který bere odkaz rvalue na typ třídy jako svůj parametr a vrátí odkaz na typ třídy, jak je ukázáno v následujícím příkladu:
+1. Definujte prázdný operátor přiřazení, který převezme odkaz rvalue na typ třídy jako svůj parametr a vrátí odkaz na typ třídy, jak je znázorněno v následujícím příkladu:
 
     ```cpp
     MemoryBlock& operator=(MemoryBlock&& other)
@@ -131,7 +131,7 @@ Následující postupy popisují, jak zapsat konstruktor přesunutí a operátor
     }
     ```
 
-1. V operátoru přiřazení přesunu přidejte podmíněný příkaz, který neprovádí operaci, pokud se pokusíte přiřadit objekt sám na sebe.
+1. V operátoru přiřazení přesunutí přidejte podmíněný příkaz, který neprovede žádnou operaci, pokud se pokusíte objekt přiřadit sám sobě.
 
     ```cpp
     if (this != &other)
@@ -141,14 +141,14 @@ Následující postupy popisují, jak zapsat konstruktor přesunutí a operátor
 
 1. V podmíněném příkazu uvolněte veškeré prostředky (například paměť) z objektu, který je přiřazen.
 
-   V následujícím příkladu se uvolní `_data` člena v objektu, který je přiřazen:
+   Následující příklad uvolní člena `_data` z objektu, který je přiřazen k:
 
     ```cpp
     // Free the existing resource.
     delete[] _data;
     ```
 
-   Postupujte podle kroků 2 a 3 v prvním postupu pro přenos datových členů ze zdrojového objektu na objekt, který je konstruován:
+   Postupujte podle kroků 2 a 3 v prvním postupu pro přenos datových členů ze zdrojového objektu do objektu, který je vytvořen:
 
     ```cpp
     // Copy the data pointer and its length from the
@@ -162,7 +162,7 @@ Následující postupy popisují, jak zapsat konstruktor přesunutí a operátor
     other._length = 0;
     ```
 
-1. Vrátí odkaz na aktuální objekt, jak je znázorněno v následujícím příkladu:
+1. Vraťte odkaz na aktuální objekt, jak je znázorněno v následujícím příkladu:
 
     ```cpp
     return *this;
@@ -170,7 +170,7 @@ Následující postupy popisují, jak zapsat konstruktor přesunutí a operátor
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje kompletní konstruktor přesunu a operátor přiřazení přesunu pro `MemoryBlock` třídy:
+Následující příklad ukazuje úplný konstruktor Move a operátor přiřazení přesunutí pro třídu `MemoryBlock`:
 
 ```cpp
 // Move constructor.
@@ -219,7 +219,7 @@ MemoryBlock& operator=(MemoryBlock&& other)
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak sémantika přesunu může zlepšit výkon aplikací. Příklad přidá dva prvky do vektorového objektu a pak vloží nový prvek mezi dva existující prvky. `vector` Třída používá sémantiky přesunutí pro efektivní provádění operace vložení přesunutím elementů Vektoru místo jejich kopírování.
+Následující příklad ukazuje, jak sémantika přesunutí může zlepšit výkon aplikací. Příklad přidá dva prvky do vektorového objektu a pak vloží nový prvek mezi dva existující prvky. Třída `vector` používá sémantiku přesunutí k efektivnímu provedení operace vložení přesunutím prvků vektoru místo jejich kopírování.
 
 ```cpp
 // rvalue-references-move-semantics.cpp
@@ -264,7 +264,7 @@ In ~MemoryBlock(). length = 50. Deleting resource.
 In ~MemoryBlock(). length = 75. Deleting resource.
 ```
 
-Před Visual Studio 2010 tento příklad vytváří následující výstup:
+Před Visual Studio 2010 tento příklad vytvořil následující výstup:
 
 ```Output
 In MemoryBlock(size_t). length = 25.
@@ -287,15 +287,15 @@ In ~MemoryBlock(). length = 50. Deleting resource.
 In ~MemoryBlock(). length = 75. Deleting resource.
 ```
 
-Verze v tomto příkladu používá sémantiku přesunutí je mnohem efektivnější než verze, která nepoužívá sémantiku přesunutí, protože vykonává méně kopírování, přidělení paměti a operací zrušení přidělení paměti.
+Verze tohoto příkladu, který používá sémantiku přesunutí, je efektivnější než verze, která nepoužívá sémantiku přesunutí, protože provádí méně operací kopírování, přidělení paměti a zrušení přidělení paměti.
 
 ## <a name="robust-programming"></a>Robustní programování
 
-Chcete-li zabránit nedostatku prostředků, vždy uvolněte prostředky (například paměť, popisovače souborů a sokety) v operátoru přiřazení přesunutí.
+Chcete-li zabránit nevracení prostředků, vždy uvolněte prostředky (například paměť, popisovače souborů a sokety) v operátoru přiřazení přesunutí.
 
-Chcete-li zabránit neobnovitelnému zničení prostředků, správně zpracovávejte vlastní přiřazení v operátoru přiřazení přesunutí.
+Chcete-li zabránit neodstranitelné zničení prostředků, správně zpracujte samostatné přiřazení v operátoru přiřazení přesunutí.
 
-Pokud zadáte konstruktor move a operátor přiřazení přesunu pro třídu, můžete vyloučit redundantní kód zápisem konstruktoru přesunutí, aby volání operátoru přiřazení přesunutí. Následující příklad ukazuje přepracovanou verzi konstruktoru přesunu, který volá operátor přiřazení přesunu:
+Pokud poskytnete konstruktor přesunu i operátor přiřazení přesunu pro třídu, můžete eliminovat redundantní kód zápisem konstruktoru Move pro volání operátoru přiřazení přesunutí. Následující příklad ukazuje revidovanou verzi konstruktoru přesunu, která volá operátor přiřazení přesunu:
 
 ```cpp
 // Move constructor.
@@ -307,9 +307,9 @@ MemoryBlock(MemoryBlock&& other)
 }
 ```
 
-[Std::move](../standard-library/utility-functions.md#move) funkce zachová vlastnost rvalue *jiných* parametru.
+Funkce [std:: Move](../standard-library/utility-functions.md#move) zachovává vlastnost rvalue *druhého* parametru.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Deklarátor odkazu r-hodnoty: &&](../cpp/rvalue-reference-declarator-amp-amp.md)<br/>
-[std::move](../standard-library/utility-functions.md#move)
+[std:: Move](../standard-library/utility-functions.md#move)
