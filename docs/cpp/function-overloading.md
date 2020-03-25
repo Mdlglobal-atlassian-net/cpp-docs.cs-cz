@@ -155,7 +155,7 @@ F1 = Add( F2, 23 );
 
 Předchozí příkaz vytvoří dvě sady:
 
-|Set 1: kandidátské funkce, které mají první argument typu zlomek|Set 2: kandidátské funkce, jejichž druhý argument lze převést na typ **int**|
+|Nastavte 1: Kandidátské funkce, které mají první argument typu zlomek|Nastavte 2: Kandidátské funkce, jejichž druhý argument lze převést na typ **int**|
 |--------------------------------------------------------------------------|-----------------------------------------------------------------------------------|
 |Varianta 1|Varianta 1 (**int** se dá převést na **Long** pomocí standardního převodu)|
 |Varianta 3||
@@ -170,7 +170,7 @@ F1 = Add( 3, 6 );
 
 Předchozí volání funkce vytvoří následující sady:
 
-|Set 1: kandidátské funkce, které mají první argument typu **int**|Set 2: kandidátské funkce, které mají druhý argument typu **int**|
+|Nastavte 1: Kandidátské funkce, které mají první argument typu **int**|Nastavte 2: Kandidátské funkce, které mají druhý argument typu **int**|
 |---------------------------------------------------------------------|----------------------------------------------------------------------|
 |Variant 2 (**int** se dá převést na **Long** pomocí standardního převodu)|Varianta 1 (**int** se dá převést na **Long** pomocí standardního převodu)|
 
@@ -337,7 +337,7 @@ UDC udc;
 LogToFile( udc );
 ```
 
-V předchozím příkladu je vyvolán uživatelem definovaný převod **operátor Long**, který převede `udc` na typ **Long**. Pokud nebyl definován uživatelsky definovaný převod na typ **Long** , převod by byl proveden takto: typ `UDC` by byl převeden na typ **int** pomocí uživatelem definovaného převodu. Pak bude standardní převod z typu **int** na typ **Long** použit tak, aby odpovídal argumentu v deklaraci.
+V předchozím příkladu je vyvolán uživatelem definovaný převod **operátor Long**, který převede `udc` na typ **Long**. Pokud nebyl definován uživatelsky definovaný převod na typ **Long** , převod by byl pokračovat následujícím způsobem: Typ `UDC` by byl převeden na typ **int** pomocí uživatelsky definovaného převodu. Pak bude standardní převod z typu **int** na typ **Long** použit tak, aby odpovídal argumentu v deklaraci.
 
 Pokud jsou vyžadovány uživatelsky definované převody, které odpovídají argumentu, nejsou standardní převody použity při vyhodnocování nejlepší shody. I v případě, že více než jedna kandidátská funkce vyžaduje uživatelem definovaný převod, jsou funkce považovány za stejné. Příklad:
 
@@ -569,6 +569,6 @@ double Account::Deposit( double dAmount, char *szPassword )
 }
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Funkce (C++)](../cpp/functions-cpp.md)
