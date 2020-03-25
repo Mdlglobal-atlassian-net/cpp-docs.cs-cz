@@ -4,17 +4,17 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - _com_ptr_t class [C++], operators
 ms.assetid: 716564e4-f538-4eee-8532-c841f90c3a69
-ms.openlocfilehash: b5ff6797937045f4d5e5b4409d4121a5b728369e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8b7da90e850e1c4465353975f2db039c203b8545
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399263"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170652"
 ---
-# <a name="comptrt-operators"></a>Operátory jazyka _com_ptr_t
+# <a name="_com_ptr_t-operators"></a>Operátory jazyka _com_ptr_t
 
-Informace o tom, `_com_ptr_t` operátory, naleznete v tématu [_com_ptr_t – třída](../cpp/com-ptr-t-class.md).
+Informace o operátorech `_com_ptr_t` naleznete v tématu [_Com_ptr_t Class](../cpp/com-ptr-t-class.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [_com_ptr_t – třída](../cpp/com-ptr-t-class.md)

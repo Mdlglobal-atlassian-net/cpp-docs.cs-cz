@@ -25,12 +25,12 @@ helpviewer_keywords:
 - aligned_malloc_dbg function
 - _aligned_malloc_dbg function
 ms.assetid: fb0429c3-685d-4826-9075-2515c5bdc5c6
-ms.openlocfilehash: 3db61d494ea94c9ccbf2844c9f47df66dad87ff7
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 49278c2282698478ad96cc1c7b1ad27add0a6787
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939886"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170931"
 ---
 # <a name="_aligned_malloc_dbg"></a>_aligned_malloc_dbg
 
@@ -67,11 +67,11 @@ Ukazatel na blok paměti, který byl přidělen nebo NULL v případě, že oper
 
 ## <a name="remarks"></a>Poznámky
 
-**_aligned_malloc_dbg** je ladicí verze funkce [_aligned_malloc](aligned-malloc.md) . Pokud není definován [_DEBUG](../../c-runtime-library/debug.md) , každé volání **_aligned_malloc_dbg** je sníženo na volání `_aligned_malloc`. Oba `_aligned_malloc` i **_aligned_malloc_dbg** přidělují blok paměti v základní haldě, ale **_aligned_malloc_dbg** nabízí několik funkcí ladění: vyrovnávací paměti na obou stranách bloku pro testování nevracení a *název souboru* číslo řádku informace k určení původu žádostí o přidělení. / Sledování specifických typů přidělení s parametrem typu bloku není podporovanou funkcí ladění pro zarovnávání přidělení. Zarovnaná přidělení se zobrazí jako typ bloku _NORMAL_BLOCK.
+**_aligned_malloc_dbg** je ladicí verze funkce [_aligned_malloc](aligned-malloc.md) . Pokud není definován [_DEBUG](../../c-runtime-library/debug.md) , každé volání **_aligned_malloc_dbg** je sníženo na volání `_aligned_malloc`. `_aligned_malloc` i **_aligned_malloc_dbg** přidělují blok paměti v základní haldě, ale **_aligned_malloc_dbg** nabízí několik funkcí ladění: vyrovnávací paměti na obou stranách bloku k testování nevrácených položek a *názvy souborů*/*číslo řádku* k určení původu žádostí o přidělení. Sledování specifických typů přidělení s parametrem typu bloku není podporovanou funkcí ladění pro zarovnávání přidělení. Zarovnaná přidělení se zobrazí jako typ bloku _NORMAL_BLOCK.
 
 **_aligned_malloc_dbg** přiděluje blok paměti o něco více místa, než je požadovaná *Velikost*. Dodatečné místo se používá správcem haldy ladění k propojení bloků paměti ladění a k poskytnutí aplikace s informacemi hlavičky ladění a přepsat vyrovnávací paměti. Po přidělení bloku je uživatelská část bloku vyplněna hodnotou 0xCD a každá z vyrovnávací paměti přepsání je vyplněna 0xFD.
 
-**_aligned_malloc_dbg** nastaví `errno` , `ENOMEM` jestli se nezdařila alokace paměti, nebo pokud velikost potřebné paměti (včetně výše zmíněné režie) `_HEAP_MAXREQ`překračuje. Další informace o tomto a dalších chybových kódech naleznete v tématu [errno, _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). **_Aligned_malloc_dbg** také ověří své parametry. Pokud *Zarovnání* není mocninou 2 nebo *Velikost* je nula, tato funkce vyvolá obslužnou rutinu neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, tato funkce vrátí hodnotu null a nastaví `errno` na. `EINVAL`
+**_aligned_malloc_dbg** nastaví `errno` na `ENOMEM`, pokud se přidělení paměti nepovede nebo pokud velikost potřebné paměti (včetně výše zmíněné režie) přesahuje `_HEAP_MAXREQ`. Další informace o tomto a dalších chybových kódech naleznete v tématu [errno, _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). **_Aligned_malloc_dbg** také ověřuje jeho parametry. Pokud *Zarovnání* není mocninou 2 nebo *Velikost* je nula, tato funkce vyvolá obslužnou rutinu neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, tato funkce vrátí hodnotu NULL a nastaví `errno` na `EINVAL`.
 
 Informace o způsobu přidělování, inicializace a správy paměťových bloků v ladicí verzi základní haldy najdete v [podrobnostech o haldě ladění CRT](/visualstudio/debugger/crt-debug-heap-details). Informace o typech bloků přidělení a způsobu jejich použití naleznete v tématu [typy bloků v haldě ladění](/visualstudio/debugger/crt-debug-heap-details). Informace o rozdílech mezi voláním standardní funkce haldy a její ladicí verzí v sestavení ladění aplikace najdete v tématu [ladění verzí funkcí přidělení haldy](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).
 
@@ -79,7 +79,7 @@ Informace o způsobu přidělování, inicializace a správy paměťových blok�
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_aligned_malloc_dbg**|\<crtdbg.h>|
+|**_aligned_malloc_dbg**|\<souboru Crtdbg. h >|
 
 Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
@@ -87,6 +87,6 @@ Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-r
 
 Ladit verze pouze [knihoven run-time jazyka C](../../c-runtime-library/crt-library-features.md) .
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Rutiny ladění](../../c-runtime-library/debug-routines.md)

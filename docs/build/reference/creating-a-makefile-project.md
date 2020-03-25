@@ -6,25 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - Makefile projects [C++]
 ms.assetid: dd077af3-97a8-48fb-baaa-cf7e07ddef61
-ms.openlocfilehash: 861cd88440a697ce5a3abc83109526227ae42f8e
-ms.sourcegitcommit: bd7ddc044f9083246614b602ef6a758775313214
+ms.openlocfilehash: b96b7a1663e5d5886615dd976900f8eda9daeccc
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68866136"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169887"
 ---
 # <a name="create-a-c-makefile-project"></a>Vytvoření projektu C++ souboru pravidel
 
-Soubor *pravidel* je textový soubor, který obsahuje pokyny, jak kompilovat a propojit (nebo *sestavit*) sadu souborů C++ zdrojového kódu. Programový program přečte soubor pravidel a vyvolá kompilátor, linker a případně jiné programy, aby mohl vytvořit spustitelný soubor. Implementace IT programu od Microsoftu se nazývá [NMAKE](nmake-reference.md).
+Soubor *pravidel* je textový soubor, který obsahuje pokyny, jak kompilovat a propojit (nebo *sestavit*) sadu souborů C++ zdrojového kódu. Programový *program* přečte soubor pravidel a vyvolá kompilátor, linker a případně jiné programy, aby mohl vytvořit spustitelný soubor. Implementace *IT programu od Microsoftu se nazývá* [NMAKE](nmake-reference.md).
 
 Máte-li existující projekt makefile, máte tyto možnosti, pokud chcete kód nebo ho ladit v integrovaném vývojovém prostředí sady Visual Studio:
 
 - Vytvořte projekt makefile v aplikaci Visual Studio, který používá existující soubor pravidel ke konfiguraci souboru. vcxproj, který bude Visual Studio používat pro technologii IntelliSense. (Nebudete mít všechny funkce IDE, které získáte s nativním projektem MSBuild.) Viz [Vytvoření projektu souboru pravidel](#create_a_makefile_project) níže.
-- Pomocí průvodce **vytvořením nového projektu z existujících souborů kódu** vytvořte nativní projekt MSBuild ze zdrojového kódu. Původní soubor pravidel se za tímto souborem nepoužije. Další informace najdete v tématu [jak: Vytvoří C++ projekt z existujícího kódu](../how-to-create-a-cpp-project-from-existing-code.md).
-- **Visual Studio 2017 a novější**: Pomocí funkce **Otevřít složku** můžete upravit a sestavit projekt makefile tak, jak je, bez jakéhokoli zásahu do systému MSBuild. Další informace naleznete v tématu [Otevřít složku projekty pro C++ ](../open-folder-projects-cpp.md).
+- Pomocí průvodce **vytvořením nového projektu z existujících souborů kódu** vytvořte nativní projekt MSBuild ze zdrojového kódu. Původní soubor pravidel se za tímto souborem nepoužije. Další informace najdete v tématu [Postupy: vytvoření C++ projektu z existujícího kódu](../how-to-create-a-cpp-project-from-existing-code.md).
+- **Visual Studio 2017 a novější**: pomocí funkce **Otevřít složku** můžete upravit a sestavit projekt makefile tak, jak je, bez jakéhokoli zásahu do systému MSBuild. Další informace naleznete v tématu [Otevřít složku projekty pro C++ ](../open-folder-projects-cpp.md).
 - **Visual Studio 2019 a novější**: Vytvořte projekt makefile se systémem UNIX pro Linux.
 
-## <a name="a-namecreate_a_makefile_project-to-create-a-makefile-project-with-the-makefile-project-template"></a><a name="create_a_makefile_project">Vytvoření projektu makefile pomocí šablony projektu makefile
+## <a name="a-namecreate_a_makefile_project-to-create-a-makefile-project-with-the-makefile-project-template"></a><a name="create_a_makefile_project"> vytvoření projektu makefile pomocí šablony projektu makefile
 
 V aplikaci Visual Studio 2017 nebo novější je šablona projektu Makefile k dispozici, C++ když je nainstalovaná úloha vývoj desktopových aplikací.
 
@@ -38,9 +38,9 @@ Výstupní soubor zadaný v projektu nemá žádný vliv na název, který gene
 
 ### <a name="to-create-a-makefile-project-in-visual-studio-2019"></a>Vytvoření projektu makefile v aplikaci Visual Studio 2019
 
-1. V hlavní nabídce sady Visual Studio vyberte **soubor** > **Nový** > **projekt** a do vyhledávacího pole zadejte "makefile". Nebo, v dialogovém okně **Nový projekt**  > rozbalte položku **Visual C++**  **General** (Visual Studio 2015) nebo **jiný** (Visual Studio 2017) a pak vyberte ze dvou možností podle toho, zda budete cíleni na systém Windows nebo Linux.
+1. V hlavní nabídce aplikace Visual Studio vyberte **soubor** > **Nový** > **projekt** a do vyhledávacího pole zadejte "makefile". Nebo, v dialogovém okně **Nový projekt** rozbalte položku  **C++ Visual** > **General** (Visual Studio 2015) nebo **jiný** (Visual Studio 2017) a pak vyberte ze dvou možností podle toho, jestli budete cílit na Windows nebo Linux.
 
-1. **Pouze Windows**: Na stránce **nastavení konfigurace ladění** zadejte příkaz, výstup, vyčištění a znovu sestavte informace pro ladění a maloobchodní sestavení. Klikněte na **Další** , pokud chcete zadat různá nastavení pro konfiguraci vydané verze.
+1. **Pouze Windows**: na stránce **nastavení konfigurace ladění** zadejte příkaz, výstup, vyčistit a znovu sestavte informace pro ladění a maloobchodní buildy. Klikněte na **Další** , pokud chcete zadat různá nastavení pro konfiguraci vydané verze.
 
 1. Kliknutím na tlačítko **Dokončit** zavřete dialogové okno a otevřete nově vytvořený projekt v **Průzkumník řešení**.
 
@@ -50,7 +50,7 @@ Výstupní soubor zadaný v projektu nemá žádný vliv na název, který gene
 
 ### <a name="to-create-a-makefile-project-in-visual-studio-2015-or-visual-studio-2017"></a>Vytvoření projektu makefile v aplikaci Visual Studio 2015 nebo Visual Studio 2017
 
-1. Na úvodní stránce sady Visual Studio zadejte do pole hledání **nového projektu** text "makefile". Nebo, v dialogovém okně  >  **Nový projekt** rozbalte položku **Visual C++**  **General** (Visual Studio 2015) nebo **jiný** (Visual Studio 2017) a pak vyberte **projekt makefile** v podokně šablony pro otevření projektu Tip.
+1. Na úvodní stránce sady Visual Studio zadejte do pole hledání **nového projektu** text "makefile". Nebo, v dialogovém okně **Nový projekt** rozbalte položku **Visual C++**  > **General** (Visual Studio 2015) nebo **jiný** (Visual Studio 2017) a pak vyberte možnost **projekt makefile** v podokně šablony a otevřete tak Průvodce projektu.
 
 1. Na stránce **nastavení aplikace** zadejte příkaz, výstup, vyčistit a znovu sestavte informace pro ladění a maloobchodní sestavení.
 
@@ -72,7 +72,7 @@ Po vytvoření projektu makefile můžete zobrazit a upravit každou z následuj
 
 - **Příkazový řádek opětovného sestavení:** Určuje příkazový řádek, který se spustí, když uživatel vybere znovu sestavení z nabídky sestavit. Zobrazuje se v poli znovu sestavit vše v příkazovém řádku na stránce vlastností projektu na stránce NMAKE.
 
-## <a name="how-to-enable-intellisense-for-makefile-projects"></a>Postupy: Povolit technologii IntelliSense pro projekty makefile
+## <a name="how-to-enable-intellisense-for-makefile-projects"></a>Postupy: Povolení technologie IntelliSense pro projekty souborů pravidel
 
 Technologie IntelliSense se v projektech makefile nezdařila, pokud je nastavení některých projektů nebo možností kompilátoru nesprávně nastaveno. Pomocí těchto kroků můžete nakonfigurovat projekty makefile tak, aby technologie IntelliSense fungovala podle očekávání:
 
@@ -86,7 +86,7 @@ Technologie IntelliSense se v projektech makefile nezdařila, pokud je nastaven�
 
    - Nastavte vlastnost **zahrnout cestu pro hledání** tak, aby určovala seznam adresářů, které kompilátor vyhledá, aby vyřešil odkazy na soubory, které jsou předány direktivám preprocesoru v projektu makefile. Další informace najdete v tématu [/i (další adresáře k zahrnutí)](i-additional-include-directories.md).
 
-    - Pro projekty vytvořené pomocí CL. Z příkazového okna nastavte proměnnou prostředí **include** tak, aby určovala adresáře, které kompilátor bude hledat, aby vyřešil odkazy na soubory, které jsou předány direktivám preprocesoru v projektu makefile.
+   - Pro projekty vytvořené pomocí CL. Z příkazového okna nastavte proměnnou prostředí **include** tak, aby určovala adresáře, které kompilátor bude hledat, aby vyřešil odkazy na soubory, které jsou předány direktivám preprocesoru v projektu makefile.
 
    - Nastavte vlastnost **Vynucené zahrnutí** k určení, které soubory hlaviček mají být zpracovány při sestavování projektu makefile. Další informace najdete v tématu [/Fi (zahrnutý soubor s povinným názvem)](fi-name-forced-include-file.md).
 
@@ -102,10 +102,10 @@ Technologie IntelliSense se v projektech makefile nezdařila, pokud je nastaven�
 
 Při příštím otevření projektu makefile ve vývojovém prostředí sady Visual Studio spusťte příkaz **Vyčistit řešení** a poté příkaz **Sestavit řešení** v projektu makefile. Technologie IntelliSense by měla v integrovaném vývojovém prostředí fungovat správně.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Používání atributu IntelliSense](/visualstudio/ide/using-intellisense)<br>
 [NMAKE – referenční zdroje](nmake-reference.md)<br>
-[Postupy: Vytvoření C++ projektu z existujícího kódu](../how-to-create-a-cpp-project-from-existing-code.md)
-[speciální znaky v souboru pravidel](special-characters-in-a-makefile.md)<br/>
+[Postupy: vytvoření C++ projektu z existujícího kódu](../how-to-create-a-cpp-project-from-existing-code.md)
+[speciálních znaků v souboru pravidel](special-characters-in-a-makefile.md)<br/>
 [Obsah souboru pravidel](contents-of-a-makefile.md)<br/>

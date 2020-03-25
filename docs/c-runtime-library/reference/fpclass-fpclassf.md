@@ -33,12 +33,12 @@ helpviewer_keywords:
 - _fpclass function
 - _fpclassf function
 ms.assetid: 2774872d-3543-446f-bc72-db85f8b95a6b
-ms.openlocfilehash: db95453a44f6a55d4bf98638351dcda4bd8377c9
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 982bd5fb33ef2e14785c775a9b79b0adc8f3a459
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857837"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170212"
 ---
 # <a name="_fpclass-_fpclassf"></a>_fpclass, _fpclassf
 
@@ -58,7 +58,7 @@ int _fpclassf(
 
 ### <a name="parameters"></a>Parametry
 
-*x*<br/>
+*znak*<br/>
 Hodnota s plovoucí desetinnou čárkou, která má být testována.
 
 ## <a name="return-value"></a>Návratová hodnota
@@ -90,7 +90,7 @@ Funkce **_fpclass** a **_fpclassf** jsou specifické pro společnost Microsoft. 
 
 Další informace o kompatibilitě a dodržování shody najdete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)<br/>
 [isnan, _isnan, _isnanf](isnan-isnan-isnanf.md)<br/>

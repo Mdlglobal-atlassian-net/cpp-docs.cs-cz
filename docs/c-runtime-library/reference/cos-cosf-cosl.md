@@ -34,12 +34,12 @@ helpviewer_keywords:
 - trigonometric functions
 - cosines, calculating
 ms.assetid: ae90435e-6b68-4a47-a81f-be87d5c08f16
-ms.openlocfilehash: 4d07a8636aabc4973c7beb9725a39e98c229a098
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 9ec612aa9f8c6eaf1731d62b654d45841cdfa159
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70942824"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170252"
 ---
 # <a name="cos-cosf-cosl"></a>cos, cosf, cosl
 
@@ -60,7 +60,7 @@ long double cos( long double x );  // C++ only
 
 ### <a name="parameters"></a>Parametry
 
-*x*<br/>
+*znak*<br/>
 Úhel v radiánech.
 
 ## <a name="return-value"></a>Návratová hodnota
@@ -69,7 +69,7 @@ Kosinus hodnoty *x*. Pokud *x* je větší nebo rovno 263 nebo menší než nebo
 
 |Vstup|Výjimka SEH|Výjimka matherr|
 |-----------|-------------------|-----------------------|
-|QNAN, ZASÁHNOUT|žádná|**_DOMAIN**|
+|QNAN, ZASÁHNOUT|Žádná|**_DOMAIN**|
 |± INF|**NENÍ**|**_DOMAIN**|
 
 ## <a name="remarks"></a>Poznámky
@@ -80,7 +80,7 @@ Vzhledem C++ k tomu, že umožňuje přetížení, můžete volat přetížení 
 
 |Rutina|Povinné záhlaví jazyka C|Požadovaná C++ hlavička|
 |-------------|---------------------|-|
-|**cos**, **cosh**, **cosf**|\<Math. h >|\<cmath > nebo \<Math. h >|
+|**cos**, **cosh –** , **cosf –**|\<Math. h >|\<cmath > nebo \<Math. h >|
 
 Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
@@ -88,7 +88,7 @@ Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-r
 
 Podívejte se na příklad ve [Sin, sinf –, Sinl](sin-sinf-sinl.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)<br/>
 [acos, acosf, acosl](acos-acosf-acosl.md)<br/>

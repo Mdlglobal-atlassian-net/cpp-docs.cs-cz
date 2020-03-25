@@ -6,12 +6,12 @@ helpviewer_keywords:
 - class libraries [MFC], MFC
 - MFC, application development
 ms.assetid: 617e9945-9bb3-471d-a3ba-e235fcfb55d1
-ms.openlocfilehash: 5f4c75e3f8bd8f7d32109cf92465dfa6e5aba6ed
-ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
+ms.openlocfilehash: 571be8300f46ceecdc65df92d35c731bec96a92a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71095863"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169982"
 ---
 # <a name="general-mfc-topics"></a>Obecná témata MFC
 
@@ -23,7 +23,7 @@ Rozhraní MFC je přístupem, který umožňuje využít jako základ práci odb
 
 ## <a name="in-this-section"></a>V tomto oddílu
 
-`MFC Samples`, které jsou zadány [v C++ vizuálních ukázkách](../overview/visual-cpp-samples.md)
+[Ukázky knihovny MFC](../overview/visual-cpp-samples.md#mfc-samples)
 
 [Použití zdrojových souborů MFC](../mfc/using-the-mfc-source-files.md)
 
@@ -33,7 +33,7 @@ Rozhraní MFC je přístupem, který umožňuje využít jako základ práci odb
 
 [Sestavení na základě rozhraní .NET Framework](../mfc/building-on-the-framework.md)
 
-[CWinApp: Třída aplikace](../mfc/cwinapp-the-application-class.md)
+[CWinApp – třída aplikace](../mfc/cwinapp-the-application-class.md)
 
 [Šablony dokumentů a proces vytváření dokumentů/zobrazení](../mfc/document-templates-and-the-document-view-creation-process.md)
 
@@ -55,6 +55,6 @@ Přehled Referenční dokumentace knihovny MFC naleznete v tématu [Knihovna Mic
 
 Informace o knihovně ATL naleznete v tématu [Reference knihovny Active Template Library](../atl/atl-class-overview.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Práce s objekty oken](../mfc/working-with-window-objects.md)

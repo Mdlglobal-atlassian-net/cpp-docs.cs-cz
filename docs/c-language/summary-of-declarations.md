@@ -2,12 +2,12 @@
 title: Souhrn deklarací
 ms.date: 11/04/2016
 ms.assetid: 53a5e9e5-1a33-40b5-9dea-7f669b479329
-ms.openlocfilehash: 88cfc78089e0efd4765a40ab0d9c6dc333deb125
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: e553f4bdfffcd4bba6a39b2d37af6ba25a3d65d9
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857018"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170433"
 ---
 # <a name="summary-of-declarations"></a>Souhrn deklarací
 
@@ -15,9 +15,9 @@ ms.locfileid: "74857018"
 &nbsp;&nbsp;&nbsp;&nbsp;atribut *deklarace-specifikátor* *-SEQ*<sub>opt</sub> *-deklarátor-list*<sub>opt</sub> **;**
 
 *specifikátory deklarace*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*třídy úložiště* -specifikátory *deklarace specifikátor-* <sub></sub> specifikátory<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*specifikátory*<sub></sub> *specifikátoru typu*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*specifikátory*<sub></sub> *kvalifikátoru typu* -deklarace
+&nbsp;&nbsp;&nbsp;&nbsp;*třídy úložiště* -specifikátory *deklarace specifikátor-* <sub>opt</sub> specifikátory<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*specifikátory*<sub>opt</sub> *specifikátoru typu*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*specifikátory*<sub>opt</sub> *kvalifikátoru typu* -deklarace
 
 *atribut-seq* :&nbsp;&nbsp;&nbsp;&nbsp;/\* \*specifických pro společnost Microsoft /<br/>
 &nbsp;&nbsp;&nbsp;atributu *atributu* &nbsp; *– SEQ*<sub>opt</sub>
@@ -25,13 +25,13 @@ ms.locfileid: "74857018"
 *atribut* : jedna z&nbsp;&nbsp;&nbsp;&nbsp;/\* \*pro konkrétní Microsoft /<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;[__asm](../assembler/inline/asm.md) [__clrcall](../cpp/clrcall.md) [__stdcall](../cpp/stdcall.md) [__based](../cpp/based-grammar.md) [__fastcall](../cpp/fastcall.md) [__thiscall](../cpp/thiscall.md) [__cdecl](../cpp/cdecl.md) [__inline](../cpp/inline-functions-cpp.md) [__vectorcall](../cpp/vectorcall.md)
 
-*init-declarator-list*:<br/>
+*init-deklarátor-list*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*init-deklarátor*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Init-declarator-list* **,** *init-declarator*
+&nbsp;&nbsp;&nbsp;&nbsp;*init-deklarátor-list* **,** *init-deklarátor*
 
 *init-deklarátor*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*deklarátor*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*deklarátor* **=** *inicializátor*  / \* pro skalární inicializace \*/
+&nbsp;&nbsp;&nbsp;&nbsp;*deklarátor* **=** *inicializátor* /\* pro skalární inicializaci \*/
 
 *specifikátor třídy úložiště*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**auto**<br/>
@@ -73,9 +73,9 @@ ms.locfileid: "74857018"
 &nbsp;&nbsp;&nbsp;&nbsp;*Direct deklarátor* **(** *parametr-Type-list* **)**  /\* nového stylu deklarátor \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Direct-deklarátor* **(** opt *-list*<sub>opt</sub> **)**  /\* zastaralý styl deklarátor \*/
 
-*pointer*:<br/>
+*ukazatel*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<strong>\*</strong> *kvalifikátor typu – zobrazit*<sub>výslovný souhlas</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<strong>\*</strong> *kvalifikátor typu – ukazatel na seznam*<sub>opt</sub>
+&nbsp;&nbsp;&nbsp;&nbsp;<strong>\*</strong> *kvalifikátor typu – ukazatel na seznam*<sub>opt</sub> *pointer*
 
 *parametr-Type-list*:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/\* seznamu parametrů \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*parametr-list*<br/>
@@ -90,8 +90,8 @@ ms.locfileid: "74857018"
 &nbsp;&nbsp;&nbsp;*typ &nbsp;kvalifikátor –* *kvalifikátor typu* seznamu
 
 *specifikátor výčtu*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**identifikátor výčtu**<sub>opt</sub> **{** *Enumerator-list* **}**<br/>
-&nbsp;&nbsp;&nbsp;identifikátor **výčtu** &nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;**identifikátor výčtu** *identifier*<sub>opt</sub> **{** *Enumerator-list* **}**<br/>
+&nbsp;&nbsp;&nbsp;identifikátor **výčtu** *identifier* &nbsp;
 
 *seznam enumerátorů*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*enumerátor*<br/>
@@ -99,13 +99,13 @@ ms.locfileid: "74857018"
 
 *enumerátor*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*výčtu – konstanta*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Konstanta výčtu* **=** *konstantního výrazu.*
+&nbsp;&nbsp;&nbsp;&nbsp;*Enumeration-konstanta* **=** *konstantní výraz*
 
 *konstanta výčtu*:<br/>
 *identifikátor* &nbsp;&nbsp;&nbsp;&nbsp;
 
 *specifikátor struct nebo Union*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; *-li identifikátor sjednocení nebo identifikátor sjednocení*<sub></sub> **{** *struct-Declaration-list* **}**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; *-li identifikátor sjednocení nebo identifikátor sjednocení* *identifier*<sub>opt</sub> **{** *struct-Declaration-list* **}**<br/>
 &nbsp;&nbsp;&nbsp;*identifikátoru* *struktury &nbsp;nebo Union*
 
 *Struktura nebo sjednocení*:<br/>
@@ -119,14 +119,14 @@ ms.locfileid: "74857018"
 *deklarace struktury*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*specifikátor-kvalifikátor-list* *struct-deklarátor-list* **;**
 
-*specifier-qualifier-list*:<br/>
-&nbsp;&nbsp;&nbsp;specifikátoru *specifikátoru typu* &nbsp;– *kvalifikátor – seznam*<sub></sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;specifikátor *kvalifikátoru typu* – *kvalifikátor – seznam*<sub></sub>
+*specifikátor – kvalifikátor – seznam*:<br/>
+&nbsp;&nbsp;&nbsp;specifikátoru *specifikátoru typu* &nbsp;– *kvalifikátor – seznam*<sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;specifikátor *kvalifikátoru typu* – *kvalifikátor – seznam*<sub>opt</sub>
 
-*struct-declarator-list*:<br/>
+*Struktura – deklarátor-list*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*struct-deklarátor* *struct-deklarátor-list* **,** *struct-deklarátor*
 
-*struct-declarator*:<br/>
+*Struktura – deklarátor*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*deklarátor*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*specifikátor typu* *deklarátor*<sub>opt</sub> **:** *konstantní výraz*
 
@@ -140,15 +140,15 @@ ms.locfileid: "74857018"
 
 *abstract-deklarátor*:/\* používá se anonymní deklarátory \*/<br/>
 &nbsp;&nbsp;&nbsp;*ukazatel* &nbsp;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*pointer*<sub>opt</sub> *direct-abstract-declarator*
+&nbsp;&nbsp;&nbsp;&nbsp;*ukazatel*<sub>opt</sub> *Direct-abstract-deklarátor*
 
-*direct-abstract-declarator*:<br/>
+*Direct-abstract-deklarátor*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp; **(** *abstract-deklarátor* **)**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*direct-abstract-declarator*<sub>opt</sub> **[** *constant-expression*<sub>opt</sub> **]**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Direct-abstract-deklarátor*<sub>opt</sub> **[** *constant-expression*<sub>opt</sub> **]**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Direct-abstract-deklarátor*<sub>opt</sub> **(** možnost<sub>opt</sub> - *Type-list* **)**
 
 *inicializátor*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*assignment-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*přiřazení-výraz*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp; **{** *inicializátor-list* **}**  /\* pro agregovanou inicializaci \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp; **{** *inicializátor-list* **,}**
 
@@ -163,8 +163,8 @@ ms.locfileid: "74857018"
 *identifikátor* &nbsp;&nbsp;&nbsp;&nbsp;
 
 Rozšířený-&nbsp;– *Modifikátor-SEQ*: &nbsp;&nbsp;&nbsp;/\* \*specifické pro společnost Microsoft /<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*extended-decl-modifier*<sub>opt</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*extended-decl-modifier-seq* *extended-decl-modifier*
+&nbsp;&nbsp;&nbsp;&nbsp;*Rozšířené-prohlášení-modifikátor*<sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Extended---modifikátor-SEQ* *Extended---modifikátor*
 
 *Rozšířené – modifikátor*:&nbsp;&nbsp;&nbsp;&nbsp;/\* \*pro konkrétní Microsoft /<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**vlákno**<br/>
@@ -172,7 +172,7 @@ Rozšířený-&nbsp;– *Modifikátor-SEQ*: &nbsp;&nbsp;&nbsp;/\* \*specifické 
 &nbsp;&nbsp;&nbsp;&nbsp;**dllimport**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**dllexport**
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Konvence volání](../cpp/calling-conventions.md)<br/>
 [Gramatika struktury fráze](../c-language/phrase-structure-grammar.md)<br/>

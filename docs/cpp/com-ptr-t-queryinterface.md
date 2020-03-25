@@ -7,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - QueryInterface method [C++]
 ms.assetid: d03292f1-6b02-40db-9756-8b0837a97319
-ms.openlocfilehash: 42953c92e4cf31b5ccd02dd51811fc1fdeedbcaf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 26dda2dff83ff0adbb7ef05c5e75f64b44138bd8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399275"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170668"
 ---
-# <a name="comptrtqueryinterface"></a>_com_ptr_t::QueryInterface
+# <a name="_com_ptr_tqueryinterface"></a>_com_ptr_t::QueryInterface
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
-Volání **QueryInterface** členskou funkci `IUnknown` na zapouzdřený ukazatel rozhraní.
+Volá členskou funkci **QueryInterface** `IUnknown` na ukazatel zapouzdřeného rozhraní.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -35,18 +35,18 @@ template<typename _InterfaceType> HRESULT QueryInterface (
 
 #### <a name="parameters"></a>Parametry
 
-*iid*<br/>
-`IID` z ukazatele rozhraní.
+*identifikátor*<br/>
+`IID` ukazatele rozhraní.
 
-*p*<br/>
-Nezpracovaný ukazatel rozhraní.
+*trub*<br/>
+Nezpracovaný ukazatel rozhraní
 
 ## <a name="remarks"></a>Poznámky
 
-Volání `IUnknown::QueryInterface` na zapouzdřený ukazatel rozhraní se zadaným `IID` a vrátí výsledný nezpracovaného ukazatele rozhraní v *p*. Tato rutina vrátí hodnotu HRESULT indikuje úspěch nebo selhání.
+Volá `IUnknown::QueryInterface` na ukazatel zapouzdřeného rozhraní se zadaným `IID` a vrátí výsledný ukazatel nezpracovaného nezpracovaného rozhraní v *p*. Tato rutina vrátí HRESULT, aby označovala úspěch nebo neúspěch.
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [_com_ptr_t – třída](../cpp/com-ptr-t-class.md)

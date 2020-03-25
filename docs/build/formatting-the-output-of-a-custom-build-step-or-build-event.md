@@ -9,43 +9,43 @@ helpviewer_keywords:
 - build steps [C++], output format
 - builds [C++], custom build steps
 ms.assetid: 92ad3e38-24d7-4b89-90e6-5a16f5f998da
-ms.openlocfilehash: b0e9a7514704742524f97e55c06ef47c7b36631b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 09bf8485a352d6ec2c1297f8a1be508cb7476c31
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62195365"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169822"
 ---
 # <a name="formatting-the-output-of-a-custom-build-step-or-build-event"></a>Formátovaní výstupu vlastního kroku sestavení nebo události sestavení
 
-Pokud výstupu vlastního kroku sestavení nebo události sestavení je správný, uživatelé, získáte následující výhody:
+Pokud je výstup vlastního kroku sestavení nebo události sestavení správně naformátován, uživatelé získají následující výhody:
 
-- Upozornění a chyby se počítají v **výstup** okna.
+- Upozornění a chyby se počítají v okně **výstup** .
 
-- Výstup se zobrazí v **seznamu úkolů** okna.
+- Výstup se zobrazí v okně **seznam úkolů** .
 
-- Kliknutím na výstup v **výstup** okně zobrazí příslušné téma.
+- Kliknutím na výstup v okně **výstup** se zobrazí příslušné téma.
 
-- Jsou povoleny operace F1 v **seznamu úkolů** okno nebo **výstup** okna.
+- V okně **seznam úkolů** nebo okně **výstup** jsou povoleny operace F1.
 
-Formát výstupu by měl být:
+Výstup by měl mít tento formát:
 
-> {<em>filename</em>**(**<em>řádek #</em> \[ **,** <em>sloupec #</em>]**)** &#124; *název nástroje*} **:** \[ <em>jakýkoli text</em> ] {**chyba** &#124;  **upozornění**} <em>+ číslo</em>**:**<em>zdrojů lokalizovatelných řetězců</em> \[ <em>jakýkoli text</em> ]
+> {<em>filename</em> **(** <em>řádek #</em> \[ **,** <em>sloupec #</em>] **)** &#124; *Tool*} **:** \[ <em>libovolný text</em> ] {Warning**Error** &#124; **warning**} <em>Code + Number</em> **:** <em>Lokalizovatelný řetězec</em> \[ <em>libovolný text</em> ]
 
-kde:
+Kde:
 
-- {*a* &#124; *b*} je volbou buď *a* nebo *b*.
+- {*a* &#124; *b*} je volba buď *a* , nebo *b*.
 
-- \[<em>Položka</em>] je volitelný řetězec nebo parametru.
+- \[<em>položka</em>] je volitelný řetězec nebo parametr.
 
 - **Tučné** představuje literál.
 
 Příklad:
 
-> C:\\*sourcefile.cpp*(134): chyba C2143: Chyba syntaxe: chybí ";" před "}"
+> C:\\*požadovaný sourcefile. cpp*(134): Chyba C2143: Chyba syntaxe: chybějící '; ' před '} '
 >
-> LINK: závažná chyba LNK1104: Nelze otevřít soubor "*somelib.lib*.
+> ODKAZ: závažná chyba LINKERŮ LNK1104: nejde otevřít soubor*somelib. lib.*
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Seznámení s kroky vlastního sestavení a s událostmi sestavení](understanding-custom-build-steps-and-build-events.md)

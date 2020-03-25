@@ -25,12 +25,12 @@ helpviewer_keywords:
 - aborting current process
 - abort function
 - processes, aborting
-ms.openlocfilehash: 3f183d6fbf9d7bce7f638e44cdc3f3b450def57b
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 46c8e25483799df3211a5022be6c4338f2c4732a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70943989"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170394"
 ---
 # <a name="abort"></a>abort
 
@@ -47,13 +47,13 @@ void abort( void );
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**přerušení** nevrátí řízení volajícímu procesu. Ve výchozím nastavení kontroluje popisovač signálu přerušení a vyvolá `SIGABRT` , pokud je nastavena hodnota. Pak **přerušení** ukončí aktuální proces a vrátí ukončovací kód nadřazenému procesu.
+**přerušení** nevrátí řízení volajícímu procesu. Ve výchozím nastavení kontroluje popisovač signálu přerušení a vyvolává `SIGABRT`, je-li nastavena jedna. Pak **přerušení** ukončí aktuální proces a vrátí ukončovací kód nadřazenému procesu.
 
 ## <a name="remarks"></a>Poznámky
 
 **Specifické pro společnost Microsoft**
 
-Ve výchozím nastavení, když je aplikace sestavena pomocí běhové běhové knihovny , před `SIGABRT` vyvoláním rutiny Abort se zobrazí chybová zpráva. V případě konzolových aplikací spuštěných v režimu konzoly je zpráva odeslána `STDERR`na adresu. Aplikace klasické pracovní plochy systému Windows a konzolové aplikace spuštěné v režimu okna zobrazí zprávu v okně se zprávou. Pokud chcete zprávu potlačit, použijte [_set_abort_behavior](set-abort-behavior.md) a vymažte `_WRITE_ABORT_MSG` příznak. Zobrazená zpráva závisí na verzi používaného běhového prostředí. Pro aplikace sestavené pomocí nejaktuálnější verze vizuálu C++se zpráva podobá této:
+Ve výchozím nastavení, když je aplikace sestavena pomocí běhové běhové knihovny, rutina **Abort** před vyvoláním `SIGABRT` zobrazí chybovou zprávu. Pro konzolové aplikace spuštěné v režimu konzoly se zpráva pošle `STDERR`. Aplikace klasické pracovní plochy systému Windows a konzolové aplikace spuštěné v režimu okna zobrazí zprávu v okně se zprávou. Chcete-li potlačit zprávu, použijte [_set_abort_behavior](set-abort-behavior.md) k vymazání příznaku `_WRITE_ABORT_MSG`. Zobrazená zpráva závisí na verzi používaného běhového prostředí. Pro aplikace sestavené pomocí nejaktuálnější verze vizuálu C++se zpráva podobá této:
 
 > R6010-Abort () bylo voláno.
 
@@ -63,11 +63,11 @@ V předchozích verzích běhové knihovny jazyka C se tato zpráva zobrazila:
 
 Když je program kompilován v režimu ladění, okno se zprávou zobrazí možnosti **přerušení**, **opakování**nebo **ignorování**. Pokud uživatel zvolí **přerušení**, program se okamžitě ukončí a vrátí ukončovací kód 3. Pokud uživatel zvolí **opakování**, ladicí program je vyvolán pro ladění za běhu, je-li k dispozici. Pokud uživatel zvolí možnost **Ignorovat**, operace **přerušit** pokračuje normálním zpracováním.
 
-V maloobchodních i ladicích sestaveních **přeruší** aplikace kontrolu, zda je nastavena obslužná rutina přerušení signálu. Pokud je nastavena obslužná rutina jiného než výchozího signálu, **přeruší** volání `raise(SIGABRT)`. Pomocí funkce [Signal](signal.md) přidružte funkci `SIGABRT` obslužné rutiny signálu přerušení k signálu. Můžete provádět vlastní akce – například vyčistit prostředky nebo protokolovat informace – a ukončit aplikaci s vlastním kódem chyby ve funkci obslužné rutiny. Pokud není definován žádný vlastní obslužná rutina signálu, **přerušení** nevyvolává `SIGABRT` signál.
+V maloobchodních i ladicích sestaveních **přeruší** aplikace kontrolu, zda je nastavena obslužná rutina přerušení signálu. Pokud je nastavena obslužná rutina jiného než výchozího signálu, **přeruší** volání `raise(SIGABRT)`. Pomocí funkce [Signal](signal.md) přidružte funkci obslužné rutiny signalizace přerušení s signálem `SIGABRT`. Můžete provádět vlastní akce – například vyčistit prostředky nebo protokolovat informace – a ukončit aplikaci s vlastním kódem chyby ve funkci obslužné rutiny. Pokud není definován žádný vlastní obslužná rutina signálu, **přerušení** nevyvolává signál `SIGABRT`.
 
-Ve výchozím nastavení se v neladit buildu desktopových nebo konzolových aplikací **přeruší** a vyvolá mechanismus služby zasílání zpráv o chybách systému Windows (dřív označovaný jako Dr. Watson) k nahlášení selhání společnosti Microsoft. Toto chování lze povolit nebo zakázat voláním `_set_abort_behavior` a nastavením nebo maskování `_CALL_REPORTFAULT` příznaku. Pokud je nastaven příznak, systém Windows zobrazí okno se zprávou s textem "problém způsobil, že program přestal pracovat správně." Uživatel může zvolit vyvolání ladicího programu s tlačítkem **ladění** nebo kliknutím na tlačítko **Zavřít program** ukončit aplikaci s kódem chyby, který je definován operačním systémem.
+Ve výchozím nastavení se v neladicích sestavách desktopových nebo konzolových aplikací **přeruší** a vyvolá mechanismus služby zasílání zpráv o chybách systému Windows (dřív označovaný jako Dr. Watson) k nahlášení selhání společnosti Microsoft. Toto chování lze povolit nebo zakázat voláním `_set_abort_behavior` a nastavením nebo maskování příznaku `_CALL_REPORTFAULT`. Pokud je nastaven příznak, systém Windows zobrazí okno se zprávou s textem "problém způsobil, že program přestal pracovat správně." Uživatel může zvolit vyvolání ladicího programu s tlačítkem **ladění** nebo kliknutím na tlačítko **Zavřít program** ukončit aplikaci s kódem chyby, který je definován operačním systémem.
 
-Pokud není vyvolána obslužná rutina zasílání zpráv o chybách systému Windows, **přeruší** volání [_exit](exit-exit-exit.md) k ukončení procesu s ukončovacím kódem 3 a vrátí řízení nadřazenému procesu nebo operačnímu systému. `_exit`nevyprázdní vyrovnávací paměti datového proudu ani `atexit` / `_onexit` zpracování.
+Pokud není vyvolána obslužná rutina zasílání zpráv o chybách systému Windows, **přeruší** volání [_exit](exit-exit-exit.md) k ukončení procesu s ukončovacím kódem 3 a vrátí řízení nadřazenému procesu nebo operačnímu systému. `_exit` nevyprázdní vyrovnávací paměti datového proudu ani `atexit`/zpracování `_onexit`.
 
 Další informace o ladění CRT naleznete v tématu [techniky ladění CRT](/visualstudio/debugger/crt-debugging-techniques).
 
@@ -77,7 +77,7 @@ Další informace o ladění CRT naleznete v tématu [techniky ladění CRT](/vi
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**abort**|\<Process. h > \<nebo Stdlib. h >|
+|**abort**|\<Process. h > nebo \<Stdlib. h >|
 
 ## <a name="example"></a>Příklad
 
@@ -115,7 +115,7 @@ int main( void )
 File could not be opened: No such file or directory
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Použití funkce abort](../../cpp/using-abort.md)<br/>
 [abort – funkce](../../c-language/abort-function-c.md)<br/>

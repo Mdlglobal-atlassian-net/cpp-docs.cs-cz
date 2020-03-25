@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - __RTDynamicCast
 ms.assetid: 56aa2d7a-aa47-46ef-830d-e37175611239
-ms.openlocfilehash: c4b0caadf20d6c5494acf47ee5a788b5ee009c47
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a5384966ff96c4e4831ba06f7c67467156a9ecd2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957331"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170069"
 ---
 # <a name="__rtdynamiccast"></a>__RTDynamicCast
 
@@ -52,7 +52,7 @@ Ukazatel na polymorfní objekt.
 Posun ukazatele virtuální funkce v objektu
 
 *SrcType*<br/>
-Statický typ objektu, na který `inptr` ukazuje parametr.
+Statický typ objektu, na který ukazuje parametr `inptr`.
 
 *TargetType*<br/>
 Zamýšlený výsledek funkce CAST
@@ -66,11 +66,11 @@ Ukazatel na příslušný dílčí objekt, pokud je úspěšný; v opačném př
 
 ## <a name="exceptions"></a>Výjimky
 
-`bad_cast()`Pokud `dynamic_cast<>` je vstupem odkaz a přetypování se nezdařilo.
+`bad_cast()`, pokud je vstup `dynamic_cast<>` odkazem a přetypování se nezdařilo.
 
 ## <a name="remarks"></a>Poznámky
 
-Převede `inptr` na objekt typu `TargetType`. Typ `inptr` musí být ukazatel, pokud `TargetType` je ukazatel nebo l-hodnota, pokud `TargetType` je odkazem. `TargetType`musí se jednat o ukazatel nebo odkaz na dříve definovaný typ třídy nebo ukazatel na void.
+Převede `inptr` na objekt typu `TargetType`. Typ `inptr` musí být ukazatel, pokud `TargetType` je ukazatel nebo l-hodnota, pokud je `TargetType` odkazem. `TargetType` musí být ukazatel nebo odkaz na dříve definovaný typ třídy nebo ukazatel na void.
 
 ## <a name="requirements"></a>Požadavky
 

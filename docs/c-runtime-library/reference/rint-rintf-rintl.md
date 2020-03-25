@@ -30,12 +30,12 @@ helpviewer_keywords:
 - rint function
 - rintl function
 ms.assetid: 312ae3e6-278c-459a-9393-11b8f87d9184
-ms.openlocfilehash: 57c4dc60d6b4d29e5c46fa6f1d03d0710ed44309
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: ac9db3ee5a50bb334754a8a1191638a319829b97
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949267"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170888"
 ---
 # <a name="rint-rintf-rintl"></a>rint, rintf, rintl
 
@@ -56,17 +56,17 @@ long double rint( long double x );  // C++ only
 
 ### <a name="parameters"></a>Parametry
 
-*x*<br/>
+*znak*<br/>
 Hodnota s plovoucí desetinnou čárkou, která má být zaokrouhlena.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Funkce **isknout** vrací hodnotu s plovoucí desetinnou čárkou, která představuje nejbližší celé číslo na *ose x*. Hodnoty uprostřed jsou zaokrouhleny podle aktuálního nastavení režimu zaokrouhlení s plovoucí desetinnou čárkou, stejné jako funkce **nearbyint –** . Na rozdíl od funkcí **nearbyint –** mohou funkce **isknout** vyvolat výjimku **FE_INEXACT** s plovoucí desetinnou čárkou, pokud se výsledek liší hodnotou z argumentu. Nevrátila se žádná chybová zpráva.
+Funkce **isknout** vrací hodnotu s plovoucí desetinnou čárkou, která představuje nejbližší celé číslo na *ose x*. Hodnoty uprostřed jsou zaokrouhleny podle aktuálního nastavení režimu zaokrouhlení s plovoucí desetinnou čárkou, stejné jako funkce **nearbyint –** . Na rozdíl od funkcí **nearbyint –** mohou funkce **isknout** vyvolat výjimku **FE_INEXACT** s plovoucí desetinnou čárkou, pokud se výsledek liší od hodnoty argumentu. Nevrátila se žádná chybová zpráva.
 
 |Vstup|Výjimka SEH|**_matherr** Jímka|
 |-----------|-------------------|--------------------------|
-|∞, QNAN, ZASÁHNOUT|žádná|žádná|
-|Denormalizované|EXCEPTION_FLT_UNDERFLOW|žádná|
+|∞, QNAN, ZASÁHNOUT|Žádná|Žádná|
+|Denormalizované|EXCEPTION_FLT_UNDERFLOW|Žádná|
 
 ## <a name="remarks"></a>Poznámky
 
@@ -116,7 +116,7 @@ rintl(2.500000) is 3
 rintl(-2.500000) is -3
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)<br/>
 [ceil, ceilf, ceill](ceil-ceilf-ceill.md)<br/>

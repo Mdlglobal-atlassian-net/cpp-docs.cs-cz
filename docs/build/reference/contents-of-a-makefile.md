@@ -5,35 +5,35 @@ helpviewer_keywords:
 - makefiles
 - makefiles, contents
 ms.assetid: 29362adb-d963-4c00-84a6-b38c2ffe6a36
-ms.openlocfilehash: 59aa21e74a7e127816fea7534861469579d5b60f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 208b2dcf6c170c6c4fdc814a299a2657adc364a4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62294093"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169913"
 ---
 # <a name="contents-of-a-makefile"></a>Obsah souboru pravidel
 
 Soubor pravidel obsahuje:
 
-- [Bloky popisů](description-blocks.md)
+- [Bloky popisu](description-blocks.md)
 
-- [Příkazy](commands-in-a-makefile.md)
+- [Příkaz](commands-in-a-makefile.md)
 
-- [Makra](macros-and-nmake.md)
+- [Makr](macros-and-nmake.md)
 
 - [Odvozená pravidla](inference-rules.md)
 
-- [Direktivy s tečkou](dot-directives.md)
+- [Dot – direktivy](dot-directives.md)
 
 - [Direktivy předběžného zpracování](makefile-preprocessing.md)
 
 ## <a name="remarks"></a>Poznámky
 
-Další funkce můžete použít v souboru pravidel jsou [zástupné znaky](wildcards-and-nmake.md), [dlouhé názvy souborů](long-filenames-in-a-makefile.md), [komentáře](comments-in-a-makefile.md), a [speciální znaky](special-characters-in-a-makefile.md).
+Další funkce, které můžete použít v souboru pravidel, jsou [zástupné znaky](wildcards-and-nmake.md), [dlouhé názvy souborů](long-filenames-in-a-makefile.md), [Komentáře](comments-in-a-makefile.md)a [speciální znaky](special-characters-in-a-makefile.md).
 
-Ukázku najdete v tématu [ukázkový soubor pravidel](sample-makefile.md).
+Ukázku naleznete v tématu [Sample makefile](sample-makefile.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [NMAKE – referenční zdroje](nmake-reference.md)

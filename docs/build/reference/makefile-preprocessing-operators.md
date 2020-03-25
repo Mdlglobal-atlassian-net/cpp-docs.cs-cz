@@ -9,65 +9,65 @@ helpviewer_keywords:
 - DEFINED operator
 - makefiles, preprocessing operators
 ms.assetid: a46e4d39-afdb-43c1-ac3b-025d33e6ebdb
-ms.openlocfilehash: 4101c2fe30bcba44e9b69ed4d6d022845e6e8904
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2276f6a3c28c6f2fac509ef0e4bc14cce9932582
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62321576"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170460"
 ---
 # <a name="makefile-preprocessing-operators"></a>Operátory předběžného zpracování souboru pravidel
 
-Výrazy předběžného zpracování souboru pravidel, můžete použít operátory, které fungují na konstantní hodnoty, ukončovací kód z příkazů, řetězce, makra a cesty k systému souborů. Vyhodnotit výraz, preprocesor nejprve rozbalí makra a pak provede příkazy a pak provádí operace. Operace se vyhodnocují v pořadí explicitní seskupování v závorkách a potom v pořadí podle priority operátorů. Výsledkem je konstantní hodnota.
+Výrazy předběžného zpracování souboru pravidel můžou používat operátory, které se chovají na konstantních hodnotách, ukončovací kódy z příkazů, řetězců, maker a cest k systémům souborů. Pro vyhodnocení výrazu preprocesor nejprve rozbalí makra a pak provede příkazy a pak provede operace. Operace se vyhodnocují v pořadí explicitního seskupení v závorkách a potom v pořadí podle priority operátora. Výsledkem je konstantní hodnota.
 
-**Definované** operátor je logický operátor, který funguje na název makra. Výraz **definované (**_makro_**)** má hodnotu true Pokud *makro* je definován, i když nemá přiřazenou hodnotu. **DEFINOVANÉ** v kombinaci s **! Pokud** nebo **! ELSE IF** je ekvivalentní **! IFDEF** nebo **! OSTATNÍ IFDEF**. Ale na rozdíl od tyto direktivy **definované** lze použít v složité výrazy.
+**Definovaný** operátor je logický operátor, který funguje s názvem makra. Výraz **definovaný (** _název_makra_ **)** má hodnotu true, pokud je definován *název_makra* , i v případě, že nemá přiřazenou hodnotu. **Definováno** v kombinaci s **! Pokud** nebo **! JINAK, pokud** je ekvivalentem **! IFDEF** nebo **! JINAK IFDEF**. Nicméně na rozdíl od těchto direktiv lze **definovat** použít ve složitých výrazech.
 
-**Existují** operátor je logický operátor, který funguje na cestu systému souborů. **Existují (**_cesta_**)** má hodnotu true Pokud *cesta* existuje. Výsledek z **existují** lze použít v binární výrazy. Pokud *cesta* obsahuje mezery, uzavřete do dvojitých uvozovek.
+Operátor **existing** je logický operátor, který funguje na cestě k systému souborů. Existuje **(** _cesta_ **)** má hodnotu true, pokud *cesta* existuje. Výsledek z **existence** lze použít v binárních výrazech. Pokud *cesta* obsahuje mezery, uzavřete ji do dvojitých uvozovek.
 
-Chcete-li porovnat dva řetězce, použijte rovnosti (**==**) operátor nebo nerovnost (**! =**) – operátor. Řetězce uzavřete do dvojitých uvozovek.
+Chcete-li porovnat dva řetězce, použijte operátor rovnosti ( **==** ) nebo operátor nerovnosti ( **! =** ). Uzavřete řetězce do dvojitých uvozovek.
 
-Konstanty typu Integer unární operátory lze použít pro numerické negace (**-**), jeden je doplňují (**~**) a Logická negace (**!**).
+Celočíselné konstanty mohou používat unární operátory pro číselnou negaci ( **-** ), jeden doplněk ( **~** ) a logickou negaci ( **!** ).
 
-Výrazy můžete použít následující operátory. Operátory stejnou prioritu jsou seskupené dohromady a skupin jsou uvedeny v sestupném pořadí podle priority. Unární operátory jsou asociativní operandu vpravo. Binární operátory stejnou prioritu přidružit operandů zleva doprava.
+Výrazy mohou používat následující operátory. Operátory stejné priority jsou seskupeny dohromady a skupiny jsou uvedeny v sestupném pořadí podle priority. Unární operátory jsou spojeny s operandem vpravo. Binární operátory stejné priority přiřadí operandy zleva doprava.
 
 |Operátor|Popis|
 |--------------|-----------------|
-|**DEFINOVANÉ (** *makro* **)**|Vytvoří logickou hodnotu pro aktuální stav definice *makro*.|
-|**Existují (** *cesta* **)**|Vytvoří logickou hodnotu existence souboru lokality v *cesta*.|
+|**Definováno (** *název_makra* **)**|Vytvoří logickou hodnotu pro aktuální stav definice *název_makra*.|
+|**Existují (** *cesta* **)**|Vytvoří logickou hodnotu pro existenci souboru v *cestě*.|
 |||
-|**\!**|Unární logický operátor NOT.|
-|**~**|Unární, jeden z doplňku.|
+|**!**|Unární logický operátor NOT.|
+|**~**|Unární doplněk.|
 |**-**|Unární negace.|
 |||
 |**&#42;**|Násobení.|
 |**/**|Dělení.|
-|**%**|Modulo (zbytek).|
+|**%**|Zbytek (zbytek).|
 |||
 |**+**|Přidání.|
 |**-**|Odčítání.|
 |||
-|**\<\<**|Bitový Posun vlevo.|
-|**>>**|Bitový Posun vpravo.|
+|**\<\<**|Bitový posun vlevo.|
+|**>>**|Bitový posun vpravo.|
 |||
-|**\<=**|Menší než nebo rovno.|
-|**>=**|Větší než nebo rovno.|
-|**\<**|Menší než.|
+|**\<=**|Je menší nebo rovno.|
+|**>=**|Je větší nebo rovno.|
+|**\<**|Je menší než.|
 |**>**|Větší než.|
 |||
-|**==**|Rovnost.|
-|**\!=**|Nerovnost.|
+|**==**|Porovnávání.|
+|**!=**|Nerovnost.|
 |||
 |**&**|Bitový AND.|
 |**^**|Bitový operátor XOR.|
 |**&#124;**|Bitový operátor OR.|
 |||
-|**&&**|Logickým operátorem a.|
+|**&&**|Logický operátor AND.|
 |||
 |**&#124;&#124;**|Logický operátor OR.|
 
 > [!NOTE]
-> Bitový operátor XOR (**^**) je stejný jako řídicí znak a musí být uvozeny řídicími znaky (jako **^^**) Pokud je použit ve výrazu.
+> Bitový operátor XOR ( **^** ) je stejný jako řídicí znak a musí být uvozena řídicím znakem (jako **^^** ) při použití ve výrazu.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Výrazy v předběžném zpracování souboru pravidel](expressions-in-makefile-preprocessing.md)

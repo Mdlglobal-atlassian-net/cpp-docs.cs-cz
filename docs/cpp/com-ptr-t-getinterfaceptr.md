@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - GetInterfacePtr method [C++]
 ms.assetid: 55e3e2c7-c939-48b5-a905-4b9cbefeea7e
-ms.openlocfilehash: dba5b5e2fcebf87ef196e2f33adedf88cc42b559
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f3244d59159855ff4060c944874e859cb5ec23ab
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399301"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170732"
 ---
-# <a name="comptrtgetinterfaceptr"></a>_com_ptr_t::GetInterfacePtr
+# <a name="_com_ptr_tgetinterfaceptr"></a>_com_ptr_t::GetInterfacePtr
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
 Vrátí zapouzdřený ukazatel rozhraní.
 
@@ -28,10 +28,10 @@ Interface*& GetInterfacePtr() throw();
 
 ## <a name="remarks"></a>Poznámky
 
-Vrátí zapouzdřený ukazatel rozhraní, což může mít hodnotu NULL.
+Vrátí zapouzdřený ukazatel rozhraní, který může mít hodnotu NULL.
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [_com_ptr_t – třída](../cpp/com-ptr-t-class.md)

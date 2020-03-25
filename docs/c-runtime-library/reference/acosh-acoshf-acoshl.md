@@ -33,12 +33,12 @@ helpviewer_keywords:
 - acosh function
 - acoshl function
 ms.assetid: 6985c4d7-9e2a-44ce-9a9b-5a43015f15f7
-ms.openlocfilehash: b547bc0db23f446672c8838419aeb9b0f32c16c3
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: da1d6024cc9f00ebfc7696ddedf92ea9f25728a1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944081"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170355"
 ---
 # <a name="acosh-acoshf-acoshl"></a>acosh, acoshf, acoshl
 
@@ -59,17 +59,17 @@ long double acosh( long double x );  // C++ only
 
 ### <a name="parameters"></a>Parametry
 
-*x*<br/>
+*znak*<br/>
 Hodnota s plovoucí desetinnou čárkou.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Funkce **acosh –** vrací inverzní arkustangens kosinus (oblouk hyperbolický kosinus) *x*. Tyto funkce jsou platné v doméně *x* ≥ 1. Pokud je *x* menší než 1, `errno` je nastaveno na `EDOM` a výsledek je tiché NaN. Pokud *x* je tiché NaN, nekonečný nebo nekonečno, je vrácena stejná hodnota.
+Funkce **acosh –** vrací inverzní arkustangens kosinus (oblouk hyperbolický kosinus) *x*. Tyto funkce jsou platné v doméně *x* ≥ 1. Pokud *x* je menší než 1, `errno` je nastaveno na `EDOM` a výsledkem je tiché NaN. Pokud *x* je tiché NaN, nekonečný nebo nekonečno, je vrácena stejná hodnota.
 
-|Vstup|Výjimka SEH|`_matherr`Jímka|
+|Vstup|Výjimka SEH|Výjimka `_matherr`|
 |-----------|-------------------|--------------------------|
-|QNAN, ZASÁHNOUT, INF|žádná|žádná|
-|*x* < 1|žádná|žádná|
+|QNAN, ZASÁHNOUT, INF|Žádná|Žádná|
+|*x* < 1|Žádná|Žádná|
 
 ## <a name="remarks"></a>Poznámky
 
@@ -79,7 +79,7 @@ C++Při použití můžete volat přetížení **acosh –** , která přebíraj
 
 |Funkce|Hlavička jazyka C|C++hlaviček|
 |--------------|--------------|------------------|
-|**acosh**, **acoshf**, **acoshl**|\<Math. h >|\<cmath >|
+|**acosh –** , **acoshf –** , **acoshl**|\<Math. h >|\<cmath >|
 
 Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
 
@@ -111,7 +111,7 @@ cosh( 0.785398 ) = 1.324609
 acosh( 1.324609 ) = 0.785398
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)<br/>
 [asinh, asinhf, asinhl](asinh-asinhf-asinhl.md)<br/>

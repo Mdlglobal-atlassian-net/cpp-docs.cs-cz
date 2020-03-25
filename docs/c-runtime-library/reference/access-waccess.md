@@ -34,12 +34,12 @@ helpviewer_keywords:
 - _waccess function
 - taccess function
 ms.assetid: ba34f745-85c3-49e5-a7d4-3590bd249dd3
-ms.openlocfilehash: 90092b5d1c250fd79be107b0c36ee5641f70b30c
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 54e112db1e0d7d4ec5495d02cf56a62b51607140
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70943930"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170381"
 ---
 # <a name="_access-_waccess"></a>_access, _waccess
 
@@ -60,7 +60,7 @@ int _waccess(
 
 ### <a name="parameters"></a>Parametry
 
-*Cesta*<br/>
+*dílčí*<br/>
 Cesta k souboru nebo adresáři.
 
 *Mode*<br/>
@@ -68,7 +68,7 @@ Atribut pro čtení a zápis.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Každá funkce vrátí hodnotu 0, pokud soubor má daný režim. Funkce vrátí hodnotu-1, pokud pojmenovaný soubor neexistuje nebo nemá daný režim; v tomto případě `errno` je nastaveno, jak je uvedeno v následující tabulce.
+Každá funkce vrátí hodnotu 0, pokud soubor má daný režim. Funkce vrátí hodnotu-1, pokud pojmenovaný soubor neexistuje nebo nemá daný režim; v tomto případě je `errno` nastaveno, jak je uvedeno v následující tabulce.
 
 |||
 |-|-|
@@ -80,7 +80,7 @@ Další informace o těchto a dalších návratových kódech naleznete v témat
 
 ## <a name="remarks"></a>Poznámky
 
-Při použití se soubory funkce **_access** určuje, zda zadaný soubor nebo adresář existuje a má atributy určené hodnotou *Mode*. Při použití s adresáři Určuje **_access** jenom to, jestli existuje zadaný adresář. ve Windows 2000 a novějších operačních systémech mají všechny adresáře přístup pro čtení a zápis.
+Při použití se soubory funkce **_access** určuje, zda zadaný soubor nebo adresář existuje a má atributy určené hodnotou *Mode*. Při použití s adresáři **_access** určuje pouze to, zda existuje zadaný adresář. ve Windows 2000 a novějších operačních systémech mají všechny adresáře přístup pro čtení a zápis.
 
 |hodnota *režimu*|Kontroluje soubor pro|
 |------------------|---------------------|
@@ -91,9 +91,9 @@ Při použití se soubory funkce **_access** určuje, zda zadaný soubor nebo ad
 
 Tato funkce pouze kontroluje, zda je soubor a adresář jen pro čtení, nebo ne, nekontroluje nastavení zabezpečení systému souborů. Potřebujete přístupový token. Další informace o zabezpečení systému souborů najdete v tématu [přístupové tokeny](/windows/win32/SecAuthZ/access-tokens). Pro poskytnutí této funkce existuje třída ATL. viz [Třída CAccessToken](../../atl/reference/caccesstoken-class.md).
 
-**_waccess** je **_access**verze s velkým znakem; Argument *cesty* pro **_waccess** je řetězec s velkým znakem. **_waccess** a **_access** se chovají stejně jinak.
+**_waccess** je verze **_access**s velkým znakem; Argument *cesty* pro **_waccess** je řetězec s velkým znakem. **_waccess** a **_access** se chovají identicky jinak.
 
-Tato funkce ověří své parametry. Pokud je *cesta* null nebo *režim* neurčuje platný režim, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, funkce nastaví `errno` na `EINVAL` a vrátí-1.
+Tato funkce ověří své parametry. Pokud je *cesta* null nebo *režim* neurčuje platný režim, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, funkce nastaví `errno` `EINVAL` a vrátí-1.
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
@@ -105,8 +105,8 @@ Tato funkce ověří své parametry. Pokud je *cesta* null nebo *režim* neurču
 
 |Rutina|Požadovaný hlavičkový soubor|Volitelné hlavičky|
 |-------------|---------------------|----------------------|
-|**_access**|\<io.h>|\<errno.h>|
-|**_waccess**|\<WCHAR. h > nebo \<IO. h >|\<errno.h>|
+|**_access**|\<IO. h >|\<errno. h >|
+|**_waccess**|\<WCHAR. h > nebo \<IO. h >|\<errno. h >|
 
 ## <a name="example"></a>Příklad
 
@@ -142,10 +142,10 @@ File crt_ACCESS.C exists.
 File crt_ACCESS.C does not have write permission.
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Zpracování souborů](../../c-runtime-library/file-handling.md)<br/>
 [_chmod, _wchmod](chmod-wchmod.md)<br/>
 [_fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32](fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)<br/>
 [_open, _wopen](open-wopen.md)<br/>
-[_stat, funkce _wstat](stat-functions.md)
+[_stat, _wstat funkce](stat-functions.md)

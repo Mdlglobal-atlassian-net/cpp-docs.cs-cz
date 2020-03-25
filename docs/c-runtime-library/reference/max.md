@@ -26,12 +26,12 @@ helpviewer_keywords:
 - maximum macro
 - __max macro
 ms.assetid: 05c936f6-0e22-45d6-a58d-4bc102e9dae2
-ms.openlocfilehash: dac82ecd1c96d1edf9175a29797d93c65bc19c99
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 4cdfd99ec344cd357900d76dfc7f9400046e448a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952753"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170186"
 ---
 # <a name="__max"></a>__max
 
@@ -62,13 +62,13 @@ Vrácený argument je vyhodnocen dvakrát makrem. To může vést k neočekávan
 
 |– Makro|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**__max**|\<stdlib.h>|
+|**__max**|\<Stdlib. h >|
 
 ## <a name="example"></a>Příklad
 
 Další informace najdete v příkladu pro [__min](min.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)<br/>
 [__min](min.md)<br/>

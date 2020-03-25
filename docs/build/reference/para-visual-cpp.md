@@ -1,5 +1,5 @@
 ---
-title: '&lt;para>'
+title: '&lt;para >'
 ms.date: 11/04/2016
 f1_keywords:
 - <para>
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - <para> C++ XML tag
 - para C++ XML tag
 ms.assetid: 35f2a1b3-bc14-4f13-bcb0-c39ccbf74d59
-ms.openlocfilehash: d8de55344eef7634d8a9a55a32b8ff5beb8852d4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 38c50a1152b8fea9b6d7bd55d89deff6546dbc83
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62320016"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171174"
 ---
 # <a name="ltparagt"></a>&lt;para&gt;
 
-\<Para > Značka je určen pro použití uvnitř značky, například [ \<summary >](summary-visual-cpp.md), [ \<remarks >](remarks-visual-cpp.md), nebo [ \<vrátí >](returns-visual-cpp.md)a umožňuje přidání struktury textu.
+Značka \<param > je určena pro použití uvnitř značky, například [\<summary >](summary-visual-cpp.md), [\<poznámky >](remarks-visual-cpp.md)nebo [\<vrátí >](returns-visual-cpp.md)a umožňuje přidat do textu strukturu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -27,17 +27,17 @@ ms.locfileid: "62320016"
 
 #### <a name="parameters"></a>Parametry
 
-*content*<br/>
-Text odstavce.
+*sušin*<br/>
+Text odstavce
 
 ## <a name="remarks"></a>Poznámky
 
-Kompilovat s [/doc](doc-process-documentation-comments-c-cpp.md) pro zpracování dokumentačních komentářů do souboru.
+Zkompilujte pomocí [/doc](doc-process-documentation-comments-c-cpp.md) a zpracujte dokumentační komentáře do souboru.
 
 ## <a name="example"></a>Příklad
 
-Zobrazit [ \<summary >](summary-visual-cpp.md) pro příklad použití \<para >.
+Příklad použití \<param > najdete v části [\<summary >](summary-visual-cpp.md) .
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Dokumentace XML](xml-documentation-visual-cpp.md)

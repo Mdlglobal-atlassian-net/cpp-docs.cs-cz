@@ -7,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - Release method [C++]
 ms.assetid: db448b34-0efa-4f02-b701-ad1ca3ae6ca5
-ms.openlocfilehash: cf4cea35386d1f781d6d2946c1730ba2e18dacea
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f455e855e782a939e79898ee46e445f65d25d37a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399223"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170589"
 ---
-# <a name="comptrtrelease"></a>_com_ptr_t::Release
+# <a name="_com_ptr_trelease"></a>_com_ptr_t::Release
 
-**Microsoft Specific**
+**Specifické pro společnost Microsoft**
 
-Volání **vydání** členskou funkci `IUnknown` na zapouzdřený ukazatel rozhraní.
+Volá členskou funkci **Release** `IUnknown` na ukazatel zapouzdřeného rozhraní.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -28,10 +28,10 @@ void Release( );
 
 ## <a name="remarks"></a>Poznámky
 
-Volání `IUnknown::Release` na zapouzdřený ukazatel rozhraní, vyvolání `E_POINTER` chyby, pokud tento ukazatel rozhraní má hodnotu NULL.
+Volá `IUnknown::Release` na ukazatel zapouzdřeného rozhraní a vyvolává chybu `E_POINTER`, pokud má ukazatel na rozhraní hodnotu NULL.
 
-**Specifické pro END Microsoft**
+**Specifické pro konec Microsoftu**
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [_com_ptr_t – třída](../cpp/com-ptr-t-class.md)

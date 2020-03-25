@@ -5,12 +5,12 @@ f1_keywords:
 - VC.Project.VCFileConfiguration.ExcludedFromBuild
 - VC.Project.VCFileConfiguration.Tool
 ms.assetid: 26e3711e-9e7d-4e8d-bc4c-2474538efdad
-ms.openlocfilehash: 41366e2eae479c3d00f79cc47da9100b22129d50
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: a9281a0ea02bd9b1fd529453cb9a67e54e4ddda7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70218183"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168968"
 ---
 # <a name="general-property-page-file"></a>Obecná stránka vlastností (soubor)
 
@@ -22,9 +22,9 @@ Když kliknete pravým tlačítkem na **Průzkumník řešení**uzel souboru, ot
 
    Určuje, zda má být soubor v sestavení pro aktuální konfiguraci.
 
-   Chcete-li programově získat přístup k <xref:Microsoft.VisualStudio.VCProjectEngine.VCFileConfiguration.ExcludedFromBuild%2A>této vlastnosti, přečtěte si téma.
+   Chcete-li získat programový přístup k této vlastnosti, přečtěte si <xref:Microsoft.VisualStudio.VCProjectEngine.VCFileConfiguration.ExcludedFromBuild%2A>.
 
-- **Obsah** (Platí jenom pro aplikace pro UWP.) Určuje, jestli soubor obsahuje obsah, který se má zahrnout do balíčku aplikace.
+- **Obsah** (platí jenom pro aplikace pro UWP) Určuje, jestli soubor obsahuje obsah, který se má zahrnout do balíčku aplikace.
 
 - **Typ položky**
 
@@ -41,29 +41,29 @@ Když kliknete pravým tlačítkem na **Průzkumník řešení**uzel souboru, ot
     |. appx|Definice aplikace XAML|[Balíček aplikace](/windows/win32/appxpkg/make-appx-package--makeappx-exe-)|
     |. HLSL,. CSO|Kompilátor HLSL|[fxc. exe](/windows/win32/direct3dtools/fxc)|
     |.h|C/C++ hlavička|[Preprocesor C/C++](../../preprocessor/c-cpp-preprocessor-reference.md)|
-    |není k dispozici|Neúčastní se sestavení|není k dispozici|
+    |neuvedeno|Neúčastní se sestavení|neuvedeno|
     |. XML,. XSLT,. xsl|XML|[Editor XML](/visualstudio/xml-tools/xml-editor)|
     |. resw,. resjson|Prostředek PRI (aplikace UWP)|[Předány MakePRI. exe](/windows/uwp/app-resources/compile-resources-manually-with-makepri)|
     ||Média (UWP)|[Balíček aplikace](/windows/win32/appxpkg/make-appx-package--makeappx-exe-)|
-    |.xsd|Nástroj generátor dat XML|[Nástroj definice schématu XML (XSD. exe)](/dotnet/standard/serialization/xml-schema-definition-tool-xsd-exe) (Vyžaduje úlohu rozhraní .NET. Není součástí MSVC.)|
+    |.xsd|Nástroj generátor dat XML|[Nástroj definice schématu XML (XSD. exe)](/dotnet/standard/serialization/xml-schema-definition-tool-xsd-exe) (vyžaduje úlohu rozhraní .NET. Není součástí MSVC.)|
     ||Nástroj manifest|[MT. exe](/windows/win32/sbscs/mt-exe)|
-    |.rc|Resource|[Kompilátor prostředků Windows (RC. exe)](/windows/win32/menurc/resource-compiler)|
+    |.rc|Prostředek|[Kompilátor prostředků Windows (RC. exe)](/windows/win32/menurc/resource-compiler)|
     |. appxmanifest|Manifest balíčku aplikace|[Balíček aplikace](/windows/win32/appxpkg/make-appx-package--makeappx-exe-)|
     |.obj|Objekt|[C/C++ Linker (Link. exe)](cl-invokes-the-linker.md)|
-    |. ttf|Písma|není k dispozici|
-    |.txt|Text|není k dispozici|
-    |není k dispozici|Nástroj pro vlastní sestavení|Definované uživatelem|
-    |není k dispozici|Kopírovat soubor|není k dispozici|
+    |. ttf|Písma|neuvedeno|
+    |.txt|Text|neuvedeno|
+    |neuvedeno|Nástroj pro vlastní sestavení|Definované uživatelem|
+    |neuvedeno|Kopírovat soubor|neuvedeno|
     |. packagelayout|Rozložení balíčku aplikace|[Balíček aplikace](/windows/win32/appxpkg/make-appx-package--makeappx-exe-)|
     |.resx|Spravovaný prostředek kompilátoru|[Resgen.exe (generátor zdrojových souborů)](/dotnet/framework/tools/resgen-exe-resource-file-generator)|
     |. Natvis|C++Soubor vizualizace ladicího programu|[Systém Natvis](/visualstudio/debugger/create-custom-views-of-native-objects)|
-    |. jpg,. bmp,. ico atd.|Image|Kompilátor prostředků založený na typu aplikace|
+    |. jpg,. bmp,. ico atd.|Obrázek|Kompilátor prostředků založený na typu aplikace|
     |.cpp|C/C++ kompilátor|CL. exe|
 
-   Chcete-li programově získat přístup k <xref:Microsoft.VisualStudio.VCProjectEngine.VCFileConfiguration.Tool%2A>této vlastnosti, přečtěte si téma.
+   Chcete-li získat programový přístup k této vlastnosti, přečtěte si <xref:Microsoft.VisualStudio.VCProjectEngine.VCFileConfiguration.Tool%2A>.
 
 Informace o tom, jak získat přístup ke stránce **Obecné** vlastnosti pod uzlem **Vlastnosti konfigurace** , naleznete v tématu [nastavení C++ vlastností kompilátoru a sestavení v sadě Visual Studio](../working-with-project-properties.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [C++odkaz na stránku vlastností projektu](property-pages-visual-cpp.md)
