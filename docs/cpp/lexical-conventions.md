@@ -7,12 +7,12 @@ helpviewer_keywords:
 - lexical conventions
 - conventions, lexical
 ms.assetid: 03f9efff-bb95-45ef-9157-0a3fac809ccf
-ms.openlocfilehash: a96878b2c1f3ca34ab69147d53b0108b3f8363aa
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 16271dc2f9024ee4f50294520726cfaed0fc0302
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301441"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179547"
 ---
 # <a name="lexical-conventions"></a>Lexikální konvence
 
@@ -29,7 +29,7 @@ Tato část představuje základní prvky programu C++. Tyto prvky nazývané �
 
 Další informace o tom, C++ jak se analyzují zdrojové soubory, najdete v tématu [fáze překladu](../preprocessor/phases-of-translation.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Referenční dokumentace jazyka C++](../cpp/cpp-language-reference.md)<br/>
 [Jednotky překladu a propojení](program-and-linkage-cpp.md)

@@ -4,37 +4,37 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Microsoft extensions to C/C++
 ms.assetid: 68654516-24ef-4f33-aae2-175f86cc1979
-ms.openlocfilehash: d8104c2df2335e11dcb711108d566e0fdd069762
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a2d0846e55122f177b4868c2e80c4f1d27267f5e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62301770"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179403"
 ---
 # <a name="microsoft-extensions"></a>Rozšíření Microsoft
 
-*příkazu asm*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__asm***instrukci sestavení* **;** <sub>optimalizované  </sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__asm {***sestavení seznam instrukcí-***};** <sub>optimalizované    </sub>
+*příkaz ASM*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__asm***sestavení-instrukce* **;** <sub>výslovný souhlas</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__asm {** *Assembly-Instruction-list* **};** <sub>výslovný souhlas</sub>
 
-*sestavení seznam instrukcí-*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*instrukci sestavení* **;** <sub>optimalizované</sub> <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*instrukci sestavení* **;** *sestavení seznam instrukcí-* **;** <sub>optimalizované</sub>
+*seznam instrukcí pro sestavení*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*sestavení-instrukce* **;** <sub>výslovný souhlas</sub> <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*sestavení-instrukce* **;** *Assembly-instrukces-list* **;** <sub>výslovný souhlas</sub>
 
-*ms-modifier-list*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*ms-modifier* *ms-modifier-list*<sub>opt</sub>
+*MS-modifikátor-seznam*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*MS-modifikátor* *MS-modifikátor-seznam*<sub>opt</sub>
 
-*ms-modifier*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__cdecl**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__fastcall**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__stdcall**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__syscall** (vyhrazeno pro budoucí implementace)<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__oldcall** (vyhrazeno pro budoucí implementace)<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__unaligned** (vyhrazeno pro budoucí implementace)<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*based-modifier*
+*MS-modifikátor*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__cdecl**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__fastcall**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__stdcall**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__syscall** (vyhrazeno pro budoucí implementace)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__oldcall** (vyhrazeno pro budoucí implementace)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__unaligned** (vyhrazeno pro budoucí implementace)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*na základě modifikátoru*
 
-*based-modifier*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__based (** *základní typ* **)**
+*založený na modifikátorech*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__based (** *podle typu* **)**
 
-*na základě typu*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Jméno*
+*založený na typu*:<br/>
+&nbsp;&nbsp;&nbsp;*název* &nbsp;
