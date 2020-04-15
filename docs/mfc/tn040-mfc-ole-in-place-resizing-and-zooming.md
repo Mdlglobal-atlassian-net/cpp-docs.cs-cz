@@ -1,5 +1,5 @@
 ---
-title: 'TN040: Knihovny MFC-OLE místní změny velikosti a měřítka'
+title: 'TN040: Změna velikosti a přiblížení knihovny MFC-OLE na místě'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - resizing in-place
@@ -7,82 +7,82 @@ helpviewer_keywords:
 - zooming and in-place activation
 - in-place activation, zooming and resizing
 ms.assetid: 4d7859bd-0b2e-4254-be62-2735cecf02c6
-ms.openlocfilehash: 9d5c87e6d5daff34a479ba61c0c275b48a8bba4d
-ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
+ms.openlocfilehash: 65f9ef04c9740e8e6f0a8e72d9d6c39008198755
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65611124"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372157"
 ---
-# <a name="tn040-mfcole-in-place-resizing-and-zooming"></a>TN040: MFC/OLE – místní změny velikosti a měřítka
+# <a name="tn040-mfcole-in-place-resizing-and-zooming"></a>TN040: změny velikosti a měřítka na místě v prostředích MFC/OLE
 
 > [!NOTE]
->  Následující Technická poznámka nebyla aktualizována, protože byla poprvé zahrnuta v online dokumentaci. V důsledku toho některé postupy a témata mohou být nesprávné nebo zastaralé. Nejnovější informace se doporučuje vyhledat téma zájmu v dokumentaci online index.
+> Následující technická poznámka nebyla aktualizována od doby, kdy byla poprvé zahrnuta do online dokumentace. V důsledku toho mohou být některé postupy a témata zastaralé nebo nesprávné. Chcete-li získat nejnovější informace, doporučujeme vyhledat téma zájmu v online indexu dokumentace.
 
-Tato poznámka popisuje problémy týkající se úpravy na místě a jak server provádět správné změna měřítka zobrazení a změna velikosti na místě. Aktivace na místě WYSIWYG koncept je provést ještě o krok v tomto kontejnery a servery vzájemně spolupracovat a zejména interpretovat specifikaci OLE téměř stejným způsobem.
+Tato poznámka se bude zabývat otázkami týkajícími se úprav na místě a jak by měl server dosáhnout správného přiblížení a změna velikosti na místě. S aktivací na místě wysiwyg koncept je přijata o krok dále v tom kontejnery a servery vzájemně spolupracují a zejména interpretovat specifikace OLE v podstatě stejným způsobem.
 
-Z důvodu zavřít interakce mezi kontejnerem a podporuje místní aktivace server existuje několik očekávání od koncového uživatele, který by se měl zachovat:
+Z důvodu úzké interakce mezi kontejnerem a serverem podporující aktivaci na místě existuje řada očekávání od koncového uživatele, který by měl být zachován:
 
-- Zobrazení prezentace (metasoubor vykreslen v `COleServerItem::OnDraw` přepsání) by měl vypadat stejně, jako když je vykreslen pro úpravy (s tím rozdílem, že nástroje pro úpravy se nezobrazí).
+- Zobrazení prezentace (metasoubor nakreslený v `COleServerItem::OnDraw` přepsání) by mělo vypadat přesně stejně jako při kreslení pro úpravy (s tím rozdílem, že nástroje pro úpravy nejsou viditelné).
 
-- Když zvětší nebo zmenší kontejneru, v okně server by měl taky!
+- Když se kontejner přiblíží, okno serveru by mělo také!
 
-- Kontejner a server by měl zobrazit objekty s možností úprav pomocí stejné metriky. To znamená, že používá režim mapování na základě počtu *logické* pixely na palec – ne fyzických pixely na palec, při vykreslování na zobrazovací zařízení.
+- Kontejner i server by měly zobrazit objekty pro úpravy pomocí stejných metrik. To znamená použití režimu mapování na základě počtu *logických* obrazových bodů na palec – nikoli fyzických obrazových bodů na palec, při vykreslování na zobrazovacím zařízení.
 
 > [!NOTE]
->  Protože aktivace na místě platí jenom pro položky, které jsou vloženy (nepřipojené), změna měřítka zobrazení vztahuje pouze na vložené objekty. Zobrazí se rozhraní API v obou `COleServerDoc` a `COleServerItem` , která se používají pro přiblížení. Důvod pro tento dichotomy je, že pouze funkce, které jsou platné pro propojené a vložené položky jsou ve `COleServerItem` (díky tomu můžete mít běžnou implementaci) a funkce, které jsou platné pouze pro vložené objekty jsou umístěny v `COleServerDoc` třídy (z perspektivy serveru, je **dokumentu** který je vložený).
+> Vzhledem k tomu, že aktivace na místě se vztahuje pouze na položky, které jsou vložené (nepropojené), přiblížení se vztahuje pouze na vložené objekty. Zobrazí se api v `COleServerDoc` `COleServerItem` obou a které se používají pro přiblížení. Důvodem pro tuto dichotomii je, že pouze funkce, které `COleServerItem` jsou platné pro propojené i vložené položky jsou v (to `COleServerDoc` umožňuje mít společnou implementaci) a funkce, které jsou platné pouze pro vložené objekty jsou umístěny ve třídě (z pohledu serveru, je **dokument,** který je vložený).
 
-Většinu zatížení se přikládá implementátora server, musí server mějte na faktor zvětšování kontejneru a jeho úpravy rozhraní podle potřeby upravit. Ale jak server určit na faktor zvětšování, která používá kontejneru
+Většina zátěže je umístěna na implementátorserveru v tom, že server musí být vědomi faktoru zvětšení kontejneru a podle potřeby upravit jeho rozhraní pro úpravy. Ale jak server určuje faktor zvětšení, který kontejner používá
 
-## <a name="mfc-support-for-zooming"></a>Podpora MFC pro přiblížení
+## <a name="mfc-support-for-zooming"></a>Podpora knihovny MFC pro zvětšování
 
-Aktuální lupy se dají určit pomocí volání `COleServerDoc::GetZoomFactor`. Toto volání při dokument není aktivní místní vždy způsobí faktor zvětšení na 100 % (nebo poměr 1:1). Volání při místní aktivní může vracely něco jiného než 100 %.
+Aktuální faktor zvětšení lze `COleServerDoc::GetZoomFactor`určit voláním . Volání tohoto, když dokument není aktivní na místě, bude vždy mít za následek 100% faktor zvětšení (nebo poměr 1:1). Volání, zatímco na místě aktivní může vrátit něco jiného než 100%.
 
-Změna měřítka zobrazení správně příklad najdete v ukázce MFC OLE [HIERSVR](../overview/visual-cpp-samples.md). Přiblížit HIERSVR ztěžuje skutečnost, že se zobrazí text a text, většinou nejsou adekvátní lineárně (pomocných parametrů, typografických zásad daného, návrh šířky a výšky všech zkomplikovat věci). Stále, HIERSVR přiměřené odkaz pro implementaci správně přibližování a tak je kurzu MFC [SCRIBBLE](../overview/visual-cpp-samples.md) (krok 7).
+Příklad správného přiblížení viz ukázka [HIERSVR](../overview/visual-cpp-samples.md)knihovny MFC OLE . Přiblížení hiersvr je komplikováno skutečností, že zobrazuje text a text obecně neměří lineárním způsobem (rady, typografické konvence, šířky návrhu a výšky věci komplikují). Přesto HIERSVR je rozumný odkaz pro implementaci přiblížení správně, a tak je kurz knihovny MFC [klikyháky](../overview/visual-cpp-samples.md) (krok 7).
 
-`COleServerDoc::GetZoomFactor` Určuje, na faktor zvětšování založené na celé řadě různých metrik dostupných z kontejneru nebo z provádění vaší `COleServerItem` a `COleServerDoc` třídy. Stručně řečeno aktuální faktor zvětšování závisí na následující vzorec:
+`COleServerDoc::GetZoomFactor`určuje faktor zvětšení na základě řady různých metrik, které jsou k `COleServerItem` dispozici `COleServerDoc` z kontejneru nebo z implementace vašeho a tříd. Stručně řečeno, aktuální faktor zvětšení je určen následujícím vzorcem:
 
 ```
 Position Rectangle (PR) / Container Extent (CE)
 ```
 
-POZICI obdélníku je určen kontejner. Je vrácen do serveru během místní aktivace při `COleClientItem::OnGetItemPosition` nazývá a aktualizuje, když kontejner volá na server `COleServerDoc::OnSetItemRects` (voláním `COleClientItem::SetItemRects`).
+POZICE OBDÉLNÍK je určen kontejneru. Je vrácena na server během aktivace `COleClientItem::OnGetItemPosition` na místě, když je volána `COleServerDoc::OnSetItemRects` a je aktualizován, když kontejner volá server (s voláním `COleClientItem::SetItemRects`).
 
-ROZSAH KONTEJNERU je o něco složitější k výpočtu. Pokud kontejner má název `COleServerItem::OnSetExtent` (voláním `COleClientItem::SetExtent`), pak rozsah KONTEJNERU, je tato hodnota převedena na pixelech na základě počtu pixelů na logický palec. Pokud kontejner nevolala SetExtent (což obvykle platí), je v rozsahu KONTEJNERU velikostí vrácenou z `COleServerItem::OnGetExtent`. Tedy pokud kontejneru nebyla volána SetExtent, rozhraní předpokládá, že pokud udělal kontejneru by mít volány ho se 100 % přirozené rozsahu (hodnota vrácená z `COleServerItem::GetExtent`). Uvádí další způsob rozhraní se předpokládá, že je kontejner zobrazení 100 % (menší častěji, ne) položky.
+Rozsah kontejneru je o něco složitější pro výpočet. Pokud kontejner volal `COleServerItem::OnSetExtent` (s voláním `COleClientItem::SetExtent`), pak rozsah kontejneru je tato hodnota převedena na obrazové body na základě počtu pixelů na logický palec. Pokud kontejner není volána SetExtent (což je obvykle případ), pak `COleServerItem::OnGetExtent`KONTEJNER ROZSAH je velikost vrácena z . Takže pokud kontejner není volána SetExtent, rozhraní předpokládá, že pokud to udělal kontejnerby jej volat s 100 % přirozeného rozsahu (hodnota vrácená z). `COleServerItem::GetExtent` Uvedeno jiným způsobem, rozhraní předpokládá, že kontejner zobrazuje 100 % (ne více, ne méně) položky.
 
-Je důležité si uvědomit, že i když `COleServerItem::OnSetExtent` a `COleServerItem::OnGetExtent` podobně jako názvy jejich není manipulovat s stejný atribut položky. `OnSetExtent` volá se, že nechat server vědět, jak velká část objektu je viditelný v kontejneru (bez ohledu na faktor zvětšování) a `OnGetExtent` volá se kontejnerem, chcete-li zjistit ideální velikost objektu.
+Je důležité si uvědomit, že i když `COleServerItem::OnSetExtent` a `COleServerItem::OnGetExtent` mají podobné názvy, nemají manipulovat se stejným atributem položky. `OnSetExtent`je volána, aby server věděl, kolik objektu je viditelné v kontejneru `OnGetExtent` (bez ohledu na faktor zvětšení) a je volána kontejnerem k určení ideální velikost objektu.
 
-Zobrazením všech zapojených rozhraní API, můžete získat dostáváme postupně jasnější představu:
+Při pohledu na každé z dotčených api, můžete získat jasnější obrázek:
 
 ## <a name="coleserveritemongetextent"></a>COleServerItem::OnGetExtent
 
-Tato funkce by měl vrátit "fyzická velikost" v jednotkách HIMETRIC položky. Nejlepší způsob, jak si můžete představit "fyzická velikost" je definovat jako velikost, kterou může zobrazit při tisku. Velikostí vrácenou zde je konstantní pro konkrétní položku obsahu (podobně jako tento metasoubor, což je konstantní pro určité položky). Tato velikost se nemění, při zvětšování u položky. Obvykle nezmění při kontejneru poskytuje položka větší nebo menší prostor voláním `OnSetExtent`. Příklad změny může být u jednoduchý textový editor se žádné "margin" schopnost, která zalomeného textu podle poslední rozsahu odesílaných kontejneru. Pokud změníte server, server pravděpodobně nastaven OLEMISC_RECOMPOSEONRESIZE bit v systémovém registru (viz dokumentace ke službě OLE SDK pro další informace o této možnosti).
+Tato funkce by měla vrátit "přirozenou velikost" v jednotkách HIMETRIC položky. Nejlepší způsob, jak si myslet o "přirozené velikosti", je definovat ji jako velikost, která se může objevit při tisku. Velikost vrácená zde je konstantní pro konkrétní obsah položky (podobně jako metasoubor, který je konstantní pro konkrétní položku). Tato velikost se nezmění při použití přiblížení na položku. Obvykle se nezmění, když kontejner poskytuje položku více `OnSetExtent`nebo méně místa voláním . Příkladem změny může být jednoduchý textový editor bez možnosti "margin", který zalomený text na základě posledního rozsahu odeslaného kontejnerem. Pokud se server změní, měl by pravděpodobně nastavit OLEMISC_RECOMPOSEONRESIZE bit v systémovém registru (další informace o této možnosti naleznete v dokumentaci k sadě OLE SDK).
 
-## <a name="coleserveritemonsetextent"></a>COleServerItem::OnSetExtent
+## <a name="coleserveritemonsetextent"></a>COleServerItem::Délkarozsahu
 
-Tato funkce je volána, když kontejner se zobrazí "víc nebo míň" objektu. Většina kontejnery nebude volat to vůbec. Výchozí implementace ukládá poslední hodnotu získanou z kontejneru v "m_sizeExtent", který se používá v `COleServerDoc::GetZoomFactor` při výpočtu hodnoty rozsahu KONTEJNERU je popsáno výše.
+Tato funkce je volána, když kontejner zobrazuje "více či méně" objektu. Většina kontejnerů nebude volat to vůbec. Výchozí implementace ukládá poslední hodnotu přijatou z kontejneru v `COleServerDoc::GetZoomFactor` "m_sizeExtent", která se používá při výpočtu výše popsané hodnoty CONTAINER EXTENT.
 
 ## <a name="coleserverdoconsetitemrects"></a>COleServerDoc::OnSetItemRects
 
-Tato funkce je volána, pouze v případě, že je místní aktivní dokument. Je volána při aktualizaci kontejneru umístění nebo ořezové použitý pro položku. POZICI obdélníku, jak je popsáno výše, poskytuje čítač pro výpočet faktoru zvětšení. Server můžete požádat o změnu umístění položky voláním `COleServerDoc::RequestPositionChange`. Kontejner může nebo nemusí reagovat na tento požadavek voláním `OnSetItemRects` (voláním `COleServerItem::SetItemRects`).
+Tato funkce je volána pouze v případě, že je dokument aktivní na místě. Je volána při kontejneru aktualizuje pozici položky nebo oříznutí použité na položku. POZICE OBDÉLNÍK, jak je popsáno výše, poskytuje čitatel pro výpočet faktor zvětšení. Server může požadovat změnu polohy položky voláním `COleServerDoc::RequestPositionChange`. Kontejner může nebo nemusí reagovat na `OnSetItemRects` tuto žádost `COleServerItem::SetItemRects`voláním (s voláním).
 
-## <a name="coleserverdocondraw"></a>COleServerDoc::OnDraw
+## <a name="coleserverdocondraw"></a>COleServerDoc::Ondraw
 
-Je důležité si uvědomit, že tento metasoubor vytvořené přepsání `COleServerItem::OnDraw` vytváří přesně stejné metasoubor, bez ohledu na aktuální faktor zvětšování. Kontejner se bude škálovat metasoubor podle potřeby. To je zásadní rozdíl mezi zobrazení `OnDraw` a položka serveru `OnDraw`. Zobrazit úchyty změna měřítka zobrazení, položky pouze vytvoří *roztahováním* metasoubor a zůstane až do kontejneru provedete příslušné měřítka.
+Je důležité si uvědomit, že metasoubor `COleServerItem::OnDraw` vytvořený přepsáním vytváří přesně stejný metasoubor, bez ohledu na aktuální faktor zvětšení. Kontejner změní velikost metasouboru podle potřeby. To to je důležitý rozdíl `OnDraw` mezi zobrazení a `OnDraw`položky serveru . Zobrazení zpracovává přiblížení, položka pouze vytvoří *metasoubor se zoomovatelem* a ponechá jej na kontejneru, aby bylo možné provést příslušné přiblížení.
 
-Nejlepší způsob, jak zajistit správné chování serveru je použít implementaci `COleServerDoc::GetZoomFactor` Pokud váš dokument je na místě aktivní.
+Nejlepší způsob, jak zajistit, aby se server choval správně, je použít implementaci, `COleServerDoc::GetZoomFactor` pokud je dokument aktivní.
 
-## <a name="mfc-support-for-in-place-resizing"></a>Podpora MFC pro změnu velikosti na místě
+## <a name="mfc-support-for-in-place-resizing"></a>Podpora knihovny MFC pro změna velikosti místa
 
-MFC plně implementuje rozhraní místní změny velikosti, jak je popsáno ve specifikaci OLE 2. Uživatelské rozhraní je podporován `COleResizeBar` třídy, vlastní zprávu WM_SIZECHILD a zvláštní zpracování této zprávy v `COleIPFrameWnd`.
+Knihovna MFC plně implementuje rozhraní pro změna velikosti na místě, jak je popsáno ve specifikaci OLE 2. Uživatelské rozhraní je `COleResizeBar` podporováno třídou, vlastní zprávou WM_SIZECHILD a `COleIPFrameWnd`zvláštním zpracováním této zprávy v .
 
-Můžete provádět různé zpracování této zprávy, než je zadán v rámci rozhraní. Jak je popsáno výše, rozhraní ponechá místní změny velikosti až kontejneru výsledky – server reaguje na změnu v hodnotě na faktor zvětšování. Pokud kontejneru jsou reaguje obě nastavením rozsahu KONTEJNERU a POZICI obdélníku během zpracování jeho `COleClientItem::OnChangeItemPosition` (volá se v důsledku volání `COleServerDoc::RequestPositionChange`) poté způsobí změnu velikosti na místě zobrazující "víc nebo míň" položky v úpravy okno. Pokud jsou reaguje kontejneru tak, že právě POZICI obdélníku nastavíte během zpracování `COleClientItem::OnChangeItemPosition`, se změní na faktor zvětšování a položka se zobrazí "možnosti zvětšit nebo zmenšit."
+Můžete chtít implementovat jiné zpracování této zprávy, než co je k dispozici v rámci. Jak je popsáno výše, rozhraní opustí výsledky na místě změny velikosti až do kontejneru – server reaguje na změnu faktoru zvětšení. Pokud kontejner reaguje nastavením rozsahu kontejneru a pozice OBDÉLNÍKBĚHEM zpracování jeho `COleClientItem::OnChangeItemPosition` (volána `COleServerDoc::RequestPositionChange`jako výsledek volání ) pak změna velikosti na místě bude mít za následek zobrazení "více či méně" položky v okně úprav. Pokud kontejner reaguje pouhým nastavením polohy OBDÉLNÍK `COleClientItem::OnChangeItemPosition`během zpracování , faktor přiblížení se změní a položka se zobrazí "přibližováno nebo oddáleno".
 
-Server můžete řídit (do určité míry), co se stane, že během tohoto vyjednávání. Tabulky, například může rozhodnout, jestli chcete zobrazit více nebo méně buněk, když uživatel změní velikost okna při úpravách položky místní. Textových procesorů může rozhodnout, jestli chcete-li změnit okraje stránky"", jsou stejné jako v okně a balit text nové rozpětí. Servery implementovat to tak, že změníte přirozené rozsahu (velikostí vrácenou z `COleServerItem::OnGetExtent`) po dokončení změny velikosti. To způsobí POZICI obdélníku a kontejner rozsah, změnit stejným způsobem, výsledkem je na stejné faktor zvětšování, ale větší nebo menší oblasti zobrazení. Kromě toho, víc nebo míň dokumentu se nebude zobrazovat v metasoubor generovaných `OnDraw`. V takovém případě samotný dokument se mění, když uživatel změní položka, namísto pouze oblasti zobrazení.
+Server může řídit (do určité míry), co se stane během tohoto vyjednávání. Tabulka se například může rozhodnout zobrazit více nebo méně buněk, když uživatel změní velikost okna při úpravách položky na místě. Textový procesor se může rozhodnout změnit "okraje stránky", takže jsou stejné jako okno a znovu zalomit text na nový okraj. Servery implementovat změnou přirozeného rozsahu `COleServerItem::OnGetExtent`(velikost vrácena z) po dokončení změny velikosti. To způsobí, že obdélník pozice a rozsah kontejneru změnit o stejnou částku, výsledkem je stejný faktor zvětšení, ale větší nebo menší oblast zobrazení. Kromě toho bude více či méně dokumentu viditelné v metasouboru generovaném `OnDraw`. V tomto případě se změní samotný dokument, když uživatel změní velikost položky, nikoli pouze oblast zobrazení.
 
-Můžete implementovat vlastní změny velikosti a využít uživatelské rozhraní poskytované `COleResizeBar` tak, že přepíšete WM_SIZECHILD zprávu ve vašich `COleIPFrameWnd` třídy. Další informace na konkrétních podrobnostech WM_SIZECHILD najdete v tématu [Technická poznámka 24](../mfc/tn024-mfc-defined-messages-and-resources.md).
+Můžete implementovat vlastní změna velikosti a stále `COleResizeBar` využívat uživatelské rozhraní poskytované `COleIPFrameWnd` přepsáním WM_SIZECHILD zprávy ve vaší třídě. Další informace o specifikách WM_SIZECHILD viz [technická poznámka 24](../mfc/tn024-mfc-defined-messages-and-resources.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Technické poznámky podle čísel](../mfc/technical-notes-by-number.md)<br/>
 [Technické poznámky podle kategorií](../mfc/technical-notes-by-category.md)

@@ -1,5 +1,5 @@
 ---
-title: Cd2dgeometrysink – třída
+title: Třída CD2DGeometrySink
 ms.date: 11/04/2016
 f1_keywords:
 - CD2DGeometrySink
@@ -38,14 +38,14 @@ helpviewer_keywords:
 - CD2DGeometrySink [MFC], SetSegmentFlags
 - CD2DGeometrySink [MFC], m_pSink
 ms.assetid: e5e07f41-0343-4ab1-9d6b-8c62ed33c04a
-ms.openlocfilehash: 48c88f0b837b2e49e4c87f07a9aa28c16a66c1e3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cb51c7b11f75debece61105bf20a201b6eab80a9
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391254"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81369243"
 ---
-# <a name="cd2dgeometrysink-class"></a>Cd2dgeometrysink – třída
+# <a name="cd2dgeometrysink-class"></a>Třída CD2DGeometrySink
 
 Obálka pro ID2D1GeometrySink.
 
@@ -59,41 +59,41 @@ class CD2DGeometrySink;
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CD2DGeometrySink::CD2DGeometrySink](#cd2dgeometrysink)|Vytvoří objekt cd2dgeometrysink – z cd2dpathgeometry – objektu.|
-|[CD2DGeometrySink::~CD2DGeometrySink](#_dtorcd2dgeometrysink)|Destruktor. Volá se, když se likviduje objektu D2D geometrie jímky.|
+|[CD2DGeometrySink::CD2DGeometrySink](#cd2dgeometrysink)|Vytvoří objekt CD2DGeometrySink z objektu CD2DPathGeometry.|
+|[CD2DGeometrySink::~CD2DGeometrySink](#_dtorcd2dgeometrysink)|Destruktor. Nazývá se při zničení objektu jímky geometrie D2D.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CD2DGeometrySink::AddArc](#addarc)|Přidá jeden oblouk geometrické cesty|
-|[CD2DGeometrySink::AddBezier](#addbezier)|Vytvoří kubické Bézierovy křivky mezi aktuálním bodem a zadaným koncový bod.|
-|[CD2DGeometrySink::AddBeziers](#addbeziers)|Vytvoří posloupnost kubické Bézierovy křivky a přidá je do jímky geometry.|
-|[CD2DGeometrySink::AddLine](#addline)|Vytvoří úsek čáry mezi aktuálním bodem a zadaným koncový bod a přidá jej do jímky geometry.|
-|[CD2DGeometrySink::AddLines](#addlines)|Vytvoří posloupnost řádky pomocí zadané body a přidá je do jímky geometry.|
-|[CD2DGeometrySink::AddQuadraticBezier](#addquadraticbezier)|Vytvoří kvadratické Bézierovy křivky mezi aktuálním bodem a zadaným koncový bod.|
-|[CD2DGeometrySink::AddQuadraticBeziers](#addquadraticbeziers)|Přidá pořadí kvadratické Bézierovy křivky segmentů jako pole v jednom volání.|
-|[CD2DGeometrySink::BeginFigure](#beginfigure)|Spustí nový obrázek na zadaný bod.|
-|[CD2DGeometrySink::Close](#close)|Zavře jímky geometrie|
-|[CD2DGeometrySink::EndFigure](#endfigure)|Ukončí aktuální obrázek; Volitelně můžete zavře.|
-|[CD2DGeometrySink::Get](#get)|Vrátí ID2D1GeometrySink rozhraní|
-|[CD2DGeometrySink::IsValid](#isvalid)|Zkontroluje platnost jímky geometrie|
-|[CD2DGeometrySink::SetFillMode](#setfillmode)|Určuje metodu sloužící k určení, které body jsou uvnitř geometrie popsal tuto jímku geometrie a které jsou body mimo.|
-|[CD2DGeometrySink::SetSegmentFlags](#setsegmentflags)|Určuje možnosti stroke a zapojte se má použít u nových segmentů přidán do jímky geometry.|
+|[CD2DGeometrySink::AddArc](#addarc)|Přidá do geometrie cesty jeden oblouk.|
+|[CD2DGeometrySink::AddBezier](#addbezier)|Vytvoří kubickou Bezierovu křivku mezi aktuálním a zadaným koncovým bodem.|
+|[CD2DGeometrySink::AddBeziers](#addbeziers)|Vytvoří posloupnost kubických Bezierových křivek a přidá je do jímky geometrie.|
+|[CD2DGeometrySink::AddLine](#addline)|Vytvoří segment čáry mezi aktuálním a zadaným koncovým bodem a přidá ho do jímky geometrie.|
+|[CD2DGeometrySink::AddLines](#addlines)|Vytvoří posloupnost čar pomocí určených bodů a přidá je do jímky geometrie.|
+|[CD2DGeometrySink::AddQuadraticBezier](#addquadraticbezier)|Vytvoří kvadratickou Bezierovu křivku mezi aktuálním a zadaným koncovým bodem.|
+|[CD2DGeometrySink::AddQuadraticBeziers](#addquadraticbeziers)|Přidá posloupnost kvadratické Segmenty Bezier jako pole v jednom volání.|
+|[CD2DGeometrySink::BeginFigure](#beginfigure)|Spustí nový obrázek v zadaném bodě.|
+|[CD2DGeometrySink::Zavřít](#close)|Zavře jímka geometrie.|
+|[CD2DGeometrySink::EndFigure](#endfigure)|Ukončí aktuální obrázek; volitelně jej zavře.|
+|[CD2DGeometrySink::Získat](#get)|Vrátí rozhraní ID2D1GeometrySink.|
+|[CD2DGeometrySink::IsValid](#isvalid)|Zkontroluje platnost jímky geometrie.|
+|[CD2DGeometrySink::Režim SetFillMode](#setfillmode)|Určuje metodu použitou k určení bodů, které jsou uvnitř geometrie popsané tímto jímkou geometrie a které body jsou mimo.|
+|[CD2DGeometrySink::SetSegmentFlags](#setsegmentflags)|Určuje volby tahu a spojení, které mají být použity na nové segmenty přidané do jímky geometrie.|
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CD2DGeometrySink::Operator ID2D1GeometrySink *](#operator_id2d1geometrysink_star)|Vrátí ID2D1GeometrySink rozhraní|
+|[CD2DGeometrySink::operátor ID2D1GeometrySink*](#operator_id2d1geometrysink_star)|Vrátí rozhraní ID2D1GeometrySink.|
 
-### <a name="protected-data-members"></a>Chránění členové dat
+### <a name="protected-data-members"></a>Členové chráněných dat
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CD2DGeometrySink::m_pSink](#m_psink)|Ukazatel ID2D1GeometrySink.|
+|[CD2DGeometrySink::m_pSink](#m_psink)|Ukazatel na ID2D1GeometrySink.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -103,17 +103,17 @@ class CD2DGeometrySink;
 
 **Záhlaví:** afxrendertarget.h
 
-##  <a name="_dtorcd2dgeometrysink"></a>  CD2DGeometrySink::~CD2DGeometrySink
+## <a name="cd2dgeometrysinkcd2dgeometrysink"></a><a name="_dtorcd2dgeometrysink"></a>CD2DGeometrySink::~CD2DGeometrySink
 
-Destruktor. Volá se, když se likviduje objektu D2D geometrie jímky.
+Destruktor. Nazývá se při zničení objektu jímky geometrie D2D.
 
 ```
 virtual ~CD2DGeometrySink();
 ```
 
-##  <a name="addarc"></a>  CD2DGeometrySink::AddArc
+## <a name="cd2dgeometrysinkaddarc"></a><a name="addarc"></a>CD2DGeometrySink::AddArc
 
-Přidá jeden oblouk geometrické cesty
+Přidá do geometrie cesty jeden oblouk.
 
 ```
 void AddArc(const D2D1_ARC_SEGMENT& arc);
@@ -122,11 +122,11 @@ void AddArc(const D2D1_ARC_SEGMENT& arc);
 ### <a name="parameters"></a>Parametry
 
 *Oblouk*<br/>
-Segment oblouk přidat obrázek
+Segment oblouku, který chcete přidat k pojivu
 
-##  <a name="addbezier"></a>  CD2DGeometrySink::AddBezier
+## <a name="cd2dgeometrysinkaddbezier"></a><a name="addbezier"></a>CD2DGeometrySink::AddBezier
 
-Vytvoří kubické Bézierovy křivky mezi aktuálním bodem a zadaným koncový bod.
+Vytvoří kubickou Bezierovu křivku mezi aktuálním a zadaným koncovým bodem.
 
 ```
 void AddBezier(const D2D1_BEZIER_SEGMENT& bezier);
@@ -134,12 +134,12 @@ void AddBezier(const D2D1_BEZIER_SEGMENT& bezier);
 
 ### <a name="parameters"></a>Parametry
 
-*bezier*<br/>
-Struktura, která popisuje kontrolních bodů a koncový bod Bézierovy křivky na Přidat.
+*Bezierovy*<br/>
+Struktura, která popisuje řídicí body a koncový bod Bezierovy křivky, kterou chcete přidat.
 
-##  <a name="addbeziers"></a>  CD2DGeometrySink::AddBeziers
+## <a name="cd2dgeometrysinkaddbeziers"></a><a name="addbeziers"></a>CD2DGeometrySink::AddBeziers
 
-Vytvoří posloupnost kubické Bézierovy křivky a přidá je do jímky geometry.
+Vytvoří posloupnost kubických Bezierových křivek a přidá je do jímky geometrie.
 
 ```
 void AddBeziers(
@@ -149,12 +149,12 @@ void AddBeziers(
 
 ### <a name="parameters"></a>Parametry
 
-*Bézierovy křivky*<br/>
-Pole Bézierovy segmentů, které popisuje Bézierových křivek na vytvořit. Křivky pochází z aktuálního místa jímky Geometrie (koncový bod poslední segment vykreslit nebo umístění, které určuje BeginFigure) pro koncový bod první segment Bézierovy křivky v poli. Pokud pole obsahuje další segmenty Bézierovy, každý další segment Bézierovu používá koncový bod předchozího segmentu Bézierovu jako počáteční bod.
+*Beziers*<br/>
+Pole Bezierových segmentů, které popisuje Bezierovy křivky, které chcete vytvořit. Křivka je nakreslena z aktuálního bodu dřezu geometrie (koncový bod posledního nakresleného segmentu nebo umístění určeného beginfigure) do koncového bodu prvního Bezierova segmentu v poli. pokud pole obsahuje další Bezierovy segmenty, každý následující Bezierův segment použije koncový bod předchozího Bezierova segmentu jako počáteční bod.
 
-##  <a name="addline"></a>  CD2DGeometrySink::AddLine
+## <a name="cd2dgeometrysinkaddline"></a><a name="addline"></a>CD2DGeometrySink::AddLine
 
-Vytvoří úsek čáry mezi aktuálním bodem a zadaným koncový bod a přidá jej do jímky geometry.
+Vytvoří segment čáry mezi aktuálním a zadaným koncovým bodem a přidá ho do jímky geometrie.
 
 ```
 void AddLine(CD2DPointF point);
@@ -162,12 +162,12 @@ void AddLine(CD2DPointF point);
 
 ### <a name="parameters"></a>Parametry
 
-*point*<br/>
-Koncový bod čáry.
+*Bod*<br/>
+Koncový bod čáry k nakreslení.
 
-##  <a name="addlines"></a>  CD2DGeometrySink::AddLines
+## <a name="cd2dgeometrysinkaddlines"></a><a name="addlines"></a>CD2DGeometrySink::AddLines
 
-Vytvoří posloupnost řádky pomocí zadané body a přidá je do jímky geometry.
+Vytvoří posloupnost čar pomocí určených bodů a přidá je do jímky geometrie.
 
 ```
 void AddLines(
@@ -177,12 +177,12 @@ void AddLines(
 
 ### <a name="parameters"></a>Parametry
 
-*body*<br/>
-Pole jednoho nebo více bodů, které popisují řádky, které chcete kreslit. Linie vychází ze jímky geometrie aktuálního místa (koncový bod poslední segment vykreslit nebo umístění, které určuje BeginFigure) k první bod v poli. Pokud pole obsahuje další body, linie vychází z prvního bodu na druhý bod v poli, z druhé bodu třetí bodu, a tak dále. Pole sekvence koncové body čáry pro kreslení.
+*Body*<br/>
+Pole jednoho nebo více bodů, které popisují čáry kreslit. Čára je nakreslena z aktuálního bodu jímky geometrie (koncový bod posledního nakresleného segmentu nebo umístění určeného beginfigure) k prvnímu bodu v poli. Pokud pole obsahuje další body, čára je nakreslena z prvního bodu do druhého bodu v poli, z druhého bodu do třetího bodu a tak dále. Pole posloupnosti koncových bodů čar, které chcete nakreslit.
 
-##  <a name="addquadraticbezier"></a>  CD2DGeometrySink::AddQuadraticBezier
+## <a name="cd2dgeometrysinkaddquadraticbezier"></a><a name="addquadraticbezier"></a>CD2DGeometrySink::AddQuadraticBezier
 
-Vytvoří kvadratické Bézierovy křivky mezi aktuálním bodem a zadaným koncový bod.
+Vytvoří kvadratickou Bezierovu křivku mezi aktuálním a zadaným koncovým bodem.
 
 ```
 void AddQuadraticBezier(const D2D1_QUADRATIC_BEZIER_SEGMENT& bezier);
@@ -190,12 +190,12 @@ void AddQuadraticBezier(const D2D1_QUADRATIC_BEZIER_SEGMENT& bezier);
 
 ### <a name="parameters"></a>Parametry
 
-*bezier*<br/>
-Struktura, která popisuje řídicí bod a koncový bod kvadratické Bézierovy křivky na Přidat.
+*Bezierovy*<br/>
+Struktura, která popisuje řídicí bod a koncový bod kvadratické Bezierovy křivky, kterou chcete přidat.
 
-##  <a name="addquadraticbeziers"></a>  CD2DGeometrySink::AddQuadraticBeziers
+## <a name="cd2dgeometrysinkaddquadraticbeziers"></a><a name="addquadraticbeziers"></a>CD2DGeometrySink::AddQuadraticBeziers
 
-Přidá pořadí kvadratické Bézierovy křivky segmentů jako pole v jednom volání.
+Přidá posloupnost kvadratické Segmenty Bezier jako pole v jednom volání.
 
 ```
 void AddQuadraticBeziers(
@@ -205,12 +205,12 @@ void AddQuadraticBeziers(
 
 ### <a name="parameters"></a>Parametry
 
-*Bézierovy křivky*<br/>
-Pole sekvence kvadratické Bézierovy křivky segmenty.
+*Beziers*<br/>
+Pole posloupnosti kvadratické Bezierovy segmenty.
 
-##  <a name="beginfigure"></a>  CD2DGeometrySink::BeginFigure
+## <a name="cd2dgeometrysinkbeginfigure"></a><a name="beginfigure"></a>CD2DGeometrySink::BeginFigure
 
-Spustí nový obrázek na zadaný bod.
+Spustí nový obrázek v zadaném bodě.
 
 ```
 void BeginFigure(
@@ -220,15 +220,15 @@ void BeginFigure(
 
 ### <a name="parameters"></a>Parametry
 
-*startPoint*<br/>
-Bod, na kterém má být nový obrázek.
+*startpoint*<br/>
+Bod, ve kterém začít novou postavu.
 
-*figureBegin*<br/>
-Určuje, zda nový obrázek musí být prázdný nebo vyplněné.
+*obrázekZačít*<br/>
+Zda má být nová postava dutá nebo vyplněná.
 
-##  <a name="cd2dgeometrysink"></a>  CD2DGeometrySink::CD2DGeometrySink
+## <a name="cd2dgeometrysinkcd2dgeometrysink"></a><a name="cd2dgeometrysink"></a>CD2DGeometrySink::CD2DGeometrySink
 
-Vytvoří objekt cd2dgeometrysink – z cd2dpathgeometry – objektu.
+Vytvoří objekt CD2DGeometrySink z objektu CD2DPathGeometry.
 
 ```
 CD2DGeometrySink(CD2DPathGeometry& pathGeometry);
@@ -236,12 +236,12 @@ CD2DGeometrySink(CD2DPathGeometry& pathGeometry);
 
 ### <a name="parameters"></a>Parametry
 
-*pathGeometry*<br/>
-Existující objekt cd2dpathgeometry –.
+*Pathgeometry*<br/>
+Existující objekt CD2DPathGeometry.
 
-##  <a name="close"></a>  CD2DGeometrySink::Close
+## <a name="cd2dgeometrysinkclose"></a><a name="close"></a>CD2DGeometrySink::Zavřít
 
-Zavře jímky geometrie
+Zavře jímka geometrie.
 
 ```
 BOOL Close();
@@ -249,11 +249,11 @@ BOOL Close();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je úspěšná. v opačném případě FALSE.
+Nenulová, pokud je úspěšná; jinak FALSE.
 
-##  <a name="endfigure"></a>  CD2DGeometrySink::EndFigure
+## <a name="cd2dgeometrysinkendfigure"></a><a name="endfigure"></a>CD2DGeometrySink::EndFigure
 
-Ukončí aktuální obrázek; Volitelně můžete zavře.
+Ukončí aktuální obrázek; volitelně jej zavře.
 
 ```
 void EndFigure(D2D1_FIGURE_END figureEnd);
@@ -262,11 +262,11 @@ void EndFigure(D2D1_FIGURE_END figureEnd);
 ### <a name="parameters"></a>Parametry
 
 *figureEnd*<br/>
-Hodnota, která určuje, zda je aktuální figure uzavřený. Pokud na obrázku je zavřená, linie vychází mezi aktuálním bodem a počáteční bod určené BeginFigure.
+Hodnota, která označuje, zda je aktuální údaj uzavřen. Pokud je obrázek uzavřen, je nakreslena čára mezi aktuálním bodem a počátečním bodem určeným beginfigure.
 
-##  <a name="get"></a>  CD2DGeometrySink::Get
+## <a name="cd2dgeometrysinkget"></a><a name="get"></a>CD2DGeometrySink::Získat
 
-Vrátí ID2D1GeometrySink rozhraní
+Vrátí rozhraní ID2D1GeometrySink.
 
 ```
 ID2D1GeometrySink* Get();
@@ -274,11 +274,11 @@ ID2D1GeometrySink* Get();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na rozhraní ID2D1GeometrySink nebo hodnota NULL, pokud objekt ještě není inicializován.
+Ukazatel na rozhraní ID2D1GeometrySink nebo NULL, pokud objekt ještě není inicializován.
 
-##  <a name="isvalid"></a>  CD2DGeometrySink::IsValid
+## <a name="cd2dgeometrysinkisvalid"></a><a name="isvalid"></a>CD2DGeometrySink::IsValid
 
-Zkontroluje platnost jímky geometrie
+Zkontroluje platnost jímky geometrie.
 
 ```
 BOOL IsValid() const;
@@ -286,19 +286,19 @@ BOOL IsValid() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE, pokud geometrie jímkou je platná. v opačném případě FALSE.
+TRUE, pokud je jímka geometrie platná; jinak FALSE.
 
-##  <a name="m_psink"></a>  CD2DGeometrySink::m_pSink
+## <a name="cd2dgeometrysinkm_psink"></a><a name="m_psink"></a>CD2DGeometrySink::m_pSink
 
-Ukazatel ID2D1GeometrySink.
+Ukazatel na ID2D1GeometrySink.
 
 ```
 ID2D1GeometrySink* m_pSink;
 ```
 
-##  <a name="operator_id2d1geometrysink_star"></a>  CD2DGeometrySink::Operator ID2D1GeometrySink *
+## <a name="cd2dgeometrysinkoperator-id2d1geometrysink"></a><a name="operator_id2d1geometrysink_star"></a>CD2DGeometrySink::operátor ID2D1GeometrySink*
 
-Vrátí ID2D1GeometrySink rozhraní
+Vrátí rozhraní ID2D1GeometrySink.
 
 ```
 operator ID2D1GeometrySink*();
@@ -306,11 +306,11 @@ operator ID2D1GeometrySink*();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na rozhraní ID2D1GeometrySink nebo hodnota NULL, pokud objekt ještě není inicializován.
+Ukazatel na rozhraní ID2D1GeometrySink nebo NULL, pokud objekt ještě není inicializován.
 
-##  <a name="setfillmode"></a>  CD2DGeometrySink::SetFillMode
+## <a name="cd2dgeometrysinksetfillmode"></a><a name="setfillmode"></a>CD2DGeometrySink::Režim SetFillMode
 
-Určuje metodu sloužící k určení, které body jsou uvnitř geometrie popsal tuto jímku geometrie a které jsou body mimo.
+Určuje metodu použitou k určení bodů, které jsou uvnitř geometrie popsané tímto jímkou geometrie a které body jsou mimo.
 
 ```
 void SetFillMode(D2D1_FILL_MODE fillMode);
@@ -319,11 +319,11 @@ void SetFillMode(D2D1_FILL_MODE fillMode);
 ### <a name="parameters"></a>Parametry
 
 *fillMode*<br/>
-Metoda používá k určení, zda daný bod je součástí geometrii.
+Metoda použitá k určení, zda je daný bod součástí geometrie.
 
-##  <a name="setsegmentflags"></a>  CD2DGeometrySink::SetSegmentFlags
+## <a name="cd2dgeometrysinksetsegmentflags"></a><a name="setsegmentflags"></a>CD2DGeometrySink::SetSegmentFlags
 
-Určuje možnosti stroke a zapojte se má použít u nových segmentů přidán do jímky geometry.
+Určuje volby tahu a spojení, které mají být použity na nové segmenty přidané do jímky geometrie.
 
 ```
 void SetSegmentFlags(D2D1_PATH_SEGMENT vertexFlags);
@@ -332,8 +332,8 @@ void SetSegmentFlags(D2D1_PATH_SEGMENT vertexFlags);
 ### <a name="parameters"></a>Parametry
 
 *vertexFlags*<br/>
-Možnosti stroke a zapojte se má použít u nových segmentů, které jsou přidány do jímky geometrie.
+Volby tahu a spojení, které mají být použity na nové segmenty přidané do jímky geometrie.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Třídy](../../mfc/reference/mfc-classes.md)

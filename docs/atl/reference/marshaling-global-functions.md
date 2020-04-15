@@ -1,36 +1,36 @@
 ---
-title: Zařazení globálních funkcí
+title: Zařazování globálních funkcí
 ms.date: 11/04/2016
 f1_keywords:
 - atlbase/ATL::AtlFreeMarshalStream
 - atlbase/ATL::AtlMarshalPtrInProc
 - atlbase/ATL::AtlUnmarshalPtr
 ms.assetid: 877100b5-6ad9-44c5-a2e0-09414f1720d0
-ms.openlocfilehash: cac6e316ad6b5d3f49c171c940d9129060744aee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b839e93b6251a09ce79df60a49b4054d1af76cc9
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62274691"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81326264"
 ---
-# <a name="marshaling-global-functions"></a>Zařazení globálních funkcí
+# <a name="marshaling-global-functions"></a>Zařazování globálních funkcí
 
-Tyto funkce poskytují podporu pro zařazování a převodem zařazování dat na ukazatele rozhraní.
+Tyto funkce poskytují podporu pro zařazování a převod dat zařazování do ukazatelů rozhraní.
 
 > [!IMPORTANT]
->  Funkce uvedené v následující tabulce nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.
+> Funkce uvedené v následující tabulce nelze použít v aplikacích, které se spouštějí v prostředí Windows Runtime.
 
 |||
 |-|-|
-|[AtlFreeMarshalStream](#atlfreemarshalstream)|Uvolní zařazování dat a `IStream` ukazatele.|
-|[AtlMarshalPtrInProc](#atlmarshalptrinproc)|Vytvoří nový objekt streamu a zařadí zadaný ukazatel rozhraní.|
-|[AtlUnmarshalPtr](#atlunmarshalptr)|Převede zařazovaná data streamu ukazatel rozhraní.|
+|[AtlFreeMarshalStream](#atlfreemarshalstream)|Uvolní data marshal a `IStream` ukazatel.|
+|[AtlMarshalPtrInProc](#atlmarshalptrinproc)|Vytvoří nový objekt datového proudu a zařazuje zadaný ukazatel rozhraní.|
+|[AtlUnmarshalPtr](#atlunmarshalptr)|Převede data zařazování datového proudu na ukazatel rozhraní.|
 
 ## <a name="requirements"></a>Požadavky:
 
 **Záhlaví:** atlbase.h
 
-##  <a name="atlfreemarshalstream"></a>  AtlFreeMarshalStream
+## <a name="atlfreemarshalstream"></a><a name="atlfreemarshalstream"></a>AtlFreeMarshalStream
 
 Uvolní zařazování dat ve streamu a následně uvolní ukazatel streamu.
 
@@ -41,13 +41,13 @@ HRESULT AtlFreeMarshalStream(IStream* pStream);
 ### <a name="parameters"></a>Parametry
 
 *pStream*<br/>
-[in] Ukazatel `IStream` rozhraní na datový proud použitý k zařazování.
+[v] Ukazatel na `IStream` rozhraní v datovém proudu slouží pro zařazování.
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [AtlMarshalPtrInProc](#atlmarshalptrinproc).
+Viz příklad pro [AtlMarshalPtrInProc](#atlmarshalptrinproc).
 
-##  <a name="atlmarshalptrinproc"></a>  AtlMarshalPtrInProc
+## <a name="atlmarshalptrinproc"></a><a name="atlmarshalptrinproc"></a>AtlMarshalPtrInProc
 
 Vytvoří nový objekt streamu, zapíše do tohoto streamu identifikátor CLSID proxy a zařadí zadaný ukazatel rozhraní tím, že do streamu zapíše data potřebná k inicializaci proxy.
 
@@ -60,32 +60,32 @@ HRESULT AtlMarshalPtrInProc(
 
 ### <a name="parameters"></a>Parametry
 
-*pUnk*<br/>
-[in] Ukazatel rozhraní k zařadit.
+*Punk*<br/>
+[v] Ukazatel na rozhraní, které má být zařazeno.
 
-*iid*<br/>
-[in] Identifikátor GUID rozhraní se zařadit.
+*Iid*<br/>
+[v] Identifikátor GUID rozhraní, které je zařazováno.
 
-*ppStream*<br/>
-[out] Ukazatel `IStream` rozhraní u nového objektu datového proudu, který se používá pro zařazování.
+*Ppstream*<br/>
+[out] Ukazatel na `IStream` rozhraní na nový objekt datového proudu, který se používá pro zařazování.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Standardní hodnoty HRESULT.
+Standardní hodnota HRESULT.
 
 ### <a name="remarks"></a>Poznámky
 
-Příznak MSHLFLAGS_TABLESTRONG je nastaven tak, že ukazatele může být zařazen do různých datových proudů. Ukazatel může být také zařazeny více než jednou.
+Příznak MSHLFLAGS_TABLESTRONG je nastaven tak, aby ukazatel může být zařazen do více datových proudů. Ukazatel může být také unmarshaled vícekrát.
 
-Pokud zařazování selže, se uvolní ukazatel streamu.
+Pokud zařazování selže, je uvolněn ukazatel datového proudu.
 
-`AtlMarshalPtrInProc` jde použít jenom na ukazatel na objekt v rámci procesu.
+`AtlMarshalPtrInProc`lze použít pouze na ukazatel na objekt v procesu.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_ATL_COM#50](../../atl/codesnippet/cpp/marshaling-global-functions_1.cpp)]
 
-##  <a name="atlunmarshalptr"></a>  AtlUnmarshalPtr
+## <a name="atlunmarshalptr"></a><a name="atlunmarshalptr"></a>AtlUnmarshalPtr
 
 Převede zařazovaná data streamu na ukazatel rozhraní, který může použít klient.
 
@@ -99,22 +99,22 @@ HRESULT AtlUnmarshalPtr(
 ### <a name="parameters"></a>Parametry
 
 *pStream*<br/>
-[in] Ukazatel na datový proud se zařazeny.
+[v] Ukazatel na nezařazený datový proud.
 
-*iid*<br/>
-[in] Identifikátor GUID rozhraní jsou zařazeny.
+*Iid*<br/>
+[v] Identifikátor GUID rozhraní, které je unmarshaled.
 
 *ppUnk*<br/>
-[out] Ukazatel na rozhraní zrušeno.
+[out] Ukazatel na nezařazené rozhraní.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Standardní hodnoty HRESULT.
+Standardní hodnota HRESULT.
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [AtlMarshalPtrInProc](#atlmarshalptrinproc).
+Viz příklad pro [AtlMarshalPtrInProc](#atlmarshalptrinproc).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Funkce](../../atl/reference/atl-functions.md)
+[Functions](../../atl/reference/atl-functions.md)

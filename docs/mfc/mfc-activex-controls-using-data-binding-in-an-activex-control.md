@@ -1,5 +1,5 @@
 ---
-title: 'MFC – ovládací prvky ActiveX: Použití datových vazeb v ovládacím prvku ActiveX'
+title: 'MFC – ovládací prvky ActiveX: Použití datových vazeb v ovládacím prvku ActiveX'
 ms.date: 11/19/2018
 f1_keywords:
 - bindable
@@ -14,125 +14,125 @@ helpviewer_keywords:
 - controls [MFC], data binding
 - bound controls [MFC], MFC ActiveX
 ms.assetid: 476b590a-bf2a-498a-81b7-dd476bd346f1
-ms.openlocfilehash: e21a31b71e681cdffed555c10079c2598967543f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 41ac0180242aea3143a1df2c32dc81fb18cd7dca
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62239531"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81370784"
 ---
-# <a name="mfc-activex-controls-using-data-binding-in-an-activex-control"></a>MFC – ovládací prvky ActiveX: Použití datových vazeb v ovládacím prvku ActiveX
+# <a name="mfc-activex-controls-using-data-binding-in-an-activex-control"></a>MFC – ovládací prvky ActiveX: Použití datových vazeb v ovládacím prvku ActiveX
 
-Jednou z výkonnější používá ovládací prvky ActiveX je datové vazby, který povolí vlastnost ovládacího prvku, který má být svázána s konkrétní pole v databázi. Když uživatel změní data v tomto vázané vlastnosti, upozorní ovládací prvek databáze a požadavky aktualizovat pole záznamu. Databáze upozorní ovládací prvek úspěch nebo selhání požadavku.
+Jedním z výkonnějších použití ovládacích prvků ActiveX je datová vazba, která umožňuje vlastnost ovládacího prvku svázat s určitým polem v databázi. Když uživatel upraví data v této vázané vlastnosti, ovládací prvek upozorní databázi a požádá o aktualizaci pole záznamu. Databáze pak upozorní řízení o úspěchu nebo neúspěchu požadavku.
 
 >[!IMPORTANT]
-> ActiveX je starší technologie, která by neměla být používána při novém vývoji. Další informace o moderních technologií, které nahrazují ActiveX naleznete v tématu [ovládací prvky ActiveX](activex-controls.md).
+> ActiveX je starší technologie, která by neměla být použita pro nový vývoj. Další informace o moderních technologiích, které nahrazují ovládací prvky ActiveX, naleznete [v tématu ActiveX Controls](activex-controls.md).
 
-Tento článek popisuje úlohy na straně ovládacího prvku. Implementace interakcích vazeb dat s databází zodpovídá za kontejnerem ovládacího prvku. Jak spravovat interakce databáze ve vašem kontejneru je nad rámec této dokumentace. Jak připravit ovládacího prvku pro vytváření datových vazeb jsou vysvětleny v zbývající část tohoto článku.
+Tento článek popisuje ovládací stránku úlohy. Implementace interakce datové vazby s databází je odpovědností kontejneru ovládacího prvku. Způsob správy interakcí databáze v kontejneru je nad rámec této dokumentace. Jak připravit ovládací prvek pro datové vazby je vysvětleno ve zbytku tohoto článku.
 
-![Koncepční schéma celé datové&#45;vázaného ovládacího prvku](../mfc/media/vc374v1.gif "koncepční schéma celé datové&#45;vázaného ovládacího prvku") <br/>
-Koncepční Diagram ovládací prvek vázaný na Data
+![Koncepční diagram ovládacího prvku&#45;dat](../mfc/media/vc374v1.gif "Koncepční diagram ovládacího prvku&#45;dat") <br/>
+Koncepční diagram ovládacího prvku vázaného na data
 
-`COleControl` Třída obsahuje dva členské funkce, které usnadňují vytváření datových vazeb jednoduchý proces k implementaci. První funkce [BoundPropertyRequestEdit](../mfc/reference/colecontrol-class.md#boundpropertyrequestedit), slouží k vyžádání oprávnění ke změně hodnoty vlastnosti. [BoundPropertyChanged](../mfc/reference/colecontrol-class.md#boundpropertychanged), druhá funkce se volá, když úspěšně změně hodnoty vlastnosti.
+Třída `COleControl` poskytuje dvě členské funkce, které usnadňují implementaci datové vazby. První funkce [BoundPropertyRequestEdit](../mfc/reference/colecontrol-class.md#boundpropertyrequestedit)se používá k vyžádání oprávnění ke změně hodnoty vlastnosti. [BoundPropertyChanged](../mfc/reference/colecontrol-class.md#boundpropertychanged), druhá funkce, je volána po úspěšné změně hodnoty vlastnosti.
 
-Tento článek obsahuje následující témata:
+Tento článek popisuje následující témata:
 
-- [Vytvoření s možností vazby uložených vlastností](#vchowcreatingbindablestockproperty)
+- [Vytvoření vazby skladové vlastnosti](#vchowcreatingbindablestockproperty)
 
-- [Vytvoření s možností vazby Get/Set – metoda](#vchowcreatingbindablegetsetmethod)
+- [Vytvoření vypojitelné metody get/set](#vchowcreatingbindablegetsetmethod)
 
-##  <a name="vchowcreatingbindablestockproperty"></a> Vytvoření s možností vazby uložených vlastností
+## <a name="creating-a-bindable-stock-property"></a><a name="vchowcreatingbindablestockproperty"></a>Vytvoření vazby skladové vlastnosti
 
-Je možné vytvořit uložených vlastností vázané na data, i když je pravděpodobnější, že můžete [umožňujících vazbu get/set – metoda](#vchowcreatingbindablegetsetmethod).
+Je možné vytvořit data vázanou vlastnost akcií, i když je pravděpodobnější, že budete chtít [vyvažovatelnou metodu get/set](#vchowcreatingbindablegetsetmethod).
 
 > [!NOTE]
-> Uložené vlastnosti mají `bindable` a `requestedit` atributy ve výchozím nastavení.
+> Vlastnosti `bindable` skladu `requestedit` mají ve výchozím nastavení atributy a.
 
-#### <a name="to-add-a-bindable-stock-property-using-the-add-property-wizard"></a>Chcete-li přidat vazbu uložených vlastností pomocí Průvodce přidáním vlastnosti
+#### <a name="to-add-a-bindable-stock-property-using-the-add-property-wizard"></a>Přidání vazby skladové vlastnosti pomocí Průvodce přidáním vlastností
 
-1. Začít projektu používat [Průvodce ovládacím prvkem MFC ActiveX](../mfc/reference/mfc-activex-control-wizard.md).
+1. Zahájení projektu pomocí [Průvodce ovládacím prvkem ActiveX knihovny MFC](../mfc/reference/mfc-activex-control-wizard.md).
 
-1. Klikněte pravým tlačítkem na uzel rozhraní ovládacího prvku.
+1. Klikněte pravým tlačítkem myši na uzel rozhraní pro ovládací prvek.
 
-   Tím se otevře v místní nabídce.
+   Otevře se místní nabídka.
 
-1. V místní nabídce klikněte na tlačítko **přidat** a potom klikněte na tlačítko **přidat vlastnost**.
+1. V místní nabídce klikněte na **Přidat** a potom na **Přidat vlastnost**.
 
-1. Vyberte jednu z položek **název vlastnosti** rozevíracího seznamu. Například můžete vybrat **Text**.
+1. Vyberte jednu z položek z rozevíracího seznamu **Název vlastnosti.** Můžete například vybrat **text**.
 
-   Protože **Text** je uložených vlastností **umožňujících vazbu** a **requestedit –** atributy jsou již zaškrtnuté.
+   Vzhledem k tomu, **že Text** je vlastnost zásob, jsou již zkontrolovány **vazby a** atributy **requestedit.**
 
-1. Vyberte z následujících políček **IDL – atributy** kartu: **displaybind** a **defaultbind** a přidat atributy v definici vlastnosti v projektu. Soubor IDL. Tyto atributy Zviditelněte ovládací prvek pro uživatele a zkontrolujte výchozí vázanou vlastnost uložených vlastností.
+1. Na kartě **Atributy IDL** zaškrtněte následující políčka: **displaybind** a **defaultbind** pro přidání atributů do definice vlastnosti v projektu . IDL. Tyto atributy zviditelní ovládací prvek pro uživatele a vlastnost stock výchozí vlastnosti s houževnatá.
 
-V tuto chvíli váš ovládací prvek mohl zobrazit data ze zdroje dat, ale uživatel nebude možné aktualizovat datová pole. Pokud chcete, aby ovládací prvek také umožnit aktualizaci dat, změňte `OnOcmCommand` [OnOcmCommand](../mfc/mfc-activex-controls-subclassing-a-windows-control.md) funkce vypadat takto:
+V tomto okamžiku může ovládací prvek zobrazit data ze zdroje dat, ale uživatel nebude moci aktualizovat datová pole. Pokud chcete, aby ovládací prvek také mohl `OnOcmCommand` aktualizovat data, změňte funkci [OnOcmCommand](../mfc/mfc-activex-controls-subclassing-a-windows-control.md) takto:
 
 [!code-cpp[NVC_MFC_AxData#1](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_1.cpp)]
 
-Nyní můžete vytvořit projekt, který se zaregistrujte ovládací prvek. Když vložíte ovládací prvek v dialogovém okně **datové pole** a **zdroj dat** vlastnosti se nepřidaly a teď můžete vybrat zdroj dat a pole, které chcete zobrazit v ovládacím prvku.
+Nyní můžete vytvořit projekt, který bude registrovat ovládací prvek. Když vložíte ovládací prvek do dialogového okna, budou přidány **vlastnosti Datové pole** a **Zdroj dat** a nyní můžete vybrat zdroj dat a pole, které se zobrazí v ovládacím prvku.
 
-##  <a name="vchowcreatingbindablegetsetmethod"></a> Vytvoření s možností vazby Get/Set – metoda
+## <a name="creating-a-bindable-getset-method"></a><a name="vchowcreatingbindablegetsetmethod"></a>Vytvoření vypojitelné metody get/set
 
-Kromě vázaný na data získá nebo nastaví metodu, můžete také vytvořit [umožňujících vazbu uložených vlastností](#vchowcreatingbindablestockproperty).
+Kromě metody get/set vázané na data můžete také vytvořit [vypojitelnou vlastnost .](#vchowcreatingbindablestockproperty)
 
 > [!NOTE]
-> Tento postup předpokládá, že máte ovládacího prvku ActiveX projektu, která je podtřídou ovládací prvek Windows.
+> Tento postup předpokládá, že máte projekt ovládacího prvku ActiveX, který podřcovává ovládací prvek systému Windows.
 
-#### <a name="to-add-a-bindable-getset-method-using-the-add-property-wizard"></a>Přidání metody get/set-umožňujících vazbu pomocí Průvodce přidáním vlastnosti
+#### <a name="to-add-a-bindable-getset-method-using-the-add-property-wizard"></a>Přidání vazby get/set metoda pomocí Průvodce přidáním vlastností
 
-1. Načtení projektu ovládacího prvku.
+1. Načtěte projekt ovládacího prvku.
 
-1. Na **nastavení** vyberte třídu okna pro ovládací prvek do podtříd. Například můžete chtít podtřídy ovládacího prvku pro úpravy.
+1. Na stránce **Nastavení ovládacího prvku** vyberte třídu okna pro ovládací prvek do podtřídy. Můžete například podtřídovat ovládací prvek EDIT.
 
-1. Načtení projektu ovládacího prvku.
+1. Načtěte projekt ovládacího prvku.
 
-1. Klikněte pravým tlačítkem na uzel rozhraní ovládacího prvku.
+1. Klikněte pravým tlačítkem myši na uzel rozhraní pro ovládací prvek.
 
-   Tím se otevře v místní nabídce.
+   Otevře se místní nabídka.
 
-1. V místní nabídce klikněte na tlačítko **přidat** a potom klikněte na tlačítko **přidat vlastnost**.
+1. V místní nabídce klikněte na **Přidat** a potom na **Přidat vlastnost**.
 
-1. Zadejte název vlastnosti v **název vlastnosti** pole. Použití `MyProp` pro účely tohoto příkladu.
+1. Do pole Název vlastnosti zadejte název **vlastnosti.** Použijte `MyProp` pro tento příklad.
 
-1. Vyberte datový typ z **typ vlastnosti** rozevíracího seznamu. Použití **krátký** pro účely tohoto příkladu.
+1. Vyberte datový typ z rozevíracího seznamu **Typ vlastnosti.** Použijte **krátký** pro tento příklad.
 
-1. Pro **typ implementace**, klikněte na tlačítko **metody Get/Set**.
+1. V **souboru Typ implementace**klepněte na tlačítko Získat nebo nastavit **metody**.
 
-1. Zaškrtněte následující políčka na kartě Atributy IDL: **umožňujících vazbu**, **requestedit –**, **displaybind**, a **defaultbind** přidat atributy v definici vlastnosti v projektu. Soubor IDL. Tyto atributy Zviditelněte ovládací prvek pro uživatele a zkontrolujte výchozí vázanou vlastnost uložených vlastností.
+1. Na kartě Atributy IDL zaškrtněte následující políčka: **bindable**, **requestedit**, **displaybind**a **defaultbind** pro přidání atributů do definice vlastnosti v projektu . IDL. Tyto atributy zviditelní ovládací prvek pro uživatele a vlastnost stock výchozí vlastnosti s houževnatá.
 
-1. Klikněte na tlačítko **Dokončit**.
+1. Klikněte na **Finish** (Dokončit).
 
-1. Upravit text `SetMyProp` fungovat tak, aby obsahoval následující kód:
+1. Upravte tělo `SetMyProp` funkce tak, aby obsahovala následující kód:
 
    [!code-cpp[NVC_MFC_AxData#2](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_2.cpp)]
 
-1. Parametr předána `BoundPropertyChanged` a `BoundPropertyRequestEdit` funkce je hodnota dispid vlastnost, která je parametr předaný pro vlastnost v atributu id(). Soubor IDL.
+1. Parametr předaný `BoundPropertyChanged` `BoundPropertyRequestEdit` funkcím a je dispid vlastnosti, což je parametr předaný atributu id() pro vlastnost v . IDL.
 
-1. Upravit [OnOcmCommand](../mfc/mfc-activex-controls-subclassing-a-windows-control.md) fungovat tak, aby obsahovala následující kód:
+1. Upravte funkci [OnOcmCommand](../mfc/mfc-activex-controls-subclassing-a-windows-control.md) tak, aby obsahovala následující kód:
 
    [!code-cpp[NVC_MFC_AxData#1](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_1.cpp)]
 
-1. Upravit `OnDraw` fungovat tak, aby obsahoval následující kód:
+1. Upravte `OnDraw` funkci tak, aby obsahovala následující kód:
 
    [!code-cpp[NVC_MFC_AxData#3](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_3.cpp)]
 
-1. Do veřejné sekce souboru hlaviček hlavičkový soubor pro třídy vašeho ovládacího prvku přidejte následující definice (konstruktory) pro členské proměnné:
+1. Do veřejné části souboru záhlaví souboru záhlaví pro třídu ovládacího prvku přidejte následující definice (konstruktory) pro členské proměnné:
 
    [!code-cpp[NVC_MFC_AxData#4](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_4.h)]
 
-1. Zkontrolujte následující řádek na posledním řádku `DoPropExchange` funkce:
+1. Následující řádek vytvořte jako `DoPropExchange` poslední řádek ve funkci:
 
    [!code-cpp[NVC_MFC_AxData#5](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_5.cpp)]
 
-1. Upravit `OnResetState` fungovat tak, aby obsahoval následující kód:
+1. Upravte `OnResetState` funkci tak, aby obsahovala následující kód:
 
    [!code-cpp[NVC_MFC_AxData#6](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_6.cpp)]
 
-1. Upravit `GetMyProp` fungovat tak, aby obsahoval následující kód:
+1. Upravte `GetMyProp` funkci tak, aby obsahovala následující kód:
 
    [!code-cpp[NVC_MFC_AxData#7](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_7.cpp)]
 
-Nyní můžete vytvořit projekt, který se zaregistrujte ovládací prvek. Když vložíte ovládací prvek v dialogovém okně **datové pole** a **zdroj dat** vlastnosti se nepřidaly a teď můžete vybrat zdroj dat a pole, které chcete zobrazit v ovládacím prvku.
+Nyní můžete vytvořit projekt, který bude registrovat ovládací prvek. Když vložíte ovládací prvek do dialogového okna, budou přidány **vlastnosti Datové pole** a **Zdroj dat** a nyní můžete vybrat zdroj dat a pole, které se zobrazí v ovládacím prvku.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [MFC – ovládací prvky ActiveX](../mfc/mfc-activex-controls.md)

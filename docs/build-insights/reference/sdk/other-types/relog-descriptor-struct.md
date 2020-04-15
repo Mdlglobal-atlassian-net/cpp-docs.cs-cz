@@ -1,6 +1,6 @@
 ---
-title: Struktura RELOG_DESCRIPTOR
-description: Odkaz C++ na strukturu RELOG_DESCRIPTOR Build Insights SDK
+title: RELOG_DESCRIPTOR struktura
+description: C++ Build Insights SDK RELOG_DESCRIPTOR odkaz na strukturu.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: f6f20835ed6535dd05def629200c113772e8f077
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: c3aee49fe9f609ca37082693ddcfd5e838cc96a1
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78332325"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81328943"
 ---
-# <a name="relog_descriptor-structure"></a>Struktura RELOG_DESCRIPTOR
+# <a name="relog_descriptor-structure"></a>RELOG_DESCRIPTOR struktura
 
 ::: moniker range="<=vs-2015"
 
-Sada C++ SDK pro Build Insights je kompatibilní se sadou Visual Studio 2017 a novější. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek selektor verzí sady Visual Studio pro tento článek na sadu Visual Studio 2017 nebo Visual Studio 2019.
+Sada C++ Build Insights SDK je kompatibilní s Visual Studio 2017 a vyšší. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek pro výběr **verze** sady Visual Studio pro tento článek na Visual Studio 2017 nebo Visual Studio 2019. Nachází se v horní části obsahu na této stránce.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Struktura `RELOG_DESCRIPTOR` se používá s funkcemi [relog](../functions/relog-a.md) a [RelogW](../functions/relog-w.md) . Popisuje, jak by se mělo přeprotokolovat trasování událostí pro Windows (ETW).
+Struktura `RELOG_DESCRIPTOR` se používá s funkcemi [RelogA](../functions/relog-a.md) a [RelogW.](../functions/relog-w.md) Popisuje, jak trasování událostí pro Windows (ETW) trasování by měla být relogged.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -45,19 +45,19 @@ typedef struct RELOG_DESCRIPTOR_TAG
 
 |  |  |
 |--|--|
-| `NumberOfAnalysisPasses` | Počet průchodů analýz, které by se měly provést v trasování ETW během fáze analýzy relace pro přeprotokolování. |
-| `AnalysisCallbacks` | Objekt [ANALYSIS_CALLBACKS](analysis-callbacks-struct.md) , který určuje, které funkce se mají volat během fáze analýzy v rámci přehlašování. |
-| `RelogCallbacks` | Objekt [RELOG_CALLBACKS](relog-callbacks-struct.md) , který určuje, které funkce se mají volat během fáze rehlašování relace znovu. |
-| `SystemEventsRetentionFlags` | [RELOG_RETENTION_SYSTEM_EVENT_FLAGS](relog-retention-system-event-flags-constants.md) Bitová maska, která určuje, které systémové události ETW budou v přeprotokolovaných trasováních zachovány. |
-| `AnalysisContext` | Uživatelem zadaný kontext, který se předává jako argument všem funkcím zpětného volání určených v `AnalysisCallbacks` |
-| `RelogContext` | Uživatelem zadaný kontext, který se předává jako argument všem funkcím zpětného volání určených v `RelogCallbacks` |
+| `NumberOfAnalysisPasses` | Počet průchodů analýzy, které by měly být provedeny přes trasování ETW během fáze analýzy relace opětovného přihlášení. |
+| `AnalysisCallbacks` | Objekt [ANALYSIS_CALLBACKS,](analysis-callbacks-struct.md) který určuje, které funkce se mají volat během fáze analýzy relace opětovného správě. |
+| `RelogCallbacks` | Objekt [RELOG_CALLBACKS,](relog-callbacks-struct.md) který určuje, které funkce se mají volat během fáze opětovného sekání relace. |
+| `SystemEventsRetentionFlags` | Bitová maska [RELOG_RETENTION_SYSTEM_EVENT_FLAGS,](relog-retention-system-event-flags-constants.md) která určuje, které systémové události ETW mají být v relogged trace. |
+| `AnalysisContext` | Kontext poskytnutý uživatelem, který je předán jako argument všem funkcím zpětného volání určeným v`AnalysisCallbacks` |
+| `RelogContext` | Kontext poskytnutý uživatelem, který je předán jako argument všem funkcím zpětného volání určeným v`RelogCallbacks` |
 
 ## <a name="remarks"></a>Poznámky
 
-Po přeprotokolování událostí ETW během relace znovu protokolování je uživatel řízen funkcemi zpětného volání zadaných v `RelogCallbacks`. Systémové události ETW, jako jsou například ukázkové PROCESORy, nejsou předávány těmto funkcím zpětného volání. Pomocí pole `SystemEventsRetentionFlags` můžete řídit, jak se znovu přihlašuje systémové události ETW.
+Opětovné protokolování událostí ETW během relace opětovného přihlášení je řízeno `RelogCallbacks`uživatelem prostřednictvím funkcí zpětného volání uvedených v aplikaci . Události systému ETW, jako jsou například vzorky procesoru, však nejsou předávány do těchto funkcí zpětného volání. Toto `SystemEventsRetentionFlags` pole slouží k řízení opětovného přihlášení událostí systému ETW.
 
-Struktury `AnalysisCallbacks` a `RelogCallbacks` akceptují pouze ukazatele na funkce, které nejsou členské. Toto omezení můžete obejít tak, že je nastavíte na ukazatel objektu. Tento ukazatel objektu se předává jako argument všem funkcím zpětného volání, které nepatří do členů. Tento ukazatel použijte k volání členských funkcí v rámci funkcí zpětného volání, které nepatří do členů.
+Struktury `AnalysisCallbacks` `RelogCallbacks` a přijímají pouze ukazatele na nečlenné funkce. Toto omezení můžete obejít tak, že je nastavíte na ukazatel objektu. Tento ukazatel objektu bude předán jako argument všem funkcím zpětného volání bez členů. Pomocí tohoto ukazatele můžete volat členské funkce z nečlenských funkcí zpětného volání.
 
-Fáze analýzy relace přeprotokolování je vždy prováděna před fází znovu protokolování.
+Fáze analýzy relace opětovného přihlášení je vždy provedena před fází opětovného přihlášení.
 
 ::: moniker-end

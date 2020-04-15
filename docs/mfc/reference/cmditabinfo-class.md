@@ -1,5 +1,5 @@
 ---
-title: Cmditabinfo – třída
+title: Třída CMDITabinfo
 ms.date: 11/04/2016
 f1_keywords:
 - CMDITabInfo
@@ -28,16 +28,16 @@ helpviewer_keywords:
 - CMDITabInfo [MFC], m_style
 - CMDITabInfo [MFC], m_tabLocation
 ms.assetid: 988ae1b7-4f7f-4239-b88f-7e28b3291c5e
-ms.openlocfilehash: a42128d097c9d63d82243090e2e215a250ff432b
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 0d230d2a3401ab556adc1183f4c4210ec6ff3c29
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64341696"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81370036"
 ---
-# <a name="cmditabinfo-class"></a>Cmditabinfo – třída
+# <a name="cmditabinfo-class"></a>Třída CMDITabinfo
 
-`CMDITabInfo` Třída se používá k předání parametrů [CMDIFrameWndEx::EnableMDITabbedGroups](../../mfc/reference/cmdiframewndex-class.md#enablemditabbedgroups) metody. – Skupiny se záložkami nastavení členů této třídy můžete řídit chování MDI.
+Třída `CMDITabInfo` se používá k předání parametrů metodě [CMDIFrameWndEx::EnableMDITabbedGroups.](../../mfc/reference/cmdiframewndex-class.md#enablemditabbedgroups) Nastavte členy této třídy pro řízení chování skupin s kartami MDI.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -49,53 +49,53 @@ class CMDITabInfo
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
 |`CMDITabInfo::CMDITabInfo`|Výchozí konstruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CMDITabInfo::Serialize](#serialize)|Čtení nebo zápis tento objekt z nebo do archivu.|
+|[CMDITabInfo::Serializovat](#serialize)|Přečte nebo zapíše tento objekt z nebo do archivu.|
 
-### <a name="data-members"></a>Datové členy
+### <a name="data-members"></a>Členové dat
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CMDITabInfo::m_bActiveTabCloseButton;](#m_bactivetabclosebutton_)|Určuje, zda **Zavřít** u popisku na aktivní kartě je zobrazeno tlačítko.|
-|[CMDITabInfo::m_bAutoColor](#m_bautocolor)|Určuje, jestli se má barvy karet MDI.|
-|[CMDITabInfo::m_bDocumentMenu](#m_bdocumentmenu)|Určuje, zda skupina karet zobrazí místní nabídka, která zobrazuje seznam otevřených dokumentů nebo zobrazí tlačítka pro posunutí.|
-|[CMDITabInfo::m_bEnableTabSwap](#m_benabletabswap)|Určuje, zda uživatele lze zaměnit pozice karty přetažením.|
-|[CMDITabInfo::m_bFlatFrame](#m_bflatframe)|Určuje, jestli karty mají plochý rámce.|
-|[CMDITabInfo::m_bTabCloseButton](#m_btabclosebutton)|Určuje, zda se zobrazí každý popisek karty **Zavřít** tlačítko.|
-|[CMDITabInfo::m_bTabCustomTooltips](#m_btabcustomtooltips)|Určuje, jestli jsou povolené vlastní popisky.|
-|[CMDITabInfo::m_bTabIcons](#m_btabicons)|Určuje, jestli se má zobrazit ikony na kartách MDI.|
-|[CMDITabInfo::m_nTabBorderSize](#m_ntabbordersize)|Určuje velikost ohraničení každé okno s kartou.|
-|[CMDITabInfo::m_style](#m_style)|Určuje styl popisků kartu.|
-|[CMDITabInfo::m_tabLocation](#m_tablocation)|Určuje, zda jsou popisky karty v horní nebo dolní části stránky.|
+|[CMDITabInfo::m_bActiveTabCloseButton;](#m_bactivetabclosebutton_)|Určuje, zda se na popisku aktivní karty zobrazí tlačítko **Zavřít.**|
+|[CMDITabInfo::m_bAutoColor](#m_bautocolor)|Určuje, zda mají být karty MDI vybarvovány.|
+|[CMDITabInfo::m_bDocumentMenu](#m_bdocumentmenu)|Určuje, zda skupina karet zobrazí místní nabídku, která zobrazuje seznam otevřených dokumentů nebo zobrazuje rolovací tlačítka.|
+|[CMDITabInfo::m_bEnableTabSwap](#m_benabletabswap)|Určuje, zda může uživatel zaměnit pozice karet přetažením.|
+|[CMDITabInfo::m_bFlatFrame](#m_bflatframe)|Určuje, zda mají tabulátory plochý rámeček.|
+|[CMDITabInfo::m_bTabCloseButton](#m_btabclosebutton)|Určuje, zda se na každém popisku karty zobrazí tlačítko **Zavřít.**|
+|[CMDITabInfo::m_bTabCustomTooltips](#m_btabcustomtooltips)|Určuje, zda jsou povoleny vlastní popisky.|
+|[CMDITabInfo::m_bTabIcons](#m_btabicons)|Určuje, zda se mají na kartách MDI zobrazovat ikony.|
+|[CMDITabInfo::m_nTabBorderSize](#m_ntabbordersize)|Určuje velikost ohraničení každého okna karty.|
+|[CMDITabInfo::m_style](#m_style)|Určuje styl popisků karet.|
+|[CMDITabInfo::m_tabLocation](#m_tablocation)|Určuje, zda jsou popisky karet umístěny v horní nebo dolní části stránky.|
 
 ## <a name="remarks"></a>Poznámky
 
-Tato třída určuje parametry skupin karet MDI, které vytvoří rozhraní framework.
+Tato třída určuje parametry skupin y karet MDI, které vytvoří rozhraní framework.
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak nastavit hodnoty různých členské proměnné v `CMDITabInfo` třídy.
+Následující příklad ukazuje, jak nastavit hodnoty různých proměnných `CMDITabInfo` členů ve třídě.
 
 [!code-cpp[NVC_MFC_MDITab#1](../../mfc/reference/codesnippet/cpp/cmditabinfo-class_1.cpp)]
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[CMDITabInfo](../../mfc/reference/cmditabinfo-class.md)
+[CMDITabinfo](../../mfc/reference/cmditabinfo-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
 **Záhlaví:** afxmdiclientareawnd.h
 
-##  <a name="m_bactivetabclosebutton_"></a>  CMDITabInfo::m_bActiveTabCloseButton;
+## <a name="cmditabinfom_bactivetabclosebutton"></a><a name="m_bactivetabclosebutton_"></a>CMDITabInfo::m_bActiveTabCloseButton;
 
-Určuje, zda **Zavřít** u popisku na aktivní kartě je zobrazeno tlačítko.
+Určuje, zda se na popisku aktivní karty zobrazí tlačítko **Zavřít.**
 
 ```
 BOOL m_bActiveTabCloseButton;
@@ -103,11 +103,11 @@ BOOL m_bActiveTabCloseButton;
 
 ### <a name="remarks"></a>Poznámky
 
-Při hodnotě TRUE se zobrazí popisek na aktivní kartě **Zavřít** tlačítko. **Zavřít** odebere tlačítko v pravém horním rohu oblasti karet. V opačném případě nebude zobrazen popisek na aktivní kartě **Zavřít** tlačítko. **Zavřít** tlačítko se zobrazí v pravém horním rohu oblasti karet.
+Pokud true, popisek aktivní karty se zobrazí tlačítko **Zavřít.** Tlačítko **Zavřít** bude odstraněno z pravého horního rohu oblasti karty. V opačném případě se na popisku aktivní karty nezobrazí tlačítko **Zavřít.** Tlačítko **Zavřít** se zobrazí v pravém horním rohu oblasti tabulátoru.
 
-##  <a name="m_bautocolor"></a>  CMDITabInfo::m_bAutoColor
+## <a name="cmditabinfom_bautocolor"></a><a name="m_bautocolor"></a>CMDITabInfo::m_bAutoColor
 
-Určuje, zda každý karet MDI b má svůj vlastní barvy.
+Určuje, zda má každá karta MDI svou vlastní barvu.
 
 ```
 BOOL m_bAutoColor;
@@ -115,11 +115,11 @@ BOOL m_bAutoColor;
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud je hodnota TRUE, bude mít každá karta vlastní barvu. Sada barev se spravuje přes knihovnu MFC. V opačném případě kartách se zobrazují v prázdné. Výchozí hodnota je FALSE.
+Pokud true, každá karta bude mít svou vlastní barvu. Sada barev je spravována knihovnou knihovny knihovny MFC. V opačném případě jsou karty zobrazeny bíle. Výchozí hodnota je FALSE.
 
-##  <a name="m_bdocumentmenu"></a>  CMDITabInfo::m_bDocumentMenu
+## <a name="cmditabinfom_bdocumentmenu"></a><a name="m_bdocumentmenu"></a>CMDITabInfo::m_bDocumentMenu
 
-Určuje, zda každá karta zobrazí místní nabídka, která zobrazuje seznam otevřených dokumentů na pravé straně, od oblasti karet.
+Určuje, zda se na každé tabulátoru zobrazí místní nabídka, která zobrazuje seznam otevřených dokumentů na pravém okraji oblasti tabulátoru.
 
 ```
 BOOL m_bDocumentMenu;
@@ -127,11 +127,11 @@ BOOL m_bDocumentMenu;
 
 ### <a name="remarks"></a>Poznámky
 
-Při hodnotě TRUE se každá karta windows zobrazí místní nabídka, která zobrazuje seznam otevřených dokumentů na pravé straně, od oblasti karet; V opačném případě okno Karta zobrazí tlačítka pro posunutí na pravé straně, od oblasti karet. Výchozí hodnota je FALSE.
+Pokud je true, každé okno karet zobrazí místní nabídku, která zobrazuje seznam otevřených dokumentů na pravém okraji oblasti karty; V opačném případě se v okně karty zobrazí tlačítka posouvání na pravém okraji oblasti karty. Výchozí hodnota je FALSE.
 
-##  <a name="m_benabletabswap"></a>  CMDITabInfo::m_bEnableTabSwap
+## <a name="cmditabinfom_benabletabswap"></a><a name="m_benabletabswap"></a>CMDITabInfo::m_bEnableTabSwap
 
-Určuje, zda uživatele lze zaměnit pozice karty přetažením.
+Určuje, zda může uživatel zaměnit pozice karet přetažením.
 
 ```
 BOOL m_bEnableTabSwap;
@@ -139,19 +139,19 @@ BOOL m_bEnableTabSwap;
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud je hodnota TRUE, uživatel může změnit pozice karty přetažením karet. V opačném případě uživatel nemůže změnit pozice karty. Výchozí hodnota je TRUE.
+Pokud true, uživatel může změnit pozice karet přetažením karty. V opačném případě uživatel nemůže změnit pozice karet. Výchozí hodnota je TRUE.
 
-##  <a name="m_bflatframe"></a>  CMDITabInfo::m_bFlatFrame
+## <a name="cmditabinfom_bflatframe"></a><a name="m_bflatframe"></a>CMDITabInfo::m_bFlatFrame
 
-Určuje, zda má každý okno s kartou plochý rámce.
+Určuje, zda má každé okno karty plochý rámeček.
 
 ```
 BOOL m_bFlatFrame;
 ```
 
-##  <a name="m_btabclosebutton"></a>  CMDITabInfo::m_bTabCloseButton
+## <a name="cmditabinfom_btabclosebutton"></a><a name="m_btabclosebutton"></a>CMDITabInfo::m_bTabCloseButton
 
-Určuje, zda se zobrazí každý okno s kartou **Zavřít** tlačítko.
+Určuje, zda se v každém okně karty zobrazí tlačítko **Zavřít.**
 
 ```
 BOOL m_bTabCloseButton;
@@ -159,11 +159,11 @@ BOOL m_bTabCloseButton;
 
 ### <a name="remarks"></a>Poznámky
 
-Při hodnotě TRUE se zobrazí každý okno s kartou **Zavřít** tlačítko na pravý okraj na kartě. V opačném případě **Zavřít** není zobrazeno tlačítko. Výchozí hodnota je TRUE.
+Pokud je true, každé okno karty zobrazí tlačítko **Zavřít** na **Close** pravém okraji karty. Výchozí hodnota je TRUE.
 
-##  <a name="m_btabcustomtooltips"></a>  CMDITabInfo::m_bTabCustomTooltips
+## <a name="cmditabinfom_btabcustomtooltips"></a><a name="m_btabcustomtooltips"></a>CMDITabInfo::m_bTabCustomTooltips
 
-Určuje, zda karet zobrazit popisy tlačítek.
+Určuje, zda karty zobrazují popisky.
 
 ```
 BOOL m_bTabCustomTooltips;
@@ -171,11 +171,11 @@ BOOL m_bTabCustomTooltips;
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud je hodnota TRUE, aplikace odešle zprávu o AFX_WM_ON_GET_TAB_TOOLTIP hlavního rámce. Tato zpráva může zpracovávat pomocí ON_REGISTERED_MESSAGE – makro.
+Pokud true, aplikace odešle zprávu AFX_WM_ON_GET_TAB_TOOLTIP do hlavního rámce. Tuto zprávu lze zpracovat pomocí ON_REGISTERED_MESSAGE makra.
 
-##  <a name="m_btabicons"></a>  CMDITabInfo::m_bTabIcons
+## <a name="cmditabinfom_btabicons"></a><a name="m_btabicons"></a>CMDITabInfo::m_bTabIcons
 
-Určuje, jestli se má zobrazit ikony na kartách MDI.
+Určuje, zda se mají na kartách MDI zobrazovat ikony.
 
 ```
 BOOL m_bTabIcons;
@@ -183,11 +183,11 @@ BOOL m_bTabIcons;
 
 ### <a name="remarks"></a>Poznámky
 
-Při hodnotě TRUE se ikony se zobrazí na každé kartě MDI. V opačném případě ikony nejsou zobrazeny na kartách. Výchozí hodnota je FALSE.
+Pokud true, ikony jsou zobrazeny na každé kartě MDI. V opačném případě ikony nejsou zobrazeny na kartách. Výchozí hodnota je FALSE.
 
-##  <a name="m_ntabbordersize"></a>  CMDITabInfo::m_nTabBorderSize
+## <a name="cmditabinfom_ntabbordersize"></a><a name="m_ntabbordersize"></a>CMDITabInfo::m_nTabBorderSize
 
-Určuje velikost ohraničení v pixelech každé okno s kartou.
+Určuje velikost ohraničení každého okna karty v obrazových bodech.
 
 ```
 int m_nTabBorderSize;
@@ -197,9 +197,9 @@ int m_nTabBorderSize;
 
 [CMFCVisualManager::GetMDITabsBordersSize](../../mfc/reference/cmfcvisualmanager-class.md#getmditabsborderssize) vrátí výchozí hodnotu.
 
-##  <a name="m_style"></a>  CMDITabInfo::m_style
+## <a name="cmditabinfom_style"></a><a name="m_style"></a>CMDITabInfo::m_style
 
-Určuje styl popisků kartu.
+Určuje styl popisků karet.
 
 ```
 CMFCTabCtrl::Style m_style
@@ -207,20 +207,20 @@ CMFCTabCtrl::Style m_style
 
 ### <a name="remarks"></a>Poznámky
 
-Zadejte jednu z následujících styly popisků kartu:
+Pro popisky tabulátorů určete jeden z následujících stylů:
 
 |||
 |-|-|
-|STYLE_3D|Styl 3D.  |
-|STYLE_3D_ONENOTE|Microsoft OneNote style.  |
-|STYLE_3D_VS2005|Microsoft Visual Studio 2005 style.  |
-|STYLE_3D_SCROLLED|Styl 3D obdélník kartu popisky.  |
-|STYLE_FLAT_SHARED_HORZ_SCROLL|Plochý s sdílené vodorovný posuvník.  |
-|STYLE_3D_ROUNDED_SCROLL|Styl 3D round kartu popisky.  |
+|STYLE_3D|3D styl.  |
+|STYLE_3D_ONENOTE|Styl Aplikace Microsoft OneNote.  |
+|STYLE_3D_VS2005|Ve stylu sady Microsoft Visual Studio 2005.  |
+|STYLE_3D_SCROLLED|3D styl s popisky obdélníkových karet.  |
+|STYLE_FLAT_SHARED_HORZ_SCROLL|Plochý styl se sdíleným vodorovným posuvníkem.  |
+|STYLE_3D_ROUNDED_SCROLL|3D styl s kulatými popisky karet.  |
 
-##  <a name="m_tablocation"></a>  CMDITabInfo::m_tabLocation
+## <a name="cmditabinfom_tablocation"></a><a name="m_tablocation"></a>CMDITabInfo::m_tabLocation
 
-Určuje, zda jsou popisky karty v horní nebo dolní části stránky.
+Určuje, zda jsou popisky karet umístěny v horní nebo dolní části stránky.
 
 ```
 CMFCTabCtrl::Location m_tabLocation;
@@ -228,15 +228,15 @@ CMFCTabCtrl::Location m_tabLocation;
 
 ### <a name="remarks"></a>Poznámky
 
-Platí pro karty jeden z následujících příznaků umístění:
+Použít na kartách jeden z následujících příznaků umístění:
 
-- LOCATION_BOTTOM: karty popisky jsou umístěné v dolní části stránky.
+- LOCATION_BOTTOM: Popisky karet jsou umístěny v dolní části stránky.
 
-- LOCATION_TOP: karty popisky jsou umístěny v horní části stránky
+- LOCATION_TOP: Popisky karet jsou umístěny v horní části stránky
 
-##  <a name="serialize"></a>  CMDITabInfo::Serialize
+## <a name="cmditabinfoserialize"></a><a name="serialize"></a>CMDITabInfo::Serializovat
 
-Čtení nebo zápis tento objekt z archivu nebo do archivu.
+Přečte nebo zapíše tento objekt z archivu nebo do archivu.
 
 ```
 void Serialize(CArchive& ar);
@@ -245,11 +245,11 @@ void Serialize(CArchive& ar);
 ### <a name="parameters"></a>Parametry
 
 *ar*<br/>
-[in] A [CArchive – třída](../../mfc/reference/carchive-class.md) objektu určeného k serializaci.
+[v] [CArchive Class](../../mfc/reference/carchive-class.md) objekt serializovat.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[CMDIFrameWndEx – třída](../../mfc/reference/cmdiframewndex-class.md)<br/>
+[Třída CMDIFrameWndEx](../../mfc/reference/cmdiframewndex-class.md)<br/>
 [MDI – skupiny se záložkami](../../mfc/mdi-tabbed-groups.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)

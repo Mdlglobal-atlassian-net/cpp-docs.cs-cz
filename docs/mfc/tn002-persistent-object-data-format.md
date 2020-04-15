@@ -8,24 +8,24 @@ helpviewer_keywords:
 - persistent C++ objects [MFC]
 - TN002
 ms.assetid: 553fe01d-c587-4c8d-a181-3244a15c2be9
-ms.openlocfilehash: 1880d5d43055966dea8ab16dc4f26bd4e4602ec5
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: f65a7b7afcf6bd832c9c23560bb29374038fae1b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447137"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81370446"
 ---
 # <a name="tn002-persistent-object-data-format"></a>TN002: Formát dat trvalých objektů
 
-Tato poznámka popisuje rutiny knihovny MFC, které podporují C++ trvalé objekty a formát dat objektů, když jsou uloženy v souboru. To platí pouze pro třídy, které mají makra [DECLARE_SERIAL](../mfc/reference/run-time-object-model-services.md#declare_serial) a [IMPLEMENT_SERIAL](../mfc/reference/run-time-object-model-services.md#implement_serial) .
+Tato poznámka popisuje rutiny knihovny MFC, které podporují trvalé objekty jazyka C++ a formát dat objektu při uložení v souboru. To platí pouze pro třídy s [makry DECLARE_SERIAL](../mfc/reference/run-time-object-model-services.md#declare_serial) a [IMPLEMENT_SERIAL.](../mfc/reference/run-time-object-model-services.md#implement_serial)
 
 ## <a name="the-problem"></a>Problém
 
-Implementace MFC pro trvalá data ukládá data pro mnoho objektů v jedné sousední části souboru. Metoda `Serialize` objektu překládá data objektu do kompaktního binárního formátu.
+Implementace knihovny MFC pro trvalá data ukládá data pro mnoho objektů v jedné souvislé části souboru. `Serialize` Metoda objektu převádí data objektu do kompaktního binárního formátu.
 
-Implementace zaručuje, že všechna data budou uložena ve stejném formátu pomocí [třídy CArchive](../mfc/reference/carchive-class.md). Jako překladatel používá objekt `CArchive`. Tento objekt bude v době, kdy bude vytvořen, trvat, dokud nebudete volat [CArchive:: Close](../mfc/reference/carchive-class.md#close). Tuto metodu lze volat buď explicitně programátorem, nebo implicitně destruktorem, když program ukončí rozsah obsahující `CArchive`.
+Implementace zaručuje, že všechna data jsou uložena ve stejném formátu pomocí [CArchive Class](../mfc/reference/carchive-class.md). Používá `CArchive` objekt jako překladač. Tento objekt přetrvává od okamžiku, kdy je vytvořen, dokud nezavoláte [CArchive::Close](../mfc/reference/carchive-class.md#close). Tato metoda může být volána buď explicitně programátorem nebo implicitně destruktorem, když program ukončí obor, který obsahuje `CArchive`.
 
-Tato poznámka popisuje implementaci `CArchive` členů [CArchive:: ReadObject](../mfc/reference/carchive-class.md#readobject) a [CArchive:: WriteObject](../mfc/reference/carchive-class.md#writeobject). Kód pro tyto funkce najdete v Arcobj. cpp a hlavní implementaci pro `CArchive` v Arccore. cpp. Uživatelský kód nevolá `ReadObject` a `WriteObject` přímo. Místo toho jsou tyto objekty používány operátory vkládání a extrahování specifických pro třídy, které jsou generovány automaticky pomocí DECLARE_SERIAL a IMPLEMENT_SERIAL maker. Následující kód ukazuje, jak jsou `WriteObject` a `ReadObject` implicitně volány:
+Tato poznámka popisuje implementaci `CArchive` členů [CArchive::ReadObject](../mfc/reference/carchive-class.md#readobject) a [CArchive::WriteObject](../mfc/reference/carchive-class.md#writeobject). Kód pro tyto funkce najdete v Arcobj.cpp a `CArchive` hlavní implementaci v Arccore.cpp. Uživatelský kód `ReadObject` nevolá `WriteObject` a přímo. Místo toho tyto objekty jsou používány operátory vkládání a extrakce specifické pro daný typ třídy, které jsou generovány automaticky DECLARE_SERIAL a IMPLEMENT_SERIAL makra. Následující kód ukazuje, jak `WriteObject` a `ReadObject` jsou implicitně volány:
 
 ```
 class CMyObject : public CObject
@@ -42,68 +42,68 @@ ar <<pObj;        // calls ar.WriteObject(pObj)
 ar>> pObj;        // calls ar.ReadObject(RUNTIME_CLASS(CObj))
 ```
 
-## <a name="saving-objects-to-the-store-carchivewriteobject"></a>Ukládání objektů do úložiště (CArchive:: WriteObject)
+## <a name="saving-objects-to-the-store-carchivewriteobject"></a>Ukládání objektů do úložiště (CArchive::WriteObject)
 
-Metoda `CArchive::WriteObject` zapisuje data hlaviček, která slouží k rekonstrukci objektu. Tato data se skládají ze dvou částí: typu objektu a stavu objektu. Tato metoda je také odpovědná za udržování identity vypsaného objektu, takže se uloží jenom jedna kopie, bez ohledu na počet ukazatelů na daný objekt (včetně kruhových ukazatelů).
+Metoda `CArchive::WriteObject` zapisuje data záhlaví, která se používá k rekonstrukci objektu. Tato data se skládá ze dvou částí: typ objektu a stav objektu. Tato metoda je také zodpovědná za udržování identity objektu, který je zapsán, takže je uložena pouze jedna kopie, bez ohledu na počet ukazatelů na tento objekt (včetně kruhových ukazatelů).
 
-Ukládání (vkládání) a obnovení (extrakce) objektů spoléhá na několik konstant manifestu. Jedná se o hodnoty, které jsou uložené v binárním souboru a poskytují důležité informace archivu (Všimněte si, že předpona "w" označuje 16 bitů množství):
+Ukládání (vkládání) a obnovení (extrahování) objektů závisí na několika "konstantách manifestu". Jedná se o hodnoty, které jsou uloženy v binárním formátu a poskytují důležité informace do archivu (všimněte si, že předpona "w" označuje 16bitová množství):
 
 |Značka|Popis|
 |---------|-----------------|
-|wNullTag|Používá se pro ukazatele objektu s hodnotou NULL (0).|
-|wNewClassTag|Označuje popis třídy, který následuje za novým v tomto archivním kontextu (-1).|
-|wOldClassTag|Indikuje, že se v tomto kontextu (0x8000) zobrazila třída čteného objektu.|
+|wNullTag|Používá se pro ukazatele objektu NULL (0).|
+|wNewClassTag|Označuje popis třídy, která následuje, je v tomto kontextu archivu nová (-1).|
+|wOldClassTag|Označuje, že třída čteného objektu byla viděna v tomto kontextu (0x8000).|
 
-Při ukládání objektů archiv udržuje [CMapPtrToPtr](../mfc/reference/cmapptrtoptr-class.md) ( *m_pStoreMap*), což je mapování uloženého objektu na 32 trvalý identifikátor (PID). Identifikátor PID je přiřazen každému jedinečnému objektu a každému jedinečnému názvu třídy, který je uložen v kontextu archivu. Tyto PID jsou předány postupně od 1. Tyto PID nemají žádný význam mimo rozsah archivu a zejména se Nezaměňujte s čísly záznamů nebo jinými položkami identity.
+Při ukládání objektů archiv udržuje [CMapPtrToPtr](../mfc/reference/cmapptrtoptr-class.md) *(m_pStoreMap),* což je mapování z uloženého objektu na 32bitový trvalý identifikátor (PID). PID je přiřazen ke každému jedinečnému objektu a každému jedinečnému názvu třídy, který je uložen v kontextu archivu. Tyto PID jsou rozdávány postupně od 1. Tyto PID nemají žádný význam mimo rozsah archivu a zejména nesmí být zaměňovány s čísly záznamů nebo jinými položkami totožnosti.
 
-Ve třídě `CArchive` jsou PID 32-bit, ale jsou zapsány jako 16bitové, pokud nejsou větší než 0x7FFE. Velké PID se zapisují jako 0x7FFF, po kterém následují 32-bit PID. Tím se udržuje kompatibilita s projekty, které byly vytvořeny v dřívějších verzích.
+Ve `CArchive` třídě jsou PIDs 32bitové, ale jsou zapsány jako 16bitové, pokud nejsou větší než 0x7FFE. Velké PID jsou zapsány jako 0x7FFF následovaný 32bitové PID. Tím je zachována kompatibilita s projekty, které byly vytvořeny v dřívějších verzích.
 
-Pokud je učiněn požadavek na uložení objektu do archivu (obvykle pomocí operátoru globálního vložení), je provedena kontroly pro nulový ukazatel [CObject](../mfc/reference/cobject-class.md) . Pokud je ukazatel NULL, je *wNullTag* vložen do archivního datového proudu.
+Při požadavku na uložení objektu do archivu (obvykle pomocí operátoru global insertion) se provádí kontrola ukazatele NULL [CObject.](../mfc/reference/cobject-class.md) Pokud je ukazatel NULL, *wNullTag* je vložen do datového proudu archivu.
 
-Pokud ukazatel není NULL a lze jej serializovat (třída je `DECLARE_SERIAL` třídy), kód zkontroluje *m_pStoreMap* a zjistí, zda byl objekt již uložen. Pokud má, kód vloží 32. bit PID přidružený k tomuto objektu do archivního datového proudu.
+Pokud ukazatel není NULL a může být serializován `DECLARE_SERIAL` (třída je třída), kód zkontroluje *m_pStoreMap,* zda byl objekt již uložen. Pokud ano, kód vloží 32bitový PID přidružený k tomuto objektu do datového proudu archivu.
 
-Pokud objekt nebyl uložen dříve, existují dvě možnosti, které je třeba vzít v úvahu: buď jak objekt, tak přesný typ (tj. třída) objektu jsou v tomto archivním kontextu nové, nebo je objekt typu, který již byl zobrazen přes přesný typ. Aby bylo možné zjistit, zda byl typ zjištěn, kód dotazuje *m_pStoreMap* pro objekt [CRuntimeClass](../mfc/reference/cruntimeclass-structure.md) , který odpovídá objektu `CRuntimeClass` přidruženému k uloženému objektu. Pokud existuje shoda, `WriteObject` vloží značku, která je bitově `OR` *wOldClassTag* a index. Pokud je `CRuntimeClass` do tohoto archivního kontextu nový, `WriteObject` přiřadí k této třídě nové PID a vloží je do archivu, před kterým bude hodnota *wNewClassTag* .
+Pokud objekt nebyl uložen dříve, existují dvě možnosti, aby zvážila: buď objekt a přesný typ (to znamená, třída) objektu jsou nové tohoto kontextu archivu, nebo objekt je přesného typu již vidět. Chcete-li zjistit, zda byl typ viděn, kód dotazuje *m_pStoreMap* pro `CRuntimeClass` [cRuntimeClass](../mfc/reference/cruntimeclass-structure.md) objekt, který odpovídá objektu přidruženému k uloženému objektu. Pokud je shoda, `WriteObject` vloží značku, která je `OR` bit moudrý *wOldClassTag* a tento index. Pokud `CRuntimeClass` je nový kontext tohoto `WriteObject` archivu, přiřadí nové PID této třídě a vloží ji do archivu, před cvorákem *wNewClassTag.*
 
-Popisovač pro tuto třídu je pak vložen do archivu pomocí metody `CRuntimeClass::Store`. `CRuntimeClass::Store` vloží číslo schématu třídy (viz níže) a textový název ASCII třídy. Všimněte si, že použití textového názvu ASCII nezaručuje jedinečnost archivace napříč aplikacemi. Proto byste měli označit datové soubory a zabránit tak poškození. Po vložení informací o třídě archiv vloží objekt do *m_pStoreMap* a potom zavolá metodu `Serialize` pro vložení dat specifických pro třídu. Umístění objektu do *m_pStoreMap* před voláním `Serialize` zabrání ukládání více kopií objektu do úložiště.
+Deskriptor pro tuto třídu je pak vložen `CRuntimeClass::Store` do archivu pomocí metody. `CRuntimeClass::Store`vloží číslo schématu třídy (viz níže) a název textu ASCII třídy. Všimněte si, že použití textového názvu ASCII nezaručuje jedinečnost archivu napříč aplikacemi. Proto byste měli označit datové soubory, abyste zabránili poškození. Po vložení informací o třídě archiv vloží objekt do *m_pStoreMap* a `Serialize` pak zavolá metodu pro vložení dat specifických pro třídu. Umístění objektu *m_pStoreMap* do m_pStoreMap `Serialize` před voláním zabrání uložení více kopií objektu do úložiště.
 
-Při návratu na počátečního volajícího (obvykle kořen sítě objektů) musíte zavolat [CArchive:: Close](../mfc/reference/carchive-class.md#close). Pokud máte v úmyslu provádět jiné operace [CFile –](../mfc/reference/cfile-class.md), je nutné [zavolat metodu `CArchive`, aby](../mfc/reference/carchive-class.md#flush) se zabránilo poškození archivu.
+Při návratu k počátečnímu volajícímu (obvykle kořenové síti objektů) musíte zavolat [CArchive::Close](../mfc/reference/carchive-class.md#close). Pokud máte v plánu provádět další operace `CArchive` [CFile,](../mfc/reference/cfile-class.md)musíte volat metodu [Flush,](../mfc/reference/carchive-class.md#flush) abyste zabránili poškození archivu.
 
 > [!NOTE]
->  Tato implementace ukládá pevně stanovený limit 0x3FFFFFFE indexů na archivní kontext. Toto číslo představuje maximální počet jedinečných objektů a tříd, které mohou být uloženy v jednom archivu, ale jeden soubor na disku může mít neomezený počet kontextů archivu.
+> Tato implementace ukládá pevný limit indexů 0x3FFFFFFE na kontext archivu. Toto číslo představuje maximální počet jedinečných objektů a tříd, které lze uložit do jednoho archivu, ale jeden soubor disku může mít neomezený počet kontextů archivu.
 
-## <a name="loading-objects-from-the-store-carchivereadobject"></a>Načítání objektů z úložiště (CArchive:: ReadObject)
+## <a name="loading-objects-from-the-store-carchivereadobject"></a>Načítání objektů z úložiště (CArchive::ReadObject)
 
-Načítání (extrakce) objektů používá metodu `CArchive::ReadObject` a je `WriteObject`. Stejně jako u `WriteObject``ReadObject` není volána přímo uživatelským kódem; uživatelský kód by měl volat operátor pro extrakci, který je typově bezpečný, který volá `ReadObject` s očekávaným `CRuntimeClass`. To zajišťují integritu typu operace extrakce.
+Loading (extrahování) `CArchive::ReadObject` objekty používá metodu a je konverzovat `WriteObject`. Stejně `WriteObject` `ReadObject` jako u , není volána přímo uživatelským kódem; uživatelský kód by měl volat operátor `ReadObject` extrakce `CRuntimeClass`bezpečného typu, který volá s očekávaným . Tím se zajistí integrita typu operace extrakce.
 
-Vzhledem k tomu, že implementace `WriteObject` přiřadila zvýšení PID, počínaje hodnotou 1 (0 je předdefinovaná jako objekt NULL), implementace `ReadObject` může použít pole k údržbě stavu archivního kontextu. Pokud je PID čten ze Storu, pokud je PID větší než aktuální horní mez *m_pLoadArray*, `ReadObject` ví, že následuje nový objekt (nebo popis třídy).
+Vzhledem `WriteObject` k tomu, že implementace přiřazena zvýšení PID, počínaje 1 `ReadObject` (0 je předdefinována jako objekt NULL), implementace můžete použít pole k udržení stavu kontextu archivu. Při čtení PID z úložiště, pokud PID je větší než *m_pLoadArray*aktuální `ReadObject` horní mez m_pLoadArray , ví, že nový objekt (nebo popis třídy) následuje.
 
-## <a name="schema-numbers"></a>Čísla schémat
+## <a name="schema-numbers"></a>Čísla schématu
 
-Číslo schématu, které je přiřazeno třídě při zjištění metody `IMPLEMENT_SERIAL` třídy, je "verze" implementace třídy. Schéma odkazuje na implementaci třídy, nikoli na počet, kolikrát daný objekt byl vytvořen jako trvalý (obvykle označovaný jako verze objektu).
+Číslo schématu, které je přiřazeno třídě, `IMPLEMENT_SERIAL` když je zjištěna metoda třídy, je "verze" implementace třídy. Schéma odkazuje na implementaci třídy, nikoli na počet, kolikrát byl daný objekt proveden trvalý (obvykle označovaný jako verze objektu).
 
-Pokud máte v úmyslu zachovat několik různých implementací stejné třídy v průběhu času, při změně implementace `Serialize` metody vašeho objektu se vám umožní napsat kód, který může načíst objekty uložené pomocí starších verzí implementace.
+Pokud máte v úmyslu udržovat několik různých implementací stejné třídy v průběhu času, zvýšení `Serialize` schématu při revizi implementace metody objektu vám umožní psát kód, který může načíst objekty uložené pomocí staršíverze implementace.
 
-Metoda `CArchive::ReadObject` vyvolá výjimku [CArchiveException](../mfc/reference/carchiveexception-class.md) , pokud nalezne číslo schématu v trvalém úložišti, které se liší od čísla schématu popisu třídy v paměti. Z této výjimky není snadné ji obnovovat.
+Metoda `CArchive::ReadObject` vyvolá [CArchiveException,](../mfc/reference/carchiveexception-class.md) když narazí na číslo schématu v trvalém úložišti, které se liší od čísla schématu popisu třídy v paměti. Není snadné se zotavit z této výjimky.
 
-Můžete použít `VERSIONABLE_SCHEMA` v kombinaci s (bitové **nebo**) verze schématu a zabránit tak vyjímka této výjimky. Pomocí `VERSIONABLE_SCHEMA`může váš kód v rámci své `Serialize` funkce provést příslušnou akci kontrolou návratové hodnoty z [CArchive:: GetObjectSchema](../mfc/reference/carchive-class.md#getobjectschema).
+Můžete použít `VERSIONABLE_SCHEMA` v kombinaci s (bitové **NEBO)** verze schématu zachovat tuto výjimku z vyvolání. Pomocí `VERSIONABLE_SCHEMA`kódu můžete provést příslušnou akci `Serialize` ve své funkci kontrolou vrácené hodnoty z [CArchive::GetObjectSchema](../mfc/reference/carchive-class.md#getobjectschema).
 
-## <a name="calling-serialize-directly"></a>Přímé volání serializace
+## <a name="calling-serialize-directly"></a>Volání Serializovat přímo
 
-V mnoha případech není nutné režii `WriteObject` obecné schéma objektů archivu a `ReadObject`. Toto je běžný případ serializace dat do [objektu CDocument](../mfc/reference/cdocument-class.md). V tomto případě je metoda `Serialize` `CDocument` volána přímo, nikoli pomocí operátorů Extract nebo INSERT. Obsah dokumentu může zase použít obecnější schéma archivu objektů.
+V mnoha případech režie obecného schématu archivu `WriteObject` objektů a `ReadObject` není nutné. Toto je běžný případ serializace dat do [CDocument](../mfc/reference/cdocument-class.md). V tomto případě `Serialize` je `CDocument` metoda volána přímo, nikoli s operátory extrakce nebo vložení. Obsah dokumentu může zase použít obecnější schéma archivace objektů.
 
-Přímé volání `Serialize` má následující výhody a nevýhody:
+Přímé `Serialize` volání má následující výhody a nevýhody:
 
-- Do archivu nejsou přidány žádné nadbytečné bajty před nebo po serializaci objektu. Tím se nejen data ukládají menším způsobem, ale umožňuje implementovat rutiny `Serialize`, které mohou zpracovávat libovolné formáty souborů.
+- Žádné další bajty jsou přidány do archivu před nebo po objektu serializovat. To nejen zmenší uložená data, ale `Serialize` umožňuje implementovat rutiny, které mohou zpracovávat všechny formáty souborů.
 
-- Knihovna MFC je vyladěna, takže implementace `WriteObject` a `ReadObject` a související kolekce nebudou propojeny do vaší aplikace, pokud nepotřebujete obecnější schéma pro archivní objekty pro nějaký jiný účel.
+- Knihovna MFC je `WriteObject` vyladěna tak, aby implementace a `ReadObject` implementace a související kolekce nebudou propojeny do vaší aplikace, pokud nepotřebujete obecnější schéma archivace objektů pro jiný účel.
 
-- Váš kód nemusí obnovovat ze starých čísel schémat. Tím se kód serializace dokumentu zodpovídá za kódování čísel schématu, čísel verzí formátu souboru nebo libovolných identifikačních čísel, která používáte na začátku vašich datových souborů.
+- Váš kód se nemusí zotavit ze starých čísel schématu. Díky tomu je kód serializace dokumentu zodpovědný za kódování čísel schématu, čísel verzí ve formátu souboru nebo identifikačních čísel, která používáte na začátku datových souborů.
 
-- Libovolný objekt, který je serializován s přímým voláním `Serialize` nesmí používat `CArchive::GetObjectSchema` nebo musí zpracovat návratovou hodnotu (UINT)-1, která označuje, že verze byla neznámá.
+- Jakýkoli objekt, který je serializován `Serialize` s `CArchive::GetObjectSchema` přímým voláním, nesmí používat nebo musí zpracovávat vrácenou hodnotu (UINT)-1 označující, že verze byla neznámá.
 
-Vzhledem k tomu, že `Serialize` je volána přímo v dokumentu, není obvykle možné podobjektům dokumentu archivovat odkazy na svůj nadřazený dokument. Těmto objektům musí být explicitně udělen ukazatel na jejich dokument kontejneru nebo je nutné použít funkci [CArchive:: MapObject](../mfc/reference/carchive-class.md#mapobject) k mapování `CDocument` ukazatele na PID před archivací těchto koncových bodů.
+Protože `Serialize` je volána přímo v dokumentu, není obvykle možné, aby dílčí objekty dokumentu archivovaly odkazy na nadřazený dokument. Tyto objekty musí mít ukazatel na jejich dokumentu kontejneru explicitně nebo je `CDocument` nutné použít [CArchive::MapObject](../mfc/reference/carchive-class.md#mapobject) funkce mapovat ukazatel na PID před tyto ukazatele zpět jsou archivovány.
 
-Jak bylo uvedeno dříve, měli byste kódovat informace o verzi a třídě sami při volání `Serialize` přímo, což vám umožní později změnit formát a zároveň zachovat zpětnou kompatibilitu se staršími soubory. Funkci `CArchive::SerializeClass` lze volat explicitně před přímým serializací objektu nebo před voláním základní třídy.
+Jak již bylo uvedeno dříve, měli byste zakódovat informace o verzi a třídě sami, když voláte `Serialize` přímo, což vám umožní změnit formát později při zachování zpětné kompatibility se staršími soubory. Funkce `CArchive::SerializeClass` může být volána explicitně před přímoserializací objektu nebo před voláním základní třídy.
 
 ## <a name="see-also"></a>Viz také
 

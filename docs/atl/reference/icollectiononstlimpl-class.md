@@ -1,5 +1,5 @@
 ---
-title: ICollectionOnSTLImpl Class
+title: Třída ICollectionOnSTLimpl
 ms.date: 11/04/2016
 f1_keywords:
 - ICollectionOnSTLImpl
@@ -11,16 +11,16 @@ f1_keywords:
 helpviewer_keywords:
 - ICollectionOnSTLImpl class
 ms.assetid: 683c88b0-0d97-4779-a762-e493334ba7f9
-ms.openlocfilehash: 6842f1c75ebbc9c3dfdd93f30d52fd2cb2936c03
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a8ccab08b89da8c1b8ef56c8932e27a6c74e62aa
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62275784"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81329898"
 ---
-# <a name="icollectiononstlimpl-class"></a>ICollectionOnSTLImpl Class
+# <a name="icollectiononstlimpl-class"></a>Třída ICollectionOnSTLimpl
 
-Tato třída poskytuje metody používané třídy kolekce.
+Tato třída poskytuje metody používané třídou kolekce.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -32,54 +32,54 @@ class ICollectionOnSTLImpl : public T
 #### <a name="parameters"></a>Parametry
 
 *T*<br/>
-Kolekce rozhraní modelu COM.
+Rozhraní kolekce COM.
 
 *CollType*<br/>
-Třída kontejneru standardní knihovny C++.
+Třída kontejneru standardní knihovny jazyka C++.
 
 *ItemType*<br/>
-Typ položky, které jsou vystavené rozhraní kontejneru.
+Typ položky vystavené rozhraní kontejneru.
 
-*CopyItem*<br/>
-A [třídy zásady kopírování](../../atl/atl-copy-policy-classes.md).
+*Kopírovat položku*<br/>
+Třída [zásad kopírování](../../atl/atl-copy-policy-classes.md).
 
 *EnumType*<br/>
-A [CComEnumOnSTL](../../atl/reference/ccomenumonstl-class.md)– třída kompatibilní enumerátor.
+[CComEnumOnSTL](../../atl/reference/ccomenumonstl-class.md)-kompatibilní enumerator třídy.
 
 ## <a name="members"></a>Členové
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[ICollectionOnSTLImpl::get__NewEnum](#newenum)|Vrátí objekt enumerátoru pro kolekci.|
+|[ICollectionOnSTLImpl::get__NewEnum](#newenum)|Vrátí objekt čítače pro kolekci.|
 |[ICollectionOnSTLImpl::getcount](#get_count)|Vrátí počet prvků v kolekci.|
 |[ICollectionOnSTLImpl::get_Item](#get_item)|Vrátí požadovanou položku z kolekce.|
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[ICollectionOnSTLImpl::m_coll](#m_coll)|Kolekce.|
+|[ICollectionOnSTLImpl::m_coll](#m_coll)|Kolekce|
 
 ## <a name="remarks"></a>Poznámky
 
-Tato třída poskytuje implementaci pro tři metody rozhraní kolekce: [getcount](#get_count), [get_Item](#get_item), a [get__NewEnum](#newenum).
+Tato třída poskytuje implementaci pro tři metody rozhraní kolekce: [getcount](#get_count), [get_Item](#get_item)a [get__NewEnum](#newenum).
 
 Chcete-li použít tuto třídu:
 
-- Definovat (nebo si půjčte), který chcete implementovat rozhraní kolekce.
+- Definujte (nebo si vypůjčte) rozhraní kolekce, které chcete implementovat.
 
-- Odvodit třídu z specializací `ICollectionOnSTLImpl` založené na tomto rozhraní kolekce.
+- Odvodit třídu `ICollectionOnSTLImpl` ze specializace založené na této rozhraní kolekce.
 
-- Použití odvozené třídy pro implementaci jakékoli metody z rozhraní kolekce není zpracována `ICollectionOnSTLImpl`.
+- Odvozené třídy slouží k implementaci všechny metody `ICollectionOnSTLImpl`z rozhraní kolekce není zpracována .
 
 > [!NOTE]
->  Pokud kolekce rozhraní je duální rozhraní, odvodit třídu z [třídou IDispatchImpl](../../atl/reference/idispatchimpl-class.md), předejte `ICollectionOnSTLImpl` specializace jako první parametr šablony, pokud chcete, aby ATL poskytnout implementaci `IDispatch` metody.
+> Pokud je rozhraní kolekce duální rozhraní, odvodit třídu z [IDispatchImpl](../../atl/reference/idispatchimpl-class.md), předávání `ICollectionOnSTLImpl` specializace jako `IDispatch` první parametr šablony, pokud chcete, aby ATL poskytnout implementaci metod.
 
-- Přidat položky do [m_coll](#m_coll) člen k naplnění kolekce.
+- Přidejte položky do [m_coll](#m_coll) člen naplnit kolekce.
 
-Další informace a příklady najdete v tématu [ATL – kolekce a enumerátory](../../atl/atl-collections-and-enumerators.md).
+Další informace a příklady naleznete v tématu [kolekce atl a výčtu](../../atl/atl-collections-and-enumerators.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -89,9 +89,9 @@ Další informace a příklady najdete v tématu [ATL – kolekce a enumerátory
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlcom
+**Záhlaví:** atlcom.h
 
-##  <a name="get_count"></a>  ICollectionOnSTLImpl::getcount
+## <a name="icollectiononstlimplgetcount"></a><a name="get_count"></a>ICollectionOnSTLImpl::getcount
 
 Tato metoda vrátí počet položek v kolekci.
 
@@ -102,15 +102,15 @@ STDMETHOD(getcount)(long* pcount);
 ### <a name="parameters"></a>Parametry
 
 *pcount*<br/>
-[out] Počet elementů v kolekci.
+[out] Počet prvků v kolekci.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Standardní hodnoty HRESULT.
+Standardní hodnota HRESULT.
 
-##  <a name="get_item"></a>  ICollectionOnSTLImpl::get_Item
+## <a name="icollectiononstlimplget_item"></a><a name="get_item"></a>ICollectionOnSTLImpl::get_Item
 
-Tato metoda vrátí určenou položku z kolekce.
+Tato metoda vrátí zadanou položku z kolekce.
 
 ```
 STDMETHOD(get_Item)(long Index, ItemType* pvar);
@@ -119,22 +119,22 @@ STDMETHOD(get_Item)(long Index, ItemType* pvar);
 ### <a name="parameters"></a>Parametry
 
 *Index*<br/>
-[in] Index založený na 1 položka v kolekci.
+[v] Index na základě 1 položky v kolekci.
 
 *pvar*<br/>
-[out] Odpovídající položky pro *Index*.
+[out] Položka odpovídající *Index*.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Standardní hodnoty HRESULT.
+Standardní hodnota HRESULT.
 
 ### <a name="remarks"></a>Poznámky
 
-Položka se získá zkopírováním dat na konkrétní pozici v [m_coll](#m_coll) pomocí metody kopie [třídy zásady kopírování](../../atl/atl-copy-policy-classes.md) předán jako argument šablony v `ICollectionOnSTLImpl` specializace.
+Položka je získána zkopírováním dat na zadané pozici v [m_coll](#m_coll) pomocí metody kopírování [třídy zásad kopírování](../../atl/atl-copy-policy-classes.md) předané jako argument šablony ve `ICollectionOnSTLImpl` specializaci.
 
-##  <a name="newenum"></a>  ICollectionOnSTLImpl::get__NewEnum
+## <a name="icollectiononstlimplget__newenum"></a><a name="newenum"></a>ICollectionOnSTLImpl::get__NewEnum
 
-Vrátí objekt enumerátoru pro kolekci.
+Vrátí objekt čítače pro kolekci.
 
 ```
 STDMETHOD(get__NewEnum)(IUnknown** ppUnk);
@@ -143,25 +143,25 @@ STDMETHOD(get__NewEnum)(IUnknown** ppUnk);
 ### <a name="parameters"></a>Parametry
 
 *ppUnk*<br/>
-[out] **IUnknown** ukazatel nově vytvořený enumerator – objekt.
+[out] **IUnknown** ukazatel nově vytvořený objekt čítače výčtu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Standardní hodnoty HRESULT.
+Standardní hodnota HRESULT.
 
 ### <a name="remarks"></a>Poznámky
 
-Nově vytvořený čítač udržuje iterátor v původní kolekci `m_coll`proto (není vytvořena žádná kopie) a obsahuje odkaz modelu COM v objektu kolekce k zajištění, že kolekce zůstane aktivní, i když existují nevyřízené enumerátory.
+Nově vytvořený čítač výčtu udržuje iterátor `m_coll`v původní kolekci , (takže je vytvořena žádná kopie) a obsahuje odkaz COM na objekt kolekce, aby bylo zajištěno, že kolekce zůstane naživu, zatímco existují vynikající čítače výčtu.
 
-##  <a name="m_coll"></a>  ICollectionOnSTLImpl::m_coll
+## <a name="icollectiononstlimplm_coll"></a><a name="m_coll"></a>ICollectionOnSTLImpl::m_coll
 
-Tento člen obsahuje položky reprezentována kolekce.
+Tento člen obsahuje položky reprezentované kolekce.
 
 ```
 CollType m_coll;
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Ukázka ATLCollections](../../overview/visual-cpp-samples.md)<br/>
-[Přehled tříd](../../atl/atl-class-overview.md)
+[Ukázka atlcollections](../../overview/visual-cpp-samples.md)<br/>
+[Přehled třídy](../../atl/atl-class-overview.md)

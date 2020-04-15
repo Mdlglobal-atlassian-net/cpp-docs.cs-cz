@@ -1,5 +1,5 @@
 ---
-title: CComEnumImpl – třída
+title: Třída CComEnumImpl
 ms.date: 11/04/2016
 f1_keywords:
 - CComEnumImpl
@@ -18,16 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - CComEnumImpl class
 ms.assetid: cc0d8e76-e608-46db-87cd-4c7161fe32d2
-ms.openlocfilehash: 7d26c59a38bfe43e49215fbb6108453e10ca6dea
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 965e0a8bf6c890882754b60e2785832933d1c52c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69497176"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81327867"
 ---
-# <a name="ccomenumimpl-class"></a>CComEnumImpl – třída
+# <a name="ccomenumimpl-class"></a>Třída CComEnumImpl
 
-Tato třída poskytuje implementaci rozhraní enumerátoru modelu COM, kde jsou položky výčtové v poli uloženy.
+Tato třída poskytuje implementaci pro rozhraní výčtu COM, kde jsou položky, které jsou výčtovány, uloženy v poli.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -39,59 +39,59 @@ class ATL_NO_VTABLE CComEnumImpl : public Base
 
 #### <a name="parameters"></a>Parametry
 
-*Základ*<br/>
-Rozhraní enumerátoru COM. Příklad najdete v tématu [IEnumString](/windows/win32/api/objidl/nn-objidl-ienumstring) .
+*Základní*<br/>
+Rozhraní čítače výčtu COM. Viz [IEnumString](/windows/win32/api/objidl/nn-objidl-ienumstring) pro příklad.
 
 *piid*<br/>
-Ukazatel na ID rozhraní rozhraní enumerátoru.
+Ukazatel na ID rozhraní rozhraní čítače.
 
 *T*<br/>
-Typ položky vystavený rozhraním enumerátoru.
+Typ položky vystavené rozhraní množek.
 
-*kopírování*<br/>
-[Třída zásad](../../atl/atl-copy-policy-classes.md)pro homogenní kopírování.
+*Kopírovat*<br/>
+Homogenní třída [zásad kopírování](../../atl/atl-copy-policy-classes.md).
 
 ## <a name="members"></a>Členové
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
 |[CComEnumImpl::CComEnumImpl](#ccomenumimpl)|Konstruktor|
 |[CComEnumImpl::~CComEnumImpl](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CComEnumImpl:: Clone](#clone)|Implementace metody rozhraní výčtu **klonování** .|
-|[CComEnumImpl:: init](#init)|Inicializuje enumerátor.|
-|[CComEnumImpl::Next](#next)|Implementace **Next**.|
-|[CComEnumImpl:: Reset](#reset)|Implementace resetu.|
-|[CComEnumImpl::Skip](#skip)|Implementace **Skip**.|
+|[CComEnumImpl::Klonování](#clone)|Implementace metody rozhraní **clone** výčtu.|
+|[CComEnumImpl::Init](#init)|Inicializuje čítač výčtu.|
+|[CComEnumImpl::Další](#next)|Implementace **Next**.|
+|[CComEnumImpl::Obnovit](#reset)|Implementace **reset**.|
+|[CComEnumImpl::Přeskočit](#skip)|Implementace **Skip**.|
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Name|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
 |[CComEnumImpl::m_begin](#m_begin)|Ukazatel na první položku v poli.|
-|[CComEnumImpl::m_dwFlags](#m_dwflags)|Příznaky kopírování předané `Init`.|
-|[CComEnumImpl::m_end](#m_end)|Ukazatel na umístění hned za poslední položkou v poli.|
+|[CComEnumImpl::m_dwFlags](#m_dwflags)|Kopírovat příznaky `Init`prošel .|
+|[CComEnumImpl::m_end](#m_end)|Ukazatel na umístění těsně za poslední položku v poli.|
 |[CComEnumImpl::m_iter](#m_iter)|Ukazatel na aktuální položku v poli.|
-|[CComEnumImpl::m_spUnk](#m_spunk)|`IUnknown` Ukazatel objektu, který poskytuje výčet kolekce.|
+|[CComEnumImpl::m_spUnk](#m_spunk)|Ukazatel `IUnknown` objektu, který poskytuje kolekci, která je výčtována.|
 
 ## <a name="remarks"></a>Poznámky
 
-Příklad implementace metod naleznete v tématu [IEnumString](/windows/win32/api/objidl/nn-objidl-ienumstring) . `CComEnumImpl`poskytuje implementaci pro rozhraní enumerátoru modelu COM, kde jsou výčtové položky uloženy v poli. Tato třída je analogická `IEnumOnSTLImpl` třídě, která poskytuje implementaci rozhraní enumerátoru na základě C++ standardního kontejneru knihovny.
+Viz [IEnumString](/windows/win32/api/objidl/nn-objidl-ienumstring) příklad implementace metody. `CComEnumImpl`poskytuje implementaci pro rozhraní výčtu COM, kde jsou položky, které jsou výčty uloženy v poli. Tato třída je obdobou `IEnumOnSTLImpl` třídy, která poskytuje implementaci rozhraní výčtu založené na kontejneru standardní knihovny Jazyka C++.
 
 > [!NOTE]
->  Podrobnosti o dalších rozdílech mezi `CComEnumImpl` a `IEnumOnSTLImpl`naleznete v tématu [CComEnumImpl:: init](#init).
+> Podrobnosti o dalších `CComEnumImpl` `IEnumOnSTLImpl`rozdílech mezi písmenem a ) naleznete v [tématu CComEnumImpl::Init](#init).
 
-Obvykle nebudete muset vytvářet vlastní třídu enumerátoru odvozením z této implementace rozhraní. Pokud chcete použít enumerátor dodaný ATL na základě pole, je obvyklejší vytvořit instanci třídy [CComEnum](../../atl/reference/ccomenum-class.md).
+Obvykle *nebudete* muset vytvořit vlastní třídu čítače odvozením z této implementace rozhraní. Pokud chcete použít čítač dodaný atl na základě pole, je běžnější vytvořit instanci [CComEnum](../../atl/reference/ccomenum-class.md).
 
-Pokud však potřebujete zadat vlastní enumerátor (například jeden, který zveřejňuje rozhraní kromě rozhraní enumerátor), můžete z této třídy odvodit. V této situaci je pravděpodobně nutné přepsat metodu [CComEnumImpl:: Clone](#clone) k poskytnutí vlastní implementace.
+Však pokud je třeba zadat vlastní čítač výčtu (například ten, který zpřístupňuje rozhraní kromě rozhraní čítače), můžete odvodit z této třídy. V takovém případě je pravděpodobné, že budete muset přepsat [CComEnumImpl::Clone](#clone) metoda poskytnout vlastní implementaci.
 
-Další informace naleznete v tématu [kolekce a čítače ATL](../../atl/atl-collections-and-enumerators.md).
+Další informace naleznete v tématu [kolekce atl a čítače výčtu](../../atl/atl-collections-and-enumerators.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -101,9 +101,9 @@ Další informace naleznete v tématu [kolekce a čítače ATL](../../atl/atl-co
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlcom. h
+**Záhlaví:** atlcom.h
 
-##  <a name="ccomenumimpl"></a>CComEnumImpl::CComEnumImpl
+## <a name="ccomenumimplccomenumimpl"></a><a name="ccomenumimpl"></a>CComEnumImpl::CComEnumImpl
 
 Konstruktor
 
@@ -111,7 +111,7 @@ Konstruktor
 CComEnumImpl();
 ```
 
-##  <a name="dtor"></a>CComEnumImpl:: ~ CComEnumImpl
+## <a name="ccomenumimplccomenumimpl"></a><a name="dtor"></a>CComEnumImpl::~CComEnumImpl
 
 Destruktor.
 
@@ -119,9 +119,9 @@ Destruktor.
 ~CComEnumImpl();
 ```
 
-##  <a name="init"></a>CComEnumImpl:: init
+## <a name="ccomenumimplinit"></a><a name="init"></a>CComEnumImpl::Init
 
-Tato metoda musí být volána před předáním ukazatele na rozhraní enumerátoru zpátky na všechny klienty.
+Tuto metodu je nutné volat před předáním ukazatele rozhraní enumerator zpět všem klientům.
 
 ```
 HRESULT Init(
@@ -133,17 +133,17 @@ HRESULT Init(
 
 ### <a name="parameters"></a>Parametry
 
-*ifunctiondiscovery*<br/>
-Ukazatel na první prvek pole obsahujícího položky, které mají být vyčísleny.
+*Začít*<br/>
+Ukazatel na první prvek pole obsahující položky, které mají být výčtu.
 
-*účelu*<br/>
-Ukazatel na umístění hned za posledním prvkem pole obsahujícího položky, které mají být vyčísleny.
+*Konec*<br/>
+Ukazatel na umístění těsně za poslední prvek pole obsahující položky, které mají být výčtu.
 
-*pUnk*<br/>
-pro `IUnknown` Ukazatel objektu, který musí být během životnosti čítače udržován v aktivním stavu. Pokud žádný takový objekt neexistuje, předejte hodnotu NULL.
+*Punk*<br/>
+[v] Ukazatel `IUnknown` objektu, který musí zůstat naživu během životnosti čítače výčtu. Předat hodnotu NULL, pokud žádný takový objekt neexistuje.
 
-*Flag*<br/>
-Příznaky určující, zda má enumerátor převzít vlastnictví pole nebo vytvořit jeho kopii. Možné hodnoty jsou popsány níže.
+*příznaky*<br/>
+Příznaky určující, zda má čítač výčtu převzít vlastnictví pole nebo vytvořit jeho kopii. Možné hodnoty jsou popsány níže.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -151,11 +151,11 @@ Standardní hodnota HRESULT.
 
 ### <a name="remarks"></a>Poznámky
 
-Tuto metodu volejte jenom jednou – inicializujte enumerátor, použijte ho a pak ho vyvolejte.
+Pouze volání této metody jednou – inicializovat čítač výčtu, použijte jej, pak vyhodit.
 
-Pokud předáte ukazatele na položky v poli, které jsou uloženy v jiném objektu (a nepožadujete enumerátor ke zkopírování dat), můžete použít parametr *punk* a zajistit tak, že objekt a pole, které jsou uchovávány, jsou k dispozici, dokud je enumerátor vyžaduje. Enumerátor jednoduše drží odkaz COM na objekt, aby zůstal aktivní. Odkaz COM je automaticky uvolněn při zničení enumerátoru.
+Pokud předáte ukazatele na položky v poli držené v jiném objektu (a nepožádáte čítače výčtu ke kopírování dat), můžete použít parametr *pUnk* k zajištění, že objekt a pole, které drží, jsou k dispozici tak dlouho, dokud je čítač enumerator potřebuje. Čítač výčtu jednoduše obsahuje odkaz COM na objekt, aby jej udrželi naživu. Odkaz COM je automaticky uvolněna při zničení čítače výčtu.
 
-Parametr *Flags* umožňuje určit, jak má enumerátor považovat prvky pole, které jsou předány. *příznaky* mohou převzít jednu z hodnot z `CComEnumFlags` výčtu uvedeného níže:
+Parametr *flags* umožňuje určit, jak by měl čítač enumerator zacházet s prvky pole, které mu byly předány. *příznaky* mohou mít jednu `CComEnumFlags` z hodnot z výčtu uvedeného níže:
 
 ```
 enum CComEnumFlags
@@ -166,18 +166,18 @@ enum CComEnumFlags
    };
 ```
 
-`AtlFlagNoCopy`znamená, že enumerátor neřídí životní cyklus pole. V takovém případě bude pole buď statické, nebo objekt identifikovaný pomocí *punk* bude zodpovědný za uvolnění pole, když už ho nepotřebujete.
+`AtlFlagNoCopy`znamená, že životnost pole není řízena čítatelem výčtu. V takovém případě bude pole statické nebo objekt identifikovaný *pomocí pUnk* bude zodpovědný za uvolnění pole, když již není potřeba.
 
-`AtlFlagTakeOwnership`znamená, že zničení pole má být řízeno enumerátorem. V tomto případě musí být pole dynamicky přiděleno pomocí **New**. Enumerátor odstraní pole ve svém destruktoru. Obvykle byste předávali hodnotu NULL pro *punk*, i když je třeba předávat platný ukazatel, pokud potřebujete být upozorněni na zničení výčtu z nějakého důvodu.
+`AtlFlagTakeOwnership`znamená, že zničení pole má být řízeno čítatelem výčtu. V tomto případě musí být pole dynamicky přiděleno pomocí **nového**. Čítač výčtu odstraní pole v jeho destruktoru. Obvykle by předat NULL pro *pUnk*, i když stále můžete předat platný ukazatel, pokud potřebujete být upozorněni na zničení čítače výčtu z nějakého důvodu.
 
-`AtlFlagCopy`znamená, že nové pole se má vytvořit zkopírováním pole předaného `Init`. Doba života nového pole je řízena enumerátorem. Enumerátor odstraní pole ve svém destruktoru. Obvykle byste předávali hodnotu NULL pro *punk*, i když je třeba předávat platný ukazatel, pokud potřebujete být upozorněni na zničení výčtu z nějakého důvodu.
+`AtlFlagCopy`znamená, že nové pole má být vytvořeno zkopírováním pole předaným společnosti `Init`. Životnost nového pole má být řízena čítatelem výčtu. Čítač výčtu odstraní pole v jeho destruktoru. Obvykle by předat NULL pro *pUnk*, i když stále můžete předat platný ukazatel, pokud potřebujete být upozorněni na zničení čítače výčtu z nějakého důvodu.
 
 > [!NOTE]
->  Prototyp této metody určuje prvky pole jako typ `T`, kde `T` byl definován jako parametr šablony třídy. Toto je stejný typ, který je vystavený prostřednictvím metody rozhraní COM [CComEnumImpl:: Next](#next). Důvodem je, že na rozdíl od [IEnumOnSTLImpl](../../atl/reference/ienumonstlimpl-class.md)Tato třída nepodporuje jiné úložiště a exponované datové typy. Datový typ prvků v poli musí být stejný jako datový typ vydaný prostřednictvím rozhraní COM.
+> Prototyp této metody určuje prvky pole jako `T`typ `T` , kde byl definován jako parametr šablony pro třídu. Jedná se o stejný typ, který je vystaven pomocí metody rozhraní COM [CComEnumImpl::Next](#next). Důsledkem je, že na rozdíl od [IEnumOnSTLImpl](../../atl/reference/ienumonstlimpl-class.md), tato třída nepodporuje různé úložiště a vystavené datové typy. Datový typ prvků v poli musí být stejný jako datový typ vystavený pomocí rozhraní COM.
 
-##  <a name="clone"></a>CComEnumImpl:: Clone
+## <a name="ccomenumimplclone"></a><a name="clone"></a>CComEnumImpl::Klonování
 
-Tato metoda poskytuje implementaci metody klonování vytvořením objektu typu `CComEnum`, jeho inicializací se stejným polem a iterátorem použitým aktuálním objektem a vrácením rozhraní u nově vytvořeného objektu.
+Tato metoda poskytuje implementaci **Metody Clone** vytvořením `CComEnum`objektu typu , inicializací se stejným polem a iterátorem používaným aktuálním objektem a vrácením rozhraní nově vytvořeného objektu.
 
 ```
 STDMETHOD(Clone)(Base** ppEnum);
@@ -186,7 +186,7 @@ STDMETHOD(Clone)(Base** ppEnum);
 ### <a name="parameters"></a>Parametry
 
 *ppEnum*<br/>
-mimo Rozhraní enumerátoru u nově vytvořeného objektu naklonované z aktuálního enumerátoru.
+[out] Rozhraní čítače na nově vytvořený objekt klonovaný z aktuálního čítače výčtu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -194,51 +194,51 @@ Standardní hodnota HRESULT.
 
 ### <a name="remarks"></a>Poznámky
 
-Všimněte si, že klonované výčty nikdy nevytvářejí vlastní kopii (nebo přebírají vlastnictví) dat, která používá původní enumerátor. V případě potřeby budou klonované výčty zůstat původní enumerátor aktivní (pomocí odkazu modelu COM), aby bylo zajištěno, že data budou k dispozici po dobu, po kterou ji potřebují.
+Všimněte si, že klonované čítače výčtu nikdy vytvořit vlastní kopii (nebo převzít vlastnictví) dat používaných původní čítač výčtu. V případě potřeby klonované čítače výčtu zachovávají původní čítač enumeratoru aktivní (pomocí odkazu COM), aby bylo zajištěno, že data budou k dispozici tak dlouho, jak je potřebují.
 
-##  <a name="m_spunk"></a>  CComEnumImpl::m_spUnk
+## <a name="ccomenumimplm_spunk"></a><a name="m_spunk"></a>CComEnumImpl::m_spUnk
 
-Tento inteligentní ukazatel udržuje odkaz na objekt předaný do [CComEnumImpl:: init](#init)a zajišťuje tak, že zůstane aktivní během životnosti enumerátoru.
+Tento inteligentní ukazatel udržuje odkaz na objekt předán [CComEnumImpl::Init](#init), zajištění, že zůstane naživu po dobu životnosti čítače výčtu.
 
 ```
 CComPtr<IUnknown> m_spUnk;
 ```
 
-##  <a name="m_begin"></a>  CComEnumImpl::m_begin
+## <a name="ccomenumimplm_begin"></a><a name="m_begin"></a>CComEnumImpl::m_begin
 
-Ukazatel na umístění hned za posledním prvkem pole obsahujícího položky, které mají být vyčísleny.
+Ukazatel na umístění těsně za poslední prvek pole obsahující položky, které mají být výčtu.
 
 ```
 T* m_begin;
 ```
 
-##  <a name="m_end"></a>  CComEnumImpl::m_end
+## <a name="ccomenumimplm_end"></a><a name="m_end"></a>CComEnumImpl::m_end
 
-Ukazatel na první prvek pole obsahujícího položky, které mají být vyčísleny.
+Ukazatel na první prvek pole obsahující položky, které mají být výčtu.
 
 ```
 T* m_end;
 ```
 
-##  <a name="m_iter"></a>  CComEnumImpl::m_iter
+## <a name="ccomenumimplm_iter"></a><a name="m_iter"></a>CComEnumImpl::m_iter
 
-Ukazatel na aktuální prvek pole obsahujícího položky, které mají být vyčísleny.
+Ukazatel na aktuální prvek pole obsahující položky, které mají být výčtu.
 
 ```
 T* m_iter;
 ```
 
-##  <a name="m_dwflags"></a>  CComEnumImpl::m_dwFlags
+## <a name="ccomenumimplm_dwflags"></a><a name="m_dwflags"></a>CComEnumImpl::m_dwFlags
 
-Příznaky předané do [CComEnumImpl:: init](#init).
+Příznaky předané [CComEnumImpl::Init](#init).
 
 ```
 DWORD m_dwFlags;
 ```
 
-##  <a name="next"></a>CComEnumImpl:: Next
+## <a name="ccomenumimplnext"></a><a name="next"></a>CComEnumImpl::Další
 
-Tato metoda poskytuje implementaci **Další** metody.
+Tato metoda poskytuje implementaci **Next** metoda.
 
 ```
 STDMETHOD(Next)(ULONG celt, T* rgelt, ULONG* pceltFetched);
@@ -247,21 +247,21 @@ STDMETHOD(Next)(ULONG celt, T* rgelt, ULONG* pceltFetched);
 ### <a name="parameters"></a>Parametry
 
 *celt*<br/>
-pro Počet požadovaných prvků.
+[v] Počet požadovaných prvků.
 
-*rgelt*<br/>
-mimo Pole, které má být vyplněno prvky.
+*rgelt (Rgelt)*<br/>
+[out] Pole, které má být vyplněno prvky.
 
-*pceltFetched*<br/>
-mimo Počet prvků skutečně vrácených v *rgelt*. To může být menší než *celt* , pokud v seznamu zůstalo méně než *celt* prvky.
+*pceltnačten*<br/>
+[out] Počet prvků skutečně vrácených v *rgelt*. To může být menší než *celt,* pokud v seznamu zůstalo méně než *keltové* prvky.
 
 ### <a name="return-value"></a>Návratová hodnota
 
 Standardní hodnota HRESULT.
 
-##  <a name="reset"></a>CComEnumImpl:: Reset
+## <a name="ccomenumimplreset"></a><a name="reset"></a>CComEnumImpl::Obnovit
 
-Tato metoda poskytuje implementaci metody resetování .
+Tato metoda poskytuje implementaci **Reset** metoda.
 
 ```
 STDMETHOD(Reset)(void);
@@ -271,9 +271,9 @@ STDMETHOD(Reset)(void);
 
 Standardní hodnota HRESULT.
 
-##  <a name="skip"></a>CComEnumImpl:: Skip
+## <a name="ccomenumimplskip"></a><a name="skip"></a>CComEnumImpl::Přeskočit
 
-Tato metoda poskytuje implementaci metody **Skip** .
+Tato metoda poskytuje implementaci **Skip** metoda.
 
 ```
 STDMETHOD(Skip)(ULONG celt);
@@ -282,7 +282,7 @@ STDMETHOD(Skip)(ULONG celt);
 ### <a name="parameters"></a>Parametry
 
 *celt*<br/>
-pro Počet prvků, které se mají přeskočit
+[v] Počet prvků přeskočit.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -290,10 +290,10 @@ Standardní hodnota HRESULT.
 
 ### <a name="remarks"></a>Poznámky
 
-Vrátí E_INVALIDARG, pokud *celt* je nula, vrátí S_FALSE, pokud jsou vraceny méně než *celt* prvky, vrátí S_OK jinak.
+Vrátí E_INVALIDARG pokud je *celt nula,* vrátí S_FALSE pokud jsou vráceny méně než *keltové* prvky, vrátí S_OK jinak.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[IEnumOnSTLImpl – třída](../../atl/reference/ienumonstlimpl-class.md)<br/>
-[CComEnum – třída](../../atl/reference/ccomenum-class.md)<br/>
+[Třída IEnumOnSTLImpl](../../atl/reference/ienumonstlimpl-class.md)<br/>
+[Třída CComEnum](../../atl/reference/ccomenum-class.md)<br/>
 [Přehled třídy](../../atl/atl-class-overview.md)

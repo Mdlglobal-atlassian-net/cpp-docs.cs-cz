@@ -11,16 +11,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::FactoryCache::cookie data member
 - Microsoft::WRL::Details::FactoryCache::factory data member
 ms.assetid: 624544e6-0989-47f6-a3e9-edb60e1ee6d4
-ms.openlocfilehash: 7196363567dffa43844bbbd1de76934a317302d1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 507d35179b9fa86399e56b18171800f41eaf1f10
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398495"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371494"
 ---
 # <a name="factorycache-structure"></a>FactoryCache – struktura
 
-Podporuje knihovny šablon jazyka C++ Windows Runtime infrastrukturu a není určena pro použití přímo v kódu.
+Podporuje infrastrukturu knihovny šablon prostředí Prostředí Windows Runtime C++ a není určen pro použití přímo z vašeho kódu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -30,16 +30,16 @@ struct FactoryCache;
 
 ## <a name="remarks"></a>Poznámky
 
-Obsahuje umístění objektu pro vytváření tříd a hodnotu, která identifikuje registrovaný wrt nebo objektu třídy modelu COM.
+Obsahuje umístění factory třídy a hodnotu, která identifikuje registrovaný objekt třídy WRT nebo COM.
 
 ## <a name="members"></a>Členové
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-Název                              | Popis
+Name (Název)                              | Popis
 --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------
-[FactoryCache::cookie](#cookie)   | Obsahuje hodnotu, která identifikuje registrovaného objektu třídy Windows Runtime nebo modelu COM a je později použít ke zrušení registrace objektu.
-[FactoryCache::factory](#factory) | Odkazuje na objekt třídy Windows Runtime nebo modelu COM.
+[FactoryCache::soubor cookie](#cookie)   | Obsahuje hodnotu, která identifikuje registrovaný objekt třídy Windows Runtime nebo COM a později se používá k zrušení registrace objektu.
+[FactoryCache::factory](#factory) | Odkazuje na systém Windows Runtime nebo com třídy factory.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -49,11 +49,11 @@ Název                              | Popis
 
 **Záhlaví:** module.h
 
-**Namespace:** Microsoft::WRL::Details
+**Obor názvů:** Microsoft::WRL::Details
 
-## <a name="cookie"></a>FactoryCache::cookie
+## <a name="factorycachecookie"></a><a name="cookie"></a>FactoryCache::soubor cookie
 
-Podporuje knihovny šablon jazyka C++ Windows Runtime infrastrukturu a není určena pro použití přímo v kódu.
+Podporuje infrastrukturu knihovny šablon prostředí Prostředí Windows Runtime C++ a není určen pro použití přímo z vašeho kódu.
 
 ```cpp
 union {
@@ -64,11 +64,11 @@ union {
 
 ### <a name="remarks"></a>Poznámky
 
-Obsahuje hodnotu, která identifikuje registrovaného objektu třídy Windows Runtime nebo modelu COM a je později použít ke zrušení registrace objektu.
+Obsahuje hodnotu, která identifikuje registrovaný objekt třídy Windows Runtime nebo COM a později se používá k zrušení registrace objektu.
 
-## <a name="factory"></a>FactoryCache::factory
+## <a name="factorycachefactory"></a><a name="factory"></a>FactoryCache::factory
 
-Podporuje knihovny šablon jazyka C++ Windows Runtime infrastrukturu a není určena pro použití přímo v kódu.
+Podporuje infrastrukturu knihovny šablon prostředí Prostředí Windows Runtime C++ a není určen pro použití přímo z vašeho kódu.
 
 ```cpp
 IUnknown* factory;
@@ -76,4 +76,4 @@ IUnknown* factory;
 
 ### <a name="remarks"></a>Poznámky
 
-Odkazuje na objekt třídy Windows Runtime nebo modelu COM.
+Odkazuje na systém Windows Runtime nebo com třídy factory.

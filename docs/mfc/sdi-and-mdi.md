@@ -8,24 +8,24 @@ helpviewer_keywords:
 - single document interface (SDI) [MFC], applications
 - MDI [MFC], vs. SDI
 ms.assetid: bb7239d9-4759-4f63-bfff-44a04b48c067
-ms.openlocfilehash: 725249e5a71e8ee097c641e5972e3cc8bb0e3e33
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9730e7baf9589c4b05a60703c619aae2e941bdec
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62308527"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372760"
 ---
 # <a name="sdi-and-mdi"></a>Rozhraní SDI a knihovna MDI
 
-MFC usnadňuje práci s rozhraní jednoho dokumentu (SDI) a aplikace rozhraní více dokumentů (MDI).
+Knihovna MFC usnadňuje práci s aplikacemi rozhraní SDI (Single Document) i s rozhraním mdi (multiple-document).
 
-Pouze jeden dokument otevřít okno rámce aplikace SDI povolit najednou. Aplikace MDI povolit více dokumentů, oken s rámečkem otevřené ve stejné instanci aplikace. Aplikace MDI má okno podřízených oken, které jsou oken s rámečkem v samotné, lze otevřít v rámci které více MDI, každá obsahuje samostatný dokument. V některých aplikacích může být podřízená okna různých typů, jako je například windows graf a tabulka windows. V takovém případě nabídek můžete změnit, protože se aktivují podřízených oken MDI různých typů.
+Aplikace SDI umožňují současně pouze jedno otevřené okno rámce dokumentu. Aplikace MDI umožňují otevření více oken rámečků dokumentu ve stejné instanci aplikace. Aplikace MDI má okno, ve kterém lze otevřít více podřízených oken MDI, které jsou samotnými okny rámce, z nichž každá obsahuje samostatný dokument. V některých aplikacích mohou být podřízená okna různých typů, například okna grafu a okna tabulky. V takovém případě se řádek nabídek může změnit, jak jsou aktivována podřízená okna MDI různých typů.
 
 > [!NOTE]
->  V části Windows 95 a později aplikace jsou obvykle SDI vzhledem k tomu, že operační systém přijala zobrazení "dokumentu střed".
+> V systému Windows 95 a novějších jsou aplikace obvykle SDI, protože operační systém přijal zobrazení "zaměřené na dokumenty".
 
-Další informace najdete v tématu [dokumenty, zobrazení a Framework](../mfc/documents-views-and-the-framework.md).
+Další informace naleznete v [tématu Dokumenty, zobrazení a rozhraní Framework](../mfc/documents-views-and-the-framework.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Použití tříd pro psaní aplikací pro Windows](../mfc/using-the-classes-to-write-applications-for-windows.md)

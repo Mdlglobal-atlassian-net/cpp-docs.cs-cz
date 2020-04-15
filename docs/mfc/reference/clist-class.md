@@ -50,16 +50,16 @@ helpviewer_keywords:
 - CList [MFC], RemoveTail
 - CList [MFC], SetAt
 ms.assetid: 6f6273c3-c8f6-47f5-ac2a-0a950379ae5d
-ms.openlocfilehash: 383222e4892bccc653f010ce4939bca23f2adc93
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 253cf12033af497115ad600e457630ae834cc69c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62225292"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372237"
 ---
 # <a name="clist-class"></a>CList – třída
 
-Podporuje seřazené seznam nejedinečných objektů dostupných postupně sekvenčně nebo podle hodnoty.
+Podporuje seřazené seznamy nejedinečných objektů přístupných postupně nebo podle hodnoty.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -72,57 +72,57 @@ class CList : public CObject
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CList::CList](#clist)|Vytvoří prázdný uspořádaného seznamu.|
+|[CList::CList](#clist)|Vytvoří prázdný seřazený seznam.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CList::AddHead](#addhead)|Přidá k začátku seznamu (novou vedoucí díky) elementu (nebo všechny prvky v jiném seznamu).|
-|[CList::AddTail](#addtail)|Přidá na konec seznamu (umožňuje nové funkce tail) elementu (nebo všechny prvky v jiném seznamu).|
-|[CList::Find](#find)|Získá pozici prvku určeného hodnotou ukazatele.|
-|[CList::FindIndex](#findindex)|Získá pozici prvku určený index založený na nule.|
-|[CList::GetAt](#getat)|Získá prvek na dané pozici.|
+|[CList::Hlavička](#addhead)|Přidá prvek (nebo všechny prvky v jiném seznamu) do hlavy seznamu (vytvoří novou hlavu).|
+|[CList::AddTail](#addtail)|Přidá prvek (nebo všechny prvky v jiném seznamu) na konci seznamu (vytvoří nový ocas).|
+|[CList::Najít](#find)|Získá pozici prvku určeného hodnotou ukazatele.|
+|[CList::FindIndex](#findindex)|Získá pozici prvku určeného index emitované nula.|
+|[CList::Getat](#getat)|Získá prvek na dané pozici.|
 |[CList::GetCount](#getcount)|Vrátí počet prvků v tomto seznamu.|
-|[CList::GetHead](#gethead)|Vrátí element head seznamu (nemůže být prázdný).|
-|[CList::GetHeadPosition](#getheadposition)|Vrátí pozici element head seznamu.|
+|[CList::Gethead](#gethead)|Vrátí prvek hlavy seznamu (nemůže být prázdný).|
+|[CList::GetheadPosition](#getheadposition)|Vrátí pozici prvku hlavy seznamu.|
 |[CList::GetNext](#getnext)|Získá další prvek pro iterace.|
 |[CList::GetPrev](#getprev)|Získá předchozí prvek pro iterace.|
 |[CList::GetSize](#getsize)|Vrátí počet prvků v tomto seznamu.|
-|[CList::GetTail](#gettail)|Vrátí element tail seznamu (nemůže být prázdný).|
-|[CList::GetTailPosition](#gettailposition)|Vrátí pozici prvku tail seznamu.|
+|[CList::GetTail](#gettail)|Vrátí ocasní prvek seznamu (nemůže být prázdný).|
+|[CList::GetTailPosition](#gettailposition)|Vrátí pozici koncového prvku seznamu.|
 |[CList::InsertAfter](#insertafter)|Vloží nový prvek za danou pozici.|
-|[CList::InsertBefore](#insertbefore)|Vloží nový prvek před danou pozici.|
-|[CList::IsEmpty](#isempty)|Testy pro prázdný seznam podmínku (žádné elementy).|
+|[CList::Insertbefore](#insertbefore)|Vloží nový prvek před danou pozici.|
+|[CList::Jeprázdný](#isempty)|Testy podmínky prázdného seznamu (žádné prvky).|
 |[CList::RemoveAll](#removeall)|Odebere všechny prvky z tohoto seznamu.|
-|[CList::RemoveAt](#removeat)|Odebere element z tohoto seznamu, určené pozici.|
-|[CList::RemoveHead](#removehead)|Odebere element z prvního seznamu.|
-|[CList::RemoveTail](#removetail)|Odebere element z konec seznamu.|
-|[CList::SetAt](#setat)|Nastaví element na dané pozici.|
+|[clist::Removeat](#removeat)|Odebere prvek z tohoto seznamu, určený podle pozice.|
+|[CList::RemoveHead](#removehead)|Odebere prvek z hlavy seznamu.|
+|[CList::RemoveTail](#removetail)|Odebere prvek z ocasu seznamu.|
+|[CList:Setat](#setat)|Nastaví prvek na dané pozici.|
 
 #### <a name="parameters"></a>Parametry
 
 *TYP*<br/>
-Typ objektu, které jsou uloženy v seznamu.
+Typ objektu uloženého v seznamu.
 
 *ARG_TYPE*<br/>
-Typ slouží k odkazování objektů uložených v seznamu. Může být referencí.
+Typ používaný k odkazování na objekty uložené v seznamu. Může to být odkaz.
 
 ## <a name="remarks"></a>Poznámky
 
-`CList` seznamy se chovat jako dvakrát propojené seznamy.
+`CList`seznamy se chovají jako dvojnásob propojené seznamy.
 
-Proměnné typu pozice je klíč pro seznam. Proměnnou POZICI jako iterátor můžete procházet seznamem postupně a jako záložku pro uchování na místě. Pozice není stejný jako index, ale.
+Proměnná typu POSITION je klíčem k seznamu. Proměnnou POSITION můžete použít jako iterátor k postupnému procházení seznamu a jako záložku pro uložení místa. Pozice však není stejná jako index.
 
-Vložení elementu je velmi rychlé zpracování v čele seznamu, na konci a známé pozici. Sekvenčního vyhledávání, je nutné při hledání elementu podle hodnoty nebo index. Toto vyhledávání může být pomalé, pokud je dlouhý seznam.
+Vložení prvku je velmi rychlé v hlavě seznamu, na ocasu a ve známé poloze. Sekvenční vyhledávání je nutné vyhledat prvek podle hodnoty nebo indexu. Toto hledání může být pomalé, pokud je seznam dlouhý.
 
-Pokud potřebujete s výpisem paměti jednotlivých prvků v seznamu, nastavte na 1 nebo větší hloubky kontextu s výpisem paměti.
+Pokud potřebujete výpis jednotlivých prvků v seznamu, je nutné nastavit hloubku kontextu výpisu na 1 nebo vyšší.
 
-Určité členské funkce třídy volání globální pomocné funkce, které je nutné upravit pro většina použití `CList` třídy. Zobrazit [pomocné rutiny třídy kolekce](../../mfc/reference/collection-class-helpers.md) v části "Makra a globální prvky".
+Některé členské funkce této třídy volají globální pomocné funkce, `CList` které musí být přizpůsobeny pro většinu použití třídy. Viz [Pomocníky třídy kolekce](../../mfc/reference/collection-class-helpers.md) v části "Makra a globální".
 
-Další informace o používání `CList`, najdete v článku [kolekce](../../mfc/collections.md).
+Další informace o `CList`použití naleznete v článku [Kolekce](../../mfc/collections.md).
 
 ## <a name="example"></a>Příklad
 
@@ -130,7 +130,7 @@ Další informace o používání `CList`, najdete v článku [kolekce](../../mf
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObjekt](../../mfc/reference/cobject-class.md)
 
 `CList`
 
@@ -138,9 +138,9 @@ Další informace o používání `CList`, najdete v článku [kolekce](../../mf
 
 **Záhlaví:** afxtempl.h
 
-##  <a name="addhead"></a>  CList::AddHead
+## <a name="clistaddhead"></a><a name="addhead"></a>CList::Hlavička
 
-Přidá nový prvek nebo seznam elementů na začátku tohoto seznamu.
+Přidá nový prvek nebo seznam prvků do hlavy tohoto seznamu.
 
 ```
 POSITION AddHead(ARG_TYPE newElement);
@@ -150,27 +150,27 @@ void AddHead(CList* pNewList);
 ### <a name="parameters"></a>Parametry
 
 *ARG_TYPE*<br/>
-Parametr šablony určující typ prvku seznam (může být referencí s).
+Parametr šablony určující typ prvku seznamu (může být odkaz).
 
 *newElement*<br/>
 Nový prvek.
 
 *pNewList*<br/>
-Ukazatel na jiný `CList` seznamu. Prvky v *pNewList* budou přidány do tohoto seznamu.
+Ukazatel na `CList` jiný seznam. Prvky v *pNewList* budou přidány do tohoto seznamu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-První verze vrátí hodnotu pozice nově vložený prvek.
+První verze vrátí hodnotu POSITION nově vloženého prvku.
 
 ### <a name="remarks"></a>Poznámky
 
-Seznam může být prázdný před provedením operace.
+Seznam může být před operací prázdný.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCCollections#36](../../mfc/codesnippet/cpp/clist-class_2.cpp)]
 
-##  <a name="addtail"></a>  CList::AddTail
+## <a name="clistaddtail"></a><a name="addtail"></a>CList::AddTail
 
 Přidá nový prvek nebo seznam prvků na konci tohoto seznamu.
 
@@ -182,29 +182,29 @@ void AddTail(CList* pNewList);
 ### <a name="parameters"></a>Parametry
 
 *ARG_TYPE*<br/>
-Parametr šablony určující typ prvku seznam (může být referencí s).
+Parametr šablony určující typ prvku seznamu (může být odkaz).
 
 *newElement*<br/>
-Elementu, který chcete přidat do tohoto seznamu.
+Prvek, který má být přidán do tohoto seznamu.
 
 *pNewList*<br/>
-Ukazatel na jiný `CList` seznamu. Prvky v *pNewList* budou přidány do tohoto seznamu.
+Ukazatel na `CList` jiný seznam. Prvky v *pNewList* budou přidány do tohoto seznamu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-První verze vrátí hodnotu pozice nově vložený prvek.
+První verze vrátí hodnotu POSITION nově vloženého prvku.
 
 ### <a name="remarks"></a>Poznámky
 
-Seznam může být prázdný před provedením operace.
+Seznam může být před operací prázdný.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCCollections#37](../../mfc/codesnippet/cpp/clist-class_3.cpp)]
 
-##  <a name="clist"></a>  CList::CList
+## <a name="clistclist"></a><a name="clist"></a>CList::CList
 
-Vytvoří prázdný uspořádaného seznamu.
+Vytvoří prázdný seřazený seznam.
 
 ```
 CList(INT_PTR nBlockSize = 10);
@@ -213,19 +213,19 @@ CList(INT_PTR nBlockSize = 10);
 ### <a name="parameters"></a>Parametry
 
 *nBlockSize*<br/>
-Členitost přidělení paměti pro rozšíření seznamu.
+Rozlišovací schopnost přidělení paměti pro rozšíření seznamu.
 
 ### <a name="remarks"></a>Poznámky
 
-S růstem seznamu je paměť přidělena v jednotkách, které *nBlockSize* položky.
+Jak seznam roste, paměť je přidělena v jednotkách *nBlockSize* položek.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCCollections#38](../../mfc/codesnippet/cpp/clist-class_4.cpp)]
 
-##  <a name="find"></a>  CList::Find
+## <a name="clistfind"></a><a name="find"></a>CList::Najít
 
-Prohledává postupně seznamu vyhledejte první prvek odpovídající zadané *searchValue*.
+Postupně vyhledá seznam a vyhledá první prvek odpovídající zadané *hodnotě hledat .*
 
 ```
 POSITION Find(
@@ -236,23 +236,23 @@ POSITION Find(
 ### <a name="parameters"></a>Parametry
 
 *ARG_TYPE*<br/>
-Parametr šablony určující typ prvku seznam (může být referencí s).
+Parametr šablony určující typ prvku seznamu (může být odkaz).
 
-*searchValue*<br/>
-Hodnota má být nalezen v seznamu.
+*funkce searchValue*<br/>
+Hodnota, která se nachází v seznamu.
 
 *startAfter*<br/>
-Počáteční pozice pro vyhledávání. Pokud není zadána žádná hodnota, začíná hledání head element.
+Počáteční pozice pro hledání. Pokud není zadána žádná hodnota, hledání začíná prvkem head.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-POZICE hodnotu, která lze použít pro iteraci nebo načtení objektu ukazatele; Hodnota NULL, pokud objekt nebyl nalezen.
+Hodnota POSITION, kterou lze použít pro iteraci nebo načtení ukazatele objektu; Null, pokud objekt nebyl nalezen.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCCollections#39](../../mfc/codesnippet/cpp/clist-class_5.cpp)]
 
-##  <a name="findindex"></a>  CList::FindIndex
+## <a name="clistfindindex"></a><a name="findindex"></a>CList::FindIndex
 
 Používá hodnotu *nIndex* jako index do seznamu.
 
@@ -263,23 +263,23 @@ POSITION FindIndex(INT_PTR nIndex) const;
 ### <a name="parameters"></a>Parametry
 
 *nIndex*<br/>
-Index založený na nule prvku seznam, který chcete najít.
+Nula na základě indexu list prvek, který má být nalezen.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-POZICE hodnotu, která lze použít pro iteraci nebo načtení objektu ukazatele; Hodnota NULL, pokud *nIndex* je záporný nebo moc velký.
+Hodnota POSITION, kterou lze použít pro iteraci nebo načtení ukazatele objektu; NULL, pokud *nIndex* je negativní nebo příliš velký.
 
 ### <a name="remarks"></a>Poznámky
 
-Spuštěním kontroly sekvenční od začátku seznamu zastavování na *n*tý prvek.
+Spustí sekvenční skenování z hlavy seznamu, zastavení na *n*th element.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCCollections#40](../../mfc/codesnippet/cpp/clist-class_6.cpp)]
 
-##  <a name="getat"></a>  CList::GetAt
+## <a name="clistgetat"></a><a name="getat"></a>CList::Getat
 
-Získá seznam element na dané pozici.
+Získá prvek seznamu na dané pozici.
 
 ```
 TYPE& GetAt(POSITION position);
@@ -291,26 +291,26 @@ const TYPE& GetAt(POSITION position) const;
 *TYP*<br/>
 Parametr šablony určující typ objektu v seznamu.
 
-*Pozice*<br/>
-Pozice prvku, který chcete získat v seznamu.
+*Pozici*<br/>
+Pozice v seznamu prvku získat.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Naleznete v popisu návratovou hodnotu pro `GetHead`.
+Viz popis vrácené `GetHead`hodnoty pro .
 
 ### <a name="remarks"></a>Poznámky
 
-`GetAt` Vrátí hodnotu elementu (nebo odkaz na prvek) přidružené k dané pozici. Není stejný jako index a nemůžete pracovat na základě hodnoty pozice sami. Proměnné typu pozice je klíč pro seznam.
+`GetAt`vrátí prvek (nebo odkaz na prvek) přidružený k dané pozici. Není to stejné jako index a nelze pracovat na position hodnotu sami. Proměnná typu POSITION je klíčem k seznamu.
 
-Ujistěte se, že hodnota pozice představuje platná pozice v seznamu. Pokud je neplatná, ladicí verze knihovny Microsoft Foundation Class se vyhodnotí.
+Je nutné zajistit, aby hodnota POZICE představovala platnou pozici v seznamu. Pokud je neplatný, pak ladicí verze Knihovny tříd Microsoft Foundation uplatňuje.
 
 ### <a name="example"></a>Příklad
 
-  Podívejte se na příklad pro [CList::GetHeadPosition](#getheadposition).
+  Viz příklad pro [CList::GetHeadPosition](#getheadposition).
 
-##  <a name="getcount"></a>  CList::GetCount
+## <a name="clistgetcount"></a><a name="getcount"></a>CList::GetCount
 
-Získá počet elementů v tomto seznamu.
+Získá počet prvků v tomto seznamu.
 
 ```
 INT_PTR GetCount() const;
@@ -318,19 +318,19 @@ INT_PTR GetCount() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Celočíselnou hodnotu obsahující počet prvků.
+Celá hodnota obsahující počet prvků.
 
 ### <a name="remarks"></a>Poznámky
 
-Voláním této metody bude generovat stejný výsledek jako [CList::GetSize](#getsize) metody.
+Volání této metody vygeneruje stejný výsledek jako [Metoda CList::GetSize.](#getsize)
 
 ### <a name="example"></a>Příklad
 
-  Podívejte se na příklad pro [CList::RemoveHead](#removehead).
+  Viz příklad pro [CList::RemoveHead](#removehead).
 
-##  <a name="gethead"></a>  CList::GetHead
+## <a name="clistgethead"></a><a name="gethead"></a>CList::Gethead
 
-Získá head element (nebo odkaz na head element) z tohoto seznamu.
+Získá head element (nebo odkaz na head element) tohoto seznamu.
 
 ```
 const TYPE& GetHead() const;
@@ -345,21 +345,21 @@ Parametr šablony určující typ objektu v seznamu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud je seznam **const**, `GetHead` vrátí kopii objektu prvek na začátku seznamu. To umožňuje funkce, která se použije pouze na pravé straně příkazu přiřazení a chrání před úpravy seznamu.
+Pokud je seznam **const**, `GetHead` vrátí kopii prvku v čele seznamu. To umožňuje funkci použít pouze na pravé straně příkazu přiřazení a chrání seznam před úpravou.
 
-Pokud seznam není **const**, `GetHead` vrátí odkaz na prvek na začátku seznamu. To umožňuje funkce, která se použije na obou stranách příkazu přiřazení a tím umožňuje položky seznamu, který má být upraven.
+Pokud seznam není **const**, `GetHead` vrátí odkaz na prvek v čele seznamu. To umožňuje funkci, která má být použita na obou stranách příkazu přiřazení a tím umožňuje položky seznamu, které mají být změněny.
 
 ### <a name="remarks"></a>Poznámky
 
-Ujistěte se, že seznam není prázdný před voláním `GetHead`. Pokud je seznam prázdný, pak vyhodnotí ladicí verze knihovny Microsoft Foundation Class. Použití [IsEmpty](#isempty) ověřit, zda seznam obsahuje prvky.
+Před voláním `GetHead`je nutné zajistit, aby seznam nebyl prázdný. Pokud je seznam prázdný, bude uplatněna ladicí verze knihovny tříd Microsoft Foundation. Pomocí [isempty](#isempty) ověřte, zda seznam obsahuje prvky.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCCollections#41](../../mfc/codesnippet/cpp/clist-class_7.cpp)]
 
-##  <a name="getheadposition"></a>  CList::GetHeadPosition
+## <a name="clistgetheadposition"></a><a name="getheadposition"></a>CList::GetheadPosition
 
-Získá pozici element head tohoto seznamu.
+Získá pozici head prvek tohoto seznamu.
 
 ```
 POSITION GetHeadPosition() const;
@@ -367,15 +367,15 @@ POSITION GetHeadPosition() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-POZICE hodnotu, která lze použít pro iteraci nebo načtení objektu ukazatele; Hodnota NULL, pokud je seznam prázdný.
+Hodnota POSITION, kterou lze použít pro iteraci nebo načtení ukazatele objektu; Null, pokud je seznam prázdný.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCCollections#42](../../mfc/codesnippet/cpp/clist-class_8.cpp)]
 
-##  <a name="getnext"></a>  CList::GetNext
+## <a name="clistgetnext"></a><a name="getnext"></a>CList::GetNext
 
-Získá seznam prvek identifikovaný *rposition*, pak nastaví *rposition* hodnotu pozice další položky v seznamu.
+Získá prvek seznamu identifikovaný *rPosition*, pak nastaví *rPosition* na hodnotu POSITION další položky v seznamu.
 
 ```
 TYPE& GetNext(POSITION& rPosition);
@@ -387,30 +387,30 @@ const TYPE& GetNext(POSITION& rPosition) const;
 *TYP*<br/>
 Parametr šablony určující typ prvků v seznamu.
 
-*rposition.*<br/>
-Odkaz na POZICI hodnotu vrácenou předchozím `GetNext`, [GetHeadPosition](#getheadposition), nebo jiné členské funkce volání.
+*rPozice*<br/>
+Odkaz na hodnotu POSITION vrácenou předchozím `GetNext` [voláním GetHeadPosition](#getheadposition)nebo jiným voláním členské funkce.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud je seznam **const**, `GetNext` vrátí kopii objektu element seznamu. To umožňuje funkce, která se použije pouze na pravé straně příkazu přiřazení a chrání před úpravy seznamu.
+Pokud je seznam **const**, `GetNext` vrátí kopii prvku seznamu. To umožňuje funkci použít pouze na pravé straně příkazu přiřazení a chrání seznam před úpravou.
 
-Pokud seznam není **const**, `GetNext` vrátí odkaz na element seznamu. To umožňuje funkce, která se použije na obou stranách příkazu přiřazení a tím umožňuje položky seznamu, který má být upraven.
+Pokud seznam není **const**, `GetNext` vrátí odkaz na prvek seznamu. To umožňuje funkci, která má být použita na obou stranách příkazu přiřazení a tím umožňuje položky seznamu, které mají být změněny.
 
 ### <a name="remarks"></a>Poznámky
 
-Můžete použít `GetNext` v dopředné iteraci smyčky, Pokud zavedete počáteční pozici voláním `GetHeadPosition` nebo `Find`.
+Můžete použít `GetNext` ve smyčce dopředné iterace, `GetHeadPosition` pokud `Find`navážete počáteční pozici s voláním nebo .
 
-Ujistěte se, že hodnota pozice představuje platná pozice v seznamu. Pokud je neplatná, ladicí verze knihovny Microsoft Foundation Class se vyhodnotí.
+Je nutné zajistit, aby hodnota POZICE představovala platnou pozici v seznamu. Pokud je neplatný, pak ladicí verze Knihovny tříd Microsoft Foundation uplatňuje.
 
-Pokud je načtený element poslední v seznamu, pak nová hodnota `rPosition` nastaven na hodnotu NULL.
+Pokud načtený prvek je poslední v seznamu, pak `rPosition` je nová hodnota nastavena na hodnotu NULL.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCCollections#43](../../mfc/codesnippet/cpp/clist-class_9.cpp)]
 
-##  <a name="getprev"></a>  CList::GetPrev
+## <a name="clistgetprev"></a><a name="getprev"></a>CList::GetPrev
 
-Získá seznam prvek identifikovaný `rPosition`, pak nastaví `rPosition` pozice hodnotu předchozí položka v seznamu.
+Získá prvek seznamu `rPosition`identifikovaný v `rPosition` , pak nastaví na hodnotu POSITION předchozí položky v seznamu.
 
 ```
 TYPE& GetPrev(POSITION& rPosition);
@@ -422,28 +422,28 @@ const TYPE& GetPrev(POSITION& rPosition) const;
 *TYP*<br/>
 Parametr šablony určující typ prvků v seznamu.
 
-*rposition.*<br/>
-Odkaz na POZICI hodnotu vrácenou předchozím `GetPrev` nebo jiné členské funkce volání.
+*rPozice*<br/>
+Odkaz na hodnotu POSITION vrácenou předchozím `GetPrev` nebo jiným voláním členské funkce.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud je seznam **const**, `GetPrev` vrátí kopii objektu prvek na začátku seznamu. To umožňuje funkce, která se použije pouze na pravé straně příkazu přiřazení a chrání před úpravy seznamu.
+Pokud je seznam **const**, `GetPrev` vrátí kopii prvku v čele seznamu. To umožňuje funkci použít pouze na pravé straně příkazu přiřazení a chrání seznam před úpravou.
 
-Pokud seznam není **const**, `GetPrev` vrátí odkaz na element seznamu. To umožňuje funkce, která se použije na obou stranách příkazu přiřazení a tím umožňuje položky seznamu, který má být upraven.
+Pokud seznam není **const**, `GetPrev` vrátí odkaz na prvek seznamu. To umožňuje funkci, která má být použita na obou stranách příkazu přiřazení a tím umožňuje položky seznamu, které mají být změněny.
 
 ### <a name="remarks"></a>Poznámky
 
-Můžete použít `GetPrev` v reverzní iteraci smyčky, Pokud zavedete počáteční pozici voláním `GetTailPosition` nebo `Find`.
+Můžete použít `GetPrev` ve smyčce zpětné iterace, pokud `GetTailPosition` navážete počáteční pozici s voláním nebo `Find`.
 
-Ujistěte se, že hodnota pozice představuje platná pozice v seznamu. Pokud je neplatná, ladicí verze knihovny Microsoft Foundation Class se vyhodnotí.
+Je nutné zajistit, aby hodnota POZICE představovala platnou pozici v seznamu. Pokud je neplatný, pak ladicí verze Knihovny tříd Microsoft Foundation uplatňuje.
 
-Je-li načíst prvek je první v seznamu, pak nová hodnota *rposition* nastaven na hodnotu NULL.
+Pokud načtený prvek je první v seznamu, pak je nová hodnota *rPosition* nastavena na hodnotu NULL.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCCollections#44](../../mfc/codesnippet/cpp/clist-class_10.cpp)]
 
-##  <a name="getsize"></a>  CList::GetSize
+## <a name="clistgetsize"></a><a name="getsize"></a>CList::GetSize
 
 Vrátí počet prvků seznamu.
 
@@ -453,19 +453,19 @@ INT_PTR GetSize() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Počet položek v seznamu.
+Počet položek v seznamu
 
 ### <a name="remarks"></a>Poznámky
 
-Voláním této metody lze načíst počet prvků v seznamu.  Voláním této metody bude generovat stejný výsledek jako [CList::GetCount](#getcount) metody.
+Volání této metody načíst počet prvků v seznamu.  Volání této metody vygeneruje stejný výsledek jako [Metoda CList::GetCount.](#getcount)
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCCollections#45](../../mfc/codesnippet/cpp/clist-class_11.cpp)]
 
-##  <a name="gettail"></a>  CList::GetTail
+## <a name="clistgettail"></a><a name="gettail"></a>CList::GetTail
 
-Získá `CObject` ukazatel, který reprezentuje element tail tohoto seznamu.
+Získá `CObject` ukazatel, který představuje ocas prvek tohoto seznamu.
 
 ```
 TYPE& GetTail();
@@ -479,19 +479,19 @@ Parametr šablony určující typ prvků v seznamu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Naleznete v popisu návratovou hodnotu pro [GetHead](../../mfc/reference/coblist-class.md#gethead).
+Viz popis vrácené hodnoty pro [GetHead](../../mfc/reference/coblist-class.md#gethead).
 
 ### <a name="remarks"></a>Poznámky
 
-Ujistěte se, že seznam není prázdný před voláním `GetTail`. Pokud je seznam prázdný, pak vyhodnotí ladicí verze knihovny Microsoft Foundation Class. Použití [IsEmpty](../../mfc/reference/coblist-class.md#isempty) ověřit, zda seznam obsahuje prvky.
+Před voláním `GetTail`je nutné zajistit, aby seznam nebyl prázdný. Pokud je seznam prázdný, bude uplatněna ladicí verze knihovny tříd Microsoft Foundation. Pomocí [isempty](../../mfc/reference/coblist-class.md#isempty) ověřte, zda seznam obsahuje prvky.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCCollections#46](../../mfc/codesnippet/cpp/clist-class_12.cpp)]
 
-##  <a name="gettailposition"></a>  CList::GetTailPosition
+## <a name="clistgettailposition"></a><a name="gettailposition"></a>CList::GetTailPosition
 
-Získá pozici prvku tail tohoto seznamu; Hodnota NULL, pokud je seznam prázdný.
+Získá pozici ocasprvek tohoto seznamu; Null, pokud je seznam prázdný.
 
 ```
 POSITION GetTailPosition() const;
@@ -499,15 +499,15 @@ POSITION GetTailPosition() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-POZICE hodnotu, která lze použít pro iteraci nebo načtení objektu ukazatele; Hodnota NULL, pokud je seznam prázdný.
+Hodnota POSITION, kterou lze použít pro iteraci nebo načtení ukazatele objektu; Null, pokud je seznam prázdný.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCCollections#47](../../mfc/codesnippet/cpp/clist-class_13.cpp)]
 
-##  <a name="insertafter"></a>  CList::InsertAfter
+## <a name="clistinsertafter"></a><a name="insertafter"></a>CList::InsertAfter
 
-Přidá prvek do tohoto seznamu za elementem na zadané pozici.
+Přidá prvek do tohoto seznamu za prvek na zadané pozici.
 
 ```
 POSITION InsertAfter(POSITION position, ARG_TYPE newElement);
@@ -515,26 +515,26 @@ POSITION InsertAfter(POSITION position, ARG_TYPE newElement);
 
 ### <a name="parameters"></a>Parametry
 
-*Pozice*<br/>
-Hodnota pozice vrácené předchozím `GetNext`, `GetPrev`, nebo `Find` volání členské funkce.
+*Pozici*<br/>
+Hodnota POSITION vrácená `GetNext`předchozím `GetPrev`voláním , nebo `Find` členské funkce.
 
 *ARG_TYPE*<br/>
 Parametr šablony určující typ prvku seznamu.
 
 *newElement*<br/>
-Elementu, který chcete přidat do tohoto seznamu.
+Prvek, který má být přidán do tohoto seznamu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota pozice, který lze použít pro iteraci nebo seznamu elementu načtení.
+Hodnota POSITION, kterou lze použít pro iteraci nebo načítání prvků seznamu.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCCollections#48](../../mfc/codesnippet/cpp/clist-class_14.cpp)]
 
-##  <a name="insertbefore"></a>  CList::InsertBefore
+## <a name="clistinsertbefore"></a><a name="insertbefore"></a>CList::Insertbefore
 
-Přidá prvek do tohoto seznamu před elementem na zadané pozici.
+Přidá prvek do tohoto seznamu před prvek na zadané pozici.
 
 ```
 POSITION InsertBefore(POSITION position, ARG_TYPE newElement);
@@ -542,30 +542,30 @@ POSITION InsertBefore(POSITION position, ARG_TYPE newElement);
 
 ### <a name="parameters"></a>Parametry
 
-*Pozice*<br/>
-Hodnota pozice vrácené předchozím `GetNext`, `GetPrev`, nebo `Find` volání členské funkce.
+*Pozici*<br/>
+Hodnota POSITION vrácená `GetNext`předchozím `GetPrev`voláním , nebo `Find` členské funkce.
 
 *ARG_TYPE*<br/>
-Parametr šablony určující typ prvku seznam (může být referencí s).
+Parametr šablony určující typ prvku seznamu (může být odkaz).
 
 *newElement*<br/>
-Elementu, který chcete přidat do tohoto seznamu.
+Prvek, který má být přidán do tohoto seznamu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota pozice, který lze použít pro iteraci nebo seznamu elementu načtení.
+Hodnota POSITION, kterou lze použít pro iteraci nebo načítání prvků seznamu.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud *pozice* má hodnotu NULL, element bude vložena na začátku seznamu.
+Pokud *position* pozice je NULL, prvek je vložen v čele seznamu.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCCollections#49](../../mfc/codesnippet/cpp/clist-class_15.cpp)]
 
-##  <a name="isempty"></a>  CList::IsEmpty
+## <a name="clistisempty"></a><a name="isempty"></a>CList::Jeprázdný
 
-Určuje, zda tento seznam neobsahuje žádné elementy.
+Označuje, zda tento seznam neobsahuje žádné prvky.
 
 ```
 BOOL IsEmpty() const;
@@ -573,15 +573,15 @@ BOOL IsEmpty() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je tento seznam prázdný; jinak 0.
+Nenulová, pokud je tento seznam prázdný; jinak 0.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCCollections#50](../../mfc/codesnippet/cpp/clist-class_16.cpp)]
 
-##  <a name="removeall"></a>  CList::RemoveAll
+## <a name="clistremoveall"></a><a name="removeall"></a>CList::RemoveAll
 
-Odebere všechny prvky v tomto seznamu a uvolní paměť přidružené.
+Odebere všechny prvky z tohoto seznamu a uvolní přidružené paměti.
 
 ```
 void RemoveAll();
@@ -589,13 +589,13 @@ void RemoveAll();
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud už je seznam prázdný, nevygeneruje se žádná chyba.
+Pokud je seznam již prázdný, není generována žádná chyba.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCCollections#51](../../mfc/codesnippet/cpp/clist-class_17.cpp)]
 
-##  <a name="removeat"></a>  CList::RemoveAt
+## <a name="clistremoveat"></a><a name="removeat"></a>clist::Removeat
 
 Odebere zadaný prvek z tohoto seznamu.
 
@@ -605,20 +605,20 @@ void RemoveAt(POSITION position);
 
 ### <a name="parameters"></a>Parametry
 
-*Pozice*<br/>
-Pozice prvku, který chcete odebrat ze seznamu.
+*Pozici*<br/>
+Umístění prvku, který má být odebrán ze seznamu.
 
 ### <a name="remarks"></a>Poznámky
 
-Ujistěte se, že hodnota pozice představuje platná pozice v seznamu. Pokud je neplatná, ladicí verze knihovny Microsoft Foundation Class se vyhodnotí.
+Je nutné zajistit, aby hodnota POZICE představovala platnou pozici v seznamu. Pokud je neplatný, pak ladicí verze Knihovny tříd Microsoft Foundation uplatňuje.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCCollections#52](../../mfc/codesnippet/cpp/clist-class_18.cpp)]
 
-##  <a name="removehead"></a>  CList::RemoveHead
+## <a name="clistremovehead"></a><a name="removehead"></a>CList::RemoveHead
 
-Odebere element z prvního seznamu a vrátí ukazatel na něj.
+Odebere prvek z hlavy seznamu a vrátí na něj ukazatel.
 
 ```
 TYPE RemoveHead();
@@ -631,19 +631,19 @@ Parametr šablony určující typ prvků v seznamu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Prvek dříve na začátku seznamu.
+Prvek dříve v čele seznamu.
 
 ### <a name="remarks"></a>Poznámky
 
-Ujistěte se, že seznam není prázdný před voláním `RemoveHead`. Pokud je seznam prázdný, pak vyhodnotí ladicí verze knihovny Microsoft Foundation Class. Použití [IsEmpty](#isempty) ověřit, zda seznam obsahuje prvky.
+Před voláním `RemoveHead`je nutné zajistit, aby seznam nebyl prázdný. Pokud je seznam prázdný, bude uplatněna ladicí verze knihovny tříd Microsoft Foundation. Pomocí [isempty](#isempty) ověřte, zda seznam obsahuje prvky.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCCollections#53](../../mfc/codesnippet/cpp/clist-class_19.cpp)]
 
-##  <a name="removetail"></a>  CList::RemoveTail
+## <a name="clistremovetail"></a><a name="removetail"></a>CList::RemoveTail
 
-Odebere element z konec seznamu a vrátí ukazatel na něj.
+Odebere prvek z ocasu seznamu a vrátí na něj ukazatel.
 
 ```
 TYPE RemoveTail();
@@ -660,15 +660,15 @@ Prvek, který byl na konci seznamu.
 
 ### <a name="remarks"></a>Poznámky
 
-Ujistěte se, že seznam není prázdný před voláním `RemoveTail`. Pokud je seznam prázdný, pak vyhodnotí ladicí verze knihovny Microsoft Foundation Class. Použití [IsEmpty](#isempty) ověřit, zda seznam obsahuje prvky.
+Před voláním `RemoveTail`je nutné zajistit, aby seznam nebyl prázdný. Pokud je seznam prázdný, bude uplatněna ladicí verze knihovny tříd Microsoft Foundation. Pomocí [isempty](#isempty) ověřte, zda seznam obsahuje prvky.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCCollections#54](../../mfc/codesnippet/cpp/clist-class_20.cpp)]
 
-##  <a name="setat"></a>  CList::SetAt
+## <a name="clistsetat"></a><a name="setat"></a>CList:Setat
 
-Proměnné typu pozice je klíč pro seznam.
+Proměnná typu POSITION je klíčem k seznamu.
 
 ```
 void SetAt(POSITION pos, ARG_TYPE newElement);
@@ -676,29 +676,29 @@ void SetAt(POSITION pos, ARG_TYPE newElement);
 
 ### <a name="parameters"></a>Parametry
 
-*pos*<br/>
-Pozice prvku, který chcete nastavit.
+*Pos*<br/>
+POZICE prvku, který má být nastaven.
 
 *ARG_TYPE*<br/>
-Parametr šablony určující typ prvku seznam (může být referencí s).
+Parametr šablony určující typ prvku seznamu (může být odkaz).
 
 *newElement*<br/>
-Elementu, který chcete přidat do seznamu.
+Prvek, který má být přidán do seznamu.
 
 ### <a name="remarks"></a>Poznámky
 
-Není stejný jako index a nemůžete pracovat na základě hodnoty pozice sami. `SetAt` zapíše element na zadanou pozici v seznamu.
+Není to stejné jako index a nelze pracovat na position hodnotu sami. `SetAt`zapíše prvek na zadanou pozici v seznamu.
 
-Ujistěte se, že hodnota pozice představuje platná pozice v seznamu. Pokud je neplatná, ladicí verze knihovny Microsoft Foundation Class se vyhodnotí.
+Je nutné zajistit, aby hodnota POZICE představovala platnou pozici v seznamu. Pokud je neplatný, pak ladicí verze Knihovny tříd Microsoft Foundation uplatňuje.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCCollections#55](../../mfc/codesnippet/cpp/clist-class_21.cpp)]
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Ukázky knihovny MFC shromažďování](../../overview/visual-cpp-samples.md)<br/>
+[Odběr vzorku knihovny MFC](../../overview/visual-cpp-samples.md)<br/>
 [CObject – třída](../../mfc/reference/cobject-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
-[CMap – třída](../../mfc/reference/cmap-class.md)<br/>
-[CArray – třída](../../mfc/reference/carray-class.md)
+[Třída CMap](../../mfc/reference/cmap-class.md)<br/>
+[Třída CArray](../../mfc/reference/carray-class.md)

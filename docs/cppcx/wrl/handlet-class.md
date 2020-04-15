@@ -27,12 +27,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HandleT::operator= operator
 - Microsoft::WRL::Wrappers::HandleT::~HandleT, destructor
 ms.assetid: 3822b32a-a426-4d94-a54d-919d4df60ee2
-ms.openlocfilehash: f66fbe23c305be15e09928242175dfa7ce8c141b
-ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.openlocfilehash: bde7d7f1bd6730d96cb0f7a0d191a32eb8ed3e8c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821815"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371454"
 ---
 # <a name="handlet-class"></a>HandleT – třída
 
@@ -48,50 +48,50 @@ class HandleT;
 ### <a name="parameters"></a>Parametry
 
 *HandleTraits*<br/>
-Instance struktury [HandleTraits](handletraits-structure.md) , která definuje společné charakteristiky popisovače.
+Instance [HandleTraits](handletraits-structure.md) struktury, která definuje společné charakteristiky popisovače.
 
 ## <a name="members"></a>Členové
 
-### <a name="public-typedefs"></a>Veřejné definice typedef
+### <a name="public-typedefs"></a>Veřejné typedefs
 
-Name     | Popis
+Name (Název)     | Popis
 -------- | -----------------------------
-`Traits` | Synonymum pro `HandleTraits`.
+`Traits` | Synonymum `HandleTraits`pro .
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-Name                                | Popis
+Name (Název)                                | Popis
 ----------------------------------- | --------------------------------------------------
-[HandleT:: HandleT](#handlet)        | Inicializuje novou instanci třídy `HandleT` třídy.
-[HandleT:: ~ HandleT](#tilde-handlet) | Zruší inicializaci instance třídy `HandleT`.
+[HandleT::HandleT](#handlet)        | Inicializuje novou instanci třídy. `HandleT`
+[HandleT::~HandleT](#tilde-handlet) | Deinitializes instance třídy. `HandleT`
 
 ### <a name="public-methods"></a>Veřejné metody
 
-Name                         | Popis
+Name (Název)                         | Popis
 ---------------------------- | ----------------------------------------------------------------------
-[HandleT:: Attach](#attach)   | Přidruží zadaný popisovač k aktuálnímu objektu `HandleT`.
-[HandleT:: Close](#close)     | Zavře aktuální objekt `HandleT`.
-[HandleT::D etach](#detach)   | Zruší přidružení aktuálního objektu `HandleT` k jeho základnímu popisovači.
-[HandleT:: Get](#get)         | Získá hodnotu podkladového popisovače.
-[HandleT::IsValid](#isvalid) | Určuje, zda aktuální objekt `HandleT` představuje popisovač.
+[HandleT::Připojit](#attach)   | Přidruží zadaný `HandleT` popisovač k aktuálnímu objektu.
+[HandleT::Zavřít](#close)     | Zavře aktuální `HandleT` objekt.
+[HandleT::Detach](#detach)   | Odpojí aktuální `HandleT` objekt od jeho základního popisovače.
+[HandleT::Získat](#get)         | Získá hodnotu základního popisovače.
+[HandleT::IsValid](#isvalid) | Označuje, zda `HandleT` aktuální objekt představuje popisovač.
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-Name                                     | Popis
+Name (Název)                                     | Popis
 ---------------------------------------- | ------------------------------------
-[HandleT::InternalClose](#internalclose) | Zavře aktuální objekt `HandleT`.
+[HandleT::InternalClose](#internalclose) | Zavře aktuální `HandleT` objekt.
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-Name                                   | Popis
+Name (Název)                                   | Popis
 -------------------------------------- | ----------------------------------------------------------------------------------
-[HandleT:: operator =](#operator-assign) | Přesune hodnotu zadaného objektu `HandleT` na aktuální objekt `HandleT`.
+[HandleT::operátor=](#operator-assign) | Přesune hodnotu zadaného `HandleT` objektu `HandleT` na aktuální objekt.
 
-### <a name="protected-data-members"></a>Chránění členové dat
+### <a name="protected-data-members"></a>Členové chráněných dat
 
-Name                        | Popis
+Name (Název)                        | Popis
 --------------------------- | ----------------------------------------------------------------
-[Popisovač:: handle_](#handle) | Obsahuje popisovač, který je reprezentován objektem `HandleT`.
+[HandleT::handle_](#handle) | Obsahuje popisovač, který `HandleT` je reprezentován objektem.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -99,21 +99,21 @@ Name                        | Popis
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** corewrappers. h
+**Záhlaví:** corewrappers.h
 
-**Obor názvů:** Microsoft:: WRL:: Wrappers
+**Obor názvů:** Microsoft::WRL::Obálky
 
-## <a name="tilde-handlet"></a>HandleT:: ~ HandleT
+## <a name="handlethandlet"></a><a name="tilde-handlet"></a>HandleT::~HandleT
 
-Zruší inicializaci instance třídy `HandleT`.
+Deinitializes instance třídy. `HandleT`
 
 ```cpp
 ~HandleT();
 ```
 
-## <a name="attach"></a>HandleT:: Attach
+## <a name="handletattach"></a><a name="attach"></a>HandleT::Připojit
 
-Přidruží zadaný popisovač k aktuálnímu objektu `HandleT`.
+Přidruží zadaný `HandleT` popisovač k aktuálnímu objektu.
 
 ```cpp
 void Attach(
@@ -123,12 +123,12 @@ void Attach(
 
 ### <a name="parameters"></a>Parametry
 
-*h*<br/>
-Popisovač.
+*H*<br/>
+Rukojeť.
 
-## <a name="close"></a>HandleT:: Close
+## <a name="handletclose"></a><a name="close"></a>HandleT::Zavřít
 
-Zavře aktuální objekt `HandleT`.
+Zavře aktuální `HandleT` objekt.
 
 ```cpp
 void Close();
@@ -136,13 +136,13 @@ void Close();
 
 ### <a name="remarks"></a>Poznámky
 
-Popisovač, který je v aktuální `HandleT`, je uzavřený a `HandleT` je nastaven na neplatný stav.
+Popisovač, který je `HandleT` základem proudu `HandleT` je uzavřen a je nastaven na neplatný stav.
 
-Pokud se popisovač neukončí správně, je vyvolána výjimka ve volajícím vlákně.
+Pokud popisovač nezavře správně, je vyvolána výjimka v volajícívlákno.
 
-## <a name="detach"></a>HandleT::D etach
+## <a name="handletdetach"></a><a name="detach"></a>HandleT::Detach
 
-Zruší přidružení aktuálního objektu `HandleT` k jeho základnímu popisovači.
+Odpojí aktuální `HandleT` objekt od jeho základního popisovače.
 
 ```cpp
 typename HandleTraits::Type Detach();
@@ -150,15 +150,15 @@ typename HandleTraits::Type Detach();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nadřízený popisovač
+Základní popisovač.
 
 ### <a name="remarks"></a>Poznámky
 
-Po dokončení této operace je aktuální `HandleT` nastavena na neplatný stav.
+Po dokončení této operace `HandleT` je aktuální nastaven na neplatný stav.
 
-## <a name="get"></a>HandleT:: Get
+## <a name="handletget"></a><a name="get"></a>HandleT::Získat
 
-Získá hodnotu podkladového popisovače.
+Získá hodnotu základního popisovače.
 
 ```cpp
 typename HandleTraits::Type Get() const;
@@ -166,19 +166,19 @@ typename HandleTraits::Type Get() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Popisovač.
+Rukojeť.
 
-## <a name="handle"></a>Popisovač:: handle_
+## <a name="handlethandle_"></a><a name="handle"></a>HandleT::handle_
 
-Obsahuje popisovač, který je reprezentován objektem `HandleT`.
+Obsahuje popisovač, který `HandleT` je reprezentován objektem.
 
 ```cpp
 typename HandleTraits::Type handle_;
 ```
 
-## <a name="handlet"></a>HandleT:: HandleT
+## <a name="handlethandlet"></a><a name="handlet"></a>HandleT::HandleT
 
-Inicializuje novou instanci třídy `HandleT` třídy.
+Inicializuje novou instanci třídy. `HandleT`
 
 ```cpp
 explicit HandleT(
@@ -193,16 +193,16 @@ HandleT(
 
 ### <a name="parameters"></a>Parametry
 
-*h*<br/>
-Popisovač.
+*H*<br/>
+Rukojeť.
 
 ### <a name="remarks"></a>Poznámky
 
-První konstruktor inicializuje objekt `HandleT`, který není platným popisovačem objektu. Druhý konstruktor vytvoří nový objekt `HandleT` z parametru *h*.
+První konstruktor inicializuje `HandleT` objekt, který není platným popisovačem objektu. Druhý konstruktor vytvoří `HandleT` nový objekt z parametru *h*.
 
-## <a name="internalclose"></a>Popisovač:: InternalClose –
+## <a name="handletinternalclose"></a><a name="internalclose"></a>HandleT::InternalClose
 
-Zavře aktuální objekt `HandleT`.
+Zavře aktuální `HandleT` objekt.
 
 ```cpp
 virtual bool InternalClose();
@@ -210,15 +210,15 @@ virtual bool InternalClose();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**true** , pokud se aktuální `HandleT` zavře úspěšně; v opačném případě **false**.
+**true,** pokud `HandleT` se aktuální úspěšně zavřel; jinak **false**.
 
 ### <a name="remarks"></a>Poznámky
 
 `InternalClose()` je `protected`.
 
-## <a name="isvalid"></a>HandleT:: IsValid
+## <a name="handletisvalid"></a><a name="isvalid"></a>HandleT::IsValid
 
-Určuje, zda aktuální objekt `HandleT` představuje popisovač.
+Označuje, zda `HandleT` aktuální objekt představuje popisovač.
 
 ```cpp
 bool IsValid() const;
@@ -226,11 +226,11 @@ bool IsValid() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**true** , pokud `HandleT` představuje popisovač; v opačném případě **false**.
+**true,** `HandleT` pokud představuje popisovač; jinak **false**.
 
-## <a name="operator-assign"></a>HandleT:: operator =
+## <a name="handletoperator"></a><a name="operator-assign"></a>HandleT::operátor=
 
-Přesune hodnotu zadaného objektu `HandleT` na aktuální objekt `HandleT`.
+Přesune hodnotu zadaného `HandleT` objektu `HandleT` na aktuální objekt.
 
 ```cpp
 HandleT& operator=(
@@ -240,13 +240,13 @@ HandleT& operator=(
 
 ### <a name="parameters"></a>Parametry
 
-*h*<br/>
-Rvalue – odkaz na popisovač.
+*H*<br/>
+Rvalue odkaz na popisovač.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Odkaz na aktuální objekt `HandleT`.
+Odkaz na aktuální `HandleT` objekt.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato operace zruší platnost objektu `HandleT` zadaného parametrem *h*.
+Tato operace zruší `HandleT` platnost objektu určeného parametrem *h*.

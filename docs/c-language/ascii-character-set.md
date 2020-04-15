@@ -2,22 +2,22 @@
 title: Znaková sada ASCII
 ms.date: 11/04/2016
 ms.assetid: 2390fd40-5fe2-4410-a06c-ccc0fea2709b
-ms.openlocfilehash: 637f605f839b363dd85278f4b85fd832ca5f8e08
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 264d1f5a0f10d77a2c7c1dcc945ee6e508c70789
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62313399"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81335073"
 ---
 # <a name="ascii-character-set"></a>Znaková sada ASCII
 
-**ANSI 2.2.1** členy spuštění a zdrojová znakových sad
+**ANSI 2,2,1** Členové zdrojových a prováděcích znakových sad
 
 Zdrojová znaková sada je sada platných znaků, které se mohou objevit ve zdrojových souborech. Pro jazyk Microsoft C je zdrojovou znakovou sadou standardně znaková sada ASCII.
 
 > [!NOTE]
->  **Upozornění** protože ovladače klávesnice a konzoly mohou změnit mapování znakové sady, programy určené k mezinárodní distribuci by měly kontrolovat kód země/oblasti.
+> **Upozornění** Vzhledem k tomu, že ovladače klávesnice a konzoly mohou přemapovat znakovou sadu, měly by programy určené pro mezinárodní distribuci zkontrolovat kód země nebo oblasti.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Znaky](../c-language/characters.md)

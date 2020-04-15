@@ -13,16 +13,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::Invoke method
 - Microsoft::WRL::Details::InvokeHelper, constructor
 ms.assetid: 555ad2bc-4dd6-4e65-a2e2-1242c395f0e5
-ms.openlocfilehash: 3fcba210d4018d22487d234b437acfee3634cec6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9cb4e166628a6b5e7671494446d467e73c9f8cc3
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386132"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371376"
 ---
 # <a name="invokehelper-structure"></a>InvokeHelper – struktura
 
-Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.
+Podporuje infrastrukturu WRL a není určen pro použití přímo z vašeho kódu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -106,41 +106,41 @@ struct InvokeHelper<TDelegateInterface, TCallback, 9> :
 *TDelegateInterface*<br/>
 Typ rozhraní delegáta.
 
-*TCallback*<br/>
+*Zpětné volání T*<br/>
 Typ funkce obslužné rutiny události.
 
 *argCount*<br/>
-Počet argumentů v `InvokeHelper` specializace.
+Počet argumentů v `InvokeHelper` specializaci.
 
 ## <a name="remarks"></a>Poznámky
 
-Poskytuje implementaci `Invoke()` metoda na základě zadané číslo a typ argumentů.
+Poskytuje implementaci metody `Invoke()` na základě zadaného počtu a typu argumentů.
 
 ## <a name="members"></a>Členové
 
-### <a name="public-typedefs"></a>Veřejné definice TypeDef
+### <a name="public-typedefs"></a>Veřejné typedefs
 
-Název     | Popis
+Name (Název)     | Popis
 -------- | -----------------------------------------------------------------------------
 `Traits` | Synonymum pro třídu, která definuje typ každého argumentu obslužné rutiny události.
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-Název                                        | Popis
+Name (Název)                                        | Popis
 ------------------------------------------- | -------------------------------------------------------
-[Invokehelper::invokehelper –](#invokehelper) | Inicializuje novou instanci třídy `InvokeHelper` třídy.
+[InvokeHelper::InvokeHelper](#invokehelper) | Inicializuje novou instanci třídy. `InvokeHelper`
 
 ### <a name="public-methods"></a>Veřejné metody
 
-Název                            | Popis
+Name (Název)                            | Popis
 ------------------------------- | -----------------------------------------------------------------------------------
-[Invokehelper::Invoke –](#invoke) | Volá obslužnou rutinu události, jehož předpis obsahuje zadaný počet argumentů.
+[InvokeHelper::Vyvolat](#invoke) | Zavolá obslužnou rutinu události, jejíž podpis obsahuje zadaný počet argumentů.
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-Název                                 | Popis
+Name (Název)                                 | Popis
 ------------------------------------ | ----------------------------------------------------------
-[Invokehelper::callback_ –](#callback) | Reprezentuje obslužnou rutinu události pro volání při výskytu události.
+[InvokeHelper::callback_](#callback) | Představuje obslužnou rutinu události, která má být volána, když dojde k události.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -150,11 +150,11 @@ Název                                 | Popis
 
 **Záhlaví:** event.h
 
-**Namespace:** Microsoft::WRL::Details
+**Obor názvů:** Microsoft::WRL::Details
 
-## <a name="callback"></a>Invokehelper::callback_ –
+## <a name="invokehelpercallback_"></a><a name="callback"></a>InvokeHelper::callback_
 
-Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.
+Podporuje infrastrukturu WRL a není určen pro použití přímo z vašeho kódu.
 
 ```cpp
 TCallback callback_;
@@ -162,13 +162,13 @@ TCallback callback_;
 
 ### <a name="remarks"></a>Poznámky
 
-Reprezentuje obslužnou rutinu události pro volání při výskytu události.
+Představuje obslužnou rutinu události, která má být volána, když dojde k události.
 
-`TCallback` Parametr šablony určuje typ obslužné rutiny události.
+Parametr `TCallback` šablony určuje typ obslužné rutiny události.
 
-## <a name="invoke"></a>Invokehelper::Invoke –
+## <a name="invokehelperinvoke"></a><a name="invoke"></a>InvokeHelper::Vyvolat
 
-Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.
+Podporuje infrastrukturu WRL a není určen pro použití přímo z vašeho kódu.
 
 ```cpp
 STDMETHOD(
@@ -234,15 +234,15 @@ Argument 9.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-S_OK v případě úspěchu; v opačném případě popisující chybu HRESULT.
+S_OK v případě úspěchu; jinak HRESULT, který popisuje chybu.
 
 ### <a name="remarks"></a>Poznámky
 
-Volá obslužnou rutinu události, jehož předpis obsahuje zadaný počet argumentů.
+Zavolá obslužnou rutinu události, jejíž podpis obsahuje zadaný počet argumentů.
 
-## <a name="invokehelper"></a>Invokehelper::invokehelper –
+## <a name="invokehelperinvokehelper"></a><a name="invokehelper"></a>InvokeHelper::InvokeHelper
 
-Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.
+Podporuje infrastrukturu WRL a není určen pro použití přímo z vašeho kódu.
 
 ```cpp
 explicit InvokeHelper(
@@ -252,11 +252,11 @@ explicit InvokeHelper(
 
 ### <a name="parameters"></a>Parametry
 
-*callback*<br/>
-Obslužné rutiny události.
+*Zpětného volání*<br/>
+Obslužná rutina události.
 
 ### <a name="remarks"></a>Poznámky
 
-Inicializuje novou instanci třídy `InvokeHelper` třídy.
+Inicializuje novou instanci třídy. `InvokeHelper`
 
-`TCallback` Parametr šablony určuje typ obslužné rutiny události.
+Parametr `TCallback` šablony určuje typ obslužné rutiny události.

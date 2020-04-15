@@ -1,5 +1,5 @@
 ---
-title: Iaxwinambientdispatchex – rozhraní
+title: Rozhraní IAxWinAmbientDispatchEx
 ms.date: 11/04/2016
 f1_keywords:
 - IAxWinAmbientDispatchEx
@@ -8,19 +8,19 @@ f1_keywords:
 helpviewer_keywords:
 - IAxWinAmbientDispatchEx interface
 ms.assetid: 2c25e079-6128-4278-bc72-b2c6195ba7ef
-ms.openlocfilehash: 638152d8c49bd20742a586bc665efcdb662b6f3a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f4816846801e388619db62998ec979a1100916ee
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62276091"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81329983"
 ---
-# <a name="iaxwinambientdispatchex-interface"></a>Iaxwinambientdispatchex – rozhraní
+# <a name="iaxwinambientdispatchex-interface"></a>Rozhraní IAxWinAmbientDispatchEx
 
-Toto rozhraní implementuje dodatečné vlastnosti prostředí pro hostované ovládací prvek.
+Toto rozhraní implementuje doplňkové vlastnosti okolí pro hostovaný ovládací prvek.
 
 > [!IMPORTANT]
->  Tato třída a jejích členů nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.
+> Tuto třídu a její členy nelze použít v aplikacích, které se spouštějí v prostředí Windows Runtime.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -34,33 +34,33 @@ MIDL_INTERFACE("B2D0778B - AC99 - 4c58 - A5C8 - E7724E5316B5") IAxWinAmbientDisp
 
 |||
 |-|-|
-|[SetAmbientDispatch](#setambientdispatch)|Tato metoda je volána k doplnění rozhraní vedlejší vlastnost výchozí uživatelské rozhraní.|
+|[SetAmbientDispatch](#setambientdispatch)|Tato metoda je volána k doplnění výchozí rozhraní vlastnosti okolí s uživatelem definované rozhraní.|
 
 ## <a name="remarks"></a>Poznámky
 
-Toto rozhraní zahrňte knihovny ATL aplikace, které jsou staticky propojené knihovny ATL a hostitele – ovládací prvky ActiveX, zejména – ovládací prvky ActiveX, které mají vlastnosti prostředí. Toto rozhraní není včetně vygeneruje tento kontrolní výraz: "Zapomněli jste LIBID předat v: CComModule::Init"
+Toto rozhraní zahrňte do aplikací knihovny ATL, které jsou staticky propojeny s knihovnou ATL a hostují ovládací prvky ActiveX, zejména ovládací prvky ActiveX, které mají vlastnosti okolí. Nezahrnutí tohoto rozhraní vygeneruje toto tvrzení: "Zapomněli jste předat LIBID ccommodule::Init"
 
-Toto rozhraní je zveřejněný prostřednictvím ovládací prvek ActiveX knihovny ATL pro hostování objektů. Odvozené od [iaxwinambientdispatch –](../../atl/reference/iaxwinambientdispatch-interface.md), `IAxWinAmbientDispatchEx` přidá metodu, která umožňuje doplnit rozhraní vedlejší vlastnost poskytované ATL s vlastním.
+Toto rozhraní je vystaveno ovládacím objektům ActiveX společnosti ATL. Odvozeno z [IAxWinAmbientDispatch](../../atl/reference/iaxwinambientdispatch-interface.md), přidá metodu, `IAxWinAmbientDispatchEx` která umožňuje doplnit rozhraní vlastností okolí poskytované ATL s jedním z vašich vlastních.
 
-<xref:System.Windows.Forms.AxHost> pokusí se načíst informace o typu o `IAxWinAmbientDispatch` a `IAxWinAmbientDispatchEx` z knihovny typů, která obsahuje kód.
+<xref:System.Windows.Forms.AxHost>se pokusí načíst `IAxWinAmbientDispatch` informace `IAxWinAmbientDispatchEx` o typu a z knihovny typů, která obsahuje kód.
 
-Pokud se připojujete k ATL90.dll, **AXHost** načte informace o typu z knihovny typů v knihovně DLL.
+Pokud odkazujete na knihovnu ATL90.dll, **AXHost** načte informace o typu z knihovny typů v knihovně DLL.
 
-Zobrazit [hostování ActiveX ovládacích prvků pomocí knihovny ATL AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md) další podrobnosti.
+Další podrobnosti najdete v [tématu Hostování ovládacích prvků ActiveX pomocí služby ATL AXHost.](../../atl/hosting-activex-controls-using-atl-axhost.md)
 
 ## <a name="requirements"></a>Požadavky
 
-Definice toto rozhraní není k dispozici v různých formách, jak je znázorněno v následující tabulce.
+Definice tohoto rozhraní je k dispozici v několika formulářích, jak je znázorněno v následující tabulce.
 
-|Typ definice|Soubor|
+|Typ definice|File|
 |---------------------|----------|
-|IDL|atliface.IDL|
-|Knihovny typů|ATL.dll|
+|Idl|atliface.idl|
+|Knihovna typů|Soubor ATL.dll|
 |C++|atliface.h (také součástí ATLBase.h)|
 
-##  <a name="setambientdispatch"></a>  IAxWinAmbientDispatchEx::SetAmbientDispatch
+## <a name="iaxwinambientdispatchexsetambientdispatch"></a><a name="setambientdispatch"></a>IAxWinAmbientDispatchEx::SetAmbientDispatch
 
-Tato metoda je volána k doplnění rozhraní vedlejší vlastnost výchozí uživatelské rozhraní.
+Tato metoda je volána k doplnění výchozí rozhraní vlastnosti okolí s uživatelem definované rozhraní.
 
 ```
 virtual HRESULT STDMETHODCALLTYPE SetAmbientDispatch(IDispatch* pDispatch) = 0;
@@ -68,17 +68,17 @@ virtual HRESULT STDMETHODCALLTYPE SetAmbientDispatch(IDispatch* pDispatch) = 0;
 
 ### <a name="parameters"></a>Parametry
 
-*pDispatch*<br/>
+*pOdeslání*<br/>
 Ukazatel na nové rozhraní.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu S_OK při úspěchu nebo chybu HRESULT při selhání.
+Vrátí S_OK na úspěch nebo chybu HRESULT při selhání.
 
 ### <a name="remarks"></a>Poznámky
 
-Když `SetAmbientDispatch` se volá s ukazatelem na nové rozhraní, bude toto nové rozhraní použít k vyvolání žádné vlastnosti nebo metody požádán o hostovaného ovládacího prvku, pokud tyto vlastnosti nejsou ještě součástí [iaxwinambientdispatch –](../../atl/reference/iaxwinambientdispatch-interface.md).
+Při `SetAmbientDispatch` volání s ukazatelem na nové rozhraní, toto nové rozhraní se použije k vyvolání všechny vlastnosti nebo metody, které jsou požadovány hostované hostovanou ovládacího prvku, pokud tyto vlastnosti již nejsou k dispozici [IAxWinAmbientDispatch](../../atl/reference/iaxwinambientdispatch-interface.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[IAxWinAmbientDispatch – rozhraní](../../atl/reference/iaxwinambientdispatch-interface.md)
+[Rozhraní IAxWinAmbientDispatch](../../atl/reference/iaxwinambientdispatch-interface.md)

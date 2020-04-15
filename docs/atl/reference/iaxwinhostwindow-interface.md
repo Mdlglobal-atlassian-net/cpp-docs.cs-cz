@@ -1,5 +1,5 @@
 ---
-title: IAxWinHostWindow Interface
+title: Rozhraní IAxWinHostWindow
 ms.date: 11/04/2016
 f1_keywords:
 - IAxWinHostWindow
@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - IAxWinHostWindow interface
 ms.assetid: 9821c035-cd52-4c46-b58a-9278064f09b4
-ms.openlocfilehash: 4bdfdf76b48c1e9f2c06213ee25cd15a113525dd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ebecc611660a788ce59bb11beb95bd60eacaf01b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62276104"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81330001"
 ---
-# <a name="iaxwinhostwindow-interface"></a>IAxWinHostWindow Interface
+# <a name="iaxwinhostwindow-interface"></a>Rozhraní IAxWinHostWindow
 
-Toto rozhraní poskytuje metody pro práci s ovládacím prvkem a jeho objekt hostitele.
+Toto rozhraní poskytuje metody pro manipulaci s ovládacím prvkem a jeho objektem hostitele.
 
 > [!IMPORTANT]
->  Tato třída a jejích členů nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.
+> Tuto třídu a její členy nelze použít v aplikacích, které se spouštějí v prostředí Windows Runtime.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -39,29 +39,29 @@ interface IAxWinHostWindow : IUnknown
 
 |||
 |-|-|
-|[AttachControl](#attachcontrol)|Připojí ke objekt hostitele existujícího ovládacího prvku.|
-|[CreateControl](#createcontrol)|Vytvoří ovládací prvek a připojí ho k objektu hostitele.|
-|[CreateControlEx](#createcontrolex)|Vytvoří ovládací prvek a připojí ho k objektu hostitele volitelně nastaví obslužnou rutinu události.|
-|[QueryControl](#querycontrol)|Vrátí ukazatel rozhraní do hostovaného ovládacího prvku.|
-|[SetExternalDispatch](#setexternaldispatch)|Nastaví externí `IDispatch` rozhraní.|
-|[SetExternalUIHandler](#setexternaluihandler)|Nastaví externí `IDocHostUIHandlerDispatch` rozhraní.|
+|[AttachControl](#attachcontrol)|Připojí existující ovládací prvek k hostitelskému objektu.|
+|[Vytvořit ovládací prvek](#createcontrol)|Vytvoří ovládací prvek a připojí jej k hostitelskému objektu.|
+|[VytvořitOvládací prvek Ex](#createcontrolex)|Vytvoří ovládací prvek, připojí jej k objektu hostitele a volitelně nastaví obslužnou rutinu události.|
+|[Ovládací prvek QueryControl](#querycontrol)|Vrátí ukazatel rozhraní hostovanému ovládacímu prvku.|
+|[SetExternalDispatch](#setexternaldispatch)|Nastaví `IDispatch` externí rozhraní.|
+|[Nakladač nastavení](#setexternaluihandler)|Nastaví `IDocHostUIHandlerDispatch` externí rozhraní.|
 
 ## <a name="remarks"></a>Poznámky
 
-Toto rozhraní je zveřejněný prostřednictvím ovládací prvek ActiveX knihovny ATL pro hostování objektů. Volání metody na tomto rozhraní můžete vytvořit nebo připojit ovládací prvek do objektu hostitele získat rozhraní z hostovaného ovládacího prvku, nebo nastavit externí dispinterface nebo obslužné rutiny UI pro použití při hostování webového prohlížeče.
+Toto rozhraní je vystaveno ovládacím objektům ActiveX společnosti ATL. Volání metody v tomto rozhraní vytvořit nebo připojit ovládací prvek k objektu hostitele, získat rozhraní z hostovaného ovládacího prvku nebo nastavit externí dispinterface nebo obslužné rutiny uživatelského rozhraní pro použití při hostování webového prohlížeče.
 
 ## <a name="requirements"></a>Požadavky
 
-Definice toto rozhraní není k dispozici jako IDL nebo C++, jak je znázorněno níže.
+Definice tohoto rozhraní je k dispozici jako IDL nebo C ++, jak je znázorněno níže.
 
-|Typ definice|Soubor|
+|Typ definice|File|
 |---------------------|----------|
-|IDL|ATLIFace.idl|
+|Idl|ATLIFace.idl|
 |C++|ATLIFace.h (také součástí ATLBase.h)|
 
-##  <a name="attachcontrol"></a>  IAxWinHostWindow::AttachControl
+## <a name="iaxwinhostwindowattachcontrol"></a><a name="attachcontrol"></a>IAxWinHostWindow::PřipojitOvládací prvek
 
-Ovládací prvek existující (a dřív inicializovaný) připojí ke objekt hostitele pomocí okna identifikovaný *hWnd*.
+Připojí existující (a dříve inicializované) ovládací prvek k objektu hostitele pomocí okna *označeného hWnd*.
 
 ```
 STDMETHOD(AttachControl)(IUnknown* pUnkControl, HWND hWnd);
@@ -70,18 +70,18 @@ STDMETHOD(AttachControl)(IUnknown* pUnkControl, HWND hWnd);
 ### <a name="parameters"></a>Parametry
 
 *pUnkControl*<br/>
-[in] Ukazatel `IUnknown` rozhraní připojené k hostitelský objekt ovládacího prvku.
+[v] Ukazatel na `IUnknown` rozhraní ovládacího prvku, který má být připojen k hostitelskému objektu.
 
-*hWnd*<br/>
-[in] Popisovač okna pro hostování.
+*Hwnd*<br/>
+[v] Popisovač do okna, které mají být použity pro hostování.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Standardní hodnoty HRESULT.
+Standardní hodnota HRESULT.
 
-##  <a name="createcontrol"></a>  IAxWinHostWindow::CreateControl
+## <a name="iaxwinhostwindowcreatecontrol"></a><a name="createcontrol"></a>IAxWinHostWindow::Ovládací prvek CreateControl
 
-Vytvoří ovládací prvek, inicializuje ji a hostuje ji v okně identifikovaný *hWnd*.
+Vytvoří ovládací prvek, inicializuje jej a hostuje v okně označeném *hWnd*.
 
 ```
 STDMETHOD(CreateControl)(
@@ -93,29 +93,29 @@ STDMETHOD(CreateControl)(
 ### <a name="parameters"></a>Parametry
 
 *lpTricsData*<br/>
-[in] Řetězec, který identifikuje ovládací prvek k vytvoření. Může být identifikátor CLSID (musí obsahovat složené závorky), ProgID, adresa URL nebo nezpracovaný kód HTML (předchází **MSHTML:**).
+[v] Řetězec identifikující ovládací prvek k vytvoření. Může se jednat o kód CLSID (musí obsahovat závorky), progID, adresu URL nebo nezpracovaný kód HTML (předponou **mshtml:**).
 
-*hWnd*<br/>
-[in] Popisovač okna pro hostování.
+*Hwnd*<br/>
+[v] Popisovač do okna, které mají být použity pro hostování.
 
 *pStream*<br/>
-[in] Ukazatel rozhraní pro datový proud obsahující inicializační data pro ovládací prvek. Může mít hodnotu NULL.
+[v] Ukazatel rozhraní pro datový proud obsahující inicializační data pro ovládací prvek. Může být NULL.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Standardní hodnoty HRESULT.
+Standardní hodnota HRESULT.
 
 ### <a name="remarks"></a>Poznámky
 
-Toto okno se má rozčlenit do podtříd objektem hostitele vystavení toto rozhraní tak, aby se zprávy můžou projeví do ovládacího prvku a další funkce kontejneru bude fungovat.
+Toto okno bude podtřídou objektem hostitele, který vystavuje toto rozhraní, takže zprávy se mohou odrazit do ovládacího prvku a další funkce kontejneru budou fungovat.
 
-Voláním této metody je ekvivalentní volání [IAxWinHostWindow::CreateControlEx](#createcontrolex).
+Volání této metody je ekvivalentní volání [IAxWinHostWindow::CreateControlEx](#createcontrolex).
 
-Vytvoření licencovaného ovládacího prvku ActiveX, najdete v tématu [IAxWinHostWindowLic::CreateControlLic](../../atl/reference/iaxwinhostwindowlic-interface.md#createcontrollicex).
+Chcete-li vytvořit licencovaný ovládací prvek ActiveX, přečtěte si informace o tom, že [iAxWinHostWindowLic::CreateControlLic](../../atl/reference/iaxwinhostwindowlic-interface.md#createcontrollicex).
 
-##  <a name="createcontrolex"></a>  IAxWinHostWindow::CreateControlEx
+## <a name="iaxwinhostwindowcreatecontrolex"></a><a name="createcontrolex"></a>IAxWinHostWindow::CreateControlEx
 
-Vytvoří ovládací prvek ActiveX, inicializuje ji a hostuje ji v zadaném okně, podobně jako [IAxWinHostWindow::CreateControl](#createcontrol).
+Vytvoří ovládací prvek ActiveX, inicializuje jej a hostuje v zadaném okně, podobně jako [IAxWinHostWindow::CreateControl](#createcontrol).
 
 ```
 STDMETHOD(CreateControlEx)(
@@ -130,36 +130,36 @@ STDMETHOD(CreateControlEx)(
 ### <a name="parameters"></a>Parametry
 
 *lpTricsData*<br/>
-[in] Řetězec, který identifikuje ovládací prvek k vytvoření. Může být identifikátor CLSID (musí obsahovat složené závorky), ProgID, adresa URL nebo nezpracovaný kód HTML (s předponou **MSHTML:**).
+[v] Řetězec identifikující ovládací prvek k vytvoření. Může se jednat o kód CLSID (musí obsahovat závorky), progID, adresu URL nebo nezpracovaný kód HTML (s předponou **mshtml:**).
 
-*hWnd*<br/>
-[in] Popisovač okna pro hostování.
+*Hwnd*<br/>
+[v] Popisovač do okna, které mají být použity pro hostování.
 
 *pStream*<br/>
-[in] Ukazatel rozhraní pro datový proud obsahující inicializační data pro ovládací prvek. Může mít hodnotu NULL.
+[v] Ukazatel rozhraní pro datový proud obsahující inicializační data pro ovládací prvek. Může být NULL.
 
 *ppUnk*<br/>
-[out] Adresa ukazatel, který se zobrazí `IUnknown` rozhraní vytvořený ovládací prvek. Může mít hodnotu NULL.
+[out] Adresa ukazatele, který obdrží `IUnknown` rozhraní vytvořeného ovládacího prvku. Může být NULL.
 
 *riidAdvise*<br/>
-[in] Identifikátor rozhraní odchozí rozhraní v obsažený objekt. Může mít hodnotu IID_NULL.
+[v] Identifikátor rozhraní odchozí rozhraní na obsažený objekt. Může být IID_NULL.
 
-*punkAdvise*<br/>
-[in] Ukazatel `IUnknown` rozhraní jímky objektu k připojení k bodu připojení na obsaženého objektu určeného `iidSink`.
+*punkAdviseace*<br/>
+[v] Ukazatel na `IUnknown` rozhraní objektu jímky, který má být připojen k `iidSink`spojovacímu bodu na obsaženém objektu určeném programem .
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Standardní hodnoty HRESULT.
+Standardní hodnota HRESULT.
 
 ### <a name="remarks"></a>Poznámky
 
-Na rozdíl od `CreateControl` metody `CreateControlEx` také umožňuje přijímat ukazatel rozhraní na nově vytvořený ovládací prvek a nastavit jímky událostí přijímat události vyvolané ovládacího prvku.
+Na `CreateControl` rozdíl `CreateControlEx` od metody také umožňuje přijímat ukazatel rozhraní na nově vytvořený ovládací prvek a nastavit jímka událostí pro příjem událostí vyvolaným ovládacím prvkem.
 
-Vytvoření licencovaného ovládacího prvku ActiveX, najdete v tématu [IAxWinHostWindowLic::CreateControlLicEx](../../atl/reference/iaxwinhostwindowlic-interface.md#createcontrollicex).
+Chcete-li vytvořit licencovaný ovládací prvek ActiveX, přečtěte si informace o tom, že [iAxWinHostWindowLic::CreateControlLicEx](../../atl/reference/iaxwinhostwindowlic-interface.md#createcontrollicex).
 
-##  <a name="querycontrol"></a>  IAxWinHostWindow::QueryControl
+## <a name="iaxwinhostwindowquerycontrol"></a><a name="querycontrol"></a>IAxWinHostWindow::Ovládací prvek QueryControl
 
-Vrátí ukazatel zadané rozhraní poskytovaných hostovaného ovládacího prvku.
+Vrátí zadaný ukazatel rozhraní poskytoovaný hostovaným ovládacím prvkem.
 
 ```
 STDMETHOD(QueryControl)(
@@ -169,19 +169,19 @@ STDMETHOD(QueryControl)(
 
 ### <a name="parameters"></a>Parametry
 
-*riid*<br/>
-[in] ID rozhraní na ovládací prvek požaduje.
+*riid řekl:*<br/>
+[v] ID rozhraní na ovládací prvek je požadováno.
 
-*ppvObject*<br/>
-[out] Adresa ukazatel, který se zobrazí zadané rozhraní vytvořený ovládací prvek.
+*ppvObjekt*<br/>
+[out] Adresa ukazatele, který obdrží zadané rozhraní vytvořeného ovládacího prvku.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Standardní hodnoty HRESULT.
+Standardní hodnota HRESULT.
 
-##  <a name="setexternaldispatch"></a>  IAxWinHostWindow::SetExternalDispatch
+## <a name="iaxwinhostwindowsetexternaldispatch"></a><a name="setexternaldispatch"></a>IAxWinHostWindow::SetExternalDispatch
 
-Nastaví externí dispinterface, která je k dispozici pro obsažené ovládací prvky prostřednictvím [IDocHostUIHandlerDispatch::GetExternal](../../atl/reference/idochostuihandlerdispatch-interface.md) metody.
+Nastaví externí rozhraní dispinterface, které je k dispozici pro obsažené ovládací prvky prostřednictvím metody [IDocHostUIHandlerDispatch::GetExternal.](../../atl/reference/idochostuihandlerdispatch-interface.md)
 
 ```
 STDMETHOD(SetExternalDispatch)(IDispatch* pDisp);
@@ -190,15 +190,15 @@ STDMETHOD(SetExternalDispatch)(IDispatch* pDisp);
 ### <a name="parameters"></a>Parametry
 
 *pDisp*<br/>
-[in] Ukazatel `IDispatch` rozhraní.
+[v] Ukazatel na `IDispatch` rozhraní.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Standardní hodnoty HRESULT.
+Standardní hodnota HRESULT.
 
-##  <a name="setexternaluihandler"></a>  IAxWinHostWindow::SetExternalUIHandler
+## <a name="iaxwinhostwindowsetexternaluihandler"></a><a name="setexternaluihandler"></a>IAxWinHostWindow::SetExternalUIHandler
 
-Voláním této funkce nastavíte externí [idochostuihandlerdispatch –](../../atl/reference/idochostuihandlerdispatch-interface.md) rozhraní `CAxWindow` objektu.
+Voláním této funkce nastavte externí rozhraní [IDocHostUIHandlerDispatch](../../atl/reference/idochostuihandlerdispatch-interface.md) pro `CAxWindow` objekt.
 
 ```
 STDMETHOD(SetExternalUIHandler)(IDocHostUIHandlerDispatch* pDisp);
@@ -207,18 +207,18 @@ STDMETHOD(SetExternalUIHandler)(IDocHostUIHandlerDispatch* pDisp);
 ### <a name="parameters"></a>Parametry
 
 *pDisp*<br/>
-[in] Ukazatel `IDocHostUIHandlerDispatch` rozhraní.
+[v] Ukazatel na `IDocHostUIHandlerDispatch` rozhraní.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Standardní hodnoty HRESULT.
+Standardní hodnota HRESULT.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce používá ovládací prvky (jako je například ovládací prvek webového prohlížeče), které se dotazují hostitelský server pro `IDocHostUIHandlerDispatch` rozhraní.
+Tato funkce je používána ovládacími prvky (například ovládacím prvkem `IDocHostUIHandlerDispatch` webového prohlížeče), které dotazují na web hostitele pro rozhraní.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[IAxWinAmbientDispatch – rozhraní](../../atl/reference/iaxwinambientdispatch-interface.md)<br/>
+[Rozhraní IAxWinAmbientDispatch](../../atl/reference/iaxwinambientdispatch-interface.md)<br/>
 [CAxWindow::QueryHost](../../atl/reference/caxwindow-class.md#queryhost)<br/>
 [AtlAxGetHost](composite-control-global-functions.md#atlaxgethost)

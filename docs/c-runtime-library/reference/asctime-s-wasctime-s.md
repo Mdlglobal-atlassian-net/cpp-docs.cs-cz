@@ -1,9 +1,11 @@
 ---
 title: asctime_s, _wasctime_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _wasctime_s
 - asctime_s
+- _o__wasctime_s
+- _o_asctime_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -33,16 +36,16 @@ helpviewer_keywords:
 - _wasctime_s function
 - asctime_s function
 ms.assetid: 17ad9b2b-a459-465d-976a-42822897688a
-ms.openlocfilehash: 1cd2a15db0a27dedd88b9abf24b98d338515c949
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 52391eb1237e4c1d7ef320dacd211b603a21ab8b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73624789"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81334214"
 ---
 # <a name="asctime_s-_wasctime_s"></a>asctime_s, _wasctime_s
 
-Převést časovou strukturu **správce** na řetězec znaků. Tyto funkce jsou verze [asctime, _wasctime](asctime-wasctime.md) s vylepšeními zabezpečení, jak je popsáno v [části funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Převeďte strukturu času **tm** na řetězec znaků. Tyto funkce jsou verze [asctime, _wasctime](asctime-wasctime.md) s vylepšeními zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -71,80 +74,82 @@ errno_t _wasctime_s(
 
 ### <a name="parameters"></a>Parametry
 
-*vyrovnávací paměti*<br/>
-Ukazatel na vyrovnávací paměť pro uložení výsledku řetězce znaků. Tato funkce předpokládá ukazatel na platné umístění v paměti, které má velikost určenou parametrem *numberOfElements*.
+*Vyrovnávací paměti*<br/>
+Ukazatel na vyrovnávací paměť pro uložení výsledku řetězce znaku. Tato funkce předpokládá ukazatel na platné umístění paměti s velikostí určenou *numberOfElements*.
 
 *numberOfElements*<br/>
 Velikost vyrovnávací paměti použité k uložení výsledku.
 
-*tmSource*<br/>
-Struktura data a času. Tato funkce předpokládá ukazatel na platný objekt **struct** **TM** .
+*tmZdroj*<br/>
+Struktura času a data. Tato funkce předpokládá ukazatel na platný **objekt struct** **tm.**
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Nula v případě úspěchu. Pokud dojde k selhání, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, návratová hodnota je kód chyby. Kódy chyb jsou definovány v ERRNO. Y. Další informace naleznete v tématu [konstanty errno](../../c-runtime-library/errno-constants.md). V následující tabulce jsou uvedeny skutečné kódy chyb vracené pro jednotlivé chybové podmínky.
+Nula v případě úspěchu. Pokud dojde k chybě, je vyvolána neplatná obslužná rutina parametru, jak je popsáno v [parametru Validation](../../c-runtime-library/parameter-validation.md). Pokud je spuštění povoleno pokračovat, vrácená hodnota je kód chyby. Kódy chyb jsou definovány v ERRNO. H. Další informace naleznete [v tématu errno Constants](../../c-runtime-library/errno-constants.md). Skutečné chybové kódy vrácené pro každý chybový stav jsou uvedeny v následující tabulce.
 
 ### <a name="error-conditions"></a>Chybové stavy
 
-|*vyrovnávací paměti*|*numberOfElements*|*tmSource*|Vrátit|Hodnota v *bufferu*|
+|*Vyrovnávací paměti*|*numberOfElements*|*tmZdroj*|Vrátit|Hodnota ve *vyrovnávací paměti*|
 |--------------|------------------------|----------|------------|-----------------------|
-|**PLATNOST**|Jakýmikoli|Jakýmikoli|**EINVAL**|Neupraveno|
-|Není **null** (ukazuje na platnou paměť)|0,8|Jakýmikoli|**EINVAL**|Neupraveno|
-|není **null**|0 < velikosti < 26|Jakýmikoli|**EINVAL**|Prázdný řetězec|
-|není **null**|> = 26|**PLATNOST**|**EINVAL**|Prázdný řetězec|
-|není **null**|> = 26|Neplatná časová struktura nebo hodnoty mimo rozsah pro součásti času|**EINVAL**|Prázdný řetězec|
+|**Null**|Všechny|Všechny|**EINVAL**|Nezměněno|
+|Není **null** (odkazuje na platnou paměť)|0|Všechny|**EINVAL**|Nezměněno|
+|Není **null**|0< velikost <i 26|Všechny|**EINVAL**|Prázdný řetězec|
+|Není **null**|>= 26|**Null**|**EINVAL**|Prázdný řetězec|
+|Není **null**|>= 26|Neplatná časová struktura nebo hodnoty mimo rozsah pro součásti času|**EINVAL**|Prázdný řetězec|
 
 > [!NOTE]
-> Chybové podmínky pro **wasctime_s** jsou podobné **asctime_s** s výjimkou, že omezení velikosti se měří ve slovech.
+> Chybové podmínky pro **wasctime_s** jsou podobné **asctime_s** s výjimkou, že limit velikosti se měří slovy.
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce **asctime** převede čas uložený jako strukturu na řetězec znaků. Hodnota *tmSource* je obvykle získána ze volání **gmtime** nebo **localtime**. Obě funkce lze použít k vyplnění struktury **TM** , jak je definováno v čase. Y.
+Funkce **asctime** převede čas uložený jako struktura na řetězec znaků. Hodnota *tmSource* je obvykle získána z volání **gmtime** nebo **localtime**. Obě funkce lze použít k vyplnění struktury **tm,** jak je definováno v TIME. H.
 
 |člen timeptr|Hodnota|
 |--------------------|-----------|
-|**tm_hour**|Hodiny od půlnoci (0-23)|
-|**tm_isdst**|Kladné, pokud je v platnosti letní čas; 0, pokud letní čas neplatí; záporné, pokud stav letního času není známý. Knihovna run-time jazyka C předpokládá pravidla USA pro implementaci výpočtu letního času (DST).|
+|**tm_hour**|Počet hodin od půlnoci (0-23)|
+|**tm_isdst**|Pozitivní, pokud je v platnosti letní čas; 0, pokud letní čas není v platnosti; negativní, pokud není znám stav letního času. C run-time knihovna předpokládá pravidla Spojených států pro implementaci výpočtu letního času (DST).|
 |**tm_mday**|Den v měsíci (1-31)|
 |**tm_min**|Minuty po hodině (0-59)|
 |**tm_mon**|Měsíc (0-11; Leden = 0)|
-|**tm_sec**|Sekundy po minutě (0-59)|
+|**tm_sec**|Sekundpo minutě (0-59)|
 |**tm_wday**|Den v týdnu (0-6; Neděle = 0)|
 |**tm_yday**|Den v roce (0-365; 1. ledna = 0)|
-|**tm_year**|Year (aktuální rok minus 1900)|
+|**tm_year**|Rok (aktuální rok minus 1900)|
 
-Převedený řetězec znaků je také upraven podle nastavení místního časového pásma. Další informace o konfiguraci místního času a funkci [_ftime64](tzset.md) pro informace o nástroji naleznete v tématu [Time, _time32, _time64](time-time32-time64.md), [_ftime, _ftime32, localtime_s](ftime-ftime32-ftime64.md)a [_localtime32_s](localtime-s-localtime32-s-localtime64-s.md) , _localtime64_s, _tzset Functions. definování prostředí časového pásma a globálních proměnných.
+Řetězec převedených znaků je také upraven podle nastavení místního časového pásma. Informace o [_tzset](tzset.md) definování prostředí časového pásma a globálních proměnných naleznete v _localtime32_s _localtime32_s a funkcích [čas, _time32, _time64](time-time32-time64.md) [, _ftime, _ftime32, _ftime64](ftime-ftime32-ftime64.md)a [localtime_s](localtime-s-localtime32-s-localtime64-s.md) _localtime64_s.
 
-Výsledek řetězce vytvořený pomocí **asctime_s** obsahuje přesně 26 znaků a má `Wed Jan 02 02:03:55 1980\n\0`formuláře. Použije se 24hodinový čas. Všechna pole mají konstantní šířku. Znak nového řádku a znak null zabírají poslední dvě pozice řetězce. Hodnota předaná jako druhý parametr by měla být nejméně ta velká. Pokud je menší, vrátí se chybový kód **EINVAL**.
+Výsledek řetězce vytvořený **asctime_s** obsahuje přesně 26 `Wed Jan 02 02:03:55 1980\n\0`znaků a má tvar . Používá se 24hodinová hodina. Všechna pole mají konstantní šířku. Nový znak řádku a znak null zabírají poslední dvě pozice řetězce. Hodnota předaná jako druhý parametr by měla být alespoň tak velká. Pokud je menší, bude vrácen kód chyby **EINVAL**.
 
-**_wasctime_s** je verze **asctime_s**s velkým znakem. **_wasctime_s** a **asctime_s** se chovají stejně jinak.
+**_wasctime_s** je širokoznaková verze **asctime_s**. **_wasctime_s** a **asctime_s** se chovají stejně jinak.
 
-Verze knihovny ladění těchto funkcí nejprve naplní vyrovnávací paměť pomocí 0xFE. Pokud chcete toto chování zakázat, použijte [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+Ladicí verze knihovny těchto funkcí nejprve vyplní vyrovnávací paměť 0xFE. Chcete-li toto chování zakázat, použijte [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mapping"></a>Mapování rutiny obecného textu
 
-|Rutina TCHAR.H|_UNICODE & _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE & _MBCS není definováno|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tasctime_s**|**asctime_s**|**asctime_s**|**_wasctime_s**|
 
-V C++systému je použití těchto funkcí zjednodušeno díky přetížení šablon; přetížení mohou odvodit délku vyrovnávací paměti automaticky a eliminují nutnost zadat argument Size. Další informace najdete v tématu [přetížení zabezpečení šablon](../../c-runtime-library/secure-template-overloads.md).
+V jazyce C++ je použití těchto funkcí zjednodušeno přetížením šablony; přetížení lze odvodit délku vyrovnávací paměti automaticky, což eliminuje potřebu zadat argument velikosti. Další informace naleznete [v tématu Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**asctime_s**|\<time. h >|
-|**_wasctime_s**|\<Time. h > nebo \<WCHAR. h >|
+|**asctime_s**|\<time.h>|
+|**_wasctime_s**|\<time.h> \<nebo wchar.h>|
 
 ## <a name="security"></a>Zabezpečení
 
-Pokud ukazatel vyrovnávací paměti není **null** a ukazatel neukazuje na platnou vyrovnávací paměť, funkce přepíše vše, co je v umístění. Následkem toho může dojít k narušení přístupu.
+Pokud ukazatel vyrovnávací paměti není **NULL** a ukazatel neodkazuje na platnou vyrovnávací paměť, funkce přepíše vše, co je v umístění. To může také vést k narušení přístupu.
 
-[Přetečení vyrovnávací paměti](/windows/win32/SecBP/avoiding-buffer-overruns) může nastat, pokud je předaný argument Size větší než skutečná velikost vyrovnávací paměti.
+K [přetečení vyrovnávací paměti](/windows/win32/SecBP/avoiding-buffer-overruns) může dojít, pokud je předaný argument velikosti větší než skutečná velikost vyrovnávací paměti.
 
 ## <a name="example"></a>Příklad
 
-Tento program umístí systémový čas do dlouhého celého čísla **ACLOCK**, převede ho do struktury **newtime** a pak ji převede na formát řetězce pro výstup pomocí funkce **asctime_s** .
+Tento program umístí systémový čas do dlouhého **celého čísla aclock**, převede jej do struktury **newtime** a pak převede na řetězec formulář pro výstup, pomocí **asctime_s** funkce.
 
 ```C
 // crt_asctime_s.c
@@ -178,9 +183,9 @@ int main( void )
 Current date and time: Wed May 14 15:30:17 2003
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Správa času](../../c-runtime-library/time-management.md)<br/>
+[Časová správa](../../c-runtime-library/time-management.md)<br/>
 [ctime_s, _ctime32_s, _ctime64_s, _wctime_s, _wctime32_s, _wctime64_s](ctime-s-ctime32-s-ctime64-s-wctime-s-wctime32-s-wctime64-s.md)<br/>
 [_ftime, _ftime32, _ftime64](ftime-ftime32-ftime64.md)<br/>
 [gmtime_s, _gmtime32_s, _gmtime64_s](gmtime-s-gmtime32-s-gmtime64-s.md)<br/>

@@ -9,16 +9,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HandleTraits::MutexTraits structure
 - Microsoft::WRL::Wrappers::HandleTraits::MutexTraits::Unlock method
 ms.assetid: 6582df80-b9ba-4892-948f-d572a3b23d54
-ms.openlocfilehash: 9bc4071e5699610a664cbf01ca3e7d36d7effc5e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6d4ba08ab1884e8584b0e98e931d2d63cdac5aec
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62379178"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371251"
 ---
 # <a name="mutextraits-structure"></a>MutexTraits – struktura
 
-Definuje běžné vlastnosti [Mutex](mutex-class.md) třídy.
+Definuje společné charakteristiky třídy [Mutex.](mutex-class.md)
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -30,9 +30,9 @@ struct MutexTraits : HANDLENullTraits;
 
 ### <a name="public-methods"></a>Veřejné metody
 
-Název                           | Popis
+Name (Název)                           | Popis
 ------------------------------ | ------------------------------------------------
-[Mutextraits::Unlock –](#unlock) | Uvolní výhradní kontrolu nad sdíleného prostředku.
+[MutexTraits::Odemknout](#unlock) | Uvolní výhradní řízení sdíleného prostředku.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -44,11 +44,11 @@ Název                           | Popis
 
 **Záhlaví:** corewrappers.h
 
-**Namespace:** Microsoft::WRL::Wrappers::HandleTraits
+**Obor názvů:** Microsoft::WRL::Obálky::HandleTraits
 
-## <a name="unlock"></a>Mutextraits::Unlock – metoda
+## <a name="mutextraitsunlock-method"></a><a name="unlock"></a>MutexTraits::Metoda odemknutí
 
-Uvolní výhradní kontrolu nad sdíleného prostředku.
+Uvolní výhradní řízení sdíleného prostředku.
 
 ```cpp
 inline static void Unlock(
@@ -58,5 +58,5 @@ inline static void Unlock(
 
 ### <a name="parameters"></a>Parametry
 
-*h*<br/>
+*H*<br/>
 Popisovač objektu mutex.

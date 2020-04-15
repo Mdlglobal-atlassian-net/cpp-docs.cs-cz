@@ -43,12 +43,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Module::UnregisterObjects method
 - Microsoft::WRL::Module::UnregisterWinRTObject method
 ms.assetid: dd67e3b8-c2e1-4f53-8c0f-565a140ba649
-ms.openlocfilehash: db3eb123382ac70f6198d094c5eb3fe44d3bbcd9
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: afd2edacefdf5d62b50a03c0a8c37f13ee5d9c9f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345790"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371320"
 ---
 # <a name="module-class"></a>Modul – třída
 
@@ -69,68 +69,70 @@ class Module<OutOfProc> : public Module<InProc>;
 
 ### <a name="parameters"></a>Parametry
 
-*moduleType*<br/>
-Kombinace jedné nebo více [ModuleType](moduletype-enumeration.md) hodnot výčtu.
+*modulTyp*<br/>
+Kombinace jedné nebo více hodnot výčtu [ModuleType.](moduletype-enumeration.md)
 
 ## <a name="members"></a>Členové
 
 ### <a name="protected-classes"></a>Chráněné třídy
 
-Název                                                                                | Popis
+Name (Název)                                                                                | Popis
 ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------
-[Module::genericreleasenotifier –](module-genericreleasenotifier-class.md) | Vyvolá obslužnou rutinu události po vydání poslední objekt v aktuálním modulu. Obslužná rutina události je zadaný ve výrazu lambda, funktor nebo ukazatel na funkci.
-[Module::methodreleasenotifier –](module-methodreleasenotifier-class.md)   | Vyvolá obslužnou rutinu události po vydání poslední objekt v aktuálním modulu. Obslužná rutina události je zadaný objekt a jejího člena ukazatel na metodu.
-[Module::ReleaseNotifier](module-releasenotifier-class.md)               | Vyvolá obslužnou rutinu události po vydání poslední objekt v modulu.
+[Modul::GenericReleaseNotifier](module-genericreleasenotifier-class.md) | Vyvolá obslužnou rutinu události při uvolnění posledního objektu v aktuálním modulu. Obslužná rutina události je určena na lambda, functor nebo ukazatel na funkci.
+[Modul::MethodReleaseNotifier](module-methodreleasenotifier-class.md)   | Vyvolá obslužnou rutinu události při uvolnění posledního objektu v aktuálním modulu. Obslužná rutina události je určena objektem a jeho ukazatelem na člen metody.
+[Modul::ReleaseNotifier](module-releasenotifier-class.md)               | Vyvolá obslužnou rutinu události při uvolnění posledního objektu v modulu.
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-Název                             | Popis
+Name (Název)                             | Popis
 -------------------------------- | -----------------------------------------------------------
-[Module::~Module](#tilde-module) | Zruší inicializaci aktuální instance `Module` třídy.
+[Modul::~Modul](#tilde-module) | Deinitializes aktuální instance `Module` třídy.
 
 ### <a name="protected-constructors"></a>Chráněné konstruktory
 
-Název                      | Popis
+Name (Název)                      | Popis
 ------------------------- | ---------------------------------------------------
-[Module::module –](#module) | Inicializuje novou instanci třídy `Module` třídy.
+[Modul::Modul](#module) | Inicializuje novou instanci třídy. `Module`
 
 ### <a name="public-methods"></a>Veřejné metody
 
-Název                                                    | Popis
+Name (Název)                                                    | Popis
 ------------------------------------------------------- | --------------------------------------------------------------------------------------------------
-[Module::Create –](#create)                               | Vytvoří instanci modulu.
-[Module::decrementobjectcount –](#decrementobjectcount)   | Sníží počet objektů, které sledují modulem.
-[Module::getactivationfactory –](#getactivationfactory)   | Získá objekt factory pro aktivaci pro modul.
-[Module::GetClassObject –](#getclassobject)               | Načte mezipaměť objekty pro vytváření tříd.
-[Module::getmodule –](#getmodule)                         | Vytvoří instanci modulu.
-[Module::getobjectcount –](#getobjectcount)               | Získá počet objektů, které spravuje tento modul.
-[Module::incrementobjectcount –](#incrementobjectcount)   | Zvýší počet objektů, které jsou sledovány v rámci modulu.
-[Module::registercomobject –](#registercomobject)         | Zaregistruje jeden nebo více objektů modelu COM, takže k nim mohli připojit další aplikace.
-[Module::registerobjects –](#registerobjects)             | Zaregistruje objekty COM nebo prostředí Windows Runtime, takže k nim mohli připojit další aplikace.
-[Module::RegisterWinRTObject](#registerwinrtobject)     | Zaregistruje jeden nebo více objektů prostředí Windows Runtime, takže k nim mohli připojit další aplikace.
-[Module::terminate –](#terminate)                         | Způsobí, že všechny objekty pro vytváření vytvořit instanci modulu pro vypnutí.
-[Module::unregistercomobject –](#unregistercomobject)     | Zruší jeden nebo více objektů modelu COM, registraci což zabrání aplikacím bránily v připojení k nim.
-[Module::unregisterobjects –](#unregisterobjects)         | Zruší registraci objekty v zadaném modulu tak, aby k nim nelze připojit další aplikace.
-[Module::UnregisterWinRTObject](#unregisterwinrtobject) | Zruší registraci jeden nebo více objektů prostředí Windows Runtime, tak, aby k nim nelze připojit další aplikace.
+[Modul::Vytvořit](#create)                               | Vytvoří instanci modulu.
+[Modul::DecrementObjectCount](#decrementobjectcount)   | Sníží počet objektů sledovaných modulem.
+[Modul::GetActivationFactory](#getactivationfactory)   | Získá aktivační továrny pro modul.
+[Modul::GetClassObject](#getclassobject)               | Načte mezipaměť třídy továren.
+[Modul::GetModule](#getmodule)                         | Vytvoří instanci modulu.
+[Modul::GetObjectCount](#getobjectcount)               | Načte počet objektů spravovaných tímto modulem.
+[Modul::IncrementObjectCount](#incrementobjectcount)   | Zintáží počet objektů sledovaných modulem.
+[Modul::RegisterCOMObject](#registercomobject)         | Zaregistruje jeden nebo více objektů MODELU COM, aby se k nim mohly připojit jiné aplikace.
+[Modul::RegisterObjects](#registerobjects)             | Registruje objekty com nebo Windows Runtime, aby se k nim mohly připojit jiné aplikace.
+[Modul::RegisterWinRTObject](#registerwinrtobject)     | Zaregistruje jeden nebo více objektů prostředí Windows Runtime, aby se k nim mohly připojit jiné aplikace.
+[Modul::Ukončit](#terminate)                         | Způsobí, že všechny továrny instance modulu vypnout.
+[Modul::Zrušit registraci objektu COMObject](#unregistercomobject)     | Zruší registrace jednoho nebo více objektů MODELU COM, což zabrání ostatním aplikacím v jejich připojení.
+[Modul::Zrušit registraci objektů](#unregisterobjects)         | Zruší registrace objektů v zadaném modulu, aby se k nim nemohly připojit jiné aplikace.
+[Modul::UnregisterWinRTObject](#unregisterwinrtobject) | Zruší registrace jednoho nebo více objektů prostředí Windows Runtime, aby se k nim nemohly připojit jiné aplikace.
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-Název                      | Popis
+Name (Název)                      | Popis
 ------------------------- | --------------------------------
-[Module::Create –](#create) | Vytvoří instanci modulu.
+[Modul::Vytvořit](#create) | Vytvoří instanci modulu.
 
-### <a name="protected-data-members"></a>Chránění členové dat
+### <a name="protected-data-members"></a>Členové chráněných dat
 
-Název                                         | Popis
+Name (Název)                                         | Popis
 -------------------------------------------- | --------------------------------------------------------------------------------------------------------
-[Module::objectcount_ –](#objectcount)         | Uchovává informace o tom, kolik třídy byly vytvořeny s [zkontrolujte](make-function.md) funkce.
-[Module::releasenotifier_ –](#releasenotifier) | Uchovává ukazatel `ReleaseNotifier` objektu.
+[Modul::objectCount_](#objectcount)         | Sleduje, kolik tříd bylo vytvořeno pomocí funkce [Vytvořit.](make-function.md)
+[Modul::releaseNotifier_](#releasenotifier) | Podrží ukazatel `ReleaseNotifier` na objekt.
 
 ### <a name="macros"></a>Makra
 
-Název | Popis------| --- [Activatableclass –](activatableclass-macros.md) |  Naplní interní mezipaměť, která obsahuje objekt factory, který můžete vytvořit instanci dané třídy. Toto makro Určuje výchozí objekt pro vytváření a skupiny ID parametry.
-[ActivatableClassWithFactory](activatableclass-macros.md) | Naplní interní mezipaměť, která obsahuje objekt factory, který můžete vytvořit instanci dané třídy. Toto makro umožňuje zadat parametr konkrétní objekt pro vytváření.
-[ActivatableClassWithFactoryEx](activatableclass-macros.md) | Naplní interní mezipaměť, která obsahuje objekt factory, který můžete vytvořit instanci dané třídy. Toto makro umožňuje určit konkrétní objekt pro vytváření a parametry ID skupiny.
+Name (Název)                                                                   | Popis
+---------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+[Aktivovatelná třída](activatableclass-macros.md)              | Naplní vnitřní mezipaměť, která obsahuje továrnu, která může vytvořit instanci zadané třídy. Toto makro určuje výchozí parametry ID výroby a skupiny.
+[ActivatableClassWithFactory](activatableclass-macros.md)   | Naplní vnitřní mezipaměť, která obsahuje továrnu, která může vytvořit instanci zadané třídy. Toto makro umožňuje zadat konkrétní parametr výroby.
+[ActivatableClassWithFactoryEx](activatableclass-macros.md) | Naplní vnitřní mezipaměť, která obsahuje továrnu, která může vytvořit instanci zadané třídy. Toto makro umožňuje zadat konkrétní parametry ID výroby a skupiny.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -144,17 +146,17 @@ Název | Popis------| --- [Activatableclass –](activatableclass-macros.md) |  
 
 **Záhlaví:** module.h
 
-**Namespace:** Microsoft::WRL
+**Obor názvů:** Microsoft::WRL
 
-## <a name="tilde-module"></a>Module::~Module
+## <a name="modulemodule"></a><a name="tilde-module"></a>Modul::~Modul
 
-Zruší inicializaci aktuální instance `Module` třídy.
+Deinitializes aktuální instance `Module` třídy.
 
 ```cpp
 virtual ~Module();
 ```
 
-## <a name="create"></a>Module::Create –
+## <a name="modulecreate"></a><a name="create"></a>Modul::Vytvořit
 
 Vytvoří instanci modulu.
 
@@ -176,22 +178,22 @@ WRL_NOTHROW static Module& Create(
 *T*<br/>
 Typ modulu.
 
-*callback*<br/>
-Volá se, když se uvolní objekt poslední instance modulu.
+*Zpětného volání*<br/>
+Nazývá se při uvolnění poslední instance objektu modulu.
 
-*object*<br/>
-*Objekt* a *metoda* v kombinaci se používají parametry. Když se uvolní objekt poslední instance v modulu odkazuje na poslední instance objektu.
+*Objekt*<br/>
+Parametry *objektu* a *metody* se používají v kombinaci. Odkazuje na poslední objekt instance při uvolnění posledního objektu instance v modulu.
 
-*– Metoda*<br/>
-*Objekt* a *metoda* v kombinaci se používají parametry. Odkazuje na metodu poslední instance objektu poslední objekt instance v modulu se při uvolnění.
+*Metoda*<br/>
+Parametry *objektu* a *metody* se používají v kombinaci. Odkazuje na metodu objektu poslední instance při uvolnění posledního objektu instance v modulu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
 Odkaz na modul.
 
-## <a name="decrementobjectcount"></a>Module::decrementobjectcount –
+## <a name="moduledecrementobjectcount"></a><a name="decrementobjectcount"></a>Modul::DecrementObjectCount
 
-Sníží počet objektů, které sledují modulem.
+Sníží počet objektů sledovaných modulem.
 
 ```cpp
 virtual long DecrementObjectCount();
@@ -199,11 +201,11 @@ virtual long DecrementObjectCount();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Počet před provedením operace dekrementace.
+Počet před operací snížení.
 
-## <a name="getactivationfactory"></a>Module::getactivationfactory –
+## <a name="modulegetactivationfactory"></a><a name="getactivationfactory"></a>Modul::GetActivationFactory
 
-Získá objekt factory pro aktivaci pro modul.
+Získá aktivační továrny pro modul.
 
 ```cpp
 WRL_NOTHROW HRESULT GetActivationFactory(
@@ -216,21 +218,21 @@ WRL_NOTHROW HRESULT GetActivationFactory(
 ### <a name="parameters"></a>Parametry
 
 *pActivatibleClassId*<br/>
-Identifikátor IID třídy modulu runtime.
+IID třídy runtime.
 
 *ppIFactory*<br/>
-IActivationFactory pro třídu zadaného modulu runtime.
+IActivationFactory pro zadanou třídu runtime.
 
-*serverName*<br/>
-Název dílčí sady objekty pro vytváření tříd v aktuálním modulu. Zadejte název serveru používané [ActivatableClassWithFactoryEx](activatableclass-macros.md) – makro, nebo zadejte `nullptr` získat výchozí název serveru.
+*Název_serveru*<br/>
+Název podmnožiny třídních továren v aktuálním modulu. Zadejte název serveru použitý v makru [ActivatableClassWithFactoryEx](activatableclass-macros.md) nebo zadejte `nullptr` výchozí název serveru.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-S_OK v případě úspěchu; v opačném případě hodnota HRESULT vrácený getactivationfactory –.
+S_OK v případě úspěchu; v opačném případě HRESULT vrácena GetActivationFactory.
 
-## <a name="getclassobject"></a>Module::GetClassObject –
+## <a name="modulegetclassobject"></a><a name="getclassobject"></a>Modul::GetClassObject
 
-Načte mezipaměť objekty pro vytváření tříd.
+Retreives cache třídy továren.
 
 ```cpp
 HRESULT GetClassObject(
@@ -243,25 +245,25 @@ HRESULT GetClassObject(
 
 ### <a name="parameters"></a>Parametry
 
-*clsid*<br/>
+*Identifikátor clsid*<br/>
 ID třídy.
 
-*riid*<br/>
+*riid řekl:*<br/>
 ID rozhraní, které požadujete.
 
-*ppv*<br/>
-Ukazatel na vráceného objektu.
+*Ppv*<br/>
+Ukazatel na vrácený objekt.
 
-*serverName*<br/>
-Název serveru, který je zadán buď `ActivatableClassWithFactory`, `ActivatableClassWithFactoryEx`, nebo `ActivatableClass` – makro; nebo `nullptr` získat výchozí název serveru.
+*Název_serveru*<br/>
+Název serveru zadaný v `ActivatableClassWithFactory`oblasti `ActivatableClassWithFactoryEx`, `ActivatableClass` nebo makra; nebo `nullptr` získat výchozí název serveru.
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
-Tuto metodu lze používejte pouze pro model COM, nikoliv modul Windows Runtime. Tato metoda poskytuje pouze `IClassFactory` metody.
+Tuto metodu použijte pouze pro com, nikoli prostředí Windows Runtime. Tato metoda zveřejňuje `IClassFactory` pouze metody.
 
-## <a name="getmodule"></a>Module::getmodule –
+## <a name="modulegetmodule"></a><a name="getmodule"></a>Modul::GetModule
 
 Vytvoří instanci modulu.
 
@@ -274,9 +276,9 @@ WRL_NOTHROW static Module& GetModule();
 
 Odkaz na modul.
 
-## <a name="getobjectcount"></a>Module::getobjectcount –
+## <a name="modulegetobjectcount"></a><a name="getobjectcount"></a>Modul::GetObjectCount
 
-Získá počet objektů, které spravuje tento modul.
+Načte počet objektů spravovaných tímto modulem.
 
 ```cpp
 virtual long GetObjectCount() const;
@@ -284,11 +286,11 @@ virtual long GetObjectCount() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Aktuální počet objektů, které spravuje tento modul.
+Aktuální počet objektů spravovaných tímto modulem.
 
-## <a name="incrementobjectcount"></a>Module::incrementobjectcount –
+## <a name="moduleincrementobjectcount"></a><a name="incrementobjectcount"></a>Modul::IncrementObjectCount
 
-Zvýší počet objektů, které jsou sledovány v rámci modulu.
+Zintáží počet objektů sledovaných modulem.
 
 ```cpp
 virtual long IncrementObjectCount();
@@ -296,11 +298,11 @@ virtual long IncrementObjectCount();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Počet před provedením operace Inkrementace.
+Počet před operací přírůstek.
 
-## <a name="module"></a>Module::module –
+## <a name="modulemodule"></a><a name="module"></a>Modul::Modul
 
-Inicializuje novou instanci třídy `Module` třídy.
+Inicializuje novou instanci třídy. `Module`
 
 ```cpp
 Module();
@@ -308,19 +310,19 @@ Module();
 
 ### <a name="remarks"></a>Poznámky
 
-Tento konstruktor je chráněn a nelze volat pomocí `new` – klíčové slovo. Namísto toho zavolejte metodu buď [Module::getmodule –](#getmodule) nebo [Module::Create –](#create).
+Tento konstruktor je chráněn a `new` nelze jej volat pomocí klíčového slova. Místo toho volejte [modul::GetModule](#getmodule) nebo [Module::Create](#create).
 
-## <a name="objectcount"></a>Module::objectcount_ –
+## <a name="moduleobjectcount_"></a><a name="objectcount"></a>Modul::objectCount_
 
-Uchovává informace o tom, kolik třídy byly vytvořeny s [zkontrolujte](make-function.md) funkce.
+Sleduje, kolik tříd bylo vytvořeno pomocí funkce [Vytvořit.](make-function.md)
 
 ```cpp
 volatile long objectCount_;
 ```
 
-## <a name="registercomobject"></a>Module::registercomobject –
+## <a name="moduleregistercomobject"></a><a name="registercomobject"></a>Modul::RegisterCOMObject
 
-Zaregistruje jeden nebo více objektů modelu COM, takže k nim mohli připojit další aplikace.
+Zaregistruje jeden nebo více objektů MODELU COM, aby se k nim mohly připojit jiné aplikace.
 
 ```cpp
 WRL_NOTHROW virtual HRESULT RegisterCOMObject(
@@ -333,34 +335,34 @@ WRL_NOTHROW virtual HRESULT RegisterCOMObject(
 
 ### <a name="parameters"></a>Parametry
 
-*serverName*<br/>
+*Název_serveru*<br/>
 Plně kvalifikovaný název serveru.
 
-*CLSID*<br/>
-Pole CLSID k registraci.
+*Clsid*<br/>
+Pole CLSIDs zaregistrovat.
 
-*objekty pro vytváření*<br/>
-Pole rozhraní IUnknown objektů tříd, jejichž dostupnost je publikován.
+*Továrny*<br/>
+Pole IUnknown rozhraní třídy objektů, jejichž dostupnost je právě publikována.
 
-*cookies*<br/>
-Po dokončení operace, pole ukazatelů na hodnoty, které identifikují třídu objektů, které jste zaregistrovali. Tyto hodnoty se později použijí zrušit registraci.
+*Soubory cookie*<br/>
+Po dokončení operace pole ukazatelů na hodnoty, které identifikují objekty třídy, které byly registrovány. Tyto hodnoty jsou později použity odvolat registraci.
 
 *Počet*<br/>
-Počet CLSID k registraci.
+Počet CLSIDs zaregistrovat.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-S_OK Pokud úspěšné; v opačném případě HRESULT jako je například CO_E_OBJISREG, který označuje důvod operace se nezdařila.
+S_OK pokud successfu; jinak HRESULT, například CO_E_OBJISREG, který označuje důvod, proč se operace nezdařila.
 
 ### <a name="remarks"></a>Poznámky
 
-Objekty modelu COM jsou registrovány CLSCTX_LOCAL_SERVER enumerátor výčtu CLSCTX.
+Objekty COM jsou registrovány u CLSCTX_LOCAL_SERVER výčtu výčtu CLSCTX výčtu.
 
-Typ připojení k registrované objekty je určená kombinací aktuální *comflag* parametr šablony a REGCLS_SUSPENDED enumerátor výčtu REGCLS.
+Typ připojení k registrovaným objektům je určen kombinací aktuálního parametru šablony *comflag* a REGCLS_SUSPENDED výčtu výčtu výčtu REGCLS.
 
-## <a name="registerobjects"></a>Module::registerobjects –
+## <a name="moduleregisterobjects"></a><a name="registerobjects"></a>Modul::RegisterObjects
 
-Zaregistruje objekty COM nebo prostředí Windows Runtime, takže k nim mohli připojit další aplikace.
+Registruje objekty com nebo Windows Runtime, aby se k nim mohly připojit jiné aplikace.
 
 ```cpp
 HRESULT RegisterObjects(
@@ -370,19 +372,19 @@ HRESULT RegisterObjects(
 
 ### <a name="parameters"></a>Parametry
 
-*module*<br/>
-Pole objektů COM nebo prostředí Windows Runtime.
+*Modul*<br/>
+Pole objektů com nebo Windows Runtime.
 
-*serverName*<br/>
-Název serveru, který vytvořil objekty.
+*Název_serveru*<br/>
+Název serveru, který objekty vytvořil.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-S_OK v případě úspěchu; v opačném případě HRESULT, který označuje důvod operace se nezdařila.
+S_OK v případě úspěchu; v opačném případě HRESULT, který označuje důvod, proč se operace nezdařila.
 
-## <a name="registerwinrtobject"></a>Module::RegisterWinRTObject
+## <a name="moduleregisterwinrtobject"></a><a name="registerwinrtobject"></a>Modul::RegisterWinRTObject
 
-Zaregistruje jeden nebo více objektů prostředí Windows Runtime, takže k nim mohli připojit další aplikace.
+Zaregistruje jeden nebo více objektů prostředí Windows Runtime, aby se k nim mohly připojit jiné aplikace.
 
 ```cpp
 HRESULT RegisterWinRTObject(const wchar_t* serverName,
@@ -393,33 +395,33 @@ HRESULT RegisterWinRTObject(const wchar_t* serverName,
 
 ### <a name="parameters"></a>Parametry
 
-*serverName*<br/>
-Název, který určuje podmnožinu objekty ovlivněné touto operací.
+*Název_serveru*<br/>
+Název, který určuje podmnožinu objektů ovlivněných touto operací.
 
-*activatableClassIds*<br/>
-Pole aktivovatelné CLSID k registraci.
+*aktivovattřídidy*<br/>
+Pole aktivovatelných CLSID s registrací.
 
 *cookie*<br/>
-Hodnota, která označuje, které jste zaregistrovali objekty třídy. Tato hodnota se používá později zrušení registrace.
+Hodnota, která identifikuje objekty třídy, které byly registrovány. Tato hodnota se později používá k odvolání registrace.
 
 *Počet*<br/>
-Počet objektů, které chcete zaregistrovat.
+Počet objektů, které mají být zapsány do registru.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-S_OK v případě úspěchu; v opačném případě chybu HRESULT jako je například CO_E_OBJISREG, který označuje důvod operace se nezdařila.
+S_OK v případě úspěchu; v opačném případě chyba HRESULT, například CO_E_OBJISREG, která označuje důvod, proč se operace nezdařila.
 
-## <a name="releasenotifier"></a>Module::releasenotifier_ –
+## <a name="modulereleasenotifier_"></a><a name="releasenotifier"></a>Modul::releaseNotifier_
 
-Uchovává ukazatel `ReleaseNotifier` objektu.
+Podrží ukazatel `ReleaseNotifier` na objekt.
 
 ```cpp
 ReleaseNotifier *releaseNotifier_;
 ```
 
-## <a name="terminate"></a>Module::terminate –
+## <a name="moduleterminate"></a><a name="terminate"></a>Modul::Ukončit
 
-Způsobí, že všechny objekty pro vytváření vytvořit instanci modulu pro vypnutí.
+Způsobí, že všechny továrny instance modulu vypnout.
 
 ```cpp
 void Terminate();
@@ -427,11 +429,11 @@ void Terminate();
 
 ### <a name="remarks"></a>Poznámky
 
-Uvolní továren v mezipaměti.
+Uvolní továrny v mezipaměti.
 
-## <a name="unregistercomobject"></a>Module::unregistercomobject –
+## <a name="moduleunregistercomobject"></a><a name="unregistercomobject"></a>Modul::Zrušit registraci objektu COMObject
 
-Zruší jeden nebo více objektů modelu COM, registraci což zabrání aplikacím bránily v připojení k nim.
+Zruší registrace jednoho nebo více objektů MODELU COM, což zabrání ostatním aplikacím v jejich připojení.
 
 ```cpp
 virtual HRESULT UnregisterCOMObject(
@@ -442,22 +444,22 @@ virtual HRESULT UnregisterCOMObject(
 
 ### <a name="parameters"></a>Parametry
 
-*serverName*<br/>
-(Nepoužívané)
+*Název_serveru*<br/>
+(Nepoužité)
 
-*cookies*<br/>
-Pole ukazatelů na hodnoty, které identifikují objekty třídy pro odstranění registrace. Pole byl vytvořen [registercomobject –](#registercomobject) metody.
+*Soubory cookie*<br/>
+Pole ukazatelů na hodnoty, které identifikují objekty třídy, které mají být neregistrované. Pole bylo vytvořeno metodou [RegisterCOMObject.](#registercomobject)
 
 *Počet*<br/>
-Počet tříd se zrušit registraci.
+Počet tříd zrušit registraci.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud je tato operace úspěšná; S_OK v opačném případě chybu HRESULT, který označuje důvod operace se nezdařila.
+S_OK pokud je tato operace úspěšná; v opačném případě chyba HRESULT, která označuje důvod, proč se operace nezdařila.
 
-## <a name="unregisterobjects"></a>Module::unregisterobjects –
+## <a name="moduleunregisterobjects"></a><a name="unregisterobjects"></a>Modul::Zrušit registraci objektů
 
-Zruší registraci objekty v zadaném modulu tak, aby k nim nelze připojit další aplikace.
+Zruší registrace objektů v zadaném modulu, aby se k nim nemohly připojit jiné aplikace.
 
 ```cpp
 HRESULT UnregisterObjects(
@@ -467,19 +469,19 @@ HRESULT UnregisterObjects(
 
 ### <a name="parameters"></a>Parametry
 
-*module*<br/>
+*Modul*<br/>
 Ukazatel na modul.
 
-*serverName*<br/>
-Kvalifikovaný název, který určuje podmnožinu objekty ovlivněné touto operací.
+*Název_serveru*<br/>
+Opravňující název, který určuje podmnožinu objektů ovlivněných touto operací.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud je tato operace úspěšná; S_OK v opačném případě chybu HRESULT, který označuje důvod tato operace se nezdařila.
+S_OK pokud je tato operace úspěšná; v opačném případě chyba HRESULT, která označuje důvod, proč se tato operace nezdařila.
 
-## <a name="unregisterwinrtobject"></a>Module::UnregisterWinRTObject
+## <a name="moduleunregisterwinrtobject"></a><a name="unregisterwinrtobject"></a>Modul::UnregisterWinRTObject
 
-Zruší registraci jeden nebo více objektů prostředí Windows Runtime, tak, aby k nim nelze připojit další aplikace.
+Zruší registrace jednoho nebo více objektů prostředí Windows Runtime, aby se k nim nemohly připojit jiné aplikace.
 
 ```cpp
 virtual HRESULT UnregisterWinRTObject(
@@ -491,4 +493,4 @@ virtual HRESULT UnregisterWinRTObject(
 ### <a name="parameters"></a>Parametry
 
 *cookie*<br/>
-Ukazatel na hodnotu, která identifikuje objektu třídy, jehož registrace je zrušené.
+Ukazatel na hodnotu, která identifikuje objekt třídy, jehož registrace má být odvolána.

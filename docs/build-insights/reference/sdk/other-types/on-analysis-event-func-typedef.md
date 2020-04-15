@@ -1,6 +1,6 @@
 ---
-title: OnAnalysisEventFunc – typedef
-description: Referenční C++ materiály k OnAnalysisEventFunc sestavení sady SDK pro Build Insights
+title: Atribut typu OnAnalysisEventFunc
+description: C++ Sestavení Insights SDK OnAnalysisEventFunc typedef odkaz.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: d260f6060e759f315589abda82e31c2c2b95a65e
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: eacd174279caff0db22586d5e40d3a866afc4459
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78332430"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81329118"
 ---
-# <a name="onanalysiseventfunc-typedef"></a>OnAnalysisEventFunc – typedef
+# <a name="onanalysiseventfunc-typedef"></a>Atribut typu OnAnalysisEventFunc
 
 ::: moniker range="<=vs-2015"
 
-Sada C++ SDK pro Build Insights je kompatibilní se sadou Visual Studio 2017 a novější. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek selektor verzí sady Visual Studio pro tento článek na sadu Visual Studio 2017 nebo Visual Studio 2019.
+Sada C++ Build Insights SDK je kompatibilní s Visual Studio 2017 a vyšší. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek pro výběr **verze** sady Visual Studio pro tento článek na Visual Studio 2017 nebo Visual Studio 2019. Nachází se v horní části obsahu na této stránce.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-`OnAnalysisEventFunc` typedef je jedním z signatur funkcí použitých ve struktuře [ANALYSIS_CALLBACKS](analysis-callbacks-struct.md) .
+Typedef `OnAnalysisEventFunc` je jedním z podpisů funkce používaných ve struktuře [ANALYSIS_CALLBACKS.](analysis-callbacks-struct.md)
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -38,13 +38,13 @@ typedef enum CALLBACK_CODE (BUILD_INSIGHTS_API *OnAnalysisEventFunc)(
 ### <a name="parameters"></a>Parametry
 
 *eventStack*\
-Zásobník událostí pro aktuální událost. Další informace o zásobníkech událostí najdete v tématu [události](../event-table.md).
+Zásobník událostí pro aktuální událost. Další informace o hromádkách událostí naleznete v [tématu Události](../event-table.md).
 
 *callbackContext*\
 Hodnota kontextu, která byla nastavena pro toto zpětné volání v [ANALYSIS_DESCRIPTOR](analysis-descriptor-struct.md) nebo [RELOG_DESCRIPTOR](relog-descriptor-struct.md).
 
 ### <a name="return-value"></a>Návratová hodnota
 
-[CALLBACK_CODE](callback-code-enum.md) hodnota, která určuje, co by mělo proběhnout příště.
+Hodnota [CALLBACK_CODE,](callback-code-enum.md) která určuje, co by se mělo stát dál.
 
 ::: moniker-end

@@ -15,16 +15,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Module::MethodReleaseNotifier::MethodReleaseNotifier, constructor
 - Microsoft::WRL::Module::MethodReleaseNotifier::object_ data member
 ms.assetid: 5c2902be-964b-488f-9f1c-adf504995cbc
-ms.openlocfilehash: 41b7cfb2601cd2023e895dbcf1a56e85fe65b35d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c641f150b6f029facffa62f7b47c7da32138735e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62325062"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371292"
 ---
 # <a name="modulemethodreleasenotifier-class"></a>Module::MethodReleaseNotifier – třída
 
-Vyvolá obslužnou rutinu události po vydání poslední objekt v aktuálním modulu. Obslužná rutina události je zadaný objekt a jejího člena ukazatel na metodu.
+Vyvolá obslužnou rutinu události při uvolnění posledního objektu v aktuálním modulu. Obslužná rutina události je určena objektem a jeho ukazatelem na člen metody.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -36,28 +36,28 @@ class MethodReleaseNotifier : public ReleaseNotifier;
 ### <a name="parameters"></a>Parametry
 
 *T*<br/>
-Typ objektu, jehož členská funkce je obslužnou rutinu události.
+Typ objektu, jehož členská funkce je obslužná rutina události.
 
 ## <a name="members"></a>Členové
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-Název                                                                                                 | Popis
+Name (Název)                                                                                                 | Popis
 ---------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------
-[Module::methodreleasenotifier:: methodreleasenotifier –](#methodreleasenotifier-methodreleasenotifier) | Inicializuje novou instanci třídy `Module::MethodReleaseNotifier` třídy.
+[Modul::MethodReleaseNotifier::MethodReleaseNotifier](#methodreleasenotifier-methodreleasenotifier) | Inicializuje novou instanci třídy. `Module::MethodReleaseNotifier`
 
 ### <a name="public-methods"></a>Veřejné metody
 
-Název                                                                   | Popis
+Name (Název)                                                                   | Popis
 ---------------------------------------------------------------------- | -------------------------------------------------------------------------------------------
-[Module::MethodReleaseNotifier:: Invoke](#methodreleasenotifier-invoke) | Volá obslužnou rutinu události spojené s aktuálním `Module::MethodReleaseNotifier` objektu.
+[Modul::MethodReleaseNotifier::Invoke](#methodreleasenotifier-invoke) | Zavolá obslužnou `Module::MethodReleaseNotifier` rutinu události přidruženou k aktuálnímu objektu.
 
-### <a name="protected-data-members"></a>Chránění členové dat
+### <a name="protected-data-members"></a>Členové chráněných dat
 
-Název                                                                    | Popis
+Name (Název)                                                                    | Popis
 ----------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------
-[Module::methodreleasenotifier:: method_ –](#methodreleasenotifier-method) | Uchovává ukazatel na obslužnou rutinu události pro aktuální `Module::MethodReleaseNotifier` objektu.
-[Module::methodreleasenotifier:: object_ –](#methodreleasenotifier-object) | Uchovává ukazatel na objekt, jehož členská funkce je obslužnou rutinu události pro aktuální `Module::MethodReleaseNotifier` objektu.
+[Modul::MethodReleaseNotifier::method_](#methodreleasenotifier-method) | Podrží ukazatel na obslužnou rutinu události pro aktuální `Module::MethodReleaseNotifier` objekt.
+[Modul::MethodReleaseNotifier::object_](#methodreleasenotifier-object) | Obsahuje ukazatel na objekt, jehož členská funkce `Module::MethodReleaseNotifier` je obslužná rutina události pro aktuální objekt.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -69,27 +69,27 @@ Název                                                                    | Popi
 
 **Záhlaví:** module.h
 
-**Namespace:** Microsoft::WRL
+**Obor názvů:** Microsoft::WRL
 
-## <a name="methodreleasenotifier-invoke"></a>Module::MethodReleaseNotifier:: Invoke
+## <a name="modulemethodreleasenotifierinvoke"></a><a name="methodreleasenotifier-invoke"></a>Modul::MethodReleaseNotifier::Invoke
 
-Volá obslužnou rutinu události spojené s aktuálním `Module::MethodReleaseNotifier` objektu.
+Zavolá obslužnou `Module::MethodReleaseNotifier` rutinu události přidruženou k aktuálnímu objektu.
 
 ```cpp
 void Invoke();
 ```
 
-## <a name="methodreleasenotifier-method"></a>Module::methodreleasenotifier:: method_ –
+## <a name="modulemethodreleasenotifiermethod_"></a><a name="methodreleasenotifier-method"></a>Modul::MethodReleaseNotifier::method_
 
-Uchovává ukazatel na obslužnou rutinu události pro aktuální `Module::MethodReleaseNotifier` objektu.
+Podrží ukazatel na obslužnou rutinu události pro aktuální `Module::MethodReleaseNotifier` objekt.
 
 ```cpp
 void (T::* method_)();
 ```
 
-## <a name="methodreleasenotifier-methodreleasenotifier"></a>Module::methodreleasenotifier:: methodreleasenotifier –
+## <a name="modulemethodreleasenotifiermethodreleasenotifier"></a><a name="methodreleasenotifier-methodreleasenotifier"></a>Modul::MethodReleaseNotifier::MethodReleaseNotifier
 
-Inicializuje novou instanci třídy `Module::MethodReleaseNotifier` třídy.
+Inicializuje novou instanci třídy. `Module::MethodReleaseNotifier`
 
 ```cpp
 MethodReleaseNotifier(
@@ -102,18 +102,18 @@ MethodReleaseNotifier(
 
 ### <a name="parameters"></a>Parametry
 
-*object*<br/>
-Objekt, jehož členská funkce je obslužnou rutinu události.
+*Objekt*<br/>
+Objekt, jehož členská funkce je obslužná rutina události.
 
-*– Metoda*<br/>
-Členská funkce parametru *objekt* , který je obslužnou rutinu události.
+*Metoda*<br/>
+Členská funkce *parametru objektu,* který je obslužnou rutinou události.
 
-*Vydání verze*<br/>
-Zadejte `true` povolit volání základní [modulu:: ReleaseNotifier::Release()](module-releasenotifier-class.md#releasenotifier-release) metody; v opačném případě zadejte `false`.
+*Vydání*<br/>
+Zadejte, `true` chcete-li povolit volání základní metody [Module::ReleaseNotifier::Release()](module-releasenotifier-class.md#releasenotifier-release) metody; v opačném `false`případě zadejte .
 
-## <a name="methodreleasenotifier-object"></a>Module::methodreleasenotifier:: object_ –
+## <a name="modulemethodreleasenotifierobject_"></a><a name="methodreleasenotifier-object"></a>Modul::MethodReleaseNotifier::object_
 
-Uchovává ukazatel na objekt, jehož členská funkce je obslužnou rutinu události pro aktuální `Module::MethodReleaseNotifier` objektu.
+Obsahuje ukazatel na objekt, jehož členská funkce `Module::MethodReleaseNotifier` je obslužná rutina události pro aktuální objekt.
 
 ```cpp
 T* object_;

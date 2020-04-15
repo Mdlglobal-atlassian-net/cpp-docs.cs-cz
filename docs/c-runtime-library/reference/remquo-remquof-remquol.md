@@ -1,10 +1,13 @@
 ---
 title: remquo, remquof, remquol
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - remquof
 - remquo
 - remquol
+- _o_remquo
+- _o_remquof
+- _o_remquol
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -30,16 +34,16 @@ helpviewer_keywords:
 - remquof function
 - remquo function
 ms.assetid: a1d3cb8b-8027-4cd3-8deb-04eb17f299fc
-ms.openlocfilehash: c96357dda007e9bf12ddaf6091af47794bfc0630
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: e6a6f211e83118379e0697464d21f5968ea68cee
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949364"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81332842"
 ---
 # <a name="remquo-remquof-remquol"></a>remquo, remquof, remquol
 
-Vypočítá zbytek dvou celočíselných hodnot a uloží celočíselnou hodnotu se znaménkem a přibližnou velikostí podílu v umístění, které je zadáno v parametru.
+Vypočítá zbývající dvě celé hodnoty a uloží celou hodnotu se znaménkem a přibližnou velikostí podílu v umístění určeném v parametru.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -56,32 +60,34 @@ long double remquo( long double numer, long double denom, int* quo ); /* C++ onl
 
 ### <a name="parameters"></a>Parametry
 
-*numer*<br/>
+*číslo*<br/>
 Čitatel.
 
 *denom*<br/>
 Jmenovatel.
 
-*quo*<br/>
-Ukazatel na celé číslo, aby se uložila hodnota, která má znaménko a přibližnou velikost podílu.
+*Quo*<br/>
+Ukazatel na celé číslo pro uložení hodnoty, která má znaménko a přibližnou velikost kvocientu.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**remquo –** vrátí zbytek s plovoucí desetinnou čárkou pro *x* / *y*. Pokud hodnota *y* je 0,0, vrátí **remquo –** tichou hodnotu NaN. Informace o reprezentace tichého NaN **printf** Family naleznete v tématu [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md).
+**vrátí** zbytek s plovoucí desetinnou cívka *x* / *y*. Pokud je hodnota *y* 0,0, **vrátí funkce remquo** tichou NaN. Informace o reprezentaci tiché honosné NaN rodinou **printf** naleznete v [tématu printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md).
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce **remquo –** vypočítá zbytek s plovoucí desetinnou čárkou *f* z *x* / *y* tak, aby *x* = *i* \* *y* + *f*, kde *i* je celé číslo, *f* má stejné znaménko jako *x*a absolutní hodnota *f* je menší než absolutní hodnota *y*.
+Funkce **remquo** vypočítá zbytek s plovoucí desetinnou cínek *f* *x* / *y* tak, že *x* = *i* \* *y* + *f*, kde *i* je celé číslo, *f* má stejné znaménko jako *x*a absolutní hodnota *f* je menší než absolutní hodnota *y*.
 
-C++umožňuje přetížení, takže můžete volat přetížení **remquo –** , která přijímají a vracejí hodnoty **float** nebo **Long** **Double** . V programu v jazyce C **remquo –** vždy přebírá dva **dvojité** argumenty a vrací hodnotu **Double**.
+C++ umožňuje přetížení, takže můžete volat přetížení **remquo,** které take a return **float** nebo **dlouhé** **dvojité** hodnoty. V programu C **remquo** vždy trvá dva **dvojité** argumenty a vrátí **double**.
+
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
-|Funkce|Požadovaná hlavička (C)|Požadovaná hlavička (C++)|
+|Funkce|Povinná hlavička (C)|Povinné záhlaví (C++)|
 |--------------|---------------------|-|
-|**remquo**, **remquof**, **remquol**|\<Math. h >|\<cmath > nebo \<Math. h >|
+|**remquo**, **remquof**, **remquol**|\<math.h>|\<cmath> \<nebo math.h>|
 
-Informace o kompatibilitě najdete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
+Informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -108,9 +114,9 @@ The remainder of -10.00 / 3.00 is -1.000000
 Approximate signed quotient is -3
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)<br/>
+[Podpora s plovoucí desetinnou tálicí](../../c-runtime-library/floating-point-support.md)<br/>
 [ldiv, lldiv](ldiv-lldiv.md)<br/>
 [imaxdiv](imaxdiv.md)<br/>
 [fmod, fmodf](fmod-fmodf.md)<br/>

@@ -17,18 +17,18 @@ helpviewer_keywords:
 - troubleshooting release builds
 - memory [C++], overwrites
 ms.assetid: 73cbc1f9-3e33-472d-9880-39a8e9977b95
-ms.openlocfilehash: 5372fe4e96c444d454c277394dd811cfac14d1f6
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 9bd1cafe40417872d42f2e9e1427e5f2eccad7a7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220892"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81328870"
 ---
 # <a name="common-problems-when-creating-a-release-build"></a>Běžné problémy při vytváření sestavení pro vydání
 
-Během vývoje bude obvykle sestavovat a testovat pomocí sestavení pro ladění projektu. Pokud potom sestavíte aplikaci pro sestavení pro vydání, můžete obdržet narušení přístupu.
+Během vývoje obvykle sestavíte a otestujete s ladicím sestavením projektu. Pokud pak vytvoříte aplikaci pro sestavení verze, může dojít k narušení přístupu.
 
-V seznamu níže jsou uvedeny základní rozdíly mezi ladění a sestavení pro vydání (nondebug). Existují další rozdíly, ale toto jsou základní rozdíly, které by mohly způsobit selhání aplikace v sestavení pro vydání, když to funguje v sestavení pro ladění.
+Níže uvedený seznam ukazuje primární rozdíly mezi ladění a verze (nondebug) sestavení. Existují další rozdíly, ale následující jsou hlavní rozdíly, které by způsobily selhání aplikace v sestavení verze, když pracuje v sestavení ladění.
 
 - [Rozložení haldy](#_core_heap_layout)
 
@@ -38,31 +38,31 @@ V seznamu níže jsou uvedeny základní rozdíly mezi ladění a sestavení pro
 
 - [Optimalizace](#_core_optimizations)
 
-Zobrazit [/GZ (zachytávat chyby sestavení pro vydání v sestavení ladění)](reference/gz-enable-stack-frame-run-time-error-checking.md) chyby v sestaveních ladění sestavení pro informace o tom, jak zachytávat release – možnost kompilátoru.
+Naleznete [/GZ (Catch Release-Build Errors in Debug Build)](reference/gz-enable-stack-frame-run-time-error-checking.md) kompilace možnost informace o tom, jak zachytit chyby sestavení vydání v sestavení ladění.
 
-##  <a name="_core_heap_layout"></a> Rozložení haldy
+## <a name="heap-layout"></a><a name="_core_heap_layout"></a>Rozložení haldy
 
-Rozložení haldy bude příčinu o devadesát procent zřejmé problémy při aplikace funguje v ladění, ale ne verzi.
+Rozložení haldy bude příčinou asi devadesát procent zdánlivé problémy, když aplikace pracuje v ladění, ale ne vydání.
 
-Při vytváření projektu pro ladění používáte přidělení paměti ladění. To znamená, že guard bajtů kolem nich všechna přidělení paměti. Tyto guard bajtů detekovat přepisování paměti. Protože se liší mezi vydání a ladění haldy rozložení verze, přepisování paměti nemusí vytvořit žádné problémy s v sestavení pro ladění, ale může mít katastrofální důsledky v sestavení pro vydání.
+Při vytváření projektu pro ladění, používáte přidělení paměti ladění. To znamená, že všechna přidělení paměti mají kolem sebe umístěny bajty stráží. Tyto stráž bajty deteprovatují přepsání paměti. Vzhledem k tomu, že rozložení haldy se liší mezi verzí release a ladění, přepsání paměti nemusí způsobit žádné problémy v sestavení ladění, ale může mít katastrofální účinky v sestavení verze.
 
-Další informace najdete v tématu [zkontrolujte přepsání paměti](checking-for-memory-overwrites.md) a [použít ladění sestavení pro kontroly pro přepsání paměti](using-the-debug-build-to-check-for-memory-overwrite.md).
+Další informace naleznete [v tématu Kontrola přepsání paměti](checking-for-memory-overwrites.md) a použití sestavení ladění ke kontrole [přepsání paměti](using-the-debug-build-to-check-for-memory-overwrite.md).
 
-##  <a name="_core_compilation"></a> Kompilace
+## <a name="compilation"></a><a name="_core_compilation"></a>Kompilace
 
-Mnohé z maker MFC a mnoho změn implementace MFC při sestavení pro vydání. Zejména makra ASSERT vyhodnotí jako nothing v sestavení pro vydání, takže žádný kód, který najdete v nepodmíněné výrazy se spustí. Další informace najdete v tématu [prozkoumat Assert – příkazy](using-verify-instead-of-assert.md).
+Mnoho makra knihovny MFC a velká část změny implementace knihovny MFC při vytváření pro vydání. Zejména assert makro vyhodnotí na nic v sestavení verze, takže žádný z kódu nalezeného v ASSERTs budou provedeny. Další informace naleznete v [tématu Examine ASSERT Statements](using-verify-instead-of-assert.md).
 
-Některé funkce jsou vloženy pro zvýšení rychlosti v sestavení pro vydání. V sestavení pro vydání se obecně zapnutými optimalizacemi. Přidělovač paměti různých se také používá.
+Některé funkce jsou vloženy pro zvýšení rychlosti v sestavení verze. Optimalizace jsou obvykle zapnuty v sestavení verze. Používá se také jiný alokátor paměti.
 
-##  <a name="_core_pointer_support"></a> Podpora ukazatele
+## <a name="pointer-support"></a><a name="_core_pointer_support"></a>Podpora ukazatele
 
-Chybí informace o ladění odstraní odsazení z vaší aplikace. Ukazatele stray v sestavení pro vydání, máte pravděpodobně odkazující na neinicializované paměti namísto odkazující na informace o ladění.
+Nedostatek informací o ladění odebere odsazení z aplikace. V sestavení verze mají zbloudilé ukazatele větší šanci ukázat na neinicializovanou paměť namísto toho, aby ukazovaly na informace o ladění.
 
-##  <a name="_core_optimizations"></a> Optimalizace
+## <a name="optimizations"></a><a name="_core_optimizations"></a>Optimalizace
 
-V závislosti na povaze určité segmenty kódů optimalizující kompilátor může vygenerovat neočekávaný kód. Toto je nejméně pravděpodobné příčiny problémů se sestavením pro vydání, ale v některých případech dojít. Řešení, najdete v části [optimalizace kódu](optimizing-your-code.md).
+V závislosti na povaze určitých segmentů kódu může optimalizační kompilátor generovat neočekávaný kód. Toto je nejméně pravděpodobná příčina problémů se sestavením verze, ale příležitostně vzniká. Řešení naleznete v [tématu Optimalizace kódu](optimizing-your-code.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Sestavení pro vydání](release-builds.md)<br/>
 [Oprava problémů se sestavením pro vydání](fixing-release-build-problems.md)

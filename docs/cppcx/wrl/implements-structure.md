@@ -15,16 +15,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Implements::FillArrayWithIid method
 - Microsoft::WRL::Implements::IidCount method
 ms.assetid: 29b13e90-34d4-4a0b-babd-5187c9eb0c36
-ms.openlocfilehash: 0ce6e9193107cbd0d033d99b257e41004b4343a8
-ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.openlocfilehash: 223f37d7cabbd0b8cd238582773c05d7b9eaabf6
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821854"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371412"
 ---
 # <a name="implements-structure"></a>Implementuje strukturu
 
-Implementuje `QueryInterface` a `GetIid` pro zadaná rozhraní.
+`QueryInterface` Implementuje `GetIid` a pro zadaná rozhraní.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -77,65 +77,65 @@ struct __declspec(novtable) Implements<
 ### <a name="parameters"></a>Parametry
 
 *I0*<br/>
-ID rozhraní zeroth Závaznou
+Zeroth ID rozhraní. (Povinné)
 
 *I1*<br/>
-První ID rozhraní. (Volitelné)
+První ID rozhraní. (Nepovinné)
 
 *I2*<br/>
-Druhé ID rozhraní. (Volitelné)
+Druhé ID rozhraní. (Nepovinné)
 
 *I3*<br/>
-IDENTIFIKÁTOR třetího rozhraní. (Volitelné)
+Třetí ID rozhraní. (Nepovinné)
 
 *I4*<br/>
-Čtvrté ID rozhraní. (Volitelné)
+Čtvrté ID rozhraní. (Nepovinné)
 
 *I5*<br/>
-Pátý identifikátor rozhraní. (Volitelné)
+Páté ID rozhraní. (Nepovinné)
 
 *I6*<br/>
-Šesté ID rozhraní. (Volitelné)
+Šesté ID rozhraní. (Nepovinné)
 
 *I7*<br/>
-ID sedmého rozhraní. (Volitelné)
+Sedmé ID rozhraní. (Nepovinné)
 
 *I8*<br/>
-Osmá ID rozhraní. (Volitelné)
+Osmé ID rozhraní. (Nepovinné)
 
 *I9*<br/>
-ID devátého rozhraní. (Volitelné)
+Deváté ID rozhraní. (Nepovinné)
 
-*Flag*<br/>
-Příznaky konfigurace pro třídu. Jeden nebo více výčtů [RuntimeClassType –](runtimeclasstype-enumeration.md) , které jsou zadány ve struktuře [RuntimeClassFlags](runtimeclassflags-structure.md) .
+*příznaky*<br/>
+Příznaky konfigurace pro třídu. Jeden nebo více výčtů [Typu RuntimeClassType,](runtimeclasstype-enumeration.md) které jsou zadány ve struktuře [RuntimeClassFlags.](runtimeclassflags-structure.md)
 
 ## <a name="remarks"></a>Poznámky
 
-Je odvozen ze seznamu zadaných rozhraní a implementuje pomocné šablony pro `QueryInterface` a `GetIid`.
+Odvozuje ze seznamu zadaných rozhraní a implementuje pomocné šablony pro `QueryInterface` a `GetIid`.
 
-Každý *I0* prostřednictvím parametru rozhraní *i9* se musí odvozovat buď z `IUnknown`, `IInspectable`, nebo šablony [ChainInterfaces](chaininterfaces-structure.md) . Parametr *Flags* určuje, zda je pro `IUnknown` nebo `IInspectable`vygenerována podpora.
+Každý parametr rozhraní *I0* až *I9* musí být odvozen buď z `IUnknown`, `IInspectable`nebo ze šablony [ChainInterfaces.](chaininterfaces-structure.md) Parametr *flags* určuje, zda je `IUnknown` generována podpora pro nebo `IInspectable`.
 
 ## <a name="members"></a>Členové
 
-### <a name="public-typedefs"></a>Veřejné definice typedef
+### <a name="public-typedefs"></a>Veřejné typedefs
 
-| Name        | Popis                               |
+| Name (Název)        | Popis                               |
 | ----------- | ----------------------------------------- |
-| `ClassFlags`| Synonymum pro `RuntimeClassFlags<WinRt>`. |
+| `ClassFlags`| Synonymum `RuntimeClassFlags<WinRt>`pro . |
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-| Name                                              | Popis                                                                                                   |
+| Name (Název)                                              | Popis                                                                                                   |
 | ------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
-| [Implementuje:: Cancastto –](#cancastto)               | Získá ukazatel na zadané rozhraní.                                                                    |
-| [Implementuje:: Casttounknown –](#casttounknown)       | Získá ukazatel na základní `IUnknown` rozhraní.                                                        |
-| [Implementuje:: Fillarraywithiid –](#fillarraywithiid) | Vloží ID rozhraní určené aktuálním parametrem šablony zeroth do určeného prvku Array. |
+| [Implementace::CanCastTo](#cancastto)               | Získá ukazatel na zadané rozhraní.                                                                    |
+| [Implementuje::CastToUnknown](#casttounknown)       | Získá ukazatel na `IUnknown` základní rozhraní.                                                        |
+| [Implementace::FillArrayWithId](#fillarraywithiid) | Vloží ID rozhraní určené aktuálním parametrem šablony nulty do zadaného prvku pole. |
 
 ### <a name="protected-constants"></a>Chráněné konstanty
 
-| Name                              | Popis                                    |
+| Name (Název)                              | Popis                                    |
 | --------------------------------- | ---------------------------------------------- |
-| [Implementuje:: Iidcount –](#iidcount) | Obsahuje počet implementovaných ID rozhraní. |
+| [Implementace::IidCount](#iidcount) | Obsahuje počet implementovaných ID rozhraní. |
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -153,11 +153,11 @@ Každý *I0* prostřednictvím parametru rozhraní *i9* se musí odvozovat buď 
 
 ## <a name="requirements"></a>Požadavky
 
-**Hlavička:** Implements. h
+**Záhlaví:** implements.h
 
-**Obor názvů:** Microsoft:: WRL
+**Obor názvů:** Microsoft::WRL
 
-## <a name="cancastto"></a>Implementuje:: Cancastto –
+## <a name="implementscancastto"></a><a name="cancastto"></a>Implementace::CanCastTo
 
 Získá ukazatel na zadané rozhraní.
 
@@ -170,23 +170,23 @@ __forceinline HRESULT CanCastTo(
 
 ### <a name="parameters"></a>Parametry
 
-*riid*<br/>
+*riid řekl:*<br/>
 Odkaz na ID rozhraní.
 
-*ppv*<br/>
-V případě úspěchu ukazatel na rozhraní určené parametrem *riid*.
+*Ppv*<br/>
+V případě úspěchu ukazatel na rozhraní určené *riid*.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-S_OK v případě úspěchu; v opačném případě hodnota HRESULT, která označuje chybu, například E_NOINTERFACE.
+S_OK v případě úspěchu; jinak HRESULT, který označuje chybu, například E_NOINTERFACE.
 
 ### <a name="remarks"></a>Poznámky
 
 Toto je interní pomocná funkce, která provádí operaci QueryInterface.
 
-## <a name="casttounknown"></a>Implementuje:: Casttounknown –
+## <a name="implementscasttounknown"></a><a name="casttounknown"></a>Implementuje::CastToUnknown
 
-Získá ukazatel na základní `IUnknown` rozhraní.
+Získá ukazatel na `IUnknown` základní rozhraní.
 
 ```cpp
 __forceinline IUnknown* CastToUnknown();
@@ -194,15 +194,15 @@ __forceinline IUnknown* CastToUnknown();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Tato operace vždy uspěje a vrací ukazatel `IUnknown`.
+Tato operace vždy úspěšné `IUnknown` a vrátí ukazatel.
 
 ### <a name="remarks"></a>Poznámky
 
-Vnitřní pomocná funkce.
+Interní pomocná funkce.
 
-## <a name="fillarraywithiid"></a>Implementuje:: Fillarraywithiid –
+## <a name="implementsfillarraywithiid"></a><a name="fillarraywithiid"></a>Implementace::FillArrayWithId
 
-Vloží ID rozhraní určené aktuálním parametrem šablony zeroth do určeného prvku Array.
+Vloží ID rozhraní určené aktuálním parametrem šablony nulty do zadaného prvku pole.
 
 ```cpp
 __forceinline static void FillArrayWithIid(
@@ -213,17 +213,17 @@ __forceinline static void FillArrayWithIid(
 
 ### <a name="parameters"></a>Parametry
 
-*index*<br/>
-Index založený na nule, který označuje počáteční prvek pole pro tuto operaci. Po dokončení této operace se *index* zvýší o 1.
+*Index*<br/>
+Index založený na nule, který označuje počáteční prvek pole pro tuto operaci. Po dokončení této operace *index* se zpřísní o 1.
 
-*IID*<br/>
+*IIDs*<br/>
 Pole typu IID.
 
 ### <a name="remarks"></a>Poznámky
 
-Vnitřní pomocná funkce.
+Interní pomocná funkce.
 
-## <a name="iidcount"></a>Implementuje:: Iidcount –
+## <a name="implementsiidcount"></a><a name="iidcount"></a>Implementace::IidCount
 
 Obsahuje počet implementovaných ID rozhraní.
 

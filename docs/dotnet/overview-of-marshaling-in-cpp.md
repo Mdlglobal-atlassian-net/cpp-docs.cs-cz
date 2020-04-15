@@ -10,69 +10,69 @@ helpviewer_keywords:
 - C++ Support Library, marshaling
 - marshaling, about marshaling
 ms.assetid: 997dd4bc-5f98-408f-b890-f35de9ce3bb8
-ms.openlocfilehash: 937fbdf4b3ed09344e69a8f1eb731565c36794ae
-ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
+ms.openlocfilehash: 0c7bf18fa823c6301a79c3f989efa73c9e8f628a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67861167"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372000"
 ---
-# <a name="overview-of-marshaling-in-ccli"></a>Přehled zařazování v C++vyhodnocovací
+# <a name="overview-of-marshaling-in-ccli"></a>Přehled zařazování v jazyce C++/CLI
 
-Ve smíšeném režimu někdy musíte zařazování dat mezi nativními a spravovanými typy. *Zařazovací knihovna* pomáhá zařazování a převádí data v jednoduché.  Zařazovací knihovna se skládá ze sady funkcí a `marshal_context` třídy, které provádějí zařazování pro běžné typy. Knihovny je definován v těchto záhlavích v **zahrnují/msclr –** adresář pro vaši verzi sady Visual Studio:
+Ve smíšeném režimu někdy musí být data mezi nativními a spravovanými typy. *Zařazovací knihovna* vám pomůže zařadit a převést data jednoduchým způsobem.  Zařazování knihovny se skládá `marshal_context` ze sady funkcí a třídy, které provádějí zařazování pro běžné typy. Knihovna je definována v těchto záhlavích v adresáři **include/msclr** pro edici Visual Studio:
 
-|Záhlaví|Popis|
+|Hlavička|Popis|
 |---------------|-----------------|
-|marshal.h|`marshal_context` třídy a volného kontext zařazování funkce|
-|marshal_atl.h| Funkce pro zařazování typů knihovny ATL|
-|marshal_cppstd.h|Funkce pro zařazování typů standardní C++|
-|marshal_windows.h|Funkce pro zařazování typů Windows|
+|maršál.h|`marshal_context`třídní a bezkontextové zařazovací funkce|
+|marshal_atl.h| Funkce pro zařazování typů ATL|
+|marshal_cppstd.h|Funkce pro zařazování standardních typů jazyka C++|
+|marshal_windows.h|Funkce pro zařazování typů systému Windows|
 
-Výchozí cesta pro **msclr –** složka je asi takhle nějak. v závislosti na tom, jakou verzi máte a číslo sestavení:
+Výchozí cesta pro složku **MSCLR** je něco takového v závislosti na tom, kterou edici máte, a číslo sestavení:
 
 ```cmd
 C:\\Program Files (x86)\\Microsoft Visual Studio\\Preview\\Enterprise\\VC\\Tools\\MSVC\\14.15.26528\\include\\msclr
 ```
 
-Můžete použít zařazovací knihovna, s nebo bez něj [marshal_context Class](../dotnet/marshal-context-class.md). Některé převody vyžadují kontextu. Ostatní převody, které je možné implementovat pomocí [marshal_as](../dotnet/marshal-as.md) funkce. V následující tabulce jsou uvedeny aktuální převodů podporovaných, zda vyžaduje kontext a jaké zařazování souboru je nutné zahrnout:
+Knihovnu zařazování můžete použít s [marshal_context třídou](../dotnet/marshal-context-class.md)nebo bez ní . Některé převody vyžadují kontext. Další převody lze implementovat pomocí [funkce marshal_as.](../dotnet/marshal-as.md) V následující tabulce jsou uvedeny aktuální podporované převody, zda vyžadují kontext a jaký soubor marshalu musíte zahrnout:
 
-|Z typu|Na typ|Zařazování – metoda|Zahrnout soubor|
+|Od typu|Chcete-li zadat|Metoda marshal|Zahrnout soubor|
 |---------------|-------------|--------------------|------------------|
-|System::String ^|const char \*|marshal_context|marshal.h|
-|const char \*|System::String ^|marshal_as|marshal.h|
-|Char \*|System::String ^|marshal_as|marshal.h|
-|System::String ^|Const wchar_t\*|marshal_context|marshal.h|
-|const wchar_t \*|System::String ^|marshal_as|marshal.h|
-|wchar_t \*|System::String ^|marshal_as|marshal.h|
-|System::IntPtr|POPISOVAČ|marshal_as|marshal_windows.h|
-|POPISOVAČ|System::IntPtr|marshal_as|marshal_windows.h|
-|System::String ^|BSTR|marshal_context|marshal_windows.h|
-|BSTR|System::String ^|marshal_as|marshal.h|
-|System::String ^|bstr_t|marshal_as|marshal_windows.h|
-|bstr_t|System::String ^|marshal_as|marshal_windows.h|
-|System::String ^|std::string|marshal_as|marshal_cppstd.h|
-|std::string|System::String ^|marshal_as|marshal_cppstd.h|
-|System::String ^|std::wstring|marshal_as|marshal_cppstd.h|
-|std::wstring|System::String ^|marshal_as|marshal_cppstd.h|
-|System::String ^|CStringT\<char>|marshal_as|marshal_atl.h|
-|CStringT\<char>|System::String ^|marshal_as|marshal_atl.h|
-|System::String ^|CStringT<wchar_t>|marshal_as|marshal_atl.h|
-|CStringT<wchar_t>|System::String ^|marshal_as|marshal_atl.h|
-|System::String ^|CComBSTR|marshal_as|marshal_atl.h|
-|CComBSTR|System::String ^|marshal_as|marshal_atl.h|
+|Systém::Řetězec^|const char\*|marshal_context|maršál.h|
+|const char\*|Systém::Řetězec^|marshal_as|maršál.h|
+|Char\*|Systém::Řetězec^|marshal_as|maršál.h|
+|Systém::Řetězec^|wchar_t\*|marshal_context|maršál.h|
+|wchar_t\*|Systém::Řetězec^|marshal_as|maršál.h|
+|Wchar_t\*|Systém::Řetězec^|marshal_as|maršál.h|
+|Systém::IntPtr|Zpracování|marshal_as|marshal_windows.h|
+|Zpracování|Systém::IntPtr|marshal_as|marshal_windows.h|
+|Systém::Řetězec^|Bstr|marshal_context|marshal_windows.h|
+|Bstr|Systém::Řetězec^|marshal_as|maršál.h|
+|Systém::Řetězec^|bstr_t|marshal_as|marshal_windows.h|
+|bstr_t|Systém::Řetězec^|marshal_as|marshal_windows.h|
+|Systém::Řetězec^|std::řetězec|marshal_as|marshal_cppstd.h|
+|std::řetězec|Systém::Řetězec^|marshal_as|marshal_cppstd.h|
+|Systém::Řetězec^|std::wstring|marshal_as|marshal_cppstd.h|
+|std::wstring|Systém::Řetězec^|marshal_as|marshal_cppstd.h|
+|Systém::Řetězec^|CStringT\<char>|marshal_as|marshal_atl.h|
+|CStringT\<char>|Systém::Řetězec^|marshal_as|marshal_atl.h|
+|Systém::Řetězec^|wchar_t> wchar_t CString<T|marshal_as|marshal_atl.h|
+|wchar_t> wchar_t CString<T|Systém::Řetězec^|marshal_as|marshal_atl.h|
+|Systém::Řetězec^|CComBSTR|marshal_as|marshal_atl.h|
+|CComBSTR|Systém::Řetězec^|marshal_as|marshal_atl.h|
 
-Zařazování vyžaduje kontext pouze při zařazení ze spravované do nativní datové typy a nativní typ, který převádíte na nemá destruktor pro automatické čištění. Zařazování kontextu zničí přidělené nativního datového typu ve svém destruktoru. Převody, které vyžadují kontext proto bude platit pouze do kontextu se odstraní. Chcete-li uložit všechny hodnoty zařazené, musíte zkopírovat hodnoty do vlastní proměnné.
+Zařazování vyžaduje kontext pouze v případě, že zařazujete ze spravovaných na nativních datových typů a nativní typ, na který převádíte, nemá destruktor pro automatické vyčištění. Kontext zařazování zničí přidělený nativní datový typ v jeho destruktoru. Proto převody, které vyžadují kontext bude platný pouze do odstranění kontextu. Chcete-li uložit všechny zařazované hodnoty, je nutné zkopírovat hodnoty do vlastních proměnných.
 
 > [!NOTE]
->  Pokud jste vložili `NULL`s do řetězce, výsledek zařazování řetězce není zaručena. Vložený `NULL`s může způsobit, že řetězec, který má být zkrácen nebo může být zachována.
+> Pokud jste vložili `NULL`s v řetězci, výsledek zařazování řetězce není zaručena. Vložené `NULL`s může způsobit, že řetězec zkrácen nebo mohou být zachovány.
 
-Tento příklad ukazuje, jak zahrnout adresář msclr – deklarace zahrnout záhlaví:
+Tento příklad ukazuje, jak zahrnout adresář msclr do deklarace hlavičky include:
 
 `#include "msclr\marshal_cppstd.h"`
 
-Knihovna zařazování je rozšiřitelný, kde můžete přidat vlastní zařazování typů. Další informace o rozšíření knihovny zařazování, naleznete v tématu [jak: Rozšíření knihovny zařazování](../dotnet/how-to-extend-the-marshaling-library.md).
+Zařazovací knihovna je rozšiřitelná, takže můžete přidat vlastní typy zařazování. Další informace o rozšíření zařazovací knihovny naleznete v [tématu How to: Extend the Marshaling Library](../dotnet/how-to-extend-the-marshaling-library.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Knihovna podpory C++](../dotnet/cpp-support-library.md)<br/>
 [Postupy: Rozšíření knihovny zařazování](../dotnet/how-to-extend-the-marshaling-library.md)

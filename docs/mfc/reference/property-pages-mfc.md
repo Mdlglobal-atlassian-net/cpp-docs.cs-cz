@@ -5,49 +5,49 @@ helpviewer_keywords:
 - property page data transfer functions in MFC
 - property pages [MFC], global MFC functions
 ms.assetid: 734f88bc-c776-4136-9b0e-f45c761a45c1
-ms.openlocfilehash: 1c4e6c585bf216518e46109e88a2388da03a0496
-ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
+ms.openlocfilehash: 1064cd99d1820ae8865fa632c3097441172c78c4
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65611780"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373000"
 ---
 # <a name="property-pages-mfc"></a>Stránky vlastností (MFC)
 
-Stránky vlastností zobrazí aktuální hodnoty konkrétní vlastnosti ovládacích prvků OLE v přizpůsobitelné grafické rozhraní pro prohlížení a úpravy díky podpoře mechanismu mapování dat podle výměna dat dialogových oken (DDX).
+Stránky vlastností zobrazují aktuální hodnoty specifických vlastností ovládacího prvku OLE v přizpůsobitelném grafickém rozhraní pro zobrazení a úpravy podporou mechanismu mapování dat založeného na výměně dat dialogu (DDX).
 
-Tento mechanismus mapování dat mapuje ovládací prvky stránky vlastností pro jednotlivé vlastnosti ovládacího prvku OLE. Hodnota vlastnosti ovládacího prvku odráží stav nebo obsah ovládacího prvku vlastnosti stránky. Mapování mezi ovládací prvky stránky vlastností a vlastností je určená **ddp_ –** funkce se volá na stránce vlastností `DoDataExchange` členskou funkci. Tady je seznam **ddp_ –** funkce, které výměnu dat zadané na stránce vlastností ovládacího prvku:
+Tento mechanismus mapování dat mapuje ovládací prvky stránky vlastností na jednotlivé vlastnosti ovládacího prvku OLE. Hodnota vlastnosti ovládacího prvku odráží stav nebo obsah ovládacího prvku stránky vlastnosti. Mapování mezi ovládacími prvky stránky **DDP_** vlastností a vlastnostmi `DoDataExchange` je určeno DDP_ volání funkce v členské funkci stránky vlastností. Následuje seznam **DDP_** funkcí, které si vyměňují data zadaná pomocí stránky vlastností ovládacího prvku:
 
 ### <a name="property-page-data-transfer"></a>Přenos dat stránky vlastností
 
 |||
 |-|-|
-|[DDP_CBIndex](#ddp_cbindex)|Propojí vybrané řetězcového indexu pole se seznamem s vlastností ovládacího prvku.|
-|[DDP_CBString](#ddp_cbstring)|Propojí vybrané řetězec v poli se seznamem s vlastností ovládacího prvku. Vybrané řetězce mohou začínat stejná písmena jako hodnotu vlastnosti, ale nemusí odpovídat plně.|
-|[DDP_CBStringExact](#ddp_cbstringexact)|Propojí vybrané řetězec v poli se seznamem s vlastností ovládacího prvku. Vybraný řetězec a hodnotu vlastnosti řetězce musí přesně shodovat.|
-|[DDP_Check](#ddp_check)|Obsahuje odkazy na stránce vlastností ovládacího prvku s vlastností ovládacího prvku zaškrtávací políčko.|
-|[DDP_LBIndex](#ddp_lbindex)|Propojí vybrané řetězcového indexu v seznamu pomocí ovládacího prvku.|
-|[DDP_LBString](#ddp_lbstring)|Propojí vybrané řetězec v seznamu pomocí ovládacího prvku. Vybrané řetězce mohou začínat stejná písmena jako hodnotu vlastnosti, ale nemusejí odpovídat plně.|
-|[DDP_LBStringExact](#ddp_lbstringexact)|Propojí vybrané řetězec v seznamu pomocí ovládacího prvku. Vybraný řetězec a hodnotu vlastnosti řetězce musí přesně shodovat.|
-|[DDP_PostProcessing](#ddp_postprocessing)|Dokončení převodu hodnoty vlastnosti z ovládacího prvku.|
-|[DDP_Radio](#ddp_radio)|Odkazy skupině přepínacích tlačítek na stránce vlastností ovládacího prvku s vlastností ovládacího prvku.|
-|[DDP_Text](#ddp_text)|Obsahuje odkazy ovládací prvek na stránce vlastností ovládacího prvku s vlastností ovládacího prvku. Tato funkce zpracovává několik různých typů vlastností, jako například **double**, **krátký**, BSTR, a **dlouhé**.|
+|[DDP_CBIndex](#ddp_cbindex)|Propojí index vybraného řetězce v poli se seznamem s vlastností ovládacího prvku.|
+|[DDP_CBString](#ddp_cbstring)|Propojí vybraný řetězec v poli se seznamem s vlastností ovládacího prvku. Vybraný řetězec může začínat stejnými písmeny jako hodnota vlastnosti, ale nemusí se plně shodovat.|
+|[DDP_CBStringExact](#ddp_cbstringexact)|Propojí vybraný řetězec v poli se seznamem s vlastností ovládacího prvku. Vybraný řetězec a hodnota řetězce vlastnosti se musí přesně shodovat.|
+|[DDP_Check](#ddp_check)|Propojí zaškrtávací políčko na stránce vlastností ovládacího prvku s vlastností ovládacího prvku.|
+|[DDP_LBIndex](#ddp_lbindex)|Propojí index vybraného řetězce v seznamu s vlastností ovládacího prvku.|
+|[DDP_LBString](#ddp_lbstring)|Propojí vybraný řetězec v seznamu s vlastností ovládacího prvku. Vybraný řetězec může začínat stejnými písmeny jako hodnota vlastnosti, ale nemusí se plně shodovat.|
+|[DDP_LBStringExact](#ddp_lbstringexact)|Propojí vybraný řetězec v seznamu s vlastností ovládacího prvku. Vybraný řetězec a hodnota řetězce vlastnosti se musí přesně shodovat.|
+|[DDP_PostProcessing](#ddp_postprocessing)|Dokončí přenos hodnot vlastností z ovládacího prvku.|
+|[DDP_Radio](#ddp_radio)|Propojí skupinu přepínacích tlačítek na stránce vlastností ovládacího prvku s vlastností ovládacího prvku.|
+|[DDP_Text](#ddp_text)|Propojí ovládací prvek na stránce vlastností ovládacího prvku s vlastností ovládacího prvku. Tato funkce zpracovává několik různých typů vlastností, například **double**, **short**, BSTR a **long**.|
 
-Další informace o `DoDataExchange` funkce a vlastnosti stránky, najdete v článku [ovládací prvky ActiveX: Stránky vlastností](../../mfc/mfc-activex-controls-property-pages.md).
+Další informace o `DoDataExchange` stránkách funkcí a vlastností naleznete v článku [Ovládací prvky ActiveX: Stránky vlastností](../../mfc/mfc-activex-controls-property-pages.md).
 
-Následuje seznam makra použitá k vytvoření a správě stránek vlastností pro ovládací prvek OLE:
+Následuje seznam maker použitých k vytvoření a správě stránek vlastností ovládacího prvku OLE:
 
 ### <a name="property-pages"></a>Stránky vlastností
 
 |||
 |-|-|
-|[BEGIN_PROPPAGEIDS](#begin_proppageids)|Začne seznam ID stránek vlastností.|
-|[END_PROPPAGEIDS](#end_proppageids)|Konec seznamu ID stránek vlastností.|
-|[PROPPAGEID](#proppageid)|Deklaruje stránky vlastností třídy ovládacího prvku.|
+|[BEGIN_PROPPAGEIDS](#begin_proppageids)|Začíná se seznam ID stránky vlastností.|
+|[END_PROPPAGEIDS](#end_proppageids)|Ukončí seznam ID stránky vlastností.|
+|[PROPPAGEID](#proppageid)|Deklaruje stránku vlastností třídy ovládacího prvku.|
 
-##  <a name="ddp_cbindex"></a>  DDP_CBIndex
+## <a name="ddp_cbindex"></a><a name="ddp_cbindex"></a>DDP_CBIndex
 
-Voláním této funkce na stránce vlastností `DoDataExchange` funkce pro synchronizaci se index aktuálního výběru v poli se seznamem na stránce vlastností hodnota celočíselnou vlastnost.
+Volání této funkce ve `DoDataExchange` funkci stránky vlastností k synchronizaci hodnoty vlastnosti celé číslo s indexem aktuálního výběru v poli se seznamem na stránce vlastností.
 
 ```
 void AFXAPI DDP_CBIndex(
@@ -59,29 +59,29 @@ void AFXAPI DDP_CBIndex(
 
 ### <a name="parameters"></a>Parametry
 
-*pDX*<br/>
-Ukazatel `CDataExchange` objektu. Architektura dodává tento objekt k vytvoření kontextu výměny dat, včetně jeho směr.
+*Pdx*<br/>
+Ukazatel na `CDataExchange` objekt. Rámec poskytuje tento objekt k vytvoření kontextu výměny dat, včetně jeho směru.
 
-*id*<br/>
-ID prostředku se seznamem pole ovládacího prvku přidruženého k vlastnosti ovládacího prvku určené *pszPropName*.
+*Id*<br/>
+ID prostředku ovládacího prvku pole se seznamem přidruženého k vlastnosti ovládacího prvku určené *pszPropName*.
 
-*Člen*<br/>
-Členské proměnné přidružené k ovládacímu prvku stránka vlastnosti určené *id* a vlastnost určenou *pszPropName*.
+*Členské*<br/>
+Členská proměnná přidružená k ovládacímu prvku stránky vlastností určenému *id* a vlastností určenou *pszPropName*.
 
 *pszPropName*<br/>
-Název vlastnosti ovládacího prvku, který bude vyměněn za prvek pole se seznamem určené *id*.
+Název vlastnosti control, která má být vyměněna s ovládacím prvkem pole se seznamem určeným *id*.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce by měla být volána před odpovídajícími `DDX_CBIndex` volání funkce.
+Tato funkce by měla `DDX_CBIndex` být volána před voláním odpovídající funkce.
 
 ### <a name="requirements"></a>Požadavky
 
-  **Header** afxctl.h
+  **Záhlaví** afxctl.h
 
-##  <a name="ddp_cbstring"></a>  DDP_CBString
+## <a name="ddp_cbstring"></a><a name="ddp_cbstring"></a>DDP_CBString
 
-Voláním této funkce na stránce vlastností `DoDataExchange` funkce synchronizace hodnotu vlastnosti řetězce pomocí aktuálního výběru v poli se seznamem na stránce vlastností.
+Volání této funkce ve `DoDataExchange` funkci stránky vlastností k synchronizaci hodnoty vlastnosti řetězce s aktuálním výběrem v poli se seznamem na stránce vlastností.
 
 ```
 void AFXAPI DDP_CBString(
@@ -93,29 +93,29 @@ void AFXAPI DDP_CBString(
 
 ### <a name="parameters"></a>Parametry
 
-*pDX*<br/>
-Ukazatel `CDataExchange` objektu. Architektura dodává tento objekt k vytvoření kontextu výměny dat, včetně jeho směr.
+*Pdx*<br/>
+Ukazatel na `CDataExchange` objekt. Rámec poskytuje tento objekt k vytvoření kontextu výměny dat, včetně jeho směru.
 
-*id*<br/>
-ID prostředku se seznamem pole ovládacího prvku přidruženého k vlastnosti ovládacího prvku určené *pszPropName*.
+*Id*<br/>
+ID prostředku ovládacího prvku pole se seznamem přidruženého k vlastnosti ovládacího prvku určené *pszPropName*.
 
-*Člen*<br/>
-Členské proměnné přidružené k ovládacímu prvku stránka vlastnosti určené *id* a vlastnost určenou *pszPropName*.
+*Členské*<br/>
+Členská proměnná přidružená k ovládacímu prvku stránky vlastností určenému *id* a vlastností určenou *pszPropName*.
 
 *pszPropName*<br/>
-Název vlastnosti ovládacího prvku, který bude vyměněn za řetězec pole se seznamem určený *id*.
+Název vlastnosti control, která má být vyměněna s řetězcem pole se seznamem určeným *id*.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce by měla být volána před odpovídajícími `DDX_CBString` volání funkce.
+Tato funkce by měla `DDX_CBString` být volána před voláním odpovídající funkce.
 
 ### <a name="requirements"></a>Požadavky
 
-  **Header** afxctl.h
+  **Záhlaví** afxctl.h
 
-##  <a name="ddp_cbstringexact"></a>  Ddp_cbstringexact –
+## <a name="ddp_cbstringexact"></a><a name="ddp_cbstringexact"></a>DDP_CBStringExact
 
-Voláním této funkce na stránce vlastností `DoDataExchange` funkce synchronizace se změní hodnota vlastnosti řetězce, který přesně odpovídá aktuální výběr v poli se seznamem na stránce vlastností.
+Volání této funkce ve `DoDataExchange` funkci stránky vlastností k synchronizaci hodnoty vlastnosti řetězce, která přesně odpovídá aktuálnímu výběru v poli se seznamem na stránce vlastností.
 
 ```
 void AFXAPI DDP_CBStringExact(
@@ -127,29 +127,29 @@ void AFXAPI DDP_CBStringExact(
 
 ### <a name="parameters"></a>Parametry
 
-*pDX*<br/>
-Ukazatel `CDataExchange` objektu. Architektura dodává tento objekt k vytvoření kontextu výměny dat, včetně jeho směr.
+*Pdx*<br/>
+Ukazatel na `CDataExchange` objekt. Rámec poskytuje tento objekt k vytvoření kontextu výměny dat, včetně jeho směru.
 
-*id*<br/>
-ID prostředku se seznamem pole ovládacího prvku přidruženého k vlastnosti ovládacího prvku určené *pszPropName*.
+*Id*<br/>
+ID prostředku ovládacího prvku pole se seznamem přidruženého k vlastnosti ovládacího prvku určené *pszPropName*.
 
-*Člen*<br/>
-Členské proměnné přidružené k ovládacímu prvku stránka vlastnosti určené *id* a vlastnost určenou *pszPropName*.
+*Členské*<br/>
+Členská proměnná přidružená k ovládacímu prvku stránky vlastností určenému *id* a vlastností určenou *pszPropName*.
 
 *pszPropName*<br/>
-Název vlastnosti ovládacího prvku, který bude vyměněn za řetězec pole se seznamem určený *id*.
+Název vlastnosti control, která má být vyměněna s řetězcem pole se seznamem určeným *id*.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce by měla být volána před odpovídajícími `DDX_CBStringExact` volání funkce.
+Tato funkce by měla `DDX_CBStringExact` být volána před voláním odpovídající funkce.
 
 ### <a name="requirements"></a>Požadavky
 
-  **Header** afxctl.h
+  **Záhlaví** afxctl.h
 
-##  <a name="ddp_check"></a>  Ddp_check –
+## <a name="ddp_check"></a><a name="ddp_check"></a>DDP_Check
 
-Voláním této funkce na stránce vlastností `DoDataExchange` funkce pro synchronizaci hodnoty vlastnosti se ovládací prvek zaškrtávací políčko přidružené vlastnosti stránky.
+Volání této funkce ve `DoDataExchange` funkci stránky vlastností k synchronizaci hodnoty vlastnosti s přidruženým ovládacím prvkem stránky vlastností.
 
 ```
 void AFXAPI DDP_Check(
@@ -161,29 +161,29 @@ void AFXAPI DDP_Check(
 
 ### <a name="parameters"></a>Parametry
 
-*pDX*<br/>
-Ukazatel `CDataExchange` objektu. Architektura dodává tento objekt k vytvoření kontextu výměny dat, včetně jeho směr.
+*Pdx*<br/>
+Ukazatel na `CDataExchange` objekt. Rámec poskytuje tento objekt k vytvoření kontextu výměny dat, včetně jeho směru.
 
-*id*<br/>
-ID prostředku v ovládacím prvku zaškrtávací políčko přidružené vlastnosti ovládacího prvku určené *pszPropName*.
+*Id*<br/>
+ID prostředku ovládacího prvku zaškrtávacího políčka přidruženého k vlastnosti ovládacího prvku určené *pszPropName*.
 
-*Člen*<br/>
-Členské proměnné přidružené k ovládacímu prvku stránka vlastnosti určené *id* a vlastnost určenou *pszPropName*.
+*Členské*<br/>
+Členská proměnná přidružená k ovládacímu prvku stránky vlastností určenému *id* a vlastností určenou *pszPropName*.
 
 *pszPropName*<br/>
-Název vlastnosti ovládacího prvku, který bude vyměněn za ovládací prvek zaškrtávací políčko určené *id*.
+Název vlastnosti control, která má být vyměněna s ovládacím prvkem zaškrtávacího políčka určeným *id*.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce by měla být volána před odpovídajícími `DDX_Check` volání funkce.
+Tato funkce by měla `DDX_Check` být volána před voláním odpovídající funkce.
 
 ### <a name="requirements"></a>Požadavky
 
-  **Header** afxctl.h
+  **Záhlaví** afxctl.h
 
-##  <a name="ddp_lbindex"></a>  DDP_LBIndex
+## <a name="ddp_lbindex"></a><a name="ddp_lbindex"></a>DDP_LBIndex
 
-Voláním této funkce na stránce vlastností `DoDataExchange` funkce pro synchronizaci se index aktuálně vybrané položky v seznamu na stránce vlastností hodnota celočíselnou vlastnost.
+Volání této funkce ve `DoDataExchange` funkci stránky vlastností k synchronizaci hodnoty vlastnosti celé číslo s indexem aktuálního výběru v seznamu na stránce vlastností.
 
 ```
 void AFXAPI DDP_LBIndex(
@@ -195,29 +195,29 @@ void AFXAPI DDP_LBIndex(
 
 ### <a name="parameters"></a>Parametry
 
-*pDX*<br/>
-Ukazatel `CDataExchange` objektu. Architektura dodává tento objekt k vytvoření kontextu výměny dat, včetně jeho směr.
+*Pdx*<br/>
+Ukazatel na `CDataExchange` objekt. Rámec poskytuje tento objekt k vytvoření kontextu výměny dat, včetně jeho směru.
 
-*id*<br/>
-ID prostředku v seznamu pole ovládacího prvku přidruženého k vlastnosti ovládacího prvku určené *pszPropName*.
+*Id*<br/>
+ID prostředku ovládacího prvku seznamu přidruženého k vlastnosti ovládacího prvku určené *pszPropName*.
 
-*Člen*<br/>
-Členské proměnné přidružené k ovládacímu prvku stránka vlastnosti určené *id* a vlastnost určenou *pszPropName*.
+*Členské*<br/>
+Členská proměnná přidružená k ovládacímu prvku stránky vlastností určenému *id* a vlastností určenou *pszPropName*.
 
 *pszPropName*<br/>
-Název vlastnosti ovládacího prvku, který bude vyměněn za seznam pole řetězec určený *id*.
+Název vlastnosti control, která má být vyměněna se řetězcem seznamu určeným *id*.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce by měla být volána před odpovídajícími `DDX_LBIndex` volání funkce.
+Tato funkce by měla `DDX_LBIndex` být volána před voláním odpovídající funkce.
 
 ### <a name="requirements"></a>Požadavky
 
-  **Header** afxctl.h
+  **Záhlaví** afxctl.h
 
-##  <a name="ddp_lbstring"></a>  Ddp_lbstring –
+## <a name="ddp_lbstring"></a><a name="ddp_lbstring"></a>DDP_LBString
 
-Voláním této funkce na stránce vlastností `DoDataExchange` funkce synchronizace hodnotu vlastnosti řetězce pomocí aktuálního výběru v rozevíracím seznamu na stránce vlastností.
+Volánítéto funkce ve `DoDataExchange` funkci stránky vlastností pro synchronizaci hodnoty vlastnosti řetězce s aktuálním výběrem v seznamu na stránce vlastností.
 
 ```
 void AFXAPI DDP_LBString(
@@ -229,29 +229,29 @@ void AFXAPI DDP_LBString(
 
 ### <a name="parameters"></a>Parametry
 
-*pDX*<br/>
-Ukazatel `CDataExchange` objektu. Architektura dodává tento objekt k vytvoření kontextu výměny dat, včetně jeho směr.
+*Pdx*<br/>
+Ukazatel na `CDataExchange` objekt. Rámec poskytuje tento objekt k vytvoření kontextu výměny dat, včetně jeho směru.
 
-*id*<br/>
-ID prostředku v seznamu pole ovládacího prvku přidruženého k vlastnosti ovládacího prvku určené *pszPropName*.
+*Id*<br/>
+ID prostředku ovládacího prvku seznamu přidruženého k vlastnosti ovládacího prvku určené *pszPropName*.
 
-*Člen*<br/>
-Členské proměnné přidružené k ovládacímu prvku stránka vlastnosti určené *id* a vlastnost určenou *pszPropName*.
+*Členské*<br/>
+Členská proměnná přidružená k ovládacímu prvku stránky vlastností určenému *id* a vlastností určenou *pszPropName*.
 
 *pszPropName*<br/>
-Název vlastnosti ovládacího prvku, který bude vyměněn za seznam pole řetězec určený *id*.
+Název vlastnosti control, která má být vyměněna se řetězcem seznamu určeným *id*.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce by měla být volána před odpovídajícími `DDX_LBString` volání funkce.
+Tato funkce by měla `DDX_LBString` být volána před voláním odpovídající funkce.
 
 ### <a name="requirements"></a>Požadavky
 
-  **Header** afxctl.h
+  **Záhlaví** afxctl.h
 
-##  <a name="ddp_lbstringexact"></a>  Ddp_lbstringexact –
+## <a name="ddp_lbstringexact"></a><a name="ddp_lbstringexact"></a>DDP_LBStringExact
 
-Voláním této funkce na stránce vlastností `DoDataExchange` funkce synchronizace se změní hodnota vlastnosti řetězce, který přesně odpovídá aktuální výběr v seznamu na stránce vlastností.
+Volání této funkce ve `DoDataExchange` funkci stránky vlastností k synchronizaci hodnoty vlastnosti řetězce, která přesně odpovídá aktuálnímu výběru v seznamu na stránce vlastností.
 
 ```
 void AFXAPI DDP_LBStringExact(
@@ -263,29 +263,29 @@ void AFXAPI DDP_LBStringExact(
 
 ### <a name="parameters"></a>Parametry
 
-*pDX*<br/>
-Ukazatel `CDataExchange` objektu. Architektura dodává tento objekt k vytvoření kontextu výměny dat, včetně jeho směr.
+*Pdx*<br/>
+Ukazatel na `CDataExchange` objekt. Rámec poskytuje tento objekt k vytvoření kontextu výměny dat, včetně jeho směru.
 
-*id*<br/>
-ID prostředku v seznamu pole ovládacího prvku přidruženého k vlastnosti ovládacího prvku určené *pszPropName*.
+*Id*<br/>
+ID prostředku ovládacího prvku seznamu přidruženého k vlastnosti ovládacího prvku určené *pszPropName*.
 
-*Člen*<br/>
-Členské proměnné přidružené k ovládacímu prvku stránka vlastnosti určené *id* a vlastnost určenou *pszPropName*.
+*Členské*<br/>
+Členská proměnná přidružená k ovládacímu prvku stránky vlastností určenému *id* a vlastností určenou *pszPropName*.
 
 *pszPropName*<br/>
-Název vlastnosti ovládacího prvku, který bude vyměněn za seznam pole řetězec určený *id*.
+Název vlastnosti control, která má být vyměněna se řetězcem seznamu určeným *id*.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce by měla být volána před odpovídajícími `DDX_LBStringExact` volání funkce.
+Tato funkce by měla `DDX_LBStringExact` být volána před voláním odpovídající funkce.
 
 ### <a name="requirements"></a>Požadavky
 
-  **Header** afxctl.h
+  **Záhlaví** afxctl.h
 
-##  <a name="ddp_postprocessing"></a>  Ddp_postprocessing –
+## <a name="ddp_postprocessing"></a><a name="ddp_postprocessing"></a>DDP_PostProcessing
 
-Voláním této funkce na stránce vlastností `DoDataExchange` funkce, dokončete převod hodnoty vlastností na stránce vlastností do ovládacího prvku při uložení hodnoty vlastnosti.
+Volání této funkce ve `DoDataExchange` funkci stránky vlastností, dokončit převod hodnot vlastností ze stránky vlastností do ovládacího prvku při ukládání hodnot vlastností.
 
 ```
 void AFXAPI DDP_PostProcessing(CDataExchange * pDX);
@@ -293,22 +293,22 @@ void AFXAPI DDP_PostProcessing(CDataExchange * pDX);
 
 ### <a name="parameters"></a>Parametry
 
-*pDX*<br/>
-Ukazatel `CDataExchange` objektu. Architektura dodává tento objekt k vytvoření kontextu výměny dat, včetně jeho směr.
+*Pdx*<br/>
+Ukazatel na `CDataExchange` objekt. Rámec poskytuje tento objekt k vytvoření kontextu výměny dat, včetně jeho směru.
 
 ### <a name="remarks"></a>Poznámky
 
-Tuto funkci lze volat po dokončení všechny funkce výměny dat. Příklad:
+Tato funkce by měla být volána po dokončení všech funkcí výměny dat. Příklad:
 
 [!code-cpp[NVC_MFCAxCtl#15](../../mfc/reference/codesnippet/cpp/property-pages-mfc_1.cpp)]
 
 ### <a name="requirements"></a>Požadavky
 
-  **Header** afxctl.h
+  **Záhlaví** afxctl.h
 
-##  <a name="ddp_radio"></a>  DDP_Radio
+## <a name="ddp_radio"></a><a name="ddp_radio"></a>DDP_Radio
 
-Voláním této funkce ve vašem ovládacím prvku `DoPropExchange` funkce pro synchronizaci hodnoty vlastnosti se přidružené vlastnosti stránky ovládací prvek přepínač.
+Volání této funkce ve `DoPropExchange` funkci ovládacího prvku pro synchronizaci hodnoty vlastnosti s ovládacím prvkem přidružené stránky stránky přepínacího tlačítka.
 
 ```
 void AFXAPI DDP_Radio(
@@ -320,29 +320,29 @@ void AFXAPI DDP_Radio(
 
 ### <a name="parameters"></a>Parametry
 
-*pDX*<br/>
-Ukazatel `CDataExchange` objektu. Architektura dodává tento objekt k vytvoření kontextu výměny dat, včetně jeho směr.
+*Pdx*<br/>
+Ukazatel na `CDataExchange` objekt. Rámec poskytuje tento objekt k vytvoření kontextu výměny dat, včetně jeho směru.
 
-*id*<br/>
-ID prostředku přepínače tlačítko ovládacího prvku přidruženého k vlastnosti ovládacího prvku určené *pszPropName*.
+*Id*<br/>
+ID prostředku ovládacího prvku přepínacího tlačítka přidruženého k vlastnosti ovládacího prvku určené *pszPropName*.
 
-*Člen*<br/>
-Členské proměnné přidružené k ovládacímu prvku stránka vlastnosti určené *id* a vlastnost určenou *pszPropName*.
+*Členské*<br/>
+Členská proměnná přidružená k ovládacímu prvku stránky vlastností určenému *id* a vlastností určenou *pszPropName*.
 
 *pszPropName*<br/>
-Název vlastnosti ovládacího prvku, který bude vyměněn za ovládacího prvku tlačítko přepínače určené *id*.
+Název vlastnosti control, která má být vyměněna s ovládacím prvkem přepínacího tlačítka určeným *id*.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce by měla být volána před odpovídajícími `DDX_Radio` volání funkce.
+Tato funkce by měla `DDX_Radio` být volána před voláním odpovídající funkce.
 
 ### <a name="requirements"></a>Požadavky
 
-  **Header** afxctl.h
+  **Záhlaví** afxctl.h
 
-##  <a name="ddp_text"></a>  DDP_Text
+## <a name="ddp_text"></a><a name="ddp_text"></a>DDP_Text
 
-Voláním této funkce ve vašem ovládacím prvku `DoDataExchange` funkce synchronizace hodnoty vlastnosti pomocí ovládacího prvku přidružené vlastnosti stránky.
+Volání této funkce ve `DoDataExchange` funkci ovládacího prvku synchronizovat hodnotu vlastnosti s přidruženým ovládacím prvkem stránky vlastností.
 
 ```
 void AFXAPI DDP_Text(
@@ -396,29 +396,29 @@ void AFXAPI DDP_Text(
 
 ### <a name="parameters"></a>Parametry
 
-*pDX*<br/>
-Ukazatel `CDataExchange` objektu. Architektura dodává tento objekt k vytvoření kontextu výměny dat, včetně jeho směr.
+*Pdx*<br/>
+Ukazatel na `CDataExchange` objekt. Rámec poskytuje tento objekt k vytvoření kontextu výměny dat, včetně jeho směru.
 
-*id*<br/>
-ID prostředku ovládacího prvku přidruženého k vlastnosti ovládacího prvku určené *pszPropName*.
+*Id*<br/>
+ID prostředku ovládacího prvku přidruženého k vlastnosti ovládacího prvku zadané *pszPropName*.
 
-*Člen*<br/>
-Členské proměnné přidružené k ovládacímu prvku stránka vlastnosti určené *id* a vlastnost určenou *pszPropName*.
+*Členské*<br/>
+Členská proměnná přidružená k ovládacímu prvku stránky vlastností určenému *id* a vlastností určenou *pszPropName*.
 
 *pszPropName*<br/>
-Název vlastnosti ovládacího prvku, který bude vyměněn za ovládací prvek určený *id*.
+Název vlastnosti control, která má být vyměněna s ovládacím prvkem určeným *id*.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce by měla být volána před odpovídajícími `DDX_Text` volání funkce.
+Tato funkce by měla `DDX_Text` být volána před voláním odpovídající funkce.
 
 ### <a name="requirements"></a>Požadavky
 
-  **Header** afxctl.h
+  **Záhlaví** afxctl.h
 
-##  <a name="begin_proppageids"></a>  BEGIN_PROPPAGEIDS
+## <a name="begin_proppageids"></a><a name="begin_proppageids"></a>BEGIN_PROPPAGEIDS
 
-Začíná definice ovládacího prvku seznam ID stránek vlastností.
+Začíná definice seznamu id stránky vlastností ovládacího prvku.
 
 ```
 BEGIN_PROPPAGEIDS(class_name,  count)
@@ -427,22 +427,22 @@ BEGIN_PROPPAGEIDS(class_name,  count)
 ### <a name="parameters"></a>Parametry
 
 *class_name*<br/>
-Název třídy ovládacího prvku pro vlastnosti, které jsou určené stránky.
+Název třídy ovládacího prvku, pro kterou jsou určeny stránky vlastností.
 
 *Počet*<br/>
-Číslo stránky vlastností, které používá třída ovládacího prvku.
+Počet stránek vlastností používaných třídou ovládacího prvku.
 
 ### <a name="remarks"></a>Poznámky
 
-V souboru implementace (.cpp), který definuje členské funkce třídy seznam vlastností stránky začínat BEGIN_PROPPAGEIDS – makro pak přidat makro položky pro každý z vašich stránky vlastností a dokončení seznamu vlastností stránky pomocí END_PROPPAGEIDS makra.
+V souboru implementace (.cpp), který definuje členské funkce pro vaši třídu, spusťte seznam stránek vlastností pomocí BEGIN_PROPPAGEIDS makra, přidejte položky maker pro každou stránku vlastností a dokončete seznam stránek vlastností END_PROPPAGEIDS makra.
 
-Další informace na stránkách vlastností, najdete v článku [ovládací prvky ActiveX: Stránky vlastností](../../mfc/mfc-activex-controls-property-pages.md).
+Další informace o stránkách vlastností naleznete v článku [Ovládací prvky ActiveX: Stránky vlastností](../../mfc/mfc-activex-controls-property-pages.md).
 
 ### <a name="requirements"></a>Požadavky
 
-  **Header** afxctl.h
+  **Záhlaví** afxctl.h
 
-##  <a name="end_proppageids"></a>  END_PROPPAGEIDS
+## <a name="end_proppageids"></a><a name="end_proppageids"></a>END_PROPPAGEIDS
 
 Ukončí definici seznamu ID stránky vlastností.
 
@@ -453,15 +453,15 @@ END_PROPPAGEIDS(class_name)
 ### <a name="parameters"></a>Parametry
 
 *class_name*<br/>
-Název třídy ovládacího prvku, který vlastní stránky vlastností.
+Název třídy ovládacího prvku, která vlastní stránku vlastností.
 
 ### <a name="requirements"></a>Požadavky
 
-  **Header** afxctl.h
+  **Záhlaví** afxctl.h
 
-##  <a name="proppageid"></a>  PROPPAGEID
+## <a name="proppageid"></a><a name="proppageid"></a>PROPPAGEID
 
-Přidá stránky vlastností pro použití ovládacího prvku OLE.
+Přidá stránku vlastností pro použití ovládacím prvkem OLE.
 
 ```
 PROPPAGEID(clsid)
@@ -469,17 +469,17 @@ PROPPAGEID(clsid)
 
 ### <a name="parameters"></a>Parametry
 
-*clsid*<br/>
-ID jedinečné třídy stránky vlastností.
+*Identifikátor clsid*<br/>
+Jedinečné ID třídy stránky vlastností.
 
 ### <a name="remarks"></a>Poznámky
 
-Všechna makra PROPPAGEID musí být umístěn mezi BEGIN_PROPPAGEIDS a END_PROPPAGEIDS makra v souboru implementace ovládacího prvku.
+Všechna makra PROPPAGEID musí být umístěna mezi BEGIN_PROPPAGEIDS a END_PROPPAGEIDS makra v implementačním souboru ovládacího prvku.
 
 ### <a name="requirements"></a>Požadavky
 
-  **Header** afxctl.h
+  **Záhlaví** afxctl.h
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Makra a globální prvky](../../mfc/reference/mfc-macros-and-globals.md)
+[Makra a globální](../../mfc/reference/mfc-macros-and-globals.md)

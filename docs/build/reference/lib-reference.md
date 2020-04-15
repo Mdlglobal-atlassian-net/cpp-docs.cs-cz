@@ -10,23 +10,23 @@ helpviewer_keywords:
 - LIB [C++]
 - 32-Bit Library Manager
 ms.assetid: ecc7f643-bbd4-47a3-8dc6-b360f880db91
-ms.openlocfilehash: 8e0c2815fdc3ab9ab171d3ebb94480393c8815ed
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d4ce4e4723faa943a8de1431a604fc7acca2d528
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62291493"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81328216"
 ---
 # <a name="lib-reference"></a>Referenční dokumentace ke knihovně LIB
 
-Správce knihovny Microsoft (LIB.exe) vytváří a spravuje knihovnu objektových souborů Common Object File Format (COFF). Lib – lze také vytvořit soubory exportu a importu knihovny odkaz exportovat definice.
+Správce knihovny (LIB.exe) vytváří a spravuje knihovnu souborů objektů COFF (Common Object File Format). LIB lze také použít k vytvoření exportních souborů a knihoven importu pro odkaz na exportované definice.
 
 > [!NOTE]
->  Tento nástroj můžete spustit pouze z příkazového řádku sady Visual Studio. Nelze provést toto spuštění z příkazového řádku systému nebo Průzkumníka souborů.
+> Tento nástroj lze spustit pouze z příkazového řádku sady Visual Studio. Nelze jej spustit ze systémového příkazového řádku nebo z Průzkumníka souborů.
 
 - [Přehled knihovny LIB](overview-of-lib.md)
 
-- [Postupy: Nastavení možností LIB.EXE ve vývojovém prostředí sady Visual Studio](how-to-set-lib-exe-options-in-the-visual-studio-development-environment.md)
+- [Postupy: Nastavení možností LIB.EXE ve vývojovém prostředí Visual Studio](how-to-set-lib-exe-options-in-the-visual-studio-development-environment.md)
 
 - [Spuštění knihovny LIB](running-lib.md)
 
@@ -36,6 +36,6 @@ Správce knihovny Microsoft (LIB.exe) vytváří a spravuje knihovnu objektovýc
 
 - [Práce s knihovnami importu a soubory exportu](working-with-import-libraries-and-export-files.md)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Nástroje pro vytváření dalších MSVC](c-cpp-build-tools.md)
+[Další nástroje pro sestavení msvc](c-cpp-build-tools.md)

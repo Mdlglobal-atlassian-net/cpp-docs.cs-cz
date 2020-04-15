@@ -1,5 +1,5 @@
 ---
-title: Prostředky
+title: Zdroje a prostředky
 ms.date: 08/28/2019
 ms.topic: article
 ms.assetid: dade2f6b-c51f-4c33-9023-41956ae4b5f6
@@ -14,55 +14,55 @@ f1_keywords:
 - VC.Project.VCResourceCompilerTool.ResourceOutputFileName
 - VC.Project.VCResourceCompilerTool.NullTerminateStrings
 - vc.project.AdditionalOptionsPage
-ms.openlocfilehash: 16168e7eb5e27f4ec0380d53cf8a5c4b9586ec34
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: c4a3048bfa07e9635662534b510fa57caa091f00
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80171135"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81336080"
 ---
-# <a name="resources-property-page"></a>Stránka vlastností prostředků
+# <a name="resources-property-page"></a>Stránka vlastností Zdroje
 
-Pro nativní desktopové programy systému Windows vyvolá sestavení [kompilátor prostředků (RC. exe)](/windows/win32/menurc/resource-compiler) pro přidání obrázků, tabulek řetězců a souborů *. res* do binárního souboru. Vlastnosti, které jsou vystaveny na této stránce vlastností, jsou předány kompilátoru prostředků, C++ nikoli kompilátoru nebo linkeru. Další informace o zde uvedených vlastnostech a způsobu mapování na možnosti příkazového řádku RC najdete v tématu [použití RC (příkazový řádek RC)](/windows/win32/menurc/using-rc-the-rc-command-line-). Informace o tom, jak získat přístup ke stránkám vlastností **prostředků** , naleznete v tématu [Nastavení vlastností kompilátoru a sestavení v sadě C++ Visual Studio](../working-with-project-properties.md). Chcete-li programově přistupovat k těmto vlastnostem, přečtěte si téma <xref:Microsoft.VisualStudio.VCProjectEngine.VCResourceCompilerTool>.
+U nativních desktopových programů systému Windows vytvoří sestavení [kompilátor prostředků (rc.exe) a](/windows/win32/menurc/resource-compiler) přidá do binárního souboru obrázky, řetězcové tabulky a soubory *RES.* Vlastnosti vystavené na této stránce vlastností jsou předány kompilátoru prostředků, nikoli kompilátoru Jazyka C++ nebo propojovacímu programu. Další informace o zde uvedených vlastnostech a o tom, jak jsou mapovány na možnosti příkazového řádku RC, naleznete [v tématu Použití RC (Příkazový řádek RC).](/windows/win32/menurc/using-rc-the-rc-command-line-) Informace o tom, jak získat přístup ke stránkám vlastností **Resources,** naleznete [v tématu Nastavení kompilátoru jazyka C++ a vlastností sestavení v sadě Visual Studio](../working-with-project-properties.md). Chcete-li programově získat <xref:Microsoft.VisualStudio.VCProjectEngine.VCResourceCompilerTool>přístup k těmto vlastnostem, naleznete v tématu .
 
-Vlastnosti pro prostředky .NET v C++aplikacích/CLI se zveřejňují na [stránce vlastností spravované prostředky](managed-resources-property-page.md).
+Vlastnosti prostředků .NET v aplikacích C++/CLI jsou vystaveny na [stránce vlastností spravovaných prostředků](managed-resources-property-page.md).
 
 ## <a name="preprocessor-definitions"></a>Definice preprocesoru
 
-Určuje jednu nebo více definic pro kompilátor prostředků. (/d [makro])
+Určuje jednu nebo více definic pro kompilátor prostředků. (/d[makro])
 
-## <a name="undefine-preprocessor-definitions"></a>Zrušit Definice preprocesoru
+## <a name="undefine-preprocessor-definitions"></a>Nedefinovat definice preprocesoru
 
-Zruší definici symbolu. přepínač
+Zrušit definici symbolu. (/u)
 
-## <a name="culture"></a>Kultura
+## <a name="culture"></a>Culture
 
-Vypíše jazykovou verzi (například AMERICKou angličtinu nebo italštinu) použitou v prostředcích. (/l [číslo])
+Seznam jazykové verze (například angličtina usa nebo italština) použité v prostředcích. (/l [num])
 
-## <a name="additional-include-directories"></a>Další adresáře k zahrnutí
+## <a name="additional-include-directories"></a>Další zahrnutí adresářů
 
-Určuje jeden nebo více adresářů, které mají být přidány do cesty include; použijte oddělovač středníkem, pokud je více než jeden. (/I [cesta])
+Určuje jeden nebo více adresářů, které chcete přidat do cesty zahrnutí; použijte oddělovač středníku, pokud je více než jeden. (/I[cesta])
 
 ## <a name="ignore-standard-include-paths"></a>Ignorovat standardní cesty zahrnutí
 
-Zabrání kompilátoru prostředků v hledání souborů k zahrnutí v adresářích zadaných v proměnných prostředí INCLUDE. /X
+Zabrání kompilátoru prostředků v hledání souborů zahrnutí v adresářích určených v proměnných prostředí INCLUDE. (/X)
 
 ## <a name="show-progress"></a>Zobrazit průběh
 
-Odeslat zprávy o průběhu do okna výstup. /v
+Odeslat zprávy o průběhu do výstupního okna. (/v)
 
-## <a name="suppress-startup-banner"></a>Potlačit úvodní nápis
+## <a name="suppress-startup-banner"></a>Potlačit spouštěcí banner
 
-Potlačit zobrazení úvodního nápisu a informační zprávy (/nologo)
+Potlačit zobrazení spouštěcího banneru a informační zprávy (/nologo)
 
 ## <a name="resource-file-name"></a>Název souboru prostředků
 
-Určuje název souboru prostředků (/FO [soubor]).
+Určuje název souboru prostředků (/fo[file])
 
-## <a name="null-terminate-strings"></a>Prázdné řetězce ukončení
+## <a name="null-terminate-strings"></a>Nulové řetězce ukončení
 
-Připojí hodnoty null k všem řetězcům v tabulce řetězců. n
+Připojit null pro všechny řetězce v tabulkách řetězců. (/n)
 
 ## <a name="see-also"></a>Viz také
 
-[C++odkaz na stránku vlastností projektu](property-pages-visual-cpp.md)
+[Odkaz na stránku vlastnosti projektu jazyka C++](property-pages-visual-cpp.md)

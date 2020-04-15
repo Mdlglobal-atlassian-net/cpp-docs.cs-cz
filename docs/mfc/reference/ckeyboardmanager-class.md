@@ -30,16 +30,16 @@ helpviewer_keywords:
 - CKeyboardManager [MFC], TranslateCharToUpper
 - CKeyboardManager [MFC], UpdateAccelTable
 ms.assetid: 4809ece6-89df-4479-8b53-9bf476ee107b
-ms.openlocfilehash: e4f8f678e76113b5d012242f474ff0ab8b0628dd
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 5d0f544943cc8584960bb2668ee7ce326547e2fa
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69505782"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372319"
 ---
 # <a name="ckeyboardmanager-class"></a>CKeyboardManager – třída
 
-Slouží ke správě tabulek klávesových zkratek pro hlavní okno rámce a pro okna podřízených rámečků.
+Spravuje tabulky klávesových zkratek pro okno hlavního rámce a podřízená okna rámců.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -53,51 +53,51 @@ class CKeyboardManager : public CObject
 
 |||
 |-|-|
-|Name|Popis|
-|[CKeyboardManager::CKeyboardManager](#ckeyboardmanager)|`CKeyboardManager` Vytvoří objekt.|
+|Name (Název)|Popis|
+|[CKeyboardManager::CKeyboardManager](#ckeyboardmanager)|Vytvoří `CKeyboardManager` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
 |||
 |-|-|
-|Name|Popis|
-|[CKeyboardManager:: CleanUp](#cleanup)|Vymaže tabulky klávesových zkratek.|
+|Name (Název)|Popis|
+|[CKeyboardManager::Vyčištění](#cleanup)|Vymaže tabulky klávesových zkratek.|
 |[CKeyboardManager::FindDefaultAccelerator](#finddefaultaccelerator)|Načte výchozí klávesovou zkratku pro zadaný příkaz a okno.|
-|[CKeyboardManager::IsKeyHandled](#iskeyhandled)|Určuje, zda je klíč zpracováván tabulkou akcelerátoru.|
-|[CKeyboardManager::IsKeyPrintable](#iskeyprintable)|Označuje, zda je znak tisknutelný.|
-|[CKeyboardManager::IsShowAllAccelerators](#isshowallaccelerators)|Označuje, zda jsou v nabídkách zobrazeny všechny klávesové zkratky pro příkaz nebo pouze výchozí klávesovou zkratku.|
-|[CKeyboardManager:: LoadState](#loadstate)|Načte z registru Windows tabulky klávesových zkratek.|
-|[CKeyboardManager::ResetAll](#resetall)|Znovu načte tabulky klávesových zkratek z prostředku aplikace.|
-|[CKeyboardManager:: SaveState](#savestate)|Uloží tabulky klávesových zkratek do registru systému Windows.|
-|[CKeyboardManager::ShowAllAccelerators](#showallaccelerators)|Určuje, zda se v rozhraní zobrazí všechny klávesové zkratky pro všechny příkazy nebo jedna klávesová zkratka pro každý příkaz. Tato metoda nemá vliv na příkazy, které mají pouze jednu přidruženou klávesovou zkratku.|
-|[CKeyboardManager::TranslateCharToUpper](#translatechartoupper)|Převede znak na jeho horní registr.|
+|[CKeyboardManager::IskeyHandled](#iskeyhandled)|Určuje, zda je klíč zpracován tabulkou akcelerátoru.|
+|[CKeyboardManager::IsKeyPrintable](#iskeyprintable)|Označuje, zda lze znak vytisknout.|
+|[CKeyboardManager::IsShowAllAccelerators](#isshowallaccelerators)|Označuje, zda nabídky zobrazují všechny klávesové zkratky pro příkaz nebo pouze výchozí klávesovou zkratku.|
+|[CKeyboardManager::LoadState](#loadstate)|Načte tabulky klávesových zkratek z registru systému Windows.|
+|[CKeyboardManager::Resetall](#resetall)|Znovu načte tabulky klávesových zkratek z prostředku aplikace.|
+|[CKeyboardManager::SaveState](#savestate)|Uloží tabulky klávesových zkratek do registru systému Windows.|
+|[CKeyboardManager::Zobrazitvšechnyakcelery](#showallaccelerators)|Určuje, zda se v rámci zobrazí všechny klávesové zkratky pro všechny příkazy nebo jednu klávesovou zkratku pro každý příkaz. Tato metoda nemá vliv na příkazy, které mají pouze jednu přidruženou klávesovou zkratku.|
+|[CKeyboardManager::PřeložitChartoupper](#translatechartoupper)|Převede znak na jeho horní registr.|
 |[CKeyboardManager::UpdateAccelTable](#updateacceltable)|Aktualizuje tabulku klávesových zkratek novou tabulkou klávesových zkratek.|
 
 ## <a name="remarks"></a>Poznámky
 
-Členové této třídy vám umožňují uložit a načíst tabulky klávesových zkratek do registru systému Windows, pomocí šablony aktualizovat tabulky krátkého vyjmutí klíče a vyhledat výchozí klávesovou zkratku pro příkaz v okně rámce. Kromě toho `CKeyboardManager` objekt umožňuje řídit, jak se budou zobrazovat klávesové zkratky uživateli.
+Členové této třídy umožňují ukládat a načítat tabulky klávesových zkratek do registru systému Windows, používat šablonu k aktualizaci krátkých tabulek kláves a najít výchozí klávesovou zkratku pro příkaz v okně rámce. Kromě toho `CKeyboardManager` objekt umožňuje řídit, jak se zobrazí klávesové zkratky pro uživatele.
 
-`CKeyboardManager` Objekt byste neměli vytvářet ručně. Vytvoří se automaticky architekturou vaší aplikace. Během procesu inicializace vaší aplikace byste však měli zavolat metodu [CWinAppEx:: InitKeyboardManager](../../mfc/reference/cwinappex-class.md#initkeyboardmanager) . Chcete-li získat ukazatel na správce klávesnice pro vaši aplikaci, zavolejte [CWinAppEx:: GetKeyboardManager](../../mfc/reference/cwinappex-class.md#getkeyboardmanager).
+Objekt byste neměli vytvářet `CKeyboardManager` ručně. Bude vytvořen automaticky v rámci vaší aplikace. Měli byste však volat [CWinAppEx::InitKeyboardManager](../../mfc/reference/cwinappex-class.md#initkeyboardmanager) během procesu inicializace vaší aplikace. Chcete-li získat ukazatel na správce klávesnice pro vaši aplikaci, volejte [CWinAppEx::GetKeyboardManager](../../mfc/reference/cwinappex-class.md#getkeyboardmanager).
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak načíst ukazatel na `CKeyboardManager` objekt `CWinAppEx` z třídy a jak zobrazit všechny klávesové zkratky přidružené k příkazům nabídky. Tento fragment kódu je součástí [ukázky vlastních stránek](../../overview/visual-cpp-samples.md).
+Následující příklad ukazuje, jak načíst `CKeyboardManager` ukazatel na `CWinAppEx` objekt z třídy a jak zobrazit všechny klávesové zkratky přidružené k příkazům nabídky. Tento fragment kódu je součástí [ukázky vlastních stránek](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_CustomPages#5](../../mfc/reference/codesnippet/cpp/ckeyboardmanager-class_1.cpp)]
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[CObject](../../mfc/reference/cobject-class.md)
+[CObjekt](../../mfc/reference/cobject-class.md)
 
 [CKeyboardManager](../../mfc/reference/ckeyboardmanager-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxkeyboardmanager. h
+**Záhlaví:** afxkeyboardmanager.h
 
-##  <a name="ckeyboardmanager"></a>CKeyboardManager::CKeyboardManager
+## <a name="ckeyboardmanagerckeyboardmanager"></a><a name="ckeyboardmanager"></a>CKeyboardManager::CKeyboardManager
 
-`CKeyboardManager` Vytvoří objekt.
+Vytvoří `CKeyboardManager` objekt.
 
 ```
 CKeyboardManager();
@@ -105,11 +105,11 @@ CKeyboardManager();
 
 ### <a name="remarks"></a>Poznámky
 
-Ve většině případů nemusíte vytvářet `CKeyboardManager` přímo. Ve výchozím nastavení vytvoří rozhraní jednu za vás. Chcete-li získat ukazatel na `CKeyboardManager`, zavolejte [CWinAppEx:: GetKeyboardManager](../../mfc/reference/cwinappex-class.md#getkeyboardmanager). Pokud vytvoříte jednu ručně, musíte ji inicializovat pomocí metody [CWinAppEx:: InitKeyboardManager](../../mfc/reference/cwinappex-class.md#initkeyboardmanager).
+Ve většině případů není třeba vytvořit `CKeyboardManager` přímo. Ve výchozím nastavení rozhraní vytvoří jeden pro vás. Chcete-li získat `CKeyboardManager`ukazatel na , volejte [CWinAppEx::GetKeyboardManager](../../mfc/reference/cwinappex-class.md#getkeyboardmanager). Pokud jej vytvoříte ručně, musíte jej inicializovat metodou [CWinAppEx::InitKeyboardManager](../../mfc/reference/cwinappex-class.md#initkeyboardmanager).
 
-##  <a name="cleanup"></a>CKeyboardManager:: CleanUp
+## <a name="ckeyboardmanagercleanup"></a><a name="cleanup"></a>CKeyboardManager::Vyčištění
 
-`CKeyboardManager` Uvolní prostředky a vymaže všechna mapování klávesových zkratek.
+Uvolní `CKeyboardManager` prostředky a vymaže všechna mapování klávesových zkratek.
 
 ```
 static void CleanUp();
@@ -117,11 +117,11 @@ static void CleanUp();
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace o klávesových zkratkách naleznete v tématu [Přizpůsobení klávesnice a myši](../../mfc/keyboard-and-mouse-customization.md).
+Další informace o klávesových zkratkách naleznete v [tématu Přizpůsobení klávesnice a myši](../../mfc/keyboard-and-mouse-customization.md).
 
-Tuto funkci není nutné volat, pokud dojde k ukončení aplikace, protože ji rozhraní volá automaticky během ukončení aplikace.
+Není nutné volat tuto funkci při ukončení aplikace, protože rozhraní framework volá automaticky během ukončení aplikace.
 
-##  <a name="finddefaultaccelerator"></a>CKeyboardManager::FindDefaultAccelerator
+## <a name="ckeyboardmanagerfinddefaultaccelerator"></a><a name="finddefaultaccelerator"></a>CKeyboardManager::FindDefaultAccelerator
 
 Načte výchozí klávesovou zkratku pro zadaný příkaz a okno.
 
@@ -136,28 +136,28 @@ static BOOL FindDefaultAccelerator(
 ### <a name="parameters"></a>Parametry
 
 *uiCmd*<br/>
-pro ID příkazu
+[v] ID příkazu.
 
-*str*<br/>
-mimo Odkaz na `CString` objekt.
+*Str*<br/>
+[out] Odkaz na `CString` objekt.
 
-*pWndFrame*<br/>
-pro Ukazatel na okno rámce.
+*pWndRám*<br/>
+[v] Ukazatel na okno rámce.
 
 *bIsDefaultFrame*<br/>
-pro Určuje, zda je okno rámce výchozím oknem rámce.
+[v] Určuje, zda je okno rámce výchozím oknem rámce.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud se zástupce najde; v opačném případě 0.
+Nenulová, pokud je zkratka nalezena; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda vyhledá příkaz určený parametrem *uiCmd* a načte výchozí klávesovou zkratku. Pak metoda převezme řetězec přidružený k této klávesové zkratce a zapíše hodnotu do parametru *str* .
+Tato metoda vyhledá příkaz určený *uiCmd* a načte výchozí klávesovou zkratku. Potom metoda převezme řetězec přidružený k této klávesové zkratce a zapíše hodnotu do parametru *str.*
 
-##  <a name="iskeyhandled"></a>CKeyboardManager::IsKeyHandled
+## <a name="ckeyboardmanageriskeyhandled"></a><a name="iskeyhandled"></a>CKeyboardManager::IskeyHandled
 
-Určuje, zda je zadaný klíč zpracován třídou [CKeyboardManager](../../mfc/reference/ckeyboardmanager-class.md).
+Určuje, zda je zadaný klíč zpracován [třídou CKeyboardManager](../../mfc/reference/ckeyboardmanager-class.md).
 
 ```
 static BOOL __stdcall IsKeyHandled(
@@ -172,22 +172,22 @@ static BOOL __stdcall IsKeyHandled(
 |||
 |-|-|
 |Parametr|Popis|
-|*nKey*|pro Klíč, který se má kontrolovat|
-|*fVirt*|pro Určuje chování klávesových zkratek. Seznam možných hodnot naleznete v tématu [Struktura akcelerace](/windows/win32/api/winuser/ns-winuser-accel).|
-|*pWndFrame*|pro Okno rámce. Tato metoda určuje, zda je v tomto snímku zpracovávána klávesová zkratka.|
-|*bIsDefaultFrame*|pro Logický parametr, který označuje, zda je *pWndFrame* výchozím oknem rámce.|
+|*nKlíč*|[v] Klíč ke kontrole.|
+|*fVirt*|[v] Určuje chování klávesové zkratky. Seznam možných hodnot naleznete v tématu [ACCEL Structure](/windows/win32/api/winuser/ns-winuser-accel).|
+|*pWndRám*|[v] Okno rámce. Tato metoda určuje, zda je v tomto rámci zpracována klávesová zkratka.|
+|*bIsDefaultFrame*|[v] Logický parametr, který označuje, zda *pWndFrame* je výchozí okno rámce.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
-TRUE, pokud je zpracována klávesová zkratka. FALSE, pokud klíč není zpracován nebo pokud má *pWndFrame* hodnotu null.
+TRUE, pokud je klávesová zkratka zpracována. FALSE, pokud klíč není zpracovánnebo pokud *pWndFrame* je NULL.
 
 ### <a name="remarks"></a>Poznámky
 
-Vstupní parametry se musí shodovat s položkou v tabulce akcelerátoru pro *nKey* a *fVirt* , aby bylo možné určit, zda je v *pWndFrame*zpracována klávesová zkratka.
+Vstupní parametry se musí shodovat se vstupem v tabulce akcelerátoru jak pro *nKey,* tak *pro fVirt,* aby bylo možné určit, zda je klávesová zkratka zpracována v *pWndFrame*.
 
-##  <a name="iskeyprintable"></a>CKeyboardManager::IsKeyPrintable
+## <a name="ckeyboardmanageriskeyprintable"></a><a name="iskeyprintable"></a>CKeyboardManager::IsKeyPrintable
 
-Označuje, zda je znak tisknutelný.
+Označuje, zda lze znak vytisknout.
 
 ```
 static BOOL __stdcall IsKeyPrintable(const UINT nChar);
@@ -198,19 +198,19 @@ static BOOL __stdcall IsKeyPrintable(const UINT nChar);
 |||
 |-|-|
 |Parametr|Popis|
-|*nChar*|pro Znak, který tato metoda kontroluje.|
+|*Nchar*|[v] Znak, který tato metoda kontroluje.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je znak tisknutelný, nula, pokud není.
+Nenulová, pokud je znak tisknutelný, nula, pokud není.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda se nezdařila, pokud volání [GetKeyboardState](/windows/win32/api/winuser/nf-winuser-getkeyboardstate) selhává.
+Tato metoda se nezdaří, pokud volání [GetKeyboardState](/windows/win32/api/winuser/nf-winuser-getkeyboardstate) selže.
 
-##  <a name="isshowallaccelerators"></a>  CKeyboardManager::IsShowAllAccelerators
+## <a name="ckeyboardmanagerisshowallaccelerators"></a><a name="isshowallaccelerators"></a>CKeyboardManager::IsShowAllAccelerators
 
-Označuje, zda jsou v nabídkách zobrazeny všechny klávesové zkratky přidružené k příkazům nabídky nebo pouze výchozí klávesové zkratky.
+Označuje, zda nabídky zobrazují všechny klávesové zkratky přidružené k příkazům nabídky nebo pouze výchozí klávesové zkratky.
 
 ```
 static BOOL IsShowAllAccelerators();
@@ -218,15 +218,15 @@ static BOOL IsShowAllAccelerators();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulová, pokud aplikace obsahuje seznam všech klávesových zkratek pro příkazy nabídky; 0, pokud aplikace zobrazuje pouze výchozí klávesové zkratky.
+Nenulová, pokud aplikace obsahuje všechny klávesové zkratky pro příkazy nabídky; 0, pokud aplikace zobrazuje pouze výchozí klávesové zkratky.
 
 ### <a name="remarks"></a>Poznámky
 
-Aplikace zobrazí seznam klávesových zkratek pro příkazy nabídky na řádku nabídek. Pomocí funkce [CKeyboardManager:: ShowAllAccelerators](#showallaccelerators) určete, zda aplikace obsahuje seznam všech klávesových zkratek nebo pouze výchozí klávesové zkratky.
+Aplikace obsahuje seznam klávesových zkratek pro příkazy nabídek v řádku nabídek. Pomocí funkce [CKeyboardManager::ShowAllAccelerators](#showallaccelerators) můžete určit, zda aplikace obsahuje všechny klávesové zkratky nebo pouze výchozí klávesové zkratky.
 
-##  <a name="loadstate"></a>CKeyboardManager:: LoadState
+## <a name="ckeyboardmanagerloadstate"></a><a name="loadstate"></a>CKeyboardManager::LoadState
 
-Načte z registru Windows tabulky klávesových zkratek.
+Načte tabulky klávesových zkratek z registru systému Windows.
 
 ```
 BOOL LoadState(
@@ -237,22 +237,22 @@ BOOL LoadState(
 ### <a name="parameters"></a>Parametry
 
 *lpszProfileName*<br/>
-pro Cesta v registru, `CKeyboardManager` kam se ukládají data.
+[v] Cesta registru, `CKeyboardManager` kde jsou uložena data.
 
-*pDefaultFrame*<br/>
-pro Ukazatel na okno rámce, které má být použito jako výchozí okno.
+*pVýchozí rámec*<br/>
+[v] Ukazatel na okno rámce, které se má použít jako výchozí okno.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud byl stav úspěšně načten nebo 0, jinak.
+Nenulová, pokud byl stav úspěšně načten nebo 0 jinak.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud má parametr *lpszProfileName* hodnotu null, tato metoda zkontroluje výchozí umístění registru pro `CKeyboardManager` data. Výchozí umístění registru je určeno [třídou CWinAppEx](../../mfc/reference/cwinappex-class.md). Data musí být napsána dříve pomocí metody [CKeyboardManager:: SaveState](#savestate).
+Pokud je parametr *lpszProfileName* NULL, tato metoda `CKeyboardManager` zkontroluje výchozí umístění registru pro data. Výchozí umístění registru je určeno [třídou CWinAppEx](../../mfc/reference/cwinappex-class.md). Data musí být dříve zapsána metodou [CKeyboardManager::SaveState](#savestate).
 
-Pokud nezadáte výchozí okno, bude použito okno hlavního rámce vaší aplikace.
+Pokud nezadáte výchozí okno, bude použito okno hlavního rámce aplikace.
 
-##  <a name="resetall"></a>CKeyboardManager::ResetAll
+## <a name="ckeyboardmanagerresetall"></a><a name="resetall"></a>CKeyboardManager::Resetall
 
 Znovu načte tabulky klávesových zkratek z prostředku aplikace.
 
@@ -262,9 +262,9 @@ void ResetAll();
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce vymaže zástupce uložené v `CKeyboardManager` instanci. Pak znovu nasadí stav správce klávesnice z prostředku aplikace.
+Tato funkce vymaže `CKeyboardManager` zkratky uložené v instanci. Potom znovu načte stav správce klávesnice z prostředku aplikace.
 
-##  <a name="savestate"></a>CKeyboardManager:: SaveState
+## <a name="ckeyboardmanagersavestate"></a><a name="savestate"></a>CKeyboardManager::SaveState
 
 Uloží tabulky klávesových zkratek do registru systému Windows.
 
@@ -277,22 +277,22 @@ BOOL SaveState(
 ### <a name="parameters"></a>Parametry
 
 *lpszProfileName*<br/>
-pro Cesta v registru pro uložení `CKeyboardManager` stavu.
+[v] Cesta registru pro `CKeyboardManager` uložení stavu.
 
-*pDefaultFrame*<br/>
-pro Ukazatel na okno rámce, které se změní na výchozí okno.
+*pVýchozí rámec*<br/>
+[v] Ukazatel na okno rámce, které se stane výchozím oknem.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud byl stav správce klávesnice úspěšně uložen nebo 0 jinak.
+Nenulová, pokud byl stav správce klávesnice úspěšně uložen, nebo 0 jinak.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud má parametr *lpszProfileName* hodnotu null, tato metoda zapíše `CKeyboardManager` stav do výchozího umístění určeného třídou [CWinAppEx](../../mfc/reference/cwinappex-class.md). Pokud zadáte umístění, můžete načíst data později pomocí metody [CKeyboardManager:: LoadState](#loadstate).
+Pokud je parametr *lpszProfileName* null, tato `CKeyboardManager` metoda zapíše stav do výchozího umístění určeného [třídou CWinAppEx](../../mfc/reference/cwinappex-class.md). Pokud zadáte umístění, můžete data načíst později pomocí metody [CKeyboardManager::LoadState](#loadstate).
 
-Pokud nezadáte výchozí okno, použije se jako výchozí okno hlavní okno rámce.
+Pokud nezadáte výchozí okno, bude jako výchozí okno použito okno hlavního rámce.
 
-##  <a name="showallaccelerators"></a>CKeyboardManager::ShowAllAccelerators
+## <a name="ckeyboardmanagershowallaccelerators"></a><a name="showallaccelerators"></a>CKeyboardManager::Zobrazitvšechnyakcelery
 
 Zobrazí všechny klávesové zkratky přidružené k příkazům nabídky.
 
@@ -304,19 +304,19 @@ static void ShowAllAccelerators(
 
 ### <a name="parameters"></a>Parametry
 
-*bShowAll*<br/>
-pro Při hodnotě TRUE se zobrazí všechny klávesové zkratky. Pokud má hodnotu FALSE, zobrazí se pouze první klávesová zkratka.
+*bZobrazitVše*<br/>
+[v] Pokud true, zobrazí se všechny klávesové zkratky. Pokud false, zobrazí se pouze první klávesová zkratka.
 
 *lpszDelimiter*<br/>
-pro Řetězec, který má být vložen mezi klávesové zkratky. Tento oddělovač nemá žádný vliv, pokud se zobrazí pouze jedna klávesová zkratka.
+[v] Řetězec, který chcete vložit mezi klávesové zkratky. Tento oddělovač nemá žádný vliv, pokud je zobrazena pouze jedna klávesová zkratka.
 
 ### <a name="remarks"></a>Poznámky
 
-Ve výchozím nastavení platí, že pokud k příkazu je přidruženo více klávesových zkratek, bude zobrazena pouze první klávesová zkratka. Tato funkce umožňuje zobrazit seznam všech klávesových zkratek přidružených ke všem příkazům.
+Ve výchozím nastavení, pokud má příkaz přidruženo více než jednu klávesovou zkratku, zobrazí se pouze první klávesová zkratka. Tato funkce umožňuje vypsat všechny klávesové zkratky přidružené ke všem příkazům.
 
-Klávesové zkratky budou uvedeny vedle příkazu v řádku nabídek. Pokud se zobrazí všechny klávesové zkratky, řetězec poskytnutý pomocí *lpszDelimiter* bude oddělit jednotlivé klávesové zkratky.
+Klávesové zkratky budou uvedeny vedle příkazu v řádku nabídek. Pokud jsou zobrazeny všechny klávesové zkratky, řetězec poskytnutý *lpszDelimiter* oddělí jednotlivé klávesové zkratky.
 
-##  <a name="translatechartoupper"></a>CKeyboardManager::TranslateCharToUpper
+## <a name="ckeyboardmanagertranslatechartoupper"></a><a name="translatechartoupper"></a>CKeyboardManager::PřeložitChartoupper
 
 Převede znak na jeho horní registr.
 
@@ -326,14 +326,14 @@ static UINT TranslateCharToUpper(const UINT nChar);
 
 ### <a name="parameters"></a>Parametry
 
-*nChar*<br/>
-pro Znak, který má být převeden.
+*Nchar*<br/>
+[v] Znak převést.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Znak, který je horní registr vstupního parametru.
+Znak, který je horním registrem vstupního parametru.
 
-##  <a name="updateacceltable"></a>CKeyboardManager::UpdateAccelTable
+## <a name="ckeyboardmanagerupdateacceltable"></a><a name="updateacceltable"></a>CKeyboardManager::UpdateAccelTable
 
 Aktualizuje tabulku klávesových zkratek novou tabulkou klávesových zkratek.
 
@@ -352,33 +352,33 @@ BOOL UpdateAccelTable(
 
 ### <a name="parameters"></a>Parametry
 
-*pTemplate*<br/>
-pro Ukazatel na šablonu dokumentu.
+*pŠablona*<br/>
+[v] Ukazatel na šablonu dokumentu.
 
 *lpAccel*<br/>
-pro Ukazatel na novou klávesovou zkratku.
+[v] Ukazatel na novou klávesovou zkratku.
 
-*nSize*<br/>
-pro Velikost nové zkratky tabulky
+*nVelikost*<br/>
+[v] Velikost nové tabulky zástupců.
 
-*pDefaultFrame*<br/>
-pro Ukazatel na výchozí okno rámce.
+*pVýchozí rámec*<br/>
+[v] Ukazatel na výchozí okno rámce.
 
-*hAccelNew*<br/>
-pro Popisovač nové místní tabulky.
+*hAccelNovinka*<br/>
+[v] Úchyt pro novou klávesovou tabulku.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je metoda úspěšná; v opačném případě 0.
+Nenulová, pokud je metoda úspěšná; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Pomocí této funkce lze nahradit existující zkratku pomocí nových klávesových zkratek pro několik objektů okna rámce. Funkce obdrží šablonu dokumentu jako parametr pro získání přístupu ke všem objektům okna rámce připojeným k dané šabloně dokumentu.
+Pomocí této funkce můžete nahradit existující tabulku zkratek novými klávesovými zkratkami pro několik objektů okna rámce. Funkce obdrží šablonu dokumentu jako parametr pro získání přístupu ke všem objektům okna rámce připojeným k dané šabloně dokumentu.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>
-[CWinAppEx – třída](../../mfc/reference/cwinappex-class.md)<br/>
+[Třída CWinAppEx](../../mfc/reference/cwinappex-class.md)<br/>
 [CWinAppEx::InitKeyboardManager](../../mfc/reference/cwinappex-class.md#initkeyboardmanager)<br/>
 [Přizpůsobení klávesnice a myši](../../mfc/keyboard-and-mouse-customization.md)

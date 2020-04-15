@@ -1,5 +1,5 @@
 ---
-title: IPersistStorageImpl – třída
+title: Třída IPersistStorageImpl
 ms.date: 11/04/2016
 f1_keywords:
 - IPersistStorageImpl
@@ -15,19 +15,19 @@ helpviewer_keywords:
 - storage, ATL
 - IPersistStorageImpl class
 ms.assetid: d652f02c-239c-47c7-9a50-3e9fc3014fff
-ms.openlocfilehash: a5b5dd4e5be43d01f00687ed9b96a3f27abcad0f
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: b235b190f237293932705e4d290ac963088722f3
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69495694"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81326472"
 ---
-# <a name="ipersiststorageimpl-class"></a>IPersistStorageImpl – třída
+# <a name="ipersiststorageimpl-class"></a>Třída IPersistStorageImpl
 
-Tato třída implementuje rozhraní [IPersistStorage](/windows/win32/api/objidl/nn-objidl-ipersiststorage) .
+Tato třída implementuje rozhraní [IPersistStorage.](/windows/win32/api/objidl/nn-objidl-ipersiststorage)
 
 > [!IMPORTANT]
->  Tato třída a její členové nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime.
+> Tuto třídu a její členy nelze použít v aplikacích, které se spouštějí v prostředí Windows Runtime.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -39,29 +39,29 @@ class ATL_NO_VTABLE IPersistStorageImpl : public IPersistStorage
 #### <a name="parameters"></a>Parametry
 
 *T*<br/>
-Vaše třída, která je `IPersistStorageImpl`odvozena z.
+Vaše třída, odvozená z `IPersistStorageImpl`.
 
 ## <a name="members"></a>Členové
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[IPersistStorageImpl:: GetClassID](#getclassid)|Načte CLSID objektu.|
-|[IPersistStorageImpl::HandsOffStorage](#handsoffstorage)|Vydá pokyn objektu k uvolnění všech objektů úložiště a vstupu do režimu HandsOff. Implementace ATL vrací S_OK.|
+|[ipersistStorageimpl::GetClassID](#getclassid)|Načte identifikátor CLSID objektu.|
+|[iPersistStorageImpl::HandsoffStorage](#handsoffstorage)|Instruuje objekt, aby uvolnil všechny objekty úložiště a přepěl do režimu HandsOff. Implementace ATL vrátí S_OK.|
 |[IPersistStorageImpl::InitNew](#initnew)|Inicializuje nové úložiště.|
-|[IPersistStorageImpl::IsDirty](#isdirty)|Kontroluje, zda data objektu byla od posledního uložení změněna.|
-|[IPersistStorageImpl::Load](#load)|Načte vlastnosti objektu ze zadaného úložiště.|
-|[IPersistStorageImpl::Save](#save)|Uloží vlastnosti objektu do určeného úložiště.|
-|[IPersistStorageImpl::SaveCompleted](#savecompleted)|Upozorní objekt, že se může vrátit do normálního režimu, který zapíše do objektu úložiště. Implementace ATL vrací S_OK.|
+|[iPersistStorageImpl::IsDirty](#isdirty)|Zkontroluje, zda se data objektu od posledního uložení změnila.|
+|[iPersistStorageImpl::Načíst](#load)|Načte vlastnosti objektu ze zadaného úložiště.|
+|[IPersistStorageImpl::Uložit](#save)|Uloží vlastnosti objektu do zadaného úložiště.|
+|[iPersistStorageImpl::Uložitdokončeno](#savecompleted)|Upozorní objekt, který se může vrátit do normálního režimu a zapisovat do svého objektu úložiště. Implementace ATL vrátí S_OK.|
 
 ## <a name="remarks"></a>Poznámky
 
-`IPersistStorageImpl`implementuje rozhraní [IPersistStorage](/windows/win32/api/objidl/nn-objidl-ipersiststorage) , které klientovi umožňuje požádat, aby se objekt načetl a ušetřil jeho trvalá data pomocí úložiště.
+`IPersistStorageImpl`implementuje rozhraní [IPersistStorage,](/windows/win32/api/objidl/nn-objidl-ipersiststorage) které umožňuje klientovi požadovat, aby se objekt načetl a uložil jeho trvalá data pomocí úložiště.
 
-Implementace této třídy vyžaduje třídu `T` , aby bylo možné implementovat rozhraní, které je `IPersistStreamInit` k dispozici prostřednictvím `QueryInterface`. Obvykle to znamená, že `T` třída by měla odvozovat z [IPersistStreamInitImpl](../../atl/reference/ipersiststreaminitimpl-class.md), poskytnout `IPersistStreamInit` položku pro v [mapě modelu COM](com-map-macros.md)a použít [mapu vlastností](property-map-macros.md) k popisu trvalých dat třídy.
+Implementace této třídy `T` vyžaduje třídu zpřístupnit `IPersistStreamInit` implementaci `QueryInterface`rozhraní prostřednictvím . Obvykle to znamená, `T` že třída by měla být odvozena `IPersistStreamInit` z [IPersistStreamInitImpl](../../atl/reference/ipersiststreaminitimpl-class.md), poskytnout položku v mapě [COM](com-map-macros.md)a použít [mapu vlastností](property-map-macros.md) k popisu trvalých dat třídy.
 
-**Související články** [Kurz ATL](../../atl/active-template-library-atl-tutorial.md), [Vytvoření projektu ATL](../../atl/reference/creating-an-atl-project.md)
+**Související články** [ATL Výuka](../../atl/active-template-library-atl-tutorial.md), [Vytvoření projektu ATL](../../atl/reference/creating-an-atl-project.md)
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -71,11 +71,11 @@ Implementace této třídy vyžaduje třídu `T` , aby bylo možné implementova
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlcom. h
+**Záhlaví:** atlcom.h
 
-##  <a name="getclassid"></a>IPersistStorageImpl:: GetClassID
+## <a name="ipersiststorageimplgetclassid"></a><a name="getclassid"></a>ipersistStorageimpl::GetClassID
 
-Načte CLSID objektu.
+Načte identifikátor CLSID objektu.
 
 ```
 STDMETHOD(GetClassID)(CLSID* pClassID);
@@ -83,11 +83,11 @@ STDMETHOD(GetClassID)(CLSID* pClassID);
 
 ### <a name="remarks"></a>Poznámky
 
-Viz [IPersist:: GetClassID](/windows/win32/api/objidl/nf-objidl-ipersist-getclassid) v Windows SDK.
+Viz [iPersist::GetClassID](/windows/win32/api/objidl/nf-objidl-ipersist-getclassid) v sadě Windows SDK.
 
-##  <a name="handsoffstorage"></a>IPersistStorageImpl::HandsOffStorage
+## <a name="ipersiststorageimplhandsoffstorage"></a><a name="handsoffstorage"></a>iPersistStorageImpl::HandsoffStorage
 
-Vydá pokyn objektu k uvolnění všech objektů úložiště a vstupu do režimu HandsOff.
+Instruuje objekt, aby uvolnil všechny objekty úložiště a přepěl do režimu HandsOff.
 
 ```
 STDMETHOD(HandsOffStorage)(void);
@@ -95,13 +95,13 @@ STDMETHOD(HandsOffStorage)(void);
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrací hodnotu S_OK.
+Vrátí S_OK.
 
 ### <a name="remarks"></a>Poznámky
 
-Viz [IPersistStorage:: HandsOffStorage](/windows/win32/api/objidl/nf-objidl-ipersiststorage-handsoffstorage) v Windows SDK.
+Viz [iPersistStorage::HandsOffStorage](/windows/win32/api/objidl/nf-objidl-ipersiststorage-handsoffstorage) v sadě Windows SDK.
 
-##  <a name="initnew"></a>  IPersistStorageImpl::InitNew
+## <a name="ipersiststorageimplinitnew"></a><a name="initnew"></a>IPersistStorageImpl::InitNew
 
 Inicializuje nové úložiště.
 
@@ -111,13 +111,13 @@ STDMETHOD(InitNew)(IStorage*);
 
 ### <a name="remarks"></a>Poznámky
 
-Implementace knihovny ATL deleguje rozhraní [IPersistStreamInit](/windows/win32/api/ocidl/nn-ocidl-ipersiststreaminit) .
+Implementace KNIHOVNY ATL deleguje rozhraní [IPersistStreamInit.](/windows/win32/api/ocidl/nn-ocidl-ipersiststreaminit)
 
-Viz [IPersistStorage: InitNew](/windows/win32/api/objidl/nf-objidl-ipersiststorage-initnew) v Windows SDK.
+Viz [iPersistStorage:InitNew](/windows/win32/api/objidl/nf-objidl-ipersiststorage-initnew) v sadě Windows SDK.
 
-##  <a name="isdirty"></a>  IPersistStorageImpl::IsDirty
+## <a name="ipersiststorageimplisdirty"></a><a name="isdirty"></a>iPersistStorageImpl::IsDirty
 
-Kontroluje, zda data objektu byla od posledního uložení změněna.
+Zkontroluje, zda se data objektu od posledního uložení změnila.
 
 ```
 STDMETHOD(IsDirty)(void);
@@ -125,11 +125,11 @@ STDMETHOD(IsDirty)(void);
 
 ### <a name="remarks"></a>Poznámky
 
-Implementace knihovny ATL deleguje rozhraní [IPersistStreamInit](/windows/win32/api/ocidl/nn-ocidl-ipersiststreaminit) .
+Implementace KNIHOVNY ATL deleguje rozhraní [IPersistStreamInit.](/windows/win32/api/ocidl/nn-ocidl-ipersiststreaminit)
 
-Viz [IPersistStorage: Dirty](/windows/win32/api/objidl/nf-objidl-ipersiststorage-isdirty) v Windows SDK.
+Viz [IPersistStorage:IsDirty](/windows/win32/api/objidl/nf-objidl-ipersiststorage-isdirty) v sadě Windows SDK.
 
-##  <a name="load"></a>IPersistStorageImpl:: Load
+## <a name="ipersiststorageimplload"></a><a name="load"></a>iPersistStorageImpl::Načíst
 
 Načte vlastnosti objektu ze zadaného úložiště.
 
@@ -139,13 +139,13 @@ STDMETHOD(Load)(IStorage* pStorage);
 
 ### <a name="remarks"></a>Poznámky
 
-Implementace knihovny ATL deleguje rozhraní [IPersistStreamInit](/windows/win32/api/ocidl/nn-ocidl-ipersiststreaminit) . `Load`k načtení dat objektu používá datový proud s názvem "obsah". Metoda [Save](#save) původně vytvořila tento datový proud.
+Implementace KNIHOVNY ATL deleguje rozhraní [IPersistStreamInit.](/windows/win32/api/ocidl/nn-ocidl-ipersiststreaminit) `Load`používá datový proud s názvem "Obsah" k načtení dat objektu. Save [Save](#save) Metoda původně vytvoří tento datový proud.
 
-Viz [IPersistStorage: Load](/windows/win32/api/objidl/nf-objidl-ipersiststorage-load) in Windows SDK.
+Viz [IPersistStorage:Load](/windows/win32/api/objidl/nf-objidl-ipersiststorage-load) in the Windows SDK.
 
-##  <a name="save"></a>IPersistStorageImpl:: Save
+## <a name="ipersiststorageimplsave"></a><a name="save"></a>IPersistStorageImpl::Uložit
 
-Uloží vlastnosti objektu do určeného úložiště.
+Uloží vlastnosti objektu do zadaného úložiště.
 
 ```
 STDMETHOD(Save)(IStorage* pStorage, BOOL fSameAsLoad);
@@ -153,13 +153,13 @@ STDMETHOD(Save)(IStorage* pStorage, BOOL fSameAsLoad);
 
 ### <a name="remarks"></a>Poznámky
 
-Implementace knihovny ATL deleguje rozhraní [IPersistStreamInit](/windows/win32/api/ocidl/nn-ocidl-ipersiststreaminit) . Při `Save` prvním volání vytvoří datový proud s názvem "obsah" v zadaném úložišti. Tento Stream se pak použije v pozdějších voláních `Save` a v voláních [metody Load](#load).
+Implementace KNIHOVNY ATL deleguje rozhraní [IPersistStreamInit.](/windows/win32/api/ocidl/nn-ocidl-ipersiststreaminit) Při `Save` prvním volání vytvoří datový proud s názvem "Obsah" na zadaném úložišti. Tento datový proud se pak `Save` používá v pozdějších voláních a volání [načíst](#load).
 
-Viz [IPersistStorage: Save](/windows/win32/api/objidl/nf-objidl-ipersiststorage-save) in the Windows SDK.
+Viz [IPersistStorage:Uložit](/windows/win32/api/objidl/nf-objidl-ipersiststorage-save) v sadě Windows SDK.
 
-##  <a name="savecompleted"></a>IPersistStorageImpl::SaveCompleted
+## <a name="ipersiststorageimplsavecompleted"></a><a name="savecompleted"></a>iPersistStorageImpl::Uložitdokončeno
 
-Upozorní objekt, že se může vrátit do normálního režimu, který zapíše do objektu úložiště.
+Upozorní objekt, který se může vrátit do normálního režimu a zapisovat do svého objektu úložiště.
 
 ```
 STDMETHOD(SaveCompleted)(IStorage*);
@@ -167,15 +167,15 @@ STDMETHOD(SaveCompleted)(IStorage*);
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrací hodnotu S_OK.
+Vrátí S_OK.
 
 ### <a name="remarks"></a>Poznámky
 
-Viz [IPersistStorage: SaveCompleted](/windows/win32/api/objidl/nf-objidl-ipersiststorage-savecompleted) v Windows SDK.
+Viz [IPersistStorage:SaveCompleted](/windows/win32/api/objidl/nf-objidl-ipersiststorage-savecompleted) v sadě Windows SDK.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Úložiště a datové proudy](/windows/win32/Stg/storages-and-streams)<br/>
-[IPersistStreamInitImpl – třída](../../atl/reference/ipersiststreaminitimpl-class.md)<br/>
-[IPersistPropertyBagImpl – třída](../../atl/reference/ipersistpropertybagimpl-class.md)<br/>
+[Třída IPersistStreamInitImpl](../../atl/reference/ipersiststreaminitimpl-class.md)<br/>
+[Třída IPersistPropertyBagImpl](../../atl/reference/ipersistpropertybagimpl-class.md)<br/>
 [Přehled třídy](../../atl/atl-class-overview.md)

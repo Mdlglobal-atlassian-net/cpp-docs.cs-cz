@@ -13,16 +13,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::RoInitializeWrapper::RoInitializeWrapper, constructor
 - Microsoft::WRL::Wrappers::RoInitializeWrapper::~RoInitializeWrapper, destructor
 ms.assetid: 4055fbe0-63a7-4c06-b5a0-414fda5640e5
-ms.openlocfilehash: b43d5bb2f553d298584ab2ae497c22637d3beb0d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eba9162f17b98d13a9caf956b4f110b89dd81c37
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403201"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371233"
 ---
 # <a name="roinitializewrapper-class"></a>RoInitializeWrapper – třída
 
-Inicializuje modul Windows Runtime.
+Inicializuje prostředí Windows Runtime.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -32,22 +32,22 @@ class RoInitializeWrapper;
 
 ## <a name="remarks"></a>Poznámky
 
-`RoInitializeWrapper` je usnadnění práce, která inicializuje modul Windows Runtime a vrátí HRESULT, která určuje, zda operace byla úspěšná. Vzhledem k tomu volá destruktor třídy `::Windows::Foundation::Uninitialize`, výskyty `RoInitializeWrapper` musí být deklarovány v oboru globálním správcem nebo nejvyšší úrovně.
+`RoInitializeWrapper`je pohodlí, které inicializuje prostředí Windows Runtime a vrátí HRESULT, který označuje, zda byla operace úspěšná. Vzhledem k tomu, `::Windows::Foundation::Uninitialize`že destruktor třídy volá , `RoInitializeWrapper` instance musí být deklarovány v globálním oboru nebo rozsahu nejvyšší úrovně.
 
 ## <a name="members"></a>Členové
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-Název                                                                    | Popis
+Name (Název)                                                                    | Popis
 ----------------------------------------------------------------------- | -----------------------------------------------------------------
-[RoInitializeWrapper::RoInitializeWrapper](#roinitializewrapper)        | Inicializuje novou instanci třídy `RoInitializeWrapper` třídy.
-[RoInitializeWrapper::~RoInitializeWrapper](#tilde-roinitializewrapper) | Odstraní aktuální instanci aplikace `RoInitializeWrapper` třídy.
+[RoInitializeWrapper::RoInitializeWrapper](#roinitializewrapper)        | Inicializuje novou instanci třídy. `RoInitializeWrapper`
+[RoInitializeWrapper::~RoInitializeWrapper](#tilde-roinitializewrapper) | Zničí aktuální instanci `RoInitializeWrapper` třídy.
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-Název                                       | Popis
+Name (Název)                                       | Popis
 ------------------------------------------ | ------------------------------------------------------------------------
-[RoInitializeWrapper::HRESULT()](#hresult) | Načte hodnotu HRESULT vytvořené metodou `RoInitializeWrapper` konstruktoru.
+[RoInitializeWrapper::HRESULT()](#hresult) | Načte HRESULT vyrobené `RoInitializeWrapper` konstruktoru.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -57,19 +57,19 @@ Název                                       | Popis
 
 **Záhlaví:** corewrappers.h
 
-**Namespace:** Microsoft::WRL::Wrappers
+**Obor názvů:** Microsoft::WRL::Obálky
 
-## <a name="hresult"></a>Roinitializewrapper:: HRESULT()
+## <a name="roinitializewrapperhresult"></a><a name="hresult"></a>RoInitializeWrapper::HRESULT()
 
-Načte hodnotu HRESULT vytvářených poslední `RoInitializeWrapper` konstruktoru.
+Načte hodnotu HRESULT vytvořenou posledním `RoInitializeWrapper` konstruktorem.
 
 ```cpp
 operator HRESULT()
 ```
 
-## <a name="roinitializewrapper"></a>Roinitializewrapper::roinitializewrapper –
+## <a name="roinitializewrapperroinitializewrapper"></a><a name="roinitializewrapper"></a>RoInitializeWrapper::RoInitializeWrapper
 
-Inicializuje novou instanci třídy `RoInitializeWrapper` třídy.
+Inicializuje novou instanci třídy. `RoInitializeWrapper`
 
 ```cpp
 RoInitializeWrapper(RO_INIT_TYPE flags)
@@ -78,15 +78,15 @@ RoInitializeWrapper(RO_INIT_TYPE flags)
 ### <a name="parameters"></a>Parametry
 
 *příznaky*<br/>
-Jeden z výčtů RO_INIT_TYPE, které určuje podporu poskytovaný modulem Windows Runtime.
+Jeden z RO_INIT_TYPE výčtů, který určuje podporu poskytovanou prostředím Windows Runtime.
 
 ### <a name="remarks"></a>Poznámky
 
-`RoInitializeWrapper` Třída vyvolá `Windows::Foundation::Initialize(flags)`.
+Třída `RoInitializeWrapper` vyvolá `Windows::Foundation::Initialize(flags)`.
 
-## <a name="tilde-roinitializewrapper"></a>RoInitializeWrapper:: ~ roinitializewrapper –
+## <a name="roinitializewrapperroinitializewrapper"></a><a name="tilde-roinitializewrapper"></a>RoInitializeWrapper::~RoInitializeWrapper
 
-Zruší inicializaci modulu Windows Runtime.
+Uninitializes prostředí Windows Runtime.
 
 ```cpp
 ~RoInitializeWrapper()
@@ -94,4 +94,4 @@ Zruší inicializaci modulu Windows Runtime.
 
 ### <a name="remarks"></a>Poznámky
 
-`RoInitializeWrapper` Třída vyvolá `Windows::Foundation::Uninitialize()`.
+Třída `RoInitializeWrapper` vyvolá `Windows::Foundation::Uninitialize()`.

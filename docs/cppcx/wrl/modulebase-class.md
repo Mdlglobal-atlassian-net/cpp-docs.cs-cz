@@ -15,16 +15,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::ModuleBase::ModuleBase, constructor
 - Microsoft::WRL::Details::ModuleBase::~ModuleBase, destructor
 ms.assetid: edce7591-6893-46f7-94a7-382827775548
-ms.openlocfilehash: 254796c03d25a77da22c48881c086a41ffbfeb82
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 13a8ceef3133e9946524e1fcd02e96535eccd7fc
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403214"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371261"
 ---
 # <a name="modulebase-class"></a>ModuleBase – třída
 
-Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.
+Podporuje infrastrukturu WRL a není určen pro použití přímo z vašeho kódu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -34,23 +34,23 @@ class ModuleBase;
 
 ## <a name="remarks"></a>Poznámky
 
-Představuje základní třídu [modulu](module-class.md) třídy.
+Představuje základní třídu [Třídy Module.](module-class.md)
 
 ## <a name="members"></a>Členové
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-Název                                         | Popis
+Name (Název)                                         | Popis
 -------------------------------------------- | ---------------------------------------------------------
-[ModuleBase::ModuleBase](#modulebase)        | Inicializuje novou instanci `Module` třídy.
-[ModuleBase::~ModuleBase](#tilde-modulebase) | Zruší inicializaci aktuální instance `Module` třídy.
+[ModulBase::ModulBase](#modulebase)        | Inicializuje instanci třídy `Module`.
+[ModulBase::~ModuleBase](#tilde-modulebase) | Deinitializes aktuální instance `Module` třídy.
 
 ### <a name="public-methods"></a>Veřejné metody
 
-Název                                                      | Popis
+Name (Název)                                                      | Popis
 --------------------------------------------------------- | -------------------------------------------------------------------------
-[Modulebase::decrementobjectcount –](#decrementobjectcount) | Při implementaci, sníží počet objektů sledování modulu.
-[Modulebase::incrementobjectcount –](#incrementobjectcount) | Při implementaci, zvýší počet objektů, které jsou sledovány v rámci modulu.
+[ModulBase::DecrementObjectCount](#decrementobjectcount) | Při implementaci sníží počet objektů sledovaných modulem.
+[ModulBase::IncrementObjectCount](#incrementobjectcount) | Při implementaci se zintáží počet objektů sledovaných modulem.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -60,11 +60,11 @@ Název                                                      | Popis
 
 **Záhlaví:** implements.h
 
-**Namespace:** Microsoft::WRL::Details
+**Obor názvů:** Microsoft::WRL::Details
 
-## <a name="tilde-modulebase"></a>ModuleBase::~ModuleBase
+## <a name="modulebasemodulebase"></a><a name="tilde-modulebase"></a>ModulBase::~ModuleBase
 
-Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.
+Podporuje infrastrukturu WRL a není určen pro použití přímo z vašeho kódu.
 
 ```cpp
 virtual ~ModuleBase();
@@ -72,11 +72,11 @@ virtual ~ModuleBase();
 
 ### <a name="remarks"></a>Poznámky
 
-Zruší inicializaci aktuální instance `ModuleBase` třídy.
+Deinitializes aktuální instance `ModuleBase` třídy.
 
-## <a name="decrementobjectcount"></a>Modulebase::decrementobjectcount –
+## <a name="modulebasedecrementobjectcount"></a><a name="decrementobjectcount"></a>ModulBase::DecrementObjectCount
 
-Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.
+Podporuje infrastrukturu WRL a není určen pro použití přímo z vašeho kódu.
 
 ```cpp
 virtual long DecrementObjectCount() = 0;
@@ -84,15 +84,15 @@ virtual long DecrementObjectCount() = 0;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Počet před provedením operace dekrementace.
+Počet před operací snížení.
 
 ### <a name="remarks"></a>Poznámky
 
-Při implementaci, sníží počet objektů sledování modulu.
+Při implementaci sníží počet objektů sledovaných modulem.
 
-## <a name="incrementobjectcount"></a>Modulebase::incrementobjectcount –
+## <a name="modulebaseincrementobjectcount"></a><a name="incrementobjectcount"></a>ModulBase::IncrementObjectCount
 
-Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.
+Podporuje infrastrukturu WRL a není určen pro použití přímo z vašeho kódu.
 
 ```cpp
 virtual long IncrementObjectCount() = 0;
@@ -100,15 +100,15 @@ virtual long IncrementObjectCount() = 0;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Počet před provedením operace Inkrementace.
+Počet před operací přírůstek.
 
 ### <a name="remarks"></a>Poznámky
 
-Při implementaci, zvýší počet objektů, které jsou sledovány v rámci modulu.
+Při implementaci se zintáží počet objektů sledovaných modulem.
 
-## <a name="modulebase"></a>ModuleBase::ModuleBase
+## <a name="modulebasemodulebase"></a><a name="modulebase"></a>ModulBase::ModulBase
 
-Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.
+Podporuje infrastrukturu WRL a není určen pro použití přímo z vašeho kódu.
 
 ```cpp
 ModuleBase();
@@ -116,4 +116,4 @@ ModuleBase();
 
 ### <a name="remarks"></a>Poznámky
 
-Inicializuje novou instanci `Module` třídy.
+Inicializuje instanci třídy `Module`.

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - NMAKE program, inference rules
 - batch-mode inference rules in NMAKE
 ms.assetid: 0650b547-ef19-4455-9bba-fa567dcf88f2
-ms.openlocfilehash: f01866e347b2734b5adfd111e3ae9de4f9edcf9f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 38402e7b8a937cebb823ce13fa1ac01fc1099878
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62295016"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81328415"
 ---
 # <a name="batch-mode-rules"></a>Pravidla dávkového režimu
 
@@ -20,18 +20,18 @@ ms.locfileid: "62295016"
    commands
 ```
 
-Dávková odvozená pravidla poskytnout pouze jednoho vyvolání odvozené pravidlo, když N příkazy procházejí tato pravidla odvození. Bez dávková odvozená pravidla bude vyžadovat N příkazů má být volána. N je počet závislé objekty, které aktivují odvozené pravidlo.
+Pravidla odvození dávkového režimu poskytují pouze jedno vyvolání pravidla odvození, když příkazy N procházejí tímto pravidlem odvození. Bez pravidel odvození dávkového režimu by vyžadovalo vyvolání příkazů N. N je počet závislých osob, které aktivují pravidlo odvození.
 
-Soubory pravidel, která obsahují dávková odvozená pravidla musí používat NMAKE 1.62 nebo vyšší verze. Pokud chcete zkontrolovat verzi NMAKE, makro _NMAKE_VER k dispozici s NMAKE verze 1.62 nebo vyšší. Toto makro vrací řetězec vyjadřující verze produktu Visual C++.
+Makefiles, které obsahují pravidla odvození dávkového režimu musí používat NMAKE verze 1.62 nebo vyšší. Chcete-li zkontrolovat verzi NMAKE, spusťte makro _NMAKE_VER, které je k dispozici s nmake verze 1.62 nebo vyšší. Toto makro vrátí řetězec představující verzi produktu Visual C++.
 
-Pouze syntaktickou rozdíl oproti standardní odvozené pravidlo je, že odvození pravidla dávkového režimu je přerušen skrze dvojtečka (:).
+Jediný syntaktický rozdíl od standardního pravidla odvození je, že pravidlo odvození dávkového režimu je ukončeno dvojitým dvojtečkou (::).
 
 > [!NOTE]
->  Nástroj pro vyvolání musí být schopna zpracovávat více souborů. Odvozené pravidlo režimu služby batch musí používat `$<` jako makra pro přístup k závislé soubory.
+> Vztažný nástroj musí být schopen zpracovat více souborů. Pravidlo odvození dávkového režimu `$<` musí být používáno jako makro pro přístup k závislým souborům.
 
-Dávková odvozená pravidla může urychlit proces sestavení. Je rychlejší slouží k poskytování soubory pro kompilátor v dávce, protože kompilátor ovladač je vyvolána pouze jednou. Například kompilátor jazyka C a C++ provádí lépe při zpracování sady souborů, protože ho může zůstat paměti rezidentní během procesu.
+Pravidla odvození dávkového režimu může urychlit proces sestavení. Je rychlejší dodávat soubory do kompilátoru v dávce, protože ovladač kompilátoru je vyvolána pouze jednou. Například kompilátor C a C++ funguje lépe při zpracování sady souborů, protože může zůstat rezidentní paměti během procesu.
 
-Následující příklad ukazuje způsob použití dávková odvozená pravidla:
+Následující příklad ukazuje, jak používat pravidla odvození dávkového režimu:
 
 ```
 #
@@ -56,7 +56,7 @@ $(Objs) :
 #end of makefile
 ```
 
-NMAKE vytvoří následující výstup bez dávková odvozená pravidla:
+NMAKE vytváří následující výstup bez pravidel odvození dávkového režimu:
 
 ```
 E:\tmp> nmake -f test.mak -a NOBatch=1
@@ -73,7 +73,7 @@ foo3.cpp
 foo4.cpp
 ```
 
-NMAKE vytvoří následující výsledek s dávková odvozená pravidla:
+NMAKE vytváří následující výsledek s pravidly odvození dávkového režimu:
 
 ```
 E:\tmp> nmake -f test.mak -a
@@ -89,6 +89,6 @@ foo4.cpp
 Generating Code...
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Odvozená pravidla](inference-rules.md)

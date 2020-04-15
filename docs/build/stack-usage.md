@@ -2,63 +2,63 @@
 title: x64 – použití zásobníku
 ms.date: 12/17/2018
 ms.assetid: 383f0072-0438-489f-8829-cca89582408c
-ms.openlocfilehash: 902e4304ac124be46c6edf0860118dc522b34890
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: b598c33fbdd56630ca3e5ef0da551f38a73baa26
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79417255"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81335531"
 ---
 # <a name="x64-stack-usage"></a>x64 – použití zásobníku
 
-Veškerá paměť nad aktuální adresou RSP je považována za nestálou: operační systém nebo ladicí program může tuto paměť přepsat během relace ladění uživatele nebo obslužné rutiny přerušení. Proto musí být RSP vždy nastaveno před pokusem o čtení nebo zápis hodnot do bloku zásobníku.
+Všechny paměti mimo aktuální adresu RSP je považován za nestálý: Operační systém nebo ladicí program může přepsat tuto paměť během relace ladění uživatele nebo obslužné rutiny přerušení. Proto RSP musí být vždy nastavena před pokusem o čtení nebo zápis hodnot do rámce zásobníku.
 
-Tato část popisuje přidělení prostoru zásobníku pro lokální proměnné a vnitřní objekt **alokace** .
+Tato část popisuje přidělení místa zásobníku pro místní proměnné a **alloca** vnitřní.
 
 ## <a name="stack-allocation"></a>Přidělení zásobníku
 
-Prolog funkce zodpovídá za přidělování prostoru zásobníku pro místní proměnné, uložené registry, parametry zásobníku a parametry registru.
+Prolog funkce je zodpovědný za přidělování místa v zásobníku pro místní proměnné, uložené registry, parametry zásobníku a parametry registru.
 
-Oblast parametru je vždy ve spodní části zásobníku (i když je použit `alloca`), takže bude vždy sousedící s návratovou adresou při jakémkoli volání funkce. Obsahuje alespoň čtyři položky, ale vždy dostatek místa pro všechny parametry, které jsou vyžadovány všemi funkcemi, které mohou být volány. Všimněte si, že prostor je vždy přidělen pro parametry registru, a to i v případě, že samotný parametr nejsou nikdy domů do zásobníku; Volaný je zaručeno, že prostor byl přidělen pro všechny jeho parametry. Pro argumenty registru jsou požadovány domovské adresy, takže je k dispozici souvislá oblast pro případ, že volaná funkce musí převzít adresu seznamu argumentů (va_list) nebo jednotlivého argumentu. Tato oblast také nabízí vhodné místo pro uložení argumentů registru během provádění převodu a jako možnost ladění (například usnadňuje vyhledání argumentů během ladění, pokud jsou uloženy na jejich domovské adrese v kódu prologu). I v případě, že volaná funkce má méně než 4 parametry, tyto 4 umístění zásobníku efektivně vlastní volaná funkce a může být použita volanou funkcí pro jiné účely kromě ukládání hodnot registru parametrů.  Volající proto nesmí ukládat informace v této oblasti zásobníku napříč voláním funkce.
+Oblast parametrů je vždy v dolní části `alloca` zásobníku (i v případě, že se používá), takže bude vždy přilehlé k zpáteční adrese během volání jakékoli funkce. Obsahuje alespoň čtyři položky, ale vždy dostatek místa pro uložení všech parametrů potřebných pro všechny funkce, které mohou být volány. Všimněte si, že místo je vždy přiděleno pro parametry registru, i v případě, že parametry samotné nejsou nikdy umístěny do zásobníku; volaný je zaručeno, že prostor byl přidělen pro všechny jeho parametry. Adresy domů jsou vyžadovány pro argumenty registru, takže souvislá oblast je k dispozici v případě, že volaná funkce potřebuje adresu seznamu argumentů (va_list) nebo jednotlivého argumentu. Tato oblast také poskytuje vhodné místo pro uložení argumentů registru během spuštění thunk a jako možnost ladění (například usnadňuje nalezení argumentů během ladění, pokud jsou uloženy na svých domovských adresách v kódu prologu). I v případě, že volaná funkce má méně než 4 parametry, jsou tato 4 umístění zásobníku efektivně vlastněna volanou funkcí a může být použita volanou funkcí pro jiné účely kromě ukládání hodnot registru parametrů.  Volající tedy nemusí ukládat informace v této oblasti zásobníku přes volání funkce.
 
-Pokud je místo dynamicky přiděleno (`alloca`) ve funkci, pak musí být nestálý registr použit jako ukazatel na rámec k označení základu pevné části zásobníku a tento registr musí být uložen a inicializován v prologu. Všimněte si, že když se používá `alloca`, volání stejného volaného ze stejného volajícího můžou mít pro své parametry registru různé domovské adresy.
+Pokud je ve funkci`alloca`dynamicky přiděleno místo ( ) , musí být jako ukazatel rámce použit trvalý registr, který označuje základnu pevné části zásobníku, a tento registr musí být uložen a inicializován v prologu. Všimněte `alloca` si, že při použití volání stejného volaní od stejného volajícího může mít různé adresy domů pro jejich parametry registru.
 
-Zásobník bude vždy zarovnaný se 16 bajty, s výjimkou prologu (například po posunutí návratové adresy) a s výjimkou, kde jsou uvedeny v [typech funkcí](#function-types) pro určitou třídu funkcí rámce.
+Zásobník bude vždy udržována 16 bajt zarovnaný, s výjimkou v rámci prologu (například po vrácení adresy je posunuta) a s výjimkou případů, kdy je uvedeno v [typech funkcí](#function-types) pro určitou třídu funkcí rámce.
 
-Následuje příklad rozložení zásobníku, kde funkce zavolá funkci, která není typu list B. funkce A Prolog již pro všechny parametry registru a zásobníku vyžadované B v dolní části zásobníku již přidělené místo. Volání přehraje zpáteční adresu a prolog B přidělí místo pro své místní proměnné, nestálé registry a prostor, který je potřeba pro volání funkcí. Pokud B používá `alloca`, je místo přiděleno mezi místní proměnná/nestálá oblast uložení registru a oblast zásobníku parametrů.
+Následuje příklad rozložení zásobníku, kde funkce A volá funkci bez listu B. Prolog funkce A již přidělil místo pro všechny parametry registru a zásobníku vyžadované B v dolní části zásobníku. Volání pushy zpáteční adresu a Prolog B přiděluje místo pro své místní proměnné, stálé registry a místo potřebné pro volání funkcí. Pokud B `alloca`používá , je místo přiděleno mezi místní proměnnou/stálé hospo-
 
-![Příklad převodu AMD](../build/media/vcamd_conv_ex_5.png "Příklad převodu AMD")
+![Příklad konverze AMD](../build/media/vcamd_conv_ex_5.png "Příklad konverze AMD")
 
-Když funkce B volá jinou funkci, vrátí se zpětná adresa hned pod domovskou adresou pro RCX.
+Když funkce B volá jinou funkci, zpáteční adresa je posunuta těsně pod domovskou adresu pro RCX.
 
-## <a name="dynamic-parameter-stack-area-construction"></a>Konstrukce dynamické oblasti zásobníku parametrů
+## <a name="dynamic-parameter-stack-area-construction"></a>Konstrukce oblasti zásobníku dynamických parametrů
 
-Pokud se použije ukazatel na rámec, existuje možnost, aby dynamicky vytvořila oblast zásobníku parametrů. To se v současnosti neprovádí v kompilátoru x64.
+Pokud je použit ukazatel rámce, existuje možnost dynamicky vytvořit oblast zásobníku parametrů. To není aktuálně provedeno v kompilátoru x64.
 
 ## <a name="function-types"></a>Typy funkcí
 
-Existují v podstatě dva typy funkcí. Funkce, která vyžaduje rámec zásobníku, se nazývá *funkce rámce*. Funkce, která nevyžaduje rámec zásobníku, se nazývá *listová funkce*.
+Existují v podstatě dva typy funkcí. Funkce, která vyžaduje rámec zásobníku, se nazývá *funkce rámce*. Funkce, která nevyžaduje rámec zásobníku se nazývá *listová funkce*.
 
-Rámec funkce je funkce, která přiděluje prostor zásobníku, volá jiné funkce, ukládá nestálé registry nebo používá zpracování výjimek. Vyžaduje taky zadání tabulky funkcí. Funkce Frame vyžaduje prolog a epilog. Funkce Frame může dynamicky přidělovat prostor zásobníku a může používat ukazatel na rámec. Funkce rámce má všechny schopnosti tohoto volání standardu, a to při jejich vyřazení.
+Funkce rámce je funkce, která přiděluje místo v zásobníku, volá další funkce, ukládá stálé registry nebo používá zpracování výjimek. Vyžaduje také položku tabulky funkcí. Funkce rámce vyžaduje prolog a epilog. Funkce rámce může dynamicky přidělit místo v zásobníku a může využívat ukazatel rámce. Funkce rámce má k dispozici všechny možnosti tohoto volajícího standardu.
 
-Pokud funkce Frame nevolá jinou funkci, není nutné zarovnávat zásobník (odkazovaný v rámci [přidělení zásobníku](#stack-allocation)oddílu).
+Pokud funkce rámce nevolá jinou funkci, není nutné zarovnat zásobník (odkazuje v [části přidělení zásobníku).](#stack-allocation)
 
-Listová funkce je ta, která nevyžaduje položku tabulky funkcí. Nemůže provádět změny v nestálých registrech, včetně RSP, což znamená, že nemůže volat žádné funkce nebo přidělovat místo v zásobníku. Může zůstat při spuštění zásobníku v nezarovnaném režimu.
+Funkce list je funkce, která nevyžaduje položku tabulky funkce. Nemůže provádět změny v žádné stálé registry, včetně RSP, což znamená, že nemůže volat žádné funkce nebo přidělit místo v zásobníku. Je povoleno ponechat zásobníku nezarovnané při jeho spuštění.
 
-## <a name="malloc-alignment"></a>nepřidělitelné přidružení
+## <a name="malloc-alignment"></a>malloc zarovnání
 
-je zaručeno, že bude vracet paměť, [která je vhodně](../c-runtime-library/reference/malloc.md) zarovnána pro uložení libovolného objektu, který má zásadní zarovnání a který se může vejít do velikosti paměti, která je přidělena. *Základní zarovnání* je zarovnání, které je menší nebo rovno největšímu zarovnání, které je podporováno implementací bez specifikace zarovnání. (Ve vizuálu C++je to zarovnání vyžadované pro `double`nebo 8 bajtů. V kódu, který cílí na 64 bitů, je 16 bajtů.) Například přidělení čtyř bajtů by bylo zarovnáno na hranici, která podporuje libovolný čtyři bajty nebo menší objekty.
+[malloc](../c-runtime-library/reference/malloc.md) je zaručeno, že vrátí paměť, která je vhodně zarovnána pro ukládání libovolného objektu, který má základní zarovnání a které by se vešlo do množství paměti, která je přidělena. *Základní zarovnání* je zarovnání, které je menší nebo rovno největší zarovnání, které je podporováno implementací bez specifikace trasy. (V jazyce Visual C++ se jedná o `double`zarovnání, které je požadováno pro nebo 8 bajtů. V kódu, který cílí na 64bitové platformy, je to 16 bajtů.) Například přidělení čtyř bajtů by bylo zarovnáno na hranici, která podporuje jakýkoli čtyřbajtový nebo menší objekt.
 
-Vizuál C++ povoluje typy, které mají *rozšířené zarovnání*, které jsou také známé jako typy *přerovnaná* . Například typy SSE [__m128](../cpp/m128.md) a `__m256`a typy deklarované pomocí `__declspec(align( n ))`, kde `n` je větší než 8, mají rozšířené zarovnání. Zarovnání paměti na hranici, která je vhodná pro objekt, který vyžaduje rozšířené zarovnání, není zaručeno `malloc`. Chcete-li přidělit paměť pro typy, které jsou zarovnaných nahoru, použijte [_aligned_malloc](../c-runtime-library/reference/aligned-malloc.md) a související funkce.
+Visual C++ umožňuje typy, které mají *rozšířené zarovnání*, které jsou také známé jako *příliš zarovnané* typy. Například Typy SSE [__m128](../cpp/m128.md) __m128 `__m256`a , a typy, `n` které jsou deklarovány pomocí kde `__declspec(align( n ))` je větší než 8, mají rozšířené zarovnání. Zarovnání paměti na hranici, která je vhodná pro `malloc`objekt, který vyžaduje rozšířené zarovnání, není zaručeno . Chcete-li přidělit paměť pro přerovnané typy, použijte [_aligned_malloc](../c-runtime-library/reference/aligned-malloc.md) a související funkce.
 
 ## <a name="alloca"></a>alloca
 
-[_alloca](../c-runtime-library/reference/alloca.md) musí být zarovnaná na 16 bajtů a navíc musí používat ukazatel na rámec.
+[_alloca](../c-runtime-library/reference/alloca.md) musí být zarovnán 16 bajtů a navíc nutné použít ukazatel rámce.
 
-Zásobník, který je přidělen, musí obsahovat místo pro parametry následného volání funkce, jak je popsáno v tématu [alokace zásobníku](#stack-allocation).
+Zásobník, který je přidělen musí obsahovat prostor za ním pro parametry následně volal funkce, jak je popsáno v [přidělení zásobníku](#stack-allocation).
 
 ## <a name="see-also"></a>Viz také
 
-[x64 – softwarové konvence](../build/x64-software-conventions.md)<br/>
+[softwarové konvence x64](../build/x64-software-conventions.md)<br/>
 [align](../cpp/align-cpp.md)<br/>
 [__declspec](../cpp/declspec.md)

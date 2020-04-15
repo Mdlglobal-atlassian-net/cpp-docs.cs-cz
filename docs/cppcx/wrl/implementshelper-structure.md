@@ -15,16 +15,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::ImplementsHelper::FillArrayWithIid method
 - Microsoft::WRL::Details::ImplementsHelper::IidCount constant
 ms.assetid: b857ba80-81bd-4e53-92b6-210991954243
-ms.openlocfilehash: 250a59152e9b41eb48c453caaa696fdc8ca3d3b4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e33842f574df5617fb40c5b3f6bb8324d5ba7c1e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398222"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371401"
 ---
 # <a name="implementshelper-structure"></a>ImplementsHelper – struktura
 
-Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.
+Podporuje infrastrukturu WRL a není určen pro použití přímo z vašeho kódu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -36,30 +36,30 @@ friend struct Details::ImplementsHelper;
 ### <a name="parameters"></a>Parametry
 
 *RuntimeClassFlagsT*<br/>
-Pole, která určuje jeden nebo více příznaků [runtimeclasstype –](runtimeclasstype-enumeration.md) enumerátory.
+Pole příznaků, které určuje jeden nebo více čítačů výčtu [RuntimeClassType.](runtimeclasstype-enumeration.md)
 
 *ILst*<br/>
 Seznam ID rozhraní.
 
 *IsDelegateToClass*<br/>
-Zadejte **true** Pokud aktuální instancí třídy `Implements` je základní třídou ID prvního rozhraní v *ILst*; v opačném případě **false**.
+Zadejte **hodnotu true,** pokud `Implements` je aktuální instance základní třídy prvního ID rozhraní v *ILst*; jinak **false**.
 
 ## <a name="remarks"></a>Poznámky
 
-Pomáhá implementovat [implementuje](implements-structure.md) struktury.
+Pomáhá implementovat [implementaci implementuje](implements-structure.md) struktury.
 
-Tato šablona prochází seznam rozhraní a přidá je jako základní třídy a jako informace nutné k povolení `QueryInterface`.
+Tato šablona prochází seznam rozhraní a přidá je jako základní třídy a jako informace nezbytné k povolení `QueryInterface`.
 
 ## <a name="members"></a>Členové
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-Název                                                    | Popis
+Name (Název)                                                    | Popis
 ------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------
-[Implementshelper::cancastto –](#cancastto)               | Získá ukazatel na ID zadané rozhraní.
-[Implementshelper::casttounknown –](#casttounknown)       | Získá ukazatel na základní `IUnknown` rozhraní pro aktuální `Implements` struktury.
-[Implementshelper::fillarraywithiid –](#fillarraywithiid) | Vloží ID rozhraní určené parametrem aktuální ID nultého šablona do určeného pole elementu.
-[ImplementsHelper::IidCount](#iidcount)                 | Obsahuje počet implementovaných rozhraní ID v aktuálním `Implements` objektu.
+[ImplementsHelper::CanCastTo](#cancastto)               | Získá ukazatel na zadané ID rozhraní.
+[ImplementsHelper::CastToUnknown](#casttounknown)       | Získá ukazatel na `IUnknown` základní rozhraní `Implements` pro aktuální strukturu.
+[ImplementsHelper::FillArrayWithId](#fillarraywithiid) | Vloží ID rozhraní určené aktuálním parametrem šablony nulty do zadaného prvku pole.
+[ImplementsHelper::IidCount](#iidcount)                 | Obsahuje počet implementovaných ID rozhraní `Implements` v aktuálním objektu.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -69,11 +69,11 @@ Název                                                    | Popis
 
 **Záhlaví:** implements.h
 
-**Namespace:** Microsoft::WRL::Details
+**Obor názvů:** Microsoft::WRL::Details
 
-## <a name="cancastto"></a>Implementshelper::cancastto –
+## <a name="implementshelpercancastto"></a><a name="cancastto"></a>ImplementsHelper::CanCastTo
 
-Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.
+Podporuje infrastrukturu WRL a není určen pro použití přímo z vašeho kódu.
 
 ```cpp
 HRESULT CanCastTo(
@@ -89,26 +89,26 @@ HRESULT CanCastTo(
 
 ### <a name="parameters"></a>Parametry
 
-*riid*<br/>
-Odkaz na identifikátor rozhraní.
+*riid řekl:*<br/>
+Odkaz na ID rozhraní.
 
-*ppv*<br/>
+*Ppv*<br/>
 Pokud je tato operace úspěšná, ukazatel na rozhraní určené *riid* nebo *iid*.
 
-*iid*<br/>
-Odkaz na identifikátor rozhraní.
+*Iid*<br/>
+Odkaz na ID rozhraní.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-S_OK v případě úspěchu; v opačném případě HRESULT, která označuje chybu.
+S_OK v případě úspěchu; jinak HRESULT, který označuje chybu.
 
 ### <a name="remarks"></a>Poznámky
 
-Získá ukazatel na ID zadané rozhraní.
+Získá ukazatel na zadané ID rozhraní.
 
-## <a name="casttounknown"></a>Implementshelper::casttounknown –
+## <a name="implementshelpercasttounknown"></a><a name="casttounknown"></a>ImplementsHelper::CastToUnknown
 
-Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.
+Podporuje infrastrukturu WRL a není určen pro použití přímo z vašeho kódu.
 
 ```cpp
 IUnknown* CastToUnknown();
@@ -116,15 +116,15 @@ IUnknown* CastToUnknown();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na základní `IUnknown` rozhraní.
+Ukazatel na `IUnknown` základní rozhraní.
 
 ### <a name="remarks"></a>Poznámky
 
-Získá ukazatel na základní `IUnknown` rozhraní pro aktuální `Implements` struktury.
+Získá ukazatel na `IUnknown` základní rozhraní `Implements` pro aktuální strukturu.
 
-## <a name="fillarraywithiid"></a>Implementshelper::fillarraywithiid –
+## <a name="implementshelperfillarraywithiid"></a><a name="fillarraywithiid"></a>ImplementsHelper::FillArrayWithId
 
-Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.
+Podporuje infrastrukturu WRL a není určen pro použití přímo z vašeho kódu.
 
 ```cpp
 void FillArrayWithIid(
@@ -134,19 +134,19 @@ void FillArrayWithIid(
 
 ### <a name="parameters"></a>Parametry
 
-*index*<br/>
-Z nuly vycházející index určující počáteční prvek pole pro tuto operaci. Po dokončení této operace *index* zvyšuje o 1.
+*Index*<br/>
+Index založený na nule, který označuje počáteční prvek pole pro tuto operaci. Po dokončení této operace *index* se zpřísní o 1.
 
-*iids*<br/>
-Pole typu IID.
+*IIDs*<br/>
+Pole ID typu.
 
 ### <a name="remarks"></a>Poznámky
 
-Vloží ID rozhraní určené parametrem aktuální ID nultého šablona do určeného pole elementu.
+Vloží ID rozhraní určené aktuálním parametrem šablony nulty do zadaného prvku pole.
 
-## <a name="iidcount"></a>ImplementsHelper::IidCount
+## <a name="implementshelperiidcount"></a><a name="iidcount"></a>ImplementsHelper::IidCount
 
-Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.
+Podporuje infrastrukturu WRL a není určen pro použití přímo z vašeho kódu.
 
 ```cpp
 static const unsigned long IidCount;
@@ -154,4 +154,4 @@ static const unsigned long IidCount;
 
 ### <a name="remarks"></a>Poznámky
 
-Obsahuje počet implementovaných rozhraní ID v aktuálním `Implements` objektu.
+Obsahuje počet implementovaných ID rozhraní `Implements` v aktuálním objektu.

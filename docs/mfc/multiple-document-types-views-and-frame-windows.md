@@ -15,75 +15,75 @@ helpviewer_keywords:
 - multiple frame windows [MFC]
 - splitter windows [MFC], static
 ms.assetid: c6b9e4e0-7c9c-45f1-a804-aeac39c9a128
-ms.openlocfilehash: f2948564b9008f9a89c89d58e3249b20b3dc2ffd
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 5d8cec0a4ba1580e7ac5fb0e3b81052de08223fc
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80168639"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81370723"
 ---
 # <a name="multiple-document-types-views-and-frame-windows"></a>Více typů dokumentů, zobrazení a oken s rámečkem
 
-Standardní vztah mezi dokumentem, jeho zobrazením a oknem rámce je popsán v tématu [vytváření dokumentů a zobrazení](../mfc/document-view-creation.md). Mnoho aplikací podporuje jeden typ dokumentu (ale možná několik otevřených dokumentů tohoto typu) s jedním zobrazením na dokumentu a pouze jedním oknem rámců na dokument. Některé aplikace ale můžou potřebovat změnit některé z těchto výchozích hodnot.
+Standardní vztah mezi dokumentem, jeho zobrazením a oknem rámce je popsán v [dokumentu/vytvoření zobrazení](../mfc/document-view-creation.md). Mnoho aplikací podporuje jeden typ dokumentu (ale možná více otevřených dokumentů tohoto typu) s jedním zobrazením v dokumentu a pouze jedním oknem rámce na dokument. Některé aplikace však možná budou muset změnit jeden nebo více těchto výchozích hodnot.
 
-## <a name="what-do-you-want-to-know-more-about"></a>K čemu chcete získat další informace
+## <a name="what-do-you-want-to-know-more-about"></a>Co chcete vědět více o
 
 - [Více typů dokumentů](#_core_multiple_document_types)
 
 - [Více zobrazení](#_core_multiple_views)
 
-- [Více oken s rámečkem](#_core_multiple_frame_windows)
+- [Více oken rámečků](#_core_multiple_frame_windows)
 
-- [Okna s rozdělovačem](#_core_splitter_windows)
+- [Okna rozdělovače](#_core_splitter_windows)
 
-##  <a name="multiple-document-types"></a><a name="_core_multiple_document_types"></a>Více typů dokumentů
+## <a name="multiple-document-types"></a><a name="_core_multiple_document_types"></a>Více typů dokumentů
 
-Průvodce aplikací knihovny MFC vytvoří pro vás jednu třídu dokumentu. V některých případech ale možná budete muset podporovat více než jeden typ dokumentu. Vaše aplikace může například potřebovat sešit a dokument grafu. Každý typ dokumentu je reprezentován vlastní třídou dokumentu a pravděpodobně také vlastní třídou zobrazení. Když uživatel zvolí nový příkaz soubor, zobrazí se dialogové okno se seznamem podporovaných typů dokumentů. Pak vytvoří dokument typu, který uživatel zvolí. Každý typ dokumentu je spravován pomocí vlastního objektu šablony dokumentu.
+Průvodce aplikací knihovny MFC vytvoří pro vás jednu třídu dokumentu. V některých případech však může být nutné podporovat více než jeden typ dokumentu. Aplikace může například potřebovat list a dokumenty grafu. Každý typ dokumentu je reprezentován vlastní třídou dokumentu a pravděpodobně také vlastní třídou zobrazení. Když uživatel zvolí příkaz Nový soubor, rozhraní se zobrazí dialogové okno se seznamem podporovaných typů dokumentů. Potom vytvoří dokument typu, který uživatel zvolí. Každý typ dokumentu je spravován vlastním objektem šablony dokumentu.
 
-Chcete-li vytvořit další třídy dokumentu, přečtěte si téma [Přidání třídy](../ide/adding-a-class-visual-cpp.md). Vyberte možnost [objektu CDocument](../mfc/reference/cdocument-class.md) jako typ třídy, která se má odvodit, a zadejte požadované informace o dokumentu. Potom implementujte data nové třídy.
+Další třídy dokumentů najdete v [tématu Přidání třídy](../ide/adding-a-class-visual-cpp.md). Zvolte [CDocument](../mfc/reference/cdocument-class.md) jako typ třídy, ze které chcete odvodit a zadejte požadované informace o dokumentu. Pak implementujte data nové třídy.
 
-Chcete-li dát rozhraní ví o vaší další třídě dokumentu, je nutné přidat druhé volání [AddDocTemplate](../mfc/reference/cwinapp-class.md#adddoctemplate) v přepsání [InitInstance](../mfc/reference/cwinapp-class.md#initinstance) třídy aplikace. Další informace naleznete v tématu [šablony dokumentů](../mfc/document-templates-and-the-document-view-creation-process.md).
+Chcete-li, aby rozhraní bylo uvedeno v rámci o vaší třídě dokumentu, je nutné přidat druhé volání do [addDocTemplate](../mfc/reference/cwinapp-class.md#adddoctemplate) v přepsání [InitInstance](../mfc/reference/cwinapp-class.md#initinstance) vaší třídy aplikace. Další informace naleznete v [tématu Document Templates](../mfc/document-templates-and-the-document-view-creation-process.md).
 
-##  <a name="multiple-views"></a><a name="_core_multiple_views"></a>Více zobrazení
+## <a name="multiple-views"></a><a name="_core_multiple_views"></a>Více zobrazení
 
-Mnoho dokumentů vyžaduje pouze jedno zobrazení, ale je možné podporovat více než jedno zobrazení jednoho dokumentu. Aby bylo možné implementovat více zobrazení, objekt dokumentu udržuje seznam jeho zobrazení, poskytuje členské funkce pro přidávání a odebírání zobrazení a poskytuje členskou funkci [UpdateAllViews](../mfc/reference/cdocument-class.md#updateallviews) pro zajištění více zobrazení, když se změní data dokumentu.
+Mnoho dokumentů vyžaduje pouze jedno zobrazení, ale je možné podporovat více než jedno zobrazení jednoho dokumentu. Chcete-li implementovat více zobrazení, objekt dokumentu uchovává seznam jeho zobrazení, poskytuje členské funkce pro přidávání a odebírání zobrazení a poskytuje [updateallviews](../mfc/reference/cdocument-class.md#updateallviews) členské funkce pro umožnění více zobrazení vědět, kdy se změnila data dokumentu.
 
-Knihovna MFC podporuje tři společná uživatelská rozhraní vyžadující více zobrazení ve stejném dokumentu. Tyto modely:
+Knihovna MFC podporuje tři běžná uživatelská rozhraní, která vyžadují více zobrazení ve stejném dokumentu. Jedná se o tyto modely:
 
-- Zobrazit objekty stejné třídy, každé v samostatném okně rámce dokumentu MDI.
+- Zobrazení objektů stejné třídy, každý v samostatném okně rámce dokumentu MDI.
 
-   Je možné, že budete chtít vytvořit druhé okno rámce v dokumentu. Uživatel může zvolit nový příkaz okna, aby otevřel druhý rámec se zobrazením stejného dokumentu a pak pomocí dvou rámců zobrazily různé části dokumentu současně. Rozhraní podporuje příkaz nové okno v nabídce okna pro aplikace MDI duplikováním počátečního okna rámce a zobrazení připojeného k dokumentu.
+   Můžete chtít podporovat vytváření druhého okna rámce v dokumentu. Uživatel může zvolit příkaz Nové okno, který otevře druhý snímek se zobrazením stejného dokumentu a potom pomocí dvou snímků zobrazí různé části dokumentu současně. Rozhraní Framework podporuje příkaz Nové okno v nabídce Window pro aplikace MDI duplikováním okna počátečního rámce a zobrazení připojeného k dokumentu.
 
-- Zobrazit objekty stejné třídy ve stejném okně rámce dokumentu.
+- Zobrazení objektů stejné třídy ve stejném okně rámce dokumentu.
 
-   Rozdělovačová okna rozdělí prostor zobrazení jednoho okna dokumentu na více samostatných zobrazení dokumentu. Rozhraní vytvoří více objektů zobrazení ze stejné třídy zobrazení. Další informace najdete v tématu [rozdělená okna](#_core_splitter_windows).
+   Rozdělovač oken rozdělí prostor zobrazení jednoho okna dokumentu do více samostatných zobrazení dokumentu. Rozhraní framework vytvoří více objektů zobrazení ze stejné třídy zobrazení. Další informace naleznete v tématu [Splitter Windows](#_core_splitter_windows).
 
-- Zobrazení objektů různých tříd v jednom okně rámce.
+- Zobrazení objektů různých tříd v okně jednoho snímku.
 
-   V tomto modelu proměnlivé okno s rozdělovačem, více zobrazení sdílí jedno okno rámce. Zobrazení jsou vytvořena z různých tříd, přičemž každé zobrazení poskytuje jiný způsob zobrazení stejného dokumentu. Například jedno zobrazení může zobrazit dokument zpracování textu v normálním režimu, zatímco v jiném zobrazení je v režimu osnovy. Rozdělovací ovládací prvek umožňuje uživateli upravit relativní velikosti zobrazení.
+   V tomto modelu, varianta okna rozdělovače, více pohledů sdílet jedno okno rámce. Zobrazení jsou vytvořena z různých tříd, z nichž každé zobrazení poskytuje jiný způsob zobrazení stejného dokumentu. Jedno zobrazení může například zobrazit textový dokument v normálním režimu, zatímco druhé zobrazení jej zobrazuje v režimu osnovy. Ovládací prvek rozdělovač eviduje uživateli relativní velikosti zobrazení.
 
-Následující obrázek dělený do částí a, b a c zobrazuje tři modely uživatelského rozhraní v uvedeném pořadí.
+Následující obrázek, rozdělený do částí a, b a c, zobrazuje tři modely uživatelského rozhraní ve výše uvedeném pořadí.
 
-![Více&#45;uživatelských rozhraní pro zobrazení](../mfc/media/vc37a71.gif "Více&#45;uživatelských rozhraní pro zobrazení") <br/>
-Uživatelská rozhraní s více zobrazeními
+![Více&#45;zobrazení uživatelských rozhraní](../mfc/media/vc37a71.gif "Více&#45;zobrazení uživatelských rozhraní") <br/>
+Vícenásobná uživatelská rozhraní
 
-Rozhraní poskytuje tyto modely implementací nového příkazu okna a poskytnutím třídy [CSplitterWnd](../mfc/reference/csplitterwnd-class.md), jak je popsáno v části [rozdělení oken](#_core_splitter_windows). Můžete implementovat jiné modely, které používají jako výchozí bod. Ukázkové programy, které ilustrují různé konfigurace zobrazení, oken s rámečkem a příčky, naleznete v tématu [MFC Samples](../overview/visual-cpp-samples.md#mfc-samples).
+Rámec poskytuje tyto modely implementací příkazu New Window a poskytnutím třídy [CSplitterWnd](../mfc/reference/csplitterwnd-class.md), jak je popsáno v [systému Splitter Windows](#_core_splitter_windows). Můžete implementovat jiné modely pomocí těchto jako výchozí bod. Ukázkové programy, které ilustrují různé konfigurace zobrazení, oken rámců a rozdělovačů, naleznete [v tématu Ukázky knihovny MFC](../overview/visual-cpp-samples.md#mfc-samples).
 
-Další informace o `UpdateAllViews`naleznete v tématu Třída [CView](../mfc/reference/cview-class.md) v *referenci MFC* a v [ukázce Klikyháky](../overview/visual-cpp-samples.md).
+Další informace `UpdateAllViews`o , naleznete v části [CView](../mfc/reference/cview-class.md) třídy v *referenční příručce knihovny MFC* a [ukázce klikacích](../overview/visual-cpp-samples.md).
 
-##  <a name="multiple-frame-windows"></a><a name="_core_multiple_frame_windows"></a>Více oken s rámečkem
+## <a name="multiple-frame-windows"></a><a name="_core_multiple_frame_windows"></a>Windows s více rámy
 
-Pomocí příkazu nové okno v nabídce okno pro aplikace MDI můžete vytvořit druhé okno rámce na stejném dokumentu. Další informace najdete v prvním modelu na obrázku s více zobrazeními uživatelského rozhraní.
+Pomocí příkazu Nové okno v nabídce Okno pro aplikace MDI můžete vytvořit druhé okno rámce ve stejném dokumentu. Další informace naleznete v prvním modelu na obrázku Vícezobrazení uživatelské rozhraní.
 
-##  <a name="splitter-windows"></a><a name="_core_splitter_windows"></a>Okna s rozdělovačem
+## <a name="splitter-windows"></a><a name="_core_splitter_windows"></a>Splitter Windows
 
-V okně s rozdělovačem je okno nebo může být rozděleno do dvou nebo více rolovacích podoken. Rozdělovačový ovládací prvek (neboli "rozdělit pole") v rámci okna vedle posuvníků umožňuje uživateli upravit relativní velikosti podoken. Každé podokno je zobrazení stejného dokumentu. V "dynamických" rozdělovačech jsou zobrazení stejné třídy, jak je znázorněno v části b obrázku uživatelského rozhraní s více zobrazeními. V "statických" rozdělovačech mohou být zobrazení různých tříd. Rozdělená okna obou druhů jsou podporována třídou [CSplitterWnd](../mfc/reference/csplitterwnd-class.md).
+V okně rozdělovače je nebo může být rozděleno do dvou nebo více posuvných podoken. Ovládací prvek rozdělovače (nebo "rozdělovací rámeček") v rámečku okna vedle posuvníků umožňuje uživateli upravit relativní velikosti podoken. Každé podokno je zobrazení ve stejném dokumentu. V "dynamické" rozdělovače pohledy jsou stejné třídy, jak je znázorněno v části b obrázku více zobrazení uživatelského rozhraní. V "statické" rozdělovače zobrazení mohou být různých tříd. Splitter okna obou druhů jsou podporovány třídou [CSplitterWnd](../mfc/reference/csplitterwnd-class.md).
 
-Dynamické rozdělovače okna s zobrazeními stejné třídy umožňují uživateli rozdělit okno na více podoken na více podoknech a potom posouvat různá podokna, aby viděli různé části dokumentu. Uživatel může také zrušit rozdělení okna a odebrat tak další zobrazení. Příkladem je dělicí příčka přidaná do [ukázky Klikyháky](../overview/visual-cpp-samples.md) . Toto téma popisuje techniku pro vytváření dynamických rozdělovačových oken. V části b obrázku uživatelského rozhraní s více zobrazeními se zobrazuje dynamické okno s rozdělovačem.
+Dynamická okna rozdělovače se zobrazeními stejné třídy umožňují uživateli rozdělit okno do více podoken podle potřeby a potom posouvat různá podokna, aby viděli různé části dokumentu. Uživatel může také zrušit rozdělení okna odebrat další zobrazení. Příkladem jsou okna rozdělovače přidaná do [ukázky klikyháky.](../overview/visual-cpp-samples.md) Toto téma popisuje techniku pro vytváření dynamických dělicích oken. Dynamické okno rozdělovače je zobrazeno v části b obrázku Vícezobrazení uživatelského rozhraní.
 
-Statické rozdělovače okna, s zobrazeními různých tříd, začínají oknem rozděleným na více podoken, z nichž každý má jiný účel. Například v editoru vizuální C++ bitmapy zobrazuje okno obrázek dvě podokna vedle sebe. V levém podokně se zobrazí obrázek velikosti rastrového obrázku. V pravém podokně se zobrazí zvětšený nebo zvětšený obrázek stejné bitmapy. Podokna jsou oddělená "dělicí příčkou", kterou může uživatel změnit, aby se změnily relativní velikosti podoken. Statické okno s rozdělovačem je znázorněno v části c grafického uživatelského rozhraní s více zobrazeními.
+Statická okna rozdělovače, s zobrazenírůzných tříd, začínají s oknem rozděleným do více podoken, z nichž každý má jiný účel. Například v bitmapovém editoru Visual C++ se v okně obrázku zobrazí dvě podokna vedle sebe. V levém podokně se zobrazí obraz bitmapy v životní velikosti. Pravé podokno zobrazuje zvětšený nebo zvětšený obraz stejné bitmapy. Podokna jsou oddělena "rozdělovačem", který může uživatel přetáhnout a změnit relativní velikost i podlomena. V části c obrázku Vícezobrazení uživatelských rozhraní je zobrazeno statické okno rozdělovače.
 
-Další informace naleznete v tématu Class [CSplitterWnd](../mfc/reference/csplitterwnd-class.md) in *MFC Reference* a [MFC Samples](../overview/visual-cpp-samples.md#mfc-samples).
+Další informace naleznete v části Třída [CSplitterWnd](../mfc/reference/csplitterwnd-class.md) v *odkazové ms* a [vzorky knihovny MFC](../overview/visual-cpp-samples.md#mfc-samples).
 
 ## <a name="see-also"></a>Viz také
 

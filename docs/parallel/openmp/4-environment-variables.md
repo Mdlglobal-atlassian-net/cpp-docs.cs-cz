@@ -2,40 +2,40 @@
 title: 4. Proměnné prostředí
 ms.date: 01/16/2019
 ms.assetid: 4ec7ed81-e9ca-46a1-84f8-8f9ce4587346
-ms.openlocfilehash: b41829fd9cf2f90312f669ef991f56dda02947f7
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: e93c59654c17ed6dbfb7483ac2dce716ce24b52a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79417052"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81370270"
 ---
-# <a name="4-environment-variables"></a>4. proměnné prostředí
+# <a name="4-environment-variables"></a>4. Proměnné prostředí
 
-Tato kapitola popisuje proměnné prostředí OpenMP C C++ a API (nebo podobné mechanizmy specifické pro platformu), které řídí provádění paralelního kódu.  Názvy proměnných prostředí musí být velká písmena. Hodnotám, které jsou přiřazeny, jsou nerozlišovat velká a malá písmena a mohou mít úvodní a koncové prázdné znaky.  Úpravy hodnot po spuštění programu jsou ignorovány.
+Tato kapitola popisuje proměnné prostředí Rozhraní API OpenMP C a C++ (nebo podobné mechanismy specifické pro platformu), které řídí provádění paralelního kódu.  Názvy proměnných prostředí musí být velká písmena. Hodnoty, které jsou jim přiřazeny, jsou nerozlišující malá a velká písmena a mohou mít úvodní a koncové prázdné místo.  Změny hodnot po spuštění programu jsou ignorovány.
 
 Proměnné prostředí jsou následující:
 
-- [OMP_SCHEDULE](#41-omp_schedule) nastaví typ časového plánu za běhu a velikost bloku dat.
-- [OMP_NUM_THREADS](#42-omp_num_threads) nastaví počet vláken, která se mají použít při provádění.
-- [OMP_DYNAMIC](#43-omp_dynamic) povoluje nebo zakazuje dynamickou úpravu počtu vláken.
-- [OMP_NESTED](#44-omp_nested) povoluje nebo zakazuje vnořené paralelismuy.
+- [OMP_SCHEDULE](#41-omp_schedule) nastaví typ plánu běhu a velikost bloku dat.
+- [OMP_NUM_THREADS](#42-omp_num_threads) nastaví počet podprocesů, které mají být používány během provádění.
+- [OMP_DYNAMIC](#43-omp_dynamic) povolí nebo zakáže dynamické nastavení počtu podprocesů.
+- [OMP_NESTED](#44-omp_nested) povolí nebo zakáže vnořený paralelismus.
 
-Příklady v této kapitole ukazují, jak se tyto proměnné můžou nastavit v prostředích prostředí csh (UNIX C Shell). V prostředích Korn shell a DOS jsou akce podobné:
+Příklady v této kapitole pouze ukazují, jak mohou být tyto proměnné nastaveny v prostředí unixového prostředí C (csh). V prostředí Korn shell a DOS jsou akce podobné:
 
 csh:  
 `setenv OMP_SCHEDULE "dynamic"`
 
-ksh:  
+Ksh:  
 `export OMP_SCHEDULE="dynamic"`
 
-DOS  
+Dos:  
 `set OMP_SCHEDULE="dynamic"`
 
-## <a name="41-omp_schedule"></a>4,1 OMP_SCHEDULE
+## <a name="41-omp_schedule"></a><a name="41-omp_schedule"></a>4.1 OMP_SCHEDULE
 
-`OMP_SCHEDULE` se vztahuje pouze na direktivy `for` a `parallel for`, které mají `runtime`typu plán. Typ plánu a velikost bloku pro všechny takové smyčky lze nastavit v době běhu. Nastavte tuto proměnnou prostředí na libovolný rozpoznaný typ plánu a na nepovinný *chunk_size*.
+`OMP_SCHEDULE`platí pouze `for` pro `parallel for` a direktivy, které mají typ `runtime`plánu . Typ plánu a velikost bloku pro všechny tyto smyčky lze nastavit v době běhu. Nastavte tuto proměnnou prostředí na libovolný rozpoznaný typ plánu a na volitelný *chunk_size*.
 
-Pro direktivy `for` a `parallel for`, které mají jiný typ plánu než `runtime`, `OMP_SCHEDULE` se ignoruje. Výchozí hodnota této proměnné prostředí je definovaná implementací. Pokud je nastaven volitelný *chunk_size* , hodnota musí být kladná. Pokud není nastavená *chunk_size* , předpokládá se hodnota 1, s výjimkou případů, kdy je plán `static`. Pro `static` plán je výchozí velikost bloku nastavená na prostor pro iteraci smyčky dělený počtem vláken, která se pro smyčku používají.
+Pro `for` `parallel for` a direktivy, `runtime`které `OMP_SCHEDULE` mají jiný typ plánu než , jsou ignorovány. Výchozí hodnota pro tuto proměnnou prostředí je definována implementací. Pokud je nastavena volitelná *chunk_size,* musí být hodnota kladná. Pokud *chunk_size* není nastavena, předpokládá se hodnota 1, `static`s výjimkou případů, kdy je plán . Pro `static` plán je výchozí velikost bloku dat nastavena na prostor iterace smyčky dělený počtem vláken aplikovaných na smyčku.
 
 Příklad:
 
@@ -46,20 +46,20 @@ setenv OMP_SCHEDULE "dynamic"
 
 ### <a name="cross-references"></a>Křížové odkazy
 
-- [pro](2-directives.md#241-for-construct) direktivu
-- [Parallel for](2-directives.md#251-parallel-for-construct) – direktiva
+- [pro](2-directives.md#241-for-construct) směrnici
+- [paralelní pro](2-directives.md#251-parallel-for-construct) směrnici
 
-## <a name="42-omp_num_threads"></a>4,2 OMP_NUM_THREADS
+## <a name="42-omp_num_threads"></a><a name="42-omp_num_threads"></a>4.2OMP_NUM_THREADS
 
-Proměnná prostředí `OMP_NUM_THREADS` nastaví výchozí počet vláken, která se mají použít při provádění. `OMP_NUM_THREADS` se ignoruje, pokud je toto číslo explicitně změněno voláním rutiny knihovny `omp_set_num_threads`. Ignoruje se také v případě, že je v direktivě `parallel` explicitní klauzule `num_threads`.
+Proměnná `OMP_NUM_THREADS` prostředí nastaví výchozí počet podprocesů, které mají být používány během provádění. `OMP_NUM_THREADS`je ignorována, pokud je toto `omp_set_num_threads` číslo explicitně změněno voláním rutiny knihovny. Je také ignorována, pokud je `num_threads` explicitní klauzule o `parallel` směrnici.
 
-Hodnota proměnné prostředí `OMP_NUM_THREADS` musí být kladné celé číslo. Jeho efekt závisí na tom, zda je dynamická úprava počtu vláken povolena. Komplexní sadu pravidel o interakci mezi `OMP_NUM_THREADS` proměnnou prostředí a dynamickou úpravou vláken naleznete v [části 2,3](2-directives.md#23-parallel-construct).
+Hodnota proměnné `OMP_NUM_THREADS` prostředí musí být kladné celé číslo. Jeho účinek závisí na tom, zda je povoleno dynamické nastavení počtu vláken. Komplexní soubor pravidel týkajících se interakce `OMP_NUM_THREADS` mezi proměnnou prostředí a dynamickým nastavením vláken naleznete [v části 2.3](2-directives.md#23-parallel-construct).
 
-Počet podprocesů, které se mají použít, je implementace definovaná v těchto případech:
+Počet podprocesů, které chcete použít, je definován implementací, pokud:
 
-- není zadaná proměnná prostředí `OMP_NUM_THREADS`,
-- Zadaná hodnota není kladné celé číslo nebo
-- hodnota je větší než maximální počet vláken, která může systém podporovat.
+- proměnná `OMP_NUM_THREADS` prostředí není zadána,
+- zadaná hodnota není kladné celé číslo, nebo
+- hodnota je větší než maximální počet podprocesů, které systém může podporovat.
 
 Příklad:
 
@@ -69,15 +69,15 @@ setenv OMP_NUM_THREADS 16
 
 ### <a name="cross-references"></a>Křížové odkazy
 
-- klauzule [num_threads](2-directives.md#23-parallel-construct)
+- [num_threads](2-directives.md#23-parallel-construct) doložka
 - [omp_set_num_threads](3-run-time-library-functions.md#311-omp_set_num_threads-function) funkce
 - [omp_set_dynamic](3-run-time-library-functions.md#317-omp_set_dynamic-function) funkce
 
-## <a name="43-omp_dynamic"></a>4,3 OMP_DYNAMIC
+## <a name="43-omp_dynamic"></a><a name="43-omp_dynamic"></a>4.3 OMP_DYNAMIC
 
-Proměnná prostředí `OMP_DYNAMIC` povoluje nebo zakazuje dynamickou úpravu počtu vláken, která jsou k dispozici pro spuštění paralelních oblastí. `OMP_DYNAMIC` se ignoruje, pokud je dynamická úprava explicitně povolená nebo zakázaná voláním rutiny knihovny `omp_set_dynamic`. Jeho hodnota musí být `TRUE` nebo `FALSE`.
+Proměnná `OMP_DYNAMIC` prostředí umožňuje nebo zakazuje dynamické nastavení počtu podprocesů, které jsou k dispozici pro provádění paralelních oblastí. `OMP_DYNAMIC`je ignorována, pokud je dynamická úprava explicitně povolena nebo zakázána voláním rutiny knihovny. `omp_set_dynamic` Jeho hodnota `TRUE` musí `FALSE`být nebo .
 
-Pokud je `OMP_DYNAMIC` nastavené na `TRUE`, může být počet vláken, která se používají pro spouštění paralelních oblastí, upravený běhovým prostředím, aby se co nejlépe používaly systémové prostředky.  Pokud je `OMP_DYNAMIC` nastaveno na `FALSE`, je dynamická úprava zakázána. Výchozí podmínka je definovaná implementací.
+Pokud `OMP_DYNAMIC` je `TRUE`nastavena na , počet podprocesů, které se používají pro provádění paralelních oblastí mohou být upraveny prostředím runtime tak, aby co nejlépe využívaly systémové prostředky.  Pokud `OMP_DYNAMIC` je `FALSE`nastavena na , dynamické nastavení je zakázáno. Výchozí podmínka je definována implementací.
 
 Příklad:
 
@@ -87,12 +87,12 @@ setenv OMP_DYNAMIC TRUE
 
 ### <a name="cross-references"></a>Křížové odkazy
 
-- [Paralelní oblasti](2-directives.md#23-parallel-construct)
+- [Paralelní regiony](2-directives.md#23-parallel-construct)
 - [omp_set_dynamic](3-run-time-library-functions.md#317-omp_set_dynamic-function) funkce
 
-## <a name="44-omp_nested"></a>4,4 OMP_NESTED
+## <a name="44-omp_nested"></a><a name="44-omp_nested"></a>4.4OMP_NESTED
 
-Proměnná prostředí `OMP_NESTED` povoluje nebo zakazuje vnořené paralelismus, pokud není vnořený paralelismu povolený nebo zakázaný voláním rutiny knihovny `omp_set_nested`. Pokud je `OMP_NESTED` nastaveno na `TRUE`, je povolen vnořený paralelismus. Pokud je `OMP_NESTED` nastaveno na `FALSE`, je vnořený paralelismu zakázán. Výchozí hodnota je `FALSE`.
+Proměnná `OMP_NESTED` prostředí povolí nebo zakáže vnořený paralelismus, pokud není `omp_set_nested` povoleno nebo zakázáno vnořené paralelismu voláním rutiny knihovny. Pokud `OMP_NESTED` je `TRUE`nastavena na , vnořené paralelismus je povolena. Pokud `OMP_NESTED` je `FALSE`nastavena na , vnořený paralelismus je zakázán. Výchozí hodnota je `FALSE`.
 
 Příklad:
 
@@ -100,6 +100,6 @@ Příklad:
 setenv OMP_NESTED TRUE
 ```
 
-### <a name="cross-reference"></a>Křížové odkazy
+### <a name="cross-reference"></a>Křížového odkazu
 
 - [omp_set_nested](3-run-time-library-functions.md#319-omp_set_nested-function) funkce

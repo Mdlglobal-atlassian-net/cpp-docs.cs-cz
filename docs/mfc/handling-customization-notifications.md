@@ -47,34 +47,34 @@ helpviewer_keywords:
 - NM_RDBLCLK notification [MFC]
 - TBN_GETBUTTONINFO notification [MFC]
 ms.assetid: 219ea08e-7515-4b98-85cb-47120f08c0a2
-ms.openlocfilehash: dc34f3eaa4b085b9d8acbaf47b21cf1825627100
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 67f40d0dc50a853a39cb9b60a938d8eafe8293c4
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62240684"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81370485"
 ---
 # <a name="handling-customization-notifications"></a>Zpracování oznámení o přizpůsobení
 
-Windows nástrojů běžného ovládacího prvku má integrované funkce, včetně dialogového okna vlastního nastavení definovaná systémem, který umožní uživateli vkládat, odstranit nebo přeuspořádat tlačítka na panelu nástrojů. Aplikace určuje, zda funkce jsou k dispozici a ovládací prvky v rozsahu, do kterého může uživatel přizpůsobit panel nástrojů.
+Společný ovládací prvek panelu nástrojů systému Windows obsahuje integrované funkce vlastního nastavení, včetně dialogového okna přizpůsobení definovaného systémem, které uživateli umožňuje vložit, odstranit nebo uspořádat tlačítka panelu nástrojů. Aplikace určuje, zda jsou k dispozici funkce vlastního nastavení, a určuje, do jaké míry může uživatel přizpůsobit panel nástrojů.
 
-Můžete provádět tyto možnosti přizpůsobení dostupné uživatele tím, že panelu nástrojů **CCS_ADJUSTABLE** style. Funkce umožní uživateli přetáhněte tlačítko na jiné místo nebo odebrat tlačítka podle jeho přetažením z panelu nástrojů. Kromě toho uživatel můžete dvakrát kliknout na panelu nástrojů zobrazte zobrazení **upravit panel nástrojů** dialogové okno, které umožňuje uživateli přidat, odstranit a změna uspořádání tlačítek panelu nástrojů. Aplikace může zobrazit dialogové okno s použitím [vlastní](../mfc/reference/ctoolbarctrl-class.md#customize) členskou funkci.
+Tyto funkce vlastního nastavení můžete zpřístupnit uživateli tak, že panelu nástrojů poskytnete **CCS_ADJUSTABLE** stylu. Funkce vlastního nastavení umožňují uživateli přetáhnout tlačítko na novou pozici nebo odstranit tlačítko jeho přetažením z panelu nástrojů. Kromě toho může uživatel poklepat na panel nástrojů a zobrazit dialogové okno **Přizpůsobit panel nástrojů,** které uživateli umožňuje přidávat, odstraňovat a měnit uspořádání tlačítek panelu nástrojů. Aplikace může zobrazit dialogové okno pomocí funkce [Přizpůsobit](../mfc/reference/ctoolbarctrl-class.md#customize) členy.
 
-Ovládací prvek panelu nástrojů odesílá zprávy s oznámením do nadřazeného okna v každém kroku v procesu vlastního nastavení. Pokud uživatel obsahuje klávesu SHIFT a zahájí přetahování tlačítko panelu nástrojů automaticky zpracovává operaci přetažení. Odešle panelu nástrojů **tbn_querydelete –** oznámení do nadřazeného okna k určení, jestli se dá tlačítko Odstranit. Operace přetažení končí, když nadřazené okno vrátí **FALSE**. V opačném případě panel nástrojů zaznamenává vstup z myši a čeká na uživatele k uvolnění tlačítka myši.
+Ovládací prvek panelu nástrojů odesílá oznámení do nadřazeného okna v každém kroku procesu vlastního nastavení. Pokud uživatel podrží klávesu SHIFT dolů a začne přetahovat tlačítko, panel nástrojů automaticky zřídí operaci přetažení. Panel nástrojů odešle **zprávu o TBN_QUERYDELETE** oznámení do nadřazeného okna, aby zjistil, zda může být tlačítko odstraněno. Operace přetažení končí, pokud nadřazené okno vrátí **hodnotu NEPRAVDA**. V opačném případě panel nástrojů zachytí vstup myši a čeká na uživatele uvolnit tlačítko myši.
 
-Když uživatel uvolní tlačítko myši, určuje ovládací prvek panelu nástrojů umístění kurzoru myši. Pokud je kurzor mimo panelu nástrojů, na tlačítko se odstraní. Pokud je kurzor na další tlačítka panelu nástrojů, odešle panelu nástrojů **tbn_queryinsert –** oznámení do nadřazeného okna k určení, pokud se dá tlačítko Vložit vlevo od daného tlačítko. Tlačítko je vložen, pokud vrací nadřazené okno **TRUE**; v opačném případě není. Odešle panelu nástrojů **tbn_toolbarchange –** zprávy oznámení, který signalizuje konec operace přetažení.
+Když uživatel uvolní tlačítko myši, ovládací prvek panelu nástrojů určuje umístění kurzoru myši. Pokud je kurzor mimo panel nástrojů, tlačítko se odstraní. Pokud je kurzor na jiném tlačítku panelu nástrojů, panel nástrojů odešle **zprávu TBN_QUERYINSERT** oznámení do nadřazeného okna, aby zjistil, zda může být tlačítko vloženo nalevo od daného tlačítka. Tlačítko se vloží, pokud nadřazené okno vrátí **hodnotu PRAVDA**; v opačném případě tomu tak není. Panel nástrojů odešle **TBN_TOOLBARCHANGE** oznámení, které signalizuje konec operace přetažení.
 
-Pokud uživatel začne operace přetažení bez podržení klávesy SHIFT, odešle ovládací prvek panelu nástrojů **tbn_begindrag –** oznámení zprávu nadřazenému oknu. Aplikace, která implementuje vlastní kód přetažením tlačítko můžete tuto zprávu jako signál spustit operaci přetažení. Odešle panelu nástrojů **tbn_enddrag –** zprávy oznámení, který signalizuje konec operace přetažení.
+Pokud uživatel zahájí operaci přetažení bez podržení klávesy SHIFT, ovládací prvek panelu nástrojů odešle **TBN_BEGINDRAG** oznámení do okna vlastníka. Aplikace, která implementuje vlastní kód přetažení tlačítka můžete použít tuto zprávu jako signál k zahájení operace přetažení. Panel nástrojů odešle **TBN_ENDDRAG** oznámení, které signalizuje konec operace přetažení.
 
-Ovládacího prvku toolbar odesílá zprávy oznámení, když uživatel přizpůsobuje panel nástrojů s použitím **upravit panel nástrojů** dialogové okno. Odešle panelu nástrojů **tbn_beginadjust –** upozornění, jakmile uživatel dvakrát klikne panelu nástrojů, ale před dialogového okna se pole vytvoří. V dalším kroku panelu začne odesílání řadu **tbn_queryinsert –** zpráv s oznámením k určení, zda panelu nástrojů umožňuje tlačítka, která se má vložit. Při vrácení nadřazené okno **TRUE**, panelu nástrojů zastaví odesílání **tbn_queryinsert –** zpráv s oznámením. Pokud nadřazené okno nezobrazí **TRUE** pro jakékoli tlačítko panelu nástrojů zničí dialogových oken.
+Ovládací prvek panelu nástrojů odesílá oznámení, když uživatel přizpůsobí panel nástrojů pomocí dialogového okna **Přizpůsobit panel nástrojů.** Panel nástrojů odešle **TBN_BEGINADJUST** oznámení poté, co uživatel poklepe na panel nástrojů, ale před vytvořením dialogového okna. Dále panel nástrojů začne odesílat řadu **zpráv TBN_QUERYINSERT** oznámení k určení, zda panel nástrojů umožňuje vkládání tlačítek. Pokud nadřazené okno vrátí **hodnotu PRAVDA**, panel nástrojů přestane odesílat **TBN_QUERYINSERT** oznámení. Pokud nadřazené okno nevrátí **hodnotu TRUE** pro žádné tlačítko, panel nástrojů dialogové okno zničí.
 
-V dalším kroku ovládacím prvkem panel nástrojů určuje Pokud tlačítka budou odstraněny z panelu nástrojů odesláním jeden **tbn_querydelete –** oznámení pro každé tlačítko na panelu nástrojů. Vrací nadřazené okno **TRUE** označíte, že tlačítko mohou být odstraněné; v opačném případě vrátí **FALSE**. Panelu nástrojů přidá všechny tlačítka na panelu nástrojů do dialogového okna, ale ty, které se možná neodstranily šedě.
+Ovládací prvek panelu nástrojů dále určuje, zda mohou být z panelu nástrojů odstraněna některá tlačítka odesláním jedné **TBN_QUERYDELETE** oznámení pro každé tlačítko na panelu nástrojů. Nadřazené okno vrátí **hodnotu TRUE,** která označuje, že tlačítko může být odstraněno. v opačném případě vrátí **hodnotu NEPRAVDA**. Panel nástrojů přidá do dialogového okna všechna tlačítka panelu nástrojů, ale zšedé ty, které nelze odstranit.
 
-Vždy, když je ovládací prvek panelu nástrojů o tlačítko v dialogovém okně Upravit panel nástrojů, odešle **tbn_getbuttoninfo –** zpráva s oznámením, určení indexu tlačítko, pro kterou potřebuje informace a Adresa **tbnotify –** struktury. Nadřazené okno musí vyplní strukturu pomocí příslušné informace.
+Vždy, když ovládací prvek panelu nástrojů potřebuje informace o tlačítku v dialogovém okně Přizpůsobit panel nástrojů, odešle **TBN_GETBUTTONINFO** oznámení s určením indexu tlačítka, pro které potřebuje informace, a adresu struktury **TBNOTIFY.** Nadřazené okno musí vyplnit strukturu s příslušnými informacemi.
 
-**Upravit panel nástrojů** dialogové okno obsahuje tlačítko Nápověda a tlačítko pro obnovení. Když uživatel klikne na tlačítko Nápověda, odešle ovládací prvek panelu nástrojů **tbn_custhelp –** zprávy oznámení. Nadřazené okno by měl odpovědět zobrazením informace nápovědy. Dialogové okno odešle **tbn_reset –** zprávy oznámení, když uživatel vybere tlačítko Obnovit. Tato zpráva signalizuje, že panelu nástrojů se chystá znovu inicializovat dialogové okno.
+Dialogové okno **Přizpůsobit panel nástrojů** obsahuje tlačítko Nápověda a tlačítko Obnovit. Když uživatel zvolí tlačítko Nápověda, ovládací prvek panelu nástrojů odešle **TBN_CUSTHELP** oznámení. Nadřazené okno by mělo reagovat zobrazením informací nápovědy. Dialogové okno odešle **TBN_RESET** oznámení, když uživatel vybere tlačítko Obnovit. Tato zpráva signalizuje, že panel nástrojů se chystá znovu inicializovat dialogové okno.
 
-Tyto zprávy jsou všechny **WM_NOTIFY** zprávy a mohou být zpracovány v nadřazenému oknu tak, že přidáte do mapy zprávu nadřazenému oknu položky mapování zpráv v následujícím formátu:
+Všechny tyto zprávy jsou **WM_NOTIFY** a mohou být zpracovány v okně vlastníka přidáním položek mapy zpráv následujícího formuláře do mapy zpráv v okně vlastníka:
 
 ```cpp
 ON_NOTIFY( wNotifyCode, idControl, memberFxn )
@@ -82,27 +82,27 @@ ON_NOTIFY( wNotifyCode, idControl, memberFxn )
 
 - **wNotifyCode**
 
-   Identifikátor kód, zprávy oznámení, jako **tbn_beginadjust –**.
+   Identifikační kód oznamovací zprávy, například **TBN_BEGINADJUST**.
 
 - **idControl**
 
    Identifikátor ovládacího prvku odesílání oznámení.
 
-- **memberFxn**
+- **členFxn**
 
-   Členská funkce, která se má volat po přijetí tohoto oznámení.
+   Členská funkce, která má být volána při přijetí tohoto oznámení.
 
-Členská funkce by být deklarována pomocí následující prototyp:
+Vaše členská funkce by byla deklarována s následujícím prototypem:
 
 ```cpp
 afx_msg void memberFxn( NMHDR * pNotifyStruct, LRESULT * result );
 ```
 
-Pokud obslužná rutina zprávy oznámení vrací hodnotu, ho měli umístit do **LRESULT** odkazované *výsledek*.
+Pokud obslužná rutina zprávy oznámení vrátí hodnotu, měla by ji vložit do **pole LRESULT,** na kterou se vztahuje *zpráva .*
 
-Pro každou zprávu `pNotifyStruct` odkazuje na buď **NMHDR** struktury nebo **tbnotify –** struktury. Tyto struktury jsou popsané níže:
+Pro každou `pNotifyStruct` zprávu odkazuje buď **nmhdr** struktury nebo **TBNOTIFY** struktury. Tyto struktury jsou popsány níže:
 
-**NMHDR** struktura obsahuje následující členy:
+Struktura **NMHDR** obsahuje následující členy:
 
 ```cpp
 typedef struct tagNMHDR {
@@ -114,33 +114,33 @@ typedef struct tagNMHDR {
 
 - **hwndFrom**
 
-   Popisovač okna ovládacího prvku, který odesílá oznámení. Pro tento popisovač pro převod `CWnd` ukazatel, použít [CWnd::FromHandle](../mfc/reference/cwnd-class.md#fromhandle).
+   Okno popisovač ovládacího prvku, který odesílá oznámení. Chcete-li převést `CWnd` tento popisovač na ukazatel, použijte [CWnd::FromHandle](../mfc/reference/cwnd-class.md#fromhandle).
 
 - **idFrom**
 
-   Identifikátor ovládacího prvku odesílání oznámení.
+   Identifikátor ovládacího prvku odesílajícího oznámení.
 
-- **code**
+- **Kód**
 
-   Kód upozornění. Tento člen může být hodnota specifické pro typ ovládacího prvku, jako například **tbn_beginadjust –** nebo **TTN_NEEDTEXT**, nebo může být jedna z běžných notification hodnot uvedených níže:
+   Kód oznámení. Tento člen může být hodnota specifická pro typ ovládacího prvku, například **TBN_BEGINADJUST** nebo **TTN_NEEDTEXT**, nebo může být jednou z níže uvedených běžných hodnot oznámení:
 
-   - **NM_CLICK** uživatel klikl levým tlačítkem myši v ovládacím prvku.
+  - **NM_CLICK** Uživatel klepnul na levé tlačítko myši v ovládacím prvku.
 
-   - **Nm_dblclk –** že uživatel poklikal levým tlačítkem myši v ovládacím prvku.
+  - **NM_DBLCLK** Uživatel poklepe levým tlačítkem myši v ovládacím prvku.
 
-   - **Nm_killfocus –** ovládací prvek ztratil vstupní fokus.
+  - **NM_KILLFOCUS** Ovládací prvek ztratil vstupní fokus.
 
-   - **Nm_outofmemory –** ovládací prvek nemohl dokončit operace, protože není k dispozici dostatek paměti.
+  - **NM_OUTOFMEMORY** Ovládací prvek nemohl dokončit operaci, protože není k dispozici dostatek paměti.
 
-   - **Nm_rclick –** uživatel klikl pravým tlačítkem myši v ovládacím prvku.
+  - **NM_RCLICK** Uživatel klepnul pravým tlačítkem myši v ovládacím prvku.
 
-   - **Nm_rdblclk –** že uživatel poklikal pravým tlačítkem myši v ovládacím prvku.
+  - **NM_RDBLCLK** Uživatel má poklepáním pravé tlačítko myši v ovládacím prvku.
 
-   - **Nm_return –** ovládací prvek má vstupní fokus a uživatel stiskne klávesu ENTER.
+  - **NM_RETURN** Ovládací prvek má vstupní fokus a uživatel stiskl klávesu ENTER.
 
-   - **Nm_setfocus –** ovládací prvek přijal zaměření pro vstup.
+  - **NM_SETFOCUS** Ovládací prvek obdržel vstupní fokus.
 
-**Tbnotify –** struktura obsahuje následující členy:
+Struktura **TBNOTIFY** obsahuje následující členy:
 
 ```cpp
 typedef struct {
@@ -152,17 +152,17 @@ typedef struct {
 } TBNOTIFY, FAR* LPTBNOTIFY;
 ```
 
-- **hdr**
+- **Hdr**
 
-   Informace, které jsou společné pro všechny **WM_NOTIFY** zprávy.
+   Informace společné pro všechny **WM_NOTIFY** zprávy.
 
-- **Položky**
+- **iPoložka**
 
-   Index tlačítko přidružené k oznámení.
+   Index tlačítka přidruženého k oznámení.
 
 - **tbButton**
 
-   **TBBUTTON** strukturu, která obsahuje informace o panelu nástrojů spojené s oznámením.
+   **TBBUTTON** strukturu, která obsahuje informace o tlačítko panelu nástrojů spojené s oznámením.
 
 - **cchText**
 
@@ -170,51 +170,51 @@ typedef struct {
 
 - **lpszText**
 
-   Ukazatel na text na tlačítku.
+   Ukazatel na text tlačítka.
 
-Oznámení, která odešle panelu nástrojů jsou následující:
+Oznámení, která panel nástrojů odesílá, jsou následující:
 
 - **TBN_BEGINADJUST**
 
-   Odesílá se, když uživatel začne přizpůsobení ovládacího prvku toolbar. Ukazatel odkazuje na **NMHDR** strukturu, která obsahuje informace o oznámení. Obslužná rutina nemusí vracet žádné konkrétní hodnotu.
+   Odesláno, když uživatel začne přizpůsobovat ovládací prvek panelu nástrojů. Ukazatel odkazuje na strukturu **NMHDR,** která obsahuje informace o oznámení. Obslužná rutina nemusí vracet žádnou konkrétní hodnotu.
 
 - **TBN_BEGINDRAG**
 
-   Odesílá se, když uživatel zahájí přetahování tlačítka v ovládacím prvku panel nástrojů. Ukazatel odkazuje **tbnotify –** struktury. **Položky** člena obsahuje index založený na nule tlačítko právě přetáhli. Obslužná rutina nemusí vracet žádné konkrétní hodnotu.
+   Odesláno, když uživatel začne přetahovat tlačítko v ovládacím prvku panelu nástrojů. Ukazatel odkazuje na **tbnotify** struktury. Člen **iItem** obsahuje nulový index přetahovaného tlačítka. Obslužná rutina nemusí vracet žádnou konkrétní hodnotu.
 
 - **TBN_CUSTHELP**
 
-   Odesílá se, když uživatel klikne na tlačítko Nápověda v dialogovém okně Upravit panel nástrojů. Žádnou návratovou hodnotu. Ukazatel odkazuje na **NMHDR** strukturu, která obsahuje informace o oznámení. Obslužná rutina nemusí vracet žádné konkrétní hodnotu.
+   Odesláno, když uživatel zvolí tlačítko Nápověda v dialogovém okně Přizpůsobit panel nástrojů. Žádná vrácená hodnota. Ukazatel odkazuje na strukturu **NMHDR,** která obsahuje informace o oznámení. Obslužná rutina nemusí vracet žádnou konkrétní hodnotu.
 
 - **TBN_ENDADJUST**
 
-   Odesílá se, když uživatel zastaví přizpůsobení ovládacího prvku toolbar. Ukazatel odkazuje na **NMHDR** strukturu, která obsahuje informace o oznámení. Obslužná rutina nemusí vracet žádné konkrétní hodnotu.
+   Odesláno, když uživatel přestane přizpůsobovat ovládací prvek panelu nástrojů. Ukazatel odkazuje na strukturu **NMHDR,** která obsahuje informace o oznámení. Obslužná rutina nemusí vracet žádnou konkrétní hodnotu.
 
-- **TBN_ENDDRAG –**
+- **TBN_ENDDRAG**
 
-   Odesílá se, když uživatel přestane přetahovat tlačítka v ovládacím prvku panel nástrojů. Ukazatel odkazuje **tbnotify –** struktury. **Položky** člena obsahuje index založený na nule tlačítko právě přetáhli. Obslužná rutina nemusí vracet žádné konkrétní hodnotu.
+   Odesláno, když uživatel přestane přetahovat tlačítko v ovládacím prvku panelu nástrojů. Ukazatel odkazuje na **tbnotify** struktury. Člen **iItem** obsahuje nulový index přetahovaného tlačítka. Obslužná rutina nemusí vracet žádnou konkrétní hodnotu.
 
 - **TBN_GETBUTTONINFO**
 
-   Odesílá se, když uživatel přizpůsobuje ovládacím prvku panel nástrojů. Panelu nástrojů používá k načtení informací potřebných v dialogovém okně Upravit panel nástrojů. Tato oznámení. Ukazatel odkazuje **tbnotify –** struktury. **Položky** člen Určuje index založený na nule tlačítko. **PszText** a **cchText** členy zadejte adresu a délka ve znacích, aktuální text tlačítka. Aplikace by měla zaplnit struktura s informacemi o tlačítka. Vrátí **TRUE** Pokud informace o tlačítku byl zkopírován do struktury, nebo **FALSE** jinak.
+   Odesláno, když uživatel přizpůsobí ovládací prvek panelu nástrojů. Panel nástrojů používá tuto oznamovací zprávu k načtení informací potřebných v dialogovém okně Přizpůsobit panel nástrojů. Ukazatel odkazuje na **tbnotify** struktury. Člen **iItem** určuje nulový index tlačítka. Členové **pszText** a **cchText** určují adresu a délku aktuálního textu tlačítka ve znacích. Aplikace by měla vyplnit strukturu s informacemi o tlačítku. Vrátí **hodnotu PRAVDA,** pokud byly informace o tlačítku zkopírovány do struktury, jinak **nepravda.**
 
 - **TBN_QUERYDELETE**
 
-   Odešle, když uživatel přizpůsobuje panel nástrojů k určení, zda tlačítko mohou být odstraněny z ovládacího prvku toolbar. Ukazatel odkazuje **tbnotify –** struktury. **Položky** člena obsahuje index založený na nule tlačítko Odstranit. Vrátí **TRUE** povolit tlačítko Odstranit nebo **FALSE** zabránit na tlačítko Odstranit.
+   Odesláno v době, kdy uživatel přizpůsobí panel nástrojů a určí, zda lze tlačítko odstranit z ovládacího prvku panelu nástrojů. Ukazatel odkazuje na **tbnotify** struktury. Člen **iItem** obsahuje nulový index tlačítka, které má být odstraněno. Vrátit **hodnotu PRAVDA,** aby bylo tlačítko odstraněno, nebo **nepravda,** aby se zabránilo odstranění tlačítka.
 
 - **TBN_QUERYINSERT**
 
-   Odešle, když uživatel přizpůsobuje ovládacím prvku panel nástrojů k určení, zda se dá tlačítko Vložit vlevo od daného tlačítko. Ukazatel odkazuje **tbnotify –** struktury. **Položky** člena obsahuje index založený na nule tlačítko Vložit. Vrátí **TRUE** povolit tlačítko má být vložen před dané tlačítko nebo **FALSE** zabránit vloženého na tlačítko.
+   Odesláno v době, kdy uživatel přizpůsobí ovládací prvek panelu nástrojů, aby zjistil, zda může být tlačítko vloženo nalevo od daného tlačítka. Ukazatel odkazuje na **tbnotify** struktury. Člen **iItem** obsahuje nulový index tlačítka, které má být vloženo. Vrátit **hodnotu PRAVDA,** aby bylo možné tlačítko vložit před dané tlačítko nebo **NEPRAVDA,** aby se zabránilo vložení tlačítka.
 
 - **TBN_RESET**
 
-   Odesílá se, když uživatel obnoví obsah dialogového okna Upravit panel nástrojů. Ukazatel odkazuje na **NMHDR** strukturu, která obsahuje informace o oznámení. Obslužná rutina nemusí vracet žádné konkrétní hodnotu.
+   Odesláno, když uživatel resetuje obsah dialogového okna Přizpůsobit panel nástrojů. Ukazatel odkazuje na strukturu **NMHDR,** která obsahuje informace o oznámení. Obslužná rutina nemusí vracet žádnou konkrétní hodnotu.
 
 - **TBN_TOOLBARCHANGE**
 
-   Odesílá poté, co uživatel přizpůsobil ovládacím prvku panel nástrojů. Ukazatel odkazuje na **NMHDR** strukturu, která obsahuje informace o oznámení. Obslužná rutina nemusí vracet žádné konkrétní hodnotu.
+   Odesláno poté, co uživatel přizpůsobil ovládací prvek panelu nástrojů. Ukazatel odkazuje na strukturu **NMHDR,** která obsahuje informace o oznámení. Obslužná rutina nemusí vracet žádnou konkrétní hodnotu.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Používání atributu CToolBarCtrl](../mfc/using-ctoolbarctrl.md)<br/>
 [Ovládací prvky](../mfc/controls-mfc.md)

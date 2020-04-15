@@ -1,72 +1,122 @@
 ---
-title: Ukázkový C++ projekt pro analýzu kódu
-ms.date: 11/04/2016
+title: Ukázkový projekt Jazyka C++ pro analýzu kódu
+description: Jak vytvořit ukázkové řešení pro použití v návodu analýzy kódu pro Microsoft C++ v sadě Visual Studio.
+ms.date: 04/14/2020
 ms.topic: sample
 helpviewer_keywords:
 - demo sample [Visual Studio ALM]
 - code analysis, samples
 ms.assetid: 09e1b9f7-5916-4ed6-a001-5c2d7e710682
-ms.openlocfilehash: 1966e9cec5825ae37728bbf28c0f21ff4eed62fc
-ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
+ms.openlocfilehash: c2a1b8c80b7e7aebd1f1530c66ade5859b392028
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77418821"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372064"
 ---
-# <a name="sample-c-project-for-code-analysis"></a>Ukázkový C++ projekt pro analýzu kódu
+# <a name="sample-c-project-for-code-analysis"></a>Ukázkový projekt Jazyka C++ pro analýzu kódu
 
-Následující postupy ukazují, jak vytvořit ukázku pro [Návod: Analýza kódu C/C++ pro vady](../code-quality/walkthrough-analyzing-c-cpp-code-for-defects.md). Postupy vytvoří:
+Následující postupy ukazují, jak vytvořit ukázku pro [návod: Analýza kódu C/C++ pro vady](../code-quality/walkthrough-analyzing-c-cpp-code-for-defects.md). Postupy vytvářejí:
 
-- Řešení sady Visual Studio s názvem CppDemo.
+- Řešení sady Visual Studio s názvem *CppDemo*.
 
-- Statický projekt knihovny s názvem CodeDefects.
+- Projekt statické knihovny s názvem *CodeDefects*.
 
-- Statický projekt knihovny s názvem poznámky.
+- Projekt statické knihovny s názvem *Poznámky*.
 
-Procedury také poskytují kód pro hlavičku a soubory *. cpp* pro statické knihovny.
+Procedury také poskytují kód pro soubory záhlaví a *CPP* pro statické knihovny.
 
 ## <a name="create-the-cppdemo-solution-and-the-codedefects-project"></a>Vytvoření řešení CppDemo a projektu CodeDefects
 
-1. Otevřete Visual Studio a vyberte **vytvořit nový projekt** .
+::: moniker range=">=vs-2019"
 
-1. Změnit filtr jazyka na**C++**
+1. Otevření Visual Studia a výběr **možnosti Vytvořit nový projekt**
 
-1. Vyberte **prázdný projekt** a klikněte na **Další** .
+1. V **dialogovém** okně Vytvořit nový projekt změňte filtr jazyka na **C++**.
 
-1. Do textového pole **název projektu** zadejte **CodeDefects**
+1. Vyberte **Průvodce plochu systému Windows** a zvolte tlačítko **Další.**
 
-1. Do textového pole **název řešení** zadejte **CppDemo** .
+1. Na stránce **Konfigurovat nový projekt** zadejte do textového pole Název **projektu** *kód Vady*.
 
-1. Klikněte na **Vytvořit**
+1. Do textového pole **Název řešení** zadejte *CppDemo*.
 
-## <a name="configure-the-codedefects-project-as-a-static-library"></a>Konfigurace projektu CodeDefects jako statické knihovny
+1. Zvolte **Vytvořit**.
 
-1. V Průzkumník řešení klikněte pravým tlačítkem na **CodeDefects** a pak klikněte na **vlastnosti**.
+1. V dialogovém okně **Projekt plochy systému Windows** změňte typ **aplikace** na **Static Kál (.lib).**
 
-1. Rozbalte položku **Vlastnosti konfigurace** a klikněte na možnost **Obecné**.
+1. V části **Další možnosti**vyberte **Možnost Prázdný projekt**.
 
-1. V seznamu **Obecné** změňte **typ konfigurace**na **Statická knihovna (. lib)** .
+1. Chcete-li vytvořit řešení a projekt, zvolte **OK.**
 
-1. V seznamu **Upřesnit** změňte **příponu cílového souboru** na **. lib.**
+::: moniker-end
 
-## <a name="add-the-header-and-source-file-to-the-codedefects-project"></a>Přidání záhlaví a zdrojového souboru do projektu CodeDefects
+::: moniker range="vs-2017"
 
-1. V Průzkumník řešení rozbalte **CodeDefects**, klikněte pravým tlačítkem na **hlavičkové soubory**, klikněte na **Přidat**a pak klikněte na **Nová položka**.
+1. Otevřete sadu Visual Studio. Na řádku nabídek zvolte **Soubor** > **nového** > **projektu**.
 
-1. V dialogovém okně **Přidat novou položku** klikněte na **kód**a pak klikněte na **hlavičkový soubor (. h)** .
+1. V dialogovém okně **Nový projekt** vyberte **Visual C++** > **Windows Desktop**.
 
-1. Do pole **název** zadejte text **Chyba. h** a pak klikněte na tlačítko **Přidat**.
+1. Vyberte **Průvodce plochou windows**.
 
-1. Zkopírujte následující kód a vložte ho do souboru *. h chyby* v editoru.
+1. Do textového pole **Název** zadejte *KódVady*.
+
+1. Do textového pole **Název řešení** zadejte *CppDemo*.
+
+1. Vyberte **OK**.
+
+1. V dialogovém okně **Projekt plochy systému Windows** změňte typ **aplikace** na **Static Kál (.lib).**
+
+1. V části **Další možnosti**vyberte **Možnost Prázdný projekt**.
+
+1. Chcete-li vytvořit řešení a projekt, zvolte **OK.**
+
+::: moniker-end
+
+::: moniker range="vs-2015"
+
+1. Otevřete sadu Visual Studio. Na řádku nabídek zvolte **Soubor** > **nového** > **projektu**.
+
+1. V dialogovém okně **Nový projekt** vyberte **šablony** > **Visual C++** > **Win32**.
+
+1. Vyberte **win32 konzolové aplikace**.
+
+1. Do textového pole **Název** zadejte *KódVady*.
+
+1. Do textového pole **Název řešení** zadejte *CppDemo*.
+
+1. Vyberte **OK**.
+
+1. V dialogovém okně **Průvodce aplikací win32** zvolte tlačítko **Další.**
+
+1. Změňte **typ aplikace** na **statickou knihovnu**.
+
+1. V části **Další možnosti**zrušte výběr **možnosti Předkompilované záhlaví**.
+
+1. Chcete-li vytvořit řešení a projekt, zvolte **Dokončit.**
+
+::: moniker-end
+
+## <a name="add-the-header-and-source-file-to-the-codedefects-project"></a>Přidání hlavičkového a zdrojového souboru do projektu CodeDefects
+
+1. V Průzkumníku řešení rozbalte **codedefects**.
+
+1. Klepnutím pravým tlačítkem myši otevřete místní nabídku **pro soubory hlaviček**. Zvolte **Přidat** > **novou položku**.
+
+1. V dialogovém okně **Přidat novou položku** vyberte **Visual C++** > **Code**a pak vyberte Soubor **záhlaví (.h).**
+
+1. Do pole **Name** edit zadejte *Bug.h*a pak zvolte **tlačítko Přidat.**
+
+1. V editačním okně pro *Bug.h*vyberte a odstraňte obsah.
+
+1. Zkopírujte následující kód a vložte jej do souboru *Bug.h* v editoru.
 
     ```cpp
     #pragma once
 
     #include <windows.h>
 
-    // These functions are consumed by the sample
-    // but are not defined. This project cannot be linked!
-    bool CheckDomain(LPCTSTR);
+    // Function prototypes
+    bool CheckDomain(wchar_t const *);
     HRESULT ReadUserAccount();
 
     // These constants define the common sizes of the
@@ -75,24 +125,34 @@ Procedury také poskytují kód pro hlavičku a soubory *. cpp* pro statické kn
     const int ACCOUNT_DOMAIN_LEN = 128;
     ```
 
-1. V Průzkumník řešení klikněte pravým tlačítkem myši na **zdrojové soubory**, přejděte na **Nový**a klikněte na **Nová položka**.
+1. Klepnutím pravým tlačítkem myši otevřete v Průzkumníkovi řešení místní nabídku **zdrojových souborů**. Zvolte **Přidat** > **novou položku**.
 
-1. V dialogovém okně **Přidat novou položku** klikněte na  **C++ soubor (. cpp)** .
+1. V dialogovém okně **Přidat novou položku** vyberte **soubor C++ (.cpp)**.
 
-1. Do pole **název** zadejte text **Chyba. cpp** a potom klikněte na tlačítko **Přidat**.
+1. Do pole **Name** edit zadejte *Bug.cpp*a pak zvolte **tlačítko Přidat.**
 
-1. Zkopírujte následující kód a vložte ho do souboru *Chyba. cpp* v editoru.
+1. Zkopírujte následující kód a vložte jej do souboru *Bug.cpp* v editoru.
 
     ```cpp
     #include "Bug.h"
 
     // the user account
-    TCHAR g_userAccount[USER_ACCOUNT_LEN] = {};
+    wchar_t g_userAccount[USER_ACCOUNT_LEN] = { L"domain\\user" };
     int len = 0;
+
+    bool CheckDomain(wchar_t const* domain)
+    {
+        return (wcsnlen_s(domain, USER_ACCOUNT_LEN) > 0);
+    }
+
+    HRESULT ReadUserAccount()
+    {
+        return S_OK;
+    }
 
     bool ProcessDomain()
     {
-        TCHAR* domain = new TCHAR[ACCOUNT_DOMAIN_LEN];
+        wchar_t* domain = new wchar_t[ACCOUNT_DOMAIN_LEN];
         // ReadUserAccount gets a 'domain\user' input from
         //the user into the global 'g_userAccount'
         if (ReadUserAccount())
@@ -101,14 +161,14 @@ Procedury také poskytují kód pro hlavičku a soubory *. cpp* pro statické kn
             // character onto the 'domain' buffer
             for (len = 0; (len < ACCOUNT_DOMAIN_LEN) && (g_userAccount[len] != L'\0'); len++)
             {
-                if (g_userAccount[len] == '\\')
+                if (g_userAccount[len] == L'\\')
                 {
                     // Stops copying on the domain and user separator ('\')
                     break;
                 }
                 domain[len] = g_userAccount[len];
             }
-            if ((len = ACCOUNT_DOMAIN_LEN) || (g_userAccount[len] != '\\'))
+            if ((len = ACCOUNT_DOMAIN_LEN) || (g_userAccount[len] != L'\\'))
             {
                 // '\' was not found. Invalid domain\user string.
                 delete[] domain;
@@ -116,7 +176,7 @@ Procedury také poskytují kód pro hlavičku a soubory *. cpp* pro statické kn
             }
             else
             {
-                domain[len] = '\0';
+                domain[len] = L'\0';
             }
             // Process domain string
             bool result = CheckDomain(domain);
@@ -139,33 +199,79 @@ Procedury také poskytují kód pro hlavičku a soubory *. cpp* pro statické kn
     }
     ```
 
-1. Klikněte na nabídku **soubor** a potom klikněte na **Uložit vše**.
+1. Na řádku nabídek zvolte **Soubor** > **Uložit vše**.
 
-## <a name="add-the-annotations-project-and-configure-it-as-a-static-library"></a>Přidat projekt poznámek a nakonfigurovat ho jako statickou knihovnu
+## <a name="add-the-annotations-project-and-configure-it-as-a-static-library"></a>Přidání projektu Poznámky a jeho konfigurace jako statické knihovny
 
-1. V Průzkumník řešení klikněte na **CppDemo**, přejděte na **Přidat**a pak klikněte na **Nový projekt**.
+::: moniker range=">=vs-2019"
 
-1. V dialogovém okně **Přidat nový projekt** Změňte filtr jazyka na **C++** a vyberte **prázdný projekt** a pak klikněte na **Další**.
+1. V Průzkumníku řešení otevřete místní nabídku klepnutím pravým tlačítkem myši na **příkaz CppDemo.** Zvolte **Přidat** > **nový projekt**.
 
-1. Do textového pole **název projektu** zadejte **Anotace**a potom klikněte na **vytvořit**.
+1. V **dialogovém** okně Přidat nový projekt vyberte **Průvodce plochu systému Windows**a pak zvolte tlačítko **Další.**
 
-1. V Průzkumník řešení klikněte pravým tlačítkem myši na položku **poznámky** a potom klikněte na možnost **vlastnosti**.
+1. Na stránce **Konfigurovat nový projekt** zadejte do textového pole Název **projektu** *poznámky*a pak zvolte **Vytvořit**.
 
-1. Rozbalte položku **Vlastnosti konfigurace** a klikněte na možnost **Obecné**.
+1. V dialogovém okně **Projekt plochy systému Windows** změňte typ **aplikace** na **Static Kál (.lib).**
 
-1. V seznamu **Obecné** změňte **typ konfigurace**na a klikněte na **Statická knihovna (. lib)** .
+1. V části **Další možnosti**vyberte **Možnost Prázdný projekt**.
 
-1. V seznamu **Upřesnit** vyberte text ve sloupci vedle možnosti **cílová Přípona souboru**a pak zadejte **. lib**.
+1. Chcete-li vytvořit projekt, zvolte **OK.**
 
-## <a name="add-the-header-file-and-source-file-to-the-annotations-project"></a>Přidat hlavičkový soubor a zdrojový soubor do projektu poznámky
+::: moniker-end
 
-1. V Průzkumník řešení rozbalte položku **poznámky**, klikněte pravým tlačítkem myši na **hlavičkové soubory**, klikněte na **Přidat**a pak klikněte na **Nová položka**.
+::: moniker range="vs-2017"
 
-1. V dialogovém okně **Přidat novou položku** klikněte na **soubor hlaviček (. h)** .
+1. V Průzkumníku řešení otevřete místní nabídku klepnutím pravým tlačítkem myši na **příkaz CppDemo.** Zvolte **Přidat** > **nový projekt**.
 
-1. Do pole **název** zadejte **Anotace. h** a potom klikněte na tlačítko **Přidat**.
+1. V dialogovém okně **Přidat nový projekt** vyberte Visual **C++** > **Windows Desktop**.
 
-1. Zkopírujte následující kód a vložte ho do souboru *poznámky. h* v editoru.
+1. Vyberte **Průvodce plochou windows**.
+
+1. Do textového pole **Název** zadejte *poznámky*a pak zvolte **OK**.
+
+1. V dialogovém okně **Projekt plochy systému Windows** změňte typ **aplikace** na **Static Kál (.lib).**
+
+1. V části **Další možnosti**vyberte **Možnost Prázdný projekt**.
+
+1. Chcete-li vytvořit projekt, zvolte **OK.**
+
+::: moniker-end
+
+::: moniker range="vs-2015"
+
+1. V Průzkumníku řešení otevřete místní nabídku klepnutím pravým tlačítkem myši na **příkaz CppDemo.** Zvolte **Přidat** > **nový projekt**.
+
+1. V dialogovém okně **Přidat nový projekt** vyberte Visual **C++** > **Win32**.
+
+1. Vyberte **win32 konzolové aplikace**.
+
+1. Do textového pole **Název** zadejte *poznámky*.
+
+1. Vyberte **OK**.
+
+1. V dialogovém okně **Průvodce aplikací win32** zvolte tlačítko **Další.**
+
+1. Změňte **typ aplikace** na **statickou knihovnu**.
+
+1. V části **Další možnosti**zrušte výběr **možnosti Předkompilované záhlaví**.
+
+1. Chcete-li vytvořit projekt, zvolte **Dokončit.**
+
+::: moniker-end
+
+## <a name="add-the-header-file-and-source-file-to-the-annotations-project"></a>Přidání souboru záhlaví a zdrojového souboru do projektu Poznámky
+
+1. V Průzkumníku řešení **rozbalte poznámky**.
+
+1. Klepnutím pravým tlačítkem myši otevřete místní nabídku **pro soubory hlaviček** v části **Poznámky**. Zvolte **Přidat** > **novou položku**.
+
+1. V dialogovém okně **Přidat novou položku** vyberte **Visual C++** > **Code**a pak vyberte Soubor **záhlaví (.h).**
+
+1. Do pole **Name** edit zadejte *anotations.h*a pak zvolte tlačítko **Přidat.**
+
+1. V editačním okně pro *anotace.h*vyberte a odstraňte obsah.
+
+1. Zkopírujte následující kód a vložte jej do souboru *anotace.h* v editoru.
 
     ```cpp
     #pragma once
@@ -182,16 +288,23 @@ Procedury také poskytují kód pro hlavičku a soubory *. cpp* pro statické kn
     _Ret_maybenull_ LinkedList* AllocateNode();
     ```
 
-1. V Průzkumník řešení klikněte pravým tlačítkem myši na **zdrojové soubory**, přejděte na **Nový**a klikněte na **Nová položka**.
+1. Klepnutím pravým tlačítkem myši otevřete v Průzkumníkovi řešení místní nabídku **zdrojových souborů** v části **Poznámky**. Zvolte **Přidat** > **novou položku**.
 
-1. V dialogovém okně **Přidat novou položku** klikněte na **kód** a potom klikněte na  **C++ soubor (. cpp)** .
+1. V dialogovém okně **Přidat novou položku** vyberte **soubor C++ (.cpp)**.
 
-1. Do pole **název** zadejte **Anotace. cpp** a potom klikněte na tlačítko **Přidat**.
+1. Do pole **Name** edit zadejte *anotations.cpp*a pak zvolte tlačítko **Přidat.**
 
-1. Zkopírujte následující kód a vložte ho do souboru *poznámky. cpp* v editoru.
+1. Zkopírujte následující kód a vložte jej do souboru *anotations.cpp* v editoru.
 
     ```cpp
     #include "annotations.h"
+    #include <malloc.h>
+
+    _Ret_maybenull_ LinkedList* AllocateNode()
+    {
+        LinkedList* result = static_cast<LinkedList*>(malloc(sizeof(LinkedList)));
+        return result;
+    }
 
     LinkedList* AddTail(LinkedList* node, int value)
     {
@@ -211,6 +324,13 @@ Procedury také poskytují kód pro hlavičku a soubory *. cpp* pro statické kn
     }
     ```
 
-1. Klikněte na nabídku **soubor** a potom klikněte na **Uložit vše**.
+1. Na řádku nabídek zvolte **Soubor** > **Uložit vše**.
 
-Řešení je nyní dokončeno a mělo by se sestavit bez chyb.
+Řešení je nyní dokončeno a mělo by být sestavení bez chyb.
+
+::: moniker range="vs-2017"
+
+> [!NOTE]
+> V sadě Visual Studio 2017 se může `E1097 unknown attribute "no_init_all"` zobrazit falešné upozornění v modulu IntelliSense. Toto upozornění můžete klidně ignorovat.
+
+::: moniker-end

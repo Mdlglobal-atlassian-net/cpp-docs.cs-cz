@@ -1,5 +1,5 @@
 ---
-title: Cmap – třída
+title: Třída CMap
 ms.date: 11/04/2016
 f1_keywords:
 - CMap
@@ -38,14 +38,14 @@ helpviewer_keywords:
 - CMap [MFC], RemoveKey
 - CMap [MFC], SetAt
 ms.assetid: 640a45ab-0993-4def-97ec-42cc78eb10b9
-ms.openlocfilehash: 58f9efb19988be8487ec87ce0c63d90ee1a97911
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9a3c92a0a8c3d40e4cc3d289cc0221ff7cdb2e11
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62296576"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81370099"
 ---
-# <a name="cmap-class"></a>Cmap – třída
+# <a name="cmap-class"></a>Třída CMap
 
 Třída kolekce slovníku, která mapuje jedinečné klíče na hodnoty.
 
@@ -57,76 +57,76 @@ template<class KEY, class ARG_KEY, class VALUE, class ARG_VALUE>class CMap : pub
 
 #### <a name="parameters"></a>Parametry
 
-*KEY*<br/>
-Třída objektu se používá jako klíč do mapy.
+*Klíč*<br/>
+Třída objektu použitá jako klíč k mapě.
 
 *ARG_KEY*<br/>
-Datový typ používaný pro *klíč* argumenty; obvykle odkaz na *klíč*.
+Datový typ používaný pro *klíčové* argumenty; obvykle odkaz na *KEY*.
 
-*HODNOTA*<br/>
-Třída objekt uložený v objektu map.
+*Hodnotu*<br/>
+Třída objektu uloženého v mapě.
 
 *ARG_VALUE*<br/>
-Datový typ používaný pro *hodnotu* argumenty; obvykle odkaz na *hodnota*.
+Datový typ používaný pro argumenty *VALUE;* obvykle odkaz na *HODNOTU*.
 
 ## <a name="members"></a>Členové
 
 ### <a name="public-structures"></a>Veřejné struktury
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CMap::CPair](#cpair)|Vnořené struktury obsahující hodnotu klíče a hodnoty přidruženého objektu.|
+|[CMap::CPair](#cpair)|Vnořená struktura obsahující hodnotu klíče a hodnotu přidruženého objektu.|
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CMap::CMap](#cmap)|Sestaví kolekci, který mapuje klíče na hodnoty.|
+|[CMap::CMap](#cmap)|Vytvoří kolekci, která mapuje klíče na hodnoty.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CMap::GetCount](#getcount)|Vrátí počet prvků, které na této mapě.|
-|[CMap::GetHashTableSize](#gethashtablesize)|Vrátí počet prvků v zatřiďovací tabulce.|
+|[CMap::GetCount](#getcount)|Vrátí počet prvků v této mapě.|
+|[CMap::GetHashTableSize](#gethashtablesize)|Vrátí počet prvků v tabulce hash.|
 |[CMap::GetNextAssoc](#getnextassoc)|Získá další prvek pro iterace.|
-|[CMap::GetSize](#getsize)|Vrátí počet prvků, které na této mapě.|
+|[CMap::GetSize](#getsize)|Vrátí počet prvků v této mapě.|
 |[CMap::GetStartPosition](#getstartposition)|Vrátí pozici prvního prvku.|
-|[CMap::InitHashTable](#inithashtable)|Inicializuje zatřiďovací tabulky a určuje jeho velikost.|
-|[CMap::IsEmpty](#isempty)|Testy pro podmínku prázdný mapy (žádné elementy).|
-|[CMap::Lookup](#lookup)|Vyhledá hodnotu namapována na daný klíč.|
-|[CMap::PGetFirstAssoc](#pgetfirstassoc)|Vrací ukazatel na první prvek.|
+|[CMap::InitHashTable](#inithashtable)|Inicializuje tabulku hash a určuje její velikost.|
+|[CMap::Jeprázdný](#isempty)|Testy pro podmínku prázdné mapy (žádné prvky).|
+|[CMap::Vyhledávání](#lookup)|Vyhledá hodnotu namapovanou na daný klíč.|
+|[CMap::PGetFirstAssoc](#pgetfirstassoc)|Vrátí ukazatel na první prvek.|
 |[CMap::PGetNextAssoc](#pgetnextassoc)|Získá ukazatel na další prvek pro iterace.|
-|[CMap::PLookup](#plookup)|Vrací ukazatel na klíč, jejíž hodnota odpovídá zadané hodnotě.|
+|[CMap::P Vyhledávání](#plookup)|Vrátí ukazatel na klíč, jehož hodnota odpovídá zadané hodnotě.|
 |[CMap::RemoveAll](#removeall)|Odebere všechny prvky z této mapy.|
-|[CMap::RemoveKey](#removekey)|Odebere element určený klíč.|
-|[CMap::SetAt](#setat)|Vloží prvek do mapy; nahradí existující prvek, pokud je nalezen odpovídající klíč.|
+|[CMap::RemoveKey](#removekey)|Odebere prvek určený klíčem.|
+|[CMap::Setat](#setat)|Vloží prvek do mapy; nahradí existující prvek, pokud je nalezen odpovídající klíč.|
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CMap::operator \[ \]](#operator_at)|Vloží prvek do mapy – operátor nahrazení pro `SetAt`.|
+|[CMap::operátor \[\]](#operator_at)|Vloží prvek do mapy – substituce operátora pro `SetAt`.|
 
 ## <a name="remarks"></a>Poznámky
 
-Po vložení pár klíč hodnota (element) do objektu map lze efektivně načíst nebo odstranit pár pomocí klíče k němu přistupovat. Můžete také iterovat přes všechny prvky v objektu map.
+Jakmile vložíte pár klíč-hodnota (prvek) do mapy, můžete efektivně načíst nebo odstranit pár pomocí klíče pro přístup k němu. Můžete také itrovat všechny prvky v mapě.
 
-Proměnné typu umístění se používá pro alternativní přístup k položkám. Můžete na POZICI "pamatovat" záznam a k iteraci v rámci mapy. Si možná myslíte, že je sekvenční podle hodnoty klíče; této iterace není. Je neurčité, sekvence načtených prvků.
+Proměnná typu POSITION se používá pro alternativní přístup k položkám. Pozici můžete použít k "zapamatování" položky a k itetování mapy. Můžete si myslet, že tato iterace je sekvenční podle hodnoty klíče; to není. Posloupnost načtených prvků je neurčitá.
 
-Určité členské funkce třídy volání globální pomocné funkce, které je nutné upravit pro většina použití `CMap` třídy. Zobrazit [pomocné rutiny třídy kolekce](../../mfc/reference/collection-class-helpers.md) v části makra a globální prvky **odkaz knihovny MFC**.
+Některé členské funkce této třídy volají globální pomocné funkce, `CMap` které musí být přizpůsobeny pro většinu použití třídy. Viz [Pomocníky tříd y kolekce](../../mfc/reference/collection-class-helpers.md) v části Makra a globální soubory referenční **knihovny MFC**.
 
-`CMap` přepíše [CObject::Serialize](../../mfc/reference/cobject-class.md#serialize) na podporu serializace a výpis z jeho prvků. Pokud je mapy uložen do archivu pomocí `Serialize`, pak serializován každý prvek mapy. Výchozí implementace `SerializeElements` pomocnou funkci neodpovídá bitové operace zápisu. Pro informace o serializaci položek kolekce ukazatel odvozen od `CObject` nebo jiné typy definované uživatelem, najdete v článku [jak: Typově bezpečné kolekce](../../mfc/how-to-make-a-type-safe-collection.md).
+`CMap`přepíše [CObject::Serialize](../../mfc/reference/cobject-class.md#serialize) pro podporu serializace a ukládání jeho prvků. Pokud je mapa uložena `Serialize`do archivu pomocí , každý prvek mapy je serializován a zase. Výchozí implementace `SerializeElements` pomocné funkce provádí bitový zápis. Informace o serializaci položek kolekce ukazatelů `CObject` odvozených z nebo jiných typů definovaných uživatelem naleznete v [tématu How to: Make a Type-Safe Collection](../../mfc/how-to-make-a-type-safe-collection.md).
 
-Pokud potřebujete diagnostiky s výpisem paměti jednotlivých prvků v objektu map (klíče a hodnoty), nastavte na 1 nebo větší hloubky kontextu s výpisem paměti.
+Pokud potřebujete diagnostický výpis jednotlivých prvků v mapě (klíče a hodnoty), musíte nastavit hloubku kontextu výpisu na 1 nebo vyšší.
 
-Když `CMap` odstranění objektu nebo při jeho prvky jsou odebrány, odeberou se klíče a hodnoty.
+Při `CMap` odstranění objektu nebo při odebrání jeho prvků jsou odebrány klíče i hodnoty.
 
-Odvození třídy map se podobá seznamu odvození. Přečtěte si článek [kolekce](../../mfc/collections.md) ilustraci odvození třídy seznamu zvláštní účely.
+Odvození třídy mapy je podobné odvození seznamu. Viz článek [Sbírky](../../mfc/collections.md) pro ilustraci odvození třídy speciální seznam.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObjekt](../../mfc/reference/cobject-class.md)
 
 `CMap`
 
@@ -134,9 +134,9 @@ Odvození třídy map se podobá seznamu odvození. Přečtěte si článek [kol
 
 **Záhlaví:** afxtempl.h
 
-##  <a name="cmap"></a>  CMap::CMap
+## <a name="cmapcmap"></a><a name="cmap"></a>CMap::CMap
 
-Vytvoří prázdné mapování.
+Vytvoří prázdnou mapu.
 
 ```
 CMap(INT_PTR nBlockSize = 10);
@@ -145,39 +145,39 @@ CMap(INT_PTR nBlockSize = 10);
 ### <a name="parameters"></a>Parametry
 
 *nBlockSize*<br/>
-Určuje členitosti přidělení paměti pro rozšíření na mapě.
+Určuje rozlišovací schopnost přidělení paměti pro rozšíření mapy.
 
 ### <a name="remarks"></a>Poznámky
 
-S růstem mapy je paměť přidělena v jednotkách, které *nBlockSize* položky.
+Jak se mapu zvětšuje, paměť je přidělena v jednotkách položek *nBlockSize.*
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCCollections#56](../../mfc/codesnippet/cpp/cmap-class_1.cpp)]
 
-##  <a name="cpair"></a>  CMap::CPair
+## <a name="cmapcpair"></a><a name="cpair"></a>CMap::CPair
 
-Obsahuje hodnotu klíče a hodnoty přidruženého objektu.
+Obsahuje hodnotu klíče a hodnotu přidruženého objektu.
 
 ### <a name="remarks"></a>Poznámky
 
-Toto je vnořené struktury v rámci třídy [CMap](../../mfc/reference/cmap-class.md).
+Toto je vnořená struktura v rámci třídy [CMap](../../mfc/reference/cmap-class.md).
 
 Struktura se skládá ze dvou polí:
 
-- `key` Skutečná hodnota typ klíče.
+- `key`Skutečná hodnota typu klíče.
 
-- `value` Hodnota přidruženého objektu.
+- `value`Hodnota přidruženého objektu.
 
-Se používá k ukládání vrácené hodnoty z [CMap::PLookup](#plookup), [CMap::PGetFirstAssoc](#pgetfirstassoc), a [CMap::PGetNextAssoc](#pgetnextassoc).
+Používá se k uložení vrácené hodnoty z [CMap::PLookup](#plookup), [CMap::PGetFirstAssoc](#pgetfirstassoc)a [CMap::PGetNextAssoc](#pgetnextassoc).
 
 ### <a name="example"></a>Příklad
 
-Příklad použití, podívejte se na příklad pro [CMap::PLookup](#plookup).
+Příklad použití naleznete v příkladu [cmap::PLookup](#plookup).
 
-##  <a name="getcount"></a>  CMap::GetCount
+## <a name="cmapgetcount"></a><a name="getcount"></a>CMap::GetCount
 
-Získá počet elementů v objektu map.
+Načte počet prvků v mapě.
 
 ```
 INT_PTR GetCount() const;
@@ -189,11 +189,11 @@ Počet prvků.
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [CMap::Lookup](#lookup).
+Viz příklad pro [CMap::Lookup](#lookup).
 
-##  <a name="gethashtablesize"></a>  CMap::GetHashTableSize
+## <a name="cmapgethashtablesize"></a><a name="gethashtablesize"></a>CMap::GetHashTableSize
 
-Určuje počet prvků v zatřiďovací tabulce pro mapu.
+Určuje počet prvků v tabulce hash pro mapu.
 
 ```
 UINT GetHashTableSize() const;
@@ -201,15 +201,15 @@ UINT GetHashTableSize() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Počet prvků v zatřiďovací tabulce.
+Počet prvků v tabulce hash.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCCollections#57](../../mfc/codesnippet/cpp/cmap-class_2.cpp)]
 
-##  <a name="getnextassoc"></a>  CMap::GetNextAssoc
+## <a name="cmapgetnextassoc"></a><a name="getnextassoc"></a>CMap::GetNextAssoc
 
-Načte prvek mapy v `rNextPosition`, pak aktualizuje `rNextPosition` odkazovat na další prvek v objektu map.
+Načte prvek mapy `rNextPosition`na `rNextPosition` , pak aktualizuje odkazovat na další prvek v mapě.
 
 ```
 void GetNextAssoc(
@@ -221,33 +221,33 @@ void GetNextAssoc(
 ### <a name="parameters"></a>Parametry
 
 *rNextPosition*<br/>
-Určuje referenci na POZICI hodnotu vrácenou předchozím `GetNextAssoc` nebo `GetStartPosition` volání.
+Určuje odkaz na hodnotu POSITION vrácenou předchozím `GetNextAssoc` nebo `GetStartPosition` volacím.
 
-*KEY*<br/>
-Parametr šablony určující typ klíče na mapě.
+*Klíč*<br/>
+Parametr šablony určující typ klíče mapy.
 
-*rKey*<br/>
-Určuje vrácené klíč načtený elementu.
+*rKlíč*<br/>
+Určuje vrácený klíč načteného prvku.
 
-*HODNOTA*<br/>
-Parametr šablony určující typ hodnoty na mapě.
+*Hodnotu*<br/>
+Parametr šablony určující typ hodnoty mapy.
 
 *rValue*<br/>
-Určuje, vrácená hodnota elementu načtený.
+Určuje vrácenou hodnotu načteného prvku.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce je zvláště užitečná pro procházení všech prvků v objektu map. Všimněte si, že sekvence pozice není nutně stejné jako pořadí klíč-hodnota.
+Tato funkce je nejužitečnější pro iterace přes všechny prvky v mapě. Všimněte si, že pořadí pozic není nutně stejné jako pořadí hodnot klíče.
 
-Pokud je načtený element poslední v objektu map, pak nová hodnota *rNextPosition* nastaven na hodnotu NULL.
+Pokud načtený prvek je poslední v mapě, pak je nová hodnota *rNextPosition* nastavena na hodnotu NULL.
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [CMap::SetAt](#setat).
+Viz příklad pro [CMap::SetAt](#setat).
 
-##  <a name="getsize"></a>  CMap::GetSize
+## <a name="cmapgetsize"></a><a name="getsize"></a>CMap::GetSize
 
-Vrátí počet prvků na mapě.
+Vrátí počet prvků mapy.
 
 ```
 INT_PTR GetSize() const;
@@ -255,19 +255,19 @@ INT_PTR GetSize() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Počet položek v objektu map.
+Počet položek v mapě.
 
 ### <a name="remarks"></a>Poznámky
 
-Voláním této metody lze načíst počet prvků v objektu map.
+Volání této metody načíst počet prvků v mapě.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCCollections#58](../../mfc/codesnippet/cpp/cmap-class_3.cpp)]
 
-##  <a name="getstartposition"></a>  CMap::GetStartPosition
+## <a name="cmapgetstartposition"></a><a name="getstartposition"></a>CMap::GetStartPosition
 
-Spuštění iterace mapování tak, že vrací hodnotu POZICI, která mohou být předány `GetNextAssoc` volání.
+Spustí iteraci mapy vrácením hodnoty POSITION, `GetNextAssoc` která může být předána volání.
 
 ```
 POSITION GetStartPosition() const;
@@ -275,19 +275,19 @@ POSITION GetStartPosition() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-POZICE určující počáteční pozice pro iterace v mapě. nebo hodnota NULL, pokud mapa je prázdný.
+Hodnota POSITION, která označuje počáteční pozici pro itace mapy; nebo NULL, pokud je mapa prázdná.
 
 ### <a name="remarks"></a>Poznámky
 
-Iterace sekvence není předvídatelný; "první prvek v objektu map", proto nemá žádný speciální význam.
+Pořadí iterace není předvídatelné; proto "první prvek v mapě" nemá žádný zvláštní význam.
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [CMap::SetAt](#setat).
+Viz příklad pro [CMap::SetAt](#setat).
 
-##  <a name="inithashtable"></a>  CMap::InitHashTable
+## <a name="cmapinithashtable"></a><a name="inithashtable"></a>CMap::InitHashTable
 
-Inicializuje zatřiďovací tabulku.
+Inicializuje tabulku hash.
 
 ```
 void InitHashTable(UINT hashSize, BOOL  bAllocNow = TRUE);
@@ -295,23 +295,23 @@ void InitHashTable(UINT hashSize, BOOL  bAllocNow = TRUE);
 
 ### <a name="parameters"></a>Parametry
 
-*hashSize*<br/>
-Počet položek v zatřiďovací tabulce.
+*velikost hashVelikost*<br/>
+Počet položek v tabulce hash.
 
-*bAllocNow*<br/>
-Při hodnotě TRUE se přiděluje zatřiďovací tabulku při inicializaci; jinak v tabulce je přidělena v případě potřeby.
+*bAllocNyní*<br/>
+Pokud TRUE, přidělí tabulku hash při inicializaci; jinak je tabulka přidělena v případě potřeby.
 
 ### <a name="remarks"></a>Poznámky
 
-Pro zajištění nejlepšího výkonu by měl být velikost tabulky hash Prvočíslo. Chcete-li minimalizovat kolize, velikost musí mít zhruba 20 procent větší než největší očekávané datové sady.
+Pro nejlepší výkon by velikost tabulky hash měla být prvočíslo. Chcete-li minimalizovat kolize, velikost by měla být zhruba o 20 procent větší než největší očekávaná sada dat.
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [CMap::Lookup](#lookup).
+Viz příklad pro [CMap::Lookup](#lookup).
 
-##  <a name="isempty"></a>  CMap::IsEmpty
+## <a name="cmapisempty"></a><a name="isempty"></a>CMap::Jeprázdný
 
-Určuje, zda na mapě je prázdný.
+Určuje, zda je mapa prázdná.
 
 ```
 BOOL IsEmpty() const;
@@ -319,15 +319,15 @@ BOOL IsEmpty() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud neobsahuje žádné elementy; toto mapování jinak 0.
+Nenulová, pokud tato mapa neobsahuje žádné prvky; jinak 0.
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [CMap::RemoveAll](#removeall).
+Viz příklad pro [CMap::RemoveAll](#removeall).
 
-##  <a name="lookup"></a>  CMap::Lookup
+## <a name="cmaplookup"></a><a name="lookup"></a>CMap::Vyhledávání
 
-Vyhledá hodnotu namapována na daný klíč.
+Vyhledá hodnotu namapovanou na daný klíč.
 
 ```
 BOOL Lookup(ARG_KEY key, VALUE& rValue) const;
@@ -336,32 +336,32 @@ BOOL Lookup(ARG_KEY key, VALUE& rValue) const;
 ### <a name="parameters"></a>Parametry
 
 *ARG_KEY*<br/>
-Parametr šablony určující typ *klíč* hodnotu.
+Parametr šablony určující typ hodnoty *klíče.*
 
 *key*<br/>
-Určuje klíč, který identifikuje elementu, který chcete vyhledávat.
+Určuje klíč, který identifikuje prvek, který má být vyhledán.
 
-*HODNOTA*<br/>
-Určuje typ hodnoty, které chcete vyhledávat.
+*Hodnotu*<br/>
+Určuje typ hodnoty, která má být vyhledána.
 
 *rValue*<br/>
-Přijímá hodnotu vyhledaných.
+Obdrží vyhlédnutou hodnotu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud element nebyl nalezen; jinak 0.
+Nenulová, pokud byl prvek nalezen; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-`Lookup` používá algoritmus hash a rychle najít prvek mapy s klíčem, který přesně odpovídá danému klíči.
+`Lookup`používá algoritmus hash rychle najít prvek mapy s klíčem, který přesně odpovídá daný klíč.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCCollections#58](../../mfc/codesnippet/cpp/cmap-class_3.cpp)]
 
-##  <a name="operator_at"></a>  [] Č. CMap::operator
+## <a name="cmapoperator--"></a><a name="operator_at"></a>CMap::operátor [ ]
 
-Pohodlné náhradou za `SetAt` členskou funkci.
+Vhodnou náhradou `SetAt` za člennou funkci.
 
 ```
 VALUE& operator[](arg_key key);
@@ -369,28 +369,28 @@ VALUE& operator[](arg_key key);
 
 ### <a name="parameters"></a>Parametry
 
-*HODNOTA*<br/>
-Parametr šablony určující typ hodnoty mapování.
+*Hodnotu*<br/>
+Parametr šablony určující typ hodnoty mapy.
 
 *ARG_KEY*<br/>
 Parametr šablony určující typ hodnoty klíče.
 
 *key*<br/>
-Klíč používaný k načtení hodnoty z mapy.
+Klíč použitý k načtení hodnoty z mapy.
 
 ### <a name="remarks"></a>Poznámky
 
-Proto jej lze použít pouze na levé straně příkazu přiřazení (l hodnota). Pokud neexistuje žádné mapování element se zadaným klíčem, se vytvoří nový prvek.
+Proto jej lze použít pouze na levé straně příkazu přiřazení (hodnota l). Pokud neexistuje žádný prvek mapy se zadaným klíčem, je vytvořen nový prvek.
 
-Ekvivalentní pro tento operátor není žádný "pravému" (r), protože je možné, že klíče nemusí být nalezen v objektu map. Použití `Lookup` členskou funkci pro prvek načítání.
+Neexistuje žádná "pravá strana" (hodnota r) ekvivalentní tomuto operátoru, protože existuje možnost, že klíč nemusí být nalezen v mapě. Pro `Lookup` načítání prvků použijte členská funkci.
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [CMap::Lookup](#lookup).
+Viz příklad pro [CMap::Lookup](#lookup).
 
-##  <a name="pgetfirstassoc"></a>  CMap::PGetFirstAssoc
+## <a name="cmappgetfirstassoc"></a><a name="pgetfirstassoc"></a>CMap::PGetFirstAssoc
 
-Vrátí první položku v objektu map.
+Vrátí první položku objektu mapy.
 
 ```
 const CPair* PGetFirstAssoc() const;
@@ -399,19 +399,19 @@ CPair* PGetFirstAssoc();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na první položku v mapě. Zobrazit [CMap::CPair](#cpair). Pokud mapa obsahuje žádné položky, hodnota je NULL.
+Ukazatel na první položku v mapě; viz [CMap::CPair](#cpair). Pokud mapa neobsahuje žádné položky, je hodnota NULL.
 
 ### <a name="remarks"></a>Poznámky
 
-Voláním této funkce vrací ukazatel první prvek v objektu map.
+Volání této funkce vrátí ukazatel první prvek v objektu mapy.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCCollections#59](../../mfc/codesnippet/cpp/cmap-class_4.cpp)]
 
-##  <a name="pgetnextassoc"></a>  CMap::PGetNextAssoc
+## <a name="cmappgetnextassoc"></a><a name="pgetnextassoc"></a>CMap::PGetNextAssoc
 
-Načte prvek mapy, na které odkazuje *pAssocRec*.
+Načte prvek mapy, na který se vztahuje *zpráva pAssocRec*.
 
 ```
 const CPair *PGetNextAssoc(const CPair* pAssocRet) const;
@@ -422,23 +422,23 @@ CPair *PGetNextAssoc(const CPair* pAssocRet);
 ### <a name="parameters"></a>Parametry
 
 *pAssocRet*<br/>
-Odkazuje na položku mapování vrácený předchozím [PGetNextAssoc](#pgetnextassoc) nebo [CMap::PGetFirstAssoc](#pgetfirstassoc) volání.
+Odkazuje na položku mapy vrácené předchozí [PGetNextAssoc](#pgetnextassoc) nebo [CMap::PGetFirstAssoc](#pgetfirstassoc) volání.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na další položky na mapě; Zobrazit [CMap::CPair](#cpair). Pokud prvek je poslední v objektu map, hodnota je NULL.
+Ukazatel na další položku v mapě; viz [CMap::CPair](#cpair). Pokud je prvek poslední v mapě, hodnota je NULL.
 
 ### <a name="remarks"></a>Poznámky
 
-Voláním této metody lze iterovat přes všechny prvky v objektu map. Načíst první prvek voláním `PGetFirstAssoc` a potom iteraci v rámci mapy při následných voláních na `PGetNextAssoc`.
+Volání této metody iterát přes všechny prvky v mapě. Načíst první prvek s `PGetFirstAssoc` voláním a pak iterate `PGetNextAssoc`prostřednictvím mapy s následná volání .
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [CMap::PGetFirstAssoc](#pgetfirstassoc).
+Viz příklad pro [CMap::PGetFirstAssoc](#pgetfirstassoc).
 
-##  <a name="plookup"></a>  CMap::PLookup
+## <a name="cmapplookup"></a><a name="plookup"></a>CMap::P Vyhledávání
 
-Najde hodnotu namapována na daný klíč.
+Najde hodnotu mapovanou na daný klíč.
 
 ```
 const CPair* PLookup(ARG_KEY key) const;
@@ -448,23 +448,23 @@ CPair* PLookup(ARG_KEY key);
 ### <a name="parameters"></a>Parametry
 
 *key*<br/>
-Klíč elementu, který chcete vyhledávat.
+Klíč pro prvek, který má být vyhledán.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na strukturu klíče; Zobrazit [CMap::CPair](#cpair). Pokud není nalezena žádná shoda, `CMap::PLookup` vrátí hodnotu NULL.
+Ukazatel na strukturu klíče; viz [CMap::CPair](#cpair). Pokud není nalezena `CMap::PLookup` žádná shoda, vrátí hodnotu NULL.
 
 ### <a name="remarks"></a>Poznámky
 
-Volejte tuto metodu za účelem vyhledání prvek mapy s klíčem, který přesně odpovídá danému klíči.
+Volání této metody k hledání prvku mapy s klíčem, který přesně odpovídá daný klíč.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCCollections#60](../../mfc/codesnippet/cpp/cmap-class_5.cpp)]
 
-##  <a name="removeall"></a>  CMap::RemoveAll
+## <a name="cmapremoveall"></a><a name="removeall"></a>CMap::RemoveAll
 
-Odebere všechny hodnoty z této mapy voláním globální pomocnou funkci `DestructElements`.
+Odebere všechny hodnoty z této mapy voláním `DestructElements`globální pomocné funkce .
 
 ```
 void RemoveAll();
@@ -472,15 +472,15 @@ void RemoveAll();
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce funguje správně, pokud mapa je prázdný.
+Funkce funguje správně, pokud je mapa již prázdná.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCCollections#61](../../mfc/codesnippet/cpp/cmap-class_6.cpp)]
 
-##  <a name="removekey"></a>  CMap::RemoveKey
+## <a name="cmapremovekey"></a><a name="removekey"></a>CMap::RemoveKey
 
-Vyhledá položku mapování odpovídající zadaný klíč; potom Pokud je nalezen klíč, odebere položku.
+Vyhledá položku mapy odpovídající zadanému klíči. pokud je klíč nalezen, odebere položku.
 
 ```
 BOOL RemoveKey(ARG_KEY key);
@@ -492,23 +492,23 @@ BOOL RemoveKey(ARG_KEY key);
 Parametr šablony určující typ klíče.
 
 *key*<br/>
-Klíč elementu, který chcete odebrat.
+Klíč pro prvek, který má být odebrán.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud byl nalezen a úspěšně odebral; položka jinak 0.
+Nenulová, pokud byla položka nalezena a úspěšně odebrána; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-`DestructElements` Pomocná funkce slouží k odebrání položky.
+Pomocná `DestructElements` funkce slouží k odebrání položky.
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [CMap::SetAt](#setat).
+Viz příklad pro [CMap::SetAt](#setat).
 
-##  <a name="setat"></a>  CMap::SetAt
+## <a name="cmapsetat"></a><a name="setat"></a>CMap::Setat
 
-Primární znamená, že vkládání elementů v objektu map.
+Primární prostředky pro vložení prvku do mapy.
 
 ```
 void SetAt(ARG_KEY key, ARG_VALUE newValue);
@@ -517,27 +517,27 @@ void SetAt(ARG_KEY key, ARG_VALUE newValue);
 ### <a name="parameters"></a>Parametry
 
 *ARG_KEY*<br/>
-Parametr šablony určující typ *klíč* parametru.
+Parametr šablony určující typ *klíčového* parametru.
 
 *key*<br/>
-Určuje klíč nového elementu.
+Určuje klíč nového prvku.
 
 *ARG_VALUE*<br/>
-Parametr šablony určující typ *newValue* parametru.
+Parametr šablony určující typ parametru *newValue.*
 
-*newValue*<br/>
-Určuje hodnotu nového elementu.
+*Newvalue*<br/>
+Určuje hodnotu nového prvku.
 
 ### <a name="remarks"></a>Poznámky
 
-Nejprve je klíč vyhledávat. Pokud je nalezen klíč, pak odpovídající hodnota, která se změnily. v opačném případě se vytvoří nový pár klíč hodnota.
+Za prvé, klíč je vzhlédl. Pokud je nalezen klíč, změní se odpovídající hodnota; v opačném případě je vytvořen nový pár klíč hodnota.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCCollections#62](../../mfc/codesnippet/cpp/cmap-class_7.cpp)]
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Ukázky knihovny MFC shromažďování](../../overview/visual-cpp-samples.md)<br/>
+[Odběr vzorku knihovny MFC](../../overview/visual-cpp-samples.md)<br/>
 [CObject – třída](../../mfc/reference/cobject-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)

@@ -1,5 +1,5 @@
 ---
-title: Ccommandlineinfo – třída
+title: Třída CCommandLineInfo
 ms.date: 11/04/2016
 f1_keywords:
 - CCommandLineInfo
@@ -28,16 +28,16 @@ helpviewer_keywords:
 - CCommandLineInfo [MFC], m_strPrinterName
 - CCommandLineInfo [MFC], m_strRestartIdentifier
 ms.assetid: 3e313ddb-0a82-4991-87ac-a27feff4668c
-ms.openlocfilehash: 6e4b535da00fdcecf4ce52fad696cb5d2bc55efa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0b4d5e5d253f2eb10388a69286d21e2190826eba
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408144"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81369464"
 ---
-# <a name="ccommandlineinfo-class"></a>Ccommandlineinfo – třída
+# <a name="ccommandlineinfo-class"></a>Třída CCommandLineInfo
 
-Pomáhá při analýze příkazového řádku při spuštění aplikace.
+Pomáhá při analýzě příkazového řádku při spuštění aplikace.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -49,53 +49,53 @@ class CCommandLineInfo : public CObject
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CCommandLineInfo::CCommandLineInfo](#ccommandlineinfo)|Vytvoří výchozí `CCommandLineInfo` objektu.|
+|[CCommandLineInfo::CCommandLineInfo](#ccommandlineinfo)|Vytvoří výchozí `CCommandLineInfo` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CCommandLineInfo::ParseParam](#parseparam)|Přepsání tohoto zpětného volání k analýze jednotlivé parametry.|
+|[CCommandLineInfo::ParseParam](#parseparam)|Přepište toto zpětné volání analyzovat jednotlivé parametry.|
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CCommandLineInfo::m_bRunAutomated](#m_brunautomated)|Určuje příkazový řádek `/Automation` možnost nebyla nalezena.|
-|[CCommandLineInfo::m_bRunEmbedded](#m_brunembedded)|Určuje příkazový řádek `/Embedding` možnost nebyla nalezena.|
-|[CCommandLineInfo::m_bShowSplash](#m_bshowsplash)|Označuje, pokud by se zobrazit úvodní obrazovky.|
-|[CCommandLineInfo::m_nShellCommand](#m_nshellcommand)|Označuje příkazového prostředí pro zpracování.|
-|[CCommandLineInfo::m_strDriverName](#m_strdrivername)|Označuje ovladač název příkazu prostředí shell, je tisk; v opačném případě prázdný.|
-|[CCommandLineInfo::m_strFileName](#m_strfilename)|Určuje název souboru dá otevřít nebo vytisknout; prázdný, pokud příkaz prostředí je nový nebo DDE.|
-|[CCommandLineInfo::m_strPortName](#m_strportname)|Port, který určuje název příkazového prostředí je tisk; v opačném případě prázdný.|
-|[CCommandLineInfo::m_strPrinterName](#m_strprintername)|Označuje, že tiskárna název příkazu prostředí shell, je tisk; v opačném případě prázdný.|
-|[CCommandLineInfo::m_strRestartIdentifier](#m_strrestartidentifier)|Označuje restartování jedinečný identifikátor pro správce restartování, pokud je správce restartování restartování aplikace.|
+|[CCommandLineInfo::m_bRunAutomated](#m_brunautomated)|Označuje, že `/Automation` byla nalezena možnost příkazového řádku.|
+|[CCommandLineInfo::m_bRunEmbedded](#m_brunembedded)|Označuje, že `/Embedding` byla nalezena možnost příkazového řádku.|
+|[CCommandLineInfo::m_bShowSplash](#m_bshowsplash)|Označuje, zda má být zobrazena úvodní obrazovka.|
+|[CCommandLineInfo::m_nShellCommand](#m_nshellcommand)|Označuje příkaz prostředí, který má být zpracován.|
+|[CCommandLineInfo::m_strDriverName](#m_strdrivername)|Označuje název ovladače, pokud je příkaz prostředí Print To; jinak prázdné.|
+|[CCommandLineInfo::m_strFileName](#m_strfilename)|Označuje název souboru, který má být otevřen nebo vytištěn; prázdné, pokud je příkaz prostředí Nový nebo DDE.|
+|[CCommandLineInfo::m_strPortName](#m_strportname)|Označuje název portu, pokud je příkaz prostředí Print To; jinak prázdné.|
+|[CCommandLineInfo::m_strPrinterName](#m_strprintername)|Označuje název tiskárny, pokud je příkaz prostředí Print To; jinak prázdné.|
+|[CCommandLineInfo::m_strRestartIdentifier](#m_strrestartidentifier)|Označuje jedinečný identifikátor restartování pro správce restartování, pokud správce restartování restartoval aplikaci.|
 
 ## <a name="remarks"></a>Poznámky
 
-Místní instance této třídy v obvykle vytvoří aplikace knihovny MFC [InitInstance](../../mfc/reference/cwinapp-class.md#initinstance) funkce objektu aplikace. Tento objekt je pak předán [CWinApp::ParseCommandLine](../../mfc/reference/cwinapp-class.md#parsecommandline), která volá opakovaně [ParseParam](#parseparam) tak, aby vyplnil `CCommandLineInfo` objektu. `CCommandLineInfo` Objekt je pak předán [CWinApp::ProcessShellCommand](../../mfc/reference/cwinapp-class.md#processshellcommand) pro zpracování argumentů příkazového řádku a příznaky.
+Aplikace knihovny MFC obvykle vytvoří místní instanci této třídy ve funkci [InitInstance](../../mfc/reference/cwinapp-class.md#initinstance) jejího aplikačního objektu. Tento objekt je pak předán [CWinApp::ParseCommandLine](../../mfc/reference/cwinapp-class.md#parsecommandline), který opakovaně volá `CCommandLineInfo` [ParseParam](#parseparam) vyplnit objekt. Objekt `CCommandLineInfo` je pak předán [CWinApp::ProcessShellCommand](../../mfc/reference/cwinapp-class.md#processshellcommand) pro zpracování argumentů a příznaků příkazového řádku.
 
-Tento objekt lze použít k zapouzdření následujících možností příkazového řádku a parametry:
+Tento objekt můžete použít k zapouzdření následujících možností a parametrů příkazového řádku:
 
-|argument příkazového řádku|Příkaz provedený|
+|Argument příkazového řádku|Příkaz proveden|
 |----------------------------|----------------------|
-|*app*|Nový soubor.|
-|*aplikace* název souboru|Otevřít soubor.|
-|*aplikace* `/p` název souboru|Tisk souboru se výchozí tiskárna.|
-|*aplikace* `/pt` filename port ovladače tiskárny|Tisk souboru na zadané tiskárně.|
-|*app* `/dde`|Spuštění a operátoru await příkazu DDE.|
-|*app* `/Automation`|Spuštění jako server automatizace OLE.|
-|*app* `/Embedding`|Spuštění upravit vložené položky OLE.|
-|*app* `/Register`<br /><br /> *app* `/Regserver`|Informuje o tom aplikace k provádění úloh registrace.|
-|*app* `/Unregister`<br /><br /> *app* `/Unregserver`|Informuje o tom aplikace provádět všechny úlohy zrušení registrace.|
+|*App*|Nový soubor.|
+|název souboru *aplikace*|Otevřete soubor.|
+|název souboru *aplikace* `/p`|Tisk souboru na výchozí tiskárnu.|
+|Port ovladače tiskárny se názvem *souboru aplikace* `/pt`|Tisk souboru na určené tiskárně.|
+|*aplikace*`/dde`|Spusťte a počkejte na příkaz DDE.|
+|*aplikace*`/Automation`|Spusťte jako server automatizace OLE.|
+|*aplikace*`/Embedding`|Spuštěním můžete upravit vloženou položku OLE.|
+|*aplikace*`/Register`<br /><br /> *aplikace*`/Regserver`|Informuje aplikaci k provedení všech registračních úkolů.|
+|*aplikace*`/Unregister`<br /><br /> *aplikace*`/Unregserver`|Informuje aplikaci k provedení všech úloh zrušení registrace.|
 
-Odvodit novou třídu z `CCommandLineInfo` ostatní příznaky a hodnoty parametrů. Přepsat [ParseParam](#parseparam) ke zpracování nového příznaky.
+Odvodit `CCommandLineInfo` novou třídu z pro zpracování jiných příznaků a hodnot parametrů. Přepsat [ParseParam](#parseparam) pro zpracování nových příznaků.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObjekt](../../mfc/reference/cobject-class.md)
 
 `CCommandLineInfo`
 
@@ -103,9 +103,9 @@ Odvodit novou třídu z `CCommandLineInfo` ostatní příznaky a hodnoty paramet
 
 **Záhlaví:** afxwin.h
 
-##  <a name="ccommandlineinfo"></a>  CCommandLineInfo::CCommandLineInfo
+## <a name="ccommandlineinfoccommandlineinfo"></a><a name="ccommandlineinfo"></a>CCommandLineInfo::CCommandLineInfo
 
-Tento konstruktor vytvoří `CCommandLineInfo` objektu s výchozími hodnotami.
+Tento konstruktor `CCommandLineInfo` vytvoří objekt s výchozími hodnotami.
 
 ```
 CCommandLineInfo();
@@ -113,17 +113,17 @@ CCommandLineInfo();
 
 ### <a name="remarks"></a>Poznámky
 
-Výchozí hodnota je chcete zobrazit úvodní obrazovku ( `m_bShowSplash=TRUE`) a ke spuštění příkazu Nový v nabídce Soubor ( `m_nShellCommand` **= NewFile**).
+Ve výchozím nastavení se zobrazí `m_bShowSplash=TRUE`úvodní obrazovka ( ) a v `m_nShellCommand`nabídce Soubor se spustí příkaz Nový ( **=NewFile**).
 
-Volání rozhraní framework aplikace [ParseParam](#parseparam) tak, aby vyplnil datové členy tohoto objektu.
+Rozhraní aplikace volá [ParseParam](#parseparam) vyplnit datové členy tohoto objektu.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCDocView#54](../../mfc/codesnippet/cpp/ccommandlineinfo-class_1.cpp)]
 
-##  <a name="m_brunautomated"></a>  CCommandLineInfo::m_bRunAutomated
+## <a name="ccommandlineinfom_brunautomated"></a><a name="m_brunautomated"></a>CCommandLineInfo::m_bRunAutomated
 
-Označuje, že `/Automation` příznak nebyl nalezen v příkazovém řádku.
+Označuje, `/Automation` že příznak byl nalezen na příkazovém řádku.
 
 ```
 BOOL m_bRunAutomated;
@@ -131,11 +131,11 @@ BOOL m_bRunAutomated;
 
 ### <a name="remarks"></a>Poznámky
 
-Při hodnotě TRUE se to znamená, že spuštění jako server automatizace OLE.
+Pokud true, to znamená spustit jako server automatizace OLE.
 
-##  <a name="m_brunembedded"></a>  CCommandLineInfo::m_bRunEmbedded
+## <a name="ccommandlineinfom_brunembedded"></a><a name="m_brunembedded"></a>CCommandLineInfo::m_bRunEmbedded
 
-Označuje, že `/Embedding` příznak nebyl nalezen v příkazovém řádku.
+Označuje, `/Embedding` že příznak byl nalezen na příkazovém řádku.
 
 ```
 BOOL m_bRunEmbedded;
@@ -143,11 +143,11 @@ BOOL m_bRunEmbedded;
 
 ### <a name="remarks"></a>Poznámky
 
-Při hodnotě TRUE se to znamená, že spuštění pro úpravy vložené položky OLE.
+Pokud TRUE, to znamená spuštění pro úpravy vložené položky OLE.
 
-##  <a name="m_bshowsplash"></a>  CCommandLineInfo::m_bShowSplash
+## <a name="ccommandlineinfom_bshowsplash"></a><a name="m_bshowsplash"></a>CCommandLineInfo::m_bShowSplash
 
-Indikuje, že se má zobrazovat úvodní obrazovka.
+Označuje, že by měla být zobrazena úvodní obrazovka.
 
 ```
 BOOL m_bShowSplash;
@@ -155,11 +155,11 @@ BOOL m_bShowSplash;
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud je hodnota TRUE, to znamená, že má být zobrazena na úvodní obrazovce pro tuto aplikaci při spuštění. Výchozí implementace [ParseParam](#parseparam) nastaví na TRUE, pokud tomuto datovému členu [m_nShellCommand](#m_nshellcommand) rovná `CCommandLineInfo::FileNew`.
+Pokud true, to znamená, že úvodní obrazovka pro tuto aplikaci by měla být zobrazena při spuštění. Výchozí implementace [ParseParam](#parseparam) nastaví tento datový člen na `CCommandLineInfo::FileNew`HODNOTU [TRUE,](#m_nshellcommand) pokud je m_nShellCommand rovno .
 
-##  <a name="m_nshellcommand"></a>  CCommandLineInfo::m_nShellCommand
+## <a name="ccommandlineinfom_nshellcommand"></a><a name="m_nshellcommand"></a>CCommandLineInfo::m_nShellCommand
 
-Označuje příkazového prostředí pro tuto instanci aplikace.
+Označuje příkaz prostředí pro tuto instanci aplikace.
 
 ```
 m_nShellCommand;
@@ -167,7 +167,7 @@ m_nShellCommand;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ pro tento datový člen je následující Výčtový typ, který je definován v `CCommandLineInfo` třídy.
+Typ pro tento datový člen je následující výčtový typ, `CCommandLineInfo` který je definován ve třídě.
 
 ```
 enum {
@@ -183,33 +183,33 @@ enum {
     };
 ```
 
-Stručný popis tyto hodnoty najdete v následujícím seznamu.
+Stručný popis těchto hodnot naleznete v následujícím seznamu.
 
-- `CCommandLineInfo::FileNew` Označuje, že na příkazovém řádku nebyl nalezen žádný název souboru.
+- `CCommandLineInfo::FileNew`Označuje, že na příkazovém řádku nebyl nalezen žádný název souboru.
 
-- `CCommandLineInfo::FileOpen` Označuje, že název souboru byl nalezen v příkazovém řádku a že žádný z následujících příznaků nebyly nalezeny v příkazovém řádku: `/p`, `/pt`, `/dde`.
+- `CCommandLineInfo::FileOpen`Označuje, že na příkazovém řádku byl nalezen název souboru a že `/p` `/pt`na `/dde`příkazovém řádku nebyl nalezen žádný z následujících příznaků: , , .
 
-- `CCommandLineInfo::FilePrint` Označuje, že `/p` příznak nebyl nalezen v příkazovém řádku.
+- `CCommandLineInfo::FilePrint`Označuje, `/p` že příznak byl nalezen na příkazovém řádku.
 
-- `CCommandLineInfo::FilePrintTo` Označuje, že `/pt` příznak nebyl nalezen v příkazovém řádku.
+- `CCommandLineInfo::FilePrintTo`Označuje, `/pt` že příznak byl nalezen na příkazovém řádku.
 
-- `CCommandLineInfo::FileDDE` Označuje, že `/dde` příznak nebyl nalezen v příkazovém řádku.
+- `CCommandLineInfo::FileDDE`Označuje, `/dde` že příznak byl nalezen na příkazovém řádku.
 
-- `CCommandLineInfo::AppRegister` Označuje, že `/Register` nebo `/Regserver` příznak nebyl nalezen v příkazovém řádku a aplikace se zobrazí výzva k registraci.
+- `CCommandLineInfo::AppRegister`Označuje, `/Register` že `/Regserver` příznak nebo byl nalezen na příkazovém řádku a aplikace byla požádána o registraci.
 
-- `CCommandLineInfo::AppUnregister` Označuje, že `/Unregister` nebo `/Unregserver` aplikace byl požádán o zrušení registrace.
+- `CCommandLineInfo::AppUnregister`Označuje, `/Unregister` že `/Unregserver` aplikace nebo byla požádána o zrušení registrace.
 
-- `CCommandLineInfo::RestartByRestartManager` Označuje, že aplikace byl restartován správcem restartování.
+- `CCommandLineInfo::RestartByRestartManager`Označuje, že aplikace byla restartována správcem restartování.
 
-- `CCommandLineInfo::FileNothing` Vypne zobrazení při spuštění nové podřízené okno MDI. Návrh aplikace vygenerované Průvodcem aplikace MDI zobrazit nové podřízené okno při spuštění. Chcete-li tuto funkci vypnout, můžete použít aplikaci `CCommandLineInfo::FileNothing` jako příkaz prostředí při volání [ProcessShellCommand](../../mfc/reference/cwinapp-class.md#processshellcommand). `ProcessShellCommand` je volán `InitInstance( )` všech `CWinApp` odvozené třídy.
+- `CCommandLineInfo::FileNothing`Vypne zobrazení nového podřízeného okna MDI při spuštění. Aplikace MDI generované průvodcem aplikace podle návrhu zobrazí při spuštění nové podřízené okno. Chcete-li tuto funkci vypnout, aplikace může použít `CCommandLineInfo::FileNothing` jako příkaz prostředí při volání [ProcessShellCommand](../../mfc/reference/cwinapp-class.md#processshellcommand). `ProcessShellCommand`je volána `InitInstance( )` všechny `CWinApp` odvozené třídy.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCDocView#55](../../mfc/codesnippet/cpp/ccommandlineinfo-class_2.cpp)]
 
-##  <a name="m_strdrivername"></a>  CCommandLineInfo::m_strDriverName
+## <a name="ccommandlineinfom_strdrivername"></a><a name="m_strdrivername"></a>CCommandLineInfo::m_strDriverName
 
-Uloží hodnotu třetí parametr není příznak na příkazovém řádku.
+Uloží hodnotu třetího parametru bez vlajky na příkazovém řádku.
 
 ```
 CString m_strDriverName;
@@ -217,11 +217,11 @@ CString m_strDriverName;
 
 ### <a name="remarks"></a>Poznámky
 
-Tento parametr je obvykle název ovladače tiskárny pro tisk do příkazu prostředí. Výchozí implementace [ParseParam](#parseparam) nastaví tento datový člen pouze tehdy, pokud `/pt` příznak nebyl nalezen v příkazovém řádku.
+Tento parametr je obvykle název ovladače tiskárny pro příkaz prostředí Print To. Výchozí implementace [ParseParam](#parseparam) nastaví tento datový `/pt` člen pouze v případě, že příznak byl nalezen na příkazovém řádku.
 
-##  <a name="m_strfilename"></a>  CCommandLineInfo::m_strFileName
+## <a name="ccommandlineinfom_strfilename"></a><a name="m_strfilename"></a>CCommandLineInfo::m_strFileName
 
-Uloží hodnotu prvního parametru bez příznaku na příkazovém řádku.
+Uloží hodnotu prvního parametru bez vlajky na příkazovém řádku.
 
 ```
 CString m_strFileName;
@@ -229,11 +229,11 @@ CString m_strFileName;
 
 ### <a name="remarks"></a>Poznámky
 
-Tento parametr je obvykle název souboru, který se otevře.
+Tento parametr je obvykle název souboru otevřít.
 
-##  <a name="m_strportname"></a>  CCommandLineInfo::m_strPortName
+## <a name="ccommandlineinfom_strportname"></a><a name="m_strportname"></a>CCommandLineInfo::m_strPortName
 
-Uloží hodnotu čtvrtého parametru bez příznaku na příkazovém řádku.
+Uloží hodnotu čtvrtého parametru bez vlajky na příkazovém řádku.
 
 ```
 CString m_strPortName;
@@ -241,11 +241,11 @@ CString m_strPortName;
 
 ### <a name="remarks"></a>Poznámky
 
-Tento parametr je obvykle název port tiskárny pro tisk do příkazu prostředí. Výchozí implementace [ParseParam](#parseparam) nastaví tento datový člen pouze tehdy, pokud `/pt` příznak nebyl nalezen v příkazovém řádku.
+Tento parametr je obvykle název portu tiskárny pro příkaz prostředí Print To. Výchozí implementace [ParseParam](#parseparam) nastaví tento datový `/pt` člen pouze v případě, že příznak byl nalezen na příkazovém řádku.
 
-##  <a name="m_strprintername"></a>  CCommandLineInfo::m_strPrinterName
+## <a name="ccommandlineinfom_strprintername"></a><a name="m_strprintername"></a>CCommandLineInfo::m_strPrinterName
 
-Uloží hodnotu druhého parametru bez příznaku na příkazovém řádku.
+Uloží hodnotu druhého parametru bez vlajky na příkazovém řádku.
 
 ```
 CString m_strPrinterName;
@@ -253,11 +253,11 @@ CString m_strPrinterName;
 
 ### <a name="remarks"></a>Poznámky
 
-Tento parametr je obvykle název tiskárny pro tisk do příkazu prostředí. Výchozí implementace [ParseParam](#parseparam) nastaví tento datový člen pouze tehdy, pokud `/pt` příznak nebyl nalezen v příkazovém řádku.
+Tento parametr je obvykle název tiskárny pro příkaz prostředí Print To. Výchozí implementace [ParseParam](#parseparam) nastaví tento datový `/pt` člen pouze v případě, že příznak byl nalezen na příkazovém řádku.
 
-##  <a name="m_strrestartidentifier"></a>  CCommandLineInfo::m_strRestartIdentifier
+## <a name="ccommandlineinfom_strrestartidentifier"></a><a name="m_strrestartidentifier"></a>CCommandLineInfo::m_strRestartIdentifier
 
-Jedinečné restartujte identifikátor na příkazovém řádku.
+Jedinečný identifikátor restartování na příkazovém řádku.
 
 ```
 CString m_strRestartIdentifier;
@@ -267,11 +267,11 @@ CString m_strRestartIdentifier;
 
 Identifikátor restartování je jedinečný pro každou instanci aplikace.
 
-Pokud správce restartování aplikace se ukončí a je konfigurováno jeho ji restartovat, provede správce restartování aplikace z příkazového řádku s identifikátorem restartování jako volitelný parametr. Po restartování správce používá identifikátor restartování, můžete aplikaci znovu otevřít dříve otevřené dokumenty a automaticky uložené soubory obnovit.
+Pokud správce restartování ukončí aplikaci a je nakonfigurován tak, aby ji restartoval, spustí aplikaci z příkazového řádku s identifikátorem restartu jako volitelným parametrem. Pokud správce restartování použije identifikátor restartování, aplikace může znovu otevřít dříve otevřené dokumenty a obnovit automaticky uložené soubory.
 
-##  <a name="parseparam"></a>  CCommandLineInfo::ParseParam
+## <a name="ccommandlineinfoparseparam"></a><a name="parseparam"></a>CCommandLineInfo::ParseParam
 
-Rozhraní volá tuto funkci k analýze/interpretaci jednotlivé parametry z příkazového řádku. Druhá verze se liší od první jenom v projektech kódování Unicode.
+Framework volá tuto funkci analyzovat/interpretovat jednotlivé parametry z příkazového řádku. Druhá verze se liší od první pouze v projektech Unicode.
 
 ```
 virtual void ParseParam(
@@ -290,39 +290,39 @@ virtual void ParseParam(
 *pszParam*<br/>
 Parametr nebo příznak.
 
-*bFlag*<br/>
-Určuje, zda *pszParam* je parametr nebo příznak.
+*bPříznak*<br/>
+Označuje, zda *pszParam* je parametr nebo příznak.
 
-*Dosah*<br/>
-Označuje, zda toto je poslední parametr nebo příznak na příkazovém řádku.
+*Výbuch*<br/>
+Označuje, zda se jedná o poslední parametr nebo příznak na příkazovém řádku.
 
 ### <a name="remarks"></a>Poznámky
 
-[CWinApp::ParseCommandLine](../../mfc/reference/cwinapp-class.md#parsecommandline) volání `ParseParam` jednou pro každý parametr nebo příznak na příkazovém řádku předání argumentu *pszParam*. Pokud je první znak parametru " **-**"nebo" **/**", pak se odebere a *bFlag* nastavena na hodnotu TRUE. Při analýze posledního parametru *výbuchu* je nastavena na hodnotu TRUE.
+[CWinApp::ParseCommandLine](../../mfc/reference/cwinapp-class.md#parsecommandline) `ParseParam` volá jednou pro každý parametr nebo příznak na příkazovém řádku a předá argument *pszParam*. Pokud je první znak parametru **-**" " **/** nebo " , je odebrán a *bFlag* je nastaven na HODNOTU TRUE. Při analýzě konečného parametru je *bLast* nastavena na HODNOTU TRUE.
 
-Výchozí implementace této funkce rozpoznává následující příznaky: `/p`, `/pt`, `/dde`, `/Automation`, a `/Embedding`, jak je znázorněno v následující tabulce:
+Výchozí implementace této funkce rozpozná následující `/p`příznaky: `/dde` `/Automation`, `/pt` `/Embedding`, , a , jak je znázorněno v následující tabulce:
 
-|argument příkazového řádku|Příkaz provedený|
+|Argument příkazového řádku|Příkaz proveden|
 |----------------------------|----------------------|
-|*app*|Nový soubor.|
-|*aplikace* název souboru|Otevřít soubor.|
-|*aplikace* `/p` název souboru|Tisk souboru se výchozí tiskárna.|
-|*aplikace* `/pt` filename port ovladače tiskárny|Tisk souboru na zadané tiskárně.|
-|*app* `/dde`|Spuštění a operátoru await příkazu DDE.|
-|*app* `/Automation`|Spuštění jako server automatizace OLE.|
-|*app* `/Embedding`|Spuštění upravit vložené položky OLE.|
-|*app* `/Register`<br /><br /> *app* `/Regserver`|Informuje o tom aplikace k provádění úloh registrace.|
-|*app* `/Unregister`<br /><br /> *app* `/Unregserver`|Informuje o tom aplikace provádět všechny úlohy zrušení registrace.|
+|*App*|Nový soubor.|
+|název souboru *aplikace*|Otevřete soubor.|
+|název souboru *aplikace* `/p`|Tisk souboru na výchozí tiskárnu.|
+|Port ovladače tiskárny se názvem *souboru aplikace* `/pt`|Tisk souboru na určené tiskárně.|
+|*aplikace*`/dde`|Spusťte a počkejte na příkaz DDE.|
+|*aplikace*`/Automation`|Spusťte jako server automatizace OLE.|
+|*aplikace*`/Embedding`|Spuštěním můžete upravit vloženou položku OLE.|
+|*aplikace*`/Register`<br /><br /> *aplikace*`/Regserver`|Informuje aplikaci k provedení všech registračních úkolů.|
+|*aplikace*`/Unregister`<br /><br /> *aplikace*`/Unregserver`|Informuje aplikaci k provedení všech úloh zrušení registrace.|
 
-Tyto informace jsou uloženy v [m_bRunAutomated](#m_brunautomated), [m_bRunEmbedded](#m_brunembedded), a [m_nShellCommand](#m_nshellcommand). Příznaky jsou označeny buď lomítko " **/**"nebo" **-**".
+Tyto informace jsou uloženy v [m_bRunAutomated](#m_brunautomated), [m_bRunEmbedded](#m_brunembedded)a [m_nShellCommand](#m_nshellcommand). Příznaky jsou označeny lomítkem pro **/** lomítko nebo pomlčkou . **-**
 
-Výchozí implementace umístí do první parametr bez příznaku [m_strFileName](#m_strfilename). V případě třídy `/pt` příznak, výchozí implementace vloží sekundy, třetím a čtvrtém parametry bez příznaku do [m_strPrinterName](#m_strprintername), [m_strDriverName](#m_strdrivername), a [m_ strPortName](#m_strportname)v uvedeném pořadí.
+Výchozí implementace umístí první parametr bez příznaku do [m_strFileName](#m_strfilename). `/pt` V případě příznakvýchozí implementace umístí druhý, třetí a čtvrtý non-flag parametry do [m_strPrinterName](#m_strprintername), [m_strDriverName](#m_strdrivername)a [m_strPortName](#m_strportname).
 
-Výchozí implementace také nastaví [m_bShowSplash](#m_bshowsplash) na hodnotu TRUE pouze v případě nový soubor. V případě nový soubor uživatel provedl, zahrnující samotná aplikace. Ve všech ostatních případech otevřete existující soubory pomocí prostředí, včetně zahrnuje akce uživatele přímo souboru. V hlediska zaměřené na dokument úvodní obrazovka nemusí oznámit spuštění aplikace.
+Výchozí implementace také nastaví [m_bShowSplash](#m_bshowsplash) na HODNOTU TRUE pouze v případě nového souboru. V případě nového souboru uživatel přijal opatření zahrnující samotnou aplikaci. V každém jiném případě, včetně otevření existujících souborů pomocí prostředí, akce uživatele zahrnuje soubor přímo. Z hlediska zaměření na dokument nemusí úvodní obrazovka oznamovat spuštění aplikace.
 
-Přepsání této funkce ve vaší odvozené třídy za účelem zpracování další příznak a parametr hodnoty.
+Přepsat tuto funkci v odvozené třídě pro zpracování jiných hodnot příznaku a parametrů.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [CObject – třída](../../mfc/reference/cobject-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>

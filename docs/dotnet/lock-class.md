@@ -14,16 +14,16 @@ f1_keywords:
 helpviewer_keywords:
 - msclr::lock class
 ms.assetid: 5123edd9-6aed-497d-9a0b-f4b6d6c0d666
-ms.openlocfilehash: c8056146998443f4e24169a4464b834d8eff29b0
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: ea09dd3d4a2eaf4cf7708d09509cfecfa4a6c6d5
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80208512"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373066"
 ---
 # <a name="lock-class"></a>lock – třída
 
-Tato třída automatizuje zámek pro synchronizaci přístupu k objektu z několika vláken.  Když je vytvořen, získá zámek a při jeho zničení uvolní zámek.
+Tato třída automatizuje uzamčení pro synchronizaci přístupu k objektu z několika vláken.  Při konstrukci získá zámek a při zničení uvolní zámek.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,45 +33,45 @@ ref class lock;
 
 ## <a name="remarks"></a>Poznámky
 
-`lock` je k dispozici pouze pro objekty CLR a lze je použít pouze v kódu CLR.
+`lock`je k dispozici pouze pro objekty CLR a lze jej použít pouze v kódu CLR.
 
-Interně, třída Lock používá <xref:System.Threading.Monitor> k synchronizaci přístupu. Další informace najdete v odkazovaném článku.
+Interně třída lock <xref:System.Threading.Monitor> používá k synchronizaci přístupu. Další informace naleznete v odkazovaném článku.
 
 ## <a name="members"></a>Členové
 
-### <a name="public-constructors"></a>Veřejné konstruktory
+### <a name="public-constructors"></a>Veřejní konstruktéři
 
-|Název|Popis|
+|Name (Název)|Popis|
 |---------|-----------|
-|[lock::lock](#lock)|Vytvoří objekt `lock`, volitelně čeká na získání zámku, po zadanou dobu nebo vůbec ne.|
-|[lock::~lock](#tilde-lock)|Destrukturuje objekt `lock`.|
+|[lock::lock](#lock)|Vytvoří `lock` objekt, volitelně čeká na získání zámku navždy, po určitou dobu nebo vůbec.|
+|[zámek::~lock](#tilde-lock)|Zničí `lock` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |---------|-----------|
-|[lock::acquire](#acquire)|Získá zámek objektu, volitelně čeká na získání zámku, po zadanou dobu nebo vůbec ne.|
-|[lock::is_locked](#is-locked)|Určuje, zda se má zámek uchovávat.|
+|[lock::acquire](#acquire)|Získá zámek na objekt, volitelně čeká na získání zámku navždy, po určitou dobu, nebo vůbec.|
+|[lock::is_locked](#is-locked)|Označuje, zda je zámek držen.|
 |[lock::release](#release)|Uvolní zámek.|
-|[lock::try_acquire](#try-acquire)|Získá zámek objektu, počká na určenou dobu a vrátí `bool`, aby nahlásila úspěch získání namísto vyvolání výjimky.|
+|[lock::try_acquire](#try-acquire)|Získá zámek na objekt, čekání na zadané množství času `bool` a vrácení a nahlásit úspěch akvizice namísto vyvolání výjimky.|
 
-### <a name="public-operators"></a>Veřejné operátory
+### <a name="public-operators"></a>Veřejní provozovatelé
 
-|Název|Popis|
+|Name (Název)|Popis|
 |---------|-----------|
-|[Lock:: operator&nbsp;bool](#operator-bool)|Operátor pro použití `lock` v podmíněném výrazu.|
-|[lock::operator==](#operator-equality)|Operátor rovnosti|
-|[lock::operator!=](#operator-inequality)|Operátor nerovnosti|
+|[zámek::operátor&nbsp;bool](#operator-bool)|Operátor pro `lock` použití v podmíněném výrazu.|
+|[lock::operator==](#operator-equality)|Operátor rovnosti.|
+|[zámek::operátor!=](#operator-inequality)|Operátor nerovnosti.|
 
 ## <a name="requirements"></a>Požadavky
 
-**Hlavičkový soubor** \<msclr\lock.h >
+**Soubor** \<záhlaví msclr\lock.h>
 
-Msclr – **oboru názvů**
+**Obor názvů** msclr
 
-## <a name="locklock"></a><a name="lock"></a>Lock:: Lock
+## <a name="locklock"></a><a name="lock"></a>zámek::zámek
 
-Vytvoří objekt `lock`, volitelně čeká na získání zámku, po zadanou dobu nebo vůbec ne.
+Vytvoří `lock` objekt, volitelně čeká na získání zámku navždy, po určitou dobu nebo vůbec.
 
 ```cpp
 template<class T> lock(
@@ -97,25 +97,25 @@ template<class T> lock(
 Objekt, který má být uzamčen.
 
 *_timeout*<br/>
-Hodnota časového limitu v milisekundách nebo jako <xref:System.TimeSpan>.
+Hodnota časového výpadku v milisekundách nebo jako <xref:System.TimeSpan>.
 
 ### <a name="exceptions"></a>Výjimky
 
-Vyvolá <xref:System.ApplicationException>, pokud k získání zámku nedochází před vypršením časového limitu.
+<xref:System.ApplicationException> Vyvolá, pokud nedojde k pořízení zámku před časovým časem.
 
 ### <a name="remarks"></a>Poznámky
 
-První tři formy konstruktoru se pokusí získat zámek `_object` v rámci zadaného časového limitu (nebo <xref:System.Threading.Timeout.Infinite>, pokud není zadán).
+První tři formy konstruktoru se pokusí `_object` získat zámek v rámci <xref:System.Threading.Timeout.Infinite> zadaného časového období (nebo pokud není zadán žádný).
 
-Čtvrtý tvar konstruktoru nezíská zámek na `_object`. `lock_later` je členem [výčtu lock_when](../dotnet/lock-when-enum.md). Pro získání zámku v tomto případě použijte [zámek:: získat](../dotnet/lock-acquire.md) nebo [uzamknout:: try_acquire](../dotnet/lock-try-acquire.md) .
+Čtvrtá forma konstruktoru nezíská zámek `_object`na . `lock_later`je členem [lock_when výčtu](../dotnet/lock-when-enum.md). Použijte [lock::acquire](../dotnet/lock-acquire.md) nebo [lock::try_acquire](../dotnet/lock-try-acquire.md) získat zámek v tomto případě.
 
-Zámek bude automaticky uvolněn při volání destruktoru.
+Zámek se automaticky uvolní při volání destruktoru.
 
-`_object` nelze <xref:System.Threading.ReaderWriterLock>.  Pokud je to, výsledkem bude chyba kompilátoru.
+`_object`nemůže být <xref:System.Threading.ReaderWriterLock>.  Pokud ano, dojde k chybě kompilátoru.
 
 ### <a name="example"></a>Příklad
 
-V tomto příkladu se používá jedna instance třídy napříč několika vlákny. Třída používá zámek sebe sama k zajištění, že přístup k vnitřním datům je konzistentní pro každé vlákno. Hlavní vlákno aplikace používá zámek na stejné instanci třídy, aby pravidelně kontroloval, zda nějaká pracovní vlákna stále existují. Hlavní aplikace pak počká na ukončení, dokud všechna pracovní vlákna nedokončí své úkoly.
+Tento příklad používá jednu instanci třídy v několika vláknech. Třída používá zámek na sebe a ujistěte se, že přístupy k jeho vnitřní data jsou konzistentní pro každé vlákno. Hlavní podproces aplikace používá zámek na stejné instanci třídy pravidelně kontrolovat, zda existují ještě nějaké pracovní podprocesy. Hlavní aplikace pak čeká na ukončení, dokud všechny pracovní podprocesy dokončily své úkoly.
 
 ```cpp
 // msl_lock_lock.cpp
@@ -203,9 +203,9 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="locklock"></a><a name="tilde-lock"></a>Lock:: ~ Lock
+## <a name="locklock"></a><a name="tilde-lock"></a>zámek::~lock
 
-Destrukturuje objekt `lock`.
+Zničí `lock` objekt.
 
 ```cpp
 ~lock();
@@ -213,11 +213,11 @@ Destrukturuje objekt `lock`.
 
 ### <a name="remarks"></a>Poznámky
 
-Destruktor volá metodu [Lock:: Release](../dotnet/lock-release.md).
+Destruktor volá [lock::release](../dotnet/lock-release.md).
 
 ### <a name="example"></a>Příklad
 
-V tomto příkladu se používá jedna instance třídy napříč několika vlákny.  Třída používá zámek sebe sama k zajištění, že přístup k vnitřním datům je konzistentní pro každé vlákno.  Hlavní vlákno aplikace používá zámek na stejné instanci třídy, aby pravidelně kontroloval, zda nějaká pracovní vlákna stále existují. Hlavní aplikace pak počká na ukončení, dokud všechna pracovní vlákna nedokončí své úkoly.
+Tento příklad používá jednu instanci třídy v několika vláknech.  Třída používá zámek na sebe a ujistěte se, že přístupy k jeho vnitřní data jsou konzistentní pro každé vlákno.  Hlavní podproces aplikace používá zámek na stejné instanci třídy pravidelně kontrolovat, zda existují ještě nějaké pracovní podprocesy. Hlavní aplikace pak čeká na ukončení, dokud všechny pracovní podprocesy dokončily své úkoly.
 
 ```cpp
 // msl_lock_dtor.cpp
@@ -305,9 +305,9 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="lockacquire"></a><a name="acquire"></a>Lock:: získat
+## <a name="lockacquire"></a><a name="acquire"></a>zámek::získat
 
-Získá zámek objektu, volitelně čeká na získání zámku, po zadanou dobu nebo vůbec ne.
+Získá zámek na objekt, volitelně čeká na získání zámku navždy, po určitou dobu, nebo vůbec.
 
 ```cpp
 void acquire();
@@ -322,21 +322,21 @@ void acquire(
 ### <a name="parameters"></a>Parametry
 
 *_timeout*<br/>
-Hodnota časového limitu v milisekundách nebo jako <xref:System.TimeSpan>.
+Hodnota časového času v milisekundách nebo jako <xref:System.TimeSpan>.
 
 ### <a name="exceptions"></a>Výjimky
 
-Vyvolá <xref:System.ApplicationException>, pokud k získání zámku nedochází před vypršením časového limitu.
+<xref:System.ApplicationException> Vyvolá, pokud nedojde k pořízení zámku před časovým časem.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud není zadána hodnota časového limitu, výchozí časový limit je <xref:System.Threading.Timeout.Infinite>.
+Pokud není zadána hodnota časového limitu, <xref:System.Threading.Timeout.Infinite>výchozí časový limit je .
 
-Pokud byl zámek již získán, tato funkce neprovede žádnou akci.
+Pokud již byl získán zámek, tato funkce neprovede žádné.
 
 ### <a name="example"></a>Příklad
 
-V tomto příkladu se používá jedna instance třídy napříč několika vlákny.  Třída používá zámek sebe sama k zajištění, že přístup k vnitřním datům je konzistentní pro každé vlákno. Hlavní vlákno aplikace používá zámek na stejné instanci třídy, aby pravidelně kontroloval, zda nějaká pracovní vlákna stále existují. Hlavní aplikace pak počká na ukončení, dokud všechna pracovní vlákna nedokončí své úkoly.
+Tento příklad používá jednu instanci třídy v několika vláknech.  Třída používá zámek na sebe a ujistěte se, že přístupy k jeho vnitřní data jsou konzistentní pro každé vlákno. Hlavní podproces aplikace používá zámek na stejné instanci třídy pravidelně kontrolovat, zda existují ještě nějaké pracovní podprocesy. Hlavní aplikace pak čeká na ukončení, dokud všechny pracovní podprocesy dokončily své úkoly.
 
 ```cpp
 // msl_lock_acquire.cpp
@@ -424,9 +424,9 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="lockis_locked"></a><a name="is-locked"></a>zámek:: is_locked
+## <a name="lockis_locked"></a><a name="is-locked"></a>zámek::is_locked
 
-Určuje, zda se má zámek uchovávat.
+Označuje, zda je zámek držen.
 
 ```cpp
 bool is_locked();
@@ -434,11 +434,11 @@ bool is_locked();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`true`, pokud je držen zámek, `false` jinak.
+`true`pokud je zámek `false` držen, jinak.
 
 ### <a name="example"></a>Příklad
 
-V tomto příkladu se používá jedna instance třídy napříč několika vlákny.  Třída používá zámek sebe sama k zajištění, že přístup k vnitřním datům je konzistentní pro každé vlákno.  Hlavní vlákno aplikace používá zámek na stejné instanci třídy, aby pravidelně kontroloval, zda nějaká pracovní vlákna stále existují, a čeká na ukončení, dokud všechna pracovní vlákna nedokončí své úkoly.
+Tento příklad používá jednu instanci třídy v několika vláknech.  Třída používá zámek na sebe a ujistěte se, že přístupy k jeho vnitřní data jsou konzistentní pro každé vlákno.  Hlavní podproces aplikace používá zámek na stejné instanci třídy pravidelně kontrolovat, zda existují pracovní vlákna a čeká na ukončení, dokud všechna pracovní vlákna dokončí své úkoly.
 
 ```cpp
 // msl_lock_is_locked.cpp
@@ -527,9 +527,9 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="lockoperator-bool"></a><a name="operator-bool"></a>Lock:: operator bool
+## <a name="lockoperator-bool"></a><a name="operator-bool"></a>zámek::operátor bool
 
-Operátor pro použití `lock` v podmíněném výrazu.
+Operátor pro `lock` použití v podmíněném výrazu.
 
 ```cpp
 operator bool();
@@ -537,15 +537,15 @@ operator bool();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`true`, pokud je držen zámek, `false` jinak.
+`true`pokud je zámek `false` držen, jinak.
 
 ### <a name="remarks"></a>Poznámky
 
-Tento operátor ve skutečnosti převádí na `_detail_class::_safe_bool`, což je bezpečnější než `bool`, protože nemůže být převeden na integrální typ.
+Tento operátor skutečně `_detail_class::_safe_bool` převede na `bool` který je bezpečnější než proto, že nelze převést na integrální typ.
 
 ### <a name="example"></a>Příklad
 
-V tomto příkladu se používá jedna instance třídy napříč několika vlákny.  Třída používá zámek sebe sama k zajištění, že přístup k vnitřním datům je konzistentní pro každé vlákno. Hlavní vlákno aplikace používá zámek na stejné instanci třídy, aby pravidelně kontroloval, zda nějaká pracovní vlákna stále existují. Hlavní aplikace počká na ukončení, dokud všechna pracovní vlákna nedokončí své úkoly.
+Tento příklad používá jednu instanci třídy v několika vláknech.  Třída používá zámek na sebe a ujistěte se, že přístupy k jeho vnitřní data jsou konzistentní pro každé vlákno. Hlavní podproces aplikace používá zámek na stejné instanci třídy pravidelně kontrolovat, zda existují ještě nějaké pracovní podprocesy. Hlavní aplikace čeká na ukončení, dokud všechny pracovní podprocesy dokončí své úkoly.
 
 ```cpp
 // msl_lock_op_bool.cpp
@@ -634,7 +634,7 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="lockrelease"></a><a name="release"></a>Lock:: Release
+## <a name="lockrelease"></a><a name="release"></a>zámek::uvolnění
 
 Uvolní zámek.
 
@@ -644,13 +644,13 @@ void release();
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud se žádný zámek nedrží, `release` neprovede žádnou akci.
+Pokud není držen žádný `release` zámek, neprovede žádnou akci.
 
-Tuto funkci nemusíte explicitně volat. Když `lock` objekt přejde mimo rozsah, jeho destruktor volá `release`.
+Tuto funkci nemusíte volat explicitně. Když `lock` objekt přejde mimo rozsah, jeho `release`destruktor volá .
 
 ### <a name="example"></a>Příklad
 
-V tomto příkladu se používá jedna instance třídy napříč několika vlákny. Třída používá zámek sebe sama k zajištění, že přístup k vnitřním datům je konzistentní pro každé vlákno. Hlavní vlákno aplikace používá zámek na stejné instanci třídy, aby pravidelně kontroloval, zda nějaká pracovní vlákna stále existují. Hlavní aplikace pak počká na ukončení, dokud všechna pracovní vlákna nedokončí své úkoly.
+Tento příklad používá jednu instanci třídy v několika vláknech. Třída používá zámek na sebe a ujistěte se, že přístupy k jeho vnitřní data jsou konzistentní pro každé vlákno. Hlavní podproces aplikace používá zámek na stejné instanci třídy pravidelně kontrolovat, zda existují ještě nějaké pracovní podprocesy. Hlavní aplikace pak čeká na ukončení, dokud všechny pracovní podprocesy dokončily své úkoly.
 
 ```cpp
 // msl_lock_release.cpp
@@ -738,9 +738,9 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="locktry_acquire"></a><a name="try-acquire"></a>zámek:: try_acquire
+## <a name="locktry_acquire"></a><a name="try-acquire"></a>zámek::try_acquire
 
-Získá zámek objektu, počká na určenou dobu a vrátí `bool`, aby nahlásila úspěch získání namísto vyvolání výjimky.
+Získá zámek na objekt, čekání na zadané množství času `bool` a vrácení a nahlásit úspěch akvizice namísto vyvolání výjimky.
 
 ```cpp
 bool try_acquire(
@@ -754,19 +754,19 @@ bool try_acquire(
 ### <a name="parameters"></a>Parametry
 
 *_timeout*<br/>
-Hodnota časového limitu v milisekundách nebo jako <xref:System.TimeSpan>.
+Hodnota časového času v milisekundách nebo jako <xref:System.TimeSpan>.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`true`, jestli se získal zámek, `false` jinak.
+`true`pokud byl zámek `false` získán, jinak.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud byl zámek již získán, tato funkce neprovede žádnou akci.
+Pokud již byl získán zámek, tato funkce neprovede žádné.
 
 ### <a name="example"></a>Příklad
 
-V tomto příkladu se používá jedna instance třídy napříč několika vlákny. Třída používá zámek sebe sama k zajištění, že přístup k vnitřním datům je konzistentní pro každé vlákno. Hlavní vlákno aplikace používá zámek na stejné instanci třídy, aby pravidelně kontroloval, zda nějaká pracovní vlákna stále existují. Hlavní aplikace pak počká na ukončení, dokud všechna pracovní vlákna nedokončí své úkoly.
+Tento příklad používá jednu instanci třídy v několika vláknech. Třída používá zámek na sebe a ujistěte se, že přístupy k jeho vnitřní data jsou konzistentní pro každé vlákno. Hlavní podproces aplikace používá zámek na stejné instanci třídy pravidelně kontrolovat, zda existují ještě nějaké pracovní podprocesy. Hlavní aplikace pak čeká na ukončení, dokud všechny pracovní podprocesy dokončily své úkoly.
 
 ```cpp
 // msl_lock_try_acquire.cpp
@@ -854,9 +854,9 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="lockoperator"></a><a name="operator-equality"></a>Lock:: operator = = – operátor
+## <a name="lockoperator"></a><a name="operator-equality"></a>zámek::operátor==
 
-Operátor rovnosti
+Operátor rovnosti.
 
 ```cpp
 template<class T> bool operator==(
@@ -866,12 +866,12 @@ template<class T> bool operator==(
 
 ### <a name="parameters"></a>Parametry
 
-*š*<br/>
-Objekt, který má být porovnán s rovností.
+*t*<br/>
+Objekt porovnat rovnost.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí `true`, jsou-li `t` stejné jako objekt zámku, `false` jinak.
+`true` Vrátí, `t` pokud je stejný jako objekt `false` zámku, jinak.
 
 ### <a name="example"></a>Příklad
 
@@ -897,9 +897,9 @@ int main () {
 Equal!
 ```
 
-## <a name="lockoperator"></a><a name="operator-inequality"></a>Lock:: operator! = – operátor
+## <a name="lockoperator"></a><a name="operator-inequality"></a>zámek::operátor!=
 
-Operátor nerovnosti
+Operátor nerovnosti.
 
 ```cpp
 template<class T> bool operator!=(
@@ -909,12 +909,12 @@ template<class T> bool operator!=(
 
 ### <a name="parameters"></a>Parametry
 
-*š*<br/>
-Objekt, který se má porovnat s nerovností.
+*t*<br/>
+Objekt porovnat pro nerovnost.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí `true`, pokud `t` se liší od objektu zámku, `false` jinak.
+`true` Vrátí, `t` pokud se liší od `false` objektu zámku, jinak.
 
 ### <a name="example"></a>Příklad
 

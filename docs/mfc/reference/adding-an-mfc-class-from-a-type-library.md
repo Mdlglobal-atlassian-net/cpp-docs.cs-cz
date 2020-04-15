@@ -6,35 +6,35 @@ helpviewer_keywords:
 - MFC, adding classes from type libraries
 - type libraries, adding MFC classes from
 ms.assetid: aba40476-3cfb-47af-990e-ae2e9e0d79cf
-ms.openlocfilehash: e8264de2c717c874da157cb29ad5e336e3ecbd0f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bf9c763a215a4880d5b0ad206f6a347341fea9eb
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62296745"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371726"
 ---
 # <a name="adding-an-mfc-class-from-a-type-library"></a>Přidání třídy knihovny MFC z knihovny typů
 
-Tohoto průvodce použijte k vytvoření třídy knihovny MFC z rozhraní dostupné knihovny typů. Můžete přidat do třídy knihovny MFC [aplikace knihovny MFC](../../mfc/reference/creating-an-mfc-application.md), [knihovny MFC DLL](../../mfc/reference/creating-an-mfc-dll-project.md), nebo [ovládací prvek ActiveX knihovny MFC](../../mfc/reference/creating-an-mfc-activex-control.md).
+Tento průvodce slouží k vytvoření třídy knihovny MFC z rozhraní v dostupné knihovně typů. Třídu knihovny MFC můžete přidat do [aplikace knihovny MFC](../../mfc/reference/creating-an-mfc-application.md), [knihovny MFC DLL](../../mfc/reference/creating-an-mfc-dll-project.md)nebo [ovládacího prvku ActiveX knihovny MFC](../../mfc/reference/creating-an-mfc-activex-control.md).
 
 > [!NOTE]
->  Není nutné k vytvoření projektu knihovny MFC s podporou pro přidání třídy z knihovny typů automatizace.
+> Není nutné vytvářet projekt knihovny MFC s povolenou automatizací pro přidání třídy z knihovny typů.
 
-Knihovna typů obsahuje binární popis rozhraní vystavené komponentou, definování metody společně s jejich parametry a návratové typy. Knihovna typů musí být zaregistrovaný, aby se zobrazí v **dostupné knihovny typů** seznamu v přidání třídy z Průvodce knihovnou typů. Viz "uvnitř Distributed COM: Knihovny typů a jazyk integrace "v knihovně MSDN pro další informace.
+Knihovna typů obsahuje binární popis rozhraní vystavených komponentou, definující metody spolu s jejich parametry a návratové typy. Aby se knihovna typů zaregistrovala, aby se zobrazila v seznamu **Dostupné knihovny typů** v Průvodci přidáním třídy z typelib. Další informace naleznete v části Vnitřní distribuované com: knihovny typů a jazyková integrace v knihovně MSDN.
 
 ### <a name="to-add-an-mfc-class-from-a-type-library"></a>Přidání třídy knihovny MFC z knihovny typů
 
-1. V jednom **Průzkumníka řešení** nebo [zobrazení tříd](/visualstudio/ide/viewing-the-structure-of-code), klikněte pravým tlačítkem na název projektu, ke kterému chcete přidat třídu.
+1. V **Průzkumníku řešení** nebo [zobrazení třídy](/visualstudio/ide/viewing-the-structure-of-code)klikněte pravým tlačítkem myši na název projektu, do kterého chcete přidat třídu.
 
-1. V místní nabídce klikněte na tlačítko **přidat**a potom klikněte na tlačítko **přidat třídu**.
+1. V místní nabídce klikněte na **Přidat**a potom klikněte na **Přidat třídu**.
 
-1. V [přidat třídu](../../ide/add-class-dialog-box.md) dialogové okno, v podokně šablon, klikněte na tlačítko **třída knihovny MFC z Typelib**a potom klikněte na tlačítko **otevřít** zobrazíte [přidat třídu z Průvodce knihovnou typů ](../../mfc/reference/add-class-from-typelib-wizard.md).
+1. V dialogovém okně [Přidat třídu](../../ide/add-class-dialog-box.md) klikněte v podokně Šablony na **položku Třída knihovny MFC z typeliba**a potom klepnutím na **tlačítko Otevřít** zobrazte [Průvodce přidáním třídy z funkce Typelib](../../mfc/reference/add-class-from-typelib-wizard.md).
 
-V průvodci můžete přidat více než jedna třída v knihovně typů. Podobně přidáním tříd z více než jeden typ knihovny v rámci jedné relace průvodce.
+V průvodci můžete přidat více než jednu třídu do knihovny typů. Podobně můžete přidat třídy z více než jedné knihovny typů v jedné relaci průvodce.
 
-Průvodce vytvoří třídy knihovny MFC, odvozený z [COleDispatchDriver](../../mfc/reference/coledispatchdriver-class.md), pro každé rozhraní, kterou přidáte z vybrané knihovny typů. `COleDispatchDriver` implementuje na straně klienta automatizaci OLE.
+Průvodce vytvoří třídu knihovny MFC odvozenou z [cOleDispatchDriver](../../mfc/reference/coledispatchdriver-class.md)pro každé rozhraní, které přidáte z vybrané knihovny typů. `COleDispatchDriver`implementuje klientskou stranu automatizace OLE.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Klienti automatizace](../../mfc/automation-clients.md)<br/>
 [Klienti automatizace: Použití knihoven typů](../../mfc/automation-clients-using-type-libraries.md)

@@ -13,16 +13,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::Mutex::Mutex, constructor
 - Microsoft::WRL::Wrappers::Mutex::operator= operator
 ms.assetid: 682a0963-721c-46a2-8871-000e9997505b
-ms.openlocfilehash: 93de43ac7e5314501d0391e2cde862ba32be0b4b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 36466bd00c5b100f20ee87173e68fdef4131ec23
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62379139"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371221"
 ---
 # <a name="mutex-class"></a>Mutex – třída
 
-Představuje objekt synchronizace, který řídí výhradně sdíleného prostředku.
+Představuje objekt synchronizace, který výhradně řídí sdílený prostředek.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -32,29 +32,29 @@ class Mutex : public HandleT<HandleTraits::MutexTraits>;
 
 ## <a name="members"></a>Členové
 
-### <a name="public-typedefs"></a>Veřejné definice TypeDef
+### <a name="public-typedefs"></a>Veřejné typedefs
 
-Název       | Popis
+Name (Název)       | Popis
 ---------- | ------------------------------------------------------
 `SyncLock` | Synonymum pro třídu, která podporuje synchronní zámky.
 
 ### <a name="public-constructor"></a>Veřejný konstruktor
 
-Název                   | Popis
+Name (Název)                   | Popis
 ---------------------- | ------------------------------------------------
-[Mutex::Mutex](#mutex) | Inicializuje novou instanci třídy `Mutex` třídy.
+[Mutex::Mutex](#mutex) | Inicializuje novou instanci třídy. `Mutex`
 
-### <a name="public-members"></a>Veřejné členy
+### <a name="public-members"></a>Veřejní členové
 
-Název                 | Popis
+Name (Název)                 | Popis
 -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------
-[Mutex::LOCK –](#lock) | Počká, až do aktuálního objektu nebo `Mutex` objekt přidružený k Zadaný popisovač mutex nebo zadaný časový limit uplynul vydané verze.
+[Mutex::Zamknout](#lock) | Čeká, dokud aktuální objekt `Mutex` nebo objekt přidružený k zadanému popisovači uvolní mutex nebo zadaný časový limit.
 
 ### <a name="public-operator"></a>Veřejný operátor
 
-Název                                 | Popis
+Name (Název)                                 | Popis
 ------------------------------------ | ---------------------------------------------------------------------------
-[Mutex::Operator =](#operator-assign) | Přiřadí (přesun) zadaný `Mutex` objektů na aktuální `Mutex` objektu.
+[Mutex::operátor=](#operator-assign) | Přiřadí (přesune) `Mutex` zadaný objekt `Mutex` aktuálnímu objektu.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -64,11 +64,11 @@ Název                                 | Popis
 
 **Záhlaví:** corewrappers.h
 
-**Namespace:** Microsoft::WRL::Wrappers
+**Obor názvů:** Microsoft::WRL::Obálky
 
-## <a name="lock"></a>Mutex::LOCK –
+## <a name="mutexlock"></a><a name="lock"></a>Mutex::Zamknout
 
-Počká, až do aktuálního objektu nebo `Mutex` objekt přidružený k Zadaný popisovač mutex nebo zadaný časový limit uplynul vydané verze.
+Čeká, dokud aktuální objekt `Mutex` nebo objekt přidružený k zadanému popisovači uvolní mutex nebo zadaný časový limit.
 
 ```cpp
 SyncLock Lock(
@@ -83,17 +83,17 @@ static SyncLock Lock(
 
 ### <a name="parameters"></a>Parametry
 
-*Milisekundy*<br/>
-Interval časového limitu v milisekundách. Výchozí hodnota je NEKONEČNO, který čekat po neomezenou dobu.
+*milisekundy*<br/>
+Časový interval v milisekundách. Výchozí hodnota je INFINITE, která čeká neomezeně dlouho.
 
-*h*<br/>
-Popisovač `Mutex` objektu.
+*H*<br/>
+Popisovač objektu. `Mutex`
 
 ### <a name="return-value"></a>Návratová hodnota
 
-## <a name="mutex"></a>Mutex::Mutex
+## <a name="mutexmutex"></a><a name="mutex"></a>Mutex::Mutex
 
-Inicializuje novou instanci třídy `Mutex` třídy.
+Inicializuje novou instanci třídy. `Mutex`
 
 ```cpp
 explicit Mutex(
@@ -107,16 +107,16 @@ Mutex(
 
 ### <a name="parameters"></a>Parametry
 
-*h*<br/>
-Popisovač nebo odkaz rvalue na popisovač, do `Mutex` objektu.
+*H*<br/>
+Popisovač nebo rvalue odkaz na popisovač, `Mutex` na objekt.
 
 ### <a name="remarks"></a>Poznámky
 
-První konstruktor inicializuje `Mutex` objekt ze zadaného popisovače. Druhý konstruktor inicializuje `Mutex` objekt Zadaný popisovač a pak přesune vlastnictví mutex do aktuální `Mutex` objektu.
+První konstruktor inicializuje `Mutex` objekt ze zadaného popisovače. Druhý konstruktor inicializuje `Mutex` objekt ze zadaného popisovače a potom přesune `Mutex` vlastnictví objektu mutex na aktuální objekt.
 
-## <a name="operator-assign"></a>Mutex::Operator =
+## <a name="mutexoperator"></a><a name="operator-assign"></a>Mutex::operátor=
 
-Přiřadí (přesun) zadaný `Mutex` objektů na aktuální `Mutex` objektu.
+Přiřadí (přesune) `Mutex` zadaný objekt `Mutex` aktuálnímu objektu.
 
 ```cpp
 Mutex& operator=(
@@ -126,13 +126,13 @@ Mutex& operator=(
 
 ### <a name="parameters"></a>Parametry
 
-*h*<br/>
-Odkaz rvalue na `Mutex` objektu.
+*H*<br/>
+Rvalue odkaz na `Mutex` objekt.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Odkaz na aktuální `Mutex` objektu.
+Odkaz na aktuální `Mutex` objekt.
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace najdete v tématu **přesunutí sémantiky** část [Rvalue Reference Declarator: & &](../../cpp/rvalue-reference-declarator-amp-amp.md).
+Další informace naleznete v části **Přesunout sémantiku** [v deklarátoru odkazu na rvalu: &&](../../cpp/rvalue-reference-declarator-amp-amp.md).

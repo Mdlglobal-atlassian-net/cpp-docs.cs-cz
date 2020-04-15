@@ -7,46 +7,46 @@ helpviewer_keywords:
 - relationships, MFC objects
 - MFC object relationships
 ms.assetid: 6e8f3b51-e80f-4d88-94c8-4c1e4ee163ad
-ms.openlocfilehash: bb8d1fcd9737b33d52038746a26f4e1bd1043e95
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d7e40e25b405d3f8ec50a518889cc2b89bc8c725
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62309041"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372810"
 ---
 # <a name="relationships-among-mfc-objects"></a>Vztahy mezi objekty MFC
 
-Pokud chcete vložit v procesu vytváření dokumentů/zobrazení perspektivy, vezměte v úvahu spuštěný program: dokument, okno rámce pro nové zobrazení a zobrazení spojené s dokumentem.
+Chcete-li proces vytváření dokumentu/zobrazení uvést do perspektivy, zvažte spuštěný program: dokument, okno rámce použité k zobrazení a pohled přidružený k dokumentu.
 
-- Dokument udržuje seznam zobrazení daný dokument a ukazatel na šablonu dokumentu, který vytvořil dokument.
+- Dokument uchovává seznam zobrazení tohoto dokumentu a ukazatel na šablonu dokumentu, která dokument vytvořila.
 
-- Zobrazení uchovává ukazatel na jeho dokument a je podřízeným prvkem nezašle nadřazenému oknu rámce.
+- Zobrazení zachová ukazatel na dokument a je podřízeným oknem nadřazeného rámečku.
 
-- Okno rámce dokumentu uchovává ukazatel na její aktuální aktivní zobrazení.
+- Okno rámce dokumentu zachová ukazatel na aktuální aktivní pohled.
 
-- Šablona dokumentu udržuje seznam jeho otevřených dokumentů.
+- Šablona dokumentu uchovává seznam otevřených dokumentů.
 
-- Aplikace udržuje seznam jeho šablony dokumentů.
+- Aplikace uchovává seznam svých šablon dokumentů.
 
-- Windows uchovává informace o všechna otevřená okna odesílání zpráv do nich.
+- Systém Windows sleduje všechna otevřená okna, takže jim může odesílat zprávy.
 
-Tyto vztahy jsou vytvořeny během vytváření dokumentů/zobrazení. Následující tabulka ukazuje, jak objekty v běžící aplikaci můžete získat přístup k jiné objekty. Libovolný objekt lze získat ukazatel objektu aplikace voláním globální funkce [AfxGetApp](../mfc/reference/application-information-and-management.md#afxgetapp).
+Tyto vztahy jsou vytvořeny během vytváření dokumentu/zobrazení. Následující tabulka ukazuje, jak mohou objekty v spuštěném programu přistupovat k jiným objektům. Libovolný objekt může získat ukazatel na objekt aplikace voláním globální funkce [AfxGetApp](../mfc/reference/application-information-and-management.md#afxgetapp).
 
-### <a name="gaining-access-to-other-objects-in-your-application"></a>Získání přístupu k jiným objektům v aplikaci
+### <a name="gaining-access-to-other-objects-in-your-application"></a>Získání přístupu k jiným objektům ve vaší aplikaci
 
-|Z objektu|Jak získat přístup k jiné objekty|
+|Z objektu|Jak získat přístup k jiným objektům|
 |-----------------|---------------------------------|
-|Dokument|Použití [GetFirstViewPosition](../mfc/reference/cdocument-class.md#getfirstviewposition) a [GetNextView](../mfc/reference/cdocument-class.md#getnextview) pro přístup k dokumentu zobrazení seznamu.<br /><br /> Volání [GetDocTemplate](../mfc/reference/cdocument-class.md#getdoctemplate) získat šablonu dokumentu.|
-|Zobrazit|Volání [GetDocument](../mfc/reference/cview-class.md#getdocument) k získání dokumentu.<br /><br /> Volání [GetParentFrame](../mfc/reference/cwnd-class.md#getparentframe) zobrazíte okno rámce.|
-|Okna rámce dokumentu|Volání [GetActiveView](../mfc/reference/cframewnd-class.md#getactiveview) zobrazíte aktuální zobrazení.<br /><br /> Volání [GetActiveDocument](../mfc/reference/cframewnd-class.md#getactivedocument) zobrazíte na dokument připojený k aktuální zobrazení.|
-|Okno rámce MDI|Volání [MDIGetActive](../mfc/reference/cmdiframewnd-class.md#mdigetactive) zobrazíte aktuálně aktivní [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md).|
+|Dokument|Pomocí [GetFirstViewPosition](../mfc/reference/cdocument-class.md#getfirstviewposition) a [GetNextView](../mfc/reference/cdocument-class.md#getnextview) pro přístup k seznamu zobrazení dokumentu.<br /><br /> Volání [GetDocTemplate](../mfc/reference/cdocument-class.md#getdoctemplate) získat šablonu dokumentu.|
+|Zobrazit|Volání [GetDocument](../mfc/reference/cview-class.md#getdocument) získat dokument.<br /><br /> Volání [GetParentFrame](../mfc/reference/cwnd-class.md#getparentframe) získat okno rámce.|
+|Okno rámce dokumentu|Volání [GetActiveView](../mfc/reference/cframewnd-class.md#getactiveview) získat aktuální zobrazení.<br /><br /> Volání [GetActiveDocument](../mfc/reference/cframewnd-class.md#getactivedocument) získat dokument připojený k aktuálnímu zobrazení.|
+|Okno rámce MDI|Volání [MDIGetActive](../mfc/reference/cmdiframewnd-class.md#mdigetactive) získat aktuálně aktivní [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md).|
 
-Obvykle má okno rámce jedno zobrazení, ale v některých případech jako rozdělovače oken stejné okno rámce obsahuje několik zobrazení. Okno rámce uchovává ukazatel na aktuálně aktivní zobrazení. ukazatel se aktualizuje pokaždé, když se aktivuje jiné zobrazení.
+Okno rámce má obvykle jedno zobrazení, ale někdy, stejně jako v rozbočovačích oken, stejné okno rámce obsahuje více zobrazení. Okno rámce zachová ukazatel na aktuálně aktivní zobrazení; ukazatel se aktualizuje při každém aktivaci jiného zobrazení.
 
 > [!NOTE]
->  Ukazatel na hlavní okno rámce je uložen v [m_pMainWnd](../mfc/reference/cwinthread-class.md#m_pmainwnd) členské proměnné objektu aplikace. Volání `OnFileNew` v přepsání metody `InitInstance` členskou funkci `CWinApp` nastaví *m_pMainWnd* za vás. Pokud není volána `OnFileNew`, je nutné nastavit hodnotu proměnné v `InitInstance` sami. (Aplikace SDI COM součástí (server) se nemusí nastavte proměnnou, je-li/Embedding na příkazovém řádku.) Všimněte si, že *m_pMainWnd* je teď členem třídy `CWinThread` spíše než `CWinApp`.
+> Ukazatel na okno hlavního rámce je uložen v [proměnné m_pMainWnd](../mfc/reference/cwinthread-class.md#m_pmainwnd) člena aplikačního objektu. Volání `OnFileNew` v přepsání `InitInstance` členské funkce `CWinApp` sad *m_pMainWnd* pro vás. Pokud nezavoláte `OnFileNew`, musíte nastavit hodnotu `InitInstance` proměnné v sobě. (Aplikace komponenty (server) modelu SDI COM nemusí proměnnou nastavit, pokud je parametr /Embedding na příkazovém řádku.) Všimněte *m_pMainWnd* si, že m_pMainWnd `CWinThread` je `CWinApp`nyní členem třídy spíše než .
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Šablony dokumentů a proces vytváření dokumentů/zobrazení](../mfc/document-templates-and-the-document-view-creation-process.md)<br/>
 [Vytváření šablon dokumentů](../mfc/document-template-creation.md)<br/>

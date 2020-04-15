@@ -1,5 +1,5 @@
 ---
-title: 'Výjimky: Použití maker MFC a výjimek jazyka C++'
+title: 'Výjimky: Použití výjimek v makrech MFC a jazyce C++'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - exception objects [MFC]
@@ -16,45 +16,45 @@ helpviewer_keywords:
 - heap corruption [MFC]
 - nested catch blocks [MFC]
 ms.assetid: d664a83d-879b-44d4-bdf0-029f0aca69e9
-ms.openlocfilehash: 00e88ddabf3a8e8b591bebae7ebc8ced0e1dc637
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: afad5335bedf001329ecb401a8a16c663afb5571
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406012"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371594"
 ---
-# <a name="exceptions-using-mfc-macros-and-c-exceptions"></a>Výjimky: Použití maker MFC a výjimek jazyka C++
+# <a name="exceptions-using-mfc-macros-and-c-exceptions"></a>Výjimky: Použití výjimek v makrech MFC a jazyce C++
 
-Tento článek popisuje důležité informace k zápisu kódu, který používá makra zpracování výjimek knihovny MFC a klíčových slov zpracování výjimek jazyka C++.
+Tento článek popisuje důležité informace pro psaní kódu, který používá makra zpracování výjimek knihovny MFC a klíčová slova pro zpracování výjimek jazyka C++.
 
-Tento článek obsahuje následující témata:
+Tento článek popisuje následující témata:
 
-- [Kombinování klíčová slova výjimek a makra](#_core_mixing_exception_keywords_and_macros)
+- [Míchání klíčových slov a maker výjimek](#_core_mixing_exception_keywords_and_macros)
 
-- [Bloky try dovnitř bloky catch](#_core_try_blocks_inside_catch_blocks)
+- [Zkuste bloky uvnitř catch bloky](#_core_try_blocks_inside_catch_blocks)
 
-##  <a name="_core_mixing_exception_keywords_and_macros"></a> Kombinování klíčová slova výjimek a makra
+## <a name="mixing-exception-keywords-and-macros"></a><a name="_core_mixing_exception_keywords_and_macros"></a>Míchání klíčových slov a maker výjimek
 
-Můžete kombinovat maker výjimek prostředí MFC a klíčová slova výjimek jazyka C++ ve stejném programu. Nemůžete ale kombinovat maker knihovny MFC s klíčová slova výjimek jazyka C++ ve stejném bloku protože makra objektů výjimek automaticky odstranit při mizení z rozsahu, zatímco kód pomocí klíčových slov zpracování výjimek ne. Další informace najdete v článku [výjimky: Zachytávání a mazání](../mfc/exceptions-catching-and-deleting-exceptions.md).
+Makra výjimek knihovny MFC a klíčová slova výjimek jazyka C++ můžete kombinovat ve stejném programu. Makra knihovny MFC však nelze kombinovat s klíčovými slovy výjimky jazyka C++ ve stejném bloku, protože makra automaticky odstraňují objekty výjimek, když jsou mimo rozsah, zatímco kód používající klíčová slova pro zpracování výjimek nikoli. Další informace naleznete v článku [Výjimky: Zachycení a odstranění výjimek](../mfc/exceptions-catching-and-deleting-exceptions.md).
 
-Hlavní rozdíl mezi makra a klíčová slova je, že makra "automatické" odstranit zachycené výjimky, když výjimky dostane mimo rozsah. Kód pomocí klíčových slov není; výjimky zachyceny v bloku catch se musí explicitně odstranit. Kombinování maker a klíčová slova výjimek jazyka C++ může způsobit nevracení paměti při objektu výjimky není odstranění nebo poškození haldy výjimku při odstranění dvakrát.
+Hlavní rozdíl mezi makry a klíčovými slovy spoáčy s toho, že makra "automaticky" odstraní zachycenou výjimku, když výjimka přejde mimo rozsah. Kód pomocí klíčových slov není; výjimky zachycené v bloku catch musí být explicitně odstraněny. Míchání maker a klíčových slov výjimky Jazyka C++ může způsobit nevracení paměti, pokud není odstraněn objekt výjimky, nebo poškození haldy při odstranění výjimky dvakrát.
 
-Následující kód například zruší platnost ukazatel výjimka:
+Následující kód, například zruší platnost ukazatele výjimky:
 
 [!code-cpp[NVC_MFCExceptions#10](../mfc/codesnippet/cpp/exceptions-using-mfc-macros-and-cpp-exceptions_1.cpp)]
 
-K problému dochází, protože `e` se odstraní, když je spuštění úspěšné mimo "vnitřní" **CATCH** bloku. Pomocí **THROW_LAST** – makro místo **THROW** způsobí, že příkaz "vnější" **CATCH** bloku získat platný ukazatel:
+K problému dochází, protože `e` je odstraněn při spuštění předá mimo "vnitřní" **CATCH** bloku. Použití **THROW_LAST** makra namísto příkazu **THROW** způsobí, že "vnější" **blok CATCH** obdrží platný ukazatel:
 
 [!code-cpp[NVC_MFCExceptions#11](../mfc/codesnippet/cpp/exceptions-using-mfc-macros-and-cpp-exceptions_2.cpp)]
 
-##  <a name="_core_try_blocks_inside_catch_blocks"></a> Uvnitř bloků Catch bloky try
+## <a name="try-blocks-inside-catch-blocks"></a><a name="_core_try_blocks_inside_catch_blocks"></a>Vyzkoušet bloky uvnitř catch bloků
 
-Nelze znovu vyvolat na aktuální výjimku v rámci **zkuste** blok, který se nachází uvnitř **CATCH** bloku. V následujícím příkladu je neplatný:
+Nelze znovu vyvolat aktuální výjimku z bloku **try,** který je uvnitř bloku **CATCH.** Následující příklad je neplatný:
 
 [!code-cpp[NVC_MFCExceptions#12](../mfc/codesnippet/cpp/exceptions-using-mfc-macros-and-cpp-exceptions_3.cpp)]
 
-Další informace najdete v tématu [výjimky: Zkoumání obsahu výjimek](../mfc/exceptions-examining-exception-contents.md).
+Další informace naleznete v [tématu Exceptions: Examining Exception Contents](../mfc/exceptions-examining-exception-contents.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Zpracování výjimek](../mfc/exception-handling-in-mfc.md)

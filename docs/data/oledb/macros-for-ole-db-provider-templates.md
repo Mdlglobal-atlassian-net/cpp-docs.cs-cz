@@ -50,43 +50,43 @@ helpviewer_keywords:
 - END_SCHEMA_MAP macro
 - SCHEMA_ENTRY macro
 ms.assetid: 909482c5-64ab-4e52-84a9-1c07091db183
-ms.openlocfilehash: 2fda4d9f003e84247527d964685e631532d4c366
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 5d29b2548102b056a21ebfccb037af3a766788ba
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80210142"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81369810"
 ---
 # <a name="macros-for-ole-db-provider-templates"></a>Makra pro šablony zprostředkovatele OLE DB
 
-Makra poskytovatele OLE DB šablon nabízí funkce v následujících kategoriích:
+Makra zprostředkovatele šablon TECHNOLOGIE OLE DB nabízejí funkce v následujících kategoriích:
 
-## <a name="property-set-map-macros"></a>Nastavení vlastností – makra mapování
+## <a name="property-set-map-macros"></a>Makra mapování sady vlastností
 
 |||
 |-|-|
 |[BEGIN_PROPERTY_SET](#begin_property_set)|Označuje začátek sady vlastností.|
 |[BEGIN_PROPERTY_SET_EX](#begin_property_set_ex)|Označuje začátek sady vlastností.|
-|[BEGIN_PROPSET_MAP](#begin_propset_map)|Označí začátek sady vlastností, která může být skrytá nebo definovaná mimo obor poskytovatele.|
-|[CHAIN_PROPERTY_SET](#chain_property_set)|Řetězí skupiny vlastností dohromady.|
+|[BEGIN_PROPSET_MAP](#begin_propset_map)|Označuje začátek sady vlastností, která může být skryta nebo definována mimo rozsah zprostředkovatele.|
+|[CHAIN_PROPERTY_SET](#chain_property_set)|Řetězy skupiny vlastností dohromady.|
 |[END_PROPERTY_SET](#end_property_set)|Označuje konec sady vlastností.|
 |[END_PROPSET_MAP](#end_propset_map)|Označuje konec mapy sady vlastností.|
-|[PROPERTY_INFO_ENTRY](#property_info_entry)|Nastaví určitou vlastnost ve vlastnosti nastavenou na výchozí hodnotu.|
-|[PROPERTY_INFO_ENTRY_EX](#property_info_entry_ex)|Nastaví určitou vlastnost v sadě vlastností nastavenou na hodnotu poskytnutou vámi. Také umožňuje nastavit příznaky a možnosti.|
-|[PROPERTY_INFO_ENTRY_VALUE](#property_info_entry_value)|Nastaví určitou vlastnost v sadě vlastností nastavenou na hodnotu poskytnutou vámi.|
+|[PROPERTY_INFO_ENTRY](#property_info_entry)|Nastaví určitou vlastnost v sadě vlastností na výchozí hodnotu.|
+|[PROPERTY_INFO_ENTRY_EX](#property_info_entry_ex)|Nastaví určitou vlastnost v sadě vlastností na hodnotu, kterou jste dodali. Také umožňuje nastavit příznaky a možnosti.|
+|[PROPERTY_INFO_ENTRY_VALUE](#property_info_entry_value)|Nastaví určitou vlastnost v sadě vlastností na hodnotu, kterou jste dodali.|
 
-## <a name="column-map-macros"></a>Makra map sloupců
+## <a name="column-map-macros"></a>Makra mapování sloupců
 
 |||
 |-|-|
-|[BEGIN_PROVIDER_COLUMN_MAP](#begin_provider_column_map)|Označí začátek položek mapování sloupce zprostředkovatele.|
-|[END_PROVIDER_COLUMN_MAP](#end_provider_column_map)|Označuje konec položek mapování sloupce zprostředkovatele.|
+|[BEGIN_PROVIDER_COLUMN_MAP](#begin_provider_column_map)|Označuje začátek položek mapy sloupce zprostředkovatele.|
+|[END_PROVIDER_COLUMN_MAP](#end_provider_column_map)|Označuje konec položek mapy sloupce zprostředkovatele.|
 |[PROVIDER_COLUMN_ENTRY](#provider_column_entry)|Představuje konkrétní sloupec podporovaný zprostředkovatelem.|
-|[PROVIDER_COLUMN_ENTRY_FIXED](#provider_column_entry_fixed)|Představuje konkrétní sloupec podporovaný zprostředkovatelem. Můžete zadat datový typ sloupce.|
-|[PROVIDER_COLUMN_ENTRY_GN](#provider_column_entry_gn)|Představuje konkrétní sloupec podporovaný zprostředkovatelem. Můžete zadat velikost sloupce, datový typ, přesnost, měřítko a identifikátor GUID sady řádků schématu.|
+|[PROVIDER_COLUMN_ENTRY_FIXED](#provider_column_entry_fixed)|Představuje konkrétní sloupec podporovaný zprostředkovatelem. Můžete určit datový typ sloupce.|
+|[PROVIDER_COLUMN_ENTRY_GN](#provider_column_entry_gn)|Představuje konkrétní sloupec podporovaný zprostředkovatelem. Můžete určit guid guid sady řádků velikosti sloupce, datového typu, přesnosti, měřítka a sady řádků schématu.|
 |[PROVIDER_COLUMN_ENTRY_LENGTH](#provider_column_entry_length)|Představuje konkrétní sloupec podporovaný zprostředkovatelem. Můžete určit velikost sloupce.|
 |[PROVIDER_COLUMN_ENTRY_STR](#provider_column_entry_str)|Představuje konkrétní sloupec podporovaný zprostředkovatelem. Předpokládá, že typ sloupce je řetězec.|
-|[PROVIDER_COLUMN_ENTRY_TYPE_LENGTH](#provider_column_entry_type_length)|Představuje konkrétní sloupec podporovaný zprostředkovatelem. Stejně jako PROVIDER_COLUMN_ENTRY_LENGTH, ale také umožňuje určit datový typ sloupce i velikost.|
+|[PROVIDER_COLUMN_ENTRY_TYPE_LENGTH](#provider_column_entry_type_length)|Představuje konkrétní sloupec podporovaný zprostředkovatelem. Stejně jako PROVIDER_COLUMN_ENTRY_LENGTH, ale také umožňuje určit datový typ sloupce, stejně jako velikost.|
 |[PROVIDER_COLUMN_ENTRY_WSTR](#provider_column_entry_wstr)|Představuje konkrétní sloupec podporovaný zprostředkovatelem. Předpokládá, že typ sloupce je řetězec znaků Unicode.|
 
 ## <a name="schema-rowset-macros"></a>Makra sady řádků schématu
@@ -99,11 +99,11 @@ Makra poskytovatele OLE DB šablon nabízí funkce v následujících kategorií
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** Atldb. h
+**Záhlaví:** atldb.h
 
 ### <a name="begin_property_set"></a><a name="begin_property_set"></a>BEGIN_PROPERTY_SET
 
-Označí začátek sady vlastností v mapě sady vlastností.
+Označuje začátek vlastnosti nastavené v mapě sady vlastností.
 
 #### <a name="syntax"></a>Syntaxe
 
@@ -113,8 +113,8 @@ BEGIN_PROPERTY_SET(guid)
 
 #### <a name="parameters"></a>Parametry
 
-*hlavních*<br/>
-pro Identifikátor GUID vlastnosti
+*Identifikátor guid*<br/>
+[v] Identifikátor GUID vlastnosti.
 
 #### <a name="example"></a>Příklad
 
@@ -122,7 +122,7 @@ Viz [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).
 
 ### <a name="begin_property_set_ex"></a><a name="begin_property_set_ex"></a>BEGIN_PROPERTY_SET_EX
 
-Označí začátek sady vlastností v mapě sady vlastností.
+Označuje začátek vlastnosti nastavené v mapě sady vlastností.
 
 #### <a name="syntax"></a>Syntaxe
 
@@ -132,11 +132,11 @@ BEGIN_PROPERTY_SET_EX(guid, flags)
 
 #### <a name="parameters"></a>Parametry
 
-*hlavních*<br/>
-pro Identifikátor GUID vlastnosti
+*Identifikátor guid*<br/>
+[v] Identifikátor GUID vlastnosti.
 
-*Flag*<br/>
-pro UPROPSET_HIDDEN pro jakékoli sady vlastností, které nechcete zveřejnit, nebo UPROPSET_PASSTHROUGH pro zprostředkovatele, který vystavuje vlastnosti definované mimo obor poskytovatele.
+*příznaky*<br/>
+[v] UPROPSET_HIDDEN pro všechny sady vlastností, které nechcete vystavit nebo UPROPSET_PASSTHROUGH pro zprostředkovatele vystavení vlastnosti definované mimo rozsah zprostředkovatele.
 
 #### <a name="example"></a>Příklad
 
@@ -144,7 +144,7 @@ Viz [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).
 
 ### <a name="begin_propset_map"></a><a name="begin_propset_map"></a>BEGIN_PROPSET_MAP
 
-Označuje začátek nastavení vlastností položek mapy.
+Označuje začátek položek mapy sady vlastností.
 
 #### <a name="syntax"></a>Syntaxe
 
@@ -154,24 +154,24 @@ BEGIN_PROPSET_MAP(Class)
 
 #### <a name="parameters"></a>Parametry
 
-*Deník*<br/>
-pro Třída, ve které je tato sada vlastností určena. Sadu vlastností lze zadat v následujících objektech OLE DB:
+*Třída*<br/>
+[v] Třída, ve které je tato sada vlastností zadána. Sadu vlastností lze zadat v následujících objektech technologie OLE DB:
 
 - [Objekty zdroje dat](/previous-versions/windows/desktop/ms721278(v=vs.85))
 
 - [Objekty relace](/previous-versions/windows/desktop/ms711572(v=vs.85))
 
-- [Příkaz](/previous-versions/windows/desktop/ms724608(v=vs.85))
+- [Příkazy](/previous-versions/windows/desktop/ms724608(v=vs.85))
 
 #### <a name="example"></a>Příklad
 
-Tady je ukázka mapy sady vlastností:
+Zde je ukázka mapy sady vlastností:
 
 [!code-cpp[NVC_OLEDB_Provider#3](../../data/oledb/codesnippet/cpp/begin-propset-map_1.h)]
 
 ### <a name="chain_property_set"></a><a name="chain_property_set"></a>CHAIN_PROPERTY_SET
 
-Toto makro zřetězí skupiny vlastností dohromady.
+Toto makro řetězy vlastnost í dohromady.
 
 #### <a name="syntax"></a>Syntaxe
 
@@ -181,15 +181,15 @@ CHAIN_PROPERTY_SET(ChainClass)
 
 #### <a name="parameters"></a>Parametry
 
-*ChainClass*<br/>
-pro Název třídy, pro kterou řetězení vlastností. Toto je třída vygenerovaná průvodcem projektem ATL, která již obsahuje mapu (jako je například relace, příkaz nebo třída objektu zdroje dat).
+*Třída chainclass*<br/>
+[v] Název třídy řetězové vlastnosti. Jedná se o třídu generovanou Průvodcem projektem knihovny ATL, která již obsahuje mapu (například třídu objektu relace, příkazu nebo zdroje dat).
 
 #### <a name="remarks"></a>Poznámky
 
-Můžete zřetězit sadu vlastností z jiné třídy na vlastní třídu a pak přistupovat k vlastnostem přímo z vaší třídy.
+Můžete zřetězit sadu vlastností z jiné třídy do vlastní třídy a pak přistupovat k vlastnostem přímo z vaší třídy.
 
 > [!CAUTION]
->  Toto makro používejte zřídka. Nesprávné použití může způsobit, že se příjemci nedaří OLE DB testy shody.
+> Toto makro používejte střídmě. Nesprávné použití může způsobit, že spotřebitel nezdaří testy shody technologie OLE DB.
 
 ### <a name="end_property_set"></a><a name="end_property_set"></a>END_PROPERTY_SET
 
@@ -203,8 +203,8 @@ END_PROPERTY_SET(guid)
 
 #### <a name="parameters"></a>Parametry
 
-*hlavních*<br/>
-pro Identifikátor GUID vlastnosti
+*Identifikátor guid*<br/>
+[v] Identifikátor GUID vlastnosti.
 
 #### <a name="example"></a>Příklad
 
@@ -237,11 +237,11 @@ PROPERTY_INFO_ENTRY(dwPropID)
 #### <a name="parameters"></a>Parametry
 
 *dwPropID*<br/>
-pro Hodnota [DBPROPID](/previous-versions/windows/desktop/ms723882(v=vs.85)) , kterou lze použít ve spojení s identifikátorem GUID sady vlastností k identifikaci vlastnosti.
+[v] Hodnota [DBPROPID,](/previous-versions/windows/desktop/ms723882(v=vs.85)) kterou lze použít ve spojení s identifikátorem GUID sady vlastností k identifikaci vlastnosti.
 
 #### <a name="remarks"></a>Poznámky
 
-Toto makro nastaví hodnotu vlastnosti typu `DWORD` na výchozí hodnotu definovanou v ATLDB. Y. Chcete-li nastavit vlastnost na hodnotu, kterou zvolíte, použijte [PROPERTY_INFO_ENTRY_VALUE](../../data/oledb/property-info-entry-value.md). Chcete-li nastavit `VARTYPE` a [DBPROPFLAGS](/previous-versions/windows/desktop/ms724342(v=vs.85)) pro vlastnost ve stejnou dobu, použijte [PROPERTY_INFO_ENTRY_EX](../../data/oledb/property-info-entry-ex.md).
+Toto makro nastaví `DWORD` hodnotu vlastnosti typu na výchozí hodnotu definovanou v databázi ATLDB. H. Chcete-li nastavit vlastnost na hodnotu podle vašeho výběru, použijte [PROPERTY_INFO_ENTRY_VALUE](../../data/oledb/property-info-entry-value.md). Chcete-li `VARTYPE` nastavit a [DBPROPFLAGS](/previous-versions/windows/desktop/ms724342(v=vs.85)) pro vlastnost současně, použijte [PROPERTY_INFO_ENTRY_EX](../../data/oledb/property-info-entry-ex.md).
 
 #### <a name="example"></a>Příklad
 
@@ -260,23 +260,23 @@ PROPERTY_INFO_ENTRY_EX(dwPropID, vt, dwFlags, value, options)
 #### <a name="parameters"></a>Parametry
 
 *dwPropID*<br/>
-pro Hodnota [DBPROPID](/previous-versions/windows/desktop/ms723882(v=vs.85)) , kterou lze použít ve spojení s identifikátorem GUID sady vlastností k identifikaci vlastnosti.
+[v] Hodnota [DBPROPID,](/previous-versions/windows/desktop/ms723882(v=vs.85)) kterou lze použít ve spojení s identifikátorem GUID sady vlastností k identifikaci vlastnosti.
 
-*terminálu*<br/>
-pro `VARTYPE` této položky vlastnosti (Definováno v wtypes. h)
+*Vt*<br/>
+[v] Položka `VARTYPE` této vlastnosti. (Definováno v wtypes.h)
 
 *dwFlags*<br/>
-pro Hodnota [DBPROPFLAGS](/previous-versions/windows/desktop/ms724342(v=vs.85)) popisující tuto položku Vlastnosti.
+[v] Hodnota [DBPROPFLAGS](/previous-versions/windows/desktop/ms724342(v=vs.85)) popisující tuto položku vlastnosti.
 
-*value*<br/>
-pro Hodnota vlastnosti typu `DWORD`.
+*Hodnotu*<br/>
+[v] Hodnota vlastnosti `DWORD`typu .
 
-*nastavení*<br/>
-Buď DBPROPOPTIONS_REQUIRED, nebo DBPROPOPTIONS_SETIFCHEAP. V normálním případě poskytovatel nemusí nastavovat *Možnosti* , protože je nastaven příjemcem.
+*Možnosti*<br/>
+Buď DBPROPOPTIONS_REQUIRED, nebo DBPROPOPTIONS_SETIFCHEAP. Za normálních okolností zprostředkovatel nemusí nastavit *možnosti,* protože je nastaven spotřebitelem.
 
 #### <a name="remarks"></a>Poznámky
 
-Pomocí tohoto makra můžete přímo zadat hodnotu vlastnosti typu `DWORD` a také možnosti a příznaky. Chcete-li pouze nastavit vlastnost na výchozí hodnotu definovanou v ATLDB. H použijte [PROPERTY_INFO_ENTRY](../../data/oledb/property-info-entry.md). Chcete-li nastavit vlastnost na hodnotu podle vlastního výběru bez nastavení možností nebo příznaků, použijte [PROPERTY_INFO_ENTRY_VALUE](../../data/oledb/property-info-entry-value.md).
+Pomocí tohoto makra můžete přímo určit `DWORD` hodnotu vlastnosti typu, možnosti a příznaky. Chcete-li pouze nastavit vlastnost na výchozí hodnotu definovanou v ATLDB. H, použijte [PROPERTY_INFO_ENTRY](../../data/oledb/property-info-entry.md). Chcete-li nastavit vlastnost na hodnotu podle vašeho výběru, bez nastavení možností nebo příznaků na něm, použijte [PROPERTY_INFO_ENTRY_VALUE](../../data/oledb/property-info-entry-value.md).
 
 #### <a name="example"></a>Příklad
 
@@ -295,14 +295,14 @@ PROPERTY_INFO_ENTRY_VALUE(dwPropID, value)
 #### <a name="parameters"></a>Parametry
 
 *dwPropID*<br/>
-pro Hodnota [DBPROPID](/previous-versions/windows/desktop/ms723882(v=vs.85)) , kterou lze použít ve spojení s identifikátorem GUID sady vlastností k identifikaci vlastnosti.
+[v] Hodnota [DBPROPID,](/previous-versions/windows/desktop/ms723882(v=vs.85)) kterou lze použít ve spojení s identifikátorem GUID sady vlastností k identifikaci vlastnosti.
 
-*value*<br/>
-pro Hodnota vlastnosti typu `DWORD`.
+*Hodnotu*<br/>
+[v] Hodnota vlastnosti `DWORD`typu .
 
 #### <a name="remarks"></a>Poznámky
 
-Pomocí tohoto makra můžete přímo zadat hodnotu vlastnosti typu `DWORD`. Chcete-li nastavit vlastnost na výchozí hodnotu definovanou v ATLDB. H použijte [PROPERTY_INFO_ENTRY](../../data/oledb/property-info-entry.md). Chcete-li nastavit hodnotu, příznaky a možnosti pro vlastnost, použijte [PROPERTY_INFO_ENTRY_EX](../../data/oledb/property-info-entry-ex.md).
+Pomocí tohoto makra můžete přímo určit `DWORD`hodnotu vlastnosti typu . Chcete-li nastavit vlastnost na výchozí hodnotu definovanou v ATLDB. H, použijte [PROPERTY_INFO_ENTRY](../../data/oledb/property-info-entry.md). Chcete-li nastavit hodnotu, příznaky a možnosti vlastnosti, použijte [PROPERTY_INFO_ENTRY_EX](../../data/oledb/property-info-entry-ex.md).
 
 #### <a name="example"></a>Příklad
 
@@ -310,7 +310,7 @@ Viz [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).
 
 ### <a name="begin_provider_column_map"></a><a name="begin_provider_column_map"></a>BEGIN_PROVIDER_COLUMN_MAP
 
-Označí začátek položek mapování sloupce zprostředkovatele.
+Označuje začátek položek mapy sloupce zprostředkovatele.
 
 #### <a name="syntax"></a>Syntaxe
 
@@ -321,17 +321,17 @@ BEGIN_PROVIDER_COLUMN_MAP(theClass)
 #### <a name="parameters"></a>Parametry
 
 *theClass*<br/>
-pro Název třídy, do které tato mapa patří.
+[v] Název třídy, ke které tato mapa patří.
 
 #### <a name="example"></a>Příklad
 
-Tady je mapa sloupce ukázkového poskytovatele:
+Zde je ukázka poskytovatele sloupcové mapy:
 
 [!code-cpp[NVC_OLEDB_Provider#4](../../data/oledb/codesnippet/cpp/begin-provider-column-map_1.h)]
 
 ### <a name="end_provider_column_map"></a><a name="end_provider_column_map"></a>END_PROVIDER_COLUMN_MAP
 
-Označuje konec položek mapování sloupce zprostředkovatele.
+Označuje konec položek mapy sloupce zprostředkovatele.
 
 #### <a name="syntax"></a>Syntaxe
 
@@ -356,13 +356,13 @@ PROVIDER_COLUMN_ENTRY (name, ordinal, member)
 #### <a name="parameters"></a>Parametry
 
 *Jméno*<br/>
-pro Název sloupce
+[v] Název sloupce.
 
-*řadový*<br/>
-pro Číslo sloupce Pokud sloupec není sloupcem záložky, číslo sloupce nesmí být 0.
+*Pořadové*<br/>
+[v] Číslo sloupce. Pokud se nejedná o sloupec Záložka, nesmí být číslo sloupce 0.
 
-*člen*<br/>
-pro Členská proměnná v `dataClass` odpovídající sloupci.
+*Členské*<br/>
+[v] Členská proměnná v `dataClass` odpovídající sloupci.
 
 ### <a name="provider_column_entry_fixed"></a><a name="provider_column_entry_fixed"></a>PROVIDER_COLUMN_ENTRY_FIXED
 
@@ -377,16 +377,16 @@ PROVIDER_COLUMN_ENTRY_FIXED(name, ordinal, dbtype, member)
 #### <a name="parameters"></a>Parametry
 
 *Jméno*<br/>
-pro Název sloupce
+[v] Název sloupce.
 
-*řadový*<br/>
-pro Číslo sloupce Pokud sloupec není sloupcem záložky, číslo sloupce nesmí být 0.
+*Pořadové*<br/>
+[v] Číslo sloupce. Pokud se nejedná o sloupec Záložka, nesmí být číslo sloupce 0.
 
-*DbType*<br/>
-pro Datový typ v [DbType](/previous-versions/windows/desktop/ms711251(v=vs.85)).
+*Dbtype*<br/>
+[v] Datový typ v [DBTYPE](/previous-versions/windows/desktop/ms711251(v=vs.85)).
 
-*člen*<br/>
-pro Členská proměnná v `dataClass`, která ukládá data.
+*Členské*<br/>
+[v] Členská proměnná, `dataClass` ve které jsou uložena data.
 
 #### <a name="remarks"></a>Poznámky
 
@@ -409,32 +409,32 @@ PROVIDER_COLUMN_ENTRY_GN (name, ordinal, flags, colSize, dbtype, precision, scal
 #### <a name="parameters"></a>Parametry
 
 *Jméno*<br/>
-pro Název sloupce
+[v] Název sloupce.
 
-*řadový*<br/>
-pro Číslo sloupce Pokud sloupec není sloupcem záložky, číslo sloupce nesmí být 0.
+*Pořadové*<br/>
+[v] Číslo sloupce. Pokud se nejedná o sloupec Záložka, nesmí být číslo sloupce 0.
 
-*Flag*<br/>
-pro Určuje způsob, jakým se vrátí data. Podívejte se na popis `dwFlags` ve [strukturách DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)).
+*příznaky*<br/>
+[v] Určuje způsob vrácení dat. Viz `dwFlags` popis v [DBBINDING struktury](/previous-versions/windows/desktop/ms716845(v=vs.85)).
 
-*colSize*<br/>
-pro Velikost sloupce
+*colVelikost*<br/>
+[v] Velikost sloupce.
 
-*DbType*<br/>
-pro Určuje datový typ hodnoty. Podívejte se na popis `wType` ve [strukturách DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)).
+*Dbtype*<br/>
+[v] Označuje datový typ hodnoty. Viz `wType` popis v [DBBINDING struktury](/previous-versions/windows/desktop/ms716845(v=vs.85)).
 
-*číslic*<br/>
-pro Určuje přesnost, která se má použít při získávání dat, je-li nastavena hodnota *dbType* DBTYPE_NUMERIC nebo DBTYPE_DECIMAL. Podívejte se na popis `bPrecision` ve [strukturách DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)).
+*Přesnost*<br/>
+[v] Označuje přesnost, která má být používána při získávání dat, pokud *dbType* je DBTYPE_NUMERIC nebo DBTYPE_DECIMAL. Viz `bPrecision` popis v [DBBINDING struktury](/previous-versions/windows/desktop/ms716845(v=vs.85)).
 
-*kapacity*<br/>
-pro Určuje měřítko, které má být použito při získávání dat, je-li nastavena hodnota dbType DBTYPE_NUMERIC nebo DBTYPE_DECIMAL. Podívejte se na popis `bScale` ve [strukturách DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)).
+*Měřítko*<br/>
+[v] Označuje měřítko, které se má použít při získávání dat, pokud dbType je DBTYPE_NUMERIC nebo DBTYPE_DECIMAL. Viz `bScale` popis v [DBBINDING struktury](/previous-versions/windows/desktop/ms716845(v=vs.85)).
 
-*hlavních*<br/>
-Identifikátor GUID sady řádků schématu. Seznam sad řádků schématu a jejich identifikátorů GUID naleznete v části [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) v *Referenční příručce OLE DB programátor* .
+*Identifikátor guid*<br/>
+Identifikátor GUID sady řádků schématu. Seznam sad řádků schématu a jejich identifikátorů GUID naleznete v sadě řádků schématu [iDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) v *referenční příručce programátora OLE DB.*
 
 #### <a name="remarks"></a>Poznámky
 
-Umožňuje určit velikost sloupce, datový typ, přesnost, měřítko a identifikátor GUID sady řádků schématu.
+Umožňuje určit identifikátor GUID sady řádků velikosti sloupce, datového typu, přesnosti, měřítka a sady řádků schématu.
 
 ### <a name="provider_column_entry_length"></a><a name="provider_column_entry_length"></a>PROVIDER_COLUMN_ENTRY_LENGTH
 
@@ -449,20 +449,20 @@ PROVIDER_COLUMN_ENTRY_LENGTH(name, ordinal, size, member)
 #### <a name="parameters"></a>Parametry
 
 *Jméno*<br/>
-pro Název sloupce
+[v] Název sloupce.
 
-*řadový*<br/>
-pro Číslo sloupce Pokud sloupec není sloupcem záložky, číslo sloupce nesmí být 0.
+*Pořadové*<br/>
+[v] Číslo sloupce. Pokud se nejedná o sloupec Záložka, nesmí být číslo sloupce 0.
 
-*hodnota*<br/>
-pro Velikost sloupce v bajtech
+*Velikost*<br/>
+[v] Velikost sloupce v bajtů.
 
-*člen*<br/>
-pro Členská proměnná v `dataClass`, která ukládá data sloupce.
+*Členské*<br/>
+[v] Členská proměnná, ve `dataClass` které jsou uložena data sloupce.
 
 #### <a name="remarks"></a>Poznámky
 
-Umožňuje zadat velikost sloupce.
+Umožňuje určit velikost sloupce.
 
 #### <a name="example"></a>Příklad
 
@@ -481,17 +481,17 @@ PROVIDER_COLUMN_ENTRY_STR(name, ordinal, member)
 #### <a name="parameters"></a>Parametry
 
 *Jméno*<br/>
-pro Název sloupce
+[v] Název sloupce.
 
-*řadový*<br/>
-pro Číslo sloupce Pokud sloupec není sloupcem záložky, číslo sloupce nesmí být 0.
+*Pořadové*<br/>
+[v] Číslo sloupce. Pokud se nejedná o sloupec Záložka, nesmí být číslo sloupce 0.
 
-*člen*<br/>
-pro Členská proměnná v datové třídě, která ukládá data.
+*Členské*<br/>
+[v] Členská proměnná ve třídě dat, která data ukládá.
 
 #### <a name="remarks"></a>Poznámky
 
-Toto makro použijte, když se předpokládá, že jsou data sloupce [DBTYPE_STR](/previous-versions/windows/desktop/ms711251(v=vs.85)).
+Toto makro použijte, pokud se předpokládá, že data sloupce jsou [DBTYPE_STR](/previous-versions/windows/desktop/ms711251(v=vs.85)).
 
 #### <a name="example"></a>Příklad
 
@@ -510,23 +510,23 @@ PROVIDER_COLUMN_ENTRY_TYPE_LENGTH(name, ordinal, dbtype, size, member)
 #### <a name="parameters"></a>Parametry
 
 *Jméno*<br/>
-pro Název sloupce
+[v] Název sloupce.
 
-*řadový*<br/>
-pro Číslo sloupce Pokud sloupec není sloupcem záložky, číslo sloupce nesmí být 0.
+*Pořadové*<br/>
+[v] Číslo sloupce. Pokud se nejedná o sloupec Záložka, nesmí být číslo sloupce 0.
 
-*DbType*<br/>
-pro Datový typ v [DbType](/previous-versions/windows/desktop/ms711251(v=vs.85)).
+*Dbtype*<br/>
+[v] Datový typ v [DBTYPE](/previous-versions/windows/desktop/ms711251(v=vs.85)).
 
-*hodnota*<br/>
-pro Velikost sloupce v bajtech
+*Velikost*<br/>
+[v] Velikost sloupce v bajtů.
 
-*člen*<br/>
-pro Členská proměnná v datové třídě, která ukládá data.
+*Členské*<br/>
+[v] Členská proměnná ve třídě dat, která data ukládá.
 
 #### <a name="remarks"></a>Poznámky
 
-Podobně jako u [PROVIDER_COLUMN_ENTRY_LENGTH](../../data/oledb/provider-column-entry-length.md) , ale také umožňuje určit datový typ sloupce i velikost.
+Podobně jako [PROVIDER_COLUMN_ENTRY_LENGTH](../../data/oledb/provider-column-entry-length.md) ale také umožňuje určit datový typ sloupce a velikost.
 
 ### <a name="provider_column_entry_wstr"></a><a name="provider_column_entry_wstr"></a>PROVIDER_COLUMN_ENTRY_WSTR
 
@@ -541,17 +541,17 @@ PROVIDER_COLUMN_ENTRY_WSTR(name, ordinal, member)
 #### <a name="parameters"></a>Parametry
 
 *Jméno*<br/>
-pro Název sloupce
+[v] Název sloupce.
 
-*řadový*<br/>
-pro Číslo sloupce Pokud sloupec není sloupcem záložky, číslo sloupce nesmí být 0.
+*Pořadové*<br/>
+[v] Číslo sloupce. Pokud se nejedná o sloupec Záložka, nesmí být číslo sloupce 0.
 
-*člen*<br/>
-pro Členská proměnná v datové třídě, která ukládá data.
+*Členské*<br/>
+[v] Členská proměnná ve třídě dat, která data ukládá.
 
 #### <a name="remarks"></a>Poznámky
 
-Toto makro použijte v případě, že data sloupce jsou znak null zakončený řetězcem znaků Unicode, [DBTYPE_WSTR](/previous-versions/windows/desktop/ms711251(v=vs.85)).
+Toto makro použijte, pokud jsou data sloupce nulovým ukončeným řetězcem znaků Unicode [DBTYPE_WSTR](/previous-versions/windows/desktop/ms711251(v=vs.85)).
 
 ### <a name="begin_schema_map"></a><a name="begin_schema_map"></a>BEGIN_SCHEMA_MAP
 
@@ -565,12 +565,12 @@ BEGIN_SCHEMA_MAP(SchemaClass);
 
 #### <a name="parameters"></a>Parametry
 
-*SchemaClass*<br/>
-Třída, která obsahuje mapu. Obvykle to bude třída Session.
+*Třída schématu*<br/>
+Třída, která obsahuje MAP. Obvykle se jedná o třídu relace.
 
 #### <a name="remarks"></a>Poznámky
 
-Další informace o sadách řádků schématu naleznete v části [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) v Windows SDK.
+Další informace o sadách řádků schématu naleznete v sadě [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) v sadě Windows SDK.
 
 ### <a name="end_schema_map"></a><a name="end_schema_map"></a>END_SCHEMA_MAP
 
@@ -584,7 +584,7 @@ END_SCHEMA_MAP()
 
 #### <a name="remarks"></a>Poznámky
 
-Další informace naleznete v tématu [Třída IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md).
+Další informace naleznete v tématu [IDBSchemaRowsetImpl Class](../../data/oledb/idbschemarowsetimpl-class.md).
 
 ### <a name="schema_entry"></a><a name="schema_entry"></a>SCHEMA_ENTRY
 
@@ -599,15 +599,15 @@ SCHEMA_ENTRY(guid,
 
 #### <a name="parameters"></a>Parametry
 
-*hlavních*<br/>
-Identifikátor GUID sady řádků schématu. Seznam sad řádků schématu a jejich identifikátorů GUID naleznete v části [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) v *Referenční příručce OLE DB programátor* .
+*Identifikátor guid*<br/>
+Identifikátor GUID sady řádků schématu. Seznam sad řádků schématu a jejich identifikátorů GUID naleznete v sadě řádků schématu [iDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) v *referenční příručce programátora OLE DB.*
 
-*rowsetClass*<br/>
-Třída, která bude vytvořena pro reprezentaci sady řádků schématu.
+*třída řádků*<br/>
+Třída, která bude vytvořena k reprezentaci sady řádků schématu.
 
 #### <a name="remarks"></a>Poznámky
 
-[IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md) může potom zadat dotaz na mapu pro seznam identifikátorů GUID, nebo může vytvořit sadu řádků, pokud se jí přestanou GUID. Sada řádků schématu `IDBSchemaRowsetImpl` vytvořena je podobná standardní třídě odvozené `CRowsetImpl`, s výjimkou, že musí poskytovat `Execute` metodu, která má následující signaturu:
+[IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md) pak můžete dotaz na mapu pro seznam identifikátorů GUID, nebo může vytvořit sadu řádků, pokud je uveden identifikátor GUID. Sada řádků schématu `IDBSchemaRowsetImpl` vytvoří je podobný `CRowsetImpl`standard-odvozené třídy, s `Execute` tím rozdílem, že musí poskytnout metodu, která má následující podpis:
 
 ```cpp
 HRESULT Execute (LONG* pcRowsAffected,
@@ -615,20 +615,20 @@ HRESULT Execute (LONG* pcRowsAffected,
     const VARIANT* rgRestrictions);
 ```
 
-Tato funkce `Execute` naplní data sady řádků. Průvodce projektem ATL vytvoří, jak je [popsáno v sadě řádků](/previous-versions/windows/desktop/ms713686(v=vs.85)) v *referenčních informacích pro programátory OLE DB*, tři počáteční sady řádků schématu v projektu pro každé ze tří povinných OLE DB schémat:
+Tato `Execute` funkce naplní data sady řádků. Průvodce projektem knihovny ATL vytvoří, jak je popsáno v [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) v *ole DB programmer odkaz*, tři počáteční sady řádků schématu v projektu pro každý ze tří povinných schémat TECHNOLOGIE OLE DB:
 
-- DBSCHEMA_TABLES
+- Dbschema_tables
 
-- DBSCHEMA_COLUMNS
+- Dbschema_columns
 
-- DBSCHEMA_PROVIDER_TYPES
+- Dbschema_provider_types
 
-Průvodce také přidá tři odpovídající položky v mapě schématu. Další informace o tom, jak pomocí průvodce vytvořit poskytovatele, najdete v tématu [vytvoření zprostředkovatele šablon OLE DB](../../data/oledb/creating-an-ole-db-provider.md) .
+Průvodce také přidá tři odpovídající položky v mapě schématu. Další informace o vytvoření zprostředkovatele pomocí průvodce naleznete [v tématu Vytvoření zprostředkovatele šablony technologie OLE DB.](../../data/oledb/creating-an-ole-db-provider.md)
 
 ## <a name="see-also"></a>Viz také
 
-[Šablony poskytovatele OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Šablony zprostředkovatelů OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architektura šablon zprostředkovatele OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)<br/>
-[Vytvoření zprostředkovatele OLE DB](../../data/oledb/creating-an-ole-db-provider.md)<br/>
-[Referenční dokumentace k šablonám zprostředkovatelů OLE DB](../../data/oledb/ole-db-provider-templates-reference.md)<br/>
-[Makra pro šablony zprostředkovatele OLE DB](../../data/oledb/macros-for-ole-db-provider-templates.md)
+[Vytvoření zprostředkovatele TECHNOLOGIE OLE DB](../../data/oledb/creating-an-ole-db-provider.md)<br/>
+[Odkaz na šablony zprostředkovatelů OLE DB](../../data/oledb/ole-db-provider-templates-reference.md)<br/>
+[Makra pro šablony zprostředkovatelů technologie OLE DB](../../data/oledb/macros-for-ole-db-provider-templates.md)

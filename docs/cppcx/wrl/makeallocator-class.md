@@ -15,16 +15,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::MakeAllocator::MakeAllocator, constructor
 - Microsoft::WRL::Details::MakeAllocator::~MakeAllocator, destructor
 ms.assetid: a1114615-abd7-4a56-9bc3-750c118f0fa1
-ms.openlocfilehash: 805f0c09b0490d8cec1a0be96dcb1fc99a051371
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dc0d83f2550646572a4eff2bec7850037c6dbf6a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62161235"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371326"
 ---
 # <a name="makeallocator-class"></a>MakeAllocator – třída
 
-Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.
+Podporuje infrastrukturu WRL a není určen pro použití přímo z vašeho kódu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -50,31 +50,31 @@ class MakeAllocator<T, true>;
 Název typu.
 
 *hasWeakReferenceSupport*<br/>
-**Hodnota TRUE** přidělení paměti pro objekt, který podporuje slabé odkazy; **false** přidělení paměti pro objekt, který nepodporuje slabé odkazy.
+**true** přidělit paměť pro objekt, který podporuje slabé odkazy; **false** přidělit paměť pro objekt, který nepodporuje slabé odkazy.
 
 ## <a name="remarks"></a>Poznámky
 
-Přiděluje paměť pro aktivovatelné třídy s nebo bez něj slabou podporu odkazu.
+Přiděluje paměť pro aktivovatelnou třídu, se slabou referenční podporou nebo bez ní.
 
-Přepsat `MakeAllocator` třídu pro implementaci modelu přidělování paměti definované uživatelem.
+Přepište `MakeAllocator` třídu a implementujte uživatelem definovaný model přidělení paměti.
 
-`MakeAllocator` se obvykle používá pro zabránění nevracení paměti, pokud objekt vyvolá během konstrukce.
+`MakeAllocator`se obvykle používá k zabránění nevracení paměti, pokud objekt vyvolá během výstavby.
 
 ## <a name="members"></a>Členové
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-Název                                                  | Popis
+Name (Název)                                                  | Popis
 ----------------------------------------------------- | ----------------------------------------------------------------
-[MakeAllocator::MakeAllocator](#makeallocator)        | Inicializuje novou instanci třídy `MakeAllocator` třídy.
-[MakeAllocator::~MakeAllocator](#tilde-makeallocator) | Zruší inicializaci aktuální instance `MakeAllocator` třídy.
+[MakeAllocator::MakeAllocator](#makeallocator)        | Inicializuje novou instanci třídy. `MakeAllocator`
+[MakeAllocator::~MakeAllocator](#tilde-makeallocator) | Deinitializes aktuální instance `MakeAllocator` třídy.
 
 ### <a name="public-methods"></a>Veřejné metody
 
-Název                                 | Popis
+Name (Název)                                 | Popis
 ------------------------------------ | -----------------------------------------------------------------------------------------------------------
-[Makeallocator::allocate –](#allocate) | Přidělí paměť a přidruží ji k aktuální `MakeAllocator` objektu.
-[MakeAllocator::Detach](#detach)     | Zruší přidružení paměť přidělenou [přidělení](#allocate) metodu z aktuální `MakeAllocator` objektu.
+[MakeAllocator::Přidělit](#allocate) | Přidělí paměť a přidruží ji k aktuálnímu `MakeAllocator` objektu.
+[MakeAllocator::Detach](#detach)     | Zruší přidružení paměti přidělené metodou [Allocate](#allocate) od `MakeAllocator` aktuálního objektu.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -84,11 +84,11 @@ Název                                 | Popis
 
 **Záhlaví:** implements.h
 
-**Namespace:** Microsoft::WRL::Details
+**Obor názvů:** Microsoft::WRL::Details
 
-## <a name="allocate"></a>Makeallocator::allocate –
+## <a name="makeallocatorallocate"></a><a name="allocate"></a>MakeAllocator::Přidělit
 
-Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.
+Podporuje infrastrukturu WRL a není určen pro použití přímo z vašeho kódu.
 
 ```cpp
 __forceinline void* Allocate();
@@ -96,19 +96,19 @@ __forceinline void* Allocate();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud je úspěšná, ukazatel do přidělené paměti. v opačném případě `nullptr`.
+Pokud je úspěšná, ukazatel na přidělenou paměť; v `nullptr`opačném případě .
 
 ### <a name="remarks"></a>Poznámky
 
-Přidělí paměť a přidruží ji k aktuální `MakeAllocator` objektu.
+Přidělí paměť a přidruží ji k aktuálnímu `MakeAllocator` objektu.
 
-Velikost přidělené paměti je velikost typu určeného aktuálním `MakeAllocator` parametr šablony.
+Velikost přidělené paměti je velikost typu určeného aktuálním `MakeAllocator` parametrem šablony.
 
-Vývojář potřebuje pouze přepsat `Allocate()` metody k implementaci modelu přidělování různých paměti.
+Vývojář musí přepsat pouze `Allocate()` metodu k implementaci jiného modelu přidělení paměti.
 
-## <a name="detach"></a>MakeAllocator::Detach
+## <a name="makeallocatordetach"></a><a name="detach"></a>MakeAllocator::Detach
 
-Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.
+Podporuje infrastrukturu WRL a není určen pro použití přímo z vašeho kódu.
 
 ```cpp
 __forceinline void Detach();
@@ -116,13 +116,13 @@ __forceinline void Detach();
 
 ### <a name="remarks"></a>Poznámky
 
-Zruší přidružení paměť přidělenou [přidělení](#allocate) metodu z aktuální `MakeAllocator` objektu.
+Zruší přidružení paměti přidělené metodou [Allocate](#allocate) od `MakeAllocator` aktuálního objektu.
 
-Při volání `Detach()`, zodpovídáte za odstranění paměti poskytované `Allocate` metody.
+Pokud zavoláte `Detach()`, jste zodpovědní za odstranění paměti `Allocate` poskytované metodou.
 
-## <a name="makeallocator"></a>Makeallocator::makeallocator –
+## <a name="makeallocatormakeallocator"></a><a name="makeallocator"></a>MakeAllocator::MakeAllocator
 
-Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.
+Podporuje infrastrukturu WRL a není určen pro použití přímo z vašeho kódu.
 
 ```cpp
 MakeAllocator();
@@ -130,11 +130,11 @@ MakeAllocator();
 
 ### <a name="remarks"></a>Poznámky
 
-Inicializuje novou instanci třídy `MakeAllocator` třídy.
+Inicializuje novou instanci třídy. `MakeAllocator`
 
-## <a name="tilde-makeallocator"></a>MakeAllocator:: ~ makeallocator –
+## <a name="makeallocatormakeallocator"></a><a name="tilde-makeallocator"></a>MakeAllocator::~MakeAllocator
 
-Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.
+Podporuje infrastrukturu WRL a není určen pro použití přímo z vašeho kódu.
 
 ```cpp
 ~MakeAllocator();
@@ -142,6 +142,6 @@ Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v k�
 
 ### <a name="remarks"></a>Poznámky
 
-Zruší inicializaci aktuální instance `MakeAllocator` třídy.
+Deinitializes aktuální instance `MakeAllocator` třídy.
 
-V případě potřeby se tento destruktor odstraní také základní přidělené paměti.
+Tento destruktor také v případě potřeby odstraní podkladovou přidělenou paměť.

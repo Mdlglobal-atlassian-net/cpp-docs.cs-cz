@@ -1,5 +1,5 @@
 ---
-title: CComVariant – třída
+title: Ccomvariantní třída
 ms.date: 11/04/2016
 f1_keywords:
 - CComVariant
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - CComVariant class
 - VARIANT macro, ATL
 ms.assetid: 4d31149c-d005-44b5-a509-10f84afa2b61
-ms.openlocfilehash: b4c157435aaffab5f1315fd4636f55f9d4e0d5b4
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 9a84d91e20242fb206d1d3f71fcb3dd207561f62
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69496863"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81327229"
 ---
-# <a name="ccomvariant-class"></a>CComVariant – třída
+# <a name="ccomvariant-class"></a>Ccomvariantní třída
 
-Tato třída zalomí typ VARIANT a poskytne člen označující typ uložených dat.
+Tato třída zabalí typ VARIANT a poskytuje člen označující typ uložených dat.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,41 +41,41 @@ class CComVariant : public tagVARIANT
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CComVariant::CComVariant](#ccomvariant)|Konstruktor|
-|[CComVariant::~CComVariant](#dtor)|Destruktor.|
+|[CcomVariant::CcomVariant](#ccomvariant)|Konstruktor|
+|[CcomVariant::~CcomVariant](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CComVariant::Attach](#attach)|Připojí k `CComVariant` objektu variantu.|
-|[CComVariant::ChangeType](#changetype)|`CComVariant` Převede objekt na nový typ.|
-|[CComVariant::Clear](#clear)|`CComVariant` Vymaže objekt.|
-|[CComVariant:: Copy](#copy)|Zkopíruje do `CComVariant` objektu variant.|
-|[CComVariant:: CopyTo](#copyto)|Zkopíruje obsah `CComVariant` objektu.|
-|[CComVariant::Detach](#detach)|Odpojí základní variant od `CComVariant` objektu.|
-|[CComVariant:: GetSize](#getsize)|Vrátí velikost v počtu bajtů obsahu `CComVariant` objektu.|
-|[CComVariant::ReadFromStream](#readfromstream)|Načte typ VARIANT z datového proudu.|
-|[CComVariant::SetByRef](#setbyref)|Inicializuje objekt a `vt` nastaví člena na VT_BYREF. `CComVariant`|
-|[CComVariant::WriteToStream](#writetostream)|Uloží základní VARIANTu do datového proudu.|
+|[CcomVariant::Připojit](#attach)|Připojí variantu k `CComVariant` objektu.|
+|[CcomVariant::ChangeType](#changetype)|Převede `CComVariant` objekt na nový typ.|
+|[CcomVariant::Vymazat](#clear)|Vymaže `CComVariant` objekt.|
+|[CcomVariant::Kopírovat](#copy)|Zkopíruje variantu `CComVariant` objektu.|
+|[CcomVariant::CopyTo](#copyto)|Zkopíruje obsah `CComVariant` objektu.|
+|[CComVariant::Detach](#detach)|Odpojí podkladovou variantu `CComVariant` od objektu.|
+|[CcomVariant::GetSize](#getsize)|Vrátí velikost v počtu bajtů obsahu `CComVariant` objektu.|
+|[CcomVariant::ReadFromStream](#readfromstream)|Načte variantu z datového proudu.|
+|[CcomVariant::Setbyref](#setbyref)|Inicializuje `CComVariant` objekt a `vt` nastaví člen na VT_BYREF.|
+|[CcomVariant::WriteToStream](#writetostream)|Uloží základní VARIANT do datového proudu.|
 
 ### <a name="public-operators"></a>Veřejné operátory
 
 |||
 |-|-|
-|[CComVariant:: operator <](#operator_lt)|Označuje, zda `CComVariant` je objekt menší než zadaný typ variant.|
-|[CComVariant:: operator >](#operator_gt)|Označuje, zda `CComVariant` je objekt větší než zadaný typ variant.|
-|[! = – operátor](#operator_neq)|Určuje, zda `CComVariant` se objekt nerovná zadanému typu variant.|
-|[operátor =](#operator_eq)|Přiřadí hodnotu `CComVariant` objektu.|
-|[operator = = – operátor](#operator_eq_eq)|Označuje, zda `CComVariant` se objekt rovná zadanému typu variant.|
+|[CComVariant::operátor <](#operator_lt)|Označuje, `CComVariant` zda je objekt menší než zadaná varianta.|
+|[CComVariant::operátor >](#operator_gt)|Označuje, `CComVariant` zda je objekt větší než zadaná varianta.|
+|[operátor !=](#operator_neq)|Označuje, `CComVariant` zda se objekt nerovná zadané variantě.|
+|[operátor =](#operator_eq)|Přiřadí objektu `CComVariant` hodnotu.|
+|[operátor ==](#operator_eq_eq)|Označuje, `CComVariant` zda se objekt rovná zadané variantě.|
 
 ## <a name="remarks"></a>Poznámky
 
-`CComVariant`zalomí typ VARIANT a VARIANTARG, který se skládá z sjednocení a členu, který označuje typ dat uložených ve sjednocení. Varianty se obvykle používají ve službě Automation.
+`CComVariant`zabalí typ VARIANT a VARIANTARG, který se skládá z unie a člena označujícího typ dat uložených v unii. Variants se obvykle používají v automatizaci.
 
-`CComVariant`je odvozen z typu VARIANT, aby jej bylo možné použít všude, kde lze použít VARIANTu. Můžete například použít makro V_VT k extrakci typu `CComVariant` nebo nebo můžete `vt` přistupovat ke členu přímo stejně jako s variantou.
+`CComVariant`od typ varianty, takže jej lze použít všude tam, kde lze variantu použít. Můžete například použít makro V_VT extrahovat typ `CComVariant` nebo můžete `vt` přistupovat k členu přímo stejně jako u varianty.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -85,11 +85,11 @@ class CComVariant : public tagVARIANT
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** Atlcomcli. h
+**Záhlaví:** atlcomcli.h
 
-##  <a name="attach"></a>CComVariant:: Attach
+## <a name="ccomvariantattach"></a><a name="attach"></a>CcomVariant::Připojit
 
-Bezpečně vymaže aktuální obsah `CComVariant` objektu, zkopíruje obsah *pSrc* do tohoto objektu a pak nastaví typ variant *pSrc* na VT_EMPTY.
+Bezpečně vymaže `CComVariant` aktuální obsah objektu, zkopíruje obsah *pSrc* do tohoto objektu, pak nastaví typ varianty *pSrc* na VT_EMPTY.
 
 ```
 HRESULT Attach(VARIANT* pSrc);
@@ -98,7 +98,7 @@ HRESULT Attach(VARIANT* pSrc);
 ### <a name="parameters"></a>Parametry
 
 *pSrc*<br/>
-pro Odkazuje na [variantu](/windows/win32/api/oaidl/ns-oaidl-variant) , která má být připojena k objektu.
+[v] Odkazuje na [variantu,](/windows/win32/api/oaidl/ns-oaidl-variant) která má být připojena k objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -106,11 +106,11 @@ Standardní hodnota HRESULT.
 
 ### <a name="remarks"></a>Poznámky
 
-Vlastnictví dat uchovávaných v *pSrc* se přenese do `CComVariant` objektu.
+Vlastnictví dat v držení *pSrc* se `CComVariant` přenáší na objekt.
 
-##  <a name="ccomvariant"></a>CComVariant::CComVariant
+## <a name="ccomvariantccomvariant"></a><a name="ccomvariant"></a>CcomVariant::CcomVariant
 
-Každý konstruktor zpracovává bezpečnou inicializaci `CComVariant` objektu `VariantInit` voláním funkce Win32 nebo nastavením hodnoty objektu a typu podle předaných parametrů.
+Každý konstruktor zpracovává bezpečnou inicializaci `CComVariant` `VariantInit` objektu voláním funkce Win32 nebo nastavením hodnoty a typu objektu podle předaných parametrů.
 
 ```
 CComVariant() throw();
@@ -141,45 +141,45 @@ CComVariant(const CComBSTR& bstrSrc);
 ### <a name="parameters"></a>Parametry
 
 *varSrc*<br/>
-pro Variantu použitou k `CComVariant` inicializaci objektu. `CComVariant` Obsah zdrojové varianty se zkopíruje do cíle bez převodu.
+[v] Nebo `CComVariant` VARIANT slouží k inicializaci objektu. `CComVariant` Obsah zdrojové varianty se zkopíruje do cíle bez převodu.
 
 *lpszSrc*<br/>
-pro Řetězec znaků použitý k inicializaci `CComVariant` objektu. Do verze LPCOLESTR konstruktoru nebo řetězce ANSI pro LPCSTR verzi můžete předat řetězec znaků s nulovou zakončenou (Unicode). V obou případech je řetězec převeden na rozhraní Unicode BSTR přidělené pomocí `SysAllocString`. Typ `CComVariant` objektu bude VT_BSTR.
+[v] Řetězec znaků použitý k inicializaci objektu. `CComVariant` Řetězec znaků s nulovým ukončením (Unicode) můžete předat verzi konstruktoru LPCOLESTR nebo řetězec ANSI do verze LPCSTR. V obou případech je řetězec převeden na Unicode `SysAllocString`BSTR přidělené pomocí . Typ objektu `CComVariant` bude VT_BSTR.
 
 *bSrc*<br/>
-pro **Logická** hodnota použitá k inicializaci `CComVariant` objektu. Argument **bool** je před uložením převeden na VARIANT_BOOL. Typ `CComVariant` objektu bude VT_BOOL.
+[v] **Bool** slouží k inicializaci objektu. `CComVariant` Argument **bool** je před uložením převeden na VARIANT_BOOL. Typ objektu `CComVariant` bude VT_BOOL.
 
 *nSrc*<br/>
-pro **Int**, **Byte**, **short**, **Long**, LongLong, ULONGLONG, **unsigned short**, unsigned **Long**nebo **unsigned int** sloužící k inicializaci `CComVariant` objektu. Typ `CComVariant` objektu bude VT_I4, VT_UI1, VT_I2, VT_I4, VT_I8, VT_UI8, VT_UI2, VT_UI4 nebo VT_UI4, v uvedeném pořadí.
+[v] **Int**, **BYTE**, **short**, **long**, LONGLONG, ULONGLONG, **unsigned short**, **unsigned long**nebo **unsigned int** used to initialize the `CComVariant` object. Typ objektu `CComVariant` bude VT_I4, VT_UI1, VT_I2, VT_I4, VT_I8, VT_UI8, VT_UI2, VT_UI4 nebo VT_UI4.
 
-*vtSrc*<br/>
-pro Typ variant. Pokud je první parametr **int**, platné typy jsou VT_I4 a VT_INT. Pokud je první parametr **dlouhý**, platné typy jsou VT_I4 a VT_ERROR. Pokud je první parametr **Double**, platné typy jsou VT_R8 a VT_DATE. Pokud je první parametr **bez znaménka int**, platné typy jsou VT_UI4 a VT_UINT.
+*vtSrc řekl:*<br/>
+[v] Typ varianty. Pokud je první parametr **int**, platné typy jsou VT_I4 a VT_INT. Pokud je první parametr **dlouhý**, jsou VT_I4 a VT_ERROR platné typy. Pokud je první parametr **double**, platné typy jsou VT_R8 a VT_DATE. Pokud je první parametr **nepodepsaný int**, platné typy jsou VT_UI4 a VT_UINT.
 
-*fltSrc*<br/>
-pro Typ **float** použitý k inicializaci `CComVariant` objektu. Typ `CComVariant` objektu bude VT_R4.
+*fltSrc řekl:*<br/>
+[v] **Float** slouží k inicializaci objektu. `CComVariant` Typ objektu `CComVariant` bude VT_R4.
 
 *dblSrc*<br/>
-pro **Typ Double** použitý k inicializaci `CComVariant` objektu. Typ `CComVariant` objektu bude VT_R8.
+[v] **Double** slouží k inicializaci objektu. `CComVariant` Typ objektu `CComVariant` bude VT_R8.
 
 *cySrc*<br/>
-pro `CY` Slouží k`CComVariant` inicializaci objektu. Typ `CComVariant` objektu bude VT_CY.
+[v] Slouží `CY` k inicializaci objektu. `CComVariant` Typ objektu `CComVariant` bude VT_CY.
 
 *pSrc*<br/>
-pro Ukazatel nebo použitý`IUnknown` k inicializaci objektu.`CComVariant` `IDispatch` `AddRef`bude volána na ukazatel rozhraní. Typ `CComVariant` objektu bude VT_DISPATCH nebo VT_UNKNOWN, v uvedeném pořadí.
+[v] Ukazatel `IDispatch` `IUnknown` nebo použitý k inicializaci objektu. `CComVariant` `AddRef`bude volána na ukazatel rozhraní. Typ objektu `CComVariant` bude VT_DISPATCH nebo VT_UNKNOWN.
 
-Nebo, ukazatel SAFERRAY použitý k inicializaci `CComVariant` objektu. Kopie třídy SAFEARRAY je uložena v `CComVariant` objektu. Typ `CComVariant` objektu bude kombinací původního typu SafeArray a VT_ARRAY.
+Nebo ukazatel SAFERRAY slouží k inicializaci objektu. `CComVariant` Kopie SAFEARRAY je uložena `CComVariant` v objektu. Typ objektu `CComVariant` bude kombinací původního typu SAFEARRAY a VT_ARRAY.
 
-*cSrc*<br/>
-pro **Znak** použitý k inicializaci `CComVariant` objektu. Typ `CComVariant` objektu bude VT_I1.
+*Csrc*<br/>
+[v] **Znak** použitý k inicializaci objektu. `CComVariant` Typ objektu `CComVariant` bude VT_I1.
 
-*bstrSrc*<br/>
-pro `CComVariant` Objekt BSTR použitý k inicializaci objektu. Typ `CComVariant` objektu bude VT_BSTR.
+*bstrSrc řekl:*<br/>
+[v] BSTR slouží k inicializaci objektu. `CComVariant` Typ objektu `CComVariant` bude VT_BSTR.
 
 ### <a name="remarks"></a>Poznámky
 
-Destruktor spravuje vyčištění voláním [CComVariant:: Clear](#clear).
+Destruktor spravuje vyčištění voláním [CComVariant::Clear](#clear).
 
-##  <a name="dtor"></a>CComVariant:: ~ CComVariant
+## <a name="ccomvariantccomvariant"></a><a name="dtor"></a>CcomVariant::~CcomVariant
 
 Destruktor.
 
@@ -189,11 +189,11 @@ Destruktor.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda spravuje vyčištění voláním [CComVariant:: Clear](#clear).
+Tato metoda spravuje vyčištění voláním [CComVariant::Clear](#clear).
 
-##  <a name="changetype"></a>CComVariant:: ChangeType
+## <a name="ccomvariantchangetype"></a><a name="changetype"></a>CcomVariant::ChangeType
 
-`CComVariant` Převede objekt na nový typ.
+Převede `CComVariant` objekt na nový typ.
 
 ```
 HRESULT ChangeType(VARTYPE vtNew, const VARIANT* pSrc = NULL);
@@ -202,10 +202,10 @@ HRESULT ChangeType(VARTYPE vtNew, const VARIANT* pSrc = NULL);
 ### <a name="parameters"></a>Parametry
 
 *vtNew*<br/>
-pro Nový typ pro `CComVariant` objekt.
+[v] Nový typ pro `CComVariant` objekt.
 
 *pSrc*<br/>
-pro Ukazatel na VARIANTu, jehož hodnota bude převedena na nový typ. Výchozí hodnota je null, což znamená, `CComVariant` že se objekt převede na místo.
+[v] Ukazatel na VARIANT, jehož hodnota bude převedena na nový typ. Výchozí hodnota je NULL, `CComVariant` což znamená, že objekt bude převeden na místě.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -213,11 +213,11 @@ Standardní hodnota HRESULT.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud předáte hodnotu pro *pSrc*, `ChangeType` použije tuto variantu jako zdroj pro převod. V opačném případě bude objektzdrojem.`CComVariant`
+Pokud předáte hodnotu pro `ChangeType` *pSrc*, použije tuto VARIANTu jako zdroj pro převod. V opačném `CComVariant` případě bude objekt zdrojem.
 
-##  <a name="clear"></a>CComVariant:: Clear
+## <a name="ccomvariantclear"></a><a name="clear"></a>CcomVariant::Vymazat
 
-Vymaže objekt vyvoláním funkce `VariantClear`Win32. `CComVariant`
+Vymaže `CComVariant` objekt `VariantClear` voláním funkce Win32.
 
 ```
 HRESULT Clear();
@@ -229,11 +229,11 @@ Standardní hodnota HRESULT.
 
 ### <a name="remarks"></a>Poznámky
 
-Destruktor automaticky volá `Clear`.
+Destruktor automaticky `Clear`volá .
 
-##  <a name="copy"></a>CComVariant:: Copy
+## <a name="ccomvariantcopy"></a><a name="copy"></a>CcomVariant::Kopírovat
 
-`CComVariant` Uvolní objekt a pak mu přiřadí kopii zadané varianty.
+Uvolní `CComVariant` objekt a pak mu přiřadí kopii zadané varianty.
 
 ```
 HRESULT Copy(const VARIANT* pSrc);
@@ -242,13 +242,13 @@ HRESULT Copy(const VARIANT* pSrc);
 ### <a name="parameters"></a>Parametry
 
 *pSrc*<br/>
-pro Ukazatel na variantu [](/windows/win32/api/oaidl/ns-oaidl-variant) , která se má zkopírovat
+[v] Ukazatel na [variantu,](/windows/win32/api/oaidl/ns-oaidl-variant) která má být zkopírována.
 
 ### <a name="return-value"></a>Návratová hodnota
 
 Standardní hodnota HRESULT.
 
-##  <a name="copyto"></a>CComVariant:: CopyTo
+## <a name="ccomvariantcopyto"></a><a name="copyto"></a>CcomVariant::CopyTo
 
 Zkopíruje obsah `CComVariant` objektu.
 
@@ -259,7 +259,7 @@ HRESULT CopyTo(BSTR* pstrDest);
 ### <a name="parameters"></a>Parametry
 
 *pstrDest*<br/>
-Odkazuje na objekt BSTR, který obdrží kopii obsahu `CComVariant` objektu.
+Odkazuje na BSTR, který obdrží kopii `CComVariant` obsahu objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -267,11 +267,11 @@ Standardní hodnota HRESULT.
 
 ### <a name="remarks"></a>Poznámky
 
-`CComVariant` Objekt musí být typu VT_BSTR.
+Objekt `CComVariant` musí být typu VT_BSTR.
 
-##  <a name="detach"></a>CComVariant::D etach
+## <a name="ccomvariantdetach"></a><a name="detach"></a>CComVariant::Detach
 
-Odpojí základní variant od `CComVariant` objektu a nastaví typ objektu na VT_EMPTY.
+Odpojí podkladovou variantu `CComVariant` od objektu a nastaví typ objektu na VT_EMPTY.
 
 ```
 HRESULT Detach(VARIANT* pDest);
@@ -280,7 +280,7 @@ HRESULT Detach(VARIANT* pDest);
 ### <a name="parameters"></a>Parametry
 
 *pDest*<br/>
-mimo Vrátí podkladovou hodnotu VARIANT objektu.
+[out] Vrátí podkladovou hodnotu VARIANT objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -288,11 +288,11 @@ Standardní hodnota HRESULT.
 
 ### <a name="remarks"></a>Poznámky
 
-Všimněte si, že obsah variant, na který odkazuje *pDest* , bude automaticky vymazán před přiřazením hodnoty a typu volajícího `CComVariant` objektu.
+Všimněte si, že obsah VARIANT odkazuje *pDest* bude automaticky vymazány před přiřazenhodnotu a typ volajícího `CComVariant` objektu.
 
-##  <a name="getsize"></a>CComVariant:: GetSize
+## <a name="ccomvariantgetsize"></a><a name="getsize"></a>CcomVariant::GetSize
 
-V případě jednoduchých velikostí variant vrátí tato metoda **operátor sizeof** základní datový typ plus **sizeof (VARTYPE)** .
+Pro jednoduché pevné velikosti VARIANTs tato metoda vrátí **velikost** základní datový typ plus **sizeof(VARTYPE)**.
 
 ```
 ULONG GetSize() const;
@@ -300,19 +300,19 @@ ULONG GetSize() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Velikost v bajtech aktuálního obsahu `CComVariant` objektu.
+Velikost aktuálního obsahu `CComVariant` objektu v bajtech.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud varianta obsahuje ukazatel rozhraní, `GetSize` dotazy pro `IPersistStream` nebo `IPersistStreamInit`. Je-li to úspěšné, vrácená hodnota je nižší než 32 bitů hodnoty vrácené `GetSizeMax` hodnotou a operátorem **sizeof** a CLSID a **sizeof (VARTYPE)** . Pokud je ukazatel rozhraní null, `GetSize` vrátí hodnotu **sizeof** a identifikátor CLSID plus **sizeof (VARTYPE)** . Pokud je celková velikost větší než ULONG_MAX, vrátí `GetSize` **sizeof (VARTYPE)** , což označuje chybu.
+Pokud varianta obsahuje ukazatel `GetSize` rozhraní, `IPersistStream` `IPersistStreamInit`dotazy pro nebo . Pokud je úspěšná, vrácená hodnota je nižší pořadí 32 bitů hodnoty vrácené plus `GetSizeMax` **velikost** CLSID a **sizeof(VARTYPE)**. Pokud je ukazatel rozhraní `GetSize` NULL, vrátí **velikost** CLSID plus **sizeof (VARTYPE)**. Pokud je celková velikost `GetSize` větší než ULONG_MAX, vrátí **sizeof(VARTYPE),** což znamená chybu.
 
-Ve všech ostatních případech je dočasná varianta typu VT_BSTR převedena z aktuální varianty. Délka tohoto BSTR je počítána jako velikost řetězce a délka samotného řetězce plus velikost znaku null plus **sizeof (VARTYPE)** . Pokud variantu nemůže být převedena na variantu typu VT_BSTR, `GetSize` vrátí **sizeof (VARTYPE)** .
+Ve všech ostatních případech je z aktuální varianty vytanována dočasná varianta typu VT_BSTR. Délka tohoto BSTR se vypočítá jako velikost délky řetězce plus délka samotného řetězce plus velikost znaku null plus **sizeof(VARTYPE)**. Pokud varianta nelze dotáhovat na VARIANT `GetSize` typu VT_BSTR, vrátí **sizeof(VARTYPE)**.
 
-Velikost vrácená touto metodou odpovídá počtu bajtů využívaných funkcí [CComVariant:: WriteToStream](#writetostream) za úspěšných podmínek.
+Velikost vrácená touto metodou odpovídá počtu bajtů používaných [CComVariant::WriteToStream](#writetostream) za úspěšných podmínek.
 
-##  <a name="operator_eq"></a>CComVariant:: operator =
+## <a name="ccomvariantoperator-"></a><a name="operator_eq"></a>CComVariant::operátor =
 
-Přiřadí hodnotu a odpovídající typ `CComVariant` objektu.
+Přiřadí `CComVariant` objektu hodnotu a odpovídající typ.
 
 ```
 CComVariant& operator=(const CComVariant& varSrc);
@@ -342,40 +342,40 @@ CComVariant& operator=(char cSrc) throw();
 ### <a name="parameters"></a>Parametry
 
 *varSrc*<br/>
-pro Variantu `CComVariant` nebo, která má být přiřazena objektu. [](/windows/win32/api/oaidl/ns-oaidl-variant) `CComVariant` Obsah zdrojové varianty se zkopíruje do cíle bez převodu.
+[v] Nebo `CComVariant` [VARIANTa,](/windows/win32/api/oaidl/ns-oaidl-variant) která `CComVariant` má být přiřazena k objektu. Obsah zdrojové varianty se zkopíruje do cíle bez převodu.
 
-*bstrSrc*<br/>
-pro BSTR, který má být přiřazen `CComVariant` objektu. Typ `CComVariant` objektu bude VT_BSTR.
+*bstrSrc řekl:*<br/>
+[v] BSTR, které mají `CComVariant` být přiřazeny k objektu. Typ objektu `CComVariant` bude VT_BSTR.
 
 *lpszSrc*<br/>
-pro Řetězec znaků, který má být přiřazen `CComVariant` objektu. Můžete předat řetězec znaků (Unicode) s nulovou šířkou (Unicode) do verze LPCOLESTR operátoru nebo řetězcem ANSI do verze LPCSTR. V obou případech je řetězec převeden na rozhraní Unicode BSTR přidělené pomocí `SysAllocString`. Typ `CComVariant` objektu bude VT_BSTR.
+[v] Řetězec znaků, který má `CComVariant` být přiřazen k objektu. Řetězec znaků s nulovým ukončením (Unicode) můžete předat lpcolestr verzi operátoru nebo ansi řetězec na verzi LPCSTR. V obou případech je řetězec převeden na Unicode BSTR přidělené pomocí `SysAllocString`. Typ objektu `CComVariant` bude VT_BSTR.
 
 *bSrc*<br/>
-pro **Logická** hodnota, která má být přiřazena `CComVariant` objektu. Argument **bool** je před uložením převeden na VARIANT_BOOL. Typ `CComVariant` objektu bude VT_BOOL.
+[v] **Bool,** který má `CComVariant` být přiřazen k objektu. Argument **bool** je před uložením převeden na VARIANT_BOOL. Typ objektu `CComVariant` bude VT_BOOL.
 
 *nSrc*<br/>
-pro **Int**, Byte, **short**, **Long**, LongLong, ULONGLONG, **unsigned short**, unsigned **Long**nebo **unsigned int** pro přiřazení k `CComVariant` objektu. Typ `CComVariant` objektu bude VT_I4, VT_UI1, VT_I2, VT_I4, VT_I8, VT_UI8, VT_UI2, VT_UI4 nebo VT_UI4, v uvedeném pořadí.
+[v] **Int**, BYTE, **short**, **long**, LONGLONG, ULONGLONG, **unsigned short**, **unsigned long**nebo **unsigned int,** které mají být přiřazeny k objektu. `CComVariant` Typ objektu `CComVariant` bude VT_I4, VT_UI1, VT_I2, VT_I4, VT_I8, VT_UI8, VT_UI2, VT_UI4 nebo VT_UI4.
 
-*fltSrc*<br/>
-pro Typ **float** , který má být přiřazen `CComVariant` objektu. Typ `CComVariant` objektu bude VT_R4.
+*fltSrc řekl:*<br/>
+[v] **Plovoucí,** které mají `CComVariant` být přiřazeny k objektu. Typ objektu `CComVariant` bude VT_R4.
 
 *dblSrc*<br/>
-pro **Dvojnásobek** , který má být přiřazen `CComVariant` objektu. Typ `CComVariant` objektu bude VT_R8.
+[v] **Double,** které mají `CComVariant` být přiřazeny k objektu. Typ objektu `CComVariant` bude VT_R8.
 
 *cySrc*<br/>
-pro `CComVariant` Objekt, `CY` který má být přiřazen objektu. Typ `CComVariant` objektu bude VT_CY.
+[v] Chcete-li `CY` přiřadit `CComVariant` k objektu. Typ objektu `CComVariant` bude VT_CY.
 
 *pSrc*<br/>
-pro Ukazatel `IDispatch` nebo `IUnknown` ,`CComVariant` který má být přiřazen objektu. `AddRef`bude volána na ukazatel rozhraní. Typ `CComVariant` objektu bude VT_DISPATCH nebo VT_UNKNOWN, v uvedeném pořadí.
+[v] Ukazatel `IDispatch` `IUnknown` nebo ukazatel, který `CComVariant` má být přiřazen k objektu. `AddRef`bude volána na ukazatel rozhraní. Typ objektu `CComVariant` bude VT_DISPATCH nebo VT_UNKNOWN.
 
-Nebo, ukazatel SAFEARRAY, který má být přiřazen `CComVariant` objektu. Kopie třídy SAFEARRAY je uložena v `CComVariant` objektu. Typ `CComVariant` objektu bude kombinací původního typu SafeArray a VT_ARRAY.
+Nebo ukazatel SAFEARRAY, který má `CComVariant` být přiřazen k objektu. Kopie SAFEARRAY je uložena `CComVariant` v objektu. Typ objektu `CComVariant` bude kombinací původního typu SAFEARRAY a VT_ARRAY.
 
-*cSrc*<br/>
-pro Znak, který má být přiřazen `CComVariant` objektu. Typ `CComVariant` objektu bude VT_I1.
+*Csrc*<br/>
+[v] Znak, který má `CComVariant` být přiřazen k objektu. Typ objektu `CComVariant` bude VT_I1.
 
-##  <a name="operator_eq_eq"></a>CComVariant:: operator = = – operátor
+## <a name="ccomvariantoperator-"></a><a name="operator_eq_eq"></a>CComVariant::operátor ==
 
-Označuje, zda `CComVariant` se objekt rovná zadanému typu variant.
+Označuje, `CComVariant` zda se objekt rovná zadané variantě.
 
 ```
 bool operator==(const VARIANT& varSrc) const throw();
@@ -383,13 +383,13 @@ bool operator==(const VARIANT& varSrc) const throw();
 
 ### <a name="remarks"></a>Poznámky
 
-Vrátí hodnotu true, `CComVariant` Pokud je hodnota a typ *varSrc* rovna hodnotě a typu v daném pořadí objektu. V opačném případě FALSE. Operátor používá výchozí národní prostředí uživatele k provedení porovnání.
+Vrátí hodnotu PRAVDA, pokud se hodnota a typ *varSrc* rovná `CComVariant` hodnotě a typu objektu. V opačném případě NEPRAVDA. Operátor používá výchozí národní prostředí uživatele k provedení porovnání.
 
 Operátor porovná pouze hodnotu typů variant. Porovnává řetězce, celá čísla a plovoucí body, ale ne pole nebo záznamy.
 
-##  <a name="operator_neq"></a>CComVariant:: operator! =
+## <a name="ccomvariantoperator-"></a><a name="operator_neq"></a>CComVariant::operátor !=
 
-Určuje, zda `CComVariant` se objekt nerovná zadanému typu variant.
+Označuje, `CComVariant` zda se objekt nerovná zadané variantě.
 
 ```
 bool operator!=(const VARIANT& varSrc) const throw();
@@ -397,13 +397,13 @@ bool operator!=(const VARIANT& varSrc) const throw();
 
 ### <a name="remarks"></a>Poznámky
 
-Vrátí hodnotu true, `CComVariant` Pokud buď hodnota nebo typ *varSrc* není rovna hodnotě nebo typu v daném objektu. V opačném případě FALSE. Operátor používá výchozí národní prostředí uživatele k provedení porovnání.
+Vrátí hodnotu PRAVDA, pokud se hodnota nebo typ *varSrc* nerovná hodnotě nebo typu objektu. `CComVariant` V opačném případě NEPRAVDA. Operátor používá výchozí národní prostředí uživatele k provedení porovnání.
 
 Operátor porovná pouze hodnotu typů variant. Porovnává řetězce, celá čísla a plovoucí body, ale ne pole nebo záznamy.
 
-##  <a name="operator_lt"></a>CComVariant:: operator&lt;
+## <a name="ccomvariantoperator-lt"></a><a name="operator_lt"></a>CComVariant::operátor&lt;
 
-Označuje, zda `CComVariant` je objekt menší než zadaný typ variant.
+Označuje, `CComVariant` zda je objekt menší než zadaná varianta.
 
 ```
 bool operator<(const VARIANT& varSrc) const throw();
@@ -411,11 +411,11 @@ bool operator<(const VARIANT& varSrc) const throw();
 
 ### <a name="remarks"></a>Poznámky
 
-Vrátí hodnotu true, pokud je hodnota `CComVariant` objektu menší než hodnota *varSrc*. V opačném případě FALSE. Operátor používá výchozí národní prostředí uživatele k provedení porovnání.
+Vrátí hodnotu PRAVDA, `CComVariant` pokud je hodnota objektu menší než hodnota *varSrc*. V opačném případě NEPRAVDA. Operátor používá výchozí národní prostředí uživatele k provedení porovnání.
 
-##  <a name="operator_gt"></a>CComVariant:: operator&gt;
+## <a name="ccomvariantoperator-gt"></a><a name="operator_gt"></a>CComVariant::operátor&gt;
 
-Označuje, zda `CComVariant` je objekt větší než zadaný typ variant.
+Označuje, `CComVariant` zda je objekt větší než zadaná varianta.
 
 ```
 bool operator>(const VARIANT& varSrc) const throw();
@@ -423,11 +423,11 @@ bool operator>(const VARIANT& varSrc) const throw();
 
 ### <a name="remarks"></a>Poznámky
 
-Vrátí hodnotu true, pokud je hodnota `CComVariant` objektu větší než hodnota *varSrc*. V opačném případě FALSE. Operátor používá výchozí národní prostředí uživatele k provedení porovnání.
+Vrátí hodnotu PRAVDA, `CComVariant` pokud je hodnota objektu větší než hodnota *varSrc*. V opačném případě NEPRAVDA. Operátor používá výchozí národní prostředí uživatele k provedení porovnání.
 
-##  <a name="readfromstream"></a>CComVariant::ReadFromStream
+## <a name="ccomvariantreadfromstream"></a><a name="readfromstream"></a>CcomVariant::ReadFromStream
 
-Nastaví základní VARIANTu na VARIANTu obsaženou v zadaném datovém proudu.
+Nastaví základní VARIANTa varianta obsažené v zadaném datovém proudu.
 
 ```
 HRESULT ReadFromStream(IStream* pStream);
@@ -436,7 +436,7 @@ HRESULT ReadFromStream(IStream* pStream);
 ### <a name="parameters"></a>Parametry
 
 *pStream*<br/>
-pro Ukazatel na rozhraní [IStream](/windows/win32/api/objidl/nn-objidl-istream) na datovém proudu, který obsahuje data.
+[v] Ukazatel na rozhraní [IStream](/windows/win32/api/objidl/nn-objidl-istream) na datovém proudu obsahující data.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -446,9 +446,9 @@ Standardní hodnota HRESULT.
 
 `ReadToStream`vyžaduje předchozí volání [WriteToStream](#writetostream).
 
-##  <a name="setbyref"></a>CComVariant::SetByRef
+## <a name="ccomvariantsetbyref"></a><a name="setbyref"></a>CcomVariant::Setbyref
 
-Inicializuje objekt a `vt` nastaví člena na VT_BYREF. `CComVariant`
+Inicializuje `CComVariant` objekt a `vt` nastaví člen na VT_BYREF.
 
 ```
 template < typename T >
@@ -460,18 +460,18 @@ void SetByRef(T* pT) throw();
 *T*<br/>
 Typ VARIANT, například BSTR, **int**nebo **char**.
 
-*pT*<br/>
-Ukazatel použitý k inicializaci `CComVariant` objektu.
+*Pt*<br/>
+Ukazatel použitý k inicializaci objektu. `CComVariant`
 
 ### <a name="remarks"></a>Poznámky
 
-`SetByRef`je šablonou funkce, která inicializuje `CComVariant` objekt na ukazatel *PT* a nastaví `vt` člena na VT_BYREF. Příklad:
+`SetByRef`je šablona funkce, která `CComVariant` inicializuje objekt na `vt` ukazatel *pT* a nastaví člen na VT_BYREF. Příklad:
 
 [!code-cpp[NVC_ATL_Utilities#76](../../atl/codesnippet/cpp/ccomvariant-class_1.cpp)]
 
-##  <a name="writetostream"></a>CComVariant::WriteToStream
+## <a name="ccomvariantwritetostream"></a><a name="writetostream"></a>CcomVariant::WriteToStream
 
-Uloží základní VARIANTu do datového proudu.
+Uloží základní VARIANT do datového proudu.
 
 ```
 HRESULT WriteToStream(IStream* pStream);
@@ -480,12 +480,12 @@ HRESULT WriteToStream(IStream* pStream);
 ### <a name="parameters"></a>Parametry
 
 *pStream*<br/>
-pro Ukazatel na rozhraní [IStream](/windows/win32/api/objidl/nn-objidl-istream) v datovém proudu.
+[v] Ukazatel na rozhraní [IStream](/windows/win32/api/objidl/nn-objidl-istream) v datovém proudu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
 Standardní hodnota HRESULT.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Přehled třídy](../../atl/atl-class-overview.md)

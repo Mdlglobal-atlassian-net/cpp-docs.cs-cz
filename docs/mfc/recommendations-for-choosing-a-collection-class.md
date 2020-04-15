@@ -16,50 +16,50 @@ helpviewer_keywords:
 - collection classes [MFC], duplicates allowed
 - collection classes [MFC], shapes
 ms.assetid: a82188cd-443f-40d8-a244-edf292a53db4
-ms.openlocfilehash: c72a57385b0036d98629d1ee24111500b9d2f8ad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 53a4eb3e30048d9dc82722d912a026d63a87586d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62218609"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371748"
 ---
 # <a name="recommendations-for-choosing-a-collection-class"></a>Doporučení pro výběr třídy kolekce
 
-Tento článek obsahuje podrobné informace, které vám pomůžou zvolit třídu kolekce pro potřeby vaší konkrétní aplikace.
+Tento článek obsahuje podrobné informace, které vám pomohou vybrat třídu kolekce pro vaše konkrétní potřeby aplikace.
 
-Výběr třídy kolekce závisí na řadě faktorů, včetně těchto:
+Výběr třídy kolekce závisí na řadě faktorů, včetně:
 
-- Funkce obrazec třídy: pořadí, indexování a výkonu, jak je znázorněno [funkce tvar kolekce](#_core_collection_shape_features) tabulce dále v tomto tématu
+- Funkce obrazce třídy: pořadí, indexování a výkon, jak je znázorněno v tabulce [Prvky obrazce kolekce](#_core_collection_shape_features) dále v tomto tématu
 
-- Určuje, zda třída používá šablony jazyka C++
+- Zda třída používá šablony Jazyka C++
 
-- Určuje, zda lze serializovat prvků uložených v kolekci
+- Zda prvky uložené v kolekci lze serializovat
 
-- Určuje, zda může být zálohované prvků uložených v kolekci pro diagnostiku
+- Zda prvky uložené v kolekci mohou být dumpingové pro diagnostiku
 
-- Určuje, zda kolekce je bezpečnost typů
+- Zda je kolekce typově bezpečná
 
-V následující tabulce [funkce tvar kolekce](#_core_collection_shape_features), obsahuje souhrn vlastností obrazce k dispozici kolekce.
+Následující tabulka [Prvky obrazce kolekce](#_core_collection_shape_features)shrnuje charakteristiky dostupných obrazců kolekce.
 
-- Sloupce 2 a 3 popisují pořadí jednotlivých tvarů a přístup k vlastnosti. V tabulce "objednáno" se rozumí, určuje pořadí, ve kterém jsou položky vložen a odstranit jejich pořadí v kolekci. neznamená to, že jsou položky seřazeny na jejich obsah. Termín "indexované" znamená, že položka v kolekci je možné načíst podle indexu celé číslo, podobně jako položky v typické pole.
+- Sloupce 2 a 3 popisují charakteristiky pořadí a přístupu každého obrazce. V tabulce termín "objednané" znamená, že pořadí, ve kterém jsou položky vloženy a odstraněny určuje jejich pořadí v kolekci; neznamená to, že položky jsou seřazeny podle jejich obsahu. Termín "indexované" znamená, že položky v kolekci lze načíst podle celého indexu, podobně jako položky v typické pole.
 
-- Sloupce 4 a 5 popisují výkon jednotlivých tvarů. V aplikacích, které vyžadují mnoho vložení do kolekce rychlosti vkládání může být obzvláště důležité. u ostatních aplikací může být důležitější rychlost vyhledávání.
+- Sloupce 4 a 5 popisují výkon každého obrazce. V aplikacích, které vyžadují mnoho vložení do kolekce, může být obzvláště důležitá rychlost vkládání; pro jiné aplikace může být důležitější rychlost vyhledávání.
 
-- Sloupec 6 popisuje, zda všechny obrazce umožňuje duplicitní prvky.
+- Sloupec 6 popisuje, zda každý obrazec umožňuje duplicitní prvky.
 
-### <a name="_core_collection_shape_features"></a>  Funkce tvar kolekce
+### <a name="collection-shape-features"></a><a name="_core_collection_shape_features"></a>Prvky obrazce kolekce
 
-|Obrazec|Řazení|Indexované|Vkládání elementů|Hledání pro zadaný element|Duplicitní prvky|
+|Obrazec|Objednáno|Indexované|Vložení prvku|Hledat zadaný prvek|Duplicitní prvky|
 |-----------|--------------|--------------|-----------------------|----------------------------------|-------------------------|
-|Seznam|Ano|Ne|Rychlé|Pomalé|Ano|
+|Seznam|Ano|Ne|Rychle|Pomalé|Ano|
 |Pole|Ano|Podle int|Pomalé|Pomalé|Ano|
-|Mapa|Ne|Pomocí klíče|Rychlé|Rychlé|Žádné (klíče) Ano (hodnoty)|
+|Mapa|Ne|Podle klíče|Rychle|Rychle|Ne (klíče) Ano (hodnoty)|
 
-V následující tabulce [vlastnosti třídy kolekcí MFC](#_core_characteristics_of_mfc_collection_classes), shrnuje další důležité vlastnosti konkrétní třídy kolekcí MFC jako vodítko pro výběr. Podle vašeho výběru může záviset na, jestli je třída založené na šablonách C++, zda jeho prvky lze serializovat pomocí knihovny MFC dokumentu [serializace](../mfc/serialization-in-mfc.md) mechanismus, zda jeho elementů můžete zálohované pomocí knihovny MFC v diagnostických vypsání mechanismus, nebo Určuje, zda třída je typově bezpečný – to znamená, zda může zaručit typ prvků ukládat a načítat z kolekce na základě třídy.
+Následující tabulka [Charakteristiky tříd kolekce knihovny MFC](#_core_characteristics_of_mfc_collection_classes)shrnuje další důležité charakteristiky konkrétních tříd kolekce knihovny MFC jako vodítko pro výběr. Vaše volba může záviset na tom, zda je třída založena na šablonách jazyka C++, zda lze její prvky serializovat pomocí mechanismu [serializace](../mfc/serialization-in-mfc.md) dokumentů knihovny MFC, zda mohou být její prvky vysazovány prostřednictvím mechanismu diagnostického dumpingu knihovny MFC nebo zda je třída typově bezpečná – to znamená, zda můžete zaručit typ prvků uložených v kolekci založené na třídě a načtené z ní.
 
-### <a name="_core_characteristics_of_mfc_collection_classes"></a>  Vlastnosti třídy kolekcí MFC
+### <a name="characteristics-of-mfc-collection-classes"></a><a name="_core_characteristics_of_mfc_collection_classes"></a>Charakteristiky tříd kolekce knihovny MFC
 
-|Třída|Použití jazyka C++<br /><br /> šablony|Může být<br /><br /> serializovat|Může být<br /><br /> zálohované|je<br /><br /> bezpečnost typů|
+|Třída|Používá C++<br /><br /> šablony|Může být<br /><br /> Serializovat|Může být<br /><br /> Dumpingových|Is<br /><br /> typově bezpečné|
 |-----------|------------------------------|---------------------------|-----------------------|-----------------------|
 |`CArray`|Ano|Ano 1|Ano 1|Ne|
 |`CByteArray`|Ne|Ano|Ano|Ano 3|
@@ -79,21 +79,21 @@ V následující tabulce [vlastnosti třídy kolekcí MFC](#_core_characteristic
 |`CPtrList`|Ne|Ne|Ano|Ne|
 |`CStringArray`|Ne|Ano|Ano|Ano 3|
 |`CStringList`|Ne|Ano|Ano|Ano 3|
-|`CTypedPtrArray`|Ano|Závisí 2|Ano|Ano|
-|`CTypedPtrList`|Ano|Závisí 2|Ano|Ano|
-|`CTypedPtrMap`|Ano|Závisí 2|Ano|Ano|
+|`CTypedPtrArray`|Ano|Záleží 2|Ano|Ano|
+|`CTypedPtrList`|Ano|Záleží 2|Ano|Ano|
+|`CTypedPtrMap`|Ano|Záleží 2|Ano|Ano|
 |`CUIntArray`|Ne|Ne|Ano|Ano 3|
 |`CWordArray`|Ne|Ano|Ano|Ano 3|
 
-1. K serializaci, musíte explicitně volat objekt kolekce `Serialize` funkce; k výpisu paměti, je třeba explicitně volat jeho `Dump` funkce. Nelze použít formuláři `ar << collObj` k serializaci nebo formuláře `dmp` `<< collObj` pro výpis.
+1. Chcete-li serializovat, musíte explicitně volat `Serialize` funkci objektu kolekce; k výpisu, musíte `Dump` explicitně volat jeho funkci. Formulář `ar << collObj` nelze použít k serializaci nebo `dmp` `<< collObj` formulář k výpisu.
 
-2. Sériovost závisí na základní typ kolekce. Například, pokud je pole s typem ukazatele na základě `CObArray`, je serializovatelný; Pokud na základě `CPtrArray`, není serializovatelný. Obecně platí nemůže být serializován třídy "Ptr".
+2. Serializovatelnost závisí na základní typ kolekce. Pokud je například pole zadaného `CObArray`ukazatele založeno na , je serializovatelné; pokud je `CPtrArray`založen na , není serializovatelný. Obecně platí, že třídy "Ptr" nelze serializovat.
 
-3. Pokud ano označené v tomto sloupci, objektu bez šablony třídy kolekce je typově bezpečný, používají tak, jak má. Například pokud ukládáte bajtů `CByteArray`, pole je typově bezpečné. Ale pokud ho použít k ukládání znaky, je jeho bezpečnost typů méně určité.
+3. Pokud je v tomto sloupci označena ano, třída kolekce bez šablony je typově bezpečná za předpokladu, že ji použijete tak, jak bylo zamýšleno. Pokud například ukládáte bajty `CByteArray`v poli , je pole bezpečné pro daný typ. Ale pokud jej používáte k ukládání znaků, jeho bezpečnost typů je méně jistá.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Kolekce](../mfc/collections.md)<br/>
 [Třídy založené na šablonách](../mfc/template-based-classes.md)<br/>
-[Postupy: Typově bezpečné kolekce](../mfc/how-to-make-a-type-safe-collection.md)<br/>
+[Postupy: Příprava typově bezpečné kolekce](../mfc/how-to-make-a-type-safe-collection.md)<br/>
 [Přístup ke všem členům kolekce](../mfc/accessing-all-members-of-a-collection.md)

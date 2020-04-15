@@ -28,16 +28,16 @@ helpviewer_keywords:
 - CStatic [MFC], SetEnhMetaFile
 - CStatic [MFC], SetIcon
 ms.assetid: e7c94cd9-5ebd-428a-aa30-b3e51f8efb95
-ms.openlocfilehash: fc0164b2d0046ca2d36291696dd6137a9fcef069
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: e5c3705c0aa2fd90e73cb54ba5a97c252ed2cf83
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447427"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371647"
 ---
 # <a name="cstatic-class"></a>CStatic – třída
 
-Poskytuje funkce pro statický ovládací prvek systému Windows.
+Poskytuje funkce statického ovládacího prvku systému Windows.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -49,52 +49,52 @@ class CStatic : public CWnd
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CStatic::CStatic](#cstatic)|Vytvoří objekt `CStatic`.|
+|[CStatic::CStatic](#cstatic)|Vytvoří `CStatic` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CStatic:: Create](#create)|Vytvoří statický ovládací prvek Windows a připojí ho k objektu `CStatic`.|
-|[CStatic::D rawItem](#drawitem)|Přepište pro vykreslení statického ovládacího prvku vykresleného vlastníkem.|
-|[CStatic:: getbitmapa](#getbitmap)|Načte popisovač rastrového obrázku dříve nastaveného pomocí [SetBitmap](#setbitmap).|
-|[CStatic:: GetCursor](#getcursor)|Načte popisovač obrázku kurzoru, který jste dříve nastavili pomocí [SetCursor](#setcursor).|
-|[CStatic::GetEnhMetaFile](#getenhmetafile)|Načte popisovač Enhanced Metafile, který jste dříve nastavili pomocí [SetEnhMetaFile](#setenhmetafile).|
-|[CStatic:: GetIcon](#geticon)|Načte popisovač ikony dříve nastaveného pomocí [SetIcon](#seticon).|
-|[CStatic::SetBitmap](#setbitmap)|Určuje rastrový obrázek, který se má zobrazit ve statickém ovládacím prvku.|
-|[CStatic::SetCursor](#setcursor)|Určuje obrázek kurzoru, který se má zobrazit ve statickém ovládacím prvku.|
+|[CStatic::Vytvořit](#create)|Vytvoří statický ovládací prvek systému `CStatic` Windows a připojí jej k objektu.|
+|[CStatic::DrawItem](#drawitem)|Přepsat nakreslit statický ovládací prvek nakreslený vlastníkem.|
+|[CStatic::GetBitmap](#getbitmap)|Načte popisovač rastrového mapu dříve nastaveného pomocí [setBitmap](#setbitmap).|
+|[CStatic::GetCursor](#getcursor)|Načte popisovač obrázku kurzoru dříve nastavené s [SetCursor](#setcursor).|
+|[CStatic::GetEnhMetaFile](#getenhmetafile)|Načte popisovač rozšířeného metasouboru, který byl dříve nastaven pomocí [souboru SetEnhMetaFile](#setenhmetafile).|
+|[CStatic::GetIcon](#geticon)|Načte popisovač ikony dříve nastavené pomocí [funkce SetIcon](#seticon).|
+|[CStatic::SetBitmap](#setbitmap)|Určuje bitmapu, která má být zobrazena ve statickém ovládacím prvku.|
+|[CStatic::SetCursor](#setcursor)|Určuje obraz kurzoru, který se má zobrazit ve statickém ovládacím prvku.|
 |[CStatic::SetEnhMetaFile](#setenhmetafile)|Určuje rozšířený metasoubor, který se má zobrazit ve statickém ovládacím prvku.|
-|[CStatic::SetIcon](#seticon)|Určuje ikonu, která se má zobrazit ve statickém ovládacím prvku.|
+|[CStatic::SetIcon](#seticon)|Určuje ikonu, která má být zobrazena ve statickém ovládacím prvku.|
 
 ## <a name="remarks"></a>Poznámky
 
-Statický ovládací prvek zobrazuje textový řetězec, rámeček, rámeček, ikonu, kurzor, rastrový obrázek nebo rozšířený metasoubor. Dá se použít k označení, krabici nebo oddělení jiných ovládacích prvků. Statické řízení obvykle neprovádí žádné vstupy a neposkytuje žádný výstup. může však upozorňovat své nadřazené tlačítko myši, pokud je vytvořeno pomocí SS_NOTIFY stylu.
+Statický ovládací prvek zobrazí textový řetězec, rámeček, obdélník, ikonu, kurzor, bitmapu nebo rozšířený metasoubor. Lze jej použít k označení, krabici nebo oddělení jiných ovládacích prvků. Statické řízení obvykle nepřijímá žádný vstup a neposkytuje žádný výstup; může však upozornit nadřazenou položku myši, pokud je vytvořena SS_NOTIFY stylu.
 
-Vytvořte statický ovládací prvek ve dvou krocích. Nejdřív zavolejte konstruktor pro vytvoření objektu `CStatic` a potom zavolejte funkci [Create](#create) member a vytvořte statický ovládací prvek a připojte ho k objektu `CStatic`.
+Vytvořte statický ovládací prvek ve dvou krocích. Nejprve zavolejte konstruktor `CStatic` u konstrukce objektu a pak volání [mařivé](#create) funkce Vytvořit člen vytvořte statický ovládací prvek a připojte jej k objektu. `CStatic`
 
-Vytvoříte-li objekt `CStatic` v dialogovém okně (prostřednictvím prostředku dialogového okna), je objekt `CStatic` automaticky zničen, když uživatel zavře dialogové okno.
+Pokud vytvoříte `CStatic` objekt v dialogovém okně (prostřednictvím prostředku dialogového okna), `CStatic` objekt se automaticky zničí, když uživatel zavře dialogové okno.
 
-Pokud vytvoříte objekt `CStatic` v rámci okna, může být také nutné jej zničit. Objekt `CStatic` vytvořený v zásobníku v rámci okna je automaticky zničen. Vytvoříte-li objekt `CStatic` na haldě pomocí **nové** funkce, je nutné volat příkaz DELETE u objektu, aby jej bylo možné **Odstranit** , když s ním budete hotovi.
+Pokud vytvoříte `CStatic` objekt v okně, může být také nutné jej zničit. Objekt `CStatic` vytvořený v zásobníku v okně je automaticky zničen. Pokud vytvoříte `CStatic` objekt na haldě pomocí **nové** funkce, musíte volat **delete** na objekt zničit, když jste hotovi s ním.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[CObject](../../mfc/reference/cobject-class.md)
+[CObjekt](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[CCmdCíl](../../mfc/reference/ccmdtarget-class.md)
 
-[CWnd](../../mfc/reference/cwnd-class.md)
+[Cwnd](../../mfc/reference/cwnd-class.md)
 
 `CStatic`
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxwin. h
+**Záhlaví:** afxwin.h
 
-##  <a name="create"></a>CStatic:: Create
+## <a name="cstaticcreate"></a><a name="create"></a>CStatic::Vytvořit
 
-Vytvoří statický ovládací prvek Windows a připojí ho k objektu `CStatic`.
+Vytvoří statický ovládací prvek systému `CStatic` Windows a připojí jej k objektu.
 
 ```
 virtual BOOL Create(
@@ -108,55 +108,55 @@ virtual BOOL Create(
 ### <a name="parameters"></a>Parametry
 
 *lpszText*<br/>
-Určuje text, který se má umístit do ovládacího prvku. Pokud má hodnotu NULL, žádný text nebude viditelný.
+Určuje text, který má být v ovládacím prvku umístit. Pokud null, žádný text bude viditelný.
 
-*dwStyle*<br/>
-Určuje styl okna statického ovládacího prvku. Použití libovolné kombinace [stylů statického ovládacího prvku](../../mfc/reference/styles-used-by-mfc.md#static-styles) pro ovládací prvek.
+*dwStyl*<br/>
+Určuje styl okna statického ovládacího prvku. Aplikujte na ovládací prvek libovolnou kombinaci [stylů statického ovládacího](../../mfc/reference/styles-used-by-mfc.md#static-styles) prvku.
 
-*OBD*<br/>
-Určuje umístění a velikost statického ovládacího prvku. Může to být buď struktura `RECT`, nebo objekt `CRect`.
+*Rect*<br/>
+Určuje umístění a velikost statického ovládacího prvku. Může to být `RECT` buď `CRect` struktura nebo objekt.
 
 *pParentWnd*<br/>
-Určuje `CStatic` nadřazené okno, obvykle objekt `CDialog`. Nesmí mít hodnotu NULL.
+Určuje nadřazené `CStatic` `CDialog` okno, obvykle objekt. Nesmí být null.
 
-*nID*<br/>
+*Nid*<br/>
 Určuje ID ovládacího prvku statického ovládacího prvku.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud bylo úspěšné; v opačném případě 0.
+Nenulová, pokud je úspěšná; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Vytvořte objekt `CStatic` ve dvou krocích. Nejdřív zavolejte konstruktor `CStatic`a potom zavolejte `Create`, která vytvoří statický ovládací prvek Windows a připojí ho k objektu `CStatic`.
+Vytvořte `CStatic` objekt ve dvou krocích. Nejprve zavolejte `CStatic`konstruktor a `Create`potom volání , který vytvoří statický `CStatic` ovládací prvek systému Windows a připojí jej k objektu.
 
-Použijte následující [Styly okna](../../mfc/reference/styles-used-by-mfc.md#window-styles) pro statický ovládací prvek:
+Použijte následující [styly oken](../../mfc/reference/styles-used-by-mfc.md#window-styles) na statický ovládací prvek:
 
-- WS_CHILD vždycky
+- WS_CHILD vždy
 
-- WS_VISIBLE obvykle
+- WS_VISIBLE Obvykle
 
-- WS_DISABLED zřídka
+- WS_DISABLED Zřídka
 
-Pokud se chystáte zobrazit rastrový obrázek, kurzor, ikonu nebo metasoubor ve statickém ovládacím prvku, je nutné použít jeden z následujících [statických stylů](../../mfc/reference/styles-used-by-mfc.md#static-styles):
+Pokud se chystáte zobrazit rastrový obrázek, kurzor, ikonu nebo metasoubor ve statickém ovládacím prvku, budete muset použít jeden z následujících [statických stylů](../../mfc/reference/styles-used-by-mfc.md#static-styles):
 
-- SS_BITMAP použít tento styl pro rastrové obrázky.
+- SS_BITMAP Tento styl použijte pro bitmapy.
 
-- SS_ICON použít tento styl pro kurzory a ikony.
+- SS_ICON Tento styl použijte pro kurzory a ikony.
 
-- SS_ENHMETAFILE tento styl použít pro rozšířené metasoubory.
+- SS_ENHMETAFILE Tento styl použijte pro rozšířené metasoubory.
 
-U kurzorů, rastrových obrázků nebo ikon můžete také použít následující styl:
+Pro kurzory, rastrové obrázky nebo ikony můžete také použít následující styl:
 
-- SS_CENTERIMAGE použít k centrování obrázku ve statickém ovládacím prvku.
+- SS_CENTERIMAGE Slouží k vystředění obrazu ve statickém ovládacím prvku.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFC_CStatic#1](../../mfc/reference/codesnippet/cpp/cstatic-class_1.cpp)]
 
-##  <a name="cstatic"></a>CStatic::CStatic
+## <a name="cstaticcstatic"></a><a name="cstatic"></a>CStatic::CStatic
 
-Vytvoří objekt `CStatic`.
+Vytvoří `CStatic` objekt.
 
 ```
 CStatic();
@@ -166,9 +166,9 @@ CStatic();
 
 [!code-cpp[NVC_MFC_CStatic#2](../../mfc/reference/codesnippet/cpp/cstatic-class_2.cpp)]
 
-##  <a name="drawitem"></a>CStatic::D rawItem
+## <a name="cstaticdrawitem"></a><a name="drawitem"></a>CStatic::DrawItem
 
-Volá se rozhraním, aby se nakreslil statický ovládací prvek vykreslený vlastníkem.
+Volat rámci k nakreslení statického ovládacího prvku nakreslené vlastníka.
 
 ```
 virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
@@ -177,15 +177,15 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ### <a name="parameters"></a>Parametry
 
 *lpDrawItemStruct*<br/>
-Ukazatel na strukturu [DRAWITEMSTRUCT –](/windows/win32/api/winuser/ns-winuser-drawitemstruct) . Struktura obsahuje informace o položce, která se má vykreslit, a o požadovaném typu výkresu.
+Ukazatel na strukturu [DRAWITEMSTRUCT.](/windows/win32/api/winuser/ns-winuser-drawitemstruct) Struktura obsahuje informace o položce, která má být vykreslena, a o typu požadovaného výkresu.
 
 ### <a name="remarks"></a>Poznámky
 
-Přepište tuto funkci pro implementaci vykreslování pro objekt `CStatic` nakreslený vlastníkem (ovládací prvek má SS_OWNERDRAW stylu).
+Přepsat tuto funkci implementovat výkres pro `CStatic` objekt nakreslený vlastníkem (ovládací prvek má styl SS_OWNERDRAW).
 
-##  <a name="getbitmap"></a>CStatic:: getbitmapa
+## <a name="cstaticgetbitmap"></a><a name="getbitmap"></a>CStatic::GetBitmap
 
-Získá popisovač rastrového obrázku dříve nastaveného pomocí [SetBitmap](#setbitmap), který je spojen s `CStatic`.
+Získá popisovač bitmapy, dříve nastavené s [SetBitmap](#setbitmap), který je přidružen . `CStatic`
 
 ```
 HBITMAP GetBitmap() const;
@@ -193,15 +193,15 @@ HBITMAP GetBitmap() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Popisovač pro aktuální rastrový obrázek nebo hodnotu NULL, pokud není nastaven rastrový obrázek.
+Popisovač aktuální bitmapy nebo NULL, pokud nebyla nastavena žádná bitmapa.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFC_CStatic#3](../../mfc/reference/codesnippet/cpp/cstatic-class_3.cpp)]
 
-##  <a name="getcursor"></a>CStatic:: GetCursor
+## <a name="cstaticgetcursor"></a><a name="getcursor"></a>CStatic::GetCursor
 
-Získá popisovač kurzoru, který byl dříve nastaven pomocí [SetCursor](#setcursor), který je spojen s `CStatic`.
+Získá popisovač kurzoru, dříve nastavena s `CStatic` [SetCursor](#setcursor), který je přidružen .
 
 ```
 HCURSOR GetCursor();
@@ -209,15 +209,15 @@ HCURSOR GetCursor();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Popisovač pro aktuální kurzor nebo hodnotu NULL, pokud není nastaven žádný kurzor.
+Popisovač aktuální kurzor nebo NULL, pokud nebyl nastaven žádný kurzor.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFC_CStatic#4](../../mfc/reference/codesnippet/cpp/cstatic-class_4.cpp)]
 
-##  <a name="getenhmetafile"></a>CStatic::GetEnhMetaFile
+## <a name="cstaticgetenhmetafile"></a><a name="getenhmetafile"></a>CStatic::GetEnhMetaFile
 
-Získá popisovač Enhanced Metafile, který se dřív nastavil pomocí [SetEnhMetafile](#setenhmetafile), který je spojený s `CStatic`.
+Získá popisovač rozšířené metasouboru, dříve nastavena s [SetEnhMetafile](#setenhmetafile), který je spojen s `CStatic`.
 
 ```
 HENHMETAFILE GetEnhMetaFile() const;
@@ -225,15 +225,15 @@ HENHMETAFILE GetEnhMetaFile() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Popisovač k aktuálnímu rozšířenému metasouboru nebo hodnotu NULL, pokud není nastaven žádný rozšířený metasoubor.
+Popisovač aktuálního rozšířeného metasouboru nebo NULL, pokud nebyl nastaven žádný rozšířený metasoubor.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFC_CStatic#5](../../mfc/reference/codesnippet/cpp/cstatic-class_5.cpp)]
 
-##  <a name="geticon"></a>CStatic:: GetIcon
+## <a name="cstaticgeticon"></a><a name="geticon"></a>CStatic::GetIcon
 
-Získá popisovač ikony, která byla dříve nastavena pomocí [SetIcon](#seticon), která je spojena s `CStatic`.
+Získá popisovač ikony, dříve nastavena s [SetIcon](#seticon), který je přidružen . `CStatic`
 
 ```
 HICON GetIcon() const;
@@ -241,15 +241,15 @@ HICON GetIcon() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Popisovač pro aktuální ikonu nebo hodnotu NULL, pokud nebyla nastavena žádná ikona.
+Popisovač aktuální ikony nebo NULL, pokud nebyla nastavena žádná ikona.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFC_CStatic#6](../../mfc/reference/codesnippet/cpp/cstatic-class_6.cpp)]
 
-##  <a name="setbitmap"></a>CStatic::SetBitmap
+## <a name="cstaticsetbitmap"></a><a name="setbitmap"></a>CStatic::SetBitmap
 
-Přidruží nový rastr k statickému ovládacímu prvku.
+Přidruží novou bitmapu ke statickému ovládacímu prvku.
 
 ```
 HBITMAP SetBitmap(HBITMAP hBitmap);
@@ -258,41 +258,41 @@ HBITMAP SetBitmap(HBITMAP hBitmap);
 ### <a name="parameters"></a>Parametry
 
 *hBitmap*<br/>
-Popisovač rastrového obrázku, který má být vykreslen ve statickém ovládacím prvku.
+Popisovač rastrového souboru, který má být nakreslen ve statickém ovládacím prvku.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Popisovač rastrového obrázku, který byl dříve přidružen ke statickému ovládacímu prvku, nebo hodnotu NULL, pokud nebyl k statickému ovládacímu prvku přidružen rastrový obrázek.
+Popisovač rastrového mapu, který byl dříve přidružen ke statickému ovládacímu prvku, nebo NULL, pokud nebyla ke statickému ovládacímu prvku přidružena žádná bitmapa.
 
 ### <a name="remarks"></a>Poznámky
 
-Bitmapa se automaticky vykreslí ve statickém ovládacím prvku. Ve výchozím nastavení se vykreslí v levém horním rohu a statický ovládací prvek se změní na velikost rastrového obrázku.
+Bitmapa bude automaticky nakreslena ve statickém ovládacím prvku. Ve výchozím nastavení bude vykreslen v levém horním rohu a statické ovládací prvek bude změnit velikost na velikost bitmapy.
 
 Můžete použít různé styly oken a statických ovládacích prvků, včetně těchto:
 
-- SS_BITMAP tento styl použít vždy pro rastrové obrázky.
+- SS_BITMAP Tento styl používejte vždy pro bitmapy.
 
-- SS_CENTERIMAGE použít k centrování obrázku ve statickém ovládacím prvku. Je-li obrázek větší než statický ovládací prvek, bude oříznut. Pokud je menší než statický ovládací prvek, prázdné místo kolem obrázku bude vyplněno barvou pixelu v levém horním rohu rastrového obrázku.
+- SS_CENTERIMAGE Slouží k vystředění obrazu ve statickém ovládacím prvku. Pokud je obraz větší než statický ovládací prvek, bude oříznut. Pokud je menší než statické ovládací prvek, prázdné místo kolem obrazu bude vyplněno barvou obrazového bodu v levém horním rohu bitmapy.
 
-- Knihovna MFC poskytuje třídu `CBitmap`, kterou můžete použít, pokud potřebujete více s rastrovým obrázkem, než stačí volat `LoadBitmap`funkce Win32. `CBitmap`, která obsahuje jeden druh objektu GDI, se často používá ve spolupráci s `CStatic`, což je třída `CWnd`, která se používá pro zobrazení grafického objektu jako statického ovládacího prvku.
+- Knihovna MFC `CBitmap`poskytuje třídu , kterou můžete použít, když musíte udělat více s `LoadBitmap`bitmapovým obrazem než jen volat funkci Win32 . `CBitmap`, který obsahuje jeden druh objektu GDI, `CStatic`se často `CWnd` používá ve spolupráci s , což je třída, která se používá pro zobrazení grafického objektu jako statického ovládacího prvku.
 
-`CImage` je třída ATL/MFC, která umožňuje snadnější práci s rastrami nezávislými na zařízení (DIB). Další informace naleznete v tématu [Třída služby CImage ve](../../atl-mfc-shared/reference/cimage-class.md).
+`CImage`je třída KNIHOVNY ATL/MFC, která umožňuje snadněji pracovat s bitmapami nezávislými na zařízení (DIB). Další informace naleznete v tématu [CImage Class](../../atl-mfc-shared/reference/cimage-class.md).
 
-- Typickým použitím je poskytnout `CStatic::SetBitmap` objekt GDI, který je vrácen operátorem HBITMAP objektu `CBitmap` nebo `CImage`. Tento kód se bude podobat následujícímu řádku.
+- Typické použití je `CStatic::SetBitmap` poskytnout Objekt GDI, který je vrácen `CBitmap` operátorem HBITMAP nebo `CImage` objektu. Kód k tomu se podobá následující řádek.
 
 ```
 MyStaticControl.SetBitmap(HBITMAP(MyBitmap));
 ```
 
-Následující příklad vytvoří dva objekty `CStatic` v haldě. Poté načte jednu se systémovou bitovou mapou pomocí `CBitmap::LoadOEMBitmap` a druhou ze souboru pomocí `CImage::Load`.
+Následující příklad vytvoří `CStatic` dva objekty na haldě. To pak načte jeden s `CBitmap::LoadOEMBitmap` systémem bitmapy pomocí `CImage::Load`a druhý ze souboru pomocí .
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFC_CStatic#3](../../mfc/reference/codesnippet/cpp/cstatic-class_3.cpp)]
 
-##  <a name="setcursor"></a>CStatic::SetCursor
+## <a name="cstaticsetcursor"></a><a name="setcursor"></a>CStatic::SetCursor
 
-Přidružuje nový obrázek kurzoru ke statickému ovládacímu prvku.
+Přidruží nový obrázek kurzoru ke statickému ovládacímu prvku.
 
 ```
 HCURSOR SetCursor(HCURSOR hCursor);
@@ -300,30 +300,30 @@ HCURSOR SetCursor(HCURSOR hCursor);
 
 ### <a name="parameters"></a>Parametry
 
-*hCursor*<br/>
-Popisovač kurzoru, který má být vykreslen ve statickém ovládacím prvku.
+*hKurzor*<br/>
+Popisovač kurzoru, který má být nakreslen ve statickém ovládacím prvku.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Popisovač kurzoru dříve přidružený ke statickému ovládacímu prvku nebo hodnotu NULL, pokud nebyl k statickému ovládacímu prvku přidružen žádný kurzor.
+Popisovač kurzoru dříve spojené se statickým ovládacím prvkem nebo NULL, pokud žádný kurzor byl přidružen ke statickému ovládacímu prvku.
 
 ### <a name="remarks"></a>Poznámky
 
-Kurzor se automaticky vykreslí ve statickém ovládacím prvku. Ve výchozím nastavení se vykreslí v levém horním rohu a statický ovládací prvek se změní na velikost kurzoru.
+Kurzor bude automaticky nakreslen ve statickém ovládacím prvku. Ve výchozím nastavení bude nakreslena v levém horním rohu a statické ovládací prvek bude změnit velikost na velikost kurzoru.
 
 Můžete použít různé styly oken a statických ovládacích prvků, včetně následujících:
 
-- SS_ICON tento styl použít vždycky pro kurzory a ikony.
+- SS_ICON Tento styl používejte vždy pro kurzory a ikony.
 
-- SS_CENTERIMAGE použít k centrování v rámci statického ovládacího prvku. Je-li obrázek větší než statický ovládací prvek, bude oříznut. Pokud je menší než statický ovládací prvek, prázdné místo kolem obrázku bude vyplněno barvou pozadí statického ovládacího prvku.
+- SS_CENTERIMAGE Slouží k vystředění statického ovládacího prvku. Pokud je obraz větší než statický ovládací prvek, bude oříznut. Pokud je menší než statické ovládací prvek, prázdné místo kolem obrázku bude vyplněno barvou pozadí statického ovládacího prvku.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFC_CStatic#4](../../mfc/reference/codesnippet/cpp/cstatic-class_4.cpp)]
 
-##  <a name="setenhmetafile"></a>CStatic::SetEnhMetaFile
+## <a name="cstaticsetenhmetafile"></a><a name="setenhmetafile"></a>CStatic::SetEnhMetaFile
 
-Přidruží nové rozšířené obrázky metasouboru ke statickému ovládacímu prvku.
+Přidruží nový rozšířený obraz metasouboru ke statickému ovládacímu prvku.
 
 ```
 HENHMETAFILE SetEnhMetaFile(HENHMETAFILE hMetaFile);
@@ -331,26 +331,26 @@ HENHMETAFILE SetEnhMetaFile(HENHMETAFILE hMetaFile);
 
 ### <a name="parameters"></a>Parametry
 
-*hMetaFile*<br/>
-Popisovač Enhanced Metafile, který se má vykreslit ve statickém ovládacím prvku
+*hMetaSoubor*<br/>
+Popisovač rozšířenémetasouboru, které mají být vypracovány ve statickém ovládacím prvku.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Popisovač rozšířeného metasouboru dříve přidružený ke statickému ovládacímu prvku nebo hodnotu NULL, pokud nebyl k statickému ovládacímu prvku přidružen žádný rozšířený metasoubor.
+Popisovač rozšířenémetasouboru dříve spojené se statickým ovládacím prvkem nebo NULL, pokud žádný rozšířený metasoubor byl přidružen ke statickému ovládacímu prvku.
 
 ### <a name="remarks"></a>Poznámky
 
-Enhanced Metafile se automaticky vykreslí ve statickém ovládacím prvku. Velikost rozšířeného metasouboru se škáluje tak, aby odpovídala velikosti statického ovládacího prvku.
+Rozšířený metasoubor bude automaticky nakreslen ve statickém ovládacím prvku. Rozšířené metasoubor uvažuje tak, aby odpovídalvelikosti statického ovládacího prvku.
 
 Můžete použít různé styly oken a statických ovládacích prvků, včetně následujících:
 
-- SS_ENHMETAFILE tento styl použít vždy pro rozšířené metasoubory.
+- SS_ENHMETAFILE Tento styl používejte vždy pro rozšířené metasoubory.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFC_CStatic#5](../../mfc/reference/codesnippet/cpp/cstatic-class_5.cpp)]
 
-##  <a name="seticon"></a>CStatic::SetIcon
+## <a name="cstaticseticon"></a><a name="seticon"></a>CStatic::SetIcon
 
 Přidruží nový obrázek ikony ke statickému ovládacímu prvku.
 
@@ -360,22 +360,22 @@ HICON SetIcon(HICON hIcon);
 
 ### <a name="parameters"></a>Parametry
 
-*hIcon*<br/>
-Popisovač ikony, která má být vykreslena ve statickém ovládacím prvku.
+*hIkona*<br/>
+Popisovač ikony, která má být nakreslena ve statickém ovládacím prvku.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Obslužná rutina ikony dříve přidružená ke statickému ovládacímu prvku nebo NULL, pokud k statickému ovládacímu prvku nebyla přidružena žádná ikona.
+Popisovač ikony dříve přidružené ke statickému ovládacímu prvku nebo NULL, pokud žádná ikona byla přidružena ke statickému ovládacímu prvku.
 
 ### <a name="remarks"></a>Poznámky
 
-Ikona se automaticky vykreslí ve statickém ovládacím prvku. Ve výchozím nastavení se vykreslí v levém horním rohu a statický ovládací prvek se změní na velikost ikony.
+Ikona bude automaticky nakreslena ve statickém ovládacím prvku. Ve výchozím nastavení bude vykreslen v levém horním rohu a statický ovládací prvek bude měnit velikost na velikost ikony.
 
 Můžete použít různé styly oken a statických ovládacích prvků, včetně následujících:
 
-- SS_ICON tento styl použít vždycky pro kurzory a ikony.
+- SS_ICON Tento styl používejte vždy pro kurzory a ikony.
 
-- SS_CENTERIMAGE použít k centrování v rámci statického ovládacího prvku. Je-li obrázek větší než statický ovládací prvek, bude oříznut. Pokud je menší než statický ovládací prvek, prázdné místo kolem obrázku bude vyplněno barvou pozadí statického ovládacího prvku.
+- SS_CENTERIMAGE Slouží k vystředění statického ovládacího prvku. Pokud je obraz větší než statický ovládací prvek, bude oříznut. Pokud je menší než statické ovládací prvek, prázdné místo kolem obrázku bude vyplněno barvou pozadí statického ovládacího prvku.
 
 ### <a name="example"></a>Příklad
 
@@ -387,7 +387,7 @@ Můžete použít různé styly oken a statických ovládacích prvků, včetně
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [CWnd – třída](../../mfc/reference/cwnd-class.md)<br/>
 [CButton – třída](../../mfc/reference/cbutton-class.md)<br/>
-[CComboBox – třída](../../mfc/reference/ccombobox-class.md)<br/>
+[Třída CComboBox](../../mfc/reference/ccombobox-class.md)<br/>
 [CEdit – třída](../../mfc/reference/cedit-class.md)<br/>
 [CListBox – třída](../../mfc/reference/clistbox-class.md)<br/>
 [CScrollBar – třída](../../mfc/reference/cscrollbar-class.md)<br/>

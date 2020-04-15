@@ -11,58 +11,58 @@ helpviewer_keywords:
 - data storage [MFC], CArchive class
 - CArchive class [MFC], constructor
 ms.assetid: aefa28ce-b55c-40dc-9e42-5f038030985d
-ms.openlocfilehash: 38642906b0973730149ed0de5381519f06d69fe5
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 71592584d4ecdd3169ad894861a97fa668c04ee8
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79442038"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81370949"
 ---
 # <a name="two-ways-to-create-a-carchive-object"></a>Dva způsoby vytvoření objektu CArchive
 
-Existují dva způsoby, jak vytvořit objekt `CArchive`:
+Objekt lze vytvořit dvěma `CArchive` způsoby:
 
-- [Implicitní vytvoření objektu CArchive prostřednictvím rozhraní .NET Framework](#_core_implicit_creation_of_a_carchive_object_via_the_framework)
+- [Implicitní vytvoření objektu CArchive prostřednictvím rámce](#_core_implicit_creation_of_a_carchive_object_via_the_framework)
 
 - [Explicitní vytvoření objektu CArchive](#_core_explicit_creation_of_a_carchive_object)
 
-##  <a name="_core_implicit_creation_of_a_carchive_object_via_the_framework"></a>Implicitní vytvoření objektu CArchive prostřednictvím rozhraní .NET Framework
+## <a name="implicit-creation-of-a-carchive-object-via-the-framework"></a><a name="_core_implicit_creation_of_a_carchive_object_via_the_framework"></a>Implicitní vytvoření objektu CArchive prostřednictvím rámce
 
-Nejběžnějším a nejjednodušším způsobem je umožnit rozhraní vytvořit objekt `CArchive` pro váš dokument jménem v příkazech uložit, Uložit jako a otevřít v nabídce soubor.
+Nejběžnějším a nejjednodušším způsobem je nechat rozhraní `CArchive` vytvořit objekt pro váš dokument jménem příkazů Uložit, Uložit jako a Otevřít v nabídce Soubor.
 
-Tady je rozhraní, když uživatel vaší aplikace vydá příkaz Uložit jako v nabídce soubor:
+Zde je to, co framework dělá, když uživatel vaší aplikace vydá příkaz Uložit jako z nabídky Soubor:
 
 1. Zobrazí dialogové okno **Uložit jako** a získá název souboru od uživatele.
 
-1. Otevře soubor s názvem uživatel jako objekt `CFile`.
+1. Otevře soubor pojmenovaný uživatelem `CFile` jako objekt.
 
-1. Vytvoří objekt `CArchive`, který odkazuje na tento objekt `CFile`. Při vytváření objektu `CArchive` rozhraní nastaví režim na "Uložit" (zápis, serializace) na rozdíl od "Load" (čtení, deserializace).
+1. Vytvoří `CArchive` objekt, který `CFile` odkazuje na tento objekt. Při vytváření `CArchive` objektu framework nastaví režim "ukládat" (psát, serializovat), na rozdíl od "zatížení" (čtení, deserializovat).
 
-1. Volá funkci `Serialize` definovanou ve vaší třídě odvozené `CDocument`a předá jí odkaz na objekt `CArchive`.
+1. Volá `Serialize` funkci definovanou `CDocument`ve vaší odvozené třídě a `CArchive` předá ji jako odkaz na objekt.
 
-Funkce `Serialize` vašeho dokumentu potom zapisuje data do objektu `CArchive`, jak je vysvětleno krátce. Při návratu z funkce `Serialize` rozhraní zničí objekt `CArchive` a pak objekt `CFile`.
+`Serialize` Funkce dokumentu pak zapíše data `CArchive` do objektu, jak je vysvětleno v nejbližší době. Po návratu `Serialize` z funkce framework zničí `CArchive` objekt a `CFile` potom objekt.
 
-Proto pokud necháte rozhraní vytvořit objekt `CArchive` pro váš dokument, stačí, abyste implementovali funkci `Serialize` dokumentu, která zapisuje a čte do archivu a z něj. Také je nutné implementovat `Serialize` pro všechny objekty odvozené `CObject`, které `Serialize` funkce dokumentu v přímém nebo nepřímém serializaci.
+Pokud tedy necháte rozhraní vytvořit `CArchive` objekt pro váš dokument, stačí implementovat `Serialize` funkci dokumentu, která zapisuje a čte do a z archivu. Je také třeba `Serialize` implementovat pro všechny `CObject`odvozené `Serialize` objekty, které funkce dokumentu zase serializes přímo nebo nepřímo.
 
-##  <a name="_core_explicit_creation_of_a_carchive_object"></a>Explicitní vytvoření objektu CArchive
+## <a name="explicit-creation-of-a-carchive-object"></a><a name="_core_explicit_creation_of_a_carchive_object"></a>Explicitní vytvoření objektu CArchive
 
-Kromě serializace dokumentu přes rozhraní existují další případy, kdy budete potřebovat objekt `CArchive`. Například můžete chtít serializovat data do a ze schránky reprezentované objektem `CSharedFile`. Nebo můžete chtít použít uživatelské rozhraní pro uložení souboru, který je jiný než ten, který je nabízený rozhraním. V takovém případě můžete vytvořit objekt `CArchive` explicitně. To můžete provést stejným způsobem jako rozhraní, a to pomocí následujícího postupu.
+Kromě serializace dokumentu prostřednictvím rozhraní, existují i jiné `CArchive` případy, kdy budete potřebovat objekt. Můžete například serializovat data do a ze schránky, reprezentované objektem. `CSharedFile` Nebo můžete chtít použít uživatelské rozhraní pro uložení souboru, který se liší od souboru, který nabízí rozhraní. V takovém případě můžete explicitně vytvořit `CArchive` objekt. Provést stejným způsobem rozhraní framework pomocí následujícího postupu.
 
 #### <a name="to-explicitly-create-a-carchive-object"></a>Explicitní vytvoření objektu CArchive
 
-1. Konstrukce objektu `CFile` nebo objektu odvozeného z `CFile`.
+1. Vytvořte `CFile` objekt nebo objekt `CFile`odvozený z aplikace .
 
-1. Předejte objekt `CFile` do konstruktoru pro `CArchive`, jak je znázorněno v následujícím příkladu:
+1. Předá `CFile` objekt konstruktoru `CArchive`pro , jak je znázorněno v následujícím příkladu:
 
    [!code-cpp[NVC_MFCSerialization#5](../mfc/codesnippet/cpp/two-ways-to-create-a-carchive-object_1.cpp)]
 
-   Druhý argument konstruktoru `CArchive` je Výčtová hodnota, která určuje, zda bude archiv použit k ukládání nebo načítání dat do nebo ze souboru. Funkce `Serialize` objektu tento stav kontroluje voláním funkce `IsStoring` pro objekt archivu.
+   Druhý argument konstruktoru `CArchive` je výčtová hodnota, která určuje, zda bude archiv použit pro ukládání nebo načítání dat do nebo ze souboru. Funkce `Serialize` objektu zkontroluje tento stav `IsStoring` voláním funkce objektu archivu.
 
-Až budete hotovi s ukládáním nebo načítáním dat do objektu `CArchive` nebo z něj, zavřete ho. I když objekty `CArchive` (a `CFile`) automaticky zavřou archiv (a soubor), je dobrým zvykem to provést, protože díky tomu je zotavení z chyb snazší. Další informace o zpracování chyb naleznete v článku [výjimky: zachytávání a odstraňování výjimek](../mfc/exceptions-catching-and-deleting-exceptions.md).
+Po dokončení ukládání nebo načítání dat do nebo `CArchive` z objektu zavřete. Přestože `CArchive` (a `CFile`) objekty automaticky zavře archiv (a soubor), je vhodné explicitně tak učinit, protože usnadňuje zotavení z chyb. Další informace o zpracování chyb naleznete v článku [Výjimky: Zachycení a odstranění výjimek](../mfc/exceptions-catching-and-deleting-exceptions.md).
 
 #### <a name="to-close-the-carchive-object"></a>Zavření objektu CArchive
 
-1. Následující příklad ukazuje, jak zavřít objekt `CArchive`:
+1. Následující příklad ukazuje, jak `CArchive` zavřít objekt:
 
    [!code-cpp[NVC_MFCSerialization#6](../mfc/codesnippet/cpp/two-ways-to-create-a-carchive-object_2.cpp)]
 

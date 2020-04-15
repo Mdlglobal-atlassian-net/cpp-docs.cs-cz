@@ -38,12 +38,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HString::Set method
 - Microsoft::WRL::Wrappers::HString::~HString, destructor
 ms.assetid: 6709dd2e-8d72-4675-8ec7-1baa7d71854d
-ms.openlocfilehash: 38979a058cd6a8b029961708b4197daea2826d85
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 625d7b7d6fc001a6fb63144807b5f29d3620485b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80077173"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371433"
 ---
 # <a name="hstring-class"></a>HString – třída
 
@@ -57,40 +57,40 @@ class HString;
 
 ## <a name="remarks"></a>Poznámky
 
-Prostředí Windows Runtime poskytuje přístup k řetězcům prostřednictvím popisovačů [HSTRING](/windows/win32/WinRT/hstring) . Třída `HString` poskytuje praktické funkce a operátory pro zjednodušení používání HSTRINGch popisovačů. Tato třída může zpracovávat životnost HSTRING, kterou vlastní, prostřednictvím vzoru RAII.
+Prostředí Windows Runtime poskytuje přístup k řetězcům prostřednictvím popisovačů [HSTRING.](/windows/win32/WinRT/hstring) Třída `HString` poskytuje pohodlí funkce a operátory pro zjednodušení pomocí HSTRING úchyty. Tato třída může zpracovat životnost HSTRING, který vlastní prostřednictvím vzoru RAII.
 
 ## <a name="members"></a>Členové
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-Název                                | Popis
+Name (Název)                                | Popis
 ----------------------------------- | -----------------------------------------------------
-[HString:: HString](#hstring)        | Inicializuje novou instanci třídy `HString`.
-[HString:: ~ HString](#tilde-hstring) | Odstraní aktuální instanci třídy `HString`.
+[HString::HString](#hstring)        | Inicializuje novou instanci třídy. `HString`
+[HString::~HString](#tilde-hstring) | Zničí aktuální instanci `HString` třídy.
 
 ### <a name="public-methods"></a>Veřejné metody
 
-Název                                     | Popis
+Name (Název)                                     | Popis
 ---------------------------------------- | -------------------------------------------------------------------------------------------------------------
-[HString:: Attach](#attach)               | Přidruží zadaný objekt `HString` k aktuálnímu objektu `HString`.
-[HString:: CopyTo](#copyto)               | Zkopíruje aktuální objekt `HString` do objektu HSTRING.
-[HString::D etach](#detach)               | Zruší přidružení zadaného objektu `HString` od jeho nadřazené hodnoty.
-[HString:: Get](#get)                     | Načte hodnotu podkladového popisovače HSTRING.
-[HString:: GetAddressOf –](#getaddressof)   | Načte ukazatel na podkladový popisovač HSTRING.
-[HString:: GetRawBuffer](#getrawbuffer)   | Načte ukazatel na podkladová řetězcová data.
-[HString:: IsValid](#isvalid)             | Určuje, zda je aktuální objekt `HString` platný.
-[HString:: Makereference –](#makereference) | Vytvoří objekt `HStringReference` ze zadaného řetězcového parametru.
-[HString:: Release](#release)             | Odstraní podkladovou řetězcovou hodnotu a inicializuje aktuální objekt `HString` k prázdné hodnotě.
-[HString:: set](#set)                     | Nastaví hodnotu aktuálního objektu `HString` na zadaný řetězec s velkým znakem nebo parametr `HString`.
+[HString::Připojit](#attach)               | Přidruží `HString` zadaný `HString` objekt k aktuálnímu objektu.
+[hstring::CopyTo](#copyto)               | Zkopíruje `HString` aktuální objekt do objektu HSTRING.
+[HString::Detach](#detach)               | Odpojí zadaný `HString` objekt od jeho základní hodnoty.
+[HString::Získat](#get)                     | Načte hodnotu základního popisovače HSTRING.
+[hstring::GetaddressOf](#getaddressof)   | Načte ukazatel na základní popisovač HSTRING.
+[HString::GetRawBuffer](#getrawbuffer)   | Načte ukazatel na podkladová data řetězce.
+[HString::IsValid](#isvalid)             | Označuje, zda `HString` je aktuální objekt platný.
+[HString::MakeReference](#makereference) | Vytvoří `HStringReference` objekt z zadaného parametru řetězce.
+[HString::Uvolnění](#release)             | Odstraní základní hodnotu řetězce a intializes aktuální `HString` objekt na prázdnou hodnotu.
+[HString::Nastavit](#set)                     | Nastaví hodnotu `HString` aktuálního objektu na zadaný řetězec nebo `HString` parametr se širokým znakem.
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-Název                                         | Popis
+Name (Název)                                         | Popis
 -------------------------------------------- | ----------------------------------------------------------------------------
-[HString:: operator =](#operator-assign)       | Přesune hodnotu jiného objektu `HString` na aktuální objekt `HString`.
-[HString:: operator = = – operátor](#operator-equality)    | Určuje, zda jsou oba parametry stejné.
-[HString:: operator! =](#operator-inequality)  | Určuje, zda se tyto dva parametry neshodují.
-[HString:: operator&lt;](#operator-less-than) | Určuje, zda je první parametr menší než druhý parametr.
+[HString::operátor=](#operator-assign)       | Přesune hodnotu `HString` jiného objektu na aktuální `HString` objekt.
+[HString::operátor==](#operator-equality)    | Označuje, zda jsou dva parametry stejné.
+[HString::operátor!=](#operator-inequality)  | Označuje, zda dva parametry nejsou stejné.
+[HString::operátor&lt;](#operator-less-than) | Označuje, zda je první parametr menší než druhý parametr.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -98,21 +98,21 @@ Název                                         | Popis
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** corewrappers. h
+**Záhlaví:** corewrappers.h
 
-**Obor názvů:** Microsoft:: WRL:: Wrappers
+**Obor názvů:** Microsoft::WRL::Obálky
 
-## <a name="hstringhstring"></a><a name="tilde-hstring"></a>HString:: ~ HString
+## <a name="hstringhstring"></a><a name="tilde-hstring"></a>HString::~HString
 
-Odstraní aktuální instanci třídy `HString`.
+Zničí aktuální instanci `HString` třídy.
 
 ```cpp
 ~HString() throw()
 ```
 
-## <a name="hstringattach"></a><a name="attach"></a>HString:: Attach
+## <a name="hstringattach"></a><a name="attach"></a>HString::Připojit
 
-Přidruží zadaný objekt `HString` k aktuálnímu objektu `HString`.
+Přidruží `HString` zadaný `HString` objekt k aktuálnímu objektu.
 
 ```cpp
 void Attach(
@@ -125,9 +125,9 @@ void Attach(
 *hstr*<br/>
 Existující objekt `HString`.
 
-## <a name="hstringcopyto"></a><a name="copyto"></a>HString:: CopyTo
+## <a name="hstringcopyto"></a><a name="copyto"></a>hstring::CopyTo
 
-Zkopíruje aktuální objekt `HString` do objektu HSTRING.
+Zkopíruje `HString` aktuální objekt do objektu HSTRING.
 
 ```cpp
 HRESULT CopyTo(
@@ -137,16 +137,16 @@ HRESULT CopyTo(
 
 ### <a name="parameters"></a>Parametry
 
-*str*<br/>
-HSTRING, který kopii obdrží.
+*Str*<br/>
+HSTRING, který obdrží kopii.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda volá funkci [WindowsDuplicateString](/windows/win32/api/winstring/nf-winstring-windowsduplicatestring) .
+Tato metoda volá funkci [WindowsDuplicateString.](/windows/win32/api/winstring/nf-winstring-windowsduplicatestring)
 
-## <a name="hstringdetach"></a><a name="detach"></a>HString::D etach
+## <a name="hstringdetach"></a><a name="detach"></a>HString::Detach
 
-Zruší přidružení zadaného objektu `HString` od jeho nadřazené hodnoty.
+Odpojí zadaný `HString` objekt od jeho základní hodnoty.
 
 ```cpp
 HSTRING Detach() throw()
@@ -154,11 +154,11 @@ HSTRING Detach() throw()
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Základní hodnota `HString` před zahájením operace odpojení.
+Základní `HString` hodnota před zahájením operace odpojení.
 
-## <a name="hstringget"></a><a name="get"></a>HString:: Get
+## <a name="hstringget"></a><a name="get"></a>HString::Získat
 
-Načte hodnotu podkladového popisovače HSTRING.
+Načte hodnotu základního popisovače HSTRING.
 
 ```cpp
 HSTRING Get() const throw()
@@ -168,9 +168,9 @@ HSTRING Get() const throw()
 
 Hodnota podkladového popisovače HSTRING
 
-## <a name="hstringgetaddressof"></a><a name="getaddressof"></a>HString:: GetAddressOf –
+## <a name="hstringgetaddressof"></a><a name="getaddressof"></a>hstring::GetaddressOf
 
-Načte ukazatel na podkladový popisovač HSTRING.
+Načte ukazatel na základní popisovač HSTRING.
 
 ```cpp
 HSTRING* GetAddressOf() throw()
@@ -178,15 +178,15 @@ HSTRING* GetAddressOf() throw()
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na podkladový popisovač HSTRING.
+Ukazatel na základní popisovač HSTRING.
 
 ### <a name="remarks"></a>Poznámky
 
-Po této operaci je hodnota řetězce podkladového popisovače HSTRING zničena.
+Po této operaci je zničena hodnota řetězce základního popisovače HSTRING.
 
-## <a name="hstringgetrawbuffer"></a><a name="getrawbuffer"></a>HString:: GetRawBuffer
+## <a name="hstringgetrawbuffer"></a><a name="getrawbuffer"></a>HString::GetRawBuffer
 
-Načte ukazatel na podkladová řetězcová data.
+Načte ukazatel na podkladová data řetězce.
 
 ```cpp
 const wchar_t* GetRawBuffer(unsigned int* length) const;
@@ -194,15 +194,15 @@ const wchar_t* GetRawBuffer(unsigned int* length) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Délka* Ukazatel na proměnnou typu **int** , která přijímá délku dat.
+*délka* Ukazatel **na int** proměnnou, která přijímá délku dat.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel **const** na podkladová řetězcová data.
+**Const** ukazatel na základní řetězcová data.
 
-## <a name="hstringhstring"></a><a name="hstring"></a>HString:: HString
+## <a name="hstringhstring"></a><a name="hstring"></a>HString::HString
 
-Inicializuje novou instanci třídy `HString`.
+Inicializuje novou instanci třídy. `HString`
 
 ```cpp
 HString() throw();
@@ -212,20 +212,20 @@ HString(HString&& other) throw();
 ### <a name="parameters"></a>Parametry
 
 *hstr*<br/>
-HSTRING popisovač.
+Popisovač HSTRING.
 
-*jiná*<br/>
+*Další*<br/>
 Existující objekt `HString`.
 
 ### <a name="remarks"></a>Poznámky
 
-První konstruktor inicializuje nový objekt `HString`, který je prázdný.
+První konstruktor inicializuje `HString` nový objekt, který je prázdný.
 
-Druhý konstruktor inicializuje nový objekt `HString` k hodnotě existujícího *jiného* parametru a pak odstraní *druhý* parametr.
+Druhý konstruktor inicializuje `HString` nový objekt na hodnotu existujícího *jiného* parametru a pak zničí *další* parametr.
 
-## <a name="hstringisvalid"></a><a name="isvalid"></a>HString:: IsValid
+## <a name="hstringisvalid"></a><a name="isvalid"></a>HString::IsValid
 
-Určuje, zda je aktuální objekt `HString` prázdný.
+Označuje, zda `HString` je aktuální objekt prázdný nebo ne.
 
 ```cpp
 bool IsValid() const throw()
@@ -233,11 +233,11 @@ bool IsValid() const throw()
 
 ### <a name="parameters"></a>Parametry
 
-**true** , pokud aktuální objekt `HString` není prázdný; v opačném případě **false**.
+**true,** pokud `HString` aktuální objekt není prázdný; jinak **false**.
 
-## <a name="hstringmakereference"></a><a name="makereference"></a>HString:: Makereference –
+## <a name="hstringmakereference"></a><a name="makereference"></a>HString::MakeReference
 
-Vytvoří objekt `HStringReference` ze zadaného řetězcového parametru.
+Vytvoří `HStringReference` objekt z zadaného parametru řetězce.
 
 ```cpp
 template<unsigned int sizeDest>
@@ -252,22 +252,22 @@ template<unsigned int sizeDest>
 
 ### <a name="parameters"></a>Parametry
 
-*podle velikosti*<br/>
-Parametr šablony, který určuje velikost cílového `HStringReference` vyrovnávací paměti.
+*sizeDest*<br/>
+Parametr šablony, který určuje velikost `HStringReference` cílové vyrovnávací paměti.
 
-*str*<br/>
-Odkaz na řetězec s velkým znakem.
+*Str*<br/>
+Odkaz na řetězec s širokým znakem.
 
-*funkce*<br/>
-Maximální délka vyrovnávací paměti parametru *str* , která se má použít v této operaci. Pokud parametr *len* nezadáte, použije se celý parametr *str* .
+*Len*<br/>
+Maximální délka vyrovnávací paměti parametru *str,* která má být v této operaci. Pokud není zadán parametr *len,* použije se celý parametr *str.*
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Objekt `HStringReference`, jehož hodnota je stejná jako zadaný parametr *str* .
+Objekt, `HStringReference` jehož hodnota je stejná jako zadaný parametr *str.*
 
-## <a name="hstringoperator-operator"></a><a name="operator-assign"></a>HString:: operator = – operátor
+## <a name="hstringoperator-operator"></a><a name="operator-assign"></a>HString::Operátor= Operátor
 
-Přesune hodnotu jiného objektu `HString` na aktuální objekt `HString`.
+Přesune hodnotu `HString` jiného objektu na aktuální `HString` objekt.
 
 ```cpp
 HString& operator=(HString&& other) throw()
@@ -275,16 +275,16 @@ HString& operator=(HString&& other) throw()
 
 ### <a name="parameters"></a>Parametry
 
-*jiná*<br/>
+*Další*<br/>
 Existující objekt `HString`.
 
 ### <a name="remarks"></a>Poznámky
 
-Hodnota existujícího *jiného* objektu je zkopírována do aktuálního objektu `HString` a *druhý* objekt je zničen.
+Hodnota existujícího *jiného* objektu je `HString` zkopírována do aktuálního objektu a *druhý* objekt je zničen.
 
-## <a name="hstringoperator-operator"></a><a name="operator-equality"></a>HString:: operator = = – operátor
+## <a name="hstringoperator-operator"></a><a name="operator-equality"></a>HString::operátor== Operátor
 
-Určuje, zda jsou oba parametry stejné.
+Označuje, zda jsou dva parametry stejné.
 
 ```cpp
 inline bool operator==(
@@ -310,19 +310,19 @@ inline bool operator==(
 
 ### <a name="parameters"></a>Parametry
 
-*lhs*<br/>
-První parametr, který se má porovnat *LHS* může být objekt `HString` nebo `HStringReference` nebo popisovač HSTRING.
+*Lhs*<br/>
+První parametr porovnat. *lhs* může `HString` být `HStringReference` nebo objekt nebo popisovač HSTRING.
 
-*zarovnání indirekce RHS*<br/>
-Druhý parametr, který se má porovnat. *Zarovnání indirekce RHS* může být objekt `HString` nebo `HStringReference` nebo popisovač HSTRING.
+*rhs*<br/>
+Druhý parametr porovnat. *rhs* může `HString` být `HStringReference` nebo objekt, nebo popisovač HSTRING.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**true** , pokud jsou parametry *LHS* a *Zarovnání indirekce RHS* stejné; v opačném případě **false**.
+**true,** pokud *jsou parametry lhs* a *rhs* stejné; jinak **false**.
 
-## <a name="hstringoperator-operator"></a><a name="operator-inequality"></a>HString:: operator! = – operátor
+## <a name="hstringoperator-operator"></a><a name="operator-inequality"></a>HString::Operátor!= Operátor
 
-Určuje, zda se tyto dva parametry neshodují.
+Označuje, zda dva parametry nejsou stejné.
 
 ```cpp
 inline bool operator!=( const HString& lhs,
@@ -343,19 +343,19 @@ inline bool operator!=( const HString& lhs,
 
 ### <a name="parameters"></a>Parametry
 
-*lhs*<br/>
-První parametr, který se má porovnat *LHS* může být objekt `HString` nebo `HStringReference` nebo popisovač HSTRING.
+*Lhs*<br/>
+První parametr porovnat. *lhs* může `HString` být `HStringReference` nebo objekt nebo popisovač HSTRING.
 
-*zarovnání indirekce RHS*<br/>
-Druhý parametr, který se má porovnat. *Zarovnání indirekce RHS* může být objekt `HString` nebo `HStringReference` nebo popisovač HSTRING.
+*rhs*<br/>
+Druhý parametr porovnat. *rhs* může `HString` být `HStringReference` nebo objekt, nebo popisovač HSTRING.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**true** , pokud nejsou parametry *LHS* a *Zarovnání indirekce RHS* stejné; v opačném případě **false**.
+**true,** pokud *parametry lhs* a *rhs* nejsou stejné; jinak **false**.
 
-## <a name="hstringoperatorlt-operator"></a><a name="operator-less-than"></a>HString:: operator&lt; – operátor
+## <a name="hstringoperatorlt-operator"></a><a name="operator-less-than"></a>HString::Operátor&lt; operátora
 
-Určuje, zda je první parametr menší než druhý parametr.
+Označuje, zda je první parametr menší než druhý parametr.
 
 ```cpp
 inline bool operator<(
@@ -365,27 +365,27 @@ inline bool operator<(
 
 ### <a name="parameters"></a>Parametry
 
-*lhs*<br/>
-První parametr, který se má porovnat *LHS* může být odkazem na `HString`.
+*Lhs*<br/>
+První parametr porovnat. *lhs* může být odkaz `HString`na .
 
-*zarovnání indirekce RHS*<br/>
-Druhý parametr, který se má porovnat. *Zarovnání indirekce RHS* může být odkaz na `HString`.
+*rhs*<br/>
+Druhý parametr porovnat. *rhs* může být odkaz `HString`na .
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**true** , pokud je parametr *LHS* menší než parametr *Zarovnání indirekce RHS* ; v opačném případě **false**.
+**true,** pokud je parametr *lhs* menší než parametr *rhs;* jinak **false**.
 
-## <a name="hstringrelease"></a><a name="release"></a>HString:: Release
+## <a name="hstringrelease"></a><a name="release"></a>HString::Uvolnění
 
-Odstraní podkladovou řetězcovou hodnotu a inicializuje aktuální objekt `HString` k prázdné hodnotě.
+Odstraní základní hodnotu řetězce a intializes aktuální `HString` objekt na prázdnou hodnotu.
 
 ```cpp
 void Release() throw()
 ```
 
-## <a name="hstringset"></a><a name="set"></a>HString:: set
+## <a name="hstringset"></a><a name="set"></a>HString::Nastavit
 
-Nastaví hodnotu aktuálního objektu `HString` na zadaný řetězec s velkým znakem nebo parametr `HString`.
+Nastaví hodnotu `HString` aktuálního objektu na zadaný řetězec nebo `HString` parametr se širokým znakem.
 
 ```cpp
 HRESULT Set(
@@ -401,11 +401,11 @@ HRESULT Set(
 
 ### <a name="parameters"></a>Parametry
 
-*str*<br/>
-Řetězec s velkým znakem.
+*Str*<br/>
+Řetězec s širokým znakem.
 
-*funkce*<br/>
-Maximální délka parametru *str* , který je přiřazen aktuálnímu objektu `HString`.
+*Len*<br/>
+Maximální délka *str* parametr, který je `HString` přiřazen k aktuálnímu objektu.
 
 *hstr*<br/>
 Existující objekt `HString`.

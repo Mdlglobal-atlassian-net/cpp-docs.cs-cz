@@ -7,20 +7,20 @@ helpviewer_keywords:
 - plus class
 - plus struct
 ms.assetid: 4594abd5-b2f2-4fac-9b6b-fc9a2723f8cf
-ms.openlocfilehash: 7071b7709f106fc974e401f89bb98c2525bd6558
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 628823a7fc3c176f83bbb1dca59ec194b5d3db97
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240498"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372072"
 ---
 # <a name="plus-struct"></a>plus – struktura
 
-Předdefinovaný objekt funkce, který provádí operace přidávání (binární `operator+`) na svých argumentů.
+Předdefinovaný objekt funkce, který provádí `operator+`operaci sčítání (binární) na jeho argumenty.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 template <class Type = void>
 struct plus : public binary_function <Type, Type, Type>
 {
@@ -40,17 +40,17 @@ struct plus<void>
 ### <a name="parameters"></a>Parametry
 
 *Typ*, *T*, *U*\
-Typ, který podporuje binární soubor `operator+` , která přebírá operandů zadaný nebo odvozené typy.
+Typ, který podporuje `operator+` binární soubor, který přebírá operandy zadaných nebo odvozených typů.
 
-*doleva*\
-Levý operand operace sčítání. Nespecializovaná šablony přebírá argument typu odkazu l-hodnoty *typ*. Specializovaná šablona perfektní přesměrování l-hodnoty a argumenty odkazu rvalue odvodit typ *T*.
+*Vlevo*\
+Levý operand operace sčítání. Nespecializovaná šablona přebírá referenční argument lvalue typu *Type*. Specializovaná šablona provádí dokonalé předávání argumentů lvalue a rvalue reference odvozeného typu *T*.
 
-*doprava*\
-Pravý operand operace sčítání. Nespecializovaná šablony přebírá argument typu odkazu l-hodnoty *typ*. Specializovaná šablona perfektní přesměrování l-hodnoty a argumenty odkazu rvalue odvodit typ *U*.
+*Právo*\
+Pravý operand operace sčítání. Nespecializovaná šablona přebírá referenční argument lvalue typu *Type*. Specializovaná šablona provádí dokonalé předávání argumentů lvalue a rvalue reference odvozeného typu *U*.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Výsledek `Left + Right`. Specializovaná šablona perfektní přesměrování výsledku, který má typ, který je vrácený binární `operator+`.
+Výsledek `Left + Right`. Specializovaná šablona provádí dokonalé předávání výsledku, který má typ, `operator+`který je vrácen binární .
 
 ## <a name="example"></a>Příklad
 

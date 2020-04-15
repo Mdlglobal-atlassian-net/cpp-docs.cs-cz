@@ -4,21 +4,21 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - exception handling [C++], filters
 ms.assetid: 47fc832b-a707-4422-b60a-aaefe14189e5
-ms.openlocfilehash: 5b207e90c1a04a91d85706f6fa4c390ef60c4718
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 05d3aa79d1293001e80a77b3171b7a4607cd81c7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80187294"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81369489"
 ---
 # <a name="writing-an-exception-filter"></a>Zápis filtru výjimek
 
-Výjimku lze zpracovat skokem do úrovně obslužné rutiny výjimky nebo pokračováním provádění. Namísto použití kódu obslužné rutiny výjimky k manipulaci s výjimkou můžete použít *Filtr* k vyčištění problému a pak vrácením – 1, obnovení normálního toku bez vymazání zásobníku.
+Výjimku lze zpracovat skokem do úrovně obslužné rutiny výjimky nebo pokračováním provádění. Namísto použití kódu obslužné rutiny výjimky ke zpracování výjimky a propadnutí, můžete použít *filtr* k vyčištění problému a potom vrácením -1, pokračovat normální tok bez vymazání zásobníku.
 
 > [!NOTE]
->  Při některých výjimkách nelze pokračovat. Pokud je *Filtr* vyhodnocen jako-1 pro takovou výjimku, systém vyvolá novou výjimku. Při volání [RaiseException –](/windows/win32/api/errhandlingapi/nf-errhandlingapi-raiseexception)určíte, zda bude výjimka pokračovat.
+> Při některých výjimkách nelze pokračovat. Pokud *filtr* vyhodnotí -1 pro takovou výjimku, systém vyvolá novou výjimku. Při volání [RaiseException](/windows/win32/api/errhandlingapi/nf-errhandlingapi-raiseexception), můžete určit, zda bude výjimka pokračovat.
 
-Například následující kód používá volání funkce ve výrazu *filtru* : Tato funkce zpracovává problém a potom vrátí-1 pro obnovení normálního toku řízení:
+Například následující kód používá volání funkce ve výrazu *filtru:* tato funkce zpracovává problém a potom vrátí -1 obnovit normální tok řízení:
 
 ```cpp
 // exceptions_Writing_an_Exception_Filter.cpp
@@ -45,11 +45,11 @@ int Eval_Exception ( int n_except ) {
 }
 ```
 
-Je vhodné použít volání funkce ve výrazu *filtru* vždy, když *Filtr* potřebuje dělat cokoli složité. Vyhodnocení výrazu způsobí spuštění funkce, v tomto případě `Eval_Exception`.
+Je vhodné použít volání funkce ve výrazu *filtru* vždy, když *filtr* potřebuje provést něco složitého. Vyhodnocení výrazu způsobí spuštění funkce, v tomto případě `Eval_Exception`.
 
-Všimněte si použití [GetExceptionCode](/windows/win32/Debug/getexceptioncode) k určení výjimky. Tuto funkci je nutné volat uvnitř samotného filtru. `Eval_Exception` nemůže volat `GetExceptionCode`, ale musí mít předaný kód výjimky.
+Všimněte si použití [GetExceptionCode](/windows/win32/Debug/getexceptioncode) k určení výjimky. Tuto funkci je nutné volat uvnitř samotného filtru. `Eval_Exception`program `GetExceptionCode`nemůže volat , ale musí mít kód výjimky, který mu byl předán.
 
-Tato obslužná rutina předá řízení jiné obslužné rutině, pokud se jedná o výjimku přetečení celého čísla nebo přetečení čísla s plovoucí desetinnou čárkou. Pokud je tomu tak, obslužná rutina zavolá funkci (funkce `ResetVars` je pouze příklad, nejedná se o funkci rozhraní API) pro obnovení některých globálních proměnných. *Příkaz-Block-2*, který je v tomto příkladu prázdný, nelze nikdy spustit, protože `Eval_Exception` nikdy nevrátí EXCEPTION_EXECUTE_HANDLER (1).
+Tato obslužná rutina předá řízení jiné obslužné rutině, pokud se jedná o výjimku přetečení celého čísla nebo přetečení čísla s plovoucí desetinnou čárkou. Pokud je tomu tak, obslužná rutina zavolá funkci (funkce `ResetVars` je pouze příklad, nejedná se o funkci rozhraní API) pro obnovení některých globálních proměnných. *Statement-block-2*, který je v tomto příkladu `Eval_Exception` prázdný, nemůže být nikdy proveden, protože nikdy nevrátí EXCEPTION_EXECUTE_HANDLER (1).
 
 Použití volání funkce je dobrá univerzální metoda pro řešení složitých výrazů filtru. Další dvě užitečné funkce jazyka C jsou:
 
@@ -69,7 +69,7 @@ __except( GetExceptionCode() == STATUS_INTEGER_OVERFLOW ? 1 : 0 ) {
 __except( GetExceptionCode() == STATUS_INTEGER_OVERFLOW ) {
 ```
 
-Podmíněný operátor je užitečnější v situacích, kdy je vhodné, aby byl filtr vyhodnocen jako-1, EXCEPTION_CONTINUE_EXECUTION.
+Podmíněný operátor je užitečnější v situacích, kdy můžete chtít filtr vyhodnotit na -1, EXCEPTION_CONTINUE_EXECUTION.
 
 Operátor čárka umožňuje provádět více nezávislých operací uvnitř jediného výrazu. Efekt je přibližně takový, že se spustí více příkazů a poté se vrátí hodnota posledního výrazu. Například následující kód uloží kód výjimky do proměnné a poté jej ověří:
 

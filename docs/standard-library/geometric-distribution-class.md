@@ -23,16 +23,16 @@ helpviewer_keywords:
 - std::geometric_distribution [C++], param_type
 - std::geometric_distribution [C++], param_type
 ms.assetid: 38f933af-3b49-492e-9d26-b6b272a60013
-ms.openlocfilehash: 66af7aba99d1510b6d4416543e54890a9e891f7e
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 44b624995ed274212a2699cb457c91dfa4530f03
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688011"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81370641"
 ---
 # <a name="geometric_distribution-class"></a>geometric_distribution – třída
 
-Generuje geometrickou distribuci.
+Generuje geometrické rozdělení.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -66,34 +66,34 @@ public:
 
 ### <a name="parameters"></a>Parametry
 
-*IntType* \
-Celočíselný typ výsledku, výchozí hodnota je **int**. Možné typy najdete v tématu [\<random >](../standard-library/random.md).
+*IntType*\
+Typ výsledku celé číslo, výchozí **int**. Možné typy naleznete v [ \<tématu náhodné>](../standard-library/random.md).
 
-*URNG* \
-Jednotný modul generátoru náhodných čísel. Možné typy najdete v tématu [\<random >](../standard-library/random.md).
+*URNG*\
+Jednotný generátor náhodných čísel. Možné typy naleznete v [ \<tématu náhodné>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Poznámky
 
-Šablona třídy popisuje distribuci, která vytváří hodnoty celočíselného typu zadaného uživatelem s geometrickou distribucí. Následující tabulka obsahuje odkazy na články týkající se jednotlivých členů.
+Šablona třídy popisuje rozdělení, které vytváří hodnoty uživatelem určeného integrálního typu s geometrickým rozdělením. Následující tabulka odkazuje na články o jednotlivých členech.
 
 ||||
 |-|-|-|
 |[geometric_distribution](#geometric_distribution)|`geometric_distribution::p`|`geometric_distribution::param`|
 |`geometric_distribution::operator()`||[param_type](#param_type)|
 
-Funkce Property `p()` vrátí hodnotu pro uložený parametr distribuce `p`.
+Funkce `p()` vlastnosti vrátí hodnotu `p`parametru uloženého rozdělení .
 
-Člen vlastnosti `param()` nastaví nebo vrátí `param_type` uložený balíček parametrů distribuce.
+Člen `param()` vlastnosti nastaví `param_type` nebo vrátí balíček parametrů uložené distribuce.
 
-Členské funkce `min()` a `max()` vracejí nejmenší možný výsledek a největší možný výsledek.
+A `min()` `max()` členské funkce vrátí nejmenší možný výsledek a největší možný výsledek.
 
-Členská funkce `reset()` zahodí všechny hodnoty uložené v mezipaměti, takže výsledek dalšího volání `operator()` nezávisí na hodnotách získaných z modulu před voláním.
+Členská `reset()` funkce zahodí všechny hodnoty uložené v mezipaměti, `operator()` takže výsledek dalšího volání nezávisí na žádné hodnoty získané z motoru před voláním.
 
-Členské funkce `operator()` vrátí další vygenerovanou hodnotu založenou na modulu URNG, buď z aktuálního balíčku parametrů, nebo pomocí zadaného balíčku parametrů.
+Členské `operator()` funkce vrátí další vygenerovanou hodnotu na základě modulu URNG, buď z aktuálního balíčku parametrů, nebo ze zadaného balíčku parametrů.
 
-Další informace o třídách distribuce a jejich členech naleznete v tématu [\<random >](../standard-library/random.md).
+Další informace o distribučních třídách a jejich členech naleznete [ \<v tématu Random>](../standard-library/random.md).
 
-Podrobné informace o rozdělení chí-kvadrát najdete v článku [geometrická distribuce](https://go.microsoft.com/fwlink/p/?linkid=400529)Wolfram MathWorld.
+Podrobné informace o distribuci chí-kvadrát naleznete v článku Wolfram MathWorld [Geometric Distribution](https://go.microsoft.com/fwlink/p/?linkid=400529).
 
 ## <a name="example"></a>Příklad
 
@@ -205,13 +205,13 @@ Distribution for 100 samples:
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<random >
+**Záhlaví:** \<náhodné>
 
 **Obor názvů:** std
 
-## <a name="geometric_distribution"></a>geometric_distribution::geometric_distribution
+## <a name="geometric_distributiongeometric_distribution"></a><a name="geometric_distribution"></a>geometric_distribution::geometric_distribution
 
-Sestaví rozdělení.
+Vytvoří rozdělení.
 
 ```cpp
 explicit geometric_distribution(double p = 0.5);
@@ -220,21 +220,21 @@ explicit geometric_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parametry
 
-*p* \
-Parametr distribuce `p`.
+*P*\
+Parametr `p` distribuce.
 
-*parametr* \
-Struktura parametrů používaná k sestavení distribuce.
+*parm*\
+Struktura parametrů slouží k vytvoření distribuce.
 
 ### <a name="remarks"></a>Poznámky
 
-**Předběžná podmínka:** `0.0 < p && p < 1.0`
+**Předpokladem:**`0.0 < p && p < 1.0`
 
-První konstruktor vytvoří objekt, jehož uložená `p` hodnota drží hodnotu *p*.
+První konstruktor zkonstruovat objekt, jehož uložená `p` hodnota obsahuje hodnotu *p*.
 
-Druhý konstruktor vytvoří objekt, jehož uložené parametry jsou inicializovány z *parametr*. Můžete získat a nastavit aktuální parametry pro existující distribuci voláním členské funkce `param()`.
+Druhý konstruktor vytvoří objekt, jehož uložené parametry jsou inicializovány z *parm*. Aktuální parametry existující distribuce můžete získat a nastavit `param()` voláním členské funkce.
 
-## <a name="param_type"></a>geometric_distribution::p aram_type
+## <a name="geometric_distributionparam_type"></a><a name="param_type"></a>geometric_distribution::param_type
 
 Ukládá parametry distribuce.
 
@@ -251,18 +251,18 @@ struct param_type {
 
 ### <a name="parameters"></a>Parametry
 
-*p* \
-Parametr distribuce `p`.
+*P*\
+Parametr `p` distribuce.
 
-*pravé* \
-Instance `param_type` pro porovnání.
+*Právo*\
+Instance `param_type` porovnat s.
 
 ### <a name="remarks"></a>Poznámky
 
-**Předběžná podmínka:** `0.0 < p && p < 1.0`
+**Předpokladem:**`0.0 < p && p < 1.0`
 
-Tato struktura může být předána konstruktoru třídy distribuce při vytváření instance, do `param()` členské funkce pro nastavení uložených parametrů stávající distribuce a `operator()` k použití namísto uložených parametrů.
+Tato struktura může být předána konstruktoru třídy distribuce `param()` při vytváření instancí, členské funkci pro `operator()` nastavení uložených parametrů existující distribuce a k použití namísto uložených parametrů.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[\<random >](../standard-library/random.md)
+[\<náhodné>](../standard-library/random.md)

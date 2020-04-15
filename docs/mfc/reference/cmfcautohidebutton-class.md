@@ -1,5 +1,5 @@
 ---
-title: CMFCAutoHideButton Class
+title: Třída CMFCAutoHideButton
 ms.date: 10/18/2018
 f1_keywords:
 - CMFCAutoHideButton
@@ -50,18 +50,18 @@ helpviewer_keywords:
 - CMFCAutoHideButton [MFC], ShowButton
 - CMFCAutoHideButton [MFC], UnSetAutoHideMode
 ms.assetid: c80e6b8b-25ca-4d12-9d27-457731028ab0
-ms.openlocfilehash: 15b449b4b9f9074966ac269787b1b3ca6f977f48
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 84f17896cc3c4f5cd6099a9ccf7e4e000f43b1f1
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403881"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81369914"
 ---
-# <a name="cmfcautohidebutton-class"></a>CMFCAutoHideButton Class
+# <a name="cmfcautohidebutton-class"></a>Třída CMFCAutoHideButton
 
-Tlačítko, které zobrazí nebo skryje odkaz [CDockablePane – třída](../../mfc/reference/cdockablepane-class.md) , který je nakonfigurovaný pro skrytí.
+Tlačítko, které zobrazuje nebo skryje [třídu CDockablePane,](../../mfc/reference/cdockablepane-class.md) která je nakonfigurována tak, aby se skryla.
 
-Další podrobnosti najdete ve zdrojovém kódu v **VC\\atlmfc\\src\\mfc** složce instalace sady Visual Studio.
+Další podrobnosti naleznete ve zdrojovém kódu umístěném ve složce **MFC\\knihovny\\VC src\\** instalace sady Visual Studio.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -73,46 +73,46 @@ class CMFCAutoHideButton : public CObject
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
 |[CMFCAutoHideButton::BringToTop](#bringtotop)||
-|[CMFCAutoHideButton::Create](#create)|Vytvoří a inicializuje automaticky skrýt tlačítko.|
-|[CMFCAutoHideButton::GetAlignment](#getalignment)|Načte zarovnání automaticky skrýt tlačítko.|
-|[CMFCAutoHideButton::GetAutoHideWindow](#getautohidewindow)|Vrátí [CDockablePane](../../mfc/reference/cdockablepane-class.md) objekt přidružený k tlačítku automatického skrytí.|
+|[CMFCAutoHideButton::Vytvořit](#create)|Vytvoří a inicializuje tlačítko automatického skrytí.|
+|[CMFCAutoHideButton::GetAlignment](#getalignment)|Načte zarovnání tlačítka automatického skrytí.|
+|[CMFCAutoHideButton::GetAutoHideWindow](#getautohidewindow)|Vrátí objekt [CDockablePane](../../mfc/reference/cdockablepane-class.md) přidružený k tlačítku automatického skrytí.|
 |[CMFCAutoHideButton::GetParentToolBar](#getparenttoolbar)||
 |[CMFCAutoHideButton::GetRect](#getrect)||
-|[CMFCAutoHideButton::GetSize](#getsize)|Určuje velikost automaticky skrýt tlačítko.|
-|[CMFCAutoHideButton::GetTextSize](#gettextsize)|Vrátí velikost položky textový popisek pro automaticky skrýt tlačítko.|
-|[CMFCAutoHideButton::HighlightButton](#highlightbutton)|Stručný přehled automaticky skrýt tlačítko.|
-|[CMFCAutoHideButton::IsActive](#isactive)|Označuje, zda automaticky skrýt tlačítko je aktivní.|
-|[CMFCAutoHideButton::IsHighlighted](#ishighlighted)|Vrátí zvýraznění automaticky skrýt tlačítko.|
-|[CMFCAutoHideButton::IsHorizontal](#ishorizontal)|Určuje, zda je automaticky skrýt tlačítko vodorovně nebo svisle.|
-|[CMFCAutoHideButton::IsTop](#istop)||
-|[CMFCAutoHideButton::IsVisible](#isvisible)|Určuje, zda tlačítko je viditelná.|
-|[CMFCAutoHideButton::Move](#move)||
-|[CMFCAutoHideButton::OnDraw](#ondraw)|Rozhraní volá tuto metodu při kreslení automaticky skrýt tlačítko.|
-|[CMFCAutoHideButton::OnDrawBorder](#ondrawborder)|Rozhraní volá tuto metodu při ohraničení automaticky skrýt tlačítko.|
-|[CMFCAutoHideButton::OnFillBackground](#onfillbackground)|Rozhraní volá tuto metodu při vyplní na pozadí automaticky skrýt tlačítko.|
-|[CMFCAutoHideButton::ReplacePane](#replacepane)||
-|[CMFCAutoHideButton::ShowAttachedWindow](#showattachedwindow)|Zobrazí nebo skryje přidruženého [CDockablePane – třída](../../mfc/reference/cdockablepane-class.md).|
+|[CMFCAutoHideButton::GetSize](#getsize)|Určuje velikost tlačítka automatického skrytí.|
+|[CMFCAutoHideButton::GetTextSize](#gettextsize)|Vrátí velikost textového popisku tlačítka automatického skrytí.|
+|[CMFCAutoHideButton::HighlightButton](#highlightbutton)|Zvýrazní tlačítko automatického skrytí.|
+|[CMFCAutoHideButton::IsActive](#isactive)|Označuje, zda je tlačítko automatického skrytí aktivní.|
+|[CMFCAutoHideButton::Zvýrazněno](#ishighlighted)|Vrátí stav zvýraznění tlačítka automatického skrytí.|
+|[CMFCAutoHideButton::IsHorizontal](#ishorizontal)|Určuje, zda je tlačítko automatického skrytí vodorovné nebo svislé.|
+|[CMFCAutoHideButton::Istop](#istop)||
+|[CMFCAutoHideButton::jeviditelný](#isvisible)|Označuje, zda je tlačítko viditelné.|
+|[CMFCAutoHideButton::Přesunout](#move)||
+|[CMFCAutoHideButton::OnDraw](#ondraw)|Framework volá tuto metodu při nakreslí tlačítko automatické ho skrýt.|
+|[CMFCAutoHideButton::OnDrawBorder](#ondrawborder)|Framework volá tuto metodu při nakreslí ohraničení automaticky skrýt tlačítko.|
+|[CMFCAutoHideButton::OnFillBackground](#onfillbackground)|Framework volá tuto metodu, když vyplní pozadí automaticky skrýt tlačítko.|
+|[CMFCAutoHideButton::Replacepane](#replacepane)||
+|[CMFCAutoHideButton::ShowAttachedWindow](#showattachedwindow)|Zobrazí nebo skryje přidruženou [třídu CDockablePane](../../mfc/reference/cdockablepane-class.md).|
 |[CMFCAutoHideButton::ShowButton](#showbutton)|Zobrazí nebo skryje tlačítko automatického skrytí.|
-|[CMFCAutoHideButton::UnSetAutoHideMode](#unsetautohidemode)||
+|[CMFCAutoHideButton::UnsetAutoHideMode](#unsetautohidemode)||
 
 ## <a name="remarks"></a>Poznámky
 
-Vytvoření se `CMFCAutoHideButton` objekt je připojen k [CDockablePane – třída](../../mfc/reference/cdockablepane-class.md). `CDockablePane` Objektu je skryta nebo zobrazena jako uživatel pracuje se `CMFCAutoHideButton` objektu.
+Při vytváření `CMFCAutoHideButton` je objekt připojen k [třídě CDockablePane](../../mfc/reference/cdockablepane-class.md). Objekt `CDockablePane` je skrytý nebo zobrazený při interakci `CMFCAutoHideButton` uživatele s objektem.
 
-Ve výchozím nastavení, rozhraní automaticky vytvoří `CMFCAutoHideButton` když uživatel zapne automatické skrývání. Rozhraní lze vytvořit prvek vlastní uživatelské rozhraní třídy místo `CMFCAutoHideButton` třídy. Chcete-li určit, které vlastní uživatelské rozhraní třídy rozhraní by měl používat, nastavte proměnnou statického členu `CMFCAutoHideBar::m_pAutoHideButtonRTS` rovna třídu vlastního uživatelského rozhraní. Ve výchozím nastavení je tato proměnná nastavená na `CMFCAutoHideButton`.
+Ve výchozím nastavení rozhraní `CMFCAutoHideButton` automaticky vytvoří, když uživatel zapne automatické skrytí. Rozhraní framework můžete vytvořit prvek vlastní třídy `CMFCAutoHideButton` ui namísto třídy. Chcete-li určit, kterou vlastní třídu rozhraní by `CMFCAutoHideBar::m_pAutoHideButtonRTS` měla architektura použít, nastavte statickou člennou proměnnou rovnou vlastní třídě rozhraní. Ve výchozím nastavení je `CMFCAutoHideButton`tato proměnná nastavena na hodnotu .
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak vytvořit `CMFCAutoHideButton` objektu a použít různé metody v `CMFCAutoHideButton` třídy. Tento příklad ukazuje způsob inicializace `CMFCAutoHideButton` s použitím jeho `Create` metoda, zobrazit přidružené `CDockablePane` třídy a zobrazit automaticky skrýt tlačítko.
+Následující příklad ukazuje, jak `CMFCAutoHideButton` vytvořit objekt a používat `CMFCAutoHideButton` různé metody ve třídě. Příklad ukazuje, jak inicializovat `CMFCAutoHideButton` objekt `Create` pomocí jeho `CDockablePane` metody, zobrazit přidruženou třídu a zobrazit tlačítko automatického skrytí.
 
 [!code-cpp[NVC_MFC_RibbonApp#32](../../mfc/reference/codesnippet/cpp/cmfcautohidebutton-class_1.cpp)]
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObjekt](../../mfc/reference/cobject-class.md)
 
 `CMFCAutoHideButton`
 
@@ -120,7 +120,7 @@ Následující příklad ukazuje, jak vytvořit `CMFCAutoHideButton` objektu a p
 
 **Záhlaví:** afxautohidebutton.h
 
-##  <a name="bringtotop"></a>  CMFCAutoHideButton::BringToTop
+## <a name="cmfcautohidebuttonbringtotop"></a><a name="bringtotop"></a>CMFCAutoHideButton::BringToTop
 
 ```
 void BringToTop();
@@ -128,9 +128,9 @@ void BringToTop();
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="create"></a>  CMFCAutoHideButton::Create
+## <a name="cmfcautohidebuttoncreate"></a><a name="create"></a>CMFCAutoHideButton::Vytvořit
 
-Vytvoří a inicializuje automaticky skrýt tlačítko.
+Vytvoří a inicializuje tlačítko automatického skrytí.
 
 ```
 virtual BOOL Create(
@@ -142,23 +142,23 @@ virtual BOOL Create(
 ### <a name="parameters"></a>Parametry
 
 *pParentBar*<br/>
-[in] Ukazatel na nadřazeného panelu nástrojů.
+[v] Ukazatel na nadřazený panel nástrojů.
 
 *pAutoHideWnd*<br/>
-[in] Ukazatel [CDockablePane](../../mfc/reference/cdockablepane-class.md) objektu. Toto tlačítko automatického schovávání skryje a ukazuje, že `CDockablePane`.
+[v] Ukazatel na [cDockablePane](../../mfc/reference/cdockablepane-class.md) objektu. Toto tlačítko automatického skrytí `CDockablePane`se skryje a zobrazí to .
 
 *dwAlignment*<br/>
-[in] Hodnota, která určuje zarovnání na tlačítko s oknem hlavního rámce.
+[v] Hodnota, která určuje zarovnání tlačítka s oknem hlavního rámce.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je úspěšná. jinak 0.
+Nenulová, pokud je úspěšná; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Když vytvoříte `CMFCAutoHideButton` objektu, je třeba automaticky skrýt tlačítko přidružit konkrétní `CDockablePane`. Uživatel může použít automaticky skrýt tlačítko skrytí a zobrazení přidruženého `CDockablePane`.
+Při vytváření `CMFCAutoHideButton` objektu je nutné přidružit tlačítko `CDockablePane`automatického skrytí k určitému . Uživatel může pomocí tlačítka automatického skrytí skrýt `CDockablePane`a zobrazit přidružené tlačítko .
 
-*DwAlignment* parametr označuje, kde se nachází automaticky skrýt tlačítko v aplikaci. Tento parametr může být jedna z následujících hodnot:
+Parametr *dwAlignment* označuje, kde se v aplikaci nachází tlačítko automatického skrytí. Parametr může být některá z následujících hodnot:
 
 - CBRS_ALIGN_LEFT
 
@@ -168,9 +168,9 @@ Když vytvoříte `CMFCAutoHideButton` objektu, je třeba automaticky skrýt tla
 
 - CBRS_ALIGN_BOTTOM
 
-##  <a name="getalignment"></a>  CMFCAutoHideButton::GetAlignment
+## <a name="cmfcautohidebuttongetalignment"></a><a name="getalignment"></a>CMFCAutoHideButton::GetAlignment
 
-Načte zarovnání automaticky skrýt tlačítko.
+Načte zarovnání tlačítka automatického skrytí.
 
 ```
 DWORD GetAlignment() const;
@@ -178,11 +178,11 @@ DWORD GetAlignment() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota DWORD, který obsahuje aktuální zarovnání automaticky skrýt tlačítko.
+Hodnota DWORD, která obsahuje aktuální zarovnání tlačítka automatického skrytí.
 
 ### <a name="remarks"></a>Poznámky
 
-Zarovnání automaticky skrýt tlačítko indikuje, ve kterém se nachází na tlačítko v aplikaci. To může být jedna z následujících hodnot:
+Zarovnání tlačítka automatického skrytí označuje, kde se tlačítko nachází v aplikaci. Může to být některá z následujících hodnot:
 
 - CBRS_ALIGN_LEFT
 
@@ -192,9 +192,9 @@ Zarovnání automaticky skrýt tlačítko indikuje, ve kterém se nachází na t
 
 - CBRS_ALIGN_BOTTOM
 
-##  <a name="getautohidewindow"></a>  CMFCAutoHideButton::GetAutoHideWindow
+## <a name="cmfcautohidebuttongetautohidewindow"></a><a name="getautohidewindow"></a>CMFCAutoHideButton::GetAutoHideWindow
 
-Vrátí [CDockablePane](../../mfc/reference/cdockablepane-class.md) objekt přidružený k tlačítku automatického skrytí.
+Vrátí objekt [CDockablePane](../../mfc/reference/cdockablepane-class.md) přidružený k tlačítku automatického skrytí.
 
 ```
 CDockablePane* GetAutoHideWindow() const;
@@ -202,13 +202,13 @@ CDockablePane* GetAutoHideWindow() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na přidruženou `CDockablePane` objektu.
+Ukazatel na přidružený `CDockablePane` objekt.
 
 ### <a name="remarks"></a>Poznámky
 
-Přidružení automaticky skrýt tlačítko s `CDockablePane`, předat `CDockablePane` jako parametr [CMFCAutoHideButton::Create](#create) metoda.
+Chcete-li přidružit `CDockablePane`tlačítko automatického skrytí k metodě , předejte `CDockablePane` jej jako parametr metodě [CMFCAutoHideButton::Create.](#create)
 
-##  <a name="getparenttoolbar"></a>  CMFCAutoHideButton::GetParentToolBar
+## <a name="cmfcautohidebuttongetparenttoolbar"></a><a name="getparenttoolbar"></a>CMFCAutoHideButton::GetParentToolBar
 
 ```
 CMFCAutoHideBar* GetParentToolBar();
@@ -218,7 +218,7 @@ CMFCAutoHideBar* GetParentToolBar();
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="getrect"></a>  CMFCAutoHideButton::GetRect
+## <a name="cmfcautohidebuttongetrect"></a><a name="getrect"></a>CMFCAutoHideButton::GetRect
 
 ```
 CRect GetRect() const;
@@ -228,9 +228,9 @@ CRect GetRect() const;
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="getsize"></a>  CMFCAutoHideButton::GetSize
+## <a name="cmfcautohidebuttongetsize"></a><a name="getsize"></a>CMFCAutoHideButton::GetSize
 
-Určuje velikost automaticky skrýt tlačítko.
+Určuje velikost tlačítka automatického skrytí.
 
 ```
 CSize GetSize() const;
@@ -238,15 +238,15 @@ CSize GetSize() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-A `CSize` objekt, který obsahuje velikost tlačítka.
+Objekt, `CSize` který obsahuje velikost tlačítka.
 
 ### <a name="remarks"></a>Poznámky
 
-Vypočtená velikost zahrnuje velikost ohraničení automaticky skrýt tlačítko.
+Vypočtená velikost zahrnuje velikost ohraničení tlačítka automatického skrytí.
 
-##  <a name="gettextsize"></a>  CMFCAutoHideButton::GetTextSize
+## <a name="cmfcautohidebuttongettextsize"></a><a name="gettextsize"></a>CMFCAutoHideButton::GetTextSize
 
-Vrátí velikost položky textový popisek pro automaticky skrýt tlačítko.
+Vrátí velikost textového popisku tlačítka automatického skrytí.
 
 ```
 virtual CSize GetTextSize() const;
@@ -254,11 +254,11 @@ virtual CSize GetTextSize() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-A [CSize](../../atl-mfc-shared/reference/csize-class.md) objekt, který obsahuje velikost textu pro automaticky skrýt tlačítko.
+[CSize](../../atl-mfc-shared/reference/csize-class.md) objekt, který obsahuje velikost textu pro automatické skrýt tlačítko.
 
-##  <a name="isactive"></a>  CMFCAutoHideButton::IsActive
+## <a name="cmfcautohidebuttonisactive"></a><a name="isactive"></a>CMFCAutoHideButton::IsActive
 
-Označuje, zda automaticky skrýt tlačítko je aktivní.
+Označuje, zda je tlačítko automatického skrytí aktivní.
 
 ```
 BOOL IsActive() const;
@@ -266,15 +266,15 @@ BOOL IsActive() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE, pokud je aktivní; automaticky skrýt tlačítko FALSE v opačném případě.
+PRAVDA, pokud je tlačítko automatického skrytí aktivní; FALSE jinak.
 
 ### <a name="remarks"></a>Poznámky
 
-Automaticky skrýt tlačítko je aktivní, kdy přidruženého [CDockablePane – třída](../../mfc/reference/cdockablepane-class.md) okno zobrazeno.
+Tlačítko automatického skrytí je aktivní, když je zobrazeno přidružené okno [třídy CDockablePane.](../../mfc/reference/cdockablepane-class.md)
 
-##  <a name="ishorizontal"></a>  CMFCAutoHideButton::IsHorizontal
+## <a name="cmfcautohidebuttonishorizontal"></a><a name="ishorizontal"></a>CMFCAutoHideButton::IsHorizontal
 
-Určuje, zda je automaticky skrýt tlačítko vodorovně nebo svisle.
+Určuje, zda je tlačítko automatického skrytí vodorovné nebo svislé.
 
 ```
 BOOL IsHorizontal() const;
@@ -282,13 +282,13 @@ BOOL IsHorizontal() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je tlačítko vodorovné; jinak 0.
+Nenulová, pokud je tlačítko vodorovné; 0 jinak.
 
 ### <a name="remarks"></a>Poznámky
 
-Rozhraní framework nastavuje orientaci ovládacího prvku [cmfcautohidebutton –](../../mfc/reference/cmfcautohidebutton-class.md) objektu při vytváření.  Orientace můžete řídit pomocí *dwAlignment* parametr [CMFCAutoHideButton::Create](#create) metody.
+Rámec nastaví orientaci objektu [CMFCAutoHideButton](../../mfc/reference/cmfcautohidebutton-class.md) při jeho vytvoření.  Orientaci můžete ovládat pomocí parametru *dwAlignment* v metodě [CMFCAutoHideButton::Create.](#create)
 
-##  <a name="istop"></a>  CMFCAutoHideButton::IsTop
+## <a name="cmfcautohidebuttonistop"></a><a name="istop"></a>CMFCAutoHideButton::Istop
 
 ```
 BOOL IsTop() const;
@@ -298,9 +298,9 @@ BOOL IsTop() const;
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="isvisible"></a>  CMFCAutoHideButton::IsVisible
+## <a name="cmfcautohidebuttonisvisible"></a><a name="isvisible"></a>CMFCAutoHideButton::jeviditelný
 
-Určuje, zda je automaticky skrýt tlačítko viditelná.
+Označuje, zda je tlačítko automatického skrytí viditelné.
 
 ```
 virtual BOOL IsVisible() const;
@@ -308,11 +308,11 @@ virtual BOOL IsVisible() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE, pokud je tlačítko viditelný; FALSE v opačném případě.
+TRUE, pokud je tlačítko viditelné; FALSE jinak.
 
-##  <a name="ondraw"></a>  CMFCAutoHideButton::OnDraw
+## <a name="cmfcautohidebuttonondraw"></a><a name="ondraw"></a>CMFCAutoHideButton::OnDraw
 
-Rozhraní volá tuto metodu při kreslení automaticky skrýt tlačítko.
+Framework volá tuto metodu při nakreslí tlačítko automatické ho skrýt.
 
 ```
 virtual void OnDraw(CDC* pDC);
@@ -320,16 +320,16 @@ virtual void OnDraw(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+*Pdc*<br/>
+[v] Ukazatel na kontext zařízení.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud chcete přizpůsobit vzhled tlačítek automatického schovávání ve vaší aplikaci, vytvořte novou třídu odvozenou z `CMFCAutoHideButton`. Tuto metodu přepište v odvozené třídy.
+Chcete-li přizpůsobit vzhled tlačítek automatického skrytí v aplikaci, vytvořte novou třídu odvozenou z aplikace `CMFCAutoHideButton`. V odvozené třídě přepsat tuto metodu.
 
-##  <a name="ondrawborder"></a>  CMFCAutoHideButton::OnDrawBorder
+## <a name="cmfcautohidebuttonondrawborder"></a><a name="ondrawborder"></a>CMFCAutoHideButton::OnDrawBorder
 
-Rozhraní volá tuto metodu při ohraničení automaticky skrýt tlačítko.
+Framework volá tuto metodu při nakreslí ohraničení automaticky skrýt tlačítko.
 
 ```
 virtual void OnDrawBorder(
@@ -340,22 +340,22 @@ virtual void OnDrawBorder(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+*Pdc*<br/>
+[v] Ukazatel na kontext zařízení.
 
 *rectBounds*<br/>
-[in] Ohraničující obdélník automaticky skrýt tlačítko.
+[v] Ohraničovací obdélník tlačítka automatického skrytí.
 
 *rectBorderSize*<br/>
-[in] Tloušťka ohraničení pro každé straně automaticky skrýt tlačítko.
+[v] Tloušťka ohraničení pro každou stranu tlačítka automatického skrytí.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud chcete přizpůsobit ohraničení každý automaticky skrýt tlačítko v aplikaci, vytvořte novou třídu odvozenou z `CMFCAutoHideButton`. Tuto metodu přepište v odvozené třídy.
+Pokud chcete přizpůsobit ohraničení každého tlačítka automatického skrytí v aplikaci, `CMFCAutoHideButton`vytvořte novou třídu odvozenou z . V odvozené třídě přepsat tuto metodu.
 
-##  <a name="onfillbackground"></a>  CMFCAutoHideButton::OnFillBackground
+## <a name="cmfcautohidebuttononfillbackground"></a><a name="onfillbackground"></a>CMFCAutoHideButton::OnFillBackground
 
-Rozhraní volá tuto metodu při vyplní na pozadí automaticky skrýt tlačítko.
+Framework volá tuto metodu, když vyplní pozadí automaticky skrýt tlačítko.
 
 ```
 virtual void OnFillBackground(
@@ -365,19 +365,19 @@ virtual void OnFillBackground(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+*Pdc*<br/>
+[v] Ukazatel na kontext zařízení.
 
 *Rect*<br/>
-[in] Ohraničující obdélník automaticky skrýt tlačítko.
+[v] Ohraničovací obdélník tlačítka automatického skrytí.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud chcete přizpůsobit na pozadí pro tlačítka automatického schovávání ve vaší aplikaci, vytvořte novou třídu odvozenou z `CMFCAutoHideButton`. Tuto metodu přepište v odvozené třídy.
+Pokud chcete přizpůsobit pozadí pro tlačítka automatického skrytí v aplikaci, `CMFCAutoHideButton`vytvořte novou třídu odvozenou z . V odvozené třídě přepsat tuto metodu.
 
-##  <a name="showattachedwindow"></a>  CMFCAutoHideButton::ShowAttachedWindow
+## <a name="cmfcautohidebuttonshowattachedwindow"></a><a name="showattachedwindow"></a>CMFCAutoHideButton::ShowAttachedWindow
 
-Zobrazí nebo skryje přidruženého [CDockablePane – třída](../../mfc/reference/cdockablepane-class.md).
+Zobrazí nebo skryje přidruženou [třídu CDockablePane](../../mfc/reference/cdockablepane-class.md).
 
 ```
 void ShowAttachedWindow(BOOL bShow);
@@ -385,10 +385,10 @@ void ShowAttachedWindow(BOOL bShow);
 
 ### <a name="parameters"></a>Parametry
 
-*bShow*<br/>
-[in] Logická hodnota, která určuje, zda tato metoda ukazuje připojeného `CDockablePane`.
+*bZobrazit*<br/>
+[v] Logická hodnota, která určuje, zda `CDockablePane`tato metoda zobrazuje připojenou .
 
-##  <a name="showbutton"></a>  CMFCAutoHideButton::ShowButton
+## <a name="cmfcautohidebuttonshowbutton"></a><a name="showbutton"></a>CMFCAutoHideButton::ShowButton
 
 Zobrazí nebo skryje tlačítko automatického skrytí.
 
@@ -398,10 +398,10 @@ virtual void ShowButton(BOOL bShow);
 
 ### <a name="parameters"></a>Parametry
 
-*bShow*<br/>
-[in] Logická hodnota, která určuje, jestli se má zobrazit automaticky skrýt tlačítko.
+*bZobrazit*<br/>
+[v] Logická hodnota, která určuje, zda se má tlačítko automatického skrytí zobrazit.
 
-##  <a name="move"></a>  CMFCAutoHideButton::Move
+## <a name="cmfcautohidebuttonmove"></a><a name="move"></a>CMFCAutoHideButton::Přesunout
 
 ```
 void Move(int nOffset);
@@ -409,11 +409,11 @@ void Move(int nOffset);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *nOffset*<br/>
+[v] *nOffset*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="replacepane"></a>  CMFCAutoHideButton::ReplacePane
+## <a name="cmfcautohidebuttonreplacepane"></a><a name="replacepane"></a>CMFCAutoHideButton::Replacepane
 
 ```
 void ReplacePane(CDockablePane* pNewBar);
@@ -421,13 +421,13 @@ void ReplacePane(CDockablePane* pNewBar);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pNewBar*<br/>
+[v] *pNewBar*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="unsetautohidemode"></a>  CMFCAutoHideButton::UnSetAutoHideMode
+## <a name="cmfcautohidebuttonunsetautohidemode"></a><a name="unsetautohidemode"></a>CMFCAutoHideButton::UnsetAutoHideMode
 
-Zakážete režim automatického skrytí.
+Zakažte režim automatického skrytí.
 
 ```
 virtual void UnSetAutoHideMode(CDockablePane* pFirstBarInGroup);
@@ -436,13 +436,13 @@ virtual void UnSetAutoHideMode(CDockablePane* pFirstBarInGroup);
 ### <a name="parameters"></a>Parametry
 
 *pFirstBarInGroup*<br/>
-[in] Ukazatel na první řádek ve skupině.
+[v] Ukazatel na první pruh ve skupině.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="highlightbutton"></a>  CMFCAutoHideButton::HighlightButton
+## <a name="cmfcautohidebuttonhighlightbutton"></a><a name="highlightbutton"></a>CMFCAutoHideButton::HighlightButton
 
-Zvýrazní tlačítko automaticky skrýt.
+Zvýrazní tlačítko automatického skrytí.
 
 ```
 virtual void HighlightButton(BOOL bHighlight);
@@ -450,14 +450,14 @@ virtual void HighlightButton(BOOL bHighlight);
 
 ### <a name="parameters"></a>Parametry
 
-*bHighlight*<br/>
-Určuje novou automaticky skrýt stav tlačítka. TRUE znamená, že se zvýrazní tlačítko, hodnota FALSE označuje, že nezvýrazní se, tlačítko.
+*bZvýraznění*<br/>
+Určuje nový stav tlačítka automatického skrytí. PRAVDA označuje, že tlačítko je zvýrazněno, FALSE označuje, že tlačítko není zvýrazněno.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="ishighlighted"></a>  CMFCAutoHideButton::IsHighlighted
+## <a name="cmfcautohidebuttonishighlighted"></a><a name="ishighlighted"></a>CMFCAutoHideButton::Zvýrazněno
 
-Vrátí stav zvýraznění automaticky skrýt tlačítko.
+Vrátí stav zvýraznění tlačítka automatického skrytí.
 
 ```
 virtual BOOL IsHighlighted() const;
@@ -465,13 +465,13 @@ virtual BOOL IsHighlighted() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu TRUE, pokud automaticky skrýt tlačítko bude zvýrazněný. v opačném případě FALSE.
+Vrátí hodnotu PRAVDA, pokud je zvýrazněno tlačítko automatického skrytí; jinak FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>
-[CMFCAutoHideBar – třída](../../mfc/reference/cmfcautohidebar-class.md)<br/>
+[Třída CMFCAutohidebar](../../mfc/reference/cmfcautohidebar-class.md)<br/>
 [CAutoHideDockSite – třída](../../mfc/reference/cautohidedocksite-class.md)

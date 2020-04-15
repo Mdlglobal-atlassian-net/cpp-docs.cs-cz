@@ -1,5 +1,5 @@
 ---
-title: CSacl – třída
+title: Třída CSacl
 ms.date: 11/04/2016
 f1_keywords:
 - CSacl
@@ -12,19 +12,19 @@ f1_keywords:
 helpviewer_keywords:
 - CSacl class
 ms.assetid: 8624889b-aebc-4183-9d29-a20f07837f05
-ms.openlocfilehash: c4bbdfccb2d6d8b167c537b7ae4df57c89438479
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 72b5c9fee3868286f9e4a0917f46aeb732349c62
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69496517"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81330993"
 ---
-# <a name="csacl-class"></a>CSacl – třída
+# <a name="csacl-class"></a>Třída CSacl
 
-Tato třída je obálkou struktury SACL (seznam řízení přístupu k systému).
+Tato třída je obálka pro strukturu SACL (seznam řízení přístupu systému).
 
 > [!IMPORTANT]
->  Tato třída a její členové nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime.
+> Tuto třídu a její členy nelze použít v aplikacích, které se spouštějí v prostředí Windows Runtime.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -36,49 +36,49 @@ class CSacl : public CAcl
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
 |[CSacl::CSacl](#csacl)|Konstruktor|
 |[CSacl::~CSacl](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CSacl::AddAuditAce](#addauditace)|Přidá do `CSacl` objektu položku řízení přístupu auditu (ACE).|
-|[CSacl::GetAceCount](#getacecount)|Vrátí počet položek řízení přístupu (ACE) v `CSacl` objektu.|
-|[CSacl::RemoveAce](#removeace)|Odebere z `CSacl` objektu konkrétní položku ACE (řízení přístupu).|
-|[CSacl::RemoveAllAces](#removeallaces)|Odebere všechny položky řízení přístupu obsažené v `CSacl` objektu.|
+|[CSacl::AddAuditAce](#addauditace)|Přidá do objektu položku řízení přístupu k auditu `CSacl` (ACE).|
+|[CSacl::GetAceCount](#getacecount)|Vrátí počet položek řízení přístupu (ACE) `CSacl` v objektu.|
+|[CSacl::RemoveAce](#removeace)|Odebere z objektu konkrétní ace (zadávání řízení přístupu). `CSacl`|
+|[CSacl::OdstranitAllAces](#removeallaces)|Odebere všechny ACE obsažené v `CSacl` objektu.|
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Name|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CSacl:: operator =](#operator_eq)|Operátor přiřazení|
+|[CSacl::operátor =](#operator_eq)|Operátor přiřazení.|
 
 ## <a name="remarks"></a>Poznámky
 
-Seznam SACL obsahuje položky řízení přístupu (ACE), které určují typy pokusů o přístup, které generují záznamy auditu v protokolu událostí zabezpečení řadiče domény. Všimněte si, že seznam SACL generuje položky protokolu pouze na řadiči domény, kde došlo k pokusu o přístup, nikoli na každém řadiči domény, který obsahuje repliku objektu.
+SACL obsahuje položky řízení přístupu (ACE), které určují typy pokusů o přístup, které generují záznamy auditu v protokolu událostí zabezpečení řadiče domény. Všimněte si, že sacl generuje položky protokolu pouze na řadiči domény, kde došlo k pokusu o přístup, nikoli na každém řadiči domény, který obsahuje repliku objektu.
 
-Chcete-li nastavit nebo načíst seznam SACL v popisovači zabezpečení objektu, musí být povoleno oprávnění SE_SECURITY_NAME v přístupovém tokenu žádajícího vlákna. Skupina Administrators má toto oprávnění udělené ve výchozím nastavení a je možné ji udělit ostatním uživatelům nebo skupinám. Je-li uděleno oprávnění, není vyžadováno: před provedením operace definované oprávněním musí být oprávnění povoleno v tokenu přístupu zabezpečení, aby se mohlo projevit. Tento model umožňuje povolit oprávnění jenom pro konkrétní systémové operace a pak je zakázaný, když už nepotřebujete. Příklady povolení SE_SECURITY_NAME naleznete v tématu [AtlGetSacl](security-global-functions.md#atlgetsacl) a [AtlSetSacl](security-global-functions.md#atlsetsacl) .
+Chcete-li nastavit nebo načíst kód SACL v popisovači zabezpečení objektu, musí být v přístupovém tokenu žádajícího vlákna povoleno oprávnění SE_SECURITY_NAME. Skupina administrators má toto oprávnění udělené ve výchozím nastavení a může být uděleno jiným uživatelům nebo skupinám. Udělení oprávnění není vše, co je požadováno: před provedením operace definované oprávnění, musí být oprávnění povoleno v tokenu přístupu zabezpečení, aby se projevilo. Model umožňuje oprávnění, která mají být povolena pouze pro určité systémové operace a potom zakázána, pokud již nejsou potřeba. Viz [AtlGetSacl](security-global-functions.md#atlgetsacl) a [AtlSetSacl](security-global-functions.md#atlsetsacl) příklady povolení SE_SECURITY_NAME.
 
-Použijte metody třídy poskytované k přidávání, odebírání, vytváření a odstraňování položek řízení přístupu (ACE `SACL` ) z objektu. Viz také [AtlGetSacl](security-global-functions.md#atlgetsacl) a [AtlSetSacl](security-global-functions.md#atlsetsacl).
+Pomocí metod třídy, které jsou k dispozici, přidejte, `SACL` odeberte, vytvořte a odstraňte ace z objektu. Viz také [AtlGetSacl](security-global-functions.md#atlgetsacl) a [AtlSetSacl](security-global-functions.md#atlsetsacl).
 
-Úvod do modelu řízení přístupu v systému Windows naleznete v tématu [Access Control](/windows/win32/SecAuthZ/access-control) v Windows SDK.
+Úvod k modelu řízení přístupu v systému Windows najdete v tématu [Řízení přístupu](/windows/win32/SecAuthZ/access-control) v sadě Windows SDK.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[CAcl](../../atl/reference/cacl-class.md)
+[Cacl](../../atl/reference/cacl-class.md)
 
 `CSacl`
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlsecurity. h
+**Záhlaví:** atlsecurity.h
 
-##  <a name="addauditace"></a>CSacl::AddAuditAce
+## <a name="csacladdauditace"></a><a name="addauditace"></a>CSacl::AddAuditAce
 
-Přidá do `CSacl` objektu položku řízení přístupu auditu (ACE).
+Přidá do objektu položku řízení přístupu k auditu `CSacl` (ACE).
 
 ```
 bool AddAuditAce(
@@ -101,19 +101,19 @@ bool AddAuditAce(
 ### <a name="parameters"></a>Parametry
 
 *rSid*<br/>
-Objekt [CSID](../../atl/reference/csid-class.md)
+[CSid](../../atl/reference/csid-class.md) objekt.
 
-*AccessMask*<br/>
-Určuje masku přístupových práv, která se mají auditovat pro zadaný `CSid` objekt.
+*Maska přístupu*<br/>
+Určuje masku přístupových práv, která mají `CSid` být auditována pro zadaný objekt.
 
-*bSuccess*<br/>
-Určuje, jestli se mají auditovat povolené pokusy o přístup. Nastavením tohoto příznaku na hodnotu true povolíte auditování. v opačném případě ho nastavte na false.
+*bÚspěch*<br/>
+Určuje, zda mají být auditovány pokusy o povolený přístup. Nastavte tento příznak na hodnotu true, aby bylo možné auditovat; v opačném případě nastavte na hodnotu false.
 
-*bFailure*<br/>
-Určuje, jestli se mají auditovat zamítnuté pokusy o přístup. Nastavením tohoto příznaku na hodnotu true povolíte auditování. v opačném případě ho nastavte na false.
+*bSelhání*<br/>
+Určuje, zda mají být auditovány pokusy o odepření přístupu. Nastavte tento příznak na hodnotu true, aby bylo možné auditovat; v opačném případě nastavte na hodnotu false.
 
 *AceFlags*<br/>
-Sada bitových příznaků, které řídí dědění ACE.
+Sada bitových příznaků, které řídí dědičnost ACE.
 
 *pObjectType*<br/>
 Typ objektu.
@@ -123,15 +123,15 @@ Typ zděděného objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu true, pokud je položka ACE přidána `CSacl` do objektu, hodnota false při selhání.
+Vrátí hodnotu PRAVDA, pokud `CSacl` je ace přidána k objektu, NEPRAVDA při selhání.
 
 ### <a name="remarks"></a>Poznámky
 
-`CSacl` Objekt obsahuje položky řízení přístupu (ACE), které určují typy pokusů o přístup, které generují záznamy auditu v protokolu událostí zabezpečení. Tato metoda přidá takovou položku ACE do `CSacl` objektu.
+Objekt `CSacl` obsahuje položky řízení přístupu (ACE), které určují typy pokusů o přístup, které generují záznamy auditu v protokolu událostí zabezpečení. Tato metoda přidá takové ACE k objektu. `CSacl`
 
-Popis různých příznaků, které lze nastavit v parametru *AceFlags* , naleznete v tématu [ACE_HEADER](/windows/win32/api/winnt/ns-winnt-ace_header) .
+Popis různých příznaků, které lze nastavit v parametru *AceFlags,* naleznete v [ACE_HEADER.](/windows/win32/api/winnt/ns-winnt-ace_header)
 
-##  <a name="csacl"></a>CSacl::CSacl
+## <a name="csaclcsacl"></a><a name="csacl"></a>CSacl::CSacl
 
 Konstruktor
 
@@ -142,14 +142,14 @@ CSacl(const ACL& rhs) throw(...);
 
 ### <a name="parameters"></a>Parametry
 
-*zarovnání indirekce RHS*<br/>
+*rhs*<br/>
 Existující `ACL` struktura (seznam řízení přístupu).
 
 ### <a name="remarks"></a>Poznámky
 
-Objekt může být volitelně vytvořen pomocí existující `ACL` struktury. `CSacl` Zajistěte, aby byl tento parametr seznam řízení přístupu (SACL) systému a nikoli volitelný seznam řízení přístupu (DACL). Pokud je v sestavení ladění k dispozici DACL, dojde k zadání kontrolního výrazu. V nástroji vydaná verze sestavování jsou všechny záznamy ze seznamu DACL ignorovány.
+Objekt `CSacl` lze volitelně vytvořit pomocí `ACL` existující struktury. Ujistěte se, že tento parametr je seznam řízení přístupu systému (SACL) a nikoli volitelný seznam řízení přístupu (DACL). V sestavení ladění, pokud dacl je zadán kontrolní výraz dojde. Ve verzi sestavení všechny položky z DACL jsou ignorovány.
 
-##  <a name="dtor"></a>  CSacl::~CSacl
+## <a name="csaclcsacl"></a><a name="dtor"></a>CSacl::~CSacl
 
 Destruktor.
 
@@ -159,11 +159,11 @@ Destruktor.
 
 ### <a name="remarks"></a>Poznámky
 
-Destruktor uvolní všechny prostředky, které objekt získal, včetně všech položek řízení přístupu (ACE).
+Destruktor uvolní všechny prostředky získané objektem, včetně všech položek řízení přístupu (ACE).
 
-##  <a name="getacecount"></a>CSacl::GetAceCount
+## <a name="csaclgetacecount"></a><a name="getacecount"></a>CSacl::GetAceCount
 
-Vrátí počet položek řízení přístupu (ACE) v `CSacl` objektu.
+Vrátí počet položek řízení přístupu (ACE) `CSacl` v objektu.
 
 ```
 UINT GetAceCount() const throw();
@@ -171,11 +171,11 @@ UINT GetAceCount() const throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí počet položek řízení přístupu obsažených v `CSacl` objektu.
+Vrátí počet objektů Řízení a řízení `CSacl` obsažených v objektu.
 
-##  <a name="operator_eq"></a>CSacl:: operator =
+## <a name="csacloperator-"></a><a name="operator_eq"></a>CSacl::operátor =
 
-Operátor přiřazení
+Operátor přiřazení.
 
 ```
 CSacl& operator=(const ACL& rhs) throw(...);
@@ -183,16 +183,16 @@ CSacl& operator=(const ACL& rhs) throw(...);
 
 ### <a name="parameters"></a>Parametry
 
-*zarovnání indirekce RHS*<br/>
-Seznam řízení přístupu (Access-Control), který se má přiřadit k existujícímu objektu. `ACL`
+*rhs*<br/>
+(Seznam `ACL` řízení přístupu) přiřadit k existujícíobjekt.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí odkaz na aktualizovaný `CSacl` objekt. Zajistěte `ACL` , aby byl parametr ve skutečnosti seznam řízení přístupu (SACL) systému, a ne seznam DACL (Discretionary Access Control List). V okně ladění sestavení dojde k kontrolnímu výrazu a v sestavení vydaných `ACL` verzí parametr bude ignorován.
+Vrátí odkaz na `CSacl` aktualizovaný objekt. Ujistěte `ACL` se, že parametr je ve skutečnosti seznam řízení přístupu systému (SACL) a nikoli volitelný seznam řízení přístupu (DACL). V sestavení ladění dojde k kontrolnímu výrazu `ACL` a ve verzi sestavení bude parametr ignorován.
 
-##  <a name="removeace"></a>CSacl::RemoveAce
+## <a name="csaclremoveace"></a><a name="removeace"></a>CSacl::RemoveAce
 
-Odebere z `CSacl` objektu konkrétní položku ACE (řízení přístupu).
+Odebere z objektu konkrétní ace (zadávání řízení přístupu). `CSacl`
 
 ```
 void RemoveAce(UINT nIndex) throw();
@@ -201,15 +201,15 @@ void RemoveAce(UINT nIndex) throw();
 ### <a name="parameters"></a>Parametry
 
 *nIndex*<br/>
-Index položky ACE, která se má odebrat
+Index položky ACE odebrat.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda je odvozena z [CAtlArray:: funkce RemoveAt](../../atl/reference/catlarray-class.md#removeat).
+Tato metoda je odvozena z [CAtlArray::RemoveAt](../../atl/reference/catlarray-class.md#removeat).
 
-##  <a name="removeallaces"></a>CSacl::RemoveAllAces
+## <a name="csaclremoveallaces"></a><a name="removeallaces"></a>CSacl::OdstranitAllAces
 
-Odebere všechny položky řízení přístupu (ACE) obsažené v `CSacl` objektu.
+Odebere všechny položky řízení přístupu (ACE) `CSacl` obsažené v objektu.
 
 ```
 void RemoveAllAces() throw();
@@ -217,12 +217,12 @@ void RemoveAllAces() throw();
 
 ### <a name="remarks"></a>Poznámky
 
-Odebere všechny `ACE` struktury (pokud existují) `CSacl` v objektu.
+Odebere `ACE` všechny struktury (pokud `CSacl` existuje) v objektu.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[CAcl – třída](../../atl/reference/cacl-class.md)<br/>
-[Seznamy ACL](/windows/win32/SecAuthZ/access-control-lists)<br/>
-[ACE](/windows/win32/SecAuthZ/access-control-entries)<br/>
+[Třída CAcl](../../atl/reference/cacl-class.md)<br/>
+[Seznamy acl](/windows/win32/SecAuthZ/access-control-lists)<br/>
+[Esa](/windows/win32/SecAuthZ/access-control-entries)<br/>
 [Přehled třídy](../../atl/atl-class-overview.md)<br/>
 [Globální funkce zabezpečení](../../atl/reference/security-global-functions.md)

@@ -194,333 +194,333 @@ helpviewer_keywords:
 - WS_EX_TRANSPARENT constant [MFC]
 - WS_EX_WINDOWEDGE constant [MFC]
 ms.assetid: d3b9af37-31b5-4c97-a8ad-189fd724b04c
-ms.openlocfilehash: 0c5f5aaacf96eef52b36421534b02f9d2a5fff6c
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 1fe8e0e167ee1fe6150487dfff436a72a2d55868
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79421448"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372920"
 ---
 # <a name="styles-used-by-mfc"></a>Styly využívané prostředím MFC
 
-Použijte následující příznaky stylu pro určení vzhledu okna nebo ovládacího prvku a chování při vytváření odpovídajícího objektu knihovny MFC. Ve většině případů jsou tyto styly nastaveny v parametru *dwStyle* funkce Class `Create`.
+Následující příznaky stylu slouží k určení vzhledu a chování okna nebo ovládacího prvku při vytváření odpovídajícího objektu knihovny MFC. Ve většině případů jsou tyto styly nastaveny v `Create` parametru *dwStyle* funkce třídy.
 
-## <a name="button-styles"></a>Styly tlačítek
+## <a name="button-styles"></a><a name="button-styles"></a>Styly tlačítek
 
-Styly tlačítek se vztahují na objekty [třídy CButton](../../mfc/reference/cbutton-class.md) , jako jsou přepínače, zaškrtávací políčka a pushbuttons. Určete kombinaci stylů v parametru *DwStyle* [CButton:: Create](../../mfc/reference/cbutton-class.md#create). Další informace o stylech tlačítek v systému Windows naleznete v tématu [styly tlačítek (Windows)](/windows/win32/Controls/button-styles).
+Styly tlačítek platí pro [objekty třídy CButton,](../../mfc/reference/cbutton-class.md) jako jsou přepínací tlačítka, zaškrtávací políčka a tlačítka. Určete kombinaci stylů v parametru *dwStyle* [cButton::Create](../../mfc/reference/cbutton-class.md#create). Další informace o stylech tlačítek v systému Windows naleznete v [tématu Button Styles (Windows)](/windows/win32/Controls/button-styles).
 
 ### <a name="button-types"></a>Typy tlačítek
 
-V následující tabulce jsou uvedeny typy tlačítek. Volitelně můžete vybrat jednu z následujících možností. Pokud nezadáte typ tlačítka, výchozí hodnota je BS_PUSHBUTTON.
+V následující tabulce jsou uvedeny typy tlačítek. Volitelně můžete zvolit jednu z následujících možností. Pokud nezadáte typ tlačítka, výchozí hodnota je BS_PUSHBUTTON.
 
 |Typ|Popis|
 |----------|-----------------|
-|BS_3STATE|Vytvoří tlačítko zaškrtávacího políčka se třemi stavy: BST_CHECKED, BST_INDETERMINATE a BST_UNCHECKED. Kliknutím na tlačítko se pošle oznámení o BN_CLICKED do okna vlastníka, ale nezmění se stav tlačítka. Ve výchozím nastavení se na pravé straně zaškrtávacího políčka zobrazí přidružený text. Chcete-li zobrazit text vlevo od zaškrtávacího políčka, použijte styl BS_LEFTTEXT nebo BS_RIGHTBUTTON.|
-|BS_AUTO3STATE|Vytvoří tlačítko zaškrtávacího políčka se třemi stavy: BST_CHECKED, BST_INDETERMINATE a BST_UNCHECKED. Kliknutím na tlačítko se pošle oznámení o BN_CLICKED do okna vlastníka a změní se stav tlačítka. Stavy tlačítek se cyklují v pořadí BST_CHECKED, BST_INDETERMINATE a BST_UNCHECKED. Ve výchozím nastavení se na pravé straně zaškrtávacího políčka zobrazí přidružený text. Chcete-li zobrazit text vlevo od zaškrtávacího políčka, použijte styl BS_LEFTTEXT nebo BS_RIGHTBUTTON.|
-|BS_AUTOCHECKBOX|Vytvoří tlačítko zaškrtávacího políčka se dvěma stavy: BST_CHECKED a BST_UNCHECKED. Kliknutím na tlačítko se pošle oznámení o BN_CLICKED do okna vlastníka a změní se stav tlačítka. Ve výchozím nastavení se na pravé straně zaškrtávacího políčka zobrazí přidružený text. Chcete-li zobrazit text vlevo od zaškrtávacího políčka, použijte styl BS_LEFTTEXT nebo BS_RIGHTBUTTON.|
-|BS_AUTORADIOBUTTON|Vytvoří přepínací tlačítko se dvěma stavy: BST_CHECKED a BST_UNCHECKED. Přepínače se obvykle používají ve skupinách, přičemž každá skupina má maximálně jednu zaškrtnutou možnost v jednom okamžiku. Kliknutím na tlačítko odešlete oznámení o BN_CLICKED do okna vlastník, nastavíte stav přepínacího tlačítka na BST_CHECKED a nastavíte stavy všech ostatních přepínačů ve skupině tlačítko na BST_UNCHECKED. Ve výchozím nastavení se na napravo od přepínače zobrazí přidružený text. Chcete-li zobrazit text vlevo od přepínače, použijte styl BS_LEFTTEXT nebo BS_RIGHTBUTTON.|
-|BS_CHECKBOX|Vytvoří tlačítko zaškrtávacího políčka se dvěma stavy: BST_CHECKED a BST_UNCHECKED. Kliknutím na tlačítko se pošle oznámení o BN_CLICKED do okna vlastníka, ale nezmění se stav tlačítka. Ve výchozím nastavení se na pravé straně zaškrtávacího políčka zobrazí přidružený text. Chcete-li zobrazit text vlevo od zaškrtávacího políčka, použijte styl BS_LEFTTEXT nebo BS_RIGHTBUTTON.|
-|BS_COMMANDLINK|Vytvoří tlačítko odkaz na příkaz. Tlačítko odkaz na příkaz je příkazové tlačítko specifické pro systém Windows Vista, které zobrazuje zelenou šipku nalevo od hlavního textu a poznámku pod hlavním textem. Můžete nastavit text poznámky pomocí [CButton:: SetNote](../../mfc/reference/cbutton-class.md#setnote).|
-|BS_DEFCOMMANDLINK|Vytvoří tlačítko odkaz na příkaz. Tlačítko odkaz na příkaz je příkazové tlačítko specifické pro systém Windows Vista, které zobrazuje zelenou šipku nalevo od hlavního textu a poznámku pod hlavním textem. Můžete nastavit text poznámky pomocí [CButton:: SetNote](../../mfc/reference/cbutton-class.md#setnote). Pokud je toto tlačítko v dialogovém okně, stisknutí klávesy ENTER pošle oznámení BN_CLICKED do dialogového okna i v případě, že tlačítko nemá fokus vstupu.|
-|BS_DEFPUSHBUTTON|Vytvoří příkazové tlačítko, které má tlusté černé ohraničení. Pokud je toto tlačítko v dialogovém okně, stisknutí klávesy ENTER pošle oznámení BN_CLICKED do dialogového okna i v případě, že tlačítko nemá fokus vstupu.|
-|BS_DEFSPLITBUTTON|Vytvoří tlačítko rozdělení. Tlačítko rozdělení je příkazové tlačítko specifické pro systém Windows Vista, které obsahuje tlačítko sousedící se šipkou rozevíracího seznamu. Po kliknutí na tlačítko se spustí výchozí příkaz. Když kliknete na šipku rozevíracího seznamu, zobrazí se nabídka dalších příkazů. Pokud je tlačítko Rozdělit v dialogovém okně, stisknutí klávesy ENTER pošle oznámení BN_CLICKED do dialogového okna, i když tlačítko nemá fokus vstupu.|
-|BS_GROUPBOX|Vytvoří obdélník, ve kterém mohou být seskupena další tlačítka. Text spojený s tímto stylem se zobrazí v levém horním rohu obdélníku.|
-|BS_OWNERDRAW|Vytvoří tlačítko vykreslené vlastníkem. Rozhraní volá metodu `DrawItem`, když se změní vizuální aspekt tlačítka. Tento styl musí být nastaven při použití třídy `CBitmapButton`.|
-|BS_PUSHBUTTON|Vytvoří příkazové tlačítko, které pošle oznámení o BN_CLICKED do okna vlastníka, když uživatel klikne na tlačítko.|
-|BS_RADIOBUTTON|Vytvoří přepínací tlačítko se dvěma stavy: BST_CHECKED a BST_UNCHECKED. Přepínače se obvykle používají ve skupinách, přičemž každá skupina má maximálně jednu zaškrtnutou možnost v jednom okamžiku. Kliknutím na tlačítko odešlete oznámení o BN_CLICKED do okna vlastník, ale nedojde k automatickému změně stavu žádného tlačítka ve skupině. Ve výchozím nastavení se na napravo od přepínače zobrazí přidružený text. Chcete-li zobrazit text vlevo od přepínače, použijte styl BS_LEFTTEXT nebo BS_RIGHTBUTTON.|
-|BS_SPLITBUTTON|Vytvoří tlačítko rozdělení. Tlačítko rozdělení je příkazové tlačítko specifické pro systém Windows Vista, které obsahuje tlačítko sousedící se šipkou rozevíracího seznamu. Po kliknutí na tlačítko se spustí výchozí příkaz. Když kliknete na šipku rozevíracího seznamu, zobrazí se nabídka dalších příkazů.|
-|BS_USERBUTTON|Zastaralé, ale je k dispozici pro kompatibilitu s 16 bitovými verzemi systému Windows. Aplikace založené na Win32 by měly místo toho použít BS_OWNERDRAW.|
+|BS_3STATE|Vytvoří zaškrtávací políčko se třemi stavy: BST_CHECKED, BST_INDETERMINATE a BST_UNCHECKED. Kliknutím na tlačítko odešlete BN_CLICKED oznámení do okna vlastníka, ale nezmění tesestavu tlačítka. Ve výchozím nastavení se přidružený text zobrazuje vpravo od zaškrtávacího políčka. Chcete-li zobrazit text vlevo od zaškrtávacího políčka, použijte styl BS_LEFTTEXT nebo BS_RIGHTBUTTON.|
+|BS_AUTO3STATE|Vytvoří zaškrtávací políčko se třemi stavy: BST_CHECKED, BST_INDETERMINATE a BST_UNCHECKED. Kliknutím na tlačítko odešlete oznámení BN_CLICKED do okna vlastníka a změníte stav tlačítka. Tlačítko uvádí cyklus v pořadí BST_CHECKED, BST_INDETERMINATE a BST_UNCHECKED. Ve výchozím nastavení se přidružený text zobrazuje vpravo od zaškrtávacího políčka. Chcete-li zobrazit text vlevo od zaškrtávacího políčka, použijte styl BS_LEFTTEXT nebo BS_RIGHTBUTTON.|
+|BS_AUTOCHECKBOX|Vytvoří zaškrtávací políčko se dvěma stavy: BST_CHECKED a BST_UNCHECKED. Kliknutím na tlačítko odešlete oznámení BN_CLICKED do okna vlastníka a změníte stav tlačítka. Ve výchozím nastavení se přidružený text zobrazuje vpravo od zaškrtávacího políčka. Chcete-li zobrazit text vlevo od zaškrtávacího políčka, použijte styl BS_LEFTTEXT nebo BS_RIGHTBUTTON.|
+|BS_AUTORADIOBUTTON|Vytvoří přepínací tlačítko se dvěma stavy: BST_CHECKED a BST_UNCHECKED. Přepínací tlačítka se obvykle používají ve skupinách, přičemž každá skupina má současně maximálně jednu zaškrtnutou možnost. Kliknutím na tlačítko odešlete oznámení BN_CLICKED do okna vlastníka, nastaví stav klikaného přepínacího tlačítka na BST_CHECKED a nastaví stavy všech ostatních přepínacích tlačítek ve skupině tlačítek na BST_UNCHECKED. Ve výchozím nastavení se přidružený text zobrazuje vpravo od přepínacího tlačítka. Chcete-li zobrazit text vlevo od přepínacího tlačítka, použijte styl BS_LEFTTEXT nebo BS_RIGHTBUTTON.|
+|BS_CHECKBOX|Vytvoří zaškrtávací políčko se dvěma stavy: BST_CHECKED a BST_UNCHECKED. Kliknutím na tlačítko odešlete BN_CLICKED oznámení do okna vlastníka, ale nezmění tesestavu tlačítka. Ve výchozím nastavení se přidružený text zobrazuje vpravo od zaškrtávacího políčka. Chcete-li zobrazit text vlevo od zaškrtávacího políčka, použijte styl BS_LEFTTEXT nebo BS_RIGHTBUTTON.|
+|BS_COMMANDLINK|Vytvoří tlačítko příkazového odkazu. Příkazové tlačítko je příkazové tlačítko specifické pro systém Windows Vista, které zobrazuje zelenou šipku vlevo od hlavního textu a poznámku pod hlavním textem. Text poznámky můžete nastavit pomocí [cbutton::SetNote](../../mfc/reference/cbutton-class.md#setnote).|
+|BS_DEFCOMMANDLINK|Vytvoří tlačítko příkazového odkazu. Příkazové tlačítko je příkazové tlačítko specifické pro systém Windows Vista, které zobrazuje zelenou šipku vlevo od hlavního textu a poznámku pod hlavním textem. Text poznámky můžete nastavit pomocí [cbutton::SetNote](../../mfc/reference/cbutton-class.md#setnote). Pokud je tlačítko v dialogovém okně, stisknutím klávesy ENTER odešlete BN_CLICKED oznámení do dialogového okna, i když tlačítko nemá vstupní fokus.|
+|BS_DEFPUSHBUTTON|Vytvoří příkazové tlačítko s těžkým černým okrajem. Pokud je tlačítko v dialogovém okně, stisknutím klávesy ENTER odešlete BN_CLICKED oznámení do dialogového okna, i když tlačítko nemá vstupní fokus.|
+|BS_DEFSPLITBUTTON|Vytvoří tlačítko rozdělení. Tlačítko rozdělení je příkazové tlačítko specifické pro systém Windows Vista, které obsahuje tlačítko sousedící se šipkou rozevíracího seznamu. Po klepnutí na tlačítko se spustí výchozí příkaz. Po klepnutí na šipku rozevíracího seznamu se zobrazí nabídka dalších příkazů. Pokud je tlačítko rozdělení v dialogovém okně, stisknutím klávesy ENTER odešlete BN_CLICKED oznámení do dialogového okna, i když tlačítko nemá vstupní fokus|
+|BS_GROUPBOX|Vytvoří obdélník, ve kterém lze seskupit další tlačítka. Text přidružený k tomuto stylu se zobrazí v levém horním rohu obdélníku.|
+|BS_OWNERDRAW|Vytvoří tlačítko nakreslené vlastníkem. Framework volá `DrawItem` metodu při změně vizuální aspekt tlačítka. Tento styl musí být nastaven `CBitmapButton` při použití třídy.|
+|BS_PUSHBUTTON|Vytvoří příkazové tlačítko, které odešle BN_CLICKED oznámení do okna vlastníka, když uživatel klepne na tlačítko.|
+|BS_RADIOBUTTON|Vytvoří přepínací tlačítko se dvěma stavy: BST_CHECKED a BST_UNCHECKED. Přepínací tlačítka se obvykle používají ve skupinách, přičemž každá skupina má současně maximálně jednu zaškrtnutou možnost. Kliknutím na tlačítko odešlete BN_CLICKED oznámení do okna vlastníka, ale automaticky nezmění stav žádného tlačítka ve skupině. Ve výchozím nastavení se přidružený text zobrazuje vpravo od přepínacího tlačítka. Chcete-li zobrazit text vlevo od přepínacího tlačítka, použijte styl BS_LEFTTEXT nebo BS_RIGHTBUTTON.|
+|BS_SPLITBUTTON|Vytvoří tlačítko rozdělení. Tlačítko rozdělení je příkazové tlačítko specifické pro systém Windows Vista, které obsahuje tlačítko sousedící se šipkou rozevíracího seznamu. Po klepnutí na tlačítko se spustí výchozí příkaz. Po klepnutí na šipku rozevíracího seznamu se zobrazí nabídka dalších příkazů.|
+|BS_USERBUTTON|Zastaralé, ale za předpokladu, že je kompatibilní s 16bitovými verzemi systému Windows. Aplikace založené na win32 by měly místo toho používat BS_OWNERDRAW.|
 
-### <a name="radio-button-and-check-box-styles"></a>Styly přepínačů a zaškrtávacích políček
+### <a name="radio-button-and-check-box-styles"></a>Styly přepínatá tlačítka a zaškrtávací políčka
 
-V následující tabulce jsou uvedeny styly, které jsou specifické pro přepínače a zaškrtávací políčka. Tyto styly jsou ignorovány ve všech ostatních typech tlačítek. Volitelně můžete zvolit jednu nebo více z následujících možností.
+V následující tabulce jsou uvedeny styly, které jsou specifické pro přepínací tlačítka a zaškrtávací políčka. Tyto styly jsou ignorovány ve všech ostatních typech tlačítek. Volitelně můžete zvolit jednu nebo více z následujících možností.
 
 |Styl|Popis|
 |-----------|-----------------|
-|BS_LEFTTEXT|V kombinaci s přepínačem nebo stylem zaškrtávacího políčka se text zobrazí na levé straně přepínače nebo zaškrtávací políčko.|
-|BS_RIGHTBUTTON|V kombinaci s přepínačem nebo stylem zaškrtávacího políčka se text zobrazí na levé straně přepínače nebo zaškrtávací políčko. Tento styl je stejný jako styl BS_LEFTTEXT.|
-|BS_PUSHLIKE|Nastaví vzhled zaškrtávacího políčka nebo přepínačů a chová se jako příkazové tlačítko. Tlačítko se zobrazí, když je jeho stav BST_CHECKED, stisknuté a ztlumené, když je jeho stav BST_INDETERMINATE a vydaný, když je jeho stav BST_UNCHECKED.|
+|BS_LEFTTEXT|V kombinaci s přepínacím tlačítkem nebo stylem zaškrtávacího políčka se text zobrazí na levé straně přepínacího tlačítka nebo zaškrtávacího políčka.|
+|BS_RIGHTBUTTON|V kombinaci s přepínacím tlačítkem nebo stylem zaškrtávacího políčka se text zobrazí na levé straně přepínacího tlačítka nebo zaškrtávacího políčka. Tento styl je shodný s BS_LEFTTEXT stylem.|
+|BS_PUSHLIKE|Zaškrtávací políčko nebo přepínací tlačítko bude vypadat a chovat se jako příkazové tlačítko. Tlačítko se zobrazí stisknuté, když je jeho stav BST_CHECKED, stisknuto a ztlumeno, když je jeho stav BST_INDETERMINATE, a uvolněno, když je jeho stav BST_UNCHECKED.|
 
 ### <a name="button-text-alignment-styles"></a>Styly zarovnání textu tlačítka
 
-V následující tabulce jsou uvedeny možnosti vodorovného a svislého zarovnání textu. Volitelně můžete vybrat jednu z následujících možností.
+V následující tabulce jsou uvedeny volby vodorovného a svislého zarovnání textu. Volitelně můžete zvolit jednu z následujících možností.
 
 |Styl|Popis|
 |-----------|-----------------|
-|BS_LEFT|Vlevo zarovná text v obdélníku tlačítka. Pokud je však tlačítko zaškrtávací políčko nebo přepínač, který nemá styl BS_RIGHTBUTTON, text zůstane zarovnán na pravé straně zaškrtávacího políčka nebo přepínače.|
-|BS_RIGHT|Pravá Zarovná text v obdélníku tlačítka. Pokud je však toto tlačítko zaškrtávací políčko nebo přepínač, který nemá styl BS_RIGHTBUTTON, text je zarovnán vpravo na pravé straně zaškrtávacího políčka nebo přepínače.|
-|BS_CENTER|Umístí text vodorovně na střed v obdélníku tlačítka.|
-|BS_TOP|Umístí text v horní části obdélníku tlačítka.|
+|BS_LEFT|Zarovná text v obdélníku tlačítka doleva. Pokud je však tlačítko zaškrtávací políčko nebo přepínací tlačítko, které nemá BS_RIGHTBUTTON styl, text zůstane zarovnán na pravé straně zaškrtávacího políčka nebo přepínacího tlačítka.|
+|BS_RIGHT|Zarovná text v obdélníku tlačítka doprava. Pokud je však tlačítko zaškrtávací políčko nebo přepínací tlačítko, které nemá BS_RIGHTBUTTON styl, je text zarovnán vpravo na pravé straně zaškrtávacího políčka nebo přepínacího tlačítka.|
+|BS_CENTER|V obdélníku tlačítka vystředí text vodorovně.|
+|BS_TOP|Umístí text do horní části obdélníku tlačítka.|
 |BS_BOTTOM|Umístí text do dolní části obdélníku tlačítka.|
-|BS_VCENTER|Umístí text svisle na střed v obdélníku tlačítka.|
+|BS_VCENTER|V obdélníku tlačítka vystředí text svisle.|
 
 ### <a name="button-content-options"></a>Možnosti obsahu tlačítka
 
-V následující tabulce jsou uvedeny možnosti, které určují, co se zobrazí na tlačítku. Typy tlačítek, které zobrazují pouze text, tyto styly ignorují. Volitelně můžete vybrat jednu z následujících možností.
+V následující tabulce jsou uvedeny možnosti, které označují, co je zobrazeno v tlačítku. Typy tlačítek, které zobrazují pouze text, tyto styly ignorují. Volitelně můžete zvolit jednu z následujících možností.
 
 |Styl|Popis|
 |-----------|-----------------|
-|BS_BITMAP|Určuje, že tlačítko zobrazuje rastrový obrázek.|
+|BS_BITMAP|Určuje, že tlačítko zobrazí bitmapu.|
 |BS_ICON|Určuje, že tlačítko zobrazí ikonu.|
 |BS_TEXT|Určuje, že tlačítko zobrazí text.|
 
-### <a name="other-button-options"></a>Další možnosti tlačítka
+### <a name="other-button-options"></a>Další možnosti tlačítek
 
-Následující tabulka uvádí další možnosti, které můžete použít s libovolným typem tlačítka. Volitelně můžete zvolit jednu nebo více z následujících možností.
-
-|Styl|Popis|
-|-----------|-----------------|
-|BS_FLAT|Určuje, že tlačítko je dvourozměrné a není vykreslené s výchozím stínováním pro vytvoření trojrozměrného obrázku.|
-|BS_MULTILINE|Zalomí text tlačítka na více řádků, pokud je textový řetězec příliš dlouhý, aby se vešel na jeden řádek v obdélníku tlačítka.|
-|BS_NOTIFY|Umožňuje tlačítku odesílat zprávy s oznámením BN_DBLCLK, BN_KILLFOCUS a BN_SETFOCUS do svého nadřazeného okna. Všimněte si, že tlačítka odesílají oznámení BN_CLICKED bez ohledu na to, zda je tento styl zadán.|
-
-## <a name="combo-box-styles"></a>Styly polí se seznamem
-
-Následující styly pole se seznamem jsou k dispozici v knihovně MFC. Další informace o stylech pole se seznamem v systému Windows naleznete v tématu [styly pole se seznamem (Windows)](/windows/win32/Controls/combo-box-styles).
+V následující tabulce jsou uvedeny další možnosti, které lze použít s libovolným typem tlačítka. Volitelně můžete zvolit jednu nebo více z následujících možností.
 
 |Styl|Popis|
 |-----------|-----------------|
-|CBS_AUTOHSCROLL|Automaticky posouvá text v ovládacím prvku pro úpravy vpravo, když uživatel zadá znak na konci řádku. Pokud tento styl není nastaven, je povolen pouze text, který se vejde do obdélníkové hranice.|
-|CBS_DISABLENOSCROLL|Seznam se zobrazí v seznamu zakázaného svislého posuvníku, pokud pole seznamu neobsahuje dostatek položek pro posouvání. Bez tohoto stylu je posuvník skrytý, pokud pole seznamu neobsahuje dostatek položek.|
-|CBS_DROPDOWN|Podobně jako u CBS_SIMPLE, s tím rozdílem, že pole seznam není zobrazeno, pokud uživatel nevybere ikonu vedle ovládacího prvku pro úpravy.|
-|CBS_DROPDOWNLIST|Podobně jako u CBS_DROPDOWN, s tím rozdílem, že ovládací prvek pro úpravy je nahrazen statickou textovou položkou, která zobrazuje aktuální výběr v poli se seznamem.|
-|CBS_HASSTRINGS|Pole se seznamem vykreslené vlastníkem obsahuje položky skládající se z řetězců. Pole se seznamem uchovává paměť a ukazatele pro řetězce, takže aplikace může použít členskou funkci `GetText` k načtení textu pro konkrétní položku.|
-|CBS_LOWERCASE|Převede na malý text v poli výběru i v seznamu.|
-|CBS_NOINTEGRALHEIGHT|Určuje, že velikost pole se seznamem má přesně velikost určenou aplikací při vytváření pole se seznamem. Systém Windows obvykle mění velikost pole se seznamem tak, aby pole se seznamem nezobrazovalo částečné položky.|
-|CBS_OEMCONVERT|Text zadaný v ovládacím prvku pro úpravy v poli se seznamem se převede ze znakové sady ANSI na znakovou sadu OEM a pak zpátky na ANSI. To zajišťuje řádný převod znaků, když aplikace zavolá funkci `AnsiToOem` Windows pro převod řetězce ANSI v poli se seznamem na znaky OEM. Tento styl je nejužitečnější pro pole se seznamem obsahující názvy souborů a vztahuje se pouze na pole se seznamem vytvořená pomocí stylů CBS_SIMPLE nebo CBS_DROPDOWN.|
-|CBS_OWNERDRAWFIXED|Vlastník seznamu je zodpovědný za vykreslení jeho obsahu. položky v poli se seznamem mají stejnou výšku.|
-|CBS_OWNERDRAWVARIABLE|Vlastník seznamu je zodpovědný za vykreslení jeho obsahu. položky v poli se seznamem jsou v rámci výšky proměnlivé.|
-|CBS_SIMPLE|Seznam se zobrazí za všech okolností. Aktuální výběr v seznamu se zobrazí v ovládacím prvku pro úpravy.|
-|CBS_SORT|Automaticky seřadí řetězce zadané do pole se seznamem.|
-|CBS_UPPERCASE|Převede na velká písmena všech textů v poli výběru i v seznamu.|
+|BS_FLAT|Určuje, že tlačítko je dvojrozměrné a není nakresleno s výchozím stínováním, aby se vytvořil trojrozměrný obraz.|
+|BS_MULTILINE|Zalomí text tlačítka na více řádků, pokud je textový řetězec příliš dlouhý a nevejde se na jeden řádek v obdélníku tlačítka.|
+|BS_NOTIFY|Umožňuje tlačítko odesílat BN_DBLCLK, BN_KILLFOCUS a BN_SETFOCUS oznámení do nadřazeného okna. Všimněte si, že tlačítka odeslat BN_CLICKED oznámení bez ohledu na to, zda je zadán tento styl.|
 
-## <a name="edit-styles"></a>Upravit styly
+## <a name="combo-box-styles"></a><a name="combo-box-styles"></a>Styly v poli se seznamem
 
-Upravit styly platí pro objekty [třídy CEdit](../../mfc/reference/cedit-class.md) . Určete kombinaci stylů v parametru *DwStyle* [CEdit:: Create](../../mfc/reference/cedit-class.md#create). Další informace o úpravách stylů ovládacích prvků v systému Windows naleznete v tématu [Upravit styly ovládacích prvků (Windows)](/windows/win32/Controls/edit-control-styles).
+Následující styly pole se seznamem jsou k dispozici v knihovně MFC. Další informace o stylůch se seznamem v systému Windows naleznete v [tématu Styly pole se seznamem (Windows).](/windows/win32/Controls/combo-box-styles)
 
 |Styl|Popis|
 |-----------|-----------------|
-|ES_AUTOHSCROLL|Když uživatel zadá znak na konci řádku, automaticky posune text doprava o 10 znaků. Když uživatel stiskne klávesu ENTER, ovládací prvek posune veškerý text zpět na pozici 0.|
-|ES_AUTOVSCROLL|Když uživatel stiskne klávesu ENTER na posledním řádku, automaticky posune text o jednu stránku nahoru.|
-|ES_CENTER|Vycentruje text v jednořádkovém nebo víceřádkovém textovém ovládacím prvku.|
-|ES_LEFT|Left – Zarovná text v jednořádkovém nebo víceřádkovém textovém ovládacím prvku.|
-|ES_LOWERCASE|Převede všechny znaky na malá písmena při zadávání do textového pole.|
-|ES_MULTILINE|Určuje víceřádkový ovládací prvek pro úpravy. (Výchozí hodnota je jeden řádek.) Pokud je zadán styl ES_AUTOVSCROLL, ovládací prvek pro úpravy zobrazuje tolik řádků, kolik je možné, a když uživatel stiskne klávesu ENTER, posune se svisle. Pokud není zadán ES_AUTOVSCROLL, ovládací prvek pro úpravy zobrazuje tolik řádků, kolik je možné, a pokud se nedají zobrazit žádné další řádky, uslyší se, pokud se stiskne ENTER. Je-li zadán styl ES_AUTOHSCROLL, ovládací prvek víceřádkového úprav se automaticky posune vodorovně, když se kurzor nachází po pravém okraji ovládacího prvku. Chcete-li začít nový řádek, musí uživatel stisknout klávesu ENTER. Pokud není zadán ES_AUTOHSCROLL, ovládací prvek automaticky zalomí slova na začátek dalšího řádku, pokud je to nutné. při stisknutí klávesy ENTER se spustí také nový řádek. Pozice WordWrap je určena velikostí okna. Pokud se změní velikost okna, změní se poloha WordWrap a text se znovu zobrazí. Víceřádkové ovládací prvky pro úpravy mohou mít posuvníky. Ovládací prvek pro úpravy s posuvníky zpracovává vlastní zprávy posuvníku. Upravit ovládací prvky bez posouvání posuvníků, jak je popsáno výše, a zpracování všech posouvaných zpráv odeslaných nadřazeným oknem.|
-|ES_NOHIDESEL|V normálním případě ovládací prvek pro úpravy skryje výběr, když ovládací prvek ztratí vstupní fokus, a obrátí výběr, když ovládací prvek dostane fokus vstupu. Určení ES_NOHIDESEL odstraní tuto výchozí akci.|
-|ES_NUMBER|Povoluje zadání pouze číslic do textového pole.|
-|ES_OEMCONVERT|Text zadaný v ovládacím prvku pro úpravy je převeden ze znakové sady ANSI na znakovou sadu OEM a pak zpět na ANSI. To zajišťuje řádný převod znaků, když aplikace zavolá funkci `AnsiToOem` Windows, aby převedla řetězec ANSI v ovládacím prvku pro úpravy na znaky OEM. Tento styl je nejužitečnější pro textové ovládací prvky, které obsahují názvy souborů.|
-|ES_PASSWORD|Zobrazí všechny znaky jako hvězdičku ( __\*__ ), jak jsou zadány do textového pole. Aplikace může použít členskou funkci `SetPasswordChar` ke změně zobrazeného znaku.|
-|ES_READONLY|Zabrání uživateli v zadání nebo úpravě textu v textovém poli.|
-|ES_RIGHT|Pravá klávesa zarovnává text v jednořádkovém nebo víceřádkovém textovém ovládacím prvku.|
-|ES_UPPERCASE|Převede všechny znaky na velká, protože jsou zadány do textového ovládacího prvku.|
-|ES_WANTRETURN|Určuje, že se má vložit návrat vozíku, když uživatel stiskne klávesu ENTER při zadávání textu do víceřádkového ovládacího prvku pro úpravy v dialogovém okně. Bez tohoto stylu má stisknutí klávesy ENTER stejný účinek jako při stisknutí dialogových oken výchozí (pushbutton). Tento styl nemá žádný vliv na jednořádkový ovládací prvek pro úpravy.|
+|CBS_AUTOHSCROLL|Automaticky posune text v ovládacím prvku pro úpravy doprava, když uživatel zadá znak na konci řádku. Pokud tento styl není nastaven, je povolen pouze text, který se vejde do obdélníkové hranice.|
+|CBS_DISABLENOSCROLL|V seznamu se zobrazí zakázaný svislý posuvník, pokud seznam neobsahuje dostatek položek k posouvání. Bez tohoto stylu je posuvník skrytý, pokud seznam neobsahuje dostatek položek.|
+|CBS_DROPDOWN|Podobně jako CBS_SIMPLE, s tím rozdílem, že seznam se nezobrazí, pokud uživatel nevybere ikonu vedle ovládacího prvku pro úpravy.|
+|CBS_DROPDOWNLIST|Podobně jako CBS_DROPDOWN, s tím rozdílem, že ovládací prvek pro úpravy je nahrazen položkou statického textu, která zobrazuje aktuální výběr v seznamu.|
+|CBS_HASSTRINGS|Pole se seznamem draw vlastníka obsahuje položky skládající se z řetězců. Pole se seznamem udržuje paměť a ukazatele pro řetězce, takže `GetText` aplikace může použít členovou funkci k načtení textu pro určitou položku.|
+|CBS_LOWERCASE|Převede na malá písmena veškerý text ve výběrovém poli i v seznamu.|
+|CBS_NOINTEGRALHEIGHT|Určuje, že velikost pole se seznamem je přesně taková velikost určená aplikací při vytváření pole se seznamem. Za normálních okolností systém Windows velikosti pole se seznamem tak, aby pole se seznamem nezobrazuje částečné položky.|
+|CBS_OEMCONVERT|Text zadaný v ovládacím prvku pro úpravy pole se seznamem je převeden ze znakové sady ANSI na znakovou sadu OEM a poté zpět na ANSI. Tím je zajištěn správný převod znaků, když aplikace volá funkci systému `AnsiToOem` Windows pro převod řetězce ANSI v poli se seznamem na znaky OEM. Tento styl je nejužitečnější pro pole se seznamem, která obsahují názvy souborů a platí pouze pro pole se seznamem vytvořená pomocí stylů CBS_SIMPLE nebo CBS_DROPDOWN.|
+|CBS_OWNERDRAWFIXED|Vlastník seznamu je zodpovědný za kreslení jeho obsahu; položky v seznamu mají stejnou výšku.|
+|CBS_OWNERDRAWVARIABLE|Vlastník seznamu je zodpovědný za kreslení jeho obsahu; položky v seznamu jsou proměnné výšky.|
+|CBS_SIMPLE|Seznam se zobrazí po celou dobu. Aktuální výběr v seznamu se zobrazí v ovládacím prvku úpravy.|
+|CBS_SORT|Automaticky seřadí řetězce zadané do seznamu.|
+|CBS_UPPERCASE|Převede na velká písmena veškerý text ve výběrovém poli i v seznamu.|
 
-## <a name="frame-window-styles-mfc"></a>Styly oken s rámečkem
+## <a name="edit-styles"></a><a name="edit-styles"></a>Úpravy stylů
 
-Styly okna s rámečkem se vztahují na objekty [třídy CFrameWnd](../../mfc/reference/cframewnd-class.md) . Určete kombinaci stylů v parametru *DwStyle* [CFrameWnd:: Create](../../mfc/reference/cframewnd-class.md#create).
-
-|Styl|Popis|
-|-----------|-----------------|
-|FWS_ADDTOTITLE|Určuje informace, které se mají připojit ke konci nadpisu okna rámce. Například "Microsoft Draw-Drawing in Document1". Můžete určit řetězce zobrazené na kartě řetězce šablony dokumentu v Průvodci aplikací. Pokud potřebujete tuto možnost vypnout, přepište členskou funkci `CWnd::PreCreateWindow`.|
-|FWS_PREFIXTITLE|Zobrazuje název dokumentu před názvem aplikace v názvu okna rámce. Například "Document-WordPad". Můžete určit řetězce zobrazené na kartě řetězce šablony dokumentu v Průvodci aplikací. Pokud potřebujete tuto možnost vypnout, přepište členskou funkci `CWnd::PreCreateWindow`.|
-|FWS_SNAPTOBARS|Ovládací prvky určují velikost okna rámce, které obklopuje ovládací panel, pokud je v plovoucím okně, nikoli ukotvený do okna rámce. Tento styl okna přizpůsobí ovládacímu panelu.|
-
-## <a name="list-box-styles"></a>Styly seznamů polí
-
-Styly seznamu se vztahují na objekty [třídy CListBox –](../../mfc/reference/clistbox-class.md) . Určete kombinaci stylů v parametru *DwStyle* [CListBox –:: Create](../../mfc/reference/clistbox-class.md#create). Další informace o stylech seznamu v systému Windows naleznete v tématu [styly seznamu (Windows)](/windows/win32/Controls/list-box-styles).
+Styly úprav platí pro [objekty třídy CEdit.](../../mfc/reference/cedit-class.md) Určete kombinaci stylů v parametru *dwStyle* [cedit::Create](../../mfc/reference/cedit-class.md#create). Další informace o úpravách stylů ovládacích prvků v systému Windows naleznete v [tématu Úpravy stylů ovládacích prvků (Windows).](/windows/win32/Controls/edit-control-styles)
 
 |Styl|Popis|
 |-----------|-----------------|
-|LBS_DISABLENOSCROLL|Seznam se zobrazí v seznamu zakázaného svislého posuvníku, pokud pole seznamu neobsahuje dostatek položek pro posouvání. Bez tohoto stylu je posuvník skrytý, pokud pole seznamu neobsahuje dostatek položek.|
-|LBS_EXTENDEDSEL|Uživatel může vybrat více položek pomocí klávesy SHIFT a kombinace myši nebo speciálních kláves.|
-|LBS_HASSTRINGS|Určuje seznam s vykreslováním vlastníka, který obsahuje položky skládající se z řetězců. Seznam uchovává paměť a ukazatele pro řetězce, takže aplikace může použít členskou funkci `GetText` k načtení textu pro konkrétní položku.|
-|LBS_MULTICOLUMN|Určuje seznam s více sloupci, který se posouvá vodorovně. Členská funkce `SetColumnWidth` nastaví šířku sloupců.|
-|LBS_MULTIPLESEL|Výběr řetězce se přepíná pokaždé, když uživatel klikne nebo dvakrát klikne na řetězec. Lze vybrat libovolný počet řetězců.|
-|LBS_NODATA|Určuje seznam bez dat. Určete tento styl, pokud bude počet položek v seznamu překročí 1000. Pole se seznamem No-data musí mít také styl LBS_OWNERDRAWFIXED, ale nesmí mít styl LBS_SORT nebo LBS_HASSTRINGS.<br/><br/> Pole se seznamem bez dat se podobá vlastnímu vytaženému seznamu s tím rozdílem, že neobsahuje žádné řetězce ani rastrová data pro položku. Příkazy pro přidání, vložení nebo odstranění položky vždycky ignorují všechna daná data položky; žádosti o nalezení řetězce v seznamu se vždycky nezdaří. Systém odešle zprávu WM_DRAWITEM do okna vlastníka, když je nutné vykreslit položku. Člen itemID struktury `DRAWITEMSTRUCT` předaný pomocí WM_DRAWITEM zprávy určuje číslo řádku, který se má vykreslit. Seznam bez dat neodesílá zprávu WM_DELETEITEM.|
-|LBS_NOINTEGRALHEIGHT|Velikost pole se seznamem je přesně velikost určená aplikací při vytvoření seznamu. Systém Windows obvykle mění velikost seznamu tak, aby se v seznamu nezobrazovaly částečné položky.|
-|LBS_NOREDRAW|Zobrazení seznamu se po provedení změn neaktualizuje. Tento styl lze kdykoli změnit odesláním WM_SETREDRAW zprávy.|
-|LBS_NOSEL|Určuje, že seznam obsahuje položky, které lze zobrazit, ale nejsou vybrány.|
-|LBS_NOTIFY|Nadřazené okno obdrží vstupní zprávu vždy, když uživatel klikne nebo dvakrát klikne na řetězec.|
-|LBS_OWNERDRAWFIXED|Vlastník seznamu je zodpovědný za vykreslení jeho obsahu. položky v poli se seznamem mají stejnou výšku.|
-|LBS_OWNERDRAWVARIABLE|Vlastník seznamu je zodpovědný za vykreslení jeho obsahu. položky v poli se seznamem jsou v rámci výšky proměnlivé.|
-|LBS_SORT|Řetězce v poli se seznamem jsou seřazené abecedně.|
-|LBS_STANDARD|Řetězce v seznamu jsou seřazené abecedně a nadřazené okno obdrží vstupní zprávu vždy, když uživatel klikne nebo dvakrát klikne na řetězec. Seznam obsahuje ohraničení všech stran.|
-|LBS_USETABSTOPS|Umožňuje, aby seznam při vykreslování řetězců rozpoznal a rozšířil znaky tabulátoru. Výchozí pozice tabulátoru jsou 32 jednotky dialogu. (Dialogová jednotka je vodorovná nebo svislá vzdálenost. Jedna vodorovná jednotka dialogového okna se rovná jedné čtvrtiny aktuální základní šířky jednotky dialogového okna. Základní jednotky dialogového okna jsou vypočítány na základě výšky a šířky aktuálního systémového písma. Funkce `GetDialogBaseUnits` systému Windows vrátí aktuální základní jednotky dialogu v pixelech.) Tento styl by neměl být použit s LBS_OWNERDRAWFIXED.|
-|LBS_WANTKEYBOARDINPUT|Vlastník seznamu přijímá WM_VKEYTOITEM nebo WM_CHARTOITEM zprávy vždy, když uživatel stiskne klávesu, když má pole seznam vstupní fokus. Díky tomu může aplikace provádět speciální zpracování na vstupu klávesnice.|
+|ES_AUTOHSCROLL|Automaticky posouvá text doprava o 10 znaků, když uživatel zadá znak na konci řádku. Když uživatel stiskne klávesu ENTER, ovládací prvek posune veškerý text zpět na pozici 0.|
+|ES_AUTOVSCROLL|Automaticky posouvá text o jednu stránku nahoru, když uživatel stiskne klávesu ENTER na posledním řádku.|
+|ES_CENTER|Vystředí text v jednořádkovém nebo víceřádkovém ovládacím prvku úprav.|
+|ES_LEFT|Zarovná text doleva v jednořádkovém nebo víceřádkovém ovládacím prvku úprav.|
+|ES_LOWERCASE|Převede všechny znaky na malá písmena, když jsou zadány do ovládacího prvku úprav.|
+|ES_MULTILINE|Označuje víceřádkový ovládací prvek pro úpravy. (Výchozí hodnota je jeden řádek.) Pokud je zadán styl ES_AUTOVSCROLL, ovládací prvek pro úpravy zobrazí co nejvíce řádků a posouvá se svisle, když uživatel stiskne klávesu ENTER. Pokud ES_AUTOVSCROLL není uvedeno, ovládací prvek pro úpravy zobrazí co nejvíce řádků a pípne, pokud je klávesa ENTER stisknuta, když nelze zobrazit žádné další řádky. Pokud je zadán ES_AUTOHSCROLL styl, ovládací prvek úprav více řádků se automaticky posouvá vodorovně, když stříška prochází kolem pravého okraje ovládacího prvku. Chcete-li spustit nový řádek, musí uživatel stisknout klávesu ENTER. Pokud ES_AUTOHSCROLL není uveden, ovládací prvek automaticky zalomí slova na začátek dalšího řádku v případě potřeby; nový řádek je také spuštěn, pokud je stisknuto enter. Pozice zalomení slova je určena velikostí okna. Pokud se změní velikost okna, změní se pozice zalomení slova a text se znovu zobrazí. Víceřádkové ovládací prvky pro úpravy mohou mít posuvníky. Ovládací prvek pro úpravy s posuvníky zpracovává vlastní zprávy posuvníku. Upravte ovládací prvky bez posuvníků, jak je popsáno výše, a zpracujte všechny zprávy posouvání odeslané nadřazeným oknem.|
+|ES_NOHIDESEL|Za normálních okolností ovládací prvek úprav skryje výběr, když ovládací prvek ztratí vstupní fokus a invertuje výběr, když ovládací prvek obdrží vstupní fokus. Zadáním ES_NOHIDESEL odstraní tuto výchozí akci.|
+|ES_NUMBER|Umožňuje zadat do ovládacího prvku úprav pouze číslice.|
+|ES_OEMCONVERT|Text zadaný v ovládacím prvku pro úpravy je převeden ze znakové sady ANSI na znakovou sadu OEM a poté zpět na ANSI. Tím je zajištěn správný převod znaků, když aplikace volá funkci systému `AnsiToOem` Windows pro převod řetězce ANSI v ovládacím prvku pro úpravy na znaky OEM. Tento styl je nejužitečnější pro úpravy ovládacích prvků, které obsahují názvy souborů.|
+|ES_PASSWORD|Zobrazí všechny znaky jako hvězdičku (__\*__) při jejich zadání do ovládacího prvku pro úpravy. Aplikace může použít `SetPasswordChar` členská funkce ke změně znaku, který je zobrazen.|
+|ES_READONLY|Zabrání uživateli v zadávání nebo úpravách textu v ovládacím prvku úprav.|
+|ES_RIGHT|Zarovná text vpravo v jednořádkovém nebo víceřádkovém ovládacím prvku úprav.|
+|ES_UPPERCASE|Převede všechny znaky na velká písmena při jejich zadání do ovládacího prvku úprav.|
+|ES_WANTRETURN|Určuje, že návrat vozíku bude vložen, když uživatel stiskne klávesu ENTER při zadávání textu do víceřádkového ovládacího prvku pro úpravy v dialogovém okně. Bez tohoto stylu má stisknutí klávesy ENTER stejný účinek jako stisknutí výchozího tlačítka dialogových oken. Tento styl nemá žádný vliv na jednořádkový ovládací prvek pro úpravy.|
 
-## <a name="message-box-styles"></a>Styly okna zpráv
+## <a name="frame-window-styles"></a><a name="frame-window-styles-mfc"></a>Styly rám-okno
 
-Styly okna zpráv se vztahují na [AfxMessageBox](../../mfc/reference/cstring-formatting-and-message-box-display.md#afxmessagebox) položky. Určete kombinaci stylů v parametru *noznámení* `AfxMessageBox`. Další informace o stylech okna zpráv v systému Windows naleznete v tématu [funkce MessageBox (Windows)](/windows/win32/api/winuser/nf-winuser-messagebox).
-
-K dispozici jsou následující styly okna zpráv.
-
-### <a name="message-box-types"></a>Typy polí zpráv
+Styly okna snímků platí pro objekty [třídy CFrameWnd.](../../mfc/reference/cframewnd-class.md) Určete kombinaci stylů v parametru *dwStyle* [cframewnd::Create](../../mfc/reference/cframewnd-class.md#create).
 
 |Styl|Popis|
 |-----------|-----------------|
-|MB_ABORTRETRYIGNORE|Okno se zprávou obsahuje tři pushbuttons: Abort, opakovat a ignorovat.|
-|MB_OK|Okno se zprávou obsahuje jednu (pushbutton): OK.|
-|MB_OKCANCEL|Okno se zprávou obsahuje dvě pushbuttons: OK a Storno.|
-|MB_RETRYCANCEL|Okno se zprávou obsahuje dvě pushbuttons: opakovat a zrušit.|
-|MB_YESNO|Okno se zprávou obsahuje dvě pushbuttons: Yes a No.|
-|MB_YESNOCANCEL|Okno se zprávou obsahuje tři pushbuttons: Ano, ne a zrušit.|
+|FWS_ADDTOTITLE|Určuje informace, které mají být připojeny na konec názvu okna rámce. Například "Microsoft Draw - Kreslení v dokumentu1". Řetězce zobrazené na kartě Řetězce šablony dokumentu můžete zadat v Průvodci aplikací. Pokud potřebujete tuto možnost vypnout, `CWnd::PreCreateWindow` přepište členní funkci.|
+|FWS_PREFIXTITLE|Zobrazí název dokumentu před názvem aplikace v názvu okna rámce. Například "Dokument - WordPad". Řetězce zobrazené na kartě Řetězce šablony dokumentu můžete zadat v Průvodci aplikací. Pokud potřebujete tuto možnost vypnout, `CWnd::PreCreateWindow` přepište členní funkci.|
+|FWS_SNAPTOBARS|Určuje velikost okna rámce, které obklopuje ovládací panel, když je v plovoucím okně, nikoli ukotvené do okna rámce. Tento styl změní velikost okna tak, aby se vešel na ovládací panel.|
 
-### <a name="message-box-modality"></a>Modální okno pro zprávy
+## <a name="list-box-styles"></a><a name="list-box-styles"></a>Styly seznamu
 
-|Styl|Popis|
-|-----------|-----------------|
-|MB_APPLMODAL|Před pokračováním v práci v aktuálním okně musí uživatel reagovat na okno se zprávou. Uživatel se ale může přesunout do oken dalších aplikací a pracovat v těchto oknech. Výchozí hodnota je MB_APPLMODAL, pokud není zadána žádná MB_SYSTEMMODAL ani MB_TASKMODAL.|
-|MB_SYSTEMMODAL|Všechny aplikace jsou pozastaveny, dokud uživatel neodpoví na okno se zprávou. Systémová – modální okna zpráv slouží ke sdělení uživatele o závažných, potenciálně škodlivých chybách, které vyžadují okamžitou pozornost a měly by se používat jenom zřídka.|
-|MB_TASKMODAL|Podobá se MB_APPLMODAL, ale není užitečná v rámci aplikace Microsoft Foundation Class. Tento příznak je vyhrazen pro volání aplikace nebo knihovny, která nemá k dispozici popisovač okna.|
-
-### <a name="message-box-icons"></a>Ikony zpráv – box
+Styly seznamu se vztahují na [objekty třídy CListBox.](../../mfc/reference/clistbox-class.md) Určete kombinaci stylů v parametru *dwStyle* [clistbox::Create](../../mfc/reference/clistbox-class.md#create). Další informace o stylech seznamů v systému Windows naleznete v [tématu Styly seznamů (Windows).](/windows/win32/Controls/list-box-styles)
 
 |Styl|Popis|
 |-----------|-----------------|
-|MB_ICONEXCLAMATION|V okně se zprávou se zobrazí ikona s vykřičníkem.|
-|MB_ICONINFORMATION|V okně se zprávou se zobrazí ikona, která se skládá z "I" v kruhu.|
-|MB_ICONQUESTION|V okně se zprávou se zobrazí ikona s otazníkem.|
-|MB_ICONSTOP|Ikona stop-Sign se zobrazí v okně se zprávou.|
+|LBS_DISABLENOSCROLL|V seznamu se zobrazí zakázaný svislý posuvník, pokud seznam neobsahuje dostatek položek k posouvání. Bez tohoto stylu je posuvník skrytý, pokud seznam neobsahuje dostatek položek.|
+|LBS_EXTENDEDSEL|Uživatel může vybrat více položek pomocí klávesy SHIFT a myši nebo speciálních kombinací kláves.|
+|LBS_HASSTRINGS|Určuje seznam losování vlastníka, který obsahuje položky skládající se z řetězců. Seznam zachovává paměť a ukazatele pro řetězce, takže aplikace může `GetText` použít členovou funkci k načtení textu pro určitou položku.|
+|LBS_MULTICOLUMN|Určuje vícesloupcový seznam, který se posouvá vodorovně. Členská `SetColumnWidth` funkce nastaví šířku sloupců.|
+|LBS_MULTIPLESEL|Výběr řetězce je přepnuto pokaždé, když uživatel klepne nebo poklekne na řetězec. Lze vybrat libovolný počet řetězců.|
+|LBS_NODATA|Určuje pole seznamu bez dat. Zadejte tento styl, pokud počet položek v seznamu přesáhne jeden tisíc. Pole bez datového seznamu musí mít také styl LBS_OWNERDRAWFIXED, ale nesmí mít styl LBS_SORT nebo LBS_HASSTRINGS.<br/><br/> Pole se seznamem bez dat se podobá seznamu nakresleného vlastníkem s tím rozdílem, že pro položku neobsahuje žádná data řetězce nebo bitmapy. Příkazy pro přidání, vložení nebo odstranění položky vždy ignorují všechna daná data položky; požadavky na nalezení řetězce v seznamu vždy nezdaří. Systém odešle zprávu WM_DRAWITEM do okna vlastníka, když musí být položka vylosována. Člen itemID `DRAWITEMSTRUCT` struktury předané se zprávou WM_DRAWITEM určuje číslo řádku položky, která má být nakreslena. Pole bez datových dat neodesílá zprávu WM_DELETEITEM.|
+|LBS_NOINTEGRALHEIGHT|Velikost seznamu je přesně taková velikost určená aplikací při vytváření seznamu. Systém Windows obvykle velikosti seznamu tak, aby seznam nezobrazuje částečné položky.|
+|LBS_NOREDRAW|Zobrazení seznamu není aktualizováno při provádění změn. Tento styl lze kdykoli změnit odesláním WM_SETREDRAW zprávy.|
+|LBS_NOSEL|Určuje, že seznam obsahuje položky, které lze zobrazit, ale nebudou vybrány.|
+|LBS_NOTIFY|Nadřazené okno obdrží vstupní zprávu vždy, když uživatel klepne nebo poklekne na řetězec.|
+|LBS_OWNERDRAWFIXED|Vlastník seznamu je zodpovědný za kreslení jeho obsahu; položky v seznamu mají stejnou výšku.|
+|LBS_OWNERDRAWVARIABLE|Vlastník seznamu je zodpovědný za kreslení jeho obsahu; položky v seznamu jsou proměnné výšky.|
+|LBS_SORT|Řetězce v seznamu jsou seřazeny abecedně.|
+|LBS_STANDARD|Řetězce v seznamu jsou seřazeny abecedně a nadřazené okno obdrží vstupní zprávu vždy, když uživatel klepne nebo poklekne na řetězec. Seznam obsahuje ohraničení na všech stranách.|
+|LBS_USETABSTOPS|Umožňuje seznamu rozpoznat a rozbalit znaky tabulátoru při kreslení jeho řetězců. Výchozí pozice tabulátoru jsou 32 dialogových jednotek. (Dialogová jednotka je vodorovná nebo svislá vzdálenost. Jedna vodorovná jednotka dialogu se rovná jedné čtvrtině aktuální jednotky základní šířky dialogu. Základní jednotky dialogu se počítají na základě výšky a šířky aktuálního systémového písma. Funkce `GetDialogBaseUnits` Systému Windows vrátí aktuální základní jednotky dialogového okna v obrazových bodech.) Tento styl by neměl být používán s LBS_OWNERDRAWFIXED.|
+|LBS_WANTKEYBOARDINPUT|Vlastník seznamu obdrží WM_VKEYTOITEM nebo WM_CHARTOITEM zprávy vždy, když uživatel stiskne klávesu, zatímco seznam má vstupní fokus. To umožňuje aplikaci provádět speciální zpracování na vstupu z klávesnice.|
 
-### <a name="message-box-default-buttons"></a>Okna se zprávou – výchozí tlačítka
+## <a name="message-box-styles"></a><a name="message-box-styles"></a>Styly okno se zprávou
 
-|Styl|Popis|
-|-----------|-----------------|
-|MB_DEFBUTTON1|První tlačítko je výchozí. Všimněte si, že první tlačítko je vždy výchozí, pokud není zadáno MB_DEFBUTTON2 nebo MB_DEFBUTTON3.|
-|MB_DEFBUTTON2|Druhým tlačítkem je výchozí hodnota.|
-|MB_DEFBUTTON3|Výchozím nastavením je třetí tlačítko.|
+Styly okno se zprávou platí pro [položky AfxMessageBox.](../../mfc/reference/cstring-formatting-and-message-box-display.md#afxmessagebox) Určete kombinaci stylů v parametru *nType* v aplikaci `AfxMessageBox`. Další informace o stylech oken zpráv v systému Windows naleznete v [tématu MessageBox Function (Windows)](/windows/win32/api/winuser/nf-winuser-messagebox).
 
-## <a name="scroll-bar-styles"></a>Styly posouvaných panelů
+K dispozici jsou následující styly okno se zprávami.
 
-Styly posuvníku se vztahují na objekty [třídy CScrollBar](../../mfc/reference/cscrollbar-class.md) . Určete kombinaci stylů v parametru *DwStyle* [CScrollBar:: Create](../../mfc/reference/cscrollbar-class.md#create). Další informace o stylech ovládacích prvků posuvníku v systému Windows najdete v tématu [styly ovládacích prvků posuvníku (Windows)](/windows/win32/Controls/scroll-bar-control-styles).
-
-|Styl|Popis|
-|-----------|-----------------|
-|SBS_BOTTOMALIGN|Používá se ve stylu SBS_HORZ. Dolní hrana posuvníku je zarovnána s dolním okrajem obdélníku zadaného ve `Create` členské funkci. Posuvník má výchozí výšku pro systémové posuvníky.|
-|SBS_HORZ|Určuje vodorovný posuvník. Pokud není zadán styl SBS_BOTTOMALIGN ani SBS_TOPALIGN, posuvník má výšku, šířku a pozici uvedenou ve `Create` členské funkci.|
-|SBS_LEFTALIGN|Používá se ve stylu SBS_VERT. Levý okraj posuvníku je zarovnán s levým okrajem obdélníku zadaného ve `Create` členské funkci. Posuvník má výchozí šířku pro systémové posuvníky.|
-|SBS_RIGHTALIGN|Používá se ve stylu SBS_VERT. Pravý okraj posuvníku je zarovnán s pravým okrajem obdélníku zadaného ve `Create` členské funkci. Posuvník má výchozí šířku pro systémové posuvníky.|
-|SBS_SIZEBOX|Určuje velikost pole. Pokud není zadán ani styl SBS_SIZEBOXBOTTOMRIGHTALIGN ani SBS_SIZEBOXTOPLEFTALIGN, má pole velikost výšku, šířku a pozici uvedenou ve `Create` členské funkci.|
-|SBS_SIZEBOXBOTTOMRIGHTALIGN|Používá se ve stylu SBS_SIZEBOX. Pravý dolní roh pole velikost je zarovnán v pravém dolním rohu obdélníku zadaného ve `Create` členské funkci. Pole velikost má výchozí velikost pro pole velikost systému.|
-|SBS_SIZEBOXTOPLEFTALIGN|Používá se ve stylu SBS_SIZEBOX. Levý horní roh pole velikost je zarovnán v levém horním rohu obdélníku zadaného ve `Create` členské funkci. Pole velikost má výchozí velikost pro pole velikost systému.|
-|SBS_SIZEGRIP|Stejné jako SBS_SIZEBOX, ale s vystouplým okrajem.|
-|SBS_TOPALIGN|Používá se ve stylu SBS_HORZ. Horní hrana posuvníku je zarovnána s horním okrajem obdélníku zadaného ve `Create` členské funkci. Posuvník má výchozí výšku pro systémové posuvníky.|
-|SBS_VERT|Určuje svislý posuvník. Pokud není zadán styl SBS_RIGHTALIGN ani SBS_LEFTALIGN, posuvník má výšku, šířku a pozici uvedenou ve `Create` členské funkci.|
-
-## <a name="static-styles"></a>Statické styly
-
-Statické styly se vztahují na objekty [třídy CStatic](../../mfc/reference/cstatic-class.md) . Určete kombinaci stylů v parametru *DwStyle* [CStatic:: Create](../../mfc/reference/cstatic-class.md#create). Další informace o stylech statických ovládacích prvků v systému Windows naleznete v tématu [styly statických ovládacích prvků (Windows)](/windows/win32/Controls/static-control-styles).
+### <a name="message-box-types"></a>Typy okno se zprávou
 
 |Styl|Popis|
 |-----------|-----------------|
-|SS_BITMAP|Určuje, že se má ve statickém ovládacím prvku zobrazovat rastrový obrázek. Daný text je název rastrového obrázku (nejedná se o název souboru), který je definován jinde v souboru prostředků. Styl ignoruje parametry nWidth a nHeight; ovládací prvek automaticky přizpůsobí velikost rastrového obrázku.|
-|SS_BLACKFRAME|Určuje rámeček s rámečkem vykresleným se stejnou barvou jako snímky okna. Výchozí hodnota je černá.|
-|SS_BLACKRECT|Určuje obdélník vyplněný barvou použitou k vykreslování rámečků okna. Výchozí hodnota je černá.|
-|SS_CENTER|Určí jednoduchý obdélník a zobrazí zadaný text na střed obdélníku. Text se naformátuje před tím, než se zobrazí. Slova, která by se rozšířila za konec řádku, se automaticky zabalí na začátek další středové čáry.|
-|SS_CENTERIMAGE|Určuje, že pokud je rastrový obrázek nebo ikona menší než klientská oblast statického ovládacího prvku, zbývající část klientské oblasti je vyplněna barvou pixelu v levém horním rohu rastrového obrázku nebo ikony. Pokud statický ovládací prvek obsahuje jeden řádek textu, je text zarovnán na střed v klientské oblasti ovládacího prvku.|
-|SS_ENDELLIPSIS|nebo SS_PATHELLIPSIS nahradí část daného řetězce se třemi tečkami, pokud je to nutné, aby výsledek odpovídal určenému obdélníku. <br /><br />Můžete zadat SS_END_ELLIPSIS pro nahrazení znaků na konci řetězce nebo SS_PATHELLIPSIS k nahrazení znaků uprostřed řetězce. Pokud řetězec obsahuje znaky zpětného lomítka (\\), SS_PATHELLIPSIS zachovává tolik textu za posledním zpětným lomítkem, než je to možné.|
-|SS_ENHMETAFILE|Určuje, že se ve statickém ovládacím prvku má zobrazit rozšířený metasoubor. Daný text je název metasouboru. Statický ovládací prvek Enhanced Metafile má pevnou velikost; metasoubor se škáluje tak, aby se vešel do klientské oblasti statického ovládacího prvku.|
-|SS_ETCHEDFRAME|Vykreslí rámec statického ovládacího prvku pomocí EDGE_ETCHED stylu okraje.|
-|SS_ETCHEDHORZ|Nakreslí horní a dolní okraj statického ovládacího prvku pomocí EDGE_ETCHED stylu okraje.|
-|SS_ETCHEDVERT|Nakreslí levý a pravý okraj statického ovládacího prvku pomocí EDGE_ETCHED stylu okraje.|
-|SS_GRAYFRAME|Určuje rámeček s rámečkem vykresleným se stejnou barvou jako na pozadí obrazovky (Desktop). Výchozí hodnota je šedá.|
+|MB_ABORTRETRYIGNORE|Okno se zprávou obsahuje tři tlačítka: Přerušit, Opakovat a Ignorovat.|
+|MB_OK|Okno se zprávou obsahuje jedno tlačítko: OK.|
+|MB_OKCANCEL|Okno se zprávou obsahuje dvě tlačítka: OK a Cancel.|
+|MB_RETRYCANCEL|Okno se zprávou obsahuje dvě tlačítka: Opakovat a Zrušit.|
+|MB_YESNO|Okno se zprávou obsahuje dvě tlačítka: Ano a Ne.|
+|MB_YESNOCANCEL|Okno se zprávou obsahuje tři tlačítka: Ano, Ne a Zrušit.|
+
+### <a name="message-box-modality"></a>Modalita okna se zprávou
+
+|Styl|Popis|
+|-----------|-----------------|
+|MB_APPLMODAL|Uživatel musí reagovat na okno se zprávou před pokračováním v práci v aktuálním okně. Uživatel však můžete přesunout do oken jiných aplikací a pracovat v těchto oknech. Výchozí hodnota je MB_APPLMODAL, pokud není zadána MB_SYSTEMMODAL ani MB_TASKMODAL.|
+|MB_SYSTEMMODAL|Všechny aplikace jsou pozastaveny, dokud uživatel neodpoví na okno se zprávou. Systémově modální okna se používají k upozornění uživatele na závažné, potenciálně škodlivé chyby, které vyžadují okamžitou pozornost a měly by být používány střídmě.|
+|MB_TASKMODAL|Podobné MB_APPLMODAL, ale není užitečné v rámci aplikace třídy Microsoft Foundation. Tento příznak je vyhrazen pro volající aplikaci nebo knihovnu, která nemá popisovač okna k dispozici.|
+
+### <a name="message-box-icons"></a>Ikony okna se zprávou
+
+|Styl|Popis|
+|-----------|-----------------|
+|MB_ICONEXCLAMATION|V poli se zprávou se zobrazí ikona vykřičníku.|
+|MB_ICONINFORMATION|V poli se zprávou se zobrazí ikona skládající se z "I" v kruhu.|
+|MB_ICONQUESTION|V poli se zprávou se zobrazí ikona otazníku.|
+|MB_ICONSTOP|V poli se zprávou se zobrazí ikona stop-sign.|
+
+### <a name="message-box-default-buttons"></a>Výchozí tlačítka okna se zprávou
+
+|Styl|Popis|
+|-----------|-----------------|
+|MB_DEFBUTTON1|První tlačítko je výchozí. Všimněte si, že první tlačítko je vždy výchozí, pokud není zadán MB_DEFBUTTON2 nebo MB_DEFBUTTON3.|
+|MB_DEFBUTTON2|Druhé tlačítko je výchozí.|
+|MB_DEFBUTTON3|Třetí tlačítko je výchozí.|
+
+## <a name="scroll-bar-styles"></a><a name="scroll-bar-styles"></a>Styly posuvníku
+
+Styly posuvníku platí pro objekty [třídy CScrollBar.](../../mfc/reference/cscrollbar-class.md) Určete kombinaci stylů v parametru *dwStyle* [cscrollbar::Create](../../mfc/reference/cscrollbar-class.md#create). Další informace o stylech ovládacího prvku posuvníku v systému Windows naleznete v [tématu Styly řízení posuvníku (Windows).](/windows/win32/Controls/scroll-bar-control-styles)
+
+|Styl|Popis|
+|-----------|-----------------|
+|SBS_BOTTOMALIGN|Používá se s SBS_HORZ stylem. Dolní okraj posuvníku je zarovnán s dolním `Create` okrajem obdélníku určeného v členské funkci. Posuvník má výchozí výšku pro systémové posuvníky.|
+|SBS_HORZ|Označuje vodorovný posuvník. Pokud není zadán SBS_BOTTOMALIGN ani SBS_TOPALIGN styl, posuvník má výšku, `Create` šířku a pozici uvedenou v členské funkci.|
+|SBS_LEFTALIGN|Používá se s SBS_VERT stylu. Levý okraj posuvníku je zarovnán s levým `Create` okrajem obdélníku určeného v členské funkci. Posuvník má výchozí šířku pro systémové posuvníky.|
+|SBS_RIGHTALIGN|Používá se s SBS_VERT stylu. Pravý okraj posuvníku je zarovnán s pravým okrajem obdélníku určeného `Create` v členské funkci. Posuvník má výchozí šířku pro systémové posuvníky.|
+|SBS_SIZEBOX|Označuje pole velikosti. Pokud není zadán a lokace SBS_SIZEBOXBOTTOMRIGHTALIGN ani SBS_SIZEBOXTOPLEFTALIGN, má pole velikosti `Create` výšku, šířku a polohu uvedenou v členské funkci.|
+|SBS_SIZEBOXBOTTOMRIGHTALIGN|Používá se ve stylu SBS_SIZEBOX. Pravý dolní roh rámečku velikosti je zarovnán s pravým dolním `Create` rohem obdélníku zadaným v členské funkci. Pole velikosti má výchozí velikost pro pole velikosti systému.|
+|SBS_SIZEBOXTOPLEFTALIGN|Používá se ve stylu SBS_SIZEBOX. Levý horní roh rámečku velikosti je zarovnán s levým horním `Create` rohem obdélníku zadaným v členské funkci. Pole velikosti má výchozí velikost pro pole velikosti systému.|
+|SBS_SIZEGRIP|Stejně jako SBS_SIZEBOX, ale se zvednutou hranou.|
+|SBS_TOPALIGN|Používá se s SBS_HORZ stylem. Horní okraj posuvníku je zarovnán s horním okrajem obdélníku určeného `Create` v členské funkci. Posuvník má výchozí výšku pro systémové posuvníky.|
+|SBS_VERT|Označuje svislý posuvník. Pokud není zadán styl SBS_RIGHTALIGN ani SBS_LEFTALIGN, posuvník má výšku, `Create` šířku a pozici uvedenou v členské funkci.|
+
+## <a name="static-styles"></a><a name="static-styles"></a>Statické styly
+
+Statické styly platí pro [objekty třídy CStatic.](../../mfc/reference/cstatic-class.md) Určete kombinaci stylů v parametru *dwStyle* [cstatic::Create](../../mfc/reference/cstatic-class.md#create). Další informace o stylech statického ovládacího prvku v systému Windows naleznete v [tématu Statické styly ovládacího prvku (Windows).](/windows/win32/Controls/static-control-styles)
+
+|Styl|Popis|
+|-----------|-----------------|
+|SS_BITMAP|Určuje, že bitmapa má být zobrazena ve statickém ovládacím prvku. Daný text je název bitmapy (nikoli názvu souboru) definované jinde v souboru prostředků. Styl ignoruje parametry nWidth a nHeight; ovládací prvek se automaticky zvětší tak, aby vyhovoval rastrové mapě.|
+|SS_BLACKFRAME|Určuje pole s nakresleným rámečkem se stejnou barvou jako rámečky oken. Výchozí hodnota je černá.|
+|SS_BLACKRECT|Určuje obdélník vyplněný barvou použitou k kreslení okenních rámečků. Výchozí hodnota je černá.|
+|SS_CENTER|Označuje jednoduchý obdélník a zobrazí daný text vystředěný v obdélníku. Text je před zobrazením formátován. Slova, která by přesahovaly konec řádku, jsou automaticky zalomena na začátek další vystředěné čáry.|
+|SS_CENTERIMAGE|Určuje, že pokud je bitmapa nebo ikona menší než klientská oblast statického ovládacího prvku, bude zbytek klientské oblasti vyplněn barvou obrazového bodu v levém horním rohu bitmapy nebo ikony. Pokud statický ovládací prvek obsahuje jeden řádek textu, text je vystředěn svisle v klientské oblasti ovládacího prvku.|
+|SS_ENDELLIPSIS|nebo SS_PATHELLIPSIS Nahradí část daného řetězce elipsami, pokud je to nutné, tak, aby výsledek se vejde do zadaného obdélníku. <br /><br />Můžete určit SS_END_ELLIPSIS nahradit znaky na konci řetězce nebo SS_PATHELLIPSIS nahradit znaky uprostřed řetězce. Pokud řetězec obsahuje znaky\\zpětného lomítka ( ), SS_PATHELLIPSIS zachová co největší část textu za posledním zpětným lomítkem.|
+|SS_ENHMETAFILE|Určuje rozšířený metasoubor, který má být zobrazen ve statickém ovládacím prvku. Daný text je název metasouboru. Vylepšený statický ovládací prvek metasouboru má pevnou velikost; velikost metasouboru se změní tak, aby odpovídal klientské oblasti statického ovládacího prvku.|
+|SS_ETCHEDFRAME|Nakreslí snímek statického ovládacího prvku pomocí stylu EDGE_ETCHED hrany.|
+|SS_ETCHEDHORZ|Nakreslí horní a dolní okraje statického ovládacího prvku pomocí stylu EDGE_ETCHED hrany.|
+|SS_ETCHEDVERT|Nakreslí levý a pravý okraj statického ovládacího prvku pomocí stylu EDGE_ETCHED hrany.|
+|SS_GRAYFRAME|Určuje pole s rámečkem nakresleným ve stejné barvě jako pozadí obrazovky (plocha). Výchozí hodnota je šedá.|
 |SS_GRAYRECT|Určuje obdélník vyplněný barvou použitou k vyplnění pozadí obrazovky. Výchozí hodnota je šedá.|
-|SS_ICON|Určuje ikonu, která se zobrazí v dialogovém okně. Daný text je název ikony (ne filename), která je definovaná jinde v souboru prostředků. Parametry *nWidth* a *nHeight* se ignorují. ikona automaticky přizpůsobí velikost.|
-|SS_LEFT|Určí jednoduchý obdélník a v obdélníku zobrazí zadaný textový zápis. Text se naformátuje před tím, než se zobrazí. Slova, která by se rozšířila za konec řádku, se automaticky zabalí na začátek dalšího řádku vlevo od zápisu.|
-|SS_LEFTNOWORDWRAP|Určí jednoduchý obdélník a v obdélníku zobrazí zadaný textový zápis. Karty jsou rozbaleny, ale slova nejsou zabalena. Text, který se rozšíří po konci řádku, je oříznutý.|
-|SS_NOPREFIX|Pokud tento styl není zadán, systém Windows bude interpretovat všechny znaky ampersandu (&) v textu ovládacího prvku tak, aby byly znaky předpony akcelerátoru. V tomto případě je ampersand odebrán a další znak v řetězci je podtržen. Pokud je statický ovládací prvek obsahující text, kde není tato funkce žádoucí, může být přidána SS_NOPREFIX. Tento styl statického ovládacího prvku může být součástí kteréhokoli z definovaných statických ovládacích prvků. Můžete zkombinovat SS_NOPREFIX s jinými styly pomocí bitového operátoru OR. Nejčastěji se používá v případě, že názvy souborů nebo jiné řetězce, které mohou obsahovat ampersand, musí být zobrazeny ve statickém ovládacím prvku v dialogovém okně.|
-|SS_NOTIFY|Pošle nadřazené okno STN_CLICKED, STN_DBLCLK, STN_DISABLE a STN_ENABLE zprávy s oznámením, když uživatel klikne nebo dvakrát klikne na ovládací prvek.|
-|SS_OWNERDRAW|Určuje, že vlastník statického ovládacího prvku zodpovídá za vykreslení ovládacího prvku. Okno vlastník obdrží zprávu WM_DRAWITEM, kdykoli je nutné vykreslit ovládací prvek.|
-|SS_REALSIZEIMAGE|Zabraňuje statickým ikonám nebo ovládacím prvkům rastrového obrázku (tj. statické ovládací prvky, které mají SS_ICON nebo SS_BITMAP styl), aby se změnily tak, jak jsou načteny nebo vykresleny. Pokud je ikona nebo rastrový obrázek větší než cílová oblast, obrázek se ořízne.|
-|SS_RIGHT|Určí jednoduchý obdélník a zobrazí zadaný text v obdélníku. Text se naformátuje před tím, než se zobrazí. Slova, která by rozšířila za konec řádku, se automaticky zabalí na začátek další pravé čáry pro vyprázdnění.|
-|SS_RIGHTJUST|Určuje, že se má v pravém dolním rohu statického ovládacího prvku s SS_BITMAP nebo SS_ICON styl zůstat opraven při změně velikosti ovládacího prvku. Pouze horní a levou stranu jsou upraveny tak, aby vyhovovaly novému rastrovému obrázku nebo ikoně.|
-|SS_SIMPLE|Určí jednoduchý obdélník a v obdélníku zobrazí jeden řádek s vyprázdněním textu. Řádek textu nelze žádným způsobem zkrátit ani změnit. (Nadřazené okno ovládacího prvku nebo dialogové okno nesmí zpracovat WM_CTLCOLORovou zprávu.)|
-|SS_SUNKEN|Nakreslí kolem statického ovládacího prvku poloviční vmáčknuté ohraničení.|
+|SS_ICON|Označuje ikonu zobrazenou v dialogovém okně. Daný text je název ikony (nikoli názvu souboru) definované jinde v souboru prostředků. Parametry *nWidth* a *nHeight* jsou ignorovány; ikona se automaticky změní.|
+|SS_LEFT|Označuje jednoduchý obdélník a zobrazí daný text zarovnaný vlevo v obdélníku. Text je před zobrazením formátován. Slova, která by přesahovaly konec řádku, jsou automaticky zalomena na začátek dalšího řádku zarovnaného doleva.|
+|SS_LEFTNOWORDWRAP|Označuje jednoduchý obdélník a zobrazí daný text zarovnaný vlevo v obdélníku. Karty jsou rozbaleny, ale slova nejsou zabalena. Text, který přesahuje konec řádku, je oříznut.|
+|SS_NOPREFIX|Pokud tento styl není zadán, bude systém Windows interpretovat všechny znaky ampersand (&) v textu ovládacího prvku jako znaky předpony akcelerátoru. V tomto případě ampersand je odebrán a další znak v řetězci je podtrženo. Pokud má statický ovládací prvek obsahovat text, ve kterém tato funkce není žádoucí, může být přidán SS_NOPREFIX. Tento styl statického řízení může být součástí libovolného definovaného statického ovládacího prvku. Můžete kombinovat SS_NOPREFIX s jinými styly pomocí bitového operátoru OR. Nejčastěji se používá, když názvy souborů nebo jiné řetězce, které mohou obsahovat ampersand je třeba zobrazit ve statickém ovládacím prvku v dialogovém okně.|
+|SS_NOTIFY|Odešle nadřazené okno STN_CLICKED, STN_DBLCLK, STN_DISABLE a STN_ENABLE oznámení, když uživatel klepne nebo poklekne na ovládací prvek.|
+|SS_OWNERDRAW|Určuje, že vlastník statického ovládacího prvku je zodpovědný za kreslení ovládacího prvku. Okno vlastníka obdrží zprávu WM_DRAWITEM vždy, když je třeba nakreslit ovládací prvek.|
+|SS_REALSIZEIMAGE|Zabrání velikosti statické ikony nebo bitmapového ovládacího prvku (tj. statických ovládacích prvků, které mají SS_ICON nebo SS_BITMAP stylu) při načítání nebo nakresleném. Pokud je ikona nebo bitmapa větší než cílová oblast, obraz se ořízne.|
+|SS_RIGHT|Označuje jednoduchý obdélník a zobrazí daný text zarovnaný vpravo v obdélníku. Text je před zobrazením formátován. Slova, která by přesahovaly konec řádku, jsou automaticky zalomena na začátek dalšího řádku zarovnaného do pravého řádku.|
+|SS_RIGHTJUST|Určuje, že pravý dolní roh statického ovládacího prvku se stylem SS_BITMAP nebo SS_ICON zůstane při změny velikosti ovládacího prvku pevný. Pouze horní a levá strana jsou upraveny tak, aby vyhovovaly nové rastrové mapě nebo ikoně.|
+|SS_SIMPLE|Označuje jednoduchý obdélník a zobrazí jeden řádek textu zarovnaného doleva v obdélníku. Řádek textu nelze žádným způsobem zkrátit ani změnit. (Nadřazené okno nebo dialogové okno ovládacího prvku nesmí zpracovat zprávu WM_CTLCOLOR.)|
+|SS_SUNKEN|Nakreslí polopotopené ohraničení kolem statického ovládacího prvku.|
 |SS_USERITEM|Určuje uživatelem definovanou položku.|
-|SS_WHITEFRAME|Určuje rámeček s rámečkem vykresleným se stejnou barvou jako pozadí okna. Výchozí hodnota je bílá.|
+|SS_WHITEFRAME|Určuje pole s nakresleným rámečkem se stejnou barvou jako pozadí okna. Výchozí hodnota je bílá.|
 |SS_WHITERECT|Určuje obdélník vyplněný barvou použitou k vyplnění pozadí okna. Výchozí hodnota je bílá.|
 |SS_WORDELLIPSIS|Zkrátí text, který se nevejde, a přidá tři tečky.|
 
-## <a name="window-styles"></a>Styly oken
+## <a name="window-styles"></a><a name="window-styles"></a>Styly oken
 
-Styly oken se vztahují na objekty [třídy CWnd](../../mfc/reference/cwnd-class.md) . Zadejte kombinaci stylů v parametru *DwStyle* [CWnd:: Create](../../mfc/reference/cwnd-class.md#create) nebo [CWnd:: CreateEx](../../mfc/reference/cwnd-class.md#createex). Další informace o stylech oken v systému Windows naleznete v tématu [styly oken (Windows)](/windows/win32/winmsg/window-styles).
+Styly oken platí pro [objekty třídy CWnd.](../../mfc/reference/cwnd-class.md) Určete kombinaci stylů v parametru *dwStyle* [cWnd::Create](../../mfc/reference/cwnd-class.md#create) nebo [CWnd::CreateEx](../../mfc/reference/cwnd-class.md#createex). Další informace o stylech oken v systému Windows naleznete v [tématu Styly oken (Windows).](/windows/win32/winmsg/window-styles)
 
 |Styl|Popis|
 |-----------|-----------------|
 |WS_BORDER|Vytvoří okno, které má ohraničení.|
-|WS_CAPTION|Vytvoří okno, které má záhlaví (implikuje WS_BORDER styl). Nelze použít se stylem WS_DLGFRAME.|
+|WS_CAPTION|Vytvoří okno, které má záhlaví (znamená WS_BORDER styl). Nelze použít s WS_DLGFRAME stylem.|
 |WS_CHILD|Vytvoří podřízené okno. Nelze použít se stylem WS_POPUP.|
-|WS_CHILDWINDOW|Stejné jako styl WS_CHILD.|
-|WS_CLIPCHILDREN|Při kreslení v nadřazeném okně vylučuje oblast obsazená podřízenými okny. Používá se při vytváření nadřazeného okna.|
-|WS_CLIPSIBLINGS|Vzájemně se přechází mezi dceřiná okna klipů; To znamená, že když konkrétní podřízené okno obdrží zprávu o malování, Styl WS_CLIPSIBLINGS ořízne všechny ostatní překryté podřízené okna z oblasti podřízeného okna, které se mají aktualizovat. (Pokud WS_CLIPSIBLINGS není zadáno a podřízená okna se překrývají, při vykreslování v klientské oblasti podřízeného okna je možné kreslit v oblasti klienta sousedícího podřízeného okna.) Pro použití pouze se stylem WS_CHILD.|
-|WS_DISABLED|Vytvoří okno, které je zpočátku zakázané.|
+|WS_CHILDWINDOW|Stejně jako WS_CHILD styl.|
+|WS_CLIPCHILDREN|Vyloučí oblast obsazenou podřízenými okny při kreslení v nadřazeném okně. Používá se při vytváření nadřazeného okna.|
+|WS_CLIPSIBLINGS|Ořízne podřízená okna vzhledem k sobě; To znamená, že když určité podřízené okno obdrží zprávu o malování, WS_CLIPSIBLINGS styl ořízne všechna ostatní překrývající se podřízená okna z oblasti podřízeného okna, které má být aktualizováno. (Pokud WS_CLIPSIBLINGS není uveden a podřízená okna překrývají, při kreslení v rámci klientské oblasti podřízené okno, je možné kreslit v rámci klientské oblasti sousední podřízené okno.) Pouze pro použití s WS_CHILD stylem.|
+|WS_DISABLED|Vytvoří okno, které je zpočátku zakázáno.|
 |WS_DLGFRAME|Vytvoří okno s dvojitým ohraničením, ale bez názvu.|
-|WS_GROUP|Určuje první ovládací prvek skupiny ovládacích prvků, ve kterém může uživatel přejít z jednoho ovládacího prvku na další pomocí kláves se šipkami. Všechny ovládací prvky definované se stylem WS_GROUP FALSE po prvním ovládacím prvku, který patří do stejné skupiny. Další ovládací prvek se stylem WS_GROUP spustí další skupinu (tj. jednu skupinu končí na začátku, kde začíná další).|
-|WS_HSCROLL|Vytvoří okno, které má vodorovný posuvník.|
-|WS_ICONIC|Vytvoří okno, které je zpočátku minimalizováno. Stejné jako styl WS_MINIMIZE.|
-|WS_MAXIMIZE|Vytvoří okno s maximální velikostí.|
-|WS_MAXIMIZEBOX|Vytvoří okno, které má tlačítko maximalizovat.|
-|WS_MINIMIZE|Vytvoří okno, které je zpočátku minimalizováno. Pro použití pouze se stylem WS_OVERLAPPED.|
-|WS_MINIMIZEBOX|Vytvoří okno, které má tlačítko minimalizovat.|
-|WS_OVERLAPPED|Vytvoří Překryté okno. Překryté okno má obvykle titulek a ohraničení.|
-|WS_OVERLAPPEDWINDOW|Vytvoří Překryté okno se styly WS_OVERLAPPED, WS_CAPTION, WS_SYSMENU, WS_THICKFRAME, WS_MINIMIZEBOX a WS_MAXIMIZEBOX.|
-|WS_POPUP|Vytvoří automaticky otevírané okno. Nelze použít se stylem WS_CHILD.|
-|WS_POPUPWINDOW|Vytvoří automaticky otevírané okno s styly WS_BORDER, WS_POPUP a WS_SYSMENU. Styl WS_CAPTION musí být kombinován se stylem WS_POPUPWINDOW, aby byla nabídka ovládacího prvku viditelná.|
-|WS_SIZEBOX|Vytvoří okno, které má ohraničení změny velikosti. Stejné jako styl WS_THICKFRAME.|
-|WS_SYSMENU|Vytvoří okno, které má v záhlaví pole ovládací nabídky. Používá se jenom pro Windows s záhlavími.|
-|WS_TABSTOP|Určuje jeden z libovolných ovládacích prvků, pomocí kterého může uživatel přesunout pomocí klávesy TAB. Klávesa TAB přesune uživatele k dalšímu ovládacímu prvku určenému stylem WS_TABSTOP.|
-|WS_THICKFRAME|Vytvoří okno se silným rámečkem, který lze použít pro velikost okna.|
-|WS_TILED|Vytvoří Překryté okno. Překryté okno má záhlaví a ohraničení. Stejné jako styl WS_OVERLAPPED.|
-|WS_TILEDWINDOW|Vytvoří Překryté okno se styly WS_OVERLAPPED, WS_CAPTION, WS_SYSMENU, WS_THICKFRAME, WS_MINIMIZEBOX a WS_MAXIMIZEBOX. Stejné jako styl WS_OVERLAPPEDWINDOW.|
+|WS_GROUP|Určuje první ovládací prvek skupiny ovládacích prvků, ve kterém může uživatel přesunout z jednoho ovládacího prvku na další pomocí kláves se šipkami. Všechny ovládací prvky definované s WS_GROUP stylem FALSE po prvním ovládacím prvku patří do stejné skupiny. Další ovládací prvek se stylem WS_GROUP spustí další skupinu (to znamená, že jedna skupina končí tam, kde začíná další).|
+|WS_HSCROLL|Vytvoří okno s vodorovným posuvníkem.|
+|WS_ICONIC|Vytvoří okno, které je zpočátku minimalizováno. Stejně jako WS_MINIMIZE styl.|
+|WS_MAXIMIZE|Vytvoří okno maximální velikosti.|
+|WS_MAXIMIZEBOX|Vytvoří okno, které má tlačítko Maximalizovat.|
+|WS_MINIMIZE|Vytvoří okno, které je zpočátku minimalizováno. Pouze pro použití s WS_OVERLAPPED stylem.|
+|WS_MINIMIZEBOX|Vytvoří okno, které má minimalizovat tlačítko.|
+|WS_OVERLAPPED|Vytvoří překrývající se okno. Překrývající se okno má obvykle titulek a ohraničení.|
+|WS_OVERLAPPEDWINDOW|Vytvoří překrývající se okno se styly WS_OVERLAPPED, WS_CAPTION, WS_SYSMENU, WS_THICKFRAME, WS_MINIMIZEBOX a WS_MAXIMIZEBOX.|
+|WS_POPUP|Vytvoří automaticky otevírané okno. Nelze použít s WS_CHILD stylem.|
+|WS_POPUPWINDOW|Vytvoří automaticky otevírané okno se styly WS_BORDER, WS_POPUP a WS_SYSMENU. Styl WS_CAPTION musí být kombinován s WS_POPUPWINDOW stylem, aby byla nabídka Ovládací prvek viditelná.|
+|WS_SIZEBOX|Vytvoří okno, které má ohraničení velikosti. Stejně jako WS_THICKFRAME styl.|
+|WS_SYSMENU|Vytvoří okno, které má v záhlaví pole nabídky Ovládací prvek. Používá se pouze pro okna s záhlavím.|
+|WS_TABSTOP|Určuje jeden z libovolného počtu ovládacích prvků, kterými se uživatel může pohybovat pomocí klávesy TAB. Klávesa TAB přesune uživatele na další ovládací prvek určený WS_TABSTOP stylu.|
+|WS_THICKFRAME|Vytvoří okno s tlustým rámečkem, který lze použít k velikosti okna.|
+|WS_TILED|Vytvoří překrývající se okno. Překrývající se okno má záhlaví a ohraničení. Stejně jako WS_OVERLAPPED styl.|
+|WS_TILEDWINDOW|Vytvoří překrývající se okno se styly WS_OVERLAPPED, WS_CAPTION, WS_SYSMENU, WS_THICKFRAME, WS_MINIMIZEBOX a WS_MAXIMIZEBOX. Stejně jako WS_OVERLAPPEDWINDOW styl.|
 |WS_VISIBLE|Vytvoří okno, které je zpočátku viditelné.|
-|WS_VSCROLL|Vytvoří okno, které má svislý posuvník.|
+|WS_VSCROLL|Vytvoří okno se svislým posuvníkem.|
 
-## <a name="extended-window-styles"></a>Rozšířené styly oken
+## <a name="extended-window-styles"></a><a name="extended-window-styles"></a>Rozšířené styly oken
 
-Rozšířené styly oken se vztahují na objekty [třídy CWnd](../../mfc/reference/cwnd-class.md) . Zadejte kombinaci stylů v parametru *DwExStyle* [CWnd:: CreateEx](../../mfc/reference/cwnd-class.md#createex). Další informace o rozšířených stylech oken v systému Windows naleznete v tématu [Rozšířené styly oken (Windows)](/windows/win32/winmsg/extended-window-styles).
+Rozšířené styly oken platí pro [objekty třídy CWnd.](../../mfc/reference/cwnd-class.md) Zadejte kombinaci stylů v parametru *dwExStyle* [cWnd::CreateEx](../../mfc/reference/cwnd-class.md#createex). Další informace o rozšířených stylech oken v systému Windows naleznete v [tématu Extended Window Styles (Windows)](/windows/win32/winmsg/extended-window-styles).
 
 |Styl|Popis|
 |-----------|-----------------|
-|WS_EX_ACCEPTFILES|Určuje, že okno vytvořené s tímto stylem přijímá soubory přetahování.|
-|WS_EX_APPWINDOW|Vynutí zobrazení okna nejvyšší úrovně na hlavním panelu, když je okno viditelné.|
-|WS_EX_CLIENTEDGE|Určuje, že okno má 3D vzhled, tj. ohraničení s vmáčknutým okrajem.|
-|WS_EX_CONTEXTHELP|Obsahuje otazník v záhlaví okna. Pokud uživatel na tento otazník klikne, změní se kurzor na ukazatel s otazníkem. Jestliže pak uživatel klikne na podřízené okno, obdrží toto okno zprávu WM_HELP.|
-|WS_EX_CONTROLPARENT|Povolí uživateli navigaci mezi podřízenými okny okna pomocí klávesy TAB.|
-|WS_EX_DLGMODALFRAME|Určuje okno s dvojitým ohraničením, které může být (volitelně) vytvořeno s záhlavím při zadání příznaku WS_CAPTION stylu v parametru *dwStyle* .|
-|WS_EX_LAYERED|Okno je [vrstvené okno](/windows/win32/winmsg/window-features). Tento styl nelze použít, pokud má okno [styl třídy](/windows/win32/winmsg/about-window-classes) buď CS_OWNDC, nebo CS_CLASSDC. Systém Microsoft Windows 8 však podporuje styl WS_EX_LAYERED pro podřízená okna, kde předchozí verze systému Windows podporují pouze okna nejvyšší úrovně.|
-|WS_EX_LEFT|Poskytuje obecné vlastnosti zarovnané na levou stranu okna. Toto nastavení je výchozí.|
-|WS_EX_LEFTSCROLLBAR|Umístí svislý posuvník vlevo od klientské oblasti.|
-|WS_EX_LTRREADING|Zobrazí text okna s použitím vlastností pořadí čtení zleva doprava. Toto nastavení je výchozí.|
+|WS_EX_ACCEPTFILES|Určuje, že okno vytvořené tímto stylem přijímá soubory přetažení.|
+|WS_EX_APPWINDOW|Vynutí okno nejvyšší úrovně na hlavní panel, když je okno viditelné.|
+|WS_EX_CLIENTEDGE|Určuje, že okno má 3D vzhled , tedy ohraničení se zapadlou hranou.|
+|WS_EX_CONTEXTHELP|Obsahuje otazník v záhlaví okna. Pokud uživatel na tento otazník klikne, změní se kurzor na ukazatel s otazníkem. Pokud uživatel klepne na podřízené okno, dítě obdrží zprávu WM_HELP.|
+|WS_EX_CONTROLPARENT|Umožňuje uživateli procházet mezi podřízenými okny okna pomocí klávesy TAB.|
+|WS_EX_DLGMODALFRAME|Označuje okno s dvojitým ohraničením, které může být (volitelně) vytvořeno s záhlavím, když zadáte příznak stylu WS_CAPTION v parametru *dwStyle.*|
+|WS_EX_LAYERED|Okno je [vrstvené okno](/windows/win32/winmsg/window-features). Tento styl nelze použít, pokud má okno [styl třídy](/windows/win32/winmsg/about-window-classes) CS_OWNDC nebo CS_CLASSDC. Systém Microsoft Windows 8 však podporuje styl WS_EX_LAYERED pro podřízená okna, kde předchozí verze systému Windows podporují pouze pro okna nejvyšší úrovně.|
+|WS_EX_LEFT|Poskytuje okno obecné zarovnané zleva vlastnosti. Toto nastavení je výchozí.|
+|WS_EX_LEFTSCROLLBAR|Umístí svislý posuvník nalevo od klientské oblasti.|
+|WS_EX_LTRREADING|Zobrazí text okna pomocí vlastností pořadí čtení zleva doprava. Toto nastavení je výchozí.|
 |WS_EX_MDICHILD|Vytvoří podřízené okno MDI.|
-|WS_EX_NOPARENTNOTIFY|Určuje, že podřízené okno vytvořené s tímto stylem nepošle zprávu WM_PARENTNOTIFY do nadřazeného okna při vytvoření nebo zničení podřízeného okna.|
-|WS_EX_OVERLAPPEDWINDOW|Kombinuje styly WS_EX_CLIENTEDGE a WS_EX_WINDOWEDGE.|
+|WS_EX_NOPARENTNOTIFY|Určuje, že podřízené okno vytvořené tímto stylem neodešle zprávu WM_PARENTNOTIFY do nadřazeného okna při vytvoření nebo zničení podřízeného okna.|
+|WS_EX_OVERLAPPEDWINDOW|Kombinuje styly WS_EX_CLIENTEDGE a WS_EX_WINDOWEDGE|
 |WS_EX_PALETTEWINDOW|Kombinuje styly WS_EX_WINDOWEDGE a WS_EX_TOPMOST.|
-|WS_EX_RIGHT|Poskytuje obecné vlastnosti zarovnané na okno. Závisí na třídě okna.|
-|WS_EX_RIGHTSCROLLBAR|Umístí svislý posuvník (Pokud je k dispozici) napravo od klientské oblasti. Toto nastavení je výchozí.|
-|WS_EX_RTLREADING|Zobrazí text okna s použitím vlastností pořadí čtení zprava doleva.|
-|WS_EX_STATICEDGE|Vytvoří okno se stylem trojrozměrného ohraničení, které má být použito pro položky, které nepřijímají vstup uživatele.|
-|WS_EX_TOOLWINDOW|Vytvoří panel nástrojů, což je okno určené k použití jako plovoucího panelu nástrojů. Panel nástrojů má záhlaví kratší než běžné záhlaví a titulek okna je vykreslen menším písmem. Panel nástrojů se nezobrazuje na hlavním panelu nebo v okně zobrazeném při stisknutí klávesové kombinace ALT+TAB.|
-|WS_EX_TOPMOST|Určuje, že okno vytvořené s tímto stylem by mělo být umístěno nad všechna nevrchní okna a zůstane nad nimi, i když je okno deaktivováno. Tento atribut může aplikace přidávat nebo odebírat pomocí členské funkce `SetWindowPos`.|
-|WS_EX_TRANSPARENT|Určuje, že okno vytvořené s tímto stylem bude transparentní. To znamená, že žádné okno není umístěním pod toto okno zakryto. Okno vytvořené s tímto stylem přijímá WM_PAINT zpráv až po aktualizaci všech oken na stejné úrovni.|
-|WS_EX_WINDOWEDGE|Určuje, že okno má ohraničení s vystouplým okrajem.|
+|WS_EX_RIGHT|Poskytuje okno obecné vlastnosti zarovnané doprava. Závisí na třídě okna.|
+|WS_EX_RIGHTSCROLLBAR|Umístí svislý posuvník (pokud je k dispozici) vpravo od klientské oblasti. Toto nastavení je výchozí.|
+|WS_EX_RTLREADING|Zobrazí text okna pomocí vlastností pořadí čtení zprava doleva.|
+|WS_EX_STATICEDGE|Vytvoří okno s trojrozměrným stylem ohraničení, které má být použito pro položky, které nepřijímají vstup uživatele.|
+|WS_EX_TOOLWINDOW|Vytvoří okno nástroje, které je okno určené k použití jako plovoucí panel nástrojů. Panel nástrojů má záhlaví kratší než běžné záhlaví a titulek okna je vykreslen menším písmem. Panel nástrojů se nezobrazuje na hlavním panelu nebo v okně zobrazeném při stisknutí klávesové kombinace ALT+TAB.|
+|WS_EX_TOPMOST|Určuje, že okno vytvořené pomocí tohoto stylu by mělo být umístěno nad všemi nenejvyššími okny a zůstat nad nimi i v případě, že je okno deaktivováno. Tento atribut může aplikace přidávat nebo odebírat pomocí členské funkce `SetWindowPos`.|
+|WS_EX_TRANSPARENT|Určuje, že okno vytvořené tímto stylem má být průhledné. To znamená, že žádné okno není umístěním pod toto okno zakryto. Okno vytvořené pomocí tohoto stylu obdrží WM_PAINT zprávy pouze po aktualizaci všech oken na stejné úrovni pod ním.|
+|WS_EX_WINDOWEDGE|Určuje, že okno má ohraničení se zvednutou hranou.|
 
 ## <a name="see-also"></a>Viz také
 
-[MFC – Přehled třídy](../../mfc/class-library-overview.md)<br/>
-[CWnd:: Create](../../mfc/reference/cwnd-class.md#create)<br/>
-[CWnd:: CreateEx](../../mfc/reference/cwnd-class.md#createex)<br/>
-[CEdit:: Create](../../mfc/reference/cedit-class.md#create)<br/>
-[CScrollBar:: Create](../../mfc/reference/cscrollbar-class.md#create)<br/>
-[CStatic:: Create](../../mfc/reference/cstatic-class.md#create)<br/>
+[Přehled třídknihovny MFC](../../mfc/class-library-overview.md)<br/>
+[CWnd::Vytvořit](../../mfc/reference/cwnd-class.md#create)<br/>
+[CWnd::CreateEx](../../mfc/reference/cwnd-class.md#createex)<br/>
+[CEdit::Vytvořit](../../mfc/reference/cedit-class.md#create)<br/>
+[CScrollBar::Vytvořit](../../mfc/reference/cscrollbar-class.md#create)<br/>
+[CStatic::Vytvořit](../../mfc/reference/cstatic-class.md#create)<br/>
 [AfxMessageBox](../../mfc/reference/cstring-formatting-and-message-box-display.md#afxmessagebox)<br/>
-[CreateWindow](/windows/win32/api/winuser/nf-winuser-createwindoww)<br/>
-[CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw)<br/>
+[Createwindow](/windows/win32/api/winuser/nf-winuser-createwindoww)<br/>
+[Createwindowex](/windows/win32/api/winuser/nf-winuser-createwindowexw)<br/>
 [Styly tlačítek (Windows)](/windows/win32/Controls/button-styles)<br/>
 [Styly pole se seznamem (Windows)](/windows/win32/Controls/combo-box-styles)<br/>
 [Upravit styly ovládacích prvků (Windows)](/windows/win32/Controls/edit-control-styles)<br/>
-[Styly pole se seznamem (Windows)](/windows/win32/Controls/list-box-styles)<br/>
-[MessageBox – funkce (Windows)](/windows/win32/api/winuser/nf-winuser-messagebox)<br/>
+[Styly seznamu (Windows)](/windows/win32/Controls/list-box-styles)<br/>
+[Funkce MessageBox (Windows)](/windows/win32/api/winuser/nf-winuser-messagebox)<br/>
 [Styly ovládacího prvku posuvníku (Windows)](/windows/win32/Controls/scroll-bar-control-styles)<br/>
-[Statické styly ovládacích prvků (Windows)](/windows/win32/Controls/static-control-styles)<br/>
+[Styly statického ovládacího prvku (Windows)](/windows/win32/Controls/static-control-styles)<br/>
 [Styly oken (Windows)](/windows/win32/winmsg/window-styles)<br/>
 [Rozšířené styly oken (Windows)](/windows/win32/winmsg/extended-window-styles)

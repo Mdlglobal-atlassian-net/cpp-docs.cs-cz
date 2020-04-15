@@ -45,83 +45,83 @@ helpviewer_keywords:
 - RFX (record field exchange), data exchange functions [MFC]
 - RFX (record field exchange)
 ms.assetid: 6e4c5c1c-acb7-4c18-bf51-bf7959a696cd
-ms.openlocfilehash: 491b00fe65634acf7c8805dd471fa6e3cc62acf0
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: bfd3ba64a33547b8a27e0f3bc896f39c94486464
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79421231"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372980"
 ---
 # <a name="record-field-exchange-functions"></a>Funkce výměny polí v záznamu
 
-Toto téma obsahuje seznam funkcí výměny pole záznamu (RFX, Bulk RFX a DFX), které slouží k automatizaci přenosu dat mezi objektem sady záznamů a jeho zdrojem dat a k provádění dalších operací s daty.
+Toto téma obsahuje seznam funkcí Exchange pole záznamu (RFX, Hromadné RFX a DFX) slouží k automatizaci přenosu dat mezi objektem sady záznamů a jeho zdroj dat a provádět další operace s daty.
 
-Pokud používáte třídy založené na rozhraní ODBC a jste implementovali hromadné načítání řádků, je nutné ručně přepsat `DoBulkFieldExchange` členské funkce `CRecordset` voláním funkce Bulk RFX pro každý datový člen odpovídající sloupci zdroje dat.
+Pokud používáte třídy založené na rozhraní ODBC a implementovali jste hromadné `DoBulkFieldExchange` načítání řádků, musíte ručně přepsat členskou `CRecordset` funkci voláním funkcí Hromadné RFX pro každý datový člen odpovídající sloupci zdroje dat.
 
-Pokud jste neimplementovali hromadné načítání řádků do tříd založených na rozhraní ODBC nebo pokud používáte třídy založené na rozhraní DAO (zastaralé), pak ClassWizard `DoFieldExchange` přepíše členskou funkci `CRecordset` nebo `CDaoRecordset` voláním funkce RFX (pro třídy rozhraní ODBC) nebo funkcí DFX (pro třídy DAO) pro každý datový člen pole v sadě záznamů.
+Pokud jste neimplementovali hromadné načítání řádků ve třídách založených na rozhraní ODBC nebo pokud používáte třídy založené `DoFieldExchange` na `CRecordset` DAO (zastaralé), pak ClassWizard přepíše členskou funkci nebo `CDaoRecordset` voláním funkcí RFX (pro třídy ODBC) nebo funkcí DFX (pro třídy DAO) pro každý datový člen pole ve vaší sadě záznamů.
 
-Výměna pole záznamu funkce přenáší data pokaždé, když rozhraní volá `DoFieldExchange` nebo `DoBulkFieldExchange`. Každá funkce přenáší konkrétní datový typ.
+Funkce výměny pole záznamu přenášejí `DoFieldExchange` data `DoBulkFieldExchange`při každém volání rozhraní nebo . Každá funkce přenáší určitý datový typ.
 
-Další informace o tom, jak se tyto funkce používají, najdete v článcích [Výměna pole záznamu: Jak funguje RFX (ODBC)](../../data/odbc/record-field-exchange-how-rfx-works.md). Další informace o hromadném načítání řádků naleznete v článku [Sada záznamů: hromadné načítání záznamů (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+Další informace o tom, jak se tyto funkce používají, naleznete v článcích [Výměna polí záznamu: Jak funguje RFX (ODBC).](../../data/odbc/record-field-exchange-how-rfx-works.md) Další informace o hromadném načítání řádků naleznete v článku [Sada záznamů: Hromadné načítání záznamů (ODBC).](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)
 
-Pro sloupce dat, která lze svázat dynamicky, můžete také volat funkce RFX nebo DFX sami, jak je vysvětleno v článcích [Sada záznamů: dynamické vazby datových sloupců (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md). Navíc můžete napsat vlastní rutiny RFX nebo DFX, jak je vysvětleno v technické poznámce [43](../../mfc/tn043-rfx-routines.md) (pro rozhraní ODBC) a technickou poznámku [53](../../mfc/tn053-custom-dfx-routines-for-dao-database-classes.md) (pro DAO).
+Pro sloupce dat, které svážete dynamicky, můžete také volat funkce RFX nebo DFX sami, jak je vysvětleno v článcích [Recordset: Dynamicky vazebné datové sloupce (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md). Kromě toho můžete napsat vlastní rutiny RFX nebo DFX, jak je vysvětleno v technické poznámce [43](../../mfc/tn043-rfx-routines.md) (pro ROZHRANÍ ODBC) a technické poznámce [53](../../mfc/tn053-custom-dfx-routines-for-dao-database-classes.md) (pro DAO).
 
-Příklad RFX a hromadné funkce RFX, jak se zobrazí ve funkcích `DoFieldExchange` a `DoBulkFieldExchange`, naleznete v tématu [RFX_Text](#rfx_text) a [RFX_Text_Bulk] #rfx_text_bulk). Funkce DFX jsou velmi podobné funkcím RFX.
+Příklad funkcí RFX a Bulk RFX tak, `DoFieldExchange` `DoBulkFieldExchange` jak jsou uvedeny ve funkcích a, naleznete v [tématu RFX_Text](#rfx_text) a [RFX_Text_Bulk]#rfx_text_bulk). Funkce DFX jsou velmi podobné funkcím RFX.
 
-### <a name="rfx-functions-odbc"></a>RFX – funkce (ODBC)
+### <a name="rfx-functions-odbc"></a>Funkce RFX (ODBC)
 
 |||
 |-|-|
-|[RFX_Binary](#rfx_binary)|Převede pole bajtů typu [CByteArray](cbytearray-class.md).|
+|[RFX_Binary](#rfx_binary)|Přenáší pole bajtů typu [CByteArray](cbytearray-class.md).|
 |[RFX_Bool](#rfx_bool)|Přenáší logická data.|
-|[RFX_Byte](#rfx_byte)|Převede jeden bajt dat.|
-|[RFX_Date](#rfx_date)|Převede data času a data pomocí [CTime –](../../atl-mfc-shared/reference/ctime-class.md) nebo TIMESTAMP_STRUCT.|
-|[RFX_Double](#rfx_double)|Převádí data typu Double-Precision.|
-|[RFX_Int](#rfx_int)|Převádí celočíselná data.|
-|[RFX_Long](#rfx_long)|Převede dlouhá celočíselná data.|
-|[RFX_LongBinary](#rfx_longbinary)|Přenáší data binárního rozsáhlého objektu (BLOB) s objektem třídy [CLongBinary –](clongbinary-class.md) .|
-|[RFX_Single](#rfx_single)|Převede data typu float.|
-|[RFX_Text](#rfx_text)|Přenáší řetězcová data.|
+|[RFX_Byte](#rfx_byte)|Přenáší jeden bajt dat.|
+|[RFX_Date](#rfx_date)|Přenáší data času a data pomocí [CTime](../../atl-mfc-shared/reference/ctime-class.md) nebo TIMESTAMP_STRUCT.|
+|[RFX_Double](#rfx_double)|Přenáší floatová data s dvojitou přesností.|
+|[RFX_Int](#rfx_int)|Přenáší celá data.|
+|[RFX_Long](#rfx_long)|Přenáší dlouhá data celé číslo.|
+|[RFX_LongBinary](#rfx_longbinary)|Přenáší binární data velkých objektů (BLOB) s objektem třídy [CLongBinary.](clongbinary-class.md)|
+|[RFX_Single](#rfx_single)|Přenáší plovoucí data.|
+|[RFX_Text](#rfx_text)|Přenáší data řetězce.|
 
 ### <a name="bulk-rfx-functions-odbc"></a>Funkce hromadného RFX (ODBC)
 
 |||
 |-|-|
-|[RFX_Binary_Bulk](#rfx_binary_bulk)|Převede pole dat bajtů.|
-|[RFX_Bool_Bulk](#rfx_bool_bulk)|Převede pole logických dat.|
-|[RFX_Byte_Bulk](#rfx_byte_bulk)|Převede pole s jedním počtem bajtů.|
-|[RFX_Date_Bulk](#rfx_date_bulk)|Převede pole dat typu TIMESTAMP_STRUCT.|
-|[RFX_Double_Bulk](#rfx_double_bulk)|Převádí pole dat s dvojitou přesností a plovoucí desetinnou čárkou.|
-|[RFX_Int_Bulk](#rfx_int_bulk)|Převede pole celočíselných dat.|
-|[RFX_Long_Bulk](#rfx_long_bulk)|Převede pole dlouhých celočíselných dat.|
-|[RFX_Single_Bulk](#rfx_single_bulk)|Převede pole dat s plovoucí desetinnou čárkou.|
-|[RFX_Text_Bulk](#rfx_text_bulk)|Převede pole dat typu typem LPStr.|
+|[RFX_Binary_Bulk](#rfx_binary_bulk)|Přenáší pole bajtových dat.|
+|[RFX_Bool_Bulk](#rfx_bool_bulk)|Přenáší pole logických dat.|
+|[RFX_Byte_Bulk](#rfx_byte_bulk)|Přenáší pole jednoho bajtu.|
+|[RFX_Date_Bulk](#rfx_date_bulk)|Přenáší pole dat typu TIMESTAMP_STRUCT.|
+|[RFX_Double_Bulk](#rfx_double_bulk)|Přenáší pole s dvojitou přesností dat s plovoucí desetinnou desetinnou tázkem.|
+|[RFX_Int_Bulk](#rfx_int_bulk)|Přenáší pole celá data.|
+|[RFX_Long_Bulk](#rfx_long_bulk)|Přenáší pole dlouhých celých dat.|
+|[RFX_Single_Bulk](#rfx_single_bulk)|Přenáší pole dat s plovoucí desetinnou desetinnou tázkem.|
+|[RFX_Text_Bulk](#rfx_text_bulk)|Přenáší pole dat typu LPSTR.|
 
-### <a name="dfx-functions-dao"></a>DFX – funkce (DAO)
+### <a name="dfx-functions-dao"></a>Funkce DFX (DAO)
 
 |||
 |-|-|
-|[DFX_Binary](#dfx_binary)|Převede pole bajtů typu [CByteArray](cbytearray-class.md).|
+|[DFX_Binary](#dfx_binary)|Přenáší pole bajtů typu [CByteArray](cbytearray-class.md).|
 |[DFX_Bool](#dfx_bool)|Přenáší logická data.|
-|[DFX_Byte](#dfx_byte)|Převede jeden bajt dat.|
-|[DFX_Currency](#dfx_currency)|Převádí data měny typu [COleCurrency](colecurrency-class.md).|
-|[DFX_DateTime](#dfx_datetime)|Převede data času a data typu [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md).|
-|[DFX_Double](#dfx_double)|Převádí data typu Double-Precision.|
-|[DFX_Long](#dfx_long)|Převede dlouhá celočíselná data.|
-|[DFX_LongBinary](#dfx_longbinary)|Přenáší data binárního rozsáhlého objektu (BLOB) s objektem třídy `CLongBinary`. Pro rozhraní DAO doporučujeme místo toho použít [DFX_Binary](#dfx_binary) .|
-|[DFX_Short](#dfx_short)|Převádí krátká celočíselná data.|
-|[DFX_Single](#dfx_single)|Převede data typu float.|
-|[DFX_Text](#dfx_text)|Přenáší řetězcová data.|
+|[DFX_Byte](#dfx_byte)|Přenáší jeden bajt dat.|
+|[DFX_Currency](#dfx_currency)|Přenáší data měny typu [COleCurrency](colecurrency-class.md).|
+|[DFX_DateTime](#dfx_datetime)|Přenáší data času a data typu [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md).|
+|[DFX_Double](#dfx_double)|Přenáší floatová data s dvojitou přesností.|
+|[DFX_Long](#dfx_long)|Přenáší dlouhá data celé číslo.|
+|[DFX_LongBinary](#dfx_longbinary)|Přenáší binární data velkých objektů (BLOB) `CLongBinary` s objektem třídy. Pro DAO se doporučuje použít [DFX_Binary](#dfx_binary) místo.|
+|[DFX_Short](#dfx_short)|Přenáší krátká data celé číslo.|
+|[DFX_Single](#dfx_single)|Přenáší plovoucí data.|
+|[DFX_Text](#dfx_text)|Přenáší data řetězce.|
 
 =============================================
 
-## <a name="rfx_binary"></a>RFX_Binary
+## <a name="rfx_binary"></a><a name="rfx_binary"></a>RFX_Binary
 
-Převede pole bajtů mezi datovými členy pole `CRecordset` objektu a sloupci záznamu ve zdroji dat typu ODBC SQL_BINARY, SQL_VARBINARY nebo SQL_LONGVARBINARY.
+Přenáší pole bajtů mezi datovými členy `CRecordset` pole objektu a sloupci záznamu na zdroji dat typu ODBC SQL_BINARY, SQL_VARBINARY nebo SQL_LONGVARBINARY.
 
 ### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 void RFX_Binary(
    CFieldExchange* pFX,
    const char* szName,
@@ -131,17 +131,17 @@ void RFX_Binary(
 
 ### <a name="parameters"></a>Parametry
 
-*pFX*<br/>
-Ukazatel na objekt třídy [CFieldExchange](cfieldexchange-class.md). Tento objekt obsahuje informace pro definování kontextu pro každé volání funkce. Další informace o operacích, které může objekt `CFieldExchange` určit, najdete v článku [Výměna pole záznamu: Jak funguje RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+*Pfx*<br/>
+Ukazatel na objekt třídy [CFieldExchange](cfieldexchange-class.md). Tento objekt obsahuje informace k definování kontextu pro každé volání funkce. Další informace o operacích, které `CFieldExchange` může objekt specifikovat, naleznete v článku Výměna pole [záznamu: Jak funguje RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
-*szName*<br/>
+*szJméno*<br/>
 Název datového sloupce.
 
-*value*<br/>
-Hodnota uložená v označeném datovém členu – hodnota, která má být převedena. Pro přenos ze sady záznamů na zdroj dat se hodnota typu [CByteArray](cbytearray-class.md)převezme ze zadaného datového členu. Pro přenos ze zdroje dat do sady záznamů je hodnota uložena v zadaném datovém členu.
+*Hodnotu*<br/>
+Hodnota uložená v uvedeném datovém členu – hodnota, která má být přenesena. Pro přenos ze sady záznamů do zdroje dat je hodnota typu [CByteArray](cbytearray-class.md)převzata ze zadaného datového člena. Pro přenos ze zdroje dat do sady záznamů je hodnota uložena v zadaném datovém členu.
 
 *nMaxLength*<br/>
-Maximální povolená délka předávaného řetězce nebo pole Výchozí hodnota *nMaxLength* je 255. Platné hodnoty jsou 1 pro INT_MAX. Rozhraní přiděluje toto množství místa pro data. Pro dosažení nejlepšího výkonu předejte dostatečně velký objem dat, aby se vešel na největší datovou položku, kterou očekáváte.
+Maximální povolená délka přeneseného řetězce nebo pole. Výchozí hodnota *nMaxLength* je 255. Zákonné hodnoty jsou 1 až INT_MAX. Rozhraní framework přiděluje toto množství místa pro data. Chcete-li dosáhnout nejlepšího výkonu, předejte dostatečně velkou hodnotu, aby se přizpůsobila největší datové položce, kterou očekáváte.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -153,15 +153,15 @@ Viz [RFX_Text](#rfx_text).
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** AFXDB. h
+**Záhlaví:** afxdb.h
 
-## <a name="rfx_bool"></a>RFX_Bool
+## <a name="rfx_bool"></a><a name="rfx_bool"></a>RFX_Bool
 
-Přenáší logická data mezi datovými členy pole `CRecordset` objektu a sloupci záznamu ve zdroji dat typu ODBC SQL_BIT.
+Přenáší logická data mezi datovými `CRecordset` členy pole objektu a sloupci záznamu na zdroji dat typu ODBC SQL_BIT.
 
 ### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 void RFX_Bool(
    CFieldExchange* pFX,
    const char* szName,
@@ -170,14 +170,14 @@ void RFX_Bool(
 
 ### <a name="parameters"></a>Parametry
 
-*pFX*<br/>
-Ukazatel na objekt třídy [CFieldExchange](cfieldexchange-class.md). Tento objekt obsahuje informace pro definování kontextu pro každé volání funkce. Další informace o operacích, které může objekt `CFieldExchange` určit, najdete v článku [Výměna pole záznamu: Jak funguje RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+*Pfx*<br/>
+Ukazatel na objekt třídy [CFieldExchange](cfieldexchange-class.md). Tento objekt obsahuje informace k definování kontextu pro každé volání funkce. Další informace o operacích, které `CFieldExchange` může objekt specifikovat, naleznete v článku Výměna pole [záznamu: Jak funguje RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
-*szName*<br/>
+*szJméno*<br/>
 Název datového sloupce.
 
-*value*<br/>
-Hodnota uložená v označeném datovém členu – hodnota, která má být převedena. Pro přenos ze sady záznamů na zdroj dat, hodnota typu BOOL je přijímán ze zadaného datového člena. Pro přenos ze zdroje dat do sady záznamů je hodnota uložena v zadaném datovém členu.
+*Hodnotu*<br/>
+Hodnota uložená v uvedeném datovém členu – hodnota, která má být přenesena. Pro přenos ze sady záznamů do zdroje dat je hodnota typu BOOL převzata ze zadaného datového člena. Pro přenos ze zdroje dat do sady záznamů je hodnota uložena v zadaném datovém členu.
 
 ### <a name="example"></a>Příklad
 
@@ -185,15 +185,15 @@ Viz [RFX_Text](#rfx_text).
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** AFXDB. h
+**Záhlaví:** afxdb.h
 
-## <a name="rfx_byte"></a>RFX_Byte
+## <a name="rfx_byte"></a><a name="rfx_byte"></a>RFX_Byte
 
-Přenáší jednotlivé bajty mezi datovými členy pole `CRecordset` objektu a sloupci záznamu ve zdroji dat typu ODBC SQL_TINYINT.
+Přenáší jednotlivé bajty mezi datovými `CRecordset` členy pole objektu a sloupci záznamu na zdroji dat typu ODBC SQL_TINYINT.
 
 ### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 void RFX_Byte(
    CFieldExchange* pFX,
    const char* szName,
@@ -202,14 +202,14 @@ void RFX_Byte(
 
 ### <a name="parameters"></a>Parametry
 
-*pFX*<br/>
-Ukazatel na objekt třídy [CFieldExchange](cfieldexchange-class.md). Tento objekt obsahuje informace pro definování kontextu pro každé volání funkce. Další informace o operacích, které může objekt `CFieldExchange` určit, najdete v článku [Výměna pole záznamu: Jak funguje RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+*Pfx*<br/>
+Ukazatel na objekt třídy [CFieldExchange](cfieldexchange-class.md). Tento objekt obsahuje informace k definování kontextu pro každé volání funkce. Další informace o operacích, které `CFieldExchange` může objekt specifikovat, naleznete v článku Výměna pole [záznamu: Jak funguje RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
-*szName*<br/>
+*szJméno*<br/>
 Název datového sloupce.
 
-*value*<br/>
-Hodnota uložená v označeném datovém členu – hodnota, která má být převedena. Pro přenos ze sady záznamů na zdroj dat je hodnota typu BYTE přijímána ze zadaného datového členu. Pro přenos ze zdroje dat do sady záznamů je hodnota uložena v zadaném datovém členu.
+*Hodnotu*<br/>
+Hodnota uložená v uvedeném datovém členu – hodnota, která má být přenesena. Pro přenos ze sady záznamů do zdroje dat je hodnota typu BYTE převzata ze zadaného datového člena. Pro přenos ze zdroje dat do sady záznamů je hodnota uložena v zadaném datovém členu.
 
 ### <a name="example"></a>Příklad
 
@@ -217,15 +217,15 @@ Viz [RFX_Text](#rfx_text).
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** AFXDB. h
+**Záhlaví:** afxdb.h
 
-## <a name="rfx_date"></a>RFX_Date
+## <a name="rfx_date"></a><a name="rfx_date"></a>RFX_Date
 
-Přenáší data `CTime` nebo TIMESTAMP_STRUCT mezi datovými členy pole `CRecordset` objektu a sloupci záznamu ve zdroji dat typu ODBC SQL_DATE, SQL_TIME nebo SQL_TIMESTAMP.
+Přenáší `CTime` nebo TIMESTAMP_STRUCT data mezi datovými členy pole objektu `CRecordset` a sloupci záznamu na zdroji dat typu ODBC SQL_DATE, SQL_TIME nebo SQL_TIMESTAMP.
 
 ### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 void RFX_Date(
    CFieldExchange* pFX,
    const char* szName,
@@ -244,22 +244,22 @@ void RFX_Date(
 
 ### <a name="parameters"></a>Parametry
 
-*pFX*<br/>
-Ukazatel na objekt třídy [CFieldExchange](cfieldexchange-class.md). Tento objekt obsahuje informace pro definování kontextu pro každé volání funkce. Další informace o operacích, které může objekt `CFieldExchange` určit, najdete v článku [Výměna pole záznamu: Jak funguje RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+*Pfx*<br/>
+Ukazatel na objekt třídy [CFieldExchange](cfieldexchange-class.md). Tento objekt obsahuje informace k definování kontextu pro každé volání funkce. Další informace o operacích, které `CFieldExchange` může objekt specifikovat, naleznete v článku Výměna pole [záznamu: Jak funguje RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
-*szName*<br/>
+*szJméno*<br/>
 Název datového sloupce.
 
-*value*<br/>
-Hodnota uložená v označeném datovém členu; hodnota, která má být převedena. Různé verze funkce mají různé datové typy pro hodnotu:
+*Hodnotu*<br/>
+Hodnota uložená v uvedeném datovém členu; hodnotu, která má být převedena. Různé verze funkce mají různé datové typy pro hodnotu:
 
-První verze funkce přebírá odkaz na objekt [CTime –](../../atl-mfc-shared/reference/ctime-class.md) . Pro přenos ze sady záznamů na zdroj dat se tato hodnota převezme ze zadaného datového členu. Pro přenos ze zdroje dat do sady záznamů je hodnota uložena v zadaném datovém členu.
+První verze funkce přebírá odkaz na [ctime](../../atl-mfc-shared/reference/ctime-class.md) objekt. Pro přenos ze sady záznamů do zdroje dat je tato hodnota převzata ze zadaného datového člena. Pro přenos ze zdroje dat do sady záznamů je hodnota uložena v zadaném datovém členu.
 
-Druhá verze funkce přebírá odkaz na strukturu `TIMESTAMP_STRUCT`. Tuto strukturu musíte nastavit sami před voláním. Pro tuto verzi nejsou k dispozici podporu pro výměnu dialogových dat (DDX) ani podpora průvodce kódem. Třetí verze funkce funguje podobně jako u první verze s tím rozdílem, že přebírá odkaz na objekt [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) .
+Druhá verze funkce přebírá odkaz na `TIMESTAMP_STRUCT` strukturu. Tuto strukturu musíte nastavit sami před voláním. Pro tuto verzi není k dispozici podpora výměny dat v dialogu (DDX) ani podpora průvodce kódem. Třetí verze funkce funguje podobně jako první verze s tím rozdílem, že přebírá odkaz na [cOleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) objektu.
 
 ### <a name="remarks"></a>Poznámky
 
-`CTime` verze funkce ukládá režijní náklady na určité přechodné zpracování a má poněkud omezený rozsah. Pokud některý z těchto faktorů najde příliš omezený počet, použijte druhou verzi funkce. Všimněte si ale nedostatku průvodce kódem a podporu DDX a požadavek, abyste strukturu nastavili sami.
+Verze `CTime` funkce ukládá režii některé zprostředkující zpracování a má poněkud omezený rozsah. Pokud zjistíte, že některý z těchto faktorů je příliš omezující, použijte druhou verzi funkce. Ale všimněte si jeho nedostatek kódu průvodce a podporu DDX a požadavek, že jste nastavili strukturu sami.
 
 ### <a name="example"></a>Příklad
 
@@ -267,15 +267,15 @@ Viz [RFX_Text](#rfx_text).
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** AFXDB. h
+**Záhlaví:** afxdb.h
 
-## <a name="rfx_double"></a>RFX_Double
+## <a name="rfx_double"></a><a name="rfx_double"></a>RFX_Double
 
-Přenáší data **Double float** mezi datovými členy pole `CRecordset` objektu a sloupci záznamu ve zdroji dat typu ODBC SQL_DOUBLE.
+Přenáší **dvojitá plovoucí** data mezi `CRecordset` datovými členy pole objektu a sloupci záznamu na zdroji dat typu ODBC SQL_DOUBLE.
 
 ### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 void RFX_Double(
    CFieldExchange* pFX,
    const char* szName,
@@ -284,14 +284,14 @@ void RFX_Double(
 
 ### <a name="parameters"></a>Parametry
 
-*pFX*<br/>
-Ukazatel na objekt třídy [CFieldExchange](cfieldexchange-class.md). Tento objekt obsahuje informace pro definování kontextu pro každé volání funkce. Další informace o operacích, které může objekt `CFieldExchange` určit, najdete v článku [Výměna pole záznamu: Jak funguje RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+*Pfx*<br/>
+Ukazatel na objekt třídy [CFieldExchange](cfieldexchange-class.md). Tento objekt obsahuje informace k definování kontextu pro každé volání funkce. Další informace o operacích, které `CFieldExchange` může objekt specifikovat, naleznete v článku Výměna pole [záznamu: Jak funguje RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
-*szName*<br/>
+*szJméno*<br/>
 Název datového sloupce.
 
-*value*<br/>
-Hodnota uložená v označeném datovém členu – hodnota, která má být převedena. Pro přenos ze sady záznamů na zdroj dat je hodnota typu **Double**převedená ze zadaného datového členu. Pro přenos ze zdroje dat do sady záznamů je hodnota uložena v zadaném datovém členu.
+*Hodnotu*<br/>
+Hodnota uložená v uvedeném datovém členu – hodnota, která má být přenesena. Pro přenos ze sady záznamů do zdroje dat je hodnota typu **double**, převzata ze zadaného datového člena. Pro přenos ze zdroje dat do sady záznamů je hodnota uložena v zadaném datovém členu.
 
 ### <a name="example"></a>Příklad
 
@@ -299,15 +299,15 @@ Viz [RFX_Text](#rfx_text).
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** AFXDB. h
+**Záhlaví:** afxdb.h
 
-## <a name="rfx_int"></a>RFX_Int
+## <a name="rfx_int"></a><a name="rfx_int"></a>RFX_Int
 
-Přenáší celočíselná data mezi poli datových členů objektu `CRecordset` a sloupce záznamu ve zdroji dat typu ODBC SQL_SMALLINT.
+Přenáší celá data mezi datovými členy `CRecordset` pole objektu a sloupci záznamu na zdroji dat typu ODBC SQL_SMALLINT.
 
 ### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 void RFX_Int(
    CFieldExchange* pFX,
    const char* szName,
@@ -316,14 +316,14 @@ void RFX_Int(
 
 ### <a name="parameters"></a>Parametry
 
-*pFX*<br/>
-Ukazatel na objekt třídy [CFieldExchange](cfieldexchange-class.md). Tento objekt obsahuje informace pro definování kontextu pro každé volání funkce. Další informace o operacích, které může objekt `CFieldExchange` určit, najdete v článku [Výměna pole záznamu: Jak funguje RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+*Pfx*<br/>
+Ukazatel na objekt třídy [CFieldExchange](cfieldexchange-class.md). Tento objekt obsahuje informace k definování kontextu pro každé volání funkce. Další informace o operacích, které `CFieldExchange` může objekt specifikovat, naleznete v článku Výměna pole [záznamu: Jak funguje RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
-*szName*<br/>
+*szJméno*<br/>
 Název datového sloupce.
 
-*value*<br/>
-Hodnota uložená v označeném datovém členu – hodnota, která má být převedena. Pro přenos ze sady záznamů na zdroj dat je hodnota typu **int**přijímána ze zadaného datového členu. Pro přenos ze zdroje dat do sady záznamů je hodnota uložena v zadaném datovém členu.
+*Hodnotu*<br/>
+Hodnota uložená v uvedeném datovém členu – hodnota, která má být přenesena. Pro přenos ze sady záznamů do zdroje dat je hodnota typu **int**, převzata ze zadaného datového člena. Pro přenos ze zdroje dat do sady záznamů je hodnota uložena v zadaném datovém členu.
 
 ### <a name="example"></a>Příklad
 
@@ -331,15 +331,15 @@ Viz [RFX_Text](#rfx_text).
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** AFXDB. h
+**Záhlaví:** afxdb.h
 
-## <a name="rfx_long"></a>RFX_Long
+## <a name="rfx_long"></a><a name="rfx_long"></a>RFX_Long
 
-Převádí dlouhá celočíselná data mezi poli datových členů objektu `CRecordset` a sloupce záznamu ve zdroji dat typu ODBC SQL_INTEGER.
+Přenáší dlouhá celá data mezi datovými `CRecordset` členy pole objektu a sloupci záznamu na zdroji dat typu ODBC SQL_INTEGER.
 
 ### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 void RFX_Long(
    CFieldExchange* pFX,
    const char* szName,
@@ -349,14 +349,14 @@ value );
 
 ### <a name="parameters"></a>Parametry
 
-*pFX*<br/>
-Ukazatel na objekt třídy [CFieldExchange](cfieldexchange-class.md). Tento objekt obsahuje informace pro definování kontextu pro každé volání funkce. Další informace o operacích, které může objekt `CFieldExchange` určit, najdete v článku [Výměna pole záznamu: Jak funguje RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+*Pfx*<br/>
+Ukazatel na objekt třídy [CFieldExchange](cfieldexchange-class.md). Tento objekt obsahuje informace k definování kontextu pro každé volání funkce. Další informace o operacích, které `CFieldExchange` může objekt specifikovat, naleznete v článku Výměna pole [záznamu: Jak funguje RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
-*szName*<br/>
+*szJméno*<br/>
 Název datového sloupce.
 
-*value*<br/>
-Hodnota uložená v označeném datovém členu – hodnota, která má být převedena. Pro přenos ze sady záznamů na zdroj dat je hodnota typu **Long**přijímána ze zadaného datového členu. Pro přenos ze zdroje dat do sady záznamů je hodnota uložena v zadaném datovém členu.
+*Hodnotu*<br/>
+Hodnota uložená v uvedeném datovém členu – hodnota, která má být přenesena. Pro přenos ze sady záznamů do zdroje dat je hodnota typu **long**převzata ze zadaného datového člena. Pro přenos ze zdroje dat do sady záznamů je hodnota uložena v zadaném datovém členu.
 
 ### <a name="example"></a>Příklad
 
@@ -364,15 +364,15 @@ Viz [RFX_Text](#rfx_text).
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** AFXDB. h
+**Záhlaví:** afxdb.h
 
-## <a name="rfx_longbinary"></a>RFX_LongBinary
+## <a name="rfx_longbinary"></a><a name="rfx_longbinary"></a>RFX_LongBinary
 
-Přenáší data binárního rozsáhlého objektu (BLOB) pomocí třídy [CLongBinary –](clongbinary-class.md) mezi datovými členy pole objektu `CRecordset` a sloupci záznamu ve zdroji dat typu ODBC SQL_LONGVARBINARY nebo SQL_LONGVARCHAR.
+Přenáší binární data velkých objektů (BLOB) pomocí třídy [CLongBinary](clongbinary-class.md) mezi datovými členy pole objektu `CRecordset` a sloupci záznamu na zdroji dat typu ODBC SQL_LONGVARBINARY nebo SQL_LONGVARCHAR.
 
 ### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 void RFX_LongBinary(
    CFieldExchange* pFX,
    const char* szName,
@@ -381,14 +381,14 @@ void RFX_LongBinary(
 
 ### <a name="parameters"></a>Parametry
 
-*pFX*<br/>
-Ukazatel na objekt třídy [CFieldExchange](cfieldexchange-class.md). Tento objekt obsahuje informace pro definování kontextu pro každé volání funkce. Další informace o operacích, které může objekt `CFieldExchange` určit, najdete v článku [Výměna pole záznamu: Jak funguje RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+*Pfx*<br/>
+Ukazatel na objekt třídy [CFieldExchange](cfieldexchange-class.md). Tento objekt obsahuje informace k definování kontextu pro každé volání funkce. Další informace o operacích, které `CFieldExchange` může objekt specifikovat, naleznete v článku Výměna pole [záznamu: Jak funguje RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
-*szName*<br/>
+*szJméno*<br/>
 Název datového sloupce.
 
-*value*<br/>
-Hodnota uložená v označeném datovém členu – hodnota, která má být převedena. Pro přenos ze sady záznamů na zdroj dat je hodnota typu `CLongBinary`převedená ze zadaného datového členu. Pro přenos ze zdroje dat do sady záznamů je hodnota uložena v zadaném datovém členu.
+*Hodnotu*<br/>
+Hodnota uložená v uvedeném datovém členu – hodnota, která má být přenesena. Pro přenos ze sady záznamů do zdroje dat `CLongBinary`je hodnota typu , převzata ze zadaného datového člena. Pro přenos ze zdroje dat do sady záznamů je hodnota uložena v zadaném datovém členu.
 
 ### <a name="example"></a>Příklad
 
@@ -396,15 +396,15 @@ Viz [RFX_Text](#rfx_text).
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** AFXDB. h
+**Záhlaví:** afxdb.h
 
-## <a name="rfx_single"></a>RFX_Single
+## <a name="rfx_single"></a><a name="rfx_single"></a>RFX_Single
 
-Převádí data s plovoucí desetinnou čárkou mezi datovými členy pole `CRecordset` objektu a sloupci záznamu ve zdroji dat typu ODBC SQL_REAL.
+Přenáší data s plovoucí desetinnou `CRecordset` desetinnou tácem mezi datovými členy pole objektu a sloupci záznamu na zdroji dat typu ODBC SQL_REAL.
 
 ### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 void RFX_Single(
    CFieldExchange* pFX,
    const char* szName,
@@ -413,14 +413,14 @@ void RFX_Single(
 
 ### <a name="parameters"></a>Parametry
 
-*pFX*<br/>
-Ukazatel na objekt třídy [CFieldExchange](cfieldexchange-class.md). Tento objekt obsahuje informace pro definování kontextu pro každé volání funkce. Další informace o operacích, které může objekt `CFieldExchange` určit, najdete v článku [Výměna pole záznamu: Jak funguje RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+*Pfx*<br/>
+Ukazatel na objekt třídy [CFieldExchange](cfieldexchange-class.md). Tento objekt obsahuje informace k definování kontextu pro každé volání funkce. Další informace o operacích, které `CFieldExchange` může objekt specifikovat, naleznete v článku Výměna pole [záznamu: Jak funguje RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
-*szName*<br/>
+*szJméno*<br/>
 Název datového sloupce.
 
-*value*<br/>
-Hodnota uložená v označeném datovém členu – hodnota, která má být převedena. Pro přenos ze sady záznamů na zdroj dat je hodnota typu **float**převedená ze zadaného datového členu. Pro přenos ze zdroje dat do sady záznamů je hodnota uložena v zadaném datovém členu.
+*Hodnotu*<br/>
+Hodnota uložená v uvedeném datovém členu – hodnota, která má být přenesena. Pro přenos ze sady záznamů do zdroje dat je hodnota typu **float**převzata ze zadaného datového člena. Pro přenos ze zdroje dat do sady záznamů je hodnota uložena v zadaném datovém členu.
 
 ### <a name="example"></a>Příklad
 
@@ -428,15 +428,15 @@ Viz [RFX_Text](#rfx_text).
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** AFXDB. h
+**Záhlaví:** afxdb.h
 
-## <a name="rfx_text"></a>RFX_Text
+## <a name="rfx_text"></a><a name="rfx_text"></a>RFX_Text
 
-Přenáší `CString` data mezi datovými členy pole `CRecordset` objektu a sloupce záznamu ve zdroji dat typu ODBC SQL_LONGVARCHAR, SQL_CHAR, SQL_VARCHAR, SQL_DECIMAL nebo SQL_NUMERIC.
+Přenáší `CString` data mezi datovými `CRecordset` členy pole objektu a sloupci záznamu na zdroj dat typu ODBC SQL_LONGVARCHAR, SQL_CHAR, SQL_VARCHAR, SQL_DECIMAL nebo SQL_NUMERIC.
 
 ### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 void RFX_Text(
    CFieldExchange* pFX,
    const char* szName,
@@ -448,31 +448,31 @@ void RFX_Text(
 
 ### <a name="parameters"></a>Parametry
 
-*pFX*<br/>
-Ukazatel na objekt třídy `CFieldExchange`. Tento objekt obsahuje informace pro definování kontextu pro každé volání funkce. Další informace o operacích, které může objekt `CFieldExchange` určit, najdete v článku [Výměna pole záznamu: Jak funguje RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+*Pfx*<br/>
+Ukazatel na objekt třídy `CFieldExchange`. Tento objekt obsahuje informace k definování kontextu pro každé volání funkce. Další informace o operacích, které `CFieldExchange` může objekt specifikovat, naleznete v článku Výměna pole [záznamu: Jak funguje RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
-*szName*<br/>
+*szJméno*<br/>
 Název datového sloupce.
 
-*value*<br/>
-Hodnota uložená v označeném datovém členu – hodnota, která má být převedena. Pro přenos ze sady záznamů na zdroj dat je hodnota typu `CString`převedená ze zadaného datového členu. Pro přenos ze zdroje dat do sady záznamů je hodnota uložena v zadaném datovém členu.
+*Hodnotu*<br/>
+Hodnota uložená v uvedeném datovém členu – hodnota, která má být přenesena. Pro přenos ze sady záznamů do zdroje dat `CString`je hodnota typu , převzata ze zadaného datového člena. Pro přenos ze zdroje dat do sady záznamů je hodnota uložena v zadaném datovém členu.
 
 *nMaxLength*<br/>
-Maximální povolená délka předávaného řetězce nebo pole Výchozí hodnota *nMaxLength* je 255. Platné hodnoty jsou 1 pro INT_MAX). Rozhraní přiděluje toto množství místa pro data. Pro dosažení nejlepšího výkonu předejte dostatečně velký objem dat, aby se vešel na největší datovou položku, kterou očekáváte.
+Maximální povolená délka přeneseného řetězce nebo pole. Výchozí hodnota *nMaxLength* je 255. Právní hodnoty jsou 1 až INT_MAX). Rozhraní framework přiděluje toto množství místa pro data. Chcete-li dosáhnout nejlepšího výkonu, předejte dostatečně velkou hodnotu, aby se přizpůsobila největší datové položce, kterou očekáváte.
 
 *nColumnType*<br/>
-Používá se hlavně pro parametry. Celé číslo označující datový typ parametru. Typ je datový typ ODBC formuláře **SQL_XXX**.
+Používá se hlavně pro parametry. Celé číslo označující datový typ parametru. Tento typ je datový typ ODBC formuláře **SQL_XXX**.
 
-*nScale*<br/>
-Určuje měřítko pro hodnoty typu ODBC SQL_DECIMAL nebo SQL_NUMERIC. *nScale* je užitečné pouze při nastavování hodnot parametrů. Další informace najdete v tématu "přesnost, škálování, délka a velikost zobrazení" v příloze D *referenčních informací programátora sady ODBC SDK*.
+*nMěřítko*<br/>
+Určuje měřítko pro hodnoty typu ODBC SQL_DECIMAL nebo SQL_NUMERIC. *nScale* je užitečné pouze při nastavování hodnot parametrů. Další informace naleznete v tématu Přesnost, měřítko, délka a velikost zobrazení v dodatku D *referenčního programu programu ODBC SDK*.
 
 ### <a name="remarks"></a>Poznámky
 
-Data ve zdroji dat všech těchto typů jsou mapována na a z `CString` v sadě záznamů.
+Data ve zdroji dat všech těchto typů jsou `CString` mapována do a z v sadě záznamů.
 
 ### <a name="example"></a>Příklad
 
-Tento příklad ukazuje několik volání `RFX_Text`. Všimněte si také dvou volání `CFieldExchange::SetFieldType`. Pro parametry musíte napsat volání `SetFieldType` a jeho volání RFX. Volání výstupního sloupce a jeho přidružená volání RFX jsou obvykle zapisována průvodcem kódem.
+Tento příklad ukazuje `RFX_Text`několik volání . Všimněte si také `CFieldExchange::SetFieldType`dvou volání . Pro parametry je nutné `SetFieldType` napsat volání a jeho RFX volání. Volání výstupního sloupce a přidružená volání RFX jsou obvykle zapsána průvodcem kódem.
 
 ```cpp
 void CCustomer::DoFieldExchange(CFieldExchange* pFX)
@@ -494,15 +494,15 @@ void CCustomer::DoFieldExchange(CFieldExchange* pFX)
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** AFXDB. h
+**Záhlaví:** afxdb.h
 
-## <a name="rfx_binary_bulk"></a>RFX_Binary_Bulk
+## <a name="rfx_binary_bulk"></a><a name="rfx_binary_bulk"></a>RFX_Binary_Bulk
 
-Přenáší více řádků bajtových dat ze sloupce zdroje dat ODBC do odpovídajícího pole v objektu odvozeném od `CRecordset`.
+Přenáší více řádků bajtových dat ze sloupce zdroje dat ODBC `CRecordset`do odpovídajícího pole v odvozeném objektu.
 
 ### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 void RFX_Binary_Bulk(
    CFieldExchange* pFX,
    LPCTSTR szName,
@@ -513,31 +513,31 @@ void RFX_Binary_Bulk(
 
 ### <a name="parameters"></a>Parametry
 
-*pFX*<br/>
-Ukazatel na objekt [CFieldExchange](cfieldexchange-class.md) . Tento objekt obsahuje informace pro definování kontextu pro každé volání funkce. Další informace najdete v článku [Výměna pole záznamu: Jak funguje RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+*Pfx*<br/>
+Ukazatel na objekt [CFieldExchange.](cfieldexchange-class.md) Tento objekt obsahuje informace k definování kontextu pro každé volání funkce. Další informace naleznete v článku [Výměna pole záznamu: Jak funguje RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
-*szName*<br/>
+*szJméno*<br/>
 Název datového sloupce.
 
 *prgByteVals*<br/>
-Ukazatel na pole bajtů hodnot. V tomto poli budou uložena data, která mají být přenesena ze zdroje dat do sady záznamů.
+Ukazatel na pole hodnot BYTE. Toto pole uloží data, která mají být přenesena ze zdroje dat do sady záznamů.
 
 *prgLengths*<br/>
-Ukazatel na pole dlouhých celých čísel. Toto pole bude uchovávat délku v bajtech každé hodnoty v poli, na které odkazuje *prgByteVals*. Všimněte si, že hodnota SQL_NULL_DATA bude uložena, pokud odpovídající datová položka obsahuje hodnotu null. Další podrobnosti najdete v tématu funkce rozhraní ODBC API `SQLBindCol` v *Referenční příručce programátora sady ODBC SDK*.
+Ukazatel na pole dlouhých celých čísel. Toto pole bude ukládat délku v bajtů každé hodnoty v poli, na které se vztahuje *prgByteVals*. Všimněte si, že hodnota SQL_NULL_DATA budou uloženy, pokud odpovídající datová položka obsahuje hodnotu Null. Další podrobnosti naleznete v funkci `SQLBindCol` ROZHRANÍ API ROZHRANÍ ODBC v *referenční příručce programátora sady ODBC SDK*.
 
 *nMaxLength*<br/>
-Maximální povolená délka hodnot uložených v poli, na kterou odkazuje *prgByteVals*. Aby se zajistilo, že data nebudou zkrácená, předejte dostatečně velkou velikost, která bude vyhovovat největší datové položce, kterou očekáváte.
+Maximální povolená délka hodnot uložených v poli, na které se vztahuje *hodnota prgByteVals*. Chcete-li zajistit, že data nebudou zkrácena, předejte hodnotu dostatečně velkou, aby se přizpůsobila největší datové položce, kterou očekáváte.
 
 ### <a name="remarks"></a>Poznámky
 
-Sloupec zdroje dat může mít typ rozhraní ODBC SQL_BINARY, SQL_VARBINARY nebo SQL_LONGVARBINARY. Sada záznamů musí definovat datový člen pole typu pointer na BYTE.
+Sloupec zdroje dat může mít typ ODBC SQL_BINARY, SQL_VARBINARY nebo SQL_LONGVARBINARY. Sada záznamů musí definovat datový člen pole typu ukazatel na BYTE.
 
-Pokud inicializujete *prgByteVals* a *prgLengths* na hodnotu null, pak se pole, na která se odkazuje, přidělují automaticky s velikostmi, které se rovnají velikosti sady řádků.
+Pokud inicializujete *prgByteVals* a *prgLengths* na HODNOTU NULL, budou pole, na která odkazují, přidělena automaticky, s velikostí roven velikosti sady řádků.
 
 > [!NOTE]
->  Hromadná výměna pole záznamu převádí data pouze ze zdroje dat do objektu sady záznamů. Aby bylo možné sadu záznamů aktualizovat, je nutné použít funkci rozhraní ODBC API `SQLSetPos`.
+> Hromadné pole záznamu výměna pouze přenáší data ze zdroje dat do objektu sady záznamů. Aby bylo možné sadu záznamů aktualizovat, musíte použít funkci `SQLSetPos`ROZHRANÍ API ROZHRANÍ ODBC .
 
-Další informace naleznete v článcích [Sada záznamů: hromadné načítání záznamů (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) a [výměny pole záznamu (RFX)](../../data/odbc/record-field-exchange-rfx.md).
+Další informace naleznete v článcích [Sada záznamů: Načítání záznamů hromadně (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) a [Výměna pole záznamu (RFX).](../../data/odbc/record-field-exchange-rfx.md)
 
 ### <a name="example"></a>Příklad
 
@@ -545,15 +545,15 @@ Viz [RFX_Text_Bulk](#rfx_text_bulk).
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** AFXDB. h
+**Záhlaví:** afxdb.h
 
-## <a name="rfx_bool_bulk"></a>RFX_Bool_Bulk
+## <a name="rfx_bool_bulk"></a><a name="rfx_bool_bulk"></a>RFX_Bool_Bulk
 
-Přenáší více řádků logických dat ze sloupce zdroje dat ODBC do odpovídajícího pole v objektu odvozeném od `CRecordset`.
+Přenese více řádků logických dat ze sloupce zdroje dat ODBC do odpovídajícího pole v odvozeném `CRecordset`objektu.
 
 ### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 void RFX_Bool_Bulk(
    CFieldExchange* pFX,
    LPCTSTR szName,
@@ -563,28 +563,28 @@ void RFX_Bool_Bulk(
 
 ### <a name="parameters"></a>Parametry
 
-*pFX*<br/>
-Ukazatel na objekt [CFieldExchange](cfieldexchange-class.md) . Tento objekt obsahuje informace pro definování kontextu pro každé volání funkce. Další informace najdete v článku [Výměna pole záznamu: Jak funguje RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+*Pfx*<br/>
+Ukazatel na objekt [CFieldExchange.](cfieldexchange-class.md) Tento objekt obsahuje informace k definování kontextu pro každé volání funkce. Další informace naleznete v článku [Výměna pole záznamu: Jak funguje RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
-*szName*<br/>
+*szJméno*<br/>
 Název datového sloupce.
 
 *prgBoolVals*<br/>
-Ukazatel na pole LOGICKÝch hodnot. V tomto poli budou uložena data, která mají být přenesena ze zdroje dat do sady záznamů.
+Ukazatel na pole bool hodnot. Toto pole uloží data, která mají být přenesena ze zdroje dat do sady záznamů.
 
 *prgLengths*<br/>
-Ukazatel na pole dlouhých celých čísel. Toto pole bude uchovávat délku v bajtech každé hodnoty v poli, na které odkazuje *prgBoolVals*. Všimněte si, že hodnota SQL_NULL_DATA bude uložena, pokud odpovídající datová položka obsahuje hodnotu null. Další podrobnosti najdete v tématu funkce rozhraní ODBC API `SQLBindCol` v *Referenční příručce programátora sady ODBC SDK*.
+Ukazatel na pole dlouhých celých čísel. Toto pole bude ukládat délku v bajtů každé hodnoty v poli, na které se vztahuje *prgBoolVals*. Všimněte si, že hodnota SQL_NULL_DATA budou uloženy, pokud odpovídající datová položka obsahuje hodnotu Null. Další podrobnosti naleznete v funkci `SQLBindCol` ROZHRANÍ API ROZHRANÍ ODBC v *referenční příručce programátora sady ODBC SDK*.
 
 ### <a name="remarks"></a>Poznámky
 
-Sloupec zdroje dat musí mít SQL_BIT typ ODBC. Sada záznamů musí definovat datový člen pole typu pointer na BOOL.
+Sloupec zdroje dat musí mít typ odbc SQL_BIT. Sada záznamů musí definovat datový člen pole typu ukazatele na BOOL.
 
-Pokud inicializujete *prgBoolVals* a *prgLengths* na hodnotu null, pak se pole, na která se odkazuje, přidělují automaticky s velikostmi, které se rovnají velikosti sady řádků.
+Pokud inicializujete *prgBoolVals* a *prgLengths* na HODNOTU NULL, budou pole, na která odkazují, přidělena automaticky, s velikostí roven velikosti sady řádků.
 
 > [!NOTE]
->  Hromadná výměna pole záznamu převádí data pouze ze zdroje dat do objektu sady záznamů. Aby bylo možné sadu záznamů aktualizovat, je nutné použít funkci rozhraní ODBC API `SQLSetPos`.
+> Hromadné pole záznamu výměna pouze přenáší data ze zdroje dat do objektu sady záznamů. Chcete-li, aby byla sada záznamů aktualizovatelná, `SQLSetPos`musíte použít funkci ROZHRANÍ API ROZHRANÍ ODBC .
 
-Další informace naleznete v článcích [Sada záznamů: hromadné načítání záznamů (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) a [výměny pole záznamu (RFX)](../../data/odbc/record-field-exchange-rfx.md).
+Další informace naleznete v článcích [Sada záznamů: Načítání záznamů hromadně (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) a [Výměna pole záznamu (RFX).](../../data/odbc/record-field-exchange-rfx.md)
 
 ### <a name="example"></a>Příklad
 
@@ -592,15 +592,15 @@ Viz [RFX_Text_Bulk](#rfx_text_bulk).
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** AFXDB. h
+**Záhlaví:** afxdb.h
 
-## <a name="rfx_byte_bulk"></a>RFX_Byte_Bulk
+## <a name="rfx_byte_bulk"></a><a name="rfx_byte_bulk"></a>RFX_Byte_Bulk
 
-Převede více řádků jednoho bajtu ze sloupce zdroje dat ODBC na odpovídající pole v objektu odvozeném od `CRecordset`.
+Přenese více řádků jednotlivých bajtů ze sloupce zdroje dat `CRecordset`ODBC do odpovídajícího pole v odvozeném objektu.
 
 ### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 void RFX_Byte_Bulk(
    CFieldExchange* pFX,
    LPCTSTR szName,
@@ -610,28 +610,28 @@ void RFX_Byte_Bulk(
 
 ### <a name="parameters"></a>Parametry
 
-*pFX*<br/>
-Ukazatel na objekt [CFieldExchange](cfieldexchange-class.md) . Tento objekt obsahuje informace pro definování kontextu pro každé volání funkce. Další informace najdete v článku [Výměna pole záznamu: Jak funguje RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+*Pfx*<br/>
+Ukazatel na objekt [CFieldExchange.](cfieldexchange-class.md) Tento objekt obsahuje informace k definování kontextu pro každé volání funkce. Další informace naleznete v článku [Výměna pole záznamu: Jak funguje RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
-*szName*<br/>
+*szJméno*<br/>
 Název datového sloupce.
 
 *prgByteVals*<br/>
-Ukazatel na pole bajtů hodnot. V tomto poli budou uložena data, která mají být přenesena ze zdroje dat do sady záznamů.
+Ukazatel na pole hodnot BYTE. Toto pole uloží data, která mají být přenesena ze zdroje dat do sady záznamů.
 
 *prgLengths*<br/>
-Ukazatel na pole dlouhých celých čísel. Toto pole bude uchovávat délku v bajtech každé hodnoty v poli, na které odkazuje *prgByteVals*. Všimněte si, že hodnota SQL_NULL_DATA bude uložena, pokud odpovídající datová položka obsahuje hodnotu null. Další podrobnosti najdete v tématu funkce rozhraní ODBC API `SQLBindCol` v *Referenční příručce programátora sady ODBC SDK*.
+Ukazatel na pole dlouhých celých čísel. Toto pole bude ukládat délku v bajtů každé hodnoty v poli, na které se vztahuje *prgByteVals*. Všimněte si, že hodnota SQL_NULL_DATA budou uloženy, pokud odpovídající datová položka obsahuje hodnotu Null. Další podrobnosti naleznete v funkci `SQLBindCol` ROZHRANÍ API ROZHRANÍ ODBC v *referenční příručce programátora sady ODBC SDK*.
 
 ### <a name="remarks"></a>Poznámky
 
-Sloupec zdroje dat musí mít SQL_TINYINT typ ODBC. Sada záznamů musí definovat datový člen pole typu pointer na BYTE.
+Sloupec zdroje dat musí mít typ odbc SQL_TINYINT. Sada záznamů musí definovat datový člen pole typu ukazatel na BYTE.
 
-Pokud inicializujete *prgByteVals* a *prgLengths* na hodnotu null, pak se pole, na která se odkazuje, přidělují automaticky s velikostmi, které se rovnají velikosti sady řádků.
+Pokud inicializujete *prgByteVals* a *prgLengths* na HODNOTU NULL, budou pole, na která odkazují, přidělena automaticky, s velikostí roven velikosti sady řádků.
 
 > [!NOTE]
->  Hromadná výměna pole záznamu převádí data pouze ze zdroje dat do objektu sady záznamů. Aby bylo možné sadu záznamů aktualizovat, je nutné použít funkci rozhraní ODBC API `SQLSetPos`.
+> Hromadné pole záznamu výměna pouze přenáší data ze zdroje dat do objektu sady záznamů. Chcete-li, aby byla sada záznamů aktualizovatelná, `SQLSetPos`musíte použít funkci ROZHRANÍ API ROZHRANÍ ODBC .
 
-Další informace naleznete v článcích [Sada záznamů: hromadné načítání záznamů (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) a [výměny pole záznamu (RFX)](../../data/odbc/record-field-exchange-rfx.md).
+Další informace naleznete v článcích [Sada záznamů: Načítání záznamů hromadně (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) a [Výměna pole záznamu (RFX).](../../data/odbc/record-field-exchange-rfx.md)
 
 ### <a name="example"></a>Příklad
 
@@ -639,15 +639,15 @@ Viz [RFX_Text_Bulk](#rfx_text_bulk).
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** AFXDB. h
+**Záhlaví:** afxdb.h
 
-## <a name="rfx_date_bulk"></a>RFX_Date_Bulk
+## <a name="rfx_date_bulk"></a><a name="rfx_date_bulk"></a>RFX_Date_Bulk
 
-Přenáší více řádků TIMESTAMP_STRUCT dat ze sloupce zdroje dat ODBC do odpovídajícího pole v objektu odvozeném z `CRecordset`.
+Přenáší více řádků TIMESTAMP_STRUCT dat ze sloupce zdroje dat ODBC `CRecordset`do odpovídajícího pole v odvozeném objektu.
 
 ### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 void RFX_Date_Bulk(
    CFieldExchange* pFX,
    LPCTSTR szName,
@@ -657,28 +657,28 @@ void RFX_Date_Bulk(
 
 ### <a name="parameters"></a>Parametry
 
-*pFX*<br/>
-Ukazatel na objekt [CFieldExchange](cfieldexchange-class.md) . Tento objekt obsahuje informace pro definování kontextu pro každé volání funkce. Další informace najdete v článku [Výměna pole záznamu: Jak funguje RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+*Pfx*<br/>
+Ukazatel na objekt [CFieldExchange.](cfieldexchange-class.md) Tento objekt obsahuje informace k definování kontextu pro každé volání funkce. Další informace naleznete v článku [Výměna pole záznamu: Jak funguje RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
-*szName*<br/>
+*szJméno*<br/>
 Název datového sloupce.
 
 *prgTSVals*<br/>
-Ukazatel na pole hodnot TIMESTAMP_STRUCT. V tomto poli budou uložena data, která mají být přenesena ze zdroje dat do sady záznamů. Další informace o TIMESTAMP_STRUCT datový typ naleznete v tématu "datové typy jazyka C" v příloze D *referenčních informací programátora sady ODBC SDK*.
+Ukazatel na pole TIMESTAMP_STRUCT hodnot. Toto pole uloží data, která mají být přenesena ze zdroje dat do sady záznamů. Další informace o datovém typu TIMESTAMP_STRUCT naleznete v tématu "Datové typy C" v dodatku D *referenčního programu programu ODBC SDK*.
 
 *prgLengths*<br/>
-Ukazatel na pole dlouhých celých čísel. Toto pole bude uchovávat délku v bajtech každé hodnoty v poli, na které odkazuje *prgTSVals*. Všimněte si, že hodnota SQL_NULL_DATA bude uložena, pokud odpovídající datová položka obsahuje hodnotu null. Další podrobnosti najdete v tématu funkce rozhraní ODBC API `SQLBindCol` v *Referenční příručce programátora sady ODBC SDK*.
+Ukazatel na pole dlouhých celých čísel. Toto pole bude ukládat délku v bajtů každé hodnoty v poli, na které se vztahuje *prgTSVals*. Všimněte si, že hodnota SQL_NULL_DATA budou uloženy, pokud odpovídající datová položka obsahuje hodnotu Null. Další podrobnosti naleznete v funkci `SQLBindCol` ROZHRANÍ API ROZHRANÍ ODBC v *referenční příručce programátora sady ODBC SDK*.
 
 ### <a name="remarks"></a>Poznámky
 
-Sloupec zdroje dat může mít typ rozhraní ODBC SQL_DATE, SQL_TIME nebo SQL_TIMESTAMP. Sada záznamů musí definovat datový člen pole typu pointer na TIMESTAMP_STRUCT.
+Sloupec zdroje dat může mít typ rozhraní ODBC SQL_DATE, SQL_TIME nebo SQL_TIMESTAMP. Sada záznamů musí definovat datový člen pole ukazatele typu, aby TIMESTAMP_STRUCT.
 
-Pokud inicializujete *prgTSVals* a *prgLengths* na hodnotu null, pak se pole, na která se odkazuje, přidělují automaticky s velikostmi, které se rovnají velikosti sady řádků.
+Pokud inicializujete *prgTSVals* a *prgLengths* na HODNOTU NULL, budou pole, na která odkazují, přidělena automaticky, s velikostí roven velikosti sady řádků.
 
 > [!NOTE]
->  Hromadná výměna pole záznamu převádí data pouze ze zdroje dat do objektu sady záznamů. Aby bylo možné sadu záznamů aktualizovat, je nutné použít funkci rozhraní ODBC API `SQLSetPos`.
+> Hromadné pole záznamu výměna pouze přenáší data ze zdroje dat do objektu sady záznamů. Chcete-li, aby byla sada záznamů aktualizovatelná, `SQLSetPos`musíte použít funkci ROZHRANÍ API ROZHRANÍ ODBC .
 
-Další informace naleznete v článcích [Sada záznamů: hromadné načítání záznamů (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) a [výměny pole záznamu (RFX)](../../data/odbc/record-field-exchange-rfx.md).
+Další informace naleznete v článcích [Sada záznamů: Načítání záznamů hromadně (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) a [Výměna pole záznamu (RFX).](../../data/odbc/record-field-exchange-rfx.md)
 
 ### <a name="example"></a>Příklad
 
@@ -686,15 +686,15 @@ Viz [RFX_Text_Bulk](#rfx_text_bulk).
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** AFXDB. h
+**Záhlaví:** afxdb.h
 
-## <a name="rfx_double_bulk"></a>RFX_Double_Bulk
+## <a name="rfx_double_bulk"></a><a name="rfx_double_bulk"></a>RFX_Double_Bulk
 
-Převádí více řádků dat s dvojitou přesností a plovoucí desetinnou čárkou ze sloupce datového zdroje ODBC k odpovídajícímu poli v objektu odvozeném od `CRecordset`.
+Přenáší více řádků dat s dvojitou přesností s plovoucí desetinnou desetinnou `CRecordset`tácem ze sloupce zdroje dat ODBC do odpovídajícího pole odvozeného objektu.
 
 ### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 void RFX_Double_Bulk(
    CFieldExchange* pFX,
    LPCTSTR szName,
@@ -704,28 +704,28 @@ void RFX_Double_Bulk(
 
 ### <a name="parameters"></a>Parametry
 
-*pFX*<br/>
-Ukazatel na objekt [CFieldExchange](cfieldexchange-class.md) . Tento objekt obsahuje informace pro definování kontextu pro každé volání funkce. Další informace najdete v článku [Výměna pole záznamu: Jak funguje RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+*Pfx*<br/>
+Ukazatel na objekt [CFieldExchange.](cfieldexchange-class.md) Tento objekt obsahuje informace k definování kontextu pro každé volání funkce. Další informace naleznete v článku [Výměna pole záznamu: Jak funguje RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
-*szName*<br/>
+*szJméno*<br/>
 Název datového sloupce.
 
 *prgDblVals*<br/>
-Ukazatel na pole **dvojitých** hodnot. V tomto poli budou uložena data, která mají být přenesena ze zdroje dat do sady záznamů.
+Ukazatel na pole **dvojité** hodnoty. Toto pole uloží data, která mají být přenesena ze zdroje dat do sady záznamů.
 
 *prgLengths*<br/>
-Ukazatel na pole dlouhých celých čísel. Toto pole bude uchovávat délku v bajtech každé hodnoty v poli, na které odkazuje *prgDblVals*. Všimněte si, že hodnota SQL_NULL_DATA bude uložena, pokud odpovídající datová položka obsahuje hodnotu null. Další podrobnosti najdete v tématu funkce rozhraní ODBC API `SQLBindCol` v *Referenční příručce programátora sady ODBC SDK*.
+Ukazatel na pole dlouhých celých čísel. Toto pole bude ukládat délku v bajtů každé hodnoty v poli, na které se vztahuje *prgDblVals*. Všimněte si, že hodnota SQL_NULL_DATA budou uloženy, pokud odpovídající datová položka obsahuje hodnotu Null. Další podrobnosti naleznete v funkci `SQLBindCol` ROZHRANÍ API ROZHRANÍ ODBC v *referenční příručce programátora sady ODBC SDK*.
 
 ### <a name="remarks"></a>Poznámky
 
-Sloupec zdroje dat musí mít SQL_DOUBLE typ ODBC. Sada záznamů musí definovat datový člen pole typu ukazatel na hodnotu **Double**.
+Sloupec zdroje dat musí mít typ odbc SQL_DOUBLE. Sada záznamů musí definovat datový člen pole ukazatele typu, který má **být zdvojený**.
 
-Pokud inicializujete *prgDblVals* a *prgLengths* na hodnotu null, pak se pole, na která se odkazuje, přidělují automaticky s velikostmi, které se rovnají velikosti sady řádků.
+Pokud inicializujete *prgDblVals* a *prgLengths* na HODNOTU NULL, budou pole, na která odkazují, přidělena automaticky, s velikostí roven velikosti sady řádků.
 
 > [!NOTE]
->  Hromadná výměna pole záznamu převádí data pouze ze zdroje dat do objektu sady záznamů. Aby bylo možné sadu záznamů aktualizovat, je nutné použít funkci rozhraní ODBC API `SQLSetPos`.
+> Hromadné pole záznamu výměna pouze přenáší data ze zdroje dat do objektu sady záznamů. Chcete-li, aby byla sada záznamů aktualizovatelná, `SQLSetPos`musíte použít funkci ROZHRANÍ API ROZHRANÍ ODBC .
 
-Další informace naleznete v článcích [Sada záznamů: hromadné načítání záznamů (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) a [výměny pole záznamu (RFX)](../../data/odbc/record-field-exchange-rfx.md).
+Další informace naleznete v článcích [Sada záznamů: Načítání záznamů hromadně (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) a [Výměna pole záznamu (RFX).](../../data/odbc/record-field-exchange-rfx.md)
 
 ### <a name="example"></a>Příklad
 
@@ -733,15 +733,15 @@ Viz [RFX_Text_Bulk](#rfx_text_bulk).
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** AFXDB. h
+**Záhlaví:** afxdb.h
 
-## <a name="rfx_int_bulk"></a>RFX_Int_Bulk
+## <a name="rfx_int_bulk"></a><a name="rfx_int_bulk"></a>RFX_Int_Bulk
 
-Přenáší celočíselná data mezi poli datových členů objektu `CRecordset` a sloupce záznamu ve zdroji dat typu ODBC SQL_SMALLINT.
+Přenáší celá data mezi datovými členy `CRecordset` pole objektu a sloupci záznamu na zdroji dat typu ODBC SQL_SMALLINT.
 
 ### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 void RFX_Int(
    CFieldExchange* pFX,
    const char* szName,
@@ -750,14 +750,14 @@ void RFX_Int(
 
 ### <a name="parameters"></a>Parametry
 
-*pFX*<br/>
-Ukazatel na objekt třídy [CFieldExchange](cfieldexchange-class.md). Tento objekt obsahuje informace pro definování kontextu pro každé volání funkce. Další informace o operacích, které může objekt `CFieldExchange` určit, najdete v článku [Výměna pole záznamu: Jak funguje RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+*Pfx*<br/>
+Ukazatel na objekt třídy [CFieldExchange](cfieldexchange-class.md). Tento objekt obsahuje informace k definování kontextu pro každé volání funkce. Další informace o operacích, které `CFieldExchange` může objekt specifikovat, naleznete v článku Výměna pole [záznamu: Jak funguje RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
-*szName*<br/>
+*szJméno*<br/>
 Název datového sloupce.
 
-*value*<br/>
-Hodnota uložená v označeném datovém členu – hodnota, která má být převedena. Pro přenos ze sady záznamů na zdroj dat je hodnota typu **int**přijímána ze zadaného datového členu. Pro přenos ze zdroje dat do sady záznamů je hodnota uložena v zadaném datovém členu.
+*Hodnotu*<br/>
+Hodnota uložená v uvedeném datovém členu – hodnota, která má být přenesena. Pro přenos ze sady záznamů do zdroje dat je hodnota typu **int**, převzata ze zadaného datového člena. Pro přenos ze zdroje dat do sady záznamů je hodnota uložena v zadaném datovém členu.
 
 ### <a name="example"></a>Příklad
 
@@ -765,15 +765,15 @@ Viz [RFX_Text](#rfx_text).
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** AFXDB. h
+**Záhlaví:** afxdb.h
 
-## <a name="rfx_long_bulk"></a>RFX_Long_Bulk
+## <a name="rfx_long_bulk"></a><a name="rfx_long_bulk"></a>RFX_Long_Bulk
 
-Převede více řádků dlouhých celočíselných dat ze sloupce datového zdroje ODBC na odpovídající pole v objektu odvozeném z `CRecordset`.
+Přenese více řádků dlouhých celočíselných dat ze sloupce zdroje dat `CRecordset`ODBC do odpovídajícího pole v odvozeném objektu.
 
 ### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 void RFX_Long_Bulk(
    CFieldExchange* pFX,
    LPCTSTR szName,
@@ -783,28 +783,28 @@ void RFX_Long_Bulk(
 
 ### <a name="parameters"></a>Parametry
 
-*pFX*<br/>
-Ukazatel na objekt [CFieldExchange](cfieldexchange-class.md) . Tento objekt obsahuje informace pro definování kontextu pro každé volání funkce. Další informace najdete v článku [Výměna pole záznamu: Jak funguje RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+*Pfx*<br/>
+Ukazatel na objekt [CFieldExchange.](cfieldexchange-class.md) Tento objekt obsahuje informace k definování kontextu pro každé volání funkce. Další informace naleznete v článku [Výměna pole záznamu: Jak funguje RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
-*szName*<br/>
+*szJméno*<br/>
 Název datového sloupce.
 
 *prgLongVals*<br/>
-Ukazatel na pole dlouhých celých čísel. V tomto poli budou uložena data, která mají být přenesena ze zdroje dat do sady záznamů.
+Ukazatel na pole dlouhých celých čísel. Toto pole uloží data, která mají být přenesena ze zdroje dat do sady záznamů.
 
 *prgLengths*<br/>
-Ukazatel na pole dlouhých celých čísel. Toto pole bude uchovávat délku v bajtech každé hodnoty v poli, na které odkazuje *prgLongVals*. Všimněte si, že hodnota SQL_NULL_DATA bude uložena, pokud odpovídající datová položka obsahuje hodnotu null. Další podrobnosti najdete v tématu funkce rozhraní ODBC API `SQLBindCol` v *Referenční příručce programátora sady ODBC SDK*.
+Ukazatel na pole dlouhých celých čísel. Toto pole bude ukládat délku v bajtů každé hodnoty v poli, na které se vztahuje *prgLongVals*. Všimněte si, že hodnota SQL_NULL_DATA budou uloženy, pokud odpovídající datová položka obsahuje hodnotu Null. Další podrobnosti naleznete v funkci `SQLBindCol` ROZHRANÍ API ROZHRANÍ ODBC v *referenční příručce programátora sady ODBC SDK*.
 
 ### <a name="remarks"></a>Poznámky
 
-Sloupec zdroje dat musí mít SQL_INTEGER typ ODBC. Sada záznamů musí definovat pole datového člena typu ukazatel na hodnotu **Long**.
+Sloupec zdroje dat musí mít typ odbc SQL_INTEGER. Sada záznamů musí definovat datový člen pole typu na **long**.
 
-Pokud inicializujete *prgLongVals* a *prgLengths* na hodnotu null, pak se pole, na která se odkazuje, přidělují automaticky s velikostmi, které se rovnají velikosti sady řádků.
+Pokud inicializujete *prgLongVals* a *prgLengths* na HODNOTU NULL, budou pole, na která odkazují, přidělena automaticky, s velikostí roven velikosti sady řádků.
 
 > [!NOTE]
->  Hromadná výměna pole záznamu převádí data pouze ze zdroje dat do objektu sady záznamů. Aby bylo možné sadu záznamů aktualizovat, je nutné použít funkci rozhraní ODBC API `SQLSetPos`.
+> Hromadné pole záznamu výměna pouze přenáší data ze zdroje dat do objektu sady záznamů. Chcete-li, aby byla sada záznamů aktualizovatelná, `SQLSetPos`musíte použít funkci ROZHRANÍ API ROZHRANÍ ODBC .
 
-Další informace naleznete v článcích [Sada záznamů: hromadné načítání záznamů (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) a [výměny pole záznamu (RFX)](../../data/odbc/record-field-exchange-rfx.md).
+Další informace naleznete v článcích [Sada záznamů: Načítání záznamů hromadně (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) a [Výměna pole záznamu (RFX).](../../data/odbc/record-field-exchange-rfx.md)
 
 ### <a name="example"></a>Příklad
 
@@ -812,15 +812,15 @@ Viz [RFX_Text_Bulk](#rfx_text_bulk).
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** AFXDB. h
+**Záhlaví:** afxdb.h
 
-## <a name="rfx_single_bulk"></a>RFX_Single_Bulk
+## <a name="rfx_single_bulk"></a><a name="rfx_single_bulk"></a>RFX_Single_Bulk
 
-Přenáší více řádků dat s plovoucí desetinnou čárkou ze sloupce datového zdroje ODBC do odpovídajícího pole v objektu odvozeném od `CRecordset`.
+Přenáší více řádků dat s plovoucí desetinnou desetinnou desetinnou `CRecordset`hodnotou ze sloupce zdroje dat ODBC do odpovídajícího pole v odvozeném objektu.
 
 ### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 void RFX_Single_Bulk(
    CFieldExchange* pFX,
    LPCTSTR szName,
@@ -830,28 +830,28 @@ void RFX_Single_Bulk(
 
 ### <a name="parameters"></a>Parametry
 
-*pFX*<br/>
-Ukazatel na objekt [CFieldExchange](cfieldexchange-class.md) . Tento objekt obsahuje informace pro definování kontextu pro každé volání funkce. Další informace najdete v článku [Výměna pole záznamu: Jak funguje RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+*Pfx*<br/>
+Ukazatel na objekt [CFieldExchange.](cfieldexchange-class.md) Tento objekt obsahuje informace k definování kontextu pro každé volání funkce. Další informace naleznete v článku [Výměna pole záznamu: Jak funguje RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
-*szName*<br/>
+*szJméno*<br/>
 Název datového sloupce.
 
 *prgFltVals*<br/>
-Ukazatel na pole hodnot **typu float** . V tomto poli budou uložena data, která mají být přenesena ze zdroje dat do sady záznamů.
+Ukazatel na pole **plovoucí** hodnoty. Toto pole uloží data, která mají být přenesena ze zdroje dat do sady záznamů.
 
 *prgLengths*<br/>
-Ukazatel na pole dlouhých celých čísel. Toto pole bude uchovávat délku v bajtech každé hodnoty v poli, na které odkazuje *prgFltVals*. Všimněte si, že hodnota SQL_NULL_DATA bude uložena, pokud odpovídající datová položka obsahuje hodnotu null. Další podrobnosti najdete v tématu funkce rozhraní ODBC API `SQLBindCol` v *Referenční příručce programátora sady ODBC SDK*.
+Ukazatel na pole dlouhých celých čísel. Toto pole bude ukládat délku v bajtů každé hodnoty v poli, na které se vztahuje *prgFltVals*. Všimněte si, že hodnota SQL_NULL_DATA budou uloženy, pokud odpovídající datová položka obsahuje hodnotu Null. Další podrobnosti naleznete v funkci `SQLBindCol` ROZHRANÍ API ROZHRANÍ ODBC v *referenční příručce programátora sady ODBC SDK*.
 
 ### <a name="remarks"></a>Poznámky
 
-Sloupec zdroje dat musí mít SQL_REAL typ ODBC. Sada záznamů musí definovat datový člen pole typu pointer na typ **float**.
+Sloupec zdroje dat musí mít typ odbc SQL_REAL. Sada záznamů musí definovat datový člen pole ukazatele typu k **floatu**.
 
-Pokud inicializujete *prgFltVals* a *prgLengths* na hodnotu null, pak se pole, na která se odkazuje, přidělují automaticky s velikostmi, které se rovnají velikosti sady řádků.
+Pokud inicializujete *prgFltVals* a *prgLengths* na HODNOTU NULL, budou pole, na která odkazují, přidělena automaticky, s velikostí roven velikosti sady řádků.
 
 > [!NOTE]
->  Hromadná výměna pole záznamu převádí data pouze ze zdroje dat do objektu sady záznamů. Aby bylo možné sadu záznamů aktualizovat, je nutné použít funkci rozhraní ODBC API `SQLSetPos`.
+> Hromadné pole záznamu výměna pouze přenáší data ze zdroje dat do objektu sady záznamů. Chcete-li, aby byla sada záznamů aktualizovatelná, `SQLSetPos`musíte použít funkci ROZHRANÍ API ROZHRANÍ ODBC .
 
-Další informace naleznete v článcích [Sada záznamů: hromadné načítání záznamů (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) a [výměny pole záznamu (RFX)](../../data/odbc/record-field-exchange-rfx.md).
+Další informace naleznete v článcích [Sada záznamů: Načítání záznamů hromadně (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) a [Výměna pole záznamu (RFX).](../../data/odbc/record-field-exchange-rfx.md)
 
 ### <a name="example"></a>Příklad
 
@@ -859,15 +859,15 @@ Viz [RFX_Text_Bulk](#rfx_text_bulk).
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** AFXDB. h
+**Záhlaví:** afxdb.h
 
-## <a name="rfx_text_bulk"></a>RFX_Text_Bulk
+## <a name="rfx_text_bulk"></a><a name="rfx_text_bulk"></a>RFX_Text_Bulk
 
-Přenáší více řádků znakových dat ze sloupce zdroje dat ODBC do odpovídajícího pole v objektu odvozeném od `CRecordset`.
+Přenese více řádků znakových dat ze sloupce zdroje dat `CRecordset`ODBC do odpovídajícího pole v odvozeném objektu.
 
 ### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 void RFX_Text_Bulk(
    CFieldExchange* pFX,
    LPCTSTR szName,
@@ -878,35 +878,35 @@ void RFX_Text_Bulk(
 
 ### <a name="parameters"></a>Parametry
 
-*pFX*<br/>
-Ukazatel na objekt [CFieldExchange](cfieldexchange-class.md) . Tento objekt obsahuje informace pro definování kontextu pro každé volání funkce. Další informace najdete v článku [Výměna pole záznamu: Jak funguje RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
+*Pfx*<br/>
+Ukazatel na objekt [CFieldExchange.](cfieldexchange-class.md) Tento objekt obsahuje informace k definování kontextu pro každé volání funkce. Další informace naleznete v článku [Výměna pole záznamu: Jak funguje RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).
 
-*szName*<br/>
+*szJméno*<br/>
 Název datového sloupce.
 
 *prgStrVals*<br/>
-Ukazatel na pole hodnot typem LPStr. V tomto poli budou uložena data, která mají být přenesena ze zdroje dat do sady záznamů. Všimněte si, že v aktuální verzi rozhraní ODBC nemůžou být tyto hodnoty Unicode.
+Ukazatel na pole lpstr hodnot. Toto pole uloží data, která mají být přenesena ze zdroje dat do sady záznamů. Všimněte si, že s aktuální verzí rozhraní ODBC tyto hodnoty nemohou být Unicode.
 
 *prgLengths*<br/>
-Ukazatel na pole dlouhých celých čísel. Toto pole bude uchovávat délku v bajtech každé hodnoty v poli, na které odkazuje *prgStrVals*. Tato délka vylučuje ukončovací znak null. Všimněte si, že hodnota SQL_NULL_DATA bude uložena, pokud odpovídající datová položka obsahuje hodnotu null. Další podrobnosti najdete v tématu funkce rozhraní ODBC API `SQLBindCol` v *Referenční příručce programátora sady ODBC SDK*.
+Ukazatel na pole dlouhých celých čísel. Toto pole bude ukládat délku v bajtů každé hodnoty v poli, na které se vztahuje *prgStrVals*. Tato délka vylučuje znak ukončení null. Všimněte si, že hodnota SQL_NULL_DATA budou uloženy, pokud odpovídající datová položka obsahuje hodnotu Null. Další podrobnosti naleznete v funkci `SQLBindCol` ROZHRANÍ API ROZHRANÍ ODBC v *referenční příručce programátora sady ODBC SDK*.
 
 *nMaxLength*<br/>
-Maximální povolená délka hodnot uložených v poli, na které ukazuje *prgStrVals*, včetně ukončovacího znaku null. Aby se zajistilo, že data nebudou zkrácená, předejte dostatečně velkou velikost, která bude vyhovovat největší datové položce, kterou očekáváte.
+Maximální povolená délka hodnot uložených v poli, na které se vztahuje *prgStrVals*, včetně znaku null termination. Chcete-li zajistit, že data nebudou zkrácena, předejte hodnotu dostatečně velkou, aby se přizpůsobila největší datové položce, kterou očekáváte.
 
 ### <a name="remarks"></a>Poznámky
 
-Sloupec zdroj dat může mít typ ODBC SQL_LONGVARCHAR, SQL_CHAR, SQL_VARCHAR, SQL_DECIMAL nebo SQL_NUMERIC. Sada záznamů musí definovat datový člen pole typu typem LPStr.
+Sloupec zdroje dat může mít typ ODBC SQL_LONGVARCHAR, SQL_CHAR, SQL_VARCHAR, SQL_DECIMAL nebo SQL_NUMERIC. Sada záznamů musí definovat datový člen pole typu LPSTR.
 
-Pokud inicializujete *prgStrVals* a *prgLengths* na hodnotu null, pak se pole, na která se odkazuje, přidělují automaticky s velikostmi, které se rovnají velikosti sady řádků.
+Pokud inicializujete *prgStrVals* a *prgLengths* na HODNOTU NULL, budou pole, na která odkazují, přidělena automaticky, s velikostí roven velikosti sady řádků.
 
 > [!NOTE]
->  Hromadná výměna pole záznamu převádí data pouze ze zdroje dat do objektu sady záznamů. Aby bylo možné sadu záznamů aktualizovat, je nutné použít funkci rozhraní ODBC API `SQLSetPos`.
+> Hromadné pole záznamu výměna pouze přenáší data ze zdroje dat do objektu sady záznamů. Chcete-li, aby byla sada záznamů aktualizovatelná, `SQLSetPos`musíte použít funkci ROZHRANÍ API ROZHRANÍ ODBC .
 
-Další informace naleznete v článcích [Sada záznamů: hromadné načítání záznamů (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) a [výměny pole záznamu (RFX)](../../data/odbc/record-field-exchange-rfx.md).
+Další informace naleznete v článcích [Sada záznamů: Načítání záznamů hromadně (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) a [Výměna pole záznamu (RFX).](../../data/odbc/record-field-exchange-rfx.md)
 
 ### <a name="example"></a>Příklad
 
-V přepsání `DoBulkFieldExchange` musíte ručně napsat volání. Tento příklad ukazuje volání `RFX_Text_Bulk`a také volání `RFX_Long_Bulk`pro přenos dat. Těmto voláním předchází volání [CFieldExchange:: SetFieldType](CFieldExchange::SetFieldType.md). Všimněte si, že u parametrů je nutné volat funkce RFX místo hromadných funkcí RFX.
+Je nutné ručně psát `DoBulkFieldExchange` volání v přepsání. Tento příklad ukazuje `RFX_Text_Bulk`volání , stejně `RFX_Long_Bulk`jako volání do , pro přenos dat. Těmto voláním předchází volání [CFieldExchange::SetFieldType](cfieldexchange-class.md#setfieldtype). Všimněte si, že pro parametry je nutné volat funkce RFX namísto funkce Hromadné RFX.
 
 ```cpp
 void CMultiCustomer::DoBulkFieldExchange(CFieldExchange* pFX)
@@ -925,15 +925,15 @@ void CMultiCustomer::DoBulkFieldExchange(CFieldExchange* pFX)
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** AFXDB. h
+**Záhlaví:** afxdb.h
 
-## <a name="dfx_binary"></a>DFX_Binary
+## <a name="dfx_binary"></a><a name="dfx_binary"></a>DFX_Binary
 
-Převede pole bajtů mezi poli datových členů objektu [CDaoRecordset](cdaorecordset-class.md) a sloupce záznamu ve zdroji dat.
+Přenáší pole bajtů mezi datovými členy pole objektu [CDaoRecordset](cdaorecordset-class.md) a sloupci záznamu ve zdroji dat.
 
 ### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 void AFXAPI DFX_Binary(
    CDaoFieldExchange* pFX,
    LPCTSTR szName,
@@ -944,27 +944,27 @@ void AFXAPI DFX_Binary(
 
 ### <a name="parameters"></a>Parametry
 
-*pFX*<br/>
-Ukazatel na objekt třídy [CDaoFieldExchange](cdaofieldexchange-class.md). Tento objekt obsahuje informace pro definování kontextu pro každé volání funkce.
+*Pfx*<br/>
+Ukazatel na objekt třídy [CDaoFieldExchange](cdaofieldexchange-class.md). Tento objekt obsahuje informace k definování kontextu pro každé volání funkce.
 
-*szName*<br/>
+*szJméno*<br/>
 Název datového sloupce.
 
-*value*<br/>
-Hodnota uložená v označeném datovém členu – hodnota, která má být převedena. Pro přenos ze sady záznamů na zdroj dat se hodnota typu [CByteArray](cbytearray-class.md)převezme ze zadaného datového členu. Pro přenos ze zdroje dat do sady záznamů je hodnota uložena v zadaném datovém členu.
+*Hodnotu*<br/>
+Hodnota uložená v uvedeném datovém členu – hodnota, která má být přenesena. Pro přenos ze sady záznamů do zdroje dat je hodnota typu [CByteArray](cbytearray-class.md)převzata ze zadaného datového člena. Pro přenos ze zdroje dat do sady záznamů je hodnota uložena v zadaném datovém členu.
 
-*nPreAllocSize*<br/>
-Rozhraní předem přidělí tuto velikost paměti. Pokud jsou vaše data větší, rozhraní vám podle potřeby přidělí více místa. Pro lepší výkon nastavte tuto velikost na dostatečně velkou, aby se zabránilo přerozdělení. Výchozí velikost je definována v AFXDAO. Soubor H jako AFX_DAO_BINARY_DEFAULT_SIZE.
+*nPreAllocVelikost*<br/>
+Rozhraní framework předem přiděluje toto množství paměti. Pokud vaše data jsou větší, rozhraní bude přiděleno více místa podle potřeby. Pro lepší výkon nastavte tuto velikost na hodnotu dostatečně velkou, aby se zabránilo přerozdělení. Výchozí velikost je definována v AFXDAO. H jako AFX_DAO_BINARY_DEFAULT_SIZE.
 
 *dwBindOptions*<br/>
-Možnost, která umožňuje využít výhod mechanismu dvojitého ukládání do vyrovnávací paměti knihovny MFC pro detekci polí sady záznamů, které se změnily. Výchozí AFX_DAO_DISABLE_FIELD_CACHE, nepoužívá dvojité ukládání do vyrovnávací paměti a je nutné volat [SetFieldDirty](cdaorecordset-class.md#setfielddirty) a [SetFieldNull](cdaorecordset-class.md#setfieldnull) sami. Další možná hodnota, AFX_DAO_ENABLE_FIELD_CACHE, používá dvojité ukládání do vyrovnávací paměti a není nutné provádět další práci k označení nevyřízených polí nebo hodnoty null. Z důvodu výkonu a paměti Vyhněte této hodnotě, pokud vaše binární data nejsou relativně malá.
+Možnost, která umožňuje využít mechanismus dvojité vyrovnávací paměti knihovny MFC pro zjišťování polí sady záznamů, která se změnila. Výchozí, AFX_DAO_DISABLE_FIELD_CACHE, nepoužívá dvojité ukládání do vyrovnávací paměti a je nutné volat [SetFieldDirty](cdaorecordset-class.md#setfielddirty) a [SetFieldNull](cdaorecordset-class.md#setfieldnull) sami. Další možná hodnota, AFX_DAO_ENABLE_FIELD_CACHE, používá dvojité ukládání do vyrovnávací paměti a není třeba provést další práci k označení polí dirty nebo Null. Z důvodů výkonu a paměti se této hodnotě vyhněte, pokud binární data nejsou relativně malá.
 
 > [!NOTE]
->  Můžete určit, zda mají být data ve výchozím nastavení dvojitě ukládána do vyrovnávací paměti pro všechna pole nastavením [CDaoRecordset:: m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields).
+> Nastavením [sady CDaoRecordset::m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields)můžete určit, zda budou data ve výchozím nastavení pro všechna pole uložena do vyrovnávací paměti.
 
 ### <a name="remarks"></a>Poznámky
 
-Data jsou mapována mezi typy DAO_BYTES v rozhraní DAO a v sadě záznamů typu [CByteArray](cbytearray-class.md) .
+Data jsou mapována mezi typem DAO_BYTES v DAO a typem [CByteArray](cbytearray-class.md) v sadě záznamů.
 
 ### <a name="example"></a>Příklad
 
@@ -972,15 +972,15 @@ Viz [DFX_Text](#dfx_text).
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxdao. h
+**Záhlaví:** afxdao.h
 
-## <a name="dfx_bool"></a>DFX_Bool
+## <a name="dfx_bool"></a><a name="dfx_bool"></a>DFX_Bool
 
-Přenáší logická data mezi poli datových členů objektu [CDaoRecordset](cdaorecordset-class.md) a sloupci záznamu ve zdroji dat.
+Přenáší logická data mezi datovými členy pole objektu [CDaoRecordset](cdaorecordset-class.md) a sloupci záznamu ve zdroji dat.
 
 ### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 void AFXAPI DFX_Bool(
    CDaoFieldExchange* pFX,
    LPCTSTR szName,
@@ -990,24 +990,24 @@ void AFXAPI DFX_Bool(
 
 ### <a name="parameters"></a>Parametry
 
-*pFX*<br/>
-Ukazatel na objekt třídy [CDaoFieldExchange](cdaofieldexchange-class.md). Tento objekt obsahuje informace pro definování kontextu pro každé volání funkce.
+*Pfx*<br/>
+Ukazatel na objekt třídy [CDaoFieldExchange](cdaofieldexchange-class.md). Tento objekt obsahuje informace k definování kontextu pro každé volání funkce.
 
-*szName*<br/>
+*szJméno*<br/>
 Název datového sloupce.
 
-*value*<br/>
-Hodnota uložená v označeném datovém členu – hodnota, která má být převedena. Pro přenos ze sady záznamů na zdroj dat, hodnota typu BOOL je přijímán ze zadaného datového člena. Pro přenos ze zdroje dat do sady záznamů je hodnota uložena v zadaném datovém členu.
+*Hodnotu*<br/>
+Hodnota uložená v uvedeném datovém členu – hodnota, která má být přenesena. Pro přenos ze sady záznamů do zdroje dat je hodnota typu BOOL převzata ze zadaného datového člena. Pro přenos ze zdroje dat do sady záznamů je hodnota uložena v zadaném datovém členu.
 
 *dwBindOptions*<br/>
-Možnost, která umožňuje využít výhod mechanismu dvojitého ukládání do vyrovnávací paměti knihovny MFC pro detekci polí sady záznamů, které se změnily. Výchozí AFX_DAO_ENABLE_FIELD_CACHE používá dvojité ukládání do vyrovnávací paměti. Další možnou hodnotou je AFX_DAO_DISABLE_FIELD_CACHE. Pokud zadáte tuto hodnotu, knihovna MFC neprovede kontrolu tohoto pole. Je nutné volat `SetFieldDirty` a `SetFieldNull` sami.
+Možnost, která umožňuje využít mechanismus dvojité vyrovnávací paměti knihovny MFC pro zjišťování polí sady záznamů, která se změnila. Výchozí, AFX_DAO_ENABLE_FIELD_CACHE, používá dvojité ukládání do vyrovnávací paměti. Další možnou hodnotou je AFX_DAO_DISABLE_FIELD_CACHE. Pokud zadáte tuto hodnotu, knihovna MFC nekontroluje toto pole. Musíš `SetFieldDirty` zavolat i `SetFieldNull` sebe.
 
 > [!NOTE]
->  Nastavením možnosti [CDaoRecordset:: m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields)můžete řídit, jestli jsou data ve výchozím nastavení dvojitě bufferovaná.
+> Nastavením [sady CDaoRecordset::m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields)můžete určit, zda budou data ve výchozím nastavení dvojitá ve vyrovnávací paměti.
 
 ### <a name="remarks"></a>Poznámky
 
-Data jsou mapována mezi typem DAO_BOOL v rozhraní DAO a typ BOOL v sadě záznamů.
+Data jsou mapována mezi typem DAO_BOOL v DAO a typem BOOL v sadě záznamů.
 
 ### <a name="example"></a>Příklad
 
@@ -1015,15 +1015,15 @@ Viz [DFX_Text](#dfx_text).
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxdao. h
+**Záhlaví:** afxdao.h
 
-## <a name="dfx_byte"></a>DFX_Byte
+## <a name="dfx_byte"></a><a name="dfx_byte"></a>DFX_Byte
 
-Přenáší jednotlivé bajty mezi poli datových členů objektu [CDaoRecordset](cdaorecordset-class.md) a sloupce záznamu ve zdroji dat.
+Přenáší jednotlivé bajty mezi datovými členy pole objektu [CDaoRecordset](cdaorecordset-class.md) a sloupci záznamu ve zdroji dat.
 
 ### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 void AFXAPI DFX_Byte(
    CDaoFieldExchange* pFX,
    LPCTSTR szName,
@@ -1033,24 +1033,24 @@ void AFXAPI DFX_Byte(
 
 ### <a name="parameters"></a>Parametry
 
-*pFX*<br/>
-Ukazatel na objekt třídy [CDaoFieldExchange](cdaofieldexchange-class.md). Tento objekt obsahuje informace pro definování kontextu pro každé volání funkce.
+*Pfx*<br/>
+Ukazatel na objekt třídy [CDaoFieldExchange](cdaofieldexchange-class.md). Tento objekt obsahuje informace k definování kontextu pro každé volání funkce.
 
-*szName*<br/>
+*szJméno*<br/>
 Název datového sloupce.
 
-*value*<br/>
-Hodnota uložená v označeném datovém členu – hodnota, která má být převedena. Pro přenos ze sady záznamů na zdroj dat je hodnota typu BYTE přijímána ze zadaného datového členu. Pro přenos ze zdroje dat do sady záznamů je hodnota uložena v zadaném datovém členu.
+*Hodnotu*<br/>
+Hodnota uložená v uvedeném datovém členu – hodnota, která má být přenesena. Pro přenos ze sady záznamů do zdroje dat je hodnota typu BYTE převzata ze zadaného datového člena. Pro přenos ze zdroje dat do sady záznamů je hodnota uložena v zadaném datovém členu.
 
 *dwBindOptions*<br/>
-Možnost, která umožňuje využít výhod mechanismu dvojitého ukládání do vyrovnávací paměti knihovny MFC pro detekci polí sady záznamů, které se změnily. Výchozí AFX_DAO_ENABLE_FIELD_CACHE používá dvojité ukládání do vyrovnávací paměti. Další možnou hodnotou je AFX_DAO_DISABLE_FIELD_CACHE. Pokud zadáte tuto hodnotu, knihovna MFC neprovede kontrolu tohoto pole. Je nutné volat `SetFieldDirty` a `SetFieldNull` sami.
+Možnost, která umožňuje využít mechanismus dvojité vyrovnávací paměti knihovny MFC pro zjišťování polí sady záznamů, která se změnila. Výchozí, AFX_DAO_ENABLE_FIELD_CACHE, používá dvojité ukládání do vyrovnávací paměti. Další možnou hodnotou je AFX_DAO_DISABLE_FIELD_CACHE. Pokud zadáte tuto hodnotu, knihovna MFC nekontroluje toto pole. Musíš `SetFieldDirty` zavolat i `SetFieldNull` sebe.
 
 > [!NOTE]
->  Nastavením možnosti [CDaoRecordset:: m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields)můžete řídit, jestli jsou data ve výchozím nastavení dvojitě bufferovaná.
+> Nastavením [sady CDaoRecordset::m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields)můžete určit, zda budou data ve výchozím nastavení dvojitá ve vyrovnávací paměti.
 
 ### <a name="remarks"></a>Poznámky
 
-Data jsou mapována mezi typem DAO_BYTES v rozhraní DAO a typem BYTE v sadě záznamů.
+Data jsou mapována mezi typem DAO_BYTES v DAO a typem BYTE v sadě záznamů.
 
 ### <a name="example"></a>Příklad
 
@@ -1058,15 +1058,15 @@ Viz [DFX_Text](#dfx_text).
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxdao. h
+**Záhlaví:** afxdao.h
 
-## <a name="dfx_currency"></a>DFX_Currency
+## <a name="dfx_currency"></a><a name="dfx_currency"></a>DFX_Currency
 
-Přenáší data měny mezi poli datových členů objektu [CDaoRecordset](cdaorecordset-class.md) a sloupci záznamu ve zdroji dat.
+Přenáší data měny mezi datovými členy pole objektu [CDaoRecordset](cdaorecordset-class.md) a sloupci záznamu ve zdroji dat.
 
 ### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 void AFXAPI DFX_Currency(
    CDaoFieldExchange* pFX,
    LPCTSTR szName,
@@ -1076,24 +1076,24 @@ void AFXAPI DFX_Currency(
 
 ### <a name="parameters"></a>Parametry
 
-*pFX*<br/>
-Ukazatel na objekt třídy [CDaoFieldExchange](cdaofieldexchange-class.md). Tento objekt obsahuje informace pro definování kontextu pro každé volání funkce.
+*Pfx*<br/>
+Ukazatel na objekt třídy [CDaoFieldExchange](cdaofieldexchange-class.md). Tento objekt obsahuje informace k definování kontextu pro každé volání funkce.
 
-*szName*<br/>
+*szJméno*<br/>
 Název datového sloupce.
 
-*value*<br/>
-Hodnota uložená v označeném datovém členu – hodnota, která má být převedena. Pro přenos ze sady záznamů do zdroje dat je tato hodnota provedena ze zadaného datového členu typu [COleCurrency](colecurrency-class.md). Pro přenos ze zdroje dat do sady záznamů je hodnota uložena v zadaném datovém členu.
+*Hodnotu*<br/>
+Hodnota uložená v uvedeném datovém členu – hodnota, která má být přenesena. Pro přenos ze sady záznamů do zdroje dat je tato hodnota převzata ze zadaného datového člena typu [COleCurrency](colecurrency-class.md). Pro přenos ze zdroje dat do sady záznamů je hodnota uložena v zadaném datovém členu.
 
 *dwBindOptions*<br/>
-Možnost, která umožňuje využít výhod mechanismu dvojitého ukládání do vyrovnávací paměti knihovny MFC pro detekci polí sady záznamů, které se změnily. Výchozí AFX_DAO_ENABLE_FIELD_CACHE používá dvojité ukládání do vyrovnávací paměti. Další možnou hodnotou je AFX_DAO_DISABLE_FIELD_CACHE. Pokud zadáte tuto hodnotu, knihovna MFC neprovede kontrolu tohoto pole. Je nutné volat `SetFieldDirty` a `SetFieldNull` sami.
+Možnost, která umožňuje využít mechanismus dvojité vyrovnávací paměti knihovny MFC pro zjišťování polí sady záznamů, která se změnila. Výchozí, AFX_DAO_ENABLE_FIELD_CACHE, používá dvojité ukládání do vyrovnávací paměti. Další možnou hodnotou je AFX_DAO_DISABLE_FIELD_CACHE. Pokud zadáte tuto hodnotu, knihovna MFC nekontroluje toto pole. Musíš `SetFieldDirty` zavolat i `SetFieldNull` sebe.
 
 > [!NOTE]
->  Nastavením možnosti [CDaoRecordset:: m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields)můžete řídit, jestli jsou data ve výchozím nastavení dvojitě bufferovaná.
+> Nastavením [sady CDaoRecordset::m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields)můžete určit, zda budou data ve výchozím nastavení dvojitá ve vyrovnávací paměti.
 
 ### <a name="remarks"></a>Poznámky
 
-Data jsou mapována mezi typy DAO_CURRENCY v rozhraní DAO a v sadě záznamů typu [COleCurrency](colecurrency-class.md) .
+Data jsou mapována mezi typem DAO_CURRENCY v DAO a [typem COleCurrency](colecurrency-class.md) v sadě záznamů.
 
 ### <a name="example"></a>Příklad
 
@@ -1101,15 +1101,15 @@ Viz [DFX_Text](#dfx_text).
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxdao. h
+**Záhlaví:** afxdao.h
 
-## <a name="dfx_datetime"></a>DFX_DateTime
+## <a name="dfx_datetime"></a><a name="dfx_datetime"></a>DFX_DateTime
 
-Převádí data a data mezi datovými členy pole v objektu [CDaoRecordset](cdaorecordset-class.md) a sloupci záznamu ve zdroji dat.
+Přenáší data času a data mezi datovými členy pole objektu [CDaoRecordset](cdaorecordset-class.md) a sloupci záznamu ve zdroji dat.
 
 ### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 void AFXAPI DFX_DateTime(
    CDaoFieldExchange* pFX,
    LPCTSTR szName,
@@ -1119,27 +1119,27 @@ void AFXAPI DFX_DateTime(
 
 ### <a name="parameters"></a>Parametry
 
-*pFX*<br/>
-Ukazatel na objekt třídy [CDaoFieldExchange](cdaofieldexchange-class.md). Tento objekt obsahuje informace pro definování kontextu pro každé volání funkce.
+*Pfx*<br/>
+Ukazatel na objekt třídy [CDaoFieldExchange](cdaofieldexchange-class.md). Tento objekt obsahuje informace k definování kontextu pro každé volání funkce.
 
-*szName*<br/>
+*szJméno*<br/>
 Název datového sloupce.
 
-*value*<br/>
-Hodnota uložená v označeném datovém členu – hodnota, která má být převedena. Funkce přebírá odkaz na objekt [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) . Pro přenos ze sady záznamů na zdroj dat se tato hodnota převezme ze zadaného datového členu. Pro přenos ze zdroje dat do sady záznamů je hodnota uložena v zadaném datovém členu.
+*Hodnotu*<br/>
+Hodnota uložená v uvedeném datovém členu – hodnota, která má být přenesena. Funkce přebírá odkaz na [cOleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) objektu. Pro přenos ze sady záznamů do zdroje dat je tato hodnota převzata ze zadaného datového člena. Pro přenos ze zdroje dat do sady záznamů je hodnota uložena v zadaném datovém členu.
 
 *dwBindOptions*<br/>
-Možnost, která umožňuje využít výhod mechanismu dvojitého ukládání do vyrovnávací paměti knihovny MFC pro detekci polí sady záznamů, které se změnily. Výchozí AFX_DAO_ENABLE_FIELD_CACHE používá dvojité ukládání do vyrovnávací paměti. Další možnou hodnotou je AFX_DAO_DISABLE_FIELD_CACHE. Pokud zadáte tuto hodnotu, knihovna MFC neprovede kontrolu tohoto pole. Je nutné volat `SetFieldDirty` a `SetFieldNull` sami.
+Možnost, která umožňuje využít mechanismus dvojité vyrovnávací paměti knihovny MFC pro zjišťování polí sady záznamů, která se změnila. Výchozí, AFX_DAO_ENABLE_FIELD_CACHE, používá dvojité ukládání do vyrovnávací paměti. Další možnou hodnotou je AFX_DAO_DISABLE_FIELD_CACHE. Pokud zadáte tuto hodnotu, knihovna MFC nekontroluje toto pole. Musíš `SetFieldDirty` zavolat i `SetFieldNull` sebe.
 
 > [!NOTE]
->  Nastavením možnosti [CDaoRecordset:: m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields)můžete řídit, jestli jsou data ve výchozím nastavení dvojitě bufferovaná.
+> Nastavením [sady CDaoRecordset::m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields)můžete určit, zda budou data ve výchozím nastavení dvojitá ve vyrovnávací paměti.
 
 ### <a name="remarks"></a>Poznámky
 
-Data jsou mapována mezi typy DAO_DATE v rozhraní DAO a v sadě záznamů typu [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) .
+Data jsou mapována mezi typem DAO_DATE v DAO a typem [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) v sadě záznamů.
 
 > [!NOTE]
->  `COleDateTime` nahrazuje [CTime –](../../atl-mfc-shared/reference/ctime-class.md) a TIMESTAMP_STRUCT pro tento účel v třídách DAO. `CTime` a TIMESTAMP_STRUCT se pořád používají pro třídy přístupu k datům založené na rozhraní ODBC.
+> `COleDateTime`nahrazuje [CTime](../../atl-mfc-shared/reference/ctime-class.md) a TIMESTAMP_STRUCT pro tento účel ve třídách DAO. `CTime`a TIMESTAMP_STRUCT se stále používají pro třídy přístupu k datům založené na rozhraní ODBC.
 
 ### <a name="example"></a>Příklad
 
@@ -1147,15 +1147,15 @@ Viz [DFX_Text](#dfx_text).
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxdao. h
+**Záhlaví:** afxdao.h
 
-## <a name="dfx_double"></a>DFX_Double
+## <a name="dfx_double"></a><a name="dfx_double"></a>DFX_Double
 
-Převádí data **typu Double float** mezi datovými členy pole v objektu [CDaoRecordset](cdaorecordset-class.md) a sloupci záznamu ve zdroji dat.
+Přenáší **dvojitá plovoucí** data mezi datovými členy pole objektu [CDaoRecordset](cdaorecordset-class.md) a sloupci záznamu ve zdroji dat.
 
 ### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 void AFXAPI DFX_Double(
    CDaoFieldExchange* pFX,
    LPCTSTR szName,
@@ -1165,24 +1165,24 @@ void AFXAPI DFX_Double(
 
 ### <a name="parameters"></a>Parametry
 
-*pFX*<br/>
-Ukazatel na objekt třídy [CDaoFieldExchange](cdaofieldexchange-class.md). Tento objekt obsahuje informace pro definování kontextu pro každé volání funkce.
+*Pfx*<br/>
+Ukazatel na objekt třídy [CDaoFieldExchange](cdaofieldexchange-class.md). Tento objekt obsahuje informace k definování kontextu pro každé volání funkce.
 
-*szName*<br/>
+*szJméno*<br/>
 Název datového sloupce.
 
-*value*<br/>
-Hodnota uložená v označeném datovém členu – hodnota, která má být převedena. Pro přenos ze sady záznamů na zdroj dat je hodnota typu **Double**převedená ze zadaného datového členu. Pro přenos ze zdroje dat do sady záznamů je hodnota uložena v zadaném datovém členu.
+*Hodnotu*<br/>
+Hodnota uložená v uvedeném datovém členu – hodnota, která má být přenesena. Pro přenos ze sady záznamů do zdroje dat je hodnota typu **double**, převzata ze zadaného datového člena. Pro přenos ze zdroje dat do sady záznamů je hodnota uložena v zadaném datovém členu.
 
 *dwBindOptions*<br/>
-Možnost, která umožňuje využít výhod mechanismu dvojitého ukládání do vyrovnávací paměti knihovny MFC pro detekci polí sady záznamů, které se změnily. Výchozí AFX_DAO_ENABLE_FIELD_CACHE používá dvojité ukládání do vyrovnávací paměti. Další možnou hodnotou je AFX_DAO_DISABLE_FIELD_CACHE. Pokud zadáte tuto hodnotu, knihovna MFC neprovede kontrolu tohoto pole. Je nutné volat `SetFieldDirty` a `SetFieldNull` sami.
+Možnost, která umožňuje využít mechanismus dvojité vyrovnávací paměti knihovny MFC pro zjišťování polí sady záznamů, která se změnila. Výchozí, AFX_DAO_ENABLE_FIELD_CACHE, používá dvojité ukládání do vyrovnávací paměti. Další možnou hodnotou je AFX_DAO_DISABLE_FIELD_CACHE. Pokud zadáte tuto hodnotu, knihovna MFC nekontroluje toto pole. Musíš `SetFieldDirty` zavolat i `SetFieldNull` sebe.
 
 > [!NOTE]
->  Nastavením možnosti [CDaoRecordset:: m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields)můžete řídit, jestli jsou data ve výchozím nastavení dvojitě bufferovaná.
+> Nastavením [sady CDaoRecordset::m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields)můžete určit, zda budou data ve výchozím nastavení dvojitá ve vyrovnávací paměti.
 
 ### <a name="remarks"></a>Poznámky
 
-Data jsou mapována mezi typem DAO_R8 v rozhraní DAO a v sadě záznamů typu **Double float** .
+Data jsou mapována mezi typem DAO_R8 v DAO a zadejte **dvojité float** v sadě záznamů.
 
 ### <a name="example"></a>Příklad
 
@@ -1190,15 +1190,15 @@ Viz [DFX_Text](#dfx_text).
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxdao. h
+**Záhlaví:** afxdao.h
 
-## <a name="dfx_long"></a>DFX_Long
+## <a name="dfx_long"></a><a name="dfx_long"></a>DFX_Long
 
-Převádí dlouhá celočíselná data mezi poli datových členů objektu [CDaoRecordset](cdaorecordset-class.md) a sloupci záznamu ve zdroji dat.
+Přenáší dlouhá data celéčíslo mezi datovými členy pole objektu [CDaoRecordset](cdaorecordset-class.md) a sloupci záznamu ve zdroji dat.
 
 ### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 void AFXAPI DFX_Long(
    CDaoFieldExchange* pFX,
    LPCTSTR szName,
@@ -1208,24 +1208,24 @@ void AFXAPI DFX_Long(
 
 ### <a name="parameters"></a>Parametry
 
-*pFX*<br/>
-Ukazatel na objekt třídy [CDaoFieldExchange](cdaofieldexchange-class.md). Tento objekt obsahuje informace pro definování kontextu pro každé volání funkce.
+*Pfx*<br/>
+Ukazatel na objekt třídy [CDaoFieldExchange](cdaofieldexchange-class.md). Tento objekt obsahuje informace k definování kontextu pro každé volání funkce.
 
-*szName*<br/>
+*szJméno*<br/>
 Název datového sloupce.
 
-*value*<br/>
-Hodnota uložená v označeném datovém členu – hodnota, která má být převedena. Pro přenos ze sady záznamů na zdroj dat je hodnota typu **Long**přijímána ze zadaného datového členu. Pro přenos ze zdroje dat do sady záznamů je hodnota uložena v zadaném datovém členu.
+*Hodnotu*<br/>
+Hodnota uložená v uvedeném datovém členu – hodnota, která má být přenesena. Pro přenos ze sady záznamů do zdroje dat je hodnota typu **long**převzata ze zadaného datového člena. Pro přenos ze zdroje dat do sady záznamů je hodnota uložena v zadaném datovém členu.
 
 *dwBindOptions*<br/>
-Možnost, která umožňuje využít výhod mechanismu dvojitého ukládání do vyrovnávací paměti knihovny MFC pro detekci polí sady záznamů, které se změnily. Výchozí AFX_DAO_ENABLE_FIELD_CACHE používá dvojité ukládání do vyrovnávací paměti. Další možnou hodnotou je AFX_DAO_DISABLE_FIELD_CACHE. Pokud zadáte tuto hodnotu, knihovna MFC neprovede kontrolu tohoto pole. Je nutné volat `SetFieldDirty` a `SetFieldNull` sami.
+Možnost, která umožňuje využít mechanismus dvojité vyrovnávací paměti knihovny MFC pro zjišťování polí sady záznamů, která se změnila. Výchozí, AFX_DAO_ENABLE_FIELD_CACHE, používá dvojité ukládání do vyrovnávací paměti. Další možnou hodnotou je AFX_DAO_DISABLE_FIELD_CACHE. Pokud zadáte tuto hodnotu, knihovna MFC nekontroluje toto pole. Musíš `SetFieldDirty` zavolat i `SetFieldNull` sebe.
 
 > [!NOTE]
->  Nastavením možnosti [CDaoRecordset:: m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields)můžete řídit, jestli jsou data ve výchozím nastavení dvojitě bufferovaná.
+> Nastavením [sady CDaoRecordset::m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields)můžete určit, zda budou data ve výchozím nastavení dvojitá ve vyrovnávací paměti.
 
 ### <a name="remarks"></a>Poznámky
 
-Data jsou mapována mezi typem DAO_I4 v rozhraní DAO a v sadě záznamů typu **Long** .
+Data jsou mapována mezi typem DAO_I4 v DAO a **typem long** v sadě záznamů.
 
 ### <a name="example"></a>Příklad
 
@@ -1233,15 +1233,15 @@ Viz [DFX_Text](#dfx_text).
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxdao. h
+**Záhlaví:** afxdao.h
 
-## <a name="dfx_longbinary"></a>DFX_LongBinary
+## <a name="dfx_longbinary"></a><a name="dfx_longbinary"></a>DFX_LongBinary
 
-**Důležité** informace Doporučujeme místo této funkce použít [DFX_Binary](#dfx_binary) .
+**Důležité informace** Doporučujeme používat [DFX_Binary](#dfx_binary) místo této funkce.
 
 ### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 void AFXAPI DFX_LongBinary(
    CDaoFieldExchange* pFX,
    LPCTSTR szName,
@@ -1252,27 +1252,27 @@ void AFXAPI DFX_LongBinary(
 
 ### <a name="parameters"></a>Parametry
 
-*pFX*<br/>
-Ukazatel na objekt třídy [CDaoFieldExchange](cdaofieldexchange-class.md). Tento objekt obsahuje informace pro definování kontextu pro každé volání funkce.
+*Pfx*<br/>
+Ukazatel na objekt třídy [CDaoFieldExchange](cdaofieldexchange-class.md). Tento objekt obsahuje informace k definování kontextu pro každé volání funkce.
 
-*szName*<br/>
+*szJméno*<br/>
 Název datového sloupce.
 
-*value*<br/>
-Hodnota uložená v označeném datovém členu – hodnota, která má být převedena. Pro přenos ze sady záznamů na zdroj dat se hodnota typu [CLongBinary –](clongbinary-class.md)převezme ze zadaného datového členu. Pro přenos ze zdroje dat do sady záznamů je hodnota uložena v zadaném datovém členu.
+*Hodnotu*<br/>
+Hodnota uložená v uvedeném datovém členu – hodnota, která má být přenesena. Pro přenos ze sady záznamů do zdroje dat je hodnota typu [CLongBinary](clongbinary-class.md)převzata ze zadaného datového člena. Pro přenos ze zdroje dat do sady záznamů je hodnota uložena v zadaném datovém členu.
 
-*dwPreAllocSize*<br/>
-Rozhraní předem přidělí tuto velikost paměti. Pokud jsou vaše data větší, rozhraní vám podle potřeby přidělí více místa. Pro lepší výkon nastavte tuto velikost na dostatečně velkou, aby se zabránilo přerozdělení.
+*dwPreAllocVelikost*<br/>
+Rozhraní framework předem přiděluje toto množství paměti. Pokud vaše data jsou větší, rozhraní bude přiděleno více místa podle potřeby. Pro lepší výkon nastavte tuto velikost na hodnotu dostatečně velkou, aby se zabránilo přerozdělení.
 
 *dwBindOptions*<br/>
-Možnost, která umožňuje využít výhod mechanismu dvojitého ukládání do vyrovnávací paměti knihovny MFC pro detekci polí sady záznamů, které se změnily. Ve výchozím nastavení AFX_DISABLE_FIELD_CACHE nepoužívá dvojité ukládání do vyrovnávací paměti. Další možnou hodnotou je AFX_DAO_ENABLE_FIELD_CACHE. Používá dvojité ukládání do vyrovnávací paměti a není nutné provádět další práci k označení nevyřízených polí nebo hodnoty null. Z důvodu výkonu a paměti Vyhněte této hodnotě, pokud vaše binární data nejsou relativně malá.
+Možnost, která umožňuje využít mechanismus dvojité vyrovnávací paměti knihovny MFC pro zjišťování polí sady záznamů, která se změnila. Výchozí, AFX_DISABLE_FIELD_CACHE, nepoužívá dvojité ukládání do vyrovnávací paměti. Další možnou hodnotou je AFX_DAO_ENABLE_FIELD_CACHE. Používá dvojité ukládání do vyrovnávací paměti a není třeba provést další práci označit pole dirty nebo Null. Z důvodů výkonu a paměti se této hodnotě vyhněte, pokud binární data nejsou relativně malá.
 
 > [!NOTE]
->  Nastavením možnosti [CDaoRecordset:: m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields)můžete řídit, jestli jsou data ve výchozím nastavení dvojitě bufferovaná.
+> Nastavením [sady CDaoRecordset::m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields)můžete určit, zda budou data ve výchozím nastavení dvojitá ve vyrovnávací paměti.
 
 ### <a name="remarks"></a>Poznámky
 
-`DFX_LongBinary` je k dispozici pro kompatibilitu s třídami knihovny MFC rozhraní ODBC. Funkce `DFX_LongBinary` přenáší data binárního rozsáhlého objektu (BLOB) pomocí `CLongBinary` třídy mezi datovými členy pole v objektu [CDaoRecordset](cdaorecordset-class.md) a sloupci záznamu ve zdroji dat. Data jsou mapována mezi typy DAO_BYTES v rozhraní DAO a v sadě záznamů typu [CLongBinary –](clongbinary-class.md) .
+`DFX_LongBinary`je k dispozici pro kompatibilitu s třídami MFC ODBC. Funkce `DFX_LongBinary` přenáší binární data s velkým objektem `CLongBinary` (BLOB) pomocí třídy mezi datovými členy pole objektu [CDaoRecordset](cdaorecordset-class.md) a sloupci záznamu ve zdroji dat. Data jsou mapována mezi typem DAO_BYTES v DAO a typem [CLongBinary](clongbinary-class.md) v sadě záznamů.
 
 ### <a name="example"></a>Příklad
 
@@ -1280,15 +1280,15 @@ Viz [DFX_Text](#dfx_text).
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxdao. h
+**Záhlaví:** afxdao.h
 
-## <a name="dfx_short"></a>DFX_Short
+## <a name="dfx_short"></a><a name="dfx_short"></a>DFX_Short
 
-Převádí krátká celočíselná data mezi poli datových členů objektu [CDaoRecordset](cdaorecordset-class.md) a sloupci záznamu ve zdroji dat.
+Přenáší krátká data celého čísla mezi datovými členy pole objektu [CDaoRecordset](cdaorecordset-class.md) a sloupci záznamu ve zdroji dat.
 
 ### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 void AFXAPI DFX_Short(
    CDaoFieldExchange* pFX,
    LPCTSTR szName,
@@ -1298,27 +1298,27 @@ void AFXAPI DFX_Short(
 
 ### <a name="parameters"></a>Parametry
 
-*pFX*<br/>
-Ukazatel na objekt třídy [CDaoFieldExchange](cdaofieldexchange-class.md). Tento objekt obsahuje informace pro definování kontextu pro každé volání funkce.
+*Pfx*<br/>
+Ukazatel na objekt třídy [CDaoFieldExchange](cdaofieldexchange-class.md). Tento objekt obsahuje informace k definování kontextu pro každé volání funkce.
 
-*szName*<br/>
+*szJméno*<br/>
 Název datového sloupce.
 
-*value*<br/>
-Hodnota uložená v označeném datovém členu – hodnota, která má být převedena. Pro přenos ze sady záznamů na zdroj dat je hodnota typu **short**převedená od zadaného datového členu. Pro přenos ze zdroje dat do sady záznamů je hodnota uložena v zadaném datovém členu.
+*Hodnotu*<br/>
+Hodnota uložená v uvedeném datovém členu – hodnota, která má být přenesena. Pro přenos ze sady záznamů do zdroje dat je hodnota typu **short**převzata ze zadaného datového člena. Pro přenos ze zdroje dat do sady záznamů je hodnota uložena v zadaném datovém členu.
 
 *dwBindOptions*<br/>
-Možnost, která umožňuje využít výhod mechanismu dvojitého ukládání do vyrovnávací paměti knihovny MFC pro detekci polí sady záznamů, které se změnily. Výchozí AFX_DAO_ENABLE_FIELD_CACHE používá dvojité ukládání do vyrovnávací paměti. Další možnou hodnotou je AFX_DAO_DISABLE_FIELD_CACHE. Pokud zadáte tuto hodnotu, knihovna MFC neprovede kontrolu tohoto pole. Je nutné volat `SetFieldDirty` a `SetFieldNull` sami.
+Možnost, která umožňuje využít mechanismus dvojité vyrovnávací paměti knihovny MFC pro zjišťování polí sady záznamů, která se změnila. Výchozí, AFX_DAO_ENABLE_FIELD_CACHE, používá dvojité ukládání do vyrovnávací paměti. Další možnou hodnotou je AFX_DAO_DISABLE_FIELD_CACHE. Pokud zadáte tuto hodnotu, knihovna MFC nekontroluje toto pole. Musíš `SetFieldDirty` zavolat i `SetFieldNull` sebe.
 
 > [!NOTE]
->  Nastavením možnosti [CDaoRecordset:: m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields)můžete řídit, jestli jsou data ve výchozím nastavení dvojitě bufferovaná.
+> Nastavením [sady CDaoRecordset::m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields)můžete určit, zda budou data ve výchozím nastavení dvojitá ve vyrovnávací paměti.
 
 ### <a name="remarks"></a>Poznámky
 
-Data jsou mapována mezi typem DAO_I2 v rozhraní DAO a v sadě záznamů typu **short** .
+Data jsou mapována mezi typem DAO_I2 v DAO a **textem krátký** v sadě záznamů.
 
 > [!NOTE]
->  `DFX_Short` je ekvivalentem [RFX_Int](#rfx_int) pro třídy založené na rozhraní ODBC.
+> `DFX_Short`je ekvivalentní [RFX_Int](#rfx_int) pro třídy založené na ROZHRANÍ ODBC.
 
 ### <a name="example"></a>Příklad
 
@@ -1326,15 +1326,15 @@ Viz [DFX_Text](#dfx_text).
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxdao. h
+**Záhlaví:** afxdao.h
 
-## <a name="dfx_single"></a>DFX_Single
+## <a name="dfx_single"></a><a name="dfx_single"></a>DFX_Single
 
-Převádí data s plovoucí desetinnou čárkou mezi poli datových členů objektu [CDaoRecordset](cdaorecordset-class.md) a sloupci záznamu ve zdroji dat.
+Přenáší data s plovoucí desetinnou desetinnou tácem mezi datovými členy pole objektu [CDaoRecordset](cdaorecordset-class.md) a sloupci záznamu ve zdroji dat.
 
 ### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 void AFXAPI DFX_Single(
    CDaoFieldExchange* pFX,
    LPCTSTR szName,
@@ -1344,24 +1344,24 @@ void AFXAPI DFX_Single(
 
 ### <a name="parameters"></a>Parametry
 
-*pFX*<br/>
-Ukazatel na objekt třídy [CDaoFieldExchange](cdaofieldexchange-class.md). Tento objekt obsahuje informace pro definování kontextu pro každé volání funkce.
+*Pfx*<br/>
+Ukazatel na objekt třídy [CDaoFieldExchange](cdaofieldexchange-class.md). Tento objekt obsahuje informace k definování kontextu pro každé volání funkce.
 
-*szName*<br/>
+*szJméno*<br/>
 Název datového sloupce.
 
-*value*<br/>
-Hodnota uložená v označeném datovém členu – hodnota, která má být převedena. Pro přenos ze sady záznamů na zdroj dat je hodnota typu **float**převedená ze zadaného datového členu. Pro přenos ze zdroje dat do sady záznamů je hodnota uložena v zadaném datovém členu.
+*Hodnotu*<br/>
+Hodnota uložená v uvedeném datovém členu – hodnota, která má být přenesena. Pro přenos ze sady záznamů do zdroje dat je hodnota typu **float**převzata ze zadaného datového člena. Pro přenos ze zdroje dat do sady záznamů je hodnota uložena v zadaném datovém členu.
 
 *dwBindOptions*<br/>
-Možnost, která umožňuje využít výhod mechanismu dvojitého ukládání do vyrovnávací paměti knihovny MFC pro detekci polí sady záznamů, které se změnily. Výchozí AFX_DAO_ENABLE_FIELD_CACHE používá dvojité ukládání do vyrovnávací paměti. Další možnou hodnotou je AFX_DAO_DISABLE_FIELD_CACHE. Pokud zadáte tuto hodnotu, knihovna MFC neprovede kontrolu tohoto pole. Je nutné volat `SetFieldDirty` a `SetFieldNull` sami.
+Možnost, která umožňuje využít mechanismus dvojité vyrovnávací paměti knihovny MFC pro zjišťování polí sady záznamů, která se změnila. Výchozí, AFX_DAO_ENABLE_FIELD_CACHE, používá dvojité ukládání do vyrovnávací paměti. Další možnou hodnotou je AFX_DAO_DISABLE_FIELD_CACHE. Pokud zadáte tuto hodnotu, knihovna MFC nekontroluje toto pole. Musíš `SetFieldDirty` zavolat i `SetFieldNull` sebe.
 
 > [!NOTE]
->  Nastavením možnosti [CDaoRecordset:: m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields)můžete řídit, jestli jsou data ve výchozím nastavení dvojitě bufferovaná.
+> Nastavením [sady CDaoRecordset::m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields)můžete určit, zda budou data ve výchozím nastavení dvojitá ve vyrovnávací paměti.
 
 ### <a name="remarks"></a>Poznámky
 
-Data jsou mapována mezi typy DAO_R4 v rozhraní DAO a v sadě záznamů typu **float** .
+Data jsou mapována mezi typem DAO_R4 v DAO a **typem float** v sadě záznamů.
 
 ### <a name="example"></a>Příklad
 
@@ -1369,15 +1369,15 @@ Viz [DFX_Text](#dfx_text).
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxdao. h
+**Záhlaví:** afxdao.h
 
-## <a name="dfx_text"></a>DFX_Text
+## <a name="dfx_text"></a><a name="dfx_text"></a>DFX_Text
 
-Přenáší `CString` data mezi poli datových členů objektu [CDaoRecordset](cdaorecordset-class.md) a sloupce záznamu ve zdroji dat.
+Přenáší `CString` data mezi datovými členy pole objektu [CDaoRecordset](cdaorecordset-class.md) a sloupci záznamu ve zdroji dat.
 
 ### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 void AFXAPI DFX_Text(
    CDaoFieldExchange* pFX,
    LPCTSTR szName,
@@ -1388,31 +1388,31 @@ void AFXAPI DFX_Text(
 
 ### <a name="parameters"></a>Parametry
 
-*pFX*<br/>
-Ukazatel na objekt třídy [CDaoFieldExchange](cdaofieldexchange-class.md). Tento objekt obsahuje informace pro definování kontextu pro každé volání funkce.
+*Pfx*<br/>
+Ukazatel na objekt třídy [CDaoFieldExchange](cdaofieldexchange-class.md). Tento objekt obsahuje informace k definování kontextu pro každé volání funkce.
 
-*szName*<br/>
+*szJméno*<br/>
 Název datového sloupce.
 
-*value*<br/>
-Hodnota uložená v označeném datovém členu – hodnota, která má být převedena. Pro přenos ze sady záznamů na zdroj dat je hodnota typu [CString](../../atl-mfc-shared/reference/cstringt-class.md)přijímána ze zadaného datového členu. Pro přenos ze zdroje dat do sady záznamů je hodnota uložena v zadaném datovém členu.
+*Hodnotu*<br/>
+Hodnota uložená v uvedeném datovém členu – hodnota, která má být přenesena. Pro přenos ze sady záznamů do zdroje dat je hodnota typu [CString](../../atl-mfc-shared/reference/cstringt-class.md)převzata ze zadaného datového člena. Pro přenos ze zdroje dat do sady záznamů je hodnota uložena v zadaném datovém členu.
 
-*nPreAllocSize*<br/>
-Rozhraní předem přidělí tuto velikost paměti. Pokud jsou vaše data větší, rozhraní vám podle potřeby přidělí více místa. Pro lepší výkon nastavte tuto velikost na dostatečně velkou, aby se zabránilo přerozdělení.
+*nPreAllocVelikost*<br/>
+Rozhraní framework předem přiděluje toto množství paměti. Pokud vaše data jsou větší, rozhraní bude přiděleno více místa podle potřeby. Pro lepší výkon nastavte tuto velikost na hodnotu dostatečně velkou, aby se zabránilo přerozdělení.
 
 *dwBindOptions*<br/>
-Možnost, která umožňuje využít výhod mechanismu dvojitého ukládání do vyrovnávací paměti knihovny MFC pro detekci polí sady záznamů, které se změnily. Výchozí AFX_DAO_ENABLE_FIELD_CACHE používá dvojité ukládání do vyrovnávací paměti. Další možnou hodnotou je AFX_DAO_DISABLE_FIELD_CACHE. Pokud zadáte tuto hodnotu, knihovna MFC neprovede kontrolu tohoto pole. Musíte volat [SetFieldDirty](cdaorecordset-class.md#setfielddirty) a [SetFieldNull](cdaorecordset-class.md#setfieldnull) sami sebe.
+Možnost, která umožňuje využít mechanismus dvojité vyrovnávací paměti knihovny MFC pro zjišťování polí sady záznamů, která se změnila. Výchozí, AFX_DAO_ENABLE_FIELD_CACHE, používá dvojité ukládání do vyrovnávací paměti. Další možnou hodnotou je AFX_DAO_DISABLE_FIELD_CACHE. Pokud zadáte tuto hodnotu, knihovna MFC nekontroluje toto pole. Musíte volat [SetFieldDirty](cdaorecordset-class.md#setfielddirty) a [SetFieldNull](cdaorecordset-class.md#setfieldnull) sami.
 
 > [!NOTE]
->  Nastavením možnosti [CDaoRecordset:: m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields)můžete řídit, jestli jsou data ve výchozím nastavení dvojitě bufferovaná.
+> Nastavením [sady CDaoRecordset::m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields)můžete určit, zda budou data ve výchozím nastavení dvojitá ve vyrovnávací paměti.
 
 ### <a name="remarks"></a>Poznámky
 
-Data jsou mapována mezi typem DAO_CHAR v rozhraní DAO (nebo, pokud je definován _UNICODE symbol, DAO_WCHAR) a do sady záznamů zadejte [CString](../../atl-mfc-shared/reference/cstringt-class.md) .  n
+Data jsou mapována mezi typem DAO_CHAR v DAO (nebo, pokud je definován symbol _UNICODE, DAO_WCHAR) a typem [CString](../../atl-mfc-shared/reference/cstringt-class.md) v sadě záznamů.  n
 
 ### <a name="example"></a>Příklad
 
-Tento příklad ukazuje několik volání `DFX_Text`. Všimněte si také dvou volání [CDaoFieldExchange:: SetFieldType](cdaofieldexchange-class.md#setfieldtype). Je nutné napsat první volání `SetFieldType` a jeho volání **DFX** . Druhé volání a přidružené volání **DFX** jsou obvykle zapisovány průvodcem kódem, který třídu vygeneroval.
+Tento příklad ukazuje `DFX_Text`několik volání . Všimněte si také dvě volání [CDaoFieldExchange::SetFieldType](cdaofieldexchange-class.md#setfieldtype). Musíte napsat první volání `SetFieldType` a jeho **volání DFX.** Druhé volání a jeho přidružené **Volání DFX** jsou obvykle zapsány průvodcem kódu, který vygeneroval třídu.
 
 ```cpp
 void CCustSet::DoFieldExchange(CDaoFieldExchange* pFX)
@@ -1432,11 +1432,11 @@ void CCustSet::DoFieldExchange(CDaoFieldExchange* pFX)
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxdao. h
+**Záhlaví:** afxdao.h
 
 ## <a name="see-also"></a>Viz také
 
-[Makra a globální prvky](mfc-macros-and-globals.md)<br/>
-[CRecordset::D oFieldExchange](crecordset-class.md#dofieldexchange)<br/>
-[CRecordset::D oBulkFieldExchange](crecordset-class.md#dobulkfieldexchange)<br/>
-[CDaoRecordset::D oFieldExchange](cdaorecordset-class.md#dofieldexchange)
+[Makra a globální](mfc-macros-and-globals.md)<br/>
+[CRecordset::DoFieldExchange](crecordset-class.md#dofieldexchange)<br/>
+[CRecordset::DoBulkFieldExchange](crecordset-class.md#dobulkfieldexchange)<br/>
+[Sada záznamů CDao::DoFieldExchange](cdaorecordset-class.md#dofieldexchange)

@@ -1,5 +1,5 @@
 ---
-title: Cd2dbrush – třída
+title: Třída CD2DBrush
 ms.date: 11/04/2016
 f1_keywords:
 - CD2DBrush
@@ -30,14 +30,14 @@ helpviewer_keywords:
 - CD2DBrush [MFC], m_pBrush
 - CD2DBrush [MFC], m_pBrushProperties
 ms.assetid: 0d2c0857-2261-48a8-8ee0-a88cbf08499a
-ms.openlocfilehash: 1d079ec6c96f96919fde39b73297580ed2a0ac75
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d03fb6f398e18957f68fc18c78d8a397efc67506
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391293"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81369282"
 ---
-# <a name="cd2dbrush-class"></a>Cd2dbrush – třída
+# <a name="cd2dbrush-class"></a>Třída CD2DBrush
 
 Obálka pro ID2D1Brush.
 
@@ -51,43 +51,43 @@ class CD2DBrush : public CD2DResource;
 
 ### <a name="protected-constructors"></a>Chráněné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CD2DBrush::CD2DBrush](#cd2dbrush)|Vytvoří objekt cd2dbrush –.|
-|[CD2DBrush::~CD2DBrush](#_dtorcd2dbrush)|Destruktor. Volá se, když se likviduje štětce objektu D2D.|
+|[CD2DBrush::CD2DBrush](#cd2dbrush)|Vytvoří objekt CD2DBrush.|
+|[CD2DBrush::~CD2DBrush](#_dtorcd2dbrush)|Destruktor. Volána při zničení objektu stopy D2D.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CD2DBrush::Attach](#attach)|Bude k obrazci existujících prostředků rozhraní pro objekt|
-|[CD2DBrush::Destroy](#destroy)|Odstraní objekt cd2dbrush –. (Přepíše [CD2DResource::Destroy](../../mfc/reference/cd2dresource-class.md#destroy).)|
-|[CD2DBrush::detach](#detach)|Odpojí prostředků rozhraní z objektu|
-|[CD2DBrush::Get](#get)|Vrátí ID2D1Brush rozhraní|
-|[CD2DBrush::GetOpacity](#getopacity)|Získá stupeň neprůhlednosti tohoto štětce|
-|[CD2DBrush::GetTransform](#gettransform)|Získá aktuální transformace cíle vykreslování|
-|[CD2DBrush::IsValid](#isvalid)|Zkontroluje platnost prostředku (přepíše [CD2DResource::IsValid](../../mfc/reference/cd2dresource-class.md#isvalid).)|
-|[CD2DBrush::SetOpacity](#setopacity)|Nastavuje stupeň neprůhlednosti tohoto štětce|
-|[CD2DBrush::SetTransform](#settransform)|Použije zadaný transformaci pro cíle vykreslování, nahraďte existující transformace. Všechny následné operace kreslení. Probíhá transformovaný místa|
+|[CD2DBrush::Připojit](#attach)|Připojí k objektu existující rozhraní prostředků.|
+|[CD2DBrush::Destroy](#destroy)|Zničí objekt CD2DBrush. (Přepíše [CD2DResource::Destroy](../../mfc/reference/cd2dresource-class.md#destroy).)|
+|[CD2DBrush::Detach](#detach)|Odpojí rozhraní prostředků od objektu.|
+|[CD2DBrush::Získat](#get)|Vrátí rozhraní ID2D1Brush.|
+|[CD2DBrush::GetOpacity](#getopacity)|Získá stupeň krytí této stopy|
+|[CD2DBrush::GetTransform](#gettransform)|Získá aktuální transformace cíle vykreslení|
+|[CD2DBrush::IsValid CD2DBrush:IsValid CD2DBrush::IsValid CD2D](#isvalid)|Zkontroluje platnost prostředku (přepíše [CD2DResource::IsValid](../../mfc/reference/cd2dresource-class.md#isvalid).)|
+|[CD2DBrush::SetOpacity](#setopacity)|Nastaví stupeň krytí této stopy.|
+|[CD2DBrush::SetTransform](#settransform)|Aplikuje zadanou transformaci na cíl vykreslení a nahradí existující transformaci. Všechny následné operace kreslení probíhají v transformovaném prostoru|
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CD2DBrush::Operator ID2D1Brush *](#operator_id2d1brush_star)|Vrátí ID2D1Brush rozhraní|
+|[CD2DBrush::operátor ID2D1Brush*](#operator_id2d1brush_star)|Vrátí rozhraní ID2D1Brush.|
 
-### <a name="protected-data-members"></a>Chránění členové dat
+### <a name="protected-data-members"></a>Členové chráněných dat
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CD2DBrush::m_pBrush](#m_pbrush)|Uchovává ukazatel na objekt ID2D1Brush.|
-|[CD2DBrush::m_pBrushProperties](#m_pbrushproperties)|Vlastnosti štětce.|
+|[CD2DBrush::m_pBrush](#m_pbrush)|Uloží ukazatel na objekt ID2D1Brush.|
+|[CD2DBrush::m_pBrushProperties](#m_pbrushproperties)|Vlastnosti stopy.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObjekt](../../mfc/reference/cobject-class.md)
 
-[CD2DResource](../../mfc/reference/cd2dresource-class.md)
+[Zdroj CD2D](../../mfc/reference/cd2dresource-class.md)
 
 `CD2DBrush`
 
@@ -95,17 +95,17 @@ class CD2DBrush : public CD2DResource;
 
 **Záhlaví:** afxrendertarget.h
 
-##  <a name="_dtorcd2dbrush"></a>  Cd2dbrush –:: ~ cd2dbrush –
+## <a name="cd2dbrushcd2dbrush"></a><a name="_dtorcd2dbrush"></a>CD2DBrush::~CD2DBrush
 
-Destruktor. Volá se, když se likviduje štětce objektu D2D.
+Destruktor. Volána při zničení objektu stopy D2D.
 
 ```
 virtual ~CD2DBrush();
 ```
 
-##  <a name="attach"></a>  CD2DBrush::Attach
+## <a name="cd2dbrushattach"></a><a name="attach"></a>CD2DBrush::Připojit
 
-Bude k obrazci existujících prostředků rozhraní objektu.
+Připojí k objektu existující rozhraní prostředků.
 
 ```
 void Attach(ID2D1Brush* pResource);
@@ -113,12 +113,12 @@ void Attach(ID2D1Brush* pResource);
 
 ### <a name="parameters"></a>Parametry
 
-*pResource*<br/>
-Rozhraní existující prostředek. Nemůže mít hodnotu NULL.
+*pZdroj*<br/>
+Existující rozhraní prostředků. Nemůže být null.
 
-##  <a name="cd2dbrush"></a>  CD2DBrush::CD2DBrush
+## <a name="cd2dbrushcd2dbrush"></a><a name="cd2dbrush"></a>CD2DBrush::CD2DBrush
 
-Vytvoří objekt cd2dbrush –.
+Vytvoří objekt CD2DBrush.
 
 ```
 CD2DBrush(
@@ -130,25 +130,25 @@ CD2DBrush(
 ### <a name="parameters"></a>Parametry
 
 *pParentTarget*<br/>
-Ukazatel na cíl vykreslování.
+Ukazatel na cíl vykreslení.
 
-*pBrushProperties*<br/>
-Ukazatel na krytí a transformace štětce.
+*pVlastnosti brushu*<br/>
+Ukazatel na krytí a transformaci stopy.
 
 *bAutoDestroy*<br/>
-Označuje, že bude objekt zničen. vlastník (pParentTarget).
+Označuje, že objekt bude zničen vlastníkem (pParentTarget).
 
-##  <a name="destroy"></a>  CD2DBrush::Destroy
+## <a name="cd2dbrushdestroy"></a><a name="destroy"></a>CD2DBrush::Destroy
 
-Odstraní objekt cd2dbrush –.
+Zničí objekt CD2DBrush.
 
 ```
 virtual void Destroy();
 ```
 
-##  <a name="detach"></a>  CD2DBrush::detach
+## <a name="cd2dbrushdetach"></a><a name="detach"></a>CD2DBrush::Detach
 
-Odpojí prostředků rozhraní z objektu.
+Odpojí rozhraní prostředků od objektu.
 
 ```
 ID2D1Brush* Detach();
@@ -156,11 +156,11 @@ ID2D1Brush* Detach();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na rozhraní odpojit prostředek.
+Ukazatel na rozhraní odpojeného prostředku.
 
-##  <a name="get"></a>  CD2DBrush::Get
+## <a name="cd2dbrushget"></a><a name="get"></a>CD2DBrush::Získat
 
-Vrátí ID2D1Brush rozhraní
+Vrátí rozhraní ID2D1Brush.
 
 ```
 ID2D1Brush* Get();
@@ -168,11 +168,11 @@ ID2D1Brush* Get();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na rozhraní ID2D1Brush nebo hodnota NULL, pokud objekt ještě není inicializován.
+Ukazatel na rozhraní ID2D1Brush nebo NULL, pokud objekt ještě není inicializován.
 
-##  <a name="getopacity"></a>  CD2DBrush::GetOpacity
+## <a name="cd2dbrushgetopacity"></a><a name="getopacity"></a>CD2DBrush::GetOpacity
 
-Získá stupeň neprůhlednosti tohoto štětce
+Získá stupeň krytí této stopy
 
 ```
 FLOAT GetOpacity() const;
@@ -180,11 +180,11 @@ FLOAT GetOpacity() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota mezi 0 a 1, která určuje krytí štětce. Tato hodnota je konstantní násobitel, která se škáluje lineárně alfa všechny pixely sestavil stopy. Před jejich jsou navzájem vynásobeny, jsou hodnoty neprůhlednosti omezen v rozsahu od 0 do 1.
+Hodnota mezi nulou a 1, která označuje krytí stopy. Tato hodnota je konstantní násobitel, který lineárně mění hodnotu alfa všech obrazových bodů vyplněných stopou. Hodnoty krytí jsou upnuty v rozsahu 0 až 1 před tím, než jsou vynásobeny společně.
 
-##  <a name="gettransform"></a>  CD2DBrush::GetTransform
+## <a name="cd2dbrushgettransform"></a><a name="gettransform"></a>CD2DBrush::GetTransform
 
-Získá aktuální transformace cíle vykreslování
+Získá aktuální transformace cíle vykreslení
 
 ```
 void GetTransform(D2D1_MATRIX_3X2_F* transform) const;
@@ -192,12 +192,12 @@ void GetTransform(D2D1_MATRIX_3X2_F* transform) const;
 
 ### <a name="parameters"></a>Parametry
 
-*transform*<br/>
-Když to vrátí, obsahuje aktuální transformace cíl vykreslování. Tento parametr je předán bez inicializace.
+*Transformace*<br/>
+Když to vrátí, obsahuje aktuální transformace cíle vykreslení. Tento parametr se předává neinicializovaný.
 
-##  <a name="isvalid"></a>  CD2DBrush::IsValid
+## <a name="cd2dbrushisvalid"></a><a name="isvalid"></a>CD2DBrush::IsValid CD2DBrush:IsValid CD2DBrush::IsValid CD2D
 
-Kontrola platnosti prostředků
+Zkontroluje platnost prostředků.
 
 ```
 virtual BOOL IsValid() const;
@@ -205,27 +205,27 @@ virtual BOOL IsValid() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE, pokud prostředek je platná. v opačném případě FALSE.
+PRAVDA, pokud je prostředek platný; jinak FALSE.
 
-##  <a name="m_pbrush"></a>  CD2DBrush::m_pBrush
+## <a name="cd2dbrushm_pbrush"></a><a name="m_pbrush"></a>CD2DBrush::m_pBrush
 
-Uchovává ukazatel na objekt ID2D1Brush.
+Uloží ukazatel na objekt ID2D1Brush.
 
 ```
 ID2D1Brush* m_pBrush;
 ```
 
-##  <a name="m_pbrushproperties"></a>  CD2DBrush::m_pBrushProperties
+## <a name="cd2dbrushm_pbrushproperties"></a><a name="m_pbrushproperties"></a>CD2DBrush::m_pBrushProperties
 
-Vlastnosti štětce.
+Vlastnosti stopy.
 
 ```
 CD2DBrushProperties* m_pBrushProperties;
 ```
 
-##  <a name="operator_id2d1brush_star"></a>  CD2DBrush::Operator ID2D1Brush *
+## <a name="cd2dbrushoperator-id2d1brush"></a><a name="operator_id2d1brush_star"></a>CD2DBrush::operátor ID2D1Brush*
 
-Vrátí ID2D1Brush rozhraní
+Vrátí rozhraní ID2D1Brush.
 
 ```
 operator ID2D1Brush*();
@@ -233,11 +233,11 @@ operator ID2D1Brush*();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na rozhraní ID2D1Brush nebo hodnota NULL, pokud objekt ještě není inicializován.
+Ukazatel na rozhraní ID2D1Brush nebo NULL, pokud objekt ještě není inicializován.
 
-##  <a name="setopacity"></a>  CD2DBrush::SetOpacity
+## <a name="cd2dbrushsetopacity"></a><a name="setopacity"></a>CD2DBrush::SetOpacity
 
-Nastavuje stupeň neprůhlednosti tohoto štětce
+Nastaví stupeň krytí této stopy.
 
 ```
 void SetOpacity(FLOAT opacity);
@@ -245,12 +245,12 @@ void SetOpacity(FLOAT opacity);
 
 ### <a name="parameters"></a>Parametry
 
-*Míra průhlednosti*<br/>
-Hodnota mezi 0 a 1, která určuje krytí štětce. Tato hodnota je konstantní násobitel, která se škáluje lineárně alfa všechny pixely sestavil stopy. Před jejich jsou navzájem vynásobeny, jsou hodnoty neprůhlednosti omezen v rozsahu od 0 do 1.
+*Krytí*<br/>
+Hodnota mezi nulou a 1, která označuje krytí stopy. Tato hodnota je konstantní násobitel, který lineárně mění hodnotu alfa všech obrazových bodů vyplněných stopou. Hodnoty krytí jsou upnuty v rozsahu 0 až 1 před tím, než jsou vynásobeny společně.
 
-##  <a name="settransform"></a>  CD2DBrush::SetTransform
+## <a name="cd2dbrushsettransform"></a><a name="settransform"></a>CD2DBrush::SetTransform
 
-Použije zadaný transformaci pro cíle vykreslování, nahraďte existující transformace. Všechny následné operace kreslení. Probíhá transformovaný místa.
+Aplikuje zadanou transformaci na cíl vykreslení a nahradí existující transformaci. Všechny následné operace kreslení probíhají v transformovaném prostoru.
 
 ```
 void SetTransform(const D2D1_MATRIX_3X2_F* transform);
@@ -258,9 +258,9 @@ void SetTransform(const D2D1_MATRIX_3X2_F* transform);
 
 ### <a name="parameters"></a>Parametry
 
-*transform*<br/>
-Transformací, která se má použít pro cíl vykreslování
+*Transformace*<br/>
+Transformace, která se má použít pro cíl vykreslení
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Třídy](../../mfc/reference/mfc-classes.md)

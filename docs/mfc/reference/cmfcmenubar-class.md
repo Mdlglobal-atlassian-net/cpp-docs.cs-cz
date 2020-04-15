@@ -106,17 +106,17 @@ helpviewer_keywords:
 - CMFCMenuBar [MFC], SetRecentlyUsedMenus
 - CMFCMenuBar [MFC], SetShowAllCommands
 ms.assetid: 8a3ce4c7-b012-4dc0-b4f8-53c10b4b86b8
-ms.openlocfilehash: 278feca6b64915d0cf789e8f68af3c3fdf9b3129
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 50dd488d1f59c99b8fee1eb96acf6d0041547df9
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79420265"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81369692"
 ---
 # <a name="cmfcmenubar-class"></a>CMFCMenuBar – třída
 
 Řádek nabídek, který implementuje ukotvení.
-Další podrobnosti najdete ve zdrojovém kódu, který se nachází ve složce **VC\\atlmfc\\src\\MFC** v instalaci sady Visual Studio.
+Další podrobnosti naleznete ve zdrojovém kódu umístěném ve složce **MFC\\knihovny\\VC src\\** instalace sady Visual Studio.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -128,81 +128,81 @@ class CMFCMenuBar : public CMFCToolbar
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CMFCMenuBar::AdjustLocations](#adjustlocations)|(Přepisuje `CMFCToolBar::AdjustLocations`.)|
-|[CMFCMenuBar::AllowChangeTextLabels](#allowchangetextlabels)|Určuje, zda lze textové popisky zobrazit v části obrázky na panelu nástrojů. (Overrides [CMFCToolBar:: AllowChangeTextLabels](../../mfc/reference/cmfctoolbar-class.md#allowchangetextlabels).)|
-|[CMFCMenuBar::AllowShowOnPaneMenu](#allowshowonpanemenu)|(Přepisuje `CPane::AllowShowOnPaneMenu`.)|
-|[CMFCMenuBar::CalcFixedLayout](#calcfixedlayout)|Vypočítá vodorovnou velikost panelu nástrojů. (Overrides [CMFCToolBar:: CalcFixedLayout](../../mfc/reference/cmfctoolbar-class.md#calcfixedlayout).)|
-|[CMFCMenuBar::CalcLayout](#calclayout)|(Přepisuje `CMFCToolBar::CalcLayout`.)|
-|[CMFCMenuBar::CalcMaxButtonHeight](#calcmaxbuttonheight)|Vypočítá maximální výšku tlačítek na panelu nástrojů. (Overrides [CMFCToolBar:: CalcMaxButtonHeight](../../mfc/reference/cmfctoolbar-class.md#calcmaxbuttonheight).)|
-|[CMFCMenuBar::CanBeClosed](#canbeclosed)|Určuje, zda uživatel může zavřít panel nástrojů. (Overrides [CMFCToolBar:: CanBeClosed](../../mfc/reference/cmfctoolbar-class.md#canbeclosed).)|
-|[CMFCMenuBar::CanBeRestored](#canberestored)|Určuje, zda systém může po přizpůsobení obnovit původní stav panelu nástrojů. (Overrides [CMFCToolBar:: CanBeRestored](../../mfc/reference/cmfctoolbar-class.md#canberestored).)|
-|[CMFCMenuBar:: Create](#create)|Vytvoří ovládací prvek nabídky a připojí ho k objektu `CMFCMenuBar`.|
-|[CMFCMenuBar::CreateEx](#createex)|Vytvoří objekt `CMFCMenuBar` s dalšími možnostmi stylu.|
-|[CMFCMenuBar::CreateFromMenu](#createfrommenu)|Inicializuje objekt `CMFCMenuBar`. Přijímá parametr HMENU, který funguje jako šablona pro vyplněné `CMFCMenuBar`.|
-|[CMFCMenuBar::EnableHelpCombobox](#enablehelpcombobox)|Povolí pole **se seznamem** , které je umístěné na pravé straně řádku nabídek.|
-|[CMFCMenuBar::EnableMenuShadows](#enablemenushadows)|Určuje, zda se mají zobrazovat stíny pro místní nabídky.|
-|[CMFCMenuBar::GetAvailableExpandSize](#getavailableexpandsize)|(Overrides [CPane:: GetAvailableExpandSize](../../mfc/reference/cpane-class.md#getavailableexpandsize).)|
-|[CMFCMenuBar::GetColumnWidth](#getcolumnwidth)|Vrátí šířku tlačítek panelu nástrojů. (Overrides [CMFCToolBar:: GetColumnWidth](../../mfc/reference/cmfctoolbar-class.md#getcolumnwidth).)|
-|[CMFCMenuBar::GetDefaultMenu](#getdefaultmenu)|Vrátí popisovač do původní nabídky v souboru prostředků.|
+|[CMFCMenubar::Adjustlocations](#adjustlocations)|(Přepíše `CMFCToolBar::AdjustLocations`.)|
+|[CMFCPanel menu::AllowChangeTextLabels](#allowchangetextlabels)|Určuje, zda lze textové popisky zobrazit pod obrázky na tlačítkách panelu nástrojů. (Přepíše [CMFCToolBar::AllowChangeTextLabels](../../mfc/reference/cmfctoolbar-class.md#allowchangetextlabels).)|
+|[CMFCMenubar::AllowShowonpaneMenu](#allowshowonpanemenu)|(Přepíše `CPane::AllowShowOnPaneMenu`.)|
+|[CMFCMenuBar::CalcFixedLayout](#calcfixedlayout)|Vypočítá vodorovnou velikost panelu nástrojů. (Přepíše [CMFCToolBar::CalcFixedLayout](../../mfc/reference/cmfctoolbar-class.md#calcfixedlayout).)|
+|[CMFCMenuBar::Rozložení čáry](#calclayout)|(Přepíše `CMFCToolBar::CalcLayout`.)|
+|[CMFCMenuBar::CalcMaxButtonHeight](#calcmaxbuttonheight)|Vypočítá maximální výšku tlačítek v panelu nástrojů. (Přepíše [CMFCToolBar::CalcMaxButtonHeight](../../mfc/reference/cmfctoolbar-class.md#calcmaxbuttonheight).)|
+|[CMFCMenuBar::CanBeClosed](#canbeclosed)|Určuje, zda může uživatel zavřít panel nástrojů. (Přepíše [CMFCToolBar::CanBeClosed](../../mfc/reference/cmfctoolbar-class.md#canbeclosed).)|
+|[CMFCMenuBar::CanBeRestored](#canberestored)|Určuje, zda může systém po vlastním nastavení obnovit původní stav panelu nástrojů. (Přepíše [CMFCToolBar::CanBeRestored](../../mfc/reference/cmfctoolbar-class.md#canberestored).)|
+|[CMFCMenubar::Vytvořit](#create)|Vytvoří ovládací prvek nabídky a `CMFCMenuBar` připojí jej k objektu.|
+|[CMFCMenubar::CreateEx](#createex)|Vytvoří `CMFCMenuBar` objekt s dalšími možnostmi stylu.|
+|[CMFCPanelmenu::CreateFromMenu](#createfrommenu)|Inicializuje `CMFCMenuBar` objekt. Přijme parametr HMENU, který funguje jako šablona pro naplněnou `CMFCMenuBar`.|
+|[CMFCMenuBar::EnableHelpCombobox](#enablehelpcombobox)|Povolí pole se seznamem **nápovědy,** které je umístěno na pravé straně panelu nabídek.|
+|[CMFCMenuBar::EnableMenuShadows](#enablemenushadows)|Určuje, zda se mají zobrazit stíny pro rozbalovací nabídky.|
+|[CMFCMenubar::GetavailableExpandSize](#getavailableexpandsize)|(Přepíše [CPane::GetAvailableExpandSize](../../mfc/reference/cpane-class.md#getavailableexpandsize).)|
+|[CMFCMenubar::GetColumnWidth](#getcolumnwidth)|Vrátí šířku tlačítek panelu nástrojů. (Přepíše [CMFCToolBar::GetColumnWidth](../../mfc/reference/cmfctoolbar-class.md#getcolumnwidth).)|
+|[CMFCPanel menu::GetDefaultMenu](#getdefaultmenu)|Vrátí popisovač původní nabídky v souboru prostředků.|
 |[CMFCMenuBar::GetDefaultMenuResId](#getdefaultmenuresid)|Vrátí identifikátor prostředku pro původní nabídku v souboru prostředků.|
 |[CMFCMenuBar::GetFloatPopupDirection](#getfloatpopupdirection)||
 |[CMFCMenuBar::GetForceDownArrows](#getforcedownarrows)||
-|[CMFCMenuBar::GetHelpCombobox](#gethelpcombobox)|Vrátí ukazatel na pole se seznamem **help** .|
-|[CMFCMenuBar::GetHMenu](#gethmenu)|Vrátí popisovač do nabídky, která je připojena k objektu `CMFCMenuBar`.|
-|[CMFCMenuBar::GetMenuFont](#getmenufont)|Vrátí aktuální globální písmo pro objekty nabídky.|
-|[CMFCMenuBar:: getmenuitem](#getmenuitem)|Vrátí tlačítko panelu nástrojů přidružené k zadanému indexu položky.|
-|[CMFCMenuBar::GetRowHeight](#getrowheight)|Vrátí výšku tlačítek panelu nástrojů. (Overrides [CMFCToolBar:: GetRowHeight](../../mfc/reference/cmfctoolbar-class.md#getrowheight).)|
-|[CMFCMenuBar::GetSystemButton](#getsystembutton)||
-|[CMFCMenuBar::GetSystemButtonsCount](#getsystembuttonscount)||
-|[CMFCMenuBar::GetSystemMenu](#getsystemmenu)||
-|[CMFCMenuBar::HighlightDisabledItems](#highlightdisableditems)|Označuje, zda jsou zakázané položky nabídky zvýrazněny.|
-|[CMFCMenuBar::IsButtonExtraSizeAvailable](#isbuttonextrasizeavailable)|Určuje, zda lze na panelu nástrojů Zobrazit tlačítka, která mají rozšířená ohraničení. (Overrides [CMFCToolBar:: IsButtonExtraSizeAvailable](../../mfc/reference/cmfctoolbar-class.md#isbuttonextrasizeavailable).)|
-|[CMFCMenuBar::IsHighlightDisabledItems](#ishighlightdisableditems)|Označuje, zda jsou zakázané položky zvýrazněny.|
-|[CMFCMenuBar::IsMenuShadows](#ismenushadows)|Určuje, zda jsou vykreslovány stíny pro místní nabídky.|
-|[CMFCMenuBar::IsRecentlyUsedMenus](#isrecentlyusedmenus)|Určuje, zda jsou v řádku nabídek zobrazeny naposledy použité příkazy nabídky.|
-|[CMFCMenuBar::IsShowAllCommands](#isshowallcommands)|Určuje, zda se v místních nabídkách zobrazují všechny příkazy.|
-|[CMFCMenuBar::IsShowAllCommandsDelay](#isshowallcommandsdelay)|Označuje, zda jsou po krátké prodlevě zobrazeny všechny příkazy v nabídkách.|
-|[CMFCMenuBar:: LoadState](#loadstate)|Načte stav objektu `CMFCMenuBar` z registru.|
-|[CMFCMenuBar::OnChangeHot](#onchangehot)|Volá se rozhraním, když uživatel vybere tlačítko na panelu nástrojů. (Overrides [CMFCToolBar:: OnChangeHot](../../mfc/reference/cmfctoolbar-class.md#onchangehot).)|
-|[CMFCMenuBar::OnDefaultMenuLoaded](#ondefaultmenuloaded)|Volá se rozhraním, když okno rámce načte výchozí nabídku ze zdrojového souboru.|
-|[CMFCMenuBar::OnSendCommand](#onsendcommand)|(Přepisuje `CMFCToolBar::OnSendCommand`.)|
-|[CMFCMenuBar::OnSetDefaultButtonText](#onsetdefaultbuttontext)|Volá se rozhraním, když je nabídka v režimu přizpůsobení a uživatel změní text položky nabídky.|
-|[CMFCMenuBar::OnToolHitTest](#ontoolhittest)|(Přepisuje `CMFCToolBar::OnToolHitTest`.)|
-|[CMFCMenuBar::P reTranslateMessage](#pretranslatemessage)|(Přepisuje `CMFCToolBar::PreTranslateMessage`.)|
-|[CMFCMenuBar::RestoreOriginalstate](#restoreoriginalstate)|Volá se rozhraním, když je nabídka v režimu přizpůsobení a uživatel vybere **obnovit** pro řádek nabídek.|
-|[CMFCMenuBar:: SaveState](#savestate)|Uloží stav objektu `CMFCMenuBar` do registru.|
+|[CMFCMenuBar::GetHelpCombobox](#gethelpcombobox)|Vrátí ukazatel na pole se seznamem **Nápověda.**|
+|[CMFCMenubar::GetHMenu](#gethmenu)|Vrátí popisovač do nabídky, která `CMFCMenuBar` je připojena k objektu.|
+|[CMFCMenubar::GetMenuFont](#getmenufont)|Vrátí aktuální globální písmo pro objekty nabídky.|
+|[CMFCPanelmenu::GetMenuItem](#getmenuitem)|Vrátí tlačítko panelu nástrojů přidružené k zadaný index položky.|
+|[CMFCMenubar::GetRowHeight](#getrowheight)|Vrátí výšku tlačítek panelu nástrojů. (Přepíše [CMFCToolBar::GetRowHeight](../../mfc/reference/cmfctoolbar-class.md#getrowheight).)|
+|[CMFCPanelmenu::GetSystemButton](#getsystembutton)||
+|[CMFCPanel menu::GetSystemButtonsCount](#getsystembuttonscount)||
+|[CMFCPanel menu::GetSystemMenu](#getsystemmenu)||
+|[CMFCPanel menu::ZvýrazněníZakázané položky](#highlightdisableditems)|Označuje, zda jsou zvýrazněny zakázané položky nabídky.|
+|[CMFCMenuBar::isbuttonextrasizek dispozici](#isbuttonextrasizeavailable)|Určuje, zda lze na panelu nástrojů zobrazovat tlačítka s rozšířenými ohraničeními. (Přepíše [CMFCToolBar::IsButtonExtraSizeAvailable](../../mfc/reference/cmfctoolbar-class.md#isbuttonextrasizeavailable).)|
+|[CMFCMenuBar::IsHighlightDisabledItems](#ishighlightdisableditems)|Označuje, zda jsou zvýrazněny zakázané položky.|
+|[CMFCMenuBar::IsMenuShadows](#ismenushadows)|Označuje, zda jsou pro rozbalovací nabídky vykresleny stíny.|
+|[CMFCMenuBar::Nabídky nabídek](#isrecentlyusedmenus)|Označuje, zda jsou na řádku nabídek zobrazeny naposledy použité příkazy nabídky.|
+|[CMFCMenuBar::Příkazy IsShowAllCommands](#isshowallcommands)|Označuje, zda se v rozbalovacích nabídkách zobrazují všechny příkazy.|
+|[CMFCMenuBar::IsShowAllCommandsDelay](#isshowallcommandsdelay)|Označuje, zda nabídky zobrazují všechny příkazy po krátké prodlevě.|
+|[CMFCPanel menu::LoadState](#loadstate)|Načte stav `CMFCMenuBar` objektu z registru.|
+|[CMFCMenuBar::OnChangeHot](#onchangehot)|Volat rámci při uživatel vybere tlačítko na panelu nástrojů. (Přepíše [CMFCToolBar::OnChangeHot](../../mfc/reference/cmfctoolbar-class.md#onchangehot).)|
+|[CMFCMenuBar::OnDefaultMenuLoaded](#ondefaultmenuloaded)|Volat rámci při okno rámce načte výchozí nabídku ze souboru prostředků.|
+|[CMFCPanel menu::Příkaz OnSendCommand](#onsendcommand)|(Přepíše `CMFCToolBar::OnSendCommand`.)|
+|[CMFCPanelmenu::OnSetDefaultButtonText](#onsetdefaultbuttontext)|Volat rámci, když je nabídka v režimu přizpůsobení a uživatel změní text položky nabídky.|
+|[CMFCMenuBar::OnToolHitTest](#ontoolhittest)|(Přepíše `CMFCToolBar::OnToolHitTest`.)|
+|[CMFCMenuBar::PreTranslateMessage](#pretranslatemessage)|(Přepíše `CMFCToolBar::PreTranslateMessage`.)|
+|[CMFCMenuBar::Obnovit původní stav](#restoreoriginalstate)|Volat rámci, když je nabídka v režimu přizpůsobení a uživatel vybere **Obnovit** pro řádek nabídek.|
+|[CMFCMenubar::SaveState](#savestate)|Uloží stav objektu `CMFCMenuBar` do registru.|
 |[CMFCMenuBar::SetDefaultMenuResId](#setdefaultmenuresid)|Nastaví původní nabídku v souboru prostředků.|
 |[CMFCMenuBar::SetForceDownArrows](#setforcedownarrows)||
-|[CMFCMenuBar::SetMaximizeMode](#setmaximizemode)|Volá se rozhraním, když se v podřízeném okně MDI změní režim zobrazení. Pokud je podřízené okno MDI nově maximalizováno nebo již není maximalizováno, tato metoda aktualizuje panel nabídek.|
-|[CMFCMenuBar::SetMenuButtonRTC](#setmenubuttonrtc)|Nastaví informace třídy modulu runtime, které jsou generovány při dynamickém vytváření tlačítek nabídky uživatelem.|
-|[CMFCMenuBar::SetMenuFont](#setmenufont)|Nastaví písmo pro všechny nabídky v aplikaci.|
-|[CMFCMenuBar::SetRecentlyUsedMenus](#setrecentlyusedmenus)|Určuje, zda se na panelu nabídek zobrazují naposledy použité příkazy nabídky.|
-|[CMFCMenuBar::SetShowAllCommands](#setshowallcommands)|Určuje, zda se na panelu nabídek zobrazují všechny příkazy.|
+|[CMFCPanel menu::SetMaximizeMode](#setmaximizemode)|Volat rámci při podřízené okno MDI změní svůj režim zobrazení. Pokud podřízené okno MDI je nově maximalizované nebo již není maximalizováno, tato metoda aktualizuje řádek nabídek.|
+|[CMFCPanel menu::SetMenuButtonRTC](#setmenubuttonrtc)|Nastaví informace o třídě runtime, které jsou generovány, když uživatel dynamicky vytvoří tlačítka nabídky.|
+|[CMFCPanel menu::SetMenuFont](#setmenufont)|Nastaví písmo pro všechny nabídky v aplikaci.|
+|[CMFCMenuBar::Nastavitnabídky naposledy použitých](#setrecentlyusedmenus)|Určuje, zda se na panelu nabídek zobrazí naposledy použité příkazy nabídek.|
+|[CMFCMenuBar::SetShowAllCommands](#setshowallcommands)|Určuje, zda se na řádku nabídek zobrazí všechny příkazy.|
 
 ## <a name="remarks"></a>Poznámky
 
-Třída `CMFCMenuBar` je řádek nabídek, který implementuje funkce ukotvení. Je podobný panelu nástrojů, i když ho nejde zavřít – je vždycky zobrazený.
+Třída `CMFCMenuBar` je řádek nabídek, který implementuje funkce ukotvení. Podobá se panelu nástrojů, i když jej nelze zavřít - je vždy zobrazen.
 
-`CMFCMenuBar` podporuje možnost zobrazení naposledy použitých objektů položek nabídky. Pokud je tato možnost povolena, `CMFCMenuBar` při prvním zobrazení zobrazí pouze podmnožinu dostupných příkazů. Následně se nedávno použité příkazy zobrazují spolu s původní podmnožinou příkazů. Kromě toho může uživatel vždy rozbalit nabídku a zobrazit všechny dostupné příkazy. Proto se každý dostupný příkaz nakonfiguruje tak, aby se zobrazoval nepřetržitě, nebo se zobrazí jenom v případě, že byl nedávno vybraný.
+`CMFCMenuBar`podporuje možnost zobrazení naposledy použitých objektů položek nabídky. Pokud je tato možnost `CMFCMenuBar` povolena, zobrazí se při prvním zobrazení pouze podmnožina dostupných příkazů. Poté jsou naposledy použité příkazy zobrazeny společně s původní podmnožinou příkazů. Kromě toho může uživatel vždy rozbalit nabídku a zobrazit všechny dostupné příkazy. Každý dostupný příkaz je tedy nakonfigurován tak, aby se zobrazoval neustále nebo pouze v případě, že byl nedávno vybrán.
 
-Chcete-li použít objekt `CMFCMenuBar`, vložte jej do objektu rámce hlavního okna. Při zpracování zprávy `WM_CREATE` volejte `CMFCMenuBar::Create` nebo `CMFCMenuBar::CreateEx`. Bez ohledu na to, kterou funkci vytvoření použijete, předejte ukazatel do hlavního okna rámce. Pak povolte ukotvení voláním [CFrameWndEx:: EnableDocking](../../mfc/reference/cframewndex-class.md#enabledocking). Ukotvit tuto nabídku voláním [CFrameWndEx::D ockpane](../../mfc/reference/cframewndex-class.md#dockpane).
+Chcete-li `CMFCMenuBar` použít objekt, vložte jej do objektu rámce hlavního okna. Při zpracování `WM_CREATE` zprávy `CMFCMenuBar::Create` volejte `CMFCMenuBar::CreateEx`nebo . Bez ohledu na to, kterou funkci vytvoříte, předáte ukazatel do okna hlavního rámce. Potom povolte ukotvení voláním [CFrameWndEx::EnableDocking](../../mfc/reference/cframewndex-class.md#enabledocking). Ukotvit tuto nabídku voláním [CFrameWndEx::DockPane](../../mfc/reference/cframewndex-class.md#dockpane).
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak použít různé metody v `CMFCMenuBar` třídy. Tento příklad ukazuje, jak nastavit styl podokna, povolit tlačítko přizpůsobit, povolit stínové kopie pro místní nabídky a aktualizovat řádek nabídek. Tento fragment kódu je součástí ukázky [Ukázka IE](../../overview/visual-cpp-samples.md).
+Následující příklad ukazuje, jak používat různé `CMFCMenuBar` metody ve třídě. Příklad ukazuje, jak nastavit styl podokna, povolit tlačítko přizpůsobit, povolit pole nápovědy, povolit stíny pro rozbalovací nabídky a aktualizovat řádek nabídek. Tento fragment kódu je součástí [ukázky ukázky aplikace IE .](../../overview/visual-cpp-samples.md)
 
 [!code-cpp[NVC_MFC_IEDemo#1](../../mfc/reference/codesnippet/cpp/cmfcmenubar-class_1.h)]
 [!code-cpp[NVC_MFC_IEDemo#3](../../mfc/reference/codesnippet/cpp/cmfcmenubar-class_2.cpp)]
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[CObject](../../mfc/reference/cobject-class.md)
+[CObjekt](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[CCmdCíl](../../mfc/reference/ccmdtarget-class.md)
 
-[CWnd](../../mfc/reference/cwnd-class.md)
+[Cwnd](../../mfc/reference/cwnd-class.md)
 
 [CBasePane](../../mfc/reference/cbasepane-class.md)
 
@@ -210,17 +210,17 @@ Následující příklad ukazuje, jak použít různé metody v `CMFCMenuBar` t�
 
 [CMFCBaseToolBar](../../mfc/reference/cmfcbasetoolbar-class.md)
 
-[CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md)
+[CMFCPanel](../../mfc/reference/cmfctoolbar-class.md)
 
 `CMFCMenuBar`
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxmenubar. h
+**Záhlaví:** afxmenubar.h
 
-##  <a name="adjustlocations"></a>CMFCMenuBar::AdjustLocations
+## <a name="cmfcmenubaradjustlocations"></a><a name="adjustlocations"></a>CMFCMenubar::Adjustlocations
 
-Upraví umístění položek nabídky na řádku nabídek.
+Upraví pozice položek nabídky na řádku nabídek.
 
 ```
 virtual void AdjustLocations();
@@ -228,9 +228,9 @@ virtual void AdjustLocations();
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="allowchangetextlabels"></a>CMFCMenuBar::AllowChangeTextLabels
+## <a name="cmfcmenubarallowchangetextlabels"></a><a name="allowchangetextlabels"></a>CMFCPanel menu::AllowChangeTextLabels
 
-Určuje, zda jsou textové popisky povoleny v rámci obrázků v řádku nabídek.
+Určuje, zda jsou textové popisky povoleny pod obrázky v řádku nabídek.
 
 ```
 virtual BOOL AllowChangeTextLabels() const;
@@ -238,11 +238,11 @@ virtual BOOL AllowChangeTextLabels() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu pravda, pokud se uživatel může rozhodnout zobrazit popisky textu v části obrázky.
+Vrátí hodnotu PRAVDA, pokud se uživatel může rozhodnout zobrazit textové popisky pod obrázky.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="allowshowonpanemenu"></a>CMFCMenuBar::AllowShowOnPaneMenu
+## <a name="cmfcmenubarallowshowonpanemenu"></a><a name="allowshowonpanemenu"></a>CMFCMenubar::AllowShowonpaneMenu
 
 ```
 virtual BOOL AllowShowOnPaneMenu() const;
@@ -252,7 +252,7 @@ virtual BOOL AllowShowOnPaneMenu() const;
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="calcfixedlayout"></a>CMFCMenuBar::CalcFixedLayout
+## <a name="cmfcmenubarcalcfixedlayout"></a><a name="calcfixedlayout"></a>CMFCMenuBar::CalcFixedLayout
 
 ```
 virtual CSize CalcFixedLayout(
@@ -262,15 +262,15 @@ virtual CSize CalcFixedLayout(
 
 ### <a name="parameters"></a>Parametry
 
-pro *bStretch*<br/>
+[v] *bÚsek*<br/>
 
-pro *bHorz*<br/>
+[v] *bHorz*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="calclayout"></a>CMFCMenuBar::CalcLayout
+## <a name="cmfcmenubarcalclayout"></a><a name="calclayout"></a>CMFCMenuBar::Rozložení čáry
 
 ```
 virtual CSize CalcLayout(
@@ -280,15 +280,15 @@ virtual CSize CalcLayout(
 
 ### <a name="parameters"></a>Parametry
 
-pro *dwMode*<br/>
+[v] *dwMode*<br/>
 
-pro *nLength*<br/>
+[v] *nDélka*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="calcmaxbuttonheight"></a>CMFCMenuBar::CalcMaxButtonHeight
+## <a name="cmfcmenubarcalcmaxbuttonheight"></a><a name="calcmaxbuttonheight"></a>CMFCMenuBar::CalcMaxButtonHeight
 
 ```
 virtual int CalcMaxButtonHeight();
@@ -298,7 +298,7 @@ virtual int CalcMaxButtonHeight();
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="canbeclosed"></a>CMFCMenuBar::CanBeClosed
+## <a name="cmfcmenubarcanbeclosed"></a><a name="canbeclosed"></a>CMFCMenuBar::CanBeClosed
 
 ```
 virtual BOOL CanBeClosed() const;
@@ -308,7 +308,7 @@ virtual BOOL CanBeClosed() const;
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="canberestored"></a>CMFCMenuBar::CanBeRestored
+## <a name="cmfcmenubarcanberestored"></a><a name="canberestored"></a>CMFCMenuBar::CanBeRestored
 
 ```
 virtual BOOL CanBeRestored() const;
@@ -318,9 +318,9 @@ virtual BOOL CanBeRestored() const;
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="create"></a>CMFCMenuBar:: Create
+## <a name="cmfcmenubarcreate"></a><a name="create"></a>CMFCMenubar::Vytvořit
 
-Vytvoří ovládací prvek nabídky a připojí ho k objektu [CMFCMenuBar](../../mfc/reference/cmfcmenubar-class.md) .
+Vytvoří ovládací prvek nabídky a připojí jej k objektu [CMFCMenuBar.](../../mfc/reference/cmfcmenubar-class.md)
 
 ```
 virtual BOOL Create(
@@ -332,25 +332,25 @@ virtual BOOL Create(
 ### <a name="parameters"></a>Parametry
 
 *pParentWnd*<br/>
-pro Ukazatel na nadřazené okno nového objektu `CMFCMenuBar`.
+[v] Ukazatel na nadřazené okno pro nový `CMFCMenuBar` objekt.
 
-*dwStyle*<br/>
-pro Styl nového řádku nabídek
+*dwStyl*<br/>
+[v] Styl nového řádku nabídek.
 
-*nID*<br/>
-pro ID podřízeného okna řádku nabídek
+*Nid*<br/>
+[v] ID pro podřízené okno panelu nabídek.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-TRUE v případě úspěchu; v opačném případě FALSE.
+PRAVDA v případě úspěchu; jinak FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Po vytvoření objektu `CMFCMenuBar` musíte volat `Create`. Tato metoda vytvoří ovládací prvek `CMFCMenuBar` a připojí ho k objektu `CMFCMenuBar`.
+Po vytvoření `CMFCMenuBar` objektu je `Create`nutné volat . Tato metoda `CMFCMenuBar` vytvoří ovládací prvek a `CMFCMenuBar` připojí jej k objektu.
 
-Další informace o stylech panelů nástrojů naleznete v tématu [CBasePane:: SetPaneStyle](../../mfc/reference/cbasepane-class.md#setpanestyle).
+Další informace o stylech panelů nástrojů naleznete v [tématu CBasePane::SetPaneStyle](../../mfc/reference/cbasepane-class.md#setpanestyle).
 
-##  <a name="createex"></a>CMFCMenuBar::CreateEx
+## <a name="cmfcmenubarcreateex"></a><a name="createex"></a>CMFCMenubar::CreateEx
 
 Vytvoří objekt [CMFCMenuBar](../../mfc/reference/cmfcmenubar-class.md) se zadanými rozšířenými styly.
 
@@ -369,40 +369,40 @@ virtual BOOL CreateEx(
 ### <a name="parameters"></a>Parametry
 
 *pParentWnd*<br/>
-pro Ukazatel na nadřazené okno nového objektu `CMFCMenuBar`.
+[v] Ukazatel na nadřazené okno nového `CMFCMenuBar` objektu.
 
-*dwCtrlStyle*<br/>
-pro Další styly pro nový řádek nabídek
+*dwCtrlStyl*<br/>
+[v] Další styly pro nový řádek nabídek.
 
-*dwStyle*<br/>
-pro Hlavní styl nového řádku nabídek.
+*dwStyl*<br/>
+[v] Hlavní styl nového panelu nabídek.
 
 *rcBorders*<br/>
-pro Parametr `CRect`, který určuje velikosti ohraničení objektu `CMFCMenuBar`.
+[v] Parametr, `CRect` který určuje velikosti ohraničení `CMFCMenuBar` objektu.
 
-*nID*<br/>
-pro ID podřízeného okna řádku nabídek
+*Nid*<br/>
+[v] ID pro podřízené okno panelu nabídek.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je metoda úspěšná; v opačném případě 0.
+Nenulová, pokud je metoda úspěšná; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Tuto funkci byste měli použít místo [CMFCMenuBar:: Create](#create) , pokud chcete kromě stylu panelu nástrojů zadat styly. Některé často používané další styly jsou TBSTYLE_TRANSPARENT a CBRS_TOP.
+Tuto funkci byste měli použít místo [CMFCMenuBar::Create,](#create) pokud chcete kromě stylu panelu nástrojů zadat styly. Některé často používané další styly jsou TBSTYLE_TRANSPARENT a CBRS_TOP.
 
-Seznam dalších stylů naleznete v tématech [ovládací prvky panelu nástrojů a styly tlačítek](/windows/win32/Controls/toolbar-control-and-button-styles), [společné styly ovládacích prvků](/windows/win32/Controls/common-control-styles)a [Běžné styly oken](/windows/win32/winmsg/window-styles).
+Seznamy dalších stylů naleznete v [tématu Ovládací prvek panelu nástrojů a Styly tlačítek](/windows/win32/Controls/toolbar-control-and-button-styles), [Běžné styly ovládacích prvků](/windows/win32/Controls/common-control-styles)a Běžné [styly oken](/windows/win32/winmsg/window-styles).
 
 ### <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak použít metodu `CreateEx` třídy `CMFCMenuBar`. Tento fragment kódu je součástí ukázky [Ukázka IE](../../overview/visual-cpp-samples.md).
+Následující příklad ukazuje, jak `CreateEx` používat metodu třídy. `CMFCMenuBar` Tento fragment kódu je součástí [ukázky ukázky aplikace IE .](../../overview/visual-cpp-samples.md)
 
 [!code-cpp[NVC_MFC_IEDemo#1](../../mfc/reference/codesnippet/cpp/cmfcmenubar-class_1.h)]
 [!code-cpp[NVC_MFC_IEDemo#2](../../mfc/reference/codesnippet/cpp/cmfcmenubar-class_3.cpp)]
 
-##  <a name="createfrommenu"></a>CMFCMenuBar::CreateFromMenu
+## <a name="cmfcmenubarcreatefrommenu"></a><a name="createfrommenu"></a>CMFCPanelmenu::CreateFromMenu
 
-Inicializuje objekt [CMFCMenuBar](../../mfc/reference/cmfcmenubar-class.md) . Tato metoda modeluje objekt `CMFCMenuBar` za parametrem HMENU.
+Inicializuje objekt [CMFCMenuBar.](../../mfc/reference/cmfcmenubar-class.md) Tato metoda `CMFCMenuBar` modeluje objekt za parametrem HMENU.
 
 ```
 virtual void CreateFromMenu(
@@ -413,22 +413,22 @@ virtual void CreateFromMenu(
 
 ### <a name="parameters"></a>Parametry
 
-*hMenu*<br/>
-pro Popisovač prostředku nabídky `CreateFromMenu` používá tento prostředek jako šablonu pro `CMFCMenuBar`.
+*hNabídka*<br/>
+[v] Popisovač prostředku nabídky. `CreateFromMenu`Používá tento prostředek jako `CMFCMenuBar`šablonu pro .
 
-*bDefaultMenu*<br/>
-pro Logická hodnota, která označuje, zda je nová nabídka výchozí.
+*bNabídka Výchozí*<br/>
+[v] Logická hodnota označující, zda je nová nabídka výchozí nabídkou.
 
 *bForceUpdate*<br/>
-pro Logická hodnota, která určuje, zda tato metoda vynutí aktualizaci nabídky.
+[v] Logická hodnota, která označuje, zda tato metoda vynutí aktualizaci nabídky.
 
 ### <a name="remarks"></a>Poznámky
 
-Tuto metodu použijte, chcete-li, aby měl ovládací prvek nabídky stejné položky nabídky jako prostředek nabídky. Tuto metodu zavoláte po volání metody [CMFCMenuBar:: Create](#create) nebo [CMFCMenuBar:: CreateEx](#createex).
+Tuto metodu použijte, pokud chcete, aby ovládací prvek nabídky měl stejné položky nabídky jako prostředek nabídky. Tuto metodu zavoláte po volání [cmfcmenubar::Create](#create) nebo [CMFCMenuBar::CreateEx](#createex).
 
-##  <a name="enablehelpcombobox"></a>CMFCMenuBar::EnableHelpCombobox
+## <a name="cmfcmenubarenablehelpcombobox"></a><a name="enablehelpcombobox"></a>CMFCMenuBar::EnableHelpCombobox
 
-Povolí pole **se seznamem** , které je umístěné na pravé straně řádku nabídek.
+Povolí pole se seznamem **nápovědy,** které je umístěno na pravé straně panelu nabídek.
 
 ```
 void EnableHelpCombobox(
@@ -440,23 +440,23 @@ void EnableHelpCombobox(
 ### <a name="parameters"></a>Parametry
 
 *uiID*<br/>
-pro ID příkazu pro **tlačítko v poli se seznamem.**
+[v] ID příkazu pro tlačítko pole se seznamem **Nápověda**
 
 *lpszPrompt*<br/>
-pro Řetězec obsahující text, který se v rozhraní zobrazí v poli se seznamem, pokud je prázdný a není aktivní. Například "sem zadejte text."
+[v] Řetězec, který obsahuje text, který rozhraní zobrazí v poli se seznamem, pokud je prázdný a není aktivní. Například "Zadejte text zde".
 
 *nComboBoxWidth*<br/>
-pro Šířka tlačítka pro pole se seznamem v pixelech
+[v] Šířka tlačítka pro pole se seznamem v pixelech.
 
 ### <a name="remarks"></a>Poznámky
 
-Pole se seznamem **help** se podobá **poli se seznamem** v aplikaci Microsoft Word v řádku nabídek.
+Pole se seznamem **Nápověda** se podobá poli se seznamem **Nápověda** v panelu nabídek aplikace Microsoft Word.
 
-Při volání této metody s *uiID* nastavenou na hodnotu 0 Tato metoda skryje pole se seznamem. V opačném případě tato metoda zobrazí pole se seznamem automaticky na pravé straně řádku nabídek. Po volání této metody zavolejte [CMFCMenuBar:: GetHelpCombobox](#gethelpcombobox) , abyste získali ukazatel na vložený objekt [CMFCToolBarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md) .
+Při volání této metody s *uiID* nastavena na 0, tato metoda skryje pole se seznamem. V opačném případě tato metoda automaticky zobrazí pole se seznamem na pravé straně panelu nabídek. Po volání této metody volejte [CMFCMenuBar::GetHelpCombobox](#gethelpcombobox) získat ukazatel na vložený objekt [CMFCToolBarComboBox.](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md)
 
-##  <a name="enablemenushadows"></a>CMFCMenuBar::EnableMenuShadows
+## <a name="cmfcmenubarenablemenushadows"></a><a name="enablemenushadows"></a>CMFCMenuBar::EnableMenuShadows
 
-Povoluje stíny pro místní nabídky.
+Povolí stíny pro rozbalovací nabídky.
 
 ```
 static void EnableMenuShadows(BOOL bEnable = TRUE);
@@ -465,13 +465,13 @@ static void EnableMenuShadows(BOOL bEnable = TRUE);
 ### <a name="parameters"></a>Parametry
 
 *bEnable*<br/>
-pro Logický parametr určující, zda mají být povoleny stínové nabídky pro místní nabídky.
+[v] Logický parametr, který označuje, zda mají být pro rozbalovací nabídky povoleny stíny.
 
 ### <a name="remarks"></a>Poznámky
 
-Algoritmus, který používá tato metoda, je složitý a může snížit výkon aplikace v pomalejších systémech.
+Algoritmus, který používá tato metoda je složitý a může snížit výkon aplikace v pomalejších systémech.
 
-##  <a name="getavailableexpandsize"></a>CMFCMenuBar::GetAvailableExpandSize
+## <a name="cmfcmenubargetavailableexpandsize"></a><a name="getavailableexpandsize"></a>CMFCMenubar::GetavailableExpandSize
 
 ```
 virtual int GetAvailableExpandSize() const;
@@ -481,7 +481,7 @@ virtual int GetAvailableExpandSize() const;
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="getcolumnwidth"></a>CMFCMenuBar::GetColumnWidth
+## <a name="cmfcmenubargetcolumnwidth"></a><a name="getcolumnwidth"></a>CMFCMenubar::GetColumnWidth
 
 ```
 virtual int GetColumnWidth() const;
@@ -491,9 +491,9 @@ virtual int GetColumnWidth() const;
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="getdefaultmenu"></a>CMFCMenuBar::GetDefaultMenu
+## <a name="cmfcmenubargetdefaultmenu"></a><a name="getdefaultmenu"></a>CMFCPanel menu::GetDefaultMenu
 
-Načte popisovač do původní nabídky. Rozhraní načte původní nabídku ze zdrojového souboru.
+Načte popisovač do původní nabídky. Rozhraní framework načte původní nabídku ze souboru prostředků.
 
 ```
 HMENU GetDefaultMenu() const;
@@ -501,13 +501,13 @@ HMENU GetDefaultMenu() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Popisovač prostředku nabídky
+Popisovač prostředku nabídky.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud vaše aplikace přizpůsobuje nabídku, můžete použít tuto metodu k načtení popisovače do původní nabídky.
+Pokud aplikace přizpůsobí nabídku, můžete tuto metodu použít k načtení popisovače do původní nabídky.
 
-##  <a name="getdefaultmenuresid"></a>CMFCMenuBar::GetDefaultMenuResId
+## <a name="cmfcmenubargetdefaultmenuresid"></a><a name="getdefaultmenuresid"></a>CMFCMenuBar::GetDefaultMenuResId
 
 Načte identifikátor prostředku pro výchozí nabídku.
 
@@ -517,13 +517,13 @@ UINT GetDefaultMenuResId() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Identifikátor prostředku nabídky
+Identifikátor prostředku nabídky.
 
 ### <a name="remarks"></a>Poznámky
 
-Rozhraní načte výchozí nabídku pro objekt `CMFCMenuBar` ze souboru prostředků.
+Rozhraní framework načte výchozí `CMFCMenuBar` nabídku objektu ze souboru prostředků.
 
-##  <a name="getfloatpopupdirection"></a>CMFCMenuBar::GetFloatPopupDirection
+## <a name="cmfcmenubargetfloatpopupdirection"></a><a name="getfloatpopupdirection"></a>CMFCMenuBar::GetFloatPopupDirection
 
 ```
 int GetFloatPopupDirection(CMFCToolBarMenuButton* pButton);
@@ -531,13 +531,13 @@ int GetFloatPopupDirection(CMFCToolBarMenuButton* pButton);
 
 ### <a name="parameters"></a>Parametry
 
-pro *pButton*<br/>
+[v] *pTlačítko*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="getforcedownarrows"></a>CMFCMenuBar::GetForceDownArrows
+## <a name="cmfcmenubargetforcedownarrows"></a><a name="getforcedownarrows"></a>CMFCMenuBar::GetForceDownArrows
 
 ```
 BOOL GetForceDownArrows();
@@ -547,9 +547,9 @@ BOOL GetForceDownArrows();
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="gethelpcombobox"></a>CMFCMenuBar::GetHelpCombobox
+## <a name="cmfcmenubargethelpcombobox"></a><a name="gethelpcombobox"></a>CMFCMenuBar::GetHelpCombobox
 
-Vrátí ukazatel na pole se seznamem **help** .
+Vrátí ukazatel na pole se seznamem **Nápověda.**
 
 ```
 CMFCToolBarComboBoxButton* GetHelpCombobox();
@@ -557,21 +557,21 @@ CMFCToolBarComboBoxButton* GetHelpCombobox();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na pole se seznamem **help** . Hodnota NULL, pokud je pole se seznamem **pomocníka** skryté nebo není povoleno.
+Ukazatel na pole se seznamem **Nápověda.** Null, pokud je pole se seznamem **nápovědy** skryté nebo není povoleno.
 
 ### <a name="remarks"></a>Poznámky
 
-Pole se seznamem **help** se nachází na pravé straně řádku nabídek. Chcete-li povolit toto pole se seznamem, zavolejte metodu [CMFCMenuBar:: EnableHelpCombobox](#enablehelpcombobox) .
+Pole se seznamem **Nápověda** se nachází na pravé straně panelu nabídek. Volání metody [CMFCMenuBar::EnableHelpCombobox](#enablehelpcombobox) povolte toto pole se seznamem.
 
-##  <a name="gethmenu"></a>CMFCMenuBar::GetHMenu
+## <a name="cmfcmenubargethmenu"></a><a name="gethmenu"></a>CMFCMenubar::GetHMenu
 
-Načte popisovač do nabídky připojené k objektu [CMFCMenuBar](../../mfc/reference/cmfcmenubar-class.md) .
+Načte popisovač do nabídky připojené k objektu [CMFCMenuBar.](../../mfc/reference/cmfcmenubar-class.md)
 
 ```
 HMENU GetHMenu() const;
 ```
 
-##  <a name="getmenufont"></a>CMFCMenuBar::GetMenuFont
+## <a name="cmfcmenubargetmenufont"></a><a name="getmenufont"></a>CMFCMenubar::GetMenuFont
 
 Načte aktuální písmo nabídky.
 
@@ -582,19 +582,19 @@ static const CFont& GetMenuFont(BOOL bHorz = TRUE);
 ### <a name="parameters"></a>Parametry
 
 *bHorz*<br/>
-pro Logický parametr, který určuje, zda má být vráceno vodorovné nebo svislé písmo. Hodnota TRUE označuje vodorovné písmo.
+[v] Logický parametr, který určuje, zda má být vráceno vodorovné nebo svislé písmo. TRUE označuje vodorovné písmo.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na parametr [CFont –](../../mfc/reference/cfont-class.md) , který obsahuje aktuální písmo řádku nabídek.
+Ukazatel na parametr [CFont,](../../mfc/reference/cfont-class.md) který obsahuje aktuální písmo řádku nabídek.
 
 ### <a name="remarks"></a>Poznámky
 
-Vrácený Font je globální parametr pro aplikaci. Pro všechny `CMFCMenuBar` objekty jsou zachována dvě globální písma. Tato samostatná písma se používají pro vodorovné a svislé panely nabídek.
+Vrácené písmo je globální parametr pro aplikaci. Pro všechny `CMFCMenuBar` objekty jsou zachována dvě globální písma. Tato samostatná písma se používají pro vodorovné a svislé panely nabídek.
 
-##  <a name="getmenuitem"></a>CMFCMenuBar:: getmenuitem
+## <a name="cmfcmenubargetmenuitem"></a><a name="getmenuitem"></a>CMFCPanelmenu::GetMenuItem
 
-Načte objekt [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md) na panelu nabídek v závislosti na indexu položky.
+Načte objekt [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md) na řádku nabídek na základě indexu položky.
 
 ```
 CMFCToolBarButton* GetMenuItem(int iItem) const;
@@ -602,14 +602,14 @@ CMFCToolBarButton* GetMenuItem(int iItem) const;
 
 ### <a name="parameters"></a>Parametry
 
-*iItem*<br/>
-pro Index položky nabídky, která se má vrátit
+*iPoložka*<br/>
+[v] Index položky nabídky vrátit.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na objekt `CMFCToolBarButton`, který odpovídá indexu určenému parametrem *iItem*. Hodnota NULL, pokud je index neplatný
+Ukazatel na `CMFCToolBarButton` objekt, který odpovídá indexu určenému *iItem*. Null, pokud je index neplatný.
 
-##  <a name="getrowheight"></a>CMFCMenuBar::GetRowHeight
+## <a name="cmfcmenubargetrowheight"></a><a name="getrowheight"></a>CMFCMenubar::GetRowHeight
 
 ```
 virtual int GetRowHeight() const;
@@ -619,7 +619,7 @@ virtual int GetRowHeight() const;
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="getsystembutton"></a>CMFCMenuBar::GetSystemButton
+## <a name="cmfcmenubargetsystembutton"></a><a name="getsystembutton"></a>CMFCPanelmenu::GetSystemButton
 
 ```
 CMFCToolBarMenuButtonsButton* GetSystemButton(
@@ -629,15 +629,15 @@ CMFCToolBarMenuButtonsButton* GetSystemButton(
 
 ### <a name="parameters"></a>Parametry
 
-pro *uiBtn*<br/>
+[v] *uiBtn*<br/>
 
-pro *bByCommand*<br/>
+[v] *bPříkaz b*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="getsystembuttonscount"></a>CMFCMenuBar::GetSystemButtonsCount
+## <a name="cmfcmenubargetsystembuttonscount"></a><a name="getsystembuttonscount"></a>CMFCPanel menu::GetSystemButtonsCount
 
 ```
 int GetSystemButtonsCount() const;
@@ -647,7 +647,7 @@ int GetSystemButtonsCount() const;
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="getsystemmenu"></a>CMFCMenuBar::GetSystemMenu
+## <a name="cmfcmenubargetsystemmenu"></a><a name="getsystemmenu"></a>CMFCPanel menu::GetSystemMenu
 
 ```
 CMFCToolBarSystemMenuButton* GetSystemMenu() const;
@@ -657,9 +657,9 @@ CMFCToolBarSystemMenuButton* GetSystemMenu() const;
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="highlightdisableditems"></a>CMFCMenuBar::HighlightDisabledItems
+## <a name="cmfcmenubarhighlightdisableditems"></a><a name="highlightdisableditems"></a>CMFCPanel menu::ZvýrazněníZakázané položky
 
-Určuje, zda se v rozhraní zvýrazní položky nabídky.
+Určuje, zda rozhraní zvýrazní zakázané položky nabídky.
 
 ```
 static void HighlightDisabledItems(BOOL bHighlight = TRUE);
@@ -667,14 +667,14 @@ static void HighlightDisabledItems(BOOL bHighlight = TRUE);
 
 ### <a name="parameters"></a>Parametry
 
-*bHighlight*<br/>
-pro Logický parametr, který označuje, zda rozhraní zvýrazní nedostupné položky nabídky.
+*bZvýraznění*<br/>
+[v] Logický parametr, který označuje, zda rozhraní zvýrazní nedostupné položky nabídky.
 
 ### <a name="remarks"></a>Poznámky
 
-Ve výchozím nastavení rozhraní nezvýrazňuje nedostupné položky nabídky, když uživatel umístí ukazatel myši nad ně.
+Ve výchozím nastavení rozhraní framework nezvýrazní nedostupné položky nabídky, když na ně uživatel umístí ukazatel myši.
 
-##  <a name="isbuttonextrasizeavailable"></a>CMFCMenuBar::IsButtonExtraSizeAvailable
+## <a name="cmfcmenubarisbuttonextrasizeavailable"></a><a name="isbuttonextrasizeavailable"></a>CMFCMenuBar::isbuttonextrasizek dispozici
 
 ```
 virtual BOOL IsButtonExtraSizeAvailable() const;
@@ -684,9 +684,9 @@ virtual BOOL IsButtonExtraSizeAvailable() const;
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="ishighlightdisableditems"></a>CMFCMenuBar::IsHighlightDisabledItems
+## <a name="cmfcmenubarishighlightdisableditems"></a><a name="ishighlightdisableditems"></a>CMFCMenuBar::IsHighlightDisabledItems
 
-Určuje, zda rozhraní zvýrazní nedostupné položky nabídky.
+Označuje, zda rozhraní zvýrazní nedostupné položky nabídky.
 
 ```
 static BOOL IsHighlightDisabledItems();
@@ -694,15 +694,15 @@ static BOOL IsHighlightDisabledItems();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-TRUE, pokud jsou zvýrazněny nedostupné položky nabídky; v opačném případě FALSE.
+PRAVDA, pokud jsou zvýrazněny nedostupné položky nabídky; jinak FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Ve výchozím nastavení rozhraní nezvýrazňuje nedostupné položky nabídky, když uživatel umístí ukazatel myši nad ně. Tuto funkci povolíte pomocí metody [CMFCMenuBar:: HighlightDisabledItems](#highlightdisableditems) .
+Ve výchozím nastavení rozhraní framework nezvýrazní nedostupné položky nabídky, když na ně uživatel umístí ukazatel myši. Tuto funkci povolte pomocí metody [CMFCMenuBar::HighlightDisabledItems.](#highlightdisableditems)
 
-##  <a name="ismenushadows"></a>CMFCMenuBar::IsMenuShadows
+## <a name="cmfcmenubarismenushadows"></a><a name="ismenushadows"></a>CMFCMenuBar::IsMenuShadows
 
-Určuje, zda rozhraní kreslí stíny pro místní nabídky.
+Označuje, zda rozhraní kreslí stíny pro rozbalovací nabídky.
 
 ```
 static BOOL IsMenuShadows();
@@ -710,15 +710,15 @@ static BOOL IsMenuShadows();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-TRUE, pokud rozhraní kreslí nabídku stínů; v opačném případě FALSE.
+PRAVDA, pokud rozhraní kreslí stíny nabídky; jinak FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Tuto funkci povolíte nebo zakážete pomocí metody [CMFCMenuBar:: EnableMenuShadows](#enablemenushadows) .
+Pomocí metody [CMFCMenuBar::EnableMenuShadows](#enablemenushadows) tuto funkci povolte nebo zakažte.
 
-##  <a name="isrecentlyusedmenus"></a>CMFCMenuBar::IsRecentlyUsedMenus
+## <a name="cmfcmenubarisrecentlyusedmenus"></a><a name="isrecentlyusedmenus"></a>CMFCMenuBar::Nabídky nabídek
 
-Určuje, zda jsou v řádku nabídek zobrazeny naposledy použité příkazy nabídky.
+Označuje, zda jsou na řádku nabídek zobrazeny naposledy použité příkazy nabídky.
 
 ```
 static BOOL IsRecentlyUsedMenus();
@@ -726,15 +726,15 @@ static BOOL IsRecentlyUsedMenus();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud `CMFCMenuBar` objekt zobrazuje naposledy použité příkazy nabídky; v opačném případě 0.
+Nenulová, `CMFCMenuBar` pokud objekt zobrazuje naposledy použité příkazy nabídky; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Pomocí funkce [CMFCMenuBar:: SetRecentlyUsedMenus](#setrecentlyusedmenus) určete, zda se na panelu nabídek zobrazují naposledy použité příkazy nabídky.
+Pomocí funkce [CMFCMenuBar::SetRecentlyUsedMenus](#setrecentlyusedmenus) můžete určit, zda se na panelu nabídek zobrazí naposledy použité příkazy nabídky.
 
-##  <a name="isshowallcommands"></a>CMFCMenuBar::IsShowAllCommands
+## <a name="cmfcmenubarisshowallcommands"></a><a name="isshowallcommands"></a>CMFCMenuBar::Příkazy IsShowAllCommands
 
-Označuje, zda jsou v nabídkách zobrazeny všechny příkazy.
+Označuje, zda nabídky zobrazují všechny příkazy.
 
 ```
 static BOOL IsShowAllCommands();
@@ -742,17 +742,17 @@ static BOOL IsShowAllCommands();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud `CMFCMenuBar` zobrazí všechny příkazy; v opačném případě 0.
+Nenulová, `CMFCMenuBar` pokud se zobrazí všechny příkazy; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Objekt `CMFCMenuBar` lze nakonfigurovat tak, aby buď zobrazoval všechny příkazy, nebo zobrazil pouze podmnožinu příkazů. Další informace o této funkci naleznete v tématu [Třída CMFCMenuBar](../../mfc/reference/cmfcmenubar-class.md).
+Objekt `CMFCMenuBar` lze nakonfigurovat tak, aby zobrazoval všechny příkazy nebo pouze podmnožinu příkazů. Další informace o této funkci naleznete v [tématu CMFCMenuBar Class](../../mfc/reference/cmfcmenubar-class.md).
 
-`IsShowAllCommands` se dozvíte, jak je tato funkce nakonfigurovaná pro objekt `CMFCMenuBar`. Chcete-li určit, které příkazy nabídky jsou zobrazeny, použijte metody [CMFCMenuBar:: SetShowAllCommands](#setshowallcommands) a [CMFCMenuBar:: SetRecentlyUsedMenus](#setrecentlyusedmenus).
+`IsShowAllCommands`vám řekne, jak je tato `CMFCMenuBar` funkce konfigurována pro objekt. Chcete-li určit, které příkazy nabídky jsou zobrazeny, použijte metody [CMFCMenuBar::SetShowAllCommands](#setshowallcommands) a [CMFCMenuBar::SetRecentlyUsedMenus](#setrecentlyusedmenus).
 
-##  <a name="isshowallcommandsdelay"></a>CMFCMenuBar::IsShowAllCommandsDelay
+## <a name="cmfcmenubarisshowallcommandsdelay"></a><a name="isshowallcommandsdelay"></a>CMFCMenuBar::IsShowAllCommandsDelay
 
-Určuje, zda bude objekt [CMFCMenuBar](../../mfc/reference/cmfcmenubar-class.md) po krátké prodlevě zobrazovat všechny příkazy.
+Označuje, zda objekt [CMFCMenuBar](../../mfc/reference/cmfcmenubar-class.md) zobrazí všechny příkazy po krátké prodlevě.
 
 ```
 static BOOL IsShowAllCommandsDelay();
@@ -760,19 +760,19 @@ static BOOL IsShowAllCommandsDelay();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud panel nabídek po krátké prodlevě zobrazuje úplné nabídky; v opačném případě 0.
+Nenulová, pokud se na řádku nabídek po krátké prodlevě zobrazí úplné nabídky; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Když nakonfigurujete panel nabídek pro zobrazení naposledy použitých položek, panel nabídek zobrazí úplnou nabídku jedním ze dvou způsobů:
+Když nakonfigurujete řádek nabídek tak, aby zobrazoval naposledy použité položky, zobrazí se na řádku nabídek úplná nabídka jedním ze dvou způsobů:
 
-- Zobrazí celou nabídku po programovém zpoždění od okamžiku, kdy uživatel najede kurzorem na šipku v dolní části nabídky.
+- Zobrazí úplnou nabídku po naprogramovaném zpoždění, kdy uživatel najeví kurzorem nad šipkou v dolní části nabídky.
 
-- Zobrazí celou nabídku, jakmile uživatel klikne na šipku v dolní části nabídky.
+- Zobrazí celou nabídku poté, co uživatel klikne na šipku v dolní části nabídky.
 
-Ve výchozím nastavení všechny `CMFCMenuBar` objekty používají možnost zobrazení úplné nabídky po krátké prodlevě. Tuto možnost nelze změnit programově ve třídě `CMFCMenuBar`. Uživatel však může změnit chování během přizpůsobení panelu nástrojů pomocí dialogového okna **přizpůsobit** .
+Ve výchozím `CMFCMenuBar` nastavení všechny objekty používají možnost k zobrazení celé nabídky po krátké prodlevě. Tuto možnost nelze ve `CMFCMenuBar` třídě programově změnit. Uživatel však může změnit chování během přizpůsobení panelu nástrojů pomocí dialogového okna **Přizpůsobit.**
 
-##  <a name="loadstate"></a>CMFCMenuBar:: LoadState
+## <a name="cmfcmenubarloadstate"></a><a name="loadstate"></a>CMFCPanel menu::LoadState
 
 Načte stav řádku nabídek z registru systému Windows.
 
@@ -786,25 +786,25 @@ virtual BOOL LoadState(
 ### <a name="parameters"></a>Parametry
 
 *lpszProfileName*<br/>
-pro Řetězec, který obsahuje cestu ke klíči registru systému Windows.
+[v] Řetězec, který obsahuje cestu klíče registru systému Windows.
 
 *nIndex*<br/>
-pro ID ovládacího prvku pro panel nabídek
+[v] ID ovládacího prvku pro řádek nabídek.
 
 *uiID*<br/>
-pro Rezervovaná hodnota.
+[v] Rezervovaná hodnota.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-TRUE, pokud byla metoda úspěšná; v opačném případě FALSE.
+TRUE, pokud byla metoda úspěšná; jinak FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-K uložení stavu řádku nabídek do registru použijte metodu [CMFCMenuBar:: SaveState](#savestate) . Uložené informace obsahují položky nabídky, stav Docker a umístění řádku nabídek.
+Pomocí metody [CMFCMenuBar::SaveState](#savestate) uložte stav řádku nabídek do registru. Uložené informace zahrnují položky nabídky, stav ukotvení a umístění panelu nabídek.
 
-Ve většině případů vaše aplikace nevolá `LoadState`. Rozhraní volá tuto metodu, když inicializuje pracovní prostor.
+Ve většině případů aplikace `LoadState`nevolá . Rozhraní framework volá tuto metodu při inicializaci pracovního prostoru.
 
-##  <a name="onchangehot"></a>CMFCMenuBar::OnChangeHot
+## <a name="cmfcmenubaronchangehot"></a><a name="onchangehot"></a>CMFCMenuBar::OnChangeHot
 
 ```
 virtual void OnChangeHot(int iHot);
@@ -812,13 +812,13 @@ virtual void OnChangeHot(int iHot);
 
 ### <a name="parameters"></a>Parametry
 
-pro *iHot*<br/>
+[v] *iHot*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="ondefaultmenuloaded"></a>CMFCMenuBar::OnDefaultMenuLoaded
+## <a name="cmfcmenubarondefaultmenuloaded"></a><a name="ondefaultmenuloaded"></a>CMFCMenuBar::OnDefaultMenuLoaded
 
-Rozhraní volá tuto metodu, když načte prostředek nabídky ze souboru prostředků.
+Rozhraní Framework volá tuto metodu při načtení prostředku nabídky ze souboru prostředků.
 
 ```
 virtual void OnDefaultMenuLoaded(HMENU hMenu);
@@ -826,14 +826,14 @@ virtual void OnDefaultMenuLoaded(HMENU hMenu);
 
 ### <a name="parameters"></a>Parametry
 
-*hMenu*<br/>
-pro Popisovač pro nabídku připojenou k objektu `CMFCMenuBar`.
+*hNabídka*<br/>
+[v] Úchyt pro nabídku `CMFCMenuBar` připojenou k objektu.
 
 ### <a name="remarks"></a>Poznámky
 
-Výchozí implementace této funkce neprovede žádnou akci. Tuto funkci přepište, pokud chcete spustit vlastní kód poté, co rozhraní načte prostředek nabídky ze souboru prostředků.
+Výchozí implementace této funkce neprovede žádné provádění. Přepsat tuto funkci spustit vlastní kód po rozhraní načte prostředek nabídky ze souboru prostředků.
 
-##  <a name="onsendcommand"></a>CMFCMenuBar::OnSendCommand
+## <a name="cmfcmenubaronsendcommand"></a><a name="onsendcommand"></a>CMFCPanel menu::Příkaz OnSendCommand
 
 ```
 virtual BOOL OnSendCommand(const CMFCToolBarButton* pButton);
@@ -841,15 +841,15 @@ virtual BOOL OnSendCommand(const CMFCToolBarButton* pButton);
 
 ### <a name="parameters"></a>Parametry
 
-pro *pButton*<br/>
+[v] *pTlačítko*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="onsetdefaultbuttontext"></a>CMFCMenuBar::OnSetDefaultButtonText
+## <a name="cmfcmenubaronsetdefaultbuttontext"></a><a name="onsetdefaultbuttontext"></a>CMFCPanelmenu::OnSetDefaultButtonText
 
-Rozhraní volá tuto metodu, když uživatel změní text položky na řádku nabídek.
+Framework volá tuto metodu, když uživatel změní text položky na řádku nabídek.
 
 ```
 virtual BOOL OnSetDefaultButtonText(CMFCToolBarButton* pButton);
@@ -857,18 +857,18 @@ virtual BOOL OnSetDefaultButtonText(CMFCToolBarButton* pButton);
 
 ### <a name="parameters"></a>Parametry
 
-*pButton*<br/>
-pro Ukazatel na objekt [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md) , který chce uživatel přizpůsobit.
+*pTlačítko*<br/>
+[v] Ukazatel na objekt [CMFCToolBarButton,](../../mfc/reference/cmfctoolbarbutton-class.md) který chce uživatel přizpůsobit.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-TRUE, pokud rozhraní aplikuje změny uživatele na panel nabídek; v opačném případě FALSE.
+TRUE, pokud rozhraní platí uživatel změní na řádku nabídek; jinak FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Výchozí implementace této metody změní text tlačítka na text, který uživatel poskytne.
+Výchozí implementace pro tuto metodu změní text tlačítka na text, který uživatel zadává.
 
-##  <a name="ontoolhittest"></a>CMFCMenuBar::OnToolHitTest
+## <a name="cmfcmenubarontoolhittest"></a><a name="ontoolhittest"></a>CMFCMenuBar::OnToolHitTest
 
 ```
 virtual INT_PTR OnToolHitTest(
@@ -878,15 +878,15 @@ virtual INT_PTR OnToolHitTest(
 
 ### <a name="parameters"></a>Parametry
 
-pro *bod*<br/>
+[v] *bod*<br/>
 
-pro *PTI*<br/>
+[v] *pTI*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="pretranslatemessage"></a>CMFCMenuBar::P reTranslateMessage
+## <a name="cmfcmenubarpretranslatemessage"></a><a name="pretranslatemessage"></a>CMFCMenuBar::PreTranslateMessage
 
 ```
 virtual BOOL PreTranslateMessage(MSG* pMsg);
@@ -894,15 +894,15 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 
 ### <a name="parameters"></a>Parametry
 
-pro *pMsg*<br/>
+[v] *pMsg*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="restoreoriginalstate"></a>CMFCMenuBar::RestoreOriginalstate
+## <a name="cmfcmenubarrestoreoriginalstate"></a><a name="restoreoriginalstate"></a>CMFCMenuBar::Obnovit původní stav
 
-Volá se rozhraním, když uživatel vybere **reset** v dialogovém okně **přizpůsobit** .
+Volat rámci, když uživatel vybere **Obnovit** z dialogového okna **Přizpůsobit.**
 
 ```
 virtual BOOL RestoreOriginalstate();
@@ -910,15 +910,15 @@ virtual BOOL RestoreOriginalstate();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je metoda úspěšná; v opačném případě 0.
+Nenulová, pokud je metoda úspěšná; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda se volá, když uživatel vybere **reset** v nabídce vlastní nastavení. Tuto metodu můžete také ručně zavolat, chcete-li obnovit stav řádku nabídek programově. Tato metoda načte původní stav ze souboru prostředků.
+Tato metoda je volána, když uživatel vybere **obnovit** z nabídky přizpůsobení. Tuto metodu můžete také ručně volat a programově obnovit stav panelu nabídek. Tato metoda načte původní stav ze souboru prostředků.
 
-Tuto metodu přepište, pokud chcete provádět jakékoli zpracování, když uživatel vybere možnost **resetovat** .
+Přepsat tuto metodu, pokud chcete provést jakékoli zpracování, když uživatel vybere možnost **Obnovit.**
 
-##  <a name="savestate"></a>CMFCMenuBar:: SaveState
+## <a name="cmfcmenubarsavestate"></a><a name="savestate"></a>CMFCMenubar::SaveState
 
 Uloží stav objektu [CMFCMenuBar](../../mfc/reference/cmfcmenubar-class.md) do registru systému Windows.
 
@@ -932,27 +932,27 @@ virtual BOOL SaveState (
 ### <a name="parameters"></a>Parametry
 
 *lpszProfileName*<br/>
-pro Řetězec, který obsahuje cestu ke klíči registru systému Windows.
+[v] Řetězec, který obsahuje cestu klíče registru systému Windows.
 
 *nIndex*<br/>
-pro ID ovládacího prvku pro panel nabídek
+[v] ID ovládacího prvku pro řádek nabídek.
 
 *uiID*<br/>
-pro Rezervovaná hodnota.
+[v] Rezervovaná hodnota.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-TRUE v případě úspěchu; v opačném případě FALSE;
+PRAVDA v případě úspěchu; jinak NEPRAVDA;
 
 ### <a name="remarks"></a>Poznámky
 
-Obvykle aplikace nevolá `SaveState`. Rozhraní volá tuto metodu, když je pracovní prostor serializován. Další informace najdete v tématu [CWinAppEx:: SaveState](../../mfc/reference/cwinappex-class.md#savestate).
+Aplikace obvykle nevolá `SaveState`. Rozhraní Framework volá tuto metodu při serializace pracovního prostoru. Další informace naleznete v tématu [CWinAppEx::SaveState](../../mfc/reference/cwinappex-class.md#savestate).
 
-Uložené informace obsahují položky nabídky, stav Docker a umístění řádku nabídek.
+Uložené informace zahrnují položky nabídky, stav ukotvení a umístění panelu nabídek.
 
-##  <a name="setdefaultmenuresid"></a>CMFCMenuBar::SetDefaultMenuResId
+## <a name="cmfcmenubarsetdefaultmenuresid"></a><a name="setdefaultmenuresid"></a>CMFCMenuBar::SetDefaultMenuResId
 
-Nastaví výchozí nabídku pro objekt [CMFCMenuBar](../../mfc/reference/cmfcmenubar-class.md) na základě ID prostředku.
+Nastaví výchozí nabídku objektu [CMFCMenuBar](../../mfc/reference/cmfcmenubar-class.md) na základě ID prostředku.
 
 ```
 void SetDefaultMenuResId(UINT uiResId);
@@ -961,15 +961,15 @@ void SetDefaultMenuResId(UINT uiResId);
 ### <a name="parameters"></a>Parametry
 
 *uiResId*<br/>
-pro ID prostředku nové výchozí nabídky
+[v] ID prostředku pro novou výchozí nabídku.
 
 ### <a name="remarks"></a>Poznámky
 
-Metoda [CMFCMenuBar:: RestoreOriginalstate](#restoreoriginalstate) obnoví výchozí nabídku ze souboru prostředků.
+Metoda [CMFCMenuBar::RestoreOriginalstate](#restoreoriginalstate) obnoví výchozí nabídku ze souboru prostředků.
 
-Použijte metodu [CMFCMenuBar:: GetDefaultMenuResId](#getdefaultmenuresid) k načtení výchozí nabídky bez obnovení.
+Použijte metodu [CMFCMenuBar::GetDefaultMenuResId](#getdefaultmenuresid) k načtení výchozí nabídky bez obnovení.
 
-##  <a name="setforcedownarrows"></a>CMFCMenuBar::SetForceDownArrows
+## <a name="cmfcmenubarsetforcedownarrows"></a><a name="setforcedownarrows"></a>CMFCMenuBar::SetForceDownArrows
 
 ```
 void SetForceDownArrows(BOOL bValue);
@@ -977,13 +977,13 @@ void SetForceDownArrows(BOOL bValue);
 
 ### <a name="parameters"></a>Parametry
 
-pro *bValue*<br/>
+[v] *bHodnota*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="setmaximizemode"></a>CMFCMenuBar::SetMaximizeMode
+## <a name="cmfcmenubarsetmaximizemode"></a><a name="setmaximizemode"></a>CMFCPanel menu::SetMaximizeMode
 
-Rozhraní volá tuto metodu, když objekt MDI změní režim zobrazení a řádek nabídek musí být aktualizován.
+Rozhraní Framework volá tuto metodu, když Rozhraní MDI změní režim zobrazení a řádek nabídek musí být aktualizován.
 
 ```
 void SetMaximizeMode(
@@ -995,21 +995,21 @@ void SetMaximizeMode(
 ### <a name="parameters"></a>Parametry
 
 *bMax*<br/>
-pro Logická hodnota, která určuje režim. Další informace naleznete v části Poznámky.
+[v] Logická hodnota, která určuje režim. Další informace naleznete v části Poznámky.
 
 *pWnd*<br/>
-pro Ukazatel na podřízené okno MDI, které se mění.
+[v] Ukazatel na podřízené okno MDI, které se mění.
 
-*bRecalcLayout*<br/>
-pro Logická hodnota určující, zda má být rozložení řádku nabídek přepočítáno okamžitě.
+*bRozložení a rozložení*<br/>
+[v] Logická hodnota, která určuje, zda má být rozložení panelu nabídek okamžitě přepočítáno.
 
 ### <a name="remarks"></a>Poznámky
 
-Po maximalizaci podřízeného okna MDI se v okně hlavního rámce MDI zobrazí systémová nabídka a tlačítka **minimalizovat**, **maximalizovat** a **Zavřít** . Pokud má *Bmax* hodnotu true a *pWnd* není null, podřízené okno MDI se maximalizuje a řádek nabídek musí zahrnovat nadbytečné ovládací prvky. V opačném případě se řádek nabídek vrátí do jeho normálního stavu.
+Když je podřízené okno MDI maximalizováno, panel nabídek připojený k hlavnímu oknu mdi zobrazí systémové menu a tlačítka **Minimalizovat**, **Maximalizovat** a **Zavřít.** Pokud *bMax* je TRUE a *pWnd* není NULL, podřízené okno MDI je maximalizována a řádek nabídek musí obsahovat další ovládací prvky. V opačném případě se řádek nabídek vrátí do normálního stavu.
 
-##  <a name="setmenubuttonrtc"></a>CMFCMenuBar::SetMenuButtonRTC
+## <a name="cmfcmenubarsetmenubuttonrtc"></a><a name="setmenubuttonrtc"></a>CMFCPanel menu::SetMenuButtonRTC
 
-Nastaví informace třídy modulu runtime, které rozhraní používá při vytváření tlačítek nabídky uživatelem.
+Nastaví informace o třídě runtime, které rozhraní používá, když uživatel vytvoří tlačítka nabídky.
 
 ```
 void SetMenuButtonRTC(CRuntimeClass* pMenuButtonRTC);
@@ -1018,15 +1018,15 @@ void SetMenuButtonRTC(CRuntimeClass* pMenuButtonRTC);
 ### <a name="parameters"></a>Parametry
 
 *pMenuButtonRTC*<br/>
-pro Informace [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) pro třídu odvozenou z [třídy CMFCMenuButton](../../mfc/reference/cmfcmenubutton-class.md).
+[v] Informace [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) pro třídu odvozenou z [třídy CMFCMenuButton](../../mfc/reference/cmfcmenubutton-class.md).
 
 ### <a name="remarks"></a>Poznámky
 
-Když uživatel přidá nová tlačítka do řádku nabídek, rozhraní vytvoří tlačítka dynamicky. Ve výchozím nastavení vytvoří `CMFCMenuButton` objekty. Přepište tuto metodu pro změnu typu objektů tlačítek, které rozhraní vytvoří.
+Když uživatel přidá nová tlačítka do řádku nabídek, rozhraní vytvoří tlačítka dynamicky. Ve výchozím nastavení `CMFCMenuButton` vytváří objekty. Přepsat tuto metodu změnit typ button objekty, které vytvoří rámci.
 
-##  <a name="setmenufont"></a>CMFCMenuBar::SetMenuFont
+## <a name="cmfcmenubarsetmenufont"></a><a name="setmenufont"></a>CMFCPanel menu::SetMenuFont
 
-Nastaví písmo pro všechny řádky nabídek ve vaší aplikaci.
+Nastaví písmo pro všechny panely nabídek v aplikaci.
 
 ```
 static BOOL SetMenuFont(
@@ -1037,24 +1037,24 @@ static BOOL SetMenuFont(
 ### <a name="parameters"></a>Parametry
 
 *lpLogFont*<br/>
-pro Ukazatel na strukturu [LOGFONT](/windows/win32/api/dimm/ns-dimm-logfonta) , která definuje písmo, které má být nastaveno.
+[v] Ukazatel na strukturu [LOGFONT,](/windows/win32/api/dimm/ns-dimm-logfonta) která definuje písmo, které má být nastaveno.
 
 *bHorz*<br/>
-pro TRUE, pokud chcete, aby byl parametr *lpLogFont* použit pro vertikální písmo, false, pokud chcete použít pro horizontální písmo.
+[v] TRUE, pokud *chcete, aby lpLogFont* parametr, který má být použit pro svislé písmo, FALSE, pokud chcete, aby byl použit pro vodorovné písmo.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-TRUE, pokud byla metoda úspěšná; v opačném případě FALSE.
+TRUE, pokud byla metoda úspěšná; jinak FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
 Pro všechny `CMFCMenuBar` objekty se používají dvě písma. Tato samostatná písma se používají pro vodorovné a svislé panely nabídek.
 
-Nastavení písma jsou globální proměnné a ovlivňují všechny `CMFCMenuBar` objekty.
+Nastavení písma jsou globální proměnné `CMFCMenuBar` a ovlivňují všechny objekty.
 
-##  <a name="setrecentlyusedmenus"></a>CMFCMenuBar::SetRecentlyUsedMenus
+## <a name="cmfcmenubarsetrecentlyusedmenus"></a><a name="setrecentlyusedmenus"></a>CMFCMenuBar::Nastavitnabídky naposledy použitých
 
-Určuje, zda se na panelu nabídek zobrazují naposledy použité příkazy nabídky.
+Určuje, zda se na panelu nabídek zobrazí naposledy použité příkazy nabídek.
 
 ```
 static void SetRecentlyUsedMenus (BOOL bOn = TRUE);
@@ -1062,12 +1062,12 @@ static void SetRecentlyUsedMenus (BOOL bOn = TRUE);
 
 ### <a name="parameters"></a>Parametry
 
-*Přání*<br/>
-pro Logická hodnota, která určuje, zda jsou zobrazeny naposledy použité příkazy nabídky.
+*Bon*<br/>
+[v] Logická hodnota, která určuje, zda jsou zobrazeny naposledy použité příkazy nabídky.
 
-##  <a name="setshowallcommands"></a>CMFCMenuBar::SetShowAllCommands
+## <a name="cmfcmenubarsetshowallcommands"></a><a name="setshowallcommands"></a>CMFCMenuBar::SetShowAllCommands
 
-Určuje, zda se v nabídce zobrazují všechny dostupné příkazy.
+Určuje, zda nabídka zobrazuje všechny dostupné příkazy.
 
 ```
 static void SetShowAllCommands(BOOL bShowAllCommands = TRUE);
@@ -1075,12 +1075,12 @@ static void SetShowAllCommands(BOOL bShowAllCommands = TRUE);
 
 ### <a name="parameters"></a>Parametry
 
-*bShowAllCommands*<br/>
-pro Logický parametr, který určuje, zda se v místní nabídce zobrazí všechny příkazy nabídky.
+*bZobrazitAllPříkazy*<br/>
+[v] Logický parametr, který určuje, zda rozbalovací nabídka zobrazuje všechny příkazy nabídky.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud nabídka nezobrazí všechny příkazy nabídky, skryje příkazy, které se zřídka používají. Další informace o zobrazení příkazů nabídky naleznete v tématu [Třída CMFCMenuBar](../../mfc/reference/cmfcmenubar-class.md).
+Pokud nabídka nezobrazuje všechny příkazy nabídky, skryje příkazy, které se používají jen zřídka. Další informace o zobrazení příkazů nabídky naleznete v [tématu CMFCMenuBar Class](../../mfc/reference/cmfcmenubar-class.md).
 
 ## <a name="see-also"></a>Viz také
 

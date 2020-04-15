@@ -1,5 +1,5 @@
 ---
-title: CWinFormsView – třída
+title: Třída CWinFormsView
 ms.date: 11/04/2016
 f1_keywords:
 - CWinFormsView
@@ -10,16 +10,16 @@ helpviewer_keywords:
 - CWinFormsView [MFC], CWinFormsView
 - CWinFormsView [MFC], GetControl
 ms.assetid: d597e397-6529-469b-88f5-7f65a6b9e895
-ms.openlocfilehash: f4a5e6b88527dad8606092ccebd4899bba5181f6
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 6eb6b9e385e9dbc96eb3b62ffb80909e54569e97
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79420860"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81369595"
 ---
-# <a name="cwinformsview-class"></a>CWinFormsView – třída
+# <a name="cwinformsview-class"></a>Třída CWinFormsView
 
-Poskytuje obecné funkce pro hostování ovládacího prvku model Windows Forms jako zobrazení MFC.
+Poskytuje obecné funkce pro hostování ovládacího prvku Windows Forms jako zobrazení knihovny MFC.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -31,41 +31,41 @@ class CWinFormsView : public CView;
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CWinFormsView:: CWinFormsView](#cwinformsview)|Vytvoří objekt `CWinFormsView`.|
+|[CWinFormsView::CWinFormsView](#cwinformsview)|Vytvoří `CWinFormsView` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CWinFormsView:: GetControl](#getcontrol)|Načte ukazatel na ovládací prvek model Windows Forms.|
+|[CWinFormsView::Ovládací prvek GetControl](#getcontrol)|Načte ukazatel na ovládací prvek Windows Forms.|
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Název||
+|Name (Název)||
 |----------|-|
-|[CWinFormsView:: operator – ovládací prvek ^](#operator_control)|Přetypování typu jako ukazatele na ovládací prvek model Windows Forms.|
+|[CWinFormsView::Ovládací prvek operátoru^](#operator_control)|Přetypování typu jako ukazatel ovládacího prvku Windows Forms.|
 
 ## <a name="remarks"></a>Poznámky
 
-Knihovna MFC používá třídu `CWinFormsView` k hostování .NET Framework ovládacího prvku model Windows Forms v zobrazení knihovny MFC. Ovládací prvek je podřízeným prvkem nativního zobrazení a zabírá celou klientskou oblast zobrazení knihovny MFC. Výsledek je podobný zobrazení `CFormView`, což vám umožní využít výhod model Windows Formsho návrháře a doby spuštění k vytvoření formulářů s bohatou možností zobrazení.
+Knihovna MFC používá třídu `CWinFormsView` k hostování ovládacího prvku .NET Framework Windows Forms v rámci zobrazení knihovny MFC. Ovládací prvek je podřízený nativní zobrazení a zabírá celou oblast klienta zobrazení knihovny MFC. Výsledek je podobný `CFormView` zobrazení, což umožňuje využít výhod návrháře formulářů systému Windows a čas spuštění k vytvoření zobrazení založených na bohatém formuláři.
 
-Další informace o použití model Windows Forms naleznete v tématu [použití uživatelského ovládacího prvku Windows Form v knihovně MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
-
-> [!NOTE]
->  Knihovna MFC model Windows Forms Integration funguje pouze v projektech, které jsou propojeny dynamicky s knihovnou MFC (projekty, ve kterých je definována AFXDLL –).
+Další informace o používání formulářů Systému Windows naleznete [v tématu Použití ovládacího prvku uživatele formuláře systému Windows v knihovně MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
 
 > [!NOTE]
->  CWinFormsView nepodporuje okno rozdělení knihovny MFC ( [Třída CSplitterWnd](../../mfc/reference/csplitterwnd-class.md)). V současné době je podporován pouze ovládací prvek rozdělovače model Windows Forms.
+> Integrace mfc Windows Forms funguje pouze v projektech, které dynamicky propojují s knihovnou MFC (projekty, ve kterých je definována knihovna AFXDLL).
+
+> [!NOTE]
+> CWinFormsView nepodporuje okno rozdělovače knihovny MFC ( [Třída CSplitterWnd).](../../mfc/reference/csplitterwnd-class.md) V současné době je podporován pouze ovládací prvek Windows Forms Splitter.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxwinforms. h
+**Záhlaví:** afxwinforms.h
 
-##  <a name="cwinformsview"></a>CWinFormsView:: CWinFormsView
+## <a name="cwinformsviewcwinformsview"></a><a name="cwinformsview"></a>CWinFormsView::CWinFormsView
 
-Vytvoří objekt `CWinFormsView`.
+Vytvoří `CWinFormsView` objekt.
 
 ```
 CWinFormsView(System::Type^ pManagedViewType);
@@ -74,19 +74,19 @@ CWinFormsView(System::Type^ pManagedViewType);
 ### <a name="parameters"></a>Parametry
 
 *pManagedViewType*<br/>
-Ukazatel na datový typ uživatelského ovládacího prvku model Windows Forms.
+Ukazatel na datový typ uživatelského ovládacího prvku Windows Forms.
 
 ### <a name="example"></a>Příklad
 
-V následujícím příkladu třída `CUserView` dědí z `CWinFormsView` a předá typ `UserControl1` konstruktoru `CWinFormsView`. `UserControl1` je uživatelsky sestavený ovládací prvek v knihovně ControlLibrary1. dll.
+V následujícím příkladu `CUserView` třída dědí z `CWinFormsView` a `UserControl1` předá typ konstruktoru. `CWinFormsView` `UserControl1`je vlastní ovládací prvek v ControlLibrary1.dll.
 
 [!code-cpp[NVC_MFC_Managed#1](../../mfc/reference/codesnippet/cpp/cwinformsview-class_1.h)]
 
 [!code-cpp[NVC_MFC_Managed#2](../../mfc/reference/codesnippet/cpp/cwinformsview-class_2.cpp)]
 
-##  <a name="getcontrol"></a>CWinFormsView:: GetControl
+## <a name="cwinformsviewgetcontrol"></a><a name="getcontrol"></a>CWinFormsView::Ovládací prvek GetControl
 
-Načte ukazatel na ovládací prvek model Windows Forms.
+Načte ukazatel na ovládací prvek Windows Forms.
 
 ```
 System::Windows::Forms::Control^ GetControl() const;
@@ -94,15 +94,15 @@ System::Windows::Forms::Control^ GetControl() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na objekt `System.Windows.Forms.Control`.
+Ukazatel na `System.Windows.Forms.Control` objekt.
 
 ### <a name="remarks"></a>Poznámky
 
-Příklad použití model Windows Forms naleznete v tématu [použití uživatelského ovládacího prvku Windows Form v knihovně MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
+Příklad použití formulářů systému Windows naleznete v [tématu Použití ovládacího prvku uživatele formuláře systému Windows v knihovně MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
 
-##  <a name="operator_control"></a>CWinFormsView:: operator – ovládací prvek ^
+## <a name="cwinformsviewoperator-control"></a><a name="operator_control"></a>CWinFormsView::Ovládací prvek operátoru^
 
-Přetypování typu jako ukazatele na ovládací prvek model Windows Forms.
+Přetypování typu jako ukazatel ovládacího prvku Windows Forms.
 
 ```
 operator System::Windows::Forms::Control^() const;
@@ -110,15 +110,15 @@ operator System::Windows::Forms::Control^() const;
 
 ### <a name="remarks"></a>Poznámky
 
-Tento operátor umožňuje předat `CWinFormsView` zobrazení funkcí, které přijímají ukazatel na ovládací prvek model Windows Forms typu <xref:System.Windows.Forms.Control>.
+Tento operátor umožňuje předat `CWinFormsView` zobrazení funkcím, které přijímají ukazatel na <xref:System.Windows.Forms.Control>ovládací prvek Windows Forms typu .
 
 ### <a name="example"></a>Příklad
 
-  Viz [CWinFormsView:: GetControl](#getcontrol).
+  Viz [CWinFormsView::GetControl](#getcontrol).
 
 ## <a name="see-also"></a>Viz také
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
-[CWinFormsControl – třída](../../mfc/reference/cwinformscontrol-class.md)<br/>
-[CWinFormsDialog – třída](../../mfc/reference/cwinformsdialog-class.md)<br/>
+[Třída CWinFormsControl](../../mfc/reference/cwinformscontrol-class.md)<br/>
+[Třída CWinFormsDialog](../../mfc/reference/cwinformsdialog-class.md)<br/>
 [CFormView – třída](../../mfc/reference/cformview-class.md)

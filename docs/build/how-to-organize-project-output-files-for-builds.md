@@ -5,69 +5,69 @@ helpviewer_keywords:
 - C++, output files
 - output files, organizing
 ms.assetid: 521d95ea-2dcc-4da0-b5eb-ac3e57941446
-ms.openlocfilehash: 202b2cbf135a5d8371354aac0fb8dd26367896c2
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 13aa3d1f8e2993ca34163ecbc0515948db56eb79
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220662"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81328532"
 ---
 # <a name="how-to-organize-project-output-files-for-builds"></a>Postupy: Uspořádání výstupních souborů projektu pro sestavení
 
-Toto téma popisuje doporučené postupy pro uspořádání výstupních souborů projektu. Sestavení při nastavování výstupních souborů projektu nesprávně, může dojít k chybám. Toto téma také popisuje výhody a nevýhody všech možností uspořádání výstupních souborů projektu.
+Toto téma popisuje osvědčené postupy pro uspořádání výstupních souborů projektu. Chyby sestavení může dojít při nastavení výstupnísoubory projektu nesprávně. Toto téma také popisuje výhody a nevýhody každé alternativy pro uspořádání výstupních souborů projektu.
 
 ## <a name="referencing-clr-assemblies"></a>Odkazování na sestavení CLR
 
-#### <a name="to-reference-assemblies-with-using"></a>Odkazování na sestavení pomocí #using
+#### <a name="to-reference-assemblies-with-using"></a>Odkazna sestavy s #using
 
-1. Sestavení lze odkazovat přímo v kódu s použitím # direktivy using, jako například `#using <System.Data.dll>`. Další informace najdete v tématu [# direktiva using](../preprocessor/hash-using-directive-cpp.md).
+1. Můžete odkazovat na sestavení přímo z kódu pomocí `#using <System.Data.dll>`direktivy #using, například . Další informace naleznete [v #using směrnice](../preprocessor/hash-using-directive-cpp.md).
 
-   Zadaný soubor může být .dll, .exe, .netmodule nebo .obj, jako je v jazyce MSIL. Odkazovaná komponenta může být sestavena v libovolném jazyce. Použití této možnosti budete mít přístup k IntelliSense jelikož metadata budou extrahována z jazyka MSIL. Dotyčný soubor musí být v cestě k projektu. jinak projekt nepůjde kompilovat a IntelliSense nebude k dispozici. Snadný způsob, jak zjistit, zda je soubor v cestě je klikněte pravým tlačítkem myši na #using řádku a zvolte **otevřít dokument** příkazu. Pokud nelze najít soubor, budete upozorněni.
+   Zadaný soubor může být .dll, .exe, .netmodule nebo .obj, pokud je v MSIL. Odkazovanou komponentu lze sestavit v libovolném jazyce. Pomocí této možnosti budete mít přístup k intelliSense, protože metadata budou extrahována z MSIL. Daný soubor musí být v cestě k projektu; v opačném případě se projekt nezkompiluje a technologie IntelliSense nebude k dispozici. Snadný způsob, jak zjistit, zda je soubor v cestě, je kliknout pravým tlačítkem myši na řádek #using a zvolit příkaz **Otevřít dokument.** Pokud soubor nelze najít, budete upozorněni.
 
-   Pokud nechcete vkládat úplnou cestu k souboru, můžete použít **/AI** – možnost kompilátoru pro úpravu vyhledávací cesty pro #using. Další informace najdete v tématu [/AI (zadat adresáře metadat)](reference/ai-specify-metadata-directories.md).
+   Pokud nechcete umístit úplnou cestu k souboru, můžete použít možnost kompilátoru **/AI** k úpravě cesty hledání pro #using odkazy. Další informace naleznete [v tématu /AI (Zadejte adresáře metadat)](reference/ai-specify-metadata-directories.md).
 
-#### <a name="to-reference-assemblies-with-fu"></a>Odkazování na sestavení pomocí /FU
+#### <a name="to-reference-assemblies-with-fu"></a>Odkazna sestavy s /FU
 
-1. Namísto odkazování na sestavení přímo ze souboru kódu, jak je popsáno výše, můžete použít **/FU** – možnost kompilátoru. Výhodou této metody je, že není nutné přidat samostatný # příkaz using pro každý soubor, který odkazuje na dané sestavení.
+1. Namísto odkazování na sestavení přímo ze souboru kódu, jak je popsáno výše, můžete použít možnost kompilátoru **/FU.** Výhodou této metody je, že není třeba přidávat samostatný příkaz #using ke každému souboru, který odkazuje na dané sestavení.
 
-   Pokud chcete nastavit tuto možnost, otevřete **stránky vlastností** pro projekt. Rozbalte **vlastnosti konfigurace** uzel a potom rozbalte **C/C++** uzel a vyberte možnost **Upřesnit**. Přidejte požadované sestavení vedle **platnost #using**. Další informace najdete v tématu [/FU (vynuceným názvem #using souboru)](reference/fu-name-forced-hash-using-file.md).
+   Chcete-li tuto možnost nastavit, otevřete **stránky vlastností** projektu. Rozbalte uzel **Vlastnosti konfigurace,** rozbalte uzel **C/C++** a vyberte **Upřesnit**. Přidejte požadovaná sestavení vedle **položky Force #using**. Další informace naleznete v tématu [/FU (Name Forced #using File).](reference/fu-name-forced-hash-using-file.md)
 
-#### <a name="to-reference-assemblies-with-add-new-reference"></a>K odkazování na sestavení pomocí přidat nový odkaz
+#### <a name="to-reference-assemblies-with-add-new-reference"></a>Odkazna sestavení pomocí přidat nový odkaz
 
-1. Toto je nejjednodušší způsob použití sestavení CLR. Nejprve zkontrolujte, zda je projekt kompilován s **/CLR** – možnost kompilátoru. Potom klikněte pravým tlačítkem myši klikněte na projekt **Průzkumníku řešení** a vyberte **přidat**, **odkazy**. **Stránky vlastností** zobrazí se dialogové okno.
+1. Toto je nejjednodušší způsob použití sestav CLR. Nejprve se ujistěte, že je projekt zkompilován pomocí možnosti kompilátoru **/clr.** Potom klepněte pravým tlačítkem myši na projekt z **Průzkumníka řešení** a vyberte **přidat**, **odkazy**. Zobrazí se dialogové okno **Stránky vlastností.**
 
-1. Z **stránky vlastností** dialogového okna, vyberte **přidat nový odkaz**. Dialogové okno se zobrazí seznam všech .NET, COM a jiných sestavení dostupných v aktuálním projektu. Vyberte požadované sestavení a klikněte na tlačítko **OK**.
+1. V dialogovém okně **Stránky vlastností** vyberte **Přidat nový odkaz**. Zobrazí se dialogové okno se seznamem všech sestavení .NET, COM a dalších sestavení dostupných v aktuálním projektu. Vyberte požadovanou sestavu a klepněte na **OK**.
 
-   Po nastavení projektového odkazu, jsou automaticky zpracovány odpovídající závislosti. Kromě toho protože metadata jsou součástí sestavení, není nutné přidat soubory hlaviček nebo spravovat prvky, které jsou používány ze spravovaných sestavení.
+   Po nastavení odkazu na projekt jsou automaticky zpracovány odpovídající závislosti. Kromě toho vzhledem k tomu, že metadata jsou součástí sestavení, není nutné přidávat soubor záhlaví nebo prototyp prvků, které jsou používány ze spravovaných sestavení.
 
-## <a name="referencing-native-dlls-or-static-libraries"></a>Odkazování nativních knihoven DLL nebo statických knihoven
+## <a name="referencing-native-dlls-or-static-libraries"></a>Odkazování na nativní knihovny DLL nebo statické knihovny
 
-#### <a name="to-reference-native-dlls-or-static-libraries"></a>Odkazování nativních knihoven DLL nebo statických knihoven
+#### <a name="to-reference-native-dlls-or-static-libraries"></a>Odkazna nativní knihovny DLL nebo statické knihovny
 
-1. Odkaz na příslušný soubor hlaviček v kódu pomocí #include. Soubor hlaviček musí být v zahrnutém umístění, nebo část aktuálního projektu. Další informace najdete v tématu [#include – direktiva (C/C++)](../preprocessor/hash-include-directive-c-cpp.md).
+1. Odkazna příslušný soubor záhlaví v kódu pomocí #include směrnice. Soubor záhlaví musí být v cestě zahrnutí nebo v části aktuálního projektu. Další informace naleznete [v tématu #include směrnice (C/C++)](../preprocessor/hash-include-directive-c-cpp.md).
 
-1. Můžete také nastavit závislosti projektu. Nastavení závislostí projektu zaručuje dvě věci. Za prvé zajišťuje, že jsou projekty sestaveny ve správném pořadí, takže projekt může vždy najít závislé soubory, které potřebuje. Za druhé implicitně přidá výstupní adresář závislého projektu k cestě tak, aby soubory lze snadno nalézt v době spojení.
+1. Můžete také nastavit závislosti projektu. Nastavení závislostí projektu zaručuje dvě věci. Nejprve zajišťuje, že projekty jsou sestaveny ve správném pořadí tak, aby projekt může vždy najít závislé soubory, které potřebuje. Za druhé implicitně přidá výstupní adresář závislého projektu do cesty, aby bylo možné soubory snadno najít v době propojení.
 
-1. Pokud chcete nasadit aplikaci, je potřeba umístit knihovnu DLL do správného umístění. Může to být jedna z následujících akcí:
+1. Chcete-li nasadit aplikaci, budete muset umístit dll na vhodném místě. To může být jeden z následujících:
 
-   1. Stejnou cestu jako spustitelný soubor.
+   1. Stejná cesta jako spustitelný soubor.
 
-   1. Kdekoli v systémových cestách ( **cesta** proměnnou prostředí).
+   1. Kdekoli v systémové cestě (proměnná prostředí **cesty).**
 
-   1. V sestavení vedle sebe. Další informace najdete v tématu [vytváření sestavení C/C++-souběžně](building-c-cpp-side-by-side-assemblies.md).
+   1. V sestavě vedle sebe. Další informace naleznete [v tématu Building C/C++ Side-by-side Assemblies](building-c-cpp-side-by-side-assemblies.md).
 
 ## <a name="working-with-multiple-projects"></a>Práce s více projekty
 
-Ve výchozím nastavení jsou projekty sestaveny tak, aby všechny výstupní soubory jsou vytvořeny v podadresáři adresáře projektu. Pojmenování tohoto adresáře závisí na konfiguraci sestavení (např. ladění a vydání). V pořadí pro projekty na stejné úrovni jako reference k sobě navzájem musí každý projekt explicitně přidat výstupní adresáře ostatních projektů do svých cest v pořadí pro úspěšné propojení. To se provádí automaticky při nastavení závislostí projektu. Nicméně pokud nepoužijete závislosti, můžete toto nutné pečlivě zpracovat vzhledem k tomu, že sestavení se může stát velmi obtížné spravovat. Například pokud projekt obsahuje konfigurace Debug a Release a zahrnuje externí knihovnu z projektu na stejné úrovni, měla by použít různé soubory knihovny podle toho, která konfigurace je sestavovaná. Pevně kódováno pomocí těchto cest proto může být velmi obtížné.
+Ve výchozím nastavení jsou projekty vytvořeny tak, aby všechny výstupní soubory byly vytvořeny v podadresáři adresáře projektu. Adresář je pojmenován na základě konfigurace sestavení (např. ladění nebo vydání). Aby na sebe měly vzájemně odkazovat projekty na stejné úrovni, musí každý projekt explicitně přidat další výstupní adresáře projektu do své cesty, aby bylo propojení úspěšné. To se provádí automaticky při nastavení závislostí projektu. Pokud však nepoužíváte závislosti, je nutné pečlivě zpracovat, protože sestavení může být velmi obtížné spravovat. Například pokud projekt má ladění a uvolnění konfigurace a obsahuje externí knihovnu z projektu na stejné úrovni, by měl použít jiný soubor knihovny v závislosti na konfiguraci, která je právě sestavována. Takže tvrdé kódování těchto cest může být složité.
 
-Všechny základní výstupní soubory (například spustitelné soubory, přírůstkové soubory linkeru a soubory PDB) jsou zkopírovány do společného adresáře řešení. Proto při práci s řešením, která obsahuje několik projektů C++ se stejnou konfigurací, jsou všechny výstupní soubory centralizované pro zjednodušené propojení a nasazení. Můžete si být jisti, že jejich aplikace/knihovna bude fungovat podle očekávání, pokud tyto soubory zůstanou pohromadě (protože soubory jsou zaručeně v cestě).
+Všechny základní výstupní soubory (například spustitelné soubory, přírůstkové propojovací soubory a soubory PDB) jsou zkopírovány do společného adresáře řešení. Proto při práci s řešením, které obsahuje řadu projektů jazyka C++ s ekvivalentní konfigurace, všechny výstupní soubory jsou centralizovány pro zjednodušené propojení a nasazení. Můžete si být jisti, že jejich aplikace nebo knihovna bude fungovat podle očekávání, pokud udržují tyto soubory pohromadě (protože soubory jsou zaručeně v cestě).
 
-Umístění výstupních souborů může být závažný problém při nasazení do produkčního prostředí. Při běhu projektů v integrovaném vývojovém prostředí, cesty k načítaným knihovnám nejsou nutně stejné jako v provozním prostředí. Pokud máte například `#using "../../lib/debug/mylib.dll"` ve vašem kódu, ale poté nasadíte mylib.dll do jiného relativního umístění, aplikace selže v době běhu. Chcete-li tomu zabránit, neměli byste používat relativní cesty #include ve vašem kódu. Je lepší zajistěte, aby byly potřebné soubory v cestě sestavení projektu a podobně zajistit, aby odpovídající provozní soubory byly správně umístěny.
+Umístění výstupních souborů může být hlavní problém při nasazování do produkčního prostředí. Při spuštění projektů v ide, cesty k zahrnuté knihovny nejsou nutně stejné jako v produkčním prostředí. Například pokud máte `#using "../../lib/debug/mylib.dll"` v kódu, ale pak nasadit mylib.dll do jiné relativní pozice, aplikace se nezdaří za běhu. Chcete-li tomu zabránit, měli byste se vyhnout použití relativní cesty v příkazech #include v kódu. Je lepší zajistit, že potřebné soubory jsou v cestě sestavení projektu a podobně zajistit, že odpovídající produkční soubory jsou správně umístěny.
 
-#### <a name="how-to-specify-where-output-files-go"></a>Určení umístění výstupních souborů
+#### <a name="how-to-specify-where-output-files-go"></a>Jak určit, kam výstupní soubory jdou
 
-1. Umístění projektu výstup, nastavení se dají najít v projektu **stránky vlastností**. Rozbalte uzel vedle **vlastnosti konfigurace** a vyberte **Obecné**. Umístění výstupu je určeno **výstupní adresář**. Další informace najdete v tématu [Obecná stránka vlastností (projekt)](reference/general-property-page-project.md).
+1. Umístění nastavení výstupu projektu naleznete na stránkách **vlastností**projektu . Rozbalte uzel vedle **vlastnosti konfigurace** a vyberte **Obecné**. Výstupní umístění je určeno vedle **výstupního adresáře**. Další informace naleznete [v tématu General Property Page (Project)](reference/general-property-page-project.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[C++typy projektů v sadě Visual Studio](reference/visual-cpp-project-types.md)
+[Typy projektů Jazyka C++ v sadě Visual Studio](reference/visual-cpp-project-types.md)

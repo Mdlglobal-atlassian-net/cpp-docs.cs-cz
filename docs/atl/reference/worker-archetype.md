@@ -1,62 +1,62 @@
 ---
-title: Pracovní proces Archetype
+title: Archetyp pracovníka
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Worker archetype
 ms.assetid: 834145cd-09d3-4149-bc99-620e1871cbfb
-ms.openlocfilehash: 2e57c575ed778184cf319bb84e61f585fcfa2111
-ms.sourcegitcommit: 44eeb065c3148d0484de791080a3f963109744fc
+ms.openlocfilehash: b0b32232d7386df0c0f13a1c3af1003369b906e0
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79509338"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81329350"
 ---
-# <a name="worker-archetype"></a>Pracovní proces Archetype
+# <a name="worker-archetype"></a>Archetyp pracovníka
 
-Třídy, které odpovídají Archetype *pracovního procesu* , poskytují kód pro zpracování pracovních položek zařazených do fronty ve fondu vláken.
+Třídy, které odpovídají *archetypu pracovního* procesu, poskytují kód pro zpracování pracovních položek zařazených do fronty ve fondu vláken.
 
 **Implementace**
 
-Chcete-li implementovat třídu, která odpovídá tomuto Archetype, třída musí poskytovat následující funkce:
+Chcete-li implementovat třídu odpovídající tomuto archetypu, musí třída poskytovat následující funkce:
 
 |Metoda|Popis|
 |------------|-----------------|
-|[Initialize](#initialize)|Volá se, aby se inicializoval objekt pracovního procesu před předáním všech požadavků, které se mají [provést](#execute).|
-|[Execute](#execute)|Volá se, aby se zpracovala pracovní položka.|
-|[Terminate](#terminate)|Volá se, aby se zrušila inicializace objektu pracovního procesu po předání všech požadavků, které se mají [provést](#execute).|
+|[Initialize](#initialize)|Volána k inicializaci objektu pracovníka před všechny požadavky jsou předány [execute](#execute).|
+|[Spuštění](#execute)|Nazývá se zpracování pracovní položky.|
+|[Terminate](#terminate)|Volána k zrušení inicializaci objektu pracovníka poté, co byly předány všechny požadavky [na execute](#execute).|
 
-|Definic|Popis|
+|Typedef|Popis|
 |-------------|-----------------|
-|[Třídy](#requesttype)|Definice typu pracovní položky, která může být zpracována třídou pracovního procesu.|
+|[Requesttype](#requesttype)|Typedef pro typ pracovní položky, které mohou být zpracovány třídou pracovníka.|
 
-Typická třída *pracovního procesu* vypadá takto:
+Typická *třída pracovníka* vypadá takto:
 
 [!code-cpp[NVC_ATL_Utilities#137](../../atl/codesnippet/cpp/worker-archetype_1.cpp)]
 
-**Existující implementace**
+**Stávající implementace**
 
-Tyto třídy odpovídají tomuto archetype:
+Tyto třídy odpovídají tomuto archetypu:
 
 |Třída|Popis|
 |-----------|-----------------|
-|[CNonStatelessWorker](../../atl/reference/cnonstatelessworker-class.md)|Přijímá žádosti z fondu vláken a předává je do objektu pracovního procesu, který je vytvořen a zničen pro každý požadavek.|
+|[CNonStatelessWorker](../../atl/reference/cnonstatelessworker-class.md)|Přijímá požadavky z fondu vláken a předá je pracovnímu objektu, který je vytvořen a zničen pro každý požadavek.|
 
 **Použití**
 
-Tyto parametry šablony očekávají, že třída bude vyhovovat tomuto archetype:
+Tyto parametry šablony očekávají, že třída bude odpovídat tomuto archetypu:
 
-|Název parametru|Používáno v|
+|Název parametru|Používá|
 |--------------------|-------------|
-|*Zaměstnanec*|[CThreadPool](../../atl/reference/cthreadpool-class.md)|
-|*Zaměstnanec*|[CNonStatelessWorker](../../atl/reference/cnonstatelessworker-class.md)|
+|*Pracovník*|[Fond cthreadpoolu](../../atl/reference/cthreadpool-class.md)|
+|*Pracovník*|[CNonStatelessWorker](../../atl/reference/cnonstatelessworker-class.md)|
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlutil. h
+**Záhlaví:** atlutil.h
 
-## <a name="execute"></a>WorkerArchetype:: Execute
+## <a name="workerarchetypeexecute"></a><a name="execute"></a>WorkerArchetype::Spustit
 
-Volá se, aby se zpracovala pracovní položka.
+Nazývá se zpracování pracovní položky.
 
 ```
 void Execute(
@@ -67,18 +67,18 @@ void Execute(
 
 #### <a name="parameters"></a>Parametry
 
-*Request*<br/>
-Pracovní položka, která má být zpracována. Pracovní položka je stejného typu jako `RequestType`.
+*Požadavek*<br/>
+Pracovní položka, která má být zpracována. Pracovní položka je stejného `RequestType`typu jako .
 
 *pvWorkerParam*<br/>
-Vlastní parametr, který rozumí třída pracovního procesu. Také předán `WorkerArchetype::Initialize` a `Terminate`.
+Vlastní parametr, kterému rozumí třída pracovníka. Také předán `WorkerArchetype::Initialize` `Terminate`a .
 
-*pOverlapped*<br/>
-Ukazatel na [PŘEkrývající](/windows/win32/api/minwinbase/ns-minwinbase-overlapped) se strukturu použitou k vytvoření fronty, na které byly pracovní položky zařazeny do fronty.
+*přeskakované*<br/>
+Ukazatel na [překrývající se](/windows/win32/api/minwinbase/ns-minwinbase-overlapped) strukturu použitou k vytvoření fronty, ve které byly pracovní položky zařazeny do fronty.
 
-## <a name="initialize"></a>WorkerArchetype:: Initialize
+## <a name="workerarchetypeinitialize"></a><a name="initialize"></a>WorkerArchetype::Inicializovat
 
-Volá se, aby se inicializoval objekt pracovního procesu před předáním všech požadavků do `WorkerArchetype::Execute`.
+Nazývá se inicializovat objekt pracovníka před `WorkerArchetype::Execute`všechny požadavky jsou předány .
 
 ```
 BOOL Initialize(void* pvParam) throw();
@@ -87,15 +87,15 @@ BOOL Initialize(void* pvParam) throw();
 #### <a name="parameters"></a>Parametry
 
 *pvParam*<br/>
-Vlastní parametr, který rozumí třída pracovního procesu. Také předán `WorkerArchetype::Terminate` a `WorkerArchetype::Execute`.
+Vlastní parametr, kterému rozumí třída pracovníka. Také předán `WorkerArchetype::Terminate` `WorkerArchetype::Execute`a .
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu TRUE při úspěchu, což je FALSE při selhání.
+Vrátit HODNOTU TRUE na úspěch, FALSE na selhání.
 
-## <a name="requesttype"></a>WorkerArchetype:: RequestType
+## <a name="workerarchetyperequesttype"></a><a name="requesttype"></a>WorkerArchetype::RequestType
 
-Definice typu pracovní položky, která může být zpracována třídou pracovního procesu.
+Typedef pro typ pracovní položky, které mohou být zpracovány třídou pracovníka.
 
 ```
 typedef MyRequestType RequestType;
@@ -103,11 +103,11 @@ typedef MyRequestType RequestType;
 
 ### <a name="remarks"></a>Poznámky
 
-Tento typ musí být použit jako první parametr `WorkerArchetype::Execute` a musí být schopný přetypování do a z ULONG_PTR.
+Tento typ musí být použit `WorkerArchetype::Execute` jako první parametr a musí být možné je přehodit do ULONG_PTR a z ní.
 
-## <a name="terminate"></a>WorkerArchetype:: terminate
+## <a name="workerarchetypeterminate"></a><a name="terminate"></a>WorkerArchetype::Ukončit
 
-Volá se, aby se zrušila inicializace objektu pracovního procesu po předání všech požadavků do `WorkerArchetype::Execute`).
+Volána k zrušení inicializace objektu `WorkerArchetype::Execute`pracovníka poté, co byly předány všechny požadavky ).
 
 ```
 void Terminate(void* pvParam) throw();
@@ -116,7 +116,7 @@ void Terminate(void* pvParam) throw();
 #### <a name="parameters"></a>Parametry
 
 *pvParam*<br/>
-Vlastní parametr, který rozumí třída pracovního procesu. Také předán `WorkerArchetype::Initialize` a `WorkerArchetype::Execute`.
+Vlastní parametr, kterému rozumí třída pracovníka. Také předán `WorkerArchetype::Initialize` `WorkerArchetype::Execute`a .
 
 ## <a name="see-also"></a>Viz také
 

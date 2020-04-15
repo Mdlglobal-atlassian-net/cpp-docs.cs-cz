@@ -16,16 +16,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::CreatorMap::factoryCreator data member
 - Microsoft::WRL::Details::CreatorMap::serverName data member
 ms.assetid: 94e40927-90c3-4107-bca3-3ad2dc4beda9
-ms.openlocfilehash: 44d06f317661059bea92d8c6f27955606a964bb7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1527f81694d1d809d585f3f6504c0e6433a2c26b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398612"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372605"
 ---
 # <a name="creatormap-structure"></a>CreatorMap – struktura
 
-Podporuje knihovny šablon jazyka C++ Windows Runtime infrastrukturu a není určena pro použití přímo v kódu.
+Podporuje infrastrukturu knihovny šablon prostředí Prostředí Windows Runtime C++ a není určen pro použití přímo z vašeho kódu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -35,26 +35,26 @@ struct CreatorMap;
 
 ## <a name="remarks"></a>Poznámky
 
-Obsahuje informace o tom, jak inicializovat, vytvářet a rušit registraci objektů.
+Obsahuje informace o tom, jak inicializovat, registrovat a zrušit registraci objektů.
 
-`CreatorMap` obsahuje následující informace:
+`CreatorMap`obsahuje tyto informace:
 
-- Tom, jak inicializovat, vytvářet a rušit registraci objektů.
+- Jak inicializovat, registrovat a zrušit registraci objektů.
 
-- Jak porovnat data aktivace v závislosti na objekt klasického modelu COM nebo prostředí Windows Runtime.
+- Jak porovnat aktivační data v závislosti na klasické matné službě COM nebo Windows Runtime factory.
 
-- Informace o název objektu pro vytváření mezipaměti a server pro rozhraní.
+- Informace o mezipaměti výroby a názvu serveru pro rozhraní.
 
 ## <a name="members"></a>Členové
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-Název                                          | Popis
+Name (Název)                                          | Popis
 --------------------------------------------- | ------------------------------------------------------------------------------------------------------
-[CreatorMap::activationId](#activationid)     | Představuje ID objektu, který je identifikován classic ID třídy modelu COM nebo názvu modulu Windows Runtime.
-[CreatorMap::factoryCache](#factorycache)     | Ukládá ukazatel na objekt pro vytváření mezipaměti `CreatorMap`.
-[CreatorMap::factoryCreator](#factorycreator) | Vytvoří objekt factory pro zadaný `CreatorMap`.
-[CreatorMap::serverName](#servername)         | Ukládá název serveru pro `CreatorMap`.
+[CreatorMap::activationId](#activationid)     | Představuje ID objektu, který je identifikován buď klasické id třídy COM nebo název prostředí Windows Runtime.
+[CreatorMap::factoryCache](#factorycache)     | Uloží ukazatel do mezipaměti `CreatorMap`továrny pro .
+[CreatorMap::factoryCreator](#factorycreator) | Vytvoří továrnu pro `CreatorMap`zadanou .
+[CreatorMap::název_serveru](#servername)         | Uloží název serveru `CreatorMap`pro .
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -64,11 +64,11 @@ Název                                          | Popis
 
 **Záhlaví:** module.h
 
-**Namespace:** Microsoft::WRL::Details
+**Obor názvů:** Microsoft::WRL::Details
 
-## <a name="activationid"></a>CreatorMap::activationId
+## <a name="creatormapactivationid"></a><a name="activationid"></a>CreatorMap::activationId
 
-Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.
+Podporuje infrastrukturu WRL a není určen pro použití přímo z vašeho kódu.
 
 ```cpp
 union {
@@ -79,19 +79,19 @@ union {
 
 ### <a name="parameters"></a>Parametry
 
-*clsid*<br/>
-Identifikátor rozhraní.
+*Identifikátor clsid*<br/>
+ID rozhraní.
 
 *getRuntimeName*<br/>
-Funkce, která načte název modulu runtime Windows objektu.
+Funkce, která načte název objektu za běhu systému Windows.
 
 ### <a name="remarks"></a>Poznámky
 
-Představuje ID objektu, který je identifikován classic ID třídy modelu COM nebo název modulu runtime Windows.
+Představuje ID objektu, který je identifikován buď klasickým ID třídy COM nebo názvem prostředí runtime systému Windows.
 
-## <a name="factorycache"></a>CreatorMap::factoryCache
+## <a name="creatormapfactorycache"></a><a name="factorycache"></a>CreatorMap::factoryCache
 
-Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.
+Podporuje infrastrukturu WRL a není určen pro použití přímo z vašeho kódu.
 
 ```cpp
 FactoryCache* factoryCache;
@@ -99,11 +99,11 @@ FactoryCache* factoryCache;
 
 ### <a name="remarks"></a>Poznámky
 
-Ukládá ukazatel na objekt pro vytváření mezipaměti `CreatorMap`.
+Uloží ukazatel do mezipaměti `CreatorMap`továrny pro .
 
-## <a name="factorycreator"></a>CreatorMap::factoryCreator
+## <a name="creatormapfactorycreator"></a><a name="factorycreator"></a>CreatorMap::factoryCreator
 
-Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.
+Podporuje infrastrukturu WRL a není určen pro použití přímo z vašeho kódu.
 
 ```cpp
 HRESULT (*factoryCreator)(
@@ -116,28 +116,28 @@ IUnknown** factory);
 ### <a name="parameters"></a>Parametry
 
 *currentflags*<br/>
-Jeden z [runtimeclasstype –](runtimeclasstype-enumeration.md) enumerátory.
+Jeden z čítačů výčtu [RuntimeClassType.](runtimeclasstype-enumeration.md)
 
-*entry*<br/>
-A CreatorMap.
+*Položka*<br/>
+Mapa tvůrců.
 
-*iidClassFactory*<br/>
-ID rozhraní objekt pro vytváření tříd.
+*IidClassFactory*<br/>
+ID rozhraní třídy factory.
 
-*objekt pro vytváření*<br/>
-Po dokončení operace, adresa objektu pro vytváření tříd.
+*Továrna*<br/>
+Po dokončení operace, adresa factory třídy.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-S_OK v případě úspěchu; v opačném případě HRESULT, která označuje chybu.
+S_OK v případě úspěchu; jinak HRESULT, který označuje chybu.
 
 ### <a name="remarks"></a>Poznámky
 
-Vytvoří objekt pro vytváření pro zadaný creatormap –.
+Vytvoří továrnu pro zadaný CreatorMap.
 
-## <a name="servername"></a>CreatorMap::serverName
+## <a name="creatormapservername"></a><a name="servername"></a>CreatorMap::název_serveru
 
-Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.
+Podporuje infrastrukturu WRL a není určen pro použití přímo z vašeho kódu.
 
 ```cpp
 const wchar_t* serverName;
@@ -145,4 +145,4 @@ const wchar_t* serverName;
 
 ### <a name="remarks"></a>Poznámky
 
-Ukládá creatormap – název serveru.
+Ukládá název serveru pro CreatorMap.

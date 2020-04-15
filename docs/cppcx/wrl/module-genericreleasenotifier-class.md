@@ -13,16 +13,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Module::GenericReleaseNotifier::GenericReleaseNotifier, constructor
 - Microsoft::WRL::Module::GenericReleaseNotifier::Invoke method
 ms.assetid: 244a8fbe-f89b-409b-aa65-db3e37f9b125
-ms.openlocfilehash: 318415c9726426cbd60c205759a6ff8572cc555e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e3cc8e33d596fb1d3ecc4a94fee7971a50ffe596
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62325049"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371310"
 ---
 # <a name="modulegenericreleasenotifier-class"></a>Module::GenericReleaseNotifier – třída
 
-Vyvolá obslužnou rutinu události po vydání poslední objekt v aktuálním modulu. Obslužná rutina události je zadaný ve výrazu lambda, funktor nebo ukazatel na funkci.
+Vyvolá obslužnou rutinu události při uvolnění posledního objektu v aktuálním modulu. Obslužná rutina události je určena na lambda, functor nebo ukazatel na funkci.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -40,21 +40,21 @@ Typ datového člena, který obsahuje umístění obslužné rutiny události.
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-Název                                                                                                     | Popis
+Name (Název)                                                                                                     | Popis
 -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------
-[Module::genericreleasenotifier:: genericreleasenotifier –](#genericreleasenotifier-genericreleasenotifier) | Inicializuje novou instanci třídy `Module::GenericReleaseNotifier` třídy.
+[Modul::GenericReleaseNotifier::GenericReleaseNotifier](#genericreleasenotifier-genericreleasenotifier) | Inicializuje novou instanci třídy. `Module::GenericReleaseNotifier`
 
 ### <a name="public-methods"></a>Veřejné metody
 
-Název                                                                     | Popis
+Name (Název)                                                                     | Popis
 ------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------
-[Module::GenericReleaseNotifier:: Invoke](#genericreleasenotifier-invoke) | Volá obslužnou rutinu události spojené s aktuálním `Module::GenericReleaseNotifier` objektu.
+[Modul::GenericReleaseNotifier::Invoke Modul::GenericReleaseNotifier::Invoke Modul::GenericReleaseNotifier::Invoke Modul:](#genericreleasenotifier-invoke) | Zavolá obslužnou `Module::GenericReleaseNotifier` rutinu události přidruženou k aktuálnímu objektu.
 
-### <a name="protected-data-members"></a>Chránění členové dat
+### <a name="protected-data-members"></a>Členové chráněných dat
 
-Název                                                                          | Popis
+Name (Název)                                                                          | Popis
 ----------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------
-[Module::genericreleasenotifier:: callback_ –](#genericreleasenotifier-callback) | Obsahuje výraz lambda, funktor nebo obslužná rutina události ukazatele na funkce přidružené k aktuální `Module::GenericReleaseNotifier` objektu.
+[Modul::GenericReleaseNotifier::callback_](#genericreleasenotifier-callback) | Obsahuje obslužnou rutinu události lambda, functor `Module::GenericReleaseNotifier` nebo ukazatel na funkci přidruženou k aktuálnímu objektu.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -66,19 +66,19 @@ Název                                                                          
 
 **Záhlaví:** module.h
 
-**Namespace:** Microsoft::WRL
+**Obor názvů:** Microsoft::WRL
 
-## <a name="genericreleasenotifier-callback"></a>Module::genericreleasenotifier:: callback_ –
+## <a name="modulegenericreleasenotifiercallback_"></a><a name="genericreleasenotifier-callback"></a>Modul::GenericReleaseNotifier::callback_
 
-Obsahuje výraz lambda, funktor nebo obslužná rutina události ukazatele na funkce přidružené k aktuální `Module::GenericReleaseNotifier` objektu.
+Obsahuje obslužnou rutinu události lambda, functor `Module::GenericReleaseNotifier` nebo ukazatel na funkci přidruženou k aktuálnímu objektu.
 
 ```cpp
 T callback_;
 ```
 
-## <a name="genericreleasenotifier-genericreleasenotifier"></a>Module::genericreleasenotifier:: genericreleasenotifier –
+## <a name="modulegenericreleasenotifiergenericreleasenotifier"></a><a name="genericreleasenotifier-genericreleasenotifier"></a>Modul::GenericReleaseNotifier::GenericReleaseNotifier
 
-Inicializuje novou instanci třídy `Module::GenericReleaseNotifier` třídy.
+Inicializuje novou instanci třídy. `Module::GenericReleaseNotifier`
 
 ```cpp
 GenericReleaseNotifier(
@@ -89,15 +89,15 @@ GenericReleaseNotifier(
 
 ### <a name="parameters"></a>Parametry
 
-*callback*<br/>
-Výraz lambda, funktor nebo obslužná rutina události ukazatele na funkci, který lze vyvolat pomocí funkce operátoru závorky (`()`).
+*Zpětného volání*<br/>
+Obslužná rutina události lambda, functor nebo pointer-to-function, kterou`()`lze vyvolat pomocí operátoru funkce závorek ( ).
 
-*Vydání verze*<br/>
-Zadejte `true` povolit volání základní [modulu:: ReleaseNotifier::Release()](module-releasenotifier-class.md#releasenotifier-release) metody; v opačném případě zadejte `false`.
+*Vydání*<br/>
+Zadejte, `true` chcete-li povolit volání základní metody [Module::ReleaseNotifier::Release()](module-releasenotifier-class.md#releasenotifier-release) metody; v opačném `false`případě zadejte .
 
-## <a name="genericreleasenotifier-invoke"></a>Module::GenericReleaseNotifier:: Invoke
+## <a name="modulegenericreleasenotifierinvoke"></a><a name="genericreleasenotifier-invoke"></a>Modul::GenericReleaseNotifier::Invoke Modul::GenericReleaseNotifier::Invoke Modul::GenericReleaseNotifier::Invoke Modul:
 
-Volá obslužnou rutinu události spojené s aktuálním `Module::GenericReleaseNotifier` objektu.
+Zavolá obslužnou `Module::GenericReleaseNotifier` rutinu události přidruženou k aktuálnímu objektu.
 
 ```cpp
 void Invoke();

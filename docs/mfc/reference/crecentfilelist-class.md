@@ -1,5 +1,5 @@
 ---
-title: Crecentfilelist – třída
+title: CRecentFileList – třída
 ms.date: 11/04/2016
 f1_keywords:
 - CRecentFileList
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - CRecentFileList [MFC], UpdateMenu
 - CRecentFileList [MFC], WriteList
 ms.assetid: a77f0524-7584-4582-849a-7e97b76d186e
-ms.openlocfilehash: 30536d91d057de4e551b5a28200dd903e12713b3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a2102c6a39c14c548828e57ad1c49de6a5bc03dd
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62372176"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81370897"
 ---
-# <a name="crecentfilelist-class"></a>Crecentfilelist – třída
+# <a name="crecentfilelist-class"></a>CRecentFileList – třída
 
-Podporuje ovládací prvek ze seznamu naposledy použitých souborů (MRU).
+Podporuje řízení seznamu naposledy použitých souborů (MRU).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -43,31 +43,31 @@ class CRecentFileList
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CRecentFileList::CRecentFileList](#crecentfilelist)|Vytvoří `CRecentFileList` objektu.|
+|[CRecentFileList::CRecentFileList](#crecentfilelist)|Vytvoří `CRecentFileList` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CRecentFileList::Add](#add)|Přidá soubor do seznamu naposledy použitých souborů.|
-|[CRecentFileList::GetDisplayName](#getdisplayname)|Obsahuje zobrazovaný název nabídky zobrazení souboru seznamu naposledy použitých položek.|
-|[CRecentFileList::GetSize](#getsize)|Získá počet souborů v seznamu naposledy použitých souborů.|
-|[CRecentFileList::ReadList](#readlist)|Načte seznam naposledy použitých souborů z registru nebo. Soubor INI.|
-|[CRecentFileList::Remove](#remove)|Odebere soubor ze seznamu naposledy použitých souborů.|
-|[CRecentFileList::UpdateMenu](#updatemenu)|Aktualizace nabídky zobrazení seznamu naposledy použitých souborů.|
-|[CRecentFileList::WriteList](#writelist)|Zapíše do seznamu naposledy použitých souborů z registru nebo. Soubor INI.|
+|[CRecentFileList::Přidat](#add)|Přidá soubor do seznamu souborů MRU.|
+|[CRecentFileList::GetDisplayName](#getdisplayname)|Poskytuje zobrazovaný název pro zobrazení nabídky názvu souboru MRU.|
+|[CRecentFileList::GetSize](#getsize)|Načte počet souborů v seznamu souborů MRU.|
+|[CRecentFileList::ReadList](#readlist)|Přečte seznam souborů MRU z registru nebo . INI.|
+|[CRecentFileList::Odebrat](#remove)|Odebere soubor ze seznamu souborů MRU.|
+|[CRecentFileList::UpdateMenu](#updatemenu)|Aktualizuje zobrazení nabídky seznamu souborů MRU.|
+|[CRecentFileList::WriteList](#writelist)|Zapíše seznam souborů MRU z registru nebo . INI.|
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CRecentFileList::operator \[ \]](#operator_at)|Vrátí `CString` objektu na dané pozici.|
+|[CRecentFileList::operátor \[\]](#operator_at)|Vrátí `CString` objekt na dané pozici.|
 
 ## <a name="remarks"></a>Poznámky
 
-Soubory můžete přidána nebo odstraněna ze seznamu naposledy použitých souborů, seznam souborů může číst nebo zapsat do registru nebo. Je možné aktualizovat soubor INI a nabídky zobrazení seznamu naposledy použitých souborů.
+Soubory mohou být přidány nebo odstraněny ze seznamu souborů MRU, seznam souborů lze číst nebo zapisovat do registru nebo . ini a nabídku zobrazující seznam souborů MRU lze aktualizovat.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -75,9 +75,9 @@ Soubory můžete přidána nebo odstraněna ze seznamu naposledy použitých sou
 
 ## <a name="requirements"></a>Požadavky
 
-**Header:** afxadv.h
+**Záhlaví:** afxadv.h
 
-##  <a name="add"></a>  CRecentFileList::Add
+## <a name="crecentfilelistadd"></a><a name="add"></a>CRecentFileList::Přidat
 
 Přidá soubor do seznamu naposledy použitých souborů (MRU).
 
@@ -104,27 +104,27 @@ void Add(
 ### <a name="parameters"></a>Parametry
 
 *lpszPathName*<br/>
-Určuje název cesty, které mají být přidány do seznamu.
+Určuje název cesty, který má být přidán do seznamu.
 
 *lpszAppID*<br/>
 Určuje ID modelu uživatele aplikace pro aplikaci.
 
-*pItem*<br/>
-Určuje ukazatel na prostředí položky, které chcete přidat do seznamu.
+*pPoložka*<br/>
+Určuje ukazatel na položku prostředí, která má být přidána do seznamu.
 
-*pLink*<br/>
-Určuje ukazatel na odkaz prostředí má být přidán do seznamu.
+*pOdkaz*<br/>
+Určuje ukazatel na shell odkaz, který má být přidán do seznamu.
 
 *pidl*<br/>
-Určuje IDLIST pro položku prostředí, který by měl být přidán do poslední složku s dokumentací.
+Určuje idlista pro položku prostředí, která by měla být přidána do poslední složky docs.
 
 ### <a name="remarks"></a>Poznámky
 
-Název souboru se přidají do horní části seznamu naposledy použitých. Pokud název souboru do seznamu naposledy použitých již existuje, bude přesunut do horní části.
+Název souboru bude přidán do horní části seznamu mru. Pokud název souboru již v seznamu MRU existuje, bude přesunut na začátek.
 
-##  <a name="crecentfilelist"></a>  CRecentFileList::CRecentFileList
+## <a name="crecentfilelistcrecentfilelist"></a><a name="crecentfilelist"></a>CRecentFileList::CRecentFileList
 
-Vytvoří `CRecentFileList` objektu.
+Vytvoří `CRecentFileList` objekt.
 
 ```
 CRecentFileList(
@@ -137,28 +137,28 @@ CRecentFileList(
 
 ### <a name="parameters"></a>Parametry
 
-*nStart*<br/>
-Posun číslování v nabídky zobrazení seznamu souborů (naposledy použité) seznamu naposledy použitých položek.
+*nStartovat*<br/>
+Posun pro číslování v nabídce zobrazení seznamu souborů MRU (naposledy použité).
 
-*lpszSection*<br/>
-Odkazuje na název oddílu registru nebo aplikace. Soubor INI, kde je seznamu naposledy použitých souborů číst nebo zapisovat.
+*lpszSekce*<br/>
+Odkazuje na název části registru nebo aplikace . INI, kde je seznam souborů MRU číst a/nebo zapisovat.
 
 *lpszEntryFormat*<br/>
-Odkazuje na řetězec formátu, který má být použit pro názvy položky uložené v registru nebo v aplikaci. Soubor INI.
+Odkazuje na formátovací řetězec, který se použije pro názvy položek uložených v registru nebo v aplikaci . INI.
 
-*nSize*<br/>
-Maximální počet souborů v seznamu naposledy použitých souborů.
+*nVelikost*<br/>
+Maximální počet souborů v seznamu souborů MRU.
 
 *nMaxDispLen*<br/>
-Maximální délka ve znacích, k dispozici pro zobrazení nabídky názvem souboru v seznamu naposledy použitých souborů.
+Maximální délka ve znacích, která je k dispozici pro zobrazení názvu souboru v nabídce v seznamu souborů MRU.
 
 ### <a name="remarks"></a>Poznámky
 
-Formátovací řetězec odkazované *lpszEntryFormat* by měl obsahovat "%d", který se použije pro nahraďte indexem položky seznamu naposledy použitých položek. Například, pokud je řetězec formátu `"file%d"` pak bude mít název položky `file0`, `file1`, a tak dále.
+Formátovací řetězec, na který poukazuje *lpszEntryFormat,* by měl obsahovat %d, který bude použit pro nahrazení indexu každé položky MRU. Pokud je `"file%d"` například formátovací řetězec, budou `file0` `file1`položky pojmenovány , a tak dále.
 
-##  <a name="getdisplayname"></a>  CRecentFileList::GetDisplayName
+## <a name="crecentfilelistgetdisplayname"></a><a name="getdisplayname"></a>CRecentFileList::GetDisplayName
 
-Získá zobrazovaný název souboru v seznamu naposledy použitých souborů pro použití v nabídce zobrazení seznamu naposledy použitých položek.
+Získá zobrazovaný název souboru v seznamu souborů MRU pro použití v nabídce zobrazení seznamu MRU.
 
 ```
 virtual BOOL GetDisplayName(
@@ -172,31 +172,31 @@ virtual BOOL GetDisplayName(
 ### <a name="parameters"></a>Parametry
 
 *strName*<br/>
-Úplná cesta souboru, jehož název má být zobrazen v nabídce seznamu naposledy použitých souborů.
+Úplná cesta k souboru, jehož název má být zobrazen v seznamu nabídek souborů MRU.
 
 *nIndex*<br/>
-Index založený na nule souboru v seznamu naposledy použitých souborů.
+Nulový index souboru v seznamu souborů MRU.
 
 *lpszCurDir*<br/>
-Řetězec uchovávající aktuální adresář.
+Řetězec s aktuálním adresářem.
 
 *nCurDir*<br/>
-Délka řetězce pro aktuální adresář.
+Délka aktuálního řetězce adresáře.
 
 *bAtLeastName*<br/>
-Pokud nenulovou hodnotu, znamená, že má být vrácen základní název souboru, i když se překročí maximální zobrazení délky (předán jako *nMaxDispLen* parametr `CRecentFileList` konstruktoru).
+Pokud nenulová, označuje, že základní název souboru by měla být vrácena, i v případě, že `CRecentFileList` překročí maximální délku zobrazení (předánjako *nMaxDispLen* parametr konstruktoru).
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**FALSE** Pokud neexistuje žádný název souboru ve stanoveném indexu v seznamu naposledy použitých souborů (MRU).
+**FALSE,** pokud není název souboru v zadaném indexu v seznamu naposledy použitých souborů (MRU).
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud je soubor v aktuálním adresáři, ponechá funkce adresáři mimo zobrazení. Pokud je příliš dlouhý název souboru, adresáře a rozšíření jsou odebrána. Pokud stále je příliš dlouhý název souboru, zobrazovaný název je nastavena na prázdný řetězec, není-li *bAtLeastName* nenulové.
+Pokud je soubor v aktuálním adresáři, funkce opustí adresář mimo zobrazení. Pokud je název souboru příliš dlouhý, adresář a přípona jsou odstraněny. Pokud je název souboru stále příliš dlouhý, zobrazovaný název je nastaven na prázdný řetězec, pokud *není název bAtLeastName* nenulový.
 
-##  <a name="getsize"></a>  CRecentFileList::GetSize
+## <a name="crecentfilelistgetsize"></a><a name="getsize"></a>CRecentFileList::GetSize
 
-Získá počet souborů v seznamu naposledy použitých souborů.
+Načte počet souborů v seznamu souborů MRU.
 
 ```
 int GetSize() const;
@@ -204,11 +204,11 @@ int GetSize() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Počet souborů v aktuálním naposledy použité seznam souborů (MRU).
+Počet souborů v aktuálním seznamu naposledy použitých souborů (MRU).
 
-##  <a name="operator_at"></a>  [] Č. CRecentFileList::operator
+## <a name="crecentfilelistoperator--"></a><a name="operator_at"></a>CRecentFileList::operátor [ ]
 
-Přetížená dolního indexu (`[]`) – operátor vrátí jednu `CString` určený index založený na nule v *nIndex*.
+Operátor přetížený dolní`[]`index ( `CString` ) vrátí jeden zadaný indexem založeným na nule v *nIndex*.
 
 ```
 CString& operator[ ](int nindex);
@@ -217,19 +217,19 @@ CString& operator[ ](int nindex);
 ### <a name="parameters"></a>Parametry
 
 *nIndex*<br/>
-Index založený na nule `CString` sadu `CString`s.
+Nulový index a `CString` v sadě `CString`s.
 
-##  <a name="readlist"></a>  CRecentFileList::ReadList
+## <a name="crecentfilelistreadlist"></a><a name="readlist"></a>CRecentFileList::ReadList
 
-Načte naposledy použité seznam souborů (MRU) z registru nebo aplikace. Soubor INI.
+Přečte seznam naposledy použitých souborů (MRU) z registru nebo z aplikace . INI.
 
 ```
 virtual void ReadList();
 ```
 
-##  <a name="remove"></a>  CRecentFileList::Remove
+## <a name="crecentfilelistremove"></a><a name="remove"></a>CRecentFileList::Odebrat
 
-Odebere soubor ze seznamu naposledy použitých souborů.
+Odebere soubor ze seznamu souborů MRU.
 
 ```
 virtual void Remove(int nIndex);
@@ -238,11 +238,11 @@ virtual void Remove(int nIndex);
 ### <a name="parameters"></a>Parametry
 
 *nIndex*<br/>
-Index založený na nule soubor, který má být odebrán ze seznamu naposledy použitých souborů (MRU).
+Nulový index souboru, který má být odebrán ze seznamu naposledy použitých souborů (MRU).
 
-##  <a name="updatemenu"></a>  CRecentFileList::UpdateMenu
+## <a name="crecentfilelistupdatemenu"></a><a name="updatemenu"></a>CRecentFileList::UpdateMenu
 
-Aktualizace nabídky zobrazení seznamu naposledy použitých souborů.
+Aktualizuje zobrazení nabídky seznamu souborů MRU.
 
 ```
 virtual void UpdateMenu(CCmdUI* pCmdUI);
@@ -251,16 +251,16 @@ virtual void UpdateMenu(CCmdUI* pCmdUI);
 ### <a name="parameters"></a>Parametry
 
 *pCmdUI*<br/>
-Ukazatel [ccmdui –](../../mfc/reference/ccmdui-class.md) objektu pro nabídku seznamu naposledy použitých souborů (MRU).
+Ukazatel na objekt [CCmdUI](../../mfc/reference/ccmdui-class.md) pro naposledy použitou nabídku seznamu souborů (MRU).
 
-##  <a name="writelist"></a>  CRecentFileList::WriteList
+## <a name="crecentfilelistwritelist"></a><a name="writelist"></a>CRecentFileList::WriteList
 
-Zapíše poslední použitou seznam souborů (MRU) do registru nebo aplikace. Soubor INI.
+Zapíše seznam naposledy použitých souborů (MRU) do registru nebo do seznamu aplikací . INI.
 
 ```
 virtual void WriteList();
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)

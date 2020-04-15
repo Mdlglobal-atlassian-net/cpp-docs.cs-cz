@@ -1,5 +1,5 @@
 ---
-title: Csimplearrayequalhelper – třída
+title: Třída CSimpleArrayEqualHelper
 ms.date: 11/04/2016
 f1_keywords:
 - CSimpleArrayEqualHelper
@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CSimpleArrayEqualHelper class
 ms.assetid: a2b55d89-78c9-42ef-842c-5304c6d20ad6
-ms.openlocfilehash: 8b7e32ddab5b2f0667b17b0f127ac2e7e5d9a426
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 386b005777b3e31dd74916a41bc5af2ab82df210
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62277991"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81330876"
 ---
-# <a name="csimplearrayequalhelper-class"></a>Csimplearrayequalhelper – třída
+# <a name="csimplearrayequalhelper-class"></a>Třída CSimpleArrayEqualHelper
 
-Tato třída je pomocné rutiny pro [csimplearray –](../../atl/reference/csimplearray-class.md) třídy.
+Tato třída je pomocníkem pro třídu [CSimpleArray.](../../atl/reference/csimplearray-class.md)
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -29,27 +29,27 @@ class CSimpleArrayEqualHelper
 #### <a name="parameters"></a>Parametry
 
 *T*<br/>
-Odvozené třídy.
+Odvozená třída.
 
 ## <a name="members"></a>Členové
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CSimpleArrayEqualHelper::IsEqual](#isequal)|(Statické) Testuje dva `CSimpleArray` objektu prvky pro rovnost.|
+|[CSimpleArrayEqualHelper::IsEqual](#isequal)|(Statické) Testuje `CSimpleArray` dva prvky objektu pro rovnost.|
 
 ## <a name="remarks"></a>Poznámky
 
-Tato třída vlastností je dodatek k `CSimpleArray` třídy. Poskytuje metodu pro porovnání dvou prvků uložených v `CSimpleArray` objektu. Ve výchozím nastavení, prvky jsou porovnány pomocí **operator=()**, ale pokud pole obsahuje komplexní datové typy, které nemají vlastní operátor rovnosti, budete potřebovat k přepsání této třídy.
+Tato třída vlastností je `CSimpleArray` doplňkem třídy. Poskytuje metodu pro porovnání dvou prvků `CSimpleArray` uložených v objektu. Ve výchozím nastavení jsou prvky porovnány pomocí **operator=()**, ale pokud pole obsahuje komplexní datové typy, které postrádají vlastní operátor rovnosti, budete muset přepsat tuto třídu.
 
 ## <a name="requirements"></a>Požadavky
 
 **Záhlaví:** atlsimpcoll.h
 
-##  <a name="isequal"></a>  CSimpleArrayEqualHelper::IsEqual
+## <a name="csimplearrayequalhelperisequal"></a><a name="isequal"></a>CSimpleArrayEqualHelper::IsEqual
 
-Testuje dva `CSimpleArray` objektu prvky pro rovnost.
+Testuje `CSimpleArray` dva prvky objektu pro rovnost.
 
 ```
 static bool IsEqual(
@@ -59,7 +59,7 @@ static bool IsEqual(
 
 ### <a name="parameters"></a>Parametry
 
-*t1*<br/>
+*T1*<br/>
 Objekt typu T.
 
 *t2*<br/>
@@ -67,10 +67,10 @@ Objekt typu T.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí true, pokud prvky jsou stejné, jinak hodnota false.
+Vrátí hodnotu true, pokud jsou prvky stejné, false otherwise.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[CSimpleArray – třída](../../atl/reference/csimplearray-class.md)<br/>
-[CSimpleArrayEqualHelperFalse – třída](../../atl/reference/csimplearrayequalhelperfalse-class.md)<br/>
-[Přehled tříd](../../atl/atl-class-overview.md)
+[Třída CSimpleArray](../../atl/reference/csimplearray-class.md)<br/>
+[Třída CSimpleArrayEqualHelperFalse](../../atl/reference/csimplearrayequalhelperfalse-class.md)<br/>
+[Přehled třídy](../../atl/atl-class-overview.md)

@@ -11,18 +11,18 @@ helpviewer_keywords:
 - executable files [C++], importing classes
 - exporting DLLs [C++], AFX_EXT_CLASS macro
 ms.assetid: 6b72cb2b-e92e-4ecd-bcab-c335e1d1cfde
-ms.openlocfilehash: bcfdc94e8db80daec227d77c20ecec6b14d5af11
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 95c72f8251a8a59833483eb948709c80a69d03d7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62195326"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81328601"
 ---
-# <a name="exporting-and-importing-using-afxextclass"></a>Export a import pomocí třídy AFX_EXT_CLASS
+# <a name="exporting-and-importing-using-afx_ext_class"></a>Export a import pomocí třídy AFX_EXT_CLASS
 
-[MFC – rozšiřující knihovny DLL](extension-dlls-overview.md) použijte makro **AFX_EXT_CLASS** export tříd; spustitelné soubory, které jsou propojeny do MFC – rozšiřující knihovny DLL použijte makro postup importu tříd. S **AFX_EXT_CLASS** – makro, stejné soubory hlaviček, které se používají k vytvoření MFC – rozšiřující knihovny DLL lze použít s spustitelné soubory, které odkazují na knihovny DLL.
+[Knihovny DLL rozšíření knihovny MFC](extension-dlls-overview.md) používají k exportu tříd **AFX_EXT_CLASS** maker. Spustitelné soubory, které odkazují na knihovnu DLL rozšíření knihovny MFC, používají makro k importu tříd. S **AFX_EXT_CLASS** makro, stejné soubory hlaviček, které se používají k vytvoření knihovny DLL rozšíření knihovny MFC lze použít s spustitelné soubory, které odkazují na knihovnu DLL.
 
-V souboru hlaviček pro vaši knihovnu DLL, přidejte **AFX_EXT_CLASS** – klíčové slovo k deklaraci vaší třídy následujícím způsobem:
+V souboru záhlaví pro dll přidejte klíčové slovo **AFX_EXT_CLASS** do deklarace třídy takto:
 
 ```cpp
 class AFX_EXT_CLASS CMyClass : public CDocument
@@ -31,11 +31,11 @@ class AFX_EXT_CLASS CMyClass : public CDocument
 };
 ```
 
-Toto makro je definováno v prostředí MFC jako `__declspec(dllexport)` při symboly preprocesoru `_AFXDLL` a `_AFXEXT` jsou definovány. Ale makro je definováno jako `__declspec(dllimport)` při `_AFXDLL` je definována a `_AFXEXT` není definován. Při definování symbol preprocesoru `_AFXDLL` označuje, že používá sdílenou verzi knihovny MFC cílový spustitelný soubor (knihovny DLL nebo aplikaci). Pokud obě `_AFXDLL` a `_AFXEXT` jsou definovány, to znamená, že cílový spustitelný soubor je rozšiřující knihovny DLL MFC.
+Toto makro je definováno knihovnou MFC jako `__declspec(dllexport)` při symbolech preprocesoru a `_AFXDLL` `_AFXEXT` jsou definovány. Makro je však `__declspec(dllimport)` `_AFXDLL` definováno `_AFXEXT` jako kdy je definováno a není definováno. Pokud je definována, `_AFXDLL` symbol preprocesoru označuje, že sdílená verze knihovny MFC je používána cílovým spustitelným souborem (knihovnou DLL nebo aplikací). Pokud `_AFXDLL` jsou `_AFXEXT` definovány oba a jsou definovány, znamená to, že cílový spustitelný soubor je knihovna DLL rozšíření knihovny MFC.
 
-Protože `AFX_EXT_CLASS` je definován jako `__declspec(dllexport)` při exportu ze rozšiřující knihovny DLL MFC, můžete exportovat celé třídy bez uvedení v .def souboru dekorované názvy pro všechny symboly dané třídy.
+Protože `AFX_EXT_CLASS` je `__declspec(dllexport)` definována jako při exportu z knihovny DLL rozšíření knihovny MFC, můžete exportovat celé třídy bez umístění dekorovaných názvů pro všechny symboly této třídy v souboru .def.
 
-I když se vytváří soubor .def a všechny dekorované názvy pro třídu s touto metodou se můžete vyhnout, je vytvoření souboru .def mnohem efektivnější, protože názvy je možné exportovat podle pořadových čísel. Pokud chcete použít metodu .def souboru exportu, umístěte následující kód na začátek a konec souboru záhlaví:
+I když se můžete vyhnout vytváření souboru .def a všechny dekorované názvy pro třídu s touto metodou, vytvoření souboru .def je efektivnější, protože názvy lze exportovat podle ordinalu. Chcete-li použít metodu exportu souboru DEF, umístěte na začátek a konec souboru záhlaví následující kód:
 
 ```cpp
 #undef AFX_DATA
@@ -46,11 +46,11 @@ I když se vytváří soubor .def a všechny dekorované názvy pro třídu s to
 ```
 
 > [!CAUTION]
->  Buďte opatrní při export vložených funkcí, protože můžou vytvořit možnost konflikty verzí. Vložená funkce se rozbalí do kódu aplikace; Proto pokud později přepsat funkci, se neaktualizuje Pokud samotná aplikace přepsán. Za normálních okolností funkcí knihovny DLL, které je možné aktualizovat bez nutnosti opětovného sestavení aplikace, které je používají.
+> Při exportu vslaných funkcí buďte opatrní, protože mohou vytvářet možnost konfliktů verzí. Funkce inline se rozbalí do kódu aplikace; Proto pokud později přepsat funkci, není získat aktualizovány, pokud samotná aplikace je znovu zkompilován. Za normálních okolností dll funkce lze aktualizovat bez opětovného sestavení aplikace, které je používají.
 
-## <a name="exporting-individual-members-in-a-class"></a>Export jednotlivé členy ve třídě
+## <a name="exporting-individual-members-in-a-class"></a>Export jednotlivých členů ve třídě
 
-Někdy můžete chtít exportovat jednotlivé členy třídy. Například, pokud jste exportovali `CDialog`-odvozené třídy, je pouze potřeba vyexportovat konstruktoru a `DoModal` volání. Můžete použít `AFX_EXT_CLASS` u jednotlivých členů, je nutné exportovat.
+Někdy můžete chtít exportovat jednotlivé členy třídy. Například pokud exportujete `CDialog`odvozenou třídu, budete muset exportovat pouze `DoModal` konstruktor a volání. Můžete použít `AFX_EXT_CLASS` na jednotlivé členy, které potřebujete exportovat.
 
 Příklad:
 
@@ -66,9 +66,9 @@ public:
 };
 ```
 
-Vzhledem k tomu, že exportujete už všichni členové třídy, můžete jej spustit do další problém vzhledem ke způsobu, které pracují maker knihovny MFC. Některé z makra pomocné rutiny knihovny MFC ve skutečnosti deklarujete nebo definujete datové členy. Proto tyto datové členy musí být také exportován z knihovny DLL.
+Vzhledem k tomu, že již exportujete všechny členy třídy, může dojít k dalšímu problému z důvodu způsobu, jakým makra knihovny MFC fungují. Několik pomocných maker knihovny MFC skutečně deklaruje nebo definuje datové členy. Proto musí být tyto datové členy také exportovány z dll.
 
-Například `DECLARE_DYNAMIC` – makro je definovaná následujícím způsobem při sestavování rozšiřující knihovny DLL MFC:
+Makro je `DECLARE_DYNAMIC` například definováno takto při vytváření knihovny DLL rozšíření knihovny MFC:
 
 ```cpp
 #define DECLARE_DYNAMIC(class_name) \
@@ -79,7 +79,7 @@ public: \
    virtual CRuntimeClass* GetRuntimeClass() const; \
 ```
 
-Řádek, který začíná statické `AFX_DATA` je deklarace statických objektů uvnitř vaší třídy. K exportu této třídy správně a přístup k informacím o za běhu z klienta spustitelný soubor, je nutné exportovat tento statický objekt. Protože má statický objekt je deklarována s modifikátorem `AFX_DATA`, budete muset definovat `AFX_DATA` bude `__declspec(dllexport)` při vytváření knihovny DLL a definujte jej jako `__declspec(dllimport)` při vytváření vašeho klientského spustitelného souboru. Protože `AFX_EXT_CLASS` je už definovaná tímto způsobem, stačí znovu definovat `AFX_DATA` být stejný jako `AFX_EXT_CLASS` kolem vaší definice třídy.
+Řádek, který začíná `AFX_DATA` statickou, deklaruje statický objekt uvnitř třídy. Chcete-li tuto třídu správně exportovat a získat přístup k informacím za běhu ze spustitelného souboru klienta, je nutné exportovat tento statický objekt. Vzhledem k tomu, že `AFX_DATA`statický objekt je `AFX_DATA` deklarován s modifikátorem , stačí definovat být `__declspec(dllexport)` při vytváření knihovny DLL a definovat ji jako `__declspec(dllimport)` při vytváření spustitelného souboru klienta. Protože `AFX_EXT_CLASS` je již definována tímto způsobem, `AFX_DATA` stačí předefinovat `AFX_EXT_CLASS` být stejný jako kolem definice třídy.
 
 Příklad:
 
@@ -97,35 +97,35 @@ class CExampleView : public CView
 #define AFX_DATA
 ```
 
-Vzhledem k tomu vždy používá MFC `AFX_DATA` symbolu na datových položek definuje v rámci jeho makra, tento postup funguje pro všechny tyto scénáře. Například funguje pro `DECLARE_MESSAGE_MAP`.
+Vzhledem k tomu, že knihovna `AFX_DATA` MFC vždy používá symbol na datových položkách, které definuje v rámci svých maker, tato technika funguje pro všechny takové scénáře. Například, to `DECLARE_MESSAGE_MAP`funguje pro .
 
 > [!NOTE]
->  Chcete-li exportovat celé třídy místo vybrané členy třídy, se automaticky vyexportují statické datové členy.
+> Pokud exportujete celou třídu, nikoli vybrané členy třídy, budou automaticky exportovány statické datové členy.
 
 ### <a name="what-do-you-want-to-do"></a>Co chcete udělat?
 
-- [Export z knihovny DLL pomocí souborů .def](exporting-from-a-dll-using-def-files.md)
+- [Export z dll pomocí souborů .def](exporting-from-a-dll-using-def-files.md)
 
-- [Export z knihovny DLL pomocí __declspec(dllexport)](exporting-from-a-dll-using-declspec-dllexport.md)
+- [Export z dll pomocí __declspec(dllexport)](exporting-from-a-dll-using-declspec-dllexport.md)
 
 - [Export funkcí jazyka C++ pro použití ve spustitelných souborech jazyka C](exporting-cpp-functions-for-use-in-c-language-executables.md)
 
-- [Export funkcí jazyka C pro použití ve spustitelných souborech jazyka C nebo C++ – jazyk](exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
+- [Export funkcí Jazyka C pro použití ve spustitelných souborech jazyka C nebo C++](exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
 
-- [Určit, kterou exportovací metodu použít](determining-which-exporting-method-to-use.md)
+- [Určení metody exportu, která se má použít](determining-which-exporting-method-to-use.md)
 
 - [Import do aplikace s použitím deklarace __declspec(dllimport)](importing-into-an-application-using-declspec-dllimport.md)
 
-- [Inicializace knihovny DLL](run-time-library-behavior.md#initializing-a-dll)
+- [Inicializovat dll](run-time-library-behavior.md#initializing-a-dll)
 
-### <a name="what-do-you-want-to-know-more-about"></a>Co chcete zjistit více informací?
+### <a name="what-do-you-want-to-know-more-about"></a>O čem chcete vědět více?
 
 - [Dekorované názvy](reference/decorated-names.md)
 
-- [Import a export vložených funkcí](importing-and-exporting-inline-functions.md)
+- [Import a export vřádkových funkcí](importing-and-exporting-inline-functions.md)
 
-- [Vzájemné importy](mutual-imports.md)
+- [Vzájemné dovozy](mutual-imports.md)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Export z knihovny DLL](exporting-from-a-dll.md)

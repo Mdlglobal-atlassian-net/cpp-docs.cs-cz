@@ -12,65 +12,65 @@ helpviewer_keywords:
 - preprocessor, directives
 - COM, type library header file
 ms.assetid: 787d1112-e543-40d7-ab15-a63d43f4030a
-ms.openlocfilehash: afd05e7380ec3838fe9763be23ccfae338adb4fb
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 9cdfef091b659151f427c381e386f0e83396e741
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70220264"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81332057"
 ---
-# <a name="import-directive-c"></a>#import direktivaC++()
+# <a name="import-directive-c"></a>#import direktiva (C++)
 
-**C++Konkrétní**
+**Specifické pro C++**
 
-Slouží k začleňování informací z knihovny typů. Obsah knihovny typů je převeden na C++ třídy, převážně popisující rozhraní modelu COM.
+Slouží k začlenění informací z knihovny typů. Obsah knihovny typů je převeden na třídy Jazyka C++, většinou popisující rozhraní MODELU COM.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **#import** *atributy* *filename* \[] \
-> **#import** *atributy filename*]> \[ \<
+> **#import** " název \[*souboru*" *atributy*]\
+> **#import** \<> \[*atributy* *názvu souboru*]
 
 ### <a name="parameters"></a>Parametry
 
-*Bitmap*\
-Určuje knihovnu typů, která se má importovat. *Název souboru* může být jeden z následujících typů:
+*Název_souboru*\
+Určuje knihovnu typů, kterou chcete importovat. *Název souboru* může být jeden z následujících druhů:
 
-- Název souboru, který obsahuje knihovnu typů, například soubor. olb,. tlb nebo. dll. Klíčové slovo `file:`může předcházet každý název souboru.
+- Název souboru, který obsahuje knihovnu typů, například soubor .olb, TLB nebo DLL. Klíčové slovo `file:`, může předcházet každému názvu souboru.
 
-- Identifikátor ProgID ovládacího prvku v knihovně typů. Klíčové slovo `progid:`může předcházet každému identifikátoru ProgID. Příklad:
+- Progid ovládacího prvku v knihovně typů. Klíčové slovo `progid:`, může předcházet každý progid. Příklad:
 
     ```cpp
     #import "progid:my.prog.id.1.5"
     ```
 
-   Další informace o identifikátorech ProgID naleznete v tématu [Určení ID lokalizace a čísla verze](#_predir_the_23import_directive_specifyingthelocalizationidandversionnumber).
+   Další informace o progids, naleznete [v tématu určení ID lokalizace a číslo verze](#_predir_the_23import_directive_specifyingthelocalizationidandversionnumber).
 
-   Při použití 32ho křížového kompilátoru na 64 operačním systému může kompilátor přečíst pouze podregistr 32 bitových procesorů. Můžete chtít použít nativní kompilátor 64 k sestavení a registraci knihovny typů 64.
+   Při použití 32bitového křížového kompilátoru v 64bitovém operačním systému může kompilátor číst pouze podregistr 32bitového registru. Můžete chtít použít nativní 64bitový kompilátor k sestavení a registraci 64bitové knihovny typů.
 
-- ID knihovny typů Klíčové slovo `libid:`může předcházet každé ID knihovny. Příklad:
+- ID knihovny knihovny typů. Klíčové slovo `libid:`, může předcházet každé ID knihovny. Příklad:
 
     ```cpp
     #import "libid:12341234-1234-1234-1234-123412341234" version("4.0") lcid("9")
     ```
 
-   Pokud nezadáte `version` `lcid`nebo, `progid:` uplatní [](#_predir_the_23import_directive_specifyingthelocalizationidandversionnumber) setakypravidlapoužitá`libid:`pro.
+   `version` Pokud nezadáte `lcid`nebo , [pravidla](#_predir_the_23import_directive_specifyingthelocalizationidandversionnumber) použitá pro `progid:` `libid:`jsou také použita .
 
-- Spustitelný soubor (. exe).
+- Spustitelný soubor (.exe).
 
-- Soubor knihovny (. dll) obsahující prostředek knihovny typů (například. ocx).
+- Soubor knihovny (.dll) obsahující prostředek knihovny typů (například OCX).
 
-- Složený dokument držící knihovnu typů.
+- Složený dokument, ve který je knihovna typů.
 
-- Jakýkoli jiný formát souboru, který může pochopit rozhraní **LoadTypeLib** API.
+- Jakýkoli jiný formát souboru, který lze pochopit **rozhraní loadtypelib** API.
 
-*atribut*\
-Jeden nebo více [atributů #import](#_predir_the_23import_directive_import_attributes). Jednotlivé atributy oddělujte mezerou nebo čárkou. Příklad:
+*Atributy*\
+Jeden nebo více [atributů #import](#_predir_the_23import_directive_import_attributes). Samostatné atributy mezerou nebo čárkou. Příklad:
 
 ```cpp
 #import "..\drawctl\drawctl.tlb" no_namespace, raw_interfaces_only
 ```
 
-\-ani
+\-nebo-
 
 ```cpp
 #import "..\drawctl\drawctl.tlb" no_namespace raw_interfaces_only
@@ -78,92 +78,92 @@ Jeden nebo více [atributů #import](#_predir_the_23import_directive_import_attr
 
 ## <a name="remarks"></a>Poznámky
 
-### <a name="_predir_the_23import_directive_searchorderforfilename"></a>Pořadí hledání názvu souboru
+### <a name="search-order-for-filename"></a><a name="_predir_the_23import_directive_searchorderforfilename"></a>Pořadí hledání pro název souboru
 
-*název souboru* je volitelně uveden v adresáři specifikace. Název souboru musí pojmenovat existující soubor. Rozdíl mezi dvěma formami syntaxe je pořadí, ve kterém preprocesor hledá soubory knihovny typů, pokud je cesta zadána neúplně.
+*název souboru* je volitelně předchází specifikace adresáře. Název souboru musí pojmenovat existující soubor. Rozdíl mezi dvěma syntaktickými formuláři je pořadí, ve kterém preprocesor hledá soubory knihovny typů, když je cesta neúplně určena.
 
-|Forma syntaxe|Akce|
+|Formulář syntaxe|Akce|
 |-----------------|------------|
-|Citovaný formulář|Vydá pokyn preprocesoru, aby nejprve hledal soubory knihovny typů v adresáři souboru, který obsahuje příkaz **#import** a potom v adresářích libovolného souboru include (`#include`) Tento soubor. Preprocesor pak vyhledá podél cest, které jsou uvedeny níže.|
-|Formulář lomené závorky|Vydá pokyn preprocesoru k hledání souborů knihovny typů na následujících cestách:<br /><br /> 1.  Seznam `PATH` cest k proměnným prostředí<br />2.  Seznam `LIB` cest k proměnným prostředí<br />3.  Cesta zadaná v možnosti kompilátoru [/i](../build/reference/i-additional-include-directories.md) , s výjimkou toho, že kompilátor hledá knihovnu typů, na kterou se odkazuje z jiné knihovny typů s atributem [no_registry](../preprocessor/no-registry.md) .|
+|Citovaný formulář|Dá preprocesoru pokyn, aby nejprve v adresáři souboru, který obsahuje příkaz **#import,** vyhledal`#include`soubory knihovny typů a poté v adresářích libovolného souboru ( ) tohoto souboru. Preprocesor pak vyhledá v níže uvedených cestách.|
+|Tvar úhlové závorky|Nastaví preprocesor, aby vyhledal soubory knihovny typů podél následujících cest:<br /><br /> 1. `PATH` Seznam cest proměnných prostředí<br />2. `LIB` Seznam cest proměnných prostředí<br />3. Cesta určená parametrem kompilátoru [/I,](../build/reference/i-additional-include-directories.md) kromě toho, že kompilátor hledá knihovnu typů, na kterou bylo odkazováno z jiné knihovny typů s atributem [no_registry.](../preprocessor/no-registry.md)|
 
-### <a name="_predir_the_23import_directive_specifyingthelocalizationidandversionnumber"></a>Zadejte ID lokalizace a číslo verze
+### <a name="specify-the-localization-id-and-version-number"></a><a name="_predir_the_23import_directive_specifyingthelocalizationidandversionnumber"></a>Zadejte ID lokalizace a číslo verze.
 
-Když zadáte ProgID, můžete také zadat ID lokalizace a číslo verze ProgID. Příklad:
+Když zadáte progid, můžete také zadat ID lokalizace a číslo verze progid. Příklad:
 
 ```cpp
 #import "progid:my.prog.id" lcid("0") version("4.0)
 ```
 
-Pokud nezadáte ID lokalizace, je identifikátor ProgID zvolen podle následujících pravidel:
+Pokud ID lokalizace nezadáte, vybere se progid podle následujících pravidel:
 
-- Pokud je k dispozici pouze jedno ID lokalizace, bude použito.
+- Pokud existuje pouze jedno ID lokalizace, používá se toto.
 
-- Pokud je k dispozici více než jeden identifikátor lokalizace, použije se první z nich s číslem verze 0, 9 nebo 409.
+- Pokud existuje více než jedno ID lokalizace, použije se první s číslem verze 0, 9 nebo 409.
 
-- Pokud je k dispozici více než jeden identifikátor lokalizace a žádná z nich není 0, 9 nebo 409, použije se poslední z nich.
+- Pokud existuje více než jedno ID lokalizace a žádný z nich není 0, 9 nebo 409, použije se poslední.
 
 - Pokud nezadáte číslo verze, použije se nejnovější verze.
 
-###  <a name="_predir_the_23import_directive_header_files_created_by_import"></a>Soubory hlaviček vytvořené importem
+### <a name="header-files-created-by-import"></a><a name="_predir_the_23import_directive_header_files_created_by_import"></a>Soubory hlaviček vytvořené importem
 
-**#import** vytvoří dva soubory hlaviček, které rekonstruuje obsah knihovny typů ve C++ zdrojovém kódu. Primární hlavičkový soubor je podobný jako ten vytvořený kompilátorem MIDL (Microsoft Interface Definition Language), ale s dalším kódem generovaným kompilátorem a daty. [Primární hlavičkový soubor](#_predir_the_primary_type_library_header_file) má stejný základní název jako knihovna typů a. Rozšíření TLH. Sekundární hlavičkový soubor má stejný základní název jako knihovna typů s příponou. Rozšíření TLI. Obsahuje implementace pro členské funkce generované kompilátorem a je obsažen (`#include`) v primárním souboru hlaviček.
+**#import** vytvoří dva soubory hlaviček, které rekonstruují obsah knihovny typů ve zdrojovém kódu jazyka C++. Primární soubor záhlaví je podobný souboru vytvořenému kompilátorem jazyka MIDL (Microsoft Interface Definition Language), ale s dalším kódem a daty generovaným kompilátorem. [Primární soubor záhlaví](#_predir_the_primary_type_library_header_file) má stejný základní název jako knihovna typů a . Prodloužení TLH. Sekundární soubor záhlaví má stejný základní název jako knihovna typů s . Prodloužení TLI. Obsahuje implementace pro členské funkce generované kompilátorem a`#include`je zahrnut ( ) v primárním souboru záhlaví.
 
-Pokud importujete vlastnost odesílajícího typu, `byref` která používá parametry, **#import** negeneruje příkaz [__declspec (Property)](../cpp/property-cpp.md) pro funkci.
+Pokud importujete vlastnost dispinterface, která používá `byref` parametry, **#import** negeneruje příkaz [__declspec(vlastnost)](../cpp/property-cpp.md) pro funkci.
 
-Oba hlavičkové soubory jsou umístěny ve výstupním adresáři určeném možností [/FO (název objektového souboru)](../build/reference/fo-object-file-name.md) . Pak jsou čteny a kompilovány kompilátorem, jako by byl primární hlavičkový soubor pojmenován `#include` direktivou.
+Oba soubory hlaviček jsou umístěny ve výstupním adresáři určeném volbou [/Fo (name object file).](../build/reference/fo-object-file-name.md) Jsou pak číst a kompilovány kompilátorem, jako kdyby `#include` byl primární soubor záhlaví pojmenován direktivou.
 
-Následující optimalizace kompilátoru jsou dodávány s direktivou **#import** :
+Následující optimalizace kompilátoru jsou dodávány s **direktivou #import:**
 
-- Hlavičkový soubor, když je vytvořen, má stejné časové razítko jako knihovna typů.
+- Soubor záhlaví, když je vytvořen, je uveden stejné časové razítko jako knihovna typů.
 
-- Při zpracování **#import** kompilátor nejprve zkontroluje, zda hlavička existuje a je aktuální. Pokud ano, pak se nemusí znovu vytvořit.
+- Při **#import** je zpracována, kompilátor nejprve zkontroluje, zda záhlaví existuje a je aktuální. Pokud ano, pak to nemusí být znovu vytvořen.
 
-Direktiva **#import** se také účastní minimálního opětovného sestavení a lze ji umístit do souboru předkompilované hlavičky.  Další informace naleznete v tématu [vytváření předkompilovaných hlavičkových souborů](../build/creating-precompiled-header-files.md).
+Direktiva **#import** se také účastní minimálního sestavení a může být umístěna do předkompilovaného souboru hlaviček.  Další informace naleznete [v tématu Vytváření předkompilovaných souborů hlaviček](../build/creating-precompiled-header-files.md).
 
-### <a name="_predir_the_primary_type_library_header_file"></a>Hlavičkový soubor primární knihovny typů
+### <a name="primary-type-library-header-file"></a><a name="_predir_the_primary_type_library_header_file"></a>Soubor záhlaví knihovny primárního typu
 
-Soubor hlaviček primární knihovny typů se skládá ze sedmi částí:
+Primární soubor záhlaví knihovny typů se skládá ze sedmi částí:
 
-- Často používaný text nadpisu: Sestává z komentářů `#include` , příkazů pro Comdef. H (definuje některá standardní makra použitá v hlavičce) a další informace o nastavení.
+- Nadpis často používaný text: `#include` Skládá se z komentářů, prohlášení pro COMDEF. H (který definuje některá standardní makra použitá v záhlaví) a další různé informace o nastavení.
 
-- Dopředné odkazy a definice typedef: Se skládá z deklarací struktury, `struct IMyInterface` jako jsou a definice typedef.
+- Dopředné odkazy a typedefs: Skládá se `struct IMyInterface` z deklarací struktury, jako je například typedefs.
 
-- Deklarace inteligentního ukazatele: Třída `_com_ptr_t` šablony je inteligentní ukazatel. Zapouzdřuje ukazatele rozhraní a eliminuje nutnost volání `AddRef`funkcí, `Release`a `QueryInterface` . Také skryje `CoCreateInstance` volání při vytváření nového objektu com. V této části se používá příkaz `_COM_SMARTPTR_TYPEDEF` makra k navázání definice typedef rozhraní COM jako specializace šablony třídy šablony [_com_ptr_t](../cpp/com-ptr-t-class.md) . Například pro rozhraní `IMyInterface`,. Soubor TLH bude obsahovat:
+- Deklarace inteligentního ukazatele: `_com_ptr_t` Třída šablony je inteligentní ukazatel. Zapouzdřuje ukazatele rozhraní a eliminuje potřebu `AddRef` `Release`volat `QueryInterface` , a funkce. Také skryje `CoCreateInstance` volání při vytváření nového objektu COM. Tato část používá `_COM_SMARTPTR_TYPEDEF` příkaz makra k vytvoření typedefs rozhraní COM jako specializace šablony [_com_ptr_t](../cpp/com-ptr-t-class.md) třídy šablony. Například pro `IMyInterface`rozhraní , . TLH soubor bude obsahovat:
 
     ```TLH
     _COM_SMARTPTR_TYPEDEF(IMyInterface, __uuidof(IMyInterface));
     ```
 
-   který kompilátor bude rozšířen na:
+   který kompilátor rozšíří na:
 
     ```cpp
     typedef _com_ptr_t<_com_IIID<IMyInterface, __uuidof(IMyInterface)> > IMyInterfacePtr;
     ```
 
-   Typ `IMyInterfacePtr` se pak dá použít místo ukazatele `IMyInterface*`nezpracovaného rozhraní. V důsledku toho není nutné volat různé `IUnknown` členské funkce
+   Typ `IMyInterfacePtr` pak lze použít místo ukazatele `IMyInterface*`nezpracovanérozhraní . V důsledku toho není nutné volat `IUnknown` různé členské funkce
 
-- Deklarace TypeInfo: Primárně se skládá z definic tříd a dalších položek, které zpřístupňují jednotlivé položky TypeInfo `ITypeLib:GetTypeInfo`vrácené funkcí. V této části se každé volání TypeInfo z knihovny typů odráží v záhlaví na formuláři závislém na těchto `TYPEKIND` informacích.
+- Typeinfo deklarace: Primárně se skládá z definice třída a další `ITypeLib:GetTypeInfo`položky vystavení jednotlivé typeinfo položky vrácené . V této části se každé informace o typech z knihovny typů `TYPEKIND` projeví v záhlaví ve formuláři závislém na informacích.
 
-- Volitelná definice GUID starého stylu: Obsahuje inicializace pojmenovaných konstant GUID. Tyto názvy mají formulář `CLSID_CoClass` a `IID_Interface`jsou podobné těm, které jsou generovány kompilátorem MIDL.
+- Volitelná definice identifikátoru GUID starého stylu: Obsahuje inicializace pojmenovaných konstant GUID. Tyto názvy `CLSID_CoClass` mají `IID_Interface`formulář a , podobně jako ty generované kompilátorem MIDL.
 
-- `#include`příkaz pro záhlaví sekundární knihovny typů
+- `#include`pro hlavičku knihovny sekundárního typu.
 
-- Často používaný text zápatí: V současné `#pragma pack(pop)`době zahrnuje.
+- Zápatí často používaný `#pragma pack(pop)`text: V současné době zahrnuje .
 
-Všechny oddíly s výjimkou často používaného textu nadpisu a často používaného oddílu zápatí jsou uzavřeny v oboru názvů `library` s názvem zadaným příkazem v původním souboru IDL. Názvy z hlavičky knihovny typů můžete použít explicitní kvalifikací pomocí názvu oboru názvů. Nebo můžete zahrnout následující příkaz:
+Všechny oddíly, s výjimkou standardního štítku a zápatí často používaný oddíl, `library` jsou uzavřeny v oboru názvů s jeho názvem určeným příkazem v původním souboru IDL. Názvy z hlavičky knihovny typů můžete použít pomocí explicitní kvalifikace pomocí názvu oboru názvů. Nebo můžete zahrnout následující příkaz:
 
 ```cpp
 using namespace MyLib;
 ```
 
-ihned po příkazu **#import** ve zdrojovém kódu.
+bezprostředně po **#import** příkazu ve zdrojovém kódu.
 
-Obor názvů lze potlačit pomocí atributu [no_namespace](no-namespace.md)) direktivy **#import** . Nicméně potlačení oboru názvů může vést k kolizím názvů. Obor názvů lze také přejmenovat pomocí atributu [rename_namespace](rename-namespace.md) .
+Obor názvů lze potlačit pomocí atributu [no_namespace](no-namespace.md)) **direktivy #import.** Potlačení oboru názvů však může vést ke kolizím názvů. Obor názvů lze také přejmenovat atributem [rename_namespace.](rename-namespace.md)
 
-Kompilátor poskytuje úplnou cestu k jakékoli závislosti knihovny typů vyžadované knihovnou typů, kterou právě zpracovává. Cesta je zapsána ve formě komentářů do hlavičky knihovny typů (. TLH), který kompilátor generuje pro každou zpracovávanou knihovnu typů.
+Kompilátor poskytuje úplnou cestu k libovolné závislosti knihovny typů vyžadované knihovnou typů, kterou aktuálně zpracovává. Cesta je zapsána ve formě komentářů do hlavičky knihovny typů (. TLH), který kompilátor generuje pro každou knihovnu zpracovaných typů.
 
-Pokud knihovna typů obsahuje odkazy na typy definované v jiných knihovnách typů, pak. Soubor TLH bude obsahovat komentáře následujícího řazení:
+Pokud knihovna typů obsahuje odkazy na typy definované v jiných knihovnách typů, pak . Soubor TLH bude obsahovat komentáře následujícího řazení:
 
 ```TLH
 //
@@ -173,24 +173,24 @@ Pokud knihovna typů obsahuje odkazy na typy definované v jiných knihovnách t
 //
 ```
 
-Skutečný název souboru v komentáři **#import** je úplná cesta knihovny typů křížového odkazu, jak je uložena v registru. Pokud dojde k chybám, které jsou způsobeny chybějícími definicemi typu, podívejte se na komentáře v záhlaví. TLH, abyste viděli, které závislé knihovny typů možná budete muset nejdřív naimportovat. Pravděpodobnými chybami jsou chyby syntaxe (například C2143, C2146, C2321), C2501 (chybějící specifikátory), nebo C2433 (' inline ' není pro deklaraci dat povoleno) při kompilování. Soubor TLI
+Skutečný název souboru v **komentáři #import** je úplná cesta knihovny křížových odkazů typů uložená v registru. Pokud narazíte na chyby, které jsou způsobeny chybějící definice typu, zkontrolujte komentáře v čele . TLH zobrazíte, které závislé knihovny typů může být nutné importovat jako první. Pravděpodobné chyby jsou syntaktické chyby (například C2143, C2146, C2321), C2501 (chybějící specifikátory decl) nebo C2433 ("inline" není povoleno na deklaraci dat) při kompilaci . TLI.
 
-Chcete-li vyřešit chyby závislostí, určete, které z komentářů závislosti nejsou jinak poskytovány systémovými hlavičkami, a pak zadejte **#import** direktivu v určitém bodě před direktivou **#import** závislé knihovny typů.
+Chcete-li vyřešit chyby závislostí, určete, které komentáře závislostí nejsou jinak poskytovány systémovými hlavičkami, a poté zadejte **#import** direktivu v určitém okamžiku před **#import** direktivou závislé knihovny typů.
 
-### <a name="_predir_the_23import_directive_import_attributes"></a>Atributy #import
+### <a name="import-attributes"></a><a name="_predir_the_23import_directive_import_attributes"></a>#import atributy
 
-**#import** může volitelně zahrnovat jeden nebo více atributů. Tyto atributy říká kompilátoru, aby upravil obsah hlaviček knihovny typů. Symbol zpětného lomítka ( **\\** ) lze použít k zahrnutí dalších řádků do jednoho příkazu **#import** . Příklad:
+**#import** mohou volitelně obsahovat jeden nebo více atributů. Tyto atributy sdělují kompilátoru, aby upravil obsah záhlaví knihovny typů. Symbol zpětného**\\**lomítka ( ) lze použít k zahrnutí dalších řádků do jednoho **příkazu #import.** Příklad:
 
 ```cpp
 #import "test.lib" no_namespace \
    rename("OldName", "NewName")
 ```
 
-Další informace najdete v tématu [#import atributy](../preprocessor/hash-import-attributes-cpp.md).
+Další informace naleznete [v tématu #import atributy](../preprocessor/hash-import-attributes-cpp.md).
 
-**Specifické C++ pro konec**
+**Specifické pro END C++**
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Direktivy preprocesoru](../preprocessor/preprocessor-directives.md)\
-[Podpora kompilátoru COM](../cpp/compiler-com-support.md)
+[Směrnice preprocesoru](../preprocessor/preprocessor-directives.md)\
+[Podpora com kompilátoru](../cpp/compiler-com-support.md)

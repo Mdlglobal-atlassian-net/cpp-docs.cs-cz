@@ -1,5 +1,5 @@
 ---
-title: Cd2dbitmapbrush – třída
+title: CD2DBitmapBrush – třída
 ms.date: 11/04/2016
 f1_keywords:
 - CD2DBitmapBrush
@@ -42,14 +42,14 @@ helpviewer_keywords:
 - CD2DBitmapBrush [MFC], m_pBitmapBrush
 - CD2DBitmapBrush [MFC], m_pBitmapBrushProperties
 ms.assetid: 46ebbe34-66e0-44c8-af1d-d129e851de5e
-ms.openlocfilehash: 1569039db8c1f85d3091282b55d7eda253444deb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e26202392bf4783598aec0dddfea514fce806a8c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405791"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81369299"
 ---
-# <a name="cd2dbitmapbrush-class"></a>Cd2dbitmapbrush – třída
+# <a name="cd2dbitmapbrush-class"></a>CD2DBitmapBrush – třída
 
 Obálka pro ID2D1BitmapBrush.
 
@@ -63,54 +63,54 @@ class CD2DBitmapBrush : public CD2DBrush;
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CD2DBitmapBrush::CD2DBitmapBrush](#cd2dbitmapbrush)|Přetíženo. Vytvoří objekt cd2dbitmapbrush – ze souboru.|
-|[CD2DBitmapBrush::~CD2DBitmapBrush](#dtor)|Destruktor. Volá se, když se likviduje štětce objektu D2D rastrového obrázku.|
+|[CD2DBitmapBrush::CD2DBitmapBrush](#cd2dbitmapbrush)|Přetíženo. Vytvoří objekt CD2DBitmapBrush ze souboru.|
+|[CD2DBitmapBrush::~CD2DBitmapBrush](#dtor)|Destruktor. Nazývá se při zničení objektu stopy bitmapy D2D.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CD2DBitmapBrush::Attach](#attach)|Bude k obrazci existujících prostředků rozhraní pro objekt|
-|[CD2DBitmapBrush::Create](#create)|Vytvoří cd2dbitmapbrush –. (Přepíše [CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create).)|
-|[CD2DBitmapBrush::Destroy](#destroy)|Odstraní objekt cd2dbitmapbrush –. (Přepíše [CD2DBrush::Destroy](../../mfc/reference/cd2dbrush-class.md#destroy).)|
-|[CD2DBitmapBrush::Detach](#detach)|Odpojí prostředků rozhraní z objektu|
-|[CD2DBitmapBrush::Get](#get)|Vrátí ID2D1BitmapBrush rozhraní|
-|[CD2DBitmapBrush::GetBitmap](#getbitmap)|Získá zdroj rastrového obrázku, který používá tento štětce k vykreslení|
-|[CD2DBitmapBrush::GetExtendModeX](#getextendmodex)|Získá metodu, pomocí kterého štětec vodorovně dlaždice těchto oblastí, které přesahují za jeho rastrový obrázek|
-|[CD2DBitmapBrush::GetExtendModeY](#getextendmodey)|Získá metodu, pomocí kterého štětec dlaždice svisle těchto oblastí, které přesahují za jeho rastrový obrázek|
-|[CD2DBitmapBrush::GetInterpolationMode](#getinterpolationmode)|Získá metodu interpolace použita, pokud je škálovat nebo otočit rastrový obrázek štětec|
-|[CD2DBitmapBrush::SetBitmap](#setbitmap)|Určuje zdroj rastrového obrázku, který tento štětce používá k vykreslení|
-|[CD2DBitmapBrush::SetExtendModeX](#setextendmodex)|Určuje, jak štětec vodorovně dlaždice těchto oblastí, které přesahují za jeho rastrový obrázek|
-|[CD2DBitmapBrush::SetExtendModeY](#setextendmodey)|Určuje, jak štětec dlaždice svisle těchto oblastí, které přesahují za jeho rastrový obrázek|
-|[CD2DBitmapBrush::SetInterpolationMode](#setinterpolationmode)|Určuje režim interpolace použita, pokud je škálovat nebo otočit rastrový obrázek štětec|
+|[CD2DBitmapBrush::Připojit](#attach)|Připojí k objektu existující rozhraní prostředků.|
+|[CD2DBitmapBrush::Vytvořit](#create)|Vytvoří CD2DBitmapBrush. (Přepíše [CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create).)|
+|[CD2DBitmapBrush::Destroy](#destroy)|Zničí objekt CD2DBitmapBrush. (Přepíše [CD2DBrush::Destroy](../../mfc/reference/cd2dbrush-class.md#destroy).)|
+|[CD2DBitmapBrush::Detach](#detach)|Odpojí rozhraní prostředků od objektu.|
+|[CD2DBitmapBrush::Získat](#get)|Vrátí rozhraní ID2D1BitmapBrush.|
+|[CD2DBitmapBrush::GetBitmap](#getbitmap)|Získá zdroj bitmapy, který tato stopa používá k malování|
+|[CD2DBitmapBrush::GetExtendModeX](#getextendmodex)|Získá metodu, kterou stopa vodorovně dlaždice ty oblasti, které přesahují jeho rastrový obrázek|
+|[CD2DBitmapBrush::GetExtendModeY](#getextendmodey)|Získá metodu, kterou stopa svisle dlaždice ty oblasti, které přesahují jeho rastrový obrázek|
+|[CD2DBitmapBrush::GetInterpolationMode](#getinterpolationmode)|Získá metodu interpolace použitou při zmenšení nebo otočení bitmapy stopy.|
+|[CD2DBitmapBrush::SetBitmap](#setbitmap)|Určuje zdroj bitmapy, který tato stopa používá k malování.|
+|[CD2DBitmapBrush::SetExtendModeX](#setextendmodex)|Určuje, jak stopa vodorovně obsadí oblasti, které přesahují její bitmapu.|
+|[CD2DBitmapBrush::SetExtendModeY](#setextendmodey)|Určuje, jak stopa svisle obsadí oblasti, které přesahují její bitmapu.|
+|[CD2DBitmapBrush::Nastavit režim interpolace](#setinterpolationmode)|Určuje režim interpolace použitý při změna měřítka nebo otočení bitmapy stopy.|
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CD2DBitmapBrush::CommonInit](#commoninit)|Inicializuje objekt|
+|[CD2DBitmapBrush::CommonInit](#commoninit)|Inicializuje objekt.|
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CD2DBitmapBrush::Operator ID2D1BitmapBrush *](#operator_id2d1bitmapbrush_star)|Vrátí ID2D1BitmapBrush rozhraní|
+|[CD2DBitmapBrush::operátor ID2D1BitmapBrush*](#operator_id2d1bitmapbrush_star)|Vrátí rozhraní ID2D1BitmapBrush.|
 
-### <a name="protected-data-members"></a>Chránění členové dat
+### <a name="protected-data-members"></a>Členové chráněných dat
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CD2DBitmapBrush::m_pBitmap](#m_pbitmap)|Uchovává ukazatel na objekt cd2dbitmap –.|
-|[CD2DBitmapBrush::m_pBitmapBrush](#m_pbitmapbrush)|Uchovává ukazatel na objekt ID2D1BitmapBrush.|
-|[CD2DBitmapBrush::m_pBitmapBrushProperties](#m_pbitmapbrushproperties)|Bitmap – vlastnosti štětce.|
+|[CD2DBitmapBrush::m_pBitmap](#m_pbitmap)|Uloží ukazatel na objekt CD2DBitmap.|
+|[CD2DBitmapBrush::m_pBitmapBrush](#m_pbitmapbrush)|Uloží ukazatel na objekt ID2D1BitmapBrush.|
+|[CD2DBitmapBrush::m_pBitmapBrushProperties](#m_pbitmapbrushproperties)|Vlastnosti bitmapového stopy.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObjekt](../../mfc/reference/cobject-class.md)
 
-[CD2DResource](../../mfc/reference/cd2dresource-class.md)
+[Zdroj CD2D](../../mfc/reference/cd2dresource-class.md)
 
 [CD2DBrush](../../mfc/reference/cd2dbrush-class.md)
 
@@ -120,17 +120,17 @@ class CD2DBitmapBrush : public CD2DBrush;
 
 **Záhlaví:** afxrendertarget.h
 
-##  <a name="dtor"></a>  Cd2dbitmapbrush –:: ~ cd2dbitmapbrush –
+## <a name="cd2dbitmapbrushcd2dbitmapbrush"></a><a name="dtor"></a>CD2DBitmapBrush::~CD2DBitmapBrush
 
-Destruktor. Volá se, když se likviduje štětce objektu D2D rastrového obrázku.
+Destruktor. Nazývá se při zničení objektu stopy bitmapy D2D.
 
 ```
 virtual ~CD2DBitmapBrush();
 ```
 
-##  <a name="attach"></a>  CD2DBitmapBrush::Attach
+## <a name="cd2dbitmapbrushattach"></a><a name="attach"></a>CD2DBitmapBrush::Připojit
 
-Bude k obrazci existujících prostředků rozhraní pro objekt
+Připojí k objektu existující rozhraní prostředků.
 
 ```
 void Attach(ID2D1BitmapBrush* pResource);
@@ -138,12 +138,12 @@ void Attach(ID2D1BitmapBrush* pResource);
 
 ### <a name="parameters"></a>Parametry
 
-*pResource*<br/>
-Rozhraní existující prostředek. Nesmí být NULL.
+*pZdroj*<br/>
+Existující rozhraní prostředků. Nelze získat hodnotu NULL.
 
-##  <a name="cd2dbitmapbrush"></a>  CD2DBitmapBrush::CD2DBitmapBrush
+## <a name="cd2dbitmapbrushcd2dbitmapbrush"></a><a name="cd2dbitmapbrush"></a>CD2DBitmapBrush::CD2DBitmapBrush
 
-Vytvoří objekt cd2dbitmapbrush –.
+Vytvoří objekt CD2DBitmapBrush.
 
 ```
 CD2DBitmapBrush(
@@ -173,32 +173,32 @@ CD2DBitmapBrush(
 ### <a name="parameters"></a>Parametry
 
 *pParentTarget*<br/>
-Ukazatel na cíl vykreslování.
+Ukazatel na cíl vykreslení.
 
 *pBitmapBrushProperties*<br/>
-Ukazatel na režimy rozšířit a režim interpolace štětce rastrového obrázku.
+Ukazatel na režimy rozšíření a režim interpolace bitmapového štětce.
 
-*pBrushProperties*<br/>
-Ukazatel na krytí a transformace štětce.
+*pVlastnosti brushu*<br/>
+Ukazatel na krytí a transformaci stopy.
 
 *bAutoDestroy*<br/>
-Označuje, že bude objekt zničen. vlastník (pParentTarget).
+Označuje, že objekt bude zničen vlastníkem (pParentTarget).
 
 *uiResID*<br/>
-Číslo ID prostředku prostředku.
+Číslo ID prostředku.
 
-*lpszType*<br/>
-Ukazatel na řetězec zakončený hodnotou null, který obsahuje typ prostředku.
+*lpszTyp*<br/>
+Ukazatel na řetězec s ukončeným hodnotou null, který obsahuje typ prostředku.
 
 *sizeDest*<br/>
-Velikost cílové bitmapy.
+Cílová velikost bitmapy.
 
 *lpszImagePath*<br/>
-Ukazatel na řetězec zakončený hodnotou null, který obsahuje název souboru.
+Ukazatel na řetězec s ukončeným hodnotou null, který obsahuje název souboru.
 
-##  <a name="commoninit"></a>  CD2DBitmapBrush::CommonInit
+## <a name="cd2dbitmapbrushcommoninit"></a><a name="commoninit"></a>CD2DBitmapBrush::CommonInit
 
-Inicializuje objekt
+Inicializuje objekt.
 
 ```
 void CommonInit(D2D1_BITMAP_BRUSH_PROPERTIES* pBitmapBrushProperties);
@@ -207,11 +207,11 @@ void CommonInit(D2D1_BITMAP_BRUSH_PROPERTIES* pBitmapBrushProperties);
 ### <a name="parameters"></a>Parametry
 
 *pBitmapBrushProperties*<br/>
-Ukazatel na vlastnosti štětce rastrového obrázku.
+Ukazatel na vlastnosti bitmapového stopy.
 
-##  <a name="create"></a>  CD2DBitmapBrush::Create
+## <a name="cd2dbitmapbrushcreate"></a><a name="create"></a>CD2DBitmapBrush::Vytvořit
 
-Vytvoří cd2dbitmapbrush –.
+Vytvoří CD2DBitmapBrush.
 
 ```
 virtual HRESULT Create(CRenderTarget* pRenderTarget);
@@ -220,23 +220,23 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget);
 ### <a name="parameters"></a>Parametry
 
 *pRenderTarget*<br/>
-Ukazatel na cíl vykreslování.
+Ukazatel na cíl vykreslení.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud metoda uspěje, vrátí hodnotu S_OK. V opačném případě vrátí kód chyby HRESULT.
+Pokud je metoda úspěšná, vrátí S_OK. V opačném případě vrátí kód chyby HRESULT.
 
-##  <a name="destroy"></a>  CD2DBitmapBrush::Destroy
+## <a name="cd2dbitmapbrushdestroy"></a><a name="destroy"></a>CD2DBitmapBrush::Destroy
 
-Odstraní objekt cd2dbitmapbrush –.
+Zničí objekt CD2DBitmapBrush.
 
 ```
 virtual void Destroy();
 ```
 
-##  <a name="detach"></a>  CD2DBitmapBrush::detach
+## <a name="cd2dbitmapbrushdetach"></a><a name="detach"></a>CD2DBitmapBrush::Detach
 
-Odpojí prostředků rozhraní z objektu
+Odpojí rozhraní prostředků od objektu.
 
 ```
 ID2D1BitmapBrush* Detach();
@@ -244,11 +244,11 @@ ID2D1BitmapBrush* Detach();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na rozhraní odpojit prostředek.
+Ukazatel na rozhraní odpojeného prostředku.
 
-##  <a name="get"></a>  CD2DBitmapBrush::Get
+## <a name="cd2dbitmapbrushget"></a><a name="get"></a>CD2DBitmapBrush::Získat
 
-Vrátí ID2D1BitmapBrush rozhraní
+Vrátí rozhraní ID2D1BitmapBrush.
 
 ```
 ID2D1BitmapBrush* Get();
@@ -256,11 +256,11 @@ ID2D1BitmapBrush* Get();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na rozhraní ID2D1BitmapBrush nebo hodnota NULL, pokud objekt ještě není inicializován.
+Ukazatel na rozhraní ID2D1BitmapBrush nebo NULL, pokud objekt ještě není inicializován.
 
-##  <a name="getbitmap"></a>  CD2DBitmapBrush::GetBitmap
+## <a name="cd2dbitmapbrushgetbitmap"></a><a name="getbitmap"></a>CD2DBitmapBrush::GetBitmap
 
-Získá zdroj rastrového obrázku, který používá tento štětce k vykreslení
+Získá zdroj bitmapy, který tato stopa používá k malování
 
 ```
 CD2DBitmap* GetBitmap();
@@ -268,11 +268,11 @@ CD2DBitmap* GetBitmap();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na objekt cd2dbitmap – nebo hodnota NULL, pokud objekt ještě není inicializován.
+Ukazatel na objekt CD2DBitmap nebo NULL, pokud objekt ještě není inicializován.
 
-##  <a name="getextendmodex"></a>  CD2DBitmapBrush::GetExtendModeX
+## <a name="cd2dbitmapbrushgetextendmodex"></a><a name="getextendmodex"></a>CD2DBitmapBrush::GetExtendModeX
 
-Získá metodu, pomocí kterého štětec vodorovně dlaždice těchto oblastí, které přesahují za jeho rastrový obrázek
+Získá metodu, kterou stopa vodorovně dlaždice ty oblasti, které přesahují jeho rastrový obrázek
 
 ```
 D2D1_EXTEND_MODE GetExtendModeX() const;
@@ -280,11 +280,11 @@ D2D1_EXTEND_MODE GetExtendModeX() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota, která určuje, jak štětec vodorovně dlaždice těchto oblastí, které přesahují za jeho rastrový obrázek
+Hodnota, která určuje, jak stopa vodorovně dlaždice ty oblasti, které přesahují jeho rastrový obrázek
 
-##  <a name="getextendmodey"></a>  CD2DBitmapBrush::GetExtendModeY
+## <a name="cd2dbitmapbrushgetextendmodey"></a><a name="getextendmodey"></a>CD2DBitmapBrush::GetExtendModeY
 
-Získá metodu, pomocí kterého štětec dlaždice svisle těchto oblastí, které přesahují za jeho rastrový obrázek
+Získá metodu, kterou stopa svisle dlaždice ty oblasti, které přesahují jeho rastrový obrázek
 
 ```
 D2D1_EXTEND_MODE GetExtendModeY() const;
@@ -292,11 +292,11 @@ D2D1_EXTEND_MODE GetExtendModeY() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota, která určuje, jak štětec dlaždice svisle těchto oblastí, které přesahují za jeho rastrový obrázek
+Hodnota, která určuje, jak stopa svisle dlaždice ty oblasti, které přesahují jeho rastrový obrázek
 
-##  <a name="getinterpolationmode"></a>  CD2DBitmapBrush::GetInterpolationMode
+## <a name="cd2dbitmapbrushgetinterpolationmode"></a><a name="getinterpolationmode"></a>CD2DBitmapBrush::GetInterpolationMode
 
-Získá metodu interpolace použita, pokud je škálovat nebo otočit rastrový obrázek štětec
+Získá metodu interpolace použitou při zmenšení nebo otočení bitmapy stopy.
 
 ```
 D2D1_BITMAP_INTERPOLATION_MODE GetInterpolationMode() const;
@@ -304,35 +304,35 @@ D2D1_BITMAP_INTERPOLATION_MODE GetInterpolationMode() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Metodu interpolace použita, pokud je škálovat nebo otočit rastrový obrázek štětec
+Metoda interpolace použitá při změna měřítka nebo otočení bitmapy stopy
 
-##  <a name="m_pbitmap"></a>  CD2DBitmapBrush::m_pBitmap
+## <a name="cd2dbitmapbrushm_pbitmap"></a><a name="m_pbitmap"></a>CD2DBitmapBrush::m_pBitmap
 
-Uchovává ukazatel na objekt cd2dbitmap –.
+Uloží ukazatel na objekt CD2DBitmap.
 
 ```
 CD2DBitmap* m_pBitmap;
 ```
 
-##  <a name="m_pbitmapbrush"></a>  CD2DBitmapBrush::m_pBitmapBrush
+## <a name="cd2dbitmapbrushm_pbitmapbrush"></a><a name="m_pbitmapbrush"></a>CD2DBitmapBrush::m_pBitmapBrush
 
-Uchovává ukazatel na objekt ID2D1BitmapBrush.
+Uloží ukazatel na objekt ID2D1BitmapBrush.
 
 ```
 ID2D1BitmapBrush* m_pBitmapBrush;
 ```
 
-##  <a name="m_pbitmapbrushproperties"></a>  CD2DBitmapBrush::m_pBitmapBrushProperties
+## <a name="cd2dbitmapbrushm_pbitmapbrushproperties"></a><a name="m_pbitmapbrushproperties"></a>CD2DBitmapBrush::m_pBitmapBrushProperties
 
-Bitmap – vlastnosti štětce.
+Vlastnosti bitmapového stopy.
 
 ```
 D2D1_BITMAP_BRUSH_PROPERTIES* m_pBitmapBrushProperties;
 ```
 
-##  <a name="operator_id2d1bitmapbrush_star"></a>  CD2DBitmapBrush::Operator ID2D1BitmapBrush *
+## <a name="cd2dbitmapbrushoperator-id2d1bitmapbrush"></a><a name="operator_id2d1bitmapbrush_star"></a>CD2DBitmapBrush::operátor ID2D1BitmapBrush*
 
-Vrátí ID2D1BitmapBrush rozhraní
+Vrátí rozhraní ID2D1BitmapBrush.
 
 ```
 operator ID2D1BitmapBrush*();
@@ -340,11 +340,11 @@ operator ID2D1BitmapBrush*();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na rozhraní ID2D1BitmapBrush nebo hodnota NULL, pokud objekt ještě není inicializován.
+Ukazatel na rozhraní ID2D1BitmapBrush nebo NULL, pokud objekt ještě není inicializován.
 
-##  <a name="setbitmap"></a>  CD2DBitmapBrush::SetBitmap
+## <a name="cd2dbitmapbrushsetbitmap"></a><a name="setbitmap"></a>CD2DBitmapBrush::SetBitmap
 
-Určuje zdroj rastrového obrázku, který tento štětce používá k vykreslení
+Určuje zdroj bitmapy, který tato stopa používá k malování.
 
 ```
 void SetBitmap(CD2DBitmap* pBitmap);
@@ -353,11 +353,11 @@ void SetBitmap(CD2DBitmap* pBitmap);
 ### <a name="parameters"></a>Parametry
 
 *pBitmap*<br/>
-Zdroj rastrového obrázku používá štětec
+Zdroj bitmapy používaný stopou
 
-##  <a name="setextendmodex"></a>  CD2DBitmapBrush::SetExtendModeX
+## <a name="cd2dbitmapbrushsetextendmodex"></a><a name="setextendmodex"></a>CD2DBitmapBrush::SetExtendModeX
 
-Určuje, jak štětec vodorovně dlaždice těchto oblastí, které přesahují za jeho rastrový obrázek
+Určuje, jak stopa vodorovně obsadí oblasti, které přesahují její bitmapu.
 
 ```
 void SetExtendModeX(D2D1_EXTEND_MODE extendModeX);
@@ -366,11 +366,11 @@ void SetExtendModeX(D2D1_EXTEND_MODE extendModeX);
 ### <a name="parameters"></a>Parametry
 
 *extendModeX*<br/>
-Hodnota, která určuje, jak štětec vodorovně dlaždice těchto oblastí, které přesahují za jeho rastrový obrázek
+Hodnota, která určuje, jak stopa vodorovně dlaždice ty oblasti, které přesahují jeho rastrový obrázek
 
-##  <a name="setextendmodey"></a>  CD2DBitmapBrush::SetExtendModeY
+## <a name="cd2dbitmapbrushsetextendmodey"></a><a name="setextendmodey"></a>CD2DBitmapBrush::SetExtendModeY
 
-Určuje, jak štětec dlaždice svisle těchto oblastí, které přesahují za jeho rastrový obrázek
+Určuje, jak stopa svisle obsadí oblasti, které přesahují její bitmapu.
 
 ```
 void SetExtendModeY(D2D1_EXTEND_MODE extendModeY);
@@ -379,11 +379,11 @@ void SetExtendModeY(D2D1_EXTEND_MODE extendModeY);
 ### <a name="parameters"></a>Parametry
 
 *extendModeY*<br/>
-Hodnota, která určuje, jak štětec dlaždice svisle těchto oblastí, které přesahují za jeho rastrový obrázek
+Hodnota, která určuje, jak stopa svisle dlaždice ty oblasti, které přesahují jeho rastrový obrázek
 
-##  <a name="setinterpolationmode"></a>  CD2DBitmapBrush::SetInterpolationMode
+## <a name="cd2dbitmapbrushsetinterpolationmode"></a><a name="setinterpolationmode"></a>CD2DBitmapBrush::Nastavit režim interpolace
 
-Určuje režim interpolace použita, pokud je škálovat nebo otočit rastrový obrázek štětec
+Určuje režim interpolace použitý při změna měřítka nebo otočení bitmapy stopy.
 
 ```
 void SetInterpolationMode(D2D1_BITMAP_INTERPOLATION_MODE interpolationMode);
@@ -392,8 +392,8 @@ void SetInterpolationMode(D2D1_BITMAP_INTERPOLATION_MODE interpolationMode);
 ### <a name="parameters"></a>Parametry
 
 *interpolationMode*<br/>
-Režim interpolace použita, pokud je škálovat nebo otočit rastrový obrázek štětec
+Režim interpolace používaný při změna měřítka nebo otočení bitmapy stopy
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Třídy](../../mfc/reference/mfc-classes.md)

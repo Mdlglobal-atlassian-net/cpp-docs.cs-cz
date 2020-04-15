@@ -11,16 +11,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HandleTraits::CriticalSectionTraits::GetInvalidValue method
 - Microsoft::WRL::Wrappers::HandleTraits::CriticalSectionTraits::Unlock method
 ms.assetid: c515a1b5-4eb0-40bc-9035-c4d9352c9de7
-ms.openlocfilehash: ce904ecbd9a5855c63fd43f07f88c215cef544ae
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 05c93bf6a2765bd11489075067c627ab3c3ab691
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398599"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372584"
 ---
 # <a name="criticalsectiontraits-structure"></a>CriticalSectionTraits – struktura
 
-Se specializuje `CriticalSection` objektu pro podporu neplatný kritický oddíl nebo funkci uvolnění kritický oddíl.
+Specializuje `CriticalSection` objekt na podporu buď neplatný kritický oddíl nebo funkce pro uvolnění kritické ho oddílu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -30,18 +30,18 @@ struct CriticalSectionTraits;
 
 ## <a name="members"></a>Členové
 
-### <a name="public-typedefs"></a>Veřejné definice TypeDef
+### <a name="public-typedefs"></a>Veřejné typedefs
 
-Název   | Popis
+Name (Název)   | Popis
 ------ | -----------------------------------------------------------------------------------------------------------------
-`Type` | A `typedef` , který definuje ukazatel na kritický oddíl. `Type` je definován jako `typedef CRITICAL_SECTION* Type;`.
+`Type` | A, `typedef` který definuje ukazatel na kritický oddíl. `Type`je definována jako `typedef CRITICAL_SECTION* Type;`.
 
 ### <a name="public-methods"></a>Veřejné metody
 
-Název                                                       | Popis
+Name (Název)                                                       | Popis
 ---------------------------------------------------------- | -----------------
-[Criticalsectiontraits::getinvalidvalue –](#getinvalidvalue) | Se specializuje `CriticalSection` šablony tak, aby šablona vždy je neplatná.
-[Criticalsectiontraits::Unlock –](#unlock)                   | Se specializuje `CriticalSection` šablony tak, že podporuje uvolňující vlastnictví objektu zadaného kritický oddíl.
+[CriticalSectionTraits::GetInvalidValue](#getinvalidvalue) | Specializuje šablonu `CriticalSection` tak, aby šablona byla vždy neplatná.
+[CriticalSectionTraits::Odemknout](#unlock)                   | Specializuje šablonu `CriticalSection` tak, aby podporovala uvolnění vlastnictví zadaného objektu kritické ho oddílu.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -51,11 +51,11 @@ Název                                                       | Popis
 
 **Záhlaví:** corewrappers.h
 
-**Namespace:** Microsoft::WRL::Wrappers::HandleTraits
+**Obor názvů:** Microsoft::WRL::Obálky::HandleTraits
 
-## <a name="getinvalidvalue"></a>Criticalsectiontraits::getinvalidvalue –
+## <a name="criticalsectiontraitsgetinvalidvalue"></a><a name="getinvalidvalue"></a>CriticalSectionTraits::GetInvalidValue
 
-Se specializuje `CriticalSection` šablony tak, aby šablona vždy je neplatná.
+Specializuje šablonu `CriticalSection` tak, aby šablona byla vždy neplatná.
 
 ```cpp
 inline static Type GetInvalidValue();
@@ -67,11 +67,11 @@ Vždy vrátí ukazatel na neplatný kritický oddíl.
 
 ### <a name="remarks"></a>Poznámky
 
-`Type` Modifikátor je definován jako `typedef CRITICAL_SECTION* Type;`.
+Modifikátor `Type` je `typedef CRITICAL_SECTION* Type;`definován jako .
 
-## <a name="unlock"></a>Criticalsectiontraits::Unlock –
+## <a name="criticalsectiontraitsunlock"></a><a name="unlock"></a>CriticalSectionTraits::Odemknout
 
-Se specializuje `CriticalSection` šablony tak, že podporuje uvolňující vlastnictví objektu zadaného kritický oddíl.
+Specializuje šablonu `CriticalSection` tak, aby podporovala uvolnění vlastnictví zadaného objektu kritické ho oddílu.
 
 ```cpp
 inline static void Unlock(
@@ -81,11 +81,11 @@ inline static void Unlock(
 
 ### <a name="parameters"></a>Parametry
 
-*cs*<br/>
-Ukazatel na objekt kritický oddíl.
+*Cs*<br/>
+Ukazatel na objekt kritického řezu.
 
 ### <a name="remarks"></a>Poznámky
 
-`Type` Modifikátor je definován jako `typedef CRITICAL_SECTION* Type;`.
+Modifikátor `Type` je `typedef CRITICAL_SECTION* Type;`definován jako .
 
-Další informace najdete v tématu **LeaveCriticalSection funkce** v **funkce synchronizace** část dokumentace k rozhraní API Windows.
+Další informace naleznete v **tématu LeaveCriticalSection funkce** v části **funkce synchronizace** v dokumentaci rozhraní API systému Windows.

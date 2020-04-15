@@ -1,5 +1,5 @@
 ---
-title: Canimationpoint – třída
+title: CAnimationPoint – třída
 ms.date: 11/04/2016
 f1_keywords:
 - CAnimationPoint
@@ -26,16 +26,16 @@ helpviewer_keywords:
 - CAnimationPoint [MFC], m_xValue
 - CAnimationPoint [MFC], m_yValue
 ms.assetid: 5dc4d46f-e695-4681-b15c-544b78b3e317
-ms.openlocfilehash: 15f06d2fa3478570d2f784879a13e7b68515e746
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 19f02010b6b73573a4800152e40c592fd1736ad5
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62218535"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81369737"
 ---
-# <a name="canimationpoint-class"></a>Canimationpoint – třída
+# <a name="canimationpoint-class"></a>CAnimationPoint – třída
 
-Implementuje funkci bodu, jehož souřadnice lze animovat.
+Implementuje funkce bodu, jehož souřadnice lze animovat.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -47,48 +47,48 @@ class CAnimationPoint : public CAnimationBaseObject;
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CAnimationPoint::CAnimationPoint](#canimationpoint)|Přetíženo. Vytvoří objekt canimationpoint –.|
+|[CAnimationPoint::CAnimationPoint](#canimationpoint)|Přetíženo. Vytvoří cAnimationPoint objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CAnimationPoint::AddTransition](#addtransition)|Přidá přechody pro X a Y.|
-|[CAnimationPoint::GetDefaultValue](#getdefaultvalue)|Vrátí výchozí hodnoty pro X a Y.|
+|[CAnimationPoint::AddTransition](#addtransition)|Přidá přechody pro souřadnice X a Y.|
+|[CAnimationPoint::GetDefaultValue](#getdefaultvalue)|Vrátí výchozí hodnoty pro souřadnice X a Y.|
 |[CAnimationPoint::GetValue](#getvalue)|Vrátí aktuální hodnotu.|
-|[CAnimationPoint::GetX](#getx)|Poskytuje přístup k canimationvariable – pro souřadnici X.|
-|[CAnimationPoint::GetY](#gety)|Poskytuje přístup k canimationvariable – souřadnici Y.|
+|[CAnimationPoint::GetX](#getx)|Poskytuje přístup k CAnimationVariable pro souřadnice X.|
+|[CanimationPoint::Gety](#gety)|Poskytuje přístup k CAnimationVariable pro souřadnice Y.|
 |[CAnimationPoint::SetDefaultValue](#setdefaultvalue)|Nastaví výchozí hodnotu.|
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CAnimationPoint::GetAnimationVariableList](#getanimationvariablelist)|Umístí animace zapouzdřené proměnné do seznamu. (Přepíše [CAnimationBaseObject::GetAnimationVariableList](../../mfc/reference/canimationbaseobject-class.md#getanimationvariablelist).)|
+|[CAnimationPoint::GetAnimationVariableList](#getanimationvariablelist)|Vloží zapouzdřené proměnné animace do seznamu. (Přepíše [CAnimationBaseObject::GetAnimationVariableList](../../mfc/reference/canimationbaseobject-class.md#getanimationvariablelist).)|
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CAnimationPoint::operator CPoint](#operator_cpoint)|Převede canimationpoint – CPoint.|
-|[CAnimationPoint::operator =](#operator_eq)|Přiřadí ptSrc canimationpoint –.|
+|[CAnimationPoint::operátor CPoint](#operator_cpoint)|Převede CAnimationPoint na CPoint.|
+|[CAnimationPoint::operátor=](#operator_eq)|Přiřadí ptSrc CAnimationPoint.|
 
-### <a name="protected-data-members"></a>Chránění členové dat
+### <a name="protected-data-members"></a>Členové chráněných dat
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CAnimationPoint::m_xValue](#m_xvalue)|Proměnné animace zapouzdřený objekt, který představuje X souřadnice bodu animace.|
-|[CAnimationPoint::m_yValue](#m_yvalue)|Proměnné animace zapouzdřený objekt, který představuje Souřadnice Y bodu animace.|
+|[CAnimationPoint::m_xValue](#m_xvalue)|Zapouzdřená proměnná animace, která představuje souřadnici X bodu animace.|
+|[CAnimationPoint::m_yValue](#m_yvalue)|Zapouzdřená proměnná animace, která představuje souřadnici Y bodu animace.|
 
 ## <a name="remarks"></a>Poznámky
 
-Canimationpoint – třída zapouzdří dva objekty canimationvariable – a může představovat v aplikacích bod. Například můžete použít tuto třídu pro animaci pozici objektu na obrazovce (například textový řetězec, kruh, bod atd). Použít tuto třídu v aplikaci, stačí vytvořit instanci objektu této třídy, přidáte jej do řadič animace pomocí CAnimationController::AddAnimationObject a volat AddTransition pro každý přechod použít souřadnice X a Y.
+Třída CAnimationPoint zapouzdřuje dva objekty CAnimationVariable a může v aplikacích představovat bod. Tuto třídu můžete například použít k animaci pozice libovolného objektu na obrazovce (například textového řetězce, kružnice, bodu atd.). Chcete-li použít tuto třídu v aplikaci, stačí vytvořit instanci objektu této třídy, přidejte jej do ovladače animace pomocí CAnimationController::AddAnimationObject a volání AddTransition pro každý přechod, který má být použit na souřadnice X nebo Y.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObjekt](../../mfc/reference/cobject-class.md)
 
 [CAnimationBaseObject](../../mfc/reference/canimationbaseobject-class.md)
 
@@ -98,9 +98,9 @@ Canimationpoint – třída zapouzdří dva objekty canimationvariable – a mů
 
 **Záhlaví:** afxanimationcontroller.h
 
-##  <a name="addtransition"></a>  CAnimationPoint::AddTransition
+## <a name="canimationpointaddtransition"></a><a name="addtransition"></a>CAnimationPoint::AddTransition
 
-Přidá přechody pro X a Y.
+Přidá přechody pro souřadnice X a Y.
 
 ```
 void AddTransition(
@@ -110,19 +110,19 @@ void AddTransition(
 
 ### <a name="parameters"></a>Parametry
 
-*pXTransition*<br/>
-Ukazatel na přechod pro souřadnice X.
+*pXPřechod*<br/>
+Ukazatel přechodu pro souřadnice X.
 
-*pYTransition*<br/>
-Ukazatel na přechod pro vaši koordinaci.
+*pYPřechod*<br/>
+Ukazatel přechodu pro souřadnici Y.
 
 ### <a name="remarks"></a>Poznámky
 
-Voláním této funkce, které chcete přidat zadaného přechody do interní seznamu přechody použít u proměnné animace pro X a Y. Při přidání přechody jsou nejsou okamžitě použity a uložené ve vnitřním seznamu. Jsou použity přechody (přidané do scénáře pro konkrétní hodnotu) při volání CAnimationController::AnimateGroup. Pokud není nutné použít s přechodem na jednu z souřadnice, lze předat hodnotu NULL.
+Volánítéto funkce pro přidání zadaných přechodů do vnitřního seznamu přechodů, které mají být použity pro proměnné animace pro souřadnice X a Y. Když přidáte přechody, nejsou použity okamžitě a uloženy v interním seznamu. Přechody jsou použity (přidány do scénáře pro určitou hodnotu) při volání CAnimationController::AnimateGroup. Pokud nepotřebujete použít přechod na jednu z souřadnic, můžete předat hodnotu NULL.
 
-##  <a name="canimationpoint"></a>  CAnimationPoint::CAnimationPoint
+## <a name="canimationpointcanimationpoint"></a><a name="canimationpoint"></a>CAnimationPoint::CAnimationPoint
 
-Vytvoří objekt canimationpoint –.
+Vytvoří cAnimationPoint objekt.
 
 ```
 CAnimationPoint();
@@ -136,25 +136,25 @@ CAnimationPoint(
 
 ### <a name="parameters"></a>Parametry
 
-*ptDefault*<br/>
-Určuje souřadnice bodu výchozí.
+*ptVýchozí*<br/>
+Určuje souřadnice výchozího bodu.
 
-*nGroupID*<br/>
+*nID skupiny*<br/>
 Určuje ID skupiny.
 
-*nObjectID*<br/>
+*nID objektu*<br/>
 Určuje ID objektu.
 
 *dwUserData*<br/>
-Určuje data definovaná uživatelem.
+Určuje uživatelem definovaná data.
 
 ### <a name="remarks"></a>Poznámky
 
-Vytvoří objekt canimationpoint – s výchozí vlastností: výchozí bod, ID skupiny a ID objektu jsou nastaveny na hodnotu 0.
+Vytvoří objekt CAnimationPoint s výchozími vlastnostmi: souřadnice výchozího bodu, ID skupiny a ID objektu jsou nastaveny na 0.
 
-##  <a name="getanimationvariablelist"></a>  CAnimationPoint::GetAnimationVariableList
+## <a name="canimationpointgetanimationvariablelist"></a><a name="getanimationvariablelist"></a>CAnimationPoint::GetAnimationVariableList
 
-Umístí animace zapouzdřené proměnné do seznamu.
+Vloží zapouzdřené proměnné animace do seznamu.
 
 ```
 virtual void GetAnimationVariableList(CList<CAnimationVariable*, CAnimationVariable*>& lst);
@@ -162,12 +162,12 @@ virtual void GetAnimationVariableList(CList<CAnimationVariable*, CAnimationVaria
 
 ### <a name="parameters"></a>Parametry
 
-*lst*<br/>
-Pokud funkce vrátí, obsahuje odkazy na dva objekty canimationvariable – představující souřadnice X a Y.
+*Lst*<br/>
+Když funkce vrátí, obsahuje ukazatele na dva CAnimationVariable objekty představující Souřadnice X a Y.
 
-##  <a name="getdefaultvalue"></a>  CAnimationPoint::GetDefaultValue
+## <a name="canimationpointgetdefaultvalue"></a><a name="getdefaultvalue"></a>CAnimationPoint::GetDefaultValue
 
-Vrátí výchozí hodnoty pro X a Y.
+Vrátí výchozí hodnoty pro souřadnice X a Y.
 
 ```
 CPoint GetDefaultValue();
@@ -175,13 +175,13 @@ CPoint GetDefaultValue();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Výchozí hodnota obsahující bod.
+Bod obsahující výchozí hodnotu.
 
 ### <a name="remarks"></a>Poznámky
 
-Voláním této funkce načtete výchozí hodnotu, která byla dříve nastavil konstruktor nebo SetDefaultValue.
+Voláním této funkce načtěte výchozí hodnotu, která byla dříve nastavena konstruktorem nebo hodnotou SetDefaultValue.
 
-##  <a name="getvalue"></a>  CAnimationPoint::GetValue
+## <a name="canimationpointgetvalue"></a><a name="getvalue"></a>CAnimationPoint::GetValue
 
 Vrátí aktuální hodnotu.
 
@@ -191,20 +191,20 @@ BOOL GetValue(CPoint& ptValue);
 
 ### <a name="parameters"></a>Parametry
 
-*ptValue*<br/>
-Výstup. Po návratu metody obsahuje aktuální hodnotu.
+*pValue*<br/>
+Výstup. Obsahuje aktuální hodnotu při této metodě vrátí.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE, pokud aktuální hodnota byla úspěšně získána; v opačném případě FALSE.
+PRAVDA, pokud byla aktuální hodnota úspěšně načtena; jinak FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Volání této funkce načtete aktuální hodnotu animace bodu. Pokud tato metoda selže nebo základní COM objekty x a Y souřadnice nejsou inicializované, ptValue obsahuje výchozí hodnotu, která byla dříve nastavena v konstruktoru nebo SetDefaultValue.
+Volání této funkce načíst aktuální hodnotu bodu animace. Pokud tato metoda selže nebo základní objekty COM pro souřadnice X a Y nebyly inicializovány, hodnota ptValue obsahuje výchozí hodnotu, která byla dříve nastavena v konstruktoru nebo hodnotou SetDefaultValue.
 
-##  <a name="getx"></a>  CAnimationPoint::GetX
+## <a name="canimationpointgetx"></a><a name="getx"></a>CAnimationPoint::GetX
 
-Poskytuje přístup k canimationvariable – pro souřadnici X.
+Poskytuje přístup k CAnimationVariable pro souřadnice X.
 
 ```
 CAnimationVariable& GetX();
@@ -212,15 +212,15 @@ CAnimationVariable& GetX();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Odkaz na zapouzdřený canimationvariable – představující X koordinaci.
+Odkaz na zapouzdřené CAnimationVariable představující Souřadnice X.
 
 ### <a name="remarks"></a>Poznámky
 
-Můžete volat tuto metodu za účelem získání přímý přístup k podkladové canimationvariable – představující X koordinaci.
+Tuto metodu můžete volat, chcete-li získat přímý přístup k podkladové proměnné CAnimationVariable představující souřadnice X.
 
-##  <a name="gety"></a>  CAnimationPoint::GetY
+## <a name="canimationpointgety"></a><a name="gety"></a>CanimationPoint::Gety
 
-Poskytuje přístup k canimationvariable – souřadnici Y.
+Poskytuje přístup k CAnimationVariable pro souřadnice Y.
 
 ```
 CAnimationVariable& GetY();
@@ -228,31 +228,31 @@ CAnimationVariable& GetY();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Odkaz na zapouzdřený canimationvariable – představující souřadnici Y.
+Odkaz na zapouzdřené CAnimationVariable představující Souřadnice Y.
 
 ### <a name="remarks"></a>Poznámky
 
-Můžete volat tuto metodu za účelem získání přímý přístup k podkladové canimationvariable – představující souřadnici Y.
+Tuto metodu můžete volat, chcete-li získat přímý přístup k podkladové proměnné CAnimationVariable představující souřadnice Y.
 
-##  <a name="m_xvalue"></a>  CAnimationPoint::m_xValue
+## <a name="canimationpointm_xvalue"></a><a name="m_xvalue"></a>CAnimationPoint::m_xValue
 
-Proměnné animace zapouzdřený objekt, který představuje X souřadnice bodu animace.
+Zapouzdřená proměnná animace, která představuje souřadnici X bodu animace.
 
 ```
 CAnimationVariable m_xValue;
 ```
 
-##  <a name="m_yvalue"></a>  CAnimationPoint::m_yValue
+## <a name="canimationpointm_yvalue"></a><a name="m_yvalue"></a>CAnimationPoint::m_yValue
 
-Proměnné animace zapouzdřený objekt, který představuje Souřadnice Y bodu animace.
+Zapouzdřená proměnná animace, která představuje souřadnici Y bodu animace.
 
 ```
 CAnimationVariable m_yValue;
 ```
 
-##  <a name="operator_cpoint"></a>  CAnimationPoint::operator CPoint
+## <a name="canimationpointoperator-cpoint"></a><a name="operator_cpoint"></a>CAnimationPoint::operátor CPoint
 
-Převede canimationpoint – CPoint.
+Převede CAnimationPoint na CPoint.
 
 ```
 operator CPoint();
@@ -260,15 +260,15 @@ operator CPoint();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Aktuální hodnota canimationpoint – jako CPoint.
+Aktuální hodnota CAnimationPoint jako CPoint.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce volá interně GetValue. Pokud GetValue z nějakého důvodu selže, vrácená bodu bude obsahovat výchozí hodnoty pro X a Y.
+Tato funkce interně volá GetValue. Pokud GetValue z nějakého důvodu selže, vrátí bod bude obsahovat výchozí hodnoty pro Souřadnice X a Y.
 
-##  <a name="operator_eq"></a>  CAnimationPoint::operator =
+## <a name="canimationpointoperator"></a><a name="operator_eq"></a>CAnimationPoint::operátor=
 
-Přiřadí ptSrc canimationpoint –.
+Přiřadí ptSrc CAnimationPoint.
 
 ```
 void operator=(const CPoint& ptSrc);
@@ -277,13 +277,13 @@ void operator=(const CPoint& ptSrc);
 ### <a name="parameters"></a>Parametry
 
 *ptSrc*<br/>
-Odkazuje na CPoint nebo bodu.
+Odkazuje na CPoint nebo POINT.
 
 ### <a name="remarks"></a>Poznámky
 
-Přiřadí ptSrc canimationpoint –. Doporučuje se, že před jeho začátkem animace, vzhledem k tomu tento operátor volá SetDefaultValue, která znovu vytvoří základní COM objekty pro souřadnice X a Y Pokud byl vytvořen. Pokud odebíráte tento objekt animace na události (ValueChanged nebo IntegerValueChanged), musíte znovu zapnout. Tyto události.
+Přiřadí ptSrc CAnimationPoint. Doporučuje se to provést před zahájením animace, protože tento operátor volá SetDefaultValue, který znovu vytvoří základní objekty COM pro souřadnice X a Y, pokud byly vytvořeny. Pokud jste se přihlásili k odběru tohoto objektu animace k událostem (ValueChanged nebo IntegerValueChanged), je třeba tyto události znovu povolit.
 
-##  <a name="setdefaultvalue"></a>  CAnimationPoint::SetDefaultValue
+## <a name="canimationpointsetdefaultvalue"></a><a name="setdefaultvalue"></a>CAnimationPoint::SetDefaultValue
 
 Nastaví výchozí hodnotu.
 
@@ -293,13 +293,13 @@ void SetDefaultValue(const POINT& ptDefault);
 
 ### <a name="parameters"></a>Parametry
 
-*ptDefault*<br/>
-Určuje výchozí hodnotu bodu.
+*ptVýchozí*<br/>
+Určuje výchozí bodovou hodnotu.
 
 ### <a name="remarks"></a>Poznámky
 
-Tuto funkci použijte k nastavení výchozí hodnoty na objekt animace. Této metody přiřadí výchozí hodnoty pro souřadnice X a Y bodu animace. Také obnoví základní objekty modelu COM, pokud byl vytvořen. Pokud odebíráte tento objekt animace na události (ValueChanged nebo IntegerValueChanged), musíte znovu zapnout. Tyto události.
+Pomocí této funkce můžete nastavit výchozí hodnotu na objekt animace. Tato metoda přiřadí výchozí hodnoty souřadnicím X a Y bodu animace. Také znovu vytvoří základní objekty COM, pokud byly vytvořeny. Pokud jste se přihlásili k odběru tohoto objektu animace k událostem (ValueChanged nebo IntegerValueChanged), je třeba tyto události znovu povolit.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Třídy](../../mfc/reference/mfc-classes.md)

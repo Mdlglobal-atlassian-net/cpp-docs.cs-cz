@@ -1,5 +1,5 @@
 ---
-title: 'TN026: DDX a DDV'
+title: 'TN026: Rutiny DDX a DDV'
 ms.date: 06/28/2018
 f1_keywords:
 - DDX
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - TN026
 - DDV (dialog data validation), procedures
 ms.assetid: c2eba87a-4b47-4083-b28b-e2fa77dfb4c4
-ms.openlocfilehash: 89916e60d9677240f2d70e37e9a80e6ad7a76fc3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 711d433b51ca09836f372d09a11f86c28b82cce6
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62305863"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81370336"
 ---
-# <a name="tn026-ddx-and-ddv-routines"></a>TN026: DDX a DDV
+# <a name="tn026-ddx-and-ddv-routines"></a>TN026: Rutiny DDX a DDV
 
 > [!NOTE]
-> Následující Technická poznámka nebyla aktualizována, protože byla poprvé zahrnuta v online dokumentaci. V důsledku toho některé postupy a témata mohou být nesprávné nebo zastaralé. Nejnovější informace se doporučuje vyhledat téma zájmu v dokumentaci online index.
+> Následující technická poznámka nebyla aktualizována od doby, kdy byla poprvé zahrnuta do online dokumentace. V důsledku toho mohou být některé postupy a témata zastaralé nebo nesprávné. Chcete-li získat nejnovější informace, doporučujeme vyhledat téma zájmu v online indexu dokumentace.
 
-Tato poznámka popisuje výměna dat dialogových oken (DDX) a architektura ověření (DDV) dat dialogového okna. Také popisuje, jak psát DDX_ nebo DDV_ procedury a jak můžete rozšířit ClassWizard používat vaše rutiny.
+Tato poznámka popisuje architekturu výměny dat dialogových oken (DDX) a ověření dat dialogových dat (DDV). Také popisuje, jak napsat DDX_ nebo DDV_ postup a jak můžete rozšířit ClassWizard používat rutiny.
 
-## <a name="overview-of-dialog-data-exchange"></a>Přehled výměna dat dialogových oken
+## <a name="overview-of-dialog-data-exchange"></a>Přehled výměny dialogových dat
 
-Všechny funkce dat dialogových oken se provádějí s kódem jazyka C++. Neexistují žádné zvláštní prostředky nebo magic makra. Srdce mechanismu, který je virtuální funkce, která je přepsána v každé třídy dialogového okna, aby se výměna dialogových dat a ověřování. Vždy nachází v tomto formuláři:
+Všechny funkce dialogových dat jsou prováděny s kódem Jazyka C++. Neexistují žádné speciální zdroje nebo magická makra. Srdcem mechanismu je virtuální funkce, která je přepsána v každé třídě dialogu, která provádí výměnu a ověřování dat dialogu. Vždy se nachází v této podobě:
 
 ```cpp
 void CMyDialog::DoDataExchange(CDataExchange* pDX)
@@ -39,91 +39,91 @@ void CMyDialog::DoDataExchange(CDataExchange* pDX)
 }
 ```
 
-Afx – komentáře zvláštní formát umožňují ClassWizard k vyhledání a úpravy kódu v rámci této funkce. Kód, který není kompatibilní s ClassWizard by měl umístit mimo speciální formátu komentáře.
+Speciální formát Komentáře AFX umožňují ClassWizard najít a upravit kód v rámci této funkce. Kód, který není kompatibilní s ClassWizard by měl být umístěn mimo komentář speciální formát.
 
-Ve výše uvedeném příkladu \<data_exchange_function_call > je ve formátu:
+Ve výše uvedeném příkladu \<je data_exchange_function_call> ve formě:
 
 ```cpp
 DDX_Custom(pDX, nIDC, field);
 ```
 
-a \<data_validation_function_call > je volitelná a má formát:
+a \<data_validation_function_call> je nepovinné a je ve formě:
 
 ```cpp
 DDV_Custom(pDX, field, ...);
 ```
 
-Více než jednu dvojici DDX_/DDV_ může být součástí každého `DoDataExchange` funkce.
+Do každé `DoDataExchange` funkce může být zahrnuto více než jeden pár DDX_/DDV_.
 
-Seznam všech rutiny výměny dat dialogového okna a rutiny ověřování dat dialogového okna je k dispozici s knihovnou MFC naleznete v tématu "afxdd_.h".
+Seznam všech rutin výměny dialogových dat a rutin ověřování dat dialogových oken, které jsou součástí knihovny MFC, naleznete v tématu afxdd_.h.
 
-Data dialogového okna je přesně to: data členů v `CMyDialog` třídy. Už se neukládají v struktury nebo žádné další obdoby.
+Dialogová data je právě to: data členů ve `CMyDialog` třídě. Není uložen ve struktuře nebo něco podobného.
 
 ## <a name="notes"></a>Poznámky
 
-I když tento "dat dialogových oken" říkáme, všechny funkce jsou k dispozici v libovolné třídě odvozené z `CWnd` a nejsou omezeny pouze dialogy.
+Přestože nazýváme tento "dialog data", všechny funkce `CWnd` jsou k dispozici v jakékoli třídě odvozené z a nejsou omezeny pouze na dialogy.
 
-Počáteční hodnoty dat jsou nastavené v konstruktoru standard C++, obvykle v bloku s `//{{AFX_DATA_INIT` a `//}}AFX_DATA_INIT` komentáře.
+Počáteční hodnoty dat jsou nastaveny ve standardním konstruktoru `//{{AFX_DATA_INIT` C++, obvykle v bloku s a `//}}AFX_DATA_INIT` komentáře.
 
-`CWnd::UpdateData` operace, která provádí inicializace a kolem volání pro zpracování chyb `DoDataExchange`.
+`CWnd::UpdateData`je operace, která provádí inicializaci a `DoDataExchange`zpracování chyb kolem volání .
 
-Můžete volat `CWnd::UpdateData` kdykoli k provedení výměny dat a ověřování. Ve výchozím nastavení `UpdateData`(pravda), se nazývá ve výchozím `CDialog::OnOK` obslužné rutiny a `UpdateData`(FALSE) je ve výchozím názvem `CDialog::OnInitDialog`.
+Můžete kdykoli `CWnd::UpdateData` volat a provádět výměnu a ověřování dat. Ve `UpdateData`výchozím nastavení (TRUE) `CDialog::OnOK` se `UpdateData`nazývá ve výchozí obslužné rutině a (FALSE) je volána ve výchozím nastavení `CDialog::OnInitDialog`.
 
-Rutina DDV_ okamžitě postupujte podle DDX_ rutiny pro daný *pole*.
+Rutina DDV_ by měla okamžitě dodržovat DDX_ rutinu pro *toto pole*.
 
 ## <a name="how-does-it-work"></a>Jak to funguje
 
-Nemusíte pochopit následující, abyste mohli používat dat dialogových oken. Ale pochopení, jak to funguje na pozadí můžete napsat vlastní postup ověření nebo exchange.
+Chcete-li použít data dialogu, nemusíte porozumět následujícím. Pochopení toho, jak to funguje na pozadí, vám však pomůže napsat vlastní postup výměny nebo ověření.
 
-`DoDataExchange` Členská funkce je stejně jako `Serialize` členské funkce – je zodpovědný za získání nebo nastavení dat do a z externích formuláře (ovládací prvky v tomto případě v dialogovém okně) z/do data členů ve třídě. *PDX* parametr je kontext pro provedení výměny dat a je podobný `CArchive` parametr `CObject::Serialize`. *PDX* ( `CDataExchange` objekt) má směr příznak mnohem jako `CArchive` má příznak směru:
+Členská `DoDataExchange` funkce je `Serialize` podobně jako členská funkce - je zodpovědná za získání nebo nastavení dat do/z externího formuláře (v tomto případě ovládacíprvky v dialogu) z/do členských dat ve třídě. Parametr *pDX* je kontext pro výměnu dat a `CArchive` je `CObject::Serialize`podobný parametru . *PDX* `CDataExchange` (objekt) má směr příznak `CArchive` podobně jako má směr příznak:
 
-- Pokud `!m_bSaveAndValidate`, načtěte data stavu do ovládacích prvků.
+- Pokud `!m_bSaveAndValidate`, načtěte stav dat do ovládacích prvků.
 
-- Pokud `m_bSaveAndValidate`, pak nastavte stav dat z ovládacích prvků.
+- Pokud `m_bSaveAndValidate`, nastavte stav dat z ovládacích prvků.
 
-Ověření dochází pouze při `m_bSaveAndValidate` nastavena. Hodnota `m_bSaveAndValidate` určuje parametr typu BOOL na `CWnd::UpdateData`.
+K ověření dochází `m_bSaveAndValidate` pouze v případě, že je nastavena. Hodnota `m_bSaveAndValidate` je určena parametrem BOOL `CWnd::UpdateData`do .
 
-Existují tři další zajímavé `CDataExchange` členy:
+Existují tři další `CDataExchange` zajímaví členové:
 
-- `m_pDlgWnd`: V okně (obvykle dialogového okna), který obsahuje ovládací prvky. To je zabránit volající globální funkce DDX_ a DDV_ s k předání 'this' na každá rutina DDX/DDV.
+- `m_pDlgWnd`: Okno (obvykle dialogové okno), které obsahuje ovládací prvky. To to je zabránit volající min. DDX_ a DDV_ globální funkce museli předat 'to' do každé rutiny DDX/DDV.
 
-- `PrepareCtrl`, a `PrepareEditCtrl`: Připraví ovládací prvek dialogového okna pro data systému exchange. Uloží popisovač tohoto ovládacího prvku nastavení fokusu, pokud se ověřování nezdaří. `PrepareCtrl` se používá pro jiné ovládací prvky a `PrepareEditCtrl` se používá pro ovládacích prvcích pro úpravy.
+- `PrepareCtrl`, `PrepareEditCtrl`a : Připraví ovládací prvek dialogového okna pro výměnu dat. Ukládá popisovač tohoto ovládacího prvku pro nastavení fokusu, pokud se ověření nezdaří. `PrepareCtrl`se používá pro neupravované ovládací prvky a `PrepareEditCtrl` používá se pro ovládací prvky pro úpravy.
 
-- `Fail`: Volá se po přepnutí do okna se zprávou upozornění uživateli vstupních chyb. Tato rutina obnoví fokus na poslední ovládací prvek (poslední volání `PrepareCtrl` nebo `PrepareEditCtrl`) a vyvolají výjimku. Tato členská funkce může být volána z DDX_ a DDV_ rutiny.
+- `Fail`: Voláno po zobrazení okna se zprávou upozorňujícího uživatele na vstupní chybu. Tato rutina obnoví fokus na poslední ovládací `PrepareCtrl` `PrepareEditCtrl`prvek (poslední volání nebo ) a vyvolá výjimku. Tato členská funkce může být volána z DDX_ i DDV_ rutiny.
 
-## <a name="user-extensions"></a>Rozšíření uživatele
+## <a name="user-extensions"></a>Uživatelská rozšíření
 
-K rozšíření výchozího mechanismu DDX/DDV několika způsoby. Můžete:
+Existuje několik způsobů, jak rozšířit výchozí mechanismus DDX/DDV. Můžete:
 
-- Přidáte nové datové typy.
+- Přidejte nové datové typy.
 
     ```cpp
     CTime
     ```
 
-- Přidáte nové postupy exchange (DDX_).
+- Přidejte nové postupy výměny (DDX_).
 
     ```cpp
     void PASCAL DDX_Time(CDataExchange* pDX, int nIDC, CTime& tm);
     ```
 
-- Přidáte nové ověřovací procedury (DDV_).
+- Přidejte nové ověřovací postupy (DDV_).
 
     ```cpp
     void PASCAL DDV_TimeFuture(CDataExchange* pDX, CTime tm, BOOL bFuture);
     // make sure time is in the future or past
     ```
 
-- Libovolné výrazy předejte postupy ověření.
+- Předajte libovolné výrazy ověřovacím postupům.
 
     ```cpp
     DDV_MinMax(pDX, age, 0, m_maxAge);
     ```
 
     > [!NOTE]
-    > Takové libovolné výrazy nelze upravit pomocí ClassWizard a proto by měl být přesunut mimo speciální formátu komentáře (/ / {{AFX_DATA_MAP(CMyClass)).
+    > Tyto libovolné výrazy nelze upravovat ClassWizard a proto by měly být přesunuty mimo komentář speciální formát (/{{AFX_DATA_MAP(CMyClass)).
 
-Máte `DoDialogExchange` členská funkce patří podmíněné výrazy nebo jakékoli jiné platné příkazy C++ s míchán výměna a ověřování volání funkce.
+Mají `DoDialogExchange` členské funkce zahrnout podmínky nebo jiné platné příkazy Jazyka C++ s propletené volání exchange a validační funkce.
 
 ```cpp
 //{{AFX_DATA_MAP(CMyClass)
@@ -137,100 +137,100 @@ else
 ```
 
 > [!NOTE]
-> Jak uvádíme výš, takový kód nelze upravit pomocí ClassWizard a měli použít pouze vně speciální formátu komentáře.
+> Jak je uvedeno výše, takový kód nelze upravit ClassWizard a by měl být použit pouze mimo komentář speciální formát.
 
-## <a name="classwizard-support"></a>Podpora ClassWizard
+## <a name="classwizard-support"></a>Podpora průvodce třídami
 
-ClassWizard podporuje podmnožinu DDX/DDV přizpůsobení, neboť umožňuje integrovat vlastní DDX_ a DDV_ rutin do uživatelského rozhraní ClassWizard. To je jenom náklady na výhodné, pokud budete chtít znovu použít konkrétní DDX a DDV rutiny v projektu nebo v mnoha projektů.
+ClassWizard podporuje podmnožinu ddx/DDV přizpůsobení tím, že umožňuje integrovat vlastní DDX_ a DDV_ rutiny do uživatelského rozhraní ClassWizard. To je výhodné pouze pro nákladově výhodné, pokud plánujete znovu použít konkrétní rutiny DDX a DDV v projektu nebo v mnoha projektech.
 
-K tomu dojde ke speciální položky ve DDX. CLW (předchozí verze aplikace Visual C++ uložené tyto informace v APSTUDIO. INI) nebo ve vašem projektu. CLW souboru. Speciální položky může být zadán buď v [obecné informace o] části vašeho projektu. CLW souboru nebo v části [ExtraDDX] DDX. Soubor CLW \Program Files\Microsoft Visual Studio\Visual C++adresáři \bin. Budete muset vytvořit DDX. CLW soubor, pokud ještě neexistuje. Pokud budete chtít použít vlastní rutiny DDX_/DDV_ pouze v určitých projektu, přidejte položky do oddílu [obecné informace o] vašeho projektu. CLW souboru místo toho. Pokud máte v plánu pro použití rutin na mnoho projektů, přidáte položky do oddílu [ExtraDDX] DDX. CLW.
+Chcete-li to provést, jsou v DDX provedeny speciální položky. CLW (předchozí verze visual c++ uložené tyto informace v APSTUDIO. INI) nebo v projektu . CLW. Speciální položky lze zadat buď do oddílu [Obecné informace] projektu . CLW nebo v části [ExtraDDX] ddx. Soubor CLW v adresáři \Program Files\Microsoft Visual Studio\Visual C++\bin. Možná budete muset vytvořit DDX. CLW, pokud ještě neexistuje. Pokud plánujete používat vlastní rutiny DDX_/DDV_ pouze v určitém projektu, přidejte položky do oddílu [Obecné informace] projektu . CLW soubor místo. Pokud plánujete používat rutiny v mnoha projektech, přidejte položky do sekce [ExtraDDX] ddx. Clw.
 
-Je obecný formát tyto speciální položky:
+Obecný formát těchto speciálních položek je:
 
-> ExtraDDXCount=*n*
+> ExtraDDXCount =*n*
 
-kde *n* je počet ExtraDDX? řádky a postup, formuláře
+kde *n* je počet ExtraDDX? řádky, které chcete sledovat, formuláře
 
-> ExtraDDX?=*keys*; *vb-keys*; *prompt*; *type*; *initValue*; *DDX_Proc* [; *DDV_Proc*; *prompt1*; *arg1* [; *prompt2*; *fmt2*]]
+> ExtraDDX?=*klávesy*; *vb-klíče*; *výzva*; *typ*; *initValue*; *DDX_Proc* [; *DDV_Proc*; *výzva1*; *arg1* [; *výzva2*; *fmt2*]]
 
-kde? číslo 1 - *n* určující, jaký typ DDX v seznamu, který definuje.
+Kde? je číslo 1 - *n* označující, který typ DDX v seznamu, který je definován.
 
-Každé pole je oddělené znakem ";". Pole a jejich účel jsou popsané níže.
+Každé pole je odděleno znakem ';'. Pole a jejich účel jsou popsány níže.
 
 - *keys*
 
-  Seznam jednotlivých znaků určující, pro který dialog řídí tento typ proměnné je povolený.
+  Seznam jednotlivých znaků označující, pro které dialogové okno ovládá tento typ proměnné je povolen.
 
-  |Znak|Povolené ovládacího prvku|
+  |Znak|Povolené řízení|
   |-|-|
-  E | Upravit
-  C | dvoustavový zaškrtávací políčko
-  c | TRI stav zaškrtávací políčko
+  E | upravit
+  C | dvoustavové zaškrtávací políčko
+  c | třístavové zaškrtávací políčko
   R | první přepínací tlačítko ve skupině
-  L | pole se seznamem nonsorted
+  L | seznam bez řazení
   l | seřazený seznam
-  M | pole se seznamem (s upravovaná položka)
-  N | nonsorted rozevíracího seznamu
-  n | seřazené rozevíracího seznamu
-  1 | Pokud vložení DDX měla být přidána do hlavní seznam (výchozí je přidat do funkce tail) obecně používá se pro rutiny DDX přenos vlastnost 'Control'.
+  M | pole se seznamem (s položkou pro úpravy)
+  Ne | neseřazený seznam přetažení
+  n | seřazený seznam přetažení
+  1 | pokud ddx vložit by měl y být přidány do hlavy seznamu (výchozí je přidat do ocasu) To se obecně používá pro rutiny DDX, které přenášejí 'Control' vlastnost.
 
-- *vb-keys*
+- *vb-klíče*
 
-  Toto pole se používá pouze v rámci produktu 16 bitů pro ovládací prvky VBX (ovládací prvky VBX nejsou podporovány v produktu 32 bitů)
+  Toto pole se používá pouze v 16bitovém produktu pro ovládací prvky VBX (ovládací prvky VBX nejsou v 32bitovém produktu podporovány)
 
-- *prompt*
+- *Výzva*
 
-  Řetězec, který se umístí v poli se seznamem vlastností (žádné uvozovky)
+  Řetězec, který chcete umístit do pole se seznamem Vlastnosti (bez uvozovek)
 
-- *type*
+- *Typ*
 
-  Jeden identifikátor pro typ generoval v hlavičkovém souboru. V našem příkladu s DDX_Time to se nastavuje na CTime.
+  Jediný identifikátor pro typ, který má být vyzařován v souboru záhlaví. V našem příkladu výše s DDX_Time by to bylo nastaveno na CTime.
 
-- *vb-keys*
+- *vb-klíče*
 
-  Nepoužívá se v této verzi a by měla být prázdná
+  Nepoužívá se v této verzi a měl by být vždy prázdný
 
 - *initValue*
 
-  Počáteční hodnota – 0 nebo prázdné. Pokud je pole prázdné, bude žádné inicializačního řádku napsané v části //{{AFX_DATA_INIT implementační soubor. Prázdná položka by měla sloužit pro objekty jazyka C++ (například `CString`, `CTime`, a tak dále), které mají konstruktory, které zajistit správné inicializace.
+  Počáteční hodnota — 0 nebo prázdné. Pokud je prázdný, nebude v části //{{AFX_DATA_INIT souboru implementace zapsán žádný řádek inicializace. Pro objekty jazyka C++ (například `CString` `CTime`, a tak dále), které mají konstruktory, které zaručují správnou inicializaci, by měla být použita prázdná položka.
 
 - *DDX_Proc*
 
-  Jeden identifikátor pro proceduru DDX_. C++ Název funkce musí začínat znakem "DDX_", ale neobsahují "DDX_" v \<DDX_Proc > identifikátor. V příkladu výše \<DDX_Proc > identifikátor bude čas. Když ClassWizard zapíše volání funkce v souboru implementace {{oddíl AFX_DATA_MAP přidá tento název k DDX_, tedy přicházejících u DDX_Time.
+  Jednotný identifikátor pro DDX_ proceduru. Název funkce Jazyka C++ musí začínat "DDX_", ale \<do identifikátoru DDX_Proc> nezahrnujte "DDX_". Ve výše uvedeném \<příkladu by DDX_Proc> identifikátorem čas. Když ClassWizard zapíše volání funkce do souboru implementace v {{AFX_DATA_MAP části, připojí tento název k DDX_, a tím přichází na DDX_Time.
 
 - *Komentář*
 
-  Komentář se má zobrazit v dialogovém okně pro proměnnou s této DDX. Umístěte vás tady a obvykle poskytují něco jakýkoli text, který popisuje operace, která provádí DDX/DDV pár.
+  Komentář, který se zobrazí v dialogu pro proměnnou s tímto DDX. Místo jakýkoli text, který chcete sem, a obvykle poskytují něco, co popisuje operaci prováděnou ddx/ DDV dvojice.
 
 - *DDV_Proc*
 
-  DDV část položka je volitelná. Ne všechny rutiny DDX mít odpovídající DDV rutiny. Často je pohodlnější zahrnout fázi ověřování jako nedílné součásti přenosu. To platí často při vaší rutinu DDV nevyžaduje žádné parametry, protože ClassWizard nepodporuje rutiny DDV bez parametrů.
+  Část položky DDV je nepovinná. Ne všechny rutiny DDX mají odpovídající rutiny DDV. Často je vhodnější zahrnout fázi ověření jako nedílnou součást přenosu. To je často případ, kdy vaše rutina DDV nevyžaduje žádné parametry, protože ClassWizard nepodporuje rutiny DDV bez jakýchkoli parametrů.
 
-- *arg*
+- *Arg*
 
-  Jeden identifikátor DDV_ postup. C++ Název funkce musí začínat znakem "DDV_", ale nezahrnete "DDX_" \<DDX_Proc > identifikátor.
+  Jednotný identifikátor pro DDV_ postup. Název funkce Jazyka C++ musí začínat "DDV_", ale \<do identifikátoru DDX_Proc> neobsahuje "DDX_".
 
-  *arg* následuje args DDV 1 nebo 2:
+  *arg* následuje 1 nebo 2 DDV args:
 
-   - *promptN*
+  - *promptN*
 
-      Řetězec umístit nad upravit položku (& pro akcelerátor).
+      Řetězec umístit nad položku úprav (s & pro akcelerátor).
 
-   - *fmtN*
+  - *fmtN*
 
-      Znak formátu pro typ arg, jeden z:
+      Formát znaku pro typ arg, jeden z:
 
-      |Znak|Type|
+      |Znak|Typ|
       |-|-|
       |d | int|
       |u | unsigned int|
-      |D | Long int (to znamená, long)|
-      |U | Long bez znaménka (DWORD)|
+      |D | long int (to znamená, že dlouhé)|
+      |U | dlouho nepodepsané (to znamená DWORD)|
       |f | float|
       |F | double|
-      |s | odkazy řetězců|
+      |s | řetězec|
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Technické poznámky podle čísel](../mfc/technical-notes-by-number.md)<br/>
 [Technické poznámky podle kategorií](../mfc/technical-notes-by-category.md)

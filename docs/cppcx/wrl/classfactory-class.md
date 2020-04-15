@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Microsoft::WRL::ClassFactory::QueryInterface method
 - Microsoft::WRL::ClassFactory::Release method
 ms.assetid: f13e6bce-722b-4f18-b7cf-3ffa6345c1db
-ms.openlocfilehash: ccc1c43e8c68053a773883c25704cdea086bd0b1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3b738cc8f439e6653162ab99b0a26e87aa8fee36
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398729"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372670"
 ---
 # <a name="classfactory-class"></a>ClassFactory – třída
 
@@ -53,19 +53,19 @@ class ClassFactory :
 ### <a name="parameters"></a>Parametry
 
 *I0*<br/>
-ID nultého rozhraní.
+Nultý rozhraní.
 
 *I1*<br/>
 První rozhraní.
 
 *I2*<br/>
-Druhé síťové rozhraní.
+Druhé rozhraní.
 
 ## <a name="remarks"></a>Poznámky
 
-Využívat `ClassFactory` poskytují implementace uživatelem definovaný objekt pro vytváření.
+Využijte `ClassFactory` k poskytování uživatelem definované implementace výroby.
 
-Následující programovací model popisuje způsob použití [implementuje](implements-structure.md) struktura určit více než tři rozhraní na objekt pro vytváření tříd.
+Následující programovací vzor ukazuje, jak použít [Implements](implements-structure.md) struktury k určení více než tři rozhraní na factory třídy.
 
 `struct MyFactory : ClassFactory<Implements<I1, I2, I3>, I4, I5>`
 
@@ -73,18 +73,18 @@ Následující programovací model popisuje způsob použití [implementuje](imp
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-Název                                        | Popis
+Name (Název)                                        | Popis
 ------------------------------------------- | -----------
 [ClassFactory::ClassFactory](#classfactory) |
 
 ### <a name="public-methods"></a>Veřejné metody
 
-Název                                            | Popis
+Name (Název)                                            | Popis
 ----------------------------------------------- | ----------------------------------------------------------------------------------------------------------------
-[ClassFactory::AddRef](#addref)                 | Zvýší počet odkazů pro aktuální `ClassFactory` objektu.
-[ClassFactory::LockServer](#lockserver)         | Zvýší nebo sníží počet podkladových objektů, které jsou sledovány aktuální `ClassFactory` objektu.
-[ClassFactory::QueryInterface](#queryinterface) | Načte ukazatel na rozhraní určené typem parametru.
-[ClassFactory::Release](#release)               | Sníží počet odkaz pro aktuální `ClassFactory` objektu.
+[ClassFactory::Addref](#addref)                 | Zintáží počet odkazů `ClassFactory` pro aktuální objekt.
+[ClassFactory::LockServer](#lockserver)         | Zkružní nebo sníží počet podkladových objektů, které jsou `ClassFactory` sledovány aktuální objekt.
+[ClassFactory::QueryInterface](#queryinterface) | Načte ukazatel na rozhraní určené parametrem.
+[ClassFactory::Vydání](#release)               | Sníží počet odkazů pro aktuální `ClassFactory` objekt.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -112,11 +112,11 @@ Název                                            | Popis
 
 **Záhlaví:** module.h
 
-**Namespace:** Microsoft::WRL
+**Obor názvů:** Microsoft::WRL
 
-## <a name="addref"></a>ClassFactory::addref –
+## <a name="classfactoryaddref"></a><a name="addref"></a>ClassFactory::Addref
 
-Zvýší počet odkazů pro aktuální `ClassFactory` objektu.
+Zintáží počet odkazů `ClassFactory` pro aktuální objekt.
 
 ```cpp
 STDMETHOD_(
@@ -127,17 +127,17 @@ STDMETHOD_(
 
 ### <a name="return-value"></a>Návratová hodnota
 
-S_OK v případě úspěchu; v opačném případě HRESULT s popisem chyby.
+S_OK v případě úspěchu; jinak HRESULT, který popisuje selhání.
 
-## <a name="classfactory"></a>ClassFactory::ClassFactory
+## <a name="classfactoryclassfactory"></a><a name="classfactory"></a>ClassFactory::ClassFactory
 
 ```cpp
 WRL_NOTHROW ClassFactory();
 ```
 
-## <a name="lockserver"></a>ClassFactory::LockServer
+## <a name="classfactorylockserver"></a><a name="lockserver"></a>ClassFactory::LockServer
 
-Zvýší nebo sníží počet podkladových objektů, které jsou sledovány aktuální `ClassFactory` objektu.
+Zkružní nebo sníží počet podkladových objektů, které jsou `ClassFactory` sledovány aktuální objekt.
 
 ```cpp
 STDMETHOD(
@@ -147,20 +147,20 @@ STDMETHOD(
 
 ### <a name="parameters"></a>Parametry
 
-*fLock*<br/>
-**Hodnota TRUE** se zvýší počet sledovaných objektů. **false** se sníží počet sledovaných objektů.
+*Stádo*<br/>
+**true** to increment the number of tracked objects. **false** zmenšit počet sledovaných objektů.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-S_OK v případě úspěchu; v opačném případě E_FAIL.
+S_OK v případě úspěchu; jinak E_FAIL.
 
 ### <a name="remarks"></a>Poznámky
 
-`ClassFactory` uchovává informace o objekty v základní instance [modulu](module-class.md) třídy.
+`ClassFactory`sleduje objekty v základní instanci třídy [Module.](module-class.md)
 
-## <a name="queryinterface"></a>ClassFactory::QueryInterface
+## <a name="classfactoryqueryinterface"></a><a name="queryinterface"></a>ClassFactory::QueryInterface
 
-Načte ukazatel na rozhraní určené typem parametru.
+Načte ukazatel na rozhraní určené parametrem.
 
 ```cpp
 STDMETHOD(
@@ -170,19 +170,19 @@ STDMETHOD(
 
 ### <a name="parameters"></a>Parametry
 
-*riid*<br/>
-Identifikátor rozhraní.
+*riid řekl:*<br/>
+ID rozhraní.
 
-*ppvObject*<br/>
-Když tato operace dokončí, ukazatel na rozhraní určené typem parametru *riid*.
+*ppvObjekt*<br/>
+Po dokončení této operace ukazatel na rozhraní určené parametrem *riid*.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-S_OK v případě úspěchu; v opačném případě HRESULT s popisem chyby.
+S_OK v případě úspěchu; jinak HRESULT, který popisuje selhání.
 
-## <a name="release"></a>ClassFactory::Release –
+## <a name="classfactoryrelease"></a><a name="release"></a>ClassFactory::Vydání
 
-Sníží počet odkaz pro aktuální `ClassFactory` objektu.
+Sníží počet odkazů pro aktuální `ClassFactory` objekt.
 
 ```cpp
 STDMETHOD_(
@@ -193,4 +193,4 @@ STDMETHOD_(
 
 ### <a name="return-value"></a>Návratová hodnota
 
-S_OK v případě úspěchu; v opačném případě HRESULT s popisem chyby.
+S_OK v případě úspěchu; jinak HRESULT, který popisuje selhání.

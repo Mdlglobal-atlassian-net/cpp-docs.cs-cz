@@ -1,6 +1,6 @@
 ---
-title: CComPtr – třída
-description: Referenční příručka ke třídě ATL C++ (Microsoft Active Template Library) CComPtr.
+title: Třída CComPtr
+description: Referenční příručka ke třídě CComPtr (Microsoft C++ Active Template Library).
 ms.date: 02/07/2020
 f1_keywords:
 - CComPtr
@@ -9,16 +9,16 @@ f1_keywords:
 helpviewer_keywords:
 - CComPtr class
 ms.assetid: 22d9ea8d-ed66-4c34-940f-141db11e83bd
-ms.openlocfilehash: 74a12b460f55a782fa2747b02f7d00287786fae6
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 855466225db2672755658dcbbc9a266d09e0e7be
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77127402"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81327529"
 ---
-# <a name="ccomptr-class"></a>CComPtr – třída
+# <a name="ccomptr-class"></a>Třída CComPtr
 
-Třída inteligentního ukazatele pro správu ukazatelů rozhraní modelu COM.
+Inteligentní třída ukazatele pro správu ukazatelů rozhraní COM.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -29,34 +29,34 @@ class CComPtr
 
 ### <a name="parameters"></a>Parametry
 
-*Š*<br/>
+*T*<br/>
 Rozhraní COM určující typ ukazatele, který má být uložen.
 
 ## <a name="members"></a>Členové
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CComPtr:: CComPtr](#ccomptr)|Konstruktor|
+|[CComPtr::CComPtr](#ccomptr)|Konstruktor|
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CComPtr:: operator =](#operator_eq)|Přiřadí ukazatel na ukazatel na člen.|
+|[CComPtr::operátor =](#operator_eq)|Přiřadí ukazatel k ukazateli člena.|
 
 ## <a name="remarks"></a>Poznámky
 
-Knihovna ATL používá ke správě ukazatelů rozhraní modelu COM `CComPtr` a [CComQIPtr](../../atl/reference/ccomqiptr-class.md) . Obě jsou odvozeny z [CComPtrBase](../../atl/reference/ccomptrbase-class.md)a obě dělají automatické počítání odkazů.
+Knihovna `CComPtr` ATL používá a [CComQIPtr](../../atl/reference/ccomqiptr-class.md) ke správě ukazatelů rozhraní COM. Oba jsou odvozeny z [CComPtrBase](../../atl/reference/ccomptrbase-class.md)a oba provést automatické počítání odkazů.
 
-Třídy `CComPtr` a [CComQIPtr](../../atl/reference/ccomqiptr-class.md) můžou zabránit nevracení paměti tím, že provádí automatické počítání odkazů.  Následující funkce oba dělají stejné logické operace. Druhá verze však může být méně náchylná k chybám, protože používá třídu `CComPtr`:
+Třídy `CComPtr` [CComQIPtr](../../atl/reference/ccomqiptr-class.md) mohou pomoci eliminovat nevracení paměti prováděním automatického počítání odkazů.  Následující funkce obou provést stejné logické operace. Druhá verze však může být méně náchylné k `CComPtr` chybám, protože používá třídu:
 
 [!code-cpp[NVC_ATL_Utilities#130](../../atl/codesnippet/cpp/ccomptr-class_1.cpp)]
 
 [!code-cpp[NVC_ATL_Utilities#131](../../atl/codesnippet/cpp/ccomptr-class_2.cpp)]
 
-V sestavení ladění, propojte knihovny Atlsd. lib pro trasování kódu.
+V sestaveních ladění odkaz na soubor atlsd.lib pro trasování kódu.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -66,9 +66,9 @@ V sestavení ladění, propojte knihovny Atlsd. lib pro trasování kódu.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlbase. h
+**Záhlaví:** atlbase.h
 
-## <a name="ccomptr"></a>CComPtr:: CComPtr
+## <a name="ccomptrccomptr"></a><a name="ccomptr"></a>CComPtr::CComPtr
 
 Konstruktor
 
@@ -80,19 +80,19 @@ CComPtr (const CComPtr<T>& lp) throw ();
 
 ### <a name="parameters"></a>Parametry
 
-*úloh*<br/>
+*Lp*<br/>
 Slouží k inicializaci ukazatele rozhraní.
 
-*Š*<br/>
-Rozhraní modelu COM.
+*T*<br/>
+Rozhraní COM.
 
 ### <a name="remarks"></a>Poznámky
 
-Konstruktory, které přijímají volání argumentu `AddRef` na *LP*, pokud se nejedná o ukazatel s hodnotou null. Vlastní objekt, který není null, získá `Release` volání na zničení objektu CComPtr, nebo pokud je nový objekt přiřazen objektu CComPtr.
+Konstruktory, které přijmout `AddRef` volání argument *na lp*, pokud není ukazatel null. Objekt, který není ve `Release` vlastnictví null, zavolá při zničení objektu CComPtr nebo pokud je objektu CComPtr přiřazen nový objekt.
 
-## <a name="operator_eq"></a>CComPtr:: operator =
+## <a name="ccomptroperator-"></a><a name="operator_eq"></a>CComPtr::operátor =
 
-Operátor přiřazení
+Operátor přiřazení.
 
 ```cpp
 T* operator= (T* lp) throw ();
@@ -101,7 +101,7 @@ T* operator= (const CComPtr<T>& lp) throw ();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí ukazatel na aktualizovaný objekt `CComPtr`.
+Vrátí ukazatel na `CComPtr` aktualizovaný objekt.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -109,6 +109,6 @@ Tato operace AddRefs nový objekt a uvolní existující objekt, pokud existuje.
 
 ## <a name="see-also"></a>Viz také
 
-[CComPtr:: CComPtr](#ccomptr)<br/>
-[CComQIPtr:: CComQIPtr](../../atl/reference/ccomqiptr-class.md#ccomqiptr)<br/>
+[CComPtr::CComPtr](#ccomptr)<br/>
+[CComQIPtr::CComQIPtr](../../atl/reference/ccomqiptr-class.md#ccomqiptr)<br/>
 [Přehled třídy](../../atl/atl-class-overview.md)

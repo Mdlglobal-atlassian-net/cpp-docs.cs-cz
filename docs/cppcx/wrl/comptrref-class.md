@@ -25,16 +25,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::ComPtrRef::operator void** operator
 - Microsoft::WRL::Details::ComPtrRef::ReleaseAndGetAddressOf method
 ms.assetid: d6bdfd20-e977-45b4-9ac1-1b8efbdb77de
-ms.openlocfilehash: 281e02d85e70a84530e6980d31669a73091448d5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: df9ded817227547493c04035e0abc3d948e24495
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398664"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372626"
 ---
 # <a name="comptrref-class"></a>ComPtrRef – třída
 
-Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.
+Podporuje infrastrukturu WRL a není určen pro použití přímo z vašeho kódu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -46,37 +46,37 @@ class ComPtrRef : public ComPtrRefBase<T>;
 ### <a name="parameters"></a>Parametry
 
 *T*<br/>
-A [ComPtr\<T >](comptr-class.md) typ nebo z ní odvozené, nikoli pouze rozhraní, které jsou reprezentována `ComPtr`.
+Typ>nebo typ odvozený od [společnosti\<ComPtr T,](comptr-class.md) `ComPtr`nikoli pouze rozhraní reprezentované rozhraním .
 
 ## <a name="remarks"></a>Poznámky
 
-Představuje odkaz na objekt typu `ComPtr<T>`.
+Představuje odkaz na objekt `ComPtr<T>`typu .
 
 ## <a name="members"></a>Členové
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-Název                               | Popis
+Name (Název)                               | Popis
 ---------------------------------- | -------------------------------------------------------------------------------------------------------------
-[Comptrref::comptrref –](#comptrref) | Inicializuje novou instanci třídy `ComPtrRef` třídy z zadaný ukazatel na jiný `ComPtrRef` objektu.
+[ComPtrRef::ComPtrRef](#comptrref) | Inicializuje novou instanci `ComPtrRef` třídy ze `ComPtrRef` zadaného ukazatele na jiný objekt.
 
 ### <a name="public-methods"></a>Veřejné metody
 
-Název                                                         | Popis
+Name (Název)                                                         | Popis
 ------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------
-[ComPtrRef::GetAddressOf](#getaddressof)                     | Načte adresu ukazatel rozhraní reprezentované aktuální `ComPtrRef` objektu.
-[ComPtrRef::ReleaseAndGetAddressOf](#releaseandgetaddressof) | Odstraní aktuální `ComPtrRef` objekt a vrátí ukazatel na ukazatel rozhraní, která je reprezentována `ComPtrRef` objektu.
+[ComPtrRef::GetAddressOf](#getaddressof)                     | Načte adresu ukazatele na rozhraní reprezentované aktuálním `ComPtrRef` objektem.
+[ComPtrRef::ReleaseAndGetAddressOf](#releaseandgetaddressof) | Odstraní aktuální `ComPtrRef` objekt a vrátí ukazatel na ukazatel na rozhraní, které `ComPtrRef` bylo reprezentováno objektem.
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-Název                                                                     | Popis
+Name (Název)                                                                     | Popis
 ------------------------------------------------------------------------ | -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-[ComPtrRef::operator InterfaceType **](#operator-interfacetype-star-star) | Odstraní aktuální `ComPtrRef` objekt a vrátí ukazatel na ukazatel rozhraní, která je reprezentována `ComPtrRef` objektu.
-[ComPtrRef::operator T *](#operator-t-star)                               | Vrátí hodnotu [ptr_ –](comptrrefbase-class.md#ptr) aktuálního objektu comptrref – datový člen.
-[ComPtrRef::operator void **](#operator-void-star-star)                   | Odstraní aktuální `ComPtrRef` objektu, přetypování ukazatel na rozhraní, která je reprezentována `ComPtrRef` objektu jako ukazatel na ukazatel- `void`a vrátí ukazatel přetypování.
-[ComPtrRef::operator *](#operator-star)                                   | Načte ukazatel na rozhraní reprezentované aktuální `ComPtrRef` objektu.
-[ComPtrRef::operator ==](#operator-equality)                              | Určuje, zda dva `ComPtrRef` objekty rovnají.
-[ComPtrRef::operator! =](#operator-inequality)                            | Určuje, zda dva `ComPtrRef` objekty nejsou stejné.
+[ComPtrRef::operátor InterfaceType**](#operator-interfacetype-star-star) | Odstraní aktuální `ComPtrRef` objekt a vrátí ukazatel na ukazatel na rozhraní, které `ComPtrRef` bylo reprezentováno objektem.
+[ComPtrRef::operátor T*](#operator-t-star)                               | Vrátí hodnotu [datového](comptrrefbase-class.md#ptr) člena ptr_ aktuálního objektu ComPtrRef.
+[ComPtrRef::operátor void**](#operator-void-star-star)                   | Odstraní aktuální `ComPtrRef` objekt, převrátí ukazatel na rozhraní, které `ComPtrRef` bylo reprezentováno objektem `void`jako ukazatel na ukazatel na , a potom vrátí ukazatel přetypádka.
+[ComPtrRef::operátor*](#operator-star)                                   | Načte ukazatel na rozhraní reprezentované aktuálním `ComPtrRef` objektem.
+[ComPtrRef::operátor==](#operator-equality)                              | Označuje, `ComPtrRef` zda jsou dva objekty stejné.
+[ComPtrRef::operátor!=](#operator-inequality)                            | Označuje, `ComPtrRef` zda dva objekty nejsou stejné.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -88,11 +88,11 @@ Název                                                                     | Pop
 
 **Záhlaví:** client.h
 
-**Namespace:** Microsoft::WRL::Details
+**Obor názvů:** Microsoft::WRL::Details
 
-## <a name="comptrref"></a>Comptrref::comptrref –
+## <a name="comptrrefcomptrref"></a><a name="comptrref"></a>ComPtrRef::ComPtrRef
 
-Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.
+Podporuje infrastrukturu WRL a není určen pro použití přímo z vašeho kódu.
 
 ```cpp
 ComPtrRef(
@@ -102,16 +102,16 @@ ComPtrRef(
 
 ### <a name="parameters"></a>Parametry
 
-*ptr*<br/>
-Zadaná hodnota jiného `ComPtrRef` objektu.
+*Ptr*<br/>
+Základní hodnota jiného `ComPtrRef` objektu.
 
 ### <a name="remarks"></a>Poznámky
 
-Inicializuje novou instanci třídy `ComPtrRef` třídy z zadaný ukazatel na jiný `ComPtrRef` objektu.
+Inicializuje novou instanci `ComPtrRef` třídy ze `ComPtrRef` zadaného ukazatele na jiný objekt.
 
-## <a name="getaddressof"></a>ComPtrRef::GetAddressOf
+## <a name="comptrrefgetaddressof"></a><a name="getaddressof"></a>ComPtrRef::GetAddressOf
 
-Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.
+Podporuje infrastrukturu WRL a není určen pro použití přímo z vašeho kódu.
 
 ```cpp
 InterfaceType* const * GetAddressOf() const;
@@ -119,15 +119,15 @@ InterfaceType* const * GetAddressOf() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Adresa ukazatele na rozhraní reprezentované aktuální `ComPtrRef` objektu.
+Adresa ukazatele na rozhraní reprezentované aktuálním `ComPtrRef` objektem.
 
 ### <a name="remarks"></a>Poznámky
 
-Načte adresu ukazatel rozhraní reprezentované aktuální `ComPtrRef` objektu.
+Načte adresu ukazatele na rozhraní reprezentované aktuálním `ComPtrRef` objektem.
 
-## <a name="operator-equality"></a>ComPtrRef::operator ==
+## <a name="comptrrefoperator"></a><a name="operator-equality"></a>ComPtrRef::operátor==
 
-Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.
+Podporuje infrastrukturu WRL a není určen pro použití přímo z vašeho kódu.
 
 ```cpp
 bool operator==(
@@ -158,27 +158,27 @@ bool operator==(
 
 ### <a name="parameters"></a>Parametry
 
-*a*<br/>
-Odkaz na `ComPtrRef` objektu.
+*A*<br/>
+Odkaz na `ComPtrRef` objekt.
 
-*b*<br/>
-Odkaz na jiný `ComPtrRef` objekt nebo ukazatel na anonymního typu (`void*`).
+*B*<br/>
+Odkaz na `ComPtrRef` jiný objekt nebo ukazatel na`void*`anonymní typ ( ).
 
 ### <a name="return-value"></a>Návratová hodnota
 
-První operátor výnosy **true** Pokud objekt *a* rovná objektu *b*; v opačném případě **false**.
+První operátor dává **true,** pokud je objekt *a* rovna objektu *b*; jinak **false**.
 
-Druhý a třetí operátory yield **true** Pokud objekt *a* rovná **nullptr**; v opačném případě **false**.
+Druhý a třetí operátor poskytují **hodnotu true,** pokud se objekt *a* rovná **hodnotě nullptr**; jinak **false**.
 
-Čtvrtý a pátý operátory yield **true** Pokud objekt *a* rovná objektu *b*; v opačném případě **false**.
+Čtvrtý a pátý operátor yield **true,** pokud je objekt *a* rovna objektu *b*; jinak **false**.
 
 ### <a name="remarks"></a>Poznámky
 
-Určuje, zda dva `ComPtrRef` objekty rovnají.
+Označuje, `ComPtrRef` zda jsou dva objekty stejné.
 
-## <a name="operator-inequality"></a>ComPtrRef::operator! =
+## <a name="comptrrefoperator"></a><a name="operator-inequality"></a>ComPtrRef::operátor!=
 
-Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.
+Podporuje infrastrukturu WRL a není určen pro použití přímo z vašeho kódu.
 
 ```cpp
 bool operator!=(
@@ -209,27 +209,27 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parametry
 
-*a*<br/>
-Odkaz na `ComPtrRef` objektu.
+*A*<br/>
+Odkaz na `ComPtrRef` objekt.
 
-*b*<br/>
-Odkaz na jiný `ComPtrRef` objekt nebo ukazatel na anonymní objekt (`void*`).
+*B*<br/>
+Odkaz na `ComPtrRef` jiný objekt nebo ukazatel na`void*`anonymní objekt ( ).
 
 ### <a name="return-value"></a>Návratová hodnota
 
-První operátor výnosy **true** Pokud objekt *a* není roven objektu *b*; v opačném případě **false**.
+První operátor dává **true,** pokud objekt *a* není rovna *objektu b*; jinak **false**.
 
-Druhý a třetí operátory yield **true** Pokud objekt *a* není roven **nullptr**; v opačném případě **false**.
+Druhý a třetí operátor poskytují **hodnotu true,** pokud se objekt *a* nerovná **hodnotě nullptr**; jinak **false**.
 
-Čtvrtý a pátý operátory yield **true** Pokud objekt *a* není roven objektu *b*; v opačném případě **false**.
+Čtvrtý a pátý operátor poskytují **hodnotu true,** pokud se objekt *a* nerovná objektu *b*; jinak **false**.
 
 ### <a name="remarks"></a>Poznámky
 
-Určuje, zda dva `ComPtrRef` objekty nejsou stejné.
+Označuje, `ComPtrRef` zda dva objekty nejsou stejné.
 
-## <a name="operator-interfacetype-star-star"></a>ComPtrRef::operator InterfaceType **
+## <a name="comptrrefoperator-interfacetype"></a><a name="operator-interfacetype-star-star"></a>ComPtrRef::operátor InterfaceType**
 
-Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.
+Podporuje infrastrukturu WRL a není určen pro použití přímo z vašeho kódu.
 
 ```cpp
 operator InterfaceType**();
@@ -237,11 +237,11 @@ operator InterfaceType**();
 
 ### <a name="remarks"></a>Poznámky
 
-Odstraní aktuální `ComPtrRef` objekt a vrátí ukazatel na ukazatel rozhraní, která je reprezentována `ComPtrRef` objektu.
+Odstraní aktuální `ComPtrRef` objekt a vrátí ukazatel na ukazatel na rozhraní, které `ComPtrRef` bylo reprezentováno objektem.
 
-## <a name="operator-star"></a>ComPtrRef::operator *
+## <a name="comptrrefoperator"></a><a name="operator-star"></a>ComPtrRef::operátor*
 
-Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.
+Podporuje infrastrukturu WRL a není určen pro použití přímo z vašeho kódu.
 
 ```cpp
 InterfaceType* operator *();
@@ -249,15 +249,15 @@ InterfaceType* operator *();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na rozhraní reprezentované aktuální `ComPtrRef` objektu.
+Ukazatel na rozhraní reprezentované aktuálním `ComPtrRef` objektem.
 
 ### <a name="remarks"></a>Poznámky
 
-Načte ukazatel na rozhraní reprezentované aktuální `ComPtrRef` objektu.
+Načte ukazatel na rozhraní reprezentované aktuálním `ComPtrRef` objektem.
 
-## <a name="operator-t-star"></a>ComPtrRef::operator T *
+## <a name="comptrrefoperator-t"></a><a name="operator-t-star"></a>ComPtrRef::operátor T*
 
-Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.
+Podporuje infrastrukturu WRL a není určen pro použití přímo z vašeho kódu.
 
 ```cpp
 operator T*();
@@ -265,11 +265,11 @@ operator T*();
 
 ### <a name="remarks"></a>Poznámky
 
-Vrátí hodnotu [ptr_ –](comptrrefbase-class.md#ptr) datový člen aktuálního `ComPtrRef` objektu.
+Vrátí hodnotu [datového](comptrrefbase-class.md#ptr) prvku ptr_ `ComPtrRef` aktuálního objektu.
 
-## <a name="operator-void-star-star"></a>ComPtrRef::operator void\*\*
+## <a name="comptrrefoperator-void"></a><a name="operator-void-star-star"></a>ComPtrRef::operátor void\*\*
 
-Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.
+Podporuje infrastrukturu WRL a není určen pro použití přímo z vašeho kódu.
 
 ```cpp
 operator void**() const;
@@ -277,11 +277,11 @@ operator void**() const;
 
 ### <a name="remarks"></a>Poznámky
 
-Odstraní aktuální `ComPtrRef` objektu, přetypování ukazatel na rozhraní, která je reprezentována `ComPtrRef` objektu jako ukazatel na ukazatel- `void`a vrátí ukazatel přetypování.
+Odstraní aktuální `ComPtrRef` objekt, převrátí ukazatel na rozhraní, které `ComPtrRef` bylo reprezentováno objektem `void`jako ukazatel na ukazatel na , a potom vrátí ukazatel přetypádka.
 
-## <a name="releaseandgetaddressof"></a>Comptrref::releaseandgetaddressof –
+## <a name="comptrrefreleaseandgetaddressof"></a><a name="releaseandgetaddressof"></a>ComPtrRef::ReleaseAndGetAddressOf
 
-Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.
+Podporuje infrastrukturu WRL a není určen pro použití přímo z vašeho kódu.
 
 ```cpp
 InterfaceType** ReleaseAndGetAddressOf();
@@ -289,8 +289,8 @@ InterfaceType** ReleaseAndGetAddressOf();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel rozhraní, která je reprezentována pomocí odstraněným `ComPtrRef` objektu.
+Ukazatel na rozhraní, které bylo `ComPtrRef` reprezentováno odstraněným objektem.
 
 ### <a name="remarks"></a>Poznámky
 
-Odstraní aktuální `ComPtrRef` objekt a vrátí ukazatel na ukazatel rozhraní, která je reprezentována `ComPtrRef` objektu.
+Odstraní aktuální `ComPtrRef` objekt a vrátí ukazatel na ukazatel na rozhraní, které `ComPtrRef` bylo reprezentováno objektem.

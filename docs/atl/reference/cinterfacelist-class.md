@@ -1,5 +1,5 @@
 ---
-title: Cinterfacelist – třída
+title: Třída CInterfaceList
 ms.date: 11/04/2016
 f1_keywords:
 - CInterfaceList
@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CInterfaceList class
 ms.assetid: 2077764d-25e5-4b3d-96c8-08a287bbcd25
-ms.openlocfilehash: e740d891e279bb29eeef898de52698dc3f04fc67
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0a7fd781c63e4ea084cf078e49fc9efb9cfa2d85
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62258634"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81326782"
 ---
-# <a name="cinterfacelist-class"></a>Cinterfacelist – třída
+# <a name="cinterfacelist-class"></a>Třída CInterfaceList
 
-Tato třída poskytuje metody, které jsou užitečné při vytváření seznamu ukazatele rozhraní modelu COM.
+Tato třída poskytuje metody užitečné při vytváření seznamu ukazatelů rozhraní COM.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -31,28 +31,28 @@ class CInterfaceList
 #### <a name="parameters"></a>Parametry
 
 *I*<br/>
-Rozhraní modelu COM zadání typu ukazatel na Uložit.
+Rozhraní COM určující typ ukazatele, který má být uložen.
 
 *piid*<br/>
-Ukazatel na IID *můžu*.
+Ukazatel na IID *I*.
 
 ## <a name="members"></a>Členové
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CInterfaceList::CInterfaceList](#cinterfacelist)|Konstruktor pro seznamu rozhraní.|
+|[CInterfaceList::CInterfaceList](#cinterfacelist)|Konstruktor pro seznam rozhraní.|
 
 ## <a name="remarks"></a>Poznámky
 
-Tato třída poskytuje konstruktor a odvozené metody pro vytvoření seznamu ukazatele rozhraní modelu COM. Použití [cinterfacearray –](../../atl/reference/cinterfacearray-class.md) když pole je povinné.
+Tato třída poskytuje konstruktor a odvozené metody pro vytvoření seznamu ukazatelů rozhraní COM. [CInterfaceArray](../../atl/reference/cinterfacearray-class.md) použijte v případě, že je vyžadováno pole.
 
-Další informace najdete v tématu [ATL – třídy kolekce](../../atl/atl-collection-classes.md).
+Další informace naleznete v tématu [třídy kolekce klíčů ATL](../../atl/atl-collection-classes.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[CAtlList](../../atl/reference/catllist-class.md)
+[Seznam CAtlList](../../atl/reference/catllist-class.md)
 
 `CInterfaceList`
 
@@ -60,9 +60,9 @@ Další informace najdete v tématu [ATL – třídy kolekce](../../atl/atl-coll
 
 **Záhlaví:** atlcoll.h
 
-##  <a name="cinterfacelist"></a>  CInterfaceList::CInterfaceList
+## <a name="cinterfacelistcinterfacelist"></a><a name="cinterfacelist"></a>CInterfaceList::CInterfaceList
 
-Konstruktor pro seznamu rozhraní.
+Konstruktor pro seznam rozhraní.
 
 ```
 CInterfaceList(UINT nBlockSize = 10) throw();
@@ -71,15 +71,15 @@ CInterfaceList(UINT nBlockSize = 10) throw();
 ### <a name="parameters"></a>Parametry
 
 *nBlockSize*<br/>
-Velikost bloku, výchozí hodnota je 10.
+Velikost bloku s výchozí hodnotou 10.
 
 ### <a name="remarks"></a>Poznámky
 
-Velikost bloku je míra množství paměti přidělené, pokud je nutné použít nový prvek. Bloky o větší velikosti snížit volání rutiny přidělení paměti, ale spotřebovávají více prostředků.
+Velikost bloku je míra množství paměti přidělené při je požadováno nový prvek. Větší velikosti bloků snižují volání rutiny přidělení paměti, ale používají více prostředků.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[CAtlList – třída](../../atl/reference/catllist-class.md)<br/>
-[CComQIPtr – třída](../../atl/reference/ccomqiptr-class.md)<br/>
-[CComQIPtrElementTraits – třída](../../atl/reference/ccomqiptrelementtraits-class.md)<br/>
-[Přehled tříd](../../atl/atl-class-overview.md)
+[Třída CAtlList](../../atl/reference/catllist-class.md)<br/>
+[Třída CComQIPtr](../../atl/reference/ccomqiptr-class.md)<br/>
+[Třída CComQIPtrElementTraits](../../atl/reference/ccomqiptrelementtraits-class.md)<br/>
+[Přehled třídy](../../atl/atl-class-overview.md)

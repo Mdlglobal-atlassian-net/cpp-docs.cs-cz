@@ -1,5 +1,5 @@
 ---
-title: Csimplearrayequalhelperfalse – třída
+title: Třída CSimpleArrayEqualHelperFalse
 ms.date: 11/04/2016
 f1_keywords:
 - CSimpleArrayEqualHelperFalse
@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CSimpleArrayEqualHelperFalse class
 ms.assetid: 6918af6f-d23d-49eb-8482-c44272f5ffeb
-ms.openlocfilehash: 35207fdcbffc0e0367d86682b5f731eef617d761
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5eca3145d64895e34b599fbf83834af142b65973
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62277952"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81330889"
 ---
-# <a name="csimplearrayequalhelperfalse-class"></a>Csimplearrayequalhelperfalse – třída
+# <a name="csimplearrayequalhelperfalse-class"></a>Třída CSimpleArrayEqualHelperFalse
 
-Tato třída je pomocné rutiny pro [csimplearray –](../../atl/reference/csimplearray-class.md) třídy.
+Tato třída je pomocníkem pro třídu [CSimpleArray.](../../atl/reference/csimplearray-class.md)
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -29,25 +29,25 @@ class CSimpleArrayEqualHelperFalse
 #### <a name="parameters"></a>Parametry
 
 *T*<br/>
-Odvozené třídy.
+Odvozená třída.
 
 ## <a name="members"></a>Členové
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
 |[CSimpleArrayEqualHelperFalse::IsEqual](#isequal)|(Statické) Vrátí hodnotu false.|
 
 ## <a name="remarks"></a>Poznámky
 
-Tato třída vlastností je doplněk k `CSimpleArray` třídy. IT vždy vrátí hodnotu false a kromě toho bude volat `ATLASSERT` s argumentem false, pokud se na ni stále odkazuje. V situacích, kde není dostatečně definovány test rovnosti, tato třída umožňuje pole obsahující prvky, aby správně fungovat pro většinu metod ale selhání způsobem jasně definovaných pro metody, které jsou závislé na porovnání například [csimplearray –:: Najít](../../atl/reference/csimplearray-class.md#find).
+Tato třída vlastností je `CSimpleArray` doplňkem třídy. Vždy vrátí false a navíc bude `ATLASSERT` volat s argumentem false, pokud je někdy odkazováno. V situacích, kdy test rovnosti není dostatečně definován, tato třída umožňuje pole obsahující prvky pracovat správně pro většinu metod, ale selhat v dobře definovaným způsobem pro metody, které závisí na porovnání, jako je [Například CSimpleArray::Find](../../atl/reference/csimplearray-class.md#find).
 
 ## <a name="requirements"></a>Požadavky
 
 **Záhlaví:** atlsimpcoll.h
 
-##  <a name="isequal"></a>  CSimpleArrayEqualHelperFalse::IsEqual
+## <a name="csimplearrayequalhelperfalseisequal"></a><a name="isequal"></a>CSimpleArrayEqualHelperFalse::IsEqual
 
 Vrátí hodnotu false.
 
@@ -61,9 +61,9 @@ Vrátí hodnotu false.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda vždy vrátí hodnotu false a bude volat `ATLASSERT` s argumentem false, pokud odkazuje. Účelem `CSimpleArrayEqualHelperFalse::IsEqual` metodou je vynutit metod pomocí porovnávání selhání způsobem jasně definované při rovnosti testy nebyly definovány odpovídajícím způsobem.
+Tato metoda vždy vrátí false `ATLASSERT` a bude volat s argumentem false,pokud odkazuje. Účelem `CSimpleArrayEqualHelperFalse::IsEqual` je vynutit metody pomocí porovnání k selhání v dobře definovaným způsobem, pokud nebyly dostatečně definovány testy rovnosti.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[CSimpleArrayEqualHelper – třída](../../atl/reference/csimplearrayequalhelper-class.md)<br/>
-[Přehled tříd](../../atl/atl-class-overview.md)
+[Třída CSimpleArrayEqualHelper](../../atl/reference/csimplearrayequalhelper-class.md)<br/>
+[Přehled třídy](../../atl/atl-class-overview.md)

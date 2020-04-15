@@ -7,46 +7,46 @@ helpviewer_keywords:
 - printing [MFC], from framework
 - printing [MFC]
 ms.assetid: be465e8d-b0c9-4fc5-9fa8-d10486064f76
-ms.openlocfilehash: e0cd2d6d85cb9820b23495a003068994b13f9c85
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: a46096592c9983d04d2122bfabb56ece9346c4bc
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64339594"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371196"
 ---
 # <a name="printing"></a>Tisk
 
-Microsoft Windows implementuje zobrazení nezávislých na zařízení. V knihovně MFC, to znamená, že stejné volání vykreslování, v `OnDraw` členské funkce třídy zobrazení jsou zodpovědné za vykreslování na displeji a na jiných zařízeních, jako jsou tiskárny. Pro náhled tisku cílové zařízení je simulované tiskový výstup na obrazovce.
+Systém Microsoft Windows implementuje zobrazení nezávislé na zařízení. V knihovně MFC to znamená, že `OnDraw` stejná volání výkresu v členské funkci třídy zobrazení jsou zodpovědná za kreslení na displeji a na jiných zařízeních, jako jsou tiskárny. Pro náhled tisku je cílové zařízení simulovaným výstupem tiskárny na displej.
 
-##  <a name="_core_your_role_in_printing_vs.._the_framework.92.s_role"></a> Vaše Role v tisku a v rámci Role
+## <a name="your-role-in-printing-vs-the-frameworks-role"></a><a name="_core_your_role_in_printing_vs.._the_framework.92.s_role"></a>Vaše role v tisku vs role rozhraní
 
-Zobrazit třídu má následující zodpovědnosti:
+Vaše třída zobrazení má následující povinnosti:
 
-- Informování rozhraní framework jsou počet stránek v dokumentu.
+- Informujte rozhraní, kolik stránek je v dokumentu.
 
-- Když se zobrazí výzva k vytištění zadanou stránku, nakreslete část dokumentu.
+- Po zobrazení vyzvání k vytištění zadané stránky nakreslete tuto část dokumentu.
 
-- Přidělit a uvolnit písem, nebo jiné grafické prostředky rozhraní GDI systému zařízení potřebné pro tisk.
+- Přidělte a nakondat všechna písma nebo jiné prostředky rozhraní grafického zařízení (GDI) potřebné pro tisk.
 
-- V případě potřeby odesílat žádný řídicí kódy potřeba změnit režim tiskárny před tiskem danou stránku, například, chcete-li změnit orientaci tisk na základě na stránku.
+- V případě potřeby odešlete všechny únikové kódy potřebné ke změně režimu tiskárny před tiskem dané stránky, například pro změnu orientace tisku na základě stránky.
 
-Odpovědnosti rozhraní framework jsou následující:
+Odpovědnost rámce je následující:
 
-- Zobrazení **tisk** dialogové okno.
+- Zobrazení **tiskového** dialogového okna.
 
-- Vytvoření [CDC](../mfc/reference/cdc-class.md) objektu tiskárny.
+- Vytvořte objekt [CDC](../mfc/reference/cdc-class.md) pro tiskárnu.
 
-- Volání [zobrazující](../mfc/reference/cdc-class.md#startdoc) a [EndDoc](../mfc/reference/cdc-class.md#enddoc) členských funkcí třídy `CDC` objektu.
+- Volání [StartDoc](../mfc/reference/cdc-class.md#startdoc) a [EndDoc](../mfc/reference/cdc-class.md#enddoc) členské `CDC` funkce objektu.
 
-- Opakovaně volat [StartPage](../mfc/reference/cdc-class.md#startpage) členskou funkci `CDC` objektu, informujte třídu zobrazení na stránce, které by měl vytisknout a volat [EndPage](../mfc/reference/cdc-class.md#endpage) členskou funkci `CDC` objektu.
+- Opakovaně volat [StartPage](../mfc/reference/cdc-class.md#startpage) členské funkce `CDC` objektu, informovat třídu zobrazení, která stránka by měla být `CDC` vytištěna a volání [EndPage](../mfc/reference/cdc-class.md#endpage) členské funkce objektu.
 
-- Volání přepisovatelné funkce v zobrazení ve vhodných chvílích.
+- Volejte overridable funkce v zobrazení ve vhodnou dobu.
 
-Následující články popisují, jak rozhraní framework podporuje tisku a tiskového náhledu:
+Následující články popisují, jak rámec podporuje tisk a náhled:
 
-### <a name="what-do-you-want-to-know-more-about"></a>Co chcete zjistit více informací
+### <a name="what-do-you-want-to-know-more-about"></a>Co chcete vědět více o
 
-- [Jak probíhá výchozí tisk](../mfc/how-default-printing-is-done.md)
+- [Jak se provádí výchozí tisk](../mfc/how-default-printing-is-done.md)
 
 - [Vícestránkové dokumenty](../mfc/multipage-documents.md)
 
@@ -54,8 +54,8 @@ Následující články popisují, jak rozhraní framework podporuje tisku a tis
 
 - [Přidělování prostředků GDI pro tisk](../mfc/allocating-gdi-resources.md)
 
-- [Náhled tisku](../mfc/print-preview-architecture.md)
+- [Náhledu](../mfc/print-preview-architecture.md)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Tisk a náhled tisku](../mfc/printing-and-print-preview.md)

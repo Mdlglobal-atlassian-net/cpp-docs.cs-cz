@@ -1,5 +1,5 @@
 ---
-title: CComSafeDeleteCriticalSection – třída
+title: CComSafeDeleteCriticalSection Třída
 ms.date: 11/04/2016
 f1_keywords:
 - CComSafeDeleteCriticalSection
@@ -12,16 +12,16 @@ f1_keywords:
 helpviewer_keywords:
 - CComSafeDeleteCriticalSection class
 ms.assetid: 4d2932c4-ba8f-48ec-8664-1db8bed01314
-ms.openlocfilehash: da83bc5d0c2ebb79aee07f30069144368169fc26
-ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.openlocfilehash: cb0dc440fc0e79e0023b5fbd6e4ca2345d031d3d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821646"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81327372"
 ---
-# <a name="ccomsafedeletecriticalsection-class"></a>CComSafeDeleteCriticalSection – třída
+# <a name="ccomsafedeletecriticalsection-class"></a>CComSafeDeleteCriticalSection Třída
 
-Tato třída poskytuje metody pro získání a uvolnění vlastnictví objektu kritického oddílu.
+Tato třída poskytuje metody pro získání a uvolnění vlastnictví objektu kritické části.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,44 +33,44 @@ class CComSafeDeleteCriticalSection : public CComCriticalSection
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CComSafeDeleteCriticalSection::CComSafeDeleteCriticalSection](#ccomsafedeletecriticalsection)|Konstruktor|
-|[CComSafeDeleteCriticalSection::~CComSafeDeleteCriticalSection](#dtor)|Destruktor.|
+|[CcomsafeDeleteCriticalSection::CcomsafeDeleteCriticalSection](#ccomsafedeletecriticalsection)|Konstruktor|
+|[CcomSafeDeleteCriticalSection::~ccomSafeDeleteCriticalSection CcomSafeDeleteCriticalSection CcomSafeDeleteCriticalSection CcomSafeDeleteCriticalSection CcomSafeDeleteCriticalSection CcomSafeDeleteCriticalSection Ccom](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CComSafeDeleteCriticalSection:: init](#init)|Vytvoří a inicializuje objekt kritického oddílu.|
-|[CComSafeDeleteCriticalSection::Lock](#lock)|Získá vlastnictví objektu kritické části.|
-|[CComSafeDeleteCriticalSection:: Term](#term)|Uvolní systémové prostředky používané objektem kritické části.|
+|[CComSafeDeleteCriticalSection::Init](#init)|Vytvoří a inicializuje objekt kritického řezu.|
+|[CComSafeDeleteCriticalSection::Zámek](#lock)|Získá vlastnictví objektu kritické části.|
+|[CComSafeDeleteCriticalSection::Termín](#term)|Uvolní systémové prostředky používané objektem kritické části.|
 
-### <a name="data-members"></a>Datové členy
+### <a name="data-members"></a>Členové dat
 
 |||
 |-|-|
-|[m_bInitialized](#m_binitialized)|Označí, zda byl inicializován vnitřní objekt `CRITICAL_SECTION`.|
+|[m_bInitialized](#m_binitialized)|Označí, `CRITICAL_SECTION` zda byl vnitřní objekt inicializován.|
 
 ## <a name="remarks"></a>Poznámky
 
-`CComSafeDeleteCriticalSection` je odvozena od třídy [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md). `CComSafeDeleteCriticalSection` však poskytuje další bezpečnostní mechanismy nad [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md).
+`CComSafeDeleteCriticalSection`pochází z třídy [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md). Poskytuje `CComSafeDeleteCriticalSection` však další bezpečnostní mechanismy než [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md).
 
-Pokud instance `CComSafeDeleteCriticalSection` přechází z oboru nebo je explicitně odstraněna z paměti, základní objekt kritického oddílu se automaticky vyčistí, pokud je stále platný. Metoda [CComSafeDeleteCriticalSection:: Term](#term) se dokončí řádným způsobem, pokud základní objekt kritického oddílu ještě není přidělený nebo už je z paměti uvolněný.
+Pokud instance `CComSafeDeleteCriticalSection` přejde mimo rozsah nebo je explicitně odstraněn z paměti, základní objekt kritické části bude automaticky vyčištěn, pokud je stále platný. Kromě toho [CComSafeDeleteCriticalSection::Term](#term) metoda bude řádně ukončena, pokud základní objekt kritické části ještě nebyla přidělena nebo již byla uvolněna z paměti.
 
-Další informace o pomocných třídách důležitých oddílů najdete v tématu [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md) .
+Další informace o třídách pomocníků kritické části naleznete v části [CComCriticalSection.](../../atl/reference/ccomcriticalsection-class.md)
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)
+[Ccomcriticalsekce](../../atl/reference/ccomcriticalsection-class.md)
 
 `CComSafeDeleteCriticalSection`
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlcore. h
+**Záhlaví:** atlcore.h
 
-##  <a name="ccomsafedeletecriticalsection"></a>CComSafeDeleteCriticalSection::CComSafeDeleteCriticalSection
+## <a name="ccomsafedeletecriticalsectionccomsafedeletecriticalsection"></a><a name="ccomsafedeletecriticalsection"></a>CcomsafeDeleteCriticalSection::CcomsafeDeleteCriticalSection
 
 Konstruktor
 
@@ -80,9 +80,9 @@ CComSafeDeleteCriticalSection();
 
 ### <a name="remarks"></a>Poznámky
 
-Nastaví datový člen [m_bInitialized](#m_binitialized) na hodnotu NEPRAVDA.
+Nastaví datový člen [m_bInitialized](#m_binitialized) na HODNOTU NEPRAVDA.
 
-##  <a name="dtor"></a>CComSafeDeleteCriticalSection:: ~ CComSafeDeleteCriticalSection
+## <a name="ccomsafedeletecriticalsectionccomsafedeletecriticalsection"></a><a name="dtor"></a>CcomSafeDeleteCriticalSection::~ccomSafeDeleteCriticalSection CcomSafeDeleteCriticalSection CcomSafeDeleteCriticalSection CcomSafeDeleteCriticalSection CcomSafeDeleteCriticalSection CcomSafeDeleteCriticalSection Ccom
 
 Destruktor.
 
@@ -92,11 +92,11 @@ Destruktor.
 
 ### <a name="remarks"></a>Poznámky
 
-Uvolní vnitřní `CRITICAL_SECTION` objekt z paměti, pokud je datový člen [m_bInitialized](#m_binitialized) nastaven na hodnotu true.
+Uvolní vnitřní `CRITICAL_SECTION` objekt z paměti, pokud je datový člen [m_bInitialized](#m_binitialized) nastaven na hodnotu TRUE.
 
-##  <a name="init"></a>CComSafeDeleteCriticalSection:: init
+## <a name="ccomsafedeletecriticalsectioninit"></a><a name="init"></a>CComSafeDeleteCriticalSection::Init
 
-Zavolá implementaci základní třídy [init](/visualstudio/debugger/init) a nastaví [m_bInitialized](#m_binitialized) na hodnotu true, pokud bylo úspěšné.
+Volá implementaci základní třídy [Init](/visualstudio/debugger/init) a nastaví [m_bInitialized](#m_binitialized) na HODNOTU TRUE, pokud je úspěšná.
 
 ```
 HRESULT Init() throw();
@@ -104,11 +104,11 @@ HRESULT Init() throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí výsledek [CComCriticalSection:: init](../../atl/reference/ccomcriticalsection-class.md#init).
+Vrátí výsledek [cComCriticalSection::Init](../../atl/reference/ccomcriticalsection-class.md#init).
 
-##  <a name="lock"></a>CComSafeDeleteCriticalSection:: Lock
+## <a name="ccomsafedeletecriticalsectionlock"></a><a name="lock"></a>CComSafeDeleteCriticalSection::Zámek
 
-Volá implementaci [zámku](ccomcriticalsection-class.md#lock)základní třídy.
+Volá implementaci základní třídy [Lock](ccomcriticalsection-class.md#lock).
 
 ```
 HRESULT Lock();
@@ -116,17 +116,17 @@ HRESULT Lock();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí výsledek [CComCriticalSection:: Lock](../../atl/reference/ccomcriticalsection-class.md#lock).
+Vrátí výsledek [cComCriticalSection::Lock](../../atl/reference/ccomcriticalsection-class.md#lock).
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda předpokládá, že datový člen [m_bInitialized](#m_binitialized) je po vstupu nastaven na hodnotu true. Kontrolní výraz je vygenerován v sestavení ladění, není-li tato podmínka splněna.
+Tato metoda předpokládá, že [m_bInitialized](#m_binitialized) datový člen je při zadávání nastaven na hodnotu TRUE. Kontrolní výraz je generován v sestavení ladění, pokud tato podmínka není splněna.
 
-Další informace o chování funkce naleznete v tématu [CComCriticalSection:: Lock](../../atl/reference/ccomcriticalsection-class.md#lock).
+Další informace o chování funkce naleznete v části [CComCriticalSection::Lock](../../atl/reference/ccomcriticalsection-class.md#lock).
 
-##  <a name="m_binitialized"></a>CComSafeDeleteCriticalSection:: m_bInitialized
+## <a name="ccomsafedeletecriticalsectionm_binitialized"></a><a name="m_binitialized"></a>CComSafeDeleteCriticalSection::m_bInitialized
 
-Označí, zda byl inicializován vnitřní objekt `CRITICAL_SECTION`.
+Označí, `CRITICAL_SECTION` zda byl vnitřní objekt inicializován.
 
 ```
 bool m_bInitialized;
@@ -134,11 +134,11 @@ bool m_bInitialized;
 
 ### <a name="remarks"></a>Poznámky
 
-Datový člen `m_bInitialized` se používá ke sledování platnosti podkladového objektu `CRITICAL_SECTION` přidruženého ke třídě [CComSafeDeleteCriticalSection](../../atl/reference/ccomsafedeletecriticalsection-class.md) . Pokud není tento příznak nastaven na hodnotu TRUE, nebude se podkladová `CRITICAL_SECTION` objekt pokoušet o vydání z paměti.
+Datový `m_bInitialized` člen se používá ke sledování `CRITICAL_SECTION` platnosti základního objektu přidruženého ke třídě [CComSafeDeleteCriticalSection.](../../atl/reference/ccomsafedeletecriticalsection-class.md) Základní `CRITICAL_SECTION` objekt nebude pokus o uvolnění z paměti, pokud tento příznak není nastaven na hodnotu TRUE.
 
-##  <a name="term"></a>CComSafeDeleteCriticalSection:: Term
+## <a name="ccomsafedeletecriticalsectionterm"></a><a name="term"></a>CComSafeDeleteCriticalSection::Termín
 
-Volá implementaci základní třídy [CComCriticalSection:: Term](../../atl/reference/ccomcriticalsection-class.md#term) , pokud je objekt interní `CRITICAL_SECTION` platný.
+Volá implementaci základní třídy [CComCriticalSection::Term,](../../atl/reference/ccomcriticalsection-class.md#term) pokud je platný vnitřní `CRITICAL_SECTION` objekt.
 
 ```
 HRESULT Term() throw();
@@ -146,13 +146,13 @@ HRESULT Term() throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí výsledek [CComCriticalSection:: Term](../../atl/reference/ccomcriticalsection-class.md#term)nebo S_OK, pokud [m_bInitialized](#m_binitialized) byl nastaven na hodnotu false po zadání.
+Vrátí výsledek [cComCriticalSection::Term](../../atl/reference/ccomcriticalsection-class.md#term)nebo S_OK pokud [byl m_bInitialized](#m_binitialized) při zadávání nastaven na hodnotu NEPRAVDA.
 
 ### <a name="remarks"></a>Poznámky
 
-Tuto metodu je bezpečné volat i v případě, že vnitřní objekt `CRITICAL_SECTION` není platný. Destruktor této třídy volá tuto metodu, pokud je datový člen [m_bInitialized](#m_binitialized) nastaven na hodnotu true.
+Je bezpečné volat tuto metodu `CRITICAL_SECTION` i v případě, že vnitřní objekt není platný. Destruktor této třídy volá tuto metodu, pokud je datový člen [m_bInitialized](#m_binitialized) nastaven na hodnotu TRUE.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[CComAutoCriticalSection – třída](../../atl/reference/ccomcriticalsection-class.md)<br/>
+[Třída CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)<br/>
 [Přehled třídy](../../atl/atl-class-overview.md)

@@ -1,8 +1,9 @@
 ---
 title: _CIpow
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _CIpow
+- _o__CIpow
 api_location:
 - msvcr100.dll
 - msvcr110.dll
@@ -12,6 +13,7 @@ api_location:
 - msvcrt.dll
 - msvcr90.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -23,16 +25,16 @@ helpviewer_keywords:
 - CIpow intrinsic
 - _CIpow intrinsic
 ms.assetid: 477aaf0c-ac58-4252-89dd-9f3e35d47536
-ms.openlocfilehash: b32d7c550d465052f7c1dcd4a81baab803ec28f0
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 1b0c900fbd9cb3070f7666a3b032ee7e44f9f881
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70940516"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81349422"
 ---
 # <a name="_cipow"></a>_CIpow
 
-Vypočítá *x* umocněnou na výkon *y* na základě horních hodnot v zásobníku.
+Vypočítá *x* umocněnou na sílu *y* na základě nejvyšších hodnot v zásobníku.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -42,15 +44,17 @@ void __cdecl _CIpow();
 
 ## <a name="remarks"></a>Poznámky
 
-Tato verze `pow` funkce má specializovanou konvenci volání, kterou kompilátor rozumí. Zrychluje spouštění, protože brání vygenerování kopií a pomáhá s přidělením registru.
+Tato verze `pow` funkce má specializované konvence volání, které kompilátor rozumí. Urychluje provádění, protože zabraňuje generování kopií a pomáhá s přidělením registru.
 
-Výsledná hodnota je vložena do horní části zásobníku.
+Výsledná hodnota je posunuta do horní části zásobníku.
+
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
 **Platforma:** x86
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Abecední seznam odkazů na funkce](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
 [pow, powf, powl](../c-runtime-library/reference/pow-powf-powl.md)
