@@ -1,6 +1,6 @@
 ---
-title: Struktura FUNCTION_FORCE_INLINEE_DATA
-description: Odkaz C++ na strukturu FUNCTION_FORCE_INLINEE_DATA Build Insights SDK
+title: FUNCTION_FORCE_INLINEE_DATA struktura
+description: C++ Build Insights SDK FUNCTION_FORCE_INLINEE_DATA odkaz na strukturu.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 3d6929f2f16e9b1bd79b7fb8b383b40e031268bf
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: a4781c9157130cb46e92906017af98710f5637b2
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78333697"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81325498"
 ---
-# <a name="function_force_inlinee_data-structure"></a>Struktura FUNCTION_FORCE_INLINEE_DATA
+# <a name="function_force_inlinee_data-structure"></a>FUNCTION_FORCE_INLINEE_DATA struktura
 
 ::: moniker range="<=vs-2015"
 
-Sada C++ SDK pro Build Insights je kompatibilní se sadou Visual Studio 2017 a novější. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek selektor verzí sady Visual Studio pro tento článek na sadu Visual Studio 2017 nebo Visual Studio 2019.
+Sada C++ Build Insights SDK je kompatibilní s Visual Studio 2017 a vyšší. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek pro výběr **verze** sady Visual Studio pro tento článek na Visual Studio 2017 nebo Visual Studio 2019. Nachází se v horní části obsahu na této stránce.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Struktura `FUNCTION_FORCE_INLINEE_DATA` popisuje vynuceně vloženou funkci.
+Struktura `FUNCTION_FORCE_INLINEE_DATA` popisuje funkci vloženou silou.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -42,7 +42,7 @@ typedef struct FUNCTION_FORCE_INLINEE_DATA_TAG
 
 |  |  |
 |--|--|
-| `Name` | Název funkce kódovaný v kódování UTF-8. |
-| `Size` | Velikost funkce, jako počet zprostředkujících instrukcí. |
+| `Name` | Název funkce, kódovaný v UTF-8. |
+| `Size` | Velikost funkce jako počet zprostředkujících pokynů. |
 
 ::: moniker-end

@@ -1,6 +1,6 @@
 ---
-title: Struktura TRACE_INFO_DATA
-description: Odkaz C++ na strukturu TRACE_INFO_DATA Build Insights SDK
+title: TRACE_INFO_DATA struktura
+description: C++ Build Insights SDK TRACE_INFO_DATA odkaz na strukturu.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 04cb5c013bca8879507983d169b38e5af0f1322b
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 70ae17a376f79cad7a669d81e482f551afd0ec62
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78333585"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81325281"
 ---
-# <a name="trace_info_data-structure"></a>Struktura TRACE_INFO_DATA
+# <a name="trace_info_data-structure"></a>TRACE_INFO_DATA struktura
 
 ::: moniker range="<=vs-2015"
 
-Sada C++ SDK pro Build Insights je kompatibilní se sadou Visual Studio 2017 a novější. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek selektor verzí sady Visual Studio pro tento článek na sadu Visual Studio 2017 nebo Visual Studio 2019.
+Sada C++ Build Insights SDK je kompatibilní s Visual Studio 2017 a vyšší. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek pro výběr **verze** sady Visual Studio pro tento článek na Visual Studio 2017 nebo Visual Studio 2019. Nachází se v horní části obsahu na této stránce.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Struktura `TRACE_INFO_DATA` popisuje analýzu nebo přeprotokolování trasování.
+Struktura `TRACE_INFO_DATA` popisuje trasování analyzovány nebo relogged.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -44,13 +44,13 @@ typedef struct TRACE_INFO_DATA_TAG
 
 |  |  |
 |--|--|
-| `LogicalProcessorCount` | Počet logických procesorů v počítači, kde bylo trasování shromážděno. |
-| `TickFrequency` | Počet taktů za sekundu, které se použijí při vyhodnocování doby trvání měřené v taktech. |
-| `StartTimestamp` | Toto pole je nastaveno na hodnotu Tick zachycenou v okamžiku spuštění trasování. |
-| `StopTimestamp` | Toto pole je nastaveno na hodnotu Tick zachycenou v okamžiku, kdy bylo trasování zastaveno. |
+| `LogicalProcessorCount` | Počet logických procesorů v počítači, kde byla trasování shromážděna. |
+| `TickFrequency` | Počet klíšťat za sekundu, které se mají použít při hodnocení doby trvání měřené v klíšťacích. |
+| `StartTimestamp` | Toto pole je nastaveno na hodnotu značky zachycenou v době spuštění trasování. |
+| `StopTimestamp` | Toto pole je nastaveno na hodnotu značky zachycenou v době, kdy bylo trasování zastaveno. |
 
 ## <a name="remarks"></a>Poznámky
 
-Odečíst `StartTimestamp` z `StopTimestamp` a získejte počet tiků uplynulých během celého trasování. Pomocí `TickFrequency` převeďte výslednou hodnotu na časovou jednotku. Příklad, který převádí takty na časové jednotky, naleznete v tématu [EVENT_DATA](event-data-struct.md).
+Odečíst `StartTimestamp` `StopTimestamp` od získat počet klíšťat uplynulběhem celé trasování. Slouží `TickFrequency` k převodu výsledné hodnoty na časovou jednotku. Příklad, který převádí značky na časové jednotky, naleznete [v tématu EVENT_DATA](event-data-struct.md).
 
 ::: moniker-end

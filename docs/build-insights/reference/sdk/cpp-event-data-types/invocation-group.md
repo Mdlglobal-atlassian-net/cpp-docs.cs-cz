@@ -1,6 +1,6 @@
 ---
-title: Třída vyvolání
-description: Referenční C++ dokumentace třídy pro vyvolání sady SDK pro Build Insights
+title: Třída InvocationGroup
+description: C++ Build Insights SDK InvocationGroup odkaz na třídu.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: b9a2bbcd2b7649b9b5703adc08ed41b272e10276
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: ff5a73d5304a21c314c0fc5ce442e0ffc23b28fd
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78333235"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81324695"
 ---
-# <a name="invocationgroup-class"></a>Třída vyvolání
+# <a name="invocationgroup-class"></a>Třída InvocationGroup
 
 ::: moniker range="<=vs-2015"
 
-Sada C++ SDK pro Build Insights je kompatibilní se sadou Visual Studio 2017 a novější. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek selektor verzí sady Visual Studio pro tento článek na sadu Visual Studio 2017 nebo Visual Studio 2019.
+Sada C++ Build Insights SDK je kompatibilní s Visual Studio 2017 a vyšší. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek pro výběr **verze** sady Visual Studio pro tento článek na Visual Studio 2017 nebo Visual Studio 2019. Nachází se v horní části obsahu na této stránce.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Třída `InvocationGroup` se používá s funkcemi [MatchEventStack](../functions/match-event-stack.md) a [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md) . Použijte ji pro spárování skupin, které obsahují kombinaci událostí [kompilátoru](../event-table.md#compiler) a [linkeru](../event-table.md#linker) .
+Třída `InvocationGroup` se používá s [funkcemi MatchEventStack](../functions/match-event-stack.md) a [MatchEventStackInMemberFunction.](../functions/match-event-stack-in-member-function.md) Použijte jej k přizpůsobení skupin obsahujících kombinaci událostí [KOMPILÁTORU](../event-table.md#compiler) a [LINKER.](../event-table.md#linker)
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -39,13 +39,13 @@ public:
 
 ## <a name="members"></a>Členové
 
-Společně s děděnými členy ze své třídy [event\<vyvolání\>](event-group.md) základní třídy třída `InvocationGroup` obsahuje následující členy:
+Spolu s zděděnými členy z základní třídy [Vyvolání eventgroup\<\> ](event-group.md) obsahuje `InvocationGroup` třída následující členy:
 
 ### <a name="constructors"></a>Konstruktory
 
-[Nevolání](#invocation-group)
+[Skupina vyvolání](#invocation-group)
 
-## <a name="invocation-group"></a>Nevolání
+## <a name="invocationgroup"></a><a name="invocation-group"></a>Skupina vyvolání
 
 ```cpp
 InvocationGroup(std::deque<Invocation>&& group);
@@ -53,7 +53,7 @@ InvocationGroup(std::deque<Invocation>&& group);
 
 ### <a name="parameters"></a>Parametry
 
-\ *skupiny*
-Skupina obsahující kombinaci událostí [kompilátoru](../event-table.md#compiler) a [linkeru](../event-table.md#linker) .
+*Skupiny*\
+Skupina obsahující kombinaci [compiler](../event-table.md#compiler) a [LINKER](../event-table.md#linker) události.
 
 ::: moniker-end

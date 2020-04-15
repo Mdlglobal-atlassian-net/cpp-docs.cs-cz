@@ -1,6 +1,6 @@
 ---
-title: BackEndPass – třída
-description: Referenční C++ dokumentace třídy BackEndPass sady SDK pro Build Insights
+title: Třída BackEndPass
+description: C++ Build Insights SDK BackEndPass odkaz na třídu.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: c159fa09b5d8a4156fc6bd886fc36da09a66db73
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 2b4b1a219abdbe418efaab4537f1c6dc9a22afb3
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78333543"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81325243"
 ---
-# <a name="backendpass-class"></a>BackEndPass – třída
+# <a name="backendpass-class"></a>Třída BackEndPass
 
 ::: moniker range="<=vs-2015"
 
-Sada C++ SDK pro Build Insights je kompatibilní se sadou Visual Studio 2017 a novější. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek selektor verzí sady Visual Studio pro tento článek na sadu Visual Studio 2017 nebo Visual Studio 2019.
+Sada C++ Build Insights SDK je kompatibilní s Visual Studio 2017 a vyšší. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek pro výběr **verze** sady Visual Studio pro tento článek na Visual Studio 2017 nebo Visual Studio 2019. Nachází se v horní části obsahu na této stránce.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Třída `BackEndPass` se používá s funkcemi [MatchEvent](../functions/match-event.md), [MatchEventInMemberFunction](../functions/match-event-in-member-function.md), [MatchEventStack](../functions/match-event-stack.md)a [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md) . Použijte ho ke spárování [BACK_END_PASS](../event-table.md#back-end-pass) události.
+Třída `BackEndPass` se používá s funkcemi [MatchEvent](../functions/match-event.md), [MatchEventInMemberFunction](../functions/match-event-in-member-function.md), [MatchEventStack](../functions/match-event-stack.md)a [MatchEventStackInMemberFunction.](../functions/match-event-stack-in-member-function.md) Slouží k tomu, aby odpovídala [události BACK_END_PASS.](../event-table.md#back-end-pass)
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -39,13 +39,13 @@ public:
 
 ## <a name="members"></a>Členové
 
-Společně s děděnými členy ze své základní třídy [CompilerPass](compiler-pass.md) obsahuje Třída `BackEndPass` následující členy:
+Spolu s zděděné členy z jeho `BackEndPass` [CompilerPass](compiler-pass.md) základní třídy, třída obsahuje následující členy:
 
 ### <a name="constructors"></a>Konstruktory
 
-[BackEndPass](#back-end-pass)
+[Backendpass](#back-end-pass)
 
-## <a name="back-end-pass"></a>BackEndPass
+## <a name="backendpass"></a><a name="back-end-pass"></a>Backendpass
 
 ```cpp
 BackEndPass(const RawEvent& event);
@@ -53,7 +53,7 @@ BackEndPass(const RawEvent& event);
 
 ### <a name="parameters"></a>Parametry
 
-\ *události*
-Událost [BACK_END_PASS](../event-table.md#back-end-pass) .
+*Událost*\
+[Událost BACK_END_PASS.](../event-table.md#back-end-pass)
 
 ::: moniker-end

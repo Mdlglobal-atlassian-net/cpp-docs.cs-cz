@@ -1,5 +1,5 @@
 ---
-title: Operátory ukazatelů na členy:. * a-&gt;*
+title: 'Operátory ukazatele na členy: .* a -&gt;*'
 ms.date: 11/04/2016
 f1_keywords:
 - .*
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - expressions [C++], operators
 - ->* operator
 ms.assetid: 2632be3f-1c81-4523-b56c-982a92a68688
-ms.openlocfilehash: 1ff7dd26f36f10948dac42783ad61d16f5feda09
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 2100933bf525f0717978528301049085eaecd4f7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80188334"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81320342"
 ---
-# <a name="pointer-to-member-operators--and--gt"></a>Operátory ukazatelů na členy:. * a-&gt;*
+# <a name="pointer-to-member-operators--and--gt"></a>Operátory ukazatele na členy: .* a -&gt;*
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -29,7 +29,7 @@ expression ->* expression
 
 ## <a name="remarks"></a>Poznámky
 
-Operátory pointer-to-Member,. * a->\*, vrátí hodnotu konkrétního člena třídy pro objekt zadaný na levé straně výrazu.  Pravá strana musí udávat člen třídy.  Následující příklad ukazuje způsob použití těchto operátorů:
+Operátory ukazatele na člen . .* \*a ->vrátí hodnotu určitého člena třídy pro objekt zadaný na levé straně výrazu.  Pravá strana musí udávat člen třídy.  Následující příklad ukazuje způsob použití těchto operátorů:
 
 ```cpp
 // expre_Expressions_with_Pointer_Member_Operators.cpp
@@ -82,11 +82,11 @@ V předchozím příkladu je pomocí ukazatele na člen `pmfn` vyvolána člensk
 
 Binární operátor .* kombinuje svůj první operand, který musí být typu objektu třídy, se svým druhým operandem, který musí být typu ukazatele na člen.
 
-Binární operátor-> * kombinuje svůj první operand, který musí být ukazatelem na objekt typu třídy s jeho druhým operandem, který musí být typu ukazatel na člen.
+Binární operátor ->* kombinuje svůj první operand, který musí být ukazatelem na objekt typu třídy, s jeho druhým operandem, který musí být typu ukazatel na člen.
 
 Ve výrazu obsahujícím operátor .* musí být první operand typu třídy ukazatele zadaného ve druhém operandu, pro nějž musí být první operand zároveň přístupný, nebo přístupného typu jednoznačně odvozeného z dané třídy, pro kterou také musí být přístupný.
 
-Ve výrazu obsahujícím operátor-> * musí být první operand typu "ukazatel na typ třídy" typu zadaného ve druhém operandu, nebo musí být typu jednoznačně odvozen z této třídy.
+Ve výrazu obsahujícím operátor ->* musí být první operand typu "ukazatel na typ třídy" typu určeného v druhém operandu nebo musí být typu jednoznačně odvozeného z této třídy.
 
 ## <a name="example"></a>Příklad
 
@@ -128,10 +128,10 @@ int main() {
 }
 ```
 
-Výsledek operátoru. * nebo->\* operátory na člena je objekt nebo funkce typu zadané v deklaraci ukazatele na člen. V předchozím příkladu je tedy výsledkem výrazu `ADerived.*pmfnFunc1()` ukazatel na funkci vracející typ void. Je-li druhý operand l-hodnotou, je i tento výsledek l-hodnotou.
+Výsledkem .* nebo ->\* ukazatele na členy operátory je objekt nebo funkce typu určeného v deklaraci ukazatele na člen. V předchozím příkladu je tedy výsledkem výrazu `ADerived.*pmfnFunc1()` ukazatel na funkci vracející typ void. Je-li druhý operand l-hodnotou, je i tento výsledek l-hodnotou.
 
 > [!NOTE]
->  Je-li výsledkem jednoho z operátorů ukazatele na člen funkce, lze jej použít pouze jako operand operátoru volání funkce.
+> Je-li výsledkem jednoho z operátorů ukazatele na člen funkce, lze jej použít pouze jako operand operátoru volání funkce.
 
 ## <a name="see-also"></a>Viz také
 

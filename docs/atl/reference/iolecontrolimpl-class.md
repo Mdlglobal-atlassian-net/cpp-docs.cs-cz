@@ -1,5 +1,5 @@
 ---
-title: IOleControlImpl – třída
+title: Třída IOleControlImpl
 ms.date: 11/04/2016
 f1_keywords:
 - IOleControlImpl
@@ -11,19 +11,19 @@ f1_keywords:
 helpviewer_keywords:
 - IOleControlImpl class
 ms.assetid: 5a4255ad-ede4-49ca-ba9a-07c2e919fa85
-ms.openlocfilehash: 3bdb501d8210c98ce982719358564c4937991e12
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 947ec16e91b99cc42cff90abe7df4a5d13576e98
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79417626"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81329612"
 ---
-# <a name="iolecontrolimpl-class"></a>IOleControlImpl – třída
+# <a name="iolecontrolimpl-class"></a>Třída IOleControlImpl
 
-Tato třída poskytuje výchozí implementaci rozhraní `IOleControl` a implementuje `IUnknown`.
+Tato třída poskytuje výchozí `IOleControl` implementaci rozhraní `IUnknown`a implementuje .
 
 > [!IMPORTANT]
->  Tato třída a její členové nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime.
+> Tuto třídu a její členy nelze použít v aplikacích, které se spouštějí v prostředí Windows Runtime.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -34,25 +34,25 @@ class IOleControlImpl
 
 #### <a name="parameters"></a>Parametry
 
-*Š*<br/>
-Vaše třída odvozená od `IOleControlImpl`.
+*T*<br/>
+Vaše třída, odvozená z `IOleControlImpl`.
 
 ## <a name="members"></a>Členové
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[IOleControlImpl:: Freezeevents.](#freezeevents)|Označuje, zda kontejner ignoruje nebo přijímá události z ovládacího prvku.|
-|[IOleControlImpl::GetControlInfo](#getcontrolinfo)|Vyplní informace o chování klávesnice ovládacího prvku. Implementace ATL vrací E_NOTIMPL.|
-|[IOleControlImpl::OnAmbientPropertyChange](#onambientpropertychange)|Informuje ovládací prvek o tom, že se změnila jedna nebo více vlastností okolí kontejneru. Implementace ATL vrací S_OK.|
-|[IOleControlImpl::-Symbolickéy](#onmnemonic)|Informuje ovládací prvek o tom, že uživatel stiskl zadaný klávesovou zkratku. Implementace ATL vrací E_NOTIMPL.|
+|[IOleControlImpl::FreezeEvents](#freezeevents)|Označuje, zda kontejner ignoruje nebo přijímá události z ovládacího prvku.|
+|[IOleControlimpl::GetControlInfo](#getcontrolinfo)|Vyplní informace o chování klávesnice ovládacího prvku. Implementace ATL vrátí E_NOTIMPL.|
+|[iOleControlimpl::OnAmbientPropertyChange](#onambientpropertychange)|Informuje ovládací prvek, že došlo ke změně jedné nebo více vlastností okolí kontejneru. Implementace ATL vrátí S_OK.|
+|[IOleControlImpl::OnMnemonic](#onmnemonic)|Informuje ovládací prvek, že uživatel stiskl zadaný stisk klávesy. Implementace ATL vrátí E_NOTIMPL.|
 
 ## <a name="remarks"></a>Poznámky
 
-Třída `IOleControlImpl` poskytuje výchozí implementaci rozhraní [IOleControl](/windows/win32/api/ocidl/nn-ocidl-iolecontrol) a implementuje `IUnknown` odesláním informací do zařízení výpisu paměti v sestaveních pro ladění.
+Třída `IOleControlImpl` poskytuje výchozí implementaci rozhraní [IOleControl](/windows/win32/api/ocidl/nn-ocidl-iolecontrol) `IUnknown` a implementuje odesláním informací do zařízení s výpisem stavu paměti v sestaveníladění.
 
-Kurz **související články** [ATL](../../atl/active-template-library-atl-tutorial.md), [Vytvoření projektu ATL](../../atl/reference/creating-an-atl-project.md)
+**Související články** [ATL Výuka](../../atl/active-template-library-atl-tutorial.md), [Vytvoření projektu ATL](../../atl/reference/creating-an-atl-project.md)
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -62,11 +62,11 @@ Kurz **související články** [ATL](../../atl/active-template-library-atl-tuto
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlctl. h
+**Záhlaví:** atlctl.h
 
-##  <a name="freezeevents"></a>IOleControlImpl:: Freezeevents.
+## <a name="iolecontrolimplfreezeevents"></a><a name="freezeevents"></a>IOleControlImpl::FreezeEvents
 
-V implementaci knihovny ATL `FreezeEvents` zvýší datový člen `m_nFreezeEvents` třídy ovládacího prvku, pokud je `bFreeze` TRUE, a snižuje `m_nFreezeEvents`, pokud `bFreeze` má hodnotu FALSE.
+V implementaci atl `FreezeEvents` zintáží datový člen `m_nFreezeEvents` třídy `bFreeze` ovládacího prvku, pokud `m_nFreezeEvents` `bFreeze` je TRUE, a snížení, pokud je FALSE.
 
 ```
 HRESULT FreezeEvents(BOOL bFreeze);
@@ -74,11 +74,11 @@ HRESULT FreezeEvents(BOOL bFreeze);
 
 ### <a name="remarks"></a>Poznámky
 
-`FreezeEvents` pak vrátí S_OK.
+`FreezeEvents`pak vrátí S_OK.
 
-Viz [IOleControl:: freezeevents.](/windows/win32/api/ocidl/nf-ocidl-iolecontrol-freezeevents) v Windows SDK.
+Viz [IOleControl::FreezeEvents](/windows/win32/api/ocidl/nf-ocidl-iolecontrol-freezeevents) v sadě Windows SDK.
 
-##  <a name="getcontrolinfo"></a>IOleControlImpl::GetControlInfo
+## <a name="iolecontrolimplgetcontrolinfo"></a><a name="getcontrolinfo"></a>IOleControlimpl::GetControlInfo
 
 Vyplní informace o chování klávesnice ovládacího prvku.
 
@@ -88,15 +88,15 @@ HRESULT GetControlInfo(LPCONTROLINFO pCI);
 
 ### <a name="remarks"></a>Poznámky
 
-Viz [IOleControl: GetControlInfo](/windows/win32/api/ocidl/nf-ocidl-iolecontrol-getcontrolinfo) v Windows SDK.
+Viz [IOleControl:GetControlInfo](/windows/win32/api/ocidl/nf-ocidl-iolecontrol-getcontrolinfo) v sadě Windows SDK.
 
 ### <a name="return-value"></a>Návratová hodnota
 
 Vrátí E_NOTIMPL.
 
-##  <a name="onambientpropertychange"></a>IOleControlImpl::OnAmbientPropertyChange
+## <a name="iolecontrolimplonambientpropertychange"></a><a name="onambientpropertychange"></a>iOleControlimpl::OnAmbientPropertyChange
 
-Informuje ovládací prvek o tom, že se změnila jedna nebo více vlastností okolí kontejneru.
+Informuje ovládací prvek, že došlo ke změně jedné nebo více vlastností okolí kontejneru.
 
 ```
 HRESULT OnAmbientPropertyChange(DISPID dispid);
@@ -108,11 +108,11 @@ Vrátí S_OK.
 
 ### <a name="remarks"></a>Poznámky
 
-Viz [IOleControl:: OnAmbientPropertyChange](/windows/win32/api/ocidl/nf-ocidl-iolecontrol-onambientpropertychange) v Windows SDK.
+Viz [IOleControl::OnAmbientPropertyChange](/windows/win32/api/ocidl/nf-ocidl-iolecontrol-onambientpropertychange) v sadě Windows SDK.
 
-##  <a name="onmnemonic"></a>IOleControlImpl::-Symbolickéy
+## <a name="iolecontrolimplonmnemonic"></a><a name="onmnemonic"></a>IOleControlImpl::OnMnemonic
 
-Informuje ovládací prvek o tom, že uživatel stiskl zadaný klávesovou zkratku.
+Informuje ovládací prvek, že uživatel stiskl zadaný stisk klávesy.
 
 ```
 HRESULT OnMnemonic(LPMSG pMsg);
@@ -124,10 +124,10 @@ Vrátí E_NOTIMPL.
 
 ### <a name="remarks"></a>Poznámky
 
-Viz [IOleControl::](/windows/win32/api/ocidl/nf-ocidl-iolecontrol-onmnemonic) v Windows SDK.
+Viz [IOleControl::OnMnemonic](/windows/win32/api/ocidl/nf-ocidl-iolecontrol-onmnemonic) v sadě Windows SDK.
 
 ## <a name="see-also"></a>Viz také
 
-[IOleObjectImpl – třída](../../atl/reference/ioleobjectimpl-class.md)<br/>
+[Třída IOleObjectImpl](../../atl/reference/ioleobjectimpl-class.md)<br/>
 [Rozhraní ovládacích prvků ActiveX](/windows/win32/com/activex-controls-interfaces)<br/>
 [Přehled třídy](../../atl/atl-class-overview.md)

@@ -1,6 +1,6 @@
 ---
-title: Activity – Třída
-description: Odkaz C++ na třídu aktivity Build Insights SDK
+title: Třída aktivity
+description: C++ Build Insights SDK Activity odkaz na třídu.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 6de411c375b42e4acfb44bf0fac9d28ad57f1ca7
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 2ea04150aec9c0b2366d97e6e4c15de557a4f47c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78333557"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81325250"
 ---
-# <a name="activity-class"></a>Activity – Třída
+# <a name="activity-class"></a>Třída aktivity
 
 ::: moniker range="<=vs-2015"
 
-Sada C++ SDK pro Build Insights je kompatibilní se sadou Visual Studio 2017 a novější. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek selektor verzí sady Visual Studio pro tento článek na sadu Visual Studio 2017 nebo Visual Studio 2019.
+Sada C++ Build Insights SDK je kompatibilní s Visual Studio 2017 a vyšší. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek pro výběr **verze** sady Visual Studio pro tento článek na Visual Studio 2017 nebo Visual Studio 2019. Nachází se v horní části obsahu na této stránce.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Třída `Activity` se používá s funkcemi [MatchEvent](../functions/match-event.md), [MatchEventInMemberFunction](../functions/match-event-in-member-function.md), [MatchEventStack](../functions/match-event-stack.md)a [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md) . Použijte ho k vyhledání události aktivity. Chcete-li zobrazit všechny události, které mohou být porovnány třídou `Activity`, přečtěte si téma [tabulka událostí](../event-table.md) .
+Třída `Activity` se používá s funkcemi [MatchEvent](../functions/match-event.md), [MatchEventInMemberFunction](../functions/match-event-in-member-function.md), [MatchEventStack](../functions/match-event-stack.md)a [MatchEventStackInMemberFunction.](../functions/match-event-stack-in-member-function.md) Použijte ji tak, aby odpovídala události aktivity. Odkazovat na [tabulku událostí](../event-table.md) zobrazíte všechny události, které mohou odpovídat třídy. `Activity`
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -54,35 +54,35 @@ public:
 
 ## <a name="remarks"></a>Poznámky
 
-Několik členských funkcí ve třídě `Activity` vrací počet impulsů. C++Build Insights používá čítač výkonu Windows jako zdroj taktů. Aby bylo možné provést převod na časovou jednotku, například sekund, je nutné použít počet impulsů s frekvencí Tick. Členská funkce `TickFrequency`, která je k dispozici v základní třídě [Event](event.md) , může být volána pro získání frekvence Tick. Stránka [EVENT_DATA](../c-event-data-types/event-data-struct.md#tick-conversion-example) ukazuje příklad převodu tiků na časovou jednotku.
+Několik členských funkcí `Activity` ve třídě vrátí počet značek. C++ Build Insights používá čítač výkonu systému Windows jako zdroj značek. Počet značek musí být použit s frekvencí značek, aby se převedl na časovou jednotku, jako jsou sekundy. Členská `TickFrequency` funkce, která je k dispozici v základní třídě [Události,](event.md) může být volána k získání frekvence značek. Stránka [EVENT_DATA](../c-event-data-types/event-data-struct.md#tick-conversion-example) zobrazuje příklad převodu značek na časovou jednotku.
 
-Pokud nechcete převádět osové hodnoty na časové jednotky sami, třída `Activity` poskytne členské funkce, které vracejí hodnoty času v nanosekundách. Pomocí standardní C++ knihovny `chrono` převeďte je na jiné časové jednotky.
+Pokud nechcete převést značky na časové jednotky `Activity` sami, třída poskytuje členské funkce, které vracejí časové hodnoty v nanosekundách. Pomocí standardní knihovny `chrono` Jazyka C++ je můžete převést na jiné časové jednotky.
 
 ## <a name="members"></a>Členové
 
-Spolu s členy zděděnými ze základní třídy [Event](event.md) třída `Activity` obsahuje následující členy:
+Spolu se svými členy [Event](event.md) zděděnými `Activity` ze základní třídy Event obsahuje třída následující členy:
 
 ### <a name="constructor"></a>Konstruktor
 
-[Aktivita](#activity)
+[Činnosti](#activity)
 
 ### <a name="functions"></a>Functions
 
 [CPUTicks](#cpu-ticks)\
-[CPUTime](#cpu-time)\
-\ [doby trvání](#duration)
+[Čas procesoru](#cpu-time)\
+[Doba trvání](#duration)\
 [ExclusiveCPUTicks](#exclusive-cpu-ticks)\
 [ExclusiveCPUTime](#exclusive-cpu-time)\
 [ExclusiveDuration](#exclusive-duration)\
 [ExclusiveDurationTicks](#exclusive-duration-ticks)\
-[ExclusiveWallClockTimeResponsibility](#exclusive-wall-clock-time-responsibility)\
+[Výhradní WallClockTimeResponsibility](#exclusive-wall-clock-time-responsibility)\
 [ExclusiveWallClockTimeResponsibilityTicks](#exclusive-wall-clock-time-responsibility-ticks)\
-[StartTimestamp](#start-timestamp)\
-[StopTimestamp](#stop-timestamp)\
-[WallClockTimeResponsibility](#wall-clock-time-responsibility)\
+[StartTimerazítko](#start-timestamp)\
+[StopTimerazítko](#stop-timestamp)\
+[WallClockTimeOdpovědnost](#wall-clock-time-responsibility)\
 [WallClockTimeResponsibilityTicks](#wall-clock-time-responsibility-ticks)
 
-## <a name="activity"></a>Akce
+## <a name="activity"></a><a name="activity"></a>Činnosti
 
 ```cpp
 Activity(const RawEvent& event);
@@ -90,10 +90,10 @@ Activity(const RawEvent& event);
 
 ### <a name="parameters"></a>Parametry
 
-\ *události*
+*Událost*\
 Jakákoli událost aktivity.
 
-## <a name="cpu-ticks"></a>CPUTicks
+## <a name="cputicks"></a><a name="cpu-ticks"></a>CPUTicks
 
 ```cpp
 const long long& CPUTicks() const;
@@ -101,9 +101,9 @@ const long long& CPUTicks() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Počet taktů procesoru, k nimž došlo během této aktivity. Takt procesoru se liší od normálního zaškrtnutí. Takty procesoru se počítají jenom v případě, že CPU spouští kód v aktivitě. Cykly procesoru se nepočítají, pokud je vlákno přidružené k aktivitě v režimu spánku.
+Počet značek procesoru, ke kterým došlo během této aktivity. Klíště procesoru se liší od běžného zaškrtnutí. Značky procesoru se počítají pouze v případě, že procesor provádí kód v aktivitě. Klíšťata procesoru se nepočítají, když je vlákno přidružené k aktivitě v režimu spánku.
 
-## <a name="cpu-time"></a>CPUTime
+## <a name="cputime"></a><a name="cpu-time"></a>Čas procesoru
 
 ```cpp
 std::chrono::nanoseconds CPUTime()() const;
@@ -111,9 +111,9 @@ std::chrono::nanoseconds CPUTime()() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Doba, po kterou CPU provádělo kód v rámci této aktivity. Tato hodnota může být vyšší než doba trvání aktivity, pokud jsou podřízené aktivity spouštěny v samostatných vláknech. Hodnota se vrátí v nanosekundách.
+Doba, po kterou procesor prováděl kód uvnitř této aktivity. Tato hodnota může být vyšší než doba trvání aktivity, pokud podřízené aktivity jsou prováděny v samostatných vláknech. Hodnota je vrácena v nanosekundách.
 
-## <a name="duration"></a>Úkolu
+## <a name="duration"></a><a name="duration"></a>Doba trvání
 
 ```cpp
 std::chrono::nanoseconds Duration() const;
@@ -123,7 +123,7 @@ std::chrono::nanoseconds Duration() const;
 
 Doba trvání aktivity v nanosekundách.
 
-## <a name="exclusive-cpu-ticks"></a>ExclusiveCPUTicks
+## <a name="exclusivecputicks"></a><a name="exclusive-cpu-ticks"></a>ExclusiveCPUTicks
 
 ```cpp
 const long long& ExclusiveCPUTicks() const;
@@ -131,9 +131,9 @@ const long long& ExclusiveCPUTicks() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Stejné jako [CPUTicks](#cpu-ticks), ale ne včetně taktů procesoru, k nimž došlo v podřízených aktivitách.
+Stejné jako [CPUTicks](#cpu-ticks), ale ne zahrnuje cpu značky, ke kterým došlo v podřízené aktivity.
 
-## <a name="exclusive-cpu-time"></a>ExclusiveCPUTime
+## <a name="exclusivecputime"></a><a name="exclusive-cpu-time"></a>ExclusiveCPUTime
 
 ```cpp
 std::chrono::nanoseconds ExclusiveCPUTime() const;
@@ -141,9 +141,9 @@ std::chrono::nanoseconds ExclusiveCPUTime() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Stejné jako [CPUTime](#cpu-time), s tím rozdílem, že není zahrnut čas procesoru podřízených aktivit.
+Stejné jako [CPUTime](#cpu-time), s tím rozdílem, že čas procesoru podřízených aktivit není zahrnuta.
 
-## <a name="exclusive-duration"></a>ExclusiveDuration
+## <a name="exclusiveduration"></a><a name="exclusive-duration"></a>ExclusiveDuration
 
 ```cpp
 std::chrono::nanoseconds ExclusiveDuration() const;
@@ -151,9 +151,9 @@ std::chrono::nanoseconds ExclusiveDuration() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Doba trvání aktivity v nanosekundách, bez zahrnutí času stráveného v podřízených aktivitách.
+Doba trvání aktivity v nanosekundách, bez množství času stráveného v podřízených aktivitách.
 
-## <a name="exclusive-duration-ticks"></a>ExclusiveDurationTicks
+## <a name="exclusivedurationticks"></a><a name="exclusive-duration-ticks"></a>ExclusiveDurationTicks
 
 ```cpp
 const long long& ExclusiveDurationTicks() const;
@@ -161,9 +161,9 @@ const long long& ExclusiveDurationTicks() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Počet taktů, ke kterým došlo v této aktivitě s výjimkou počtu tiků, k nimž došlo v podřízených aktivitách.
+Počet značek, ke kterým došlo v této aktivitě, s výjimkou počtu značek, ke kterým došlo v podřízených aktivitách.
 
-## <a name="exclusive-wall-clock-time-responsibility"></a>ExclusiveWallClockTimeResponsibility
+## <a name="exclusivewallclocktimeresponsibility"></a><a name="exclusive-wall-clock-time-responsibility"></a>Výhradní WallClockTimeResponsibility
 
 ```cpp
 std::chrono::nanoseconds ExclusiveWallClockTimeResponsibility() const;
@@ -171,9 +171,9 @@ std::chrono::nanoseconds ExclusiveWallClockTimeResponsibility() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Stejné jako [WallClockTimeResponsibility](#wall-clock-time-responsibility), ale nezahrnují zodpovědnost za pracovní dobu u podřízených aktivit.
+Stejné jako [WallClockTimeResponsibility](#wall-clock-time-responsibility), ale ne zahrnuje zeď-hodiny čas odpovědnosti podřízených aktivit.
 
-## <a name="exclusive-wall-clock-time-responsibility-ticks"></a>ExclusiveWallClockTimeResponsibilityTicks
+## <a name="exclusivewallclocktimeresponsibilityticks"></a><a name="exclusive-wall-clock-time-responsibility-ticks"></a>ExclusiveWallClockTimeResponsibilityTicks
 
 ```cpp
 const long long& ExclusiveWallClockTimeResponsibilityTicks() const;
@@ -181,9 +181,9 @@ const long long& ExclusiveWallClockTimeResponsibilityTicks() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Stejné jako [WallClockTimeResponsibilityTicks](#wall-clock-time-responsibility-ticks), ale ne včetně časových taktů zodpovědnosti podřízených aktivit.
+Stejné jako [WallClockTimeResponsibilityTicks](#wall-clock-time-responsibility-ticks), ale ne zahrnuje zeď hodiny čas odpovědnosti tiká podřízené aktivity.
 
-## <a name="start-timestamp"></a>StartTimestamp
+## <a name="starttimestamp"></a><a name="start-timestamp"></a>StartTimerazítko
 
 ```cpp
 const long long& StartTimestamp() const;
@@ -191,9 +191,9 @@ const long long& StartTimestamp() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota Tick zachycená v době spuštění aktivity.
+Hodnota značky zachycená v době zahájení aktivity.
 
-## <a name="stop-timestamp"></a>StopTimestamp
+## <a name="stoptimestamp"></a><a name="stop-timestamp"></a>StopTimerazítko
 
 ```cpp
 const long long& StopTimestamp() const;
@@ -201,9 +201,9 @@ const long long& StopTimestamp() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota Tick zachycená v době, kdy se aktivita zastavila
+Hodnota značky zachycená v době, kdy byla aktivita zastavena.
 
-## <a name="wall-clock-time-responsibility"></a>WallClockTimeResponsibility
+## <a name="wallclocktimeresponsibility"></a><a name="wall-clock-time-responsibility"></a>WallClockTimeOdpovědnost
 
 ```cpp
 std::chrono::nanoseconds WallClockTimeResponsibility() const;
@@ -211,9 +211,9 @@ std::chrono::nanoseconds WallClockTimeResponsibility() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Časová zodpovědnost za tuto aktivitu na základě hodin v nanosekundách Další informace o tom, jaká je doba zodpovědnosti za chodu, najdete v tématu [WallClockTimeResponsibilityTicks](#wall-clock-time-responsibility-ticks).
+Odpovědnost za tuto aktivitu v nanosekundách. Další informace o tom, co wall-clock čas odpovědnost znamená, naleznete v [tématu WallClockTimeResponsibilityTicks](#wall-clock-time-responsibility-ticks).
 
-## <a name="wall-clock-time-responsibility-ticks"></a>WallClockTimeResponsibilityTicks
+## <a name="wallclocktimeresponsibilityticks"></a><a name="wall-clock-time-responsibility-ticks"></a>WallClockTimeResponsibilityTicks
 
 ```cpp
 const long long& WallClockTimeResponsibilityTicks() const;
@@ -221,6 +221,6 @@ const long long& WallClockTimeResponsibilityTicks() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Počet impulsů, který představuje příspěvek této aktivity k celkovému času na zdi. Časová zodpovědnost na zeď se liší od normálního zaškrtnutí. Časová pravítka na zdi berou v úvahu paralelismus mezi aktivitami. Dvě paralelní aktivity můžou mít dobu trvání 50 a stejný čas spuštění a zastavení. V takovém případě se jim přiřadí časová zodpovědnost za 25 taktů.
+Počet značek, který představuje příspěvek této aktivity k celkovému času nástěnných hodin. Klíště odpovědnosti za čas na zdi se liší od běžného klíštěte. Nástěnné hodiny čas odpovědnost i tiky vzít v úvahu paralelismus mezi aktivitami. Dvě paralelní aktivity mohou mít dobu trvání 50 značek a stejný čas zahájení a zastavení. V tomto případě oba získat přiřazena zeď-hodiny čas odpovědnosti 25 značek.
 
 ::: moniker-end

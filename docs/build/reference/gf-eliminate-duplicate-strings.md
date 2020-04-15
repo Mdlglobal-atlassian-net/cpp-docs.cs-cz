@@ -14,16 +14,16 @@ helpviewer_keywords:
 - GF compiler option [C++]
 - strings [C++], pooling
 ms.assetid: bb7b5d1c-8e1f-453b-9298-8fcebf37d16c
-ms.openlocfilehash: 90d3fb5c601d9534215a46594884be5d168fe0aa
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: e0d23004c7b710f51065db52410fbb15b7cca040
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66449543"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81320492"
 ---
 # <a name="gf-eliminate-duplicate-strings"></a>/GF (odstranění duplicitních řetězců)
 
-Umožňuje kompilátoru vytvořit jednu kopii identických řetězců v bitové kopii programu a v paměti během provádění. Toto je optimalizace se označuje jako *sdružování řetězců* , který můžete vytvořit programy menší.
+Umožňuje kompilátoru vytvořit jednu kopii identických řetězců v bitové kopii programu a v paměti během provádění. Jedná se o optimalizaci s názvem *sdružování řetězců,* která může vytvářet menší programy.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,11 +33,11 @@ Umožňuje kompilátoru vytvořit jednu kopii identických řetězců v bitové 
 
 ## <a name="remarks"></a>Poznámky
 
-Pokud používáte **/GF**, operační systém není možné Prohodit řetězec část paměti a může číst zpět řetězce ze souboru bitové kopie.
+Pokud použijete **/GF**, operační systém nezamění řetězcovou část paměti a může číst řetězce zpět ze souboru bitové kopie.
 
-**/GF** fondů řetězců jen pro čtení. Pokud se pokusíte upravit řetězců v rámci **/GF**, dojde k chybě aplikace.
+**/GF** fondy řetězce jako jen pro čtení. Pokud se pokusíte upravit řetězce pod **/GF**, dojde k chybě aplikace.
 
-Sdružování řetězců umožňuje, co se má sloužit jako více ukazatelů na více vyrovnávacích pamětí většího počtu ukazatelů na jednu vyrovnávací paměť. V následujícím kódu `s` a `t` jsou inicializovány pomocí stejné řetězce. Sdružování řetězců způsobí, že se jim tak, aby odkazoval na stejnou paměť:
+Sdružování řetězců umožňuje, co byly určeny jako více ukazatelů na více vyrovnávacích pamětí, které mají být více ukazatelů na jednu vyrovnávací paměť. V následujícím kódu `s` `t` a jsou inicializovány stejným řetězcem. Sdružování řetězců způsobí, že odkazují na stejnou paměť:
 
 ```
 char *s = "This is a character buffer";
@@ -45,28 +45,28 @@ char *t = "This is a character buffer";
 ```
 
 > [!NOTE]
->  [/Zi](z7-zi-zi-debug-information-format.md) možnost použít pro funkce upravit a pokračovat, automaticky nastaví **/GF** možnost.
+> Možnost [/ZI,](z7-zi-zi-debug-information-format.md) která se používá pro úpravy a pokračovat, automaticky nastaví **/GF** možnost.
 
 > [!NOTE]
->  **/GF** – možnost kompilátoru vytvoří adresovatelný sekci pro každý jedinečný řetězec. A ve výchozím objektový soubor může obsahovat až 65 536 adresovatelných sekcí. Pokud váš program obsahuje více než 65 536 řetězce, použijte [/bigobj](bigobj-increase-number-of-sections-in-dot-obj-file.md) – možnost kompilátoru vytvořit víc oddílů.
+> Možnost kompilátoru **/GF** vytvoří adresovatelný oddíl pro každý jedinečný řetězec. A ve výchozím nastavení může soubor objektu obsahovat až 65 536 adresovatelných oddílů. Pokud váš program obsahuje více než 65 536 řetězců, vytvořte další oddíly pomocí možnosti kompilátoru [/bigobj.](bigobj-increase-number-of-sections-in-dot-obj-file.md)
 
-**/GF** je v účinku po [/O1](o1-o2-minimize-size-maximize-speed.md) nebo [/O2](o1-o2-minimize-size-maximize-speed.md) se používá.
+**/GF** je v platnosti při [použití /O1](o1-o2-minimize-size-maximize-speed.md) nebo [/O2.](o1-o2-minimize-size-maximize-speed.md)
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
 
-1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
+1. Otevřete dialogové okno **Stránky vlastností** projektu. Podrobnosti naleznete v [tématu Nastavení kompilátoru jazyka C++ a vlastnosti sestavení v sadě Visual Studio](../working-with-project-properties.md).
 
-1. Klikněte na tlačítko **C/C++** složky.
+1. Klikněte na složku **C/C++.**
 
-1. Klikněte na tlačítko **generování kódu** stránku vlastností.
+1. Klikněte na stránku **vlastností Generování kódu.**
 
-1. Upravit **povolit sdružování řetězců** vlastnost.
+1. Upravte vlastnost **Povolit sdružování řetězců.**
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru
 
-- Viz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.StringPooling%2A>.
+- Viz třída <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.StringPooling%2A>.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Parametry kompilátoru MSVC](compiler-options.md)<br/>
 [Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)

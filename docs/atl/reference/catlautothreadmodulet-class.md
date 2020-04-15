@@ -1,5 +1,5 @@
 ---
-title: Catlautothreadmodulet – třída
+title: Třída CAtlAutoThreadModuleT
 ms.date: 11/04/2016
 f1_keywords:
 - CAtlAutoThreadModuleT
@@ -8,19 +8,19 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlAutoThreadModuleT class
 ms.assetid: ae1667c6-3fb8-47bc-b35d-9ea5e9896d7f
-ms.openlocfilehash: 63f1c8dbe3c752773fd64c6e339a9a3b67051d35
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e7b7a327d7c47c4472b43ed58fbe9ad0556a7620
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62247164"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81321545"
 ---
-# <a name="catlautothreadmodulet-class"></a>Catlautothreadmodulet – třída
+# <a name="catlautothreadmodulet-class"></a>Třída CAtlAutoThreadModuleT
 
-Tato třída poskytuje metody pro implementaci serveru ve fondu vláken, apartment model modelu COM.
+Tato třída poskytuje metody pro implementaci serveru COM s družinou s družinou modelu apartment.
 
 > [!IMPORTANT]
->  Tato třída a jejích členů nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.
+> Tuto třídu a její členy nelze použít v aplikacích, které se spouštějí v prostředí Windows Runtime.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -34,28 +34,28 @@ class ATL_NO_VTABLE CAtlAutoThreadModuleT : public IAtlAutoThreadModule
 #### <a name="parameters"></a>Parametry
 
 *T*<br/>
-Třída, která implementuje serveru COM.
+Třída, která bude implementovat server COM.
 
 *ThreadAllocator*<br/>
-Třídy správy výběr vlákna. Výchozí hodnota je [ccomsimplethreadallocator –](../../atl/reference/ccomsimplethreadallocator-class.md).
+Třída spravující výběr podprocesu. Výchozí hodnota je [CComSimpleThreadAllocator](../../atl/reference/ccomsimplethreadallocator-class.md).
 
 *dwWait*<br/>
-Určuje interval časového limitu v milisekundách. Výchozí hodnota je NEKONEČNO, což znamená, že interval časového limitu metody nikdy vypaří.
+Určuje interval časového limitu v milisekundách. Výchozí hodnota je INFINITE, což znamená, že časový limit metody nikdy neuplyne.
 
 ## <a name="members"></a>Členové
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CAtlAutoThreadModuleT::GetDefaultThreads](#getdefaultthreads)|Tato statická funkce dynamicky vypočítá a vrátí maximální počet vláken pro modul EXE, na základě počtu procesorů.|
+|[CAtlAutoThreadModuleT::GetDefaultThreads](#getdefaultthreads)|Tato statická funkce dynamicky vypočítá a vrátí maximální počet vláken pro modul EXE na základě počtu procesorů.|
 
 ## <a name="remarks"></a>Poznámky
 
-Třída [catlautothreadmodule –](../../atl/reference/catlautothreadmodule-class.md) je odvozena z `CAtlAutoThreadModuleT` kvůli implementaci ve fondu vláken, apartment model modelu COM serveru. Nahradí zastaralou třídu [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md).
+Třída [CAtlAutoThreadModule](../../atl/reference/catlautothreadmodule-class.md) je `CAtlAutoThreadModuleT` odvozena z k implementaci serveru COM s družné hotence s družinou. Nahrazuje zastaralou třídu [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md).
 
 > [!NOTE]
->  Tato třída by neměl v knihovně DLL použít jako výchozí *dwWait* hodnoty NEKONEČNÉ způsobí zablokování při uvolnění knihovny DLL.
+> Tato třída by neměla být použita v dll, jako výchozí *dwWait* hodnota INFINITE způsobí zablokování při uvolnění dll.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -67,9 +67,9 @@ Třída [catlautothreadmodule –](../../atl/reference/catlautothreadmodule-clas
 
 **Záhlaví:** atlbase.h
 
-##  <a name="getdefaultthreads"></a>  CAtlAutoThreadModuleT::GetDefaultThreads
+## <a name="catlautothreadmoduletgetdefaultthreads"></a><a name="getdefaultthreads"></a>CAtlAutoThreadModuleT::GetDefaultThreads
 
-Tato statická funkce dynamicky vypočítá a vrátí maximální počet vláken pro modul EXE, na základě počtu procesorů.
+Tato statická funkce dynamicky vypočítá a vrátí maximální počet vláken pro modul EXE na základě počtu procesorů.
 
 ```
 static int GetDefaultThreads();
@@ -77,15 +77,15 @@ static int GetDefaultThreads();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Počet vláken v modulu souboru EXE.
+Počet podprocesů, které mají být vytvořeny v modulu EXE.
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto metodu, pokud chcete použít jinou metodu pro výpočet počtu vláken. Ve výchozím nastavení počet vláken vychází z počtu procesorů.
+Přepsat tuto metodu, pokud chcete použít jinou metodu pro výpočet počtu podprocesů. Ve výchozím nastavení je počet podprocesů založen na počtu procesorů.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[IAtlAutoThreadModule – třída](../../atl/reference/iatlautothreadmodule-class.md)<br/>
-[Přehled tříd](../../atl/atl-class-overview.md)<br/>
-[IAtlAutoThreadModule – třída](../../atl/reference/iatlautothreadmodule-class.md)<br/>
+[Třída IAtlAutoThreadModule](../../atl/reference/iatlautothreadmodule-class.md)<br/>
+[Přehled třídy](../../atl/atl-class-overview.md)<br/>
+[Třída IAtlAutoThreadModule](../../atl/reference/iatlautothreadmodule-class.md)<br/>
 [Třídy modulů](../../atl/atl-module-classes.md)

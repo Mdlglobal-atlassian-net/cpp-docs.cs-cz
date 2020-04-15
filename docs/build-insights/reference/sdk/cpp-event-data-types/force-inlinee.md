@@ -1,6 +1,6 @@
 ---
-title: ForceInlinee – třída
-description: Referenční C++ dokumentace třídy ForceInlinee sady SDK pro Build Insights
+title: Třída ForceInlinee
+description: C++ Build Insights SDK ForceInlinee odkaz na třídu.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 7d3cce13601a0b3edbcd2b57664b2d0d94a7d3df
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: c6a1af0384197a0a3b6062ad9ef30537c348190d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78333333"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81324784"
 ---
-# <a name="forceinlinee-class"></a>ForceInlinee – třída
+# <a name="forceinlinee-class"></a>Třída ForceInlinee
 
 ::: moniker range="<=vs-2015"
 
-Sada C++ SDK pro Build Insights je kompatibilní se sadou Visual Studio 2017 a novější. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek selektor verzí sady Visual Studio pro tento článek na sadu Visual Studio 2017 nebo Visual Studio 2019.
+Sada C++ Build Insights SDK je kompatibilní s Visual Studio 2017 a vyšší. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek pro výběr **verze** sady Visual Studio pro tento článek na Visual Studio 2017 nebo Visual Studio 2019. Nachází se v horní části obsahu na této stránce.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Třída `ForceInlinee` se používá s funkcemi [MatchEvent](../functions/match-event.md), [MatchEventInMemberFunction](../functions/match-event-in-member-function.md), [MatchEventStack](../functions/match-event-stack.md)a [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md) . Použijte ho ke spárování [FORCE_INLINEE](../event-table.md#force-inlinee) události.
+Třída `ForceInlinee` se používá s funkcemi [MatchEvent](../functions/match-event.md), [MatchEventInMemberFunction](../functions/match-event-in-member-function.md), [MatchEventStack](../functions/match-event-stack.md)a [MatchEventStackInMemberFunction.](../functions/match-event-stack-in-member-function.md) Slouží k tomu, aby odpovídala [události FORCE_INLINEE.](../event-table.md#force-inlinee)
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -42,18 +42,18 @@ public:
 
 ## <a name="members"></a>Členové
 
-Společně s děděnými členy ze své základní třídy [SimpleEvent](simple-event.md) obsahuje Třída `ForceInlinee` následující členy:
+Spolu s zděděnými členy ze základní `ForceInlinee` třídy [SimpleEvent](simple-event.md) obsahuje třída následující členy:
 
 ### <a name="constructors"></a>Konstruktory
 
-[ForceInlinee](#force-inlinee)
+[SílaInlinee](#force-inlinee)
 
 ### <a name="functions"></a>Functions
 
-[Název](#name)
-[Velikost](#size)
+[Velikost názvu](#name)
+[Size](#size)
 
-## <a name="force-inlinee"></a>ForceInlinee
+## <a name="forceinlinee"></a><a name="force-inlinee"></a>SílaInlinee
 
 ```cpp
 ForceInlinee(const RawEvent& event);
@@ -61,10 +61,10 @@ ForceInlinee(const RawEvent& event);
 
 ### <a name="parameters"></a>Parametry
 
-\ *události*
-Událost [FORCE_INLINEE](../event-table.md#force-inlinee) .
+*Událost*\
+[Událost FORCE_INLINEE.](../event-table.md#force-inlinee)
 
-## <a name="name"></a>Jméno
+## <a name="name"></a><a name="name"></a>Jméno
 
 ```cpp
 const char* Name() const;
@@ -72,9 +72,9 @@ const char* Name() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Název vysílané vložené funkce kódované v kódování UTF-8.
+Název funkce vložené silou, kódované v UTF-8.
 
-## <a name="size"></a>Hodnota
+## <a name="size"></a><a name="size"></a>Velikost
 
 ```cpp
 const unsigned short& Size() const;
@@ -82,6 +82,6 @@ const unsigned short& Size() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Velikost vynuceně vložené funkce jako počet zprostředkujících instrukcí.
+Velikost funkce vložené silou jako počet zprostředkující instrukce.
 
 ::: moniker-end

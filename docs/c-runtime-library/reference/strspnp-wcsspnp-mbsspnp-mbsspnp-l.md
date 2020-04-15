@@ -1,11 +1,13 @@
 ---
 title: _strspnp, _wcsspnp, _mbsspnp, _mbsspnp_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbsspnp
 - _wcsspnp
 - _mbsspnp_l
 - _strspnp
+- _o__mbsspnp
+- _o__mbsspnp_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -45,19 +48,19 @@ helpviewer_keywords:
 - _tcsspnp function
 - tcsspnp function
 ms.assetid: 1ce18100-2edd-4c3b-af8b-53f204d80233
-ms.openlocfilehash: af80f4970e5aad4355b0287c901f130809cc4f79
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c45fc42fb9edce1b82b0910f8aae81d4058d5974
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946671"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81317025"
 ---
 # <a name="_strspnp-_wcsspnp-_mbsspnp-_mbsspnp_l"></a>_strspnp, _wcsspnp, _mbsspnp, _mbsspnp_l
 
-Vrací ukazatel na první znak v daném řetězci, který není v jiném daném řetězci.
+Vrátí ukazatel na první znak v daném řetězci, který není v jiném daném řetězci.
 
 > [!IMPORTANT]
-> **_mbsspnp** a **_mbsspnp_l** nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime. Další informace najdete v tématu [funkce CRT nejsou v aplikacích Univerzální platforma Windows podporovány](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsspnp** a **_mbsspnp_l** nelze použít v aplikacích, které se spouštějí v prostředí Windows Runtime. Další informace naleznete v tématu [funkce CRT, které nejsou podporovány v aplikacích univerzální platformy Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -83,24 +86,26 @@ unsigned char *_mbsspnp_l(
 
 ### <a name="parameters"></a>Parametry
 
-*str*<br/>
-Řetězec zakončený hodnotou null pro hledání.
+*Str*<br/>
+Řetězec ukončený hodnotou Null pro vyhledávání.
 
-*charset*<br/>
-Znaková sada zakončená hodnotou null
+*Charset*<br/>
+Znaková sada ukončená hodnotou Null.
 
-*jazyka*<br/>
-Národní prostředí, které se má použít.
+*Národní prostředí*<br/>
+Národní prostředí použít.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**_strspnp**, **_wcsspnp**a **_mbsspnp** vrací ukazatel na první znak v *str* , který nepatří do sady znaků v *znakové sadě charset*. Každá z těchto funkcí vrátí **hodnotu null** , pokud se ve *str* skládá výhradně ze znaků ze *CharSet*. Pro každou z těchto rutin není žádná návratová hodnota vyhrazena pro indikaci chyby.
+**_strspnp**, **_wcsspnp**a **_mbsspnp** vrátí ukazatel na první znak v *str,* který nepatří do sady znaků v *znakové sadě*. Každá z těchto funkcí vrátí **hodnotu NULL,** pokud *str* obsahuje výhradně znaky z *znakové sady*. Pro každou z těchto rutin není vyhrazena žádná vrácená hodnota, která by označovala chybu.
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce **_mbsspnp** vrací ukazatel na vícebajtový znak, který je prvním znakem v *str* , který nepatří do sady znaků v *znakové sadě charset*. **_mbsspnp** rozpoznává vícebajtové znakové sekvence podle [vícebajtové znakové stránky](../../c-runtime-library/code-pages.md) , která se právě používá. Hledání nezahrnuje ukončující znaky null.
+Funkce **_mbsspnp** vrátí ukazatel na vícebajtový znak, který je prvním znakem v *str,* který nepatří do sady znaků v *znakové sadě*. **_mbsspnp** rozpoznává vícebajtové sekvence znaků podle aktuálně používáné [vícebajtové znakové stránky.](../../c-runtime-library/code-pages.md) Hledání nezahrnuje ukončující prázdné znaky.
 
-Pokud je buď parametr *str* nebo *CharSet* ukazatel s hodnotou null, tato funkce vyvolá obslužnou rutinu neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, vrátí funkce **hodnotu null** a nastaví **errno** na **EINVAL**.
+Pokud *str* nebo *charset* je ukazatel null, tato funkce vyvolá neplatný obslužnou rutinu parametru, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je spuštění povoleno pokračovat, funkce vrátí **hodnotu NULL** a nastaví **errno** na **EINVAL**.
+
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
@@ -108,19 +113,19 @@ Pokud je buď parametr *str* nebo *CharSet* ukazatel s hodnotou null, tato funkc
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tcsspnp**|**_strspnp**|**_mbsspnp**|**_wcsspnp**|
 
-**_strspnp** a **_wcsspnp** jsou jednobajtové znaky a verze **_mbsspnp**pro velké znaky. **_strspnp** a **_wcsspnp** se chovají stejně jako **_mbsspnp** jinak; jsou k dispozici pouze pro toto mapování a neměly by se používat z jakéhokoli jiného důvodu. Další informace najdete v tématu [použití mapování obecného textu](../../c-runtime-library/using-generic-text-mappings.md) a [Mapování obecného textu](../../c-runtime-library/generic-text-mappings.md).
+**_strspnp** a **_wcsspnp** jsou jednobajtové znakové a širokoomístné verze **_mbsspnp**. **_strspnp** a **_wcsspnp** se chovají stejně jako **_mbsspnp** jinak; jsou poskytovány pouze pro toto mapování a neměly by být používány z žádného jiného důvodu. Další informace naleznete [v tématu Použití mapování obecného textu](../../c-runtime-library/using-generic-text-mappings.md) a mapování [obecného textu](../../c-runtime-library/generic-text-mappings.md).
 
-**_mbsspnp_l** je totožný s tím rozdílem, že místo toho používá parametr národního prostředí. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
+**_mbsspnp_l** je totožný s tím rozdílem, že místo toho používá parametr národního prostředí. Další informace naleznete v [tématu Locale](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_mbsspnp**|\<Mbstring. h >|
+|**_mbsspnp**|\<mbstring.h>|
 |**_strspnp**|\<tchar.h>|
 |**_wcsspnp**|\<tchar.h>|
 
-Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -144,9 +149,9 @@ int main( void ) {
 abbage
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Manipulace s řetězci](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Zacházení s řetězci](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [Národní prostředí](../../c-runtime-library/locale.md)<br/>
 [Výklad sekvencí vícebajtových znaků](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [strspn, wcsspn, _mbsspn, _mbsspn_l](strspn-wcsspn-mbsspn-mbsspn-l.md)<br/>

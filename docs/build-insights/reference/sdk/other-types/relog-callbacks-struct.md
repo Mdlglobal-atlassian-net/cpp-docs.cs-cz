@@ -1,6 +1,6 @@
 ---
-title: Struktura RELOG_CALLBACKS
-description: Odkaz C++ na strukturu RELOG_CALLBACKS Build Insights SDK
+title: struktura RELOG_CALLBACKS
+description: C++ Build Insights SDK RELOG_CALLBACKS odkaz na strukturu.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: c5dbed196e6cafaa301b6e07cd0f5546a0f4d563
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 60e7db81a48731090a23b82332704a79a51e97df
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78332339"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81328962"
 ---
-# <a name="relog_callbacks-structure"></a>Struktura RELOG_CALLBACKS
+# <a name="relog_callbacks-structure"></a>struktura RELOG_CALLBACKS
 
 ::: moniker range="<=vs-2015"
 
-Sada C++ SDK pro Build Insights je kompatibilní se sadou Visual Studio 2017 a novější. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek selektor verzí sady Visual Studio pro tento článek na sadu Visual Studio 2017 nebo Visual Studio 2019.
+Sada C++ Build Insights SDK je kompatibilní s Visual Studio 2017 a vyšší. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek pro výběr **verze** sady Visual Studio pro tento článek na Visual Studio 2017 nebo Visual Studio 2019. Nachází se v horní části obsahu na této stránce.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Struktura `RELOG_CALLBACKS` se používá při inicializaci objektu [RELOG_DESCRIPTOR](relog-descriptor-struct.md) . Určuje funkce, které mají být volány během přeprotokolování trasování událostí pro Windows (ETW).
+Struktura `RELOG_CALLBACKS` se používá při inicializaci [RELOG_DESCRIPTOR](relog-descriptor-struct.md) objektu. Určuje, které funkce se mají volat během opětovného přihlášení trasování trasování událostí pro Windows (ETW).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -47,17 +47,17 @@ typedef struct RELOG_CALLBACKS_TAG
 
 |  |  |
 |--|--|
-| `OnStartActivity` | Volá se, aby se zpracovala událost zahájení aktivity. |
-| `OnStopActivity` | Volá se, aby se zpracovala událost zastavení aktivity. |
-| `OnSimpleEvent` | Volá se, aby se zpracovala jednoduchá událost. |
-| `OnTraceInfo` | Volá se jednou na začátku přehlašování po volání `OnBeginReloggingPass`. |
-| `OnBeginRelogging` | Volá se při zahájení relace znovu protokolování, než se začne znovu přihlašovat. |
-| `OnEndRelogging` | Volá se, když se ukončí relace znovu protokolování, až se úspěšně přehlásilo. |
-| `OnBeginReloggingPass` | Volá se, když se před zpracováním jakékoli události znovu projde. |
-| `OnEndReloggingPass` | Volá se, když se po zpracování všech událostí ukončí průchod znovu Logging. |
+| `OnStartActivity` | Nazývá se zpracování události zahájení aktivity. |
+| `OnStopActivity` | Nazývá se zpracování události zastavení aktivity. |
+| `OnSimpleEvent` | Volána ke zpracování jednoduché události. |
+| `OnTraceInfo` | Volána jednou na začátku relogging `OnBeginReloggingPass` průchodu, poté, co byl volán. |
+| `OnBeginRelogging` | Volána při zahájení relace opětovného přihlášení před zahájením opakování průchodu. |
+| `OnEndRelogging` | Volána při ukončení relace opětovného přihlášení po ukončení opakování průchodu. |
+| `OnBeginReloggingPass` | Volána při zahájení opakování průchodu, před zpracováním jakékoli události. |
+| `OnEndReloggingPass` | Volána při ukončení opakování průchodu, po zpracování všech událostí. |
 
 ## <a name="remarks"></a>Poznámky
 
-Všichni členové `RELOG_CALLBACKS` struktury musí ukazovat na platnou funkci. Další informace o přijatých podpisech funkcí naleznete v tématech [OnRelogEventFunc](on-relog-event-func-typedef.md), [OnTraceInfoFunc](on-trace-info-func-typedef.md)a [OnBeginEndPassFunc](on-begin-end-pass-func-typedef.md).
+Všichni členové `RELOG_CALLBACKS` struktury musí ukazovat na platnou funkci. Další informace o podpisech přijatých funkcí naleznete v [tématech OnRelogEventFunc](on-relog-event-func-typedef.md), [OnTraceInfoFunc](on-trace-info-func-typedef.md)a [OnBeginEndPassFunc](on-begin-end-pass-func-typedef.md).
 
 ::: moniker-end

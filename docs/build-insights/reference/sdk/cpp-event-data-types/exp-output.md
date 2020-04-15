@@ -1,6 +1,6 @@
 ---
-title: ExpOutput – třída
-description: Referenční C++ dokumentace třídy ExpOutput sady SDK pro Build Insights
+title: Třída ExpOutput
+description: C++ Build Insights SDK ExpOutput odkaz na třídu.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: bc108096bf2fffba876231bbf522295d0d0dcc0d
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 4c8c5f2f260596c444df7841c2a3e0c65f5163f7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78333354"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81324822"
 ---
-# <a name="expoutput-class"></a>ExpOutput – třída
+# <a name="expoutput-class"></a>Třída ExpOutput
 
 ::: moniker range="<=vs-2015"
 
-Sada C++ SDK pro Build Insights je kompatibilní se sadou Visual Studio 2017 a novější. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek selektor verzí sady Visual Studio pro tento článek na sadu Visual Studio 2017 nebo Visual Studio 2019.
+Sada C++ Build Insights SDK je kompatibilní s Visual Studio 2017 a vyšší. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek pro výběr **verze** sady Visual Studio pro tento článek na Visual Studio 2017 nebo Visual Studio 2019. Nachází se v horní části obsahu na této stránce.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Třída `ExpOutput` se používá s funkcemi [MatchEvent](../functions/match-event.md), [MatchEventInMemberFunction](../functions/match-event-in-member-function.md), [MatchEventStack](../functions/match-event-stack.md)a [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md) . Použijte ho ke spárování [EXP_OUTPUT](../event-table.md#exp-output) události.
+Třída `ExpOutput` se používá s funkcemi [MatchEvent](../functions/match-event.md), [MatchEventInMemberFunction](../functions/match-event-in-member-function.md), [MatchEventStack](../functions/match-event-stack.md)a [MatchEventStackInMemberFunction.](../functions/match-event-stack-in-member-function.md) Použijte ji tak, aby odpovídala [události EXP_OUTPUT.](../event-table.md#exp-output)
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -39,13 +39,13 @@ public:
 
 ## <a name="members"></a>Členové
 
-Spolu se zděděnými členy ze základní třídy typu " [výstup](file-output.md) " třídy `ExpOutput` obsahuje následující členy:
+Spolu s zděděnými členy ze základní `ExpOutput` třídy [FileOutput](file-output.md) obsahuje třída následující členy:
 
 ### <a name="constructors"></a>Konstruktory
 
 [ExpOutput](#exp-output)
 
-## <a name="exp-output"></a>ExpOutput
+## <a name="expoutput"></a><a name="exp-output"></a>ExpOutput
 
 ```cpp
 ExpOutput(const RawEvent& event);
@@ -53,7 +53,7 @@ ExpOutput(const RawEvent& event);
 
 ### <a name="parameters"></a>Parametry
 
-\ *události*
-Událost [EXP_OUTPUT](../event-table.md#exp-output) .
+*Událost*\
+[Událost EXP_OUTPUT.](../event-table.md#exp-output)
 
 ::: moniker-end

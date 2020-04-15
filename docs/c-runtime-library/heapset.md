@@ -25,19 +25,19 @@ helpviewer_keywords:
 - debugging [CRT], heap-related problems
 - _heapset function
 ms.assetid: 9667eeb0-55bc-4c19-af5f-d1fd0a142b3c
-ms.openlocfilehash: c47ab59b1d8b9e73add640f7a7cf5fb146dc7c53
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 2a0aea37237f04939579eb059a42dd33771339ad
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75300258"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81351276"
 ---
 # <a name="_heapset"></a>_heapset
 
-Kontroluje haldy pro minimální konzistenci a nastavuje bezplatné položky na zadanou hodnotu.
+Zkontroluje hromady pro minimální konzistenci a nastaví volné položky na zadanou hodnotu.
 
 > [!IMPORTANT]
->  Tato funkce je zastaralá. Počínaje verzí Visual Studio 2015 není k dispozici v CRT.
+> Tato funkce je zastaralá. Počínaje Visual Studio 2015, není k dispozici v CRT.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -49,35 +49,35 @@ int _heapset(
 
 #### <a name="parameters"></a>Parametry
 
-*vyplnění*<br/>
-Znak Fill.
+*fill*<br/>
+Vyplnit znak.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-`_heapset` vrátí jednu z následujících celočíselných konstant manifestu definovaných ve typu. h.
+`_heapset`vrátí jednu z následujících konstant manifestu celého čísla definované v souboru Malloc.h.
 
 |||
 |-|-|
-| `_HEAPBADBEGIN`  | Informace počáteční hlavičky jsou neplatné nebo se nenašly.  |
-| `_HEAPBADNODE`  | Byl nalezen poškozený nebo chybný uzel haldy.  |
-| `_HEAPEMPTY`  | Halda není inicializovaná.  |
-| `_HEAPOK`  | Halda se jeví jako konzistentní.  |
+| `_HEAPBADBEGIN`  | Počáteční informace záhlaví jsou neplatné nebo nebyly nalezeny.  |
+| `_HEAPBADNODE`  | Byla nalezena halda poškozená nebo chybná uzla.  |
+| `_HEAPEMPTY`  | Halda není inicializována.  |
+| `_HEAPOK`  | Halda se zdá být konzistentní.  |
 
-Kromě toho, pokud dojde k chybě, `_heapset` nastaví `errno` na `ENOSYS`.
+Kromě toho, pokud dojde `_heapset` k `errno` `ENOSYS`chybě, nastaví na .
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce `_heapset` zobrazuje volná umístění paměti nebo uzly, které byly neúmyslně přepsány.
+Funkce `_heapset` zobrazuje umístění volné paměti nebo uzly, které byly neúmyslně přepsány.
 
-`_heapset` kontroluje minimální konzistenci haldy a pak nastaví každý bajt bezplatných položek haldy na hodnotu `fill`. Tato známá hodnota ukazuje, která paměťová umístění haldy obsahují volné uzly a která obsahují data, která nebyla záměrně zapsána do uvolněné paměti. Pokud operační systém nepodporuje `_heapset`(například Windows 98), funkce vrátí `_HEAPOK` a nastaví `errno` na `ENOSYS`.
+`_heapset`zkontroluje minimální konzistenci na haldě a potom nastaví každý bajt volné položky haldy na hodnotu. `fill` Tato známá hodnota ukazuje, která umístění paměti haldy obsahují volné uzly a která obsahují data, která byla neúmyslně zapsána do uvolněné paměti. Pokud operační systém `_heapset`nepodporuje (například Windows 98), `_HEAPOK` funkce `errno` `ENOSYS`se vrátí a nastaví na .
 
 ## <a name="requirements"></a>Požadavky
 
-|Rutina|Požadovaný hlavičkový soubor|Volitelné záhlaví|
+|Rutina|Požadovaný hlavičkový soubor|Volitelná hlavička|
 |-------------|---------------------|---------------------|
-|`_heapset`|\<. h >|\<errno.h>|
+|`_heapset`|\<malloc.h>|\<errno.h>|
 
-Další informace o kompatibilitě naleznete v úvodu v tématu [Kompatibilita](../c-runtime-library/compatibility.md) .
+Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../c-runtime-library/compatibility.md) v úvodu.
 
 ## <a name="example"></a>Příklad
 
@@ -121,7 +121,7 @@ int main( void )
 OK - heap is fine
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Přidělení paměti](../c-runtime-library/memory-allocation.md)<br/>
 [_heapadd](../c-runtime-library/heapadd.md)<br/>

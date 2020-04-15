@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - __raise keyword [C++]
 ms.assetid: 6f1ae418-5f0f-48b6-9f6e-8ea7e66b239a
-ms.openlocfilehash: 9238e8e3e2fcd2c2f8b6431cfb0a79d452c5adf3
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: eb3ab24378071663b2a6a1abab700b81c3172419
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80179169"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81317225"
 ---
 # <a name="__raise"></a>__raise
 
@@ -26,12 +26,12 @@ __raise method-declarator;
 
 ## <a name="remarks"></a>Poznámky
 
-Ze spravovaného kódu lze událost vyvolat pouze ze třídy, ve které je definována. Další informace najdete v [události](../extensions/event-cpp-component-extensions.md) .
+Ze spravovaného kódu lze událost vyvolat pouze ze třídy, ve které je definována. Další informace naleznete v [akci.](../extensions/event-cpp-component-extensions.md)
 
-Klíčové slovo **__raise** způsobí, že dojde k chybě, pokud voláte událost bez události.
+Klíčové slovo **__raise** způsobí, že chyba vyzařovat, pokud zavoláte non-event.
 
 > [!NOTE]
->  Třída šablony nebo struktura nemohou obsahovat události.
+> Třída šablony nebo struktura nemohou obsahovat události.
 
 ## <a name="example"></a>Příklad
 

@@ -1,5 +1,5 @@
 ---
-title: CHtmlEditView – třída
+title: Třída CHtmlEditView
 ms.date: 11/04/2016
 f1_keywords:
 - CHtmlEditView
@@ -14,16 +14,16 @@ helpviewer_keywords:
 - CHtmlEditView [MFC], GetDHtmlDocument
 - CHtmlEditView [MFC], GetStartDocument
 ms.assetid: 166c8ba8-3fb5-4dd7-a9ea-5bca662d00f6
-ms.openlocfilehash: 8267a5272d2d542c4679bf30aa9d3ad8b933d81d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1254a3412846cdebd1d9accb91d27d0afbc4ef8d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389564"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81352082"
 ---
-# <a name="chtmleditview-class"></a>CHtmlEditView – třída
+# <a name="chtmleditview-class"></a>Třída CHtmlEditView
 
-Poskytuje funkce úprav platformy WebBrowser v rámci kontextu architektury dokumentu/zobrazení MFC.
+Poskytuje funkce platformy pro úpravy webového prohlížeče v kontextu architektury dokumentu a zobrazení knihovny MFC.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -35,31 +35,31 @@ class CHtmlEditView : public CHtmlView, public CHtmlEditCtrlBase<CHtmlEditView>
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CHtmlEditView::CHtmlEditView](#chtmleditview)|Vytvoří `CHtmlEditView` objektu.|
+|[CHtmlEditView::CHtmlEditView](#chtmleditview)|Vytvoří `CHtmlEditView` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CHtmlEditView::Create](#create)|Vytvoří nový objekt okna.|
-|[CHtmlEditView::GetDHtmlDocument](#getdhtmldocument)|Vrátí `IHTMLDocument2` rozhraní pro aktuální dokument.|
+|[CHtmlEditView::Vytvořit](#create)|Vytvoří nový objekt okna.|
+|[ChtmleditView::GetDHtmlDocument](#getdhtmldocument)|Vrátí `IHTMLDocument2` rozhraní v aktuálním dokumentu.|
 |[CHtmlEditView::GetStartDocument](#getstartdocument)|Načte název výchozího dokumentu pro toto zobrazení.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObjekt](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[CCmdCíl](../../mfc/reference/ccmdtarget-class.md)
 
-[CWnd](../../mfc/reference/cwnd-class.md)
+[Cwnd](../../mfc/reference/cwnd-class.md)
 
-[CView](../../mfc/reference/cview-class.md)
+[Cview](../../mfc/reference/cview-class.md)
 
 [CScrollView](../../mfc/reference/cscrollview-class.md)
 
-[CFormView](../../mfc/reference/cformview-class.md)
+[Cformview](../../mfc/reference/cformview-class.md)
 
 [CHtmlEditCtrlBase](../../mfc/reference/chtmleditctrlbase-class.md)
 
@@ -69,17 +69,17 @@ class CHtmlEditView : public CHtmlView, public CHtmlEditCtrlBase<CHtmlEditView>
 
 ## <a name="requirements"></a>Požadavky
 
-**Header:** afxhtml.h
+**Záhlaví:** afxhtml.h
 
-##  <a name="chtmleditview"></a>  CHtmlEditView::CHtmlEditView
+## <a name="chtmleditviewchtmleditview"></a><a name="chtmleditview"></a>CHtmlEditView::CHtmlEditView
 
-Vytvoří `CHtmlEditView` objektu.
+Vytvoří `CHtmlEditView` objekt.
 
 ```
 CHtmlEditView();
 ```
 
-##  <a name="create"></a>  CHtmlEditView::Create
+## <a name="chtmleditviewcreate"></a><a name="create"></a>CHtmlEditView::Vytvořit
 
 Vytvoří nový objekt okna.
 
@@ -96,34 +96,34 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>Parametry
 
-*lpszClassName*<br/>
-Odkazuje na řetězec znaků zakončené znakem null, která pojmenuje třídu Windows. Název třídy může být jakýkoli název zaregistrované [afxregisterwndclass –](application-information-and-management.md#afxregisterwndclass) globální funkce nebo `RegisterClass` funkce Windows. Pokud má hodnotu NULL, používá předdefinované výchozí [CFrameWnd](../../mfc/reference/cframewnd-class.md) atributy.
+*název lpszClassName*<br/>
+Odkazuje na řetězec znaků ukončený nulou, který pojmenovává třídu systému Windows. Název třídy může být libovolný název registrovaný globální funkcí [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) nebo funkcí systému `RegisterClass` Windows. Pokud null, používá předdefinované výchozí [CFrameWnd](../../mfc/reference/cframewnd-class.md) atributy.
 
-*lpszWindowName*<br/>
-Odkazuje na řetězec znaků zakončené znakem null představující název okna.
+*lpszNázev_okna*<br/>
+Odkazuje na řetězec znaků ukončený hodnotou null, který představuje název okna.
 
-*dwStyle*<br/>
-Určuje atributy stylu okna. Ve výchozím nastavení jsou nastavené styly WS_VISIBLE a WS_CHILD Windows.
+*dwStyl*<br/>
+Určuje atributy stylu okna. Ve výchozím nastavení jsou nastaveny styly WS_VISIBLE a WS_CHILD systému Windows.
 
 *Rect*<br/>
-Odkaz na [RECT](/previous-versions/dd162897\(v=vs.85\)) struktura určující velikost a umístění okna. *RectDefault* hodnota umožňuje určit velikost a umístění nového okna Windows.
+Odkaz na strukturu [RECT](/previous-versions/dd162897\(v=vs.85\)) určující velikost a umístění okna. Hodnota *rectDefault* umožňuje systému Windows určit velikost a umístění nového okna.
 
 *pParentWnd*<br/>
 Ukazatel na nadřazené okno ovládacího prvku.
 
-*nID*<br/>
-Číslo ID zobrazení. Ve výchozím nastavení AFX_IDW_PANE_FIRST.
+*Nid*<br/>
+ID číslo zobrazení. Ve výchozím nastavení nastavte AFX_IDW_PANE_FIRST.
 
-*pContext*<br/>
-Ukazatel [ccreatecontext –](../../mfc/reference/ccreatecontext-structure.md). Ve výchozím nastavení s hodnotou NULL.
+*pKontext*<br/>
+Ukazatel na [CCreateContext](../../mfc/reference/ccreatecontext-structure.md). Null ve výchozím nastavení.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda také bude volat obsažený ovládací prvek WebBrowser `Navigate` metoda načíst výchozí dokument (viz [CHtmlEditView::GetStartDocument](#getstartdocument)).
+Tato metoda bude také volat obsažené `Navigate` WebBrowser metodu načíst výchozí dokument (viz [CHtmlEditView::GetStartDocument](#getstartdocument)).
 
-##  <a name="getdhtmldocument"></a>  CHtmlEditView::GetDHtmlDocument
+## <a name="chtmleditviewgetdhtmldocument"></a><a name="getdhtmldocument"></a>ChtmleditView::GetDHtmlDocument
 
-Vrátí `IHTMLDocument2` rozhraní pro aktuální dokument.
+Vrátí `IHTMLDocument2` rozhraní v aktuálním dokumentu.
 
 ```
 BOOL GetDHtmlDocument(IHTMLDocument2** ppDocument) const;
@@ -132,9 +132,9 @@ BOOL GetDHtmlDocument(IHTMLDocument2** ppDocument) const;
 ### <a name="parameters"></a>Parametry
 
 *ppDocument*<br/>
-[IHTMLDocument2](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa752574\(v=vs.85\)) rozhraní.
+Rozhraní [IHTMLDocument2.](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa752574\(v=vs.85\))
 
-##  <a name="getstartdocument"></a>  CHtmlEditView::GetStartDocument
+## <a name="chtmleditviewgetstartdocument"></a><a name="getstartdocument"></a>CHtmlEditView::GetStartDocument
 
 Načte název výchozího dokumentu pro toto zobrazení.
 
@@ -142,7 +142,7 @@ Načte název výchozího dokumentu pro toto zobrazení.
 virtual LPCTSTR GetStartDocument();
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Ukázka HTMLEdit](../../overview/visual-cpp-samples.md)<br/>
+[HtmlEdit ukázka](../../overview/visual-cpp-samples.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)
