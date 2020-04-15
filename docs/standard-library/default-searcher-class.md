@@ -1,20 +1,20 @@
 ---
-title: default_searcher – třída
+title: default_searcher třída
 ms.date: 08/03/2019
 f1_keywords:
 - functional/std::default_searcher
 helpviewer_keywords:
 - std::default_searcher [C++]
-ms.openlocfilehash: f2b1fe83b5223bbb60e9e32149c101e6379f93c3
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 2c8b93b83b271f787c993f789e1a68f84a60f016
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "68268000"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368928"
 ---
-# <a name="default_searcher-class"></a>default_searcher – třída
+# <a name="default_searcher-class"></a>default_searcher třída
 
-A `default_searcher` je typ objektu funkce pro operace, které hledají sekvenci určenou v konstruktoru objektu. Hledání je provedeno v jiné sekvenci poskytnuté operátoru volání funkce objektu. Vyvolá hledání [std:: Search](algorithm-functions.md#search) a provede hledání. `default_searcher`
+A `default_searcher` je typ objektu funkce pro operace, které hledají posloupnost zadanou v konstruktoru objektu. Hledání se provádí v rámci jiné sekvence poskytované operátoru volání funkce objektu. Vyvolá `default_searcher` [std::search](algorithm-functions.md#search) provést hledání.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -38,14 +38,14 @@ class default_searcher
 
 | | |
 | - | - |
-| **BeginRequestEventArgs** | |
+| **Konstruktor** | |
 | [default_searcher](#default-searcher-constructor) | |
 | **Operátory** | |
-| [operator()](#operator-call) | |
+| [operátor()](#operator-call) | |
 
-## <a name="default-searcher-constructor"></a>konstruktor default_searcher
+## <a name="default_searcher-constructor"></a><a name="default-searcher-constructor"></a>konstruktor default_searcher
 
-Vytvoří objekt funkce pomocí sekvence hledání a predikátu rovnosti. `default_searcher`
+Vytvoří objekt `default_searcher` funkce pomocí sekvence hledat a rovnosti predikátu.
 
 ```cpp
 default_searcher(                   // C++17
@@ -62,23 +62,23 @@ constexpr default_searcher(         // C++20
 ### <a name="parameters"></a>Parametry
 
 *pat_first*\
-Počáteční prvek sekvence, která se má vyhledat
+Počáteční prvek sekvence hledat.
 
 *pat_last*\
-Konec sekvence, která se má vyhledat
+Konec sekvence hledat.
 
-*čekání*\
-Volitelný predikát porovnání rovnosti pro elementy Sequence. Pokud není zadán typ porovnání rovnosti, je `std::equal_to`výchozí hodnota.
+*pred*\
+Volitelné porovnání rovnosti predikát pro sekvenční prvky. Pokud není zadán typ porovnání rovnosti, `std::equal_to`výchozí je .
 
 ### <a name="remarks"></a>Poznámky
 
-Vyvolá jakoukoli výjimku vyvolanou kopírovacím konstruktorem typů *BinaryPredicate* nebo *ForwardIterator* .
+Vyvolá všechny výjimky vyvolána konstruktorkopie *BinaryPredicate* nebo *ForwardIterator* typy.
 
-Tato třída je v C++ 17 novinkou. C++ 20 vytvořil konstruktor `constexpr`.
+Tato třída je nová v jazyce C++17. C ++ 20 udělal `constexpr`konstruktor .
 
-## <a name="operator-call"></a>operator () – operátor
+## <a name="operator"></a><a name="operator-call"></a>operátor()
 
-Operátor volání operátoru funkce. Vyhledá v rámci sekvence `[first, last)` argumentů sekvenci určenou konstruktoru.
+Operátor volání operátoru funkce. Hledá v posloupnosti `[first, last)` argumentů posloupnost zadanou konstruktoru.
 
 ```cpp
 template <class ForwardIterator2>   // C++17
@@ -94,26 +94,26 @@ constexpr pair<ForwardIterator2, ForwardIterator2> operator()(
 
 ### <a name="parameters"></a>Parametry
 
-*první*\
-Počáteční prvek sekvence, v níž se má hledat
+*První*\
+Počáteční prvek sekvence hledat v rámci.
 
-*posledního*\
-Konec sekvence, v níž se má hledat
+*Poslední*\
+Konec sekvence k prohledání uvnitř.
 
 ### <a name="remarks"></a>Poznámky
 
-Vrátí pár iterátorů. Počáteční *iterátor je* platným výsledkem:
+Vrátí pár iterátorů. Počáteční iterátor *i* je účinným výsledkem:
 
 `std::search( first, last, pat_first, pat_last, pred )`.
 
-Druhý iterátor páru je *Poslední* *v případě, že se*jedná o *Poslední*. V opačném případě je to efektivní výsledek:
+Druhý iterátor dvojice je *poslední,* pokud *i** je *poslední*. V opačném případě je to efektivní výsledek:
 
 `std::next( i, std::distance( pat_first, pat_last ))`.
 
-Tato třída je v C++ 17 novinkou. C++ 20 vytvořil operátor `constexpr`volání.
+Tato třída je nová v jazyce C++17. C++20 provedl operátor `constexpr`volání .
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[\<funkční >](functional.md)\
+[\<funkční>](functional.md)\
 [funkce algoritmu](algorithm-functions.md)\
-[std:: Search](algorithm-functions.md#search)
+[std::hledat](algorithm-functions.md#search)

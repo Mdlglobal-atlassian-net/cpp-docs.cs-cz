@@ -1,5 +1,5 @@
 ---
-title: 'TN021: Příkaz a směrování zpráv'
+title: 'TN021: Směrování příkazů a zpráv'
 ms.date: 06/28/2018
 f1_keywords:
 - vc.routing
@@ -8,91 +8,91 @@ helpviewer_keywords:
 - command routing [MFC], technical note TN021
 - Windows messages [MFC], routing
 ms.assetid: b5952c8b-123e-406c-a36d-a6ac7c6df307
-ms.openlocfilehash: ce8aa2013c8f2f351ca1028f0d6103135ba5ecd8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bdd405bda5c0af9e04a50eee4ef5738f3a53259e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62306178"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81370412"
 ---
-# <a name="tn021-command-and-message-routing"></a>TN021: Příkaz a směrování zpráv
+# <a name="tn021-command-and-message-routing"></a>TN021: Směrování příkazů a zpráv
 
 > [!NOTE]
->  Následující Technická poznámka nebyla aktualizována, protože byla poprvé zahrnuta v online dokumentaci. V důsledku toho některé postupy a témata mohou být nesprávné nebo zastaralé. Nejnovější informace se doporučuje vyhledat téma zájmu v dokumentaci online index.
+> Následující technická poznámka nebyla aktualizována od doby, kdy byla poprvé zahrnuta do online dokumentace. V důsledku toho mohou být některé postupy a témata zastaralé nebo nesprávné. Chcete-li získat nejnovější informace, doporučujeme vyhledat téma zájmu v online indexu dokumentace.
 
-Tato poznámka popisuje architekturu směrování a odeslání příkazu, stejně jako pokročilá témata týkající se Obecné okno směrování zpráv.
+Tato poznámka popisuje architekturu směrování a odeslání příkazů a také pokročilá témata v obecném směrování zpráv okna.
 
-Najdete Visual C++ pro obecné informace o architekturách tu popsané, zejména rozdíl mezi Windows zprávy oznámení ovládacích prvků a příkazů. Tato poznámka předpokládá, že velmi obeznámeni s problémy popsané v dokumentaci tištěné a pouze adresy velmi Pokročilá témata.
+Obecné podrobnosti o zde popsaných architekturách, zejména o rozdílu mezi zprávami systému Windows, oznámeními ovládacího prvku a příkazy, naleznete v jazyce Visual C++. Tato poznámka předpokládá, že jste velmi dobře obeznámeni s problémy popsanými v tištěné dokumentaci a řeší pouze velmi pokročilá témata.
 
-## <a name="command-routing-and-dispatch-mfc-10-functionality-evolves-to-mfc-20-architecture"></a>Směrování příkazů a odeslání MFC 1.0 funkcí se vyvíjí s knihovnou MFC 2.0 architektury
+## <a name="command-routing-and-dispatch-mfc-10-functionality-evolves-to-mfc-20-architecture"></a>Funkce směrování a odeslání knihovny MFC 1.0 se vyvíjí na architekturu knihovny MFC 2.0
 
-Windows má wm_command – zprávy, která je přetížena pro poskytují oznámení příkazy nabídky, klávesové zkratky a oznámení ovládacího prvku dialogu.
+Systém Windows má WM_COMMAND zprávu, která je přetížena poskytovat oznámení příkazů nabídky, klíče akcelerátoru a dialog-ovládací upozornění.
 
-1.0 s MFC integrovaným zabývat trochu tím, že obslužná rutina příkazu (například "OnFileNew") `CWnd` odvozené třídy zavolána v reakci na konkrétní wm_command –. Rozděleno spolu s strukturu dat s názvem mapu zpráv a má za následek velmi efektivní pro místo příkazu mechanismus.
+MFC 1.0 postaven na tom trochu tím, že příkaz obslužné `CWnd` rutiny (například "OnFileNew") v odvozené třídě získat volání v reakci na konkrétní WM_COMMAND. To je slepená spolu s datovou strukturu s názvem mapa zpráv a výsledkem je velmi prostorově efektivní příkazový mechanismus.
 
-MFC 1.0 poskytujeme také další funkce pro oddělení oznámení ovládacích prvků ze zprávy příkazů. Příkazy jsou reprezentovány ID 16bitové, někdy označovanou jako ID příkazu. Příkazy obvykle začínají `CFrameWnd` (to znamená nabídky vyberte možnost nebo přeložené akcelerátoru) a směrované do celé řady dalších oknech.
+Knihovna MFC 1.0 také poskytla další funkce pro oddělení řídicích oznámení od zpráv příkazů. Příkazy jsou reprezentovány 16bitovým ID, někdy označované jako ID příkazu. Příkazy obvykle začínají `CFrameWnd` od (tj. výběr nabídky nebo přeloženého akcelerátoru) a jsou směrovány do různých jiných oken.
 
-1.0 knihovny MFC používá směrování příkazů v omezené smysl pro implementaci rozhraní více dokumentů (MDI). (Okna rámce MDI delegovat příkazy, které její aktivní podřízené okno MDI).
+Knihovna MFC 1.0 používá směrování příkazů v omezeném smyslu pro implementaci rozhraní MDI (Multiple Document Interface). (Příkazy delegáta okna rámce MDI do aktivního podřízeného okna MDI.)
 
-Tato funkce byla generalizovaný a rozšířit v MFC 2.0, aby bylo možné příkazy zpracovávat širší rozsah objektů (nikoli pouze objekty oken). Poskytuje další formální a rozšiřitelná architektura pro směrování zpráv a opětovně používá příkaz cíl směrování pro nejen zpracování příkazů, ale také pro aktualizace objektů uživatelského rozhraní (např. položky nabídky nebo tlačítka na panelu nástrojů) tak, aby odrážela aktuální dostupnost příkazu .
+Tato funkce byla zobecněna a rozšířena v knihovně MFC 2.0, aby příkazy mohly být zpracovány širším rozsahem objektů (nejen objekty okna). Poskytuje více formální a rozšiřitelné architektury pro směrování zpráv a opakovaně používá směrování cíle příkazu nejen pro zpracování příkazů, ale také pro aktualizaci objektů rozhraní (jako položky nabídky a tlačítka panelu nástrojů) tak, aby odrážely aktuální dostupnost příkazu.
 
 ## <a name="command-ids"></a>Identifikátory příkazů
 
-Vysvětlení směrování a proces vytvoření vazby příkazu naleznete v tématu Visual C++. [Technická poznámka 20](../mfc/tn020-id-naming-and-numbering-conventions.md) obsahuje informace o pojmenování ID.
+Vysvětlení procesu směrování a vazby příkazů naleznete v tématu Visual C++ . [Technická poznámka 20](../mfc/tn020-id-naming-and-numbering-conventions.md) obsahuje informace o pojmenování ID.
 
-Obecný předponu "ID_" používáme pro ID příkazů. ID příkazu je > = 0x8000. Zpráva řádku nebo stavového řádku. Zobrazí řetězce popisu příkazu, pokud je STRINGTABLE prostředek se stejným ID jako identifikátor příkazu
+Pro ID příkazů používáme obecnou předponu "ID_". ID příkazů jsou >= 0x8000. Řádek zprávy nebo stavový řádek zobrazí řetězec popisu příkazu, pokud existuje stringtable prostředek se stejnými ID jako ID příkazu.
 
-V prostředcích aplikace se zobrazí příkaz, který může ID na několika místech:
+Ve zdrojích aplikace se id příkazu může zobrazit na několika místech:
 
-- V jedné STRINGTABLE prostředku, který má stejný Identifikátor jako zpráva řádku.
+- V jednom stringtable prostředek, který má stejné ID jako výzva řádku zprávy.
 
-- Může být mnoho nabídce prostředky, které jsou připojeny k položkám, které vyvolají ten samý příkaz.
+- V možném počtu zdrojů NABÍDKY, které jsou připojeny k položkám nabídky, které vyvolávají stejný příkaz.
 
-- (Rozšířené) v dialogovém okně tlačítko GOSUB příkazu.
+- (ADVANCED) v dialogovém okně pro příkaz GOSUB.
 
-Ve zdrojovém kódu vaší aplikace zobrazí se příkaz, který může ID na několika místech:
+Ve zdrojovém kódu aplikace se id příkazu může zobrazit na několika místech:
 
-- V prostředku. H (nebo jiné hlavičkový soubor symbolů hlavní) k definování ID příkazů specifických pro aplikaci.
+- Ve vašem zdroji. H (nebo jiný hlavní soubor záhlaví symbolu) k definování ID příkazů specifických pro aplikaci.
 
-- NAPŘÍKLAD v poli ID použité k vytvoření panelu nástrojů.
+- MOŽNÁ V poli ID slouží k vytvoření panelu nástrojů.
 
-- V makru ON_COMMAND.
+- V ON_COMMAND makru.
 
-- TŘEBA v ON_UPDATE_COMMAND_UI – makro.
+- Možná v ON_UPDATE_COMMAND_UI makro.
 
-V současné době pouze implementace v prostředí MFC, která vyžaduje ID příkazů být > = 0x8000 je implementace GOSUB dialogová okna a příkazy.
+V současné době je jedinou implementací v knihovně MFC, která vyžaduje ID příkazů >= 0x8000, implementace dialogů/příkazů GOSUB.
 
-## <a name="gosub-commands-using-command-architecture-in-dialogs"></a>Příkazy GOSUB, pomocí příkazu architektury v dialogových oknech
+## <a name="gosub-commands-using-command-architecture-in-dialogs"></a>Příkazy GOSUB, použití architektury příkazů v dialogových oknech
 
-Příkaz architektury, směrování a příkazy pracuje s oken s rámečkem, položek nabídky, tlačítka na panelu nástrojů, tlačítek dialogového okna, jiné ovládací pruhy a další prvky uživatelského rozhraní navržené tak, aby aktualizace na vyžádání a směrování příkazů nebo hlavní ovládací prvek ID cíl příkazu (obvykle hlavní okno rámce). Využívajících hlavního příkazu může směrovat další příkaz cílové objektů podle potřeby oznámení příkaz nebo ovládací prvek.
+Architektura příkazů směrování a povolení příkazů funguje dobře s okny rámců, položkami nabídek, tlačítky panelu nástrojů, tlačítky dialogových panelů, dalšími ovládacími panely a dalšími prvky uživatelského rozhraní určenými k aktualizaci příkazů na vyžádání a směrování příkazů nebo řídicích ID na hlavní cíl příkazu (obvykle okno hlavního rámce). Tento cíl hlavního příkazu může podle potřeby směrovat oznámení o příkazu nebo řízení do jiných cílových objektů příkazu.
 
-Dialogové okno (modálním nebo nemodálním) mohou těžit z některé funkce architektury příkazu, pokud přiřadíte ID ovládacího prvku dialogu ID příslušný příkaz. Podporu pro dialogová okna není automatická, takže možná budete muset napsat další kód.
+Dialogové okno (modální nebo nemodální) může využívat některé funkce architektury příkazu, pokud přiřadíte ID ovládacího prvku ovládacího prvku příslušnému ID příkazu. Podpora dialogových oken není automatická, takže možná budete muset napsat nějaký další kód.
 
-Všimněte si, že všechny tyto funkce fungovalo správně, vaše ID příkazů by měl být > = 0x8000. Protože mnoho dialogových oknech může směrované na rámec stejné, sdílené příkazy by měl být > = 0x8000, zatímco nesdílené IDCs v konkrétní dialogového okna by měl být < = 0x7FFF.
+Všimněte si, že pro všechny tyto funkce pracovat správně, id příkazu by měla být >= 0x8000. Vzhledem k tomu, že mnoho dialogových oken může být směrováno do stejného rámce, sdílené příkazy by měly být >= 0x8000, zatímco nesdílené IDC v určitém dialogu by měly být <= 0x7FFF.
 
-Normální tlačítko můžete umístit v normální modální dialogové okno s IDC tlačítka nastavte na ID příslušný příkaz. Když uživatel vybere tlačítko, vlastník dialogového okna (obvykle hlavní okno rámce) načte příkaz, stejně jako všechny příkazy. Příkaz GOSUB tomu se říká, protože ho se zobrazí další dialog (GOSUB prvního dialogového okna) se obvykle používá.
+Normální tlačítko můžete umístit do normálního modálního dialogu s IDC tlačítka nastaveným na příslušné ID příkazu. Když uživatel vybere tlačítko, vlastník dialogového okna (obvykle okno hlavního rámce) získá příkaz stejně jako jakýkoli jiný příkaz. Tento příkaz se nazývá příkaz GOSUB, protože se obvykle používá k zobrazení jiného dialogu (GOSUB prvního dialogu).
 
-Můžete také volat funkci `CWnd::UpdateDialogControls` na dialogové okno a předejte jí adresu okna hlavního rámce. Tato funkce se povolí nebo zakáže závislosti na tom, zda mají obslužné rutiny příkazů v rámci vaší ovládací prvky dialogového okna. Tato funkce je volána automaticky za vás pro ovládací pruhy v nečinné smyčky vaší aplikace, ale lze zavolat přímo pro normální dialogová okna, které chcete nechat tuto funkci.
+Můžete také volat `CWnd::UpdateDialogControls` funkci v dialogu a předat jí adresu hlavního okna rámce. Tato funkce povolí nebo zakáže ovládací prvky dialogového okna na základě toho, zda mají v rámečku obslužné rutiny příkazů. Tato funkce je volána automaticky pro ovládací panely v nečinnosti smyčky aplikace, ale musíte volat přímo pro normální dialogy, které chcete mít tuto funkci.
 
-## <a name="when-onupdatecommandui-is-called"></a>Když je volána ON_UPDATE_COMMAND_UI
+## <a name="when-on_update_command_ui-is-called"></a>Když se ON_UPDATE_COMMAND_UI nazývá
 
-Udržování stavu povolený/checked položek nabídky všechny programu celou dobu může být problém výpočetně náročné. Běžná technika je povolení/vrácení položek nabídky se pouze v případě, že uživatel vybere automaticky otevírané okno. Implementace MFC 2.0 `CFrameWnd` zpracovává zprávu WM_INITMENUPOPUP a používá k určení stavů nabídky prostřednictvím obslužné rutiny ON_UPDATE_COMMAND_UI architekturu směrování příkazu.
+Udržování povoleného/kontrolovaného stavu všech položek nabídky programu po celou dobu může být výpočtově nákladný problém. Běžnou technikou je povolit nebo zkontrolovat položky nabídky pouze v případě, že uživatel vybere soubor POPUP. MFC 2.0 implementace `CFrameWnd` zpracovává WM_INITMENUPOPUP zprávy a používá architekturu směrování příkazů k určení stavů nabídek prostřednictvím obslužných rutin ON_UPDATE_COMMAND_UI.
 
-`CFrameWnd` také zpracovává zprávy WM_ENTERIDLE pro popis aktuální nabídce položky vybrané na stavovém řádku (také označované jako řádek zprávy).
+`CFrameWnd`také zpracovává zprávu WM_ENTERIDLE popisující aktuální položku nabídky vybranou na stavovém řádku (označovanou také jako řádek zprávy).
 
-Struktura nabídky aplikace, upravovat Visual C++, se používá k reprezentování potenciální příkazy, které jsou k dispozici v době WM_INITMENUPOPUP. ON_UPDATE_COMMAND_UI obslužné rutiny můžete změnit text nabídky nebo stav nebo pro rozšířené použití (např. do seznamu naposledy použitých souborů nebo v rozbalovací nabídce příkazy OLE), ve skutečnosti upravit struktura nabídky před vykreslením nabídky.
+Struktura nabídky aplikace, upravená visual c++, se používá k reprezentaci potenciální příkazy k dispozici v WM_INITMENUPOPUP době. ON_UPDATE_COMMAND_UI obslužné rutiny můžete upravit stav nebo text nabídky nebo pro pokročilé použití (například seznam OBJEKT MRU souboru nebo nabídky ole slovesa), ve skutečnosti upravit strukturu nabídky před vykreslením nabídky.
 
-Panely nástrojů (a další ovládací pruhy) se provádí stejný druh ON_UPDATE_COMMAND_UI zpracování při aplikaci zadá jeho nečinné smyčky. Najdete v článku *knihovny tříd* a [Technická poznámka 31](../mfc/tn031-control-bars.md) Další informace o ovládacích panelů.
+Stejný druh zpracování ON_UPDATE_COMMAND_UI se provádí pro panely nástrojů (a další ovládací panely) při vstupu aplikace do smyčky nečinnosti. Další informace o ovládacích panelech naleznete v *příručce třídní knihovny* a [technické poznámce 31.](../mfc/tn031-control-bars.md)
 
-## <a name="nested-pop-up-menus"></a>Vnořené místní nabídky
+## <a name="nested-pop-up-menus"></a>Vnořené rozbalovací nabídky
 
-Pokud používáte struktura vnořené nabídky, můžete si všimnout, že je volána obslužnou rutinu ON_UPDATE_COMMAND_UI pro první položku v rozbalovací nabídce ve dvou různých případech.
+Pokud používáte vnořenou strukturu nabídky, zjistíte, že obslužná rutina ON_UPDATE_COMMAND_UI pro první položku nabídky v rozbalovací nabídce je volána ve dvou různých případech.
 
-Nejprve je volána pro rozbalovací nabídce, samotného. To je nezbytné, protože nabídek nejsou dostupné žádné identifikátory a používáme ID první položky nabídky v rozbalovací nabídce k odkazování na celý rozbalovací nabídky. V takovém případě *m_pSubMenu* členské proměnné `CCmdUI` objektu bude mít hodnotu NULL a bude odkazovat na místní nabídky.
+Nejprve se nazývá samotné rozbalovací menu. To je nezbytné, protože rozbalovací nabídky nemají ID a používáme ID první položky nabídky rozbalovací nabídky odkazovat na celou rozbalovací nabídku. V takovém případě bude *proměnná m_pSubMenu* člena objektu `CCmdUI` nenulá a bude ukazovat na rozbalovací nabídku.
 
-Za druhé je volána těsně před plánovaným položek nabídky v rozbalovací nabídce je potřeba vykreslit. V takovém případě Identifikátor odkazuje pouze na první položky nabídky a *m_pSubMenu* členské proměnné `CCmdUI` objektu bude mít hodnotu NULL.
+Za druhé, je volána těsně před položky nabídky v rozbalovací nabídce mají být vypracovány. V tomto případě ID odkazuje pouze na první *m_pSubMenu* položku nabídky `CCmdUI` a m_pSubMenu členské proměnné objektu bude NULL.
 
-To umožňuje povolit v rozbalovací nabídce liší od jeho položek nabídky, ale vyžaduje psaní kódu podle některé nabídky. Například ve vnořených nabídky s následující strukturou:
+To umožňuje povolit rozbalovací nabídku odlišnou od položek nabídky, ale vyžaduje, abyste napsali nějaký kód podporující nabídku. Například v vnořené nabídce s následující strukturou:
 
 ```Output
 File>
@@ -101,9 +101,9 @@ File>
     Chart (ID_NEW_CHART)
 ```
 
-Příkazy ID_NEW_SHEET a ID_NEW_CHART může být nezávisle na sobě povolena nebo zakázána. **Nový** rozbalovací nabídky by měla být povolená, pokud některý z nich je povolené.
+Příkazy ID_NEW_SHEET a ID_NEW_CHART lze nezávisle povolit nebo zakázat. **Nová** rozbalovací nabídka by měla být povolena, pokud je povolena některá z těchto dvou.
 
-Obslužná rutina příkazu pro ID_NEW_SHEET (první příkaz v místní nabídce) bude vypadat nějak takto:
+Obslužná rutina příkazu pro ID_NEW_SHEET (první příkaz v automaticky otevíraném zobrazení) bude vypadat nějak takto:
 
 ```cpp
 void CMyApp::OnUpdateNewSheet(CCmdUI* pCmdUI)
@@ -125,7 +125,7 @@ void CMyApp::OnUpdateNewSheet(CCmdUI* pCmdUI)
 }
 ```
 
-Obslužná rutina příkazu pro ID_NEW_CHART by obslužná rutina příkazu normální aktualizace a podívejte se něco jako:
+Obslužná rutina příkazu pro ID_NEW_CHART by byla normální obslužná rutina příkazu aktualizace a vypadala by podobně:
 
 ```cpp
 void CMyApp::OnUpdateNewChart(CCmdUI* pCmdUI)
@@ -134,32 +134,32 @@ void CMyApp::OnUpdateNewChart(CCmdUI* pCmdUI)
 }
 ```
 
-## <a name="oncommand-and-onbnclicked"></a>ON_COMMAND a ON_BN_CLICKED
+## <a name="on_command-and-on_bn_clicked"></a>ON_COMMAND a ON_BN_CLICKED
 
-Makra map zpráv pro **ON_COMMAND** a **ON_BN_CLICKED** jsou stejné. ID příkazu, který MFC příkazy a ovládání oznámení mechanismus směrování využívá jenom rozhodování, kam chcete směrovat. Ovládací prvek oznámení s kódem oznámení ovládacího prvku nula (**BN_CLICKED**) jsou interpretovány jako příkazy.
+Makra mapy zpráv pro **ON_COMMAND** a **ON_BN_CLICKED** jsou stejná. Mechanismus směrování příkazů a řízení řízení knihovny MFC používá pouze ID příkazu k rozhodnutí, kam se má směrovat. Řídicí oznámení s kódem oznámení ovládacího prvku nula (**BN_CLICKED**) jsou interpretována jako příkazy.
 
 > [!NOTE]
-> Ve skutečnosti všech zpráv s oznámením ovládacího prvku projít řetězu obslužná rutina příkazu. Například je technicky možné si můžete napsat obslužnou rutinu oznámení ovládacího prvku **EN_CHANGE** ve své třídě dokumentu. Nejedná obecně vhodné, protože praktické aplikace tato funkce se několik, tato funkce není podporována nástrojem ClassWizard a použití funkce může způsobit křehké kódu.
+> Ve skutečnosti všechny zprávy o oznámení ovládacího prvku projít řetězce obslužné rutiny příkazu. Například je technicky možné pro zápis obslužné rutiny oznámení ovládacího prvku pro **EN_CHANGE** ve vaší třídě dokumentu. To není obecně vhodné, protože praktické aplikace této funkce jsou málo, funkce není podporovánclassWizard a použití funkce může mít za následek křehký kód.
 
-## <a name="disabling-the-automatic-disabling-of-button-controls"></a>Zakázat automatické vypnutí ovládací prvky tlačítek
+## <a name="disabling-the-automatic-disabling-of-button-controls"></a>Zakázání automatického zakázání ovládacích prvků tlačítek
 
-Pokud umístit ovládací prvek tlačítko na panel dialogového okna, nebo v dialogovém okně použití voláte **CWnd::UpdateDialogControls** vlastními silami, všimnete si tohoto tlačítka, které nemají **ON_COMMAND** nebo **ON_UPDATE_COMMAND_UI** obslužné rutiny se automaticky deaktivuje pro vás rozhraní. V některých případech nemusíte mít obslužnou rutinu, ale můžete tlačítko zůstat zapnuté. Nejjednodušší způsob, jak toho dosáhnout, je přidání obslužná rutina příkazu fiktivní (jde udělat ClassWizard) a nedělat nic do něj.
+Pokud umístíte ovládací prvek tlačítka na dialogové míchací panel nebo v dialogovém okně pomocí, kde voláte **CWnd::UpdateDialogControls** na vlastní pěst, zjistíte, že tlačítka, která nemají **ON_COMMAND** nebo **ON_UPDATE_COMMAND_UI** obslužné rutiny budou automaticky zakázány pro vás rámci. V některých případech nebudete muset mít obslužnou rutinu, ale budete chtít, aby tlačítko zůstalo povolené. Nejjednodušší způsob, jak toho dosáhnout, je přidat fiktivní obslužnou rutinu příkazu (snadné provádět s ClassWizard) a nedělat nic v něm.
 
-## <a name="window-message-routing"></a>Směrování zpráv oken
+## <a name="window-message-routing"></a>Směrování zpráv okna
 
-Následující část popisuje některé pokročilejší témata na třídy knihovny MFC a jak je ovlivnit směrování zpráv Windows a další témata. Informace v tomto poli je pouze stručně popisuje. Odkazovat *knihovny tříd* podrobné informace o veřejných rozhraní API. Najdete zdrojový kód knihovny MFC pro další informace o podrobnosti implementace.
+Následující popisuje některé pokročilejší témata na třídy knihovny MFC a jak směrování zpráv systému Windows a další témata ovlivňují. Informace zde jsou popsány pouze stručně. Podrobnosti o veřejných apich naleznete v *odkazu na knihovnu tříd.* Další informace o podrobnostech implementace naleznete ve zdrojovém kódu knihovny knihovny knihovny knihovny knihovny knihovny knihovny knihovny Knihovny MFC.
 
-Najdete [technická Poznámka 17](../mfc/tn017-destroying-window-objects.md) pro podrobnosti o okně Vyčištění, velmi důležité tématu a vyhledat všechny **CWnd**-odvozené třídy.
+Podrobnosti o vyčištění okna, což je velmi důležité téma pro všechny třídy **odvozené od CWnd,** naleznete v [technické poznámce 17.](../mfc/tn017-destroying-window-objects.md)
 
-## <a name="cwnd-issues"></a>CWnd – problémy
+## <a name="cwnd-issues"></a>CWnd problémy
 
-Členská funkce implementace **CWnd::OnChildNotify** poskytuje výkonnou a rozšiřitelnou architekturu pro podřízená okna (označované také jako ovládací prvky) k připojení nebo jinak informováni o zprávy, příkazy a ovládací prvek oznámení, které jejich nadřazené (nebo "vlastník"). Pokud podřízené okno (/ ovládací prvek) jazyka C++ je **CWnd** objektu samotného, virtuální funkce **OnChildNotify** je nejdříve volána s parametry z původní zprávy (to znamená, **MSG**struktura). Podřízené okno může opustit zprávu samostatně, jíst ho nebo upravit zprávu pro nadřazenou položku (vzácného).
+Funkce člen implementace **CWnd::OnChildNotify** poskytuje výkonnou a rozšiřitelnou architekturu pro podřízená okna (označovaná také jako ovládací prvky) pro zavěšení nebo jiné informace o zprávách, příkazech a oznámeních ovládacích prvků, které přejdou na jejich nadřazené (nebo "vlastník"). Pokud podřízené okno (/control) je c++ **CWnd** objekt sám, virtuální funkce **OnChildNotify** je volána jako první s parametry z původní zprávy (to znamená, **msg** struktury). Podřízené okno může nechat zprávu samostatně, jíst nebo upravit zprávu pro nadřazené (rare).
 
-Výchozí **CWnd** implementace zpracovává následující zprávy a používá **OnChildNotify** hook umožňující podřízené systému windows (ovládací prvky) k první přístupu na úrovni zprávy:
+Výchozí **implementace CWnd** zpracovává následující zprávy a používá **onChildNotify** hák povolit podřízené okna (ovládací prvky) pro první přístup ke zprávě:
 
-- **WM_MEASUREITEM** a **WM_DRAWITEM** (pro vlastní kreslení)
+- **WM_MEASUREITEM** a **WM_DRAWITEM** (pro sebelosování)
 
-- **WM_COMPAREITEM** a **WM_DELETEITEM** (pro vlastní kreslení)
+- **WM_COMPAREITEM** a **WM_DELETEITEM** (pro sebelosování)
 
 - **WM_HSCROLL** a **WM_VSCROLL**
 
@@ -167,43 +167,43 @@ Výchozí **CWnd** implementace zpracovává následující zprávy a používá
 
 - **WM_PARENTNOTIFY**
 
-Uvidíte **OnChildNotify** hook slouží ke změně vykreslené vlastníkem zprávy do samostatně nakreslit zpráv.
+Všimněte **si, že hák OnChildNotify** se používá pro změnu zpráv kreslení vlastníka do zpráv s vlastním kreslením.
 
-Kromě **OnChildNotify** hook, posuňte zprávy mají další směrování chování. Níže jsou uvedené podrobné informace o posuvníky a zdroje **WM_HSCROLL** a **WM_VSCROLL** zprávy.
+Kromě **onChildNotify** háček, scroll zprávy mají další směrování chování. Další podrobnosti o posuvnících a zdrojích **WM_HSCROLL** a **WM_VSCROLL** zpráv naleznete níže.
 
-## <a name="cframewnd-issues"></a>CFrameWnd – problémy
+## <a name="cframewnd-issues"></a>CFrameWnd problémy
 
-**CFrameWnd** třída poskytuje většinu směrování příkazů a uživatelského rozhraní aktualizací implementace. Používá se především pro hlavní okno rámce aplikace (**CWinApp::m_pMainWnd**), ale platí pro všechna okna rámce.
+Třída **CFrameWnd** poskytuje většinu směrování příkazů a implementaci aktualizace uživatelského rozhraní. Používá se především pro okno hlavního rámce aplikace (**CWinApp::m_pMainWnd),** ale platí pro všechna okna rámce.
 
-Hlavní okno rámce je v okně na řádku nabídek a je nadřazené ve stavovém řádku nebo zpráva řádku. Podrobnosti najdete výše uvedené informace o směrování příkazů a **WM_INITMENUPOPUP.**
+Okno hlavního rámce je okno s panelem nabídek a je nadřazeným stavovým řádkem nebo řádkem zprávy. Viz výše uvedená diskuse o směrování příkazů a **WM_INITMENUPOPUP.**
 
-**CFrameWnd** třída poskytuje správu aktivního zobrazení. Následující zprávy se směrují prostřednictvím aktivní zobrazení:
+Třída **CFrameWnd** poskytuje správu aktivního zobrazení. Následující zprávy jsou směrovány prostřednictvím aktivního zobrazení:
 
-- Všechny zprávy příkazu (aktivního zobrazení získá první přístup k nim).
+- Všechny příkazzprávy (aktivní zobrazení získá první přístup k nim).
 
-- **WM_HSCROLL** a **WM_VSCROLL** zprávy z na stejné úrovni posuvníky (viz níže).
+- **WM_HSCROLL** a **WM_VSCROLL** zprávy z posuvníků na sourozenecké úrovni (viz níže).
 
-- **WM_ACTIVATE** (a **WM_MDIACTIVATE** pro MDI) získat převedena na volání virtuální funkce **CView::OnActivateView**.
+- **WM_ACTIVATE** (a **WM_MDIACTIVATE** pro MDI) se změní na volání virtuální funkce **CView::OnActivateView**.
 
-## <a name="cmdiframewndcmdichildwnd-issues"></a>CMDIFrameWnd – / CMDIChildWnd – problémy
+## <a name="cmdiframewndcmdichildwnd-issues"></a>CMDIFrameWnd/CMDIChildWnd problémy
 
-Obě třídy okna rámce MDI odvozovat **CFrameWnd** a proto jsou povoleny pro stejný druh směrování příkazů a aktualizace uživatelského rozhraní součástí **CFrameWnd**. V typické aplikaci MDI, pouze hlavní okno rámce (to znamená **CMDIFrameWnd** objekt) obsahuje řádek nabídek a stavovým řádkem a proto je hlavní příčiny směrování implementace příkazu.
+Obě třídy okna rámce MDI jsou odvozeny z **CFrameWnd** a proto jsou povoleny pro stejný druh směrování příkazů a aktualizace uživatelského rozhraní poskytované v **CFrameWnd**. V typické aplikaci MDI pouze hlavní okno rámce (to znamená **CMDIFrameWnd** objekt) obsahuje řádek nabídek a stavový řádek a proto je hlavním zdrojem implementace směrování příkazu.
 
-Obecné směrování schéma je, že aktivní podřízené okno MDI získá první přístup k příkazům. Výchozí hodnota **PreTranslateMessage –** funkce zpracování tabulky akcelerátoru pro obě podřízených oken MDI (první) a rámce MDI (v sekundách) a také standardní akcelerátory systémový příkaz MDI obvykle zpracovává  **TranslateMDISysAccel** (poslední).
+Obecné schéma směrování je, že aktivní podřízené okno MDI získá první přístup k příkazům. Výchozí **funkce PreTranslateMessage** zpracovávají tabulky akcelerátorů pro podřízené okna MDI (první) a rámec MDI (druhý) a také standardní akcelerátory příkazů systému MDI obvykle zpracovány **TranslateMDISysAccel** (poslední).
 
-## <a name="scroll-bar-issues"></a>Posuvník problémy
+## <a name="scroll-bar-issues"></a>Problémy s posuvníkem
 
-Při zpracování zprávy posuvníku (**WM_HSCROLL**/**OnHScroll** a/nebo **WM_VSCROLL**/**OnVScroll**), snažte se tak nespoléhá na posuvníku panelu zprávy, odkud napsat kód pro obslužnou rutinu. To není jenom o obecné Windows problém, protože posuvníku zprávy můžou pocházet z true posuvníku panelu Ovládací prvky nebo z **WS_HSCROLL**/**WS_VSCROLL** posuvníky, které nejsou ovládací prvky stavového řádku posuvníku.
+Při zpracování scroll-message **(WM_HSCROLL**/**OnHScroll** a/nebo **WM_VSCROLL**/**OnVScroll**) byste se měli pokusit napsat kód obslužné rutiny, aby se nespoléhal na to, odkud zpráva posuvníku pochází. To není jen obecný problém systému Windows, protože rolovací zprávy mohou pocházet z ovládacích prvků true scroll bar nebo z **WS_HSCROLL**/**WS_VSCROLL** posuvníky, které nejsou ovládací prvky posuvníku.
 
-Rozšiřuje knihovny MFC, která umožňuje pro ovládací prvky stavového řádku posouvání podřízených nebo v okně se přešli na stejné úrovni (ve skutečnosti nadřazené a podřízené vztah mezi posuvník a okno se možnosti posouvat určitý objekt může být libovolná). To je obzvláště důležité pro sdílené posuvníky s rozdělovače oken. Najdete [Technická poznámka 29](../mfc/tn029-splitter-windows.md) podrobné informace o provádění **CSplitterWnd** včetně Další informace o sdílených posuvníku panelu problémy.
+Knihovna MFC rozšiřuje, že aby posuvník ovládací prvky buď potomek nebo na stejné úrovni okna posouvání (ve skutečnosti vztah nadřazený/podřízený mezi posuvník a okno posouvání může být cokoliv). To je důležité zejména pro sdílené posuvníky s rozdělovacími okny. Podrobnosti o implementaci **CSplitterWnd,** včetně dalších informací o sdílených problémech s posuvníkem, naleznete v [technické poznámce 29.](../mfc/tn029-splitter-windows.md)
 
-Na straně poznámku, existují dva **CWnd** odvozené třídy, kde styly panelu přejděte na vytvořit, když jsou zachycena a nebudou předány Windows. Když předána rutině vytváření, **WS_HSCROLL** a **WS_VSCROLL** lze nezávisle na sobě nastavit, ale po vytvoření nedá změnit. Samozřejmě by měl přímo testovat nebo nastavit bity WS_SCROLL styl okna, které si vytvořilo.
+Na straně poznámka, existují dvě **CWnd** odvozené třídy, kde posuvník styly zadané v době vytvoření jsou zachyceny a nejsou předány systému Windows. Při předání rutiny vytváření lze nezávisle nastavit **WS_HSCROLL** a **WS_VSCROLL,** ale po vytvoření nelze změnit. Samozřejmě byste neměli přímo testovat nebo nastavujte bity stylu WS_SCROLL okna, které vytvořili.
 
-Pro **CMDIFrameWnd** styly posuvníku panelu předáním **vytvořit** nebo **loadframe –** se používají k vytváření MDICLIENT. Pokud chcete mít posuvné oblasti MDICLIENT (jako Windows programový manažer) nastavte oba posuvníku styly (**WS_HSCROLL** &#124; **WS_VSCROLL**) pro styl použitý k vytvoření **CMDIFrameWnd**.
+Pro **CMDIFrameWnd** se styly posuvníku, které předáte **do příkazu Vytvořit** nebo **LoadFrame,** použít k vytvoření mdiclientu. Pokud chcete mít rolovací oblast MDICLIENT (jako je Správce programů systému Windows), nezapomeňte nastavit oba styly posuvníku **(WS_HSCROLL** &#124; **WS_VSCROLL)** pro styl použitý k vytvoření **CMDIFrameWnd**.
 
-Pro **CSplitterWnd** styly posuvníku panelu použít lze na speciální sdílené posuvníky v oblasti rozdělovač. Pro statické rozdělovače oken bude obvykle není nastavena buď styl panelu přejděte. Dynamické rozdělovače oken, obvykle využívá posuvník sadu stylů pro směr rozdělíte, tedy **WS_HSCROLL** rozdělit řádky, **WS_VSCROLL** rozdělit sloupce.
+Pro **CSplitterWnd** styly posuvníku platí pro speciální sdílené posuvníky pro oblasti rozdělovače. U statických štrůdkových oken obvykle nenastavíte ani styl posuvníku. Pro dynamická okna rozdělovače, budete mít obvykle posuvník styl nastavit pro směr, který rozdělíte, To znamená, **WS_HSCROLL** pokud můžete rozdělit řádky, **WS_VSCROLL,** pokud můžete rozdělit sloupce.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Technické poznámky podle čísel](../mfc/technical-notes-by-number.md)<br/>
 [Technické poznámky podle kategorií](../mfc/technical-notes-by-category.md)

@@ -11,16 +11,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HandleTraits::HANDLETraits::Close method
 - Microsoft::WRL::Wrappers::HandleTraits::HANDLETraits::GetInvalidValue method
 ms.assetid: 22963e88-d857-4624-9182-7c986daff722
-ms.openlocfilehash: 4dd2cde62d36c46926e703e6fb649e2ae4ef7811
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 604098cd3289722767117910d6e44e272dcb8b77
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398365"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371451"
 ---
 # <a name="handletraits-structure"></a>Struktura HANDLETraits
 
-Definuje běžné vlastnosti popisovač.
+Definuje společné charakteristiky úchytu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -30,18 +30,18 @@ struct HANDLETraits;
 
 ## <a name="members"></a>Členové
 
-### <a name="public-typedefs"></a>Veřejné definice TypeDef
+### <a name="public-typedefs"></a>Veřejné typedefs
 
-Název   | Popis
+Name (Název)   | Popis
 ------ | ---------------------
-`Type` | Synonymum pro POPISOVAČ.
+`Type` | Synonymum pro HANDLE.
 
 ### <a name="public-methods"></a>Veřejné metody
 
-Název                                              | Popis
+Name (Název)                                              | Popis
 ------------------------------------------------- | -----------------------------
-[Handletraits::Close –](#close)                     | Zavře určený.
-[Handletraits::getinvalidvalue –](#getinvalidvalue) | Představuje neplatný popisovač.
+[HANDLETraits::Zavřít](#close)                     | Zavře zadaný popisovač.
+[HANDLETraits::GetInvalidValue](#getinvalidvalue) | Představuje neplatný popisovač.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -51,11 +51,11 @@ Název                                              | Popis
 
 **Záhlaví:** corewrappers.h
 
-**Namespace:** Microsoft::WRL::Wrappers::HandleTraits
+**Obor názvů:** Microsoft::WRL::Obálky::HandleTraits
 
-## <a name="close"></a>Handletraits::Close –
+## <a name="handletraitsclose"></a><a name="close"></a>HANDLETraits::Zavřít
 
-Zavře určený.
+Zavře zadaný popisovač.
 
 ```cpp
 inline static bool Close(
@@ -65,14 +65,14 @@ inline static bool Close(
 
 ### <a name="parameters"></a>Parametry
 
-*h*<br/>
-Obslužná rutina zavřete.
+*H*<br/>
+Rukojeť zavřít.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** pokud zpracování *h* zavření úspěšně; v opačném případě **false**.
+**true,** pokud popisovač *h* úspěšně uzavřen; jinak **false**.
 
-## <a name="getinvalidvalue"></a>Handletraits::getinvalidvalue –
+## <a name="handletraitsgetinvalidvalue"></a><a name="getinvalidvalue"></a>HANDLETraits::GetInvalidValue
 
 Představuje neplatný popisovač.
 
@@ -82,4 +82,4 @@ inline static HANDLE GetInvalidValue();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vždy vrátí INVALID_HANDLE_VALUE. (INVALID_HANDLE_VALUE je definován ve Windows.)
+Vždy se vrátí INVALID_HANDLE_VALUE. (INVALID_HANDLE_VALUE je definovánsystémem Windows.)

@@ -7,22 +7,22 @@ helpviewer_keywords:
 - CHeaderCtrl class [MFC], drag and drop support
 - HDN_ notifications [MFC]
 ms.assetid: 93a152ec-804f-488f-b260-b3a438d0dc0f
-ms.openlocfilehash: f30ad029742a01280abda85cbd1a81104d01d8cd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8dfaabf3da62c216d3da662f59c57b63e695d9ad
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62297031"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371167"
 ---
 # <a name="providing-drag-and-drop-support-for-header-items"></a>Zajištění podpory přetažení u položek záhlaví
 
-K poskytování podpory a přetažení u položek záhlaví, zadejte hds_dragdrop – styl. Podpora a přetažení u položek záhlaví umožňuje uživateli změnit pořadí položek záhlaví ovládacího prvku záhlaví. Výchozí chování poskytuje poloprůhledných přetáhnout obrázek položky záhlaví jsou kvůli usnadnění použití vypsány a vizuální indikátor na nové pozici, pokud hlavička položka byla vynechána.
+Chcete-li poskytnout podporu přetažením položek záhlaví, zadejte styl HDS_DRAGDROP. Podpora přetažením položek záhlaví umožňuje uživateli určit pořadí položek záhlaví ovládacího prvku záhlaví. Výchozí chování poskytuje poloprůhledný obrázek přetažení položky záhlaví a vizuální indikátor nové pozice, pokud je položka záhlaví vynechána.
 
-Jako s běžnými funkcemi přetažení myší, můžete rozšířit výchozí chování a přetahování zpracováním HDN_BEGINDRAG a HDN_ENDDRAG oznámení. Můžete také upravit vzhled obrázku přetáhněte tak, že přepíšete [CHeaderCtrl::CreateDragImage](../mfc/reference/cheaderctrl-class.md#createdragimage) členskou funkci.
+Stejně jako u běžných funkcí přetažení můžete rozšířit výchozí chování přetažení zpracováním HDN_BEGINDRAG a HDN_ENDDRAG oznámení. Vzhled přetahovaná obrazu můžete také přizpůsobit přepsáním členské funkce [CHeaderCtrl::CreateDragImage.](../mfc/reference/cheaderctrl-class.md#createdragimage)
 
 > [!NOTE]
->  Pokud poskytujete podporu drag drop pro ovládací prvek vložený záhlaví v ovládacím prvku seznamu, naleznete v části Extended Style [změna stylů ovládacího prvku seznam](../mfc/changing-list-control-styles.md) tématu.
+> Pokud poskytujete podporu přetažením pro vložený ovládací prvek záhlaví v ovládacím prvku seznamu, přečtěte si část Rozšířený styl v tématu [Změna stylů ovládacího prvku seznamu.](../mfc/changing-list-control-styles.md)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Používání atributu CHeaderCtrl](../mfc/using-cheaderctrl.md)

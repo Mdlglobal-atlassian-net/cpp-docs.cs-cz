@@ -1,5 +1,5 @@
 ---
-title: 'Výjimky: Převádění z maker výjimek prostředí MFC'
+title: 'Výjimky: Převádění z maker výjimek prostředí MFC'
 ms.date: 08/27/2018
 helpviewer_keywords:
 - converting exceptions [MFC]
@@ -14,103 +14,103 @@ helpviewer_keywords:
 - catch blocks [MFC], delimiting
 - exception handling [MFC], converting exceptions
 ms.assetid: bd3ac3b3-f3ce-4fdd-a168-a2cff13ed796
-ms.openlocfilehash: 59b83438d5341fd6a139af64a2f365a739438741
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 330f66b1f46542082637645ad53da016b434d4a2
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394504"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372019"
 ---
-# <a name="exceptions-converting-from-mfc-exception-macros"></a>Výjimky: Převádění z maker výjimek prostředí MFC
+# <a name="exceptions-converting-from-mfc-exception-macros"></a>Výjimky: Převádění z maker výjimek prostředí MFC
 
-Toto je rozšířená.
+Toto je pokročilé téma.
 
-Tento článek vysvětluje, jak převést existujícímu kódu napsanému s makry Microsoft Foundation Class – **zkuste**, **CATCH**, **THROW**, a tak dále, použít zpracování výjimek jazyka C++ klíčová slova **zkuste**, **catch**, a **throw**. Mezi témata patří:
+Tento článek vysvětluje, jak převést existující kód napsaný s makry třídy Microsoft Foundation – **TRY**, **CATCH**, **THROW**a tak dále – chcete-li použít klíčová slova c++ pro zpracování výjimek, **zkuste**, **catch**a **throw**. Témata:
 
-- [Převod výhod](#_core_advantages_of_converting)
+- [Výhody konverze](#_core_advantages_of_converting)
 
-- [Převod kódu pomocí maker výjimek použití výjimek jazyka C++](#_core_doing_the_conversion)
+- [Převod kódu s makry výjimek na použití výjimek jazyka C++](#_core_doing_the_conversion)
 
-##  <a name="_core_advantages_of_converting"></a> K výhodám tohoto převodu
+## <a name="advantages-of-converting"></a><a name="_core_advantages_of_converting"></a>Výhody konverze
 
-Pravděpodobně není potřeba převést existující kód, i když byste měli znát rozdíly mezi implementací makra v MFC verze 3.0 a implementace v dřívějších verzích. Tyto rozdíly a následné změny v chování kódu jsou popsány v [výjimky: Změny maker pro výjimky ve verzi 3.0](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md).
+Pravděpodobně není nutné převést existující kód, i když byste měli být vědomi rozdílů mezi implementacemi maker v knihovně MFC verze 3.0 a implementacemi v dřívějších verzích. Tyto rozdíly a následné změny v chování kódu jsou popsány v [exceptions: Změny makra výjimek ve verzi 3.0](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md).
 
-Hlavní výhody převodu jsou:
+Hlavní výhody konverze jsou:
 
-- Kód, který používá klíčová slova zpracování výjimek jazyka C++ kompiluje o něco menší. Soubor EXE nebo. KNIHOVNY DLL.
+- Kód, který používá klíčová slova zpracování výjimek jazyka C++ zkompiluje na o něco menší . EXE nebo . Knihovny dll.
 
-- C++ Klíčových slov zpracování výjimek jsou větší variabilitu: Jejich dokáže zpracovat výjimky libovolného datového typu, který je možné zkopírovat (**int**, **float**, **char**, a tak dále), kdežto makra zpracování výjimek pouze třídy `CException` třídy a z něj odvozenou.
+- Klíčová slova pro zpracování výjimek jazyka C++ jsou všestrannější: Mohou zpracovávat výjimky libovolného datového typu, který lze zkopírovat **(int**, **float**, **char**a tak dále), zatímco makra zpracovávají pouze výjimky třídy `CException` a tříd odvozené z ní.
 
-Hlavní rozdíl mezi makra a klíčová slova je, že kód pomocí makra "automatické" odstraní zachycené výjimky, když výjimky dostane mimo rozsah. Kód pomocí klíčových slov není, takže musí explicitně odstranit zachycené výjimky. Další informace najdete v článku [výjimky: Zachytávání a mazání](../mfc/exceptions-catching-and-deleting-exceptions.md).
+Hlavní rozdíl mezi makry a klíčovými slovy spoje v tom, že kód používající makra "automaticky" odstraní zachycenou výjimku, když výjimka přejde mimo rozsah. Kód pomocí klíčových slov není, takže je nutné explicitně odstranit zachycenou výjimku. Další informace naleznete v článku [Výjimky: Zachycení a odstranění výjimek](../mfc/exceptions-catching-and-deleting-exceptions.md).
 
-Další rozdíl je syntaxe. Syntaxe pro makra a klíčová slova se liší ve třech ohledech:
+Dalším rozdílem je syntaxe. Syntaxe maker a klíčových slov se liší ve třech ohledech:
 
-1. Argumenty a deklarace výjimek:
+1. Argumenty maker a deklarace výjimek:
 
-   A **CATCH** volání makra má následující syntaxi:
+   Vyvolání makra **CATCH** má následující syntaxi:
 
    **CATCH(** *exception_class*, *exception_object_pointer_name* **)**
 
-   Všimněte si, že čárkami mezi název třídy a název objektu ukazatele.
+   Všimněte si čárky mezi názvem třídy a názvem ukazatele objektu.
 
-   Výjimka deklarace **catch** – klíčové slovo používá tuto syntaxi:
+   Deklarace výjimky pro klíčové slovo **catch** používá tuto syntaxi:
 
-   **catch(** *exception_type* *exception_name* **)**
+   **úlovek(** *exception_type* *exception_name* **)**
 
-   Příkazu deklarace. Tato výjimka označuje typ výjimky catch bloku obslužné rutiny.
+   Tento příkaz deklarace výjimky označuje typ výjimky, kterou zpracovává blok catch.
 
-2. Vymezení bloky catch:
+2. Vymezení bloků úlovků:
 
-   S makry **CATCH** – makro (s argumenty) začíná první blok catch; **AND_CATCH** – makro začne bloky následné catch a **END_CATCH** – makro Ukončí posloupnost bloky catch.
+   S makry **catch** makro (s jeho argumenty) začíná první catch bloku; **makro AND_CATCH** začíná následné bloky catch a **END_CATCH** makro ukončí posloupnost bloků catch.
 
-   S klíčovými slovy **catch** začíná každý blok catch – klíčové slovo (s deklarací výjimka). Neexistuje žádné protějškem **END_CATCH** – makro; catch bloku končí jeho pravou složenou závorku.
+   S klíčovými slovy catch **klíčové** slovo (s jeho deklarace výjimky) začíná každý blok catch. Makro **END_CATCH** neexistuje. blok catch končí jeho uzavírací závorkou.
 
-3. Výraz throw:
+3. Throw výraz:
 
-   Použití makra **THROW_LAST** pro opětovné vyvolání na aktuální výjimku. **Throw** – klíčové slovo se žádný argument má stejný účinek.
+   Makra používají **THROW_LAST** znovu vyvolat aktuální výjimku. Klíčové slovo **throw** bez argumentu má stejný účinek.
 
-##  <a name="_core_doing_the_conversion"></a> Provádění převodu
+## <a name="doing-the-conversion"></a><a name="_core_doing_the_conversion"></a>Provedení převodu
 
-#### <a name="to-convert-code-using-macros-to-use-the-c-exception-handling-keywords"></a>Chcete-li převést kódu pomocí makra použití klíčových slov zpracování výjimek jazyka C++
+#### <a name="to-convert-code-using-macros-to-use-the-c-exception-handling-keywords"></a>Převod kódu pomocí maker pro použití klíčových slov pro zpracování výjimek jazyka C++
 
-1. Vyhledejte všechny výskyty makra MFC **zkuste**, **CATCH**, **AND_CATCH**, **END_CATCH**, **THROW**, a **THROW_LAST**.
+1. Vyhledejte všechny výskyty maker knihovny MFC **TRY**, **CATCH**, **AND_CATCH**, **END_CATCH**, **THROW**a **THROW_LAST**.
 
-2. Nahraďte nebo odstraňte všechny výskyty následující makra:
+2. Nahraďte nebo odstraňte všechny výskyty následujících maker:
 
-   **Zkuste** (nahraďte ho hodnotou **zkuste**)
+   **TRY** (Nahraďte jej **try)**
 
-   **ZACHYTIT** (nahraďte ho hodnotou **catch**)
+   **CATCH** (Nahraďte jej **úlovkem)**
 
-   **AND_CATCH** (nahraďte ho hodnotou **catch**)
+   **AND_CATCH** (Nahraďte jej **úlovkem)**
 
-   **END_CATCH** (odstranit)
+   **END_CATCH** (Odstranit)
 
-   **VYVOLAT** (nahraďte ho hodnotou **throw**)
+   **THROW** (Nahraďte jej **hodem)**
 
-   **THROW_LAST** (nahraďte ho hodnotou **throw**)
+   **THROW_LAST** (Vyměňte jej **za hod)**
 
-3. Upravte – makro argumentů tak, aby tvoří platný výjimka deklarace.
+3. Upravte argumenty makra tak, aby tvořily platné deklarace výjimek.
 
-   Například změnit
+   Například změna
 
    [!code-cpp[NVC_MFCExceptions#6](../mfc/codesnippet/cpp/exceptions-converting-from-mfc-exception-macros_1.cpp)]
 
-   až
+   na
 
    [!code-cpp[NVC_MFCExceptions#7](../mfc/codesnippet/cpp/exceptions-converting-from-mfc-exception-macros_2.cpp)]
 
-4. Upravte kód v blocích catch tak, aby odstraní objekty výjimek podle potřeby. Další informace najdete v článku [výjimky: Zachytávání a mazání](../mfc/exceptions-catching-and-deleting-exceptions.md).
+4. Upravte kód v zachytávacích blocích tak, aby podle potřeby odstranil objekty výjimek. Další informace naleznete v článku [Výjimky: Zachycení a odstranění výjimek](../mfc/exceptions-catching-and-deleting-exceptions.md).
 
-Tady je příklad použití maker výjimek prostředí MFC kód zpracování výjimek. Všimněte si, že protože kód v následujícím příkladu používá makra výjimku `e` se automaticky odstraní:
+Zde je příklad kódu pro zpracování výjimek pomocí makra výjimek knihovny MFC. Všimněte si, že vzhledem k tomu, `e` že kód v následujícím příkladu používá makra, výjimka je odstraněna automaticky:
 
 [!code-cpp[NVC_MFCExceptions#8](../mfc/codesnippet/cpp/exceptions-converting-from-mfc-exception-macros_3.cpp)]
 
-Kód v následujícím příkladu používá klíčová slova výjimek jazyka C++, výjimky se musí explicitně odstranit:
+Kód v následujícím příkladu používá klíčová slova výjimky Jazyka C++, takže výjimka musí být explicitně odstraněna:
 
 [!code-cpp[NVC_MFCExceptions#9](../mfc/codesnippet/cpp/exceptions-converting-from-mfc-exception-macros_4.cpp)]
 
-Další informace najdete v tématu [výjimky: Použití maker MFC a výjimek jazyka C++](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md).
+Další informace naleznete v [tématu Exceptions: Using Makra knihovny MFC a C++ Exceptions](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Zpracování výjimek](../mfc/exception-handling-in-mfc.md)<br/>

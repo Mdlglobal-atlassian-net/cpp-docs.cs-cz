@@ -12,16 +12,16 @@ helpviewer_keywords:
 - CListView [MFC], GetListCtrl
 - CListView [MFC], RemoveImageList
 ms.assetid: 7626bdb2-a1b8-4eab-b631-6743710a8432
-ms.openlocfilehash: 698e37b2853a2ca3698ee0a426c8ded688c99c58
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ae1a76e4cdd052ff44dcbd69d467c51741bcc2ff
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62296654"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81370142"
 ---
 # <a name="clistview-class"></a>CListView – třída
 
-Zjednodušuje použití ovládacího prvku seznam a [CListCtrl](../../mfc/reference/clistctrl-class.md), třídy, která zapouzdřuje funkce ovládacího prvku seznam architektuře document / view knihovny MFC.
+Zjednodušuje použití ovládacího prvku seznamu a [clistctrl](../../mfc/reference/clistctrl-class.md), třídy, která zapouzdřuje funkce řízení seznamu, s architekturou zobrazení dokumentu knihovny MFC.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,35 +33,35 @@ class CListView : public CCtrlView
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CListView::CListView](#clistview)|Vytvoří `CListView` objektu.|
+|[CListView::CListView](#clistview)|Vytvoří `CListView` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CListView::GetListCtrl](#getlistctrl)|Vrátí ovládací prvek seznamu, který je přidružený k zobrazení.|
+|[CListView::GetListCtrl](#getlistctrl)|Vrátí ovládací prvek seznamu přidružený k zobrazení.|
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CListView::RemoveImageList](#removeimagelist)|Odebere seznam zadané bitové kopie ze zobrazení seznamu.|
+|[CListView::RemoveImageList](#removeimagelist)|Odebere zadaný seznam obrázků ze zobrazení seznamu.|
 
 ## <a name="remarks"></a>Poznámky
 
-Další informace na této architektuře, najdete v přehledu pro [CView](../../mfc/reference/cview-class.md) třídy a křížové odkazy uvedené existuje.
+Další informace o této architektuře naleznete v přehledu pro [CView](../../mfc/reference/cview-class.md) třídy a křížové odkazy citované zde.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObjekt](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[CCmdCíl](../../mfc/reference/ccmdtarget-class.md)
 
-[CWnd](../../mfc/reference/cwnd-class.md)
+[Cwnd](../../mfc/reference/cwnd-class.md)
 
-[CView](../../mfc/reference/cview-class.md)
+[Cview](../../mfc/reference/cview-class.md)
 
 [CCtrlView](../../mfc/reference/cctrlview-class.md)
 
@@ -71,17 +71,17 @@ Další informace na této architektuře, najdete v přehledu pro [CView](../../
 
 **Záhlaví:** afxcview.h
 
-##  <a name="clistview"></a>  CListView::CListView
+## <a name="clistviewclistview"></a><a name="clistview"></a>CListView::CListView
 
-Vytvoří `CListView` objektu.
+Vytvoří `CListView` objekt.
 
 ```
 CListView();
 ```
 
-##  <a name="getlistctrl"></a>  CListView::GetListCtrl
+## <a name="clistviewgetlistctrl"></a><a name="getlistctrl"></a>CListView::GetListCtrl
 
-Voláním této členské funkce k získání odkazu na ovládací prvek seznamu, který je přidružený k zobrazení.
+Volání této členské funkce získat odkaz na ovládací prvek seznamu přidružené k zobrazení.
 
 ```
 CListCtrl& GetListCtrl() const;
@@ -89,15 +89,15 @@ CListCtrl& GetListCtrl() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Odkaz na ovládací prvek seznamu, který je přidružený k zobrazení.
+Odkaz na ovládací prvek seznamu přidružený k zobrazení.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCListView#7](../../atl/reference/codesnippet/cpp/clistview-class_1.cpp)]
 
-##  <a name="removeimagelist"></a>  CListView::RemoveImageList
+## <a name="clistviewremoveimagelist"></a><a name="removeimagelist"></a>CListView::RemoveImageList
 
-Odebere seznam zadané bitové kopie ze zobrazení seznamu.
+Odebere zadaný seznam obrázků ze zobrazení seznamu.
 
 ```
 void RemoveImageList(int nImageList);
@@ -105,12 +105,12 @@ void RemoveImageList(int nImageList);
 
 ### <a name="parameters"></a>Parametry
 
-*nImageList*<br/>
-Z nuly vycházející index bitové kopie k odebrání.
+*nSeznam obrázků*<br/>
+Index na základě nuly obrázku odebrat.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Ukázky knihovny MFC ROWLIST](../../overview/visual-cpp-samples.md)<br/>
+[Řádek řádku vzorku knihovny MFC](../../overview/visual-cpp-samples.md)<br/>
 [CCtrlView – třída](../../mfc/reference/cctrlview-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [CCtrlView – třída](../../mfc/reference/cctrlview-class.md)

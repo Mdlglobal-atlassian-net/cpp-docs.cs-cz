@@ -1,6 +1,6 @@
 ---
-title: Event – třída
-description: Referenční C++ dokumentace třídy Event Insights sady SDK pro sestavování
+title: Třída EventGroup
+description: Odkaz na třídu C++ Build Insights SDK EventGroup.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: ac8ac70f3fc160714b86dd0c483808a4d06e7699
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 596c18ca0e9b4d7b26c4ed5209b16871952c4af2
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78333431"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81324990"
 ---
-# <a name="eventgroup-class"></a>Event – třída
+# <a name="eventgroup-class"></a>Třída EventGroup
 
 ::: moniker range="<=vs-2015"
 
-Sada C++ SDK pro Build Insights je kompatibilní se sadou Visual Studio 2017 a novější. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek selektor verzí sady Visual Studio pro tento článek na sadu Visual Studio 2017 nebo Visual Studio 2019.
+Sada C++ Build Insights SDK je kompatibilní s Visual Studio 2017 a vyšší. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek pro výběr **verze** sady Visual Studio pro tento článek na Visual Studio 2017 nebo Visual Studio 2019. Nachází se v horní části obsahu na této stránce.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Šablona třídy `EventGroup` je základní třídou pro všechny třídy zachycení skupiny.
+Šablona `EventGroup` třídy je základní třída pro všechny třídy zachycení skupiny.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -47,20 +47,20 @@ public:
 
 ### <a name="parameters"></a>Parametry
 
-*TActivity* Typ aktivity obsažený ve skupině.
+*Aktivita* Typ aktivity obsažený ve skupině.
 
 ## <a name="members"></a>Členové
 
 ### <a name="functions"></a>Functions
 
-[Zpět](#back)
-[začínat](#begin)
-[End](#end)
-[přední](#front)
-[operator []](#subscript-operator)
-[velikosti](#size)
+[Konec](#back)
+[zadního začátku](#begin)
+[end](#end)
+[Přední](#front)
+[operátor[]](#subscript-operator)
+[Velikost](#size)
 
-## <a name="back"></a>Návrat
+## <a name="back"></a><a name="back"></a>Zpět
 
 ```cpp
 const TActivity& Back() const;
@@ -68,9 +68,9 @@ const TActivity& Back() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Odkaz na událost poslední aktivita ve skupině.
+Odkaz na poslední událost aktivity ve skupině.
 
-## <a name="begin"></a>ifunctiondiscovery
+## <a name="begin"></a><a name="begin"></a>Začít
 
 ```cpp
 std::deque<TActivity>::const_iterator begin() const;
@@ -80,7 +80,7 @@ std::deque<TActivity>::const_iterator begin() const;
 
 Iterátor ukazující na začátek skupiny událostí aktivity.
 
-## <a name="end"></a>účelu
+## <a name="end"></a><a name="end"></a>Konec
 
 ```cpp
 std::deque<TActivity>::const_iterator end() const;
@@ -90,7 +90,7 @@ std::deque<TActivity>::const_iterator end() const;
 
 Iterátor ukazující jednu pozici za konec skupiny událostí aktivity.
 
-## <a name="front"></a>Dopředu
+## <a name="front"></a><a name="front"></a>Přední
 
 ```cpp
 const TActivity& Front() const;
@@ -100,7 +100,7 @@ const TActivity& Front() const;
 
 Odkaz na první událost aktivity ve skupině.
 
-## <a name="subscript-operator"></a>operator [] – operátor
+## <a name="operator"></a><a name="subscript-operator"></a>operátor[]
 
 ```cpp
 const TActivity& operator[](size_t index) const;
@@ -108,14 +108,14 @@ const TActivity& operator[](size_t index) const;
 
 ### <a name="parameters"></a>Parametry
 
-\ *indexu*
-Index prvku, ke kterému má být přístup ve skupině událostí aktivity.
+*Index*\
+Index prvku pro přístup ve skupině událostí aktivity.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Událost z zásobníku událostí uložená na pozici vyznačenou *indexem*
+Událost ze zásobníku událostí uložená na pozici označenou *indexem*.
 
-## <a name="size"></a>Hodnota
+## <a name="size"></a><a name="size"></a>Velikost
 
 ```cpp
 size_t Size() const;

@@ -12,80 +12,80 @@ helpviewer_keywords:
 - delayed rendering [MFC]
 - OLE [MFC], data sources
 ms.assetid: f7f27e77-bb5d-4131-b819-d71bf929ebaf
-ms.openlocfilehash: adbe2a77fb0069e9874ab20a51b3ab08aabbe1f6
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: a08b6ff274c73d301c156d65aa56fbecca49128c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79446999"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81370555"
 ---
 # <a name="data-objects-and-data-sources-manipulation"></a>Datové objekty a zdroje dat: Manipulace
 
-Po vytvoření datového objektu nebo zdroje dat můžete provádět řadu běžných operací s daty, jako je vkládání a odebírání dat, vytváření výčtu formátů dat a další. Tento článek popisuje techniky nezbytné k dokončení nejběžnějších operací. Témata:
+Po vytvoření datového objektu nebo zdroje dat můžete s daty provést řadu běžných operací, například vložit a odebrat data, vyjmenovat formáty, ve kterých se data nachází, a další. Tento článek popisuje techniky nezbytné k dokončení nejběžnější operace. Témata:
 
-- [Vložení dat do zdroje dat](#_core_inserting_data_into_a_data_source)
+- [Vkládání dat do zdroje dat](#_core_inserting_data_into_a_data_source)
 
 - [Určení formátů dostupných v datovém objektu](#_core_determining_the_formats_available_in_a_data_object)
 
 - [Načítání dat z datového objektu](#_core_retrieving_data_from_a_data_object)
 
-##  <a name="_core_inserting_data_into_a_data_source"></a>Vložení dat do zdroje dat
+## <a name="inserting-data-into-a-data-source"></a><a name="_core_inserting_data_into_a_data_source"></a>Vložení dat do zdroje dat
 
-Způsob vložení dat do zdroje dat závisí na tom, zda jsou data dodávána okamžitě nebo na vyžádání a v případě, že je dodána. Možnosti jsou následující.
+Způsob vložení dat do zdroje dat závisí na tom, zda jsou data dodána okamžitě nebo na vyžádání a na jakém médiu jsou zadána. Možnosti jsou následující.
 
-### <a name="supplying-data-immediately-immediate-rendering"></a>Okamžité poskytnutí dat (okamžité vykreslování)
+### <a name="supplying-data-immediately-immediate-rendering"></a>Okamžité dodání dat (okamžité vykreslování)
 
-- Pro každý formát schránky, ve kterém jsou data dodávána, zavolejte `COleDataSource::CacheGlobalData` opakovaně. Předejte formát schránky, který se má použít, popisovač paměti obsahující data a volitelně i strukturu **FORMATETC** popisující data.
+- Opakovaně `COleDataSource::CacheGlobalData` volat pro každý formát schránky, ve kterém zadávajíte data. Předejte formát schránky, který má být použit, popisovač paměti obsahující data a volitelně strukturu **FORMATETC** popisující data.
 
      -nebo-
 
-- Pokud chcete pracovat přímo s **STGMEDIUM** strukturami, zavoláte `COleDataSource::CacheData` místo `COleDataSource::CacheGlobalData` v možnosti výše.
+- Pokud chcete pracovat přímo s **STGMEDIUM** struktury, `COleDataSource::CacheData` `COleDataSource::CacheGlobalData` volání namísto výše uvedené možnosti.
 
-### <a name="supplying-data-on-demand-delayed-rendering"></a>Zadávání dat na vyžádání (zpožděné vykreslování)
+### <a name="supplying-data-on-demand-delayed-rendering"></a>Poskytování dat na vyžádání (zpožděné vykreslování)
 
 Toto je pokročilé téma.
 
-- Pro každý formát schránky, ve kterém jsou data dodávána, zavolejte `COleDataSource::DelayRenderData` opakovaně. Předejte formát schránky, který se má použít, a volitelně strukturu **FORMATETC** popisující data. Po vyžádání dat rozhraní zavolá `COleDataSource::OnRenderData`, které je nutné přepsat.
+- Opakovaně `COleDataSource::DelayRenderData` volat pro každý formát schránky, ve kterém zadávajíte data. Předaj formát schránky, který má být použit, a volitelně strukturu **FORMATETC** popisující data. Pokud jsou požadována data, `COleDataSource::OnRenderData`bude volat rozhraní , které je nutné přepsat.
 
      -nebo-
 
-- Použijete-li objekt `CFile` k poskytnutí dat, zavolejte `COleDataSource::DelayRenderFileData` namísto `COleDataSource::DelayRenderData` v předchozí možnosti. Po vyžádání dat rozhraní zavolá `COleDataSource::OnRenderFileData`, které je nutné přepsat.
+- Pokud používáte `CFile` objekt k dodání `COleDataSource::DelayRenderFileData` dat, `COleDataSource::DelayRenderData` volání namísto v předchozí možnosti. Pokud jsou požadována data, `COleDataSource::OnRenderFileData`bude volat rozhraní , které je nutné přepsat.
 
-##  <a name="_core_determining_the_formats_available_in_a_data_object"></a>Určení formátů dostupných v datovém objektu
+## <a name="determining-the-formats-available-in-a-data-object"></a><a name="_core_determining_the_formats_available_in_a_data_object"></a>Určení formátů dostupných v datovém objektu
 
-Předtím, než aplikace umožní uživateli vložit do něj data, musí zjistit, jestli ve schránce existují formáty, které může zpracovat. K tomu by měla aplikace provádět následující akce:
+Předtím, než aplikace umožňuje uživateli vložit data do něj, musí vědět, zda existují formáty ve schránce, které může zpracovat. Chcete-li to provést, aplikace by měla provést následující akce:
 
-1. Vytvořte objekt `COleDataObject` a strukturu **FORMATETC** .
+1. Vytvořte `COleDataObject` objekt a strukturu **FORMATETC.**
 
-1. Chcete-li přidružit datový objekt k datům ve schránce, zavolejte `AttachClipboard` členskou funkci datového objektu.
+1. Volání členské funkce `AttachClipboard` datového objektu k přidružení datového objektu k datům ve schránce.
 
 1. Proveďte jednu z těchto akcí:
 
-   - Pokud je k dispozici pouze jeden nebo dva formáty, zavolejte `IsDataAvailable` členskou funkci datového objektu. Ušetříte tím čas v případech, kdy data ve schránce podporují výrazně více formátů než vaše aplikace.
+   - Volání členské funkce `IsDataAvailable` datového objektu, pokud existují pouze jeden nebo dva formáty, které potřebujete. To vám ušetří čas v případech, kdy data ve schránce podporují podstatně více formátů než vaše aplikace.
 
      \-nebo-
 
-   - Chcete-li spustit výčet formátů dostupných ve schránce, zavolejte členskou funkci datového objektu `BeginEnumFormats`. Potom zavolejte `GetNextFormat`, dokud schránka nevrátí formát, který vaše aplikace podporuje, nebo nejsou žádné další formáty.
+   - Volání členské funkce `BeginEnumFormats` datového objektu začít výčet formátů dostupných ve schránce. Pak `GetNextFormat` volání, dokud schránka vrátí formát aplikace podporuje nebo nejsou k dispozici žádné další formáty.
 
-Pokud používáte **ON_UPDATE_COMMAND_UI**, můžete teď v nabídce Upravit povolit speciální položky vložit a případně vložit. Chcete-li to provést, zavolejte buď `CMenu::EnableMenuItem`, nebo `CCmdUI::Enable`. Další informace o tom, jaké aplikace kontejneru by měly provádět s položkami nabídky a kdy, naleznete v tématech [nabídky a prostředky: Přidání kontejneru](../mfc/menus-and-resources-container-additions.md).
+Pokud používáte **ON_UPDATE_COMMAND_UI**, můžete nyní povolit vložit a případně vložit speciální položky v nabídce Úpravy. Chcete-li to `CMenu::EnableMenuItem` provést, volejte buď nebo `CCmdUI::Enable`. Další informace o tom, co mají aplikace kontejnerů dělat s položkami nabídky a kdy, naleznete v [tématu Nabídky a prostředky: Přidání kontejneru](../mfc/menus-and-resources-container-additions.md).
 
-##  <a name="_core_retrieving_data_from_a_data_object"></a>Načítání dat z datového objektu
+## <a name="retrieving-data-from-a-data-object"></a><a name="_core_retrieving_data_from_a_data_object"></a>Načítání dat z datového objektu
 
-Jakmile se rozhodnete pro formát dat, vše zůstává k načtení dat z datového objektu. K tomu se uživatel rozhodne, kam se mají data vložit, a aplikace zavolá příslušnou funkci. Data budou k dispozici v jednom z následujících středních údajů:
+Jakmile se rozhodnete pro formát dat, vše, co zbývá, je načíst data z datového objektu. Chcete-li to provést, uživatel rozhodne, kam umístit data a aplikace volá příslušnou funkci. Údaje budou k dispozici na jednom z následujících médií:
 
-|Střednědobé používání|Volání funkce|
+|Střednědobé používání|Funkce pro volání|
 |------------|----------------------|
-|Globální paměť (`HGLOBAL`)|`COleDataObject::GetGlobalData`|
-|Soubor (`CFile`)|`COleDataObject::GetFileData`|
-|Struktura **STGMEDIUM** (`IStorage`)|`COleDataObject::GetData`|
+|Globální paměť`HGLOBAL`( )|`COleDataObject::GetGlobalData`|
+|Soubor`CFile`( )|`COleDataObject::GetFileData`|
+|**Struktura STGMEDIUM** (`IStorage`)|`COleDataObject::GetData`|
 
-Obvykle bude médium zadáno spolu s formátem schránky. Například objekt **CF_EMBEDDEDSTRUCT** je vždy v `IStorage`m médiu, které vyžaduje strukturu **STGMEDIUM** . Proto byste použili `GetData`, protože se jedná o jedinou jednu z těchto funkcí, které mohou přijmout strukturu **STGMEDIUM** .
+Obvykle bude médium zadáno spolu s formátem schránky. Například **CF_EMBEDDEDSTRUCT** objekt je vždy `IStorage` v médiu, které vyžaduje strukturu **STGMEDIUM.** Proto byste použít, `GetData` protože je pouze jedna z těchto funkcí, které mohou přijmout **stgmedium** strukturu.
 
-V případech, kdy je formát schránky ve `IStream` nebo `HGLOBAL`m médiu, může rozhraní poskytnout `CFile` ukazatel, který odkazuje na data. Aplikace pak může použít čtení souborů k získání dat v podstatě stejným způsobem, jako by mohla importovat data ze souboru. V podstatě se jedná o rozhraní na straně klienta pro `OnRenderData` a `OnRenderFileData` rutiny ve zdroji dat.
+V případech, kdy je formát `IStream` `HGLOBAL` schránky v nebo médium, může rozhraní poskytnout `CFile` ukazatel, který odkazuje na data. Aplikace pak může použít soubor číst získat data v podstatě stejným způsobem, jak by mohla importovat data ze souboru. V podstatě se jedná o `OnRenderData` rozhraní `OnRenderFileData` na straně klienta a rutiny ve zdroji dat.
 
-Uživatel teď může do dokumentu vložit data stejně jako pro jiná data ve stejném formátu.
+Uživatel nyní může do dokumentu vkládat data stejně jako u jiných dat ve stejném formátu.
 
-### <a name="what-do-you-want-to-know-more-about"></a>K čemu chcete získat další informace
+### <a name="what-do-you-want-to-know-more-about"></a>Co chcete vědět více o
 
 - [Přetažení](../mfc/drag-and-drop-ole.md)
 
@@ -95,4 +95,4 @@ Uživatel teď může do dokumentu vložit data stejně jako pro jiná data ve s
 
 [Datové objekty a zdroje dat (OLE)](../mfc/data-objects-and-data-sources-ole.md)<br/>
 [COleDataObject – třída](../mfc/reference/coledataobject-class.md)<br/>
-[COleDataSource – třída](../mfc/reference/coledatasource-class.md)
+[Třída COleDataSource](../mfc/reference/coledatasource-class.md)

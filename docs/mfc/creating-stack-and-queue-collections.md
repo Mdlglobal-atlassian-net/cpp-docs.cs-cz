@@ -11,43 +11,43 @@ helpviewer_keywords:
 - stack collections
 - collections, queue
 ms.assetid: 3c7bc198-35f0-4fc3-aaed-6005a0f22638
-ms.openlocfilehash: ed0ad9b98a69e56df4e66b25bc6ca08cdaaad413
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5b3427f7bb2e46435ddf2768bcbb816f9d7e5c1a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62242403"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371605"
 ---
 # <a name="creating-stack-and-queue-collections"></a>Vytváření kolekcí zásobníků a front
 
-Tento článek vysvětluje, jak vytvořit další datové struktury, jako například [zásobníky](#_core_stacks) a [fronty](#_core_queues), z knihovny MFC seznam tříd. V příkladech se používá třídy odvozené od `CList`, ale můžete použít `CList` přímo nemusíte přidávat funkce.
+Tento článek vysvětluje, jak vytvořit další datové struktury, jako jsou [například zásobníky](#_core_stacks) a fronty , z tříd seznamu [knihovny](#_core_queues)MFC. Příklady používají třídy `CList`odvozené z `CList` aplikace , ale můžete je použít přímo, pokud nepotřebujete přidat funkce.
 
-##  <a name="_core_stacks"></a> Zásobníky
+## <a name="stacks"></a><a name="_core_stacks"></a>Zásobníky
 
-Protože standardní seznamu kolekce má head a koncovou část, je snadné vytvořit kolekci odvozené seznamu, která napodobuje chování last-in-first-out zásobníku. Zásobník je jako zásobník zásobníky v stravování. Jak zásobníky jsou přidány do zásobníku, dostanou nad rámec zásobníku. Poslední zásobník přidali je první, kdo se odeberou. Členské funkce kolekce seznamu `AddHead` a `RemoveHead` lze použít k přidání a odebere prvky z prvního seznamu; proto nejčastěji přidaná element je první, kdo se odeberou.
+Vzhledem k tomu, že standardní seznam kolekce má hlavu a ocas, je snadné vytvořit odvozené seznam kolekce, která napodobuje chování poslední v první zásobníku. Hromádka je jako stoh táců v jídelně. Jako zásobníky jsou přidány do zásobníku, jdou na horní části zásobníku. Poslední přidaný zásobník je první, který má být odstraněn. Funkce členů kolekce `AddHead` `RemoveHead` seznamu a lze přidat a odebrat prvky konkrétně z hlavy seznamu; proto je naposledy přidaný prvek první, který má být odebrán.
 
-#### <a name="to-create-a-stack-collection"></a>Chcete-li vytvořit kolekci zásobníku
+#### <a name="to-create-a-stack-collection"></a>Vytvoření kolekce zásobníku
 
-1. Odvodit novou třídu seznamu z jednoho z existujících seznamu tříd knihovny MFC a přidejte další členské funkce pro podporu funkcí zásobníku operací.
+1. Odvodit novou třídu seznamu z jedné z existujících tříd seznamu knihovny MFC a přidat další členské funkce pro podporu funkcí operací zásobníku.
 
-   Následující příklad ukazuje, jak přidat členské funkce Vložit prvky do zásobníku, náhled prvku na vrcholu zásobníku, a hlavní prvek ze zásobníku:
+   Následující příklad ukazuje, jak přidat členské funkce pro nabízení prvků do zásobníku, prohlížení v horním prvku zásobníku a pop horní prvek ze zásobníku:
 
    [!code-cpp[NVC_MFCCollections#20](../mfc/codesnippet/cpp/creating-stack-and-queue-collections_1.h)]
 
-Všimněte si, že tento přístup poskytuje základní `CObList` třídy. Uživatel může vrstva volat všechny `CObList` členské funkce, zda má smysl pro zásobník nebo ne.
+Všimněte si, že `CObList` tento přístup zveřejňuje základní třídy. Uživatel může volat `CObList` libovolnou člennou funkci, ať už to dává smysl pro zásobník nebo ne.
 
-##  <a name="_core_queues"></a> fronty
+## <a name="queues"></a><a name="_core_queues"></a>Fronty
 
-Protože standardní seznamu kolekce má head a koncovou část, je také snadné vytváření odvozené seznamu kolekce, která napodobuje chování first-in-first-out fronty. Fronta je jako je například lidé v stravování. První osoby v řádku je první ke zpracování. Stejně jako vytvářet více lidí, přejdou na konci řádku čekat jejich zapnout. Členské funkce kolekce seznamu `AddTail` a `RemoveHead` lze použít k přidání a odebrání prvků z hlavní nebo konec seznamu; nejčastěji proto nedávno přidali, element je vždy poslední odeberou.
+Vzhledem k tomu, že standardní seznam kolekce má hlavu a ocas, je také snadné vytvořit odvozené seznam kolekce, která napodobuje chování fronty first-in-first-out. Fronta je jako řada lidí v jídelně. První osoba v řadě je první, která má být doručena. Jak přicházejí další lidé, jdou na konec fronty, aby počkali, až na ně přijde řada. Členská funkce `AddTail` kolekce `RemoveHead` seznamu a lze je použít k přidání a odebrání prvků konkrétně z hlavy nebo ocasu seznamu; proto je naposledy přidaný prvek vždy poslední, který má být odebrán.
 
-#### <a name="to-create-a-queue-collection"></a>Vytvoření kolekce fronty
+#### <a name="to-create-a-queue-collection"></a>Vytvoření kolekce front
 
-1. Odvodit novou třídu seznamu z jednoho z předdefinovaného seznamu tříd, opatřeného knihovny Microsoft Foundation Class a přidejte další členské funkce pro podporu sémantiku operace fronty.
+1. Odvodit novou třídu seznamu z jedné z předdefinovaných tříd seznamu, které jsou součástí knihovny tříd Microsoft Foundation, a přidat další členské funkce pro podporu sémantiky operací fronty.
 
-   Následující příklad ukazuje, jak můžete členské funkce přidat element do konce fronty a načíst prvek z přední části fronty připojit.
+   Následující příklad ukazuje, jak můžete připojit členské funkce přidat prvek na konec fronty a získat prvek z přední části fronty.
 
    [!code-cpp[NVC_MFCCollections#21](../mfc/codesnippet/cpp/creating-stack-and-queue-collections_2.h)]
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Kolekce](../mfc/collections.md)

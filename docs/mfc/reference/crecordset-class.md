@@ -130,12 +130,12 @@ helpviewer_keywords:
 - CRecordset [MFC], m_strFilter
 - CRecordset [MFC], m_strSort
 ms.assetid: dd89a21d-ef39-4aab-891b-1e373d67c855
-ms.openlocfilehash: 1ebdb18254171d28b5d5e02367596b79142df284
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 264c9eda4860dfbe41d40c9b454ec40a1a274ba5
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79421014"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368367"
 ---
 # <a name="crecordset-class"></a>CRecordset – třída
 
@@ -151,119 +151,119 @@ class CRecordset : public CObject
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CRecordset:: CRecordset](#crecordset)|Vytvoří objekt `CRecordset`. Vaše odvozená třída musí poskytovat konstruktor, který volá tuto třídu.|
+|[CRecordset::CRecordset](#crecordset)|Vytvoří `CRecordset` objekt. Odvozené třídy musí poskytnout konstruktor, který volá tento jeden.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CRecordset:: AddNew](#addnew)|Připraví pro přidání nového záznamu. Dokončete přidání voláním `Update`.|
-|[CRecordset:: CanAppend](#canappend)|Vrátí nenulovou hodnotu, pokud je možné přidat nové záznamy do sady záznamů prostřednictvím členské funkce `AddNew`.|
-|[CRecordset:: CanBookmark](#canbookmark)|Vrátí nenulovou hodnotu, pokud sada záznamů podporuje záložky.|
-|[CRecordset:: Cancel](#cancel)|Zruší asynchronní operaci nebo proces z druhého vlákna.|
-|[CRecordset:: CancelUpdate](#cancelupdate)|Zruší všechny probíhající aktualizace z důvodu operace `AddNew` nebo `Edit`.|
-|[CRecordset:: CanRestart](#canrestart)|Vrátí nenulovou hodnotu, pokud je možné volat `Requery` pro opětovné spuštění dotazu sady záznamů.|
-|[CRecordset:: CanScroll](#canscroll)|Vrátí nenulovou hodnotu, pokud můžete procházet záznamy.|
-|[CRecordset:: CanTransact](#cantransact)|Vrátí nenulovou hodnotu, pokud zdroj dat podporuje transakce.|
-|[CRecordset:: CanUpdate](#canupdate)|Vrátí nenulovou hodnotu, pokud může být sada záznamů aktualizována (můžete přidat, aktualizovat nebo odstranit záznamy).|
-|[CRecordset:: CheckRowsetError](#checkrowseterror)|Volá se, aby se zpracovaly chyby generované při načítání záznamu.|
-|[CRecordset:: Close](#close)|Zavře sadu záznamů a HSTMT rozhraní ODBC, které je k němu přidružené.|
-|[CRecordset::D dstranit](#delete)|Odstraní aktuální záznam ze sady záznamů. Po odstranění musíte explicitně přejít na jiný záznam.|
-|[CRecordset::D oBulkFieldExchange](#dobulkfieldexchange)|Volá se, aby se vyměnily hromadné řádky dat ze zdroje dat do sady záznamů. Implementuje hromadnou výměnu pole záznamu (Bulk RFX).|
-|[CRecordset::D oFieldExchange](#dofieldexchange)|Volá se k výměně dat (v obou směrech) mezi datovými členy pole sady záznamů a odpovídajícím záznamem ve zdroji dat. Implementuje výměnu pole záznamu (RFX).|
-|[CRecordset:: Edit](#edit)|Připraví změny aktuálního záznamu. Pro dokončení úpravy zavolejte `Update`.|
-|[CRecordset:: FlushResultSet](#flushresultset)|Vrátí nenulovou hodnotu, pokud existuje další sada výsledků, která má být načtena při použití předdefinovaného dotazu.|
-|[CRecordset:: GetBookmark](#getbookmark)|Přiřadí hodnotu záložky záznamu k objektu Parameter.|
-|[CRecordset:: GetDefaultConnect](#getdefaultconnect)|Volá se, aby se získal výchozí připojovací řetězec.|
-|[CRecordset:: GetDefaultSQL](#getdefaultsql)|Volá se, aby se získal výchozí řetězec SQL, který se má provést.|
-|[CRecordset:: GetFieldValue –](#getfieldvalue)|Vrátí hodnotu pole v sadě záznamů.|
-|[CRecordset:: GetODBCFieldCount](#getodbcfieldcount)|Vrátí počet polí v sadě záznamů.|
-|[CRecordset:: GetODBCFieldInfo](#getodbcfieldinfo)|Vrátí konkrétní druhy informací o polích v sadě záznamů.|
-|[CRecordset:: GetRecordCount](#getrecordcount)|Vrátí počet záznamů v sadě záznamů.|
-|[CRecordset:: GetRowsetSize](#getrowsetsize)|Vrátí počet záznamů, které chcete načíst během jednoho načtení.|
-|[CRecordset:: GetRowsFetched](#getrowsfetched)|Vrátí skutečný počet řádků načtených během načítání.|
-|[CRecordset:: GetRowStatus](#getrowstatus)|Vrátí stav řádku po načtení.|
-|[CRecordset:: GetSQL](#getsql)|Získá řetězec SQL, který slouží k výběru záznamů pro sadu záznamů.|
-|[CRecordset:: GetStatus](#getstatus)|Získá stav sady záznamů: index aktuálního záznamu a zda byl získán konečný počet záznamů.|
-|[CRecordset:: GetTable.](#gettablename)|Získá název tabulky, na které je založena sada záznamů.|
-|[CRecordset:: IsBOF](#isbof)|Vrátí nenulovou hodnotu, pokud byla sada záznamů umístěna před první záznam. Neexistuje aktuální záznam.|
-|[CRecordset:: IsDeleted odstraněno](#isdeleted)|Vrátí nenulovou hodnotu, pokud je sada záznamů umístěna na odstraněný záznam.|
-|[CRecordset:: IsEOF](#iseof)|Vrátí nenulovou hodnotu, pokud byla sada záznamů umístěna za posledním záznamem. Neexistuje aktuální záznam.|
-|[CRecordset:: IsFieldDirty](#isfielddirty)|Vrátí nenulovou hodnotu, pokud je zadané pole v aktuálním záznamu změněno.|
-|[CRecordset:: IsFieldNull](#isfieldnull)|Vrátí nenulovou hodnotu, pokud zadané pole v aktuálním záznamu má hodnotu null (nemá žádnou hodnotu).|
-|[CRecordset:: IsFieldNullable](#isfieldnullable)|Vrátí nenulovou hodnotu, pokud zadané pole v aktuálním záznamu může být nastaveno na hodnotu null (bez hodnoty).|
-|[CRecordset:: Open](#isopen)|Vrátí nenulovou hodnotu, pokud byla dříve volána `Open`.|
-|[CRecordset:: Move](#move)|Umístí sadu záznamů na zadaný počet záznamů z aktuálního záznamu v obou směrech.|
-|[CRecordset:: MoveFirst](#movefirst)|Umístí aktuální záznam na první záznam v sadě záznamů. Nejprve otestujte `IsBOF`.|
-|[CRecordset:: MoveLast](#movelast)|Umístí aktuální záznam na poslední záznam nebo poslední sadu řádků. Nejprve otestujte `IsEOF`.|
-|[CRecordset:: MoveNext](#movenext)|Umístí aktuální záznam na další záznam nebo na další sadu řádků. Nejprve otestujte `IsEOF`.|
-|[CRecordset:: MovePrev](#moveprev)|Umístí aktuální záznam na předchozí záznam nebo na předchozí sadu řádků. Nejprve otestujte `IsBOF`.|
-|[CRecordset:: OnSetOptions](#onsetoptions)|Volá se, aby se nastavily možnosti (používané pro výběr) pro zadaný příkaz ODBC.|
-|[CRecordset:: OnSetUpdateOptions](#onsetupdateoptions)|Volá se, aby se nastavily možnosti (používané při aktualizaci) pro zadaný příkaz ODBC.|
-|[CRecordset:: Open](#open)|Otevře sadu záznamů načtením tabulky nebo provedením dotazu, který sada záznamů představuje.|
-|[CRecordset:: RefreshRowset](#refreshrowset)|Aktualizuje data a stav zadaných řádků.|
-|[CRecordset:: Requery](#requery)|Spustí znovu dotaz sady záznamů pro aktualizaci vybraných záznamů.|
-|[CRecordset:: SetAbsolutePosition](#setabsoluteposition)|Umístí sadu záznamů na záznamu odpovídající zadanému číslu záznamu.|
-|[CRecordset:: SetBookmark](#setbookmark)|Umístí sadu záznamů na záznam určený záložkou.|
-|[CRecordset:: SetFieldDirty](#setfielddirty)|Označí zadané pole v aktuálním záznamu jako změněné.|
-|[CRecordset:: SetFieldNull](#setfieldnull)|Nastaví hodnotu zadaného pole v aktuálním záznamu na hodnotu null (bez hodnoty).|
-|[CRecordset:: SetLockingMode](#setlockingmode)|Nastaví režim uzamykání na "optimistické" zamykání (výchozí) nebo "pesimistické" zamykání. Určuje způsob uzamčení záznamů pro aktualizace.|
-|[CRecordset:: SetParamNull](#setparamnull)|Nastaví zadaný parametr na hodnotu null (nemá žádnou hodnotu).|
-|[CRecordset:: SetRowsetCursorPosition](#setrowsetcursorposition)|Umístí kurzor na zadaný řádek v rámci sady řádků.|
-|[CRecordset:: SetRowsetSize](#setrowsetsize)|Určuje počet záznamů, které chcete načíst během načítání.|
-|[CRecordset:: Update](#update)|Dokončí operaci `AddNew` nebo `Edit` uložením nových nebo upravených dat ve zdroji dat.|
+|[CRecordset::Přidatnový](#addnew)|Připravuje se na přidání nového záznamu. Volání `Update` k dokončení přidání.|
+|[CRecordset::CanAppend](#canappend)|Vrátí nenulovou hodnotu, pokud lze nové `AddNew` záznamy přidat do sady záznamů pomocí členské funkce.|
+|[CRecordset::CanBookmark](#canbookmark)|Vrátí nenulovou hodnotu, pokud sada záznamů podporuje záložky.|
+|[CRecordset::Zrušit](#cancel)|Zruší asynchronní operaci nebo proces z druhého vlákna.|
+|[CRecordset::Zrušitaktualizaci](#cancelupdate)|Zruší všechny čekající aktualizace `AddNew` z `Edit` důvodu nebo operace.|
+|[CRecordset::CanRestart](#canrestart)|Vrátí nenulovou, pokud `Requery` může být volána pro opětovné spuštění dotazu sady záznamů.|
+|[CRecordset::CanScroll](#canscroll)|Vrátí nenulovou hodnotu, pokud můžete procházet záznamy.|
+|[CRecordset::CanTransact](#cantransact)|Vrátí nenulovou, pokud zdroj dat podporuje transakce.|
+|[CRecordset::CanUpdate](#canupdate)|Vrátí nenulovou hodnotu, pokud lze sadu záznamů aktualizovat (můžete přidávat, aktualizovat nebo odstraňovat záznamy).|
+|[CRecordset::CheckRowsetError](#checkrowseterror)|Volána ke zpracování chyb generovaných během načítání záznamu.|
+|[CRecordset::Zavřít](#close)|Zavře sadu záznamů a odbc HSTMT s ním spojené.|
+|[CRecordset::Delete](#delete)|Odstraní aktuální záznam ze sady záznamů. Po odstranění je nutné explicitně přejít na jiný záznam.|
+|[CRecordset::DoBulkFieldExchange](#dobulkfieldexchange)|Nazývá se výměna hromadných řádků dat ze zdroje dat do sady záznamů. Implementuje výměnu polí hromadného záznamu (Bulk RFX).|
+|[CRecordset::DoFieldExchange](#dofieldexchange)|Nazývá se výměna dat (v obou směrech) mezi datovými členy pole sady záznamů a odpovídajícím záznamem ve zdroji dat. Implementuje výměnu pole záznamu (RFX).|
+|[CRecordset::Upravit](#edit)|Připraví změny aktuálního záznamu. Volání `Update` k dokončení úpravy.|
+|[CRecordset::FlushResultSet](#flushresultset)|Vrátí nenulovou, pokud je při použití předdefinovaného dotazu načtení jiná sada výsledků.|
+|[CRecordset::GetBookmark](#getbookmark)|Přiřadí hodnotu záložky záznamu objektu parametru.|
+|[CRecordset::GetDefaultConnect](#getdefaultconnect)|Volána získat výchozí připojovací řetězec.|
+|[CRecordset::GetDefaultSQL](#getdefaultsql)|Volána k získání výchozího řetězce SQL ke spuštění.|
+|[CRecordset::GetFieldValue](#getfieldvalue)|Vrátí hodnotu pole v sadě záznamů.|
+|[CRecordset::GetODBCFieldCount](#getodbcfieldcount)|Vrátí počet polí v sadě záznamů.|
+|[CRecordset::GetODBCFieldInfo](#getodbcfieldinfo)|Vrátí určité druhy informací o polích v sadě záznamů.|
+|[CRecordset::GetRecordCount](#getrecordcount)|Vrátí počet záznamů v sadě záznamů.|
+|[CRecordset::GetRowsetSize](#getrowsetsize)|Vrátí počet záznamů, které chcete načíst během jednoho načtení.|
+|[CRecordset::GetRowsFetched](#getrowsfetched)|Vrátí skutečný počet řádků načtených během načtení.|
+|[CRecordset::GetRowStatus](#getrowstatus)|Vrátí stav řádku po načtení.|
+|[CRecordset::GetSQL](#getsql)|Získá řetězec SQL slouží k výběru záznamů pro sadu záznamů.|
+|[CRecordset::GetStatus](#getstatus)|Získá stav sady záznamů: index aktuálního záznamu a zda byl získán konečný počet záznamů.|
+|[CRecordset::GetTableName](#gettablename)|Získá název tabulky, na kterém je založena sada záznamů.|
+|[CRecordset::IsBOF](#isbof)|Vrátí nenulovou hodnotu, pokud byla sada záznamů umístěna před prvním záznamem. Neexistuje žádný aktuální záznam.|
+|[CRecordset::IsDeleted](#isdeleted)|Vrátí nenulovou hodnotu, pokud je sada záznamů umístěna na odstraněný záznam.|
+|[CRecordset::IsEOF](#iseof)|Vrátí nenulovou hodnotu, pokud byla sada záznamů umístěna za posledním záznamem. Neexistuje žádný aktuální záznam.|
+|[CRecordset::IsFieldDirty](#isfielddirty)|Vrátí nenulovou hodnotu, pokud bylo změněno zadané pole v aktuálním záznamu.|
+|[Sada záznamů C::Hodnota IsFieldNull](#isfieldnull)|Vrátí nenulovou hodnotu, pokud je zadané pole v aktuálním záznamu null (nemá žádnou hodnotu).|
+|[CRecordset::IsFieldNullable](#isfieldnullable)|Vrátí nenulovou hodnotu, pokud lze zadané pole v aktuálním záznamu nastavit na hodnotu null (bez hodnoty).|
+|[CRecordset::IsOpen](#isopen)|Vrátí nenulovou hodnotu, pokud `Open` byla volána dříve.|
+|[CRecordset::Přesunout](#move)|Umístí sadu záznamů na zadaný počet záznamů z aktuálního záznamu v obou směrech.|
+|[CRecordset::PřesunoutPrvní](#movefirst)|Umístí aktuální záznam na první záznam v sadě záznamů. Test `IsBOF` pro první.|
+|[CRecordset::MoveLast](#movelast)|Umístí aktuální záznam na poslední záznam nebo na poslední sadu řádků. Test `IsEOF` pro první.|
+|[CRecordset::MoveNext](#movenext)|Umístí aktuální záznam na další záznam nebo na další sadu řádků. Test `IsEOF` pro první.|
+|[CRecordset::MovePrev](#moveprev)|Umístí aktuální záznam na předchozí záznam nebo na předchozí sadu řádků. Test `IsBOF` pro první.|
+|[CRecordset::OnSetOptions](#onsetoptions)|Nazývá se nastavení možností (používá se při výběru) pro zadaný příkaz ODBC.|
+|[CRecordset::OnSetUpdateOptions](#onsetupdateoptions)|Nazývá se nastavení možností (používá se při aktualizaci) pro zadaný příkaz ODBC.|
+|[Crecordset::open](#open)|Otevře sadu záznamů načtením tabulky nebo provedením dotazu, který sada záznamů představuje.|
+|[CRecordset::RefreshRowset](#refreshrowset)|Aktualizuje data a stav zadaného řádku(ů).|
+|[CRecordset::Requery](#requery)|Znovu spustí dotaz sady záznamů a aktualizuje vybrané záznamy.|
+|[CRecordset::Nastavitabsoluteposition](#setabsoluteposition)|Umístí sadu záznamů na záznam odpovídající zadanému číslu záznamu.|
+|[CRecordset::SetBookmark](#setbookmark)|Umístí sadu záznamů na záznam určený záložkou.|
+|[CRecordset::SetFieldDirty](#setfielddirty)|Označí zadané pole v aktuálním záznamu jako změněné.|
+|[CRecordset::SetFieldNull](#setfieldnull)|Nastaví hodnotu zadaného pole v aktuálním záznamu na hodnotu null (bez hodnoty).|
+|[CRecordset::SetLockingMode](#setlockingmode)|Nastaví režim zamykání na "optimistické" zamykání (výchozí) nebo "pesimistické" zamykání. Určuje, jak jsou záznamy uzamčeny pro aktualizace.|
+|[CRecordset::SetParamNull](#setparamnull)|Nastaví zadaný parametr na hodnotu null (bez hodnoty).|
+|[CRecordset::SetRowsetCursorPosition](#setrowsetcursorposition)|Umístí kurzor na zadaný řádek v rámci sady řádků.|
+|[CRecordset::SetRowsetSize](#setrowsetsize)|Určuje počet záznamů, které chcete načíst během načítání.|
+|[CRecordset::Aktualizovat](#update)|Dokončí operaci `AddNew` `Edit` nebo operaci uložením nových nebo upravených dat do zdroje dat.|
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CRecordset:: m_hstmt](#m_hstmt)|Obsahuje popisovač příkazu ODBC pro sadu záznamů. Zadejte `HSTMT`.|
-|[CRecordset:: m_nFields](#m_nfields)|Obsahuje počet datových členů pole v sadě záznamů. Zadejte `UINT`.|
-|[CRecordset:: m_nParams](#m_nparams)|Obsahuje počet datových členů parametrů v sadě záznamů. Zadejte `UINT`.|
-|[CRecordset:: m_pDatabase](#m_pdatabase)|Obsahuje ukazatel na objekt `CDatabase`, pomocí kterého je sada záznamů připojena ke zdroji dat.|
-|[CRecordset:: m_strFilter](#m_strfilter)|Obsahuje `CString`, který určuje klauzuli `WHERE` jazyk SQL (Structured Query Language) (SQL). Slouží jako filtr k výběru pouze těch záznamů, které splňují určitá kritéria.|
-|[CRecordset:: m_strSort](#m_strsort)|Obsahuje `CString`, který určuje klauzuli SQL `ORDER BY`. Slouží k řízení způsobu řazení záznamů.|
+|[CSada záznamů::m_hstmt](#m_hstmt)|Obsahuje popisovač příkazu ODBC pro sadu záznamů. Zadejte `HSTMT`.|
+|[CRecordset::m_nFields](#m_nfields)|Obsahuje počet datových členů pole v sadě záznamů. Zadejte `UINT`.|
+|[CSada záznamů::m_nParams](#m_nparams)|Obsahuje počet datových členů parametrů v sadě záznamů. Zadejte `UINT`.|
+|[CRecordset::m_pDatabase](#m_pdatabase)|Obsahuje ukazatel na `CDatabase` objekt, jehož prostřednictvím je sada záznamů připojena ke zdroji dat.|
+|[CSada záznamů::m_strFilter](#m_strfilter)|Obsahuje `CString` klauzuli, která určuje klauzuli `WHERE` strukturovaného dotazovacího jazyka (SQL). Používá se jako filtr k výběru pouze těch záznamů, které splňují určitá kritéria.|
+|[CRecordset::m_strSort](#m_strsort)|`CString` Obsahuje, který určuje `ORDER BY` klauzuli SQL. Slouží k řízení způsobu řazení záznamů.|
 
-## <a name="remarks"></a>Mark
+## <a name="remarks"></a><a name="remarks"></a>Poznámky
 
-Známé jako "sady záznamů", "`CRecordset` objekty jsou obvykle používány ve dvou formách: dynamické sady a snímky. Dynamická sada zůstane synchronizovaná s aktualizacemi dat provedenými ostatními uživateli. Snímek je statické zobrazení dat. Každý formulář představuje sadu záznamů, které jsou opraveny v okamžiku otevření sady záznamů, ale při posunu na záznam v dynamické sadě odrážejí změny provedené v záznamu, a to buď jinými uživateli, nebo jinými sadami záznamů ve vaší aplikaci.
+Objekty označované `CRecordset` jako "sady záznamů" se obvykle používají ve dvou formách: dynaseje a snímky. Sada dynasad zůstane synchronizována s aktualizacemi dat provedenými jinými uživateli. Snímek je statické zobrazení dat. Každý formulář představuje sadu záznamů opravených v době otevření sady záznamů, ale při přechodu na záznam v dynasetě odráží změny následně provedené v záznamu, a to buď jinými uživateli, nebo jinými sadami záznamů v aplikaci.
 
 > [!NOTE]
->  Pokud pracujete s třídami objektů pro přístup k datům (DAO), nikoli s třídami rozhraní ODBC (Open Database Connectivity), místo toho použijte třídu [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) . Další informace najdete v článku [Přehled: programování databáze](../../data/data-access-programming-mfc-atl.md).
+> Pokud pracujete s třídami DAO (Data Access Objects) místo s třídami Open Database Connectivity (ODBC), použijte místo toho třídu [CDaoRecordset.](../../mfc/reference/cdaorecordset-class.md) Další informace naleznete v článku [Přehled: Programování databáze](../../data/data-access-programming-mfc-atl.md).
 
-Chcete-li pracovat s libovolným druhem sady záznamů, obvykle je odvozena třída sady záznamů specifická pro aplikaci z `CRecordset`. Sady záznamů vybírají záznamy ze zdroje dat a pak můžete:
+Chcete-li pracovat s oběma typy sad záznamů, obvykle odvodit třídu sady záznamů specifické pro aplikaci z `CRecordset`. Sady záznamů vybírají záznamy ze zdroje dat a pak můžete:
 
 - Procházejte záznamy.
 
-- Aktualizujte záznamy a zadejte režim uzamykání.
+- Aktualizujte záznamy a zadejte režim uzamčení.
 
-- Filtrováním sady záznamů omezíte, které záznamy vybírají z těch, které jsou k dispozici ve zdroji dat.
+- Filtrujte sadu záznamů, abyste omezili, které záznamy vybere z těch, které jsou k dispozici ve zdroji dat.
 
 - Seřaďte sadu záznamů.
 
-- Parametrizovat sadu záznamů pro přizpůsobení jejího výběru s informacemi, které nejsou známy až do doby běhu.
+- Parametrizujte sadu záznamů pro přizpůsobení jejího výběru informacemi, které nejsou známy až do spuštění.
 
-Chcete-li použít třídu, otevřete databázi a vytvořte objekt sady záznamů a předejte konstruktoru ukazatel na objekt `CDatabase`. Pak zavolejte členskou funkci `Open` sady záznamů, kde můžete určit, zda je objekt sadou a snímkem. Volání `Open` vybere data ze zdroje dat. Po otevření objektu sady záznamů použijte jeho členské funkce a datové členy pro procházení záznamů a jejich provoz. Dostupné operace závisí na tom, zda je objekt sadou funkcí nebo snímku, zda je možné jej aktualizovat nebo je jen pro čtení (to závisí na schopnosti zdroje dat ODBC (Open Database Connectivity)) a zda jste implementovali hromadné načítání řádků. Chcete-li aktualizovat záznamy, které mohly být změněny nebo přidány od volání `Open`, zavolejte členskou funkci objektu `Requery`. Voláním členské funkce objektu `Close` a zničením objektu po jeho dokončení.
+Chcete-li použít třídu, otevřete databázi a vytvořte objekt `CDatabase` sady záznamů a předejte konstruktoru ukazatel objektu. Potom volání `Open` sady záznamů členské funkce, kde můžete určit, zda je objekt dynaset nebo snímek. Volání `Open` vybere data ze zdroje dat. Po otevření objektu sady záznamů použijte jeho členské funkce a datové členy k procházení záznamů a pracujte s nimi. Dostupné operace závisí na tom, zda je objekt dynaset nebo snímek, zda je aktualizovatelný nebo jen pro čtení (to závisí na schopnosti zdroje dat připojení otevřené databáze (ODBC) a zda jste implementovali hromadné načítání řádků. Chcete-li aktualizovat záznamy, které mohly být od `Open` volání `Requery` změněny nebo přidány, zavolejte člennou funkci objektu. Volání `Close` členské funkce objektu a zničit objekt po dokončení s ním.
 
-V odvozené `CRecordset` třídě, výměna pole záznamu (RFX) nebo hromadná výměna pole záznamu (Bulk RFX) slouží k podpoře čtení a aktualizace polí záznamu.
+V odvozené `CRecordset` třídě se výměna pole záznamu (RFX) nebo hromadná výměna pole záznamu (Bulk RFX) používá k podpoře čtení a aktualizace polí záznamů.
 
-Další informace o sadách záznamů a výměně polí záznamů naleznete v článku Přehled článků [: programování databáze](../../data/data-access-programming-mfc-atl.md), [Sada záznamů (ODBC)](../../data/odbc/recordset-odbc.md), [Sada záznamů: hromadné načítání záznamů (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)a [záznam výměny pole (RFX)](../../data/odbc/record-field-exchange-rfx.md). Chcete-li se zaměřit na dynamické sady a snímky, přečtěte si článek [dynamická sada](../../data/odbc/dynaset.md) a [snímek](../../data/odbc/snapshot.md).
+Další informace o sadách záznamů a výměně polí záznamů naleznete v článcích [Přehled: Programování databáze](../../data/data-access-programming-mfc-atl.md), [Sada záznamů (ODBC),](../../data/odbc/recordset-odbc.md) [Sada záznamů: Načítání záznamů hromadně (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)a [Výměna pole záznamů (RFX).](../../data/odbc/record-field-exchange-rfx.md) Zaměření na dynasady a snímky naleznete v článcích [Dynaset](../../data/odbc/dynaset.md) a [Snímek](../../data/odbc/snapshot.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[CObject](../../mfc/reference/cobject-class.md)
+[CObjekt](../../mfc/reference/cobject-class.md)
 
 `CRecordset`
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** AFXDB. h
+**Záhlaví:** afxdb.h
 
-##  <a name="addnew"></a>CRecordset:: AddNew
+## <a name="crecordsetaddnew"></a><a name="addnew"></a>CRecordset::Přidatnový
 
-Připraví pro přidání nového záznamu do tabulky.
+Připraví se na přidání nového záznamu do tabulky.
 
 ```
 virtual void AddNew();
@@ -271,32 +271,32 @@ virtual void AddNew();
 
 ### <a name="remarks"></a>Poznámky
 
-Chcete-li zobrazit nově přidaný záznam, je nutné zavolat členskou funkci [Requery](#requery) . Pole záznamu mají počáteční hodnotu null. (V terminologii databáze hodnota null znamená "nemá žádnou hodnotu" a není shodná s hodnotou NULL v C++.) K dokončení této operace je nutné zavolat členskou funkci [Update](#update) . `Update` uloží změny do zdroje dat.
+Chcete-li zobrazit nově přidaný záznam, musíte zavolat členskou funkci [Requery.](#requery) Pole záznamu jsou zpočátku Null. (V terminologii databáze null znamená "bez hodnoty" a není stejný jako NULL v jazyce C++.) Chcete-li operaci dokončit, musíte zavolat člennou funkci [Aktualizace.](#update) `Update`uloží změny do zdroje dat.
 
 > [!NOTE]
->  Pokud jste implementovali hromadné načítání řádků, nemůžete volat `AddNew`. Výsledkem bude selhání kontrolního výrazu. I když `CRecordset` třídy neposkytuje mechanismus pro aktualizaci hromadných řádků dat, můžete napsat vlastní funkce pomocí funkce rozhraní ODBC API `SQLSetPos`. Další informace o hromadném načítání řádků naleznete v článku [Sada záznamů: hromadné načítání záznamů (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+> Pokud jste implementovali hromadné načítání řádků, nelze volat `AddNew`. Výsledkem bude neúspěšný kontrolní výraz. Přestože `CRecordset` třída neposkytuje mechanismus pro aktualizaci hromadných řádků dat, můžete zapisovat vlastní funkce pomocí funkce `SQLSetPos`ROZHRANÍ API ROZHRANÍ ODBC . Další informace o hromadném načítání řádků naleznete v článku [Sada záznamů: Hromadné načítání záznamů (ODBC).](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)
 
-`AddNew` připraví nový prázdný záznam pomocí datových členů pole sady záznamů. Po volání `AddNew`nastavte požadované hodnoty v datových členech pole sady záznamů. (Není nutné volat členskou funkci [Edit](#edit) pro tento účel; použijte `Edit` pouze pro existující záznamy.) Když následně zavoláte `Update`, změněné hodnoty v polích datových členů jsou uloženy ve zdroji dat.
+`AddNew`připraví nový prázdný záznam pomocí datových členů sady záznamů. Po volání `AddNew`nastavte požadované hodnoty v datových členech pole sady záznamů. (Není pro tento účel třeba volat členská `Edit` funkci [Edit;](#edit) používejte pouze pro existující záznamy.) Při následném `Update`volání jsou změněné hodnoty v datových členech pole uloženy ve zdroji dat.
 
 > [!CAUTION]
->  Pokud se posunete k novému záznamu před voláním `Update`, nový záznam bude ztracen a nebude zadáno žádné upozornění.
+> Pokud před voláním `Update`přejdete na nový záznam , nový záznam bude ztracen a nebude vydáno žádné upozornění.
 
-Pokud zdroj dat podporuje transakce, můžete provést `AddNew` volání části transakce. Další informace o transakcích naleznete v tématu Class [CDatabase](../../mfc/reference/cdatabase-class.md). Všimněte si, že před voláním `AddNew`byste měli zavolat metodu [CDatabase:: BeginTrans](../../mfc/reference/cdatabase-class.md#begintrans) .
+Pokud zdroj dat podporuje transakce, můžete `AddNew` volání součástí transakce. Další informace o transakcích naleznete v tématu [cdatabase](../../mfc/reference/cdatabase-class.md)třídy . Všimněte si, že byste měli zavolat [CDatabase::BeginTrans](../../mfc/reference/cdatabase-class.md#begintrans) před voláním `AddNew`.
 
 > [!NOTE]
->  Pro dynamické sady jsou do sady záznamů přidány nové záznamy jako poslední záznam. Přidané záznamy se do snímků nepřidaly. Chcete-li aktualizovat sadu záznamů, je nutné volat `Requery`.
+> U dynaseje jsou nové záznamy přidány do sady záznamů jako poslední záznam. Přidané záznamy nejsou přidány do snímků; chcete-li `Requery` aktualizovat sadu záznamů, musíte zavolat.
 
-Je neplatné volat `AddNew` pro sadu záznamů, jejíž členská funkce `Open` nebyla volána. `CDBException` je vyvolána, pokud zavoláte `AddNew` pro sadu záznamů, ke které nelze připojit. Můžete určit, zda lze sadu záznamů aktualizovat voláním [CanAppend](#canappend).
+Je nezákonné volat `AddNew` sadu záznamů, `Open` jehož členská funkce nebyla volána. A `CDBException` je vyvolána, `AddNew` pokud voláte sadu záznamů, které nelze připojit. Můžete určit, zda je sada záznamů aktualizovatelná voláním [CanAppend](#canappend).
 
-Další informace naleznete v následujících článcích: [Sada záznamů: Jak sady záznamů aktualizují záznamy (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md), [Sada záznamů: Přidání, aktualizace a odstranění záznamů (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)a [transakce (ODBC)](../../data/odbc/transaction-odbc.md).
+Další informace naleznete v následujících článcích: [Sada záznamů: Jak sady záznamů aktualizovat záznamy (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md), [Sada záznamů: Přidání, Aktualizace a odstranění záznamů (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)a [Transakce (ODBC).](../../data/odbc/transaction-odbc.md)
 
 ### <a name="example"></a>Příklad
 
-Viz článek [transakce: provádění transakce v sadě záznamů (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md).
+Viz článek [Transakce: Provedení transakce v sadě záznamů (ODBC).](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)
 
-##  <a name="canappend"></a>CRecordset:: CanAppend
+## <a name="crecordsetcanappend"></a><a name="canappend"></a>CRecordset::CanAppend
 
-Určuje, zda je dříve otevřená sada záznamů povolena k přidání nových záznamů.
+Určuje, zda dříve otevřená sada záznamů umožňuje přidávat nové záznamy.
 
 ```
 BOOL CanAppend() const;
@@ -304,11 +304,11 @@ BOOL CanAppend() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud sada záznamů povoluje přidávání nových záznamů; v opačném případě 0. `CanAppend` vrátí 0, pokud jste sadu záznamů otevřeli jako jen pro čtení.
+Nenulová, pokud sada záznamů umožňuje přidávání nových záznamů; jinak 0. `CanAppend`vrátí hodnotu 0, pokud jste sadu záznamů otevřeli jen pro čtení.
 
-##  <a name="canbookmark"></a>CRecordset:: CanBookmark
+## <a name="crecordsetcanbookmark"></a><a name="canbookmark"></a>CRecordset::CanBookmark
 
-Určuje, zda sada záznamů umožňuje označovat záznamy pomocí záložek.
+Určuje, zda sada záznamů umožňuje označit záznamy pomocí záložek.
 
 ```
 BOOL CanBookmark() const;
@@ -316,20 +316,20 @@ BOOL CanBookmark() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud sada záznamů podporuje záložky; v opačném případě 0.
+Nenulová, pokud sada záznamů podporuje záložky; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce je nezávislá na možnosti `CRecordset::useBookmarks` v parametru *dwOptions* v [otevřené](#open) členské funkci. `CanBookmark` určuje, zda daný typ ovladače ODBC a kurzor podporují záložky. `CRecordset::useBookmarks` určuje, zda budou k dispozici záložky za předpokladu, že jsou podporovány.
+Tato funkce je `CRecordset::useBookmarks` nezávislá na možnosti v parametru *dwOptions* členské funkce [Otevřít.](#open) `CanBookmark`označuje, zda dané záložky podpory ovladače ODBC a typu kurzoru podporují. `CRecordset::useBookmarks`označuje, zda budou záložky k dispozici, pokud jsou podporovány.
 
 > [!NOTE]
->  Záložky nejsou podporovány pro sady záznamů s dopřednou podporou.
+> Záložky nejsou podporovány v sadách záznamů pouze pro předávání.
 
-Další informace o záložkách a navigaci v sadě záznamů naleznete v článcích [Sada záznamů: záložky a absolutní umístění (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md) a [Sada záznamů: posouvání (ODBC)](../../data/odbc/recordset-scrolling-odbc.md).
+Další informace o záložkách a navigaci v sadě záznamů naleznete v článcích [Sada záznamů: Záložky a absolutní pozice (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md) a [Sada záznamů: Posouvání (ODBC).](../../data/odbc/recordset-scrolling-odbc.md)
 
-##  <a name="cancel"></a>CRecordset:: Cancel
+## <a name="crecordsetcancel"></a><a name="cancel"></a>CRecordset::Zrušit
 
-Požaduje, aby zdroj dat zrušil buď probíhající asynchronní operaci, nebo proces z druhého vlákna.
+Požaduje, aby zdroj dat zrušil probíhající asynchronní operaci nebo proces z druhého vlákna.
 
 ```
 void Cancel();
@@ -337,11 +337,11 @@ void Cancel();
 
 ### <a name="remarks"></a>Poznámky
 
-Všimněte si, že třídy knihovny MFC rozhraní ODBC již nepoužívají asynchronní zpracování; k provedení operace asynchronní je nutné přímo zavolat funkci rozhraní ODBC API `SQLSetConnectOption`. Další informace naleznete v tématu "spouštění funkcí asynchronně" v *příručce programátora sady ODBC SDK*.
+Všimněte si, že třídy Knihovny MFC ODBC již nepoužívají asynchronní zpracování. Chcete-li provést asychronní operaci, musíte přímo `SQLSetConnectOption`volat funkci ROZHRANÍ API ROZHRANÍ ODBC . Další informace naleznete v tématu "Provádění funkcí asynchronně" v *průvodci programátorem sady ODBC SDK*.
 
-##  <a name="cancelupdate"></a>CRecordset:: CancelUpdate
+## <a name="crecordsetcancelupdate"></a><a name="cancelupdate"></a>CRecordset::Zrušitaktualizaci
 
-Před voláním metody [Update](#update) zruší všechny probíhající aktualizace způsobené operací [Edit](#edit) nebo [AddNew](#addnew) .
+Zruší všechny čekající aktualizace způsobené operací [Upravit](#edit) nebo [PřidatNový](#addnew) [před](#update) update je volána.
 
 ```
 void CancelUpdate();
@@ -350,15 +350,15 @@ void CancelUpdate();
 ### <a name="remarks"></a>Poznámky
 
 > [!NOTE]
->  Tato členská funkce se nedá použít pro sady záznamů, které používají hromadné načítání řádků, protože takové sady záznamů nemohou volat `Edit`, `AddNew`nebo `Update`. Další informace o hromadném načítání řádků naleznete v článku [Sada záznamů: hromadné načítání záznamů (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+> Tato členská funkce není použitelná u sad záznamů, které používají `Edit`hromadné `AddNew`načítání `Update`řádků, protože tyto sady záznamů nemohou volat , , nebo . Další informace o hromadném načítání řádků naleznete v článku [Sada záznamů: Hromadné načítání záznamů (ODBC).](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)
 
-Je-li povolena automatická kontrola nevyřízených polí, `CancelUpdate` obnoví členské proměnné na hodnoty, které existovaly před voláním `Edit` nebo `AddNew`. v opačném případě budou všechny změny hodnot zůstat. Ve výchozím nastavení je automatická kontrola polí povolena při otevření sady záznamů. Chcete-li jej zakázat, je nutné zadat `CRecordset::noDirtyFieldCheck` v parametru *dwOptions* funkce [otevřít](#open) členskou funkci.
+Pokud je povolena automatická `CancelUpdate` kontrola znečištěného pole, obnoví `Edit` `AddNew` členské proměnné na hodnoty, které měly před nebo byly volány; v opačném případě zůstanou změny hodnoty zachovány. Ve výchozím nastavení je při otevření sady záznamů povoleno automatické kontrolu polí. Chcete-li jej zakázat, musíte zadat `CRecordset::noDirtyFieldCheck` parametr *dwOptions* členské funkce [Otevřít.](#open)
 
-Další informace o aktualizaci dat naleznete v článku [Sada záznamů: Přidání, aktualizace a odstranění záznamů (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md).
+Další informace o aktualizaci dat naleznete v článku [Sada záznamů: Přidání, aktualizace a odstranění záznamů (ODBC).](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)
 
-##  <a name="canrestart"></a>CRecordset:: CanRestart
+## <a name="crecordsetcanrestart"></a><a name="canrestart"></a>CRecordset::CanRestart
 
-Určuje, zda sada záznamů umožňuje restartování dotazu (pro aktualizaci svých záznamů) voláním členské funkce `Requery`.
+Určuje, zda sada záznamů umožňuje restartování dotazu (aktualizovat jeho `Requery` záznamy) voláním členské funkce.
 
 ```
 BOOL CanRestart() const;
@@ -366,9 +366,9 @@ BOOL CanRestart() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je povoleno opakované dotazování; v opačném případě 0.
+Nenulová, pokud je povolen requery; jinak 0.
 
-##  <a name="canscroll"></a>CRecordset:: CanScroll
+## <a name="crecordsetcanscroll"></a><a name="canscroll"></a>CRecordset::CanScroll
 
 Určuje, zda sada záznamů umožňuje posouvání.
 
@@ -378,15 +378,15 @@ BOOL CanScroll() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud sada záznamů umožňuje posouvání; v opačném případě 0.
+Nenulová, pokud sada záznamů umožňuje posouvání; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace o posouvání naleznete v článku [Sada záznamů: posouvání (ODBC)](../../data/odbc/recordset-scrolling-odbc.md).
+Další informace o posouvání naleznete v článku [Sada záznamů: Scrolling (ODBC)](../../data/odbc/recordset-scrolling-odbc.md).
 
-##  <a name="cantransact"></a>CRecordset:: CanTransact
+## <a name="crecordsetcantransact"></a><a name="cantransact"></a>CRecordset::CanTransact
 
-Určuje, zda sada záznamů povoluje transakce.
+Určuje, zda sada záznamů umožňuje transakce.
 
 ```
 BOOL CanTransact() const;
@@ -394,15 +394,15 @@ BOOL CanTransact() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud sada záznamů povoluje transakce; v opačném případě 0.
+Nenulová, pokud sada záznamů povoluje transakce; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace najdete v článku [transakce (ODBC)](../../data/odbc/transaction-odbc.md).
+Další informace naleznete v článku [Transakce (ODBC)](../../data/odbc/transaction-odbc.md).
 
-##  <a name="canupdate"></a>CRecordset:: CanUpdate
+## <a name="crecordsetcanupdate"></a><a name="canupdate"></a>CRecordset::CanUpdate
 
-Určuje, zda může být sada záznamů aktualizována.
+Určuje, zda lze sadu záznamů aktualizovat.
 
 ```
 BOOL CanUpdate() const;
@@ -410,15 +410,15 @@ BOOL CanUpdate() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je možné sadu záznamů aktualizovat; v opačném případě 0.
+Nenulová, pokud lze aktualizovat sadu záznamů; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Sada záznamů může být pouze pro čtení, pokud je podkladový zdroj dat určen jen pro čtení, nebo pokud jste zadali `CRecordset::readOnly` v parametru *dwOptions* při otevření sady záznamů.
+Sada záznamů může být jen pro čtení, pokud je základní `CRecordset::readOnly` zdroj dat jen pro čtení nebo pokud jste při otevření sady záznamů zadali parametr *dwOptions.*
 
-##  <a name="checkrowseterror"></a>CRecordset:: CheckRowsetError
+## <a name="crecordsetcheckrowseterror"></a><a name="checkrowseterror"></a>CRecordset::CheckRowsetError
 
-Volá se, aby se zpracovaly chyby generované při načítání záznamu.
+Volána ke zpracování chyb generovaných během načítání záznamu.
 
 ```
 virtual void CheckRowsetError(RETCODE nRetCode);
@@ -427,26 +427,26 @@ virtual void CheckRowsetError(RETCODE nRetCode);
 ### <a name="parameters"></a>Parametry
 
 *nRetCode*<br/>
-Návratový kód funkce rozhraní API ODBC. Podrobnosti najdete v tématu poznámky.
+Návratový kód funkce ROZHRANÍ API ROZHRANÍ ODBC. Podrobnosti naleznete v tématu Poznámky.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato virtuální členská funkce zpracovává chyby, ke kterým dochází při načítání záznamů, a je užitečné při hromadném načítání řádků. Možná budete chtít zvážit přepsání `CheckRowsetError` k implementaci vlastního zpracování chyb.
+Tato virtuální členská funkce zpracovává chyby, ke kterým dochází při načítání záznamů a je užitečná při hromadném načítání řádků. Možná budete chtít zvážit `CheckRowsetError` přepsání implementovat vlastní zpracování chyb.
 
-`CheckRowsetError` se zavolá automaticky v navigační operaci kurzoru, jako je například `Open`, `Requery`nebo jakákoli `Move` operace. Je předána návratovou hodnotou funkce rozhraní ODBC API `SQLExtendedFetch`. Následující tabulka uvádí možné hodnoty parametru *nRetCode* .
+`CheckRowsetError`je volána automaticky v operaci `Open`navigace `Requery`kurzorem, například , nebo jakékoli `Move` operaci. Je předána vrácená hodnota funkce `SQLExtendedFetch`ROZHRANÍ API ROZHRANÍ ODBC . V následující tabulce jsou uvedeny možné hodnoty parametru *nRetCode.*
 
 |nRetCode|Popis|
 |--------------|-----------------|
-|SQL_SUCCESS|Funkce byla úspěšně dokončena; žádné další informace nejsou k dispozici.|
-|SQL_SUCCESS_WITH_INFO|Funkce byla úspěšně dokončena, pravděpodobně s nezávažnou chybou. Další informace lze získat voláním `SQLError`.|
-|SQL_NO_DATA_FOUND|Byly načteny všechny řádky ze sady výsledků dotazu.|
-|SQL_ERROR|Funkce se nezdařila. Další informace lze získat voláním `SQLError`.|
-|SQL_INVALID_HANDLE|Funkce se nezdařila kvůli neplatnému popisovači prostředí, popisovači připojení nebo popisovači příkazů. To znamená chybu při programování. Z `SQLError`nejsou k dispozici žádné další informace.|
-|SQL_STILL_EXECUTING|Funkce, která byla spuštěna asynchronně, je stále prováděna. Všimněte si, že ve výchozím nastavení nebude knihovna MFC nikdy předána tuto hodnotu do `CheckRowsetError`; Knihovna MFC bude pokračovat v volání `SQLExtendedFetch`, dokud již nevrátí SQL_STILL_EXECUTING.|
+|SQL_SUCCESS|Funkce byla úspěšně dokončena. nejsou k dispozici žádné další informace.|
+|Sql_success_with_info|Funkce byla úspěšně dokončena, pravděpodobně s nezávažnou chybou. Další informace lze získat `SQLError`na telefonním čísle .|
+|SQL_NO_DATA_FOUND|Všechny řádky ze sady výsledků byly načteny.|
+|Sql_error|Funkce se nezdařila. Další informace lze získat `SQLError`na telefonním čísle .|
+|SQL_INVALID_HANDLE|Funkce se nezdařila z důvodu neplatného popisovače prostředí, popisovače připojení nebo popisovače příkazu. To znamená chybu programování. Od společnosti nejsou `SQLError`k dispozici žádné další informace.|
+|SQL_STILL_EXECUTING|Funkce, která byla spuštěna asynchronně je stále spuštěna. Všimněte si, že ve výchozím nastavení `CheckRowsetError`knihovna MFC nikdy nepředá tuto hodnotu ; Knihovna MFC `SQLExtendedFetch` bude pokračovat v volání, dokud již nevrátí SQL_STILL_EXECUTING.|
 
-Další informace o `SQLError`najdete v Windows SDK. Další informace o hromadném načítání řádků naleznete v článku [Sada záznamů: hromadné načítání záznamů (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+Další informace `SQLError`o aplikaci naleznete v souboru Windows SDK. Další informace o hromadném načítání řádků naleznete v článku [Sada záznamů: Hromadné načítání záznamů (ODBC).](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)
 
-##  <a name="close"></a>CRecordset:: Close
+## <a name="crecordsetclose"></a><a name="close"></a>CRecordset::Zavřít
 
 Zavře sadu záznamů.
 
@@ -456,17 +456,17 @@ virtual void Close();
 
 ### <a name="remarks"></a>Poznámky
 
-Rozhraní ODBC HSTMT a veškerá paměť rozhraní, které je přiděleno rozhraní pro sadu záznamů, se oddělují. Obvykle po volání `Close`odstraníte objekt C++ Recordset, pokud byl přidělen s **novým**.
+ODBC HSTMT a všechny paměti rámce přidělené pro sadu záznamů jsou přiděleny. Obvykle po `Close`volání odstraníte objekt sady záznamů jazyka C++, pokud byl přidělen s **novým**.
 
-Po volání `Close`můžete volat `Open` znovu. To umožňuje znovu použít objekt sady záznamů. Alternativou je volání `Requery`.
+Po volání `Open` `Close`můžete volat znovu . To umožňuje znovu použít objekt sady záznamů. Alternativou je `Requery`volání .
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCDatabase#17](../../mfc/codesnippet/cpp/crecordset-class_1.cpp)]
 
-##  <a name="crecordset"></a>CRecordset:: CRecordset
+## <a name="crecordsetcrecordset"></a><a name="crecordset"></a>CRecordset::CRecordset
 
-Vytvoří objekt `CRecordset`.
+Vytvoří `CRecordset` objekt.
 
 ```
 CRecordset(CDatabase* pDatabase = NULL);
@@ -474,23 +474,23 @@ CRecordset(CDatabase* pDatabase = NULL);
 
 ### <a name="parameters"></a>Parametry
 
-*pDatabase*<br/>
-Obsahuje ukazatel na objekt `CDatabase` nebo hodnotu NULL. Pokud hodnota není NULL a členská funkce `CDatabase`ho objektu `Open` nebyla volána pro jeho připojení ke zdroji dat, sada záznamů se ji pokusí otevřít během vlastního volání `Open`. Pokud předáte hodnotu NULL, objekt `CDatabase` je vytvořen a připojen k vám pomocí informací o zdroji dat, které jste zadali při odvození třídy sady záznamů pomocí ClassWizard.
+*pDatabáze*<br/>
+Obsahuje ukazatel na `CDatabase` objekt nebo hodnotu NULL. Pokud není null `CDatabase` a `Open` členská funkce objektu nebyla volána pro připojení ke zdroji dat, sada `Open` záznamů se pokusí otevřít za vás během vlastního volání. Pokud předáte hodnotu `CDatabase` NULL, objekt je vytvořen a připojen za vás pomocí informací o zdroji dat, které jste zadali při odvození třídy sady záznamů pomocí ClassWizard.
 
 ### <a name="remarks"></a>Poznámky
 
-Můžete buď použít `CRecordset` přímo nebo odvodit třídu specifickou pro aplikaci z `CRecordset`. Pomocí ClassWizard můžete odvodit vaše třídy sady záznamů.
+Můžete použít `CRecordset` přímo nebo odvodit `CRecordset`třídu specifickou pro aplikaci z aplikace . Pomocí Průvodce classwizard můžete odvodit třídy sady záznamů.
 
 > [!NOTE]
->  Odvozená třída *musí* poskytovat svůj vlastní konstruktor. V konstruktoru odvozené třídy volejte `CRecordset::CRecordset`konstruktoru a předejte příslušné parametry spolu s ním.
+> Odvozená třída *musí* dodávat vlastní konstruktor. V konstruktoru odvozené třídy, volání `CRecordset::CRecordset`konstruktoru , předávání příslušné parametry spolu s ním.
 
-Předat hodnotu NULL konstruktoru sady záznamů, aby měl objekt `CDatabase` vytvořen a připojen automaticky. Toto je užitečnou zkratku, která nevyžaduje vytvoření a připojení objektu `CDatabase` před sestavením sady záznamů.
+Předejte null konstruktoru sady `CDatabase` záznamů, aby byl objekt automaticky vytvořen a připojen. Toto je užitečný těsnopis, který `CDatabase` nevyžaduje vytvoření a připojení objektu před sestavením sady záznamů.
 
 ### <a name="example"></a>Příklad
 
-Další informace naleznete v článku [Sada záznamů: Deklarování třídy pro tabulku (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md).
+Další informace naleznete v článku [Sada záznamů: Deklarování třídy pro tabulku (ODBC).](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)
 
-##  <a name="delete"></a>CRecordset::D dstranit
+## <a name="crecordsetdelete"></a><a name="delete"></a>CRecordset::Delete
 
 Odstraní aktuální záznam.
 
@@ -500,25 +500,25 @@ virtual void Delete();
 
 ### <a name="remarks"></a>Poznámky
 
-Po úspěšném odstranění jsou datové členy pole sady záznamů nastaveny na hodnotu null a je nutné explicitně volat jednu z `Move` funkcí, aby bylo možné přesunout odstraněný záznam. Po přesunutí odstraněného záznamu není možné se k němu vrátit. Pokud zdroj dat podporuje transakce, můžete provést `Delete` volání části transakce. Další informace najdete v článku [transakce (ODBC)](../../data/odbc/transaction-odbc.md).
+Po úspěšném odstranění jsou datové členy sady záznamů nastaveny na hodnotu Null a `Move` je nutné explicitně zavolat jednu z funkcí, aby bylo možné přesunout odstraněný záznam. Jakmile se přesunete mimo odstraněný záznam, není možné se k němu vrátit. Pokud zdroj dat podporuje transakce, můžete `Delete` volat část transakce. Další informace naleznete v článku [Transakce (ODBC)](../../data/odbc/transaction-odbc.md).
 
 > [!NOTE]
->  Pokud jste implementovali hromadné načítání řádků, nemůžete volat `Delete`. Výsledkem bude selhání kontrolního výrazu. I když `CRecordset` třídy neposkytuje mechanismus pro aktualizaci hromadných řádků dat, můžete napsat vlastní funkce pomocí funkce rozhraní ODBC API `SQLSetPos`. Další informace o hromadném načítání řádků naleznete v článku [Sada záznamů: hromadné načítání záznamů (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+> Pokud jste implementovali hromadné načítání řádků, nelze volat `Delete`. Výsledkem bude neúspěšný kontrolní výraz. Přestože `CRecordset` třída neposkytuje mechanismus pro aktualizaci hromadných řádků dat, můžete zapisovat vlastní funkce pomocí funkce `SQLSetPos`ROZHRANÍ API ROZHRANÍ ODBC . Další informace o hromadném načítání řádků naleznete v článku [Sada záznamů: Hromadné načítání záznamů (ODBC).](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)
 
 > [!CAUTION]
->  Sada záznamů musí být aktualizovatelná a při volání `Delete`musí být aktuální záznam v sadě záznamů platný. v opačném případě dojde k chybě. Pokud například odstraníte záznam, ale nebudete se posouvat k novému záznamu předtím, než `Delete` znovu zavoláte, `Delete` vyvolá výjimku [CDBException](../../mfc/reference/cdbexception-class.md).
+> Sada záznamů musí být aktualizovatelná a při volání `Delete`musí být v sadě záznamů platný aktuální záznam ; v opačném případě dojde k chybě. Pokud například odstraníte záznam, ale před dalším voláním `Delete` se `Delete` neposunete na nový záznam, vyvolá výjimku [CDBException](../../mfc/reference/cdbexception-class.md).
 
-Na rozdíl od metody [AddNew](#addnew) a [Edit](#edit)není volání `Delete` následováno voláním metody [Update](#update). Pokud se `Delete` volání nezdařilo, datové členy pole zůstanou beze změny.
+Na rozdíl od [AddNew](#addnew) `Delete` a [Upravit](#edit), volání není následuje volání [Update](#update). Pokud `Delete` volání selže, datové členy pole zůstanou beze změny.
 
 ### <a name="example"></a>Příklad
 
-Tento příklad ukazuje sadu záznamů vytvořenou v rámci funkce. Příklad předpokládá existenci `m_dbCust`, členská proměnná typu `CDatabase` již byla připojena ke zdroji dat.
+Tento příklad ukazuje sadu záznamů vytvořenou v rámci funkce. Příklad předpokládá existenci `m_dbCust`, členské proměnné typu, `CDatabase` který je již připojen ke zdroji dat.
 
 [!code-cpp[NVC_MFCDatabase#18](../../mfc/codesnippet/cpp/crecordset-class_2.cpp)]
 
-##  <a name="dobulkfieldexchange"></a>CRecordset::D oBulkFieldExchange
+## <a name="crecordsetdobulkfieldexchange"></a><a name="dobulkfieldexchange"></a>CRecordset::DoBulkFieldExchange
 
-Volá se, aby se vyměnily hromadné řádky dat ze zdroje dat do sady záznamů. Implementuje hromadnou výměnu pole záznamu (Bulk RFX).
+Nazývá se výměna hromadných řádků dat ze zdroje dat do sady záznamů. Implementuje výměnu polí hromadného záznamu (Bulk RFX).
 
 ```
 virtual void DoBulkFieldExchange(CFieldExchange* pFX);
@@ -526,27 +526,27 @@ virtual void DoBulkFieldExchange(CFieldExchange* pFX);
 
 ### <a name="parameters"></a>Parametry
 
-*pFX*<br/>
-Ukazatel na objekt [CFieldExchange](../../mfc/reference/cfieldexchange-class.md) . Rozhraní již nastaví tento objekt pro určení kontextu operace výměny pole.
+*Pfx*<br/>
+Ukazatel na objekt [CFieldExchange.](../../mfc/reference/cfieldexchange-class.md) Rámec již nastavil tento objekt k určení kontextu pro operaci výměny v terénu.
 
 ### <a name="remarks"></a>Poznámky
 
-Když je implementováno hromadné načítání řádků, volá rozhraní tuto členskou funkci, aby automaticky přenesla data ze zdroje dat do objektu sady záznamů. `DoBulkFieldExchange` také váže datové členy parametrů, pokud existují, na zástupné symboly parametrů v řetězci příkazu SQL pro výběr sady záznamů.
+Při hromadné načítání řádků je implementováno, rozhraní framework volá tuto členská funkci k automatickému přenosu dat ze zdroje dat do objektu sady záznamů. `DoBulkFieldExchange`také váže členy dat parametru, pokud existuje, na zástupné symboly parametrů v řetězci příkazu SQL pro výběr sady záznamů.
 
-Pokud není implementováno hromadné načítání řádků, rozhraní volá metodu [DoFieldExchange](#dofieldexchange). Chcete-li implementovat hromadné načítání řádků, je nutné zadat možnost `CRecordset::useMultiRowFetch` parametru *dwOptions* v [otevřené](#open) členské funkci.
+Pokud hromadné načítání řádků není implementováno, rozhraní framework volání [DoFieldExchange](#dofieldexchange). Chcete-li implementovat hromadné načítání `CRecordset::useMultiRowFetch` řádků, musíte zadat možnost parametru *dwOptions* v členské funkci [Otevřít.](#open)
 
 > [!NOTE]
-> `DoBulkFieldExchange` je k dispozici pouze v případě, že používáte třídu odvozenou z `CRecordset`. Pokud jste vytvořili objekt sady záznamů přímo z `CRecordset`, je nutné zavolat členskou funkci [GetFieldValue –](#getfieldvalue) pro načtení dat.
+> `DoBulkFieldExchange`je k dispozici pouze v případě, `CRecordset`že používáte třídu odvozenou z aplikace . Pokud jste vytvořili objekt sady `CRecordset`záznamů přímo z aplikace , musíte volat člennou funkci [GetFieldValue,](#getfieldvalue) abyste načetli data.
 
-Hromadná výměna pole záznamu (Bulk RFX) se podobá výměně pole záznamu (RFX). Data se automaticky přenesou ze zdroje dat do objektu sady záznamů. Nemůžete však volat `AddNew`, `Edit`, `Delete`nebo `Update` pro přenos změn zpět do zdroje dat. Třída `CRecordset` v současné době neposkytuje mechanismus pro aktualizaci hromadných řádků dat; pomocí `SQLSetPos`funkce rozhraní ODBC API ale můžete napsat vlastní funkce.
+Výměna pole hromadného záznamu (Bulk RFX) je podobná výměně pole záznamu (RFX). Data jsou automaticky přenesena ze zdroje dat do objektu sady záznamů. Nelze však `AddNew`volat `Edit` `Delete`, `Update` , , nebo přenést změny zpět do zdroje dat. Třída `CRecordset` v současné době neposkytuje mechanismus pro aktualizaci hromadných řádků dat; můžete však napsat vlastní funkce pomocí funkce `SQLSetPos`ROZHRANÍ API ROZHRANÍ ODBC .
 
-Všimněte si, že ClassWizard nepodporuje hromadnou výměnu pole záznamu; Proto je nutné přepsat `DoBulkFieldExchange` ručně zápisem volání funkcí hromadného RFX. Další informace o těchto funkcích najdete v tématu [funkce výměny pole záznamu](../../mfc/reference/record-field-exchange-functions.md)v tématu.
+Všimněte si, že ClassWizard nepodporuje hromadné výměny pole záznamu; proto je nutné `DoBulkFieldExchange` přepsat ručně zápisem volání funkce hromadné RFX. Další informace o těchto funkcích naleznete v tématu [Funkce výměny polí záznamu](../../mfc/reference/record-field-exchange-functions.md).
 
-Další informace o hromadném načítání řádků naleznete v článku [Sada záznamů: hromadné načítání záznamů (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md). Související informace naleznete v článku [Výměna pole záznamu (RFX)](../../data/odbc/record-field-exchange-rfx.md).
+Další informace o hromadném načítání řádků naleznete v článku [Sada záznamů: Hromadné načítání záznamů (ODBC).](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) Související informace naleznete v článku [Výměna pole záznamu (RFX)](../../data/odbc/record-field-exchange-rfx.md).
 
-##  <a name="dofieldexchange"></a>CRecordset::D oFieldExchange
+## <a name="crecordsetdofieldexchange"></a><a name="dofieldexchange"></a>CRecordset::DoFieldExchange
 
-Volá se k výměně dat (v obou směrech) mezi datovými členy pole sady záznamů a odpovídajícím záznamem ve zdroji dat. Implementuje výměnu pole záznamu (RFX).
+Nazývá se výměna dat (v obou směrech) mezi datovými členy pole sady záznamů a odpovídajícím záznamem ve zdroji dat. Implementuje výměnu pole záznamu (RFX).
 
 ```
 virtual void DoFieldExchange(CFieldExchange* pFX);
@@ -554,33 +554,33 @@ virtual void DoFieldExchange(CFieldExchange* pFX);
 
 ### <a name="parameters"></a>Parametry
 
-*pFX*<br/>
-Ukazatel na objekt [CFieldExchange](../../mfc/reference/cfieldexchange-class.md) . Rozhraní již nastaví tento objekt pro určení kontextu operace výměny pole.
+*Pfx*<br/>
+Ukazatel na objekt [CFieldExchange.](../../mfc/reference/cfieldexchange-class.md) Rámec již nastavil tento objekt k určení kontextu pro operaci výměny v terénu.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud není implementováno hromadné načítání řádků, volá rozhraní tuto členskou funkci, aby automaticky vyměnila data mezi poli datových členů objektu Recordset a odpovídající sloupce aktuálního záznamu ve zdroji dat. `DoFieldExchange` také váže datové členy parametrů, pokud existují, na zástupné symboly parametrů v řetězci příkazu SQL pro výběr sady záznamů.
+Pokud není implementováno hromadné načítání řádků, rozhraní framework volá tuto členská funkci k automatické výměně dat mezi datovými členy pole objektu sady záznamů a odpovídajícími sloupci aktuálního záznamu ve zdroji dat. `DoFieldExchange`také váže členy dat parametru, pokud existuje, na zástupné symboly parametrů v řetězci příkazu SQL pro výběr sady záznamů.
 
-Pokud je implementováno hromadné načítání řádků, volá rozhraní [DoBulkFieldExchange](#dobulkfieldexchange). Chcete-li implementovat hromadné načítání řádků, je nutné zadat možnost `CRecordset::useMultiRowFetch` parametru *dwOptions* v [otevřené](#open) členské funkci.
+Pokud je implementováno hromadné načítání řádků, framework volá [DoBulkFieldExchange](#dobulkfieldexchange). Chcete-li implementovat hromadné načítání `CRecordset::useMultiRowFetch` řádků, musíte zadat možnost parametru *dwOptions* v členské funkci [Otevřít.](#open)
 
 > [!NOTE]
-> `DoFieldExchange` je k dispozici pouze v případě, že používáte třídu odvozenou z `CRecordset`. Pokud jste vytvořili objekt sady záznamů přímo z `CRecordset`, je nutné zavolat členskou funkci [GetFieldValue –](#getfieldvalue) pro načtení dat.
+> `DoFieldExchange`je k dispozici pouze v případě, `CRecordset`že používáte třídu odvozenou z aplikace . Pokud jste vytvořili objekt sady `CRecordset`záznamů přímo z aplikace , musíte volat člennou funkci [GetFieldValue,](#getfieldvalue) abyste načetli data.
 
-Výměna dat polí označovaná jako výměna pole záznamu (RFX), funguje v obou směrech: z datových členů pole objektu sady záznamů do polí záznamu ve zdroji dat a ze záznamu ve zdroji dat do objektu sady záznamů.
+Výměna dat pole, nazývaná výměna pole záznamu (RFX), funguje v obou směrech: od datových členů pole objektu sady záznamů až po pole záznamu ve zdroji dat a ze záznamu ve zdroji dat k objektu sady záznamů.
 
-Jediná akce, kterou je třeba obvykle provést k implementaci `DoFieldExchange` pro odvozenou třídu sady záznamů, je vytvoření třídy pomocí ClassWizard a určení názvů a datových typů datových členů pole. Můžete také přidat kód, který zapisuje ClassWizard zápisy pro určení parametrů datových členů nebo pro práci s dalšími sloupci, které svážete dynamicky. Další informace naleznete v článku [Sada záznamů: dynamické vazby datových sloupců (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md).
+Jedinou akcí, kterou je `DoFieldExchange` třeba normálně provést k implementaci pro odvozenou třídu sady záznamů, je vytvoření třídy pomocí Průvodce třídou a určení názvů a datových typů datových členů pole. Můžete také přidat kód, co ClassWizard zapíše určit členy dat parametru nebo řešit všechny sloupce, které svázat dynamicky. Další informace naleznete v článku [Sada záznamů: Dynamicky vazebné datové sloupce (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md).
 
-Při deklaraci odvozené třídy sady záznamů pomocí ClassWizard průvodce zapíše přepsání `DoFieldExchange` pro vás, které se podobá následujícímu příkladu:
+Když deklarujete třídu odvozené sady záznamů pomocí `DoFieldExchange` Průvodce třídou, průvodce za píše přepsání za vás, které se podobá následujícímu příkladu:
 
 [!code-cpp[NVC_MFCDatabase#19](../../mfc/codesnippet/cpp/crecordset-class_3.cpp)]
 
-Další informace o funkcích RFX naleznete v tématu [funkce výměny pole záznamu](../../mfc/reference/record-field-exchange-functions.md)v tématu.
+Další informace o funkcích RFX naleznete v tématu [Funkce výměny polí záznamu](../../mfc/reference/record-field-exchange-functions.md).
 
-Další příklady a podrobnosti o `DoFieldExchange`najdete v článku [Výměna pole záznamu: Jak funguje RFX](../../data/odbc/record-field-exchange-how-rfx-works.md). Obecné informace o RFX najdete v článku [Výměna pole záznamu](../../data/odbc/record-field-exchange-rfx.md).
+Další příklady a `DoFieldExchange`podrobnosti o najdete v článku [Záznam pole Exchange: Jak funguje RFX](../../data/odbc/record-field-exchange-how-rfx-works.md). Obecné informace o RFX naleznete v článku [Výměna pole záznamu](../../data/odbc/record-field-exchange-rfx.md).
 
-##  <a name="edit"></a>CRecordset:: Edit
+## <a name="crecordsetedit"></a><a name="edit"></a>CRecordset::Upravit
 
-Umožňuje změny v aktuálním záznamu.
+Umožňuje změny aktuálního záznamu.
 
 ```
 virtual void Edit();
@@ -588,30 +588,30 @@ virtual void Edit();
 
 ### <a name="remarks"></a>Poznámky
 
-Po volání `Edit`můžete změnit datové členy pole přímo obnovením jejich hodnot. Operace je dokončena, pokud následně zavoláte členskou funkci [Update](#update) pro uložení změn ve zdroji dat.
+Po volání `Edit`můžete změnit datové členy pole přímým resetováním jejich hodnot. Operace je dokončena, když následně zavoláte [členská](#update) funkci Update a uložíte změny do zdroje dat.
 
 > [!NOTE]
->  Pokud jste implementovali hromadné načítání řádků, nemůžete volat `Edit`. Výsledkem bude selhání kontrolního výrazu. I když `CRecordset` třídy neposkytuje mechanismus pro aktualizaci hromadných řádků dat, můžete napsat vlastní funkce pomocí funkce rozhraní ODBC API `SQLSetPos`. Další informace o hromadném načítání řádků naleznete v článku [Sada záznamů: hromadné načítání záznamů (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+> Pokud jste implementovali hromadné načítání řádků, nelze volat `Edit`. Výsledkem bude neúspěšný kontrolní výraz. Přestože `CRecordset` třída neposkytuje mechanismus pro aktualizaci hromadných řádků dat, můžete zapisovat vlastní funkce pomocí funkce `SQLSetPos`ROZHRANÍ API ROZHRANÍ ODBC . Další informace o hromadném načítání řádků naleznete v článku [Sada záznamů: Hromadné načítání záznamů (ODBC).](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)
 
-`Edit` ukládá hodnoty datových členů sady záznamů. Pokud voláte `Edit`, proveďte změny a zavolejte `Edit` znovu, hodnoty záznamu budou obnoveny na to, co byly před prvním `Edit` volání.
+`Edit`uloží hodnoty datových členů sady záznamů. Pokud zavoláte `Edit`, provedete `Edit` změny a pak zavoláte znovu, hodnoty záznamu `Edit` se obnoví na hodnoty, které byly před prvním voláním.
 
-V některých případech můžete chtít sloupec aktualizovat tak, že ho nastavíte na hodnotu null (neobsahuje žádná data). Uděláte to tak, že zavoláte [SetFieldNull](#setfieldnull) s parametrem true k označení pole null. tím také dojde k aktualizaci sloupce. Pokud chcete, aby pole bylo zapsáno do zdroje dat, i když se jeho hodnota nezměnila, zavolejte [SetFieldDirty](#setfielddirty) s parametrem true. To funguje i v případě, že pole má hodnotu null.
+V některých případech můžete chtít aktualizovat sloupec tím, že je Null (obsahující žádná data). Chcete-li tak učinit, volání [SetFieldNull](#setfieldnull) s parametrem TRUE označit pole Null; To také způsobí, že sloupec aktualizovat. Pokud chcete, aby pole bylo zapsáno do zdroje dat, i když se jeho hodnota nezměnila, zavolejte [SetFieldDirty](#setfielddirty) s parametrem TRUE. To funguje i v případě, že pole mělo hodnotu Null.
 
-Pokud zdroj dat podporuje transakce, můžete provést `Edit` volání části transakce. Všimněte si, že před voláním `Edit` a po otevření sady záznamů byste měli zavolat metodu [CDatabase:: BeginTrans](../../mfc/reference/cdatabase-class.md#begintrans) . Všimněte si také, že volání [CDatabase:: CommitTrans](../../mfc/reference/cdatabase-class.md#committrans) není náhradou za volání `Update` k dokončení operace `Edit`. Další informace o transakcích naleznete v tématu Class [CDatabase](../../mfc/reference/cdatabase-class.md).
+Pokud zdroj dat podporuje transakce, můžete `Edit` volat část transakce. Všimněte si, že byste měli volat `Edit` [CDatabase::BeginTrans](../../mfc/reference/cdatabase-class.md#begintrans) před voláním a po otevření sady záznamů. Všimněte si také, že volání [CDatabase::CommitTrans](../../mfc/reference/cdatabase-class.md#committrans) není náhradou za volání `Update` k dokončení `Edit` operace. Další informace o transakcích naleznete v tématu [cdatabase](../../mfc/reference/cdatabase-class.md)třídy .
 
-V závislosti na aktuálním režimu uzamykání může být aktualizovaný záznam zamčený `Edit` dokud nebudete volat `Update` nebo posuňte na jiný záznam, nebo může být uzamčen pouze během `Edit` volání. Režim uzamykání můžete změnit pomocí [SetLockingMode](#setlockingmode).
+V závislosti na aktuálním režimu uzamčení `Edit` může být `Update` aktualizovaný záznam uzamčen, dokud nezavoláte `Edit` nebo nepřejdete na jiný záznam, nebo může být uzamčen pouze během hovoru. Režim zamykání můžete změnit pomocí [režimu SetLockingMode](#setlockingmode).
 
-Předchozí hodnota aktuálního záznamu se obnoví, pokud se před voláním `Update`posunete k novému záznamu. Pokud zavoláte `Edit` pro sadu záznamů, kterou nelze aktualizovat, nebo pokud neexistuje žádný aktuální záznam, je vyvolána `CDBException`.
+Předchozí hodnota aktuálního záznamu bude obnovena, pokud před `Update`voláním přejdete na nový záznam . A `CDBException` je vyvolána, `Edit` pokud voláte sadu záznamů, které nelze aktualizovat, nebo pokud neexistuje žádný aktuální záznam.
 
-Další informace najdete v článcích [transakce (ODBC)](../../data/odbc/transaction-odbc.md) a [Sada záznamů: zamykání záznamů (ODBC)](../../data/odbc/recordset-locking-records-odbc.md).
+Další informace naleznete v článcích [Transakce (ODBC)](../../data/odbc/transaction-odbc.md) a [Recordset: Uzamčení záznamů (ODBC).](../../data/odbc/recordset-locking-records-odbc.md)
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCDatabase#20](../../mfc/codesnippet/cpp/crecordset-class_4.cpp)]
 
-##  <a name="flushresultset"></a>CRecordset:: FlushResultSet
+## <a name="crecordsetflushresultset"></a><a name="flushresultset"></a>CRecordset::FlushResultSet
 
-Načte další sadu výsledků předdefinovaného dotazu (uložené procedury), pokud existuje více sad výsledků.
+Načte další sadu výsledků předdefinovaného dotazu (uložená procedura), pokud existuje více sad výsledků.
 
 ```
 BOOL FlushResultSet();
@@ -619,27 +619,27 @@ BOOL FlushResultSet();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud existuje více sad výsledků, které mají být načteny; v opačném případě 0.
+Nenulová, pokud je třeba načíst více sad výsledků; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-`FlushResultSet` byste měli volat pouze v případě, že jste úplně dokončili kurzor na aktuální sadě výsledků dotazu. Všimněte si, že při načítání další sady výsledků voláním `FlushResultSet`není ukazatel platný v této sadě výsledků. Po volání `FlushResultSet`byste měli zavolat členskou funkci [MoveNext](#movenext) .
+Měli byste `FlushResultSet` volat pouze v případě, že jste zcela dokončeni s kurzorem na aktuální sadu výsledků. Všimněte si, že při načtení další sadu výsledků voláním `FlushResultSet`, kurzor není platný pro tuto sadu výsledků; po volání `FlushResultSet`byste měli zavolat člennou funkci [MoveNext](#movenext) .
 
-Pokud předdefinovaný dotaz používá výstupní parametr nebo vstupní/výstupní parametry, je nutné volat `FlushResultSet`, dokud nevrátí hodnotu `FALSE` (hodnota 0), aby bylo možné získat tyto hodnoty parametrů.
+Pokud předdefinovaný dotaz používá výstupní parametr nebo parametry input/output, musíte volat, `FlushResultSet` dokud nevrátí `FALSE` (hodnota 0), abyste získali tyto hodnoty parametrů.
 
-`FlushResultSet` volá funkci rozhraní ODBC API `SQLMoreResults`. Pokud `SQLMoreResults` Vrátí SQL_ERROR nebo SQL_INVALID_HANDLE, pak `FlushResultSet` vyvolá výjimku. Další informace o `SQLMoreResults`najdete v Windows SDK.
+`FlushResultSet`volá funkci `SQLMoreResults`ROZHRANÍ API ROZHRANÍ ODBC . Pokud `SQLMoreResults` vrátí SQL_ERROR nebo `FlushResultSet` SQL_INVALID_HANDLE, pak vyvolá výjimku. Další informace `SQLMoreResults`o aplikaci naleznete v souboru Windows SDK.
 
-Vaše uložená procedura musí mít vázaná pole, pokud chcete volat `FlushResultSet`.
+Uložená procedura musí mít vázaná `FlushResultSet`pole, pokud chcete volat .
 
 ### <a name="example"></a>Příklad
 
-Následující kód předpokládá, že `COutParamRecordset` je objekt odvozený `CRecordset`na základě předdefinovaného dotazu se vstupním parametrem a výstupním parametrem a má více sad výsledků. Všimněte si struktury přepsání [DoFieldExchange](#dofieldexchange) .
+Následující kód předpokládá, `COutParamRecordset` že `CRecordset`je odvozený objekt založený na předdefinovaný dotaz s vstupní parametr a výstupní parametr a mají více sad výsledků. Všimněte si struktury [přepsání DoFieldExchange.](#dofieldexchange)
 
 [!code-cpp[NVC_MFCDatabase#21](../../mfc/codesnippet/cpp/crecordset-class_5.cpp)]
 
 [!code-cpp[NVC_MFCDatabase#22](../../mfc/codesnippet/cpp/crecordset-class_6.cpp)]
 
-##  <a name="getbookmark"></a>CRecordset:: GetBookmark
+## <a name="crecordsetgetbookmark"></a><a name="getbookmark"></a>CRecordset::GetBookmark
 
 Získá hodnotu záložky pro aktuální záznam.
 
@@ -650,25 +650,25 @@ void GetBookmark(CDBVariant& varBookmark);
 ### <a name="parameters"></a>Parametry
 
 *varBookmark*<br/>
-Odkaz na objekt [CDBVariant –](../../mfc/reference/cdbvariant-class.md) představující záložku na aktuálním záznamu.
+Odkaz na objekt [CDBVariant](../../mfc/reference/cdbvariant-class.md) představující záložku na aktuálním záznamu.
 
 ### <a name="remarks"></a>Poznámky
 
-Chcete-li zjistit, zda jsou záložky v sadě záznamů podporovány, zavolejte [CanBookmark](#canbookmark). Chcete-li zpřístupnit záložky, pokud jsou podporovány, je nutné nastavit možnost `CRecordset::useBookmarks` v parametru *dwOptions* pro [otevřenou](#open) členskou funkci.
+Chcete-li zjistit, zda jsou záložky v sadě záznamů podporovány, zavolejte [CanBookmark](#canbookmark). Chcete-li záložky zpřístupnit, pokud jsou `CRecordset::useBookmarks` podporovány, musíte nastavit možnost v parametru *dwOptions* členské funkce [Otevřít.](#open)
 
 > [!NOTE]
->  Pokud záložky nejsou podporovány nebo nejsou k dispozici, volání `GetBookmark` bude mít za následek vyvolanou výjimku. Záložky nejsou podporovány pro sady záznamů s dopřednou podporou.
+> Pokud záložky nejsou podporovány `GetBookmark` nebo nejsou k dispozici, volání bude mít za následek vyvolání výjimky. Záložky nejsou podporovány v sadách záznamů pouze pro předávání.
 
-`GetBookmark` přiřadí hodnotu záložky pro aktuální záznam do objektu `CDBVariant`. Chcete-li se k záznamu vrátit kdykoli po přesunu na jiný záznam, zavolejte [SetBookmark](#setbookmark) s odpovídajícím objektem `CDBVariant`.
+`GetBookmark`přiřadí `CDBVariant` objektu hodnotu záložky pro aktuální záznam. Chcete-li se k tomuto záznamu kdykoli vrátit po přesunutí na `CDBVariant` jiný záznam, zavolejte [SetBookmark](#setbookmark) s odpovídajícím objektem.
 
 > [!NOTE]
->  Po určitých operacích sady záznamů již nemusí být záložky platné. Například pokud voláte `GetBookmark` následovaný `Requery`, pravděpodobně se nebudete moci vrátit k záznamu pomocí `SetBookmark`. Voláním [CDatabase:: GetBookmarkPersistence](../../mfc/reference/cdatabase-class.md#getbookmarkpersistence) zkontrolujete, jestli můžete bezpečně volat `SetBookmark`.
+> Po určité operace sady záznamů již nemusí být záložky platné. Pokud například zavoláte `GetBookmark` `Requery`následovaný písmenem , nebude pravděpodobně možné `SetBookmark`vrátit se k záznamu pomocí . Volání [CDatabase::GetBookmarkPersistence](../../mfc/reference/cdatabase-class.md#getbookmarkpersistence) zkontrolovat, zda `SetBookmark`můžete bezpečně volat .
 
-Další informace o záložkách a navigaci v sadě záznamů naleznete v článcích [Sada záznamů: záložky a absolutní umístění (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md) a [Sada záznamů: posouvání (ODBC)](../../data/odbc/recordset-scrolling-odbc.md).
+Další informace o záložkách a navigaci v sadě záznamů naleznete v článcích [Sada záznamů: Záložky a absolutní pozice (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md) a [Sada záznamů: Posouvání (ODBC).](../../data/odbc/recordset-scrolling-odbc.md)
 
-##  <a name="getdefaultconnect"></a>CRecordset:: GetDefaultConnect
+## <a name="crecordsetgetdefaultconnect"></a><a name="getdefaultconnect"></a>CRecordset::GetDefaultConnect
 
-Volá se, aby se získal výchozí připojovací řetězec.
+Volána získat výchozí připojovací řetězec.
 
 ```
 virtual CString GetDefaultConnect();
@@ -676,15 +676,15 @@ virtual CString GetDefaultConnect();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`CString`, který obsahuje výchozí připojovací řetězec.
+A, `CString` který obsahuje výchozí připojovací řetězec.
 
 ### <a name="remarks"></a>Poznámky
 
-Rozhraní volá tuto členskou funkci, aby získala výchozí připojovací řetězec pro zdroj dat, na kterém je založena sada záznamů. ClassWizard implementuje tuto funkci za vás tím, že identifikuje stejný zdroj dat, který používáte v ClassWizard, aby získal informace o tabulkách a sloupcích. Pravděpodobně bude vhodné spoléhat na toto výchozí připojení při vývoji aplikace. Výchozí připojení ale nemusí být vhodné pro uživatele vaší aplikace. V takovém případě byste měli tuto funkci znovu implementovat a zahodí verzi ClassWizard. Další informace o připojovacích řetězcích najdete v článku [zdroj dat (ODBC)](../../data/odbc/data-source-odbc.md).
+Rozhraní Framework volá tuto členskou funkci, aby získalo výchozí připojovací řetězec pro zdroj dat, na kterém je založena sada záznamů. ClassWizard implementuje tuto funkci za vás identifikací stejného zdroje dat, který používáte v ClassWizard získat informace o tabulkách a sloupcích. Pravděpodobně zjistíte, že je vhodné spoléhat se na toto výchozí připojení při vývoji aplikace. Výchozí připojení však nemusí být vhodné pro uživatele aplikace. Pokud tomu tak je, měli byste tuto funkci znovu implementovat a zahodit verzi ClassWizard. Další informace o připojovacích řetězcích naleznete v článku [Zdroj dat (ODBC).](../../data/odbc/data-source-odbc.md)
 
-##  <a name="getdefaultsql"></a>CRecordset:: GetDefaultSQL
+## <a name="crecordsetgetdefaultsql"></a><a name="getdefaultsql"></a>CRecordset::GetDefaultSQL
 
-Volá se, aby se získal výchozí řetězec SQL, který se má provést.
+Volána k získání výchozího řetězce SQL ke spuštění.
 
 ```
 virtual CString GetDefaultSQL();
@@ -692,24 +692,24 @@ virtual CString GetDefaultSQL();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`CString`, který obsahuje výchozí příkaz SQL.
+A, `CString` který obsahuje výchozí příkaz SQL.
 
 ### <a name="remarks"></a>Poznámky
 
-Rozhraní volá tuto členskou funkci, aby získala výchozí příkaz SQL, na kterém je sada záznamů založena. Může se jednat o název tabulky nebo příkaz SQL **Select** .
+Rozhraní Framework volá tuto členskou funkci, aby získalo výchozí příkaz SQL, na kterém je založena sada záznamů. Může se jedná o název tabulky nebo příkaz SQL **SELECT.**
 
-Nebudete nepřímo definovat výchozí příkaz SQL deklarováním třídy sady záznamů pomocí ClassWizard a ClassWizard tuto úlohu provede za vás.
+Nepřímo definujete výchozí příkaz SQL deklarováním třídy sady záznamů pomocí Průvodce řazením záznamů a ClassWizard provede tento úkol za vás.
 
-Pokud potřebujete řetězec příkazu SQL pro vlastní použití, zavolejte `GetSQL`, která vrátí příkaz jazyka SQL, který se používá k výběru záznamů sady záznamů při jejich otevření. Můžete upravit výchozí řetězec SQL v přepsání třídy `GetDefaultSQL`. Například můžete zadat volání předdefinovaného dotazu pomocí příkazu **volání** . (Upozorňujeme však, že pokud `GetDefaultSQL`upravíte, budete také muset upravit `m_nFields` tak, aby odpovídalo počtu sloupců ve zdroji dat.)
+Pokud potřebujete řetězec příkazu SQL pro `GetSQL`vlastní použití, call , který vrátí příkaz SQL použitý k výběru záznamů sady záznamů při jeho otevření. Výchozí řetězec SQL můžete upravit v přepsání `GetDefaultSQL`třídy aplikace . Můžete například zadat volání předdefinovaného dotazu pomocí příkazu **CALL.** (Všimněte si však, `GetDefaultSQL`že pokud upravujete , je také nutné upravit tak, `m_nFields` aby odpovídaly počtu sloupců ve zdroji dat.)
 
-Další informace naleznete v článku [Sada záznamů: Deklarování třídy pro tabulku (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md).
+Další informace naleznete v článku [Sada záznamů: Deklarování třídy pro tabulku (ODBC).](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)
 
 > [!CAUTION]
->  Název tabulky bude prázdný, pokud rozhraní neidentifikovalo název tabulky, pokud bylo zadáno více názvů tabulek, nebo pokud příkaz **volání** nelze interpretovat. Všimněte si, že při použití příkazu **volání** není nutné vkládat prázdné znaky mezi složenou závorku a klíčové slovo **volání** , ani vkládat prázdné znaky před složenou závorku nebo před klíčovým slovem **Select** v příkazu **Select** .
+> Název tabulky bude prázdný, pokud rozhraní framework nemohlo identifikovat název tabulky, pokud bylo zadáno více názvů tabulek nebo pokud příkaz **CALL** nelze interpretovat. Všimněte si, že při použití **příkazu CALL** nesmíte vložit mezery mezi složené závorky a **call** klíčové slovo, ani byste neměli vkládat mezery před složené složenou závorku nebo před klíčové slovo **SELECT** v příkazu **SELECT.**
 
-##  <a name="getfieldvalue"></a>CRecordset:: GetFieldValue –
+## <a name="crecordsetgetfieldvalue"></a><a name="getfieldvalue"></a>CRecordset::GetFieldValue
 
-Načte data pole v aktuálním záznamu.
+Načte data polí v aktuálním záznamu.
 
 ```
 void GetFieldValue(
@@ -733,13 +733,13 @@ void GetFieldValue(
 
 ### <a name="parameters"></a>Parametry
 
-*lpszName*<br/>
+*název lpsz*<br/>
 Název pole.
 
-*varValu*e odkaz na objekt [CDBVariant –](../../mfc/reference/cdbvariant-class.md) , který bude uchovávat hodnotu pole.
+*varValu*e Odkaz na objekt [CDBVariant,](../../mfc/reference/cdbvariant-class.md) který uloží hodnotu pole.
 
-*nFieldType*<br/>
-Datový typ ODBC C daného pole. Použití výchozí hodnoty DEFAULT_FIELD_TYPE, vynutí `GetFieldValue` určení datového typu jazyka C z datového typu SQL na základě následující tabulky. V opačném případě můžete zadat datový typ přímo nebo zvolit kompatibilní datový typ. do SQL_C_CHAR můžete například uložit libovolný datový typ.
+*nTyp pole*<br/>
+Datový typ odbc C pole. Použití výchozí hodnoty DEFAULT_FIELD_TYPE `GetFieldValue` vynutí určení datového typu C z datového typu SQL na základě následující tabulky. V opačném případě můžete zadat datový typ přímo nebo zvolit kompatibilní datový typ; můžete například uložit libovolný datový typ do SQL_C_CHAR.
 
 |Datový typ C|Datový typ SQL|
 |-----------------|-------------------|
@@ -750,42 +750,42 @@ Datový typ ODBC C daného pole. Použití výchozí hodnoty DEFAULT_FIELD_TYPE,
 |SQL_C_FLOAT|SQL_REAL|
 |SQL_C_DOUBLE|SQL_FLOATSQL_DOUBLE|
 |SQL_C_TIMESTAMP|SQL_DATESQL_TIMESQL_TIMESTAMP|
-|SQL_C_CHAR|SQL_NUMERICSQL_DECIMALSQL_BIGINTSQL_CHARSQL_VARCHARSQL_LONGVARCHAR|
-|SQL_C_BINARY|SQL_BINARYSQL_VARBINARYSQL_LONGVARBINARY|
+|Sql_c_char|SQL_NUMERICSQL_DECIMALSQL_BIGINTSQL_CHARSQL_VARCHARSQL_LONGVARCHAR|
+|Sql_c_binary|SQL_BINARYSQL_VARBINARYSQL_LONGVARBINARY|
 
-Další informace o datových typech ODBC naleznete v tématech "datové typy SQL" a "C Data Types" v příloze D Windows SDK.
+Další informace o datových typech ROZHRANÍ ODBC naleznete v tématech Datové typy SQL a "Datové typy Jazyka C" v dodatku D sady Windows SDK.
 
 *nIndex*<br/>
-Index pole založený na nule.
+Nulový index pole.
 
 *strValue*<br/>
-Odkaz na objekt [CString](../../atl-mfc-shared/reference/cstringt-class.md) , který bude uchovávat hodnotu pole převedenou na text bez ohledu na datový typ pole.
+Odkaz na [cstring](../../atl-mfc-shared/reference/cstringt-class.md) objekt, který bude ukládat hodnotu pole převedenou na text, bez ohledu na datový typ pole.
 
 ### <a name="remarks"></a>Poznámky
 
-Můžete vyhledat pole buď podle názvu, nebo podle indexu. Hodnotu pole můžete uložit buď do objektu `CDBVariant`, nebo do objektu `CString`.
+Pole můžete vyhledat podle názvu nebo indexu. Hodnotu pole můžete uložit `CDBVariant` do objektu nebo objektu. `CString`
 
-Pokud jste implementovali hromadné načítání řádků, aktuální záznam je vždy umístěn na prvním záznamu v sadě řádků. Chcete-li použít `GetFieldValue` pro záznam v rámci dané sady řádků, je nutné nejprve zavolat členskou funkci [SetRowsetCursorPosition](#setrowsetcursorposition) pro přesunutí kurzoru na požadovaný řádek v rámci této sady řádků. Potom pro tento řádek zavolejte `GetFieldValue`. Chcete-li implementovat hromadné načítání řádků, je nutné zadat možnost `CRecordset::useMultiRowFetch` parametru *dwOptions* v [otevřené](#open) členské funkci.
+Pokud jste implementovali hromadné načítání řádků, aktuální záznam je vždy umístěn na první záznam v sadě řádků. Chcete-li použít `GetFieldValue` na záznam v rámci dané sady řádků, musíte nejprve volat [SetRowsetCursorPosition](#setrowsetcursorposition) člennou funkci přesunout kurzor na požadovaný řádek v rámci této sady řádků. Tak `GetFieldValue` zavolejte pro ten řádek. Chcete-li implementovat hromadné načítání `CRecordset::useMultiRowFetch` řádků, musíte zadat možnost parametru *dwOptions* v členské funkci [Otevřít.](#open)
 
-Můžete použít `GetFieldValue` k dynamickému načítání polí v době běhu, a ne staticky je svázat v době návrhu. Například pokud jste deklarovali objekt sady záznamů přímo z `CRecordset`, je nutné použít `GetFieldValue` k načtení dat polí; Výměna pole záznamu (RFX) nebo hromadná výměna pole záznamu (Bulk RFX) není implementována.
+Můžete použít `GetFieldValue` k dynamicky načítat pole za běhu, nikoli staticky vazby je v době návrhu. Pokud jste například deklarovali objekt `CRecordset`sady záznamů `GetFieldValue` přímo z aplikace , musíte použít k načtení dat pole. záznam pole exchange (RFX), nebo hromadné záznam pole exchange (Bulk RFX), není implementována.
 
 > [!NOTE]
->  Pokud deklarujete objekt sady záznamů bez odvození od `CRecordset`, nemusíte mít nahranou knihovnu kurzorů rozhraní ODBC. Knihovna kurzorů vyžaduje, aby sada záznamů měla alespoň jeden vázaný sloupec; Pokud však použijete `CRecordset` přímo, žádný ze sloupců není svázán. Členské funkce [CDatabase:: OpenEx](../../mfc/reference/cdatabase-class.md#openex) a [CDatabase:: Open](../../mfc/reference/cdatabase-class.md#open) určují, zda bude načtena knihovna kurzorů.
+> Pokud deklarujete objekt sady `CRecordset`záznamů bez odvození z aplikace , nemáte načtenou knihovnu kurzorů ROZHRANÍ ODBC. Knihovna kurzorů vyžaduje, aby sada záznamů měla alespoň jeden vázaný sloupec; však při `CRecordset` použití přímo, žádný ze sloupců jsou vázány. Členské funkce [CDatabase::OpenEx](../../mfc/reference/cdatabase-class.md#openex) a [CDatabase::Open](../../mfc/reference/cdatabase-class.md#open) ovládací prvek, zda bude načtena knihovna kurzoru.
 
-`GetFieldValue` volá funkci rozhraní ODBC API `SQLGetData`. Pokud Váš ovladač vypíše hodnotu SQL_NO_TOTAL pro skutečnou délku hodnoty pole, `GetFieldValue` vyvolá výjimku. Další informace o `SQLGetData`najdete v Windows SDK.
+`GetFieldValue`volá funkci `SQLGetData`ROZHRANÍ API ROZHRANÍ ODBC . Pokud ovladač výstupy hodnota SQL_NO_TOTAL pro skutečnou délku hodnoty pole, `GetFieldValue` vyvolá výjimku. Další informace `SQLGetData`o aplikaci naleznete v souboru Windows SDK.
 
 ### <a name="example"></a>Příklad
 
-Následující vzorový kód ilustruje volání `GetFieldValue` pro objekt sady záznamů deklarované přímo z `CRecordset`.
+Následující ukázkový kód ilustruje `GetFieldValue` volání objektu sady `CRecordset`záznamů deklarovaného přímo z .
 
 [!code-cpp[NVC_MFCDatabase#23](../../mfc/codesnippet/cpp/crecordset-class_7.cpp)]
 
 > [!NOTE]
->  Na rozdíl od třídy DAO `CDaoRecordset``CRecordset` nemá `SetFieldValue` členskou funkci. Pokud vytvoříte objekt přímo z `CRecordset`, je pro něj efektivně jen pro čtení.
+> Na rozdíl od `CDaoRecordset`třídy DAO `CRecordset` nemá členská `SetFieldValue` funkce. Pokud vytvoříte objekt `CRecordset`přímo z aplikace , je efektivně jen pro čtení.
 
-Další informace o hromadném načítání řádků naleznete v článku [Sada záznamů: hromadné načítání záznamů (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+Další informace o hromadném načítání řádků naleznete v článku [Sada záznamů: Hromadné načítání záznamů (ODBC).](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)
 
-##  <a name="getodbcfieldcount"></a>CRecordset:: GetODBCFieldCount
+## <a name="crecordsetgetodbcfieldcount"></a><a name="getodbcfieldcount"></a>CRecordset::GetODBCFieldCount
 
 Načte celkový počet polí v objektu sady záznamů.
 
@@ -799,11 +799,11 @@ Počet polí v sadě záznamů.
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace o vytváření sad záznamů naleznete v článku [Sada záznamů: vytváření a uzavírání sad záznamů (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md).
+Další informace o vytváření sad záznamů naleznete v článku [Sada záznamů: Vytváření a zavírání sad záznamů (ODBC).](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md)
 
-##  <a name="getodbcfieldinfo"></a>CRecordset:: GetODBCFieldInfo
+## <a name="crecordsetgetodbcfieldinfo"></a><a name="getodbcfieldinfo"></a>CRecordset::GetODBCFieldInfo
 
-Získává informace o polích v sadě záznamů.
+Získá informace o polích v sadě záznamů.
 
 ```
 void GetODBCFieldInfo(
@@ -817,24 +817,24 @@ void GetODBCFieldInfo(
 
 ### <a name="parameters"></a>Parametry
 
-*lpszName*<br/>
+*název lpsz*<br/>
 Název pole.
 
-*FieldInfo*<br/>
-Odkaz na strukturu `CODBCFieldInfo`.
+*Fieldinfo*<br/>
+Odkaz na `CODBCFieldInfo` strukturu.
 
 *nIndex*<br/>
-Index pole založený na nule.
+Nulový index pole.
 
 ### <a name="remarks"></a>Poznámky
 
-Jedna verze funkce vám umožní vyhledat pole podle názvu. Druhá verze umožňuje vyhledat pole podle indexu.
+Jedna verze funkce umožňuje vyhledat pole podle názvu. Druhá verze umožňuje vyhledat pole podle indexu.
 
-Popis vrácených informací najdete v tématu struktura [codbcfieldinfo –](../../mfc/reference/codbcfieldinfo-structure.md) .
+Popis vrácených informací naleznete ve struktuře [CODBCFieldInfo.](../../mfc/reference/codbcfieldinfo-structure.md)
 
-Další informace o vytváření sad záznamů naleznete v článku [Sada záznamů: vytváření a uzavírání sad záznamů (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md).
+Další informace o vytváření sad záznamů naleznete v článku [Sada záznamů: Vytváření a zavírání sad záznamů (ODBC).](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md)
 
-##  <a name="getrecordcount"></a>CRecordset:: GetRecordCount
+## <a name="crecordsetgetrecordcount"></a><a name="getrecordcount"></a>CRecordset::GetRecordCount
 
 Určuje velikost sady záznamů.
 
@@ -844,16 +844,16 @@ long GetRecordCount() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Počet záznamů v sadě záznamů; 0, pokud sada záznamů neobsahuje žádné záznamy; nebo-1, pokud nelze určit počet záznamů.
+Počet záznamů v sadě záznamů; 0, pokud sada záznamů neobsahuje žádné záznamy; nebo -1, pokud nelze určit počet záznamů.
 
 ### <a name="remarks"></a>Poznámky
 
 > [!CAUTION]
->  Počet záznamů je udržován jako "horní mez"; nejpřesnější záznam, který se stále zobrazuje, když uživatel prochází záznamy. Celkový počet záznamů je znám pouze poté, co uživatel přesunul za poslední záznam. Z důvodů výkonu se počet při volání `MoveLast`neaktualizuje. Chcete-li spočítat záznamy sami, zavolejte `MoveNext` opakovaně, dokud `IsEOF` nevrátí nenulovou hodnotu. Přidání záznamu prostřednictvím `CRecordset:AddNew` a `Update` zvyšuje počet; odstranění záznamu pomocí `CRecordset::Delete` sníží počet.
+> Počet záznamů je udržován jako "značka vysoké hladiny vody", což je nejvyšší číslovaný záznam, který je dosud považován za uživatele, který prochází záznamy. Celkový počet záznamů je znám až poté, co uživatel přešel za poslední záznam. Z důvodů výkonu počet není aktualizován `MoveLast`při volání . Chcete-li záznamy spočítat sami, opakovaně volejte, `MoveNext` dokud `IsEOF` nevrátí nenulovou hodnotu. Přidání záznamu `CRecordset:AddNew` přes `Update` a zvyšuje počet; odstranění záznamu pomocí `CRecordset::Delete` sníží počet.
 
-##  <a name="getrowsetsize"></a>CRecordset:: GetRowsetSize
+## <a name="crecordsetgetrowsetsize"></a><a name="getrowsetsize"></a>CRecordset::GetRowsetSize
 
-Získá aktuální nastavení počtu řádků, které chcete načíst během daného načtení.
+Získá aktuální nastavení pro počet řádků, které chcete načíst během daného načtení.
 
 ```
 DWORD GetRowsetSize() const;
@@ -861,17 +861,17 @@ DWORD GetRowsetSize() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Počet řádků, které mají být načteny během daného načtení.
+Počet řádků načíst během dané načtení.
 
 ### <a name="remarks"></a>Poznámky
 
-Používáte-li hromadné načítání řádků, je výchozí velikost sady řádků při otevření sady záznamů 25; v opačném případě je to 1.
+Pokud používáte hromadné načítání řádků, je výchozí velikost sady řádků při otevření sady záznamů 25; jinak je 1.
 
-Chcete-li implementovat hromadné načítání řádků, je nutné zadat možnost `CRecordset::useMultiRowFetch` v parametru *dwOptions* pro [otevřenou](#open) členskou funkci. Chcete-li změnit nastavení pro velikost sady řádků, zavolejte [SetRowsetSize](#setrowsetsize).
+Chcete-li implementovat hromadné načítání `CRecordset::useMultiRowFetch` řádků, musíte zadat možnost v parametru *dwOptions* členské funkce [Otevřít.](#open) Chcete-li změnit nastavení velikosti sady řádků, zavolejte [SetRowsetSize](#setrowsetsize).
 
-Další informace o hromadném načítání řádků naleznete v článku [Sada záznamů: hromadné načítání záznamů (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+Další informace o hromadném načítání řádků naleznete v článku [Sada záznamů: Hromadné načítání záznamů (ODBC).](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)
 
-##  <a name="getrowsfetched"></a>CRecordset:: GetRowsFetched
+## <a name="crecordsetgetrowsfetched"></a><a name="getrowsfetched"></a>CRecordset::GetRowsFetched
 
 Určuje, kolik záznamů bylo skutečně načteno po načtení.
 
@@ -885,19 +885,19 @@ Počet řádků načtených ze zdroje dat po daném načtení.
 
 ### <a name="remarks"></a>Poznámky
 
-To je užitečné, pokud jste implementovali hromadné načítání řádků. Velikost sady řádků obvykle určuje, kolik řádků bude načteno z načtení; Celkový počet řádků v sadě záznamů ale také ovlivňuje, kolik řádků bude načteno v sadě řádků. Například pokud vaše sada záznamů má 10 záznamů s nastavením velikosti sady řádků 4, pak smyčka prostřednictvím sady záznamů voláním `MoveNext` bude mít za následek konečnou sadu řádků obsahující pouze dva záznamy.
+To je užitečné, když jste implementovali hromadné načítání řádků. Velikost sady řádků obvykle označuje, kolik řádků bude načteno z načtení; celkový počet řádků v sadě záznamů však také ovlivňuje, kolik řádků bude načteno v sadě řádků. Pokud má například sada záznamů 10 záznamů s nastavením velikosti sady řádků 4, bude opakování sady záznamů voláním `MoveNext` mít za následek, že poslední sada řádků bude mít pouze 2 záznamy.
 
-Chcete-li implementovat hromadné načítání řádků, je nutné zadat možnost `CRecordset::useMultiRowFetch` v parametru *dwOptions* pro [otevřenou](#open) členskou funkci. Chcete-li určit velikost sady řádků, zavolejte [SetRowsetSize](#setrowsetsize).
+Chcete-li implementovat hromadné načítání `CRecordset::useMultiRowFetch` řádků, musíte zadat možnost v parametru *dwOptions* členské funkce [Otevřít.](#open) Chcete-li určit velikost sady řádků, zavolejte [SetRowsetSize](#setrowsetsize).
 
-Další informace o hromadném načítání řádků naleznete v článku [Sada záznamů: hromadné načítání záznamů (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+Další informace o hromadném načítání řádků naleznete v článku [Sada záznamů: Hromadné načítání záznamů (ODBC).](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCDatabase#24](../../mfc/codesnippet/cpp/crecordset-class_8.cpp)]
 
-##  <a name="getrowstatus"></a>CRecordset:: GetRowStatus
+## <a name="crecordsetgetrowstatus"></a><a name="getrowstatus"></a>CRecordset::GetRowStatus
 
-Získá stav řádku v aktuální sadě řádků.
+Získá stav pro řádek v aktuální sadě řádků.
 
 ```
 WORD GetRowStatus(WORD wRow) const;
@@ -905,31 +905,31 @@ WORD GetRowStatus(WORD wRow) const;
 
 ### <a name="parameters"></a>Parametry
 
-*wRow*<br/>
-Pozice na jednom řádku v aktuální sadě řádků. Tato hodnota může být v rozsahu od 1 do velikosti sady řádků.
+*wŘádek*<br/>
+Jednomístná pozice řádku v aktuální sadě řádků. Tato hodnota může být v rozsahu od 1 do velikosti sady řádků.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota stavu řádku Podrobnosti najdete v tématu poznámky.
+Hodnota stavu řádku. Podrobnosti naleznete v tématu Poznámky.
 
 ### <a name="remarks"></a>Poznámky
 
-`GetRowStatus` vrátí hodnotu, která indikuje buď změnu stavu na řádek od posledního načtení ze zdroje dat, nebo nenačtený žádný řádek odpovídající *wRow* . V následující tabulce jsou uvedeny možné návratové hodnoty.
+`GetRowStatus`vrátí hodnotu, která označuje buď všechny změny stavu řádku od posledního načtení ze zdroje dat, nebo že nebyl načten žádný řádek odpovídající *wRow.* V následující tabulce jsou uvedeny možné vrácené hodnoty.
 
 |Hodnota stavu|Popis|
 |------------------|-----------------|
-|SQL_ROW_SUCCESS|Řádek zůstane beze změny.|
+|SQL_ROW_SUCCESS|Řádek se nezmění.|
 |SQL_ROW_UPDATED|Řádek byl aktualizován.|
 |SQL_ROW_DELETED|Řádek byl odstraněn.|
 |SQL_ROW_ADDED|Řádek byl přidán.|
-|SQL_ROW_ERROR|Řádek nejde získat, protože došlo k chybě.|
-|SQL_ROW_NOROW|Neexistuje žádný řádek, který by odpovídal *wRow*.|
+|SQL_ROW_ERROR|Řádek je nenahraditelný z důvodu chyby.|
+|SQL_ROW_NOROW|Neexistuje žádný řádek, který odpovídá *wRow*.|
 
-Další informace najdete v tématu funkce rozhraní ODBC API `SQLExtendedFetch` v Windows SDK.
+Další informace naleznete v části `SQLExtendedFetch` Funkce rozhraní API ROZHRANÍ ODBC v sadě Windows SDK.
 
-##  <a name="getstatus"></a>CRecordset:: GetStatus
+## <a name="crecordsetgetstatus"></a><a name="getstatus"></a>CRecordset::GetStatus
 
-Určuje index aktuálního záznamu v sadě záznamů a zda byl zobrazen poslední záznam.
+Určuje index aktuálního záznamu v sadě záznamů a zda byl zaznamenán poslední záznam.
 
 ```
 void GetStatus(CRecordsetStatus& rStatus) const;
@@ -937,12 +937,12 @@ void GetStatus(CRecordsetStatus& rStatus) const;
 
 ### <a name="parameters"></a>Parametry
 
-*rStatus*<br/>
-Odkaz na objekt `CRecordsetStatus`. Další informace naleznete v části Poznámky.
+*rStav*<br/>
+Odkaz na `CRecordsetStatus` objekt. Další informace naleznete v části Poznámky.
 
 ### <a name="remarks"></a>Poznámky
 
-`CRecordset` se pokusí sledovat index, ale za určitých okolností to nemusí být možné. Vysvětlení najdete v tématu [GetRecordCount](#getrecordcount) .
+`CRecordset`pokusí sledovat index, ale za určitých okolností to nemusí být možné. Viz [GetRecordCount](#getrecordcount) pro vysvětlení.
 
 Struktura `CRecordsetStatus` má následující tvar:
 
@@ -954,15 +954,15 @@ struct CRecordsetStatus
 };
 ```
 
-Dva členové `CRecordsetStatus` mají následující význam:
+Dva členové `CRecordsetStatus` mají následující významy:
 
-- `m_lCurrentRecord` obsahuje index aktuálního záznamu v rámci sady záznamů založený na nule, pokud je tento příkaz známý. Pokud index nelze určit, obsahuje tento člen AFX_CURRENT_RECORD_UNDEFINED (-2). Pokud má `IsBOF` hodnotu TRUE (prázdná sada záznamů nebo se pokusí o posunutí před první záznam), `m_lCurrentRecord` je nastaven na AFX_CURRENT_RECORD_BOF (-1). Pokud je v prvním záznamu, pak je nastaven na 0, druhý záznam 1 atd.
+- `m_lCurrentRecord`Obsahuje nulový index aktuálního záznamu v sadě záznamů, pokud je znám. Pokud index nelze určit, tento člen obsahuje AFX_CURRENT_RECORD_UNDEFINED (-2). Pokud `IsBOF` je TRUE (prázdná sada záznamů nebo `m_lCurrentRecord` pokus o posun před prvním záznamem), je nastavena na AFX_CURRENT_RECORD_BOF (-1). Pokud na první záznam, pak je nastavena na 0, druhý záznam 1, a tak dále.
 
-- Pokud byl určen celkový počet záznamů v sadě záznamů, `m_bRecordCountFinal` nenulovou hodnotu. Obecně se to musí provést spuštěním na začátku sady záznamů a voláním `MoveNext`, dokud `IsEOF` nevrátí nenulovou hodnotu. Pokud je tento člen nula, počet záznamů vrácený funkcí `GetRecordCount`, pokud ne-1, je pouze "horním" počtem záznamů.
+- `m_bRecordCountFinal`Nenulová, pokud byl určen celkový počet záznamů v sadě záznamů. Obecně to musí být provedeno spuštěním na začátku `MoveNext` `IsEOF` sady záznamů a voláním, dokud nevrátí nenulovou hodnotu. Pokud je tento člen nula, `GetRecordCount`počet záznamů jako vrácený do , pokud ne -1, je pouze "horní mez" počet záznamů.
 
-##  <a name="getsql"></a>CRecordset:: GetSQL
+## <a name="crecordsetgetsql"></a><a name="getsql"></a>CRecordset::GetSQL
 
-Zavolejte tuto členskou funkci, aby se získal příkaz SQL, který se použil k výběru záznamů sady záznamů při jejím otevření.
+Volání této členské funkce získat příkaz SQL, který byl použit k výběru záznamů sady záznamů při jeho otevření.
 
 ```
 const CString& GetSQL() const;
@@ -970,20 +970,20 @@ const CString& GetSQL() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Odkaz **const** na `CString`, který obsahuje příkaz SQL.
+**Const** odkaz na `CString` který obsahuje příkaz SQL.
 
 ### <a name="remarks"></a>Poznámky
 
-Obvykle se jedná o příkaz SQL **Select** . Řetězec vrácený `GetSQL` je jen pro čtení.
+To bude obecně sql **select** příkaz. Řetězec vrácený `GetSQL` je jen pro čtení.
 
-Řetězec vrácený `GetSQL` se obvykle liší od libovolného řetězce, který jste mohli předat sadě záznamů v parametru *lpszSQL* , do členské funkce `Open`. Důvodem je, že sada záznamů vytvoří úplný příkaz SQL na základě toho, co jste předali do `Open`, co jste zadali v ClassWizard, co jste mohli zadat v `m_strFilter` a `m_strSort` datových členů a všechny parametry, které jste mohli zadat. Podrobnosti o tom, jak sada záznamů vytváří tento příkaz SQL, naleznete v článku [Sada záznamů: Jak sady záznamů vybírají záznamy (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md).
+Řetězec vrácený `GetSQL` podle se obvykle liší od libovolného řetězce, který jste předali `Open` sadě záznamů v parametru *lpszSQL* do členské funkce. Důvodem je, že sada záznamů vytvoří úplný příkaz `Open`SQL na základě toho, co jste předali `m_strFilter` `m_strSort` , co jste zadali pomocí ClassWizard, co jste zadali v a datových členech a všechny parametry, které jste zadali. Podrobnosti o tom, jak sada záznamů vytváří tento příkaz SQL, naleznete v článku [Sada záznamů: Jak sady záznamů vyberte záznamy (ODBC).](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)
 
 > [!NOTE]
->  Tuto členskou funkci volejte až po volání funkce [Open](#open).
+> Volání této členské funkce pouze po volání [Open](#open).
 
-##  <a name="gettablename"></a>CRecordset:: GetTable.
+## <a name="crecordsetgettablename"></a><a name="gettablename"></a>CRecordset::GetTableName
 
-Získá název tabulky SQL, na které je založen dotaz sady záznamů.
+Získá název tabulky SQL, na kterém je založen dotaz sady záznamů.
 
 ```
 const CString& GetTableName() const;
@@ -991,18 +991,18 @@ const CString& GetTableName() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Odkaz **const** na `CString`, který obsahuje název tabulky, pokud je sada záznamů založena na tabulce; v opačném případě prázdný řetězec.
+**Const** odkaz `CString` na, který obsahuje název tabulky, pokud je sada záznamů založena na tabulce; v opačném případě prázdný řetězec.
 
 ### <a name="remarks"></a>Poznámky
 
-`GetTableName` je platná pouze v případě, že sada záznamů je založena na tabulce, nikoli spojení s více tabulkami nebo předdefinovaným dotazem (uloženou proceduru). Název je určen jen pro čtení.
+`GetTableName`je platný pouze v případě, že sada záznamů je založena na tabulce, nikoli spojení více tabulek nebo předdefinovaný dotaz (uložená procedura). Název je jen pro čtení.
 
 > [!NOTE]
->  Tuto členskou funkci volejte až po volání funkce [Open](#open).
+> Volání této členské funkce pouze po volání [Open](#open).
 
-##  <a name="isbof"></a>CRecordset:: IsBOF
+## <a name="crecordsetisbof"></a><a name="isbof"></a>CRecordset::IsBOF
 
-Vrátí nenulovou hodnotu, pokud byla sada záznamů umístěna před první záznam. Neexistuje aktuální záznam.
+Vrátí nenulovou hodnotu, pokud byla sada záznamů umístěna před prvním záznamem. Neexistuje žádný aktuální záznam.
 
 ```
 BOOL IsBOF() const;
@@ -1010,21 +1010,21 @@ BOOL IsBOF() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulová, pokud sada záznamů neobsahuje žádné záznamy nebo pokud jste se přesunuli zpět před první záznam; v opačném případě 0.
+Nenulová, pokud sada záznamů neobsahuje žádné záznamy nebo pokud jste před prvním záznamem posunuli zpět; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Než začnete s prvním záznamem sady záznamů, zavoláte tuto členskou funkci před přechodem ze záznamu na záznam a zjistěte, zda jste prošli. Můžete také použít `IsBOF` společně s `IsEOF` k určení, zda sada záznamů obsahuje nějaké záznamy nebo je prázdná. Ihned po volání `Open`, pokud sada záznamů neobsahuje žádné záznamy, `IsBOF` vrátí nenulovou hodnotu. Při otevření sady záznamů, která má alespoň jeden záznam, je první záznam aktuálním záznamem a `IsBOF` vrátí hodnotu 0.
+Před přechodem ze záznamu na záznam zavolejte tuto členovou funkci a zjistěte, zda jste před prvním záznamem sady záznamů odešli. Můžete také `IsBOF` použít `IsEOF` spolu s určit, zda sada záznamů obsahuje nějaké záznamy nebo je prázdný. Ihned po `Open`volání vrátí sada záznamů `IsBOF` hodnotu nenulová. Když otevřete sadu záznamů, která má alespoň jeden záznam, `IsBOF` první záznam je aktuální záznam a vrátí hodnotu 0.
 
-Pokud je první záznam aktuálním záznamem a zavoláte `MovePrev`, `IsBOF` pak vrátí nenulovou hodnotu. Pokud `IsBOF` vrátí nenulovou hodnotu a zavoláte `MovePrev`, dojde k chybě. Pokud `IsBOF` vrátí nenulovou hodnotu, aktuální záznam není definován a všechny akce, které vyžadují aktuální záznam, budou mít za následek chybu.
+Pokud je první záznam aktuální mše a voláte `MovePrev`, `IsBOF` vrátí se následně nenulová. Pokud `IsBOF` vrátí nenulovou `MovePrev`a zavoláte , dojde k chybě. Pokud `IsBOF` vrátí nenulovou hodnotu, aktuální záznam není definován a každá akce, která vyžaduje aktuální záznam, bude mít za následek chybu.
 
 ### <a name="example"></a>Příklad
 
-V tomto příkladu se používá `IsBOF` a `IsEOF` k detekci omezení sady záznamů, když se kód posouvá prostřednictvím sady záznamů v obou směrech.
+Tento příklad `IsBOF` `IsEOF` používá a zjistit limity sady záznamů jako kód posouvá sadu záznamů v obou směrech.
 
 [!code-cpp[NVC_MFCDatabase#25](../../mfc/codesnippet/cpp/crecordset-class_9.cpp)]
 
-##  <a name="isdeleted"></a>CRecordset:: IsDeleted odstraněno
+## <a name="crecordsetisdeleted"></a><a name="isdeleted"></a>CRecordset::IsDeleted
 
 Určuje, zda byl aktuální záznam odstraněn.
 
@@ -1034,22 +1034,22 @@ BOOL IsDeleted() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je sada záznamů umístěna na odstraněný záznam; v opačném případě 0.
+Nenulová, pokud je sada záznamů umístěna na odstraněný záznam; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud se posunete na záznam a `IsDeleted` vrátí hodnotu TRUE (nenulový), musíte se před provedením jakékoli jiné operace sady záznamů posunout na jiný záznam.
+Pokud přejdete na `IsDeleted` záznam a vrátíte hodnotu TRUE (nenulová), musíte se před provedením jiných operací sady záznamů posunout na jiný záznam.
 
-Výsledek `IsDeleted` závisí na mnoha faktorech, jako je například typ sady záznamů, bez ohledu na to, zda je vaše sada záznamů aktualizovatelná, zda jste zadali možnost `CRecordset::skipDeletedRecords` při otevření sady záznamů, zda vaše balíčky ovladačů odstranily záznamy a zda existuje více uživatelů.
+Výsledek `IsDeleted` závisí na mnoha faktorech, jako je typ sady záznamů, zda je sada `CRecordset::skipDeletedRecords` záznamů aktualizovatelná, zda jste při otevření sady záznamů zadali tuto možnost, zda ovladač zabalí odstraněné záznamy a zda je více uživatelů.
 
-Další informace o `CRecordset::skipDeletedRecords` a balení ovladače naleznete v tématu [otevřená](#open) členská funkce.
+Další informace `CRecordset::skipDeletedRecords` o a balení ovladače naleznete v části [Otevřená](#open) členská funkce.
 
 > [!NOTE]
->  Pokud jste implementovali hromadné načítání řádků, neměli byste volat `IsDeleted`. Místo toho zavolejte členskou funkci [GetRowStatus](#getrowstatus) . Další informace o hromadném načítání řádků naleznete v článku [Sada záznamů: hromadné načítání záznamů (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+> Pokud jste implementovali hromadné načítání řádků, `IsDeleted`neměli byste volat . Místo toho volejte člennou funkci [GetRowStatus.](#getrowstatus) Další informace o hromadném načítání řádků naleznete v článku [Sada záznamů: Hromadné načítání záznamů (ODBC).](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)
 
-##  <a name="iseof"></a>CRecordset:: IsEOF
+## <a name="crecordsetiseof"></a><a name="iseof"></a>CRecordset::IsEOF
 
-Vrátí nenulovou hodnotu, pokud byla sada záznamů umístěna za posledním záznamem. Neexistuje aktuální záznam.
+Vrátí nenulovou hodnotu, pokud byla sada záznamů umístěna za posledním záznamem. Neexistuje žádný aktuální záznam.
 
 ```
 BOOL IsEOF() const;
@@ -1057,21 +1057,21 @@ BOOL IsEOF() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulová, pokud sada záznamů neobsahuje žádné záznamy, nebo pokud jste propřesunuli více než poslední záznam; v opačném případě 0.
+Nenulová, pokud sada záznamů neobsahuje žádné záznamy nebo pokud jste se posunuli za poslední záznam; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Tuto členskou funkci zavolejte při posouvání záznamu záznamu na záznam, abyste zjistili, jestli jste prošli za posledním záznamem sady záznamů. Můžete také použít `IsEOF` k určení, zda sada záznamů obsahuje nějaké záznamy nebo je prázdná. Ihned po volání `Open`, pokud sada záznamů neobsahuje žádné záznamy, `IsEOF` vrátí nenulovou hodnotu. Při otevření sady záznamů, která má alespoň jeden záznam, je první záznam aktuálním záznamem a `IsEOF` vrátí hodnotu 0.
+Volání této členské funkce při posouvání ze záznamu do záznamu zjistit, zda jste překročili poslední záznam sady záznamů. Můžete také `IsEOF` určit, zda sada záznamů obsahuje nějaké záznamy nebo je prázdná. Ihned po `Open`volání vrátí sada záznamů `IsEOF` hodnotu nenulová. Když otevřete sadu záznamů, která má alespoň jeden záznam, `IsEOF` první záznam je aktuální záznam a vrátí hodnotu 0.
 
-Pokud je poslední záznam aktuálním záznamem při volání `MoveNext`, `IsEOF` následně vrátí nenulovou hodnotu. Pokud `IsEOF` vrátí nenulovou hodnotu a zavoláte `MoveNext`, dojde k chybě. Pokud `IsEOF` vrátí nenulovou hodnotu, aktuální záznam není definován a všechny akce, které vyžadují aktuální záznam, budou mít za následek chybu.
+Pokud je poslední záznam aktuálním `MoveNext`záznamem při volání , `IsEOF` vrátí se následně nenulová. Pokud `IsEOF` vrátí nenulovou `MoveNext`a zavoláte , dojde k chybě. Pokud `IsEOF` vrátí nenulovou hodnotu, aktuální záznam není definován a každá akce, která vyžaduje aktuální záznam, bude mít za následek chybu.
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [IsBOF](#isbof).
+Viz příklad pro [IsBOF](#isbof).
 
-##  <a name="isfielddirty"></a>CRecordset:: IsFieldDirty
+## <a name="crecordsetisfielddirty"></a><a name="isfielddirty"></a>CRecordset::IsFieldDirty
 
-Určuje, zda byl zadaný datový člen pole změněn od volání metody [Edit](#edit) nebo [AddNew](#addnew) .
+Určuje, zda byl zadaný datový člen pole změněn od [doby, kdy](#edit) byl volán příkaz Upravit nebo [Přidat nový.](#addnew)
 
 ```
 BOOL IsFieldDirty(void* pv);
@@ -1079,29 +1079,29 @@ BOOL IsFieldDirty(void* pv);
 
 ### <a name="parameters"></a>Parametry
 
-*PV*<br/>
-Ukazatel na datový člen pole, jehož stav chcete ověřit, nebo hodnotu NULL, chcete-li určit, zda jsou některá pole nečistá.
+*Pv*<br/>
+Ukazatel na člena dat pole, jehož stav chcete zkontrolovat, nebo NULL k určení, zda některé z polí jsou nečisté.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulová, pokud se zadaný datový člen pole změnil od chvíle, kdy došlo k volání `AddNew` nebo `Edit`; v opačném případě 0.
+Nenulová, pokud se zadaný `AddNew` datový `Edit`člen pole změnil od volání nebo ; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Data ve všech datových členech v poli undirty se přenesou do záznamu ve zdroji dat, když je aktuální záznam aktualizován voláním členské funkce [Update](#update) `CRecordset` (po volání `Edit` nebo `AddNew`).
+Data ve všech datových členech `CRecordset` nefunkčních polí budou přenesena do záznamu ve zdroji dat při aktualizaci aktuálního `AddNew`záznamu voláním členské funkce [Update](#update) (po volání `Edit` nebo ).
 
 > [!NOTE]
->  Tato členská funkce se nedá použít pro sady záznamů, které používají hromadné načítání řádků. Pokud jste implementovali hromadné načítání řádků, `IsFieldDirty` vždy vrátí hodnotu FALSE a výsledkem bude selhání kontrolního výrazu. Další informace o hromadném načítání řádků naleznete v článku [Sada záznamů: hromadné načítání záznamů (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+> Tato členská funkce není použitelná u sad záznamů, které používají hromadné načítání řádků. Pokud jste implementovali hromadné načítání `IsFieldDirty` řádků, vrátí vždy FALSE a bude mít za následek kontrolní výraz se nezdařilo. Další informace o hromadném načítání řádků naleznete v článku [Sada záznamů: Hromadné načítání záznamů (ODBC).](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)
 
-Volání `IsFieldDirty` obnoví účinek předchozích volání do [SetFieldDirty](#setfielddirty) , protože stav nezadaného pole je znovu vyhodnocován. V případě `AddNew` v případě, že se hodnota aktuálního pole liší od hodnoty pseudo null, je stav pole nastaveno na undirto. V případě `Edit` v případě, že se hodnota pole liší od hodnoty uložené v mezipaměti, je stav pole nastaveno na hodnotu undirto.
+Volání `IsFieldDirty` obnoví účinky předchozích volání [SetFieldDirty,](#setfielddirty) protože dirty stav pole je přehodnocena. V `AddNew` případě, že se aktuální hodnota pole liší od pseudo nulové hodnoty, je stav pole nastaven nečistý. V `Edit` případě, že hodnota pole se liší od hodnoty uložené v mezipaměti, pak stav pole je nastaven dirty.
 
-`IsFieldDirty` je implementována prostřednictvím [DoFieldExchange](#dofieldexchange).
+`IsFieldDirty`je implementována prostřednictvím [DoFieldExchange](#dofieldexchange).
 
-Další informace o příznaku undirty naleznete v článku [Sada záznamů: Jak sady záznamů vybírají záznamy (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md).
+Další informace o příznaku dirty naleznete v článku [Sada záznamů: Jak sady záznamů vyberte záznamy (ODBC).](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)
 
-##  <a name="isfieldnull"></a>CRecordset:: IsFieldNull
+## <a name="crecordsetisfieldnull"></a><a name="isfieldnull"></a>Sada záznamů C::Hodnota IsFieldNull
 
-Vrátí nenulovou hodnotu, pokud zadané pole v aktuálním záznamu má hodnotu null (nemá žádnou hodnotu).
+Vrátí nenulovou hodnotu, pokud je zadané pole v aktuálním záznamu Null (nemá žádnou hodnotu).
 
 ```
 BOOL IsFieldNull(void* pv);
@@ -1109,25 +1109,25 @@ BOOL IsFieldNull(void* pv);
 
 ### <a name="parameters"></a>Parametry
 
-*PV*<br/>
-Ukazatel na datový člen pole, jehož stav chcete ověřit, nebo hodnotu NULL, chcete-li určit, zda jsou některá pole null.
+*Pv*<br/>
+Ukazatel na datového člena pole, jehož stav chcete zkontrolovat, nebo NULL k určení, zda některé z polí jsou Null.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je zadaný datový člen pole označen jako null; v opačném případě 0.
+Nenulová, pokud je zadaný datový člen pole označen jako Null; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Zavolejte tuto členskou funkci, abyste zjistili, jestli je zadaný datový člen v sadě záznamů označený jako null. (V terminologii databáze hodnota null znamená "nemá žádnou hodnotu" a není shodná s hodnotou NULL v C++.) Pokud je datový člen pole označen jako null, je interpretován jako sloupec aktuálního záznamu, pro který neexistuje žádná hodnota.
+Volání této členské funkce k určení, zda byl zadaný datový člen pole sady záznamů označen jako null. (V terminologii databáze null znamená "bez hodnoty" a není stejný jako NULL v jazyce C++.) Pokud je datový člen pole označen jako Null, je interpretován jako sloupec aktuálního záznamu, pro který neexistuje žádná hodnota.
 
 > [!NOTE]
->  Tato členská funkce se nedá použít pro sady záznamů, které používají hromadné načítání řádků. Pokud jste implementovali hromadné načítání řádků, `IsFieldNull` vždy vrátí hodnotu FALSE a výsledkem bude selhání kontrolního výrazu. Další informace o hromadném načítání řádků naleznete v článku [Sada záznamů: hromadné načítání záznamů (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+> Tato členská funkce není použitelná u sad záznamů, které používají hromadné načítání řádků. Pokud jste implementovali hromadné načítání `IsFieldNull` řádků, vrátí vždy FALSE a bude mít za následek kontrolní výraz se nezdařilo. Další informace o hromadném načítání řádků naleznete v článku [Sada záznamů: Hromadné načítání záznamů (ODBC).](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)
 
-`IsFieldNull` je implementována prostřednictvím [DoFieldExchange](#dofieldexchange).
+`IsFieldNull`je implementována prostřednictvím [DoFieldExchange](#dofieldexchange).
 
-##  <a name="isfieldnullable"></a>CRecordset:: IsFieldNullable
+## <a name="crecordsetisfieldnullable"></a><a name="isfieldnullable"></a>CRecordset::IsFieldNullable
 
-Vrátí nenulovou hodnotu, pokud zadané pole v aktuálním záznamu může být nastaveno na hodnotu null (bez hodnoty).
+Vrátí nenulovou hodnotu, pokud lze zadané pole v aktuálním záznamu nastavit na hodnotu Null (bez hodnoty).
 
 ```
 BOOL IsFieldNullable(void* pv);
@@ -1135,33 +1135,33 @@ BOOL IsFieldNullable(void* pv);
 
 ### <a name="parameters"></a>Parametry
 
-*PV*<br/>
-Ukazatel na datový člen pole, jehož stav chcete ověřit, nebo hodnotu NULL, chcete-li určit, zda lze některá pole nastavit na hodnotu null.
+*Pv*<br/>
+Ukazatel na datového člena pole, jehož stav chcete zkontrolovat, nebo NULL k určení, zda lze některé z polí nastavit na hodnotu Null.
 
 ### <a name="remarks"></a>Poznámky
 
-Voláním této členské funkce určíte, zda je zadaný datový člen pole "Nullable" (lze nastavit na hodnotu null). C++ Hodnota null není shodná s hodnotou null, která v terminologii databáze znamená "nemá žádnou hodnotu").
+Volání této členské funkce k určení, zda je zadaný člen dat pole "nullable" (lze nastavit na hodnotu Null; C++ NULL není stejný jako Null, což v terminologii databáze znamená "bez hodnoty").
 
 > [!NOTE]
->  Pokud jste implementovali hromadné načítání řádků, nemůžete volat `IsFieldNullable`. Místo toho zavolejte členskou funkci [GetODBCFieldInfo](#getodbcfieldinfo) a určete, zda může být pole nastaveno na hodnotu null. Všimněte si, že můžete vždy volat `GetODBCFieldInfo`, bez ohledu na to, zda jste implementovali hromadné načítání řádků. Další informace o hromadném načítání řádků naleznete v článku [Sada záznamů: hromadné načítání záznamů (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+> Pokud jste implementovali hromadné načítání řádků, nelze volat `IsFieldNullable`. Místo toho zavolejte člennou funkci [GetODBCFieldInfo](#getodbcfieldinfo) a zjistěte, zda lze pole nastavit na hodnotu Null. Všimněte si, `GetODBCFieldInfo`že můžete vždy volat , bez ohledu na to, zda jste implementovali hromadné načítání řádků. Další informace o hromadném načítání řádků naleznete v článku [Sada záznamů: Hromadné načítání záznamů (ODBC).](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)
 
-Pole, které nemůže mít hodnotu null, musí mít hodnotu. Pokud se pokusíte nastavit takové pole na hodnotu null při přidávání nebo aktualizaci záznamu, zdroj dat odmítne přidání nebo aktualizaci a [aktualizace](#update) vyvolá výjimku. K výjimce dojde při volání `Update`, ne při volání [SetFieldNull](#setfieldnull).
+Pole, které nemůže být Null, musí mít hodnotu. Pokud se pokusíte nastavit takové pole na Hodnotu Null při přidávání nebo aktualizaci záznamu, zdroj dat odmítne přidání nebo aktualizaci a [Update](#update) vyvolá výjimku. K výjimce dochází `Update`při volání , nikoli při volání [SetFieldNull](#setfieldnull).
 
-Použití hodnoty NULL pro první argument funkce bude používat funkci pouze pro `outputColumn` pole, nikoli `param` polí. Například volání
+Použití null pro první argument funkce bude používat `outputColumn` funkci `param` pouze pro pole, nikoli pole. Například volání
 
 [!code-cpp[NVC_MFCDatabase#26](../../mfc/codesnippet/cpp/crecordset-class_10.cpp)]
 
-nastaví pouze `outputColumn` pole na hodnotu NULL; `param` pole nebudou nijak ovlivněna.
+nastaví `outputColumn` pouze pole na hodnotu NULL; `param` pole nebudou ovlivněna.
 
-Chcete-li pracovat s `param` poli, je nutné dodat skutečnou adresu jednotlivých `param`, na kterých chcete pracovat, například:
+Chcete-li `param` pracovat na polích, musíte `param` zadat skutečnou adresu osoby, na které chcete pracovat, například:
 
 [!code-cpp[NVC_MFCDatabase#27](../../mfc/codesnippet/cpp/crecordset-class_11.cpp)]
 
-To znamená, že nemůžete nastavit všechna `param` pole na hodnotu NULL, stejně jako u polí `outputColumn`.
+To znamená, že `param` nelze nastavit všechna pole `outputColumn` na hodnotu NULL, stejně jako u polí.
 
-`IsFieldNullable` je implementována prostřednictvím [DoFieldExchange](#dofieldexchange).
+`IsFieldNullable`je implementována prostřednictvím [DoFieldExchange](#dofieldexchange).
 
-##  <a name="isopen"></a>CRecordset:: Open
+## <a name="crecordsetisopen"></a><a name="isopen"></a>CRecordset::IsOpen
 
 Určuje, zda je sada záznamů již otevřena.
 
@@ -1171,112 +1171,112 @@ BOOL IsOpen() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulová, pokud byla dříve volána členská funkce objektu sady záznamů nebo členská funkce [Requery](#requery) [a sada](#open) záznamů nebyla zavřena. v opačném případě 0.
+Nenulová, pokud byla dříve volána členská funkce objektu [Open](#open) nebo [Requery objektu](#requery) sady záznamů a sada záznamů nebyla uzavřena; jinak 0.
 
-##  <a name="m_hstmt"></a>CRecordset:: m_hstmt
+## <a name="crecordsetm_hstmt"></a><a name="m_hstmt"></a>CSada záznamů::m_hstmt
 
-Obsahuje popisovač do datové struktury příkazu ODBC typu HSTMT přidružené k sadě záznamů.
-
-### <a name="remarks"></a>Poznámky
-
-Každý dotaz na zdroj dat ODBC je přidružen k HSTMT.
-
-> [!CAUTION]
->  Nepoužívejte `m_hstmt` před voláním metody [Open](#open) .
-
-Obvykle není nutné přistupovat k HSTMT přímo, ale možná budete potřebovat pro přímé provádění příkazů SQL. Členská funkce `ExecuteSQL` třídy `CDatabase` poskytuje příklad použití `m_hstmt`.
-
-##  <a name="m_nfields"></a>CRecordset:: m_nFields
-
-Obsahuje počet datových členů pole ve třídě sady záznamů; To znamená, že počet sloupců vybraný sadou záznamů ze zdroje dat.
+Obsahuje popisovač datové struktury příkazu ODBC typu HSTMT přidružené k sadě záznamů.
 
 ### <a name="remarks"></a>Poznámky
 
-Konstruktor třídy sady záznamů musí inicializovat `m_nFields` se správným číslem. Pokud jste neimplementovali hromadné načítání řádků, ClassWizard zapíše tuto inicializaci za vás, když ji použijete k deklaraci vaší třídy sady záznamů. Můžete ho také napsat ručně.
-
-Rozhraní používá toto číslo ke správě interakce mezi datovými členy pole a odpovídající sloupce aktuálního záznamu ve zdroji dat.
+Každý dotaz ke zdroji dat ODBC je přidružen k HSTMT.
 
 > [!CAUTION]
->  Toto číslo musí odpovídat počtu výstupních sloupců zaregistrovaných ve `DoFieldExchange` nebo `DoBulkFieldExchange` po volání metody [SetFieldType](../../mfc/reference/cfieldexchange-class.md#setfieldtype) s parametrem `CFieldExchange::outputColumn`.
+> Nepoužívejte `m_hstmt` před [otevřením](#open) byl volán.
 
-Sloupce můžete svázat dynamicky, jak je vysvětleno v článku sada záznamů: dynamické vazby datových sloupců. V takovém případě je nutné zvýšit počet v `m_nFields` tak, aby odrážel počet volání funkce RFX nebo hromadně RFX ve vaší `DoFieldExchange` nebo `DoBulkFieldExchange` členské funkci pro dynamicky vázané sloupce.
+Za normálních okolností není nutné přistupovat k HSTMT přímo, ale budete potřebovat pro přímé provádění příkazů SQL. Členská `ExecuteSQL` funkce `CDatabase` třídy poskytuje `m_hstmt`příklad použití .
 
-Další informace naleznete v článcích [Sada záznamů: dynamické vazby datových sloupců (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md) a [Sada záznamů: hromadné načítání záznamů (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+## <a name="crecordsetm_nfields"></a><a name="m_nfields"></a>CRecordset::m_nFields
+
+Obsahuje počet datových členů pole ve třídě sady záznamů; počet sloupců vybraných sadou záznamů ze zdroje dat.
+
+### <a name="remarks"></a>Poznámky
+
+Konstruktor pro třídu sady záznamů `m_nFields` musí inicializovat se správným číslem. Pokud jste neimplementovali hromadné načítání řádků, ClassWizard zapíše tuto inicializaci za vás, když ji použijete k deklarování třídy sady záznamů. Můžete také napsat ručně.
+
+Rozhraní Framework používá toto číslo ke správě interakce mezi datovými členy pole a odpovídajícími sloupci aktuálního záznamu ve zdroji dat.
+
+> [!CAUTION]
+> Toto číslo musí odpovídat počtu "výstupních sloupců" registrovaných v `DoFieldExchange` nebo `DoBulkFieldExchange` po volání [SetFieldType](../../mfc/reference/cfieldexchange-class.md#setfieldtype) s parametrem `CFieldExchange::outputColumn`.
+
+Sloupce můžete svázat dynamicky, jak je vysvětleno v článku "Sada záznamů: Dynamicky vazebné datové sloupce". Pokud tak učiníte, je nutné `m_nFields` zvýšit počet v odrážet počet RFX `DoFieldExchange` nebo `DoBulkFieldExchange` hromadné RFX volání funkce ve vaší nebo členské funkce pro dynamicky vázané sloupce.
+
+Další informace naleznete v článcích [Sada záznamů: Dynamicky vazebné datové sloupce (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md) a [Recordset: Načítání záznamů hromadně (ODBC).](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)
 
 ### <a name="example"></a>Příklad
 
-Viz článek [Výměna pole záznamu: Použití RFX](../../data/odbc/record-field-exchange-using-rfx.md).
+Viz článek [Výměna pole záznamu: Pomocí RFX](../../data/odbc/record-field-exchange-using-rfx.md).
 
-##  <a name="m_nparams"></a>CRecordset:: m_nParams
+## <a name="crecordsetm_nparams"></a><a name="m_nparams"></a>CSada záznamů::m_nParams
 
-Obsahuje počet datových členů parametrů ve třídě sady záznamů. To znamená, že počet parametrů předaných s dotazem sady záznamů.
+Obsahuje počet datových členů parametru ve třídě sady záznamů; to znamená počet parametrů předaných s dotazem sady záznamů.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud vaše třída sady záznamů obsahuje nějaké datové členy parametru, konstruktor třídy musí inicializovat `m_nParams` se správným číslem. Hodnota `m_nParams` výchozí hodnota je 0. Pokud přidáte členy dat parametrů (které je nutné provést ručně), musíte také ručně přidat inicializaci v konstruktoru třídy, aby odrážela počet parametrů (který musí být nejméně tak velký, jako je počet ' ' zástupných symbolů v `m_strFilter` nebo řetězci `m_strSort`).
+Pokud vaše třída sady záznamů má všechny datové členy parametru, `m_nParams` konstruktor pro třídu musí inicializovat se správným číslem. Hodnota výchozí `m_nParams` hodnoty 0. Pokud přidáte datové členy parametrů (což je nutné provést ručně), musíte také ručně přidat inicializaci v konstruktoru třídy tak, aby odrážela počet `m_strFilter` `m_strSort` parametrů (které musí být alespoň stejně velké jako počet zástupných symbolů ve vašem nebo řetězci).
 
-Rozhraní používá toto číslo při parameterizes dotazu sady záznamů.
+Rozhraní framework používá toto číslo při parametrizaci dotazu sady záznamů.
 
 > [!CAUTION]
->  Toto číslo musí odpovídat počtu "paraí" zaregistrovaným ve `DoFieldExchange` nebo `DoBulkFieldExchange` po volání metody [SetFieldType](../../mfc/reference/cfieldexchange-class.md#setfieldtype) s hodnotou parametru `CFieldExchange::inputParam`, `CFieldExchange::param`, `CFieldExchange::outputParam`nebo `CFieldExchange::inoutParam`.
+> Toto číslo musí odpovídat počtu "params" registrovaných `DoFieldExchange` v nebo `DoBulkFieldExchange` po volání `CFieldExchange::param` [SetFieldType](../../mfc/reference/cfieldexchange-class.md#setfieldtype) s hodnotou parametru `CFieldExchange::inputParam`, , `CFieldExchange::outputParam`, nebo `CFieldExchange::inoutParam`.
 
 ### <a name="example"></a>Příklad
 
-  Viz články [Sada záznamů: Parametrizace sady záznamů (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md) a [Výměna pole záznamu: using RFX](../../data/odbc/record-field-exchange-using-rfx.md).
+  Podívejte se na články [Recordset: Parametrizace sady záznamů (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md) a [Výměna pole záznamu: Pomocí RFX](../../data/odbc/record-field-exchange-using-rfx.md).
 
-##  <a name="m_pdatabase"></a>CRecordset:: m_pDatabase
+## <a name="crecordsetm_pdatabase"></a><a name="m_pdatabase"></a>CRecordset::m_pDatabase
 
-Obsahuje ukazatel na objekt `CDatabase`, pomocí kterého je sada záznamů připojena ke zdroji dat.
-
-### <a name="remarks"></a>Poznámky
-
-Tato proměnná se nastavuje dvěma způsoby. Obvykle při vytváření objektu Recordset předáte ukazatel na již připojený `CDatabase` objekt. Pokud místo toho předáte hodnotu NULL, `CRecordset` pro vás vytvoří objekt `CDatabase` a připojí ho. V obou případech `CRecordset` ukládá ukazatel do této proměnné.
-
-Obvykle nebudete muset přímo používat ukazatel uložený v `m_pDatabase`. Pokud však píšete vlastní rozšíření pro `CRecordset`, může být nutné použít ukazatel. Můžete například potřebovat ukazatel, pokud vyvoláte vlastní `CDBException`s. Případně ho můžete potřebovat, pokud potřebujete něco použít stejným `CDatabase` objekt, jako je například spuštění transakcí, nastavení časových limitů nebo volání `ExecuteSQL` členské funkce třídy `CDatabase` k provedení příkazů SQL přímo.
-
-##  <a name="m_strfilter"></a>CRecordset:: m_strFilter
-
-Po sestavení objektu sady záznamů, ale před voláním jeho členské funkce `Open` použijte tohoto datového člena k uložení `CString` obsahujícího klauzuli **WHERE** jazyka SQL.
+Obsahuje ukazatel na `CDatabase` objekt, jehož prostřednictvím je sada záznamů připojena ke zdroji dat.
 
 ### <a name="remarks"></a>Poznámky
 
-Sada záznamů používá tento řetězec k omezení (nebo filtrování) záznamů, které vybral během `Open` nebo `Requery` volání. To je užitečné pro výběr podmnožiny záznamů, například "Všichni prodejci" na bázi Kalifornie "(" State = CA "). Syntaxe rozhraní ODBC SQL pro klauzuli **WHERE** je
+Tato proměnná je nastavena dvěma způsoby. Obvykle předáte ukazatel již připojenému `CDatabase` objektu při vytváření objektu sady záznamů. Pokud místo toho `CRecordset` předáte hodnotu NULL, vytvoří `CDatabase` za vás objekt a připojí jej. V obou `CRecordset` případech uloží ukazatel v této proměnné.
+
+Za normálních okolností nebudete muset `m_pDatabase`přímo používat ukazatel uložený v aplikaci . Pokud však napíšete `CRecordset`vlastní rozšíření do aplikace , bude pravděpodobně nutné použít ukazatel. Například můžete potřebovat ukazatel, pokud hodíte vlastní `CDBException`s. Nebo budete potřebovat, pokud potřebujete něco provést `CDatabase` pomocí stejného objektu, jako je například `ExecuteSQL` spuštění transakcí, nastavení časového nastavení nebo volání členské funkce třídy `CDatabase` k přímému spuštění příkazů SQL.
+
+## <a name="crecordsetm_strfilter"></a><a name="m_strfilter"></a>CSada záznamů::m_strFilter
+
+Po vytvoření objektu sady záznamů, ale `Open` před voláním jeho členské `CString` funkce použijte tento datový člen k uložení obsahující klauzuli SQL **WHERE.**
+
+### <a name="remarks"></a>Poznámky
+
+Sada záznamů používá tento řetězec k omezení (nebo filtrování) `Open` záznamů, které vybere během volání nebo `Requery` volání. To je užitečné pro výběr podmnožinu záznamů, například "všichni prodejci se sídlem v Kalifornii" ("stav = certifikační autorita"). Syntaxe ODBC SQL pro klauzuli **WHERE** je
 
 `WHERE search-condition`
 
-Všimněte si, že do řetězce nezahrnete klíčové slovo **WHERE** . Rozhraní je dodává.
+Všimněte si, že do řetězce nezahrnete klíčové slovo **WHERE.** Rámec ji dodává.
 
-Můžete také parametrizovat řetězec filtru tím, že v něm umístíte zástupné symboly, deklarujete parametr datového člena ve třídě pro každý zástupný symbol a předáte parametry do sady záznamů za běhu. To vám umožní vytvořit filtr za běhu. Další informace naleznete v článku [Sada záznamů: Parametrizace sady záznamů (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).
+Řetězec filtru můžete také parametrizovat umístěním zástupných symbolů '' do něj, deklarováním datového člena parametru ve vaší třídě pro každý zástupný symbol a předáním parametrů sadě záznamů za běhu. To umožňuje vytvořit filtr za běhu. Další informace naleznete v článku [Sada záznamů: Parametrizace sady záznamů (ODBC).](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)
 
-Další informace o klauzulích **WHERE** jazyka SQL najdete v článku [SQL](../../data/odbc/sql.md). Další informace o výběru a filtrování záznamů naleznete v článku [Sada záznamů: filtrování záznamů (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md).
+Další informace o klauzulích SQL **WHERE** naleznete v článku [SQL](../../data/odbc/sql.md). Další informace o výběru a filtrování záznamů naleznete v článku [Sada záznamů: Filtrování záznamů (ODBC).](../../data/odbc/recordset-filtering-records-odbc.md)
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCDatabase#30](../../mfc/codesnippet/cpp/crecordset-class_12.cpp)]
 
-##  <a name="m_strsort"></a>CRecordset:: m_strSort
+## <a name="crecordsetm_strsort"></a><a name="m_strsort"></a>CRecordset::m_strSort
 
-Po vytvoření objektu sady záznamů, ale před voláním jeho členské funkce `Open`, použijte tohoto datového člena k uložení `CString` obsahujícího klauzuli **ORDER by** jazyka SQL.
+Po vytvoření objektu sady záznamů, ale `Open` před voláním jeho členské `CString` funkce použijte tento datový člen k uložení obsahující klauzule SQL **ORDER BY.**
 
 ### <a name="remarks"></a>Poznámky
 
-Sada záznamů používá tento řetězec k řazení záznamů, které vybere během `Open` nebo `Requery` volání. Tuto funkci můžete použít k řazení sady záznamů v jednom nebo více sloupcích. Syntaxe rozhraní ODBC SQL pro klauzuli **ORDER by** je
+Sada záznamů používá tento řetězec k seřazení `Open` záznamů, které vybere během volání nebo `Requery` volání. Pomocí této funkce můžete seřadit sadu záznamů v jednom nebo více sloupcích. Syntaxe ODBC SQL pro klauzuli **ORDER BY** je
 
 `ORDER BY sort-specification [, sort-specification]...`
 
-kde je specifikace řazení celé číslo nebo název sloupce. Můžete také zadat vzestupné nebo sestupné pořadí (ve výchozím nastavení je pořadí vzestupné) připojením "ASC" nebo "DESC" do seznamu sloupců v řetězci řazení. Vybrané záznamy jsou nejprve seřazené podle prvního sloupce uvedeného v poli, potom podle druhého atd. Například můžete seřadit sadu "Customers" Recordset podle příjmení a pak jméno. Počet sloupců, které můžete zobrazit, závisí na zdroji dat. Další informace najdete v Windows SDK.
+kde specifikace řazení je celé číslo nebo název sloupce. Můžete také určit vzestupné nebo sestupné pořadí (pořadí je vzestupně ve výchozím nastavení) připojením "ASC" nebo "DESC" do seznamu sloupců v řetězci řazení. Vybrané záznamy jsou seřazeny nejprve podle prvního uvedeného sloupce, potom podle druhého a tak dále. Můžete například objednat sadu záznamů "Zákazníci" podle příjmení a poté křestního jména. Počet sloupců, které můžete uvést, závisí na zdroji dat. Další informace naleznete v souboru Windows SDK.
 
-Všimněte si, že do řetězce nezahrnete klíčové slovo **ORDER by** . Rozhraní je dodává.
+Všimněte si, že do řetězce nezahrnete klíčové slovo **ORDER BY.** Rámec ji dodává.
 
-Další informace o klauzulích SQL najdete v článku [SQL](../../data/odbc/sql.md). Další informace o řazení záznamů naleznete v článku [Sada záznamů: řazení záznamů (ODBC)](../../data/odbc/recordset-sorting-records-odbc.md).
+Další informace o klauzulích SQL naleznete v článku [SQL](../../data/odbc/sql.md). Další informace o řazení záznamů naleznete v článku [Sada záznamů: Řazení záznamů (ODBC).](../../data/odbc/recordset-sorting-records-odbc.md)
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCDatabase#31](../../mfc/codesnippet/cpp/crecordset-class_13.cpp)]
 
-##  <a name="move"></a>CRecordset:: Move
+## <a name="crecordsetmove"></a><a name="move"></a>CRecordset::Přesunout
 
-Přesune ukazatel na aktuální záznam v rámci sady záznamů, a to buď dopředu, nebo zpět.
+Přesune ukazatel aktuálního záznamu v sadě záznamů dopředu nebo dozadu.
 
 ```
 virtual void Move(
@@ -1286,56 +1286,56 @@ virtual void Move(
 
 ### <a name="parameters"></a>Parametry
 
-*Hodnota nRows*<br/>
-Počet řádků, které se mají přesunout dopředu nebo dozadu Kladné hodnoty posunou vpřed ke konci sady záznamů. Záporné hodnoty se posunou zpět směrem k začátku.
+*nŘádky*<br/>
+Počet řádků, které se mají pohybovat dopředu nebo dozadu. Kladné hodnoty se posouvají vpřed ke konci sady záznamů. Záporné hodnoty se pohybují dozadu směrem k začátku.
 
 *wFetchType*<br/>
-Určuje sadu řádků, kterou bude `Move` načíst. Podrobnosti najdete v tématu poznámky.
+Určuje sadu řádků, `Move` která se načte. Podrobnosti naleznete v tématu Poznámky.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud předáte hodnotu 0 pro *hodnota nRows*, `Move` aktualizuje aktuální záznam. `Move` ukončí všechny aktuální `AddNew` nebo `Edit` režim a obnoví hodnotu aktuálního záznamu před zavoláním `AddNew` nebo `Edit`.
+Pokud předáte hodnotu 0 pro `Move` *nRows*, aktualizuje aktuální záznam; `Move` ukončí libovolný `AddNew` proud `Edit` nebo režim a obnoví hodnotu `AddNew` aktuálního záznamu před nebo `Edit` byl volán.
 
 > [!NOTE]
->  Při procházení sady záznamů nelze vynechat odstraněné záznamy. Další informace naleznete v tématu [CRecordset:: IsDeleted](#isdeleted) . Když otevřete `CRecordset` se sadou možností `skipDeletedRecords`, `Move` kontrolní výrazy, pokud je parametr *hodnota nRows* 0. Toto chování brání aktualizaci řádků, které jsou odstraněny jinými klientskými aplikacemi pomocí stejných dat. Popis `skipDeletedRecords`naleznete v tématu v [otevřeném](#open) parametru *dwOptions* .
+> Při procházení sady záznamů nelze odstraněné záznamy přeskočit. Další informace naleznete [v tématu CRecordset::IsDeleted.](#isdeleted) Při otevření `CRecordset` s `skipDeletedRecords` nastavenou `Move` možností, uplatní, pokud *nRows* parametr je 0. Toto chování zabraňuje aktualizaci řádků, které jsou odstraněny jinými klientskými aplikacemi pomocí stejných dat. Popis souboru naleznete v parametru `skipDeletedRecords` *dwOption* v části [Otevřít.](#open)
 
-`Move` změnu umístění sady záznamů pomocí sad řádků. Na základě hodnot pro *hodnota nRows* a *wFetchType*`Move` načte příslušnou sadu řádků a následně vytvoří první záznam v dané sadě řádků aktuálního záznamu. Pokud jste neimplementovali hromadné načítání řádků, je velikost sady řádků vždy 1. Při načítání sady řádků `Move` přímo volá členskou funkci [CheckRowsetError](#checkrowseterror) pro zpracování všech chyb, které jsou výsledkem načtení.
+`Move`přemístí sadu záznamů podle sad řádků. Na základě hodnot pro *nRows* a `Move` *wFetchType*načte příslušnou sadu řádků a potom vytvoří první záznam v této sadě řádků aktuální záznam. Pokud jste neimplementovali hromadné načítání řádků, velikost sady řádků je vždy 1. Při načítání sady řádků `Move` přímo volá členská funkce [CheckRowsetError,](#checkrowseterror) aby zpracovat všechny chyby vyplývající z načtení.
 
-V závislosti na hodnotách, které předáte, je `Move` ekvivalentní k ostatním členským funkcím `CRecordset`. Konkrétně hodnota *wFetchType* může označovat členskou funkci, která je intuitivnější a často upřednostňovanou metodou pro přesunutí aktuálního záznamu.
+V závislosti na předávaném hodnotách `Move` je ekvivalentní ostatním `CRecordset` členským funkcím. Zejména hodnota *wFetchType* může znamenat členská funkce, která je intuitivnější a často upřednostňovanou metodou pro přesunutí aktuálního záznamu.
 
-V následující tabulce jsou uvedeny možné hodnoty pro *wFetchType*, sada řádků, kterou `Move` načte na základě *wFetchType* a *hodnota nRows*, a jakékoliv ekvivalentní členské funkce odpovídající *wFetchType*.
+V následující tabulce jsou uvedeny možné hodnoty pro `Move` *wFetchType*, sadu řádků, která bude načítat na základě *wFetchType* a *nRows*, a všechny ekvivalentní členské funkce odpovídající *wFetchType*.
 
 |wFetchType|Načtená sada řádků|Ekvivalentní členská funkce|
 |----------------|--------------------|--------------------------------|
-|SQL_FETCH_RELATIVE (výchozí hodnota)|Sada řádků začínající *hodnota nRows* řádky od prvního řádku v aktuální sadě řádků.||
-|SQL_FETCH_NEXT|Následující sada řádků; *hodnota nRows* se ignoruje.|[Metoda](#movenext)|
-|SQL_FETCH_PRIOR|Předchozí sada řádků; *hodnota nRows* se ignoruje.|[MovePrev](#moveprev)|
-|SQL_FETCH_FIRST|První sada řádků v sadě záznamů; *hodnota nRows* se ignoruje.|[MoveFirst](#movefirst)|
-|SQL_FETCH_LAST|Poslední dokončená sada řádků v sadě záznamů; *hodnota nRows* se ignoruje.|[MoveLast](#movelast)|
-|SQL_FETCH_ABSOLUTE|Pokud *hodnota nrows* > 0, sada řádků spouští *hodnota nRows* řádky od začátku sady záznamů. Pokud *hodnota nrows* < 0, sada řádků spouští *hodnota nRows* řádky z konce sady záznamů. Pokud *hodnota nRows* = 0, pak se vrátí podmínka Start-of-File (BOF).|[SetAbsolutePosition](#setabsoluteposition)|
-|SQL_FETCH_BOOKMARK|Sada řádků začínající na řádku, jehož hodnota záložky odpovídá *hodnota nRows*.|[SetBookmark](#setbookmark)|
+|SQL_FETCH_RELATIVE (výchozí hodnota)|Sada řádků začínající *nRows* řádky z prvního řádku v aktuální sadě řádků.||
+|SQL_FETCH_NEXT|Další sada řádků; *nRows* je ignorována.|[Movenext](#movenext)|
+|SQL_FETCH_PRIOR|Předchozí sada řádků; *nRows* je ignorována.|[Moveprev](#moveprev)|
+|SQL_FETCH_FIRST|První sada řádků v sadě záznamů; *nRows* je ignorována.|[Movefirst](#movefirst)|
+|SQL_FETCH_LAST|Poslední úplná sada řádků v sadě záznamů; *nRows* je ignorována.|[Movelast](#movelast)|
+|SQL_FETCH_ABSOLUTE|Pokud *nRows* > 0, sada řádků začínající *nRows* řádky od začátku sady záznamů. Pokud *nRows* < 0, sada řádků začínající *nRows* řádky od konce sady záznamů. Pokud *nRows* = 0, pak je vrácena podmínka začátku souboru (BOF).|[NastavitabsolutePosition](#setabsoluteposition)|
+|SQL_FETCH_BOOKMARK|Sada řádků začínající na řádku, jehož hodnota záložky odpovídá *nRows*.|[Značka SetBookmark](#setbookmark)|
 
 > [!NOTE]
->  Pro sady záznamů, které jsou jen pro čtení, je `Move` platný pouze s hodnotou SQL_FETCH_NEXT pro *wFetchType*.
+> Pro sady záznamů pouze `Move` pro předávání je platný pouze s hodnotou SQL_FETCH_NEXT pro *wFetchType*.
 
 > [!CAUTION]
->  Volání `Move` vyvolá výjimku, pokud sada záznamů neobsahuje žádné záznamy. Chcete-li určit, zda sada záznamů obsahuje nějaké záznamy, zavolejte [IsBOF](#isbof) a [IsEOF](#iseof).
+> Volání `Move` vyvolá výjimku, pokud sada záznamů nemá žádné záznamy. Chcete-li zjistit, zda sada záznamů má nějaké záznamy, volání [IsBOF](#isbof) a [IsEOF](#iseof).
 
 > [!NOTE]
->  Pokud jste se přesunuli za začátek nebo konec sady záznamů (`IsBOF` nebo `IsEOF` vrátí nenulovou hodnotu), volání funkce `Move` pravděpodobně vyvolá `CDBException`. Například pokud `IsEOF` vrátí nenulovou hodnotu a `IsBOF` ne, `MoveNext` vyvolá výjimku, ale `MovePrev` nikoli.
+> Pokud jste se posunuli za začátek nebo`IsBOF` `IsEOF` konec sady záznamů `Move` (nebo vrátí `CDBException`nenulovou hodnotu), volání funkce bude pravděpodobně hodit . Například pokud `IsEOF` vrátí nenulovou `IsBOF` a `MoveNext` není, pak `MovePrev` vyvolá výjimku, ale nebude.
 
 > [!NOTE]
->  Pokud zavoláte `Move`, zatímco se aktualizuje nebo přidává aktuální záznam, aktualizace se ztratí bez upozornění.
+> Pokud zavoláte `Move` v době, kdy je aktuální záznam aktualizován nebo přidáván, aktualizace budou ztraceny bez upozornění.
 
-Další informace o navigaci v sadě záznamů naleznete v článcích [Sada záznamů: posouvání (ODBC)](../../data/odbc/recordset-scrolling-odbc.md) a [Sada záznamů: záložky a absolutní umístění (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md). Další informace o hromadném načítání řádků naleznete v článku [Sada záznamů: hromadné načítání záznamů (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md). Související informace najdete v tématu funkce rozhraní ODBC API `SQLExtendedFetch` v Windows SDK.
+Další informace o navigaci v sadě záznamů naleznete v článcích [Sada záznamů: Scrolling (ODBC)](../../data/odbc/recordset-scrolling-odbc.md) a [Recordset: Záložky a Absolutní pozice (ODBC).](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md) Další informace o hromadném načítání řádků naleznete v článku [Sada záznamů: Hromadné načítání záznamů (ODBC).](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) Související informace naleznete v části `SQLExtendedFetch` Funkce rozhraní API ROZHRANÍ ODBC v sadě Windows SDK.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCDatabase#28](../../mfc/codesnippet/cpp/crecordset-class_14.cpp)]
 
-##  <a name="movefirst"></a>CRecordset:: MoveFirst
+## <a name="crecordsetmovefirst"></a><a name="movefirst"></a>CRecordset::PřesunoutPrvní
 
-Vytvoří první záznam v první sadě řádků aktuálního záznamu.
+Vytvoří první záznam v první sadě řádků aktuální záznam.
 
 ```
 void MoveFirst();
@@ -1343,31 +1343,31 @@ void MoveFirst();
 
 ### <a name="remarks"></a>Poznámky
 
-Bez ohledu na to, zda bylo provedeno hromadné načítání řádků, bude vždy první záznam v sadě záznamů.
+Bez ohledu na to, zda bylo implementováno hromadné načítání řádků, bude to vždy první záznam v sadě záznamů.
 
-Po otevření sady záznamů není nutné volat `MoveFirst` hned. V tuto chvíli je první záznam (pokud existuje) automaticky aktuální záznam.
-
-> [!NOTE]
->  Tato členská funkce není platná pro sady záznamů s dopředné jen pro čtení.
+Není třeba volat `MoveFirst` ihned po otevření sady záznamů. V té době je první záznam (pokud existuje) automaticky aktuální záznam.
 
 > [!NOTE]
->  Při procházení sady záznamů nelze vynechat odstraněné záznamy. Podrobnosti najdete v části členská funkce [IsDeleted](#isdeleted) .
+> Tato členská funkce není platná pro sady záznamů pouze pro předávání.
+
+> [!NOTE]
+> Při procházení sady záznamů nelze odstraněné záznamy přeskočit. Podrobnosti naleznete v členské funkci [IsDeleted.](#isdeleted)
 
 > [!CAUTION]
->  Volání kterékoli z `Move` Functions vyvolá výjimku, pokud sada záznamů neobsahuje žádné záznamy. Chcete-li určit, zda sada záznamů obsahuje nějaké záznamy, zavolejte `IsBOF` a `IsEOF`.
+> Volání některé `Move` z funkcí vyvolá výjimku, pokud sada záznamů nemá žádné záznamy. Chcete-li zjistit, zda sada `IsBOF` záznamů `IsEOF`má nějaké záznamy, volání a .
 
 > [!NOTE]
->  Pokud voláte některou z funkcí `Move`, zatímco se aktualizuje nebo přidává aktuální záznam, aktualizace se ztratí bez upozornění.
+> Pokud zavoláte některou z funkcí během `Move` aktualizace nebo přidání aktuálního záznamu, aktualizace budou bez upozornění ztraceny.
 
-Další informace o navigaci v sadě záznamů naleznete v článcích [Sada záznamů: posouvání (ODBC)](../../data/odbc/recordset-scrolling-odbc.md) a [Sada záznamů: záložky a absolutní umístění (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md). Další informace o hromadném načítání řádků naleznete v článku [Sada záznamů: hromadné načítání záznamů (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+Další informace o navigaci v sadě záznamů naleznete v článcích [Sada záznamů: Scrolling (ODBC)](../../data/odbc/recordset-scrolling-odbc.md) a [Recordset: Záložky a Absolutní pozice (ODBC).](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md) Další informace o hromadném načítání řádků naleznete v článku [Sada záznamů: Hromadné načítání záznamů (ODBC).](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)
 
 ### <a name="example"></a>Příklad
 
-  Podívejte se na příklad pro [IsBOF](#isbof).
+  Viz příklad pro [IsBOF](#isbof).
 
-##  <a name="movelast"></a>CRecordset:: MoveLast
+## <a name="crecordsetmovelast"></a><a name="movelast"></a>CRecordset::MoveLast
 
-Provede první záznam v poslední dokončené sadě řádků v aktuálním záznamu.
+Vytvoří první záznam v poslední kompletní sadě řádků aktuální záznam.
 
 ```
 void MoveLast();
@@ -1375,29 +1375,29 @@ void MoveLast();
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud jste neimplementovali hromadné načítání řádků, vaše sada záznamů má velikost sady řádků 1, takže `MoveLast` jednoduše přesune na poslední záznam v sadě záznamů.
+Pokud jste neimplementovali hromadné načítání řádků, má sada záznamů velikost `MoveLast` sady řádků 1, takže se jednoduše přesune na poslední záznam v sadě záznamů.
 
 > [!NOTE]
->  Tato členská funkce není platná pro sady záznamů s dopředné jen pro čtení.
+> Tato členská funkce není platná pro sady záznamů pouze pro předávání.
 
 > [!NOTE]
->  Při procházení sady záznamů nelze vynechat odstraněné záznamy. Podrobnosti najdete v části členská funkce [IsDeleted](#isdeleted) .
+> Při procházení sady záznamů nelze odstraněné záznamy přeskočit. Podrobnosti naleznete v členské funkci [IsDeleted.](#isdeleted)
 
 > [!CAUTION]
->  Volání kterékoli z `Move` Functions vyvolá výjimku, pokud sada záznamů neobsahuje žádné záznamy. Chcete-li určit, zda sada záznamů obsahuje nějaké záznamy, zavolejte `IsBOF` a `IsEOF`.
+> Volání některé `Move` z funkcí vyvolá výjimku, pokud sada záznamů nemá žádné záznamy. Chcete-li zjistit, zda sada `IsBOF` záznamů `IsEOF`má nějaké záznamy, volání a .
 
 > [!NOTE]
->  Pokud voláte některou z funkcí `Move`, zatímco se aktualizuje nebo přidává aktuální záznam, aktualizace se ztratí bez upozornění.
+> Pokud zavoláte některou z funkcí během `Move` aktualizace nebo přidání aktuálního záznamu, aktualizace budou bez upozornění ztraceny.
 
-Další informace o navigaci v sadě záznamů naleznete v článcích [Sada záznamů: posouvání (ODBC)](../../data/odbc/recordset-scrolling-odbc.md) a [Sada záznamů: záložky a absolutní umístění (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md). Další informace o hromadném načítání řádků naleznete v článku [Sada záznamů: hromadné načítání záznamů (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+Další informace o navigaci v sadě záznamů naleznete v článcích [Sada záznamů: Scrolling (ODBC)](../../data/odbc/recordset-scrolling-odbc.md) a [Recordset: Záložky a Absolutní pozice (ODBC).](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md) Další informace o hromadném načítání řádků naleznete v článku [Sada záznamů: Hromadné načítání záznamů (ODBC).](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)
 
 ### <a name="example"></a>Příklad
 
-  Podívejte se na příklad pro [IsBOF](#isbof).
+  Viz příklad pro [IsBOF](#isbof).
 
-##  <a name="movenext"></a>CRecordset:: MoveNext
+## <a name="crecordsetmovenext"></a><a name="movenext"></a>CRecordset::MoveNext
 
-Vytvoří první záznam v další sadě řádků s aktuálním záznamem.
+Vytvoří první záznam v další sadě řádků jako aktuální záznam.
 
 ```
 void MoveNext();
@@ -1405,29 +1405,29 @@ void MoveNext();
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud jste neimplementovali hromadné načítání řádků, vaše sada záznamů má velikost sady řádků 1, takže `MoveNext` jednoduše přesune na další záznam.
+Pokud jste neimplementovali hromadné načítání řádků, má sada záznamů velikost `MoveNext` sady řádků 1, takže se jednoduše přesune na další záznam.
 
 > [!NOTE]
->  Při procházení sady záznamů nelze vynechat odstraněné záznamy. Podrobnosti najdete v části členská funkce [IsDeleted](#isdeleted) .
+> Při procházení sady záznamů nelze odstraněné záznamy přeskočit. Podrobnosti naleznete v členské funkci [IsDeleted.](#isdeleted)
 
 > [!CAUTION]
->  Volání kterékoli z `Move` Functions vyvolá výjimku, pokud sada záznamů neobsahuje žádné záznamy. Chcete-li určit, zda sada záznamů obsahuje nějaké záznamy, zavolejte `IsBOF` a `IsEOF`.
+> Volání některé `Move` z funkcí vyvolá výjimku, pokud sada záznamů nemá žádné záznamy. Chcete-li zjistit, zda sada `IsBOF` záznamů `IsEOF`má nějaké záznamy, volání a .
 
 > [!NOTE]
->  Doporučuje se také volat `IsEOF` před voláním `MoveNext`. Například pokud jste protáhli za koncem sady záznamů, `IsEOF` vrátí nenulovou hodnotu; následné volání `MoveNext` by vyvolalo výjimku.
+> Před voláním `MoveNext`je `IsEOF` také doporučeno zavolat . Pokud jste například posunuli za konec sady `IsEOF` záznamů, vrátí se nenulová; následné volání `MoveNext` by vyvolat výjimku.
 
 > [!NOTE]
->  Pokud voláte některou z funkcí `Move`, zatímco se aktualizuje nebo přidává aktuální záznam, aktualizace se ztratí bez upozornění.
+> Pokud zavoláte některou z funkcí během `Move` aktualizace nebo přidání aktuálního záznamu, aktualizace budou bez upozornění ztraceny.
 
-Další informace o navigaci v sadě záznamů naleznete v článcích [Sada záznamů: posouvání (ODBC)](../../data/odbc/recordset-scrolling-odbc.md) a [Sada záznamů: záložky a absolutní umístění (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md). Další informace o hromadném načítání řádků naleznete v článku [Sada záznamů: hromadné načítání záznamů (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+Další informace o navigaci v sadě záznamů naleznete v článcích [Sada záznamů: Scrolling (ODBC)](../../data/odbc/recordset-scrolling-odbc.md) a [Recordset: Záložky a Absolutní pozice (ODBC).](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md) Další informace o hromadném načítání řádků naleznete v článku [Sada záznamů: Hromadné načítání záznamů (ODBC).](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)
 
 ### <a name="example"></a>Příklad
 
-  Podívejte se na příklad pro [IsBOF](#isbof).
+  Viz příklad pro [IsBOF](#isbof).
 
-##  <a name="moveprev"></a>CRecordset:: MovePrev
+## <a name="crecordsetmoveprev"></a><a name="moveprev"></a>CRecordset::MovePrev
 
-Provede první záznam v předchozí sadě řádků aktuálního záznamu.
+Vytvoří první záznam v předchozí sadě řádků jako aktuální záznam.
 
 ```
 void MovePrev();
@@ -1435,32 +1435,32 @@ void MovePrev();
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud jste neimplementovali hromadné načítání řádků, vaše sada záznamů má velikost sady řádků 1, takže `MovePrev` jednoduše přesune na předchozí záznam.
+Pokud jste neimplementovali hromadné načítání řádků, má sada záznamů velikost `MovePrev` sady řádků 1, takže se jednoduše přesune na předchozí záznam.
 
 > [!NOTE]
->  Tato členská funkce není platná pro sady záznamů s dopředné jen pro čtení.
+> Tato členská funkce není platná pro sady záznamů pouze pro předávání.
 
 > [!NOTE]
->  Při procházení sady záznamů nelze vynechat odstraněné záznamy. Podrobnosti najdete v části členská funkce [IsDeleted](#isdeleted) .
+> Při procházení sady záznamů nelze odstraněné záznamy přeskočit. Podrobnosti naleznete v členské funkci [IsDeleted.](#isdeleted)
 
 > [!CAUTION]
->  Volání kterékoli z `Move` Functions vyvolá výjimku, pokud sada záznamů neobsahuje žádné záznamy. Chcete-li určit, zda sada záznamů obsahuje nějaké záznamy, zavolejte `IsBOF` a `IsEOF`.
+> Volání některé `Move` z funkcí vyvolá výjimku, pokud sada záznamů nemá žádné záznamy. Chcete-li zjistit, zda sada `IsBOF` záznamů `IsEOF`má nějaké záznamy, volání a .
 
 > [!NOTE]
->  Doporučuje se také volat `IsBOF` před voláním `MovePrev`. Například pokud jste se přesunuli před začátek sady záznamů, `IsBOF` vrátí nenulovou hodnotu; následné volání `MovePrev` by vyvolalo výjimku.
+> Před voláním `MovePrev`je `IsBOF` také doporučeno zavolat . Pokud jste například posunuli před začátek sady `IsBOF` záznamů, vrátí se nenulová; následné volání `MovePrev` by vyvolat výjimku.
 
 > [!NOTE]
->  Pokud voláte některou z funkcí `Move`, zatímco se aktualizuje nebo přidává aktuální záznam, aktualizace se ztratí bez upozornění.
+> Pokud zavoláte některou z funkcí během `Move` aktualizace nebo přidání aktuálního záznamu, aktualizace budou bez upozornění ztraceny.
 
-Další informace o navigaci v sadě záznamů naleznete v článcích [Sada záznamů: posouvání (ODBC)](../../data/odbc/recordset-scrolling-odbc.md) a [Sada záznamů: záložky a absolutní umístění (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md). Další informace o hromadném načítání řádků naleznete v článku [Sada záznamů: hromadné načítání záznamů (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+Další informace o navigaci v sadě záznamů naleznete v článcích [Sada záznamů: Scrolling (ODBC)](../../data/odbc/recordset-scrolling-odbc.md) a [Recordset: Záložky a Absolutní pozice (ODBC).](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md) Další informace o hromadném načítání řádků naleznete v článku [Sada záznamů: Hromadné načítání záznamů (ODBC).](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)
 
 ### <a name="example"></a>Příklad
 
-  Podívejte se na příklad pro [IsBOF](#isbof).
+  Viz příklad pro [IsBOF](#isbof).
 
-##  <a name="onsetoptions"></a>CRecordset:: OnSetOptions
+## <a name="crecordsetonsetoptions"></a><a name="onsetoptions"></a>CRecordset::OnSetOptions
 
-Volá se, aby se nastavily možnosti (používané pro výběr) pro zadaný příkaz ODBC.
+Nazývá se nastavení možností (používá se při výběru) pro zadaný příkaz ODBC.
 
 ```
 virtual void OnSetOptions(HSTMT hstmt);
@@ -1473,15 +1473,15 @@ HSTMT příkazu ODBC, jehož možnosti mají být nastaveny.
 
 ### <a name="remarks"></a>Poznámky
 
-Volání `OnSetOptions` k nastavení možností (použitých pro výběr) pro zadaný příkaz ODBC. Rozhraní volá tuto členskou funkci pro nastavení počátečních možností pro sadu záznamů. `OnSetOptions` Určuje podporu zdroje dat pro rolovací kurzory a pro souběžnost kurzoru a nastaví odpovídající možnosti sady záznamů. (Zatímco `OnSetOptions` se používá pro operace výběru, `OnSetUpdateOptions` se používá pro operace aktualizace.)
+Volání `OnSetOptions` k nastavení možností (použitých při výběru) pro zadaný příkaz ODBC. Rozhraní Framework volá tuto členská funkci k nastavení počátečních možností sady záznamů. `OnSetOptions`určuje podporu zdroje dat pro posuvné kurzory a souběžnost kurzoru a podle toho nastaví možnosti sady záznamů. (Vzhledem `OnSetOptions` k tomu, `OnSetUpdateOptions` že se používá pro operace výběru, se používá pro operace aktualizace.)
 
-Přepsat `OnSetOptions` pro nastavení možností specifických pro ovladač nebo zdroj dat. Například pokud váš zdroj dat podporuje otevření pro výhradní přístup, můžete přepsat `OnSetOptions`, abyste mohli využít této možnosti.
+Přepsáním `OnSetOptions` nastavte možnosti specifické pro ovladač nebo zdroj dat. Například pokud váš zdroj dat podporuje otevření pro `OnSetOptions` výhradní přístup, můžete přepsat využít této schopnosti.
 
-Další informace o kurzorech najdete v článku [ODBC](../../data/odbc/odbc-basics.md).
+Další informace o kurzorech naleznete v článku [ODBC](../../data/odbc/odbc-basics.md).
 
-##  <a name="onsetupdateoptions"></a>CRecordset:: OnSetUpdateOptions
+## <a name="crecordsetonsetupdateoptions"></a><a name="onsetupdateoptions"></a>CRecordset::OnSetUpdateOptions
 
-Volá se, aby se nastavily možnosti (používané při aktualizaci) pro zadaný příkaz ODBC.
+Nazývá se nastavení možností (používá se při aktualizaci) pro zadaný příkaz ODBC.
 
 ```
 virtual void OnSetUpdateOptions(HSTMT hstmt);
@@ -1494,13 +1494,13 @@ HSTMT příkazu ODBC, jehož možnosti mají být nastaveny.
 
 ### <a name="remarks"></a>Poznámky
 
-Volání `OnSetUpdateOptions` k nastavení možností (použitých při aktualizaci) pro zadaný příkaz ODBC. Rozhraní volá tuto členskou funkci poté, co vytvoří HSTMT pro aktualizaci záznamů v sadě záznamů. (Zatímco `OnSetOptions` se používá pro operace výběru, `OnSetUpdateOptions` se používá pro operace aktualizace.) `OnSetUpdateOptions` Určuje podporu zdroje dat pro rolovací kurzory a pro souběžnost kurzoru a nastaví odpovídající možnosti sady záznamů.
+Volání `OnSetUpdateOptions` k nastavení možností (používá se při aktualizaci) pro zadaný příkaz ODBC. Rozhraní Framework volá tuto členská funkci poté, co vytvoří HSTMT aktualizovat záznamy v sadě záznamů. (Vzhledem `OnSetOptions` k tomu, `OnSetUpdateOptions` že se používá pro operace výběru, se používá pro operace aktualizace.) `OnSetUpdateOptions` určuje podporu zdroje dat pro posuvné kurzory a souběžnost kurzoru a podle toho nastaví možnosti sady záznamů.
 
-Před použitím tohoto příkazu pro přístup k databázi přepište `OnSetUpdateOptions` pro nastavení možností příkazu ODBC.
+Přepsání `OnSetUpdateOptions` maže tenastavit možnosti příkazu ODBC před tímto příkazem se používá pro přístup k databázi.
 
-Další informace o kurzorech najdete v článku [ODBC](../../data/odbc/odbc-basics.md).
+Další informace o kurzorech naleznete v článku [ODBC](../../data/odbc/odbc-basics.md).
 
-##  <a name="open"></a>CRecordset:: Open
+## <a name="crecordsetopen"></a><a name="open"></a>Crecordset::open
 
 Otevře sadu záznamů načtením tabulky nebo provedením dotazu, který sada záznamů představuje.
 
@@ -1514,106 +1514,106 @@ virtual BOOL Open(
 ### <a name="parameters"></a>Parametry
 
 *nOpenType*<br/>
-Přijměte výchozí hodnotu, AFX_DB_USE_DEFAULT_TYPE nebo použijte jednu z následujících hodnot z `enum OpenType`:
+Přijměte výchozí hodnotu, AFX_DB_USE_DEFAULT_TYPE nebo použijte `enum OpenType`jednu z následujících hodnot z :
 
-- `CRecordset::dynaset` sadu záznamů s obousměrným posouváním. Členství a pořadí záznamů je určeno při otevření sady záznamů, ale změny datových hodnot provedené ostatními uživateli jsou viditelné až po operaci načtení. Dynamické sady jsou známy také jako sady záznamů řízené sadou klíčů.
+- `CRecordset::dynaset`Sada záznamů s obousměrným posouváním. Členství a pořadí záznamů je určeno při otevření sady záznamů, ale změny datových hodnot provedené ostatními uživateli jsou viditelné až po operaci načtení. Dynamické sady jsou známy také jako sady záznamů řízené sadou klíčů.
 
-- `CRecordset::snapshot` statické sady záznamů s obousměrným posouváním. Členství a pořadí záznamů je určeno při otevření sady záznamů. Datové hodnoty jsou určeny při načtení záznamů. Změny provedené ostatními uživateli nejsou viditelné, dokud není sada záznamů zavřena a znovu otevřena.
+- `CRecordset::snapshot`Statická sada záznamů s obousměrným posouváním. Členství a pořadí záznamů je určeno při otevření sady záznamů. Datové hodnoty jsou určeny při načtení záznamů. Změny provedené ostatními uživateli nejsou viditelné, dokud není sada záznamů zavřena a znovu otevřena.
 
-- `CRecordset::dynamic` sadu záznamů s obousměrným posouváním. Změny členství, pořadí a datových hodnot provedené jinými uživateli jsou viditelné po operaci načtení. Povšimněte si, že mnoho ovladačů ODBC nepodporuje tento typ sady záznamů.
+- `CRecordset::dynamic`Sada záznamů s obousměrným posouváním. Změny členství, pořadí a datových hodnot provedené jinými uživateli jsou viditelné po operaci načtení. Povšimněte si, že mnoho ovladačů ODBC nepodporuje tento typ sady záznamů.
 
-- `CRecordset::forwardOnly` sadu záznamů jen pro čtení s dopředné posouvání.
+- `CRecordset::forwardOnly`Sada záznamů jen pro čtení s pouze posunutím vpřed.
 
-   Pro `CRecordset`je výchozí hodnota `CRecordset::snapshot`. Mechanismus výchozích hodnot umožňuje interakci průvodců aplikace Visual C++ s třídou `CRecordset` pro rozhraní ODBC i třídou `CDaoRecordset` pro rozhraní DAO, které používají různé výchozí hodnoty.
+   Pro `CRecordset`výchozí hodnotu `CRecordset::snapshot`je . Mechanismus výchozích hodnot umožňuje interakci průvodců aplikace Visual C++ s třídou `CRecordset` pro rozhraní ODBC i třídou `CDaoRecordset` pro rozhraní DAO, které používají různé výchozí hodnoty.
 
-Další informace o těchto typech sady záznamů naleznete v článku [Sada záznamů (ODBC)](../../data/odbc/recordset-odbc.md). Související informace naleznete v článku "použití bloků a rolovacích kurzorů" v Windows SDK.
+Další informace o těchto typech sad záznamů naleznete v článku [Sada záznamů (ODBC).](../../data/odbc/recordset-odbc.md) Související informace naleznete v článku "Použití blokování a rolovací kurzory" v sadě Windows SDK.
 
 > [!CAUTION]
->  Není-li požadovaný typ podporován, rozhraní vyvolá výjimku.
+> Není-li požadovaný typ podporován, rozhraní vyvolá výjimku.
 
-*Ipszsql*<br/>
+*Lpszsql*<br/>
 Ukazatel řetězce obsahující jedno z následujících:
 
 - Ukazatel NULL.
 
 - Název tabulky.
 
-- Příkaz jazyka SQL **Select** (volitelně s klauzulí **WHERE** nebo **ORDER by** klauzule SQL).
+- Příkaz SQL **SELECT** (volitelně s klauzulí SQL **WHERE** nebo **ORDER BY).**
 
-- Příkaz **volání** určující název předdefinovaného dotazu (uložená procedura). Buďte opatrní, abyste nevložili prázdné znaky mezi složenou závorku a klíčové slovo **Call** .
+- Příkaz **CALL** určující název předdefinovaného dotazu (uložená procedura). Dávejte pozor, abyste nevkládali mezery mezi složené závorky a klíčové slovo **CALL.**
 
-Další informace o tomto řetězci naleznete v tabulce a diskuzi o roli ClassWizard v části [poznámky](#remarks) .
+Další informace o tomto řetězci naleznete v tabulce a diskusi o roli ClassWizard v části [Poznámky.](#remarks)
 
 > [!NOTE]
->  Pořadí sloupců v sadě výsledků dotazu musí odpovídat pořadí volání funkce RFX nebo hromadného RFX v přepsání funkce [DoFieldExchange](#dofieldexchange) nebo [DoBulkFieldExchange](#dobulkfieldexchange) .
+> Pořadí sloupců v sadě výsledků se musí shodovat s pořadím volání funkce RFX nebo Bulk RFX v přepsání funkce [DoFieldExchange](#dofieldexchange) nebo [DoBulkFieldExchange.](#dobulkfieldexchange)
 
-*dwOptions*<br/>
-Bitová maska schopná určit kombinaci hodnot uvedených níže. Některé se vzájemně vylučují. Výchozí hodnota je **None (žádné**).
+*Dwoptions*<br/>
+Bitová maska schopná určit kombinaci hodnot uvedených níže. Některé se vzájemně vylučují. Výchozí hodnota je **žádná**.
 
-- `CRecordset::none` nejsou nastaveny žádné možnosti. Tato hodnota parametru se vzájemně vylučuje se všemi ostatními hodnotami. Ve výchozím nastavení může být sada záznamů aktualizována pomocí [Edit](#edit) nebo [Delete](#delete) a umožňuje přidávání nových záznamů pomocí metody [AddNew](#addnew). Možnost aktualizace závisí na zdroji dat i na možnosti *nOpenType* , kterou zadáte. Optimalizace pro hromadná přidávání nejsou dostupné. Hromadné načítání řádků nebude implementováno. Odstraněné záznamy nebudou při navigaci v sadě záznamů přeskočeny. Záložky nejsou k dispozici. Automatická kontrola nečistých polí je implementována.
+- `CRecordset::none`Nejsou nastaveny žádné možnosti. Tato hodnota parametru se vzájemně vylučuje se všemi ostatními hodnotami. Ve výchozím nastavení lze sadu záznamů aktualizovat pomocí [funkce Upravit](#edit) nebo [Odstranit](#delete) a umožňuje připojit nové záznamy pomocí [funkce AddNew](#addnew). Aktualizovatelnost závisí na zdroji dat a také na zadané možnosti *nOpenType.* Optimalizace pro hromadná přidávání nejsou dostupné. Hromadné načítání řádků nebude implementováno. Odstraněné záznamy nebudou při navigaci v sadě záznamů přeskočeny. Záložky nejsou k dispozici. Automatická kontrola nečistých polí je implementována.
 
-- `CRecordset::appendOnly` nepovoluje `Edit` nebo `Delete` sady záznamů. Povolit pouze funkci `AddNew`. Tato možnost se vzájemně vylučuje s možností `CRecordset::readOnly`.
+- `CRecordset::appendOnly`Nepovoluj `Edit` sadu záznamů ani `Delete` na ní. Povolit pouze funkci `AddNew`. Tato možnost se vzájemně vylučuje s možností `CRecordset::readOnly`.
 
-- `CRecordset::readOnly` otevřít sadu záznamů jako jen pro čtení. Tato možnost se vzájemně vylučuje s možností `CRecordset::appendOnly`.
+- `CRecordset::readOnly`Otevřete sadu záznamů jen pro čtení. Tato možnost se vzájemně vylučuje s možností `CRecordset::appendOnly`.
 
-- `CRecordset::optimizeBulkAdd` použít připravený příkaz SQL k optimalizaci přidávání mnoha záznamů najednou. Platí pouze v případě, že nepoužíváte funkci rozhraní ODBC API `SQLSetPos` k aktualizaci sady záznamů. První aktualizace určuje, která pole jsou označena za nečistá. Tato možnost se vzájemně vylučuje s možností `CRecordset::useMultiRowFetch`.
+- `CRecordset::optimizeBulkAdd`Pomocí připraveného příkazu SQL optimalizujte přidání mnoha záznamů najednou. Platí pouze v případě, že k `SQLSetPos` aktualizaci sady záznamů nepoužíváte funkci ROZHRANÍ API ROZHRANÍ ODBC. První aktualizace určuje, která pole jsou označena za nečistá. Tato možnost se vzájemně vylučuje s možností `CRecordset::useMultiRowFetch`.
 
-- `CRecordset::useMultiRowFetch` implementovat hromadné načítání řádků, aby bylo možné načíst více řádků v rámci jedné operace načtení. Jde o pokročilou funkci navrženou pro zvýšení výkonu. Hromadná výměna polí záznamu však není podporována nástrojem ClassWizard. Tato možnost se vzájemně vylučuje s možností `CRecordset::optimizeBulkAdd`. Všimněte si, že pokud zadáte `CRecordset::useMultiRowFetch`, bude možnost `CRecordset::noDirtyFieldCheck` automaticky zapnuta (nebude k dispozici dvojité ukládání do vyrovnávací paměti); u sad záznamů, které jsou jen pro čtení, se možnost automaticky zapne `CRecordset::useExtendedFetch`. Další informace o hromadném načítání řádků naleznete v článku [Sada záznamů: hromadné načítání záznamů (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+- `CRecordset::useMultiRowFetch`Implementovat hromadné načítání řádků povolit více řádků, které mají být načteny v rámci operace načtení. Jde o pokročilou funkci navrženou pro zvýšení výkonu. Hromadná výměna polí záznamu však není podporována nástrojem ClassWizard. Tato možnost se vzájemně vylučuje s možností `CRecordset::optimizeBulkAdd`. Všimněte si, `CRecordset::useMultiRowFetch`že pokud `CRecordset::noDirtyFieldCheck` zadáte , pak možnost bude zapnuta automaticky (dvojité ukládání do vyrovnávací paměti nebude k dispozici); na sadách záznamů pouze `CRecordset::useExtendedFetch` pro předávání, bude tato možnost automaticky zapnuta. Další informace o hromadném načítání řádků naleznete v článku [Sada záznamů: Hromadné načítání záznamů (ODBC).](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)
 
-- Při procházení sadou záznamů `CRecordset::skipDeletedRecords` přeskočit všechny odstraněné záznamy. V určitých relativních načteních tato možnost sníží výkon. Tato možnost není platná pro sady záznamů s posouváním pouze vpřed. Pokud zavoláte [Move](#move) s parametrem *hodnota nRows* nastaveným na hodnotu 0 a nastaví se sada možností `CRecordset::skipDeletedRecords`, `Move` vyhodnotí. Všimněte si, že `CRecordset::skipDeletedRecords` je podobná *balení ovladače*, což znamená, že odstraněné řádky jsou ze sady záznamů odebrány. Pokud však ovladač záznamy komprimuje, budou přeskočeny pouze vámi odstraněné záznamy. Záznamy odstraněné jinými uživateli v době, kdy byla sada otevřena, nebudou přeskočeny. `CRecordset::skipDeletedRecords` přeskočí řádky odstraněné jinými uživateli.
+- `CRecordset::skipDeletedRecords`Při procházení sadou záznamů přeskočte všechny odstraněné záznamy. V určitých relativních načteních tato možnost sníží výkon. Tato možnost není platná pro sady záznamů s posouváním pouze vpřed. Pokud zavoláte [Move](#move) s parametrem *nRows* `CRecordset::skipDeletedRecords` nastaveným `Move` na 0 a nastavenou možností, bude uplatněna. Všimněte `CRecordset::skipDeletedRecords` si, že je podobný *balení ovladače*, což znamená, že odstraněné řádky jsou odebrány ze sady záznamů. Pokud však ovladač záznamy komprimuje, budou přeskočeny pouze vámi odstraněné záznamy. Záznamy odstraněné jinými uživateli v době, kdy byla sada otevřena, nebudou přeskočeny. `CRecordset::skipDeletedRecords`přeskakuje řádky odstraněné jinými uživateli.
 
-- `CRecordset::useBookmarks` může používat záložky v sadě záznamů, pokud jsou podporovány. Záložky zpomalují načítání dat, ale zvyšují výkon navigace v nich. Nelze je použít v sadách záznamů s posouváním pouze vpřed. Další informace naleznete v článku [Sada záznamů: záložky a absolutní umístění (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md).
+- `CRecordset::useBookmarks`Může používat záložky v sadě záznamů, pokud je podporován. Záložky zpomalují načítání dat, ale zvyšují výkon navigace v nich. Nelze je použít v sadách záznamů s posouváním pouze vpřed. Další informace naleznete v článku [Sada záznamů: Záložky a absolutní pozice (ODBC).](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md)
 
-- `CRecordset::noDirtyFieldCheck` vypnout automatickou kontrolu nevyřízených polí (dvojité ukládání do vyrovnávací paměti). Tím dojde ke zvýšení výkonu. Pole je však zapotřebí ručně označit jako nečistá zavoláním členských funkcí `SetFieldDirty` a `SetFieldNull`. Povšimněte si, že dvojité ukládání do vyrovnávací paměti ve třídě `CRecordset` je podobné dvojitému ukládání do vyrovnávací paměti ve třídě `CDaoRecordset`. Ve třídě `CRecordset` však nelze zapnout dvojité ukládání do vyrovnávací paměti pro jednotlivá pole. Lze jej zapnout nebo vypnout pouze pro všechna pole najednou. Všimněte si, že pokud zadáte možnost `CRecordset::useMultiRowFetch`, `CRecordset::noDirtyFieldCheck` bude automaticky zapnuta; `SetFieldDirty` a `SetFieldNull` však nelze použít pro sady záznamů, které implementují hromadné načítání řádků.
+- `CRecordset::noDirtyFieldCheck`Vypněte automatickou kontrolu znečištěného pole (dvojité ukládání do vyrovnávací paměti). Tím dojde ke zvýšení výkonu. Pole je však zapotřebí ručně označit jako nečistá zavoláním členských funkcí `SetFieldDirty` a `SetFieldNull`. Povšimněte si, že dvojité ukládání do vyrovnávací paměti ve třídě `CRecordset` je podobné dvojitému ukládání do vyrovnávací paměti ve třídě `CDaoRecordset`. Ve třídě `CRecordset` však nelze zapnout dvojité ukládání do vyrovnávací paměti pro jednotlivá pole. Lze jej zapnout nebo vypnout pouze pro všechna pole najednou. Všimněte si, že `CRecordset::useMultiRowFetch`pokud `CRecordset::noDirtyFieldCheck` zadáte možnost , pak se zapne automaticky; však `SetFieldDirty` `SetFieldNull` a nelze použít na sady záznamů, které implementují hromadné načítání řádků.
 
-- `CRecordset::executeDirect` nepoužívejte připravený příkaz SQL. Pro zlepšení výkonu tuto možnost zadejte, pokud nebude nikdy volána členská funkce `Requery`.
+- `CRecordset::executeDirect`Nepoužívejte připravený příkaz SQL. Chcete-li zvýšit výkon, `Requery` zadejte tuto možnost, pokud členské funkce nikdy nebude volána.
 
-- `CRecordset::useExtendedFetch` implementovat `SQLExtendedFetch` namísto `SQLFetch`. Navrženo pro implementaci hromadného načítání řádků pro sady záznamů s posouváním pouze vpřed. Pokud zadáte možnost `CRecordset::useMultiRowFetch` pro sadu záznamů s dopředné jenom dopředné, `CRecordset::useExtendedFetch` se automaticky zapne.
+- `CRecordset::useExtendedFetch`Implementovat `SQLExtendedFetch` `SQLFetch`namísto . Navrženo pro implementaci hromadného načítání řádků pro sady záznamů s posouváním pouze vpřed. Pokud zadáte možnost `CRecordset::useMultiRowFetch` v sadě záznamů pouze `CRecordset::useExtendedFetch` pro předávání, bude automaticky zapnuta.
 
-- `CRecordset::userAllocMultiRowBuffers` bude uživatel přidělovat vyrovnávací paměti úložiště pro data. Chcete-li přidělit své vlastní úložiště, použijte tuto možnost spolu s možností `CRecordset::useMultiRowFetch`. V opačném případě bude potřebné úložiště přiděleno rozhraním. Další informace naleznete v článku [Sada záznamů: hromadné načítání záznamů (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md). Všimněte si, že zadáním `CRecordset::userAllocMultiRowBuffers` bez určení `CRecordset::useMultiRowFetch` způsobí selhání kontrolního výrazu.
+- `CRecordset::userAllocMultiRowBuffers`Uživatel přidělí vyrovnávací paměti úložiště pro data. Chcete-li přidělit své vlastní úložiště, použijte tuto možnost spolu s možností `CRecordset::useMultiRowFetch`. V opačném případě bude potřebné úložiště přiděleno rozhraním. Další informace naleznete v článku [Sada záznamů: Hromadné načítání záznamů (ODBC).](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) Všimněte si, že zadání `CRecordset::userAllocMultiRowBuffers` bez zadání `CRecordset::useMultiRowFetch` bude mít za následek kontrolní výraz se nezdařilo.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud se objekt `CRecordset` úspěšně otevřel; jinak 0 v případě, že [CDatabase:: Open](../../mfc/reference/cdatabase-class.md#open) (při volání) vrátí hodnotu 0.
+Nenulová, `CRecordset` pokud byl objekt úspěšně otevřen; jinak 0, pokud [CDatabase::Open](../../mfc/reference/cdatabase-class.md#open) (pokud je volána) vrátí 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Chcete-li spustit dotaz definovaný sadou záznamů, je zapotřebí zavolat tuto členskou funkci. Před voláním `Open`musíte vytvořit objekt sady záznamů.
+Chcete-li spustit dotaz definovaný sadou záznamů, je zapotřebí zavolat tuto členskou funkci. Před `Open`voláním je nutné vytvořit objekt sady záznamů.
 
-Toto připojení sady záznamů ke zdroji dat závisí na způsobu sestavení sady záznamů před voláním `Open`. Pokud předáte objekt [CDatabase](../../mfc/reference/cdatabase-class.md) do konstruktoru sady záznamů, který nebyl připojen ke zdroji dat, tato členská funkce používá [GetDefaultConnect](#getdefaultconnect) k pokusu o otevření objektu databáze. Pokud předáte NULL do konstruktoru sady záznamů, konstruktor vytvoří objekt `CDatabase` za vás a `Open` se pokusí připojit objekt databáze. Podrobnosti o zavírání sady záznamů a připojení za těchto různých okolností naleznete v tématu [Close](#close).
+Připojení této sady záznamů ke zdroji dat závisí na tom, `Open`jak vytvoříte sadu záznamů před voláním . Pokud předáte objekt [CDatabase](../../mfc/reference/cdatabase-class.md) konstruktoru sady záznamů, který nebyl připojen ke zdroji dat, tato členská funkce použije k pokusu o otevření databázového objektu [funkci GetDefaultConnect.](#getdefaultconnect) Pokud předáte null konstruktoru sady záznamů, konstruktor vytvoří `CDatabase` objekt `Open` za vás a pokusí se připojit databázový objekt. Podrobnosti o zavření sady záznamů a připojení za těchto různých okolností naleznete v [tématu Zavřít](#close).
 
 > [!NOTE]
->  Přístup ke zdroji dat pomocí objektu `CRecordset` je vždy sdílen. Na rozdíl od třídy `CDaoRecordset` nelze objekt `CRecordset` použít k otevření zdroje dat s výhradním přístupem.
+> Přístup ke zdroji dat pomocí objektu `CRecordset` je vždy sdílen. Na rozdíl od třídy `CDaoRecordset` nelze objekt `CRecordset` použít k otevření zdroje dat s výhradním přístupem.
 
-Při volání `Open`dotaz, obvykle příkaz SQL **Select** , vybere záznamy na základě kritérií uvedených v následující tabulce.
+Při volání `Open`vybere dotaz, obvykle příkaz SQL **SELECT,** záznamy na základě kritérií zobrazených v následující tabulce.
 
 |Hodnota parametru IpszSQL|Zvolené záznamy jsou určeny|Příklad|
 |------------------------------------|----------------------------------------|-------------|
 |NULL|Řetězec vrácený funkcí `GetDefaultSQL`.||
 |Název tabulky SQL|Všechny sloupce tabulkového seznamu ve funkci `DoFieldExchange` nebo `DoBulkFieldExchange`.|`"Customer"`|
 |Název předdefinovaného dotazu (uložené procedury)|Sloupce, k jejichž vrácení je dotaz definován.|`"{call OverDueAccts}"`|
-|**Vybrat** sloupec-seznam **ze** seznamu tabulek|Zadané sloupce ze zadané tabulky nebo tabulek.|`"SELECT CustId, CustName FROM`<br /><br /> `Customer"`|
+|**VYBRAT** seznam sloupců **z** tabulky|Zadané sloupce ze zadané tabulky nebo tabulek.|`"SELECT CustId, CustName FROM`<br /><br /> `Customer"`|
 
 > [!CAUTION]
->  Ujistěte se, že do řetězce jazyka SQL nebyly vloženy prázdné znaky. Například pokud vložíte prázdné znaky mezi složenou závorku a klíčové slovo **volání** , knihovna MFC bude interpretovat řetězec SQL jako název tabulky a začlenit ho do příkazu **Select** , což způsobí vyvolání výjimky. Podobně, pokud váš předdefinovaný dotaz používá výstupní parametr, Nevkládat prázdné znaky mezi složenou závorku a symbol. Nakonec není nutné vkládat prázdné znaky před složenou závorku v příkazu **Call** nebo před klíčovým slovem **Select** v příkazu **Select** .
+> Ujistěte se, že do řetězce jazyka SQL nebyly vloženy prázdné znaky. Pokud například vložíte prázdné znaky mezi složené závorky a klíčové slovo **CALL,** knihovna MFC nesprávně interpretuje řetězec SQL jako název tabulky a začlení jej do příkazu **SELECT,** což bude mít za následek vyvolání výjimky. Podobně pokud předdefinovaný dotaz používá výstupní parametr, nevkládejte mezery mezi složené závorky a symbol '. Nakonec nesmíte vložit mezery před složené složenou závorku v příkazu **CALL** nebo před klíčové slovo **SELECT** v příkazu **SELECT.**
 
-Obvyklým postupem je předání hodnoty NULL `Open`; v tomto případě `Open` volá [GetDefaultSQL](#getdefaultsql). Pokud používáte odvozenou třídu `CRecordset`, `GetDefaultSQL` poskytuje názvy tabulek, které jste zadali v ClassWizard. Místo toho lze zadat jiné informace v parametru `lpszSQL`.
+Obvyklý postup je předat `Open`NULL do ; v tomto `Open` případě volá [GetDefaultSQL](#getdefaultsql). Pokud používáte odvozenou `CRecordset` třídu, `GetDefaultSQL` přidá název tabulky, které jste zadali v ClassWizard. Místo toho lze zadat jiné informace v parametru `lpszSQL`.
 
-Cokoli, co předáte, `Open` vytvoří konečný řetězec SQL pro dotaz (řetězec může obsahovat klauzule SQL **WHERE** a **ORDER by** připojené k řetězci `lpszSQL`, který jste předali), a pak dotaz spustí. Vytvořenou řetězcovou adresu lze prostudovat voláním [GetSQL](#getsql) po volání metody `Open`. Další podrobnosti o tom, jak sada záznamů vytvoří příkaz SQL a vybere záznamy, naleznete v článku [Sada záznamů: Jak sady záznamů vybírají záznamy (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md).
+Bez ohledu `Open` na to, co předáte, vytvoří konečný řetězec SQL pro dotaz (řetězec `lpszSQL` může mít klauzule SQL **WHERE** a ORDER **BY** připojené k řetězci, který jste předali) a poté spustí dotaz. Můžete prozkoumat vytvořený řetězec voláním [GetSQL](#getsql) po volání `Open`. Další podrobnosti o tom, jak sada záznamů vytváří příkaz SQL a vybírá záznamy, naleznete v článku [Sada záznamů: Jak sady záznamů vyberte záznamy (ODBC).](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)
 
 Datové členy polí třídy sady záznamů jsou svázány se sloupci zvolených dat. Jsou-li vráceny jakékoli záznamy, první záznam se stává aktuálním záznamem.
 
-Pokud chcete nastavit možnosti pro sadu záznamů, jako je filtr nebo řazení, určete je po sestavení objektu sady záznamů, ale před voláním `Open`. Chcete-li aktualizovat záznamy v sadě záznamů poté, co je sada záznamů již otevřena, zavolejte příkaz [Requery](#requery).
+Chcete-li nastavit volby pro sadu záznamů, například filtr nebo řazení, zadejte je `Open`po vytvoření objektu sady záznamů, ale před voláním . Chcete-li aktualizovat záznamy v sadě záznamů po otevření sady záznamů, zavolejte [dotaz Requery](#requery).
 
-Další informace, včetně dalších příkladů, naleznete v článcích [Sada záznamů (ODBC)](../../data/odbc/recordset-odbc.md), [Sada záznamů: Jak sady záznamů vybírají záznamy (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)a [Sada záznamů: vytváření a uzavírání sad záznamů (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md).
+Další informace, včetně dalších příkladů, naleznete v článcích [Sada záznamů (ODBC),](../../data/odbc/recordset-odbc.md) [Sada záznamů: Jak sady záznamů vyberte záznamy (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)a [Recordset: Vytváření a zavírání sad záznamů (ODBC).](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md)
 
 ### <a name="example"></a>Příklad
 
-Následující příklady kódu ukazují různé formy `Open` volání.
+Následující příklady kódu zobrazit různé `Open` formy volání.
 
 [!code-cpp[NVC_MFCDatabase#16](../../mfc/codesnippet/cpp/crecordset-class_15.cpp)]
 
-##  <a name="refreshrowset"></a>CRecordset:: RefreshRowset
+## <a name="crecordsetrefreshrowset"></a><a name="refreshrowset"></a>CRecordset::RefreshRowset
 
 Aktualizuje data a stav řádku v aktuální sadě řádků.
 
@@ -1625,31 +1625,31 @@ void RefreshRowset(
 
 ### <a name="parameters"></a>Parametry
 
-*wRow*<br/>
-Pozice na jednom řádku v aktuální sadě řádků. Tato hodnota může být v rozsahu od nuly až po velikost sady řádků.
+*wŘádek*<br/>
+Jednomístná pozice řádku v aktuální sadě řádků. Tato hodnota může být v rozsahu od nuly do velikosti sady řádků.
 
 *wLockType*<br/>
-Hodnota, která označuje, jak Uzamknout řádek po jeho obnovení. Podrobnosti najdete v tématu poznámky.
+Hodnota označující, jak zamknout řádek po jeho aktualizaci. Podrobnosti naleznete v tématu Poznámky.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud předáte hodnotu nula pro *wRow*, pak se aktualizuje každý řádek v sadě řádků.
+Pokud předáte hodnotu nula pro *wRow*, pak každý řádek v sadě řádků bude aktualizován.
 
-Chcete-li použít `RefreshRowset`, je nutné implementovat hromadné načítání řádků zadáním možnosti `CRecordset::useMulitRowFetch` v [otevřené](#open) členské funkci.
+Chcete-li použít `RefreshRowset`, musíte mít implementovat `CRecordset::useMulitRowFetch` hromadné načítání řádků zadáním možnosti v [otevřené](#open) členské funkce.
 
-`RefreshRowset` volá funkci rozhraní ODBC API `SQLSetPos`. Parametr *wLockType* určuje stav zámku řádku po provedení `SQLSetPos`. Následující tabulka popisuje možné hodnoty pro *wLockType*.
+`RefreshRowset`volá funkci `SQLSetPos`ROZHRANÍ API ROZHRANÍ ODBC . Parametr *wLockType* určuje stav zámku řádku `SQLSetPos` po provedení. Následující tabulka popisuje možné hodnoty pro *wLockType*.
 
 |wLockType|Popis|
 |---------------|-----------------|
-|SQL_LOCK_NO_CHANGE (výchozí hodnota)|Ovladač nebo zdroj dat zajišťuje, že řádek je ve stejném uzamčeném nebo odemčeném stavu, jako by byl zavolán `RefreshRowset`.|
-|SQL_LOCK_EXCLUSIVE|Ovladač nebo zdroj dat zamkne řádek výhradně. Ne všechny zdroje dat podporují tento typ zámku.|
+|SQL_LOCK_NO_CHANGE (výchozí hodnota)|Ovladač nebo zdroj dat zajišťuje, že řádek je ve stejném uzamčeném nebo odemčeném stavu, jako tomu bylo předtím. `RefreshRowset`|
+|SQL_LOCK_EXCLUSIVE|Ovladač nebo zdroj dat uzamkne řádek výhradně. Ne všechny zdroje dat podporují tento typ zámku.|
 |SQL_LOCK_UNLOCK|Ovladač nebo zdroj dat odemkne řádek. Ne všechny zdroje dat podporují tento typ zámku.|
 
-Další informace o `SQLSetPos`najdete v Windows SDK. Další informace o hromadném načítání řádků naleznete v článku [Sada záznamů: hromadné načítání záznamů (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+Další informace `SQLSetPos`o aplikaci naleznete v souboru Windows SDK. Další informace o hromadném načítání řádků naleznete v článku [Sada záznamů: Hromadné načítání záznamů (ODBC).](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)
 
-##  <a name="requery"></a>CRecordset:: Requery
+## <a name="crecordsetrequery"></a><a name="requery"></a>CRecordset::Requery
 
-Znovu sestaví (aktualizuje) sadu záznamů.
+Znovu vytvoří (aktualizuje) sadu záznamů.
 
 ```
 virtual BOOL Requery();
@@ -1657,30 +1657,30 @@ virtual BOOL Requery();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud byla sada záznamů úspěšně znovu sestavena; v opačném případě 0.
+Nenulová, pokud byla sada záznamů úspěšně znovu sestavena; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
 Jsou-li vráceny jakékoli záznamy, první záznam se stává aktuálním záznamem.
 
-Aby sada záznamů odrážela přidávání a odstraňování, které jste vy nebo jiní uživatelé nastavili na zdroj dat, je nutné sadu záznamů znovu sestavit voláním `Requery`. Pokud sada záznamů je dynamická sada, automaticky odrážejí aktualizace, které vy nebo jiní uživatelé provedete, do svých stávajících záznamů (ale ne přidaných). Pokud je sada záznamů snímkem, je nutné volat `Requery`, aby odrážela úpravy provedené jinými uživateli, a také přidání a odstranění.
+Aby sada záznamů odrážela dodatky a odstranění, které vy nebo jiní uživatelé provádíte do `Requery`zdroje dat, je nutné znovu vytvořit sadu záznamů voláním . Pokud je sada záznamů dynaset, automaticky odráží aktualizace, které vy nebo jiní uživatelé provedete s existujícími záznamy (ale ne s dodatky). Pokud je sada záznamů snímek, `Requery` musíte volat tak, aby odrážely úpravy ostatních uživatelů a také doplňky a odstranění.
 
-V případě dynamické sady nebo snímku volejte `Requery` kdykoli chcete sadu záznamů znovu sestavit pomocí nového filtru nebo řazení, nebo hodnot nového parametru. Nastavte novou vlastnost Filter nebo Sort přiřazením nových hodnot `m_strFilter` a `m_strSort` před voláním `Requery`. Před voláním `Requery`nastavte nové parametry přiřazením nových hodnot datovým členům parametru. Pokud se řetězce filtru a řazení nezměnily, můžete použít dotaz, který zvyšuje výkon.
+Pro dynaset nebo snímek `Requery` volejte kdykoli, kdy chcete znovu sestavit sadu záznamů pomocí nového filtru nebo řazení nebo nových hodnot parametrů. Nastavte novou vlastnost filtru nebo řazení přiřazením `m_strSort` nových `Requery`hodnot `m_strFilter` a před voláním . Před voláním `Requery`nastavte nové parametry přiřazením nových hodnot datovým členům parametrů . Pokud jsou řetězce filtru a řazení nezměněny, můžete dotaz znovu použít, což zvyšuje výkon.
 
-Pokud se pokus o opětovné sestavení sady záznamů nezdaří, sada záznamů je zavřena. Před voláním `Requery`můžete určit, zda lze sadu záznamů znovu dotazovat voláním členské funkce `CanRestart`. `CanRestart` nezaručuje, že `Requery` bude úspěšná.
+Pokud se pokus o znovusestavení sady záznamů nezdaří, sada záznamů je uzavřena. Před voláním `Requery`můžete určit, zda lze sadu záznamů znovu `CanRestart` dotazovat voláním členské funkce. `CanRestart`nezaručuje, `Requery` že bude úspěšná.
 
 > [!CAUTION]
->  Volání `Requery` až po volání metody [Open](#open).
+> Volat `Requery` až po volání [Otevřít](#open).
 
 ### <a name="example"></a>Příklad
 
-V tomto příkladu je znovu sestavena sada záznamů, aby bylo možné použít jiné pořadí řazení.
+Tento příklad znovu vytvoří sadu záznamů a použije jiné pořadí řazení.
 
 [!code-cpp[NVC_MFCDatabase#29](../../mfc/codesnippet/cpp/crecordset-class_16.cpp)]
 
-##  <a name="setabsoluteposition"></a>CRecordset:: SetAbsolutePosition
+## <a name="crecordsetsetabsoluteposition"></a><a name="setabsoluteposition"></a>CRecordset::Nastavitabsoluteposition
 
-Umístí sadu záznamů na záznamu odpovídající zadanému číslu záznamu.
+Umístí sadu záznamů na záznam odpovídající zadanému číslu záznamu.
 
 ```
 void SetAbsolutePosition(long nRows);
@@ -1688,28 +1688,28 @@ void SetAbsolutePosition(long nRows);
 
 ### <a name="parameters"></a>Parametry
 
-*Hodnota nRows*<br/>
-Pořadové místo na základě jedné položky pro aktuální záznam v sadě záznamů.
+*nŘádky*<br/>
+Jednomístná ordinální pozice pro aktuální záznam v sadě záznamů.
 
 ### <a name="remarks"></a>Poznámky
 
-`SetAbsolutePosition` přesune aktuální ukazatel záznamu na základě této řadové pozice.
+`SetAbsolutePosition`přesune ukazatel aktuálního záznamu na základě této ordinální polohy.
 
 > [!NOTE]
->  Tato členská funkce není platná pro sady záznamů s dopředné jen pro čtení.
+> Tato členská funkce není platná pro sady záznamů pouze pro předávání.
 
-Pro sady záznamů rozhraní ODBC, absolutní pozice nastavení 1 odkazuje na první záznam v sadě záznamů; nastavení 0 odkazuje na pozici začátku souboru (BOF).
+U sad záznamů ROZHRANÍ ODBC odkazuje nastavení absolutní polohy 1 na první záznam v sadě záznamů; nastavení 0 odkazuje na pozici začátku souboru (BOF).
 
-Můžete také předat záporné hodnoty `SetAbsolutePosition`. V tomto případě je pozice sady záznamů vyhodnocena z konce sady záznamů. Například `SetAbsolutePosition( -1 )` přesune ukazatel na aktuální záznam na poslední záznam v sadě záznamů.
+Záporné hodnoty můžete `SetAbsolutePosition`také předat . V tomto případě je pozice sady záznamů vyhodnocena od konce sady záznamů. Například `SetAbsolutePosition( -1 )` přesune ukazatel aktuálního záznamu na poslední záznam v sadě záznamů.
 
 > [!NOTE]
->  Absolutní pozice není určena k použití jako náhradní číslo záznamu. Záložky jsou stále doporučeným způsobem zachování a návratu na danou pozici, protože pozice záznamu se mění při odstranění předcházejících záznamů. Kromě toho nemůžete mít jistotu, že daný záznam bude mít stejné absolutní umístění, pokud je znovu znovu vytvořena sada záznamů, protože pořadí jednotlivých záznamů v rámci sady záznamů není zaručeno, pokud není vytvořeno pomocí příkazu jazyka SQL pomocí klauzule **ORDER by** .
+> Absolutní pozice není určena k použití jako náhradní číslo záznamu. Záložky jsou stále doporučeným způsobem, jak zachovat a vrátit se na danou pozici, protože pozice záznamu se změní při odstranění předchozích záznamů. Kromě toho si nemůžete být jisti, že daný záznam bude mít stejnou absolutní pozici, pokud je sada záznamů znovu vytvořena, protože pořadí jednotlivých záznamů v rámci sady záznamů není zaručeno, pokud není vytvořeno pomocí příkazu SQL pomocí klauzule **ORDER BY.**
 
-Další informace o navigaci a záložkách sady záznamů naleznete v článcích [Sada záznamů: posouvání (ODBC)](../../data/odbc/recordset-scrolling-odbc.md) a [Sada záznamů: záložky a absolutní umístění (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md).
+Další informace o navigaci a záložkách sady záznamů naleznete v článcích [Sada záznamů: Scrolling (ODBC)](../../data/odbc/recordset-scrolling-odbc.md) a [Recordset: Záložky a Absolutní pozice (ODBC).](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md)
 
-##  <a name="setbookmark"></a>CRecordset:: SetBookmark
+## <a name="crecordsetsetbookmark"></a><a name="setbookmark"></a>CRecordset::SetBookmark
 
-Umístí sadu záznamů na záznam, který obsahuje zadanou záložku.
+Umístí sadu záznamů na záznam obsahující zadanou záložku.
 
 ```
 void SetBookmark(const CDBVariant& varBookmark);
@@ -1718,25 +1718,25 @@ void SetBookmark(const CDBVariant& varBookmark);
 ### <a name="parameters"></a>Parametry
 
 *varBookmark*<br/>
-Odkaz na objekt [CDBVariant –](../../mfc/reference/cdbvariant-class.md) obsahující hodnotu záložky pro konkrétní záznam.
+Odkaz na objekt [CDBVariant](../../mfc/reference/cdbvariant-class.md) obsahující hodnotu záložky pro určitý záznam.
 
 ### <a name="remarks"></a>Poznámky
 
-Chcete-li zjistit, zda jsou záložky v sadě záznamů podporovány, zavolejte [CanBookmark](#canbookmark). Chcete-li zpřístupnit záložky, pokud jsou podporovány, je nutné nastavit možnost `CRecordset::useBookmarks` v parametru *dwOptions* pro [otevřenou](#open) členskou funkci.
+Chcete-li zjistit, zda jsou záložky v sadě záznamů podporovány, zavolejte [CanBookmark](#canbookmark). Chcete-li záložky zpřístupnit, pokud jsou `CRecordset::useBookmarks` podporovány, musíte nastavit možnost v parametru *dwOptions* členské funkce [Otevřít.](#open)
 
 > [!NOTE]
->  Pokud záložky nejsou podporovány nebo nejsou k dispozici, volání `SetBookmark` bude mít za následek vyvolanou výjimku. Záložky nejsou podporovány pro sady záznamů s dopřednou podporou.
+> Pokud záložky nejsou podporovány `SetBookmark` nebo nejsou k dispozici, volání bude mít za následek vyvolání výjimky. Záložky nejsou podporovány v sadách záznamů pouze pro předávání.
 
-Chcete-li nejprve načíst záložku pro aktuální záznam, zavolejte metodu [GetBookmark](#getbookmark), která uloží hodnotu záložky do objektu `CDBVariant`. Později se můžete vrátit k tomuto záznamu voláním `SetBookmark` s použitím uložené hodnoty záložky.
+Chcete-li nejprve načíst záložku pro aktuální záznam, zavolejte [GetBookmark](#getbookmark), který uloží hodnotu záložky do objektu. `CDBVariant` Později se můžete k tomuto záznamu vrátit voláním `SetBookmark` pomocí uložené hodnoty záložky.
 
 > [!NOTE]
->  Po určitých operacích sady záznamů byste měli před voláním `SetBookmark`ověřit zachování záložky. Například pokud načtete záložku s `GetBookmark` a potom zavoláte `Requery`, záložka již nemusí být platná. Voláním [CDatabase:: GetBookmarkPersistence](../../mfc/reference/cdatabase-class.md#getbookmarkpersistence) zkontrolujete, jestli můžete bezpečně volat `SetBookmark`.
+> Po určitých operacích sady záznamů byste měli `SetBookmark`před voláním zkontrolovat trvalost záložky . Pokud například načtete záložku `GetBookmark` s `Requery`a pak zavoláte , nemusí být již platná. Volání [CDatabase::GetBookmarkPersistence](../../mfc/reference/cdatabase-class.md#getbookmarkpersistence) zkontrolovat, zda `SetBookmark`můžete bezpečně volat .
 
-Další informace o záložkách a navigaci v sadě záznamů naleznete v článcích [Sada záznamů: záložky a absolutní umístění (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md) a [Sada záznamů: posouvání (ODBC)](../../data/odbc/recordset-scrolling-odbc.md).
+Další informace o záložkách a navigaci v sadě záznamů naleznete v článcích [Sada záznamů: Záložky a absolutní pozice (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md) a [Sada záznamů: Posouvání (ODBC).](../../data/odbc/recordset-scrolling-odbc.md)
 
-##  <a name="setfielddirty"></a>CRecordset:: SetFieldDirty
+## <a name="crecordsetsetfielddirty"></a><a name="setfielddirty"></a>CRecordset::SetFieldDirty
 
-Označí datový člen pole sady záznamů jako změněný nebo beze změny.
+Označí datového člena pole sady záznamů jako změněného nebo nezměněného.
 
 ```
 void SetFieldDirty(void* pv, BOOL bDirty = TRUE);
@@ -1744,39 +1744,39 @@ void SetFieldDirty(void* pv, BOOL bDirty = TRUE);
 
 ### <a name="parameters"></a>Parametry
 
-*PV*<br/>
-Obsahuje adresu datového člena pole v sadě záznamů nebo hodnotu NULL. Pokud je NULL, všechna pole datových členů v sadě záznamů jsou označena příznakem. (C++ Hodnota null není shodná s hodnotou null v terminologii databáze, což znamená "nemá žádnou hodnotu.")
+*Pv*<br/>
+Obsahuje adresu datového člena pole v sadě záznamů nebo null. Pokud null, jsou označeny všechny členy dat pole v sadě záznamů. (C++ NULL není stejný jako Null v databázi terminologie, což znamená "bez hodnoty.")
 
 *bDirty*<br/>
-TRUE, pokud má datový člen pole označení "dirty" (změněno). Jinak FALSE, pokud datový člen pole musí být označen jako "vyčistit" (beze změny).
+PRAVDA, pokud má být datový člen pole označen jako "dirty" (změněn). Jinak FALSE, pokud člen dat pole má být označen jako "čistý" (beze změny).
 
 ### <a name="remarks"></a>Poznámky
 
-Označení polí jako nezměněné zajistí, že se pole neaktualizuje a výsledkem je méně přenosů SQL.
+Označení polí jako nezměněných zajišťuje, že pole nebude aktualizováno a výsledkem bude méně provozu SQL.
 
 > [!NOTE]
->  Tato členská funkce se nedá použít pro sady záznamů, které používají hromadné načítání řádků. Pokud jste implementovali hromadné načítání řádků, pak `SetFieldDirty` způsobí selhání kontrolního výrazu. Další informace o hromadném načítání řádků naleznete v článku [Sada záznamů: hromadné načítání záznamů (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+> Tato členská funkce není použitelná u sad záznamů, které používají hromadné načítání řádků. Pokud jste implementovali hromadné načítání `SetFieldDirty` řádků, bude výsledkem neúspěšná kontrolní skupina. Další informace o hromadném načítání řádků naleznete v článku [Sada záznamů: Hromadné načítání záznamů (ODBC).](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)
 
-Rozhraní označuje změněné datové členy pole tak, aby se zajistilo jejich zápis do záznamu ve zdroji dat pomocí mechanismu výměny pole záznamu (RFX). Změna hodnoty pole obvykle automaticky nastaví pole jako chybné, takže nebudete muset volat `SetFieldDirty` sami, ale někdy budete chtít zajistit, aby se sloupce explicitně aktualizovaly nebo vložily bez ohledu na to, jaká hodnota je v datovém členu pole.
+Rámcové značky změnily datové členy pole, aby bylo zajištěno, že budou zapsány do záznamu ve zdroji dat mechanismem výměny pole záznamu (RFX). Změna hodnoty pole obvykle nastaví pole dirty automaticky, takže `SetFieldDirty` budete zřídka muset volat sami sebe, ale někdy můžete chtít zajistit, že sloupce budou explicitně aktualizovány nebo vloženy bez ohledu na to, jaká hodnota je v datovém členu pole.
 
 > [!CAUTION]
->  Tuto členskou funkci volejte až poté, co jste volali [Edit](#edit) nebo [AddNew](#addnew).
+> Volání této členské funkce až po volání [Upravit](#edit) nebo [Přidatnový](#addnew).
 
-Použití hodnoty NULL pro první argument funkce bude používat funkci pouze pro `outputColumn` pole, nikoli `param` polí. Například volání
+Použití null pro první argument funkce bude používat `outputColumn` funkci `param` pouze pro pole, nikoli pole. Například volání
 
 [!code-cpp[NVC_MFCDatabase#26](../../mfc/codesnippet/cpp/crecordset-class_10.cpp)]
 
-nastaví pouze `outputColumn` pole na hodnotu NULL; `param` pole nebudou nijak ovlivněna.
+nastaví `outputColumn` pouze pole na hodnotu NULL; `param` pole nebudou ovlivněna.
 
-Chcete-li pracovat s `param` poli, je nutné dodat skutečnou adresu jednotlivých `param`, na kterých chcete pracovat, například:
+Chcete-li `param` pracovat na polích, musíte `param` zadat skutečnou adresu osoby, na které chcete pracovat, například:
 
 [!code-cpp[NVC_MFCDatabase#27](../../mfc/codesnippet/cpp/crecordset-class_11.cpp)]
 
-To znamená, že nemůžete nastavit všechna `param` pole na hodnotu NULL, stejně jako u polí `outputColumn`.
+To znamená, že `param` nelze nastavit všechna pole `outputColumn` na hodnotu NULL, stejně jako u polí.
 
-##  <a name="setfieldnull"></a>CRecordset:: SetFieldNull
+## <a name="crecordsetsetfieldnull"></a><a name="setfieldnull"></a>CRecordset::SetFieldNull
 
-Označí datový člen pole sady záznamů jako null (konkrétně bez hodnoty) nebo jako jiný než null.
+Označí datového člena pole sady záznamů jako null (konkrétně bez hodnoty) nebo jako nenulový.
 
 ```
 void SetFieldNull(void* pv, BOOL bNull = TRUE);
@@ -1784,44 +1784,44 @@ void SetFieldNull(void* pv, BOOL bNull = TRUE);
 
 ### <a name="parameters"></a>Parametry
 
-*PV*<br/>
-Obsahuje adresu datového člena pole v sadě záznamů nebo hodnotu NULL. Pokud je NULL, všechna pole datových členů v sadě záznamů jsou označena příznakem. (C++ Hodnota null není shodná s hodnotou null v terminologii databáze, což znamená "nemá žádnou hodnotu.")
+*Pv*<br/>
+Obsahuje adresu datového člena pole v sadě záznamů nebo null. Pokud null, jsou označeny všechny členy dat pole v sadě záznamů. (C++ NULL není stejný jako Null v databázi terminologie, což znamená "bez hodnoty.")
 
 *bNull*<br/>
-Nenulová, pokud má datový člen pole označení bez hodnoty (null). V opačném případě 0, pokud má datový člen pole označení příznakem jako jiný než null.
+Nenulová, pokud má být datový člen pole označen jako neoznačený jako bez hodnoty (Null). V opačném případě 0, pokud má být datový člen pole označen jako nenulový.
 
 ### <a name="remarks"></a>Poznámky
 
-Když přidáte nový záznam do sady záznamů, všechna pole datových členů jsou zpočátku nastavena na hodnotu null a označena jako "dirtá" (změna). Když načtete záznam ze zdroje dat, jeho sloupce buď již mají hodnoty, nebo mají hodnotu null.
+Když přidáte nový záznam do sady záznamů, všechny datové členy pole jsou zpočátku nastaveny na hodnotu Null a označeny jako "dirty" (změněno). Při načtení záznamu ze zdroje dat jeho sloupce již mají hodnoty nebo jsou null.
 
 > [!NOTE]
->  Nevolejte tuto členskou funkci na sady záznamů, které používají hromadné načítání řádků. Pokud jste implementovali hromadné načítání řádků, volání `SetFieldNull` vede v neúspěšném kontrolním výrazu. Další informace o hromadném načítání řádků naleznete v článku [Sada záznamů: hromadné načítání záznamů (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+> Nevolejte tuto člennou funkci na sadách záznamů, které používají hromadné načítání řádků. Pokud jste implementovali hromadné načítání `SetFieldNull` řádků, volání výsledků v kontrolním výrazu se nezdařilo. Další informace o hromadném načítání řádků naleznete v článku [Sada záznamů: Hromadné načítání záznamů (ODBC).](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)
 
-Pokud chcete určit pole aktuálního záznamu, které nemá hodnotu, zavolejte `SetFieldNull` s *bNull* nastavenou na hodnotu true, abyste označili hodnotu null. Pokud pole již bylo označeno jako null a nyní chcete dát hodnotu, stačí nastavit novou hodnotu. Nemusíte odebírat příznak null s `SetFieldNull`. Chcete-li zjistit, zda je pole povoleno mít hodnotu null, zavolejte `IsFieldNullable`.
+Pokud konkrétně chcete určit pole aktuálního záznamu jako pole, `SetFieldNull` které nemá hodnotu, volání s *hodnotou bNull* nastavenou na HODNOTU TRUE, která jej označí jako null. Pokud bylo pole dříve označeno jako null a nyní chcete mu přidělit hodnotu, jednoduše nastavte jeho novou hodnotu. Není třeba odebrat příznak Null `SetFieldNull`s . Chcete-li zjistit, zda je povoleno `IsFieldNullable`mít pole hodnotu Null, volejte .
 
 > [!CAUTION]
->  Tuto členskou funkci volejte až poté, co jste volali [Edit](#edit) nebo [AddNew](#addnew).
+> Volání této členské funkce až po volání [Upravit](#edit) nebo [Přidatnový](#addnew).
 
-Použití hodnoty NULL pro první argument funkce bude používat funkci pouze pro `outputColumn` pole, nikoli `param` polí. Například volání
+Použití null pro první argument funkce bude používat `outputColumn` funkci `param` pouze pro pole, nikoli pole. Například volání
 
 [!code-cpp[NVC_MFCDatabase#26](../../mfc/codesnippet/cpp/crecordset-class_10.cpp)]
 
-nastaví pouze `outputColumn` pole na hodnotu NULL; `param` pole nebudou nijak ovlivněna.
+nastaví `outputColumn` pouze pole na hodnotu NULL; `param` pole nebudou ovlivněna.
 
-Chcete-li pracovat s `param` poli, je nutné dodat skutečnou adresu jednotlivých `param`, na kterých chcete pracovat, například:
+Chcete-li `param` pracovat na polích, musíte `param` zadat skutečnou adresu osoby, na které chcete pracovat, například:
 
 [!code-cpp[NVC_MFCDatabase#27](../../mfc/codesnippet/cpp/crecordset-class_11.cpp)]
 
-To znamená, že nemůžete nastavit všechna `param` pole na hodnotu NULL, stejně jako u polí `outputColumn`.
+To znamená, že `param` nelze nastavit všechna pole `outputColumn` na hodnotu NULL, stejně jako u polí.
 
 > [!NOTE]
->  Při nastavování parametrů na hodnotu null, volání `SetFieldNull` před otevřením sady záznamů je výsledkem kontrolního výrazu. V tomto případě zavolejte [SetParamNull](#setparamnull).
+> Při nastavování parametrů na `SetFieldNull` hodnotu Null má volání před otevřením sady záznamů za následek kontrolní výraz. V tomto případě volejte [SetParamNull](#setparamnull).
 
-`SetFieldNull` je implementována prostřednictvím [DoFieldExchange](#dofieldexchange).
+`SetFieldNull`je implementována prostřednictvím [DoFieldExchange](#dofieldexchange).
 
-##  <a name="setlockingmode"></a>CRecordset:: SetLockingMode
+## <a name="crecordsetsetlockingmode"></a><a name="setlockingmode"></a>CRecordset::SetLockingMode
 
-Nastaví režim uzamykání na "optimistické" zamykání (výchozí) nebo "pesimistické" zamykání. Určuje způsob uzamčení záznamů pro aktualizace.
+Nastaví režim zamykání na "optimistické" zamykání (výchozí) nebo "pesimistické" zamykání. Určuje, jak jsou záznamy uzamčeny pro aktualizace.
 
 ```
 void SetLockingMode(UINT nMode);
@@ -1829,20 +1829,20 @@ void SetLockingMode(UINT nMode);
 
 ### <a name="parameters"></a>Parametry
 
-*nMode*<br/>
+*nRežim*<br/>
 Obsahuje jednu z následujících hodnot z `enum LockMode`:
 
-- `optimistic` optimistické zamykání zamkne záznam, který se aktualizuje pouze během volání `Update`.
+- `optimistic`Optimistické zamykání uzamkne `Update`záznam aktualizovaný pouze během volání do .
 
-- `pessimistic` pesimistické zamykání uzamkne záznam hned po volání `Edit` a zůstane uzamčeno, dokud se neukončí volání `Update` nebo dokud nepřejdete na nový záznam.
+- `pessimistic`Pesimistické zamykání `Edit` uzamkne záznam, `Update` jakmile je voláno, a zachová jej uzamčený, dokud se hovor nedokončí nebo nepřesunete na nový záznam.
 
 ### <a name="remarks"></a>Poznámky
 
-Tuto členskou funkci volejte, pokud potřebujete určit, které ze dvou strategií zamykání záznamů se sada záznamů používá pro aktualizace. Ve výchozím nastavení je režim uzamykání sady záznamů `optimistic`. Můžete ji změnit na přísnější `pessimistic` strategii zamykání. Po sestavení a otevření objektu sady záznamů zavolejte `SetLockingMode`, ale před voláním `Edit`.
+Volání této členské funkce, pokud potřebujete určit, které ze dvou strategií zamykání záznamů sada záznamů používá pro aktualizace. Ve výchozím nastavení je `optimistic`režim uzamčení sady záznamů . Můžete to změnit na `pessimistic` opatrnější strategii zamykání. Volání `SetLockingMode` po vytvoření a otevření objektu sady `Edit`záznamů, ale před voláním .
 
-##  <a name="setparamnull"></a>CRecordset:: SetParamNull
+## <a name="crecordsetsetparamnull"></a><a name="setparamnull"></a>CRecordset::SetParamNull
 
-Označí parametr jako null (konkrétně bez hodnoty) nebo jako jiný než null.
+Označí parametr jako Null (konkrétně bez hodnoty) nebo jako non-Null.
 
 ```
 void SetParamNull(
@@ -1853,18 +1853,18 @@ void SetParamNull(
 ### <a name="parameters"></a>Parametry
 
 *nIndex*<br/>
-Index parametru založený na nule.
+Nula na základě indexu parametru.
 
 *bNull*<br/>
-Pokud je hodnota TRUE (výchozí hodnota), parametr je označen jako null. V opačném případě je parametr označen jako jiný než null.
+Pokud true (výchozí hodnota), parametr je označen jako Null. V opačném případě je parametr označen jako non-Null.
 
 ### <a name="remarks"></a>Poznámky
 
-Na rozdíl od [SetFieldNull](#setfieldnull)můžete volat `SetParamNull` před otevřením sady záznamů.
+Na rozdíl od [SetFieldNull](#setfieldnull), můžete volat `SetParamNull` před otevřením sady záznamů.
 
-`SetParamNull` se obvykle používá s předdefinovanými dotazy (uložené procedury).
+`SetParamNull`se obvykle používá s předdefinovanými dotazy (uložené procedury).
 
-##  <a name="setrowsetcursorposition"></a>CRecordset:: SetRowsetCursorPosition
+## <a name="crecordsetsetrowsetcursorposition"></a><a name="setrowsetcursorposition"></a>CRecordset::SetRowsetCursorPosition
 
 Přesune kurzor na řádek v rámci aktuální sady řádků.
 
@@ -1874,29 +1874,29 @@ void SetRowsetCursorPosition(WORD wRow, WORD wLockType = SQL_LOCK_NO_CHANGE);
 
 ### <a name="parameters"></a>Parametry
 
-*wRow*<br/>
-Pozice na jednom řádku v aktuální sadě řádků. Tato hodnota může být v rozsahu od 1 do velikosti sady řádků.
+*wŘádek*<br/>
+Jednomístná pozice řádku v aktuální sadě řádků. Tato hodnota může být v rozsahu od 1 do velikosti sady řádků.
 
 *wLockType*<br/>
-Hodnota označující, jak se má řádek po obnovení uzamknout Podrobnosti najdete v tématu poznámky.
+Hodnota označující, jak zamknout řádek po jeho aktualizaci. Podrobnosti naleznete v tématu Poznámky.
 
 ### <a name="remarks"></a>Poznámky
 
-Při implementaci hromadného načítání řádků jsou záznamy načteny sadou řádků, kde první záznam v načtené sadě řádků je aktuální záznam. Chcete-li vytvořit jiný záznam v rámci sady řádků v aktuálním záznamu, zavolejte `SetRowsetCursorPosition`. Můžete například zkombinovat `SetRowsetCursorPosition` s členskou funkcí [GetFieldValue –](#getfieldvalue) k dynamickému načtení dat z libovolného záznamu vaší sady záznamů.
+Při implementaci hromadného načítání řádků jsou záznamy načteny sadami řádků, kde první záznam v načtené sadě řádků je aktuální záznam. Chcete-li vytvořit další záznam v rámci sady `SetRowsetCursorPosition`řádků aktuální záznam, volejte . Můžete například kombinovat `SetRowsetCursorPosition` s člennou funkcí [GetFieldValue](#getfieldvalue) a dynamicky načíst data z libovolného záznamu vaší sady záznamů.
 
-Chcete-li použít `SetRowsetCursorPosition`, je nutné implementovat hromadné načítání řádků zadáním možnosti `CRecordset::useMultiRowFetch` parametru *dwOptions* v [otevřené](#open) členské funkci.
+`SetRowsetCursorPosition`Chcete-li použít , musíte mít implementovány `CRecordset::useMultiRowFetch` hromadné načítání řádků zadáním *možnosti dwOptions* parametr v [Open](#open) členské funkce.
 
-`SetRowsetCursorPosition` volá funkci rozhraní ODBC API `SQLSetPos`. Parametr *wLockType* určuje stav zámku řádku po provedení `SQLSetPos`. Následující tabulka popisuje možné hodnoty pro *wLockType*.
+`SetRowsetCursorPosition`volá funkci `SQLSetPos`ROZHRANÍ API ROZHRANÍ ODBC . Parametr *wLockType* určuje stav zámku řádku `SQLSetPos` po provedení. Následující tabulka popisuje možné hodnoty pro *wLockType*.
 
 |wLockType|Popis|
 |---------------|-----------------|
-|SQL_LOCK_NO_CHANGE (výchozí hodnota)|Ovladač nebo zdroj dat zajišťuje, že řádek je ve stejném uzamčeném nebo odemčeném stavu, jako by byl zavolán `SetRowsetCursorPosition`.|
-|SQL_LOCK_EXCLUSIVE|Ovladač nebo zdroj dat zamkne řádek výhradně. Ne všechny zdroje dat podporují tento typ zámku.|
+|SQL_LOCK_NO_CHANGE (výchozí hodnota)|Ovladač nebo zdroj dat zajišťuje, že řádek je ve stejném uzamčeném nebo odemčeném stavu, jako tomu bylo předtím. `SetRowsetCursorPosition`|
+|SQL_LOCK_EXCLUSIVE|Ovladač nebo zdroj dat uzamkne řádek výhradně. Ne všechny zdroje dat podporují tento typ zámku.|
 |SQL_LOCK_UNLOCK|Ovladač nebo zdroj dat odemkne řádek. Ne všechny zdroje dat podporují tento typ zámku.|
 
-Další informace o `SQLSetPos`najdete v Windows SDK. Další informace o hromadném načítání řádků naleznete v článku [Sada záznamů: hromadné načítání záznamů (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+Další informace `SQLSetPos`o aplikaci naleznete v souboru Windows SDK. Další informace o hromadném načítání řádků naleznete v článku [Sada záznamů: Hromadné načítání záznamů (ODBC).](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)
 
-##  <a name="setrowsetsize"></a>CRecordset:: SetRowsetSize
+## <a name="crecordsetsetrowsetsize"></a><a name="setrowsetsize"></a>CRecordset::SetRowsetSize
 
 Určuje počet záznamů, které chcete načíst během načítání.
 
@@ -1906,28 +1906,28 @@ virtual void SetRowsetSize(DWORD dwNewRowsetSize);
 
 ### <a name="parameters"></a>Parametry
 
-*dwNewRowsetSize*<br/>
-Počet řádků, které mají být načteny během daného načtení.
+*dwNewRowsetVelikost*<br/>
+Počet řádků načíst během dané načtení.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato virtuální členská funkce určuje, kolik řádků chcete načíst během jednoho načtení při použití hromadného načítání řádků. Chcete-li implementovat hromadné načítání řádků, je nutné nastavit možnost `CRecordset::useMultiRowFetch` v parametru *dwOptions* pro [otevřenou](#open) členskou funkci.
+Tato virtuální členská funkce určuje, kolik řádků chcete načíst během jednoho načtení při použití hromadného načítání řádků. Chcete-li implementovat hromadné načítání `CRecordset::useMultiRowFetch` řádků, musíte nastavit možnost v parametru *dwOptions* členské funkce [Otevřít.](#open)
 
 > [!NOTE]
->  Volání `SetRowsetSize` bez implementace hromadného načtení řádku způsobí selhání kontrolního výrazu.
+> Volání `SetRowsetSize` bez implementace hromadného načítání řádků bude mít za následek kontrolní výraz, který se nezdařil.
 
-Před voláním `Open`, aby se původně nastavila velikost sady řádků pro sadu záznamů, volejte `SetRowsetSize`. Výchozí velikost sady řádků při implementaci hromadného načítání řádků je 25.
+Volání `SetRowsetSize` před `Open` voláním nejprve nastavit velikost sady řádků pro sadu záznamů. Výchozí velikost sady řádků při implementaci hromadného načítání řádků je 25.
 
 > [!NOTE]
->  Při volání `SetRowsetSize`buďte opatrní. Pokud ručně přiřazujete úložiště pro data (určené možností `CRecordset::userAllocMultiRowBuffers` parametru dwOptions v `Open`), měli byste ověřit, zda je nutné znovu přidělit tyto vyrovnávací paměti úložiště po volání `SetRowsetSize`, ale před provedením jakékoli operace navigace kurzoru.
+> Při volání `SetRowsetSize`buďte opatrní . Pokud ručně přidělujete úložiště pro data (jak `CRecordset::userAllocMultiRowBuffers` je určeno možností parametru dwOptions v aplikaci `Open`), měli byste `SetRowsetSize`zkontrolovat, zda je třeba tyto vyrovnávací paměti úložiště po volání přerozdělit , ale před provedením jakékoli operace navigace kurzorem.
 
-Chcete-li získat aktuální nastavení pro velikost sady řádků, zavolejte [GetRowsetSize](#getrowsetsize).
+Chcete-li získat aktuální nastavení pro velikost sady řádků, volejte [GetRowsetSize](#getrowsetsize).
 
-Další informace o hromadném načítání řádků naleznete v článku [Sada záznamů: hromadné načítání záznamů (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+Další informace o hromadném načítání řádků naleznete v článku [Sada záznamů: Hromadné načítání záznamů (ODBC).](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)
 
-##  <a name="update"></a>CRecordset:: Update
+## <a name="crecordsetupdate"></a><a name="update"></a>CRecordset::Aktualizovat
 
-Dokončí operaci `AddNew` nebo `Edit` uložením nových nebo upravených dat ve zdroji dat.
+Dokončí operaci `AddNew` `Edit` nebo operaci uložením nových nebo upravených dat do zdroje dat.
 
 ```
 virtual BOOL Update();
@@ -1935,27 +1935,27 @@ virtual BOOL Update();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud byl jeden záznam úspěšně aktualizován; v opačném případě 0, pokud se žádné sloupce nezměnily. Pokud nebyly aktualizovány žádné záznamy, nebo pokud byl aktualizován více než jeden záznam, je vyvolána výjimka. Výjimka je také vyvolána pro jakékoli jiné selhání ve zdroji dat.
+Nenulová, pokud byl jeden záznam úspěšně aktualizován; jinak 0, pokud se nezměnily žádné sloupce. Pokud nebyly aktualizovány žádné záznamy nebo pokud byl aktualizován více než jeden záznam, je vyvolána výjimka. Výjimka je také vyvolána pro jakékoli jiné selhání ve zdroji dat.
 
 ### <a name="remarks"></a>Poznámky
 
-Tuto členskou funkci volejte po volání metody [AddNew](#addnew) nebo [Edit](#edit) členské funkce. Toto volání je vyžadováno k dokončení operace `AddNew` nebo `Edit`.
+Volání této členské funkce po volání [přidatnové](#addnew) nebo [upravit](#edit) členské funkce. Toto volání je `AddNew` nutné `Edit` k dokončení operace nebo.
 
 > [!NOTE]
->  Pokud jste implementovali hromadné načítání řádků, nemůžete volat `Update`. Výsledkem bude selhání kontrolního výrazu. I když `CRecordset` třídy neposkytuje mechanismus pro aktualizaci hromadných řádků dat, můžete napsat vlastní funkce pomocí funkce rozhraní ODBC API `SQLSetPos`. Další informace o hromadném načítání řádků naleznete v článku [Sada záznamů: hromadné načítání záznamů (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+> Pokud jste implementovali hromadné načítání řádků, nelze volat `Update`. Výsledkem bude neúspěšný kontrolní výraz. Přestože `CRecordset` třída neposkytuje mechanismus pro aktualizaci hromadných řádků dat, můžete zapisovat vlastní funkce pomocí funkce `SQLSetPos`ROZHRANÍ API ROZHRANÍ ODBC . Další informace o hromadném načítání řádků naleznete v článku [Sada záznamů: Hromadné načítání záznamů (ODBC).](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)
 
-`AddNew` i `Edit` připraví upravenou vyrovnávací paměť, ve které jsou přidaná nebo upravená data umístěna k uložení do zdroje dat. `Update` uloží data. Aktualizují se pouze pole označená nebo zjištěná jako změněná.
+Obě `AddNew` `Edit` a připravit upravit vyrovnávací paměti, ve kterém jsou umístěny přidané nebo upravené data pro uložení do zdroje dat. `Update`uloží data. Aktualizována jsou pouze pole označená nebo zjištěná jako změněná.
 
-Pokud zdroj dat podporuje transakce, můžete uskutečnit `Update` volání (a odpovídající `AddNew` nebo volání `Edit`) část transakce. Další informace o transakcích naleznete v článku [transakce (ODBC)](../../data/odbc/transaction-odbc.md).
+Pokud zdroj dat podporuje transakce, můžete `Update` volání (a `AddNew` `Edit` jeho odpovídající nebo volání) součástí transakce. Další informace o transakcích naleznete v článku [Transakce (ODBC).](../../data/odbc/transaction-odbc.md)
 
 > [!CAUTION]
->  Pokud zavoláte `Update` bez prvního volání `AddNew` nebo `Edit`, `Update` vyvolá `CDBException`. Pokud voláte `AddNew` nebo `Edit`, je nutné volat `Update` před voláním operace `Move` nebo před zavřením buď sady záznamů nebo připojení ke zdroji dat. V opačném případě se vaše změny ztratí bez oznámení.
+> Pokud `Update` zavoláte bez `AddNew` předchozího volání buď nebo `Edit`, `Update` vyvolá . `CDBException` Pokud `AddNew` zavoláte `Edit`nebo , `Update` musíte zavolat před voláním `Move` operace nebo před zavření sady záznamů nebo připojení zdroje dat. V opačném případě budou změny ztraceny bez oznámení.
 
-Podrobnosti o zpracování selhání `Update` naleznete v článku [Sada záznamů: Jak sady záznamů aktualizují záznamy (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md).
+Podrobnosti o `Update` zpracování chyb naleznete v článku [Sada záznamů: Jak sady záznamů aktualizovat záznamy (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md).
 
 ### <a name="example"></a>Příklad
 
-Viz článek [transakce: provádění transakce v sadě záznamů (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md).
+Viz článek [Transakce: Provedení transakce v sadě záznamů (ODBC).](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)
 
 ## <a name="see-also"></a>Viz také
 

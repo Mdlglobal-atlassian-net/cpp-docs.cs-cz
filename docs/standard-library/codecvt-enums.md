@@ -1,23 +1,23 @@
 ---
-title: výčty &lt;codecvt&gt;
+title: '&lt;kodekové&gt; výčty'
 ms.date: 11/04/2016
 f1_keywords:
 - codecvt/std::codecvt_mode
 ms.assetid: 46a8b073-01bc-46d3-b3d3-a8540f9422c1
 helpviewer_keywords:
 - std::codecvt_mode
-ms.openlocfilehash: bbef1fe28c3321f06c0cc586062cd017168f8e73
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: e67290d8de0b8251191c4a93b66b7e19a293ed61
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79421924"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371943"
 ---
-# <a name="ltcodecvtgt-enums"></a>výčty &lt;codecvt&gt;
+# <a name="ltcodecvtgt-enums"></a>&lt;kodekové&gt; výčty
 
-## <a name="codecvt_mode"></a>Výčet codecvt_mode
+## <a name="codecvt_mode-enumeration"></a><a name="codecvt_mode"></a>codecvt_mode výčet
 
-Určuje informace o konfiguraci pro omezující vlastnosti [národního prostředí](../standard-library/locale-class.md) .
+Určuje informace o konfiguraci pro omezující [vlastnosti národního prostředí.](../standard-library/locale-class.md)
 
 ```cpp
 enum codecvt_mode {
@@ -29,16 +29,16 @@ enum codecvt_mode {
 
 ### <a name="remarks"></a>Poznámky
 
-Výčet definuje tři konstanty, které dodávají konfigurační informace do omezujících vlastností národního prostředí deklarované v [\<codecvt >](../standard-library/codecvt.md). Jedinečné hodnoty jsou:
+Výčet definuje tři konstanty, které poskytují informace o konfiguraci na národní prostředí omezující vlastnosti deklarované v [ \<codecvt>](../standard-library/codecvt.md). Odlišné hodnoty jsou:
 
-- `consume_header`pro použití počáteční sekvence hlavičky při čtení vícebajtové sekvence a určení endian pro následnou vícebajtovou sekvenci, která se má přečíst
+- `consume_header`, aby byla při čtení vícebajtové sekvence spotřebována počáteční sekvenci záhlaví a určila endianness následující vícebajtové sekvence, která má být přečtena
 
-- `generate_header`pro vygenerování počáteční sekvence hlavičky při zápisu vícebajtové sekvence pro inzerování endian následné vícebajtové sekvence, která se má zapsat
+- `generate_header`, chcete-li generovat počáteční sekvenci záhlaví při zápisu vícebajtové sekvence k inzerování endianness následné vícebajtové sekvence, která má být zapsána
 
-- `little_endian`, aby se vygenerovala vícebajtová sekvence v řádu Little-endian, na rozdíl od výchozí objednávky big-endian
+- `little_endian`, chcete-li generovat vícebajtovou sekvenci v pořadí little-endian, na rozdíl od výchozího pořadí big-endian
 
-Tyto konstanty je možné ORed společně v libovolných kombinacích.
+Tyto konstanty mohou být ORed společně v libovolné kombinace.
 
 ## <a name="see-also"></a>Viz také
 
-[\<codecvt >](../standard-library/codecvt.md)
+[\<kodek>](../standard-library/codecvt.md)

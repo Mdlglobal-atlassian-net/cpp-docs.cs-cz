@@ -1,5 +1,5 @@
 ---
-title: CRecentDockSiteInfo Class
+title: Třída CRecentDockSiteInfo
 ms.date: 11/04/2016
 f1_keywords:
 - CRecentDockSiteInfo
@@ -30,16 +30,16 @@ helpviewer_keywords:
 - CRecentDockSiteInfo [MFC], SetInfo
 - CRecentDockSiteInfo [MFC], StoreDockInfo
 ms.assetid: 2dd14f95-d5a2-4461-a7a5-2c6c36a3a165
-ms.openlocfilehash: 4a522d4dc88e7d1937ffa5b859aec32615939f21
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d2178881ea18f9dc5300bde838b01a516e6bb395
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62372163"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81370933"
 ---
-# <a name="crecentdocksiteinfo-class"></a>CRecentDockSiteInfo Class
+# <a name="crecentdocksiteinfo-class"></a>Třída CRecentDockSiteInfo
 
-`CRecentDockSiteInfo` Třída je pomocná třída, která ukládá nejnovější informace o stavu [cpane – třída](../../mfc/reference/cpane-class.md).
+Třída `CRecentDockSiteInfo` je pomocná třída, která ukládá nejnovější informace o stavu pro [třídu CPane](../../mfc/reference/cpane-class.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -51,15 +51,15 @@ class CRecentDockSiteInfo : public CObject
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
 |`CRecentDockSiteInfo::CRecentDockSiteInfo`|Výchozí konstruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CRecentDockSiteInfo::CleanUp](#cleanup)||
+|[CRecentDockSiteInfo::Vyčištění](#cleanup)||
 |[CRecentDockSiteInfo::GetRecentDefaultPaneDivider](#getrecentdefaultpanedivider)||
 |[CRecentDockSiteInfo::GetRecentDockedPercent](#getrecentdockedpercent)||
 |[CRecentDockSiteInfo::GetRecentDockedRect](#getrecentdockedrect)||
@@ -68,20 +68,20 @@ class CRecentDockSiteInfo : public CObject
 |[CRecentDockSiteInfo::GetRecentTabContainer](#getrecenttabcontainer)||
 |[CRecentDockSiteInfo::Init](#init)||
 |[CRecentDockSiteInfo::IsRecentLeftPane](#isrecentleftpane)||
-|[CRecentDockSiteInfo::operator =](#operator_eq)||
+|[CRecentDockSiteInfo::operátor =](#operator_eq)||
 |[CRecentDockSiteInfo::SaveListOfRecentPanes](#savelistofrecentpanes)||
 |[CRecentDockSiteInfo::SetInfo](#setinfo)||
 |[CRecentDockSiteInfo::StoreDockInfo](#storedockinfo)||
 
 ## <a name="remarks"></a>Poznámky
 
-`CRecentDockSiteInfo` Třídy je třída dat správy. Sleduje poslední stav `CPane` jako přechází mezi je ukotvena a s plovoucí desetinnou čárkou. Když uživatel dvakrát klikne na tlačítko s plovoucí desetinnou čárkou ukotvitelné podokno, ukotven. Dvojité kliknutí ukotvené podokno vrátí ji do jeho předchozího umístění, velikost a stavu. Podobně když je znovu ukotvené podokno vrátí do předchozího umístění ukotvení. Tato třída dat dělá, který je to možné. Protože členy této třídy obsahují informace o stavu pro ukotvené podokno, se nesmí upravovat přímo v aplikaci.
+Třída `CRecentDockSiteInfo` je třída správy dat. Sleduje poslední stav, `CPane` jak přechody mezi ukotvení a plovoucí. Když uživatel dvakrát klikne na plovoucí dokovatelné podokno, stane se ukotveným. Poklepáním na ukotvené podokno vrátí do jeho předchozí umístění, velikost a stav. Podobně, když je podokno znovu ukotveno, vrátí se do předchozího umístění ukotvení. Tato třída dat je to, co to umožňuje. Vzhledem k tomu, že členové této třídy ukládají informace o stavu pro ukotvené podokno, neměly by být přímo změněny vaší aplikací.
 
-A `CRecentDockSiteInfo` pokaždé, když se vytvoří podokno je vytvořen objekt. Každý `CPane` členské proměnné, má objekt [CPane::m_recentDockInfo](../../mfc/reference/cpane-class.md#m_recentdockinfo), k ukládání příslušných informací.
+Objekt `CRecentDockSiteInfo` je vytvořen při každém vytvoření podokna. Každý `CPane` objekt má členskou proměnnou [CPane::m_recentDockInfo](../../mfc/reference/cpane-class.md#m_recentdockinfo), aby tyto informace uložil.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObjekt](../../mfc/reference/cobject-class.md)
 
 [CRecentDockSiteInfo](../../mfc/reference/crecentdocksiteinfo-class.md)
 
@@ -89,7 +89,7 @@ A `CRecentDockSiteInfo` pokaždé, když se vytvoří podokno je vytvořen objek
 
 **Záhlaví:** afxrecentDockSiteInfo.h
 
-##  <a name="cleanup"></a>  CRecentDockSiteInfo::CleanUp
+## <a name="crecentdocksiteinfocleanup"></a><a name="cleanup"></a>CRecentDockSiteInfo::Vyčištění
 
 ```
 void CleanUp();
@@ -97,7 +97,7 @@ void CleanUp();
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="crecentdocksiteinfo"></a>  CRecentDockSiteInfo::CRecentDockSiteInfo
+## <a name="crecentdocksiteinfocrecentdocksiteinfo"></a><a name="crecentdocksiteinfo"></a>CRecentDockSiteInfo::CRecentDockSiteInfo
 
 ```
 CRecentDockSiteInfo(CPane* pBar);
@@ -105,11 +105,11 @@ CRecentDockSiteInfo(CPane* pBar);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pBar*<br/>
+[v] *pBar*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="getrecentdefaultpanedivider"></a>  CRecentDockSiteInfo::GetRecentDefaultPaneDivider
+## <a name="crecentdocksiteinfogetrecentdefaultpanedivider"></a><a name="getrecentdefaultpanedivider"></a>CRecentDockSiteInfo::GetRecentDefaultPaneDivider
 
 ```
 CPaneDivider* GetRecentDefaultPaneDivider();
@@ -119,7 +119,7 @@ CPaneDivider* GetRecentDefaultPaneDivider();
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="getrecentdockedpercent"></a>  CRecentDockSiteInfo::GetRecentDockedPercent
+## <a name="crecentdocksiteinfogetrecentdockedpercent"></a><a name="getrecentdockedpercent"></a>CRecentDockSiteInfo::GetRecentDockedPercent
 
 ```
 int GetRecentDockedPercent(BOOL bForSlider);
@@ -127,13 +127,13 @@ int GetRecentDockedPercent(BOOL bForSlider);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *bForSlider*<br/>
+[v] *bForSlider*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="getrecentdockedrect"></a>  CRecentDockSiteInfo::GetRecentDockedRect
+## <a name="crecentdocksiteinfogetrecentdockedrect"></a><a name="getrecentdockedrect"></a>CRecentDockSiteInfo::GetRecentDockedRect
 
 ```
 CRect& GetRecentDockedRect(BOOL bForSlider);
@@ -141,13 +141,13 @@ CRect& GetRecentDockedRect(BOOL bForSlider);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *bForSlider*<br/>
+[v] *bForSlider*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="getrecentlistofpanes"></a>  CRecentDockSiteInfo::GetRecentListOfPanes
+## <a name="crecentdocksiteinfogetrecentlistofpanes"></a><a name="getrecentlistofpanes"></a>CRecentDockSiteInfo::GetRecentListOfPanes
 
 ```
 CList<HWND, HWND>& GetRecentListOfPanes(BOOL bForSlider);
@@ -155,13 +155,13 @@ CList<HWND, HWND>& GetRecentListOfPanes(BOOL bForSlider);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *bForSlider*<br/>
+[v] *bForSlider*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="getrecentpanecontainer"></a>  CRecentDockSiteInfo::GetRecentPaneContainer
+## <a name="crecentdocksiteinfogetrecentpanecontainer"></a><a name="getrecentpanecontainer"></a>CRecentDockSiteInfo::GetRecentPaneContainer
 
 ```
 CPaneContainer* GetRecentPaneContainer(BOOL bForSlider);
@@ -169,13 +169,13 @@ CPaneContainer* GetRecentPaneContainer(BOOL bForSlider);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *bForSlider*<br/>
+[v] *bForSlider*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="getrecenttabcontainer"></a>  CRecentDockSiteInfo::GetRecentTabContainer
+## <a name="crecentdocksiteinfogetrecenttabcontainer"></a><a name="getrecenttabcontainer"></a>CRecentDockSiteInfo::GetRecentTabContainer
 
 ```
 CPaneContainer* GetRecentTabContainer(BOOL bForSlider);
@@ -183,13 +183,13 @@ CPaneContainer* GetRecentTabContainer(BOOL bForSlider);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *bForSlider*<br/>
+[v] *bForSlider*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="init"></a>  CRecentDockSiteInfo::Init
+## <a name="crecentdocksiteinfoinit"></a><a name="init"></a>CRecentDockSiteInfo::Init
 
 ```
 void Init();
@@ -197,7 +197,7 @@ void Init();
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="isrecentleftpane"></a>  CRecentDockSiteInfo::IsRecentLeftPane
+## <a name="crecentdocksiteinfoisrecentleftpane"></a><a name="isrecentleftpane"></a>CRecentDockSiteInfo::IsRecentLeftPane
 
 ```
 BOOL IsRecentLeftPane(BOOL bForSlider);
@@ -205,13 +205,13 @@ BOOL IsRecentLeftPane(BOOL bForSlider);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *bForSlider*<br/>
+[v] *bForSlider*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="operator_eq"></a>  CRecentDockSiteInfo::operator =
+## <a name="crecentdocksiteinfooperator-"></a><a name="operator_eq"></a>CRecentDockSiteInfo::operátor =
 
 ```
 CRecentDockSiteInfo& operator=(CRecentDockSiteInfo& src);
@@ -219,13 +219,13 @@ CRecentDockSiteInfo& operator=(CRecentDockSiteInfo& src);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *src*<br/>
+[v] *src*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="savelistofrecentpanes"></a>  CRecentDockSiteInfo::SaveListOfRecentPanes
+## <a name="crecentdocksiteinfosavelistofrecentpanes"></a><a name="savelistofrecentpanes"></a>CRecentDockSiteInfo::SaveListOfRecentPanes
 
 ```
 void SaveListOfRecentPanes(CList<HWND,
@@ -235,13 +235,13 @@ void SaveListOfRecentPanes(CList<HWND,
 
 ### <a name="parameters"></a>Parametry
 
-[in] *CList – < HWND*<br/>
-[in] *lstOrg*<br/>
-[in] *bForSlider*<br/>
+[v] *CList<HWND*<br/>
+[v] *lstOrg*<br/>
+[v] *bForSlider*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="setinfo"></a>  CRecentDockSiteInfo::SetInfo
+## <a name="crecentdocksiteinfosetinfo"></a><a name="setinfo"></a>CRecentDockSiteInfo::SetInfo
 
 ```
 virtual void SetInfo(
@@ -251,12 +251,12 @@ virtual void SetInfo(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *bForSlider*<br/>
-[in] *srcInfo*<br/>
+[v] *bForSlider*<br/>
+[v] *srcInfo*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="storedockinfo"></a>  CRecentDockSiteInfo::StoreDockInfo
+## <a name="crecentdocksiteinfostoredockinfo"></a><a name="storedockinfo"></a>CRecentDockSiteInfo::StoreDockInfo
 
 ```
 virtual void StoreDockInfo(
@@ -266,13 +266,13 @@ virtual void StoreDockInfo(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pRecentContainer*<br/>
-[in] *pTabbedBar*<br/>
+[v] *pRecentContainer*<br/>
+[v] *pTabbedBar*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>
-[CDockSite – třída](../../mfc/reference/cdocksite-class.md)
+[Třída CDocksite](../../mfc/reference/cdocksite-class.md)

@@ -1,5 +1,5 @@
 ---
-title: Cmfcbasetoolbar – třída
+title: Třída CMFCBaseToolBar
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCBaseToolBar
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - CMFCBaseToolBar [MFC], GetMinSize
 - CMFCBaseToolBar [MFC], OnAfterChangeParent
 ms.assetid: 5d79206d-55e4-46f8-b1b8-042e34d7f9da
-ms.openlocfilehash: 7a6ccdaf3d78b9973505dd4e90ca76f671fce889
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 027fe8569ff133bb3f348c9d0607f19c6d778c4e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403864"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367834"
 ---
-# <a name="cmfcbasetoolbar-class"></a>Cmfcbasetoolbar – třída
+# <a name="cmfcbasetoolbar-class"></a>Třída CMFCBaseToolBar
 
 Základní třída pro panely nástrojů.
 
@@ -33,27 +33,27 @@ class CMFCBaseToolBar : public CPane
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
 |`CMFCBaseToolBar::CMFCBaseToolBar`|Výchozí konstruktor.|
 |`CMFCBaseToolBar::~CMFCBaseToolBar`|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|`CMFCBaseToolBar::CreateObject`|Rozhraní používá k vytvoření dynamické instance tohoto typu třídy.|
+|`CMFCBaseToolBar::CreateObject`|Používá rámci k vytvoření dynamické instance tohoto typu třídy.|
 |[CMFCBaseToolBar::GetDockingMode](#getdockingmode)|Vrátí režim ukotvení. (Přepíše [CBasePane::GetDockingMode](../../mfc/reference/cbasepane-class.md#getdockingmode).)|
 |[CMFCBaseToolBar::GetMinSize](#getminsize)|Vrátí minimální velikost panelu nástrojů. (Přepíše [CPane::GetMinSize](../../mfc/reference/cpane-class.md#getminsize).)|
-|[CMFCBaseToolBar::OnAfterChangeParent](#onafterchangeparent)|Volá se rozhraním po změně nadřazené v podokně. (Přepíše [CBasePane::OnAfterChangeParent](../../mfc/reference/cbasepane-class.md#onafterchangeparent).)|
+|[CMFCBaseToolBar::OnAfterChangeParent](#onafterchangeparent)|Volat rámci po změny nadřazeného podokna. (Přepíše [CBasePane::OnAfterChangeParent](../../mfc/reference/cbasepane-class.md#onafterchangeparent).)|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObjekt](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[CCmdCíl](../../mfc/reference/ccmdtarget-class.md)
 
-[CWnd](../../mfc/reference/cwnd-class.md)
+[Cwnd](../../mfc/reference/cwnd-class.md)
 
 [CBasePane](../../mfc/reference/cbasepane-class.md)
 
@@ -63,9 +63,9 @@ class CMFCBaseToolBar : public CPane
 
 ## <a name="requirements"></a>Požadavky
 
-**Header:** afxbasetoolbar.h
+**Záhlaví:** afxbasetoolbar.h
 
-##  <a name="getdockingmode"></a>  CMFCBaseToolBar::GetDockingMode
+## <a name="cmfcbasetoolbargetdockingmode"></a><a name="getdockingmode"></a>CMFCBaseToolBar::GetDockingMode
 
 Vrátí režim ukotvení.
 
@@ -75,9 +75,9 @@ virtual AFX_DOCK_TYPE GetDockingMode() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukotvení režimu.
+Dokovací režim.
 
-##  <a name="getminsize"></a>  CMFCBaseToolBar::GetMinSize
+## <a name="cmfcbasetoolbargetminsize"></a><a name="getminsize"></a>CMFCBaseToolBar::GetMinSize
 
 Vrátí minimální velikost panelu nástrojů.
 
@@ -90,9 +90,9 @@ virtual void GetMinSize(CSize& size) const;
 *Velikost*<br/>
 [out] Minimální velikost panelu nástrojů.
 
-##  <a name="onafterchangeparent"></a>  CMFCBaseToolBar::OnAfterChangeParent
+## <a name="cmfcbasetoolbaronafterchangeparent"></a><a name="onafterchangeparent"></a>CMFCBaseToolBar::OnAfterChangeParent
 
-Volá se rozhraním po změně nadřazené v podokně.
+Volat rámci po změny nadřazeného podokna.
 
 ```
 virtual void OnAfterChangeParent(CWnd* pWndOldParent);
@@ -101,9 +101,9 @@ virtual void OnAfterChangeParent(CWnd* pWndOldParent);
 ### <a name="parameters"></a>Parametry
 
 *pWndOldParent*<br/>
-[in] Ukazatel na předchozí nadřazené okno.
+[v] Ukazatel na předchozí nadřazené okno.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)

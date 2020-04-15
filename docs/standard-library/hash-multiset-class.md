@@ -86,19 +86,19 @@ helpviewer_keywords:
 - stdext::hash_multiset::upper_bound
 - stdext::hash_multiset::value_comp
 ms.assetid: 0580397a-a76e-40ad-aea2-5c6f3a9d0a21
-ms.openlocfilehash: 7881b1d6775206fbea40c3ba4b15572a6d4b3580
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 8888f393e1058e3cd5ff968d9433b5306cac4949
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79421679"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81370655"
 ---
 # <a name="hash_multiset-class"></a>hash_multiset – třída
 
 > [!NOTE]
-> Toto rozhraní API je zastaralé. Alternativa je [Unordered_multiset třídy](../standard-library/unordered-multiset-class.md).
+> Toto rozhraní API je zastaralé. Alternativou je [unordered_multiset Class](../standard-library/unordered-multiset-class.md).
 
-Třída kontejneru hash_multiset je rozšíření C++ standardní knihovny, které se používá pro úložiště a rychlé načítání dat z kolekce, ve které hodnoty prvků, které jsou obsaženy, slouží jako klíčové hodnoty a nejsou vyžadovány jako jedinečné.
+Třída kontejneru hash_multiset je rozšíření standardní knihovny Jazyka C++ a používá se pro ukládání a rychlé načítání dat z kolekce, ve které hodnoty obsažené prvky slouží jako klíčové hodnoty a nemusí být jedinečné.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -109,14 +109,14 @@ class hash_multiset
 
 ### <a name="parameters"></a>Parametry
 
-\ *klíčů*
-Typ dat prvku, který bude uložen v hash_multiset.
+*Klíč*\
+Datový typ prvku, který má být uložen v hash_multiset.
 
-\ *vlastností*
-Typ, který obsahuje dva objekty funkce, jedno z porovnání třídy, které je binární predikát schopný porovnat dvě hodnoty elementů jako klíče řazení pro určení jejich relativního pořadí a funkci hash, která je unárním predikátem mapování hodnot klíčů prvků na nepodepsaná celá čísla typu `size_t`. Tento argument je nepovinný a `hash_compare<Key, less<Key> >` je výchozí hodnota.
+*Vlastnosti*\
+Typ, který obsahuje dva objekty funkce, jeden z třídy porovnat, který je binární predikát schopen porovnat dva element hodnoty jako klíče řazení k určení jejich relativní pořadí a `size_t`hash funkce, která je unární predikát mapování klíčových hodnot prvků neznatelná celá čísla typu . Tento argument je volitelný `hash_compare<Key, less<Key> >` a je výchozí hodnota.
 
-\ *přidělování*
-Typ, který představuje uložený objekt přidělování, který zapouzdřuje informace o přidělování a navracení paměti hash_multiset. Tento argument je nepovinný a výchozí hodnota je `allocator<Key>`.
+*Přidělování*\
+Typ, který představuje uložený objekt přidělování, který zapouzdřuje podrobnosti o přidělení hash_multiset a přidělení paměti. Tento argument je volitelný a `allocator<Key>`výchozí hodnota je .
 
 ## <a name="remarks"></a>Poznámky
 
@@ -126,100 +126,100 @@ Hash_multiset je:
 
 - Oboustranný, protože poskytuje obousměrný iterátor pro přístup k jeho prvkům.
 
-- Hash, protože jeho prvky jsou seskupeny do kontejnerů na základě hodnoty funkce hash použité pro klíčové hodnoty prvků.
+- Hashed, protože jeho prvky jsou seskupeny do bloků na základě hodnoty funkce hash aplikované na klíčové hodnoty prvků.
 
-- Jedinečný v tom smyslu, že každý z jeho prvků musí mít jedinečný klíč. Vzhledem k tomu, že hash_multiset je také jednoduchý asociativní kontejner, jeho prvky jsou také jedinečné.
+- Jedinečný v tom smyslu, že každý z jeho prvků musí mít jedinečný klíč. Vzhledem k tomu, hash_multiset je také jednoduchý asociativní kontejner, jeho prvky jsou také jedinečné.
 
-- Šablona třídy, protože funkce, které poskytuje, jsou obecné a nezávisle na konkrétním typu dat obsažených jako elementy nebo klíče. Datové typy použité pro prvky a klíče jsou místo toho zadány jako parametry v šabloně třídy společně s funkcí porovnání a alokátorem.
+- Šablona třídy, protože funkce, které poskytuje, je obecná a tak nezávislá na konkrétním typu dat obsažených jako prvky nebo klíče. Datové typy použité pro prvky a klíče jsou místo toho zadány jako parametry v šabloně třídy společně s funkcí porovnání a alokátorem.
 
-Hlavní výhodou použití algoritmu hash nad řazením je vyšší efektivita: úspěšné hashace provádí vložení, odstranění a vyhledává v konstantním průměrném čase v porovnání s časem, který je úměrný logaritmu počtu prvků v kontejneru pro řazení. technice. Hodnotu prvku v sadě nelze změnit přímo. Místo toho musíte odstranit staré hodnoty a vložit prvky s novými hodnotami.
+Hlavní výhodou zapisování přes řazení je větší efektivita: úspěšné zapisování provádí vložení, odstranění a najde v konstantní mzda v průměru ve srovnání s časem úměrným logaritmu počet prvků v kontejneru pro řazení techniky. Hodnotu prvku v sadě nelze změnit přímo. Místo toho musíte odstranit staré hodnoty a vložit prvky s novými hodnotami.
 
-Volba typu kontejneru by měla obecně vycházet z typu vyhledávání a vkládání vyžadovaného aplikací. Asociativní kontejnery s algoritmem hash jsou optimalizované pro operace vyhledávání, vkládání a odebírání. Členské funkce, které explicitně podporují tyto operace, jsou efektivní při použití s dobře navrženou funkcí hash a jejich provádění v čase s průměrnou konstantou a nezávisle na počtu prvků v kontejneru. Dobře navržená funkce hash vytváří jednotnou distribuci hodnot hash a minimalizuje počet kolizí, kde je zřejmé, že se vyskytne při mapování jedinečných klíčových hodnot na stejnou hodnotu hash. V nejhorším případě s nejhorší možnou funkcí hash je počet operací úměrný počtu prvků v sekvenci (lineární čas).
+Volba typu kontejneru by měla obecně vycházet z typu vyhledávání a vkládání vyžadovaného aplikací. Hashed asociativní kontejnery jsou optimalizovány pro operace vyhledávání, vkládání a odstraňování. Členské funkce, které explicitně podporují tyto operace jsou efektivní při použití s dobře navržené funkce hash, jejich provádění v čase, který je v průměru konstantní a není závislý na počtu prvků v kontejneru. Dobře navržená funkce hash vytváří rovnoměrné rozložení hodnot hash a minimalizuje počet kolizí, kde se říká, že ke kolizi dochází, když jsou odlišné hodnoty klíče mapovány na stejnou hodnotu hash. V nejhorším případě s nejhorší možnou funkcí hash je počet operací úměrný počtu prvků v sekvenci (lineární čas).
 
-Hash_multiset by měl být asociativní kontejner výběru, pokud podmínky přidružování hodnot k jejich klíčům splňují požadavky aplikace. Prvky hash_multiset mohou být vícenásobné a slouží jako vlastní klíče řazení, takže klíče nejsou jedinečné. Model pro tento typ struktury je uspořádaný seznam slov, v němž se slova mohou vyskytovat více než jednou. Bylo překročeno více výskytů slov, a hash_set by byla příslušná struktura kontejneru. Pokud byly jedinečné definice připojeny jako hodnoty k seznamu jedinečných klíčových slov, hash_map by byla vhodnou strukturou, která bude tato data obsahovat. Pokud místo toho definice nejsou jedinečné, hash_multimap by byl zvoleným kontejnerem.
+Hash_multiset by měl být asociativní kontejner volby při podmínky přisouvání hodnoty s jejich klíče jsou splněny aplikací. Prvky hash_multiset může být více a slouží jako jejich vlastní klíče řazení, takže klíče nejsou jedinečné. Model pro tento typ struktury je uspořádaný seznam slov, v němž se slova mohou vyskytovat více než jednou. Pokud by nebylo povoleno více výskytů slov, byla by hash_set příslušnou strukturou kontejneru. Pokud byly jedinečné definice připojeny jako hodnoty k seznamu jedinečných klíčových slov, pak by hash_map byla vhodnou strukturou pro obsahující tato data. Pokud místo toho definice nebyly jedinečné, pak hash_multimap by kontejner volby.
 
-Hash_multiset řadí sekvenci, kterou ovládá, voláním uloženého objektu zatřiďovacích vlastností typu [value_compare](#value_compare). K tomuto uloženému objektu je možné přistupovat voláním členské funkce [key_comp](#key_comp). Takový objekt funkce se musí chovat stejně jako objekt třídy `hash_compare<Key, less<Key> >`. Konkrétně pro všechny hodnoty *klíče* typu `Key`volání `Trait(Key)` vypočítá distribuci hodnot typu `size_t`.
+Hash_multiset seřídí sekvenci, kterou řídí voláním uloženého objektu vlastností hash typu [value_compare](#value_compare). K tomuto uloženému objektu lze přistupovat voláním key_comp členské [funkce](#key_comp). Takový objekt funkce se musí chovat stejně `hash_compare<Key, less<Key> >`jako objekt třídy . Konkrétně pro všechny *Key* hodnoty `Key`Key typu `Trait(Key)` , volání dává rozdělení `size_t`hodnot typu .
 
-Obecně, tyto prvky musí být menší než srovnatelné pro toto pořadí, což znamená, že když jsou uvedeny dva prvky, může být stanoveno, zda jsou ekvivalentní (v tom smyslu, že ani jeden není menší než ten druhý), nebo že jeden je menší než druhý. To má za výsledek řazení mezi neekvivalentními prvky. Technicky je funkce porovnání binárním predikátem, který indukuje přísné slabé řazení, standardním matematickým způsobem. Binární predikát *f*( *x*, *y*) je objekt funkce, který má dva objekty argumentu x a y a návratovou hodnotu true nebo false. Řazení uložené na hash_multiset je přísné slabé seřazení, pokud je binární predikát Nereflexivní, antisymetrický a tranzitivní a je-li ekvivalence tranzitivní, kde jsou dva objekty x a y definovány jako ekvivalentní, když mají hodnoty *f*( *x*, *y*) i *f*( *y*, *x*) hodnotu false. Pokud silnější podmínka rovnosti mezi klíči nahradí ekvivalenci, stane se pořadí celkovým (v tom smyslu, že všechny prvky jsou uspořádány ve vztahu k sobě navzájem) a odpovídající klíče budou od sebe nerozeznatelné.
+Obecně, tyto prvky musí být menší než srovnatelné pro toto pořadí, což znamená, že když jsou uvedeny dva prvky, může být stanoveno, zda jsou ekvivalentní (v tom smyslu, že ani jeden není menší než ten druhý), nebo že jeden je menší než druhý. To má za výsledek řazení mezi neekvivalentními prvky. Technicky je funkce porovnání binárním predikátem, který indukuje přísné slabé řazení, standardním matematickým způsobem. Binární predikát *f*( *x*, *y*) je objekt funkce, který má dva argumenty objekty x a y a vrácenou hodnotu true nebo false. Řazení uložené na hash_multiset je přísné slabé řazení, pokud je binární predikát nereflexivní, antisymetrický a tranzitivní a pokud je rovnocennost přenositá, kde jsou dva objekty x a y definovány jako rovnocenné, pokud jsou oba *f*( *x*, *y*) a *f*( *y*, *x*) false. Pokud silnější podmínka rovnosti mezi klíči nahradí ekvivalenci, stane se pořadí celkovým (v tom smyslu, že všechny prvky jsou uspořádány ve vztahu k sobě navzájem) a odpovídající klíče budou od sebe nerozeznatelné.
 
-Skutečné pořadí prvků v řízené sekvenci závisí na funkci hash, funkci řazení a aktuální velikosti zatřiďovací tabulky uložené v objektu kontejneru. Nelze určit aktuální velikost zatřiďovací tabulky, takže nemůžete obecné předpovědět pořadí prvků v řízené sekvenci. Vkládání prvků nezruší platnost žádných iterátorů a odstranění prvků zruší platnost pouze těch iterátorů, které výslovně odkazovaly na odstraněné prvky.
+Skutečné pořadí prvků v řízené sekvenci závisí na funkci hash, funkci řazení a aktuální velikost tabulky hash uložené v objektu kontejneru. Nelze určit aktuální velikost tabulky hash, takže obecně nelze předpovědět pořadí prvků v řízené sekvenci. Vkládání prvků nezruší platnost žádných iterátorů a odstranění prvků zruší platnost pouze těch iterátorů, které výslovně odkazovaly na odstraněné prvky.
 
-Iterátor poskytnutý hash_multiset třídou je obousměrný iterátor, ale členské funkce třídy vkládají a hash_multiset mají verze, které přebírají jako parametry šablony slabší vstupní iterátor, jehož požadavky na funkce jsou více minimální než Ty jsou zaručené třídou Obousměrných iterátorů. Různé koncepty iterátorů tvoří rodinu týkající se upřesnění jejich funkčnosti. Každý koncept iterátoru má vlastní hash_multiset požadavků a algoritmy, které s nimi pracují, musí omezit jejich předpoklady na požadavky poskytované tímto typem iterátoru. Lze předpokládat, že ke vstupnímu iterátoru lze přistoupit přes ukazatel pro odkazování na některý objekt a že může být zvýšen na další iterátor v pořadí. Jedná se o minimální hash_multiset funkcí, ale stačí, abyste se mohli lépe spojit s rozsahem iterátorů [`first`, `last`) v kontextu funkcí členů třídy.
+Iterátor poskytované hash_multiset třídy je obousměrný iterátor, ale funkce členů třídy vložit a hash_multiset mít verze, které berou jako parametry šablony slabší vstupní iterátor, jehož požadavky na funkčnost jsou minimální než ty, které jsou zaručeny třídou obousměrné iterátory. Různé koncepty iterátorů tvoří rodinu týkající se upřesnění jejich funkčnosti. Každý koncept iterátoru má své vlastní hash_multiset požadavků a algoritmy, které s nimi pracují, musí omezit své předpoklady na požadavky poskytované tímto typem iterátoru. Lze předpokládat, že ke vstupnímu iterátoru lze přistoupit přes ukazatel pro odkazování na některý objekt a že může být zvýšen na další iterátor v pořadí. Jedná se o minimální hash_multiset funkčnosti, ale stačí, abyste mohli smysluplně hovořit o `first`řadě iterátorů [ , `last`) v kontextu funkcí členů třídy.
 
 ### <a name="constructors"></a>Konstruktory
 
 |Konstruktor|Popis|
 |-|-|
-|[hash_multiset](#hash_multiset)|Vytvoří `hash_multiset`, který je prázdný nebo který je kopií všech nebo částí jiných `hash_multiset`.|
+|[hash_multiset](#hash_multiset)|Konstrukce, `hash_multiset` který je prázdný nebo který je kopií celé `hash_multiset`nebo části některé jiné .|
 
 ### <a name="typedefs"></a>Typedefs
 
 |Název typu|Popis|
 |-|-|
-|[allocator_type](#allocator_type)|Typ, který představuje třídu `allocator` pro objekt `hash_multiset`.|
-|[const_iterator](#const_iterator)|Typ, který poskytuje obousměrný iterátor, který může číst prvek **const** v `hash_multiset`.|
-|[const_pointer](#const_pointer)|Typ, který poskytuje ukazatel na prvek **const** v `hash_multiset`.|
-|[const_reference](#const_reference)|Typ, který poskytuje odkaz na prvek **const** uložený v `hash_multiset` pro čtení a provádění operací **const** .|
-|[const_reverse_iterator](#const_reverse_iterator)|Typ, který poskytuje obousměrný iterátor, který může číst libovolný prvek **const** v `hash_multiset`.|
-|[difference_type](#difference_type)|Typ celého čísla se znaménkem, který poskytuje rozdíl mezi dvěma iterátory, které řeší prvky v rámci stejné `hash_multiset`.|
-|[iterátor](#iterator)|Typ, který poskytuje obousměrný iterátor, který může číst nebo upravovat libovolný prvek v `hash_multiset`.|
-|[key_compare](#key_compare)|Typ, který poskytuje objekt funkce, který může porovnat dva klíče řazení pro určení relativního pořadí dvou prvků v `hash_multiset`.|
-|[key_type](#key_type)|Typ, který popisuje objekt uložený jako prvek `hash_set` v jeho kapacitě jako klíč řazení.|
-|[ukazatele](#pointer)|Typ, který poskytuje ukazatel na prvek v `hash_multiset`.|
-|[odkaz](#reference)|Typ, který poskytuje odkaz na prvek uložený v `hash_multiset`.|
-|[reverse_iterator](#reverse_iterator)|Typ, který poskytuje obousměrný iterátor, který může číst nebo upravovat prvek v obráceném `hash_multiset`.|
-|[size_type](#size_type)|Typ unsigned integer, který může představovat počet prvků v `hash_multiset`.|
-|[value_compare](#value_compare)|Typ, který poskytuje dva objekty Functions, binární predikát porovnání třídy, který může porovnat dvě hodnoty prvku `hash_multiset` k určení jejich relativního pořadí a unární predikát, který prvky vyhodnotí.|
-|[value_type](#value_type)|Typ, který popisuje objekt uložený jako prvek `hash_multiset` v jeho kapacitě jako hodnota.|
+|[allocator_type](#allocator_type)|Typ, který `allocator` představuje třídu `hash_multiset` pro objekt.|
+|[const_iterator](#const_iterator)|Typ, který poskytuje obousměrný iterátor, který může číst `hash_multiset` **const** prvek v .|
+|[const_pointer](#const_pointer)|Typ, který poskytuje ukazatel na **const** element v `hash_multiset`.|
+|[const_reference](#const_reference)|Typ, který poskytuje odkaz na **const** `hash_multiset` prvek uložený v a pro čtení a provádění **const** operací.|
+|[const_reverse_iterator](#const_reverse_iterator)|Typ, který poskytuje obousměrný iterátor, který může číst `hash_multiset`libovolný **prvek const** v .|
+|[difference_type](#difference_type)|Podepsaný typ celé číslo, který poskytuje rozdíl mezi dvěma iterátory, které adresují prvky v rámci stejného `hash_multiset`.|
+|[Iterace](#iterator)|Typ, který poskytuje obousměrný iterátor, který může číst `hash_multiset`nebo upravovat libovolný prvek v rozhraní .|
+|[key_compare](#key_compare)|Typ, který poskytuje objekt funkce, který může porovnat dva klíče řazení `hash_multiset`k určení relativní pořadí dvou prvků v .|
+|[key_type](#key_type)|Typ, který popisuje objekt uložený jako `hash_set` prvek v jeho kapacitě jako klíč řazení.|
+|[ukazatel](#pointer)|Typ, který poskytuje ukazatel na `hash_multiset`prvek v .|
+|[Odkaz](#reference)|Typ, který poskytuje odkaz na prvek `hash_multiset`uložený v .|
+|[reverse_iterator](#reverse_iterator)|Typ, který poskytuje obousměrný iterátor, který může číst nebo `hash_multiset`upravovat prvek v obráceném .|
+|[size_type](#size_type)|Nepodepsaný podnosný typ, který může představovat počet prvků v . `hash_multiset`|
+|[value_compare](#value_compare)|Typ, který poskytuje dva objekty funkce, binární predikát třídy `hash_multiset` porovnat, které lze porovnat dva elementové hodnoty a k určení jejich relativní pořadí a unární predikát, který zařazuje hodnoty prvků.|
+|[value_type](#value_type)|Typ, který popisuje objekt uložený jako `hash_multiset` prvek v jeho kapacitě jako hodnotu.|
 
 ### <a name="member-functions"></a>Členské funkce
 
 |Členská funkce|Popis|
 |-|-|
-|[ifunctiondiscovery](#begin)|Vrátí iterátor, který adresuje první prvek v `hash_multiset`.|
-|[cbegin](#cbegin)|Vrátí konstantní iterátor adresující první prvek v `hash_multiset`.|
-|[cend](#cend)|Vrátí konstantní iterátor, který adresuje umístění následující po posledním prvku v `hash_multiset`.|
-|[jejich](#clear)|Smaže všechny prvky `hash_multiset`.|
-|[count](#count)|Vrátí počet prvků v `hash_multiset`, jejichž klíč odpovídá klíči zadanému parametru.|
-|[crbegin –](#crbegin)|Vrátí konstantní iterátor adresující první prvek v obráceném `hash_multiset`.|
-|[crend](#crend)|Vrátí konstantní iterátor, který adresuje umístění následující po posledním prvku v obráceném `hash_multiset`.|
-|[emplace](#emplace)|Vloží prvek konstruovaný na místo do `hash_multiset`.|
-|[emplace_hint](#emplace_hint)|Vloží prvek konstruovaný na místo do `hash_multiset`s pomocným parametrem umístění.|
-|[obsahovat](#empty)|Testuje, zda je `hash_multiset` prázdné.|
-|[účelu](#end)|Vrátí iterátor, který adresuje umístění následující po posledním prvku v `hash_multiset`.|
-|[equal_range](#equal_range)|Vrátí dvojici iterátorů v uvedeném pořadí na první prvek v `hash_multiset` s klíčem, který je větší než zadaný klíč a na první prvek v `hash_multiset` s klíčem, který je roven nebo větší než klíč.|
-|[ověřování](#erase)|Odebere prvek nebo rozsah prvků v `hash_multiset` ze zadané pozice nebo odstraní prvky, které odpovídají zadanému klíči.|
-|[find](#find)|Vrátí iterátor adresující umístění elementu v `hash_multiset`, který má klíč shodný se zadaným klíčem.|
-|[get_allocator](#get_allocator)|Vrátí kopii objektu `allocator`, který se používá k vytvoření `hash_multiset`.|
-|[zadat](#insert)|Vloží prvek nebo rozsah prvků do `hash_multiset`.|
-|[key_comp](#key_compare)|Načte kopii objektu porovnání, která se používá k řazení klíčů v `hash_multiset`.|
-|[lower_bound](#lower_bound)|Vrátí iterátor na první prvek v `hash_multiset` s klíčem, který je větší nebo roven zadanému klíči.|
+|[Začít](#begin)|Vrátí iterátor, který řeší první prvek `hash_multiset`v rozhraní .|
+|[cbegin](#cbegin)|Vrátí const iterator adresující první `hash_multiset`prvek v rozhraní .|
+|[cend](#cend)|Vrátí const iterátor, který řeší umístění, které následuje `hash_multiset`poslední prvek v .|
+|[Jasné](#clear)|Vymaže všechny `hash_multiset`prvky .|
+|[Počet](#count)|Vrátí počet prvků v `hash_multiset` klíči, jejichž klíč odpovídá klíči zadanému parametrem.|
+|[crbegin](#crbegin)|Vrátí const iterator adresování první `hash_multiset`prvek v obrácené .|
+|[crend](#crend)|Vrátí const iterator, který řeší umístění, které následuje `hash_multiset`poslední prvek v obráceném .|
+|[místo](#emplace)|Vloží prvek vytvořený na místě `hash_multiset`do .|
+|[emplace_hint](#emplace_hint)|Vloží prvek vytvořený na místě `hash_multiset`do aplikace s nápovědou k umístění.|
+|[empty](#empty)|Testuje, `hash_multiset` pokud je prázdný.|
+|[Konec](#end)|Vrátí iterátor, který řeší umístění, které následuje `hash_multiset`poslední prvek v rozhraní .|
+|[equal_range](#equal_range)|Vrátí dvojici iterátorů respektive první prvek v `hash_multiset` klíč s klíčem, který je větší než zadaný klíč a na první prvek s `hash_multiset` klíčem, který je roven nebo větší než klíč.|
+|[Vymazat](#erase)|Odebere prvek nebo rozsah prvků `hash_multiset` v a ze zadané pozice nebo odebere prvky, které odpovídají zadanému klíči.|
+|[find](#find)|Vrátí iterátor adresování umístění prvku `hash_multiset` v, který má klíč ekvivalentní zadaný klíč.|
+|[get_allocator](#get_allocator)|Vrátí kopii `allocator` objektu použitého `hash_multiset`k vytvoření .|
+|[Vložit](#insert)|Vloží prvek nebo rozsah prvků do `hash_multiset`.|
+|[key_comp](#key_compare)|Načte kopii objektu porovnání použitého `hash_multiset`k objednání klíčů v .|
+|[lower_bound](#lower_bound)|Vrátí iterátor k prvnímu prvku `hash_multiset` v a s klíčem, který je roven nebo větší než zadaný klíč.|
 |[max_size](#max_size)|Vrátí maximální délku `hash_multiset`.|
-|[rbegin](#rbegin)|Vrátí iterátor adresující první prvek v obráceném `hash_multiset`.|
-|[rend](#rend)|Vrátí iterátor, který adresuje umístění následující po posledním prvku v obráceném `hash_multiset`.|
-|[hodnota](#size)|Vrátí počet prvků v `hash_multiset`.|
-|[adresu](#swap)|Vyměňuje prvky dvou `hash_multiset`s.|
-|[upper_bound](#upper_bound)|Vrátí iterátor na první prvek v `hash_multiset`, který má klíč, který je roven nebo větší než zadaný klíč.|
-|[value_comp](#value_comp)|Načte kopii objektu zatřiďovacích vlastností, která se používá k hodnotě hash a seřazení hodnot klíčů elementu v `hash_multiset`.|
+|[rbegin](#rbegin)|Vrátí iterátor adresující první prvek `hash_multiset`v obráceném .|
+|[rend](#rend)|Vrátí iterátor, který řeší umístění, které následuje poslední `hash_multiset`prvek v obráceném .|
+|[Velikost](#size)|Vrátí počet prvků v `hash_multiset`rozhraní .|
+|[Swap](#swap)|Vyměňuje prvky `hash_multiset`dvou s.|
+|[upper_bound](#upper_bound)|Vrátí iterátor prvnímu prvku v `hash_multiset` a, který s klíčem, který je roven nebo větší než zadaný klíč.|
+|[value_comp](#value_comp)|Načte kopii objektu vlastností hash použitého k hodnotám `hash_multiset`klíče hash a objednaného prvku v rozhraní .|
 
 ### <a name="operators"></a>Operátory
 
 |Operátor|Popis|
 |-|-|
-|[hash_multiset:: operator =](#op_eq)|Nahradí prvky hash_multiset kopií jiného hash_multiset.|
+|[hash_multiset::operátor=](#op_eq)|Nahradí prvky hash_multiset kopií jiného hash_multiset.|
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<hash_set >
+**Záhlaví:** \<> hash_set
 
 **Obor názvů:** stdext
 
-## <a name="allocator_type"></a>hash_multiset:: allocator_type
+## <a name="hash_multisetallocator_type"></a><a name="allocator_type"></a>hash_multiset::allocator_type
 
 > [!NOTE]
-> Toto rozhraní API je zastaralé. Alternativa je [Unordered_multiset třídy](../standard-library/unordered-multiset-class.md).
+> Toto rozhraní API je zastaralé. Alternativou je [unordered_multiset Class](../standard-library/unordered-multiset-class.md).
 
-Typ, který představuje třídu přidělování pro objekt hash_multiset.
+Typ, který představuje třídu alokátoru pro objekt hash_multiset.
 
 ```cpp
 typedef list<typename Traits::value_type, typename Traits::allocator_type>::allocator_type allocator_type;
@@ -227,14 +227,14 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::allo
 
 ### <a name="example"></a>Příklad
 
-Příklad použití `allocator_type` naleznete v tématu příklad [get_allocator](#get_allocator) .
+Viz příklad pro [get_allocator](#get_allocator) příklad pomocí`allocator_type`
 
-## <a name="begin"></a>hash_multiset:: begin
+## <a name="hash_multisetbegin"></a><a name="begin"></a>hash_multiset::začátek
 
 > [!NOTE]
-> Toto rozhraní API je zastaralé. Alternativa je [Unordered_multiset třídy](../standard-library/unordered-multiset-class.md).
+> Toto rozhraní API je zastaralé. Alternativou je [unordered_multiset Class](../standard-library/unordered-multiset-class.md).
 
-Vrátí iterátor, který adresuje první prvek v hash_multiset.
+Vrátí iterátor, který řeší první prvek v hash_multiset.
 
 ```cpp
 const_iterator begin() const;
@@ -244,11 +244,11 @@ iterator begin();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Obousměrný iterátor, který adresuje první prvek v hash_multiset nebo umístění, které je úspěšně prázdné hash_multiset.
+Obousměrný itečelní objekt adresující první prvek v hash_multiset nebo umístění, které následuje prázdný hash_multiset.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud je vrácená hodnota `begin` přiřazena k `const_iterator`, prvky v objektu hash_multiset nelze upravovat. Pokud je vrácená hodnota `begin` přiřazena k `iterator`, prvky v objektu hash_multiset lze upravit.
+Pokud `begin` je vrácená hodnota `const_iterator`přiřazena k , prvky v objektu hash_multiset nelze změnit. Pokud `begin` je vrácená hodnota `iterator`přiřazena k , prvky v objektu hash_multiset lze změnit.
 
 ### <a name="example"></a>Příklad
 
@@ -290,12 +290,12 @@ The first element of hms1 is 1
 The first element of hms1 is now 2
 ```
 
-## <a name="cbegin"></a>hash_multiset:: cbegin
+## <a name="hash_multisetcbegin"></a><a name="cbegin"></a>hash_multiset::cbegin
 
 > [!NOTE]
-> Toto rozhraní API je zastaralé. Alternativa je [Unordered_multiset třídy](../standard-library/unordered-multiset-class.md).
+> Toto rozhraní API je zastaralé. Alternativou je [unordered_multiset Class](../standard-library/unordered-multiset-class.md).
 
-Vrátí konstantní iterátor, který adresuje první prvek v hash_multiset.
+Vrátí const iterator, který řeší první prvek v hash_multiset.
 
 ```cpp
 const_iterator cbegin() const;
@@ -303,11 +303,11 @@ const_iterator cbegin() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Konstantní obousměrný iterátor, který adresuje první prvek v [hash_multiset](../standard-library/hash-multiset-class.md) nebo umístění, které je úspěšně prázdné `hash_multiset`.
+Konstovat obousměrný iterátor adresování první prvek v [hash_multiset](../standard-library/hash-multiset-class.md) nebo `hash_multiset`umístění, které následuje prázdné .
 
 ### <a name="remarks"></a>Poznámky
 
-S návratovou hodnotou `cbegin`nelze upravovat elementy v objektu `hash_multiset`.
+S vrácenou `cbegin`hodnotou , `hash_multiset` prvky v objektu nelze změnit.
 
 ### <a name="example"></a>Příklad
 
@@ -337,12 +337,12 @@ int main( )
 The first element of hs1 is 1
 ```
 
-## <a name="cend"></a>hash_multiset:: cend
+## <a name="hash_multisetcend"></a><a name="cend"></a>hash_multiset::cenzura
 
 > [!NOTE]
-> Toto rozhraní API je zastaralé. Alternativa je [Unordered_multiset třídy](../standard-library/unordered-multiset-class.md).
+> Toto rozhraní API je zastaralé. Alternativou je [unordered_multiset Class](../standard-library/unordered-multiset-class.md).
 
-Vrátí konstantní iterátor, který adresuje umístění následující po posledním prvku v hash_multiset.
+Vrátí const iterator, který řeší umístění, které následuje poslední prvek v hash_multiset.
 
 ```cpp
 const_iterator cend() const;
@@ -350,11 +350,11 @@ const_iterator cend() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Konstantní obousměrný iterátor, který adresuje umístění následující po posledním prvku v [hash_multiset](../standard-library/hash-multiset-class.md). Pokud je `hash_multiset` prázdné, `hash_multiset::cend == hash_multiset::begin`.
+Konstovat obousměrný iterátor, který řeší umístění, které následuje poslední prvek v [hash_multiset](../standard-library/hash-multiset-class.md). Pokud `hash_multiset` je prázdný, `hash_multiset::cend == hash_multiset::begin`pak .
 
 ### <a name="remarks"></a>Poznámky
 
-`cend` slouží k otestování, zda iterátor dosáhl konce jeho `hash_multiset`. Hodnota vrácená `cend` by neměla být zpětně odkazovaná.
+`cend`se používá k testování, zda iterátor dosáhl `hash_multiset`konce svého . Hodnota vrácená `cend` by neměla být odkazována.
 
 ### <a name="example"></a>Příklad
 
@@ -385,12 +385,12 @@ int main( )
 The last element of hs1 is 3
 ```
 
-## <a name="clear"></a>hash_multiset:: Clear
+## <a name="hash_multisetclear"></a><a name="clear"></a>hash_multiset::vymazat
 
 > [!NOTE]
-> Toto rozhraní API je zastaralé. Alternativa je [Unordered_multiset třídy](../standard-library/unordered-multiset-class.md).
+> Toto rozhraní API je zastaralé. Alternativou je [unordered_multiset Class](../standard-library/unordered-multiset-class.md).
 
-Smaže všechny prvky hash_multiset.
+Vymaže všechny prvky hash_multiset.
 
 ```cpp
 void clear();
@@ -429,12 +429,12 @@ The size of the hash_multiset is initially 2.
 The size of the hash_multiset after clearing is 0.
 ```
 
-## <a name="const_iterator"></a>hash_multiset:: const_iterator
+## <a name="hash_multisetconst_iterator"></a><a name="const_iterator"></a>hash_multiset::const_iterator
 
 > [!NOTE]
-> Toto rozhraní API je zastaralé. Alternativa je [Unordered_multiset třídy](../standard-library/unordered-multiset-class.md).
+> Toto rozhraní API je zastaralé. Alternativou je [unordered_multiset Class](../standard-library/unordered-multiset-class.md).
 
-Typ, který poskytuje obousměrný iterátor, který může číst prvek **const** v hash_multiset.
+Typ, který poskytuje obousměrný iterátor, který může číst **const** prvek v hash_multiset.
 
 ```cpp
 typedef list<typename Traits::value_type, typename Traits::allocator_type>::const_iterator const_iterator;
@@ -442,18 +442,18 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
 
 ### <a name="remarks"></a>Poznámky
 
-Typ `const_iterator` nelze použít pro úpravu hodnoty prvku.
+Typ `const_iterator` nelze použít ke změně hodnoty prvku.
 
 ### <a name="example"></a>Příklad
 
-Viz příklad pro [začátek](#begin) příkladu pomocí `const_iterator`.
+Viz příklad pro [začátek](#begin) pro příklad pomocí `const_iterator`.
 
-## <a name="const_pointer"></a>hash_multiset:: const_pointer
+## <a name="hash_multisetconst_pointer"></a><a name="const_pointer"></a>hash_multiset::const_pointer
 
 > [!NOTE]
-> Toto rozhraní API je zastaralé. Alternativa je [Unordered_multiset třídy](../standard-library/unordered-multiset-class.md).
+> Toto rozhraní API je zastaralé. Alternativou je [unordered_multiset Class](../standard-library/unordered-multiset-class.md).
 
-Typ, který poskytuje ukazatel na prvek **const** v hash_multiset.
+Typ, který poskytuje ukazatel na **const** prvek v hash_multiset.
 
 ```cpp
 typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::const_pointer const_pointer;
@@ -461,16 +461,16 @@ typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::co
 
 ### <a name="remarks"></a>Poznámky
 
-Typ `const_pointer` nelze použít pro úpravu hodnoty prvku.
+Typ `const_pointer` nelze použít ke změně hodnoty prvku.
 
-Ve většině případů by [const_iterator](#const_iterator) měla použít pro přístup k prvkům v objektu **const** hash_multiset.
+Ve většině případů by měl být [použit const_iterator](#const_iterator) pro přístup k prvkům v **objektu const** hash_multiset.
 
-## <a name="const_reference"></a>hash_multiset:: const_reference
+## <a name="hash_multisetconst_reference"></a><a name="const_reference"></a>hash_multiset::const_reference
 
 > [!NOTE]
-> Toto rozhraní API je zastaralé. Alternativa je [Unordered_multiset třídy](../standard-library/unordered-multiset-class.md).
+> Toto rozhraní API je zastaralé. Alternativou je [unordered_multiset Class](../standard-library/unordered-multiset-class.md).
 
-Typ, který poskytuje odkaz na prvek **const** uložený v hash_multiset pro čtení a provádění operací **const** .
+Typ, který poskytuje odkaz na **prvek const** uložený v hash_multiset pro čtení a provádění operací **const.**
 
 ```cpp
 typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::const_reference const_reference;
@@ -512,12 +512,12 @@ int main( )
 The first element in the hash_multiset is 10.
 ```
 
-## <a name="const_reverse_iterator"></a>hash_multiset:: const_reverse_iterator
+## <a name="hash_multisetconst_reverse_iterator"></a><a name="const_reverse_iterator"></a>hash_multiset::const_reverse_iterator
 
 > [!NOTE]
-> Toto rozhraní API je zastaralé. Alternativa je [Unordered_multiset třídy](../standard-library/unordered-multiset-class.md).
+> Toto rozhraní API je zastaralé. Alternativou je [unordered_multiset Class](../standard-library/unordered-multiset-class.md).
 
-Typ, který poskytuje obousměrný iterátor, který může číst libovolný prvek **const** v hash_multiset.
+Typ, který poskytuje obousměrný iterátor, který může číst libovolný **prvek const** v hash_multiset.
 
 ```cpp
 typedef list<typename Traits::value_type, typename Traits::allocator_type>::const_reverse_iterator const_reverse_iterator;
@@ -525,18 +525,18 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
 
 ### <a name="remarks"></a>Poznámky
 
-Typ `const_reverse_iterator` nemůže změnit hodnotu prvku a používá se k iterování skrze hash_multiset v opačném případě.
+Typ `const_reverse_iterator` nemůže změnit hodnotu prvku a používá se k iterátu přes hash_multiset v opačném pořadí.
 
 ### <a name="example"></a>Příklad
 
-Příklad, jak deklarovat a použít `const_reverse_iterator`, naleznete v příkladu pro [rend](#rend) .
+Příklad pro [rend](#rend) naleznete v příkladu, jak `const_reverse_iterator`deklarovat a používat .
 
-## <a name="count"></a>hash_multiset:: Count
+## <a name="hash_multisetcount"></a><a name="count"></a>hash_multiset::počet
 
 > [!NOTE]
-> Toto rozhraní API je zastaralé. Alternativa je [Unordered_multiset třídy](../standard-library/unordered-multiset-class.md).
+> Toto rozhraní API je zastaralé. Alternativou je [unordered_multiset Class](../standard-library/unordered-multiset-class.md).
 
-Vrátí počet prvků v hash_multiset, jejichž klíč odpovídá klíči určenému parametrem.
+Vrátí počet prvků v hash_multiset jehož klíč odpovídá klíči zadanému parametrem.
 
 ```cpp
 size_type count(const Key& key) const;
@@ -544,22 +544,22 @@ size_type count(const Key& key) const;
 
 ### <a name="parameters"></a>Parametry
 
-\ *klíčů*
-Klíč prvků, které mají být porovnány od hash_multiset.
+*Klíč*\
+Klíč prvků, které mají být uzavřeno z hash_multiset.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Počet prvků v hash_multiset pomocí klíče zadaného parametrem.
+Počet prvků v hash_multiset s klíčem zadaným parametrem.
 
 ### <a name="remarks"></a>Poznámky
 
 Členská funkce vrátí počet prvků v následujícím rozsahu:
 
-\[ lower_bound (*klíč*), Upper_bound (*klíč*)).
+\[lower_bound(*klíč),* upper_bound(*klíč*).
 
 ### <a name="example"></a>Příklad
 
-Následující příklad ukazuje použití členské funkce hash_multiset:: Count.
+Následující příklad ukazuje použití hash_multiset::count členské funkce.
 
 ```cpp
 // hash_multiset_count.cpp
@@ -594,12 +594,12 @@ The number of elements in hms1 with a sort key of 1 is: 2.
 The number of elements in hms1 with a sort key of 2 is: 0.
 ```
 
-## <a name="crbegin"></a>hash_multiset:: crbegin –
+## <a name="hash_multisetcrbegin"></a><a name="crbegin"></a>hash_multiset::crbegin
 
 > [!NOTE]
-> Toto rozhraní API je zastaralé. Alternativa je [Unordered_multiset třídy](../standard-library/unordered-multiset-class.md).
+> Toto rozhraní API je zastaralé. Alternativou je [unordered_multiset Class](../standard-library/unordered-multiset-class.md).
 
-Vrátí konstantní iterátor adresující první prvek v obráceném hash_multiset.
+Vrátí const iterator adresování první prvek v obrácené matné hash_multiset.
 
 ```cpp
 const_reverse_iterator crbegin() const;
@@ -607,15 +607,15 @@ const_reverse_iterator crbegin() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Const reverzní obousměrný iterátor, který adresuje první prvek v obráceném [hash_multiset](../standard-library/hash-multiset-class.md) nebo řeší, co byl posledním prvkem v neobráceném `hash_multiset`.
+Const reverzní obousměrný iterátor adresování první prvek v obrácené [hash_multiset](../standard-library/hash-multiset-class.md) nebo řešení toho, co bylo poslední prvek v unreverse `hash_multiset`.
 
 ### <a name="remarks"></a>Poznámky
 
-`crbegin` se používá s obráceným `hash_multiset` stejně jako [hash_multiset:: begin](#begin) se používá v `hash_multiset`.
+`crbegin`se používá s `hash_multiset` obráceným stejně [jako hash_multiset::begin](#begin) se používá s `hash_multiset`.
 
-S návratovou hodnotou `crbegin`nelze změnit objekt `hash_multiset`.
+S vrácenou `crbegin`hodnotou `hash_multiset` aplikace nelze objekt změnit.
 
-`crbegin` lze použít k iteraci `hash_multiset` zpět.
+`crbegin`lze použít k iterovat přes `hash_multiset` dozadu.
 
 ### <a name="example"></a>Příklad
 
@@ -646,12 +646,12 @@ int main( )
 The first element in the reversed hash_multiset is 30.
 ```
 
-## <a name="crend"></a>hash_multiset:: crend
+## <a name="hash_multisetcrend"></a><a name="crend"></a>hash_multiset::crend
 
 > [!NOTE]
-> Toto rozhraní API je zastaralé. Alternativa je [Unordered_multiset třídy](../standard-library/unordered-multiset-class.md).
+> Toto rozhraní API je zastaralé. Alternativou je [unordered_multiset Class](../standard-library/unordered-multiset-class.md).
 
-Vrátí konstantní iterátor, který adresuje umístění následující po posledním prvku v obráceném hash_multiset.
+Vrátí const iterátor, který řeší umístění, které následuje poslední prvek v obráceném hash_multiset.
 
 ```cpp
 const_reverse_iterator crend() const;
@@ -659,15 +659,15 @@ const_reverse_iterator crend() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Const reverzní obousměrný iterátor, který adresuje umístění následující po posledním prvku v obráceném [hash_multiset](../standard-library/hash-multiset-class.md) (umístění, které předchází prvnímu prvku v neobráceném `hash_multiset`).
+Const reverzní obousměrný iterátor, který řeší umístění, které následuje poslední prvek v obrácené [morhash_multiset](../standard-library/hash-multiset-class.md) (umístění, které předcházelo první prvek v unreverse). `hash_multiset`
 
 ### <a name="remarks"></a>Poznámky
 
-`crend` se používá s obráceným `hash_multiset` stejně jako [hash_multiset:: end](#end) se používá s `hash_multiset`.
+`crend`se používá s `hash_multiset` obráceným stejně [jako hash_multiset::end](#end) se používá s `hash_multiset`.
 
-S návratovou hodnotou `crend`nelze změnit objekt `hash_multiset`.
+S vrácenou `crend`hodnotou `hash_multiset` aplikace nelze objekt změnit.
 
-`crend` lze použít k otestování, zda reverzní iterátor dosáhl konce jeho hash_multiset.
+`crend`lze použít k testování, zda reverzní iterátor dosáhl konce svého hash_multiset.
 
 ### <a name="example"></a>Příklad
 
@@ -699,12 +699,12 @@ int main( )
 The last element in the reversed hash_multiset is 10.
 ```
 
-## <a name="difference_type"></a>hash_multiset::d ifference_type
+## <a name="hash_multisetdifference_type"></a><a name="difference_type"></a>hash_multiset::difference_type
 
 > [!NOTE]
-> Toto rozhraní API je zastaralé. Alternativa je [Unordered_multiset třídy](../standard-library/unordered-multiset-class.md).
+> Toto rozhraní API je zastaralé. Alternativou je [unordered_multiset Class](../standard-library/unordered-multiset-class.md).
 
-Typ celého čísla se znaménkem, který poskytuje rozdíl mezi dvěma iterátory, které řeší prvky v rámci stejné hash_multiset.
+Podepsaný typ celé číslo, který poskytuje rozdíl mezi dvěma iterátory, které adresují prvky v rámci stejné hash_multiset.
 
 ```cpp
 typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::difference_type difference_type;
@@ -712,9 +712,9 @@ typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::di
 
 ### <a name="remarks"></a>Poznámky
 
-`difference_type` je typ vrácený při odečítání nebo přírůstcích pomocí iterátorů kontejneru. `difference_type` se obvykle používá k reprezentaci počtu prvků v rozsahu [`first`, `last`) mezi iterátory `first` a `last`, zahrnuje element, na který odkazuje `first`, a rozsah prvků až do, ale ne včetně, prvku, na který odkazuje `last`.
+Je `difference_type` typ vrácena při odečtení nebo zvýšení prostřednictvím iterátory kontejneru. Obvykle `difference_type` se používá k reprezentaci počtu prvků `first` `last`v rozsahu [ , `first` ) `last`mezi iterátory `first` a , zahrnuje prvek, na který se vztahuje, a rozsah prvků až do prvku, na který je však `last`nezahrnuto.
 
-Všimněte si, že i když `difference_type` je k dispozici pro všechny iterátory, které splňují požadavky vstupního iterátoru, který zahrnuje třídu Obousměrných iterátorů podporovaných vratnými kontejnery, jako je například set. Odčítání mezi iterátory je podporováno pouze iterátory s náhodným přístupem, které jsou poskytovány kontejnerem s náhodným přístupem, jako je například Vector nebo deque.
+Všimněte `difference_type` si, že i když je k dispozici pro všechny iterátory, které splňují požadavky vstupníitekor, který zahrnuje třídu obousměrné iterátory podporované reverzibilní kontejnery, jako je sada. Odčítání mezi iterátory je podporováno pouze iterátory s náhodným přístupem poskytovaným kontejnerem s náhodným přístupem, jako je vektor nebo deque.
 
 ### <a name="example"></a>Příklad
 
@@ -779,12 +779,12 @@ The number '20' occurs 2 times in hash_multiset hms1.
 The number of elements in the hash_multiset hms1 is 3.
 ```
 
-## <a name="emplace"></a>hash_multiset:: emplace
+## <a name="hash_multisetemplace"></a><a name="emplace"></a>hash_multiset::emplace
 
 > [!NOTE]
-> Toto rozhraní API je zastaralé. Alternativa je [Unordered_multiset třídy](../standard-library/unordered-multiset-class.md).
+> Toto rozhraní API je zastaralé. Alternativou je [unordered_multiset Class](../standard-library/unordered-multiset-class.md).
 
-Vloží prvek konstruovaný na místo do hash_multiset.
+Vloží prvek vytvořený na místě do hash_multiset.
 
 ```cpp
 template <class ValTy>
@@ -795,11 +795,11 @@ iterator insert(ValTy&& val);
 
 |Parametr|Popis|
 |-|-|
-|*počítává*|Hodnota prvku, který má být vložen do [hash_multiset](../standard-library/hash-multiset-class.md) , pokud `hash_multiset` již daný prvek neobsahuje, nebo obecněji, element, jehož klíč je ekvivalentně seřazen.|
+|*Val*|Hodnota prvku, který má být [hash_multiset](../standard-library/hash-multiset-class.md) vložen do `hash_multiset` hash_multiset pokud již obsahuje tento prvek nebo obecněji prvek, jehož klíč je ekvivalentní objednané.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Členská funkce `emplace` vrací iterátor, který odkazuje na pozici, kam byl nový prvek vložen.
+Členská `emplace` funkce vrátí iterátor, který odkazuje na pozici, kde byl vložen nový prvek.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -829,12 +829,12 @@ int main( )
 After the emplace insertion, hms3 contains a.
 ```
 
-## <a name="emplace_hint"></a>hash_multiset:: emplace_hint
+## <a name="hash_multisetemplace_hint"></a><a name="emplace_hint"></a>hash_multiset::emplace_hint
 
 > [!NOTE]
-> Toto rozhraní API je zastaralé. Alternativa je [Unordered_multiset třídy](../standard-library/unordered-multiset-class.md).
+> Toto rozhraní API je zastaralé. Alternativou je [unordered_multiset Class](../standard-library/unordered-multiset-class.md).
 
-Vloží prvek konstruovaný na místo do hash_multiset s pomocným parametrem umístění.
+Vloží prvek vytvořený na místě do hash_multiset s nápovědou k umístění.
 
 ```cpp
 template <class ValTy>
@@ -845,19 +845,19 @@ iterator insert(
 
 ### <a name="parameters"></a>Parametry
 
-\ *Val*
-Hodnota prvku, který má být vložen do [hash_multiset](../standard-library/hash-multiset-class.md) , pokud `hash_multiset` již daný prvek neobsahuje, nebo obecněji, element, jehož klíč je ekvivalentně seřazen.
+*Val*\
+Hodnota prvku, který má být [hash_multiset](../standard-library/hash-multiset-class.md) vložen do `hash_multiset` hash_multiset pokud již obsahuje tento prvek nebo obecněji prvek, jehož klíč je ekvivalentní objednané.
 
-*kde*\
-Místo zahájení vyhledání správného bodu vložení. (Vložení se může vyskytnout v konstantním čase, namísto logaritmické doby, pokud se kurzor okamžitě sleduje *tam, kde*.)
+*Kde*\
+Místo zahájení vyhledání správného bodu vložení. (Vložení může dojít v amortizované konstantní čas, namísto logaritmického času, pokud kurzor bezprostředně *následuje, kde*.)
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Členská funkce [hash_multiset:: emplace](#emplace) vrací iterátor, který odkazuje na pozici, kam byl nový prvek vložen do `hash_multiset`.
+Funkce [hash_multiset::emplace](#emplace) vrátí iterátor, který odkazuje na pozici, kde byl `hash_multiset`vložen nový prvek do .
 
 ### <a name="remarks"></a>Poznámky
 
-Vložení se může objevit v konstantním času v čase, namísto logaritmické doby, pokud se místo vložení hned následuje *tam, kde*.
+Vložení může dojít v amortizované konstantní čas, namísto logaritmického času, pokud kurzor bezprostředně následuje *kde*.
 
 ### <a name="example"></a>Příklad
 
@@ -885,12 +885,12 @@ int main( )
 After the emplace insertion, hms1 contains a.
 ```
 
-## <a name="empty"></a>hash_multiset:: Empty
+## <a name="hash_multisetempty"></a><a name="empty"></a>hash_multiset::prázdný
 
 > [!NOTE]
-> Toto rozhraní API je zastaralé. Alternativa je [Unordered_multiset třídy](../standard-library/unordered-multiset-class.md).
+> Toto rozhraní API je zastaralé. Alternativou je [unordered_multiset Class](../standard-library/unordered-multiset-class.md).
 
-Testuje, zda je hash_multiset prázdné.
+Testuje, pokud je hash_multiset prázdný.
 
 ```cpp
 bool empty() const;
@@ -898,7 +898,7 @@ bool empty() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**true** , pokud je hash_multiset prázdné. **false** , pokud je hash_multiset neprázdné.
+**true,** pokud je hash_multiset prázdná; **false,** pokud hash_multiset není prázdný.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -934,12 +934,12 @@ The hash_multiset hms1 is not empty.
 The hash_multiset hms2 is empty.
 ```
 
-## <a name="end"></a>hash_multiset:: end
+## <a name="hash_multisetend"></a><a name="end"></a>hash_multiset::konec
 
 > [!NOTE]
-> Toto rozhraní API je zastaralé. Alternativa je [Unordered_multiset třídy](../standard-library/unordered-multiset-class.md).
+> Toto rozhraní API je zastaralé. Alternativou je [unordered_multiset Class](../standard-library/unordered-multiset-class.md).
 
-Vrátí iterátor, který adresuje umístění následující po posledním prvku v hash_multiset.
+Vrátí iterátor, který řeší umístění, které následuje poslední prvek v hash_multiset.
 
 ```cpp
 const_iterator end() const;
@@ -949,11 +949,11 @@ iterator end();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Obousměrný iterátor, který adresuje umístění následující po posledním prvku v hash_multiset. Pokud je hash_multiset prázdné, pak hash_multiset:: end = = hash_multiset:: begin.
+Obousměrný iterátor, který řeší umístění, které následuje poslední prvek v hash_multiset. Pokud je hash_multiset prázdný, pak hash_multiset::end == hash_multiset::begin.
 
 ### <a name="remarks"></a>Poznámky
 
-`end` slouží k otestování, zda iterátor dosáhl konce jeho hash_multiset. Hodnota vrácená `end` by neměla být zpětně odkazovaná.
+`end`se používá k testování, zda iterátor dosáhl konce svého hash_multiset. Hodnota vrácená `end` by neměla být odkazována.
 
 ### <a name="example"></a>Příklad
 
@@ -997,12 +997,12 @@ The last element of hms1 is 3
 The last element of hms1 is now 2
 ```
 
-## <a name="equal_range"></a>hash_multiset:: equal_range
+## <a name="hash_multisetequal_range"></a><a name="equal_range"></a>hash_multiset::equal_range
 
 > [!NOTE]
-> Toto rozhraní API je zastaralé. Alternativa je [Unordered_multiset třídy](../standard-library/unordered-multiset-class.md).
+> Toto rozhraní API je zastaralé. Alternativou je [unordered_multiset Class](../standard-library/unordered-multiset-class.md).
 
-Vrátí dvojici iterátorů v uvedeném pořadí na první prvek v hash_multiset s klíčem, který je větší než zadaný klíč a na první prvek v hash_multiset s klíčem, který je roven nebo větší než klíč.
+Vrátí dvojici iterátorů respektive první prvek v hash_multiset s klíčem, který je větší než zadaný klíč a první prvek v hash_multiset s klíčem, který je roven nebo větší než klíč.
 
 ```cpp
 pair <const_iterator, const_iterator> equal_range (const Key& key) const;
@@ -1012,14 +1012,14 @@ pair <iterator, iterator> equal_range (const Key& key);
 
 ### <a name="parameters"></a>Parametry
 
-\ *klíčů*
-Klíč argumentu, který se má porovnat s klíčem řazení prvku z prohledávané hash_multiset.
+*Klíč*\
+Klíč argumentu, který má být porovnán s klíčem řazení prvku z hash_multiset prohledáván.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pár iterátorů, kde první je [lower_bound](#lower_bound) klíče a druhý je [Upper_bound](#upper_bound) klíče.
+Dvojice iterátorů, kde první je [lower_bound](#lower_bound) klíče a druhá je [upper_bound](#upper_bound) klíče.
 
-Chcete-li získat přístup k prvnímu iterátoru páru `pr` vráceném členskou funkcí, použijte `pr`. **nejprve** a pro zpětnou vazbu dolního iterátoru použijte \*(`pr`. **první**). Pro přístup k druhému iterátoru páru `pr` vráceném členskou funkcí použijte `pr`. **sekundy** a pro zpětnou vazbu horního iterátoru, použijte \*(`pr`. **sekundy**).
+Chcete-li získat přístup k prvnímu iterátoru `pr` `pr`dvojice vrácené členovou funkcí, použijte . **nejprve** a dereference dolní mez iterátoru, použití \*( `pr`. **první**). Chcete-li získat přístup k druhému iterátoru `pr` `pr`dvojice vrácené členovou funkcí, použijte . **a** pro dereferenci horní mez iterátoru, použití \*( `pr`. **za druhé**).
 
 ### <a name="example"></a>Příklad
 
@@ -1084,12 +1084,12 @@ matching the 2nd element of the pair returned by equal_range( 20 ).
 The hash_multiset hms1 doesn't have an element with a key less than 40.
 ```
 
-## <a name="erase"></a>hash_multiset:: Erase
+## <a name="hash_multiseterase"></a><a name="erase"></a>hash_multiset::vymazat
 
 > [!NOTE]
-> Toto rozhraní API je zastaralé. Alternativa je [Unordered_multiset třídy](../standard-library/unordered-multiset-class.md).
+> Toto rozhraní API je zastaralé. Alternativou je [unordered_multiset Class](../standard-library/unordered-multiset-class.md).
 
-Odebere prvek nebo rozsah prvků v hash_multiset ze zadané pozice nebo odstraní prvky, které odpovídají zadanému klíči.
+Odebere prvek nebo rozsah prvků v hash_multiset ze zadaných pozic nebo odebere prvky, které odpovídají zadanému klíči.
 
 ```cpp
 iterator erase(iterator where);
@@ -1101,29 +1101,29 @@ size_type erase(const key_type& key);
 
 ### <a name="parameters"></a>Parametry
 
-*kde*\
-Pozice prvku, který má být odebrán z hash_multiset.
+*Kde*\
+Umístění prvku, který má být odebrán z hash_multiset.
 
-*první*\
-Pozice prvního prvku byla odebrána z hash_multiset.
+*První*\
+Pozice prvního prvku odstraněného z hash_multiset.
 
-*poslední*\
-Pozice bezprostředně za posledním prvkem odebraným z hash_multiset.
+*Poslední*\
+Umístěte těsně za poslední prvek odstraněný z hash_multiset.
 
-\ *klíčů*
-Klíč prvků, které mají být odebrány z hash_multiset.
+*Klíč*\
+Klíč prvků, které mají být odstraněny z hash_multiset.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pro první dvě členské funkce obousměrný iterátor, který určuje první prvek zbývající za odebranými prvky, nebo ukazatel na konec hash_multiset, pokud žádný takový prvek neexistuje. Pro třetí členskou funkci počet prvků, které byly odebrány z hash_multiset.
+Pro první dvě členské funkce obousměrný iterátor, který označuje první prvek zbývající za všechny prvky odebrány nebo ukazatel na konec hash_multiset pokud žádný takový prvek neexistuje. Pro třetí členskou funkci počet prvků, které byly odebrány z hash_multiset.
 
 ### <a name="remarks"></a>Poznámky
 
-Členské funkce nikdy nevyvolají výjimku.
+Členské funkce nikdy vyvolat výjimku.
 
 ### <a name="example"></a>Příklad
 
-Následující příklad ukazuje použití členské funkce hash_multiset:: Erase.
+Následující příklad ukazuje použití hash_multiset::erase členské funkce.
 
 ```cpp
 // hash_multiset_erase.cpp
@@ -1207,12 +1207,12 @@ After another element with a key equal to that of the 2nd element
 is deleted, the hash_multiset hms3 is: 0 3.
 ```
 
-## <a name="find"></a>hash_multiset:: Find
+## <a name="hash_multisetfind"></a><a name="find"></a>hash_multiset::najít
 
 > [!NOTE]
-> Toto rozhraní API je zastaralé. Alternativa je [Unordered_multiset třídy](../standard-library/unordered-multiset-class.md).
+> Toto rozhraní API je zastaralé. Alternativou je [unordered_multiset Class](../standard-library/unordered-multiset-class.md).
 
-Vrátí iterátor adresující umístění elementu v hash_multiset, který má klíč shodný se zadaným klíčem.
+Vrátí iterátor adresování umístění prvku v hash_multiset, který má klíč ekvivalentní zadaný klíč.
 
 ```cpp
 iterator find(const Key& key);
@@ -1222,18 +1222,18 @@ const_iterator find(const Key& key) const;
 
 ### <a name="parameters"></a>Parametry
 
-\ *klíčů*
-Klíč argumentu, který má být porovnán klíčem řazení elementu z hledaného hash_multiset.
+*Klíč*\
+Klíč argumentu, který má být porovnán s klíčem řazení prvku z hash_multiset prohledáván.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-[Iterátor](#iterator) nebo [const_iterator](#const_iterator) , které řeší umístění elementu, který odpovídá zadanému klíči, nebo který řeší umístění, které následuje po posledním prvku v hash_multiset, pokud se pro klíč nenajde žádná shoda.
+[Iterátor](#iterator) nebo [const_iterator,](#const_iterator) který řeší umístění prvku ekvivalentního zadanému klíči nebo který řeší umístění, které následuje poslední prvek v hash_multiset pokud pro klíč není nalezena žádná shoda.
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí iterátor, který adresuje prvek v hash_multiset jejichž klíč řazení je `equivalent` na klíč argumentu v binárním predikátu, který vystaví řazení na základě vztahu srovnatelnosti menšího typu.
+Členská funkce vrátí iterátor, který řeší prvek v hash_multiset `equivalent` jehož klíč řazení je klíč argumentu pod binární predikát, který indukuje řazení na základě méně než vztah srovnatelnosti.
 
-Pokud je vrácená hodnota `find` přiřazená k `const_iterator`, objekt hash_multiset nelze upravit. Pokud je vrácená hodnota `find` přiřazena k `iterator`, lze objekt hash_multiset upravit.
+Pokud `find` je vrácená hodnota `const_iterator`přiřazena aplikaci , nelze objekt hash_multiset změnit. Pokud `find` je vrácená hodnota `iterator`přiřazena k aplikaci , lze změnit objekt hash_multiset.
 
 ### <a name="example"></a>Příklad
 
@@ -1285,12 +1285,12 @@ The hash_multiset hms1 doesn't have an element with a key of 40.
 The element of hms1 with a key matching that of the last element is: 30.
 ```
 
-## <a name="get_allocator"></a>hash_multiset:: get_allocator
+## <a name="hash_multisetget_allocator"></a><a name="get_allocator"></a>hash_multiset::get_allocator
 
 > [!NOTE]
-> Toto rozhraní API je zastaralé. Alternativa je [Unordered_multiset třídy](../standard-library/unordered-multiset-class.md).
+> Toto rozhraní API je zastaralé. Alternativou je [unordered_multiset Class](../standard-library/unordered-multiset-class.md).
 
-Vrátí kopii objektu přidělování, která se používá k vytvoření hash_multiset.
+Vrátí kopii objektu alokátoru použitého ke vytvoření hash_multiset.
 
 ```cpp
 Allocator get_allocator() const;
@@ -1298,13 +1298,13 @@ Allocator get_allocator() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Alokátor používaný hash_multiset ke správě paměti, což je `Allocator`parametr šablony třídy.
+Alokátor používaný hash_multiset ke správě paměti, což je parametr `Allocator`šablony třídy .
 
-Další informace o `Allocator`naleznete v části poznámky v tématu [hash_multiset třídy](../standard-library/hash-multiset-class.md) .
+Další informace `Allocator`naleznete v části Poznámky v tématu [hash_multiset třída.](../standard-library/hash-multiset-class.md)
 
 ### <a name="remarks"></a>Poznámky
 
-Přidělování pro třídu hash_multiset určují, jak Třída spravuje úložiště. Výchozí přidělující třídy kontejnerů C++ standardní knihovny jsou dostačující pro většinu programovacích potřeb. Psaní a používání vlastního třídy přidělování je pokročilým C++ tématem.
+Alokátory pro třídu hash_multiset určují, jak třída spravuje úložiště. Výchozí alokátory dodávané s třídami kontejneru standardní knihovny jazyka C++ jsou dostatečné pro většinu potřeb programování. Psaní a používání vlastní třídy přidělování je pokročilé téma jazyka C++.
 
 ### <a name="example"></a>Příklad
 
@@ -1361,12 +1361,12 @@ int main( )
 }
 ```
 
-## <a name="hash_multiset"></a>hash_multiset:: hash_multiset
+## <a name="hash_multisethash_multiset"></a><a name="hash_multiset"></a>hash_multiset::hash_multiset
 
 > [!NOTE]
-> Toto rozhraní API je zastaralé. Alternativa je [Unordered_multiset třídy](../standard-library/unordered-multiset-class.md).
+> Toto rozhraní API je zastaralé. Alternativou je [unordered_multiset Class](../standard-library/unordered-multiset-class.md).
 
-Vytvoří `hash_multiset`, který je prázdný nebo který je kopií všech nebo částí jiných `hash_multiset`.
+Konstrukce, `hash_multiset` který je prázdný nebo který je kopií celé `hash_multiset`nebo části některé jiné .
 
 ```cpp
 hash_multiset();
@@ -1413,45 +1413,45 @@ hash_multiset(
 ### <a name="parameters"></a>Parametry
 
 *Al*\
-Třída přidělování úložiště, která se má použít pro tento objekt `hash_multiset`, který má výchozí hodnotu `Allocator`.
+Třída alokátoru úložiště, která `hash_multiset` má být použita `Allocator`pro tento objekt, který je ve výchozím nastavení .
 
-\ *comp*
-Funkce porovnání typu `const Traits` slouží k uspořádání prvků v `hash_multiset`, jejichž výchozí hodnota je `hash_compare`.
+*Comp*\
+Funkce porovnání typu `const Traits` použitého k seřizování prvků v rozhraní `hash_multiset`, které jsou ve výchozím nastavení . `hash_compare`
 
-*Pravé*\
-`hash_multiset`, ze kterého má být vytvořená `hash_multiset` kopie.
+*Právo*\
+Z `hash_multiset` nichž je `hash_multiset` konstruována kopie.
 
-*první*\
-Pozice prvního prvku v rozsahu prvků, které mají být zkopírovány.
+*První*\
+Umístění prvního prvku v rozsahu prvků, které mají být zkopírovány.
 
-*poslední*\
-Pozice prvního prvku mimo rozsah prvků, které mají být zkopírovány.
+*Poslední*\
+Pozice první prvek mimo rozsah prvků, které mají být zkopírovány.
 
-\ *IList*
-Initializer_list obsahující prvky, které mají být zkopírovány.
+*Ilist*\
+Initializer_list, který obsahuje prvky, které mají být zkopírovány.
 
 ### <a name="remarks"></a>Poznámky
 
-Všechny konstruktory ukládají typ objektu přidělování, který spravuje úložiště paměti pro `hash_multiset` a které mohou být později vráceny voláním [hash_multiset:: get_allocator](#get_allocator). Parametr allocator je často v deklaraci třídy vynechán a makra předběžného zpracování jsou použita k nahrazení alternativních alokátorů.
+Všechny konstruktory uložit typ objektu alokátoru, který `hash_multiset` spravuje úložiště paměti pro a které mohou být později vráceny voláním [hash_multiset::get_allocator](#get_allocator). Parametr allocator je často v deklaraci třídy vynechán a makra předběžného zpracování jsou použita k nahrazení alternativních alokátorů.
 
 Všechny konstruktory inicializují své hash_multisets.
 
-Všechny konstruktory ukládají objekt funkce typu `Traits`, který se používá k navázání objednávky mezi klíči `hash_multiset` a které mohou být později vráceny voláním [hash_multiset:: key_comp](#key_comp). Další informace o `Traits` naleznete v tématu [hash_multiset třídy](../standard-library/hash-multiset-class.md) .
+Všechny konstruktory uložit objekt `Traits` funkce typu, který se používá k `hash_multiset` vytvoření pořadí mezi klíči a které mohou být později vráceny voláním [hash_multiset::key_comp](#key_comp). Další informace `Traits` naleznete v tématu [hash_multiset třídy.](../standard-library/hash-multiset-class.md)
 
-První tři konstruktory určují prázdné počáteční `hash_multiset`, druhý určující typ funkce porovnání (*comp*), která se použije při vytváření pořadí prvků, a třetí explicitní určení typu přidělujícího objektu (*Al*), který se má použít. Klíčové slovo **Explicit** potlačí určité druhy automatických převodů typu.
+První tři konstruktory určují `hash_multiset`prázdnou iniciálu , druhou určující typ funkce porovnání (*Comp),* která má být použita při stanovení pořadí prvků, a třetí explicitně specifikuje typ alokátoru (*Al*), který má být použit. Klíčové slovo **explicitní** potlačí určité druhy automatického převodu typu.
 
 Čtvrtý konstruktor přesune `hash_multiset` `Right`.
 
-Pátý, šestý a sedmý konstruktor používají initializer_list.
+Pátý, šestý a sedmý konstruktory používají initializer_list.
 
-Poslední tři konstruktory kopírují rozsah [`first`, `last`) `hash_multiset` se zvýšením explicitního určení typu funkce porovnání třídy Compare a Alokátor.
+Poslední tři konstruktory zkopírují `first` `last`rozsah [ `hash_multiset` , ) s rostoucí explicitní při určování typu funkce porovnání třídy Porovnání a přidělování.
 
-Skutečné pořadí prvků v kontejneru sady nastavení s hodnotou hash závisí na funkci hash, funkci řazení a aktuální velikosti zatřiďovací tabulky a nemůže obecně být předpokládaná, protože by mohla být s kontejnerem množiny, kde byla určena funkcí řazení. samy.
+Skutečné pořadí prvků v kontejneru hash set závisí na funkci hash, funkci řazení a aktuální velikost tabulky hash a obecně nelze předpovědět, jak by to mohlo s kontejnerem sady, kde bylo určeno pouze funkcí řazení.
 
-## <a name="insert"></a>hash_multiset:: INSERT
+## <a name="hash_multisetinsert"></a><a name="insert"></a>hash_multiset::vložit
 
 > [!NOTE]
-> Toto rozhraní API je zastaralé. Alternativa je [Unordered_multiset třídy](../standard-library/unordered-multiset-class.md).
+> Toto rozhraní API je zastaralé. Alternativou je [unordered_multiset Class](../standard-library/unordered-multiset-class.md).
 
 Vloží prvek nebo rozsah prvků do hash_multiset.
 
@@ -1490,37 +1490,37 @@ iterator insert(
 
 ### <a name="parameters"></a>Parametry
 
-*hodnota*\
-Hodnota prvku, který má být vložen do hash_multiset, pokud hash_multiset již daný prvek neobsahuje, nebo obecněji, element, jehož klíč je ekvivalentně seřazen.
+*Hodnotu*\
+Hodnota prvku, který má být vložen do hash_multiset, pokud hash_multiset již obsahuje tento prvek nebo obecněji prvek, jehož klíč je ekvivalentní objednané.
 
-*kde*\
-Místo zahájení vyhledání správného bodu vložení. (Vložení se může vyskytnout v konstantním čase, namísto logaritmické doby, pokud se kurzor okamžitě sleduje *tam, kde*.)
+*Kde*\
+Místo zahájení vyhledání správného bodu vložení. (Vložení může dojít v amortizované konstantní čas, namísto logaritmického času, pokud kurzor bezprostředně *následuje, kde*.)
 
-*první*\
+*První*\
 Pozice prvního prvku, který má být zkopírován z hash_multiset.
 
-*poslední*\
-Pozice bezprostředně za posledním prvkem, který má být zkopírován z hash_multiset.
+*Poslední*\
+Pozice těsně za poslední prvek, který má být zkopírován z hash_multiset.
 
-\ *IList*
-Initializer_list obsahující prvky ke zkopírování.
+*Ilist*\
+initializer_list, který obsahuje prvky ke kopírování.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-První dvě vložené členské funkce vrátí iterátor, který odkazuje na pozici, kam byl nový prvek vložen.
+První dvě funkce vložit člen vrátí iterátor, který odkazuje na pozici, kde byl vložen nový prvek.
 
-Následující tři členské funkce používají initializer_list.
+Další tři členské funkce používají initializer_list.
 
-Třetí členská funkce vloží sekvenci hodnot prvků do hash_multiset odpovídající každému prvku, který je adresován v rozsahu [`first`, `last`) zadaného hash_multiset.
+Třetí členská funkce vloží posloupnost hodnot prvků do hash_multiset odpovídající každému prvku, který je `first` `last`adresován iterátorem v rozsahu [ , ) zadaného hash_multiset.
 
 ### <a name="remarks"></a>Poznámky
 
-Vložení se může vyskytnout v konstantním konstantním čase pro verzi pomocného parametru pro vložení, namísto logaritmické doby, pokud se místo vložení hned následuje *tam, kde*.
+Vložení může dojít v amortizované konstantní čas pro nápovědu verzi vložit, namísto logaritmického času, pokud kurzor bezprostředně následuje *kde*.
 
-## <a name="iterator"></a>hash_multiset:: iterátor
+## <a name="hash_multisetiterator"></a><a name="iterator"></a>hash_multiset::iterátor
 
 > [!NOTE]
-> Toto rozhraní API je zastaralé. Alternativa je [Unordered_multiset třídy](../standard-library/unordered-multiset-class.md).
+> Toto rozhraní API je zastaralé. Alternativou je [unordered_multiset Class](../standard-library/unordered-multiset-class.md).
 
 Typ, který poskytuje obousměrný iterátor, který může číst nebo upravovat libovolný prvek v hash_multiset.
 
@@ -1530,18 +1530,18 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::iter
 
 ### <a name="remarks"></a>Poznámky
 
-Typ `iterator` lze použít pro úpravu hodnoty prvku.
+Typ `iterator` lze změnit hodnotu prvku.
 
 ### <a name="example"></a>Příklad
 
-Viz příklad pro [začátek](#begin) pro příklad, jak deklarovat a používat `iterator`.
+Viz příklad pro [začátek](#begin) pro příklad, `iterator`jak deklarovat a používat .
 
-## <a name="key_comp"></a>hash_multiset:: key_comp
+## <a name="hash_multisetkey_comp"></a><a name="key_comp"></a>hash_multiset::key_comp
 
 > [!NOTE]
-> Toto rozhraní API je zastaralé. Alternativa je [Unordered_multiset třídy](../standard-library/unordered-multiset-class.md).
+> Toto rozhraní API je zastaralé. Alternativou je [unordered_multiset Class](../standard-library/unordered-multiset-class.md).
 
-Načte kopii objektu porovnání, která se používá k řazení klíčů v hash_multiset.
+Načte kopii objektu porovnání použitého k objednání klíčů v hash_multiset.
 
 ```cpp
 key_compare key_comp() const;
@@ -1549,19 +1549,19 @@ key_compare key_comp() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí *vlastnosti*parametru šablony hash_multiset, které obsahují objekty funkce, které jsou použity k hodnotě hash a k uspořádání prvků kontejneru.
+Vrátí hash_multiset parametr šablony *Vlastnosti*, který obsahuje objekty funkce, které se používají k hash a pořadí prvků kontejneru.
 
-Další informace o *vlastnostích* naleznete v tématu [hash_multiset třídy](../standard-library/hash-multiset-class.md) .
+Další informace o *vlastnostech* naleznete v tématu [hash_multiset třída.](../standard-library/hash-multiset-class.md)
 
 ### <a name="remarks"></a>Poznámky
 
-Uložený objekt definuje členskou funkci:
+Uložený objekt definuje členovou funkci:
 
 `bool operator<(const Key& _xVal, const Key& _yVal);`
 
-Vrátí **hodnotu true** , pokud `_xVal` předchází a není rovna `_yVal` v pořadí řazení.
+který vrátí `_xVal` **hodnotu true,** pokud `_yVal` předchází, a není rovna v pořadí řazení.
 
-Všimněte si, že [key_compare](#key_compare) i [value_compare](#value_compare) jsou synonyma pro *vlastnosti*parametrů šablony. Oba typy jsou k dispozici pro třídy hash_multiset a hash_multiset, kde jsou identické, pro zajištění kompatibility s třídami hash_map a hash_multimap, kde jsou odlišné.
+Všimněte si, že [key_compare](#key_compare) i [value_compare](#value_compare) jsou synonyma pro *vlastnosti*parametru šablony . Oba typy jsou k dispozici pro třídy hash_multiset a hash_multiset, kde jsou identické, pro kompatibilitu s hash_map a hash_multimap třídy, kde jsou odlišné.
 
 ### <a name="example"></a>Příklad
 
@@ -1612,12 +1612,12 @@ int main( )
 }
 ```
 
-## <a name="key_compare"></a>hash_multiset:: key_compare
+## <a name="hash_multisetkey_compare"></a><a name="key_compare"></a>hash_multiset::key_compare
 
 > [!NOTE]
-> Toto rozhraní API je zastaralé. Alternativa je [Unordered_multiset třídy](../standard-library/unordered-multiset-class.md).
+> Toto rozhraní API je zastaralé. Alternativou je [unordered_multiset Class](../standard-library/unordered-multiset-class.md).
 
-Typ, který poskytuje dva objekty Functions, binární predikát porovnání třídy, který může porovnat dvě hodnoty prvku hash_multiset k určení jejich relativního pořadí a unární predikát, který prvky vyhodnotí.
+Typ, který poskytuje dva objekty funkce, binární predikát třídy porovnat, které lze porovnat dva elementové hodnoty hash_multiset k určení jejich relativní pořadí a unární predikát, který hodnoty zatříděny prvky.
 
 ```cpp
 typedef Traits key_compare;
@@ -1625,22 +1625,22 @@ typedef Traits key_compare;
 
 ### <a name="remarks"></a>Poznámky
 
-`key_compare` je synonymum pro *vlastnosti*parametrů šablony.
+`key_compare`je synonymem pro parametr znakové *vlastnosti*šablony .
 
-Další informace o *vlastnostích* naleznete v tématu [hash_multiset třídy](../standard-library/hash-multiset-class.md) .
+Další informace o *vlastnostech* naleznete v tématu [hash_multiset třída.](../standard-library/hash-multiset-class.md)
 
-Všimněte si, že `key_compare` i value_compare jsou synonyma pro *vlastnosti*parametrů šablony. Oba typy jsou k dispozici pro třídy hash_set a hash_multiset, kde jsou identické, pro zajištění kompatibility s třídami hash_map a hash_multimap, kde jsou odlišné.
+Všimněte `key_compare` si, že oba a value_compare jsou synonyma pro *vlastnosti*parametru šablony . Oba typy jsou k dispozici pro třídy hash_set a hash_multiset, kde jsou identické, pro kompatibilitu s hash_map a hash_multimap třídy, kde jsou odlišné.
 
 ### <a name="example"></a>Příklad
 
-Příklad, jak deklarovat a používat `key_compare`, naleznete v tématu příklad pro [key_comp](#key_comp) .
+Příklad pro [key_comp](#key_comp) naleznete příklad deklarace `key_compare`a používání .
 
-## <a name="key_type"></a>hash_multiset:: key_type
+## <a name="hash_multisetkey_type"></a><a name="key_type"></a>hash_multiset::key_type
 
 > [!NOTE]
-> Toto rozhraní API je zastaralé. Alternativa je [Unordered_multiset třídy](../standard-library/unordered-multiset-class.md).
+> Toto rozhraní API je zastaralé. Alternativou je [unordered_multiset Class](../standard-library/unordered-multiset-class.md).
 
-Typ, který poskytuje objekt funkce, který může porovnat klíče řazení pro určení relativního pořadí dvou prvků v hash_multiset.
+Typ, který poskytuje objekt funkce, který může porovnat klíče řazení k určení relativní pořadí dvou prvků v hash_multiset.
 
 ```cpp
 typedef Key key_type;
@@ -1648,22 +1648,22 @@ typedef Key key_type;
 
 ### <a name="remarks"></a>Poznámky
 
-`key_type` je synonymum pro *klíč*parametru šablony.
+`key_type`je synonymem pro parametr šablony *Klíč*.
 
-Všimněte si, že `key_type` i [value_type](../standard-library/hash-set-class.md#value_type) jsou synonyma pro *klíč*parametru šablony. Oba typy jsou k dispozici pro třídy set a multiset, kde jsou identické, pro kompatibilitu s třídami map a multimap, kde jsou odlišné.
+Všimněte `key_type` si, že oba a [value_type](../standard-library/hash-set-class.md#value_type) jsou synonyma pro parametr šablony *Key*. Oba typy jsou k dispozici pro set a vícesetové třídy, kde jsou identické, pro kompatibilitu s map a multimap třídy, kde jsou odlišné.
 
-Další informace o *klíči*naleznete v části poznámky v tématu [hash_multiset třídy](../standard-library/hash-multiset-class.md) .
+Další informace o *klíči*naleznete v části Poznámky v tématu [hash_multiset třídy.](../standard-library/hash-multiset-class.md)
 
 ### <a name="example"></a>Příklad
 
-Příklad, jak deklarovat a používat `key_type`, naleznete v tématu příklad pro [value_type](#value_type) .
+Příklad pro [value_type](#value_type) například, jak deklarovat a používat `key_type`.
 
-## <a name="lower_bound"></a>hash_multiset:: lower_bound
+## <a name="hash_multisetlower_bound"></a><a name="lower_bound"></a>hash_multiset::lower_bound
 
 > [!NOTE]
-> Toto rozhraní API je zastaralé. Alternativa je [Unordered_multiset třídy](../standard-library/unordered-multiset-class.md).
+> Toto rozhraní API je zastaralé. Alternativou je [unordered_multiset Class](../standard-library/unordered-multiset-class.md).
 
-Vrátí iterátor na první prvek v hash_multiset s klíčem, který je větší nebo roven zadanému klíči.
+Vrátí iterátor prvnímu prvku v hash_multiset s klíčem, který je roven nebo větší než zadaný klíč.
 
 ```cpp
 const_iterator lower_bound(const Key& key) const;
@@ -1673,12 +1673,12 @@ iterator lower_bound(const Key& key);
 
 ### <a name="parameters"></a>Parametry
 
-\ *klíčů*
-Klíč argumentu, který se má porovnat s klíčem řazení prvku z prohledávané hash_multiset.
+*Klíč*\
+Klíč argumentu, který má být porovnán s klíčem řazení prvku z hash_multiset prohledáván.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-[Iterátor](#iterator) nebo [const_iterator](#const_iterator) , které řeší umístění prvního prvku v hash_multiset s klíčem, který je roven nebo větší než klíč argumentu nebo který řeší umístění, které následuje po posledním prvku v hash_multiset, pokud se pro klíč nenajde žádná shoda.
+[Iterátor](#iterator) nebo [const_iterator,](#const_iterator) který řeší umístění prvního prvku v hash_multiset s klíčem, který je roven nebo větší než klíč argumentu nebo který řeší umístění, které následuje poslední prvek v hash_multiset pokud pro klíč není nalezena žádná shoda.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1725,10 +1725,10 @@ int main() {
 }
 ```
 
-## <a name="max_size"></a>hash_multiset:: max_size
+## <a name="hash_multisetmax_size"></a><a name="max_size"></a>hash_multiset::max_size
 
 > [!NOTE]
-> Toto rozhraní API je zastaralé. Alternativa je [Unordered_multiset třídy](../standard-library/unordered-multiset-class.md).
+> Toto rozhraní API je zastaralé. Alternativou je [unordered_multiset Class](../standard-library/unordered-multiset-class.md).
 
 Vrátí maximální délku hash_multiset.
 
@@ -1763,10 +1763,10 @@ int main( )
 }
 ```
 
-## <a name="op_eq"></a>hash_multiset:: operator =
+## <a name="hash_multisetoperator"></a><a name="op_eq"></a>hash_multiset::operátor=
 
 > [!NOTE]
-> Toto rozhraní API je zastaralé. Alternativa je [Unordered_multiset třídy](../standard-library/unordered-multiset-class.md).
+> Toto rozhraní API je zastaralé. Alternativou je [unordered_multiset Class](../standard-library/unordered-multiset-class.md).
 
 Nahradí prvky hash_multiset kopií jiného hash_multiset.
 
@@ -1780,11 +1780,11 @@ hash_multiset& operator=(hash_multiset&& right);
 
 |Parametr|Popis|
 |-|-|
-|*Kliknutím*|[Hash_multiset](../standard-library/hash-multiset-class.md) se kopíruje do `hash_multiset`.|
+|*Právo*|Hash_multiset [hash_multiset](../standard-library/hash-multiset-class.md) zkopírován `hash_multiset`do .|
 
 ### <a name="remarks"></a>Poznámky
 
-Po vymazání všech existujících prvků v `hash_multiset``operator=` buď zkopírování nebo přesunutí obsahu *přímo* do `hash_multiset`.
+Po vymazání všech existujících `hash_multiset` `operator=` prvků v aplikaci zkopíruje `hash_multiset`nebo přesune obsah *vpravo* do .
 
 ### <a name="example"></a>Příklad
 
@@ -1824,10 +1824,10 @@ int main( )
 }
 ```
 
-## <a name="pointer"></a>hash_multiset::p ointer
+## <a name="hash_multisetpointer"></a><a name="pointer"></a>hash_multiset::pointer
 
 > [!NOTE]
-> Toto rozhraní API je zastaralé. Alternativa je [Unordered_multiset třídy](../standard-library/unordered-multiset-class.md).
+> Toto rozhraní API je zastaralé. Alternativou je [unordered_multiset Class](../standard-library/unordered-multiset-class.md).
 
 Typ, který poskytuje ukazatel na prvek v hash_multiset.
 
@@ -1837,14 +1837,14 @@ typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::po
 
 ### <a name="remarks"></a>Poznámky
 
-Typ `pointer` lze použít pro úpravu hodnoty prvku.
+Typ `pointer` lze změnit hodnotu prvku.
 
-Ve většině případů by měl být použit [iterátor](#iterator) pro přístup k prvkům v objektu multiset.
+Ve většině případů [iterátor](#iterator) by měl být použit pro přístup k prvkům v objektu více sad.
 
-## <a name="rbegin"></a>hash_multiset:: rbegin
+## <a name="hash_multisetrbegin"></a><a name="rbegin"></a>hash_multiset::začátek
 
 > [!NOTE]
-> Toto rozhraní API je zastaralé. Alternativa je [Unordered_multiset třídy](../standard-library/unordered-multiset-class.md).
+> Toto rozhraní API je zastaralé. Alternativou je [unordered_multiset Class](../standard-library/unordered-multiset-class.md).
 
 Vrátí iterátor adresující první prvek v obráceném hash_multiset.
 
@@ -1856,15 +1856,15 @@ reverse_iterator rbegin();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Reverzní obousměrný iterátor, který adresuje první prvek v obráceném hash_multiset nebo řeší, co byl posledním prvkem v neobráceném hash_multiset.
+Reverzní obousměrný iterátor adresování první prvek v obrácené hash_multiset nebo adresování, co bylo poslední prvek v unreverse hash_multiset.
 
 ### <a name="remarks"></a>Poznámky
 
-`rbegin` se používá s obráceným hash_multiset stejně jako [Begin](#begin) se používá s hash_multiset.
+`rbegin`se používá s obráceným hash_multiset stejně jako [začátek](#begin) se používá s hash_multiset.
 
-Pokud je vrácená hodnota `rbegin` přiřazena k `const_reverse_iterator`, nelze objekt hash_multiset změnit. Pokud je vrácená hodnota `rbegin` přiřazena k `reverse_iterator`, lze objekt hash_multiset upravit.
+Pokud `rbegin` je vrácená hodnota `const_reverse_iterator`přiřazena aplikaci , nelze hash_multiset objekt změnit. Pokud `rbegin` je vrácená hodnota `reverse_iterator`přiřazena k , pak hash_multiset objekt upravil.
 
-`rbegin` lze použít k iteraci hash_multiset zpět.
+`rbegin`lze itetovat přes hash_multiset dozadu.
 
 ### <a name="example"></a>Příklad
 
@@ -1924,10 +1924,10 @@ The reversed hash_multiset is: 30 20 10
 After the erasure, the first element in the reversed hash_multiset is 20.
 ```
 
-## <a name="reference"></a>hash_multiset:: Reference
+## <a name="hash_multisetreference"></a><a name="reference"></a>hash_multiset::odkaz
 
 > [!NOTE]
-> Toto rozhraní API je zastaralé. Alternativa je [Unordered_multiset třídy](../standard-library/unordered-multiset-class.md).
+> Toto rozhraní API je zastaralé. Alternativou je [unordered_multiset Class](../standard-library/unordered-multiset-class.md).
 
 Typ, který poskytuje odkaz na prvek uložený v hash_multiset.
 
@@ -1974,12 +1974,12 @@ The first element in the hash_multiset is 10.
 The first element in the hash_multiset is now 15.
 ```
 
-## <a name="rend"></a>hash_multiset:: rend
+## <a name="hash_multisetrend"></a><a name="rend"></a>hash_multiset::rend
 
 > [!NOTE]
-> Toto rozhraní API je zastaralé. Alternativa je [Unordered_multiset třídy](../standard-library/unordered-multiset-class.md).
+> Toto rozhraní API je zastaralé. Alternativou je [unordered_multiset Class](../standard-library/unordered-multiset-class.md).
 
-Vrátí iterátor, který adresuje umístění následující po posledním prvku v obráceném hash_multiset.
+Vrátí iterátor, který řeší umístění, které následuje poslední prvek v obráceném hash_multiset.
 
 ```cpp
 const_reverse_iterator rend() const;
@@ -1989,15 +1989,15 @@ reverse_iterator rend();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Zpětný obousměrný iterátor, který adresuje umístění následující po posledním prvku v obráceném hash_multiset (umístění, které předchází prvnímu prvku v neobráceném hash_multiset).
+Reverzní obousměrný iterátor, který řeší umístění, které následuje poslední prvek v obráceném hash_multiset (umístění, které předcházelo prvnímu prvku v neobrácené masce hash_multiset).
 
 ### <a name="remarks"></a>Poznámky
 
-`rend` se používá s obráceným hash_multiset stejně jako [End](#end) se používá s hash_multiset.
+`rend`se používá s obráceným hash_multiset [stejně](#end) jako konec se používá s hash_multiset.
 
-Pokud je vrácená hodnota `rend` přiřazena k `const_reverse_iterator`, nelze objekt hash_multiset změnit. Pokud je vrácená hodnota `rend` přiřazena k `reverse_iterator`, lze objekt hash_multiset upravit. Hodnota vrácená `rend` by neměla být zpětně odkazovaná.
+Pokud `rend` je vrácená hodnota `const_reverse_iterator`přiřazena aplikaci , nelze hash_multiset objekt změnit. Pokud `rend` je vrácená hodnota `reverse_iterator`přiřazena k , pak hash_multiset objekt upravil. Hodnota vrácená `rend` by neměla být odkazována.
 
-`rend` lze použít k otestování, zda reverzní iterátor dosáhl konce jeho hash_multiset.
+`rend`lze použít k testování, zda reverzní iterátor dosáhl konce svého hash_multiset.
 
 ### <a name="example"></a>Příklad
 
@@ -2060,10 +2060,10 @@ The reversed hash_multiset is: 30 20 10 .
 After the erasure, the last element in the reversed hash_multiset is 20.
 ```
 
-## <a name="reverse_iterator"></a>hash_multiset:: reverse_iterator
+## <a name="hash_multisetreverse_iterator"></a><a name="reverse_iterator"></a>hash_multiset::reverse_iterator
 
 > [!NOTE]
-> Toto rozhraní API je zastaralé. Alternativa je [Unordered_multiset třídy](../standard-library/unordered-multiset-class.md).
+> Toto rozhraní API je zastaralé. Alternativou je [unordered_multiset Class](../standard-library/unordered-multiset-class.md).
 
 Typ, který poskytuje obousměrný iterátor, který může číst nebo upravovat prvek v obráceném hash_multiset.
 
@@ -2073,16 +2073,16 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::reve
 
 ### <a name="remarks"></a>Poznámky
 
-Typ `reverse_iterator` slouží k iterování skrze hash_multiset v opačném případě.
+Typ `reverse_iterator` se používá k iterátu přes hash_multiset v opačném směru.
 
 ### <a name="example"></a>Příklad
 
-Příklad, jak deklarovat a používat `reverse_iterator`, naleznete v tématu příklad pro [rbegin](#rbegin) .
+Příklad pro [rbegin](#rbegin) pro příklad, jak `reverse_iterator`deklarovat a používat .
 
-## <a name="size"></a>hash_multiset:: size
+## <a name="hash_multisetsize"></a><a name="size"></a>hash_multiset::velikost
 
 > [!NOTE]
-> Toto rozhraní API je zastaralé. Alternativa je [Unordered_multiset třídy](../standard-library/unordered-multiset-class.md).
+> Toto rozhraní API je zastaralé. Alternativou je [unordered_multiset Class](../standard-library/unordered-multiset-class.md).
 
 Vrátí počet prvků v hash_multiset.
 
@@ -2126,12 +2126,12 @@ The hash_multiset length is 1.
 The hash_multiset length is now 2.
 ```
 
-## <a name="size_type"></a>hash_multiset:: size_type
+## <a name="hash_multisetsize_type"></a><a name="size_type"></a>hash_multiset::size_type
 
 > [!NOTE]
-> Toto rozhraní API je zastaralé. Alternativa je [Unordered_multiset třídy](../standard-library/unordered-multiset-class.md).
+> Toto rozhraní API je zastaralé. Alternativou je [unordered_multiset Class](../standard-library/unordered-multiset-class.md).
 
-Typ unsigned integer, který může představovat počet prvků v hash_multiset.
+Nepodepsaný podčíslení typ, který může představovat počet prvků v hash_multiset.
 
 ```cpp
 typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::size_type size_type;
@@ -2141,12 +2141,12 @@ typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::si
 
 ### <a name="example"></a>Příklad
 
-Viz příklad pro [Velikost](#size) pro příklad, jak deklarovat a použít `size_type`
+Příklad [velikosti](#size) naleznete v příkladu, jak deklarovat a používat`size_type`
 
-## <a name="swap"></a>hash_multiset:: swap
+## <a name="hash_multisetswap"></a><a name="swap"></a>hash_multiset::swap
 
 > [!NOTE]
-> Toto rozhraní API je zastaralé. Alternativa je [Unordered_multiset třídy](../standard-library/unordered-multiset-class.md).
+> Toto rozhraní API je zastaralé. Alternativou je [unordered_multiset Class](../standard-library/unordered-multiset-class.md).
 
 Vyměňuje prvky dvou hash_multisets.
 
@@ -2156,12 +2156,12 @@ void swap(hash_multiset& right);
 
 ### <a name="parameters"></a>Parametry
 
-*pravé*\
-Argument hash_multiset poskytnutí prvků, které mají být nahrazeny cílovým hash_multiset.
+*Právo*\
+Argument hash_multiset poskytuje prvky, které mají být vyměněny za cílovou hash_multiset.
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce neověřuje žádné odkazy, ukazatele nebo iterátory, které určují elementy ze dvou hash_multisets, jejichž prvky se vyměňují.
+Členská funkce zruší platnost žádné odkazy, ukazatele nebo iterátory, které označují prvky ve dvou hash_multisets, jejichž prvky jsou vyměňovány.
 
 ### <a name="example"></a>Příklad
 
@@ -2217,12 +2217,12 @@ After swapping with hms2, list hms1 is: 200 100.
 After swapping with hms3, list hms1 is: 300.
 ```
 
-## <a name="upper_bound"></a>hash_multiset:: upper_bound
+## <a name="hash_multisetupper_bound"></a><a name="upper_bound"></a>hash_multiset::upper_bound
 
 > [!NOTE]
-> Toto rozhraní API je zastaralé. Alternativa je [Unordered_multiset třídy](../standard-library/unordered-multiset-class.md).
+> Toto rozhraní API je zastaralé. Alternativou je [unordered_multiset Class](../standard-library/unordered-multiset-class.md).
 
-Vrátí iterátor na první prvek v hash_multiset s klíčem, který je větší než zadaný klíč.
+Vrátí iterátor prvnímu prvku v hash_multiset s klíčem, který je větší než zadaný klíč.
 
 ```cpp
 const_iterator upper_bound(const Key& key) const;
@@ -2232,12 +2232,12 @@ iterator upper_bound(const Key& key);
 
 ### <a name="parameters"></a>Parametry
 
-\ *klíčů*
-Klíč argumentu, který se má porovnat s klíčem řazení prvku z prohledávané hash_multiset.
+*Klíč*\
+Klíč argumentu, který má být porovnán s klíčem řazení prvku z hash_multiset prohledáván.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-[Iterátor](#iterator) nebo [const_iterator](#const_iterator) , které řeší umístění prvního prvku v hash_multiset s klíčem větším, než je klíč argumentu, nebo který řeší umístění, které následuje po posledním prvku v hash_multiset, pokud se pro klíč nenajde žádná shoda.
+[Iterátor](#iterator) nebo [const_iterator,](#const_iterator) který řeší umístění prvního prvku v hash_multiset s klíčem větším než klíč argumentu nebo který řeší umístění, které následuje poslední prvek v hash_multiset pokud pro klíč není nalezena žádná shoda.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -2295,12 +2295,12 @@ The first element of hms1 with a key greater than
 that of the initial element of hms1 is: 20.
 ```
 
-## <a name="value_comp"></a>hash_multiset:: value_comp
+## <a name="hash_multisetvalue_comp"></a><a name="value_comp"></a>hash_multiset::value_comp
 
 > [!NOTE]
-> Toto rozhraní API je zastaralé. Alternativa je [Unordered_multiset třídy](../standard-library/unordered-multiset-class.md).
+> Toto rozhraní API je zastaralé. Alternativou je [unordered_multiset Class](../standard-library/unordered-multiset-class.md).
 
-Načte kopii objektu porovnání, která se používá k seřazení hodnot prvků v hash_multiset.
+Načte kopii objektu porovnání použitého k pořadí hodnot prvků v hash_multiset.
 
 ```cpp
 value_compare value_comp() const;
@@ -2308,19 +2308,19 @@ value_compare value_comp() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí *vlastnosti*parametrů šablony hash_multiset, které obsahují objekty funkce, které jsou použity k hodnotě hash a k uspořádání prvků kontejneru.
+Vrátí hash_multiset parametr šablony *Vlastnosti*, který obsahuje objekty funkce, které se používají k hash a pořadí prvků kontejneru.
 
-Další informace o *vlastnostích* naleznete v tématu [hash_multiset třídy](../standard-library/hash-multiset-class.md) .
+Další informace o *vlastnostech* naleznete v tématu [hash_multiset třída.](../standard-library/hash-multiset-class.md)
 
 ### <a name="remarks"></a>Poznámky
 
-Uložený objekt definuje členskou funkci:
+Uložený objekt definuje členovou funkci:
 
-**bool – operátor**( **constKey &** `_xVal`, **const Key &** *_yVal*);
+**bool operátor** **(constKey&** `_xVal`, **const Key&** *_yVal);*
 
-Vrátí **hodnotu true** , pokud `_xVal` předchází a není rovna `_yVal` v pořadí řazení.
+který vrátí `_xVal` **hodnotu true,** pokud `_yVal` předchází, a není rovna v pořadí řazení.
 
-Všimněte si, že [key_compare](#key_compare) i [value_compare](#value_compare) jsou synonyma pro *vlastnosti*parametrů šablony. Oba typy jsou k dispozici pro třídy hash_multiset a hash_multiset, kde jsou identické, pro zajištění kompatibility s třídami hash_map a hash_multimap, kde jsou odlišné.
+Všimněte si, že [key_compare](#key_compare) i [value_compare](#value_compare) jsou synonyma pro *vlastnosti*parametru šablony . Oba typy jsou k dispozici pro třídy hash_multiset a hash_multiset, kde jsou identické, pro kompatibilitu s hash_map a hash_multimap třídy, kde jsou odlišné.
 
 ### <a name="example"></a>Příklad
 
@@ -2376,12 +2376,12 @@ vc1( 2,3 ) returns value of true, where vc1 is the function object of hms1.
 vc2( 2,3 ) returns value of false, where vc2 is the function object of hms2.
 ```
 
-## <a name="value_compare"></a>hash_multiset:: value_compare
+## <a name="hash_multisetvalue_compare"></a><a name="value_compare"></a>hash_multiset::value_compare
 
 > [!NOTE]
-> Toto rozhraní API je zastaralé. Alternativa je [Unordered_multiset třídy](../standard-library/unordered-multiset-class.md).
+> Toto rozhraní API je zastaralé. Alternativou je [unordered_multiset Class](../standard-library/unordered-multiset-class.md).
 
-Typ, který poskytuje dva objekty Functions, binární predikát porovnání třídy, který může porovnat dvě hodnoty prvku hash_multiset k určení jejich relativního pořadí a unární predikát, který prvky vyhodnotí.
+Typ, který poskytuje dva objekty funkce, binární predikát třídy porovnat, které lze porovnat dva elementové hodnoty hash_multiset k určení jejich relativní pořadí a unární predikát, který hodnoty zatříděny prvky.
 
 ```cpp
 typedef key_compare value_compare;
@@ -2389,22 +2389,22 @@ typedef key_compare value_compare;
 
 ### <a name="remarks"></a>Poznámky
 
-`value_compare` je synonymum pro *vlastnosti*parametrů šablony.
+`value_compare`je synonymem pro parametr znakové *vlastnosti*šablony .
 
-Další informace o *vlastnostích* naleznete v tématu [hash_multiset třídy](../standard-library/hash-multiset-class.md) .
+Další informace o *vlastnostech* naleznete v tématu [hash_multiset třída.](../standard-library/hash-multiset-class.md)
 
-Všimněte si, že [key_compare](#key_compare) i `value_compare` jsou synonyma pro *vlastnosti*parametrů šablony. Oba typy jsou k dispozici pro třídy nastavené a multiset, kde jsou identické, pro kompatibilitu s mapami tříd a multimap, kde jsou odlišné.
+Všimněte si, `value_compare` že oba [key_compare](#key_compare) a jsou synonyma pro *vlastnosti*parametru šablony . Oba typy jsou k dispozici pro sady tříd a multiset, kde jsou identické, pro kompatibilitu s mapa tříd a multimap, kde jsou odlišné.
 
 ### <a name="example"></a>Příklad
 
-Příklad, jak deklarovat a používat `value_compare`, naleznete v tématu příklad pro [value_comp](#value_comp) .
+Příklad pro [value_comp](#value_comp) například, jak deklarovat a používat `value_compare`.
 
-## <a name="value_type"></a>hash_multiset:: value_type
+## <a name="hash_multisetvalue_type"></a><a name="value_type"></a>hash_multiset::value_type
 
 > [!NOTE]
-> Toto rozhraní API je zastaralé. Alternativa je [Unordered_multiset třídy](../standard-library/unordered-multiset-class.md).
+> Toto rozhraní API je zastaralé. Alternativou je [unordered_multiset Class](../standard-library/unordered-multiset-class.md).
 
-Typ, který popisuje objekt uložený jako prvek jako hash_multiset v jeho kapacitě jako hodnota.
+Typ, který popisuje objekt uložený jako prvek jako prvek hash_multiset v jeho kapacitě jako hodnotu.
 
 ```cpp
 typedef Key value_type;
@@ -2452,5 +2452,5 @@ The hash_multiset has elements: 10 20.
 
 ## <a name="see-also"></a>Viz také
 
-[Bezpečnost vlákna ve C++ standardní knihovně](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)
+[Bezpečnost vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Referenční příručka standardní knihovny jazyka C++](../standard-library/cpp-standard-library-reference.md)

@@ -1,6 +1,6 @@
 ---
-title: TemplateInstantiation – třída
-description: Referenční C++ dokumentace třídy TemplateInstantiation sady SDK pro Build Insights
+title: Třída TemplateInstantiation
+description: C++ Build Insights SDK TemplateInstantiation odkaz na třídu.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 2c94f8d3a4613e072c03f6dd4c846798d3d2122b
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: ba8fd10efc6a536c9160f10b19e19e17bfaaad98
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78332969"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81324224"
 ---
-# <a name="templateinstantiation-class"></a>TemplateInstantiation – třída
+# <a name="templateinstantiation-class"></a>Třída TemplateInstantiation
 
 ::: moniker range="<=vs-2015"
 
-Sada C++ SDK pro Build Insights je kompatibilní se sadou Visual Studio 2017 a novější. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek selektor verzí sady Visual Studio pro tento článek na sadu Visual Studio 2017 nebo Visual Studio 2019.
+Sada C++ Build Insights SDK je kompatibilní s Visual Studio 2017 a vyšší. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek pro výběr **verze** sady Visual Studio pro tento článek na Visual Studio 2017 nebo Visual Studio 2019. Nachází se v horní části obsahu na této stránce.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Třída `TemplateInstantiation` se používá s funkcemi [MatchEvent](../functions/match-event.md), [MatchEventInMemberFunction](../functions/match-event-in-member-function.md), [MatchEventStack](../functions/match-event-stack.md)a [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md) . Použijte ho ke spárování [TEMPLATE_INSTANTIATION](../event-table.md#template-instantiation) události.
+Třída `TemplateInstantiation` se používá s funkcemi [MatchEvent](../functions/match-event.md), [MatchEventInMemberFunction](../functions/match-event-in-member-function.md), [MatchEventStack](../functions/match-event-stack.md)a [MatchEventStackInMemberFunction.](../functions/match-event-stack-in-member-function.md) Použijte ji tak, aby odpovídala [události TEMPLATE_INSTANTIATION.](../event-table.md#template-instantiation)
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -52,19 +52,19 @@ public:
 
 ## <a name="members"></a>Členové
 
-Spolu se zděděnými členy ze své základní třídy [aktivity](activity.md) obsahuje Třída `TemplateInstantiation` následující členy:
+Spolu s zděděnými členy ze `TemplateInstantiation` základní třídy [Aktivita](activity.md) obsahuje třída následující členy:
 
 ### <a name="constructors"></a>Konstruktory
 
-[TemplateInstantiation](#template-instantiation)
+[ŠablonaVytvoření](#template-instantiation)
 
 ### <a name="functions"></a>Functions
 
 [Druh](#kind)
-[PrimaryTemplateSymbolKey](#primary-template-symbol-key)
+[PrimaryTemplateSymbolSymbolSpecializationSymbolKey](#primary-template-symbol-key)
 [SpecializationSymbolKey](#specialization-symbol-key)
 
-## <a name="kind"></a>Plnění
+## <a name="kind"></a><a name="kind"></a>Druhu
 
 ```cpp
 Kind Kind() const;
@@ -72,9 +72,9 @@ Kind Kind() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Kód popisující typ vytvoření instance šablony, který byl proveden.
+Kód popisující typ vytvoření instance šablony.
 
-## <a name="primary-template-symbol-key"></a>PrimaryTemplateSymbolKey
+## <a name="primarytemplatesymbolkey"></a><a name="primary-template-symbol-key"></a>Primární klíč symbolů šablony
 
 ```cpp
 const unsigned long long& PrimaryTemplateSymbolKey() const;
@@ -84,7 +84,7 @@ const unsigned long long& PrimaryTemplateSymbolKey() const;
 
 Číselný identifikátor pro typ šablony, který byl specializovaný. Tento identifikátor je jedinečný v rámci front-endového průchodu kompilátoru.
 
-## <a name="specialization-symbol-key"></a>SpecializationSymbolKey
+## <a name="specializationsymbolkey"></a><a name="specialization-symbol-key"></a>SpecializaceSymbolKey
 
 ```cpp
 const unsigned long long& SpecializationSymbolKey() const;
@@ -92,9 +92,9 @@ const unsigned long long& SpecializationSymbolKey() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Číselný identifikátor typu specializace. Tento identifikátor je jedinečný v rámci front-endového průchodu kompilátoru.
+Číselný identifikátor pro typ specializace. Tento identifikátor je jedinečný v rámci front-endového průchodu kompilátoru.
 
-## <a name="template-instantiation"></a>TemplateInstantiation
+## <a name="templateinstantiation"></a><a name="template-instantiation"></a>ŠablonaVytvoření
 
 ```cpp
 TemplateInstantiation(const RawEvent& event);
@@ -102,7 +102,7 @@ TemplateInstantiation(const RawEvent& event);
 
 ### <a name="parameters"></a>Parametry
 
-\ *události*
-Událost [TEMPLATE_INSTANTIATION](../event-table.md#template-instantiation) .
+*Událost*\
+[Událost TEMPLATE_INSTANTIATION.](../event-table.md#template-instantiation)
 
 ::: moniker-end

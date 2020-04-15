@@ -6,98 +6,98 @@ helpviewer_keywords:
 - TN023
 - standard resources
 ms.assetid: 60af8415-c576-4c2f-a711-ca5da0b9a1f2
-ms.openlocfilehash: b6a1978a92fcf53de7caacd41c01a91ff16a3fc3
-ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
+ms.openlocfilehash: 90e7b9b7c354ba919c3dee279725b4498bea57ff
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65611401"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81370385"
 ---
 # <a name="tn023-standard-mfc-resources"></a>TN023: Standardní prostředky MFC
 
-Tato poznámka popisuje standardní prostředky aplikace součástí a vyžadované knihovnou MFC.
+Tato poznámka popisuje standardní prostředky poskytované a potřebné knihovny knihovny knihovny Knihovny MFC.
 
-## <a name="standard-resources"></a>Standardní prostředky aplikace
+## <a name="standard-resources"></a>Standardní zdroje
 
-Nabízí dvě kategorie předdefinované prostředky, které můžete použít v aplikaci knihovny MFC: klipart prostředky a standardních prostředcích rozhraní.
+Knihovna MFC nabízí dvě kategorie předdefinovaných prostředků, které můžete použít ve vaší aplikaci: prostředky klipartu a standardní rámcové prostředky.
 
-Klipart prostředky jsou další prostředky, které nezávisí na rozhraní, ale které můžete chtít přidat do vaší aplikace uživatelského rozhraní. Následující prostředky klipart jsou obsaženy v ukázce MFC Obecné [klipart](../overview/visual-cpp-samples.md):
+Prostředky klipartu jsou další prostředky, na kterých rozhraní nezávisí, ale které můžete chtít přidat do uživatelského rozhraní aplikace. Následující zdroje klipartu jsou obsaženy ve vzorku [clipartu](../overview/visual-cpp-samples.md)MFC General :
 
 - Common.rc: Jeden soubor prostředků, který obsahuje:
 
-   - Rozsáhlá kolekce ikon, které představují širokou škálu obchodních a zpracování dat úlohy.
+  - Velká kolekce ikon, které představují různé obchodní a úlohy zpracování dat.
 
-   - Několik běžných kurzory (viz také Afxres.rc).
+  - Několik běžných kurzorů (viz také Afxres.rc).
 
-   - Rastrový obrázek panelu nástrojů, který obsahuje několik tlačítek panelu nástrojů.
+  - Bitmapa panelu nástrojů, která obsahuje několik tlačítek panelu nástrojů.
 
-   - Ikona rastrového obrázku a prostředky, které jsou používány Commdlg.dll.
+  - Rastrové a ikonové prostředky používané souborem Commdlg.dll.
 
-- Indicate.rc: Obsahuje prostředky řetězců pro indikátory stavu klíče stavového řádku, jako je například "Limit" pro Caps Lock.
+- Indicate.rc: Obsahuje prostředky řetězce pro indikátory stavového řádku stavu stavu, například "CAP" pro caps lock.
 
-- Prompts.rc: Id_file_new – obsahuje řádku nabídky řetězcové prostředky pro každou přednastaveného příkazu, jako je například "Vytvořit nový dokument".
+- Prompts.rc: Obsahuje prostředky řetězce s výzvou nabídky pro každý předdefinovaný příkaz, například "Vytvořit nový dokument" pro ID_FILE_NEW.
 
-- COMMDLG.rc: Soubor .rc kompatibilní Visual C++, který obsahuje standardní šablony COMMDLG dialogového okna.
+- Commdlg.rc: Soubor .rc kompatibilní s visual c++, který obsahuje standardní šablony dialogů COMMDLG.
 
-Standardních prostředcích rozhraní jsou prostředky s afx – definované identifikátory, které rozhraní závisí na interní implementace. Zřídka bude nutné změnit tyto afx – definované prostředky. Pokud tak učiníte, postupujte podle pokynů uvedených dále v tomto tématu.
+Standardní framework prostředky jsou prostředky s ID definované AFX, které framework závisí na pro interní implementace. Tyto prostředky definované afx bude zřídka nutné změnit. Pokud tak učiníte, měli byste postupovat podle postupu popsaného dále v tomto tématu.
 
-Následující prostředky architektury jsou obsaženy v adresáři MFC\INCLUDE:
+Následující prostředky architektury jsou obsaženy v adresáři Knihovna MFC\INCLUDE:
 
-- Afxres.rc: Běžné prostředky využívané třídou rozhraní framework.
+- Afxres.rc: Společné zdroje používané v rámci.
 
-- Afxprint.rc: Prostředky specifické pro tisk.
+- Afxprint.rc: Zdroje specifické pro tisk.
 
-- Afxolecl.rc: Prostředky specifické pro OLE klientské aplikace.
+- Afxolecl.rc: Prostředky specifické pro klientské aplikace OLE.
 
-- Afxolev.rc: Prostředky specifické pro úplné aplikace serveru OLE.
+- Afxolev.rc: Prostředky specifické pro úplné serverové aplikace OLE.
 
-## <a name="using-clip-art-resources"></a>Použití prostředků klipart
+## <a name="using-clip-art-resources"></a>Použití zdrojů klipartu
 
-#### <a name="to-use-a-clip-art-binary-resource"></a>Použít na binární prostředek klipart
+#### <a name="to-use-a-clip-art-binary-resource"></a>Použití klipartového binárního prostředku
 
-1. Otevřete soubor prostředků vaší aplikace v jazyce Visual C++.
+1. Otevřete soubor prostředků aplikace v jazyce Visual C++.
 
-1. Open Common.rc. Tento soubor obsahuje všechny binární klipart prostředky. Protože Common.rc soubor je zkompilován. to může chvíli trvat.
+1. Otevřít Common.rc. Tento soubor obsahuje všechny binární klipartové prostředky. To může nějakou dobu trvat, protože soubor Common.rc je kompilován.
 
-1. Podržte klávesu CTRL při přetahování prostředky, které chcete použít z Common.rc do souboru prostředků vaší aplikace.
+1. Při přetahování prostředků z souboru Common.rc do souboru prostředků aplikace podržte klávesu CTRL.
 
-Další prostředky klipart, postupujte podle stejných kroků. Jediným rozdílem je, že otevřete soubor .rc příslušné místo Common.rc.
-
-> [!NOTE]
->  Dejte pozor, abyste přesunout prostředky z Common.rc neúmyslně trvale. Pokud podržíte klávesu CTRL při přetahování prostředky, vytvoří se kopie. Pokud jste není podržte CTRL při přetahování, přesunou se prostředky. Pokud máte obavy, že může nechtěně provedli jste změny do souboru Common.rc, klikněte na "Ne", když se zobrazí výzva, jestli se má uložit změny do Common.rc.
+Chcete-li použít jiné prostředky klipartu, postupujte stejným způsobem. Jediným rozdílem je, že otevřete příslušný soubor RC namísto Common.rc.
 
 > [!NOTE]
->  Soubory prostředků .rc mít speciálnímu prostředku TEXTINCLUDE v nich, které zabrání v uložení náhodně nad rámec standardních .rc soubory.
+> Dávejte pozor, abyste neúmyslně přesunout prostředky z Common.rc trvale. Pokud při přetahování prostředků podržíte klávesu CTRL, vytvoříte kopii. Pokud při tažení nepodržíte klávesu CTRL, budou prostředky přesunuty. Pokud se obáváte, že jste omylem provedli změny v souboru Common.rc, klepněte na tlačítko "Ne", když budete dotázáni, zda chcete uložit změny common.rc.
 
-### <a name="customizing-standard-framework-resources"></a>Přizpůsobení standardních prostředcích rozhraní
+> [!NOTE]
+> Soubory prostředků RC mají v nich speciální prostředek TEXTINCLUDE, který vám zabrání nechtěnému uložení nad standardními soubory RC.
 
-Standardních prostředcích rozhraní jsou obvykle zahrnuta v aplikaci s použitím #include příkaz Soubor prostředků aplikace. AppWizard vygeneruje soubor prostředků. Tento soubor obsahuje odpovídající standardních prostředcích rozhraní, v závislosti na tom, jaké možnosti AppWizard vyberete. Můžete zkontrolovat, přidat nebo odebrat prostředky, které jsou zahrnuty změnou směrnice času kompilace. Chcete-li to provést, otevřete **prostředků** nabídky a vybereme **Set Includes**. Podívejte se na upravovaná položka "Směrnice času kompilace". Příklad:
+### <a name="customizing-standard-framework-resources"></a>Přizpůsobení prostředků standardu frameworku
+
+Standardní framework prostředky jsou obvykle zahrnuty v aplikaci pomocí příkazu #include v souboru prostředků aplikace. AppWizard vygeneruje soubor prostředků. Tento soubor obsahuje příslušné standardní framework prostředky, v závislosti na možnosti AppWizard, které vyberete. Můžete zkontrolovat, přidat nebo odebrat prostředky, které jsou zahrnuty změnou direktivy kompilace. Chcete-li to provést, otevřete nabídku **Zdroj** a vyberte **možnost Nastavit zahrnuje**. Podívejte se na položku úprav "Direktivy v době kompilace". Příklad:
 
 ```
 #include "afxres.rc"
 #include "afxprint.rc"
 ```
 
-Přizpůsobení standardních prostředcích rozhraní nejběžnější případ je přidání nebo odebrání dalších zahrnuje pro tisk, klient OLE a podpora serveru OLE.
+Nejběžnější případ přizpůsobení prostředků standardní architektury je přidání nebo odebrání dalších zahrnuje pro tisk, OLE klienta a ole server podporu.
 
-Ve výjimečných případech může být vhodné přizpůsobit obsah standardních prostředcích rozhraní pro konkrétní aplikaci ne jenom přidávat a odebírat celý soubor. Tady kroky ukazují, jak můžete omezit prostředky, které jsou zahrnuty:
+V některých výjimečných případech můžete chtít přizpůsobit obsah standardních prostředků rozhraní framework pro konkrétní aplikaci, nikoli pouze přidat a odebrat celý soubor. Následující kroky ukazují, jak můžete omezit prostředky, které jsou zahrnuty:
 
-##### <a name="to-customize-the-contents-of-a-standard-resource-file"></a>Chcete-li přizpůsobit obsah souboru standardních prostředků
+##### <a name="to-customize-the-contents-of-a-standard-resource-file"></a>Přizpůsobení obsahu standardního souboru prostředků
 
-1. Otevřete soubor prostředků v jazyce Visual C++.
+1. Otevřete soubor prostředků ve Visual C++.
 
-1. Odebrat pomocí příkazu Set Includes prostředků `#include` standardní .rc souboru, který chcete přizpůsobit. Například přizpůsobení panelu nástrojů náhledu tisku, odeberte `#include "afxprint.rc"` řádku.
+1. Pomocí příkazu Sada prostředků `#include` Zahrnuje odeberte standardní soubor RC, který chcete přizpůsobit. Chcete-li například přizpůsobit panel nástrojů náhledu tisku, odeberte `#include "afxprint.rc"` řádek.
 
-1. Otevřete soubory odpovídající standardní prostředky v MFC\INCLUDE. V následujícím příkladu výše v tomto tématu je příslušný soubor MFC\Include\Aafxprint.rc
+1. Otevřete příslušné soubory standardních prostředků v knihovně MFC\INCLUDE. Následující příklad dříve v tomto tématu, příslušný soubor je MFC\Include\Aafxprint.rc
 
-1. Zkopírujte všechny prostředky ze souboru .rc standardní do souboru prostředků aplikace.
+1. Zkopírujte všechny prostředky ze standardního souboru RC do souboru prostředků aplikace.
 
-1. Upravte kopii standardní prostředky aplikace v souboru prostředků aplikace.
+1. Upravte kopii standardních prostředků v souboru prostředků aplikace.
 
 > [!NOTE]
->  Neprovádějte žádné změny přímo do souborů .rc standardní prostředky. Tím se upravit prostředky, které jsou k dispozici v každé aplikaci, ne jenom v ta, kterou právě pracujete.
+> Neupravujte prostředky přímo ve standardních souborech RC. Tím se změní prostředky, které jsou k dispozici v každé aplikaci, nikoli pouze v té, na které právě pracujete.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Technické poznámky podle čísel](../mfc/technical-notes-by-number.md)<br/>
 [Technické poznámky podle kategorií](../mfc/technical-notes-by-category.md)

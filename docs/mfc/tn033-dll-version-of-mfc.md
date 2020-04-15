@@ -8,145 +8,145 @@ helpviewer_keywords:
 - DLL version of MFC [MFC]
 - TN033
 ms.assetid: b6f1080b-b66b-4b1e-8fb1-926c5816392c
-ms.openlocfilehash: fda256043027dbff249cedf490b150b6ad30a5fb
-ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
+ms.openlocfilehash: ad4cb883cfe7e397cf599d659afb02b23501dc5a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65611100"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81370316"
 ---
 # <a name="tn033-dll-version-of-mfc"></a>TN033: DLL verze knihovny MFC
 
-Tato poznámka popisuje, jak můžete pomocí knihovny MFCxx.DLL a MFCxxD.DLL (kde x je číslo verze knihovny MFC) sdílené knihovny DLL s aplikací knihovny MFC a MFC – rozšiřující knihovny DLL. Další informace o běžných knihovnách MFC DLL, naleznete v tématu [pomocí knihovny MFC jako součásti knihovny DLL](../mfc/tn011-using-mfc-as-part-of-a-dll.md).
+Tato poznámka popisuje, jak můžete použít knihovny sdílených dynamických odkazů MFCxx.DLL a MFCxxD.DLL (kde x je číslo verze knihovny MFC) s aplikacemi knihovny MFC a knihovnami DLL rozšíření knihovny MFC. Další informace o běžných knihovnách DLL knihovny MFC naleznete [v tématu Použití knihovny MFC jako součást knihovny DLL](../mfc/tn011-using-mfc-as-part-of-a-dll.md).
 
-Tato technická Poznámka popisuje tři aspekty knihovny DLL. Poslední dva jsou pro pokročilejší uživatele:
+Tato technická poznámka se týká tří aspektů knihoven dll. Poslední dva jsou pro pokročilejší uživatele:
 
-- [Jak vytvářet rozšíření knihovny MFC DLL](#_mfcnotes_how_to_write_an_mfc_extension_dll)
+- [Jak sestavit knihovnu DLL rozšíření knihovny MFC](#_mfcnotes_how_to_write_an_mfc_extension_dll)
 
-- [Jak vytvářet aplikace knihovny MFC, která používá knihovnu DLL verze knihovny MFC](#_mfcnotes_writing_an_application_that_uses_the_dll_version)
+- [Jak sestavit aplikaci knihovny MFC, která používá verzi knihovny MFC knihovny MFC knihovny DLL](#_mfcnotes_writing_an_application_that_uses_the_dll_version)
 
-- [Sdílení knihovny DLL MFC jsou implementovány.](#_mfcnotes_how_the_mfc30.dll_is_implemented)
+- [Implementace knihovny MFC sdílené dynamické propojení](#_mfcnotes_how_the_mfc30.dll_is_implemented)
 
-Pokud vás zajímá vytváření knihovny DLL pomocí knihovny MFC, který lze použít s aplikacemi non-MFC (tomu se říká běžné knihovny MFC DLL), podívejte se na [Technická poznámka 11](../mfc/tn011-using-mfc-as-part-of-a-dll.md).
+Máte-li zájem o vytvoření knihovny DLL pomocí knihovny MFC, kterou lze použít s aplikacemi bez knihovny MFC (tomu se nazývá běžná knihovna DLL knihovny MFC), přečtěte si [technickou poznámku 11](../mfc/tn011-using-mfc-as-part-of-a-dll.md).
 
-## <a name="overview-of-mfcxxdll-support-terminology-and-files"></a>Přehled knihovny MFCxx.DLL podpory: Terminologie a soubory
+## <a name="overview-of-mfcxxdll-support-terminology-and-files"></a>Přehled podpory MFCxx.DLL: Terminologie a soubory
 
-**Běžné knihovny MFC DLL**: Běžné knihovny MFC DLL použijete k sestavení samostatné knihovny DLL pomocí některé z třídy knihovny MFC. Rozhraní hranice aplikace/DLL jsou rozhraní "C" a klientská aplikace nemusí být aplikace knihovny MFC.
+**Pravidelné Knihovny DLL knihovny MFC**: Používáte pravidelnou knihovnu DLL knihovny MFC k vytvoření samostatné knihovny DLL pomocí některých tříd knihovny MFC. Rozhraní přes hranice aplikace/knihovny DLL jsou rozhraní "C" a klientská aplikace nemusí být aplikace knihovny MFC.
 
-Toto je verze podpora DLL, které jsou podporované ve verzi 1.0 knihovny MFC. Je popsána v [Technická poznámka 11](../mfc/tn011-using-mfc-as-part-of-a-dll.md) a ukázce MFC Advanced Concepts [DLLScreenCap](../overview/visual-cpp-samples.md).
-
-> [!NOTE]
-> Od verze Visual C++ verze 4.0 termín **USRDLL** je zastaralá a nahradila ji běžné knihovny MFC DLL, která staticky propojuje ke knihovně MFC. Může také vytvořit standardní knihovny MFC DLL, která dynamicky propojuje ke knihovně MFC.
-
-MFC 3.0 (a vyšší) podporuje běžných knihovnách MFC DLL se všechny nové funkce, včetně tříd OLE a databáze.
-
-**AFXDLL**: To se také označuje jako sdílenou verzi knihovny MFC. Toto je novou podporu knihovny DLL do MFC 2.0. Samotné knihovny MFC je v řadě knihoven DLL (popsaných níže) a klientská aplikace nebo knihovny DLL dynamicky propojuje knihovny DLL, které jsou potřeba. Rozhraní hranice aplikace/DLL jsou C++/MFC třídy rozhraní. Klientská aplikace musí být aplikace knihovny MFC. Tento atribut podporuje všechny funkce MFC 3.0 (výjimka: UNICODE není podporován pro databázové třídy).
+Toto je verze podpory knihovny DLL podporovaná v knihovně MFC 1.0. Je popsán v [technické poznámce 11](../mfc/tn011-using-mfc-as-part-of-a-dll.md) a vzorku MFC Advanced Concepts [DLLScreenCap](../overview/visual-cpp-samples.md).
 
 > [!NOTE]
-> Od verze Visual C++ verze 4.0 tento druh knihovny DLL se označuje jako "Rozšiřující knihovny DLL."
+> Od visual c++ verze 4.0 je termín **USRDLL** zastaralý a byl nahrazen běžnou knihovnou DLL knihovny MFC, která staticky odkazuje na knihovnu MFC. Můžete také vytvořit pravidelnou knihovnu DLL knihovny MFC, která dynamicky odkazuje na knihovnu MFC.
 
-Tato poznámka bude používat knihovny MFCxx.DLL jako reference pro celou nastavit knihovnu MFC DLL, která zahrnuje:
+Knihovna MFC 3.0 (a vyšší) podporuje běžné knihovny DLL knihovny MFC se všemi novými funkcemi, včetně tříd OLE a Database.
 
-- Ladění: MFCxxD.DLL (kombinace) a MFCSxxD.LIB (static).
-
-- Verze: (Kombinace) knihovny MFCxx.DLL a MFCSxx.LIB (static).
-
-- Ladění Unicode: MFCxxUD.DLL (kombinace) a MFCSxxD.LIB (static).
-
-- Verze Unicode: MFCxxU.DLL (kombinace) a MFCSxxU.LIB (static).
+**AFXDLL**: To se také označuje jako sdílená verze knihoven knihovny Knihovny MFC. Toto je nová podpora knihovny DLL přidaná v knihovně MFC 2.0. Knihovna knihovny Knihovny MFC sama o sobě je v počtu knihoven DLL (popsané níže) a klientská aplikace nebo knihovna DLL dynamicky propojuje knihovny DLL, které vyžaduje. Rozhraní přes hranice aplikace/Knihovny DLL jsou rozhraní třídy C++/MFC. Klientská aplikace musí být aplikace knihovny MFC. To podporuje všechny funkce knihovny MFC 3.0 (výjimka: UNICODE není podporovánpro třídy databáze).
 
 > [!NOTE]
-> MFCSxx [U] [D]. Lib – knihovny se používají ve spojení s MFC sdílené knihovny DLL. Tyto knihovny obsahovat kód, který se musí do aplikace nebo knihovna DLL staticky propojené.
+> Od verze Visual C++ verze 4.0 se tento typ dll označuje jako "rozšiřující dll.".
 
-Odkazy na aplikace na odpovídající importovat knihovny:
+Tato poznámka bude používat knihovnu MFCxx.DLL k odkazování na celou sadu knihovny DLL knihovny MFC, která zahrnuje:
+
+- Ladění: MFCxxD.DLL (kombinované) a MFCSxxD.LIB (statické).
+
+- Verze: MFCxx.DLL (kombinovaná) a MFCSxx.LIB (statické).
+
+- Unicode Debug: MFCxxUD.DLL (kombinované) a MFCSxxD.LIB (statické).
+
+- Unicode Release: MFCxxU.DLL (kombinovaná) a MFCSxxU.LIB (statické).
+
+> [!NOTE]
+> The MFCSxx[U][D]. Knihovny LIB se používají ve spojení s knihovnami MFC sdílené knihovny DLL. Tyto knihovny obsahují kód, který musí být staticky propojen s aplikací nebo knihovnou DLL.
+
+Aplikace odkazuje na odpovídající knihovny importu:
 
 - Ladění: MFCxxD.LIB
 
-- Verze: MFCxx.LIB
+- Vydání: MFCxx.LIB
 
-- Ladění Unicode: MFCxxUD.LIB
+- Ladění unicode: MFCxxUD.LIB
 
-- Verze Unicode: MFCxxU.LIB
+- Unicode Verze: MFCxxU.LIB
 
-"Knihovny MFC rozšíření DLL" je postavené na knihovny MFCxx.DLL knihovny DLL (a/nebo jiné knihovny MFC sdílených knihoven DLL). Tady architektura součástí knihovny MFC aktivuje. Pokud užitečné třídu odvodit z třídy knihovny MFC nebo vytvářet další knihovny MFC jako toolkit, je možné je umístit v knihovně DLL. Že používá knihovnu DLL knihovny MFCxx.DLL, stejně jako ultimate klientské aplikace. To umožňuje opakovaně použitelné listu tříd, opakovaně použitelné základní třídy a opakovaně použitelné dokumentů a zobrazení tříd.
+Knihovna DLL rozšíření knihovny MFC je knihovna DLL postavená na knihovně MFCxx.DLL (nebo ostatní sdílené knihovny DLL knihovny MFC). Zde se spustí architektura komponent knihovny MFC. Pokud odvodíte užitečnou třídu z třídy Knihovny MFC nebo vytvoříte jinou sadu nástrojů podobný knihovně MFC, můžete ji umístit do knihovny DLL. Tato dll používá MFCxx.DLL, stejně jako konečná klientská aplikace. To umožňuje opakovaně použitelné třídy listů, opakovaně použitelné základní třídy a opakovaně použitelné třídy zobrazení nebo dokumentu.
 
-## <a name="pros-and-cons"></a>Výhody a nevýhody
+## <a name="pros-and-cons"></a>Klady a zápory
 
-Proč byste měli použít sdílenou verzi knihovny MFC
+Proč používat sdílenou verzi knihovny MFC
 
-- Použití sdílené knihovny může způsobit menší aplikace (minimální aplikace, která používá většina knihovny MFC je menší než 10 tis.).
+- Použití sdílené knihovny může mít za následek menší aplikace (minimální aplikace, která používá většinu knihovny knihovny MFC je menší než 10 kB).
 
-- Sdílených verzí knihovny MFC podporuje rozšiřující knihovny DLL MFC a běžných knihovnách MFC DLL.
+- Sdílená verze knihovny MFC podporuje knihovny DLL rozšíření knihovny MFC a běžné knihovny DLL knihovny MFC.
 
-- Vytváření aplikace, která používá sdílené knihovny MFC je rychlejší než sestavování aplikace staticky propojené knihovny MFC, protože není nutné samostatně propojit knihovnu MFC. To platí zejména v **ladění** sestavení, kde musí propojovací program kompaktně ladit informace – díky propojení s knihovnou DLL, která už obsahuje informace o ladění, je méně ladících informací ke spojení v rámci vaší aplikace.
+- Vytváření aplikace, která používá sdílené knihovny knihovny Knihovny MFC je rychlejší než vytváření staticky propojené aplikace knihovny MFC, protože není nutné propojit samotný knihovnu MFC. To platí zejména v sestavení **chod u ladění,** kde propojovací systém musí komprimovat informace o ladění – propojením s dll, která již obsahuje informace o ladění, je méně ladicí informace k komprimaci v rámci aplikace.
 
 Proč byste neměli používat sdílenou verzi knihovny MFC:
 
-- Přesouvání aplikaci používající sdílené knihovny vyžaduje dodání MFCxx.DLL (a ostatní) knihovny s vaším programem. Knihovny MFCxx.DLL je volně redistribuovány, stejně jako mnoho knihoven DLL, ale stále je nutné nainstalovat knihovny DLL ve vašem instalačním programu. Kromě toho je nutné dodat MSVCRTxx.DLL, která obsahuje knihovny C runtime, který se používá i tak, že váš program a samotnými knihovnami MFC DLL.
+- Odeslání aplikace, která používá sdílenou knihovnu, vyžaduje, abyste s programem doplnili knihovnu MFCxx.DLL (a další). Knihovna MFCxx.DLL je volně redistribuovatelná jako mnoho knihoven DLL, ale stále je nutné nainstalovat knihovnu DLL do programu SETUP. Kromě toho je nutné dodat knihovnu MSVCRTxx.DLL, která obsahuje knihovnu C-runtime, která je používána programem i samotnými knihovnami DLL knihovny MFC.
 
-##  <a name="_mfcnotes_how_to_write_an_mfc_extension_dll"></a> Jak napsat rozšiřující knihovny DLL MFC
+## <a name="how-to-write-an-mfc-extension-dll"></a><a name="_mfcnotes_how_to_write_an_mfc_extension_dll"></a>Jak napsat knihovnu DLL rozšíření knihovny MFC
 
-Rozšiřující knihovna DLL MFC je knihovna DLL obsahující třídy a funkce zapisují na tomto funkce pro třídy knihovny MFC. Rozšiřující knihovna DLL MFC používá sdílené knihovny DLL MFC stejným způsobem jako aplikace, používá s několika další aspekty:
+Knihovna DLL rozšíření knihovny MFC je knihovna DLL obsahující třídy a funkce napsané k ozdobě funkcí tříd knihovny MFC. Knihovna DLL rozšíření knihovny MFC používá sdílené knihovny DLL knihovny MFC stejným způsobem, jakým ji používá aplikace, s několika dalšími důležité informacemi:
 
-- Proces sestavení se podobá vytváření aplikace, která používá sdílené knihovny MFC s pár dalších kompilátoru a možnosti linkeru.
+- Proces sestavení je podobný vytváření aplikace, která používá sdílené knihovny knihovny Knihovny MFC s několika dalšími možnostmi kompilátoru a propojovacího zařízení.
 
-- Knihovna MFC DLL rozšíření nemá `CWinApp`-odvozené třídy.
+- Knihovna DLL rozšíření knihovny `CWinApp`MFC nemá odvozenou třídu.
 
-- Rozšiřující knihovna DLL MFC, musíte zadat speciální `DllMain`. AppWizard poskytuje `DllMain` funkce, která můžete upravit.
+- Knihovna DLL rozšíření knihovny `DllMain`MFC musí poskytovat speciální knihovnu . AppWizard poskytuje `DllMain` funkci, kterou můžete upravit.
 
-- Rozšiřující knihovna DLL MFC obvykle poskytne inicializační rutina pro vytvoření `CDynLinkLibrary` MFC – rozšiřující knihovny DLL chce export-li `CRuntimeClass`no nebo prostředky do aplikace. Odvozená třída `CDynLinkLibrary` mohou být použity, pokud na aplikační data musí být udržuje MFC – rozšiřující knihovny DLL.
+- Knihovna DLL rozšíření knihovny MFC obvykle `CDynLinkLibrary` poskytuje inicializační rutinu `CRuntimeClass`k vytvoření knihovny MFC extension DLL chce exportovat es nebo prostředky do aplikace. Odvozená třída `CDynLinkLibrary` může být použita, pokud data pro aplikaci musí být udržována knihovnou DLL rozšíření knihovny MFC.
 
-Tyto aspekty jsou popsány podrobněji níže. Také byste měli použít k ukázce MFC Advanced Concepts [DLLHUSK](../overview/visual-cpp-samples.md) protože ilustruje:
+Tyto úvahy jsou podrobněji popsány níže. Měli byste také odkazovat na mfc rozšířené koncepty ukázky [DLLHUSK,](../overview/visual-cpp-samples.md) protože ilustruje:
 
-- Vytvoření aplikace pomocí sdílené knihovny. (DLLHUSK. Soubor EXE je aplikace knihovny MFC, která dynamicky propojuje ke knihovnám MFC také další knihovny DLL).
+- Vytváření aplikace pomocí sdílených knihoven. (DLLHUSK. EXE je aplikace knihovny MFC, která dynamicky odkazuje na knihovny knihovny Knihovny MFC a další knihovny DLL.)
 
-- Sestavování rozšiřující knihovny DLL MFC. (Všimněte si, jako speciální příznaky `_AFXEXT` , která se používají při sestavování rozšiřující knihovny DLL MFC)
+- Vytváření knihovny DLL rozšíření knihovny MFC. (Všimněte si speciálních `_AFXEXT` příznaků, jako jsou například, které se používají při vytváření knihovny DLL rozšíření knihovny MFC)
 
-- Dva příklady rozšiřující knihovny DLL MFC. Ukazuje základní struktura knihovny MFC DLL rozšíření s omezenou exporty (TESTDLL1) a další pořady export celá třída rozhraní (TESTDLL2).
+- Dva příklady knihovny DLL rozšíření knihovny MFC. Jeden zobrazuje základní strukturu knihovny DLL rozšíření knihovny MFC s omezenými exporty (TESTDLL1) a druhý ukazuje export rozhraní celé třídy (TESTDLL2).
 
-Klientská aplikace a všechny rozšiřující knihovny DLL MFC musí používat stejnou verzi knihovny MFCxx.DLL. Měli byste postupovat podle konvence knihovny MFC DLL a poskytnout i ladění a maloobchodního prodeje (/ release) verzi vaší MFC – rozšiřující knihovny DLL. To umožňuje klientských programů pro sestavení ladění a prodejní verzí své aplikace a propojte je s odpovídající ladicí nebo prodejní verze produktu všechny knihovny DLL.
+Klientská aplikace i všechny knihovny DLL rozšíření knihovny MFC musí používat stejnou verzi knihovny MFCxx.DLL. Měli byste dodržovat konvence knihovny MFC DLL a poskytnout ladicí i maloobchodní (/release) verzi vaší knihovny DLL rozšíření knihovny MFC. To umožňuje klientským programům vytvářet ladicí i maloobchodní verze svých aplikací a propojit je s příslušným laděním nebo maloobchodní verzí všech knihoven DLL.
 
 > [!NOTE]
->  Protože C++ pojmenujte pozměnění a exportovat problémy, exportovat seznam z rozšiřující knihovny DLL MFC může lišit mezi ladění a maloobchodní verze stejné knihovny DLL a knihovny DLL pro různé platformy. Maloobchodní MFCxx.DLL má asi 2000 exportovat vstupní bod; ladění MFCxxD.DLL má přibližně 3000 exportovat vstupní body.
+> Vzhledem k tomu, že c++ název mangling a export problémy, seznam exportu z knihovny DLL rozšíření knihovny MFC se může lišit mezi ladicí a maloobchodní verze stejné knihovny DLL a Knihovny DLL pro různé platformy. Maloobchodní MFCxx.DLL má asi 2000 exportovaných vstupních bodů; Ladicí mfcxxD.dll má asi 3000 exportovaných vstupních bodů.
 
-### <a name="quick-note-on-memory-management"></a>Rychlé poznámky týkající se správy paměti
+### <a name="quick-note-on-memory-management"></a>Stručná poznámka ke správě paměti
 
-V části s názvem "Správu paměti a" na konci této Technická poznámka popisuje provádění MFCxx.DLL sdílených verzí knihovny MFC. Informace, které potřebujete vědět o implementaci právě rozšiřující knihovny MFC DLL je zde popsáno.
+Část s názvem "Správa paměti", ke konci této technické poznámky, popisuje implementaci knihovny MFCxx.DLL se sdílenou verzí knihovny MFC. Informace, které potřebujete vědět k implementaci pouze knihovny DLL rozšíření knihovny MFC, jsou popsány zde.
 
-Knihovny MFCxx.DLL a všechny rozšiřující knihovny DLL MFC načtena do klientské aplikace adresní prostor bude používat stejné přidělení paměti, načítání prostředků a dalších státech MFC "globální" jako kdyby byly ve stejné aplikaci. To je důležité, protože knihovny MFC DLL a běžných knihovnách MFC DLL, která staticky se propojit s knihovnou MFC přesným opakem a každou knihovnu DLL přidělování mimo svůj vlastní fond paměti k dispozici.
+Knihovna MFCxx.DLL a všechny knihovny DLL rozšíření knihovny MFC načtené do adresního prostoru klientské aplikace budou používat stejný alokátor paměti, načítání prostředků a další "globální" stavy knihovny MFC, jako by byly ve stejné aplikaci. To je významné, protože knihovny DLL bez knihovny MFC a běžné knihovny DLL knihovny MFC, které staticky odkazují na knihovnu MFC, provádějí přesný opak a mají každou knihovnu DLL, která je přiděluje z vlastního fondu paměti.
 
-Pokud rozšiřující knihovny DLL MFC přidělí paměť, pak tuto paměť můžete libovolně kombinovat s jakýkoli jiný objekt přidělený aplikace. Navíc pokud dojde k chybě aplikace používající sdílené knihovny MFC, ochranu operačního systému bude udržovat tak integritu jiné aplikace knihovny MFC, knihovny DLL pro sdílení obsahu.
+Pokud knihovna DLL rozšíření knihovny MFC přiděluje paměť, pak tato paměť může volně kombinovat s jiným objektem přiděleným aplikacím. Také pokud dojde k chybě aplikace, která používá sdílené knihovny knihovny Knihovny MFC, ochrana operačního systému bude udržovat integritu jakékoli jiné aplikace knihovny MFC sdílení knihovny DLL.
 
-Podobně jako jiné "globální" stavy knihovny MFC, jako je aktuální spustitelný soubor a načíst prostředky z, jsou také sdílené mezi klientskou aplikaci a všechny rozšiřující knihovny DLL MFC i MFCxx.DLL samotný.
+Podobně jiné "globální" stavy knihovny MFC, jako je aktuální spustitelný soubor pro načtení prostředků, jsou také sdíleny mezi klientskou aplikací a všemi knihovnami DLL rozšíření knihovny MFC a také samotnými knihovnami MFCxx.DLL.
 
-### <a name="building-an-mfc-extension-dll"></a>Sestavování rozšiřující knihovny DLL MFC
+### <a name="building-an-mfc-extension-dll"></a>Vytváření knihovny DLL rozšíření knihovny MFC
 
-AppWizard můžete použít k vytvoření projektu knihovny MFC DLL rozšíření, a automaticky vygeneruje se odpovídající kompilátor a propojovací program nastavení. Bylo také generovat `DllMain` funkce, která můžete upravit.
+Pomocí Průvodce aplikací můžete vytvořit projekt knihovny DLL rozšíření knihovny MFC a automaticky vygeneruje příslušné nastavení kompilátoru a propojovacího zařízení. Byla také generovat `DllMain` funkci, kterou můžete upravit.
 
-Pokud převádíte na rozšiřující knihovny DLL MFC existující projekt, začněte pomocí standardních pravidel pro vytvoření aplikace pomocí sdílených verzí knihovny MFC, a pak postupujte takto:
+Pokud převádíte existující projekt na knihovnu DLL rozšíření knihovny MFC, začněte standardními pravidly pro vytváření aplikace pomocí sdílené verze knihovny MFC a proveďte následující kroky:
 
-- Přidat **/D_AFXEXT** příznaky kompilátoru. V dialogovém okně Vlastnosti projektu vyberte uzel C/C++. Vyberte kategorii preprocesoru. Přidat `_AFXEXT` makra definovat pole, každou z položek, oddělení středníky.
+- Přidejte **/D_AFXEXT** do příznaků kompilátoru. V dialogovém okně Vlastnosti projektu vyberte uzel C/C++. Pak vyberte kategorii Preprocesor. Přidejte `_AFXEXT` do pole Definovat makra a oddělte každou položku středníky.
 
-- Odeberte **/Gy** přepínač kompilátoru. V dialogovém okně Vlastnosti projektu vyberte uzel C/C++. Potom vyberte kategorii, generování kódu. Ujistěte se, že není povolená možnost "Povolit propojování na úrovní funkcí". To usnadní Postup exportu tříd, protože linkeru nedojde k odebrání neodkazovaných funkce. Pokud původní projekt sloužící k sestavení standardní knihovny MFC DLL staticky propojené do MFC, změna **/MT [d]** – možnost kompilátoru do **/MD [d]**.
+- Odeberte přepínač kompilátoru **/Gy.** V dialogovém okně Vlastnosti projektu vyberte uzel C/C++. Pak vyberte kategorii Generování kódu. Ujistěte se, že možnost "Povolit propojení na úrovni funkce" není povolena. To usnadní export tříd, protože propojovací program neodebere neodkazované funkce. Pokud původní projekt slouží k vytvoření běžné knihovny DLL knihovny MFC staticky propojené s knihovnou MFC, změňte možnost kompilátoru **/MT[d]** na **/MD[d]**.
 
-- Sestavení knihovny exportu s **/dll** možnost odkaz. Tím se nastaví, když vytvoříte nový cíl zadáte Win32 dynamickou knihovnu jako cílový typ.
+- Vytvořte knihovnu exportu s parametrem **/DLL** na LINK. To bude nastaveno při vytváření nového cíle a jako cílový typ bude jako cílový typ zadána knihovna win32 dynamic-link.
 
-### <a name="changing-your-header-files"></a>Změna hlavičkové soubory
+### <a name="changing-your-header-files"></a>Změna souborů záhlaví
 
-Cílem rozšiřující knihovny DLL MFC je obvykle exportovat některé běžné funkce do jedné nebo více aplikací, které můžete použít tuto funkci. To boils k exportu tříd a globální funkce, které jsou k dispozici pro klientské aplikace.
+Cílem knihovny DLL rozšíření knihovny MFC je obvykle exportovat některé běžné funkce do jedné nebo více aplikací, které mohou tuto funkci používat. To se scvrkává na export tříd a globální funkce, které jsou k dispozici pro klientské aplikace.
 
-Pokud to chcete udělat musí zajistit, že každý z členské funkce je označen jako import a export podle potřeby. To vyžaduje speciální deklarace: `__declspec(dllexport)` a `__declspec(dllimport)`. Při vaší třídy jsou používána klientskými aplikacemi, můžete je deklarovat jako `__declspec(dllimport)`. Pokud při sestavování rozšíření MFC DLL, by měly být deklarovány jako `__declspec(dllexport)`. Kromě toho funkce musí být ve skutečnosti exportován, tak, aby klientské programy vytvořit vazbu k nim v okamžiku načtení.
+Chcete-li to provést, musíte se ujistit, že každá členská funkce je označena jako import nebo export podle potřeby. To vyžaduje zvláštní `__declspec(dllexport)` prohlášení: a `__declspec(dllimport)`. Pokud jsou vaše třídy používány klientskými aplikacemi, chcete, aby byly deklarovány jako `__declspec(dllimport)`. Při samotné knihovně DLL rozšíření knihovny MFC `__declspec(dllexport)`by měly být deklarovány jako . Kromě toho musí být funkce skutečně exportovány, aby se s nimi klientské programy v době načítání svažovaly.
 
-Chcete-li exportovat celé třídy, použijte `AFX_EXT_CLASS` v definici třídy. Toto makro je definována v rámci rozhraní jako `__declspec(dllexport)` při `_AFXDLL` a `_AFXEXT` je definován, ale definované jako `__declspec(dllimport)` při `_AFXEXT` není definován. `_AFXEXT` jak je popsáno výše, je definována pouze při sestavování vaší MFC – rozšiřující knihovny DLL. Příklad:
+Chcete-li exportovat `AFX_EXT_CLASS` celou třídu, použijte v definici třídy. Toto makro je definováno `_AFXDLL` `_AFXEXT` rámcem jako `__declspec(dllexport)` když `__declspec(dllimport)` `_AFXEXT` a je definováno, ale definováno jako když není definováno. `_AFXEXT`jak je popsáno výše, je definována pouze při vytváření knihovny DLL rozšíření knihovny MFC. Příklad:
 
 ```cpp
 class AFX_EXT_CLASS CExampleExport : public CObject
 { /* ... class definition ... */ };
 ```
 
-### <a name="not-exporting-the-entire-class"></a>Export není celé třídy
+### <a name="not-exporting-the-entire-class"></a>Neexport celé třídy
 
-Někdy můžete exportovat pouze jednotlivé nezbytné členy třídy. Například, pokud jste exportovali `CDialog`-odvozené třídy, je pouze potřeba vyexportovat konstruktoru a `DoModal` volání. Můžete to taky tyto členy pomocí knihovny DLL. Soubor DEF, ale můžete také použít `AFX_EXT_CLASS` stejným způsobem pro jednotlivé členy je potřeba vyexportovat.
+Někdy můžete chtít exportovat pouze jednotlivé potřebné členy vaší třídy. Například pokud exportujete `CDialog`odvozenou třídu, budete muset exportovat pouze `DoModal` konstruktor a volání. Tyto členy můžete exportovat pomocí dll . DEF, ale můžete také `AFX_EXT_CLASS` použít v podstatě stejným způsobem na jednotlivé členy, které potřebujete exportovat.
 
 Příklad:
 
@@ -161,9 +161,9 @@ public:
 };
 ```
 
-Když toto provedete, můžete jej spustit do další problém vzhledem k tomu, že exportujete už všichni členové třídy. Problém je tak, jak tato práce maker knihovny MFC. Některé z makra pomocné rutiny knihovny MFC ve skutečnosti deklarujete nebo definujete datové členy. Proto tyto datové členy také potřebovat export z knihovny DLL.
+Když toto provést, může dojít k další problém, protože již exportujete všechny členy třídy. Problém je ve způsobu, jakým makra knihovny MFC fungují. Několik pomocných maker knihovny MFC skutečně deklaruje nebo definuje datové členy. Proto tyto datové členy bude také nutné exportovat z dll.
 
-DECLARE_DYNAMIC – makro například je definována takto při sestavování rozšiřující knihovny DLL MFC:
+Například makro DECLARE_DYNAMIC je definováno následujícím způsobem při vytváření knihovny DLL rozšíření knihovny MFC:
 
 ```cpp
 #define DECLARE_DYNAMIC(class_name) \
@@ -174,9 +174,9 @@ protected: \
     virtual CRuntimeClass* GetRuntimeClass() const; \
 ```
 
-Řádek, který začíná "statické `AFX_DATA`" je deklarace statických objektů uvnitř vaší třídy. K exportu této třídy správně a přístup k informacím o modulu runtime z klienta. Soubor EXE, je nutné exportovat tento statický objekt. Protože má statický objekt je deklarována s modifikátorem `AFX_DATA`, budete muset definovat `AFX_DATA` bude `__declspec(dllexport)` při vytváření knihovny DLL a definujte jej jako `__declspec(dllimport)` při vytváření vašeho klientského spustitelného souboru.
+Řádek, který začíná `AFX_DATA`"statické " deklaruje statický objekt uvnitř třídy. Chcete-li správně exportovat tuto třídu a získat přístup k informacím za běhu z klienta . EXE, musíte exportovat tento statický objekt. Vzhledem k tomu, že `AFX_DATA`statický objekt je `AFX_DATA` deklarován s modifikátorem , stačí definovat být `__declspec(dllexport)` při vytváření knihovny DLL a definovat ji jako `__declspec(dllimport)` při vytváření spustitelného souboru klienta.
 
-Jak je popsáno výše, `AFX_EXT_CLASS` tímto způsobem je již definován. Stačí znovu definovat `AFX_DATA` být stejný jako `AFX_EXT_CLASS` kolem vaší definice třídy.
+Jak je `AFX_EXT_CLASS` uvedeno výše, je již definována tímto způsobem. Stačí jen re-definovat `AFX_DATA` být stejný `AFX_EXT_CLASS` jako kolem definice třídy.
 
 Příklad:
 
@@ -192,12 +192,12 @@ class CExampleView : public CView
 #define AFX_DATA
 ```
 
-Knihovna MFC vždy používá `AFX_DATA` symbolu na datových položek definuje v rámci jeho makra, takže tento postup bude fungovat pro všechny tyto scénáře. Například pro DECLARE_MESSAGE_MAP bude fungovat.
+Knihovna MFC `AFX_DATA` vždy používá symbol na datové položky, které definuje v rámci svých maker, takže tato technika bude fungovat pro všechny tyto scénáře. Například to bude fungovat pro DECLARE_MESSAGE_MAP.
 
 > [!NOTE]
-> Chcete-li exportovat celé třídy místo vybrané členy třídy, se automaticky vyexportují statické datové členy.
+> Pokud exportujete celou třídu, nikoli vybrané členy třídy, budou automaticky exportovány statické datové členy.
 
-Stejný postup můžete použít automaticky export `CArchive` operátor extrakce pro třídy, které používají DECLARE_SERIAL a IMPLEMENT_SERIAL makra. Exportujte operátor archivu tak, že "bracketing" deklarace tříd (umístěný ve. Soubor H) následujícím kódem:
+Stejnou techniku můžete použít k `CArchive` automatickému exportu operátoru extrakce pro třídy, které používají makra DECLARE_SERIAL a IMPLEMENT_SERIAL. Exportujte operátor archivu pomocí bracketingu deklarací tříd (umístěných v . H) s následujícím kódem:
 
 ```cpp
 #undef AFX_API
@@ -209,13 +209,13 @@ Stejný postup můžete použít automaticky export `CArchive` operátor extrakc
 #define AFX_API
 ```
 
-### <a name="limitations-of-afxext"></a>Omezení _AFXEXT
+### <a name="limitations-of-_afxext"></a>Omezení _AFXEXT
 
-Můžete použít _**AFXEXT** processoru symbolů pro vaše MFC – rozšiřující knihovny DLL, pokud nemáte více vrstev MFC – rozšiřující knihovny DLL. Pokud máte MFC – rozšiřující knihovny DLL, které volají nebo jsou odvozeny z tříd ve vlastním MFC – rozšiřující knihovny DLL, které pak jsou odvozeny z třídy knihovny MFC, musíte použít vlastní symbol preprocesoru Chcete-li předejít nejednoznačnosti.
+Symbol předprocesoru _**AFXEXT** můžete použít pro knihovny DLL rozšíření knihovny MFC, pokud nemáte více vrstev dll rozšíření knihovny MFC. Pokud máte knihovny DLL rozšíření knihovny MFC, které volají nebo odvozují z tříd ve vlastních knihovnách DLL rozšíření knihovny MFC, které pak jsou odvozeny z tříd knihovny MFC, musíte použít vlastní symbol preprocesoru, abyste předešli nejednoznačnosti.
 
-V čem problém spočívá tohoto v systému Win32, musíte explicitně deklarovat všechna data jako `__declspec(dllexport)` pokud export z knihovny DLL a `__declspec(dllimport)` Pokud má být importována z knihovny DLL. Při definování `_AFXEXT`, hlaviček knihovny MFC, zkontrolujte, zda `AFX_EXT_CLASS` je správně definován.
+Problém je, že v Win32, musíte `__declspec(dllexport)` explicitně deklarovat všechna data, `__declspec(dllimport)` jako kdyby má být exportován z DLL a pokud má být importován z DLL. Při definování `_AFXEXT`, záhlaví knihovny MFC ujistěte se, že `AFX_EXT_CLASS` je definovánsprávně.
 
-Pokud máte více vrstev, jeden symbol, jako `AFX_EXT_CLASS` nestačí, protože rozšiřující knihovny DLL MFC může exportovat nové třídy, jak jako jiné třídy importovat z jiné MFC – rozšiřující knihovny DLL. Aby bylo možné řešení tohoto problému, použijte speciální symbol preprocesoru, která označuje, že vytváříte samotná knihovna DLL oproti použití knihovny DLL. Představte si například dvě rozšiřující knihovny DLL MFC, A.DLL a B.DLL. Každá exportovat některé třídy v A.H B.H. B.DLL používá třídy z A.DLL. Soubory hlaviček by vypadat přibližně takto:
+Pokud máte více vrstev, jeden `AFX_EXT_CLASS` symbol, jako je například není dostačující, protože knihovna DLL rozšíření knihovny MFC může být export nových tříd, stejně jako import ovat jiné třídy z jiné ho dll rozšíření knihovny MFC. Chcete-li tento problém vyřešit, použijte speciální symbol preprocesoru, který označuje, že vytváříte samotnou knihovnu DLL versus pomocí knihovny DLL. Představte si například dvě knihovny DLL rozšíření knihovny MFC, knihovnu A.DLL a knihovnu B.DLL. Každý z nich exportuje některé třídy v A.H a B.H. B.DLL používá třídy z A.DLL. Soubory hlaviček by vypadaly nějak takto:
 
 ```cpp
 /* A.H */
@@ -239,13 +239,13 @@ class CLASS_DECL_B CExampleB : public CExampleA
 { /* ... class definition ... */ };
 ```
 
-Při vytváření A.DLL, je sestavena s **/DA_IMPL** a při vytváření B.DLL, je sestavena s **/DB_IMPL**. Když použijete samostatné symboly pro každou knihovnu DLL, exportu CExampleB a CExampleA je importován při vytváření B.DLL. CExampleA je vyexportovali při vytváření A.DLL a importován při použití B.DLL (nebo jiného klienta).
+Když je vytvořena a.Dll, je sestavena s **/DA_IMPL** a když je vytvořena b.DLL, je sestavena s **/DB_IMPL**. Pomocí samostatných symbolů pro každou dll cexampleb je exportován a CExampleA je importován při vytváření B.DLL. CExampleA se exportuje při vytváření A.DLL a importuje se při použití b.dll (nebo jiným klientem).
 
-Tento typ vrstvení nelze provést, při použití předdefinované `AFX_EXT_CLASS` a `_AFXEXT` symboly preprocesoru. Tento problém není na rozdíl od způsobem mechanismus knihovna MFC sama používá při sestavování rozšiřující knihovny DLL, která jeho OLE, databáze a knihovny MFC sítě řeší techniky popsané výše.
+Tento typ vrstvení nelze provést při `AFX_EXT_CLASS` použití `_AFXEXT` vestavěných a preprocesorových symbolů. Výše popsaná technika řeší tento problém způsobem, který se neliší od mechanismu, který knihovna MFC sama používá při vytváření svých knihoven DLL rozšíření OLE, Databáze a síťový knihovny MFC.
 
-### <a name="not-exporting-the-entire-class"></a>Export není celé třídy
+### <a name="not-exporting-the-entire-class"></a>Neexport celé třídy
 
-Znovu budete muset provést zvláštní pozornost při neexportujete celá třída. Je nutné zajistit, že jsou správně exportovány potřebná data položky vytvořené pomocí maker knihovny MFC. To můžete udělat tak, že znovu definujete `AFX_DATA` makra vaší konkrétní třídy. To by mělo být provedeno kdykoli neexportujete celá třída.
+Opět platí, že budete muset věnovat zvláštní pozornost, když nejste export celé třídy. Je třeba zajistit, aby byly potřebné datové položky vytvořené makry knihovny MFC exportovány správně. To lze provést opětovnou `AFX_DATA` definicí na makro vaší konkrétní třídy. To by mělo být provedeno při každém exportu celé třídy.
 
 Příklad:
 
@@ -272,9 +272,9 @@ class CExampleA : public CObject
 #define AFX_DATA
 ```
 
-### <a name="dllmain"></a>DllMain
+### <a name="dllmain"></a>Dllmain
 
-Následuje přesný kód, který byste měli umístit do hlavní zdrojový soubor pro rozšíření MFC DLL. Poté, co obsahuje standardní by měl mít. Všimněte si, že při použití AppWizard vytvořit počáteční soubory pro rozšiřující knihovny DLL MFC, poskytne `DllMain` za vás.
+Následuje přesný kód, který byste měli umístit do hlavního zdrojového souboru pro knihovnu DLL přípony knihovny MFC. Mělo by to přijít po standardu zahrnuje. Všimněte si, že při použití AppWizard k vytvoření počáteční soubory `DllMain` pro dll rozšíření knihovny MFC, dodává a pro vás.
 
 ```cpp
 #include "afxdllx.h"
@@ -304,25 +304,25 @@ DllMain(HINSTANCE hInstance, DWORD dwReason, LPVOID)
 }
 ```
 
-Volání `AfxInitExtensionModule` zachytává moduly runtime – třídy (`CRuntimeClass` struktury) i jeho objekty pro vytváření objektů (`COleObjectFactory` objektů) pro použití novější při `CDynLinkLibrary` je vytvořen objekt. (Volitelné) volání `AfxTermExtensionModule` umožňuje knihovny MFC k vyčištění MFC – rozšiřující knihovny DLL při každém odpojení procesu (která se stane při ukončení procesu, nebo pokud kvůli uvolnění knihovny DLL `FreeLibrary` volání) z MFC – rozšiřující knihovny DLL. Protože většina MFC – rozšiřující knihovny DLL nejsou načtené dynamicky (obvykle jsou propojeny prostřednictvím jejich knihovny importu), volání `AfxTermExtensionModule` není obvykle nutné.
+Volání `AfxInitExtensionModule` zachytí moduly runtime třídy`CRuntimeClass` (struktury) stejně jako`COleObjectFactory` jeho objekt továrny `CDynLinkLibrary` (objekty) pro pozdější použití při vytvoření objektu. (Volitelné) volání `AfxTermExtensionModule` umožňuje knihovně MFC vyčistit knihovnu DLL rozšíření knihovny MFC při každém odpojit (což se stane při `FreeLibrary` ukončení procesu nebo při uvolnění knihovny DLL v důsledku volání) z knihovny DLL rozšíření knihovny MFC. Vzhledem k tomu, že většina knihovny DLL rozšíření knihovny MFC nejsou `AfxTermExtensionModule` dynamicky načteny (obvykle jsou propojeny prostřednictvím svých knihoven importu), volání obvykle není nutné.
 
-Pokud vaše aplikace načte nebo uvolní MFC – rozšiřující knihovny DLL dynamicky, je nutné volat `AfxTermExtensionModule` jak je znázorněno výše. Také je potřeba použít `AfxLoadLibrary` a `AfxFreeLibrary` (namísto funkce Win32 `LoadLibrary` a `FreeLibrary`) Pokud vaše aplikace používá více vláken, nebo pokud dynamicky načtení rozšiřující knihovny DLL MFC. Pomocí `AfxLoadLibrary` a `AfxFreeLibrary` zajistí, že spuštění a vypnutí kód, který provede, když je načteny nebo uvolněny MFC – rozšiřující knihovny DLL nejsou poškozeny globální stav knihovny MFC.
+Pokud aplikace načte a uvolní rozšíření Knihovny DLL knihovny MFC dynamicky, nezapomeňte volat, `AfxTermExtensionModule` jak je znázorněno výše. Také nezapomeňte použít `AfxLoadLibrary` `AfxFreeLibrary` a (namísto Win32 funkce `LoadLibrary` a `FreeLibrary`) pokud vaše aplikace používá více vláken nebo pokud dynamicky načte rozšíření Knihovny DLL knihovny MFC. Použití `AfxLoadLibrary` `AfxFreeLibrary` a zajišťuje, že spuštění a vypnutí kódu, který se spustí při načtení a uvolnění knihovny DLL rozšíření knihovny MFC, nepoškodí globální stav knihovny MFC.
 
-Soubor hlaviček AFXDLLX. H obsahuje speciální definice strukturám používaným v rozšiřující knihovny DLL MFC, jako je například definice `AFX_EXTENSION_MODULE` a `CDynLinkLibrary`.
+Hlavičkový soubor AFXDLLX. H obsahuje speciální definice pro struktury používané v knihovnách DLL `AFX_EXTENSION_MODULE` rozšíření `CDynLinkLibrary`knihovny MFC, jako je například definice pro a .
 
-Globální *extensionDLL* musí být deklarován, jak je znázorněno. Na rozdíl od 16bitové verze knihovny MFC, přidělení paměti a volání funkcí knihovny MFC během této doby od MFCxx.DLL je plně inicializován době vaše `DllMain` je volána.
+Globální *extensionDLL* musí být deklarována tak, jak je znázorněno. Na rozdíl od 16bitové verze knihovny MFC můžete během této doby přidělit funkce knihovny MFC paměti a `DllMain` volat, protože knihovna MFCxx.DLL je plně inicializována v době, kdy je volána vaše.
 
-### <a name="sharing-resources-and-classes"></a>Sdílení prostředků a třídy
+### <a name="sharing-resources-and-classes"></a>Sdílení zdrojů a tříd
 
-Jednoduché rozšiřující knihovny DLL MFC potřebovat exportovat pouze několik funkcí s malou šířkou pásma klientská aplikace a nic víc. Další náročné knihovny DLL uživatelského rozhraní chtít exportovat prostředky a třídy jazyka C++ do klientské aplikace.
+Jednoduché knihovny DLL rozšíření knihovny MFC potřebují exportovat pouze několik funkcí s malou šířkou pásma do klientské aplikace a nic víc. Další knihovny DLL náročné na uživatelské rozhraní mohou chtít exportovat prostředky a třídy Jazyka C++ do klientské aplikace.
 
-Export prostředků se provádí prostřednictvím seznamu prostředků. V každé žádosti je jednotlivě propojený seznam `CDynLinkLibrary` objekty. Při hledání pro určitý prostředek, podívejte se nejprve sledovat aktuální modul prostředků většinu standardní implementace MFC, který se načítá prostředky (`AfxGetResourceHandle`) a, pokud nebyla nalezena procházení seznamu `CDynLinkLibrary` objekty pokusu o načtení požadovaný prostředek.
+Export zdrojů se provádí prostřednictvím seznamu zdrojů. V každé aplikaci je singly propojený seznam `CDynLinkLibrary` objektů. Při hledání prostředku, většina standardních implementací knihovny MFC, které`AfxGetResourceHandle`načítají prostředky nejprve `CDynLinkLibrary` na aktuální modul prostředků ( ) a pokud není nalezen projít seznam objektů, které se pokoušejí načíst požadovaný prostředek.
 
-Dynamické vytváření objektů jazyka C++ název třídy C++ se podobá. Mechanismus serializace objektu knihovny MFC musí mít všechny `CRuntimeClass` registrované objekty tak, aby mohl rekonstruovat dynamicky vytvořením objekt jazyka C++ vyžaduje typu založeného na co byla uložena dříve.
+Dynamické vytváření objektů jazyka C++ s názvem třídy C++ je podobné. Mechanismus deserializace objektu knihovny MFC musí mít všechny `CRuntimeClass` objekty registrované tak, aby jej bylo možné rekonstruovat dynamickým vytvořením objektu Jazyka C++ požadovaného typu na základě toho, co bylo uloženo dříve.
 
-Pokud chcete, aby klientská aplikace použít třídy v rozšíření MFC DLL, které jsou `DECLARE_SERIAL`, je nutné exportovat třídy bude viditelná pro klientské aplikace. Tím se taky dělá návod `CDynLinkLibrary` seznamu.
+Pokud chcete, aby klientská aplikace používala třídy `DECLARE_SERIAL`v knihovně DLL rozšíření knihovny MFC , které jsou , budete muset exportovat třídy, které budou viditelné pro klientskou aplikaci. To se také provádí `CDynLinkLibrary` procházkou po seznamu.
 
-V případě ukázce MFC Advanced Concepts [DLLHUSK](../overview/visual-cpp-samples.md), seznamu vypadá přibližně takto:
+V případě mfc advanced concepts ukázky [DLLHUSK](../overview/visual-cpp-samples.md), seznam vypadá něco jako:
 
 ```Example
 head ->   DLLHUSK.EXE   - or - DLLHUSK.EXE
@@ -335,17 +335,17 @@ head ->   DLLHUSK.EXE   - or - DLLHUSK.EXE
            MFC90D.DLL           MFC90.DLL
 ```
 
-Knihovny MFCxx.DLL je obvykle poslední v seznamu prostředků a třídy. Knihovny MFCxx.DLL zahrnuje všechny standardní prostředky MFC, včetně řetězce výzev pro všechny identifikátory standardních příkazů. Uvedení na konec seznamu umožňuje knihovny DLL a vlastní klientské aplikace nebudete chtít své vlastní kopii standardní prostředky MFC, ale chcete-li využívají sdílené prostředky do knihovny MFCxx.DLL místo.
+MFCxx.DLL je obvykle poslední v seznamu zdrojů a tříd. Knihovna MFCxx.DLL obsahuje všechny standardní prostředky knihovny MFC, včetně řetězců výzev pro všechna id standardního příkazu. Umístění na konci seznamu umožňuje knihovny DLL a klientské aplikace sám nemají vlastní kopii standardní prostředky knihovny MFC, ale spoléhat na sdílené prostředky v Knihovně MFCxx.DLL místo.
 
-Sloučení prostředků tak názvy tříd všech knihoven DLL do oboru názvů klientské aplikace má nevýhodou, že budete muset pečlivě jaké ID nebo názvy, které vyberete. Můžete samozřejmě tuto funkci můžete zakázat tak, že vyexportujete buď není prostředky nebo `CDynLinkLibrary` objektu do klientské aplikace. [DLLHUSK](../overview/visual-cpp-samples.md) ukázka spravuje sdílený prostředek oboru názvů pomocí více souborů záhlaví. Zobrazit [Technická poznámka 35](../mfc/tn035-using-multiple-resource-files-and-header-files-with-visual-cpp.md) další tipy pro používání souborů sdílených prostředků.
+Sloučení prostředků a názvů tříd všech knihoven DLL do oboru názvů klientské aplikace má nevýhodu, že musíte být opatrní, jaké ID nebo názvy vyberete. Tuto funkci můžete samozřejmě zakázat tím, že `CDynLinkLibrary` do klientské aplikace neexportujete prostředky ani objekt. Ukázka [DLLHUSK](../overview/visual-cpp-samples.md) spravuje obor názvů sdílených prostředků pomocí více souborů hlaviček. Další tipy k používání sdílených souborů prostředků najdete v [technické poznámce 35.](../mfc/tn035-using-multiple-resource-files-and-header-files-with-visual-cpp.md)
 
-### <a name="initializing-the-dll"></a>Inicializace knihovny DLL
+### <a name="initializing-the-dll"></a>Inicializace dll
 
-Jak je uvedeno výše, obvykle můžete vytvořit `CDynLinkLibrary` objektu, abyste mohli exportovat třídy a prostředky do klientské aplikace. Je potřeba poskytnout exportovaný vstupní bod inicializace knihovny DLL. Minimálně to je void rutinu, která nepřijímá žádné argumenty a vrací hodnotu nothing, ale může být cokoliv, co vám vyhovuje.
+Jak bylo uvedeno výše, obvykle budete `CDynLinkLibrary` chtít vytvořit objekt, aby bylo možné exportovat prostředky a třídy do klientské aplikace. Pro inicializaci dll. Minimálně se jedná o neplatnou rutinu, která nepřijímá žádné argumenty a nic nevrací, ale může to být cokoli, co se vám líbí.
 
-Každá klientská aplikace, která chce používat vaše knihovna DLL musí volat tato rutina inicializace, pokud použijete tento přístup. Také to může přidělit `CDynLinkLibrary` objektu ve vašich `DllMain` bezprostředně po volání `AfxInitExtensionModule`.
+Každá klientská aplikace, která chce používat dll musí volat tuto inicializační rutinu, pokud použijete tento přístup. Tento `CDynLinkLibrary` objekt můžete také `DllMain` přidělit `AfxInitExtensionModule`ve vašem právě po volání .
 
-Musíte vytvořit inicializační rutina `CDynLinkLibrary` objekt haldy aktuální aplikace, svázanou s vaší MFC – rozšiřující knihovny DLL informace. To můžete udělat následujícími způsoby:
+Inicializační rutina `CDynLinkLibrary` musí vytvořit objekt v haldě aktuální aplikace, připojený až k informacím knihovny DLL rozšíření knihovny MFC. To lze provést pomocí následujících akcí:
 
 ```cpp
 extern "C" extern void WINAPI InitXxxDLL()
@@ -354,133 +354,133 @@ extern "C" extern void WINAPI InitXxxDLL()
 }
 ```
 
-Název rutiny *InitXxxDLL* v tomto příkladu může být cokoli si pod. Nemusí být **extern "C"**, ale, že tomu tak je snazší Údržba exportovaného seznamu.
+Název rutiny *InitXxxDLL* v tomto příkladu může být cokoli, co chcete. Nemusí být **extern "C"**, ale tím je export ní seznam snadněji udržovat.
 
 > [!NOTE]
-> Pokud používáte MFC – rozšiřující knihovny DLL z běžné knihovny DLL MFC, musíte exportovat tento inicializační funkce. Tato funkce musí být volána z běžné knihovny MFC DLL před použitím všech tříd knihovny DLL MFC rozšíření nebo prostředky.
+> Pokud používáte knihovnu DLL rozšíření knihovny MFC z běžné knihovny DLL knihovny MFC, je nutné tuto funkci inicializace exportovat. Tato funkce musí být volána z běžné knihovny DLL knihovny MFC před použitím všech tříd nebo prostředků dll rozšíření knihovny MFC.
 
-### <a name="exporting-entries"></a>Export položky
+### <a name="exporting-entries"></a>Export položek
 
-Jednoduchý způsob pro export tříd je použití `__declspec(dllimport)` a `__declspec(dllexport)` v každé třídě a globální funkce, kterou chcete exportovat. To je mnohem jednodušší, ale je méně efektivní než pojmenování každý vstupní bod (popsaných níže), protože budete mít méně kontrolu nad jaké funkce jsou exportovány, což nelze exportovat funkce podle pořadových čísel. TESTDLL1 a TESTDLL2 pomocí této metody můžete exportovat jejich položky.
+Jednoduchý způsob exportu tříd je `__declspec(dllimport)` `__declspec(dllexport)` použití a pro každou třídu a globální funkci, kterou chcete exportovat. To je mnohem jednodušší, ale je méně efektivní než pojmenování každého vstupního bodu (popsané níže), protože máte menší kontrolu nad tím, jaké funkce jsou exportovány a nelze exportovat funkce řadové. TESTDLL1 a TESTDLL2 použít tuto metodu k exportu svých položek.
 
-Metodu efektivnější (a metodu používanou pro knihovny MFCxx.DLL) je exportovat každou položku ručně pojmenováním každá položka. Soubor DEF. Protože jsme exportujete selektivní exporty z naší knihovny DLL (tedy nikoli vše), jsme musíte se rozhodnout určité rozhraní, která nám chcete exportovat. To je obtížné, protože je nutné zadat názvy byly pozměněny linkeru ve formuláři položky v. Soubor DEF. Není exportovat všechny třídy jazyka C++, pokud je skutečně potřeba pro ni mají symbolický odkaz.
+Účinnější metodou (a metodou používanou mfcxx.DLL) je exportovat každou položku ručně pojmenováním každé položky v . DEF. Vzhledem k tomu, že exportujeme selektivní vývozy z naší knihovny DLL (tj. ne všechno), musíme se rozhodnout, která konkrétní rozhraní chceme exportovat. To je obtížné, protože je nutné zadat pošacené názvy propojovacího nebo spojovacího pole ve formě položek v . DEF. Neexportujte žádné třídy Jazyka C++, pokud pro ni opravdu nepotřebujete mít symbolický odkaz.
 
-Pokud jste vyzkoušeli export C++ třídy s. DEF soubor dříve, možná budete chtít Vyviňte nástroj k automatickému vygenerování tohoto seznamu. To lze provést pomocí odkazu dvoufázový proces. Propojit vaše knihovna DLL jednou pro žádné exporty a povolit linkeru, aby generoval. Soubor s Mapováním. Na. Soubor s Mapováním je možné vytvořit seznam funkcí, které mají být exportovány, takže se některé změny uspořádání, můžete použít ke generování EXPORTU zadané pro vaše. Soubor DEF. Exportovat seznam knihovny MFCxx.DLL a technologií OLE a databáze rozšiřující knihovny DLL MFC, několik tisíc v čísle, se vygeneroval s odpovídající proces (i když není úplně automatický a vyžaduje některé ruční ladění každý jednou za chvíli).
+Pokud jste se pokusili exportovat třídy jazyka C++ pomocí . DEF dříve, můžete vytvořit nástroj pro generování tohoto seznamu automaticky. To lze provést pomocí dvoustupňového procesu propojení. Propojte dll jednou bez exportu a povolte propojovacímu zařízení generovat . MAP. Tá. Mapový soubor lze použít ke generování seznamu funkcí, které by měly být exportovány, takže s některými přeskupení, může být použit ke generování export položky pro vaše . DEF. Export seznam pro MFCxx.DLL a OLE a rozšíření knihovny MFC rozšíření Knihovny DLL, několik tisíc v počtu, byl generován s takovým procesem (i když to není zcela automatické a vyžaduje některé ruční ladění jednou za čas).
 
 ### <a name="cwinapp-vs-cdynlinklibrary"></a>CWinApp vs. CDynLinkLibrary
 
-Knihovny MFC DLL rozšíření nemá `CWinApp`-odvozenému objektu vlastní; místo toho musíte pracovat `CWinApp`-odvozenému objektu klientské aplikace. To znamená, že klientská aplikace vlastní pumpa zpráv nečinné smyčky a tak dále.
+Knihovna DLL rozšíření knihovny `CWinApp`MFC nemá vlastní objekt odvozený. místo toho musí `CWinApp`pracovat s -derived objekt klientské aplikace. To znamená, že klientská aplikace vlastní hlavní zprávy čerpadlo, nečinnosti smyčky a tak dále.
 
-Pokud vaše knihovna DLL rozšíření MFC potřebuje udržovat doplňující data pro každou aplikaci, lze odvodit novou třídu z `CDynLinkLibrary` a vytvořte jej v InitXxxDLL rutina popisu výše. Při spuštění, knihovny DLL můžete zkontrolovat aktuální aplikace seznam `CDynLinkLibrary` objekty, abyste našli ten konkrétní rozšiřující knihovny MFC DLL.
+Pokud vaše knihovna MFC Extension DLL potřebuje udržovat další data `CDynLinkLibrary` pro každou aplikaci, můžete odvodit novou třídu z a vytvořit ji v rutině InitXxxDLL popsat výše. Při spuštění knihovny DLL můžete zkontrolovat aktuální `CDynLinkLibrary` aplikace seznam objektů najít jeden pro konkrétní rozšíření knihovny DLL knihovny MFC.
 
-### <a name="using-resources-in-your-dll-implementation"></a>Použití prostředků ve vaší implementaci knihovny DLL
+### <a name="using-resources-in-your-dll-implementation"></a>Použití prostředků v implementaci dll
 
-Jak je uvedeno výše, provede zatížení prostředků výchozí seznam `CDynLinkLibrary` objekty hledáte prvního souboru EXE nebo DLL, která má požadovaný prostředek. Všechna rozhraní API knihovny MFC stejně jako všechny vnitřní kód používá `AfxFindResourceHandle` projde seznam prostředků se najít prostředek, bez ohledu na to, kde může nacházet.
+Jak bylo uvedeno výše, výchozí zatížení prostředků `CDynLinkLibrary` bude procházet seznam objektů, které hledají první EXE nebo DLL, který má požadovaný prostředek. Všechna pravidla API knihovny MFC, `AfxFindResourceHandle` stejně jako všechny vnitřní kód používá k procházce seznamu prostředků najít všechny prostředky, bez ohledu na to, kde se může nacházet.
 
-Pokud chcete načíst prostředky jenom na konkrétním místě, používají rozhraní API `AfxGetResourceHandle` a `AfxSetResourceHandle` uložit původní popisovač a nastavit nový popisovač. Je potřeba obnovit původní popisovač prostředku, pak se vraťte do klientské aplikace. Ukázka TESTDLL2 používá tento přístup pro explicitní načtení nabídky.
+Pokud chcete načíst prostředky pouze z určitého `AfxGetResourceHandle` místa, použijte api a `AfxSetResourceHandle` uložit starý popisovač a nastavte nový popisovač. Nezapomeňte obnovit starý popisovač prostředků před návratem do klientské aplikace. Ukázka TESTDLL2 používá tento přístup pro explicitní načtení nabídky.
 
-Procházení seznamu má nevýhody, že je o něco pomalejší a vyžaduje správu rozsahů ID prostředků. To má výhodu, že klientská aplikace, která obsahuje odkazy na několik rozšiřující knihovny DLL MFC můžete použít libovolný zadaná knihovna DLL prostředků bez nutnosti zadávat popisovač instance knihovny DLL. `AfxFindResourceHandle` rozhraní API slouží k procházení seznamu prostředků pro hledání shody daného. Přijímá název a typ prostředku a vrátí popisovač prostředku, ve kterém byl nalezen první (nebo hodnota NULL).
+Chůze v seznamu má nevýhody, že je o něco pomalejší a vyžaduje správu rozsahů ID prostředků. Má tu výhodu, že klientská aplikace, která odkazuje na několik knihovny DLL rozšíření knihovny MFC můžete použít libovolný prostředek s dll poskytuje bez nutnosti zadat popisovač instance Knihovny DLL. `AfxFindResourceHandle`je rozhraní API používané pro chůzi seznamu prostředků hledat danou shodu. Přebírá název a typ prostředku a vrátí popisovač prostředku, kde byl poprvé nalezen (nebo NULL).
 
-##  <a name="_mfcnotes_writing_an_application_that_uses_the_dll_version"></a> Psaní aplikací, který používá verzi knihovny DLL
+## <a name="writing-an-application-that-uses-the-dll-version"></a><a name="_mfcnotes_writing_an_application_that_uses_the_dll_version"></a>Psaní aplikace, která používá verzi dll
 
-### <a name="application-requirements"></a>Požadavky na aplikace
+### <a name="application-requirements"></a>Požadavky na aplikaci
 
-Aplikace, která používá sdílenou verzi knihovny MFC musí postupovat podle několika jednoduchých pravidel:
+Aplikace, která používá sdílenou verzi knihovny MFC, musí dodržovat několik jednoduchých pravidel:
 
-- Musí mít `CWinApp` objekt a standardní pravidla pro zprávy odeslané.
+- Musí mít `CWinApp` objekt a dodržovat standardní pravidla pro čerpadlo zpráv.
 
-- Musí být kompilovány se sadou vyžaduje kompilátor příznaky (viz níže).
+- Musí být kompilován se sadou požadovaných příznaků kompilátoru (viz níže).
 
-- Třeba propojit s knihovnami importu MFCxx. Díky nastavení příznaků vyžaduje kompilátor, zjistit hlaviček knihovny MFC v době spojení knihovny, které aplikace by měla propojit s.
+- Musí být propojena s knihovnami importu MFCxx. Nastavením požadovaných příznaků kompilátoru určují záhlaví knihovny MFC v době propojení, se kterou knihovnou by měla aplikace propojit.
 
-- Pokud chcete spustit spustitelný soubor, musí být MFCxx.DLL na cestě nebo v adresáři systému Windows.
+- Chcete-li spustit spustitelný soubor, mfcxx.Dll musí být na cestě nebo v systémovém adresáři systému Windows.
 
-### <a name="building-with-the-development-environment"></a>Sestavování s využitím vývojové prostředí
+### <a name="building-with-the-development-environment"></a>Budování s rozvojovým prostředím
 
-Pokud používáte interní souborů pravidel s většinou standardních výchozích hodnot, můžete snadno změnit projekt tak, aby sestavení verze knihovny DLL.
+Pokud používáte interní makefile s většinou standardních výchozích hodnot, můžete snadno změnit projekt a vytvořit verzi dll.
 
-Následující krok předpokládá, že máte správně fungující aplikaci knihovny MFC s NAFXCWD spojené. LIB (pro ladění) a NAFXCW. LIB (pro maloobchodní prodej) a chcete převeďte ho na použití sdílených verzí knihovny MFC. Běží prostředí Visual C++ a mít interní projekt soubor.
+Následující krok předpokládá, že máte správně fungující aplikaci knihovny MFC propojenou s NAFXCWD. LIB (pro ladění) a NAFXCW. LIB (pro maloobchod) a chcete jej převést tak, aby používala sdílenou verzi knihovny knihovny knihovny MFC. Spouštějíte prostředí Visual C++ a máte interní soubor projektu.
 
-1. Na **projekty** nabídky, klikněte na tlačítko **vlastnosti**. V **Obecné** stránky **výchozí nastavení projektu**, nastavte Microsoft Foundation Classes na **použít knihovnu MFC ve sdílené knihovně DLL** (MFCxx(d).dll).
+1. V nabídce **Projekty** klepněte na **položku Vlastnosti**. Na stránce **Obecné** v části **Výchozí nastavení projektu**nastavte třídy Microsoft Foundation tak, aby **používaly knihovnu MFC ve sdílené knihovně DLL** (MFCxx(d).dll).
 
-### <a name="building-with-nmake"></a>Sestavování s využitím NMAKE
+### <a name="building-with-nmake"></a>Budova s NMAKE
 
-Pokud používáte externí soubor pravidel funkce jazyka Visual C++, nebo používáte NMAKE přímo, budete muset upravit váš soubor pravidel pro podporu kompilátoru a možnosti linkeru
+Pokud používáte externí funkci makefile visual c++ nebo používáte nmake přímo, budete muset upravit makefile pro podporu kompilátoru a propojovacího programu možnosti
 
 Požadované příznaky kompilátoru:
 
 - **/D_AFXDLL /MD**
    **/D_AFXDLL**
 
-Tento symbol, který má být definována musí standardní záhlaví knihovny MFC:
+Standardní hlavičky knihovny MFC musí být definovántento symbol:
 
-- **/ MD** aplikace musí používat knihovnu DLL verze knihovny run-time jazyka C
+- **/MD** Aplikace musí používat verzi knihovny DLL knihovny run-time c
 
-Nastavení další příznaky kompilátoru řídí výchozími hodnotami knihovny MFC (například _DEBUG pro ladění).
+Všechny ostatní příznaky kompilátoru postupujte podle výchozích hodnot knihovny MFC (například _DEBUG pro ladění).
 
-Upravte seznam linkeru knihoven. Změna NAFXCWD. LIB MFCxxD.LIB a změňte NAFXCW. Nástroj LIB MFCxx.LIB. Nahraďte LIBC. LIB s MSVCRT. LIB. Stejně jako u jakékoli jiné knihovny MFC je důležité, že je umístěn MFCxxD.LIB **před** žádné knihovny C runtime.
+Upravte seznam knihoven propojovacího systému. Změnit NAFXCWD. LIB na MFCxxD.LIB a změnit NAFXCW. LIB na MFCxx.LIB. Vyměňte LIBC. LIB s MSVCRT. Lib. Stejně jako u jiných knihovny Knihovny MFC je důležité, aby MFCxxD.LIB je umístěn **před** všechny knihovny C-runtime.
 
-Volitelně přidejte **/D_AFXDLL** maloobchodních a ladicích možnosti kompilátoru prostředku (ten, který skutečně sestavuje prostředky s **/R**). Díky tomu svého konečného spustitelného souboru menší prostřednictvím sdílení prostředků, které se nacházejí v knihovnách MFC DLL.
+Volitelně přidat **/D_AFXDLL** do možností kompilátoru maloobchodních i ladicích prostředků (ten, který ve skutečnosti zkompiluje prostředky s **/R**). Díky konečné spustitelný soubor menší sdílení prostředků, které jsou k dispozici v knihovnách DLL knihovny MFC.
 
-Vyžaduje se znovu sestavit, po provedení těchto změn.
+Po provedení těchto změn je vyžadováno úplné opětovné sestavení.
 
-### <a name="building-the-samples"></a>Ukázky vytváření
+### <a name="building-the-samples"></a>Vytváření vzorků
 
-Většina ukázkové programy MFC může být sestaven z jazyka Visual C++, nebo ze sdíleného souboru pravidel NMAKE kompatibilní z příkazového řádku.
+Většina ukázkových programů knihovny MFC může být vytvořena z jazyka Visual C++ nebo ze sdíleného makefile kompatibilního s NMAKE z příkazového řádku.
 
-Některé z těchto ukázek použití knihovny MFCxx.DLL převést, můžete načíst. Klíč k vícenásobné aktivaci souboru do Visual C++ a nastavit možnosti projektu, jak je popsáno výše. Pokud používáte NMAKE sestavení, můžete zadat "AFXDLL = 1" na NMAKE příkazového řádku a že bude vytvoření vzorku pomocí sdílené knihovny MFC.
+Chcete-li převést některý z těchto vzorků použít MFCxx.DLL, můžete načíst . MAK do visual c++ a nastavte možnosti projektu, jak je popsáno výše. Pokud používáte sestavení NMAKE, můžete zadat "AFXDLL=1" na příkazovém řádku NMAKE a který vytvoří ukázku pomocí sdílených knihoven knihovny MFC.
 
-Ukázce MFC Advanced Concepts [DLLHUSK](../overview/visual-cpp-samples.md) využívá rozhraní DLL verze knihovny MFC. Tato ukázka nejen ukazuje, jak sestavit aplikaci propojit s MFCxx.DLL, ale také ukazuje další funkce knihovny DLL MFC možnost balení například rozšiřující knihovny DLL MFC je popsáno dále v tomto Technická poznámka.
+Ukázka knihovny MFC Advanced Concepts [DLLHUSK](../overview/visual-cpp-samples.md) je vytvořena s verzí knihovny MFC knihovny MFC knihovny MFC. Tato ukázka nejen ukazuje, jak vytvořit aplikaci propojenou s knihovnou MFCxx.DLL, ale také ilustruje další funkce možnosti balení Knihovny MFC DLL, jako jsou knihovny DLL rozšíření knihovny MFC popsané dále v této technické poznámce.
 
-### <a name="packaging-notes"></a>Poznámky k vytváření balíčků
+### <a name="packaging-notes"></a>Poznámky k balení
 
-Komerčně nabízenou verzi knihovny DLL (MFCxx [U]. Knihovny DLL) jsou volně redistribuovány. Ladicí verze knihoven DLL nejsou volně redistribuovány a by měla sloužit pouze během vývoje aplikace.
+Maloobchodní verze knihoven DLL (MFCxx[U]. DLL) jsou volně redistribuovatelné. Ladicí verze knihovny DLL nejsou volně redistribuovatelné a měly by být použity pouze při vývoji aplikace.
 
-Ladění knihoven DLL jsou k dispozici s ladicími informacemi. Pomocí ladicího programu Visual C++, můžou sledovat provádění vaší aplikace, stejně jako knihovna DLL. Uvolnění knihovny DLL (MFCxx [U]. Knihovny DLL) neobsahují informace o ladění.
+Ladicí knihovny DLL jsou k dispozici s informacemi o ladění. Pomocí ladicího programu Visual C++ můžete sledovat spuštění aplikace i dll. DLL release (MFCxx[U]. DLL) neobsahují informace o ladění.
 
--Li přizpůsobit nebo opětovné sestavení knihovny DLL, pak byste měli volat je něco jiného než "MFCxx" The MFC SRC souboru MFCDLL. Klíč k vícenásobné aktivaci popisuje možnosti sestavení a obsahuje logiku pro přejmenování knihovny DLL. Přejmenování souborů je nezbytné, protože tyto knihovny DLL jsou potenciálně sdílet řada aplikací knihovny MFC. S vlastní verze knihovny MFC DLL nahradit nainstalované v systému způsobit nefunkčnost jiné aplikace knihovny MFC pomocí sdílené knihovny MFC DLL.
+Pokud upravíte nebo znovu vytvoříte knihovny DLL, měli byste je nazvat něčím jiným než knihovnou MFCxx Soubor SRC knihovny MFC MFCDLL. Mak popisuje možnosti sestavení a obsahuje logiku pro přejmenování dll. Je nezbytné přejmenovat soubory, protože tyto knihovny DLL jsou potenciálně sdíleny mnoha aplikacemi knihovny MFC. Pokud vlastní verze knihoven DLL knihovny MFC nahradíte ty, které jsou nainstalovány v systému, může dojít k přerušení jiné aplikace knihovny MFC pomocí sdílených knihoven DLL knihovny MFC.
 
-Opětovné sestavení knihovny DLL MFC se nedoporučuje.
+Opětovné sestavení knihovny DLL knihovny MFC se nedoporučuje.
 
-##  <a name="_mfcnotes_how_the_mfc30.dll_is_implemented"></a> Jak je implementovaná MFCxx.DLL
+## <a name="how-the-mfcxxdll-is-implemented"></a><a name="_mfcnotes_how_the_mfc30.dll_is_implemented"></a>Jak je implementována mfcxx.dll
 
-Následující část popisuje, jak je implementované knihovny MFC DLL (MFCxx.DLL a MFCxxD.DLL). Vysvětlení, že zde nejsou podrobnosti také důležité, pokud všechny ji chcete je použít knihovnu MFC DLL s vaší aplikací. Podrobnosti zde nejsou nezbytně nutné pochopit, jak psát rozšiřující knihovny DLL MFC, ale Princip implementovaný vám mohou pomoci psát vlastní knihovny DLL.
+Následující část popisuje, jak je implementována knihovna MFC DLL (MFCxx.DLL a MFCxxD.DLL). Pochopení podrobnosti zde také nejsou důležité, pokud vše, co chcete udělat, je použít knihovnu DLL knihovny MFC s vaší aplikací. Podrobnosti zde nejsou nezbytné pro pochopení, jak napsat knihovnu DLL rozšíření knihovny MFC, ale pochopení této implementace vám může pomoci napsat vlastní knihovnu DLL.
 
 ### <a name="implementation-overview"></a>Přehled implementace
 
-MFC DLL je ve skutečnosti zvláštním případem rozšiřující knihovna DLL MFC, jak je popsáno výše. Má velmi velký počet exportů pro velký počet tříd. Existuje několik dalších věcí uděláme v knihovně MFC DLL, které usnadňují speciální ještě více než regulární MFC – rozšiřující knihovny DLL.
+Knihovna DLL knihovny MFC je skutečně zvláštní případ knihovny DLL rozšíření knihovny MFC, jak je popsáno výše. Má velmi velký počet vývozů pro velký počet tříd. Existuje několik dalších věcí, které děláme v knihovně DLL knihovny MFC, díky kterým je ještě více zvláštní než běžné rozšíření knihovny DLL knihovny MFC.
 
-### <a name="win32-does-most-of-the-work"></a>Win32 provede většinu práce
+### <a name="win32-does-most-of-the-work"></a>Win32 dělá většinu práce
 
-16bitové verze knihovny MFC potřeba několik speciální technik, včetně dat pro aplikaci v segmentu zásobníku speciální segmenty vytvořené nějaký kód sestavení 80 x 86, výjimek na úrovni jednotlivého procesu kontextů a další techniky. Win32 přímo podporuje za zpracování dat v knihovně DLL, která je, co chtějí ve většině případů. Ve většině případů MFCxx.DLL je právě NAFXCW. Lib – zabalené v knihovně DLL. Když se podíváte na zdrojový kód knihovny MFC, najdete velmi málo _AFXDLL #ifdef, protože existují velmi málo zvláštní případy, které je potřeba provést. Zvláštní případy, které se konkrétně existují řešit Win32 na Windows 3.1 (jinak známé jako Win32s). Win32s nemá podpora na úrovni jednotlivého procesu DLL data přímo, takže knihovny MFC DLL musí používat úložiště thread local (TLS) rozhraní API systému Win32 k získání dat místní proces.
+16bitová verze knihovny MFC potřebovala řadu speciálních technik, včetně dat pro aplikaci v segmentu zásobníku, speciálních segmentů vytvořených některým kódem sestavení 80x86, kontexty výjimek pro každý proces a dalších technik. Win32 přímo podporuje data na zpracování v dll, což je to, co chcete většinu času. Z větší části MFCxx.DLL je jen NAFXCW. LIB zabalená v dll. Pokud se podíváte na zdrojový kód knihovny MFC, najdete jen velmi málo #ifdef _AFXDLL, protože existuje jen velmi málo zvláštních případů, které je třeba provést. Zvláštní případy, které jsou tam jsou konkrétně řešit Win32 v systému Windows 3.1 (jinak známý jako Win32s). Win32s nepodporuje data knihovny DLL pro každý proces přímo, takže knihovna MFC DLL musí k získání místních dat procesu použít rozhraní API pro místní úložiště (TLS).
 
 ### <a name="impact-on-library-sources-additional-files"></a>Dopad na zdroje knihovny, další soubory
 
-Dopad **_AFXDLL** verze na normální zdroje třídy knihovny MFC a hlavičky je relativně malé. Existuje soubor speciální verzi (AFXV_DLL. H) stejně jako další záhlaví souboru (AFXDLL_. H) součástí hlavní AFXWIN. Hlavička H. AFXDLL_. Obsahuje hlavičky H `CDynLinkLibrary` třídy a další podrobnosti implementace obou `_AFXDLL` aplikací a rozšiřující knihovny DLL MFC. AFXDLLX. H záhlaví se poskytuje pro sestavování rozšiřující knihovny DLL MFC (podrobnosti naleznete v části výše).
+Dopad **_AFXDLL** verze na normální zdroje knihovny tříd knihovny knihovny knihovny knihovny knihovny knihovny knihovny knihovny knihovny knihovny knihovny knihovny knihovny je poměrně menší. K dispozici je speciální verze souboru (AFXV_DLL. H) a další soubor záhlaví (AFXDLL_. H) zahrnuto v hlavním AFXWIN. H záhlaví. Ten AFXDLL_. H záhlaví `CDynLinkLibrary` obsahuje třídu a `_AFXDLL` další podrobnosti implementace obou aplikací a knihovny DLL rozšíření knihovny MFC. The AFXDLLX. H záhlaví je k dispozici pro vytváření knihovny DLL rozšíření knihovny MFC (podrobnosti viz výše).
 
-Pravidelné zdrojů do knihovny MFC v MFC SRC mají další podmíněný kód v rámci `_AFXDLL` #ifdef. Na další zdrojový soubor (DLLINIT. CPP) obsahuje další inicializační kód knihovny DLL a dalších připevnit pro sdílenou verzi knihovny MFC.
+Pravidelné zdroje knihovny Knihovny MFC v knihovně MFC `_AFXDLL` SRC mají některé další podmíněný kód pod #ifdef. Další zdrojový soubor (DLLINIT. CPP) obsahuje další kód inicializace knihovny DLL a další připevnění pro sdílenou verzi knihovny MFC.
 
-Aby bylo možné sestavit sdílených verzí knihovny MFC, jsou k dispozici další soubory. (Podrobnosti najdete níže v tom, jak vytvořit knihovnu DLL.)
+Za účelem vytvoření sdílené verze knihovny MFC jsou k dispozici další soubory. (Podrobnosti o vytvoření dll.)
 
-- Dvě. DEF soubory se používají pro export vstupní body DLL knihovny MFC pro ladění (MFCxxD.DEF) a (MFCxx.DEF) verzi knihovny DLL.
+- Dva. Soubory DEF se používají pro export vstupních bodů Knihovny MFC DLL pro ladění (MFCxxD.DEF) a vydání (MFCxx.DEF) verze dll.
 
-- Aplikace. Soubor RC (MFCDLL. RC) obsahuje všechny standardní prostředky MFC a VERSIONINFO prostředku pro knihovnu DLL.
+- A . RC soubor (MFCDLL. RC) obsahuje všechny standardní prostředky knihovny MFC a prostředek VERSIONINFO pro knihovnu DLL.
 
-- ODPOVĚĎ. Soubor CLW (MFCDLL. CLW) je k dispozici při procházení MFC tříd pomocí ClassWizard. Poznámka: Tato funkce není konkrétní knihovny DLL verze knihovny MFC.
+- A. SOUBOR CLW (Knihovna MFCDLL. CLW) je k dispozici pro prohlížení tříd knihovny MFC pomocí ClassWizard. Poznámka: Tato funkce není zvláštní verze knihovny MFC Knihovny DLL.
 
 ### <a name="memory-management"></a>Správa paměti
 
-Aplikace pomocí knihovny MFCxx.DLL používá běžné přidělení paměti poskytované MSVCRTxx.DLL sdílenou knihovnu DLL modulu C runtime. Aplikace, libovolný rozšiřující knihovny DLL MFC a také samotnými knihovnami MFC DLL pomocí tohoto alokátoru sdílené paměti. Pomocí sdílené knihovny DLL pro přidělení paměti lze knihovny DLL MFC přidělit paměť, která je později uvolněna aplikací nebo naopak. Protože aplikace a knihovny DLL musí používat stejnou allocator, by neměla přepsat globální C++ **operátor new** nebo **operátor delete**. Stejná pravidla platí i pro zbývající rutiny přidělení běhové paměti jazyka C (například **malloc**, **realloc**, **bezplatné**a další).
+Aplikace používající mfcxx.dll používá společný alokátor paměti poskytovaný msvcrtxx.DLL, sdílenou dll c-runtime. Aplikace, všechny knihovny DLL rozšíření knihovny MFC a také knihovny DLL knihovny MFC používají tento alokátor sdílené paměti. Pomocí sdílené knihovny DLL pro přidělení paměti knihovny MFC knihovny DLL můžete přidělit paměť, která je později uvolněna aplikací nebo naopak. Vzhledem k tomu, že aplikace i dll musí používat stejný alokátor, neměli byste přepsat globální operátor C++ **nový** nebo **operátor odstranit**. Stejná pravidla platí pro zbytek rutiny přidělení paměti za běhu jazyka C (například **malloc**, **realloc**, **free**a další).
 
-### <a name="ordinals-and-class-declspecdllexport-and-dll-naming"></a>Řadové číslovky a třída __declspec(dllexport) a pojmenování knihovny DLL
+### <a name="ordinals-and-class-__declspecdllexport-and-dll-naming"></a>Řadové názvy a __declspec třídy (dllexport) a pojmenování dll.
 
-Nepoužijeme `class` **__declspec(dllexport)** funkce C++ kompilátoru. Místo toho seznam exporty je součástí zdroje knihovny tříd (MFCxx.DEF a MFCxxD.DEF). Exportují se jenom tyto vybrané sady vstupní body (funkce a data). Jiné symboly, jako je například knihovny MFC privátní implementace funkcí nebo tříd, se nebudou exportovat všechny exporty provádí ordinální číslo bez názvu řetězce v tabulce rezidenční nebo jiných rezidentní název.
+Nepoužíváme `class` **funkci __declspec(dllexport)** kompilátoru Jazyka C++. Místo toho seznam exportů je součástí zdrojů knihovny tříd (MFCxx.DEF a MFCxxD.DEF). Exportují se pouze tyto vybrané sady vstupních bodů (funkcí a dat). Jiné symboly, například funkce nebo třídy soukromé implementace knihovny MFC, nejsou exportovány Všechny exporty se provádějí podle pravidla bez názvu řetězce v tabulce rezidentních nebo nerezidentních názvů.
 
-Pomocí `class` **__declspec(dllexport)** může být reálnou alternativu pro vytváření knihovny DLL menší, ale v případě velké knihovny DLL jako knihovny MFC, výchozí export mechanismus má efektivitu a kapacitu omezení.
+Použití `class` **__declspec(dllexport)** může být životaschopnou alternativou pro vytváření menších knihoven DLL, ale v případě velké knihovny DLL, jako je knihovna MFC, má výchozí mechanismus exportu omezení efektivity a kapacity.
 
-Co to znamená, že všechny je, že nám můžete zabalit velké množství funkcí ve verzi knihovny MFCxx.DLL, který je pouze přibližně 800 KB bez negativního vlivu mnohem provádění nebo rychlost načítání. Knihovny MFCxx.DLL by byl 100 tisíc větší nebyla tuto techniku použít. Také díky tomu je možné přidat další vstupní body na konci. Soubor DEF povolit jednoduchou správu verzí bez omezení rychlosti a velikosti efektivitu export podle pořadových čísel. Hlavní verze revize v knihovně tříd knihovny MFC se změní název knihovny. To znamená, MFC30. Knihovna DLL je distribuovatelné knihovny DLL obsahující verzi 3.0 tříd knihovny MFC. Upgrade této knihovny DLL, Řekněme v hypotetické 3.1 knihovny MFC, knihovny DLL by se pojmenoval MFC31. Knihovna DLL místo. Znovu při úpravě zdrojový kód knihovny MFC k vytvoření vlastní verzi knihovny MFC DLL, použijte jiný název (a ideálně bez knihovny MFC"" v názvu).
+Co to všechno znamená, že můžeme zabalit velké množství funkcí ve verzi MFCxx.DLL, která je pouze kolem 800 KB bez kompromisů hodně spuštění nebo rychlost načítání. MFCxx.DLL by byl o 100 kB větší, kdyby tato technika nebyla použita. To také umožňuje přidat další vstupní body na konci . DEF, který umožňuje jednoduchou správu verzí, aniž by byla ohrožena rychlost a účinnost velikosti exportu podle řadového čísla. Hlavní revize verzí v knihovně tříd knihovny MFC změní název knihovny. Tedy MFC30. Knihovna DLL je redistribuovatelná knihovna DLL obsahující verzi 3.0 knihovny tříd knihovny MFC. Upgrade této knihovny DLL, řekněme v hypotetické knihovně MFC 3.1, knihovna DLL by se jmenovala MFC31. Místo toho dll. Opět platí, že pokud upravíte zdrojový kód knihovny MFC k vytvoření vlastní verze knihovny DLL knihovny MFC, použijte jiný název (a nejlépe jeden bez "MFC" v názvu).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Technické poznámky podle čísel](../mfc/technical-notes-by-number.md)<br/>
 [Technické poznámky podle kategorií](../mfc/technical-notes-by-category.md)

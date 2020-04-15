@@ -8,88 +8,88 @@ helpviewer_keywords:
 - DLLs [MFC], linking
 - MFC DLLs [MFC], linking regular MFC DLLs to MFC
 ms.assetid: 76753e9c-59dc-40f6-b6a7-f6bb9a7c4190
-ms.openlocfilehash: 753612fae101708dd4f8294db121980b62af30b3
-ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
+ms.openlocfilehash: 0f4d4e2ed76a0fa5f8f775345fc672a1df055a39
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65610944"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81370429"
 ---
 # <a name="tn011-using-mfc-as-part-of-a-dll"></a>TN011: Použití prostředí MFC jako součásti knihovny DLL
 
-Tato poznámka popisuje běžné knihovny MFC DLL, které umožňují použít knihovnu MFC jako součásti Windows dynamická knihovna (DLL). Předpokládá, že máte zkušenosti s Windows knihovny DLL a jak je vytvořit. Informace o MFC – rozšiřující knihovny DLL, pomocí které můžete vytvořit rozšíření pro knihovnu MFC, naleznete v tématu [DLL verze knihovny MFC](../mfc/tn033-dll-version-of-mfc.md).
+Tato poznámka popisuje běžné knihovny DLL knihovny Knihovny MFC, které umožňují používat knihovnu knihovny Knihovny MFC jako součást knihovny DLL s dynamickými spojnicemi systému Windows. Předpokládá, že jste obeznámeni s knihovníkem DLL systému Windows a jak je vytvořit. Informace o knihovnách DLL rozšíření knihovny MFC, pomocí kterých můžete vytvořit rozšíření knihovny Knihovny MFC, naleznete [v tématu DLL Verze knihovny MFC](../mfc/tn033-dll-version-of-mfc.md).
 
-## <a name="dll-interfaces"></a>Rozhraní knihovny DLL
+## <a name="dll-interfaces"></a>Rozhraní Knihovny DLL
 
-regulární knihovny DLL MFC předpokládat, rozhraní mezi aplikací a knihovny DLL jsou určené v funkcí jazyka C nebo explicitně exportované třídy. Nelze exportovat rozhraní třídy knihovny MFC.
+pravidelné knihovny DLL knihovny MFC předpokládají, že rozhraní mezi aplikací a knihovnou DLL jsou určena ve funkcích podobných c nebo explicitně exportovaných třídách. Rozhraní třídy knihovny MFC nelze exportovat.
 
-Pokud chcete použít knihovnu MFC DLL a aplikace, mají možnost buď použití sdílených verzí knihovny MFC nebo staticky se propojit ke kopírování knihoven. Aplikace a knihovny DLL může používají jednu standardní verze knihovny MFC.
+Pokud knihovna DLL i aplikace chtějí používat knihovnu MFC, obě mají možnost použít sdílenou verzi knihoven knihovny Knihovny MFC nebo staticky propojit kopii knihoven. Aplikace i knihovna DLL mohou používat jednu ze standardních verzí knihovny knihovny MFC.
 
-regulární knihovny DLL MFC mají několik výhod:
+běžné knihovny DLL knihovny MFC mají několik výhod:
 
-- Aplikace, která používá knihovnu DLL není nutné použít knihovnu MFC a nemusí být aplikace v jazyce Visual C++.
+- Aplikace, která používá knihovnu DLL, nemusí používat knihovnu MFC a nemusí být aplikací visual c++.
 
-- Pomocí běžných knihovnách MFC DLL, která staticky propojené ke knihovně MFC velikost knihovny DLL závisí jenom na rutin modulu runtime MFC a C, které jsou používány a propojené.
+- U běžných knihoven DLL knihovny MFC, které staticky odkazují na knihovnu MFC, závisí velikost knihovny DLL pouze na rutinách za běhu knihovny MFC a C, které jsou používány a propojeny.
 
-- Pomocí běžných knihovnách MFC DLL, která dynamicky propojené ke knihovně MFC Úspora paměti narozdíl od použití sdílených verzí knihovny MFC můžou být významné. Ale musíte distribuovat sdílené knihovny DLL Mfc\<*verze*> .dll a Msvvcrt\<*verze*> DLL s vaší knihovou DLL.
+- U běžných knihoven DLL knihovny MFC, které dynamicky odkazují na knihovnu MFC, může být významné úspory paměti při použití sdílené verze knihovny MFC. Je však nutné distribuovat sdílené knihovny\<DLL,*verzi* knihovny MFC\<>.dll a*msvvcrt verze*>.dll, s knihovnou DLL.
 
-- Knihovna DLL je nezávisle na tom, jak jsou implementované třídy. Návrh knihovny DLL exportuje pouze do rozhraní API, které chcete. Proto pokud se změní implementaci běžných knihovnách MFC DLL jsou stále platné.
+- Návrh dll je nezávislý na tom, jak jsou implementovány třídy. Návrh dll exportuje pouze do rozhraní API, které chcete. V důsledku toho pokud se změní implementace, jsou stále platné běžné knihovny DLL knihovny MFC.
 
-- Pomocí běžných knihovnách MFC DLL, která staticky propojené ke knihovně MFC Pokud knihovna DLL a aplikace použít knihovnu MFC, nejsou žádné problémy s aplikací, která požaduje jinou verzi knihovny MFC DLL nebo naopak. Protože knihovny MFC je staticky propojené s každou knihovnu DLL nebo EXE, není žádný dotaz, jakou verzi máte.
+- U běžných knihoven DLL knihovny MFC, které staticky odkazují na knihovnu MFC, pokud knihovna MLL i aplikace používají knihovnu MFC, neexistují žádné problémy s aplikací, která chce jinou verzi knihovny MFC než knihovnu DLL nebo naopak. Vzhledem k tomu, že knihovna knihovny Knihovny MFC je staticky propojena do každé knihovny DLL nebo EXE, není pochyb o tom, kterou verzi máte.
 
 ## <a name="api-limitations"></a>Omezení rozhraní API
 
-Některé funkce knihovny MFC se nevztahují na verze knihovny DLL, buď z důvodu technická omezení nebo proto, že tyto služby jsou obvykle poskytovaný aplikací. Aktuální verze knihovny MFC, je pouze funkce, která se nedá použít `CWinApp::SetDialogBkColor`.
+Některé funkce knihovny MFC se nevztahuje na verzi knihovny DLL, z důvodu technických omezení nebo proto, že tyto služby jsou obvykle poskytovány aplikací. S aktuální verzí knihovny MFC je `CWinApp::SetDialogBkColor`jedinou funkcí, která není použitelná .
 
-## <a name="building-your-dll"></a>Building Your DLL
+## <a name="building-your-dll"></a>Vytváření dll
 
-Při kompilaci běžných knihovnách MFC DLL, která staticky propojené ke knihovně MFC, symboly `_USRDLL` a `_WINDLL` musí být definovaný. Váš kód knihovny DLL musí být zkompilovaná následující přepínače kompilátoru:
+Při kompilaci běžných knihovny DLL knihovny MFC, `_USRDLL` `_WINDLL` které staticky odkazují na knihovnu MFC, musí být definovány symboly a musí být definovány. Kód DLL musí být také zkompilován s následujícími přepínači kompilátoru:
 
-- **/ D_WINDLL** označuje, že se kompilace pro knihovny DLL
+- **/D_WINDLL** znamená kompilace je pro DLL
 
-- **/ D_USRDLL** určuje vytváříte běžné knihovny MFC DLL
+- **/D_USRDLL** určuje, že vytváříte pravidelnou knihovnu DLL knihovny MFC.
 
-Musíte také definovat tyto symboly a použijte tyto přepínače kompilátoru při kompilaci běžných knihovnách MFC DLL, která dynamicky propojené ke knihovně MFC. Kromě toho symbol `_AFXDLL` musí být definován a váš kód knihovny DLL musí být kompilována s:
+Musíte také definovat tyto symboly a používat tyto přepínače kompilátoru při kompilaci běžných knihovny DLL knihovny MFC, které dynamicky propojují knihovnu MFC. Kromě toho musí `_AFXDLL` být definován symbol a kód Knihovny DLL musí být kompilován pomocí:
 
-- **/ D_AFXDLL** Určuje, že vytváříte běžné knihovny MFC DLL dynamicky propojuje ke knihovně MFC
+- **/D_AFXDLL** určuje, že vytváříte pravidelnou knihovnu DLL knihovny MFC, která dynamicky odkazuje na knihovnu MFC.
 
-Rozhraní (API) mezi aplikace a knihovny DLL musí být explicitně exportován. Doporučujeme definovat vaše rozhraní být s malou šířkou pásma a používat pouze C rozhraní, pokud je to možné. Přímé rozhraní jazyka C jsou snadněji udržovat než složitější třídy jazyka C++.
+Rozhraní (API) mezi aplikací a knihovnou DLL musí být explicitně exportována. Doporučujeme definovat rozhraní s nízkou šířkou pásma a používat pouze rozhraní C, pokud je to možné. Rozhraní Direct C jsou snadněji udržovatelné než složitější třídy Jazyka C++.
 
-Umístěte svoje rozhraní API v samostatné záhlaví, který může obsahovat soubory C a C++. Zobrazit záhlaví ScreenCap.h v ukázce MFC Advanced Concepts [DLLScreenCap](../overview/visual-cpp-samples.md) příklad. Pokud chcete exportovat funkce, zadejte je `EXPORTS` části souboru definice modulu (. DEF) nebo zahrnout `__declspec(dllexport)` na vaše definice funkce. Použití `__declspec(dllimport)` naimportujte tyto funkce klientský spustitelný soubor.
+Umístěte vaše API do samostatné hlavičky, která může být zahrnuta do souborů C i C++. Viz záhlaví ScreenCap.h v mfc rozšířené koncepty ukázky [DLLScreenCap](../overview/visual-cpp-samples.md) pro příklad. Chcete-li své funkce exportovat, zadejte je do `EXPORTS` části definičního souboru modulu (. DEF) nebo `__declspec(dllexport)` zahrnout do definice funkcí. Slouží `__declspec(dllimport)` k importu těchto funkcí do spustitelného souboru klienta.
 
-Na začátku exportované funkce v běžných knihovnách MFC DLL, která dynamicky propojené ke knihovně MFC, je nutné přidat makro AFX_MANAGE_STATE. Toto makro nastaví aktuální stav modulu pro knihovnu DLL. Pokud chcete použít toto makro, přidejte následující řádek kódu na začátek funkcí exportovaných z knihovny DLL:
+Makro AFX_MANAGE_STATE je nutné přidat na začátek všech exportovaných funkcí v běžných knihovnách DLL knihovny MFC, které dynamicky propojují knihovnu MFC. Toto makro nastaví aktuální stav modulu na stav pro dll. Chcete-li použít toto makro, přidejte na začátek funkcí exportovaných z dll následující řádek kódu:
 
 `AFX_MANAGE_STATE(AfxGetStaticModuleState( ))`
 
 ## <a name="winmain---dllmain"></a>WinMain -> DllMain
 
-Knihovna MFC definuje standardním Win32 `DllMain` vstupní bod, který inicializuje vaše [CWinApp](../mfc/reference/cwinapp-class.md) odvozenému objektu jako v typické aplikaci knihovny MFC. Umístěte všechny inicializace knihovnu DLL v [InitInstance](../mfc/reference/cwinapp-class.md#initinstance) metody jako v typické aplikaci knihovny MFC.
+Knihovna knihovny MFC definuje `DllMain` standardní vstupní bod Win32, který inicializuje odvozený objekt [CWinApp](../mfc/reference/cwinapp-class.md) jako v typické aplikaci knihovny MFC. Umístěte všechny inicializace specifické pro knihovnu DLL v [initinstance](../mfc/reference/cwinapp-class.md#initinstance) metoda jako v typické aplikace knihovny MFC.
 
-Všimněte si, že [CWinApp::Run](../mfc/reference/cwinapp-class.md#run) mechanismus se nevztahuje na knihovnu DLL, protože aplikace vlastní hlavní pumpu zpráv. Pokud vaše knihovna DLL zobrazí nemodální dialogová okna, nebo má vlastní okna hlavního rámce, pumpa zpráv vaší aplikace musí volat rutinu Export knihovny DLL, která volá [CWinApp::PreTranslateMessage](../mfc/reference/cwinapp-class.md#pretranslatemessage).
+Všimněte si, že [Mechanismus CWinApp::Run](../mfc/reference/cwinapp-class.md#run) se nevztahuje na dll, protože aplikace vlastní hlavní zprávy čerpadlo. Pokud vaše dll zobrazí moderování nebo má vlastní okno hlavního rámce, hlavní zprávy čerpadla aplikace musí volat DLL exportované rutiny, která volá [CWinApp::PreTranslateMessage](../mfc/reference/cwinapp-class.md#pretranslatemessage).
 
-Najdete v ukázce DLLScreenCap pro použití této funkce.
+Viz ukázka DLLScreenCap pro použití této funkce.
 
-`DllMain` Funkce, která knihovna MFC poskytuje, zavolá [CWinApp::ExitInstance](../mfc/reference/cwinapp-class.md#exitinstance) metoda, která je odvozena z třídy `CWinApp` před uvolněním knihovny DLL.
+Funkce, kterou knihovna `DllMain` MFC poskytuje, bude volat metodu [CWinApp::ExitInstance](../mfc/reference/cwinapp-class.md#exitinstance) vaší třídy, která je odvozena před `CWinApp` uvolněním knihovny DLL.
 
-## <a name="linking-your-dll"></a>Propojování vaší knihovny DLL
+## <a name="linking-your-dll"></a>Propojení dll
 
-Pomocí běžných knihovnách MFC DLL, která staticky propojené ke knihovně MFC je třeba propojit vaši knihovnu DLL Nafxcwd.lib nebo Nafxcw.lib a s verzí modulů runtime jazyka C s názvem Libcmt.lib. Tyto knihovny jsou předem připravená a mohou být nainstalovány službou je zadáte, když spustíte instalační program Visual C++.
+U běžných knihoven DLL knihovny MFC, které staticky odkazují na knihovnu MFC, je nutné propojit knihovnu DLL s knihovnou Nafxcwd.lib nebo Nafxcw.lib a s verzí runčase C s názvem Libcmt.lib. Tyto knihovny jsou předem sestavené a mohou být nainstalovány jejich zadáním při spuštění nastavení visual c++.
 
-## <a name="sample-code"></a>Vzorový kód
+## <a name="sample-code"></a>Příklad kódu
 
-Najdete v ukázce MFC Advanced Concepts programu DLLScreenCap úplnou ukázku. Několik zajímavých věcí, Všimněte si v této ukázce jsou následující:
+Kompletní ukázku najdete v ukázkovém programu Knihovny MFC Advanced Concepts DLLScreenCap. Několik zajímavých věcí, které je třeba poznamenat v této ukázce, jsou následující:
 
-- Příznaky kompilátoru knihovny DLL a těch, které aplikace se liší.
+- Příznaky kompilátoru dll a ty aplikace se liší.
 
-- Odkaz řádky a. DEF soubory pro knihovnu DLL a pro aplikace se liší.
+- Řádky propojení a . DEF soubory pro DLL a ty pro aplikaci se liší.
 
-- Aplikace, která používá knihovnu DLL nemusí být v jazyce C++.
+- Aplikace, která používá dll nemusí být v jazyce C++.
 
-- Rozhraní mezi aplikací a knihovna DLL je rozhraní API, který je použitelný pro C nebo C++ a se exportuje s DLLScreenCap.def.
+- Rozhraní mezi aplikací a knihovnou DLL je rozhraní API, které je použitelné pomocí jazyka C nebo C++ a je exportováno pomocí souboru DLLScreenCap.def.
 
-Následující příklad ukazuje rozhraní API, která je definována v běžné knihovny MFC DLL, která staticky propojuje ke knihovně MFC. V tomto příkladu je ohraničen prohlášení `extern "C" { }` bloku pro uživatele jazyka C++. To má několik výhod. Nejprve je vaše rozhraní API knihovny DLL použitelné než C++ klientskými aplikacemi. Za druhé snižuje režijní náklady na knihovnu DLL protože pozměnění názvu C++ se nepoužije pro exportovaný název. A konečně, usnadňuje chcete explicitně přidat do. DEF souboru (pro export podle pořadových čísel) bez nutnosti starat o pozměnění názvu.
+Následující příklad ilustruje rozhraní API, které je definováno v běžné knihovně DLL knihovny MFC, která staticky odkazuje na knihovnu MFC. V tomto příkladu je deklarace `extern "C" { }` uzavřena v bloku pro uživatele jazyka C++. To má několik výhod. Nejprve umožňuje vaše DLL API použitelné klientskými aplikacemi bez c++. Za druhé snižuje režii dll, protože c++ název mangling nebude použita na exportovaný název. Nakonec usnadňuje explicitní přidání do . DEF (pro export podle řadového zařízení), aniž byste se museli starat o mangling.
 
-```
+```cpp
 #ifdef __cplusplus
 extern "C" {
 #endif  /* __cplusplus */
@@ -107,9 +107,9 @@ BOOL PromptTraceFlags(TracerData FAR* lpData);
 #endif
 ```
 
-Struktury využívané prostředím rozhraní API nejsou odvozeny od třídy knihovny MFC a jsou definovaná v záhlaví rozhraní API. Tím se sníží složitost rozhraní mezi knihovny DLL a aplikací a znamená použitelné knihovny DLL pomocí programů jazyka C.
+Struktury používané rozhraním API nejsou odvozeny z tříd knihovny MFC a jsou definovány v hlavičce rozhraní API. To snižuje složitost rozhraní mezi knihovnou DLL a aplikací a umožňuje, aby knihovna DLL byla použitelná programy C.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Technické poznámky podle čísel](../mfc/technical-notes-by-number.md)<br/>
 [Technické poznámky podle kategorií](../mfc/technical-notes-by-category.md)

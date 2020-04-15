@@ -8,45 +8,45 @@ helpviewer_keywords:
 - serialization [MFC], MFC
 - serialization [MFC], bypassing
 ms.assetid: fb596a18-4522-47e0-96e0-192732d24c12
-ms.openlocfilehash: 5c7dec140635b6d83bdae936d1bb0cef144f825b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eca4d0357977bc7ef21063718c738ae5bd8e7431
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62308209"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372753"
 ---
 # <a name="serialization-in-mfc"></a>Serializace v prostředí MFC
 
-Tento článek vysvětluje mechanizmus serializace, který v třídy knihovny MFC (Microsoft Foundation) umožňující objektů zachována i mezi spuštěními vaší aplikace.
+Tento článek vysvětluje mechanismus serializace k dispozici v Knihovně tříd Microsoft Foundation (MFC) povolit objekty zachovat mezi spuštění programu.
 
-Serializace je proces zápisu nebo čtení objektu do nebo z trvalého úložiště média, jako je soubor na disku. Serializace je ideální pro situace, kde je požadován pro uchování stavu strukturovaných dat (třeba C++ třídy nebo struktury) během nebo po spuštění programu. Serializace objektů poskytovaných knihovnou MFC umožňuje to je však standardní a konzistentním způsobem, homogenního uživatele nutnosti provádět operace se soubory ručně.
+Serializace je proces zápisu nebo čtení objektu do nebo z trvalého paměťového média, jako je například soubor na disku. Serializace je ideální pro situace, kdy je žádoucí zachovat stav strukturovaných dat (například třídy nebo struktury jazyka C++) během nebo po spuštění programu. Použití serializačních objektů poskytovaných knihovnou MFC umožňuje, aby k tomu došlo standardním a konzistentním způsobem, což uživatele zbavuje nutnosti provádět operace se soubory ručně.
 
-Knihovna MFC poskytuje integrovanou podporu pro serializaci ve třídě `CObject`. Proto všechny třídy odvozené z `CObject` můžou těžit z výhod `CObject`na protokol serializace.
+Knihovna MFC poskytuje integrovanou podporu pro `CObject`serializaci ve třídě . Všechny třídy odvozené `CObject` z proto `CObject`můžete využít 's serializační protokol.
 
-Základní myšlenka serializace je, že objekt by měl být schopni napsat jejím aktuálním stavu, obvykle indikován hodnoty jeho členů proměnných do trvalého úložiště. Později objekt můžete znovu vytvořit čtením nebo rekonstrukcí stavu objektu z úložiště. Serializace zpracovává všechny podrobnosti o objektu ukazatele a cyklické odkazy na objekty, které se použijí při serializaci objektu. Zásadním aspektem je, že objekt samotný zodpovídá za čtení a zápis svůj stav. Proto pro, aby byla třída serializovatelný, musí implementovat operace základní serializace. Jak je uvedeno ve skupině serializace články, je snadné přidat tuto funkci na třídu.
+Základní myšlenkou serializace je, že objekt by měl být schopen zapsat svůj aktuální stav, obvykle označený hodnotou jeho členských proměnných, do trvalého úložiště. Později objekt může být znovu vytvořen čtením nebo rekonstrukcí stavu objektu z úložiště. Serializace zpracovává všechny podrobnosti ukazatelů objektu a cyklické odkazy na objekty, které se používají při serializaci objektu. Klíčovým bodem je, že samotný objekt je zodpovědný za čtení a zápis vlastního stavu. Proto pro třídu serializovat, musí implementovat základní serializace operace. Jak je znázorněno ve skupině serializace článků, je snadné přidat tuto funkci do třídy.
 
-Knihovna MFC používá objekt `CArchive` třídu jako prostředník mezi objekt, který má být serializován a paměťovému médiu. Tento objekt je vždy přidruženo `CFile` objekt, který získá informace potřebné pro serializaci, včetně názvu souboru a určuje, zda požadovaná operace je pro čtení nebo zápisu. Můžete použít objekt, který provádí operace serializace `CArchive` objektu bez ohledu na druh paměťovému médiu.
+Knihovna MFC používá `CArchive` objekt třídy jako prostředníkmezi objektserializovat a paměťové médium. Tento objekt je vždy `CFile` přidružen k objektu, ze kterého získá potřebné informace pro serializaci, včetně názvu souboru a zda je požadovaná operace čtení nebo zápis. Objekt, který provádí operaci serializace `CArchive` můžete použít objekt bez ohledu na povahu paměťového média.
 
-A `CArchive` objekt používá přetížené vložení (**<\<**) a extrakce (**>>**) operátoři mohli provést zápis a čtení operací. Další informace najdete v tématu [ukládání a načítání objektů CObject prostřednictvím archivu](../mfc/storing-and-loading-cobjects-via-an-archive.md) v článku serializace: Serializace objektu.
+Objekt `CArchive` používá přetížené vkládání**<**( )**>>** a extrakce ( ) operátory provádět operace zápisu a čtení. Další informace naleznete [v tématu Ukládání a načítání cobjects prostřednictvím archivu](../mfc/storing-and-loading-cobjects-via-an-archive.md) v článku Serializace: Serializace objektu.
 
 > [!NOTE]
->  Nepleťte si `CArchive` třída s atributem pro obecné účely iostream – třídy, které jsou pro formátovaný pouze text. `CArchive` Je třída Serializované objekty binární formát.
+> Nezaměňujte `CArchive` třídu s třídou iostream pro obecné účely, které jsou pouze pro formátovaný text. Třída `CArchive` je pro binární formát serializované objekty.
 
-Pokud chcete, můžete obejít MFC serializace za účelem vytvoření vlastní mechanismus pro ukládání trvalých dat. Je potřeba přepsat členské funkce třídy, které se zahájí serializace příkazového uživatele. Viz diskuze v [Technická poznámka 22](../mfc/tn022-standard-commands-implementation.md) id_file_open – id_file_save – a id_file_save_as – standardní příkazy.
+Pokud chcete, můžete obejít serializaci knihovny MFC a vytvořit vlastní mechanismus pro trvalé ukládání dat. Budete muset přepsat členské funkce třídy, které iniciují serializaci na příkaz uživatele. Podívejte se na diskusi v [technické poznámce 22](../mfc/tn022-standard-commands-implementation.md) standardních příkazů ID_FILE_OPEN, ID_FILE_SAVE a ID_FILE_SAVE_AS.
 
-V následujících článcích zahrnují dva hlavní úkoly vyžadované pro serializaci:
+Následující články pokrývají dva hlavní úkoly potřebné pro serializaci:
 
 - [Serializace: Příprava serializovatelné třídy](../mfc/serialization-making-a-serializable-class.md)
 
 - [Serializace: Serializace objektu](../mfc/serialization-serializing-an-object.md)
 
-Tento článek [serializace: Serializace vs. Databáze vstupní a výstupní](../mfc/serialization-serialization-vs-database-input-output.md) popisuje po serializace je příslušný postup vstupní a výstupní v databázových aplikacích.
+Článek [Serializace: Serializace vs. Vstup a výstup databáze](../mfc/serialization-serialization-vs-database-input-output.md) popisuje, kdy je serializace vhodnou vstupní a výstupní technikou v databázových aplikacích.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Koncepty](../mfc/mfc-concepts.md)<br/>
 [Obecná témata MFC](../mfc/general-mfc-topics.md)<br/>
-[CArchive – třída](../mfc/reference/carchive-class.md)<br/>
+[Třída CArchiv](../mfc/reference/carchive-class.md)<br/>
 [CObject – třída](../mfc/reference/cobject-class.md)<br/>
 [CDocument – třída](../mfc/reference/cdocument-class.md)<br/>
 [CFile – třída](../mfc/reference/cfile-class.md)

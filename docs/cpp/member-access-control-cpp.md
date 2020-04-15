@@ -6,16 +6,16 @@ helpviewer_keywords:
 - member access [C++]
 - member-access control [C++]
 ms.assetid: 2d596bca-56ad-4277-94e1-ce3db45fa14a
-ms.openlocfilehash: 367ee5183498453b9ce647c8e91ad1194f90fbd2
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: e8f62e82ebb7fcc18be5ac7d203df0fb46c9b635
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345031"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81369863"
 ---
 # <a name="member-access-control-c"></a>řízení přístupu ke členu (C++)
 
-Řízení přístupu vám umožňují oddělit [veřejné](../cpp/public-cpp.md) rozhraní třídy z [privátní](../cpp/private-cpp.md) podrobnosti implementace a [chráněné](../cpp/protected-cpp.md) členy, které jsou určeny pouze pro použití podle odvozené třídy. Specifikátor přístupu se vztahuje na všechny členy deklarované za ním až do dalšího specifikátoru přístupu.
+Ovládací prvky přístupu umožňují oddělit [veřejné](../cpp/public-cpp.md) rozhraní třídy od podrobností [soukromé](../cpp/private-cpp.md) implementace a [chráněných](../cpp/protected-cpp.md) členů, které jsou určeny pouze pro použití odvozenými třídami. Specifikátor přístupu se vztahuje na všechny členy deklarované po něm, dokud nebude zjištěn další specifikátor přístupu.
 
 ```cpp
 class Point
@@ -35,40 +35,40 @@ protected:      // Declare protected function for derived classes only.
 };
 ```
 
-Přístup k výchozím **privátní** ve třídě, a **veřejné** v struktura nebo sjednocení. Specifikátory přístupu ve třídě může být libovolný počet pokusů o použít v libovolném pořadí. Přidělení úložiště pro objekty typů třídy je závislé na implementaci, ale je zaručeno, že členům budou přiřazeny postupné vyšší adresy paměti mezi specifikátory přístupu.
+Výchozí přístup je **soukromý** ve třídě a **veřejný** ve struktuře nebo sjednocení. Specifikátory přístupu ve třídě lze použít libovolný počet opakování v libovolném pořadí. Přidělení úložiště pro objekty typů třídy je závislé na implementaci, ale je zaručeno, že členům budou přiřazeny postupné vyšší adresy paměti mezi specifikátory přístupu.
 
 ## <a name="member-access-control"></a>Ovládací prvek přístupu členů
 
 |Typ přístupu|Význam|
 |--------------------|-------------|
-|[private](../cpp/private-cpp.md)|Členy třídy deklarované jako **privátní** mohou být používány pouze členskými funkcemi a přáteli třídy (třídy nebo funkce).|
-|[protected](../cpp/protected-cpp.md)|Členy třídy deklarované jako **chráněné** lze použít členskými funkcemi a přáteli třídy (třídy nebo funkce). Navíc je možné je použít třídami odvozenými z třídy.|
-|[public](../cpp/public-cpp.md)|Členy třídy deklarované jako **veřejné** lze použít v jakékoli funkci.|
+|[private](../cpp/private-cpp.md)|Členy třídy deklarované jako **soukromé** mohou používat pouze členské funkce a přátelé (třídy nebo funkce) třídy.|
+|[protected](../cpp/protected-cpp.md)|Členy třídy deklarované jako **chráněné** mohou být použity členské funkce a přátelé (třídy nebo funkce) třídy. Navíc je možné je použít třídami odvozenými z třídy.|
+|[public](../cpp/public-cpp.md)|Členy třídy deklarované jako **veřejné** mohou být použity libovolnou funkcí.|
 
 Řízení přístupu pomůže zabránit používání objektů způsoby, které nebyly k použití určeny. Tato ochrana je ztracena při provedení explicitních převodů typu (přetypování).
 
 > [!NOTE]
->  Řízení přístupu se vztahuje rovněž na všechny názvy: členské funkce, data členů, vnořené třídy a enumerátory.
+> Řízení přístupu se vztahuje rovněž na všechny názvy: členské funkce, data členů, vnořené třídy a enumerátory.
 
 ## <a name="access-control-in-derived-classes"></a>Řízení přístupu v odvozených třídách
 
-Ovládací prvek dva faktory, které členy základní třídy jsou k dispozici v odvozené třídě; stejných faktorů řízení přístupu k zděděné členy v odvozené třídě:
+Dva faktory řídí, které členy základní třídy jsou přístupné v odvozené třídě; tyto stejné faktory řídí přístup k zděděné členy v odvozené třídě:
 
-- Určuje, zda odvozená třída deklaruje pomocí základní třídy **veřejné** specifikátor přístupu.
+- Určuje, zda odvozená třída deklaruje základní třídu pomocí specifikátoru **veřejného** přístupu.
 
-- Přístup ke členu Novinky v základní třídě.
+- Jaký přístup k členu je v základní třídě.
 
-Následující tabulka ukazuje interakci mezi tyto faktory a jak určit přístup ke členům základní třídy.
+V následující tabulce je uvedena interakce mezi těmito faktory a způsob určení přístupu členů základní třídy.
 
-### <a name="member-access-in-base-class"></a>Přístup ke členům v základní třídě.
+### <a name="member-access-in-base-class"></a>Přístup členů v základní třídě
 
 |private|protected|Public|
 |-------------|---------------|------------|
-|Vždy nedostupné bez ohledu na to odvozením přístup|V odvozené třídě, pokud používáte privátní odvození privátní|V odvozené třídě, pokud používáte privátní odvození privátní|
-||Pokud používáte chráněné odvození chráněné v odvozené třídě|Pokud používáte chráněné odvození chráněné v odvozené třídě|
-||Pokud používáte veřejné odvození chráněné v odvozené třídě|Veřejné v odvozené třídě, pokud používáte veřejné odvození|
+|Vždy nepřístupné bez ohledu na přístup k odvození|Soukromé v odvozené třídě, pokud používáte soukromé odvození|Soukromé v odvozené třídě, pokud používáte soukromé odvození|
+||Chráněno v odvozené třídě, pokud používáte chráněnou odvození|Chráněno v odvozené třídě, pokud používáte chráněnou odvození|
+||Chráněno v odvozené třídě, pokud používáte public derivation|Veřejné v odvozené třídě, pokud používáte public derivation|
 
-Následující příklad ukazuje toto:
+Ilustruje to následující příklad:
 
 ```cpp
 // access_specifiers_for_base_classes.cpp
@@ -112,18 +112,18 @@ int main()
 }
 ```
 
-V `DerivedClass1`, členské funkce `PublicFunc` je členem veřejné a `ProtectedFunc` je chráněný člen, protože `BaseClass` se o veřejnou základní třídu. `PrivateFunc` soukromý `BaseClass`, a je nepřístupný pro jakékoli odvozené třídy.
+V `DerivedClass1`aplikaci `PublicFunc` je členská `ProtectedFunc` funkce veřejným členem `BaseClass` a je chráněným členem, protože je třídou veřejné základní. `PrivateFunc`je privátní pro `BaseClass`, a je nepřístupný pro všechny odvozené třídy.
 
-V `DerivedClass2`, funkce `PublicFunc` a `ProtectedFunc` jsou považovány za soukromé členy, protože `BaseClass` je soukromé základní třídy. Opět `PrivateFunc` soukromý `BaseClass`, a je nepřístupný pro jakékoli odvozené třídy.
+V `DerivedClass2`aplikaci `PublicFunc` `ProtectedFunc` funkce a jsou `BaseClass` považovány za soukromé členy, protože je soukromé základní třídy. Opět `PrivateFunc` je privátní a `BaseClass`je nepřístupný pro všechny odvozené třídy.
 
-Je možné deklarovat odvozené třídy bez specifikátoru základní třídy přístup. V takovém případě odvozování považována za soukromou, pokud používá deklaraci odvozené třídy **třídy** – klíčové slovo. Odvození se považuje za veřejné, pokud odvozené třídy prohlášení, použije **struktura** – klíčové slovo. Například následující kód:
+Odvozenou třídu můžete deklarovat bez specifikátoru přístupu základní třídy. V takovém případě je odvození považováno za soukromé, pokud deklarace odvozené třídy používá klíčové slovo **třídy.** Odvození je považováno za veřejné, pokud deklarace odvozené třídy používá klíčové slovo **strukturní.** Například následující kód:
 
 ```cpp
 class Derived : Base
 ...
 ```
 
-je ekvivalentní:
+odpovídá:
 
 ```cpp
 class Derived : private Base
@@ -137,23 +137,23 @@ struct Derived : Base
 ...
 ```
 
-je ekvivalentní:
+odpovídá:
 
 ```cpp
 struct Derived : public Base
 ...
 ```
 
-Všimněte si, že nejsou dostupné na funkce členy deklarované jako soukromý přístup nebo pokud těchto funkcí nebo tříd jsou deklarovány pomocí odvozené třídy **friend** deklarace v základní třídě.
+Všimněte si, že členové deklarované jako soukromé přístup nejsou přístupné funkce nebo odvozené třídy, pokud tyto funkce nebo třídy jsou deklarovány pomocí **deklarace friend** v základní třídě.
 
-A **sjednocení** typ nemůže mít základní třídu.
+Typ **sjednocení** nemůže mít základní třídu.
 
 > [!NOTE]
->  Při zadávání soukromé základní třídy, je vhodné explicitně použít **privátní** – klíčové slovo to uživatelé odvozené třídy pochopit přístup ke členu.
+> Při zadávání soukromé základní třídy je vhodné explicitně použít klíčové slovo **private,** aby uživatelé odvozené třídy pochopili přístup člena.
 
 ## <a name="access-control-and-static-members"></a>Řízení přístupu a statické členy
 
-Pokud zadáte základní třídu jako **privátní**, ovlivní to pouze nestatické členy. Veřejné statické členy jsou v odvozených třídách stále přístupné. Avšak přístup ke členům základní třídy pomocí ukazatelů, odkazů nebo objektů může vyžadovat převod, kdy se znovu uplatní časové řízení přístupu. Vezměte v úvahu v následujícím příkladu:
+Zadáte-li základní třídu jako **soukromou**, ovlivní pouze nestatické členy. Veřejné statické členy jsou v odvozených třídách stále přístupné. Avšak přístup ke členům základní třídy pomocí ukazatelů, odkazů nebo objektů může vyžadovat převod, kdy se znovu uplatní časové řízení přístupu. Uvažujte následující příklad:
 
 ```cpp
 // access_control.cpp
@@ -187,7 +187,7 @@ int Derived2::ShowCount()
 }
 ```
 
-V předchozím kódu řízení přístupu zakazuje převod z ukazatele na typ `Derived2` na ukazatele na typ `Base`. **To** ukazatel je implicitně typu `Derived2 *`. Chcete-li vybrat `CountOf` funkci **to** musí být převeden na typ `Base *`. Takový převod není povolen, protože typ `Base` je privátní nepřímá základní třída typu `Derived2`. Převod na typ soukromé základní třídy je přijatelný pouze pro ukazatele na přímé odvozené třídy. Proto lze ukazatele typu `Derived1 *` převést na typ `Base *`.
+V předchozím kódu řízení přístupu zakazuje převod z ukazatele na typ `Derived2` na ukazatele na typ `Base`. Tento **this** ukazatel je implicitně `Derived2 *`typu . Chcete-li `CountOf` vybrat **funkci,** musí být `Base *`převedena na typ . Takový převod není povolen, protože typ `Base` je privátní nepřímá základní třída typu `Derived2`. Převod na typ soukromé základní třídy je přijatelný pouze pro ukazatele na přímé odvozené třídy. Proto lze ukazatele typu `Derived1 *` převést na typ `Base *`.
 
 Explicitní volání funkce `CountOf` bez použití ukazatele, odkazu nebo objektu neprovede žádný převod. Proto je toto volání povoleno.
 
@@ -195,7 +195,7 @@ Explicitní volání funkce `CountOf` bez použití ukazatele, odkazu nebo objek
 
 ## <a name="access-to-virtual-functions"></a>Přístup k virtuálním funkcím
 
-Řízení přístupu uplatňované pro [virtuální](../cpp/virtual-cpp.md) funkce je určeno typem použitým k volání funkce. Přepisovací deklarace funkce neovlivňují řízení přístupu pro daný typ. Příklad:
+Řízení přístupu použité na [virtuální](../cpp/virtual-cpp.md) funkce je určeno typem použitým k volání funkce. Přepisovací deklarace funkce neovlivňují řízení přístupu pro daný typ. Příklad:
 
 ```cpp
 // access_to_virtual_functions.cpp
@@ -228,17 +228,17 @@ int main()
 V předchozím příkladu volání virtuální funkce `GetState` pomocí ukazatele na typ `VFuncBase` volá funkci `VFuncDerived::GetState` a funkce `GetState` je považována za veřejnou. Volání funkce `GetState` pomocí ukazatele na typ `VFuncDerived` je však narušením řízení přístupu, protože funkce `GetState` je ve třídě `VFuncDerived` deklarována jako soukromá.
 
 > [!CAUTION]
->  Virtuální funkci `GetState` lze zavolat pomocí ukazatele na základní třídu `VFuncBase`. To neznamená, že volaná funkce je verzí této funkce obsaženou v základní třídě.
+> Virtuální funkci `GetState` lze zavolat pomocí ukazatele na základní třídu `VFuncBase`. To neznamená, že volaná funkce je verzí této funkce obsaženou v základní třídě.
 
-## <a name="access-control-with-multiple-inheritance"></a>Řízení přístupu pomocí vícenásobná dědičnost
+## <a name="access-control-with-multiple-inheritance"></a>Řízení přístupu s více násobnou dědičností
 
 Ve svazech vícenásobné dědičnosti zahrnujících virtuální základní třídy lze konkrétního názvu dosáhnout více cestami. Protože v případě těchto různých cest mohou platit různá řízení přístupu, volí kompilátor volí, která poskytuje nejvíce přístupu. Prohlédněte si následující obrázek.
 
-![Přístup podél cest grafu dědičnosti](../cpp/media/vc38v91.gif "přístup podél cest grafu dědičnosti") <br/>
+![Přístup podél cest grafu dědičnosti](../cpp/media/vc38v91.gif "Přístup podél cest grafu dědičnosti") <br/>
 Přístup podél cest grafu dědičnosti
 
 Na obrázku je název deklarovaný ve třídě `VBase` vždy dosažen prostřednictvím třídy `RightPath`. Pravá cesta je přístupnější, protože třída `RightPath` deklaruje třídu `VBase` jako veřejnou základní, zatímco třída `LeftPath` deklaruje třídu `VBase` jako soukromou.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Referenční dokumentace jazyka C++](../cpp/cpp-language-reference.md)
+[Referenční příručka jazyka C++](../cpp/cpp-language-reference.md)

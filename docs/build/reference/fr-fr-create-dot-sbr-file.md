@@ -13,12 +13,12 @@ helpviewer_keywords:
 - FR compiler option [C++]
 - symbolic browser information
 ms.assetid: 3fd8f88b-3924-4feb-9393-287036a28896
-ms.openlocfilehash: 73642baba77a62cac531ae7b2842ec9953b338ec
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 58f55811f5d2bb81bc77da38a87c35bae91ce6cb
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62292793"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81320522"
 ---
 # <a name="fr-fr-create-sbr-file"></a>/FR, /Fr (Vytvořit soubor .Sbr)
 
@@ -34,34 +34,34 @@ Vytvoří soubory .sbr.
 ## <a name="remarks"></a>Poznámky
 
 > [!WARNING]
-> Přestože BSCMAKE je stále instalace sady Visual Studio, se už používá integrovaným vývojovým prostředím. Od verze Visual Studio 2008 je automaticky uloženy informace o procházení a symbol v soubor SDF SQL serveru ve složce řešení.
+> Přestože BSCMAKE je stále nainstalován s Visual Studio, je již používán ide. Od aplikace Visual Studio 2008 jsou informace o procházení a symbolech automaticky uloženy v souboru SQL Server .sdf ve složce řešení.
 
-Během procesu sestavení, nástroje Microsoft procházet informace souboru údržby Utility (BSCMAKE) používá k vytvoření těchto souborů. Soubor BSC, který se používá k zobrazení informací o procházení.
+Během procesu sestavení nástroj BSCMAKE (Microsoft Browse Information File Maintenance Utility) používá tyto soubory k vytvoření . BSC soubor, který se používá k zobrazení informací o procházení.
 
-**/FR** vytvoří soubor .sbr s úplné symbolické informace.
+**/FR** vytvoří soubor .sbr s úplnými symbolickými informacemi.
 
-**/FR** vytvoří soubor .sbr bez informací o lokálních proměnných.
+**/Fr** vytvoří soubor .sbr bez informací o místních proměnných.
 
-Pokud nezadáte `filename`, soubor .sbr získá stejný základní název zdrojového souboru.
+Pokud nezadáte `filename`, soubor .sbr získá stejný základní název jako zdrojový soubor.
 
-**/FR** je zastaralá; použijte **/FR** místo. Další informace najdete v tématu zastaralé a odebrat možnosti kompilátoru v [možnosti kompilátoru seřazené podle kategorie](compiler-options-listed-by-category.md).
+**/Fr** je zastaralé; místo toho použijte **/FR.** Další informace naleznete v tématu Zastaralé a odebrané možnosti kompilátoru v [možnostech kompilátoru uvedených podle kategorie](compiler-options-listed-by-category.md).
 
 > [!NOTE]
->  Neměňte .sbr rozšíření. BscMake – vyžaduje zprostředkující soubory, které chcete mít tuto příponu.
+> Neměňte rozšíření .sbr. BSCMAKE vyžaduje, aby zprostředkující soubory měly tuto příponu.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
 
-1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
+1. Otevřete dialogové okno **Stránky vlastností** projektu. Podrobnosti naleznete v [tématu Nastavení kompilátoru jazyka C++ a vlastnosti sestavení v sadě Visual Studio](../working-with-project-properties.md).
 
-1. V navigačním podokně, vyberte **C/C++**, **informace o procházení** stránku vlastností.
+1. V navigačním podokně zvolte stránku vlastností **C/C++**, **Procházet informace.**
 
-1. Upravit **soubor s informacemi o procházení** nebo **povolit informace o procházení** vlastnost.
+1. Upravte vlastnost **Procházet informační soubor** nebo **Povolit informace o procházení.**
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru
 
-- Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.BrowseInformation%2A> a <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.BrowseInformationFile%2A>.
+- Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.BrowseInformation%2A> <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.BrowseInformationFile%2A>a .
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Možnosti výstupního souboru (/F)](output-file-f-options.md)<br/>
 [Parametry kompilátoru MSVC](compiler-options.md)<br/>

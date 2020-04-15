@@ -1,138 +1,138 @@
 ---
-title: 'Referenční dokumentace: zobrazení Windows Performance Analyzer'
-description: Referenční informace C++ o zobrazeních přehledů sestavení dostupných v analyzátoru výkonu Windows
+title: 'Reference: Zobrazení nástroje Windows Performance Analyzer'
+description: Odkaz na zobrazení přehledů sestavení c++ dostupných v nástroji Windows Performance Analyzer.
 ms.date: 11/03/2019
 helpviewer_keywords:
 - C++ Build Insights
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: eb3e20ed3ca4231b10efaf36310f6fbc0f5980bf
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: b54b1b76d83b77ec7b8d8d3309d81ed9eb2db2d0
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78332234"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81323239"
 ---
-# <a name="reference-windows-performance-analyzer-views"></a>Referenční dokumentace: zobrazení Windows Performance Analyzer
+# <a name="reference-windows-performance-analyzer-views"></a>Reference: Zobrazení nástroje Windows Performance Analyzer
 
 ::: moniker range="<=vs-2017"
 
-Nástroje C++ pro tvorbu sestav jsou k dispozici v aplikaci Visual Studio 2019. Chcete-li zobrazit dokumentaci k této verzi, nastavte ovládací prvek selektor verzí sady Visual Studio pro tento článek na sadu Visual Studio 2019.
+Nástroje Přehledy sestavení C++ jsou dostupné ve Visual Studiu 2019. Chcete-li zobrazit dokumentaci pro tuto verzi, nastavte ovládací prvek pro výběr **verze** sady Visual Studio pro tento článek na Visual Studio 2019. Nachází se v horní části obsahu na této stránce.
 
 ::: moniker-end
 ::: moniker range="vs-2019"
 
-Tento článek poskytuje podrobné informace o všech zobrazeních přehledů C++ sestavení dostupných v nástroji Windows Performance Analyzer (WPA). Pomocí této stránky můžete najít:
+Tento článek obsahuje podrobnosti o každém zobrazení sestavení c++ sestavení k dispozici v nástroji Windows Performance Analyzer (WPA). Na této stránce můžete najít:
 
-- Popis sloupce dat; ani
-- dostupná přednastavení pro každé zobrazení, včetně zamýšleného použití a preferovaného režimu zobrazení.
+- popisy datových sloupců; A
+- přednastavení pro každé zobrazení, včetně jejich zamýšleného použití a preferovaného režimu zobrazení.
 
-Pokud s protokolem WPA začínáte, doporučujeme si nejprve seznámit se [základy WPA pro C++ Build Insights](/cpp/build-insights/tutorials/wpa-basics).
+Pokud s WPA teprve začínáte, doporučujeme, abyste se nejprve seznámili se [základy WPA pro C++ Přehledy sestavení](/cpp/build-insights/tutorials/wpa-basics).
 
 ## <a name="build-explorer"></a>Průzkumník sestavení
 
-Zobrazení Průzkumníka sestavení se používá pro:
+Zobrazení Průzkumník sestavení se používá k:
 
-- Diagnostikujte problémy paralelismus,
-- Určete, zda je čas sestavení ovládán analýzou, generováním kódu nebo propojením a
-- Identifikujte kritické body a neobvykle dlouhé aktivity sestavení.
+- diagnostikovat problémy s paralelismem,
+- určit, zda čas sestavení dominuje analýza, generování kódu nebo propojení a
+- identifikovat úzká místa a neobvykle dlouhé činnosti sestavení.
 
-### <a name="build-explorer-view-data-columns"></a>Sloupce dat zobrazení Průzkumníka sestavení
+### <a name="build-explorer-view-data-columns"></a>Sloupce dat zobrazení zobrazení Aplikace Build Explorer
 
 | Název sloupce | Popis |
 |-|-|
-| BuildTimelineDescription | Textový popis časové osy, na které se aktuální aktivita nebo vlastnost vyskytuje. |
-| BuildTimelineId          | Identifikátor založený na nule pro časovou osu, na které se aktuální aktivita nebo vlastnost vyskytuje. |
-| Komponenta                | Komponenta, která je zkompilována nebo propojena po vygenerování aktuální události. Hodnota tohoto sloupce je *\<\>informace o volání* , pokud k této události není přidružena žádná komponenta. X je jedinečný číselný identifikátor pro vyvolání prováděný v době, kdy byla událost vygenerována. Tento identifikátor je stejný jako ten, který je ve sloupci InvocationId pro tuto událost. |
-| Počet                    | Počet aktivit nebo vlastností reprezentovaných tímto řádkem dat. Tato hodnota je vždy 1 a je užitečná pouze při agregačních scénářích, pokud je seskupeno více řádků. |
-| ExclusiveCPUTime         | Množství času procesoru v milisekundách, které používá tato aktivita. Doba strávená podřízenými aktivitami není v této množství zahrnutá. |
-| ExclusiveDuration        | Doba trvání aktivity milisekundy. Doba trvání podřízených aktivit není v této množství zahrnutá. |
-| InclusiveCPUTime         | Množství času procesoru v milisekundách používaných touto aktivitou a všemi podřízenými aktivitami. |
-| InclusiveDuration        | Doba trvání milisekundy této aktivity, včetně všech podřízených aktivit. |
-| InvocationDescription    | Textový popis vyvolání, ve kterém došlo k této události Popis zahrnuje, zda se jednalo o *CL. exe* nebo *Link. exe*, a jedinečný číselný identifikátor vyvolání. Pokud je to možné, zahrnuje úplnou cestu k komponentě zkompilované nebo propojené během vyvolání. Pro vyvolání, které nevytvářejí žádnou komponentu, nebo pro ty, které sestavují více komponent, je cesta prázdná. Identifikátor vyvolání je stejný jako ten ve sloupci InvocationId. |
-| InvocationId             | Jedinečný číselný identifikátor vyvolání, ve kterém došlo k této události. |
-| Název                     | Název aktivity nebo vlastnosti reprezentované touto událostí. |
-| Čas                     | Časové razítko, které určuje, kdy došlo k události. |
-| Nástroj                     | Nástroj, který se provádí v případě výskytu této události. Hodnota tohoto sloupce je buď CL, nebo odkaz. |
-| Typ                     | Typ aktuální události Tato hodnota je buď aktivita, nebo vlastnost. |
-| Hodnota                    | Pokud je aktuální událost vlastnost, tento sloupec obsahuje hodnotu. Pokud aktuální událost je aktivita, zůstane tento sloupec prázdný. |
+| BuildTimelineDescription | Textový popis časové osy, na které dochází k aktuální aktivitě nebo vlastnosti. |
+| BuildTimelineId          | Identifikátor založený na nule pro časovou osu, na které dochází k aktuální aktivitě nebo vlastnosti. |
+| Komponenta                | Součást, která je kompilována nebo propojena při vyzařování aktuální události. Hodnota tohoto sloupce * \<je Vyvolání\> X Info,* pokud žádná součást je přidružena k této události. X je jedinečný číselný identifikátor pro vyvolání, které bylo spuštěno v době, kdy byla událost emitována. Tento identifikátor je stejný jako identifikátor ve sloupci InvocationId pro tuto událost. |
+| Počet                    | Počet aktivit nebo vlastností reprezentované tímto datovým řádkem. Tato hodnota je vždy 1 a je užitečné pouze ve scénářích agregace při seskupování více řádků. |
+| ExclusiveCPUTime         | Množství času procesoru v milisekundách používaných touto aktivitou. Čas strávený v podřízených aktivitách není zahrnut v této částce. |
+| ExclusiveDuration        | Milisekunda trvání aktivity. Doba trvání podřízených aktivit není zahrnuta v této částce. |
+| Inkluzivní procesorový čas         | Množství času procesoru v milisekundách používaných touto aktivitou a všechny podřízené aktivity. |
+| Inkluzívní doba trvání        | Milisekunda trvání této aktivity, včetně všech podřízených aktivit. |
+| VyvoláníPopis    | Textový popis vyvolání této události došlo v. Popis zahrnuje, zda byl *cl.exe* nebo *link.exe*a jedinečný identifikátor číselného vyvolání. Pokud je to možné, obsahuje úplnou cestu k komponentě zkompilované nebo propojené během vyvolání. Pro vyvolání, které nevytvářejí žádnou součást, nebo pro ty, které vytvářejí více součástí, je cesta prázdná. Identifikátor vyvolání je stejný jako ve sloupci InvocationId. |
+| VyvoláníIIda             | Jedinečný číselný identifikátor pro vyvolání této události došlo v. |
+| Name (Název)                     | Název aktivity nebo vlastnosti reprezentované touto událostí. |
+| Time                     | Časové razítko, které identifikuje, kdy k události došlo. |
+| Nástroj                     | Nástroj, který se provádí, když k této události došlo. Hodnota tohoto sloupce je CL nebo Odkaz. |
+| Typ                     | Typ aktuální události. Tato hodnota je aktivita nebo Vlastnost. |
+| Hodnota                    | Pokud je aktuální událost vlastnost, tento sloupec obsahuje jeho hodnotu. Tento sloupec zůstane prázdný, pokud je aktuální událost aktivitou. |
 
-### <a name="build-explorer-view-presets"></a>Předvolby zobrazení Průzkumníka sestavení
+### <a name="build-explorer-view-presets"></a>Přednastavení zobrazení Build Explorer
 
-| Název předvolby           | Upřednostňovaný režim zobrazení | Jak používat |
+| Název přednastavení           | Upřednostňovaný režim zobrazení | Jak používat |
 |-----------------------|---------------------|------------|
-| Statistika aktivity   | Graf nebo tabulka       | Pomocí této předvolby můžete zobrazit agregované statistiky pro všechny aktivity Průzkumníka sestavení. V režimu tabulky sdělte na první pohled, zda je sestavení ovládáno analýzou, generováním kódu nebo linkerem. Agregované doby trvání každé aktivity jsou seřazeny v sestupném pořadí. Rozjděte si hlavní uzel, abyste mohli snadno najít, která volání pro tyto hlavní aktivity vybírají nejvíce času. Pokud chcete, můžete upravit nastavení WPA tak, aby zobrazovalo průměry nebo jiné typy agregací. V režimu grafu si přečtěte, kdy je každá aktivita aktivní během sestavení. |
-| Vyvolání           | Graph               | Posuňte se dolů na seznam vyvolání v zobrazení grafu seřazené podle času spuštění. Můžete ji použít společně s využitím procesoru (vzorkování) k vyhledání vyvolání, která se zarovnají s nízkými zónami využití procesoru. Detekuje problémy paralelismu. |
-| Vlastnosti vyvolání | Tabulka               | Rychle Najděte klíčové informace o daném kompilátoru nebo vyvolání linkeru. Určete jeho verzi, pracovní adresář nebo úplný příkazový řádek, který se používá k vyvolání. |
-| Časové osy             | Graph               | Podívejte se na pruhový graf, jak se vaše sestavení paralelně vytvořilo. Identifikujte problémy paralelismu a kritická místa na první pohled. Nakonfigurujte WPA pro přiřazení různých významů k pruhům podle vašich potřeb. Vyberte popisy volání jako poslední seskupený sloupec pro zobrazení barevně kódovaného pruhového grafu pro všechna vaše volání. Pomůže vám rychle identifikovat časově náročné culprits. Pak přiblížíte a zvolte název aktivity jako poslední seskupený sloupec, abyste viděli nejdelší části. |
+| Statistika aktivity   | Graf / Tabulka       | Toto přednastavení slouží k zobrazení agregovaných statistik pro všechny aktivity Průzkumníka sestavení. V režimu tabulky na první pohled řekněte, jestli sestavení dominuje analýza, generování kódu nebo propojovací program. Agregované doby trvání pro každou aktivitu jsou seřazeny v sestupném pořadí. Přejděte na rozšíření horní uzel snadno zjistit, které vyvolání trvat nejvíce času pro tyto nejvyšší aktivity. Pokud chcete, můžete upravit nastavení WPA tak, aby zobrazovala průměry nebo jiné typy agregací. V režimu grafu, podívejte se, kdy je každá aktivita aktivní během sestavení. |
+| Vyvolání           | Graph               | Posuňte se dolů seznamem vyvolání v zobrazení grafu seřazených podle času zahájení. Můžete jej použít společně se zobrazením CPU (Sampled) k vyhledání vyvolání, která jsou zarovnána s nízkými zónami využití procesoru. Detekujte problémy s paralelismem. |
+| Vlastnosti vyvolání | Table               | Rychle najít klíčové informace o dané vyvolání kompilátoru nebo propojovacího systému. Určete jeho verzi, pracovní adresář nebo úplný příkazový řádek použitý k jeho vyvolání. |
+| Časové osy             | Graph               | Podívejte se na pruhový graf, jak byla vaše sestavení paralelizována. Na první pohled identifikujte problémy s paralelismem a úzká místa. Nakonfigurujte WPA tak, aby přiřazovala barům různé významy podle vašich potřeb. Zvolte popisy vyvolání jako poslední seskupený sloupec, chcete-li zobrazit barevně kódovaný pruhový graf všech vašich vyvolání. Pomáhá vám rychle identifikovat časově náročné viníky. Potom přibližte zobrazení a zvolte název aktivity jako poslední seskupený sloupec, abyste viděli nejdelší části. |
 
 ## <a name="files"></a>Soubory
 
-Zobrazení soubory se používá pro:
+Zobrazení Soubory se používá k:
 
-- Určete, která záhlaví se budou často zobrazovat a
-- pomůžete se rozhodnout, co zahrnout do předkompilované hlavičky (PCH).
+- určit, které hlavičky jsou zahrnuty nejčastěji, a
+- vám pomohou rozhodnout, co zahrnout do předkompilované hlavičky (PCH).
 
-### <a name="files-view-data-columns"></a>Sloupce dat zobrazení souborů
+### <a name="files-view-data-columns"></a>Soubory zobrazují datové sloupce
 
 | Název sloupce              | Popis |
 |--------------------------|-------------|
-| Název aktivity ActivityName             | Aktivita probíhají v době, kdy byla tato událost souboru vyvolána. V současné době se tato hodnota vždy *analyzuje*. |
+| Název_aktivity             | Probíhající aktivita při vyprávění této události souboru. V současné době je tato hodnota vždy *analýza*. |
 | BuildTimelineDescription | * |
 | BuildTimelineId          | * |
 | Komponenta                | * |
 | Počet                    | * |
-| úrovní                    | Pozice s nulovým základem ve stromu zahrnutí, ve kterém je tento soubor nalezen. Počítání začíná v kořenu include stromu. Hodnota 0 obvykle odpovídá souboru. c/. cpp. |
+| Hloubka                    | Pozice založená na nule ve stromu zahrnutí, ve kterém je tento soubor nalezen. Počítání začíná v kořenovém adresáři stromu zahrnutí. Hodnota 0 obvykle odpovídá souboru .c/.cpp. |
 | ExclusiveDuration        | * |
-| IncludedBy               | Úplná cesta k souboru, který zahrnoval aktuální soubor. |
-| IncludedPath             | Úplná cesta k aktuálnímu souboru. |
-| InclusiveDuration        | * |
-| InvocationId             | * |
-| StartTime                | Časové razítko, které představuje čas, kdy byla vyvolána událost aktuálního souboru. |
+| Includedby               | Úplná cesta k souboru, který obsahoval aktuální soubor. |
+| ZahrnutyCesta             | Úplná cesta k aktuálnímu souboru. |
+| Inkluzívní doba trvání        | * |
+| VyvoláníIIda             | * |
+| StartTime                | Časové razítko, které představuje čas, kdy byla vyzařována aktuální událost souboru. |
 | Nástroj                     | * |
 
-\* hodnota tohoto sloupce je stejná jako v zobrazení [Průzkumník sestavení](#build-explorer-view-data-columns) .
+\*Hodnota tohoto sloupce je stejná jako v zobrazení [Průzkumníka sestavení.](#build-explorer-view-data-columns)
 
-### <a name="files-view-presets"></a>Předvolby zobrazení souborů
+### <a name="files-view-presets"></a>Přednastavení zobrazení souborů
 
-| Název předvolby | Upřednostňovaný režim zobrazení | Jak používat |
+| Název přednastavení | Upřednostňovaný režim zobrazení | Jak používat |
 |-------------|---------------------|------------|
-| Statistika  | Tabulka               | Podívejte se na seznam v sestupném pořadí, abyste viděli, které soubory mají nejvyšší agregovanou dobu analýzy. Tyto informace slouží k tomu, abyste pomohli restrukturovat hlavičky nebo rozhodnout, co se má do souboru PCH zahrnout. |
+| Statistika  | Table               | Podívejte se na seznam v sestupném pořadí, které soubory měly nejvyšší agregovaný čas analýzy. Tyto informace vám pomohou restrukturalizovat záhlaví nebo se rozhodnout, co zahrnout do pch. |
 
 ## <a name="functions"></a>Functions
 
-Zobrazení Functions (funkce) se používá k identifikaci funkcí s nadměrným dlouhým časem generování kódu.
+Zobrazení Funkce se používá k identifikaci funkcí s příliš dlouhou dobu generování kódu.
 
-### <a name="functions-view-data-columns"></a>Sloupce dat zobrazení funkcí
+### <a name="functions-view-data-columns"></a>Funkce zobrazení datových sloupců
 
 | Název sloupce              | Popis |
 |--------------------------|-------------|
-| Název aktivity ActivityName             | Aktivita probíhající v době, kdy byla tato událost funkce vyvolána. V současné době je tato hodnota vždy *strategii*. |
+| Název_aktivity             | Probíhající aktivita při vyprávění této události funkce. V současné době tato hodnota je vždy *CodeGeneration*. |
 | BuildTimelineDescription | * |
 | BuildTimelineId          | * |
 | Komponenta                | * |
 | Počet                    | * |
 | Doba trvání                 | Doba trvání aktivity generování kódu pro tuto funkci. |
-| FunctionName             | Název funkce, která projde generování kódu. |
-| InvocationId             | * |
-| StartTime                | Časové razítko, které představuje, kdy byla vyvolána událost aktuální funkce. |
+| Název funkce             | Název funkce, která prochází generováním kódu. |
+| VyvoláníIIda             | * |
+| StartTime                | Časové razítko, které představuje, když byla vyzařována aktuální událost funkce. |
 | Nástroj                     | * |
 
-\* hodnota tohoto sloupce je stejná jako v zobrazení [Průzkumník sestavení](#build-explorer-view-data-columns) .
+\*Hodnota tohoto sloupce je stejná jako v zobrazení [Průzkumníka sestavení.](#build-explorer-view-data-columns)
 
-### <a name="functions-view-presets"></a>Předvolby zobrazení funkcí
+### <a name="functions-view-presets"></a>Přednastavení zobrazení funkcí
 
-| Název předvolby | Upřednostňovaný režim zobrazení | Jak používat |
+| Název přednastavení | Upřednostňovaný režim zobrazení | Jak používat |
 |-------------|---------------------|------------|
-| Statistika  | Tabulka               | Podívejte se na seznam v sestupném pořadí, abyste viděli, které funkce měly nejvyšší agregovaný čas generování kódu. Můžou se považovat za to, kde váš kód používá klíčové slovo **__forceinline** , nebo že některé funkce můžou být moc velké. |
-| Časové osy   | Graph               | Podívejte se na tento pruhový graf, kde zjistíte umístění a dobu trvání funkcí, které se vygenerují nejvíce času. Podívejte se, jestli jsou v zobrazení Průzkumníka sestavení zarovnané na kritická místa. Pokud to uděláte, proveďte příslušnou akci, abyste snížili čas generování kódu a využili své časy sestavení. |
+| Statistika  | Table               | Podívejte se na seznam v sestupném pořadí, které funkce měly nejvyšší čas generování agregovaného kódu. Mohou naznačovat, kde váš kód nadhodní klíčové slovo **__forceinline** nebo že některé funkce mohou být příliš velké. |
+| Časové osy   | Graph               | Podívejte se na tento sloupcový graf, abyste se dozvěděli umístění a dobu trvání funkcí, které se generují nejvíce. Podívejte se, jestli jsou zarovnány s kritickými místy v zobrazení Průzkumník sestavení. Pokud ano, proveďte příslušná opatření ke zkrácení doby generování kódu a prospěch u vašich časů sestavení. |
 
 ## <a name="see-also"></a>Viz také
 
-[Začínáme se C++ sestavami Build Insights](/cpp/build-insights/get-started-with-cpp-build-insights)\
-[Reference:\ příkazy vcperf](vcperf-commands.md)
-[Kurz: Základy Windows Performance Analyzer](/cpp/build-insights/tutorials/wpa-basics)\
+[Začínáme s Přehledy sestavení c++](/cpp/build-insights/get-started-with-cpp-build-insights)\
+[Reference: příkazy vcperf](vcperf-commands.md)\
+[Kurz: Základy nástroje Windows Performance Analyzer](/cpp/build-insights/tutorials/wpa-basics)\
 [Analyzátor výkonu systému Windows](/windows-hardware/test/wpt/windows-performance-analyzer)
 
 ::: moniker-end

@@ -14,16 +14,16 @@ helpviewer_keywords:
 - std::recursive_mutex [C++], lock
 - std::recursive_mutex [C++], try_lock
 - std::recursive_mutex [C++], unlock
-ms.openlocfilehash: 448b4d03e4d38dc45621cddab7d8f5d03b805968
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 9ab7a96a7c07582450ab41b140dcc5494a63661f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68451675"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81320210"
 ---
-# <a name="recursivemutex-class"></a>recursive_mutex – třída
+# <a name="recursive_mutex-class"></a>recursive_mutex – třída
 
-Představuje *typ mutex*. Na rozdíl od [mutex](../standard-library/mutex-class-stl.md)je chování volání metody zamykání pro objekty, které jsou již uzamčeny, jasně definovány.
+Představuje *typ mutex*. Na rozdíl od [mutex](../standard-library/mutex-class-stl.md), chování volání uzamčení metody pro objekty, které jsou již uzamčeny je dobře definována.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -35,28 +35,28 @@ class recursive_mutex;
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[recursive_mutex](#recursive_mutex)|`recursive_mutex` Vytvoří objekt.|
-|[~recursive_mutex Destructor](#dtorrecursive_mutex_destructor)|Uvolní všechny prostředky, které jsou používány `recursive_mutex` objektem.|
+|[recursive_mutex](#recursive_mutex)|Vytvoří `recursive_mutex` objekt.|
+|[~recursive_mutex Destruktor](#dtorrecursive_mutex_destructor)|Uvolní všechny prostředky, které `recursive_mutex` jsou používány objektem.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[lock](#lock)|Blokuje volající vlákno, dokud vlákno nezíská vlastnictví mutexu.|
-|[try_lock](#try_lock)|Pokusy o získání vlastnictví mutexu bez blokování.|
-|[Uzamknout](#unlock)|Uvolňuje vlastnictví mutexu.|
+|[Zámek](#lock)|Blokuje volající vlákno, dokud vlákno nezíská vlastnictví objektu mutex.|
+|[try_lock](#try_lock)|Pokusí se získat vlastnictví mutex bez blokování.|
+|[Odemknout](#unlock)|Uvolní vlastnictví mutex.|
 
 ## <a name="requirements"></a>Požadavky
 
-**Hlavička:** \<> mutex
+**Záhlaví:** \<> mutex
 
 **Obor názvů:** std
 
-## <a name="lock"></a>získáte
+## <a name="lock"></a><a name="lock"></a>Zámek
 
-Blokuje volající vlákno, dokud vlákno nezíská vlastnictví `mutex`.
+Blokuje volající vlákno, dokud vlákno nezíská vlastnictví `mutex`rozhraní .
 
 ```cpp
 void lock();
@@ -64,17 +64,17 @@ void lock();
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud volající vlákno již vlastní `mutex`, metoda se vrátí okamžitě a předchozí zámek zůstane v platnosti.
+Pokud volající vlákno již `mutex`vlastní , metoda se vrátí okamžitě a předchozí zámek zůstane v platnosti.
 
-## <a name="recursive_mutex"></a>recursive_mutex
+## <a name="recursive_mutex"></a><a name="recursive_mutex"></a>recursive_mutex
 
-`recursive_mutex` Vytvoří objekt, který není uzamčen.
+Vytvoří `recursive_mutex` objekt, který není uzamčen.
 
 ```cpp
 recursive_mutex();
 ```
 
-## <a name="dtorrecursive_mutex_destructor"></a>~ recursive_mutex
+## <a name="recursive_mutex"></a><a name="dtorrecursive_mutex_destructor"></a>~recursive_mutex
 
 Uvolní všechny prostředky, které jsou používány objektem.
 
@@ -86,7 +86,7 @@ Uvolní všechny prostředky, které jsou používány objektem.
 
 Pokud je objekt uzamčen při spuštění destruktoru, chování není definováno.
 
-## <a name="try_lock"></a>try_lock
+## <a name="try_lock"></a><a name="try_lock"></a>try_lock
 
 Pokusí se získat vlastnictví `mutex` bez blokování.
 
@@ -96,15 +96,15 @@ bool try_lock() noexcept;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**true** , pokud metoda úspěšně získá vlastnictví `mutex` nebo v případě, že `mutex**; otherwise, **false`volající vlákno již vlastní.
+**true** pokud metoda úspěšně získá vlastnictví `mutex` nebo pokud volající vlákno `mutex**; otherwise, **false`již vlastní .
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud volající vlákno již vlastní `mutex`, funkce okamžitě vrátí **hodnotu true**a předchozí zámek zůstane v platnosti.
+Pokud volající vlákno již `mutex`vlastní , funkce okamžitě vrátí **hodnotu true**a předchozí zámek zůstane v platnosti.
 
-## <a name="unlock"></a>Uzamknout
+## <a name="unlock"></a><a name="unlock"></a>Odemknout
 
-Uvolňuje vlastnictví mutexu.
+Uvolní vlastnictví mutex.
 
 ```cpp
 void unlock();
@@ -112,11 +112,11 @@ void unlock();
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda `mutex` uvolní vlastnictví pouze poté, co je volána, kolikrát bylo volání metody [Lock](#lock) a [try_lock](#try_lock) v `recursive_mutex` objektu úspěšné.
+Tato metoda uvolní vlastnictví `mutex` pouze poté, co je volána tolikrát, [kolikrát zámek](#lock) a [try_lock](#try_lock) byly úspěšně volány na objekt. `recursive_mutex`
 
 Pokud volající vlákno nevlastní `mutex`, chování není definováno.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Odkazy na hlavičkové soubory](../standard-library/cpp-standard-library-header-files.md)\
-[\<mutex>](../standard-library/mutex.md)
+[Odkaz na soubory záhlaví](../standard-library/cpp-standard-library-header-files.md)\
+[\<>mutex](../standard-library/mutex.md)

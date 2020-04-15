@@ -1,6 +1,6 @@
 ---
 title: StopTracingSession
-description: Reference C++ k funkci StopTracingSession sady SDK pro Build Insights
+description: C++ Build Insights SDK StopTracingSession odkaz na funkci.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: a4be229dcfddef0624869b789ee35e51336ac78e
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: c6c7a3c6ca47749491774cc3bcd97aae8aa663ea
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78332549"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81323518"
 ---
 # <a name="stoptracingsession"></a>StopTracingSession
 
 ::: moniker range="<=vs-2015"
 
-Sada C++ SDK pro Build Insights je kompatibilní se sadou Visual Studio 2017 a novější. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek selektor verzí sady Visual Studio pro tento článek na sadu Visual Studio 2017 nebo Visual Studio 2019.
+Sada C++ Build Insights SDK je kompatibilní s Visual Studio 2017 a vyšší. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek pro výběr **verze** sady Visual Studio pro tento článek na Visual Studio 2017 nebo Visual Studio 2019. Nachází se v horní části obsahu na této stránce.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Funkce `StopTracingSession` zastaví probíhající relaci trasování a vytvoří nezpracovaný trasovací soubor. Nezpracované trasovací soubory se dají předat funkcím [analyze](analyze.md), [AnalzeA](analyze-a.md)a [AnalyzeW](analyze-w.md) , aby se spustila relace analýzy. Nezpracované trasovací soubory lze také předat funkcím [relog](relog.md), [relog](relog-a.md)a [RelogW](relog-w.md) , aby bylo možné spustit znovu protokolování relace. Spustitelné soubory, které volají `StopTracingSession`, musí mít oprávnění správce.
+Funkce `StopTracingSession` zastaví probíhající relaci trasování a vytvoří nezpracovaný soubor trasování. Nezpracované trasovací soubory mohou být předány funkci [Analyzovat](analyze.md), [AnalzeA](analyze-a.md)a [AnalyzeW](analyze-w.md) a spustit relaci analýzy. Nezpracované trasovací soubory lze také předat funkci [Relog](relog.md), [RelogA](relog-a.md)a [RelogW](relog-w.md) a spustit relaci opětovného přihlášení. Volání `StopTracingSession` spustitelných souborů musí mít oprávnění správce.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -43,14 +43,14 @@ inline RESULT_CODE StopTracingSession(
 
 ### <a name="parameters"></a>Parametry
 
-*název_relace*\
-Název relace trasování, která se má zastavit. Použijte stejný název relace jako ten předaný do [StartTracingSession](start-tracing-session.md), [StartTracingSessionA](start-tracing-session-a.md)nebo [StartTracingSessionW](start-tracing-session-w.md).
+*Název_relace*\
+Název relace trasování zastavit. Použijte stejný název relace jako název předané [StartTracingSession](start-tracing-session.md), [StartTracingSessionA](start-tracing-session-a.md)nebo [StartTracingSessionW](start-tracing-session-w.md).
 
 *outputLogFile*\
-Cesta k konečnému výstupnímu souboru protokolu, ve kterém by se mělo Uložit nezpracovaná trasování
+Cesta ke konečnému výstupnímu souboru protokolu, kde by mělo být nezpracovaná trasování uložena.
 
-\ *statistiky*
-Ukazatel na objekt [TRACING_SESSION_STATISTICS](../other-types/tracing-session-statistics-struct.md) . před vrácením `StopTracingSession` zapisuje statistiky shromažďování trasování v tomto objektu.
+*Statistiky*\
+Ukazatel na [TRACING_SESSION_STATISTICS](../other-types/tracing-session-statistics-struct.md) objekt. `StopTracingSession`zapíše statistiky shromažďování trasování v tomto objektu před vrácením.
 
 ### <a name="return-value"></a>Návratová hodnota
 

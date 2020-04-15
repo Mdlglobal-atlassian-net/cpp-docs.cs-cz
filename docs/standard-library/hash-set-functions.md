@@ -5,23 +5,23 @@ f1_keywords:
 - hash_set/std::swap
 - hash_set/std::swap (hash_multiset)
 ms.assetid: 557a0162-3728-4537-97dc-f9f6cc7ece94
-ms.openlocfilehash: 2fbc05c16ba6629397bbb07bab30cb9315a16e1f
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: d7df6b3c5dc0d0d493d17b3e9995bc4758ffd6d4
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79421616"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81370590"
 ---
 # <a name="lthash_setgt-functions"></a>&lt;hash_set&gt; funkce
 
 |||
 |-|-|
-|[adresu](#swap)|[swap (hash_multiset)](#swap_hash_multiset)|
+|[Swap](#swap)|[swap (hash_multiset)](#swap_hash_multiset)|
 
-## <a name="swap"></a>adresu
+## <a name="swap"></a><a name="swap"></a>Swap
 
 > [!NOTE]
-> Toto rozhraní API je zastaralé. Alternativa je [Unordered_set třídy](../standard-library/unordered-set-class.md).
+> Toto rozhraní API je zastaralé. Alternativou je [unordered_set class](../standard-library/unordered-set-class.md).
 
 Vyměňuje prvky dvou hash_sets.
 
@@ -33,28 +33,28 @@ void swap(
 
 ### <a name="parameters"></a>Parametry
 
-*pravé*\
-Hash_set poskytují prvky, které mají být měněny, nebo hash_set jejichž prvky mají být vyměňovány pomocí těch hash_set *doleva*.
+*Právo*\
+hash_set poskytující prvky, které mají být vyměněny, nebo hash_set jejichž prvky mají být vyměněny za prvky hash_set *vlevo*.
 
-*levý*\
-Hash_set, jejichž prvky mají být vyměněny pomocí hash_set *právo*.
+*Vlevo*\
+hash_set jejichž prvky mají být vyměněny s prvky hash_set *práva*.
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce šablony `swap` je algoritmus specializovaný na třídu kontejneru hash_set ke spuštění členské funkce `left.`[swap](../standard-library/hash-set-class.md#swap)(`right`). Toto je instance částečného řazení šablon funkcí kompilátorem. Pokud jsou funkce šablony přetíženy takovým způsobem, že shoda šablony s voláním funkce není jedinečná, kompilátor vybere nejvíce specializované verze funkce šablony. Obecná verze funkce šablony
+Funkce `swap` šablony je algoritmus specializovaný na třídu kontejneru `left.`hash_set`right`pro spuštění [prohození](../standard-library/hash-set-class.md#swap)členské funkce ( ). Toto je instance částečného řazení šablon funkcí kompilátorem. Pokud jsou funkce šablony přetíženy takovým způsobem, že shoda šablony s voláním funkce není jedinečná, kompilátor vybere nejspecializovanější verzi funkce šablony. Obecná verze funkce šablony
 
-**Template \<třída T > void swap (T &, T &),**
+**šablona \<třídy T> void swap (T&, T&),**
 
-Třída algoritmu funguje podle přiřazení a je pomalé operace. Specializovaná verze v každém kontejneru je mnohem rychlejší, protože může pracovat s interní reprezentace třídy kontejneru.
+ve třídě algoritmu pracuje podle přiřazení a je pomalá operace. Specializovaná verze v každém kontejneru je mnohem rychlejší, protože může pracovat s vnitřní reprezentací třídy kontejneru.
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad kódu pro třídu member [hash_set:: swap](../standard-library/hash-set-class.md#swap) pro příklad, který používá šablonu verze `swap`.
+Podívejte se na příklad kódu pro třídu člena [hash_set::swap](../standard-library/hash-set-class.md#swap) pro příklad, který používá verzi šablony aplikace `swap`.
 
-## <a name="swap_hash_multiset"></a>swap (hash_multiset)
+## <a name="swap-hash_multiset"></a><a name="swap_hash_multiset"></a>swap (hash_multiset)
 
 > [!NOTE]
-> Toto rozhraní API je zastaralé. Alternativa je [Unordered_set třídy](../standard-library/unordered-set-class.md).
+> Toto rozhraní API je zastaralé. Alternativou je [unordered_set class](../standard-library/unordered-set-class.md).
 
 Vyměňuje prvky dvou hash_multisets.
 
@@ -64,23 +64,23 @@ void swap(hash_multiset <Key, Traits, Allocator>& left, hash_multiset <Key, Trai
 
 ### <a name="parameters"></a>Parametry
 
-*pravé*\
-Hash_multiset poskytují prvky, které mají být měněny, nebo hash_multiset jejichž prvky mají být vyměňovány pomocí těch hash_multiset *doleva*.
+*Právo*\
+hash_multiset poskytuje prvky, které mají být vyměněny, nebo hash_multiset jejichž prvky mají být vyměněny s prvky hash_multiset *vlevo*.
 
-*levý*\
-Hash_multiset, jejichž prvky mají být vyměněny pomocí hash_multiset *právo*.
+*Vlevo*\
+hash_multiset jejichž prvky mají být vyměněny s prvky hash_multiset *pravice*.
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce šablony `swap` je algoritmus specializovaný na třídu kontejneru hash_multiset ke spuštění členské funkce `left.`[swap](../standard-library/hash-multiset-class.md#swap)(`right`). Toto je instance částečného řazení šablon funkcí kompilátorem. Pokud jsou funkce šablony přetíženy takovým způsobem, že shoda šablony s voláním funkce není jedinečná, kompilátor vybere nejvíce specializované verze funkce šablony. Obecná verze funkce šablony
+Funkce `swap` šablony je algoritmus specializovaný na třídu kontejneru `left.`hash_multiset`right`pro spuštění [prohození](../standard-library/hash-multiset-class.md#swap)členské funkce ( ). Toto je instance částečného řazení šablon funkcí kompilátorem. Pokud jsou funkce šablony přetíženy takovým způsobem, že shoda šablony s voláním funkce není jedinečná, kompilátor vybere nejspecializovanější verzi funkce šablony. Obecná verze funkce šablony
 
-**Template \<třída T > void swap (T &, T &),**
+**šablona \<třídy T> void swap (T&, T&),**
 
-Třída algoritmu funguje podle přiřazení a je pomalé operace. Specializovaná verze v každém kontejneru je mnohem rychlejší, protože může pracovat s interní reprezentace třídy kontejneru.
+ve třídě algoritmu pracuje podle přiřazení a je pomalá operace. Specializovaná verze v každém kontejneru je mnohem rychlejší, protože může pracovat s vnitřní reprezentací třídy kontejneru.
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad kódu pro třídu member [hash_multiset:: swap](../standard-library/hash-multiset-class.md#swap) pro příklad, který používá šablonu verze `swap`.
+Podívejte se na příklad kódu pro třídu člena [hash_multiset::swap](../standard-library/hash-multiset-class.md#swap) pro příklad, který používá verzi šablony `swap`aplikace .
 
 ## <a name="see-also"></a>Viz také
 

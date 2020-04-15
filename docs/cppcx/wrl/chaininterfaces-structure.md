@@ -17,16 +17,16 @@ helpviewer_keywords:
 - Microsoft::WRL::ChainInterfaces::IidCount constant
 - Microsoft::WRL::ChainInterfaces::Verify method
 ms.assetid: d7415b59-5468-4bef-a3fd-8d82b12f0e9c
-ms.openlocfilehash: 9fd315f017d3dcc9823054ea99e845ec99bc4192
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dd1af3fb5c1079a40d8248dc71ae4972537aa856
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398742"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372650"
 ---
 # <a name="chaininterfaces-structure"></a>ChainInterfaces – struktura
 
-Určuje, ověřování a Inicializace funkce, které mohou být použity na sadu rozhraní ID.
+Určuje ověřovací a inicializační funkce, které lze použít pro sadu ID rozhraní.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -71,60 +71,60 @@ struct ChainInterfaces<
 ### <a name="parameters"></a>Parametry
 
 *I0*<br/>
-(Povinné) ID rozhraní: 0.
+(Povinné) ID rozhraní 0.
 
 *I1*<br/>
-(Povinné) ID rozhraní: 1.
+(Povinné) ID rozhraní 1.
 
 *I2*<br/>
-(Volitelné) Rozhraní s ID 2.
+(Nepovinné) ID rozhraní 2.
 
 *I3*<br/>
-(Volitelné) ID rozhraní 3.
+(Nepovinné) ID rozhraní 3.
 
 *I4*<br/>
-(Volitelné) ID rozhraní 4.
+(Nepovinné) ID rozhraní 4.
 
 *I5*<br/>
-(Volitelné) ID rozhraní 5.
+(Nepovinné) ID rozhraní 5.
 
 *I6*<br/>
-(Volitelné) ID rozhraní 6.
+(Nepovinné) ID rozhraní 6.
 
 *I7*<br/>
-(Volitelné) Rozhraní ID 7.
+(Nepovinné) ID rozhraní 7.
 
 *I8*<br/>
-(Volitelné) ID rozhraní 8.
+(Nepovinné) ID rozhraní 8.
 
 *I9*<br/>
-(Volitelné) ID rozhraní 9.
+(Nepovinné) ID rozhraní 9.
 
 *DerivedType*<br/>
-Odvozeného typu.
+Odvozený typ.
 
 *BaseType*<br/>
 Základní typ odvozeného typu.
 
 *hasImplements*<br/>
-Logická hodnota, že pokud **true**, znamená, že nemůžete použít [MixIn](mixin-structure.md) strukturu s třídou, která není odvozena od [implementuje](implements-structure.md) stucture.
+Logická hodnota, která pokud **true**, znamená, že nelze použít [MixIn](mixin-structure.md) strukturu s třídou, která není odvozena z [implements](implements-structure.md) stucture.
 
 ## <a name="members"></a>Členové
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-Název                                                   | Popis
+Name (Název)                                                   | Popis
 ------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-[Chaininterfaces::cancastto –](#cancastto)               | Určuje, jestli ID zadané rozhraní může být převeden na jednotlivé specializace určené `ChainInterface` parametry šablony.
-[Chaininterfaces::casttounknown –](#casttounknown)       | Přetypování ukazatele rozhraní typu definované *I0* parametr šablony na ukazatel na `IUnknown`.
-[Chaininterfaces::fillarraywithiid –](#fillarraywithiid) | Ukládá ID rozhraní určené *I0* parametr šablony v zadaném umístění v zadaném poli ID rozhraní.
-[ChainInterfaces::Verify](#verify)                     | Ověřuje, že každé rozhraní určené parametry šablony *I0* prostřednictvím *I9* dědí z `IUnknown` a/nebo `IInspectable`a že *I0* dědí z *I1* prostřednictvím *I9*.
+[ChainInterfaces::CanCastTo](#cancastto)               | Označuje, zda zadané ID rozhraní může být přetypováno `ChainInterface` do každé specializace definované parametry šablony.
+[ChainInterfaces::CastToUnknown](#casttounknown)       | Přetypovat ukazatel rozhraní typu definovaného parametrem šablony *I0* na ukazatel na `IUnknown`.
+[ChainInterfaces::FillArrayWithId](#fillarraywithiid) | Uloží ID rozhraní definované parametrem šablony *I0* do zadaného umístění v zadaném poli ID rozhraní.
+[ChainInterfaces::Ověřit](#verify)                     | Ověří, že každé rozhraní definované parametry šablony *I0* až `IInspectable` *I9* dědí z `IUnknown` a/nebo a že *I0* dědí z *I1* až *I9*.
 
 ### <a name="protected-constants"></a>Chráněné konstanty
 
-Název                                   | Popis
+Name (Název)                                   | Popis
 -------------------------------------- | -----------------------------------------------------------------------------------------------------------------
-[ChainInterfaces::IidCount](#iidcount) | Celkový počet rozhraní ID, které jsou součástí rozhraní určené parametry šablony *I0* prostřednictvím *I9*.
+[ChainInterfaces::IidCount](#iidcount) | Celkový počet ID rozhraní obsažených v rozhraních určených parametry šablony *I0* až *I9*.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -136,11 +136,11 @@ Název                                   | Popis
 
 **Záhlaví:** implements.h
 
-**Namespace:** Microsoft::WRL
+**Obor názvů:** Microsoft::WRL
 
-## <a name="cancastto"></a>Chaininterfaces::cancastto –
+## <a name="chaininterfacescancastto"></a><a name="cancastto"></a>ChainInterfaces::CanCastTo
 
-Určuje, zda ID zadané rozhraní může být převeden na jednotlivé specializace určené parametry jiné než výchozí šablony.
+Označuje, zda lze zadané ID rozhraní přetypovat do každé specializace definované nevýchozími parametry šablony.
 
 ```cpp
 __forceinline bool CanCastTo(
@@ -151,19 +151,19 @@ __forceinline bool CanCastTo(
 
 ### <a name="parameters"></a>Parametry
 
-*riid*<br/>
-Identifikátor rozhraní.
+*riid řekl:*<br/>
+ID rozhraní.
 
-*ppv*<br/>
-Ukazatel na poslední ID rozhraní, který byl úspěšně převeden.
+*Ppv*<br/>
+Ukazatel na poslední ID rozhraní, které bylo úspěšně přetypováno.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** Pokud všechny operace přetypování bylo úspěšné; jinak **false**.
+**true,** pokud všechny operace obsazení úspěšné; jinak **false**.
 
-## <a name="casttounknown"></a>Chaininterfaces::casttounknown –
+## <a name="chaininterfacescasttounknown"></a><a name="casttounknown"></a>ChainInterfaces::CastToUnknown
 
-Přetypování ukazatele rozhraní typu definované *I0* parametr šablony na ukazatel na `IUnknown`.
+Přetypovat ukazatel rozhraní typu definovaného parametrem šablony *I0* na ukazatel na `IUnknown`.
 
 ```cpp
 __forceinline IUnknown* CastToUnknown();
@@ -173,9 +173,9 @@ __forceinline IUnknown* CastToUnknown();
 
 Ukazatel na `IUnknown`.
 
-## <a name="fillarraywithiid"></a>Chaininterfaces::fillarraywithiid –
+## <a name="chaininterfacesfillarraywithiid"></a><a name="fillarraywithiid"></a>ChainInterfaces::FillArrayWithId
 
-Ukládá ID rozhraní určené *I0* parametr šablony v zadaném umístění v zadaném poli ID rozhraní.
+Uloží ID rozhraní definované parametrem šablony *I0* do zadaného umístění v zadaném poli ID rozhraní.
 
 ```cpp
 __forceinline static void FillArrayWithIid(
@@ -186,15 +186,15 @@ __forceinline static void FillArrayWithIid(
 
 ### <a name="parameters"></a>Parametry
 
-*index*<br/>
-Ukazatel na hodnotu indexu do *IID* pole.
+*Index*<br/>
+Ukazatel na hodnotu indexu do pole *IIDs.*
 
-*iids*<br/>
+*IIDs*<br/>
 Pole ID rozhraní.
 
-## <a name="iidcount"></a>ChainInterfaces::IidCount
+## <a name="chaininterfacesiidcount"></a><a name="iidcount"></a>ChainInterfaces::IidCount
 
-Celkový počet rozhraní ID, které jsou součástí rozhraní určené parametry šablony *I0* prostřednictvím *I9*.
+Celkový počet ID rozhraní obsažených v rozhraních určených parametry šablony *I0* až *I9*.
 
 ```cpp
 static const unsigned long IidCount = Details::InterfaceTraits<I0>::IidCount + Details::InterfaceTraits<I1>::IidCount + Details::InterfaceTraits<I2>::IidCount + Details::InterfaceTraits<I3>::IidCount + Details::InterfaceTraits<I4>::IidCount + Details::InterfaceTraits<I5>::IidCount + Details::InterfaceTraits<I6>::IidCount + Details::InterfaceTraits<I7>::IidCount + Details::InterfaceTraits<I8>::IidCount + Details::InterfaceTraits<I9>::IidCount;
@@ -206,11 +206,11 @@ Celkový počet ID rozhraní.
 
 ### <a name="remarks"></a>Poznámky
 
-Parametry šablony *I0* a *I1* jsou povinné a parametry *I2* prostřednictvím *I9* jsou volitelné. Počet IID každé rozhraní, které je obvykle 1.
+Parametry šablony *I0* a *I1* jsou povinné a parametry *I2* až *I9* jsou volitelné. Počet IID každého rozhraní je obvykle 1.
 
-## <a name="verify"></a>Chaininterfaces::Verify –
+## <a name="chaininterfacesverify"></a><a name="verify"></a>ChainInterfaces::Ověřit
 
-Ověřuje, že každé rozhraní určené parametry šablony *I0* prostřednictvím *I9* dědí z `IUnknown` a/nebo `IInspectable`a že *I0* dědí z *I1* prostřednictvím *I9*.
+Ověří, že každé rozhraní definované parametry šablony *I0* až `IInspectable` *I9* dědí z `IUnknown` a/nebo a že *I0* dědí z *I1* až *I9*.
 
 ```cpp
 WRL_NOTHROW __forceinline static void Verify();
@@ -218,6 +218,6 @@ WRL_NOTHROW __forceinline static void Verify();
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud se ověření nezdaří, `static_assert` vydá chybovou zprávu s popisem chyby.
+Pokud ověřovací operace selže, `static_assert` vydává chybovou zprávu popisující selhání.
 
-Parametry šablony *I0* a *I1* jsou povinné a parametry *I2* prostřednictvím *I9* jsou volitelné.
+Parametry šablony *I0* a *I1* jsou povinné a parametry *I2* až *I9* jsou volitelné.

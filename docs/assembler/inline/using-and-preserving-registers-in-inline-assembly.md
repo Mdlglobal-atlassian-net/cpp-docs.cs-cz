@@ -7,34 +7,34 @@ helpviewer_keywords:
 - registers, inline assembly
 - preserving registers
 ms.assetid: dbcd7360-6f3e-4b22-9ee2-9f65ca6f2543
-ms.openlocfilehash: 51147a217ec56c525fc01e1b36a9381b9356ba4d
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 97db09ac7652c00e9599a6938f4114de080906c0
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80169152"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81318031"
 ---
 # <a name="using-and-preserving-registers-in-inline-assembly"></a>Použití a zachování registrů v sestavení inline assemblerem
 
-**Specifické pro společnost Microsoft**
+**Specifické pro Microsoft**
 
-Obecně byste neměli předpokládat, že při zahájení bloku `__asm` bude mít registr zadanou hodnotu. U hodnot registru není zaručeno uchování v různých `__asm`ch blocích. Pokud zadáte blok vloženého kódu a zahájíte jiný, nemůžete spoléhat na Registry ve druhém bloku, abyste zachovali jejich hodnoty z prvního bloku. Blok `__asm` dědí jakékoli hodnoty registru z normálního toku řízení.
+Obecně byste neměli předpokládat, že registr bude `__asm` mít danou hodnotu při zahájení bloku. Hodnoty registru není zaručeno, že `__asm` budou zachovány v samostatných blocích. Pokud ukončíte blok včleněného kódu a začnete jiný, nemůžete spoléhat na registry v druhém bloku zachovat jejich hodnoty z prvního bloku. Blok `__asm` zdědí všechny hodnoty registru vyplývající z normální tok řízení.
 
-Použijete-li konvenci volání `__fastcall`, kompilátor předá do zásobníku argumenty funkce v registrech. To může ve funkcích pomocí `__asm`ch bloků vytvořit problémy, protože funkce nemá žádný způsob, jak určit, který parametr je v němž se nachází. Pokud se funkce stane přijmout parametr v EAX vrátí a okamžitě uloží něco jiného v EAX vrátí, původní parametr se ztratí. Kromě toho je nutné zachovávat ECX registraci v jakékoli funkci deklarované pomocí `__fastcall`.
+Pokud používáte `__fastcall` konvence volání, kompilátor předá argumenty funkce v registrech namísto v zásobníku. To může způsobit problémy ve funkcích s `__asm` bloky, protože funkce nemá žádný způsob, jak zjistit, který parametr je ve kterém registru. Pokud se stane, že funkce obdrží parametr v EAX a okamžitě uloží něco jiného v EAXu, původní parametr se ztratí. Kromě toho je nutné zachovat registr ECX `__fastcall`v jakékoli funkci deklarované s .
 
-Aby se zabránilo takovému konfliktu registru, nepoužívejte konvenci `__fastcall` pro funkce, které obsahují blok `__asm`. Pokud zadáte `__fastcall` konvenci globálně s možností kompilátoru/gr, deklarujete všechny funkce obsahující `__asm` blok `__cdecl` nebo `__stdcall`. (Atribut `__cdecl` instruuje kompilátor, aby pro tuto funkci používal konvenci volání jazyka C.) Pokud nekompilujete s/gr, vyhněte se deklaraci funkce s atributem `__fastcall`.
+Chcete-li se vyhnout takové konflikty `__fastcall` registru, nepoužívejte `__asm` konvence pro funkce, které obsahují blok. Pokud zadáte `__fastcall` konvence globálně s parametrem /Gr kompilátoru, `__asm` deklarovat všechny funkce obsahující blok s `__cdecl` nebo `__stdcall`. (Atribut `__cdecl` říká kompilátoru použít konvence volání Jazyka C pro tuto funkci.) Pokud nejste kompilaci s /Gr, vyhněte `__fastcall` se deklarování funkce s atributem.
 
-Při použití `__asm` k zápisu jazyka sestavení v C/C++ Functions není nutné uchovávat Registry EAX vrátí, EBX, ECX, EDX, ESI a EDI. Například v POWER2. Příklad: v [zápisu funkcí s vloženým sestavením](../../assembler/inline/writing-functions-with-inline-assembly.md)funkce `power2` nezachovává hodnotu v registru EAX vrátí. Použití těchto registrů však ovlivní kvalitu kódu, protože Alokátor registrace je nemůže použít k ukládání hodnot napříč `__asm`mi bloky. Kromě toho při použití EBX, ESI nebo EDI ve vloženém kódu sestavení vynutíte kompilátor ukládat a obnovovat tyto registry ve funkci prologu a epilogu.
+Při `__asm` použití jazyka sestavení ve funkcích C/C++ není nutné uchovávat registry EAX, EBX, ECX, EDX, ESI nebo EDI. Například v POWER2. C příklad [v zápisu funkce s inline sestavení](../../assembler/inline/writing-functions-with-inline-assembly.md), `power2` funkce nezachová hodnotu v registru EAX. Použití těchto registrů však ovlivní kvalitu kódu, protože alokátor `__asm` registru je nemůže použít k ukládání hodnot mezi bloky. Kromě toho pomocí EBX, ESI nebo EDI v kódu inline sestavení vynutíte kompilátor ukládat a obnovovat tyto registry v prologu funkce a epilogu.
 
-Pro rozsah `__asm` bloku byste měli zachovat další používané Registry (například Registry DS, SS, SP, BP a Flags). Registry ESP a EBP byste měli zachovat, pokud nemáte nějaký důvod na jejich změnu (například na přepínání zásobníků). Viz také [optimalizace vloženého sestavení](../../assembler/inline/optimizing-inline-assembly.md).
+Měli byste zachovat další registry, které používáte (například DS, SS, SP, `__asm` BP a příznaky registry) pro rozsah bloku. Měli byste zachovat registry ESP a EBP, pokud nemáte nějaký důvod je změnit (například pro přepínání zásobníků). Viz také [optimalizace inline sestavení](../../assembler/inline/optimizing-inline-assembly.md).
 
-Některé typy SSE vyžadují zarovnání zásobníku na osm bajtů, což vynutí kompilátor generovat dynamický kód pro zarovnání zásobníku. Aby bylo možné přistupovat k místním proměnným i k parametrům funkce po zarovnání, kompilátor udržuje dva ukazatele rámců.  Pokud kompilátor provádí vynechání ukazatele na rámec (rpcrt4), bude používat EBP a ESP.  Pokud kompilátor neprovede!!, použije EBX a EBP. Chcete-li zajistit, aby kód běžel správně, neměňte EBX v kódu ASM, pokud funkce vyžaduje dynamické zarovnání zásobníku, protože by mohla změnit ukazatel na rámec. Buď přesuňte typy zarovnané na osm bajtů mimo funkci, nebo nepoužívejte EBX.
+Některé typy SSE vyžadují zarovnání zásobníku o osm bajtů, což kompilátoru vynucuje dynamický kód zarovnání zásobníku. Aby měl kompilátor přístup k místním proměnným i parametrům funkce po zarovnání, zachová dva ukazatele rámce.  Pokud kompilátor provede vynechání ukazatele rámce (FPO), použije EBP a ESP.  Pokud kompilátor neprovádí FPO, použije EBX a EBP. Chcete-li zajistit, aby kód fungoval správně, neupravujte EBX v kódu asm, pokud funkce vyžaduje dynamické zarovnání zásobníku, protože by mohla změnit ukazatel rámce. Buď přesuňte osmibajtové zarovnané typy z funkce nebo se vyhněte použití EBX.
 
 > [!NOTE]
->  Pokud váš kód vloženého sestavení změní příznak Direction pomocí instrukcí STD nebo CLD, je nutné obnovit příznak na původní hodnotu.
+> Pokud kód vrozené sestavení změní příznak směru pomocí pokynů STD nebo CLD, je nutné obnovit příznak na původní hodnotu.
 
-**Specifické pro konec Microsoftu**
+**END Microsoft Specifické**
 
 ## <a name="see-also"></a>Viz také
 
-[Vkládaný assembler](../../assembler/inline/inline-assembler.md)<br/>
+[Inline Assembler](../../assembler/inline/inline-assembler.md)<br/>

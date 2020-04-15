@@ -9,16 +9,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::IsSame structure
 - Microsoft::WRL::Details::IsSame::value constant
 ms.assetid: 1eddbc3f-3cc5-434f-8495-e4477e1f868e
-ms.openlocfilehash: b659f832756b79289181db34fa8d6fc0d974609d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fcaf33309521b44163022e0ffa9b1e03e53e2551
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62161274"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371349"
 ---
 # <a name="issame-structure"></a>IsSame – struktura
 
-Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.
+Podporuje infrastrukturu WRL a není určen pro použití přímo z vašeho kódu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -36,19 +36,19 @@ struct IsSame<T1, T1>;
 Typ.
 
 *T2*<br/>
-Jiného typu.
+Jiný typ.
 
 ## <a name="remarks"></a>Poznámky
 
-Testy, zda jeden zadaný typ je stejný jako jiný určený typ.
+Testuje, zda je jeden zadaný typ stejný jako jiný zadaný typ.
 
 ## <a name="members"></a>Členové
 
 ### <a name="public-constants"></a>Veřejné konstanty
 
-Název                    | Popis
+Name (Název)                    | Popis
 ----------------------- | --------------------------------------------------
-[IsSame::value](#value) | Označuje, zda jeden typ. je stejný jako jiný.
+[IsSame::hodnota](#value) | Označuje, zda je jeden typ stejný jako jiný.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -58,11 +58,11 @@ Název                    | Popis
 
 **Záhlaví:** internal.h
 
-**Namespace:** Microsoft::WRL::Details
+**Obor názvů:** Microsoft::WRL::Details
 
-## <a name="value"></a>IsSame::value
+## <a name="issamevalue"></a><a name="value"></a>IsSame::hodnota
 
-Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.
+Podporuje infrastrukturu WRL a není určen pro použití přímo z vašeho kódu.
 
 ```cpp
 template <typename T1, typename T2>
@@ -80,6 +80,6 @@ struct IsSame<T1, T1>
 
 ### <a name="remarks"></a>Poznámky
 
-Označuje, zda jeden typ. je stejný jako jiný.
+Označuje, zda je jeden typ stejný jako jiný.
 
-`value` je **true** Pokud parametrů šablony jsou stejné, a **false** Pokud se liší parametry šablony.
+`value`**true,** pokud parametry šablony jsou stejné, a **false,** pokud parametry šablony se liší.

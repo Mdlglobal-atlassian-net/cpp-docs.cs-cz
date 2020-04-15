@@ -1,6 +1,6 @@
 ---
-title: OptRef – třída
-description: Referenční C++ dokumentace třídy OptRef sady SDK pro Build Insights
+title: Třída OptRef
+description: C++ Build Insights SDK Reference třídy OptRef.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: c2abad6489012250862bc0721663572d03261bd4
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: dca8cc62eed4b7136f88ed5ba6a1a168b2de56c3
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78333102"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81324446"
 ---
-# <a name="optref-class"></a>OptRef – třída
+# <a name="optref-class"></a>Třída OptRef
 
 ::: moniker range="<=vs-2015"
 
-Sada C++ SDK pro Build Insights je kompatibilní se sadou Visual Studio 2017 a novější. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek selektor verzí sady Visual Studio pro tento článek na sadu Visual Studio 2017 nebo Visual Studio 2019.
+Sada C++ Build Insights SDK je kompatibilní s Visual Studio 2017 a vyšší. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek pro výběr **verze** sady Visual Studio pro tento článek na Visual Studio 2017 nebo Visual Studio 2019. Nachází se v horní části obsahu na této stránce.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Třída `OptRef` se používá s funkcemi [MatchEvent](../functions/match-event.md), [MatchEventInMemberFunction](../functions/match-event-in-member-function.md), [MatchEventStack](../functions/match-event-stack.md)a [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md) . Použijte ho ke spárování [OPT_REF](../event-table.md#opt-ref) události.
+Třída `OptRef` se používá s funkcemi [MatchEvent](../functions/match-event.md), [MatchEventInMemberFunction](../functions/match-event-in-member-function.md), [MatchEventStack](../functions/match-event-stack.md)a [MatchEventStackInMemberFunction.](../functions/match-event-stack-in-member-function.md) Použijte ji tak, aby odpovídala [události OPT_REF.](../event-table.md#opt-ref)
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -39,13 +39,13 @@ public:
 
 ## <a name="members"></a>Členové
 
-Spolu se zděděnými členy ze své základní třídy [aktivity](activity.md) obsahuje Třída `OptRef` následující členy:
+Spolu s zděděnými členy ze `OptRef` základní třídy [Aktivita](activity.md) obsahuje třída následující členy:
 
 ### <a name="constructors"></a>Konstruktory
 
 [OptRef](#opt-ref)
 
-## <a name="opt-ref"></a>OptRef
+## <a name="optref"></a><a name="opt-ref"></a>OptRef
 
 ```cpp
 OptRef(const RawEvent& event);
@@ -53,7 +53,7 @@ OptRef(const RawEvent& event);
 
 ### <a name="parameters"></a>Parametry
 
-\ *události*
-Událost [OPT_REF](../event-table.md#opt-ref) .
+*Událost*\
+[Událost OPT_REF.](../event-table.md#opt-ref)
 
 ::: moniker-end

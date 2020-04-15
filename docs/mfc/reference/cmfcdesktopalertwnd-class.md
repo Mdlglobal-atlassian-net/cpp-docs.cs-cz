@@ -1,5 +1,5 @@
 ---
-title: Cmfcdesktopalertwnd – třída
+title: CMFCDesktopAlertWnd – třída
 ms.date: 10/18/2018
 f1_keywords:
 - CMFCDesktopAlertWnd
@@ -44,18 +44,19 @@ helpviewer_keywords:
 - CMFCDesktopAlertWnd [MFC], SetSmallCaption
 - CMFCDesktopAlertWnd [MFC], SetTransparency
 ms.assetid: 73a2dd7b-ea84-4ae2-9830-7cf6e8dd2425
-ms.openlocfilehash: 3ff74f5025d888077b51f8191f043237597dfdbe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f9c59258cf757b5468985a954640ccec1543512b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403669"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367639"
 ---
-# <a name="cmfcdesktopalertwnd-class"></a>Cmfcdesktopalertwnd – třída
+# <a name="cmfcdesktopalertwnd-class"></a>CMFCDesktopAlertWnd – třída
 
-`CMFCDesktopAlertWnd` Třída implementuje funkce nemodálního dialogového okno, které se zobrazí na obrazovce a informuje uživatele o události.
+Třída `CMFCDesktopAlertWnd` implementuje funkce nemodální dialogové okno, které se zobrazí na obrazovce informovat uživatele o události.
 
-Další podrobnosti najdete ve zdrojovém kódu v **VC\\atlmfc\\src\\mfc** složce instalace sady Visual Studio.
+Další podrobnosti naleznete ve zdrojovém kódu umístěném ve složce **MFC\\knihovny\\VC src\\** instalace sady Visual Studio.
+
 ## <a name="syntax"></a>Syntaxe
 
 ```
@@ -66,71 +67,71 @@ class CMFCDesktopAlertWnd : public CWnd
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CMFCDesktopAlertWnd::Create](#create)|Vytvoří a inicializuje okno výstrah plochy.|
-|[CMFCDesktopAlertWnd::GetAnimationSpeed](#getanimationspeed)|Vrátí rychlost animace.|
+|[CMFCDesktopAlertWnd::Vytvořit](#create)|Vytvoří a inicializuje okno výstrah y plochy.|
+|[CMFCDesktopAlertWnd::Rychlost getanimationspeed](#getanimationspeed)|Vrátí rychlost animace.|
 |[CMFCDesktopAlertWnd::GetAnimationType](#getanimationtype)|Vrátí typ animace.|
-|[CMFCDesktopAlertWnd::GetAutoCloseTime](#getautoclosetime)|Vrátí hodnotu vypršení časového limitu automatickým ukončením.|
-|[CMFCDesktopAlertWnd::GetCaptionHeight](#getcaptionheight)|Vrátí výšku titulek.|
+|[CMFCDesktopAlertWnd::GetAutoCloseTime](#getautoclosetime)|Vrátí časový režim automatického uzavření.|
+|[CMFCDesktopAlertWnd::GetCaptionHeight](#getcaptionheight)|Vrátí výšku titulku.|
 |[CMFCDesktopAlertWnd::GetDialogSize](#getdialogsize)||
-|[CMFCDesktopAlertWnd::GetLastPos](#getlastpos)|Vrátí poslední platná pozice okno výstrah plochy na obrazovce.|
+|[CMFCDesktopAlertWnd::GetLastPos](#getlastpos)|Vrátí poslední platnou pozici okna upozornění na ploše na obrazovce.|
 |[CMFCDesktopAlertWnd::GetTransparency](#gettransparency)|Vrátí úroveň průhlednosti.|
-|[CMFCDesktopAlertWnd::HasSmallCaption](#hassmallcaption)|Určuje, zda se zobrazí okno výstrah plochy s titulkem malé.|
+|[CMFCDesktopAlertWnd::HasSmallCaption](#hassmallcaption)|Určuje, zda se zobrazí okno výstrahy na ploše s malým titulkem.|
 |[CMFCDesktopAlertWnd::OnBeforeShow](#onbeforeshow)||
-|[CMFCDesktopAlertWnd::OnClickLinkButton](#onclicklinkbutton)|Volá se rozhraním, když uživatel klikne na tlačítko odkazu na klasické pracovní plochy nabídky upozornění.|
-|[CMFCDesktopAlertWnd::OnCommand](#oncommand)|Rozhraní volá tuto funkci člena, když uživatel vybere položku z nabídky, pokud podřízený ovládací prvek odešle zprávu s oznámením, nebo pokud je přeložen stisknutí kláves akcelerátoru. (Přepíše [CWnd::OnCommand](../../mfc/reference/cwnd-class.md#oncommand).)|
+|[CMFCDesktopAlertWnd::OnClickLinkButton](#onclicklinkbutton)|Volat rámci, když uživatel klepne na tlačítko odkazu umístěné v nabídce upozornění plochy.|
+|[CMFCDesktopAlertWnd::OnCommand](#oncommand)|Rozhraní Framework volá tuto členská funkci, když uživatel vybere položku z nabídky, když podřízený ovládací prvek odešle oznámení nebo při přeložení klávesy akcelerátoru. (Přepíše [CWnd::OnCommand](../../mfc/reference/cwnd-class.md#oncommand).)|
 |[CMFCDesktopAlertWnd::OnDraw](#ondraw)||
 |[CMFCDesktopAlertWnd::ProcessCommand](#processcommand)||
-|[CMFCDesktopAlertWnd::SetAnimationSpeed](#setanimationspeed)|Nastaví nové rychlost animace.|
+|[CMFCDesktopAlertWnd::Rychlost SetAnimationSpeed](#setanimationspeed)|Nastaví novou rychlost animace.|
 |[CMFCDesktopAlertWnd::SetAnimationType](#setanimationtype)|Nastaví typ animace.|
-|[CMFCDesktopAlertWnd::SetAutoCloseTime](#setautoclosetime)|Nastaví automatické ukončení časový limit.|
-|[CMFCDesktopAlertWnd::SetSmallCaption](#setsmallcaption)|Přepne mezi běžné, že malé titulky.|
-|[CMFCDesktopAlertWnd::SetTransparency](#settransparency)|Nastaví úroveň průhlednosti.|
+|[CMFCDesktopAlertWnd::SetAutoCloseTime](#setautoclosetime)|Nastaví časový režim automatického uzavření.|
+|[CMFCDesktopAlertWnd::SetSmallCaption](#setsmallcaption)|Přepíná mezi malými a normálními titulky.|
+|[CMFCDesktopAlertWnd::Nastavit průhlednost](#settransparency)|Nastaví úroveň průhlednosti.|
 
 ## <a name="remarks"></a>Poznámky
 
-Okno výstrah plochy může být transparentní, může se objevit s efekty animace a můžou zmizet (po zadané době nebo když je uživatel nezavře kliknutím na tlačítko Zavřít).
+Okno upozornění na ploše může být průhledné, může se zobrazit s animačními efekty a může zmizet (po zadaném zpoždění nebo když ho uživatel zavře kliknutím na tlačítko zavřít).
 
-Okno výstrah plochy může také obsahovat výchozí dialogové okno, který zase obsahuje ikonu, text zprávy (popisek) a odkaz. Okno výstrah plochy, případně může obsahovat vlastní dialogové okno z prostředků.
+Okno s upozorněním na ploše může také obsahovat výchozí dialogové okno, které zase obsahuje ikonu, text zprávy (popisek) a odkaz. Případně okno upozornění na ploše může obsahovat vlastní dialog z prostředků aplikace.
 
-Vytvořit okno výstrah plochy ve dvou krocích. Nejprve volat konstruktor k vytvoření `CMFCDesktopAlertWnd` objektu. Za druhé volání [CMFCDesktopAlertWnd::Create](#create) členskou funkci pro vytvoření okna a připojte ji k `CMFCDesktopAlertWnd` objektu.
+Okno výstrahy na ploše vytvoříte ve dvou krocích. Nejprve volání konstruktoru `CMFCDesktopAlertWnd` k vytvoření objektu. Za druhé, volání [CMFCDesktopAlertWnd::Create](#create) členské funkce k vytvoření `CMFCDesktopAlertWnd` okna a připojit k objektu.
 
-`CMFCDesktopAlertWnd` Objekt vytvoří dialogové okno zvláštní podřízené, který vyplní klientské oblasti okno výstrah plochy. Dialogové okno vlastní všechny ovládací prvky, které jsou umístěny v něm.
+Objekt `CMFCDesktopAlertWnd` vytvoří speciální podřízené dialogové okno, které vyplní klientskou oblast okna výstrahy plochy. Dialogové okno vlastní všechny ovládací prvky, které jsou umístěny na něm.
 
-Chcete-li zobrazit dialogové okno Vlastní v automaticky otevíraném okně, postupujte takto:
+Chcete-li zobrazit vlastní dialogové okno ve vyskakovacím okně, postupujte takto:
 
-1. Odvodit třídu z `CMFCDesktopAlertDialog`.
+1. Odvodit `CMFCDesktopAlertDialog`třídu z .
 
-1. Vytvoření šablony dialogového okna podřízené v prostředcích.
+1. Vytvořte podřízenou šablonu dialogového okna v prostředcích.
 
-1. Volání [CMFCDesktopAlertWnd::Create](#create) pomocí ID prostředku šablony dialogového okna a ukazatel na informace o modulu runtime třídy odvozené třídy.
+1. Volání [CMFCDesktopAlertWnd::Create](#create) pomocí ID prostředku šablony dialogového okna a ukazatele na informace o třídě runtime odvozené třídy.
 
-1. Program vlastní dialogových oken pro zpracování všech oznámení z hostované ovládací prvky nebo programu hostované ovládací prvky pro zpracování těchto oznámení přímo.
+1. Naprogramujte vlastní dialogové okno pro zpracování všech oznámení přicházejících z hostovaných ovládacích prvků nebo naprogramujte hostované ovládací prvky tak, aby tato oznámení zpracovávaly přímo.
 
-Můžete řídit chování okno výstrah plochy, použijte následující funkce:
+Chování okna upozornění na ploše můžete použít následující funkce:
 
-- Nastavit typ animace voláním [CMFCDesktopAlertWnd::SetAnimationType](#setanimationtype). Platné možnosti jsou při rozvinutí snímků a má vyblednout.
+- Nastavte typ animace voláním [CMFCDesktopAlertWnd::SetAnimationType](#setanimationtype). Mezi platné možnosti patří rozvinout, posunout a zeslabit.
 
-- Nastavit rychlost snímku animace voláním [CMFCDesktopAlertWnd::SetAnimationSpeed](#setanimationspeed).
+- Nastavte rychlost snímku animace voláním [CMFCDesktopAlertWnd::SetAnimationSpeed](#setanimationspeed).
 
-- Nastavit úroveň průhlednosti voláním [CMFCDesktopAlertWnd::SetTransparency](#settransparency).
+- Nastavte úroveň průhlednosti voláním [CMFCDesktopAlertWnd::SetTransparency](#settransparency).
 
-- Změňte velikost popisků na malé voláním [CMFCDesktopAlertWnd::SetSmallCaption](#setsmallcaption). Malé titulek je 7 pixelů na výšku.
+- Změňte velikost titulku na malé voláním [CMFCDesktopAlertWnd::SetSmallCaption](#setsmallcaption). Malý titulek je vysoký 7 pixelů.
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak použít různé metody v `CMFCDesktopAlertWnd` třída ke konfiguraci `CMFCDesktopAlertWnd` objektu. Tento příklad ukazuje, jak nastavit typ animace, nastavit průhlednosti v automaticky otevíraném okně, určete, že okno výstrah zobrazí malé titulek a nastavit čas, který uplyne mezi výstrah okno automaticky zavře. Tento příklad také ukazuje, jak vytvořit a inicializovat okno výstrah plochy. Tento fragment kódu je součástí [Desktopu výstrah demonstrační ukázka](../../overview/visual-cpp-samples.md).
+Následující příklad ukazuje, jak používat různé `CMFCDesktopAlertWnd` metody ve `CMFCDesktopAlertWnd` třídě ke konfiguraci objektu. Příklad ukazuje, jak nastavit typ animace, nastavit průhlednost rozbalovacího okna, určit, že okno výstrahy zobrazí malý titulek, a nastavit čas, který uplyne, než se okno výstrahy automaticky zavře. Příklad také ukazuje, jak vytvořit a inicializovat okno výstrahy plochy. Tento fragment kódu je součástí [ukázky ukázky upozornění](../../overview/visual-cpp-samples.md)na ploše .
 
 [!code-cpp[NVC_MFC_DesktopAlertDemo#1](../../mfc/reference/codesnippet/cpp/cmfcdesktopalertwnd-class_1.cpp)]
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObjekt](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[CCmdCíl](../../mfc/reference/ccmdtarget-class.md)
 
-[CWnd](../../mfc/reference/cwnd-class.md)
+[Cwnd](../../mfc/reference/cwnd-class.md)
 
 [CMFCDesktopAlertWnd](../../mfc/reference/cmfcdesktopalertwnd-class.md)
 
@@ -138,9 +139,9 @@ Následující příklad ukazuje, jak použít různé metody v `CMFCDesktopAler
 
 **Záhlaví:** afxDesktopAlertWnd.h
 
-##  <a name="create"></a>  CMFCDesktopAlertWnd::Create
+## <a name="cmfcdesktopalertwndcreate"></a><a name="create"></a>CMFCDesktopAlertWnd::Vytvořit
 
-Vytvoří a inicializuje okno výstrah plochy.
+Vytvoří a inicializuje okno výstrah y plochy.
 
 ```
 virtual BOOL Create(
@@ -159,37 +160,37 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>Parametry
 
-*pWndOwner*<br/>
-[out v] Určuje vlastníka okně oznámení. Tento vlastník pak dostanou všechna oznámení pro okno výstrah plochy. Tato hodnota nemůže být NULL.
+*pWndVlastník*<br/>
+[dovnitř, ven] Určuje vlastníka okna výstrahy. Tento vlastník pak obdrží všechna oznámení pro okno upozornění na ploše. Tato hodnota nemůže být null.
 
 *uiDlgResID*<br/>
-[in] Určuje ID prostředku okna výstrahy.
+[v] Určuje ID prostředku okna výstrahy.
 
-*hMenu*<br/>
-[in] Určuje nabídku, která se zobrazí, když uživatel klikne na tlačítko nabídky. Pokud má hodnotu NULL, není zobrazeno tlačítko nabídky.
+*hNabídka*<br/>
+[v] Určuje nabídku, která se zobrazí, když uživatel klepne na tlačítko nabídky. Pokud null, tlačítko nabídky se nezobrazí.
 
 *ptPos*<br/>
-[in] Určuje počáteční pozici, kde se zobrazí okno výstrahy, pomocí souřadnice obrazovky. Pokud je tento parametr (-1, -1), okno upozornění se zobrazí v pravém dolním rohu obrazovky.
+[v] Určuje počáteční polohu, ve které se zobrazí výstražné okno, pomocí souřadnic obrazovky. Pokud je tento parametr (-1, -1), zobrazí se v pravém dolním rohu obrazovky okno výstrahy.
 
 *pRTIDlgBar*<br/>
-[in] Informace o třídě modulu runtime pro vlastní třídy dialogového okna, která zahrnuje klientské oblasti okna výstrahy.
+[v] Informace o třídě runtime pro vlastní třídu dialogového okna, která pokrývá klientskou oblast okna výstrahy.
 
 *params*<br/>
-[in] Určuje parametry, které se používají k vytvoření výstrahy okna.
+[v] Určuje parametry, které se používají k vytvoření okna výstrahy.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE, pokud okno upozornění se úspěšně; vytvořil. v opačném případě hodnota FALSE.
+PRAVDA, pokud bylo okno výstrahy úspěšně vytvořeno. jinak NEPRAVDA.
 
 ### <a name="remarks"></a>Poznámky
 
-Volejte tuto metodu za účelem vytvoření výstrahy okna. Klientské oblasti okna oznámení obsahuje podřízené dialogové okno, který je hostitelem všechny ovládací prvky, které se zobrazí uživateli.
+Volání této metody k vytvoření okna výstrahy. Klientská oblast okna výstrahy obsahuje podřízené dialogové okno, které hostuje všechny ovládací prvky, které jsou zobrazeny uživateli.
 
-První přetížení metody vytvoří okno oznámení, která obsahuje podřízené dialogové okno, který je načten z prostředků. První přetížení metody můžete také zadat informace o třídě modulu runtime pro třídu dialogového okna vlastní pole.
+První metoda přetížení vytvoří okno výstrahy, která obsahuje podřízené dialogové okno, které je načteno z prostředků aplikace. První metoda přetížení můžete také určit informace o třídě runtime pro vlastní třídu dialogového okna.
 
-Druhé přetížení metody vytvoří okno oznámení, která obsahuje výchozí ovládací prvky. Můžete určit, jaké ovládací prvky se zobrazí tak, že upravíte [cmfcdesktopalertwndinfo – třída](../../mfc/reference/cmfcdesktopalertwndinfo-class.md).
+Druhá metoda přetížení vytvoří okno výstrahy, která obsahuje výchozí ovládací prvky. Můžete určit, které ovládací prvky se mají zobrazit úpravou [třídy CMFCDesktopAlertWndInfo](../../mfc/reference/cmfcdesktopalertwndinfo-class.md).
 
-##  <a name="getanimationspeed"></a>  CMFCDesktopAlertWnd::GetAnimationSpeed
+## <a name="cmfcdesktopalertwndgetanimationspeed"></a><a name="getanimationspeed"></a>CMFCDesktopAlertWnd::Rychlost getanimationspeed
 
 Vrátí rychlost animace.
 
@@ -199,13 +200,13 @@ UINT GetAnimationSpeed() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Rychlost animace okně oznámení v milisekundách.
+Rychlost animace okna výstrahy v milisekundách.
 
 ### <a name="remarks"></a>Poznámky
 
-Rychlost animace popisuje, jak rychle okně oznámení se otevře a zavře.
+Rychlost animace popisuje, jak rychle se okno výstrahy otevírá a zavírá.
 
-##  <a name="getanimationtype"></a>  CMFCDesktopAlertWnd::GetAnimationType
+## <a name="cmfcdesktopalertwndgetanimationtype"></a><a name="getanimationtype"></a>CMFCDesktopAlertWnd::GetAnimationType
 
 Vrátí typ animace.
 
@@ -215,21 +216,21 @@ CMFCPopupMenu::ANIMATION_TYPE GetAnimationType();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Jedním z následujících typů animace:
+Jeden z následujících typů animací:
 
 - NO_ANIMATION
 
-- ROZBALIT
+- Rozvinout
 
-- SNÍMEK
+- Snímek
 
-- MÁ VYBLEDNOUT
+- Fade
 
 - SYSTEM_DEFAULT_ANIMATION
 
-##  <a name="getautoclosetime"></a>  CMFCDesktopAlertWnd::GetAutoCloseTime
+## <a name="cmfcdesktopalertwndgetautoclosetime"></a><a name="getautoclosetime"></a>CMFCDesktopAlertWnd::GetAutoCloseTime
 
-Vrátí hodnotu vypršení časového limitu automatickým ukončením.
+Vrátí časový režim automatického uzavření.
 
 ```
 int GetAutoCloseTime() const;
@@ -237,15 +238,15 @@ int GetAutoCloseTime() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Doba v milisekundách, po jejichž uplynutí bude upozornění okno automaticky zavře.
+Čas v milisekundách, po kterém se automaticky zavře okno výstrahy.
 
 ### <a name="remarks"></a>Poznámky
 
-Tuto metodu použijte k určení, jak dlouho má uplynout před výstrah okno se automaticky zavře.
+Pomocí této metody můžete určit, kolik času má uplynout, než se okno výstrahy automaticky zavře.
 
-##  <a name="getcaptionheight"></a>  CMFCDesktopAlertWnd::GetCaptionHeight
+## <a name="cmfcdesktopalertwndgetcaptionheight"></a><a name="getcaptionheight"></a>CMFCDesktopAlertWnd::GetCaptionHeight
 
-Vrátí výšku titulek.
+Vrátí výšku titulku.
 
 ```
 virtual int GetCaptionHeight();
@@ -253,15 +254,15 @@ virtual int GetCaptionHeight();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Výška v pixelech titulek.
+Výška titulku v pixelech.
 
 ### <a name="remarks"></a>Poznámky
 
-Tuto metodu lze přepsat v odvozené třídě. Výchozí implementace buď: vrací hodnotu Výška malé titulek (7 pixelů), pokud by měl automaticky otevíraném okně zobrazit malé popisek nebo hodnotě získané z rozhraní Windows API funkce `GetSystemMetrics(SM_CYSMCAPTION)`.
+Tato metoda může být přepsána v odvozené třídě. Výchozí implementace buď: vrátí malou hodnotu výšky titulku (7 pixelů), pokud má vyskakovací okno zobrazit malý titulek nebo hodnotu získanou z funkce `GetSystemMetrics(SM_CYSMCAPTION)`rozhraní API systému Windows .
 
-##  <a name="getlastpos"></a>  CMFCDesktopAlertWnd::GetLastPos
+## <a name="cmfcdesktopalertwndgetlastpos"></a><a name="getlastpos"></a>CMFCDesktopAlertWnd::GetLastPos
 
-Vrátí poslední pozice okno výstrah plochy na obrazovce.
+Vrátí poslední pozici okna upozornění na ploše na obrazovce.
 
 ```
 CPoint GetLastPos() const;
@@ -269,13 +270,13 @@ CPoint GetLastPos() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Bod, v souřadnicovém systému obrazovky.
+Bod, na souřadnicích obrazovky.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda vrací poslední platná umístění okna oznámení na obrazovce.
+Tato metoda vrátí poslední platnou pozici výstražného okna na obrazovce.
 
-##  <a name="gettransparency"></a>  CMFCDesktopAlertWnd::GetTransparency
+## <a name="cmfcdesktopalertwndgettransparency"></a><a name="gettransparency"></a>CMFCDesktopAlertWnd::GetTransparency
 
 Vrátí úroveň průhlednosti.
 
@@ -285,15 +286,15 @@ BYTE GetTransparency() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Úroveň průhlednosti mezi 0 a 255. Vyšší hodnota, další neprůhledné okna.
+Úroveň transparentnosti mezi 0 a 255, včetně. Čím větší hodnota, tím více neprůhledné okno.
 
 ### <a name="remarks"></a>Poznámky
 
-Pomocí této metody můžete načíst aktuální úroveň průhlednosti okna výstrahy.
+Tato metoda slouží k načtení aktuální úrovně průhlednosti okna výstrahy.
 
-##  <a name="hassmallcaption"></a>  CMFCDesktopAlertWnd::HasSmallCaption
+## <a name="cmfcdesktopalertwndhassmallcaption"></a><a name="hassmallcaption"></a>CMFCDesktopAlertWnd::HasSmallCaption
 
-Určuje, zda má okno výstrah plochy malé titulků nebo popisků normální velikosti.
+Určuje, zda má okno upozornění na ploše malý titulek nebo titulek běžné velikosti.
 
 ```
 BOOL HasSmallCaption() const;
@@ -301,13 +302,13 @@ BOOL HasSmallCaption() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE, pokud automaticky otevíraném okně se zobrazí malá titulkem; FALSE, pokud se zobrazí okno automaticky otevírané okno s popiskem normální velikosti.
+TRUE, pokud se vyskakovací okno zobrazí s malým titulkem; FALSE, pokud se zobrazí vyskakovací okno s titulkem běžné velikosti.
 
 ### <a name="remarks"></a>Poznámky
 
-Tuto metodu použijte k určení, zda má automaticky otevíraném okně malé titulků nebo popisků normální velikosti. Ve výchozím nastavení je malé titulek 7 pixelů na výšku. Výška titulek standardní velikost lze získat voláním funkce rozhraní Windows API `GetSystemMetrics(SM_CYCAPTION)`.
+Tato metoda slouží k určení, zda má vyskakovací okno malý titulek nebo titulek běžné velikosti. Ve výchozím nastavení je malý titulek vysoký 7 pixelů. Výšku titulku běžné velikosti můžete získat voláním `GetSystemMetrics(SM_CYCAPTION)`funkce rozhraní API systému Windows .
 
-##  <a name="onbeforeshow"></a>  CMFCDesktopAlertWnd::OnBeforeShow
+## <a name="cmfcdesktopalertwndonbeforeshow"></a><a name="onbeforeshow"></a>CMFCDesktopAlertWnd::OnBeforeShow
 
 ```
 virtual BOOL OnBeforeShow(CPoint&);
@@ -315,15 +316,15 @@ virtual BOOL OnBeforeShow(CPoint&);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *CPoint &*<br/>
+[v] *CPoint&*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="onclicklinkbutton"></a>  CMFCDesktopAlertWnd::OnClickLinkButton
+## <a name="cmfcdesktopalertwndonclicklinkbutton"></a><a name="onclicklinkbutton"></a>CMFCDesktopAlertWnd::OnClickLinkButton
 
-Volá se rozhraním, když uživatel klikne na tlačítko odkazu na klasické pracovní plochy nabídky upozornění.
+Volat rámci, když uživatel klepne na tlačítko odkazu umístěné v nabídce upozornění plochy.
 
 ```
 virtual BOOL OnClickLinkButton(UINT uiCmdID);
@@ -332,17 +333,17 @@ virtual BOOL OnClickLinkButton(UINT uiCmdID);
 ### <a name="parameters"></a>Parametry
 
 *uiCmdID*<br/>
-[in] Tento parametr se nepoužívá.
+[v] Tento parametr se nepoužívá.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vždy hodnotu FALSE.
+Vždy FALSE
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto metodu v odvozené třídě, pokud chcete, která vás upozorní, když uživatel klikne na odkaz v okně oznámení.
+Přepsat tuto metodu v odvozené třídě, pokud chcete být upozorněni, když uživatel klepne na odkaz v okně výstrahy.
 
-##  <a name="oncommand"></a>  CMFCDesktopAlertWnd::OnCommand
+## <a name="cmfcdesktopalertwndoncommand"></a><a name="oncommand"></a>CMFCDesktopAlertWnd::OnCommand
 
 ```
 virtual BOOL OnCommand(
@@ -352,15 +353,15 @@ virtual BOOL OnCommand(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *wParam*<br/>
+[v] *wParam*<br/>
 
-[in] *lParam*<br/>
+[v] *LParam*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="ondraw"></a>  CMFCDesktopAlertWnd::OnDraw
+## <a name="cmfcdesktopalertwndondraw"></a><a name="ondraw"></a>CMFCDesktopAlertWnd::OnDraw
 
 ```
 virtual void OnDraw(CDC* pDC);
@@ -368,11 +369,11 @@ virtual void OnDraw(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pDC*<br/>
+[v] *pDC*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="processcommand"></a>  CMFCDesktopAlertWnd::ProcessCommand
+## <a name="cmfcdesktopalertwndprocesscommand"></a><a name="processcommand"></a>CMFCDesktopAlertWnd::ProcessCommand
 
 ```
 BOOL ProcessCommand(HWND hwnd);
@@ -380,15 +381,15 @@ BOOL ProcessCommand(HWND hwnd);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *hwnd*<br/>
+[v] *hwnd*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="setanimationspeed"></a>  CMFCDesktopAlertWnd::SetAnimationSpeed
+## <a name="cmfcdesktopalertwndsetanimationspeed"></a><a name="setanimationspeed"></a>CMFCDesktopAlertWnd::Rychlost SetAnimationSpeed
 
-Nastaví nové rychlost animace.
+Nastaví novou rychlost animace.
 
 ```
 void SetAnimationSpeed(UINT nSpeed);
@@ -396,14 +397,14 @@ void SetAnimationSpeed(UINT nSpeed);
 
 ### <a name="parameters"></a>Parametry
 
-*nSpeed*<br/>
-[in] Určuje novou rychlost animace v milisekundách.
+*nRychlost*<br/>
+[v] Určuje novou rychlost animace v milisekundách.
 
 ### <a name="remarks"></a>Poznámky
 
-Voláním této metody lze nastavit rychlost animace okna výstrahy. Rychlost animace výchozí doba je 30 milisekund.
+Volání této metody nastavit rychlost animace pro okno výstrahy. Výchozí rychlost animace je 30 milisekund.
 
-##  <a name="setanimationtype"></a>  CMFCDesktopAlertWnd::SetAnimationType
+## <a name="cmfcdesktopalertwndsetanimationtype"></a><a name="setanimationtype"></a>CMFCDesktopAlertWnd::SetAnimationType
 
 Nastaví typ animace.
 
@@ -413,26 +414,26 @@ void SetAnimationType(CMFCPopupMenu::ANIMATION_TYPE type);
 
 ### <a name="parameters"></a>Parametry
 
-*type*<br/>
-[in] Určuje typ animace.
+*Typ*<br/>
+[v] Určuje typ animace.
 
 ### <a name="remarks"></a>Poznámky
 
-Voláním této metody lze nastavit typ animace. Můžete určit jednu z následujících hodnot:
+Volání této metody nastavit typ animace. Můžete určit jednu z následujících hodnot:
 
 - NO_ANIMATION
 
-- ROZBALIT
+- Rozvinout
 
-- SNÍMEK
+- Snímek
 
-- MÁ VYBLEDNOUT
+- Fade
 
 - SYSTEM_DEFAULT_ANIMATION
 
-##  <a name="setautoclosetime"></a>  CMFCDesktopAlertWnd::SetAutoCloseTime
+## <a name="cmfcdesktopalertwndsetautoclosetime"></a><a name="setautoclosetime"></a>CMFCDesktopAlertWnd::SetAutoCloseTime
 
-Nastaví automatické ukončení časový limit.
+Nastaví časový režim automatického uzavření.
 
 ```
 void SetAutoCloseTime(int nTime);
@@ -440,16 +441,16 @@ void SetAutoCloseTime(int nTime);
 
 ### <a name="parameters"></a>Parametry
 
-*nTime*<br/>
-[in] Doba v milisekundách, který uplyne mezi výstrah okno automaticky zavře.
+*nČas*<br/>
+[v] Čas v milisekundách, který uplyne před automaticky zavře okno výstrahy.
 
 ### <a name="remarks"></a>Poznámky
 
-Okno výstrahy se automaticky ukončí po zadanou dobu, pokud uživatel nekomunikuje s oknem.
+Okno výstrahy se automaticky zavře po zadaném čase, pokud uživatel s oknem nepracuje.
 
-##  <a name="setsmallcaption"></a>  CMFCDesktopAlertWnd::SetSmallCaption
+## <a name="cmfcdesktopalertwndsetsmallcaption"></a><a name="setsmallcaption"></a>CMFCDesktopAlertWnd::SetSmallCaption
 
-Přepne mezi malé a standardní velikost popisků.
+Přepíná mezi titulky malé a běžné velikosti.
 
 ```
 void SetSmallCaption(BOOL bSmallCaption = TRUE);
@@ -457,16 +458,16 @@ void SetSmallCaption(BOOL bSmallCaption = TRUE);
 
 ### <a name="parameters"></a>Parametry
 
-*bSmallCaption*<br/>
-[in] TRUE, pokud chcete určit, že okno výstrah zobrazí malé titulek; v opačném případě FALSE, pokud chcete určit, že výstrahy okně se zobrazí popisek normální velikosti.
+*bMalý titulek*<br/>
+[v] TRUE, chcete-li určit, že okno výstrahy zobrazí malý titulek; v opačném případě FALSE určit, že okno výstrahy zobrazí titulek běžné velikosti.
 
 ### <a name="remarks"></a>Poznámky
 
-Volejte tuto metodu pro zobrazení titulků malé nebo normální velikosti. Ve výchozím nastavení je malé titulek 7 pixelů na výšku. Velikost regulární titulek lze získat voláním funkce rozhraní Windows API `GetSystemMetrics(SM_CYCAPTION)`.
+Volání této metody zobrazíte popisek malé nebo běžné velikosti. Ve výchozím nastavení je malý titulek vysoký 7 pixelů. Velikost běžného titulku můžete získat voláním `GetSystemMetrics(SM_CYCAPTION)`funkce rozhraní API systému Windows .
 
-##  <a name="settransparency"></a>  CMFCDesktopAlertWnd::SetTransparency
+## <a name="cmfcdesktopalertwndsettransparency"></a><a name="settransparency"></a>CMFCDesktopAlertWnd::Nastavit průhlednost
 
-Nastaví úroveň průhlednosti v automaticky otevíraném okně.
+Nastaví úroveň průhlednosti vyskakovacího okna.
 
 ```
 void SetTransparency(BYTE nTransparency);
@@ -474,14 +475,14 @@ void SetTransparency(BYTE nTransparency);
 
 ### <a name="parameters"></a>Parametry
 
-*nTransparency*<br/>
-[in] Určuje úroveň průhlednosti. Tato hodnota musí být mezi 0 a 255. Vyšší hodnota, další neprůhledné okna.
+*nPrůhlednost*<br/>
+[v] Určuje úroveň průhlednosti. Tato hodnota musí být mezi 0 a 255 včetně. Čím větší hodnota, tím více neprůhledné okno.
 
 ### <a name="remarks"></a>Poznámky
 
-Volání této funkce nastavíte úroveň průhlednosti v automaticky otevíraném okně.
+Voláním této funkce nastavte úroveň průhlednosti vyskakovacího okna.
 
-##  <a name="getdialogsize"></a>  CMFCDesktopAlertWnd::GetDialogSize
+## <a name="cmfcdesktopalertwndgetdialogsize"></a><a name="getdialogsize"></a>CMFCDesktopAlertWnd::GetDialogSize
 
 ```
 virtual CSize GetDialogSize();
@@ -491,10 +492,10 @@ virtual CSize GetDialogSize();
 
 ### <a name="remarks"></a>Poznámky
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>
 [CMFCDesktopAlertWndInfo – třída](../../mfc/reference/cmfcdesktopalertwndinfo-class.md)<br/>
-[CMFCDesktopAlertDialog – třída](../../mfc/reference/cmfcdesktopalertdialog-class.md)<br/>
+[Třída CMFCDesktopAlertDialog](../../mfc/reference/cmfcdesktopalertdialog-class.md)<br/>
 [CWnd – třída](../../mfc/reference/cwnd-class.md)

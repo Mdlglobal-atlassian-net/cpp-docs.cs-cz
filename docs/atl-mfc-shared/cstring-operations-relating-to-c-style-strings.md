@@ -1,5 +1,5 @@
 ---
-title: CString – operace týkající se řetězců ve stylu C
+title: CString – operace týkající se řetězců ve stylu jazyka C
 ms.date: 11/04/2016
 helpviewer_keywords:
 - CString objects, basic operations
@@ -15,34 +15,34 @@ helpviewer_keywords:
 - strings [C++], class CString
 - casting CString objects
 ms.assetid: 5048de8a-5298-4891-b8a0-c554b5a3ac1b
-ms.openlocfilehash: eee23296d9aac40849dacf58c3b3d9bdf583d1df
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 406a934d3691c7787085cc319770074ac2ee5926
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62236096"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81317945"
 ---
-# <a name="cstring-operations-relating-to-c-style-strings"></a>CString – operace týkající se řetězců ve stylu C
+# <a name="cstring-operations-relating-to-c-style-strings"></a>CString – operace týkající se řetězců ve stylu jazyka C
 
-A [CString](../atl-mfc-shared/using-cstring.md) objektu obsahuje znak řetězec data. `CString` dědí sadu [metody a operátory](../atl-mfc-shared/reference/cstringt-class.md) , která jsou definována v šabloně třídy [CStringT](../atl-mfc-shared/reference/cstringt-class.md) pro práci s řetězcovými daty. (`CString` je **typedef** , který se specializuje `CStringT` pracovat, jaká data znak, který `CString` podporuje.)
+[CString](../atl-mfc-shared/using-cstring.md) objekt obsahuje data řetězce znaků. `CString`dědí sadu [metod a operátorů,](../atl-mfc-shared/reference/cstringt-class.md) které jsou definovány v šabloně třídy [CStringT](../atl-mfc-shared/reference/cstringt-class.md) pro práci s řetězcovými daty. (`CString` je **typedef,** `CStringT` který se specializuje na práci `CString` s druhem znakových dat, která podporují.)
 
-`CString` neukládá znaková data interně jako řetězec stylu C zakončený hodnotou null. Místo toho `CString` sleduje délku znaková data tak, aby lépe zabezpečený můžete sledovat data a prostor vyžaduje.
+`CString`neukládá data znaků interně jako řetězec s nulovým ukončeným stylem C. Místo `CString` toho sleduje délku dat znaků tak, aby bylo možné bezpečněji sledovat data a místo, které vyžaduje.
 
-`CString` přijímají řetězce ve stylu jazyka C a nabízí způsobů, jak získat přístup k datům znak jako řetězec stylu C. Toto téma obsahuje následující oddíly, které vysvětlují, jak používat `CString` objekt, jako by byly řetězec stylu C zakončený hodnotou null.
+`CString`přijímá řetězce stylu C a poskytuje způsoby přístupu k datům znaků jako řetězec stylu C. Toto téma obsahuje následující části, `CString` které vysvětlují, jak používat objekt, jako by se jednalo o řetězec s nulovým ukončeným stylem C.
 
-- [Převádění řetězců ve stylu C zakončený hodnotou null](#_core_using_cstring_as_a_c.2d.style_null.2d.terminated_string)
+- [Převod na řetězce ukončené nulou ve stylu C](#_core_using_cstring_as_a_c.2d.style_null.2d.terminated_string)
 
-- [Práce s řetězci funkce standardní knihovny run-time](#_core_working_with_standard_run.2d.time_library_string_functions)
+- [Práce se standardními funkcemi řetězce knihovny za běhu](#_core_working_with_standard_run.2d.time_library_string_functions)
 
-- [Úprava CString obsah přímo](#_core_modifying_cstring_contents_directly)
+- [Úprava obsahu CString přímo](#_core_modifying_cstring_contents_directly)
 
-- [CString – objekty pomocí funkce argumentů proměnných](#_core_using_cstring_objects_with_variable_argument_functions)
+- [Použití objektů CString s funkcemi proměnnéargumentu](#_core_using_cstring_objects_with_variable_argument_functions)
 
-- [Určení CString formální parametry.](#_core_specifying_cstring_formal_parameters)
+- [Určení formálních parametrů CString](#_core_specifying_cstring_formal_parameters)
 
-##  <a name="_core_using_cstring_as_a_c.2d.style_null.2d.terminated_string"></a> CString – použití jako řetězec stylu C zakončený hodnotou Null
+## <a name="using-cstring-as-a-c-style-null-terminated-string"></a><a name="_core_using_cstring_as_a_c.2d.style_null.2d.terminated_string"></a>Použití řetězce CString jako řetězce s nulovým ukončeným stylem C
 
-Použití `CString` objektu jako řetězec stylu C, objekt přetypujte na LPCTSTR. V následujícím příkladu `CString` vrací ukazatel jen pro čtení ve stylu jazyka C řetězec zakončený hodnotou null. `strcpy` Funkce vloží kopii řetězce ve stylu jazyka C v proměnné `myString`.
+Chcete-li `CString` použít objekt jako řetězec ve stylu C, přetypování objektu LPCTSTR. V následujícím příkladu `CString` vrátí ukazatel pro čtení jen pro čtení c-styl null ukončenřetězec. Funkce `strcpy` vloží kopii řetězce stylu C do `myString`proměnné .
 
 ```cpp
 CString aCString = "A string";
@@ -50,56 +50,56 @@ char myString[256];
 strcpy(myString, (LPCTSTR)aCString);
 ```
 
-Můžete použít `CString` metody, například `SetAt`můžete upravit jednotlivé znaky na objekt řetězce. Ale LPCTSTR ukazatel je dočasný a níže uvedených situací při jakékoli změně `CString`. `CString` Můžete také přejít mimo rozsah a automaticky se neodstraní. Doporučujeme, abyste měli čerstvé LPCTSTR ukazatel `CString` objektu pokaždé, když použijete jednu.
+Metody můžete `CString` použít například `SetAt`k úpravě jednotlivých znaků v řetězcovém objektu. Ukazatel LPCTSTR je však dočasné a stane se `CString`neplatným při jakékoli změně . Může `CString` také přejít mimo rozsah a být automaticky odstraněny. Doporučujeme získat nový Ukazatel LPCTSTR `CString` objektu pokaždé, když jej použijete.
 
-Někdy můžete potřebovat kopii `CString` data upravovat přímo. Použijte funkci bezpečnější `strcpy_s` (nebo Unicode a MBCS-přenosné `_tcscpy_s`) ke kopírování `CString` objektu do samostatných vyrovnávací paměti. To je, kde je možné bezpečně upravit znaků, jak je znázorněno v následujícím příkladu.
+Někdy můžete potřebovat kopii `CString` dat přímo upravit. Pomocí zabezpečenější `strcpy_s` funkce (nebo `_tcscpy_s`unicode/mbcs-portable) `CString` zkopírujte objekt do samostatné vyrovnávací paměti. Toto je místo, kde lze znaky bezpečně upravit, jak ukazuje následující příklad.
 
 [!code-cpp[NVC_ATLMFC_Utilities#189](../atl-mfc-shared/codesnippet/cpp/cstring-operations-relating-to-c-style-strings_1.cpp)]
 
 > [!NOTE]
-> Třetí argument `strcpy_s` (nebo Unicode a MBCS-přenosné `_tcscpy_s`) je buď `const wchar_t*` (Unicode) nebo `const char*` (ANSI). V příkladu výše průchody `CString` pro tento argument. Kompilátor C++ automaticky použije funkce pro převod definovaný pro `CString` třídu, která převede `CString` do `LPCTSTR`. Schopnost definovat operace přetypování z jednoho typu na jiný je mezi nejužitečnější funkce jazyka C++.
+> Třetí argument `strcpy_s` (nebo Unicode/MBCS `_tcscpy_s`přenosný) je `const wchar_t*` buď (Unicode) `const char*` nebo (ANSI). Výše uvedený příklad `CString` předá pro tento argument. Kompilátor Jazyka C++ automaticky použije funkci `CString` převodu definovanou pro třídu, která převádí a `CString` na `LPCTSTR`. Schopnost definovat operace přetypování z jednoho typu do druhého je jednou z nejužitečnějších funkcí jazyka C++.
 
-##  <a name="_core_working_with_standard_run.2d.time_library_string_functions"></a> Práce s řetězci funkce standardní knihovny Run-Time
+## <a name="working-with-standard-run-time-library-string-functions"></a><a name="_core_working_with_standard_run.2d.time_library_string_functions"></a>Práce se standardními funkcemi řetězce knihovny run-time
 
-Byste měli najít `CString` metoda provádět jakékoli operace řetězců, pro které můžete zvážit použití funkce řetězec standardní knihovny run-time jazyka C, jako `strcmp` (nebo Unicode a MBCS-přenosné `_tcscmp`).
+Měli byste být schopni `CString` najít metodu k provedení jakékoli operace řetězce, pro které můžete `strcmp` zvážit použití standardní c run-time `_tcscmp`knihovny řetězce funkce, jako je například (nebo Unicode/MBCS-portable ).
 
-Pokud je nutné použít funkce jazyka C za běhu řetězce, můžete použít techniky popsané v _core_using_cstring_as_a_c.2d.style_null.2d.terminated_string. Můžete zkopírovat `CString` objektu do vyrovnávací paměti ekvivalentní řetězce ve stylu jazyka C, provádění operací na vyrovnávací paměť a potom přiřadit výsledný řetězec C-style zpět do `CString` objektu.
+Pokud je nutné použít funkce řetězce c run-time, můžete použít techniky popsané v _core_using_cstring_as_a_c.2d.style_null.2d.terminated_string. Objekt můžete `CString` zkopírovat do ekvivalentní vyrovnávací paměti řetězce ve stylu C, provést operace ve vyrovnávací paměti `CString` a pak přiřadit výsledný řetězec stylu C zpět k objektu.
 
-##  <a name="_core_modifying_cstring_contents_directly"></a> Úprava CString obsah přímo
+## <a name="modifying-cstring-contents-directly"></a><a name="_core_modifying_cstring_contents_directly"></a>Změna obsahu řetězce CString přímo
 
-Ve většině případů byste měli použít `CString` členské funkce, chcete-li změnit obsah `CString` objektu nebo k převodu `CString` na řetězec znaků C-style.
+Ve většině situací byste `CString` měli použít členské funkce `CString` k úpravě `CString` obsahu objektu nebo k převodu na znakový řetězec ve stylu C.
 
-To bude dávat smysl přímo upravit v některých situacích `CString` obsah, například při práci s funkcemi operačního systému, které vyžadují vyrovnávací paměti pro znaky.
+Existují některé situace, kdy má smysl `CString` přímo upravit obsah, například při práci s funkcemi operačního systému, které vyžadují vyrovnávací paměť znaků.
 
-`GetBuffer` a `ReleaseBuffer` metody poskytují přístup k interní znak vyrovnávací paměť `CString` objektu a umožňují upravovat přímo. Následující kroky ukazují, jak používat tyto funkce pro tento účel.
+Metody `GetBuffer` `ReleaseBuffer` a nabízejí přístup k vyrovnávací `CString` paměti vnitřníznak objektu a umožňují jej přímo upravovat. Následující kroky ukazují, jak tyto funkce k tomuto účelu používat.
 
-### <a name="to-use-getbuffer-and-releasebuffer-to-access-the-internal-character-buffer-of-a-cstring-object"></a>Použití getbuffer – a ReleaseBuffer pro přístup k vyrovnávací paměti pro interní znaky CString objektu
+### <a name="to-use-getbuffer-and-releasebuffer-to-access-the-internal-character-buffer-of-a-cstring-object"></a>Použití objektů GetBuffer a ReleaseBuffer pro přístup k vnitřní vyrovnávací paměti znaků objektu CString
 
-1. Volání `GetBuffer` pro `CString` a určení délku vyrovnávací paměti, budete potřebovat.
+1. Volání `GetBuffer` objektu `CString` a určete délku vyrovnávací paměti, kterou požadujete.
 
-1. Použít ukazatele vrácené `GetBuffer` pro zápis znaků do přímo `CString` objektu.
+1. Pomocí ukazatele vrácené ho `GetBuffer` zapisovat znaky přímo do objektu. `CString`
 
-1. Volání `ReleaseBuffer` pro `CString` objektu k aktualizaci všech interní `CString` informace, například délku řetězce stavu. Když upravíte obsah `CString` objektu přímo, je nutné volat `ReleaseBuffer` před voláním jakékoli jiné `CString` členské funkce.
+1. Volání `ReleaseBuffer` objektu `CString` aktualizovat všechny `CString` informace o vnitřním stavu, například délka řetězce. Po úpravě obsahu `CString` objektu přímo, `ReleaseBuffer` musíte volat před `CString` voláním jakékoli jiné členské funkce.
 
-##  <a name="_core_using_cstring_objects_with_variable_argument_functions"></a> CString – objekty pomocí funkce argumentů proměnných
+## <a name="using-cstring-objects-with-variable-argument-functions"></a><a name="_core_using_cstring_objects_with_variable_argument_functions"></a>Použití objektů CString s funkcemi proměnné argumenty
 
-Některé funkce C přijímají proměnný počet argumentů. Je důležité příklad `printf_s`. Kvůli způsobu, jakým tento druh funkce je deklarovaná kompilátor nemůže být jisti typ argumentů a nemůže určit, kterou převod operaci má provést pro každý argument. Proto je důležité použít explicitní typ přetypování při předávání `CString` objekt funkce, která přijímá proměnný počet argumentů.
+Některé funkce Jazyka C mají proměnný počet argumentů. Pozoruhodným příkladem `printf_s`je . Z důvodu způsobu, jakým je tento druh funkce deklarována, kompilátor nemůže být jisti typem argumentů a nemůže určit, kterou operaci převodu provést u každého argumentu. Proto je nezbytné použít explicitní typ přetypování `CString` při předávání objektu do funkce, která má proměnný počet argumentů.
 
-Použití `CString` objektu ve funkci argumentů s proměnnou délkou explicitně přetypován `CString` LPCTSTR řetězec, jak je znázorněno v následujícím příkladu.
+Chcete-li `CString` použít objekt ve funkci proměnné `CString` argument, explicitně přetypování na řetězec LPCTSTR, jak je znázorněno v následujícím příkladu.
 
 [!code-cpp[NVC_ATLMFC_Utilities#190](../atl-mfc-shared/codesnippet/cpp/cstring-operations-relating-to-c-style-strings_2.cpp)]
 
-##  <a name="_core_specifying_cstring_formal_parameters"></a> Určení CString formální parametry
+## <a name="specifying-cstring-formal-parameters"></a><a name="_core_specifying_cstring_formal_parameters"></a>Určení formálních parametrů řetězce CString
 
-Pro většinu funkcí, které vyžadují jako argument řetězec je nejvhodnější k určení formálních parametrů v prototypu funkce jako `const` ukazatel na znak (`LPCTSTR`) místo `CString`. Pokud je formální parametr zadán jako `const` ukazatel na znak, můžete předat buď ukazatele na pole TCHAR, řetězcový literál [`"hi there"`], nebo `CString` objektu. `CString` Objektu se automaticky převedou na LPCTSTR. Můžete použít LPCTSTR jakéhokoli místa, můžete použít také `CString` objektu.
+Pro většinu funkcí, které potřebují argument řetězce, je nejlepší zadat formální `const` parametr v`LPCTSTR`prototypu funkce `CString`jako ukazatel na znak ( ) namísto . Pokud je formální parametr `const` zadán jako ukazatel na znak, můžete předat buď ukazatel na pole`"hi there"`TCHAR, literálový řetězec [ ], nebo `CString` objekt. Objekt `CString` bude automaticky převeden na LPCTSTR. Jakékoliv místo, kde můžete použít LPCTSTR, `CString` můžete také použít objekt.
 
-Formální parametr můžete také určit jako odkaz na konstanty typu řetězec (to znamená `const CString&`) Pokud tento argument se nezmění. Přetáhněte **const** modifikátor Pokud řetězec se upravit funkci. V případě potřeby je výchozí hodnota null, inicializovat jej na řetězec s hodnotou null [`""`], jak je znázorněno níže:
+Můžete také zadat formální parametr jako odkaz na `const CString&`konstantní řetězec (to znamená), pokud argument nebude změněn. Přetažení **const** modifikátor, pokud řetězec bude změněn funkcí. Pokud je požadována výchozí hodnota null, inicializujte ji na nulový řetězec [`""`], jak je znázorněno níže:
 
 [!code-cpp[NVC_ATLMFC_Utilities#191](../atl-mfc-shared/codesnippet/cpp/cstring-operations-relating-to-c-style-strings_3.cpp)]
 
-Pro většinu funkcí výsledky, můžete jednoduše vrátit `CString` objektu podle hodnoty.
+U většiny výsledků funkce můžete `CString` jednoduše vrátit objekt podle hodnoty.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Řetězce (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)<br/>
+[Řetězce (KNIHOVNA ATL/Knihovna Knihovny AFC)](../atl-mfc-shared/strings-atl-mfc.md)<br/>
 [CString – předávání argumentů](../atl-mfc-shared/cstring-argument-passing.md)

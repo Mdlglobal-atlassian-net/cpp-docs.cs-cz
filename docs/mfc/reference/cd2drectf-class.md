@@ -1,5 +1,5 @@
 ---
-title: CD2DRectF – třída
+title: Třída CD2DRectF
 ms.date: 11/04/2016
 f1_keywords:
 - CD2DRectF
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - CD2DRectF [MFC], CD2DRectF
 - CD2DRectF [MFC], IsNull
 ms.assetid: 87c12d87-9d18-4a19-ba14-0f51d6b6835a
-ms.openlocfilehash: 9b91cfaec3827a61152c4116b56e817a436606be
-ms.sourcegitcommit: 725e86dabe2901175ecc63261c3bf05802dddff4
+ms.openlocfilehash: 33d3c5f9e795ad6c91b689436e8a3b1b56966dce
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68682393"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81369126"
 ---
-# <a name="cd2drectf-class"></a>CD2DRectF – třída
+# <a name="cd2drectf-class"></a>Třída CD2DRectF
 
 Obálka pro `D2D1_RECT_F`.
 
@@ -31,21 +31,21 @@ class CD2DRectF : public D2D1_RECT_F;
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CD2DRectF::CD2DRectF](#cd2drectf)|Přetíženo. Vytvoří objekt z `D2D1_RECT_F`objektu. `CD2DRectF`|
+|[CD2DRectF::CD2DRectF](#cd2drectf)|Přetíženo. Vytvoří `CD2DRectF` objekt z `D2D1_RECT_F` objektu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CD2DRectF:: IsNull](#isnull)|Vrací **logickou** hodnotu, která označuje, zda výraz neobsahuje žádná platná data (null).|
+|[CD2DRectF::IsNull](#isnull)|Vrátí **logickou** hodnotu, která označuje, zda výraz neobsahuje žádná platná data (NULL).|
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Name|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CD2DRectF:: operator CRect](#operator_crect)|Převede `CD2DRectF` na`CRect` objekt.|
+|[CD2DRectF::operátor CRect](#operator_crect)|Převede `CD2DRectF` `CRect` na objekt.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -55,9 +55,9 @@ class CD2DRectF : public D2D1_RECT_F;
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxrendertarget. h
+**Záhlaví:** afxrendertarget.h
 
-##  <a name="cd2drectf"></a>CD2DRectF::CD2DRectF
+## <a name="cd2drectfcd2drectf"></a><a name="cd2drectf"></a>CD2DRectF::CD2DRectF
 
 Vytvoří objekt CD2DRectF z objektu CRect.
 
@@ -75,24 +75,24 @@ CD2DRectF(
 
 ### <a name="parameters"></a>Parametry
 
-*OBD*<br/>
+*Rect*<br/>
 zdrojový obdélník
 
-*fLeft*<br/>
-souřadnice zdrojové levé části
+*fVlevo*<br/>
+zdroj levé souřadnice
 
 *fTop*<br/>
-hlavní souřadnice zdroje
+zdroj oválná souřadnice
 
-*fRight*<br/>
-souřadnice zdrojové vpravo
+*Strach*<br/>
+souřadnice práva na zdroj
 
 *fBottom*<br/>
-Dolní souřadnice zdroje
+zdroj spodní souřadnice
 
-##  <a name="isnull"></a>CD2DRectF:: IsNull
+## <a name="cd2drectfisnull"></a><a name="isnull"></a>CD2DRectF::IsNull
 
-Vrací logickou hodnotu, která označuje, zda výraz neobsahuje žádná platná data (null).
+Vrátí logickou hodnotu, která označuje, zda výraz neobsahuje žádná platná data (Null).
 
 ```
 BOOL IsNull() const;
@@ -100,11 +100,11 @@ BOOL IsNull() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-TRUE, pokud jsou hodnoty horní, levý, dolní a pravého obdélníku všechny rovny 0; v opačném případě FALSE.
+PRAVDA, pokud jsou nejvyšší, levé, dolní a pravé hodnoty obdélníku rovny 0; jinak FALSE.
 
-##  <a name="operator_crect"></a>CD2DRectF:: operator CRect
+## <a name="cd2drectfoperator-crect"></a><a name="operator_crect"></a>CD2DRectF::operátor CRect
 
-Převede CD2DRectF na objekt CRect.
+Převede objekt CD2DRectF na objekt CRect.
 
 ```
 operator CRect();
@@ -112,8 +112,8 @@ operator CRect();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Aktuální hodnota obdélníku D2D
+Aktuální hodnota obdélníku D2D.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Třídy](../../mfc/reference/mfc-classes.md)

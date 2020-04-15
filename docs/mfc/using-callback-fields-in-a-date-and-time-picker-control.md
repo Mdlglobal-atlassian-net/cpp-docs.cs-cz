@@ -13,50 +13,50 @@ helpviewer_keywords:
 - DTN_FORMAT notification [MFC]
 - DateTimePicker control [MFC]
 ms.assetid: 404f4ba9-cba7-4718-9faa-bc6b274a723f
-ms.openlocfilehash: 5d08c349253e62c15553cfa0452cee930b1a1876
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 50350e51b6747d8c010db9d0dcaa9dff2e56e1f3
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69513505"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366560"
 ---
 # <a name="using-callback-fields-in-a-date-and-time-picker-control"></a>Použití polí zpětného volání v ovládacím prvku pro výběr data a času
 
-Kromě standardních formátovacích znaků, které definují pole pro výběr data a času, můžete přizpůsobit výstup zadáním určitých částí vlastního formátu řetězce jako pole zpětného volání. Chcete-li deklarovat pole zpětného volání, zahrňte jeden nebo více znaků "X" (kód ASCII 88) kdekoli v těle formátovacího řetězce. Například následující řetězec "' dnes je: ' YY '/' MM '/' DD ' (den ' X ') ' ' způsobí, že ovládací prvek pro výběr data a času zobrazí aktuální hodnotu jako rok následovaný měsíc, datum a nakonec den v roce.
+Kromě znaků standardního formátu, které definují pole pro výběr data a času, můžete přizpůsobit výstup zadáním určitých částí vlastního formátovacího řetězce jako polí zpětného volání. Chcete-li deklarovat pole zpětného volání, uveďte jeden nebo více znaků "X" (ASCII Code 88) kdekoli v těle formátovacího řetězce. Například následující řetězec "'Dnes je: 'yy'/'MM'/'dd' (Den 'X')'"způsobí, že ovládací prvek výběru data a času zobrazí aktuální hodnotu jako rok následovaný měsícem, datem a nakonec dnem v roce.
 
 > [!NOTE]
->  Počet X v poli zpětného volání neodpovídá počtu znaků, které se zobrazí.
+> Počet X v poli zpětného volání neodpovídá počtu znaků, které budou zobrazeny.
 
-Můžete rozlišovat mezi více poli zpětného volání ve vlastním řetězci opakováním znaku "X". Proto formátovací řetězec "XXddddMMMdd", "yyyXXX" obsahuje dvě jedinečná pole zpětného volání "XX" a "XXX".
+Můžete rozlišovat mezi více polí zpětného volání ve vlastním řetězci opakováním znaku "X". Formátovací řetězec "XXddddMMDdd", "yyyXXX" tedy obsahuje dvě jedinečná pole zpětného volání, "XX" a "XXX".
 
 > [!NOTE]
->  Pole zpětného volání se považují za platná pole, takže vaše aplikace musí být připravená na zpracování zpráv s oznámením DTN_WMKEYDOWN.
+> Pole zpětného volání jsou považována za platná pole, takže aplikace musí být připravena ke zpracování DTN_WMKEYDOWN oznámení.
 
-Implementování polí zpětného volání v ovládacím prvku pro výběr data a času se skládá ze tří částí:
+Implementace polí zpětného volání v ovládacím prvku výběru data a času se skládá ze tří částí:
 
-- Inicializuje se řetězec vlastního formátu.
+- Inicializace vlastního formátovacího řetězce
 
 - Zpracování oznámení DTN_FORMATQUERY
 
-- Zpracování oznámení DTN_FORMAT
+- Zpracování DTN_FORMAT oznámení
 
-## <a name="initializing-the-custom-format-string"></a>Inicializuje se řetězec vlastního formátu.
+## <a name="initializing-the-custom-format-string"></a>Inicializace vlastního formátovacího řetězce
 
-Inicializujte vlastní řetězec voláním metody `CDateTimeCtrl::SetFormat`. Další informace naleznete v tématu [použití vlastních formátovacích řetězců v ovládacím prvku pro výběr data a času](../mfc/using-custom-format-strings-in-a-date-and-time-picker-control.md). Běžným místem pro nastavení vlastního formátovacího řetězce je `OnInitDialog` funkce, která obsahuje třídu nebo `OnInitialUpdate` funkci obsahující třídu zobrazení.
+Inicializovat vlastní řetězec voláním `CDateTimeCtrl::SetFormat`. Další informace naleznete [v tématu Použití vlastních formátovacích řetězců v ovládacím prvku pro výběr data a času](../mfc/using-custom-format-strings-in-a-date-and-time-picker-control.md). Běžné místo pro nastavení vlastního formátovacího řetězce je ve `OnInitDialog` `OnInitialUpdate` funkci obsahující třídy dialognebo funkce obsahující třídy zobrazení.
 
 ## <a name="handling-the-dtn_formatquery-notification"></a>Zpracování oznámení DTN_FORMATQUERY
 
-Když ovládací prvek analyzuje řetězec formátu a narazí na pole zpětného volání, aplikace pošle oznamovací zprávy DTN_FORMAT a DTN_FORMATQUERY. Řetězec pole zpětného volání je součástí oznámení, abyste mohli určit, které pole zpětného volání se dotazuje.
+Když ovládací prvek analyzuje formátovací řetězec a narazí na pole zpětného volání, aplikace odešle DTN_FORMAT a DTN_FORMATQUERY oznámení. Řetězec pole zpětného volání je součástí oznámení, takže můžete určit, které pole zpětného volání je dotazováno.
 
-Oznámení DTN_FORMATQUERY se pošle, aby se získala maximální povolená velikost v pixelech řetězce, který se zobrazí v aktuálním poli zpětného volání.
+Oznámení DTN_FORMATQUERY je odesláno k načtení maximální povolené velikosti v pixelech řetězce, který se zobrazí v aktuálním poli zpětného volání.
 
-Chcete-li tuto hodnotu správně vypočítat, je nutné vypočítat výšku a šířku řetězce, aby bylo možné nahradit pole pomocí písma zobrazení ovládacího prvku. Skutečný výpočet řetězce lze snadno dosáhnout voláním funkce [GetTextExtentPoint32](/windows/win32/api/wingdi/nf-wingdi-gettextextentpoint32w) Win32. Jakmile je velikost určena, předejte hodnotu zpět do aplikace a ukončete funkci obslužné rutiny.
+Chcete-li správně vypočítat tuto hodnotu, musíte vypočítat výšku a šířku řetězce, který má být nahrazen polem, pomocí písma zobrazení ovládacího prvku. Skutečný výpočet řetězce lze snadno dosáhnout voláním funkce [GetTextExtentPoint32](/windows/win32/api/wingdi/nf-wingdi-gettextextentpoint32w) Win32. Jakmile je určena velikost, předajte hodnotu zpět do aplikace a ukončete funkci obslužné rutiny.
 
-Následující příklad představuje jednu z metod poskytnutí velikosti řetězce zpětného volání:
+Následující příklad je jednou z metod poskytování velikosti řetězce zpětného volání:
 
 [!code-cpp[NVC_MFCControlLadenDialog#8](../mfc/codesnippet/cpp/using-callback-fields-in-a-date-and-time-picker-control_1.cpp)]
 
-Jakmile je vypočtena velikost aktuálního pole zpětného volání, je nutné pro pole dodat hodnotu. To se provádí v obslužné rutině oznámení DTN_FORMAT.
+Po výpočtu velikosti aktuálního pole zpětného volání je nutné zadat hodnotu pole. To se provádí v obslužné rutině pro oznámení DTN_FORMAT.
 
 ## <a name="handling-the-dtn_format-notification"></a>Zpracování oznámení DTN_FORMAT
 
@@ -65,9 +65,9 @@ Oznámení DTN_FORMAT používá aplikace k vyžádání řetězce znaků, kter�
 [!code-cpp[NVC_MFCControlLadenDialog#9](../mfc/codesnippet/cpp/using-callback-fields-in-a-date-and-time-picker-control_2.cpp)]
 
 > [!NOTE]
->  Ukazatel na strukturu **NMDATETIMEFORMAT** je nalezen přetypováním prvního parametru obslužné rutiny oznámení na správný typ.
+> Ukazatel na strukturu **NMDATETIMEFORMAT** je nalezen přetypováníprvní parametr obslužné rutiny oznámení na správný typ.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Používání atributu CDateTimeCtrl](../mfc/using-cdatetimectrl.md)<br/>
 [Ovládací prvky](../mfc/controls-mfc.md)

@@ -13,16 +13,16 @@ helpviewer_keywords:
 - Microsoft::WRL::SimpleActivationFactory::GetRuntimeClassName method
 - Microsoft::WRL::SimpleActivationFactory::GetTrustLevel method
 ms.assetid: aff768e0-0038-4fd7-95d2-ad7d308da41c
-ms.openlocfilehash: 1831a816d0967c2ca53f941128639ea368c1b727
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 39e539c63e91b508f51656114ee8fbd68150991f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403083"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81370940"
 ---
 # <a name="simpleactivationfactory-class"></a>SimpleActivationFactory – třída
 
-Poskytuje základní mechanismus pro vytvoření prostředí Windows Runtime nebo klasického modelu COM základní třídy.
+Poskytuje základní mechanismus pro vytvoření prostředí Windows Runtime nebo klasické základní třídy COM.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,14 +33,14 @@ class SimpleActivationFactory : public ActivationFactory<>;
 
 ### <a name="parameters"></a>Parametry
 
-*základ*<br/>
+*Základní*<br/>
 Základní třída.
 
 ## <a name="remarks"></a>Poznámky
 
-Základní třída musí poskytovat konstruktor default.
+Základní třída musí poskytnout výchozí konstruktor.
 
-Následující příklad kódu ukazuje, jak používat simpleactivationfactory – s [ActivatableClassWithFactoryEx](activatableclass-macros.md) – makro.
+Následující příklad kódu ukazuje, jak používat SimpleActivationFactory s macro [ActivatableClassWithFactoryEx.](activatableclass-macros.md)
 
 `ActivatableClassWithFactoryEx(MyClass, SimpleActivationFactory, MyServerName);`
 
@@ -48,11 +48,11 @@ Následující příklad kódu ukazuje, jak používat simpleactivationfactory �
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
 |[SimpleActivationFactory::ActivateInstance – metoda](#activateinstance)|Vytvoří instanci zadaného rozhraní.|
-|[SimpleActivationFactory::GetRuntimeClassName – metoda](#getruntimeclassname)|Získá název třídy runtime instance třídy určené *Base* parametr šablony třídy.|
-|[SimpleActivationFactory::GetTrustLevel – metoda](#gettrustlevel)|Získá instanci třídy určené úroveň důvěryhodnosti *Base* parametr šablony třídy.|
+|[SimpleActivationFactory::GetRuntimeClassName – metoda](#getruntimeclassname)|Získá název třídy runtime instance třídy určené parametrem šablony *základní* třídy.|
+|[SimpleActivationFactory::GetTrustLevel – metoda](#gettrustlevel)|Získá úroveň důvěryhodnosti instance třídy určené parametrem šablony *základní* třídy.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -82,9 +82,9 @@ Následující příklad kódu ukazuje, jak používat simpleactivationfactory �
 
 **Záhlaví:** module.h
 
-**Namespace:** Microsoft::WRL
+**Obor názvů:** Microsoft::WRL
 
-## <a name="activateinstance"></a>Simpleactivationfactory::activateinstance – metoda
+## <a name="simpleactivationfactoryactivateinstance-method"></a><a name="activateinstance"></a>SimpleActivationFactory::Metoda ActivateInstance
 
 Vytvoří instanci zadaného rozhraní.
 
@@ -96,20 +96,20 @@ STDMETHOD( ActivateInstance )(
 
 #### <a name="parameters"></a>Parametry
 
-*ppvObject*<br/>
-Když tato operace dokončí, ukazatel na instanci objektu určeného parametrem `Base` parametr šablony třídy.
+*ppvObjekt*<br/>
+Po dokončení této operace ukazatel na instanci `Base` objektu určené parametrem šablony třídy.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-S_OK v případě úspěchu; v opačném případě HRESULT, která označuje chybu.
+S_OK v případě úspěchu; jinak HRESULT, který označuje chybu.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud `__WRL_STRICT__` je definován, chybu kontrolní výraz je vygenerován, pokud zadaná v parametru šablony třídy základní třída není odvozen od [RuntimeClass](runtimeclass-class.md), nebo nemá nakonfigurovanou WinRt nebo WinRtClassicComMix [ Runtimeclasstype –](runtimeclasstype-enumeration.md) hodnota výčtu.
+Pokud `__WRL_STRICT__` je definována, chyba assert je emitován, pokud základní třída zadaná v parametru šablony třídy není odvozena z [RuntimeClass](runtimeclass-class.md), nebo není nakonfigurována s hodnotou výčtu WinRt nebo WinRtClassicComMix [RuntimeClassType.](runtimeclasstype-enumeration.md)
 
-## <a name="getruntimeclassname"></a>Simpleactivationfactory::getruntimeclassname – metoda
+## <a name="simpleactivationfactorygetruntimeclassname-method"></a><a name="getruntimeclassname"></a>SimpleActivationFactory::Metoda GetRuntimeClassName
 
-Získá název třídy runtime instance třídy určené `Base` parametr šablony třídy.
+Získá název třídy runtime instance třídy `Base` určené parametrem šablony třídy.
 
 ```cpp
 STDMETHOD( GetRuntimeClassName )(
@@ -120,19 +120,19 @@ STDMETHOD( GetRuntimeClassName )(
 #### <a name="parameters"></a>Parametry
 
 *runtimeName*<br/>
-Po dokončení této operace, název třídy runtime.
+Po dokončení této operace název třídy runtime.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-S_OK v případě úspěchu; v opačném případě HRESULT, která označuje chybu.
+S_OK v případě úspěchu; jinak HRESULT, který označuje chybu.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud `__WRL_STRICT__` je definován, chybu kontrolní výraz je vygenerován, pokud třída určená `Base` parametr šablony třídy není odvozen od [RuntimeClass](runtimeclass-class.md), nebo nemá nakonfigurovanou WinRt nebo WinRtClassicComMix [Runtimeclasstype –](runtimeclasstype-enumeration.md) hodnota výčtu.
+Pokud `__WRL_STRICT__` je definována, chyba assert je vyzařována, pokud třída určená parametrem šablony `Base` třídy není odvozena z [RuntimeClass](runtimeclass-class.md)nebo není nakonfigurována s hodnotou výčtu WinRt nebo WinRtClassicComMix [RuntimeClassType.](runtimeclasstype-enumeration.md)
 
-## <a name="gettrustlevel"></a>Simpleactivationfactory::gettrustlevel – metoda
+## <a name="simpleactivationfactorygettrustlevel-method"></a><a name="gettrustlevel"></a>SimpleActivationFactory::Metoda GetTrustLevel
 
-Získá instanci třídy určené úroveň důvěryhodnosti `Base` parametr šablony třídy.
+Získá úroveň důvěryhodnosti instance třídy určené `Base` parametrem šablony třídy.
 
 ```cpp
 STDMETHOD(
@@ -142,9 +142,9 @@ STDMETHOD(
 
 #### <a name="parameters"></a>Parametry
 
-*trustLvl*<br/>
-Když tato operace dokončí, úroveň důvěryhodnosti objektu aktuální třídy.
+*důvěraLvl*<br/>
+Po dokončení této operace úroveň důvěryhodnosti aktuální objekt třídy.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vždy S_OK.
+Vždycky S_OK.

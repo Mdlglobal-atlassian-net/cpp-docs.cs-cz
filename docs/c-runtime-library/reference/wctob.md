@@ -1,8 +1,9 @@
 ---
 title: wctob
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - wctob
+- _o_wctob
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -26,16 +28,16 @@ helpviewer_keywords:
 - wctob function
 - characters, converting
 ms.assetid: 46aec98b-c2f2-4e9d-9d89-7db99ba8a9a6
-ms.openlocfilehash: 151325b0d66e6d57156cdf94828ca1d4b151d437
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 420071680c3dc273f6df637cf44273f2c24bd64c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944929"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81320440"
 ---
 # <a name="wctob"></a>wctob
 
-Určuje, zda velký znak odpovídá vícebajtovým znakům a vrací jeho vícebajtovou reprezentaci znaků.
+Určuje, zda široký znak odpovídá vícebajtovému znaku a vrátí jeho vícebajtovou reprezentaci znaků.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -47,18 +49,20 @@ int wctob(
 
 ### <a name="parameters"></a>Parametry
 
-*wchar*<br/>
-Hodnota, která se má přeložit
+*Wchar*<br/>
+Hodnota přeložit.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Pokud **wctob** úspěšně převede velký znak, vrátí jeho revícebajtovou reprezentaci pouze v případě, že vícebajtový znak je přesně jeden bajt dlouhý. Pokud **wctob** narazí na velký znak, nelze převést na vícebajtový znak nebo vícebajtový znak není přesně 1 bajtem a vrátí hodnotu-1.
+Pokud **wctob** úspěšně převede široký znak, vrátí jeho vícebajtové zobrazení znaků, pouze v případě, že vícebajtový znak je přesně jeden bajt dlouhý. Pokud **wctob** narazí na široký znak, nelze jej převést na vícebajtový znak nebo vícebajtový znak není přesně jeden bajt dlouhý, vrátí -1.
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce **wctob** převede velký znak obsažený v *WCHAR* na odpovídající vícebajtový znak předaný návratovou hodnotou **int** , pokud je vícebajtový znak v jednom bajtu dlouhý.
+Funkce **wctob** převede široký znak obsažený v *wchar* na odpovídající vícebajtový znak předaný hodnotou return **int,** pokud je vícebajtový znak přesně jeden bajt dlouhý.
 
-Pokud **wctob** nebylo úspěšné a nebyl nalezen žádný odpovídající vícebajtový znak, funkce nastaví **errno** na **EILSEQ** a vrátí-1.
+Pokud **byl soubor wctob** neúspěšný a nebyl nalezen žádný odpovídající vícebajtový znak, funkce nastaví **errno** na **EILSEQ** a vrátí -1.
+
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
@@ -66,11 +70,11 @@ Pokud **wctob** nebylo úspěšné a nebyl nalezen žádný odpovídající víc
 |-------------|---------------------|
 |**wctob**|\<wchar.h>|
 
-Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
-Tento program ilustruje chování funkce **wcstombs** .
+Tento program ilustruje chování **funkce wcstombs.**
 
 ```C
 // crt_wctob.c
@@ -102,7 +106,7 @@ int main( void )
 Determined the corresponding multibyte character to be "A".
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Převod dat](../../c-runtime-library/data-conversion.md)<br/>
 [Národní prostředí](../../c-runtime-library/locale.md)<br/>
