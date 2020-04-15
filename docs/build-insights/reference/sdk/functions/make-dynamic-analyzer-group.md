@@ -1,6 +1,6 @@
 ---
 title: MakeDynamicAnalyzerGroup
-description: Reference C++ k funkci MakeDynamicAnalyzerGroup sady SDK pro Build Insights
+description: C++ Build Insights SDK MakeDynamicAnalyzerGroup odkaz na funkci.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: f409d685c6af6514b73cd837d668a962c1a0d01a
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 148eeea41f29ac6dd75653feed7f3f3f8c301911
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78332829"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81323960"
 ---
 # <a name="makedynamicanalyzergroup"></a>MakeDynamicAnalyzerGroup
 
 ::: moniker range="<=vs-2015"
 
-Sada C++ SDK pro Build Insights je kompatibilní se sadou Visual Studio 2017 a novější. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek selektor verzí sady Visual Studio pro tento článek na sadu Visual Studio 2017 nebo Visual Studio 2019.
+Sada C++ Build Insights SDK je kompatibilní s Visual Studio 2017 a vyšší. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek pro výběr **verze** sady Visual Studio pro tento článek na Visual Studio 2017 nebo Visual Studio 2019. Nachází se v horní části obsahu na této stránce.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Funkce `MakeDynamicAnalyzerGroup` slouží k vytvoření dynamické skupiny analyzátorů. Členové skupiny analyzátoru obdrží události jednu od zleva doprava, dokud nebudou analyzovány všechny události v trasování.
+Tato `MakeDynamicAnalyzerGroup` funkce se používá k vytvoření skupiny dynamických analyzátorů. Členové skupiny analyzátorů přijímají události jeden po druhém zleva doprava, dokud nebudou analyzovány všechny události v trasování.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -39,17 +39,17 @@ auto MakeDynamicAnalyzerGroup(std::vector<std::unique_ptr<IAnalyzer>> analyzers)
 
 ### <a name="parameters"></a>Parametry
 
-\ *analyzátorů*
-Vektor [IAnalyzer](../other-types/ianalyzer-class.md) ukazatelů, které jsou součástí skupiny dynamického analyzátoru. Tyto ukazatele můžou být nezpracované, `std::unique_ptr`nebo `std::shared_ptr`.
+*Analyzátory*\
+Vektor ukazatelů [IAnalyzer](../other-types/ianalyzer-class.md) zahrnutých ve skupině dynamických analyzátorů. Tyto ukazatele mohou být `std::unique_ptr`nezpracované nebo `std::shared_ptr`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Dynamická skupina analyzátoru. K zachycení návratové hodnoty použijte klíčové slovo **auto** .
+Skupina dynamických analyzátorů. Pomocí **klíčového** slova auto zachyťte vrácenou hodnotu.
 
 ## <a name="remarks"></a>Poznámky
 
-Na rozdíl od statických skupin analyzátoru nemusí být členové dynamické skupiny analyzátoru v době kompilace známi. Můžete vybrat členy skupiny analyzátoru za běhu na základě vstupu programu nebo na základě jiných hodnot, které jsou v době kompilace neznámé. Na rozdíl od statických skupin analyzátoru mají ukazatele [IAnalyzer](../other-types/ianalyzer-class.md) v rámci skupiny dynamických analyzátorů polymorfní chování a volání virtuální funkce jsou odesílána správně. Tato flexibilita se dodává na náklady na potenciálně pomalejší dobu zpracování událostí. Pokud jsou všichni členové skupiny Analyzer známi v době kompilace a pokud nepotřebujete polymorfní chování, zvažte použití statické skupiny analyzátoru. Chcete-li použít statickou skupinu analyzátoru, zavolejte místo toho [MakeStaticAnalyzerGroup](make-static-analyzer-group.md) .
+Na rozdíl od skupin statických analyzátorů nemusí být členové skupiny dynamického analyzátoru známi v době kompilace. Můžete zvolit členy skupiny analyzátoru za běhu na základě vstupu programu nebo na základě jiných hodnot, které nejsou v době kompilace známy. Na rozdíl od skupin statických analyzátorů ukazatele [IAnalyzer](../other-types/ianalyzer-class.md) v rámci skupiny dynamických analyzátorů mají polymorfní chování a volání virtuálních funkcí jsou odesílána správně. Tato flexibilita přichází na úkor pravděpodobně pomalejší čas zpracování událostí. Pokud jsou v době kompilace známy všechny členy skupiny analyzátorů a pokud nepotřebujete polymorfní chování, zvažte použití statické skupiny analyzátorů. Chcete-li použít statickou skupinu analyzátorů, zavolejte místo toho [MakeStaticAnalyzerGroup.](make-static-analyzer-group.md)
 
-Dynamickou skupinu analyzátorů lze zapouzdřit do statické skupiny analyzátorů. Provedete to tak, že adresu předáte do [MakeStaticAnalyzerGroup](make-static-analyzer-group.md). Tuto techniku použijte při předávání skupin dynamického analyzátoru funkcím, jako je například [analyzovat](analyze.md), které akceptují pouze statické skupiny analyzátorů.
+Skupinu dynamických analyzátorů lze zapouzdřit uvnitř statické skupiny analyzátorů. To se provádí předáním jeho adresu [MakeStaticAnalyzerGroup](make-static-analyzer-group.md). Tuto techniku použijte pro předávání dynamických skupin analyzátorů funkcím, jako je [analyzovat](analyze.md), které přijímají pouze skupiny statických analyzátorů.
 
 ::: moniker-end

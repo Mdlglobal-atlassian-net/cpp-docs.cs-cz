@@ -1,5 +1,5 @@
 ---
-title: Globální funkce registru a TypeLib
+title: Globální funkce registru a typu Lib
 ms.date: 03/27/2019
 f1_keywords:
 - atlbase/ATL::AtlGetPerUserRegistration
@@ -17,48 +17,48 @@ f1_keywords:
 helpviewer_keywords:
 - RegistryDataExchange function, global functions
 ms.assetid: d58b8a4e-975c-4417-8b34-d3c847f679b3
-ms.openlocfilehash: c5fdaceb47b6cd09dd9d66f26af1337a8dc6bbae
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 69df927ddd04c19d10703854aa8c8948894309d1
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79417493"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81326081"
 ---
-# <a name="registry-and-typelib-global-functions"></a>Globální funkce registru a TypeLib
+# <a name="registry-and-typelib-global-functions"></a>Globální funkce registru a typu Lib
 
 Tyto funkce poskytují podporu pro načítání a registraci knihovny typů.
 
 > [!IMPORTANT]
->  Funkce uvedené v následujících tabulkách nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime.
+> Funkce uvedené v následujících tabulkách nelze použít v aplikacích, které se spouštějí v prostředí Windows Runtime.
 
 |||
 |-|-|
 |[AfxRegCreateKey](#afxregcreatekey)|Vytvoří zadaný klíč registru.|
 |[AfxRegDeleteKey](#afxregdeletekey)|Odstraní zadaný klíč registru.|
-|[AfxRegisterPreviewHandler](#afxregisterpreviewhandler)|Pomocný objekt pro registraci obslužné rutiny náhledu.|
-|[AfxUnregisterPreviewHandler](#afxunregisterpreviewhandler)| Pomocný objekt pro zrušení registrace obslužné rutiny náhledu. |
+|[AfxRegisterNáhledHandler](#afxregisterpreviewhandler)|Pomocník pro registraci obslužné rutiny náhledu.|
+|[AfxUnregisterPreviewHandler](#afxunregisterpreviewhandler)| Pomocník pro zrušení registrace obslužné rutiny náhledu. |
 |[AtlRegisterTypeLib](#atlregistertypelib)|Voláním této funkce se zaregistruje knihovna typů.|
-|[AtlUnRegisterTypeLib](#atlunregistertypelib)|Tato funkce se volá pro zrušení registrace knihovny typů.|
+|[AtlUnRegisterTypeLib](#atlunregistertypelib)|Tato funkce je volána k zrušení registrace knihovny typů.|
 |[AfxRegOpenKey](#afxregopenkey)|Otevře zadaný klíč registru.|
 |[AfxRegOpenKeyEx](#afxregopenkeyex)|Otevře zadaný klíč registru.|
 |[AtlLoadTypeLib](#atlloadtypelib)|Voláním této funkce se načte knihovna typů.|
 |[AtlUpdateRegistryFromResourceD](#atlupdateregistryfromresourced)|Voláním této funkce se registr aktualizuje ze zadaného prostředku.|
-|[RegistryDataExchange](#registrydataexchange)|Voláním této funkce se provede čtení nebo zápis v systémovém registru. Volá se v [makrech výměny dat v registru](../../atl/reference/registry-data-exchange-macros.md).|
+|[RegistryDataExchange](#registrydataexchange)|Voláním této funkce se provede čtení nebo zápis v systémovém registru. Volat [makra výměny dat registru](../../atl/reference/registry-data-exchange-macros.md).|
 
 Tyto funkce řídí, který uzel v registru program používá k ukládání informací.
 
 |||
 |-|-|
-|[AtlGetPerUserRegistration](#atlgetperuserregistration)|Načte, zda aplikace přesměrovává přístup k registru do uzlu **HKEY_CURRENT_USER** ( **HKCU**).|
-|[AtlSetPerUserRegistration](#atlsetperuserregistration)|Nastaví, zda aplikace přesměrovává přístup k registru do uzlu **HKEY_CURRENT_USER** ( **HKCU**).|
+|[AtlGetPerUserRegistration](#atlgetperuserregistration)|Načte, zda aplikace přesměruje přístup registru k uzlu **HKEY_CURRENT_USER** ( **HKCU).**|
+|[AtlSetPerUserRegistration](#atlsetperuserregistration)|Nastaví, zda aplikace přesměruje přístup registru k uzlu **HKEY_CURRENT_USER** ( **HKCU**).|
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlbase. h
+**Záhlaví:** atlbase.h
 
-## <a name="atlgetperuserregistration"></a>AtlGetPerUserRegistration
+## <a name="atlgetperuserregistration"></a><a name="atlgetperuserregistration"></a>AtlGetPerUserRegistration
 
-Pomocí této funkce lze určit, zda aplikace přesměrovává přístup k registru do uzlu **HKEY_CURRENT_USER** (**HKCU**).
+Tato funkce slouží k určení, zda aplikace přesměruje přístup registru k uzlu **HKEY_CURRENT_USER** (**HKCU**).
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -68,24 +68,24 @@ ATLINLINE ATLAPI AtlGetPerUserRegistration(bool* pEnabled);
 
 ### <a name="parameters"></a>Parametry
 
-*pEnabled*<br/>
-mimo Hodnota TRUE označuje, že informace registru jsou směrovány na uzel **HKCU** ; Hodnota FALSE znamená, že aplikace zapisuje informace registru do výchozího uzlu. Výchozí uzel je **HKEY_CLASSES_ROOT** (**HKCR**).
+*pPovoleno*<br/>
+[out] True označuje, že informace o registru je směrována do uzlu **HKCU;** NEPRAVDA označuje, že aplikace zapisuje informace registru do výchozího uzlu. Výchozí uzel je **HKEY_CLASSES_ROOT** (**HKCR**).
 
 ### <a name="return-value"></a>Návratová hodnota
 
-S_OK, zda je metoda úspěšná, jinak kód chyby HRESULT, pokud dojde k chybě.
+S_OK pokud je metoda úspěšná, jinak kód chyby HRESULT, pokud dojde k chybě.
 
 ### <a name="remarks"></a>Poznámky
 
-Přesměrování registru není ve výchozím nastavení povolené. Pokud povolíte tuto možnost, bude přístup k registru přesměrován na **HKEY_CURRENT_USER \software\classes**.
+Přesměrování registru není ve výchozím nastavení povoleno. Pokud tuto možnost povolíte, bude přístup k registru přesměrován na **HKEY_CURRENT_USER\Software\Classes**.
 
-Přesměrování není globální. Toto přesměrování registru ovlivňuje pouze architektury MFC a ATL.
+Přesměrování není globální. Toto přesměrování registru ovlivňuje pouze architektury knihovny MFC a knihovny ATL.
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlbase. h
+**Záhlaví:** atlbase.h
 
-## <a name="afxregcreatekey"></a>AfxRegCreateKey
+## <a name="afxregcreatekey"></a><a name="afxregcreatekey"></a>AfxRegCreateKey
 
 Vytvoří zadaný klíč registru.
 
@@ -97,27 +97,27 @@ LONG AFXAPI AfxRegCreateKey(HKEY hKey, LPCTSTR lpSubKey, PHKEY phkResult, CAtlTr
 
 ### <a name="parameters"></a>Parametry
 
-*hKey*<br/>
-Popisovač pro otevřený klíč registru.
+*hKlíč*<br/>
+Popisovač otevřeného klíče registru.
 
 *lpSubKey*<br/>
 Název klíče, který tato funkce otevře nebo vytvoří.
 
-*phkResult*<br/>
-Ukazatel na proměnnou, která přijímá popisovač pro otevřený nebo vytvořený klíč.
+*phkVýsledek*<br/>
+Ukazatel na proměnnou, která přijímá popisovač otevřeného nebo vytvořeného klíče.
 
-*pTM*<br/>
-Ukazatel na objekt `CAtlTransactionManager`.
+*Ptm*<br/>
+Ukazatel na `CAtlTransactionManager` objekt.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud je funkce úspěšná, návratová hodnota je ERROR_SUCCESS. Pokud dojde k chybě funkce, vrácená hodnota je nenulový kód chyby definovaný v WinError. h.
+Pokud je funkce úspěšná, vrácená hodnota je ERROR_SUCCESS. Pokud funkce selže, vrácená hodnota je nenulový kód chyby definovaný ve winerror.h.
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** AFXPRIV. h
+**Záhlaví:** afxpriv.h
 
-## <a name="afxregdeletekey"></a>AfxRegDeleteKey
+## <a name="afxregdeletekey"></a><a name="afxregdeletekey"></a>AfxRegDeleteKey
 
 Odstraní zadaný klíč registru.
 
@@ -129,26 +129,26 @@ LONG AFXAPI AfxRegDeleteKey(HKEY hKey, LPCTSTR lpSubKey, CAtlTransactionManager*
 
 ### <a name="parameters"></a>Parametry
 
-*hKey*<br/>
-Popisovač pro otevřený klíč registru.
+*hKlíč*<br/>
+Popisovač otevřeného klíče registru.
 
 *lpSubKey*<br/>
-Název klíče, který se má odstranit
+Název klíče, který má být odstraněn.
 
-*pTM*<br/>
-Ukazatel na objekt `CAtlTransactionManager`.
+*Ptm*<br/>
+Ukazatel na `CAtlTransactionManager` objekt.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud je funkce úspěšná, návratová hodnota je ERROR_SUCCESS. Pokud dojde k chybě funkce, vrácená hodnota je nenulový kód chyby definovaný v WinError. h.
+Pokud je funkce úspěšná, vrácená hodnota je ERROR_SUCCESS. Pokud funkce selže, vrácená hodnota je nenulový kód chyby definovaný ve winerror.h.
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** AFXPRIV. h
+**Záhlaví:** afxpriv.h
 
 ## <a name="afxregisterpreviewhandler"></a>
 
-Pomocný objekt pro registraci obslužné rutiny náhledu.
+Pomocník pro registraci obslužné rutiny náhledu.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -159,19 +159,19 @@ BOOL AFXAPI AfxRegisterPreviewHandler(LPCTSTR lpszCLSID, LPCTSTR lpszShortTypeNa
 ### <a name="parameters"></a>Parametry
 
 *lpszCLSID*<br/>
-Určuje identifikátor CLSID obslužné rutiny.
+Určuje CLSID obslužné rutiny.
 
 *lpszShortTypeName*<br/>
-Určuje identifikátor ProgID obslužné rutiny.
+Určuje progID obslužné rutiny.
 
 *lpszFilterExt*<br/>
-Určuje příponu souboru zaregistrovanou v této obslužné rutině.
+Určuje příponu souboru registrovanou u této obslužné rutiny.
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxdisp. h
+**Záhlaví:** afxdisp.h
 
-##  <a name="atlregistertypelib"></a>AtlRegisterTypeLib
+## <a name="atlregistertypelib"></a><a name="atlregistertypelib"></a>AtlRegisterTypeLib
 
 Voláním této funkce se zaregistruje knihovna typů.
 
@@ -185,21 +185,21 @@ ATLAPI AtlRegisterTypeLib(HINSTANCE hInstTypeLib, LPCOLESTR lpszIndex);
 Popisovač instance modulu.
 
 *lpszIndex*<br/>
-Řetězec ve formátu "\\\n", kde N je celočíselný index prostředku knihovny typů. Může mít hodnotu NULL, pokud není požadován index.
+Řetězec ve formátu\\\N, kde N je index celéčíslo prostředku knihovny typů. Může být NULL, pokud není vyžadován žádný index.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí S_OK při úspěchu nebo chybu HRESULT při selhání.
+Vrátí S_OK na úspěch nebo chybu HRESULT při selhání.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato pomocná funkce je využívána [AtlComModuleUnregisterServer](server-registration-global-functions.md#atlcommoduleunregisterserver) a [CAtlComModule:: RegisterTypeLib](../../atl/reference/catlcommodule-class.md#registertypelib).
+Tato pomocná funkce je využívána [AtlComModuleUnregisterServer](server-registration-global-functions.md#atlcommoduleunregisterserver) a [CAtlComModule::RegisterTypeLib](../../atl/reference/catlcommodule-class.md#registertypelib).
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlbase. h
+**Záhlaví:** atlbase.h
 
-## <a name="afxregopenkey"></a>AfxRegOpenKey
+## <a name="afxregopenkey"></a><a name="afxregopenkey"></a>AfxRegOpenKey
 
 Otevře zadaný klíč registru.
 
@@ -211,27 +211,27 @@ LONG AFXAPI AfxRegOpenKey(HKEY hKey, LPCTSTR lpSubKey, PHKEY phkResult, CAtlTran
 
 ### <a name="parameters"></a>Parametry
 
-*hKey*<br/>
-Popisovač pro otevřený klíč registru.
+*hKlíč*<br/>
+Popisovač otevřeného klíče registru.
 
 *lpSubKey*<br/>
 Název klíče, který tato funkce otevře nebo vytvoří.
 
-*phkResult*<br/>
+*phkVýsledek*<br/>
 Ukazatel na proměnnou, která obdrží popisovač vytvořeného klíče.
 
-*pTM*<br/>
-Ukazatel na objekt `CAtlTransactionManager`.
+*Ptm*<br/>
+Ukazatel na `CAtlTransactionManager` objekt.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud je funkce úspěšná, návratová hodnota je ERROR_SUCCESS. Pokud dojde k chybě funkce, vrácená hodnota je nenulový kód chyby definovaný v WinError. h.
+Pokud je funkce úspěšná, vrácená hodnota je ERROR_SUCCESS. Pokud funkce selže, vrácená hodnota je nenulový kód chyby definovaný ve winerror.h.
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** AFXPRIV. h
+**Záhlaví:** afxpriv.h
 
-## <a name="afxregopenkeyex"></a>AfxRegOpenKeyEx
+## <a name="afxregopenkeyex"></a><a name="afxregopenkeyex"></a>AfxRegOpenKeyEx
 
 Otevře zadaný klíč registru.
 
@@ -243,35 +243,35 @@ LONG AFXAPI AfxRegOpenKeyEx(HKEY hKey, LPCTSTR lpSubKey, DWORD ulOptions, REGSAM
 
 ### <a name="parameters"></a>Parametry
 
-*hKey*<br/>
-Popisovač pro otevřený klíč registru.
+*hKlíč*<br/>
+Popisovač otevřeného klíče registru.
 
 *lpSubKey*<br/>
 Název klíče, který tato funkce otevře nebo vytvoří.
 
-*ulOptions*<br/>
-Tento parametr je rezervovaný a musí být nula.
+*ulMožnosti*<br/>
+Tento parametr je vyhrazen a musí být nula.
 
 *samDesired*<br/>
 Maska, která určuje požadovaná přístupová práva ke klíči.
 
-*phkResult*<br/>
-Ukazatel na proměnnou, která přijímá popisovač pro otevřený klíč.
+*phkVýsledek*<br/>
+Ukazatel na proměnnou, která obdrží popisovač na otevřený klíč.
 
-*pTM*<br/>
-Ukazatel na objekt `CAtlTransactionManager`.
+*Ptm*<br/>
+Ukazatel na `CAtlTransactionManager` objekt.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud je funkce úspěšná, návratová hodnota je ERROR_SUCCESS. Pokud dojde k chybě funkce, vrácená hodnota je nenulový kód chyby definovaný v WinError. h.
+Pokud je funkce úspěšná, vrácená hodnota je ERROR_SUCCESS. Pokud funkce selže, vrácená hodnota je nenulový kód chyby definovaný ve winerror.h.
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** AFXPRIV. h
+**Záhlaví:** afxpriv.h
 
-## <a name="afxunregisterpreviewhandler"></a>AfxUnregisterPreviewHandler
+## <a name="afxunregisterpreviewhandler"></a><a name="afxunregisterpreviewhandler"></a>AfxUnregisterPreviewHandler
 
-Pomocný objekt pro zrušení registrace obslužné rutiny náhledu.
+Pomocník pro zrušení registrace obslužné rutiny náhledu.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -282,15 +282,15 @@ BOOL AFXAPI AfxUnRegisterPreviewHandler(LPCTSTR lpszCLSID);
 ### <a name="parameters"></a>Parametry
 
 *lpszCLSID*<br/>
-Určuje identifikátor CLSID obslužné rutiny, která má být zrušena.
+Určuje CLSID obslužné rutiny, která má být neregistrována.
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxdisp. h
+**Záhlaví:** afxdisp.h
 
-## <a name="atlsetperuserregistration"></a>AtlSetPerUserRegistration
+## <a name="atlsetperuserregistration"></a><a name="atlsetperuserregistration"></a>AtlSetPerUserRegistration
 
-Nastaví, zda aplikace přesměrovává přístup k registru do uzlu **HKEY_CURRENT_USER** (**HKCU**).
+Nastaví, zda aplikace přesměruje přístup registru k uzlu **HKEY_CURRENT_USER** (**HKCU**).
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -301,23 +301,23 @@ ATLINLINE ATLAPI AtlSetPerUserRegistration(bool bEnable);
 ### <a name="parameters"></a>Parametry
 
 *bEnable*<br/>
-pro Hodnota TRUE označuje, že informace registru jsou směrovány na uzel **HKCU** ; Hodnota FALSE znamená, že aplikace zapisuje informace registru do výchozího uzlu. Výchozí uzel je **HKEY_CLASSES_ROOT** (**HKCR**).
+[v] True označuje, že informace o registru je směrována do uzlu **HKCU;** NEPRAVDA označuje, že aplikace zapisuje informace registru do výchozího uzlu. Výchozí uzel je **HKEY_CLASSES_ROOT** (**HKCR**).
 
 ### <a name="return-value"></a>Návratová hodnota
 
-S_OK, zda je metoda úspěšná, jinak kód chyby HRESULT, pokud dojde k chybě.
+S_OK pokud je metoda úspěšná, jinak kód chyby HRESULT, pokud dojde k chybě.
 
 ### <a name="remarks"></a>Poznámky
 
-Přesměrování registru není ve výchozím nastavení povolené. Pokud povolíte tuto možnost, bude přístup k registru přesměrován na **HKEY_CURRENT_USER \software\classes**.
+Přesměrování registru není ve výchozím nastavení povoleno. Pokud tuto možnost povolíte, bude přístup k registru přesměrován na **HKEY_CURRENT_USER\Software\Classes**.
 
-Přesměrování není globální. Toto přesměrování registru ovlivňuje pouze architektury MFC a ATL.
+Přesměrování není globální. Toto přesměrování registru ovlivňuje pouze architektury knihovny MFC a knihovny ATL.
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlbase. h
+**Záhlaví:** atlbase.h
 
-##  <a name="atlunregistertypelib"></a>AtlUnRegisterTypeLib
+## <a name="atlunregistertypelib"></a><a name="atlunregistertypelib"></a>AtlUnRegisterTypeLib
 
 Voláním této funkce se zruší registrace knihovny typů.
 
@@ -335,21 +335,21 @@ ATLAPI AtlUnRegisterTypeLib(
 Popisovač instance modulu.
 
 *lpszIndex*<br/>
-Řetězec ve formátu "\\\n", kde N je celočíselný index prostředku knihovny typů. Může mít hodnotu NULL, pokud není požadován index.
+Řetězec ve formátu\\\N, kde N je index celéčíslo prostředku knihovny typů. Může být NULL, pokud není vyžadován žádný index.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí S_OK při úspěchu nebo chybu HRESULT při selhání.
+Vrátí S_OK na úspěch nebo chybu HRESULT při selhání.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato pomocná funkce je využívána [CAtlComModule:: UnRegisterTypeLib](../../atl/reference/catlcommodule-class.md#unregistertypelib) a [AtlComModuleUnregisterServer](server-registration-global-functions.md#atlcommoduleunregisterserver).
+Tato pomocná funkce je využívána [CAtlComModule::UnRegisterTypeLib](../../atl/reference/catlcommodule-class.md#unregistertypelib) a [AtlComModuleUnregisterServer](server-registration-global-functions.md#atlcommoduleunregisterserver).
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlbase. h
+**Záhlaví:** atlbase.h
 
-##  <a name="atlloadtypelib"></a>AtlLoadTypeLib
+## <a name="atlloadtypelib"></a><a name="atlloadtypelib"></a>AtlLoadTypeLib
 
 Voláním této funkce se načte knihovna typů.
 
@@ -366,34 +366,34 @@ ATLINLINE ATLAPI AtlLoadTypeLib(
 ### <a name="parameters"></a>Parametry
 
 *hInstTypeLib*<br/>
-Zpracujte modul přidružený k knihovně typů.
+Zpracovat modul přidružený ke knihovně typů.
 
 *lpszIndex*<br/>
-Řetězec ve formátu "\\\n", kde N je celočíselný index prostředku knihovny typů. Může mít hodnotu NULL, pokud není požadován index.
+Řetězec ve formátu\\\N, kde N je index celéčíslo prostředku knihovny typů. Může být NULL, pokud není vyžadován žádný index.
 
-*pbstrPath*<br/>
-Po úspěšném návratu obsahuje úplnou cestu k modulu přidruženému k knihovně typů.
+*cesta pbstrPath*<br/>
+Při úspěšném návratu obsahuje úplnou cestu modulu přidruženého ke knihovně typů.
 
 *ppTypeLib*<br/>
-Po úspěšném vrácení obsahuje ukazatel na ukazatel na načtenou knihovnu typů.
+Při úspěšném návratu obsahuje ukazatel na ukazatel na načtenou knihovnu typů.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí S_OK při úspěchu nebo chybu HRESULT při selhání.
+Vrátí S_OK na úspěch nebo chybu HRESULT při selhání.
 
 ### <a name="remarks"></a>Poznámky
 
 Tato pomocná funkce je využívána [AtlRegisterTypeLib](#atlregistertypelib) a [AtlUnRegisterTypeLib](#atlunregistertypelib).
 
-##  <a name="atlupdateregistryfromresourced"></a>AtlUpdateRegistryFromResourceD
+## <a name="atlupdateregistryfromresourced"></a><a name="atlupdateregistryfromresourced"></a>AtlUpdateRegistryFromResourceD
 
-Tato funkce se v Visual Studio 2013 nepoužívá a je odebrána v aplikaci Visual Studio 2015.
+Tato funkce byla v sadě Visual Studio 2013 zastaralá a je odebrána v sadě Visual Studio 2015.
 
 ```
 <removed>
 ```
 
-##  <a name="registrydataexchange"></a>RegistryDataExchange
+## <a name="registrydataexchange"></a><a name="registrydataexchange"></a>RegistryDataExchange
 
 Voláním této funkce se provede čtení nebo zápis v systémovém registru.
 
@@ -408,34 +408,34 @@ HRESULT RegistryDataExchange(
 
 ### <a name="parameters"></a>Parametry
 
-*Bodů*<br/>
+*Pt*<br/>
 Ukazatel na aktuální objekt.
 
 *rdxOp*<br/>
-Hodnota výčtu, která určuje, která operace má funkce provádět. Povolené hodnoty najdete v tabulce v části poznámky.
+Hodnota výčtu, která označuje, kterou operaci by měla funkce provést. Povolené hodnoty naleznete v tabulce v části Poznámky.
 
-*pItem*<br/>
-Ukazatel na data, která se mají číst z registru nebo do něj zapisovat. Data mohou také představovat klíč, který se má odstranit z registru. Výchozí hodnota je NULL.
+*pPoložka*<br/>
+Ukazatel na data, která mají být přečtena z registru nebo do něj zapsána. Data mohou také představovat klíč, který má být odstraněn z registru. Výchozí hodnota je NULL.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí S_OK při úspěchu nebo chybu HRESULT při selhání.
+Vrátí S_OK na úspěch nebo chybu HRESULT při selhání.
 
 ### <a name="remarks"></a>Poznámky
 
-Makra [BEGIN_RDX_MAP](registry-data-exchange-macros.md#begin_rdx_map) a [END_RDX_MAP](registry-data-exchange-macros.md#end_rdx_map) rozbalí do funkce, která volá `RegistryDataExchange`.
+Makra [BEGIN_RDX_MAP](registry-data-exchange-macros.md#begin_rdx_map) a [END_RDX_MAP](registry-data-exchange-macros.md#end_rdx_map) rozbalí `RegistryDataExchange`na funkci, která volá .
 
-Možné hodnoty výčtu, které určují, jakou operaci má funkce provádět, jsou uvedeny v následující tabulce:
+Možné výčtové hodnoty, které označují operaci, kterou by měla funkce provést, jsou uvedeny v následující tabulce:
 
 |Hodnota výčtu|Operace|
 |----------------|---------------|
-|eReadFromReg|Načte data z registru.|
-|eWriteToReg|Zapište data do registru.|
+|eReadFromReg|Čtení dat z registru.|
+|eWriteToReg|Zapisovat data do registru.|
 |eDeleteFromReg|Odstraňte klíč z registru.|
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlbase. h
+**Záhlaví:** atlbase.h
 
 ## <a name="see-also"></a>Viz také
 

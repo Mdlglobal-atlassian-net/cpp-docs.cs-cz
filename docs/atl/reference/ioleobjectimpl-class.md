@@ -1,5 +1,5 @@
 ---
-title: IOleObjectImpl – třída
+title: Třída IOleObjectImpl
 ms.date: 11/04/2016
 f1_keywords:
 - IOleObjectImpl
@@ -49,19 +49,19 @@ helpviewer_keywords:
 - IOleObject, ATL implementation
 - IOleObjectImpl class
 ms.assetid: 59750b2d-1633-4a51-a4c2-6455b6b90c45
-ms.openlocfilehash: ded158b0ec862de5b0d0b23dd4b9edb50ad577ef
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 86d82aea2e92eb99903284abe4ac03478369616c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79417619"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81326529"
 ---
-# <a name="ioleobjectimpl-class"></a>IOleObjectImpl – třída
+# <a name="ioleobjectimpl-class"></a>Třída IOleObjectImpl
 
-Tato třída implementuje `IUnknown` a je hlavní rozhraní, pomocí kterého kontejner komunikuje s ovládacím prvkem.
+Tato třída `IUnknown` implementuje a je hlavní rozhraní, jehož prostřednictvím kontejner komunikuje s ovládacím prvkem.
 
 > [!IMPORTANT]
->  Tato třída a její členové nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime.
+> Tuto třídu a její členy nelze použít v aplikacích, které se spouštějí v prostředí Windows Runtime.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -72,61 +72,61 @@ class ATL_NO_VTABLE IOleObjectImpl : public IOleObject
 
 #### <a name="parameters"></a>Parametry
 
-*Š*<br/>
-Vaše třída odvozená od `IOleObjectImpl`.
+*T*<br/>
+Vaše třída, odvozená z `IOleObjectImpl`.
 
 ## <a name="members"></a>Členové
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[IOleObjectImpl:: Advise](#advise)|Vytvoří poradní spojení s ovládacím prvkem.|
-|[IOleObjectImpl:: Close](#close)|Změní stav ovládacího prvku ze spuštěno na načteno.|
-|[IOleObjectImpl::D oVerb](#doverb)|Instruuje ovládací prvek, aby provedl jednu z jeho výčtových akcí.|
-|[IOleObjectImpl::D oVerbDiscardUndo](#doverbdiscardundo)|Přikáže ovládacímu prvku, aby zahodí všechny změny, které se udržují.|
-|[IOleObjectImpl::D oVerbHide](#doverbhide)|Oznamuje ovládacímu prvku, aby ze zobrazení odstranil jeho uživatelské rozhraní.|
-|[IOleObjectImpl::D oVerbInPlaceActivate](#doverbinplaceactivate)|Spustí ovládací prvek a nainstaluje jeho okno, ale neinstaluje uživatelské rozhraní ovládacího prvku.|
-|[IOleObjectImpl::D oVerbOpen](#doverbopen)|Způsobí, že ovládací prvek bude otevřen v samostatném okně.|
-|[IOleObjectImpl::D oVerbPrimary](#doverbprimary)|Provede zadanou akci, když uživatel dvakrát klikne na ovládací prvek. Ovládací prvek definuje akci, obvykle pro aktivaci ovládacího prvku na místě.|
-|[IOleObjectImpl::D oVerbShow](#doverbshow)|Zobrazí uživateli nově vložený ovládací prvek.|
-|[IOleObjectImpl::D oVerbUIActivate](#doverbuiactivate)|Aktivuje ovládací prvek na místě a zobrazuje uživatelské rozhraní ovládacího prvku, jako jsou nabídky a panely nástrojů.|
-|[IOleObjectImpl::EnumAdvise](#enumadvise)|Vytvoří výčet poradních připojení ovládacího prvku.|
-|[IOleObjectImpl::EnumVerbs](#enumverbs)|Vytvoří výčet akcí pro ovládací prvek.|
-|[IOleObjectImpl::GetClientSite](#getclientsite)|Načte klientský web ovládacího prvku.|
-|[IOleObjectImpl::GetClipboardData](#getclipboarddata)|Načte data ze schránky. Implementace ATL vrací E_NOTIMPL.|
-|[IOleObjectImpl:: getrozsah](#getextent)|Načte rozsah zobrazované oblasti ovládacího prvku.|
+|[iOleObjectimpl::Poradit](#advise)|Naváže poradní připojení s ovládacím prvkem.|
+|[iOleObjectImpl::Zavřít](#close)|Změní stav ovládacího prvku z spuštěného na načtený.|
+|[IOleObjectImpl::DoVerb](#doverb)|Říká ovládacímu prvku provést jednu z jeho výčtu akce.|
+|[IOleObjectImpl::DoVerbDiscardUndo](#doverbdiscardundo)|Říká ovládacímu prvku, aby zrušil všechny stavy, které udržuje.|
+|[IOleObjectImpl::DoVerbHide](#doverbhide)|Říká ovládacímu prvku odebrat jeho uživatelské rozhraní ze zobrazení.|
+|[IOleObjectImpl::DoVerbInPlaceActivate](#doverbinplaceactivate)|Spustí ovládací prvek a nainstaluje jeho okno, ale nenainstaluje uživatelské rozhraní ovládacího prvku.|
+|[IOleObjectImpl::DoVerbOpen](#doverbopen)|Způsobí, že ovládací prvek bude open-edited v samostatném okně.|
+|[IOleObjectImpl::DoVerbPrimary](#doverbprimary)|Provede zadanou akci, když uživatel poklekne na ovládací prvek. Ovládací prvek definuje akci, obvykle k aktivaci ovládacího prvku na místě.|
+|[IOleObjectImpl::DoVerbShow](#doverbshow)|Zobrazí nově vložený ovládací prvek uživateli.|
+|[IOleObjectImpl::DoVerbUIAktivovat](#doverbuiactivate)|Aktivuje ovládací prvek na místě a zobrazuje uživatelské rozhraní ovládacího prvku, například nabídky a panely nástrojů.|
+|[IOleObjectImpl::EnumAdvise](#enumadvise)|Vyjmenovává poradní připojení ovládacího prvku.|
+|[IOleObjectImpl::EnumVerbs](#enumverbs)|Vyjmenovává akce pro ovládací prvek.|
+|[iOleObjectimpl::GetClientSite](#getclientsite)|Načte klientskou lokalitu ovládacího prvku.|
+|[IOleObjectImpl::GetClipboardData](#getclipboarddata)|Načte data ze schránky. Implementace ATL vrátí E_NOTIMPL.|
+|[iOleObjectimpl::GetExtent](#getextent)|Načte rozsah oblasti zobrazení ovládacího prvku.|
 |[IOleObjectImpl::GetMiscStatus](#getmiscstatus)|Načte stav ovládacího prvku.|
-|[IOleObjectImpl:: GetMoniker](#getmoniker)|Načte moniker ovládacího prvku. Implementace ATL vrací E_NOTIMPL.|
-|[IOleObjectImpl::GetUserClassID](#getuserclassid)|Načte identifikátor třídy ovládacího prvku.|
-|[IOleObjectImpl::GetUserType](#getusertype)|Načte název uživatelského typu ovládacího prvku.|
-|[IOleObjectImpl::InitFromData](#initfromdata)|Inicializuje ovládací prvek z vybraných dat. Implementace ATL vrací E_NOTIMPL.|
-|[IOleObjectImpl::IsUpToDate](#isuptodate)|Kontroluje, zda je ovládací prvek aktuální. Implementace ATL vrací S_OK.|
-|[IOleObjectImpl::OnPostVerbDiscardUndo](#onpostverbdiscardundo)|Volá se [DoVerbDiscardUndo](#doverbdiscardundo) po zahození stavu vrácení zpět.|
-|[IOleObjectImpl::OnPostVerbHide](#onpostverbhide)|Volá se [DoVerbHide](#doverbhide) po skrytí ovládacího prvku.|
-|[IOleObjectImpl::OnPostVerbInPlaceActivate](#onpostverbinplaceactivate)|Volá se [DoVerbInPlaceActivate](#doverbinplaceactivate) po aktivaci ovládacího prvku na místě.|
-|[IOleObjectImpl::OnPostVerbOpen](#onpostverbopen)|Volá se [DoVerbOpen](#doverbopen) po otevření ovládacího prvku pro úpravy v samostatném okně.|
-|[IOleObjectImpl::OnPostVerbShow](#onpostverbshow)|Volá se [DoVerbShow](#doverbshow) po tom, co se ovládací prvek nastavil jako viditelný.|
-|[IOleObjectImpl::OnPostVerbUIActivate](#onpostverbuiactivate)|Volá se [DoVerbUIActivate](#doverbuiactivate) po aktivaci uživatelského rozhraní ovládacího prvku.|
-|[IOleObjectImpl::OnPreVerbDiscardUndo](#onpreverbdiscardundo)|Volá se [DoVerbDiscardUndo](#doverbdiscardundo) před tím, než se zruší stav zrušení.|
-|[IOleObjectImpl::OnPreVerbHide](#onpreverbhide)|Volá se [DoVerbHide](#doverbhide) před tím, než je ovládací prvek skrytý.|
-|[IOleObjectImpl::OnPreVerbInPlaceActivate](#onpreverbinplaceactivate)|Volá se [DoVerbInPlaceActivate](#doverbinplaceactivate) před aktivací ovládacího prvku na místě.|
-|[IOleObjectImpl::OnPreVerbOpen](#onpreverbopen)|Volá se [DoVerbOpen](#doverbopen) před otevřením ovládacího prvku pro úpravy v samostatném okně.|
-|[IOleObjectImpl::OnPreVerbShow](#onpreverbshow)|Volá se [DoVerbShow](#doverbshow) před tím, než se ovládací prvek zviditelní.|
-|[IOleObjectImpl::OnPreVerbUIActivate](#onpreverbuiactivate)|Volá se [DoVerbUIActivate](#doverbuiactivate) před aktivací uživatelského rozhraní ovládacího prvku.|
-|[IOleObjectImpl::SetClientSite](#setclientsite)|Instruuje ovládací prvek o jeho klientské lokalitě v kontejneru.|
-|[IOleObjectImpl::SetColorScheme](#setcolorscheme)|Doporučuje barevné schéma pro aplikaci ovládacího prvku, pokud existuje. Implementace ATL vrací E_NOTIMPL.|
-|[IOleObjectImpl::SetExtent](#setextent)|Nastaví rozsah zobrazované oblasti ovládacího prvku.|
-|[IOleObjectImpl::SetHostNames](#sethostnames)|Informuje ovládací prvek o názvech aplikace kontejneru a dokumentu kontejneru.|
-|[IOleObjectImpl::SetMoniker](#setmoniker)|Oznamuje ovládacímu prvku, co je jeho moniker. Implementace ATL vrací E_NOTIMPL.|
-|[IOleObjectImpl:: Unadvise](#unadvise)|Odstraní Poradní připojení k ovládacímu prvku.|
-|[IOleObjectImpl:: Update](#update)|Aktualizuje ovládací prvek. Implementace ATL vrací S_OK.|
+|[IOleObjectImpl::GetMoniker](#getmoniker)|Načte zástupné spoje ovládacího prvku. Implementace ATL vrátí E_NOTIMPL.|
+|[iOleObjectimpl::GetUserClassID](#getuserclassid)|Načte identifikátor třídy ovládacího prvku.|
+|[iOleObjectimpl::GetUserType](#getusertype)|Načte název uživatelského typu ovládacího prvku.|
+|[IOleObjectImpl::InitFromData](#initfromdata)|Inicializuje ovládací prvek z vybraných dat. Implementace ATL vrátí E_NOTIMPL.|
+|[iOleObjectimpl::Aktuální](#isuptodate)|Zkontroluje, zda je ovládací prvek aktuální. Implementace ATL vrátí S_OK.|
+|[IOleObjectImpl::OnPostVerbDiscardUndo](#onpostverbdiscardundo)|Volána [DoVerbDiscardUndo](#doverbdiscardundo) po zahození stavu vrátit.|
+|[iOleObjectimpl::OnPostVerbHide](#onpostverbhide)|Volána [DoVerbHide](#doverbhide) po ovládacíprvek je skrytý.|
+|[iOleObjectimpl::onpostverbinplaceActivate](#onpostverbinplaceactivate)|Volat [DoVerbInPlaceAktivovat](#doverbinplaceactivate) po aktivaci ovládacího prvku na místě.|
+|[iOleObjectimpl::OnpostverbOpen](#onpostverbopen)|Volána [DoVerbOpen](#doverbopen) po otevření ovládacího prvku pro úpravy v samostatném okně.|
+|[iOleObjectimpl::OnpostverbShow](#onpostverbshow)|Volána [DoVerbShow](#doverbshow) po zviditelnění ovládacího prvku.|
+|[iOleObjectimpl::onpostverbuiActivate](#onpostverbuiactivate)|Volána [DoVerbUIActivate](#doverbuiactivate) po aktivaci uživatelského rozhraní ovládacího prvku.|
+|[IOleObjectImpl::OnPreVerbDiscardUndo](#onpreverbdiscardundo)|Volána [DoVerbDiscardUndo](#doverbdiscardundo) před zahození stavu vrátit.|
+|[iOleObjectimpl::OnPreVerbHide](#onpreverbhide)|Volána [DoVerbHide](#doverbhide) před ovládací prvek je skrytý.|
+|[iOleObjectimpl::onpreverbinplaceActivate](#onpreverbinplaceactivate)|Volat [DoVerbInPlaceActivate](#doverbinplaceactivate) před ovládací prvek je aktivován na místě.|
+|[iOleObjectimpl::onpreverbopen](#onpreverbopen)|Volána [DoVerbOpen](#doverbopen) před otevřením ovládacího prvku pro úpravy v samostatném okně.|
+|[iOleObjectimpl::onpreverbshow](#onpreverbshow)|Volána [DoVerbShow](#doverbshow) před ovládací prvek byl zviditelněn.|
+|[iOleObjectimpl::onpreverbuiActivate](#onpreverbuiactivate)|Volána [DoVerbUIActivate](#doverbuiactivate) před aktivací uživatelského rozhraní ovládacího prvku.|
+|[iOleObjectImpl::SetClientSite](#setclientsite)|Informuje o ovládacím prvku o jeho klientské lokality v kontejneru.|
+|[iOleObjectimpl::Setcolorscheme](#setcolorscheme)|Doporučuje barevné schéma pro aplikaci ovládacího prvku, pokud existuje. Implementace ATL vrátí E_NOTIMPL.|
+|[iOleObjectimpl:SetExtent](#setextent)|Nastaví rozsah oblasti zobrazení ovládacího prvku.|
+|[iOleObjectimpl::SetHostNames](#sethostnames)|Říká ovládacímu prvku názvy kontejneru aplikace a kontejneru dokumentu.|
+|[IOleObjectImpl::SetMoniker](#setmoniker)|Říká ovládacímu prvku, co je jeho zástupná skupina. Implementace ATL vrátí E_NOTIMPL.|
+|[IOleObjectImpl::Nerada](#unadvise)|Odstraní poradní připojení s ovládacím prvkem.|
+|[iOleObjectImpl::Aktualizovat](#update)|Aktualizuje ovládací prvek. Implementace ATL vrátí S_OK.|
 
 ## <a name="remarks"></a>Poznámky
 
-Rozhraní [IOleObject](/windows/win32/api/oleidl/nn-oleidl-ioleobject) je hlavní rozhraní, pomocí kterého kontejner komunikuje s ovládacím prvkem. Třída `IOleObjectImpl` poskytuje výchozí implementaci tohoto rozhraní a implementuje `IUnknown` odesláním informací do zařízení výpisu paměti v sestaveních pro ladění.
+[Rozhraní IOleObject](/windows/win32/api/oleidl/nn-oleidl-ioleobject) je hlavní rozhraní, jehož prostřednictvím kontejner komunikuje s ovládacím prvkem. Třída `IOleObjectImpl` poskytuje výchozí implementaci tohoto rozhraní `IUnknown` a implementuje odesláním informací do zařízení s výpisem stavu paměti v sestavení ladění.
 
-Kurz **související články** [ATL](../../atl/active-template-library-atl-tutorial.md), [Vytvoření projektu ATL](../../atl/reference/creating-an-atl-project.md)
+**Související články** [ATL Výuka](../../atl/active-template-library-atl-tutorial.md), [Vytvoření projektu ATL](../../atl/reference/creating-an-atl-project.md)
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -136,11 +136,11 @@ Kurz **související články** [ATL](../../atl/active-template-library-atl-tuto
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlctl. h
+**Záhlaví:** atlctl.h
 
-##  <a name="advise"></a>IOleObjectImpl:: Advise
+## <a name="ioleobjectimpladvise"></a><a name="advise"></a>iOleObjectimpl::Poradit
 
-Vytvoří poradní spojení s ovládacím prvkem.
+Naváže poradní připojení s ovládacím prvkem.
 
 ```
 STDMETHOD(Advise)(
@@ -150,11 +150,11 @@ STDMETHOD(Advise)(
 
 ### <a name="remarks"></a>Poznámky
 
-Viz [IOleObject:: Advise](/windows/win32/api/oleidl/nf-oleidl-ioleobject-advise) v Windows SDK.
+Viz [IOleObject::Advise](/windows/win32/api/oleidl/nf-oleidl-ioleobject-advise) v sadě Windows SDK.
 
-##  <a name="close"></a>IOleObjectImpl:: Close
+## <a name="ioleobjectimplclose"></a><a name="close"></a>iOleObjectImpl::Zavřít
 
-Změní stav ovládacího prvku ze spuštěno na načteno.
+Změní stav ovládacího prvku z spuštěného na načtený.
 
 ```
 STDMETHOD(Close)(DWORD dwSaveOption);
@@ -162,15 +162,15 @@ STDMETHOD(Close)(DWORD dwSaveOption);
 
 ### <a name="remarks"></a>Poznámky
 
-Deaktivuje ovládací prvek a odstraní okno ovládacího prvku, pokud existuje. Pokud je datový člen třídy ovládacího prvku [CComControlBase:: M_BREQUIRESSAVE](../../atl/reference/ccomcontrolbase-class.md#m_brequiressave) true a parametr *dwSaveOption* je buď OLECLOSE_SAVEIFDIRTY nebo OLECLOSE_PROMPTSAVE, vlastnosti ovládacího prvku jsou před zavřením uloženy.
+Deaktivuje ovládací prvek a zničí okno ovládacího prvku, pokud existuje. Pokud je datový člen třídy ovládacího prvku [CComControlBase::m_bRequiresSave](../../atl/reference/ccomcontrolbase-class.md#m_brequiressave) TRUE a parametr *dwSaveOption* je OLECLOSE_SAVEIFDIRTY nebo OLECLOSE_PROMPTSAVE, vlastnosti ovládacího prvku se před zavřením uloží.
 
-Ukazatele uchovávané v datových členech třídy ovládacího prvku [CComControlBase:: m_spInPlaceSite](../../atl/reference/ccomcontrolbase-class.md#m_spinplacesite) a [CComControlBase:: m_spAdviseSink](../../atl/reference/ccomcontrolbase-class.md#m_spadvisesink) jsou uvolněny a datové členy [CComControlBase:: m_bNegotiatedWnd](../../atl/reference/ccomcontrolbase-class.md#m_bnegotiatedwnd), [CComControlBase:: m_bWndless](../../atl/reference/ccomcontrolbase-class.md#m_bwndless)a [CComControlBase:: m_bInPlaceSiteEx](../../atl/reference/ccomcontrolbase-class.md#m_binplacesiteex) jsou nastaveny na hodnotu false.
+Ukazatele uchovávané v datových členech třídy ovládacího prvku [CComControlBase::m_spInPlaceSite](../../atl/reference/ccomcontrolbase-class.md#m_spinplacesite) a [CComControlBase::m_spAdviseSink](../../atl/reference/ccomcontrolbase-class.md#m_spadvisesink) jsou uvolněny a datové členy [CComControlBase:::m_bNegotiatedWnd](../../atl/reference/ccomcontrolbase-class.md#m_bnegotiatedwnd), [CComControlBase::m_bWndless](../../atl/reference/ccomcontrolbase-class.md#m_bwndless)a [CComControlBase::m_bInPlaceSiteEx](../../atl/reference/ccomcontrolbase-class.md#m_binplacesiteex) jsou nastaveny na HODNOTU FALSE.
 
-Viz [IOleObject:: Close](/windows/win32/api/oleidl/nf-oleidl-ioleobject-close) v Windows SDK.
+Viz [IOleObject::Close](/windows/win32/api/oleidl/nf-oleidl-ioleobject-close) v sadě Windows SDK.
 
-##  <a name="doverb"></a>IOleObjectImpl::D oVerb
+## <a name="ioleobjectimpldoverb"></a><a name="doverb"></a>IOleObjectImpl::DoVerb
 
-Instruuje ovládací prvek, aby provedl jednu z jeho výčtových akcí.
+Říká ovládacímu prvku provést jednu z jeho výčtu akce.
 
 ```
 STDMETHOD(DoVerb)(
@@ -184,24 +184,24 @@ STDMETHOD(DoVerb)(
 
 ### <a name="remarks"></a>Poznámky
 
-V závislosti na hodnotě `iVerb`je jedna z pomocných funkcí ATL `DoVerb` volána následujícím způsobem:
+V závislosti na `iVerb`hodnotě aplikace `DoVerb` se nazývá jedna z pomocných funkcí atl takto:
 
-|*iVerb* Osa|Pomocná funkce DoVerb se volala|
+|*iSponož* Hodnotu|DoVerb pomocná funkce s názvem|
 |-------------------|-----------------------------------|
-|OLEIVERB_DISCARDUNDOSTATE|[DoVerbDiscardUndo](#doverbdiscardundo)|
+|OLEIVERB_DISCARDUNDOSTATE|[DoVerbDiscardUnod](#doverbdiscardundo)|
 |OLEIVERB_HIDE|[DoVerbHide](#doverbhide)|
-|OLEIVERB_INPLACEACTIVATE|[DoVerbInPlaceActivate](#doverbinplaceactivate)|
+|OLEIVERB_INPLACEACTIVATE|[DoverbinplaceAktivovat](#doverbinplaceactivate)|
 |OLEIVERB_OPEN|[DoVerbOpen](#doverbopen)|
-|OLEIVERB_PRIMARY|[DoVerbPrimary](#doverbprimary)|
-|OLEIVERB_PROPERTIES|[CComControlBase::D oVerbProperties](../../atl/reference/ccomcontrolbase-class.md#doverbproperties)|
+|OLEIVERB_PRIMARY|[DoVerbPrimární](#doverbprimary)|
+|OLEIVERB_PROPERTIES|[CComControlBase::DoVerbProperties](../../atl/reference/ccomcontrolbase-class.md#doverbproperties)|
 |OLEIVERB_SHOW|[DoVerbShow](#doverbshow)|
-|OLEIVERB_UIACTIVATE|[DoVerbUIActivate](#doverbuiactivate)|
+|OLEIVERB_UIACTIVATE|[DoverbuiAktivovat](#doverbuiactivate)|
 
-Viz [IOleObject::D overb](/windows/win32/api/oleidl/nf-oleidl-ioleobject-doverb) v Windows SDK.
+Viz [IOleObject::DoVerb](/windows/win32/api/oleidl/nf-oleidl-ioleobject-doverb) v sadě Windows SDK.
 
-##  <a name="doverbdiscardundo"></a>IOleObjectImpl::D oVerbDiscardUndo
+## <a name="ioleobjectimpldoverbdiscardundo"></a><a name="doverbdiscardundo"></a>IOleObjectImpl::DoVerbDiscardUndo
 
-Přikáže ovládacímu prvku, aby zahodí všechny změny, které se udržují.
+Říká ovládacímu prvku, aby zrušil všechny stavy, které udržuje.
 
 ```
 HRESULT DoVerbDiscardUndo(LPCRECT /* prcPosRect */, HWND /* hwndParent */);
@@ -209,17 +209,17 @@ HRESULT DoVerbDiscardUndo(LPCRECT /* prcPosRect */, HWND /* hwndParent */);
 
 ### <a name="parameters"></a>Parametry
 
-*prcPosRec*<br/>
-pro Ukazatel na obdélník, do kterého kontejner chce ovládací prvek nakreslit.
+*č. PosRec*<br/>
+[v] Ukazatel na obdélník kontejneru chce ovládací prvek čerpat do.
 
 *hwndParent*<br/>
-pro Popisovač okna obsahujícího ovládací prvek
+[v] Popisovač okna obsahující ovládací prvek.
 
 ### <a name="return-value"></a>Návratová hodnota
 
 Vrátí S_OK.
 
-##  <a name="doverbhide"></a>IOleObjectImpl::D oVerbHide
+## <a name="ioleobjectimpldoverbhide"></a><a name="doverbhide"></a>IOleObjectImpl::DoVerbHide
 
 Deaktivuje a odebere uživatelské rozhraní ovládacího prvku a skryje ovládací prvek.
 
@@ -229,19 +229,19 @@ HRESULT DoVerbHide(LPCRECT /* prcPosRect */, HWND /* hwndParent */);
 
 ### <a name="parameters"></a>Parametry
 
-*prcPosRec*<br/>
-pro Ukazatel na obdélník, do kterého kontejner chce ovládací prvek nakreslit.
+*č. PosRec*<br/>
+[v] Ukazatel na obdélník kontejneru chce ovládací prvek čerpat do.
 
 *hwndParent*<br/>
-pro Popisovač okna obsahujícího ovládací prvek Nepoužívá se v implementaci ATL.
+[v] Popisovač okna obsahující ovládací prvek. Nepoužívá se v implementaci ATL.
 
 ### <a name="return-value"></a>Návratová hodnota
 
 Vrátí S_OK.
 
-##  <a name="doverbinplaceactivate"></a>IOleObjectImpl::D oVerbInPlaceActivate
+## <a name="ioleobjectimpldoverbinplaceactivate"></a><a name="doverbinplaceactivate"></a>IOleObjectImpl::DoVerbInPlaceActivate
 
-Spustí ovládací prvek a nainstaluje jeho okno, ale neinstaluje uživatelské rozhraní ovládacího prvku.
+Spustí ovládací prvek a nainstaluje jeho okno, ale nenainstaluje uživatelské rozhraní ovládacího prvku.
 
 ```
 HRESULT DoVerbInPlaceActivate(LPCRECT prcPosRect, HWND /* hwndParent */);
@@ -249,11 +249,11 @@ HRESULT DoVerbInPlaceActivate(LPCRECT prcPosRect, HWND /* hwndParent */);
 
 ### <a name="parameters"></a>Parametry
 
-*prcPosRec*<br/>
-pro Ukazatel na obdélník, do kterého kontejner chce ovládací prvek nakreslit.
+*č. PosRec*<br/>
+[v] Ukazatel na obdélník kontejneru chce ovládací prvek čerpat do.
 
 *hwndParent*<br/>
-pro Popisovač okna obsahujícího ovládací prvek Nepoužívá se v implementaci ATL.
+[v] Popisovač okna obsahující ovládací prvek. Nepoužívá se v implementaci ATL.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -261,11 +261,11 @@ Jedna ze standardních hodnot HRESULT.
 
 ### <a name="remarks"></a>Poznámky
 
-Aktivuje ovládací prvek místo voláním [CComControlBase:: InPlaceActivate](../../atl/reference/ccomcontrolbase-class.md#inplaceactivate). Není-li datový člen třídy ovládacího prvku `m_bWindowOnly` TRUE, `DoVerbInPlaceActivate` nejprve proveden pokus o aktivaci ovládacího prvku jako řízení bez okna (možné pouze v případě, že kontejner podporuje [IOleInPlaceSiteWindowless](/windows/win32/api/ocidl/nn-ocidl-ioleinplacesitewindowless)). Pokud se to nepovede, funkce se pokusí o aktivaci ovládacího prvku s rozšířenými funkcemi (možné pouze v případě, že kontejner podporuje [IOleInPlaceSiteEx](/windows/win32/api/ocidl/nn-ocidl-ioleinplacesiteex)). Pokud se to nepovede, funkce se pokusí aktivovat ovládací prvek bez rozšířených funkcí (možné jenom v případě, že kontejner podporuje [IOleInPlaceSite](/windows/win32/api/oleidl/nn-oleidl-ioleinplacesite)). Pokud je aktivace úspěšná, funkce upozorní kontejner na aktivaci ovládacího prvku.
+Aktivuje ovládací prvek na místě voláním [CComControlBase::InPlaceActivate](../../atl/reference/ccomcontrolbase-class.md#inplaceactivate). Pokud datový člen `m_bWindowOnly` třídy ovládacího `DoVerbInPlaceActivate` prvku není TRUE, nejprve se pokusí aktivovat ovládací prvek jako ovládací prvek bez oken (možné pouze v případě, že kontejner podporuje [IOleInPlaceSiteWindowless).](/windows/win32/api/ocidl/nn-ocidl-ioleinplacesitewindowless) Pokud se to nezdaří, funkce se pokusí aktivovat ovládací prvek s rozšířenými funkcemi (možné pouze v případě, že kontejner podporuje [IOleInPlaceSiteEx).](/windows/win32/api/ocidl/nn-ocidl-ioleinplacesiteex) Pokud se to nezdaří, funkce se pokusí aktivovat ovládací prvek bez rozšířených funkcí (možné pouze v případě, že kontejner podporuje [IOleInPlaceSite).](/windows/win32/api/oleidl/nn-oleidl-ioleinplacesite) Pokud aktivace proběhne úspěšně, funkce upozorní kontejner, že byl aktivován ovládací prvek.
 
-##  <a name="doverbopen"></a>IOleObjectImpl::D oVerbOpen
+## <a name="ioleobjectimpldoverbopen"></a><a name="doverbopen"></a>IOleObjectImpl::DoVerbOpen
 
-Způsobí, že ovládací prvek bude otevřen v samostatném okně.
+Způsobí, že ovládací prvek bude open-edited v samostatném okně.
 
 ```
 HRESULT DoVerbOpen(LPCRECT /* prcPosRect */, HWND /* hwndParent */);
@@ -273,19 +273,19 @@ HRESULT DoVerbOpen(LPCRECT /* prcPosRect */, HWND /* hwndParent */);
 
 ### <a name="parameters"></a>Parametry
 
-*prcPosRec*<br/>
-pro Ukazatel na obdélník, do kterého kontejner chce ovládací prvek nakreslit.
+*č. PosRec*<br/>
+[v] Ukazatel na obdélník kontejneru chce ovládací prvek čerpat do.
 
 *hwndParent*<br/>
-pro Popisovač okna obsahujícího ovládací prvek
+[v] Popisovač okna obsahující ovládací prvek.
 
 ### <a name="return-value"></a>Návratová hodnota
 
 Vrátí S_OK.
 
-##  <a name="doverbprimary"></a>IOleObjectImpl::D oVerbPrimary
+## <a name="ioleobjectimpldoverbprimary"></a><a name="doverbprimary"></a>IOleObjectImpl::DoVerbPrimary
 
-Definuje akci provedenou, když uživatel dvakrát klikne na ovládací prvek.
+Definuje akci přijatou při poklepání uživatele na ovládací prvek.
 
 ```
 HRESULT DoVerbPrimary(LPCRECT prcPosRect, HWND hwndParent);
@@ -293,11 +293,11 @@ HRESULT DoVerbPrimary(LPCRECT prcPosRect, HWND hwndParent);
 
 ### <a name="parameters"></a>Parametry
 
-*prcPosRec*<br/>
-pro Ukazatel na obdélník, do kterého kontejner chce ovládací prvek nakreslit.
+*č. PosRec*<br/>
+[v] Ukazatel na obdélník kontejneru chce ovládací prvek čerpat do.
 
 *hwndParent*<br/>
-pro Popisovač okna obsahujícího ovládací prvek
+[v] Popisovač okna obsahující ovládací prvek.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -305,11 +305,11 @@ Jedna ze standardních hodnot HRESULT.
 
 ### <a name="remarks"></a>Poznámky
 
-Ve výchozím nastavení je nastaveno zobrazení stránek vlastností. Můžete ji přepsat ve vaší třídě ovládacího prvku a vyvolat tak jiné chování při poklikání. Můžete například přehrát video nebo přejít na místo na místě aktivní.
+Ve výchozím nastavení nastavte zobrazení stránek vlastností. Můžete přepsat ve třídě ovládacího prvku vyvolat jiné chování při poklepání; můžete například přehrát video nebo přejít na místo aktivní.
 
-##  <a name="doverbshow"></a>IOleObjectImpl::D oVerbShow
+## <a name="ioleobjectimpldoverbshow"></a><a name="doverbshow"></a>IOleObjectImpl::DoVerbShow
 
-Dá kontejneru pokyn, aby ovládací prvek byl viditelný.
+Říká kontejneru, aby ovládací prvek viditelný.
 
 ```
 HRESULT DoVerbShow(LPCRECT prcPosRect, HWND /* hwndParent */);
@@ -317,19 +317,19 @@ HRESULT DoVerbShow(LPCRECT prcPosRect, HWND /* hwndParent */);
 
 ### <a name="parameters"></a>Parametry
 
-*prcPosRec*<br/>
-pro Ukazatel na obdélník, do kterého kontejner chce ovládací prvek nakreslit.
+*č. PosRec*<br/>
+[v] Ukazatel na obdélník kontejneru chce ovládací prvek čerpat do.
 
 *hwndParent*<br/>
-pro Popisovač okna obsahujícího ovládací prvek Nepoužívá se v implementaci ATL.
+[v] Popisovač okna obsahující ovládací prvek. Nepoužívá se v implementaci ATL.
 
 ### <a name="return-value"></a>Návratová hodnota
 
 Jedna ze standardních hodnot HRESULT.
 
-##  <a name="doverbuiactivate"></a>IOleObjectImpl::D oVerbUIActivate
+## <a name="ioleobjectimpldoverbuiactivate"></a><a name="doverbuiactivate"></a>IOleObjectImpl::DoVerbUIAktivovat
 
-Aktivuje uživatelské rozhraní ovládacího prvku a upozorní kontejner, že jeho nabídky se nahrazují složenými nabídkami.
+Aktivuje uživatelské rozhraní ovládacího prvku a upozorní kontejner, že jeho nabídky jsou nahrazovány složenými nabídkami.
 
 ```
 HRESULT DoVerbUIActivate(LPCRECT prcPosRect, HWND /* hwndParent */);
@@ -337,19 +337,19 @@ HRESULT DoVerbUIActivate(LPCRECT prcPosRect, HWND /* hwndParent */);
 
 ### <a name="parameters"></a>Parametry
 
-*prcPosRec*<br/>
-pro Ukazatel na obdélník, do kterého kontejner chce ovládací prvek nakreslit.
+*č. PosRec*<br/>
+[v] Ukazatel na obdélník kontejneru chce ovládací prvek čerpat do.
 
 *hwndParent*<br/>
-pro Popisovač okna obsahujícího ovládací prvek Nepoužívá se v implementaci ATL.
+[v] Popisovač okna obsahující ovládací prvek. Nepoužívá se v implementaci ATL.
 
 ### <a name="return-value"></a>Návratová hodnota
 
 Jedna ze standardních hodnot HRESULT.
 
-##  <a name="enumadvise"></a>IOleObjectImpl::EnumAdvise
+## <a name="ioleobjectimplenumadvise"></a><a name="enumadvise"></a>IOleObjectImpl::EnumAdvise
 
-Poskytuje výčet registrovaných poradenských připojení pro tento ovládací prvek.
+Poskytuje výčet registrovaných poradní připojení pro tento ovládací prvek.
 
 ```
 STDMETHOD(EnumAdvise)(IEnumSTATDATA** ppenumAdvise);
@@ -357,11 +357,11 @@ STDMETHOD(EnumAdvise)(IEnumSTATDATA** ppenumAdvise);
 
 ### <a name="remarks"></a>Poznámky
 
-Viz [IOleObject:: enumAdvise](/windows/win32/api/oleidl/nf-oleidl-ioleobject-enumadvise) v Windows SDK.
+Viz [IOleObject::EnumAdvise](/windows/win32/api/oleidl/nf-oleidl-ioleobject-enumadvise) v sadě Windows SDK.
 
-##  <a name="enumverbs"></a>IOleObjectImpl::EnumVerbs
+## <a name="ioleobjectimplenumverbs"></a><a name="enumverbs"></a>IOleObjectImpl::EnumVerbs
 
-Poskytuje výčet registrovaných akcí (operací) pro tento ovládací prvek voláním `OleRegEnumVerbs`.
+Poskytuje výčet registrovaných akcí (sloves) pro tento `OleRegEnumVerbs`ovládací prvek voláním .
 
 ```
 STDMETHOD(EnumVerbs)(IEnumOLEVERB** ppEnumOleVerb);
@@ -369,13 +369,13 @@ STDMETHOD(EnumVerbs)(IEnumOLEVERB** ppEnumOleVerb);
 
 ### <a name="remarks"></a>Poznámky
 
-Do souboru. rgs projektu můžete přidat operace. Například viz CIRCCTL. RGS v ukázce [str](../../overview/visual-cpp-samples.md) .
+Do souboru RGS projektu můžete přidat slovesa. Viz například CIRCCTL. RGS ve vzorku [CIRC.](../../overview/visual-cpp-samples.md)
 
-Viz [IOleObject:: EnumVerbs](/windows/win32/api/oleidl/nf-oleidl-ioleobject-enumverbs) v Windows SDK.
+Viz [IOleObject::EnumVerbs](/windows/win32/api/oleidl/nf-oleidl-ioleobject-enumverbs) v sadě Windows SDK.
 
-##  <a name="getclientsite"></a>IOleObjectImpl::GetClientSite
+## <a name="ioleobjectimplgetclientsite"></a><a name="getclientsite"></a>iOleObjectimpl::GetClientSite
 
-Vloží ukazatel do datového členu třídy ovládacího prvku [CComControlBase:: m_spClientSite](../../atl/reference/ccomcontrolbase-class.md#m_spclientsite) do *ppClientSite* a zvýší počet odkazů na ukazatel.
+Vloží ukazatel v datovém členu třídy ovládacího prvku [CComControlBase::m_spClientSite](../../atl/reference/ccomcontrolbase-class.md#m_spclientsite) do *ppClientSite* a nastaví počet odkazů na ukazatel.
 
 ```
 STDMETHOD(GetClientSite)(IOleClientSite** ppClientSite);
@@ -383,9 +383,9 @@ STDMETHOD(GetClientSite)(IOleClientSite** ppClientSite);
 
 ### <a name="remarks"></a>Poznámky
 
-Viz [IOleObject:: GetClientSite](/windows/win32/api/oleidl/nf-oleidl-ioleobject-getclientsite) v Windows SDK.
+Viz [IOleObject::GetClientSite](/windows/win32/api/oleidl/nf-oleidl-ioleobject-getclientsite) v sadě Windows SDK.
 
-##  <a name="getclipboarddata"></a>IOleObjectImpl::GetClipboardData
+## <a name="ioleobjectimplgetclipboarddata"></a><a name="getclipboarddata"></a>IOleObjectImpl::GetClipboardData
 
 Načte data ze schránky.
 
@@ -401,9 +401,9 @@ Vrátí E_NOTIMPL.
 
 ### <a name="remarks"></a>Poznámky
 
-Viz [IOleObject:: GetClipboardData](/windows/win32/api/oleidl/nf-oleidl-ioleobject-getclipboarddata) v Windows SDK.
+Viz [IOleObject::GetClipboardData](/windows/win32/api/oleidl/nf-oleidl-ioleobject-getclipboarddata) v sadě Windows SDK.
 
-##  <a name="getextent"></a>IOleObjectImpl:: getrozsah
+## <a name="ioleobjectimplgetextent"></a><a name="getextent"></a>iOleObjectimpl::GetExtent
 
 Načte velikost zobrazení běžícího ovládacího prvku v jednotkách HIMETRIC (0,01 milimetru na jednotku).
 
@@ -415,13 +415,13 @@ STDMETHOD(GetExtent)(
 
 ### <a name="remarks"></a>Poznámky
 
-Velikost je uložena v datovém členu třídy ovládacího prvku [CComControlBase:: m_sizeExtent](../../atl/reference/ccomcontrolbase-class.md#m_sizeextent).
+Velikost je uložena v datovém členu třídy ovládacího prvku [CComControlBase::m_sizeExtent](../../atl/reference/ccomcontrolbase-class.md#m_sizeextent).
 
-Viz [IOleObject:: getrozsah](/windows/win32/api/oleidl/nf-oleidl-ioleobject-getextent) v Windows SDK.
+Viz [IOleObject::GetExtent](/windows/win32/api/oleidl/nf-oleidl-ioleobject-getextent) v sadě Windows SDK.
 
-##  <a name="getmiscstatus"></a>IOleObjectImpl::GetMiscStatus
+## <a name="ioleobjectimplgetmiscstatus"></a><a name="getmiscstatus"></a>IOleObjectImpl::GetMiscStatus
 
-Vrátí ukazatel na zaregistrované informace o stavu ovládacího prvku voláním `OleRegGetMiscStatus`.
+Vrátí ukazatel na registrované informace o `OleRegGetMiscStatus`stavu ovládacího prvku voláním .
 
 ```
 STDMETHOD(GetMiscStatus)(
@@ -431,13 +431,13 @@ STDMETHOD(GetMiscStatus)(
 
 ### <a name="remarks"></a>Poznámky
 
-Informace o stavu zahrnují chování, které podporuje data ovládacího prvku a prezentace. Do souboru. rgs projektu můžete přidat informace o stavu.
+Informace o stavu zahrnují chování podporované daty ovládacího prvku a prezentace. Do souboru RGS projektu můžete přidat informace o stavu.
 
-Viz [IOleObject:: GetMiscStatus](/windows/win32/api/oleidl/nf-oleidl-ioleobject-getmiscstatus) v Windows SDK.
+Viz [IOleObject::GetMiscStatus](/windows/win32/api/oleidl/nf-oleidl-ioleobject-getmiscstatus) v sadě Windows SDK.
 
-##  <a name="getmoniker"></a>IOleObjectImpl:: GetMoniker
+## <a name="ioleobjectimplgetmoniker"></a><a name="getmoniker"></a>IOleObjectImpl::GetMoniker
 
-Načte moniker ovládacího prvku.
+Načte zástupné spoje ovládacího prvku.
 
 ```
 STDMETHOD(GetMoniker)(
@@ -452,9 +452,9 @@ Vrátí E_NOTIMPL.
 
 ### <a name="remarks"></a>Poznámky
 
-Viz [IOleObject:: GetMoniker](/windows/win32/api/oleidl/nf-oleidl-ioleobject-getmoniker) v Windows SDK.
+Viz [IOleObject::GetMoniker](/windows/win32/api/oleidl/nf-oleidl-ioleobject-getmoniker) v sadě Windows SDK.
 
-##  <a name="getuserclassid"></a>IOleObjectImpl::GetUserClassID
+## <a name="ioleobjectimplgetuserclassid"></a><a name="getuserclassid"></a>iOleObjectimpl::GetUserClassID
 
 Vrátí identifikátor třídy ovládacího prvku.
 
@@ -464,11 +464,11 @@ STDMETHOD(GetUserClassID)(CLSID* pClsid);
 
 ### <a name="remarks"></a>Poznámky
 
-Viz [IOleObject:: GetUserClassID](/windows/win32/api/oleidl/nf-oleidl-ioleobject-getuserclassid) v Windows SDK.
+Viz [IOleObject::GetUserClassID](/windows/win32/api/oleidl/nf-oleidl-ioleobject-getuserclassid) v sadě Windows SDK.
 
-##  <a name="getusertype"></a>IOleObjectImpl::GetUserType
+## <a name="ioleobjectimplgetusertype"></a><a name="getusertype"></a>iOleObjectimpl::GetUserType
 
-Vrátí název uživatelského typu ovládacího prvku voláním `OleRegGetUserType`.
+Vrátí název uživatelského typu ovládacího `OleRegGetUserType`prvku voláním .
 
 ```
 STDMETHOD(GetUserType)(
@@ -478,11 +478,11 @@ STDMETHOD(GetUserType)(
 
 ### <a name="remarks"></a>Poznámky
 
-Název uživatelského typu se používá k zobrazení v prvcích uživatelského rozhraní, jako jsou nabídky a dialogová okna. V souboru. rgs projektu můžete změnit název typu uživatele.
+Název uživatelského typu se používá pro zobrazení v elementech uživatelských rozhraní, jako jsou nabídky a dialogová okna. Název typu uživatele můžete změnit v souboru RGS projektu.
 
-Viz [IOleObject:: GetUserType](/windows/win32/api/oleidl/nf-oleidl-ioleobject-getusertype) v Windows SDK.
+Viz [IOleObject::GetUserType](/windows/win32/api/oleidl/nf-oleidl-ioleobject-getusertype) v sadě Windows SDK.
 
-##  <a name="initfromdata"></a>IOleObjectImpl::InitFromData
+## <a name="ioleobjectimplinitfromdata"></a><a name="initfromdata"></a>IOleObjectImpl::InitFromData
 
 Inicializuje ovládací prvek z vybraných dat.
 
@@ -499,11 +499,11 @@ Vrátí E_NOTIMPL.
 
 ### <a name="remarks"></a>Poznámky
 
-Viz [IOleObject:: InitFromData](/windows/win32/api/oleidl/nf-oleidl-ioleobject-initfromdata) v Windows SDK.
+Viz [IOleObject::InitFromData](/windows/win32/api/oleidl/nf-oleidl-ioleobject-initfromdata) v sadě Windows SDK.
 
-##  <a name="isuptodate"></a>IOleObjectImpl::IsUpToDate
+## <a name="ioleobjectimplisuptodate"></a><a name="isuptodate"></a>iOleObjectimpl::Aktuální
 
-Kontroluje, zda je ovládací prvek aktuální.
+Zkontroluje, zda je ovládací prvek aktuální.
 
 ```
 STDMETHOD(IsUpToDate)(void);
@@ -515,11 +515,11 @@ Vrátí S_OK.
 
 ### <a name="remarks"></a>Poznámky
 
-Viz [IOleObject:: IsUpToDate](/windows/win32/api/oleidl/nf-oleidl-ioleobject-isuptodate) v Windows SDK.
+Viz [IOleObject::IsUpToDate](/windows/win32/api/oleidl/nf-oleidl-ioleobject-isuptodate) v sadě Windows SDK.
 
-##  <a name="onpostverbdiscardundo"></a>IOleObjectImpl::OnPostVerbDiscardUndo
+## <a name="ioleobjectimplonpostverbdiscardundo"></a><a name="onpostverbdiscardundo"></a>IOleObjectImpl::OnPostVerbDiscardUndo
 
-Volá se [DoVerbDiscardUndo](#doverbdiscardundo) po zahození stavu vrácení zpět.
+Volána [DoVerbDiscardUndo](#doverbdiscardundo) po zahození stavu vrátit.
 
 ```
 HRESULT OnPostVerbDiscardUndo();
@@ -531,11 +531,11 @@ Vrátí S_OK.
 
 ### <a name="remarks"></a>Poznámky
 
-Tuto metodu můžete přepsat kódem, který má být proveden po zahození stavu vrácení zpět.
+Přepsat tuto metodu s kódem, který chcete spustit po zahození stavu vrátit.
 
-##  <a name="onpostverbhide"></a>IOleObjectImpl::OnPostVerbHide
+## <a name="ioleobjectimplonpostverbhide"></a><a name="onpostverbhide"></a>iOleObjectimpl::OnPostVerbHide
 
-Volá se [DoVerbHide](#doverbhide) po skrytí ovládacího prvku.
+Volána [DoVerbHide](#doverbhide) po ovládacíprvek je skrytý.
 
 ```
 HRESULT OnPostVerbHide();
@@ -547,11 +547,11 @@ Vrátí S_OK.
 
 ### <a name="remarks"></a>Poznámky
 
-Tuto metodu můžete přepsat kódem, který chcete provést po skrytí ovládacího prvku.
+Přepsat tuto metodu s kódem, který chcete spustit po ovládací prvek je skrytý.
 
-##  <a name="onpostverbinplaceactivate"></a>IOleObjectImpl::OnPostVerbInPlaceActivate
+## <a name="ioleobjectimplonpostverbinplaceactivate"></a><a name="onpostverbinplaceactivate"></a>iOleObjectimpl::onpostverbinplaceActivate
 
-Volá se [DoVerbInPlaceActivate](#doverbinplaceactivate) po aktivaci ovládacího prvku na místě.
+Volat [DoVerbInPlaceAktivovat](#doverbinplaceactivate) po aktivaci ovládacího prvku na místě.
 
 ```
 HRESULT OnPostVerbInPlaceActivate();
@@ -563,11 +563,11 @@ Vrátí S_OK.
 
 ### <a name="remarks"></a>Poznámky
 
-Tuto metodu můžete přepsat kódem, který chcete provést po aktivaci ovládacího prvku na místě.
+Přepsat tuto metodu s kódem, který chcete spustit po aktivaci ovládacího prvku na místě.
 
-##  <a name="onpostverbopen"></a>IOleObjectImpl::OnPostVerbOpen
+## <a name="ioleobjectimplonpostverbopen"></a><a name="onpostverbopen"></a>iOleObjectimpl::OnpostverbOpen
 
-Volá se [DoVerbOpen](#doverbopen) po otevření ovládacího prvku pro úpravy v samostatném okně.
+Volána [DoVerbOpen](#doverbopen) po otevření ovládacího prvku pro úpravy v samostatném okně.
 
 ```
 HRESULT OnPostVerbOpen();
@@ -579,11 +579,11 @@ Vrátí S_OK.
 
 ### <a name="remarks"></a>Poznámky
 
-Tuto metodu přepište pomocí kódu, který má být proveden po otevření ovládacího prvku pro úpravy v samostatném okně.
+Přepsat tuto metodu s kódem, který chcete spustit po otevření ovládacího prvku pro úpravy v samostatném okně.
 
-##  <a name="onpostverbshow"></a>IOleObjectImpl::OnPostVerbShow
+## <a name="ioleobjectimplonpostverbshow"></a><a name="onpostverbshow"></a>iOleObjectimpl::OnpostverbShow
 
-Volá se [DoVerbShow](#doverbshow) po tom, co se ovládací prvek nastavil jako viditelný.
+Volána [DoVerbShow](#doverbshow) po zviditelnění ovládacího prvku.
 
 ```
 HRESULT OnPostVerbShow();
@@ -595,11 +595,11 @@ Vrátí S_OK.
 
 ### <a name="remarks"></a>Poznámky
 
-Tuto metodu přepište pomocí kódu, který má být proveden poté, co byl ovládací prvek proveden jako viditelný.
+Přepsat tuto metodu s kódem, který chcete spustit po ovládacíprvek byl zviditelněn.
 
-##  <a name="onpostverbuiactivate"></a>IOleObjectImpl::OnPostVerbUIActivate
+## <a name="ioleobjectimplonpostverbuiactivate"></a><a name="onpostverbuiactivate"></a>iOleObjectimpl::onpostverbuiActivate
 
-Volá se [DoVerbUIActivate](#doverbuiactivate) po aktivaci uživatelského rozhraní ovládacího prvku.
+Volána [DoVerbUIActivate](#doverbuiactivate) po aktivaci uživatelského rozhraní ovládacího prvku.
 
 ```
 HRESULT OnPostVerbUIActivate();
@@ -611,11 +611,11 @@ Vrátí S_OK.
 
 ### <a name="remarks"></a>Poznámky
 
-Tuto metodu přepište pomocí kódu, který má být proveden po aktivaci uživatelského rozhraní ovládacího prvku.
+Přepsat tuto metodu s kódem, který chcete spustit po aktivaci uživatelského rozhraní ovládacího prvku.
 
-##  <a name="onpreverbdiscardundo"></a>IOleObjectImpl::OnPreVerbDiscardUndo
+## <a name="ioleobjectimplonpreverbdiscardundo"></a><a name="onpreverbdiscardundo"></a>IOleObjectImpl::OnPreVerbDiscardUndo
 
-Volá se [DoVerbDiscardUndo](#doverbdiscardundo) před tím, než se zruší stav zrušení.
+Volána [DoVerbDiscardUndo](#doverbdiscardundo) před zahození stavu vrátit.
 
 ```
 HRESULT OnPreVerbDiscardUndo();
@@ -627,11 +627,11 @@ Vrátí S_OK.
 
 ### <a name="remarks"></a>Poznámky
 
-Chcete-li zabránit zahození stavu vrácení zpět, přepište tuto metodu, aby vracela chybu HRESULT.
+Chcete-li zabránit zahození stavu zpět, přepište tuto metodu a vraťte chybu HRESULT.
 
-##  <a name="onpreverbhide"></a>IOleObjectImpl::OnPreVerbHide
+## <a name="ioleobjectimplonpreverbhide"></a><a name="onpreverbhide"></a>iOleObjectimpl::OnPreVerbHide
 
-Volá se [DoVerbHide](#doverbhide) před tím, než je ovládací prvek skrytý.
+Volána [DoVerbHide](#doverbhide) před ovládací prvek je skrytý.
 
 ```
 HRESULT OnPreVerbHide();
@@ -643,11 +643,11 @@ Vrátí S_OK.
 
 ### <a name="remarks"></a>Poznámky
 
-Chcete-li zabránit skrytí ovládacího prvku, přepište tuto metodu, aby vracela chybu HRESULT.
+Chcete-li zabránit skryté ovládací prvek, přepsat tuto metodu vrátit chybu HRESULT.
 
-##  <a name="onpreverbinplaceactivate"></a>IOleObjectImpl::OnPreVerbInPlaceActivate
+## <a name="ioleobjectimplonpreverbinplaceactivate"></a><a name="onpreverbinplaceactivate"></a>iOleObjectimpl::onpreverbinplaceActivate
 
-Volá se [DoVerbInPlaceActivate](#doverbinplaceactivate) před aktivací ovládacího prvku na místě.
+Volat [DoVerbInPlaceActivate](#doverbinplaceactivate) před ovládací prvek je aktivován na místě.
 
 ```
 HRESULT OnPreVerbInPlaceActivate();
@@ -659,11 +659,11 @@ Vrátí S_OK.
 
 ### <a name="remarks"></a>Poznámky
 
-Chcete-li zabránit aktivaci ovládacího prvku na místě, přepište tuto metodu, aby vracela chybu HRESULT.
+Chcete-li zabránit aktivaci ovládacího prvku na místě, přepište tuto metodu a vraťte chybu HRESULT.
 
-##  <a name="onpreverbopen"></a>IOleObjectImpl::OnPreVerbOpen
+## <a name="ioleobjectimplonpreverbopen"></a><a name="onpreverbopen"></a>iOleObjectimpl::onpreverbopen
 
-Volá se [DoVerbOpen](#doverbopen) před otevřením ovládacího prvku pro úpravy v samostatném okně.
+Volána [DoVerbOpen](#doverbopen) před otevřením ovládacího prvku pro úpravy v samostatném okně.
 
 ```
 HRESULT OnPreVerbOpen();
@@ -675,11 +675,11 @@ Vrátí S_OK.
 
 ### <a name="remarks"></a>Poznámky
 
-Chcete-li zabránit tomu, aby byl ovládací prvek otevřen pro úpravy v samostatném okně, přepište tuto metodu, aby vracela chybu HRESULT.
+Chcete-li zabránit otevření ovládacího prvku pro úpravy v samostatném okně, přepište tuto metodu a vraťte chybu HRESULT.
 
-##  <a name="onpreverbshow"></a>IOleObjectImpl::OnPreVerbShow
+## <a name="ioleobjectimplonpreverbshow"></a><a name="onpreverbshow"></a>iOleObjectimpl::onpreverbshow
 
-Volá se [DoVerbShow](#doverbshow) před tím, než se ovládací prvek zviditelní.
+Volána [DoVerbShow](#doverbshow) před ovládací prvek byl zviditelněn.
 
 ```
 HRESULT OnPreVerbShow();
@@ -691,11 +691,11 @@ Vrátí S_OK.
 
 ### <a name="remarks"></a>Poznámky
 
-Chcete-li zabránit tomu, aby byl ovládací prvek viditelný, přepište tuto metodu, aby vracela chybu HRESULT.
+Chcete-li zabránit zobrazení ovládacího prvku, přepište tuto metodu a vraťte chybu HRESULT.
 
-##  <a name="onpreverbuiactivate"></a>IOleObjectImpl::OnPreVerbUIActivate
+## <a name="ioleobjectimplonpreverbuiactivate"></a><a name="onpreverbuiactivate"></a>iOleObjectimpl::onpreverbuiActivate
 
-Volá se [DoVerbUIActivate](#doverbuiactivate) před aktivací uživatelského rozhraní ovládacího prvku.
+Volána [DoVerbUIActivate](#doverbuiactivate) před aktivací uživatelského rozhraní ovládacího prvku.
 
 ```
 HRESULT OnPreVerbUIActivate();
@@ -707,11 +707,11 @@ Vrátí S_OK.
 
 ### <a name="remarks"></a>Poznámky
 
-Chcete-li zabránit aktivaci uživatelského rozhraní ovládacího prvku, přepište tuto metodu, aby vracela chybu HRESULT.
+Chcete-li zabránit aktivaci uživatelského rozhraní ovládacího prvku, přepište tuto metodu a vraťte chybu HRESULT.
 
-##  <a name="setclientsite"></a>IOleObjectImpl::SetClientSite
+## <a name="ioleobjectimplsetclientsite"></a><a name="setclientsite"></a>iOleObjectImpl::SetClientSite
 
-Instruuje ovládací prvek o jeho klientské lokalitě v kontejneru.
+Informuje o ovládacím prvku o jeho klientské lokality v kontejneru.
 
 ```
 STDMETHOD(SetClientSite)(IOleClientSite* pClientSite);
@@ -721,9 +721,9 @@ STDMETHOD(SetClientSite)(IOleClientSite* pClientSite);
 
 Metoda pak vrátí S_OK.
 
-Viz [IOleObject:: SetClientSite](/windows/win32/api/oleidl/nf-oleidl-ioleobject-setclientsite) v Windows SDK.
+Viz [IOleObject::SetClientSite](/windows/win32/api/oleidl/nf-oleidl-ioleobject-setclientsite) v sadě Windows SDK.
 
-##  <a name="setcolorscheme"></a>IOleObjectImpl::SetColorScheme
+## <a name="ioleobjectimplsetcolorscheme"></a><a name="setcolorscheme"></a>iOleObjectimpl::Setcolorscheme
 
 Doporučuje barevné schéma pro aplikaci ovládacího prvku, pokud existuje.
 
@@ -737,11 +737,11 @@ Vrátí E_NOTIMPL.
 
 ### <a name="remarks"></a>Poznámky
 
-Viz [IOleObject:: SetColorScheme](/windows/win32/api/oleidl/nf-oleidl-ioleobject-setcolorscheme) v Windows SDK.
+Viz [IOleObject::SetColorScheme](/windows/win32/api/oleidl/nf-oleidl-ioleobject-setcolorscheme) v sadě Windows SDK.
 
-##  <a name="setextent"></a>IOleObjectImpl::SetExtent
+## <a name="ioleobjectimplsetextent"></a><a name="setextent"></a>iOleObjectimpl:SetExtent
 
-Nastaví rozsah zobrazované oblasti ovládacího prvku.
+Nastaví rozsah oblasti zobrazení ovládacího prvku.
 
 ```
 STDMETHOD(SetExtent)(
@@ -751,17 +751,17 @@ STDMETHOD(SetExtent)(
 
 ### <a name="remarks"></a>Poznámky
 
-V opačném případě `SetExtent` ukládá hodnotu, na kterou odkazuje `psizel` v datovém členu třídy ovládacího prvku [CComControlBase:: m_sizeExtent](../../atl/reference/ccomcontrolbase-class.md#m_sizeextent). Tato hodnota je v jednotkách HIMETRIC (0,01 milimetr na jednotku).
+V `SetExtent` opačném případě uloží `psizel` hodnotu, na kterou poukazuje v datovém členu třídy ovládacího prvku [CComControlBase::m_sizeExtent](../../atl/reference/ccomcontrolbase-class.md#m_sizeextent). Tato hodnota je v jednotkách HIMETRIC (0,01 milimetru na jednotku).
 
-Pokud má datový člen třídy ovládacího prvku [CComControlBase:: m_bResizeNatural](../../atl/reference/ccomcontrolbase-class.md#m_bresizenatural) hodnotu TRUE, `SetExtent` také ukládá hodnotu, na kterou odkazuje `psizel` v datovém členu třídy ovládacího prvku [CComControlBase:: m_sizeNatural](../../atl/reference/ccomcontrolbase-class.md#m_sizenatural).
+Pokud je datový člen třídy ovládacího prvku `SetExtent` [CComControlBase:::m_bResizeNatural](../../atl/reference/ccomcontrolbase-class.md#m_bresizenatural) TRUE, uloží také hodnotu, na kterou upozorňujete v datovém `psizel` členu třídy ovládacího prvku [CComControlBase::m_sizeNatural](../../atl/reference/ccomcontrolbase-class.md#m_sizenatural).
 
-Pokud má datový člen třídy ovládacího prvku [CComControlBase:: m_bRecomposeOnResize](../../atl/reference/ccomcontrolbase-class.md#m_brecomposeonresize) hodnotu TRUE, `SetExtent` volání `SendOnDataChange` a `SendOnViewChange` pro oznámení všech poradenských umyvadel zaregistrovaných u držitele poradenství, že se změnila velikost ovládacího prvku.
+Pokud je datový člen třídy ovládacího prvku `SetExtent` [CComControlBase:::m_bRecomposeOnResize](../../atl/reference/ccomcontrolbase-class.md#m_brecomposeonresize) TRUE, volá `SendOnDataChange` a `SendOnViewChange` upozorní všechny poradní jímky registrované u držitele advise, že se změnila velikost ovládacího prvku.
 
-Viz [IOleObject:: SetExtent](/windows/win32/api/oleidl/nf-oleidl-ioleobject-setextent) v Windows SDK.
+Viz [IOleObject::SetExtent](/windows/win32/api/oleidl/nf-oleidl-ioleobject-setextent) v sadě Windows SDK.
 
-##  <a name="sethostnames"></a>IOleObjectImpl::SetHostNames
+## <a name="ioleobjectimplsethostnames"></a><a name="sethostnames"></a>iOleObjectimpl::SetHostNames
 
-Informuje ovládací prvek o názvech aplikace kontejneru a dokumentu kontejneru.
+Říká ovládacímu prvku názvy kontejneru aplikace a kontejneru dokumentu.
 
 ```
 STDMETHOD(SetHostNames)(LPCOLESTR /* szContainerApp */, LPCOLESTR /* szContainerObj */);
@@ -773,11 +773,11 @@ Vrátí S_OK.
 
 ### <a name="remarks"></a>Poznámky
 
-Viz [IOleObject:: SetHostNames](/windows/win32/api/oleidl/nf-oleidl-ioleobject-sethostnames) v Windows SDK.
+Viz [IOleObject::SetHostNames](/windows/win32/api/oleidl/nf-oleidl-ioleobject-sethostnames) v sadě Windows SDK.
 
-##  <a name="setmoniker"></a>IOleObjectImpl::SetMoniker
+## <a name="ioleobjectimplsetmoniker"></a><a name="setmoniker"></a>IOleObjectImpl::SetMoniker
 
-Oznamuje ovládacímu prvku, co je jeho moniker.
+Říká ovládacímu prvku, co je jeho zástupná skupina.
 
 ```
 STDMETHOD(SetMoniker)(
@@ -791,11 +791,11 @@ Vrátí E_NOTIMPL.
 
 ### <a name="remarks"></a>Poznámky
 
-Viz [IOleObject:: SetMoniker](/windows/win32/api/oleidl/nf-oleidl-ioleobject-setmoniker) v Windows SDK.
+Viz [IOleObject::SetMoniker](/windows/win32/api/oleidl/nf-oleidl-ioleobject-setmoniker) v sadě Windows SDK.
 
-##  <a name="unadvise"></a>IOleObjectImpl:: Unadvise
+## <a name="ioleobjectimplunadvise"></a><a name="unadvise"></a>IOleObjectImpl::Nerada
 
-Odstraní Poradní připojení uložené v datovém členu `m_spOleAdviseHolder` třídy ovládacího prvku.
+Odstraní poradní připojení uložené v datovém `m_spOleAdviseHolder` členu třídy ovládacího prvku.
 
 ```
 STDMETHOD(Unadvise)(DWORD dwConnection);
@@ -803,9 +803,9 @@ STDMETHOD(Unadvise)(DWORD dwConnection);
 
 ### <a name="remarks"></a>Poznámky
 
-Viz [IOleObject:: Unadvise](/windows/win32/api/oleidl/nf-oleidl-ioleobject-unadvise) v Windows SDK.
+Viz [IOleObject::Unadvise](/windows/win32/api/oleidl/nf-oleidl-ioleobject-unadvise) v sadě Windows SDK.
 
-##  <a name="update"></a>IOleObjectImpl:: Update
+## <a name="ioleobjectimplupdate"></a><a name="update"></a>iOleObjectImpl::Aktualizovat
 
 Aktualizuje ovládací prvek.
 
@@ -819,10 +819,10 @@ Vrátí S_OK.
 
 ### <a name="remarks"></a>Poznámky
 
-Viz [IOleObject:: Update](/windows/win32/api/oleidl/nf-oleidl-ioleobject-update) ve Windows SDK.
+Viz [IOleObject::Update](/windows/win32/api/oleidl/nf-oleidl-ioleobject-update) v sadě Windows SDK.
 
 ## <a name="see-also"></a>Viz také
 
-[CComControl – třída](../../atl/reference/ccomcontrol-class.md)<br/>
+[Třída CComControl](../../atl/reference/ccomcontrol-class.md)<br/>
 [Rozhraní ovládacích prvků ActiveX](/windows/win32/com/activex-controls-interfaces)<br/>
 [Přehled třídy](../../atl/atl-class-overview.md)

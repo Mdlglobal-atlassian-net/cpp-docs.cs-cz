@@ -1,5 +1,5 @@
 ---
-title: CRichEditView – – třída
+title: CRichEditView – třída
 ms.date: 11/04/2016
 f1_keywords:
 - CRichEditView
@@ -100,16 +100,16 @@ helpviewer_keywords:
 - CRichEditView [MFC], m_nBulletIndent
 - CRichEditView [MFC], m_nWordWrap
 ms.assetid: bd576b10-4cc0-4050-8f76-e1a0548411e4
-ms.openlocfilehash: b32578cc3c9ad4f7a89b8ee76449259c0fa0b43b
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 2d832f3cc07d39ace9e679901c5344a376cea03c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79421476"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81318629"
 ---
-# <a name="cricheditview-class"></a>CRichEditView – – třída
+# <a name="cricheditview-class"></a>CRichEditView – třída
 
-Pomocí [CRichEditDoc](../../mfc/reference/cricheditdoc-class.md) a [CRichEditCntrItem](../../mfc/reference/cricheditcntritem-class.md)poskytuje funkce ovládacího prvku Rich Edit v rámci kontextu architektury zobrazení dokumentu knihovny MFC.
+S [CRichEditDoc](../../mfc/reference/cricheditdoc-class.md) a [CRichEditCntrItem](../../mfc/reference/cricheditcntritem-class.md), poskytuje funkce rich edit control v kontextu architektury zobrazení dokumentu knihovny MFC.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -121,90 +121,90 @@ class CRichEditView : public CCtrlView
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CRichEditView –:: CRichEditView –](#cricheditview)|Vytvoří objekt `CRichEditView`.|
+|[CRichEditView::CRichEditView](#cricheditview)|Vytvoří `CRichEditView` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CRichEditView –:: AdjustDialogPosition](#adjustdialogposition)|Přesune dialogové okno tak, že neskryje aktuální výběr.|
-|[CRichEditView –:: CanPaste](#canpaste)|Určuje, zda schránka obsahuje data, která lze vložit do zobrazení pro úpravy s formátováním.|
-|[CRichEditView –::D oPaste](#dopaste)|Vloží položku OLE do tohoto zobrazení s bohatou úpravou.|
-|[CRichEditView –:: hledán FindText](#findtext)|Vyhledá zadaný text a vyvolá na něj čekací kurzor.|
-|[CRichEditView –:: FindTextSimple](#findtextsimple)|Vyhledá zadaný text.|
-|[CRichEditView –:: GetCharFormatSelection](#getcharformatselection)|Načte atributy formátování znaků pro aktuální výběr.|
-|[CRichEditView –:: GetDocument](#getdocument)|Načte ukazatel na související [CRichEditDoc](../../mfc/reference/cricheditdoc-class.md).|
-|[CRichEditView –:: GetInPlaceActiveItem](#getinplaceactiveitem)|Načte položku OLE, která je aktuálně místně aktivní v zobrazení pro úpravy.|
-|[CRichEditView –:: getmarže](#getmargins)|Načte okraje pro toto zobrazení s bohatou úpravou.|
-|[CRichEditView –:: GetPageRect](#getpagerect)|Načte rámeček stránky pro toto zobrazení s bohatou úpravou.|
-|[CRichEditView –:: GetPaperSize](#getpapersize)|Načte velikost papíru pro toto zobrazení s bohatou úpravou.|
-|[CRichEditView –:: GetParaFormatSelection](#getparaformatselection)|Načte atributy formátování odstavce pro aktuální výběr.|
-|[CRichEditView –:: GetPrintRect](#getprintrect)|Načte rámeček pro tisk pro toto zobrazení s formátováním s bohatou úpravou.|
-|[CRichEditView –:: GetPrintWidth](#getprintwidth)|Načte šířku tisku pro toto zobrazení s formátováním RTF.|
-|[CRichEditView –:: GetRichEditCtrl](#getricheditctrl)|Načte ovládací prvek Rich Edit.|
-|[CRichEditView –:: GetSelectedItem](#getselecteditem)|Načte vybranou položku z zobrazení pro úpravy s formátováním.|
-|[CRichEditView –:: GetTextLength](#gettextlength)|Načte délku textu v zobrazení pro úpravy s formátováním.|
-|[CRichEditView –:: GetTextLengthEx](#gettextlengthex)|Načte počet znaků nebo bajtů v zobrazení pro úpravy s formátováním. Rozbalený seznam příznaků pro metodu určení délky|
-|[CRichEditView –:: InsertFileAsObject](#insertfileasobject)|Vloží soubor jako položku OLE.|
-|[CRichEditView –:: InsertItem](#insertitem)|Vloží novou položku jako položku OLE.|
-|[CRichEditView –:: IsRichEditFormat](#isricheditformat)|Určuje, zda schránka obsahuje data ve formátu RTF nebo textu.|
-|[CRichEditView –:: OnCharEffect](#onchareffect)|Přepíná formátování znaků pro aktuální výběr.|
-|[CRichEditView –:: OnParaAlign](#onparaalign)|Změní zarovnání odstavců.|
-|[CRichEditView –:: OnUpdateCharEffect](#onupdatechareffect)|Aktualizuje uživatelské rozhraní příkazu pro funkce znaků Public member.|
-|[CRichEditView –:: OnUpdateParaAlign](#onupdateparaalign)|Aktualizuje uživatelské rozhraní příkazu pro veřejné členské funkce odstavce.|
-|[CRichEditView –::P rintInsideRect](#printinsiderect)|Zformátuje zadaný text v rámci daného obdélníku.|
-|[CRichEditView –::P rintPage](#printpage)|Zformátuje zadaný text v rámci dané stránky.|
-|[CRichEditView –:: SetCharFormat](#setcharformat)|Nastaví atributy formátování znaků pro aktuální výběr.|
-|[CRichEditView –:: SetMargins](#setmargins)|Nastaví okraje pro toto zobrazení s bohatou úpravou.|
-|[CRichEditView –:: SetPaperSize](#setpapersize)|Nastaví velikost papíru pro toto zobrazení s bohatou úpravou.|
-|[CRichEditView –:: SetParaFormat](#setparaformat)|Nastaví atributy formátování odstavce pro aktuální výběr.|
-|[CRichEditView –:: TextNotFound](#textnotfound)|Obnoví vnitřní stav vyhledávání ovládacího prvku.|
+|[CRichEditView::UpravitdialogPosition](#adjustdialogposition)|Přesune dialogové okno tak, aby nezakrývalo aktuální výběr.|
+|[CricheditView::CanPaste](#canpaste)|Určuje, zda schránka obsahuje data, která lze vložit do rozšířeného zobrazení úprav.|
+|[CRichEditView::DoPaste](#dopaste)|Vloží položku OLE do tohoto rozšířeného zobrazení úprav.|
+|[CRichEditView::FindText](#findtext)|Najde zadaný text s vyvoláním kurzorčekání.|
+|[CRichEditView::FindTextSimple](#findtextsimple)|Najde zadaný text.|
+|[CRichEditView::GetCharFormatSelection](#getcharformatselection)|Načte atributy formátování znaků pro aktuální výběr.|
+|[CRichEditView::GetDocument](#getdocument)|Načte ukazatel na související [CRichEditDoc](../../mfc/reference/cricheditdoc-class.md).|
+|[CricheditView::GetInplaceActiveItem](#getinplaceactiveitem)|Načte položku OLE, která je aktuálně na místě aktivní v zobrazení bohaté úpravy.|
+|[CRichEditView::Okraje](#getmargins)|Načte okraje pro toto rozšířené zobrazení úprav.|
+|[CRichEditView::GetPageRect](#getpagerect)|Načte obdélník stránky pro toto rozšířené zobrazení úprav.|
+|[CRichEditView::GetPaperSize](#getpapersize)|Načte velikost papíru pro toto rozšířené zobrazení úprav.|
+|[CRichEditView::GetParaFormatSelection](#getparaformatselection)|Načte atributy formátování odstavce pro aktuální výběr.|
+|[CRichEditView::GetPrintRect](#getprintrect)|Načte obdélník tisku pro toto rozšířené zobrazení úprav.|
+|[CRichEditView::GetPrintWidth](#getprintwidth)|Načte šířku tisku pro toto rozšířené zobrazení úprav.|
+|[CRichEditView::GetRichEditCtrl](#getricheditctrl)|Načte ovládací prvek rich edit.|
+|[CRichEditView::GetSelectedItem](#getselecteditem)|Načte vybranou položku z bohatého zobrazení úprav.|
+|[CRichEditView::GetTextLength](#gettextlength)|Načte délku textu v rozšířeném zobrazení úprav.|
+|[CRichEditView::GetTextLengthEx](#gettextlengthex)|Načte počet znaků nebo bajtů v rozšířeném zobrazení úprav. Rozšířený seznam příznaků pro metodu určení délky.|
+|[CRichEditView::InsertfileAsObject](#insertfileasobject)|Vloží soubor jako položku OLE.|
+|[CRichEditView::InsertItem](#insertitem)|Vloží novou položku jako položku OLE.|
+|[CricheditView::isricheditformat](#isricheditformat)|Určuje, zda schránka obsahuje data v formátu RICH edit nebo text.|
+|[CricheditView::OnCharEffect](#onchareffect)|Přepíná formátování znaků pro aktuální výběr.|
+|[CricheditView::OnparaAlign](#onparaalign)|Změní zarovnání odstavců.|
+|[CricheditView::OnUpdateCharEffect](#onupdatechareffect)|Aktualizuje příkaz uI pro znak veřejné členské funkce.|
+|[CricheditView::OnUpdateParaAlign](#onupdateparaalign)|Aktualizuje příkaz uI pro odstavce veřejné členské funkce.|
+|[CRichEditView::PrintInsideRect](#printinsiderect)|Zformátuje zadaný text v daném obdélníku.|
+|[CRichEditView::PrintPage](#printpage)|Zformátuje zadaný text na dané stránce.|
+|[CRichEditView::SetCharFormat](#setcharformat)|Nastaví atributy formátování znaků pro aktuální výběr.|
+|[CRichEditView::SetMargins](#setmargins)|Nastaví okraje pro toto rozšířené zobrazení úprav.|
+|[CRichEditView::SetPaperSize](#setpapersize)|Nastaví velikost papíru pro toto rozšířené zobrazení úprav.|
+|[CRichEditView::SetParaFormat](#setparaformat)|Nastaví atributy formátování odstavce pro aktuální výběr.|
+|[CricheditView::Textnotfound](#textnotfound)|Obnoví stav vnitřního hledání ovládacího prvku.|
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CRichEditView –:: GetClipboardData](#getclipboarddata)|Načte objekt schránky pro rozsah v tomto zobrazení s bohatou úpravou.|
-|[CRichEditView –::](#getcontextmenu)|Načte místní nabídku, která se má použít při stisknutí pravého tlačítka myši.|
-|[CRichEditView –:: s volbou](#isselected)|Určuje, zda je zadaná položka OLE vybrána nebo ne.|
-|[CRichEditView –:: OnFindNext](#onfindnext)|Najde další výskyt podřetězce.|
-|[CRichEditView –:: OnInitialUpdate](#oninitialupdate)|Aktualizuje zobrazení, když se poprvé připojí k dokumentu.|
-|[CRichEditView –:: OnPasteNativeObject](#onpastenativeobject)|Načte nativní data z položky OLE.|
-|[CRichEditView –:: OnPrinterChanged](#onprinterchanged)|Nastaví charakteristiky tisku na dané zařízení.|
-|[CRichEditView –:: OnReplaceAll](#onreplaceall)|Nahradí všechny výskyty daného řetězce novým řetězcem.|
-|[CRichEditView –:: OnReplaceSel](#onreplacesel)|Nahradí aktuální výběr.|
-|[CRichEditView –:: OnTextNotFound](#ontextnotfound)|Zpracovává oznámení uživateli, že nebyl nalezen požadovaný text.|
-|[CRichEditView –:: QueryAcceptData](#queryacceptdata)|Dotaz zobrazí informace o datech v `IDataObject`.|
-|[CRichEditView –:: WrapChanged](#wrapchanged)|Upraví cílové výstupní zařízení pro toto zobrazení s bohatou úpravou na základě hodnoty `m_nWordWrap`.|
+|[CRichEditView::GetClipboardData](#getclipboarddata)|Načte objekt schránky pro oblast v tomto rozšířeném zobrazení úprav.|
+|[CRichEditView::GetContextMenu](#getcontextmenu)|Načte místní nabídku pro použití na pravé tlačítko myši dolů.|
+|[CricheditView::Jevybrán](#isselected)|Označuje, zda je daná položka OLE vybrána či nikoli.|
+|[CricheditView::OnFindNext](#onfindnext)|Najde další výskyt podřetězce.|
+|[CricheditView::OnInitialUpdate](#oninitialupdate)|Aktualizuje zobrazení při prvním připojení k dokumentu.|
+|[cricheditview::onpastenativeobject](#onpastenativeobject)|Načte nativní data z položky OLE.|
+|[CricheditView::OnPrinterZměněn](#onprinterchanged)|Nastaví tiskové charakteristiky na dané zařízení.|
+|[CricheditView::OnReplaceAll](#onreplaceall)|Nahradí všechny výskyty daného řetězce novým řetězcem.|
+|[CRichEditView::OnReplaceSel](#onreplacesel)|Nahradí aktuální výběr.|
+|[CricheditView::ontextnotfound](#ontextnotfound)|Zpracovává oznámení uživatele, že požadovaný text nebyl nalezen.|
+|[CrichEditView::QueryAcceptData](#queryacceptdata)|Dotazy k zobrazení dat na `IDataObject`.|
+|[CRichEditView::WrapChanged](#wrapchanged)|Upraví cílové výstupní zařízení pro toto rozšířené zobrazení `m_nWordWrap`úprav na základě hodnoty aplikace .|
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CRichEditView –:: m_nBulletIndent](#m_nbulletindent)|Určuje velikost odsazení pro seznamy odrážek.|
-|[CRichEditView –:: m_nWordWrap](#m_nwordwrap)|Označuje omezení zalamování slov.|
+|[CRichEditView::m_nBulletIndent](#m_nbulletindent)|Označuje velikost odsazení pro seznamy odrážek.|
+|[CRichEditView::m_nWordWrap](#m_nwordwrap)|Označuje omezení zalamování řádků.|
 
 ## <a name="remarks"></a>Poznámky
 
-"Ovládací prvek" Rich Edit "je okno, ve kterém může uživatel text zadat a upravit. Textu lze přiřadit formátování znaků a odstavců a může obsahovat vložené objekty OLE. Ovládací prvky s bohatým úpravou poskytují programovací rozhraní pro formátování textu. Aplikace však musí implementovat všechny součásti uživatelského rozhraní, které jsou nezbytné k zpřístupnění operací formátování uživateli.
+"Rich edit control" je okno, ve kterém může uživatel zadávat a upravovat text. Text může být přiřazen k formátování znaků a odstavců a může obsahovat vložené objekty OLE. Ovládací prvky pro úpravy rich poskytují programovací rozhraní pro formátování textu. Aplikace však musí implementovat všechny součásti uživatelského rozhraní nezbytné k tomu, aby byly operace formátování dostupné uživateli.
 
-`CRichEditView` zachovává text a formátuje charakteristiky textu. `CRichEditDoc` udržuje seznam položek klienta OLE, které jsou v zobrazení. `CRichEditCntrItem` poskytuje přístup na straně kontejneru k položce klienta OLE.
+`CRichEditView`zachová text a formátování charakteristiky textu. `CRichEditDoc`udržuje seznam položek klienta OLE, které jsou v zobrazení. `CRichEditCntrItem`poskytuje přístup na straně kontejneru k položce klienta OLE.
 
-Tento běžný ovládací prvek systému Windows (a proto [CRichEditCtrl](../../mfc/reference/cricheditctrl-class.md) a související třídy) je k dispozici pouze pro programy, které jsou spuštěny v systémech Windows 95/98 a Windows NT verze 3,51 a novější.
+Tento ovládací prvek Windows Common (a tedy [CRichEditCtrl](../../mfc/reference/cricheditctrl-class.md) a související třídy) je k dispozici pouze pro programy spuštěné v systémech Windows 95/98 a Windows NT verze 3.51 a novější.
 
-Příklad použití bohatých zobrazení pro úpravy v aplikaci MFC naleznete v ukázkové aplikaci [WordPad](../../overview/visual-cpp-samples.md) .
+Příklad použití rozšířeného zobrazení úprav v aplikaci knihovny MFC naleznete v ukázkové aplikaci [wordpadu.](../../overview/visual-cpp-samples.md)
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[CObject](../../mfc/reference/cobject-class.md)
+[CObjekt](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[CCmdCíl](../../mfc/reference/ccmdtarget-class.md)
 
-[CWnd](../../mfc/reference/cwnd-class.md)
+[Cwnd](../../mfc/reference/cwnd-class.md)
 
-[CView](../../mfc/reference/cview-class.md)
+[Cview](../../mfc/reference/cview-class.md)
 
 [CCtrlView](../../mfc/reference/cctrlview-class.md)
 
@@ -212,11 +212,11 @@ Příklad použití bohatých zobrazení pro úpravy v aplikaci MFC naleznete v 
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxrich. h
+**Záhlaví:** afxrich.h
 
-##  <a name="adjustdialogposition"></a>CRichEditView –:: AdjustDialogPosition
+## <a name="cricheditviewadjustdialogposition"></a><a name="adjustdialogposition"></a>CRichEditView::UpravitdialogPosition
 
-Voláním této funkce přesunete dané dialogové okno tak, že neskryje aktuální výběr.
+Volánítéto funkce přesunout dané dialogové okno tak, aby nezakrývalo aktuální výběr.
 
 ```
 void AdjustDialogPosition(CDialog* pDlg);
@@ -225,11 +225,11 @@ void AdjustDialogPosition(CDialog* pDlg);
 ### <a name="parameters"></a>Parametry
 
 *pDlg*<br/>
-Ukazatel na objekt `CDialog`.
+Ukazatel na `CDialog` objekt.
 
-##  <a name="canpaste"></a>CRichEditView –:: CanPaste
+## <a name="cricheditviewcanpaste"></a><a name="canpaste"></a>CricheditView::CanPaste
 
-Voláním této funkce určíte, zda schránka obsahuje informace, které mohou být vloženy do tohoto zobrazení s formátováním.
+Volání této funkce k určení, zda schránka obsahuje informace, které lze vložit do tohoto zobrazení bohaté úpravy.
 
 ```
 BOOL CanPaste() const;
@@ -237,19 +237,19 @@ BOOL CanPaste() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulová, Pokud schránka obsahuje data ve formátu, který může toto zobrazení s bohatou úpravou přijmout; v opačném případě 0.
+Nenulová, pokud schránka obsahuje data ve formátu, který může toto rozšířené zobrazení úprav přijmout; jinak 0.
 
-##  <a name="cricheditview"></a>CRichEditView –:: CRichEditView –
+## <a name="cricheditviewcricheditview"></a><a name="cricheditview"></a>CRichEditView::CRichEditView
 
-Voláním této funkce vytvoříte objekt `CRichEditView`.
+Volání této funkce `CRichEditView` k vytvoření objektu.
 
 ```
 CRichEditView();
 ```
 
-##  <a name="dopaste"></a>CRichEditView –::D oPaste
+## <a name="cricheditviewdopaste"></a><a name="dopaste"></a>CRichEditView::DoPaste
 
-Voláním této funkce vložíte položku OLE do *dataobj* do tohoto dokumentu nebo zobrazení s bohatým úpravou.
+Volání této funkce pro vložení položky OLE v *dataobj* do tohoto rozšířeného upravit dokument/zobrazení.
 
 ```
 void DoPaste(
@@ -261,9 +261,9 @@ void DoPaste(
 ### <a name="parameters"></a>Parametry
 
 *dataobj*<br/>
-[COleDataObject](../../mfc/reference/coledataobject-class.md) obsahující data, která mají být vložena.
+[COleDataObject](../../mfc/reference/coledataobject-class.md) obsahující data vložit.
 
-*CF*<br/>
+*Viz*<br/>
 Požadovaný formát schránky.
 
 *hMetaPict*<br/>
@@ -271,13 +271,13 @@ Metasoubor, který představuje položku, která má být vložena.
 
 ### <a name="remarks"></a>Poznámky
 
-Rozhraní volá tuto funkci jako součást výchozí implementace [QueryAcceptData](#queryacceptdata).
+Rozhraní Framework volá tuto funkci jako součást výchozí implementace [QueryAcceptData](#queryacceptdata).
 
-Tato funkce určuje typ vložení na základě výsledků obslužné rutiny pro vložení Special. Pokud je *CF* 0, nová položka používá aktuální reprezentaci ikonickým. Pokud má *CF* hodnotu nenulového a *hMetaPict* není null, nová položka pro svůj reprezentace používá *hMetaPict* .
+Tato funkce určuje typ pasty na základě výsledků obslužné rutiny pro Vložit jinak. Pokud *cf* je 0, nová položka používá aktuální ikonické reprezentace. Pokud *cf* je nenulová a *hMetaPict* není NULL, nová položka používá *hMetaPict* pro jeho reprezentaci.
 
-##  <a name="findtext"></a>CRichEditView –:: hledán FindText
+## <a name="cricheditviewfindtext"></a><a name="findtext"></a>CRichEditView::FindText
 
-Voláním této funkce Najděte zadaný text a nastavte ho jako aktuální výběr.
+Voláním této funkce vyhledejte zadaný text a nastavte jej jako aktuální výběr.
 
 ```
 BOOL FindText(
@@ -289,33 +289,33 @@ BOOL FindText(
 
 ### <a name="parameters"></a>Parametry
 
-*lpszFind*<br/>
+*lpszNajít*<br/>
 Obsahuje řetězec, který chcete vyhledat.
 
 *bCase*<br/>
-Určuje, zda hledání rozlišuje malá a velká písmena.
+Označuje, zda hledání rozlišuje malá a velká písmena.
 
 *bWord*<br/>
-Určuje, zda má hledání odpovídat celým slovům, nikoli částí slov.
+Označuje, zda by hledání mělo odpovídat pouze celým slovům, nikoli částem slov.
 
-*bNext*<br/>
-Určuje směr hledání. Při hodnotě TRUE je směr hledání na konci vyrovnávací paměti. Pokud je hodnota FALSE, směr hledání je na začátku vyrovnávací paměti.
+*bDalší*<br/>
+Označuje směr hledání. Pokud TRUE, směr hledání je směrem ke konci vyrovnávací paměti. Pokud false, směr hledání je směrem k začátku vyrovnávací paměti.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je nalezen text *lpszFind* ; v opačném případě 0.
+Nenulová, pokud je nalezen text *lpszFind;* jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce zobrazí během operace Find kurzor čekání.
+Tato funkce zobrazí kurzor čekání během operace hledání.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCDocView#151](../../mfc/codesnippet/cpp/cricheditview-class_1.cpp)]
 
-##  <a name="findtextsimple"></a>CRichEditView –:: FindTextSimple
+## <a name="cricheditviewfindtextsimple"></a><a name="findtextsimple"></a>CRichEditView::FindTextSimple
 
-Voláním této funkce Najděte zadaný text a nastavte ho jako aktuální výběr.
+Voláním této funkce vyhledejte zadaný text a nastavte jej jako aktuální výběr.
 
 ```
 BOOL FindTextSimple(
@@ -327,27 +327,27 @@ BOOL FindTextSimple(
 
 ### <a name="parameters"></a>Parametry
 
-*lpszFind*<br/>
+*lpszNajít*<br/>
 Obsahuje řetězec, který chcete vyhledat.
 
 *bCase*<br/>
-Určuje, zda hledání rozlišuje malá a velká písmena.
+Označuje, zda hledání rozlišuje malá a velká písmena.
 
 *bWord*<br/>
-Určuje, zda má hledání odpovídat celým slovům, nikoli částí slov.
+Označuje, zda by hledání mělo odpovídat pouze celým slovům, nikoli částem slov.
 
-*bNext*<br/>
-Určuje směr hledání. Při hodnotě TRUE je směr hledání na konci vyrovnávací paměti. Pokud je hodnota FALSE, směr hledání je na začátku vyrovnávací paměti.
+*bDalší*<br/>
+Označuje směr hledání. Pokud TRUE, směr hledání je směrem ke konci vyrovnávací paměti. Pokud false, směr hledání je směrem k začátku vyrovnávací paměti.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je nalezen text *lpszFind* ; v opačném případě 0.
+Nenulová, pokud je nalezen text *lpszFind;* jinak 0.
 
 ### <a name="example"></a>Příklad
 
-  Podívejte se na příklad pro [CRichEditView –:: hledán FindText](#findtext).
+  Viz příklad [cricheditview::FindText](#findtext).
 
-##  <a name="getcharformatselection"></a>CRichEditView –:: GetCharFormatSelection
+## <a name="cricheditviewgetcharformatselection"></a><a name="getcharformatselection"></a>CRichEditView::GetCharFormatSelection
 
 Voláním této funkce získáte atributy formátování znaků aktuálního výběru.
 
@@ -357,19 +357,19 @@ CHARFORMAT2& GetCharFormatSelection();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Struktura [CHARFORMAT2](/windows/win32/api/richedit/ns-richedit-charformat2w) , která obsahuje atributy formátování znaků aktuálního výběru.
+Struktura [CHARFORMAT2,](/windows/win32/api/richedit/ns-richedit-charformat2w) která obsahuje atributy formátování znaků aktuálního výběru.
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace naleznete v části [EM_GETCHARFORMAT](/windows/win32/Controls/em-getcharformat) zpráva a struktura [CHARFORMAT2](/windows/win32/api/richedit/ns-richedit-charformat2w) v Windows SDK.
+Další informace naleznete ve [zprávě EM_GETCHARFORMAT](/windows/win32/Controls/em-getcharformat) a struktury [CHARFORMAT2](/windows/win32/api/richedit/ns-richedit-charformat2w) v sadě Windows SDK.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCDocView#152](../../mfc/codesnippet/cpp/cricheditview-class_2.cpp)]
 
-##  <a name="getclipboarddata"></a>CRichEditView –:: GetClipboardData
+## <a name="cricheditviewgetclipboarddata"></a><a name="getclipboarddata"></a>CRichEditView::GetClipboardData
 
-Rozhraní volá tuto funkci jako součást zpracování [IRichEditOleCallback:: GetClipboardData](/windows/win32/api/richole/nf-richole-iricheditolecallback-getclipboarddata).
+Framework volá tuto funkci jako součást zpracování [IRichEditOleCallback::GetClipboardData](/windows/win32/api/richole/nf-richole-iricheditolecallback-getclipboarddata).
 
 ```
 virtual HRESULT GetClipboardData(
@@ -382,42 +382,42 @@ virtual HRESULT GetClipboardData(
 ### <a name="parameters"></a>Parametry
 
 *lpchrg*<br/>
-Ukazatel na strukturu [CHARRANGE](/windows/win32/api/richedit/ns-richedit-charrange) , která určuje rozsah znaků (a položky OLE) pro zkopírování do datového objektu určeného parametrem *lplpdataobj*.
+Ukazatel na strukturu [CHARRANGE](/windows/win32/api/richedit/ns-richedit-charrange) určující rozsah znaků (a položek OLE), které se mají kopírovat do datového objektu určeného *lplpdataobj*.
 
 *dwReco*<br/>
-Příznak operace schránky. Může to být jedna z těchto hodnot.
+Příznak operace schránky. Může být jednou z těchto hodnot.
 
-- RECO_COPY zkopírovat do schránky.
+- RECO_COPY Copy do schránky.
 
-- RECO_CUT vyjmout do schránky.
+- RECO_CUT Vyjmout do schránky.
 
-- Operace přetažení (přetahování myší) RECO_DRAG.
+- RECO_DRAG Operace přetažení (přetažení).
 
-- Operace drop elementu RECO_DROP (přetažení).
+- RECO_DROP Drop operace (drag and drop).
 
 - RECO_PASTE vložit ze schránky.
 
 *lpRichDataObj*<br/>
-Ukazatel na objekt [IDataObject](/windows/win32/api/objidl/nn-objidl-idataobject) obsahující data ze schránky z ovládacího prvku Rich Edit ( [IRichEditOle:: GetClipboardData](/windows/win32/api/richole/nf-richole-iricheditole-getclipboarddata)).
+Ukazatel na objekt [IDataObject](/windows/win32/api/objidl/nn-objidl-idataobject) obsahující data schránky z ovládacího prvku rich edit ( [IRichEditOle::GetClipboardData](/windows/win32/api/richole/nf-richole-iricheditole-getclipboarddata)).
 
 *lplpdataobj*<br/>
-Ukazatel na proměnnou ukazatele, která přijímá adresu objektu `IDataObject` reprezentující rozsah zadaný v parametru *lpchrg* . Hodnota *lplpdataobj* se ignoruje, pokud se vrátí chyba.
+Ukazatel na proměnnou ukazatele, která `IDataObject` přijímá adresu objektu představující rozsah zadaný v parametru *lpchrg.* Hodnota *lplpdataobj* je ignorována, pokud je vrácena chyba.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota HRESULT, která hlásí úspěch operace. Další informace o HRESULT naleznete v tématu [Struktura kódů chyb modelu COM](/windows/win32/com/structure-of-com-error-codes) v Windows SDK.
+Hodnota HRESULT vykazující úspěch operace. Další informace o hresult naleznete [v tématu Struktura kódů chyb COM](/windows/win32/com/structure-of-com-error-codes) v sadě Windows SDK.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud vrácená hodnota označuje úspěch, `IRichEditOleCallback::GetClipboardData` vrátí `IDataObject`, ke kterému má přistup *lplpdataobj*; v opačném případě vrátí rozhraní *lpRichDataObj*, ke kterému se přistupovalo. Tuto funkci potlačíte tak, aby poskytovala vlastní data ze schránky. Výchozí implementace této funkce vrací E_NOTIMPL.
+Pokud vrácená hodnota `IRichEditOleCallback::GetClipboardData` označuje `IDataObject` úspěch, vrátí přístup *lplpdataobj*; v opačném případě vrátí ten, ke který přistupuje *lpRichDataObj*. Přepište tuto funkci a zadejte vlastní data schránky. Výchozí implementace této funkce vrátí E_NOTIMPL.
 
-Toto je pokročilá přepsatelné.
+Tohle je pokročilé překažné.
 
-Další informace naleznete v tématu [IRichEditOle:: GetClipboardData](/windows/win32/api/richole/nf-richole-iricheditole-getclipboarddata), [IRichEditOleCallback:: GetClipboardData](/windows/win32/api/richole/nf-richole-iricheditolecallback-getclipboarddata)a [CHARRANGE](/windows/win32/api/richedit/ns-richedit-charrange) v tématu Windows SDK a viz [IDataObject](/windows/win32/api/objidl/nn-objidl-idataobject) v Windows SDK.
+Další informace naleznete v [tématech IRichEditOle::GetClipboardData](/windows/win32/api/richole/nf-richole-iricheditole-getclipboarddata), [IRichEditOleCallback::GetClipboardData](/windows/win32/api/richole/nf-richole-iricheditolecallback-getclipboarddata)a [CHARRANGE](/windows/win32/api/richedit/ns-richedit-charrange) v sadě Windows SDK a viz [IDataObject](/windows/win32/api/objidl/nn-objidl-idataobject) v sadě Windows SDK.
 
-##  <a name="getcontextmenu"></a>CRichEditView –::
+## <a name="cricheditviewgetcontextmenu"></a><a name="getcontextmenu"></a>CRichEditView::GetContextMenu
 
-Rozhraní volá tuto funkci jako součást zpracování [IRichEditOleCallback::](/windows/win32/api/richole/nf-richole-iricheditolecallback-getcontextmenu)getzaskladnění.
+Framework volá tuto funkci jako součást zpracování [IRichEditOleCallback::GetContextContextMenu](/windows/win32/api/richole/nf-richole-iricheditolecallback-getcontextmenu).
 
 ```
 virtual HMENU GetContextMenu(
@@ -429,41 +429,41 @@ virtual HMENU GetContextMenu(
 ### <a name="parameters"></a>Parametry
 
 *seltyp*<br/>
-Typ výběru. Hodnoty typu výběru jsou popsány v části poznámky.
+Typ výběru. Hodnoty typu výběru jsou popsány v části Poznámky.
 
 *lpoleobj*<br/>
-Ukazatel na strukturu `OLEOBJECT` určující první vybraný objekt OLE, pokud výběr obsahuje jednu nebo více položek OLE. Pokud výběr neobsahuje žádné položky, *lpoleobj* má hodnotu null. Struktura `OLEOBJECT` obsahuje ukazatel na objekt OLE v tabulce.
+Ukazatel na `OLEOBJECT` strukturu určující první vybraný objekt OLE, pokud výběr obsahuje jednu nebo více položek OLE. Pokud výběr neobsahuje žádné položky, *lpoleobj* je NULL. Struktura `OLEOBJECT` obsahuje ukazatel na objekt OLE v-table.
 
 *lpchrg*<br/>
 Ukazatel na strukturu [CHARRANGE](/windows/win32/api/richedit/ns-richedit-charrange) obsahující aktuální výběr.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Popisovač do kontextové nabídky.
+Zpracovat místní nabídku.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce je typická součást pravého tlačítka myši.
+Tato funkce je typickou součástí zpracování pravého tlačítka myši dolů.
 
 Typ výběru může být libovolná kombinace následujících příznaků:
 
-- SEL_EMPTY označuje, že není k dispozici žádný aktuální výběr.
+- SEL_EMPTY Označuje, že neexistuje žádný aktuální výběr.
 
-- SEL_TEXT označuje, že aktuální výběr obsahuje text.
+- SEL_TEXT Označuje, že aktuální výběr obsahuje text.
 
-- SEL_OBJECT označuje, že aktuální výběr obsahuje alespoň jednu položku OLE.
+- SEL_OBJECT Označuje, že aktuální výběr obsahuje alespoň jednu položku OLE.
 
-- SEL_MULTICHAR označuje, že aktuální výběr obsahuje více než jeden znak textu.
+- SEL_MULTICHAR Označuje, že aktuální výběr obsahuje více než jeden znak textu.
 
-- SEL_MULTIOBJECT označuje, že aktuální výběr obsahuje více než jeden objekt OLE.
+- SEL_MULTIOBJECT Označuje, že aktuální výběr obsahuje více než jeden objekt OLE.
 
-Výchozí implementace vrací hodnotu NULL. Toto je pokročilá přepsatelné.
+Výchozí implementace vrátí hodnotu NULL. Tohle je pokročilé překažné.
 
-Další informace naleznete v tématu [IRichEditOleCallback::](/windows/win32/api/richole/nf-richole-iricheditolecallback-getcontextmenu) Get a [CHARRANGE](/windows/win32/api/richedit/ns-richedit-charrange) v Windows SDK.
+Další informace naleznete v [tématu IRichEditOleCallback::GetContextMenu](/windows/win32/api/richole/nf-richole-iricheditolecallback-getcontextmenu) a [CHARRANGE](/windows/win32/api/richedit/ns-richedit-charrange) v sadě Windows SDK.
 
-##  <a name="getdocument"></a>CRichEditView –:: GetDocument
+## <a name="cricheditviewgetdocument"></a><a name="getdocument"></a>CRichEditView::GetDocument
 
-Voláním této funkce získáte ukazatel na `CRichEditDoc` přidružené k tomuto zobrazení.
+Volání této funkce získat ukazatel `CRichEditDoc` na přidružené k tomuto zobrazení.
 
 ```
 CRichEditDoc* GetDocument() const;
@@ -471,11 +471,11 @@ CRichEditDoc* GetDocument() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na objekt [CRichEditDoc](../../mfc/reference/cricheditdoc-class.md) přidružený k vašemu objektu `CRichEditView`.
+Ukazatel na objekt [CRichEditDoc](../../mfc/reference/cricheditdoc-class.md) `CRichEditView` přidružený k objektu.
 
-##  <a name="getinplaceactiveitem"></a>CRichEditView –:: GetInPlaceActiveItem
+## <a name="cricheditviewgetinplaceactiveitem"></a><a name="getinplaceactiveitem"></a>CricheditView::GetInplaceActiveItem
 
-Voláním této funkce získáte položku OLE, která je aktuálně aktivována na místě v tomto objektu `CRichEditView`.
+Volání této funkce získat položku OLE, která je `CRichEditView` aktuálně aktivována na místě v tomto objektu.
 
 ```
 CRichEditCntrItem* GetInPlaceActiveItem() const;
@@ -483,11 +483,11 @@ CRichEditCntrItem* GetInPlaceActiveItem() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na jeden místně aktivní objekt [CRichEditCntrItem](../../mfc/reference/cricheditcntritem-class.md) v tomto zobrazení s bohatou úpravou; Hodnota NULL, pokud není aktuálně k dispozici žádná položka OLE v místním aktivním stavu.
+Ukazatel na jeden, na místě aktivní [CRichEditCntrItem](../../mfc/reference/cricheditcntritem-class.md) objektu v tomto zobrazení rich úprav; Null, pokud není žádná položka OLE aktuálně v aktivním stavu na místě.
 
-##  <a name="getmargins"></a>CRichEditView –:: getmarže
+## <a name="cricheditviewgetmargins"></a><a name="getmargins"></a>CRichEditView::Okraje
 
-Voláním této funkce načtete aktuální okraje použité při tisku.
+Volání této funkce načíst aktuální okraje používané při tisku.
 
 ```
 CRect GetMargins() const;
@@ -495,9 +495,9 @@ CRect GetMargins() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Okraje používané při tisku, měřené v MM_TWIPS.
+Okraje použité při tisku, měřeno v MM_TWIPS.
 
-##  <a name="getpagerect"></a>CRichEditView –:: GetPageRect
+## <a name="cricheditviewgetpagerect"></a><a name="getpagerect"></a>CRichEditView::GetPageRect
 
 Voláním této funkce získáte rozměry stránky použité při tisku.
 
@@ -507,15 +507,15 @@ CRect GetPageRect() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hranice stránky používané při tisku, měřeno v MM_TWIPS.
+Hranice stránky použité při tisku, měřeno v MM_TWIPS.
 
 ### <a name="remarks"></a>Poznámky
 
 Tato hodnota je založena na velikosti papíru.
 
-##  <a name="getpapersize"></a>CRichEditView –:: GetPaperSize
+## <a name="cricheditviewgetpapersize"></a><a name="getpapersize"></a>CRichEditView::GetPaperSize
 
-Voláním této funkce načtete aktuální velikost papíru.
+Voláním této funkce načtěte aktuální velikost papíru.
 
 ```
 CSize GetPaperSize() const;
@@ -523,13 +523,13 @@ CSize GetPaperSize() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Velikost dokumentu používaného při tisku, měřeno v MM_TWIPS.
+Velikost papíru použitého při tisku měřená v MM_TWIPS.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCDocView#153](../../mfc/codesnippet/cpp/cricheditview-class_3.cpp)]
 
-##  <a name="getparaformatselection"></a>CRichEditView –:: GetParaFormatSelection
+## <a name="cricheditviewgetparaformatselection"></a><a name="getparaformatselection"></a>CRichEditView::GetParaFormatSelection
 
 Voláním této funkce získáte atributy formátování odstavce aktuálního výběru.
 
@@ -539,15 +539,15 @@ PARAFORMAT2& GetParaFormatSelection();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Struktura [PARAFORMAT2](/windows/win32/api/richedit/ns-richedit-paraformat2) , která obsahuje atributy formátování odstavce aktuálního výběru.
+Struktura [PARAFORMAT2,](/windows/win32/api/richedit/ns-richedit-paraformat2) která obsahuje atributy formátování odstavce aktuálního výběru.
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace najdete v tématu [EM_GETPARAFORMAT](/windows/win32/Controls/em-getparaformat) struktury zpráv a [PARAFORMAT2](/windows/win32/api/richedit/ns-richedit-paraformat2) v Windows SDK.
+Další informace naleznete [v tématu EM_GETPARAFORMAT](/windows/win32/Controls/em-getparaformat) message and [PARAFORMAT2](/windows/win32/api/richedit/ns-richedit-paraformat2) structure in the Windows SDK.
 
-##  <a name="getprintrect"></a>CRichEditView –:: GetPrintRect
+## <a name="cricheditviewgetprintrect"></a><a name="getprintrect"></a>CRichEditView::GetPrintRect
 
-Voláním této funkce načtete hranice oblasti tisku v rámci rámečku stránky.
+Volání této funkce načíst hranice oblasti tisku v obdélníku stránky.
 
 ```
 CRect GetPrintRect() const;
@@ -555,15 +555,15 @@ CRect GetPrintRect() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hranice oblasti obrázku používané při tisku, měřeno v MM_TWIPS.
+Hranice oblasti obrazu použité při tisku, měřené v MM_TWIPS.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCDocView#154](../../mfc/codesnippet/cpp/cricheditview-class_4.cpp)]
 
-##  <a name="getprintwidth"></a>CRichEditView –:: GetPrintWidth
+## <a name="cricheditviewgetprintwidth"></a><a name="getprintwidth"></a>CRichEditView::GetPrintWidth
 
-Voláním této funkce určíte šířku oblasti tisku.
+Voláním této funkce určete šířku oblasti tisku.
 
 ```
 int GetPrintWidth() const;
@@ -573,9 +573,9 @@ int GetPrintWidth() const;
 
 Šířka oblasti tisku měřená v MM_TWIPS.
 
-##  <a name="getricheditctrl"></a>CRichEditView –:: GetRichEditCtrl
+## <a name="cricheditviewgetricheditctrl"></a><a name="getricheditctrl"></a>CRichEditView::GetRichEditCtrl
 
-Voláním této funkce načtete objekt [CRichEditCtrl](../../mfc/reference/cricheditctrl-class.md) přidružený k objektu `CRichEditView`.
+Volání této funkce načíst [CRichEditCtrl](../../mfc/reference/cricheditctrl-class.md) `CRichEditView` objekt přidružený k objektu.
 
 ```
 CRichEditCtrl& GetRichEditCtrl() const;
@@ -587,11 +587,11 @@ Objekt `CRichEditCtrl` pro toto zobrazení.
 
 ### <a name="example"></a>Příklad
 
-  Podívejte se na příklad pro [CRichEditView –:: hledán FindText](#findtext).
+  Viz příklad [cricheditview::FindText](#findtext).
 
-##  <a name="getselecteditem"></a>CRichEditView –:: GetSelectedItem
+## <a name="cricheditviewgetselecteditem"></a><a name="getselecteditem"></a>CRichEditView::GetSelectedItem
 
-Voláním této funkce načtete položku OLE (objekt `CRichEditCntrItem`) aktuálně vybranou v tomto objektu `CRichEditView`.
+Volání této funkce k načtení `CRichEditCntrItem` položky OLE (objektu) aktuálně vybrané v tomto `CRichEditView` objektu.
 
 ```
 CRichEditCntrItem* GetSelectedItem() const;
@@ -599,11 +599,11 @@ CRichEditCntrItem* GetSelectedItem() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na objekt [CRichEditCntrItem](../../mfc/reference/cricheditcntritem-class.md) vybraný v objektu `CRichEditView`; Hodnota NULL, pokud v tomto zobrazení není vybrána žádná položka.
+Ukazatel na objekt [CRichEditCntrItem](../../mfc/reference/cricheditcntritem-class.md) `CRichEditView` vybraný v objektu; Null, pokud není v tomto zobrazení vybrána žádná položka.
 
-##  <a name="gettextlength"></a>CRichEditView –:: GetTextLength
+## <a name="cricheditviewgettextlength"></a><a name="gettextlength"></a>CRichEditView::GetTextLength
 
-Voláním této funkce načtete délku textu v tomto objektu `CRichEditView`.
+Volání této funkce načíst délku `CRichEditView` textu v tomto objektu.
 
 ```
 long GetTextLength() const;
@@ -611,11 +611,11 @@ long GetTextLength() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Délka textu v tomto objektu `CRichEditView`.
+Délka textu v tomto `CRichEditView` objektu.
 
-##  <a name="gettextlengthex"></a>CRichEditView –:: GetTextLengthEx
+## <a name="cricheditviewgettextlengthex"></a><a name="gettextlengthex"></a>CRichEditView::GetTextLengthEx
 
-Tuto členskou funkci volejte pro výpočet délky textu v tomto objektu `CRichEditView`.
+Volání této členské funkce pro výpočet délky textu v tomto `CRichEditView` objektu.
 
 ```
 long GetTextLengthEx(
@@ -626,22 +626,22 @@ long GetTextLengthEx(
 ### <a name="parameters"></a>Parametry
 
 *dwFlags*<br/>
-Hodnota určující metodu, která se má použít při určování délky textu Tento člen může být jednou nebo více hodnotami, které jsou uvedeny v části Flags Member of [GETTEXTLENGTHEX](/windows/win32/api/richedit/ns-richedit-gettextlengthex) popsané v Windows SDK.
+Hodnota určující metodu, která má být použita při určování délky textu. Tento člen může být jedna nebo více hodnot uvedených v členu příznaků [GETTEXTLENGTHEX](/windows/win32/api/richedit/ns-richedit-gettextlengthex) popsaného v sadě Windows SDK.
 
 *uCodePage*<br/>
 Znaková stránka pro překlad (CP_ACP pro znakovou stránku ANSI, 1200 pro Unicode).
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Počet znaků nebo bajtů v ovládacím prvku pro úpravy. Pokud byly v *dwFlags*nastaveny nekompatibilní příznaky, vrátí tato členská funkce E_INVALIDARG.
+Počet znaků nebo bajtů v ovládacím prvku úprav. Pokud byly v *dwFlags*nastaveny nekompatibilní příznaky , vrátí tato členská funkce E_INVALIDARG.
 
 ### <a name="remarks"></a>Poznámky
 
-`GetTextLengthEx` poskytuje další způsoby určení délky textu. Podporuje funkci s bohatou úpravou 2,0. Další informace najdete v tématu [o ovládacích prvcích pro úpravy s formátováním](/windows/win32/Controls/about-rich-edit-controls) v Windows SDK.
+`GetTextLengthEx`poskytuje další způsoby určení délky textu. Podporuje funkci Rich Edit 2.0. Další informace naleznete v [tématu O rozšířených ovládacích prvcích úprav](/windows/win32/Controls/about-rich-edit-controls) v sadě Windows SDK.
 
-##  <a name="insertfileasobject"></a>CRichEditView –:: InsertFileAsObject
+## <a name="cricheditviewinsertfileasobject"></a><a name="insertfileasobject"></a>CRichEditView::InsertfileAsObject
 
-Voláním této funkce vložíte zadaný soubor (jako objekt [CRichEditCntrItem](../../mfc/reference/cricheditcntritem-class.md) ) do zobrazení pro úpravy s formátováním.
+Volání této funkce vložit zadaný soubor (jako [cRichEditCntrItem](../../mfc/reference/cricheditcntritem-class.md) objekt) do zobrazení bohaté úpravy.
 
 ```
 void InsertFileAsObject(LPCTSTR lpszFileName);
@@ -649,12 +649,12 @@ void InsertFileAsObject(LPCTSTR lpszFileName);
 
 ### <a name="parameters"></a>Parametry
 
-*lpszFileName*<br/>
-Řetězec obsahující název souboru, který se má vložit
+*název souboru lpsz*<br/>
+Řetězec obsahující název souboru, který má být vložen.
 
-##  <a name="insertitem"></a>CRichEditView –:: InsertItem
+## <a name="cricheditviewinsertitem"></a><a name="insertitem"></a>CRichEditView::InsertItem
 
-Voláním této funkce vložíte objekt [CRichEditCntrItem](../../mfc/reference/cricheditcntritem-class.md) do zobrazení pro úpravy s formátováním.
+Volání této funkce vložit [CRichEditCntrItem](../../mfc/reference/cricheditcntritem-class.md) objektu do zobrazení bohaté úpravy.
 
 ```
 HRESULT InsertItem(CRichEditCntrItem* pItem);
@@ -662,7 +662,7 @@ HRESULT InsertItem(CRichEditCntrItem* pItem);
 
 ### <a name="parameters"></a>Parametry
 
-*pItem*<br/>
+*pPoložka*<br/>
 Ukazatel na položku, která má být vložena.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -671,11 +671,11 @@ Hodnota HRESULT označující úspěch vložení.
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace o HRESULT naleznete v tématu [Struktura kódů chyb modelu COM](/windows/win32/com/structure-of-com-error-codes) v Windows SDK.
+Další informace o hresult naleznete [v tématu Struktura kódů chyb COM](/windows/win32/com/structure-of-com-error-codes) v sadě Windows SDK.
 
-##  <a name="isricheditformat"></a>CRichEditView –:: IsRichEditFormat
+## <a name="cricheditviewisricheditformat"></a><a name="isricheditformat"></a>CricheditView::isricheditformat
 
-Voláním této funkce určíte, zda je *CF* formát schránky, který je text, formátovaný text nebo formátovaný text s položkami OLE.
+Volání této funkce k určení, zda *cf* je formát schránky, který je text, formát RTF nebo formátovaný text s položkami OLE.
 
 ```
 static BOOL AFX_CDECL IsRichEditFormat(CLIPFORMAT cf);
@@ -683,16 +683,16 @@ static BOOL AFX_CDECL IsRichEditFormat(CLIPFORMAT cf);
 
 ### <a name="parameters"></a>Parametry
 
-*CF*<br/>
-Formát schránky, který vás zajímá.
+*Viz*<br/>
+Formát schránky zájmu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulová, pokud má *CF* formát RTF nebo textový formát schránky.
+Nenulová, pokud *cf* je formát rozšířené úpravy nebo textové schránky.
 
-##  <a name="isselected"></a>CRichEditView –:: s volbou
+## <a name="cricheditviewisselected"></a><a name="isselected"></a>CricheditView::Jevybrán
 
-Voláním této funkce určíte, zda je zadaná položka OLE aktuálně vybrána v tomto zobrazení.
+Volání této funkce k určení, zda je zadaná položka OLE aktuálně vybrána v tomto zobrazení.
 
 ```
 virtual BOOL IsSelected(const CObject* pDocItem) const;
@@ -705,23 +705,23 @@ Ukazatel na objekt v zobrazení.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je objekt vybrán; v opačném případě 0.
+Nenulová, pokud je objekt vybrán; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Tuto funkci přepište, pokud má odvozená třída zobrazení jinou metodu pro zpracování výběru položek OLE.
+Přepsat tuto funkci, pokud vaše odvozené zobrazení třídy má jinou metodu pro zpracování výběru položek OLE.
 
-##  <a name="m_nbulletindent"></a>CRichEditView –:: m_nBulletIndent
+## <a name="cricheditviewm_nbulletindent"></a><a name="m_nbulletindent"></a>CRichEditView::m_nBulletIndent
 
-Odsazení položek odrážek v seznamu; ve výchozím nastavení 720 jednotek, což je 1/2 palců.
+Odsazení pro položky odrážek v seznamu; ve výchozím nastavení 720 jednotek, což je 1/2 palce.
 
 ```
 int m_nBulletIndent;
 ```
 
-##  <a name="m_nwordwrap"></a>CRichEditView –:: m_nWordWrap
+## <a name="cricheditviewm_nwordwrap"></a><a name="m_nwordwrap"></a>CRichEditView::m_nWordWrap
 
-Určuje typ zalamování řádků pro toto zobrazení s formátováním RTF.
+Označuje typ zalamování slov pro toto rozšířené zobrazení úprav.
 
 ```
 int m_nWordWrap;
@@ -731,17 +731,17 @@ int m_nWordWrap;
 
 Jedna z následujících hodnot:
 
-- `WrapNone` neindikuje žádné automatické zalamování slov.
+- `WrapNone`Označuje žádné automatické obtékání slov.
 
-- `WrapToWindow` označuje zalamování slov na základě šířky okna.
+- `WrapToWindow`Označuje zalomení slova na základě šířky okna.
 
-- `WrapToTargetDevice` označuje zalamování slov na základě charakteristik cílového zařízení.
+- `WrapToTargetDevice`Označuje zalamování řádků na základě vlastností cílového zařízení.
 
 ### <a name="example"></a>Příklad
 
-  Podívejte se na příklad pro [CRichEditView –:: WrapChanged](#wrapchanged).
+  Viz příklad [cricheditview::WrapChanged](#wrapchanged).
 
-##  <a name="onchareffect"></a>CRichEditView –:: OnCharEffect
+## <a name="cricheditviewonchareffect"></a><a name="onchareffect"></a>CricheditView::OnCharEffect
 
 Voláním této funkce přepnete efekty formátování znaků pro aktuální výběr.
 
@@ -754,24 +754,24 @@ void OnCharEffect(
 ### <a name="parameters"></a>Parametry
 
 *dwMask*<br/>
-Změny formátování znaků v aktuálním výběru.
+Efekty formátování znaků, které chcete upravit v aktuálním výběru.
 
-*dwEffect*<br/>
-Požadovaný seznam efektů formátování znaků, které se mají přepnout
+*dwEfekt*<br/>
+Požadovaný seznam efektů formátování znaků, které chcete přepnout.
 
 ### <a name="remarks"></a>Poznámky
 
 Každé volání této funkce přepíná zadané efekty formátování pro aktuální výběr.
 
-Další informace o parametrech *dwMask* a *dwEffect* a jejich potenciálních hodnotách naleznete v tématu odpovídající datové členy [Charformat](/windows/win32/api/richedit/ns-richedit-charformata) v Windows SDK.
+Další informace o parametrech *dwMask* a *dwEffect* a jejich potenciálních hodnotách naleznete v odpovídajících datových členech [sady CHARFORMAT](/windows/win32/api/richedit/ns-richedit-charformata) v sadě Windows SDK.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCDocView#155](../../mfc/codesnippet/cpp/cricheditview-class_5.cpp)]
 
-##  <a name="onfindnext"></a>CRichEditView –:: OnFindNext
+## <a name="cricheditviewonfindnext"></a><a name="onfindnext"></a>CricheditView::OnFindNext
 
-Volá se rozhraním, když se zpracovávají příkazy z dialogového okna Najít/nahradit.
+Volat rámci při zpracování příkazů z dialogového okna Najít a nahradit.
 
 ```
 virtual void OnFindNext(
@@ -783,25 +783,25 @@ virtual void OnFindNext(
 
 ### <a name="parameters"></a>Parametry
 
-*lpszFind*<br/>
-Řetězec, který se má najít
+*lpszNajít*<br/>
+Řetězec, který se má najít.
 
-*bNext*<br/>
-Směr hledání: hodnota TRUE označuje nefunkční. NEPRAVDA, nahoru.
+*bDalší*<br/>
+Směr hledání: PRAVDA označuje dolů; FALSE, nahoru.
 
 *bCase*<br/>
-Označuje, zda má hledání rozlišovat velká a malá písmena.
+Označuje, zda hledání má být malá a velká písmena.
 
 *bWord*<br/>
-Určuje, zda má hledání odpovídat pouze celá slova, nebo nikoli.
+Označuje, zda má hledání odpovídat pouze celým slovům, či nikoli.
 
 ### <a name="remarks"></a>Poznámky
 
-Voláním této funkce Najděte text v rámci `CRichEditView`. Tuto funkci potlačíte, chcete-li změnit charakteristiky hledání pro odvozenou třídu zobrazení.
+Voláním této funkce vyhledejte text v rámci . `CRichEditView` Přepište tuto funkci a změňte vyhledávací charakteristiky odvozené třídy zobrazení.
 
-##  <a name="oninitialupdate"></a>CRichEditView –:: OnInitialUpdate
+## <a name="cricheditviewoninitialupdate"></a><a name="oninitialupdate"></a>CricheditView::OnInitialUpdate
 
-Volá se rozhraním po prvním připojení zobrazení k dokumentu, ale před tím, než se zobrazení zpočátku zobrazí.
+Volat rámci po zobrazení je nejprve připojen k dokumentu, ale před zobrazení je zpočátku zobrazena.
 
 ```
 virtual void OnInitialUpdate();
@@ -809,15 +809,15 @@ virtual void OnInitialUpdate();
 
 ### <a name="remarks"></a>Poznámky
 
-Výchozí implementace této funkce volá členskou funkci [CView:: proupdate](../../mfc/reference/cview-class.md#onupdate) bez informací nápovědy (tj. použití výchozích hodnot 0 pro parametr *lHint* a hodnota null pro parametr *pHint* ). Přepište tuto funkci, pokud chcete provést jednorázovou inicializaci, která vyžaduje informace o dokumentu. Například pokud má vaše aplikace dokumenty s pevnou velikostí, můžete tuto funkci použít k inicializaci omezení posouvání zobrazení na základě velikosti dokumentu. Pokud vaše aplikace podporuje dokumenty s proměnlivou velikostí, použijte `OnUpdate` k aktualizaci limitů posouvání pokaždé, když se dokument změní.
+Výchozí implementace této funkce volá členská funkci [CView::OnUpdate](../../mfc/reference/cview-class.md#onupdate) bez informací nápovědy (to znamená pomocí výchozích hodnot 0 pro parametr *lHint* a NULL pro parametr *pHint).* Přepište tuto funkci a proveďte jednorázovou inicializaci, která vyžaduje informace o dokumentu. Pokud má například aplikace dokumenty pevné velikosti, můžete pomocí této funkce inicializovat omezení posouvání zobrazení na základě velikosti dokumentu. Pokud vaše aplikace podporuje dokumenty s `OnUpdate` proměnnou velikosti, použijte k aktualizaci omezení posouvání při každé změně dokumentu.
 
 ### <a name="example"></a>Příklad
 
-  Podívejte se na příklad pro [CRichEditView –:: m_nWordWrap](#m_nwordwrap).
+  Viz příklad [cricheditview::m_nWordWrap](#m_nwordwrap).
 
-##  <a name="onpastenativeobject"></a>CRichEditView –:: OnPasteNativeObject
+## <a name="cricheditviewonpastenativeobject"></a><a name="onpastenativeobject"></a>cricheditview::onpastenativeobject
 
-Pomocí této funkce lze načíst nativní data z vložené položky.
+Tato funkce slouží k načtení nativních dat z vložené položky.
 
 ```
 virtual BOOL OnPasteNativeObject(LPSTORAGE lpStg);
@@ -826,21 +826,21 @@ virtual BOOL OnPasteNativeObject(LPSTORAGE lpStg);
 ### <a name="parameters"></a>Parametry
 
 *lpStg*<br/>
-Ukazatel na objekt [IStorage](/windows/win32/api/objidl/nn-objidl-istorage) .
+Ukazatel na objekt [IStorage.](/windows/win32/api/objidl/nn-objidl-istorage)
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud bylo úspěšné; v opačném případě 0;
+Nenulová, pokud je úspěšná; jinak 0;
 
 ### <a name="remarks"></a>Poznámky
 
-Obvykle to provedete tak, že vytvoříte [COleStreamFile](../../mfc/reference/colestreamfile-class.md) kolem `IStorage`. `COleStreamFile` lze připojit k archivu a volání [CObject:: serializovat](../../mfc/reference/cobject-class.md#serialize) pro načtení dat.
+Obvykle byste to provést vytvořením [COleStreamFile](../../mfc/reference/colestreamfile-class.md) `IStorage`kolem . Lze `COleStreamFile` připojit k archivu a [CObject::Serializovat](../../mfc/reference/cobject-class.md#serialize) volána k načtení dat.
 
-Toto je pokročilá přepsatelné.
+Tohle je pokročilé překažné.
 
-Další informace najdete v tématu [IStorage](/windows/win32/api/objidl/nn-objidl-istorage) v Windows SDK.
+Další informace naleznete v [tématu IStorage](/windows/win32/api/objidl/nn-objidl-istorage) v sadě Windows SDK.
 
-##  <a name="onparaalign"></a>CRichEditView –:: OnParaAlign
+## <a name="cricheditviewonparaalign"></a><a name="onparaalign"></a>CricheditView::OnparaAlign
 
 Voláním této funkce změníte zarovnání odstavce pro vybrané odstavce.
 
@@ -850,22 +850,22 @@ void OnParaAlign(WORD wAlign);
 
 ### <a name="parameters"></a>Parametry
 
-*wAlign*<br/>
+*wZarovnat*<br/>
 Požadované zarovnání odstavce. Jedna z následujících hodnot:
 
-- PFA_LEFT zarovnat odstavce s levým okrajem.
+- PFA_LEFT Zarovnejte odstavce s levým okrajem.
 
-- PFA_RIGHT zarovnat odstavce s pravým okrajem.
+- PFA_RIGHT Zarovnejte odstavce s pravým okrajem.
 
-- PFA_CENTER vycentrovat odstavce mezi okraji.
+- PFA_CENTER Vystředit odstavce mezi okraji.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCDocView#156](../../mfc/codesnippet/cpp/cricheditview-class_6.cpp)]
 
-##  <a name="onprinterchanged"></a>CRichEditView –:: OnPrinterChanged
+## <a name="cricheditviewonprinterchanged"></a><a name="onprinterchanged"></a>CricheditView::OnPrinterZměněn
 
-Tuto funkci přepište, pokud chcete změnit vlastnosti pro toto zobrazení RTF při změně tiskárny.
+Přepsáním této funkce změníte charakteristiky tohoto rozšířeného zobrazení úprav při změně tiskárny.
 
 ```
 virtual void OnPrinterChanged(const CDC& dcPrinter);
@@ -873,16 +873,16 @@ virtual void OnPrinterChanged(const CDC& dcPrinter);
 
 ### <a name="parameters"></a>Parametry
 
-*dcPrinter*<br/>
+*dcTiskárna*<br/>
 Objekt [CDC](../../mfc/reference/cdc-class.md) pro novou tiskárnu.
 
 ### <a name="remarks"></a>Poznámky
 
-Výchozí implementace nastaví velikost papíru na fyzickou výšku a šířku pro výstupní zařízení (tiskárnu). Pokud k *dcPrinter*není přidružený žádný kontext zařízení, výchozí implementace nastaví velikost papíru na 8,5 a 11 palců.
+Výchozí implementace nastaví velikost papíru na fyzickou výšku a šířku výstupního zařízení (tiskárny). Pokud není k *dcPrinter*přidružen žádný kontext zařízení , nastaví výchozí implementace velikost papíru na 8,5 o 11 palců.
 
-##  <a name="onreplaceall"></a>CRichEditView –:: OnReplaceAll
+## <a name="cricheditviewonreplaceall"></a><a name="onreplaceall"></a>CricheditView::OnReplaceAll
 
-Volá se rozhraním, když se má zpracovat příkaz nahradit všechny příkazy z dialogového okna nahradit.
+Volat rámci při zpracování nahradit všechny příkazy z dialogového okna Nahradit.
 
 ```
 virtual void OnReplaceAll(
@@ -894,29 +894,29 @@ virtual void OnReplaceAll(
 
 ### <a name="parameters"></a>Parametry
 
-*lpszFind*<br/>
+*lpszNajít*<br/>
 Text, který má být nahrazen.
 
-*lpszReplace*<br/>
-Nahrazující text.
+*lpszNahradit*<br/>
+Náhradní text.
 
 *bCase*<br/>
-Určuje, zda hledání rozlišuje malá a velká písmena.
+Označuje, zda hledání rozlišuje malá a velká písmena.
 
 *bWord*<br/>
-Určuje, zda je nutné při hledání zvolit celá slova nebo ne.
+Označuje, zda hledání musí vybrat celá slova nebo ne.
 
 ### <a name="remarks"></a>Poznámky
 
-Voláním této funkce nahradíte všechny výskyty daného textu jiným řetězcem. Potlačením této funkce upravíte charakteristiky hledání pro toto zobrazení.
+Volání této funkce nahradit všechny výskyty některých daný text s jiným řetězcem. Přepsáním této funkce změníte charakteristiky hledání pro toto zobrazení.
 
 ### <a name="example"></a>Příklad
 
-  Podívejte se na příklad pro [CRichEditView –:: hledán FindText](#findtext).
+  Viz příklad [cricheditview::FindText](#findtext).
 
-##  <a name="onreplacesel"></a>CRichEditView –:: OnReplaceSel
+## <a name="cricheditviewonreplacesel"></a><a name="onreplacesel"></a>CRichEditView::OnReplaceSel
 
-Volá se rozhraním, když se zpracovávají příkazy nahradit v dialogovém okně nahradit.
+Volat rámci při zpracování Nahradit příkazy z dialogového okna Nahradit.
 
 ```
 virtual void OnReplaceSel(
@@ -929,28 +929,28 @@ virtual void OnReplaceSel(
 
 ### <a name="parameters"></a>Parametry
 
-*lpszFind*<br/>
+*lpszNajít*<br/>
 Text, který má být nahrazen.
 
-*bNext*<br/>
-Určuje směr hledání: hodnota TRUE je mimo provoz. NEPRAVDA, nahoru.
+*bDalší*<br/>
+Označuje směr hledání: PRAVDA je dole; FALSE, nahoru.
 
 *bCase*<br/>
-Určuje, zda hledání rozlišuje malá a velká písmena.
+Označuje, zda hledání rozlišuje malá a velká písmena.
 
 *bWord*<br/>
-Určuje, zda je nutné při hledání zvolit celá slova nebo ne.
+Označuje, zda hledání musí vybrat celá slova nebo ne.
 
-*lpszReplace*<br/>
-Nahrazující text.
+*lpszNahradit*<br/>
+Náhradní text.
 
 ### <a name="remarks"></a>Poznámky
 
-Voláním této funkce nahradíte jeden výskyt nějakého zadaného textu jiným řetězcem. Potlačením této funkce upravíte charakteristiky hledání pro toto zobrazení.
+Volání této funkce nahradit jeden výskyt některých daný text s jiným řetězcem. Přepsáním této funkce změníte charakteristiky hledání pro toto zobrazení.
 
-##  <a name="ontextnotfound"></a>CRichEditView –:: OnTextNotFound
+## <a name="cricheditviewontextnotfound"></a><a name="ontextnotfound"></a>CricheditView::ontextnotfound
 
-Volá se rozhraním, když se nepovede najít.
+Volat rámci při selhání hledání.
 
 ```
 virtual void OnTextNotFound(LPCTSTR lpszFind);
@@ -958,22 +958,22 @@ virtual void OnTextNotFound(LPCTSTR lpszFind);
 
 ### <a name="parameters"></a>Parametry
 
-*lpszFind*<br/>
+*lpszNajít*<br/>
 Text, který nebyl nalezen.
 
 ### <a name="remarks"></a>Poznámky
 
-Přepsáním této funkce změníte výstupní oznámení z [MessageBeep](/windows/win32/api/winuser/nf-winuser-messagebeep).
+Přepsat tuto funkci změnit výstupní oznámení z [MessageBeep](/windows/win32/api/winuser/nf-winuser-messagebeep).
 
-Další informace najdete v tématu [MessageBeep](/windows/win32/api/winuser/nf-winuser-messagebeep) v Windows SDK.
+Další informace naleznete v tématu [MessageBeep](/windows/win32/api/winuser/nf-winuser-messagebeep) v sadě Windows SDK.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCDocView#157](../../mfc/codesnippet/cpp/cricheditview-class_7.cpp)]
 
-##  <a name="onupdatechareffect"></a>CRichEditView –:: OnUpdateCharEffect
+## <a name="cricheditviewonupdatechareffect"></a><a name="onupdatechareffect"></a>CricheditView::OnUpdateCharEffect
 
-Rozhraní volá tuto funkci, aby aktualizovala uživatelské rozhraní příkazu pro příkazy efektu znaků.
+Rozhraní Framework volá tuto funkci k aktualizaci příkazu UI pro příkazy efekt znaků.
 
 ```
 void OnUpdateCharEffect(
@@ -985,27 +985,27 @@ void OnUpdateCharEffect(
 ### <a name="parameters"></a>Parametry
 
 *pCmdUI*<br/>
-Ukazatel na objekt [CCmdUI –](../../mfc/reference/ccmdui-class.md) .
+Ukazatel na objekt [CCmdUI.](../../mfc/reference/ccmdui-class.md)
 
 *dwMask*<br/>
-Určuje masku formátování znaků.
+Označuje masku formátování znaků.
 
-*dwEffect*<br/>
+*dwEfekt*<br/>
 Označuje efekt formátování znaků.
 
 ### <a name="remarks"></a>Poznámky
 
-Maska *dwMask* určuje, které atributy formátování znaků se mají kontrolovat. Příznaky *dwEffect* seznam atributů formátování znaků, které se mají nastavit nebo vymazat.
+Maska *dwMask* určuje, které atributy formátování znaků mají být kontrolovány. Příznaky *dwEffect* seznam atributy formátování znaků nastavit/ vymazat.
 
-Další informace o parametrech *dwMask* a *dwEffect* a jejich potenciálních hodnotách naleznete v tématu odpovídající datové členy [Charformat](/windows/win32/api/richedit/ns-richedit-charformata) v Windows SDK.
+Další informace o parametrech *dwMask* a *dwEffect* a jejich potenciálních hodnotách naleznete v odpovídajících datových členech [sady CHARFORMAT](/windows/win32/api/richedit/ns-richedit-charformata) v sadě Windows SDK.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCDocView#158](../../mfc/codesnippet/cpp/cricheditview-class_8.cpp)]
 
-##  <a name="onupdateparaalign"></a>CRichEditView –:: OnUpdateParaAlign
+## <a name="cricheditviewonupdateparaalign"></a><a name="onupdateparaalign"></a>CricheditView::OnUpdateParaAlign
 
-Rozhraní volá tuto funkci, aby aktualizovala uživatelské rozhraní příkazu pro příkazy efektu odstavce.
+Framework volá tuto funkci k aktualizaci příkazu UI pro příkazy odstavcový efekt.
 
 ```
 void OnUpdateParaAlign(
@@ -1016,24 +1016,24 @@ void OnUpdateParaAlign(
 ### <a name="parameters"></a>Parametry
 
 *pCmdUI*<br/>
-Ukazatel na objekt [CCmdUI –](../../mfc/reference/ccmdui-class.md) .
+Ukazatel na objekt [CCmdUI.](../../mfc/reference/ccmdui-class.md)
 
-*wAlign*<br/>
-Zarovnání odstavce pro kontrolu. Jedna z následujících hodnot:
+*wZarovnat*<br/>
+Zarovnání odstavce ke kontrole. Jedna z následujících hodnot:
 
-- PFA_LEFT zarovnat odstavce s levým okrajem.
+- PFA_LEFT Zarovnejte odstavce s levým okrajem.
 
-- PFA_RIGHT zarovnat odstavce s pravým okrajem.
+- PFA_RIGHT Zarovnejte odstavce s pravým okrajem.
 
-- PFA_CENTER vycentrovat odstavce mezi okraji.
+- PFA_CENTER Vystředit odstavce mezi okraji.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCDocView#159](../../mfc/codesnippet/cpp/cricheditview-class_9.cpp)]
 
-##  <a name="printinsiderect"></a>CRichEditView –::P rintInsideRect
+## <a name="cricheditviewprintinsiderect"></a><a name="printinsiderect"></a>CRichEditView::PrintInsideRect
 
-Voláním této funkce naformátujete rozsah textu v ovládacím prvku Rich Edit tak, aby se vešel do *rectLayout* pro zařízení určené *primárním řadičem domény*.
+Volání této funkce pro formátování rozsahu textu v ovládacím prvku rich edit, aby se vešly do *rectLayout* pro zařízení určené *pDC*.
 
 ```
 long PrintInsideRect(
@@ -1046,36 +1046,36 @@ long PrintInsideRect(
 
 ### <a name="parameters"></a>Parametry
 
-*Emulátor*<br/>
+*Pdc*<br/>
 Ukazatel na kontext zařízení pro výstupní oblast.
 
 *rectLayout*<br/>
-[Rect](/windows/win32/api/windef/ns-windef-rect) nebo [CRect](../../atl-mfc-shared/reference/crect-class.md) definující výstupní oblast.
+[RECT](/windows/win32/api/windef/ns-windef-rect) nebo [CRect,](../../atl-mfc-shared/reference/crect-class.md) který definuje výstupní oblast.
 
 *nIndexStart*<br/>
 Nulový index prvního znaku, který má být formátován.
 
 *nIndexStop*<br/>
-Index s nulovým základem posledního znaku, který má být formátován.
+Nulový index posledního znaku, který má být formátován.
 
-*bOutput*<br/>
-Určuje, zda má být vykreslen text. Je-li hodnota FALSE, text je právě změřen.
+*bVýstup*<br/>
+Označuje, zda má být text vykreslen. Pokud false, text je jen měří.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Index posledního znaku, který se vejde do výstupní oblasti a druhý
+Index posledního znaku, který se vejde do výstupní oblasti plus jeden.
 
 ### <a name="remarks"></a>Poznámky
 
-Obvykle je toto volání následováno voláním [CRichEditCtrl::D isplayband](../../mfc/reference/cricheditctrl-class.md#displayband) , které generuje výstup.
+Obvykle toto volání následuje volání [CRichEditCtrl::DisplayBand,](../../mfc/reference/cricheditctrl-class.md#displayband) který generuje výstup.
 
 ### <a name="example"></a>Příklad
 
-  Podívejte se na příklad pro [CRichEditView –:: GetPaperSize](#getpapersize).
+  Viz příklad [cricheditview::GetPaperSize](#getpapersize).
 
-##  <a name="printpage"></a>CRichEditView –::P rintPage
+## <a name="cricheditviewprintpage"></a><a name="printpage"></a>CRichEditView::PrintPage
 
-Voláním této funkce naformátujete rozsah textu v ovládacím prvku Rich Edit pro výstupní zařízení určené *primárním řadičem domény*.
+Volání této funkce pro formátování rozsahu textu v rozšířeném ovládacím prvku úprav pro výstupní zařízení určené *pDC*.
 
 ```
 long PrintPage(
@@ -1086,28 +1086,28 @@ long PrintPage(
 
 ### <a name="parameters"></a>Parametry
 
-*Emulátor*<br/>
+*Pdc*<br/>
 Ukazatel na kontext zařízení pro výstup stránky.
 
 *nIndexStart*<br/>
 Nulový index prvního znaku, který má být formátován.
 
 *nIndexStop*<br/>
-Index s nulovým základem posledního znaku, který má být formátován.
+Nulový index posledního znaku, který má být formátován.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Index posledního znaku, který se vejde na stránku plus jedna.
+Index posledního znaku, který se vejde na stránku plus jeden.
 
 ### <a name="remarks"></a>Poznámky
 
-Rozložení každé stránky je řízeno [GetPageRect](#getpagerect) a [GetPrintRect](#getprintrect). Obvykle je toto volání následováno voláním [CRichEditCtrl::D isplayband](../../mfc/reference/cricheditctrl-class.md#displayband) , které generuje výstup.
+Rozložení každé stránky je řízeno [GetPageRect](#getpagerect) a [GetPrintRect](#getprintrect). Obvykle toto volání následuje volání [CRichEditCtrl::DisplayBand,](../../mfc/reference/cricheditctrl-class.md#displayband) který generuje výstup.
 
-Všimněte si, že okraje jsou relativní vzhledem k fyzické stránce, ne k logické stránce. Proto budou marže nuly často vystřihnout text, protože mnoho tiskáren má na stránce netisknutelné oblasti. Aby nedošlo k oříznutí textu, měli byste před tiskem volat [SetMargins](#setmargins) a nastavit přiměřené okraje.
+Všimněte si, že okraje jsou relativní vzhledem k fyzické stránce, nikoli logické stránce. Okraje nuly tedy často oříznou text, protože mnoho tiskáren má na stránce netisknutelné oblasti. Chcete-li se vyhnout oříznutí textu, měli byste před tiskem zavolat [SetMargins](#setmargins) a nastavit přiměřené okraje.
 
-##  <a name="queryacceptdata"></a>CRichEditView –:: QueryAcceptData
+## <a name="cricheditviewqueryacceptdata"></a><a name="queryacceptdata"></a>CrichEditView::QueryAcceptData
 
-Volá se rozhraním, aby se vložil objekt do Rich Edit.
+Volat rámci vložit objekt do bohaté upravit.
 
 ```
 virtual HRESULT QueryAcceptData(
@@ -1121,7 +1121,7 @@ virtual HRESULT QueryAcceptData(
 ### <a name="parameters"></a>Parametry
 
 *lpdataobj*<br/>
-Ukazatel na [IDataObject](/windows/win32/api/objidl/nn-objidl-idataobject) pro dotaz.
+Ukazatel na [objekt IDataObject](/windows/win32/api/objidl/nn-objidl-idataobject) pro dotaz.
 
 *lpcfFormat*<br/>
 Ukazatel na přijatelný formát dat.
@@ -1129,29 +1129,29 @@ Ukazatel na přijatelný formát dat.
 *dwReco*<br/>
 Nepoužívá se.
 
-*bReally*<br/>
-Určuje, zda by měla operace vložení pokračovat, nebo ne.
+*bOpravdu*<br/>
+Označuje, zda by měla operace vložení pokračovat či nikoli.
 
-*hMetaFile*<br/>
-Popisovač metasouboru, který se používá k vykreslení ikony položky
+*hMetaSoubor*<br/>
+Úchyt metasouboru použitého k kreslení ikony položky.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota HRESULT, která hlásí úspěch operace.
+Hodnota HRESULT vykazující úspěch operace.
 
 ### <a name="remarks"></a>Poznámky
 
-Tuto funkci přepište, pokud chcete zpracovat různé organizace položek modelu COM v odvozené třídě dokumentu. Toto je pokročilá přepsatelné.
+Přepsat tuto funkci pro zpracování různých organizací položek COM v odvozené třídě dokumentu. Tohle je pokročilé překažné.
 
-Další informace o HRESULT a `IDataObject`najdete v tématu [Struktura chybových kódů com](/windows/win32/com/structure-of-com-error-codes) a [IDataObject](/windows/win32/api/objidl/nn-objidl-idataobject)v Windows SDK v tomto pořadí.
+Další informace o hresult a `IDataObject`najdete v [tématu Struktura kódů chyb COM](/windows/win32/com/structure-of-com-error-codes) a [IDataObject](/windows/win32/api/objidl/nn-objidl-idataobject)v sadě Windows SDK.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCDocView#160](../../mfc/codesnippet/cpp/cricheditview-class_10.cpp)]
 
-##  <a name="setcharformat"></a>CRichEditView –:: SetCharFormat
+## <a name="cricheditviewsetcharformat"></a><a name="setcharformat"></a>CRichEditView::SetCharFormat
 
-Voláním této funkce nastavíte atributy formátování znaků pro nový text v tomto objektu `CRichEditView`.
+Voláním této funkce nastavte atributy formátování znaků pro `CRichEditView` nový text v tomto objektu.
 
 ```
 void SetCharFormat(CHARFORMAT2 cf);
@@ -1159,22 +1159,22 @@ void SetCharFormat(CHARFORMAT2 cf);
 
 ### <a name="parameters"></a>Parametry
 
-*CF*<br/>
-Struktura [CHARFORMAT2](/windows/win32/api/richedit/ns-richedit-charformat2w) obsahující nové výchozí atributy formátování znaků.
+*Viz*<br/>
+[CharFORMAT2](/windows/win32/api/richedit/ns-richedit-charformat2w) struktura obsahující nové výchozí atributy formátování znaků.
 
 ### <a name="remarks"></a>Poznámky
 
-Touto funkcí se změnily pouze atributy určené členem `dwMask` *CF* .
+Tato funkce změní pouze `dwMask` atributy určené členem *cf.*
 
-Další informace najdete v tématu [EM_SETCHARFORMAT](/windows/win32/Controls/em-setcharformat) struktury zpráv a [CHARFORMAT2](/windows/win32/api/richedit/ns-richedit-charformat2w) v Windows SDK.
+Další informace naleznete [v tématu EM_SETCHARFORMAT](/windows/win32/Controls/em-setcharformat) message and [CHARFORMAT2](/windows/win32/api/richedit/ns-richedit-charformat2w) structure in the Windows SDK.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCDocView#152](../../mfc/codesnippet/cpp/cricheditview-class_2.cpp)]
 
-##  <a name="setmargins"></a>CRichEditView –:: SetMargins
+## <a name="cricheditviewsetmargins"></a><a name="setmargins"></a>CRichEditView::SetMargins
 
-Voláním této funkce nastavíte okraje pro tisk pro toto zobrazení s bohatou úpravou.
+Voláním této funkce nastavte okraje tisku pro toto rozšířené zobrazení úprav.
 
 ```
 void SetMargins(const CRect& rectMargin);
@@ -1182,22 +1182,22 @@ void SetMargins(const CRect& rectMargin);
 
 ### <a name="parameters"></a>Parametry
 
-*rectMargin*<br/>
-Nové hodnoty okrajů pro tisk měřenou v MM_TWIPS.
+*rectMarže*<br/>
+Nové hodnoty okrajů pro tisk měřené v MM_TWIPS.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud je [m_nWordWrap](#m_nwordwrap) `WrapToTargetDevice`, měli byste zavolat [WrapChanged](#wrapchanged) po použití této funkce pro úpravu vlastností tisku.
+Pokud [m_nWordWrap](#m_nwordwrap) m_nWordWrap `WrapToTargetDevice`je , měli byste volat [WrapChanged](#wrapchanged) po použití této funkce upravit tiskové charakteristiky.
 
-Všimněte si, že okraje používané v [PrintPage](#printpage) jsou relativní vzhledem k fyzické stránce, ne k logické stránce. Proto budou marže nuly často vystřihnout text, protože mnoho tiskáren má na stránce netisknutelné oblasti. Chcete-li se vyhnout oříznutí textu, měli byste volat použití `SetMargins` k nastavení přiměřených okrajů tiskárny před tiskem.
+Všimněte si, že okraje používané [PrintPage](#printpage) jsou relativní vzhledem k fyzické stránce, nikoli logické stránce. Okraje nuly tedy často oříznou text, protože mnoho tiskáren má na stránce netisknutelné oblasti. Chcete-li zabránit oříznutí textu, `SetMargins` měli byste před tiskem zavolat použít k nastavení přiměřených okrajů tiskárny.
 
 ### <a name="example"></a>Příklad
 
-  Podívejte se na příklad pro [CRichEditView –:: GetPaperSize](#getpapersize).
+  Viz příklad [cricheditview::GetPaperSize](#getpapersize).
 
-##  <a name="setpapersize"></a>CRichEditView –:: SetPaperSize
+## <a name="cricheditviewsetpapersize"></a><a name="setpapersize"></a>CRichEditView::SetPaperSize
 
-Voláním této funkce nastavíte velikost papíru pro tisk tohoto zobrazení s bohatou úpravou.
+Voláním této funkce nastavte velikost papíru pro tisk tohoto rozšířeného zobrazení úprav.
 
 ```
 void SetPaperSize(CSize sizePaper);
@@ -1210,15 +1210,15 @@ Nové hodnoty velikosti papíru pro tisk měřené v MM_TWIPS.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud je [m_nWordWrap](#m_nwordwrap) `WrapToTargetDevice`, měli byste zavolat [WrapChanged](#wrapchanged) po použití této funkce pro úpravu vlastností tisku.
+Pokud [m_nWordWrap](#m_nwordwrap) m_nWordWrap `WrapToTargetDevice`je , měli byste volat [WrapChanged](#wrapchanged) po použití této funkce upravit tiskové charakteristiky.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCDocView#161](../../mfc/codesnippet/cpp/cricheditview-class_11.cpp)]
 
-##  <a name="setparaformat"></a>CRichEditView –:: SetParaFormat
+## <a name="cricheditviewsetparaformat"></a><a name="setparaformat"></a>CRichEditView::SetParaFormat
 
-Voláním této funkce nastavíte atributy formátování odstavce pro aktuální výběr v tomto objektu `CRichEditView`.
+Voláním této funkce nastavte atributy formátování odstavce pro `CRichEditView` aktuální výběr v tomto objektu.
 
 ```
 BOOL SetParaFormat(PARAFORMAT2& pf);
@@ -1226,26 +1226,26 @@ BOOL SetParaFormat(PARAFORMAT2& pf);
 
 ### <a name="parameters"></a>Parametry
 
-*stránkovací*<br/>
-[PARAFORMAT2](/windows/win32/api/richedit/ns-richedit-paraformat2) struktura obsahující nové výchozí atributy formátování odstavce.
+*Pf*<br/>
+[Struktura PARAFORMAT2](/windows/win32/api/richedit/ns-richedit-paraformat2) obsahující nové výchozí atributy formátování odstavce.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud bylo úspěšné; v opačném případě 0.
+Nenulová, pokud je úspěšná; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Touto funkcí se změnily jenom atributy určené členem `dwMask` *BF* .
+Tato funkce změní pouze `dwMask` atributy určené členem *pf.*
 
-Další informace najdete v tématu [EM_SETPARAFORMAT](/windows/win32/Controls/em-setparaformat) struktury zpráv a [PARAFORMAT2](/windows/win32/api/richedit/ns-richedit-paraformat2) v Windows SDK.
+Další informace naleznete [v tématu EM_SETPARAFORMAT](/windows/win32/Controls/em-setparaformat) message and [PARAFORMAT2](/windows/win32/api/richedit/ns-richedit-paraformat2) structure in the Windows SDK.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCDocView#162](../../mfc/codesnippet/cpp/cricheditview-class_12.cpp)]
 
-##  <a name="textnotfound"></a>CRichEditView –:: TextNotFound
+## <a name="cricheditviewtextnotfound"></a><a name="textnotfound"></a>CricheditView::Textnotfound
 
-Voláním této funkce obnovíte stav interního vyhledávání ovládacího prvku [CRichEditView –](../../mfc/reference/cricheditview-class.md) po neúspěšném volání [hledán FindText](#findtext).
+Volání této funkce obnovit stav vnitřního vyhledávání ovládacího prvku [CRichEditView](../../mfc/reference/cricheditview-class.md) po neúspěšném volání [FindText](#findtext).
 
 ```
 void TextNotFound(LPCTSTR lpszFind);
@@ -1253,22 +1253,22 @@ void TextNotFound(LPCTSTR lpszFind);
 
 ### <a name="parameters"></a>Parametry
 
-*lpszFind*<br/>
+*lpszNajít*<br/>
 Obsahuje textový řetězec, který nebyl nalezen.
 
 ### <a name="remarks"></a>Poznámky
 
-Doporučuje se, aby se tato metoda volala hned po neúspěšných voláních [hledán FindText](#findtext) , aby se správně obnovil stav interního hledání daného ovládacího prvku.
+Doporučuje se, aby tato metoda byla volána ihned po neúspěšných voláních [FindText](#findtext) tak, aby byl správně resetován stav vnitřního hledání ovládacího prvku.
 
-Parametr *lpszFind* by měl zahrnovat stejný obsah jako řetězec poskytnutý pro [hledán FindText](#findtext). Po resetování vnitřního stavu hledání Tato metoda zavolá metodu [OnTextNotFound](#ontextnotfound) se zadaným hledaným řetězcem.
+Parametr *lpszFind* by měl obsahovat stejný obsah jako řetězec poskytnutý [findtextu](#findtext). Po obnovení stavu vnitřního vyhledávání bude tato metoda volat metodu [OnTextNotFound](#ontextnotfound) s poskytnutým vyhledávacím řetězcem.
 
 ### <a name="example"></a>Příklad
 
-  Podívejte se na příklad pro [CRichEditView –:: hledán FindText](#findtext).
+  Viz příklad [cricheditview::FindText](#findtext).
 
-##  <a name="wrapchanged"></a>CRichEditView –:: WrapChanged
+## <a name="cricheditviewwrapchanged"></a><a name="wrapchanged"></a>CRichEditView::WrapChanged
 
-Tuto funkci volejte, když se změní charakteristiky tisku ( [SetMargins](#setmargins) nebo [SetPaperSize](#setpapersize)).
+Volání této funkce při změně vlastností tisku [(SetMargins](#setmargins) nebo [SetPaperSize).](#setpapersize)
 
 ```
 virtual void WrapChanged();
@@ -1276,7 +1276,7 @@ virtual void WrapChanged();
 
 ### <a name="remarks"></a>Poznámky
 
-Pomocí této funkce lze změnit způsob, jakým zobrazení s bohatou úpravou reaguje na změny v [m_nWordWrap](#m_nwordwrap) nebo charakteristiky tisku ( [OnPrinterChanged](#onprinterchanged)).
+Přepsáním této funkce můžete upravit způsob, jakým zobrazení bohaté úpravy reaguje na změny [m_nWordWrap](#m_nwordwrap) nebo vlastností tisku ( [OnPrinterChanged](#onprinterchanged)).
 
 ### <a name="example"></a>Příklad
 
@@ -1284,8 +1284,8 @@ Pomocí této funkce lze změnit způsob, jakým zobrazení s bohatou úpravou r
 
 ## <a name="see-also"></a>Viz také
 
-[Ukázka knihovny MFC v programu WORDPAD](../../overview/visual-cpp-samples.md)<br/>
+[MFC Ukázka WORDPAD](../../overview/visual-cpp-samples.md)<br/>
 [CCtrlView – třída](../../mfc/reference/cctrlview-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
-[CRichEditDoc – třída](../../mfc/reference/cricheditdoc-class.md)<br/>
-[CRichEditCntrItem – třída](../../mfc/reference/cricheditcntritem-class.md)
+[Třída CrichEditDoc](../../mfc/reference/cricheditdoc-class.md)<br/>
+[Třída CRichEditCntrItem](../../mfc/reference/cricheditcntritem-class.md)

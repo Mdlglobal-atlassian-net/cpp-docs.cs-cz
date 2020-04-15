@@ -1,5 +1,5 @@
 ---
-title: CAutoPtrArray Class
+title: Třída CAutoPtrArray
 ms.date: 11/04/2016
 f1_keywords:
 - CAutoPtrArray
@@ -8,19 +8,19 @@ f1_keywords:
 helpviewer_keywords:
 - CAutoPtrArray class
 ms.assetid: 880a70da-8c81-4427-8ac6-49aa8d424244
-ms.openlocfilehash: beb0184a9945990b8d92efe03d4f54baa76ca380
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 93fc5cfea4ea655e57e785ca234df59fe10d6570
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62246808"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81318899"
 ---
-# <a name="cautoptrarray-class"></a>CAutoPtrArray Class
+# <a name="cautoptrarray-class"></a>Třída CAutoPtrArray
 
-Tato třída poskytuje metody, které jsou užitečné při vytváření pole inteligentních ukazatelů.
+Tato třída poskytuje metody užitečné při vytváření pole inteligentní ukazatele.
 
 > [!IMPORTANT]
->  Tato třída a jejích členů nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.
+> Tuto třídu a její členy nelze použít v aplikacích, které se spouštějí v prostředí Windows Runtime.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -40,15 +40,15 @@ Typ ukazatele.
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
 |[CAutoPtrArray::CAutoPtrArray](#cautoptrarray)|Konstruktor|
 
 ## <a name="remarks"></a>Poznámky
 
-Tato třída poskytuje konstruktor a je odvozena z metody [catlarray –](../../atl/reference/catlarray-class.md) a [cautoptrelementtraits –](../../atl/reference/cautoptrelementtraits-class.md) pro vytvoření objektu třídy kolekce ukládání inteligentní ukazatele.
+Tato třída poskytuje konstruktor a odvozuje metody z [CAtlArray](../../atl/reference/catlarray-class.md) a [CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md) na podporu vytvoření třídy kolekce objektu ukládání inteligentní ukazatele.
 
-Další informace najdete v tématu [ATL – třídy kolekce](../../atl/atl-collection-classes.md).
+Další informace naleznete v tématu [třídy kolekce klíčů ATL](../../atl/atl-collection-classes.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -60,7 +60,7 @@ Další informace najdete v tématu [ATL – třídy kolekce](../../atl/atl-coll
 
 **Záhlaví:** atlcoll.h
 
-##  <a name="cautoptrarray"></a>  CAutoPtrArray::CAutoPtrArray
+## <a name="cautoptrarraycautoptrarray"></a><a name="cautoptrarray"></a>CAutoPtrArray::CAutoPtrArray
 
 Konstruktor
 
@@ -72,9 +72,9 @@ CAutoPtrArray() throw();
 
 Inicializuje pole inteligentního ukazatele.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[CAtlArray – třída](../../atl/reference/catlarray-class.md)<br/>
-[CAutoPtrElementTraits – třída](../../atl/reference/cautoptrelementtraits-class.md)<br/>
-[CAutoPtrList – třída](../../atl/reference/cautoptrlist-class.md)<br/>
-[Přehled tříd](../../atl/atl-class-overview.md)
+[Třída CAtlArray](../../atl/reference/catlarray-class.md)<br/>
+[Třída CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md)<br/>
+[Třída CAutoPtrList](../../atl/reference/cautoptrlist-class.md)<br/>
+[Přehled třídy](../../atl/atl-class-overview.md)

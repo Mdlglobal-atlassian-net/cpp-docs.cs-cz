@@ -10,26 +10,26 @@ helpviewer_keywords:
 - COFF files, displaying information about
 - binary file dumper
 ms.assetid: 4bc06822-5330-44b4-8a3f-6180dfd41dfb
-ms.openlocfilehash: 45f6b9c71eaea93597e90de93c704d2ea260235e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6ad421b0c90ad55126f69a899503d6a73184979f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62273271"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81320537"
 ---
 # <a name="dumpbin-reference"></a>DUMPBIN – odkaz
 
-Microsoft COFF – Vypisovač binárních souborů (DUMPBIN. Soubor EXE) zobrazí informace o binárních souborů Common Object File Format (COFF). DUMPBIN – můžete použít k prozkoumání soubory objektů COFF, standardní knihovny objektů COFF, spustitelných souborů a dynamické knihovny (DLL).
+Binární soubor Ový kód COFF (DUMPBIN. EXE) zobrazuje informace o binárních souborech Common Object File Format (COFF). Dumpbin můžete použít ke kontrole souborů objektů COFF, standardníknihovny objektů COFF, spustitelné soubory a dynamické knihovny (DLL).
 
 > [!NOTE]
->  Tento nástroj můžete spustit pouze z příkazového řádku sady Visual Studio. Nelze provést toto spuštění z příkazového řádku systému nebo Průzkumníka souborů.
+> Tento nástroj lze spustit pouze z příkazového řádku sady Visual Studio. Nelze jej spustit ze systémového příkazového řádku nebo z Průzkumníka souborů.
 
-Pouze [/HEADERS](headers.md) – možnost nástroje DUMPBIN je k dispozici pro použití se soubory vytvořenými pomocí [/GL](gl-whole-program-optimization.md) – možnost kompilátoru.
+Pouze [možnost /HEADERS](headers.md) DUMPBIN je k dispozici pro použití v souborech vytvořených s možností kompilátoru [/GL.](gl-whole-program-optimization.md)
 
-- [DUMPBIN – příkazový řádek](dumpbin-command-line.md)
+- [Příkazový řádek DUMPBIN](dumpbin-command-line.md)
 
-- [DUMPBIN – možnosti](dumpbin-options.md)
+- [MOŽNOSTI DUMPBIN](dumpbin-options.md)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Nástroje pro vytváření dalších MSVC](c-cpp-build-tools.md)
+[Další nástroje pro sestavení msvc](c-cpp-build-tools.md)

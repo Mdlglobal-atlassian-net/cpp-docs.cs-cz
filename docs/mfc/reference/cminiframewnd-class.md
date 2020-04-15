@@ -1,5 +1,5 @@
 ---
-title: CMiniFrameWnd – třída
+title: Třída CMiniFrameWnd
 ms.date: 11/04/2016
 f1_keywords:
 - CMiniFrameWnd
@@ -12,16 +12,16 @@ helpviewer_keywords:
 - CMiniFrameWnd [MFC], Create
 - CMiniFrameWnd [MFC], CreateEx
 ms.assetid: b8f534ed-0532-4d8e-9657-5595cf677749
-ms.openlocfilehash: 45b4698cc70487a6c3fe1470fe27f7b5c4f95402
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: e9b91161f4207f4d2215d8777beade93617ddfac
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69504592"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81319822"
 ---
-# <a name="cminiframewnd-class"></a>CMiniFrameWnd – třída
+# <a name="cminiframewnd-class"></a>Třída CMiniFrameWnd
 
-Představuje okno rámce s poloviční výškou, které se obvykle zobrazuje okolo plovoucích panelů nástrojů.
+Představuje okno rámce s poloviční výškou, které je obvykle vidět kolem plovoucích panelů nástrojů.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,32 +33,32 @@ class CMiniFrameWnd : public CFrameWnd
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CMiniFrameWnd::CMiniFrameWnd](#cminiframewnd)|`CMiniFrameWnd` Vytvoří objekt.|
+|[CMiniFrameWnd::CMiniFrameWnd](#cminiframewnd)|Vytvoří `CMiniFrameWnd` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CMiniFrameWnd:: Create](#create)|`CMiniFrameWnd` Vytvoří objekt po konstrukci.|
-|[CMiniFrameWnd::CreateEx](#createex)|`CMiniFrameWnd` Vytvoří objekt (s dalšími možnostmi) po konstrukci.|
+|[CMiniFrameWnd::Vytvořit](#create)|Vytvoří `CMiniFrameWnd` objekt po konstrukci.|
+|[CMiniFrameWnd::CreateEx](#createex)|Vytvoří `CMiniFrameWnd` objekt (s dalšími možnostmi) po konstrukci.|
 
 ## <a name="remarks"></a>Poznámky
 
-Tyto zkrácené systémy Windows se chovají stejně jako normální okna s rámečkem, s tím rozdílem, že nemají tlačítka pro minimalizaci, maximalizaci a nabídky, a stačí pouze jedním kliknutím na systémovou nabídku, která je odpustit.
+Tato okna s minirámečkem se chovají jako normální okna rámů, kromě toho, že nemají tlačítka nebo nabídky minimalizovat / maximalizovat a stačí je pouze jedním kliknutím na systémové menu zavřít.
 
-Chcete-li `CMiniFrameWnd` použít objekt, nejprve jej definujte. Potom zavolejte funkci [vytvořit](#create) členskou funkci pro zobrazení okna se zkráceným rámcem.
+Chcete-li `CMiniFrameWnd` použít objekt, nejprve definujte objekt. Potom voláním členské funkce [Vytvořit](#create) zobrazíte okno minirámečku.
 
-Další informace o tom, jak používat `CMiniFrameWnd` objekty, najdete v článku [docked a plovoucí panely nástrojů](../../mfc/docking-and-floating-toolbars.md).
+Další informace o použití `CMiniFrameWnd` objektů naleznete v článku [Ukotvení a plovoucí panely nástrojů](../../mfc/docking-and-floating-toolbars.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[CObject](../../mfc/reference/cobject-class.md)
+[CObjekt](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[CCmdCíl](../../mfc/reference/ccmdtarget-class.md)
 
-[CWnd](../../mfc/reference/cwnd-class.md)
+[Cwnd](../../mfc/reference/cwnd-class.md)
 
 [CFrameWnd](../../mfc/reference/cframewnd-class.md)
 
@@ -66,11 +66,11 @@ Další informace o tom, jak používat `CMiniFrameWnd` objekty, najdete v člá
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxwin. h
+**Záhlaví:** afxwin.h
 
-##  <a name="cminiframewnd"></a>CMiniFrameWnd::CMiniFrameWnd
+## <a name="cminiframewndcminiframewnd"></a><a name="cminiframewnd"></a>CMiniFrameWnd::CMiniFrameWnd
 
-`CMiniFrameWnd` Vytvoří objekt, ale nevytvoří okno.
+Vytvoří `CMiniFrameWnd` objekt, ale nevytvoří okno.
 
 ```
 CMiniFrameWnd();
@@ -78,11 +78,11 @@ CMiniFrameWnd();
 
 ### <a name="remarks"></a>Poznámky
 
-Chcete-li vytvořit okno, zavolejte [CMiniFrameWnd:: Create](#create).
+Chcete-li vytvořit okno, zavolejte [CMiniFrameWnd::Create](#create).
 
-##  <a name="create"></a>CMiniFrameWnd:: Create
+## <a name="cminiframewndcreate"></a><a name="create"></a>CMiniFrameWnd::Vytvořit
 
-Vytvoří okno se zkráceným rámcem Windows a připojí ho k `CMiniFrameWnd` objektu.
+Vytvoří okno minirámečku systému Windows `CMiniFrameWnd` a připojí jej k objektu.
 
 ```
 virtual BOOL Create(
@@ -96,59 +96,59 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>Parametry
 
-*lpClassName*<br/>
-Odkazuje na řetězec znaků zakončený hodnotou null, který pojmenovává třídu systému Windows. Název třídy může být jakýkoli název zaregistrovaný s globální funkcí [AfxRegisterWndClass –](application-information-and-management.md#afxregisterwndclass) . Pokud má hodnotu NULL, třída okna bude pro vás zaregistrována rozhraním. Knihovna MFC poskytuje výchozí třídě následující styly a atributy:
+*název lpClassName*<br/>
+Odkazuje na řetězec znaků ukončený nulou, který pojmenovává třídu systému Windows. Název třídy může být libovolný název registrovaný s globální funkcí [AfxRegisterWndClass.](application-information-and-management.md#afxregisterwndclass) Pokud null, třída okna bude registrována pro vás rámci. Knihovna MFC poskytuje výchozí třídě následující styly a atributy:
 
-- Nastaví styl bitového CS_DBLCLKS, který odešle dvakrát klikněte na zprávy, když uživatel dvakrát klikne na myš.
+- Nastaví bit stylu CS_DBLCLKS, který odesílá poklepání na zprávy do procedury okna, když uživatel poklepe myší.
 
-- Nastaví styl bitů CS_HREDRAW a CS_VREDRAW, který směruje obsah oblasti klienta, která se má překreslit, když se změní velikost okna.
+- Nastaví bity stylu CS_HREDRAW a CS_VREDRAW, které směrují obsah klientské oblasti, která má být překreslena při změně velikosti okna.
 
-- Nastaví kurzor třídy na IDC_ARROW Windows Standard.
+- Nastaví kurzor třídy na standardní IDC_ARROW systému Windows.
 
-- Nastaví štětec pozadí třídy na hodnotu NULL, takže okno neodstraní své pozadí.
+- Nastaví stopu pozadí třídy na hodnotu NULL, takže okno nevymaže jeho pozadí.
 
-- Nastaví ikonu třídy na standardní ikonu logo Windows mávající-Flag.
+- Nastaví ikonu třídy na standardní ikonu loga Windows s mávajícívlajkou.
 
-- Nastaví výchozí velikost a polohu okna tak, jak je uvedeno v systému Windows.
+- Nastaví okno na výchozí velikost a umístění, jak je uvedeno systémem Windows.
 
-*lpWindowName*<br/>
-Odkazuje na řetězec znaků zakončený hodnotou null, který obsahuje název okna.
+*lpNázev_okna*<br/>
+Odkazuje na řetězec znaků ukončený hodnotou null, který obsahuje název okna.
 
-*dwStyle*<br/>
-Určuje atributy stylu okna. Ty mohou zahrnovat standardní styly oken a jeden nebo více následujících speciálních stylů:
+*dwStyl*<br/>
+Určuje atributy stylu okna. Mohou zahrnovat standardní styly oken a jeden nebo více následujících speciálních stylů:
 
-- MFS_MOVEFRAME umožňuje přesunout okno se zkráceným rámcem kliknutím na libovolné místo v okně, nikoli pouze na titulek.
+- MFS_MOVEFRAME Umožňuje přesunutí okna minirámečku kliknutím na libovolný okraj okna, nikoli pouze na titulek.
 
-- MFS_4THICKFRAME zakáže změnu velikosti okna se zkrácenými snímky.
+- MFS_4THICKFRAME Zakáže změna velikosti okna minirámečku.
 
-- MFS_SYNCACTIVE synchronizuje aktivaci okna se zkráceným rámcem do aktivace jeho nadřazeného okna.
+- MFS_SYNCACTIVE Synchronizuje aktivaci okna minirámečku s aktivací nadřazeného okna.
 
-- MFS_THICKFRAME umožňuje, aby okno s minimálním rámcem bylo co nejmenší velikosti jako obsah klientské oblasti.
+- MFS_THICKFRAME Umožňuje velikost okna mini-frame tak malé, jak umožňuje obsah klientské oblasti.
 
-- MFS_BLOCKSYSMENU zakáže přístup k systémové nabídce a nabídce ovládacího prvku a převede je na část titulku (záhlaví).
+- MFS_BLOCKSYSMENU Zakáže přístup k systémové nabídce a nabídce ovládacího prvku a převede je na část titulku (záhlaví).
 
-Popis možných hodnot stylu okna naleznete v tématu [CWnd:: Create](../../mfc/reference/cwnd-class.md#create) . Typická kombinace použitá pro okna se zkrácenými rámečky je&#124;WS_POPUP&#124;WS_CAPTION WS_SYSMENU.
+Viz [CWnd::Create](../../mfc/reference/cwnd-class.md#create) pro popis možných hodnot stylu okna. Typická kombinace používaná pro okna s minirámy je WS_POPUP&#124;WS_CAPTION WS_CAPTION&#124;WS_SYSMENU.
 
-*OBD*<br/>
-`RECT` Struktura určující požadované rozměry okna.
+*Rect*<br/>
+Struktura `RECT` určující požadované rozměry okna.
 
 *pParentWnd*<br/>
 Odkazuje na nadřazené okno. Pro okna nejvyšší úrovně použijte hodnotu NULL.
 
-*nID*<br/>
-Pokud je okno se zkráceným rámcem vytvořeno jako podřízené okno, jedná se o identifikátor podřízeného ovládacího prvku; v opačném případě 0.
+*Nid*<br/>
+Pokud je okno minirámečku vytvořeno jako podřízené okno, jedná se o identifikátor podřízeného ovládacího prvku; jinak 0.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud bylo úspěšné; v opačném případě 0.
+Nenulová, pokud je úspěšná; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-`Create`Inicializuje název třídy okna a název okna a registruje výchozí hodnoty pro svůj styl a nadřazenou položku.
+`Create`inicializuje název třídy a název okna okna a zaregistruje výchozí hodnoty pro jeho styl a nadřazený.
 
-##  <a name="createex"></a>CMiniFrameWnd::CreateEx
+## <a name="cminiframewndcreateex"></a><a name="createex"></a>CMiniFrameWnd::CreateEx
 
-`CMiniFrameWnd` Vytvoří objekt.
+Vytvoří `CMiniFrameWnd` objekt.
 
 ```
 virtual BOOL CreateEx(
@@ -163,49 +163,49 @@ virtual BOOL CreateEx(
 
 ### <a name="parameters"></a>Parametry
 
-*dwExStyle*<br/>
-Určuje rozšířený styl `CMiniFrameWnd` , který je vytvářen. Použijte libovolné [Rozšířené styly okna](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) v okně.
+*dwExStyl*<br/>
+Určuje rozšířený styl vytvářeného souboru. `CMiniFrameWnd` Použijte některý ze [stylů rozšířeného okna](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) v okně.
 
-*lpClassName*<br/>
-Odkazuje na řetězec znaků zakončený hodnotou null, který má název třídy systému Windows ( [WNDCLASS](/windows/win32/api/winuser/ns-winuser-wndclassw) struktura). Název třídy může být libovolný název zaregistrovaný s globální funkcí [AfxRegisterWndClass –](application-information-and-management.md#afxregisterwndclass) nebo libovolným předdefinovaným názvem třídy ovládacího prvku. Nesmí mít hodnotu NULL.
+*název lpClassName*<br/>
+Odkazuje na řetězec znaků ukončený nulou, který pojmenovává třídu systému Windows (strukturu [WNDCLASS).](/windows/win32/api/winuser/ns-winuser-wndclassw) Název třídy může být libovolný název registrovaný s globální funkcí [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) nebo libovolný majek řazených názvů třídovládacích prvků. Nesmí být null.
 
-*lpWindowName*<br/>
-Odkazuje na řetězec znaků zakončený hodnotou null, který obsahuje název okna.
+*lpNázev_okna*<br/>
+Odkazuje na řetězec znaků ukončený hodnotou null, který obsahuje název okna.
 
-*dwStyle*<br/>
-Určuje atributy stylu okna. Popis možných hodnot naleznete v tématu [styly oken](../../mfc/reference/styles-used-by-mfc.md#window-styles) a [CWnd:: Create](../../mfc/reference/cwnd-class.md#create) .
+*dwStyl*<br/>
+Určuje atributy stylu okna. Viz [Styly oken](../../mfc/reference/styles-used-by-mfc.md#window-styles) a [CWnd::Create](../../mfc/reference/cwnd-class.md#create) pro popis možných hodnot.
 
-*OBD*<br/>
-Velikost a poloha okna v souřadnicích klienta *pParentWnd*.
+*Rect*<br/>
+Velikost a umístění okna v klientských souřadnicích *pParentWnd*.
 
 *pParentWnd*<br/>
-Odkazuje na objekt nadřazeného okna.
+Odkazuje na nadřazený objekt okna.
 
-*nID*<br/>
+*Nid*<br/>
 Identifikátor podřízeného okna.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu TRUE při úspěchu, FALSE při selhání.
+Vrátí hodnotu PRAVDA při úspěchu, nepravda při neúspěchu.
 
 ### <a name="remarks"></a>Poznámky
 
-`CreateEx` Parametry určují WNDCLASS, styl okna a (volitelně) počáteční polohu a velikost okna. `CreateEx`Určuje také nadřazené okno (pokud existuje) a ID.
+Parametry `CreateEx` určují WNDCLASS, styl okna a (volitelně) počáteční pozici a velikost okna. `CreateEx`také určuje nadřazené okno (pokud existuje) a ID.
 
-Když `CreateEx` se spustí, Windows pošle do okna zprávy [WM_GETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo), [WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate), [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize)a [WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate) .
+Při `CreateEx` spuštění systémwindows odešle do okna zprávy [WM_GETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo), [WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate), [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize)a [WM_CREATE.](../../mfc/reference/cwnd-class.md#oncreate)
 
-Chcete-li zvětšit výchozí zpracování zprávy, odvodit třídu `CMiniFrameWnd`z, přidat do nové třídy mapu zprávy a poskytnout členské funkce pro výše uvedené zprávy. Přepsání `OnCreate`, například k provedení potřebné inicializace pro novou třídu.
+Chcete-li rozšířit výchozí zpracování zpráv, odvodit třídu z `CMiniFrameWnd`, přidat mapu zpráv do nové třídy a poskytnout členské funkce pro výše uvedené zprávy. Přepište `OnCreate`, například provést potřebnou inicializaci pro novou třídu.
 
-Přepište `On`další obslužné rutiny zpráv *zpráv* pro přidání dalších funkcí do odvozené třídy.
+Přepsat další `On` *zprávy* zprávy obslužné rutiny přidat další funkce odvozené třídy.
 
-Pokud je zadán styl WS_VISIBLE, Windows pošle okno všechny zprávy vyžadované k aktivaci a zobrazení okna. Určuje-li styl okna záhlaví, zobrazí se v záhlaví zobrazený název okna, na které se odkazuje parametr *lpszWindowName* .
+Pokud je uveden WS_VISIBLE styl, systém Windows odešle okno všechny zprávy potřebné k aktivaci a zobrazení okna. Pokud styl okna určuje záhlaví, zobrazí se v záhlaví název okna, na který ukazuje parametr *lpszWindowName.*
 
 Parametr *dwStyle* může být libovolná kombinace [stylů oken](../../mfc/reference/styles-used-by-mfc.md#window-styles).
 
-Okna panelu nástrojů palety původní styl již nejsou podporována. Starý styl, který neměl tlačítko pro uzavření "X", byl podporován při spuštění aplikace MFC v předchozích verzích systému Windows, ale již není podporován v aplikaci Visual C++.NET. Nyní je podporován pouze nový styl WS_EX_TOOLWINDOW; Popis tohoto stylu naleznete v tématu [Rozšířené styly oken](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles).
+Okna panelu nástrojů palety starého stylu již nejsou podporována. Starý styl, který neměl tlačítko Zavřít "X", byl podporován při spuštění aplikace knihovny MFC v předchozích verzích systému Windows, ale již není podporován v jazyce Visual C++.NET. Nyní je podporován pouze nový styl WS_EX_TOOLWINDOW; Popis tohoto stylu naleznete v tématu [Rozšířené styly oken](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[CFrameWnd – třída](../../mfc/reference/cframewnd-class.md)<br/>
+[Třída CFrameWnd](../../mfc/reference/cframewnd-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
-[CFrameWnd – třída](../../mfc/reference/cframewnd-class.md)
+[Třída CFrameWnd](../../mfc/reference/cframewnd-class.md)

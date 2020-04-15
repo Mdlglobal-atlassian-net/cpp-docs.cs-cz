@@ -1,5 +1,5 @@
 ---
-title: 'Kontejnery ovládacích prvků ActiveX: Programování ovládacích prvků ActiveX v kontejneru ovládacího prvku ActiveX'
+title: 'ActiveX – kontejnery ovládacích prvků: Programování ovládacích prvků ActiveX v kontejneru ovládacího prvku ActiveX'
 ms.date: 09/12/2018
 helpviewer_keywords:
 - ActiveX control containers [MFC], accessing ActiveX controls
@@ -12,90 +12,90 @@ helpviewer_keywords:
 - wrapper classes [MFC], using
 - ActiveX controls [MFC], wrapper classes
 ms.assetid: ef9b2480-92d6-4191-b16e-8055c4fd7b73
-ms.openlocfilehash: eaeb5275ce825272e1c605e7ceeefa24db7a32ab
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9620f4d47197147db4972c9f2024f6018a705902
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62378112"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371191"
 ---
-# <a name="activex-control-containers-programming-activex-controls-in-an-activex-control-container"></a>Kontejnery ovládacích prvků ActiveX: Programování ovládacích prvků ActiveX v kontejneru ovládacího prvku ActiveX
+# <a name="activex-control-containers-programming-activex-controls-in-an-activex-control-container"></a>ActiveX – kontejnery ovládacích prvků: Programování ovládacích prvků ActiveX v kontejneru ovládacího prvku ActiveX
 
-Tento článek popisuje proces pro přístup k zveřejněné [metody](../mfc/mfc-activex-controls-methods.md) a [vlastnosti](../mfc/mfc-activex-controls-properties.md) vložený ovládacích prvků ActiveX.
+Tento článek popisuje proces přístupu k exponovaným [metodám](../mfc/mfc-activex-controls-methods.md) a [vlastnostem](../mfc/mfc-activex-controls-properties.md) vložených ovládacích prvků ActiveX.
 
 >[!IMPORTANT]
-> ActiveX je starší technologie, která by neměla být používána při novém vývoji. Další informace o moderních technologií, které nahrazují ActiveX naleznete v tématu [ovládací prvky ActiveX](activex-controls.md).
+> ActiveX je starší technologie, která by neměla být použita pro nový vývoj. Další informace o moderních technologiích, které nahrazují ovládací prvky ActiveX, naleznete [v tématu ActiveX Controls](activex-controls.md).
 
-V podstatě postupujte podle těchto kroků:
+V podstatě budete postupovat podle následujících kroků:
 
-1. [Vložení ovládacího prvku ActiveX v kontejneru projektu ActiveX](../mfc/inserting-a-control-into-a-control-container-application.md) pomocí galerie.
+1. [Vložte ovládací prvek ActiveX do projektu kontejneru ActiveX](../mfc/inserting-a-control-into-a-control-container-application.md) pomocí galerie.
 
-1. [Definujte proměnnou člena](../mfc/activex-control-containers-connecting-an-activex-control-to-a-member-variable.md) (nebo jiná forma přístup) stejného typu jako ActiveX třídu obálky ovládacího prvku.
+1. [Definujte členovou proměnnou](../mfc/activex-control-containers-connecting-an-activex-control-to-a-member-variable.md) (nebo jinou formu přístupu) stejného typu jako třídu obálky ovládacího prvku ActiveX.
 
-1. [Program ovládací prvek ActiveX](#_core_programming_the_activex_control) pomocí předdefinovaných členské funkce obálkovou třídu.
+1. [Naprogramujte ovládací prvek ActiveX](#_core_programming_the_activex_control) pomocí předdefinovaných členských funkcí obálky.
 
-V tomto výkladu Předpokládejme, že jste vytvořili založených na dialogovém okně projekt (kontejneru) s podporou ovládacího prvku ActiveX. Ukázka ovládacího prvku systému KR, KR, se přidají do výsledné projektu.
+V této diskusi předpokládejme, že jste vytvořili projekt založený na dialogu (s názvem Kontejner) s podporou ovládacího prvku ActiveX. Řízení vzorku Circ, Circ, budou přidány do výsledného projektu.
 
-Jakmile ovládací prvek KR vložíte do projektu (krok 1), vložte do dialogové okno aplikace hlavní instanci ovládacího prvku kr.
+Po vložení ovládacího prvku Circ do projektu (krok 1) vložte instanci ovládacího prvku Circ do hlavního dialogového okna aplikace.
 
 ## <a name="procedures"></a>Procedury
 
-#### <a name="to-add-the-circ-control-to-the-dialog-template"></a>Přidání ovládacího prvku KR k šabloně dialogu
+#### <a name="to-add-the-circ-control-to-the-dialog-template"></a>Přidání ovládacího prvku Circ do šablony dialogového okna
 
-1. Načtení projektu kontejneru ovládacího prvku ActiveX. V tomto příkladu použijte `Container` projektu.
+1. Načtěte projekt kontejneru ovládacího prvku ActiveX. V tomto příkladu `Container` použijte projekt.
 
-1. Klikněte na kartu zobrazení prostředků.
+1. Klikněte na kartu Zobrazení zdrojů.
 
-1. Otevřít **dialogové okno** složky.
+1. Otevřete složku **Dialog.**
 
-1. Dvakrát klikněte šablony hlavní dialogového okna. V tomto příkladu použijte **IDD_CONTAINER_DIALOG**.
+1. Poklepejte na šablonu hlavního dialogového okna. V tomto příkladu použijte **IDD_CONTAINER_DIALOG**.
 
-1. Klikněte na ikonu KR ovládacího prvku na panelu nástrojů.
+1. Klepněte na ikonu ovládacího prvku Circ v panelu nástrojů.
 
-1. Klikněte na místě dialogové okno Vložit ovládací prvek str.
+1. Klepnutím na místo v dialogovém okně vložte ovládací prvek Circ.
 
-1. Z **souboru** nabídce zvolte **Uložit vše** uložte všechny změny šablony dialogového okna.
+1. V nabídce **Soubor** zvolte **Uložit vše,** chcete-li uložit všechny změny do šablony dialogového okna.
 
-## <a name="modifications-to-the-project"></a>Změny v projektu
+## <a name="modifications-to-the-project"></a>Změny projektu
 
-Chcete-li aplikace typu kontejner pro přístup k ovládacím prvku KR, Visual C++ automaticky přidá obálkovou třídu (`CCirc`) implementační soubor (. CPP) do kontejneru projektu a záhlaví třídy obálky (. H) soubor do souboru záhlaví pole dialogové okno:
+Chcete-li povolit aplikaci Container přístup k ovládacímu prvku Circ, Visual C++ automaticky přidá soubor implementace obálky (`CCirc`) (. CPP) do projektu Container a hlavičky obálkové třídy (. H) do souboru záhlaví dialogového okna:
 
 [!code-cpp[NVC_MFC_AxCont#1](../mfc/codesnippet/cpp/programming-activex-controls-in-a-activex-control-container_1.h)]
 
-##  <a name="_core_the_wrapper_class_header_28h29_file"></a> Záhlaví třídy obálky (. H) soubor
+## <a name="the-wrapper-class-header-h-file"></a><a name="_core_the_wrapper_class_header_28h29_file"></a>Záhlaví třídy obálky (. H) Soubor
 
-Získání a nastavení vlastností (a volat metody) ovládacího prvku KR `CCirc` Obálková třída obsahuje deklaraci všechny vystavené metod a vlastností. V tomto příkladu jsou tyto deklarace součástí msc H. Následující příklad je část třídy `CCirc` , který definuje rozhraní vystavené ovládacího prvku ActiveX:
+Chcete-li získat a nastavit vlastnosti (a vyvolat `CCirc` metody) pro circ ovládacího prvku, obálka třída poskytuje deklaraci všech exponovaných metod a vlastností. V příkladu se tyto deklarace nacházejí v CIRC. H. Následující ukázka je část `CCirc` třídy, která definuje exponovaná rozhraní ovládacího prvku ActiveX:
 
 [!code-cpp[NVC_MFC_AxCont#2](../mfc/codesnippet/cpp/programming-activex-controls-in-a-activex-control-container_2.h)]
 [!code-cpp[NVC_MFC_AxCont#3](../mfc/codesnippet/cpp/programming-activex-controls-in-a-activex-control-container_3.h)]
 
-Tyto funkce může být volána z jiných postupů vaší aplikace pomocí normální syntaxí jazyka C++. Další informace o používání tato členská funkce, nastavení pro přístup k vlastnosti a metody ovládacího prvku, naleznete v části [programování ovládací prvek ActiveX](#_core_programming_the_activex_control).
+Tyto funkce pak lze volat z jiných postupů aplikace pomocí normální syntaxe jazyka C++. Další informace o použití této sady členských funkcí pro přístup k metodám a vlastnostem ovládacího prvku naleznete v části [Programování ovládacího prvku ActiveX](#_core_programming_the_activex_control).
 
-##  <a name="_core_member_variable_modifications_to_the_project"></a> Členské proměnné změny v projektu
+## <a name="member-variable-modifications-to-the-project"></a><a name="_core_member_variable_modifications_to_the_project"></a>Členské proměnné změny projektu
 
-Jakmile byl přidán do projektu a vložené v kontejneru pole dialogového okna ovládacího prvku ActiveX, byla přístupná z jiných částí projektu. Nejjednodušší způsob, jak řízení přístupu je [vytvořit proměnnou člena](../mfc/activex-control-containers-connecting-an-activex-control-to-a-member-variable.md) dialogové třídy `CContainerDlg` (krok 2), to znamená stejného typu jako Obálková třída, přidaných do projektu Visual C++. Potom můžete členské proměnné pro přístup k vloženému ovládacímu prvku kdykoli.
+Jakmile je ovládací prvek ActiveX přidán do projektu a vložen do kontejneru dialogového okna, je přístupný jinými částmi projektu. Nejjednodušší způsob, jak získat přístup k ovládacímu prvku, `CContainerDlg` je [vytvořit členovou proměnnou](../mfc/activex-control-containers-connecting-an-activex-control-to-a-member-variable.md) třídy dialog (krok 2), která je stejného typu jako třída obálky přidaná do projektu visual c++. Potom můžete použít proměnnou člena pro přístup k vložený ovládací prvek kdykoli.
 
-Při **přidat členskou proměnnou** dialogové okno přidá *m_circctl* členské proměnné do projektu, přidá také následující řádky do souboru hlaviček (. H) z `CContainerDlg` třídy:
+Když dialogové okno **Přidat proměnnou člena** přidá do projektu proměnnou *m_circctl* člen, přidá také následující řádky do souboru záhlaví (. H) třídy: `CContainerDlg`
 
 [!code-cpp[NVC_MFC_AxCont#4](../mfc/codesnippet/cpp/programming-activex-controls-in-a-activex-control-container_4.h)]
 [!code-cpp[NVC_MFC_AxCont#5](../mfc/codesnippet/cpp/programming-activex-controls-in-a-activex-control-container_5.h)]
 
-Kromě toho volání **ddx_control –** se automaticky přidá do `CContainerDlg`vaší implementace `DoDataExchange`:
+Kromě toho je výzva **k DDX_Control** `CContainerDlg`automaticky přidána `DoDataExchange`k provádění aplikace :
 
 [!code-cpp[NVC_MFC_AxCont#6](../mfc/codesnippet/cpp/programming-activex-controls-in-a-activex-control-container_6.cpp)]
 
-##  <a name="_core_programming_the_activex_control"></a> Programování ovládacího prvku ActiveX
+## <a name="programming-the-activex-control"></a><a name="_core_programming_the_activex_control"></a>Programování ovládacího prvku ActiveX
 
-V tomto okamžiku jste vložili ovládacího prvku ActiveX do dialogového okna šablony a vytvořen členské proměnné. Nyní můžete běžné C++ syntaxi pro přístup k vlastnostem a metodám vloženému ovládacímu prvku.
+V tomto okamžiku jste vložili ovládací prvek ActiveX do šablony dialogového okna a vytvořili pro něj členní proměnnou. Nyní můžete použít společnou syntaxi jazyka C++ pro přístup k vlastnostem a metodám vloženého ovládacího prvku.
 
-Jak je uvedeno (v [záhlaví třídy obálky (. H) File](#_core_the_wrapper_class_header_28h29_file)), souboru hlaviček (. H) pro `CCirc` obálkové třídy, v tomto případu msc H, obsahuje seznam členské funkce, které můžete použít k získání a nastavení jakoukoli hodnotu vlastnosti zveřejněné. Členské funkce zveřejněné metody jsou také k dispozici.
+Jak je uvedeno (v [záhlaví třídy obálky (. H) Soubor](#_core_the_wrapper_class_header_28h29_file)), soubor záhlaví (. H) pro `CCirc` obálkovou třídu, v tomto případě CIRC. H, obsahuje seznam členských funkcí, které můžete použít k získání a nastavení jakékoli hodnoty exponované vlastnosti. K dispozici jsou také členské funkce pro exponované metody.
 
-Probíhá společné místo, kde můžete upravit vlastnosti ovládacího prvku `OnInitDialog` členské funkce třídy hlavním dialogu. Tato funkce je volána těsně před plánovaným dialogové okno se zobrazí a slouží k inicializaci jeho obsah, včetně všech ovládacích prvků.
+Společné místo pro úpravu vlastností ovládacího prvku je v `OnInitDialog` členské funkci hlavní třídy dialogu. Tato funkce je volána těsně před zobrazením dialogového okna a slouží k inicializaci jeho obsahu, včetně všech jeho ovládacích prvků.
 
-Následující příklad kódu používá *m_circctl* členské proměnné k úpravě popisek a CircleShape vlastností vloženému ovládacímu prvku KR:
+Následující příklad kódu používá proměnnou *m_circctl* člen k úpravě vlastností Caption a CircleShape vloženého ovládacího prvku Circ:
 
 [!code-cpp[NVC_MFC_AxCont#7](../mfc/codesnippet/cpp/programming-activex-controls-in-a-activex-control-container_7.cpp)]
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [ActiveX – kontejnery ovládacích prvků](../mfc/activex-control-containers.md)

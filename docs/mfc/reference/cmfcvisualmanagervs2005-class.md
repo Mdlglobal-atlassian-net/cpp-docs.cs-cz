@@ -1,5 +1,5 @@
 ---
-title: CMFCVisualManagerVS2005 Class
+title: Třída CMFCVisualManagerVS2005
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCVisualManagerVS2005
@@ -38,16 +38,16 @@ helpviewer_keywords:
 - CMFCVisualManagerVS2005 [MFC], OnFillMiniFrameCaption
 - CMFCVisualManagerVS2005 [MFC], OnUpdateSystemColors
 ms.assetid: ea39b9ae-327e-4a51-bce7-dc84c78f005b
-ms.openlocfilehash: 4d1ef0c9087e876f3e8f43430b58fc80f3923ba6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b92077ecf4670dd5395296327c767ee3c7b848ba
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62338113"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81319906"
 ---
-# <a name="cmfcvisualmanagervs2005-class"></a>CMFCVisualManagerVS2005 Class
+# <a name="cmfcvisualmanagervs2005-class"></a>Třída CMFCVisualManagerVS2005
 
-`CMFCVisualManagerVS2005` Poskytuje vzhled aplikace Microsoft Visual Studio 2005 aplikace.
+`CMFCVisualManagerVS2005`Poskytuje aplikaci vzhled sady Microsoft Visual Studio 2005.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -59,42 +59,42 @@ class CMFCVisualManagerVS2005 : public CMFCVisualManagerOffice2003
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CMFCVisualManagerVS2005::GetDockingTabsBordersSize](#getdockingtabsborderssize)|Rozhraní volá tuto metodu při kreslení podokno, které je ukotvena a oddělené tabulátory. (Přepíše [CMFCVisualManager::GetDockingTabsBordersSize](../../mfc/reference/cmfcvisualmanager-class.md#getdockingtabsborderssize).)|
-|[CMFCVisualManagerVS2005::GetMDITabsBordersSize](#getmditabsborderssize)|Rozhraní volá tuto metodu za účelem určení velikost ohraničení okna MDITabs předtím, než se vykreslí v okně. (Přepíše [CMFCVisualManager::GetMDITabsBordersSize](../../mfc/reference/cmfcvisualmanager-class.md#getmditabsborderssize).)|
+|[CMFCVisualManagerVS2005::GetDockingTabsBordersSize](#getdockingtabsborderssize)|Rozhraní Framework volá tuto metodu při nakreslí podokno, které je ukotvena a s kartami. (Přepíše [CMFCVisualManager::GetDockingTabsBordersSize](../../mfc/reference/cmfcvisualmanager-class.md#getdockingtabsborderssize).)|
+|[CMFCVisualManagerVS2005::GetMDITabsBordersSize](#getmditabsborderssize)|Rozhraní Framework volá tuto metodu k určení velikosti ohraničení okna MDITabs před nakreslí okno. (Přepíše [CMFCVisualManager::GetMDITabsBordersSize](../../mfc/reference/cmfcvisualmanager-class.md#getmditabsborderssize).)|
 |[CMFCVisualManagerVS2005::GetPropertyGridGroupColor](#getpropertygridgroupcolor)|(Přepíše [CMFCVisualManagerOffice2003::GetPropertyGridGroupColor](../../mfc/reference/cmfcvisualmanageroffice2003-class.md#getpropertygridgroupcolor).)|
 |[CMFCVisualManagerVS2005::GetTabFrameColors](#gettabframecolors)|(Přepíše [CMFCVisualManagerOffice2003::GetTabFrameColors](../../mfc/reference/cmfcvisualmanageroffice2003-class.md#gettabframecolors).)|
-|[CMFCVisualManagerVS2005::HasOverlappedAutoHideButtons](#hasoverlappedautohidebuttons)|Vrátí, zda automatického skrytí tlačítka překrývají v aktuální správce vzhledu. (Overrides [CMFCVisualManager::HasOverlappedAutoHideButtons](../../mfc/reference/cmfcvisualmanager-class.md#hasoverlappedautohidebuttons).)|
-|[CMFCVisualManagerVS2005::OnDrawAutoHideButtonBorder](#ondrawautohidebuttonborder)|(Overrides [CMFCVisualManagerOffice2003::OnDrawAutoHideButtonBorder](../../mfc/reference/cmfcvisualmanageroffice2003-class.md#ondrawautohidebuttonborder).)|
+|[CMFCVisualManagerVS2005::HasOverlappedAutoHideButtons](#hasoverlappedautohidebuttons)|Vrátí, zda se tlačítka automatického skrytí překrývají v aktuálním vizuálním správci. (Přepíše [CMFCVisualManager::HasOverlappedAutoHideButtons](../../mfc/reference/cmfcvisualmanager-class.md#hasoverlappedautohidebuttons).)|
+|[CMFCVisualManagerVS2005::OnDrawAutoHideButtonBorder](#ondrawautohidebuttonborder)|(Přepíše [CMFCVisualManagerOffice2003::OnDrawAutoHideButtonBorder](../../mfc/reference/cmfcvisualmanageroffice2003-class.md#ondrawautohidebuttonborder).)|
 |[CMFCVisualManagerVS2005::OnDrawCaptionButton](#ondrawcaptionbutton)|(Přepíše `CMFCVisualManagerOfficeXP::OnDrawCaptionButton`.)|
 |[CMFCVisualManagerVS2005::OnDrawPaneCaption](#ondrawpanecaption)|(Přepíše [CMFCVisualManagerOffice2003::OnDrawPaneCaption](../../mfc/reference/cmfcvisualmanageroffice2003-class.md#ondrawpanecaption).)|
-|[CMFCVisualManagerVS2005::OnDrawSeparator](#ondrawseparator)|(Přepíše [CMFCVisualManagerOffice2003::OnDrawSeparator](../../mfc/reference/cmfcvisualmanageroffice2003-class.md#ondrawseparator).)|
+|[CMFCVisualManagerVS2005::Oddělovač ondraw](#ondrawseparator)|(Přepíše [CMFCVisualManagerOffice2003::OnDrawSeparator](../../mfc/reference/cmfcvisualmanageroffice2003-class.md#ondrawseparator).)|
 |[CMFCVisualManagerVS2005::OnDrawTab](#ondrawtab)|(Přepíše [CMFCVisualManagerOffice2003::OnDrawTab](../../mfc/reference/cmfcvisualmanageroffice2003-class.md#ondrawtab).)|
-|[CMFCVisualManagerVS2005::OnDrawToolBoxFrame](#ondrawtoolboxframe)|(Overrides [CMFCVisualManager::OnDrawToolBoxFrame](../../mfc/reference/cmfcvisualmanager-class.md#ondrawtoolboxframe).)|
+|[CMFCVisualManagerVS2005::OnDrawToolBoxFrame](#ondrawtoolboxframe)|(Přepíše [CMFCVisualManager::OnDrawToolBoxFrame](../../mfc/reference/cmfcvisualmanager-class.md#ondrawtoolboxframe).)|
 |[CMFCVisualManagerVS2005::OnEraseTabsArea](#onerasetabsarea)|(Přepíše [CMFCVisualManagerOffice2003::OnEraseTabsArea](../../mfc/reference/cmfcvisualmanageroffice2003-class.md#onerasetabsarea).)|
-|[CMFCVisualManagerVS2005::OnFillAutoHideButtonBackground](#onfillautohidebuttonbackground)|(Overrides [CMFCVisualManagerOffice2003::OnFillAutoHideButtonBackground](../../mfc/reference/cmfcvisualmanageroffice2003-class.md#onfillautohidebuttonbackground).)|
-|[CMFCVisualManagerVS2005::OnFillHighlightedArea](#onfillhighlightedarea)|(Overrides [CMFCVisualManagerOffice2003::OnFillHighlightedArea](../../mfc/reference/cmfcvisualmanageroffice2003-class.md#onfillhighlightedarea).)|
+|[CMFCVisualManagerVS2005::OnFillAutoHideButtonPozadí](#onfillautohidebuttonbackground)|(Přepíše [CMFCVisualManagerOffice2003::OnFillAutoHideButtonBackground](../../mfc/reference/cmfcvisualmanageroffice2003-class.md#onfillautohidebuttonbackground).)|
+|[CMFCVisualManagerVS2005::OnFillHighlightedArea](#onfillhighlightedarea)|(Přepíše [CMFCVisualManagerOffice2003::OnFillHighlightedArea](../../mfc/reference/cmfcvisualmanageroffice2003-class.md#onfillhighlightedarea).)|
 |[CMFCVisualManagerVS2005::OnFillMiniFrameCaption](#onfillminiframecaption)|(Přepíše `CMFCVisualManagerOfficeXP::OnFillMiniFrameCaption`.)|
-|[CMFCVisualManagerVS2005::OnUpdateSystemColors](#onupdatesystemcolors)|(Overrides [CMFCVisualManagerOffice2003::OnUpdateSystemColors](../../mfc/reference/cmfcvisualmanageroffice2003-class.md#onupdatesystemcolors).)|
+|[CMFCVisualManagerVS2005::OnUpdateSystemColors](#onupdatesystemcolors)|(Přepíše [CMFCVisualManagerOffice2003::OnUpdateSystemColors](../../mfc/reference/cmfcvisualmanageroffice2003-class.md#onupdatesystemcolors).)|
 
 ## <a name="remarks"></a>Poznámky
 
-Můžete použít třídu CMFCVisualManagerVS2005 – Chcete-li změnit vzhled vaší aplikace tak, aby připomínaly u Microsoft Visual Studio 2005.
+Třídu CMFCVisualManagerVS2005 slouží ke změně vizuálního vzhledu aplikace tak, aby se podobal atožnému souboru Microsoft Visual Studio 2005.
 
-Všichni členové této třídy jsou virtuální funkce, které jsou odvozeny z nadřazeného člena pro tuto třídu [cmfcvisualmanager – třída](../../mfc/reference/cmfcvisualmanager-class.md).
+Všichni členové této třídy jsou virtuální funkce, které jsou odvozeny od předchůdce této třídy [CMFCVisualManager Class](../../mfc/reference/cmfcvisualmanager-class.md).
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak použít Správce vzhledu VS 2005. Tento fragment kódu je součástí [Desktopu výstrah demonstrační ukázka](../../overview/visual-cpp-samples.md).
+Následující příklad ukazuje, jak používat vizuální manažer VS 2005. Tento fragment kódu je součástí [ukázky ukázky upozornění](../../overview/visual-cpp-samples.md)na ploše .
 
 [!code-cpp[NVC_MFC_DesktopAlertDemo#9](../../mfc/reference/codesnippet/cpp/cmfcvisualmanagervs2005-class_1.cpp)]
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObjekt](../../mfc/reference/cobject-class.md)
 
-[CMFCBaseVisualManager](../../mfc/reference/cmfcbasevisualmanager-class.md)
+[CmFCBaseVisualManager](../../mfc/reference/cmfcbasevisualmanager-class.md)
 
 [CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md)
 
@@ -106,9 +106,9 @@ Následující příklad ukazuje, jak použít Správce vzhledu VS 2005. Tento f
 
 ## <a name="requirements"></a>Požadavky
 
-**Header:** afxvisualmanagervs2005.h
+**Záhlaví:** afxvisualmanagervs2005.h
 
-##  <a name="getdockingtabsborderssize"></a>  CMFCVisualManagerVS2005::GetDockingTabsBordersSize
+## <a name="cmfcvisualmanagervs2005getdockingtabsborderssize"></a><a name="getdockingtabsborderssize"></a>CMFCVisualManagerVS2005::GetDockingTabsBordersSize
 
 ```
 virtual int GetDockingTabsBordersSize();
@@ -118,7 +118,7 @@ virtual int GetDockingTabsBordersSize();
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="getmditabsborderssize"></a>  CMFCVisualManagerVS2005::GetMDITabsBordersSize
+## <a name="cmfcvisualmanagervs2005getmditabsborderssize"></a><a name="getmditabsborderssize"></a>CMFCVisualManagerVS2005::GetMDITabsBordersSize
 
 ```
 virtual int GetMDITabsBordersSize();
@@ -128,7 +128,7 @@ virtual int GetMDITabsBordersSize();
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="getpropertygridgroupcolor"></a>  CMFCVisualManagerVS2005::GetPropertyGridGroupColor
+## <a name="cmfcvisualmanagervs2005getpropertygridgroupcolor"></a><a name="getpropertygridgroupcolor"></a>CMFCVisualManagerVS2005::GetPropertyGridGroupColor
 
 ```
 virtual COLORREF GetPropertyGridGroupColor(CMFCPropertyGridCtrl* pPropList);
@@ -136,13 +136,13 @@ virtual COLORREF GetPropertyGridGroupColor(CMFCPropertyGridCtrl* pPropList);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pPropList*<br/>
+[v] *pPropList*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="gettabframecolors"></a>  CMFCVisualManagerVS2005::GetTabFrameColors
+## <a name="cmfcvisualmanagervs2005gettabframecolors"></a><a name="gettabframecolors"></a>CMFCVisualManagerVS2005::GetTabFrameColors
 
 ```
 virtual void GetTabFrameColors(
@@ -159,19 +159,19 @@ virtual void GetTabFrameColors(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pTabWnd*<br/>
-[in] *clrDark*<br/>
-[in] *clrBlack*<br/>
-[in] *clrHighlight*<br/>
-[in] *clrFace*<br/>
-[in] *clrDarkShadow*<br/>
-[in] *clrLight*<br/>
-[in] *pbrFace*<br/>
-[in] *pbrBlack*<br/>
+[v] *pTabWnd*<br/>
+[v] *clrDark*<br/>
+[v] *clrČerná*<br/>
+[v] *clrHighlight*<br/>
+[v] *clrFace*<br/>
+[v] *clrDarkShadow*<br/>
+[v] *clrLight*<br/>
+[v] *pbrFace*<br/>
+[v] *pbrČerná*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="hasoverlappedautohidebuttons"></a>  CMFCVisualManagerVS2005::HasOverlappedAutoHideButtons
+## <a name="cmfcvisualmanagervs2005hasoverlappedautohidebuttons"></a><a name="hasoverlappedautohidebuttons"></a>CMFCVisualManagerVS2005::HasOverlappedAutoHideButtons
 
 ```
 virtual BOOL HasOverlappedAutoHideButtons() const;
@@ -181,7 +181,7 @@ virtual BOOL HasOverlappedAutoHideButtons() const;
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="ondrawautohidebuttonborder"></a>  CMFCVisualManagerVS2005::OnDrawAutoHideButtonBorder
+## <a name="cmfcvisualmanagervs2005ondrawautohidebuttonborder"></a><a name="ondrawautohidebuttonborder"></a>CMFCVisualManagerVS2005::OnDrawAutoHideButtonBorder
 
 ```
 virtual void OnDrawAutoHideButtonBorder(
@@ -193,14 +193,14 @@ virtual void OnDrawAutoHideButtonBorder(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pDC*<br/>
-[in] *rectBounds*<br/>
-[in] *rectBorderSize*<br/>
-[in] *pButton*<br/>
+[v] *pDC*<br/>
+[v] *rectBounds*<br/>
+[v] *rectBorderSize*<br/>
+[v] *pTlačítko*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="ondrawcaptionbutton"></a>  CMFCVisualManagerVS2005::OnDrawCaptionButton
+## <a name="cmfcvisualmanagervs2005ondrawcaptionbutton"></a><a name="ondrawcaptionbutton"></a>CMFCVisualManagerVS2005::OnDrawCaptionButton
 
 ```
 virtual void OnDrawCaptionButton(
@@ -215,17 +215,17 @@ virtual void OnDrawCaptionButton(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pDC*<br/>
-[in] *pButton*<br/>
-[in] *bActive*<br/>
-[in] *bHorz*<br/>
-[in] *bMaximized*<br/>
-[in] *bDisabled*<br/>
-[in] *nImageID*<br/>
+[v] *pDC*<br/>
+[v] *pTlačítko*<br/>
+[v] *bAktivní*<br/>
+[v] *bHorz*<br/>
+[v] *bMaximalizace*<br/>
+[v] *bZakázáno.*<br/>
+[v] *nImageID*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="ondrawpanecaption"></a>  CMFCVisualManagerVS2005::OnDrawPaneCaption
+## <a name="cmfcvisualmanagervs2005ondrawpanecaption"></a><a name="ondrawpanecaption"></a>CMFCVisualManagerVS2005::OnDrawPaneCaption
 
 ```
 virtual COLORREF OnDrawPaneCaption(
@@ -238,17 +238,17 @@ virtual COLORREF OnDrawPaneCaption(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pDC*<br/>
-[in] *pBar*<br/>
-[in] *bActive*<br/>
-[in] *rectCaption*<br/>
-[in] *rectButtons*<br/>
+[v] *pDC*<br/>
+[v] *pBar*<br/>
+[v] *bAktivní*<br/>
+[v] *rectCaption*<br/>
+[v] *rectButtons*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="ondrawseparator"></a>  CMFCVisualManagerVS2005::OnDrawSeparator
+## <a name="cmfcvisualmanagervs2005ondrawseparator"></a><a name="ondrawseparator"></a>CMFCVisualManagerVS2005::Oddělovač ondraw
 
 ```
 virtual void OnDrawSeparator(
@@ -260,14 +260,14 @@ virtual void OnDrawSeparator(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pDC*<br/>
-[in] *pBar*<br/>
-[in] *rect*<br/>
-[in] *bIsHoriz*<br/>
+[v] *pDC*<br/>
+[v] *pBar*<br/>
+[v] *rect*<br/>
+[v] *bIsHoriz*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="ondrawtab"></a>  CMFCVisualManagerVS2005::OnDrawTab
+## <a name="cmfcvisualmanagervs2005ondrawtab"></a><a name="ondrawtab"></a>CMFCVisualManagerVS2005::OnDrawTab
 
 ```
 virtual void OnDrawTab(
@@ -280,15 +280,15 @@ virtual void OnDrawTab(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pDC*<br/>
-[in] *rectTab*<br/>
-[in] *iTab*<br/>
-[in] *bIsActive*<br/>
-[in] *pTabWnd*<br/>
+[v] *pDC*<br/>
+[v] *rectTab*<br/>
+[v] *iTab*<br/>
+[v] *bIsAktivní*<br/>
+[v] *pTabWnd*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="ondrawtoolboxframe"></a>  CMFCVisualManagerVS2005::OnDrawToolBoxFrame
+## <a name="cmfcvisualmanagervs2005ondrawtoolboxframe"></a><a name="ondrawtoolboxframe"></a>CMFCVisualManagerVS2005::OnDrawToolBoxFrame
 
 ```
 virtual void OnDrawToolBoxFrame(
@@ -298,12 +298,12 @@ virtual void OnDrawToolBoxFrame(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pDC*<br/>
-[in] *rect*<br/>
+[v] *pDC*<br/>
+[v] *rect*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="onerasetabsarea"></a>  CMFCVisualManagerVS2005::OnEraseTabsArea
+## <a name="cmfcvisualmanagervs2005onerasetabsarea"></a><a name="onerasetabsarea"></a>CMFCVisualManagerVS2005::OnEraseTabsArea
 
 ```
 virtual void OnEraseTabsArea(
@@ -314,13 +314,13 @@ virtual void OnEraseTabsArea(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pDC*<br/>
-[in] *rect*<br/>
-[in] *pTabWnd*<br/>
+[v] *pDC*<br/>
+[v] *rect*<br/>
+[v] *pTabWnd*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="onfillautohidebuttonbackground"></a>  CMFCVisualManagerVS2005::OnFillAutoHideButtonBackground
+## <a name="cmfcvisualmanagervs2005onfillautohidebuttonbackground"></a><a name="onfillautohidebuttonbackground"></a>CMFCVisualManagerVS2005::OnFillAutoHideButtonPozadí
 
 ```
 virtual void OnFillAutoHideButtonBackground(
@@ -331,13 +331,13 @@ virtual void OnFillAutoHideButtonBackground(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pDC*<br/>
-[in] *rect*<br/>
-[in] *pButton*<br/>
+[v] *pDC*<br/>
+[v] *rect*<br/>
+[v] *pTlačítko*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="onfillhighlightedarea"></a>  CMFCVisualManagerVS2005::OnFillHighlightedArea
+## <a name="cmfcvisualmanagervs2005onfillhighlightedarea"></a><a name="onfillhighlightedarea"></a>CMFCVisualManagerVS2005::OnFillHighlightedArea
 
 ```
 virtual void OnFillHighlightedArea(
@@ -349,14 +349,14 @@ virtual void OnFillHighlightedArea(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pDC*<br/>
-[in] *rect*<br/>
-[in] *pBrush*<br/>
-[in] *pButton*<br/>
+[v] *pDC*<br/>
+[v] *rect*<br/>
+[v] *pŠtětec*<br/>
+[v] *pTlačítko*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="onfillminiframecaption"></a>  CMFCVisualManagerVS2005::OnFillMiniFrameCaption
+## <a name="cmfcvisualmanagervs2005onfillminiframecaption"></a><a name="onfillminiframecaption"></a>CMFCVisualManagerVS2005::OnFillMiniFrameCaption
 
 ```
 virtual COLORREF OnFillMiniFrameCaption(
@@ -368,16 +368,16 @@ virtual COLORREF OnFillMiniFrameCaption(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pDC*<br/>
-[in] *rectCaption*<br/>
-[in] *pFrameWnd*<br/>
-[in] *bActive*<br/>
+[v] *pDC*<br/>
+[v] *rectCaption*<br/>
+[v] *pFrameWnd*<br/>
+[v] *bAktivní*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="onupdatesystemcolors"></a>  CMFCVisualManagerVS2005::OnUpdateSystemColors
+## <a name="cmfcvisualmanagervs2005onupdatesystemcolors"></a><a name="onupdatesystemcolors"></a>CMFCVisualManagerVS2005::OnUpdateSystemColors
 
 ```
 virtual void OnUpdateSystemColors();
@@ -385,7 +385,7 @@ virtual void OnUpdateSystemColors();
 
 ### <a name="remarks"></a>Poznámky
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>

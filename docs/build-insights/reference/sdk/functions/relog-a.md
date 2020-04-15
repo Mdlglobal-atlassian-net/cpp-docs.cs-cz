@@ -1,6 +1,6 @@
 ---
-title: Relog
-description: Odkaz C++ na funkci pro sestavení Insights SDK relog.
+title: RelogA
+description: C++ Build Insights SDK RelogA odkaz na funkci.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: c4427aa0ac85e34bfb9d569913a8ccf6ab264f52
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 5a772b1156fc69eeef39514afe401c549c3b7c38
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78332731"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81323852"
 ---
-# <a name="reloga"></a>Relog
+# <a name="reloga"></a>RelogA
 
 ::: moniker range="<=vs-2015"
 
-Sada C++ SDK pro Build Insights je kompatibilní se sadou Visual Studio 2017 a novější. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek selektor verzí sady Visual Studio pro tento článek na sadu Visual Studio 2017 nebo Visual Studio 2019.
+Sada C++ Build Insights SDK je kompatibilní s Visual Studio 2017 a vyšší. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek pro výběr **verze** sady Visual Studio pro tento článek na Visual Studio 2017 nebo Visual Studio 2019. Nachází se v horní části obsahu na této stránce.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Funkce `RelogA` slouží ke čtení událostí MSVC z trasování událostí pro Windows (ETW) a jejich zápis do nového upraveného trasování ETW.
+Funkce `RelogA` se používá ke čtení událostí MSVC z trasování trasování trasování událostí pro Windows (ETW) a zapsat je do nového, upraveného trasování ETW.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -42,10 +42,10 @@ enum RESULT_CODE RelogA(
 Vstupní trasování ETW, ze kterého chcete číst události.
 
 *outputLogFile*\
-Soubor, do kterého mají být zapsány nové události.
+Soubor, ve kterém chcete napsat nové události.
 
 *relogDescriptor*\
-Ukazatel na objekt [RELOG_DESCRIPTOR](../other-types/relog-descriptor-struct.md) . Pomocí tohoto objektu můžete nakonfigurovat relaci přehlašování.
+Ukazatel na [RELOG_DESCRIPTOR](../other-types/relog-descriptor-struct.md) objekt. Tento objekt slouží ke konfiguraci relace opětovného správě.
 
 ### <a name="return-value"></a>Návratová hodnota
 

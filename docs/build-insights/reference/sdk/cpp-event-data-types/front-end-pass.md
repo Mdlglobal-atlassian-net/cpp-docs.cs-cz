@@ -1,6 +1,6 @@
 ---
-title: FrontEndPass – třída
-description: Referenční C++ dokumentace třídy FrontEndPass sady SDK pro Build Insights
+title: Třída FrontEndPass
+description: C++ Build Insights SDK FrontEndPass odkaz na třídu.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: cc0bf38c46b51d4a49da46be88e23afa64c12cc8
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 137f553f1e495b7658ae89e69a48cec6b1988a81
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78333270"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81324731"
 ---
-# <a name="frontendpass-class"></a>FrontEndPass – třída
+# <a name="frontendpass-class"></a>Třída FrontEndPass
 
 ::: moniker range="<=vs-2015"
 
-Sada C++ SDK pro Build Insights je kompatibilní se sadou Visual Studio 2017 a novější. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek selektor verzí sady Visual Studio pro tento článek na sadu Visual Studio 2017 nebo Visual Studio 2019.
+Sada C++ Build Insights SDK je kompatibilní s Visual Studio 2017 a vyšší. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek pro výběr **verze** sady Visual Studio pro tento článek na Visual Studio 2017 nebo Visual Studio 2019. Nachází se v horní části obsahu na této stránce.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Třída `FrontEndPass` se používá s funkcemi [MatchEvent](../functions/match-event.md), [MatchEventInMemberFunction](../functions/match-event-in-member-function.md), [MatchEventStack](../functions/match-event-stack.md)a [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md) . Použijte ho ke spárování [FRONT_END_PASS](../event-table.md#front-end-pass) události.
+Třída `FrontEndPass` se používá s funkcemi [MatchEvent](../functions/match-event.md), [MatchEventInMemberFunction](../functions/match-event-in-member-function.md), [MatchEventStack](../functions/match-event-stack.md)a [MatchEventStackInMemberFunction.](../functions/match-event-stack-in-member-function.md) Použijte ji tak, aby odpovídala [události FRONT_END_PASS.](../event-table.md#front-end-pass)
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -39,13 +39,13 @@ public:
 
 ## <a name="members"></a>Členové
 
-Společně s děděnými členy ze své základní třídy [CompilerPass](compiler-pass.md) obsahuje Třída `FrontEndPass` následující členy:
+Spolu s zděděné členy z jeho `FrontEndPass` [CompilerPass](compiler-pass.md) základní třídy, třída obsahuje následující členy:
 
 ### <a name="constructors"></a>Konstruktory
 
-[FrontEndPass](#front-end-pass)
+[Frontendpass](#front-end-pass)
 
-## <a name="front-end-pass"></a>FrontEndPass
+## <a name="frontendpass"></a><a name="front-end-pass"></a>Frontendpass
 
 ```cpp
 FrontEndPass(const RawEvent& event);
@@ -53,7 +53,7 @@ FrontEndPass(const RawEvent& event);
 
 ### <a name="parameters"></a>Parametry
 
-\ *události*
-Událost [FRONT_END_PASS](../event-table.md#front-end-pass) .
+*Událost*\
+[Událost FRONT_END_PASS.](../event-table.md#front-end-pass)
 
 ::: moniker-end

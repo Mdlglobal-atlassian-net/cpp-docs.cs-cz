@@ -1,6 +1,6 @@
 ---
-title: Thread – třída
-description: Odkaz C++ na třídu vláken sady SDK pro Build Insights
+title: Třída vlákna
+description: C++ Build Insights SDK Thread odkaz na třídu.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: a74eb130bd3f8be949fef0c19d545f61a72f3934
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 397083c63f451b2d3fb8dad529adf73855af8644
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78332962"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81324201"
 ---
-# <a name="thread-class"></a>Thread – třída
+# <a name="thread-class"></a>Třída vlákna
 
 ::: moniker range="<=vs-2015"
 
-Sada C++ SDK pro Build Insights je kompatibilní se sadou Visual Studio 2017 a novější. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek selektor verzí sady Visual Studio pro tento článek na sadu Visual Studio 2017 nebo Visual Studio 2019.
+Sada C++ Build Insights SDK je kompatibilní s Visual Studio 2017 a vyšší. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek pro výběr **verze** sady Visual Studio pro tento článek na Visual Studio 2017 nebo Visual Studio 2019. Nachází se v horní části obsahu na této stránce.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Třída `Thread` se používá s funkcemi [MatchEvent](../functions/match-event.md), [MatchEventInMemberFunction](../functions/match-event-in-member-function.md), [MatchEventStack](../functions/match-event-stack.md)a [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md) . Použijte ho ke spárování události [vlákna](../event-table.md#thread) .
+Třída `Thread` se používá s funkcemi [MatchEvent](../functions/match-event.md), [MatchEventInMemberFunction](../functions/match-event-in-member-function.md), [MatchEventStack](../functions/match-event-stack.md)a [MatchEventStackInMemberFunction.](../functions/match-event-stack-in-member-function.md) Použijte ji tak, aby odpovídala události [THREAD.](../event-table.md#thread)
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -39,13 +39,13 @@ public:
 
 ## <a name="members"></a>Členové
 
-Spolu se zděděnými členy ze své základní třídy [aktivity](activity.md) obsahuje Třída `Thread` následující členy:
+Spolu s zděděnými členy ze `Thread` základní třídy [Aktivita](activity.md) obsahuje třída následující členy:
 
 ### <a name="constructors"></a>Konstruktory
 
-[Doporučujeme](#thread)
+[Vlákno](#thread)
 
-## <a name="thread"></a>Doporučujeme
+## <a name="thread"></a><a name="thread"></a>Vlákno
 
 ```cpp
 Thread(const RawEvent& event);
@@ -53,7 +53,7 @@ Thread(const RawEvent& event);
 
 ### <a name="parameters"></a>Parametry
 
-\ *události*
-Událost [vlákna](../event-table.md#thread) .
+*Událost*\
+Událost [THREAD.](../event-table.md#thread)
 
 ::: moniker-end

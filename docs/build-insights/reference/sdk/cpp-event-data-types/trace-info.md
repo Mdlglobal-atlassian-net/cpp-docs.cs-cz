@@ -1,6 +1,6 @@
 ---
-title: TraceInfo – třída
-description: Referenční C++ dokumentace třídy TraceInfo sady SDK pro Build Insights
+title: TraceInfo třída
+description: C++ Build Insights SDK TraceInfo odkaz na třídu.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 5cf32c8dc954a803a11888231d35b1050ac81cc3
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 75d53937e3999f5692dee0ecf419e0ce5f49a274
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78332941"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81324177"
 ---
-# <a name="traceinfo-class"></a>TraceInfo – třída
+# <a name="traceinfo-class"></a>TraceInfo třída
 
 ::: moniker range="<=vs-2015"
 
-Sada C++ SDK pro Build Insights je kompatibilní se sadou Visual Studio 2017 a novější. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek selektor verzí sady Visual Studio pro tento článek na sadu Visual Studio 2017 nebo Visual Studio 2019.
+Sada C++ Build Insights SDK je kompatibilní s Visual Studio 2017 a vyšší. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek pro výběr **verze** sady Visual Studio pro tento článek na Visual Studio 2017 nebo Visual Studio 2019. Nachází se v horní části obsahu na této stránce.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Třída `TraceInfo` slouží k přístupu k užitečným vlastnostem týkajícím se analyzovaného nebo přeprotokolovaného trasování.
+Třída `TraceInfo` se používá pro přístup k užitečné vlastnosti o trasování analyzovány nebo relogged.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -47,9 +47,9 @@ public:
 
 ## <a name="remarks"></a>Poznámky
 
-Ododečte `StartTimestamp` od `StopTimestamp` a Získá počet tiků uplynulých během celého trasování. Pomocí `TickFrequency` převeďte výslednou hodnotu na časovou jednotku. Příklad převodu taktů na čas naleznete v tématu [EVENT_DATA](../c-event-data-types/event-data-struct.md).
+Odečíst `StartTimestamp` od `StopTimestamp` získat počet klíšťat uplynulběhem celé trasování. Slouží `TickFrequency` k převodu výsledné hodnoty na časovou jednotku. Příklad převodu značek na čas naleznete [v tématu EVENT_DATA](../c-event-data-types/event-data-struct.md).
 
-Pokud nechcete, aby se osové značky převedly sami, třída `TraceInfo` poskytuje členskou funkci, která vrací dobu trasování v nanosekundách. Tuto hodnotu můžete C++ převést na jiné časové jednotky pomocí standardní knihovny `chrono`.
+Pokud nechcete převést značky sami, `TraceInfo` třída poskytuje členská funkce, která vrací dobu trvání trasování v nanosekundách. Pomocí standardní knihovny `chrono` Jazyka C++ převeďte tuto hodnotu na jiné časové jednotky.
 
 ## <a name="members"></a>Členové
 
@@ -65,7 +65,7 @@ Pokud nechcete, aby se osové značky převedly sami, třída `TraceInfo` poskyt
 [StopTimestamp](#stop-timestamp)
 [TickFrequency](#tick-frequency)
 
-## <a name="duration"></a>Úkolu
+## <a name="duration"></a><a name="duration"></a>Doba trvání
 
 ```cpp
 std::chrono::nanoseconds Duration() const;
@@ -75,7 +75,7 @@ std::chrono::nanoseconds Duration() const;
 
 Doba trvání aktivity v nanosekundách.
 
-## <a name="logical-processor-count"></a>LogicalProcessorCount
+## <a name="logicalprocessorcount"></a><a name="logical-processor-count"></a>Logický počet procesorů
 
 ```cpp
 const unsigned long& LogicalProcessorCount() const;
@@ -83,9 +83,9 @@ const unsigned long& LogicalProcessorCount() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Počet logických procesorů v počítači, kde bylo trasování shromážděno.
+Počet logických procesorů v počítači, kde byla trasování shromážděna.
 
-## <a name="start-timestamp"></a>StartTimestamp
+## <a name="starttimestamp"></a><a name="start-timestamp"></a>StartTimerazítko
 
 ```cpp
 const long long& StartTimestamp() const;
@@ -93,9 +93,9 @@ const long long& StartTimestamp() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota Tick zachycená v době, kdy bylo trasování spuštěno.
+Hodnota značky zachycená v době spuštění trasování.
 
-## <a name="stop-timestamp"></a>StopTimestamp
+## <a name="stoptimestamp"></a><a name="stop-timestamp"></a>StopTimerazítko
 
 ```cpp
 const long long& StopTimestamp() const;
@@ -103,9 +103,9 @@ const long long& StopTimestamp() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota Tick zachycená v době, kdy bylo trasování zastaveno.
+Hodnota značky zachycená v době, kdy bylo trasování zastaveno.
 
-## <a name="tick-frequency"></a>TickFrequency
+## <a name="tickfrequency"></a><a name="tick-frequency"></a>Frekvence zaškrtnutí
 
 ```cpp
 const long long& TickFrequency() const;
@@ -113,9 +113,9 @@ const long long& TickFrequency() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Počet taktů za sekundu, které se použijí při vyhodnocování doby trvání měřené v taktech.
+Počet klíšťat za sekundu, které se mají použít při hodnocení doby trvání měřené v klíšťacích.
 
-## <a name="trace-info"></a>TraceInfo
+## <a name="traceinfo"></a><a name="trace-info"></a>TraceInfo
 
 ```cpp
 TraceInfo(const TRACE_INFO_DATA& data);
@@ -123,7 +123,7 @@ TraceInfo(const TRACE_INFO_DATA& data);
 
 ### <a name="parameters"></a>Parametry
 
-\ *dat*
+*Dat*\
 Data obsahující informace o trasování.
 
 ::: moniker-end

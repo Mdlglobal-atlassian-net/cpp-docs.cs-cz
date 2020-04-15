@@ -9,26 +9,26 @@ helpviewer_keywords:
 - EDITBIN program
 - COFF files, editing
 ms.assetid: efdda03b-3dfc-4d31-90e6-caf5b3977914
-ms.openlocfilehash: 45c2967a55e85ae31bb77bb2e8d50415eafbea46
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 266347de063b4e050cb032aa2d8d74e7934b8081
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62293027"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81328340"
 ---
 # <a name="editbin-reference"></a>EDITBIN – odkaz
 
-Microsoft COFF binární soubor Editor (EDITBIN. Soubor EXE) upraví binárních souborů Common Object File Format (COFF). Editbin – můžete použít k úpravě souborů objektů, spustitelných souborů a dynamické knihovny (DLL).
+Binární editor souborů Microsoft COFF (EDITBIN. EXE) upravuje binární soubory formátu Common Object File Format (COFF). Editbin můžete použít k úpravě souborů objektů, spustitelných souborů a knihoven dynamických spojů (DLL).
 
 > [!NOTE]
->  Tento nástroj můžete spustit pouze z příkazového řádku sady Visual Studio. Nelze provést toto spuštění z příkazového řádku systému nebo Průzkumníka souborů.
+> Tento nástroj lze spustit pouze z příkazového řádku sady Visual Studio. Nelze jej spustit ze systémového příkazového řádku nebo z Průzkumníka souborů.
 
-Editbin – není k dispozici pro použití se soubory vytvořenými pomocí [/GL](gl-whole-program-optimization.md) – možnost kompilátoru. Veškeré úpravy binární soubory, které jsou vytvořené pomocí/GL. muset dosáhnout při opětovné kompilaci a propojování.
+EDITBIN není k dispozici pro použití v souborech vytvořených s možností kompilátoru [/GL.](gl-whole-program-optimization.md) Jakékoli změny binárních souborů vytvořených s /GL bude muset být dosaženo rekompilací a propojením.
 
-- [Editbin – příkazový řádek](editbin-command-line.md)
+- [PŘÍKAZOVÝ ŘÁDEK EDITBIN](editbin-command-line.md)
 
-- [– Možnosti nástroje EDITBIN](editbin-options.md)
+- [MOŽNOSTI EDITBIN](editbin-options.md)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Nástroje pro vytváření dalších MSVC](c-cpp-build-tools.md)
+[Další nástroje pro sestavení msvc](c-cpp-build-tools.md)

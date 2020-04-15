@@ -1,6 +1,6 @@
 ---
-title: MatchEventInMemberFunction
-description: Reference C++ k funkci MatchEventInMemberFunction sady SDK pro Build Insights
+title: MatcheventInMemberFunction
+description: C++ Build Insights SDK MatchEventInMemberFunction odkaz na funkci.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: eabbb8a91609b1447ebcc19af32df2ffed347c24
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 522630da16e3f4a1294316d88140f4bc25dca2c8
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78332801"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81323903"
 ---
-# <a name="matcheventinmemberfunction"></a>MatchEventInMemberFunction
+# <a name="matcheventinmemberfunction"></a>MatcheventInMemberFunction
 
 ::: moniker range="<=vs-2015"
 
-Sada C++ SDK pro Build Insights je kompatibilní se sadou Visual Studio 2017 a novější. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek selektor verzí sady Visual Studio pro tento článek na sadu Visual Studio 2017 nebo Visual Studio 2019.
+Sada C++ Build Insights SDK je kompatibilní s Visual Studio 2017 a vyšší. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek pro výběr **verze** sady Visual Studio pro tento článek na Visual Studio 2017 nebo Visual Studio 2019. Nachází se v horní části obsahu na této stránce.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Funkce `MatchEventInMemberFunction` slouží k porovnání události s typem, který je popsán prvním parametrem členské funkce. Odpovídající událost je předána členské funkci pro další zpracování.
+Funkce `MatchEventInMemberFunction` se používá k porovnání události s typem popsaným prvním parametrem členské funkce. Odpovídající událost je předána členské funkci k dalšímu zpracování.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -45,40 +45,40 @@ bool MatchEventInMemberFunction(
 
 ### <a name="parameters"></a>Parametry
 
-*TInterface*\
-Typ, který obsahuje členskou funkci.
+*Rozhraní T*\
+Typ, který obsahuje členská funkce.
 
-*TReturn*\
-Návratový typ členské funkce
+*TNávrat*\
+Návratový typ členské funkce.
 
-*TEvent*\
-Typ události, která má být shodná.
+*Událost*\
+Typ události, která má odpovídat.
 
 *TExtraParams*\
-Typy dodatečných parametrů přijaté členskou funkcí společně s typem události, který se má shodovat.
+Typy dalšíparametry přijaté členské funkce spolu s typem události tak, aby odpovídaly.
 
 *TExtraArgs*\
-Typy dalších argumentů, které byly předány `MatchEventInMemberFunction`.
+Typy další argumenty, které byly `MatchEventInMemberFunction`předány .
 
-\ *události*
-Událost, která se má shodovat s typem události popsanou v *TEvent*.
+*Událost*\
+Událost, která se shoduje s typem události popsaným *tevent*.
 
 *objectPtr*\
-Ukazatel na objekt, na kterém se *memberFunc* volá.
+Ukazatel na objekt, na kterém *memberFunc* získá volání.
 
-*memberFunc*\
-Členská funkce, která popisuje typ události, která se má shodovat.
+*členFunc*\
+Členská funkce, která popisuje typ události tak, aby odpovídal.
 
 *extraArgs*\
-Argumenty, které získají dokonalé – předávané *memberFunc* spolu s parametrem typu události.
+Argumenty, které získat perfektní *předány memberFunc* spolu s parametrem typu události.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota **bool** , která má **hodnotu true** , pokud bylo spárování úspěšné, nebo v opačném případě **false** .
+**Bool** hodnota, která je **true,** pokud odpovídající byl úspěšný, nebo **false** jinak.
 
 ## <a name="remarks"></a>Poznámky
 
-Typ události, který se má použít pro parametr *TEvent* , můžete vybrat ze seznamu *tříd zachycení*. Seznam událostí a třídy zachycení, které můžete použít k přiřazení, najdete v tématu [tabulka událostí](../event-table.md).
+Typ události, který se má použít pro parametr *TEvent,* lze vybrat ze seznamu *tříd zachycení*. Seznam událostí a tříd zachycení, které můžete použít k jejich sladění, naleznete v [tabulce událostí](../event-table.md).
 
 ## <a name="example"></a>Příklad
 

@@ -1,5 +1,5 @@
 ---
-title: Ctimespan – třída
+title: CTimeSpan – třída
 ms.date: 10/18/2018
 f1_keywords:
 - CTimeSpan
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - shared classes, CTimeSpan
 - time, elapsed
 ms.assetid: ee1e42f6-1839-477a-8435-fb26ad475140
-ms.openlocfilehash: 3c80260c1f57e49a34b4e9f3331f4d0d69ab30ce
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 14aa5eb52e2c631a92e40ae7053c566284e00e57
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62252523"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81317506"
 ---
-# <a name="ctimespan-class"></a>Ctimespan – třída
+# <a name="ctimespan-class"></a>CTimeSpan – třída
 
-Časový úsek, který interně uložená jako počet sekund v časové období.
+Množství času, který je interně uložen jako počet sekund v časovém rozpětí.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -44,52 +44,52 @@ class CTimeSpan
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CTimeSpan::CTimeSpan](#ctimespan)|Vytvoří `CTimeSpan` objekty různými způsoby.|
+|[CTimeSpan::CTimeSpan](#ctimespan)|Vytváří `CTimeSpan` objekty různými způsoby.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CTimeSpan::Format](#format)|Převede `CTimeSpan` do formátovaného řetězce.|
-|[CTimeSpan::GetDays](#getdays)|Vrátí hodnotu, která představuje počet dnů dokončení v tomto `CTimeSpan`.|
-|[CTimeSpan::GetHours](#gethours)|Vrátí hodnotu, která představuje počet hodin aktuálního dne (až 23 -23).|
-|[CTimeSpan::GetMinutes](#getminutes)|Vrátí hodnotu, která představuje počet minut do aktuální hodiny (-59 až 59).|
-|[CTimeSpan::GetSeconds](#getseconds)|Vrátí hodnotu, která představuje počet sekund do aktuální minuty (-59 až 59).|
+|[CTimeSpan::Formát](#format)|Převede `CTimeSpan` na formátovaný řetězec.|
+|[CTimeSpan::GetDays](#getdays)|Vrátí hodnotu, která představuje počet `CTimeSpan`dnů dokončení v tomto .|
+|[CTimeSpan::GetHours](#gethours)|Vrátí hodnotu, která představuje počet hodin v aktuálním dni (-23 až 23).|
+|[CTimeSpan::GetMinutes](#getminutes)|Vrátí hodnotu, která představuje počet minut v aktuální hodině (-59 až 59).|
+|[CTimeSpan::GetSeconds](#getseconds)|Vrátí hodnotu, která představuje počet sekund v aktuální minutě (-59 až 59).|
 |[CTimeSpan::GetTimeSpan](#gettimespan)|Vrátí hodnotu `CTimeSpan` objektu.|
-|[CTimeSpan::GetTotalHours](#gettotalhours)|Vrátí hodnotu, která představuje celkový počet hodin dokončeno v tomto `CTimeSpan`.|
-|[CTimeSpan::GetTotalMinutes](#gettotalminutes)|Vrátí hodnotu, která představuje celkový počet kompletní minutách v tomto `CTimeSpan`.|
-|[CTimeSpan::GetTotalSeconds](#gettotalseconds)|Vrátí hodnotu, která představuje celkový počet sekund dokončena v tomto `CTimeSpan`.|
+|[CTimeSpan::GetTotalHours](#gettotalhours)|Vrátí hodnotu, která představuje celkový počet `CTimeSpan`hodin dokončení v tomto .|
+|[CTimeSpan::GetTotalMinutes](#gettotalminutes)|Vrátí hodnotu, která představuje celkový počet `CTimeSpan`minut dokončení v tomto .|
+|[CTimeSpan::GetTotalSeconds](#gettotalseconds)|Vrátí hodnotu, která představuje celkový počet `CTimeSpan`celých sekund v tomto .|
 |[CTimeSpan::Serialize64](#serialize64)|Serializuje data do nebo z archivu.|
 
 ### <a name="operators"></a>Operátory
 
 |||
 |-|-|
-|[Operator + –](#operator_add_-)|Přidá a odečte `CTimeSpan` objekty.|
-|[+= – operátor-=](#operator_add_eq_-_eq)|Přidá a odečte `CTimeSpan` objektů do a z tohoto `CTimeSpan`.|
-|[Operator == < atd.](#ctimespan_comparison_operators)|Porovná dvě relativní časové hodnoty.|
+|[operátor + -](#operator_add_-)|Přidá a odečte objekty. `CTimeSpan`|
+|[operátor += -=](#operator_add_eq_-_eq)|Přidá a odečte `CTimeSpan` objekt a `CTimeSpan`od tohoto .|
+|[operátor == < atd.](#ctimespan_comparison_operators)|Porovná dvě relativní časové hodnoty.|
 
 ## <a name="remarks"></a>Poznámky
 
-`CTimeSpan` nemá základní třídu.
+`CTimeSpan`nemá základní třídu.
 
-`CTimeSpan` Funkce převádějí sekund různé kombinace dny, hodiny, minuty a sekundy.
+`CTimeSpan`funkce převádějí sekundy na různé kombinace dnů, hodin, minut a sekund.
 
-`CTimeSpan` Objekt uložen v **__time64_t –** struktury, což je 8 bajtů.
+Objekt `CTimeSpan` je uložen v **__time64_t** struktury, což je 8 bajtů.
 
-Třídě doprovodných prvků [CTime](../../atl-mfc-shared/reference/ctime-class.md), představuje absolutní čas.
+Doprovodná třída [CTime](../../atl-mfc-shared/reference/ctime-class.md)představuje absolutní čas.
 
-`CTime` a `CTimeSpan` třídy nejsou určeny pro odvození. Vzhledem k tomu, že neexistují žádné virtuální funkce, velikost obou `CTime` a `CTimeSpan` objekty je přesně 8 bajtů. Většina členské funkce jsou vložené.
+`CTime` Třídy `CTimeSpan` a nejsou určeny pro odvození. Vzhledem k tomu, že neexistují `CTime` `CTimeSpan` žádné virtuální funkce, velikost obou a objektů je přesně 8 bajtů. Většina členských funkcí je včleněná.
 
-Další informace o používání `CTimeSpan`, najdete v článcích [datum a čas](../../atl-mfc-shared/date-and-time.md), a [Správa času](../../c-runtime-library/time-management.md) v *Run-Time Library Reference*.
+Další informace o `CTimeSpan`použití naleznete v článcích [Datum a čas](../../atl-mfc-shared/date-and-time.md)a Správa [času](../../c-runtime-library/time-management.md) v *referenční příručce knihovny za běhu*.
 
 ## <a name="requirements"></a>Požadavky
 
 **Záhlaví:** atltime.h
 
-##  <a name="ctimespan_comparison_operators"></a>  Ctimespan – relační operátory
+## <a name="ctimespan-comparison-operators"></a><a name="ctimespan_comparison_operators"></a>Operátory porovnání CTimeSpan
 
 Operátory porovnání.
 
@@ -104,20 +104,20 @@ bool operator>=(CTimeSpan span) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*span*<br/>
-Objekt k porovnání.
+*Span*<br/>
+Objekt k porovnání
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Tyto operátory porovnávají dva relativní časové hodnoty. Vrátí hodnotu TRUE Pokud je podmínka true. v opačném případě FALSE.
+Tyto operátory porovnat dvě relativní časové hodnoty. Vrátí hodnotu PRAVDA, pokud je podmínka pravdivá; jinak FALSE.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_ATLMFC_Utilities#169](../../atl-mfc-shared/codesnippet/cpp/ctimespan-class_1.cpp)]
 
-##  <a name="ctimespan"></a>  CTimeSpan::CTimeSpan
+## <a name="ctimespanctimespan"></a><a name="ctimespan"></a>CTimeSpan::CTimeSpan
 
-Vytvoří `CTimeSpan` objekty různými způsoby.
+Vytváří `CTimeSpan` objekty různými způsoby.
 
 ```
 CTimeSpan() throw();
@@ -133,42 +133,42 @@ CTimeSpan(
 ### <a name="parameters"></a>Parametry
 
 *timeSpanSrc*<br/>
-A `CTimeSpan` objekt, který již existuje.
+Objekt, `CTimeSpan` který již existuje.
 
-*čas*<br/>
-A **__time64_t –** časovou hodnotu, což je počet sekund v časové období.
+*Čas*<br/>
+Hodnota **__time64_t** času, což je počet sekund v časovém rozpětí.
 
-*lDays*, *nHours*, *nMins*, *nSecs*<br/>
-Dny, hodiny minuty a sekundy, v uvedeném pořadí.
+*lDny*, *nHodiny*, *nMins*, *nSecs*<br/>
+Dny, hodiny, minuty a sekundy.
 
 ### <a name="remarks"></a>Poznámky
 
-Tyto konstruktory vytvořte nový `CTimeSpan` objekt je inicializován s relativní určený čas. Níže je popsána jednotlivých konstruktor:
+Všechny tyto konstruktory `CTimeSpan` vytvořit nový objekt inicializován s zadaným relativní čas. Každý konstruktor je popsán níže:
 
-- `CTimeSpan( );` Vytvoří neinicializované `CTimeSpan` objektu.
+- `CTimeSpan( );`Vytvoří neinicializovaný `CTimeSpan` objekt.
 
-- `CTimeSpan( const CTimeSpan& );` Vytvoří `CTimeSpan` objektu z jiného `CTimeSpan` hodnotu.
+- `CTimeSpan( const CTimeSpan& );`Vytvoří `CTimeSpan` objekt z `CTimeSpan` jiné hodnoty.
 
-- `CTimeSpan( __time64_t );` Vytvoří `CTimeSpan` objektu z **__time64_t –** typu.
+- `CTimeSpan( __time64_t );`Vytvoří `CTimeSpan` objekt z **typu __time64_t.**
 
-- `CTimeSpan( LONG, int, int, int );` Vytvoří `CTimeSpan` objekt z komponent pomocí jednotlivých komponent omezen na tyto rozsahy:
+- `CTimeSpan( LONG, int, int, int );`Vytvoří `CTimeSpan` objekt z komponent s každou součástí omezena na následující oblasti:
 
-   |Součást|Rozsah|
+   |Komponenta|Rozsah|
    |---------------|-----------|
-   |*lDays*|0 – 25 000 (přibližně)|
-   |*nHours*|0-23|
+   |*lDny*|0-25 000 (přibližně)|
+   |*nHodiny*|0-23|
    |*nMins*|0-59|
    |*nSecs*|0-59|
 
-Všimněte si, že ladicí verze knihovny Microsoft Foundation Class vyhodnotí, pokud jeden nebo více součástí hodiny je mimo rozsah. Je vaší odpovědností, abyste ověřte argumenty před voláním.
+Všimněte si, že ladicí verze knihovny tříd Microsoft Foundation uplatňuje, pokud je jedna nebo více součástí denního dne mimo rozsah. Je vaší odpovědností ověřit argumenty před voláním.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_ATLMFC_Utilities#162](../../atl-mfc-shared/codesnippet/cpp/ctimespan-class_2.cpp)]
 
-##  <a name="format"></a>  CTimeSpan::Format
+## <a name="ctimespanformat"></a><a name="format"></a>CTimeSpan::Formát
 
-Generuje formátovaný řetězec, který odpovídá tomuto `CTimeSpan`.
+Generuje formátovaný řetězec, který odpovídá `CTimeSpan`tomuto .
 
 ```
 CString Format(LPCSTR pFormat) const;
@@ -179,36 +179,36 @@ CString Format(UINT nID) const;
 ### <a name="parameters"></a>Parametry
 
 *pFormat*, *pszFormat*<br/>
-Formátování řetězců podobně jako `printf` formátovací řetězec. Formátování kódů předchází procento (`%`) podepsat, jsou nahrazeny odpovídajícím `CTimeSpan` komponenty. Jiné znaky v řetězci formátování se zkopírují do vráceném řetězci beze změny. Hodnota a význam kódů formátování pro `Format` jsou uvedeny níže:
+Formátovací řetězec podobný řetězci `printf` formátování. Kódy formátování, před nimiž`%`je podepsáno procento ( `CTimeSpan` ) , jsou nahrazeny odpovídající komponentou. Ostatní znaky ve formátovacím řetězci jsou zkopírovány beze změny do vráceného řetězce. Hodnota a význam formátovacích kódů pro jsou uvedeny `Format` níže:
 
-- **%D** celkový počet dní v tomto `CTimeSpan`
+- **%D** Celkový počet dní v tomto`CTimeSpan`
 
-- **%H** hodin aktuálního dne
+- **%H** Hodiny v aktuálním dni
 
-- **%M** minut do aktuální hodiny
+- **%M** Minuty v aktuální hodině
 
-- **%S** sekund do aktuální minuty
+- **%S** Sekundy v aktuální minutě
 
-- **%%** Znak procent
+- **%%** Znak procenta
 
-*nID*<br/>
+*Nid*<br/>
 ID řetězce, který identifikuje tento formát.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-A `CString` objekt, který obsahuje formátovaný čas.
+Objekt, `CString` který obsahuje formátovaný čas.
 
 ### <a name="remarks"></a>Poznámky
 
-Ladicí verze knihovny kontroluje formátovacích kódech a vyhodnotí, pokud kód není v seznamu výše.
+Ladicí verze knihovny zkontroluje kódy formátování a uplatní, pokud kód není ve výše uvedeném seznamu.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_ATLMFC_Utilities#163](../../atl-mfc-shared/codesnippet/cpp/ctimespan-class_3.cpp)]
 
-##  <a name="getdays"></a>  CTimeSpan::GetDays
+## <a name="ctimespangetdays"></a><a name="getdays"></a>CTimeSpan::GetDays
 
-Vrátí hodnotu, která představuje počet dnů dokončení v tomto `CTimeSpan`.
+Vrátí hodnotu, která představuje počet `CTimeSpan`dnů dokončení v tomto .
 
 ```
 LONGLONG GetDays() const throw();
@@ -216,19 +216,19 @@ LONGLONG GetDays() const throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí počet dní, dokončení 24 hodin v časové období. Tato hodnota může být záporná, pokud je záporný časový interval.
+Vrátí počet dokončených 24 hodin v časovém rozpětí. Tato hodnota může být záporná, pokud je časové rozpětí záporné.
 
 ### <a name="remarks"></a>Poznámky
 
-Všimněte si, že letní čas může způsobit `GetDays` potenciálně překvapivé výsledek. Například když letního času je v platnosti, `GetDays` hlásí počet dnů mezi 1. dubna do 1. května jako 29, 30, protože jeden den v dubnu na trh se zkrátila o hodinu a proto nepočítají jako celý den.
+Všimněte si, že `GetDays` letní čas může způsobit vrácení potenciálně překvapivého výsledku. Například při letního časově `GetDays` rozvaděčje, hlásí počet dní mezi 1.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_ATLMFC_Utilities#164](../../atl-mfc-shared/codesnippet/cpp/ctimespan-class_4.cpp)]
 
-##  <a name="gethours"></a>  CTimeSpan::GetHours
+## <a name="ctimespangethours"></a><a name="gethours"></a>CTimeSpan::GetHours
 
-Vrátí hodnotu, která představuje počet hodin aktuálního dne (až 23 -23).
+Vrátí hodnotu, která představuje počet hodin v aktuálním dni (-23 až 23).
 
 ```
 LONG GetHours() const throw();
@@ -236,15 +236,15 @@ LONG GetHours() const throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí počet hodin po aktuálním dni. Jsou v rozsahu -23 až 23.
+Vrátí počet hodin v aktuálním dni. Rozsah je -23 až 23.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_ATLMFC_Utilities#165](../../atl-mfc-shared/codesnippet/cpp/ctimespan-class_5.cpp)]
 
-##  <a name="getminutes"></a>  CTimeSpan::GetMinutes
+## <a name="ctimespangetminutes"></a><a name="getminutes"></a>CTimeSpan::GetMinutes
 
-Vrátí hodnotu, která představuje počet minut do aktuální hodiny (-59 až 59).
+Vrátí hodnotu, která představuje počet minut v aktuální hodině (-59 až 59).
 
 ```
 LONG GetMinutes() const throw();
@@ -252,15 +252,15 @@ LONG GetMinutes() const throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí počet minut do aktuální hodiny. Jsou v rozsahu -59 do 59.
+Vrátí počet minut v aktuální hodině. Rozsah je -59 až 59.
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [GetHours](#gethours).
+Viz příklad pro [GetHours](#gethours).
 
-##  <a name="getseconds"></a>  CTimeSpan::GetSeconds
+## <a name="ctimespangetseconds"></a><a name="getseconds"></a>CTimeSpan::GetSeconds
 
-Vrátí hodnotu, která představuje počet sekund do aktuální minuty (-59 až 59).
+Vrátí hodnotu, která představuje počet sekund v aktuální minutě (-59 až 59).
 
 ```
 LONG GetSeconds() const throw();
@@ -268,13 +268,13 @@ LONG GetSeconds() const throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí počet sekund do aktuální minuty. Jsou v rozsahu -59 do 59.
+Vrátí počet sekund v aktuální minutě. Rozsah je -59 až 59.
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [GetHours](#gethours).
+Viz příklad pro [GetHours](#gethours).
 
-##  <a name="gettimespan"></a>  CTimeSpan::GetTimeSpan
+## <a name="ctimespangettimespan"></a><a name="gettimespan"></a>CTimeSpan::GetTimeSpan
 
 Vrátí hodnotu `CTimeSpan` objektu.
 
@@ -286,9 +286,9 @@ __ time64_t GetTimeSpan() const throw();
 
 Vrátí aktuální hodnotu `CTimeSpan` objektu.
 
-##  <a name="gettotalhours"></a>  CTimeSpan::GetTotalHours
+## <a name="ctimespangettotalhours"></a><a name="gettotalhours"></a>CTimeSpan::GetTotalHours
 
-Vrátí hodnotu, která představuje celkový počet hodin dokončeno v tomto `CTimeSpan`.
+Vrátí hodnotu, která představuje celkový počet `CTimeSpan`hodin dokončení v tomto .
 
 ```
 LONGLONG GetTotalHours() const throw();
@@ -296,15 +296,15 @@ LONGLONG GetTotalHours() const throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí celkový počet hodin dokončeno v tomto `CTimeSpan`.
+Vrátí celkový počet hodin dokončení `CTimeSpan`v tomto .
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_ATLMFC_Utilities#166](../../atl-mfc-shared/codesnippet/cpp/ctimespan-class_6.cpp)]
 
-##  <a name="gettotalminutes"></a>  CTimeSpan::GetTotalMinutes
+## <a name="ctimespangettotalminutes"></a><a name="gettotalminutes"></a>CTimeSpan::GetTotalMinutes
 
-Vrátí hodnotu, která představuje celkový počet kompletní minutách v tomto `CTimeSpan`.
+Vrátí hodnotu, která představuje celkový počet `CTimeSpan`minut dokončení v tomto .
 
 ```
 LONGLONG GetTotalMinutes() const throw();
@@ -312,15 +312,15 @@ LONGLONG GetTotalMinutes() const throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí celkový počet minut na dokončení v tomto `CTimeSpan`.
+Vrátí celkový počet minut dokončení `CTimeSpan`v tomto .
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [GetTotalHours](#gettotalhours).
+Viz příklad [gettotalhours](#gettotalhours).
 
-##  <a name="gettotalseconds"></a>  CTimeSpan::GetTotalSeconds
+## <a name="ctimespangettotalseconds"></a><a name="gettotalseconds"></a>CTimeSpan::GetTotalSeconds
 
-Vrátí hodnotu, která představuje celkový počet sekund dokončena v tomto `CTimeSpan`.
+Vrátí hodnotu, která představuje celkový počet `CTimeSpan`celých sekund v tomto .
 
 ```
 LONGLONG GetTotalSeconds() const throw();
@@ -328,15 +328,15 @@ LONGLONG GetTotalSeconds() const throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí celkový počet sekund dokončena v tomto `CTimeSpan`.
+Vrátí celkový počet celých `CTimeSpan`sekund v tomto .
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [GetTotalHours](#gettotalhours).
+Viz příklad [gettotalhours](#gettotalhours).
 
-##  <a name="operator_add_-"></a>  CTimeSpan::operator +, -
+## <a name="ctimespanoperator---"></a><a name="operator_add_-"></a>CTimeSpan::operátor +, -
 
-Přidá a odečte `CTimeSpan` objekty.
+Přidá a odečte objekty. `CTimeSpan`
 
 ```
 CTimeSpan operator+(CTimeSpan span) const throw();
@@ -345,24 +345,24 @@ CTimeSpan operator-(CTimeSpan span) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*span*<br/>
-Hodnota k přidání do `CTimeSpan` objektu.
+*Span*<br/>
+Hodnota, kterou chcete `CTimeSpan` přidat k objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-A `CTimeSpan` objekt představující výsledek operace.
+Objekt `CTimeSpan` představující výsledek operace.
 
 ### <a name="remarks"></a>Poznámky
 
-Tyto dva operátory umožňují operátorů sčítání a odečítání `CTimeSpan` objektů do a od sebe navzájem.
+Tyto dva operátory umožňují přidávat `CTimeSpan` a odečítat objekty mezi sebou a od sebe navzájem.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_ATLMFC_Utilities#167](../../atl-mfc-shared/codesnippet/cpp/ctimespan-class_7.cpp)]
 
-##  <a name="operator_add_eq_-_eq"></a>  CTimeSpan::operator +=-=
+## <a name="ctimespanoperator---"></a><a name="operator_add_eq_-_eq"></a>CTimeSpan::operátor +=, -=
 
-Přidá a odečte `CTimeSpan` objektů do a z tohoto `CTimeSpan`.
+Přidá a odečte `CTimeSpan` objekt a `CTimeSpan`od tohoto .
 
 ```
 CTimeSpan& operator+=(CTimeSpan span) throw();
@@ -371,25 +371,25 @@ CTimeSpan& operator-=(CTimeSpan span) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*span*<br/>
-Hodnota k přidání do `CTimeSpan` objektu.
+*Span*<br/>
+Hodnota, kterou chcete `CTimeSpan` přidat k objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Aktualizovaný `CTimeSpan` objektu.
+Aktualizovaný `CTimeSpan` objekt.
 
 ### <a name="remarks"></a>Poznámky
 
-Tyto operátory umožňují operátorů sčítání a odečítání `CTimeSpan` objektů do a z tohoto `CTimeSpan`.
+Tyto operátory umožňují přidat a `CTimeSpan` odečíst objekt `CTimeSpan`a od tohoto .
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_ATLMFC_Utilities#168](../../atl-mfc-shared/codesnippet/cpp/ctimespan-class_8.cpp)]
 
-##  <a name="serialize64"></a>  CTimeSpan::Serialize64
+## <a name="ctimespanserialize64"></a><a name="serialize64"></a>CTimeSpan::Serialize64
 
 > [!NOTE]
->  Tato metoda je pouze k dispozici v projektech knihovny MFC.
+> Tato metoda je k dispozici pouze v projektech knihovny MFC.
 
 Serializuje data přidružená k členské proměnné do nebo z archivu.
 
@@ -400,13 +400,13 @@ CArchive& Serialize64(CArchive& ar);
 ### <a name="parameters"></a>Parametry
 
 *ar*<br/>
-`CArchive` Objekt, který chcete aktualizovat.
+Objekt, `CArchive` který chcete aktualizovat.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Aktualizovaný `CArchive` objektu.
+Aktualizovaný `CArchive` objekt.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [asctime, _wasctime](../../c-runtime-library/reference/asctime-wasctime.md)<br/>
 [_ftime, _ftime32, _ftime64](../../c-runtime-library/reference/ftime-ftime32-ftime64.md)<br/>
@@ -415,4 +415,4 @@ Aktualizovaný `CArchive` objektu.
 [strftime, wcsftime, _strftime_l, _wcsftime_l](../../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)<br/>
 [time, _time32, _time64](../../c-runtime-library/reference/time-time32-time64.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
-[Sdílené třídy ATL/MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)
+[Sdílené třídy KNIHOVNY ATL/Knihovny MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)

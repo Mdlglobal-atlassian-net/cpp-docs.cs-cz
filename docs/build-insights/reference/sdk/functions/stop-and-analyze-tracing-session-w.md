@@ -1,6 +1,6 @@
 ---
 title: StopAndAnalyzeTracingSessionW
-description: Reference C++ k funkci StopAndAnalyzeTracingSessionW sady SDK pro Build Insights
+description: C++ Sestavení Insights SDK StopAndAnalyzeTracingSessionW odkaz na funkci.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: ec36162efcd2bfcf17cb07a997a7ff170338d3d2
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 2f5f232c3e58c66bc36099d954d97a8f945187ef
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78332668"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81323721"
 ---
 # <a name="stopandanalyzetracingsessionw"></a>StopAndAnalyzeTracingSessionW
 
 ::: moniker range="<=vs-2015"
 
-Sada C++ SDK pro Build Insights je kompatibilní se sadou Visual Studio 2017 a novější. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek selektor verzí sady Visual Studio pro tento článek na sadu Visual Studio 2017 nebo Visual Studio 2019.
+Sada C++ Build Insights SDK je kompatibilní s Visual Studio 2017 a vyšší. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek pro výběr **verze** sady Visual Studio pro tento článek na Visual Studio 2017 nebo Visual Studio 2019. Nachází se v horní části obsahu na této stránce.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Funkce `StopAndAnalyzeTracingSessionW` zastaví probíhající relaci trasování a uloží výsledné trasování do dočasného souboru. Relace analýzy pak ihned začne používat dočasný soubor jako vstup. Spustitelné soubory volající tuto funkci musí mít oprávnění správce.
+Funkce `StopAndAnalyzeTracingSessionW` zastaví probíhající relaci trasování a uloží výsledné trasování do dočasného souboru. Relace analýzy je pak okamžitě zahájena pomocí dočasného souboru jako vstupu. Spustitelné soubory volající tuto funkci musí mít oprávnění správce.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -38,14 +38,14 @@ enum RESULT_CODE StopAndAnalyzeTracingSessionW(
 
 ### <a name="parameters"></a>Parametry
 
-*název_relace*\
-Název relace trasování, která se má zastavit. Použijte stejný název relace jako ten předaný do [StartTracingSession](start-tracing-session.md), [StartTracingSessionA](start-tracing-session-a.md)nebo [StartTracingSessionW](start-tracing-session-w.md).
+*Název_relace*\
+Název relace trasování zastavit. Použijte stejný název relace jako název předané [StartTracingSession](start-tracing-session.md), [StartTracingSessionA](start-tracing-session-a.md)nebo [StartTracingSessionW](start-tracing-session-w.md).
 
-\ *statistiky*
-Ukazatel na objekt [TRACING_SESSION_STATISTICS](../other-types/tracing-session-statistics-struct.md) . před vrácením `StopAndAnalyzeTracingSessionW` zapisuje statistiky shromažďování trasování v tomto objektu.
+*Statistiky*\
+Ukazatel na [TRACING_SESSION_STATISTICS](../other-types/tracing-session-statistics-struct.md) objekt. `StopAndAnalyzeTracingSessionW`zapíše statistiky shromažďování trasování v tomto objektu před vrácením.
 
 *analysisDescriptor*\
-Ukazatel na objekt [ANALYSIS_DESCRIPTOR](../other-types/analysis-descriptor-struct.md) . Pomocí tohoto objektu můžete nakonfigurovat relaci analýzy, kterou spustí `StopAndAnalyzeTracingSessionW`.
+Ukazatel na [objekt ANALYSIS_DESCRIPTOR.](../other-types/analysis-descriptor-struct.md) Tento objekt slouží ke konfiguraci relace `StopAndAnalyzeTracingSessionW`analýzy, která je spuštěna aplikací .
 
 ### <a name="return-value"></a>Návratová hodnota
 

@@ -1,5 +1,5 @@
 ---
-title: Canimationtimereventhandler – třída
+title: Třída CAnimationTimerEventHandler
 ms.date: 11/04/2016
 f1_keywords:
 - CAnimationTimerEventHandler
@@ -16,16 +16,16 @@ helpviewer_keywords:
 - CAnimationTimerEventHandler [MFC], OnRenderingTooSlow
 - CAnimationTimerEventHandler [MFC], SetAnimationController
 ms.assetid: 188dea3b-4b5e-4f6b-8df9-09d993a21619
-ms.openlocfilehash: e5e6b0a22d438f9c26318129e2d04df96d386cda
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 72b6e5d8d9d4823795a1fb053c5f2374cb80fba4
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391332"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81320017"
 ---
-# <a name="canimationtimereventhandler-class"></a>Canimationtimereventhandler – třída
+# <a name="canimationtimereventhandler-class"></a>Třída CAnimationTimerEventHandler
 
-Implementuje zpětné volání, které je voláno rozhraním API animace při výskytu události časování.
+Implementuje zpětné volání, které je voláno rozhraním API animace při výskytu událostí časování.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -37,17 +37,17 @@ class CAnimationTimerEventHandler : public CUIAnimationTimerEventHandlerBase<CAn
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CAnimationTimerEventHandler::CreateInstance](#createinstance)|Vytvoří instanci `CAnimationTimerEventHandler` zpětného volání.|
+|[CanimationeventHandler::CreateInstance](#createinstance)|Vytvoří instanci zpětného `CAnimationTimerEventHandler` volání.|
 |[CAnimationTimerEventHandler::OnPostUpdate](#onpostupdate)|Zpracovává události, ke kterým dochází po dokončení aktualizace animace. (Přepíše `CUIAnimationTimerEventHandlerBase::OnPostUpdate`.)|
 |[CAnimationTimerEventHandler::OnPreUpdate](#onpreupdate)|Zpracovává události, ke kterým dochází před zahájením aktualizace animace. (Přepíše `CUIAnimationTimerEventHandlerBase::OnPreUpdate`.)|
-|[CAnimationTimerEventHandler::OnRenderingTooSlow](#onrenderingtooslow)|Zpracovává události, ke kterým dochází při vykreslování snímkovou frekvenci animace klesne pod minimální kmitočet žádoucí. (Přepíše `CUIAnimationTimerEventHandlerBase::OnRenderingTooSlow`.)|
-|[CAnimationTimerEventHandler::SetAnimationController](#setanimationcontroller)|Uchovává ukazatel na řadič animace směrování událostí.|
+|[CanimationtimerEventHandler::OnRenderingTooslow](#onrenderingtooslow)|Zpracovává události, ke kterým dochází, když kmitočet snímků vykreslování pro animaci klesne pod minimální žádoucí kmitočet snímků. (Přepíše `CUIAnimationTimerEventHandlerBase::OnRenderingTooSlow`.)|
+|[CAnimationTimerEventHandler::SetAnimationController](#setanimationcontroller)|Ukládá ukazatel na řadič animace pro směrování událostí.|
 
 ## <a name="remarks"></a>Poznámky
 
-Tuto obslužnou rutinu události je vytvořen a předán IUIAnimationTimer::SetTimerEventHandler při volání CAnimationController::EnableAnimationTimerEventHandler.
+Tato obslužná rutina události je vytvořena a předána iUIAnimationTimer::SetTimerEventHandler při volání CAnimationController::EnableAnimationTimerEventHandler.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -61,9 +61,9 @@ Tuto obslužnou rutinu události je vytvořen a předán IUIAnimationTimer::SetT
 
 **Záhlaví:** afxanimationcontroller.h
 
-##  <a name="createinstance"></a>  CAnimationTimerEventHandler::CreateInstance
+## <a name="canimationtimereventhandlercreateinstance"></a><a name="createinstance"></a>CanimationeventHandler::CreateInstance
 
-Vytvoří instanci canimationtimereventhandler – zpětného volání.
+Vytvoří instanci zpětného volání CAnimationTimerEventHandler.
 
 ```
 static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
@@ -74,15 +74,15 @@ static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
 ### <a name="parameters"></a>Parametry
 
 *pAnimationController*<br/>
-Ukazatel na řadič animace, který se zobrazí události.
+Ukazatel na ovladač animace, který bude přijímat události.
 
-*ppTimerEventHandler*
+*phandler s událostí ppTimer*
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud metoda uspěje, vrátí hodnotu S_OK. V opačném případě vrátí kód chyby HRESULT.
+Pokud je metoda úspěšná, vrátí S_OK. V opačném případě vrátí kód chyby HRESULT.
 
-##  <a name="onpostupdate"></a>  CAnimationTimerEventHandler::OnPostUpdate
+## <a name="canimationtimereventhandleronpostupdate"></a><a name="onpostupdate"></a>CAnimationTimerEventHandler::OnPostUpdate
 
 Zpracovává události, ke kterým dochází po dokončení aktualizace animace.
 
@@ -92,9 +92,9 @@ IFACEMETHOD(OnPostUpdate)();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud metoda uspěje; S_OK jinak E_FAIL.
+S_OK pokud je metoda úspěšná; jinak E_FAIL.
 
-##  <a name="onpreupdate"></a>  CAnimationTimerEventHandler::OnPreUpdate
+## <a name="canimationtimereventhandleronpreupdate"></a><a name="onpreupdate"></a>CAnimationTimerEventHandler::OnPreUpdate
 
 Zpracovává události, ke kterým dochází před zahájením aktualizace animace.
 
@@ -104,11 +104,11 @@ IFACEMETHOD(OnPreUpdate)();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud metoda uspěje; S_OK jinak E_FAIL.
+S_OK pokud je metoda úspěšná; jinak E_FAIL.
 
-##  <a name="onrenderingtooslow"></a>  CAnimationTimerEventHandler::OnRenderingTooSlow
+## <a name="canimationtimereventhandleronrenderingtooslow"></a><a name="onrenderingtooslow"></a>CanimationtimerEventHandler::OnRenderingTooslow
 
-Zpracovává události, ke kterým dochází při vykreslování snímkovou frekvenci animace klesne pod minimální kmitočet žádoucí.
+Zpracovává události, ke kterým dochází, když kmitočet snímků vykreslování pro animaci klesne pod minimální žádoucí kmitočet snímků.
 
 ```
 IFACEMETHOD(OnRenderingTooSlow)(UINT32 fps);
@@ -116,15 +116,15 @@ IFACEMETHOD(OnRenderingTooSlow)(UINT32 fps);
 
 ### <a name="parameters"></a>Parametry
 
-*snímků za sekundu*
+*Fps*
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud metoda uspěje; S_OK jinak E_FAIL.
+S_OK pokud je metoda úspěšná; jinak E_FAIL.
 
-##  <a name="setanimationcontroller"></a>  CAnimationTimerEventHandler::SetAnimationController
+## <a name="canimationtimereventhandlersetanimationcontroller"></a><a name="setanimationcontroller"></a>CAnimationTimerEventHandler::SetAnimationController
 
-Uchovává ukazatel na řadič animace směrování událostí.
+Ukládá ukazatel na řadič animace pro směrování událostí.
 
 ```
 void SetAnimationController(CAnimationController* pAnimationController);
@@ -133,8 +133,8 @@ void SetAnimationController(CAnimationController* pAnimationController);
 ### <a name="parameters"></a>Parametry
 
 *pAnimationController*<br/>
-Ukazatel na řadič animace, který se zobrazí události.
+Ukazatel na ovladač animace, který bude přijímat události.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Třídy](../../mfc/reference/mfc-classes.md)

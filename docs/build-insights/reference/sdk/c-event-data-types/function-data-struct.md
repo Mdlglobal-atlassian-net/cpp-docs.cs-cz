@@ -1,6 +1,6 @@
 ---
-title: Struktura FUNCTION_DATA
-description: Odkaz C++ na strukturu FUNCTION_DATA Build Insights SDK
+title: FUNCTION_DATA struktura
+description: C++ Build Insights SDK FUNCTION_DATA odkaz na strukturu.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,18 +9,18 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 718e93bed798786a4596ccb3e724b2b54d4fe79d
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: ec715192e3480932d351cdb4be1443c329a4868b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78333732"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81325531"
 ---
-# <a name="function_data-structure"></a>Struktura FUNCTION_DATA
+# <a name="function_data-structure"></a>FUNCTION_DATA struktura
 
 ::: moniker range="<=vs-2015"
 
-Sada C++ SDK pro Build Insights je kompatibilní se sadou Visual Studio 2017 a novější. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek selektor verzí sady Visual Studio pro tento článek na sadu Visual Studio 2017 nebo Visual Studio 2019.
+Sada C++ Build Insights SDK je kompatibilní s Visual Studio 2017 a vyšší. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek pro výběr **verze** sady Visual Studio pro tento článek na Visual Studio 2017 nebo Visual Studio 2019. Nachází se v horní části obsahu na této stránce.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
@@ -41,6 +41,6 @@ typedef struct FUNCTION_DATA_TAG
 
 |  |  |
 |--|--|
-| `Name` | Název funkce kódovaný v kódování UTF-8. |
+| `Name` | Název funkce, kódovaný v UTF-8. |
 
 ::: moniker-end

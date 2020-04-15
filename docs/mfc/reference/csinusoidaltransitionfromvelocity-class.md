@@ -1,5 +1,5 @@
 ---
-title: CSinusoidalTransitionFromVelocity Class
+title: CSinusoidalTransitionFromVelocity – třída
 ms.date: 11/04/2016
 f1_keywords:
 - CSinusoidalTransitionFromVelocity
@@ -14,16 +14,16 @@ helpviewer_keywords:
 - CSinusoidalTransitionFromVelocity [MFC], m_duration
 - CSinusoidalTransitionFromVelocity [MFC], m_period
 ms.assetid: cc885f17-b84b-45ee-8f1f-36a8bbb7adad
-ms.openlocfilehash: f61effb6dacdd1076784de8e825a3acec192474c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0df9ca6d140cb9e3ec85be3ce32760a66599c5d4
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324464"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81318237"
 ---
-# <a name="csinusoidaltransitionfromvelocity-class"></a>CSinusoidalTransitionFromVelocity Class
+# <a name="csinusoidaltransitionfromvelocity-class"></a>CSinusoidalTransitionFromVelocity – třída
 
-Zapouzdřuje přechod se sinusovou, který má amplitudu určenou počáteční rychlostí proměnné animace.
+Zapouzdřuje přechod sinusové rychlosti, který má amplitudu, která je určena počáteční rychlostí proměnné animace.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -35,30 +35,30 @@ class CSinusoidalTransitionFromVelocity : public CBaseTransition;
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
 |[CSinusoidalTransitionFromVelocity::CSinusoidalTransitionFromVelocity](#csinusoidaltransitionfromvelocity)|Vytvoří objekt přechodu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CSinusoidalTransitionFromVelocity::Create](#create)|Knihovna přechod k vytvoření objektu přechod zapouzdřený objekt modelu COM zavolá. (Přepíše [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|
+|[CSinusoidalTransitionFromVelocity::Vytvořit](#create)|Volá knihovnu přechodu k vytvoření zapouzdřený přechod ový objekt COM. (Přepíše [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
 |[CSinusoidalTransitionFromVelocity::m_duration](#m_duration)|Doba trvání přechodu.|
-|[CSinusoidalTransitionFromVelocity::m_period](#m_period)|Období oscilace sinusovým wave během několika sekund.|
+|[CSinusoidalTransitionFromVelocity::m_period](#m_period)|Doba kmitání sinusové vlny v sekundách.|
 
 ## <a name="remarks"></a>Poznámky
 
-Hodnota proměnné animace oscillates kolem počáteční hodnota za celou dobu trvání přechod se sinusovým rozsahem. Amplitudu oscilace je určena rychlostí proměnné animace po zahájení přechodu. Protože všechny přechody jsou automaticky vymazány, doporučuje se je přidělena pomocí operátoru nové. Zapouzdřený objekt IUIAnimationTransition COM je vytvořené CAnimationController::AnimateGroup, dokud je NULL. Změna členské proměnné po vytvoření tohoto objektu COM nemá žádný vliv.
+Hodnota proměnné animace osciluje kolem počáteční hodnoty po celou dobu trvání přechodu sinusového rozsahu. Amplituda kmitání je určena rychlostí proměnné animace při zahájení přechodu. Vzhledem k tomu, že všechny přechody jsou vymazány automaticky, doporučuje se jim přidělit pomocí operátoru new. Zapouzdřený objekt IUIAnimationTransition COM je vytvořen CAnimationController::AnimateGroup, do té doby je null. Změna členských proměnných po vytvoření tohoto objektu COM nemá žádný vliv.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObjekt](../../mfc/reference/cobject-class.md)
 
 [CBaseTransition](../../mfc/reference/cbasetransition-class.md)
 
@@ -68,9 +68,9 @@ Hodnota proměnné animace oscillates kolem počáteční hodnota za celou dobu 
 
 **Záhlaví:** afxanimationcontroller.h
 
-##  <a name="create"></a>  CSinusoidalTransitionFromVelocity::Create
+## <a name="csinusoidaltransitionfromvelocitycreate"></a><a name="create"></a>CSinusoidalTransitionFromVelocity::Vytvořit
 
-Knihovna přechod k vytvoření objektu přechod zapouzdřený objekt modelu COM zavolá.
+Volá knihovnu přechodu k vytvoření zapouzdřený přechod ový objekt COM.
 
 ```
 virtual BOOL Create(
@@ -80,14 +80,14 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>Parametry
 
-*pLibrary*<br/>
-Ukazatel na přechod knihovny, který je zodpovědný za vytváření standardní přechodů.
+*pKnihovna*<br/>
+Ukazatel na knihovnu přechodů, která je zodpovědná za vytváření standardních přechodů.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE, pokud úspěšně; vytvoření přechodu v opačném případě FALSE.
+PRAVDA, pokud je přechod úspěšně vytvořen; jinak FALSE.
 
-##  <a name="csinusoidaltransitionfromvelocity"></a>  CSinusoidalTransitionFromVelocity::CSinusoidalTransitionFromVelocity
+## <a name="csinusoidaltransitionfromvelocitycsinusoidaltransitionfromvelocity"></a><a name="csinusoidaltransitionfromvelocity"></a>CSinusoidalTransitionFromVelocity::CSinusoidalTransitionFromVelocity
 
 Vytvoří objekt přechodu.
 
@@ -103,9 +103,9 @@ CSinusoidalTransitionFromVelocity(
 Doba trvání přechodu.
 
 *Období*<br/>
-Období oscilace sinusovým wave během několika sekund.
+Doba kmitání sinusové vlny v sekundách.
 
-##  <a name="m_duration"></a>  CSinusoidalTransitionFromVelocity::m_duration
+## <a name="csinusoidaltransitionfromvelocitym_duration"></a><a name="m_duration"></a>CSinusoidalTransitionFromVelocity::m_duration
 
 Doba trvání přechodu.
 
@@ -113,14 +113,14 @@ Doba trvání přechodu.
 UI_ANIMATION_SECONDS m_duration;
 ```
 
-##  <a name="m_period"></a>  CSinusoidalTransitionFromVelocity::m_period
+## <a name="csinusoidaltransitionfromvelocitym_period"></a><a name="m_period"></a>CSinusoidalTransitionFromVelocity::m_period
 
-Období oscilace sinusovým wave během několika sekund.
+Doba kmitání sinusové vlny v sekundách.
 
 ```
 UI_ANIMATION_SECONDS m_period;
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Třídy](../../mfc/reference/mfc-classes.md)

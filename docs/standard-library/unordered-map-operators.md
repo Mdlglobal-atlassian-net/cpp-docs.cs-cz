@@ -1,26 +1,26 @@
 ---
-title: operátory &lt;unordered_map&gt;
+title: '&lt;unordered_map&gt; operátorů'
 ms.date: 11/04/2016
 f1_keywords:
 - unordered_map/std::operator!=
 - unordered_map/std::operator==
 ms.assetid: 9d5add0b-84bd-4a79-bd82-3f58b55145ed
-ms.openlocfilehash: fe4877bc5b371a2570c18950bac36a003078ccc7
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: f062c4fd0332525a8b8940d2d93df41df56d2baa
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79422547"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373128"
 ---
-# <a name="ltunordered_mapgt-operators"></a>operátory &lt;unordered_map&gt;
+# <a name="ltunordered_mapgt-operators"></a>&lt;unordered_map&gt; operátorů
 
 |||||
 |-|-|-|-|
-|[operator!=](#op_neq)|[operator = = – operátor](#op_eq_eq)|[operator!=](#op_neq_multimap)|[operator = = – operátor](#op_eq_eq_multimap)|
+|[operátor!=](#op_neq)|[operátor==](#op_eq_eq)|[operátor!=](#op_neq_multimap)|[operátor==](#op_eq_eq_multimap)|
 
-## <a name="op_neq"></a>! = – operátor
+## <a name="operator"></a><a name="op_neq"></a>operátor!=
 
-Testuje, zda [unordered_map](../standard-library/unordered-map-class.md) objekt na levé straně operátoru není roven objektu unordered_map na pravé straně.
+Testuje, zda [unordered_map](../standard-library/unordered-map-class.md) objekt na levé straně operátoru není rovna unordered_map objektu na pravé straně.
 
 ```cpp
 bool operator!=(const unordered_map <Key, Type, Hash, Pred, Allocator>& left, const unordered_map <Key, Type, Hash, Pred, Allocator>& right);
@@ -28,19 +28,19 @@ bool operator!=(const unordered_map <Key, Type, Hash, Pred, Allocator>& left, co
 
 ### <a name="parameters"></a>Parametry
 
-*levý*\
+*Vlevo*\
 Objekt typu `unordered_map`.
 
-*pravé*\
+*Právo*\
 Objekt typu `unordered_map`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**true** , pokud unordered_maps nejsou stejné; **false** , pokud jsou stejné.
+**true,** pokud unordered_maps nejsou stejné; **false,** pokud jsou si rovni.
 
 ### <a name="remarks"></a>Poznámky
 
-Porovnání mezi objekty unordered_map není ovlivněno libovolným pořadím, ve kterém ukládají jejich prvky. Dva unordered_maps jsou stejné, pokud mají stejný počet prvků a prvky v jednom kontejneru jsou permutací prvků v druhém kontejneru. V opačném případě jsou nerovné.
+Porovnání mezi unordered_map objekty není ovlivněna libovolné pořadí, ve kterém ukládají své prvky. Dvě unordered_maps jsou stejné, pokud mají stejný počet prvků a prvky v jedné nádobě jsou permutace prvků v druhé kontejneru. V opačném případě jsou nerovné.
 
 ### <a name="example"></a>Příklad
 
@@ -74,7 +74,7 @@ int main( )
 }
 ```
 
-**Výkonem**
+**Výstup:**
 
 `um1 != um2: true`
 
@@ -82,9 +82,9 @@ int main( )
 
 `um2 != um3: true`
 
-## <a name="op_eq_eq"></a>operator = = – operátor
+## <a name="operator"></a><a name="op_eq_eq"></a>operátor==
 
-Testuje, zda je objekt [unordered_map](../standard-library/unordered-map-class.md) na levé straně operátoru roven objektu unordered_map na pravé straně.
+Testuje, zda [unordered_map](../standard-library/unordered-map-class.md) objekt na levé straně operátoru se rovná unordered_map objektu na pravé straně.
 
 ```cpp
 bool operator==(const unordered_map <Key, Type, Hash, Pred, Allocator>& left, const unordered_map <Key, Type, Hash, Pred, Allocator>& right);
@@ -92,19 +92,19 @@ bool operator==(const unordered_map <Key, Type, Hash, Pred, Allocator>& left, co
 
 ### <a name="parameters"></a>Parametry
 
-*levý*\
+*Vlevo*\
 Objekt typu `unordered_map`.
 
-*pravé*\
+*Právo*\
 Objekt typu `unordered_map`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**true** , pokud se unordered_maps rovnají; **false** , pokud se neshodují.
+**true,** pokud jsou unordered_maps stejné; **false,** pokud nejsou rovni.
 
 ### <a name="remarks"></a>Poznámky
 
-Porovnání mezi objekty unordered_map není ovlivněno libovolným pořadím, ve kterém ukládají jejich prvky. Dva unordered_maps jsou stejné, pokud mají stejný počet prvků a prvky v jednom kontejneru jsou permutací prvků v druhém kontejneru. V opačném případě jsou nerovné.
+Porovnání mezi unordered_map objekty není ovlivněna libovolné pořadí, ve kterém ukládají své prvky. Dvě unordered_maps jsou stejné, pokud mají stejný počet prvků a prvky v jedné nádobě jsou permutace prvků v druhé kontejneru. V opačném případě jsou nerovné.
 
 ### <a name="example"></a>Příklad
 
@@ -138,7 +138,7 @@ int main( )
 }
 ```
 
-**Výkonem**
+**Výstup:**
 
 `um1 == um2: false`
 
@@ -146,9 +146,9 @@ int main( )
 
 `um2 == um3: false`
 
-## <a name="op_neq_multimap"></a>! = – operátor
+## <a name="operator"></a><a name="op_neq_multimap"></a>operátor!=
 
-Testuje, zda [unordered_multimap](../standard-library/unordered-multimap-class.md) objekt na levé straně operátoru není roven objektu unordered_multimap na pravé straně.
+Testuje, zda [unordered_multimap](../standard-library/unordered-multimap-class.md) objekt na levé straně operátoru není rovna unordered_multimap objektu na pravé straně.
 
 ```cpp
 bool operator!=(const unordered_multimap <Key, Type, Hash, Pred, Allocator>& left, const unordered_multimap <Key, Type, Hash, Pred, Allocator>& right);
@@ -156,19 +156,19 @@ bool operator!=(const unordered_multimap <Key, Type, Hash, Pred, Allocator>& lef
 
 ### <a name="parameters"></a>Parametry
 
-*levý*\
+*Vlevo*\
 Objekt typu `unordered_multimap`.
 
-*pravé*\
+*Právo*\
 Objekt typu `unordered_multimap`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**true** , pokud unordered_multimaps nejsou stejné; **false** , pokud jsou stejné.
+**true,** pokud unordered_multimaps nejsou stejné; **false,** pokud jsou si rovni.
 
 ### <a name="remarks"></a>Poznámky
 
-Porovnání mezi objekty unordered_multimap není ovlivněno libovolným pořadím, ve kterém ukládají jejich prvky. Dva unordered_multimaps jsou stejné, pokud mají stejný počet prvků a prvky v jednom kontejneru jsou permutací prvků v druhém kontejneru. V opačném případě se neshodují.
+Porovnání mezi unordered_multimap objekty není ovlivněna libovolné pořadí, ve kterém ukládají své prvky. Dvě unordered_multimaps jsou stejné, pokud mají stejný počet prvků a prvky v jedné nádobě jsou permutace prvků v druhé kontejneru. V opačném případě nejsou stejné.
 
 ### <a name="example"></a>Příklad
 
@@ -203,7 +203,7 @@ int main( )
 }
 ```
 
-**Výkonem**
+**Výstup:**
 
 `um1 != um2: true`
 
@@ -211,9 +211,9 @@ int main( )
 
 `um2 != um3: true`
 
-## <a name="op_eq_eq_multimap"></a>operator = = – operátor
+## <a name="operator"></a><a name="op_eq_eq_multimap"></a>operátor==
 
-Testuje, zda je objekt [unordered_multimap](../standard-library/unordered-multimap-class.md) na levé straně operátoru roven objektu unordered_multimap na pravé straně.
+Testuje, zda [unordered_multimap](../standard-library/unordered-multimap-class.md) objekt na levé straně operátoru se rovná unordered_multimap objektu na pravé straně.
 
 ```cpp
 bool operator==(const unordered_multimap <Key, Type, Hash, Pred, Allocator>& left, const unordered_multimap <Key, Type, Hash, Pred, Allocator>& right);
@@ -221,19 +221,19 @@ bool operator==(const unordered_multimap <Key, Type, Hash, Pred, Allocator>& lef
 
 ### <a name="parameters"></a>Parametry
 
-*levý*\
+*Vlevo*\
 Objekt typu `unordered_multimap`.
 
-*pravé*\
+*Právo*\
 Objekt typu `unordered_multimap`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**true** , pokud se unordered_multimaps rovnají; **false** , pokud se neshodují.
+**true,** pokud jsou unordered_multimaps stejné; **false,** pokud nejsou rovni.
 
 ### <a name="remarks"></a>Poznámky
 
-Porovnání mezi objekty unordered_multimap není ovlivněno libovolným pořadím, ve kterém ukládají jejich prvky. Dva unordered_multimaps jsou stejné, pokud mají stejný počet prvků a prvky v jednom kontejneru jsou permutací prvků v druhém kontejneru. V opačném případě jsou nerovné.
+Porovnání mezi unordered_multimap objekty není ovlivněna libovolné pořadí, ve kterém ukládají své prvky. Dvě unordered_multimaps jsou stejné, pokud mají stejný počet prvků a prvky v jedné nádobě jsou permutace prvků v druhé kontejneru. V opačném případě jsou nerovné.
 
 ### <a name="example"></a>Příklad
 
@@ -268,7 +268,7 @@ int main( )
 }
 ```
 
-**Výkonem**
+**Výstup:**
 
 `um1 == um2: false`
 

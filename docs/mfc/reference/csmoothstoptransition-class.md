@@ -1,5 +1,5 @@
 ---
-title: Csmoothstoptransition – třída
+title: Třída CSmoothStopTransition
 ms.date: 11/04/2016
 f1_keywords:
 - CSmoothStopTransition
@@ -14,16 +14,16 @@ helpviewer_keywords:
 - CSmoothStopTransition [MFC], m_dblFinalValue
 - CSmoothStopTransition [MFC], m_maximumDuration
 ms.assetid: e1a4b476-6f96-43dd-90db-870a64406b85
-ms.openlocfilehash: 89496c1b867d6fbb498f56271de7b45afef7edc3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0ba550b4a0b9443d0681e17195687fb94c207ace
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62323879"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81318210"
 ---
-# <a name="csmoothstoptransition-class"></a>Csmoothstoptransition – třída
+# <a name="csmoothstoptransition-class"></a>Třída CSmoothStopTransition
 
-Zapouzdřuje přechod s plynulým zastavením.
+Zapouzdřuje přechod hladkého zastavení.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -35,42 +35,42 @@ class CSmoothStopTransition : public CBaseTransition;
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CSmoothStopTransition::CSmoothStopTransition](#csmoothstoptransition)|Přechod s plynulým zastavením vytvoří a inicializuje jeho maximální doba trvání a konečná hodnota.|
+|[CSmoothStopTransition::CSmoothStopTransition](#csmoothstoptransition)|Vytvoří přechod hladkého zastavení a inicializuje jeho maximální dobu trvání a konečnou hodnotu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CSmoothStopTransition::Create](#create)|Knihovna přechod k vytvoření objektu přechod zapouzdřený objekt modelu COM zavolá. (Přepíše [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|
+|[CSmoothStopTransition::Vytvořit](#create)|Volá knihovnu přechodu k vytvoření zapouzdřený přechod ový objekt COM. (Přepíše [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
 |[CSmoothStopTransition::m_dblFinalValue](#m_dblfinalvalue)|Hodnota proměnné animace na konci přechodu.|
 |[CSmoothStopTransition::m_maximumDuration](#m_maximumduration)|Maximální doba trvání přechodu.|
 
 ## <a name="remarks"></a>Poznámky
 
-Přechod s plynulým zastavením zpomaluje blíží dané konečnou hodnotu a dosáhne s rychlostí nula. Doba trvání přechodu je určen určenou počáteční rychlostí, rozdíl mezi hodnotami počáteční a konečné a zadané maximální doba trvání. Pokud neexistuje žádné řešení, který se skládá z jedné parabolickou oblouk, tato metoda vytvoří kubický přechod. Protože všechny přechody jsou automaticky vymazány, doporučuje se je přidělena pomocí operátoru nové. Zapouzdřený objekt IUIAnimationTransition COM je vytvořené CAnimationController::AnimateGroup, dokud je NULL. Změna členské proměnné po vytvoření tohoto objektu COM nemá žádný vliv.
+Přechod hladkého zastavení se zpomaluje, když se blíží k dané konečné hodnotě, a dosáhne ji s nulovou rychlostí. Doba trvání přechodu je určena počáteční rychlostí, rozdílem mezi počáteční a konečnou hodnotou a zadanou maximální dobou trvání. Pokud neexistuje žádné řešení skládající se z jednoho parabolického oblouku, tato metoda vytvoří kubický přechod. Vzhledem k tomu, že všechny přechody jsou vymazány automaticky, doporučuje se jim přidělit pomocí operátoru new. Zapouzdřený objekt IUIAnimationTransition COM je vytvořen CAnimationController::AnimateGroup, do té doby je null. Změna členských proměnných po vytvoření tohoto objektu COM nemá žádný vliv.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObjekt](../../mfc/reference/cobject-class.md)
 
 [CBaseTransition](../../mfc/reference/cbasetransition-class.md)
 
-[CSmoothStopTransition](../../mfc/reference/csmoothstoptransition-class.md)
+[CSmoothStopPřechod](../../mfc/reference/csmoothstoptransition-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
 **Záhlaví:** afxanimationcontroller.h
 
-##  <a name="create"></a>  CSmoothStopTransition::Create
+## <a name="csmoothstoptransitioncreate"></a><a name="create"></a>CSmoothStopTransition::Vytvořit
 
-Knihovna přechod k vytvoření objektu přechod zapouzdřený objekt modelu COM zavolá.
+Volá knihovnu přechodu k vytvoření zapouzdřený přechod ový objekt COM.
 
 ```
 virtual BOOL Create(
@@ -80,16 +80,16 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>Parametry
 
-*pLibrary*<br/>
-Ukazatel na přechod knihovny, který je zodpovědný za vytváření standardní přechodů.
+*pKnihovna*<br/>
+Ukazatel na knihovnu přechodů, která je zodpovědná za vytváření standardních přechodů.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE, pokud úspěšně; vytvoření přechodu v opačném případě FALSE.
+PRAVDA, pokud je přechod úspěšně vytvořen; jinak FALSE.
 
-##  <a name="csmoothstoptransition"></a>  CSmoothStopTransition::CSmoothStopTransition
+## <a name="csmoothstoptransitioncsmoothstoptransition"></a><a name="csmoothstoptransition"></a>CSmoothStopTransition::CSmoothStopTransition
 
-Přechod s plynulým zastavením vytvoří a inicializuje jeho maximální doba trvání a konečná hodnota.
+Vytvoří přechod hladkého zastavení a inicializuje jeho maximální dobu trvání a konečnou hodnotu.
 
 ```
 CSmoothStopTransition(
@@ -99,13 +99,13 @@ CSmoothStopTransition(
 
 ### <a name="parameters"></a>Parametry
 
-*maximumDuration*<br/>
+*maximumDoba trvání*<br/>
 Maximální doba trvání přechodu.
 
 *dblFinalValue*<br/>
 Hodnota proměnné animace na konci přechodu.
 
-##  <a name="m_dblfinalvalue"></a>  CSmoothStopTransition::m_dblFinalValue
+## <a name="csmoothstoptransitionm_dblfinalvalue"></a><a name="m_dblfinalvalue"></a>CSmoothStopTransition::m_dblFinalValue
 
 Hodnota proměnné animace na konci přechodu.
 
@@ -113,7 +113,7 @@ Hodnota proměnné animace na konci přechodu.
 DOUBLE m_dblFinalValue;
 ```
 
-##  <a name="m_maximumduration"></a>  CSmoothStopTransition::m_maximumDuration
+## <a name="csmoothstoptransitionm_maximumduration"></a><a name="m_maximumduration"></a>CSmoothStopTransition::m_maximumDuration
 
 Maximální doba trvání přechodu.
 
@@ -121,6 +121,6 @@ Maximální doba trvání přechodu.
 UI_ANIMATION_SECONDS m_maximumDuration;
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Třídy](../../mfc/reference/mfc-classes.md)

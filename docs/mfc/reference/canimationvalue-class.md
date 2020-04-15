@@ -1,5 +1,5 @@
 ---
-title: Canimationvalue – třída
+title: Třída CAnimationValue
 ms.date: 11/04/2016
 f1_keywords:
 - CAnimationValue
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - CAnimationValue [MFC], GetAnimationVariableList
 - CAnimationValue [MFC], m_value
 ms.assetid: 78c5ae19-ede5-4f20-bfbe-68b467b603c2
-ms.openlocfilehash: 86a2caa8946bcafeabf85687a24b2430ecefe790
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0437f0fc66f64ccb99157330154bf5aa4b5666b3
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62338685"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81321975"
 ---
-# <a name="canimationvalue-class"></a>Canimationvalue – třída
+# <a name="canimationvalue-class"></a>Třída CAnimationValue
 
-Implementuje funkci objektu animace, který má jednu hodnotu.
+Implementuje funkce objektu animace, který má jednu hodnotu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,46 +41,46 @@ class CAnimationValue : public CAnimationBaseObject;
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CAnimationValue::CAnimationValue](#canimationvalue)|Přetíženo. Vytvoří objekt canimationvalue –.|
+|[CAnimationValue::CAnimationValue](#canimationvalue)|Přetíženo. Vytvoří objekt CAnimationValue.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CAnimationValue::AddTransition](#addtransition)|Přidá přechodu použít hodnotu.|
-|[CAnimationValue::GetValue](#getvalue)|Přetíženo. Načte aktuální hodnotu.|
-|[CAnimationValue::GetVariable](#getvariable)|Poskytuje přístup k zapouzdřenému animace proměnné.|
+|[CAnimationValue::AddTransition](#addtransition)|Přidá přechod, který má být použit na hodnotu.|
+|[CAnimationValue::Hodnota GetValue](#getvalue)|Přetíženo. Načte aktuální hodnotu.|
+|[CAnimationValue::Proměnná](#getvariable)|Poskytuje přístup k zapouzdřené proměnné animace.|
 |[CAnimationValue::SetDefaultValue](#setdefaultvalue)|Nastaví výchozí hodnotu.|
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CAnimationValue::GetAnimationVariableList](#getanimationvariablelist)|Umístí animace zapouzdřené proměnné do seznamu. (Přepíše [CAnimationBaseObject::GetAnimationVariableList](../../mfc/reference/canimationbaseobject-class.md#getanimationvariablelist).)|
+|[CAnimationValue::GetAnimationVariableList](#getanimationvariablelist)|Vloží zapouzdřenou proměnnou animace do seznamu. (Přepíše [CAnimationBaseObject::GetAnimationVariableList](../../mfc/reference/canimationbaseobject-class.md#getanimationvariablelist).)|
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CAnimationValue::operator DOUBLE](#operator_double)|Poskytuje převod mezi canimationvalue – a DOUBLE.|
-|[CAnimationValue::operator INT32](#operator_int32)|Poskytuje převod mezi canimationvalue – a datový typ INT32.|
-|[CAnimationValue::operator =](#operator_eq)|Přetíženo. Canimationvalue – přiřadí hodnotu typu INT32.|
+|[CAnimationValue::operátor DOUBLE](#operator_double)|Poskytuje převod mezi CAnimationValue a DOUBLE.|
+|[CAnimationValue::operátor INT32](#operator_int32)|Poskytuje převod mezi CAnimationValue a INT32.|
+|[CAnimationValue::operátor=](#operator_eq)|Přetíženo. Přiřadí hodnotu INT32 hodnotě CAnimationValue.|
 
-### <a name="protected-data-members"></a>Chránění členové dat
+### <a name="protected-data-members"></a>Členové chráněných dat
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CAnimationValue::m_value](#m_value)|Zapouzdřený objekt animace proměnné, která představuje hodnotu animace.|
+|[CAnimationValue::m_value](#m_value)|Zapouzdřená proměnná animace, která představuje hodnotu animace.|
 
 ## <a name="remarks"></a>Poznámky
 
-Canimationvalue – třída zapouzdří jeden objekt canimationvariable – a může představovat v aplikacích animovaný jednu hodnotu. Například můžete použít tuto třídu pro animovaný průhlednost (efekt slábnutí), úhel (Chcete-li otáčet objekty), nebo pro všechny ostatní případy, když budete chtít vytvořit animaci v závislosti na hodnotu single animovaný. Použít tuto třídu v aplikaci, stačí vytvořit instanci objektu této třídy, přidat řadič animace pomocí CAnimationController::AddAnimationObject a volat AddTransition pro každý přechod na použité pro hodnotu.
+Třída CAnimationValue zapouzdřuje jeden objekt CAnimationVariable a může v aplikacích představovat jednu animovanou hodnotu. Tuto třídu můžete například použít pro animovanou průhlednost (efekt zeslabení), úhel (k otočení objektů) nebo pro jakýkoli jiný případ, kdy potřebujete vytvořit animaci v závislosti na jedné animované hodnotě. Chcete-li použít tuto třídu v aplikaci, stačí vytvořit instanci objektu této třídy, přidejte jej do ovladače animace pomocí CAnimationController::AddAnimationObject a volání AddTransition pro každý přechod, který má být použit na hodnotu.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObjekt](../../mfc/reference/cobject-class.md)
 
 [CAnimationBaseObject](../../mfc/reference/canimationbaseobject-class.md)
 
@@ -90,9 +90,9 @@ Canimationvalue – třída zapouzdří jeden objekt canimationvariable – a m�
 
 **Záhlaví:** afxanimationcontroller.h
 
-##  <a name="addtransition"></a>  CAnimationValue::AddTransition
+## <a name="canimationvalueaddtransition"></a><a name="addtransition"></a>CAnimationValue::AddTransition
 
-Přidá přechodu použít hodnotu.
+Přidá přechod, který má být použit na hodnotu.
 
 ```
 void AddTransition(CBaseTransition* pTransition);
@@ -100,16 +100,16 @@ void AddTransition(CBaseTransition* pTransition);
 
 ### <a name="parameters"></a>Parametry
 
-*pTransition*<br/>
+*pPřechod*<br/>
 Ukazatel na objekt přechodu.
 
 ### <a name="remarks"></a>Poznámky
 
-Voláním této funkce přidat přechod na vnitřní seznam přechody použít proměnnou animace. Při přidání přechody jsou nejsou okamžitě použity a uložené ve vnitřním seznamu. Jsou použity přechody (přidané do scénáře pro konkrétní hodnotu) při volání CAnimationController::AnimateGroup.
+Volánítéto funkce chcete přidat přechod do vnitřního seznamu přechodů, které mají být použity na proměnnou animace. Když přidáte přechody, nejsou použity okamžitě a uloženy v interním seznamu. Přechody jsou použity (přidány do scénáře pro určitou hodnotu) při volání CAnimationController::AnimateGroup.
 
-##  <a name="canimationvalue"></a>  CAnimationValue::CAnimationValue
+## <a name="canimationvaluecanimationvalue"></a><a name="canimationvalue"></a>CAnimationValue::CAnimationValue
 
-Vytvoří objekt canimationvalue –.
+Vytvoří objekt CAnimationValue.
 
 ```
 CAnimationValue();
@@ -126,22 +126,22 @@ CAnimationValue(
 *dblDefaultValue*<br/>
 Určuje výchozí hodnotu.
 
-*nGroupID*<br/>
+*nID skupiny*<br/>
 Určuje ID skupiny.
 
-*nObjectID*<br/>
+*nID objektu*<br/>
 Určuje ID objektu.
 
 *dwUserData*<br/>
-Určuje data definovaná uživatelem.
+určuje uživatelem definovaná data.
 
 ### <a name="remarks"></a>Poznámky
 
-Vytvoří objekt canimationvalue – s výchozí vlastností: výchozí hodnota, ID skupiny a ID objektu jsou nastaveny na hodnotu 0.
+Konstrukce objektu CAnimationValue s výchozími vlastnostmi: výchozí hodnota, ID skupiny a ID objektu jsou nastaveny na 0.
 
-##  <a name="getanimationvariablelist"></a>  CAnimationValue::GetAnimationVariableList
+## <a name="canimationvaluegetanimationvariablelist"></a><a name="getanimationvariablelist"></a>CAnimationValue::GetAnimationVariableList
 
-Umístí animace zapouzdřené proměnné do seznamu.
+Vloží zapouzdřenou proměnnou animace do seznamu.
 
 ```
 virtual void GetAnimationVariableList(
@@ -151,10 +151,10 @@ virtual void GetAnimationVariableList(
 
 ### <a name="parameters"></a>Parametry
 
-*lst*<br/>
-Po návratu funkce obsahuje ukazatel na canimationvariable – představující animovaný hodnotu.
+*Lst*<br/>
+Když funkce vrátí, obsahuje ukazatel CAnimationVariable představující animovanou hodnotu.
 
-##  <a name="getvalue"></a>  CAnimationValue::GetValue
+## <a name="canimationvaluegetvalue"></a><a name="getvalue"></a>CAnimationValue::Hodnota GetValue
 
 Načte aktuální hodnotu.
 
@@ -165,23 +165,23 @@ BOOL GetValue(INT32& nValue);
 
 ### <a name="parameters"></a>Parametry
 
-*dblValue*<br/>
-Výstup. Po návratu funkce obsahuje aktuální hodnotu proměnné animace.
+*hodnota dblValue*<br/>
+Výstup. Když funkce vrátí, obsahuje aktuální hodnotu proměnné animace.
 
-*nValue*<br/>
-Výstup. Po návratu funkce obsahuje aktuální hodnotu proměnné animace.
+*nHodnota*<br/>
+Výstup. Když funkce vrátí, obsahuje aktuální hodnotu proměnné animace.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE, pokud aktuální hodnota se načetla úspěšně; v opačném případě FALSE.
+PRAVDA, pokud byla aktuální hodnota úspěšně načtena; jinak FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Volání této funkce načtete aktuální hodnotu. Tato implementace volá zapouzdřený objekt modelu COM, a pokud volání selže, tato metoda vrátí výchozí hodnotu, která byla dříve nastavena v konstruktoru, nebo s SetDefaultValue.
+Volání této funkce načíst aktuální hodnotu. Tato implementace volá zapouzdřený objekt COM a pokud volání selže, tato metoda vrátí výchozí hodnotu, která byla dříve nastavena v konstruktoru nebo s SetDefaultValue.
 
-##  <a name="getvariable"></a>  CAnimationValue::GetVariable
+## <a name="canimationvaluegetvariable"></a><a name="getvariable"></a>CAnimationValue::Proměnná
 
-Poskytuje přístup k zapouzdřenému animace proměnné.
+Poskytuje přístup k zapouzdřené proměnné animace.
 
 ```
 CAnimationVariable& GetVariable();
@@ -189,23 +189,23 @@ CAnimationVariable& GetVariable();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Odkaz na proměnnou zapouzdřený animace.
+Odkaz na zapouzdřenou proměnnou animace.
 
 ### <a name="remarks"></a>Poznámky
 
-Tuto metodu použijte pro přístup k proměnné zapouzdřený animace. Canimationvariable – získáte přístup k základní IUIAnimationVariable objekt, jehož ukazatel může mít hodnotu NULL, pokud nebyl vytvořen proměnné animace.
+Tuto metodu použijte pro přístup k zapouzdřené proměnné animace. Z CAnimationVariable získáte přístup k podkladovému objektu IUIAnimationVariable, jehož ukazatel může být NULL, pokud nebyla vytvořena proměnná animace.
 
-##  <a name="m_value"></a>  CAnimationValue::m_value
+## <a name="canimationvaluem_value"></a><a name="m_value"></a>CAnimationValue::m_value
 
-Zapouzdřený objekt animace proměnné, která představuje hodnotu animace.
+Zapouzdřená proměnná animace, která představuje hodnotu animace.
 
 ```
 CAnimationVariable m_value;
 ```
 
-##  <a name="operator_double"></a>  CAnimationValue::operator DOUBLE
+## <a name="canimationvalueoperator-double"></a><a name="operator_double"></a>CAnimationValue::operátor DOUBLE
 
-Poskytuje převod mezi canimationvalue – a DOUBLE.
+Poskytuje převod mezi CAnimationValue a DOUBLE.
 
 ```
 operator DOUBLE();
@@ -213,15 +213,15 @@ operator DOUBLE();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Aktuální hodnota hodnota animace.
+Aktuální hodnota hodnoty animace.
 
 ### <a name="remarks"></a>Poznámky
 
-Poskytuje převod mezi canimationvalue – a DOUBLE. Interně tato metoda volá GetValue a neprovádí kontrolu chyb. Pokud GetValue selže, vrácená hodnota bude obsahovat výchozí hodnotu dříve nastavené v konstruktoru nebo s SetDefaultValue.
+Poskytuje převod mezi CAnimationValue a DOUBLE. Tato metoda interně volá GetValue a nekontroluje chyby. Pokud hodnota GetValue selže, vrácená hodnota bude obsahovat výchozí hodnotu, která byla dříve nastavena v konstruktoru nebo s hodnotou SetDefaultValue.
 
-##  <a name="operator_int32"></a>  CAnimationValue::operator INT32
+## <a name="canimationvalueoperator-int32"></a><a name="operator_int32"></a>CAnimationValue::operátor INT32
 
-Poskytuje převod mezi canimationvalue – a datový typ INT32.
+Poskytuje převod mezi CAnimationValue a INT32.
 
 ```
 operator INT32();
@@ -229,15 +229,15 @@ operator INT32();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Aktuální hodnota animace hodnotu jako celé číslo.
+Aktuální hodnota hodnoty animace jako celé číslo.
 
 ### <a name="remarks"></a>Poznámky
 
-Poskytuje převod mezi canimationvalue – a datový typ INT32. Interně tato metoda volá GetValue a neprovádí kontrolu chyb. Pokud GetValue selže, vrácená hodnota bude obsahovat výchozí hodnotu dříve nastavené v konstruktoru nebo s SetDefaultValue.
+Poskytuje převod mezi CAnimationValue a INT32. Tato metoda interně volá GetValue a nekontroluje chyby. Pokud hodnota GetValue selže, vrácená hodnota bude obsahovat výchozí hodnotu, která byla dříve nastavena v konstruktoru nebo s hodnotou SetDefaultValue.
 
-##  <a name="operator_eq"></a>  CAnimationValue::operator =
+## <a name="canimationvalueoperator"></a><a name="operator_eq"></a>CAnimationValue::operátor=
 
-Canimationvalue – přiřadí hodnotu DOUBLE.
+Přiřadí hodnotu DOUBLE hodnotě CAnimationValue.
 
 ```
 void operator=(DOUBLE dblVal);
@@ -247,16 +247,16 @@ void operator=(INT32 nVal);
 ### <a name="parameters"></a>Parametry
 
 *dblVal*<br/>
-Určuje hodnotu pro přiřazení hodnoty animace.
+Určuje hodnotu, která má být přiřazena hodnotě animace.
 
 *nVal*<br/>
-Určuje hodnotu pro přiřazení hodnoty animace.
+Určuje hodnotu, která má být přiřazena hodnotě animace.
 
 ### <a name="remarks"></a>Poznámky
 
-Canimationvalue – přiřadí hodnotu DOUBLE. Tato hodnota nastavena jako výchozí hodnotu pro proměnnou zapouzdřený animace. Pokud odebíráte tento objekt animace na události (ValueChanged nebo IntegerValueChanged), musíte znovu zapnout. Tyto události.
+Přiřadí hodnotu DOUBLE hodnotě CAnimationValue. Tato hodnota je nastavena jako výchozí hodnota pro zapouzdřenou proměnnou animace. Pokud jste se přihlásili k odběru tohoto objektu animace k událostem (ValueChanged nebo IntegerValueChanged), je třeba tyto události znovu povolit.
 
-##  <a name="setdefaultvalue"></a>  CAnimationValue::SetDefaultValue
+## <a name="canimationvaluesetdefaultvalue"></a><a name="setdefaultvalue"></a>CAnimationValue::SetDefaultValue
 
 Nastaví výchozí hodnotu.
 
@@ -271,8 +271,8 @@ Určuje výchozí hodnotu.
 
 ### <a name="remarks"></a>Poznámky
 
-Tuto metodu použijte k nastavení výchozí hodnoty. Výchozí hodnota se vrátí do aplikace při animaci nebyl spuštěn a/nebo základní objekt modelu COM není vytvořená. Pokud už je vytvořený na základní objekt modelu COM zapouzdřena v CAnimationVarible, znovu vytvoří tuto metodu, proto možná budete muset volat metody EnableValueChanged/EnableIntegerValueChanged znovu.
+Pomocí této metody můžete nastavit výchozí hodnotu. Výchozí hodnota je vrácena do aplikace, pokud animace nebyla spuštěna a/nebo základní objekt COM nebyl vytvořen. Pokud základní objekt COM zapouzdřený v CAnimationVarible byl již vytvořen, tato metoda jej znovu vytvoří, proto možná budete muset znovu volat metody EnableValueChanged/EnableIntegerValueChanged.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Třídy](../../mfc/reference/mfc-classes.md)

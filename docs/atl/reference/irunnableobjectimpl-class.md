@@ -1,5 +1,5 @@
 ---
-title: IRunnableObjectImpl – třída
+title: Třída IRunnableObjectImpl
 ms.date: 11/04/2016
 f1_keywords:
 - IRunnableObjectImpl
@@ -16,19 +16,19 @@ helpviewer_keywords:
 - controls [ATL], running
 - controls [C++], container running in ATL
 ms.assetid: 305c7c3b-889e-49dd-aca1-34379c1b9931
-ms.openlocfilehash: 6b1af7c21c6f5028ad6d3a228cb22650fa3cef42
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 2843c0c25a5c104ffbdff72255ac5d85cf53b1ee
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69495672"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81329450"
 ---
-# <a name="irunnableobjectimpl-class"></a>IRunnableObjectImpl – třída
+# <a name="irunnableobjectimpl-class"></a>Třída IRunnableObjectImpl
 
-Tato třída implementuje `IUnknown` a poskytuje výchozí implementaci rozhraní [IRunnableObject](/windows/win32/api/objidl/nn-objidl-irunnableobject) .
+Tato třída `IUnknown` implementuje a poskytuje výchozí implementaci rozhraní [IRunnableObject.](/windows/win32/api/objidl/nn-objidl-irunnableobject)
 
 > [!IMPORTANT]
->  Tato třída a její členové nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime.
+> Tuto třídu a její členy nelze použít v aplikacích, které se spouštějí v prostředí Windows Runtime.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -40,25 +40,25 @@ class IRunnableObjectImpl
 #### <a name="parameters"></a>Parametry
 
 *T*<br/>
-Vaše třída, která je `IRunnableObjectImpl`odvozena z.
+Vaše třída, odvozená z `IRunnableObjectImpl`.
 
 ## <a name="members"></a>Členové
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[IRunnableObjectImpl::GetRunningClass](#getrunningclass)|Vrátí CLSID běžícího ovládacího prvku. Implementace ATL nastaví identifikátor CLSID na GUID_NULL a vrátí E_UNEXPECTED.|
-|[IRunnableObjectImpl::IsRunning](#isrunning)|Určuje, zda je ovládací prvek spuštěn. Implementace ATL vrátí hodnotu TRUE.|
-|[IRunnableObjectImpl::LockRunning](#lockrunning)|Zamkne ovládací prvek do běžícího stavu. Implementace ATL vrací S_OK.|
-|[IRunnableObjectImpl:: Run](#run)|Vynutí spuštění ovládacího prvku. Implementace ATL vrací S_OK.|
-|[IRunnableObjectImpl::SetContainedObject](#setcontainedobject)|Indikuje, že ovládací prvek je vložený. Implementace ATL vrací S_OK.|
+|[IRunnableObjectImpl::GetRunningClass](#getrunningclass)|Vrátí clsid spuštěného ovládacího prvku. Implementace ATL nastaví CLSID na GUID_NULL a vrátí E_UNEXPECTED.|
+|[IRunnableObjectImpl::Jespuštěno](#isrunning)|Určuje, zda je ovládací prvek spuštěn. Implementace ATL vrátí hodnotu PRAVDA.|
+|[IRunnableObjectImpl::LockRunning](#lockrunning)|Zamkne ovládací prvek do spuštěného stavu. Implementace ATL vrátí S_OK.|
+|[IRunnableObjectImpl::Spustit](#run)|Vynutí spuštění ovládacího prvku. Implementace ATL vrátí S_OK.|
+|[IRunnableObjectImpl::SetContainedObject](#setcontainedobject)|Označuje, že ovládací prvek je vložen. Implementace ATL vrátí S_OK.|
 
 ## <a name="remarks"></a>Poznámky
 
-Rozhraní [IRunnableObject](/windows/win32/api/objidl/nn-objidl-irunnableobject) umožňuje kontejneru určit, jestli je ovládací prvek spuštěný, vynutí jeho spuštění nebo ho zamknout do běžícího stavu. Třída `IRunnableObjectImpl` poskytuje výchozí implementaci tohoto rozhraní a implementuje `IUnknown` odesláním informací do zařízení výpisu paměti v sestaveních pro ladění.
+[Rozhraní IRunnableObject](/windows/win32/api/objidl/nn-objidl-irunnableobject) umožňuje kontejneru určit, pokud je spuštěn ovládací prvek, vynutit jej spustit nebo zamknout do spuštěného stavu. Třída `IRunnableObjectImpl` poskytuje výchozí implementaci tohoto rozhraní `IUnknown` a implementuje odesláním informací do zařízení s výpisem stavu paměti v sestavení ladění.
 
-**Související články** [Kurz ATL](../../atl/active-template-library-atl-tutorial.md), [Vytvoření projektu ATL](../../atl/reference/creating-an-atl-project.md)
+**Související články** [ATL Výuka](../../atl/active-template-library-atl-tutorial.md), [Vytvoření projektu ATL](../../atl/reference/creating-an-atl-project.md)
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -68,11 +68,11 @@ Rozhraní [IRunnableObject](/windows/win32/api/objidl/nn-objidl-irunnableobject)
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlctl. h
+**Záhlaví:** atlctl.h
 
-##  <a name="getrunningclass"></a>  IRunnableObjectImpl::GetRunningClass
+## <a name="irunnableobjectimplgetrunningclass"></a><a name="getrunningclass"></a>IRunnableObjectImpl::GetRunningClass
 
-Vrátí CLSID běžícího ovládacího prvku.
+Vrátí clsid spuštěného ovládacího prvku.
 
 ```
 HRESULT GetRunningClass(LPCLSID lpClsid);
@@ -80,13 +80,13 @@ HRESULT GetRunningClass(LPCLSID lpClsid);
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Implementace knihovny ATL nastaví \* *lpClsid* na GUID_NULL a vrátí E_UNEXPECTED.
+Implementace ATL \* nastaví *lpClsid* na GUID_NULL a vrátí E_UNEXPECTED.
 
 ### <a name="remarks"></a>Poznámky
 
-Viz [IRunnableObject:: GetRunningClass](/windows/win32/api/objidl/nf-objidl-irunnableobject-getrunningclass) v Windows SDK.
+Viz [IRunnableObject::GetRunningClass](/windows/win32/api/objidl/nf-objidl-irunnableobject-getrunningclass) v sadě Windows SDK.
 
-##  <a name="isrunning"></a>IRunnableObjectImpl:: inrunning
+## <a name="irunnableobjectimplisrunning"></a><a name="isrunning"></a>IRunnableObjectImpl::Jespuštěno
 
 Určuje, zda je ovládací prvek spuštěn.
 
@@ -96,15 +96,15 @@ virtual BOOL IsRunning();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Implementace ATL vrátí hodnotu TRUE.
+Implementace ATL vrátí hodnotu PRAVDA.
 
 ### <a name="remarks"></a>Poznámky
 
-Viz [IRunnableObject::-Running](/windows/win32/api/objidl/nf-objidl-irunnableobject-isrunning) v Windows SDK.
+Viz [IRunnableObject::IsRunning](/windows/win32/api/objidl/nf-objidl-irunnableobject-isrunning) v sadě Windows SDK.
 
-##  <a name="lockrunning"></a>  IRunnableObjectImpl::LockRunning
+## <a name="irunnableobjectimpllockrunning"></a><a name="lockrunning"></a>IRunnableObjectImpl::LockRunning
 
-Zamkne ovládací prvek do běžícího stavu.
+Zamkne ovládací prvek do spuštěného stavu.
 
 ```
 HRESULT LockRunning(BOOL fLock, BOOL fLastUnlockCloses);
@@ -112,13 +112,13 @@ HRESULT LockRunning(BOOL fLock, BOOL fLastUnlockCloses);
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Implementace ATL vrací S_OK.
+Implementace ATL vrátí S_OK.
 
 ### <a name="remarks"></a>Poznámky
 
-Viz [IRunnableObject:: LockRunning](/windows/win32/api/objidl/nf-objidl-irunnableobject-lockrunning) v Windows SDK.
+Viz [IRunnableObject::LockRunning](/windows/win32/api/objidl/nf-objidl-irunnableobject-lockrunning) v sadě Windows SDK.
 
-##  <a name="run"></a>IRunnableObjectImpl:: Run
+## <a name="irunnableobjectimplrun"></a><a name="run"></a>IRunnableObjectImpl::Spustit
 
 Vynutí spuštění ovládacího prvku.
 
@@ -128,15 +128,15 @@ HRESULT Run(LPBINDCTX lpbc);
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Implementace ATL vrací S_OK.
+Implementace ATL vrátí S_OK.
 
 ### <a name="remarks"></a>Poznámky
 
-Viz [IRunnableObject:: Run](/windows/win32/api/objidl/nf-objidl-irunnableobject-run) in the Windows SDK.
+Viz [IRunnableObject::Run](/windows/win32/api/objidl/nf-objidl-irunnableobject-run) in the Windows SDK.
 
-##  <a name="setcontainedobject"></a>IRunnableObjectImpl::SetContainedObject
+## <a name="irunnableobjectimplsetcontainedobject"></a><a name="setcontainedobject"></a>IRunnableObjectImpl::SetContainedObject
 
-Indikuje, že ovládací prvek je vložený.
+Označuje, že ovládací prvek je vložen.
 
 ```
 HRESULT SetContainedObject(BOOL fContained);
@@ -144,13 +144,13 @@ HRESULT SetContainedObject(BOOL fContained);
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Implementace ATL vrací S_OK.
+Implementace ATL vrátí S_OK.
 
 ### <a name="remarks"></a>Poznámky
 
-Viz [IRunnableObject:: SetContainedObject](/windows/win32/api/objidl/nf-objidl-irunnableobject-setcontainedobject) v Windows SDK.
+Viz [IRunnableObject::SetContainedObject](/windows/win32/api/objidl/nf-objidl-irunnableobject-setcontainedobject) v sadě Windows SDK.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[CComControl – třída](../../atl/reference/ccomcontrol-class.md)<br/>
+[Třída CComControl](../../atl/reference/ccomcontrol-class.md)<br/>
 [Přehled třídy](../../atl/atl-class-overview.md)

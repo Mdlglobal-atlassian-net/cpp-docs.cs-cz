@@ -1,5 +1,5 @@
 ---
-title: Csingledoctemplate – třída
+title: Třída CSingleDocTemplate
 ms.date: 11/04/2016
 f1_keywords:
 - CSingleDocTemplate
@@ -8,14 +8,14 @@ f1_keywords:
 helpviewer_keywords:
 - CSingleDocTemplate [MFC], CSingleDocTemplate
 ms.assetid: 4f3a8212-81ee-48a0-ad22-e0ed7c36a391
-ms.openlocfilehash: 4d1361734f38d903e2171839b95888863126974a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5a014b35a6cd2d12367e190e4d6dd689e28eae66
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324179"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81318351"
 ---
-# <a name="csingledoctemplate-class"></a>Csingledoctemplate – třída
+# <a name="csingledoctemplate-class"></a>Třída CSingleDocTemplate
 
 Definuje šablonu dokumentu, která implementuje rozhraní jednoho dokumentu (SDI).
 
@@ -29,35 +29,35 @@ class CSingleDocTemplate : public CDocTemplate
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CSingleDocTemplate::CSingleDocTemplate](#csingledoctemplate)|Vytvoří `CSingleDocTemplate` objektu.|
+|[CSingleDocTemplate::CSingleDocTemplate](#csingledoctemplate)|Vytvoří `CSingleDocTemplate` objekt.|
 
 ## <a name="remarks"></a>Poznámky
 
-Aplikace SDI hlavní okno rámce používá k zobrazení dokumentu. najednou může být otevřeno pouze jeden dokument.
+Aplikace SDI používá okno hlavního rámce k zobrazení dokumentu; současně lze otevřít pouze jeden dokument.
 
-Definuje šablonu dokumentu vztah mezi tři typy tříd:
+Šablona dokumentu definuje vztah mezi třemi typy tříd:
 
-- Třídy dokumentu, které jsou odvozeny z `CDocument`.
+- Třída dokumentu, která je `CDocument`odvozena z aplikace .
 
-- Třídy zobrazení, která zobrazuje data ze třídy dokumentu uvedené výše. Z této třídy lze odvodit `CView`, `CScrollView`, `CFormView`, nebo `CEditView`. (Můžete také použít `CEditView` přímo.)
+- Třída zobrazení, která zobrazuje data z výše uvedené třídy dokumentu. Tuto třídu můžete `CView` `CScrollView`odvodit z , , `CFormView`nebo `CEditView`. (Můžete také `CEditView` použít přímo.)
 
-- Třída okno rámce, který obsahuje zobrazení. Pro šablonu aplikace SDI dokumentu, lze odvodit z této třídy `CFrameWnd`; Pokud není potřeba přizpůsobit chování hlavní okno rámce, můžete použít `CFrameWnd` přímo bez odvození vlastní třídy.
+- Třída okna rámce, která obsahuje zobrazení. Pro šablonu dokumentu SDI můžete tuto `CFrameWnd`třídu odvodit z ; Pokud nepotřebujete přizpůsobit chování okna hlavního rámce, můžete `CFrameWnd` použít přímo bez odvození vlastní třídy.
 
-Aplikace SDI obvykle podporuje jeden typ souboru, takže má jenom jednu `CSingleDocTemplate` objektu. Najednou může být otevřeno pouze jeden dokument.
+Aplikace SDI obvykle podporuje jeden typ dokumentu, takže `CSingleDocTemplate` má pouze jeden objekt. Současně lze otevřít pouze jeden dokument.
 
-Není nutné volat jakékoli členské funkce `CSingleDocTemplate` s výjimkou konstruktoru. Obslužné rutiny framework `CSingleDocTemplate` objekty interně.
+Není nutné volat žádné členské funkce `CSingleDocTemplate` s výjimkou konstruktoru. Rozhraní framework `CSingleDocTemplate` zpracovává objekty interně.
 
-Další informace o používání `CSingleDocTemplate`, naleznete v tématu [šablony dokumentů a proces vytváření dokumentů/zobrazení](../../mfc/document-templates-and-the-document-view-creation-process.md).
+Další informace o `CSingleDocTemplate`použití naleznete v [tématu Document Templates and the Document/View Creation Process](../../mfc/document-templates-and-the-document-view-creation-process.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObjekt](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[CCmdCíl](../../mfc/reference/ccmdtarget-class.md)
 
-[CDocTemplate –](../../mfc/reference/cdoctemplate-class.md)
+[Šablona CDoc](../../mfc/reference/cdoctemplate-class.md)
 
 `CSingleDocTemplate`
 
@@ -65,9 +65,9 @@ Další informace o používání `CSingleDocTemplate`, naleznete v tématu [ša
 
 **Záhlaví:** afxwin.h
 
-##  <a name="csingledoctemplate"></a>  CSingleDocTemplate::CSingleDocTemplate
+## <a name="csingledoctemplatecsingledoctemplate"></a><a name="csingledoctemplate"></a>CSingleDocTemplate::CSingleDocTemplate
 
-Vytvoří `CSingleDocTemplate` objektu.
+Vytvoří `CSingleDocTemplate` objekt.
 
 ```
 CSingleDocTemplate(
@@ -79,10 +79,10 @@ CSingleDocTemplate(
 
 ### <a name="parameters"></a>Parametry
 
-*nIDResource*<br/>
-Určuje Identifikátor prostředku použitého typu dokumentu. To může zahrnovat nabídky, ikony, tabulky akcelerátorů a řetězcové prostředky.
+*nIDZdroj*<br/>
+Určuje ID prostředků použitých s typem dokumentu. To může zahrnovat menu, ikonu, tabulku akcelerátoru a prostředky řetězce.
 
-Prostředek řetězce se skládá z až sedm dílčích řetězců oddělených znakem "\n" (znak '\n' je potřeba jako zástupný symbol, pokud neuvedete podřetězce; ale nejsou nezbytné koncové znaky '\n'); Tyto podřetězců popisují typ dokumentu. Informace o dílčích řetězců naleznete v tématu [CDocTemplate::GetDocString](../../mfc/reference/cdoctemplate-class.md#getdocstring). Tento prostředek řetězce najdete v souboru prostředků aplikace. Příklad:
+Prostředek řetězce se skládá až ze sedmi podřetězců oddělených znakem \n (znak \n je potřebný jako zástupný symbol, pokud není zahrnut podřetězec; koncové znaky \n však nejsou nutné); tyto podřetězce popisují typ dokumentu. Informace o podřetězec, naleznete v tématu [CDocTemplate::GetDocString](../../mfc/reference/cdoctemplate-class.md#getdocstring). Tento řetězec prostředku se nachází v souboru prostředků aplikace. Příklad:
 
 ```RC
 // MYCALC.RC
@@ -92,22 +92,22 @@ BEGIN
 END
 ```
 
-Můžete upravit tento řetězec pomocí editoru řetězce; celý řetězec se zobrazí jako jedna položka v editoru řetězce, nikoli sedm samostatné položky.
+Tento řetězec můžete upravit pomocí editoru řetězců; celý řetězec se zobrazí jako jedna položka v editoru řetězců, nikoli jako sedm samostatných položek.
 
-Další informace o těchto typech prostředků najdete v tématu [Editor řetězců](../../windows/string-editor.md).
+Další informace o těchto typech prostředků naleznete v [Editoru řetězců](../../windows/string-editor.md).
 
-*pDocClass*<br/>
-Odkazuje `CRuntimeClass` objekt třídy dokumentu. Tato třída je `CDocument`-odvozené třídy, které definujete k vyjádření vašich dokumentů.
+*třída pDocClass*<br/>
+Odkazuje na `CRuntimeClass` objekt třídy dokumentu. Tato třída `CDocument`je odvozená třída, kterou definujete, aby reprezentovala vaše dokumenty.
 
 *pFrameClass*<br/>
-Odkazuje `CRuntimeClass` objekt okna rámce třídy. Tato třída může být `CFrameWnd`– odvozené třídy, nebo to může být `CFrameWnd` samotný Pokud chcete výchozí chování okna hlavního rámce.
+Odkazuje na `CRuntimeClass` objekt třídy okna rámce. Tato třída může `CFrameWnd`být odvozené třídy, `CFrameWnd` nebo může být sama, pokud chcete výchozí chování pro okno hlavního rámce.
 
 *pViewClass*<br/>
-Odkazuje `CRuntimeClass` objekt třídy zobrazení. Tato třída je `CView`-odvozené třídy, které definujete pro zobrazení dokumentů.
+Odkazuje na `CRuntimeClass` objekt třídy zobrazení. Tato třída `CView`je odvozená třída, kterou definujete pro zobrazení dokumentů.
 
 ### <a name="remarks"></a>Poznámky
 
-Dynamicky přidělovat `CSingleDocTemplate` objektu a předejte ji do `CWinApp::AddDocTemplate` z `InitInstance` členské funkce třídy aplikace.
+Dynamicky přidělit `CSingleDocTemplate` objekt a `CWinApp::AddDocTemplate` předat `InitInstance` jej z členské funkce třídy aplikace.
 
 ### <a name="example"></a>Příklad
 
@@ -115,14 +115,14 @@ Dynamicky přidělovat `CSingleDocTemplate` objektu a předejte ji do `CWinApp::
 
 [!code-cpp[NVC_MFCDocViewSDI#14](../../mfc/codesnippet/cpp/csingledoctemplate-class_2.cpp)]
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Ukázky knihovny MFC DOCKTOOL](../../overview/visual-cpp-samples.md)<br/>
-[CDocTemplate – třída](../../mfc/reference/cdoctemplate-class.md)<br/>
+[MFC Ukázka DOCKTOOL](../../overview/visual-cpp-samples.md)<br/>
+[Třída CDocTemplate](../../mfc/reference/cdoctemplate-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
-[CDocTemplate – třída](../../mfc/reference/cdoctemplate-class.md)<br/>
+[Třída CDocTemplate](../../mfc/reference/cdoctemplate-class.md)<br/>
 [CDocument – třída](../../mfc/reference/cdocument-class.md)<br/>
-[CFrameWnd – třída](../../mfc/reference/cframewnd-class.md)<br/>
-[CMultiDocTemplate – třída](../../mfc/reference/cmultidoctemplate-class.md)<br/>
-[CView – třída](../../mfc/reference/cview-class.md)<br/>
+[Třída CFrameWnd](../../mfc/reference/cframewnd-class.md)<br/>
+[Třída CMultiDocTemplate](../../mfc/reference/cmultidoctemplate-class.md)<br/>
+[Třída CView](../../mfc/reference/cview-class.md)<br/>
 [CWinApp – třída](../../mfc/reference/cwinapp-class.md)

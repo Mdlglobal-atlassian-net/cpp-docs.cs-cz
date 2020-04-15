@@ -20,16 +20,16 @@ helpviewer_keywords:
 - std::priority_queue [C++], size
 - std::priority_queue [C++], top
 ms.assetid: 69fca9cc-a449-4be4-97b7-02ca5db9cbb2
-ms.openlocfilehash: 3591264efec87c2c3454d0f885c19b30b73ae51c
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: cef85eafaa3aab1c448234399f146191de957b8b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458427"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81323020"
 ---
-# <a name="priorityqueue-class"></a>priority_queue – třída
+# <a name="priority_queue-class"></a>priority_queue – třída
 
-Třída adaptivního kontejneru pro šablony, která poskytuje omezení funkcí omezující přístup k hlavnímu prvku určitého základního typu kontejneru, který je vždy největší nebo nejvyšší prioritou. Do priority_queue lze přidat nové prvky a nejvyšší prvek priority_queue lze zkontrolovat nebo odebrat.
+Třída adaptéru kontejneru šablony, která poskytuje omezení funkcí omezujících přístup k hornímu prvku některého základního typu kontejneru, který je vždy největší nebo s nejvyšší prioritou. Nové prvky mohou být přidány do priority_queue a horní prvek priority_queue mohou být zkontrolovány nebo odstraněny.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -40,66 +40,66 @@ class priority_queue
 
 ### <a name="parameters"></a>Parametry
 
-*Textový*\
-Typ dat prvku, který bude uložen v priority_queue.
+*Typ*\
+Datový typ prvku, který má být uložen v priority_queue.
 
-*Vnitřního*\
-Typ podkladového kontejneru, který slouží k implementaci rozhraní priority_queue.
+*Kontejner*\
+Typ základní kontejner u implementovat priority_queue.
 
-*Porovnán*\
-Typ poskytující objekt funkce, který může porovnat dvě hodnoty prvků jako klíče řazení pro určení jejich relativního pořadí v priority_queue. Tento argument je nepovinný a binární `less<typename Container::value_type>` predikát je výchozí hodnota.
+*Porovnat*\
+Typ, který poskytuje objekt funkce, který může porovnat dva hodnoty elementu jako klíče řazení k určení jejich relativní pořadí v priority_queue. Tento argument je volitelný a binární `less<typename Container::value_type>` predikát je výchozí hodnota.
 
 ## <a name="remarks"></a>Poznámky
 
-Prvky třídy `Type` specifikované v prvním parametru šablony objektu Queue jsou synonyma s [value_type](#value_type) a musí odpovídat typu elementu v základní třídě `Container` kontejneru, která je stanovena druhou šablonou. ukazatele. `Type` Musí být přiřazen, aby bylo možné zkopírovat objekty daného typu a přiřadit hodnoty proměnným tohoto typu.
+Prvky třídy `Type` stanovené v prvním parametru šablony objektu fronty jsou synonymem [value_type](#value_type) a musí `Container` odpovídat typu prvku v základní třídě kontejneru stanovenému druhým parametrem šablony. Musí `Type` být přiřaditelné, aby bylo možné kopírovat objekty tohoto typu a přiřadit hodnoty proměnným tohoto typu.
 
-Priority_queue objedná sekvenci, kterou řídí, voláním objektu uložené funkce třídy `Traits`. Obecně, tyto prvky musí být menší než srovnatelné pro toto pořadí, což znamená, že když jsou uvedeny dva prvky, může být stanoveno, zda jsou ekvivalentní (v tom smyslu, že ani jeden není menší než ten druhý), nebo že jeden je menší než druhý. To má za výsledek řazení mezi neekvivalentními prvky. Technicky je funkce porovnání binárním predikátem, který indukuje přísné slabé řazení, standardním matematickým způsobem.
+Priority_queue seřadí sekvenci, kterou řídí `Traits`voláním uloženého objektu funkce třídy . Obecně, tyto prvky musí být menší než srovnatelné pro toto pořadí, což znamená, že když jsou uvedeny dva prvky, může být stanoveno, zda jsou ekvivalentní (v tom smyslu, že ani jeden není menší než ten druhý), nebo že jeden je menší než druhý. To má za výsledek řazení mezi neekvivalentními prvky. Technicky je funkce porovnání binárním predikátem, který indukuje přísné slabé řazení, standardním matematickým způsobem.
 
-Vhodné základní třídy kontejneru pro priority_queue zahrnují [třídu deque](../standard-library/deque-class.md) a výchozí [třídu Vector](../standard-library/vector-class.md) nebo jakýkoli jiný kontejner sekvence, který podporuje operace `front`, `push_back`a `pop_back` a a. iterátor náhodného přístupu. Základní třída kontejneru je zapouzdřena v rámci adaptéru kontejneru, který zpřístupňuje pouze omezené sady členských funkcí kontejneru sekvence jako veřejné rozhraní.
+Vhodné základní třídy kontejnerů pro priority_queue zahrnují [třídu deque](../standard-library/deque-class.md) a výchozí `front` `push_back` [vektorovou třídu](../standard-library/vector-class.md) nebo jakýkoli jiný kontejner sekvence, který podporuje operace aplikace , a `pop_back` a iterátor s náhodným přístupem. Základní třída kontejneru je zapouzdřena v adaptéru kontejneru, který zveřejňuje pouze omezenou sadu funkce kontejneru sekvence jako veřejné rozhraní.
 
-Přidávání prvků do a odebírání prvků z `priority_queue` obou má logaritmickou složitost. Přístup k prvkům `priority_queue` v má konstantní složitost.
+Přidání prvků a odebrání `priority_queue` prvků z obou mají logaritmickou složitost. Přístup k prvkům `priority_queue` v má konstantní složitost.
 
-Existují tři typy adaptérů kontejneru definovaných C++ standardní knihovnou: stack, Queue a priority_queue. Každý z nich omezuje funkčnost některé základní třídy kontejneru, aby poskytovala přesně kontrolované rozhraní pro standardní datovou strukturu.
+Standardní knihovna jazyka C++definuje tři typy adaptérů kontejnerů: zásobník, fronta a priority_queue. Každý omezuje funkce některé základní třídy kontejneru poskytnout přesně řízené rozhraní pro standardní datové struktury.
 
-- [Třída Stack](../standard-library/stack-class.md) podporuje strukturu dat Last-in, First-out (LIFO). Dobrým analogem k tomu, že byste měli mít na paměti, je zásobník talířů. Prvky (pláty) mohou být vloženy, zkontrolovány nebo odebrány pouze z horní části zásobníku, což je poslední prvek na konci základního kontejneru. Omezení pro přístup pouze k hornímu prvku je důvodem pro použití třídy Stack.
+- [Třída zásobníku](../standard-library/stack-class.md) podporuje strukturu dat poslední dovnitř, první ven (LIFO). Dobrým analogem, který je třeba mít na paměti, by byl stoh desek. Prvky (desky) mohou být vloženy, zkontrolovány nebo odstraněny pouze z horní části zásobníku, což je poslední prvek na konci základního kontejneru. Omezení přístupu pouze k hornímu prvku je důvodem pro použití třídy zásobníku.
 
-- [Třída Queue](../standard-library/queue-class.md) podporuje strukturu dat first in, First-out (FIFO). Dobrým analogovým, kdo by měl mít na paměti, jsou lidé, kteří se budou podělit o bankovní informace. Prvky (lidé) mohou být přidány do zadní části řádku a jsou odebrány z přední části řádku. Může být zkontrolován jak přední, tak zadní strana řádku. Omezení pro přístup pouze k prvkům front a back tímto způsobem je důvodem použití třídy Queue.
+- [Třída fronty](../standard-library/queue-class.md) podporuje strukturu dat fifo (first-in, first-out). Dobrým analogem, který je třeba mít na paměti, by byli lidé, kteří stojí frontu na bankovní pokladní. Prvky (osoby) mohou být přidány do zadní části řádku a jsou odstraněny z přední části řádku. Přední i zadní část linky mohou být zkontrolovány. Omezení přístupu pouze přední a zadní prvky tímto způsobem je důvod pro použití třídy fronty.
 
-- Třída priority_queue řadí své prvky, aby největší prvek byl vždy na nejvyšší pozici. Podporuje vložení elementu a kontrolu a odebrání horního prvku. Dobrým analogovým, co je potřeba mít na paměti, jsou lidé, kteří se doplňují, kde jsou seřazené podle stáří, výšky nebo jiného kritéria.
+- Třída priority_queue objednává své prvky tak, aby největší prvek byl vždy na nejvyšší pozici. Podporuje vkládání prvku a kontrolu a odstranění horního prvku. Dobrým analogem, který je třeba mít na paměti, by byli lidé, kteří se řadí tam, kde jsou uspořádáni podle věku, výšky nebo jiného kritéria.
 
 ### <a name="constructors"></a>Konstruktory
 
 |Konstruktor|Popis|
 |-|-|
-|[priority_queue](#priority_queue)|Vytvoří objekt `priority_queue` , který je prázdný nebo který je kopií rozsahu základního objektu kontejneru nebo jiného `priority_queue`.|
+|[priority_queue](#priority_queue)|Konstrukce, `priority_queue` který je prázdný nebo který je kopií rozsahu základní ho `priority_queue`kontejneru objektu nebo jiné .|
 
 ### <a name="typedefs"></a>Typedefs
 
 |Název typu|Popis|
 |-|-|
-|[container_type](#container_type)|Typ, který poskytuje základní kontejner, který má být upraven pomocí `priority_queue`.|
-|[size_type](#size_type)|Typ unsigned integer, který může představovat počet prvků v `priority_queue`.|
-|[value_type](#value_type)|Typ, který představuje typ objektu uložený jako prvek v `priority_queue`.|
+|[container_type](#container_type)|Typ, který poskytuje základní kontejner, `priority_queue`který má být upraven .|
+|[size_type](#size_type)|Nepodepsaný podnosný typ, který může představovat počet prvků v . `priority_queue`|
+|[value_type](#value_type)|Typ, který představuje typ objektu uloženého `priority_queue`jako prvek v .|
 
 ### <a name="member-functions"></a>Členské funkce
 
 |Členská funkce|Popis|
 |-|-|
-|[empty](#empty)|Testuje, zda `priority_queue` je pole prázdné.|
-|[výstrah](#pop)|Odebere největší prvek `priority_queue` z horní pozice.|
-|[push](#push)|Přidá prvek do fronty priorit na základě priority elementu z operátoru <.|
-|[hodnota](#size)|Vrátí počet prvků v `priority_queue`.|
-|[vrchol](#top)|Vrátí odkaz const na největší prvek v horní části `priority_queue`.|
+|[empty](#empty)|Testuje, `priority_queue` pokud je prázdný.|
+|[Pop](#pop)|Odstraní největší prvek `priority_queue` z horní pozice.|
+|[Push](#push)|Přidá prvek do fronty priorit na základě priority prvku z operátoru<.|
+|[Velikost](#size)|Vrátí počet prvků v `priority_queue`rozhraní .|
+|[Top](#top)|Vrátí odkaz na největší prvek v horní `priority_queue`části .|
 
 ## <a name="requirements"></a>Požadavky
 
-**Hlavička:** \<> fronty
+**Záhlaví:** \<> fronty
 
 **Obor názvů:** std
 
-## <a name="container_type"></a>priority_queue::container_type
+## <a name="priority_queuecontainer_type"></a><a name="container_type"></a>priority_queue::container_type
 
-Typ, který poskytuje přizpůsobení základního kontejneru.
+Typ, který poskytuje základní kontejner, který má být upraven.
 
 ```cpp
 typedef Container container_type;
@@ -107,17 +107,17 @@ typedef Container container_type;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ je synonymum pro parametr `Container`šablony. C++ Standardní třída `deque` kontejneru sekvence knihovny a výchozí třída `vector` splňuje požadavky, které mají být použity jako základní kontejner pro objekt priority_queue. Mohou být také použity uživatelsky definované typy splňující požadavky.
+Typ je synonymem pro `Container`parametr šablony . Třída `deque` kontejneru sekvencí standardní knihovny jazyka C++ a výchozí třída `vector` splňují požadavky, které mají být použity jako základní kontejner pro priority_queue objekt. Mohou být rovněž použity uživatelem definované typy splňující požadavky.
 
-Další informace o `Container`naleznete v části poznámky v tématu [Třída priority_queue](../standard-library/priority-queue-class.md) .
+Další informace `Container`naleznete v části Poznámky v tématu [priority_queue třída.](../standard-library/priority-queue-class.md)
 
 ### <a name="example"></a>Příklad
 
-Příklad, jak deklarovat [](#priority_queue) a používat `container_type`, naleznete v příkladu pro priority_queue.
+Příklad pro [priority_queue](#priority_queue) najdete příklad, jak `container_type`deklarovat a používat .
 
-## <a name="empty"></a>priority_queue:: Empty
+## <a name="priority_queueempty"></a><a name="empty"></a>priority_queue::prázdný
 
-Testuje, zda je priority_queue prázdné.
+Testuje, pokud je priority_queue prázdný.
 
 ```cpp
 bool empty() const;
@@ -125,7 +125,7 @@ bool empty() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**true** , pokud je priority_queue prázdné; **false** , pokud je priority_queue neprázdné.
+**true,** pokud je priority_queue prázdná; **false,** pokud priority_queue není prázdný.
 
 ### <a name="example"></a>Příklad
 
@@ -161,9 +161,9 @@ The priority_queue q1 is not empty.
 The priority_queue s2 is empty.
 ```
 
-## <a name="pop"></a>priority_queue::p op
+## <a name="priority_queuepop"></a><a name="pop"></a>priority_queue::pop
 
-Odebere největší prvek priority_queue z horní pozice.
+Odstraní největší prvek priority_queue z horní pozice.
 
 ```cpp
 void pop();
@@ -171,7 +171,7 @@ void pop();
 
 ### <a name="remarks"></a>Poznámky
 
-Aby bylo možné použít členskou funkci, musí být priority_queue neprázdný. Horní část priority_queue je vždy obsazena největším prvkem v kontejneru.
+Priority_queue musí být neprázdný, aby bylo možné použít členskou funkci. Horní část priority_queue je vždy obsazena největším prvkem v kontejneru.
 
 ### <a name="example"></a>Příklad
 
@@ -217,9 +217,9 @@ After a pop, the priority_queue length is 2.
 After a pop, the element at the top of the priority_queue is 20.
 ```
 
-## <a name="priority_queue"></a>priority_queue::p riority_queue
+## <a name="priority_queuepriority_queue"></a><a name="priority_queue"></a>priority_queue::priority_queue
 
-Vytvoří priority_queue, který je prázdný nebo který je kopií rozsahu základního kontejneru objektu nebo jiného priority_queue.
+Vytvoří priority_queue, která je prázdná nebo je kopií rozsahu základního kontejneru nebo jiného priority_queue.
 
 ```cpp
 priority_queue();
@@ -243,27 +243,27 @@ priority_queue(InputIterator first, InputIterator last, const Traits& _comp, con
 ### <a name="parameters"></a>Parametry
 
 *_comp*\
-Funkce Compare typu **constTraits** slouží k seřazení prvků v priority_queue, přičemž výchozí hodnota porovná funkci základního kontejneru.
+Funkce porovnání typu **constTraits** slouží k pořadí prvků v priority_queue, který výchozí porovnání funkce základníkontejner.
 
 *_Cont*\
-Základní kontejner, ze kterého má být vytvořený priority_queue kopií
+Základní kontejner, jehož vyrobeno priority_queue má být kopie.
 
-*Kliknutím*\
-Priority_queue, ze kterého je vytvořená sada kopií.
+*Právo*\
+priority_queue, které je vytvořená sada kopie.
 
-*první*\
-Pozice prvního prvku v rozsahu prvků, které mají být zkopírovány.
+*První*\
+Umístění prvního prvku v rozsahu prvků, které mají být zkopírovány.
 
-*posledního*\
-Pozice prvního prvku mimo rozsah prvků, které mají být zkopírovány.
+*Poslední*\
+Pozice první prvek mimo rozsah prvků, které mají být zkopírovány.
 
 ### <a name="remarks"></a>Poznámky
 
-Každý z prvních tří konstruktorů určuje prázdnou počáteční priority_queue, druhý také určující typ funkce porovnání (`comp`), která se má použít při vytváření pořadí prvků a třetího explicitního určení `container_type`(`_Cont`), který se má použít. Klíčové slovo **Explicit** potlačí určité druhy automatických převodů typu.
+Každý z prvních tří konstruktorů určuje prázdnou počáteční priority_queue, druhý také`comp`specifikuje typ funkce porovnání ( ) která má být `container_type` `_Cont`použita při určování pořadí prvků a třetí explicitně specifikuje ( ). Klíčové slovo **explicitní** potlačí určité druhy automatického převodu typu.
 
-Čtvrtý konstruktor určuje kopii pravého priority_queueu.
+Čtvrtý konstruktor určuje kopii priority_queue *pravé*.
 
-Poslední tři konstruktory nakopírují rozsah \[ *první*, *Poslední*) z nějakého kontejneru a používají hodnoty k inicializaci priority_queue se zvýšením explicitního určení typu funkce porovnání třídy `Traits` a `container_type`.
+Poslední tři konstruktory \[zkopírují oblast *první*, *poslední*) některé hokontejneru a pomocí hodnot inicializovat priority_queue `Traits` s `container_type`rostoucí explicitní při určování typu funkce porovnání třídy a .
 
 ### <a name="example"></a>Příklad
 
@@ -376,9 +376,9 @@ int main( )
 }
 ```
 
-## <a name="push"></a>priority_queue::p USH
+## <a name="priority_queuepush"></a><a name="push"></a>priority_queue::push
 
-Přidá prvek do fronty priorit na základě priority elementu z operátoru <.
+Přidá prvek do fronty priorit na základě priority prvku z operátoru<.
 
 ```cpp
 void push(const Type& val);
@@ -386,8 +386,8 @@ void push(const Type& val);
 
 ### <a name="parameters"></a>Parametry
 
-*počítává*\
-Prvek přidaný do horní části priority_queueu.
+*Val*\
+Prvek přidán do horní části priority_queue.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -425,7 +425,7 @@ The priority_queue length is 3.
 The element at the top of the priority_queue is 30.
 ```
 
-## <a name="size"></a>priority_queue:: size
+## <a name="priority_queuesize"></a><a name="size"></a>priority_queue::velikost
 
 Vrátí počet prvků v priority_queue.
 
@@ -466,9 +466,9 @@ The priority_queue length is 1.
 The priority_queue length is now 2.
 ```
 
-## <a name="size_type"></a>priority_queue::size_type
+## <a name="priority_queuesize_type"></a><a name="size_type"></a>priority_queue::size_type
 
-Typ unsigned integer, který může představovat počet prvků v objektu priority_queue.
+Nepodepsaný podčíslení typ, který může představovat počet prvků v priority_queue.
 
 ```cpp
 typedef typename Container::size_type size_type;
@@ -476,15 +476,15 @@ typedef typename Container::size_type size_type;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ je synonymum pro `size_type` základní kontejner přizpůsobený priority_queue.
+Typ je synonymem `size_type` pro základní kontejner přizpůsobený priority_queue.
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [Velikost](#size) pro příklad, jak deklarovat a použít `size_type`.
+Příklad [velikosti](#size) naleznete v příkladu, jak `size_type`deklarovat a používat .
 
-## <a name="top"></a>priority_queue:: Top
+## <a name="priority_queuetop"></a><a name="top"></a>priority_queue::nahoru
 
-Vrátí odkaz const na největší prvek v horní části priority_queue.
+Vrátí odkaz na největší prvek v horní části priority_queue.
 
 ```cpp
 const_reference top() const;
@@ -492,11 +492,11 @@ const_reference top() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Odkaz na největší prvek, který je určen `Traits` funkcí, objektem priority_queue.
+Odkaz na největší prvek, jak `Traits` je určeno funkce, objekt priority_queue.
 
 ### <a name="remarks"></a>Poznámky
 
-Aby bylo možné použít členskou funkci, musí být priority_queue neprázdný.
+Priority_queue musí být neprázdný, aby bylo možné použít členskou funkci.
 
 ### <a name="example"></a>Příklad
 
@@ -530,9 +530,9 @@ The priority_queue length is 3.
 The element at the top of the priority_queue is 30.
 ```
 
-## <a name="value_type"></a>priority_queue::value_type
+## <a name="priority_queuevalue_type"></a><a name="value_type"></a>priority_queue::value_type
 
-Typ, který představuje typ objektu uložený jako prvek v priority_queue.
+Typ, který představuje typ objektu uloženého jako prvek v priority_queue.
 
 ```cpp
 typedef typename Container::value_type value_type;
@@ -540,7 +540,7 @@ typedef typename Container::value_type value_type;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ je synonymum pro `value_type` základní kontejner přizpůsobený priority_queue.
+Typ je synonymem `value_type` pro základní kontejner přizpůsobený priority_queue.
 
 ### <a name="example"></a>Příklad
 
@@ -572,7 +572,7 @@ The value_type is AnInt = 69
 The element at the top of the priority_queue is 69.
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Bezpečnost vlákna ve C++ standardní knihovně](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)
+[Bezpečnost vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Referenční příručka standardní knihovny jazyka C++](../standard-library/cpp-standard-library-reference.md)

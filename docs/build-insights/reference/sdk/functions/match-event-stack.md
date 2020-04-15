@@ -1,6 +1,6 @@
 ---
-title: MatchEventStack
-description: Reference C++ k funkci MatchEventStack sady SDK pro Build Insights
+title: Stack matchevent
+description: C++ Build Insights SDK MatchEventStack odkaz na funkci.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 445c2d00c24da10754d32256de0c691e82b557e1
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: a223d420e8c48667fbd1c6569f02d0486f597b5e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78332780"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81323876"
 ---
-# <a name="matcheventstack"></a>MatchEventStack
+# <a name="matcheventstack"></a>Stack matchevent
 
 ::: moniker range="<=vs-2015"
 
-Sada C++ SDK pro Build Insights je kompatibilní se sadou Visual Studio 2017 a novější. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek selektor verzí sady Visual Studio pro tento článek na sadu Visual Studio 2017 nebo Visual Studio 2019.
+Sada C++ Build Insights SDK je kompatibilní s Visual Studio 2017 a vyšší. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek pro výběr **verze** sady Visual Studio pro tento článek na Visual Studio 2017 nebo Visual Studio 2019. Nachází se v horní části obsahu na této stránce.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Funkce `MatchEventStack` se používá pro porovnání zásobníku událostí s konkrétní hierarchií událostí. Odpovídající hierarchie jsou předávány obslužné rutině pro další zpracování. Další informace o událostech, zásobníkech událostí a hierarchiích najdete v tématu [tabulka událostí](../event-table.md).
+Funkce `MatchEventStack` se používá k porovnání zásobníku událostí s konkrétní hierarchií událostí. Odpovídající hierarchie jsou předány obslužné rutině pro další zpracování. Další informace o událostech, hromádkách událostí a hierarchiích najdete v [tabulce událostí](../event-table.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -43,36 +43,36 @@ bool MatchEventStack(
 
 ### <a name="parameters"></a>Parametry
 
-*TEvent*\
-Typ nadřazeného prvku Eldest, který se má shodovat s zásobníkem událostí.
+*Událost*\
+Typ nejstarší ho rodiče, který se má shodovat v zásobníku událostí.
 
-*TEvents*\
-Zbývající typy, které chcete v zásobníku událostí porovnat.
+*Události*\
+Zbývající typy, které chcete porovnat v zásobníku událostí.
 
-*TCallable*\
-Typ, který podporuje `operator()`. Další informace o tom, které argumenty jsou předány tomuto operátorovi, *naleznete v popisu parametru s* parametrem.
+*Tcallable*\
+Typ, který `operator()`podporuje . Další informace o tom, které argumenty jsou tomuto operátoru předány, naleznete v popisu *volna.*
 
 *TExtraArgs*\
-Typy dalších argumentů předaných `MatchEventStack`.
+Typy další argumenty předány `MatchEventStack`.
 
 *eventStack*\
-Zásobník událostí, který se má shodovat s hierarchií typu události popsanou v *TEvent* a *TEvents*.
+Zásobník událostí odpovídá hierarchii typu události popsané *tevent* a *tevents*.
 
-*volat*\
-Po úspěšném porovnání zásobníku událostí s hierarchií typu události popsanou v *TEvent* a *TEvents*`MatchEventStack` vyvolá volání metody *Invoke.* Předá k navýšení jednoho argumentu r-value pro každý typ v hierarchii událostí. Sada parametrů *extraArgs* je ve zbývajících parametrech *pro vyžádání dokonalé.*
+*Callable*\
+Po úspěšném porovnání zásobníku událostí s hierarchií typu události `MatchEventStack` popsanou *společnostmi TEvent* a *TEvents*vyvolá *vyvolatelný*soubor . Přejde na *volatelný* jeden argument r-hodnota pro každý typ v hierarchii událostí. Balíček parametrů *extraArgs* je ve zbývajících parametrech *callable*perfektně předán .
 
 *extraArgs*\
-Argumenty, které získají *dokonalý a předávané k vyžádání* , spolu s odpovídajícím typem události.
+Argumenty, které získat perfektní-přepojit *na volatelné* spolu s odpovídající typ události.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota **bool** , která má **hodnotu true** , pokud bylo spárování úspěšné, nebo v opačném případě **false** .
+**Bool** hodnota, která je **true,** pokud odpovídající byl úspěšný, nebo **false** jinak.
 
 ## <a name="remarks"></a>Poznámky
 
-Poslední událost v *eventStack* se vždycky spáruje s poslední položkou v seznamu typů zřetězených \[*TEvent*, *TEvents...* \]. Všechny ostatní položky *TEvent* a *TEvents* se můžou shodovat s libovolnou pozicí v *eventStack* s výjimkou posledního, pokud jsou ve stejném pořadí.
+Poslední událost v *eventStack* je vždy porovnána s poslední \[položkou v zřetězené *TEvent*, *TEvents...* \] seznamu typů. Všechny ostatní *položky TEvent* a *TEvents* mohou odpovídat libovolné pozici v *eventStack* s výjimkou poslední, za předpokladu, že jsou ve stejném pořadí.
 
-Typy událostí, které se mají použít pro parametry *TEvent* a *TEvents* , se vyberou ze seznamu *tříd zachycení*. Seznam událostí a třídy zachycení, které můžete použít k přiřazení, najdete v tématu [tabulka událostí](../event-table.md).
+Typy událostí, které se mají použít pro parametry *TEvent* a *TEvents,* jsou vybrány ze seznamu *tříd zachycení*. Seznam událostí a tříd zachycení, které můžete použít k jejich sladění, naleznete v [tabulce událostí](../event-table.md).
 
 ## <a name="example"></a>Příklad
 

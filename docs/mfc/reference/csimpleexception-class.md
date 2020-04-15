@@ -1,5 +1,5 @@
 ---
-title: Csimpleexception – třída
+title: CSimpleException – třída
 ms.date: 11/04/2016
 f1_keywords:
 - CSimpleException
@@ -10,16 +10,16 @@ helpviewer_keywords:
 - CSimpleException [MFC], CSimpleException
 - CSimpleException [MFC], GetErrorMessage
 ms.assetid: be0eb8ef-e5b9-47d6-b0fb-efaff2d1e666
-ms.openlocfilehash: aa36fc0ac0eed5ea760224f9e0a3af1c97e18895
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eb94ba9e3d26b3cd910f23c3d4abb29d3b8b1cd1
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324087"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81318361"
 ---
-# <a name="csimpleexception-class"></a>Csimpleexception – třída
+# <a name="csimpleexception-class"></a>CSimpleException – třída
 
-Tato třída je základní třída pro výjimky kritických zdrojů MFC.
+Tato třída je základní třídou pro výjimky knihovny MFC kritické pro prostředky.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -31,37 +31,37 @@ class AFX_NOVTABLE CSimpleException : public CException
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
 |[CSimpleException::CSimpleException](#csimpleexception)|Konstruktor|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CSimpleException::GetErrorMessage](#geterrormessage)|Poskytuje text o chybu, že došlo k chybě.|
+|[CSimpleException::GetErrorMessage](#geterrormessage)|Obsahuje text o chybě, ke které došlo.|
 
 ## <a name="remarks"></a>Poznámky
 
-`CSimpleException` Základní třída pro výjimky kritických zdrojů MFC a zpracovává vlastnictví a inicializace chybovou zprávu. Následující třídy použijte `CSimpleException` jako své základní třídy:
+`CSimpleException`je základní třída pro výjimky knihovny MFC kritické pro prostředky a zpracovává vlastnictví a inicializaci chybové zprávy. Následující třídy `CSimpleException` používají jako svou základní třídu:
 
 |||
 |-|-|
-|[CMemoryException – třída](../../mfc/reference/cmemoryexception-class.md)|Výjimka mimo z důvodu nedostatku paměti|
-|[CNotSupportedException – třída](../../mfc/reference/cnotsupportedexception-class.md)|Žádosti o nepodporovanou operaci|
-|[CResourceException – třída](../../mfc/reference/cresourceexception-class.md)|Windows prostředek nebyl nalezen nebo není možné vytvořit|
-|[CUserException – třída](../../mfc/reference/cuserexception-class.md)|Výjimka, která určuje prostředek se nenašel.|
-|[CInvalidArgException – třída](../../mfc/reference/cinvalidargexception-class.md)|Výjimka, která určuje neplatný argument.|
+|[CMemoryException – třída](../../mfc/reference/cmemoryexception-class.md)|Výjimka nedostatku paměti|
+|[CNotSupportedException – třída](../../mfc/reference/cnotsupportedexception-class.md)|Požadavky na nepodporovanou operaci|
+|[CResourceException – třída](../../mfc/reference/cresourceexception-class.md)|Prostředek systému Windows nebyl nalezen nebo není kreatable|
+|[Třída CUserException](../../mfc/reference/cuserexception-class.md)|Výjimka, která označuje, že prostředek nebyl nalezen.|
+|[CInvalidArgException – třída](../../mfc/reference/cinvalidargexception-class.md)|Výjimka, která označuje neplatný argument|
 
-Protože `CSimpleException` je abstraktní základní třída, nelze deklarovat `CSimpleException` objektu přímo. Místo toho je třeba deklarovat odvozené objekty, jako jsou ty v předchozí tabulce. Pokud deklarujete odvozené třídy, použijte jako model předchozí třídy.
+Protože `CSimpleException` je abstraktní základní třída, `CSimpleException` nelze deklarovat objekt přímo. Místo toho je nutné deklarovat odvozené objekty, jako jsou ty v předchozí tabulce. Pokud deklarujete vlastní odvozenou třídu, použijte předchozí třídy jako model.
 
-Další informace najdete v tématu [cexception – třída](../../mfc/reference/cexception-class.md) tématu a [zpracování výjimek (MFC)](../../mfc/exception-handling-in-mfc.md).
+Další informace naleznete v tématu [CException Class](../../mfc/reference/cexception-class.md) a [Exception Handling (MFC).](../../mfc/exception-handling-in-mfc.md)
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObjekt](../../mfc/reference/cobject-class.md)
 
-[Cexception –](../../mfc/reference/cexception-class.md)
+[CException](../../mfc/reference/cexception-class.md)
 
 `CSimpleException`
 
@@ -69,7 +69,7 @@ Další informace najdete v tématu [cexception – třída](../../mfc/reference
 
 **Záhlaví:** afx.h
 
-##  <a name="csimpleexception"></a>  CSimpleException::CSimpleException
+## <a name="csimpleexceptioncsimpleexception"></a><a name="csimpleexception"></a>CSimpleException::CSimpleException
 
 Konstruktor
 
@@ -81,15 +81,15 @@ explicit CSimpleException(BOOL bAutoDelete);
 ### <a name="parameters"></a>Parametry
 
 *bAutoDelete*<br/>
-Zadejte hodnotu PRAVDA, pokud paměť pro `CSimpleException` objekt byl přidělen na haldě. To způsobí, že `CSimpleException` objektu, který chcete odstranit, když `Delete` členská funkce je volána k odstranění výjimku. Zadejte hodnotu FALSE, pokud `CSimpleException` objekt v zásobníku nebo je globální objekt. V tomto případě `CSimpleException` objektů nebudou odstraněny při `Delete` členská funkce je volána.
+Zadejte hodnotu TRUE, pokud byla na haldě přidělena paměť `CSimpleException` pro objekt. To způsobí, `CSimpleException` že objekt, `Delete` který má být odstraněn, když je volána členská funkce k odstranění výjimky. Zadejte hodnotu NEPRAVDA, `CSimpleException` pokud je objekt v zásobníku nebo je globálním objektem. V takovém případě `CSimpleException` nebude objekt odstraněn `Delete` při volání členské funkce.
 
 ### <a name="remarks"></a>Poznámky
 
-Je třeba obvykle nikdy přímo volání tohoto konstruktoru. Funkce, která vyvolá výjimku, by měl vytvořit instanci `CException`-odvozené třídy a volání konstruktoru, nebo použijte jedno z knihovny MFC vyvoláním funkce, jako například [afxthrowfileexception –](exception-processing.md#afxthrowfileexception), vyvolání předdefinovaný typ.
+Za normálních okolností by nikdy nutné volat tento konstruktor přímo. Funkce, která vyvolá výjimku by měla `CException`vytvořit instanci odvozené třídy a volat jeho konstruktor, nebo by měla použít jednu z funkcí mfc throw, jako je například [AfxThrowFileException](exception-processing.md#afxthrowfileexception), k vyvolání předdefinovaného typu.
 
-##  <a name="geterrormessage"></a>  CSimpleException::GetErrorMessage
+## <a name="csimpleexceptiongeterrormessage"></a><a name="geterrormessage"></a>CSimpleException::GetErrorMessage
 
-Voláním této funkce člena zadejte text o chybu, že došlo k chybě.
+Volání této členské funkce poskytnout text o chybě, ke které došlo.
 
 ```
 virtual BOOL GetErrorMessage(
@@ -100,24 +100,24 @@ virtual BOOL GetErrorMessage(
 
 ### <a name="parameters"></a>Parametry
 
-*lpszError*<br/>
-Ukazatel do vyrovnávací paměti, která se zobrazí chybová zpráva.
+*chyba lpsz*<br/>
+Ukazatel na vyrovnávací paměť, která obdrží chybovou zprávu.
 
-*nMaxError*<br/>
-Maximální počet znaků, které může obsahovat vyrovnávací paměti, včetně ukončovacího znaku NULL.
+*nChyba*<br/>
+Maximální počet znaků, které může vyrovnávací paměť obsahovat, včetně zakončení NULL.
 
 *pnHelpContext*<br/>
-Adresa UINT, která bude dostávat ID kontextové nápovědy Pokud má hodnotu NULL, vrátí se žádné ID.
+Adresa UINT, který obdrží ID kontextu nápovědy. Pokud null, žádné ID bude vrácena.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je funkce úspěšná; v opačném případě 0, pokud žádná chyba text zprávy je k dispozici.
+Nenulová, pokud je funkce úspěšná; v opačném případě 0, pokud není k dispozici žádný text chybové zprávy.
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace najdete v tématu [CException::GetErrorMessage](../../mfc/reference/cfileexception-class.md#geterrormessage).
+Další informace naleznete v [tématu CException::GetErrorMessage](../../mfc/reference/cfileexception-class.md#geterrormessage).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [CException – třída](../../mfc/reference/cexception-class.md)<br/>

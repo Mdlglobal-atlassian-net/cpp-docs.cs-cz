@@ -1,5 +1,5 @@
 ---
-title: CDataExchange Class
+title: CDataExchange – třída
 ms.date: 11/04/2016
 f1_keywords:
 - CDataExchange
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - CDataExchange [MFC], m_bSaveAndValidate
 - CDataExchange [MFC], m_pDlgWnd
 ms.assetid: 84ed6113-325d-493e-a75d-223f03a992b8
-ms.openlocfilehash: 0e7a9d429acb1acd72942e5f10ac0815232ddc69
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 73319ad898bfebf4caf191954ebb3935bd4ebce9
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62253566"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81321957"
 ---
-# <a name="cdataexchange-class"></a>CDataExchange Class
+# <a name="cdataexchange-class"></a>CDataExchange – třída
 
-Podporuje výměna dat dialogových oken (DDX) a rutiny (DDV) ověřování dat dialogového okna používané v rámci tříd Microsoft Foundation.
+Podporuje rutiny výměny dat dialogu (DDX) a ověření dat dialogových dat (DDV) používané třídami Microsoft Foundation.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,33 +41,33 @@ class CDataExchange
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CDataExchange::CDataExchange](#cdataexchange)|Vytvoří `CDataExchange` objektu.|
+|[CDataExchange::CDataExchange](#cdataexchange)|Vytvoří `CDataExchange` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CDataExchange::Fail](#fail)|Volá se, když se ověřování nezdaří. Obnoví fokus na předchozí ovládací prvek a vyvolá výjimku.|
-|[CDataExchange::PrepareCtrl](#preparectrl)|Připraví zadaný ovládací prvek pro výměnu dat nebo ověření. Použití pro ovládací prvky nonedit.|
-|[CDataExchange::PrepareEditCtrl](#prepareeditctrl)|Připraví zadané textové pole pro výměnu dat nebo ověření.|
-|[CDataExchange::PrepareOleCtrl](#prepareolectrl)|Určený ovládací prvek OLE připraví pro výměnu dat nebo ověření. Použití pro ovládací prvky nonedit.|
+|[CDataExchange::Selhání](#fail)|Nazývá se při ověření se nezdaří. Obnoví fokus na předchozí ovládací prvek a vyvolá výjimku.|
+|[CDataExchange::PrepareCtrl](#preparectrl)|Připraví zadaný ovládací prvek pro výměnu dat nebo ověření. Používá se pro ovládací prvky bez úprav.|
+|[CDataExchange::PrepareEditCtrl](#prepareeditctrl)|Připraví zadaný ovládací prvek úprav pro výměnu dat nebo ověření.|
+|[CDataExchange::PrepareOleCtrl](#prepareolectrl)|Připraví zadaný ovládací prvek OLE pro výměnu dat nebo ověření. Používá se pro ovládací prvky bez úprav.|
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CDataExchange::m_bSaveAndValidate](#m_bsaveandvalidate)|Příznak směru DDX a DDV.|
-|[CDataExchange::m_pDlgWnd](#m_pdlgwnd)|Dialogové okno nebo okno, kde data exchange probíhá.|
+|[CDataExchange::m_bSaveAndValidate](#m_bsaveandvalidate)|Příznak pro směr DDX a DDV.|
+|[CDataExchange::m_pDlgWnd](#m_pdlgwnd)|Dialogové okno nebo okno, ve kterém probíhá výměna dat.|
 
 ## <a name="remarks"></a>Poznámky
 
-`CDataExchange` nemá základní třídu.
+`CDataExchange`nemá základní třídu.
 
-Tuto třídu použít, pokud píšete rutiny výměny dat pro vlastní datové typy nebo ovládací prvky, nebo pokud vytváříte vlastní rutiny ověřování dat. Další informace o psaní vlastních rutiny DDX a DDV najdete v tématu [Technická poznámka 26](../../mfc/tn026-ddx-and-ddv-routines.md). Přehled DDX a DDV, naleznete v tématu [výměna dat dialogových oken a ověření](../../mfc/dialog-data-exchange-and-validation.md) a [dialogových oknech](../../mfc/dialog-boxes.md).
+Tuto třídu použijte, pokud píšete rutiny výměny dat pro vlastní datové typy nebo ovládací prvky nebo pokud píšete vlastní rutiny ověření dat. Další informace o psaní vlastních rutin DDX a DDV naleznete [v technické poznámce 26](../../mfc/tn026-ddx-and-ddv-routines.md). Přehled DDX a DDV najdete [v tématu Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md) and Dialog [Boxes](../../mfc/dialog-boxes.md).
 
-A `CDataExchange` objekt poskytuje kontextové informace potřebné pro DDX a DDV trvat umístit. Příznak *m_bSaveAndValidate* je FALSE při DDX slouží k naplnění počáteční hodnoty ovládací prvky dialogového okna z datové členy. Příznak *m_bSaveAndValidate* hodnotu TRUE, pokud DDX slouží k nastavení aktuální hodnoty ovládací prvky dialogového okna do datové členy a kdy DDV slouží k ověření datových hodnot. Pokud DDV ověření nezdaří, zobrazí se postup DDV okno se zprávou s vysvětlením vstupních chyb. Pak zavolá postup DDV `Fail` resetovat fokus na problematický ovládací prvek a vyvolat výjimku zastavte sledovací proces ověřování.
+Objekt `CDataExchange` poskytuje kontextové informace potřebné pro DDX a DDV. Příznak *m_bSaveAndValidate* je FALSE, pokud se ddx používá k vyplnění počátečních hodnot dialogových ovládacích prvků z datových členů. Příznak *m_bSaveAndValidate* je TRUE, pokud se ddx používá k nastavení aktuálních hodnot dialogových ovládacích prvků do datových členů a při použití ddv k ověření datových hodnot. Pokud se ověření DDV nezdaří, postup DDV zobrazí okno se zprávou vysvětlující vstupní chybu. Procedura DDV pak `Fail` zavolá, aby se fokus obnovil na problematický ovládací prvek a vyvolal výjimku pro zastavení procesu ověření.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -77,9 +77,9 @@ A `CDataExchange` objekt poskytuje kontextové informace potřebné pro DDX a DD
 
 **Záhlaví:** afxwin.h
 
-##  <a name="cdataexchange"></a>  CDataExchange::CDataExchange
+## <a name="cdataexchangecdataexchange"></a><a name="cdataexchange"></a>CDataExchange::CDataExchange
 
-Voláním této členské funkce k vytvoření `CDataExchange` objektu.
+Volání této členské funkce `CDataExchange` k vytvoření objektu.
 
 ```
 CDataExchange(
@@ -90,22 +90,22 @@ CDataExchange(
 ### <a name="parameters"></a>Parametry
 
 *pDlgWnd*<br/>
-Ukazatel do nadřazeného okna, která obsahuje ovládací prvek. Obvykle se jedná [CDialog](../../mfc/reference/cdialog-class.md)-odvozenému objektu.
+Ukazatel na nadřazené okno, které obsahuje ovládací prvek. Obvykle se jedná o [cDialog](../../mfc/reference/cdialog-class.md)-odvozený objekt.
 
 *bSaveAndValidate*<br/>
-Při hodnotě TRUE se tento objekt ověřuje data a pak zapíše data z ovládacích prvků členů. Pokud má hodnotu FALSE, tento objekt přesun dat z členů na ovládací prvky.
+Pokud TRUE, tento objekt ověří data, pak zapíše data z ovládacích prvků do členů. Pokud false, tento objekt přesune data z členů na ovládací prvky.
 
 ### <a name="remarks"></a>Poznámky
 
-Vytvoření `CDataExchange` objekt sami sebe k ukládání dalších informací datového objektu exchange k předání do vašeho okna [CWnd::DoDataExchange](../../mfc/reference/cwnd-class.md#dodataexchange) členskou funkci.
+Vytvořte `CDataExchange` objekt sami ukládat další informace v objektu výměny dat předat do okna [CWnd::DoDataExchange](../../mfc/reference/cwnd-class.md#dodataexchange) členské funkce.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCControlLadenDialog#70](../../mfc/codesnippet/cpp/cdataexchange-class_1.cpp)]
 
-##  <a name="fail"></a>  CDataExchange::Fail
+## <a name="cdataexchangefail"></a><a name="fail"></a>CDataExchange::Selhání
 
-Rozhraní volá tuto členskou funkci, pokud selže operace s daty ověření (DDV) dialogové okno.
+Rozhraní Framework volá tuto členská funkci, když se nezdaří operace ověření dat dialogu (DDV).
 
 ```
 void Fail();
@@ -113,15 +113,15 @@ void Fail();
 
 ### <a name="remarks"></a>Poznámky
 
-`Fail` Obnoví fokus a výběru ovládacího prvku, jejichž ověření se nezdařilo (Pokud je ovládací prvek pro obnovení). `Fail` následně vyvolává výjimku typu [cuserexception –](../../mfc/reference/cuserexception-class.md) zastavte sledovací proces ověřování. Výjimky způsobí, že okno se zprávou s vysvětlením chyb, který se má zobrazit. Po ověření DDV nezdaří, uživatel může znovu dat v ovládacím prvku problematické.
+`Fail`obnoví fokus a výběr do ovládacího prvku, jehož ověření se nezdařilo (pokud je ovládací prvek k obnovení). `Fail`pak vyvolá výjimku typu [CUserException](../../mfc/reference/cuserexception-class.md) zastavit proces ověřování. Výjimka způsobí, že okno se zprávou vysvětlující chybu, která má být zobrazena. Po selhání ověření DDV může uživatel znovu zadat data v ovládacím prvku problematický.
 
-Můžete volat implementors vlastní rutiny DDV `Fail` z jejich rutiny, když se ověřování nezdaří.
+Implementátoři vlastní rutiny DDV `Fail` můžete volat z jejich rutiny při ověření nezdaří.
 
-Další informace o psaní vlastních rutiny DDX a DDV najdete v tématu [Technická poznámka 26](../../mfc/tn026-ddx-and-ddv-routines.md). Přehled DDX a DDV, naleznete v tématu [výměna dat dialogových oken a ověření](../../mfc/dialog-data-exchange-and-validation.md) a [Dialog Box témata](../../mfc/dialog-boxes.md).
+Další informace o psaní vlastních rutin DDX a DDV naleznete [v technické poznámce 26](../../mfc/tn026-ddx-and-ddv-routines.md). Přehled ddx a ddv naleznete [v tématu Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md) and Dialog Box [Topics](../../mfc/dialog-boxes.md).
 
-##  <a name="m_bsaveandvalidate"></a>  CDataExchange::m_bSaveAndValidate
+## <a name="cdataexchangem_bsaveandvalidate"></a><a name="m_bsaveandvalidate"></a>CDataExchange::m_bSaveAndValidate
 
-Tento příznak určuje směr operace s daty exchange (DDX) dialogové okno.
+Tento příznak označuje směr operace výměny dat dialogu (DDX).
 
 ```
 BOOL m_bSaveAndValidate;
@@ -129,15 +129,15 @@ BOOL m_bSaveAndValidate;
 
 ### <a name="remarks"></a>Poznámky
 
-Příznaku je nenulová Pokud `CDataExchange` objektu se používá k přesunu dat z ovládací prvky dialogového okna na datové členy třídy dialogového okna, jakmile uživatel upravuje ovládací prvky. Příznak je nula, pokud objekt se používá k inicializaci dialogového okna ovládacích prvků z datové členy třídy dialogového okna.
+Příznak je nenulový, `CDataExchange` pokud se objekt používá k přesunutí dat z ovládacích prvků dialogu do datových členů třídy dialogů poté, co uživatel ovládací prvky upraví. Příznak je nula, pokud se objekt používá k inicializaci dialogových ovládacích prvků z datových členů třídy dialogů.
 
-Příznak je nenulový také při ověřování dat dialogového okna (DDV).
+Příznak je také nenulová během ověřování dat dialogového okna (DDV).
 
-Další informace o psaní vlastních rutiny DDX a DDV najdete v tématu [Technická poznámka 26](../../mfc/tn026-ddx-and-ddv-routines.md). Přehled DDX a DDV, naleznete v tématu [výměna dat dialogových oken a ověření](../../mfc/dialog-data-exchange-and-validation.md) a [Dialog Box témata](../../mfc/dialog-boxes.md).
+Další informace o psaní vlastních rutin DDX a DDV naleznete [v technické poznámce 26](../../mfc/tn026-ddx-and-ddv-routines.md). Přehled ddx a ddv naleznete [v tématu Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md) and Dialog Box [Topics](../../mfc/dialog-boxes.md).
 
-##  <a name="m_pdlgwnd"></a>  CDataExchange::m_pDlgWnd
+## <a name="cdataexchangem_pdlgwnd"></a><a name="m_pdlgwnd"></a>CDataExchange::m_pDlgWnd
 
-Obsahuje ukazatel [CWnd](../../mfc/reference/cwnd-class.md) objektu, pro který dialog výměnu dat (DDX) nebo ověřování (DDV) probíhat.
+Obsahuje ukazatel na [CWnd](../../mfc/reference/cwnd-class.md) objekt, pro který dialog výměna dat (DDX) nebo ověření (DDV) probíhá.
 
 ```
 CWnd* m_pDlgWnd;
@@ -145,13 +145,13 @@ CWnd* m_pDlgWnd;
 
 ### <a name="remarks"></a>Poznámky
 
-Tento objekt je obvykle [CDialog](../../mfc/reference/cdialog-class.md) objektu. Implementors vlastní rutiny DDX a DDV můžete použít k získání přístupu do dialogového okna, která obsahuje ovládací prvky jsou nasazeny na tento ukazatel.
+Tento objekt je obvykle [CDialog](../../mfc/reference/cdialog-class.md) objekt. Implementátory vlastní rutiny DDX nebo DDV můžete použít tento ukazatel získat přístup k dialogové okno, které obsahuje ovládací prvky, které pracují na.
 
-Další informace o psaní vlastních rutiny DDX a DDV najdete v tématu [Technická poznámka 26](../../mfc/tn026-ddx-and-ddv-routines.md). Přehled DDX a DDV, naleznete v tématu [výměna dat dialogových oken a ověření](../../mfc/dialog-data-exchange-and-validation.md) a [Dialog Box témata](../../mfc/dialog-boxes.md).
+Další informace o psaní vlastních rutin DDX a DDV naleznete [v technické poznámce 26](../../mfc/tn026-ddx-and-ddv-routines.md). Přehled ddx a ddv naleznete [v tématu Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md) and Dialog Box [Topics](../../mfc/dialog-boxes.md).
 
-##  <a name="preparectrl"></a>  CDataExchange::PrepareCtrl
+## <a name="cdataexchangepreparectrl"></a><a name="preparectrl"></a>CDataExchange::PrepareCtrl
 
-Rozhraní volá tuto funkci člena zadaný ovládací prvek Příprava výměna dat dialogových oken (DDX) a ověřování (DDV).
+Rozhraní Framework volá tuto členská funkci k přípravě zadaného ovládacího prvku pro výměnu dat dialogů (DDX) a ověření (DDV).
 
 ```
 HWND PrepareCtrl(int nIDC);
@@ -160,25 +160,25 @@ HWND PrepareCtrl(int nIDC);
 ### <a name="parameters"></a>Parametry
 
 *nIDC*<br/>
-ID ovládacího prvku abyste byli připraveni DDX a DDV
+ID ovládacího prvku, který má být připraven pro DDX nebo DDV.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-HWND určené pro DDX a DDV ovládacího prvku.
+HWND ovládacího prvku připravovaného pro DDX nebo DDV.
 
 ### <a name="remarks"></a>Poznámky
 
-Použít [PrepareEditCtrl](#prepareeditctrl) místo pro ovládacích prvcích pro úpravy; použijte pro všechny ostatní ovládací prvky tuto členskou funkci.
+Místo toho použijte [příkaz PrepareEditCtrl](#prepareeditctrl) pro ovládací prvky pro úpravy; tuto člennou funkci pro všechny ostatní ovládací prvky.
 
-Příprava se skládá z ovládacího prvku HWND v ukládání `CDataExchange` třídy. Rozhraní používá tento ovladač k obnovení dříve cílené ovládacího prvku v případě selhání DDX a DDV fokus.
+Příprava spočívá v uložení HWND ovládacího `CDataExchange` prvku ve třídě. Rozhraní framework používá tento popisovač k obnovení fokusu na dříve zaměřený ovládací prvek v případě selhání DDX nebo DDV.
 
-Implementors vlastní rutiny DDX a DDV by měly volat `PrepareCtrl` pro všechny ovládací prvky bez úprav, pro které výměna dat prostřednictvím DDX nebo ověřování dat prostřednictvím DDV.
+Realizátoři vlastních rutin DDX nebo DDV by měli volat `PrepareCtrl` pro všechny neupravované ovládací prvky, pro které si vyměňují data prostřednictvím DDX nebo ověřují data prostřednictvím DDV.
 
-Další informace o psaní vlastních rutiny DDX a DDV najdete v tématu [Technická poznámka 26](../../mfc/tn026-ddx-and-ddv-routines.md). Přehled DDX a DDV, naleznete v tématu [výměna dat dialogových oken a ověření](../../mfc/dialog-data-exchange-and-validation.md) a [Dialog Box témata](../../mfc/dialog-boxes.md).
+Další informace o psaní vlastních rutin DDX a DDV naleznete [v technické poznámce 26](../../mfc/tn026-ddx-and-ddv-routines.md). Přehled ddx a ddv naleznete [v tématu Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md) and Dialog Box [Topics](../../mfc/dialog-boxes.md).
 
-##  <a name="prepareeditctrl"></a>  CDataExchange::PrepareEditCtrl
+## <a name="cdataexchangeprepareeditctrl"></a><a name="prepareeditctrl"></a>CDataExchange::PrepareEditCtrl
 
-Rozhraní volá tuto funkci člena zadané textové pole Příprava výměna dat dialogových oken (DDX) a ověřování (DDV).
+Framework volá tuto členská funkci k přípravě zadaného ovládacího prvku pro výměnu dat dialogů (DDX) a ověření (DDV).
 
 ```
 HWND PrepareEditCtrl(int nIDC);
@@ -187,25 +187,25 @@ HWND PrepareEditCtrl(int nIDC);
 ### <a name="parameters"></a>Parametry
 
 *nIDC*<br/>
-ID ovládacího prvku pro úpravy se připravit DDX a DDV.
+ID editačního ovládacího prvku, který má být připraven pro DDX nebo DDV.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-HWND určené pro DDX a DDV ovládacího prvku pro úpravy.
+HWND editačního ovládacího prvku připravovaného pro DDX nebo DDV.
 
 ### <a name="remarks"></a>Poznámky
 
-Použití [PrepareCtrl](#preparectrl) místo pro všechny ovládací prvky bez úprav.
+Místo toho použijte [příkaz PrepareCtrl](#preparectrl) pro všechny ovládací prvky bez úprav.
 
-Příprava se skládá ze dvou kroků. Nejprve je potřeba `PrepareEditCtrl` ukládá ovládacího prvku HWND ve `CDataExchange` třídy. Rozhraní používá tento ovladač k obnovení dříve cílené ovládacího prvku v případě selhání DDX a DDV fokus. Druhý, `PrepareEditCtrl` nastaví příznak, který `CDataExchange` třída, která označuje, že ovládací prvek, jehož data se vyměňují nebo ověření je ovládací prvek upravit.
+Příprava se skládá ze dvou věcí. Nejprve `PrepareEditCtrl` uloží HWND ovládacího `CDataExchange` prvku ve třídě. Rozhraní framework používá tento popisovač k obnovení fokusu na dříve zaměřený ovládací prvek v případě selhání DDX nebo DDV. Za `PrepareEditCtrl` druhé nastaví `CDataExchange` příznak ve třídě označuje, že ovládací prvek, jehož data jsou vyměňovány nebo ověřovány je ovládací prvek úpravy.
 
-Implementors vlastní rutiny DDX a DDV by měly volat `PrepareEditCtrl` pro všechny ovládací prvky, pro které výměna dat prostřednictvím DDX nebo ověřování dat prostřednictvím DDV úprav.
+Realizátoři vlastních rutin DDX nebo DDV by měli volat `PrepareEditCtrl` pro všechny editační ovládací prvky, pro které si vyměňují data prostřednictvím DDX nebo ověřují data prostřednictvím DDV.
 
-Další informace o psaní vlastních rutiny DDX a DDV najdete v tématu [Technická poznámka 26](../../mfc/tn026-ddx-and-ddv-routines.md). Přehled DDX a DDV, naleznete v tématu [výměna dat dialogových oken a ověření](../../mfc/dialog-data-exchange-and-validation.md) a [Dialog Box témata](../../mfc/dialog-boxes.md).
+Další informace o psaní vlastních rutin DDX a DDV naleznete [v technické poznámce 26](../../mfc/tn026-ddx-and-ddv-routines.md). Přehled ddx a ddv naleznete [v tématu Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md) and Dialog Box [Topics](../../mfc/dialog-boxes.md).
 
-##  <a name="prepareolectrl"></a>  CDataExchange::PrepareOleCtrl
+## <a name="cdataexchangeprepareolectrl"></a><a name="prepareolectrl"></a>CDataExchange::PrepareOleCtrl
 
-Rozhraní volá tuto funkci člena zadaný ovládací prvek OLE Příprava výměna dat dialogových oken (DDX) a ověřování (DDV).
+Rozhraní Framework volá tuto členskou funkci k přípravě zadaného ovládacího prvku OLE pro výměnu dat dialogů (DDX) a ověření (DDV).
 
 ```
 COleControlSite* PrepareOleCtrl(int nIDC);
@@ -214,23 +214,23 @@ COleControlSite* PrepareOleCtrl(int nIDC);
 ### <a name="parameters"></a>Parametry
 
 *nIDC*<br/>
-ID ovládacího prvku OLE se připravit DDX a DDV.
+ID ovládacího prvku OLE, které má být připraveno pro DDX nebo DDV.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na ovládací prvek webu OLE.
+Ukazatel na lokalitu ovládacího prvku OLE.
 
 ### <a name="remarks"></a>Poznámky
 
-Použití [PrepareEditCtrl](#prepareeditctrl) místo pro ovládacích prvcích pro úpravy nebo [PrepareCtrl](#preparectrl) pro všechny ostatní ovládací prvky jiných než OLE.
+Místo toho použijte [prepareeditctrl](#prepareeditctrl) pro ovládací prvky pro úpravy nebo [PrepareCtrl](#preparectrl) pro všechny ostatní ovládací prvky bez OLE.
 
-Implementors vlastní rutiny DDX a DDV by měly volat `PrepareOleCtrl` pro všechny ovládací prvky OLE, pro které výměna dat prostřednictvím DDX nebo ověřování dat prostřednictvím DDV.
+Implementátory vlastní ddx nebo DDV `PrepareOleCtrl` rutiny by měl yvolat pro všechny ole ovládací prvky, pro které jsou výměnu dat prostřednictvím DDX nebo ověřování dat přes DDV.
 
-Další informace o psaní vlastních rutiny DDX a DDV najdete v tématu [Technická poznámka 26](../../mfc/tn026-ddx-and-ddv-routines.md). Přehled DDX a DDV, naleznete v tématu [výměna dat dialogových oken a ověření](../../mfc/dialog-data-exchange-and-validation.md) a [Dialog Box témata](../../mfc/dialog-boxes.md).
+Další informace o psaní vlastních rutin DDX a DDV naleznete [v technické poznámce 26](../../mfc/tn026-ddx-and-ddv-routines.md). Přehled ddx a ddv naleznete [v tématu Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md) and Dialog Box [Topics](../../mfc/dialog-boxes.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Ukázky knihovny MFC VIEWEX](../../overview/visual-cpp-samples.md)<br/>
+[Ukázka knihovny MFC VIEWEX](../../overview/visual-cpp-samples.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [CWnd::DoDataExchange](../../mfc/reference/cwnd-class.md#dodataexchange)<br/>
 [CWnd::UpdateData](../../mfc/reference/cwnd-class.md#updatedata)

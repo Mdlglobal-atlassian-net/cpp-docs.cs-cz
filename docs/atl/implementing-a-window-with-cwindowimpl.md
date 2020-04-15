@@ -1,5 +1,5 @@
 ---
-title: Implementace okna pomocí CWindowImpl
+title: Implementace okna s CWindowImpl
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ATL, windows
@@ -9,61 +9,61 @@ helpviewer_keywords:
 - subclassing ATL window classes
 - superclassing, ATL
 ms.assetid: 3fc40550-f1d6-4702-8b7c-4cf682b6a855
-ms.openlocfilehash: 265c3145d8ceacae540286f72939dc046e7c8b35
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e5fdbf15ddd7edc69f0667a9b7e08c7c5e531a5e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62197842"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81319453"
 ---
-# <a name="implementing-a-window-with-cwindowimpl"></a>Implementace okna pomocí CWindowImpl
+# <a name="implementing-a-window-with-cwindowimpl"></a>Implementace okna s CWindowImpl
 
-Implementace okna, odvoďte třídu z `CWindowImpl`. V odvozené třídě deklarujte mapy zpráv a funkcí obslužných rutin zpráv. Teď můžete použít třídu třemi různými způsoby:
+Chcete-li implementovat okno, `CWindowImpl`odvodit třídu z . V odvozené třídě deklarujte mapu zpráv a funkce obslužné rutiny zprávy. Nyní můžete třídu používat třemi různými způsoby:
 
-- [Vytvoření okna založené na novou třídu s Windows](#_atl_creating_a_window_based_on_a_new_windows_class)
+- [Vytvoření okna založeného na nové třídě systému Windows](#_atl_creating_a_window_based_on_a_new_windows_class)
 
-- [Nadřazené třídu existující Windows](#_atl_superclassing_an_existing_windows_class)
+- [Nadtřída existující třídy Windows](#_atl_superclassing_an_existing_windows_class)
 
-- [Podtřídy existujícímu oknu.](#_atl_subclassing_an_existing_window)
+- [Podtřídy existujícího okna](#_atl_subclassing_an_existing_window)
 
-##  <a name="_atl_creating_a_window_based_on_a_new_windows_class"></a> Vytvoření okna založené na novou třídu s Windows
+## <a name="creating-a-window-based-on-a-new-windows-class"></a><a name="_atl_creating_a_window_based_on_a_new_windows_class"></a>Vytvoření okna na základě nové třídy systému Windows
 
-`CWindowImpl` obsahuje [DECLARE_WND_CLASS](reference/window-class-macros.md#declare_wnd_class) – makro, chcete-li deklarovat informace o třídě Windows. Implementuje toto makro `GetWndClassInfo` funkci, která používá [cwndclassinfo –](../atl/reference/cwndclassinfo-class.md) zadat informace novou třídu s Windows. Když `CWindowImpl::Create` nazývá tento Windows třída je registrována. a vytvoří se nové okno.
+`CWindowImpl`obsahuje [DECLARE_WND_CLASS](reference/window-class-macros.md#declare_wnd_class) makro deklarovat informace o třídě systému Windows. Toto makro `GetWndClassInfo` implementuje funkci, která používá [CWndClassInfo](../atl/reference/cwndclassinfo-class.md) k definování informací o nové třídě systému Windows. Při `CWindowImpl::Create` volání je tato třída systému Windows registrována a je vytvořeno nové okno.
 
 > [!NOTE]
->  `CWindowImpl` předá hodnotu NULL na `DECLARE_WND_CLASS` – makro, což znamená, že knihovny ATL bude generovat název třídy Windows. Chcete-li zadat vlastní název, předejte řetězec DECLARE_WND_CLASS v vaše `CWindowImpl`-odvozené třídy.
+> `CWindowImpl`předá makru hodnotu `DECLARE_WND_CLASS` NULL, což znamená, že společnost ATL vygeneruje název třídy systému Windows. Chcete-li zadat vlastní název, předejte `CWindowImpl`řetězec DECLARE_WND_CLASS ve vaší odvozené třídě.
 
 ## <a name="example"></a>Příklad
 
-Následuje příklad třídy, která implementuje okno založené na nové třídě Windows:
+Následuje příklad třídy, která implementuje okno založené na nové třídě systému Windows:
 
 [!code-cpp[NVC_ATL_Windowing#64](../atl/codesnippet/cpp/implementing-a-window-with-cwindowimpl_1.h)]
 
-Vytvoření časového období, vytvořit instanci `CMyWindow` a následně zavolat `Create` metoda.
+Chcete-li vytvořit okno, `CMyWindow` vytvořte instanci a pak volání `Create` metody.
 
 > [!NOTE]
->  Chcete-li přepsat výchozí třída informace o Windows, implementovat `GetWndClassInfo` metoda v odvozené třídy tak, že nastavíte `CWndClassInfo` členy do příslušné hodnoty.
+> Chcete-li přepsat výchozí informace o `GetWndClassInfo` třídě systému Windows, `CWndClassInfo` implementujte metodu v odvozené třídě nastavením členů na příslušné hodnoty.
 
-##  <a name="_atl_superclassing_an_existing_windows_class"></a> Superclassing existující třídu Windows
+## <a name="superclassing-an-existing-windows-class"></a><a name="_atl_superclassing_an_existing_windows_class"></a>Nadřazení existující třídy Windows
 
-[DECLARE_WND_SUPERCLASS](reference/window-class-macros.md#declare_wnd_superclass) – makro vám umožní vytvořit okno této nadřazené třídy existující Windows třídy. Zadejte toto makro v vaše `CWindowImpl`-odvozené třídy. Stejně jako ostatní okna ATL zprávy zpracovává mapu zpráv.
+DECLARE_WND_SUPERCLASS [DECLARE_WND_SUPERCLASS](reference/window-class-macros.md#declare_wnd_superclass) makro umožňuje vytvořit okno, které superclasses existující třídy systému Windows. Zadejte toto `CWindowImpl`makro v odvozené třídě. Stejně jako jakékoli jiné okno atl, zprávy jsou zpracovány mapy zpráv.
 
-Při použití DECLARE_WND_SUPERCLASS novou třídu s Windows se zaregistruje. Tato nová třída bude stejná jako existující třídy, ale nahradí proceduru okna s `CWindowImpl::WindowProc` (nebo funkci, která přepíše tuto metodu).
+Při použití DECLARE_WND_SUPERCLASS bude registrována nová třída systému Windows. Tato nová třída bude stejná jako existující třída, kterou zadáte, ale nahradí proceduru okna `CWindowImpl::WindowProc` (nebo s vaší funkcí, která přepíše tuto metodu).
 
 ## <a name="example"></a>Příklad
 
-Následující je příkladem třídu této nadřazené třídy standardní upravit třídy:
+Následuje příklad třídy, která přeřazuje standardní třídu Edit:
 
 [!code-cpp[NVC_ATL_Windowing#65](../atl/codesnippet/cpp/implementing-a-window-with-cwindowimpl_2.h)]
 
-K vytvoření okna supertřídu upravit, vytvoření instance `CMyEdit` a následně zavolat `Create` metody.
+Chcete-li vytvořit okno Úpravy se `CMyEdit` supertřídami, `Create` vytvořte instanci metody a pak ji zavolejte.
 
-##  <a name="_atl_subclassing_an_existing_window"></a> Vytvoření podtřídy existujícímu oknu.
+## <a name="subclassing-an-existing-window"></a><a name="_atl_subclassing_an_existing_window"></a>Podřazení existujícího okna
 
-K podtřídou existujícímu oknu, odvoďte třídu z `CWindowImpl` a deklarovat mapy zpráv, jako v předchozích dvou případů. Všimněte si však, že nezadáte žádné informace o třídě Windows, protože se již existujícímu oknu. podtřídy.
+Chcete-li podtřídy existující okno, odvodit třídu z `CWindowImpl` a deklarovat mapu zprávy, jako ve dvou předchozích případech. Všimněte si však, že nezadáte žádné informace o třídě systému Windows, protože podtřídíte již existující okno.
 
-Namísto volání metody `Create`, volání `SubclassWindow` a předejte jej do existujícího okna chcete podtřídy popisovač. Jakmile podtřídou třídy okna, se bude používat `CWindowImpl::WindowProc` (nebo funkci, která přepíše tuto metodu) ke směrování zpráv v mapování zprávy. Chcete-li odpojit rozčleněných do podtříd okna z objektu, volejte `UnsubclassWindow`. Původní proceduru okna v okně se pak obnoví.
+Místo volání `Create`, `SubclassWindow` volání a předat popisovač do existujícího okna, které chcete podtřídy. Jakmile je okno podtřídy, `CWindowImpl::WindowProc` bude používat (nebo vaše funkce, která přepíše tuto metodu) přímé zprávy na mapu zpráv. Chcete-li odpojit okno podtřídy `UnsubclassWindow`od objektu, volejte . Původní postup okna okna bude poté obnoven.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Implementace okna](../atl/implementing-a-window.md)

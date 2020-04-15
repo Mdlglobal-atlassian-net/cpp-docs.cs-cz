@@ -1,6 +1,6 @@
 ---
-title: IAnalyzer – třída
-description: Referenční C++ dokumentace třídy IAnalyzer sady SDK pro Build Insights
+title: Třída IAnalyzer
+description: C++ Build Insights SDK IAnalyzer odkaz na třídu.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 53f7b36695bb24d96ccfe88afbb56ff717c94dc9
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: be9d80bb94450458c73fd6ce8d908985ba6f293d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78332451"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81329176"
 ---
-# <a name="ianalyzer-class"></a>IAnalyzer – třída
+# <a name="ianalyzer-class"></a>Třída IAnalyzer
 
 ::: moniker range="<=vs-2015"
 
-Sada C++ SDK pro Build Insights je kompatibilní se sadou Visual Studio 2017 a novější. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek selektor verzí sady Visual Studio pro tento článek na sadu Visual Studio 2017 nebo Visual Studio 2019.
+Sada C++ Build Insights SDK je kompatibilní s Visual Studio 2017 a vyšší. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek pro výběr **verze** sady Visual Studio pro tento článek na Visual Studio 2017 nebo Visual Studio 2019. Nachází se v horní části obsahu na této stránce.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Třída `IAnalyzer` poskytuje rozhraní pro analýzu trasování událostí pro Windows (ETW). Používá se u funkcí [MakeDynamicAnalyzerGroup](../functions/make-dynamic-analyzer-group.md), [MakeDynamicReloggerGroup](../functions/make-dynamic-relogger-group.md), [MakeStaticAnalyzerGroup](../functions/make-dynamic-analyzer-group.md)a [MakeStaticReloggerGroup](../functions/make-static-analyzer-group.md) . Použijte `IAnalyzer` jako základní třídu k vytvoření vlastního analyzátoru, který může být součástí skupiny analyzátorů nebo přeprotokolovacích nástrojů.
+Třída `IAnalyzer` poskytuje rozhraní pro analýzu trasování trasování událostí pro Windows (ETW). Používá se s funkcemi [MakeDynamicAnalyzerGroup](../functions/make-dynamic-analyzer-group.md), [MakeDynamicReloggerGroup](../functions/make-dynamic-relogger-group.md), [MakeStaticAnalyzerGroup](../functions/make-dynamic-analyzer-group.md)a [MakeStaticReloggerGroup.](../functions/make-static-analyzer-group.md) Použijte `IAnalyzer` jako základní třídu k vytvoření vlastního analyzátoru, který může být součástí analyzátoru nebo skupiny reloggerů.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -61,17 +61,17 @@ public:
 
 ## <a name="remarks"></a>Poznámky
 
-Třídy, které jsou odvozeny od `IAnalyzer`, lze použít jako analyzátory i pro přeprotokolovací nástroje. Při použití jako reprotokolovacích nástrojů se funkce specifické pro přeprotokolovací nástroj přesměrují na jejich ekvivalent analyzátoru. Reverzní není true: třídu, která je odvozena z `IRelogger` nelze použít jako analyzátor. Použití analyzátoru ve skupině reprotokolovacích nástrojů je běžným vzorem. Při umístění do prvotní pozice skupiny přeprotokolovacích souborů může analyzátor předem vypočítat informace a zpřístupnit je pro opětovné protokolování v pozdějších pozicích.
+Třídy, `IAnalyzer` které jsou odvozeny z lze použít jako analyzátory a reloggery. Při použití jako reloggery, funkce specifické pro relogger přesměrovat na jejich ekvivalent analyzátoru. Opak není pravdou: třídu, která `IRelogger` je odvozena z nelze použít jako analyzátor. Použití analyzátoru ve skupině relogger je běžný vzor. Při umístění do rané pozice skupiny relogger, analyzátor může pre-vypočítat informace a zpřístupnit je pro reloggery v pozdějších pozicích.
 
-Výchozí návratová hodnota pro všechny funkce, které nejsou přepsány, je `AnalysisControl::CONTINUE`. Další informace najdete v tématu [AnalysisControl](analysis-control-enum-class.md).
+Výchozí vrácená hodnota pro všechny funkce, `AnalysisControl::CONTINUE`které nejsou přepsány, je . Další informace naleznete v tématu [AnalysisControl](analysis-control-enum-class.md).
 
 ## <a name="members"></a>Členové
 
-Kromě členu [OnTraceInfo](irelogger-class.md#on-trace-info) z rozhraní `IRelogger` obsahuje Třída `IAnalyzer` následující členy:
+Kromě [ontraceinfo](irelogger-class.md#on-trace-info) člen z `IRelogger` `IAnalyzer` rozhraní, třída obsahuje následující členy:
 
 ### <a name="destructor"></a>Destruktor
 
-[~ IAnalyzer](#ianalyzer-destructor)
+[~IAnalyzátor](#ianalyzer-destructor)
 
 ### <a name="functions"></a>Functions
 
@@ -79,15 +79,15 @@ Kromě členu [OnTraceInfo](irelogger-class.md#on-trace-info) z rozhraní `IRelo
 [OnBeginAnalysisPass](#on-begin-analysis-pass)\
 [OnBeginRelogging](#on-begin-relogging)\
 [OnBeginReloggingPass](#on-begin-relogging-pass)\
-[OnEndAnalysis](#on-end-analysis)\
-[OnEndAnalysisPass](#on-end-analysis-pass)\
+[Onendanalýza](#on-end-analysis)\
+[OnendAnalysisPass](#on-end-analysis-pass)\
 [OnEndRelogging](#on-end-relogging)\
 [OnEndReloggingPass](#on-end-relogging-pass)\
-[OnSimpleEvent](#on-simple-event)\
+[Událost OnSimpleEvent](#on-simple-event)\
 [OnStartActivity](#on-start-activity)\
 [OnStopActivity](#on-stop-activity)
 
-## <a name="ianalyzer-destructor"></a>~ IAnalyzer
+## <a name="ianalyzer"></a><a name="ianalyzer-destructor"></a>~IAnalyzátor
 
 Zničí třídu IAnalyzer.
 
@@ -95,9 +95,9 @@ Zničí třídu IAnalyzer.
 virtual ~IAnalyzer();
 ```
 
-## <a name="on-begin-analysis"></a>OnBeginAnalysis
+## <a name="onbeginanalysis"></a><a name="on-begin-analysis"></a>OnBeginAnalysis
 
-V případě analyzátorů, které jsou součástí skupiny analyzátorů, je tato funkce volána před zahájením prvního průchodu analýzy. Pro analyzátory součástí skupiny přeprotokolovacích souborů je tato funkce volána před zahájením opětovného protokolování. Pro analyzátory součást analyzátoru i skupiny přeprotokolovacích souborů stejné relace opětovného protokolování je tato funkce volána dvakrát před zahájením první analýzy.
+Pro analyzátory, které jsou součástí skupiny analyzátorů, je tato funkce volána před zahájením prvního průchodu analýzy. Pro analyzátory část relogger skupiny, tato funkce je volána před zahájením relogging pass. Pro analyzátory část analyzátoru a relogger skupiny stejné relace opětovného přihlášení, tato funkce je volána dvakrát před zahájením první analýzy průchodu.
 
 ```cpp
 virtual AnalysisControl OnBeginAnalysis();
@@ -105,11 +105,11 @@ virtual AnalysisControl OnBeginAnalysis();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-[AnalysisControl](analysis-control-enum-class.md) kód, který popisuje, co by mělo proběhnout příště.
+Kód [AnalysisControl,](analysis-control-enum-class.md) který popisuje, co by se mělo stát dál.
 
-## <a name="on-begin-analysis-pass"></a>OnBeginAnalysisPass
+## <a name="onbeginanalysispass"></a><a name="on-begin-analysis-pass"></a>OnBeginAnalysisPass
 
-V případě analyzátorů, které jsou součástí skupiny analyzátorů, je tato funkce volána na začátku každé analytické fáze. Pro analyzátory, které jsou součástí skupiny přeprotokolovacích souborů, je tato funkce volána na začátku průchodu reprotokolovacího nástroje. Pro analyzátory, které jsou součástí skupiny analyzátoru i přeprotokolovacího nástroje stejné relace opětovného protokolování, je tato funkce volána na začátku každé analytické fáze a na začátku průchodu opětovného protokolování.
+Pro analyzátory, které jsou součástí skupiny analyzátorů, je tato funkce volána na začátku každého průchodu analýzy. Pro analyzátory součástí skupiny relogger, tato funkce se nazývá na začátku průchodu relogger. Pro analyzátory část analyzátoru a relogger skupiny stejné relace relogging, tato funkce se nazývá na začátku každé analýzy průchodu, a na začátku relogger projít.
 
 ```cpp
 virtual AnalysisControl OnBeginAnalysisPass();
@@ -117,23 +117,23 @@ virtual AnalysisControl OnBeginAnalysisPass();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-[AnalysisControl](analysis-control-enum-class.md) kód, který popisuje, co by mělo proběhnout příště.
+Kód [AnalysisControl,](analysis-control-enum-class.md) který popisuje, co by se mělo stát dál.
 
-## <a name="on-begin-relogging"></a>OnBeginRelogging
+## <a name="onbeginrelogging"></a><a name="on-begin-relogging"></a>OnBeginRelogging
 
 ```cpp
 AnalysisControl OnBeginRelogging() final;
 ```
 
-Tuto funkci nelze přepsat. Je volána sadou SDK pro C++ Build Insights, když je analyzátor součástí skupiny přeprotokolovacích souborů. Tato funkce přesměrovává volání na [OnBeginAnalysis](#on-begin-analysis).
+Tuto funkci nelze přepsat. Je volána c++ sestavení insights SDK při analyzátor je součástí skupiny relogger. Tato funkce přesměruje volání [na OnBeginAnalysis](#on-begin-analysis).
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Výsledek volání [OnBeginAnalysis](#on-begin-analysis)
+Výsledek [OnBeginAnalysis](#on-begin-analysis) volání.
 
-## <a name="on-begin-relogging-pass"></a>OnBeginReloggingPass
+## <a name="onbeginreloggingpass"></a><a name="on-begin-relogging-pass"></a>OnBeginReloggingPass
 
-Tuto funkci nelze přepsat. Je volána sadou SDK pro C++ Build Insights, když je analyzátor součástí skupiny přeprotokolovacích souborů. Tato funkce přesměrovává volání na [OnBeginAnalysisPass](#on-begin-analysis-pass).
+Tuto funkci nelze přepsat. Je volána c++ sestavení insights SDK při analyzátor je součástí skupiny relogger. Tato funkce přesměruje volání [OnBeginAnalysisPass](#on-begin-analysis-pass).
 
 ```cpp
 AnalysisControl OnBeginReloggingPass() final;
@@ -141,14 +141,14 @@ AnalysisControl OnBeginReloggingPass() final;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Výsledek volání [OnBeginAnalysisPass](#on-begin-analysis-pass)
+Výsledek [onbeginAnalysisPass](#on-begin-analysis-pass) volání.
 
-## <a name="on-end-analysis"></a>OnEndAnalysis
+## <a name="onendanalysis"></a><a name="on-end-analysis"></a>Onendanalýza
 
-Pro analyzátory, které jsou součástí skupiny analyzátorů, je tato funkce volána po ukončení poslední fáze analýzy. Pro analyzátory, které jsou součástí skupiny přeprotokolovacího nástroje, je tato funkce volána po ukončení opětovného přihlášení. Pro analyzátory, které jsou součástí skupiny analyzátoru i přeprotokolovacího nástroje stejné relace opětovného protokolování, je tato funkce volána dvakrát:
+Pro analyzátory, které jsou součástí skupiny analyzátoru, je tato funkce volána po ukončení posledního průchodu analýzy. Pro analyzátory, které jsou součástí skupiny relogger, tato funkce je volána po ukončení opětovného přihlášení průchodu. Pro analyzátory, které jsou součástí analyzátoru a relogger skupiny stejné relace opětovného přihlášení, tato funkce se nazývá dvakrát:
 
-1. po ukončení všech průchodů analýz a před zahájením znovu zalogování a
-1. Po dokončení přehlašování bylo úspěšně dokončeno.
+1. po ukončení všech analytických průchodů a před zahájením opakování a
+1. po ukončení průchodu pro opětovné přihlášení.
 
 ```cpp
 virtual AnalysisControl OnEndAnalysis();
@@ -156,11 +156,11 @@ virtual AnalysisControl OnEndAnalysis();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-[AnalysisControl](analysis-control-enum-class.md) kód, který popisuje, co by mělo proběhnout příště.
+Kód [AnalysisControl,](analysis-control-enum-class.md) který popisuje, co by se mělo stát dál.
 
-## <a name="on-end-analysis-pass"></a>OnEndAnalysisPass
+## <a name="onendanalysispass"></a><a name="on-end-analysis-pass"></a>OnendAnalysisPass
 
-Pro analyzátory, které jsou součástí skupiny analyzátorů, je tato funkce volána na konci každé analytické fáze. Pro analyzátory součástí skupiny přeprotokolovacích souborů je tato funkce volána na konci přeprotokolovacího nástroje. Pro analyzátory, které jsou součástí skupiny analyzátoru i přeprotokolovacího nástroje stejné relace opětovného protokolování, je tato funkce volána na konci každé analýzy průchodu a na konci přeběhu znovu protokolovacího nástroje.
+Pro analyzátory, které jsou součástí skupiny analyzátorů, je tato funkce volána na konci každého průchodu analýzy. Pro analyzátory součástí skupiny relogger, tato funkce je volána na konci průchodu relogger. Pro analyzátory část analyzátoru a relogger skupiny stejné relace relogging, tato funkce se nazývá na konci každé analýzy průchodu a na konci průchodu relogger.
 
 ```cpp
 virtual AnalysisControl OnEndAnalysisPass();
@@ -168,11 +168,11 @@ virtual AnalysisControl OnEndAnalysisPass();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-[AnalysisControl](analysis-control-enum-class.md) kód, který popisuje, co by mělo proběhnout příště.
+Kód [AnalysisControl,](analysis-control-enum-class.md) který popisuje, co by se mělo stát dál.
 
-## <a name="on-end-relogging"></a>OnEndRelogging
+## <a name="onendrelogging"></a><a name="on-end-relogging"></a>OnEndRelogging
 
-Tuto funkci nelze přepsat. Je volána sadou SDK pro C++ Build Insights, když je analyzátor součástí skupiny přeprotokolovacích souborů. Tato funkce přesměrovává volání na [OnEndAnalysis](#on-end-analysis).
+Tuto funkci nelze přepsat. Je volána c++ sestavení insights SDK při analyzátor je součástí skupiny relogger. Tato funkce přesměruje volání [na OnEndAnalysis](#on-end-analysis).
 
 ```cpp
 AnalysisControl OnEndRelogging() final;
@@ -180,11 +180,11 @@ AnalysisControl OnEndRelogging() final;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Výsledek volání [OnEndAnalysis](#on-end-analysis)
+Výsledek [OnEndAnalysis](#on-end-analysis) volání.
 
-## <a name="on-end-relogging-pass"></a>OnEndReloggingPass
+## <a name="onendreloggingpass"></a><a name="on-end-relogging-pass"></a>OnEndReloggingPass
 
-Tuto funkci nelze přepsat. Je volána sadou SDK pro C++ Build Insights, když je analyzátor součástí skupiny přeprotokolovacích souborů. Tato funkce přesměrovává volání na [OnEndAnalysisPass](#on-end-analysis-pass).
+Tuto funkci nelze přepsat. Je volána c++ sestavení insights SDK při analyzátor je součástí skupiny relogger. Tato funkce přesměruje volání [na OnEndAnalysisPass](#on-end-analysis-pass).
 
 ```cpp
 AnalysisControl OnEndReloggingPass() final;
@@ -192,11 +192,11 @@ AnalysisControl OnEndReloggingPass() final;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Výsledek volání [OnEndAnalysisPass](#on-end-analysis-pass)
+Výsledek [onendanalysispass](#on-end-analysis-pass) volání.
 
-## <a name="on-simple-event"></a>OnSimpleEvent
+## <a name="onsimpleevent"></a><a name="on-simple-event"></a>Událost OnSimpleEvent
 
-Tato funkce se volá, když se zpracovává jednoduchá událost. Druhá verze této funkce se nedá přepsat. Je volána sadou SDK pro C++ Build Insights, když je analyzátor součástí skupiny přeprotokolovacích souborů. Všechna volání na verzi 2 jsou přesměrována na verzi 1.
+Tato funkce je volána při zpracování jednoduché události. Druhou verzi této funkce nelze přepsat. Je volána c++ sestavení insights SDK při analyzátor je součástí skupiny relogger. Všechna volání na verzi 2 jsou přesměrována na verzi 1.
 
 ### <a name="version-1"></a>Verze 1
 
@@ -214,18 +214,18 @@ AnalysisControl OnSimpleEvent(const EventStack& eventStack,
 ### <a name="parameters"></a>Parametry
 
 *eventStack*\
-Zásobník událostí pro tuto jednoduchou událost. Další informace o zásobníkech událostí najdete v tématu [události](../event-table.md).
+Zásobník událostí pro tuto jednoduchou událost. Další informace o hromádkách událostí naleznete v [tématu Události](../event-table.md).
 
-*relogSession*\
-Tento parametr se nepoužívá.
+*relogsession*\
+Tento parametr není použit.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-[AnalysisControl](analysis-control-enum-class.md) kód, který popisuje, co by mělo proběhnout příště.
+Kód [AnalysisControl,](analysis-control-enum-class.md) který popisuje, co by se mělo stát dál.
 
-## <a name="on-start-activity"></a>OnStartActivity
+## <a name="onstartactivity"></a><a name="on-start-activity"></a>OnStartActivity
 
-Tato funkce se volá, když se zpracovává událost zahájení aktivity. Druhá verze této funkce se nedá přepsat. Je volána sadou SDK pro C++ Build Insights, když je analyzátor součástí skupiny přeprotokolovacích souborů. Všechna volání na verzi 2 jsou přesměrována na verzi 1.
+Tato funkce je volána při zpracování události zahájení aktivity. Druhou verzi této funkce nelze přepsat. Je volána c++ sestavení insights SDK při analyzátor je součástí skupiny relogger. Všechna volání na verzi 2 jsou přesměrována na verzi 1.
 
 ### <a name="version-1"></a>Verze 1
 
@@ -243,18 +243,18 @@ AnalysisControl OnStartActivity(const EventStack& eventStack,
 ### <a name="parameters"></a>Parametry
 
 *eventStack*\
-Zásobník událostí pro událost spuštění této aktivity. Další informace o zásobníkech událostí najdete v tématu [události](../event-table.md).
+Zásobník událostí pro tuto událost zahájení aktivity. Další informace o hromádkách událostí naleznete v [tématu Události](../event-table.md).
 
-*relogSession*\
-Tento parametr se nepoužívá.
+*relogsession*\
+Tento parametr není použit.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-[AnalysisControl](analysis-control-enum-class.md) kód, který popisuje, co by mělo proběhnout příště.
+Kód [AnalysisControl,](analysis-control-enum-class.md) který popisuje, co by se mělo stát dál.
 
-## <a name="on-stop-activity"></a>OnStopActivity
+## <a name="onstopactivity"></a><a name="on-stop-activity"></a>OnStopActivity
 
-Tato funkce se volá, když se zpracovává událost zastavení aktivity. Druhá verze této funkce se nedá přepsat. Je volána sadou SDK pro C++ Build Insights, když je analyzátor součástí skupiny přeprotokolovacích souborů. Všechna volání na verzi 2 jsou přesměrována na verzi 1.
+Tato funkce je volána při zpracování události zastavení aktivity. Druhou verzi této funkce nelze přepsat. Je volána c++ sestavení insights SDK při analyzátor je součástí skupiny relogger. Všechna volání na verzi 2 jsou přesměrována na verzi 1.
 
 ### <a name="version-1"></a>Verze 1
 
@@ -272,13 +272,13 @@ AnalysisControl OnStopActivity(const EventStack& eventStack,
 ### <a name="parameters"></a>Parametry
 
 *eventStack*\
-Zásobník událostí pro tuto událost zastavení aktivity Další informace o zásobníkech událostí najdete v tématu [události](../event-table.md).
+Zásobník událostí pro tuto událost zastavení aktivity. Další informace o hromádkách událostí naleznete v [tématu Události](../event-table.md).
 
-*relogSession*\
-Tento parametr se nepoužívá.
+*relogsession*\
+Tento parametr není použit.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-[AnalysisControl](analysis-control-enum-class.md) kód, který popisuje, co by mělo proběhnout příště.
+Kód [AnalysisControl,](analysis-control-enum-class.md) který popisuje, co by se mělo stát dál.
 
 ::: moniker-end

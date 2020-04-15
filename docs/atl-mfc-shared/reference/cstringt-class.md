@@ -1,5 +1,5 @@
 ---
-title: CStringt – třída
+title: CStringT – třída
 ms.date: 03/27/2019
 f1_keywords:
 - CStringT
@@ -80,16 +80,16 @@ helpviewer_keywords:
 - shared classes, CStringT
 - CStringT class
 ms.assetid: 7cacc59c-425f-40f1-8f5b-6db921318ec9
-ms.openlocfilehash: a411ed54a73a0dee49ebbd9ccacbd7c6f8e69ca5
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 90f63b474f509b4d1a15ad6fe11bda61c343f483
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79418207"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81317587"
 ---
-# <a name="cstringt-class"></a>CStringt – třída
+# <a name="cstringt-class"></a>CStringT – třída
 
-Tato třída reprezentuje objekt `CStringT`.
+Tato třída `CStringT` představuje objekt.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -103,165 +103,165 @@ class CStringT :
 #### <a name="parameters"></a>Parametry
 
 *BaseType*<br/>
-Typ znaku řetězcové třídy. Může být jedna z následujících akcí:
+Typ znaku třídy řetězce. Může to být jedna z následujících možností:
 
 - **char** (pro řetězce znaků ANSI).
 
 - **wchar_t** (pro řetězce znaků Unicode).
 
-- TCHAR (pro řetězce znaků ANSI a Unicode).
+- TCHAR (pro řetězce znaků ANSI i Unicode).
 
 *StringTraits*<br/>
-Určuje, zda třída String potřebuje podporu knihovny jazyka C run-time (CRT) a kde jsou umístěny prostředky řetězců. Může být jedna z následujících akcí:
+Určuje, zda třída řetězce potřebuje podporu knihovny C Run-Time (CRT) a kde jsou umístěny prostředky řetězce. Může to být jedna z následujících možností:
 
-- **StrTraitATL < wchar_t** &#124; **char** &#124; **TCHAR, ChTraitsCRT < wchar_t** &#124; **char** &#124; **TCHAR > >**
+- **StrTraitATL< wchar_t** &#124; **char** &#124; **TCHAR, ChTraitsCRT< wchar_t** &#124; **char** &#124; **TCHAR > >**
 
-   Třída vyžaduje podporu CRT a hledá řetězce prostředků v modulu určeném parametrem `m_hInstResource` (člen třídy modulu aplikace).
+   Třída vyžaduje podporu CRT a vyhledá v modulu `m_hInstResource` určeném (člen třídy modulu aplikace) řetězce prostředků.
 
-- **StrTraitATL < wchar_t** &#124; **char** &#124; **TCHAR, ChTraitsOS < wchar_t** &#124; **char** &#124; **TCHAR > >**
+- **StrTraitATL< wchar_t<** &#124; **char** &#124; **TCHAR, ChTraitsOS< wchar_t** &#124; **char** &#124; **TCHAR > >**
 
-   Třída nevyžaduje podporu CRT a hledá řetězce prostředků v modulu určeném parametrem `m_hInstResource` (člen třídy modulu aplikace).
+   Třída nevyžaduje podporu CRT a vyhledá v modulu určeném `m_hInstResource` (člen třídy modulu aplikace) hledá řetězce prostředků.
 
-- **StrTraitMFC < wchar_t** &#124; **char** &#124; **TCHAR, ChTraitsCRT < wchar_t** &#124; **char** &#124; **TCHAR > >**
+- **StrTraitMFC< wchar_t** &#124; **char** &#124; **TCHAR, ChTraitsCRT< wchar_t** &#124; **char** &#124; **TCHAR > >**
 
-   Třída vyžaduje podporu CRT a hledá řetězce prostředků pomocí standardního vyhledávacího algoritmu MFC.
+   Třída vyžaduje podporu CRT a vyhledává řetězce prostředků pomocí standardního algoritmu vyhledávání knihovny MFC.
 
-- **StrTraitMFC < wchar_t** &#124; **char** &#124; **TCHAR, ChTraitsOS < wchar_t** &#124; **char** &#124; **TCHAR > >**
+- **StrTraitMFC< wchar_t** &#124; **char** &#124; **TCHAR, ChTraitsOS< wchar_t** &#124; **char** &#124; **TCHAR > >**
 
-   Třída nevyžaduje podporu CRT a hledá řetězce prostředků pomocí standardního vyhledávacího algoritmu MFC.
+   Třída nevyžaduje podporu CRT a vyhledá v řetězecích prostředků pomocí standardního algoritmu vyhledávání knihovny MFC.
 
 ## <a name="members"></a>Členové
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CStringt:: CStringt](#cstringt)|Sestaví objekt `CStringT` různými způsoby.|
-|[CStringt:: ~ CStringt](#_dtorcstringt)|Odstraní objekt `CStringT`.|
+|[CStringT::CStringt](#cstringt)|Vytvoří `CStringT` objekt různými způsoby.|
+|[CStringT::~CStringT](#_dtorcstringt)|Zničí `CStringT` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CStringt:: AllocSysString](#allocsysstring)|Přidělí datový objekt BSTR z `CStringT` dat.|
-|[CStringt:: AnsiToOem](#ansitooem)|Provede místní převod ze znakové sady ANSI na znakovou sadu OEM.|
-|[CStringt:: AppendFormat](#appendformat)|Připojí formátovaná data k existujícímu objektu `CStringT`.|
-|[CStringt:: COLLATE](#collate)|Porovná dva řetězce (rozlišuje velká a malá písmena, používá informace specifické pro národní prostředí).|
-|[CStringt:: CollateNoCase](#collatenocase)|Porovná dva řetězce (nerozlišuje velikost písmen, používá informace specifické pro národní prostředí).|
-|[CStringt:: Compare](#compare)|Porovná dva řetězce (rozlišuje velká a malá písmena).|
-|[CStringt:: CompareNoCase](#comparenocase)|Porovná dva řetězce (nerozlišuje velikost písmen).|
-|[CStringt::D dstranit](#delete)|Odstraní znak nebo znaky z řetězce.|
-|[CStringt:: Find](#find)|Vyhledá znak nebo podřetězec uvnitř většího řetězce.|
-|[CStringt:: FindOneOf](#findoneof)|Vyhledá první shodný znak ze sady.|
-|[CStringt:: Format](#format)|Zformátuje řetězec jako `sprintf`.|
-|[CStringt:: FormatMessage](#formatmessage)|Formátuje řetězec zprávy.|
-|[CStringt:: FormatMessageV](#formatmessagev)|Formátuje řetězec zprávy pomocí seznamu argumentů proměnných.|
-|[CStringt:: FormatV](#formatv)|Zformátuje řetězec pomocí seznamu proměnných argumentů.|
-|[CStringt:: GetEnvironmentVariable](#getenvironmentvariable)|Nastaví řetězec na hodnotu zadané proměnné prostředí.|
-|[CStringt:: INSERT](#insert)|Vloží jeden znak nebo podřetězec na daný index v rámci řetězce.|
-|[CStringt:: Left](#left)|Extrahuje levou část řetězce.|
-|[CStringt:: LoadString](#loadstring)|Načte existující `CStringT` objekt z prostředku Windows.|
-|[CStringt:: MakeLower](#makelower)|Převede všechny znaky v tomto řetězci na malá písmena.|
-|[CStringt:: MakeReverse](#makereverse)|Obrátí řetězec.|
-|[CStringt:: MakeUpper](#makeupper)|Převede všechny znaky v tomto řetězci na velká písmena.|
-|[CStringt:: Mid](#mid)|Extrahuje střední část řetězce.|
-|[CStringt:: OemToAnsi](#oemtoansi)|Provede místní převod ze znakové sady OEM na znakovou sadu ANSI.|
-|[CStringt:: Remove](#remove)|Odebere označené znaky z řetězce.|
-|[CStringt:: Replace](#replace)|Nahradí označené znaky dalšími znaky.|
-|[CStringt:: ReverseFind](#reversefind)|Najde znak uvnitř většího řetězce; začíná od konce.|
-|[CStringt:: Right](#right)|Extrahuje pravou část řetězce.|
-|[CStringt:: SetSysString](#setsysstring)|Nastaví existující objekt BSTR daty z objektu `CStringT`.|
-|[CStringt:: SpanExcluding](#spanexcluding)|Extrahuje znaky z řetězce počínaje prvním znakem, který není v sadě znaků identifikovaných pomocí `pszCharSet`.|
-|[CStringt:: SpanIncluding](#spanincluding)|Extrahuje podřetězec, který obsahuje pouze znaky v sadě.|
-|[CStringt:: tokenizovat](#tokenize)|Extrahuje zadané tokeny do cílového řetězce.|
-|[CStringt:: Trim](#trim)|Ořízne všechny úvodní a koncové prázdné znaky z řetězce.|
-|[CStringt:: TrimLeft](#trimleft)|Ořízne z řetězce úvodní prázdné znaky.|
-|[CStringt:: TrimRight](#trimright)|Ořízne v řetězci koncové prázdné znaky.|
+|[CStringT::AllocSysString](#allocsysstring)|Přiděluje BSTR z `CStringT` dat.|
+|[CStringT::AnsiToOem](#ansitooem)|Provede převod na místě ze znakové sady ANSI na znakovou sadu OEM.|
+|[CStringT::Připojitformát](#appendformat)|Připojí formátovaná data k `CStringT` existujícímu objektu.|
+|[CStringT::Kompletovat](#collate)|Porovná dva řetězce (rozlišuje malá a velká písmena, používá informace specifické pro národní prostředí).|
+|[CStringT::CollateNoCase](#collatenocase)|Porovná dva řetězce (malá a velká písmena, používá informace specifické pro národní prostředí).|
+|[CStringT::Porovnat](#compare)|Porovná dva řetězce (malá a velká písmena).|
+|[CStringT::PorovnáníNocase](#comparenocase)|Porovná dva řetězce (malá a velká písmena).|
+|[CStringT::Delete](#delete)|Odstraní znak nebo znaky z řetězce.|
+|[CStringT::Najít](#find)|Najde znak nebo podřetězec uvnitř větší řetězec.|
+|[CStringt::Najít](#findoneof)|Najde první odpovídající znak ze sady.|
+|[CStringT::Formát](#format)|Formátuje řetězec `sprintf` stejně jako řetězec.|
+|[CStringT::Zpráva formátu](#formatmessage)|Formátuje řetězec zprávy.|
+|[CStringT::FormatMessageV](#formatmessagev)|Formátuje řetězec zprávy pomocí seznamu argumentů proměnných.|
+|[CStringT::FormatV](#formatv)|Zformátuje řetězec pomocí seznamu proměnných argumentů.|
+|[CStringT::GetEnvironmentVariable](#getenvironmentvariable)|Nastaví řetězec na hodnotu zadané proměnné prostředí.|
+|[CStringT::Vložit](#insert)|Vloží jeden znak nebo podřetězec na daný index v řetězci.|
+|[CStringT::Vlevo](#left)|Extrahuje levou část řetězce.|
+|[CStringT::Načíst řetězec](#loadstring)|Načte `CStringT` existující objekt z prostředku systému Windows.|
+|[CStringT::MakeLower](#makelower)|Převede všechny znaky v tomto řetězci na malé znaky.|
+|[CStringT::MakeReverse](#makereverse)|Obrátí řetězec.|
+|[CStringt::MakeUpper](#makeupper)|Převede všechny znaky v tomto řetězci na velká písmena.|
+|[CStringT::Střední](#mid)|Extrahuje střední část řetězce.|
+|[CStringT::OemToAnsi](#oemtoansi)|Provede převod na místě ze znakové sady OEM na znakovou sadu ANSI.|
+|[CStringT::Odebrat](#remove)|Odebere označené znaky z řetězce.|
+|[CStringT::Nahradit](#replace)|Nahradí označené znaky jinými znaky.|
+|[CStringT::Reverznífind](#reversefind)|Najde znak uvnitř větší hovna; začíná od konce.|
+|[CStringT::Doprava](#right)|Extrahuje pravou část řetězce.|
+|[CStringT::SetSysString](#setsysstring)|Nastaví existující objekt BSTR `CStringT` s daty z objektu.|
+|[CStringT::SpanBez](#spanexcluding)|Extrahuje znaky z řetězce, počínaje prvním znakem, které nejsou `pszCharSet`v sadě znaků identifikovaných .|
+|[CStringT::SpanIncluding](#spanincluding)|Extrahuje podřetězec, který obsahuje pouze znaky v sadě.|
+|[CStringT::Tokenize](#tokenize)|Extrahuje zadané tokeny v cílovém řetězci.|
+|[CStringT::Oříznutí](#trim)|Ořízne všechny úvodní a koncové znaky prázdného místa z řetězce.|
+|[CStringT::Oříznutívlevo](#trimleft)|Ořízne počáteční znaky prázdného místa z řetězce.|
+|[cstringt::TrimRight](#trimright)|Ořízne koncové znaky prázdného místa z řetězce.|
 
 ### <a name="operators"></a>Operátory
 
 |||
 |-|-|
-|[CStringt:: operator =](#operator_eq)|Přiřadí novou hodnotu objektu `CStringT`.|
-|[CStringt:: operator +](#operator_add)|Zřetězí dva řetězce nebo znak a řetězec.|
-|[CStringt:: operator + =](#operator_add_eq)|Zřetězí nový řetězec na konec existujícího řetězce.|
-|[CStringt:: operator = =](#operator_eq_eq)|Určuje, zda jsou dva řetězce logicky stejné.|
-|[CStringt:: operator! =](#operator_neq)|Určuje, zda jsou dva řetězce logicky neshodné.|
-|[CStringt:: operator &lt;](#operator_lt)|Určuje, zda je řetězec na levé straně operátoru menší než řetězec na pravé straně.|
-|[CStringt:: operator &gt;](#operator_gt)|Určuje, zda je řetězec na levé straně operátoru větší než řetězec na pravé straně.|
-|[CStringt:: operator &lt;=](#operator_lt_eq)|Určuje, zda je řetězec na levé straně operátoru menší než nebo roven řetězci na pravé straně.|
-|[CStringt:: operator &gt;=](#operator_gt_eq)|Určuje, zda je řetězec na levé straně operátoru větší než nebo roven řetězci na pravé straně.|
+|[CStringT::operátor =](#operator_eq)|Přiřadí objektu novou `CStringT` hodnotu.|
+|[CStringT::operátor +](#operator_add)|Zřetězí dva řetězce nebo znak a řetězec.|
+|[CStringT::operátor +=](#operator_add_eq)|Zřetězí nový řetězec na konec existujícího řetězce.|
+|[CStringT::operátor ==](#operator_eq_eq)|Určuje, zda jsou dva řetězce logicky stejné.|
+|[CStringT::operátor !=](#operator_neq)|Určuje, zda dva řetězce nejsou logicky stejné.|
+|[CStringT::operátor&lt;](#operator_lt)|Určuje, zda je řetězec na levé straně operátoru menší než řetězec na pravé straně.|
+|[CStringT::operátor&gt;](#operator_gt)|Určuje, zda je řetězec na levé straně operátoru větší než řetězec na pravé straně.|
+|[CStringT::operátor&lt;=](#operator_lt_eq)|Určuje, zda je řetězec na levé straně operátoru menší nebo roven řetězci na pravé straně.|
+|[CStringT::operátor&gt;=](#operator_gt_eq)|Určuje, zda je řetězec na levé straně operátoru větší nebo roven řetězci na pravé straně.|
 
 ## <a name="remarks"></a>Poznámky
 
-`CStringT` dědí z [třídy CSimpleStringT](../../atl-mfc-shared/reference/csimplestringt-class.md). Pokročilé funkce, jako je například manipulace se znaky, řazení a hledání, jsou implementovány pomocí `CStringT`.
+`CStringT`dědí z [csimplestringt třídy](../../atl-mfc-shared/reference/csimplestringt-class.md). Pokročilé funkce, jako je například manipulace s znaky, řazení a vyhledávání, jsou implementovány . `CStringT`
 
 > [!NOTE]
-> objekty `CStringT` jsou schopny vyvolávání výjimek. K tomu dochází, když `CStringT` objekt z jakéhokoli důvodu vyčerpá z paměti.
+> `CStringT`objekty jsou schopny vyvolat výjimky. K tomu dochází, `CStringT` když objekt vyčerpá paměť z jakéhokoli důvodu.
 
-Objekt `CStringT` se skládá ze sekvence znaků s proměnlivou délkou. `CStringT` poskytuje funkce a operátory pomocí syntaxe, která je podobná syntaxi Basic. Operátory zřetězení a porovnávání, společně s zjednodušenou správou paměti, usnadňují použití objektů `CStringT` více než běžnými znakovými poli.
+Objekt `CStringT` se skládá z posloupnosti znaků s proměnnou délkou. `CStringT`poskytuje funkce a operátory pomocí syntaxe podobné basic. Operátory zřetězení a porovnání spolu se `CStringT` zjednodušenou správou paměti usnadňují použití objektů než běžná pole znaků.
 
 > [!NOTE]
->  I když je možné vytvořit `CStringT` instance, které obsahují vložené znaky null, doporučujeme proti ní. Volání metod a operátorů na `CStringT` objekty, které obsahují vložené znaky null, mohou způsobit neočekávané výsledky.
+> I když je `CStringT` možné vytvořit instance, které obsahují vložené prázdné znaky, doporučujeme proti němu. Volání metod a `CStringT` operátorů na objekty, které obsahují vložené prázdné znaky může způsobit nezamýšlené výsledky.
 
-Pomocí různých kombinací parametrů `BaseType` a `StringTraits` mohou objekty `CStringT` být v následujících typech, které byly předdefinovány knihovnou ATL.
+Pomocí různých kombinací `BaseType` a `StringTraits` parametry, `CStringT` objekty mohou přijít v následujících typech, které byly předdefinovány knihovny KNIHOVNY ATL.
 
 Při použití v aplikaci ATL:
 
-`CString`, `CStringA`a `CStringW` jsou exportovány z knihovny MFC DLL (MFC90. DLL), nikdy z knihoven DLL uživatele. To se provádí, aby se zabránilo násobení `CStringT` definování.
+`CString`, `CStringA`a `CStringW` jsou exportovány z knihovny MFC DLL (MFC90. DLL), nikdy z uživatelských knihoven DLL. To se provádí, aby se zabránilo `CStringT` množení definovány.
 
 > [!NOTE]
->  Pokud váš kód obsahuje alternativní řešení pro chyby linkeru, které jsou popsány v tématu [Export třídy řetězců pomocí CStringT](../../atl-mfc-shared/exporting-string-classes-using-cstringt.md), měli byste tento kód odebrat. Už není zapotřebí.
+> Pokud váš kód obsahuje řešení pro chyby propojovacího zařízení, které je popsáno v [exportu tříd řetězce pomocí CStringT](../../atl-mfc-shared/exporting-string-classes-using-cstringt.md), měli byste tento kód odebrat. Už není zapotřebí.
 
 V aplikacích založených na knihovně MFC jsou k dispozici následující typy řetězců:
 
-|CStringt – typ|Deklarace|
+|Typ CStringT|Deklarace|
 |-------------------|-----------------|
 |`CStringA`|Řetězec typu znaku ANSI s podporou CRT.|
 |`CStringW`|Řetězec typu znaku Unicode s podporou CRT.|
-|`CString`|Typy znaků ANSI i Unicode s podporou CRT.|
+|`CString`|Typy znaků ANSI a Unicode s podporou CRT.|
 
-Následující typy řetězců jsou k dispozici v projektech, kde je definována ATL_CSTRING_NO_CRT:
+Následující typy řetězců jsou k dispozici v projektech, kde je definovánATL_CSTRING_NO_CRT
 
-|CStringt – typ|Deklarace|
+|Typ CStringT|Deklarace|
 |-------------------|-----------------|
-|`CAtlStringA`|Řetězec typu znaků ANSI bez podpory CRT.|
+|`CAtlStringA`|Řetězec typu znaku ANSI bez podpory CRT.|
 |`CAtlStringW`|Řetězec typu znaku Unicode bez podpory CRT.|
-|`CAtlString`|Typy znaků ANSI i Unicode bez podpory CRT.|
+|`CAtlString`|Typy znaků ANSI a Unicode bez podpory CRT.|
 
-Následující typy řetězců jsou k dispozici v projektech, kde ATL_CSTRING_NO_CRT není definován:
+Následující typy řetězců jsou k dispozici v projektech, kde není definována ATL_CSTRING_NO_CRT:
 
-|CStringt – typ|Deklarace|
+|Typ CStringT|Deklarace|
 |-------------------|-----------------|
 |`CAtlStringA`|Řetězec typu znaku ANSI s podporou CRT.|
 |`CAtlStringW`|Řetězec typu znaku Unicode s podporou CRT.|
-|`CAtlString`|Typy znaků ANSI i Unicode s podporou CRT.|
+|`CAtlString`|Typy znaků ANSI a Unicode s podporou CRT.|
 
-`CString` objekty mají také následující vlastnosti:
+`CString`objekty mají také následující vlastnosti:
 
-- `CStringT` objekty mohou růst v důsledku operací zřetězení.
+- `CStringT`objekty mohou růst v důsledku operací zřetězení.
 
-- objekty `CStringT` sledují "sémantika hodnoty". Objekt `CStringT` můžete představit jako skutečný řetězec, nikoli jako ukazatel na řetězec.
+- `CStringT`objekty následují za "hodnotou sémantiky". Představte `CStringT` si objekt jako skutečný řetězec, nikoli jako ukazatel na řetězec.
 
-- Pro argumenty funkce `PCXSTR` lze volně dosadit `CStringT` objekty.
+- Můžete volně nahradit `CStringT` objekty pro `PCXSTR` argumenty funkce.
 
-- Vlastní Správa paměti pro vyrovnávací paměti řetězců. Další informace najdete v tématu [Správa paměti a CString](../../atl-mfc-shared/memory-management-with-cstringt.md).
+- Vlastní správa paměti pro vyrovnávací paměti řetězce. Další informace naleznete v [tématu Memory Management a CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).
 
-## <a name="cstringt-predefined-types"></a>Předdefinované typy CStringt
+## <a name="cstringt-predefined-types"></a>Předdefinované typy CStringT
 
-Vzhledem k tomu, že `CStringT` používá argument šablony pro definování typu znaku (buď [wchar_t](../../c-runtime-library/standard-types.md) nebo [char](../../c-runtime-library/standard-types.md)), typy parametrů metody mohou být složité v časech. Pro zjednodušení tohoto problému je definována sada předdefinovaných typů, která se používá v celé `CStringT` třídy. V následující tabulce jsou uvedeny různé typy:
+Protože `CStringT` používá argument šablony k definování typu znaku (wchar_t [nebo](../../c-runtime-library/standard-types.md) [znak](../../c-runtime-library/standard-types.md)) podporované, typy parametrů metody mohou být někdy složité. Pro zjednodušení tohoto problému je definována a používána `CStringT` v celé třídě sada předdefinovaných typů. V následující tabulce jsou uvedeny různé typy:
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|`XCHAR`|Jeden znak (buď **wchar_t** , nebo **znak**) se stejným typem znaku jako objekt `CStringT`.|
-|`YCHAR`|Jeden znak (buď **wchar_t** , nebo **znak**) s typem opačného znaku jako objekt `CStringT`.|
-|`PXSTR`|Ukazatel na řetězec znaků (buď **wchar_t** , nebo **znak**) se stejným typem znaků jako objekt `CStringT`.|
-|`PYSTR`|Ukazatel na řetězec znaků (buď **wchar_t** , nebo **znak**) s typem opačného znaku jako objekt `CStringT`.|
-|`PCXSTR`|Ukazatel na řetězec **konstantního** znaku (buď **wchar_t** , nebo **znak**) se stejným typem znaků jako objekt `CStringT`.|
-|`PCYSTR`|Ukazatel na řetězec **konstantního** znaku (buď **wchar_t** , nebo **znak**) s typem opačného znaku jako objekt `CStringT`.|
+|`XCHAR`|Jeden znak **(buď wchar_t** nebo **znak**) se `CStringT` stejným typem znaku jako objekt.|
+|`YCHAR`|Jeden znak **(buď wchar_t** nebo **znak**) s `CStringT` opačným typem znaku jako objekt.|
+|`PXSTR`|Ukazatel na řetězec znaku **(wchar_t** nebo **znak)** se `CStringT` stejným typem znaku jako objekt.|
+|`PYSTR`|Ukazatel na řetězec znaku **(buď wchar_t** nebo **char)** `CStringT` s opačným typem znaku jako objekt.|
+|`PCXSTR`|Ukazatel na řetězec **znaků const** **(buď wchar_t** nebo **char)** `CStringT` se stejným typem znaku jako objekt.|
+|`PCYSTR`|Ukazatel na řetězec **znaku const** **(buď wchar_t** nebo **char)** s opačným typem znaku jako objekt. `CStringT`|
 
 > [!NOTE]
->  Kód, který dříve používal nedokumentované metody `CString` (například `AssignCopy`), musí být nahrazen kódem, který používá následující dokumentované metody `CStringT` (například `GetBuffer` nebo `ReleaseBuffer`). Tyto metody jsou zděděné z `CSimpleStringT`.
+> Kód, který dříve používal `CString` nedokumentované `AssignCopy`metody (například ) musí být nahrazen `CStringT` kódem, `GetBuffer` `ReleaseBuffer`který používá následující zdokumentované metody (například nebo ). Tyto metody jsou `CSimpleStringT`zděděny z .
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -271,14 +271,14 @@ Vzhledem k tomu, že `CStringT` používá argument šablony pro definování ty
 
 ## <a name="requirements"></a>Požadavky
 
-|Hlavička|Použít pro|
+|Hlavička|Použití pro|
 |------------|-------------|
-|CStringT. h|Řetězcové objekty pouze MFC|
-|atlstr.h|Objekty řetězce bez knihovny MFC|
+|cstringt.h|Objekty řetězce pouze knihovny MFC|
+|atlstr.h|Objekty řetězce jiné než Knihovna MFC|
 
-##  <a name="allocsysstring"></a>CStringt:: AllocSysString
+## <a name="cstringtallocsysstring"></a><a name="allocsysstring"></a>CStringT::AllocSysString
 
-Přidělí řetězec kompatibilní s automatizací typu BSTR a zkopíruje obsah objektu `CStringT` do něj, včetně ukončujícího znaku null.
+Přidělí řetězec kompatibilní s automatizací typu BSTR a `CStringT` zkopíruje do něj obsah objektu, včetně ukončujícího znaku null.
 
 ```
 BSTR AllocSysString() const;
@@ -290,11 +290,11 @@ Nově přidělený řetězec.
 
 ### <a name="remarks"></a>Poznámky
 
-V programech MFC je vyvolána [Třída CMemoryException](../../mfc/reference/cmemoryexception-class.md) , pokud existuje nedostatek paměti. V programech ATL je vyvolána výjimka [CAtlException](../../atl/reference/catlexception-class.md) . Tato funkce se obvykle používá k vrácení řetězců pro automatizaci.
+V programech knihovny MFC je vyvolána [třída CMemoryException,](../../mfc/reference/cmemoryexception-class.md) pokud neexistuje dostatek paměti. V programech ATL je vyvolána [catlexception.](../../atl/reference/catlexception-class.md) Tato funkce se obvykle používá k vrácení řetězců pro automatizaci.
 
-Obecně platí, že pokud je tento řetězec předán funkci modelu COM jako parametr [in], pak volající vyžaduje uvolnění řetězce. To lze provést pomocí [SysFreeString](/windows/win32/api/oleauto/nf-oleauto-sysfreestring), jak je popsáno v Windows SDK. Další informace naleznete v tématu [přidělování a uvolňování paměti pro BSTR](../../atl-mfc-shared/allocating-and-releasing-memory-for-a-bstr.md).
+Obvykle pokud tento řetězec je předán funkci COM jako parametr [in], pak to vyžaduje, aby volající uvolnit řetězec. To lze provést pomocí [sysFreeString](/windows/win32/api/oleauto/nf-oleauto-sysfreestring), jak je popsáno v sadě Windows SDK. Další informace naleznete [v tématu Přidělování a uvolnění paměti pro BSTR](../../atl-mfc-shared/allocating-and-releasing-memory-for-a-bstr.md).
 
-Další informace o funkcích alokace OLE v systému Windows naleznete v tématu [případě](/windows/win32/api/oleauto/nf-oleauto-sysallocstring) v Windows SDK.
+Další informace o funkcích přidělení OLE v systému Windows naleznete v tématu [SysAllocString](/windows/win32/api/oleauto/nf-oleauto-sysallocstring) v sadě Windows SDK.
 
 ### <a name="example"></a>Příklad
 
@@ -302,9 +302,9 @@ Následující příklad ukazuje použití `CStringT::AllocSysString`.
 
 [!code-cpp[NVC_ATLMFC_Utilities#105](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_1.cpp)]
 
-##  <a name="ansitooem"></a>CStringt:: AnsiToOem
+## <a name="cstringtansitooem"></a><a name="ansitooem"></a>CStringT::AnsiToOem
 
-Převede všechny znaky z tohoto `CStringT` objektu ze znakové sady ANSI na znakovou sadu OEM.
+Převede všechny znaky `CStringT` v tomto objektu ze znakové sady ANSI na znakovou sadu OEM.
 
 ```
 void AnsiToOem();
@@ -318,9 +318,9 @@ Funkce není k dispozici, pokud je definována _UNICODE.
 
 [!code-cpp[NVC_ATLMFC_Utilities#106](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_2.cpp)]
 
-##  <a name="appendformat"></a>CStringt:: AppendFormat
+## <a name="cstringtappendformat"></a><a name="appendformat"></a>CStringT::Připojitformát
 
-Připojí formátovaná data k existujícímu objektu `CStringT`.
+Připojí formátovaná data k `CStringT` existujícímu objektu.
 
 ```
 void __cdecl AppendFormat(PCXSTR pszFormat, [, argument] ...);
@@ -332,7 +332,7 @@ void __cdecl AppendFormat(UINT nFormatID, [, argument] ...);
 *pszFormat*<br/>
 Řetězec řízení formátu.
 
-*nFormatID*<br/>
+*nID formátu*<br/>
 Identifikátor prostředku řetězce, který obsahuje řetězec řízení formátu.
 
 *Argument*<br/>
@@ -340,15 +340,15 @@ Volitelné argumenty
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce formátuje a připojuje řadu znaků a hodnot v `CStringT`. Každý volitelný argument (pokud existuje) je převeden a připojen podle odpovídající specifikace formátu v *pszFormat* nebo z prostředku řetězce identifikovaného parametrem *nFormatID*.
+Tato funkce formátuje a připojí řadu znaků `CStringT`a hodnot v . Každý volitelný argument (pokud existuje) je převeden a připojen podle odpovídající specifikace formátu v *pszFormat* nebo z prostředku řetězce identifikovaného *nFormatID*.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_ATLMFC_Utilities#107](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_3.cpp)]
 
-##  <a name="collate"></a>CStringt:: COLLATE
+## <a name="cstringtcollate"></a><a name="collate"></a>CStringT::Kompletovat
 
-Porovná dva řetězce pomocí funkce obecného textu `_tcscoll`.
+Porovná dva řetězce pomocí funkce `_tcscoll`obecného textu .
 
 ```
 int Collate(PCXSTR psz) const throw();
@@ -361,15 +361,15 @@ Druhý řetězec použitý pro porovnání.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nula, pokud jsou řetězce identické, < 0, pokud je tento objekt `CStringT` menší než *PSZ*, nebo > 0, pokud je tento objekt `CStringT` větší než *PSZ*.
+Nula, pokud řetězce jsou identické, `CStringT` < 0, pokud tento objekt `CStringT` je menší než *psz*, nebo > 0, pokud tento objekt je větší než *psz*.
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce obecného textu `_tcscoll`, která je definována v TCHAR. H, mapuje buď `strcoll`, `wcscoll`nebo `_mbscoll`, v závislosti na znakové sadě definované v době kompilace. Každá funkce provádí porovnání řetězců s rozlišováním velkých a malých písmen podle znakové stránky, která se právě používá. Další informace najdete v tématu [strcoll –, wcscoll, _mbscoll, _strcoll_l, _wcscoll_l _mbscoll_l](../../c-runtime-library/reference/strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md).
+Funkce `_tcscoll`obecného textu , která je definována v TCHAR. H, mapuje `strcoll` `wcscoll`na `_mbscoll`buď , nebo , v závislosti na znakové sadě, která je definována v době kompilace. Každá funkce provádí porovnání řetězců rozlišujícímalá písmena podle aktuálně používáné znakové stránky. Další informace naleznete [v tématech strcoll, wcscoll, _mbscoll, _strcoll_l, _wcscoll_l, _mbscoll_l](../../c-runtime-library/reference/strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md).
 
-##  <a name="collatenocase"></a>CStringt:: CollateNoCase
+## <a name="cstringtcollatenocase"></a><a name="collatenocase"></a>CStringT::CollateNoCase
 
-Porovná dva řetězce pomocí funkce obecného textu `_tcscoll`.
+Porovná dva řetězce pomocí funkce `_tcscoll`obecného textu .
 
 ```
 int CollateNoCase(PCXSTR psz) const throw();
@@ -382,19 +382,19 @@ Druhý řetězec použitý pro porovnání.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nula, pokud jsou řetězce identické (ignorování velkých a malých písmen), < 0, pokud je tento objekt `CStringT` menší než *PSZ* (ignorování velkých a malých písmen), nebo > 0, pokud je tento objekt `CStringT` větší než *PSZ* (ignorování velkých a malých písmen).
+Nula, pokud řetězce jsou identické (ignorování `CStringT` případu), < 0, pokud tento objekt je `CStringT` menší než *psz* (ignorování případu), nebo > 0, pokud tento objekt je větší než *psz* (ignorování případu).
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce obecného textu `_tcscoll`, která je definována v TCHAR. H, mapuje buď `stricoll`, `wcsicoll`nebo `_mbsicoll`, v závislosti na znakové sadě definované v době kompilace. Každá funkce provede porovnání řetězců bez rozlišování velkých a malých písmen, podle znakové stránky, která se právě používá. Další informace najdete v tématu [strcoll –, wcscoll, _mbscoll, _strcoll_l, _wcscoll_l _mbscoll_l](../../c-runtime-library/reference/strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md).
+Funkce `_tcscoll`obecného textu , která je definována v TCHAR. H, mapuje `stricoll` `wcsicoll`na `_mbsicoll`buď , nebo , v závislosti na znakové sadě, která je definována v době kompilace. Každá funkce provádí porovnání řetězců bez rozlišování velkých a malých písmen podle aktuálně používáné znakové stránky. Další informace naleznete [v tématech strcoll, wcscoll, _mbscoll, _strcoll_l, _wcscoll_l, _mbscoll_l](../../c-runtime-library/reference/strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md).
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_ATLMFC_Utilities#109](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_4.cpp)]
 
-##  <a name="compare"></a>CStringt:: Compare
+## <a name="cstringtcompare"></a><a name="compare"></a>CStringT::Porovnat
 
-Porovná dva řetězce (rozlišuje velká a malá písmena).
+Porovná dva řetězce (malá a velká písmena).
 
 ```
 int Compare(PCXSTR psz) const;
@@ -407,13 +407,13 @@ Druhý řetězec použitý pro porovnání.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nula, pokud jsou řetězce identické, < 0, pokud je tento objekt `CStringT` menší než *PSZ*, nebo > 0, pokud je tento objekt `CStringT` větší než *PSZ*.
+Nula, pokud řetězce jsou identické, `CStringT` < 0, pokud tento objekt `CStringT` je menší než *psz*, nebo > 0, pokud tento objekt je větší než *psz*.
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce obecného textu `_tcscmp`, která je definována v TCHAR. H, mapuje buď `strcmp`, `wcscmp`nebo `_mbscmp`, v závislosti na znakové sadě definované v době kompilace. Každá funkce provádí porovnání řetězců s rozlišováním velkých a malých písmen a není ovlivněno národním prostředím. Další informace najdete v tématu [strcmp, wcscmp, _mbscmp](../../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md).
+Funkce `_tcscmp`obecného textu , která je definována v TCHAR. H, mapuje `strcmp` `wcscmp`na `_mbscmp`buď , nebo , v závislosti na znakové sadě, která je definována v době kompilace. Každá funkce provádí porovnání řetězců rozlišující malá a velká písmena a není ovlivněna národním prostředím. Další informace naleznete [v tématu strcmp, wcscmp, _mbscmp](../../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md).
 
-Pokud řetězec obsahuje vložené hodnoty null, pro účely porovnání je řetězec považován za zkrácený při prvním vloženém znaku null.
+Pokud řetězec obsahuje vložené nulls, pro účely porovnání řetězec je považován za zkrácený na první vložený znak null.
 
 ### <a name="example"></a>Příklad
 
@@ -421,9 +421,9 @@ Následující příklad ukazuje použití `CStringT::Compare`.
 
 [!code-cpp[NVC_ATLMFC_Utilities#110](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_5.cpp)]
 
-##  <a name="comparenocase"></a>CStringt:: CompareNoCase
+## <a name="cstringtcomparenocase"></a><a name="comparenocase"></a>CStringT::PorovnáníNocase
 
-Porovná dva řetězce (nerozlišuje velikost písmen).
+Porovná dva řetězce (malá a velká písmena).
 
 ```
 int CompareNoCase(PCXSTR psz) const throw();
@@ -436,19 +436,19 @@ Druhý řetězec použitý pro porovnání.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nula, pokud jsou řetězce identické (ignorování velkých a malých písmen), < 0, pokud je tento objekt `CStringT` menší než *PSZ* (ignorování velkých a malých písmen), nebo > 0, pokud je tento objekt `CStringT` větší než *PSZ* (ignorování velkých a malých písmen).
+Nula, pokud řetězce jsou identické (ignorování `CStringT` případu), <0, pokud tento objekt je `CStringT` menší než *psz* (ignorování případu), nebo >0, pokud tento objekt je větší než *psz* (ignorování případu).
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce obecného textu `_tcsicmp`, která je definována v TCHAR. H se mapuje buď na `_stricmp`, `_wcsicmp` nebo `_mbsicmp`, v závislosti na znakové sadě definované v době kompilace. Každá funkce provede porovnání řetězců bez rozlišování velkých a malých písmen. Porovnání závisí na LC_CTYPE aspektu národního prostředí, ale ne LC_COLLATE. Další informace najdete v tématu [_stricmp, _wcsicmp, _mbsicmp _stricmp_l, _wcsicmp_l](../../c-runtime-library/reference/stricmp-wcsicmp-mbsicmp-stricmp-l-wcsicmp-l-mbsicmp-l.md)_mbsicmp_l.
+Funkce `_tcsicmp`obecného textu , která je definována v TCHAR. H, mapuje `_stricmp` `_wcsicmp` na `_mbsicmp`buď , nebo , v závislosti na znakové sady, která je definována v době kompilace. Každá funkce provádí porovnání řetězců bez rozlišování velkých a malých písmen. Porovnání závisí na LC_CTYPE aspektnárodní prostředí, ale není LC_COLLATE. Další informace naleznete [v tématu _stricmp, _wcsicmp, _mbsicmp, _stricmp_l, _wcsicmp_l, _mbsicmp_l](../../c-runtime-library/reference/stricmp-wcsicmp-mbsicmp-stricmp-l-wcsicmp-l-mbsicmp-l.md).
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_ATLMFC_Utilities#111](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_6.cpp)]
 
-##  <a name="cstringt"></a>CStringt:: CStringt
+## <a name="cstringtcstringt"></a><a name="cstringt"></a>CStringT::CStringt
 
-Vytvoří objekt `CStringT`.
+Vytvoří `CStringT` objekt.
 
 ```
 CStringT() throw() :
@@ -525,72 +525,72 @@ CStringT(const YCHAR* pch, int nLength, IAtlStringMgr* pStringMgr) :
 
 ### <a name="parameters"></a>Parametry
 
-*PCH*<br/>
-Ukazatel na pole znaků s délkou *nLength*, ne zakončené znakem null.
+*pch*<br/>
+Ukazatel na pole znaků délky *nLength*, není null ukončen.
 
-*nLength*<br/>
-Počet znaků v souboru *PCH*.
+*nDélka*<br/>
+Počet znaků v *pch*.
 
-*Zvolte*<br/>
+*Ch*<br/>
 Jeden znak.
 
 *pszSrc*<br/>
-Řetězec zakončený hodnotou null bude zkopírován do tohoto objektu `CStringT`.
+Řetězec s ukončeným hodnotou null, `CStringT` který má být zkopírován do tohoto objektu.
 
 *pStringMgr*<br/>
-Ukazatel na správce paměti pro objekt `CStringT`. Další informace o správě `IAtlStringMgr` a paměti pro `CStringT`najdete v tématu [Správa paměti pomocí CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).
+Ukazatel na správce paměti `CStringT` pro objekt. Další informace `IAtlStringMgr` o správě `CStringT`paměti a pro správu paměti naleznete v [tématu Správa paměti s cstringt](../../atl-mfc-shared/memory-management-with-cstringt.md).
 
 *strSrc*<br/>
-Existující objekt `CStringT`, který se má zkopírovat do tohoto objektu `CStringT` Další informace o `CThisString` a `CThisSimpleString`najdete v části poznámky.
+Existující `CStringT` objekt, který má `CStringT` být do tohoto objektu zkopírován. Další informace `CThisString` o `CThisSimpleString`a najdete v části Poznámky.
 
 *varSrc*<br/>
-Objekt variant, který má být zkopírován do tohoto objektu `CStringT`.
+Objekt varianty, který má `CStringT` být do tohoto objektu zkopírován.
 
 *BaseType*<br/>
-Typ znaku řetězcové třídy. Může být jedna z následujících akcí:
+Typ znaku třídy řetězce. Může to být jedna z následujících možností:
 
 **char** (pro řetězce znaků ANSI).
 
 **wchar_t** (pro řetězce znaků Unicode).
 
-TCHAR (pro řetězce znaků ANSI a Unicode).
+TCHAR (pro řetězce znaků ANSI i Unicode).
 
 *bMFCDLL*<br/>
-Logická hodnota, která určuje, zda se jedná o projekt knihovny MFC DLL (TRUE) nebo ne (FALSE).
+Logická hodnota, která určuje, zda je projekt knihovnou MFC DLL (TRUE) nebo ne (FALSE).
 
-*SystemString*<br/>
-Musí být `System::String`a projekt musí být zkompilován pomocí parametrem/CLR.
+*Řetězec systemstring*<br/>
+Musí `System::String`být a projekt musí být zkompilován s /clr.
 
-*pString*<br/>
-Popisovač pro objekt `CStringT`.
+*pŘetězec*<br/>
+Úchyt `CStringT` pro objekt.
 
 ### <a name="remarks"></a>Poznámky
 
-Vzhledem k tomu, že konstruktory kopírují vstupní data do nového přiděleného úložiště, měli byste si být vědomi, že by mohlo dojít k výjimkám paměti. Všimněte si, že některé z těchto konstruktorů fungují jako funkce pro převod. To vám umožňuje nahradit například LPTSTR, kde se očekává objekt `CStringT`.
+Vzhledem k tomu, že konstruktory zkopírují vstupní data do nového přidělenéúložiště, měli byste si být vědomi, že mohou mít způsobit výjimky paměti. Všimněte si, že některé z těchto konstruktorů fungují jako funkce převodu. To umožňuje nahradit například LPTSTR, kde `CStringT` se očekává objekt.
 
-- `CStringT`(`LPCSTR` `lpsz`): sestaví `CStringT` Unicode z řetězce ANSI. Tento konstruktor lze také použít k načtení prostředku řetězce, jak je znázorněno v následujícím příkladu.
+- `CStringT`( `LPCSTR` `lpsz` ): Vytvoří unicode `CStringT` z řetězce ANSI. Tento konstruktor můžete také použít k načtení prostředku řetězce, jak je znázorněno v příkladu níže.
 
-- `CStringT(` `LPCWSTR` `lpsz`): sestaví `CStringT` z řetězce Unicode.
+- `CStringT(`): Vytvoří `CStringT` řetězec z unicode. `LPCWSTR` `lpsz`
 
-- `CStringT`(`const unsigned char*` `psz`): umožňuje vytvořit `CStringT` z ukazatele na **nepodepsaný znak**.
-
-> [!NOTE]
->  Definujte makro _CSTRING_DISABLE_NARROW_WIDE_CONVERSION pro vypnutí implicitního převodu řetězce mezi řetězci ANSI a Unicode. Makro vyloučí z kompilačních konstruktorů, které podporují převod.
-
-Všimněte si, že parametr *strSrc* může být buď objekt `CStringT` nebo `CThisSimpleString`. Pro `CStringT`použijte jednu z jeho výchozích instancí (`CString`, `CStringA`nebo `CStringW`); pro `CThisSimpleString`použijte **Tento** ukazatel. `CThisSimpleString` deklaruje instanci [třídy CSimpleStringT](../../atl-mfc-shared/reference/csimplestringt-class.md), která je menší řetězcové třídy s menší integrovanou funkcí než `CStringT`ou třídou.
-
-Operátor přetížení `CSimpleStringT<>&()` vytvoří objekt `CStringT` z deklarace `CSimpleStringT`.
+- `CStringT`( `const unsigned char*` `psz` ): Umožňuje vytvořit `CStringT` z ukazatele na **nepodepsané char**.
 
 > [!NOTE]
->  I když je možné vytvořit `CStringT` instance, které obsahují vložené znaky null, doporučujeme proti ní. Volání metod a operátorů na `CStringT` objekty, které obsahují vložené znaky null, mohou způsobit neočekávané výsledky.
+> Definujte _CSTRING_DISABLE_NARROW_WIDE_CONVERSION makra, chcete-li vypnout implicitní převod řetězců mezi řetězci ANSI a Unicode. Makro vylučuje z kompilace konstruktory, které podporují převod.
+
+Všimněte si, že *strSrc* parametr může být `CStringT` nebo objekt. `CThisSimpleString` Pro `CStringT`, použijte jeden z jeho`CString`výchozích instancí ( , `CStringA`, nebo `CStringW`); pro `CThisSimpleString`, použijte **tento** ukazatel. `CThisSimpleString`deklaruje instanci [třídy CSimpleStringT](../../atl-mfc-shared/reference/csimplestringt-class.md), což je menší třída `CStringT` řetězce s méně vestavěnou funkcí než třída.
+
+Operátor přetížení `CSimpleStringT<>&()` vytvoří `CStringT` objekt z `CSimpleStringT` deklarace.
+
+> [!NOTE]
+> I když je `CStringT` možné vytvořit instance, které obsahují vložené prázdné znaky, doporučujeme proti němu. Volání metod a `CStringT` operátorů na objekty, které obsahují vložené prázdné znaky může způsobit nezamýšlené výsledky.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_ATLMFC_Utilities#112](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_7.cpp)]
 
-##  <a name="_dtorcstringt"></a>CStringt:: ~ CStringt
+## <a name="cstringtcstringt"></a><a name="_dtorcstringt"></a>CStringT::~CStringT
 
-Odstraní objekt `CStringT`.
+Zničí `CStringT` objekt.
 
 ```
 ~CStringT() throw();
@@ -598,11 +598,11 @@ Odstraní objekt `CStringT`.
 
 ### <a name="remarks"></a>Poznámky
 
-Odstraní objekt `CStringT`.
+Zničí `CStringT` objekt.
 
-##  <a name="delete"></a>CStringt::D dstranit
+## <a name="cstringtdelete"></a><a name="delete"></a>CStringT::Delete
 
-Odstraní znak nebo znaky z řetězce začínajícího znakem na daném indexu.
+Odstraní znak nebo znaky z řetězce začínající znakem v daném indexu.
 
 ```
 int Delete(int iIndex, int nCount = 1);
@@ -611,7 +611,7 @@ int Delete(int iIndex, int nCount = 1);
 ### <a name="parameters"></a>Parametry
 
 *iIndex*<br/>
-Index založený na nule prvního znaku v objektu `CStringT`, který se má odstranit.
+Index založený na nule prvního `CStringT` znaku v objektu, který chcete odstranit.
 
 *nCount*<br/>
 Počet znaků, které mají být odebrány.
@@ -622,7 +622,7 @@ Délka změněného řetězce.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud je *nCount* delší než řetězec, zbytek řetězce se odebere.
+Pokud *nCount* je delší než řetězec, zbytek řetězce budou odebrány.
 
 ### <a name="example"></a>Příklad
 
@@ -635,7 +635,7 @@ After: Soccer best,
     but hockey is quicker!
 ```
 
-##  <a name="find"></a>CStringt:: Find
+## <a name="cstringtfind"></a><a name="find"></a>CStringT::Najít
 
 Vyhledá v tomto řetězci první shodu znaku nebo podřetězce.
 
@@ -647,29 +647,29 @@ int Find(XCHAR ch, int iStart=0) const throw();
 ### <a name="parameters"></a>Parametry
 
 *pszSub*<br/>
-Dílčí řetězec, který má být hledán.
+Podřetězec, který chcete vyhledat.
 
-*-zahájení*<br/>
-Index znaku v řetězci, ve kterém má být zahájeno hledání, nebo 0, aby bylo možné začít od začátku.
+*iStartovat*<br/>
+Index znaku v řetězci začít hledání s nebo 0 začít od začátku.
 
-*Zvolte*<br/>
+*Ch*<br/>
 Jeden znak, který chcete vyhledat.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Index založený na nule prvního znaku v tomto objektu `CStringT`, který se shoduje s požadovaným podřetězcem nebo znaky; -1, pokud nebyl nalezen dílčí řetězec nebo znak.
+Nulový index prvního znaku `CStringT` v tomto objektu, který odpovídá požadovanému podřetězci nebo znakům; -1, pokud není nalezen podřetězec nebo znak.
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce je přetížena, aby přijímala jednotlivé znaky (podobně jako funkce modulu runtime `strchr`) a řetězce (podobně jako `strstr`).
+Funkce je přetížena přijmout oba jednotlivé znaky (podobně `strchr`jako funkce run-time) a řetězce (podobně jako `strstr`).
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_ATLMFC_Utilities#114](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_9.cpp)]
 
-##  <a name="findoneof"></a>CStringt:: FindOneOf
+## <a name="cstringtfindoneof"></a><a name="findoneof"></a>CStringt::Najít
 
-Vyhledá v tomto řetězci první znak, který odpovídá jakémukoli znaku obsaženému v *pszCharSet*.
+Vyhledá v tomto řetězci první znak, který odpovídá libovolnému znaku obsaženému v *souboru pszCharSet*.
 
 ```
 int FindOneOf(PCXSTR pszCharSet) const throw();
@@ -678,23 +678,23 @@ int FindOneOf(PCXSTR pszCharSet) const throw();
 ### <a name="parameters"></a>Parametry
 
 *pszCharSet*<br/>
-Řetězec obsahující znaky pro spárování.
+Řetězec obsahující znaky pro porovnávání.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Index založený na nule prvního znaku v tomto řetězci, který je také v *pszCharSet*; -1, pokud se neshoduje.
+Index založený na nule prvního znaku v tomto řetězci, který je také v *pszCharSet*; -1, pokud není shoda.
 
 ### <a name="remarks"></a>Poznámky
 
-Vyhledá první výskyt všech znaků v *pszCharSet*.
+Vyhledá první výskyt některého ze znaků v *pszCharSet*.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_ATLMFC_Utilities#115](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_10.cpp)]
 
-##  <a name="format"></a>CStringt:: Format
+## <a name="cstringtformat"></a><a name="format"></a>CStringT::Formát
 
-Zapisuje formátovaná data do `CStringT` stejným způsobem, jakým [sprintf_s](../../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md) formátuje data do pole znaků ve stylu jazyka C.
+Zapisuje `CStringT` formátovaná data stejným způsobem, jakým [sprintf_s](../../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md) formátuje data do znakového pole ve stylu C.
 
 ```
 void __cdecl Format(UINT nFormatID, [, argument]...);
@@ -703,7 +703,7 @@ void __cdecl Format(PCXSTR pszFormat,  [, argument] ...);
 
 ### <a name="parameters"></a>Parametry
 
-*nFormatID*<br/>
+*nID formátu*<br/>
 Identifikátor prostředku řetězce, který obsahuje řetězec řízení formátu.
 
 *pszFormat*<br/>
@@ -714,19 +714,19 @@ Volitelné argumenty
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce formátuje a ukládá řadu znaků a hodnot v `CStringT`. Každý volitelný argument (pokud existuje) je převeden a výstup podle odpovídající specifikace formátu v *pszFormat* nebo z prostředku řetězce identifikovaného parametrem *nFormatID*.
+Tato funkce formátuje a ukládá řadu znaků `CStringT`a hodnot v . Každý volitelný argument (pokud existuje) je převeden a výstup podle odpovídající specifikace formátu v *pszFormat* nebo z prostředku řetězce identifikované *nFormatID*.
 
-Volání se nezdaří, pokud je samotný objekt String nabídnut jako parametr pro `Format`. Například následující kód způsobí nepředvídatelné výsledky:
+Volání se nezdaří, pokud je samotný objekt `Format`řetězce nabízen jako parametr . Například následující kód způsobí nepředvídatelné výsledky:
 
 [!code-cpp[NVC_ATLMFC_Utilities#116](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_11.cpp)]
 
-Další informace najdete v tématu [syntaxe specifikace formátu: printf a wprintf Functions](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
+Další informace naleznete [v tématu Syntaxe specifikace formátu: printf a wprintf Functions](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_ATLMFC_Utilities#117](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_12.cpp)]
 
-##  <a name="formatmessage"></a>CStringt:: FormatMessage
+## <a name="cstringtformatmessage"></a><a name="formatmessage"></a>CStringT::Zpráva formátu
 
 Formátuje řetězec zprávy.
 
@@ -737,29 +737,29 @@ void __cdecl FormatMessage(PCXSTR pszFormat, [, argument]...);
 
 ### <a name="parameters"></a>Parametry
 
-*nFormatID*<br/>
-Identifikátor prostředku řetězce, který obsahuje text neformátované zprávy.
+*nID formátu*<br/>
+Identifikátor prostředků řetězce, který obsahuje neformátovaný text zprávy.
 
 *pszFormat*<br/>
-Odkazuje na řetězec řízení formátu. Bude prohledáván pro odpovídající vložení a formátování. Formátovací řetězec je podobný řetězci formátu *printf*běhových funkcí, s výjimkou umožňuje vložení parametrů v libovolném pořadí.
+Odkazuje na řetězec řízení formátu. Bude naskenován pro vložky a formátován odpovídajícím způsobem. Formátovací řetězec je podobný run-time funkce *printf*-style řetězce, s výjimkou umožňuje parametry, které mají být vloženy v libovolném pořadí.
 
 *Argument*<br/>
 Volitelné argumenty
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce vyžaduje jako vstup definici zprávy. Definice zprávy je určena *pszFormat* nebo z prostředku řetězce identifikovaného pomocí *nFormatID*. Funkce zkopíruje formátovaný text zprávy do objektu `CStringT` a v případě potřeby zpracovává všechny vložené sekvence vložení.
+Funkce vyžaduje jako vstup definici zprávy. Definice zprávy je určena *pszFormat* nebo z prostředku řetězce identifikovaného *nFormatID*. Funkce zkopíruje formátovaný text `CStringT` zprávy do objektu a na požádání zprovozní všechny vložené sekvence vložení.
 
 > [!NOTE]
-> `FormatMessage` se pokusí přidělit systémovou paměť pro nově formátovaný řetězec. Pokud tento pokus neproběhne úspěšně, dojde k automatickému vyvolání výjimky paměti.
+> `FormatMessage`pokusí se přidělit systémovou paměť pro nově formátovaný řetězec. Pokud se tento pokus nezdaří, je automaticky vyvolána výjimka paměti.
 
-Každé vložení musí mít odpovídající parametr za parametrem *pszFormat* nebo *nFormatID* . V textu zprávy je několik řídicích sekvencí podporováno pro dynamické formátování zprávy. Další informace najdete v Windows SDK funkci Windows [FormatMessage](/windows/win32/api/winbase/nf-winbase-formatmessage) .
+Každá vložení musí mít odpovídající parametr za parametrem *pszFormat* nebo *nFormatID.* V textu zprávy je podporováno několik sekvencí escape pro dynamické formátování zprávy. Další informace naleznete v aplikaci Windows [FormatMessage](/windows/win32/api/winbase/nf-winbase-formatmessage) v sadě Windows SDK.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_ATLMFC_Utilities#118](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_13.cpp)]
 
-##  <a name="formatmessagev"></a>CStringt:: FormatMessageV
+## <a name="cstringtformatmessagev"></a><a name="formatmessagev"></a>CStringT::FormatMessageV
 
 Formátuje řetězec zprávy pomocí seznamu argumentů proměnných.
 
@@ -770,21 +770,21 @@ void FormatMessageV(PCXSTR pszFormat, va_list* pArgList);
 ### <a name="parameters"></a>Parametry
 
 *pszFormat*<br/>
-Odkazuje na řetězec řízení formátu. Bude prohledáván pro odpovídající vložení a formátování. Formátovací řetězec je podobný běhovým řetězcům formátu `printf`ve stylu, s výjimkou umožňuje vložení parametrů v libovolném pořadí.
+Odkazuje na řetězec řízení formátu. Bude naskenován pro vložky a formátován odpovídajícím způsobem. Formátovací řetězec je podobný řetězce `printf`formátu funkce run-time- styl, s výjimkou umožňuje parametry, které mají být vloženy v libovolném pořadí.
 
-*pArgList*<br/>
+*seznam pArglist*<br/>
 Ukazatel na seznam argumentů.
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce vyžaduje jako vstup definici zprávy určenou funkcí *pszFormat*. Funkce zkopíruje formátovaný text zprávy a seznam argumentů do objektu `CStringT` a v případě potřeby zpracovává všechny vložené sekvence vložení.
+Funkce vyžaduje definici zprávy jako vstup, určenou *pszFormat*. Funkce zkopíruje formátovaný text zprávy a seznam proměnných argumentů do objektu, `CStringT` zpracování všech vložených sekvencí vložení na požádání.
 
 > [!NOTE]
-> `FormatMessageV` volá [CStringT:: FormatMessage](#formatmessage), která se pokusí přidělit systémovou paměť pro nově formátovaný řetězec. Pokud tento pokus neproběhne úspěšně, dojde k automatickému vyvolání výjimky paměti.
+> `FormatMessageV`volá [CStringT::FormatMessage](#formatmessage), který se pokusí přidělit systémovou paměť pro nově formátovaný řetězec. Pokud se tento pokus nezdaří, je automaticky vyvolána výjimka paměti.
 
-Další informace najdete v Windows SDK funkci Windows [FormatMessage](/windows/win32/api/winbase/nf-winbase-formatmessage) .
+Další informace naleznete v aplikaci Windows [FormatMessage](/windows/win32/api/winbase/nf-winbase-formatmessage) v sadě Windows SDK.
 
-##  <a name="formatv"></a>CStringt:: FormatV
+## <a name="cstringtformatv"></a><a name="formatv"></a>CStringT::FormatV
 
 Formátuje řetězec zprávy pomocí seznamu argumentů proměnných.
 
@@ -795,14 +795,14 @@ void FormatV(PCXSTR pszFormat, va_list args);
 ### <a name="parameters"></a>Parametry
 
 *pszFormat*<br/>
-Odkazuje na řetězec řízení formátu. Bude prohledáván pro odpovídající vložení a formátování. Formátovací řetězec je podobný běhovým řetězcům formátu `printf`ve stylu, s výjimkou umožňuje vložení parametrů v libovolném pořadí.
+Odkazuje na řetězec řízení formátu. Bude naskenován pro vložky a formátován odpovídajícím způsobem. Formátovací řetězec je podobný řetězce `printf`formátu funkce run-time- styl, s výjimkou umožňuje parametry, které mají být vloženy v libovolném pořadí.
 
-*argumentů*<br/>
+*Args*<br/>
 Ukazatel na seznam argumentů.
 
 ### <a name="remarks"></a>Poznámky
 
-Zapíše formátovaný řetězec a seznam proměnných argumentů do řetězce `CStringT` stejným způsobem, jakým `vsprintf_s` formátuje data do pole znaků ve stylu jazyka C.
+Zapíše formátovaný řetězec a seznam proměnných `CStringT` argumentů do `vsprintf_s` řetězce stejným způsobem, jakým formátuje data do pole znaků ve stylu C.
 
 ### <a name="example"></a>Příklad
 
@@ -810,7 +810,7 @@ Zapíše formátovaný řetězec a seznam proměnných argumentů do řetězce `
 
 [!code-cpp[NVC_ATLMFC_Utilities#120](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_15.cpp)]
 
-##  <a name="getenvironmentvariable"></a>CStringt:: GetEnvironmentVariable
+## <a name="cstringtgetenvironmentvariable"></a><a name="getenvironmentvariable"></a>CStringT::GetEnvironmentVariable
 
 Nastaví řetězec na hodnotu zadané proměnné prostředí.
 
@@ -821,23 +821,23 @@ BOOL GetEnvironmentVariable(PCXSTR pszVar);
 ### <a name="parameters"></a>Parametry
 
 *pszVar*<br/>
-Ukazatel na řetězec zakončený hodnotou null, který určuje proměnnou prostředí.
+Ukazatel na řetězec s ukončeným hodnotou null, který určuje proměnnou prostředí.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud bylo úspěšné; v opačném případě 0.
+Nenulová, pokud je úspěšná; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Načte hodnotu zadané proměnné z bloku prostředí volajícího procesu. Hodnota je ve formátu řetězce znaků zakončeného hodnotou null.
+Načte hodnotu zadané proměnné z bloku prostředí volajícího procesu. Hodnota je ve formě řetězce znaků ukončeného nulou.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_ATLMFC_Utilities#121](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_16.cpp)]
 
-##  <a name="insert"></a>CStringt:: INSERT
+## <a name="cstringtinsert"></a><a name="insert"></a>CStringT::Vložit
 
-Vloží jeden znak nebo podřetězec na daný index v rámci řetězce.
+Vloží jeden znak nebo podřetězec na daný index v řetězci.
 
 ```
 int Insert(int iIndex, PCXSTR psz);
@@ -847,12 +847,12 @@ int Insert(int iIndex, XCHAR ch);
 ### <a name="parameters"></a>Parametry
 
 *iIndex*<br/>
-Index znaku, před kterým bude provedeno vkládání.
+Index znaku, před kterým dojde k vložení.
 
 *psz*<br/>
-Ukazatel na dílčí řetězec, který má být vložen.
+Ukazatel na podřetězec, který má být vložen.
 
-*Zvolte*<br/>
+*Ch*<br/>
 Znak, který má být vložen.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -861,15 +861,15 @@ Délka změněného řetězce.
 
 ### <a name="remarks"></a>Poznámky
 
-Parametr *iIndex* identifikuje první znak, který bude přesunut, aby uvolnil místo pro daný znak nebo podřetězec. Pokud je *nIndex* nula, vložení proběhne před celým řetězcem. Pokud je *nIndex* větší než délka řetězce, funkce bude zřetězit aktuální řetězec a nový materiál poskytnutý buď *ch* , nebo *PSZ*.
+Parametr *iIndex* identifikuje první znak, který bude přesunut, aby se uvolnilo místo pro znak nebo podřetězec. Pokud *nIndex* je nula, vložení dojde před celý řetězec. Pokud *nIndex* je vyšší než délka řetězce, funkce zřetězí současný řetězec a nový materiál poskytnutý *buď ch* nebo *psz*.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_ATLMFC_Utilities#122](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_17.cpp)]
 
-##  <a name="left"></a>CStringt:: Left
+## <a name="cstringtleft"></a><a name="left"></a>CStringT::Vlevo
 
-Extrahuje zcela *nCount* znaky z tohoto objektu `CStringT` a vrátí kopii extrahované podřetězce.
+Extrahuje znaky *nCount* nejvíce `CStringT` vlevo z tohoto objektu a vrátí kopii extrahovaného podřetězce.
 
 ```
 CStringT Left(int nCount) const;
@@ -878,25 +878,25 @@ CStringT Left(int nCount) const;
 ### <a name="parameters"></a>Parametry
 
 *nCount*<br/>
-Počet znaků, které mají být extrahovány z tohoto objektu `CStringT`.
+Počet znaků extrahovat `CStringT` z tohoto objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Objekt `CStringT`, který obsahuje kopii zadaného rozsahu znaků. Vrácený objekt `CStringT` může být prázdný.
+Objekt, `CStringT` který obsahuje kopii zadaného rozsahu znaků. Vrácený `CStringT` objekt může být prázdný.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud *nCount* překračuje délku řetězce, bude extrahován celý řetězec. `Left` je podobná funkci Basic `Left`.
+Pokud *nCount* překročí délku řetězce, pak je extrahován celý řetězec. `Left`je podobná funkci `Left` Basic.
 
-Pro vícebajtové znakové sady (MBCS) *nCount* zachází s každou 8bitové sekvencí jako znak, takže *nCount* vrátí počet vícebajtových znaků vynásobený dvěma.
+Pro vícebajtové znakové sady (MBCS) *nCount* považuje každou 8bitovou sekvenci za znak, takže *nCount* vrátí počet vícebajtových znaků vynásobený dvěma.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_ATLMFC_Utilities#123](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_18.cpp)]
 
-##  <a name="loadstring"></a>CStringt:: LoadString
+## <a name="cstringtloadstring"></a><a name="loadstring"></a>CStringT::Načíst řetězec
 
-Přečte prostředek řetězce Windows identifikovaný *NID*do existujícího objektu `CStringT`.
+Přečte prostředek řetězce systému Windows, identifikovaný `CStringT` *nID*, do existujícího objektu.
 
 ```
 BOOL LoadString(HINSTANCE hInstance, UINT nID, WORD wLanguageID);
@@ -909,27 +909,27 @@ BOOL LoadString(UINT nID);
 *hInstance*<br/>
 Popisovač instance modulu.
 
-*nID*<br/>
-ID prostředku řetězce Windows
+*Nid*<br/>
+ID řetězce systému Windows.
 
 *wLanguageID*<br/>
-Jazyk řetězcového prostředku.
+Jazyk prostředků řetězce.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud bylo zatížení prostředku úspěšné; v opačném případě 0.
+Nenulová, pokud bylo zatížení prostředku úspěšné; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Načte prostředek řetězce (*NID*) ze zadaného modulu (*HINSTANCE*) pomocí zadaného jazyka (*wLanguage*).
+Načte řetězec prostředku (*nID*) ze zadaného modulu (*hInstance*) pomocí zadaného jazyka (*wLanguage*).
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_ATLMFC_Utilities#124](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_19.cpp)]
 
-##  <a name="makelower"></a>CStringt:: MakeLower
+## <a name="cstringtmakelower"></a><a name="makelower"></a>CStringT::MakeLower
 
-Převede objekt `CStringT` na malý řetězec.
+Převede `CStringT` objekt na řetězec s malou písmena.
 
 ```
 CStringT& MakeLower();
@@ -937,15 +937,15 @@ CStringT& MakeLower();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Výsledný řetězec malými písmeny.
+Výsledný řetězec s ložených písmen.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_ATLMFC_Utilities#125](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_20.cpp)]
 
-##  <a name="makereverse"></a>CStringt:: MakeReverse
+## <a name="cstringtmakereverse"></a><a name="makereverse"></a>CStringT::MakeReverse
 
-Obrátí pořadí znaků v objektu `CStringT`.
+Obrátí pořadí znaků v objektu. `CStringT`
 
 ```
 CStringT& MakeReverse();
@@ -953,15 +953,15 @@ CStringT& MakeReverse();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Výsledný stornovaný řetězec.
+Výsledný obrácený řetězec.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_ATLMFC_Utilities#126](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_21.cpp)]
 
-##  <a name="makeupper"></a>CStringt:: MakeUpper
+## <a name="cstringtmakeupper"></a><a name="makeupper"></a>CStringt::MakeUpper
 
-Převede objekt `CStringT` na řetězec na velká písmena.
+Převede `CStringT` objekt na řetězec s velkými písmeny.
 
 ```
 CStringT& MakeUpper();
@@ -969,7 +969,7 @@ CStringT& MakeUpper();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Výsledný řetězec na velká písmena.
+Výsledný řetězec velkých písmen.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -977,9 +977,9 @@ Výsledný řetězec na velká písmena.
 
 [!code-cpp[NVC_ATLMFC_Utilities#127](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_22.cpp)]
 
-##  <a name="mid"></a>CStringt:: Mid
+## <a name="cstringtmid"></a><a name="mid"></a>CStringT::Střední
 
-Extrahuje podřetězec délky *nCount* znaků z tohoto objektu `CStringT` od pozice *iFirst* (počítáno od nuly).
+Extrahuje podřetězec délky *nCount* znaky z tohoto `CStringT` objektu, počínaje pozice *iFirst* (na základě nuly).
 
 ```
 CStringT Mid(int iFirst, int nCount) const;
@@ -988,29 +988,29 @@ CStringT Mid(int iFirst) const;
 
 ### <a name="parameters"></a>Parametry
 
-*iFirst*<br/>
-Index založený na nule prvního znaku v tomto objektu `CStringT`, který má být zahrnut do extrahovaný podřetězec.
+*iPrvní*<br/>
+Nula index první znak v `CStringT` tomto objektu, který má být zahrnut do extrahovaného podřetězce.
 
 *nCount*<br/>
-Počet znaků, které mají být extrahovány z tohoto objektu `CStringT`. Pokud tento parametr není zadán, je extrahován zbytek řetězce.
+Počet znaků extrahovat `CStringT` z tohoto objektu. Pokud tento parametr není zadán, je extrahován zbytek řetězce.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Objekt `CStringT`, který obsahuje kopii zadaného rozsahu znaků. Počítejte s tím, že vrácený objekt `CStringT` může být prázdný.
+Objekt, `CStringT` který obsahuje kopii zadaného rozsahu znaků. Všimněte si, že vrácený `CStringT` objekt může být prázdný.
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce vrátí kopii extrahované podřetězce. `Mid` je podobná základní funkci Mid (s výjimkou toho, že indexy na úrovni Basic jsou založené na jednom).
+Funkce vrátí kopii extrahovaného podřetězce. `Mid`je podobná základní střední funkce (s tím rozdílem, že indexy v Basic jsou jednozaložené).
 
-Pro vícebajtové znakové sady (MBCS) *nCount* odkazuje na každý 8bitový znak; To znamená, že vedoucí a koncový bajt v jednom vícebajtovém znaku se počítají jako dva znaky.
+Pro vícebajtové znakové sady (MBCS) *nCount* odkazuje na každý 8bitový znak; to znamená, že úvodní bajt a bajt stopy v jednom vícebajtovém znaku se počítají jako dva znaky.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_ATLMFC_Utilities#128](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_23.cpp)]
 
-##  <a name="oemtoansi"></a>CStringt:: OemToAnsi
+## <a name="cstringtoemtoansi"></a><a name="oemtoansi"></a>CStringT::OemToAnsi
 
-Převede všechny znaky v tomto `CStringT` objektu ze znakové sady OEM na znakovou sadu ANSI.
+Převede všechny znaky `CStringT` v tomto objektu ze znakové sady OEM na znakovou sadu ANSI.
 
 ```
 void OemToAnsi();
@@ -1018,15 +1018,15 @@ void OemToAnsi();
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce není k dispozici, pokud je definována _UNICODE.
+Tato funkce není k dispozici, pokud je definován_UNICODE.
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [CStringT:: AnsiToOem](#ansitooem).
+Viz příklad [cstringt::AnsiToOem](#ansitooem).
 
-##  <a name="operator_eq"></a>CStringt:: operator =
+## <a name="cstringtoperator-"></a><a name="operator_eq"></a>CStringT::operátor =
 
-Přiřadí k řetězci novou hodnotu.
+Přiřadí řetězec novou hodnotu.
 
 ```
 CStringT& operator=(const CStringT& strSrc);
@@ -1045,36 +1045,36 @@ CStringT& operator=(const VARIANT& var);
 ### <a name="parameters"></a>Parametry
 
 *strSrc*<br/>
-`CStringT`, který se má přiřadit k tomuto řetězci.
+A `CStringT` přiřadit k tomuto řetězci.
 
-*str*<br/>
-Odkaz na objekt `CThisSimpleString`.
+*Str*<br/>
+Odkaz na `CThisSimpleString` objekt.
 
 *bMFCDLL*<br/>
-Logická hodnota určující, zda se jedná o projekt knihovny MFC DLL, nebo ne.
+Logická hodnota určující, zda je projekt knihovnou DLL knihovny MFC nebo ne.
 
 *BaseType*<br/>
-Základní typ řetězce.
+Typ základní řetězec.
 
 *var*<br/>
-Objekt typu variant, který se má přiřadit k tomuto řetězci.
+Variantní objekt, který má být přiřazen tomuto řetězci.
 
-*Zvolte*<br/>
-Znak ANSI nebo Unicode, který se má přiřadit k řetězci.
+*Ch*<br/>
+Znak ANSI nebo Unicode přiřadit k řetězci.
 
 *pszSrc*<br/>
-Ukazatel na původní přiřazený řetězec.
+Ukazatel na původní řetězec, který je přiřazen.
 
 ### <a name="remarks"></a>Poznámky
 
-Operátor přiřazení akceptuje další objekt `CStringT`, znakový ukazatel nebo jeden znak. Počítejte s tím, že výjimky paměti mohou nastat vždy, když použijete tento operátor, protože může být přiděleno nové úložiště.
+Operátor přiřazení přijme `CStringT` jiný objekt, ukazatel znaku nebo jeden znak. Měli byste si být vědomi toho, že výjimky paměti může dojít při každém použití tohoto operátoru, protože nové úložiště může být přiděleno.
 
-Informace o `CThisSimpleString`naleznete v části poznámky v [CStringT:: CStringT](#cstringt).
+Informace o `CThisSimpleString`tématu naleznete v části Poznámky [cstringt::CStringT](#cstringt).
 
 > [!NOTE]
-> I když je možné vytvořit `CStringT` instance, které obsahují vložené znaky null, doporučujeme proti ní. Volání metod a operátorů na `CStringT` objekty, které obsahují vložené znaky null, mohou způsobit neočekávané výsledky.
+> I když je `CStringT` možné vytvořit instance, které obsahují vložené prázdné znaky, doporučujeme proti němu. Volání metod a `CStringT` operátorů na objekty, které obsahují vložené prázdné znaky může způsobit nezamýšlené výsledky.
 
-##  <a name="operator_add"></a>CStringt:: operator +
+## <a name="cstringtoperator-"></a><a name="operator_add"></a>CStringT::operátor +
 
 Zřetězí dva řetězce nebo znak a řetězec.
 
@@ -1090,36 +1090,36 @@ friend CStringT operator+(wchar_t ch1, const CStringT& str2,);
 
 ### <a name="parameters"></a>Parametry
 
-*CH1*<br/>
-Znak ANSI nebo Unicode, který má být zřetězen s řetězcem.
+*ch1*<br/>
+Znak ANSI nebo Unicode, který se má zřetězit řetězcem.
 
-*CH2*<br/>
-Znak ANSI nebo Unicode, který má být zřetězen s řetězcem.
+*ch2*<br/>
+Znak ANSI nebo Unicode, který se má zřetězit řetězcem.
 
 *str1*<br/>
-`CStringT` zřetězení s řetězcem nebo znakem.
+A `CStringT` zřetězit s řetězcem nebo znakem.
 
 *str2*<br/>
-`CStringT` zřetězení s řetězcem nebo znakem.
+A `CStringT` zřetězit s řetězcem nebo znakem.
 
 *psz1*<br/>
-Ukazatel na řetězec zakončený hodnotou null, který má být zřetězen s řetězcem nebo znakem.
+Ukazatel na řetězec s ukončeným hodnotou null, který chcete zřetězit řetězcem nebo znakem.
 
 *psz2*<br/>
-Ukazatel na řetězec, který má být zřetězen s řetězcem nebo znakem.
+Ukazatel na řetězec zřetězit s řetězcem nebo znakem.
 
 ### <a name="remarks"></a>Poznámky
 
-Existuje sedm forem přetížení funkce `CStringT::operator+`. První verze zřetězí dva existující `CStringT` objekty. Následující dva zřetězení `CStringT` objekt a řetězec zakončený hodnotou null. Další dva zřetězení `CStringT` objektu a znaku ANSI. Poslední dva zřetězení `CStringT` objektu a znaku Unicode.
+Existuje sedm formy přetížení `CStringT::operator+` funkce. První verze zřetězí dva `CStringT` existující objekty. Další dva zřetězit `CStringT` objekt a řetězec s ukončeným hodnotou null. Další dva zřetězit `CStringT` objekt a znak ANSI. Poslední dva zřetězit `CStringT` objekt a znak Unicode.
 
 > [!NOTE]
->  I když je možné vytvořit `CStringT` instance, které obsahují vložené znaky null, doporučujeme proti ní. Volání metod a operátorů na `CStringT` objekty, které obsahují vložené znaky null, mohou způsobit neočekávané výsledky.
+> I když je `CStringT` možné vytvořit instance, které obsahují vložené prázdné znaky, doporučujeme proti němu. Volání metod a `CStringT` operátorů na objekty, které obsahují vložené prázdné znaky může způsobit nezamýšlené výsledky.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_ATLMFC_Utilities#140](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_24.cpp)]
 
-##  <a name="operator_add_eq"></a>CStringt:: operator + =
+## <a name="cstringtoperator-"></a><a name="operator_add_eq"></a>CStringT::operátor +=
 
 Zřetězí znaky na konec řetězce.
 
@@ -1141,41 +1141,41 @@ CStringT& operator+=(const VARIANT& var);
 
 ### <a name="parameters"></a>Parametry
 
-*str*<br/>
-Odkaz na objekt `CThisSimpleString`.
+*Str*<br/>
+Odkaz na `CThisSimpleString` objekt.
 
 *bMFCDLL*<br/>
-Logická hodnota určující, zda se jedná o projekt knihovny MFC DLL, nebo ne.
+Logická hodnota určující, zda je projekt knihovnou DLL knihovny MFC nebo ne.
 
 *BaseType*<br/>
-Základní typ řetězce.
+Typ základní řetězec.
 
 *var*<br/>
-Objekt variant, který se má zřetězit k tomuto řetězci.
+Variantní objekt zřetězit do tohoto řetězce.
 
-*Zvolte*<br/>
-Znak ANSI nebo Unicode, který má být zřetězen s řetězcem.
+*Ch*<br/>
+Znak ANSI nebo Unicode, který se má zřetězit řetězcem.
 
 *pszSrc*<br/>
-Ukazatel na řetězec, který se zřetězí.
+Ukazatel na původní řetězec, který je zřetězen.
 
 *strSrc*<br/>
-`CStringT`, který se má zřetězit k tomuto řetězci.
+A `CStringT` zřetězit k tomuto řetězci.
 
 ### <a name="remarks"></a>Poznámky
 
-Operátor přijímá jiný objekt `CStringT`, znakový ukazatel nebo jeden znak. Je třeba si uvědomit, že výjimky paměti mohou nastat vždy, když použijete tento operátor zřetězení, protože nové úložiště lze přidělit pro znaky přidané do tohoto objektu `CStringT`.
+Operátor přijme jiný `CStringT` objekt, ukazatel znaku nebo jeden znak. Měli byste si být vědomi toho, že výjimky paměti může dojít při každém použití `CStringT` tohoto operátoru zřetězení, protože nové úložiště může být přiděleno pro znaky přidané do tohoto objektu.
 
-Informace o `CThisSimpleString`naleznete v části poznámky v [CStringT:: CStringT](#cstringt).
+Informace o `CThisSimpleString`tématu naleznete v části Poznámky [cstringt::CStringT](#cstringt).
 
 > [!NOTE]
->  I když je možné vytvořit `CStringT` instance, které obsahují vložené znaky null, doporučujeme proti ní. Volání metod a operátorů na `CStringT` objekty, které obsahují vložené znaky null, mohou způsobit neočekávané výsledky.
+> I když je `CStringT` možné vytvořit instance, které obsahují vložené prázdné znaky, doporučujeme proti němu. Volání metod a `CStringT` operátorů na objekty, které obsahují vložené prázdné znaky může způsobit nezamýšlené výsledky.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_ATLMFC_Utilities#141](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_25.cpp)]
 
-##  <a name="operator_eq_eq"></a>CStringt:: operator = =
+## <a name="cstringtoperator-"></a><a name="operator_eq_eq"></a>CStringT::operátor ==
 
 Určuje, zda jsou dva řetězce logicky stejné.
 
@@ -1191,35 +1191,35 @@ friend bool operator==(XCHAR ch1, const CStringT& str2,) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*CH1*<br/>
+*ch1*<br/>
 Znak ANSI nebo Unicode pro porovnání.
 
-*CH2*<br/>
+*ch2*<br/>
 Znak ANSI nebo Unicode pro porovnání.
 
 *str1*<br/>
-`CStringT` pro porovnání.
+A `CStringT` pro srovnání.
 
 *str2*<br/>
-`CStringT` pro porovnání.
+A `CStringT` pro srovnání.
 
 *psz1*<br/>
-Ukazatel na řetězec zakončený hodnotou null pro porovnání.
+Ukazatel na řetězec s ukončeným hodnotou null pro porovnání.
 
 *psz2*<br/>
-Ukazatel na řetězec zakončený hodnotou null pro porovnání.
+Ukazatel na řetězec s ukončeným hodnotou null pro porovnání.
 
 ### <a name="remarks"></a>Poznámky
 
-Testuje, zda je řetězec nebo znak na levé straně roven řetězci nebo znaku na pravé straně a vrátí hodnotu TRUE nebo FALSE odpovídajícím způsobem.
+Testuje, zda je řetězec nebo znak na levé straně roven řetězci nebo znaku na pravé straně, a odpovídajícím způsobem vrátí hodnotu PRAVDA nebo NEPRAVDA.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_ATLMFC_Utilities#142](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_26.cpp)]
 
-##  <a name="operator_neq"></a>CStringt:: operator! =
+## <a name="cstringtoperator-"></a><a name="operator_neq"></a>CStringT::operátor !=
 
-Určuje, zda jsou dva řetězce logicky neshodné.
+Určuje, zda dva řetězce nejsou logicky stejné.
 
 ```
 friend bool operator!=(const CStringT& str1, const CStringT& str2) throw();
@@ -1233,33 +1233,33 @@ friend bool operator!=(XCHAR ch1, const CStringT& str2,) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*CH1*<br/>
-Znak ANSI nebo Unicode, který má být zřetězen s řetězcem.
+*ch1*<br/>
+Znak ANSI nebo Unicode, který se má zřetězit řetězcem.
 
-*CH2*<br/>
-Znak ANSI nebo Unicode, který má být zřetězen s řetězcem.
+*ch2*<br/>
+Znak ANSI nebo Unicode, který se má zřetězit řetězcem.
 
 *str1*<br/>
-`CStringT` pro porovnání.
+A `CStringT` pro srovnání.
 
 *str2*<br/>
-`CStringT` pro porovnání.
+A `CStringT` pro srovnání.
 
 *psz1*<br/>
-Ukazatel na řetězec zakončený hodnotou null pro porovnání.
+Ukazatel na řetězec s ukončeným hodnotou null pro porovnání.
 
 *psz2*<br/>
-Ukazatel na řetězec zakončený hodnotou null pro porovnání.
+Ukazatel na řetězec s ukončeným hodnotou null pro porovnání.
 
 ### <a name="remarks"></a>Poznámky
 
-Testuje, zda se řetězec nebo znak na levé straně nerovná řetězci nebo znaku na pravé straně.
+Testy, pokud řetězec nebo znak na levé straně se nerovná řetězec nebo znak na pravé straně.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_ATLMFC_Utilities#143](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_27.cpp)]
 
-##  <a name="operator_lt"></a>CStringt:: operator &lt;
+## <a name="cstringtoperator-lt"></a><a name="operator_lt"></a>CStringT::operátor&lt;
 
 Určuje, zda je řetězec na levé straně operátoru menší než řetězec na pravé straně.
 
@@ -1272,32 +1272,32 @@ friend bool operator<(PCXSTR psz1, const CStringT& str2) throw();
 ### <a name="parameters"></a>Parametry
 
 *str1*<br/>
-`CStringT` pro porovnání.
+A `CStringT` pro srovnání.
 
 *str2*<br/>
-`CStringT` pro porovnání.
+A `CStringT` pro srovnání.
 
 *psz1*<br/>
-Ukazatel na řetězec zakončený hodnotou null pro porovnání.
+Ukazatel na řetězec s ukončeným hodnotou null pro porovnání.
 
 *psz2*<br/>
-Ukazatel na řetězec zakončený hodnotou null pro porovnání.
+Ukazatel na řetězec s ukončeným hodnotou null pro porovnání.
 
 ### <a name="remarks"></a>Poznámky
 
-Lexicographical porovnávání mezi řetězci, znak po znaku až do:
+Lexikografické porovnání mezi řetězci, znak po znaku, dokud:
 
-- Najde dva odpovídající znaky, které nejsou stejné a výsledek jejich porovnání je výsledkem porovnání řetězců.
+- Najde dva odpovídající znaky nerovné a výsledek jejich porovnání je přijata v důsledku porovnání mezi řetězci.
 
-- Nenajde žádné nerovnosti, ale jeden řetězec má více znaků než druhý a kratší řetězec je považován za méně než delší řetězec.
+- Nenajde žádné nerovnosti, ale jeden řetězec má více znaků než druhý a kratší řetězec je považován za menší než delší řetězec.
 
-- Nenajde žádné nerovnosti a zjistí, že řetězce mají stejný počet znaků, a proto jsou řetězce stejné.
+- Nenajde žádné nerovnosti a zjistí, že řetězce mají stejný počet znaků, a proto řetězce jsou stejné.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_ATLMFC_Utilities#144](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_28.cpp)]
 
-##  <a name="operator_gt"></a>CStringt:: operator &gt;
+## <a name="cstringtoperator-gt"></a><a name="operator_gt"></a>CStringT::operátor&gt;
 
 Určuje, zda je řetězec na levé straně operátoru větší než řetězec na pravé straně.
 
@@ -1310,34 +1310,34 @@ friend bool operator>(PCXSTR psz1, const CStringT& str2) throw();
 ### <a name="parameters"></a>Parametry
 
 *str1*<br/>
-`CStringT` pro porovnání.
+A `CStringT` pro srovnání.
 
 *str2*<br/>
-`CStringT` pro porovnání.
+A `CStringT` pro srovnání.
 
 *psz1*<br/>
-Ukazatel na řetězec zakončený hodnotou null pro porovnání.
+Ukazatel na řetězec s ukončeným hodnotou null pro porovnání.
 
 *psz2*<br/>
-Ukazatel na řetězec zakončený hodnotou null pro porovnání.
+Ukazatel na řetězec s ukončeným hodnotou null pro porovnání.
 
 ### <a name="remarks"></a>Poznámky
 
-Lexicographical porovnávání mezi řetězci, znak po znaku až do:
+Lexikografické porovnání mezi řetězci, znak po znaku, dokud:
 
-- Najde dva odpovídající znaky, které nejsou stejné a výsledek jejich porovnání je výsledkem porovnání řetězců.
+- Najde dva odpovídající znaky nerovné a výsledek jejich porovnání je přijata v důsledku porovnání mezi řetězci.
 
-- Nenajde žádné nerovnosti, ale jeden řetězec má více znaků než druhý a kratší řetězec je považován za méně než delší řetězec.
+- Nenajde žádné nerovnosti, ale jeden řetězec má více znaků než druhý a kratší řetězec je považován za menší než delší řetězec.
 
-- Nenajde žádné nerovnosti a zjistí, že řetězce mají stejný počet znaků, takže jsou řetězce stejné.
+- Nenajde žádné nerovnosti a zjistí, že řetězce mají stejný počet znaků, takže řetězce jsou stejné.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_ATLMFC_Utilities#145](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_29.cpp)]
 
-##  <a name="operator_lt_eq"></a>CStringt:: operator &lt;=
+## <a name="cstringtoperator-lt"></a><a name="operator_lt_eq"></a>CStringT::operátor&lt;=
 
-Určuje, zda je řetězec na levé straně operátoru menší než nebo roven řetězci na pravé straně.
+Určuje, zda je řetězec na levé straně operátoru menší nebo roven řetězci na pravé straně.
 
 ```
 friend bool operator<=(const CStringT& str1, const CStringT& str2) throw();
@@ -1348,34 +1348,34 @@ friend bool operator<=(PCXSTR psz1, const CStringT& str2) throw();
 ### <a name="parameters"></a>Parametry
 
 *str1*<br/>
-`CStringT` pro porovnání.
+A `CStringT` pro srovnání.
 
 *str2*<br/>
-`CStringT` pro porovnání.
+A `CStringT` pro srovnání.
 
 *psz1*<br/>
-Ukazatel na řetězec zakončený hodnotou null pro porovnání.
+Ukazatel na řetězec s ukončeným hodnotou null pro porovnání.
 
 *psz2*<br/>
-Ukazatel na řetězec zakončený hodnotou null pro porovnání.
+Ukazatel na řetězec s ukončeným hodnotou null pro porovnání.
 
 ### <a name="remarks"></a>Poznámky
 
-Lexicographical porovnávání mezi řetězci, znak po znaku až do:
+Lexikografické porovnání mezi řetězci, znak po znaku, dokud:
 
-- Najde dva odpovídající znaky, které nejsou stejné a výsledek jejich porovnání je výsledkem porovnání řetězců.
+- Najde dva odpovídající znaky nerovné a výsledek jejich porovnání je přijata v důsledku porovnání mezi řetězci.
 
-- Nenajde žádné nerovnosti, ale jeden řetězec má více znaků než druhý a kratší řetězec je považován za méně než delší řetězec.
+- Nenajde žádné nerovnosti, ale jeden řetězec má více znaků než druhý a kratší řetězec je považován za menší než delší řetězec.
 
-- Nenajde žádné nerovnosti a zjistí, že řetězce mají stejný počet znaků, takže jsou řetězce stejné.
+- Nenajde žádné nerovnosti a zjistí, že řetězce mají stejný počet znaků, takže řetězce jsou stejné.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_ATLMFC_Utilities#146](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_30.cpp)]
 
-##  <a name="operator_gt_eq"></a>CStringt:: operator &gt;=
+## <a name="cstringtoperator-gt"></a><a name="operator_gt_eq"></a>CStringT::operátor&gt;=
 
-Určuje, zda je řetězec na levé straně operátoru větší než nebo roven řetězci na pravé straně.
+Určuje, zda je řetězec na levé straně operátoru větší nebo roven řetězci na pravé straně.
 
 ```
 friend bool operator>=(const CStringT& str1, const CStringT& str2) throw();
@@ -1386,10 +1386,10 @@ friend bool operator>=(PCXSTR psz1, const CStringT& str2) throw();
 ### <a name="parameters"></a>Parametry
 
 *str1*<br/>
-`CStringT` pro porovnání.
+A `CStringT` pro srovnání.
 
 *str2*<br/>
-`CStringT` pro porovnání.
+A `CStringT` pro srovnání.
 
 *psz1*<br/>
 Ukazatel na řetězec pro porovnání.
@@ -1399,21 +1399,21 @@ Ukazatel na řetězec pro porovnání.
 
 ### <a name="remarks"></a>Poznámky
 
-Lexicographical porovnávání mezi řetězci, znak po znaku až do:
+Lexikografické porovnání mezi řetězci, znak po znaku, dokud:
 
-- Najde dva odpovídající znaky, které nejsou stejné a výsledek jejich porovnání je výsledkem porovnání řetězců.
+- Najde dva odpovídající znaky nerovné a výsledek jejich porovnání je přijata v důsledku porovnání mezi řetězci.
 
-- Nenajde žádné nerovnosti, ale jeden řetězec má více znaků než druhý a kratší řetězec je považován za méně než delší řetězec.
+- Nenajde žádné nerovnosti, ale jeden řetězec má více znaků než druhý a kratší řetězec je považován za menší než delší řetězec.
 
-- Nenajde žádné nerovnosti a zjistí, že řetězce mají stejný počet znaků, takže jsou řetězce stejné.
+- Nenajde žádné nerovnosti a zjistí, že řetězce mají stejný počet znaků, takže řetězce jsou stejné.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_ATLMFC_Utilities#147](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_31.cpp)]
 
-##  <a name="remove"></a>CStringt:: Remove
+## <a name="cstringtremove"></a><a name="remove"></a>CStringT::Odebrat
 
-Odebere všechny výskyty zadaného znaku z řetězce.
+Odebere všechny instance zadaného znaku z řetězce.
 
 ```
 int Remove(XCHAR chRemove);
@@ -1421,24 +1421,24 @@ int Remove(XCHAR chRemove);
 
 ### <a name="parameters"></a>Parametry
 
-*chRemove*<br/>
+*chOdebrat*<br/>
 Znak, který má být odebrán z řetězce.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Počet znaků odebraných z řetězce. Nula, pokud se řetězec nemění.
+Počet znaků odebraných z řetězce. Nula, pokud řetězec není změněn.
 
 ### <a name="remarks"></a>Poznámky
 
-Porovnávání znaku rozlišuje velká a malá písmena.
+Porovnání znaku jsou rozlišována malá a velká písmena.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_ATLMFC_Utilities#129](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_32.cpp)]
 
-##  <a name="replace"></a>CStringt:: Replace
+## <a name="cstringtreplace"></a><a name="replace"></a>CStringT::Nahradit
 
-Existují dvě verze `Replace`. První verze nahrazuje jednu nebo více kopií podřetězce pomocí jiného podřetězce. Oba podřetězce jsou zakončené znakem null. Druhá verze nahrazuje jednu nebo více kopií znaku pomocí jiného znaku. Obě verze pracují s daty znaků uloženými v `CStringT`.
+Existují dvě verze `Replace`aplikace . První verze nahradí jednu nebo více kopií podřetězce pomocí jiného podřetězce. Oba podřetězce jsou ukončeny s nulou. Druhá verze nahradí jednu nebo více kopií znaku pomocí jiného znaku. Obě verze pracují s daty `CStringT`znaků uloženými v aplikaci .
 
 ```
 int Replace(PCXSTR pszOld, PCXSTR pszNew);
@@ -1448,45 +1448,45 @@ int Replace(XCHAR chOld, XCHAR chNew);
 ### <a name="parameters"></a>Parametry
 
 *pszOld*<br/>
-Ukazatel na řetězec zakončený hodnotou null, který má být nahrazen hodnotou *pszNew*.
+Ukazatel na řetězec s ukončeným hodnotou null, který má být nahrazen *pszNew*.
 
-*pszNew*<br/>
-Ukazatel na řetězec zakončený hodnotou null, který nahrazuje *pszOld*.
+*pszNový*<br/>
+Ukazatel na řetězec ukončený nulou, který nahrazuje *pszOld*.
 
-*chOld*<br/>
-Znak, který má být nahrazen nástrojem *chNew*.
+*chStarý*<br/>
+Znak, který má být nahrazen *chNew*.
 
-*chNew*<br/>
-Znak nahrazující *chOld*
+*chNovinka*<br/>
+Znak nahrazující *chOld*.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí počet nahrazených instancí znaku nebo podřetězec nebo hodnotu nula, pokud se řetězec nemění.
+Vrátí počet nahrazených instancí znaku nebo podřetězce nebo nula, pokud se řetězec nezmění.
 
 ### <a name="remarks"></a>Poznámky
 
-`Replace` může změnit délku řetězce, protože *pszNew* a *pszOld* nemusí mít stejnou délku a několik kopií starého podřetězce lze změnit na nový. Funkce provádí shodu rozlišující velká a malá písmena.
+`Replace`můžete změnit délku řetězce, protože *pszNew* a *pszOld* nemusí být stejné délky, a několik kopií starého podřetězce lze změnit na nový. Funkce provádí shodu rozlišující malá a velká písmena.
 
-Příklady instancí `CStringT` jsou `CString`, `CStringA`a `CStringW`.
+Příklady `CStringT` instancí `CString` `CStringA`jsou `CStringW`, a .
 
-Pro `CStringA``Replace` pracuje se znaky ANSI nebo vícebajtových znaků (MBCS). V případě `CStringW``Replace` pracuje s velkým množstvím znaků.
+Pro `CStringA` `Replace` , pracuje se znaky ANSI nebo vícebajtové (MBCS). Pro `CStringW` `Replace` , pracuje s širokými znaky.
 
-Pro `CString`je v době kompilace vybraný znakový datový typ, a to na základě toho, jestli jsou definované konstanty v následující tabulce.
+Pro `CString`, znak datový typ je vybrán v době kompilace, na základě toho, zda jsou definovány konstanty v následující tabulce.
 
-|Definovaná konstanta|Znakový datový typ|
+|Definovaná konstanta|Datový typ znaku|
 |----------------------|-------------------------|
-|_UNICODE|Široké znaky|
-|_MBCS|Dvoubajtové znaky|
+|_unicode|Široké znaky|
+|_mbcs|Vícebajtové znaky|
 |Ani jedno|Jednobajtové znaky|
-|Obojí|Nedefinováno|
+|Obojí|Nedefinované|
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_ATLMFC_Utilities#200](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_33.cpp)]
 
-##  <a name="reversefind"></a>CStringt:: ReverseFind
+## <a name="cstringtreversefind"></a><a name="reversefind"></a>CStringT::Reverznífind
 
-Vyhledá tento objekt `CStringT` pro poslední shodu znaku.
+Vyhledá tento `CStringT` objekt pro poslední shodu znaku.
 
 ```
 int ReverseFind(XCHAR ch) const throw();
@@ -1494,24 +1494,24 @@ int ReverseFind(XCHAR ch) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*Zvolte*<br/>
+*Ch*<br/>
 Znak, který chcete vyhledat.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Index založený na nule posledního znaku v tomto objektu `CStringT`, který odpovídá požadovanému znaku, nebo-1, pokud znak nebyl nalezen.
+Nulový index posledního znaku `CStringT` v tomto objektu, který odpovídá požadovanému znaku, nebo -1, pokud znak nebyl nalezen.
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce je podobná `strrchr`běhové funkci.
+Funkce je podobná funkci `strrchr`run-time .
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_ATLMFC_Utilities#130](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_34.cpp)]
 
-##  <a name="right"></a>CStringt:: Right
+## <a name="cstringtright"></a><a name="right"></a>CStringT::Doprava
 
-Extrahuje poslední (tj.) *nCount* znaky z tohoto objektu `CStringT` a vrátí kopii extrahované podřetězce.
+Extrahuje poslední (to znamená, že nejvíce `CStringT` vpravo) *nCount* znaky z tohoto objektu a vrátí kopii extrahovanépodstring.
 
 ```
 CStringT Right(int nCount) const;
@@ -1520,25 +1520,25 @@ CStringT Right(int nCount) const;
 ### <a name="parameters"></a>Parametry
 
 *nCount*<br/>
-Počet znaků, které mají být extrahovány z tohoto objektu `CStringT`.
+Počet znaků extrahovat `CStringT` z tohoto objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Objekt `CStringT`, který obsahuje kopii zadaného rozsahu znaků. Počítejte s tím, že vrácený objekt `CStringT` může být prázdný.
+Objekt, `CStringT` který obsahuje kopii zadaného rozsahu znaků. Všimněte si, že vrácený `CStringT` objekt může být prázdný.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud *nCount* překračuje délku řetězce, bude extrahován celý řetězec. `Right` je podobná funkci Basic `Right` (s výjimkou toho, že indexy na úrovni Basic jsou založené na nule).
+Pokud *nCount* překročí délku řetězce, pak je extrahován celý řetězec. `Right`je podobná základní `Right` funkci (s tím rozdílem, že indexy v Basic jsou založeny na nule).
 
-Pro vícebajtové znakové sady (MBCS) *nCount* odkazuje na každý 8bitový znak; To znamená, že vedoucí a koncový bajt v jednom vícebajtovém znaku se počítají jako dva znaky.
+Pro vícebajtové znakové sady (MBCS) *nCount* odkazuje na každý 8bitový znak; to znamená, že úvodní bajt a bajt stopy v jednom vícebajtovém znaku se počítají jako dva znaky.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_ATLMFC_Utilities#131](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_35.cpp)]
 
-##  <a name="setsysstring"></a>CStringt:: SetSysString
+## <a name="cstringtsetsysstring"></a><a name="setsysstring"></a>CStringT::SetSysString
 
-Znovu přidělí objekt BSTR, na který odkazuje *pbstr* , a zkopíruje do něj obsah objektu `CStringT`, včetně znaku null.
+Přerozdělí BSTR, na který je odkazováno `CStringT` *pbstr,* a zkopíruje do něj obsah objektu, včetně znaku NULL.
 
 ```
 BSTR SetSysString(BSTR* pbstr) const;
@@ -1547,7 +1547,7 @@ BSTR SetSysString(BSTR* pbstr) const;
 ### <a name="parameters"></a>Parametry
 
 *pbstr*<br/>
-Ukazatel na řetězec znaků.
+Ukazatel na řetězec znaku.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1555,7 +1555,7 @@ Nový řetězec.
 
 ### <a name="remarks"></a>Poznámky
 
-V závislosti na obsahu `CStringT`ho objektu se může změnit hodnota BSTR, na kterou odkazuje *pbstr* . Funkce vyvolá `CMemoryException`, pokud existuje nedostatek paměti.
+V závislosti na `CStringT` obsahu objektu může změnit hodnotu BSTR odkazuje *pbstr.* Funkce vyvolá pokud `CMemoryException` neexistuje dostatek paměti.
 
 Tato funkce se obvykle používá ke změně hodnoty řetězců předaných odkazem pro automatizaci.
 
@@ -1563,9 +1563,9 @@ Tato funkce se obvykle používá ke změně hodnoty řetězců předaných odka
 
 [!code-cpp[NVC_ATLMFC_Utilities#132](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_36.cpp)]
 
-##  <a name="spanexcluding"></a>CStringt:: SpanExcluding
+## <a name="cstringtspanexcluding"></a><a name="spanexcluding"></a>CStringT::SpanBez
 
-Extrahuje znaky z řetězce počínaje prvním znakem, který není v sadě znaků identifikovaných pomocí *pszCharSet*.
+Extrahuje znaky z řetězce, počínaje prvním znakem, které nejsou v sadě znaků identifikovaných *pszCharSet*.
 
 ```
 CStringT SpanExcluding(PCXSTR pszCharSet) const;
@@ -1574,23 +1574,23 @@ CStringT SpanExcluding(PCXSTR pszCharSet) const;
 ### <a name="parameters"></a>Parametry
 
 *pszCharSet*<br/>
-Řetězec, který je interpretován jako sada znaků.
+Řetězec interpretovaný jako sada znaků.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Podřetězec obsahující znaky v řetězci, které nejsou v *pszCharSet*počínaje prvním znakem v řetězci a končí prvním znakem nalezeným v řetězci, který je také v *pszCharSet* (tj. počínaje prvním znakem v řetězci a až s výjimkou prvního znaku v řetězci, který je nalezen *pszCharSet*). Vrátí celý řetězec, pokud v *pszCharSet* není žádný znak v řetězci.
+Podřetězec, který obsahuje znaky v řetězci, které nejsou v *pszCharSet*, počínaje prvním znakem v řetězci a končící prvním znakem nalezeným v řetězci, který je také v *pszCharSet* (to znamená počínaje prvním znakem v řetězci a až po první znak v řetězci, který je nalezen *pszCharSet*). Vrátí celý řetězec, pokud je v řetězci nalezen žádný znak v *pszCharSet.*
 
 ### <a name="remarks"></a>Poznámky
 
-`SpanExcluding` extrahuje a vrátí všechny znaky předcházející prvnímu výskytu znaku z *pszCharSet* (jinými slovy znak z *pszCharSet* a všechny znaky, které následují v řetězci, se nevrátí). Pokud v řetězci není nalezen žádný znak z *pszCharSet* , pak `SpanExcluding` vrátí celý řetězec.
+`SpanExcluding`extrahuje a vrátí všechny znaky předcházející prvnímu výskytu znaku z *pszCharSet* (jinými slovy, znak z *pszCharSet* a všechny znaky následující v řetězci, nejsou vráceny). Pokud žádný znak z *pszCharSet* je `SpanExcluding` nalezen v řetězci, vrátí celý řetězec.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_ATLMFC_Utilities#133](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_37.cpp)]
 
-##  <a name="spanincluding"></a>CStringt:: SpanIncluding
+## <a name="cstringtspanincluding"></a><a name="spanincluding"></a>CStringT::SpanIncluding
 
-Extrahuje znaky z řetězce počínaje prvním znakem, které jsou v sadě znaků identifikované *pszCharSet*.
+Extrahuje znaky z řetězce, počínaje prvním znakem, které jsou v sadě znaků identifikovaných *pszCharSet*.
 
 ```
 CStringT SpanIncluding(PCXSTR pszCharSet) const;
@@ -1599,23 +1599,23 @@ CStringT SpanIncluding(PCXSTR pszCharSet) const;
 ### <a name="parameters"></a>Parametry
 
 *pszCharSet*<br/>
-Řetězec, který je interpretován jako sada znaků.
+Řetězec interpretovaný jako sada znaků.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Podřetězec, který obsahuje znaky v řetězci, které jsou v *pszCharSet*, počínaje prvním znakem v řetězci a končící při nalezení znaku v řetězci, který není v *pszCharSet*. `SpanIncluding` vrátí prázdný podřetězec, pokud první znak v řetězci není v zadané sadě.
+Podřetězec, který obsahuje znaky v řetězci, které jsou v *pszCharSet*, počínaje prvním znakem v řetězci a končící, když je nalezen znak v řetězci, který není v *pszCharSet*. `SpanIncluding`vrátí prázdný podřetězec, pokud první znak v řetězci není v zadané sadě.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud první znak řetězce není v sadě znaků, pak `SpanIncluding` vrátí prázdný řetězec. V opačném případě vrátí posloupnost po sobě jdoucích znaků, které jsou v sadě.
+Pokud první znak řetězce není v znakové `SpanIncluding` sadě, vrátí prázdný řetězec. V opačném případě vrátí posloupnost po sobě jdoucích znaků, které jsou v sadě.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_ATLMFC_Utilities#134](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_38.cpp)]
 
-##  <a name="tokenize"></a>CStringt:: tokenizovat
+## <a name="cstringttokenize"></a><a name="tokenize"></a>CStringT::Tokenize
 
-Vyhledá další token v cílovém řetězci.
+Najde další token v cílovém řetězci.
 
 ```
 CStringT Tokenize(PCXSTR pszTokens, int& iStart) const;
@@ -1623,10 +1623,10 @@ CStringT Tokenize(PCXSTR pszTokens, int& iStart) const;
 
 ### <a name="parameters"></a>Parametry
 
-*pszTokens*<br/>
+*pszTokeny*<br/>
 Řetězec obsahující oddělovače tokenů. Pořadí těchto oddělovačů není důležité.
 
-*-zahájení*<br/>
+*iStartovat*<br/>
 Index založený na nule pro zahájení hledání.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -1635,9 +1635,9 @@ Objekt `CStringT` obsahující aktuální hodnotu tokenu.
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce `Tokenize` vyhledá další token v cílovém řetězci. Sada znaků v *pszTokens* určuje možné oddělovače tokenu, který se má najít. Při každém volání `Tokenize` funkce *začíná na začátku,* přeskočí úvodní oddělovače a vrátí objekt `CStringT` obsahující aktuální token, což je řetězec znaků až k dalšímu znaku oddělovače. Hodnota parametru- *Start* je aktualizována tak, aby byla pozice za koncovým znakem oddělovače, nebo-1, pokud bylo dosaženo konce řetězce. Další tokeny mohou být rozděleny ze zbytku cílového řetězce řadou volání `Tokenize`, pomocí parametru- *Start* pro udržení přehledu o tom, kde v řetězci je další token čten. Pokud nejsou k dispozici žádné další tokeny, funkce vrátí prázdný řetězec a příkaz set- *Start* bude nastaven na hodnotu-1.
+Funkce `Tokenize` najde další token v cílovém řetězci. Sada znaků v *pszTokens* určuje možné oddělovače tokenu, který má být nalezen. Při každém `Tokenize` volání funkce začíná na *iStart*, přeskočí úvodní `CStringT` oddělovače a vrátí objekt obsahující aktuální token, což je řetězec znaků až do dalšího znaku oddělovače. Hodnota *iStart* je aktualizována na pozici za koncovým znakem oddělovače nebo -1, pokud bylo dosaženo konce řetězce. Další tokeny mohou být rozděleny ze zbytku cílového `Tokenize`řetězce řadou volání do , pomocí *iStart* sledovat, kde v řetězci další token má být čten. Pokud nejsou k dispozici žádné další tokeny funkce vrátí prázdný řetězec a *iStart* bude nastavena na -1.
 
-Na rozdíl od funkcí CRT tokenizovat, jako je [strtok_s, _strtok_s_l, wcstok_s, _wcstok_s_l, _mbstok_s, _mbstok_s_l](../../c-runtime-library/reference/strtok-s-strtok-s-l-wcstok-s-wcstok-s-l-mbstok-s-mbstok-s-l.md), `Tokenize` neupravuje cílový řetězec.
+Na rozdíl od crt tokenize funkce [jako strtok_s, _strtok_s_l, wcstok_s, _wcstok_s_l, _mbstok_s, _mbstok_s_l](../../c-runtime-library/reference/strtok-s-strtok-s-l-wcstok-s-wcstok-s-l-mbstok-s-mbstok-s-l.md), `Tokenize` nemění cílový řetězec.
 
 ### <a name="example"></a>Příklad
 
@@ -1653,7 +1653,7 @@ Resulting Token: Second
 Resulting Token: Third
 ```
 
-##  <a name="trim"></a>CStringt:: Trim
+## <a name="cstringttrim"></a><a name="trim"></a>CStringT::Oříznutí
 
 Ořízne úvodní a koncové znaky z řetězce.
 
@@ -1665,11 +1665,11 @@ CStringT& Trim();
 
 ### <a name="parameters"></a>Parametry
 
-*chTarget*<br/>
+*chCíl*<br/>
 Cílový znak, který má být oříznut.
 
-*pszTargets*<br/>
-Ukazatel na řetězec obsahující cílové znaky, které mají být oříznuty. Všechny úvodní a koncové výskyty znaků v *pszTarget* budou oříznuty z objektu `CStringT`.
+*pszCíle*<br/>
+Ukazatel na řetězec obsahující cílové znaky, které mají být oříznuty. Všechny počáteční a koncové výskyty znaků v *pszTarget* budou `CStringT` oříznuty z objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1677,13 +1677,13 @@ Vrátí oříznutý řetězec.
 
 ### <a name="remarks"></a>Poznámky
 
-Odebere všechny úvodní a koncové výskyty jednoho z následujících:
+Odstraní všechny hlavní a koncové výskyty jedné z následujících událostí:
 
-- Znak určený parametrem *chTarget*.
+- Znak určený *chTarget*.
 
-- Všechny znaky nalezené v řetězci určeném parametrem *pszTargets*.
+- Všechny znaky nalezené v řetězci *určeném pszTargets*.
 
-- Typy.
+- Mezery.
 
 ### <a name="example"></a>Příklad
 
@@ -1698,7 +1698,7 @@ Before: "******Soccer is best, but liquor is quicker!!!!!"
 After : "Soccer is best, but liquor is quicker"
 ```
 
-##  <a name="trimleft"></a>CStringt:: TrimLeft
+## <a name="cstringttrimleft"></a><a name="trimleft"></a>CStringT::Oříznutívlevo
 
 Ořízne úvodní znaky z řetězce.
 
@@ -1710,11 +1710,11 @@ CStringT& TrimLeft();
 
 ### <a name="parameters"></a>Parametry
 
-*chTarget*<br/>
+*chCíl*<br/>
 Cílový znak, který má být oříznut.
 
-*pszTargets*<br/>
-Ukazatel na řetězec obsahující cílové znaky, které mají být oříznuty. Všechny úvodní výskyty znaků v *pszTarget* budou oříznuty z objektu `CStringT`.
+*pszCíle*<br/>
+Ukazatel na řetězec obsahující cílové znaky, které mají být oříznuty. Všechny hlavní výskyty znaků v *pszTarget* budou `CStringT` oříznuty z objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1722,19 +1722,19 @@ Výsledný oříznutý řetězec.
 
 ### <a name="remarks"></a>Poznámky
 
-Odebere všechny úvodní a koncové výskyty jednoho z následujících:
+Odstraní všechny hlavní a koncové výskyty jedné z následujících událostí:
 
-- Znak určený parametrem *chTarget*.
+- Znak určený *chTarget*.
 
-- Všechny znaky nalezené v řetězci určeném parametrem *pszTargets*.
+- Všechny znaky nalezené v řetězci *určeném pszTargets*.
 
-- Typy.
+- Mezery.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_ATLMFC_Utilities#137](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_41.cpp)]
 
-##  <a name="trimright"></a>CStringt:: TrimRight
+## <a name="cstringttrimright"></a><a name="trimright"></a>cstringt::TrimRight
 
 Ořízne koncové znaky z řetězce.
 
@@ -1746,31 +1746,31 @@ CStringT& TrimRight();
 
 ### <a name="parameters"></a>Parametry
 
-*chTarget*<br/>
+*chCíl*<br/>
 Cílový znak, který má být oříznut.
 
-*pszTargets*<br/>
-Ukazatel na řetězec obsahující cílové znaky, které mají být oříznuty. Všechny koncové výskyty znaků v *pszTarget* budou oříznuty z objektu `CStringT`.
+*pszCíle*<br/>
+Ukazatel na řetězec obsahující cílové znaky, které mají být oříznuty. Všechny koncové výskyty znaků v *pszTarget* budou oříznuty z objektu. `CStringT`
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí objekt `CStringT`, který obsahuje oříznutý řetězec.
+Vrátí `CStringT` objekt, který obsahuje oříznutý řetězec.
 
 ### <a name="remarks"></a>Poznámky
 
-Odebere koncové výskyty jednoho z následujících:
+Odstraní koncové výskyty jedné z následujících událostí:
 
-- Znak určený parametrem *chTarget*.
+- Znak určený *chTarget*.
 
-- Všechny znaky nalezené v řetězci určeném parametrem *pszTargets*.
+- Všechny znaky nalezené v řetězci *určeném pszTargets*.
 
-- Typy.
+- Mezery.
 
-Verze `CStringT& TrimRight(XCHAR chTarget)` přijímá jeden parametr znaku a odstraní všechny kopie tohoto znaku z konce `CStringT` řetězcových dat. Začíná na konci řetězce a funguje směrem dopředu. Zastaví se, když najde jiný znak nebo když `CSTringT` vyčerpá znaková data.
+Verze `CStringT& TrimRight(XCHAR chTarget)` přijme jeden parametr znaku a odebere všechny kopie `CStringT` tohoto znaku z konce dat řetězce. Začíná od konce řetězce a pracuje směrem dopředu. Zastaví se, když najde jiný `CSTringT` znak nebo když dojde k datům znaků.
 
-Verze `CStringT& TrimRight(PCXSTR pszTargets)` přijímá řetězec zakončený hodnotou null, který obsahuje všechny různé znaky, které chcete vyhledat. Odebere všechny kopie těchto znaků v objektu `CStringT`. Začíná na konci řetězce a funguje směrem dopředu. Zastaví se, když najde znak, který není v cílovém řetězci, nebo když `CStringT` vyčerpá znaková data. Nepokusí se najít celý cílový řetězec na podřetězec na konci `CStringT`.
+Verze `CStringT& TrimRight(PCXSTR pszTargets)` přijímá řetězec s ukončeným hodnotou null, který obsahuje všechny různé znaky, které mají být vyhledány. Odebere všechny kopie těchto znaků `CStringT` v objektu. Začíná na konci řetězce a pracuje směrem dopředu. Zastaví se, když najde znak, který není v `CStringT` cílovém řetězci, nebo když dojde k datům znaků. Nepokouší se spárovat celý cílový řetězec s podřetězcem na konci . `CStringT`
 
-Verze `CStringT& TrimRight()` nepožaduje žádné parametry. Ořízne všechny koncové prázdné znaky z konce `CStringT` řetězce. Prázdné znaky mohou být zalomení řádků, mezery nebo tabulátory.
+Verze `CStringT& TrimRight()` nevyžaduje žádné parametry. Ořízne všechny koncové znaky prázdné ho `CStringT` od konce řetězce. Prázdné znaky mohou být zalomení řádků, mezery nebo karty.
 
 -
 
@@ -1781,5 +1781,5 @@ Verze `CStringT& TrimRight()` nepožaduje žádné parametry. Ořízne všechny 
 ## <a name="see-also"></a>Viz také
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
-[Sdílené třídy ATL/MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)<br/>
+[Sdílené třídy KNIHOVNY ATL/Knihovny MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)<br/>
 [CSimpleStringT – třída](../../atl-mfc-shared/reference/csimplestringt-class.md)

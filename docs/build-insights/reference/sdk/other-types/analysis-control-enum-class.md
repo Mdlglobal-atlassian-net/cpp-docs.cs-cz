@@ -1,6 +1,6 @@
 ---
 title: Třída výčtu AnalysisControl
-description: Odkaz C++ na výčet AnalysisControl sady SDK pro Build Insights
+description: C++ Sestavení Insights SDK AnalysisControl odkaz na výčet.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,31 +9,31 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: cf162c11e0a7109b8d733dab79df80782398e14d
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: e9431f878390127f2cefbe8f0ee42ca509e147de
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78332500"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81323633"
 ---
 # <a name="analysiscontrol-enum-class"></a>Třída výčtu AnalysisControl
 
 ::: moniker range="<=vs-2015"
 
-Sada C++ SDK pro Build Insights je kompatibilní se sadou Visual Studio 2017 a novější. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek selektor verzí sady Visual Studio pro tento článek na sadu Visual Studio 2017 nebo Visual Studio 2019.
+Sada C++ Build Insights SDK je kompatibilní s Visual Studio 2017 a vyšší. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek pro výběr **verze** sady Visual Studio pro tento článek na Visual Studio 2017 nebo Visual Studio 2019. Nachází se v horní části obsahu na této stránce.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Třída výčtu `AnalysisControl` slouží k řízení toku relace analýzy nebo znovu protokolování. Vraťte kód `AnalysisControl` z členské funkce [IAnalyzer](ianalyzer-class.md) nebo [IRelogger](irelogger-class.md) , abyste mohli řídit, co by mělo probíhat dále.
+Výčet `AnalysisControl` třída se používá řídit tok analýzy nebo opětovné hoprotokolování relace. Vrátit `AnalysisControl` kód z [iAnalyzer](ianalyzer-class.md) nebo [IRelogger](irelogger-class.md) členské funkce řídit, co by se mělo stát dál.
 
 ## <a name="members"></a>Členové
 
 |  |  |
 |--|--|
-| `BLOCK` | Zabrání dalšímu rozšiřování aktuální události ve skupině Analyzer nebo reprotokolovacího nástroje. |
-| `CANCEL` | Zrušte aktuální analýzu nebo znovu protokolovací relaci. |
-| `CONTINUE` | Aktuální analýza nebo relace znovu se budou normálně pokračovat. Rozšíří aktuální událost na další analyzátor nebo člena skupiny reprotokolovacího nástroje. |
-| `FAILURE` | Zruší aktuální analýzu nebo znovu nahlašování a signalizuje chybu. |
+| `BLOCK` | Zabrání šíření aktuální události v analyzátoru nebo skupině reloggeru. |
+| `CANCEL` | Zrušte aktuální analýzu nebo opětovné přihlášení relace. |
+| `CONTINUE` | Pokračujte v aktuální analýze nebo opětovném zahlcování relace normálně. Propagujte aktuální událost na dalšího člena analyzátoru nebo reloggerové skupiny. |
+| `FAILURE` | Zrušte aktuální analýzu nebo opětovné přihlášení relace a signalizujte chybu. |
 
 ::: moniker-end

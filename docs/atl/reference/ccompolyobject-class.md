@@ -1,5 +1,5 @@
 ---
-title: CComPolyObject – třída
+title: Třída CComPolyObject
 ms.date: 11/04/2016
 f1_keywords:
 - CComPolyObject
@@ -17,16 +17,16 @@ helpviewer_keywords:
 - aggregation [C++], ATL objects
 - CComPolyObject class
 ms.assetid: eaf67c18-e855-48ca-9b15-f1df3106121b
-ms.openlocfilehash: deed29b5fb80ea8bbd06b3d50f45e38740b1619f
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: e30afef455db5f83afca8ff9e515f39f015c3b8a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69497156"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81327559"
 ---
-# <a name="ccompolyobject-class"></a>CComPolyObject – třída
+# <a name="ccompolyobject-class"></a>Třída CComPolyObject
 
-Tato třída implementuje `IUnknown` agregovaný nebo neagregovaný objekt.
+Tato třída `IUnknown` implementuje pro agregovaný nebo neagregovaný objekt.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -38,48 +38,48 @@ class CComPolyObject : public IUnknown,
 
 #### <a name="parameters"></a>Parametry
 
-*uložen*<br/>
-Vaše třída odvozená z [třídy CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) nebo [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)a také z jiných rozhraní, která chcete pro objekt podporovat.
+*Obsažené*<br/>
+Vaše třída, odvozená z [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) nebo [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), stejně jako z jiných rozhraní, které chcete podporovat na objektu.
 
 ## <a name="members"></a>Členové
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
 |[CComPolyObject::CComPolyObject](#ccompolyobject)|Konstruktor|
 |[CComPolyObject::~CComPolyObject](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CComPolyObject:: AddRef](#addref)|Zvýší počet odkazů objektu.|
-|[CComPolyObject:: CreateInstance](#createinstance)|Tras Umožňuje vytvořit nový objekt **<** `contained` **>** CComPolyObject bez režie funkce [CoCreateInstance](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance).|
-|[CComPolyObject::FinalConstruct](#finalconstruct)|Provede konečnou inicializaci `m_contained`.|
-|[CComPolyObject::FinalRelease](#finalrelease)|Provede konečné zničení `m_contained`.|
+|[CComPolyObject::AddRef](#addref)|Zintáží počet odkazů objektu.|
+|[CComPolyObject::CreateInstance](#createinstance)|(Statické) Umožňuje vytvořit nový **objekt CComPolyObject<** `contained` **>** bez režie [coCreateInstance](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance).|
+|[CComPolyObject::FinalConstruct](#finalconstruct)|Provede konečnou inicializaci . `m_contained`|
+|[CComPolyObject::FinalRelease](#finalrelease)|Provede konečné `m_contained`zničení .|
 |[CComPolyObject::QueryInterface](#queryinterface)|Načte ukazatel na požadované rozhraní.|
-|[CComPolyObject:: Release](#release)|Sníží počet odkazů objektu.|
+|[CComPolyObject::Vydání](#release)|Sníží počet odkazů objektu.|
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Name|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CComPolyObject::m_contained](#m_contained)|Deleguje `IUnknown` volání vnějších neznámých, pokud je objekt agregovaný nebo `IUnknown` k objektu, pokud objekt není agregovaný.|
+|[CComPolyObject::m_contained](#m_contained)|Delegáti `IUnknown` volání vnější neznámý, pokud je objekt `IUnknown` agregována nebo objektu, pokud objekt není agregována.|
 
 ## <a name="remarks"></a>Poznámky
 
 `CComPolyObject`implementuje [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) pro agregovaný nebo neagregovaný objekt.
 
-Při vytvoření instance `CComPolyObject` je zaškrtnuta hodnota vnějšího neznámého. Pokud je null, `IUnknown` je implementován pro neagregovaný objekt. Pokud není vnější neznámá hodnota null, `IUnknown` je implementována pro agregovaný objekt.
+Při vytvoření `CComPolyObject` instance je zaškrtnuta hodnota vnější neznámý. Pokud je NULL, `IUnknown` je implementována pro neagregovaný objekt. Pokud vnější neznámý není `IUnknown` NULL, je implementována pro agregovaný objekt.
 
-Výhodou použití `CComPolyObject` je, že nemusíte mít v modulu [CComAggObject](../../atl/reference/ccomaggobject-class.md) i [CComObject](../../atl/reference/ccomobject-class.md) , aby bylo možné zpracovávat agregované i neagregované případy. Jeden `CComPolyObject` objekt zpracovává oba případy. To znamená, že ve vašem modulu existují jenom jednu kopii vtable a jednu kopii funkcí. Pokud je tabulka vtable velká, může to podstatně snížit velikost modulu. Pokud je však tabulka vtable malá, použití `CComPolyObject` může mít za následek mírně větší velikost modulu, protože není optimalizována pro agregované nebo neagregované objekty, jako jsou `CComAggObject` a `CComObject`.
+Výhodou použití `CComPolyObject` je, že se vyhnete tomu, abyste v modulu zvládali agregované a neagregované případy [cComAggObject](../../atl/reference/ccomaggobject-class.md) a [CComObject.](../../atl/reference/ccomobject-class.md) Jeden `CComPolyObject` objekt zpracovává oba případy. To znamená, že ve vašem modulu existuje pouze jedna kopie vtable a jedna kopie funkcí. Pokud je vaše vtable je velký, to může podstatně snížit velikost modulu. Pokud je však vaše vtable malá, může použití `CComPolyObject` způsobit o něco větší velikost modulu, protože není `CComAggObject` optimalizována pro agregovaný nebo neagregovaný objekt, jako jsou a . `CComObject`
 
-Pokud je makro DECLARE_POLY_AGGREGATABLE zadáno v definici třídy vašeho objektu, `CComPolyObject` bude použito k vytvoření objektu. DECLARE_POLY_AGGREGATABLE bude automaticky deklarována, pokud použijete Průvodce projektem ATL k vytvoření úplného řízení nebo ovládacího prvku aplikace Internet Explorer.
+Pokud je makro DECLARE_POLY_AGGREGATABLE zadáno v definici třídy objektu, `CComPolyObject` bude použito k vytvoření objektu. DECLARE_POLY_AGGREGATABLE bude automaticky deklarována, pokud pomocí Průvodce projektem ATL vytvoříte úplný ovládací prvek nebo ovládací prvek aplikace Internet Explorer.
 
-Pokud je agregovaná, `CComPolyObject` má objekt vlastní `IUnknown`, oddělený `IUnknown`od vnějšího objektu a udržuje svůj vlastní počet odkazů. `CComPolyObject`používá [CComContainedObject](../../atl/reference/ccomcontainedobject-class.md) k delegování na vnější neznámý.
+Pokud agregována, `CComPolyObject` objekt `IUnknown`má své vlastní , `IUnknown`oddělené od vnějšího objektu a udržuje svůj vlastní počet odkazů. `CComPolyObject`používá [CComContainedObject](../../atl/reference/ccomcontainedobject-class.md) k delegování na vnější neznámý.
 
-Další informace o agregaci naleznete v článku [Základy objektů ATL modelu COM](../../atl/fundamentals-of-atl-com-objects.md).
+Další informace o agregaci naleznete v článku [Základy objektů ATL COM](../../atl/fundamentals-of-atl-com-objects.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -93,11 +93,11 @@ Další informace o agregaci naleznete v článku [Základy objektů ATL modelu 
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlcom. h
+**Záhlaví:** atlcom.h
 
-##  <a name="addref"></a>CComPolyObject:: AddRef
+## <a name="ccompolyobjectaddref"></a><a name="addref"></a>CComPolyObject::AddRef
 
-Zvýší počet odkazů na objekt.
+Zintáží počet odkazů na objekt.
 
 ```
 STDMETHOD_(ULONG, AddRef)();
@@ -107,7 +107,7 @@ STDMETHOD_(ULONG, AddRef)();
 
 Hodnota, která může být užitečná pro diagnostiku nebo testování.
 
-##  <a name="ccompolyobject"></a>CComPolyObject::CComPolyObject
+## <a name="ccompolyobjectccompolyobject"></a><a name="ccompolyobject"></a>CComPolyObject::CComPolyObject
 
 Konstruktor
 
@@ -117,16 +117,16 @@ CComPolyObject(void* pv);
 
 ### <a name="parameters"></a>Parametry
 
-*pv*<br/>
-pro Ukazatel na vnější neznámý, pokud má být objekt agregován, nebo hodnotu NULL, pokud objekt není agregovaný.
+*Pv*<br/>
+[v] Ukazatel na vnější neznámý, pokud má být objekt agregován, nebo NULL, pokud objekt není agregován.
 
 ### <a name="remarks"></a>Poznámky
 
-Inicializuje datový člen, m_contained a zvýší počet zámků modulu. [](#m_contained) `CComContainedObject`
+Inicializuje `CComContainedObject` datový člen, [m_contained](#m_contained)a zintáží počet zámků modulu.
 
-Destruktor snižuje počet zámků modulu.
+Destruktor sníží počet zámek modulu.
 
-##  <a name="dtor"></a>CComPolyObject:: ~ CComPolyObject
+## <a name="ccompolyobjectccompolyobject"></a><a name="dtor"></a>CComPolyObject::~CComPolyObject
 
 Destruktor.
 
@@ -136,11 +136,11 @@ Destruktor.
 
 ### <a name="remarks"></a>Poznámky
 
-Uvolní všechny přidělené prostředky, zavolá [FinalRelease](#finalrelease)a sníží počet zámků modulu.
+Uvolní všechny přidělené prostředky, volá [FinalRelease](#finalrelease)a sníží počet zámek modulu.
 
-##  <a name="createinstance"></a>CComPolyObject:: CreateInstance
+## <a name="ccompolyobjectcreateinstance"></a><a name="createinstance"></a>CComPolyObject::CreateInstance
 
-Umožňuje vytvořit nový objekt **<** `contained` **>** CComPolyObject bez režie funkce [CoCreateInstance](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance).
+Umožňuje vytvořit nový **objekt CComPolyObject<** `contained` **>** bez režie [coCreateInstance](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance).
 
 ```
 static HRESULT WINAPI CreateInstance(
@@ -150,8 +150,8 @@ static HRESULT WINAPI CreateInstance(
 
 ### <a name="parameters"></a>Parametry
 
-*pp*<br/>
-mimo Ukazatel na **CComPolyObject <** `contained` **>** ukazatel. Pokud `CreateInstance` je neúspěšné, je *PP* nastaven na hodnotu null.
+*Stran*<br/>
+[out] Ukazatel na **ukazatel ccompolyobject<.** `contained` **>** Pokud `CreateInstance` je neúspěšný, *pp* je nastavena na hodnotu NULL.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -159,13 +159,13 @@ Standardní hodnota HRESULT.
 
 ### <a name="remarks"></a>Poznámky
 
-Vrácený objekt má nulový počet odkazů, takže zavolejte `AddRef` hned a pak použijte `Release` k uvolnění odkazu na ukazatel objektu, až budete hotovi.
+Vrácený objekt má počet odkazů nula, takže okamžitě volat, `AddRef` pak použijte `Release` k uvolnění odkazu na ukazatel objektu, když jste hotovi.
 
-Pokud nepotřebujete přímý přístup k objektu, ale přesto chcete vytvořit nový objekt bez režie `CoCreateInstance`, použijte raději [CComCoClass:: CreateInstance](../../atl/reference/ccomcoclass-class.md#createinstance) .
+Pokud nepotřebujete přímý přístup k objektu, ale přesto chcete vytvořit nový `CoCreateInstance`objekt bez režie , použijte [CComCoClass::CreateInstance](../../atl/reference/ccomcoclass-class.md#createinstance) místo.
 
-##  <a name="finalconstruct"></a>CComPolyObject::FinalConstruct
+## <a name="ccompolyobjectfinalconstruct"></a><a name="finalconstruct"></a>CComPolyObject::FinalConstruct
 
-Tato metoda je volána během finálních fází konstrukce objektu a provádí jakoukoli konečnou inicializaci na [m_contained](#m_contained) datovém členu.
+Volána během závěrečné fáze konstrukce objektu, tato metoda provede konečnou inicializaci na [m_contained](#m_contained) datového člena.
 
 ```
 HRESULT FinalConstruct();
@@ -175,17 +175,17 @@ HRESULT FinalConstruct();
 
 Standardní hodnota HRESULT.
 
-##  <a name="finalrelease"></a>CComPolyObject::FinalRelease
+## <a name="ccompolyobjectfinalrelease"></a><a name="finalrelease"></a>CComPolyObject::FinalRelease
 
-Volá se během zničení objektu. Tato metoda uvolní datový člen [m_contained](#m_contained) .
+Volána během zničení objektu, tato metoda uvolní [m_contained](#m_contained) datový člen.
 
 ```
 void FinalRelease();
 ```
 
-##  <a name="m_contained"></a>CComPolyObject::m_contained
+## <a name="ccompolyobjectm_contained"></a><a name="m_contained"></a>CComPolyObject::m_contained
 
-Objekt [CComContainedObject](../../atl/reference/ccomcontainedobject-class.md) odvozený z vaší třídy.
+[CComContainedObject](../../atl/reference/ccomcontainedobject-class.md) objekt odvozený z vaší třídy.
 
 ```
 CComContainedObject<contained> m_contained;
@@ -193,14 +193,14 @@ CComContainedObject<contained> m_contained;
 
 ### <a name="parameters"></a>Parametry
 
-*uložen*<br/>
-pro Vaše třída odvozená z [třídy CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) nebo [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)a také z jiných rozhraní, která chcete pro objekt podporovat.
+*Obsažené*<br/>
+[v] Vaše třída, odvozená z [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) nebo [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), stejně jako z jiných rozhraní, které chcete podporovat na objektu.
 
 ### <a name="remarks"></a>Poznámky
 
-`IUnknown`volání prostřednictvím `m_contained` jsou delegována na vnější neznámý, je-li objekt agregovaný, nebo `IUnknown` na tento objekt, pokud objekt není agregovaný.
+`IUnknown`volání `m_contained` prostřednictvím jsou delegovány na vnější neznámé, pokud `IUnknown` je objekt agregován, nebo na tento objekt, pokud objekt není agregován.
 
-##  <a name="queryinterface"></a>CComPolyObject:: QueryInterface
+## <a name="ccompolyobjectqueryinterface"></a><a name="queryinterface"></a>CComPolyObject::QueryInterface
 
 Načte ukazatel na požadované rozhraní.
 
@@ -215,14 +215,14 @@ HRESULT QueryInterface(Q** pp);
 *Q*<br/>
 Rozhraní COM.
 
-*iid*<br/>
-pro Identifikátor požadovaného rozhraní.
+*Iid*<br/>
+[v] Identifikátor požadovaného rozhraní.
 
-*ppvObject*<br/>
-mimo Ukazatel na ukazatel rozhraní identifikovaný *identifikátorem IID*. Pokud objekt nepodporuje toto rozhraní, je *ppvObject* nastaveno na hodnotu null.
+*ppvObjekt*<br/>
+[out] Ukazatel rozhraní identifikovaný *iid*. Pokud objekt nepodporuje toto rozhraní, *je hodnota ppvObject* nastavena na hodnotu NULL.
 
-*pp*<br/>
-mimo Ukazatel na rozhraní identifikované `__uuidof(Q)`.
+*Stran*<br/>
+[out] Ukazatel na rozhraní označené `__uuidof(Q)`rozhraním .
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -230,9 +230,9 @@ Standardní hodnota HRESULT.
 
 ### <a name="remarks"></a>Poznámky
 
-Pro agregovaný objekt, pokud je `IUnknown`požadované rozhraní, `QueryInterface` vrátí ukazatel na vlastní `IUnknown` agregovaný objekt a zvýší počet odkazů. V opačném případě tato metoda se dotazuje na `CComContainedObject` rozhraní prostřednictvím datového členu [m_contained](#m_contained).
+Pro agregovaný objekt, pokud `IUnknown`je `QueryInterface` požadované rozhraní , vrátí ukazatel `IUnknown` na vlastní agregované objektu a přírůstky počet odkazů. Jinak tato metoda dotazuje rozhraní `CComContainedObject` prostřednictvím datového člena, [m_contained](#m_contained).
 
-##  <a name="release"></a>CComPolyObject:: Release
+## <a name="ccompolyobjectrelease"></a><a name="release"></a>CComPolyObject::Vydání
 
 Sníží počet odkazů na objekt.
 
@@ -242,10 +242,10 @@ STDMETHOD_(ULONG, Release)();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-V sestavení `Release` ladění vrátí hodnotu, která může být užitečná pro diagnostiku nebo testování. V neladicích sestaveních `Release` vždy vrátí hodnotu 0.
+V sestavení ladění `Release` vrátí hodnotu, která může být užitečná pro diagnostiku nebo testování. V neladivěné `Release` sestavení, vždy vrátí 0.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[CComObjectRootEx – třída](../../atl/reference/ccomobjectrootex-class.md)<br/>
+[Třída CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)<br/>
 [DECLARE_POLY_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_poly_aggregatable)<br/>
 [Přehled třídy](../../atl/atl-class-overview.md)

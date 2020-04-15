@@ -1,6 +1,6 @@
 ---
 title: Relog
-description: Referenční C++ informace o funkci relog sady SDK pro Build Insights
+description: C++ Build Insights SDK Relog odkaz na funkci.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 1ce09101deebd957de4b9305762dc37f38b53f4e
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 28b290d2bf2880ce2f534fa1cd91750890e2fead
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78332689"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81323778"
 ---
 # <a name="relog"></a>Relog
 
 ::: moniker range="<=vs-2015"
 
-Sada C++ SDK pro Build Insights je kompatibilní se sadou Visual Studio 2017 a novější. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek selektor verzí sady Visual Studio pro tento článek na sadu Visual Studio 2017 nebo Visual Studio 2019.
+Sada C++ Build Insights SDK je kompatibilní s Visual Studio 2017 a vyšší. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek pro výběr **verze** sady Visual Studio pro tento článek na Visual Studio 2017 nebo Visual Studio 2019. Nachází se v horní části obsahu na této stránce.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Funkce `Relog` slouží ke čtení událostí MSVC z trasování událostí pro Windows (ETW) a jejich zápis do nového upraveného trasování ETW.
+Funkce `Relog` se používá ke čtení událostí MSVC z trasování trasování trasování událostí pro Windows (ETW) a zapsat je do nového, upraveného trasování ETW.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -55,38 +55,38 @@ RESULT_CODE Relog(
 
 ### <a name="parameters"></a>Parametry
 
-*TAnalyzerGroupMembers*\
-Tento parametr je vždy odvozený.
+*Členové skupiny TAnalyzerGroup*\
+Tento parametr je vždy odvodit.
 
-*TReloggerGroupMembers*\
-Tento parametr je vždy odvozený.
+*TReloggerČlenové skupiny*\
+Tento parametr je vždy odvodit.
 
 *inputLogFile*\
 Vstupní trasování ETW, ze kterého chcete číst události.
 
 *outputLogFile*\
-Soubor, do kterého mají být zapsány nové události.
+Soubor, ve kterém chcete napsat nové události.
 
 *numberOfAnalysisPasses*\
-Počet průchodů analýzy, které mají být spuštěny na vstupním trasování. Trasování se předává na základě zadané skupiny analyzátoru jednou za analýzu.
+Počet analýzy předá ke spuštění na vstupní trasování. Trasování získá průchod za předpokladu, analyzer skupiny jednou za průchod analýzy.
 
 *systemEventsRetentionFlags*\
-Bitová maska, která určuje, které systémové události ETW mají zůstat v přeprotokolovaném trasování. Další informace najdete v tématu [RELOG_RETENTION_SYSTEM_EVENT_FLAGS](../other-types/relog-retention-system-event-flags-constants.md).
+Bitová maska, která určuje, které systémové události ETW zachovat v relogged trasování. Další informace naleznete v [tématu RELOG_RETENTION_SYSTEM_EVENT_FLAGS](../other-types/relog-retention-system-event-flags-constants.md).
 
-\a *analyzátoru*
-Skupina analyzátoru, která se používá pro fázi analýzy relace přeprotokolování. Zavolejte [MakeStaticAnalyzerGroup](make-static-analyzer-group.md) a vytvořte skupinu analyzátoru. Chcete-li použít dynamickou skupinu analýz získanou z [MakeDynamicAnalyzerGroup](make-dynamic-analyzer-group.md), nejprve ji zapouzdřete do statické skupiny analyzátoru předáním adresy do `MakeStaticAnalyzerGroup`.
+*skupina analyzátorů*\
+Skupina analyzátoru použitá pro fázi analýzy relace opětovného přihlášení. Volání [MakeStaticAnalyzerGroup](make-static-analyzer-group.md) vytvořit skupinu analyzátoru. Chcete-li použít skupinu dynamických analyzátorů získanou ze [skupiny MakeDynamicAnalyzerGroup](make-dynamic-analyzer-group.md), nejprve ji zapouzdřte do skupiny statických analyzátorů předáním její adresy společnosti `MakeStaticAnalyzerGroup`.
 
-\ opětovného *naprotokolovacího* nástroje
-Skupina reprotokolovacích nástrojů, která znovu zapisuje události do trasovacího souboru zadaného v *outputLogFile*. Zavolejte [MakeStaticReloggerGroup](make-static-relogger-group.md) k vytvoření skupiny přeprotokolovacích souborů. Chcete-li použít dynamickou skupinu přeprotokolovacích souborů získanou z [MakeDynamicReloggerGroup](make-dynamic-relogger-group.md), nejprve ji zapouzdřete do skupiny statických přeprotokolovacích souborů předáním její adresy do `MakeStaticReloggerGroup`.
+*skupina relogger*\
+Skupina relogger, která reloguje události do trasovacího souboru zadaného v *outputLogFile*. Volání [MakeStaticReloggerGroup](make-static-relogger-group.md) vytvořit skupinu relogger. Chcete-li použít dynamickou skupinu reloggerzí z [MakeDynamicReloggerGroup](make-dynamic-relogger-group.md), nejprve zapouzdřete uvnitř statické skupiny relogger předáním jeho adresu `MakeStaticReloggerGroup`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
 Kód výsledku z [RESULT_CODE](../other-types/result-code-enum.md) výčtu.
 
-### <a name="remark"></a>Přeznačit
+### <a name="remark"></a>Poznámka
 
-Vstupní trasování se předává přes skupinu analyzátoru *numberOfAnalysisPasses* časy. K dispozici není žádná podobná možnost pro přehlašování. Trasování je předáno pouze jednou pro skupinu reprotokolovacích souborů po dokončení všech průchodů analýz.
+Vstupní trasování je předána prostřednictvím analyzátoru skupiny *numberOfAnalysisPasses* časy. Neexistuje žádná podobná možnost pro opětovné přihlášení průchodů. Trasování je předánka koryto skupiny relogger pouze jednou, po dokončení všech průchodů analýzy.
 
-Opětovné protokolování systémových událostí, jako jsou vzorky procesoru v rámci třídy reprotokolovacího nástroje, není podporováno. Pomocí parametru *systemEventsRetentionFlags* určete, které systémové události se mají zachovat ve výstupním trasování.
+Opětovné uhlazení systémových událostí, jako jsou ukázky procesoru z třídy reloggeru, není podporováno. Pomocí parametru *systemEventsRetentionFlags* můžete rozhodnout, které systémové události mají být ve výstupním trasování uchovány.
 
 ::: moniker-end

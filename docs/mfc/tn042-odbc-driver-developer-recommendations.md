@@ -8,115 +8,115 @@ helpviewer_keywords:
 - databases [MFC], ODBC
 - TN042
 ms.assetid: ecc6b5d9-f480-4582-9e22-8309fe561dad
-ms.openlocfilehash: 462f8229d995add79f48f34b7f81257710b4a8b8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 67f7a86a247b60be66dabb0a89f04d39ce76222b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62305408"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372138"
 ---
 # <a name="tn042-odbc-driver-developer-recommendations"></a>TN042: Doporučení pro vývojáře ovladačů ODBC
 
 > [!NOTE]
->  Následující Technická poznámka nebyla aktualizována, protože byla poprvé zahrnuta v online dokumentaci. V důsledku toho některé postupy a témata mohou být nesprávné nebo zastaralé. Nejnovější informace se doporučuje vyhledat téma zájmu v dokumentaci online index.
+> Následující technická poznámka nebyla aktualizována od doby, kdy byla poprvé zahrnuta do online dokumentace. V důsledku toho mohou být některé postupy a témata zastaralé nebo nesprávné. Chcete-li získat nejnovější informace, doporučujeme vyhledat téma zájmu v online indexu dokumentace.
 
-Tato poznámka popisuje pokyny pro zápis ovladač ODBC. Obsahuje obecné požadavky a předpoklady ODBC funkce, díky kterému třídy databází MFC a různé očekávané sémantické podrobnosti. Vyžaduje ovladač funkce, které podporují tři `CRecordset` otevřete režimy (**forwardOnly**, **snímku** a **dynamická sada**) jsou popsány.
+Tato poznámka popisuje pokyny pro autory ovladačů ODBC. Popisuje obecné požadavky a předpoklady funkcí ROZHRANÍ ODBC, které vytvořily třídy databáze knihovny MFC, a různé očekávané sémantické podrobnosti. Jsou popsány požadované funkce `CRecordset` ovladače pro podporu tří režimů Otevření **(forwardOnly**, **snapshot** a **dynaset).**
 
-## <a name="odbcs-cursor-library"></a>Knihovna kurzorů rozhraní ODBC.
+## <a name="odbcs-cursor-library"></a>Knihovna kurzorů od rozhraní ODBC
 
-Třídy databází MFC k dispozici funkce pro uživatele, který v mnoha případech převyšuje funkce poskytované službou většina ODBC – ovladače úrovně 1. Naštěstí knihovna kurzorů rozhraní ODBC pro samotný vrstvy mezi databázové třídy a ovladače a bude automaticky poskytovat většinu této další funkce.
+Třídy databáze knihovny MFC představují uživateli funkce, které v mnoha případech předčí funkce poskytované většinou ovladačů ODBC úrovně 1. Naštěstí knihovna kurzorů rozhraní ODBC se bude vrstvit mezi třídy databáze a ovladač a automaticky poskytne velkou část této další funkce.
 
-Například většina 1.0 ovladačů nepodporují zpětně posouvání. Knihovna kurzorů rozhraní můžete zjišťovat a bude ukládat do mezipaměti řádků z ovladače a prezentovat podle požadavku na FETCH_PREV volání v `SQLExtendedFetch`.
+Například většina ovladačů 1.0 nepodporuje zpětné posouvání. Knihovna kurzorů to může zjistit a uloží řádky z ovladače `SQLExtendedFetch`do mezipaměti a zobrazí je podle požadavků na FETCH_PREV volání v .
 
-Dalším příkladem důležité závislosti knihovny kurzoru je umístěné aktualizace. Většina 1.0 ovladačů také nemají umístěné aktualizace, ale knihovna kurzorů rozhraní bude generovat příkazy aktualizace, které identifikují cílové řádek ve zdroji dat na základě své aktuální hodnoty data uložená v mezipaměti, nebo hodnoty časového razítka v mezipaměti.
+Dalším důležitým příkladem závislosti na knihovně kurzoru je umístění aktualizací. Většina ovladačů 1.0 také nemají umístěné aktualizace, ale knihovna kurzoru vygeneruje příkazy aktualizace, které identifikují cílový řádek ve zdroji dat na základě aktuálních hodnot dat uložených v mezipaměti nebo hodnoty časového razítka uloženév mezipaměti.
 
-Knihovna tříd nikdy využívá více sad řádků. Proto, několik `SQLSetPos` příkazů jsou vždy aplikovány na řádku 1 sady řádků.
+Knihovna tříd nikdy nepoužívá více sad řádků. Proto několik `SQLSetPos` příkazů jsou vždy použity na řádek 1 sady řádků.
 
-## <a name="cdatabases"></a>CDatabases
+## <a name="cdatabases"></a>CDatabáze
 
-Každý `CDatabase` přiděluje jediného **HDBC**. (Pokud `CDatabase`společnosti `ExecuteSQL` se používá funkce, **HSTMT** dočasně přidělené.) Pokud více `CDatabase`společnosti jsou povinné, více **HDBC**za sekundu na **HENV** musí podporovat.
+Každý `CDatabase` přiděluje jeden **HDBC**. (Pokud `CDatabase`je `ExecuteSQL` použita funkce 's, **hstmt** je dočasně přidělen.) Takže pokud `CDatabase`je vyžadováno více 's, musí být podporováno více **HDBC**s na **HENV.**
 
-Databázové třídy vyžadují knihovna kurzorů rozhraní. Toto je zohledněno v `SQLSetConnections` volání **SQL_ODBC_CURSORS**, **SQL_CUR_USE_ODBC**.
+Třídy databáze vyžadují knihovnu kurzorů. To se odráží `SQLSetConnections` ve volání **SQL_ODBC_CURSORS**, **SQL_CUR_USE_ODBC**.
 
-`SQLDriverConnect`, **SQL_DRIVER_COMPLETE** používá `CDatabase::Open` k navázání připojení ke zdroji dat.
+`SQLDriverConnect`, **SQL_DRIVER_COMPLETE** slouží `CDatabase::Open` k navázání připojení ke zdroji dat.
 
-Ovladače musí podporovat `SQLGetInfo SQL_ODBC_API_CONFORMANCE`  >=  **SQL_OAC_LEVEL1**, `SQLGetInfo SQL_ODBC_SQL_CONFORMANCE`  >=  **SQL_OSC_MINIMUM**.
+Řidič musí `SQLGetInfo SQL_ODBC_API_CONFORMANCE`  >= podporovat **SQL_OAC_LEVEL1**, `SQLGetInfo SQL_ODBC_SQL_CONFORMANCE`  >=  **SQL_OSC_MINIMUM**.
 
-Aby transakce budeme podporovat `CDatabase` a jeho závislé sady záznamů `SQLGetInfo SQL_CURSOR_COMMIT_BEHAVIOR` a **SQL_CURSOR_ROLLBACK_BEHAVIOR** musí mít **SQL_CR_PRESERVE**. V opačném případě pokusů o provedení řídicí transakce se budou ignorovat.
+Aby byly transakce podporovány pro `CDatabase` a jeho závislé `SQLGetInfo SQL_CURSOR_COMMIT_BEHAVIOR` sady záznamů a **SQL_CURSOR_ROLLBACK_BEHAVIOR** musí **mít SQL_CR_PRESERVE**. V opačném případě budou pokusy o provedení řízení transakcí ignorovány.
 
-`SQLGetInfo SQL_DATA_SOURCE_READ_ONLY` musí se podporovat. Vrátí "Y",-li žádné operace aktualizace se provede na zdroj dat.
+`SQLGetInfo SQL_DATA_SOURCE_READ_ONLY`musí být podporovány. Pokud vrátí "Y", žádné operace aktualizace budou provedeny na zdroj dat.
 
-Pokud `CDatabase` je otevřen jen pro čtení, pokus o nastavení zdroje dat číst pouze bude proveden s `SQLSetConnectOption SQL_ACCESS_MODE`, **SQL_MODE_READ_ONLY**.
+Pokud `CDatabase` je otevřen readonly, pokus o nastavení zdroje dat `SQLSetConnectOption SQL_ACCESS_MODE`jen pro čtení bude provedena s , **SQL_MODE_READ_ONLY**.
 
-Identifikátory vyžadují uvozovky u,-li tyto informace má být vrácen z ovladače s `SQLGetInfo SQL_IDENTIFIER_QUOTE_CHAR` volání.
+Pokud identifikátory vyžadují citací, tyto informace `SQLGetInfo SQL_IDENTIFIER_QUOTE_CHAR` by měly být vráceny z ovladače s voláním.
 
 Pro účely ladění `SQLGetInfo SQL_DBMS_VER` a **SQL_DBMS_NAME** jsou načteny z ovladače.
 
-`SQLSetStmtOption SQL_QUERY_TIMEOUT` a **SQL_ASYNC_ENABLE** může být volána na `CDatabase`společnosti **HDBC**.
+`SQLSetStmtOption SQL_QUERY_TIMEOUT`a **SQL_ASYNC_ENABLE** mohou být `CDatabase`volány na **'s HDBC**.
 
-`SQLError` může být volána s některé nebo všechny argumenty hodnotu NULL.
+`SQLError`může být volána s některé nebo všechny argumenty NULL.
 
-Samozřejmě `SQLAllocEnv`, `SQLAllocConnect`, `SQLDisconnect` a `SQLFreeConnect` musí podporovat.
+Samozřejmě, `SQLAllocEnv` `SQLAllocConnect`, `SQLDisconnect` `SQLFreeConnect` a musí být podporovány.
 
-## <a name="executesql"></a>ExecuteSQL
+## <a name="executesql"></a>Executesql
 
-Kromě přidělení a uvolnění dočasný **HSTMT**, `ExecuteSQL` volání `SQLExecDirect`, `SQLFetch`, `SQLNumResultCol` a `SQLMoreResults`. `SQLCancel` může být volána na **HSTMT**.
+Kromě přidělování a osvobozování dočasného `ExecuteSQL` **HSTMT**volání `SQLExecDirect`, `SQLFetch`a `SQLNumResultCol` `SQLMoreResults`. `SQLCancel`může být volána na **HSTMT**.
 
 ## <a name="getdatabasename"></a>GetDatabaseName
 
-`SQLGetInfo SQL_DATABASE_NAME` bude volána.
+`SQLGetInfo SQL_DATABASE_NAME`bude volána.
 
-## <a name="begintrans-committrans-rollback"></a>Metody BeginTrans CommitTrans, vrácení zpět
+## <a name="begintrans-committrans-rollback"></a>BeginTrans, CommitTrans, Vrácení zpět
 
-`SQLSetConnectOption SQL_AUTOCOMMIT` a `SQLTransact SQL_COMMIT`, **SQL_ROLLBACK** a **SQL_AUTOCOMMIT** bude volána, pokud transakce, požadavky přicházejí.
+`SQLSetConnectOption SQL_AUTOCOMMIT`a `SQLTransact SQL_COMMIT` **SQL_ROLLBACK** a **SQL_AUTOCOMMIT** budou volány, pokud jsou podány žádosti o transakci.
 
-## <a name="crecordsets"></a>CRecordsets
+## <a name="crecordsets"></a>Sady crekordérech
 
-`SQLAllocStmt`, `SQLPrepare`, `SQLExecute` (Pro `Open` a `Requery`), `SQLExecDirect` (pro operace update), `SQLFreeStmt` musí podporovat. `SQLNumResultCols` a `SQLDescribeCol` bude volána při výsledky, nastavte v různých časech.
+`SQLAllocStmt`, `SQLPrepare` `SQLExecute` , `Open` (For a `Requery`), `SQLExecDirect` `SQLFreeStmt` (pro operace aktualizace), musí být podporovány. `SQLNumResultCols`a `SQLDescribeCol` budou vyzváni k výsledkům nastaveným v různých časech.
 
-`SQLSetParam` je často používána pro svázání parametrů dat a **DATA_AT_EXEC** funkce.
+`SQLSetParam`se používá značně pro data vazby parametrů a **DATA_AT_EXEC** funkce.
 
-`SQLBindCol` je často používána k registraci výstupní umístění úložiště dat sloupce s rozhraním ODBC.
+`SQLBindCol`se používá značně k registraci výstupních umístění úložiště sloupcových dat pomocí rozhraní ODBC.
 
-Dvě `SQLGetData` volání slouží k načtení **SQL_LONG_VARCHAR** a **SQL_LONG_VARBINARY** data. První volání, pokusí se najít celková délka sloupce voláním `SQLGetData` se cbMaxValue 0, ale s platnou pcbValue. Pokud obsahuje pcbValue **SQL_NO_TOTAL**, je vyvolána výjimka. V opačném případě **HGLOBAL** je přidělena a další `SQLGetData` volání k načtení celého výsledku.
+Dvě `SQLGetData` volání se používají k načtení **SQL_LONG_VARCHAR** a **SQL_LONG_VARBINARY** dat. První volání se pokusí najít celkovou délku `SQLGetData` hodnoty sloupce voláním s cbMaxValue 0, ale s platnou hodnotou pcbValue. Pokud pcbValue obsahuje **SQL_NO_TOTAL**, je vyvolána výjimka. V opačném případě **HGLOBAL** je `SQLGetData` přidělena a jiné volání provést načíst celý výsledek.
 
 ## <a name="updating"></a>Aktualizace
 
-Pokud o to požádá pesimistické zamykání `SQLGetInfo SQL_LOCK_TYPES` budou dotazovat. Pokud **SQL_LCK_EXCLUSIVE** se nepodporuje, bude vyvolána výjimka.
+Pokud pesimistické `SQLGetInfo SQL_LOCK_TYPES` uzamčení je požadováno, bude dotazován. Pokud **SQL_LCK_EXCLUSIVE** není podporována, bude vyvolána výjimka.
 
-Aktualizaci `CRecordset` (**snímku** nebo **dynamická sada**) způsobí, že druhý **HSTMT** mají být přiděleny. Ovladače, které nepodporují druhá **HSTMT**, knihovna kurzorů rozhraní budou simulovat tuto funkci. Bohužel to může v některých případech to znamenat vynucení aktuální dotaz na první **HSTMT** dokončen před zpracováním druhý **HSTMT**požadavku uživatele.
+Pokusy o `CRecordset` aktualizaci (**snímek** nebo **dynaset**) způsobí, že druhý **HSTMT,** které mají být přiděleny. Pro ovladače, které nepodporují druhý **HSTMT**, knihovna kurzoru bude simulovat tuto funkci. Bohužel to může někdy znamenat vynucení aktuální dotaz na první **HSTMT** k dokončení před zpracováním druhé **HSTMT**'s požadavek.
 
-`SQLFreeStmt SQL_CLOSE` a **SQL_RESET_PARAMS** a `SQLGetCursorName` bude volána během operace aktualizace.
+`SQLFreeStmt SQL_CLOSE`a **SQL_RESET_PARAMS** SQL_RESET_PARAMS `SQLGetCursorName` a bude volána během operací aktualizace.
 
-Pokud existují **CLongBinarys** v **outputColumns**, ODBC **DATA_AT_EXEC** funkce musí být podporována. Jedná se o vrácení **SQL_NEED_DATA** z `SQLExecDirect`, `SQLParamData` a `SQLPutData`.
+Pokud jsou v **outputColumns** **clongbinarys** , musí být podporována **funkce DATA_AT_EXEC** rozhraní ODBC. To zahrnuje **SQL_NEED_DATA** vrácení `SQLExecDirect`SQL_NEED_DATA `SQLParamData` `SQLPutData`z , a .
 
-`SQLRowCount` je volána po provedení ověření, že byla aktualizována pouze 1 záznam `SQLExecDirect`.
+`SQLRowCount`je volána po spuštění k ověření, že `SQLExecDirect`pouze 1 záznam byl aktualizován .
 
-## <a name="forwardonly-cursors"></a>Kurzory ForwardOnly
+## <a name="forwardonly-cursors"></a>Pouze kurzory vpřed
 
-Pouze `SQLFetch` , je třeba `Move` operace. Všimněte si, že **forwardOnly** kurzory aktualizace nepodporují.
+Pro `SQLFetch` operace je `Move` vyžadováno pouze. Všimněte si, že **forwardOnly** kurzory nepodporují aktualizace.
 
-## <a name="snapshot-cursors"></a>Kurzory snímku
+## <a name="snapshot-cursors"></a>Kurzory snímků
 
-Vyžaduje funkcí snímků `SQLExtendedFetch` podporovat. Jak bylo uvedeno výše, knihovna kurzorů rozhraní ODBC se rozpoznat, kdy se ovladač nepodporuje `SQLExtendedFetch`a podporují nezbytné, samotného.
+Funkce snímku `SQLExtendedFetch` vyžaduje podporu. Jak je uvedeno výše, knihovna kurzorů ROZHRANÍ `SQLExtendedFetch`ODBC zjistí, kdy ovladač nepodporuje , a poskytne potřebnou podporu sám.
 
-`SQLGetInfo`, **SQL_SCROLL_OPTIONS** musí podporovat **SQL_SO_STATIC**.
+`SQLGetInfo`musí **SQL_SO_STATIC** **podporovat SQL_SCROLL_OPTIONS** .
 
-## <a name="dynaset-cursors"></a>Dynamická sada kurzory
+## <a name="dynaset-cursors"></a>Kurzory dynasad
 
-Níže je minimální podporu k otevření dynamická sada vyžaduje:
+Níže je minimální podpora potřebná k otevření dynasetu:
 
-`SQLGetInfo`, **SQL_ODBC_VER** musí vracet > "01".
+`SQLGetInfo`, **SQL_ODBC_VER** se musí vrátit > "01".
 
-`SQLGetInfo`, **SQL_SCROLL_OPTIONS** musí podporovat **SQL_SO_KEYSET_DRIVEN**.
+`SQLGetInfo`musí **SQL_SCROLL_OPTIONS** podporovat **SQL_SO_KEYSET_DRIVEN**.
 
-`SQLGetInfo`, **SQL_ROW_UPDATES** musí vracet "Y".
+`SQLGetInfo`, **SQL_ROW_UPDATES** musí vrátit "Y".
 
-`SQLGetInfo`, **SQL_POSITIONED_UPDATES** musí podporovat **SQL_PS_POSITIONED_DELETE** a **SQL_PS_POSITIONED_UPDATE**.
+`SQLGetInfo`musí **SQL_POSITIONED_UPDATES** podporovat **SQL_PS_POSITIONED_DELETE** a **SQL_PS_POSITIONED_UPDATE**.
 
-Kromě toho, pokud o to požádá pesimistické zamykání volání `SQLSetPos` irow 1, fRefresh FALSE a hejna **SQL_LCK_EXCLUSIVE** bude proveden.
+Kromě toho, pokud pesimistické uzamčení je požadováno, bude provedeno volání `SQLSetPos` s irow 1, fRefresh FALSE a fLock **SQL_LCK_EXCLUSIVE.**
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Technické poznámky podle čísel](../mfc/technical-notes-by-number.md)<br/>
 [Technické poznámky podle kategorií](../mfc/technical-notes-by-category.md)

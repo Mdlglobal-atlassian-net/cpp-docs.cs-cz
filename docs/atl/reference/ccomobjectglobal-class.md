@@ -1,5 +1,5 @@
 ---
-title: CComObjectGlobal Class
+title: Třída CComObjectGlobal
 ms.date: 11/04/2016
 f1_keywords:
 - CComObjectGlobal
@@ -12,16 +12,16 @@ f1_keywords:
 helpviewer_keywords:
 - CComObjectGlobal class
 ms.assetid: 79bdee55-66e4-4536-b5b3-bdf09f78b9a6
-ms.openlocfilehash: ec3abd04ce72cce98dae72a1ed8cbb8d9fe72079
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9a784584179186cdf1e63c1ec43cad4d59391ec3
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62259336"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81327623"
 ---
-# <a name="ccomobjectglobal-class"></a>CComObjectGlobal Class
+# <a name="ccomobjectglobal-class"></a>Třída CComObjectGlobal
 
-Tato třída spravuje počet odkazů na modul obsahující vaše `Base` objektu.
+Tato třída spravuje počet odkazů na modul `Base` obsahující objekt.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -32,37 +32,37 @@ class CComObjectGlobal : public Base
 
 #### <a name="parameters"></a>Parametry
 
-*základ*<br/>
-Vaše třída odvozena od [ccomobjectroot –](../../atl/reference/ccomobjectroot-class.md) nebo [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), jak dobře jako z jiných rozhraní, které chcete podporovat na objekt.
+*Základní*<br/>
+Vaše třída, odvozená z [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) nebo [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), stejně jako z jakéhokoli jiného rozhraní, které chcete podporovat na objektu.
 
 ## <a name="members"></a>Členové
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
 |[CComObjectGlobal::CComObjectGlobal](#ccomobjectglobal)|Konstruktor|
 |[CComObjectGlobal::~CComObjectGlobal](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CComObjectGlobal::AddRef](#addref)|Implementuje globální `AddRef`.|
-|[CComObjectGlobal::QueryInterface](#queryinterface)|Implementuje globální `QueryInterface`.|
-|[CComObjectGlobal::Release](#release)|Implementuje globální `Release`.|
+|[CComObjectGlobal::Addref](#addref)|Implementuje `AddRef`globální .|
+|[CComObjectGlobal::QueryInterface](#queryinterface)|Implementuje `QueryInterface`globální .|
+|[CComObjectGlobal::Vydání](#release)|Implementuje `Release`globální .|
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CComObjectGlobal::m_hResFinalConstruct](#m_hresfinalconstruct)|Obsahuje HRESULT vrátil během procesu vytváření `CComObjectGlobal` objektu.|
+|[CComObjectGlobal::m_hResFinalConstruct](#m_hresfinalconstruct)|Obsahuje HRESULT vrácené během `CComObjectGlobal` konstrukce objektu.|
 
 ## <a name="remarks"></a>Poznámky
 
-`CComObjectGlobal` spravuje počet odkazů na modul obsahující vaše `Base` objektu. `CComObjectGlobal` zajišťuje, že objekt se neodstraní, tak dlouho, dokud se neuvolní modulu. Objekt se odebrat pouze v případě, že počet odkazů na celý modul sníží na nulu.
+`CComObjectGlobal`spravuje referenční počet na modul obsahující `Base` váš objekt. `CComObjectGlobal`zajišťuje, že váš objekt nebude odstraněn, pokud modul nebude uvolněn. Objekt bude odebrán pouze v případě, že počet odkazů na celý modul přejde na nulu.
 
-Například použití `CComObjectGlobal`, objekt pro vytváření tříd může obsahovat běžné globální objekt, jež jsou sdílena ve všech svých klientů.
+Například pomocí `CComObjectGlobal`objektu třídy může být objekt třídy obsahovat společný globální objekt, který je sdílen všemi jeho klienty.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -72,11 +72,11 @@ Například použití `CComObjectGlobal`, objekt pro vytváření tříd může 
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlcom
+**Záhlaví:** atlcom.h
 
-##  <a name="addref"></a>  CComObjectGlobal::AddRef
+## <a name="ccomobjectglobaladdref"></a><a name="addref"></a>CComObjectGlobal::Addref
 
-Zvýší počet odkazů objektu 1.
+Zintáží počet odkazů objektu o 1.
 
 ```
 STDMETHOD_(ULONG, AddRef)();
@@ -84,15 +84,15 @@ STDMETHOD_(ULONG, AddRef)();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota, která může být užitečné pro diagnostiku a testování.
+Hodnota, která může být užitečná pro diagnostiku a testování.
 
 ### <a name="remarks"></a>Poznámky
 
-Ve výchozím nastavení `AddRef` volání `_Module::Lock`, kde `_Module` je globální instanci [ccommodule –](../../atl/reference/ccommodule-class.md) nebo z něj odvozenou třídu.
+Ve výchozím `AddRef` `_Module::Lock`nastavení `_Module` volání , kde je globální instance [CComModule](../../atl/reference/ccommodule-class.md) nebo třídy odvozené z něj.
 
-##  <a name="ccomobjectglobal"></a>  CComObjectGlobal::CComObjectGlobal
+## <a name="ccomobjectglobalccomobjectglobal"></a><a name="ccomobjectglobal"></a>CComObjectGlobal::CComObjectGlobal
 
-Konstruktor Volání `FinalConstruct` a pak nastaví [m_hResFinalConstruct](#m_hresfinalconstruct) k `HRESULT` vrácený `FinalConstruct`.
+Konstruktor Volá `FinalConstruct` a potom nastaví `FinalConstruct` [m_hResFinalConstruct](#m_hresfinalconstruct) na vrácené `HRESULT` .
 
 ```
 CComObjectGlobal(void* = NULL));
@@ -100,9 +100,9 @@ CComObjectGlobal(void* = NULL));
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud ještě odvozené ze základní třídy [ccomobjectroot –](../../atl/reference/ccomobjectroot-class.md), je nutné zadat vlastní `FinalConstruct` metody. Volání destruktoru `FinalRelease`.
+Pokud jste neodvodili základní třídu z [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md), musíte zadat vlastní `FinalConstruct` metodu. Destruktor `FinalRelease`volá .
 
-##  <a name="dtor"></a>  CComObjectGlobal::~CComObjectGlobal
+## <a name="ccomobjectglobalccomobjectglobal"></a><a name="dtor"></a>CComObjectGlobal::~CComObjectGlobal
 
 Destruktor.
 
@@ -114,17 +114,17 @@ CComObjectGlobal();
 
 Uvolní všechny přidělené prostředky a volání [FinalRelease](ccomobjectrootex-class.md#finalrelease).
 
-##  <a name="m_hresfinalconstruct"></a>  CComObjectGlobal::m_hResFinalConstruct
+## <a name="ccomobjectglobalm_hresfinalconstruct"></a><a name="m_hresfinalconstruct"></a>CComObjectGlobal::m_hResFinalConstruct
 
-Obsahuje hodnotu HRESULT z volání `FinalConstruct` během procesu vytváření `CComObjectGlobal` objektu.
+Obsahuje HRESULT z `FinalConstruct` volání během `CComObjectGlobal` konstrukce objektu.
 
 ```
 HRESULT m_hResFinalConstruct;
 ```
 
-##  <a name="queryinterface"></a>  CComObjectGlobal::QueryInterface
+## <a name="ccomobjectglobalqueryinterface"></a><a name="queryinterface"></a>CComObjectGlobal::QueryInterface
 
-Načte ukazatel na ukazatel požadované rozhraní.
+Načte ukazatel na požadovaný ukazatel rozhraní.
 
 ```
 STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
@@ -132,23 +132,23 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
 
 ### <a name="parameters"></a>Parametry
 
-*iid*<br/>
-[in] Identifikátor GUID se požadované rozhraní.
+*Iid*<br/>
+[v] Identifikátor GUID požadovaného rozhraní.
 
-*ppvObject*<br/>
-[out] Ukazatel na ukazatel rozhraní, který je identifikován iid, nebo hodnota NULL, pokud se nenajde rozhraní.
+*ppvObjekt*<br/>
+[out] Ukazatel rozhraní identifikovaný iid nebo NULL, pokud rozhraní není nalezeno.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Standardní hodnoty HRESULT.
+Standardní hodnota HRESULT.
 
 ### <a name="remarks"></a>Poznámky
 
-`QueryInterface` zpracovává pouze v tabulce mapy modelu COM rozhraní.
+`QueryInterface`zpracovává pouze rozhraní v tabulce mapy COM.
 
-##  <a name="release"></a>  CComObjectGlobal::Release
+## <a name="ccomobjectglobalrelease"></a><a name="release"></a>CComObjectGlobal::Vydání
 
-Sníží počet odkaz na objekt o 1.
+Sníží počet odkazů objektu o 1.
 
 ```
 STDMETHOD_(ULONG, Release)();
@@ -156,15 +156,15 @@ STDMETHOD_(ULONG, Release)();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-V ladicím buildu `Release` vrátí hodnotu, která může být užitečné pro diagnostiku a testování. V sestaveních bez ladění `Release` vždy vrátí hodnotu 0.
+V sestavení ladění `Release` vrátí hodnotu, která může být užitečná pro diagnostiku a testování. V sestaveních bez ladění `Release` vždy vrátí 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Ve výchozím nastavení `Release` volání `_Module::Unlock`, kde `_Module` je globální instanci [ccommodule –](../../atl/reference/ccommodule-class.md) nebo z něj odvozenou třídu.
+Ve výchozím `Release` `_Module::Unlock`nastavení `_Module` volání , kde je globální instance [CComModule](../../atl/reference/ccommodule-class.md) nebo třídy odvozené z něj.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[CComObjectStack – třída](../../atl/reference/ccomobjectstack-class.md)<br/>
-[CComAggObject – třída](../../atl/reference/ccomaggobject-class.md)<br/>
-[CComObject – třída](../../atl/reference/ccomobject-class.md)<br/>
-[Přehled tříd](../../atl/atl-class-overview.md)
+[Třída CComObjectStack](../../atl/reference/ccomobjectstack-class.md)<br/>
+[Třída CComAggObject](../../atl/reference/ccomaggobject-class.md)<br/>
+[Třída CComObject](../../atl/reference/ccomobject-class.md)<br/>
+[Přehled třídy](../../atl/atl-class-overview.md)

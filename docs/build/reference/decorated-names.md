@@ -6,39 +6,39 @@ helpviewer_keywords:
 - name decoration [C++]
 - names [C++], decorated
 ms.assetid: a4e9ae8e-b239-4454-b401-4102793cb344
-ms.openlocfilehash: 3389b5466bf4a2a48c5e36b01da6818a523fec6f
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: f6d81029d20d9aaca96ff184f48e94a9ce35d56e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80077353"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81320506"
 ---
 # <a name="decorated-names"></a>Dekorované názvy
 
-Funkce, data a objekty v jazyce C a C++ programy jsou interně zastoupeny jejich dekorovanými názvy. *Dekorovaný název* je kódovaný řetězec, který kompilátor vytvořil během kompilace objektu, data nebo definice funkce. Zaznamenává konvence volání, typy, parametry funkcí a další informace společně s názvem. Tato dekorace názvů, označovaná také jako *pojmenování názvů*, pomáhá linkeru najít správné funkce a objekty při propojení spustitelného souboru.
+Funkce, data a objekty v programech C a C++ jsou interně reprezentovány jejich dekorované názvy. *Upravený název* je kódovaný řetězec vytvořený kompilátorem během kompilace objektu, dat nebo definice funkce. Zaznamenává konvence volání, typy, parametry funkce a další informace spolu s názvem. Tento název dekorace, označované také jako *název mangling*, pomáhá propojovací program najít správné funkce a objekty při propojování spustitelný soubor.
 
-Upravené zásady vytváření názvů se v různých verzích sady Visual Studio změnily a můžou se také lišit v různých cílových architekturách. Aby bylo možné správně propojit se zdrojovými soubory vytvořenými pomocí sady Visual C++ Studio, C a knihoven DLL a knihoven, je nutné kompilovat pomocí stejné sady nástrojů kompilátoru, příznaků a cílové architektury.
+Dekorované konvence pojmenování se změnily v různých verzích sady Visual Studio a může se také lišit v různých cílových architekturách. Chcete-li správně propojit se zdrojovými soubory vytvořenými pomocí sady Visual Studio, c a c++ knihovny a knihovny by měly být kompilovány pomocí stejné sady nástrojů kompilátoru, příznaky a cílovou architekturu.
 
 > [!NOTE]
-> Knihovny vytvořené pomocí sady Visual Studio 2015 mohou být spotřebovány aplikacemi vytvořenými pomocí sady Visual Studio 2017 nebo sady Visual Studio 2019.
+> Knihovny vytvořené v sadě Visual Studio 2015 můžou spotřebovávat aplikace vytvořené pomocí Sady Visual Studio 2017 nebo Visual Studia 2019.
 
-##  <a name="using-decorated-names"></a><a name="Using"></a>Používání dekorovaných názvů
+## <a name="using-decorated-names"></a><a name="Using"></a>Použití dekorovaných názvů
 
-Za normálních okolností nemusíte znát dekorovaný název, aby bylo možné napsat kód, který bude kompilovat a propojení úspěšné. Dekorované názvy jsou podrobně implementovány pro kompilátor a linker. Nástroje obvykle zpracovávají název v neupravené podobě. Dekorované jméno se ale někdy vyžaduje při zadání názvu funkce linkeru a dalších nástrojů. Například pro spárování přetížených C++ funkcí, členů oborů názvů, konstruktorů tříd, destruktorů a speciálních členských funkcí je nutné zadat dekorované jméno. Podrobnosti o příznacích možností a dalších situacích, které vyžadují dekorované názvy, najdete v dokumentaci k nástrojům a možnostem, které používáte.
+Za normálních okolností není třeba znát upravený název psát kód, který kompiluje a odkazy úspěšně. Dekorované názvy jsou podrobnosti implementace vnitřní kompilátoru a propojovacího systému. Nástroje obvykle zpracovat název v jeho nevyzdobené podobě. Upravený název je však někdy vyžadován, když zadáte název funkce propropojovacího systému a další nástroje. Chcete-li například porovnat přetížené funkce jazyka C++, členy oborů názvů, konstruktory tříd, destruktory a speciální členské funkce, musíte zadat upravený název. Podrobnosti o příznaky možnosti a další situace, které vyžadují dekorované názvy, naleznete v dokumentaci k nástrojům a možnostem, které používáte.
 
-Změníte-li název funkce, třídu, konvenci volání, návratový typ nebo libovolný parametr, upravený název se také změní. V takovém případě musíte získat nový dekorovaný název a použít ho všude, kde je zadaný upravený název.
+Pokud změníte název funkce, třídu, konvence volání, návratový typ nebo libovolný parametr, změní se také upravený název. V takovém případě musíte získat nový upravený název a použít jej všude, kde je zadán dekorovaný název.
 
-Dekorace názvů je také důležité při propojení s kódem napsaným v jiných programovacích jazycích nebo pomocí jiných kompilátorů. Různé kompilátory používají různé konvence pro dekorace názvů. Pokud vaše spustitelné odkazy na kód napsané v jiném jazyce, musí být provedena zvláštní péče, aby odpovídala exportovaným a importovaným názvům a konvencím volání. Kód jazyka sestavení musí používat MSVC dekorované názvy a konvence volání pro propojení ke zdrojovému kódu napsanému pomocí MSVC.
+Název dekorace je také důležité při propojení s kódem napsaný v jiných programovacích jazycích nebo pomocí jiných kompilátorů. Různé kompilátory používají různé konvence dekorace názvu. Pokud váš spustitelný soubor odkazuje na kód napsaný v jiném jazyce, je třeba věnovat zvláštní pozornost vyváženému a importovanému jménu a konvencím volání. Kód jazyka sestavení musí používat msvc dekorované názvy a konvence volání pro propojení se zdrojovým kódem napsaným pomocí MSVC.
 
-##  <a name="format-of-a-c-decorated-name"></a><a name="Format"></a>Formát C++ dekorovaného názvu
+## <a name="format-of-a-c-decorated-name"></a><a name="Format"></a>Formát dekorovaného názvu c++
 
-Dekorované názvy C++ funkce obsahují následující informace:
+Upravený název funkce jazyka C++ obsahuje následující informace:
 
-- Název funkce
+- Název funkce.
 
-- Třída, pro kterou je funkce členem, pokud se jedná o členskou funkci. To může zahrnovat třídu, která obklopuje třídu, která obsahuje funkci, a tak dále.
+- Třída, která je členem funkce, pokud je členská funkce. To může zahrnovat třídu, která obklopuje třídu, která obsahuje funkci a tak dále.
 
-- Obor názvů, do kterého funkce patří, pokud je součástí oboru názvů.
+- Obor názvů, do který funkce patří, pokud je součástí oboru názvů.
 
 - Typy parametrů funkce.
 
@@ -46,45 +46,45 @@ Dekorované názvy C++ funkce obsahují následující informace:
 
 - Návratový typ funkce.
 
-Názvy funkcí a tříd jsou v dekorované názvu kódovány. Zbytek dekorovaného názvu je kód, který má vnitřní význam pouze pro kompilátor a linker. Níže jsou uvedeny příklady nedekorované a dekorované C++ názvy.
+Názvy funkcí a tříd jsou kódovány v dekorovaném názvu. Zbytek upravený název je kód, který má vnitřní význam pouze pro kompilátor a propojovací program. Následují příklady neupravených a dekorovaných názvů c++.
 
-|Nedekorovaný název|Dekorovaný název|
+|Upravený název|Upravený název|
 |----------------------|--------------------|
 |`int a(char){int i=3;return i;};`|`?a@@YAHD@Z`|
 |`void __stdcall b::c(float){};`|`?c@b@@AAGXM@Z`|
 
-##  <a name="format-of-a-c-decorated-name"></a><a name="FormatC"></a>Formát dekorované názvy jazyka C
+## <a name="format-of-a-c-decorated-name"></a><a name="FormatC"></a>Formát c dekorovaného názvu
 
-Forma dekorace pro funkci jazyka C závisí na konvenci volání používané v jeho deklaraci, jak je znázorněno v následující tabulce. Toto je také formát dekorace, který se používá, C++ když je kód deklarován pro `extern "C"` propojení. Výchozí konvence volání je `__cdecl`. Všimněte si, že v 64ovém prostředí nejsou funkce dekorované.
+Forma dekorace pro funkci C závisí na konvence volání použité v jeho prohlášení, jak je znázorněno v následující tabulce. Toto je také formát dekorace, který se používá `extern "C"` při c++ kód je deklarován mít propojení. Výchozí konvence volání `__cdecl`je . Všimněte si, že v 64bitovém prostředí nejsou funkce dekorovány.
 
-|Konvence volání|Dekorace|
+|Konvenci|Dekorace|
 |------------------------|----------------|
-|`__cdecl`|Počáteční podtržítko ( **_** )|
-|`__stdcall`|Počáteční podtržítko ( **_** ) a koncové znaménko ( **\@** ) následované počtem bajtů v seznamu parametrů v desítkové soustavě|
-|`__fastcall`|Úvodní a koncové znaménko ( **\@** ) následované desítkovým číslem reprezentujícím počet bajtů v seznamu parametrů|
-|`__vectorcall`|Dva na konci znaménka ( **\@\@** ) následovaný desítkovým počtem bajtů v seznamu parametrů|
+|`__cdecl`|Úvodní podtržítko (**_**)|
+|`__stdcall`|Úvodní podtržítko (**_**)**\@** a koncové za znaménko ( ) následované počtem bajtů v seznamu parametrů v desítkové mase|
+|`__fastcall`|Proklad a koncové**\@** na znaménka ( ) následované desítkovým číslem představujícím počet bajtů v seznamu parametrů|
+|`__vectorcall`|Dva koncové na**\@** znaménka ( ) následované desetinným počtem bajtů v seznamu parametrů|
 
-##  <a name="viewing-decorated-names"></a><a name="Viewing"></a>Zobrazení dekorovaných názvů
+## <a name="viewing-decorated-names"></a><a name="Viewing"></a>Zobrazení dekorovaných jmen
 
-Po zkompilování zdrojového souboru, který obsahuje definici dat, objektu nebo definice funkce nebo prototypu, lze získat upravený tvar názvu symbolu. K prohlédnutí dekorací názvů v programu můžete použít jednu z následujících metod:
+Po kompilaci zdrojového souboru, který obsahuje data, objekt nebo definici funkce nebo prototyp, můžete získat dekorovaný tvar názvu symbolu. Chcete-li prozkoumat dekorované názvy v programu, můžete použít jednu z následujících metod:
 
-#### <a name="to-use-a-listing-to-view-decorated-names"></a>Použití seznamu k zobrazení dekorované názvy
+#### <a name="to-use-a-listing-to-view-decorated-names"></a>Použití výpisu k zobrazení dekorovaných názvů
 
-1. Vygenerujte výpis kompilací zdrojového souboru, který obsahuje data, objekt nebo definici funkce nebo prototyp s možností kompilátoru [typ souboru výpisu](fa-fa-listing-file.md) nastavenou na sestavení se zdrojovým kódem ( **/FAS**).
+1. Vygenerujte výpis kompilací zdrojového souboru, který obsahuje definici dat, objektu nebo funkce nebo prototyp u [možnosti kompilátoru Typu souboru výpisu](fa-fa-listing-file.md) nastavenou na sestavení se zdrojovým kódem (**/FA**).
 
-   Zadejte například `cl /c /FAs example.cpp` do příkazového řádku pro vývojáře pro vygenerování souboru výpisu, například ASM.
+   Zadejte `cl /c /FAs example.cpp` například na příkazovém řádku vývojáře a vygenerujte soubor výpisu, example.asm.
 
-2. Ve výsledném souboru výpisu Najděte řádek, který začíná VEŘEJNÝm, a ukončí středník následovaný nedekorovanými daty nebo názvem funkce. Symbol mezi VEŘEJNÝm a středníkem je upravený název.
+2. Ve výsledném souboru výpisu najděte řádek, který začíná na PUBLIC a zakončuje středník následovaný upravenými daty nebo názvem funkce. Symbol mezi PUBLIC a středníkem je upravený název.
 
-#### <a name="to-use-dumpbin-to-view-decorated-names"></a>Použití DUMPBIN k zobrazení dekorované názvy
+#### <a name="to-use-dumpbin-to-view-decorated-names"></a>Použití funkce DUMPBIN k zobrazení dekorovaných názvů
 
-1. Chcete-li zobrazit exportované symboly v souboru. obj nebo. lib, zadejte do příkazového řádku pro vývojáře `dumpbin /symbols` `objfile`.
+1. Exportované symboly zobrazíte v souboru OBJ `dumpbin /symbols` `objfile` nebo LIB, zadejte na příkazovém řádku vývojáře.
 
-2. Chcete-li najít upravený tvar symbolu, vyhledejte nedekorovaný název v závorkách. Dekorovaný název je na stejném řádku, za znakem kanálu (&#124;) a před nedekorovaným názvem.
+2. Chcete-li najít zdobený tvar symbolu, vyhledejte upravený název v závorce. Upravený název je na stejném řádku, za znakem kanálu (&#124;) a před upraveným názvem.
 
-##  <a name="viewing-undecorated-names"></a><a name="Undecorated"></a>Zobrazení nedekorovaných názvů
+## <a name="viewing-undecorated-names"></a><a name="Undecorated"></a>Zobrazení nevyzdobených názvů
 
-Pomocí UNDNAME. exe můžete převést dekorovaný název na jeho nedekorovaný formulář. Tento příklad ukazuje, jak to funguje:
+Pomocí programu undname.exe můžete převést upravený název na neupravený formulář. Tento příklad ukazuje, jak to funguje:
 
 ```
 C:\>undname ?func1@a@@AAEXH@Z
@@ -97,5 +97,5 @@ is :- "private: void __thiscall a::func1(int)"
 
 ## <a name="see-also"></a>Viz také
 
-[Další nástroje pro sestavení MSVC](c-cpp-build-tools.md)<br/>
+[Další nástroje pro sestavení msvc](c-cpp-build-tools.md)<br/>
 [Používání příkazu extern pro specifikaci propojení](../../cpp/using-extern-to-specify-linkage.md)

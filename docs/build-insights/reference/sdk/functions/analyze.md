@@ -1,6 +1,6 @@
 ---
 title: Analýza
-description: Referenční C++ informace k analýze funkcí sady SDK pro Build Insights
+description: Odkaz na funkci SDK Analýzy přehledů sestavení jazyka C++.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 49161641d1cff1c64261d95bb2caace2f802543a
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 08b3643270cc785b3fbea36720d192b4a1473104
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78332864"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81324109"
 ---
 # <a name="analyze"></a>Analýza
 
 ::: moniker range="<=vs-2015"
 
-Sada C++ SDK pro Build Insights je kompatibilní se sadou Visual Studio 2017 a novější. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek selektor verzí sady Visual Studio pro tento článek na sadu Visual Studio 2017 nebo Visual Studio 2019.
+Sada C++ Build Insights SDK je kompatibilní s Visual Studio 2017 a vyšší. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek pro výběr **verze** sady Visual Studio pro tento článek na Visual Studio 2017 nebo Visual Studio 2019. Nachází se v horní části obsahu na této stránce.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Funkce `Analyze` slouží k analýze trasování událostí pro Windows (ETW) získaného z MSVC při trasování C++ buildu. Události v trasování ETW jsou postupně přesměrovány do skupiny analyzátorů poskytované volajícím. Tato funkce podporuje analýzy s více průchody, které umožňují předávat datový proud událostí do skupiny analyzátorů několikrát v řádku.
+Funkce `Analyze` se používá k analýze trasování událostí pro Windows (ETW) trasování získané z MSVC při trasování sestavení C++. Události v trasování ETW jsou předávány postupně do skupiny analyzátoru poskytované volajícím. Tato funkce podporuje víceprůchodové analýzy, které umožňují předávat datový proud událostí do skupiny analyzátorů vícekrát za sebou.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -45,17 +45,17 @@ RESULT_CODE Analyze(
 
 ### <a name="parameters"></a>Parametry
 
-*TAnalyzerGroupMembers*\
-Tento parametr je vždy odvozený.
+*Členové skupiny TAnalyzerGroup*\
+Tento parametr je vždy odvodit.
 
 *inputLogFile*\
 Vstupní trasování ETW, ze kterého chcete číst události.
 
 *numberOfPasses*\
-Počet průchodů analýzy, které mají být spuštěny na vstupním trasování. Trasování se předává na základě zadané skupiny analyzátoru jednou za analýzu.
+Počet analýzy předá ke spuštění na vstupní trasování. Trasování získá průchod za předpokladu, analyzer skupiny jednou za průchod analýzy.
 
-\a *analyzátoru*
-Skupina analyzátoru použitá pro analýzu. Zavolejte [MakeStaticAnalyzerGroup](make-static-analyzer-group.md) a vytvořte skupinu analyzátoru. Chcete-li použít dynamickou skupinu analýz získanou z [MakeDynamicAnalyzerGroup](make-dynamic-analyzer-group.md), nejprve ji zapouzdřete do statické skupiny analyzátoru předáním adresy do `MakeStaticAnalyzerGroup`.
+*skupina analyzátorů*\
+Skupina analyzátorů použitá pro analýzu. Volání [MakeStaticAnalyzerGroup](make-static-analyzer-group.md) vytvořit skupinu analyzátoru. Chcete-li použít skupinu dynamických analyzátorů získanou ze [skupiny MakeDynamicAnalyzerGroup](make-dynamic-analyzer-group.md), nejprve ji zapouzdřte do skupiny statických analyzátorů předáním její adresy společnosti `MakeStaticAnalyzerGroup`.
 
 ### <a name="return-value"></a>Návratová hodnota
 

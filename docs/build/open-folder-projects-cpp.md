@@ -1,53 +1,53 @@
 ---
-title: Podpora otevírání složek pro C++ systémy sestavení v aplikaci Visual Studio
+title: Podpora otevřených složek pro systémy sestavení c++ v sadě Visual Studio
 ms.date: 12/02/2019
 helpviewer_keywords:
 - Open Folder Projects in Visual Studio
 ms.assetid: abd1985e-3717-4338-9e80-869db5435175
-ms.openlocfilehash: 8342060e7286c1089312874199bf341ec36bed62
-ms.sourcegitcommit: 6c1960089b92d007fc28c32af1e4bef0f85fdf0c
+ms.openlocfilehash: 9264aa4bf77de406bdde9042ef9ec4251763f721
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75556686"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81320965"
 ---
-# <a name="open-folder-support-for-c-build-systems-in-visual-studio"></a>Podpora otevírání složek pro C++ systémy sestavení v aplikaci Visual Studio
+# <a name="open-folder-support-for-c-build-systems-in-visual-studio"></a>Podpora otevřených složek pro systémy sestavení c++ v sadě Visual Studio
 
 ::: moniker range="vs-2015"
 
-Funkce otevřít složku je k dispozici v systému Visual Studio 2017 nebo novějším.
+Funkce Otevřít složku je dostupná ve Visual Studiu 2017 a novějším.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2017"
 
-V aplikaci Visual Studio 2017 a novější funkce "otevřená složka" umožňuje otevřít složku zdrojových souborů a okamžitě spustit kódování s podporou technologie IntelliSense, procházení, refaktoringu, ladění atd. Úpravy, vytváření, přesunout a odstranit soubory, Visual Studio automaticky sleduje změny a průběžně aktualizuje jeho index IntelliSense. Nejsou načteny žádné soubory. sln nebo. vcxproj. v případě potřeby můžete zadat vlastní úlohy a parametry sestavení a spuštění prostřednictvím jednoduchých souborů. JSON. Tato funkce umožňuje integrovat libovolný systém sestavení třetí strany do sady Visual Studio. Obecné informace o otevřené složce naleznete v tématu [vývoj kódu v aplikaci Visual Studio bez projektů nebo řešení](/visualstudio/ide/develop-code-in-visual-studio-without-projects-or-solutions).
+V sadě Visual Studio 2017 a novější chod funkce "Otevřít složku" umožňuje otevřít složku zdrojových souborů a okamžitě začít kódovat s podporou technologie IntelliSense, procházení, refaktoringu, ladění a tak dále. Při úpravách, vytváření, přesouvání nebo odstraňování souborů aplikace Visual Studio automaticky sleduje změny a průběžně aktualizuje svůj index Technologie IntelliSense. Nejsou načteny žádné soubory .sln nebo .vcxproj; V případě potřeby můžete zadat vlastní úkoly, stejně jako parametry sestavení a spuštění prostřednictvím jednoduchých souborů JSON. Tato funkce umožňuje integrovat jakýkoli systém sestavení jiných výrobců do sady Visual Studio. Obecné informace o otevřené složce naleznete [v tématu Vývoj kódu v sadě Visual Studio bez projektů nebo řešení](/visualstudio/ide/develop-code-in-visual-studio-without-projects-or-solutions).
 
-## <a name="cmake-and-qt"></a>CMake a QT
+## <a name="cmake-and-qt"></a>CMake a Qt
 
-CMake je integrována v integrovaném vývojovém prostředí sady Visual Studio C++ jako součást úlohy plochy. Pracovní postup pro CMake není totožný s pracovním postupem popsaným v tomto článku. Pokud používáte CMake, přečtěte si téma [projekty cmake v sadě Visual Studio](cmake-projects-in-visual-studio.md). CMake můžete použít také k sestavení projektů QT nebo můžete použít [rozšíření QT sady Visual Studio](https://download.qt.io/development_releases/vsaddin/) pro sadu visual Studio 2015 nebo visual Studio 2017.
+CMake je integrován v integrovaném prostředí Visual Studio jako součást úlohy plochy jazyka C++. Pracovní postup pro CMake není totožný s pracovním postupem popsaným v tomto článku. Pokud používáte CMake, najdete [v tématu CMake projekty v sadě Visual Studio](cmake-projects-in-visual-studio.md). Můžete také použít CMake k vytváření projektů Qt nebo můžete použít [rozšíření Qt Visual Studio](https://download.qt.io/development_releases/vsaddin/) pro Visual Studio 2015 nebo Visual Studio 2017.
 
-## <a name="other-build-systems"></a>Další systémy sestavení
+## <a name="other-build-systems"></a>Ostatní systémy sestavení
 
-Použití integrovaného vývojového prostředí sady Visual Studio se systémem sestavení nebo sadou nástrojů kompilátoru, která není přímo podporována v hlavní nabídce vyberte **soubor | Otevřít | Nebo stiskněte** **kombinaci kláves CTRL + SHIFT + ALT + O**. Přejděte do složky, která obsahuje soubory zdrojového kódu. Chcete-li sestavit projekt, nakonfigurujte technologii IntelliSense a nastavte parametry ladění, přidejte tři soubory JSON:
+Chcete-li použít prostředí IDE sady Visual Studio s nástrojem sestavení nebo nástrojem kompilátoru, který není přímo podporován z hlavní nabídky, vyberte **možnost Soubor | Otevřeno | Složka** nebo stiskněte **kombinaci kláves Ctrl + Shift + Alt + O**. Přejděte do složky, která obsahuje soubory zdrojového kódu. Chcete-li vytvořit projekt, nakonfigurovat technologie IntelliSense a nastavit parametry ladění, přidejte tři soubory JSON:
 
 | | |
 |-|-|
-|CppProperties.json|Zadejte vlastní informace o konfiguraci pro procházení. V případě potřeby vytvořte tento soubor do kořenové složky projektu. (Nepoužívá se v projektech CMake.)|
-|tasks.vs.json|Zadejte vlastní příkazy sestavení. Přístup přes **Průzkumníka řešení** položka kontextové nabídky **nakonfigurovat úlohy**.|
-|launch.vs.json|Zadejte argumenty příkazového řádku pro ladicí program. Přístup přes **Průzkumníka řešení** položka kontextové nabídky **nastavení ladění a spouštění**.|
+|CppProperties.json|Zadejte informace o vlastní konfiguraci pro procházení. V případě potřeby vytvořte tento soubor v kořenové složce projektu. (Nepoužívá se v projektech CMake.)|
+|tasks.vs.json|Zadejte vlastní příkazy sestavení. Přístup prostřednictvím položky kontextové nabídky **Průzkumníka řešení** **Konfigurace úloh**.|
+|launch.vs.json|Zadejte argumenty příkazového řádku pro ladicí program. Přístup prostřednictvím položky kontextové nabídky **Průzkumníka řešení** **Ladění a Nastavení spuštění**.|
 
-## <a name="configure-code-navigation-with-cpppropertiesjson"></a>Konfigurace navigace v kódu pomocí CppProperties. JSON
+## <a name="configure-code-navigation-with-cpppropertiesjson"></a>Konfigurace navigace pomocí kódu CppProperties.json
 
-Pro technologii IntelliSense a chování při procházení, jako je například **Přejít k definici** , aby fungovala správně, musí Visual Studio znát, který kompilátor používáte, kde jsou systémové hlavičky a kde jsou umístěny další vložené soubory, pokud nejsou přímo ve složce, kterou jste otevřeli (složka pracovního prostoru). Chcete-li zadat konfiguraci, můžete zvolit možnost **spravovat konfigurace** z rozevíracího seznamu na hlavním panelu nástrojů:
+Pro IntelliSense a procházení chování, jako je **přejít na definici** pracovat správně, Visual Studio potřebuje vědět, který kompilátor používáte, kde jsou systémové hlavičky a kde jsou umístěny všechny další zahrnout soubory, pokud nejsou přímo ve složce, kterou jste otevřeli (složka pracovního prostoru). Chcete-li určit konfiguraci, můžete zvolit **Spravovat konfigurace** z rozevíracího souboru na hlavním panelu nástrojů:
 
-![Rozevírací seznam pro správu konfigurací](media/manage-configurations-dropdown.png)
+![Rozevírací informace ke správě konfigurací](media/manage-configurations-dropdown.png)
 
 Visual Studio nabízí následující výchozí konfigurace:
 
 ![Výchozí konfigurace](media/default-configurations.png)
 
-Pokud například zvolíte **x64-Debug**, Visual Studio vytvoří soubor s názvem *CppProperties. JSON* ve složce kořenového projektu:
+Pokud například zvolíte **x64-Debug**, Visual Studio vytvoří soubor s názvem *CppProperties.json* v kořenové složce projektu:
 
 ```json
 {
@@ -73,14 +73,14 @@ Pokud například zvolíte **x64-Debug**, Visual Studio vytvoří soubor s názv
 }
 ```
 
-Tato konfigurace dědí proměnné prostředí Developer Command Prompt sady Visual Studio [x64](building-on-the-command-line.md). Jedna z těchto proměnných je `INCLUDE` a na ni můžete odkazovat pomocí makra `${env.INCLUDE}`. Vlastnost `includePath` oznamuje aplikaci Visual Studio, kde hledat všechny zdroje, které IT potřebují pro technologii IntelliSense. V tomto případě říká "hledání ve všech adresářích určených proměnnou prostředí INCLUDE" a také všechny adresáře ve stromu aktuální pracovní složky. " Vlastnost `name` je název, který se zobrazí v rozevíracím seznamu, a může to být cokoli, co chcete. Vlastnost `defines` poskytuje nápovědu pro technologii IntelliSense při výskytu podmíněných kompilačních bloků. Vlastnost `intelliSenseMode` poskytuje další tipy na základě typu kompilátoru. K dispozici je několik možností pro MSVC, RSZ a Clang.
+Tato konfigurace dědí proměnné prostředí [v příkazovém řádku pro vývojáře](building-on-the-command-line.md)sady Visual Studio x64 . Jedna z těchto `INCLUDE` proměnných je a můžete odkazovat na to zde pomocí `${env.INCLUDE}` makra. Vlastnost `includePath` sděluje Visual Studio, kde hledat všechny zdroje, které potřebuje pro IntelliSense. V tomto případě se říká, že "podívejte se do všech adresářů určených include proměnné prostředí a také všechny adresáře v aktuálním stromu pracovní složky." Vlastnost `name` je název, který se zobrazí v rozbalovací mase a může být cokoli, co se vám líbí. Vlastnost `defines` poskytuje rady pro IntelliSense, když narazí na bloky podmíněné kompilace. Vlastnost `intelliSenseMode` poskytuje některé další rady založené na typu kompilátoru. Pro msvc, gcc a clang je k dispozici několik možností.
 
 > [!NOTE]
-> Pokud se zdá, že Visual Studio bude ignorovat nastavení v souboru *CppProperties. JSON*, zkuste přidat výjimku do souboru *. gitignore* takto: `!/CppProperties.json`.
+> Pokud se zdá, že Visual Studio ignoruje nastavení v *souboru CppProperties.json*, `!/CppProperties.json`zkuste přidat výjimku do souboru *.gitignore* takto: .
 
-## <a name="default-configuration-for-mingw-w64"></a>Výchozí konfigurace pro MinGW-W64
+## <a name="default-configuration-for-mingw-w64"></a>Výchozí konfigurace pro MinGW-w64
 
-Pokud přidáte konfiguraci MinGW-W64, vyhledá JSON tento kód:
+Pokud přidáte konfiguraci MinGW-W64, JSON vypadá takto:
 
 ```json
 {
@@ -109,29 +109,29 @@ Pokud přidáte konfiguraci MinGW-W64, vyhledá JSON tento kód:
 }
 ```
 
-Poznamenejte si `environments` blok. Definuje vlastnosti, které se chovají jako proměnné prostředí a jsou k dispozici nejen v souboru *CppProperties. JSON* , ale také v ostatních konfiguračních souborech *Task. vs. JSON* a *Launch. vs. JSON*. Konfigurace `Mingw64` dědí prostředí `mingw_w64` a používá jeho vlastnost `INCLUDE` k určení hodnoty pro `includePath`. Podle potřeby můžete přidat další cesty k této vlastnosti pole.
+Všimněte `environments` si bloku. Definuje vlastnosti, které se chovají jako proměnné prostředí a jsou k dispozici nejen v souboru *CppProperties.json,* ale také v jiných konfiguračních souborech *task.vs.json* a *launch.vs.json*. Konfigurace `Mingw64` dědí `mingw_w64` prostředí a používá `INCLUDE` jeho vlastnost k `includePath`určení hodnoty pro . Podle potřeby můžete do této vlastnosti pole přidat další cesty.
 
-Vlastnost `intelliSenseMode` je nastavena na hodnotu vhodnou pro RSZ. Další informace o všech těchto vlastnostech naleznete v tématu [CppProperties Schema Reference](cppproperties-schema-reference.md).
+Vlastnost `intelliSenseMode` je nastavena na hodnotu vhodnou pro GCC. Další informace o všech těchto vlastnostech naleznete v tématu [CppProperties odkaz na schéma](cppproperties-schema-reference.md).
 
-Pokud vše funguje správně, uvidíte IntelliSense z hlaviček RSZ při najetí myší na typ:
+Když vše funguje správně, uvidíte IntelliSense ze záhlaví GCC, když najedete na typ:
 
-![Funkce RSZ IntelliSense](media/gcc-intellisense.png)
+![GCC IntelliSense](media/gcc-intellisense.png)
 
-## <a name="enable-intellisense-diagnostics"></a>Povolit diagnostiku IntelliSense
+## <a name="enable-intellisense-diagnostics"></a>Povolení diagnostiky technologie IntelliSense
 
-Pokud nevidíte očekávanou technologii IntelliSense, můžete řešit problémy tak, že v části **nástroje** > **Možnosti** > **textový editor** > **C/C++**  > **Rozšířené** a nastavení **Povolit protokolování** na **hodnotu true**. Pokud chcete začít, zkuste nastavit **úroveň protokolování** na 5 a **filtry protokolování** na 8.
+Pokud nevidíte intelliSense, které očekáváte, můžete řešit problémy s **textem nástroje** > **Options** > **Editor** > **C/C++** > **Upřesnit** a nastavení **Povolit protokolování** na **true**. Chcete-li začít, zkuste nastavit **úroveň protokolování** na 5 a **filtry protokolování** na 8.
 
-![Diagnostické protokoly](media/diagnostic-logging.png)
+![Protokolování diagnostiky](media/diagnostic-logging.png)
 
-Výstup se přesměruje do **okno výstup** a zobrazí se, když zvolíte **Zobrazit výstup z: C++ vizuálního protokolu*. Výstup obsahuje mimo jiné seznam skutečných cest, které IntelliSense pokouší použít. Pokud cesty se neshodují s těmi v *CppProperties. JSON*, zkuste zavřít složku a odstranit podsložku *. vs* , která obsahuje data procházení v mezipaměti.
+Výstup je odváděn do **výstupního okna** a je viditelný, když zvolíte **Zobrazit výstup z: Visual C++ Log*. Výstup obsahuje mimo jiné seznam skutečných cest zahrnutí, které se intelliSense pokouší použít. Pokud cesty neodpovídají cestám v *souboru CppProperties.json*, zkuste složku zavřít a odstranit podsložku *.vs,* která obsahuje data procházení uložené v mezipaměti.
 
-### <a name="define-build-tasks-with-tasksvsjson"></a>Definování úloh sestavení pomocí Tasks. vs. JSON
+### <a name="define-build-tasks-with-tasksvsjson"></a>Definování úloh sestavení pomocí souboru tasks.vs.json
 
-Můžete automatizovat skripty sestavení ani žádné jiné externí operace se soubory, které máte v aktuálním pracovním prostoru spuštěním jako úlohy přímo v integrovaném vývojovém prostředí. Vytvoření nového úkolu můžete nakonfigurovat tak, že kliknete pravým tlačítkem na soubor nebo složku a vyberete **nakonfigurovat úlohy**.
+Můžete automatizovat vytvářet skripty nebo jiné externí operace na soubory, které máte v aktuálním pracovním prostoru spuštěním je jako úlohy přímo v ide. Nový úkol můžete nakonfigurovat tak, že kliknete pravým tlačítkem myši na soubor nebo složku a vyberete **konfigurovat úkoly**.
 
-![Otevřít složku konfigurovat úlohy](media/configure-tasks.png)
+![Otevřít úlohy konfigurace složky](media/configure-tasks.png)
 
-Tím se vytvoří (nebo otevře) soubor *Tasks. vs. JSON* ve složce. vs, kterou sada Visual Studio vytvoří v kořenové složce projektu. V tomto souboru můžete definovat libovolný úkol a potom ho vyvolat z kontextové nabídky **Průzkumník řešení** . Pokud chcete pokračovat v příkladu RSZ, následující fragment kódu ukazuje kompletní *úlohy. soubor. JSON* s jako jeden úkol, který vyvolá soubor *g + +. exe* pro sestavení projektu. Předpokládat, že projekt obsahuje jeden soubor s názvem *Hello. cpp*.
+Tím se vytvoří (nebo otevře) soubor *tasks.vs.json* ve složce .vs, kterou sada Visual Studio vytvoří ve složce kořenového projektu. V tomto souboru můžete definovat libovolnou úlohu a potom ji vyvolat z kontextové nabídky **Průzkumníka řešení.** Chcete-li pokračovat v příkladu GCC, následující úryvek zobrazuje kompletní *soubor tasks.vs.json* s jako jeden úkol, který vyvolá *g ++.exe* k vytvoření projektu. Předpokládejme, že projekt obsahuje jeden soubor s názvem *hello.cpp*.
 
 ```json
 {
@@ -154,9 +154,9 @@ Tím se vytvoří (nebo otevře) soubor *Tasks. vs. JSON* ve složce. vs, kterou
 
 ```
 
-Soubor JSON se umístí do podsložky *. vs* . Chcete-li zobrazit složku, klikněte na tlačítko **Zobrazit všechny soubory** v horní části **Průzkumník řešení**. Tuto úlohu můžete spustit tak, že kliknete pravým tlačítkem na kořenový uzel v **Průzkumník řešení** a zvolíte **sestavení Hello**. Až se úloha dokončí, měl by se zobrazit nový soubor *Hello. exe* v **Průzkumník řešení**.
+Soubor JSON je umístěn do podss *.vs.* Chcete-li tuto složku zobrazit, klikněte na tlačítko **Zobrazit všechny soubory** v horní části **Průzkumníka řešení**. Tuto úlohu můžete spustit kliknutím pravým tlačítkem myši na kořenový uzel v **Průzkumníku řešení** a výběrem **možnosti sestavení hello**. Po dokončení úkolu byste měli vidět nový soubor, *hello.exe* v **Průzkumníku řešení**.
 
-Můžete definovat mnoho druhů úkolů. Následující příklad ukazuje *soubor Tasks. vs. JSON* , který definuje jeden úkol. `taskLabel` definuje název, který se zobrazí v místní nabídce. `appliesTo` definuje, na kterých souborech lze příkaz provést. Vlastnost `command` odkazuje na proměnnou prostředí COMSPEC, která identifikuje cestu pro konzolu (*cmd. exe* ve Windows). Můžete také odkazovat na proměnné prostředí, které jsou deklarovány v CppProperties. JSON nebo CMakeSettings. JSON. Vlastnost `args` Určuje příkazový řádek, který má být vyvolán. `${file}` Makra obnoví na vybraný soubor na **Průzkumníka řešení**. Následující příklad zobrazí název souboru aktuálně vybraného souboru. cpp.
+Můžete definovat mnoho druhů úkolů. Následující příklad ukazuje *soubor tasks.vs.json,* který definuje jeden úkol. `taskLabel`definuje název, který se zobrazí v místní nabídce. `appliesTo`definuje, ve kterých souborech lze příkaz provádět. Vlastnost `command` odkazuje na proměnnou prostředí COMSPEC, která identifikuje cestu pro konzolu *(cmd.exe* v systému Windows). Můžete také odkazovat na proměnné prostředí, které jsou deklarovány v CppProperties.json nebo CMakeSettings.json. Vlastnost `args` určuje příkazový řádek, který má být vyvolán. Makro `${file}` načte vybraný soubor v **Průzkumníku řešení**. V následujícím příkladu se zobrazí název souboru aktuálně vybraného souboru CPP.
 
 ```json
 {
@@ -173,13 +173,13 @@ Můžete definovat mnoho druhů úkolů. Následující příklad ukazuje *soubo
 }
 ```
 
-Po uložení *Tasks. vs. JSON*můžete kliknout pravým tlačítkem na libovolný soubor *. cpp* ve složce, zvolit z kontextové nabídky příkaz **echo filename** a zobrazit název souboru zobrazeného v okně výstup.
+Po uložení *souboru tasks.vs.json*můžete klepnout pravým tlačítkem myši na libovolný soubor *CPP* ve složce, z kontextové nabídky zvolit **název souboru Echo** a zobrazit název souboru zobrazený v okně Výstup.
 
-Další informace najdete v tématu [Referenční dokumentace schématu Tasks. vs. JSON](tasks-vs-json-schema-reference-cpp.md).
+Další informace naleznete v [tématu Tasks.vs.json odkaz na schéma](tasks-vs-json-schema-reference-cpp.md).
 
-### <a name="configure-debugging-parameters-with-launchvsjson"></a>Konfigurace parametrů ladění pomocí Launch. vs. JSON
+### <a name="configure-debugging-parameters-with-launchvsjson"></a>Konfigurace parametrů ladění pomocí souboru launch.vs.json
 
-Pokud chcete přizpůsobit argumenty příkazového řádku programu a pokyny pro ladění, klikněte pravým tlačítkem na spustitelný soubor v **Průzkumník řešení** a vyberte **nastavení ladění a spouštění**. Tím se otevře existující soubor *Launch. vs. JSON* , nebo pokud žádný neexistuje, vytvoří se nový soubor se sadou minimálních nastavení spuštění. Nejdřív máte možnost určit, jaký typ relace ladění chcete nakonfigurovat. Pro ladění projektu MINGW-W64 jsme zvolili **CC++ /Launch pro MINGW/Cygwin (GDB)** . Tím se vytvoří konfigurace spuštění pro použití *GDB. exe* s některými pedagogy, které se týkají výchozích hodnot. Jedna z těchto výchozích hodnot je `MINGW_PREFIX`. Můžete nahradit literálovou cestu (jak je vidět níže), nebo můžete definovat vlastnost `MINGW_PREFIX` v *CppProperties. JSON*:
+Chcete-li přizpůsobit argumenty příkazového řádku programu a pokyny k ladění, klepněte pravým tlačítkem myši na spustitelný soubor v **Průzkumníku řešení** a vyberte **nastavení ladění a spuštění**. Tím se otevře existující soubor *launch.vs.json,* nebo pokud žádný neexistuje, vytvoří se nový soubor se sadou minimálních nastavení spuštění. Nejprve budete mít na výběr, jaký druh relace ladění, kterou chcete konfigurovat. Pro ladění projektu MinGw-w64 volíme **C/C++ Launch pro MinGW/Cygwin (gdb)**. Tím se vytvoří konfigurace spuštění pro použití *gdb.exe* s některými vzdělanými odhady o výchozích hodnotách. Jednou z těchto `MINGW_PREFIX`výchozích hodnot je . Můžete nahradit literál cestu (jak je znázorněno `MINGW_PREFIX` níže) nebo můžete definovat vlastnost v *CppProperties.json*:
 
 ```json
 {
@@ -201,17 +201,17 @@ Pokud chcete přizpůsobit argumenty příkazového řádku programu a pokyny pr
 
 ```
 
-Chcete-li spustit ladění, zvolte spustitelný soubor v rozevíracím seznamu ladění a pak klikněte na zelenou šipku:
+Chcete-li začít ladit, zvolte spustitelný soubor v rozevíracím seznamu ladění a klikněte na zelenou šipku:
 
-![Spustit ladicí program](media/launch-debugger-gdb.png)
+![Spuštění ladicího programu](media/launch-debugger-gdb.png)
 
-Měl by se zobrazit dialogové okno **inicializace ladicího programu** a pak externí okno konzoly, ve kterém je spuštěný program.
+Měli byste vidět **inicializace ladicího programu** dialogové okno a potom externí okno konzoly, která je spuštěna program.
 
-Další informace najdete v referenčních informacích ke [schématu Launch. vs. JSON](launch-vs-schema-reference-cpp.md).
+Další informace naleznete v [tématu launch.vs.json odkaz na schéma](launch-vs-schema-reference-cpp.md).
 
-## <a name="launching-other-executables"></a>Spouštění dalších spustitelných souborů
+## <a name="launching-other-executables"></a>Spuštění dalších spustitelných souborů
 
-Můžete definovat nastavení spuštění libovolného spustitelného souboru v počítači. Následující příklad spustí *7za* a určí další argumenty jejich přidáním do pole `args` JSON:
+Můžete definovat nastavení spuštění pro libovolný spustitelný soubor v počítači. Následující příklad spustí *7za* a určuje další argumenty jejich `args` přidáním do pole JSON:
 
 ```json
 {
@@ -228,6 +228,6 @@ Můžete definovat nastavení spuštění libovolného spustitelného souboru v 
 }
 ```
 
-Při uložení tohoto souboru se nová konfigurace zobrazí v rozevíracím seznamu cíl ladění a můžete ji vybrat ke spuštění ladicího programu. Pro libovolný počet spustitelných souborů můžete vytvořit tolik konfigurací ladění, kolik chcete. Pokud stisknete klávesu **F5** nyní, ladicí program se spustí a zahájí všechny zarážky, které jste už možná nastavili. K dispozici jsou teď všechna známá okna ladicího programu a jejich funkce.
+Když uložíte tento soubor, nová konfigurace se zobrazí v rozevíracím souboru Ladění cíle a můžete ji vybrat a spustit ladicí program. Můžete vytvořit libovolný počet konfigurací ladění pro libovolný počet spustitelných souborů. Pokud stisknete **klávesu F5** nyní, ladicí program se spustí a narazí na všechny zarážky, které jste již nastavili. Všechna známá okna ladicího programu a jejich funkce jsou nyní k dispozici.
 
 ::: moniker-end

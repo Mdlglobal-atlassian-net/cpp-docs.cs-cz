@@ -1,36 +1,36 @@
 ---
-title: Globální funkce WinModule
+title: WinModule globální funkce
 ms.date: 11/04/2016
 f1_keywords:
 - atlbase/ATL::AtlWinModuleAddCreateWndData
 - atlbase/ATL::AtlWinModuleExtractCreateWndData
 ms.assetid: 8ce45a5b-26a7-491f-9096-c09ceca5f2c2
-ms.openlocfilehash: 0e7450ea2a42c0b35dc5a6d1b77dfb0f2acb9520
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3d7d001a2835514cc5385a7069c0bcda58cdd88e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62196856"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81329364"
 ---
-# <a name="winmodule-global-functions"></a>Globální funkce WinModule
+# <a name="winmodule-global-functions"></a>WinModule globální funkce
 
-Tyto funkce poskytuje podporu pro `_AtlCreateWndData` struktury operace.
+Tyto funkce poskytují `_AtlCreateWndData` podporu pro operace struktury.
 
 > [!IMPORTANT]
-> Funkce uvedené v následující tabulce nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.
+> Funkce uvedené v následující tabulce nelze použít v aplikacích, které se spouštějí v prostředí Windows Runtime.
 
 |||
 |-|-|
-|[AtlWinModuleAddCreateWndData](#atlwinmoduleaddcreatewnddata)|Tato funkce slouží k inicializaci a přidání `_AtlCreateWndData` struktury.|
-|[AtlWinModuleExtractCreateWndData](#atlwinmoduleextractcreatewnddata)|Voláním této funkce extrahujete existující `_AtlCreateWndData` struktury.|
+|[AtlWinModuleAddCreateWndData](#atlwinmoduleaddcreatewnddata)|Tato funkce se používá k inicializaci a přidání `_AtlCreateWndData` struktury.|
+|[AtlWinModuleExtractCreateWndData](#atlwinmoduleextractcreatewnddata)|Volání této funkce extrahovat existující `_AtlCreateWndData` strukturu.|
 
 ## <a name="requirements"></a>Požadavky
 
 **Záhlaví:** atlbase.h
 
-##  <a name="atlwinmoduleaddcreatewnddata"></a>  AtlWinModuleAddCreateWndData
+## <a name="atlwinmoduleaddcreatewnddata"></a><a name="atlwinmoduleaddcreatewnddata"></a>AtlWinModuleAddCreateWndData
 
-Tato funkce slouží k inicializaci a přidání `_AtlCreateWndData` struktury.
+Tato funkce se používá k inicializaci a přidání `_AtlCreateWndData` struktury.
 
 ```
 ATLINLINE ATLAPI_(void) AtlWinModuleAddCreateWndData(
@@ -41,22 +41,22 @@ ATLINLINE ATLAPI_(void) AtlWinModuleAddCreateWndData(
 
 ### <a name="parameters"></a>Parametry
 
-*pWinModule*<br/>
-Ukazatel na modulu [_atl_win_module70 –](../../atl/reference/atl-win-module70-structure.md) struktury.
+*pWinModul*<br/>
+Ukazatel na strukturu [_ATL_WIN_MODULE70](../../atl/reference/atl-win-module70-structure.md) modulu.
 
-*pData*<br/>
-Ukazatel [_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md) struktura bude inicializována a přidán do aktuální modul.
+*Pdata*<br/>
+Ukazatel na [_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md) strukturu, která má být inicializována a přidána do aktuálního modulu.
 
-*pObject*<br/>
-Ukazatel na objekt **to** ukazatele.
+*pObjekt*<br/>
+Ukazatel na objekt je **tento** ukazatel.
 
 ### <a name="remarks"></a>Poznámky
 
-Inicializuje `_AtlCreateWndData` strukturou, který se používá k ukládání **to** ukazatel používá k odkazování na instance třídy a přidá ji do seznamu odkazuje modul `_ATL_WIN_MODULE70` struktury. Volané [CAtlWinModule::AddCreateWndData](catlwinmodule-class.md#addcreatewnddata).
+Inicializuje `_AtlCreateWndData` strukturu, která se používá k uložení **tohoto** ukazatele, který slouží k odkazování na instance `_ATL_WIN_MODULE70` třídy, a přidá ji do seznamu, na který odkazuje struktura modulu. Volal [CAtlWinModule::AddCreateWndData](catlwinmodule-class.md#addcreatewnddata).
 
-##  <a name="atlwinmoduleextractcreatewnddata"></a>  AtlWinModuleExtractCreateWndData
+## <a name="atlwinmoduleextractcreatewnddata"></a><a name="atlwinmoduleextractcreatewnddata"></a>AtlWinModuleExtractCreateWndData
 
-Voláním této funkce extrahujete existující `_AtlCreateWndData` struktury.
+Volání této funkce extrahovat existující `_AtlCreateWndData` strukturu.
 
 ```
 ATLINLINE ATLAPI_(void*) AtlWinModuleExtractCreateWndData(_ATL_WIN_MODULE* pWinModule);
@@ -64,17 +64,17 @@ ATLINLINE ATLAPI_(void*) AtlWinModuleExtractCreateWndData(_ATL_WIN_MODULE* pWinM
 
 ### <a name="parameters"></a>Parametry
 
-*pWinModule*<br/>
-Ukazatel na modulu [_atl_win_module70 –](../../atl/reference/atl-win-module70-structure.md) struktury.
+*pWinModul*<br/>
+Ukazatel na strukturu [_ATL_WIN_MODULE70](../../atl/reference/atl-win-module70-structure.md) modulu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrací ukazatel [_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md) struktury.
+Vrátí ukazatel na [_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md) struktury.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce bude extrahujete existující `_AtlCreateWndData` strukturu ze seznamu odkazuje modul `_ATL_WIN_MODULE70` struktury.
+Tato funkce extrahuje existující `_AtlCreateWndData` strukturu ze seznamu, `_ATL_WIN_MODULE70` na který odkazuje struktura modulu.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Funkce](../../atl/reference/atl-functions.md)
+[Functions](../../atl/reference/atl-functions.md)

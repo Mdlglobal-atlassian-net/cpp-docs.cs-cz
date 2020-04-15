@@ -1,6 +1,6 @@
 ---
-title: MatchEvent
-description: Reference C++ k funkci MatchEvent sady SDK pro Build Insights
+title: Událost matchevent
+description: C++ Build Insights SDK MatchEvent odkaz na funkci.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: f8022953e2f56f7c8917f161b094c50e0c5ecbdf
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 0c60653641c676716bcdd60865433773da79325f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78332773"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81323858"
 ---
-# <a name="matchevent"></a>MatchEvent
+# <a name="matchevent"></a>Událost matchevent
 
 ::: moniker range="<=vs-2015"
 
-Sada C++ SDK pro Build Insights je kompatibilní se sadou Visual Studio 2017 a novější. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek selektor verzí sady Visual Studio pro tento článek na sadu Visual Studio 2017 nebo Visual Studio 2019.
+Sada C++ Build Insights SDK je kompatibilní s Visual Studio 2017 a vyšší. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek pro výběr **verze** sady Visual Studio pro tento článek na Visual Studio 2017 nebo Visual Studio 2019. Nachází se v horní části obsahu na této stránce.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Funkce `MatchEvent` slouží k porovnání události se seznamem typů událostí. Pokud událost odpovídá typu v seznamu, je předána obslužné rutině pro další zpracování.
+Funkce `MatchEvent` se používá k porovnání události se seznamem typů událostí. Pokud událost odpovídá typu v seznamu, je předána obslužné rutině k dalšímu zpracování.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -43,34 +43,34 @@ bool MatchEvent(
 
 ### <a name="parameters"></a>Parametry
 
-*TEvent*\
+*Událost*\
 První typ události, který chcete porovnat.
 
-*TEvents*\
-Zbývající typy událostí, které si přejete porovnat.
+*Události*\
+Zbývající typy událostí, které chcete porovnat.
 
-*TCallable*\
-Typ, který podporuje `operator()`. Další informace o tom, které argumenty jsou předány tomuto operátorovi, *naleznete v popisu parametru s* parametrem.
+*Tcallable*\
+Typ, který `operator()`podporuje . Další informace o tom, které argumenty jsou tomuto operátoru předány, naleznete v popisu *volna.*
 
 *TExtraArgs*\
-Typy dalších argumentů, které byly předány `MatchEvent`.
+Typy další argumenty, které byly `MatchEvent`předány .
 
-\ *události*
-Událost, která se má shodovat s typy událostí popsanými v *TEvent* a *TEvents*.
+*Událost*\
+Událost, která se bude shodovat s typy událostí popsanými *teventa* a *TEvents*.
 
-*volat*\
-`MatchEvent` vyvolá volání metody *Invoke po* úspěšném porovnání události s jakýmkoli typem události popsaným v *TEvent* a *TEvents*. První argument předaný metodě *pro vyžádání* je hodnota r, která odpovídá typu události. Sada parametrů *extraArgs* je ve zbývajících parametrech *pro vyžádání dokonalé.*  
+*Callable*\
+`MatchEvent`vyvolá *volatelné* po úspěšném porovnání události s libovolným typem události popsaným *tevent* a *tevents*. První argument předaný *volatelné* je hodnota r odpovídající typ události. Balíček parametrů *extraArgs* je ve zbývajících parametrech *callable*perfektně předán .  
 
 *extraArgs*\
-Argumenty, které získají *dokonalý a předávané k vyžádání* , spolu s odpovídajícím typem události.
+Argumenty, které získat perfektní-přepojit *na volatelné* spolu s odpovídající typ události.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Logická** hodnota **true** , pokud bylo spárování úspěšné, nebo jinak **false** .
+**Bool** hodnota, která je **true,** pokud odpovídající byl úspěšný, nebo **false** jinak.
 
 ## <a name="remarks"></a>Poznámky
 
-Typy událostí, které se mají použít pro parametry *TEvent* a *TEvents* , se vyberou ze seznamu *tříd zachycení*. Seznam událostí a třídy zachycení, které můžete použít k přiřazení, najdete v tématu [tabulka událostí](../event-table.md).
+Typy událostí, které se mají použít pro parametry *TEvent* a *TEvents,* jsou vybrány ze seznamu *tříd zachycení*. Seznam událostí a tříd zachycení, které můžete použít k jejich sladění, naleznete v [tabulce událostí](../event-table.md).
 
 ## <a name="example"></a>Příklad
 

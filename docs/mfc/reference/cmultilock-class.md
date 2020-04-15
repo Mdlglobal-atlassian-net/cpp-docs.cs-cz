@@ -1,5 +1,5 @@
 ---
-title: CMultiLock Class
+title: Třída CMultiLock
 ms.date: 11/04/2016
 f1_keywords:
 - CMultiLock
@@ -14,16 +14,16 @@ helpviewer_keywords:
 - CMultiLock [MFC], Lock
 - CMultiLock [MFC], Unlock
 ms.assetid: c5b7c78b-1f81-4387-b7dd-2c813c5b6b61
-ms.openlocfilehash: b2fe3ecf2197b8edb13e89600b16e550deff9af2
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: a051c6a510c53ac0c7c0a6efd8b4b5720080b264
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69504539"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81319715"
 ---
-# <a name="cmultilock-class"></a>CMultiLock Class
+# <a name="cmultilock-class"></a>Třída CMultiLock
 
-Představuje mechanismus pro řízení přístupu, který se používá při řízení přístupu k prostředkům v programu s více vlákny.
+Představuje mechanismus řízení přístupu používaný při řízení přístupu k prostředkům v programu s více vlákny.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -35,29 +35,29 @@ class CMultiLock
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CMultiLock::CMultiLock](#cmultilock)|`CMultiLock` Vytvoří objekt.|
+|[CMultiLock::CMultiLock](#cmultilock)|Vytvoří `CMultiLock` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CMultiLock::-lockd](#islocked)|Určuje, zda je určitý objekt synchronizace v poli uzamčen.|
-|[CMultiLock::Lock](#lock)|Počká na pole synchronizačních objektů.|
-|[CMultiLock:: Unlock](#unlock)|Uvolňuje všechny vlastněné objekty synchronizace.|
+|[CMultilock::Uzamčený](#islocked)|Určuje, zda je uzamčen konkrétní objekt synchronizace v poli.|
+|[CMultiLock::Zamknout](#lock)|Čeká na pole objektů synchronizace.|
+|[CMultiLock::Odemknout](#unlock)|Uvolní všechny vlastněné objekty synchronizace.|
 
 ## <a name="remarks"></a>Poznámky
 
 `CMultiLock`nemá základní třídu.
 
-Chcete-li použít synchronizační třídy [CSemaphore](../../mfc/reference/csemaphore-class.md), [CMutex](../../mfc/reference/cmutex-class.md)a [CEvent](../../mfc/reference/cevent-class.md), můžete vytvořit `CMultiLock` objekt nebo [CSingleLock](../../mfc/reference/csinglelock-class.md) , který bude čekat a uvolnit objekt synchronizace. Použijte `CMultiLock` v případě, že existuje více objektů, které lze použít v určitou dobu. Použijte `CSingleLock` , pokud potřebujete počkat jenom na jeden objekt v jednom okamžiku.
+Chcete-li použít třídy synchronizace [CSemaphore](../../mfc/reference/csemaphore-class.md), [CMutex](../../mfc/reference/cmutex-class.md)a `CMultiLock` [CEvent](../../mfc/reference/cevent-class.md), můžete vytvořit objekt nebo [csinglelock,](../../mfc/reference/csinglelock-class.md) který počká a uvolní objekt synchronizace. Použijte, `CMultiLock` pokud existuje více objektů, které můžete použít v určitém čase. Použijte, `CSingleLock` když potřebujete čekat pouze na jeden objekt najednou.
 
-Chcete-li `CMultiLock` použít objekt, nejprve vytvořte pole objektů synchronizace, na které chcete čekat. Dále zavolejte `CMultiLock` konstruktor objektu uvnitř členské funkce ve třídě kontrolovaného prostředku. Pak zavolejte členskou funkci [zámku](#lock) , abyste zjistili, jestli je prostředek k dispozici (signalizace). Pokud je jedna, pokračujte zbývající částí členské funkce. Pokud není k dispozici žádný prostředek, počkejte na určenou dobu, než se prostředek uvolní, nebo vraťte chybu. Po použití prostředku zavolejte funkci [Unlock](#unlock) , pokud `CMultiLock` se má objekt znovu použít `CMultiLock` , nebo umožněte zničení objektu.
+Chcete-li `CMultiLock` použít objekt, nejprve vytvořte pole objektů synchronizace, na které chcete čekat. Dále volání `CMultiLock` konstruktoru objektu uvnitř členské funkce ve třídě řízeného prostředku. Potom volání [lock](#lock) členské funkce k určení, zda prostředek je k dispozici (signalizováno). Pokud je, pokračujte se zbytkem členské funkce. Pokud není k dispozici žádný prostředek, počkejte na zadané množství času pro uvolnění zdroje nebo vrácení selhání. Po dokončení použití prostředku, volání [Odemknout](#unlock) funkce, pokud `CMultiLock` má být objekt `CMultiLock` znovu použit, nebo povolit zničení objektu.
 
-`CMultiLock`objekty jsou nejužitečnější, pokud má vlákno velký počet `CEvent` objektů, na které může reagovat. Vytvořte pole obsahující všechny `CEvent` ukazatele a zavolejte. `Lock` Tím dojde k tomu, že vlákno počká, dokud nebude signalizována jedna z událostí.
+`CMultiLock`objekty jsou nejužitečnější, když `CEvent` vlákno má velký počet objektů, na které může reagovat. Vytvořte pole obsahující `CEvent` všechny ukazatele a `Lock`volání . To způsobí, že vlákno čekat, dokud je signalizována jedna z událostí.
 
-Další informace o použití `CMultiLock` objektů naleznete v článku [Multithreading: Jak používat synchronizační třídy](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).
+Další informace o použití `CMultiLock` objektů naleznete v článku [Vícevláken: Jak používat třídy synchronizace](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -65,11 +65,11 @@ Další informace o použití `CMultiLock` objektů naleznete v článku [Multit
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxmt. h
+**Záhlaví:** afxmt.h
 
-##  <a name="cmultilock"></a>CMultiLock::CMultiLock
+## <a name="cmultilockcmultilock"></a><a name="cmultilock"></a>CMultiLock::CMultiLock
 
-`CMultiLock` Vytvoří objekt.
+Vytvoří `CMultiLock` objekt.
 
 ```
 CMultiLock(
@@ -80,22 +80,22 @@ CMultiLock(
 
 ### <a name="parameters"></a>Parametry
 
-*ppObjects*<br/>
-Pole ukazatelů na objekty synchronizace, které mají být očekávány. Nemůže mít hodnotu NULL.
+*ppObjekty*<br/>
+Pole ukazatelů na synchronizační objekty, na které se má čekat. Nemůže být null.
 
 *dwCount*<br/>
 Počet objektů v *ppObjects*. Musí být větší než 0.
 
 *bInitialLock*<br/>
-Určuje, zda se má zpočátku pokusit o přístup k libovolnému z dodaných objektů.
+Určuje, zda se má nejprve pokusit o přístup k některému z dodaných objektů.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce je volána po vytvoření pole synchronizačních objektů, které mají být očekávány. Obvykle se volá z vlákna, které musí čekat na zpřístupnění některého z objektů synchronizace.
+Tato funkce je volána po vytvoření pole objektů synchronizace, na které se má čekat. Obvykle se nazývá z v rámci vlákna, který musí čekat na jeden z objektů synchronizace k dispozici.
 
-##  <a name="islocked"></a>CMultiLock::-lockd
+## <a name="cmultilockislocked"></a><a name="islocked"></a>CMultilock::Uzamčený
 
-Určuje, zda je zadaný objekt nesignálný (není k dispozici).
+Určuje, zda je zadaný objekt nesignalizován (není k dispozici).
 
 ```
 BOOL IsLocked(DWORD dwItem);
@@ -103,16 +103,16 @@ BOOL IsLocked(DWORD dwItem);
 
 ### <a name="parameters"></a>Parametry
 
-*dwItem*<br/>
-Index v poli objektů odpovídajících objektu, jehož stav je dotazován.
+*dwPoložka*<br/>
+Index v poli objektů odpovídající objektu, jehož stav je dotazován.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je zadaný objekt uzamčen; v opačném případě 0.
+Nenulová, pokud je zadaný objekt uzamčen; jinak 0.
 
-##  <a name="lock"></a>CMultiLock:: Lock
+## <a name="cmultilocklock"></a><a name="lock"></a>CMultiLock::Zamknout
 
-Voláním této funkce získáte přístup k jednomu nebo více prostředkům řízeným synchronizačními objekty dodanými do `CMultiLock` konstruktoru.
+Volání této funkce získat přístup k jednomu nebo více prostředků řízených `CMultiLock` synchronizační objekty dodávané konstruktoru.
 
 ```
 DWORD Lock(
@@ -124,43 +124,43 @@ DWORD Lock(
 ### <a name="parameters"></a>Parametry
 
 *dwTimeOut*<br/>
-Určuje dobu, po kterou se má čekat, než bude objekt synchronizace k dispozici (signalizace). Pokud je nekonečné `Lock` , počká, až bude objekt před vrácením signalizována.
+Určuje dobu čekání na dostupnost objektu synchronizace (signalizováno). Pokud INFINITE, bude čekat, `Lock` dokud objekt je signalizován před návratem.
 
 *bWaitForAll*<br/>
-Určuje, zda všechny objekty, které se budou čekat, se musí nacházet ve stejné době, než se vrátí. Pokud má hodnotu `Lock` false, vrátí se, pokud některý z objektů čeká na signál.
+Určuje, zda všechny objekty, na které bylo před vrácením čekáno, musí být signalizovány současně. Pokud false, `Lock` vrátí, když některý z objektů čekal na je signalizován.
 
 *dwWakeMask*<br/>
-Určuje další podmínky, které mají povolené přerušení čekání. Úplný seznam dostupných možností pro tento parametr naleznete v tématu [MsgWaitForMultipleObjects](/windows/win32/api/winuser/nf-winuser-msgwaitformultipleobjects) v Windows SDK.
+Určuje další podmínky, které mohou přerušit čekání. Úplný seznam dostupných možností pro tento parametr naleznete v [tématu MsgWaitForMultipleObjects](/windows/win32/api/winuser/nf-winuser-msgwaitformultipleobjects) v sadě Windows SDK.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-V `Lock` případě chyby vrátí hodnotu-1. V případě úspěchu vrátí jednu z následujících hodnot:
+Pokud `Lock` se nezdaří, vrátí - 1. Pokud je úspěšná, vrátí jednu z následujících hodnot:
 
-- Mezi WAIT_OBJECT_0 a WAIT_OBJECT_0 + (počet objektů-1)
+- Mezi WAIT_OBJECT_0 a WAIT_OBJECT_0 + (počet objektů - 1)
 
-   Pokud má *bWaitForAll* hodnotu true, všechny objekty jsou signalizace (k dispozici). Pokud je *BWAITFORALL* false, vrácený Value-WAIT_OBJECT_0 je index v poli objektů objektu, který je signalizace (k dispozici).
+   Pokud *je hodnota bWaitForAll* true, jsou signalizovány všechny objekty (k dispozici). Pokud *bWaitForAll* je FALSE, vrácená hodnota - WAIT_OBJECT_0 je index v poli objektů objektu, který je signalizován (k dispozici).
 
 - WAIT_OBJECT_0 + (počet objektů)
 
    Událost zadaná v *dwWakeMask* je k dispozici ve vstupní frontě vlákna.
 
-- Mezi WAIT_ABANDONED_0 a WAIT_ABANDONED_0 + (počet objektů-1)
+- Mezi WAIT_ABANDONED_0 a WAIT_ABANDONED_0 + (počet objektů - 1)
 
-   Pokud má *bWaitForAll* hodnotu true, všechny objekty jsou signalizace a nejméně jeden z objektů je opuštěným objektem mutex. Pokud je *BWAITFORALL* false, návratová hodnota-WAIT_ABANDONED_0 je index v poli objektů objektu opuštěné mutex, který splnil čekání.
+   Pokud *bWaitForAll* je PRAVDA, všechny objekty jsou signalizovány a alespoň jeden z objektů je opuštěný objekt mutex. Pokud *bWaitForAll* je FALSE, vrácená hodnota - WAIT_ABANDONED_0 je index v poli objektů opuštěné mutex objektu, který splnil čekání.
 
 - WAIT_TIMEOUT
 
-   Časový limit zadaný v *dwTimeOut* vyprší bez úspěšného čekání.
+   Časový limit zadaný v *dwTimeOut* vypršel bez čekání úspěšné.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud má *bWaitForAll* hodnotu true `Lock` , vrátí se úspěšně, jakmile se všechny synchronizační objekty budou signalizovat současně. Pokud má *bWaitForAll* hodnotu false `Lock` , vrátí se, jakmile se jeden nebo více synchronizačních objektů přestane signalizovat.
+Pokud *bWaitForAll* je `Lock` PRAVDA, vrátí úspěšně, jakmile všechny objekty synchronizace se zobrazí současně signalizovat. Pokud *bWaitForAll* je `Lock` FALSE, vrátí, jakmile jeden nebo více objektů synchronizace se stane signalizován.
 
-Pokud `Lock` se nemůže vrátit hned, počká na to, že nepřekračuje počet milisekund zadaných v parametru *dwTimeOut* , než se vrátí. Pokud je *dwTimeOut* nekonečno, nevrátí se, `Lock` dokud nebude získán přístup k objektu nebo pokud byla splněna podmínka zadaná v *dwWakeMask* . V opačném `Lock` případě, pokud bylo možné získat synchronizační objekt, vrátí se úspěšně. Pokud ne, vrátí se chyba.
+Pokud `Lock` není schopen vrátit okamžitě, bude čekat na ne více než počet milisekund zadaný v *parametru dwTimeOut* před návratem. Pokud *dwTimeOut* je `Lock` INFINITE, nevrátí, dokud není získán přístup k objektu nebo podmínka zadaná v *dwWakeMask* byla splněna. V opačném `Lock` případě, pokud byl schopen získat objekt synchronizace, vrátí úspěšně; Pokud tomu tak není, vrátí selhání.
 
-##  <a name="unlock"></a>CMultiLock:: Unlock
+## <a name="cmultilockunlock"></a><a name="unlock"></a>CMultiLock::Odemknout
 
-Uvolní synchronizační objekt vlastněný nástrojem `CMultiLock`.
+Uvolní objekt synchronizace vlastněný `CMultiLock`společností .
 
 ```
 BOOL Unlock();
@@ -172,22 +172,22 @@ BOOL Unlock(
 
 ### <a name="parameters"></a>Parametry
 
-*lCount*<br/>
-Počet odkazů, které se mají vydávat Musí být větší než 0. Pokud by zadaná hodnota způsobila překročení maximálního počtu objektů, počet se nemění a funkce vrátí hodnotu FALSE.
+*lPočet*<br/>
+Počet odkazů, které mají být vydány. Musí být větší než 0. Pokud by zadaná částka způsobila, že počet objektů překročí jeho maximum, počet se nezmění a funkce vrátí hodnotu NEPRAVDA.
 
 *lPrevCount*<br/>
-Odkazuje na proměnnou, aby získala předchozí počet pro objekt synchronizace. Pokud má hodnotu NULL, předchozí počet se nevrátí.
+Odkazuje na proměnnou, která získá předchozí počet pro objekt synchronizace. Pokud null, předchozí počet není vrácena.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud byla funkce úspěšná; v opačném případě 0.
+Nenulová, pokud byla funkce úspěšná; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce je volána `CMultiLock`destruktorem.
+Tato funkce je `CMultiLock`volána destruktorem společnosti.
 
-První tvar `Unlock` se pokusí odemknout synchronizační objekt, který `CMultiLock`spravuje. Druhá forma `Unlock` se pokusí `CSemaphore` odemknout objekty, které vlastní `CMultiLock`. Pokud `CMultiLock` objekt není vlastníkem žádného `CSemaphore` uzamčeného objektu, vrátí funkce hodnotu false. v opačném případě vrátí hodnotu true. *lCount* a *lpPrevCount* jsou přesně stejné jako parametry [CSingleLock:: Unlock](../../mfc/reference/csinglelock-class.md#unlock). Druhá forma z `Unlock` je zřídka platná pro případy s více zámky.
+První forma `Unlock` pokusí odemknout objekt synchronizace `CMultiLock`spravované . Druhá forma `Unlock` pokusí odemknout `CSemaphore` objekty `CMultiLock`vlastněné . Pokud `CMultiLock` nevlastní žádný `CSemaphore` uzamčený objekt, funkce vrátí hodnotu NEPRAVDA. v opačném případě vrátí hodnotu TRUE. *lCount* a *lpPrevCount* jsou přesně stejné jako parametry [CSingleLock::Unlock](../../mfc/reference/csinglelock-class.md#unlock). Druhá forma `Unlock` je zřídka použitelné pro multilock situace.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)

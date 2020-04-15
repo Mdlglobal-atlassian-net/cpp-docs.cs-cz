@@ -10,29 +10,29 @@ helpviewer_keywords:
 - scripts, Registrar scripts
 - registry, Registrar
 ms.assetid: 106752ae-4cfc-4030-8cb2-d36a1d635a2e
-ms.openlocfilehash: c64d47be6df515a0bd4a8d2cfef51f8d56311f4a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9b4492ea393c01b3fa382828d3ca6097d52493f0
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62252011"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81317362"
 ---
 # <a name="atl-registry-component-registrar"></a>Komponenta knihovny ATL pro přístup k registru (Registrar)
 
-Doménový Registrátor ATL poskytuje optimalizované přístup do systémového registru pomocí vlastních rozhraní. Doménový Registrátor je volných vláken a umožňují statické propojení kódu pro klienty jazyka C++.
+Registrátor ATL poskytuje optimalizovaný přístup k systémovému registru prostřednictvím vlastního rozhraní. Registrátor je free-threaded a umožňuje statické propojení kódu pro klienty Jazyka C++.
 
 > [!NOTE]
->  Zdrojový kód pro doménový Registrátor ATL lze najít v atlmfc\include\atliface.h.
+> Zdrojový kód registrátora KNIHOVNY ATL naleznete v souboru atlmfc\include\atliface.h.
 
 ## <a name="in-this-section"></a>V tomto oddílu
 
-[Vytváření skriptů registrátoru](../atl/creating-registrar-scripts.md)<br/>
-Příručka k vytváření skriptů registrátoru. Obsahuje témata o syntaxi BNF, stromů analýzy registru skriptování příklady použití nahraditelných parametrů a volání skriptů.
+[Vytváření skriptů registrátora](../atl/creating-registrar-scripts.md)<br/>
+Průvodce vytvářením skriptů registrátora. Zahrnuje témata o syntaxi BNF, analýzách stromů, příkladech skriptování registru, použití nahraditelných parametrů a vyvolání skriptů.
 
-[Nastavení statického odkazu na kód registrátoru (pouze C++)](../atl/setting-up-a-static-link-to-the-registrar-code-cpp-only.md)<br/>
-Jsou uvedené kroky k nastavení statické propojení na doménový Registrátor.
+[Nastavení statického odkazu na kód registrátora (pouze C++)](../atl/setting-up-a-static-link-to-the-registrar-code-cpp-only.md)<br/>
+Uvádí postup nastavení statického propojení s registrátorem.
 
 ## <a name="related-sections"></a>Související oddíly
 
 [ATL](../atl/active-template-library-atl-concepts.md)<br/>
-Obsahuje odkazy na koncepční témata o tom, jak programovat pomocí knihovnu Active Template Library.
+Obsahuje odkazy na koncepční témata týkající se programování pomocí knihovny aktivních šablon.

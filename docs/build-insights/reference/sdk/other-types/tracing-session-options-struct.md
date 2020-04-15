@@ -1,6 +1,6 @@
 ---
-title: Struktura TRACING_SESSION_OPTIONS
-description: Odkaz C++ na strukturu TRACING_SESSION_OPTIONS Build Insights SDK
+title: TRACING_SESSION_OPTIONS struktura
+description: C++ Build Insights SDK TRACING_SESSION_OPTIONS odkaz na strukturu.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 3f02552d5df4ffe71bc4be5c46e4b5239f25d73c
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 5aeb6299aea8dc0661b9469ee524e7aa4d010aca
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78332206"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81323431"
 ---
-# <a name="tracing_session_options-structure"></a>Struktura TRACING_SESSION_OPTIONS
+# <a name="tracing_session_options-structure"></a>TRACING_SESSION_OPTIONS struktura
 
 ::: moniker range="<=vs-2015"
 
-Sada C++ SDK pro Build Insights je kompatibilní se sadou Visual Studio 2017 a novější. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek selektor verzí sady Visual Studio pro tento článek na sadu Visual Studio 2017 nebo Visual Studio 2019.
+Sada C++ Build Insights SDK je kompatibilní s Visual Studio 2017 a vyšší. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek pro výběr **verze** sady Visual Studio pro tento článek na Visual Studio 2017 nebo Visual Studio 2019. Nachází se v horní části obsahu na této stránce.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Struktura `TRACING_SESSION_OPTIONS` se používá při inicializaci [ANALYSIS_DESCRIPTOR](analysis-descriptor-struct.md) nebo struktury [RELOG_DESCRIPTOR](relog-descriptor-struct.md) . Popisuje, které události mají být zachyceny během shromažďování trasování.
+Struktura `TRACING_SESSION_OPTIONS` se používá při inicializaci [ANALYSIS_DESCRIPTOR](analysis-descriptor-struct.md) nebo [RELOG_DESCRIPTOR](relog-descriptor-struct.md) struktury. Popisuje události, které mají být zachyceny během shromažďování trasování.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -42,7 +42,7 @@ typedef struct TRACING_SESSION_OPTIONS_TAG
 
 |  |  |
 |--|--|
-| `SystemEventFlags` | Bitová maska popisující systémové události, které se mají zachytit Další informace najdete v tématu [TRACING_SESSION_SYSTEM_EVENT_FLAGS](tracing-session-system-event-flags-constants.md). |
-| `MsvcEventFlags` | Bitová maska popisující MSVC události, které se mají zachytit Další informace najdete v tématu [TRACING_SESSION_MSVC_EVENT_FLAGS](tracing-session-msvc-event-flags-constants.md). |
+| `SystemEventFlags` | Bitová maska popisující systémové události, které mají být zachyceny. Další informace naleznete v [tématu TRACING_SESSION_SYSTEM_EVENT_FLAGS](tracing-session-system-event-flags-constants.md). |
+| `MsvcEventFlags` | Bitová maska popisující události MSVC zachytit. Další informace naleznete [v tématu TRACING_SESSION_MSVC_EVENT_FLAGS](tracing-session-msvc-event-flags-constants.md). |
 
 ::: moniker-end

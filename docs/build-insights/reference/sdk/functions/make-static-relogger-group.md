@@ -1,6 +1,6 @@
 ---
-title: MakeStaticReloggerGroup
-description: Reference C++ k funkci MakeStaticReloggerGroup sady SDK pro Build Insights
+title: MakestaticReloggerSkupina
+description: C++ Build Insights SDK MakestaticreloggerGroup odkaz na funkci.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 06927af89b16d9de1148e555868dd2022c59b171
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 75b638537cb8e0cdeeb5476a3f5277e8e90d9baf
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78332808"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81323916"
 ---
-# <a name="makestaticreloggergroup"></a>MakeStaticReloggerGroup
+# <a name="makestaticreloggergroup"></a>MakestaticReloggerSkupina
 
 ::: moniker range="<=vs-2015"
 
-Sada C++ SDK pro Build Insights je kompatibilní se sadou Visual Studio 2017 a novější. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek selektor verzí sady Visual Studio pro tento článek na sadu Visual Studio 2017 nebo Visual Studio 2019.
+Sada C++ Build Insights SDK je kompatibilní s Visual Studio 2017 a vyšší. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek pro výběr **verze** sady Visual Studio pro tento článek na Visual Studio 2017 nebo Visual Studio 2019. Nachází se v horní části obsahu na této stránce.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Funkce `MakeStaticReloggerGroup` slouží k vytvoření skupiny statického přeprotokolovacího nástroje, kterou lze předat funkcím, jako je například [relog](relog.md). Členové skupiny reprotokolovacích nástrojů obdrží události jeden od zleva doprava, dokud nebudou zpracovány všechny události v trasování.
+Funkce `MakeStaticReloggerGroup` se používá k vytvoření statické skupiny reloggeru, která může být předána funkcím, jako je [Relog](relog.md). Členové skupiny relogger přijímat události jeden po druhém zleva doprava, dokud všechny události v trasování byly zpracovány.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -37,17 +37,17 @@ auto MakeStaticReloggerGroup(TReloggerPtrs... reloggers);
 ### <a name="parameters"></a>Parametry
 
 *TReloggerPtrs*\
-Tento parametr je vždy odvozený.
+Tento parametr je vždy odvodit.
 
-\ *přeprotokolovacích* nástrojů
-Sada parametrů ukazatelů [IRelogger](../other-types/irelogger-class.md) , která je součástí skupiny statických přeprotokolovacích souborů. Tyto ukazatele můžou být nezpracované, `std::unique_ptr`nebo `std::shared_ptr`. Ukazatele [IAnalyzer](../other-types/ianalyzer-class.md) se také považují za `IRelogger` ukazatelé z důvodu vztahu dědičnosti.
+*reloggery*\
+Balíček parametrů [ukazatelů IRelogger,](../other-types/irelogger-class.md) který je součástí statické skupiny relogger. Tyto ukazatele mohou být `std::unique_ptr`nezpracované nebo `std::shared_ptr`. [Ukazatele IAnalyzer](../other-types/ianalyzer-class.md) jsou `IRelogger` také považovány za ukazatele z důvodu vztahu dědičnosti.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Skupina statických přeprotokolovacích souborů. K zachycení návratové hodnoty použijte klíčové slovo **auto** .
+Statická skupina reloggerů. Pomocí **klíčového** slova auto zachyťte vrácenou hodnotu.
 
 ## <a name="remarks"></a>Poznámky
 
-Na rozdíl od dynamických skupin přeprotokolovacích souborů musí být členy skupiny statických protokolovacích nástrojů známo v době kompilace. Kromě toho skupina statických přeprotokolovacích souborů obsahuje ukazatele [IRelogger](../other-types/irelogger-class.md) , které nemají polymorfní chování. Při použití skupiny statického přeprotokolovacího nástroje k analýze trasování událostí pro Windows (ETW) se volání rozhraní `IRelogger` vždy přeloží na objekt přímo, na který odkazuje člen skupiny reprotokolovacích nástrojů. Tato ztráta flexibility je dodávána s možností rychlejšího zpracování událostí. Pokud členy skupiny reprotokolovacích souborů nelze znát v době kompilace, nebo pokud vyžadujete polymorfní chování ukazatelů `IRelogger`, zvažte použití dynamické skupiny reprotokolovacích nástrojů. Můžete použít dynamickou skupinu přeprotokolovacích souborů voláním [MakeDynamicReloggerGroup](make-dynamic-relogger-group.md) místo.
+Na rozdíl od dynamických relogger skupiny, musí být členové statické relogger skupiny známé v době kompilace. Navíc statické relogger skupina obsahuje [ukazatele IRelogger,](../other-types/irelogger-class.md) které nemají polymorfní chování. Při použití statické relogger skupiny analyzovat trasování trasování událostí pro Windows `IRelogger` (ETW), volání rozhraní vždy vyřešit objekt přímo ukázal člen skupiny relogger. Tato ztráta flexibility přichází s možností rychlejšího zpracování událostí. Pokud členové skupiny relogger nelze znát v době kompilace, nebo pokud požadujete `IRelogger` polymorfní chování na ukazatele, zvažte použití dynamické skupiny relogger. Můžete použít dynamickou skupinu relogger voláním [MakeDynamicReloggerGroup](make-dynamic-relogger-group.md) místo.
 
 ::: moniker-end

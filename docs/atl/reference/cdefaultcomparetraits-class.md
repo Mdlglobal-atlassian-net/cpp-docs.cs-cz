@@ -1,5 +1,5 @@
 ---
-title: Cdefaultcomparetraits – třída
+title: Třída CDefaultCompareTraits
 ms.date: 11/04/2016
 f1_keywords:
 - CDefaultCompareTraits
@@ -9,16 +9,16 @@ f1_keywords:
 helpviewer_keywords:
 - CDefaultCompareTraits class
 ms.assetid: a17e2740-e7b4-48f2-aeb7-c80ce84b63f7
-ms.openlocfilehash: c5f4ab3737838af11501c4a0f2037b57087939c9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8262800ef613424c37c53931d97dd4b1b1a71321
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62245909"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81327066"
 ---
-# <a name="cdefaultcomparetraits-class"></a>Cdefaultcomparetraits – třída
+# <a name="cdefaultcomparetraits-class"></a>Třída CDefaultCompareTraits
 
-Tato třída poskytuje výchozí element porovnání funkcí.
+Tato třída poskytuje výchozí funkce porovnání prvků.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -30,30 +30,30 @@ class CDefaultCompareTraits
 #### <a name="parameters"></a>Parametry
 
 *T*<br/>
-Typ dat uložených v kolekci.
+Typ dat, která mají být uložena v kolekci.
 
 ## <a name="members"></a>Členové
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CDefaultCompareTraits::CompareElements](#compareelements)|(Statické) Voláním této funkce porovnání rovnosti dvou prvků.|
-|[CDefaultCompareTraits::CompareElementsOrdered](#compareelementsordered)|(Statické) Voláním této funkce pro zjištění větší a menší elementu.|
+|[CDefaultCompareTraits::Porovnatprvky](#compareelements)|(Statické) Volání této funkce porovnat dva prvky rovnosti.|
+|[CDefaultCompareTraits::CompareElementsOrdered](#compareelementsordered)|(Statické) Volání této funkce k určení větší a menší prvek.|
 
 ## <a name="remarks"></a>Poznámky
 
-Tato třída obsahuje dvě statické funkce pro porovnání prvků uložených v objektu třídy kolekce. Tato třída je využíváno [cdefaultelementtraits – třída](../../atl/reference/cdefaultelementtraits-class.md).
+Tato třída obsahuje dvě statické funkce pro porovnání prvků uložených v objektu třídy kolekce. Tato třída je využívána [třídou CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md).
 
-Další informace najdete v tématu [ATL – třídy kolekce](../../atl/atl-collection-classes.md).
+Další informace naleznete v tématu [třídy kolekce klíčů ATL](../../atl/atl-collection-classes.md).
 
 ## <a name="requirements"></a>Požadavky
 
 **Záhlaví:** atlcoll.h
 
-##  <a name="compareelements"></a>  CDefaultCompareTraits::CompareElements
+## <a name="cdefaultcomparetraitscompareelements"></a><a name="compareelements"></a>CDefaultCompareTraits::Porovnatprvky
 
-Voláním této funkce porovnání rovnosti dvou prvků.
+Volání této funkce porovnat dva prvky rovnosti.
 
 ```
 static bool CompareElements(const T& element1, const T& element2);
@@ -69,15 +69,15 @@ Druhý prvek.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí true, pokud prvky jsou stejné, jinak hodnota false.
+Vrátí hodnotu true, pokud jsou prvky stejné, false otherwise.
 
 ### <a name="remarks"></a>Poznámky
 
-Výchozí implementace této funkce je rovnost (**==**) – operátor. Z objektů kromě jednoduché datové typy tato funkce možná muset být přepsána.
+Výchozí implementací této funkce je**==** operátor rovnosti ( ). U jiných objektů než jednoduchých datových typů může být nutné tuto funkci přepsat.
 
-##  <a name="compareelementsordered"></a>  CDefaultCompareTraits::CompareElementsOrdered
+## <a name="cdefaultcomparetraitscompareelementsordered"></a><a name="compareelementsordered"></a>CDefaultCompareTraits::CompareElementsOrdered
 
-Voláním této funkce pro zjištění větší a menší elementu.
+Volání této funkce k určení větší a menší prvek.
 
 ```
 static int CompareElementsOrdered(const T& element1, const T& element2);
@@ -93,18 +93,18 @@ Druhý prvek.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí celé číslo, na základě následující tabulky:
+Vrátí celé číslo na základě následující tabulky:
 
 |Podmínka|Návratová hodnota|
 |---------------|------------------|
 |*element1* < *element2*|<0|
 |*element1* == *element2*|0|
-|*element1* > *element2*|>0|
+|*element1* > *element2*|> 0|
 
 ### <a name="remarks"></a>Poznámky
 
-Výchozí implementace této funkce používá **==**, **\<**, a **>** operátory. Z objektů kromě jednoduché datové typy tato funkce možná muset být přepsána.
+Výchozí implementace této funkce **==** používá **\<**, **>** a operátory. U jiných objektů než jednoduchých datových typů může být nutné tuto funkci přepsat.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Přehled tříd](../../atl/atl-class-overview.md)
+[Přehled třídy](../../atl/atl-class-overview.md)

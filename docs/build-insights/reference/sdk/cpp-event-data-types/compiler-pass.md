@@ -1,6 +1,6 @@
 ---
-title: CompilerPass – třída
-description: Referenční C++ dokumentace třídy CompilerPass sady SDK pro Build Insights
+title: Třída CompilerPass
+description: C++ Build Insights SDK CompilerPass odkaz na třídu.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 3c2fa1c2c4be8aaf5bec77b383f93a4b033ca8e3
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 11af981b647d5183f88dad024d90c0ef4f8a28bc
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78333473"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81325047"
 ---
-# <a name="compilerpass-class"></a>CompilerPass – třída
+# <a name="compilerpass-class"></a>Třída CompilerPass
 
 ::: moniker range="<=vs-2015"
 
-Sada C++ SDK pro Build Insights je kompatibilní se sadou Visual Studio 2017 a novější. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek selektor verzí sady Visual Studio pro tento článek na sadu Visual Studio 2017 nebo Visual Studio 2019.
+Sada C++ Build Insights SDK je kompatibilní s Visual Studio 2017 a vyšší. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek pro výběr **verze** sady Visual Studio pro tento článek na Visual Studio 2017 nebo Visual Studio 2019. Nachází se v horní části obsahu na této stránce.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Třída `CompilerPass` se používá s funkcemi [MatchEvent](../functions/match-event.md), [MatchEventInMemberFunction](../functions/match-event-in-member-function.md), [MatchEventStack](../functions/match-event-stack.md)a [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md) . Použijte ho ke spárování [BACK_END_PASS](../event-table.md#back-end-pass) nebo [FRONT_END_PASS](../event-table.md#front-end-pass) události.
+Třída `CompilerPass` se používá s funkcemi [MatchEvent](../functions/match-event.md), [MatchEventInMemberFunction](../functions/match-event-in-member-function.md), [MatchEventStack](../functions/match-event-stack.md)a [MatchEventStackInMemberFunction.](../functions/match-event-stack-in-member-function.md) Použijte ji tak, aby odpovídala [události BACK_END_PASS](../event-table.md#back-end-pass) nebo [FRONT_END_PASS.](../event-table.md#front-end-pass)
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -49,28 +49,28 @@ public:
 
 ## <a name="members"></a>Členové
 
-Spolu se zděděnými členy ze své základní třídy [aktivity](activity.md) obsahuje Třída `CompilerPass` následující členy:
+Spolu s zděděnými členy ze `CompilerPass` základní třídy [Aktivita](activity.md) obsahuje třída následující členy:
 
 ### <a name="constructors"></a>Konstruktory
 
-[CompilerPass](#compiler-pass)
+[KompilátorPass](#compiler-pass)
 
 ### <a name="enums"></a>Výčty
 
-#### <a name="passcode"></a>Kód
+#### <a name="passcode"></a>Heslo
 
 |||
 |-|-|
-|FRONT_END|Front-end průchod.|
-|BACK_END|Back-endové průchod.|
+|FRONT_END|Front-end přihrávka.|
+|BACK_END|Back-end přihrávka.|
 
 ### <a name="functions"></a>Functions
 
 [InputSourcePath](#input-source-path)\
 [OutputObjectPath](#output-object-path)\
-\ [hesla](#pass-code)
+[Heslo](#pass-code)\
 
-## <a name="compiler-pass"></a>CompilerPass
+## <a name="compilerpass"></a><a name="compiler-pass"></a>KompilátorPass
 
 ```cpp
 CompilerPass(const RawEvent& event);
@@ -78,10 +78,10 @@ CompilerPass(const RawEvent& event);
 
 ### <a name="parameters"></a>Parametry
 
-\ *události*
-Událost [BACK_END_PASS](../event-table.md#back-end-pass) nebo [FRONT_END_PASS](../event-table.md#front-end-pass) .
+*Událost*\
+Událost [BACK_END_PASS](../event-table.md#back-end-pass) nebo [FRONT_END_PASS.](../event-table.md#front-end-pass)
 
-## <a name="input-source-path"></a>InputSourcePath
+## <a name="inputsourcepath"></a><a name="input-source-path"></a>InputSourcePath
 
 ```cpp
 const wchar_t* InputSourcePath() const;
@@ -89,9 +89,9 @@ const wchar_t* InputSourcePath() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Absolutní cesta ke vstupnímu zdrojovému souboru zpracovávanému tímto kompilátorem.
+Absolutní cesta k vstupnímu zdrojovému souboru zpracovanému tímto průchodem kompilátoru.
 
-## <a name="output-object-path"></a>OutputObjectPath
+## <a name="outputobjectpath"></a><a name="output-object-path"></a>OutputObjectPath
 
 ```cpp
 const wchar_t* OutputObjectPath() const;
@@ -99,9 +99,9 @@ const wchar_t* OutputObjectPath() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Absolutní cesta k souboru výstupního objektu vyprodukovaného tímto kompilátorem Pass.
+Absolutní cesta k výstupnímu souboru objektu vytvořeného tímto průchodem kompilátoru.
 
-## <a name="pass-code"></a>Kód
+## <a name="passcode"></a><a name="pass-code"></a>Heslo
 
 ```cpp
 PassCode PassCode() const;
@@ -109,6 +109,6 @@ PassCode PassCode() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Kód, který označuje, který průchod kompilátorem je reprezentován tímto objektem CompilerPass.
+Kód označující, který kompilátor průchod je reprezentován tento CompilerPass objektu.
 
 ::: moniker-end

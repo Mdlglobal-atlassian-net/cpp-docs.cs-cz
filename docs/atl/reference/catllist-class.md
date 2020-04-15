@@ -1,5 +1,5 @@
 ---
-title: Catllist – třída
+title: Třída CAtlList
 ms.date: 11/04/2016
 f1_keywords:
 - CAtlList
@@ -37,16 +37,16 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlList class
 ms.assetid: 09e98053-64b2-4efa-99ab-d0542caaf981
-ms.openlocfilehash: faed99197eb14da8ea095bef81d0d1a9845b18ad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 91b1841423fe159bb5fdd0f06a112c601b1dbc83
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62247004"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81318933"
 ---
-# <a name="catllist-class"></a>Catllist – třída
+# <a name="catllist-class"></a>Třída CAtlList
 
-Tato třída poskytuje metody pro vytváření a správa seznamu objektů.
+Tato třída poskytuje metody pro vytváření a správu objektu seznamu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -58,74 +58,74 @@ class CAtlList
 #### <a name="parameters"></a>Parametry
 
 *E*<br/>
-Typ elementu.
+Typ prvku.
 
 *ETraits*<br/>
-Kód použitý má zkopírovat nebo přesunout prvky. Zobrazit [celementtraits – třída](../../atl/reference/celementtraits-class.md) další podrobnosti.
+Kód používaný ke kopírování nebo přesouvání prvků. Další podrobnosti najdete v [části CElementTraits Class.](../../atl/reference/celementtraits-class.md)
 
 ## <a name="members"></a>Členové
 
-### <a name="public-typedefs"></a>Veřejné definice TypeDef
+### <a name="public-typedefs"></a>Veřejné typedefs
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
 |[CAtlList::INARGTYPE](#inargtype)||
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
 |[CAtlList::CAtlList](#catllist)|Konstruktor|
 |[CAtlList::~CAtlList](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CAtlList::AddHead](#addhead)|Voláním této metody lze přidat element do začátku seznamu.|
-|[CAtlList::AddHeadList](#addheadlist)|Voláním této metody lze přidat existující seznam k začátku seznamu.|
-|[CAtlList::AddTail](#addtail)|Voláním této metody lze přidat element do zadní části tohoto seznamu.|
-|[CAtlList::AddTailList](#addtaillist)|Voláním této metody lze přidat existující seznam na konci tohoto seznamu.|
-|[CAtlList::AssertValid](#assertvalid)|Voláním této metody zkontrolujte, že v seznamu je platný.|
-|[CAtlList::Find](#find)|Voláním této metody lze pro zadaný element v seznamu vyhledejte.|
-|[CAtlList::FindIndex](#findindex)|Volejte tuto metodu za účelem získání pozici elementu, danou hodnotu indexu.|
-|[CAtlList::GetAt](#getat)|Volání této metody k vrácení prvku na určené pozici v seznamu.|
-|[CAtlList::GetCount](#getcount)|Voláním této metody vrátí počet objektů v seznamu.|
-|[CAtlList::GetHead](#gethead)|Voláním této metody vrátí prvek na začátku seznamu.|
-|[CAtlList::GetHeadPosition](#getheadposition)|Volejte tuto metodu za účelem získání pozici první pozice v seznamu.|
-|[CAtlList::GetNext](#getnext)|Voláním této metody vrátit další prvek ze seznamu.|
-|[CAtlList::GetPrev](#getprev)|Voláním této metody vrátit předchozí prvek ze seznamu.|
-|[CAtlList::GetTail](#gettail)|Voláním této metody vrátí prvek na konec seznamu.|
-|[CAtlList::GetTailPosition](#gettailposition)|Volejte tuto metodu za účelem získání pozice konec seznamu.|
-|[CAtlList::InsertAfter](#insertafter)|Voláním této metody lze vložit nový prvek do seznamu za určené pozici.|
-|[CAtlList::InsertBefore](#insertbefore)|Volejte tuto metodu za účelem vloží nový prvek do seznamu před určené pozici.|
-|[CAtlList::IsEmpty](#isempty)|Volejte tuto metodu za účelem určení, zda je seznam prázdný.|
-|[CAtlList::MoveToHead](#movetohead)|Voláním této metody lze přesunout zadaný prvek na začátku seznamu.|
-|[CAtlList::MoveToTail](#movetotail)|Voláním této metody lze přesunout zadaný prvek na konec seznamu.|
-|[CAtlList::RemoveAll](#removeall)|Volejte tuto metodu, která odebere všechny prvky ze seznamu.|
-|[CAtlList::RemoveAt](#removeat)|Voláním této metody lze odebrat ze seznamu jediný prvek.|
-|[CAtlList::RemoveHead](#removehead)|Volejte tuto metodu za účelem odstranění prvku na začátku seznamu.|
-|[CAtlList::RemoveHeadNoReturn](#removeheadnoreturn)|Volejte tuto metodu za účelem odebrání prvek na začátku seznamu bez návratová hodnota.|
-|[CAtlList::RemoveTail](#removetail)|Volejte tuto metodu za účelem odebrání prvek na konec seznamu.|
-|[CAtlList::RemoveTailNoReturn](#removetailnoreturn)|Volejte tuto metodu za účelem odebrání prvek na konec seznamu bez návratová hodnota.|
-|[CAtlList::SetAt](#setat)|Voláním této metody nastavte hodnotu prvku na dané pozici v seznamu.|
-|[CAtlList::SwapElements](#swapelements)|Voláním této metody lze zaměnit prvky v seznamu.|
+|[CAtlList::Přidat hlavu](#addhead)|Volání této metody přidat prvek do hlavy seznamu.|
+|[CAtlList::AddHeadList](#addheadlist)|Volání této metody přidat existující seznam do hlavního seznamu.|
+|[CAtlList::AddTail](#addtail)|Volání této metody přidat prvek do ocasu tohoto seznamu.|
+|[CAtlList::AddTailList](#addtaillist)|Volání této metody přidat existující seznam na konci tohoto seznamu.|
+|[CAtlList::AssertValid](#assertvalid)|Volání této metody pro potvrzení, že seznam je platný.|
+|[CAtlList::Najít](#find)|Volání této metody hledat v seznamu pro zadaný prvek.|
+|[CAtlList::FindIndex](#findindex)|Volání této metody získat pozici prvku, dané hodnoty indexu.|
+|[CAtlList::GetAt](#getat)|Volání této metody vrátit prvek na zadané pozici v seznamu.|
+|[CAtlList::GetCount](#getcount)|Volání této metody vrátit počet objektů v seznamu.|
+|[CAtlList::GetHead](#gethead)|Volání této metody vrátit prvek v čele seznamu.|
+|[CAtlList::GetHeadPosition](#getheadposition)|Volání této metody získat pozici vedoucího seznamu.|
+|[CAtlList::GetNext](#getnext)|Volání této metody vrátit další prvek ze seznamu.|
+|[CAtlList::GetPrev](#getprev)|Volání této metody vrátit předchozí prvek ze seznamu.|
+|[CAtlList::GetTail](#gettail)|Volání této metody vrátit prvek na konci seznamu.|
+|[CAtlList::GetTailPosition](#gettailposition)|Volání této metody získat pozici ocasu seznamu.|
+|[CAtlList::InsertAfter](#insertafter)|Volání této metody vložit nový prvek do seznamu za zadanou pozici.|
+|[CAtlList::InsertBefore](#insertbefore)|Volání této metody vložit nový prvek do seznamu před zadané pozice.|
+|[CAtlList::IsEmpty](#isempty)|Volání této metody k určení, zda je seznam prázdný.|
+|[CAtlList::MoveToHead](#movetohead)|Volání této metody přesunout zadaný prvek do čela seznamu.|
+|[CAtlList::MoveToTail](#movetotail)|Volání této metody přesunout zadaný prvek na konec seznamu.|
+|[CAtlList::OdebratVše](#removeall)|Volání této metody odebrat všechny prvky ze seznamu.|
+|[CAtlList::RemoveAt](#removeat)|Volání této metody odebrat jeden prvek ze seznamu.|
+|[CAtlList::RemoveHead](#removehead)|Volání této metody odebrat prvek v čele seznamu.|
+|[CAtlList::RemoveHeadNoReturn](#removeheadnoreturn)|Volání této metody odebrat prvek v čele seznamu bez vrácení hodnoty.|
+|[CAtlList::RemoveTail](#removetail)|Volání této metody odebrat prvek na konci seznamu.|
+|[CAtlList::RemoveTailNoReturn](#removetailnoreturn)|Volání této metody odebrat prvek na konci seznamu bez vrácení hodnoty.|
+|[CAtlList::SetAt](#setat)|Volání této metody nastavit hodnotu prvku na dané pozici v seznamu.|
+|[CAtlList::SwapElements](#swapelements)|Volání této metody pro zamění prvky v seznamu.|
 
 ## <a name="remarks"></a>Poznámky
 
-`CAtlList` Třídy podporuje seřazené seznam nejedinečných objektů dostupných postupně sekvenčně nebo podle hodnoty. `CAtlList` seznamy se chovat jako dvakrát propojené seznamy. Každý seznam obsahuje head a koncovou část a nové prvky (nebo v některých případech seznamů) lze přidat na oba konce tohoto seznamu, nebo vložit před nebo po konkrétní prvky.
+Třída `CAtlList` podporuje seřazené seznamy nejedinečných objektů přístupných postupně nebo podle hodnoty. `CAtlList`seznamy se chovají jako dvojnásob propojené seznamy. Každý seznam má hlavu a ocas a nové prvky (nebo seznamy v některých případech) mohou být přidány na jeden konec seznamu nebo vloženy před nebo za určité prvky.
 
-Většina `CAtlList` metody změní použití hodnoty pozice. Tato hodnota se používá metody skutečná paměť umístění, kde prvky jsou uloženy a by neměly být vypočtena nebo předpovědět přímo odkazovat. Pokud je potřeba přístup *n*tý prvek v seznamu Metoda [CAtlList::FindIndex](#findindex) vrátí odpovídající hodnotu pozice pro daný index. Metody [CAtlList::GetNext](#getnext) a [CAtlList::GetPrev](#getprev) lze použít k iteraci v rámci objektů v seznamu.
+Většina `CAtlList` metod využívá hodnotu pozice. Tato hodnota se používá metody odkazovat na umístění skutečné paměti, kde jsou uloženy prvky a by neměly být vypočteny nebo předpovědět přímo. Pokud je nutné získat přístup k *n*th element v seznamu, metoda [CAtlList::FindIndex](#findindex) vrátí odpovídající hodnotu pozice pro daný index. Metody [CAtlList::GetNext](#getnext) a [CAtlList::GetPrev](#getprev) lze iterate prostřednictvím objektů v seznamu.
 
-Další informace týkající se třídy kolekcí k dispozici s technologií ATL naleznete v tématu [ATL – třídy kolekce](../../atl/atl-collection-classes.md).
+Další informace týkající se tříd kolekce, které jsou k dispozici s atl, naleznete [v tématu TŘÍDY kolekce atl](../../atl/atl-collection-classes.md).
 
 ## <a name="requirements"></a>Požadavky
 
 **Záhlaví:** atlcoll.h
 
-##  <a name="addhead"></a>  CAtlList::AddHead
+## <a name="catllistaddhead"></a><a name="addhead"></a>CAtlList::Přidat hlavu
 
-Voláním této metody lze přidat element do začátku seznamu.
+Volání této metody přidat prvek do hlavy seznamu.
 
 ```
 POSITION AddHead();
@@ -134,24 +134,24 @@ POSITION AddHead(INARGTYPE element);
 
 ### <a name="parameters"></a>Parametry
 
-*– Element*<br/>
+*Prvek*<br/>
 Nový prvek.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí pozici nově přidaný prvek.
+Vrátí pozici nově přidaného prvku.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud je použita první verze, je prázdný element vytvořený pomocí jeho výchozí konstruktor, nikoli jeho kopírovací konstruktor.
+Pokud je použita první verze, prázdný prvek je vytvořen pomocí jeho výchozí konstruktor, spíše než jeho kopie konstruktoru.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_ATL_Utilities#13](../../atl/codesnippet/cpp/catllist-class_1.cpp)]
 
-##  <a name="addheadlist"></a>  CAtlList::AddHeadList
+## <a name="catllistaddheadlist"></a><a name="addheadlist"></a>CAtlList::AddHeadList
 
-Voláním této metody lze přidat existující seznam k začátku seznamu.
+Volání této metody přidat existující seznam do hlavního seznamu.
 
 ```
 void AddHeadList(const CAtlList<E, ETraits>* plNew);
@@ -159,20 +159,20 @@ void AddHeadList(const CAtlList<E, ETraits>* plNew);
 
 ### <a name="parameters"></a>Parametry
 
-*plNew*<br/>
-Seznam, který chcete přidat.
+*plNovinka*<br/>
+Seznam, který má být přidán.
 
 ### <a name="remarks"></a>Poznámky
 
-V seznamu na které odkazuje *plNew* se vloží na začátek seznamu existujících. V sestavení pro ladění k selhání kontrolního výrazu dojde, pokud *plNew* je rovna hodnotě NULL.
+Seznam, na který odkazem *plNew* ukazuje, je vložen na začátek existujícího seznamu. V sestaveních ladění dojde k selhání kontrolního výrazu, pokud *plNew* se rovná hodnotě NULL.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_ATL_Utilities#14](../../atl/codesnippet/cpp/catllist-class_2.cpp)]
 
-##  <a name="addtail"></a>  CAtlList::AddTail
+## <a name="catllistaddtail"></a><a name="addtail"></a>CAtlList::AddTail
 
-Voláním této metody lze přidat element do zadní části tohoto seznamu.
+Volání této metody přidat prvek do ocasu tohoto seznamu.
 
 ```
 POSITION AddTail();
@@ -181,24 +181,24 @@ POSITION AddTail(INARGTYPE element);
 
 ### <a name="parameters"></a>Parametry
 
-*– Element*<br/>
-Elementu, který chcete přidat.
+*Prvek*<br/>
+Prvek přidat.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí POZICI nově přidaný prvek.
+Vrátí pozici nově přidaného prvku.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud je použita první verze, je prázdný element vytvořený pomocí jeho výchozí konstruktor, nikoli jeho kopírovací konstruktor. Bude prvek přidán na konec seznamu a tak ho teď bude konci. Tuto metodu lze použít s prázdným seznamem.
+Pokud je použita první verze, prázdný prvek je vytvořen pomocí jeho výchozí konstruktor, spíše než jeho kopie konstruktoru. Prvek je přidán na konec seznamu, a tak se nyní stane ocasem. Tuto metodu lze použít s prázdným seznamem.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_ATL_Utilities#15](../../atl/codesnippet/cpp/catllist-class_3.cpp)]
 
-##  <a name="addtaillist"></a>  CAtlList::AddTailList
+## <a name="catllistaddtaillist"></a><a name="addtaillist"></a>CAtlList::AddTailList
 
-Voláním této metody lze přidat existující seznam na konci tohoto seznamu.
+Volání této metody přidat existující seznam na konci tohoto seznamu.
 
 ```
 void AddTailList(const CAtlList<E, ETraits>* plNew);
@@ -206,20 +206,20 @@ void AddTailList(const CAtlList<E, ETraits>* plNew);
 
 ### <a name="parameters"></a>Parametry
 
-*plNew*<br/>
-Seznam, který chcete přidat.
+*plNovinka*<br/>
+Seznam, který má být přidán.
 
 ### <a name="remarks"></a>Poznámky
 
-V seznamu na které odkazuje *plNew* je vložen za posledním prvkem (pokud existuje) v seznamu objektů. Po posledním prvku v *plNew* seznam stane proto funkce tail. V sestavení pro ladění k selhání kontrolního výrazu dojde, pokud *plNew* je rovna hodnotě NULL.
+Seznam odkazovaný *na plNew* je vložen za poslední prvek (pokud existuje) v objektu seznamu. Poslední prvek v *seznamu plNew* se proto stává ocasem. V sestaveních ladění dojde k selhání kontrolního výrazu, pokud *plNew* se rovná hodnotě NULL.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_ATL_Utilities#16](../../atl/codesnippet/cpp/catllist-class_4.cpp)]
 
-##  <a name="assertvalid"></a>  CAtlList::AssertValid
+## <a name="catllistassertvalid"></a><a name="assertvalid"></a>CAtlList::AssertValid
 
-Voláním této metody zkontrolujte, že v seznamu je platný.
+Volání této metody pro potvrzení, že seznam je platný.
 
 ```
 void AssertValid() const;
@@ -227,13 +227,13 @@ void AssertValid() const;
 
 ### <a name="remarks"></a>Poznámky
 
-V sestavení ladění bude selhání kontrolního výrazu dojít, pokud objekt seznamu není platný. Aby byla platná, musí mít prázdný seznam, head a tail odkazuje na hodnotu NULL a seznam, který není prázdný musí mít hlavní i funkce tail odkazující na platné adresy.
+V sestaveních ladění dojde k selhání kontrolního výrazu, pokud objekt seznamu není platný. Aby byl prázdný seznam platný, musí mít hlavu i zadní strana směřující na hodnotu NULL a seznam, který není prázdný, musí mít hlavu i zadní strana směřující na platné adresy.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_ATL_Utilities#17](../../atl/codesnippet/cpp/catllist-class_5.cpp)]
 
-##  <a name="catllist"></a>  CAtlList::CAtlList
+## <a name="catllistcatllist"></a><a name="catllist"></a>CAtlList::CAtlList
 
 Konstruktor
 
@@ -248,13 +248,13 @@ Velikost bloku.
 
 ### <a name="remarks"></a>Poznámky
 
-Konstruktor pro `CAtlList` objektu. Velikost bloku je míra množství paměti přidělené, pokud je nutné použít nový prvek. Bloky o větší velikosti snížit volání rutiny přidělení paměti, ale spotřebovávají více prostředků.
+Konstruktor pro `CAtlList` objekt. Velikost bloku je míra množství paměti přidělené při je požadováno nový prvek. Větší velikosti bloků snižují volání rutiny přidělení paměti, ale používají více prostředků.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_ATL_Utilities#18](../../atl/codesnippet/cpp/catllist-class_6.cpp)]
 
-##  <a name="dtor"></a>  Catllist –:: ~ catllist –
+## <a name="catllistcatllist"></a><a name="dtor"></a>CAtlList::~CAtlList
 
 Destruktor.
 
@@ -266,11 +266,11 @@ Destruktor.
 
 Uvolní všechny přidělené prostředky, včetně volání [CAtlList::RemoveAll](#removeall) odebrat všechny prvky ze seznamu.
 
-V sestavení pro ladění k selhání kontrolního výrazu dojde, pokud seznam stále obsahuje některé prvky po volání `RemoveAll`.
+V sestaveních ladění dojde k selhání kontrolního výrazu, pokud `RemoveAll`seznam stále obsahuje některé prvky po volání .
 
-##  <a name="find"></a>  CAtlList::Find
+## <a name="catllistfind"></a><a name="find"></a>CAtlList::Najít
 
-Voláním této metody lze pro zadaný element v seznamu vyhledejte.
+Volání této metody hledat v seznamu pro zadaný prvek.
 
 ```
 POSITION Find(INARGTYPE element, POSITION posStartAfter = NULL) const throw();
@@ -278,27 +278,27 @@ POSITION Find(INARGTYPE element, POSITION posStartAfter = NULL) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*– Element*<br/>
-Elementu, který chcete nalézt v seznamu.
+*Prvek*<br/>
+Prvek, který se nachází v seznamu.
 
 *posStartAfter*<br/>
-Počáteční pozice pro vyhledávání. Pokud není zadána žádná hodnota, začíná hledání head element.
+Počáteční pozice pro hledání. Pokud není zadána žádná hodnota, hledání začíná prvkem head.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrací hodnotu pozice prvku, pokud najde, jinak vrátí hodnotu NULL.
+Vrátí hodnotu POSITION prvku, pokud byl nalezen, jinak vrátí hodnotu NULL.
 
 ### <a name="remarks"></a>Poznámky
 
-V sestavení ladění, dojde k selhání kontrolního výrazu objekt seznamu není platný nebo pokud *posStartAfter* hodnota je mimo rozsah.
+V sestaveních ladění dojde k selhání kontrolního výrazu, pokud objekt seznamu není platný nebo pokud je hodnota *posStartAfter* mimo rozsah.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_ATL_Utilities#19](../../atl/codesnippet/cpp/catllist-class_7.cpp)]
 
-##  <a name="findindex"></a>  CAtlList::FindIndex
+## <a name="catllistfindindex"></a><a name="findindex"></a>CAtlList::FindIndex
 
-Volejte tuto metodu za účelem získání pozici elementu, danou hodnotu indexu.
+Volání této metody získat pozici prvku, dané hodnoty indexu.
 
 ```
 POSITION FindIndex(size_t iElement) const throw();
@@ -307,25 +307,25 @@ POSITION FindIndex(size_t iElement) const throw();
 ### <a name="parameters"></a>Parametry
 
 *iElement*<br/>
-Index založený na nule element seznamu požadavků.
+Index na základě nuly prvku seznamu požadovaný.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí odpovídající hodnota pozice nebo hodnota NULL, pokud *iElement* je mimo rozsah.
+Vrátí odpovídající hodnotu POSITION nebo HODNOTU NULL, pokud je *prvek iElement* mimo rozsah.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda vrátí POZICI umožňuje přístup k odpovídající hodnotě daný index, *n*tý prvek v seznamu.
+Tato metoda vrátí POZICI odpovídající dané hodnotě indexu, což umožňuje přístup k *n*th element v seznamu.
 
-V sestavení ladění bude selhání kontrolního výrazu dojít, pokud objekt seznamu není platný.
+V sestaveních ladění dojde k selhání kontrolního výrazu, pokud objekt seznamu není platný.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_ATL_Utilities#20](../../atl/codesnippet/cpp/catllist-class_8.cpp)]
 
-##  <a name="getat"></a>  CAtlList::GetAt
+## <a name="catllistgetat"></a><a name="getat"></a>CAtlList::GetAt
 
-Volání této metody k vrácení prvku na určené pozici v seznamu.
+Volání této metody vrátit prvek na zadané pozici v seznamu.
 
 ```
 E& GetAt(POSITION pos) throw();
@@ -334,28 +334,28 @@ const E& GetAt(POSITION pos) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*pos*<br/>
-Hodnota pozice, zadání konkrétní elementu.
+*Pos*<br/>
+Hodnota POSITION určující určitý prvek.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Odkaz na nebo kopie elementu.
+Odkaz na prvek nebo jeho kopii.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud je seznam **const**, `GetAt` vrátí kopii objektu elementu. To umožňuje metoda má být použit pouze na pravé straně příkazu přiřazení a chrání před úpravy seznamu.
+Pokud je seznam **const**, `GetAt` vrátí kopii prvku. To umožňuje metodu, která má být použita pouze na pravé straně příkazu přiřazení a chrání seznam před úpravou.
 
-Pokud seznam není **const**, `GetAt` vrátí odkaz na element. To umožňuje metody, který se má použít na obou stranách příkazu přiřazení a tím umožňuje položky seznamu, který má být upraven.
+Pokud seznam není **const**, `GetAt` vrátí odkaz na prvek. To umožňuje metodu, která má být použita na obou stranách příkazu přiřazení a tím umožňuje položky seznamu, které mají být změněny.
 
-V sestavení pro ladění k selhání kontrolního výrazu dojde, pokud *pos* je rovna hodnotě NULL.
+V sestaveních ladění dojde k selhání kontrolního výrazu, pokud *se pos* rovná hodnotě NULL.
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [CAtlList::FindIndex](#findindex).
+Viz příklad pro [CAtlList::FindIndex](#findindex).
 
-##  <a name="getcount"></a>  CAtlList::GetCount
+## <a name="catllistgetcount"></a><a name="getcount"></a>CAtlList::GetCount
 
-Voláním této metody vrátí počet objektů v seznamu.
+Volání této metody vrátit počet objektů v seznamu.
 
 ```
 size_t GetCount() const throw();
@@ -367,11 +367,11 @@ Vrátí počet prvků v seznamu.
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [CAtlList::Find](#find).
+Viz příklad pro [CAtlList::Find](#find).
 
-##  <a name="gethead"></a>  CAtlList::GetHead
+## <a name="catllistgethead"></a><a name="gethead"></a>CAtlList::GetHead
 
-Voláním této metody vrátí prvek na začátku seznamu.
+Volání této metody vrátit prvek v čele seznamu.
 
 ```
 E& GetHead() throw();
@@ -380,23 +380,23 @@ const E& GetHead() const throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí odkaz na nebo kopii tohoto prvku na začátku seznamu.
+Vrátí odkaz na prvek v čele seznamu nebo jeho kopii.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud je seznam **const**, `GetHead` vrátí kopii objektu prvek na začátku seznamu. To umožňuje metoda má být použit pouze na pravé straně příkazu přiřazení a chrání před úpravy seznamu.
+Pokud je seznam **const**, `GetHead` vrátí kopii prvku v čele seznamu. To umožňuje metodu, která má být použita pouze na pravé straně příkazu přiřazení a chrání seznam před úpravou.
 
-Pokud seznam není **const**, `GetHead` vrátí odkaz na prvek na začátku seznamu. To umožňuje metody, který se má použít na obou stranách příkazu přiřazení a tím umožňuje položky seznamu, který má být upraven.
+Pokud seznam není **const**, `GetHead` vrátí odkaz na prvek v čele seznamu. To umožňuje metodu, která má být použita na obou stranách příkazu přiřazení a tím umožňuje položky seznamu, které mají být změněny.
 
-V sestavení ladění bude selhání kontrolního výrazu dojít, pokud první pozice v seznamu odkazuje na hodnotu NULL.
+V sestaveních ladění dojde k selhání kontrolního výrazu, pokud vedoucí seznamu odkazuje na hodnotu NULL.
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [CAtlList::AddHead](#addhead).
+Viz příklad pro [CAtlList::AddHead](#addhead).
 
-##  <a name="getheadposition"></a>  CAtlList::GetHeadPosition
+## <a name="catllistgetheadposition"></a><a name="getheadposition"></a>CAtlList::GetHeadPosition
 
-Volejte tuto metodu za účelem získání pozici první pozice v seznamu.
+Volání této metody získat pozici vedoucího seznamu.
 
 ```
 POSITION GetHeadPosition() const throw();
@@ -404,7 +404,7 @@ POSITION GetHeadPosition() const throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí POZICI hodnotu odpovídající prvek na začátku seznamu.
+Vrátí hodnotu POZICE odpovídající prvku v čele seznamu.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -414,9 +414,9 @@ Pokud je seznam prázdný, vrácená hodnota je NULL.
 
 [!code-cpp[NVC_ATL_Utilities#21](../../atl/codesnippet/cpp/catllist-class_9.cpp)]
 
-##  <a name="getnext"></a>  CAtlList::GetNext
+## <a name="catllistgetnext"></a><a name="getnext"></a>CAtlList::GetNext
 
-Voláním této metody vrátit další prvek ze seznamu.
+Volání této metody vrátit další prvek ze seznamu.
 
 ```
 E& GetNext(POSITION& pos) throw();
@@ -425,26 +425,26 @@ const E& GetNext(POSITION& pos) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*pos*<br/>
-Hodnota pozice, vrácený z předchozího volání `GetNext`, [CAtlList::GetHeadPosition](#getheadposition), nebo jiné `CAtlList` metody.
+*Pos*<br/>
+Hodnota POSITION vrácená předchozím voláním `GetNext`, [CAtlList::GetHeadPosition](#getheadposition)nebo jinou `CAtlList` metodou.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud je seznam **const**, `GetNext` vrátí kopii objektu další prvek seznamu. To umožňuje metoda má být použit pouze na pravé straně příkazu přiřazení a chrání před úpravy seznamu.
+Pokud je seznam **const**, `GetNext` vrátí kopii dalšího prvku seznamu. To umožňuje metodu, která má být použita pouze na pravé straně příkazu přiřazení a chrání seznam před úpravou.
 
-Pokud seznam není **const**, `GetNext` vrátí odkaz na další prvek seznamu. To umožňuje metody, který se má použít na obou stranách příkazu přiřazení a tím umožňuje položky seznamu, který má být upraven.
+Pokud seznam není **const**, `GetNext` vrátí odkaz na další prvek seznamu. To umožňuje metodu, která má být použita na obou stranách příkazu přiřazení a tím umožňuje položky seznamu, které mají být změněny.
 
 ### <a name="remarks"></a>Poznámky
 
-Čítač pozice *pos*, je aktualizován, aby ukazoval na další prvek v seznamu, nebo hodnota NULL, pokud neexistují žádné další prvky. V sestavení pro ladění k selhání kontrolního výrazu dojde, pokud *pos* je rovna hodnotě NULL.
+Čítač *POZICE, pos*, je aktualizován tak, aby ukazoval na další prvek v seznamu nebo NULL, pokud neexistují žádné další prvky. V sestaveních ladění dojde k selhání kontrolního výrazu, pokud *se pos* rovná hodnotě NULL.
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [CAtlList::GetHeadPosition](#getheadposition).
+Viz příklad pro [CAtlList::GetHeadPosition](#getheadposition).
 
-##  <a name="getprev"></a>  CAtlList::GetPrev
+## <a name="catllistgetprev"></a><a name="getprev"></a>CAtlList::GetPrev
 
-Voláním této metody vrátit předchozí prvek ze seznamu.
+Volání této metody vrátit předchozí prvek ze seznamu.
 
 ```
 E& GetPrev(POSITION& pos) throw();
@@ -453,26 +453,26 @@ const E& GetPrev(POSITION& pos) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*pos*<br/>
-Hodnota pozice, vrácený z předchozího volání `GetPrev`, [CAtlList::GetTailPosition](#gettailposition), nebo jiné `CAtlList` metody.
+*Pos*<br/>
+Hodnota POSITION vrácená předchozím voláním `GetPrev`, [CAtlList::GetTailPosition](#gettailposition)nebo jinou `CAtlList` metodou.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud je seznam **const**, `GetPrev` vrátí kopii objektu element seznamu. To umožňuje metoda má být použit pouze na pravé straně příkazu přiřazení a chrání před úpravy seznamu.
+Pokud je seznam **const**, `GetPrev` vrátí kopii prvku seznamu. To umožňuje metodu, která má být použita pouze na pravé straně příkazu přiřazení a chrání seznam před úpravou.
 
-Pokud seznam není **const**, `GetPrev` vrátí odkaz na element seznamu. To umožňuje metody, který se má použít na obou stranách příkazu přiřazení a tím umožňuje položky seznamu, který má být upraven.
+Pokud seznam není **const**, `GetPrev` vrátí odkaz na prvek seznamu. To umožňuje metodu, která má být použita na obou stranách příkazu přiřazení a tím umožňuje položky seznamu, které mají být změněny.
 
 ### <a name="remarks"></a>Poznámky
 
-Čítač pozice *pos*, je aktualizován, aby ukazoval na předchozí prvek v seznamu, nebo hodnota NULL, pokud neexistují žádné další prvky. V sestavení pro ladění k selhání kontrolního výrazu dojde, pokud *pos* je rovna hodnotě NULL.
+Čítač *POZICE, pos*, je aktualizován tak, aby ukazoval na předchozí prvek v seznamu nebo NULL, pokud neexistují žádné další prvky. V sestaveních ladění dojde k selhání kontrolního výrazu, pokud *se pos* rovná hodnotě NULL.
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [CAtlList::GetTailPosition](#gettailposition).
+Viz příklad pro [CAtlList::GetTailPosition](#gettailposition).
 
-##  <a name="gettail"></a>  CAtlList::GetTail
+## <a name="catllistgettail"></a><a name="gettail"></a>CAtlList::GetTail
 
-Voláním této metody vrátí prvek na konec seznamu.
+Volání této metody vrátit prvek na konci seznamu.
 
 ```
 E& GetTail() throw();
@@ -481,23 +481,23 @@ const E& GetTail() const throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí odkaz na nebo kopie, prvek na konec seznamu.
+Vrátí odkaz na prvek nebo jeho kopii na konci seznamu.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud je seznam **const**, `GetTail` vrátí kopii objektu prvek na začátku seznamu. To umožňuje metoda má být použit pouze na pravé straně příkazu přiřazení a chrání před úpravy seznamu.
+Pokud je seznam **const**, `GetTail` vrátí kopii prvku v čele seznamu. To umožňuje metodu, která má být použita pouze na pravé straně příkazu přiřazení a chrání seznam před úpravou.
 
-Pokud seznam není **const**, `GetTail` vrátí odkaz na prvek na začátku seznamu. To umožňuje metody, který se má použít na obou stranách příkazu přiřazení a tím umožňuje položky seznamu, který má být upraven.
+Pokud seznam není **const**, `GetTail` vrátí odkaz na prvek v čele seznamu. To umožňuje metodu, která má být použita na obou stranách příkazu přiřazení a tím umožňuje položky seznamu, které mají být změněny.
 
-V sestavení ladění dojde k selhání kontrolního výrazu Pokud konec seznamu odkazuje na hodnotu NULL.
+V sestaveních ladění dojde k selhání kontrolního výrazu, pokud ocas seznamu odkazuje na hodnotu NULL.
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [CAtlList::AddTail](#addtail).
+Viz příklad pro [CAtlList::AddTail](#addtail).
 
-##  <a name="gettailposition"></a>  CAtlList::GetTailPosition
+## <a name="catllistgettailposition"></a><a name="gettailposition"></a>CAtlList::GetTailPosition
 
-Volejte tuto metodu za účelem získání pozice konec seznamu.
+Volání této metody získat pozici ocasu seznamu.
 
 ```
 POSITION GetTailPosition() const throw();
@@ -505,7 +505,7 @@ POSITION GetTailPosition() const throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí POZICI hodnotu odpovídající prvek na konec seznamu.
+Vrátí hodnotu POZICE odpovídající prvku na konci seznamu.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -515,17 +515,17 @@ Pokud je seznam prázdný, vrácená hodnota je NULL.
 
 [!code-cpp[NVC_ATL_Utilities#22](../../atl/codesnippet/cpp/catllist-class_10.cpp)]
 
-##  <a name="inargtype"></a>  CAtlList::INARGTYPE
+## <a name="catllistinargtype"></a><a name="inargtype"></a>CAtlList::INARGTYPE
 
-Typ použitý při prvek se předá jako vstupní argument.
+Typ používaný při předání prvku jako vstupní argument.
 
 ```
 typedef ETraits::INARGTYPE INARGTYPE;
 ```
 
-##  <a name="insertafter"></a>  CAtlList::InsertAfter
+## <a name="catllistinsertafter"></a><a name="insertafter"></a>CAtlList::InsertAfter
 
-Voláním této metody lze vložit nový prvek do seznamu za určené pozici.
+Volání této metody vložit nový prvek do seznamu za zadanou pozici.
 
 ```
 POSITION InsertAfter(POSITION pos, INARGTYPE element);
@@ -533,27 +533,27 @@ POSITION InsertAfter(POSITION pos, INARGTYPE element);
 
 ### <a name="parameters"></a>Parametry
 
-*pos*<br/>
-Hodnota pozice, po jejímž uplynutí se vloží nový prvek.
+*Pos*<br/>
+Hodnota POSITION, po kterou bude vložen nový prvek.
 
-*– Element*<br/>
-Element, který má být vložen.
+*Prvek*<br/>
+Prvek, který má být vložen.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu POZICI nového elementu.
+Vrátí hodnotu POSITION nového prvku.
 
 ### <a name="remarks"></a>Poznámky
 
-V sestavení ladění dojde k selhání kontrolního výrazu Pokud seznam není platná, pokud insert selže nebo pokud je proveden pokus o vložení prvku po konci.
+V sestaveních ladění dojde k selhání kontrolního výrazu, pokud seznam není platný, pokud se příkaz insert nezdaří nebo pokud je proveden pokus o vložení prvku za ocas.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_ATL_Utilities#23](../../atl/codesnippet/cpp/catllist-class_11.cpp)]
 
-##  <a name="insertbefore"></a>  CAtlList::InsertBefore
+## <a name="catllistinsertbefore"></a><a name="insertbefore"></a>CAtlList::InsertBefore
 
-Volejte tuto metodu za účelem vloží nový prvek do seznamu před určené pozici.
+Volání této metody vložit nový prvek do seznamu před zadané pozice.
 
 ```
 POSITION InsertBefore(POSITION pos, INARGTYPE element);
@@ -561,27 +561,27 @@ POSITION InsertBefore(POSITION pos, INARGTYPE element);
 
 ### <a name="parameters"></a>Parametry
 
-*pos*<br/>
-Nový prvek se vloží do seznamu před tuto hodnotu pozice.
+*Pos*<br/>
+Nový prvek bude vložen do seznamu před tuto hodnotu POSITION.
 
-*– Element*<br/>
-Element, který má být vložen.
+*Prvek*<br/>
+Prvek, který má být vložen.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu POZICI nového elementu.
+Vrátí hodnotu POSITION nového prvku.
 
 ### <a name="remarks"></a>Poznámky
 
-V sestavení ladění dojde k selhání kontrolního výrazu Pokud seznam není platná, pokud insert selže nebo pokud je proveden pokus o vložení elementu před první pozice.
+V sestaveních ladění dojde k selhání kontrolního výrazu, pokud seznam není platný, pokud se příkaz insert nezdaří nebo pokud je proveden pokus o vložení prvku před hlavu.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_ATL_Utilities#24](../../atl/codesnippet/cpp/catllist-class_12.cpp)]
 
-##  <a name="isempty"></a>  CAtlList::IsEmpty
+## <a name="catllistisempty"></a><a name="isempty"></a>CAtlList::IsEmpty
 
-Volejte tuto metodu za účelem určení, zda je seznam prázdný.
+Volání této metody k určení, zda je seznam prázdný.
 
 ```
 bool IsEmpty() const throw();
@@ -589,15 +589,15 @@ bool IsEmpty() const throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí true, pokud seznam neobsahuje žádné objekty, jinak hodnota false.
+Vrátí hodnotu true, pokud seznam neobsahuje žádné objekty, jinak false.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_ATL_Utilities#25](../../atl/codesnippet/cpp/catllist-class_13.cpp)]
 
-##  <a name="movetohead"></a>  CAtlList::MoveToHead
+## <a name="catllistmovetohead"></a><a name="movetohead"></a>CAtlList::MoveToHead
 
-Voláním této metody lze přesunout zadaný prvek na začátku seznamu.
+Volání této metody přesunout zadaný prvek do čela seznamu.
 
 ```
 void MoveToHead(POSITION pos) throw();
@@ -605,20 +605,20 @@ void MoveToHead(POSITION pos) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*pos*<br/>
-Hodnota pozice prvku, který chcete přesunout.
+*Pos*<br/>
+Hodnota POSITION prvku přesunout.
 
 ### <a name="remarks"></a>Poznámky
 
-Zadaný element se přesune z aktuálního umístění do začátku seznamu. V sestavení pro ladění k selhání kontrolního výrazu dojde, pokud *pos* je rovna hodnotě NULL.
+Zadaný prvek je přesunut z aktuální pozice do hlavy seznamu. V sestaveních ladění dojde k selhání kontrolního výrazu, pokud *se pos* rovná hodnotě NULL.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_ATL_Utilities#26](../../atl/codesnippet/cpp/catllist-class_14.cpp)]
 
-##  <a name="movetotail"></a>  CAtlList::MoveToTail
+## <a name="catllistmovetotail"></a><a name="movetotail"></a>CAtlList::MoveToTail
 
-Voláním této metody lze přesunout zadaný prvek na konec seznamu.
+Volání této metody přesunout zadaný prvek na konec seznamu.
 
 ```
 void MoveToTail(POSITION pos) throw();
@@ -626,20 +626,20 @@ void MoveToTail(POSITION pos) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*pos*<br/>
-Hodnota pozice prvku, který chcete přesunout.
+*Pos*<br/>
+Hodnota POSITION prvku přesunout.
 
 ### <a name="remarks"></a>Poznámky
 
-Zadaný element se přesune z aktuálního umístění na konec seznamu. V sestavení pro ladění k selhání kontrolního výrazu dojde, pokud *pos* je rovna hodnotě NULL.
+Zadaný prvek je přesunut z aktuální polohy na konec seznamu. V sestaveních ladění dojde k selhání kontrolního výrazu, pokud *se pos* rovná hodnotě NULL.
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [CAtlList::MoveToHead](#movetohead).
+Viz příklad pro [CAtlList::MoveToHead](#movetohead).
 
-##  <a name="removeall"></a>  CAtlList::RemoveAll
+## <a name="catllistremoveall"></a><a name="removeall"></a>CAtlList::OdebratVše
 
-Volejte tuto metodu, která odebere všechny prvky ze seznamu.
+Volání této metody odebrat všechny prvky ze seznamu.
 
 ```
 void RemoveAll() throw();
@@ -647,15 +647,15 @@ void RemoveAll() throw();
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda odebere všechny prvky ze seznamu a uvolní přidělené paměti. V sestaveních ladí ATLASSERT, bude vyvolána pokud se neodstraní všechny elementy nebo pokud byla poškozena struktura seznamu.
+Tato metoda odebere všechny prvky ze seznamu a uvolní přidělené paměti. V sestaveních debugs bude vyvolána ATLASSERT, pokud nejsou odstraněny všechny prvky nebo pokud došlo k poškození struktury seznamu.
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [CAtlList::IsEmpty](#isempty).
+Viz příklad pro [CAtlList::IsEmpty](#isempty).
 
-##  <a name="removeat"></a>  CAtlList::RemoveAt
+## <a name="catllistremoveat"></a><a name="removeat"></a>CAtlList::RemoveAt
 
-Voláním této metody lze odebrat ze seznamu jediný prvek.
+Volání této metody odebrat jeden prvek ze seznamu.
 
 ```
 void RemoveAt(POSITION pos) throw();
@@ -663,22 +663,22 @@ void RemoveAt(POSITION pos) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*pos*<br/>
-Hodnota pozice prvku, který chcete odebrat.
+*Pos*<br/>
+Hodnota POSITION prvku odebrat.
 
 ### <a name="remarks"></a>Poznámky
 
-Element odkazuje *pos* Odebereme, vystavení a uvolnění paměti. To je nepřijatelné využívat `RemoveAt` odebrat head nebo konec seznamu.
+Prvek odkazovaný *pos* je odebrán a paměť je uvolněna. Je přijatelné použít `RemoveAt` k odstranění hlavy nebo ocasu seznamu.
 
-V sestavení ladění dojde k selhání kontrolního výrazu Pokud seznam není platný nebo pokud prvek způsobí, že se seznamem, aby přístup k paměti, která není součástí struktury seznamu.
+V sestaveních ladění dojde k selhání kontrolního výrazu, pokud seznam není platný nebo pokud odebrání prvku způsobí, že seznam má přístup k paměti, která není součástí struktury seznamu.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_ATL_Utilities#27](../../atl/codesnippet/cpp/catllist-class_15.cpp)]
 
-##  <a name="removehead"></a>  CAtlList::RemoveHead
+## <a name="catllistremovehead"></a><a name="removehead"></a>CAtlList::RemoveHead
 
-Volejte tuto metodu za účelem odstranění prvku na začátku seznamu.
+Volání této metody odebrat prvek v čele seznamu.
 
 ```
 E RemoveHead();
@@ -686,19 +686,19 @@ E RemoveHead();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí prvek na začátku seznamu.
+Vrátí prvek v čele seznamu.
 
 ### <a name="remarks"></a>Poznámky
 
-Head element se odstraní ze seznamu a uvolnění paměti. Kopii tohoto elementu je vrácena. V sestavení ladění dojde k selhání kontrolního výrazu Pokud je seznam prázdný.
+Prvek head je odstraněn ze seznamu a paměť je uvolněna. Je vrácena kopie prvku. V sestaveních ladění dojde k selhání kontrolního výrazu, pokud je seznam prázdný.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_ATL_Utilities#28](../../atl/codesnippet/cpp/catllist-class_16.cpp)]
 
-##  <a name="removeheadnoreturn"></a>  CAtlList::RemoveHeadNoReturn
+## <a name="catllistremoveheadnoreturn"></a><a name="removeheadnoreturn"></a>CAtlList::RemoveHeadNoReturn
 
-Volejte tuto metodu za účelem odebrání prvek na začátku seznamu bez návratová hodnota.
+Volání této metody odebrat prvek v čele seznamu bez vrácení hodnoty.
 
 ```
 void RemoveHeadNoReturn() throw();
@@ -706,15 +706,15 @@ void RemoveHeadNoReturn() throw();
 
 ### <a name="remarks"></a>Poznámky
 
-Head element se odstraní ze seznamu a uvolnění paměti. V sestavení ladění dojde k selhání kontrolního výrazu Pokud je seznam prázdný.
+Prvek head je odstraněn ze seznamu a paměť je uvolněna. V sestaveních ladění dojde k selhání kontrolního výrazu, pokud je seznam prázdný.
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [CAtlList::IsEmpty](#isempty).
+Viz příklad pro [CAtlList::IsEmpty](#isempty).
 
-##  <a name="removetail"></a>  CAtlList::RemoveTail
+## <a name="catllistremovetail"></a><a name="removetail"></a>CAtlList::RemoveTail
 
-Volejte tuto metodu za účelem odebrání prvek na konec seznamu.
+Volání této metody odebrat prvek na konci seznamu.
 
 ```
 E RemoveTail();
@@ -722,19 +722,19 @@ E RemoveTail();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí prvek na konec seznamu.
+Vrátí prvek na konci seznamu.
 
 ### <a name="remarks"></a>Poznámky
 
-Tail prvek je odstraněn ze seznamu a uvolnění paměti. Kopii tohoto elementu je vrácena. V sestavení ladění dojde k selhání kontrolního výrazu Pokud je seznam prázdný.
+Prvek ocasu je odstraněn ze seznamu a paměť je uvolněna. Je vrácena kopie prvku. V sestaveních ladění dojde k selhání kontrolního výrazu, pokud je seznam prázdný.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_ATL_Utilities#29](../../atl/codesnippet/cpp/catllist-class_17.cpp)]
 
-##  <a name="removetailnoreturn"></a>  CAtlList::RemoveTailNoReturn
+## <a name="catllistremovetailnoreturn"></a><a name="removetailnoreturn"></a>CAtlList::RemoveTailNoReturn
 
-Volejte tuto metodu za účelem odebrání prvek na konec seznamu bez návratová hodnota.
+Volání této metody odebrat prvek na konci seznamu bez vrácení hodnoty.
 
 ```
 void RemoveTailNoReturn() throw();
@@ -742,15 +742,15 @@ void RemoveTailNoReturn() throw();
 
 ### <a name="remarks"></a>Poznámky
 
-Tail prvek je odstraněn ze seznamu a uvolnění paměti. V sestavení ladění dojde k selhání kontrolního výrazu Pokud je seznam prázdný.
+Prvek ocasu je odstraněn ze seznamu a paměť je uvolněna. V sestaveních ladění dojde k selhání kontrolního výrazu, pokud je seznam prázdný.
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [CAtlList::IsEmpty](#isempty).
+Viz příklad pro [CAtlList::IsEmpty](#isempty).
 
-##  <a name="setat"></a>  CAtlList::SetAt
+## <a name="catllistsetat"></a><a name="setat"></a>CAtlList::SetAt
 
-Voláním této metody nastavte hodnotu prvku na dané pozici v seznamu.
+Volání této metody nastavit hodnotu prvku na dané pozici v seznamu.
 
 ```
 void SetAt(POSITION pos, INARGTYPE element);
@@ -758,23 +758,23 @@ void SetAt(POSITION pos, INARGTYPE element);
 
 ### <a name="parameters"></a>Parametry
 
-*pos*<br/>
-Hodnota pozice odpovídá elementu, který chcete změnit.
+*Pos*<br/>
+Hodnota POSITION odpovídající prvku změnit.
 
-*– Element*<br/>
-Nová hodnota prvku.
+*Prvek*<br/>
+Hodnota nového prvku.
 
 ### <a name="remarks"></a>Poznámky
 
-Nahradí existující hodnotu *element*. V sestavení pro ladění k selhání kontrolního výrazu dojde, pokud *pos* je rovna hodnotě NULL.
+Nahradí existující hodnotu *elementem*. V sestaveních ladění dojde k selhání kontrolního výrazu, pokud *se pos* rovná hodnotě NULL.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_ATL_Utilities#30](../../atl/codesnippet/cpp/catllist-class_18.cpp)]
 
-##  <a name="swapelements"></a>  CAtlList::SwapElements
+## <a name="catllistswapelements"></a><a name="swapelements"></a>CAtlList::SwapElements
 
-Voláním této metody lze zaměnit prvky v seznamu.
+Volání této metody pro zamění prvky v seznamu.
 
 ```
 void SwapElements(POSITION pos1, POSITION pos2) throw();
@@ -783,20 +783,20 @@ void SwapElements(POSITION pos1, POSITION pos2) throw();
 ### <a name="parameters"></a>Parametry
 
 *pos1*<br/>
-První hodnota pozice.
+První hodnota POSITION.
 
 *pos2*<br/>
-Druhá hodnota pozice.
+Druhá hodnota POSITION.
 
 ### <a name="remarks"></a>Poznámky
 
-Zamění prvky ve dvou pozic určený. V sestavení ladění bude selhání kontrolního výrazu dojít, pokud buď hodnota pozice se nerovná hodnotě NULL.
+Zamění prvky na obou zadaných pozicích. V sestaveních ladění dojde k selhání kontrolního výrazu, pokud je hodnota pozice rovna hodnotě NULL.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_ATL_Utilities#31](../../atl/codesnippet/cpp/catllist-class_19.cpp)]
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [CList – třída](../../mfc/reference/clist-class.md)<br/>
-[Přehled tříd](../../atl/atl-class-overview.md)
+[Přehled třídy](../../atl/atl-class-overview.md)

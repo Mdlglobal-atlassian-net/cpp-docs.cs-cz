@@ -1,5 +1,5 @@
 ---
-title: CSmartDockingInfo Class
+title: Třída CSmartDockingInfo
 ms.date: 11/19/2018
 f1_keywords:
 - CSmartDockingInfo
@@ -26,16 +26,16 @@ helpviewer_keywords:
 - CSmartDockingInfo [MFC], m_uiMarkerBmpResID
 - CSmartDockingInfo [MFC], m_uiMarkerLightBmpResID
 ms.assetid: cab04f38-4bc1-4378-9337-c56fc87fbd68
-ms.openlocfilehash: d5f918b591e1db9ff67288a8761f7554698fa761
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c0ccb9f728add37230cbfd88cc8f6c9b1696fa2e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62323993"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81318230"
 ---
-# <a name="csmartdockinginfo-class"></a>CSmartDockingInfo Class
+# <a name="csmartdockinginfo-class"></a>Třída CSmartDockingInfo
 
-Definuje vzhled značek inteligentního dokování.
+Definuje vzhled inteligentních značkovacích značek.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -47,57 +47,57 @@ class CSmartDockingInfo : public CObject
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
 |`CSmartDockingInfo::CSmartDockingInfo`|Výchozí konstruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CSmartDockingInfo::CopyTo](#copyto)|Zkopíruje aktuální inteligentní dokovací informace o parametrech do zadaných [csmartdockinginfo –](../../mfc/reference/csmartdockinginfo-class.md) objektu.|
+|[CSmartDockingInfo::Kopírovat](#copyto)|Zkopíruje aktuální parametry inteligentních dokovacích informací do poskytnutého objektu [CSmartDockingInfo.](../../mfc/reference/csmartdockinginfo-class.md)|
 
-### <a name="data-members"></a>Datové členy
+### <a name="data-members"></a>Členové dat
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CSmartDockingInfo::m_bUseThemeColorInShading](#m_busethemecolorinshading)|Určuje, jestli se má použít aktuální barvu motivu, při zobrazí rozhraní značek inteligentního dokování.|
-|[CSmartDockingInfo::m_clrBaseBackground](#m_clrbasebackground)|Určuje barvu pozadí základní značek inteligentního dokování.|
-|[CSmartDockingInfo::m_clrToneDest](#m_clrtonedest)|Určuje barvu, která nahradí `m_clrToneSrc` v inteligentního dokování rastrové obrázky značky.|
-|[CSmartDockingInfo::m_clrToneSrc](#m_clrtonesrc)|Určuje barvu inteligentního dokování rastrové obrázky značky.|
-|[CSmartDockingInfo::m_clrTransparent](#m_clrtransparent)|Určuje barvu inteligentního dokování rastrových obrázků značky, pokud jsou transparentní.|
-|[CSmartDockingInfo::m_nCentralGroupOffset](#m_ncentralgroupoffset)|Určuje posun centrální skupina značek inteligentního dokování z obdélníku centrální skupiny hranic.|
-|[CSmartDockingInfo::m_sizeTotal](#m_sizetotal)|Určuje celkovou velikost všech značek inteligentního dokování ve skupině.|
-|[CSmartDockingInfo::m_uiMarkerBmpResID](#m_uimarkerbmpresid)|Definuje ID rastrové obrázky, systém použije pro značek inteligentního dokování, které se zvýrazněnou prostředků.|
-|[CSmartDockingInfo::m_uiMarkerLightBmpResID](#m_uimarkerlightbmpresid)|Definuje ID rastrové obrázky, systém použije pro značek inteligentního dokování, kteří jsou zvýrazněni prostředků.|
+|[CSmartDockingInfo::m_bUseThemeColorInShading](#m_busethemecolorinshading)|Určuje, zda se má použít aktuální barva motivu, když se v rámci zobrazí inteligentní značky ukotvení.|
+|[CSmartDockingInfo::m_clrBaseBackground](#m_clrbasebackground)|Určuje základní barvu pozadí inteligentních značek ukotvení.|
+|[CSmartDockingInfo::m_clrToneDest](#m_clrtonedest)|Určuje barvu, která `m_clrToneSrc` nahrazuje bitmapy inteligentních dokovacích značek.|
+|[CSmartDockingInfo::m_clrToneSrc](#m_clrtonesrc)|Určuje barvu bitmap inteligentních dokovacích značek.|
+|[CSmartDockingInfo::m_clrTransparent](#m_clrtransparent)|Určuje barvu bitmap inteligentních dokovacích značek, pokud jsou průhledné.|
+|[CSmartDockingInfo::m_nCentralGroupOffset](#m_ncentralgroupoffset)|Určuje posun centrální skupiny inteligentních dokovacích značek od hranic obdélníku centrální skupiny.|
+|[CSmartDockingInfo::m_sizeTotal](#m_sizetotal)|Určuje celkovou velikost všech inteligentních dokovacích značek ve skupině.|
+|[CSmartDockingInfo::m_uiMarkerBmpResID](#m_uimarkerbmpresid)|Definuje ID prostředků bitmap, které rozhraní používá pro inteligentní značky ukotvení, které nejsou zvýrazněny.|
+|[CSmartDockingInfo::m_uiMarkerLightBmpResID](#m_uimarkerlightbmpresid)|Definuje ID prostředků bitmap, které rozhraní používá pro inteligentní značky ukotvení, které jsou zvýrazněny.|
 
 ## <a name="remarks"></a>Poznámky
 
-Framework zpracovává inteligentní značky dokovací interně. Následující obrázek znázorňuje standardních značek inteligentního dokování:
+Rámec zpracovává inteligentní dokovací značky interně. Následující obrázek znázorňuje standardní inteligentní dokovací značky:
 
-![Standardní značky pro inteligentního dokování](../../mfc/reference/media/nextsdmarkers.png "standardní značky pro inteligentní ukotvení")
+![Standardní značky pro inteligentní dokování](../../mfc/reference/media/nextsdmarkers.png "Standardní značky pro inteligentní dokování")
 
-Na tomto obrázku zobrazuje obrázek na levé straně centrální skupina inteligentní dokovací značku, která nemá ukotvení na kartu povolena. Uprostřed obrázku značky pravého okraje inteligentní ukotvení. Na pravé straně obrázku centrální skupina inteligentní dokovací značku, na kterém ukotvení na kartu povolena. Inteligentní značky centrální skupina dokovací má hlavní rastrový obrázek a pět inteligentní dokovací rastrové obrázky značky.
+Na tomto obrázku obrázek vlevo zobrazuje značku inteligentního ukotvení centrální skupiny, která nemá povoleno ukotvení na kartě. Obrázek uprostřed zobrazuje značku inteligentního dokování pravého okraje. Obrázek vpravo zobrazuje centrální skupinu inteligentní dokovací značku, která má ukotvení na kartě povoleno. Centrální skupina inteligentní dokovací značka má hlavní bitmapu a pět inteligentních dokovacích rastrů značky.
 
-Můžete přizpůsobit následující parametry značek inteligentního dokování:
+Můžete přizpůsobit následující parametry inteligentních dokovacích značek:
 
-- Barva. Můžete například nahradit všechny uživatelem definovaných barev modrou barvu značky na obrázku.
+- Barev. Můžete například nahradit modrou barvu značek na obrázku libovolnou uživatelem definovanou barvou.
 
-- Barva, průhlednost.
+- Barva průhlednosti.
 
-- Posun ukotvení inteligentní značky ve skupině centrální z ohraničení ohraničující obdélník.
+- Odsazení inteligentní dokovací značky v centrální skupině od okraje ohraničovacího obdélníku.
 
-- Hlavní rastrový obrázek, který představuje centrální skupina.
+- Hlavní bitmapa, která představuje centrální skupinu.
 
-- Rastrové obrázky, který představuje pravidelné a zvýrazněné značek inteligentního dokování.
+- Bitmapy, které představují pravidelné a zvýrazněné inteligentní dokovací značky.
 
-Následující obrázek znázorňuje příklad značek inteligentního dokování, které byly upraveny:
+Následující obrázek znázorňuje příklad inteligentních značek ukotvení, které byly přizpůsobeny:
 
-![Vlastní značky pro inteligentního dokování](../../mfc/reference/media/nextsdmarkerscustom.png "vlastní značky pro inteligentní ukotvení")
+![Vlastní značky pro inteligentní dokování](../../mfc/reference/media/nextsdmarkerscustom.png "Vlastní značky pro inteligentní dokování")
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObjekt](../../mfc/reference/cobject-class.md)
 
 [CSmartDockingInfo](../../mfc/reference/csmartdockinginfo-class.md)
 
@@ -105,9 +105,9 @@ Následující obrázek znázorňuje příklad značek inteligentního dokován�
 
 **Záhlaví:** afxDockingManager.h
 
-##  <a name="copyto"></a>  CSmartDockingInfo::CopyTo
+## <a name="csmartdockinginfocopyto"></a><a name="copyto"></a>CSmartDockingInfo::Kopírovat
 
-Zkopíruje aktuální inteligentního dokování parametry do zadaných [csmartdockinginfo –](../../mfc/reference/csmartdockinginfo-class.md) objektu.
+Zkopíruje aktuální inteligentní dokovací parametry do zadaný objekt [CSmartDockingInfo.](../../mfc/reference/csmartdockinginfo-class.md)
 
 ```
 void CopyTo(CSmartDockingInfo& params);
@@ -116,11 +116,11 @@ void CopyTo(CSmartDockingInfo& params);
 ### <a name="parameters"></a>Parametry
 
 *params*<br/>
-[out] Objekt typu `CSmartDockingInfo` , které se vyplní aktuální inteligentního dokování parametry.
+[out] Objekt typu, `CSmartDockingInfo` který je naplněn aktuálními parametry inteligentního ukotvení.
 
-##  <a name="m_busethemecolorinshading"></a>  CSmartDockingInfo::m_bUseThemeColorInShading
+## <a name="csmartdockinginfom_busethemecolorinshading"></a><a name="m_busethemecolorinshading"></a>CSmartDockingInfo::m_bUseThemeColorInShading
 
-Určuje, jestli se má použít aktuální barvu motivu, při zobrazí rozhraní značek inteligentního dokování.
+Určuje, zda se má použít aktuální barva motivu, když se v rámci zobrazí inteligentní značky ukotvení.
 
 ```
 BOOL m_bUseThemeColorInShading;
@@ -128,21 +128,21 @@ BOOL m_bUseThemeColorInShading;
 
 ### <a name="remarks"></a>Poznámky
 
-Při hodnotě TRUE se značek jsou vykreslovány pomocí aktuální barva motivu; v opačném případě značek vykreslí ve světle modrou barvou.
+Pokud je hodnota PRAVDA, jsou značky nakresleny pomocí aktuální barvy motivu; jinak jsou značky nakresleny světle modrou barvou.
 
 Výchozí hodnota je FALSE.
 
-##  <a name="m_clrbasebackground"></a>  CSmartDockingInfo::m_clrBaseBackground
+## <a name="csmartdockinginfom_clrbasebackground"></a><a name="m_clrbasebackground"></a>CSmartDockingInfo::m_clrBaseBackground
 
-Určuje barvu pozadí základní značek inteligentního dokování.
+Určuje základní barvu pozadí inteligentních značek ukotvení.
 
 ```
 COLORREF m_clrBaseBackground;
 ```
 
-##  <a name="m_clrtonedest"></a>  CSmartDockingInfo::m_clrToneDest
+## <a name="csmartdockinginfom_clrtonedest"></a><a name="m_clrtonedest"></a>CSmartDockingInfo::m_clrToneDest
 
-Určuje barvu, která nahradí `m_clrToneSrc` v inteligentního dokování rastrové obrázky značky.
+Určuje barvu, která `m_clrToneSrc` bude nahrazena v bitmapách inteligentních dokovacích značek.
 
 ```
 COLORREF m_clrToneDest;
@@ -150,13 +150,13 @@ COLORREF m_clrToneDest;
 
 ### <a name="remarks"></a>Poznámky
 
-Nastavením této hodnoty můžete změnit barvu značky bitmap prostřednictvím kódu programu. Například pokud chcete změnit barvu standardní značek, opatřeného rozhraní framework, nastavte tuto hodnotu na požadovanou barvu. Ve výchozím nastavení [CSmartDockingInfo::m_clrToneSrc](#m_clrtonesrc) je nastavena na RGB (61, 123, 241) (namodralý barvu).
+Tuto hodnotu nastavte, chcete-li programově měnit barvu bitmap značek. Chcete-li například změnit barvu standardních značek dodávaných s rámcem, nastavte tuto hodnotu na požadovanou barvu. Ve výchozím nastavení [cSmartDockingInfo::m_clrToneSrc](#m_clrtonesrc) je nastavena na RGB (61, 123, 241) (modravá barva).
 
-Chcete-li změnit barvu vlastní značky, musíte zadat oba `m_clrToneDest` a `m_clrToneSrc`.
+Chcete-li změnit barvu vlastních značek, `m_clrToneDest` `m_clrToneSrc`musíte zadat obě značky a .
 
-##  <a name="m_clrtonesrc"></a>  CSmartDockingInfo::m_clrToneSrc
+## <a name="csmartdockinginfom_clrtonesrc"></a><a name="m_clrtonesrc"></a>CSmartDockingInfo::m_clrToneSrc
 
-Určuje barvu inteligentního dokování rastrové obrázky značky.
+Určuje barvu bitmap inteligentních dokovacích značek.
 
 ```
 COLORREF m_clrToneSrc;
@@ -164,13 +164,13 @@ COLORREF m_clrToneSrc;
 
 ### <a name="remarks"></a>Poznámky
 
-Tuto hodnotu lze nastavte pouze v případě, že chcete barva vlastní rastrový obrázek nahraďte jinou barvu. Nemáte nastavte tuto hodnotu, pokud chcete změnit barvu úrovně Standard (rámec poskytovaný) značky.
+Tuto hodnotu nastavte pouze v případě, že chcete nahradit barvu vlastní bitmapy jinou barvou. Tuto hodnotu není třeba nastavovat, pokud měníte barvu standardní značky (poskytujete rámec).
 
-Použití `(COLORREF)-1` ponechat prázdný člen skupiny inteligentního dokování.
+Slouží `(COLORREF)-1` k tomu, aby byl člen inteligentní dokovací skupiny prázdný.
 
-##  <a name="m_clrtransparent"></a>  CSmartDockingInfo::m_clrTransparent
+## <a name="csmartdockinginfom_clrtransparent"></a><a name="m_clrtransparent"></a>CSmartDockingInfo::m_clrTransparent
 
-Určuje barvu inteligentního dokování rastrových obrázků značky, pokud jsou transparentní.
+Určuje barvu bitmap inteligentních dokovacích značek, pokud jsou průhledné.
 
 ```
 COLORREF m_clrTransparent;
@@ -178,11 +178,11 @@ COLORREF m_clrTransparent;
 
 ### <a name="remarks"></a>Poznámky
 
-Tato hodnota je nutné nastavit při zobrazení vlastní značky a vlastních rastrových obrázků ve skupině ukotvení.
+Tuto hodnotu je nutné nastavit při zobrazení vlastních značek a vlastních bitmap v dokovací skupině.
 
-##  <a name="m_ncentralgroupoffset"></a>  CSmartDockingInfo::m_nCentralGroupOffset
+## <a name="csmartdockinginfom_ncentralgroupoffset"></a><a name="m_ncentralgroupoffset"></a>CSmartDockingInfo::m_nCentralGroupOffset
 
-Určuje odsazení mezi centrální skupina značek inteligentního dokování a hranice centrální skupina obdélník.
+Určuje posun mezi centrální skupinou inteligentních značek ukotvení a hranicemi obdélníku centrální skupiny.
 
 ```
 int m_nCentralGroupOffset;
@@ -190,11 +190,11 @@ int m_nCentralGroupOffset;
 
 ### <a name="remarks"></a>Poznámky
 
-Tuto hodnotu zadejte, pokud chcete změnit výchozí posun mezi vlastní značky a hranice centrální skupina značek inteligentního dokování. Posun výchozí je 5 pixelů.
+Tuto hodnotu zadejte, pokud chcete změnit výchozí posun mezi vlastními značkami a hranicemi centrální skupiny inteligentních značek ukotvení. Výchozí posun je 5 pixelů.
 
-##  <a name="m_sizetotal"></a>  CSmartDockingInfo::m_sizeTotal
+## <a name="csmartdockinginfom_sizetotal"></a><a name="m_sizetotal"></a>CSmartDockingInfo::m_sizeTotal
 
-Určuje celkovou velikost ohraničující obdélník, který obklopuje všech značek inteligentního dokování v centrální skupina.
+Určuje celkovou velikost ohraničujícího obdélníku, který obklopuje všechny inteligentní dokovací značky v centrální skupině.
 
 ```
 CSize m_sizeTotal;
@@ -202,11 +202,11 @@ CSize m_sizeTotal;
 
 ### <a name="remarks"></a>Poznámky
 
-Nastavte `m_sizeTotal` velikosti ohraničující obdélník centrální skupina značky. Musíte zadat tuto hodnotu, pokud používáte vlastní rastrové obrázky pro značky.
+Nastavte `m_sizeTotal` velikost ohraničovacího obdélníku značky centrální skupiny. Tuto hodnotu musíte zadat, pokud používáte vlastní rastrové obrázky pro značky.
 
-##  <a name="m_uimarkerbmpresid"></a>  CSmartDockingInfo::m_uiMarkerBmpResID
+## <a name="csmartdockinginfom_uimarkerbmpresid"></a><a name="m_uimarkerbmpresid"></a>CSmartDockingInfo::m_uiMarkerBmpResID
 
-Definuje prostředek ID rastrové obrázky, které se používají pro křížového zvýraznění vlastních značek inteligentního dokování.
+Definuje ID prostředků bitmap, které se používají pro nezvýrazněné vlastní inteligentní dokovací značky.
 
 ```
 UINT m_uiMarkerBmpResID[AFX_SD_MARKERS_NUM];
@@ -214,7 +214,7 @@ UINT m_uiMarkerBmpResID[AFX_SD_MARKERS_NUM];
 
 ### <a name="remarks"></a>Poznámky
 
-Vyplňte tato pole ID rastrových obrázků představující značek inteligentního dokování prostředků. AFX_SD_MARKERS_NUM je aktuálně definován jako 5. Vyplnění pole následujícím způsobem:
+Vyplňte toto pole ID prostředků rastrových obrázků představujících inteligentní značky ukotvení. AFX_SD_MARKERS_NUM je v současné době definována jako 5. Pole vyplníte následujícím způsobem:
 
 ```cpp
 params.m_uiMarkerBmpResID[0] = IDB_MARKER_LEFT;
@@ -224,9 +224,9 @@ params.m_uiMarkerBmpResID[3] = IDB_MARKER_BOTTOM;
 params.m_uiMarkerBmpResID[4] = IDB_MARKER_CENTER;
 ```
 
-##  <a name="m_uimarkerlightbmpresid"></a>  CSmartDockingInfo::m_uiMarkerLightBmpResID
+## <a name="csmartdockinginfom_uimarkerlightbmpresid"></a><a name="m_uimarkerlightbmpresid"></a>CSmartDockingInfo::m_uiMarkerLightBmpResID
 
-Definuje prostředek ID rastrové obrázky, které se používají pro zvýrazněné vlastních značek inteligentního dokování.
+Definuje ID prostředků bitmap, které se používají pro zvýrazněné vlastní inteligentní dokovací značky.
 
 ```
 UINT m_uiMarkerLightBmpResID[AFX_SD_MARKERS_NUM];
@@ -234,7 +234,7 @@ UINT m_uiMarkerLightBmpResID[AFX_SD_MARKERS_NUM];
 
 ### <a name="remarks"></a>Poznámky
 
-Vyplňte tato pole ID rastrových obrázků představující zvýrazněné značek inteligentního dokování prostředků. AFX_SD_MARKERS_NUM je aktuálně definován jako 5. Vyplnění pole následujícím způsobem:
+Vyplňte toto pole ID prostředků rastrů představujících zvýrazněné inteligentní značky ukotvení. AFX_SD_MARKERS_NUM je v současné době definována jako 5. Pole vyplníte následujícím způsobem:
 
 ```cpp
 params.m_uiMarkerLightBmpResID[0] = IDB_MARKER_LEFT_LIGHT;
@@ -244,7 +244,7 @@ params.m_uiMarkerLightBmpResID[3] = IDB_MARKER_BOTTOM_LIGHT;
 params.m_uiMarkerLightBmpResID[4] = IDB_MARKER_CENTER_LIGHT;
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>

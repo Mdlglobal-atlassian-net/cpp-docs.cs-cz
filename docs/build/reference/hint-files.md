@@ -11,33 +11,34 @@ helpviewer_keywords:
 - cpp.stop
 - Class View, hint file
 ms.assetid: 17194f66-cf62-4523-abec-77db0675ab65
-ms.openlocfilehash: de299f17686d68956e9847d47743d8931734d4ad
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 8037cb8025cc85a8479528490e1512531cbcc035
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80075208"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81322316"
 ---
 # <a name="hint-files"></a>Soubory pokynů
 
-*Soubor s nápovědou* obsahuje makra, která by jinak způsobila, že oblasti kódu budou přeskočeny analyzátorem databáze C++ procházení. Když otevřete projekt sady Visual Studio C++ , analyzátor analyzuje kód v každém zdrojovém souboru v projektu a vytvoří databázi s informacemi o každém identifikátoru. Rozhraní IDE používá tyto informace k podpoře funkcí pro procházení kódu, jako je **zobrazení tříd** prohlížeč a **navigační panel**.
+*Soubor nápovědy* obsahuje makra, která by jinak způsobila přeskoče oblastí kódu analyzátorem databáze procházení jazyka C++. Při otevření projektu Visual Studio C++ analyzátor analyzuje kód v každém zdrojovém souboru v projektu a vytvoří databázi s informacemi o každém identifikátoru. IDE používá tyto informace pro podporu funkce procházení kódu, jako je například prohlížeč **zobrazení tříd a** navigační **panel**.
 
-Analyzátor C++ databáze procházení je přibližný analyzátor, který může v krátké době analyzovat velké objemy kódu. Jedním z důvodů je, že to je rychlé, protože přeskočí obsah bloků. Například zaznamenává pouze umístění a parametry funkce a ignoruje její obsah. Určitá makra mohou způsobit problémy s heuristickými metodami, které slouží k určení začátku a konce bloku. Tyto problémy způsobují nesprávné zaznamenávání oblastí kódu.
+Analyzátor databáze procházení C++ je přibližný analyzátor, který může analyzovat velké množství kódu v krátkém čase. Jedním z důvodů, proč je to rychlé, je to, že přeskočí obsah bloků. Například zaznamenává pouze umístění a parametry funkce a ignoruje její obsah. Některá makra mohou způsobit problémy s heuristiky, které se používají k určení začátku a konce bloku. Tyto problémy způsobit oblasti kódu, které mají být zaznamenány nesprávně.
 
-Tyto vynechané oblasti mohou být v manifestu vícenásobným způsobem:
+Tyto přeskočené oblasti se mohou projevit několika způsoby:
 
-- Chybějící typy a funkce v **zobrazení tříd**, **Přejít na** a **navigační panel**
+- Chybějící typy a funkce v **zobrazení tříd ,** **přejít na** a navigační **panel**
 
-- Nesprávné obory v **navigačním panelu**
+- Nesprávné obory na **navigačním panelu**
 
 - Návrhy na **vytvoření deklarace/definice** pro funkce, které jsou již definovány
 
-Soubor s nápovědou obsahuje uživatelsky přizpůsobitelné Rady, které mají stejnou syntaxi jako definiceC++ C/makra. Vizuál C++ obsahuje integrovaný soubor pokynů, který je pro většinu projektů dostačující. Můžete však vytvořit vlastní soubory pokynů pro zlepšení analyzátoru konkrétně pro váš projekt.
+Soubor nápovědy obsahuje uživatelem přizpůsobitelné rady, které mají stejnou syntaxi jako definice maker C/C++. Visual C++ obsahuje předdefinovaný soubor nápovědy, který je dostačující pro většinu projektů. Můžete však vytvořit vlastní soubory nápovědy pro zlepšení analyzátoru speciálně pro váš projekt.
 
 > [!IMPORTANT]
-> Pokud upravíte nebo přidáte soubor pokynů, je nutné provést další kroky, aby se změny projevily:
-> - Ve verzích před Visual Studio 2017 verze 15,6: Odstraňte soubor. sdf nebo soubor VC. DB v řešení pro všechny změny.
-> - V aplikaci Visual Studio 2017 verze 15,6 a novější: po přidání nových souborů pokynů toto řešení zavřete a znovu otevřete.
+> Pokud změníte nebo přidáte soubor nápovědy, budete muset provést další kroky, aby se změny projevily:
+>
+> - Ve verzích před Visual Studio 2017 verze 15.6: Odstraňte soubor .sdf a/nebo VC.db soubor v řešení pro všechny změny.
+> - Ve Visual Studiu 2017 verze 15.6 a novější: Zavřete a znovu otevřete řešení po přidání nových souborů nápovědy.
 
 ## <a name="scenario"></a>Scénář
 
@@ -48,7 +49,7 @@ void Function() NOEXCEPT
 }
 ```
 
-Bez souboru nápovědy se `Function` nezobrazuje v **zobrazení tříd**, **Přejít na** nebo **navigační panel**. Po přidání souboru s nápovědou v této definici makra analyzátor nyní rozumí a nahrazuje makro `NOEXCEPT`, které umožňuje správně analyzovat funkci:
+Bez souboru `Function` nápovědy se nezobrazuje v **zobrazení tříd ,** **přejděte na** nebo navigačním **panelu**. Po přidání souboru nápovědy s touto definicí makra `NOEXCEPT` analyzátor nyní rozumí a nahrazuje makro, což mu umožňuje správně analyzovat funkci:
 
 ```cpp.hint
 #define NOEXCEPT
@@ -56,29 +57,29 @@ Bez souboru nápovědy se `Function` nezobrazuje v **zobrazení tříd**, **Pře
 
 ## <a name="disruptive-macros"></a>Rušivá makra
 
-Existují dvě kategorie maker, které mají rušivý dopad na analyzátor:
+Analyzátor narušuje dvěma kategoriemi maker:
 
-- Makra, která odpouzdřují klíčová slova, která naformátují funkci
+- Makra, která zapouzdřují klíčová slova, která zdobí funkci
 
    ```cpp
    #define NOEXCEPT noexcept
    #define STDMETHODCALLTYPE __stdcall
    ```
 
-   U těchto typů maker se v souboru nápovědy vyžaduje jenom název makra:
+   U těchto typů maker je v souboru nápovědy vyžadován pouze název makra:
 
    ```cpp.hint
    #define NOEXCEPT
    #define STDMETHODCALLTYPE
    ```
 
-- Makra, která obsahují nevyvážené závorky
+- Makra obsahující nevyvážené závorky
 
    ```cpp
    #define BEGIN {
    ```
 
-   U těchto typů maker se v souboru nápovědy vyžaduje název makra i jeho obsah:
+   Pro tyto typy maker je v souboru nápovědy vyžadován název makra i jeho obsah:
 
    ```cpp.hint
    #define BEGIN {
@@ -86,93 +87,93 @@ Existují dvě kategorie maker, které mají rušivý dopad na analyzátor:
 
 ## <a name="editor-support"></a>Podpora editoru
 
-Od verze Visual Studio 2017 verze 15,8 existuje několik funkcí, které identifikují rušivá makra:
+Počínaje visual studio 2017 verze 15.8 existuje několik funkcí pro identifikaci rušivých maker:
 
-- Jsou zvýrazněna makra, která jsou v oblastech, které byly přeskočeny analyzátorem.
+- Makra, která jsou uvnitř oblastí přeskočených analyzátorem, jsou zvýrazněna.
 
-- K dispozici je rychlá akce pro vytvoření souboru nápovědy, který obsahuje zvýrazněné makro, nebo pokud existuje existující soubor pokynů pro přidání makra do souboru pokynů.
+- K dispozici je rychlá akce pro vytvoření souboru nápovědy, který obsahuje zvýrazněné makro, nebo pokud existuje existující soubor nápovědy, pro přidání makra do souboru nápovědy.
 
-![Zvýrazněné makro](media/hint-squiggle-and-actions.png "Vlnovka s nápovědou a rychlé akce")
+![Zvýrazněné makro.](media/hint-squiggle-and-actions.png "Vlnitost nápovědy a rychlé akce")
 
-Po provedení některé z rychlých akcí analyzátor znovu analyzuje soubory ovlivněné souborem nápovědy.
+Po provedení některé z rychlých akcí analyzátor provede změny souborů ovlivněných souborem nápovědy.
 
-Ve výchozím nastavení je makro problému zvýrazněno jako návrh. Zvýraznění lze změnit na něco, co je patrné, například červená nebo zelená vlnovka. V části **nástroje** > **Možnosti** > **textový editor** > **C++ C/**  > **zobrazení**použijte možnost **makra v seznamu vynechané oblasti procházení** v části **vlnovky kódu** .
+Ve výchozím nastavení je makro problému zvýrazněno jako návrh. Zvýraznění lze změnit na něco výraznějšího, například červenou nebo zelenou vlnovku. Použijte možnost **Makra ve přeskočené oblasti procházení** v části **Kód squiggles** v části **Nástroje** > **Možnosti** > **textového editoru** > **C/C++** > **Zobrazení**.
 
-![Makra v případě vynechané možnosti oblastí procházení](media/skipped-regions-squiggle-option.png "Byla vynechána možnost vlnovku pro vynechané oblasti.")
+![Makra v možnosti Přeskočené oblasti procházení.](media/skipped-regions-squiggle-option.png "Možnost překlápěcí oblasti squiggle.")
 
 ## <a name="display-browsing-database-errors"></a>Zobrazit chyby databáze procházení
 
-Příkaz nabídky **Zobrazit chyby databáze** v **projektu** > zobrazení procházení zobrazí všechny oblasti, které se nepodařilo analyzovat v **Seznam chyb**. Příkaz slouží k zjednodušení sestavení počátečního souboru s nápovědou. Analyzátor ale nemůže sdělit, zda příčinou chyby bylo rušivé makro, takže je nutné vyhodnotit každou chybu. Spusťte příkaz **Zobrazit chyby databáze procházení** a přejděte k jednotlivým chybám, abyste načetli ovlivněný soubor v editoru. Když je soubor načtený, pokud jsou nějaká makra uvnitř oblasti, zvýrazní se. Můžete vyvolat rychlé akce, které je třeba přidat do souboru nápovědy. Po aktualizaci souboru nápovědy se seznam chyb aktualizuje automaticky. Případně, pokud upravujete soubor pokynů ručně, můžete použít příkaz pro **opětovné prohledání řešení** a aktivovat aktualizaci.
+Příkaz Příkaz**Chyby procházení aplikace** **Project** > Display Browsing Database Zobrazuje všechny oblasti, které se v **seznamu chyb**nepodařilo analyzovat . Příkaz je určen pro zjednodušení vytváření počátečního souboru nápovědy. Analyzátor však nemůže zjistit, zda příčinou chyby bylo rušivé makro, takže je nutné vyhodnotit každou chybu. Spusťte příkaz **Chyby procházení zobrazení** a přejděte na každou chybu, chcete-li načíst ohrožený soubor v editoru. Jakmile je soubor načten, pokud jsou v oblasti nějaká makra, jsou zvýrazněna. Můžete vyvolat rychlé akce a přidat je do souboru nápovědy. Po aktualizaci souboru nápovědy se seznam chyb automaticky aktualizuje. Případně, pokud upravujete soubor nápovědy ručně, můžete použít příkaz **Znovu prohledávat řešení** k aktivaci aktualizace.
 
 ## <a name="architecture"></a>Architektura
 
-Soubory pokynů se týkají fyzických adresářů, nikoli logických adresářů zobrazených v **Průzkumník řešení**. Nemusíte přidávat soubor pokynů do projektu, aby měl soubor pokynů efekt. Systém analýzy používá soubory pokynů pouze v případě, že analyzuje zdrojové soubory.
+Soubory nápovědy se vztahují k fyzickým adresářům, nikoli k logickým adresářům zobrazených v **Průzkumníku řešení**. Není třeba přidávat soubor nápovědy do projektu pro soubor nápovědy mít vliv. Systém analýzy používá soubory nápovědy pouze v případě, že analyzuje zdrojové soubory.
 
-Každý soubor s nápovědou má název **cpp. Hint**. Mnoho adresářů může obsahovat soubor s nápovědou, ale v konkrétním adresáři může dojít pouze k jednomu souboru s nápovědou.
+Každý soubor nápovědy se nazývá **cpp.hint**. Mnoho adresářů může obsahovat soubor nápovědy, ale v určitém adresáři může nastat pouze jeden soubor nápovědy.
 
-Projekt může mít vliv na žádný nebo více souborů s nápovědou. Pokud nejsou k dispozici žádné soubory pokynů, analytický systém používá techniky obnovení chyb pro ignorování nečitelného zdrojového kódu. V opačném případě analytický systém používá následující strategii k hledání a shromažďování pomocných postupů.
+Projekt může být ovlivněn nulou nebo více soubory nápovědy. Pokud neexistují žádné soubory nápovědy, systém analýzy používá techniky obnovení chyb k ignorování nerozluštitelného zdrojového kódu. V opačném případě systém analýzy používá následující strategii k vyhledání a shromáždění nápovědy.
 
 ### <a name="search-order"></a>Pořadí hledání
 
-Systém analýzy hledá v adresářích soubory pokynů v následujícím pořadí.
+Systém analýzy vyhledává v adresářích soubory nápovědy v následujícím pořadí.
 
-- Adresář, který obsahuje instalační balíček pro Visual C++ (**vcpackages**). Tento adresář obsahuje vestavěný soubor pokynů, který popisuje symboly v často používaných systémových souborech, jako je například **Windows. h**. V důsledku toho projekt automaticky zdědí většinu tipů, které potřebuje.
+- Adresář, který obsahuje instalační balíček pro Visual C++ (**vcpackages**). Tento adresář obsahuje vestavěný soubor nápovědy, který popisuje symboly v často používaných systémových souborech, například **windows.h**. V důsledku toho projekt automaticky zdědí většinu nápovědy, které potřebuje.
 
-- Cesta z kořenového adresáře zdrojového souboru do adresáře, který obsahuje samotný zdrojový soubor. V typickém projektu sady C++ Visual Studio obsahuje kořenový adresář soubor řešení nebo projektu.
+- Cesta z kořenového adresáře zdrojového souboru do adresáře, který obsahuje samotný zdrojový soubor. V typickém projektu Visual Studio C++ obsahuje kořenový adresář soubor řešení nebo projektu.
 
-   Výjimkou z tohoto pravidla je, pokud je *soubor stop* v cestě ke zdrojovému souboru. Soubor stop je libovolný soubor s názvem **cpp. stop**. Soubor stop poskytuje další kontrolu nad pořadím vyhledávání. Místo spuštění z kořenového adresáře prohledává systém analýzy z adresáře, který obsahuje soubor stop, do adresáře, který obsahuje zdrojový soubor. V typickém projektu nepotřebujete soubor stop.
+   Výjimkou z tohoto pravidla je, pokud je *soubor stop* v cestě ke zdrojovému souboru. Soubor stop je libovolný soubor s názvem **cpp.stop**. Soubor stop poskytuje další kontrolu nad pořadím hledání. Namísto spuštění z kořenového adresáře prohledává systém analýzy z adresáře, který obsahuje soubor stop, do adresáře, který obsahuje zdrojový soubor. V typickém projektu nepotřebujete soubor stop.
 
-### <a name="hint-gathering"></a>Shromažďování pokynů
+### <a name="hint-gathering"></a>Shromažďování tipů
 
-Soubor s nápovědou obsahuje nula nebo více *tipů*. Pomocný parametr je definován nebo odstraněn stejně jako makro C neboC++ . To znamená, že direktiva preprocesoru `#define` vytvoří nebo předefinuje pomocný parametr a direktiva `#undef` odstraní pomocný parametr.
+Soubor nápovědy obsahuje *nulu*nebo více rad . Nápověda je definována nebo odstraněna stejně jako makro C/C++. To znamená, `#define` že preprocesorsměrnice vytvoří nebo předefinuje `#undef` nápovědu a směrnice odstraní nápovědu.
 
-Systém analýzy otevře všechny soubory pokynů v pořadí hledání, které bylo popsáno dříve. Sestaví porady jednotlivých souborů do sady *efektivních pomocných*parametrů a pak pomocí efektivních pomocných parametrů interpretuje identifikátory ve vašem kódu.
+Systém analýzy otevře každý soubor nápovědy v pořadí hledání popsaném výše. Akumuluje rady každého souboru do sady *efektivních rad*a pak použije efektivní rady k interpretaci identifikátorů v kódu.
 
-Systém analýzy používá tato pravidla ke shromáždění tipů:
+Systém analýzy používá tato pravidla k akumulaci nápovědy:
 
-- Pokud nová Nápověda Určuje název, který ještě není definovaný, přidá nový pokyn název k efektivním pomocným parametrům.
+- Pokud nová nápověda určuje název, který ještě není definován, nová nápověda přidá název k efektivním přijím.
 
-- Pokud nový parametr určí název, který je již definován, Nový pomocný parametr znovu definuje existující nápovědu.
+- Pokud nová nápověda určuje název, který je již definován, nová nápověda předefinuje existující nápovědu.
 
-- Pokud je nový pomocný parametr `#undef` direktivou, která určuje existující efektivní pomocný parametr, nový pokyn odstraní existující nápovědu.
+- Pokud nová nápověda `#undef` je směrnice, která určuje existující efektivní nápovědu, nový nápověda odstraní existující nápovědu.
 
-První pravidlo znamená, že účinné pomocné parametry jsou zděděné z dříve otevřených souborů pokynů. Poslední dvě pravidla znamenají, že pomocný parametr pozdější v pořadí hledání může přepsat předchozí nápovědu. Můžete například přepsat všechny předchozí pomocné parametry, pokud vytvoříte soubor pokynů v adresáři, který obsahuje zdrojový soubor.
+První pravidlo znamená, že efektivní rady jsou zděděny z dříve otevřených souborů nápovědy. Poslední dvě pravidla znamenají, že rady později v pořadí hledání mohou přepsat dřívější rady. Pokud například vytvoříte soubor nápovědy v adresáři, který obsahuje zdrojový soubor, můžete přepsat všechny předchozí rady.
 
-Informace o tom, jak se shromažďují pomocné údaje, najdete v části [příklad](#example) .
+Zobrazení způsobu shromáždění nápověd y naleznete v části [Příklad.](#example)
 
 ### <a name="syntax"></a>Syntaxe
 
-Pomocné parametry můžete vytvořit a odstranit pomocí stejné syntaxe jako direktivy preprocesoru pro vytváření a odstraňování maker. Ve skutečnosti systém analýzy používá k vyhodnocení pokynů C/C++ preprocesor. Další informace o direktivách preprocesoru naleznete v tématu direktiva [#define (c/C++)](../../preprocessor/hash-define-directive-c-cpp.md) a [Direktiva #undef (cC++/)](../../preprocessor/hash-undef-directive-c-cpp.md).
+Rady při psaní vytvoříte a odstraníte pomocí stejné syntaxe jako direktivy preprocesoru k vytvoření a odstranění maker. Ve skutečnosti systém analýzy používá preprocesor C/C++ k vyhodnocení rady. Další informace o direktivách preprocesoru naleznete [v tématu #define directive (C/C++)](../../preprocessor/hash-define-directive-c-cpp.md) a [#undef directive (C/C++).](../../preprocessor/hash-undef-directive-c-cpp.md)
 
-Jedinými neobvyklými syntaktickými prvky jsou `@<`, `@=`a `@>` nahrazující řetězce. Tyto nahrazující řetězce specifické pro soubor s nápovědou jsou používány pouze v makrech *map* . Mapa je sada maker, která se vztahují na data, funkce nebo události do jiných dat, funkcí nebo obslužných rutin událostí. `MFC` například používá mapy k vytváření [map zpráv](../../mfc/reference/message-maps-mfc.md)a `ATL` používá mapy k vytváření [map objektů](../../atl/reference/object-map-macros.md). Nahrazující řetězce specifické pro soubor s nápovědou označují počáteční, mezilehlé a koncové prvky mapy. Pouze název mapového makra je podstatný. Proto každý nahrazující řetězec záměrně skrývá implementaci makra.
+Pouze neobvyklé prvky `@<`syntaxe jsou , `@=`a `@>` náhradní řetězce. Tyto řetězce specifické pro soubor nápovědy se používají pouze v *makra* mapy. Mapa je sada maker, která spojují data, funkce nebo události s jinými daty, funkcemi nebo obslužnými rutinami událostí. Pomocí map `MFC` například vytváří [mapy](../../mfc/reference/message-maps-mfc.md) `ATL` zpráv a mapy k vytváření [map objektů](../../atl/reference/object-map-macros.md). Náhradní řetězce specifické pro soubor nápovědy označují počáteční, střední a koncové prvky mapy. Významný je pouze název makra mapy. Proto každý náhradní řetězec záměrně skryje implementaci makra.
 
-Pomocné parametry používají tuto syntaxi:
+Rady používají tuto syntaxi:
 
 |Syntaxe|Význam|
 |------------|-------------|
-|*pomocný parametr `#define` –* *nahrazování názvů – řetězec*<br /><br /> `#define` parametr *-name* `(` *parametr*,...`)`*náhradní řetězec*|Direktiva preprocesoru, která definuje nový pomocný parametr nebo předefinuje existující nápovědu. Po direktivě nahradí preprocesor všechny výskyty *názvu pomocného parametru* ve zdrojovém kódu pomocí *řetězce nahrazení*.<br /><br /> Druhá forma syntaxe definuje pomocný parametr podobný funkci. Pokud se ve zdrojovém kódu vyskytne pomocný parametr, preprocesor nejprve nahradí každý výskyt *parametru* v *řetězci pro nahrazení* odpovídajícím argumentem ve zdrojovém kódu a pak nahradí *pomocný parametr názvem* s *náhradním řetězcem*.|
-|`@<`|*Řetězec nahrazení* specifický pro soubor s nápovědou, který označuje začátek sady prvků mapy.|
-|`@=`|*Řetězec nahrazení* specifický pro soubor s nápovědou, který označuje pomocný element mapy. Mapa může mít více elementů mapy.|
-|`@>`|*Řetězec nahrazení* specifický pro soubor s nápovědou, který označuje konec sady prvků mapy.|
-|*pomocný parametr `#undef` – název*|Direktiva preprocesoru, která odstraní existující pomocný parametr. Název pomocného parametru je uveden pomocí identifikátoru *názvu pomocného parametru* .|
-|*komentář* `//`|Jednořádkový komentář.|
-|`/*` *komentář* `*/`|Víceřádkový komentář.|
+|`#define`*řetězec nahrazení* názvu *nápovědy*<br /><br /> `#define`*parametr* *název nápovědy* `(` , ... `)` *náhradní řetězec*|Preprocesorová směrnice, která definuje novou nápovědu nebo předefinuje existující nápovědu. Po direktivě preprocesor nahradí každý výskyt *názvu nápovědy* ve zdrojovém kódu *náhradním řetězcem*.<br /><br /> Druhý formulář syntaxe definuje nápovědu jako funkce. Pokud se ve zdrojovém kódu vyskytne nápověda jako funkce, preprocesor nejprve nahradí každý výskyt *parametru* v *náhradním řetězci* odpovídajícím argumentem ve zdrojovém kódu a potom nahradí *název nápovědy* *náhradním řetězcem*.|
+|`@<`|Řetězec *nahrazení* specifické ho souboru nápovědy, který označuje začátek sady prvků mapy.|
+|`@=`|Náhradní *řetězec* specifické pro soubor nápovědy, který označuje zprostředkující prvek mapy. Mapa může mít více prvků mapy.|
+|`@>`|Řetězec *nahrazení* specifické ho souboru nápovědy, který označuje konec sady prvků mapy.|
+|`#undef`*název nápovědy*|Preprocesorsměrnice, která odstraní existující nápovědu. Název nápovědy je poskytnut identifikátorem *názvu nápovědy.*|
+|`//`*komentář*|Jednořádkový komentář.|
+|`/*`*komentář*`*/`|Víceřádkový komentář.|
 
 ## <a name="example"></a>Příklad
 
-Tento příklad ukazuje, jak se z souborů pokynů shromažďují pomocné parametry. V tomto příkladu nejsou používány soubory stop.
+Tento příklad ukazuje, jak se shromažďují rady ze souborů nápovědy. Stop soubory nejsou použity v tomto příkladu.
 
-Ilustrace znázorňuje některé fyzické adresáře v projektu sady Visual Studio C++ . Existují soubory pokynů v adresářích `vcpackages`, `Debug`, `A1`a `A2`.
+Obrázek znázorňuje některé fyzické adresáře v projektu Visual Studio C++. Soubory nápovědy jsou `vcpackages` `Debug`v `A1`adresářích , , a `A2` .
 
-### <a name="hint-file-directories"></a>Adresáře souborů pokynů
+### <a name="hint-file-directories"></a>Adresáře souborů nápovědy
 
-![Společné a specifické&#45;adresáře souborů nápovědy pro konkrétní projekt](media/hintfile.png "HintFile")
+![Běžné a projektové&#45;konkrétní adresáře souborů nápovědy.](media/hintfile.png "Soubor nápovědy")
 
-### <a name="directories-and-hint-file-contents"></a>Adresáře a obsah souboru pokynů
+### <a name="directories-and-hint-file-contents"></a>Adresáře a obsah souboru nápovědy
 
-Tento seznam obsahuje adresáře v tomto projektu, které obsahují soubory pokynů, a obsah těchto souborů s nápovědou. V seznamu pomocného adresáře `vcpackages` se uvádí jenom některé z mnoha pomocných parametrů:
+Tento seznam zobrazuje adresáře v tomto projektu, které obsahují soubory nápovědy, a obsah těchto souborů nápovědy. Jsou uvedeny pouze některé `vcpackages` z mnoha rad v souboru nápovědy adresáře:
 
-- vcpackages
+- vcbalíčky
 
     ```cpp.hint
     // vcpackages (partial list)
@@ -183,7 +184,7 @@ Tento seznam obsahuje adresáře v tomto projektu, které obsahují soubory poky
     #define _In_count_(size)
     ```
 
-- Ladění
+- Ladit
 
     ```cpp.hint
     // Debug
@@ -210,13 +211,13 @@ Tento seznam obsahuje adresáře v tomto projektu, které obsahují soubory poky
     #undef CBRACE
     ```
 
-### <a name="effective-hints"></a>Efektivní Nápověda
+### <a name="effective-hints"></a>Efektivní rady
 
-Tato tabulka uvádí efektivní nápovědu pro zdrojové soubory v tomto projektu:
+V této tabulce jsou uvedeny účinné rady pro zdrojové soubory v tomto projektu:
 
-- Zdrojový soubor: A1_A2_B. cpp
+- Zdrojový soubor: A1_A2_B.cpp
 
-- Efektivní Nápověda:
+- Efektivní rady:
 
     ```cpp.hint
     // vcpackages (partial list)
@@ -232,19 +233,19 @@ Tato tabulka uvádí efektivní nápovědu pro zdrojové soubory v tomto projekt
     #define END_NAMESPACE }
     ```
 
-Tyto poznámky se vztahují na předchozí seznam:
+Tyto poznámky platí pro předchozí seznam:
 
-- Efektivní pomocné parametry se nacházejí v adresářích `vcpackages`, `Debug`, `A1`a `A2`.
+- Efektivní rady jsou z `vcpackages` `Debug`, `A1`, `A2` a adresáře.
 
-- Direktiva **#undef** v souboru s nápovědou `Debug` odebrala v souboru pokynů adresáře `vcpackages` nápovědu `#define _In_`.
+- Direktiva `Debug` **#undef** v `#define _In_` souboru `vcpackages` nápovědy odstranila nápovědu v souboru nápovědy adresáře.
 
-- Soubor pokynů v adresáři `A1` znovu definuje `START_NAMESPACE`.
+- Soubor nápovědy `START_NAMESPACE` `A1` v adresáři předefinuje .
 
-- Pomocný parametr `#undef` v adresáři `A2` odebral pomocný parametr pro `OBRACE` a `CBRACE` v souboru pokynů pro `Debug` adresář.
+- `#undef` Nápověda v `A2` adresáři odstranila `OBRACE` `CBRACE` rady `Debug` pro a v souboru nápovědy adresáře.
 
 ## <a name="see-also"></a>Viz také
 
-[Typy souborů vytvořených pro projekty sady C++ Visual Studio](file-types-created-for-visual-cpp-projects.md)<br>
+[Typy souborů vytvořené pro projekty jazyka Visual Studio C++](file-types-created-for-visual-cpp-projects.md)<br>
 [#define – direktiva (C++)](../../preprocessor/hash-define-directive-c-cpp.md)<br>
 [#undef – direktiva (C++)](../../preprocessor/hash-undef-directive-c-cpp.md)<br>
 [Poznámky SAL](../../c-runtime-library/sal-annotations.md)<br>

@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::SizeT Struct
 ms.assetid: 0803612c-8ba1-430c-9b7b-1bebae88608d
-ms.openlocfilehash: 7f81cb9e1fc2ef7a74cb3878c369e4d7d14e3d90
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5add9212dc2655bc37cd357741073f855b009bde
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62330131"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81322152"
 ---
 # <a name="platformsizet-value-class"></a>Platform::SizeT – hodnotová třída
 
-Představuje velikost objektu. SizeT je bez znaménka datového typu.
+Představuje velikost objektu. SizeT je nepodepsaný datový typ.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -28,21 +28,21 @@ public ref class SizeT sealed : ValueType
 
 |Člen|Popis|
 |------------|-----------------|
-|[SizeT::SizeT konstruktor](#ctor)|Inicializuje novou instanci třídy se zadanou hodnotou.|
+|[SizeT::Konstruktor SizeT](#ctor)|Inicializuje novou instanci třídy se zadanou hodnotou.|
 
 ### <a name="requirements"></a>Požadavky
 
-**Minimální podporovaná klienta:** Windows 8
+**Minimální podporovaný klient:** Windows 8
 
-**Minimální podporovaná serveru:** Windows Server 2012
+**Minimální podporovaný server:** Windows Server 2012
 
-**Namespace:** Platforma
+**Obor názvů:** Platforma
 
 **Metadata:** platform.winmd
 
-## <a name="ctor"></a>  SizeT::SizeT konstruktor
+## <a name="sizetsizet-constructor"></a><a name="ctor"></a>SizeT::Konstruktor SizeT
 
-Inicializuje novou instanci třídy SizeT se zadanou hodnotou.
+Inicializuje novou instanci SizeT se zadanou hodnotou.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -52,12 +52,12 @@ SizeT( uint32 value1 );   SizeT( void* value2 );
 
 ### <a name="parameters"></a>Parametry
 
-*value1*<br/>
-32bitové hodnoty bez znaménka.
+*hodnota1*<br/>
+Nepodepsaná 32bitová hodnota.
 
-*value2*<br/>
-Ukazatel na 32bitové hodnoty bez znaménka.
+*hodnota2*<br/>
+Ukazatel na nepodepsanou 32bitovou hodnotu.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Platform – obor názvů](../cppcx/platform-namespace-c-cx.md)

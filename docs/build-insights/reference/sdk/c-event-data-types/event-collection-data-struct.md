@@ -1,6 +1,6 @@
 ---
-title: Struktura EVENT_COLLECTION_DATA
-description: Odkaz C++ na strukturu EVENT_COLLECTION_DATA Build Insights SDK
+title: EVENT_COLLECTION_DATA struktura
+description: C++ Build Insights SDK EVENT_COLLECTION_DATA odkaz na strukturu.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,18 +9,18 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 1a622a8459b6aa6d9dcbe0faaf90ae545b449466
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 88ba39ede8c86f47c2e6458332ae005eddc06fda
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78333809"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81325695"
 ---
-# <a name="event_collection_data-structure"></a>Struktura EVENT_COLLECTION_DATA
+# <a name="event_collection_data-structure"></a>EVENT_COLLECTION_DATA struktura
 
 ::: moniker range="<=vs-2015"
 
-Sada C++ SDK pro Build Insights je kompatibilní se sadou Visual Studio 2017 a novější. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek selektor verzí sady Visual Studio pro tento článek na sadu Visual Studio 2017 nebo Visual Studio 2019.
+Sada C++ Build Insights SDK je kompatibilní s Visual Studio 2017 a vyšší. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek pro výběr **verze** sady Visual Studio pro tento článek na Visual Studio 2017 nebo Visual Studio 2019. Nachází se v horní části obsahu na této stránce.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
@@ -43,6 +43,6 @@ typedef struct EVENT_COLLECTION_DATA_TAG
 |  |  |
 |--|--|
 | `Count` | Počet `EVENT_DATA` prvků v poli. |
-| `Elements` | Ukazatel na první prvek `EVENT_DATA` v poli. |
+| `Elements` | Ukazatel na `EVENT_DATA` první prvek v poli. |
 
 ::: moniker-end

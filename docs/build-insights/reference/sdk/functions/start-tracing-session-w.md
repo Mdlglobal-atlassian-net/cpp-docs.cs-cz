@@ -1,6 +1,6 @@
 ---
 title: StartTracingSessionW
-description: Reference C++ k funkci StartTracingSessionW sady SDK pro Build Insights
+description: C++ Build Insights SDK StartTracingSessionW odkaz na funkci.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,18 +9,18 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 072b02166f2841e6d210306ef75c9fc64fea9778
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: af67c3be50cb19ccbfb7fe286e5d61cd1d241bf8
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78332647"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81323796"
 ---
 # <a name="starttracingsessionw"></a>StartTracingSessionW
 
 ::: moniker range="<=vs-2015"
 
-Sada C++ SDK pro Build Insights je kompatibilní se sadou Visual Studio 2017 a novější. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek selektor verzí sady Visual Studio pro tento článek na sadu Visual Studio 2017 nebo Visual Studio 2019.
+Sada C++ Build Insights SDK je kompatibilní s Visual Studio 2017 a vyšší. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek pro výběr **verze** sady Visual Studio pro tento článek na Visual Studio 2017 nebo Visual Studio 2019. Nachází se v horní části obsahu na této stránce.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
@@ -37,11 +37,11 @@ enum RESULT_CODE StartTracingSessionW(
 
 ### <a name="parameters"></a>Parametry
 
-*název_relace*\
-Název relace trasování, která se má spustit. Použijte stejný název při volání [StopTracingSessionW](stop-tracing-session-w.md)nebo jakékoli jiné funkce stop Trace.
+*Název_relace*\
+Název relace trasování, která má být zahájena. Použijte stejný název při volání [StopTracingSessionW](stop-tracing-session-w.md)nebo jakékoli jiné funkce stop stop.
 
-*možnosti*\
-Ukazatel na objekt [TRACING_SESSION_OPTIONS](../other-types/tracing-session-options-struct.md) . Pomocí tohoto objektu vyberte, které události by měly být shromažďovány trasovací relací.
+*Možnosti*\
+Ukazatel na [TRACING_SESSION_OPTIONS](../other-types/tracing-session-options-struct.md) objekt. Pomocí tohoto objektu můžete vybrat, které události mají být shromažďovány relace trasování.
 
 ### <a name="return-value"></a>Návratová hodnota
 

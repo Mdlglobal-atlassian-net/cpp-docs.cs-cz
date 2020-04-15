@@ -1,5 +1,5 @@
 ---
-title: /Zc:alignedNew (c ++ 17 nadbytečně zarovnané přidělení)
+title: /Zc:alignedNew (přidělení nadměrného zarovnání C++17)
 ms.date: 05/18/2019
 f1_keywords:
 - /Zc:alignedNew
@@ -7,16 +7,16 @@ helpviewer_keywords:
 - /Zc:alignedNew
 - Zc:alignedNew
 - -Zc:alignedNew
-ms.openlocfilehash: dfcc4982e1b5f67b5a01d5a0d09d4fd9279deacf
-ms.sourcegitcommit: 61121faf879cc581a4d39e4baccabf7cf1f673a5
+ms.openlocfilehash: 041f62bbbf5f7a2750960d21d1534cf6daf4b874
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65934186"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81335688"
 ---
-# <a name="zcalignednew-c17-over-aligned-allocation"></a>/Zc:alignedNew (c ++ 17 nadbytečně zarovnané přidělení)
+# <a name="zcalignednew-c17-over-aligned-allocation"></a>/Zc:alignedNew (přidělení nadměrného zarovnání C++17)
 
-Povolit podporu pro C ++ 17 nadbytečně zarovnané **nové**, dynamické přidělování paměti zarovnány na hranice větší než je výchozí maximální velikost standardní zarovnaný typu, **maximální\_zarovnat\_t**.
+Povolit podporu pro C ++ 17 over-aligned **nové**, dynamické přidělení paměti zarovnané na hranice větší než výchozí pro maximální velikosti standardní zarovnaný typ, **max\_align\_t**.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -24,15 +24,15 @@ Povolit podporu pro C ++ 17 nadbytečně zarovnané **nové**, dynamické přid�
 
 ## <a name="remarks"></a>Poznámky
 
-Kompilátor MSVC a knihovna podporují C ++ 17 standardní nadbytečně zarovnané dynamické přidělování paměti. Když **/Zc:alignedNew** je zadána možnost dynamického přidělování, jako `new Example;` respektuje zarovnání *příklad* i když je větší než `max_align_t`, největšímu zarovnání vyžaduje se pro všechny základní typ. Pokud je zarovnání přiděleného typu nesmí být větší než zarovnání zaručeno, že původní operátorem **nové**, která je dostupná jako hodnotu předdefinované makro  **\_ \_STDCPP\_ VÝCHOZÍ\_nový\_zarovnání\_\_**, příkaz `new Example;` výsledkem volání `::operator new(size_t)` stejně jako v C ++ 14. Pokud je větší než zarovnání  **\_ \_STDCPP\_výchozí\_nový\_zarovnání\_\_**, místo toho získává implementaci paměť pomocí `::operator new(size_t, align_val_t)`. Podobně, vyvolá odstranění nadbytečně zarovnané typy `::operator delete(void*, align_val_t)` nebo velikosti odstranit podpis `::operator delete(void*, size_t, align_val_t)`.
+Kompilátor a knihovna MSVC podporují standardní přetížení dynamické paměti C++17. Když **je zadána možnost /Zc:alignedNew,** `new Example;` dynamické přidělení, například respektuje zarovnání `max_align_t` *Příklad* i v případě, že je větší než , největší zarovnání požadované pro všechny základní typ. Pokud zarovnání přiděleného typu není větší než zarovnání zaručené původním **operátorem new**, které je k `new Example;` dispozici jako hodnota `::operator new(size_t)` předdefinovaného makra ** \_ \_STDCPP\_DEFAULT\_NEW\_ALIGNMENT\_**, výsledkem příkazu je volání stejně jako v jazyce C++14. Pokud zarovnání je větší než `::operator new(size_t, align_val_t)` ** \_ \_STDCPP\_default\_new\_alignment\_**, implementace místo toho získá paměť pomocí . Podobně odstranění přerovnaných typů vyvolá `::operator delete(void*, align_val_t)` nebo velký podpis `::operator delete(void*, size_t, align_val_t)`odstranění .
 
-**/Zc:alignedNew** možnost je dostupná jenom při [/std: c ++ 17](std-specify-language-standard-version.md) nebo [/std: c ++ nejnovější](std-specify-language-standard-version.md) je povolená. V části **/std: c ++ 17** nebo **/std: c ++ nejnovější**, **/Zc:alignedNew** je ve výchozím nastavení povolené, tak, aby odpovídal ISO standardu C ++ 17. Pokud pouze z důvodu můžete implementovat operátor **nové** a **odstranit** je podpora nadbytečně zarovnané přidělení, už je nutné tento kód v C ++ 17 režimu. Tuto možnost vypnout a vrátit v C ++ 14 chování **nové** a **odstranit** při použití **/std::c ++ 17** nebo **/std: c ++ nejnovější**, Zadejte **/Zc:alignedNew-**. Pokud se rozhodnete implementovat operátor **nové** a **odstranit** , ale nejste připraveni na implementaci nadbytečně zarovnané – operátor **nové** a **odstranit** přetížení, které mají `align_val_t` parametrů, použijte **/Zc:alignedNew-** volá možnost zabránit generuje kompilátor a standardní knihovna pro nadbytečně zarovnané přetížení. [/ Permissive-](permissive-standards-conformance.md) možnost nedojde ke změně ve výchozím nastavení **/Zc:alignedNew**.
+Možnost **/Zc:alignedNew** je k dispozici pouze v případě, že je povolena [možnost /std:c++17](std-specify-language-standard-version.md) nebo [/std:c++latest.](std-specify-language-standard-version.md) Pod **/std:c++17** nebo **/std:c++latest**, **/Zc:alignedNew** je ve výchozím nastavení povolen a vyhovuje standardu ISO C++17. Pokud jediný důvod, proč implementovat operátor **new** a **odstranit** je pro podporu přerovnaných přidělení, můžete již potřebovat tento kód v režimu C ++ 17. Chcete-li tuto možnost vypnout a vrátit se k chování **nového** jazyka C++14 a **odstranit** při použití **parametru /std::c++17** nebo **/std:c++latest**, zadejte **/Zc:alignedNew-**. Pokud implementujete operátor **new** a **odstranit,** ale nejste připraveni implementovat přerovnaný operátor **new** a **odstranit** přetížení, které mají `align_val_t` parametr, použijte **/Zc:alignedNew-** možnost zabránit kompilátoru a standardní knihovny z generování volání over-aligned přetížení. Možnost [/tolerantní-](permissive-standards-conformance.md) nezmění výchozí nastavení **/Zc:alignedNew**.
 
-Podpora pro **/Zc:alignedNew** je k dispozici od verze Visual Studio 2017 verze 15.5.
+Podpora **/Zc:alignedNew** je k dispozici od visual studia 2017 verze 15.5.
 
 ## <a name="example"></a>Příklad
 
-Tato ukázka předvádí, jak operátor **nové** a operátor **odstranit** chovat, když **/Zc:alignedNew** je možnost nastavená.
+Tato ukázka ukazuje, jak operátor **new** a **operátor delete** chovat při **/Zc:alignedNew** možnost je nastavena.
 
 ```cpp
 // alignedNew.cpp
@@ -86,7 +86,7 @@ int main() {
 }
 ```
 
-Tímto výstupem je typický pro 32bitová sestavení. Ukazatel, který se hodnoty liší založené na němž je aplikace spuštěna v paměti.
+Tento výstup je typický pro 32bitová sestavení. Hodnoty ukazatele se liší v závislosti na tom, kde je aplikace spuštěna v paměti.
 
 ```Output
 unaligned new(4) = 009FD0D0
@@ -95,16 +95,16 @@ aligned new(256, 256) = 009FE800
 aligned sized delete(009FE800, 256, 256)
 ```
 
-Informace o problémech přizpůsobení v aplikaci Visual C++, naleznete v tématu [nestandardní chování](../../cpp/nonstandard-behavior.md).
+Informace o problémech s kondenzací v jazyce Visual C++ naleznete [v tématu Nestandardní chování](../../cpp/nonstandard-behavior.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
 
-1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
+1. Otevřete dialogové okno **Stránky vlastností** projektu. Podrobnosti naleznete v [tématu Nastavení kompilátoru jazyka C++ a vlastnosti sestavení v sadě Visual Studio](../working-with-project-properties.md).
 
-1. Vyberte **vlastnosti konfigurace** > **C/C++** > **příkazového řádku** stránku vlastností.
+1. Vyberte stránku **vlastností Vlastnosti** > konfigurace**C/C++** > **.**
 
-1. Upravit **další možnosti** vlastnost, aby zahrnovala **/Zc:alignedNew** nebo **/Zc:alignedNew-** a klikněte na tlačítko **OK**.
+1. Upravte vlastnost **Další volby** tak, aby **zahrnovala parametr /Zc:alignedNew** nebo **/Zc:alignedNew-** a pak zvolte **OK**.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [/Zc (shoda)](zc-conformance.md)

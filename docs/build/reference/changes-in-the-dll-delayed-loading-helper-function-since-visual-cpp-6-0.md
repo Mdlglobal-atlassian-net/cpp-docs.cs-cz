@@ -7,18 +7,18 @@ helpviewer_keywords:
 - __delayLoadHelper2 function
 - helper functions, what's changed
 ms.assetid: 99f0be69-105d-49ba-8dd5-3be7939c0c72
-ms.openlocfilehash: cd6e842fd6d35e05f2d5a9f906713f0d85d3b80d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 536729e27c89d068957ea451355957e4a35348ee
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62294626"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81320611"
 ---
 # <a name="changes-in-the-dll-delayed-loading-helper-function-since-visual-c-60"></a>Změny v podpůrné funkci knihovny DLL s odloženým načtením od aplikace Visual C++ verze 6.0
 
-Pokud máte více verzí jazyka Visual C++ v počítači nebo pokud jste definovali vlastní pomocné funkce, které mohou být ovlivněny změny provedené na knihovnu DLL funkci s odloženým načtením pomocné rutiny. Příklad:
+Pokud máte v počítači více verzí visual c++ nebo pokud jste definovali vlastní pomocnou funkci, mohou být ovlivněny změnami provedenými v pomocné funkci zpožděného načítání dll. Příklad:
 
-- **__delayloadhelper –** je nyní **__delayloadhelper2 –**
+- **__delayLoadHelper** je nyní **__delayLoadHelper2**
 
 - **__pfnDliNotifyHook** je nyní **__pfnDliNotifyHook2**
 
@@ -27,32 +27,32 @@ Pokud máte více verzí jazyka Visual C++ v počítači nebo pokud jste definov
 - **__FUnloadDelayLoadedDLL** je nyní **__FUnloadDelayLoadedDLL2**
 
 > [!NOTE]
->  Pokud používáte výchozí pomocná funkce, neovlivní tyto změny vám. Neexistují žádné změny týkající se způsobu vyvolání linkeru.
+> Pokud používáte výchozí pomocnou funkci, tyto změny vás neovlivní. Neexistují žádné změny týkající se způsobu vyvolání propojovacího evidenátoru.
 
-## <a name="multiple-versions-of-visual-c"></a>Více verzí jazyka Visual C++
+## <a name="multiple-versions-of-visual-c"></a>Více verzí visual c++
 
-Pokud máte více verzí jazyka Visual C++ v počítači, ujistěte se, že má linker odpovídá delayimp.lib. Pokud dojde k neshodě, zobrazí se chyba linkeru, buď reporting `___delayLoadHelper2@8` nebo `___delayLoadHelper@8` jako nerozpoznaný externí symbol. Předchozí zahrnuje nové linkeru spuštěného s původní delayimp.lib a ten starý linkeru spuštěného s novou delayimp.lib znamená.
+Pokud máte v počítači více verzí visual c++, ujistěte se, že propojovací program odpovídá delayimp.lib. Pokud dojde k neshodě, zobrazí se hlášení chyb `___delayLoadHelper2@8` `___delayLoadHelper@8` propojovacího objektu jako nevyřešeného externího symbolu. První znamená nový linker se starým delayimp.lib, a druhý znamená starý linker s novým delayimp.lib.
 
-Pokud dojde k chybě nevyřešené linkeru, spusťte [dumpbin /linkermember](linkermember.md): 1 na delayimp.lib, který očekáváte, že obsahují pomocnou funkci zobrazíte, které pomocná funkce je definována místo. Pomocná funkce mohou být také definovány v souboru objektů; Spustit [dumpbin /symbols](symbols.md) a hledejte `delayLoadHelper(2)`.
+Pokud se zobrazí nevyřešená chyba propojovacího systému, spusťte [dumpbin /linkermember](linkermember.md):1 na souboru delayimp.lib, který očekáváte, že bude obsahovat pomocnou funkci, abyste zjistili, která pomocná funkce je definována místo toho. Pomocná funkce může být také definována v souboru objektu; spustit [dumpbin /symboly](symbols.md) a hledat `delayLoadHelper(2)`.
 
-Pokud víte, že máte linker Visual C++ 6.0, pak:
+Pokud víte, že máte propojovací program Visual C++ 6.0, pak:
 
-- Spusťte dumpbin pomocné rutiny zatížení zpoždění LIB nebo .obj soubor k určení, zda definuje **__delayloadhelper2 –**. Pokud ne, propojení se nezdaří.
+- Spusťte dumpbin v souboru lib nebo obj pomocníka pro zpoždění a zjistěte, zda definuje **__delayLoadHelper2**. Pokud ne, odkaz se nezdaří.
 
-- Definování **__delayloadhelper –** v zpoždění načíst soubor .lib nebo .obj pomocné rutiny.
+- Definujte **__delayLoadHelper** v souboru lib nebo obj pomocníka pro zpoždění.
 
-## <a name="user-defined-helper-function"></a>Uživatelem definované pomocné funkce
+## <a name="user-defined-helper-function"></a>Uživatelem definovaná pomocná funkce
 
-Je-li definovány vlastní pomocné funkce a používáte aktuální verzi jazyka Visual C++, postupujte takto:
+Pokud jste definovali vlastní pomocnou funkci a používáte aktuální verzi visual c++, postupujte takto:
 
-- Přejmenovat pomocnou funkci pro **__delayloadhelper2 –**.
+- Přejmenujte pomocnou funkci na **__delayLoadHelper2**.
 
-- Protože ukazatele v popisovači zpoždění (v delayimp.h ImgDelayDescr) byly změněny z absolutních adresách (pro vozidla) na relativní adresy (RVA) fungovat podle očekávání v obě 32bitové a 64bitové aplikace, musíte převést tyto zpět na ukazatele. Byly zavedeny nové funkce: Pfromrva – součástí delayhlp.cpp. Tuto funkci můžete použít na všech polí v popisovači převést zpět na buď ukazatele 32 nebo 64 bitů. Pomocná funkce výchozí zpoždění zatížení nadále funkční šablonu, která slouží jako příklad.
+- Vzhledem k tomu, že ukazatele v popisovači zpoždění (ImgDelayDescr v delayimp.h) byly změněny z absolutní adresy (VAs) na relativní adresy (RVAs) pracovat podle očekávání v 32- a 64bitových programech, je třeba převést tyto zpět na ukazatele. Byla zavedena nová funkce: PFromRva, nalezená v delayhlp.cpp. Tuto funkci můžete použít u každého z polí v popisovači a převést je zpět na 32bitové nebo 64bitové ukazatele. Výchozí funkce pomocníka pro načítání zpoždění je i nadále dobrou šablonou, kterou lze použít jako příklad.
 
-## <a name="load-all-imports-for-a-delay-loaded-dll"></a>Načtení všech importů pro knihovnu DLL se zpožděným načtením
+## <a name="load-all-imports-for-a-delay-loaded-dll"></a>Načíst všechny importy pro zpožděnou dll
 
-Propojovací program můžete načíst všechny importy z knihovny DLL, který jste zadali jako zpožděné načtení. Zobrazit [načtení všech importů pro knihovnu DLL Delay-Loaded](loading-all-imports-for-a-delay-loaded-dll.md) Další informace.
+Propojovací aplikace může načíst všechny importy z dll, které jste zadali zpoždění načten. Další informace naleznete [v tématu Načítání všech importů pro zpoždění načtenou dll.](loading-all-imports-for-a-delay-loaded-dll.md)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Základní informace o podpůrné funkci](understanding-the-helper-function.md)

@@ -1,6 +1,6 @@
 ---
-title: Struktura ANALYSIS_DESCRIPTOR
-description: Odkaz C++ na strukturu ANALYSIS_DESCRIPTOR Build Insights SDK
+title: ANALYSIS_DESCRIPTOR struktura
+description: C++ Build Insights SDK ANALYSIS_DESCRIPTOR odkaz na strukturu.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: fc11ce11e1faaae02edb36aac447c18ea8107e35
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 1de7f2a5bc3f02a327daaecf8c2cebc44687ba43
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78332479"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81323616"
 ---
-# <a name="analysis_descriptor-structure"></a>Struktura ANALYSIS_DESCRIPTOR
+# <a name="analysis_descriptor-structure"></a>ANALYSIS_DESCRIPTOR struktura
 
 ::: moniker range="<=vs-2015"
 
-Sada C++ SDK pro Build Insights je kompatibilní se sadou Visual Studio 2017 a novější. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek selektor verzí sady Visual Studio pro tento článek na sadu Visual Studio 2017 nebo Visual Studio 2019.
+Sada C++ Build Insights SDK je kompatibilní s Visual Studio 2017 a vyšší. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek pro výběr **verze** sady Visual Studio pro tento článek na Visual Studio 2017 nebo Visual Studio 2019. Nachází se v horní části obsahu na této stránce.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Struktura `ANALYSIS_DESCRIPTOR` se používá s funkcemi [analyze](../functions/analyze-a.md) a [AnalyzeW](../functions/analyze-w.md) . Popisuje, jak by mělo být analyzováno trasování událostí pro Windows (ETW).
+Struktura `ANALYSIS_DESCRIPTOR` se používá s [funkcemi AnalyzeA](../functions/analyze-a.md) a [AnalyzeW.](../functions/analyze-w.md) Popisuje, jak trasování událostí pro Windows (ETW) trasování by měly být analyzovány.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -42,12 +42,12 @@ typedef struct ANALYSIS_DESCRIPTOR_TAG
 
 |  |  |
 |--|--|
-| `NumberOfPasses` | Počet průchodů analýzy, které by se měly provést v trasování ETW. |
-| `Callbacks` | Objekt [ANALYSIS_CALLBACKS](analysis-callbacks-struct.md) , který určuje funkce, které mají být volány během relace analýzy. |
-| `Context` | Uživatelem zadaný kontext, který se předává jako argument všem funkcím zpětného volání určených v `Callbacks` |
+| `NumberOfPasses` | Počet průchodů analýzy, které by měly být provedeny přes trasování ETW. |
+| `Callbacks` | Objekt [ANALYSIS_CALLBACKS,](analysis-callbacks-struct.md) který určuje, které funkce se mají volat během relace analýzy. |
+| `Context` | Kontext poskytnutý uživatelem, který je předán jako argument všem funkcím zpětného volání určeným v`Callbacks` |
 
 ## <a name="remarks"></a>Poznámky
 
-Struktura `Callbacks` akceptuje pouze ukazatele na nečlenské funkce. Toto omezení můžete obejít nastavením `Context` na ukazatel objektu. Tento ukazatel objektu se předává jako argument všem funkcím zpětného volání, které nepatří do členů. Tento ukazatel použijte k volání členských funkcí v rámci funkcí zpětného volání, které nepatří do členů.
+Struktura `Callbacks` přijímá pouze ukazatele na nečlenné funkce. Toto omezení můžete obejít nastavením `Context` ukazatele objektu. Tento ukazatel objektu bude předán jako argument všem funkcím zpětného volání bez členů. Pomocí tohoto ukazatele můžete volat členské funkce z nečlenských funkcí zpětného volání.
 
 ::: moniker-end

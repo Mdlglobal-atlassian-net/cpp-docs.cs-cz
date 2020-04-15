@@ -7,35 +7,35 @@ helpviewer_keywords:
 - __asm keyword [C++], data members
 - structure types in __asm blocks
 ms.assetid: e99f5a28-0381-4090-8ece-6af8f2436a49
-ms.openlocfilehash: 1f56cc5c049c1501ea09c76f31be3ab9dea5ed10
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b4341f87226118906749dcdb18b9227e68be6a23
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62167605"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81318082"
 ---
-# <a name="accessing-c-or-c-data-in-asm-blocks"></a>Přístup k datům jazyka C nebo C++ v blocích __asm
+# <a name="accessing-c-or-c-data-in-__asm-blocks"></a>Přístup k datům jazyka C nebo C++ v blocích __asm
 
-**Microsoft Specific**
+**Specifické pro Microsoft**
 
-Skvělou výhodou vloženého sestavení je možnost odkazovat na proměnné jazyka C nebo C++ podle názvu. `__asm` Bloku mohou odkazovat na žádné symboly, včetně názvy proměnných, které jsou v oboru, ve kterém se zobrazí bloku. Například pokud proměnnou C `var` je v oboru, instrukce
+Velké pohodlí vřádkové sestavení je schopnost odkazovat na c nebo C++ proměnné podle názvu. Blok `__asm` může odkazovat na všechny symboly, včetně názvů proměnných, které jsou v oboru, kde se zobrazí blok. Například, pokud c `var` proměnná je v oboru, instrukce
 
 ```cpp
 __asm mov eax, var
 ```
 
-uloží hodnotu `var` v EAX.
+ukládá hodnotu `var` v EAX.
 
-Pokud třídy, struktury nebo člen sjednocení musí mít jedinečný název `__asm` bloku může odkazovat pomocí pouze název člena, bez zadání proměnné nebo `typedef` název před období (**.**) – operátor. Pokud název členu není jedinečný, ale musíte umístit do proměnné nebo `typedef` název bezprostředně před operátor období. Například typy struktur v této sdílené složce ukázka `same_name` jako jména členů:.
+Pokud má člen třídy, struktury nebo sjednocení `__asm` jedinečný název, může na něj blok odkazovat `typedef` pouze pomocí názvu člena, aniž by byl před operátorem period (**.**) specifikován proměnná nebo název. Pokud však název člena není jedinečný, musíte `typedef` umístit proměnnou nebo název bezprostředně před operátor období. Například typy struktury v následujícím `same_name` vzorku sdílejí jako název svého člena:.
 
-Při deklarování proměnné s typy
+Pokud deklarujete proměnné s typy
 
 ```cpp
 struct first_type hal;
 struct second_type oat;
 ```
 
-všechny odkazy na člen `same_name` musíte použít název proměnné, protože `same_name` není jedinečný. Ale člen `weasel` má jedinečný název, takže můžete odkazovat pomocí pouze jeho název člena:
+všechny odkazy na `same_name` člen musí použít `same_name` název proměnné, protože není jedinečný. Ale člen `weasel` má jedinečný název, takže na něj můžete odkazovat pouze pomocí jeho názvu člena:
 
 ```cpp
 // InlineAssembler_Accessing_C_asm_Blocks.cpp
@@ -68,12 +68,12 @@ int main()
 }
 ```
 
-Všimněte si, že vynechání název proměnné je pouze pro potřebu psaní kódu. Stejné pokyny k sestavení jsou generovány, zda je název proměnné je k dispozici.
+Všimněte si, že vynechání názvu proměnné je pouze pohodlí kódování. Stejné pokyny sestavení jsou generovány bez ohledu na to, zda je k dispozici název proměnné.
 
-Můžete přistupovat datové členy v jazyce C++ bez ohledu na omezení přístupu. Nelze však volat členské funkce.
+Můžete přistupovat k datovým členům v jazyce C++ bez ohledu na omezení přístupu. Však nelze volat členské funkce.
 
-**Specifické pro END Microsoft**
+**END Microsoft Specifické**
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Použití jazyka C nebo C++ v blocích __asm](../../assembler/inline/using-c-or-cpp-in-asm-blocks.md)<br/>

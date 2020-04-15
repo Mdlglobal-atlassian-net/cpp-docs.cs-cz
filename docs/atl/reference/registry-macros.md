@@ -12,34 +12,34 @@ f1_keywords:
 helpviewer_keywords:
 - registry, ATL macros
 ms.assetid: 3ee041da-c63b-42a4-89cf-2a4b2a6f81ae
-ms.openlocfilehash: c2a70c15473798ba6eb2ef35e0b7ded395708586
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: fd012b4300f4cd72cdc9ab363b770ac1dbefa06e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79417500"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81326047"
 ---
 # <a name="registry-macros"></a>Makra registru
 
-Tato makra definují užitečnou knihovnu typů a možnosti registru.
+Tato makra definují užitečná knihovna typů a zařízení registru.
 
 |||
 |-|-|
-|[_ATL_STATIC_REGISTRY](#_atl_static_registry)|Označuje, že chcete, aby byl registrační kód objektu v objektu, aby nedošlo k závislosti na knihovně ATL. DLL.|
-|[DECLARE_LIBID](#declare_libid)|Poskytuje způsob, jak ATL získat *LIBID* knihovny typů.|
-|[DECLARE_NO_REGISTRY](#declare_no_registry)|Vyhněte se výchozí registraci ATL.|
-|[DECLARE_REGISTRY](#declare_registry)|Zadá nebo odebere položku hlavního objektu v registru systému.|
-|[DECLARE_REGISTRY_APPID_RESOURCEID](#declare_registry_appid_resourceid)|Určuje informace potřebné k automatické registraci *AppID*.|
-|[DECLARE_REGISTRY_RESOURCE](#declare_registry_resource)|Najde pojmenovaný prostředek a spustí v něm skript registru.|
-|[DECLARE_REGISTRY_RESOURCEID](#declare_registry_resourceid)|Vyhledá prostředek identifikovaný IDENTIFIKAČNÍm číslem a spustí v něm skript registru.|
+|[_ATL_STATIC_REGISTRY](#_atl_static_registry)|Označuje, že chcete, aby registrační kód objektu byl v objektu, aby se zabránilo závislosti na knihovně ATL. Knihovny dll.|
+|[DECLARE_LIBID](#declare_libid)|Poskytuje způsob, jak knihovna ATL získat *libid* knihovny typů.|
+|[DECLARE_NO_REGISTRY](#declare_no_registry)|Zabraňuje výchozí registraci atl.|
+|[DECLARE_REGISTRY](#declare_registry)|Zadá nebo odebere položku hlavního objektu v systémovém registru.|
+|[DECLARE_REGISTRY_APPID_RESOURCEID](#declare_registry_appid_resourceid)|Určuje informace potřebné k automatické *registraci appid*.|
+|[DECLARE_REGISTRY_RESOURCE](#declare_registry_resource)|Vyhledá pojmenovaný prostředek a spustí v něm skript registru.|
+|[DECLARE_REGISTRY_RESOURCEID](#declare_registry_resourceid)|Vyhledá prostředek identifikovaný číslem ID a spustí v něm skript registru.|
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlcom. h
+**Záhlaví:** atlcom.h
 
-##  <a name="_atl_static_registry"></a>_ATL_STATIC_REGISTRY
+## <a name="_atl_static_registry"></a><a name="_atl_static_registry"></a>_ATL_STATIC_REGISTRY
 
-Symbol, který označuje, zda má být registrační kód objektu v objektu, aby se předešlo závislosti na knihovně ATL. DLL.
+Symbol, který označuje, že chcete registrační kód objektu být v objektu, aby se zabránilo závislosti na knihovně ATL. Knihovny dll.
 
 ```
 #define _ATL_STATIC_REGISTRY
@@ -51,9 +51,9 @@ Při definování ATL_STATIC_REGISTRY byste měli použít následující kód:
 
 [!code-cpp[NVC_ATL_EventHandlingSample#5](../../atl/codesnippet/cpp/registry-macros_1.cpp)]
 
-##  <a name="declare_libid"></a>DECLARE_LIBID
+## <a name="declare_libid"></a><a name="declare_libid"></a>DECLARE_LIBID
 
-Poskytuje způsob, jak ATL získat *LIBID* knihovny typů.
+Poskytuje způsob, jak knihovna ATL získat *libid* knihovny typů.
 
 ```
 DECLARE_LIBID( libid )
@@ -61,28 +61,28 @@ DECLARE_LIBID( libid )
 
 ### <a name="parameters"></a>Parametry
 
-*LIBID*<br/>
-Identifikátor GUID knihovny typů
+*libid*<br/>
+Identifikátor GUID knihovny typů.
 
 ### <a name="remarks"></a>Poznámky
 
-Použijte DECLARE_LIBID ve třídě odvozené `CAtlModuleT`.
+Použijte DECLARE_LIBID `CAtlModuleT`v odvozené třídě.
 
 ### <a name="example"></a>Příklad
 
-Projekty ATL založené na atributech, které nejsou vygenerované pomocí atributů, budou mít ukázku použití tohoto makra.
+Nepřiřazené projekty knihovny ATL generované průvodcem budou mít vzorek použití tohoto makra.
 
-##  <a name="declare_no_registry"></a>DECLARE_NO_REGISTRY
+## <a name="declare_no_registry"></a><a name="declare_no_registry"></a>DECLARE_NO_REGISTRY
 
-Použijte DECLARE_NO_REGISTRY, pokud chcete zabránit jakémukoli výchozí registraci ATL pro třídu, ve které se toto makro zobrazí.
+Pokud se chcete vyhnout výchozí registraci atl pro třídu, ve které se toto makro zobrazí, použijte DECLARE_NO_REGISTRY.
 
 ```
 DECLARE_NO_REGISTRY()
 ```
 
-##  <a name="declare_registry"></a>DECLARE_REGISTRY
+## <a name="declare_registry"></a><a name="declare_registry"></a>DECLARE_REGISTRY
 
-Zadá standardní registraci třídy do systémového registru nebo ji odebere ze systémového registru.
+Zadá registraci standardní třídy do systémového registru nebo ji odebere ze systémového registru.
 
 ```
 DECLARE_REGISTRY(
@@ -95,30 +95,30 @@ DECLARE_REGISTRY(
 
 ### <a name="parameters"></a>Parametry
 
-*class*<br/>
-pro Zahrnuto z důvodu zpětné kompatibility.
+*třída*<br/>
+[v] Součástí je zpětná kompatibilita.
 
-*PID*<br/>
-pro LPCTSTR, který je identifikátorem programu specifickým pro verzi.
+*Pid*<br/>
+[v] LPCTSTR, který je identifikátor programu specifické pro verzi.
 
 *vpid*<br/>
-pro LPCTSTR, který je identifikátor programu nezávislý na verzi.
+[v] LPCTSTR, který je identifikátor programu nezávislý na verzi.
 
-*nid*<br/>
-pro UINT, který je indexem řetězce prostředku v registru, který se má použít jako popis programu.
+*Nid*<br/>
+[v] UINT, který je index řetězce prostředků v registru použít jako popis programu.
 
-*Flag*<br/>
-pro Hodnota DWORD obsahující model vláken tohoto programu v registru. Musí být jedna z následujících hodnot: THREADFLAGS_APARTMENT, THREADFLAGS_BOTH nebo AUTPRXFLAG.
+*příznaky*<br/>
+[v] DWORD obsahující model zřetězení programu v registru. Musí být jedna z následujících hodnot: THREADFLAGS_APARTMENT, THREADFLAGS_BOTH nebo AUTPRXFLAG.
 
 ### <a name="remarks"></a>Poznámky
 
-Standardní registrace se skládá z identifikátoru CLSID, ID programu, ID programu nezávislého na verzi, řetězce popisu a modelu vlákna.
+Standardní registrace se skládá z CLSID, ID programu, ID programu nezávislého na verzi, řetězce popisu a modelu vlákna.
 
-Při vytváření objektu nebo ovládacího prvku pomocí Průvodce přidáním třídy ATL Průvodce automaticky implementuje podporu registru založenou na skriptech a přidá makro [DECLARE_REGISTRY_RESOURCEID](#declare_registry_resourceid) do souborů. Pokud nechcete podporu registru založenou na skriptech, musíte toto makro nahradit DECLARE_REGISTRY. DECLARE_REGISTRY do registru vloží jenom pět základních klíčů popsaných výše. Je nutné ručně napsat kód pro vložení dalších klíčů do registru.
+Když vytvoříte objekt nebo ovládací prvek pomocí Průvodce přidáním třídy knihovny ATL, průvodce automaticky implementuje podporu registru založenou na skriptech a přidá [DECLARE_REGISTRY_RESOURCEID](#declare_registry_resourceid) makro do souborů. Pokud nechcete podporu registru založeného na skriptech, je třeba toto makro nahradit DECLARE_REGISTRY. DECLARE_REGISTRY vloží do registru pouze pět výše popsaných základních klíčů. Chcete-li vložit další klíče do registru, je nutné ručně napsat kód.
 
-##  <a name="declare_registry_appid_resourceid"></a>DECLARE_REGISTRY_APPID_RESOURCEID
+## <a name="declare_registry_appid_resourceid"></a><a name="declare_registry_appid_resourceid"></a>DECLARE_REGISTRY_APPID_RESOURCEID
 
-Určuje informace potřebné k automatické registraci *AppID*.
+Určuje informace potřebné k automatické *registraci appid*.
 
 ```
 DECLARE_REGISTRY_APPID_RESOURCEID(
@@ -128,23 +128,23 @@ DECLARE_REGISTRY_APPID_RESOURCEID(
 
 ### <a name="parameters"></a>Parametry
 
-*RESID*<br/>
-ID prostředku souboru. rgs, který obsahuje informace o *AppID*.
+*Resid*<br/>
+ID prostředku souboru RGS, který obsahuje informace o *appid*.
 
-*identifikátor*<br/>
-IDENTIFIKÁTOR GUID.
+*Appid*<br/>
+Identifikátor GUID.
 
 ### <a name="remarks"></a>Poznámky
 
-Použijte DECLARE_REGISTRY_APPID_RESOURCEID ve třídě odvozené `CAtlModuleT`.
+Použijte DECLARE_REGISTRY_APPID_RESOURCEID `CAtlModuleT`v odvozené třídě.
 
 ### <a name="example"></a>Příklad
 
-Třídy přidané do projektů ATL pomocí Průvodce přidáním kódu třídy budou mít ukázku použití tohoto makra.
+Třídy přidané do projektů ATL pomocí průvodce přidáním kódu třídy budou mít ukázku použití tohoto makra.
 
-##  <a name="declare_registry_resource"></a>DECLARE_REGISTRY_RESOURCE
+## <a name="declare_registry_resource"></a><a name="declare_registry_resource"></a>DECLARE_REGISTRY_RESOURCE
 
-Získá pojmenovaný prostředek obsahující soubor registru a spustí skript pro zadání objektů do systémového registru nebo jejich odebrání ze systémového registru.
+Získá pojmenovaný prostředek obsahující soubor registru a spustí skript pro buď zadávat objekty do systémového registru nebo je odebrat ze systémového registru.
 
 ```
 DECLARE_REGISTRY_RESOURCE( x )
@@ -152,24 +152,24 @@ DECLARE_REGISTRY_RESOURCE( x )
 
 ### <a name="parameters"></a>Parametry
 
-*znak*<br/>
-pro Identifikátor řetězce vašeho prostředku
+*X*<br/>
+[v] Identifikátor řetězce vašeho prostředku.
 
 ### <a name="remarks"></a>Poznámky
 
-Při vytváření objektu nebo ovládacího prvku pomocí Průvodce projektem ATL Průvodce automaticky implementuje podporu registru založenou na skriptech a přidá makro [DECLARE_REGISTRY_RESOURCEID](#declare_registry_resourceid) , které je podobně jako DECLARE_REGISTRY_RESOURCE, do souborů.
+Při vytváření objektu nebo ovládacího prvku pomocí Průvodce projektem knihovny ATL průvodce automaticky implementuje podporu registru založenou na skriptech a přidá do souborů [makro DECLARE_REGISTRY_RESOURCEID,](#declare_registry_resourceid) které je podobné DECLARE_REGISTRY_RESOURCE.
 
-Pro optimalizovaný přístup k registru můžete staticky propojit komponentu registru ATL (registrátor). Chcete-li staticky propojit kód registrátora, přidejte následující řádek do souboru *PCH. h* (*stdafx. h* v aplikaci Visual Studio 2017 a starší):
+Můžete staticky propojit s součástí registru ATL (Registrar) pro optimalizovaný přístup k registru. Chcete-li staticky propojit kód registrátora, přidejte do souboru *pch.h* následující řádek (*stdafx.h* v sadě Visual Studio 2017 a starší):
 
 [!code-cpp[NVC_ATL_COM#56](../../atl/codesnippet/cpp/registry-macros_2.h)]
 
-Pokud chcete, aby knihovna ATL nahradila nahrazující hodnoty za běhu, nezadávejte makro DECLARE_REGISTRY_RESOURCE nebo DECLARE_REGISTRY_RESOURCEID. Místo toho vytvořte pole `_ATL_REGMAP_ENTRIES` struktury, kde každá položka obsahuje zástupný symbol s proměnnou s hodnotou, která má nahradit zástupný symbol za běhu. Pak zavolejte [CAtlModule:: UpdateRegistryFromResourceD](catlmodule-class.md#updateregistryfromresourced) nebo [CAtlModule:: UpdateRegistryFromResourceS](catlmodule-class.md#updateregistryfromresources)a předejte pole. Tím se přidají všechny nahrazující hodnoty ve strukturách `_ATL_REGMAP_ENTRIES` do náhradní mapy registrátora.
+Pokud chcete, aby společnost ATL nahradila náhradní hodnoty za běhu, nezadávejte DECLARE_REGISTRY_RESOURCE nebo DECLARE_REGISTRY_RESOURCEID makro. Místo toho vytvořte `_ATL_REGMAP_ENTRIES` pole struktur, kde každá položka obsahuje variabilní zástupný symbol spárovaný s hodnotou, která nahradí zástupný symbol za běhu. Potom zavolejte [CAtlModule::UpdateRegistryFromResourceD](catlmodule-class.md#updateregistryfromresourced) nebo [CAtlModule::UpdateRegistryFromResourceS](catlmodule-class.md#updateregistryfromresources), předání pole. Tím se všechny náhradní hodnoty `_ATL_REGMAP_ENTRIES` ve strukturách přidá do náhradní mapy registrátora.
 
-Další informace o nahraditelných parametrech a skriptování naleznete v článku [Komponenta registru ATL (registrátor)](../../atl/atl-registry-component-registrar.md).
+Další informace o nahraditelných parametrech a skriptování naleznete v článku [Součást registru ATL (registrátor)](../../atl/atl-registry-component-registrar.md).
 
-##  <a name="declare_registry_resourceid"></a>DECLARE_REGISTRY_RESOURCEID
+## <a name="declare_registry_resourceid"></a><a name="declare_registry_resourceid"></a>DECLARE_REGISTRY_RESOURCEID
 
-Stejné jako u [DECLARE_REGISTRY_RESOURCE](#declare_registry_resource) s tím rozdílem, že používá k identifikaci prostředku objekt uint generovaný průvodcem, nikoli název řetězce.
+Stejné jako [DECLARE_REGISTRY_RESOURCE](#declare_registry_resource) s tím rozdílem, že používá průvodce generované UINT k identifikaci prostředku, spíše než název řetězce.
 
 ```
 DECLARE_REGISTRY_RESOURCEID( x )
@@ -177,21 +177,21 @@ DECLARE_REGISTRY_RESOURCEID( x )
 
 ### <a name="parameters"></a>Parametry
 
-*znak*<br/>
-pro Identifikátor vygenerovaného průvodcem pro váš prostředek.
+*X*<br/>
+[v] Identifikátor zdroje generovaný průvodcem.
 
 ### <a name="remarks"></a>Poznámky
 
-Při vytváření objektu nebo ovládacího prvku pomocí Průvodce projektem ATL Průvodce automaticky implementuje podporu registru založenou na skriptech a přidá makro DECLARE_REGISTRY_RESOURCEID do souborů.
+Při vytváření objektu nebo ovládacího prvku pomocí Průvodce projektem knihovny ATL průvodce automaticky implementuje podporu registru založenou na skriptech a přidá DECLARE_REGISTRY_RESOURCEID makro do souborů.
 
-Pro optimalizovaný přístup k registru můžete staticky propojit komponentu registru ATL (registrátor). Chcete-li staticky propojit kód registrátora, přidejte následující řádek do souboru *stdafx. h* (*PCH. h* v aplikaci Visual Studio 2019 a novější):
+Můžete staticky propojit s součástí registru ATL (Registrar) pro optimalizovaný přístup k registru. Chcete-li staticky propojit kód registrátora, přidejte do *souboru stdafx.h* následující řádek *(pch.h* v sadě Visual Studio 2019 a novější):
 
 [!code-cpp[NVC_ATL_COM#56](../../atl/codesnippet/cpp/registry-macros_2.h)]
 
-Pokud chcete, aby knihovna ATL nahradila nahrazující hodnoty za běhu, nezadávejte makro DECLARE_REGISTRY_RESOURCE nebo DECLARE_REGISTRY_RESOURCEID. Místo toho vytvořte pole `_ATL_REGMAP_ENTRIES` struktury, kde každá položka obsahuje zástupný symbol s proměnnou s hodnotou, která má nahradit zástupný symbol za běhu. Pak zavolejte [CAtlModule:: UpdateRegistryFromResourceD](catlmodule-class.md#updateregistryfromresourced) nebo [CAtlModule:: UpdateRegistryFromResourceS](catlmodule-class.md#updateregistryfromresources)a předejte pole. Tím se přidají všechny nahrazující hodnoty ve strukturách `_ATL_REGMAP_ENTRIES` do náhradní mapy registrátora.
+Pokud chcete, aby společnost ATL nahradila náhradní hodnoty za běhu, nezadávejte DECLARE_REGISTRY_RESOURCE nebo DECLARE_REGISTRY_RESOURCEID makro. Místo toho vytvořte `_ATL_REGMAP_ENTRIES` pole struktur, kde každá položka obsahuje variabilní zástupný symbol spárovaný s hodnotou, která nahradí zástupný symbol za běhu. Potom zavolejte [CAtlModule::UpdateRegistryFromResourceD](catlmodule-class.md#updateregistryfromresourced) nebo [CAtlModule::UpdateRegistryFromResourceS](catlmodule-class.md#updateregistryfromresources), předání pole. Tím se všechny náhradní hodnoty `_ATL_REGMAP_ENTRIES` ve strukturách přidá do náhradní mapy registrátora.
 
-Další informace o nahraditelných parametrech a skriptování naleznete v článku [Komponenta registru ATL (registrátor)](../../atl/atl-registry-component-registrar.md).
+Další informace o nahraditelných parametrech a skriptování naleznete v článku [Součást registru ATL (registrátor)](../../atl/atl-registry-component-registrar.md).
 
 ## <a name="see-also"></a>Viz také
 
-[Makr](../../atl/reference/atl-macros.md)
+[Makra](../../atl/reference/atl-macros.md)

@@ -1,5 +1,5 @@
 ---
-title: CSettingsStoreSP Class
+title: CSettingsStoreSP – třída
 ms.date: 11/04/2016
 f1_keywords:
 - CSettingsStoreSP
@@ -12,16 +12,16 @@ helpviewer_keywords:
 - CSettingsStoreSP [MFC], Create
 - CSettingsStoreSP [MFC], SetRuntimeClass
 ms.assetid: bcd37f40-cfd4-4d17-a5ce-3bfabe995dcc
-ms.openlocfilehash: 5c7a992b983552340ebe21e59d2ee9a667841ec0
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 9e22184a4081762a3d505645752e514315146981
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64339523"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81318455"
 ---
-# <a name="csettingsstoresp-class"></a>CSettingsStoreSP Class
+# <a name="csettingsstoresp-class"></a>CSettingsStoreSP – třída
 
-`CSettingsStoreSP` Třída je pomocná třída, která můžete použít k vytvoření instance [csettingsstore – třída](../../mfc/reference/csettingsstore-class.md).
+Třída `CSettingsStoreSP` je pomocná třída, kterou můžete použít k vytvoření instancí [třídy CSettingsStore](../../mfc/reference/csettingsstore-class.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,47 +33,47 @@ class CSettingsStoreSP
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CSettingsStoreSP::CSettingsStoreSP](#csettingsstoresp)|Vytvoří `CSettingsStoreSP` objektu.|
+|[CSettingsStoreSP::CSettingsStoreSP](#csettingsstoresp)|Vytvoří `CSettingsStoreSP` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CSettingsStoreSP::Create](#create)|Vytvoří instanci třídy, která je odvozena od `CSettingsStore`.|
-|[CSettingsStoreSP::SetRuntimeClass](#setruntimeclass)|Nastaví třídu modulu runtime. `Create` Metoda třídy modulu runtime používá k určení jaké třídu objektů, které chcete vytvořit.|
+|[CSettingsStoreSP::Vytvořit](#create)|Vytvoří instanci třídy, která `CSettingsStore`je odvozena z aplikace .|
+|[CSettingsStoreSP::SetRuntimeClass](#setruntimeclass)|Nastaví třídu runtime. Metoda `Create` používá runtime třídy k určení, jakou třídu objektů vytvořit.|
 
-### <a name="data-members"></a>Datové členy
+### <a name="data-members"></a>Členové dat
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|`m_dwUserData`|Vlastní uživatelská data, která je uložena v `CSettingsStoreSP` objektu. Zadat tato data v konstruktoru `CSettingsStoreSP` objektu.|
-|`m_pRegistry`|`CSettingsStore`-Odvozené objekt, který `Create` metoda vytvoří.|
+|`m_dwUserData`|Vlastní uživatelská data uložená v objektu. `CSettingsStoreSP` Tato data zadáte v konstruktoru objektu. `CSettingsStoreSP`|
+|`m_pRegistry`|-derived `CSettingsStore`objekt, `Create` který metoda vytvoří.|
 
 ## <a name="remarks"></a>Poznámky
 
-Můžete použít `CSettingsStoreSP` třídy přesměrovat všechny operace s registrem knihovny MFC do jiných umístění, jako je například soubor XML nebo databáze. Postupujte přitom takto:
+Třídu `CSettingsStoreSP` můžete použít k přesměrování všech operací registru knihovny MFC do jiných umístění, například do souboru XML nebo do databáze. Postupujte přitom takto:
 
-1. Vytvořte třídu (například `CMyStore`) a jsou odvozeny z `CSettingsStore`.
+1. Vytvořte třídu `CMyStore`(například) `CSettingsStore`a odvodit ji z .
 
-1. Použití [DECLARE_DYNCREATE](run-time-object-model-services.md#declare_dyncreate) a [IMPLEMENT_DYNCREATE](run-time-object-model-services.md#implement_dyncreate) makra s vlastní `CSettingsStore` třídy můžete povolit dynamické vytváření.
+1. Pomocí [DECLARE_DYNCREATE](run-time-object-model-services.md#declare_dyncreate) a [IMPLEMENT_DYNCREATE](run-time-object-model-services.md#implement_dyncreate) makra s vlastní `CSettingsStore` třídou povolte dynamické vytváření.
 
-1. Přepsání virtuální funkce a provádět `Read` a `Write` funkce ve své vlastní třídě. Implementujte další funkce pro čtení a zápis dat do požadovaného umístění.
+1. Přepsat virtuální funkce a `Read` implementovat a `Write` funkce ve vlastní třídě. Implementujte všechny další funkce pro čtení a zápis dat do požadovaného umístění.
 
-1. V aplikaci volat `CSettingsStoreSP::SetRuntimeClass` a předat ukazatel [CRuntimeClass – struktura](../../mfc/reference/cruntimeclass-structure.md) získané z vaší třídy.
+1. Ve vaší aplikaci volání `CSettingsStoreSP::SetRuntimeClass` a předání v ukazatel na [CRuntimeClass struktury](../../mfc/reference/cruntimeclass-structure.md) získané z vaší třídy.
 
-Pokaždé, když se rozhraní by obvykle přistupovali k registru, bude nyní dynamicky vytvořit instanci vlastní třída a použít ke čtení nebo zápis dat.
+Vždy, když rozhraní obvykle přístup k registru, bude nyní dynamicky konstanci vlastní třídy a použít ji ke čtení nebo zápisu dat.
 
-`CSettingsStoreSP::SetRuntimeClass` používá globální statické proměnné. Jenom jeden vlastní úložiště je proto k dispozici v čase.
+`CSettingsStoreSP::SetRuntimeClass`používá globální statickou proměnnou. Proto je k dispozici pouze jeden vlastní úložiště současně.
 
 ## <a name="requirements"></a>Požadavky
 
 **Záhlaví:** afxsettingsstore.h
 
-##  <a name="create"></a>  CSettingsStoreSP::Create
+## <a name="csettingsstorespcreate"></a><a name="create"></a>CSettingsStoreSP::Vytvořit
 
-Vytvoří novou instanci objektu, který je odvozen z [csettingsstore – třída](../../mfc/reference/csettingsstore-class.md).
+Vytvoří novou instanci objektu, který je odvozen z [CSettingsStore Class](../../mfc/reference/csettingsstore-class.md).
 
 ```
 CSettingsStore& CSettingsStoreSP Create(
@@ -84,32 +84,32 @@ CSettingsStore& CSettingsStoreSP Create(
 ### <a name="parameters"></a>Parametry
 
 *bAdmin*<br/>
-[in] Parametr logické hodnoty, která určuje, zda `CSettingsStore` objekt je vytvořen v režimu správce.
+[v] Logický parametr, který určuje, `CSettingsStore` zda je objekt vytvořen v režimu správce.
 
 *bReadOnly*<br/>
-[in] Parametr logické hodnoty, která určuje, zda `CSettingsStore` vytvoření objektu pro přístup jen pro čtení.
+[v] Logický parametr, který určuje, `CSettingsStore` zda je objekt vytvořen pro přístup jen pro čtení.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Odkaz na nově vytvořený `CSettingsStore` objektu.
+Odkaz na nově `CSettingsStore` vytvořený objekt.
 
 ### <a name="remarks"></a>Poznámky
 
-Můžete použít metodu [CSettingsStoreSP::SetRuntimeClass](#setruntimeclass) k určení, jaký typ objektu `CSettingsStoreSP::Create` vytvoří. Ve výchozím nastavení, tato metoda vytvoří `CSettingsStore` objektu.
+Můžete použít metodu [CSettingsStoreSP::SetRuntimeClass](#setruntimeclass) k určení, jaký typ objektu `CSettingsStoreSP::Create` vytvoří. Ve výchozím nastavení tato `CSettingsStore` metoda vytvoří objekt.
 
-Pokud jste vytvořili `CSettingsStore` objektu v režimu správce, je výchozím umístěním pro všechny přístup k registru HKEY_LOCAL_MACHINE. V opačném případě je výchozím umístěním pro všechny přístup k registru HKEY_CURRENT_USER.
+Pokud vytvoříte `CSettingsStore` objekt v režimu správce, bude HKEY_LOCAL_MACHINE výchozí umístění pro veškerý přístup k registru. V opačném případě je HKEY_CURRENT_USER výchozí umístění pro veškerý přístup k registru.
 
-Pokud *bAdmin* má hodnotu TRUE, aplikace musí mít administrativní oprávnění. V opačném případě dojde při pokusu o přístup k registru.
+Pokud *je bAdmin* TRUE, aplikace musí mít práva pro správu. V opačném případě se nezdaří při pokusu o přístup k registru.
 
 ### <a name="example"></a>Příklad
 
-Následující příklad ukazuje způsob použití `Create` metodu `CSettingsStoreSP` třídy.
+Následující příklad ukazuje, jak `Create` používat metodu třídy. `CSettingsStoreSP`
 
 [!code-cpp[NVC_MFC_RibbonApp#33](../../mfc/reference/codesnippet/cpp/csettingsstoresp-class_1.cpp)]
 
-##  <a name="csettingsstoresp"></a>  CSettingsStoreSP::CSettingsStoreSP
+## <a name="csettingsstorespcsettingsstoresp"></a><a name="csettingsstoresp"></a>CSettingsStoreSP::CSettingsStoreSP
 
-Vytvoří [csettingsstoresp – třída](../../mfc/reference/csettingsstoresp-class.md) objektu.
+Vytvoří objekt [třídy CSettingsStoreSP.](../../mfc/reference/csettingsstoresp-class.md)
 
 ```
 CSettingsStoreSP::CSettingsStoreSP(DWORD dwUserData = 0);
@@ -118,15 +118,15 @@ CSettingsStoreSP::CSettingsStoreSP(DWORD dwUserData = 0);
 ### <a name="parameters"></a>Parametry
 
 *dwUserData*<br/>
-[in] Data definovaná uživatelem, který `CSettingsStoreSP` objektu úložiště.
+[v] Uživatelem definovaná `CSettingsStoreSP` data, která objekt ukládá.
 
 ### <a name="remarks"></a>Poznámky
 
-`CSettingsStoreSP` Ukládají data z objektu *dwUserData* proměnné chráněný člen `m_dwUserData`.
+Objekt `CSettingsStoreSP` ukládá data z *dwUserData* v `m_dwUserData`proměnné chráněného člena .
 
-##  <a name="setruntimeclass"></a>  CSettingsStoreSP::SetRuntimeClass
+## <a name="csettingsstorespsetruntimeclass"></a><a name="setruntimeclass"></a>CSettingsStoreSP::SetRuntimeClass
 
-Nastaví třídu modulu runtime. Metoda [CSettingsStoreSP::Create](#create) používá třídu runtime k určení typu objektu, který chcete vytvořit.
+Nastaví třídu runtime. Metoda [CSettingsStoreSP::Create](#create) používá třídu runtime k určení typu objektu, který má být vytvořit.
 
 ```
 static BOOL __stdcall CSettingsStoreSP::SetRuntimeClass(CRuntimeClass* pRTI);
@@ -135,18 +135,18 @@ static BOOL __stdcall CSettingsStoreSP::SetRuntimeClass(CRuntimeClass* pRTI);
 ### <a name="parameters"></a>Parametry
 
 *pRTI*<br/>
-[in] Ukazatel na informace o třídě modulu runtime pro třídy odvozené z [csettingsstore – třída](../../mfc/reference/csettingsstore-class.md).
+[v] Ukazatel na informace o třídě runtime pro třídu odvozenou z [třídy CSettingsStore](../../mfc/reference/csettingsstore-class.md).
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE v případě úspěchu; FALSE, pokud třída identifikována *pRTI* není odvozen od `CSettingsStore`.
+PRAVDA v případě úspěchu; FALSE, pokud třída identifikovaná *pRTI* `CSettingsStore`není odvozena z .
 
 ### <a name="remarks"></a>Poznámky
 
-Můžete použít [csettingsstoresp – třída](../../mfc/reference/csettingsstoresp-class.md) odvozovat z `CSettingsStore`. Pomocí této metody `SetRuntimeClass` Pokud budete chtít vytvořit objekty tohoto vlastní třídu, která je odvozena od `CSettingsStore`.
+[Třídu CSettingsStoreSP](../../mfc/reference/csettingsstoresp-class.md) můžete použít k `CSettingsStore`odvození tříd z aplikace . Metodu `SetRuntimeClass` použijte, pokud chcete vytvořit objekty vlastní třídy, která je odvozena od `CSettingsStore`.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
-[CSettingsStore – třída](../../mfc/reference/csettingsstore-class.md)
+[Třída CSettingsStore](../../mfc/reference/csettingsstore-class.md)

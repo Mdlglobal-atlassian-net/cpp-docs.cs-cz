@@ -7,34 +7,34 @@ helpviewer_keywords:
 - event handling, global functions
 - global functions, event handling
 ms.assetid: fd674470-3def-47c3-be1c-894fa85f13e8
-ms.openlocfilehash: bb109c63b497420ad6e797cd8e0b366ce4dc0475
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f2f8269dcf0f59a5d0794d3f16d4c4f85d8841ac
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62276339"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81330139"
 ---
 # <a name="event-handling-global-functions"></a>Globální funkce zpracování událostí
 
-Tato funkce poskytuje obslužné rutiny události.
+Tato funkce poskytuje obslužnou rutinu události.
 
 > [!IMPORTANT]
->  Funkce uvedené v následující tabulce nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.
+> Funkci uvedenou v následující tabulce nelze použít v aplikacích, které se spouštějí v prostředí Windows Runtime.
 
 |||
 |-|-|
-|[AtlWaitWithMessageLoop](#atlwaitwithmessageloop)|Počká na objekt, který má být signalizován, mezitím podle potřeby odbaví zprávy okna.|
+|[AtlWaitWithMessageLoop](#atlwaitwithmessageloop)|Čeká na objekt, který má být signalizován, mezitím dispečink okno zprávy podle potřeby.|
 
 ## <a name="requirements"></a>Požadavky
 
 **Záhlaví:** atlbase.h
 
-##  <a name="atlwaitwithmessageloop"></a>  AtlWaitWithMessageLoop
+## <a name="atlwaitwithmessageloop"></a><a name="atlwaitwithmessageloop"></a>AtlWaitWithMessageLoop
 
 Počká na objekt, který má být signalizován, a mezitím podle potřeby odbaví zprávy okna.
 
 > [!IMPORTANT]
->  Tuto funkci nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.
+> Tuto funkci nelze použít v aplikacích, které se spouštějí v prostředí Windows Runtime.
 
 ```
 BOOL AtlWaitWithMessageLoop(HANDLE hEvent);
@@ -42,17 +42,17 @@ BOOL AtlWaitWithMessageLoop(HANDLE hEvent);
 
 ### <a name="parameters"></a>Parametry
 
-*hEvent*<br/>
-[in] Popisovač objektu čekání.
+*hUdálost*<br/>
+[v] Popisovač objektu čekat.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu PRAVDA, pokud byl signalizován objektu.
+Vrátí hodnotu PRAVDA, pokud byl objekt signalizován.
 
 ### <a name="remarks"></a>Poznámky
 
-To je užitečné, pokud chcete čekat na událost objektu dojít, a oznámí to děje, ale povolit okna zpráv odeslaných během čekání.
+To je užitečné, pokud chcete počkat na událost objektu a být upozorněni, že k ní dochází, ale povolit zprávy okna, které mají být odeslány během čekání.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Funkce](../../atl/reference/atl-functions.md)
+[Functions](../../atl/reference/atl-functions.md)

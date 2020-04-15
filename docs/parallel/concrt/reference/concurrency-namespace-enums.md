@@ -12,26 +12,26 @@ f1_keywords:
 - CONCRT/concurrency::join_type
 - CONCRT/concurrency::message_status Enumeration
 ms.assetid: a40e3b2d-ad21-4229-9880-2cfa84f7ab8f
-ms.openlocfilehash: 716c2d03e6d1ff67566bd28e5931996ea2d400af
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: e3a943ed52ce9653086203713bb98331f809314d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79422232"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372726"
 ---
 # <a name="concurrency-namespace-enums"></a>concurrency – výčty oboru názvů
 
 ||||
 |-|-|-|
 |[Agents_EventType](#agents_eventtype)|[ConcRT_EventType](#concrt_eventtype)|[Concrt_TraceFlags](#concrt_traceflags)|
-|[CriticalRegionType –](#criticalregiontype)|[DynamicProgressFeedbackType –](#dynamicprogressfeedbacktype)|[PolicyElementKey –](#policyelementkey)|
-|[SchedulerType –](#schedulertype)|[SchedulingProtocolType –](#schedulingprotocoltype)|[SwitchingProxyState –](#switchingproxystate)|
-|[WinRTInitializationType –](#winrtinitializationtype)|[agent_status](#agent_status)|[join_type](#join_type)|
+|[CriticalRegionType](#criticalregiontype)|[DynamicProgressFeedbackType](#dynamicprogressfeedbacktype)|[Klíč PolicyElement](#policyelementkey)|
+|[Typ plánovače](#schedulertype)|[SchedulingProtocolType](#schedulingprotocoltype)|[Přepínáníproxystate](#switchingproxystate)|
+|[Typ inicializace WinRT](#winrtinitializationtype)|[agent_status](#agent_status)|[join_type](#join_type)|
 |[message_status](#message_status)|[task_group_status](#task_group_status)|
 
-## <a name="agent_status"></a>Výčet agent_status
+## <a name="agent_status-enumeration"></a><a name="agent_status"></a>agent_status výčet
 
-Platné stavy pro `agent`.
+Platné stavy `agent`pro .
 
 ```cpp
 enum agent_status;
@@ -39,25 +39,25 @@ enum agent_status;
 
 ### <a name="values"></a>Hodnoty
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|`agent_canceled`|`agent` byla zrušena.|
-|`agent_created`|`agent` byl vytvořen, ale nebyl spuštěn.|
-|`agent_done`|`agent` dokončen bez zrušení.|
-|`agent_runnable`|`agent` se spustil, ale nezadal jeho `run` metodu.|
-|`agent_started`|`agent` bylo zahájeno.|
+|`agent_canceled`|Byla `agent` zrušena.|
+|`agent_created`|Byl `agent` vytvořen, ale nebyl spuštěn.|
+|`agent_done`|Dokončeno `agent` bez zrušení.|
+|`agent_runnable`|Byla `agent` spuštěna, ale nezadala svou `run` metodu.|
+|`agent_started`|Začalo `agent` to.|
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace najdete v tématu [Asynchronní agenti](../../../parallel/concrt/asynchronous-agents.md).
+Další informace naleznete [v tématu Asynchronní agenti](../../../parallel/concrt/asynchronous-agents.md).
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** ConcRT. h
+**Záhlaví:** concrt.h
 
-## <a name="agents_eventtype"></a>Výčet Agents_EventType
+## <a name="agents_eventtype-enumeration"></a><a name="agents_eventtype"></a>Agents_EventType výčet
 
-Typy událostí, které lze trasovat pomocí funkce trasování nabízené knihovnou agentů
+Typy událostí, které lze sledovat pomocí funkce trasování nabízené knihovnou agentů
 
 ```cpp
 enum Agents_EventType;
@@ -65,24 +65,24 @@ enum Agents_EventType;
 
 ### <a name="values"></a>Hodnoty
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|`AGENTS_EVENT_CREATE`|Typ události, která představuje vytvoření objektu|
-|`AGENTS_EVENT_DESTROY`|Typ události, která představuje odstranění objektu|
-|`AGENTS_EVENT_END`|Typ události, která představuje uzavření nějakého zpracování|
-|`AGENTS_EVENT_LINK`|Typ události, která představuje propojení bloků zpráv|
-|`AGENTS_EVENT_NAME`|Typ události, která představuje název objektu|
-|`AGENTS_EVENT_SCHEDULE`|Typ události, která představuje plánování procesu|
-|`AGENTS_EVENT_START`|Typ události, která představuje zahájení nějakého zpracování|
-|`AGENTS_EVENT_UNLINK`|Typ události, která představuje odpojení bloků zpráv|
+|`AGENTS_EVENT_CREATE`|Typ události, který představuje vytvoření objektu|
+|`AGENTS_EVENT_DESTROY`|Typ události, který představuje odstranění objektu|
+|`AGENTS_EVENT_END`|Typ události, který představuje závěr některých zpracování|
+|`AGENTS_EVENT_LINK`|Typ události, který představuje propojení bloků zpráv|
+|`AGENTS_EVENT_NAME`|Typ události, který představuje název objektu|
+|`AGENTS_EVENT_SCHEDULE`|Typ události, který představuje plánování procesu|
+|`AGENTS_EVENT_START`|Typ události, který představuje zahájení některých zpracování|
+|`AGENTS_EVENT_UNLINK`|Typ události, který představuje odpojení bloků zpráv|
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** ConcRT. h
+**Záhlaví:** concrt.h
 
-## <a name="concrt_eventtype"></a>Výčet ConcRT_EventType
+## <a name="concrt_eventtype-enumeration"></a><a name="concrt_eventtype"></a>ConcRT_EventType výčet
 
-Typy událostí, které lze trasovat pomocí funkce trasování, které nabízí Concurrency Runtime.
+Typy událostí, které lze sledovat pomocí funkce trasování, kterou nabízí runtime souběžnosti.
 
 ```cpp
 enum ConcRT_EventType;
@@ -90,23 +90,23 @@ enum ConcRT_EventType;
 
 ### <a name="values"></a>Hodnoty
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|`CONCRT_EVENT_ATTACH`|Typ události, která představuje akt připojení ke Scheduleru.|
-|`CONCRT_EVENT_BLOCK`|Typ události, která představuje akt kontextu blokování.|
-|`CONCRT_EVENT_DETACH`|Typ události, která představuje akt odpojení od plánovače.|
-|`CONCRT_EVENT_END`|Typ události, která označuje začátek dvojice událostí Start/end.|
-|`CONCRT_EVENT_GENERIC`|Typ události, který se používá pro různé události.|
-|`CONCRT_EVENT_IDLE`|Typ události, která představuje Act kontextu, se stane nečinným.|
-|`CONCRT_EVENT_START`|Typ události, která označuje začátek dvojice událostí Start/end.|
-|`CONCRT_EVENT_UNBLOCK`|Typ události, která představuje Act z odblokování kontextu.|
-|`CONCRT_EVENT_YIELD`|Typ události, která představuje Act z kontextu, který je výsledkem.|
+|`CONCRT_EVENT_ATTACH`|Typ události, který představuje akt připojení k plánovači.|
+|`CONCRT_EVENT_BLOCK`|Typ události, který představuje akt blokování kontextu.|
+|`CONCRT_EVENT_DETACH`|Typ události, který představuje akt odpojení od plánovače.|
+|`CONCRT_EVENT_END`|Typ události, který označuje začátek dvojice událostí začátku a konce.|
+|`CONCRT_EVENT_GENERIC`|Typ události používaný pro různé události.|
+|`CONCRT_EVENT_IDLE`|Typ události, který představuje akt kontextu stává nečinnosti.|
+|`CONCRT_EVENT_START`|Typ události, který označuje začátek dvojice událostí začátku a konce.|
+|`CONCRT_EVENT_UNBLOCK`|Typ události, který představuje akt odblokování kontextu.|
+|`CONCRT_EVENT_YIELD`|Typ události, který představuje akt kontext udání.|
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** ConcRT. h **obor názvů:** concurrency
+**Záhlaví:** concrt.h **Obor názvů:** souběžnost
 
-## <a name="concrt_traceflags"></a>Výčet Concrt_TraceFlags
+## <a name="concrt_traceflags-enumeration"></a><a name="concrt_traceflags"></a>Concrt_TraceFlags výčet
 
 Příznaky trasování pro typy událostí
 
@@ -116,7 +116,7 @@ enum Concrt_TraceFlags;
 
 ### <a name="values"></a>Hodnoty
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
 |`AgentEventFlag`||
 |`AllEventsFlag`||
@@ -128,11 +128,11 @@ enum Concrt_TraceFlags;
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** ConcRT. h
+**Záhlaví:** concrt.h
 
-## <a name="criticalregiontype"></a>Výčet CriticalRegionType –
+## <a name="criticalregiontype-enumeration"></a><a name="criticalregiontype"></a>Výčet typu CriticalRegion
 
-Typ kritické oblasti, ke které je kontext uvnitř.
+Typ kritické oblasti kontextu je uvnitř.
 
 ```cpp
 enum CriticalRegionType;
@@ -140,19 +140,19 @@ enum CriticalRegionType;
 
 ### <a name="values"></a>Hodnoty
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|`InsideCriticalRegion`|Označuje, že kontext je uvnitř kritické oblasti. V případě kritické oblasti jsou asynchronní pozastavení od plánovače skryta. Pokud dojde k pozastavení, Správce prostředků počká, až se vlákno stane spustitelný a jednoduše ho obnoví, místo vyvolání plánovače. Jakékoli zámky pořízené v takové oblasti se musí považovat za extrémní péči.|
-|`InsideHyperCriticalRegion`|Označuje, že kontext je uvnitř oblasti kritické pro technologii Hyper-v. V případě kritických oblastí, které jsou v oblasti Hyper-v kritické, jsou synchronní i asynchronní odpružení od plánovače skryté. Pokud by mohlo dojít k pozastavení nebo blokování, správce prostředků počká na spustitelný vlákna a jednoduše ho obnoví, místo aby znovu vyvolal Plánovač. Zámky pořízené v takové oblasti nesmí být nikdy sdíleny s kódem běžícím mimo takovou oblast. Tím dojde k nepředvídatelnému zablokování.|
-|`OutsideCriticalRegion`|Označuje, že kontext je mimo jakoukoli kritickou oblast.|
+|`InsideCriticalRegion`|Označuje, že kontext je uvnitř kritické oblasti. Při uvnitř kritické oblasti asynchronní pozastavení jsou skryty z plánovače. Pokud k takovému pozastavení dojde, správce prostředků bude čekat, až se vlákno stane spustitelným, a jednoduše jej obnoví namísto vyvolání plánovače znovu. Všechny zámky odebrané uvnitř takové oblasti musí být brány s velkou opatrností.|
+|`InsideHyperCriticalRegion`|Označuje, že kontext je uvnitř hyperkritické oblasti. Při uvnitř hyperkritické oblasti synchronní i asynchronní pozastavení jsou skryty z plánovače. Pokud k takovému pozastavení nebo blokování dojde, správce prostředků bude čekat na vlákno, aby se stal spustitelný a jednoduše jej obnovit namísto vyvolání plánovače znovu. Zámky přijatá uvnitř takové oblasti nesmí být nikdy sdíleny s kódem spuštěným mimo takovou oblast. To způsobí nepředvídatelné zablokování.|
+|`OutsideCriticalRegion`|Označuje, že kontext je mimo všechny kritické oblasti.|
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** concrtrm. h
+**Záhlaví:** concrtrm.h
 
-## <a name="dynamicprogressfeedbacktype"></a>Výčet DynamicProgressFeedbackType –
+## <a name="dynamicprogressfeedbacktype-enumeration"></a><a name="dynamicprogressfeedbacktype"></a>Výčet typu DynamicProgressFeedbackType
 
-Používá se v zásadách `DynamicProgressFeedback` k popisu, zda budou prostředky pro Plánovač znovu vyrovnávatelné podle statistických informací shromážděných z plánovače nebo pouze na základě virtuálních procesorů, které přecházejí do nečinného stavu prostřednictvím volání metod `Activate` a `Deactivate` na `IVirtualProcessorRoot` rozhraní. Další informace o dostupných zásadách plánovače najdete v tématu [PolicyElementKey –](concurrency-namespace-enums.md).
+Používá `DynamicProgressFeedback` zásady k popisu, zda prostředky pro plánovač bude znovu vyvážit podle statistické informace shromážděné z plánovače nebo pouze na `Activate` základě `Deactivate` virtuálních `IVirtualProcessorRoot` procesorů jít dovnitř a ven z nečinnosti stavu prostřednictvím volání a metody na rozhraní. Další informace o dostupných zásadách plánovače naleznete v [tématu PolicyElementKey](concurrency-namespace-enums.md).
 
 ```cpp
 enum DynamicProgressFeedbackType;
@@ -160,14 +160,14 @@ enum DynamicProgressFeedbackType;
 
 ### <a name="values"></a>Hodnoty
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|`ProgressFeedbackDisabled`|Plánovač neshromažďuje informace o průběhu. Nové vyrovnávání se provádí výhradně na úrovni předplatného podkladového vlákna hardwaru. Další informace o úrovních předplatného najdete v tématu [IExecutionResource:: CurrentSubscriptionLevel –](IExecutionResource-structure.md).<br /><br /> Tato hodnota je vyhrazena pro použití modulem runtime.|
-|`ProgressFeedbackEnabled`|Plánovač shromažďuje informace o průběhu a předává je do Správce prostředků. Správce prostředků bude tyto statistické informace využívat k vyvážení prostředků jménem plánovače kromě úrovně předplatného základního hardwarového vlákna. Další informace o úrovních předplatného najdete v tématu [IExecutionResource:: CurrentSubscriptionLevel –](IExecutionResource-structure.md).|
+|`ProgressFeedbackDisabled`|Plánovač neshromažďuje informace o průběhu. Vyvažování se provádí výhradně na základě úrovně předplatného základního hardwarového vlákna. Další informace o úrovních předplatného naleznete v [tématu IExecutionResource::CurrentSubscriptionLevel](IExecutionResource-structure.md).<br /><br /> Tato hodnota je vyhrazena pro použití za běhu.|
+|`ProgressFeedbackEnabled`|Plánovač shromažďuje informace o průběhu a předá je správci prostředků. Správce prostředků použije tyto statistické informace k obnovení rovnováhy prostředků jménem plánovače kromě úrovně předplatného základního hardwarového vlákna. Další informace o úrovních předplatného naleznete v [tématu IExecutionResource::CurrentSubscriptionLevel](IExecutionResource-structure.md).|
 
-## <a name="join_type"></a>Výčet join_type
+## <a name="join_type-enumeration"></a><a name="join_type"></a>join_type výčet
 
-Typ `join`ového bloku pro zasílání zpráv.
+Typ bloku `join` zasílání zpráv.
 
 ```cpp
 enum join_type;
@@ -175,18 +175,18 @@ enum join_type;
 
 ### <a name="values"></a>Hodnoty
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|`greedy`|Hladce `join` bloky zasílání zpráv hned po rozmnožení přijmout zprávu. To je efektivnější, ale má možnost živý zámek v závislosti na konfiguraci sítě.|
-|`non_greedy`|Nehladové `join` blok zasílání zpráv odloží zprávy a pokusí se je využít po doručení všech. Jsou zaručené pracovat, ale pomalejší.|
+|`greedy`|Nenasytné `join` bloky zasílání zpráv okamžitě přijmout zprávu při šíření. To je efektivnější, ale má možnost live-lock, v závislosti na konfiguraci sítě.|
+|`non_greedy`|Nechamtivý `join` zasílání zpráv blokuje odložit zprávy a pokusit se je spotřebovat poté, co všichni dorazili. Ty jsou zaručeně fungovat, ale pomalejší.|
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** Agents. h
+**Záhlaví:** agents.h
 
-## <a name="message_status"></a>Výčet message_status
+## <a name="message_status-enumeration"></a><a name="message_status"></a>message_status výčet
 
-Platné odpovědi na nabídku objektu `message` do bloku.
+Platné odpovědi pro nabídku `message` objektu bloku.
 
 ```cpp
 enum message_status;
@@ -194,20 +194,20 @@ enum message_status;
 
 ### <a name="values"></a>Hodnoty
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
 |`accepted`|Cíl zprávu přijal.|
 |`declined`|Cíl zprávu nepřijal.|
-|`missed`|Cíl se pokusil přijmout zprávu, ale již není k dispozici.|
+|`missed`|Cíl se pokusil zprávu přijmout, ale již nebyla k dispozici.|
 |`postponed`|Cíl odložil zprávu.|
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** Agents. h
+**Záhlaví:** agents.h
 
-## <a name="policyelementkey"></a>Výčet PolicyElementKey –
+## <a name="policyelementkey-enumeration"></a><a name="policyelementkey"></a>Výčet klíče PolicyElementKey
 
-Klíče zásad popisující aspekty chování plánovače. Jednotlivé prvky zásad jsou popsány dvojicí klíč-hodnota. Další informace o zásadách plánovače a jejich vlivu na plánovače najdete v tématu [Plánovač úloh](../../../parallel/concrt/task-scheduler-concurrency-runtime.md).
+Klíče zásad popisující aspekty chování plánovače. Každý prvek zásady je popsán dvojicí klíč-hodnota. Další informace o zásadách plánovače a jejich dopadu na plánovače naleznete v [tématu Plánovač úloh](../../../parallel/concrt/task-scheduler-concurrency-runtime.md).
 
 ```cpp
 enum PolicyElementKey;
@@ -215,27 +215,27 @@ enum PolicyElementKey;
 
 ### <a name="values"></a>Hodnoty
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|`ContextPriority`|Priorita vlákna operačního systému každého kontextu v plánovači. Pokud je tento klíč nastavený na hodnotu, `INHERIT_THREAD_PRIORITY` kontexty v Plánovači zdědí prioritu vlákna, které vytvořil Plánovač.<br /><br /> Platné hodnoty: všechny platné hodnoty pro funkci Windows `SetThreadPriority` a speciální hodnotu `INHERIT_THREAD_PRIORITY`<br /><br /> Výchozí hodnota: `THREAD_PRIORITY_NORMAL`|
-|`ContextStackSize`|Velikost rezervovaného zásobníku každého kontextu v Plánovači v kilobajtech.<br /><br /> Platné hodnoty: kladná celá čísla<br /><br /> Výchozí hodnota: `0`, což znamená, že se použije výchozí hodnota procesu pro velikost zásobníku.|
-|`DynamicProgressFeedback`|Určuje, zda budou prostředky pro Plánovač znovu vyrovnávatelné podle statistických informací shromážděných z plánovače nebo pouze podle úrovně předplatného základních hardwarových vláken. Další informace najdete v tématu [DynamicProgressFeedbackType –](#dynamicprogressfeedbacktype).<br /><br /> Platné hodnoty: člen výčtu `DynamicProgressFeedbackType`, buď `ProgressFeedbackEnabled`, nebo `ProgressFeedbackDisabled`<br /><br /> Výchozí hodnota: `ProgressFeedbackEnabled`|
-|`LocalContextCacheSize`|Když je klíč zásad `SchedulingProtocol` nastavený na hodnotu `EnhanceScheduleGroupLocality`, určuje se maximální počet spustitelný kontextů, které se můžou ukládat do mezipaměti v místních frontách virtuálních procesorů. Takové kontexty obvykle budou spouštěny v pořadí posledního navýšení (LIFO) na virtuálním procesoru, což způsobilo, že se stanou spustitelný. Všimněte si, že tento klíč zásad nemá žádný význam, pokud je `SchedulingProtocol` klíč nastaven na hodnotu `EnhanceForwardProgress`.<br /><br /> Platné hodnoty: nezáporná celá čísla<br /><br /> Výchozí hodnota: `8`|
-|`MaxConcurrency`|Maximální úroveň souběžnosti, kterou Plánovač požaduje. Správce prostředků se pokusí tento počet virtuálních procesorů zpočátku přidělit. Speciální hodnota [MaxExecutionResources –](concurrency-namespace-constants1.md#maxexecutionresources) označuje, že požadovaná souběžná úroveň je shodná s počtem hardwarových vláken v počítači. Je-li hodnota zadaná pro `MinConcurrency` větší než počet hardwarových vláken v počítači a `MaxConcurrency` je určena jako `MaxExecutionResources`, bude hodnota `MaxConcurrency` vyvolána, aby odpovídala nastavení pro `MinConcurrency`.<br /><br /> Platné hodnoty: kladná celá čísla a speciální hodnota `MaxExecutionResources`<br /><br /> Výchozí hodnota: `MaxExecutionResources`|
-|`MaxPolicyElementKey`|Maximální klíč elementu zásad Nejedná se o platný klíč elementu.|
-|`MinConcurrency`|Minimální úroveň souběžnosti, kterou je nutné poskytnout plánovači správcem prostředků. Počet virtuálních procesorů přiřazených k plánovači nikdy nebude nižší než minimum. Speciální hodnota [MaxExecutionResources –](concurrency-namespace-constants1.md#maxexecutionresources) označuje, že minimální souběžnost je stejná jako počet hardwarových vláken v počítači. Pokud je hodnota zadaná pro `MaxConcurrency` menší než počet hardwarových vláken v počítači a `MinConcurrency` je zadána jako `MaxExecutionResources`, hodnota `MinConcurrency` je nižší, aby odpovídala nastavení pro `MaxConcurrency`.<br /><br /> Platné hodnoty: nezáporná celá čísla a speciální hodnota `MaxExecutionResources`. Všimněte si, že pro zásady plánovače používané pro konstrukci Concurrency Runtime schedulerů je hodnota `0` neplatná.<br /><br /> Výchozí hodnota: `1`|
-|`SchedulerKind`|Typ vláken, která bude Plánovač využívat pro podkladové kontexty provádění. Další informace najdete v tématu [SchedulerType –](#schedulertype).<br /><br /> Platné hodnoty: člen výčtu `SchedulerType`, například `ThreadScheduler`<br /><br /> Výchozí hodnota: `ThreadScheduler`. Tím se přeloží na vlákna Win32 ve všech operačních systémech.|
-|`SchedulingProtocol`|Popisuje, který algoritmus plánování bude Plánovač používat. Další informace najdete v tématu [SchedulingProtocolType –](#schedulingprotocoltype).<br /><br /> Platné hodnoty: člen výčtu `SchedulingProtocolType`, buď `EnhanceScheduleGroupLocality`, nebo `EnhanceForwardProgress`<br /><br /> Výchozí hodnota: `EnhanceScheduleGroupLocality`|
-|`TargetOversubscriptionFactor`|Nezávazně počet virtuálních procesorů na hardwarové vlákno. Pokud je to nutné, můžete v případě potřeby Správce prostředků zvýšit cílový faktor předplatného tak, aby `MaxConcurrency` s hardwarovými vlákny v počítači.<br /><br /> Platné hodnoty: kladná celá čísla<br /><br /> Výchozí hodnota: `1`|
+|`ContextPriority`|Priorita vlákna operačního systému každého kontextu v plánovači. Pokud je tento klíč `INHERIT_THREAD_PRIORITY` nastaven na hodnotu, kontexty v plánovači zdědí prioritu vlákna, které plánovač vytvořilo.<br /><br /> Platné hodnoty : Všechny platné hodnoty `SetThreadPriority` pro funkci systému Windows a speciální hodnota`INHERIT_THREAD_PRIORITY`<br /><br /> Výchozí hodnota :`THREAD_PRIORITY_NORMAL`|
+|`ContextStackSize`|Rezervovaná velikost zásobníku každého kontextu v plánovači v kilobajtech.<br /><br /> Platné hodnoty : Kladná celá čísla<br /><br /> Výchozí hodnota `0`: označuje, že výchozí hodnota procesu pro velikost zásobníku bude použita.|
+|`DynamicProgressFeedback`|Určuje, zda prostředky pro plánovačbude znovu vyvážena podle statistických informací shromážděných z plánovače nebo pouze na základě úrovně předplatného podkladových hardwarových vláken. Další informace naleznete v tématu [DynamicProgressFeedbackType](#dynamicprogressfeedbacktype).<br /><br /> Platné hodnoty : Člen `DynamicProgressFeedbackType` výčtu, `ProgressFeedbackEnabled` buď nebo`ProgressFeedbackDisabled`<br /><br /> Výchozí hodnota :`ProgressFeedbackEnabled`|
+|`LocalContextCacheSize`|Pokud `SchedulingProtocol` je klíč zásad nastaven `EnhanceScheduleGroupLocality`na hodnotu , určuje to maximální počet spustitelných kontextů, které mohou být uloženy do mezipaměti v místních frontách virtuálního procesoru. Tyto kontexty se obvykle spustí v pořadí poslední in-first-out (LIFO) na virtuálníprocesor, který způsobil, že se stanou spustitelné. Všimněte si, že tento `SchedulingProtocol` klíč zásad nemá `EnhanceForwardProgress`žádný význam, pokud je klíč nastaven na hodnotu .<br /><br /> Platné hodnoty : Nezáporná celá čísla<br /><br /> Výchozí hodnota :`8`|
+|`MaxConcurrency`|Maximální úroveň souběžnosti požadované plánovače. Správce prostředků se pokusí zpočátku přidělit tolik virtuálních procesorů. Speciální hodnota [MaxExecutionResources](concurrency-namespace-constants1.md#maxexecutionresources) označuje, že požadovaná úroveň souběžnosti je stejná jako počet hardwarových vláken v počítači. Pokud `MinConcurrency` je zadaná hodnota větší než počet hardwarových `MaxConcurrency` vláken `MaxExecutionResources`v počítači `MaxConcurrency` a je určena jako `MinConcurrency`, je hodnota pro zvýšena tak, aby odpovídala tomu, co je nastaveno pro .<br /><br /> Platné hodnoty : Kladná celá čísla a speciální hodnota`MaxExecutionResources`<br /><br /> Výchozí hodnota :`MaxExecutionResources`|
+|`MaxPolicyElementKey`|Klíč maximálního prvku zásady. Není platný klíč prvku.|
+|`MinConcurrency`|Minimální úroveň souběžnosti, která musí být poskytnuta plánovači správcem prostředků. Počet virtuálních procesorů přiřazených plánovači nikdy neklesne pod minimum. Speciální hodnota [MaxExecutionResources](concurrency-namespace-constants1.md#maxexecutionresources) označuje, že minimální úroveň souběžnosti je stejná jako počet hardwarových vláken v počítači. Pokud je hodnota `MaxConcurrency` zadaná pro menší než počet `MinConcurrency` hardwarových `MaxExecutionResources`vláken v `MinConcurrency` počítači a je určena `MaxConcurrency`jako , je hodnota pro snížena tak, aby odpovídala tomu, co je nastaveno pro .<br /><br /> Platné hodnoty : Nezáporná celá čísla `MaxExecutionResources`a speciální hodnota . Všimněte si, že pro zásady plánovače používané pro `0` konstrukci plánovačů souběžnosti runtime je hodnota neplatná.<br /><br /> Výchozí hodnota :`1`|
+|`SchedulerKind`|Typ podprocesů, které plánovač použije pro základní kontexty spuštění. Další informace naleznete v tématu [SchedulerType](#schedulertype).<br /><br /> Platné hodnoty : Člen `SchedulerType` výčtu, například`ThreadScheduler`<br /><br /> Výchozí hodnota `ThreadScheduler`: . To se promítá do vláken Win32 ve všech operačních systémech.|
+|`SchedulingProtocol`|Popisuje, který plánovací algoritmus bude plánovačem používat. Další informace naleznete v tématu [SchedulingProtocolType](#schedulingprotocoltype).<br /><br /> Platné hodnoty : Člen `SchedulingProtocolType` výčtu, `EnhanceScheduleGroupLocality` buď nebo`EnhanceForwardProgress`<br /><br /> Výchozí hodnota :`EnhanceScheduleGroupLocality`|
+|`TargetOversubscriptionFactor`|Předběžný počet virtuálních procesorů na hardwarové vlákno. Cíl oversubscription faktor může zvýšit Správce prostředků, v `MaxConcurrency` případě potřeby uspokojit s podprocesů hardwaru v počítači.<br /><br /> Platné hodnoty : Kladná celá čísla<br /><br /> Výchozí hodnota :`1`|
 |`WinRTInitialization`||
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** ConcRT. h
+**Záhlaví:** concrt.h
 
-## <a name="schedulertype"></a>Výčet SchedulerType –
+## <a name="schedulertype-enumeration"></a><a name="schedulertype"></a>Výčet typu plánovače
 
-Používá se zásadami `SchedulerKind` k popisu typu vláken, které by měl Plánovač využít pro podkladové kontexty provádění. Další informace o dostupných zásadách plánovače najdete v tématu [PolicyElementKey –](concurrency-namespace-enums.md).
+Používá zásady `SchedulerKind` k popisu typu podprocesů, které plánovač by měl použít pro základní kontexty spuštění. Další informace o dostupných zásadách plánovače naleznete v [tématu PolicyElementKey](concurrency-namespace-enums.md).
 
 ```cpp
 enum SchedulerType;
@@ -243,18 +243,18 @@ enum SchedulerType;
 
 ### <a name="values"></a>Hodnoty
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|`ThreadScheduler`|Označuje explicitní požadavek normálních vláken Win32.|
-|`UmsThreadDefault`|V Concurrency Runtime v Visual Studio 2013 se nepodporují vlákna v uživatelském režimu plánovatelná (UMS). Použití `UmsThreadDefault` jako hodnoty pro zásady `SchedulerType` nebude mít za následek chybu. Plánovač vytvořený s touto zásadou ale bude ve výchozím nastavení používat vlákna Win32.|
+|`ThreadScheduler`|Označuje explicitní požadavek běžných vláken Win32.|
+|`UmsThreadDefault`|Uživatelsky přívětivé (UMS) vlákna nejsou podporovány v modulu Souběžnost Runtime v sadě Visual Studio 2013. Použití `UmsThreadDefault` jako hodnota `SchedulerType` pro zásadu nebude mít za následek chybu. Plánovač vytvořený pomocí této zásady však bude ve výchozím nastavení používat vlákna Win32.|
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** ConcRT. h
+**Záhlaví:** concrt.h
 
-## <a name="schedulingprotocoltype"></a>Výčet SchedulingProtocolType –
+## <a name="schedulingprotocoltype-enumeration"></a><a name="schedulingprotocoltype"></a>Výčet typu SchedulingProtocolType
 
-Používá se v zásadách `SchedulingProtocol` k popisu, který algoritmus plánování bude pro Plánovač využíván. Další informace o dostupných zásadách plánovače najdete v tématu [PolicyElementKey –](concurrency-namespace-enums.md).
+Používá zásady `SchedulingProtocol` k popisu, který algoritmus plánování bude použit pro plánovače. Další informace o dostupných zásadách plánovače naleznete v [tématu PolicyElementKey](concurrency-namespace-enums.md).
 
 ```cpp
 enum SchedulingProtocolType;
@@ -262,18 +262,18 @@ enum SchedulingProtocolType;
 
 ### <a name="values"></a>Hodnoty
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|`EnhanceForwardProgress`|Plánovač dává přednost kruhovému dotazování prostřednictvím skupin plánů po provedení jednotlivých úkolů. Odblokované kontexty jsou obvykle naplánovány v rámci metody FIFO (First-in-first-out). Virtuální procesory neukládá do mezipaměti neblokované kontexty.|
-|`EnhanceScheduleGroupLocality`|Před přechodem do jiné skupiny plánů upřednostňuje Plánovač, aby pokračoval v práci na úkolech v rámci aktuální skupiny plánovače. Odblokované kontexty jsou ukládány do mezipaměti pro virtuální procesor a jsou obvykle naplánovány pomocí metody LIFO (za sekundu) virtuálním procesorem, který je odblokované.|
+|`EnhanceForwardProgress`|Plánovač upřednostňuje dotazování prostřednictvím skupin y plánu po provedení jednotlivých úloh. Neblokované kontexty jsou obvykle naplánovány způsobem FIFO (first-in-first-out). Virtuální procesory neukládat do mezipaměti neblokované kontexty.|
+|`EnhanceScheduleGroupLocality`|Plánovač upřednostňuje pokračovat v práci na úkolech v rámci aktuální skupiny plánu před přesunutím do jiné skupiny plánu. Neblokované kontexty jsou ukládány do mezipaměti na virtuální procesor a jsou obvykle naplánovány způsobem "last-in-first-out) virtuálním procesorem, který je odblokoval.|
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** ConcRT. h
+**Záhlaví:** concrt.h
 
-## <a name="switchingproxystate"></a>Výčet SwitchingProxyState –
+## <a name="switchingproxystate-enumeration"></a><a name="switchingproxystate"></a>Přepínání výčtu stavu proxy
 
-Slouží k označení stavu, ve kterém se nachází proxy vlákna, pokud je spuštěný kontext spolupráce, přepnutí na jiný proxy vlákna.
+Používá se k označení stavu proxy vlákna, když provádí kooperativní kontextový přepínač na jiný proxy podproces.
 
 ```cpp
 enum SwitchingProxyState;
@@ -281,21 +281,21 @@ enum SwitchingProxyState;
 
 ### <a name="values"></a>Hodnoty
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|`Blocking`|Označuje, že volající vlákno spolupracuje a že by měl být výhradně vlastníkem volajícího, dokud ho znovu nespustí a provede jinou akci.|
-|`Idle`|Označuje, že volající vlákno již není plánovačem vyžadováno a je vrácen do Správce prostředků. Kontext, který byl odeslán, již nebude moci využívat Správce prostředků.|
-|`Nesting`|Označuje, že volající vlákno je vnořeno do podřízeného plánovače a je vyžadováno volajícím, aby se mohl připojit k jinému plánovači.|
+|`Blocking`|Označuje, že volající vlákno je kooperativně blokování a by měl být výhradně vlastněny volajícím až následně znovu spuštěna a provádění další akce.|
+|`Idle`|Označuje, že volající vlákno již není potřeba plánovačem a je vrácena správci prostředků. Kontext, který byl odesílán již nelze využít Správce prostředků.|
+|`Nesting`|Označuje, že volající vlákno vnoří podřízený plánovač a je potřeba volajícím, aby se připojilk jinému plánovači.|
 
 ### <a name="remarks"></a>Poznámky
 
-Do metody `IThreadProxy::SwitchTo` je předán parametr typu `SwitchingProxyState`, který instruuje Správce prostředků, jak považovat proxy vlákna, které provádí volání.
+Parametr typu `SwitchingProxyState` je předán metodě `IThreadProxy::SwitchTo` instrukce Správce prostředků, jak zacházet proxy podprocesu, který provádí volání.
 
-Další informace o použití tohoto typu naleznete v tématu [IThreadProxy:: SwitchTo –](ithreadproxy-structure.md#switchto).
+Další informace o tom, jak se tento typ používá, naleznete v [tématu IThreadProxy::SwitchTo](ithreadproxy-structure.md#switchto).
 
-## <a name="task_group_status"></a>Výčet task_group_status
+## <a name="task_group_status-enumeration"></a><a name="task_group_status"></a>task_group_status výčet
 
-Popisuje stav spuštění objektu `task_group` nebo `structured_task_group`. Hodnota tohoto typu je vrácena mnoha metodami, které čekají na dokončení úloh naplánovaných na skupinu úloh.
+Popisuje stav spuštění `task_group` objektu `structured_task_group` nebo objektu. Hodnota tohoto typu je vrácena mnoha metodami, které čekají na úkoly naplánované na dokončení skupiny úkolů.
 
 ```cpp
 enum task_group_status;
@@ -303,19 +303,19 @@ enum task_group_status;
 
 ### <a name="values"></a>Hodnoty
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|`canceled`|Objekt `task_group` nebo `structured_task_group` byl zrušen. Jeden nebo více úkolů možná není spuštěno.|
-|`completed`|Úkoly zařazené do fronty `task_group` nebo `structured_task_group` objektu byly úspěšně dokončeny.|
-|`not_complete`|Úkoly zařazené do fronty pro objekt `task_group` nebyly dokončeny. Všimněte si, že tato hodnota není aktuálně vrácena Concurrency Runtime.|
+|`canceled`|Objekt `task_group` `structured_task_group` nebo byl zrušen. Je možné, že nebyl proveden jeden nebo více úkolů.|
+|`completed`|Úkoly zařazené `task_group` do `structured_task_group` fronty k objektu nebo byly úspěšně dokončeny.|
+|`not_complete`|Úkoly zařazené `task_group` do fronty k objektu nebyly dokončeny. Všimněte si, že tato hodnota není v současné době vrácena souběžnosti Runtime.|
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** pplinterface. h
+**Záhlaví:** pplinterface.h
 
-## <a name="winrtinitializationtype"></a>Výčet WinRTInitializationType –
+## <a name="winrtinitializationtype-enumeration"></a><a name="winrtinitializationtype"></a>Výčet typu WinRTInitializationType
 
-Používá se v zásadách `WinRTInitialization` k popisu, jestli a jak se prostředí Windows Runtime inicializuje na vláknech Scheduleru pro aplikaci, která běží na operačních systémech s verzí Windows 8 nebo vyšší. Další informace o dostupných zásadách plánovače najdete v tématu [PolicyElementKey –](concurrency-namespace-enums.md).
+Používá zásady `WinRTInitialization` k popisu, zda a jak bude prostředí Windows Runtime inicializováno ve vláknech plánovače pro aplikaci, která běží v operačních systémech s verzí Windows 8 nebo vyšší. Další informace o dostupných zásadách plánovače naleznete v [tématu PolicyElementKey](concurrency-namespace-enums.md).
 
 ```cpp
 enum WinRTInitializationType;
@@ -323,15 +323,15 @@ enum WinRTInitializationType;
 
 ### <a name="values"></a>Hodnoty
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|`DoNotInitializeWinRT`|Pokud je aplikace spuštěna v operačních systémech s verzí Windows 8 nebo vyšší, vlákna v Plánovači nebudou inicializovat prostředí Windows Runtime.|
-|`InitializeWinRTAsMTA`|Když je aplikace spuštěna v operačních systémech s verzí Windows 8 nebo vyšší, každé vlákno v Plánovači Inicializuje prostředí Windows Runtime a deklaruje, že je součástí vícevláknového objektu apartment.|
+|`DoNotInitializeWinRT`|Pokud je aplikace spuštěna v operačních systémech s verzí Windows 8 nebo vyšší, vlákna v plánovači nebude inicializovat prostředí Windows Runtime .|
+|`InitializeWinRTAsMTA`|Když je aplikace spuštěna v operačních systémech s verzí Windows 8 nebo vyšší, každé vlákno v rámci plánovače inicializuje prostředí Windows Runtime a deklaruje, že je součástí vícevláknového apartmentu.|
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** ConcRT. h
+**Záhlaví:** concrt.h
 
 ## <a name="see-also"></a>Viz také
 
-[concurrency – obor názvů](concurrency-namespace.md)
+[obor názvů souběžnosti](concurrency-namespace.md)

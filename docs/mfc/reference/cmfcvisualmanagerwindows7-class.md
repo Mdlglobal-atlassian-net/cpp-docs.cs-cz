@@ -1,5 +1,5 @@
 ---
-title: CMFCVisualManagerWindows7 Class
+title: Třída CMFCVisualManagerWindows7
 ms.date: 03/27/2019
 f1_keywords:
 - CMFCVisualManagerWindows7
@@ -10,16 +10,16 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCVisualManagerWindows7 Class [MFC]
 ms.assetid: e8d87df1-0c09-4b58-8ade-4e911f796e42
-ms.openlocfilehash: e729201f1a6b6fd41286cc6af2b8c08fc7ee697c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6686afecc2b8ef97ea24ef45ff5225433677a954
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62373622"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81319838"
 ---
-# <a name="cmfcvisualmanagerwindows7-class"></a>CMFCVisualManagerWindows7 Class
+# <a name="cmfcvisualmanagerwindows7-class"></a>Třída CMFCVisualManagerWindows7
 
-`CMFCVisualManagerWindows7` Poskytuje vzhled aplikace Windows 7 aplikace.
+Dává `CMFCVisualManagerWindows7` aplikaci vzhled aplikace windows 7.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -31,79 +31,79 @@ class CMFCVisualManagerWindows7 : public CMFCVisualManagerWindows;
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
 |[CMFCVisualManagerWindows7::CMFCVisualManagerWindows7](#cmfcvisualmanagerwindows7)|Výchozí konstruktor.|
 |[CMFCVisualManagerWindows7::~CMFCVisualManagerWindows7](#_dtorcmfcvisualmanagerwindows7)|Výchozí destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|`CMFCVisualManagerWindows7::CleanStyle`|Vymaže aktuální vizuální styl a obnoví výchozí vzhled.|
-|`CMFCVisualManagerWindows7::CleanUp`|Vymaže všechny objekty v uživatelském rozhraní a obnoví v nabídkách.|
-|`CMFCVisualManagerWindows7::DrawNcBtn`|V rámci nakreslí tlačítko v neklientské oblasti. Rozhraní používá tuto metodu za účelem vykreslení minimalizovat, maximalizovat, zavřete a obnovení tlačítka v pravém horním rohu okna rámce. Tato metoda je volána, pouze pokud program používá `Aero` motiv.|
-|`CMFCVisualManagerWindows7::DrawNcText`|Kreslení textu v jiné klientské oblasti na snímku. Rozhraní používá tuto metodu pro kreslení název aplikace v záhlaví v horní části okna rámce.|
-|`CMFCVisualManagerWindows7::DrawSeparator`|Nakreslí na oddělovač [cmfctoolbar – třída](../../mfc/reference/cmfctoolbar-class.md).|
-|`CMFCVisualManagerWindows7::GetRibbonBar`|Načte [CMFCRibbonBar – třída](../../mfc/reference/cmfcribbonbar-class.md) související s uživatelským rozhraním.|
-|[CMFCVisualManagerWindows7::GetRibbonEditBackgroundColor](#getribboneditbackgroundcolor)|Získá barvu pozadí pole úpravy pásu karet.|
+|`CMFCVisualManagerWindows7::CleanStyle`|Vymaže aktuální vizuální styl a obnoví výchozí vizuální styl.|
+|`CMFCVisualManagerWindows7::CleanUp`|Vymaže všechny objekty v uživatelském rozhraní a obnoví nabídky.|
+|`CMFCVisualManagerWindows7::DrawNcBtn`|Nakreslí tlačítko v oblasti bez klienta na snímku. Rámec používá tuto metodu k nakreslení minimalizovat, maximalizovat, zavřít a obnovit tlačítka v pravém horním rohu rámečku okna. Tato metoda je volána pouze `Aero` v případě, že program používá motiv.|
+|`CMFCVisualManagerWindows7::DrawNcText`|Nakreslí text v oblasti, která není klientem v rámečku. Rámec používá tuto metodu k nakreslení názvu aplikace v záhlaví v horní části okna rámce.|
+|`CMFCVisualManagerWindows7::DrawSeparator`|Nakreslí oddělovač na [CMFCToolBar třídy](../../mfc/reference/cmfctoolbar-class.md).|
+|`CMFCVisualManagerWindows7::GetRibbonBar`|Načte [třídu CMFCRibbonBar](../../mfc/reference/cmfcribbonbar-class.md) přidruženou k uživatelskému rozhraní.|
+|[CMFCVisualManagerWindows7::GetRibbonEditBackgroundColor](#getribboneditbackgroundcolor)|Získá barvu pozadí textového rámečku pásu karet.|
 |`CMFCVisualManagerWindows7::GetRibbonPopupBorderSize`|Přepíše [CMFCVisualManager::GetRibbonPopupBorderSize](../../mfc/reference/cmfcvisualmanager-class.md#getribbonpopupbordersize)|
-|`CMFCVisualManagerWindows7::GetRibbonQuickAccessToolBarChevronOffset`|Overrides [CMFCVisualManager::GetRibbonQuickAccessToolBarChevronOffset](../../mfc/reference/cmfcvisualmanager-class.md#getribbonquickaccesstoolbarchevronoffset)|
-|`CMFCVisualManagerWindows7::GetRibbonQuickAccessToolBarRightMargin`|Overrides [CMFCVisualManager::GetRibbonQuickAccessToolBarRightMargin](../../mfc/reference/cmfcvisualmanager-class.md#getribbonquickaccesstoolbarrightmargin)|
-|`CMFCVisualManagerWindows7::IsHighlightWholeMenuItem`|Overrides [CMFCVisualManagerWindows::IsHighlightWholeMenuItem](../../mfc/reference/cmfcvisualmanagerwindows-class.md#ishighlightwholemenuitem)|
-|`CMFCVisualManagerWindows7::IsOwnerDrawMenuCheck`|Overrides [CMFCVisualManager::IsOwnerDrawMenuCheck](../../mfc/reference/cmfcvisualmanager-class.md#isownerdrawmenucheck)|
-|`CMFCVisualManagerWindows7::IsRibbonPresent`|Určuje, zda `CMFCRibbonBar` k dispozici a je viditelný.|
-|`CMFCVisualManagerWindows7::OnDrawButtonBorder`|Overrides [CMFCVisualManagerWindows::OnDrawButtonBorder](../../mfc/reference/cmfcvisualmanagerwindows-class.md#ondrawbuttonborder)|
-|`CMFCVisualManagerWindows7::OnDrawCheckBoxEx`|Overrides [CMFCVisualManagerWindows::OnDrawCheckBoxEx](../../mfc/reference/cmfcvisualmanagerwindows-class.md#ondrawcheckboxex)|
-|`CMFCVisualManagerWindows7::OnDrawComboDropButton`|Overrides [CMFCVisualManagerWindows::OnDrawComboDropButton](../../mfc/reference/cmfcvisualmanagerwindows-class.md#ondrawcombodropbutton)|
-|`CMFCVisualManagerWindows7::OnDrawDefaultRibbonImage`|Overrides [CMFCVisualManager::OnDrawDefaultRibbonImage](../../mfc/reference/cmfcvisualmanager-class.md#ondrawdefaultribbonimage)|
-|`CMFCVisualManagerWindows7::OnDrawMenuBorder`|Overrides [CMFCVisualManagerWindows::OnDrawMenuBorder](../../mfc/reference/cmfcvisualmanagerwindows-class.md#ondrawmenuborder)|
-|`CMFCVisualManagerWindows7::OnDrawMenuCheck`|Overrides [CMFCVisualManager::OnDrawMenuCheck](../../mfc/reference/cmfcvisualmanager-class.md#ondrawmenucheck)|
-|`CMFCVisualManagerWindows7::OnDrawMenuLabel`|Overrides [CMFCVisualManager::OnDrawMenuLabel](../../mfc/reference/cmfcvisualmanager-class.md#ondrawmenulabel)|
-|`CMFCVisualManagerWindows7::OnDrawRadioButton`|Přepsání `CMFCVisualManager::OnDrawRadioButton`|
-|`CMFCVisualManagerWindows7::OnDrawRibbonApplicationButton`|Overrides [CMFCVisualManager::OnDrawRibbonApplicationButton](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonapplicationbutton)|
-|`CMFCVisualManagerWindows7::OnDrawRibbonButtonBorder`|Overrides [CMFCVisualManager::OnDrawRibbonButtonBorder](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonbuttonborder)|
-|`CMFCVisualManagerWindows7::OnDrawRibbonCaption`|Overrides [CMFCVisualManager::OnDrawRibbonCaption](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribboncaption)|
-|`CMFCVisualManagerWindows7::OnDrawRibbonCaptionButton`|Overrides [CMFCVisualManager::OnDrawRibbonCaptionButton](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribboncaptionbutton)|
-|`CMFCVisualManagerWindows7::OnDrawRibbonCategory`|Overrides [CMFCVisualManager::OnDrawRibbonCategory](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribboncategory)|
-|`CMFCVisualManagerWindows7::OnDrawRibbonCategoryTab`|Overrides [CMFCVisualManager::OnDrawRibbonCategoryTab](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribboncategorytab)|
-|`CMFCVisualManagerWindows7::OnDrawRibbonDefaultPaneButton`|Overrides [CMFCVisualManager::OnDrawRibbonDefaultPaneButton](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbondefaultpanebutton)|
-|`CMFCVisualManagerWindows7::OnDrawRibbonGalleryButton`|Overrides [CMFCVisualManager::OnDrawRibbonGalleryButton](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbongallerybutton)|
-|`CMFCVisualManagerWindows7::OnDrawRibbonLaunchButton`|Přepsání `CMFCVisualManager::OnDrawRibbonLaunchButton`|
-|`CMFCVisualManagerWindows7::OnDrawRibbonMenuCheckFrame`|Overrides [CMFCVisualManager::OnDrawRibbonMenuCheckFrame](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonmenucheckframe)|
-|`CMFCVisualManagerWindows7::OnDrawRibbonPanel`|Overrides [CMFCVisualManager::OnDrawRibbonPanel](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonpanel)|
-|`CMFCVisualManagerWindows7::OnDrawRibbonPanelCaption`|Overrides [CMFCVisualManager::OnDrawRibbonPanelCaption](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonpanelcaption)|
-|`CMFCVisualManagerWindows7::OnDrawRibbonProgressBar`|Overrides [CMFCVisualManager::OnDrawRibbonProgressBar](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonprogressbar)|
-|`CMFCVisualManagerWindows7::OnDrawRibbonRecentFilesFrame`|Overrides [CMFCVisualManager::OnDrawRibbonRecentFilesFrame](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonrecentfilesframe)|
-|`CMFCVisualManagerWindows7::OnDrawRibbonSliderChannel`|Overrides [CMFCVisualManager::OnDrawRibbonSliderChannel](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonsliderchannel)|
+|`CMFCVisualManagerWindows7::GetRibbonQuickAccessToolBarChevronOffset`|Přepíše [CMFCVisualManager::GetRibbonQuickAccessToolBarChevronOffset](../../mfc/reference/cmfcvisualmanager-class.md#getribbonquickaccesstoolbarchevronoffset)|
+|`CMFCVisualManagerWindows7::GetRibbonQuickAccessToolBarRightMargin`|Přepíše [CMFCVisualManager::GetRibbonQuickAccessToolBarRightMargin](../../mfc/reference/cmfcvisualmanager-class.md#getribbonquickaccesstoolbarrightmargin)|
+|`CMFCVisualManagerWindows7::IsHighlightWholeMenuItem`|Přepsání [CMFCVisualManagerWindows::IsHighlightWholeMenuItem](../../mfc/reference/cmfcvisualmanagerwindows-class.md#ishighlightwholemenuitem)|
+|`CMFCVisualManagerWindows7::IsOwnerDrawMenuCheck`|Přepíše [CMFCVisualManager::IsOwnerDrawMenuCheck](../../mfc/reference/cmfcvisualmanager-class.md#isownerdrawmenucheck)|
+|`CMFCVisualManagerWindows7::IsRibbonPresent`|Určuje, zda `CMFCRibbonBar` je a viditelné.|
+|`CMFCVisualManagerWindows7::OnDrawButtonBorder`|Přepíše [CMFCVisualManagerWindows::OnDrawButtonBorder](../../mfc/reference/cmfcvisualmanagerwindows-class.md#ondrawbuttonborder)|
+|`CMFCVisualManagerWindows7::OnDrawCheckBoxEx`|Přepsání [CMFCVisualManagerWindows::OnDrawCheckBoxEx](../../mfc/reference/cmfcvisualmanagerwindows-class.md#ondrawcheckboxex)|
+|`CMFCVisualManagerWindows7::OnDrawComboDropButton`|Přepíše [CMFCVisualManagerWindows::OnDrawComboDropButton](../../mfc/reference/cmfcvisualmanagerwindows-class.md#ondrawcombodropbutton)|
+|`CMFCVisualManagerWindows7::OnDrawDefaultRibbonImage`|Přepíše [CMFCVisualManager::OnDrawDefaultRibbonImage](../../mfc/reference/cmfcvisualmanager-class.md#ondrawdefaultribbonimage)|
+|`CMFCVisualManagerWindows7::OnDrawMenuBorder`|Přepíše [CMFCVisualManagerWindows::OnDrawMenuBorder](../../mfc/reference/cmfcvisualmanagerwindows-class.md#ondrawmenuborder)|
+|`CMFCVisualManagerWindows7::OnDrawMenuCheck`|Přepíše [CMFCVisualManager::OnDrawMenuCheck](../../mfc/reference/cmfcvisualmanager-class.md#ondrawmenucheck)|
+|`CMFCVisualManagerWindows7::OnDrawMenuLabel`|Přepíše [CMFCVisualManager::OnDrawMenuLabel](../../mfc/reference/cmfcvisualmanager-class.md#ondrawmenulabel)|
+|`CMFCVisualManagerWindows7::OnDrawRadioButton`|Přepisuje`CMFCVisualManager::OnDrawRadioButton`|
+|`CMFCVisualManagerWindows7::OnDrawRibbonApplicationButton`|Přepíše [CMFCVisualManager::OnDrawRibbonApplicationButton](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonapplicationbutton)|
+|`CMFCVisualManagerWindows7::OnDrawRibbonButtonBorder`|Přepíše [CMFCVisualManager::OnDrawRibbonButtonBorder](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonbuttonborder)|
+|`CMFCVisualManagerWindows7::OnDrawRibbonCaption`|Přepíše [CMFCVisualManager::OnDrawRibbonCaption](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribboncaption)|
+|`CMFCVisualManagerWindows7::OnDrawRibbonCaptionButton`|Přepíše [CMFCVisualManager::OnDrawRibbonCaptionButton](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribboncaptionbutton)|
+|`CMFCVisualManagerWindows7::OnDrawRibbonCategory`|Přepíše [CMFCVisualManager::OnDrawRibbonCategory](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribboncategory)|
+|`CMFCVisualManagerWindows7::OnDrawRibbonCategoryTab`|Přepíše [CMFCVisualManager::OnDrawRibbonCategoryTab](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribboncategorytab)|
+|`CMFCVisualManagerWindows7::OnDrawRibbonDefaultPaneButton`|Přepíše [CMFCVisualManager::OnDrawRibbonDefaultPaneButton](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbondefaultpanebutton)|
+|`CMFCVisualManagerWindows7::OnDrawRibbonGalleryButton`|Přepíše [CMFCVisualManager::OnDrawRibbonGalleryButton](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbongallerybutton)|
+|`CMFCVisualManagerWindows7::OnDrawRibbonLaunchButton`|Přepisuje`CMFCVisualManager::OnDrawRibbonLaunchButton`|
+|`CMFCVisualManagerWindows7::OnDrawRibbonMenuCheckFrame`|Přepíše [CMFCVisualManager::OnDrawRibbonMenuCheckFrame](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonmenucheckframe)|
+|`CMFCVisualManagerWindows7::OnDrawRibbonPanel`|Přepíše [CMFCVisualManager::OnDrawRibbonPanel](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonpanel)|
+|`CMFCVisualManagerWindows7::OnDrawRibbonPanelCaption`|Přepíše [CMFCVisualManager::OnDrawRibbonPanelCaption](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonpanelcaption)|
+|`CMFCVisualManagerWindows7::OnDrawRibbonProgressBar`|Přepíše [CMFCVisualManager::OnDrawRibbonProgressBar](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonprogressbar)|
+|`CMFCVisualManagerWindows7::OnDrawRibbonRecentFilesFrame`|Přepíše [CMFCVisualManager::OnDrawRibbonRecentFilesFrame](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonrecentfilesframe)|
+|`CMFCVisualManagerWindows7::OnDrawRibbonSliderChannel`|Přepíše [CMFCVisualManager::OnDrawRibbonSliderChannel](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonsliderchannel)|
 |`CMFCVisualManagerWindows7::OnDrawRibbonSliderThumb`|Přepíše [CMFCVisualManager::OnDrawRibbonSliderThumb](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonsliderthumb)|
-|`CMFCVisualManagerWindows7::OnDrawRibbonSliderZoomButton`|Overrides [CMFCVisualManager::OnDrawRibbonSliderZoomButton](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonsliderzoombutton)|
-|`CMFCVisualManagerWindows7::OnDrawRibbonStatusBarPane`|Overrides [CMFCVisualManager::OnDrawRibbonStatusBarPane](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonstatusbarpane)|
-|`CMFCVisualManagerWindows7::OnDrawRibbonTabsFrame`|Overrides [CMFCVisualManager::OnDrawRibbonTabsFrame](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbontabsframe)|
-|`CMFCVisualManagerWindows7::OnDrawStatusBarSizeBox`|Overrides [CMFCVisualManagerWindows::OnDrawStatusBarSizeBox](../../mfc/reference/cmfcvisualmanagerwindows-class.md#ondrawstatusbarsizebox)|
-|`CMFCVisualManagerWindows7::OnFillBarBackground`|Overrides [CMFCVisualManagerWindows::OnFillBarBackground](../../mfc/reference/cmfcvisualmanagerwindows-class.md#onfillbarbackground)|
-|`CMFCVisualManagerWindows7::OnFillButtonInterior`|Overrides [CMFCVisualManagerWindows::OnFillButtonInterior](../../mfc/reference/cmfcvisualmanagerwindows-class.md#onfillbuttoninterior)|
-|[CMFCVisualManagerWindows7::OnFillMenuImageRect](#onfillmenuimagerect)|Rozhraní volá tuto metodu při vyplní oblast kolem obrázků položek nabídek.|
-|`CMFCVisualManagerWindows7::OnFillRibbonButton`|Overrides [CMFCVisualManager::OnFillRibbonButton](../../mfc/reference/cmfcvisualmanager-class.md#onfillribbonbutton)|
-|`CMFCVisualManagerWindows7::OnFillRibbonQuickAccessToolBarPopup`|Overrides [CMFCVisualManager::OnFillRibbonQuickAccessToolBarPopup](../../mfc/reference/cmfcvisualmanager-class.md#onfillribbonquickaccesstoolbarpopup)|
-|`CMFCVisualManagerWindows7::OnHighlightMenuItem`|Overrides [CMFCVisualManagerWindows::OnHighlightMenuItem](../../mfc/reference/cmfcvisualmanagerwindows-class.md#onhighlightmenuitem)|
-|`CMFCVisualManagerWindows7::OnNcActivate`|Overrides [CMFCVisualManager::OnNcActivate](../../mfc/reference/cmfcvisualmanager-class.md#onncactivate)|
-|`CMFCVisualManagerWindows7::OnNcPaint`|Overrides [CMFCVisualManager::OnNcPaint](../../mfc/reference/cmfcvisualmanager-class.md#onncpaint)|
-|`CMFCVisualManagerWindows7::OnUpdateSystemColors`|Overrides [CMFCVisualManagerWindows::OnUpdateSystemColors](../../mfc/reference/cmfcvisualmanagerwindows-class.md#onupdatesystemcolors)|
-|`CMFCVisualManagerWindows7::SetResourceHandle`|Nastaví popisovač prostředku, který popisuje atributy správce vzhledu.|
+|`CMFCVisualManagerWindows7::OnDrawRibbonSliderZoomButton`|Přepíše [CMFCVisualManager::OnDrawRibbonSliderZoomButton](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonsliderzoombutton)|
+|`CMFCVisualManagerWindows7::OnDrawRibbonStatusBarPane`|Přepíše [CMFCVisualManager::OnDrawRibbonStatusBarPane](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonstatusbarpane)|
+|`CMFCVisualManagerWindows7::OnDrawRibbonTabsFrame`|Přepíše [CMFCVisualManager::OnDrawRibbonTabsFrame](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbontabsframe)|
+|`CMFCVisualManagerWindows7::OnDrawStatusBarSizeBox`|Přepsání [CMFCVisualManagerWindows::OnDrawStatusBarSizeBox](../../mfc/reference/cmfcvisualmanagerwindows-class.md#ondrawstatusbarsizebox)|
+|`CMFCVisualManagerWindows7::OnFillBarBackground`|Přepíše [CMFCVisualManagerWindows::OnFillBarBackground](../../mfc/reference/cmfcvisualmanagerwindows-class.md#onfillbarbackground)|
+|`CMFCVisualManagerWindows7::OnFillButtonInterior`|Přepíše [CMFCVisualManagerWindows::OnFillButtonInterior](../../mfc/reference/cmfcvisualmanagerwindows-class.md#onfillbuttoninterior)|
+|[CMFCVisualManagerWindows7::OnFillMenuImageRect](#onfillmenuimagerect)|Framework volá tuto metodu, když vyplňuje oblast kolem obrázků položek nabídky.|
+|`CMFCVisualManagerWindows7::OnFillRibbonButton`|Přepíše [CMFCVisualManager::OnFillRibbonButton](../../mfc/reference/cmfcvisualmanager-class.md#onfillribbonbutton)|
+|`CMFCVisualManagerWindows7::OnFillRibbonQuickAccessToolBarPopup`|Přepíše [CMFCVisualManager::OnFillRibbonQuickAccessToolBarPopup](../../mfc/reference/cmfcvisualmanager-class.md#onfillribbonquickaccesstoolbarpopup)|
+|`CMFCVisualManagerWindows7::OnHighlightMenuItem`|Přepíše [CMFCVisualManagerWindows::OnHighlightMenuItem](../../mfc/reference/cmfcvisualmanagerwindows-class.md#onhighlightmenuitem)|
+|`CMFCVisualManagerWindows7::OnNcActivate`|Přepíše [CMFCVisualManager::OnNcActivate](../../mfc/reference/cmfcvisualmanager-class.md#onncactivate)|
+|`CMFCVisualManagerWindows7::OnNcPaint`|Přepíše [CMFCVisualManager::OnNcPaint](../../mfc/reference/cmfcvisualmanager-class.md#onncpaint)|
+|`CMFCVisualManagerWindows7::OnUpdateSystemColors`|Přepíše [CMFCVisualManagerWindows::OnUpdateSystemColors](../../mfc/reference/cmfcvisualmanagerwindows-class.md#onupdatesystemcolors)|
+|`CMFCVisualManagerWindows7::SetResourceHandle`|Nastaví popisovač prostředků, který popisuje atributy vizuálního manažera.|
 |`CMFCVisualManagerWindows7::SetStyle`|Nastaví barevné schéma `CMFCVisualManagerWindows7` grafického uživatelského rozhraní.|
 
 ## <a name="remarks"></a>Poznámky
 
-Použití `CMFCVisualManagerWindows7` třídy změnit vzhled vaší aplikace tak, aby napodoboval výchozí aplikace pro Windows 7. Tato třída nemusí být platný, pokud vaše aplikace běží na verzi systému Windows starší než Windows 7. V tomto scénáři aplikace používá výchozí správce vzhledu definované v [cmfcvisualmanager –](../../mfc/reference/cmfcvisualmanager-class.md).
+Pomocí `CMFCVisualManagerWindows7` třídy můžete změnit vzhled aplikace tak, aby napodobovala výchozí aplikaci systému Windows 7. Tato třída nemusí být platná, pokud je aplikace spuštěna ve verzi systému Windows starší než Windows 7. V tomto scénáři aplikace používá výchozí vizuální manažer definovaný v [CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md).
 
-Cmfcvisualmanagerwindows7 – dědí z obou více metod [CMFCVisualManagerWindows – třída](../../mfc/reference/cmfcvisualmanagerwindows-class.md) a `CMFCVisualManager` třídy. Metody uvedené v předchozí části jsou metody ještě `CMFCVisualManagerWindows7` třídy.
+CMFCVisualManagerWindows7 dědí více metod z třídy [CMFCVisualManagerWindows](../../mfc/reference/cmfcvisualmanagerwindows-class.md) a třídy. `CMFCVisualManager` Metody uvedené v předchozí části jsou `CMFCVisualManagerWindows7` metody nové třídy.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObjekt](../../mfc/reference/cobject-class.md)
 
-[CMFCBaseVisualManager](../../mfc/reference/cmfcbasevisualmanager-class.md)
+[CmFCBaseVisualManager](../../mfc/reference/cmfcbasevisualmanager-class.md)
 
 [CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md)
 
@@ -115,9 +115,9 @@ Cmfcvisualmanagerwindows7 – dědí z obou více metod [CMFCVisualManagerWindow
 
 ## <a name="requirements"></a>Požadavky
 
-**Header:** afxvisualmanagerwindows7.h
+**Záhlaví:** afxvisualmanagerwindows7.h
 
-##  <a name="_dtorcmfcvisualmanagerwindows7"></a>  Cmfcvisualmanagerwindows7 –:: ~ cmfcvisualmanagerwindows7 –
+## <a name="cmfcvisualmanagerwindows7cmfcvisualmanagerwindows7"></a><a name="_dtorcmfcvisualmanagerwindows7"></a>CMFCVisualManagerWindows7::~CMFCVisualManagerWindows7
 
 Výchozí destruktor.
 
@@ -125,7 +125,7 @@ Výchozí destruktor.
 virtual ~CMFCVisualManagerWindows7();
 ```
 
-##  <a name="cmfcvisualmanagerwindows7"></a>  CMFCVisualManagerWindows7::CMFCVisualManagerWindows7
+## <a name="cmfcvisualmanagerwindows7cmfcvisualmanagerwindows7"></a><a name="cmfcvisualmanagerwindows7"></a>CMFCVisualManagerWindows7::CMFCVisualManagerWindows7
 
 Výchozí konstruktor.
 
@@ -133,9 +133,9 @@ Výchozí konstruktor.
 CMFCVisualManagerWindows7();
 ```
 
-##  <a name="getribboneditbackgroundcolor"></a>  CMFCVisualManagerWindows7::GetRibbonEditBackgroundColor
+## <a name="cmfcvisualmanagerwindows7getribboneditbackgroundcolor"></a><a name="getribboneditbackgroundcolor"></a>CMFCVisualManagerWindows7::GetRibbonEditBackgroundColor
 
-Získá barva pozadí textového pole pásu karet.
+Získá barvu pozadí editačního pole pásu karet.
 
 ```
 virtual COLORREF GetRibbonEditBackgroundColor (
@@ -147,27 +147,27 @@ virtual COLORREF GetRibbonEditBackgroundColor (
 
 ### <a name="parameters"></a>Parametry
 
-*pEdit*<br/>
-[in] Ukazatel na ovládací prvek pro úpravy. Tato hodnota nemůže být NULL.
+*pUpravit*<br/>
+[v] Ukazatel na ovládací prvek pro úpravy. Tato hodnota nemůže být null.
 
-*bIsHighlighted*<br/>
-[out] Vrátí, zda se zvýrazní pole pásu karet.
+*bIsZvýrazněno*<br/>
+[out] Vrátí, zda je pole pásu karet zvýrazněné.
 
-*bIsPaneHighlighted*<br/>
-[out] Vrátí hodnotu TRUE, pokud na pásu karet panelu, který obsahuje *pEdit* je zvýrazněn.
+*bIsPaneZvýrazněno*<br/>
+[out] Vrátí hodnotu PRAVDA, pokud je zvýrazněn panel pásu karet, který obsahuje *příkaz pEdit.*
 
-*bIsDisabled*<br/>
-[out] Vrátí, zda *pEdit* je zakázaná.
+*bIsZakázáno*<br/>
+[out] Vrátí, zda je *příkaz pEdit* zakázán.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Barva pozadí textového pole *pEdit*.
+Barva pozadí editačního pole *pEdit .*
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="onfillmenuimagerect"></a>  CMFCVisualManagerWindows7::OnFillMenuImageRect
+## <a name="cmfcvisualmanagerwindows7onfillmenuimagerect"></a><a name="onfillmenuimagerect"></a>CMFCVisualManagerWindows7::OnFillMenuImageRect
 
-Rozhraní volá tuto metodu při vyplní oblast kolem obrázku položky nabídky.
+Framework volá tuto metodu, když vyplňuje oblast kolem obrázku položky nabídky.
 
 ```
 virtual void OnFillMenuImageRect(
@@ -179,21 +179,21 @@ virtual void OnFillMenuImageRect(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
-[in] Ukazatel na kontext zařízení tlačítka s nabídkou.
+*Pdc*<br/>
+[v] Ukazatel na kontext zařízení tlačítka nabídky.
 
-*pButton*<br/>
-[in] Ukazatel `CMFCToolBarButton`. Rozhraní framework výplně pozadí pro toto tlačítko.
+*pTlačítko*<br/>
+[v] Ukazatel na `CMFCToolBarButton`. Rámec vyplní pozadí pro toto tlačítko.
 
 *Obdélník*<br/>
-[in] Obdélník, který určuje hranice oblasti obrázek tlačítka nabídky.
+[v] Obdélník, který určuje hranice oblasti obrázku tlačítka nabídky.
 
-*state*<br/>
-[in] Stav tlačítka.
+*Státu*<br/>
+[v] Stav tlačítka.
 
 ### <a name="remarks"></a>Poznámky
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>

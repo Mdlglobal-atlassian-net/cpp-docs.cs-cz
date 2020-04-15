@@ -1,5 +1,5 @@
 ---
-title: CInterfaceArray Class
+title: Třída CInterfaceArray
 ms.date: 11/04/2016
 f1_keywords:
 - CInterfaceArray
@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CInterfaceArray class
 ms.assetid: 1f29cf66-a086-4a7b-b6a8-64f73da39f79
-ms.openlocfilehash: 2e8714bf40e99a1014d7cd6de82cddb13cbbb9cf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e6efe31989b06f0977ecff156a8f64053dc64ad1
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62258868"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81326803"
 ---
-# <a name="cinterfacearray-class"></a>CInterfaceArray Class
+# <a name="cinterfacearray-class"></a>Třída CInterfaceArray
 
-Tato třída poskytuje metody, které jsou užitečné při vytváření pole z ukazatele rozhraní modelu COM.
+Tato třída poskytuje metody užitečné při vytváření pole ukazatelů rozhraní COM.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -31,24 +31,24 @@ class CInterfaceArray :
 #### <a name="parameters"></a>Parametry
 
 *I*<br/>
-Rozhraní modelu COM zadání typu ukazatel na Uložit.
+Rozhraní COM určující typ ukazatele, který má být uložen.
 
 *piid*<br/>
-Ukazatel na IID *můžu*.
+Ukazatel na IID *I*.
 
 ## <a name="members"></a>Členové
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
 |[CInterfaceArray::CInterfaceArray](#cinterfacearray)|Konstruktor pro pole rozhraní.|
 
 ## <a name="remarks"></a>Poznámky
 
-Tato třída poskytuje konstruktor a odvozené metody pro vytvoření pole ukazatelů rozhraní modelu COM. Použití [cinterfacelist –](../../atl/reference/cinterfacelist-class.md) při seznam je povinný.
+Tato třída poskytuje konstruktor a odvozené metody pro vytvoření pole ukazatelů rozhraní COM. [CInterfaceList](../../atl/reference/cinterfacelist-class.md) použijte v případě, že je požadován seznam.
 
-Další informace najdete v tématu [ATL – třídy kolekce](../../atl/atl-collection-classes.md).
+Další informace naleznete v tématu [třídy kolekce klíčů ATL](../../atl/atl-collection-classes.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -60,7 +60,7 @@ Další informace najdete v tématu [ATL – třídy kolekce](../../atl/atl-coll
 
 **Záhlaví:** atlcoll.h
 
-##  <a name="cinterfacearray"></a>  CInterfaceArray::CInterfaceArray
+## <a name="cinterfacearraycinterfacearray"></a><a name="cinterfacearray"></a>CInterfaceArray::CInterfaceArray
 
 Konstruktor
 
@@ -72,9 +72,9 @@ CInterfaceArray() throw();
 
 Inicializuje pole inteligentního ukazatele.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[CAtlArray – třída](../../atl/reference/catlarray-class.md)<br/>
-[CComQIPtr – třída](../../atl/reference/ccomqiptr-class.md)<br/>
-[CComQIPtrElementTraits – třída](../../atl/reference/ccomqiptrelementtraits-class.md)<br/>
-[Přehled tříd](../../atl/atl-class-overview.md)
+[Třída CAtlArray](../../atl/reference/catlarray-class.md)<br/>
+[Třída CComQIPtr](../../atl/reference/ccomqiptr-class.md)<br/>
+[Třída CComQIPtrElementTraits](../../atl/reference/ccomqiptrelementtraits-class.md)<br/>
+[Přehled třídy](../../atl/atl-class-overview.md)

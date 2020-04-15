@@ -1,5 +1,5 @@
 ---
-title: CSinusoidalTransitionFromRange Class
+title: Třída CSinusoidalTransitionFromRange
 ms.date: 11/04/2016
 f1_keywords:
 - CSinusoidalTransitionFromRange
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - CSinusoidalTransitionFromRange [MFC], m_period
 - CSinusoidalTransitionFromRange [MFC], m_slope
 ms.assetid: 8b66a729-5f10-431a-b055-e3600d0065da
-ms.openlocfilehash: df360493413e850f4c0fcee41c925cd256c16dad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0612a4b365b928d3c9be6d76168a76b4ee1caa85
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324022"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81318260"
 ---
-# <a name="csinusoidaltransitionfromrange-class"></a>CSinusoidalTransitionFromRange Class
+# <a name="csinusoidaltransitionfromrange-class"></a>Třída CSinusoidalTransitionFromRange
 
-Zapouzdřuje přechod se sinusovým rozsahem, který má daný rozsah oscilace.
+Zapouzdřuje sinusový rozsah přechodu, který má daný rozsah kmitání.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,33 +41,33 @@ class CSinusoidalTransitionFromRange : public CBaseTransition;
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
 |[CSinusoidalTransitionFromRange::CSinusoidalTransitionFromRange](#csinusoidaltransitionfromrange)|Vytvoří objekt přechodu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CSinusoidalTransitionFromRange::Create](#create)|Knihovna přechod k vytvoření objektu přechod zapouzdřený objekt modelu COM zavolá. (Přepíše [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|
+|[CSinusoidalTransitionFromRange::Vytvořit](#create)|Volá knihovnu přechodu k vytvoření zapouzdřený přechod ový objekt COM. (Přepíše [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CSinusoidalTransitionFromRange::m_dblMaximumValue](#m_dblmaximumvalue)|Hodnota proměnné animace Špička sinusovým tvaru.|
-|[CSinusoidalTransitionFromRange::m_dblMinimumValue](#m_dblminimumvalue)|Hodnota proměnné animace v žlábku sinusovým tvaru.|
+|[CSinusoidalTransitionFromRange::m_dblMaximumValue](#m_dblmaximumvalue)|Hodnota proměnné animace na vrcholu sinusové vlny.|
+|[CSinusoidalTransitionFromRange::m_dblMinimumValue](#m_dblminimumvalue)|Hodnota proměnné animace na koryto sinusové vlny.|
 |[CSinusoidalTransitionFromRange::m_duration](#m_duration)|Doba trvání přechodu.|
-|[CSinusoidalTransitionFromRange::m_period](#m_period)|Období oscilace sinusovým wave během několika sekund.|
-|[CSinusoidalTransitionFromRange::m_slope](#m_slope)|Křivka na začátku přechod.|
+|[CSinusoidalTransitionFromRange::m_period](#m_period)|Doba kmitání sinusové vlny v sekundách.|
+|[CSinusoidalTransitionFromRange::m_slope](#m_slope)|Sklon na začátku přechodu.|
 
 ## <a name="remarks"></a>Poznámky
 
-Hodnota proměnné animace kolísá mezi zadaný minimální a maximální hodnoty za celou dobu trvání přechod se sinusovým rozsahem. Tento parametr sklon se používá k rozlišení mezi dva možné vlny sinus určeného další parametry. Protože všechny přechody jsou automaticky vymazány, doporučuje se je přidělena pomocí operátoru nové. Zapouzdřený objekt IUIAnimationTransition COM je vytvořené CAnimationController::AnimateGroup, dokud je NULL. Změna členské proměnné po vytvoření tohoto objektu COM nemá žádný vliv.
+Hodnota proměnné animace kolísá mezi zadanými minimálními a maximálními hodnotami po celou dobu trvání přechodu rozsahu sinusoidy. Parametr sklonu se používá k rozdvojení mezi dvěma možnými sinusovými vlnami určenými ostatními parametry. Vzhledem k tomu, že všechny přechody jsou vymazány automaticky, doporučuje se jim přidělit pomocí operátoru new. Zapouzdřený objekt IUIAnimationTransition COM je vytvořen CAnimationController::AnimateGroup, do té doby je null. Změna členských proměnných po vytvoření tohoto objektu COM nemá žádný vliv.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObjekt](../../mfc/reference/cobject-class.md)
 
 [CBaseTransition](../../mfc/reference/cbasetransition-class.md)
 
@@ -77,9 +77,9 @@ Hodnota proměnné animace kolísá mezi zadaný minimální a maximální hodno
 
 **Záhlaví:** afxanimationcontroller.h
 
-##  <a name="create"></a>  CSinusoidalTransitionFromRange::Create
+## <a name="csinusoidaltransitionfromrangecreate"></a><a name="create"></a>CSinusoidalTransitionFromRange::Vytvořit
 
-Knihovna přechod k vytvoření objektu přechod zapouzdřený objekt modelu COM zavolá.
+Volá knihovnu přechodu k vytvoření zapouzdřený přechod ový objekt COM.
 
 ```
 virtual BOOL Create(
@@ -89,14 +89,14 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>Parametry
 
-*pLibrary*<br/>
-Ukazatel na přechod knihovny, který je zodpovědný za vytváření standardní přechodů.
+*pKnihovna*<br/>
+Ukazatel na knihovnu přechodů, která je zodpovědná za vytváření standardních přechodů.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE, pokud úspěšně; vytvoření přechodu v opačném případě FALSE.
+PRAVDA, pokud je přechod úspěšně vytvořen; jinak FALSE.
 
-##  <a name="csinusoidaltransitionfromrange"></a>  CSinusoidalTransitionFromRange::CSinusoidalTransitionFromRange
+## <a name="csinusoidaltransitionfromrangecsinusoidaltransitionfromrange"></a><a name="csinusoidaltransitionfromrange"></a>CSinusoidalTransitionFromRange::CSinusoidalTransitionFromRange
 
 Vytvoří objekt přechodu.
 
@@ -115,34 +115,34 @@ CSinusoidalTransitionFromRange(
 Doba trvání přechodu.
 
 *dblMinimumValue*<br/>
-Hodnota proměnné animace v žlábku sinusovým tvaru.
+Hodnota proměnné animace na koryto sinusové vlny.
 
 *dblMaximumValue*<br/>
-Hodnota proměnné animace Špička sinusovým tvaru.
+Hodnota proměnné animace na vrcholu sinusové vlny.
 
 *Období*<br/>
-Období oscilace sinusovým wave během několika sekund.
+Doba kmitání sinusové vlny v sekundách.
 
-*křivka*<br/>
-Křivka na začátku přechod.
+*Svahu*<br/>
+Sklon na začátku přechodu.
 
-##  <a name="m_dblmaximumvalue"></a>  CSinusoidalTransitionFromRange::m_dblMaximumValue
+## <a name="csinusoidaltransitionfromrangem_dblmaximumvalue"></a><a name="m_dblmaximumvalue"></a>CSinusoidalTransitionFromRange::m_dblMaximumValue
 
-Hodnota proměnné animace Špička sinusovým tvaru.
+Hodnota proměnné animace na vrcholu sinusové vlny.
 
 ```
 DOUBLE m_dblMaximumValue;
 ```
 
-##  <a name="m_dblminimumvalue"></a>  CSinusoidalTransitionFromRange::m_dblMinimumValue
+## <a name="csinusoidaltransitionfromrangem_dblminimumvalue"></a><a name="m_dblminimumvalue"></a>CSinusoidalTransitionFromRange::m_dblMinimumValue
 
-Hodnota proměnné animace v žlábku sinusovým tvaru.
+Hodnota proměnné animace na koryto sinusové vlny.
 
 ```
 DOUBLE m_dblMinimumValue;
 ```
 
-##  <a name="m_duration"></a>  CSinusoidalTransitionFromRange::m_duration
+## <a name="csinusoidaltransitionfromrangem_duration"></a><a name="m_duration"></a>CSinusoidalTransitionFromRange::m_duration
 
 Doba trvání přechodu.
 
@@ -150,22 +150,22 @@ Doba trvání přechodu.
 UI_ANIMATION_SECONDS m_duration;
 ```
 
-##  <a name="m_period"></a>  CSinusoidalTransitionFromRange::m_period
+## <a name="csinusoidaltransitionfromrangem_period"></a><a name="m_period"></a>CSinusoidalTransitionFromRange::m_period
 
-Období oscilace sinusovým wave během několika sekund.
+Doba kmitání sinusové vlny v sekundách.
 
 ```
 UI_ANIMATION_SECONDS m_period;
 ```
 
-##  <a name="m_slope"></a>  CSinusoidalTransitionFromRange::m_slope
+## <a name="csinusoidaltransitionfromrangem_slope"></a><a name="m_slope"></a>CSinusoidalTransitionFromRange::m_slope
 
-Křivka na začátku přechod.
+Sklon na začátku přechodu.
 
 ```
 UI_ANIMATION_SLOPE m_slope;
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Třídy](../../mfc/reference/mfc-classes.md)

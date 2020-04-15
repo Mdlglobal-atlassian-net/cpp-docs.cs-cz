@@ -1,6 +1,6 @@
 ---
-title: Objekt EnvironmentVariable – třída
-description: Referenční C++ dokumentace třídy objekt EnvironmentVariable sady SDK pro Build Insights
+title: Třída EnvironmentVariable
+description: C++ Build Insights SDK EnvironmentVariable odkaz na třídu.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 19e9278e76fb2116dac30a0e790fba86c6c56484
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 963c52e0ea9e048448c6f2b3ac62d9938817467e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78333438"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81325022"
 ---
-# <a name="environmentvariable-class"></a>Objekt EnvironmentVariable – třída
+# <a name="environmentvariable-class"></a>Třída EnvironmentVariable
 
 ::: moniker range="<=vs-2015"
 
-Sada C++ SDK pro Build Insights je kompatibilní se sadou Visual Studio 2017 a novější. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek selektor verzí sady Visual Studio pro tento článek na sadu Visual Studio 2017 nebo Visual Studio 2019.
+Sada C++ Build Insights SDK je kompatibilní s Visual Studio 2017 a vyšší. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek pro výběr **verze** sady Visual Studio pro tento článek na Visual Studio 2017 nebo Visual Studio 2019. Nachází se v horní části obsahu na této stránce.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Třída `EnvironmentVariable` se používá s funkcemi [MatchEvent](../functions/match-event.md), [MatchEventInMemberFunction](../functions/match-event-in-member-function.md), [MatchEventStack](../functions/match-event-stack.md)a [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md) . Použijte ho ke spárování [ENVIRONMENT_VARIABLE](../event-table.md#environment-variable) události.
+Třída `EnvironmentVariable` se používá s funkcemi [MatchEvent](../functions/match-event.md), [MatchEventInMemberFunction](../functions/match-event-in-member-function.md), [MatchEventStack](../functions/match-event-stack.md)a [MatchEventStackInMemberFunction.](../functions/match-event-stack-in-member-function.md) Použijte ji tak, aby odpovídala [události ENVIRONMENT_VARIABLE.](../event-table.md#environment-variable)
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -42,18 +42,18 @@ public:
 
 ## <a name="members"></a>Členové
 
-Společně s děděnými členy ze své základní třídy [SimpleEvent](simple-event.md) obsahuje Třída `EnvironmentVariable` následující členy:
+Spolu s zděděnými členy ze základní `EnvironmentVariable` třídy [SimpleEvent](simple-event.md) obsahuje třída následující členy:
 
 ### <a name="constructors"></a>Konstruktory
 
-[Objekt EnvironmentVariable](#environment-variable)
+[Proměnná prostředí](#environment-variable)
 
 ### <a name="functions"></a>Functions
 
-[Název](#name)
-[hodnota](#value)
+[Hodnota názvu](#name)
+[Value](#value)
 
-## <a name="environment-variable"></a>Objekt EnvironmentVariable
+## <a name="environmentvariable"></a><a name="environment-variable"></a>Proměnná prostředí
 
 ```cpp
 EnvironmentVariable(const RawEvent& event);
@@ -61,10 +61,10 @@ EnvironmentVariable(const RawEvent& event);
 
 ### <a name="parameters"></a>Parametry
 
-\ *události*
-Událost [ENVIRONMENT_VARIABLE](../event-table.md#environment-variable) .
+*Událost*\
+[Událost ENVIRONMENT_VARIABLE.](../event-table.md#environment-variable)
 
-## <a name="name"></a>Jméno
+## <a name="name"></a><a name="name"></a>Jméno
 
 ```cpp
 const wchar_t Name() const;
@@ -72,9 +72,9 @@ const wchar_t Name() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Název proměnné prostředí
+Název proměnné prostředí.
 
-## <a name="value"></a>Osa
+## <a name="value"></a><a name="value"></a>Hodnotu
 
 ```cpp
 const wchar_t Value() const;

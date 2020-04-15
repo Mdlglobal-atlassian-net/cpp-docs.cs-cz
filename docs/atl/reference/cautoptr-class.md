@@ -1,5 +1,5 @@
 ---
-title: Cautoptr – třída
+title: Třída CAutoPtr
 ms.date: 11/04/2016
 f1_keywords:
 - CAutoPtr
@@ -12,19 +12,19 @@ f1_keywords:
 helpviewer_keywords:
 - CAutoPtr class
 ms.assetid: 08988d53-4fb0-4711-bdfc-8ac29c63f410
-ms.openlocfilehash: 7f4f446aa97f2bf3843b830bd7fb4c4a5d74ffdb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cb8e3d6b71db6ab60b3b246bd8c5bf4f2c9aaa34
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62260159"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81321259"
 ---
-# <a name="cautoptr-class"></a>Cautoptr – třída
+# <a name="cautoptr-class"></a>Třída CAutoPtr
 
-Tato třída reprezentuje objekt inteligentního ukazatele.
+Tato třída představuje inteligentní ukazatel objektu.
 
 > [!IMPORTANT]
->  Tato třída a jejích členů nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.
+> Tuto třídu a její členy nelze použít v aplikacích, které se spouštějí v prostředí Windows Runtime.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -42,44 +42,44 @@ Typ ukazatele.
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
 |[CAutoPtr::CAutoPtr](#cautoptr)|Konstruktor|
 |[CAutoPtr::~CAutoPtr](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CAutoPtr::Attach](#attach)|Volejte tuto metodu za účelem převzít vlastnictví stávajícího ukazatele.|
-|[CAutoPtr::Detach](#detach)|Volejte tuto metodu za účelem uvolní vlastnictví ukazatele.|
-|[CAutoPtr::Free](#free)|Volejte tuto metodu za účelem odstranění objektu, na které odkazují `CAutoPtr`.|
+|[CAutoPtr::Připojit](#attach)|Volání této metody převzít vlastnictví existující ukazatel.|
+|[CAutoPtr::Detach](#detach)|Volání této metody uvolnit vlastnictví ukazatele.|
+|[CAutoPtr::Zdarma](#free)|Volání této metody odstranit objekt ukázal `CAutoPtr`.|
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CAutoPtr::operator T *](#operator_t_star)|Operátor přetypování.|
-|[CAutoPtr::operator =](#operator_eq)|Operátor přiřazení.|
-|[CAutoPtr::operator ->](#operator_ptr)|Operátor pointer-to-member.|
+|[CAutoPtr::operátor T*](#operator_t_star)|Operátor obsazení.|
+|[CAutoPtr::operátor =](#operator_eq)|Operátor přiřazení.|
+|[CAutoPtr::operátor ->](#operator_ptr)|Operátor ukazatele na člen.|
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CAutoPtr::m_p](#m_p)|Členské proměnné ukazatele data.|
+|[CAutoPtr::m_p](#m_p)|Proměnná datového prvku ukazatele.|
 
 ## <a name="remarks"></a>Poznámky
 
-Tato třída poskytuje metody pro vytváření a správu inteligentního ukazatele, která pomůže zajistit ochranu před nevracení paměti, že automaticky uvolnění prostředků při spadá mimo rozsah.
+Tato třída poskytuje metody pro vytváření a správu inteligentní ukazatel, který pomůže chránit před nevracením paměti tím, že automaticky uvolní prostředky, když spadá mimo rozsah.
 
-Další, `CAutoPtr`konstruktor kopie a přiřazení operátoru převodu vlastnictví ukazatele, kopírování zdroje ukazatel na ukazatel cílový a nastavení zdroje ukazatel na hodnotu NULL. Proto není možné mít dvě `CAutoPtr` objekty každý ukládání stejný ukazatel, a to snižuje možnost odstranění stejný ukazatel dvakrát.
+Dále `CAutoPtr`'s copy konstruktor a operátor přiřazení převod vlastnictví ukazatele, kopírování zdrojukazatel cílového ukazatele a nastavení zdrojový ukazatel null. Proto je nemožné mít `CAutoPtr` dva objekty každý ukládání stejného ukazatele, a to snižuje možnost odstranění stejného ukazatele dvakrát.
 
-`CAutoPtr` také zjednodušuje vytváření kolekcí ukazatelů. Místo odvození třídy kolekce a přepisování destruktoru, je jednodušší, aby kolekce `CAutoPtr` objekty. Při odstranění kolekce `CAutoPtr` objekty dostanou mimo rozsah, který se automaticky odstranit sami.
+`CAutoPtr`také zjednodušuje vytváření kolekcí ukazatelů. Místo odvození třídy kolekce a přepsání destruktoru je jednodušší vytvořit `CAutoPtr` kolekci objektů. Při odstranění kolekce objekty `CAutoPtr` přejdou mimo rozsah a automaticky odstranit sami.
 
-[Cheapptr –](../../atl/reference/cheapptr-class.md) a varianty fungovat stejným způsobem jako `CAutoPtr`, s tím rozdílem, že se přidělují a uvolňují paměť pomocí funkce různé haldy místo C++ **nové** a **odstranit** operátory. [Cautovectorptr –](../../atl/reference/cautovectorptr-class.md) je podobný `CAutoPtr`, jediným rozdílem je, že používá **vektorové new []** a **vektoru delete []** k přidělují a uvolňují paměť.
+[CHeapPtr](../../atl/reference/cheapptr-class.md) a varianty fungují stejným `CAutoPtr`způsobem jako , s tím rozdílem, že přidělují a volné paměti pomocí různých funkcí haldy namísto C++ **nové** a **odstranit** operátory. [CAutoVectorPtr](../../atl/reference/cautovectorptr-class.md) je `CAutoPtr`podobný , jediný rozdíl je, že používá **vektor nové []** a **vektor delete []** přidělit a uvolnit paměť.
 
-Viz také [cautoptrarray –](../../atl/reference/cautoptrarray-class.md) a [cautoptrlist –](../../atl/reference/cautoptrlist-class.md) když pole nebo seznamy inteligentních ukazatelů jsou povinné.
+Viz také [CAutoPtrArray](../../atl/reference/cautoptrarray-class.md) a [CAutoPtrList,](../../atl/reference/cautoptrlist-class.md) pokud jsou vyžadována pole nebo seznamy inteligentních ukazatelů.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -89,9 +89,9 @@ Viz také [cautoptrarray –](../../atl/reference/cautoptrarray-class.md) a [cau
 
 [!code-cpp[NVC_ATL_Utilities#74](../../atl/codesnippet/cpp/cautoptr-class_1.cpp)]
 
-##  <a name="attach"></a>  CAutoPtr::Attach
+## <a name="cautoptrattach"></a><a name="attach"></a>CAutoPtr::Připojit
 
-Volejte tuto metodu za účelem převzít vlastnictví stávajícího ukazatele.
+Volání této metody převzít vlastnictví existující ukazatel.
 
 ```
 void Attach(T* p) throw();
@@ -99,20 +99,20 @@ void Attach(T* p) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*p*<br/>
-`CAutoPtr` Objektu bude převzít vlastnictví tohoto ukazatele.
+*P*<br/>
+Objekt `CAutoPtr` převezme vlastnictví tohoto ukazatele.
 
 ### <a name="remarks"></a>Poznámky
 
-Když `CAutoPtr` objekt převezme vlastnictví ukazatele, automaticky odstraní ukazatel a jakékoli přiděleného objemu dat při dostane mimo rozsah. Pokud [CAutoPtr::Detach](#detach) je volána, programátor je znovu daný odpovědnost za žádné uvolnění při přidělování prostředků.
+Když `CAutoPtr` objekt převezme vlastnictví ukazatele, automaticky odstraní ukazatel a všechna přidělená data, když přejde mimo rozsah. Pokud [CAutoPtr::Detach](#detach) se nazývá, programátor je opět pověřen odpovědnost za uvolnění všech přidělených prostředků.
 
-V sestavení pro ladění k selhání kontrolního výrazu dojde, pokud [CAutoPtr::m_p](#m_p) datový člen aktuálně odkazuje na existující hodnotu; to znamená, že není rovna hodnotě NULL.
+V sestaveních ladění dojde k selhání kontrolního výrazu, pokud datový člen [CAutoPtr:::m_p](#m_p) aktuálně odkazuje na existující hodnotu; to znamená, že se nerovná hodnotě NULL.
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad v [CAutoPtr přehled](../../atl/reference/cautoptr-class.md).
+Viz příklad v [Přehledu CAutoPtr](../../atl/reference/cautoptr-class.md).
 
-##  <a name="cautoptr"></a>  CAutoPtr::CAutoPtr
+## <a name="cautoptrcautoptr"></a><a name="cautoptr"></a>CAutoPtr::CAutoPtr
 
 Konstruktor
 
@@ -129,21 +129,21 @@ CAutoPtr(CAutoPtr<T>& p) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*p*<br/>
-Stávajícího ukazatele.
+*P*<br/>
+Existující ukazatel.
 
-*TSrc*<br/>
-Typ spravované jiným `CAutoPtr`, která slouží k inicializaci aktuální objekt.
+*TSrc (TSrc)*<br/>
+Typ, který je `CAutoPtr`spravován jiným , slouží k inicializaci aktuálního objektu.
 
 ### <a name="remarks"></a>Poznámky
 
-`CAutoPtr` Objektu lze vytvořit pomocí stávajícího ukazatele, v takovém případě ji převede vlastnictví ukazatele.
+Objekt `CAutoPtr` lze vytvořit pomocí existující ukazatel, v takovém případě přenese vlastnictví ukazatele.
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad v [CAutoPtr přehled](../../atl/reference/cautoptr-class.md).
+Viz příklad v [Přehledu CAutoPtr](../../atl/reference/cautoptr-class.md).
 
-##  <a name="dtor"></a>  CAutoPtr::~CAutoPtr
+## <a name="cautoptrcautoptr"></a><a name="dtor"></a>CAutoPtr::~CAutoPtr
 
 Destruktor.
 
@@ -153,11 +153,11 @@ Destruktor.
 
 ### <a name="remarks"></a>Poznámky
 
-Uvolní všechny přidělené prostředky. Volání [CAutoPtr::Free](#free).
+Uvolní všechny přidělené zdroje. Volání [CAutoPtr::Free](#free).
 
-##  <a name="detach"></a>  CAutoPtr::Detach
+## <a name="cautoptrdetach"></a><a name="detach"></a>CAutoPtr::Detach
 
-Volejte tuto metodu za účelem uvolní vlastnictví ukazatele.
+Volání této metody uvolnit vlastnictví ukazatele.
 
 ```
 T* Detach() throw();
@@ -169,15 +169,15 @@ Vrátí kopii ukazatele.
 
 ### <a name="remarks"></a>Poznámky
 
-Uvolní vlastnictví ukazatele, nastaví [CAutoPtr::m_p](#m_p) data členskou proměnnou na hodnotu NULL a vrátí kopii ukazatele. Po volání `Detach`, ho je až programátorovi, aby uvolněte všechny přidělené prostředky nad tím, které `CAutoPtr` objekt může mít dříve předpokládá, že reponsibility.
+Uvolní vlastnictví ukazatele, nastaví proměnnou [CAutoPtr::m_p](#m_p) datového člena na HODNOTU NULL a vrátí kopii ukazatele. Po `Detach`volání je na programátorovi, aby uvolnil všechny `CAutoPtr` přidělené prostředky, přes které objekt mohl dříve předpokládat reponsibility.
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad v [CAutoPtr přehled](../../atl/reference/cautoptr-class.md).
+Viz příklad v [Přehledu CAutoPtr](../../atl/reference/cautoptr-class.md).
 
-##  <a name="free"></a>  CAutoPtr::Free
+## <a name="cautoptrfree"></a><a name="free"></a>CAutoPtr::Zdarma
 
-Volejte tuto metodu za účelem odstranění objektu, na které odkazují `CAutoPtr`.
+Volání této metody odstranit objekt ukázal `CAutoPtr`.
 
 ```
 void Free() throw();
@@ -185,11 +185,11 @@ void Free() throw();
 
 ### <a name="remarks"></a>Poznámky
 
-Objekt, který odkazuje `CAutoPtr` je uvolněn a [CAutoPtr::m_p](#m_p) data členská proměnná je nastavena na hodnotu NULL.
+Objekt, na který `CAutoPtr` se vztahuje odkaz, je uvolněn a proměnná [CAutoPtr::m_p](#m_p) datový člen je nastavena na hodnotu NULL.
 
-##  <a name="m_p"></a>  CAutoPtr::m_p
+## <a name="cautoptrm_p"></a><a name="m_p"></a>CAutoPtr::m_p
 
-Členské proměnné ukazatele data.
+Proměnná datového prvku ukazatele.
 
 ```
 T* m_p;
@@ -197,9 +197,9 @@ T* m_p;
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská proměnná uchovává informace o ukazatel.
+Tato členská proměnná obsahuje informace o ukazateli.
 
-##  <a name="operator_eq"></a>  CAutoPtr::operator =
+## <a name="cautoptroperator-"></a><a name="operator_eq"></a>CAutoPtr::operátor =
 
 Operátor přiřazení.
 
@@ -213,27 +213,27 @@ CAutoPtr<T>& operator= (CAutoPtr<TSrc>& p);
 
 ### <a name="parameters"></a>Parametry
 
-*p*<br/>
+*P*<br/>
 Ukazatel.
 
-*TSrc*<br/>
+*TSrc (TSrc)*<br/>
 Typ třídy.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí odkaz na **CAutoPtr\< T >**.
+Vrátí odkaz na **cautoptr\< t >**.
 
 ### <a name="remarks"></a>Poznámky
 
-Operátor přiřazení odpojí `CAutoPtr` objekt z jakékoli aktuální ukazatel a připojí nový ukazatel *p*, na příslušné místo.
+Operátor přiřazení odpojí `CAutoPtr` objekt od libovolného aktuálního ukazatele a připojí nový ukazatel *p*na jeho místo.
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad v [CAutoPtr přehled](../../atl/reference/cautoptr-class.md).
+Viz příklad v [Přehledu CAutoPtr](../../atl/reference/cautoptr-class.md).
 
-##  <a name="operator_ptr"></a>  CAutoPtr::operator-&gt;
+## <a name="cautoptroperator--gt"></a><a name="operator_ptr"></a>CAutoPtr::operátor -&gt;
 
-Operátor pointer-to-member.
+Operátor ukazatele na člen.
 
 ```
 T* operator->() const throw();
@@ -241,19 +241,19 @@ T* operator->() const throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu [CAutoPtr::m_p](#m_p) data členské proměnné.
+Vrátí hodnotu proměnné [CAutoPtr::m_p](#m_p) datového člena.
 
 ### <a name="remarks"></a>Poznámky
 
-Operátor volání metody ve třídě, na které odkazují `CAutoPtr` objektu. V sestavení pro ladění k selhání kontrolního výrazu dojde, pokud `CAutoPtr` odkazuje na hodnotu NULL.
+Tento operátor slouží k volání metody ve `CAutoPtr` třídě, na kterou objekt ukazuje. V sestaveních ladění dojde k selhání `CAutoPtr` kontrolního výrazu, pokud odkazuje na HODNOTU NULL.
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad v [CAutoPtr přehled](../../atl/reference/cautoptr-class.md).
+Viz příklad v [Přehledu CAutoPtr](../../atl/reference/cautoptr-class.md).
 
-##  <a name="operator_t_star"></a>  CAutoPtr::operator T *
+## <a name="cautoptroperator-t"></a><a name="operator_t_star"></a>CAutoPtr::operátor T*
 
-Operátor přetypování.
+Operátor obsazení.
 
 ```
 operator T* () const throw();
@@ -261,14 +261,14 @@ operator T* () const throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrací ukazatel na objekt typu dat definovanému v šabloně třídy.
+Vrátí ukazatel na datový typ objektu definovaný v šabloně třídy.
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad v [CAutoPtr přehled](../../atl/reference/cautoptr-class.md).
+Viz příklad v [Přehledu CAutoPtr](../../atl/reference/cautoptr-class.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[CHeapPtr – třída](../../atl/reference/cheapptr-class.md)<br/>
-[CAutoVectorPtr – třída](../../atl/reference/cautovectorptr-class.md)<br/>
-[Přehled tříd](../../atl/atl-class-overview.md)
+[Třída CHeapPtr](../../atl/reference/cheapptr-class.md)<br/>
+[Třída CAutoVectorPtr](../../atl/reference/cautovectorptr-class.md)<br/>
+[Přehled třídy](../../atl/atl-class-overview.md)

@@ -1,5 +1,5 @@
 ---
-title: Cheapptrelementtraits – třída
+title: Třída CHeapPtrElementTraits
 ms.date: 11/04/2016
 f1_keywords:
 - CHeapPtrElementTraits
@@ -9,19 +9,19 @@ f1_keywords:
 helpviewer_keywords:
 - CHeapPtrElementTraits class
 ms.assetid: 910e0e06-3c8b-4242-bf00-b57eb74fbc77
-ms.openlocfilehash: e535afb3a49a5720c8394cc1ab9186c360527fea
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f09da968b264463eba759372e4e0756397e9978e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62258920"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81326879"
 ---
-# <a name="cheapptrelementtraits-class"></a>Cheapptrelementtraits – třída
+# <a name="cheapptrelementtraits-class"></a>Třída CHeapPtrElementTraits
 
-Tato třída poskytuje metody, statické funkce a definice TypeDef, které jsou užitečné při vytváření kolekce haldy ukazatelů.
+Tato třída poskytuje metody, statické funkce a typedefs užitečné při vytváření kolekcí ukazatelů haldy.
 
 > [!IMPORTANT]
->  Tato třída a jejích členů nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.
+> Tuto třídu a její členy nelze použít v aplikacích, které se spouštějí v prostředí Windows Runtime.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -34,35 +34,35 @@ class CHeapPtrElementTraits :
 #### <a name="parameters"></a>Parametry
 
 *T*<br/>
-Typ objektu ukládaly ve třídě kolekce.
+Typ objektu, který má být uložen ve třídě kolekce.
 
-*Allocator –*<br/>
-Třída přidělení paměti pro použití. Výchozí hodnota je [ccrtallocator –](../../atl/reference/ccrtallocator-class.md).
+*Přidělování*<br/>
+Třída přidělení paměti, která má být používána. Výchozí hodnota je [CCRTAllocator](../../atl/reference/ccrtallocator-class.md).
 
 ## <a name="members"></a>Členové
 
-### <a name="public-typedefs"></a>Veřejné definice TypeDef
+### <a name="public-typedefs"></a>Veřejné typedefs
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CHeapPtrElementTraits::INARGTYPE](#inargtype)|Datový typ pro použití při přidávání prvků do objektu třídy kolekce.|
-|[CHeapPtrElementTraits::OUTARGTYPE](#outargtype)|Datový typ použitý pro získání prvky z třídy objektu kolekce.|
+|[CHeapPtrElementTraits::INARGTYPE](#inargtype)|Datový typ, který se má použít pro přidání prvků do objektu třídy kolekce.|
+|[CHeapPtrElementTraits::OUTARGTYPE](#outargtype)|Datový typ, který se má použít pro načítání prvků z objektu třídy kolekce.|
 
 ## <a name="remarks"></a>Poznámky
 
-Tato třída poskytuje metody, statické funkce a funkce TypeDef pro pomoc zřízení objekty třídy kolekcí obsahujících ukazatele haldy. Třída `CHeapPtrList` je odvozena z `CHeapPtrElementTraits`.
+Tato třída poskytuje metody, statické funkce a typedefs pro pomoc při vytváření objektů třídy kolekce obsahující ukazatele haldy. Třída `CHeapPtrList` je odvozena od `CHeapPtrElementTraits`.
 
-Další informace najdete v tématu [ATL – třídy kolekce](../../atl/atl-collection-classes.md).
+Další informace naleznete v tématu [třídy kolekce klíčů ATL](../../atl/atl-collection-classes.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Cdefaultcomparetraits –](../../atl/reference/cdefaultcomparetraits-class.md)
+[CDefaultCompareTraits](../../atl/reference/cdefaultcomparetraits-class.md)
 
-[Cdefaulthashtraits –](../../atl/reference/cdefaulthashtraits-class.md)
+[CDefaultHashTraits](../../atl/reference/cdefaulthashtraits-class.md)
 
-[Celementtraitsbase –](../../atl/reference/celementtraitsbase-class.md)
+[CElementTraitsBase](../../atl/reference/celementtraitsbase-class.md)
 
-[Cdefaultelementtraits –](../../atl/reference/cdefaultelementtraits-class.md)
+[CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md)
 
 `CHeapPtrElementTraits`
 
@@ -70,24 +70,24 @@ Další informace najdete v tématu [ATL – třídy kolekce](../../atl/atl-coll
 
 **Záhlaví:** atlcoll.h
 
-##  <a name="inargtype"></a>  CHeapPtrElementTraits::INARGTYPE
+## <a name="cheapptrelementtraitsinargtype"></a><a name="inargtype"></a>CHeapPtrElementTraits::INARGTYPE
 
-Datový typ pro použití při přidávání prvků do objektu třídy kolekce.
+Datový typ, který se má použít pro přidání prvků do objektu třídy kolekce.
 
 ```
 typedef CHeapPtr<T, Allocator>& INARGTYPE;
 ```
 
-##  <a name="outargtype"></a>  CHeapPtrElementTraits::OUTARGTYPE
+## <a name="cheapptrelementtraitsoutargtype"></a><a name="outargtype"></a>CHeapPtrElementTraits::OUTARGTYPE
 
-Datový typ použitý pro získání prvky z třídy objektu kolekce.
+Datový typ, který se má použít pro načítání prvků z objektu třídy kolekce.
 
 ```
 typedef T *& OUTARGTYPE;
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[CDefaultElementTraits – třída](../../atl/reference/cdefaultelementtraits-class.md)<br/>
-[CComHeapPtr – třída](../../atl/reference/ccomheapptr-class.md)<br/>
-[Přehled tříd](../../atl/atl-class-overview.md)
+[Třída CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md)<br/>
+[Třída CComHeapPtr](../../atl/reference/ccomheapptr-class.md)<br/>
+[Přehled třídy](../../atl/atl-class-overview.md)

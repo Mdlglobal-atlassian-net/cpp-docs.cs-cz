@@ -1,5 +1,5 @@
 ---
-title: Cautoptrelementtraits – třída
+title: Třída CAutoPtrElementTraits
 ms.date: 11/04/2016
 f1_keywords:
 - CAutoPtrElementTraits
@@ -9,19 +9,19 @@ f1_keywords:
 helpviewer_keywords:
 - CAutoPtrElementTraits class
 ms.assetid: 777c1b14-6ab7-491f-b9a5-be149e71d4a2
-ms.openlocfilehash: d217441048403b0ff5361f8049b76367174812f1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ac29116dc9beedf587c42cc0e52f8c9dbaf3d782
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62246734"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81318878"
 ---
-# <a name="cautoptrelementtraits-class"></a>Cautoptrelementtraits – třída
+# <a name="cautoptrelementtraits-class"></a>Třída CAutoPtrElementTraits
 
-Tato třída poskytuje metody, statické funkce a definice TypeDef, které jsou užitečné při vytváření kolekce inteligentních ukazatelů.
+Tato třída poskytuje metody, statické funkce a typedefs užitečné při vytváření kolekcí inteligentní ukazatele.
 
 > [!IMPORTANT]
->  Tato třída a jejích členů nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.
+> Tuto třídu a její členy nelze použít v aplikacích, které se spouštějí v prostředí Windows Runtime.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -38,26 +38,26 @@ Typ ukazatele.
 
 ## <a name="members"></a>Členové
 
-### <a name="public-typedefs"></a>Veřejné definice TypeDef
+### <a name="public-typedefs"></a>Veřejné typedefs
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CAutoPtrElementTraits::INARGTYPE](#inargtype)|Datový typ pro použití při přidávání prvků do objektu třídy kolekce.|
-|[CAutoPtrElementTraits::OUTARGTYPE](#outargtype)|Datový typ použitý pro získání prvky z třídy objektu kolekce.|
+|[CAutoPtrElementTraits::INARGTYPE](#inargtype)|Datový typ, který se má použít pro přidání prvků do objektu třídy kolekce.|
+|[CAutoPtrElementTraits::OUTARGTYPE](#outargtype)|Datový typ, který se má použít pro načítání prvků z objektu třídy kolekce.|
 
 ## <a name="remarks"></a>Poznámky
 
-Tato třída poskytuje metody, statické funkce a funkce TypeDef pro pomoc vytvoření třídy objektů kolekce obsahující inteligentní ukazatele. Třídy [cautoptrarray –](../../atl/reference/cautoptrarray-class.md) a [cautoptrlist –](../../atl/reference/cautoptrlist-class.md) odvozovat `CAutoPtrElementTraits`. Pokud sestavování kolekce inteligentních ukazatelů, která vyžaduje vektor – nový a operátory odstranění, použijte [cautovectorptrelementtraits –](../../atl/reference/cautovectorptrelementtraits-class.md) místo.
+Tato třída poskytuje metody, statické funkce a typedefs pro pomoc při vytváření objektů třídy kolekce obsahujícíinteligentní ukazatele. Třídy [CAutoPtrArray](../../atl/reference/cautoptrarray-class.md) a [CAutoPtrList](../../atl/reference/cautoptrlist-class.md) jsou odvozeny z . `CAutoPtrElementTraits` Pokud vytváření kolekce inteligentní ukazatele, které vyžaduje vektor nové a odstranit operátory, použijte [CAutoVectorPtrElementTraits](../../atl/reference/cautovectorptrelementtraits-class.md) místo.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Cdefaultcomparetraits –](../../atl/reference/cdefaultcomparetraits-class.md)
+[CDefaultCompareTraits](../../atl/reference/cdefaultcomparetraits-class.md)
 
-[Cdefaulthashtraits –](../../atl/reference/cdefaulthashtraits-class.md)
+[CDefaultHashTraits](../../atl/reference/cdefaulthashtraits-class.md)
 
-[Celementtraitsbase –](../../atl/reference/celementtraitsbase-class.md)
+[CElementTraitsBase](../../atl/reference/celementtraitsbase-class.md)
 
-[Cdefaultelementtraits –](../../atl/reference/cdefaultelementtraits-class.md)
+[CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md)
 
 `CAutoPtrElementTraits`
 
@@ -65,23 +65,23 @@ Tato třída poskytuje metody, statické funkce a funkce TypeDef pro pomoc vytvo
 
 **Záhlaví:** atlcoll.h
 
-##  <a name="inargtype"></a>  CAutoPtrElementTraits::INARGTYPE
+## <a name="cautoptrelementtraitsinargtype"></a><a name="inargtype"></a>CAutoPtrElementTraits::INARGTYPE
 
-Datový typ pro použití při přidávání prvků do objektu třídy kolekce.
+Datový typ, který se má použít pro přidání prvků do objektu třídy kolekce.
 
 ```
 typedef CAutoPtr<T>& INARGTYPE;
 ```
 
-##  <a name="outargtype"></a>  CAutoPtrElementTraits::OUTARGTYPE
+## <a name="cautoptrelementtraitsoutargtype"></a><a name="outargtype"></a>CAutoPtrElementTraits::OUTARGTYPE
 
-Datový typ použitý pro získání prvky z třídy objektu kolekce.
+Datový typ, který se má použít pro načítání prvků z objektu třídy kolekce.
 
 ```
 typedef T *& OUTARGTYPE;
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[CDefaultElementTraits – třída](../../atl/reference/cdefaultelementtraits-class.md)<br/>
-[Přehled tříd](../../atl/atl-class-overview.md)
+[Třída CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md)<br/>
+[Přehled třídy](../../atl/atl-class-overview.md)

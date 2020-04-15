@@ -1,6 +1,6 @@
 ---
-title: OptICF – třída
-description: Referenční C++ dokumentace třídy OptICF sady SDK pro Build Insights
+title: Třída OptICF
+description: C++ Build Insights SDK OptICF odkaz na třídu.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: b7594d573a0e4eaf2e19f306b8a109923ba235dc
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: f63fea61f9defc216390fa377b2d1eeace01371b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78333109"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81324465"
 ---
-# <a name="opticf-class"></a>OptICF – třída
+# <a name="opticf-class"></a>Třída OptICF
 
 ::: moniker range="<=vs-2015"
 
-Sada C++ SDK pro Build Insights je kompatibilní se sadou Visual Studio 2017 a novější. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek selektor verzí sady Visual Studio pro tento článek na sadu Visual Studio 2017 nebo Visual Studio 2019.
+Sada C++ Build Insights SDK je kompatibilní s Visual Studio 2017 a vyšší. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek pro výběr **verze** sady Visual Studio pro tento článek na Visual Studio 2017 nebo Visual Studio 2019. Nachází se v horní části obsahu na této stránce.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Třída `OptICF` se používá s funkcemi [MatchEvent](../functions/match-event.md), [MatchEventInMemberFunction](../functions/match-event-in-member-function.md), [MatchEventStack](../functions/match-event-stack.md)a [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md) . Použijte ho ke spárování [OPT_ICF](../event-table.md#opt-icf) události.
+Třída `OptICF` se používá s funkcemi [MatchEvent](../functions/match-event.md), [MatchEventInMemberFunction](../functions/match-event-in-member-function.md), [MatchEventStack](../functions/match-event-stack.md)a [MatchEventStackInMemberFunction.](../functions/match-event-stack-in-member-function.md) Použijte ji tak, aby odpovídala [události OPT_ICF.](../event-table.md#opt-icf)
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -39,13 +39,13 @@ public:
 
 ## <a name="members"></a>Členové
 
-Spolu se zděděnými členy ze své základní třídy [aktivity](activity.md) obsahuje Třída `OptICF` následující členy:
+Spolu s zděděnými členy ze `OptICF` základní třídy [Aktivita](activity.md) obsahuje třída následující členy:
 
 ### <a name="constructors"></a>Konstruktory
 
-[OptICF](#opt-icf)
+[OptiCF](#opt-icf)
 
-## <a name="opt-icf"></a>OptICF
+## <a name="opticf"></a><a name="opt-icf"></a>OptiCF
 
 ```cpp
 OptICF(const RawEvent& event);
@@ -53,7 +53,7 @@ OptICF(const RawEvent& event);
 
 ### <a name="parameters"></a>Parametry
 
-\ *události*
-Událost [OPT_ICF](../event-table.md#opt-icf) .
+*Událost*\
+[OPT_ICF](../event-table.md#opt-icf) událost.
 
 ::: moniker-end

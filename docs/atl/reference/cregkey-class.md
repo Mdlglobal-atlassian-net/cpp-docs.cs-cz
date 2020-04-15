@@ -1,5 +1,5 @@
 ---
-title: CRegKey – třída
+title: Třída CregKey
 ms.date: 11/04/2016
 f1_keywords:
 - CRegKey
@@ -42,19 +42,19 @@ helpviewer_keywords:
 - registry, writing to
 - registry, deleting keys
 ms.assetid: 3afce82b-ba2c-4c1a-8404-dc969e1af74b
-ms.openlocfilehash: 3faf446f74577034a3d0676b90ebe7027ef6da06
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 01810c16ff3e7fbc930983b9a52dc3a80f779f14
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69496539"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81331032"
 ---
-# <a name="cregkey-class"></a>CRegKey – třída
+# <a name="cregkey-class"></a>Třída CregKey
 
 Tato třída poskytuje metody pro manipulaci s položkami v systémovém registru.
 
 > [!IMPORTANT]
->  Tato třída a její členové nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime.
+> Tuto třídu a její členy nelze použít v aplikacích, které se spouštějí v prostředí Windows Runtime.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -66,76 +66,76 @@ class CRegKey
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
 |[CRegKey::CRegKey](#cregkey)|Konstruktor|
 |[CRegKey::~CRegKey](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CRegKey::Attach](#attach)|Voláním této metody připojte k `CRegKey` objektu objekt HKEY nastavením popisovače členů [m_hKey](#m_hkey) na `hKey`hodnotu.|
-|[CRegKey:: Close](#close)|Voláním této metody uvolníte členský popisovač [m_hKey](#m_hkey) a nastavíte jej na hodnotu null.|
-|[CRegKey::Create](#create)|Voláním této metody vytvoříte zadaný klíč, pokud neexistuje jako podklíč `hKeyParent`.|
-|[CRegKey::DeleteSubKey](#deletesubkey)|Voláním této metody odeberete zadaný klíč z registru.|
-|[CRegKey::DeleteValue](#deletevalue)|Voláním této metody odeberete pole hodnoty z [m_hKey](#m_hkey).|
-|[CRegKey::Detach](#detach)|Voláním této metody odpojíte [m_hKey](#m_hkey) členský popisovač od `CRegKey` objektu a nastavíte `m_hKey` hodnotu null.|
-|[CRegKey:: EnumKey](#enumkey)|Voláním této metody můžete vytvořit výčet podklíčů pro otevřený klíč registru.|
-|[CRegKey:: flush](#flush)|Voláním této metody zapíšete všechny atributy otevřeného klíče registru do registru.|
-|[CRegKey:: GetKeySecurity](#getkeysecurity)|Voláním této metody načtěte kopii popisovače zabezpečení, který chrání otevřený klíč registru.|
-|[CRegKey::NotifyChangeKeyValue](#notifychangekeyvalue)|Tato metoda upozorní volajícího na změny atributů nebo obsahu otevřeného klíče registru.|
-|[CRegKey::Open](#open)|Voláním této metody otevřete zadaný klíč a nastavte [m_hKey](#m_hkey) na popisovač tohoto klíče.|
-|[CRegKey::QueryBinaryValue](#querybinaryvalue)|Voláním této metody načtete binární data pro zadaný název hodnoty.|
-|[CRegKey::QueryDWORDValue](#querydwordvalue)|Voláním této metody načtete data DWORD pro zadaný název hodnoty.|
-|[CRegKey::QueryGUIDValue](#queryguidvalue)|Voláním této metody načtete data GUID pro zadaný název hodnoty.|
-|[CRegKey::QueryMultiStringValue](#querymultistringvalue)|Voláním této metody načtete data s více řetězci pro zadaný název hodnoty.|
-|[CRegKey::QueryQWORDValue](#queryqwordvalue)|Voláním této metody načtete data QWORD pro zadaný název hodnoty.|
-|[CRegKey::QueryStringValue](#querystringvalue)|Voláním této metody načtete data řetězce pro zadaný název hodnoty.|
-|[CRegKey::QueryValue](#queryvalue)|Voláním této metody načtete data pro zadané pole hodnoty [m_hKey](#m_hkey). Dřívější verze této metody již nejsou podporovány a jsou označeny jako ATL_DEPRECATED.|
-|[CRegKey::RecurseDeleteKey](#recursedeletekey)|Voláním této metody odeberete zadaný klíč z registru a explicitně odeberete všechny podklíče.|
-|[CRegKey:: SetBinaryValue](#setbinaryvalue)|Voláním této metody nastavíte binární hodnotu klíče registru.|
-|[CRegKey:: SetDWORDValue](#setdwordvalue)|Voláním této metody nastavíte hodnotu DWORD klíče registru.|
-|[CRegKey:: SetGUIDValue](#setguidvalue)|Voláním této metody nastavíte hodnotu identifikátoru GUID klíče registru.|
-|[CRegKey:: SetKeySecurity](#setkeysecurity)|Voláním této metody nastavíte zabezpečení klíče registru.|
-|[CRegKey:: SetKeyValue](#setkeyvalue)|Voláním této metody uložíte data do zadaného pole hodnoty zadaného klíče.|
-|[CRegKey::SetMultiStringValue](#setmultistringvalue)|Voláním této metody nastavíte hodnotu pro více řetězců klíče registru.|
-|[CRegKey:: SetQWORDValue](#setqwordvalue)|Voláním této metody nastavíte hodnotu QWORD klíče registru.|
-|[CRegKey::SetStringValue](#setstringvalue)|Voláním této metody nastavíte hodnotu řetězce klíče registru.|
-|[CRegKey:: SetValue](#setvalue)|Voláním této metody uložíte data do zadaného pole hodnoty [m_hKey](#m_hkey). Dřívější verze této metody již nejsou podporovány a jsou označeny jako ATL_DEPRECATED.|
+|[CregKey::Připojit](#attach)|Volání této metody připojit HKEY `CRegKey` k objektu nastavením `hKey` [popisovače m_hKey](#m_hkey) člen .|
+|[CRegKey::Zavřít](#close)|Volání této metody uvolnit [popisovač člena m_hKey](#m_hkey) a nastavte jej na hodnotu NULL.|
+|[CRegKey::Vytvořit](#create)|Volání této metody k vytvoření zadaného klíče, pokud neexistuje `hKeyParent`jako podklíč .|
+|[CRegKey::DeleteSubKey](#deletesubkey)|Volání této metody odebrat zadaný klíč z registru.|
+|[CRegKey::DeleteValue](#deletevalue)|Volání této metody odebrat pole hodnoty z [m_hKey](#m_hkey).|
+|[CRegKey::Detach](#detach)|Volání této metody odpojit popisovač [m_hKey](#m_hkey) `m_hKey` člena z objektu a nastavte na hodnotu `CRegKey` NULL.|
+|[CRegKey::EnumKey](#enumkey)|Volání této metody výčet podklíče otevřeného klíče registru.|
+|[CRegKey::Vyprázdnění](#flush)|Volání této metody zapsat všechny atributy otevřeného klíče registru do registru.|
+|[CregKey::GetKeySecurity](#getkeysecurity)|Volání této metody načíst kopii popisovače zabezpečení chrání císl.|
+|[CregKey::NotifyChangeKey](#notifychangekeyvalue)|Tato metoda upozorní volajícího na změny atributů nebo obsahu otevřeného klíče registru.|
+|[CRegKey::Otevřít](#open)|Volání této metody otevřít zadaný klíč a nastavit [m_hKey](#m_hkey) na popisovač tohoto klíče.|
+|[CregKey::Hodnota binárního dotazu](#querybinaryvalue)|Volání této metody načíst binární data pro zadaný název hodnoty.|
+|[CregKey::QueryDWORDValue](#querydwordvalue)|Volání této metody načíst data DWORD pro zadaný název hodnoty.|
+|[Cregkey::QueryGUIDValue](#queryguidvalue)|Volání této metody načíst data GUID pro zadaný název hodnoty.|
+|[CregKey::QueryMultiStringValue](#querymultistringvalue)|Volání této metody načíst víceřetězcová data pro zadaný název hodnoty.|
+|[CRegKey::QueryQWORDValue](#queryqwordvalue)|Volání této metody načíst data QWORD pro zadaný název hodnoty.|
+|[CregKey::Hodnota řetězce dotazu](#querystringvalue)|Volání této metody načíst data řetězce pro zadaný název hodnoty.|
+|[CRegKey::Hodnota dotazu](#queryvalue)|Volání této metody k načtení dat pro zadané pole hodnoty [m_hKey](#m_hkey). Dřívější verze této metody již nejsou podporovány a jsou označeny jako ATL_DEPRECATED.|
+|[CRegKey::RecurseDeleteKey](#recursedeletekey)|Volání této metody odebrat zadaný klíč z registru a explicitně odebrat všechny podklíče.|
+|[CRegKey::SetBinaryValue](#setbinaryvalue)|Volání této metody nastavit binární hodnotu klíče registru.|
+|[CregKey::SetDWORDValue](#setdwordvalue)|Volání této metody nastavit hodnotu DWORD klíče registru.|
+|[Cregkey::SetGUIDValue](#setguidvalue)|Volánítéto metody nastavit hodnotu GUID klíče registru.|
+|[CRegKey::SetKeySecurity](#setkeysecurity)|Volání této metody nastavit zabezpečení klíče registru.|
+|[CregKey::SetKeyValue](#setkeyvalue)|Volání této metody k uložení dat v poli zadané hodnoty zadaného klíče.|
+|[CregKey::SetMultiStringValue](#setmultistringvalue)|Volání této metody nastavit hodnotu více řetězců klíče registru.|
+|[CRegKey::SetQWORDValue](#setqwordvalue)|Volání této metody nastavit hodnotu QWORD klíče registru.|
+|[CRegKey::SetStringValue](#setstringvalue)|Volání této metody nastavit hodnotu řetězce klíče registru.|
+|[CRegKey::SetValue](#setvalue)|Volání této metody k uložení dat v poli zadané hodnoty [m_hKey](#m_hkey). Dřívější verze této metody již nejsou podporovány a jsou označeny jako ATL_DEPRECATED.|
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Name|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CRegKey:: operator HKEY](#operator_hkey)|`CRegKey` Převede objekt na HKEY.|
-|[CRegKey:: operator =](#operator_eq)|Operátor přiřazení|
+|[CRegKey::operátor HKEY](#operator_hkey)|Převede `CRegKey` objekt na HKEY.|
+|[CRegKey::operátor =](#operator_eq)|Operátor přiřazení.|
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Name|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CRegKey::m_hKey](#m_hkey)|Obsahuje popisovač klíče registru přidruženého `CRegKey` k objektu.|
-|[CRegKey::m_pTM](#m_ptm)|Ukazatel na `CAtlTransactionManager` objekt|
+|[CRegKey::m_hKey](#m_hkey)|Obsahuje popisovač klíče registru přidruženého k objektu. `CRegKey`|
+|[CRegKey::m_pTM](#m_ptm)|Ukazatel `CAtlTransactionManager` na objekt|
 
 ## <a name="remarks"></a>Poznámky
 
-`CRegKey`poskytuje metody pro vytváření a odstraňování klíčů a hodnot v registru systému. Registr obsahuje sadu definicí pro součásti systému specifické pro instalaci, například čísla verzí softwaru, mapování nainstalovanáho hardwaru a objekty COM.
+`CRegKey`Poskytuje metody pro vytváření a odstranění klíčů a hodnot v systémovém registru. Registr obsahuje sadu definic pro systémové součásti specifické pro instalaci, jako jsou čísla verzí softwaru, logická a fyzická mapování nainstalovaného hardwaru a objekty modelu COM.
 
-`CRegKey`poskytuje programovací rozhraní k systémovému registru pro daný počítač. Chcete-li například otevřít konkrétní klíč registru, zavolejte `CRegKey::Open`. Chcete-li načíst nebo upravit datovou hodnotu `CRegKey::QueryValue` , `CRegKey::SetValue`zavolejte nebo v uvedeném pořadí. Chcete-li zavřít klíč, `CRegKey::Close`zavolejte.
+`CRegKey`poskytuje programovací rozhraní do systémového registru pro daný počítač. Chcete-li například otevřít určitý `CRegKey::Open`klíč registru, volejte . Chcete-li načíst nebo `CRegKey::QueryValue` upravit `CRegKey::SetValue`hodnotu dat, volejte nebo , resp. Chcete-li zavřít `CRegKey::Close`klíč, volejte .
 
-Když klíč zavřete, data registru se zapisují (vyprázdní) na pevný disk. Tento proces může trvat několik sekund. Pokud vaše aplikace musí explicitně zapisovat data registru na pevný disk, můžete zavolat funkci [funkce RegFlushKey](/windows/win32/api/winreg/nf-winreg-regflushkey) Win32. Nástroj ale `RegFlushKey` používá mnoho systémových prostředků a měl by se volat jenom v případě, že je nezbytný.
+Když zavřete klíč, jeho data registru jsou zapsány (vyprázdněny) na pevný disk. Tento proces může trvat několik sekund. Pokud aplikace musí explicitně zapisovat data registru na pevný disk, můžete volat funkci [RegFlushKey](/windows/win32/api/winreg/nf-winreg-regflushkey) Win32. Však `RegFlushKey` používá mnoho systémových prostředků a by měla být volána pouze v případě, že je to nezbytně nutné.
 
 > [!IMPORTANT]
->  Jakékoli metody, které umožňují volajícímu určit umístění v registru, mohou číst data, která nelze důvěřovat. Metody, které používají [volání RegQueryValueEx](/windows/win32/api/winreg/nf-winreg-regqueryvalueexw) , by měly vzít v úvahu, že tato funkce explicitně nezpracovává řetězce, které jsou ukončeny hodnotou null. Obě podmínky by měly být zkontrolovány volajícím kódem.
+> Všechny metody, které umožňují volajícímu určit umístění registru mají potenciál číst data, která nelze důvěřovat. Metody, které používají [RegQueryValueEx](/windows/win32/api/winreg/nf-winreg-regqueryvalueexw) by měl y vzít v úvahu, že tato funkce není explicitně zpracovávat řetězce, které jsou null ukončena. Obě podmínky by měly být kontrolovány pomocí volajícího kódu.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlbase. h
+**Záhlaví:** atlbase.h
 
-##  <a name="attach"></a>CRegKey:: Attach
+## <a name="cregkeyattach"></a><a name="attach"></a>CregKey::Připojit
 
-Voláním této metody připojte k `CRegKey` objektu objekt HKEY nastavením popisovače členské [m_hKey](#m_hkey) na hodnotu *HKEY*.
+Volání této metody připojit HKEY `CRegKey` k objektu nastavením [popisovače m_hKey](#m_hkey) člena *hKey*.
 
 ```
 void Attach(HKEY hKey) throw();
@@ -143,16 +143,16 @@ void Attach(HKEY hKey) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*hKey*<br/>
+*hKlíč*<br/>
 Popisovač klíče registru.
 
 ### <a name="remarks"></a>Poznámky
 
-`Attach`vyhodnotí `m_hKey` , pokud je hodnota jiná než null.
+`Attach`bude uplatňovat, pokud `m_hKey` není null.
 
-##  <a name="close"></a>CRegKey:: Close
+## <a name="cregkeyclose"></a><a name="close"></a>CRegKey::Zavřít
 
-Voláním této metody uvolníte členský popisovač [m_hKey](#m_hkey) a nastavíte jej na hodnotu null.
+Volání této metody uvolnit [popisovač člena m_hKey](#m_hkey) a nastavte jej na hodnotu NULL.
 
 ```
 LONG Close() throw();
@@ -160,11 +160,11 @@ LONG Close() throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-V případě úspěchu vrátí ERROR_SUCCESS; v opačném případě vrátí chybovou hodnotu.
+Pokud je úspěšná, vrátí ERROR_SUCCESS; v opačném případě vrátí chybovou hodnotu.
 
-##  <a name="create"></a>CRegKey:: Create
+## <a name="cregkeycreate"></a><a name="create"></a>CRegKey::Vytvořit
 
-Voláním této metody vytvoříte zadaný klíč, pokud neexistuje jako podklíč pro *hKeyParent*.
+Volání této metody k vytvoření zadaného klíče, pokud neexistuje jako podklíč *hKeyParent*.
 
 ```
 LONG Create(
@@ -179,36 +179,36 @@ LONG Create(
 
 ### <a name="parameters"></a>Parametry
 
-*hKeyParent*<br/>
-Popisovač otevřeného klíče.
+*hParent*<br/>
+Rukojeť otevřeného klíče.
 
 *lpszKeyName*<br/>
-Určuje název klíče, který má být vytvořen nebo otevřen. Tento název musí být podklíčem *hKeyParent*.
+Určuje název klíče, který má být vytvořen nebo otevřen. Tento název musí být podklíč *hKeyParent*.
 
 *lpszClass*<br/>
 Určuje třídu klíče, který má být vytvořen nebo otevřen. Výchozí hodnota je REG_NONE.
 
-*dwOptions*<br/>
-Možnosti pro klíč Výchozí hodnota je REG_OPTION_NON_VOLATILE. Seznam možných hodnot a popisů naleznete v tématu [RegCreateKeyEx](/windows/win32/api/winreg/nf-winreg-regcreatekeyexw) v Windows SDK.
+*Dwoptions*<br/>
+Možnosti pro klíč. Výchozí hodnota je REG_OPTION_NON_VOLATILE. Seznam možných hodnot a popisů naleznete v tématu [RegCreateKeyEx](/windows/win32/api/winreg/nf-winreg-regcreatekeyexw) v sadě Windows SDK.
 
 *samDesired*<br/>
-Přístup k zabezpečení klíče Výchozí hodnota je KEY_READ &#124; KEY_WRITE. Seznam možných hodnot a popisů naleznete v tématu `RegCreateKeyEx`.
+Přístup k zabezpečení klíče. Výchozí hodnota je KEY_READ KEY_WRITE &#124;. Seznam možných hodnot a popisů `RegCreateKeyEx`naleznete v tématu .
 
 *lpSecAttr*<br/>
-Ukazatel na strukturu [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) , která označuje, zda může být popisovač klíče zděděn podřízeným procesem. Ve výchozím nastavení má tento parametr hodnotu NULL (což znamená, že popisovač Nelze zdědit).
+Ukazatel na [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) struktury, která označuje, zda popisovač klíče může být zděděn podřízeným procesem. Ve výchozím nastavení je tento parametr null (což znamená, že popisovač nelze zdědit).
 
-*lpdwDisposition*<br/>
-mimo Pokud hodnota není NULL, načte buď REG_CREATED_NEW_KEY (Pokud klíč neexistoval a byl vytvořen), nebo REG_OPENED_EXISTING_KEY (Pokud klíč existoval a byl otevřen).
+*lpdwDispozice*<br/>
+[out] Pokud není null, načte buď REG_CREATED_NEW_KEY (pokud klíč neexistoval a byl vytvořen) nebo REG_OPENED_EXISTING_KEY (pokud klíč existoval a byl otevřen).
 
 ### <a name="return-value"></a>Návratová hodnota
 
-V případě úspěchu vrátí ERROR_SUCCESS a otevře klíč. Pokud se metoda nezdařila, vrácená hodnota je nenulový kód chyby definovaný v WINERROR. Y.
+Pokud je úspěšná, vrátí ERROR_SUCCESS a otevře klíč. Pokud se metoda nezdaří, vrácená hodnota je nenulový kód chyby definovaný ve winerror. H.
 
 ### <a name="remarks"></a>Poznámky
 
-`Create`Nastaví člena [m_hKey](#m_hkey) na popisovač tohoto klíče.
+`Create`nastaví [člen m_hKey](#m_hkey) na popisovač tohoto klíče.
 
-##  <a name="cregkey"></a>CRegKey:: CRegKey
+## <a name="cregkeycregkey"></a><a name="cregkey"></a>CRegKey::CRegKey
 
 Konstruktor
 
@@ -224,17 +224,17 @@ CRegKey(CAtlTransactionManager* pTM) throw();
 *key*<br/>
 Odkaz na `CRegKey` objekt.
 
-*hKey*<br/>
+*hKlíč*<br/>
 Popisovač klíče registru.
 
-*pTM*<br/>
+*Ptm*<br/>
 Ukazatel na objekt CAtlTransactionManager
 
 ### <a name="remarks"></a>Poznámky
 
-Vytvoří nový `CRegKey` objekt. Objekt lze vytvořit z existujícího `CRegKey` objektu nebo z popisovače na klíč registru.
+Vytvoří nový `CRegKey` objekt. Objekt lze vytvořit z `CRegKey` existujícího objektu nebo z popisovače do klíče registru.
 
-##  <a name="dtor"></a>CRegKey:: ~ CRegKey
+## <a name="cregkeycregkey"></a><a name="dtor"></a>CRegKey::~CRegKey
 
 Destruktor.
 
@@ -244,11 +244,11 @@ Destruktor.
 
 ### <a name="remarks"></a>Poznámky
 
-Verze `m_hKey`destruktoru.
+Destruktor uvolní `m_hKey`.
 
-##  <a name="deletesubkey"></a>CRegKey::D eleteSubKey
+## <a name="cregkeydeletesubkey"></a><a name="deletesubkey"></a>CRegKey::DeleteSubKey
 
-Voláním této metody odeberete zadaný klíč z registru.
+Volání této metody odebrat zadaný klíč z registru.
 
 ```
 LONG DeleteSubKey(LPCTSTR lpszSubKey) throw();
@@ -257,19 +257,19 @@ LONG DeleteSubKey(LPCTSTR lpszSubKey) throw();
 ### <a name="parameters"></a>Parametry
 
 *lpszSubKey*<br/>
-Určuje název klíče, který se má odstranit. Tento název musí být podklíčem [m_hKey](#m_hkey).
+Určuje název klíče, který chcete odstranit. Tento název musí být podklíč [m_hKey](#m_hkey).
 
 ### <a name="return-value"></a>Návratová hodnota
 
-V případě úspěchu vrátí ERROR_SUCCESS. Pokud se metoda nezdařila, vrácená hodnota je nenulový kód chyby definovaný v WINERROR. Y.
+Pokud je úspěšná, vrátí ERROR_SUCCESS. Pokud se metoda nezdaří, vrácená hodnota je nenulový kód chyby definovaný ve winerror. H.
 
 ### <a name="remarks"></a>Poznámky
 
-`DeleteSubKey`klíč, který nemá žádné podklíče, lze odstranit pouze. Pokud má klíč podklíče, zavolejte místo toho [RecurseDeleteKey](#recursedeletekey) .
+`DeleteSubKey`může odstranit pouze klíč, který nemá žádné podklíče. Pokud klíč má podklíče, volání [RecurseDeleteKey](#recursedeletekey) místo.
 
-##  <a name="deletevalue"></a>CRegKey::D eleteValue
+## <a name="cregkeydeletevalue"></a><a name="deletevalue"></a>CRegKey::DeleteValue
 
-Voláním této metody odeberete pole hodnoty z [m_hKey](#m_hkey).
+Volání této metody odebrat pole hodnoty z [m_hKey](#m_hkey).
 
 ```
 LONG DeleteValue(LPCTSTR lpszValue) throw();
@@ -278,15 +278,15 @@ LONG DeleteValue(LPCTSTR lpszValue) throw();
 ### <a name="parameters"></a>Parametry
 
 *lpszValue*<br/>
-Určuje pole hodnoty, které se má odebrat.
+Určuje pole hodnoty, které chcete odebrat.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-V případě úspěchu vrátí ERROR_SUCCESS. Pokud se metoda nezdařila, vrácená hodnota je nenulový kód chyby definovaný v WINERROR. Y.
+Pokud je úspěšná, vrátí ERROR_SUCCESS. Pokud se metoda nezdaří, vrácená hodnota je nenulový kód chyby definovaný ve winerror. H.
 
-##  <a name="detach"></a>CRegKey::D etach
+## <a name="cregkeydetach"></a><a name="detach"></a>CRegKey::Detach
 
-Voláním této metody odpojíte [m_hKey](#m_hkey) členský popisovač od `CRegKey` objektu a nastavíte `m_hKey` hodnotu null.
+Volání této metody odpojit popisovač [m_hKey](#m_hkey) `m_hKey` člena z objektu a nastavte na hodnotu `CRegKey` NULL.
 
 ```
 HKEY Detach() throw();
@@ -294,11 +294,11 @@ HKEY Detach() throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-HKEY přidružený `CRegKey` k objektu
+HKEY přidružené k `CRegKey` objektu.
 
-##  <a name="enumkey"></a>CRegKey:: EnumKey
+## <a name="cregkeyenumkey"></a><a name="enumkey"></a>CRegKey::EnumKey
 
-Voláním této metody můžete vytvořit výčet podklíčů pro otevřený klíč registru.
+Volání této metody výčet podklíče otevřeného klíče registru.
 
 ```
 LONG EnumKey(
@@ -311,28 +311,28 @@ LONG EnumKey(
 ### <a name="parameters"></a>Parametry
 
 *iIndex*<br/>
-Index podklíče. Tento parametr by měl být pro první volání nulový a následně zvýšen pro následná volání.
+Index podklíče. Tento parametr by měl být nula pro první volání a potom se zvětší pro následné volání
 
 *pszName*<br/>
-Ukazatel na vyrovnávací paměť, která přijímá název podklíče, včetně ukončujícího znaku null. Do vyrovnávací paměti se zkopíruje pouze název podklíče, nikoli úplná hierarchie klíčů.
+Ukazatel na vyrovnávací paměť, která obdrží název podklíče, včetně ukončujícího znaku null. Pouze název podklíče je zkopírován do vyrovnávací paměti, nikoli do úplné hierarchie klíčů.
 
 *pnNameLength*<br/>
-Ukazatel na proměnnou, která určuje velikost vyrovnávací paměti určené parametrem *pszName* v TCHARs. Tato velikost by měla zahrnovat ukončující znak null. Když se metoda vrátí, proměnná, na kterou odkazuje *pnNameLength* , obsahuje počet znaků uložených ve vyrovnávací paměti. Vrácený počet nezahrnuje ukončující znak null.
+Ukazatel na proměnnou, která určuje velikost vyrovnávací paměti určené parametrem *pszName* v TCHAR. Tato velikost by měla obsahovat ukončující znak null. Když metoda vrátí, proměnná na kterou se vztahuje *pnNameLength* obsahuje počet znaků uložených ve vyrovnávací paměti. Vrácený počet nezahrnuje ukončující znak null.
 
 *pftLastWriteTime*<br/>
-Ukazatel na proměnnou, která přijímá čas posledního zápisu podklíče do výčtu.
+Ukazatel na proměnnou, která obdrží čas, kdy byl naposledy zapsán podklíč výčtu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud je metoda úspěšná, návratová hodnota je ERROR_SUCCESS. Pokud se metoda nezdařila, vrácená hodnota je nenulový kód chyby definovaný v WINERROR. Y.
+Pokud je metoda úspěšná, vrácená hodnota je ERROR_SUCCESS. Pokud se metoda nezdaří, vrácená hodnota je nenulový kód chyby definovaný ve winerror. H.
 
 ### <a name="remarks"></a>Poznámky
 
-Chcete-li vytvořit výčet podklíčů, zavolejte `CRegKey::EnumKey` s indexem nula. Zvyšte hodnotu indexu a opakujte akci, dokud metoda nevrátí ERROR_NO_MORE_ITEMS. Další informace najdete v tématu [RegEnumKeyEx](/windows/win32/api/winreg/nf-winreg-regenumkeyexw) v Windows SDK.
+Chcete-li vytvořit výčet podklíčů, volání `CRegKey::EnumKey` s indexem nula. Zvýšení hodnoty indexu a opakujte, dokud metoda nevrátí ERROR_NO_MORE_ITEMS. Další informace naleznete v tématu [RegEnumKeyEx](/windows/win32/api/winreg/nf-winreg-regenumkeyexw) v sadě Windows SDK.
 
-##  <a name="flush"></a>CRegKey:: flush
+## <a name="cregkeyflush"></a><a name="flush"></a>CRegKey::Vyprázdnění
 
-Voláním této metody zapíšete všechny atributy otevřeného klíče registru do registru.
+Volání této metody zapsat všechny atributy otevřeného klíče registru do registru.
 
 ```
 LONG Flush() throw();
@@ -340,15 +340,15 @@ LONG Flush() throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud je metoda úspěšná, návratová hodnota je ERROR_SUCCESS. Pokud se metoda nezdařila, vrácená hodnota je nenulový kód chyby definovaný v WINERROR. Y.
+Pokud je metoda úspěšná, vrácená hodnota je ERROR_SUCCESS. Pokud se metoda nezdaří, vrácená hodnota je nenulový kód chyby definovaný ve winerror. H.
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace najdete v tématu [RegEnumFlush](/windows/win32/api/winreg/nf-winreg-regflushkey) v Windows SDK.
+Další informace naleznete v tématu [RegEnumFlush](/windows/win32/api/winreg/nf-winreg-regflushkey) v sadě Windows SDK.
 
-##  <a name="getkeysecurity"></a>CRegKey:: GetKeySecurity
+## <a name="cregkeygetkeysecurity"></a><a name="getkeysecurity"></a>CregKey::GetKeySecurity
 
-Voláním této metody načtěte kopii popisovače zabezpečení, který chrání otevřený klíč registru.
+Volání této metody načíst kopii popisovače zabezpečení chrání císl.
 
 ```
 LONG GetKeySecurity(
@@ -360,31 +360,31 @@ LONG GetKeySecurity(
 ### <a name="parameters"></a>Parametry
 
 *si*<br/>
-Hodnota [SECURITY_INFORMATION](/windows/win32/SecAuthZ/security-information) , která označuje požadované informace o zabezpečení.
+Hodnota [SECURITY_INFORMATION,](/windows/win32/SecAuthZ/security-information) která označuje požadované informace o zabezpečení.
 
-*psd*<br/>
+*Psd*<br/>
 Ukazatel na vyrovnávací paměť, která obdrží kopii požadovaného popisovače zabezpečení.
 
 *pnBytes*<br/>
-Velikost vyrovnávací paměti v bajtech, na kterou ukazuje *PSD*.
+Velikost vyrovnávací paměti v bajtech, na kterou poukazuje *psd*.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud je metoda úspěšná, návratová hodnota je ERROR_SUCCESS. Pokud se metoda nezdařila, vrácená hodnota je nenulový kód chyby je definován v WINERROR. Y.
+Pokud je metoda úspěšná, vrácená hodnota je ERROR_SUCCESS. Pokud se metoda nezdaří, vrácená hodnota je nenulový kód chyby je definován v WINERROR. H.
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace najdete v tématu [RegGetKeySecurity](/windows/win32/api/winreg/nf-winreg-reggetkeysecurity).
+Další informace naleznete v tématu [RegGetKeySecurity](/windows/win32/api/winreg/nf-winreg-reggetkeysecurity).
 
-##  <a name="m_hkey"></a>  CRegKey::m_hKey
+## <a name="cregkeym_hkey"></a><a name="m_hkey"></a>CRegKey::m_hKey
 
-Obsahuje popisovač klíče registru přidruženého `CRegKey` k objektu.
+Obsahuje popisovač klíče registru přidruženého k objektu. `CRegKey`
 
 ```
 HKEY m_hKey;
 ```
 
-##  <a name="m_ptm"></a>  CRegKey::m_pTM
+## <a name="cregkeym_ptm"></a><a name="m_ptm"></a>CRegKey::m_pTM
 
 Ukazatel na `CAtlTransactionManager` objekt.
 
@@ -394,7 +394,7 @@ CAtlTransactionManager* m_pTM;
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="notifychangekeyvalue"></a>CRegKey:: NotifyChangeKeyValue
+## <a name="cregkeynotifychangekeyvalue"></a><a name="notifychangekeyvalue"></a>CregKey::NotifyChangeKey
 
 Tato metoda upozorní volajícího na změny atributů nebo obsahu otevřeného klíče registru.
 
@@ -409,38 +409,38 @@ LONG NotifyChangeKeyValue(
 ### <a name="parameters"></a>Parametry
 
 *bWatchSubtree*<br/>
-Určuje příznak, který označuje, zda se mají hlásit změny v zadaném klíči a všech jeho podklíčích, nebo pouze v zadaném klíči. Pokud má tento parametr hodnotu TRUE, metoda nahlásí změny v klíči a jejích podklíčích. Pokud má parametr hodnotu FALSE, metoda hlásí změny pouze v klíči.
+Určuje příznak, který označuje, zda má být vzadaném klíči a všech jeho podklíčích nebo pouze v zadaném klíči nahlásit změny. Pokud je tento parametr TRUE, metoda hlásí změny v klíči a jeho podklíčích. Pokud je parametr NEPRAVDA, metoda hlásí změny pouze v klíči.
 
 *dwNotifyFilter*<br/>
-Určuje sadu příznaků, které řídí, které změny mají být hlášeny. Tento parametr může být kombinací následujících hodnot:
+Určuje sadu příznaků, které řídí, které změny by měly být hlášeny. Tento parametr může být kombinací následujících hodnot:
 
-|Value|Význam|
+|Hodnota|Význam|
 |-----------|-------------|
-|REG_NOTIFY_CHANGE_NAME|Upozorní volajícího, že se přidal nebo odstranil nějaký podklíč.|
-|REG_NOTIFY_CHANGE_ATTRIBUTES|Upozorněte volající změny atributů klíče, jako je například informace popisovače zabezpečení.|
-|REG_NOTIFY_CHANGE_LAST_SET|Upozorněte volající změny hodnoty klíče. To může zahrnovat přidání nebo odstranění hodnoty nebo změna existující hodnoty.|
-|REG_NOTIFY_CHANGE_SECURITY|Upozorněte volající změny v popisovači zabezpečení klíče.|
+|REG_NOTIFY_CHANGE_NAME|Upozornit volajícího, pokud je podklíč přidán nebo odstraněn.|
+|REG_NOTIFY_CHANGE_ATTRIBUTES|Upozorněte volajícího na změny atributů klíče, jako jsou například informace o popisovači zabezpečení.|
+|REG_NOTIFY_CHANGE_LAST_SET|Upozorněte volajícího na změny hodnoty klíče. To může zahrnovat přidání nebo odstranění hodnoty nebo změnu existující hodnoty.|
+|REG_NOTIFY_CHANGE_SECURITY|Upozorněte volajícího na změny popisovače zabezpečení klíče.|
 
-*hEvent*<br/>
-Zpracování události. Pokud má parametr *bAsync* hodnotu true, metoda se okamžitě vrátí a změny se oznamují signalizací této události. Pokud má *bAsync* hodnotu false, *hEvent* se ignoruje.
+*hUdálost*<br/>
+Zpracování události. Pokud je parametr *bAsync* TRUE, metoda se okamžitě vrátí a změny jsou hlášeny signalizací této události. Pokud *je bAsync* FALSE, *hEvent* je ignorován.
 
 *bAsync*<br/>
-Určuje příznak, který označuje, jak metoda hlásí změny. Pokud je tento parametr TRUE, metoda vrátí okamžitě a ohlásí změny tím, že signalizuje určenou událost. Pokud je tento parametr FALSE, metoda nevrátí, dokud nedošlo ke změně. Pokud *hEvent* neurčuje platnou událost, parametr *bAsync* nemůže mít hodnotu true.
+Určuje příznak, který označuje, jak se metoda hlásí. Pokud je tento parametr TRUE, metoda se okamžitě vrátí a hlásí změny signalizací zadané události. Pokud je tento parametr FALSE, metoda se nevrátí, dokud dojde ke změně. Pokud *funkce hEvent* neurčuje platnou událost, parametr *bAsync* nemůže být TRUE.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud je metoda úspěšná, návratová hodnota je ERROR_SUCCESS. Pokud se metoda nezdařila, vrácená hodnota je nenulový kód chyby definovaný v WINERROR. Y.
+Pokud je metoda úspěšná, vrácená hodnota je ERROR_SUCCESS. Pokud se metoda nezdaří, vrácená hodnota je nenulový kód chyby definovaný ve winerror. H.
 
 ### <a name="remarks"></a>Poznámky
 
 > [!NOTE]
->  Tato metoda neupozorní volajícího, pokud je zadaný klíč odstraněný.
+> Tato metoda neupozorní volajícího, pokud je odstraněn zadaný klíč.
 
-Další podrobnosti a ukázkový program najdete v tématu [RegNotifyChangeKeyValue](/windows/win32/api/winreg/nf-winreg-regnotifychangekeyvalue).
+Další podrobnosti a ukázkový program naleznete v tématu [RegNotifyChangeKeyValue](/windows/win32/api/winreg/nf-winreg-regnotifychangekeyvalue).
 
-##  <a name="open"></a>CRegKey:: Open
+## <a name="cregkeyopen"></a><a name="open"></a>CRegKey::Otevřít
 
-Voláním této metody otevřete zadaný klíč a nastavte [m_hKey](#m_hkey) na popisovač tohoto klíče.
+Volání této metody otevřít zadaný klíč a nastavit [m_hKey](#m_hkey) na popisovač tohoto klíče.
 
 ```
 LONG Open(
@@ -451,36 +451,36 @@ LONG Open(
 
 ### <a name="parameters"></a>Parametry
 
-*hKeyParent*<br/>
-Popisovač otevřeného klíče.
+*hParent*<br/>
+Rukojeť otevřeného klíče.
 
 *lpszKeyName*<br/>
-Určuje název klíče, který má být vytvořen nebo otevřen. Tento název musí být podklíčem *hKeyParent*.
+Určuje název klíče, který má být vytvořen nebo otevřen. Tento název musí být podklíč *hKeyParent*.
 
 *samDesired*<br/>
-Přístup k zabezpečení klíče Výchozí hodnota je KEY_ALL_ACCESS. Seznam možných hodnot a popisů naleznete v tématu [RegCreateKeyEx](/windows/win32/api/winreg/nf-winreg-regcreatekeyexw) v Windows SDK.
+Přístup k zabezpečení klíče. Výchozí hodnota je KEY_ALL_ACCESS. Seznam možných hodnot a popisů naleznete v tématu [RegCreateKeyEx](/windows/win32/api/winreg/nf-winreg-regcreatekeyexw) v sadě Windows SDK.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-V případě úspěchu vrátí ERROR_SUCCESS; v opačném případě je v WINERROR definována nenulová hodnota chyby. Y.
+Pokud je úspěšná, vrátí ERROR_SUCCESS; v opačném případě nenulová chybová hodnota definovaná ve winerror. H.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud má parametr *lpszKeyName* hodnotu null nebo odkazuje na prázdný řetězec, `Open` otevře se nový popisovač klíče identifikovaného *hKeyParent*, ale nezavře žádný dříve otevřený popisovač.
+Pokud je parametr *lpszKeyName* null nebo odkazuje `Open` na prázdný řetězec, otevře nový popisovač klíče identifikovaného *hKeyParent*, ale nezavře žádné dříve otevřené popisovač.
 
-Na rozdíl od [CRegKey:: Create](#create)nebude zadaný klíč vytvořen, `Open` Pokud neexistuje.
+Na rozdíl od [CRegKey::Create](#create)nevytvoří `Open` zadaný klíč, pokud neexistuje.
 
-##  <a name="operator_hkey"></a>CRegKey:: operator HKEY
+## <a name="cregkeyoperator-hkey"></a><a name="operator_hkey"></a>CRegKey::operátor HKEY
 
-`CRegKey` Převede objekt na HKEY.
+Převede `CRegKey` objekt na HKEY.
 
 ```
 operator HKEY() const throw();
 ```
 
-##  <a name="operator_eq"></a>CRegKey:: operator =
+## <a name="cregkeyoperator-"></a><a name="operator_eq"></a>CRegKey::operátor =
 
-Operátor přiřazení
+Operátor přiřazení.
 
 ```
 CRegKey& operator= (CRegKey& key) throw();
@@ -489,7 +489,7 @@ CRegKey& operator= (CRegKey& key) throw();
 ### <a name="parameters"></a>Parametry
 
 *key*<br/>
-Klíč ke zkopírování.
+Klíč ke kopírování.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -497,11 +497,11 @@ Vrátí odkaz na nový klíč.
 
 ### <a name="remarks"></a>Poznámky
 
-Tento operátor odpojí *klíč* od aktuálního objektu a místo toho jej `CRegKey` přiřadí objektu.
+Tento operátor odpojí *klíč* od aktuálního objektu `CRegKey` a místo toho jej přiřadí k objektu.
 
-##  <a name="querybinaryvalue"></a>  CRegKey::QueryBinaryValue
+## <a name="cregkeyquerybinaryvalue"></a><a name="querybinaryvalue"></a>CregKey::Hodnota binárního dotazu
 
-Voláním této metody načtete binární data pro zadaný název hodnoty.
+Volání této metody načíst binární data pro zadaný název hodnoty.
 
 ```
 LONG QueryBinaryValue(
@@ -513,28 +513,28 @@ LONG QueryBinaryValue(
 ### <a name="parameters"></a>Parametry
 
 *pszValueName*<br/>
-Ukazatel na řetězec zakončený hodnotou null obsahující název hodnoty k dotazování.
+Ukazatel na řetězec s ukončeným hodnotou null obsahující název hodnoty dotazu.
 
-*pValue*<br/>
+*pHodnota*<br/>
 Ukazatel na vyrovnávací paměť, která přijímá data hodnoty.
 
 *pnBytes*<br/>
-Ukazatel na proměnnou, která určuje velikost vyrovnávací paměti v bajtech, na kterou ukazuje parametr *pValue* . Když metoda vrátí, tato proměnná obsahuje velikost kopírovaných dat do vyrovnávací paměti.
+Ukazatel na proměnnou, která určuje velikost vyrovnávací paměti v bajtech, na kterou odkazuje parametr *pValue.* Když metoda vrátí, tato proměnná obsahuje velikost dat zkopírovaných do vyrovnávací paměti.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud je metoda úspěšná, vrátí se ERROR_SUCCESS. Pokud metoda nedokáže načíst hodnotu, vrátí nenulový kód chyby definovaný v WINERROR. Y. Pokud odkazovaná data nejsou typu REG_BINARY, vrátí ERROR_INVALID_DATA.
+Pokud je metoda úspěšná, je vrácena ERROR_SUCCESS. Pokud se metodě nepodaří přečíst hodnotu, vrátí nenulový kód chyby definovaný ve winerror. H. Pokud odkazovaná data nejsou typu REG_BINARY, je vrácena ERROR_INVALID_DATA.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda využívá `RegQueryValueEx` a potvrzuje, že je vrácen správný typ dat. Další podrobnosti najdete v tématu [volání RegQueryValueEx](/windows/win32/api/winreg/nf-winreg-regqueryvalueexw) .
+Tato metoda využívá `RegQueryValueEx` a potvrzuje, že je vrácen správný typ dat. Další podrobnosti najdete v [tématu RegQueryValueEx.](/windows/win32/api/winreg/nf-winreg-regqueryvalueexw)
 
 > [!IMPORTANT]
->  Tato metoda umožňuje volajícímu určit libovolné umístění v registru a potenciálně číst data, která nelze důvěřovat. Také funkce [volání RegQueryValueEx](/windows/win32/api/winreg/nf-winreg-regqueryvalueexw) používaná touto metodou explicitně nezpracovává řetězce, které jsou ukončeny hodnotou null. Obě podmínky by měly být zkontrolovány volajícím kódem.
+> Tato metoda umožňuje volajícímu zadat libovolné umístění registru, potenciálně čtení dat, která nelze důvěřovat. Funkce [RegQueryValueEx](/windows/win32/api/winreg/nf-winreg-regqueryvalueexw) použitá touto metodou také explicitně nezpracovává řetězce, které jsou ukončeny hodnotou NULL. Obě podmínky by měly být kontrolovány pomocí volajícího kódu.
 
-##  <a name="querydwordvalue"></a>  CRegKey::QueryDWORDValue
+## <a name="cregkeyquerydwordvalue"></a><a name="querydwordvalue"></a>CregKey::QueryDWORDValue
 
-Voláním této metody načtete data DWORD pro zadaný název hodnoty.
+Volání této metody načíst data DWORD pro zadaný název hodnoty.
 
 ```
 LONG QueryDWORDValue(
@@ -545,25 +545,25 @@ LONG QueryDWORDValue(
 ### <a name="parameters"></a>Parametry
 
 *pszValueName*<br/>
-Ukazatel na řetězec zakončený hodnotou null obsahující název hodnoty k dotazování.
+Ukazatel na řetězec s ukončeným hodnotou null obsahující název hodnoty dotazu.
 
 *dwValue*<br/>
-Ukazatel na vyrovnávací paměť, která přijímá hodnotu DWORD.
+Ukazatel na vyrovnávací paměť, která přijímá DWORD.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud je metoda úspěšná, vrátí se ERROR_SUCCESS. Pokud metoda nedokáže načíst hodnotu, vrátí nenulový kód chyby definovaný v WINERROR. Y. Pokud se na odkazovaná data nejedná o typ REG_DWORD, vrátí se ERROR_INVALID_DATA.
+Pokud je metoda úspěšná, je vrácena ERROR_SUCCESS. Pokud se metodě nepodaří přečíst hodnotu, vrátí nenulový kód chyby definovaný ve winerror. H. Pokud odkazovaná data nejsou typu REG_DWORD, je vrácena ERROR_INVALID_DATA.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda využívá `RegQueryValueEx` a potvrzuje, že je vrácen správný typ dat. Další podrobnosti najdete v tématu [volání RegQueryValueEx](/windows/win32/api/winreg/nf-winreg-regqueryvalueexw) .
+Tato metoda využívá `RegQueryValueEx` a potvrzuje, že je vrácen správný typ dat. Další podrobnosti najdete v [tématu RegQueryValueEx.](/windows/win32/api/winreg/nf-winreg-regqueryvalueexw)
 
 > [!IMPORTANT]
->  Tato metoda umožňuje volajícímu určit libovolné umístění v registru a potenciálně číst data, která nelze důvěřovat. Také funkce [volání RegQueryValueEx](/windows/win32/api/winreg/nf-winreg-regqueryvalueexw) používaná touto metodou explicitně nezpracovává řetězce, které jsou ukončeny hodnotou null. Obě podmínky by měly být zkontrolovány volajícím kódem.
+> Tato metoda umožňuje volajícímu zadat libovolné umístění registru, potenciálně čtení dat, která nelze důvěřovat. Funkce [RegQueryValueEx](/windows/win32/api/winreg/nf-winreg-regqueryvalueexw) použitá touto metodou také explicitně nezpracovává řetězce, které jsou ukončeny hodnotou NULL. Obě podmínky by měly být kontrolovány pomocí volajícího kódu.
 
-##  <a name="queryguidvalue"></a>  CRegKey::QueryGUIDValue
+## <a name="cregkeyqueryguidvalue"></a><a name="queryguidvalue"></a>Cregkey::QueryGUIDValue
 
-Voláním této metody načtete data GUID pro zadaný název hodnoty.
+Volání této metody načíst data GUID pro zadaný název hodnoty.
 
 ```
 LONG QueryGUIDValue(
@@ -574,25 +574,25 @@ LONG QueryGUIDValue(
 ### <a name="parameters"></a>Parametry
 
 *pszValueName*<br/>
-Ukazatel na řetězec zakončený hodnotou null obsahující název hodnoty k dotazování.
+Ukazatel na řetězec s ukončeným hodnotou null obsahující název hodnoty dotazu.
 
 *guidValue*<br/>
 Ukazatel na proměnnou, která přijímá identifikátor GUID.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud je metoda úspěšná, vrátí se ERROR_SUCCESS. Pokud metoda nedokáže načíst hodnotu, vrátí nenulový kód chyby definovaný v WINERROR. Y. Pokud se odkazovaná data nejedná o platný identifikátor GUID, vrátí se ERROR_INVALID_DATA.
+Pokud je metoda úspěšná, je vrácena ERROR_SUCCESS. Pokud se metodě nepodaří přečíst hodnotu, vrátí nenulový kód chyby definovaný ve winerror. H. Pokud odkazovaná data nejsou platným identifikátorem GUID, je vrácen a vrácen a vrácen a ERROR_INVALID_DATA.
 
 ### <a name="remarks"></a>Poznámky
 
 Tato metoda využívá `CRegKey::QueryStringValue` a převádí řetězec na identifikátor GUID pomocí [CLSIDFromString](/windows/win32/api/combaseapi/nf-combaseapi-clsidfromstring).
 
 > [!IMPORTANT]
->  Tato metoda umožňuje volajícímu určit libovolné umístění v registru a potenciálně číst data, která nelze důvěřovat.
+> Tato metoda umožňuje volajícímu zadat libovolné umístění registru, potenciálně čtení dat, která nelze důvěřovat.
 
-##  <a name="querymultistringvalue"></a>  CRegKey::QueryMultiStringValue
+## <a name="cregkeyquerymultistringvalue"></a><a name="querymultistringvalue"></a>CregKey::QueryMultiStringValue
 
-Voláním této metody načtete data s více řetězci pro zadaný název hodnoty.
+Volání této metody načíst víceřetězcová data pro zadaný název hodnoty.
 
 ```
 LONG QueryMultiStringValue(
@@ -604,28 +604,28 @@ LONG QueryMultiStringValue(
 ### <a name="parameters"></a>Parametry
 
 *pszValueName*<br/>
-Ukazatel na řetězec zakončený hodnotou null obsahující název hodnoty k dotazování.
+Ukazatel na řetězec s ukončeným hodnotou null obsahující název hodnoty dotazu.
 
 *pszValue*<br/>
-Ukazatel na vyrovnávací paměť, která přijímá data s více řetězci. Více řetězců je pole řetězců ukončených hodnotou null, ukončené dvěma znaky null.
+Ukazatel na vyrovnávací paměť, která přijímá data s více řetězci. Víceřetězcový řetězec je pole řetězců ukončených hodnotou null, ukončené dvěma prázdnými znaky.
 
 *pnChars*<br/>
-Velikost vyrovnávací paměti v TCHARs, na kterou ukazuje *pszValue*. Když se metoda vrátí, *pnChars* obsahuje velikost v TCHARs načteného řetězce, včetně ukončujícího znaku null.
+Velikost vyrovnávací paměti v TCHAR, na kterou poukazuje *pszValue*. Když metoda *vrátí, pnChars* obsahuje velikost, v TCHARs, víceřetězcové načtené, včetně ukončující znak null.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud je metoda úspěšná, vrátí se ERROR_SUCCESS. Pokud metoda nedokáže načíst hodnotu, vrátí nenulový kód chyby definovaný v WINERROR. Y. Pokud se na odkazovaná data nejedná o typ REG_MULTI_SZ, vrátí se ERROR_INVALID_DATA.
+Pokud je metoda úspěšná, je vrácena ERROR_SUCCESS. Pokud se metodě nepodaří přečíst hodnotu, vrátí nenulový kód chyby definovaný ve winerror. H. Pokud odkazovaná data nejsou typu REG_MULTI_SZ, je vrácena ERROR_INVALID_DATA.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda využívá `RegQueryValueEx` a potvrzuje, že je vrácen správný typ dat. Další podrobnosti najdete v tématu [volání RegQueryValueEx](/windows/win32/api/winreg/nf-winreg-regqueryvalueexw) .
+Tato metoda využívá `RegQueryValueEx` a potvrzuje, že je vrácen správný typ dat. Další podrobnosti najdete v [tématu RegQueryValueEx.](/windows/win32/api/winreg/nf-winreg-regqueryvalueexw)
 
 > [!IMPORTANT]
->  Tato metoda umožňuje volajícímu určit libovolné umístění v registru a potenciálně číst data, která nelze důvěřovat. Také funkce [volání RegQueryValueEx](/windows/win32/api/winreg/nf-winreg-regqueryvalueexw) používaná touto metodou explicitně nezpracovává řetězce, které jsou ukončeny hodnotou null. Obě podmínky by měly být zkontrolovány volajícím kódem.
+> Tato metoda umožňuje volajícímu zadat libovolné umístění registru, potenciálně čtení dat, která nelze důvěřovat. Funkce [RegQueryValueEx](/windows/win32/api/winreg/nf-winreg-regqueryvalueexw) použitá touto metodou také explicitně nezpracovává řetězce, které jsou ukončeny hodnotou NULL. Obě podmínky by měly být kontrolovány pomocí volajícího kódu.
 
-##  <a name="queryqwordvalue"></a>  CRegKey::QueryQWORDValue
+## <a name="cregkeyqueryqwordvalue"></a><a name="queryqwordvalue"></a>CRegKey::QueryQWORDValue
 
-Voláním této metody načtete data QWORD pro zadaný název hodnoty.
+Volání této metody načíst data QWORD pro zadaný název hodnoty.
 
 ```
 LONG QueryQWORDValue(
@@ -636,25 +636,25 @@ LONG QueryQWORDValue(
 ### <a name="parameters"></a>Parametry
 
 *pszValueName*<br/>
-Ukazatel na řetězec zakončený hodnotou null obsahující název hodnoty k dotazování.
+Ukazatel na řetězec s ukončeným hodnotou null obsahující název hodnoty dotazu.
 
 *qwValue*<br/>
-Ukazatel na vyrovnávací paměť, která přijímá hodnotu QWORD.
+Ukazatel na vyrovnávací paměť, která přijímá QWORD.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud je metoda úspěšná, vrátí se ERROR_SUCCESS. Pokud metoda nedokáže načíst hodnotu, vrátí nenulový kód chyby definovaný v WINERROR. Y. Pokud se odkazuje na data typu REG_QWORD, vrátí se ERROR_INVALID_DATA.
+Pokud je metoda úspěšná, je vrácena ERROR_SUCCESS. Pokud se metodě nepodaří přečíst hodnotu, vrátí nenulový kód chyby definovaný ve winerror. H. Pokud odkazovaná data nejsou typu REG_QWORD, je vrácena ERROR_INVALID_DATA.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda využívá `RegQueryValueEx` a potvrzuje, že je vrácen správný typ dat. Další podrobnosti najdete v tématu [volání RegQueryValueEx](/windows/win32/api/winreg/nf-winreg-regqueryvalueexw) .
+Tato metoda využívá `RegQueryValueEx` a potvrzuje, že je vrácen správný typ dat. Další podrobnosti najdete v [tématu RegQueryValueEx.](/windows/win32/api/winreg/nf-winreg-regqueryvalueexw)
 
 > [!IMPORTANT]
->  Tato metoda umožňuje volajícímu určit libovolné umístění v registru a potenciálně číst data, která nelze důvěřovat. Také funkce [volání RegQueryValueEx](/windows/win32/api/winreg/nf-winreg-regqueryvalueexw) používaná touto metodou explicitně nezpracovává řetězce, které jsou ukončeny hodnotou null. Obě podmínky by měly být zkontrolovány volajícím kódem.
+> Tato metoda umožňuje volajícímu zadat libovolné umístění registru, potenciálně čtení dat, která nelze důvěřovat. Funkce [RegQueryValueEx](/windows/win32/api/winreg/nf-winreg-regqueryvalueexw) použitá touto metodou také explicitně nezpracovává řetězce, které jsou ukončeny hodnotou NULL. Obě podmínky by měly být kontrolovány pomocí volajícího kódu.
 
-##  <a name="querystringvalue"></a>  CRegKey::QueryStringValue
+## <a name="cregkeyquerystringvalue"></a><a name="querystringvalue"></a>CregKey::Hodnota řetězce dotazu
 
-Voláním této metody načtete data řetězce pro zadaný název hodnoty.
+Volání této metody načíst data řetězce pro zadaný název hodnoty.
 
 ```
 LONG QueryStringValue(
@@ -666,28 +666,28 @@ LONG QueryStringValue(
 ### <a name="parameters"></a>Parametry
 
 *pszValueName*<br/>
-Ukazatel na řetězec zakončený hodnotou null obsahující název hodnoty k dotazování.
+Ukazatel na řetězec s ukončeným hodnotou null obsahující název hodnoty dotazu.
 
 *pszValue*<br/>
-Ukazatel na vyrovnávací paměť, která přijímá řetězcová data.
+Ukazatel na vyrovnávací paměť, která přijímá data řetězce.
 
 *pnChars*<br/>
-Velikost vyrovnávací paměti v TCHARs, na kterou ukazuje *pszValue*. Když metoda vrátí, *pnChars* obsahuje velikost, která je v TCHARs načteného řetězce, včetně ukončujícího znaku null.
+Velikost vyrovnávací paměti v TCHAR, na kterou poukazuje *pszValue*. Když metoda *vrátí, pnChars* obsahuje velikost, v TCHARs, načíst řetězec, včetně ukončující znak null.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud je metoda úspěšná, vrátí se ERROR_SUCCESS. Pokud metoda nedokáže načíst hodnotu, vrátí nenulový kód chyby definovaný v WINERROR. Y. Pokud odkazovaná data nejsou typu REG_SZ, vrátí se ERROR_INVALID_DATA. Pokud metoda vrátí ERROR_MORE_DATA, *pnChars* se rovná nule, nikoli požadovaná velikost vyrovnávací paměti v bajtech.
+Pokud je metoda úspěšná, je vrácena ERROR_SUCCESS. Pokud se metodě nepodaří přečíst hodnotu, vrátí nenulový kód chyby definovaný ve winerror. H. Pokud odkazovaná data nejsou typu REG_SZ, je vrácena ERROR_INVALID_DATA. Pokud metoda vrátí ERROR_MORE_DATA, *pnChars* se rovná nule, není požadovaná velikost vyrovnávací paměti v bajtů.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda využívá `RegQueryValueEx` a potvrzuje, že je vrácen správný typ dat. Další podrobnosti najdete v tématu [volání RegQueryValueEx](/windows/win32/api/winreg/nf-winreg-regqueryvalueexw) .
+Tato metoda využívá `RegQueryValueEx` a potvrzuje, že je vrácen správný typ dat. Další podrobnosti najdete v [tématu RegQueryValueEx.](/windows/win32/api/winreg/nf-winreg-regqueryvalueexw)
 
 > [!IMPORTANT]
->  Tato metoda umožňuje volajícímu určit libovolné umístění v registru a potenciálně číst data, která nelze důvěřovat. Také funkce [volání RegQueryValueEx](/windows/win32/api/winreg/nf-winreg-regqueryvalueexw) používaná touto metodou explicitně nezpracovává řetězce, které jsou ukončeny hodnotou null. Obě podmínky by měly být zkontrolovány volajícím kódem.
+> Tato metoda umožňuje volajícímu zadat libovolné umístění registru, potenciálně čtení dat, která nelze důvěřovat. Funkce [RegQueryValueEx](/windows/win32/api/winreg/nf-winreg-regqueryvalueexw) použitá touto metodou také explicitně nezpracovává řetězce, které jsou ukončeny hodnotou NULL. Obě podmínky by měly být kontrolovány pomocí volajícího kódu.
 
-##  <a name="queryvalue"></a>  CRegKey::QueryValue
+## <a name="cregkeyqueryvalue"></a><a name="queryvalue"></a>CRegKey::Hodnota dotazu
 
-Voláním této metody načtete data pro zadané pole hodnoty [m_hKey](#m_hkey). Dřívější verze této metody již nejsou podporovány a jsou označeny jako ATL_DEPRECATED.
+Volání této metody k načtení dat pro zadané pole hodnoty [m_hKey](#m_hkey). Dřívější verze této metody již nejsou podporovány a jsou označeny jako ATL_DEPRECATED.
 
 ```
 LONG QueryValue(
@@ -709,45 +709,45 @@ ATL_DEPRECATED LONG QueryValue(
 ### <a name="parameters"></a>Parametry
 
 *pszValueName*<br/>
-Ukazatel na řetězec zakončený hodnotou null obsahující název hodnoty k dotazování. Pokud má *pszValueName* hodnotu null nebo prázdný řetězec, "", metoda načte typ a data pro nepojmenované nebo výchozí hodnotu klíče, pokud existuje.
+Ukazatel na řetězec s ukončeným hodnotou null obsahující název hodnoty dotazu. Pokud *pszValueName* je NULL nebo prázdný řetězec, "", metoda načte typ a data pro nepojmenované klíče nebo výchozí hodnotu, pokud existuje.
 
 *pdwType*<br/>
-Ukazatel na proměnnou, která přijímá kód označující typ dat uložených v zadané hodnotě. Parametr *pdwType* může mít hodnotu null, pokud není požadován kód typu.
+Ukazatel na proměnnou, která obdrží kód označující typ dat uložených v zadané hodnotě. Parametr *pdwType* může být null, pokud kód typu není vyžadován.
 
-*pData*<br/>
-Ukazatel na vyrovnávací paměť, která přijímá data hodnoty. Tento parametr může mít hodnotu NULL, pokud nejsou požadovaná data.
+*Pdata*<br/>
+Ukazatel na vyrovnávací paměť, která přijímá data hodnoty. Tento parametr může být NULL, pokud data nejsou vyžadována.
 
 *pnBytes*<br/>
-Ukazatel na proměnnou, která určuje velikost vyrovnávací paměti v bajtech, na kterou ukazuje parametr *PDATA* . Když metoda vrátí, tato proměnná obsahuje velikost kopírovaných dat do *PDATA.*
+Ukazatel na proměnnou, která určuje velikost vyrovnávací paměti v bajtech, na kterou odkazuje parametr *pData.* Když metoda vrátí, tato proměnná obsahuje velikost dat zkopírovaných do *pData.*
 
 *dwValue*<br/>
 Číselná data pole hodnoty.
 
 *lpszValueName*<br/>
-Určuje pole hodnoty, které se má dotazovat.
+Určuje pole hodnoty, které má být dotazováno.
 
-*szValue*<br/>
+*szHodnota*<br/>
 Řetězcová data pole hodnoty.
 
 *pdwCount*<br/>
-Velikost řetězcových dat. Jeho hodnota je zpočátku nastavená na velikost *szValue* vyrovnávací paměti.
+Velikost dat řetězce. Jeho hodnota je zpočátku nastavena na velikost vyrovnávací paměti *szValue.*
 
 ### <a name="return-value"></a>Návratová hodnota
 
-V případě úspěchu vrátí ERROR_SUCCESS; v opačném případě nenulový kód chyby definovaný v WINERROR. Y.
+Pokud je úspěšná, vrátí ERROR_SUCCESS; v opačném případě nenulový kód chyby definovaný ve winerror. H.
 
 ### <a name="remarks"></a>Poznámky
 
-Tyto dvě původní verze `QueryValue` nástroje již nejsou podporovány a jsou označeny jako ATL_DEPRECATED. Kompilátor vydá upozornění, pokud jsou použity tyto formuláře.
+Dvě původní verze `QueryValue` programu již nejsou podporovány a jsou označeny jako ATL_DEPRECATED. Kompilátor vydá upozornění, pokud jsou tyto formuláře použity.
 
-Zbývající metoda volá volání RegQueryValueEx.
+Zbývající metoda volá RegQueryValueEx.
 
 > [!IMPORTANT]
->  Tato metoda umožňuje volajícímu určit libovolné umístění v registru a potenciálně číst data, která nelze důvěřovat. Také funkce volání RegQueryValueEx používaná touto metodou explicitně nezpracovává řetězce, které jsou ukončeny hodnotou NULL. Obě podmínky by měly být zkontrolovány volajícím kódem.
+> Tato metoda umožňuje volajícímu zadat libovolné umístění registru, potenciálně čtení dat, která nelze důvěřovat. Funkce RegQueryValueEx použitá touto metodou také explicitně nezpracovává řetězce, které jsou ukončeny hodnotou NULL. Obě podmínky by měly být kontrolovány pomocí volajícího kódu.
 
-##  <a name="recursedeletekey"></a>CRegKey:: RecurseDeleteKey
+## <a name="cregkeyrecursedeletekey"></a><a name="recursedeletekey"></a>CRegKey::RecurseDeleteKey
 
-Voláním této metody odeberete zadaný klíč z registru a explicitně odeberete všechny podklíče.
+Volání této metody odebrat zadaný klíč z registru a explicitně odebrat všechny podklíče.
 
 ```
 LONG RecurseDeleteKey(LPCTSTR lpszKey) throw();
@@ -756,19 +756,19 @@ LONG RecurseDeleteKey(LPCTSTR lpszKey) throw();
 ### <a name="parameters"></a>Parametry
 
 *lpszKey*<br/>
-Určuje název klíče, který se má odstranit. Tento název musí být podklíčem [m_hKey](#m_hkey).
+Určuje název klíče, který chcete odstranit. Tento název musí být podklíč [m_hKey](#m_hkey).
 
 ### <a name="return-value"></a>Návratová hodnota
 
-V případě úspěchu vrátí ERROR_SUCCESS; v opačném případě je v WINERROR definována nenulová hodnota chyby. Y.
+Pokud je úspěšná, vrátí ERROR_SUCCESS; v opačném případě nenulová chybová hodnota definovaná ve winerror. H.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud má klíč podklíče, je nutné zavolat tuto metodu, abyste klíč odstranili.
+Pokud klíč má podklíče, musíte volat tuto metodu k odstranění klíče.
 
-##  <a name="setbinaryvalue"></a>CRegKey:: SetBinaryValue
+## <a name="cregkeysetbinaryvalue"></a><a name="setbinaryvalue"></a>CRegKey::SetBinaryValue
 
-Voláním této metody nastavíte binární hodnotu klíče registru.
+Volání této metody nastavit binární hodnotu klíče registru.
 
 ```
 LONG SetBinaryValue(
@@ -780,25 +780,25 @@ LONG SetBinaryValue(
 ### <a name="parameters"></a>Parametry
 
 *pszValueName*<br/>
-Ukazatel na řetězec obsahující název hodnoty, kterou chcete nastavit. Pokud hodnota s tímto názvem již není přítomna, metoda ji přidá do klíče.
+Ukazatel na řetězec obsahující název hodnoty, která má být nastavena. Pokud hodnota s tímto názvem již není k dispozici, metoda ji přidá ke klíči.
 
-*pValue*<br/>
-Ukazatel na vyrovnávací paměť obsahující data, která mají být uložena se zadaným názvem hodnoty.
+*pHodnota*<br/>
+Ukazatel na vyrovnávací paměť obsahující data, která mají být uložena s názvem zadané hodnoty.
 
-*nBytes*<br/>
-Určuje velikost informací, na které odkazuje parametr *pValue* , v bajtech.
+*nBajtu bajtů*<br/>
+Určuje velikost informací, na které se v bajtech ukazuje parametr *pValue.*
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud je metoda úspěšná, návratová hodnota je ERROR_SUCCESS. Pokud se metoda nezdařila, vrácená hodnota je nenulový kód chyby definovaný v WINERROR. Y.
+Pokud je metoda úspěšná, vrácená hodnota je ERROR_SUCCESS. Pokud se metoda nezdaří, vrácená hodnota je nenulový kód chyby definovaný ve winerror. H.
 
 ### <a name="remarks"></a>Poznámky
 
 Tato metoda používá [RegSetValueEx](/windows/win32/api/winreg/nf-winreg-regsetvalueexw) k zápisu hodnoty do registru.
 
-##  <a name="setdwordvalue"></a>CRegKey:: SetDWORDValue
+## <a name="cregkeysetdwordvalue"></a><a name="setdwordvalue"></a>CregKey::SetDWORDValue
 
-Voláním této metody nastavíte hodnotu DWORD klíče registru.
+Volání této metody nastavit hodnotu DWORD klíče registru.
 
 ```
 LONG SetDWORDValue(LPCTSTR pszValueName, DWORD dwValue) throw();
@@ -807,22 +807,22 @@ LONG SetDWORDValue(LPCTSTR pszValueName, DWORD dwValue) throw();
 ### <a name="parameters"></a>Parametry
 
 *pszValueName*<br/>
-Ukazatel na řetězec obsahující název hodnoty, kterou chcete nastavit. Pokud hodnota s tímto názvem již není přítomna, metoda ji přidá do klíče.
+Ukazatel na řetězec obsahující název hodnoty, která má být nastavena. Pokud hodnota s tímto názvem již není k dispozici, metoda ji přidá ke klíči.
 
 *dwValue*<br/>
-Data typu DWORD, která mají být uložena se zadaným názvem hodnoty.
+Data DWORD, která mají být uložena s názvem zadané hodnoty.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud je metoda úspěšná, návratová hodnota je ERROR_SUCCESS. Pokud se metoda nezdařila, vrácená hodnota je nenulový kód chyby definovaný v WINERROR. Y.
+Pokud je metoda úspěšná, vrácená hodnota je ERROR_SUCCESS. Pokud se metoda nezdaří, vrácená hodnota je nenulový kód chyby definovaný ve winerror. H.
 
 ### <a name="remarks"></a>Poznámky
 
 Tato metoda používá [RegSetValueEx](/windows/win32/api/winreg/nf-winreg-regsetvalueexw) k zápisu hodnoty do registru.
 
-##  <a name="setguidvalue"></a>CRegKey:: SetGUIDValue
+## <a name="cregkeysetguidvalue"></a><a name="setguidvalue"></a>Cregkey::SetGUIDValue
 
-Voláním této metody nastavíte hodnotu identifikátoru GUID klíče registru.
+Volánítéto metody nastavit hodnotu GUID klíče registru.
 
 ```
 LONG SetGUIDValue(LPCTSTR pszValueName, REFGUID guidValue) throw();
@@ -831,22 +831,22 @@ LONG SetGUIDValue(LPCTSTR pszValueName, REFGUID guidValue) throw();
 ### <a name="parameters"></a>Parametry
 
 *pszValueName*<br/>
-Ukazatel na řetězec obsahující název hodnoty, kterou chcete nastavit. Pokud hodnota s tímto názvem již není přítomna, metoda ji přidá do klíče.
+Ukazatel na řetězec obsahující název hodnoty, která má být nastavena. Pokud hodnota s tímto názvem již není k dispozici, metoda ji přidá ke klíči.
 
 *guidValue*<br/>
-Odkaz na identifikátor GUID, který se má uložit se zadaným názvem hodnoty
+Odkaz na identifikátor GUID, který má být uložen se zadaným názvem hodnoty.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud je metoda úspěšná, návratová hodnota je ERROR_SUCCESS. Pokud se metoda nezdařila, vrácená hodnota je nenulový kód chyby definovaný v WINERROR. Y.
+Pokud je metoda úspěšná, vrácená hodnota je ERROR_SUCCESS. Pokud se metoda nezdaří, vrácená hodnota je nenulový kód chyby definovaný ve winerror. H.
 
 ### <a name="remarks"></a>Poznámky
 
 Tato metoda využívá `CRegKey::SetStringValue` a převádí identifikátor GUID na řetězec pomocí [StringFromGUID2](/windows/win32/api/combaseapi/nf-combaseapi-stringfromguid2).
 
-##  <a name="setkeyvalue"></a>CRegKey:: SetKeyValue
+## <a name="cregkeysetkeyvalue"></a><a name="setkeyvalue"></a>CregKey::SetKeyValue
 
-Voláním této metody uložíte data do zadaného pole hodnoty zadaného klíče.
+Volání této metody k uložení dat v poli zadané hodnoty zadaného klíče.
 
 ```
 LONG SetKeyValue(
@@ -858,25 +858,25 @@ LONG SetKeyValue(
 ### <a name="parameters"></a>Parametry
 
 *lpszKeyName*<br/>
-Určuje název klíče, který má být vytvořen nebo otevřen. Tento název musí být podklíčem [m_hKey](#m_hkey).
+Určuje název klíče, který má být vytvořen nebo otevřen. Tento název musí být podklíč [m_hKey](#m_hkey).
 
 *lpszValue*<br/>
-Určuje data, která mají být uložena. Tento parametr nesmí mít hodnotu NULL.
+Určuje data, která mají být uložena. Tento parametr musí být non-NULL.
 
 *lpszValueName*<br/>
-Určuje pole hodnoty, které se má nastavit. Pokud pole hodnota s tímto názvem ještě v klíči neexistuje, přidá se.
+Určuje pole hodnoty, které má být nastaveno. Pokud pole hodnoty s tímto názvem v klíči ještě neexistuje, bude přidáno.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-V případě úspěchu vrátí ERROR_SUCCESS; v opačném případě nenulový kód chyby definovaný v WINERROR. Y.
+Pokud je úspěšná, vrátí ERROR_SUCCESS; v opačném případě nenulový kód chyby definovaný ve winerror. H.
 
 ### <a name="remarks"></a>Poznámky
 
-Voláním této metody vytvoříte nebo otevřete klíč *lpszKeyName* a uložíte data *lpszValue* do pole hodnota *lpszValueName* .
+Volánítéto metody k vytvoření nebo otevření *klávesy lpszKeyName* a uložení dat *lpszValue* do pole hodnoty *lpszValueName.*
 
-##  <a name="setkeysecurity"></a>CRegKey:: SetKeySecurity
+## <a name="cregkeysetkeysecurity"></a><a name="setkeysecurity"></a>CRegKey::SetKeySecurity
 
-Voláním této metody nastavíte zabezpečení klíče registru.
+Volání této metody nastavit zabezpečení klíče registru.
 
 ```
 LONG SetKeySecurity(SECURITY_INFORMATION si, PSECURITY_DESCRIPTOR psd) throw();
@@ -885,29 +885,29 @@ LONG SetKeySecurity(SECURITY_INFORMATION si, PSECURITY_DESCRIPTOR psd) throw();
 ### <a name="parameters"></a>Parametry
 
 *si*<br/>
-Určuje součásti popisovače zabezpečení, které se mají nastavit. Hodnota může být kombinací následujících hodnot:
+Určuje součásti popisovače zabezpečení, které chcete nastavit. Hodnota může být kombinací následujících hodnot:
 
-|Value|Význam|
+|Hodnota|Význam|
 |-----------|-------------|
-|DACL_SECURITY_INFORMATION|Nastaví volitelný seznam řízení přístupu (DACL) klíče. Klíč musí mít přístup WRITE_DAC nebo volající proces musí být vlastníkem objektu.|
-|GROUP_SECURITY_INFORMATION|Nastaví identifikátor zabezpečení primární skupiny (SID) klíče. Klíč musí mít přístup WRITE_OWNER nebo volající proces musí být vlastníkem objektu.|
-|OWNER_SECURITY_INFORMATION|Nastaví identifikátor SID vlastníka klíče. Klíč musí mít přístup WRITE_OWNER nebo volající proces musí být vlastníkem objektu nebo musí mít povolené oprávnění SE_TAKE_OWNERSHIP_NAME.|
-|SACL_SECURITY_INFORMATION|Nastaví seznam řízení přístupu (SACL) systému klíče. Klíč musí mít přístup ACCESS_SYSTEM_SECURITY. Správným způsobem, jak tento přístup získat, je povolit [oprávnění](/windows/win32/secauthz/privileges) SE_SECURITY_NAME v aktuálním přístupovém tokenu volajícího, otevřít popisovač pro ACCESS_SYSTEM_SECURITY přístup a pak toto oprávnění zakázat.|
+|DACL_SECURITY_INFORMATION|Nastaví volitelný seznam řízení přístupu (DACL) klíče. Klíč musí mít WRITE_DAC přístup, nebo volající proces musí být vlastníkem objektu.|
+|GROUP_SECURITY_INFORMATION|Nastaví identifikátor zabezpečení primární skupiny klíče (SID). Klíč musí mít přístup WRITE_OWNER nebo volající proces musí být vlastníkem objektu.|
+|OWNER_SECURITY_INFORMATION|Nastaví sid vlastníka klíče. Klíč musí mít WRITE_OWNER přístup nebo volající proces musí být vlastníkem objektu nebo musí mít povoleno oprávnění SE_TAKE_OWNERSHIP_NAME.|
+|SACL_SECURITY_INFORMATION|Nastaví seznam řízení přístupu k systému (SACL). Klíč musí mít ACCESS_SYSTEM_SECURITY přístup. Správný způsob, jak získat tento přístup je povolit [SE_SECURITY_NAME oprávnění](/windows/win32/secauthz/privileges) v volajícím aktuální přístupový token, otevřete popisovač pro přístup ACCESS_SYSTEM_SECURITY a potom zakázat oprávnění.|
 
-*psd*<br/>
-Ukazatel na strukturu [SECURITY_DESCRIPTOR](/windows/win32/api/winnt/ns-winnt-security_descriptor) , která určuje atributy zabezpečení, které se mají nastavit pro zadaný klíč.
+*Psd*<br/>
+Ukazatel na [SECURITY_DESCRIPTOR](/windows/win32/api/winnt/ns-winnt-security_descriptor) strukturu, která určuje atributy zabezpečení, které mají být nastaveny pro zadaný klíč.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud je metoda úspěšná, návratová hodnota je ERROR_SUCCESS. Pokud se metoda nezdařila, vrácená hodnota je nenulový kód chyby definovaný v WINERROR. Y.
+Pokud je metoda úspěšná, vrácená hodnota je ERROR_SUCCESS. Pokud se metoda nezdaří, vrácená hodnota je nenulový kód chyby definovaný ve winerror. H.
 
 ### <a name="remarks"></a>Poznámky
 
-Nastaví atributy zabezpečení klíče. Další podrobnosti najdete v tématu [RegSetKeySecurity](/windows/win32/api/winreg/nf-winreg-regsetkeysecurity) .
+Nastaví atributy zabezpečení klíče. Další podrobnosti naleznete v tématu [RegSetKeySecurity.](/windows/win32/api/winreg/nf-winreg-regsetkeysecurity)
 
-##  <a name="setmultistringvalue"></a>CRegKey:: SetMultiStringValue
+## <a name="cregkeysetmultistringvalue"></a><a name="setmultistringvalue"></a>CregKey::SetMultiStringValue
 
-Voláním této metody nastavíte hodnotu pro více řetězců klíče registru.
+Volání této metody nastavit hodnotu více řetězců klíče registru.
 
 ```
 LONG SetMultiStringValue(LPCTSTR pszValueName, LPCTSTR pszValue) throw();
@@ -916,22 +916,22 @@ LONG SetMultiStringValue(LPCTSTR pszValueName, LPCTSTR pszValue) throw();
 ### <a name="parameters"></a>Parametry
 
 *pszValueName*<br/>
-Ukazatel na řetězec obsahující název hodnoty, kterou chcete nastavit. Pokud hodnota s tímto názvem již není přítomna, metoda ji přidá do klíče.
+Ukazatel na řetězec obsahující název hodnoty, která má být nastavena. Pokud hodnota s tímto názvem již není k dispozici, metoda ji přidá ke klíči.
 
 *pszValue*<br/>
-Ukazatel na data s více řetězci, který se má uložit se zadaným názvem hodnoty. Více řetězců je pole řetězců ukončených hodnotou null, ukončené dvěma znaky null.
+Ukazatel na víceřetězcová data, která mají být uložena s názvem zadané hodnoty. Víceřetězcový řetězec je pole řetězců ukončených hodnotou null, ukončené dvěma prázdnými znaky.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud je metoda úspěšná, návratová hodnota je ERROR_SUCCESS. Pokud se metoda nezdařila, vrácená hodnota je nenulový kód chyby definovaný v WINERROR. Y.
+Pokud je metoda úspěšná, vrácená hodnota je ERROR_SUCCESS. Pokud se metoda nezdaří, vrácená hodnota je nenulový kód chyby definovaný ve winerror. H.
 
 ### <a name="remarks"></a>Poznámky
 
 Tato metoda používá [RegSetValueEx](/windows/win32/api/winreg/nf-winreg-regsetvalueexw) k zápisu hodnoty do registru.
 
-##  <a name="setqwordvalue"></a>CRegKey:: SetQWORDValue
+## <a name="cregkeysetqwordvalue"></a><a name="setqwordvalue"></a>CRegKey::SetQWORDValue
 
-Voláním této metody nastavíte hodnotu QWORD klíče registru.
+Volání této metody nastavit hodnotu QWORD klíče registru.
 
 ```
 LONG SetQWORDValue(LPCTSTR pszValueName, ULONGLONG qwValue) throw();
@@ -940,22 +940,22 @@ LONG SetQWORDValue(LPCTSTR pszValueName, ULONGLONG qwValue) throw();
 ### <a name="parameters"></a>Parametry
 
 *pszValueName*<br/>
-Ukazatel na řetězec obsahující název hodnoty, kterou chcete nastavit. Pokud hodnota s tímto názvem již není přítomna, metoda ji přidá do klíče.
+Ukazatel na řetězec obsahující název hodnoty, která má být nastavena. Pokud hodnota s tímto názvem již není k dispozici, metoda ji přidá ke klíči.
 
 *qwValue*<br/>
-Data QWORD se budou ukládat se zadaným názvem hodnoty.
+QWORD data, která mají být uložena s názvem zadané hodnoty.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud je metoda úspěšná, návratová hodnota je ERROR_SUCCESS. Pokud se metoda nezdařila, vrácená hodnota je nenulový kód chyby definovaný v WINERROR. Y.
+Pokud je metoda úspěšná, vrácená hodnota je ERROR_SUCCESS. Pokud se metoda nezdaří, vrácená hodnota je nenulový kód chyby definovaný ve winerror. H.
 
 ### <a name="remarks"></a>Poznámky
 
 Tato metoda používá [RegSetValueEx](/windows/win32/api/winreg/nf-winreg-regsetvalueexw) k zápisu hodnoty do registru.
 
-##  <a name="setstringvalue"></a>CRegKey:: SetStringValue
+## <a name="cregkeysetstringvalue"></a><a name="setstringvalue"></a>CRegKey::SetStringValue
 
-Voláním této metody nastavíte hodnotu řetězce klíče registru.
+Volání této metody nastavit hodnotu řetězce klíče registru.
 
 ```
 LONG SetStringValue(
@@ -967,25 +967,25 @@ LONG SetStringValue(
 ### <a name="parameters"></a>Parametry
 
 *pszValueName*<br/>
-Ukazatel na řetězec obsahující název hodnoty, kterou chcete nastavit. Pokud hodnota s tímto názvem již není přítomna, metoda ji přidá do klíče.
+Ukazatel na řetězec obsahující název hodnoty, která má být nastavena. Pokud hodnota s tímto názvem již není k dispozici, metoda ji přidá ke klíči.
 
 *pszValue*<br/>
-Ukazatel na data řetězce, která se mají uložit se zadaným názvem hodnoty.
+Ukazatel na data řetězce, která mají být uložena s názvem zadané hodnoty.
 
-*dwType*<br/>
-Typ řetězce pro zápis do registru: buď REG_SZ (výchozí) nebo REG_EXPAND_SZ (pro více řetězců).
+*dwTyp*<br/>
+Typ řetězce pro zápis do registru: buď REG_SZ (výchozí) nebo REG_EXPAND_SZ (pro víceřetězcové).
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud je metoda úspěšná, návratová hodnota je ERROR_SUCCESS. Pokud se metoda nezdařila, vrácená hodnota je nenulový kód chyby definovaný v WINERROR. Y.
+Pokud je metoda úspěšná, vrácená hodnota je ERROR_SUCCESS. Pokud se metoda nezdaří, vrácená hodnota je nenulový kód chyby definovaný ve winerror. H.
 
 ### <a name="remarks"></a>Poznámky
 
 Tato metoda používá [RegSetValueEx](/windows/win32/api/winreg/nf-winreg-regsetvalueexw) k zápisu hodnoty do registru.
 
-##  <a name="setvalue"></a>CRegKey:: SetValue
+## <a name="cregkeysetvalue"></a><a name="setvalue"></a>CRegKey::SetValue
 
-Voláním této metody uložíte data do zadaného pole hodnoty [m_hKey](#m_hkey). Dřívější verze této metody již nejsou podporovány a jsou označeny jako ATL_DEPRECATED.
+Volání této metody k uložení dat v poli zadané hodnoty [m_hKey](#m_hkey). Dřívější verze této metody již nejsou podporovány a jsou označeny jako ATL_DEPRECATED.
 
 ```
 LONG SetValue(
@@ -1014,49 +1014,49 @@ ATL_DEPRECATED LONG SetValue(
 ### <a name="parameters"></a>Parametry
 
 *pszValueName*<br/>
-Ukazatel na řetězec obsahující název hodnoty, kterou chcete nastavit. Pokud hodnota s tímto názvem není v klíči již přítomna, metoda ji přidá do klíče. Pokud má *pszValueName* hodnotu null nebo prázdný řetězec, "", metoda nastaví typ a data pro nepojmenované nebo výchozí hodnoty klíče.
+Ukazatel na řetězec obsahující název hodnoty, která má být nastavena. Pokud hodnota s tímto názvem již není v klíči k dispozici, metoda ji přidá ke klíči. Pokud *pszValueName* je NULL nebo prázdný řetězec, "", metoda nastaví typ a data pro nepojmenované klíče nebo výchozí hodnotu.
 
-*dwType*<br/>
-Určuje kód, který označuje typ dat, na které odkazuje parametr *pValue* .
+*dwTyp*<br/>
+Určuje kód označující typ dat, na která se parametr *pValue* ukazuje.
 
-*pValue*<br/>
-Ukazatel na vyrovnávací paměť obsahující data, která mají být uložena se zadaným názvem hodnoty.
+*pHodnota*<br/>
+Ukazatel na vyrovnávací paměť obsahující data, která mají být uložena s názvem zadané hodnoty.
 
-*nBytes*<br/>
-Určuje velikost informací, na které odkazuje parametr *pValue* , v bajtech. Pokud jsou data typu REG_SZ, REG_EXPAND_SZ nebo REG_MULTI_SZ, *nBytes* musí zahrnovat velikost ukončujícího znaku null.
+*nBajtu bajtů*<br/>
+Určuje velikost informací, na které se v bajtech ukazuje parametr *pValue.* Pokud data jsou typu REG_SZ, REG_EXPAND_SZ nebo REG_MULTI_SZ, *nBajty* musí obsahovat velikost ukončujícího znaku null.
 
-*hKeyParent*<br/>
-Popisovač otevřeného klíče.
+*hParent*<br/>
+Rukojeť otevřeného klíče.
 
 *lpszKeyName*<br/>
-Určuje název klíče, který má být vytvořen nebo otevřen. Tento název musí být podklíčem *hKeyParent*.
+Určuje název klíče, který má být vytvořen nebo otevřen. Tento název musí být podklíč *hKeyParent*.
 
 *lpszValue*<br/>
-Určuje data, která mají být uložena. Tento parametr nesmí mít hodnotu NULL.
+Určuje data, která mají být uložena. Tento parametr musí být non-NULL.
 
 *lpszValueName*<br/>
-Určuje pole hodnoty, které se má nastavit. Pokud pole hodnota s tímto názvem ještě v klíči neexistuje, přidá se.
+Určuje pole hodnoty, které má být nastaveno. Pokud pole hodnoty s tímto názvem v klíči ještě neexistuje, bude přidáno.
 
 *dwValue*<br/>
 Určuje data, která mají být uložena.
 
 *bMulti*<br/>
-Pokud je hodnota false, označuje, že řetězec je typu REG_SZ. Pokud je nastaveno na true, označuje, že řetězec je s více řetězci typu REG_MULTI_SZ.
+Pokud false, označuje řetězec je typu REG_SZ. Pokud true, označuje řetězec je víceřetězcový typ REG_MULTI_SZ.
 
-*nValueLen*<br/>
-Pokud má *bMulti* hodnotu true, *nValueLen* je délka řetězce *lpszValue* ve znacích. Pokud je *bMulti* false, hodnota-1 označuje, že metoda bude automaticky počítat délku.
+*nHodnotaLen*<br/>
+Pokud *bMulti* je true, *nValueLen* je délka *lpszValue* řetězec ve znacích. Pokud *bMulti* je false, hodnota -1 označuje, že metoda vypočítá délku automaticky.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-V případě úspěchu vrátí ERROR_SUCCESS; v opačném případě nenulový kód chyby definovaný v WINERROR. Y.
+Pokud je úspěšná, vrátí ERROR_SUCCESS; v opačném případě nenulový kód chyby definovaný ve winerror. H.
 
 ### <a name="remarks"></a>Poznámky
 
-Dvě původní verze `SetValue` nástroje jsou označeny jako ATL_DEPRECATED a neměly by se již používat. Kompilátor vydá upozornění, pokud jsou použity tyto formuláře.
+Dvě původní verze `SetValue` programu jsou označeny jako ATL_DEPRECATED a neměly by být používány. Kompilátor vydá upozornění, pokud jsou tyto formuláře použity.
 
 Třetí metoda volá [RegSetValueEx](/windows/win32/api/winreg/nf-winreg-regsetvalueexw).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Ukázka modelu DCOM](../../overview/visual-cpp-samples.md)<br/>
+[Ukázka DCOM](../../overview/visual-cpp-samples.md)<br/>
 [Přehled třídy](../../atl/atl-class-overview.md)

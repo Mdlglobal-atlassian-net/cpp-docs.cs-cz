@@ -1,6 +1,6 @@
 ---
-title: Struktura TRACING_SESSION_STATISTICS
-description: Odkaz C++ na strukturu TRACING_SESSION_OPTIONS Build Insights SDK
+title: TRACING_SESSION_STATISTICS struktura
+description: C++ Build Insights SDK TRACING_SESSION_OPTIONS odkaz na strukturu.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 9aa7c0a861d80fd3ebff85eb7ecb17dd05ae869e
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 96cff3a231fd515ec1c52a048b8350a63ba46a39
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78332199"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81323379"
 ---
-# <a name="tracing_session_statistics-structure"></a>Struktura TRACING_SESSION_STATISTICS
+# <a name="tracing_session_statistics-structure"></a>TRACING_SESSION_STATISTICS struktura
 
 ::: moniker range="<=vs-2015"
 
-Sada C++ SDK pro Build Insights je kompatibilní se sadou Visual Studio 2017 a novější. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek selektor verzí sady Visual Studio pro tento článek na sadu Visual Studio 2017 nebo Visual Studio 2019.
+Sada C++ Build Insights SDK je kompatibilní s Visual Studio 2017 a vyšší. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek pro výběr **verze** sady Visual Studio pro tento článek na Visual Studio 2017 nebo Visual Studio 2019. Nachází se v horní části obsahu na této stránce.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Struktura `TRACING_SESSION_STATISTICS` popisuje statistiku shromažďovaného trasování. Jeho pole jsou nastavena při zastavování relace trasování.
+Struktura `TRACING_SESSION_STATISTICS` popisuje statistiky trasování, které byly shromážděny. Jeho pole jsou nastavena při zastavení relace trasování.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -44,10 +44,10 @@ typedef struct TRACING_SESSION_STATISTICS_TAG
 
 |  |  |
 |--|--|
-| `MSVCEventsLost` | Počet vyřazených událostí MSVC. |
-| `MSVCBuffersLost` | Počet vyřazených vyrovnávacích pamětí událostí MSVC. |
-| `SystemEventsLost` | Počet vyřazených systémových událostí. |
-| `SystemBuffersLost` | Počet vyřazených vyrovnávacích pamětí systémových událostí. |
+| `MSVCEventsLost` | Počet událostí MSVC, které byly vynechány. |
+| `MSVCBuffersLost` | Počet vyrovnávacích pamětí událostí MSVC, které byly vynechány. |
+| `SystemEventsLost` | Počet systémových událostí, které byly vynechány. |
+| `SystemBuffersLost` | Počet vyrovnávacích pamětí systémových událostí, které byly vynechány. |
 
 ## <a name="remarks"></a>Poznámky
 

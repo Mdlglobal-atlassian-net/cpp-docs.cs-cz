@@ -1,5 +1,5 @@
 ---
-title: Crbtree – třída
+title: Třída CRBTree
 ms.date: 11/04/2016
 f1_keywords:
 - CRBTree
@@ -27,16 +27,16 @@ f1_keywords:
 helpviewer_keywords:
 - CRBTree class
 ms.assetid: a1b1cb63-38e4-4fc2-bb28-f774d1721760
-ms.openlocfilehash: 59416000eecf4be25746d9dedd86ea2af116087a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 56c9db9d1a7bcd7fe2a2647d8b1339d223c4b66b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62278069"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81331240"
 ---
-# <a name="crbtree-class"></a>Crbtree – třída
+# <a name="crbtree-class"></a>Třída CRBTree
 
-Tato třída poskytuje metody pro vytváření a využívání Red černé stromu.
+Tato třída poskytuje metody pro vytváření a využití červeno-černý strom.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -51,76 +51,76 @@ class CRBTree
 #### <a name="parameters"></a>Parametry
 
 *K*<br/>
-Typ klíče prvku.
+Typ klíčového prvku.
 
 *V*<br/>
-Typ elementu hodnota.
+Typ prvku hodnoty.
 
-*KTraits*<br/>
-Kód použitý má zkopírovat nebo přesunout klíčové prvky. Zobrazit [celementtraits – třída](../../atl/reference/celementtraits-class.md) další podrobnosti.
+*KTraity*<br/>
+Kód používaný ke kopírování nebo přesunutí klíčových prvků. Další podrobnosti najdete v [části CElementTraits Class.](../../atl/reference/celementtraits-class.md)
 
 *VTraits*<br/>
-Kód použitý má zkopírovat nebo přesunout elementy hodnotu.
+Kód používaný ke kopírování nebo přesouvání prvků hodnoty.
 
 ## <a name="members"></a>Členové
 
-### <a name="public-typedefs"></a>Veřejné definice TypeDef
+### <a name="public-typedefs"></a>Veřejné typedefs
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CRBTree::KINARGTYPE](#kinargtype)|Typ použitý klíč je předána jako vstupní argument.|
-|[CRBTree::KOUTARGTYPE](#koutargtype)|Typ použitý při klíč se vrátí jako výstup argument.|
-|[CRBTree::VINARGTYPE](#vinargtype)|Typ použitý jako vstupní argument je předána hodnota.|
-|[CRBTree::VOUTARGTYPE](#voutargtype)|Typ použitý při je hodnota předána jako argument výstup.|
+|[CRBTree::KINARGTYPE](#kinargtype)|Typ použitý při předání klíče jako vstupní argument.|
+|[CRBTree::KOUTARGTYPE](#koutargtype)|Typ použitý při vrácení klíče jako výstupního argumentu.|
+|[CRBTree::VINARGTYPE](#vinargtype)|Typ použitý při předání hodnoty jako vstupní argument.|
+|[CRBTree::VOUTARGTYPE](#voutargtype)|Typ použitý při předání hodnoty jako výstupní argument.|
 
 ### <a name="public-classes"></a>Veřejné třídy
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[Třída CRBTree::CPair](#cpair_class)|Třída obsahující prvky klíč a hodnotu.|
+|[CRBTree::Třída CPair](#cpair_class)|Třída obsahující klíčové a hodnotové prvky.|
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
 |[CRBTree::~CRBTree](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CRBTree::FindFirstKeyAfter](#findfirstkeyafter)|Volání této metody pro hledání pozice prvku, který se používá k dispozici další klíč.|
-|[CRBTree::GetAt](#getat)|Volejte tuto metodu za účelem získání elementu na dané pozici ve stromu.|
-|[CRBTree::GetCount](#getcount)|Volejte tuto metodu za účelem získání počet prvků ve stromové struktuře.|
-|[CRBTree::GetHeadPosition](#getheadposition)|Volejte tuto metodu za účelem získání hodnoty pozice pro element na hlavu stromu.|
-|[CRBTree::GetKeyAt](#getkeyat)|Volejte tuto metodu za účelem získání klíče z dané pozici ve stromu.|
-|[CRBTree::GetNext](#getnext)|Volejte tuto metodu za účelem získání ukazatele na prvek uložený v `CRBTree` objektu a umístění, přejděte na další prvek.|
-|[CRBTree::GetNextAssoc](#getnextassoc)|Volat tuto metodu za účelem získání klíč a hodnotu prvek uložený v objektu map a pozice, přejděte na další prvek.|
-|[CRBTree::GetNextKey](#getnextkey)|Volejte tuto metodu za účelem získání klíče prvek uložený ve stromové struktuře a umístění, přejděte na další prvek.|
-|[CRBTree::GetNextValue](#getnextvalue)|Volání této metody k získání hodnoty prvek uložený ve stromové struktuře a umístění, přejděte na další prvek.|
-|[CRBTree::GetPrev](#getprev)|Volejte tuto metodu za účelem získání ukazatele na prvek uložený v `CRBTree` objektu a pak aktualizujte umístění na předchozí prvek.|
-|[CRBTree::GetTailPosition](#gettailposition)|Volejte tuto metodu za účelem získání hodnoty pozice pro prvek na konec stromu.|
-|[CRBTree::GetValueAt](#getvalueat)|Volejte tuto metodu za účelem načtení hodnoty uložené na dané pozici v `CRBTree` objektu.|
-|[CRBTree::IsEmpty](#isempty)|Volejte tuto metodu za účelem testování pro objekt prázdný strom.|
-|[CRBTree::RemoveAll](#removeall)|Voláním této metody lze odebrat všechny prvky z `CRBTree` objektu.|
-|[CRBTree::RemoveAt](#removeat)|Volejte tuto metodu za účelem odebrání elementu na dané pozici v `CRBTree` objektu.|
-|[CRBTree::SetValueAt](#setvalueat)|Voláním této metody lze změnit hodnotu uloženou v dané pozici v `CRBTree` objektu.|
+|[CRBTree::FindFirstKeyAfter](#findfirstkeyafter)|Volání této metody najít pozici prvku, který používá další dostupný klíč.|
+|[CRBTree::Getat](#getat)|Volání této metody získat prvek na dané pozici ve stromu.|
+|[CRBTree::GetCount](#getcount)|Volání této metody získat počet prvků ve stromu.|
+|[CRBTree::GetheadPozice](#getheadposition)|Volání této metody získat hodnotu pozice pro prvek v čele stromu.|
+|[CRBTree::GetKeyat](#getkeyat)|Volání této metody získat klíč z dané pozice ve stromu.|
+|[CRBTree::GetNext](#getnext)|Volání této metody získat ukazatel na prvek `CRBTree` uložený v objektu a posunut pozici na další prvek.|
+|[CRBTree::GetNextAssoc](#getnextassoc)|Volání této metody získat klíč a hodnotu prvku uloženého v mapě a posunut pozici na další prvek.|
+|[CRBTree::GetNextKey](#getnextkey)|Volání této metody získat klíč prvku uloženého ve stromu a posunut pozici na další prvek.|
+|[CRBTree::GetNextValue](#getnextvalue)|Volání této metody získat hodnotu prvku uloženého ve stromu a posunut pozici na další prvek.|
+|[CRBTree::GetPrev](#getprev)|Volání této metody získat ukazatel na prvek `CRBTree` uložený v objektu a potom aktualizovat pozici předchozí prvek.|
+|[CRBTree::GettailPosition](#gettailposition)|Volání této metody získat hodnotu pozice pro prvek na konci stromu.|
+|[CRBTree::GetValueAt](#getvalueat)|Volání této metody načíst hodnotu uloženou `CRBTree` na dané pozici v objektu.|
+|[CRBTree::Jeprázdný](#isempty)|Volání této metody k testování objektu prázdné stromu.|
+|[CRBTree::RemoveAll](#removeall)|Volání této metody odebrat `CRBTree` všechny prvky z objektu.|
+|[CRBTree::RemoveAt](#removeat)|Volání této metody odebrat prvek na `CRBTree` dané pozici v objektu.|
+|[CRBTree::SetValueAt](#setvalueat)|Volání této metody změnit hodnotu uloženou `CRBTree` na dané pozici v objektu.|
 
 ## <a name="remarks"></a>Poznámky
 
-Tree černý Red je binárního vyhledávacího stromu, který používá speciální hodně informací za uzel a zajistěte, aby zůstal "Rovnováha,", který je, výšku stromu nebude zvětšovat nepřiměřeně velké a ovlivnit výkon.
+Red-Black strom je binární vyhledávací strom, který používá další bit informací na uzel k zajištění, že zůstane "vyvážený", to znamená, že výška stromu neroste nepřiměřeně velké a ovlivnit výkon.
 
-Tato třída šablony slouží k využívat [crbmap –](../../atl/reference/crbmap-class.md) a [crbmultimap –](../../atl/reference/crbmultimap-class.md). Hromadné metody, které tvoří tyto odvozené třídy jsou k dispozici v `CRBTree`.
+Tato třída šablony je určena pro použití [CRBMap](../../atl/reference/crbmap-class.md) a [CRBMultiMap](../../atl/reference/crbmultimap-class.md). Převážná část metod, které tvoří tyto odvozené `CRBTree`třídy jsou poskytovány .
 
-Podrobnější diskuzi o různých třídy kolekcí a jejich funkce a výkonové charakteristiky, naleznete v tématu [ATL – třídy kolekce](../../atl/atl-collection-classes.md).
+Podrobnější diskusi o různých třídách kolekce a jejich funkcích a vlastnostech výkonu naleznete [v tématu TŘÍDY kolekce atl](../../atl/atl-collection-classes.md).
 
 ## <a name="requirements"></a>Požadavky
 
 **Záhlaví:** atlcoll.h
 
-##  <a name="cpair_class"></a>  Třída CRBTree::CPair
+## <a name="crbtreecpair-class"></a><a name="cpair_class"></a>CRBTree::Třída CPair
 
-Třída obsahující prvky klíč a hodnotu.
+Třída obsahující klíčové a hodnotové prvky.
 
 ```
 class CPair : public __POSITION
@@ -128,16 +128,16 @@ class CPair : public __POSITION
 
 ### <a name="remarks"></a>Poznámky
 
-Tato třída se používá metody [CRBTree::GetAt](#getat), [CRBTree::GetNext](#getnext), a [CRBTree::GetPrev](#getprev) pro přístup k prvkům klíč a hodnotu, uložené ve stromové struktuře.
+Tato třída je používána metodami [CRBTree::GetAt](#getat), [CRBTree::GetNext](#getnext)a [CRBTree::GetPrev](#getprev) pro přístup k prvkům klíče a hodnot uložených ve stromové struktuře.
 
 Členové jsou následující:
 
 |||
 |-|-|
-|`m_key`|Datový člen ukládání klíčovým prvkem.|
-|`m_value`|Datový člen ukládání prvku hodnoty.|
+|`m_key`|Datový člen ukládání klíčový prvek.|
+|`m_value`|Datový člen ukládání elementvalue.|
 
-##  <a name="dtor"></a>  Crbtree –:: ~ crbtree –
+## <a name="crbtreecrbtree"></a><a name="dtor"></a>CRBTree::~CRBTree
 
 Destruktor.
 
@@ -147,11 +147,11 @@ Destruktor.
 
 ### <a name="remarks"></a>Poznámky
 
-Uvolní všechny přidělené prostředky. Volání [CRBTree::RemoveAll](#removeall) odstranit všechny elementy.
+Uvolní všechny přidělené zdroje. Volá [CRBTree::RemoveAll](#removeall) odstranit všechny prvky.
 
-##  <a name="findfirstkeyafter"></a>  CRBTree::FindFirstKeyAfter
+## <a name="crbtreefindfirstkeyafter"></a><a name="findfirstkeyafter"></a>CRBTree::FindFirstKeyAfter
 
-Volání této metody pro hledání pozice prvku, který se používá k dispozici další klíč.
+Volání této metody najít pozici prvku, který používá další dostupný klíč.
 
 ```
 POSITION FindFirstKeyAfter(KINARGTYPE key) const throw();
@@ -160,19 +160,19 @@ POSITION FindFirstKeyAfter(KINARGTYPE key) const throw();
 ### <a name="parameters"></a>Parametry
 
 *key*<br/>
-Hodnotu klíče.
+Hodnota klíče.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu pozice prvku, který se používá k dispozici další klíč. Pokud neexistují žádné další prvky, je vrácena hodnota NULL.
+Vrátí hodnotu pozice prvku, který používá další dostupný klíč. Pokud neexistují žádné další prvky, null je vrácena.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda usnadňuje procházení stromu bez nutnosti k výpočtu hodnoty pozice předem.
+Tato metoda usnadňuje procházení stromu bez nutnosti předem vypočítat hodnoty polohy.
 
-##  <a name="getat"></a>  CRBTree::GetAt
+## <a name="crbtreegetat"></a><a name="getat"></a>CRBTree::Getat
 
-Volejte tuto metodu za účelem získání elementu na dané pozici ve stromu.
+Volání této metody získat prvek na dané pozici ve stromu.
 
 ```
 CPair* GetAt(POSITION pos) throw();
@@ -182,28 +182,28 @@ void GetAt(POSITION pos, KOUTARGTYPE key, VOUTARGTYPE value) const;
 
 ### <a name="parameters"></a>Parametry
 
-*pos*<br/>
+*Pos*<br/>
 Hodnota pozice.
 
 *key*<br/>
-Proměnná, která přijímá klávesu.
+Proměnná, která přijímá klíč.
 
-*value*<br/>
-Proměnné, která přijímá hodnotu.
+*Hodnotu*<br/>
+Proměnná, která přijímá hodnotu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrací ukazatel na první dva formuláře [CPair](#cpair_class). Třetí formuláře získá klíč a hodnotu pro danou pozici.
+První dva formuláře vrátí ukazatel [CPair](#cpair_class). Třetí formulář získá klíč a hodnotu pro danou pozici.
 
 ### <a name="remarks"></a>Poznámky
 
-Hodnota pozice lze dříve určit pomocí volání metody, jako [CRBTree::GetHeadPosition](#getheadposition) nebo [CRBTree::GetTailPosition](#gettailposition).
+Hodnotu pozice lze dříve určit voláním metody, jako je [CRBTree::GetHeadPosition](#getheadposition) nebo [CRBTree::GetTailPosition](#gettailposition).
 
-V sestavení pro ladění k selhání kontrolního výrazu dojde, pokud *pos* je rovna hodnotě NULL.
+V sestaveních ladění dojde k selhání kontrolního výrazu, pokud *se pos* rovná hodnotě NULL.
 
-##  <a name="getcount"></a>  CRBTree::GetCount
+## <a name="crbtreegetcount"></a><a name="getcount"></a>CRBTree::GetCount
 
-Volejte tuto metodu za účelem získání počet prvků ve stromové struktuře.
+Volání této metody získat počet prvků ve stromu.
 
 ```
 size_t GetCount() const throw();
@@ -211,11 +211,11 @@ size_t GetCount() const throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí počet prvků (každý pár klíč/hodnota je jeden element) uložené ve stromové struktuře.
+Vrátí počet prvků (každý klíč/hodnota pár je jeden prvek) uložené ve stromu.
 
-##  <a name="getheadposition"></a>  CRBTree::GetHeadPosition
+## <a name="crbtreegetheadposition"></a><a name="getheadposition"></a>CRBTree::GetheadPozice
 
-Volejte tuto metodu za účelem získání hodnoty pozice pro element na hlavu stromu.
+Volání této metody získat hodnotu pozice pro prvek v čele stromu.
 
 ```
 POSITION GetHeadPosition() const throw();
@@ -223,15 +223,15 @@ POSITION GetHeadPosition() const throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu pozice pro element na hlavu stromu.
+Vrátí hodnotu pozice prvku v čele stromu.
 
 ### <a name="remarks"></a>Poznámky
 
-Hodnota vrácená `GetHeadPosition` lze použít s metodami, jako [CRBTree::GetKeyAt](#getkeyat) nebo [CRBTree::GetNext](#getnext) procházení stromu a načítat hodnoty.
+Hodnotu vrácenou pomocí lze použít s metodami, `GetHeadPosition` jako je [NAPříklad CRBTree::GetKeyAt](#getkeyat) nebo [CRBTree::GetNext](#getnext) procházet stroma a načíst hodnoty.
 
-##  <a name="getkeyat"></a>  CRBTree::GetKeyAt
+## <a name="crbtreegetkeyat"></a><a name="getkeyat"></a>CRBTree::GetKeyat
 
-Volejte tuto metodu za účelem získání klíče z dané pozici ve stromu.
+Volání této metody získat klíč z dané pozice ve stromu.
 
 ```
 const K& GetKeyAt(POSITION pos) const throw();
@@ -239,20 +239,20 @@ const K& GetKeyAt(POSITION pos) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*pos*<br/>
+*Pos*<br/>
 Hodnota pozice.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí klíč uložený na pozici *pos* ve stromové struktuře.
+Vrátí klíč uložený ve *stromu* pozice.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud *pos* není platná pozice hodnotu, jsou výsledky nepředvídatelné. V sestavení pro ladění k selhání kontrolního výrazu dojde, pokud *pos* je rovna hodnotě NULL.
+Pokud *pos* není platná hodnota pozice, výsledky jsou nepředvídatelné. V sestaveních ladění dojde k selhání kontrolního výrazu, pokud *se pos* rovná hodnotě NULL.
 
-##  <a name="getnext"></a>  CRBTree::GetNext
+## <a name="crbtreegetnext"></a><a name="getnext"></a>CRBTree::GetNext
 
-Volejte tuto metodu za účelem získání ukazatele na prvek uložený v `CRBTree` objektu a umístění, přejděte na další prvek.
+Volání této metody získat ukazatel na prvek `CRBTree` uložený v objektu a posunut pozici na další prvek.
 
 ```
 const CPair* GetNext(POSITION& pos) const throw();
@@ -261,20 +261,20 @@ CPair* GetNext(POSITION& pos) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*pos*<br/>
-Čítač pozice vrácené předchozí volání metody, jako [CRBTree::GetHeadPosition](#getheadposition) nebo [CRBTree::FindFirstKeyAfter](#findfirstkeyafter).
+*Pos*<br/>
+Čítač pozice vrácený předchozím voláním metod, jako je [NAPŘÍKLAD CRBTree::GetHeadPosition](#getheadposition) nebo [CRBTree::FindFirstKeyAfter](#findfirstkeyafter).
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrací ukazatel na další [CPair](#cpair_class) hodnotu ve stromové struktuře.
+Vrátí ukazatel na další hodnotu [CPair](#cpair_class) ve stromu.
 
 ### <a name="remarks"></a>Poznámky
 
-*Pos* pozice čítače je aktualizována po každém volání. Pokud je načtený element poslední ve stromové struktuře *pos* nastaven na hodnotu NULL.
+Čítač pozice *pos* je aktualizován po každém volání. Pokud načtený prvek je poslední ve stromu, *pos* je nastavena na HODNOTU NULL.
 
-##  <a name="getnextassoc"></a>  CRBTree::GetNextAssoc
+## <a name="crbtreegetnextassoc"></a><a name="getnextassoc"></a>CRBTree::GetNextAssoc
 
-Volat tuto metodu za účelem získání klíč a hodnotu prvek uložený v objektu map a pozice, přejděte na další prvek.
+Volání této metody získat klíč a hodnotu prvku uloženého v mapě a posunut pozici na další prvek.
 
 ```
 void GetNextAssoc(
@@ -285,22 +285,22 @@ void GetNextAssoc(
 
 ### <a name="parameters"></a>Parametry
 
-*pos*<br/>
-Čítač pozice vrácené předchozí volání metody, jako [CRBTree::GetHeadPosition](#getheadposition) nebo [CRBTree::FindFirstKeyAfter](#findfirstkeyafter).
+*Pos*<br/>
+Čítač pozice vrácený předchozím voláním metod, jako je [NAPŘÍKLAD CRBTree::GetHeadPosition](#getheadposition) nebo [CRBTree::FindFirstKeyAfter](#findfirstkeyafter).
 
 *key*<br/>
-Parametr šablony určující typ klíče stromové struktuře.
+Parametr šablony určující typ klíče stromu.
 
-*value*<br/>
-Parametr šablony určující typ hodnoty stromové struktuře.
+*Hodnotu*<br/>
+Parametr šablony určující typ hodnoty stromu.
 
 ### <a name="remarks"></a>Poznámky
 
-*Pos* pozice čítače je aktualizována po každém volání. Pokud je načtený element poslední ve stromové struktuře *pos* nastaven na hodnotu NULL.
+Čítač pozice *pos* je aktualizován po každém volání. Pokud načtený prvek je poslední ve stromu, *pos* je nastavena na HODNOTU NULL.
 
-##  <a name="getnextkey"></a>  CRBTree::GetNextKey
+## <a name="crbtreegetnextkey"></a><a name="getnextkey"></a>CRBTree::GetNextKey
 
-Volejte tuto metodu za účelem získání klíče prvek uložený ve stromové struktuře a umístění, přejděte na další prvek.
+Volání této metody získat klíč prvku uloženého ve stromu a posunut pozici na další prvek.
 
 ```
 const K& GetNextKey(POSITION& pos) const throw();
@@ -308,20 +308,20 @@ const K& GetNextKey(POSITION& pos) const throw();
 
 ### <a name="parameters"></a>Parametry
 
-*pos*<br/>
-Čítač pozice vrácené předchozí volání metody, jako [CRBTree::GetHeadPosition](#getheadposition) nebo [CRBTree::FindFirstKeyAfter](#findfirstkeyafter).
+*Pos*<br/>
+Čítač pozice vrácený předchozím voláním metod, jako je [NAPŘÍKLAD CRBTree::GetHeadPosition](#getheadposition) nebo [CRBTree::FindFirstKeyAfter](#findfirstkeyafter).
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí odkaz na další klíče ve stromové struktuře.
+Vrátí odkaz na další klíč ve stromu.
 
 ### <a name="remarks"></a>Poznámky
 
-Aktualizuje aktuální pozice čítače, *pos*. Pokud nejsou žádné další položky ve stromové struktuře, čítač pozice je nastaven na hodnotu NULL.
+Aktualizuje aktuální čítač *pozice, pos*. Pokud ve stromu nejsou žádné další položky, čítač pozice je nastaven na hodnotu NULL.
 
-##  <a name="getnextvalue"></a>  CRBTree::GetNextValue
+## <a name="crbtreegetnextvalue"></a><a name="getnextvalue"></a>CRBTree::GetNextValue
 
-Volání této metody k získání hodnoty prvek uložený ve stromové struktuře a umístění, přejděte na další prvek.
+Volání této metody získat hodnotu prvku uloženého ve stromu a posunut pozici na další prvek.
 
 ```
 const V& GetNextValue(POSITION& pos) const throw();
@@ -330,20 +330,20 @@ V& GetNextValue(POSITION& pos) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*pos*<br/>
-Čítač pozice vrácené předchozí volání metody, jako [CRBTree::GetHeadPosition](#getheadposition) nebo [CRBTree::FindFirstKeyAfter](#findfirstkeyafter).
+*Pos*<br/>
+Čítač pozice vrácený předchozím voláním metod, jako je [NAPŘÍKLAD CRBTree::GetHeadPosition](#getheadposition) nebo [CRBTree::FindFirstKeyAfter](#findfirstkeyafter).
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí odkaz na další hodnotu ve stromové struktuře.
+Vrátí odkaz na další hodnotu ve stromu.
 
 ### <a name="remarks"></a>Poznámky
 
-Aktualizuje aktuální pozice čítače, *pos*. Pokud nejsou žádné další položky ve stromové struktuře, čítač pozice je nastaven na hodnotu NULL.
+Aktualizuje aktuální čítač *pozice, pos*. Pokud ve stromu nejsou žádné další položky, čítač pozice je nastaven na hodnotu NULL.
 
-##  <a name="getprev"></a>  CRBTree::GetPrev
+## <a name="crbtreegetprev"></a><a name="getprev"></a>CRBTree::GetPrev
 
-Volejte tuto metodu za účelem získání ukazatele na prvek uložený v `CRBTree` objektu a pak aktualizujte umístění na předchozí prvek.
+Volání této metody získat ukazatel na prvek `CRBTree` uložený v objektu a potom aktualizovat pozici předchozí prvek.
 
 ```
 const CPair* GetPrev(POSITION& pos) const throw();
@@ -352,20 +352,20 @@ CPair* GetPrev(POSITION& pos) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*pos*<br/>
-Čítač pozice vrácené předchozí volání metody, jako [CRBTree::GetHeadPosition](#getheadposition) nebo [CRBTree::FindFirstKeyAfter](#findfirstkeyafter).
+*Pos*<br/>
+Čítač pozice vrácený předchozím voláním metod, jako je [NAPŘÍKLAD CRBTree::GetHeadPosition](#getheadposition) nebo [CRBTree::FindFirstKeyAfter](#findfirstkeyafter).
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrací ukazatel na předchozí [CPair](#cpair_class) hodnota uložená ve stromové struktuře.
+Vrátí ukazatel na předchozí hodnotu [CPair](#cpair_class) uloženou ve stromu.
 
 ### <a name="remarks"></a>Poznámky
 
-Aktualizuje aktuální pozice čítače, *pos*. Pokud nejsou žádné další položky ve stromové struktuře, čítač pozice je nastaven na hodnotu NULL.
+Aktualizuje aktuální čítač *pozice, pos*. Pokud ve stromu nejsou žádné další položky, čítač pozice je nastaven na hodnotu NULL.
 
-##  <a name="gettailposition"></a>  CRBTree::GetTailPosition
+## <a name="crbtreegettailposition"></a><a name="gettailposition"></a>CRBTree::GettailPosition
 
-Volejte tuto metodu za účelem získání hodnoty pozice pro prvek na konec stromu.
+Volání této metody získat hodnotu pozice pro prvek na konci stromu.
 
 ```
 POSITION GetTailPosition() const throw();
@@ -373,15 +373,15 @@ POSITION GetTailPosition() const throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu pozice pro prvek na konec stromu.
+Vrátí hodnotu pozice prvku na konci stromu.
 
 ### <a name="remarks"></a>Poznámky
 
-Hodnota vrácená `GetTailPosition` lze použít s metodami, jako [CRBTree::GetKeyAt](#getkeyat) nebo [CRBTree::GetPrev](#getprev) procházení stromu a načítat hodnoty.
+Hodnotu vrácenou pomocí lze použít s metodami, `GetTailPosition` jako je [NAPříklad CRBTree::GetKeyAt](#getkeyat) nebo [CRBTree::GetPrev](#getprev) procházet stroma a načíst hodnoty.
 
-##  <a name="getvalueat"></a>  CRBTree::GetValueAt
+## <a name="crbtreegetvalueat"></a><a name="getvalueat"></a>CRBTree::GetValueAt
 
-Volejte tuto metodu za účelem načtení hodnoty uložené na dané pozici v `CRBTree` objektu.
+Volání této metody načíst hodnotu uloženou `CRBTree` na dané pozici v objektu.
 
 ```
 const V& GetValueAt(POSITION pos) const throw();
@@ -390,16 +390,16 @@ V& GetValueAt(POSITION pos) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*pos*<br/>
-Čítač pozice vrácené předchozí volání metody, jako [CRBTree::GetHeadPosition](#getheadposition) nebo [CRBTree::FindFirstKeyAfter](#findfirstkeyafter).
+*Pos*<br/>
+Čítač pozice vrácený předchozím voláním metod, jako je [NAPŘÍKLAD CRBTree::GetHeadPosition](#getheadposition) nebo [CRBTree::FindFirstKeyAfter](#findfirstkeyafter).
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí odkaz na hodnotu uloženou v dané pozici v `CRBTree` objektu.
+Vrátí odkaz na hodnotu uloženou na `CRBTree` dané pozici v objektu.
 
-##  <a name="isempty"></a>  CRBTree::IsEmpty
+## <a name="crbtreeisempty"></a><a name="isempty"></a>CRBTree::Jeprázdný
 
-Volejte tuto metodu za účelem testování pro objekt prázdný strom.
+Volání této metody k testování objektu prázdné stromu.
 
 ```
 bool IsEmpty() const throw();
@@ -407,27 +407,27 @@ bool IsEmpty() const throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu TRUE, pokud stromu je prázdné, hodnota FALSE v opačném případě.
+Vrátí hodnotu PRAVDA, pokud je strom prázdný, jinak NEPRAVDA.
 
-##  <a name="kinargtype"></a>  CRBTree::KINARGTYPE
+## <a name="crbtreekinargtype"></a><a name="kinargtype"></a>CRBTree::KINARGTYPE
 
-Typ použitý klíč je předána jako vstupní argument.
+Typ použitý při předání klíče jako vstupní argument.
 
 ```
 typedef KTraits::INARGTYPE KINARGTYPE;
 ```
 
-##  <a name="koutargtype"></a>  CRBTree::KOUTARGTYPE
+## <a name="crbtreekoutargtype"></a><a name="koutargtype"></a>CRBTree::KOUTARGTYPE
 
-Typ použitý při klíč se vrátí jako výstup argument.
+Typ použitý při vrácení klíče jako výstupního argumentu.
 
 ```
 typedef KTraits::OUTARGTYPE KOUTARGTYPE;
 ```
 
-##  <a name="removeall"></a>  CRBTree::RemoveAll
+## <a name="crbtreeremoveall"></a><a name="removeall"></a>CRBTree::RemoveAll
 
-Voláním této metody lze odebrat všechny prvky z `CRBTree` objektu.
+Volání této metody odebrat `CRBTree` všechny prvky z objektu.
 
 ```
 void RemoveAll() throw();
@@ -435,11 +435,11 @@ void RemoveAll() throw();
 
 ### <a name="remarks"></a>Poznámky
 
-Vymaže navýšení kapacity `CRBTree` objektu, uvolňování paměti pro ukládání prvky.
+Vymaže `CRBTree` objekt, uvolnění paměti používané k uložení prvků.
 
-##  <a name="removeat"></a>  CRBTree::RemoveAt
+## <a name="crbtreeremoveat"></a><a name="removeat"></a>CRBTree::RemoveAt
 
-Volejte tuto metodu za účelem odebrání elementu na dané pozici v `CRBTree` objektu.
+Volání této metody odebrat prvek na `CRBTree` dané pozici v objektu.
 
 ```
 void RemoveAt(POSITION pos) throw();
@@ -447,16 +447,16 @@ void RemoveAt(POSITION pos) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*pos*<br/>
-Čítač pozice vrácené předchozí volání metody, jako [CRBTree::GetHeadPosition](#getheadposition) nebo [CRBTree::FindFirstKeyAfter](#findfirstkeyafter).
+*Pos*<br/>
+Čítač pozice vrácený předchozím voláním metod, jako je [NAPŘÍKLAD CRBTree::GetHeadPosition](#getheadposition) nebo [CRBTree::FindFirstKeyAfter](#findfirstkeyafter).
 
 ### <a name="remarks"></a>Poznámky
 
-Odebere dvojice klíč/hodnota, které jsou uložené na zadané pozici. Je uvolněna paměť pro ukládání elementu. Odkazuje na POZICI *pos* stává neplatným a při pozice všech elementů ve stromové struktuře zůstává v platnosti, ne tedy nutně dělají zachovat stejné pořadí.
+Odebere dvojici klíč/hodnota uloženou na zadané pozici. Paměť použitá k uložení prvku je uvolněna. POZICE odkazuje *pos* stane neplatným a zatímco POZICE jiných prvků ve stromu zůstává v platnosti, nemusí nutně zachovat stejné pořadí.
 
-##  <a name="setvalueat"></a>  CRBTree::SetValueAt
+## <a name="crbtreesetvalueat"></a><a name="setvalueat"></a>CRBTree::SetValueAt
 
-Voláním této metody lze změnit hodnotu uloženou v dané pozici v `CRBTree` objektu.
+Volání této metody změnit hodnotu uloženou `CRBTree` na dané pozici v objektu.
 
 ```
 void SetValueAt(POSITION pos, VINARGTYPE value);
@@ -464,32 +464,32 @@ void SetValueAt(POSITION pos, VINARGTYPE value);
 
 ### <a name="parameters"></a>Parametry
 
-*pos*<br/>
-Čítač pozice vrácené předchozí volání metody, jako [CRBTree::GetHeadPosition](#getheadposition) nebo [CRBTree::FindFirstKeyAfter](#findfirstkeyafter).
+*Pos*<br/>
+Čítač pozice vrácený předchozím voláním metod, jako je [NAPŘÍKLAD CRBTree::GetHeadPosition](#getheadposition) nebo [CRBTree::FindFirstKeyAfter](#findfirstkeyafter).
 
-*value*<br/>
-Hodnota k přidání do `CRBTree` objektu.
+*Hodnotu*<br/>
+Hodnota, kterou chcete `CRBTree` přidat k objektu.
 
 ### <a name="remarks"></a>Poznámky
 
-Změní hodnotu prvek uložený na dané pozici v `CRBTree` objektu.
+Změní prvek hodnoty uložený v `CRBTree` dané pozici v objektu.
 
-##  <a name="vinargtype"></a>  CRBTree::VINARGTYPE
+## <a name="crbtreevinargtype"></a><a name="vinargtype"></a>CRBTree::VINARGTYPE
 
-Typ použitý jako vstupní argument je předána hodnota.
+Typ použitý při předání hodnoty jako vstupní argument.
 
 ```
 typedef VTraits::INARGTYPE VINARGTYPE;
 ```
 
-##  <a name="voutargtype"></a>  CRBTree::VOUTARGTYPE
+## <a name="crbtreevoutargtype"></a><a name="voutargtype"></a>CRBTree::VOUTARGTYPE
 
-Typ použitý při je hodnota předána jako argument výstup.
+Typ použitý při předání hodnoty jako výstupní argument.
 
 ```
 typedef VTraits::OUTARGTYPE VOUTARGTYPE;
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Přehled tříd](../../atl/atl-class-overview.md)
+[Přehled třídy](../../atl/atl-class-overview.md)

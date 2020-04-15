@@ -1,5 +1,5 @@
 ---
-title: CAtlTransactionManager – třída
+title: Třída CAtlTransactionManager
 ms.date: 11/04/2016
 f1_keywords:
 - CAtlTransactionManager
@@ -25,19 +25,19 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlTransactionManager class
 ms.assetid: b01732dc-1d16-4b42-bfac-b137fca2b740
-ms.openlocfilehash: d72867eaa449a20e676d4eddc4c94c02090334e5
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 5c2814f963ea4814e0d7585e0e4d6dda26c1f04d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69497723"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81321328"
 ---
-# <a name="catltransactionmanager-class"></a>CAtlTransactionManager – třída
+# <a name="catltransactionmanager-class"></a>Třída CAtlTransactionManager
 
-Třída CAtlTransactionManager poskytuje obálku funkcí KTM (kernel Transaction Manager).
+Třída CAtlTransactionManager poskytuje obálku funkcí správce transakcí jádra (KTM).
 
 > [!IMPORTANT]
->  Tato třída a její členové nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime.
+> Tuto třídu a její členy nelze použít v aplikacích, které se spouštějí v prostředí Windows Runtime.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -49,37 +49,37 @@ class CAtlTransactionManager;
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[~CAtlTransactionManager](#dtor)|CAtlTransactionManager destruktor|
-|[CAtlTransactionManager](#catltransactionmanager)|Konstruktor CAtlTransactionManager|
+|[~CAtlTransactionManager](#dtor)|Destruktor CAtlTransactionManager.|
+|[CAtlTransactionManager](#catltransactionmanager)|Konstruktor CAtlTransactionManager.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
 |[Zavřít](#close)|Zavře jeden popisovač transakce.|
-|[Potvrzuj](#commit)|Požaduje, aby transakce byla potvrzena.|
-|[Vytvoření](#create)|Vytvoří popisovač transakce.|
-|[CreateFile](#createfile)|Vytvoří nebo otevře soubor, datový proud souboru nebo adresář jako transakční operaci.|
-|[DeleteFile](#deletefile)|Odstraní existující soubor jako transakční operaci.|
-|[FindFirstFile](#findfirstfile)|Vyhledá v adresáři soubor nebo podadresář jako transakční operaci.|
-|[GetFileAttributes](#getfileattributes)|Načte atributy systému souborů pro zadaný soubor nebo adresář jako transakční operaci.|
+|[Potvrzení](#commit)|Požaduje, aby transakce potvrzena.|
+|[Vytvořit](#create)|Vytvoří popisovač transakce.|
+|[Vytvořit soubor](#createfile)|Vytvoří nebo otevře soubor, datový proud souborů nebo adresář jako transakční operaci.|
+|[Deletefile](#deletefile)|Odstraní existující soubor jako transakční operaci.|
+|[Soubor FindFirst](#findfirstfile)|Vyhledá v adresáři soubor nebo podadresář jako transakční operaci.|
+|[Atributy getfile](#getfileattributes)|Načte atributy systému souborů pro zadaný soubor nebo adresář jako transakční operaci.|
 |[GetFileAttributesEx](#getfileattributesex)|Načte atributy systému souborů pro zadaný soubor nebo adresář jako transakční operaci.|
-|[GetHandle –](#gethandle)|Vrátí popisovač transakce.|
-|[Fallback](#isfallback)|Určuje, zda jsou povolena náhradní volání.|
-|[MoveFile](#movefile)|Přesune existující soubor nebo adresář, včetně jeho podřízených, jako transakční operace.|
-|[RegCreateKeyEx](#regcreatekeyex)|Vytvoří zadaný klíč registru a přidruží ho k transakci. Pokud klíč už existuje, funkce ho otevře.|
-|[RegDeleteKey](#regdeletekey)|Odstraní podklíč a jeho hodnoty ze zadaného zobrazení registru pro konkrétní platformu jako transakční operace.|
-|[Volání RegOpenKeyEx](#regopenkeyex)|Otevře zadaný klíč registru a přidruží ho k transakci.|
-|[Návrat](#rollback)|Požaduje vrácení transakce zpět.|
-|[SetFileAttributes](#setfileattributes)|Nastaví atributy pro soubor nebo adresář jako transakční operaci.|
+|[GetHandle](#gethandle)|Vrátí popisovač transakce.|
+|[IsFallback](#isfallback)|Určuje, zda jsou povolena záložní volání.|
+|[Movefile](#movefile)|Přesune existující soubor nebo adresář, včetně jeho podřízených, jako transakční operaci.|
+|[RegCreateKeyEx](#regcreatekeyex)|Vytvoří zadaný klíč registru a přidruží jej k transakci. Pokud klíč již existuje, funkce jej otevře.|
+|[RegDeleteKey](#regdeletekey)|Odstraní podklíč a jeho hodnoty ze zadaného zobrazení registru specifického pro platformu jako transakční operaci.|
+|[RegOpenKeyEx](#regopenkeyex)|Otevře zadaný klíč registru a přidruží jej k transakci.|
+|[Vrácení zpět](#rollback)|Požaduje, aby transakce byla vrácena zpět.|
+|[Atributy souboru SetFile](#setfileattributes)|Nastaví atributy souboru nebo adresáře jako transakční operaci.|
 
-### <a name="protected-data-members"></a>Chránění členové dat
+### <a name="protected-data-members"></a>Členové chráněných dat
 
-|Name|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[m_bFallback](#m_bfallback)|TRUE, pokud je podporována záloha; V opačném případě NEPRAVDA.|
+|[m_bFallback](#m_bfallback)|PRAVDA, pokud je záloha podporována; FALSE jinak.|
 |[m_hTransaction](#m_htransaction)|Popisovač transakce.|
 
 ## <a name="remarks"></a>Poznámky
@@ -90,11 +90,11 @@ class CAtlTransactionManager;
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atltransactionmanager. h
+**Záhlaví:** atltransactionmanager.h
 
-##  <a name="dtor"></a>~ CAtlTransactionManager
+## <a name="catltransactionmanager"></a><a name="dtor"></a>~CAtlTransactionManager
 
-CAtlTransactionManager destruktor
+Destruktor CAtlTransactionManager.
 
 ```
 virtual ~CAtlTransactionManager();
@@ -102,11 +102,11 @@ virtual ~CAtlTransactionManager();
 
 ### <a name="remarks"></a>Poznámky
 
-Při normálním zpracování je transakce automaticky potvrzena a uzavřena. Pokud je destruktor volán během výjimky unwind, transakce je vrácena zpět a zavřena.
+Při normálním zpracování je transakce automaticky potvrzena a uzavřena. Pokud je destruktor volán během unwind výjimky, transakce je vrácena zpět a uzavřena.
 
-##  <a name="catltransactionmanager"></a>CAtlTransactionManager
+## <a name="catltransactionmanager"></a><a name="catltransactionmanager"></a>CAtlTransactionManager
 
-Konstruktor CAtlTransactionManager
+Konstruktor CAtlTransactionManager.
 
 ```
 CAtlTransactionManager(BOOL bFallback = TRUE, BOOL bAutoCreateTransaction = TRUE);
@@ -115,14 +115,14 @@ CAtlTransactionManager(BOOL bFallback = TRUE, BOOL bAutoCreateTransaction = TRUE
 ### <a name="parameters"></a>Parametry
 
 *bFallback*<br/>
-Hodnota TRUE označuje záložní podporu. Pokud je funkce transacted neúspěšná, třída automaticky zavolá funkci "non-transactd". Hodnota FALSE neoznačuje žádná záložní volání.
+TRUE označuje podporu záložní. Pokud transakční funkce selže, třída automaticky volá funkci "non-transacted". FALSE označuje žádné "záložní" volání.
 
 *bAutoCreateTransaction*<br/>
-Hodnota TRUE označuje, že je obslužná rutina transakce vytvořena automaticky v konstruktoru. Hodnota FALSE znamená, že není.
+TRUE označuje, že obslužná rutina transakce je vytvořena automaticky v konstruktoru. FALSE označuje, že tomu tak není.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="close"></a>Uzavírací
+## <a name="close"></a><a name="close"></a>Zavřete
 
 Zavře popisovač transakce.
 
@@ -132,15 +132,15 @@ inline BOOL Close();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-TRUE v případě úspěchu; v opačném případě FALSE.
+PRAVDA v případě úspěchu; jinak FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato obálka volá `CloseHandle` funkci. Metoda je automaticky volána v destruktoru.
+Tento obálka `CloseHandle` volá funkci. Metoda je automaticky volána v destruktoru.
 
-##  <a name="commit"></a>Potvrzuj
+## <a name="commit"></a><a name="commit"></a>Spáchat
 
-Požaduje, aby transakce byla potvrzena.
+Požaduje, aby transakce potvrzena.
 
 ```
 inline BOOL Commit();
@@ -148,13 +148,13 @@ inline BOOL Commit();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-TRUE v případě úspěchu; v opačném případě FALSE.
+PRAVDA v případě úspěchu; jinak FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato obálka volá `CommitTransaction` funkci. Metoda je automaticky volána v destruktoru.
+Tento obálka `CommitTransaction` volá funkci. Metoda je automaticky volána v destruktoru.
 
-##  <a name="create"></a>Vytvořeny
+## <a name="create"></a><a name="create"></a>Vytvořit
 
 Vytvoří popisovač transakce.
 
@@ -164,15 +164,15 @@ inline BOOL Create();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-TRUE v případě úspěchu; v opačném případě FALSE.
+PRAVDA v případě úspěchu; jinak FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato obálka volá `CreateTransaction` funkci. Ověřit pro
+Tento obálka `CreateTransaction` volá funkci. Zkontrolujte, zda
 
-##  <a name="createfile"></a>CreateFile
+## <a name="createfile"></a><a name="createfile"></a>Vytvořit soubor
 
-Vytvoří nebo otevře soubor, datový proud souboru nebo adresář jako transakční operaci.
+Vytvoří nebo otevře soubor, datový proud souborů nebo adresář jako transakční operaci.
 
 ```
 inline HANDLE CreateFile(
@@ -187,26 +187,26 @@ inline HANDLE CreateFile(
 
 ### <a name="parameters"></a>Parametry
 
-*lpFileName*<br/>
+*název lpFileName*<br/>
 Název objektu, který má být vytvořen nebo otevřen.
 
 *dwDesiredAccess*<br/>
-Přístup k objektu, který může být shrnut jako čtení, zápis, obojí nebo ani (nula). Nejčastěji používané hodnoty jsou GENERIC_READ, GENERIC_WRITE nebo obojí: GENERIC_READ &#124; GENERIC_WRITE.
+Přístup k objektu, který lze shrnout jako čtení, zápis, obojí nebo ani jeden (nula). Nejčastěji používané hodnoty jsou GENERIC_READ, GENERIC_WRITE nebo obojí: GENERIC_READ &#124; GENERIC_WRITE.
 
 *dwShareMode*<br/>
-Režim sdílení objektu, který je možné číst, zapisovat, obojí, odstranit, všechny tyto nebo žádné: 0, FILE_SHARE_DELETE, FILE_SHARE_READ, FILE_SHARE_WRITE.
+Režim sdílení objektu, který lze číst, psát, oba, odstranit všechny tyto nebo žádné: 0, FILE_SHARE_DELETE, FILE_SHARE_READ, FILE_SHARE_WRITE.
 
 *lpSecurityAttributes*<br/>
-Ukazatel na strukturu SECURITY_ATTRIBUTES, která obsahuje volitelný popisovač zabezpečení, a také určuje, zda lze vrácený popisovač dědit pomocí podřízených procesů. Parametr může mít hodnotu NULL.
+Ukazatel na SECURITY_ATTRIBUTES strukturu, která obsahuje volitelný popisovač zabezpečení a také určuje, zda vrácený popisovač může být zděděn podřízenými procesy. Parametr může být NULL.
 
-*dwCreationDisposition*<br/>
-Akce, která se má provést u souborů, které existují a neexistují. Tento parametr musí být jedna z následujících hodnot, která nemůže být kombinována: CREATE_ALWAYS, CREATE_NEW, OPEN_ALWAYS, OPEN_EXISTING nebo TRUNCATE_EXISTING.
+*dwCreationDispozice*<br/>
+Akce, která má být u souborů, které existují a neexistují. Tento parametr musí být jednou z následujících hodnot, které nelze kombinovat: CREATE_ALWAYS, CREATE_NEW, OPEN_ALWAYS, OPEN_EXISTING nebo TRUNCATE_EXISTING.
 
 *dwFlagsAndAttributes*<br/>
-Atributy souboru a příznaky. Tento parametr může obsahovat libovolnou kombinaci dostupných atributů souboru (FILE_ATTRIBUTE_ *). Všechny ostatní atributy souboru přepíšou FILE_ATTRIBUTE_NORMAL. Tento parametr může také obsahovat kombinace příznaků (FILE_FLAG_\*) pro řízení chování ukládání do vyrovnávací paměti, režimy přístupu a další příznaky pro zvláštní účely. Tyto hodnoty jsou kombinovány\* s libovolnými FILE_ATTRIBUTE_ hodnotami.
+Atributy souboru a příznaky. Tento parametr může zahrnovat libovolnou kombinaci dostupných atributů souboru (FILE_ATTRIBUTE_*). Všechny ostatní atributy souboru přepíší FILE_ATTRIBUTE_NORMAL. Tento parametr může také obsahovat\*kombinace příznaků (FILE_FLAG_) pro řízení chování ukládání do vyrovnávací paměti, režimy přístupu a další příznaky pro speciální účely. Tyto kombinovat s\* všechny FILE_ATTRIBUTE_ hodnoty.
 
 *hTemplateFile*<br/>
-Platný popisovač souboru šablony s přístupem GENERIC_READ Right. Soubor šablony poskytuje atributy souboru a rozšířené atributy pro soubor, který se vytváří. Tento parametr může mít hodnotu NULL.
+Platný popisovač souboru šablony s GENERIC_READ přístupové právo. Soubor šablony dodává atributy souboru a rozšířené atributy pro soubor, který je vytvářen. Tento parametr může být NULL.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -214,9 +214,9 @@ Vrátí popisovač, který lze použít pro přístup k objektu.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato obálka volá `CreateFileTransacted` funkci.
+Tento obálka `CreateFileTransacted` volá funkci.
 
-##  <a name="deletefile"></a>DeleteFile
+## <a name="deletefile"></a><a name="deletefile"></a>Deletefile
 
 Odstraní existující soubor jako transakční operaci.
 
@@ -226,14 +226,14 @@ inline BOOL DeleteFile(LPCTSTR lpFileName);
 
 ### <a name="parameters"></a>Parametry
 
-*lpFileName*<br/>
-Název souboru, který se má odstranit
+*název lpFileName*<br/>
+Název souboru, který má být odstraněn.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato obálka volá `DeleteFileTransacted` funkci.
+Tento obálka `DeleteFileTransacted` volá funkci.
 
-##  <a name="findfirstfile"></a>FindFirstFile
+## <a name="findfirstfile"></a><a name="findfirstfile"></a>Soubor FindFirst
 
 Vyhledá v adresáři soubor nebo podadresář jako transakční operaci.
 
@@ -245,21 +245,21 @@ inline HANDLE FindFirstFile(
 
 ### <a name="parameters"></a>Parametry
 
-*lpFileName*<br/>
-Adresář nebo cesta a název souboru, který chcete vyhledat. Tento parametr může obsahovat zástupné znaky, jako je například hvězdička (*) nebo otazník ().
+*název lpFileName*<br/>
+Adresář nebo cesta a název souboru, který chcete vyhledat. Tento parametr může obsahovat zástupné znaky, například hvězdičku (*) nebo otazník ().
 
 *pNextInfo*<br/>
 Ukazatel na strukturu WIN32_FIND_DATA, která přijímá informace o nalezeném souboru nebo podadresáři.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud je funkce úspěšná, návratová hodnota je popisovač hledání používaný při následném volání `FindNextFile` nebo. `FindClose` Pokud dojde k chybě nebo pokud funkce nenajde soubory z hledaného řetězce v parametru *lpFileName* , vrácená hodnota je INVALID_HANDLE_VALUE.
+Pokud je funkce úspěšná, vrácená hodnota je popisovač `FindNextFile` `FindClose`hledání použitý v následnévolání nebo . Pokud funkce selže nebo se nezdaří najít soubory z vyhledávacího řetězce v parametru *lpFileName,* vrátí hodnota je INVALID_HANDLE_VALUE.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato obálka volá `FindFirstFileTransacted` funkci.
+Tento obálka `FindFirstFileTransacted` volá funkci.
 
-##  <a name="getfileattributes"></a>GetFileAttributes
+## <a name="getfileattributes"></a><a name="getfileattributes"></a>Atributy getfile
 
 Načte atributy systému souborů pro zadaný soubor nebo adresář jako transakční operaci.
 
@@ -269,14 +269,14 @@ inline DWORD GetFileAttributes(LPCTSTR lpFileName);
 
 ### <a name="parameters"></a>Parametry
 
-*lpFileName*<br/>
+*název lpFileName*<br/>
 Název souboru nebo adresáře.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato obálka volá `GetFileAttributesTransacted` funkci.
+Tento obálka `GetFileAttributesTransacted` volá funkci.
 
-##  <a name="getfileattributesex"></a>Chyba funkce GetFileAttributesEx
+## <a name="getfileattributesex"></a><a name="getfileattributesex"></a>GetFileAttributesEx
 
 Načte atributy systému souborů pro zadaný soubor nebo adresář jako transakční operaci.
 
@@ -289,20 +289,20 @@ inline BOOL GetFileAttributesEx(
 
 ### <a name="parameters"></a>Parametry
 
-*lpFileName*<br/>
+*název lpFileName*<br/>
 Název souboru nebo adresáře.
 
 *fInfoLevelId*<br/>
-Úroveň informací atributu, které mají být načteny.
+Úroveň informace o atributu načíst.
 
 *lpFileInformation*<br/>
-Ukazatel na vyrovnávací paměť, která obdrží informace o atributu. Typ informací o atributu, který je uložen do této vyrovnávací paměti, je určen hodnotou *fInfoLevelId*. Pokud je parametr *FInfoLevelId* GetFileExInfoStandard, pak tento parametr odkazuje na strukturu WIN32_FILE_ATTRIBUTE_DATA.
+Ukazatel na vyrovnávací paměť, která obdrží informace o atributu. Typ informace o atributu, který je uložen do této vyrovnávací paměti je určen hodnotou *fInfoLevelId*. Pokud je parametr *fInfoLevelId* GetFileExInfoStandard, pak tento parametr odkazuje na WIN32_FILE_ATTRIBUTE_DATA strukturu.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato obálka volá `GetFileAttributesTransacted` funkci.
+Tento obálka `GetFileAttributesTransacted` volá funkci.
 
-##  <a name="gethandle"></a>GetHandle –
+## <a name="gethandle"></a><a name="gethandle"></a>GetHandle
 
 Vrátí popisovač transakce.
 
@@ -312,13 +312,13 @@ HANDLE GetHandle() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí popisovač transakce pro třídu. Vrátí hodnotu null, `CAtlTransactionManager` Pokud není připojena k popisovači.
+Vrátí popisovač transakce pro třídu. Vrátí hodnotu `CAtlTransactionManager` NULL, pokud není připojen k popisovač.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="isfallback"></a>Fallback
+## <a name="isfallback"></a><a name="isfallback"></a>IsFallback
 
-Určuje, zda jsou povolena náhradní volání.
+Určuje, zda jsou povolena záložní volání.
 
 ```
 BOOL IsFallback() const;
@@ -326,13 +326,13 @@ BOOL IsFallback() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu TRUE, pokud třída podporuje náhradní volání. V opačném případě NEPRAVDA.
+Vrátí hodnotu PRAVDA, je třída podporuje záložní volání. FALSE jinak.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="m_bfallback"></a>m_bFallback
+## <a name="m_bfallback"></a><a name="m_bfallback"></a>m_bFallback
 
-TRUE, pokud je podporována záloha; V opačném případě NEPRAVDA.
+PRAVDA, pokud je záloha podporována; FALSE jinak.
 
 ```
 BOOL m_bFallback;
@@ -340,7 +340,7 @@ BOOL m_bFallback;
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="m_htransaction"></a>  m_hTransaction
+## <a name="m_htransaction"></a><a name="m_htransaction"></a>m_hTransaction
 
 Popisovač transakce.
 
@@ -350,9 +350,9 @@ HANDLE m_hTransaction;
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="movefile"></a>MoveFile
+## <a name="movefile"></a><a name="movefile"></a>Movefile
 
-Přesune existující soubor nebo adresář, včetně jeho podřízených, jako transakční operace.
+Přesune existující soubor nebo adresář, včetně jeho podřízených, jako transakční operaci.
 
 ```
 inline BOOL MoveFile(LPCTSTR lpOldFileName, LPCTSTR lpNewFileName);
@@ -364,15 +364,15 @@ inline BOOL MoveFile(LPCTSTR lpOldFileName, LPCTSTR lpNewFileName);
 Aktuální název existujícího souboru nebo adresáře v místním počítači.
 
 *lpNewFileName*<br/>
-Nový název souboru nebo adresáře. Tento název již nesmí existovat. Nový soubor může být na jiném systému souborů nebo jednotce. Nový adresář musí být na stejné jednotce.
+Nový název souboru nebo adresáře. Tento název již nesmí existovat. Nový soubor může být v jiném systému souborů nebo jednotce. Nový adresář musí být na stejné jednotce.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato obálka volá `MoveFileTransacted` funkci.
+Tento obálka `MoveFileTransacted` volá funkci.
 
-##  <a name="regcreatekeyex"></a>RegCreateKeyEx
+## <a name="regcreatekeyex"></a><a name="regcreatekeyex"></a>RegCreateKeyEx
 
-Vytvoří zadaný klíč registru a přidruží ho k transakci. Pokud klíč už existuje, funkce ho otevře.
+Vytvoří zadaný klíč registru a přidruží jej k transakci. Pokud klíč již existuje, funkce jej otevře.
 
 ```
 inline LSTATUS RegCreateKeyEx(
@@ -389,44 +389,44 @@ inline LSTATUS RegCreateKeyEx(
 
 ### <a name="parameters"></a>Parametry
 
-*hKey*<br/>
-Popisovač pro otevřený klíč registru.
+*hKlíč*<br/>
+Popisovač otevřeného klíče registru.
 
 *lpSubKey*<br/>
 Název podklíče, který tato funkce otevře nebo vytvoří.
 
-*dwReserved*<br/>
-Tento parametr je rezervovaný a musí být nula.
+*dwVyhrazeno*<br/>
+Tento parametr je vyhrazen a musí být nula.
 
 *lpClass*<br/>
-Uživatelsky definovaná třída tohoto klíče. Tento parametr může být ignorován. Tento parametr může mít hodnotu NULL.
+Uživatelem definovaná třída tohoto klíče. Tento parametr může být ignorován. Tento parametr může být NULL.
 
-*dwOptions*<br/>
+*Dwoptions*<br/>
 Tento parametr může být jedna z následujících hodnot: REG_OPTION_BACKUP_RESTORE, REG_OPTION_NON_VOLATILE nebo REG_OPTION_VOLATILE.
 
 *samDesired*<br/>
 Maska, která určuje přístupová práva pro klíč.
 
 *lpSecurityAttributes*<br/>
-Ukazatel na strukturu SECURITY_ATTRIBUTES, která určuje, zda vrácený popisovač mohou být děděny podřízenými procesy. Pokud má *lpSecurityAttributes* hodnotu null, nelze popisovač dědit.
+Ukazatel na strukturu SECURITY_ATTRIBUTES, která určuje, zda vrácený popisovač může být zděděn podřízenými procesy. Pokud *lpSecurityAttributes* je NULL, popisovač nelze zdědit.
 
-*phkResult*<br/>
-Ukazatel na proměnnou, která přijímá popisovač pro otevřený nebo vytvořený klíč. Pokud klíč není jedním z předdefinovaných klíčů registru, zavolejte `RegCloseKey` funkci po dokončení používání popisovače.
+*phkVýsledek*<br/>
+Ukazatel na proměnnou, která přijímá popisovač otevřeného nebo vytvořeného klíče. Pokud klíč není jedním z předdefinovaných klíčů `RegCloseKey` registru, zavolejte funkci po dokončení použití popisovače.
 
-*lpdwDisposition*<br/>
-Ukazatel na proměnnou, která přijímá jednu z následujících hodnot Disposition: REG_CREATED_NEW_KEY nebo REG_OPENED_EXISTING_KEY.
+*lpdwDispozice*<br/>
+Ukazatel na proměnnou, která obdrží jednu z následujících dispozičních hodnot: REG_CREATED_NEW_KEY nebo REG_OPENED_EXISTING_KEY.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud je funkce úspěšná, návratová hodnota je ERROR_SUCCESS. Pokud dojde k chybě funkce, vrácená hodnota je nenulový kód chyby definovaný v WinError. h.
+Pokud je funkce úspěšná, vrácená hodnota je ERROR_SUCCESS. Pokud funkce selže, vrácená hodnota je nenulový kód chyby definovaný ve winerror.h.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato obálka volá `RegCreateKeyTransacted` funkci.
+Tento obálka `RegCreateKeyTransacted` volá funkci.
 
-##  <a name="regdeletekey"></a>RegDeleteKey
+## <a name="regdeletekey"></a><a name="regdeletekey"></a>RegDeleteKey
 
-Odstraní podklíč a jeho hodnoty ze zadaného zobrazení registru pro konkrétní platformu jako transakční operace.
+Odstraní podklíč a jeho hodnoty ze zadaného zobrazení registru specifického pro platformu jako transakční operaci.
 
 ```
 inline LSTATUS RegDeleteKeyEx(HKEY hKey, LPCTSTR lpSubKey);
@@ -436,20 +436,20 @@ inline LSTATUS RegDeleteKeyEx(HKEY hKey, LPCTSTR lpSubKey);
 
 |Parametr|Popis|
 |---------------|-----------------|
-|*hKey*|Popisovač pro otevřený klíč registru.|
-|*lpSubKey*|Název klíče, který se má odstranit|
+|*hKlíč*|Popisovač otevřeného klíče registru.|
+|*lpSubKey*|Název klíče, který má být odstraněn.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud je funkce úspěšná, návratová hodnota je ERROR_SUCCESS. Pokud dojde k chybě funkce, vrácená hodnota je nenulový kód chyby definovaný v WinError. h.
+Pokud je funkce úspěšná, vrácená hodnota je ERROR_SUCCESS. Pokud funkce selže, vrácená hodnota je nenulový kód chyby definovaný ve winerror.h.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato obálka volá `RegDeleteKeyTransacted` funkci.
+Tento obálka `RegDeleteKeyTransacted` volá funkci.
 
-##  <a name="regopenkeyex"></a>Volání RegOpenKeyEx
+## <a name="regopenkeyex"></a><a name="regopenkeyex"></a>RegOpenKeyEx
 
-Otevře zadaný klíč registru a přidruží ho k transakci.
+Otevře zadaný klíč registru a přidruží jej k transakci.
 
 ```
 inline LSTATUS RegOpenKeyEx(
@@ -462,32 +462,32 @@ inline LSTATUS RegOpenKeyEx(
 
 ### <a name="parameters"></a>Parametry
 
-*hKey*<br/>
-Popisovač pro otevřený klíč registru.
+*hKlíč*<br/>
+Popisovač otevřeného klíče registru.
 
 *lpSubKey*<br/>
-Název podklíče registru, který se má otevřít
+Název podklíče registru, který má být otevřen.
 
-*ulOptions*<br/>
-Tento parametr je rezervovaný a musí být nula.
+*ulMožnosti*<br/>
+Tento parametr je vyhrazen a musí být nula.
 
 *samDesired*<br/>
 Maska, která určuje přístupová práva pro klíč.
 
-*phkResult*<br/>
-Ukazatel na proměnnou, která přijímá popisovač pro otevřený nebo vytvořený klíč. Pokud klíč není jedním z předdefinovaných klíčů registru, zavolejte `RegCloseKey` funkci po dokončení používání popisovače.
+*phkVýsledek*<br/>
+Ukazatel na proměnnou, která přijímá popisovač otevřeného nebo vytvořeného klíče. Pokud klíč není jedním z předdefinovaných klíčů `RegCloseKey` registru, zavolejte funkci po dokončení použití popisovače.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud je funkce úspěšná, návratová hodnota je ERROR_SUCCESS. Pokud se funkce nezdařila, vrácená hodnota je nenulový kód chyby definovaný v WinError. h
+Pokud je funkce úspěšná, vrácená hodnota je ERROR_SUCCESS. Pokud funkce selže, vrácená hodnota je nenulový kód chyby definovaný ve winerror.h
 
 ### <a name="remarks"></a>Poznámky
 
-Tato obálka volá `RegOpenKeyTransacted` funkci.
+Tento obálka `RegOpenKeyTransacted` volá funkci.
 
-##  <a name="rollback"></a>Návrat
+## <a name="rollback"></a><a name="rollback"></a>Vrácení zpět
 
-Požaduje vrácení transakce zpět.
+Požaduje, aby transakce byla vrácena zpět.
 
 ```
 inline BOOL Rollback();
@@ -495,15 +495,15 @@ inline BOOL Rollback();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-TRUE v případě úspěchu; v opačném případě FALSE.
+PRAVDA v případě úspěchu; jinak FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato obálka volá `RollbackTransaction` funkci.
+Tento obálka `RollbackTransaction` volá funkci.
 
-##  <a name="setfileattributes"></a>SetFileAttributes
+## <a name="setfileattributes"></a><a name="setfileattributes"></a>Atributy souboru SetFile
 
-Nastaví atributy pro soubor nebo adresář jako transakční operaci.
+Nastaví atributy souboru nebo adresáře jako transakční operaci.
 
 ```
 inline BOOL SetFileAttributes(LPCTSTR lpFileName, DWORD dwAttributes);
@@ -511,16 +511,16 @@ inline BOOL SetFileAttributes(LPCTSTR lpFileName, DWORD dwAttributes);
 
 ### <a name="parameters"></a>Parametry
 
-*lpFileName*<br/>
+*název lpFileName*<br/>
 Název souboru nebo adresáře.
 
-*dwAttributes*<br/>
-Atributy souboru, které mají být nastaveny pro daný soubor. Další informace najdete v tématu [SetFileAttributesTransacted](/windows/win32/api/winbase/nf-winbase-setfileattributestransactedw).
+*dwAtributy*<br/>
+Atributy souboru, které chcete pro soubor nastavit. Další informace naleznete v [tématu SetFileAttributesTransacted](/windows/win32/api/winbase/nf-winbase-setfileattributestransactedw).
 
 ### <a name="remarks"></a>Poznámky
 
-Tato obálka volá `SetFileAttributesTransacted` funkci.
+Tento obálka `SetFileAttributesTransacted` volá funkci.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Desktopové komponenty ATL objektů COM](../../atl/atl-com-desktop-components.md)

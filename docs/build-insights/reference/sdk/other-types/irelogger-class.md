@@ -1,6 +1,6 @@
 ---
-title: IRelogger – třída
-description: Referenční C++ dokumentace třídy IRelogger sady SDK pro Build Insights
+title: Třída IRelogger
+description: C++ Build Insights SDK IRelogger odkaz na třídu.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: d0796cec3fe4ac6183279e8d8013a9550f18b61c
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 146377b2b44df43ed4b2f749efd9fb614a2a09c9
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79417430"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81329144"
 ---
-# <a name="irelogger-class"></a>IRelogger – třída
+# <a name="irelogger-class"></a>Třída IRelogger
 
 ::: moniker range="<=vs-2015"
 
-Sada C++ SDK pro Build Insights je kompatibilní se sadou Visual Studio 2017 a novější. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek selektor verzí sady Visual Studio pro tento článek na sadu Visual Studio 2017 nebo Visual Studio 2019.
+Sada C++ Build Insights SDK je kompatibilní s Visual Studio 2017 a vyšší. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek pro výběr **verze** sady Visual Studio pro tento článek na Visual Studio 2017 nebo Visual Studio 2019. Nachází se v horní části obsahu na této stránce.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Třída `IRelogger` poskytuje rozhraní pro zpětné protokolování trasování událostí pro Windows (ETW). Používá se s funkcemi [MakeDynamicReloggerGroup](../functions/make-dynamic-relogger-group.md) a [MakeStaticReloggerGroup](../functions/make-static-analyzer-group.md) . Použijte `IRelogger` jako základní třídu k vytvoření vlastního protokolovacího nástroje, který může být součástí skupiny přeprotokolovacích souborů.
+Třída `IRelogger` poskytuje rozhraní pro opětovné zaprotokolování trasování událostí pro Windows (ETW). Používá se s [MakeDynamicReloggerGroup](../functions/make-dynamic-relogger-group.md) a [MakeStaticReloggerGroup](../functions/make-static-analyzer-group.md) funkce. Použijte `IRelogger` jako základní třídu k vytvoření vlastního reloggeru, který může být součástí skupiny relogger.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -54,26 +54,26 @@ public:
 
 ## <a name="remarks"></a>Poznámky
 
-Výchozí návratová hodnota pro všechny funkce, které nejsou přepsány, je `AnalysisControl::CONTINUE`. Další informace najdete v tématu [AnalysisControl](analysis-control-enum-class.md).
+Výchozí vrácená hodnota pro všechny funkce, `AnalysisControl::CONTINUE`které nejsou přepsány, je . Další informace naleznete v tématu [AnalysisControl](analysis-control-enum-class.md).
 
 ## <a name="members"></a>Členové
 
 ### <a name="destructor"></a>Destruktor
 
-[~ IRelogger](#irelogger-destructor)
+[~IRelogger](#irelogger-destructor)
 
-### <a name="functions"></a>Funkce
+### <a name="functions"></a>Functions
 
 [OnBeginRelogging](#on-begin-relogging)\
 [OnBeginReloggingPass](#on-begin-relogging-pass)\
 [OnEndRelogging](#on-end-relogging)\
 [OnEndReloggingPass](#on-end-relogging-pass)\
-[OnSimpleEvent](#on-simple-event)\
+[Událost OnSimpleEvent](#on-simple-event)\
 [OnStartActivity](#on-start-activity)\
 [OnStopActivity](#on-stop-activity)\
-[OnTraceInfo](#on-trace-info)
+[OntraceInfo](#on-trace-info)
 
-## <a name="irelogger-destructor"></a>~ IRelogger
+## <a name="irelogger"></a><a name="irelogger-destructor"></a>~IRelogger
 
 Zničí třídu IRelogger.
 
@@ -81,9 +81,9 @@ Zničí třídu IRelogger.
 virtual ~IRelogger();
 ```
 
-## <a name="on-begin-relogging"></a>OnBeginRelogging
+## <a name="onbeginrelogging"></a><a name="on-begin-relogging"></a>OnBeginRelogging
 
-Tato funkce je volána před zahájením přehlašování.
+Tato funkce je volána před zahájením opakování průchodu.
 
 ```cpp
 virtual AnalysisControl OnBeginRelogging();
@@ -91,11 +91,11 @@ virtual AnalysisControl OnBeginRelogging();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-[AnalysisControl](analysis-control-enum-class.md) kód, který popisuje, co by mělo proběhnout příště.
+Kód [AnalysisControl,](analysis-control-enum-class.md) který popisuje, co by se mělo stát dál.
 
-## <a name="on-begin-relogging-pass"></a>OnBeginReloggingPass
+## <a name="onbeginreloggingpass"></a><a name="on-begin-relogging-pass"></a>OnBeginReloggingPass
 
-Tato funkce se volá na začátku přehlašování.
+Tato funkce je volána na začátku průchodu opětovného přihlášení.
 
 ```cpp
 virtual AnalysisControl OnBeginReloggingPass();
@@ -103,11 +103,11 @@ virtual AnalysisControl OnBeginReloggingPass();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-[AnalysisControl](analysis-control-enum-class.md) kód, který popisuje, co by mělo proběhnout příště.
+Kód [AnalysisControl,](analysis-control-enum-class.md) který popisuje, co by se mělo stát dál.
 
-## <a name="on-end-relogging"></a>OnEndRelogging
+## <a name="onendrelogging"></a><a name="on-end-relogging"></a>OnEndRelogging
 
-Tato funkce se volá po skončení průchodu znovu Logging.
+Tato funkce je volána po ukončení průchodu opětovného přihlášení.
 
 ```cpp
 virtual AnalysisControl OnEndRelogging();
@@ -115,11 +115,11 @@ virtual AnalysisControl OnEndRelogging();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-[AnalysisControl](analysis-control-enum-class.md) kód, který popisuje, co by mělo proběhnout příště.
+Kód [AnalysisControl,](analysis-control-enum-class.md) který popisuje, co by se mělo stát dál.
 
-## <a name="on-end-relogging-pass"></a>OnEndReloggingPass
+## <a name="onendreloggingpass"></a><a name="on-end-relogging-pass"></a>OnEndReloggingPass
 
-Tato funkce se volá na konci přelogování Pass.
+Tato funkce je volána na konci průchodu opětovného přihlášení.
 
 ```cpp
 virtual AnalysisControl OnEndReloggingPass();
@@ -127,45 +127,45 @@ virtual AnalysisControl OnEndReloggingPass();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-[AnalysisControl](analysis-control-enum-class.md) kód, který popisuje, co by mělo proběhnout příště.
+Kód [AnalysisControl,](analysis-control-enum-class.md) který popisuje, co by se mělo stát dál.
 
-## <a name="on-simple-event"></a>OnSimpleEvent
+## <a name="onsimpleevent"></a><a name="on-simple-event"></a>Událost OnSimpleEvent
 
 ```cpp
 virtual AnalysisControl OnSimpleEvent(const EventStack& eventStack);
 ```
 
-Tato funkce se volá, když se zpracovává jednoduchá událost.
+Tato funkce je volána při zpracování jednoduché události.
 
 ### <a name="parameters"></a>Parametry
 
 *eventStack*\
-Zásobník událostí pro tuto jednoduchou událost. Další informace o zásobníkech událostí najdete v tématu [události](../event-table.md).
+Zásobník událostí pro tuto jednoduchou událost. Další informace o hromádkách událostí naleznete v [tématu Události](../event-table.md).
 
 ### <a name="return-value"></a>Návratová hodnota
 
-[AnalysisControl](analysis-control-enum-class.md) kód, který popisuje, co by mělo proběhnout příště.
+Kód [AnalysisControl,](analysis-control-enum-class.md) který popisuje, co by se mělo stát dál.
 
-## <a name="on-start-activity"></a>OnStartActivity
+## <a name="onstartactivity"></a><a name="on-start-activity"></a>OnStartActivity
 
 ```cpp
 virtual AnalysisControl OnStartActivity(const EventStack& eventStack);
 ```
 
-Tato funkce se volá, když se zpracovává událost zahájení aktivity.
+Tato funkce je volána při zpracování události zahájení aktivity.
 
 ### <a name="parameters"></a>Parametry
 
 *eventStack*\
-Zásobník událostí pro událost spuštění této aktivity. Další informace o zásobníkech událostí najdete v tématu [události](../event-table.md).
+Zásobník událostí pro tuto událost zahájení aktivity. Další informace o hromádkách událostí naleznete v [tématu Události](../event-table.md).
 
 ### <a name="return-value"></a>Návratová hodnota
 
-[AnalysisControl](analysis-control-enum-class.md) kód, který popisuje, co by mělo proběhnout příště.
+Kód [AnalysisControl,](analysis-control-enum-class.md) který popisuje, co by se mělo stát dál.
 
-## <a name="on-stop-activity"></a>OnStopActivity
+## <a name="onstopactivity"></a><a name="on-stop-activity"></a>OnStopActivity
 
-Tato funkce se volá, když se zpracovává událost zastavení aktivity.
+Tato funkce je volána při zpracování události zastavení aktivity.
 
 ```cpp
 virtual AnalysisControl OnStopActivity(const EventStack& eventStack);
@@ -174,27 +174,27 @@ virtual AnalysisControl OnStopActivity(const EventStack& eventStack);
 ### <a name="parameters"></a>Parametry
 
 *eventStack*\
-Zásobník událostí pro tuto událost zastavení aktivity Další informace o zásobníkech událostí najdete v tématu [události](../event-table.md).
+Zásobník událostí pro tuto událost zastavení aktivity. Další informace o hromádkách událostí naleznete v [tématu Události](../event-table.md).
 
 ### <a name="return-value"></a>Návratová hodnota
 
-[AnalysisControl](analysis-control-enum-class.md) kód, který popisuje, co by mělo proběhnout příště.
+Kód [AnalysisControl,](analysis-control-enum-class.md) který popisuje, co by se mělo stát dál.
 
-## <a name="on-trace-info"></a>OnTraceInfo
+## <a name="ontraceinfo"></a><a name="on-trace-info"></a>OntraceInfo
 
 ```cpp
 virtual AnalysisControl OnTraceInfo(const TraceInfo& traceInfo);
 ```
 
-Tato funkce se volá jednou na začátku každé analýzy nebo průchodu znovu.
+Tato funkce je volána jednou na začátku každé analýzy nebo opětovného přihlášení průchodu.
 
 ### <a name="parameters"></a>Parametry
 
 *traceInfo*\
-Objekt [TraceInfo](../cpp-event-data-types/trace-info.md) , který obsahuje užitečné vlastnosti pro spotřebované trasování.
+[TraceInfo](../cpp-event-data-types/trace-info.md) objekt, který obsahuje užitečné vlastnosti o trasování spotřebovává.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-[AnalysisControl](analysis-control-enum-class.md) kód, který popisuje, co by mělo proběhnout příště.
+Kód [AnalysisControl,](analysis-control-enum-class.md) který popisuje, co by se mělo stát dál.
 
 ::: moniker-end

@@ -1,5 +1,5 @@
 ---
-title: Cmultidoctemplate – třída
+title: Třída CMultiDocTemplate
 ms.date: 11/04/2016
 f1_keywords:
 - CMultiDocTemplate
@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CMultiDocTemplate [MFC], CMultiDocTemplate
 ms.assetid: 5b8aa328-e461-41d0-b388-00594535e119
-ms.openlocfilehash: 5fefe91fa2067831c0263146ff3b2cd143b9c647
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3b3f239b05b1cf7661929333e2d616acce6bedb0
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62366930"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81319735"
 ---
-# <a name="cmultidoctemplate-class"></a>Cmultidoctemplate – třída
+# <a name="cmultidoctemplate-class"></a>Třída CMultiDocTemplate
 
-Definuje šablonu dokumentu, který implementuje rozhraní více dokumentů (MDI).
+Definuje šablonu dokumentu, která implementuje rozhraní více dokumentů (MDI).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -29,37 +29,37 @@ class CMultiDocTemplate : public CDocTemplate
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CMultiDocTemplate::CMultiDocTemplate](#cmultidoctemplate)|Vytvoří `CMultiDocTemplate` objektu.|
+|[CMultiDocTemplate::CMultiDocTemplate](#cmultidoctemplate)|Vytvoří `CMultiDocTemplate` objekt.|
 
 ## <a name="remarks"></a>Poznámky
 
-Aplikace MDI používá jako pracovní prostor ve kterém může uživatel otevřít nula nebo více rámečkem v dokumentu, z nichž každý zobrazí dokument hlavní okno rámce. Podrobnější popis MDI, naleznete v tématu *Windows rozhraní pokyny pro návrh softwaru*.
+Aplikace MDI používá okno hlavního rámce jako pracovní plochu, ve které může uživatel otevřít nulu nebo více oken rámců dokumentu, z nichž každý zobrazuje dokument. Podrobnější popis rozhraní MDI naleznete v *pokynech rozhraní systému Windows pro návrh softwaru*.
 
-Šablona dokumentu definuje vztahy mezi tři typy tříd:
+Šablona dokumentu definuje vztahy mezi třemi typy tříd:
 
-- Třídy dokumentu, které jsou odvozeny z [CDocument](../../mfc/reference/cdocument-class.md).
+- Třída dokumentu, kterou odvozujete z [CDocument](../../mfc/reference/cdocument-class.md).
 
-- Třídy zobrazení, která zobrazuje data ze třídy dokumentu uvedené výše. Z této třídy lze odvodit [CView](../../mfc/reference/cview-class.md), `CScrollView`, `CFormView`, nebo `CEditView`. (Můžete také použít `CEditView` přímo.)
+- Třída zobrazení, která zobrazuje data z výše uvedené třídy dokumentu. Tuto třídu můžete odvodit `CEditView`z [CView](../../mfc/reference/cview-class.md), `CScrollView`, `CFormView`, nebo . (Můžete také `CEditView` použít přímo.)
 
-- Třída okno rámce, který obsahuje zobrazení. Pro šablonu dokumentu MDI, lze odvodit z této třídy `CMDIChildWnd`, nebo pokud není nutné přizpůsobit chování oken s rámečkem dokumentu, můžete použít [CMDIChildWnd](../../mfc/reference/cmdichildwnd-class.md) přímo bez odvození vlastní třídy.
+- Třída okna rámce, která obsahuje zobrazení. Pro šablonu dokumentu MDI můžete tuto `CMDIChildWnd`třídu odvodit z aplikace , nebo pokud nepotřebujete přizpůsobit chování oken rámečků dokumentu, můžete přímo použít [CMDIChildWnd](../../mfc/reference/cmdichildwnd-class.md) bez odvození vlastní třídy.
 
-Aplikace MDI může podporovat více než jeden typ dokumentu a dokumenty různých typů může být otevřeno ve stejnou dobu. Vaše aplikace má jednu šablonu dokumentu pro každý typ dokumentu, který ji podporuje. Například pokud aplikace MDI podporuje tabulky a textové dokumenty, aplikace má dva `CMultiDocTemplate` objekty.
+Aplikace MDI může podporovat více než jeden typ dokumentu a dokumenty různých typů mohou být otevřeny současně. Aplikace má jednu šablonu dokumentu pro každý typ dokumentu, který podporuje. Pokud například aplikace MDI podporuje tabulky i textové dokumenty, `CMultiDocTemplate` má aplikace dva objekty.
 
-Aplikace používá šablony dokumentu, když uživatel vytvoří nový dokument. Pokud aplikace podporuje více než jeden typ dokumentu, rozhraní získá názvy typů podporovaných dokumentu z šablony dokumentů a zobrazí je v seznamu v dialogovém okně Nový soubor. Jakmile uživatel vybral typu dokumentu, aplikace vytvoří objekt třídy dokumentu, objekt okna rámce a objekt zobrazení a připojí je k sobě navzájem.
+Aplikace používá šablony dokumentu, když uživatel vytvoří nový dokument. Pokud aplikace podporuje více než jeden typ dokumentu, pak rozhraní získá názvy podporovaných typů dokumentů ze šablon dokumentů a zobrazí je v seznamu v dialogovém okně Nový soubor. Jakmile uživatel vybere typ dokumentu, aplikace vytvoří objekt třídy dokumentu, objekt okna rámečku a objekt zobrazení a připojí je k sobě.
 
-Není potřeba volat jakékoli členské funkce `CMultiDocTemplate` s výjimkou konstruktoru. Obslužné rutiny framework `CMultiDocTemplate` objekty interně.
+Není nutné volat žádné členské `CMultiDocTemplate` funkce s výjimkou konstruktoru. Rozhraní framework `CMultiDocTemplate` zpracovává objekty interně.
 
-Další informace o `CMultiDocTemplate`, naleznete v tématu [šablony dokumentů a proces vytváření dokumentů/zobrazení](../../mfc/document-templates-and-the-document-view-creation-process.md).
+Další informace `CMultiDocTemplate`naleznete v [tématu Document Templates and the Document/View Creation Process](../../mfc/document-templates-and-the-document-view-creation-process.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObjekt](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[CCmdCíl](../../mfc/reference/ccmdtarget-class.md)
 
-[CDocTemplate –](../../mfc/reference/cdoctemplate-class.md)
+[Šablona CDoc](../../mfc/reference/cdoctemplate-class.md)
 
 `CMultiDocTemplate`
 
@@ -67,9 +67,9 @@ Další informace o `CMultiDocTemplate`, naleznete v tématu [šablony dokument�
 
 **Záhlaví:** afxwin.h
 
-##  <a name="cmultidoctemplate"></a>  CMultiDocTemplate::CMultiDocTemplate
+## <a name="cmultidoctemplatecmultidoctemplate"></a><a name="cmultidoctemplate"></a>CMultiDocTemplate::CMultiDocTemplate
 
-Vytvoří `CMultiDocTemplate` objektu.
+Vytvoří `CMultiDocTemplate` objekt.
 
 ```
 CMultiDocTemplate(
@@ -81,10 +81,10 @@ CMultiDocTemplate(
 
 ### <a name="parameters"></a>Parametry
 
-*nIDResource*<br/>
-Určuje Identifikátor prostředku použitého typu dokumentu. To může zahrnovat nabídky, ikony, tabulky akcelerátorů a řetězcové prostředky.
+*nIDZdroj*<br/>
+Určuje ID prostředků použitých s typem dokumentu. To může zahrnovat menu, ikonu, tabulku akcelerátoru a prostředky řetězce.
 
-Prostředek řetězce se skládá z až sedm dílčích řetězců oddělených znakem "\n" (znak '\n' je potřeba jako zástupný symbol pro Pokud neuvedete podřetězce; ale nejsou nezbytné koncové znaky '\n'); Tyto podřetězců popisují typ dokumentu. Informace o dílčích řetězců naleznete v tématu [CDocTemplate::GetDocString](../../mfc/reference/cdoctemplate-class.md#getdocstring). Tento prostředek řetězce najdete v souboru prostředků aplikace. Příklad:
+Prostředek řetězce se skládá až ze sedmi podřetězců oddělených znakem \n (znak \n je potřebný jako zástupný symbol, pokud není zahrnut podřetězec; koncové znaky \n však nejsou nutné); tyto podřetězce popisují typ dokumentu. Informace o podřetězec, naleznete v tématu [CDocTemplate::GetDocString](../../mfc/reference/cdoctemplate-class.md#getdocstring). Tento řetězec prostředku se nachází v souboru prostředků aplikace. Příklad:
 
 ```RC
 // MYCALC.RC
@@ -94,35 +94,35 @@ BEGIN
 END
 ```
 
-Všimněte si, že řetězec začíná znakem '\n'; je to proto, že první dílčí řetězec se používá pro aplikace MDI a proto není zahrnutý. Můžete upravit tento řetězec pomocí editoru řetězce; celý řetězec se zobrazí jako jedna položka v editoru řetězce, nikoli sedm samostatné položky.
+Všimněte si, že řetězec začíná znakem \n; Důvodem je, že první podřetězec se nepoužívá pro aplikace MDI a proto není zahrnuta. Tento řetězec můžete upravit pomocí editoru řetězců; celý řetězec se zobrazí jako jedna položka v editoru řetězců, nikoli jako sedm samostatných položek.
 
-Další informace o těchto typech prostředků najdete v tématu [editory prostředků](../../windows/resource-editors.md).
+Další informace o těchto typech prostředků naleznete v [tématu Editory prostředků](../../windows/resource-editors.md).
 
-*pDocClass*<br/>
-Odkazuje `CRuntimeClass` objekt třídy dokumentu. Tato třída je `CDocument`-odvozené třídy, které definujete k vyjádření vašich dokumentů.
+*třída pDocClass*<br/>
+Odkazuje na `CRuntimeClass` objekt třídy dokumentu. Tato třída `CDocument`je odvozená třída, kterou definujete, aby reprezentovala vaše dokumenty.
 
 *pFrameClass*<br/>
-Odkazuje `CRuntimeClass` objekt třídy oken s rámečkem. Tato třída může být `CMDIChildWnd`-odvozené třídy, nebo to může být `CMDIChildWnd` samotný Pokud chcete výchozí chování pro vaše oken s rámečkem v dokumentu.
+Odkazuje na `CRuntimeClass` objekt třídy okno rámce. Tato třída může `CMDIChildWnd`být odvozené třídy, `CMDIChildWnd` nebo může být sama, pokud chcete výchozí chování pro okna rámce dokumentu.
 
 *pViewClass*<br/>
-Odkazuje `CRuntimeClass` objekt třídy zobrazení. Tato třída je `CView`-odvozené třídy, které definujete pro zobrazení dokumentů.
+Odkazuje na `CRuntimeClass` objekt třídy zobrazení. Tato třída `CView`je odvozená třída, kterou definujete pro zobrazení dokumentů.
 
 ### <a name="remarks"></a>Poznámky
 
-Dynamicky přidělit jednu `CMultiDocTemplate` objekt pro každý typ dokumentu, která vaše aplikace podporuje a předat každému z nich `CWinApp::AddDocTemplate` z `InitInstance` členské funkce třídy aplikace.
+Dynamicky přidělit jeden `CMultiDocTemplate` objekt pro každý typ dokumentu, `CWinApp::AddDocTemplate` který `InitInstance` vaše aplikace podporuje a předat každý z členské funkce třídy aplikace.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCDocView#92](../../mfc/codesnippet/cpp/cmultidoctemplate-class_1.cpp)]
 
-Tady je druhý příklad.
+Zde je druhý příklad.
 
 [!code-cpp[NVC_MFCDocView#93](../../mfc/codesnippet/cpp/cmultidoctemplate-class_2.cpp)]
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[CDocTemplate – třída](../../mfc/reference/cdoctemplate-class.md)<br/>
+[Třída CDocTemplate](../../mfc/reference/cdoctemplate-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
-[CDocTemplate – třída](../../mfc/reference/cdoctemplate-class.md)<br/>
-[CSingleDocTemplate – třída](../../mfc/reference/csingledoctemplate-class.md)<br/>
+[Třída CDocTemplate](../../mfc/reference/cdoctemplate-class.md)<br/>
+[Třída CSingleDocTemplate](../../mfc/reference/csingledoctemplate-class.md)<br/>
 [CWinApp – třída](../../mfc/reference/cwinapp-class.md)

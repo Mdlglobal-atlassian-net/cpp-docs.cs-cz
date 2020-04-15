@@ -1,31 +1,31 @@
 ---
-title: Windows Messages Macros
+title: Makra zpráv systému Windows
 ms.date: 11/04/2016
 f1_keywords:
 - atlbase/ATL::WM_FORWARDMSG
 ms.assetid: 63abd22c-372d-4148-bb04-c605950ae64f
-ms.openlocfilehash: 7bb5e2fa265c3a5dcabcc16d8343d5b86a4aaf42
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a5a6d45c64d6123128ae362c1ef5643392439f41
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62275922"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81329414"
 ---
-# <a name="windows-messages-macros"></a>Windows Messages Macros
+# <a name="windows-messages-macros"></a>Makra zpráv systému Windows
 
-Toto makro předává zprávy okna.
+Toto makro předá zprávy okna.
 
 |||
 |-|-|
-|[WM_FORWARDMSG](#wm_forwardmsg)|Slouží k předání zprávy přijímány okno do jiného okna pro zpracování.|
+|[WM_FORWARDMSG](#wm_forwardmsg)|Slouží k předání zprávy přijaté oknem do jiného okna ke zpracování.|
 
 ## <a name="requirements"></a>Požadavky
 
 **Záhlaví:** atlbase.h
 
-##  <a name="wm_forwardmsg"></a>  WM_FORWARDMSG
+## <a name="wm_forwardmsg"></a><a name="wm_forwardmsg"></a>WM_FORWARDMSG
 
-Toto makro předává zprávy přijímány okno do jiného okna pro zpracování.
+Toto makro předá zprávu přijatou oknem do jiného okna ke zpracování.
 
 ```
 WM_FORWARDMSG
@@ -33,23 +33,23 @@ WM_FORWARDMSG
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud zpráva byla zpracována, hodnotu není.
+Nenulová, pokud byla zpráva zpracována, nula, pokud ne.
 
 ### <a name="remarks"></a>Poznámky
 
-Použijte WM_FORWARDMSG přeposílat přijatých okno do jiného okna pro zpracování zprávy. LPARAM a WPARAM parametry jsou použity následujícím způsobem:
+Pomocí WM_FORWARDMSG přeposlat zprávu přijatou oknem do jiného okna ke zpracování. Parametry LPARAM a WPARAM se používají takto:
 
-|Parametr|Použití|
+|Parametr|Využití|
 |---------------|-----------|
 |WPARAM|Data definovaná uživatelem|
-|LPARAM|Ukazatel `MSG` strukturu, která obsahuje informace o zprávě|
+|Lparam|Ukazatel na `MSG` strukturu, která obsahuje informace o zprávě|
 
 ### <a name="example"></a>Příklad
 
-V následujícím příkladu `m_hWndOther` představuje ostatní okna, která obdrží tuto zprávu.
+V následujícím příkladu představuje další okno, `m_hWndOther` které obdrží tuto zprávu.
 
 [!code-cpp[NVC_ATL_Windowing#137](../../atl/codesnippet/cpp/windows-messages-macros_1.cpp)]
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Makra](../../atl/reference/atl-macros.md)
