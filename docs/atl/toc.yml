@@ -162,7 +162,7 @@
       href: specifying-the-threading-model-for-a-project-atl.md
     - name: Třídy modulů ATL
       href: atl-module-classes.md
-    - name: Služby ATL
+    - name: služby ATL
       expanded: false
       items:
         - name: Služby ATL
