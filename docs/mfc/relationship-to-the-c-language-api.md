@@ -8,21 +8,21 @@ helpviewer_keywords:
 - Visual C, Windows API calls
 - Windows API [MFC], and MFC
 ms.assetid: 334e8efc-f3cc-4018-bc2e-02908b2a39fe
-ms.openlocfilehash: c52b11a7395e3972f8bf9d83501fbafb61e6f4a6
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 1fbd4d332f5ade1cb9415448b138ac5bc838307d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79446384"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372831"
 ---
 # <a name="relationship-to-the-c-language-api"></a>Vztah k rozhraní API jazyka C
 
-Jediná vlastnost, která nastaví knihovnu knihovny MFC (Microsoft Foundation Class) kromě jiných knihoven tříd pro systém Windows, je velmi blízko mapování na rozhraní Windows API napsané v jazyce C. Kromě toho můžete obecně kombinovat volání knihovny tříd bez přímého volání rozhraní API systému Windows. Tento přímý přístup ale neznamená, že třídy jsou pro toto rozhraní API kompletní náhradou. Vývojáři musí stále občas dělat Přímá volání některých funkcí Windows, například [SetCursor](/windows/win32/api/winuser/nf-winuser-setcursor) a [GetSystemMetrics](/windows/win32/api/winuser/nf-winuser-getsystemmetrics), například. Funkce systému Windows je zabalena členskou funkcí třídy pouze v případě, že existuje jasná výhoda.
+Jedinou vlastností, která nastavuje knihovnu třídy Microsoft Foundation (MFC) na rozdíl od jiných knihoven tříd pro Windows, je velmi blízké mapování rozhraní API systému Windows napsané v jazyce C. Dále můžete obecně kombinovat volání do knihovny tříd volně s přímýmvoláním rozhraní API systému Windows. Tento přímý přístup však neznamená, že třídy jsou úplnou náhradou za toto rozhraní API. Vývojáři musí stále občas provádět přímé volání na některé funkce systému Windows, jako je [například SetCursor](/windows/win32/api/winuser/nf-winuser-setcursor) a [GetSystemMetrics](/windows/win32/api/winuser/nf-winuser-getsystemmetrics). Funkce systému Windows je zabalena členovou funkcí třídy pouze v případě, že je jasná výhoda.
 
-Vzhledem k tomu, že někdy potřebujete provádět nativní volání funkcí Windows, měli byste mít přístup k dokumentaci k rozhraní Windows API jazyka C-Language. Tato dokumentace je součástí Microsoft Visual C++.
+Vzhledem k tomu, že někdy potřebujete volat nativní funkce systému Windows, měli byste mít přístup k dokumentaci rozhraní API jazyka C. Tato dokumentace je součástí aplikace Microsoft Visual C++.
 
 > [!NOTE]
->  Přehled toho, jak architektura knihovny MFC funguje, najdete v tématu [použití tříd pro psaní aplikací pro Windows](../mfc/using-the-classes-to-write-applications-for-windows.md).
+> Přehled fungování architektury knihovny knihovny knihovny knihovny knihovny knihovny knihovny knihovny naleznete [v tématu Použití tříd k zápisu aplikací pro windows](../mfc/using-the-classes-to-write-applications-for-windows.md).
 
 ## <a name="see-also"></a>Viz také
 

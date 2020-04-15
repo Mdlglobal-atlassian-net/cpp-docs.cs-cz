@@ -11,16 +11,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HandleTraits::HANDLENullTraits::Close method
 - Microsoft::WRL::Wrappers::HandleTraits::HANDLENullTraits::GetInvalidValue method
 ms.assetid: 88a29a14-c516-40cb-a0ca-ee897a668623
-ms.openlocfilehash: d70425f414b998eb67e3937c2c126dd3eda0c00d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 41e06cc50f36a077a34d992c416a543e5bf9b593
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398378"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371479"
 ---
 # <a name="handlenulltraits-structure"></a>HANDLENullTraits – struktura
 
-Definuje běžné vlastnosti neinicializovaný popisovač.
+Definuje společné charakteristiky neinicializovaného popisovače.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -30,18 +30,18 @@ struct HANDLENullTraits;
 
 ## <a name="members"></a>Členové
 
-### <a name="public-typedefs"></a>Veřejné definice TypeDef
+### <a name="public-typedefs"></a>Veřejné typedefs
 
-Název   | Popis
+Name (Název)   | Popis
 ------ | ---------------------
-`Type` | Synonymum pro POPISOVAČ.
+`Type` | Synonymum pro HANDLE.
 
 ### <a name="public-methods"></a>Veřejné metody
 
-Název                                                  | Popis
+Name (Název)                                                  | Popis
 ----------------------------------------------------- | -----------------------------
-[Handlenulltraits::Close –](#close)                     | Zavře určený.
-[Handlenulltraits::getinvalidvalue –](#getinvalidvalue) | Představuje neplatný popisovač.
+[HANDLENullTraits::Zavřít](#close)                     | Zavře zadaný popisovač.
+[HANDLENullTraits::GetInvalidValue](#getinvalidvalue) | Představuje neplatný popisovač.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -51,11 +51,11 @@ Název                                                  | Popis
 
 **Záhlaví:** corewrappers.h
 
-**Namespace:** Microsoft::WRL::Wrappers::HandleTraits
+**Obor názvů:** Microsoft::WRL::Obálky::HandleTraits
 
-## <a name="close"></a>Handlenulltraits::Close –
+## <a name="handlenulltraitsclose"></a><a name="close"></a>HANDLENullTraits::Zavřít
 
-Zavře určený.
+Zavře zadaný popisovač.
 
 ```cpp
 inline static bool Close(
@@ -65,14 +65,14 @@ inline static bool Close(
 
 ### <a name="parameters"></a>Parametry
 
-*h*<br/>
-Obslužná rutina zavřete.
+*H*<br/>
+Rukojeť zavřít.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** pokud zpracování *h* zavření úspěšně; v opačném případě **false**.
+**true,** pokud popisovač *h* úspěšně uzavřen; jinak **false**.
 
-## <a name="getinvalidvalue"></a>Handlenulltraits::getinvalidvalue –
+## <a name="handlenulltraitsgetinvalidvalue"></a><a name="getinvalidvalue"></a>HANDLENullTraits::GetInvalidValue
 
 Představuje neplatný popisovač.
 
@@ -82,4 +82,4 @@ inline static Type GetInvalidValue();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vždy vrátí `nullptr`.
+Vždy vrátí hodnotu `nullptr`.

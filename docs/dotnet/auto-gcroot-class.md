@@ -16,16 +16,16 @@ f1_keywords:
 helpviewer_keywords:
 - msclr::auto_gcroot
 ms.assetid: b5790912-265d-463e-a486-47302e91042a
-ms.openlocfilehash: fce0a127a4debfb8001c1e97924fbffa40d52d62
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 87e6703f759888b36ed89daed10df937701c6dbd
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80078984"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372555"
 ---
 # <a name="auto_gcroot-class"></a>auto_gcroot – třída
 
-Automatická správa prostředků (jako [Auto_ptr třída](../standard-library/auto-ptr-class.md)), která se dá použít k vložení virtuálního popisovače do nativního typu.
+Automatická správa prostředků (například [auto_ptr Class),](../standard-library/auto-ptr-class.md)kterou lze použít k vložení virtuálního popisovače do nativního typu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,43 +41,43 @@ Spravovaný typ, který má být vložen.
 
 ## <a name="members"></a>Členové
 
-### <a name="public-constructors"></a>Veřejné konstruktory
+### <a name="public-constructors"></a>Veřejní konstruktéři
 
-|Název|Popis|
+|Name (Název)|Popis|
 |---------|-----------|
-|[auto_gcroot::auto_gcroot](#auto-gcroot)|Konstruktor `auto_gcroot`.|
-|[auto_gcroot::~auto_gcroot](#tilde-auto-gcroot)|`auto_gcroot` destruktor
+|[auto_gcroot::auto_gcroot](#auto-gcroot)|Konstruktor. `auto_gcroot`|
+|[auto_gcroot::~auto_gcroot](#tilde-auto-gcroot)|Destruktor. `auto_gcroot`
 |
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |---------|-----------|
 |[auto_gcroot::attach](#attach)|Připojte `auto_gcroot` k objektu.|
 |[auto_gcroot::get](#get)|Získá obsažený objekt.|
-|[auto_gcroot::release](#release)|Uvolní objekt ze správy `auto_gcroot`.|
-|[auto_gcroot::reset](#reset)|Zničit aktuální objekt vlastnictví a volitelně pořídit nový objekt.|
-|[auto_gcroot::swap](#swap)|Prohodí objekty s jiným `auto_gcroot`.|
+|[auto_gcroot::release](#release)|Uvolní objekt ze `auto_gcroot` správy.|
+|[auto_gcroot::reset](#reset)|Zničte aktuální vlastněný objekt a volitelně převezměte nový objekt.|
+|[auto_gcroot::swap](#swap)|Zamění objekty `auto_gcroot`za jiné .|
 
-### <a name="public-operators"></a>Veřejné operátory
+### <a name="public-operators"></a>Veřejní provozovatelé
 
-|Název|Popis|
+|Name (Název)|Popis|
 |---------|-----------|
-|[auto_gcroot:: operator-&gt;](#operator-arrow)|Operátor přístupu členů.|  
-|[auto_gcroot::operator=](#operator-assign)|Operátor přiřazení|
-|[auto_gcroot:: operator&nbsp;auto_gcroot](#operator-auto-gcroot)|Operátor přetypování mezi `auto_gcroot` a kompatibilní typy.|
-|[auto_gcroot:: operator&nbsp;bool](#operator-bool)|Operátor pro použití `auto_gcroot` v podmíněném výrazu.|  
-|[auto_gcroot::operator!](#operator-logical-not)|Operátor pro použití `auto_gcroot` v podmíněném výrazu.|
+|[auto_gcroot::operátor-&gt;](#operator-arrow)|Operátor přístupu člena.|  
+|[auto_gcroot::operator=](#operator-assign)|Operátor přiřazení.|
+|[auto_gcroot::auto_gcroot&nbsp;operátora](#operator-auto-gcroot)|Operátor přetypového `auto_gcroot` přetypádku mezi a kompatibilní typy.|
+|[auto_gcroot::operátor&nbsp;bool](#operator-bool)|Operátor pro `auto_gcroot` použití v podmíněném výrazu.|  
+|[auto_gcroot::operátor!](#operator-logical-not)|Operátor pro `auto_gcroot` použití v podmíněném výrazu.|
 
 ## <a name="requirements"></a>Požadavky
 
-**Hlavičkový soubor** \<msclr – \ auto_gcroot. h >
+**Soubor hlavičky** \<msclr\auto_gcroot.h>
 
-Msclr – **oboru názvů**
+**Obor názvů** msclr
 
-## <a name="auto_gcrootauto_gcroot"></a><a name="auto-gcroot"></a>auto_gcroot:: auto_gcroot
+## <a name="auto_gcrootauto_gcroot"></a><a name="auto-gcroot"></a>auto_gcroot::auto_gcroot
 
-Konstruktor `auto_gcroot`.
+Konstruktor. `auto_gcroot`
 
 ```cpp
 auto_gcroot(
@@ -95,14 +95,14 @@ auto_gcroot(
 ### <a name="parameters"></a>Parametry
 
 *_ptr*<br/>
-Objekt, který chcete vlastnit.
+Objekt vlastnit.
 
 *_right*<br/>
 Existující `auto_gcroot`.
 
 ### <a name="remarks"></a>Poznámky
 
-Při sestavování `auto_gcroot` z existujícího `auto_gcroot`existující `auto_gcroot` uvolní svůj objekt před převodem vlastnictví objektu na nový `auto_gcroot`.
+Při vytváření `auto_gcroot` z existující `auto_gcroot`, `auto_gcroot` existující uvolní svůj objekt před převodem `auto_gcroot`vlastnictví objektu na nový .
 
 ### <a name="example"></a>Příklad
 
@@ -191,9 +191,9 @@ in RefClassA destructor: second
 done
 ```
 
-## <a name="auto_gcrootauto_gcroot"></a><a name="tilde-auto-gcroot"></a>auto_gcroot:: ~ auto_gcroot
+## <a name="auto_gcrootauto_gcroot"></a><a name="tilde-auto-gcroot"></a>auto_gcroot::~auto_gcroot
 
-`auto_gcroot` destruktor
+Destruktor. `auto_gcroot`
 
 ```cpp
 ~auto_gcroot();
@@ -201,7 +201,7 @@ done
 
 ### <a name="remarks"></a>Poznámky
 
-Destruktor také destrukturuje vlastněný objekt.
+Destruktor také zničí vlastněný objekt.
 
 ### <a name="example"></a>Příklad
 
@@ -238,7 +238,7 @@ ClassA destructor
 done
 ```
 
-## <a name="auto_gcrootattach"></a><a name="attach"></a>auto_gcroot:: Attach
+## <a name="auto_gcrootattach"></a><a name="attach"></a>auto_gcroot::připojit
 
 Připojte `auto_gcroot` k objektu.
 
@@ -258,7 +258,7 @@ auto_gcroot<_element_type> & attach(
 ### <a name="parameters"></a>Parametry
 
 *_right*<br/>
-Objekt, který se má připojit, nebo `auto_gcroot` obsahující objekt, který se má připojit.
+Objekt připojit nebo `auto_gcroot` obsahující objekt připojit.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -266,7 +266,7 @@ Aktuální `auto_gcroot`.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud je `_right` `auto_gcroot`, uvolní vlastnictví svého objektu před tím, než je objekt připojen k aktuálnímu `auto_gcroot`.
+Pokud `_right` je `auto_gcroot`, uvolní vlastnictví svého objektu před objekt je `auto_gcroot`připojen k aktuálnímu .
 
 ### <a name="example"></a>Příklad
 
@@ -333,7 +333,7 @@ Hello from fourth A!
 in ClassA destructor:fourth
 ```
 
-## <a name="auto_gcrootget"></a><a name="get"></a>auto_gcroot:: Get
+## <a name="auto_gcrootget"></a><a name="get"></a>auto_gcroot::získat
 
 Získá obsažený objekt.
 
@@ -343,7 +343,7 @@ _element_type get() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Objekt, který jej obsahuje.
+Obsažený objekt.
 
 ### <a name="example"></a>Příklad
 
@@ -393,9 +393,9 @@ Hello from first A!
 in ClassA destructor:first
 ```
 
-## <a name="auto_gcrootrelease"></a><a name="release"></a>auto_gcroot:: Release
+## <a name="auto_gcrootrelease"></a><a name="release"></a>auto_gcroot::vydání
 
-Uvolní objekt ze správy `auto_gcroot`.
+Uvolní objekt ze `auto_gcroot` správy.
 
 ```cpp
 _element_type release();
@@ -456,9 +456,9 @@ Hello from first A!
 done
 ```
 
-## <a name="auto_gcrootreset"></a><a name="reset"></a>auto_gcroot:: Reset
+## <a name="auto_gcrootreset"></a><a name="reset"></a>auto_gcroot::obnovit
 
-Zničit aktuální objekt vlastnictví a volitelně pořídit nový objekt.
+Zničte aktuální vlastněný objekt a volitelně převezměte nový objekt.
 
 ```cpp
 void reset(
@@ -469,7 +469,7 @@ void reset(
 ### <a name="parameters"></a>Parametry
 
 *_new_ptr*<br/>
-Volitelné Nový objekt.
+(Nepovinné) Nový objekt.
 
 ### <a name="example"></a>Příklad
 
@@ -521,9 +521,9 @@ ClassA destructor: second
 done
 ```
 
-## <a name="auto_gcrootswap"></a><a name="swap"></a>auto_gcroot:: swap
+## <a name="auto_gcrootswap"></a><a name="swap"></a>auto_gcroot::swap
 
-Prohodí objekty s jiným `auto_gcroot`.
+Zamění objekty `auto_gcroot`za jiné .
 
 ```cpp
 void swap(
@@ -534,7 +534,7 @@ void swap(
 ### <a name="parameters"></a>Parametry
 
 *_right*<br/>
-`auto_gcroot`, ve kterém se mají přeměnit objekty
+S `auto_gcroot` kterými chcete zaměnit objekty.
 
 ### <a name="example"></a>Příklad
 
@@ -563,9 +563,9 @@ s1 = 'string one', s2 = 'string two'
 s1 = 'string two', s2 = 'string one'
 ```
 
-## <a name="auto_gcrootoperator-gt"></a><a name="operator-arrow"></a>auto_gcroot:: operator-&gt;
+## <a name="auto_gcrootoperator-gt"></a><a name="operator-arrow"></a>auto_gcroot::operátor-&gt;
 
-Operátor přístupu členů.
+Operátor přístupu člena.
 
 ```cpp
 _element_type operator->() const;
@@ -612,9 +612,9 @@ Hello from first A!
 a->m_i = 5
 ```
 
-## <a name="auto_gcrootoperator"></a><a name="operator-assign"></a>auto_gcroot:: operator =
+## <a name="auto_gcrootoperator"></a><a name="operator-assign"></a>auto_gcroot::operátor=
 
-Operátor přiřazení
+Operátor přiřazení.
 
 ```cpp
 auto_gcroot<_element_type> & operator=(
@@ -632,11 +632,11 @@ auto_gcroot<_element_type> & operator=(
 ### <a name="parameters"></a>Parametry
 
 *_right*<br/>
-Objekt nebo `auto_gcroot`, které mají být přiřazeny k aktuálnímu `auto_gcroot`.
+Objekt nebo `auto_gcroot` chcete-li být `auto_gcroot`přiřazenk aktuálnímu .
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Aktuální `auto_gcroot`, který je teď vlastníkem `_right`.
+Aktuální `auto_gcroot`, nyní `_right`vlastnící .
 
 ### <a name="example"></a>Příklad
 
@@ -704,9 +704,9 @@ done
 in ClassA destructor: third
 ```
 
-## <a name="auto_gcrootoperator-auto_gcroot"></a><a name="operator-auto-gcroot"></a>auto_gcroot:: operator auto_gcroot
+## <a name="auto_gcrootoperator-auto_gcroot"></a><a name="operator-auto-gcroot"></a>auto_gcroot::operátor auto_gcroot
 
-Operátor přetypování mezi `auto_gcroot` a kompatibilní typy.
+Operátor přetypového `auto_gcroot` přetypádku mezi a kompatibilní typy.
 
 ```cpp
 template<typename _other_type>
@@ -715,7 +715,7 @@ operator auto_gcroot<_other_type>();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Aktuální `auto_gcroot` přetypovat na `auto_gcroot<_other_type>`.
+Aktuální `auto_gcroot` přetypované na `auto_gcroot<_other_type>`.
 
 ### <a name="example"></a>Příklad
 
@@ -759,9 +759,9 @@ Hello from first B!
 Hello from first A!
 ```
 
-## <a name="auto_gcrootoperator-bool"></a><a name="operator-bool"></a>auto_gcroot:: operator bool
+## <a name="auto_gcrootoperator-bool"></a><a name="operator-bool"></a>auto_gcroot::operátor bool
 
-Operátor pro použití `auto_gcroot` v podmíněném výrazu.
+Operátor pro `auto_gcroot` použití v podmíněném výrazu.
 
 ```cpp
 operator bool() const;
@@ -769,11 +769,11 @@ operator bool() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`true`, je-li zabalený objekt platný; `false` jinak.
+`true`pokud je zabalený objekt platný; `false` v opačném případě.
 
 ### <a name="remarks"></a>Poznámky
 
-Tento operátor ve skutečnosti převede na `_detail_class::_safe_bool`, což je bezpečnější než `bool`, protože nemůže být převedeno na integrální typ.
+Tento operátor ve `_detail_class::_safe_bool`skutečnosti převede `bool` na , což je bezpečnější než proto, že nelze převést na integrální typ.
 
 ### <a name="example"></a>Příklad
 
@@ -804,9 +804,9 @@ now s is valid
 now s is invalid
 ```
 
-## <a name="auto_gcrootoperator"></a><a name="operator-logical-not"></a>auto_gcroot:: operator!
+## <a name="auto_gcrootoperator"></a><a name="operator-logical-not"></a>auto_gcroot::operátor!
 
-Operátor pro použití `auto_gcroot` v podmíněném výrazu.
+Operátor pro `auto_gcroot` použití v podmíněném výrazu.
 
 ```cpp
 bool operator!() const;
@@ -814,7 +814,7 @@ bool operator!() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`true`, je-li zabalený objekt neplatný; `false` jinak.
+`true`pokud je zalomený objekt neplatný; `false` v opačném případě.
 
 ### <a name="example"></a>Příklad
 
