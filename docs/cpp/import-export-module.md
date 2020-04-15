@@ -9,17 +9,17 @@ helpviewer_keywords:
 - modules [C++]
 - modules [C++], import
 - modules [C++], export
-description: Deklarace import a export použijte pro přístup k a k publikování typů a funkcí definovaných v zadaném modulu.
-ms.openlocfilehash: 7406bf75595bef20775ee1b67c27bd62bff1a932
-ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
+description: Pomocí dovozních a vývozních prohlášení můžete přistupovat k typům a funkcím definovaným v zadaném modulu a publikovat je.
+ms.openlocfilehash: a765e9a406660d3c945ef3d70754178b0648458c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76518280"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374117"
 ---
 # <a name="module-import-export"></a>modul, import, export
 
-Deklarace **modulu**, **importu**a **exportu** jsou k dispozici v c++ 20 a vyžadují přepínač kompilátoru [/Experimental: Module](../build/reference/experimental-module.md) společně s [/std: C + + nejnovější](../build/reference/std-specify-language-standard-version.md). Další informace najdete v tématu [Přehled modulů v C++ ](modules-cpp.md).
+Deklarace **modulu**, **importu**a **exportu** jsou k dispozici v jazyce C++20 a vyžadují přepínač kompilátoru [/experimental:module](../build/reference/experimental-module.md) spolu s [parametrem /std:c++latest](../build/reference/std-specify-language-standard-version.md). Další informace naleznete [v tématu Přehled modulů v jazyce C++](modules-cpp.md).
 
 ## <a name="module"></a>module
 
@@ -31,13 +31,13 @@ module ModuleA;
 
 ## <a name="export"></a>export
 
-Použijte deklaraci **modulu exportu** pro soubor primárního rozhraní modulu, který musí mít příponu **. IXX**:
+Použijte **deklaraci exportního modulu** pro primární soubor rozhraní modulu, který musí mít příponu **.ixx**:
 
 ```cpp
 export module ModuleA;
 ```
 
-V souboru rozhraní použijte modifikátor **exportu** u názvů, které jsou určeny jako součást veřejného rozhraní:
+V souboru rozhraní použijte modifikátor **exportu** u názvů, které mají být součástí veřejného rozhraní:
 
 ```cpp
 // ModuleA.ixx
@@ -66,11 +66,11 @@ int main() {
 }
 ```
 
-Klíčové slovo **Export** se nemusí zobrazit v souboru implementace modulu. Pokud je pro název oboru názvů použit **Export** , jsou exportovány všechny názvy v oboru názvů.
+Klíčové slovo **exportu** se nemusí zobrazit v souboru implementace modulu. Při **použití exportu** na název oboru názvů jsou exportovány všechny názvy v oboru názvů.
 
 ## <a name="import"></a>import
 
-Pomocí deklarace **importu** můžete v programu zviditelnit názvy modulů. Deklarace importu se musí vyskytovat po deklaraci modulu a za direktivami #include, ale před všemi deklaracemi v souboru.
+Pomocí **deklarace importu** zviditelněte názvy modulu v programu. Dovozní prohlášení musí být uvedeno za prohlášením modulu a po všech #include směrnic, ale před všemi prohlášeními v souboru.
 
 ```cpp
 module ModuleA;
@@ -88,7 +88,7 @@ class Baz
 
 ## <a name="remarks"></a>Poznámky
 
-**Import** i **modul** se považují za klíčová slova pouze v případě, že se zobrazují na začátku logického řádku:
+**Import** i **modul** jsou považovány za klíčová slova pouze v případě, že se zobrazí na začátku logického řádku:
 
 ```cpp
 
@@ -110,9 +110,9 @@ export import module-name
 int i; module ;
 ```
 
-**Specifické pro společnost Microsoft**
+**Specifické pro Microsoft**
 
-V Microsoftu C++jsou tokeny **importu** a **modul** vždycky identifikátory a klíčová slova nikdy, když se používají jako argumenty pro makro.
+V jazyce Microsoft C++ **jsou import** tokenů a **modul** vždy identifikátory a nikdy klíčová slova, pokud jsou použity jako argumenty pro makro.
 
 ### <a name="example"></a>Příklad
 
@@ -123,8 +123,8 @@ import // Always an identifier, never a keyword
 )
 ```
 
-**Specifické pro konec Microsoftu**
+**Ukončit microsoft specifické**
 
 ## <a name="see-also"></a>Viz také
 
-[Přehled modulů vC++](modules-cpp.md)
+[Přehled modulů v C++](modules-cpp.md)

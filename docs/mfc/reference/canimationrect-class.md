@@ -1,5 +1,5 @@
 ---
-title: Canimationrect – třída
+title: CAnimationRect – třída
 ms.date: 11/04/2016
 f1_keywords:
 - CAnimationRect
@@ -38,16 +38,16 @@ helpviewer_keywords:
 - CAnimationRect [MFC], m_szInitial
 - CAnimationRect [MFC], m_topValue
 ms.assetid: 0294156d-241e-4a57-92b2-31234fe557d6
-ms.openlocfilehash: 84c4cf92894a9ece2021417445c9d7ab94ee6bdf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4ffd1254efd3283a4c5641092aefec8eec0ac22a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62378177"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373327"
 ---
-# <a name="canimationrect-class"></a>Canimationrect – třída
+# <a name="canimationrect-class"></a>CAnimationRect – třída
 
-Implementuje funkci obdélníku, jehož strany lze animovat.
+Implementuje funkce obdélníku, jehož strany mohou být animovány.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -59,59 +59,59 @@ class CAnimationRect : public CAnimationBaseObject;
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
 |[CAnimationRect::CAnimationRect](#canimationrect)|Přetíženo. Vytvoří objekt rect animace.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CAnimationRect::AddTransition](#addtransition)|Přidá přechody pro levé straně, horní, pravé a dolní souřadnice.|
-|[CAnimationRect::GetBottom](#getbottom)|Poskytuje přístup k canimationvariable – představuje dolní souřadnice.|
-|[CAnimationRect::GetDefaultValue](#getdefaultvalue)|Vrátí výchozí hodnoty pro rozsah obdélníku.|
-|[CAnimationRect::GetLeft](#getleft)|Poskytuje přístup k canimationvariable – představující Levá souřadnice.|
-|[CAnimationRect::GetRight](#getright)|Poskytuje přístup k canimationvariable – představující Pravá souřadnice.|
-|[CAnimationRect::GetTop](#gettop)|Poskytuje přístup k canimationvariable – představující horní souřadnici.|
-|[CAnimationRect::GetValue](#getvalue)|Vrátí aktuální hodnotu.|
+|[CAnimationRect::AddTransition](#addtransition)|Přidá přechody pro souřadnice vlevo, nahoře, vpravo a dole.|
+|[CAnimationRect::GetBottom](#getbottom)|Poskytuje přístup k CAnimationVariable představující dolní souřadnice.|
+|[CAnimationRect::GetDefaultValue](#getdefaultvalue)|Vrátí výchozí hodnoty pro hranice obdélníku.|
+|[CAnimationRect::GetLeft](#getleft)|Poskytuje přístup k CAnimationVariable představující levé souřadnice.|
+|[CAnimationRect::GetRight](#getright)|Poskytuje přístup k CAnimationVariable představující pravé souřadnice.|
+|[CAnimationRect::GetTop](#gettop)|Poskytuje přístup k CAnimationVariable představující nejvyšší souřadnice.|
+|[CAnimationRect::Hodnota GetValue](#getvalue)|Vrátí aktuální hodnotu.|
 |[CAnimationRect::SetDefaultValue](#setdefaultvalue)|Nastaví výchozí hodnotu.|
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CAnimationRect::GetAnimationVariableList](#getanimationvariablelist)|Umístí animace zapouzdřené proměnné do seznamu. (Přepíše [CAnimationBaseObject::GetAnimationVariableList](../../mfc/reference/canimationbaseobject-class.md#getanimationvariablelist).)|
+|[CAnimationRect::GetAnimationVariableList](#getanimationvariablelist)|Vloží zapouzdřené proměnné animace do seznamu. (Přepíše [CAnimationBaseObject::GetAnimationVariableList](../../mfc/reference/canimationbaseobject-class.md#getanimationvariablelist).)|
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CAnimationRect::operator RECT](#operator_rect)|Převede canimationrect – obdélníkový|
-|[CAnimationRect::operator=](#operator_eq)|Rect – přiřadí canimationrect –.|
+|[CAnimationRect::operátor RECT](#operator_rect)|Převede CAnimationRect na RECT.|
+|[CAnimationRect::operátor=](#operator_eq)|Přiřadí rect CAnimationRect.|
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CAnimationRect::m_bFixedSize](#m_bfixedsize)|Určuje, zda obdélník má pevnou velikost.|
+|[CAnimationRect::m_bFixedSize](#m_bfixedsize)|Určuje, zda má obdélník pevnou velikost.|
 
-### <a name="protected-data-members"></a>Chránění členové dat
+### <a name="protected-data-members"></a>Členové chráněných dat
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CAnimationRect::m_bottomValue](#m_bottomvalue)|Proměnné animace zapouzdřený objekt, který představuje dolní mez animace obdélníku.|
-|[CAnimationRect::m_leftValue](#m_leftvalue)|Proměnné animace zapouzdřený objekt, který představuje vlevo mez animace obdélníku.|
-|[CAnimationRect::m_rightValue](#m_rightvalue)|Proměnné animace zapouzdřený objekt, který představuje pravé mez animace obdélníku.|
-|[CAnimationRect::m_szInitial](#m_szinitial)|Určuje počáteční velikost animace obdélníku.|
-|[CAnimationRect::m_topValue](#m_topvalue)|Proměnné animace zapouzdřený objekt, který představuje horní mez animace obdélníku.|
+|[CAnimationRect::m_bottomValue](#m_bottomvalue)|Zapouzdřená proměnná animace, která představuje dolní vazbu obdélníku animace.|
+|[CAnimationRect::m_leftValue](#m_leftvalue)|Zapouzdřená proměnná animace, která představuje left bound animace obdélníku.|
+|[CAnimationRect::m_rightValue](#m_rightvalue)|Zapouzdřená proměnná animace, která představuje pravovpravovousavý obdélník animace.|
+|[CAnimationRect::m_szInitial](#m_szinitial)|Určuje počáteční velikost obdélníku animace.|
+|[CAnimationRect::m_topValue](#m_topvalue)|Zapouzdřená proměnná animace, která představuje horní vazbu obdélníku animace.|
 
 ## <a name="remarks"></a>Poznámky
 
-Canimationrect – třída zapouzdří čtyři canimationvariable – objekty a může představovat v aplikacích obdélníku. Použít tuto třídu v aplikaci, stačí vytvořit instanci objektu této třídy, přidat řadič animace pomocí CAnimationController::AddAnimationObject a volání AddTransition pro každý přechod pro levé, pravé horní a dolní souřadnice.
+Třída CAnimationRect zapouzdřuje čtyři objekty CAnimationVariable a může v aplikacích představovat obdélník. Chcete-li použít tuto třídu v aplikaci, stačí vytvořit instanci objektu této třídy, přidejte jej do ovladače animace pomocí CAnimationController::AddAnimationObject a volání AddTransition pro každý přechod, který má být použit na levé, pravé horní a dolní souřadnice.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObjekt](../../mfc/reference/cobject-class.md)
 
 [CAnimationBaseObject](../../mfc/reference/canimationbaseobject-class.md)
 
@@ -121,9 +121,9 @@ Canimationrect – třída zapouzdří čtyři canimationvariable – objekty a 
 
 **Záhlaví:** afxanimationcontroller.h
 
-##  <a name="addtransition"></a>  CAnimationRect::AddTransition
+## <a name="canimationrectaddtransition"></a><a name="addtransition"></a>CAnimationRect::AddTransition
 
-Přidá přechody pro levé straně, horní, pravé a dolní souřadnice.
+Přidá přechody pro souřadnice vlevo, nahoře, vpravo a dole.
 
 ```
 void AddTransition(
@@ -136,24 +136,24 @@ void AddTransition(
 ### <a name="parameters"></a>Parametry
 
 *pLeftTransition*<br/>
-Určuje přechodu na levé straně.
+Určuje přechod pro levou stranu.
 
 *pTopTransition*<br/>
-Určuje přechod pro horní strana.
+Určuje přechod pro horní stranu.
 
 *pRightTransition*<br/>
-Určuje přechodu na pravé straně.
+Určuje přechod pro pravou stranu.
 
 *pBottomTransition*<br/>
-Určuje přechod pro dolní strana.
+Určuje přechod pro spodní stranu.
 
 ### <a name="remarks"></a>Poznámky
 
-Voláním této funkce, které chcete přidat zadaného přechody do interní seznamu přechody má použít u proměnné animace pro jednotlivých stran obdélník. Při přidání přechody jsou nejsou okamžitě použity a uložené ve vnitřním seznamu. Jsou použity přechody (přidané do scénáře pro konkrétní hodnotu) při volání CAnimationController::AnimateGroup. Pokud není nutné použít s přechodem na jednu ze strany obdélník, můžete předat hodnotu NULL.
+Volání této funkce přidat zadané přechody do vnitřního seznamu přechodů, které mají být použity pro proměnné animace pro každou stranu obdélníku. Když přidáte přechody, nejsou použity okamžitě a uloženy v interním seznamu. Přechody jsou použity (přidány do scénáře pro určitou hodnotu) při volání CAnimationController::AnimateGroup. Pokud nepotřebujete použít přechod na jednu ze stran obdélníku, můžete předat hodnotu NULL.
 
-##  <a name="canimationrect"></a>  CAnimationRect::CAnimationRect
+## <a name="canimationrectcanimationrect"></a><a name="canimationrect"></a>CAnimationRect::CAnimationRect
 
-Vytvoří objekt canimationrect –.
+Vytvoří cAnimationRect objektu.
 
 ```
 CAnimationRect();
@@ -186,40 +186,40 @@ CAnimationRect(
 *Rect*<br/>
 Určuje výchozí obdélník.
 
-*nGroupID*<br/>
+*nID skupiny*<br/>
 Určuje ID skupiny.
 
-*nObjectID*<br/>
+*nID objektu*<br/>
 Určuje ID objektu.
 
 *dwUserData*<br/>
-Určuje data definovaná uživatelem.
+Určuje uživatelem definovaná data.
 
-*pt*<br/>
+*Pt*<br/>
 Souřadnice levého horního rohu.
 
-*sz*<br/>
-Velikost obdélník.
+*Sz*<br/>
+Velikost obdélníku.
 
-*nLeft*<br/>
-Určuje souřadnice levého mez.
+*nVlevo*<br/>
+Určuje souřadnice levá vazba.
 
-*nTop*<br/>
-Určuje souřadnici horní vázána.
+*nNahoře*<br/>
+Určuje souřadnice horní hranice.
 
-*nRight*<br/>
-Určuje souřadnici pravého mez.
+*nVpravo*<br/>
+Určuje souřadnici vpravo vázané.
 
-*nBottom*<br/>
-Určuje souřadnici dolní vázána.
+*nDolní část*<br/>
+Určuje souřadnice dolní hranice.
 
 ### <a name="remarks"></a>Poznámky
 
-Objekt je vytvořen s výchozími hodnotami u vlevo, horní, pravé a dolního okraje, ID objektu a ID skupiny, který bude nastavený na hodnotu 0. Může se změnit později v době běhu pomocí SetDefaultValue a ID sady.
+Objekt je vytvořen s výchozími hodnotami pro levé, horní, pravé a dolní, ID objektu a ID skupiny, které budou nastaveny na 0. Mohou být později změněny za běhu pomocí SetDefaultValue a SetID.
 
-##  <a name="getanimationvariablelist"></a>  CAnimationRect::GetAnimationVariableList
+## <a name="canimationrectgetanimationvariablelist"></a><a name="getanimationvariablelist"></a>CAnimationRect::GetAnimationVariableList
 
-Umístí animace zapouzdřené proměnné do seznamu.
+Vloží zapouzdřené proměnné animace do seznamu.
 
 ```
 virtual void GetAnimationVariableList(
@@ -229,12 +229,12 @@ virtual void GetAnimationVariableList(
 
 ### <a name="parameters"></a>Parametry
 
-*lst*<br/>
-Pokud funkce vrátí, obsahuje odkazy na čtyři canimationvariable – objekty představující souřadnice obdélník.
+*Lst*<br/>
+Když funkce vrátí, obsahuje ukazatele na čtyři CAnimationVariable objekty představující souřadnice obdélníku.
 
-##  <a name="getbottom"></a>  CAnimationRect::GetBottom
+## <a name="canimationrectgetbottom"></a><a name="getbottom"></a>CAnimationRect::GetBottom
 
-Poskytuje přístup k canimationvariable – představuje dolní souřadnice.
+Poskytuje přístup k CAnimationVariable představující dolní souřadnice.
 
 ```
 CAnimationVariable& GetBottom();
@@ -242,15 +242,15 @@ CAnimationVariable& GetBottom();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Odkaz na zapouzdřený canimationvariable – představuje dolní souřadnice.
+Odkaz na zapouzdřené CAnimationVariable představující dolní souřadnice.
 
 ### <a name="remarks"></a>Poznámky
 
-Můžete volat tuto metodu za účelem získání přímý přístup k podkladové canimationvariable – představuje dolní souřadnice.
+Tuto metodu můžete volat, chcete-li získat přímý přístup k podkladové proměnné CAnimationVariable představující dolní souřadnice.
 
-##  <a name="getdefaultvalue"></a>  CAnimationRect::GetDefaultValue
+## <a name="canimationrectgetdefaultvalue"></a><a name="getdefaultvalue"></a>CAnimationRect::GetDefaultValue
 
-Vrátí výchozí hodnoty pro rozsah obdélníku.
+Vrátí výchozí hodnoty pro hranice obdélníku.
 
 ```
 CRect GetDefaultValue();
@@ -258,15 +258,15 @@ CRect GetDefaultValue();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Crect – hodnotu obsahující výchozí hodnoty pro levé, pravé, horní a dolní.
+Hodnota CRect obsahující výchozí hodnoty pro levé, pravé, horní a dolní.
 
 ### <a name="remarks"></a>Poznámky
 
-Voláním této funkce načtete výchozí hodnotu, která byla dříve nastavil konstruktor nebo SetDefaultValue.
+Voláním této funkce načtěte výchozí hodnotu, která byla dříve nastavena konstruktorem nebo hodnotou SetDefaultValue.
 
-##  <a name="getleft"></a>  CAnimationRect::GetLeft
+## <a name="canimationrectgetleft"></a><a name="getleft"></a>CAnimationRect::GetLeft
 
-Poskytuje přístup k canimationvariable – představující Levá souřadnice.
+Poskytuje přístup k CAnimationVariable představující levé souřadnice.
 
 ```
 CAnimationVariable& GetLeft();
@@ -274,15 +274,15 @@ CAnimationVariable& GetLeft();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Odkaz na zapouzdřený canimationvariable – představující Levá souřadnice.
+Odkaz na zapouzdřené CAnimationVariable představující levé souřadnice.
 
 ### <a name="remarks"></a>Poznámky
 
-Můžete volat tuto metodu za účelem získání přímý přístup k podkladové canimationvariable – představující Levá souřadnice.
+Tuto metodu můžete volat, chcete-li získat přímý přístup k podkladové proměnné CAnimationVariable představující levé souřadnice.
 
-##  <a name="getright"></a>  CAnimationRect::GetRight
+## <a name="canimationrectgetright"></a><a name="getright"></a>CAnimationRect::GetRight
 
-Poskytuje přístup k canimationvariable – představující Pravá souřadnice.
+Poskytuje přístup k CAnimationVariable představující pravé souřadnice.
 
 ```
 CAnimationVariable& GetRight();
@@ -290,15 +290,15 @@ CAnimationVariable& GetRight();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Odkaz na zapouzdřený canimationvariable – představující Pravá souřadnice.
+Odkaz na zapouzdřené CAnimationVariable představující pravé souřadnice.
 
 ### <a name="remarks"></a>Poznámky
 
-Můžete volat tuto metodu za účelem získání přímý přístup k podkladové canimationvariable – představující Pravá souřadnice.
+Tuto metodu můžete volat získat přímý přístup k podkladové CAnimationVariable představující správné souřadnice.
 
-##  <a name="gettop"></a>  CAnimationRect::GetTop
+## <a name="canimationrectgettop"></a><a name="gettop"></a>CAnimationRect::GetTop
 
-Poskytuje přístup k canimationvariable – představující horní souřadnici.
+Poskytuje přístup k CAnimationVariable představující nejvyšší souřadnice.
 
 ```
 CAnimationVariable& GetTop();
@@ -306,13 +306,13 @@ CAnimationVariable& GetTop();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Odkaz na zapouzdřený canimationvariable – představující horní souřadnici.
+Odkaz na zapouzdřené CAnimationVariable představující nejvyšší souřadnice.
 
 ### <a name="remarks"></a>Poznámky
 
-Můžete volat tuto metodu za účelem získání přímý přístup k podkladové canimationvariable – hlavní bod se souřadnicemi představující.
+Tuto metodu můžete volat získat přímý přístup k podkladové CAnimationVariable představující horní souřadnice.
 
-##  <a name="getvalue"></a>  CAnimationRect::GetValue
+## <a name="canimationrectgetvalue"></a><a name="getvalue"></a>CAnimationRect::Hodnota GetValue
 
 Vrátí aktuální hodnotu.
 
@@ -323,19 +323,19 @@ BOOL GetValue(CRect& rect);
 ### <a name="parameters"></a>Parametry
 
 *Rect*<br/>
-Výstup. Po návratu metody obsahuje aktuální hodnotu.
+Výstup. Obsahuje aktuální hodnotu při této metodě vrátí.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE, pokud aktuální hodnota byla úspěšně získána; v opačném případě FALSE.
+PRAVDA, pokud byla aktuální hodnota úspěšně načtena; jinak FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Voláním této funkce k získání aktuální hodnoty animace obdélníku. Pokud tato metoda selže nebo základní COM objekty pro vlevo nahoře, vpravo a dole nejsou inicializované, rect obsahuje výchozí hodnotu, která byla dříve nastavena v konstruktoru nebo SetDefaultValue.
+Volání této funkce načíst aktuální hodnotu obdélníkanimace. Pokud tato metoda selže nebo základní objekty COM pro levé, horní, pravé a dolní nebyly inicializovány, rect obsahuje výchozí hodnotu, která byla dříve nastavena v konstruktoru nebo SetDefaultValue.
 
-##  <a name="m_bfixedsize"></a>  CAnimationRect::m_bFixedSize
+## <a name="canimationrectm_bfixedsize"></a><a name="m_bfixedsize"></a>CAnimationRect::m_bFixedSize
 
-Určuje, zda obdélník má pevnou velikost.
+Určuje, zda má obdélník pevnou velikost.
 
 ```
 BOOL m_bFixedSize;
@@ -343,51 +343,51 @@ BOOL m_bFixedSize;
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud je tento člen má hodnotu true, velikost obdélníku je pevná a doprava a hodnot dolní přepočítána pokaždé, když levém horním rohu se přesune podle pevné velikosti. Nastavte tuto hodnotu na TRUE, pokud chcete jednoduše přesunout obdélník kolem obrazovky. V tomto případě přechody použitý pro souřadnice vpravo a dole se ignorují. Velikost je při vytvoření objektu nebo volejte SetDefaultValue interně uložená. Ve výchozím nastavení je tento člen nastaven na hodnotu FALSE.
+Pokud je tento člen true, pak je velikost obdélníku pevná a pravé a dolní hodnoty jsou přepočítány pokaždé, když je levý horní roh přesunut podle pevné velikosti. Nastavte tuto hodnotu na HODNOTU TRUE, abyste snadno přesunuli obdélník po obrazovce. V tomto případě jsou přechody aplikované na pravé a dolní souřadnice ignorovány. Velikost je uložena interně při vytváření objektu a/nebo volání SetDefaultValue. Ve výchozím nastavení je tento člen nastaven na hodnotu NEPRAVDA.
 
-##  <a name="m_bottomvalue"></a>  CAnimationRect::m_bottomValue
+## <a name="canimationrectm_bottomvalue"></a><a name="m_bottomvalue"></a>CAnimationRect::m_bottomValue
 
-Proměnné animace zapouzdřený objekt, který představuje dolní mez animace obdélníku.
+Zapouzdřená proměnná animace, která představuje dolní vazbu obdélníku animace.
 
 ```
 CAnimationVariable m_bottomValue;
 ```
 
-##  <a name="m_leftvalue"></a>  CAnimationRect::m_leftValue
+## <a name="canimationrectm_leftvalue"></a><a name="m_leftvalue"></a>CAnimationRect::m_leftValue
 
-Proměnné animace zapouzdřený objekt, který představuje vlevo mez animace obdélníku.
+Zapouzdřená proměnná animace, která představuje left bound animace obdélníku.
 
 ```
 CAnimationVariable m_leftValue;
 ```
 
-##  <a name="m_rightvalue"></a>  CAnimationRect::m_rightValue
+## <a name="canimationrectm_rightvalue"></a><a name="m_rightvalue"></a>CAnimationRect::m_rightValue
 
-Proměnné animace zapouzdřený objekt, který představuje pravé mez animace obdélníku.
+Zapouzdřená proměnná animace, která představuje pravovpravovousavý obdélník animace.
 
 ```
 CAnimationVariable m_rightValue;
 ```
 
-##  <a name="m_szinitial"></a>  CAnimationRect::m_szInitial
+## <a name="canimationrectm_szinitial"></a><a name="m_szinitial"></a>CAnimationRect::m_szInitial
 
-Určuje počáteční velikost animace obdélníku.
+Určuje počáteční velikost obdélníku animace.
 
 ```
 CSize m_szInitial;
 ```
 
-##  <a name="m_topvalue"></a>  CAnimationRect::m_topValue
+## <a name="canimationrectm_topvalue"></a><a name="m_topvalue"></a>CAnimationRect::m_topValue
 
-Proměnné animace zapouzdřený objekt, který představuje horní mez animace obdélníku.
+Zapouzdřená proměnná animace, která představuje horní vazbu obdélníku animace.
 
 ```
 CAnimationVariable m_topValue;
 ```
 
-##  <a name="operator_rect"></a>  CAnimationRect::operator RECT
+## <a name="canimationrectoperator-rect"></a><a name="operator_rect"></a>CAnimationRect::operátor RECT
 
-Převede canimationrect – obdélníkový
+Převede CAnimationRect na RECT.
 
 ```
 operator RECT();
@@ -395,15 +395,15 @@ operator RECT();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Aktuální hodnota animace obdélníku jako RECT.
+Aktuální hodnota obdélníku animace jako RECT.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce volá interně GetValue. Pokud GetValue z nějakého důvodu selže, bude obsahovat vrácené RECT výchozí hodnoty pro všechny souřadnice obdélník.
+Tato funkce interně volá GetValue. Pokud GetValue z nějakého důvodu selže, vrácené RECT bude obsahovat výchozí hodnoty pro všechny souřadnice obdélníku.
 
-##  <a name="operator_eq"></a>  CAnimationRect::operator =
+## <a name="canimationrectoperator"></a><a name="operator_eq"></a>CAnimationRect::operátor=
 
-Rect – přiřadí canimationrect –.
+Přiřadí rect CAnimationRect.
 
 ```
 void operator=(const RECT& rect);
@@ -412,13 +412,13 @@ void operator=(const RECT& rect);
 ### <a name="parameters"></a>Parametry
 
 *Rect*<br/>
-Nová hodnota animace obdélníku.
+Nová hodnota obdélníkanimace.
 
 ### <a name="remarks"></a>Poznámky
 
-Doporučuje se provést před zahájením animace, vzhledem k tomu tento operátor volá SetDefaultValue, která znovu vytvoří objekty modelu COM pro barevné složky, pokud byl vytvořen. Pokud odebíráte tento objekt animace na události (ValueChanged nebo IntegerValueChanged), musíte znovu zapnout. Tyto události.
+Doporučuje se to provést před zahájením animace, protože tento operátor volá SetDefaultValue, který znovu vytvoří základní objekty COM pro barevné komponenty, pokud byly vytvořeny. Pokud jste se přihlásili k odběru tohoto objektu animace k událostem (ValueChanged nebo IntegerValueChanged), je třeba tyto události znovu povolit.
 
-##  <a name="setdefaultvalue"></a>  CAnimationRect::SetDefaultValue
+## <a name="canimationrectsetdefaultvalue"></a><a name="setdefaultvalue"></a>CAnimationRect::SetDefaultValue
 
 Nastaví výchozí hodnotu.
 
@@ -429,12 +429,12 @@ void SetDefaultValue(const CRect& rect);
 ### <a name="parameters"></a>Parametry
 
 *Rect*<br/>
-Určuje nové výchozí hodnoty pro vlevo, nahoře, vpravo a dole.
+Určuje nové výchozí hodnoty pro levé, horní, pravé a dolní.
 
 ### <a name="remarks"></a>Poznámky
 
-Tuto funkci použijte k nastavení výchozí hodnoty na objekt animace. Tyto metody přiřadí výchozí hodnoty hranice obdélníku. Také obnoví základní objekty modelu COM, pokud byl vytvořen. Pokud odebíráte tento objekt animace na události (ValueChanged nebo IntegerValueChanged), musíte znovu zapnout. Tyto události.
+Pomocí této funkce můžete nastavit výchozí hodnotu na objekt animace. Tato metoda přiřadí výchozí hodnoty hranice obdélníku. Také znovu vytvoří základní objekty COM, pokud byly vytvořeny. Pokud jste se přihlásili k odběru tohoto objektu animace k událostem (ValueChanged nebo IntegerValueChanged), je třeba tyto události znovu povolit.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Třídy](../../mfc/reference/mfc-classes.md)

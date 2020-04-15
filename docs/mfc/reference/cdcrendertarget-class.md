@@ -1,5 +1,5 @@
 ---
-title: Cdcrendertarget – třída
+title: CDCRenderTarget – třída
 ms.date: 11/04/2016
 f1_keywords:
 - CDCRenderTarget
@@ -20,14 +20,14 @@ helpviewer_keywords:
 - CDCRenderTarget [MFC], GetDCRenderTarget
 - CDCRenderTarget [MFC], m_pDCRenderTarget
 ms.assetid: aa8059c9-08e6-49e4-9b8c-00fa54077a61
-ms.openlocfilehash: 70169d2b89d9ea657898f7a96dea27556023d4e2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 790ce0f32c2325fa0ea92ca0bda64ddaa4c86c45
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62168170"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375692"
 ---
-# <a name="cdcrendertarget-class"></a>Cdcrendertarget – třída
+# <a name="cdcrendertarget-class"></a>CDCRenderTarget – třída
 
 Obálka pro ID2D1DCRenderTarget.
 
@@ -41,47 +41,47 @@ class CDCRenderTarget : public CRenderTarget;
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CDCRenderTarget::CDCRenderTarget](#cdcrendertarget)|Vytvoří objekt cdcrendertarget –.|
+|[CDCRenderTarget::CDCRenderTarget](#cdcrendertarget)|Vytvoří objekt CDCRenderTarget.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CDCRenderTarget::Attach](#attach)|Bude k obrazci existující vykreslení rozhraní cílového objektu|
-|[CDCRenderTarget::BindDC](#binddc)|Vytvoří vazbu cíle vykreslování do kontextu zařízení, na který vystavuje příkazy pro kreslení|
-|[CDCRenderTarget::Create](#create)|Vytvoří cdcrendertarget –.|
-|[CDCRenderTarget::Detach](#detach)|Odpojí vykreslování cílového rozhraní z objektu|
-|[CDCRenderTarget::GetDCRenderTarget](#getdcrendertarget)|Vrátí ID2D1DCRenderTarget rozhraní|
+|[CDCRenderTarget::Připojit](#attach)|Připojí k objektu existující cílové rozhraní vykreslení.|
+|[CDCRenderTarget::BindDC](#binddc)|Sváže cíl vykreslení s kontextem zařízení, do kterého vydává příkazy kreslení.|
+|[CDCRenderTarget::Vytvořit](#create)|Vytvoří CDCRenderTarget.|
+|[CDCRenderTarget::Detach](#detach)|Odpojení vykreslení cílového rozhraní od objektu|
+|[CDCRenderTarget::GetDCRenderTarget](#getdcrendertarget)|Vrátí rozhraní ID2D1DCRenderTarget.|
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CDCRenderTarget::operator ID2D1DCRenderTarget *](#operator_id2d1dcrendertarget_star)|Vrátí ID2D1DCRenderTarget rozhraní|
+|[CDCRenderTarget::operátor ID2D1DCRenderTarget*](#operator_id2d1dcrendertarget_star)|Vrátí rozhraní ID2D1DCRenderTarget.|
 
-### <a name="protected-data-members"></a>Chránění členové dat
+### <a name="protected-data-members"></a>Členové chráněných dat
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
 |[CDCRenderTarget::m_pDCRenderTarget](#m_pdcrendertarget)|Ukazatel na objekt ID2D1DCRenderTarget.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObjekt](../../mfc/reference/cobject-class.md)
 
-[CRenderTarget](../../mfc/reference/crendertarget-class.md)
+[Cíl CRender](../../mfc/reference/crendertarget-class.md)
 
-[CDCRenderTarget](../../mfc/reference/cdcrendertarget-class.md)
+[CÍL CDCRender](../../mfc/reference/cdcrendertarget-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
 **Záhlaví:** afxrendertarget.h
 
-##  <a name="attach"></a>  CDCRenderTarget::Attach
+## <a name="cdcrendertargetattach"></a><a name="attach"></a>CDCRenderTarget::Připojit
 
-Bude k obrazci existující vykreslení rozhraní cílového objektu
+Připojí k objektu existující cílové rozhraní vykreslení.
 
 ```
 void Attach(ID2D1DCRenderTarget* pTarget);
@@ -89,12 +89,12 @@ void Attach(ID2D1DCRenderTarget* pTarget);
 
 ### <a name="parameters"></a>Parametry
 
-*pTarget*<br/>
-Existující rozhraní cíl vykreslování. Nesmí být NULL.
+*pCíl*<br/>
+Existující rozhraní cíle vykreslení. Nelze získat hodnotu NULL.
 
-##  <a name="binddc"></a>  CDCRenderTarget::BindDC
+## <a name="cdcrendertargetbinddc"></a><a name="binddc"></a>CDCRenderTarget::BindDC
 
-Vytvoří vazbu cíle vykreslování do kontextu zařízení, na který vystavuje příkazy pro kreslení
+Sváže cíl vykreslení s kontextem zařízení, do kterého vydává příkazy kreslení.
 
 ```
 BOOL BindDC(
@@ -104,27 +104,27 @@ BOOL BindDC(
 
 ### <a name="parameters"></a>Parametry
 
-*dc*<br/>
-Kontext zařízení, ke kterému cíle vykreslování vysílá příkazy vykreslování
+*Dc*<br/>
+Kontext zařízení, na který cíl vykreslení vydává příkazy kreslení
 
 *Rect*<br/>
-Dimenze popisovač kontextu zařízení (HDC), ke kterému je vázán cíle vykreslování
+Rozměry popisovače kontextu zařízení (HDC), ke kterému je cíl vykreslení vázán
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud metoda uspěje, vrátí hodnotu TRUE. V opačném případě vrátí hodnotu FALSE.
+Pokud je metoda úspěšná, vrátí hodnotu TRUE. V opačném případě vrátí hodnotu NEPRAVDA.
 
-##  <a name="cdcrendertarget"></a>  CDCRenderTarget::CDCRenderTarget
+## <a name="cdcrendertargetcdcrendertarget"></a><a name="cdcrendertarget"></a>CDCRenderTarget::CDCRenderTarget
 
-Vytvoří objekt cdcrendertarget –.
+Vytvoří objekt CDCRenderTarget.
 
 ```
 CDCRenderTarget();
 ```
 
-##  <a name="create"></a>  CDCRenderTarget::Create
+## <a name="cdcrendertargetcreate"></a><a name="create"></a>CDCRenderTarget::Vytvořit
 
-Vytvoří cdcrendertarget –.
+Vytvoří CDCRenderTarget.
 
 ```
 BOOL Create(const D2D1_RENDER_TARGET_PROPERTIES& props);
@@ -132,16 +132,16 @@ BOOL Create(const D2D1_RENDER_TARGET_PROPERTIES& props);
 
 ### <a name="parameters"></a>Parametry
 
-*Vlastnosti*<br/>
-Režim vykreslování, formát pixelu, možnosti vzdálené komunikace, informace DPI a minimální podporu rozhraní DirectX vyžadované pro vykreslení hardwaru.
+*Rekvizity*<br/>
+Režim vykreslování, formát pixelů, možnosti vzdálené komunikace, informace dpi a minimální podpora rozhraní DirectX požadovaná pro vykreslování hardwaru.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud metoda uspěje, vrátí hodnotu TRUE. V opačném případě vrátí hodnotu FALSE.
+Pokud je metoda úspěšná, vrátí hodnotu TRUE. V opačném případě vrátí hodnotu NEPRAVDA.
 
-##  <a name="detach"></a>  CDCRenderTarget::Detach
+## <a name="cdcrendertargetdetach"></a><a name="detach"></a>CDCRenderTarget::Detach
 
-Odpojí vykreslování cílového rozhraní z objektu
+Odpojení vykreslení cílového rozhraní od objektu
 
 ```
 ID2D1DCRenderTarget* Detach();
@@ -149,11 +149,11 @@ ID2D1DCRenderTarget* Detach();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na odpojeném vykreslení cílové rozhraní.
+Ukazatel na odpojené rozhraní cíle vykreslení.
 
-##  <a name="getdcrendertarget"></a>  CDCRenderTarget::GetDCRenderTarget
+## <a name="cdcrendertargetgetdcrendertarget"></a><a name="getdcrendertarget"></a>CDCRenderTarget::GetDCRenderTarget
 
-Vrátí ID2D1DCRenderTarget rozhraní
+Vrátí rozhraní ID2D1DCRenderTarget.
 
 ```
 ID2D1DCRenderTarget* GetDCRenderTarget();
@@ -161,9 +161,9 @@ ID2D1DCRenderTarget* GetDCRenderTarget();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na rozhraní ID2D1DCRenderTarget nebo hodnota NULL, pokud objekt ještě není inicializován.
+Ukazatel na rozhraní ID2D1DCRenderTarget nebo NULL, pokud objekt ještě není inicializován.
 
-##  <a name="m_pdcrendertarget"></a>  CDCRenderTarget::m_pDCRenderTarget
+## <a name="cdcrendertargetm_pdcrendertarget"></a><a name="m_pdcrendertarget"></a>CDCRenderTarget::m_pDCRenderTarget
 
 Ukazatel na objekt ID2D1DCRenderTarget.
 
@@ -171,9 +171,9 @@ Ukazatel na objekt ID2D1DCRenderTarget.
 ID2D1DCRenderTarget* m_pDCRenderTarget;
 ```
 
-##  <a name="operator_id2d1dcrendertarget_star"></a>  CDCRenderTarget::operator ID2D1DCRenderTarget *
+## <a name="cdcrendertargetoperator-id2d1dcrendertarget"></a><a name="operator_id2d1dcrendertarget_star"></a>CDCRenderTarget::operátor ID2D1DCRenderTarget*
 
-Vrátí ID2D1DCRenderTarget rozhraní
+Vrátí rozhraní ID2D1DCRenderTarget.
 
 ```
 operator ID2D1DCRenderTarget*();
@@ -181,8 +181,8 @@ operator ID2D1DCRenderTarget*();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na rozhraní ID2D1DCRenderTarget nebo hodnota NULL, pokud objekt ještě není inicializován.
+Ukazatel na rozhraní ID2D1DCRenderTarget nebo NULL, pokud objekt ještě není inicializován.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Třídy](../../mfc/reference/mfc-classes.md)

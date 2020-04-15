@@ -1,5 +1,5 @@
 ---
-title: Cexception – třída
+title: CException – třída
 ms.date: 11/04/2016
 f1_keywords:
 - CException
@@ -12,16 +12,16 @@ helpviewer_keywords:
 - CException [MFC], Delete
 - CException [MFC], ReportError
 ms.assetid: cfacf14d-bfe4-4666-a5c7-38b800512920
-ms.openlocfilehash: 5942e636809e3758f34d209a3da80f0d903ab708
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: c3742db7475e626b18e9c073a0b7417a8034863f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66450361"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373943"
 ---
-# <a name="cexception-class"></a>Cexception – třída
+# <a name="cexception-class"></a>CException – třída
 
-Základní třída pro všechny výjimky knihovny Microsoft Foundation Class.
+Základní třída pro všechny výjimky v knihovně tříd Microsoft Foundation.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,50 +33,50 @@ class AFX_NOVTABLE CException : public CObject
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CException::CException](#cexception)|Vytvoří `CException` objektu.|
+|[CException::CException](#cexception)|Vytvoří `CException` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CException::Delete](#delete)|Odstraní `CException` objektu.|
-|[CException::ReportError](#reporterror)|Sestavy chybová zpráva v okně se zprávou pro uživatele.|
+|[CException::Delete](#delete)|Odstraní `CException` objekt.|
+|[CException::Chyba sestavy](#reporterror)|Nahlásí uživateli chybovou zprávu v poli se zprávou.|
 
 ## <a name="remarks"></a>Poznámky
 
-Protože `CException` je abstraktní základní třídu nelze vytvořit `CException` objekty přímo; je nutné vytvořit objekty odvozené třídy. Pokud je potřeba vytvořit vlastní `CException`– styl třídy, použijte jednu z odvozených tříd uvedených jako model. Ujistěte se, že odvozené třídy také používá `IMPLEMENT_DYNAMIC`.
+Protože `CException` je abstraktní základní třída, nelze vytvářet `CException` objekty přímo; musíte vytvořit objekty odvozených tříd. Pokud potřebujete vytvořit vlastní `CException`třídu stylu, použijte jednu z výše uvedených odvozených tříd jako model. Ujistěte se, že vaše `IMPLEMENT_DYNAMIC`odvozené třídy také používá .
 
 Odvozené třídy a jejich popisy jsou uvedeny níže:
 
 |||
 |-|-|
-|[CSimpleException](../../mfc/reference/csimpleexception-class.md)|Základní třída pro výjimky kritických zdrojů MFC|
-|[CInvalidArgException](../../mfc/reference/cinvalidargexception-class.md)|Podmínku výjimky neplatného argumentu|
-|[CMemoryException](../../mfc/reference/cmemoryexception-class.md)|Výjimka mimo z důvodu nedostatku paměti|
-|[CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md)|Žádost o nepodporovanou operaci|
-|[Carchiveexception –](../../mfc/reference/carchiveexception-class.md)|Archiv specifické výjimky|
-|[CFileException](../../mfc/reference/cfileexception-class.md)|Výjimka konkrétního souboru|
-|[CResourceException](../../mfc/reference/cresourceexception-class.md)|Windows prostředek nebyl nalezen nebo není možné vytvořit|
-|[COleException](../../mfc/reference/coleexception-class.md)|OLE – výjimka|
-|[CDBException](../../mfc/reference/cdbexception-class.md)|Výjimky databáze (to znamená, že výjimka okolnosti, které pro databázových tříd MFC založených na Open Database Connectivity)|
-|[COleDispatchException](../../mfc/reference/coledispatchexception-class.md)|Výjimka odeslání (Automatizace) OLE|
-|[CUserException](../../mfc/reference/cuserexception-class.md)|Výjimka, která označuje, že prostředek nebyl nalezen.|
-|[CDaoException](../../mfc/reference/cdaoexception-class.md)|Objekt výjimky (to znamená, že výjimka okolnosti, které pro třídy DAO) pro přístup k datům|
-|[CInternetException](../../mfc/reference/cinternetexception-class.md)|Výjimka Internetu (to znamená, že výjimka okolnosti, které třídy internetových).|
+|[CSimpleException](../../mfc/reference/csimpleexception-class.md)|Základní třída pro výjimky knihovny MFC kritické pro prostředky|
+|[Výjimka CInvalidargException](../../mfc/reference/cinvalidargexception-class.md)|Neplatná podmínka výjimky argumentu|
+|[Výjimka cmemoryexception](../../mfc/reference/cmemoryexception-class.md)|Výjimka nedostatku paměti|
+|[CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md)|Požadavek na nepodporovanou operaci|
+|[CArchiveException](../../mfc/reference/carchiveexception-class.md)|Výjimka specifická pro archiv|
+|[Výjimka souboru C](../../mfc/reference/cfileexception-class.md)|Výjimka specifická pro soubor|
+|[CVýjimka prostředků](../../mfc/reference/cresourceexception-class.md)|Prostředek systému Windows nebyl nalezen nebo není kreatable|
+|[COleException](../../mfc/reference/coleexception-class.md)|Výjimka OLE|
+|[Výjimka CDB](../../mfc/reference/cdbexception-class.md)|Výjimka databáze (to znamená podmínky výjimky vznikající pro třídy databáze knihovny MFC založené na připojení otevřené databáze)|
+|[Výjimka COleDispatchException](../../mfc/reference/coledispatchexception-class.md)|Výjimka pro odeslání OLE (automatizace)|
+|[Výjimka CUserException](../../mfc/reference/cuserexception-class.md)|Výjimka, která označuje, že prostředek nebyl nalezen.|
+|[Výjimka CDao](../../mfc/reference/cdaoexception-class.md)|Výjimka objektu přístupu k datům (to znamená podmínky výjimky vznikající pro třídy DAO)|
+|[Výjimka CInternet](../../mfc/reference/cinternetexception-class.md)|Internetová výjimka (to znamená podmínky výjimky vznikající pro internetové třídy).|
 
-Tyto výjimky jsou určeny pro použití s [THROW](exception-processing.md#throw), [THROW_LAST](exception-processing.md#throw_last), [zkuste](exception-processing.md#try), [catch](exception-processing.md#catch), [and_catch](exception-processing.md#and_catch), a [end_catch](exception-processing.md#end_catch) makra. Další informace o výjimkách, naleznete v tématu [zpracování výjimek](exception-processing.md), nebo se podívejte článek [zpracování výjimek (MFC)](../exception-handling-in-mfc.md).
+Tyto výjimky jsou určeny pro použití s [makry THROW](exception-processing.md#throw), [THROW_LAST](exception-processing.md#throw_last), [try](exception-processing.md#try), [catch](exception-processing.md#catch), [and_catch](exception-processing.md#and_catch)a [end_catch.](exception-processing.md#end_catch) Další informace o výjimkách naleznete v [tématu Zpracování výjimek](exception-processing.md)nebo v článku [Zpracování výjimek (MFC).](../exception-handling-in-mfc.md)
 
-Chcete-li zachytit specifické výjimky, použijte příslušná odvozená třída. Chcete-li catch, všechny typy výjimek, použijte `CException`a pak použijte [CObject::IsKindOf](cobject-class.md#iskindof) k rozlišení mezi `CException`-odvozené třídy. Všimněte si, že `CObject::IsKindOf` platí jenom pro třídy deklarované s [IMPLEMENT_DYNAMIC](run-time-object-model-services.md#implement_dynamic) – makro, aby bylo možné využít výhod dynamického typu kontroly. Žádné `CException`-odvozené třídy, které vytvoříte, používejte `IMPLEMENT_DYNAMIC` – makro, příliš.
+Chcete-li zachytit konkrétní výjimku, použijte příslušnou odvozenou třídu. Chcete-li zachytit všechny typy `CException`výjimek, použijte a potom použijte [CObject::IsKindOf](cobject-class.md#iskindof) k rozlišení mezi `CException`odvozenými třídami. Všimněte `CObject::IsKindOf` si, že funguje pouze pro třídy deklarované s [makro IMPLEMENT_DYNAMIC,](run-time-object-model-services.md#implement_dynamic) aby bylo možné využít dynamické kontroly typu. Všechny `CException`-odvozené třídy, které `IMPLEMENT_DYNAMIC` vytvoříte by měl použít makro, taky.
 
-Podrobnosti o výjimkách uživateli můžete sestavy voláním [GetErrorMessage](cfileexception-class.md#geterrormessage) nebo [ReportError](#reporterror), dva členské funkce, které pracují s žádným z `CException`v odvozených třídách.
+Podrobnosti o výjimkách pro uživatele můžete hlásit voláním [GetErrorMessage](cfileexception-class.md#geterrormessage) nebo [ReportError](#reporterror), dvou členských funkcí, které pracují s některou z `CException`odvozených tříd společnosti .
 
-Pokud výjimku zachycuje se prostřednictvím jednoho z maker, `CException` objekt automaticky odstraněn, neodstraňujte ho sami. Pokud je výjimka zachycena pomocí **catch** – klíčové slovo, není automaticky odstraněn. Přečtěte si článek [zpracování výjimek (MFC)](../exception-handling-in-mfc.md) Další informace o tom, kdy se odstranit objekt geosyncservice.
+Pokud je výjimka zachycena jedním z `CException` maker, objekt se odstraní automaticky; neodstraňujte jej sami. Pokud je výjimka zachycena pomocí klíčového slova **catch,** není automaticky odstraněna. Další informace o tom, kdy odstranit objekt exeption, naleznete v článku [Zpracování výjimek (MFC).](../exception-handling-in-mfc.md)
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](cobject-class.md)
+[CObjekt](cobject-class.md)
 
 `CException`
 
@@ -84,9 +84,9 @@ Pokud výjimku zachycuje se prostřednictvím jednoho z maker, `CException` obje
 
 **Záhlaví:** afx.h
 
-##  <a name="cexception"></a>  CException::CException
+## <a name="cexceptioncexception"></a><a name="cexception"></a>CException::CException
 
-Tato členská funkce vytvoří `CException` objektu.
+Tato členská funkce `CException` vytvoří objekt.
 
 ```
 explicit CException(BOOL bAutoDelete);
@@ -95,15 +95,15 @@ explicit CException(BOOL bAutoDelete);
 ### <a name="parameters"></a>Parametry
 
 *b_AutoDelete*<br/>
-Zadejte hodnotu PRAVDA, pokud paměť pro `CException` objekt byl přidělen na haldě. To způsobí, že `CException` objektu, který chcete odstranit, když `Delete` členská funkce je volána k odstranění výjimku. Zadejte hodnotu FALSE, pokud `CException` objekt v zásobníku nebo je globální objekt. V tomto případě `CException` objektů nebudou odstraněny při `Delete` členská funkce je volána.
+Zadejte hodnotu TRUE, pokud byla na haldě přidělena paměť `CException` pro objekt. To způsobí, `CException` že objekt, `Delete` který má být odstraněn, když je volána členská funkce k odstranění výjimky. Zadejte hodnotu NEPRAVDA, `CException` pokud je objekt v zásobníku nebo je globálním objektem. V takovém případě `CException` nebude objekt odstraněn `Delete` při volání členské funkce.
 
 ### <a name="remarks"></a>Poznámky
 
-Je třeba obvykle nikdy přímo volání tohoto konstruktoru. Funkce, která vyvolá výjimku, by měl vytvořit instanci `CException`-odvozené třídy a volání konstruktoru, nebo použijte jedno z knihovny MFC vyvoláním funkce, jako například [afxthrowfileexception –](exception-processing.md#afxthrowfileexception), vyvolání předdefinovaný typ. Tato dokumentace je k dispozici pouze pro úplnost.
+Za normálních okolností by nikdy nutné volat tento konstruktor přímo. Funkce, která vyvolá výjimku by měla `CException`vytvořit instanci odvozené třídy a volat jeho konstruktor, nebo by měla použít jednu z funkcí mfc throw, jako je například [AfxThrowFileException](exception-processing.md#afxthrowfileexception), k vyvolání předdefinovaného typu. Tato dokumentace je k dispozici pouze pro úplnost.
 
-##  <a name="delete"></a>  CException::Delete
+## <a name="cexceptiondelete"></a><a name="delete"></a>CException::Delete
 
-Tato funkce zkontroluje, zda `CException` objekt byl vytvořen na haldě, a pokud ano, zavolá **odstranit** operátor v objektu.
+Tato funkce zkontroluje, `CException` zda byl objekt vytvořen na haldě, a pokud ano, volá operátor **delete** na objektu.
 
 ```
 void Delete();
@@ -111,11 +111,11 @@ void Delete();
 
 ### <a name="remarks"></a>Poznámky
 
-Při odstraňování `CException` objektu, použijte `Delete` členská funkce se odstranit výjimky. Nepoužívejte **odstranit** operátor přímo, protože `CException` objekt může být globální objekt nebo byly vytvořeny v zásobníku.
+Při odstraňování objektu `CException` použijte `Delete` členovou funkci k odstranění výjimky. Nepoužívejte operátor **delete** přímo, `CException` protože objekt může být globální objekt nebo byly vytvořeny v zásobníku.
 
-Můžete určit, zda by měl objekt odstranit při vytvoření objektu. Další informace najdete v tématu [CException::CException](#cexception).
+Můžete určit, zda má být objekt odstraněn při vytvoření objektu. Další informace naleznete v [tématu CException::CException](#cexception).
 
-Je třeba volat `Delete` Pokud používáte C++ **zkuste**- **catch** mechanismus. Pokud používáte makra MFC **zkuste** a **CATCH**, pak tato makra bude automaticky voláním této funkce.
+Stačí volat, `Delete` pokud používáte c++ **zkuste**- **catch** mechanismus. Pokud používáte makra knihovny MFC **TRY** a **CATCH**, budou tato makra automaticky volat tuto funkci.
 
 ### <a name="example"></a>Příklad
 
@@ -168,9 +168,9 @@ if (pFile != NULL)
 }
 ```
 
-##  <a name="reporterror"></a>  CException::ReportError
+## <a name="cexceptionreporterror"></a><a name="reporterror"></a>CException::Chyba sestavy
 
-Voláním této členské funkce text chybové zprávy v okně se zprávou pro uživatele.
+Volání této členské funkce pro hlášení textu chyby v poli se zprávou uživateli.
 
 ```
 virtual int ReportError(
@@ -180,19 +180,19 @@ virtual int ReportError(
 
 ### <a name="parameters"></a>Parametry
 
-*nType*<br/>
-Určuje styl okna se zprávou. Použít libovolnou kombinaci [styly oken zpráv](styles-used-by-mfc.md#message-box-styles) do pole. Pokud tento parametr nezadáte, použije se MB_OK.
+*nTyp*<br/>
+Určuje styl okna se zprávou. Použijte libovolnou kombinaci [stylů okno se zprávou](styles-used-by-mfc.md#message-box-styles) do pole. Pokud tento parametr nezadáte, výchozí hodnota je MB_OK.
 
-*nMessageID*<br/>
-Určuje ID prostředku (položky tabulky řetězců) zpráva se zobrazí, pokud objekt výjimky nemá chybovou zprávu. Zobrazí se v případě 0, zpráva "není žádná chybová zpráva k dispozici".
+*nID zprávy*<br/>
+Určuje ID prostředku (položku tabulky řetězců) zprávy, která se má zobrazit, pokud objekt výjimky nemá chybovou zprávu. Pokud 0, zobrazí se zpráva "Není k dispozici žádná chybová zpráva".
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`AfxMessageBox` Hodnotu; jinak 0, pokud není k dispozici dostatek paměti k zobrazení okna se zprávou. Zobrazit [AfxMessageBox](cstring-formatting-and-message-box-display.md#afxmessagebox) pro možných vrácených hodnot.
+Hodnota; `AfxMessageBox` jinak 0, pokud není dostatek paměti pro zobrazení okna se zprávou. Možné vrácené hodnoty naleznete v poli [AfxMessageBox.](cstring-formatting-and-message-box-display.md#afxmessagebox)
 
 ### <a name="example"></a>Příklad
 
-Tady je příklad použití `CException::ReportError`. Další příklad, podívejte se na příklad pro [CATCH](exception-processing.md#catch).
+Zde je příklad použití `CException::ReportError`. Další příklad naleznete v příkladu [catch](exception-processing.md#catch).
 
 ```cpp
 CFile fileInput;
@@ -226,9 +226,9 @@ else
 }
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [CObject – třída](cobject-class.md)<br/>
 [Graf hierarchie](../hierarchy-chart.md)<br/>
 [Zpracování výjimek](exception-processing.md)<br/>
-[Postup: Vytvoření vlastní třídy vlastních výjimek](https://go.microsoft.com/fwlink/p/?linkid=128045)
+[Jak mohu: Vytvořit vlastní vlastní třídy výjimek](https://go.microsoft.com/fwlink/p/?linkid=128045)

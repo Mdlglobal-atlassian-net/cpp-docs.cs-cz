@@ -12,16 +12,16 @@ helpviewer_keywords:
 - stdext::rts_alloc [C++], deallocate
 - stdext::rts_alloc [C++], equals
 ms.assetid: ab41bffa-83d1-4a1c-87b9-5707d516931f
-ms.openlocfilehash: b0ec7d4d3dbe5ef1334bf3c394819a4f5235c28c
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 6ed84d906944a09fa355e281640e9480f3173554
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688985"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373429"
 ---
 # <a name="rts_alloc-class"></a>rts_alloc – třída
 
-Šablona třídy rts_alloc popisuje [Filtr](../standard-library/allocators-header.md) , který obsahuje pole instancí mezipaměti a určuje, která instance má být použita pro přidělení a zrušení přidělení za běhu místo v době kompilace.
+Šablona třídy rts_alloc popisuje [filtr,](../standard-library/allocators-header.md) který obsahuje pole instancí mezipaměti a určuje, kterou instanci použít pro přidělení a deallocation za běhu namísto v době kompilace.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -34,27 +34,27 @@ class rts_alloc
 
 |Parametr|Popis|
 |---------------|-----------------|
-|*Mezipaměť*|Typ instancí mezipaměti obsažených v poli. Může se jednat o [třídu cache_chunklist](../standard-library/cache-chunklist-class.md), [cache_freelist](../standard-library/cache-freelist-class.md)nebo [cache_suballoc](../standard-library/cache-suballoc-class.md).|
+|*Mezipaměť*|Typ instancí mezipaměti obsažených v poli. Může cache_chunklist [třídy](../standard-library/cache-chunklist-class.md), [cache_freelist](../standard-library/cache-freelist-class.md)nebo [cache_suballoc](../standard-library/cache-suballoc-class.md).|
 
 ## <a name="remarks"></a>Poznámky
 
-Tato šablona třídy obsahuje více instancí přidělování bloků a určuje, která instance má být použita pro přidělení nebo zrušení přidělení za běhu místo v době kompilace. Používá se s kompilátory, které nemohou kompilovat opětovnou vazby.
+Tato šablona třídy obsahuje více instancí alokátoru bloku a určuje, kterou instanci použít pro přidělení nebo přidělení za běhu namísto v době kompilace. Používá se s kompilátory, které nelze zkompilovat rebind.
 
 ### <a name="member-functions"></a>Členské funkce
 
 |Členská funkce|Popis|
 |-|-|
 |[allocate](#allocate)|Přidělí blok paměti.|
-|[uvolnit](#deallocate)|Uvolní zadaný počet objektů od úložiště, které začínají na zadané pozici.|
+|[Navrátit](#deallocate)|Uvolní zadaný počet objektů z úložiště začínající na zadané pozici.|
 |[equals](#equals)|Porovná dvě mezipaměti pro rovnost.|
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<allocators >
+**Záhlaví:** \<alokátory>
 
 **Obor názvů:** stdext
 
-## <a name="allocate"></a>rts_alloc:: allocate
+## <a name="rts_allocallocate"></a><a name="allocate"></a>rts_alloc::přidělit
 
 Přidělí blok paměti.
 
@@ -66,7 +66,7 @@ void *allocate(std::size_t count);
 
 |Parametr|Popis|
 |---------------|-----------------|
-|*výpočtu*|Počet prvků v poli, které mají být přiděleny.|
+|*Počet*|Počet prvků v poli, které mají být přiděleny.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -74,11 +74,11 @@ Ukazatel na přidělený objekt.
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrací `caches[_IDX].allocate(count)`, kde `_IDX` indexu je určena požadovaným *počtem*velikostí bloku, nebo pokud je *počet* příliš velký, vrátí `operator new(count)`. `cache`, která představuje objekt mezipaměti.
+Členská funkce `caches[_IDX].allocate(count)`vrátí , `_IDX` kde je index určen požadovaným *počtem*velikostí bloku , `operator new(count)`nebo pokud je *počet* příliš velký, vrátí . `cache`, který představuje objekt mezipaměti.
 
-## <a name="deallocate"></a>rts_alloc::d eallocate
+## <a name="rts_allocdeallocate"></a><a name="deallocate"></a>rts_alloc::deallocate
 
-Uvolní zadaný počet objektů od úložiště, které začínají na zadané pozici.
+Uvolní zadaný počet objektů z úložiště začínající na zadané pozici.
 
 ```cpp
 void deallocate(void* ptr, std::size_t count);
@@ -88,14 +88,14 @@ void deallocate(void* ptr, std::size_t count);
 
 |Parametr|Popis|
 |---------------|-----------------|
-|*ptr*|Ukazatel na první objekt, který má být vrácen z úložiště.|
-|*výpočtu*|Počet objektů, které se mají uvolnit z úložiště|
+|*Ptr*|Ukazatel na první objekt, který má být deallocated z úložiště.|
+|*Počet*|Počet objektů, které mají být deallocated z úložiště.|
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce volá `caches[_IDX].deallocate(ptr, count)`, kde `_IDX` indexu je určena požadovaným *počtem*velikostí bloku, nebo pokud je *počet* příliš velký, vrátí `operator delete(ptr)`.
+Členská funkce `caches[_IDX].deallocate(ptr, count)`volá , `_IDX` kde je index určen *požadovanýpočet*velikosti bloku , `operator delete(ptr)`nebo pokud *počet* je příliš velký, vrátí .
 
-## <a name="equals"></a>rts_alloc:: Equals
+## <a name="rts_allocequals"></a><a name="equals"></a>rts_alloc::rovná se
 
 Porovná dvě mezipaměti pro rovnost.
 
@@ -108,13 +108,13 @@ bool equals(const sync<_Cache>& _Other) const;
 |Parametr|Popis|
 |---------------|-----------------|
 |*_Cache*|Objekt mezipaměti přidružený k filtru.|
-|*_Other*|Objekt mezipaměti, který se má porovnat s rovností.|
+|*_Other*|Objekt mezipaměti porovnat rovnost.|
 
 ### <a name="remarks"></a>Poznámky
 
-**true** , pokud výsledek `caches[0].equals(other.caches[0])`; v opačném případě **false**. `caches` představuje pole objektů mezipaměti.
+**true,** pokud `caches[0].equals(other.caches[0])`výsledek ; jinak **false**. `caches`představuje pole objektů mezipaměti.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl) \
-[\<allocators >](../standard-library/allocators-header.md)
+[ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl)\
+[\<alokátory>](../standard-library/allocators-header.md)

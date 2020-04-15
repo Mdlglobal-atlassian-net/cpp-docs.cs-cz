@@ -8,33 +8,33 @@ helpviewer_keywords:
 - SQL calls
 - direct SQL calls from ODBC
 ms.assetid: 091988d2-f5a5-4c2d-aa09-8779a9fb9607
-ms.openlocfilehash: 9240a227cdc4004d1e6e2b7ac26946ca233b71ec
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: e2421e047d217fdc7a138509385399fa37d36a1f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80212625"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374502"
 ---
 # <a name="sql-making-direct-sql-calls-odbc"></a>SQL: Přímá volání SQL (ODBC)
 
 Toto téma vysvětluje:
 
-- Kdy použít Přímá volání SQL.
+- Kdy použít přímá volání SQL.
 
-- [Jak provedete Přímá volání SQL ke zdroji dat](#_core_making_direct_sql_function_calls).
+- [Jak provádět přímé volání SQL ke zdroji dat](#_core_making_direct_sql_function_calls).
 
 > [!NOTE]
->  Tyto informace se vztahují na třídy knihovny MFC rozhraní ODBC. Pokud pracujete s třídami knihovny MFC DAO, přečtěte si téma "porovnání databáze Microsoft Jet Database Engine SQL a ANSI SQL" v nápovědě rozhraní DAO.
+> Tyto informace platí pro třídy Knihovny MFC ODBC. Pokud pracujete s třídami MFC DAO, přečtěte si téma "Porovnání Microsoft Jet Database Engine SQL a ANSI SQL" v nápovědě DAO.
 
-##  <a name="when-to-call-sql-directly"></a><a name="_core_when_to_call_sql_directly"></a>Kdy přímo volat SQL
+## <a name="when-to-call-sql-directly"></a><a name="_core_when_to_call_sql_directly"></a>Kdy volat přímo SQL
 
-Chcete-li vytvořit nové tabulky, vyřadit (odstranit) tabulky, měnit existující tabulky, vytvářet indexy a provádět další funkce SQL, které mění schéma [zdroje dat (ODBC)](../../data/odbc/data-source-odbc.md) , je nutné vystavit příkaz SQL přímo ke zdroji dat pomocí jazyka DDL (Database Definition Language). Když použijete průvodce k vytvoření sady záznamů pro tabulku (v době návrhu), můžete vybrat, které sloupce tabulky se reprezentují v sadě záznamů. To neumožňuje, aby sloupce, které jste vy nebo jiný uživatel zdroje dat přidali do tabulky později, po zkompilování programu. Databázové třídy nepodporují DDL přímo, ale přesto můžete napsat kód pro svázání nového sloupce s vaší sadou záznamů v době běhu. Informace o tom, jak tuto vazbu provést, naleznete v tématu [Sada záznamů: dynamické vazby datových sloupců (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md).
+Chcete-li vytvořit nové tabulky, přetáhnout (odstranit) tabulky, změnit existující tabulky, vytvořit indexy a provádět další funkce SQL, které mění schéma [zdroje dat (ODBC),](../../data/odbc/data-source-odbc.md) musíte vydat příkaz SQL přímo do zdroje dat pomocí jazyka DDL (Database Definition Language). Při použití průvodce k vytvoření sady záznamů pro tabulku (v době návrhu) můžete zvolit, které sloupce tabulky budou v sadě záznamů představovat. To neumožňuje sloupce vy nebo jiný uživatel zdroje dat přidat do tabulky později, po zkompilování programu. Třídy databáze nepodporují DDL přímo, ale stále můžete napsat kód svázat nový sloupec na sadu záznamů dynamicky, v době běhu. Informace o tom, jak provést tuto vazbu, naleznete v [tématu Recordset: Dynamicky vazebné datové sloupce (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md).
 
-Můžete použít samotný systém DBMS pro změnu schématu nebo jiného nástroje, který umožňuje provádění funkcí DDL. Můžete také použít volání funkcí rozhraní ODBC pro odeslání příkazů jazyka SQL, například volání předdefinovaného dotazu (uložené procedury), který nevrací záznamy.
+Samotný systém DBMS můžete použít ke změně schématu nebo jiného nástroje, který umožňuje provádět funkce DDL. Můžete také použít volání funkce ROZHRANÍ ODBC pro odesílání příkazů SQL, jako je například volání předdefinovaného dotazu (uložená procedura), který nevrací záznamy.
 
-##  <a name="making-direct-sql-function-calls"></a><a name="_core_making_direct_sql_function_calls"></a>Vytváření přímých volání funkcí SQL
+## <a name="making-direct-sql-function-calls"></a><a name="_core_making_direct_sql_function_calls"></a>Volání funkcí direct SQL
 
-Můžete přímo spustit volání SQL pomocí objektu [třídy CDatabase](../../mfc/reference/cdatabase-class.md) . Nastavte řetězec příkazu SQL (obvykle ve `CString`) a předejte ho do členské funkce [CDatabase:: ExecuteSQL](../../mfc/reference/cdatabase-class.md#executesql) vašeho objektu `CDatabase`. Pokud používáte volání funkcí rozhraní ODBC k odeslání příkazu jazyka SQL, který obvykle vrací záznamy, záznamy budou ignorovány.
+Můžete přímo spustit volání SQL pomocí [cdatabase třídy](../../mfc/reference/cdatabase-class.md) objektu. Nastavte řetězec příkazu `CString`SQL (obvykle v ) a předejte jej členské funkci [CDatabase::ExecuteSQL](../../mfc/reference/cdatabase-class.md#executesql) vašeho `CDatabase` objektu. Pokud používáte volání funkce ODBC k odeslání příkazu SQL, který obvykle vrací záznamy, budou záznamy ignorovány.
 
 ## <a name="see-also"></a>Viz také
 

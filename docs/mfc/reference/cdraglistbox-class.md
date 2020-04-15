@@ -1,5 +1,5 @@
 ---
-title: Cdraglistbox – třída
+title: Třída CDragListBox
 ms.date: 11/04/2016
 f1_keywords:
 - CDragListBox
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - CDragListBox [MFC], Dropped
 - CDragListBox [MFC], ItemFromPt
 ms.assetid: fee20b42-60ae-4aa9-83f9-5a3d9b96e33b
-ms.openlocfilehash: d8afc5b14f5f52ca7a4d28a3d3c3c5440b7c819f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0d1ae94948e1143a5bac17985423c4bd1bfbaf65
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62164043"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374033"
 ---
-# <a name="cdraglistbox-class"></a>Cdraglistbox – třída
+# <a name="cdraglistbox-class"></a>Třída CDragListBox
 
-Kromě zajištění funkcí seznamu Windows, `CDragListBox` třída umožňuje uživateli seznam položek pole, jako jsou názvy souborů, přesouvat v rámci pole se seznamem.
+Kromě poskytování funkcí seznamu systému Windows `CDragListBox` umožňuje třída uživateli přesunout položky seznamu, například názvy souborů, v seznamu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,38 +41,38 @@ class CDragListBox : public CListBox
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CDragListBox::CDragListBox](#cdraglistbox)|Vytvoří `CDragListBox` objektu.|
+|[CDragListBox::CDragListBox](#cdraglistbox)|Vytvoří `CDragListBox` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CDragListBox::BeginDrag](#begindrag)|Volá se rozhraním, když začne operace přetažení.|
-|[CDragListBox::CancelDrag](#canceldrag)|Volá se rozhraním, když operace přetažení zruší.|
-|[CDragListBox::Dragging](#dragging)|Volá se rozhraním, během operace přetažení.|
-|[CDragListBox::DrawInsert](#drawinsert)|Vykreslí se vykreslilo vodítko přetáhněte pole se seznamem.|
-|[CDragListBox::Dropped](#dropped)|Volá se rozhraním po položce byla vyřazena.|
-|[CDragListBox::ItemFromPt](#itemfrompt)|Vrátí souřadnice položky právě přetáhli.|
+|[CDragListBox::BeginDrag](#begindrag)|Volat rámci při spuštění operace přetažení.|
+|[CDragListBox::CancelDrag](#canceldrag)|Volat rámci při operaci přetažení byla zrušena.|
+|[CDragListBox::Dragging](#dragging)|Volat rámci během operace přetažení.|
+|[CDragListBox::DrawInsert](#drawinsert)|Nakreslí vodítko pro vložení seznamu přetažení.|
+|[CDragListBox::D](#dropped)|Volat rámci po položka byla vynechána.|
+|[CDragListBox::ItemFrompt](#itemfrompt)|Vrátí souřadnice přetahované položky.|
 
 ## <a name="remarks"></a>Poznámky
 
-Pole se seznamem díky tomu umožňuje uživatelům pořadí položek v seznamu v jakýmkoli způsobem je pro ně nejvhodnější. Ve výchozím nastavení bude pole se seznamem přesunout položku do nového umístění v seznamu. Ale `CDragListBox` objekty lze přizpůsobit, aby kopírovat položky místo jejich přesunutí.
+Seznamy s touto funkcí umožňují uživatelům objednat položky v seznamu jakýmkoli způsobem, který je pro ně nejužitečnější. Ve výchozím nastavení bude seznam přesunout položku do nového umístění v seznamu. Objekty `CDragListBox` však lze přizpůsobit tak, aby zkopírovaly položky namísto jejich přesouvání.
 
-Přidružený ovládací prvek seznam `CDragListBox` třída nesmí mít LBS_SORT nebo styl LBS_MULTIPLESELECT. Popis seznamu styly, naleznete v tématu [styly seznamů](../../mfc/reference/styles-used-by-mfc.md#list-box-styles).
+Ovládací prvek seznamu přidružený `CDragListBox` ke třídě nesmí obsahovat LBS_SORT nebo LBS_MULTIPLESELECT stylu. Popis stylů seznamu naleznete v tématu [Styly seznamu](../../mfc/reference/styles-used-by-mfc.md#list-box-styles).
 
-Použití seznamu přetáhněte v existující dialogové okno s vaší aplikace, do šablony dialogového okna pomocí editoru dialogového okna přidat ovládací prvek seznamu a pak přiřaďte členské proměnné (kategorie `Control` a proměnné typu `CDragListBox`) odpovídající pole se seznamem ovládací prvek v šabloně dialogu.
+Chcete-li použít seznam přetažení v existujícím dialogovém okně aplikace, přidejte ovládací prvek seznamu do šablony dialogového okna pomocí editoru dialogů a přiřaďte členská proměnná (Kategorie `Control` a Typ `CDragListBox`proměnné) odpovídající ovládacímu prvku seznamu v šabloně dialogového okna.
 
-Další informace o přiřazování k proměnné členů ovládacích prvků naleznete v tématu [klávesovou zkratku pro definování členských proměnných pro ovládací prvky dialogového okna](../../windows/defining-member-variables-for-dialog-controls.md).
+Další informace o přiřazování ovládacích prvků členským proměnným naleznete v [tématu Zástupce pro definování členských proměnných pro ovládací prvky dialogových dialogů](../../windows/defining-member-variables-for-dialog-controls.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObjekt](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[CCmdCíl](../../mfc/reference/ccmdtarget-class.md)
 
-[CWnd](../../mfc/reference/cwnd-class.md)
+[Cwnd](../../mfc/reference/cwnd-class.md)
 
 [CListBox](../../mfc/reference/clistbox-class.md)
 
@@ -82,9 +82,9 @@ Další informace o přiřazování k proměnné členů ovládacích prvků nal
 
 **Záhlaví:** afxcmn.h
 
-##  <a name="begindrag"></a>  CDragListBox::BeginDrag
+## <a name="cdraglistboxbegindrag"></a><a name="begindrag"></a>CDragListBox::BeginDrag
 
-Volá framework při výskytu události, která by mohla spustit operaci přetažení, jako je například stisknutí levého tlačítka myši.
+Volat rámci při dojde k události, která by mohla zahájit operaci přetažení, jako je například stisknutí levého tlačítka myši.
 
 ```
 virtual BOOL BeginDrag(CPoint pt);
@@ -92,20 +92,20 @@ virtual BOOL BeginDrag(CPoint pt);
 
 ### <a name="parameters"></a>Parametry
 
-*pt*<br/>
-A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objekt, který obsahuje souřadnice položky právě přetáhli.
+*Pt*<br/>
+[CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objekt, který obsahuje souřadnice položky přetahované.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud přetažení je povoleno, jinak 0.
+Nenulová, pokud je přetažení povoleno, jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce přepište, pokud chcete řídit, co se stane, když začne operace přetažení. Výchozí implementace zachytí myš a zůstane v režimu přetažení, dokud uživatel stiskne tlačítko myši doleva nebo doprava nebo stiskne klávesu ESC, které během operace přetažení zrušena.
+Přepsat tuto funkci, pokud chcete řídit, co se stane při zahájení operace přetažení. Výchozí implementace zachytí myš a zůstane v režimu přetažení, dokud uživatel neklepne na levé nebo pravé tlačítko myši nebo stiskne ESC, kdy je operace přetažení zrušena.
 
-##  <a name="canceldrag"></a>  CDragListBox::CancelDrag
+## <a name="cdraglistboxcanceldrag"></a><a name="canceldrag"></a>CDragListBox::CancelDrag
 
-Volá se rozhraním, když operace přetažení zruší.
+Volat rámci při operaci přetažení byla zrušena.
 
 ```
 virtual void CancelDrag(CPoint pt);
@@ -113,24 +113,24 @@ virtual void CancelDrag(CPoint pt);
 
 ### <a name="parameters"></a>Parametry
 
-*pt*<br/>
-A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objekt, který obsahuje souřadnice položky právě přetáhli.
+*Pt*<br/>
+[CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objekt, který obsahuje souřadnice položky přetahované.
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto funkci pro zpracování všechna speciální zpracování pro ovládací prvek seznamu pole.
+Přepsat tuto funkci pro zpracování jakékoli speciální zpracování pro ovládací prvek seznamu.
 
-##  <a name="cdraglistbox"></a>  CDragListBox::CDragListBox
+## <a name="cdraglistboxcdraglistbox"></a><a name="cdraglistbox"></a>CDragListBox::CDragListBox
 
-Vytvoří `CDragListBox` objektu.
+Vytvoří `CDragListBox` objekt.
 
 ```
 CDragListBox();
 ```
 
-##  <a name="dragging"></a>  CDragListBox::Dragging
+## <a name="cdraglistboxdragging"></a><a name="dragging"></a>CDragListBox::Dragging
 
-Volá se rozhraním, když se ocitne položky seznamu v rámci `CDragListBox` objektu.
+Volat rámci při přetahování položky seznamu `CDragListBox` v rámci objektu.
 
 ```
 virtual UINT Dragging(CPoint pt);
@@ -138,26 +138,26 @@ virtual UINT Dragging(CPoint pt);
 
 ### <a name="parameters"></a>Parametry
 
-*pt*<br/>
-A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objekt, který obsahuje x a y obrazovky souřadnice kurzoru.
+*Pt*<br/>
+[CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objekt, který obsahuje x a y souřadnice obrazovky kurzoru.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-ID prostředku kurzoru, který se má zobrazit. Možné jsou následující hodnoty:
+ID prostředku kurzoru, který má být zobrazen. Jsou možné následující hodnoty:
 
-- DL_COPYCURSOR označuje, že bude položka zkopírována.
+- DL_COPYCURSOR Označuje, že položka bude zkopírována.
 
-- DL_MOVECURSOR označuje, že položka bude přesunut.
+- DL_MOVECURSOR Označuje, že položka bude přesunuta.
 
-- DL_STOPCURSOR označuje, že aktuální cíl přetažení je nepřijatelné.
+- DL_STOPCURSOR Označuje, že aktuální cíl přetažení není přijatelné.
 
 ### <a name="remarks"></a>Poznámky
 
-Výchozí chování vrátí DL_MOVECURSOR. Tato funkce přepište, pokud chcete poskytovat další funkce.
+Výchozí chování vrátí DL_MOVECURSOR. Přepsat tuto funkci, pokud chcete poskytnout další funkce.
 
-##  <a name="drawinsert"></a>  CDragListBox::DrawInsert
+## <a name="cdraglistboxdrawinsert"></a><a name="drawinsert"></a>CDragListBox::DrawInsert
 
-Volá se rozhraním, aby se vykreslilo vodítko před položkou s uvedeným indexem.
+Volat rámci nakreslit vodítko vložení před položku s uvedeným indexem.
 
 ```
 virtual void DrawInsert(int nItem);
@@ -165,16 +165,16 @@ virtual void DrawInsert(int nItem);
 
 ### <a name="parameters"></a>Parametry
 
-*nItem*<br/>
-Index založený na nule kurzor.
+*nPoložka*<br/>
+Nulový index kurzoru.
 
 ### <a name="remarks"></a>Poznámky
 
-Hodnota - 1 vymaže se vykreslilo vodítko ukazatele. Přepsání této funkce můžete změnit vzhled nebo chování se vykreslilo vodítko ukazatele.
+Hodnota - 1 vymaže vodítko vložení. Přepsáním této funkce můžete upravit vzhled nebo chování vodítka vložení.
 
-##  <a name="dropped"></a>  CDragListBox::Dropped
+## <a name="cdraglistboxdropped"></a><a name="dropped"></a>CDragListBox::D
 
-Volá se rozhraním při přetažení položky v rámci `CDragListBox` objektu.
+Volat rámci při položka je vynechána v rámci objektu. `CDragListBox`
 
 ```
 virtual void Dropped(
@@ -185,18 +185,18 @@ virtual void Dropped(
 ### <a name="parameters"></a>Parametry
 
 *nSrcIndex*<br/>
-Určuje index založený na nule vynechaných řetězec.
+Určuje nulový index vynechaného řetězce.
 
-*pt*<br/>
-A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objekt, který obsahuje souřadnice místa přetažení.
+*Pt*<br/>
+[CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objekt, který obsahuje souřadnice přetažení webu.
 
 ### <a name="remarks"></a>Poznámky
 
-Výchozí chování zkopíruje položky seznamu a její data do nového umístění a poté odstraní původní položka. Přepsání této funkce můžete přizpůsobit výchozí chování, například povolení kopie seznam položek pole přetáhnout do jiných umístění v rámci seznamu.
+Výchozí chování zkopíruje položku seznamu a její data do nového umístění a odstraní původní položku. Přepsáním této funkce můžete přizpůsobit výchozí chování, například povolit přetažení kopií položek seznamu do jiných umístění v seznamu.
 
-##  <a name="itemfrompt"></a>  CDragListBox::ItemFromPt
+## <a name="cdraglistboxitemfrompt"></a><a name="itemfrompt"></a>CDragListBox::ItemFrompt
 
-Volání této funkce načtete index založený na nule položky seznamu nachází v *pt*.
+Volánítéto funkce načíst nula index položky seznamu umístěné na *pt*.
 
 ```
 int ItemFromPt(
@@ -206,19 +206,19 @@ int ItemFromPt(
 
 ### <a name="parameters"></a>Parametry
 
-*pt*<br/>
-A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objekt, který obsahuje souřadnice bodu v rámci tohoto pole se seznamem.
+*Pt*<br/>
+[CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objekt obsahující souřadnice bodu v seznamu.
 
-*bAutoScroll*<br/>
-Nenulové, pokud posouvání je povoleno, jinak 0.
+*bAutomatický posun*<br/>
+Nenulová, pokud je povoleno posouvání, jinak 0.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Z nuly vycházející index položky seznamu přetažení.
+Nulový index položky seznamu přetažení.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Ukázky knihovny MFC lze kontejner TSTCON](../../overview/visual-cpp-samples.md)<br/>
+[Ukázka knihovny MFC TSTCON](../../overview/visual-cpp-samples.md)<br/>
 [CListBox – třída](../../mfc/reference/clistbox-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [CListBox – třída](../../mfc/reference/clistbox-class.md)
