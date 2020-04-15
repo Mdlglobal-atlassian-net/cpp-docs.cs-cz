@@ -1,5 +1,5 @@
 ---
-title: Cmfcribboncombobox – třída
+title: Třída CMFCRibbonComboBox
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCRibbonComboBox
@@ -40,20 +40,20 @@ helpviewer_keywords:
 - CMFCRibbonComboBox [MFC], SelectItem
 - CMFCRibbonComboBox [MFC], SetDropDownHeight
 ms.assetid: 9b29a6a4-cf17-4152-9b13-0bf90784b30d
-ms.openlocfilehash: 89007ea3eb7fd0aef28caadf439195b4090a05d8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5846b1c5590a756f0a0820583af3d0b159968ea2
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62237320"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375230"
 ---
-# <a name="cmfcribboncombobox-class"></a>Cmfcribboncombobox – třída
+# <a name="cmfcribboncombobox-class"></a>Třída CMFCRibbonComboBox
 
-`CMFCRibbonComboBox` Třída implementuje ovládací prvek pole se seznamem, který lze přidat na panel pásu karet, panel pásu karet nebo nabídky pásu karet.
+Třída `CMFCRibbonComboBox` implementuje ovládací prvek pole se seznamem, který můžete přidat na panel pásu karet, panel pásu karet nebo místní nabídku pásu karet.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 class CMFCRibbonComboBox : public CMFCRibbonEdit
 ```
 
@@ -61,50 +61,50 @@ class CMFCRibbonComboBox : public CMFCRibbonEdit
 
 ### <a name="constructors"></a>Konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CMFCRibbonComboBox::CMFCRibbonComboBox](#cmfcribboncombobox)|Vytvoří objekt cmfcribboncombobox –.|
+|[CMFCRibbonComboBox::CMFCRibbonComboBox](#cmfcribboncombobox)|Vytvoří objekt CMFCRibbonComboBox.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CMFCRibbonComboBox::AddItem](#additem)|Připojí jedinečný položky pole se seznamem.|
+|[CMFCRibbonComboBox::Přidatpoložku](#additem)|Připojí jedinečnou položku do seznamu.|
 |[CMFCRibbonComboBox::DeleteItem](#deleteitem)|Odstraní zadanou položku ze seznamu.|
-|[CMFCRibbonComboBox::EnableDropDownListResize](#enabledropdownlistresize)|Určuje, zda pole se seznamem můžete změnit velikost, když se rozbalí.|
-|[CMFCRibbonComboBox::FindItem](#finditem)|Vrátí index první položky v seznamu, který se shoduje se zadaným řetězcem.|
+|[CMFCRibbonComboBox::EnableDropDownListResize](#enabledropdownlistresize)|Určuje, zda může seznam změnit velikost, když klesne dolů.|
+|[CMFCRibbonComboBox::FindItem](#finditem)|Vrátí index první položky v seznamu, který odpovídá zadanému řetězci.|
 |[CMFCRibbonComboBox::GetCount](#getcount)|Vrátí počet položek v seznamu.|
 |[CMFCRibbonComboBox::GetCurSel](#getcursel)|Získá index aktuálně vybrané položky v seznamu.|
-|[CMFCRibbonComboBox::GetDropDownHeight](#getdropdownheight)|Získává výšku objektu pole se seznamem, když se rozbalil pole se seznamem.|
-|[CMFCRibbonComboBox::GetIntermediateSize](#getintermediatesize)|Jak se zobrazuje v režimu zprostředkující vrátí velikost položky pole se seznamem.|
-|[CMFCRibbonComboBox::GetItem](#getitem)|Vrací řetězec přidružený k položce na zadaném indexu v seznamu.|
-|[CMFCRibbonComboBox::GetItemData](#getitemdata)|Vrátí data související s položkou v zadaném indexu v seznamu.|
-|[CMFCRibbonComboBox::HasEditBox](#haseditbox)|Určuje, zda ovládací prvek obsahuje textové pole.|
-|[CMFCRibbonComboBox::IsResizeDropDownList](#isresizedropdownlist)|Určuje, zda můžete změnit velikost pole se seznamem.|
-|[CMFCRibbonComboBox::OnSelectItem](#onselectitem)|Volá se rozhraním, když uživatel vybere položku v seznamu.|
-|[CMFCRibbonComboBox::RemoveAllItems](#removeallitems)|Odstraní všechny položky ze seznamu a vymaže pole pro úpravy.|
+|[CMFCRibbonComboBox::GetDropDownHeight](#getdropdownheight)|Získá výšku seznamu při seznamu je spadl dolů.|
+|[CMFCRibbonComboBox::GetIntermediateSize](#getintermediatesize)|Vrátí velikost pole se seznamem zobrazenou v mezilehlém režimu.|
+|[CMFCRibbonComboBox::GetItem](#getitem)|Vrátí řetězec přidružený k položce v zadaném indexu v seznamu.|
+|[CMFCRibbonComboBox::GetItemData](#getitemdata)|Vrátí data přidružená k položce v zadaném indexu v seznamu.|
+|[CMFCRibbonComboBox::HasEditBox](#haseditbox)|Označuje, zda ovládací prvek obsahuje textové pole.|
+|[CMFCRibbonComboBox::IsResizeDropDownList](#isresizedropdownlist)|Označuje, zda lze velikost seznamu velikost i v seznamu.|
+|[CMFCRibbonComboBox::OnSelectItem](#onselectitem)|Volat rámci při uživatel vybere položku v seznamu.|
+|[CMFCRibbonComboBox::Odstranitvšechny položky](#removeallitems)|Odstraní všechny položky ze seznamu a vymaže pole pro úpravy.|
 |[CMFCRibbonComboBox::SelectItem](#selectitem)|Vybere položku v seznamu.|
-|[CMFCRibbonComboBox::SetDropDownHeight](#setdropdownheight)|Výška pole se seznamem nastaví, když se rozbalil.|
+|[CMFCRibbonComboBox::SetDropDownHeight](#setdropdownheight)|Nastaví výšku seznamu, když je spadl dolů.|
 
 ## <a name="remarks"></a>Poznámky
 
-Pole se seznamem pásu karet se skládá z pole se seznamem v kombinaci se statický popisek nebo popisek, který může být upraven uživatelem. Je nutné zadat typ chcete, aby při vytváření vašeho – pole se seznamem pásu karet.
+Pole se seznamem na pásu karet se skládá ze seznamu v kombinaci se statickým popiskem nebo popiskem, který může uživatel upravovat. Při vytváření pole se seznamem na pásu karet je nutné určit, který typ chcete zadat.
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak vytvořit objekt `CMFCRibbonComboBox` třídy, přidejte položku do pole se seznamem, vyberte položku v poli se seznamem a přidejte pole se seznamem na panel.
+Následující příklad ukazuje, jak vytvořit objekt `CMFCRibbonComboBox` třídy, přidat položku do pole se seznamem, vybrat položku v poli se seznamem a přidat pole se seznamem do panelu.
 
 [!code-cpp[NVC_MFC_RibbonApp#11](../../mfc/reference/codesnippet/cpp/cmfcribboncombobox-class_1.cpp)]
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObjekt](../../mfc/reference/cobject-class.md)
 
-[Cmfcribbonbaseelement –](../../mfc/reference/cmfcribbonbaseelement-class.md)
+[CMFC4RibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)
 
-[CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md)
+[CmFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md)
 
-[CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md)
+[CMFCRibbon](../../mfc/reference/cmfcribbonedit-class.md)
 
 [CMFCRibbonComboBox](../../mfc/reference/cmfcribboncombobox-class.md)
 
@@ -112,11 +112,11 @@ Následující příklad ukazuje, jak vytvořit objekt `CMFCRibbonComboBox` tř�
 
 **Záhlaví:** afxribboncombobox.h
 
-##  <a name="additem"></a>  CMFCRibbonComboBox::AddItem
+## <a name="cmfcribboncomboboxadditem"></a><a name="additem"></a>CMFCRibbonComboBox::Přidatpoložku
 
-Připojí jedinečný položky pole se seznamem.
+Připojí jedinečnou položku do seznamu.
 
-```
+```cpp
 virtual INT_PTR AddItem(
     LPCTSTR lpszItem,
     DWORD_PTR dwData=0);
@@ -124,21 +124,21 @@ virtual INT_PTR AddItem(
 
 ### <a name="parameters"></a>Parametry
 
-*lpszItem*<br/>
-[in] Řetězec položky pro přidání.
+*lpszPoložka*<br/>
+[v] Řetězec položky, kterou chcete přidat.
 
 *dwData*<br/>
-[in] Data přidružená k položka k přidání.
+[v] Data přidružená k položce, kterou chcete přidat.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Index založený na nule připojené položky.
+Nulový index připojené položky.
 
-##  <a name="cmfcribboncombobox"></a>  CMFCRibbonComboBox::CMFCRibbonComboBox
+## <a name="cmfcribboncomboboxcmfcribboncombobox"></a><a name="cmfcribboncombobox"></a>CMFCRibbonComboBox::CMFCRibbonComboBox
 
-Vytvoří `CMFCRibbonComboBox` objektu.
+Vytvoří `CMFCRibbonComboBox` objekt.
 
-```
+```cpp
 public:
 CMFCRibbonComboBox(
     UINT nID,
@@ -153,30 +153,30 @@ CMFCRibbonComboBox();
 
 ### <a name="parameters"></a>Parametry
 
-*nID*<br/>
-[in] ID pole se seznamem.
+*Nid*<br/>
+[v] ID pole se seznamem.
 
 *bHasEditBox*<br/>
-[in] Hodnota TRUE, pokud chcete, aby do textového pole v ovládacím prvku; FALSE v opačném případě.
+[v] TRUE, pokud chcete upravit pole v ovládacím prvku; FALSE jinak.
 
-*nWidth*<br/>
-[in] Šířka v pixelech; pole se seznamem nebo -1 pro výchozí šířky.
+*nŠířka*<br/>
+[v] Šířka pole se seznamem v pixelech; nebo -1 pro výchozí šířku.
 
-*lpszLabel*<br/>
-[in] Zobrazit popisek pole se seznamem.
+*popisek lpsz*<br/>
+[v] Popisek displeje pole se seznamem.
 
-*nImage*<br/>
-[in] Malý obrázek indexu pole se seznamem.
+*nObrázek*<br/>
+[v] Malý index obrázku pole se seznamem.
 
 ### <a name="remarks"></a>Poznámky
 
 Výchozí šířka je 108 pixelů.
 
-##  <a name="deleteitem"></a>  CMFCRibbonComboBox::DeleteItem
+## <a name="cmfcribboncomboboxdeleteitem"></a><a name="deleteitem"></a>CMFCRibbonComboBox::DeleteItem
 
 Odstraní zadanou položku ze seznamu.
 
-```
+```cpp
 BOOL DeleteItem(int iIndex);
 BOOL DeleteItem(DWORD_PTR dwData);
 
@@ -186,108 +186,108 @@ BOOL DeleteItem(LPCTSTR lpszText);
 ### <a name="parameters"></a>Parametry
 
 *iIndex*<br/>
-[in] Index založený na nule položka, která má být odstraněna.
+[v] Index na základě nuly položky, která má být odstraněna.
 
 *dwData*<br/>
-[in] Data přidružená k položka, která má být odstraněna.
+[v] Data přidružená k položce, která má být odstraněna.
 
 *lpszText*<br/>
-[in] Řetězec položky, která má být odstraněna. Pokud existuje více položek s do jednoho řetězce, odstraní se první položky.
+[v] Řetězec položky, která má být odstraněna. Pokud existuje více položek se stejným řetězcem, první položka je odstraněna.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE, pokud zadaná položka je Odstraněná; v opačném případě hodnota FALSE.
+PRAVDA, pokud byla zadaná položka odstraněna; jinak NEPRAVDA.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="enabledropdownlistresize"></a>  CMFCRibbonComboBox::EnableDropDownListResize
+## <a name="cmfcribboncomboboxenabledropdownlistresize"></a><a name="enabledropdownlistresize"></a>CMFCRibbonComboBox::EnableDropDownListResize
 
-Určuje, zda pole se seznamem můžete změnit velikost, když se rozbalí.
+Určuje, zda může seznam změnit velikost, když klesne dolů.
 
-```
+```cpp
 void EnableDropDownListResize(BOOL bEnable=FALSE);
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *bEnable*<br/>
-[in] Pokud chcete povolit změnu velikosti; FALSE, pokud chcete zakázat změnu velikosti.
+[v] TRUE pro povolení změna velikosti; NEPRAVDA pro zakázání velikosti.
 
 ### <a name="remarks"></a>Poznámky
 
-Při změně velikosti je povoleno, bude pole se seznamem změnit velikost položkám, které se zobrazí.
+Pokud je změna velikosti povolena, změní se v seznamu velikost tak, aby odpovídala zobrazené položkám.
 
-##  <a name="finditem"></a>  CMFCRibbonComboBox::FindItem
+## <a name="cmfcribboncomboboxfinditem"></a><a name="finditem"></a>CMFCRibbonComboBox::FindItem
 
-Vrátí index první položky v seznamu, který se shoduje se zadaným řetězcem.
+Vrátí index první položky v seznamu, který odpovídá zadanému řetězci.
 
-```
+```cpp
 int FindItem(LPCTSTR lpszText) const;
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *lpszText*<br/>
-[in] Řetězec položky v seznamu.
+[v] Řetězec položky v seznamu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Z nuly vycházející index položky; nebo -1, pokud položka není nalezena.
+Index na základě nuly položky; nebo -1, pokud položka není nalezena.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="getcount"></a>  CMFCRibbonComboBox::GetCount
+## <a name="cmfcribboncomboboxgetcount"></a><a name="getcount"></a>CMFCRibbonComboBox::GetCount
 
 Vrátí počet položek v seznamu.
 
-```
+```cpp
 INT_PTR GetCount() const;
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Počet položek v seznamu, nebo 0, pokud neobsahuje žádné položky pole se seznamem.
+Počet položek v seznamu nebo 0, pokud seznam neobsahuje žádné položky.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="getcursel"></a>  CMFCRibbonComboBox::GetCurSel
+## <a name="cmfcribboncomboboxgetcursel"></a><a name="getcursel"></a>CMFCRibbonComboBox::GetCurSel
 
 Získá index aktuálně vybrané položky v seznamu.
 
-```
+```cpp
 int GetCurSel() const;
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Z nuly vycházející index aktuálně vybrané položky v seznamu pole. nebo -1, pokud není vybrána žádná položka.
+Nulový index aktuálně vybrané položky v seznamu; nebo -1, pokud není vybrána žádná položka.
 
-##  <a name="getdropdownheight"></a>  CMFCRibbonComboBox::GetDropDownHeight
+## <a name="cmfcribboncomboboxgetdropdownheight"></a><a name="getdropdownheight"></a>CMFCRibbonComboBox::GetDropDownHeight
 
-Získává výšku objektu pole se seznamem, když se rozbalil pole se seznamem.
+Získá výšku seznamu při seznamu je spadl dolů.
 
-```
+```cpp
 int GetDropDownHeight();
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Výška v pixelech, pole se seznamem.
+Výška v pixelech seznamu.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="getintermediatesize"></a>  CMFCRibbonComboBox::GetIntermediateSize
+## <a name="cmfcribboncomboboxgetintermediatesize"></a><a name="getintermediatesize"></a>CMFCRibbonComboBox::GetIntermediateSize
 
-Jak se zobrazuje v režimu zprostředkující vrátí velikost položky pole se seznamem.
+Vrátí velikost pole se seznamem zobrazenou v mezilehlém režimu.
 
-```
+```cpp
 virtual CSize GetIntermediateSize(CDC* pDC);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
-[in] Ukazatel na kontext zařízení pro pole se seznamem.
+*Pdc*<br/>
+[v] Ukazatel na kontext zařízení pro pole se seznamem.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -295,106 +295,106 @@ Velikost pole se seznamem.
 
 ### <a name="remarks"></a>Poznámky
 
-Vrátí velikost vychází z velikosti pole se seznamem poznat malé obrázky.
+Vrácená velikost je založena na velikosti pole se seznamem, když zobrazuje malé obrázky.
 
-##  <a name="getitem"></a>  CMFCRibbonComboBox::GetItem
+## <a name="cmfcribboncomboboxgetitem"></a><a name="getitem"></a>CMFCRibbonComboBox::GetItem
 
-Vrací řetězec přidružený k položce na zadaném indexu v seznamu.
+Vrátí řetězec přidružený k položce v zadaném indexu v seznamu.
 
-```
+```cpp
 LPCTSTR GetItem(int iIndex) const;
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *iIndex*<br/>
-[in] Index založený na nule položku v seznamu.
+[v] Nulový index položky v seznamu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na řetězec, který je přidružený k položce; v opačném případě hodnotu NULL, pokud parametr indexu je neplatný, nebo pokud je parametr indexu -1 a neexistuje žádná položka vybraná v poli se seznamem.
+Ukazatel na řetězec, který je přidružen k položce; v opačném případě null, pokud je parametr indexu neplatný, nebo pokud je parametr indexu -1 a v poli se seznamem není vybrána žádná položka.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="getitemdata"></a>  CMFCRibbonComboBox::GetItemData
+## <a name="cmfcribboncomboboxgetitemdata"></a><a name="getitemdata"></a>CMFCRibbonComboBox::GetItemData
 
-Vrátí data související s položkou v zadaném indexu v seznamu.
+Vrátí data přidružená k položce v zadaném indexu v seznamu.
 
-```
+```cpp
 DWORD_PTR GetItemData(int iIndex) const;
 ```
 
 ### <a name="parameters"></a>Parametry
 
 *iIndex*<br/>
-[in] Index založený na nule položku v seznamu.
+[v] Nulový index položky v seznamu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Data přidružená k položce; nebo 0. Pokud položka buď neexistuje, nebo pokud je parametr indexu -1 a v seznamu není vybrána žádná položka.
+Data přidružená k položce; nebo 0, pokud položka neexistuje, nebo pokud je parametr indexu -1 a v seznamu není žádná vybraná položka.
 
-##  <a name="haseditbox"></a>  CMFCRibbonComboBox::HasEditBox
+## <a name="cmfcribboncomboboxhaseditbox"></a><a name="haseditbox"></a>CMFCRibbonComboBox::HasEditBox
 
-Určuje, zda ovládací prvek obsahuje textové pole.
+Označuje, zda ovládací prvek obsahuje textové pole.
 
-```
+```cpp
 BOOL HasEditBox() const;
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE, pokud ovládací prvek obsahuje textové pole; v opačném případě hodnota FALSE.
+TRUE, pokud ovládací prvek obsahuje textové pole; jinak NEPRAVDA.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="isresizedropdownlist"></a>  CMFCRibbonComboBox::IsResizeDropDownList
+## <a name="cmfcribboncomboboxisresizedropdownlist"></a><a name="isresizedropdownlist"></a>CMFCRibbonComboBox::IsResizeDropDownList
 
-Určuje, zda můžete změnit velikost pole se seznamem.
+Označuje, zda lze velikost seznamu velikost i v seznamu.
 
-```
+```cpp
 BOOL IsResizeDropDownList() const;
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE, pokud se dá změnit pole se seznamem; v opačném případě FALSE. [CMFCRibbonComboBox::EnableDropDownListResize](#enabledropdownlistresize)
+PRAVDA, pokud lze velikost seznamu velikost i v případě, že se velikost seznamu: jinak FALSE. [CMFCRibbonComboBox::EnableDropDownListResize](#enabledropdownlistresize)
 
 ### <a name="remarks"></a>Poznámky
 
-Můžete povolit seznam změny velikosti pomocí pole [CMFCRibbonComboBox::EnableDropDownListResize](#enabledropdownlistresize) metody.
+Změna velikosti seznamu můžete povolit pomocí metody [CMFCRibbonComboBox::EnableDropDownListResize.](#enabledropdownlistresize)
 
-##  <a name="onselectitem"></a>  CMFCRibbonComboBox::OnSelectItem
+## <a name="cmfcribboncomboboxonselectitem"></a><a name="onselectitem"></a>CMFCRibbonComboBox::OnSelectItem
 
-Volá se rozhraním, když uživatel vybere položku v seznamu.
+Volat rámci při uživatel vybere položku v seznamu.
 
-```
+```cpp
 virtual void OnSelectItem(int nItem);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*nItem*<br/>
-[in] Index vybrané položky.
+*nPoložka*<br/>
+[v] Index vybrané položky.
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto metodu, pokud chcete zpracovat výběr vstupu uživatele.
+Přepsat tuto metodu, pokud chcete zpracovat výběr vstupu uživatele.
 
-##  <a name="removeallitems"></a>  CMFCRibbonComboBox::RemoveAllItems
+## <a name="cmfcribboncomboboxremoveallitems"></a><a name="removeallitems"></a>CMFCRibbonComboBox::Odstranitvšechny položky
 
 Odstraní všechny položky ze seznamu a vymaže pole pro úpravy.
 
-```
+```cpp
 void RemoveAllItems();
 ```
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="selectitem"></a>  CMFCRibbonComboBox::SelectItem
+## <a name="cmfcribboncomboboxselectitem"></a><a name="selectitem"></a>CMFCRibbonComboBox::SelectItem
 
 Vybere položku v seznamu.
 
-```
+```cpp
 BOOL SelectItem(int iIndex);
 BOOL SelectItem(DWORD_PTR dwData);
 
@@ -404,39 +404,39 @@ BOOL SelectItem(LPCTSTR lpszText);
 ### <a name="parameters"></a>Parametry
 
 *iIndex*<br/>
-[in] Index založený na nule položku v seznamu.
+[v] Nulový index položky v seznamu.
 
 *dwData*<br/>
-[in] Data související s položkou v seznamu.
+[v] Data přidružená k položce v seznamu.
 
 *lpszText*<br/>
-[in] Řetězec položky v seznamu.
+[v] Řetězec položky v seznamu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE, pokud metoda byla úspěšná. v opačném případě FALSE.
+TRUE, pokud byla metoda úspěšná; jinak FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="setdropdownheight"></a>  CMFCRibbonComboBox::SetDropDownHeight
+## <a name="cmfcribboncomboboxsetdropdownheight"></a><a name="setdropdownheight"></a>CMFCRibbonComboBox::SetDropDownHeight
 
-Výška pole se seznamem nastaví, když se rozbalil.
+Nastaví výšku seznamu, když je spadl dolů.
 
-```
+```cpp
 void SetDropDownHeight(int nHeight);
 ```
 
 ### <a name="parameters"></a>Parametry
 
-*nHeight*<br/>
-[in] Výška v pixelech, pole se seznamem.
+*nVýška*<br/>
+[v] Výška v pixelech seznamu.
 
 ### <a name="remarks"></a>Poznámky
 
 Výchozí výška je 150 pixelů.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>
-[CMFCRibbonEdit – třída](../../mfc/reference/cmfcribbonedit-class.md)
+[CmFC, stuha na pásu karet](../../mfc/reference/cmfcribbonedit-class.md)

@@ -20,88 +20,88 @@ helpviewer_keywords:
 - frame window classes [MFC], toolbar embedded in
 - LoadToolBar method [MFC]
 ms.assetid: cc00aaff-8a56-433b-b0c0-b857d76b4ffd
-ms.openlocfilehash: 9c784db2e1a482b313147e6837d6bbbd16d0ecb4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d4e8793337beb2eed533fe04daf549ec21efc61d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62168216"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373469"
 ---
 # <a name="toolbar-fundamentals"></a>Principy panelů nástrojů
 
-Tento článek popisuje základní implementace MFC, která umožňuje přidat výchozí panel nástrojů do vaší aplikace tak, že vyberete možnost v Průvodci aplikací. Probíraná témata zahrnují:
+Tento článek popisuje základní implementaci knihovny MFC, která umožňuje přidat do aplikace výchozí panel nástrojů výběrem možnosti v Průvodci aplikací. Probíraná témata zahrnují:
 
-- [Možnosti nástrojů Průvodce aplikací](#_core_the_appwizard_toolbar_option)
+- [Panel nástrojů Průvodce aplikací, volba](#_core_the_appwizard_toolbar_option)
 
 - [Panel nástrojů v kódu](#_core_the_toolbar_in_code)
 
-- [Úpravy prostředek panelu nástrojů](#_core_editing_the_toolbar_resource)
+- [Úprava prostředku panelu nástrojů](#_core_editing_the_toolbar_resource)
 
 - [Více panelů nástrojů](#_core_multiple_toolbars)
 
-##  <a name="_core_the_appwizard_toolbar_option"></a> Možnost nástrojů Průvodce aplikací
+## <a name="the-application-wizard-toolbar-option"></a><a name="_core_the_appwizard_toolbar_option"></a>Možnost panelu nástrojů Průvodce aplikací
 
-Chcete-li získat jeden panel nástrojů s výchozí tlačítka, vyberte možnost Standard ukotvení panelu nástrojů na stránce s názvem funkce uživatelského rozhraní. Tím přidáte kód do vaší aplikace, které:
+Chcete-li získat jeden panel nástrojů s výchozími tlačítky, vyberte na stránce s popiskem Funkce uživatelského rozhraní možnost Standardní ukotvení. Tím přidáte do aplikace kód, který:
 
 - Vytvoří objekt panelu nástrojů.
 
-- Spravuje panelu nástrojů, včetně schopnosti ukotvit nebo uvolnit.
+- Spravuje panel nástrojů, včetně jeho schopnosti ukotvit nebo plavat.
 
-##  <a name="_core_the_toolbar_in_code"></a> Panel nástrojů v kódu
+## <a name="the-toolbar-in-code"></a><a name="_core_the_toolbar_in_code"></a>Panel nástrojů v kódu
 
-Panel nástrojů [ctoolbar –](../mfc/reference/ctoolbar-class.md) objekt deklarován jako datový člen vaší aplikace `CMainFrame` třídy. Jinými slovy objekt nástrojů se vloží do objekt okna hlavního rámce. To znamená, že MFC vytvoří panel nástrojů, když se vytvoří okno rámce a odstraní panelu nástrojů při odstraní okno rámce. Následující deklarace částečné třídy pro několik aplikačních dokumentu (MDI interface) ukazuje datových členů pro integrovaném panelu nástrojů a vložené stavový řádek. Také ukazuje přepsání `OnCreate` členskou funkci.
+Panel nástrojů je [ctoolbar](../mfc/reference/ctoolbar-class.md) objekt deklarován jako `CMainFrame` datový člen třídy vaší aplikace. Jinými slovy, objekt panelu nástrojů je vložen do objektu okna hlavního rámečku. To znamená, že knihovna MFC vytvoří panel nástrojů při vytváření okna rámce a zničí panel nástrojů, když zničí okno rámce. Následující deklarace částečné třídy pro aplikaci rozhraní více dokumentů (MDI) zobrazuje datové členy pro vložený panel nástrojů a vložený stavový řádek. Zobrazuje také přepsání `OnCreate` členské funkce.
 
 [!code-cpp[NVC_MFCListView#6](../atl/reference/codesnippet/cpp/toolbar-fundamentals_1.h)]
 
-Dojde k vytvoření panelu nástrojů v `CMainFrame::OnCreate`. Volání knihovny MFC [OnCreate](../mfc/reference/cwnd-class.md#oncreate) po vytvoření okna pro snímek, ale předtím, než se stane viditelnou. Výchozí hodnota `OnCreate` , Průvodce aplikací generuje provede následující úlohy nástrojů:
+K vytvoření panelu `CMainFrame::OnCreate`nástrojů dochází v . Knihovna MFC volá [OnCreate](../mfc/reference/cwnd-class.md#oncreate) po vytvoření okna pro rámec, ale před tím, než se stane viditelným. Výchozí `OnCreate` nastavení, které Generuje Průvodce aplikací, provádí následující úkoly na panelu nástrojů:
 
-1. Volání `CToolBar` objektu [vytvořit](../mfc/reference/ctoolbar-class.md#create) členskou funkci pro vytvoření základní [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) objektu.
+1. Volá `CToolBar` členská funkce [Create](../mfc/reference/ctoolbar-class.md#create) objektu k vytvoření podkladového objektu [CToolBarCtrl.](../mfc/reference/ctoolbarctrl-class.md)
 
-1. Volání [LoadToolBar](../mfc/reference/ctoolbar-class.md#loadtoolbar) načíst informace o prostředku panelu nástrojů.
+1. Volá [LoadToolBar](../mfc/reference/ctoolbar-class.md#loadtoolbar) načíst informace o prostředku panelu nástrojů.
 
-1. Volání funkce umožňující ukotvení s plovoucí desetinnou čárkou a popisy tlačítek. Podrobnosti o těchto volání, najdete v článku [ukotvení a plovoucí panely nástrojů](../mfc/docking-and-floating-toolbars.md).
+1. Volá funkce pro povolení dokování, plovoucí a tipy nástrojů. Podrobnosti o těchto hovorech naleznete v článku [Ukotvení a plovoucí panely nástrojů](../mfc/docking-and-floating-toolbars.md).
 
 > [!NOTE]
->  Ukázky knihovny MFC Obecné [DOCKTOOL](../overview/visual-cpp-samples.md) zahrnuje obrázky starých i nových panelů nástrojů MFC. Panely nástrojů, které používají `COldToolbar` vyžadují volání v kroku 2 `LoadBitmap` (spíše než `LoadToolBar`) a `SetButtons`. Nových panelů nástrojů vyžaduje volání `LoadToolBar`.
+> Ukázka knihovny MFC General [DOCKTOOL](../overview/visual-cpp-samples.md) obsahuje ilustrace starých i nových panelů nástrojů knihovny MFC. Panely nástrojů, `COldToolbar` které používají vyžadují `LoadBitmap` volání v `LoadToolBar`kroku `SetButtons`2 na (nikoli ) a . Nové panely nástrojů vyžadují `LoadToolBar`volání .
 
-Ukotvení s plovoucí desetinnou čárkou a tipy k volání nástroje jsou volitelné. Můžete odebrat tyto řádky z `OnCreate` Pokud dáváte přednost. Výsledkem je zůstane pevný, nelze plovoucí desetinnou čárkou nebo redock a nedá se zobrazit popisy tlačítek panelu nástrojů.
+Volání tipů pro ukotvení, plovoucí a nástroje jsou volitelné. Pokud chcete, můžete `OnCreate` tyto řádky odebrat. Výsledkem je panel nástrojů, který zůstává pevný, nemůže se uvolnit nebo znovu ukotvit a nemůže zobrazit tipy nástrojů.
 
-##  <a name="_core_editing_the_toolbar_resource"></a> Úpravy prostředek panelu nástrojů
+## <a name="editing-the-toolbar-resource"></a><a name="_core_editing_the_toolbar_resource"></a>Úprava prostředku panelu nástrojů
 
-Podle výchozích nástrojů, získáte pomocí Průvodce aplikací **rt_toolbar –** vlastní prostředek, zavedená v prostředí MFC verze 4.0. Můžete upravit tento prostředek se [panelu nástrojů editoru](../windows/toolbar-editor.md). Editor umožňuje snadno přidat, odstranit a změna uspořádání tlačítek. Obsahuje grafický editor pro tlačítka, který je velmi podobný editor obecné grafiky v aplikaci Visual C++. Pokud jste upravili panelů nástrojů v předchozích verzích Visual C++, najdete úlohy mnohem jednodušší, nyní.
+Výchozí panel nástrojů, který získáte pomocí Průvodce aplikací, je založen na **vlastním prostředku RT_TOOLBAR** zavedeném ve verzi 4.0 knihovny MFC. Tento prostředek můžete upravit pomocí [editoru panelu nástrojů](../windows/toolbar-editor.md). Editor umožňuje snadno přidávat, odstraňovat a měnit uspořádání tlačítek. Obsahuje grafický editor tlačítek, který je velmi podobný obecnému grafickému editoru v jazyce Visual C++. Pokud jste upravili panely nástrojů v předchozích verzích visual c++, najdete úkol mnohem jednodušší nyní.
 
-Pro tlačítka panelu nástrojů připojte k příkazu, dáváte tlačítko ID příkazu, například `ID_MYCOMMAND`. ID příkazu zadejte na stránce vlastností tlačítka panelu nástrojů editoru. Vytvořte obslužnou rutinu pro příkaz (viz [mapování zpráv na funkce](../mfc/reference/mapping-messages-to-functions.md) Další informace).
+Chcete-li k příkazu připojit tlačítko panelu nástrojů, přiřazujte tlačítku ID příkazu, například `ID_MYCOMMAND`. Zadejte ID příkazu na stránce vlastností tlačítka v editoru panelu nástrojů. Potom vytvořte funkci obslužné rutiny pro příkaz (další informace naleznete v [tématu Mapování zpráv na funkce).](../mfc/reference/mapping-messages-to-functions.md)
 
-Nové [ctoolbar –](../mfc/reference/ctoolbar-class.md) členské funkce pracovat **rt_toolbar –** prostředků. [LoadToolBar](../mfc/reference/ctoolbar-class.md#loadtoolbar) nyní zaujímá místo [loadbitmap –](../mfc/reference/ctoolbar-class.md#loadbitmap) načíst bitmapu obrázky tlačítek panelu nástrojů a [setbuttons –](../mfc/reference/ctoolbar-class.md#setbuttons) nastavit styly tlačítek a spojte se s rastrové obrázky tlačítka.
+Nové členské funkce [CToolBar](../mfc/reference/ctoolbar-class.md) pracují s **RT_TOOLBAR** zdrojem. [LoadToolBar](../mfc/reference/ctoolbar-class.md#loadtoolbar) nyní přebírá místo [LoadBitmap](../mfc/reference/ctoolbar-class.md#loadbitmap) pro načtení bitmapy obrazů tlačítka panelu nástrojů a [SetButtons](../mfc/reference/ctoolbar-class.md#setbuttons) pro nastavení stylů tlačítek a připojení tlačítek s bitmapovými obrazy.
 
-Podrobnosti o použití editoru panelu nástrojů najdete v tématu [panelu nástrojů editoru](../windows/toolbar-editor.md).
+Podrobnosti o používání editoru panelů nástrojů naleznete v [editoru panelů nástrojů](../windows/toolbar-editor.md).
 
-##  <a name="_core_multiple_toolbars"></a> Více panelů nástrojů
+## <a name="multiple-toolbars"></a><a name="_core_multiple_toolbars"></a>Více panelů nástrojů
 
-Průvodce aplikací poskytuje jeden výchozí panel nástrojů. Pokud potřebujete více než jednoho panelu nástrojů v aplikaci, můžete modelovat se může váš kód pro další panely nástrojů, na základě kódu generované v průvodci pro výchozí panel nástrojů.
+Průvodce aplikací poskytuje jeden výchozí panel nástrojů. Pokud potřebujete více než jeden panel nástrojů v aplikaci, můžete modelovat kód pro další panely nástrojů na základě kódu generovaného průvodcem pro výchozí panel nástrojů.
 
-Pokud chcete zobrazit panel nástrojů jako výsledek příkazu, bude potřeba:
+Pokud chcete zobrazit panel nástrojů jako výsledek příkazu, budete muset:
 
-- Vytvořit nový prostředek panelu nástrojů pomocí panelu nástrojů editoru a načtěte ho v `OnCreate` s [LoadToolbar](../mfc/reference/ctoolbar-class.md#loadtoolbar) členskou funkci.
+- Vytvořte nový prostředek panelu nástrojů pomocí editoru panelu nástrojů a načtěte `OnCreate` jej pomocí členské funkce [LoadToolbar.](../mfc/reference/ctoolbar-class.md#loadtoolbar)
 
-- Vložit nový [ctoolbar –](../mfc/reference/ctoolbar-class.md) objekt ve své třídě okna hlavního rámce.
+- Vložte nový objekt [CToolBar](../mfc/reference/ctoolbar-class.md) do třídy okna hlavního rámce.
 
-- Ujistěte se volá příslušnou funkci v `OnCreate` ukotvit nebo plovoucí panel nástrojů, nastavení jeho stylů a tak dále.
+- Proveďte příslušná `OnCreate` volání funkcí pro ukotvení nebo plovoucí panel nástrojů, nastavte jeho styly a tak dále.
 
-### <a name="what-do-you-want-to-know-more-about"></a>Co chcete zjistit více informací
+### <a name="what-do-you-want-to-know-more-about"></a>Co chcete vědět více o
 
-- [Implementace panelu nástrojů v prostředí MFC (Přehled informací na panely nástrojů)](../mfc/mfc-toolbar-implementation.md)
+- [Implementace panelu nástrojů knihovny MFC (přehled informací o panelech nástrojů)](../mfc/mfc-toolbar-implementation.md)
 
-- [Ukotvitelné a plovoucí panely nástrojů](../mfc/docking-and-floating-toolbars.md)
+- [Dokovací a plovoucí panely nástrojů](../mfc/docking-and-floating-toolbars.md)
 
-- [Popisy tlačítek na panelu nástrojů](../mfc/toolbar-tool-tips.md)
+- [Tipy nástrojů panelu nástrojů](../mfc/toolbar-tool-tips.md)
 
-- [Ctoolbar –](../mfc/reference/ctoolbar-class.md) a [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) třídy
+- [Třídy CToolBar](../mfc/reference/ctoolbar-class.md) a [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)
 
-- [Práce s ovládacím prvkem panel nástrojů](../mfc/working-with-the-toolbar-control.md)
+- [Práce s ovládacím prvkem panelu nástrojů](../mfc/working-with-the-toolbar-control.md)
 
-- [Použití starých panelů nástrojů](../mfc/using-your-old-toolbars.md)
+- [Používání starých panelů nástrojů](../mfc/using-your-old-toolbars.md)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Implementace panelu nástrojů v prostředí MFC](../mfc/mfc-toolbar-implementation.md)

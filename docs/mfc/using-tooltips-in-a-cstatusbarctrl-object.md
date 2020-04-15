@@ -6,23 +6,23 @@ helpviewer_keywords:
 - status bars [MFC], tool tips
 - CStatusBarCtrl class [MFC], tool tips
 ms.assetid: a77597a7-43ef-4b8f-87bc-a8ea1dc63dc3
-ms.openlocfilehash: a607a5fb8c9470df42d12c771865b924891b2dac
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 29d326c708743424686d616bbaf172ccd72481ce
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79442539"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374698"
 ---
 # <a name="using-tooltips-in-a-cstatusbarctrl-object"></a>Použití popisů tlačítek v objektu CStatusBarCtrl
 
-Chcete-li povolit popisy tlačítek pro ovládací prvek stavového řádku, vytvořte objekt `CStatusBarCtrl` se stylem SBT_TOOLTIPS.
+Chcete-li povolit popisky ovládacího `CStatusBarCtrl` prvku stavového řádku, vytvořte objekt se stylem SBT_TOOLTIPS.
 
 > [!NOTE]
->  Pokud k implementaci stavového řádku používáte objekt `CStatusBar`, použijte funkci `CStatusBar::CreateEx`. Umožňuje zadat další styly pro vložený objekt `CStatusBarCtrl`.
+> Pokud používáte `CStatusBar` objekt k implementaci stavového `CStatusBar::CreateEx` řádku, použijte funkci. Umožňuje zadat další styly pro `CStatusBarCtrl` vložený objekt.
 
-Po úspěšném vytvoření objektu `CStatusBarCtrl` použijte [CStatusBarCtrl:: SetTipText](../mfc/reference/cstatusbarctrl-class.md#settiptext) a [CStatusBarCtrl:: GetTipText](../mfc/reference/cstatusbarctrl-class.md#gettiptext) pro nastavení a načtení textu tipu pro konkrétní podokno.
+Po `CStatusBarCtrl` úspěšném vytvoření objektu nastavte a načtěte text tipu pro určité podokno pomocí [cstatusbarctrl::SetTipText](../mfc/reference/cstatusbarctrl-class.md#settiptext) a [CStatusBarCtrl::GetTipText.](../mfc/reference/cstatusbarctrl-class.md#gettiptext)
 
-Po nastavení popisu tlačítka se zobrazí pouze v případě, že má část ikonu a žádný text, nebo pokud se celý text v části nedá zobrazit. Tipy nástrojů nejsou v jednoduchém režimu podporovány.
+Jakmile je tip nástroje nastaven, zobrazí se pouze v případě, že díl obsahuje ikonu a žádný text nebo pokud nelze zobrazit celý text uvnitř dílu. Tipy nástrojů nejsou podporovány v jednoduchém režimu.
 
 ## <a name="see-also"></a>Viz také
 

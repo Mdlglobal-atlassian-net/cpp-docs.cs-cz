@@ -1,5 +1,5 @@
 ---
-title: COleVariant – třída
+title: COleVariant třída
 ms.date: 11/04/2016
 f1_keywords:
 - COleVariant
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - COleVariant [MFC], GetByteArrayFromVariantArray
 - COleVariant [MFC], SetString
 ms.assetid: e1b5cd4a-b066-4b9b-b48b-6215ed52d998
-ms.openlocfilehash: 49cd4a8d3db436d5e3c4d29efbb4d80b4741a270
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.openlocfilehash: f907ed7c058f87cf03530411bc8fa4a3c108a4f0
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70739779"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374827"
 ---
-# <a name="colevariant-class"></a>COleVariant – třída
+# <a name="colevariant-class"></a>COleVariant třída
 
-Zapouzdřuje datový typ [variant](/windows/win32/api/oaidl/ns-oaidl-variant) .
+Zapouzdřuje datový typ [VARIANT.](/windows/win32/api/oaidl/ns-oaidl-variant)
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,43 +41,43 @@ class COleVariant : public tagVARIANT
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[COleVariant::COleVariant](#colevariant)|`COleVariant` Vytvoří objekt.|
+|[COleVariant::ColeVariant](#colevariant)|Vytvoří `COleVariant` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[COleVariant::Attach](#attach)|Připojí VARIANTu k `COleVariant`.|
-|[COleVariant::ChangeType](#changetype)|Změní typ variant tohoto `COleVariant` objektu.|
-|[COleVariant::Clear](#clear)|Vymaže tento `COleVariant` objekt.|
-|[COleVariant::Detach](#detach)|Odpojí variantu od `COleVariant` a a vrátí variantu.|
-|[COleVariant::GetByteArrayFromVariantArray](#getbytearrayfromvariantarray)|Načte pole bajtů z existujícího pole variant.|
-|[COleVariant:: SetString](#setstring)|Nastaví řetězec na konkrétní typ, obvykle ANSI.|
+|[COleVariant::Připojit](#attach)|Připojí variantu k `COleVariant`.|
+|[COleVariant::ChangeType](#changetype)|Změní typ varianty `COleVariant` tohoto objektu.|
+|[COleVariant::Vymazat](#clear)|Vymaže tento `COleVariant` objekt.|
+|[COleVariant::Detach](#detach)|Odpojí variantu od `COleVariant` a vrátí variantu.|
+|[COleVariant::GetByteArrayFromVariantArray](#getbytearrayfromvariantarray)|Načte bajtové pole z existujícího pole varianty.|
+|[COleVariant::SetString](#setstring)|Nastaví řetězec na určitý typ, obvykle ANSI.|
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Name|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[COleVariant:: operator LPCVARIANT](#operator_lpcvariant)|`COleVariant` Převede hodnotu`LPCVARIANT`na.|
-|[COleVariant:: operator LPVARIANT](#operator_lpvariant)|`COleVariant` Převede objekt`LPVARIANT`na.|
-|[COleVariant:: operator =](#operator_eq)|`COleVariant` Zkopíruje hodnotu.|
-|[COleVariant:: operator = = – operátor](#operator_eq_eq)|Porovná `COleVariant` dvě hodnoty.|
-|[COleVariant:: operator &lt;, &lt;&gt;&gt;](#operator_lt_lt__gt_gt)|`CArchive` `CDumpContext` Vytvoří výstup `COleVariant` `CArchive`hodnoty na nebo a vstup objektu z. `COleVariant`|
+|[COleVariant::operátor LPCVARIANT](#operator_lpcvariant)|Převede `COleVariant` hodnotu `LPCVARIANT`na .|
+|[COleVariant::operátor LPVARIANT](#operator_lpvariant)|Převede `COleVariant` objekt na `LPVARIANT`.|
+|[COleVariant::operátor =](#operator_eq)|Zkopíruje `COleVariant` hodnotu.|
+|[COleVariant::operátor ==](#operator_eq_eq)|Porovná dvě `COleVariant` hodnoty.|
+|[COleVariant::operátor &lt; &lt;,&gt;&gt;](#operator_lt_lt__gt_gt)|Výstupy `COleVariant` hodnoty `CArchive` nebo `CDumpContext` a zadává `COleVariant` `CArchive`objekt z .|
 
 ## <a name="remarks"></a>Poznámky
 
-Tento typ dat se používá v automatizaci OLE. Konkrétně struktura [DISPPARAMS](/windows/win32/api/oaidl/ns-oaidl-dispparams) obsahuje ukazatel na pole variantních struktur. Struktura se používá k předání parametrů rozhraní [IDispatch:: Invoke.](/windows/win32/api/oaidl/nf-oaidl-idispatch-invoke) `DISPPARAMS`
+Tento datový typ se používá v automatizaci OLE. Konkrétně [DISPPARAMS](/windows/win32/api/oaidl/ns-oaidl-dispparams) struktura obsahuje ukazatel na pole variant struktur. Struktura `DISPPARAMS` se používá k předání parametrů [iDispatch::Invoke](/windows/win32/api/oaidl/nf-oaidl-idispatch-invoke).
 
 > [!NOTE]
-> Tato třída je odvozena z `VARIANT` struktury. To znamená, že můžete předat `COleVariant` do parametr, který volá `VARIANT` pro a, aby datové členy `VARIANT` struktury byly přístupné datovým členům `COleVariant`.
+> Tato třída je odvozena od `VARIANT` struktury. To znamená, že `COleVariant` můžete předat v `VARIANT` parametr, který volá `VARIANT` pro a, že `COleVariant`datové členy struktury jsou přístupné datové členy .
 
-Dvě související třídy MFC [COleCurrency](../../mfc/reference/colecurrency-class.md) a [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) zapouzdřují variantní datové typy Currency ( `VT_CY`) a Date ( `VT_DATE`). Třída se používá rozsáhle v třídách rozhraní DAO; tyto třídy si můžete prohlédnout pro typické použití této třídy, například [CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md) a [CDaoRecordset.](../../mfc/reference/cdaorecordset-class.md) `COleVariant`
+Dvě související třídy knihovny MFC [COleCurrency](../../mfc/reference/colecurrency-class.md) a [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) `VT_CY`zapouzdřují variantní datové typy CURRENCY ( ) a DATE ( `VT_DATE`). Třída `COleVariant` se používá značně ve třídách DAO; viz tyto třídy pro typické použití této třídy, například [CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md) a [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md).
 
-Další informace naleznete v tématu [variant](/windows/win32/api/oaidl/ns-oaidl-variant), [Currency](/windows/win32/api/wtypes/ns-wtypes-cy~r1), [DISPPARAMS](/windows/win32/api/oaidl/ns-oaidl-dispparams)a [IDispatch:: Invoke](/windows/win32/api/oaidl/nf-oaidl-idispatch-invoke) v Windows SDK.
+Další informace naleznete [v položkách VARIANT](/windows/win32/api/oaidl/ns-oaidl-variant), [CURRENCY](/windows/win32/api/wtypes/ns-wtypes-cy~r1), [DISPPARAMS](/windows/win32/api/oaidl/ns-oaidl-dispparams)a [IDispatch::Invoke](/windows/win32/api/oaidl/nf-oaidl-idispatch-invoke) v sadě Windows SDK.
 
-Další informace o `COleVariant` třídě a jejím použití v automatizaci OLE naleznete v tématu "předávání parametrů v automatizaci OLE" v článku [Automatizace](../../mfc/automation.md).
+Další informace o `COleVariant` třídě a jeho použití v automatizaci OLE naleznete v části předávání parametrů v automatizaci OLE v článku [Automatizace](../../mfc/automation.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -87,11 +87,11 @@ Další informace o `COleVariant` třídě a jejím použití v automatizaci OLE
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxdisp. h
+**Záhlaví:** afxdisp.h
 
-##  <a name="attach"></a>COleVariant:: Attach
+## <a name="colevariantattach"></a><a name="attach"></a>COleVariant::Připojit
 
-Voláním této funkce připojíte daný objekt [variant](/windows/win32/api/oaidl/ns-oaidl-variant) k aktuálnímu `COleVariant` objektu.
+Volání této funkce připojit daný [objekt](/windows/win32/api/oaidl/ns-oaidl-variant) `COleVariant` VARIANT k aktuálnímu objektu.
 
 ```
 void Attach(VARIANT& varSrc);
@@ -100,17 +100,17 @@ void Attach(VARIANT& varSrc);
 ### <a name="parameters"></a>Parametry
 
 *varSrc*<br/>
-Existující `VARIANT` objekt, který bude připojen k aktuálnímu `COleVariant` objektu.
+Existující `VARIANT` objekt, který má být `COleVariant` připojen k aktuálnímu objektu.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce nastaví VARTYPE typu *varSrc* na VT_EMPTY.
+Tato funkce nastaví VARTYPE *varSrc* na VT_EMPTY.
 
-Další informace naleznete v tématu [variant](/windows/win32/api/oaidl/ns-oaidl-variant) a [VARENUM](/windows/win32/api/wtypes/ne-wtypes-varenum) položky v Windows SDK.
+Další informace naleznete [v](/windows/win32/api/oaidl/ns-oaidl-variant) položkách VARIANT a [VARENUM](/windows/win32/api/wtypes/ne-wtypes-varenum) v sadě Windows SDK.
 
-##  <a name="colevariant"></a>COleVariant::COleVariant
+## <a name="colevariantcolevariant"></a><a name="colevariant"></a>COleVariant::ColeVariant
 
-`COleVariant` Vytvoří objekt.
+Vytvoří `COleVariant` objekt.
 
 ```
 COleVariant();
@@ -135,82 +135,82 @@ COleVariant(LPCITEMIDLIST pidl);
 ### <a name="parameters"></a>Parametry
 
 *varSrc*<br/>
-Existující `COleVariant` objekt nebo `VARIANT` objekt, který má být zkopírován do `COleVariant` nového objektu.
+Existující `COleVariant` nebo `VARIANT` objekt, který má `COleVariant` být zkopírován do nového objektu.
 
 *pSrc*<br/>
 Ukazatel na `VARIANT` objekt, který bude zkopírován do nového `COleVariant` objektu.
 
 *lpszSrc*<br/>
-Řetězec zakončený hodnotou null, který má být zkopírován do `COleVariant` nového objektu.
+Řetězec s ukončeným hodnotou null, `COleVariant` který má být zkopírován do nového objektu.
 
-*vtSrc*<br/>
-`VARTYPE` Pro nový`COleVariant` objekt.
+*vtSrc řekl:*<br/>
+Pro `VARTYPE` nový `COleVariant` objekt.
 
 *strSrc*<br/>
-Objekt [CString](../../atl-mfc-shared/reference/cstringt-class.md) , který bude zkopírován do nového `COleVariant` objektu.
+[CString](../../atl-mfc-shared/reference/cstringt-class.md) objekt, který má být `COleVariant` zkopírován do nového objektu.
 
-*nSrc*, *lSrc* číselnou hodnotu, která se má zkopírovat do nového `COleVariant` objektu.
+*nSrc*, *lSrc* Číselná hodnota, která `COleVariant` má být zkopírována do nového objektu.
 
-*vtSrc*<br/>
-`VARTYPE` Pro nový`COleVariant` objekt.
+*vtSrc řekl:*<br/>
+Pro `VARTYPE` nový `COleVariant` objekt.
 
 *curSrc*<br/>
-Objekt [COleCurrency](../../mfc/reference/colecurrency-class.md) , který se má zkopírovat do nového `COleVariant` objektu.
+[COleCurrency](../../mfc/reference/colecurrency-class.md) objekt, který má být `COleVariant` zkopírován do nového objektu.
 
 *fltSrc*, *dblSrc*<br/>
-Číselná hodnota, která se má zkopírovat do nového `COleVariant` objektu.
+Číselná hodnota, která má být `COleVariant` zkopírována do nového objektu.
 
 *timeSrc*<br/>
-Objekt [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) , který se má zkopírovat do nového `COleVariant` objektu.
+[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) objekt, který má být `COleVariant` zkopírován do nového objektu.
 
 *arrSrc*<br/>
-Objekt [CByteArray](../../mfc/reference/cbytearray-class.md) , který se má zkopírovat do nového `COleVariant` objektu.
+[CByteArray](../../mfc/reference/cbytearray-class.md) objekt, který má být `COleVariant` zkopírován do nového objektu.
 
 *lbSrc*<br/>
-Objekt [CLongBinary –](../../mfc/reference/clongbinary-class.md) , který se má zkopírovat do nového `COleVariant` objektu.
+[CLongBinary](../../mfc/reference/clongbinary-class.md) objekt, který má být `COleVariant` zkopírován do nového objektu.
 
 *pidl*<br/>
-Ukazatel na strukturu [ITEMIDLIST](/windows/win32/api/shtypes/ns-shtypes-itemidlist) , která se má zkopírovat do nového `COleVariant` objektu.
+Ukazatel na [itemidlist](/windows/win32/api/shtypes/ns-shtypes-itemidlist) struktury, které mají `COleVariant` být zkopírovány do nového objektu.
 
 ### <a name="remarks"></a>Poznámky
 
-Všechny tyto konstruktory vytvoří nové `COleVariant` objekty inicializované na zadanou hodnotu. Následuje stručný popis každého z těchto konstruktorů.
+Všechny tyto konstruktory `COleVariant` vytvořit nové objekty inicializovány na zadanou hodnotu. Následuje stručný popis každého z těchto konstruktorů.
 
-- **COleVariant ()** Vytvoří prázdný `COleVariant` objekt VT_EMPTY.
+- **COleVariant( )** Vytvoří prázdný `COleVariant` objekt, VT_EMPTY.
 
-- **COleVariant (** *varSrc* **)** Zkopíruje existující `VARIANT` objekt nebo `COleVariant` . Typ variant je zachován.
+- **COleVariant(** *varSrc* **)** Zkopíruje `VARIANT` existující `COleVariant` nebo objekt. Typ varianty je zachován.
 
-- **COleVariant (** *pSrc* **)** Zkopíruje existující `VARIANT` objekt nebo `COleVariant` . Typ variant je zachován.
+- **COleVariant(** *pSrc* **)** Zkopíruje `VARIANT` existující `COleVariant` nebo objekt. Typ varianty je zachován.
 
-- **COleVariant (** *lpszSrc* **)** Zkopíruje řetězec do nového objektu VT_BSTR (UNICODE).
+- **COleVariant(** *lpszSrc* **)** Zkopíruje řetězec do nového objektu, VT_BSTR (UNICODE).
 
-- **COleVariant (** *lpszSrc* **,** *vtSrc* **)** Zkopíruje řetězec do nového objektu. Parametr *vtSrc* musí být VT_BSTR (Unicode) nebo VT_BSTRT (ANSI).
+- **COleVariant(** *lpszSrc* **,** *vtSrc* **)** Zkopíruje řetězec do nového objektu. Parametr *vtSrc* musí být VT_BSTR (UNICODE) nebo VT_BSTRT (ANSI).
 
-- **COleVariant (** *strSrc* **)** Zkopíruje řetězec do nového objektu VT_BSTR (UNICODE).
+- **COleVariant(** *strSrc* **)** Zkopíruje řetězec do nového objektu, VT_BSTR (UNICODE).
 
-- **COleVariant (** *nSrc* **)** Zkopíruje 8bitové celé číslo do nového objektu VT_UI1.
+- **COleVariant(** *nSrc* **)** Zkopíruje 8bitové celé číslo do nového objektu, VT_UI1.
 
-- **COleVariant (** *nSrc* **,** *vtSrc* **)** Zkopíruje 16bitové celé číslo (nebo logickou hodnotu) do nového objektu. Parametr *vtSrc* musí být VT_I2 nebo VT_BOOL.
+- **COleVariant(** *nSrc* **,** *vtSrc* **)** Zkopíruje do nového objektu 16bitové celé číslo (nebo logickou hodnotu). Parametr *vtSrc* musí být VT_I2 nebo VT_BOOL.
 
-- **COleVariant (** *lSrc* **,** *vtSrc* **)** Zkopíruje do nového objektu 32 celé číslo (nebo hodnotu Code). Parametr *vtSrc* musí být VT_I4, VT_ERROR nebo VT_BOOL.
+- **COleVariant(** *lSrc* **,** *vtSrc* **)** Zkopíruje do nového objektu 32bitové celé číslo (nebo hodnotu SCODE). Parametr *vtSrc* musí být VT_I4, VT_ERROR nebo VT_BOOL.
 
-- **COleVariant (** *curSrc* **)** `COleCurrency` Zkopíruje hodnotu do nového objektu VT_CY.
+- **COleVariant(** *curSrc* **)** Zkopíruje `COleCurrency` hodnotu do nového objektu, VT_CY.
 
-- **COleVariant (** *fltSrc* **)** Zkopíruje hodnotu 32-bit s plovoucí desetinnou čárkou do nového objektu VT_R4.
+- **COleVariant(** *fltSrc* **)** Zkopíruje 32bitovou hodnotu s plovoucí desetinnou hodnotou do nového objektu, VT_R4.
 
-- **COleVariant (** *dblSrc* **)** Zkopíruje hodnotu 64-bit s plovoucí desetinnou čárkou do nového objektu VT_R8.
+- **COleVariant(** *dblSrc* **)** Zkopíruje 64bitovou hodnotu s plovoucí desetinnou hodnotou do nového objektu, VT_R8.
 
-- **COleVariant (** *timeSrc* **)** `COleDateTime` Zkopíruje hodnotu do nového objektu VT_DATE.
+- **COleVariant(** *timeSrc* **)** Zkopíruje `COleDateTime` hodnotu do nového objektu, VT_DATE.
 
-- **COleVariant (** *arrSrc* **)** `CByteArray` Zkopíruje objekt do nového objektu VT_EMPTY.
+- **COleVariant(** *arrSrc* **)** Zkopíruje `CByteArray` objekt do nového objektu, VT_EMPTY.
 
-- **COleVariant (** *lbSrc* **)** `CLongBinary` Zkopíruje objekt do nového objektu VT_EMPTY.
+- **COleVariant(** *lbSrc* **)** Zkopíruje `CLongBinary` objekt do nového objektu, VT_EMPTY.
 
-Další informace o Code naleznete v tématu [Struktura kódů chyb modelu COM](/windows/win32/com/structure-of-com-error-codes) v Windows SDK.
+Další informace o kódu SCODE naleznete [v tématu Struktura kódů chyb COM](/windows/win32/com/structure-of-com-error-codes) v sadě Windows SDK.
 
-##  <a name="changetype"></a>COleVariant:: ChangeType
+## <a name="colevariantchangetype"></a><a name="changetype"></a>COleVariant::ChangeType
 
-Převede typ hodnoty variant v tomto `COleVariant` objektu.
+Převede typ hodnoty varianty `COleVariant` v tomto objektu.
 
 ```
 void ChangeType(VARTYPE vartype, LPVARIANT pSrc = NULL);
@@ -218,19 +218,19 @@ void ChangeType(VARTYPE vartype, LPVARIANT pSrc = NULL);
 
 ### <a name="parameters"></a>Parametry
 
-*VARTYPE*<br/>
-VARTYPE pro tento `COleVariant` objekt.
+*vartyp*<br/>
+VARTYPE pro `COleVariant` tento objekt.
 
 *pSrc*<br/>
-Ukazatel na objekt [variant](/windows/win32/api/oaidl/ns-oaidl-variant) , který má být převeden. Pokud je tato hodnota null, je `COleVariant` tento objekt použit jako zdroj pro převod.
+Ukazatel na [objekt VARIANT,](/windows/win32/api/oaidl/ns-oaidl-variant) který má být převeden. Pokud je tato hodnota `COleVariant` null, tento objekt se používá jako zdroj pro převod.
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace naleznete v tématu [variant](/windows/win32/api/oaidl/ns-oaidl-variant), [VarEnum](/windows/win32/api/wtypes/ne-wtypes-varenum)a [VariantChangeType](/windows/win32/api/oleauto/nf-oleauto-variantchangetype) položky v Windows SDK.
+Další informace naleznete [v](/windows/win32/api/oaidl/ns-oaidl-variant)položkách VARIANT , [VARENUM](/windows/win32/api/wtypes/ne-wtypes-varenum)a [VariantChangeType](/windows/win32/api/oleauto/nf-oleauto-variantchangetype) v sadách Windows SDK.
 
-##  <a name="clear"></a>COleVariant:: Clear
+## <a name="colevariantclear"></a><a name="clear"></a>COleVariant::Vymazat
 
-`VARIANT`Vymaže.
+Vymaže `VARIANT`.
 
 ```
 void Clear();
@@ -238,13 +238,13 @@ void Clear();
 
 ### <a name="remarks"></a>Poznámky
 
-Tím se nastaví VARTYPE pro tento objekt na VT_EMPTY. `COleVariant` Destruktor volá tuto funkci.
+Tím nastavíte VARTYPE pro tento objekt VT_EMPTY. Destruktor `COleVariant` volá tuto funkci.
 
-Další informace naleznete v tématu `VARIANT`, VARTYPE a `VariantClear` záznamech v Windows SDK.
+Další informace naleznete `VARIANT`v souboru `VariantClear` , VARTYPE a položkách v sadě Windows SDK.
 
-##  <a name="detach"></a>COleVariant::D etach
+## <a name="colevariantdetach"></a><a name="detach"></a>COleVariant::Detach
 
-Odpojí základní objekt [variant](/windows/win32/api/oaidl/ns-oaidl-variant) od tohoto `COleVariant` objektu.
+Odpojí základní objekt [VARIANT](/windows/win32/api/oaidl/ns-oaidl-variant) `COleVariant` od tohoto objektu.
 
 ```
 VARIANT Detach();
@@ -252,14 +252,14 @@ VARIANT Detach();
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce nastaví VARTYPE pro tento `COleVariant` objekt na VT_EMPTY.
+Tato funkce nastaví vartype pro tento `COleVariant` objekt VT_EMPTY.
 
 > [!NOTE]
->  Po volání `Detach`je úkolem volajícího volat `VariantClear` výslednou `VARIANT` strukturu.
+> Po `Detach`volání je odpovědností volajícího volat `VariantClear` na výslednou `VARIANT` strukturu.
 
-Další informace naleznete v tématu [variant](/windows/win32/api/oaidl/ns-oaidl-variant), [VarEnum](/windows/win32/api/wtypes/ne-wtypes-varenum)a [VariantClear](/windows/win32/api/oleauto/nf-oleauto-variantclear) položky v Windows SDK.
+Další informace naleznete [v](/windows/win32/api/oaidl/ns-oaidl-variant)položkách VARIANT , [VARENUM](/windows/win32/api/wtypes/ne-wtypes-varenum)a [VariantClear](/windows/win32/api/oleauto/nf-oleauto-variantclear) v sadách Windows SDK.
 
-##  <a name="getbytearrayfromvariantarray"></a>COleVariant::GetByteArrayFromVariantArray
+## <a name="colevariantgetbytearrayfromvariantarray"></a><a name="getbytearrayfromvariantarray"></a>COleVariant::GetByteArrayFromVariantArray
 
 Načte bajtové pole z existujícího pole variant.
 
@@ -269,12 +269,12 @@ void GetByteArrayFromVariantArray(CByteArray& bytes);
 
 ### <a name="parameters"></a>Parametry
 
-*psaný*<br/>
-Odkaz na existující objekt [CByteArray](../../mfc/reference/cbytearray-class.md) .
+*Bajtů*<br/>
+Odkaz na existující objekt [CByteArray.](../../mfc/reference/cbytearray-class.md)
 
-##  <a name="operator_lpcvariant"></a>COleVariant:: operator LPCVARIANT
+## <a name="colevariantoperator-lpcvariant"></a><a name="operator_lpcvariant"></a>COleVariant::operátor LPCVARIANT
 
-Tento operátor přetypování vrací `VARIANT` strukturu, jejíž hodnota je zkopírována `COleVariant` z tohoto objektu.
+Tento operátor přetypování vrátí strukturu, `VARIANT` `COleVariant` jejíž hodnota je zkopírována z tohoto objektu.
 
 ```
 operator LPCVARIANT() const;
@@ -282,9 +282,9 @@ operator LPCVARIANT() const;
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="operator_lpvariant"></a>COleVariant:: operator LPVARIANT
+## <a name="colevariantoperator-lpvariant"></a><a name="operator_lpvariant"></a>COleVariant::operátor LPVARIANT
 
-Zavolejte Tento operátor přetypování pro přístup k `VARIANT` podkladové `COleVariant` struktuře pro tento objekt.
+Volání tohoto operátoru přetypování pro přístup k základní `VARIANT` struktuře pro tento `COleVariant` objekt.
 
 ```
 operator LPVARIANT();
@@ -293,11 +293,11 @@ operator LPVARIANT();
 ### <a name="remarks"></a>Poznámky
 
 > [!CAUTION]
-> Změna hodnoty ve `VARIANT` struktuře, k níž se přistupovalo pomocí ukazatele vráceného touto funkcí, změní hodnotu `COleVariant` tohoto objektu.
+> Změna hodnoty ve `VARIANT` struktuře, ke které má přístup ukazatel vrácený touto funkcí, změní hodnotu tohoto `COleVariant` objektu.
 
-##  <a name="operator_eq"></a>COleVariant:: operator =
+## <a name="colevariantoperator-"></a><a name="operator_eq"></a>COleVariant::operátor =
 
-Tyto přetížené operátory přiřazení zkopírují zdrojové hodnoty do tohoto `COleVariant` objektu.
+Tyto přetížené operátory přiřazení zkopírují zdrojovou hodnotu do tohoto `COleVariant` objektu.
 
 ```
 const COleVariant& operator=(const VARIANT& varSrc);
@@ -318,46 +318,46 @@ const COleVariant& operator=(const CLongBinary& lbSrc);
 
 ### <a name="remarks"></a>Poznámky
 
-Následuje stručný popis každého operátoru:
+Stručný popis každého operátora je následující:
 
-- **operator = (** *varSrc* **)** – operátor Zkopíruje existující variantu nebo `COleVariant` objekt do tohoto objektu.
+- **operátor =(** *varSrc* **)** Zkopíruje existující `COleVariant` VARIANT nebo objekt do tohoto objektu.
 
-- **operator = (** *pSrc* **)** – operátor Zkopíruje objekt VARIANT, k němuž přistupoval *pSrc* , do tohoto objektu.
+- **operátor =(** *pSrc* **)** Zkopíruje objekt VARIANT, ke kterého *pSrc* přistupuje, do tohoto objektu.
 
-- **operator = (** *lpszSrc* **)** – operátor Zkopíruje řetězec zakončený hodnotou null do tohoto objektu a nastaví VARTYPE na VT_BSTR.
+- **operátor =(** *lpszSrc* **)** Zkopíruje řetězec s ukončeným hodnotou null do tohoto objektu a nastaví typ VARTYPE na VT_BSTR.
 
-- **operator = (** *strSrc* **)** – operátor Zkopíruje objekt [CString](../../atl-mfc-shared/reference/cstringt-class.md) do tohoto objektu a nastaví VARTYPE na VT_BSTR.
+- **operátor =(** *strSrc* **)** Zkopíruje [cstring](../../atl-mfc-shared/reference/cstringt-class.md) objekt do tohoto objektu a nastaví VARTYPE na VT_BSTR.
 
-- **operator = (** *nSrc* **)** – operátor Zkopíruje do tohoto objektu 8bitové celé číslo o hodnotě 8 nebo 16 bitů. Pokud je *nSrc* 8bitové hodnoty, je objekt VARTYPE v této hodnotě nastaven na VT_UI1. Pokud je *nSrc* 16bitová hodnota a jako VARTYPE je to VT_BOOL, je zachovaná; v opačném případě je nastavená na VT_I2.
+- **operátor =(** *nSrc* **)** Zkopíruje do tohoto objektu osmibitovou nebo 16bitovou celočíselnou hodnotu. Pokud *nSrc* je 8bitová hodnota, VARTYPE to je nastavena na VT_UI1. Pokud *nSrc* je 16bitová hodnota a VARTYPE to je VT_BOOL, je zachována; v opačném případě je nastavena na VT_I2.
 
-- **operator = (** *lSrc* **)** – operátor Zkopíruje do tohoto objektu hodnotu 32 celé číslo. Pokud je VARTYPE typu VT_ERROR, je udržována; v opačném případě je nastavená na VT_I4.
+- **operátor =(** *lSrc* **)** Zkopíruje do tohoto objektu 32bitovou celočíselnou hodnotu. Pokud vartype to je VT_ERROR, je zachována; v opačném případě je nastavena na VT_I4.
 
-- **operator = (** *curSrc* **)** – operátor Zkopíruje objekt [COleCurrency](../../mfc/reference/colecurrency-class.md) do tohoto objektu a nastaví VARTYPE na VT_CY.
+- **operátor =(** *curSrc* **)** Zkopíruje [cOleCurrency](../../mfc/reference/colecurrency-class.md) objekt do tohoto objektu a nastaví VARTYPE na VT_CY.
 
-- **operator = (** *fltSrc* **)** – operátor Zkopíruje do tohoto objektu hodnotu 32 s plovoucí desetinnou čárkou a nastaví ukazatel VARTYPE na VT_R4.
+- **operátor =(** *fltSrc* **)** Zkopíruje 32bitovou hodnotu s plovoucí desetinnou tácem do tohoto objektu a nastaví typ VARTYPE na VT_R4.
 
-- **operator = (** *dblSrc* **)** – operátor Zkopíruje do tohoto objektu hodnotu 64 s plovoucí desetinnou čárkou a nastaví ukazatel VARTYPE na VT_R8.
+- **operátor =(** *dblSrc* **)** Zkopíruje 64bitovou hodnotu s plovoucí desetinnou tácem do tohoto objektu a nastaví typ VARTYPE na VT_R8.
 
-- **operator = (** *dateSrc* **)** – operátor Zkopíruje objekt [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) do tohoto objektu a nastaví VARTYPE na VT_DATE.
+- **operátor =(** *dateSrc* **)** Zkopíruje [cOleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) objekt do tohoto objektu a nastaví VARTYPE na VT_DATE.
 
-- **operator = (** *arrSrc* **)** – operátor Zkopíruje objekt [CByteArray](../../mfc/reference/cbytearray-class.md) do tohoto `COleVariant` objektu.
+- **operátor =(** *arrSrc* **)** Zkopíruje objekt [CByteArray](../../mfc/reference/cbytearray-class.md) do tohoto `COleVariant` objektu.
 
-- **operator = (** *lbSrc* **)** – operátor Zkopíruje objekt [CLongBinary –](../../mfc/reference/clongbinary-class.md) do tohoto `COleVariant` objektu.
+- **operátor =(** *lbSrc* **)** Zkopíruje [clongbinary](../../mfc/reference/clongbinary-class.md) objekt `COleVariant` do tohoto objektu.
 
-Další informace naleznete v tématu [variant](/windows/win32/api/oaidl/ns-oaidl-variant) a [VARENUM](/windows/win32/api/wtypes/ne-wtypes-varenum) položky v Windows SDK.
+Další informace naleznete [v](/windows/win32/api/oaidl/ns-oaidl-variant) položkách VARIANT a [VARENUM](/windows/win32/api/wtypes/ne-wtypes-varenum) v sadě Windows SDK.
 
-##  <a name="operator_eq_eq"></a>COleVariant:: operator = = – operátor
+## <a name="colevariantoperator-"></a><a name="operator_eq_eq"></a>COleVariant::operátor ==
 
-Tento operátor porovná dvě hodnoty variant a vrátí nenulovou hodnotu, pokud jsou stejné. v opačném případě 0.
+Tento operátor porovná dvě hodnoty varianta a vrátí nenulovou, pokud jsou stejné; jinak 0.
 
 ```
 BOOL operator==(const VARIANT& varSrc) const;
 BOOL operator==(LPCVARIANT pSrc) const;
 ```
 
-##  <a name="operator_lt_lt__gt_gt"></a>COleVariant:: operator &lt;, &lt;&gt;&gt;
+## <a name="colevariantoperator-ltlt-gtgt"></a><a name="operator_lt_lt__gt_gt"></a>COleVariant::operátor &lt; &lt;,&gt;&gt;
 
-`CArchive` `CdumpContext` Vytvoří výstup `COleVariant` `CArchive`hodnoty na nebo a vstup objektu z. `COleVariant`
+Výstupy `COleVariant` hodnoty `CArchive` nebo `CdumpContext` a zadává `COleVariant` `CArchive`objekt z .
 
 ```
 friend CDumpContext& AFXAPI operator<<(
@@ -375,11 +375,11 @@ friend CArchive& AFXAPI operator>>(
 
 ### <a name="remarks"></a>Poznámky
 
-Operátor `COleVariant` vložení ( **\<)podporujediagnostickývýpisa\<** ukládání do archivu. Operátor pro extrakci ( **>>** ) podporuje načítání z archivu.
+Operátor `COleVariant` vložení (**\<**) podporuje diagnostický dumping a ukládání do archivu. Operátor extrakce (**>>**) podporuje načítání z archivu.
 
-##  <a name="setstring"></a>COleVariant:: SetString
+## <a name="colevariantsetstring"></a><a name="setstring"></a>COleVariant::SetString
 
-Nastaví řetězec na konkrétní typ.
+Nastaví řetězec na určitý typ.
 
 ```
 void SetString(LPCTSTR lpszSrc, VARTYPE vtSrc);
@@ -388,17 +388,17 @@ void SetString(LPCTSTR lpszSrc, VARTYPE vtSrc);
 ### <a name="parameters"></a>Parametry
 
 *lpszSrc*<br/>
-Řetězec zakončený hodnotou null, který má být zkopírován do `COleVariant` nového objektu.
+Řetězec s ukončeným hodnotou null, `COleVariant` který má být zkopírován do nového objektu.
 
-*VtSrc*<br/>
+*VtSrc řekl:*<br/>
 VARTYPE pro nový `COleVariant` objekt.
 
 ### <a name="remarks"></a>Poznámky
 
-Parametr *vtSrc* musí být VT_BSTR (Unicode) nebo VT_BSTRT (ANSI). `SetString`se obvykle používá k nastavení řetězců na ANSI, protože výchozí hodnota pro konstruktor [COleVariant:: COleVariant](#colevariant) s parametrem String nebo String a bez VARTYPE je Unicode.
+Parametr *vtSrc* musí být VT_BSTR (UNICODE) nebo VT_BSTRT (ANSI). `SetString`Obvykle se používá k nastavení řetězců na ANSI, protože výchozí hodnota konstruktoru [COleVariant::COleVariant](#colevariant) s parametrem string nebo string pointer a žádný VARTYPE není UNICODE.
 
-Sada záznamů DAO v sestavení bez kódování UNICODE očekává, že řetězce budou ANSI. Proto pro funkce DAO, které používají `COleVariant` objekty, pokud nevytváříte sadu záznamů Unicode, je nutné použít formu konstruktoru **COleVariant:: COleVariant (** *lpszSrc* **,** *vtSrc* **)** s *vtSrc* nastavenou na hodnotu VT _BSTRT (ANSI) nebo použít `SetString` s *vtSrc* nastavenou na VT_BSTRT k vytváření řetězců ANSI. Například `CDaoRecordset` funkce [CDaoRecordset:: Seek](../../mfc/reference/cdaorecordset-class.md#seek) a [CDaoRecordset:: SetFieldValue](../../mfc/reference/cdaorecordset-class.md#setfieldvalue) používají `COleVariant` objekty jako parametry. Tyto objekty musí být ANSI, pokud sada záznamů DAO není UNICODE.
+Sada záznamů DAO v sestavení bez UNICODE očekává, že řetězce budou ANSI. `COleVariant` Proto pro funkce DAO, které používají objekty, pokud nevytváříte sadu záznamů UNICODE, musíte použít **cOleVariant::COleVariant(** *lpszSrc* **,** *vtSrc* **)** forma konstruktoru s *vtSrc* nastavena na VT_BSTRT (ANSI) nebo použít `SetString` s *vtSrc* nastavena na VT_BSTRT k vytvoření ansi řetězců. Například `CDaoRecordset` funkce [CDaoRecordset::Seek](../../mfc/reference/cdaorecordset-class.md#seek) a [CDaoRecordset::SetFieldValue](../../mfc/reference/cdaorecordset-class.md#setfieldvalue) používají `COleVariant` objekty jako parametry. Tyto objekty musí být ANSI, pokud sada záznamů DAO není UNICODE.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>

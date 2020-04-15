@@ -11,16 +11,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::RuntimeClassBaseT::AsIID method
 - Microsoft::WRL::Details::RuntimeClassBaseT::GetImplementedIIDS method
 ms.assetid: a62775fb-3359-4f45-9ff1-c07fa8da464b
-ms.openlocfilehash: 5d93b3e86e7ba105a42ccbedbbf44c51ada97bbd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 06a9f73e00d541b0e5bcbe20c57befe4a67c5132
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403162"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375723"
 ---
 # <a name="runtimeclassbaset-structure"></a>RuntimeClassBaseT – struktura
 
-Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.
+Podporuje infrastrukturu WRL a není určen pro použití přímo z vašeho kódu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -32,20 +32,20 @@ friend struct Details::RuntimeClassBaseT;
 ### <a name="parameters"></a>Parametry
 
 *RuntimeClassTypeT*<br/>
-Pole, která určuje jeden nebo více příznaků [runtimeclasstype –](runtimeclasstype-enumeration.md) enumerátory.
+Pole příznaků, které určuje jeden nebo více čítačů výčtu [RuntimeClassType.](runtimeclasstype-enumeration.md)
 
 ## <a name="remarks"></a>Poznámky
 
-Poskytuje pomocné metody pro `QueryInterface` operace a získat ID rozhraní.
+Poskytuje pomocné `QueryInterface` metody pro operace a získání ID rozhraní.
 
 ## <a name="members"></a>Členové
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-Název                                                         | Popis
+Name (Název)                                                         | Popis
 ------------------------------------------------------------ | -----------------------------------------------------------------------------
-[RuntimeClassBaseT::AsIID](#asiid)                           | Načte ukazatel na ID zadané rozhraní.
-[Runtimeclassbaset::getimplementediids –](#getimplementediids) | Načte pole ID, které jsou implementovány pomocí zadaného typu rozhraní.
+[RuntimeClassBaseT::AsIID](#asiid)                           | Načte ukazatel na zadané ID rozhraní.
+[RuntimeClassBaseT::GetImplementedIIDS](#getimplementediids) | Načte pole ID rozhraní, které jsou implementovány zadaným typem.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -55,11 +55,11 @@ Název                                                         | Popis
 
 **Záhlaví:** implements.h
 
-**Namespace:** Microsoft::WRL::Details
+**Obor názvů:** Microsoft::WRL::Details
 
-## <a name="asiid"></a>RuntimeClassBaseT::AsIID
+## <a name="runtimeclassbasetasiid"></a><a name="asiid"></a>RuntimeClassBaseT::AsIID
 
-Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.
+Podporuje infrastrukturu WRL a není určen pro použití přímo z vašeho kódu.
 
 ```cpp
 template<typename T>
@@ -73,28 +73,28 @@ __forceinline static HRESULT AsIID(
 ### <a name="parameters"></a>Parametry
 
 *T*<br/>
-Typ, který implementuje rozhraní ID určené parametrem *riid*.
+Typ, který implementuje ID rozhraní určené parametrem *riid*.
 
-*implements*<br/>
-Proměnné určené parametrem šablony typu *T*.
+*Implementuje*<br/>
+Proměnná typu určeného parametrem šablony *T*.
 
-*riid*<br/>
-ID rozhraní, který se má načíst.
+*riid řekl:*<br/>
+ID rozhraní načíst.
 
-*ppvObject*<br/>
+*ppvObjekt*<br/>
 Pokud je tato operace úspěšná, ukazatel na ukazatel na rozhraní určené parametrem *riid*.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-S_OK v případě úspěchu; v opačném případě popisující chybu HRESULT.
+S_OK v případě úspěchu; jinak HRESULT, který popisuje chybu.
 
 ### <a name="remarks"></a>Poznámky
 
-Načte ukazatel na ID zadané rozhraní.
+Načte ukazatel na zadané ID rozhraní.
 
-## <a name="getimplementediids"></a>Runtimeclassbaset::getimplementediids –
+## <a name="runtimeclassbasetgetimplementediids"></a><a name="getimplementediids"></a>RuntimeClassBaseT::GetImplementedIIDS
 
-Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.
+Podporuje infrastrukturu WRL a není určen pro použití přímo z vašeho kódu.
 
 ```cpp
 template<typename T>
@@ -108,21 +108,21 @@ __forceinline static HRESULT GetImplementedIIDS(
 ### <a name="parameters"></a>Parametry
 
 *T*<br/>
-Typ *implementuje* parametru.
+Typ *implements* parametru.
 
-*implements*<br/>
+*Implementuje*<br/>
 Ukazatel na typ určený parametrem *T*.
 
 *iidCount*<br/>
-Maximální počet rozhraní ID pro načtení.
+Maximální počet ID rozhraní načíst.
 
-*iids*<br/>
-Pokud se tato operace dokončí úspěšně, pole rozhraní implementovaný tímto typem ID *T*.
+*IIDs*<br/>
+Pokud se tato operace úspěšně dokončí, pole ID rozhraní implementované typem *T*.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-S_OK v případě úspěchu; v opačném případě popisující chybu HRESULT.
+S_OK v případě úspěchu; jinak HRESULT, který popisuje chybu.
 
 ### <a name="remarks"></a>Poznámky
 
-Načte pole ID, které jsou implementovány pomocí zadaného typu rozhraní.
+Načte pole ID rozhraní, které jsou implementovány zadaným typem.

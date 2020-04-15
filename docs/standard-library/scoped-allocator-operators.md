@@ -1,26 +1,26 @@
 ---
-title: operátory &lt;scoped_allocator&gt;
+title: '&lt;scoped_allocator&gt; operátorů'
 ms.date: 11/04/2016
 f1_keywords:
 - scoped_allocator/std::operator!=
 - scoped_allocator/std::operator==
 ms.assetid: 4dfe0805-cc6e-479f-887f-a1c164f73837
-ms.openlocfilehash: 071fc3b73cd3378b110d6d412bb7575e35a77478
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 45da89793c3f4ea131404fc3392413e7aea9ef3e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79419558"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373385"
 ---
-# <a name="ltscoped_allocatorgt-operators"></a>operátory &lt;scoped_allocator&gt;
+# <a name="ltscoped_allocatorgt-operators"></a>&lt;scoped_allocator&gt; operátorů
 
 |||
 |-|-|
-|[operator!=](#op_neq)|[operator = = – operátor](#op_eq_eq)|
+|[operátor!=](#op_neq)|[operátor==](#op_eq_eq)|
 
-## <a name="op_neq"></a>! = – operátor
+## <a name="operator"></a><a name="op_neq"></a>operátor!=
 
-Testuje dva objekty `scoped_allocator_adaptor` pro nerovnost.
+Testuje `scoped_allocator_adaptor` dva objekty pro nerovnost.
 
 ```cpp
 template <class Outer, class... Inner>
@@ -31,19 +31,19 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parametry
 
-*levý*\
-Levý objekt `scoped_allocator_adaptor`.
+*Vlevo*\
+Levý `scoped_allocator_adaptor` objekt.
 
-*pravé*\
-Pravý objekt `scoped_allocator_adaptor`.
+*Právo*\
+Správný `scoped_allocator_adaptor` objekt.
 
 ### <a name="return-value"></a>Návratová hodnota
 
 `!(left == right)`
 
-## <a name="op_eq_eq"></a>operator = = – operátor
+## <a name="operator"></a><a name="op_eq_eq"></a>operátor==
 
-Testuje dva objekty `scoped_allocator_adaptor` pro rovnost.
+Testuje `scoped_allocator_adaptor` dva objekty rovnosti.
 
 ```cpp
 template <class Outer, class... Inner>
@@ -54,11 +54,11 @@ bool operator==(
 
 ### <a name="parameters"></a>Parametry
 
-*levý*\
-Levý objekt `scoped_allocator_adaptor`.
+*Vlevo*\
+Levý `scoped_allocator_adaptor` objekt.
 
-*pravé*\
-Pravý objekt `scoped_allocator_adaptor`.
+*Právo*\
+Správný `scoped_allocator_adaptor` objekt.
 
 ### <a name="return-value"></a>Návratová hodnota
 

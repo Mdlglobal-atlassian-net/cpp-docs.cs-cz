@@ -10,16 +10,16 @@ helpviewer_keywords:
 - CFieldExchange [MFC], IsFieldType
 - CFieldExchange [MFC], SetFieldType
 ms.assetid: 24c5c0b3-06a6-430e-9b6f-005a2c65e29f
-ms.openlocfilehash: e66b3ed16d4f21d46567c37bfaf7929d32f63b8e
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: d4b99a4992075072253d4f9b3182a926673bdfd0
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79420405"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373935"
 ---
 # <a name="cfieldexchange-class"></a>CFieldExchange – třída
 
-Podporuje rutiny výměny pole záznamu (RFX) a hromadná výměna pole záznamu (Bulk RFX) používané třídami databáze.
+Podporuje rutiny výměny pole záznamu (RFX) a hromadné hodového záznamu (Hromadné RFX) používané třídami databáze.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -31,31 +31,31 @@ class CFieldExchange
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CFieldExchange:: IsFieldType](#isfieldtype)|Vrátí nenulovou hodnotu, pokud je aktuální operace vhodná pro typ aktualizovaného pole.|
-|[CFieldExchange:: SetFieldType](#setfieldtype)|Určuje typ datového členu sady záznamů – sloupec nebo parametr – reprezentovaný všemi následujícími voláními RFX funkcí do dalšího volání `SetFieldType`.|
+|[CfieldExchange::IsfieldType](#isfieldtype)|Vrátí nenulovou hodnotu, pokud je aktuální operace vhodná pro typ aktualizovaného pole.|
+|[Cfieldexchange::setfieldtype](#setfieldtype)|Určuje typ datového člena sady záznamů – sloupec nebo parametr – reprezentované `SetFieldType`všemi následujícími voláními funkcí RFX až do dalšího volání aplikace .|
 
 ## <a name="remarks"></a>Poznámky
 
-`CFieldExchange` nemá základní třídu.
+`CFieldExchange`nemá základní třídu.
 
-Tuto třídu použijte v případě, že píšete rutiny výměny dat pro vlastní datové typy nebo když implementujete hromadné načítání řádků; v opačném případě tuto třídu nebudete používat přímo. RFX a Hromadná RFX vyměňuje data mezi poli datových členů objektu Recordset a odpovídajícími poli aktuálního záznamu ve zdroji dat.
+Tuto třídu použijte, pokud píšete rutiny výměny dat pro vlastní datové typy nebo při implementaci hromadného načítání řádků; v opačném případě nebudete přímo používat tuto třídu. RFX a Bulk RFX vyměňují data mezi datovými členy pole objektu sady záznamů a odpovídajícími poli aktuálního záznamu ve zdroji dat.
 
 > [!NOTE]
->  Pokud pracujete s třídami objektů pro přístup k datům (DAO), nikoli s třídami rozhraní ODBC (Open Database Connectivity), místo toho použijte třídu [CDaoFieldExchange](../../mfc/reference/cdaofieldexchange-class.md) . Další informace najdete v článku [Přehled: programování databáze](../../data/data-access-programming-mfc-atl.md).
+> Pokud pracujete s objekty přístupu k datům (DAO) třídy spíše než otevřené připojení k databázi (ODBC) třídy, použijte třídu [CDaoFieldExchange](../../mfc/reference/cdaofieldexchange-class.md) místo. Další informace naleznete v článku [Přehled:Programování databáze](../../data/data-access-programming-mfc-atl.md).
 
-Objekt `CFieldExchange` poskytuje kontextové informace potřebné k tomu, aby mohlo probíhat výměna pole záznamů nebo hromadné výměny pole záznamů. objekty `CFieldExchange` podporují řadu operací, včetně parametrů vazby a datových členů polí a nastavení různých příznaků pro pole aktuálního záznamu. Operace RFX a Bulk RFX jsou prováděny na datových členech třídy recordset typů definovaných **výčtovým** **FieldType** v `CFieldExchange`. Možné hodnoty **FieldType** jsou:
+Objekt `CFieldExchange` poskytuje kontextové informace potřebné pro výměnu pole záznamu nebo hromadné výměny pole záznamu. `CFieldExchange`objekty podporují řadu operací, včetně parametrů vazby a datových členů polí a nastavení různých příznaků v polích aktuálního záznamu. RFX a Bulk RFX operace jsou prováděny na datových členech třídy `CFieldExchange`recordset typů definovaných **ve výčtu** **FieldType** in . Možné hodnoty **Typu pole** jsou:
 
-- `CFieldExchange::outputColumn` pro datové členy polí.
+- `CFieldExchange::outputColumn`pro datové členy pole.
 
-- pro datové členy vstupních parametrů `CFieldExchange::inputParam` nebo `CFieldExchange::param`.
+- `CFieldExchange::inputParam`nebo `CFieldExchange::param` pro členy vstupních parametrů.
 
-- `CFieldExchange::outputParam` pro datové členy parametru Output
+- `CFieldExchange::outputParam`pro datové členy výstupních parametrů.
 
-- `CFieldExchange::inoutParam` pro datové členy vstupní/výstupní parametry.
+- `CFieldExchange::inoutParam`pro datové členy vstupních a výstupních parametrů.
 
-Většina členských funkcí a datových členů třídy je k dispozici pro psaní vlastních rutin RFX. Budete často používat `SetFieldType`. Další informace najdete v článcích [Výměna pole záznamu (RFX)](../../data/odbc/record-field-exchange-rfx.md) a [Sada záznamů (ODBC)](../../data/odbc/recordset-odbc.md). Informace o hromadném načítání řádků naleznete v článku [Sada záznamů: hromadné načítání záznamů (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md). Podrobnosti o globálních funkcích RFX a Bulk RFX naleznete v části [funkce výměny pole záznamu](../../mfc/reference/record-field-exchange-functions.md) v části makra MFC a Globals tohoto odkazu.
+Většina členských funkcí třídy a datových členů jsou k dispozici pro psaní vlastní rutiny RFX. Budete používat `SetFieldType` často. Další informace naleznete v článcích [Výměna polí záznamů (RFX)](../../data/odbc/record-field-exchange-rfx.md) a [Sada záznamů (ODBC).](../../data/odbc/recordset-odbc.md) Informace o hromadném načítání řádků naleznete v článku [Sada záznamů: Hromadné načítání záznamů (ODBC).](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) Podrobnosti o globálních funkcích RFX a Bulk RFX naleznete v části [Záznam funkce výměny polí](../../mfc/reference/record-field-exchange-functions.md) v části MFC MFC MFC MFC makra a globální.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -63,11 +63,11 @@ Většina členských funkcí a datových členů třídy je k dispozici pro psa
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** AFXDB. h
+**Záhlaví:** afxdb.h
 
-##  <a name="isfieldtype"></a>CFieldExchange:: IsFieldType
+## <a name="cfieldexchangeisfieldtype"></a><a name="isfieldtype"></a>CfieldExchange::IsfieldType
 
-Pokud zapíšete vlastní funkci RFX, volejte `IsFieldType` na začátku vaší funkce, abyste zjistili, zda lze aktuální operaci provést na určitém typu datového členu pole nebo parametru (`CFieldExchange::outputColumn`, `CFieldExchange::inputParam`, `CFieldExchange::param`, `CFieldExchange::outputParam`nebo `CFieldExchange::inoutParam`).
+Pokud píšete vlastní funkci RFX, `IsFieldType` volání na začátku funkce k určení, zda aktuální operace lze provést `CFieldExchange::outputColumn` `CFieldExchange::inputParam`na `CFieldExchange::param` `CFieldExchange::outputParam`konkrétní pole nebo typ datového člena parametru (, , , , nebo `CFieldExchange::inoutParam`).
 
 ```
 BOOL IsFieldType(UINT* pnField);
@@ -76,19 +76,19 @@ BOOL IsFieldType(UINT* pnField);
 ### <a name="parameters"></a>Parametry
 
 *pnField*<br/>
-Pořadové číslo datového členu pole nebo parametru je vráceno v tomto parametru. Toto číslo odpovídá pořadí datového člena ve funkci [CRecordset::D ofieldexchange](../../mfc/reference/crecordset-class.md#dofieldexchange) nebo [CRecordset::D obulkfieldexchange](../../mfc/reference/crecordset-class.md#dobulkfieldexchange) .
+V tomto parametru je vráceno pořadové číslo datového člena pole nebo parametru. Toto číslo odpovídá pořadí datového člena ve funkci [CRecordset::DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) nebo [CRecordset::DoBulkFieldExchange.](../../mfc/reference/crecordset-class.md#dobulkfieldexchange)
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud lze aktuální operaci provést pro aktuální pole nebo typ parametru.
+Nenulová, pokud lze aktuální operaci provést u aktuálního pole nebo typu parametru.
 
 ### <a name="remarks"></a>Poznámky
 
-Sledujte model existujících funkcí RFX.
+Postupujte podle modelu existujících funkcí RFX.
 
-##  <a name="setfieldtype"></a>CFieldExchange:: SetFieldType
+## <a name="cfieldexchangesetfieldtype"></a><a name="setfieldtype"></a>Cfieldexchange::setfieldtype
 
-Budete potřebovat volání `SetFieldType` v přepsání metody [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) nebo [DoBulkFieldExchange](../../mfc/reference/crecordset-class.md#dobulkfieldexchange) vaší třídy sady záznamů.
+Potřebujete volání `SetFieldType` v přepsání třídy [doFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) nebo [DoBulkFieldExchange](../../mfc/reference/crecordset-class.md#dobulkfieldexchange) vaší třídy záznamů.
 
 ```
 void SetFieldType(UINT nFieldType);
@@ -96,8 +96,8 @@ void SetFieldType(UINT nFieldType);
 
 ### <a name="parameters"></a>Parametry
 
-*nFieldType*<br/>
-Hodnota `enum FieldType`deklarovaná v `CFieldExchange`, která může být jedna z následujících:
+*nTyp pole*<br/>
+Hodnota `enum FieldType`, deklarovaná v `CFieldExchange`písmenu a), která může být jednou z následujících hodnot:
 
 - `CFieldExchange::outputColumn`
 
@@ -111,24 +111,24 @@ Hodnota `enum FieldType`deklarovaná v `CFieldExchange`, která může být jedn
 
 ### <a name="remarks"></a>Poznámky
 
-Pro pole datových členů je třeba volat `SetFieldType` s parametrem `CFieldExchange::outputColumn`a následovat volání funkcí RFX nebo hromadného RFX. Pokud jste neimplementovali hromadné načítání řádků, pak ClassWizard toto volání `SetFieldType` v části mapa pole v `DoFieldExchange`.
+Pro datové členy pole `SetFieldType` je nutné `CFieldExchange::outputColumn`volat s parametrem , následovaný voláním funkcí RFX nebo Bulk RFX. Pokud jste neimplementovali hromadné načítání řádků, `SetFieldType` pak ClassWizard umístí toto `DoFieldExchange`volání za vás v části mapy pole .
 
-Pokud parametrizovatte třídu sady záznamů, je nutné volat `SetFieldType` znovu, mimo část mapování polí, následovaná voláními RFX pro všechny datové členy parametru. Každý typ datového členu parametru musí mít své vlastní volání `SetFieldType`. Následující tabulka rozlišuje různé hodnoty, které můžete předat `SetFieldType`, aby představovaly parametry datových členů vaší třídy:
+Pokud parametrizujete třídu sady záznamů, `SetFieldType` musíte volat znovu, mimo libovolnou část mapy pole, následovanou voláním RFX pro všechny členy dat parametrů. Každý typ datového člena parametru musí mít své vlastní `SetFieldType` volání. Následující tabulka rozlišuje různé `SetFieldType` hodnoty, které můžete předat, aby reprezentovaly členy dat parametrů vaší třídy:
 
-|Hodnota parametru SetFieldType|Typ datového členu parametru|
+|Hodnota parametru SetFieldType|Typ datového člena parametru|
 |----------------------------------|-----------------------------------|
-|`CFieldExchange::inputParam`|Vstupní parametr Hodnota, která je předána dotazu nebo uložené proceduře sady záznamů.|
-|`CFieldExchange::param` | Stejné jako `CFieldExchange::inputParam`.|
-|`CFieldExchange::outputParam`|Výstupní parametr Návratová hodnota uložené procedury sady záznamů.|
-|`CFieldExchange::inoutParam`|Vstupní/výstupní parametr Hodnota, která je předána a vrácena z uložené procedury sady záznamů.|
+|`CFieldExchange::inputParam`|Vstupní parametr. Hodnota, která je předána do dotazu sady záznamů nebo uložené procedury.|
+|`CFieldExchange::param` | stejné `CFieldExchange::inputParam`jako .|
+|`CFieldExchange::outputParam`|Výstupní parametr. Vrácená hodnota uložené procedury sady záznamů.|
+|`CFieldExchange::inoutParam`|Vstupní/výstupní parametr. Hodnota, která je předána a vrácena z uložené procedury sady záznamů.|
 
-Obecně platí, že každá skupina volání RFX funkce přidružená k datovým členům pole nebo k datovým členům parametru musí předcházet volání `SetFieldType`. Parametr *nFieldType* každého volání `SetFieldType` identifikuje typ datových členů reprezentovaných voláními funkce RFX, které následují volání `SetFieldType`.
+Obecně platí, že každé skupině volání funkce RFX přidružené k datovým členům `SetFieldType`pole nebo datovým členům parametrů musí předcházet volání . Parametr *nFieldType* každého `SetFieldType` volání identifikuje typ datových členů reprezentované volánífunkce RFX, které následují po `SetFieldType` volání.
 
-Další informace o zpracování výstupních a vstupně-výstupních parametrů naleznete v tématu `CRecordset` členská funkce [FlushResultSet](../../mfc/reference/crecordset-class.md#flushresultset). Další informace o funkcích RFX a Bulk RFX najdete v tématu [funkce výměny pole záznamu](../../mfc/reference/record-field-exchange-functions.md)v tématu. Související informace o hromadném načítání řádků naleznete v článku [Sada záznamů: hromadné načítání záznamů (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+Další informace o zpracování výstupních a vstupních `CRecordset` a výstupních parametrů naleznete v členské funkci [FlushResultSet](../../mfc/reference/crecordset-class.md#flushresultset). Další informace o funkcích RFX a Bulk RFX naleznete v tématu [Record Field Exchange Functions](../../mfc/reference/record-field-exchange-functions.md). Související informace o hromadném načítání řádků naleznete v článku [Sada záznamů: Hromadné načítání záznamů (ODBC).](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)
 
 ### <a name="example"></a>Příklad
 
-Tento příklad ukazuje několik volání funkcí RFX s doprovodnou voláním `SetFieldType`. Všimněte si, že `SetFieldType` je volána prostřednictvím ukazatele `pFX` na objekt `CFieldExchange`.
+Tento příklad ukazuje několik volání rfx funkce `SetFieldType`s doprovodné volání . Všimněte `SetFieldType` si, `pFX` že je `CFieldExchange` volána prostřednictvím ukazatele na objekt.
 
 [!code-cpp[NVC_MFCDatabase#33](../../mfc/codesnippet/cpp/cfieldexchange-class_1.cpp)]
 

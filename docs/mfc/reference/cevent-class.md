@@ -16,16 +16,16 @@ helpviewer_keywords:
 - CEvent [MFC], SetEvent
 - CEvent [MFC], Unlock
 ms.assetid: df676042-ce27-4702-800a-e73ff4f44395
-ms.openlocfilehash: fbf2d834163199107aae44bd5723ceff79e36f91
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 009a17342cb92025d67bf2fe0df1b9d5c7c0c6f0
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69506679"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373961"
 ---
 # <a name="cevent-class"></a>CEvent – třída
 
-Představuje událost, což je synchronizační objekt, který umožňuje jednomu vláknu oznamovat jiné, že došlo k události.
+Představuje událost, což je objekt synchronizace, který umožňuje jednomu vláknu upozornit jiné, že došlo k události.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -37,36 +37,36 @@ class CEvent : public CSyncObject
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CEvent::CEvent](#cevent)|`CEvent` Vytvoří objekt.|
+|[CEvent::CEvent](#cevent)|Vytvoří `CEvent` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CEvent::P ulseEvent](#pulseevent)|Nastaví událost na k dispozici (signalizaci), uvolní vlákna čekající na vyřízení a nastaví událost na nedostupnou (nesignalizované).|
-|[CEvent::ResetEvent](#resetevent)|Nastaví událost na nedostupné (nesignalizované).|
-|[CEvent:: SetEvent](#setevent)|Nastaví událost na k dispozici (signalizaci) a uvolní všechna čekací vlákna.|
-|[CEvent:: Unlock](#unlock)|Uvolní objekt události.|
+|[CEvent::PulseEvent](#pulseevent)|Nastaví událost na dostupnou (signalizovanou), uvolní čekající vlákna a nastaví událost na nedostupnou (nesignalizovanou).|
+|[CEvent::ResetEvent](#resetevent)|Nastaví událost na nedostupnou (nesignalizovanou).|
+|[CEvent::SetEvent](#setevent)|Nastaví událost na dostupnou (signalizovanou) a uvolní všechna čekající vlákna.|
+|[CEvent::Odemknout](#unlock)|Uvolní objekt události.|
 
 ## <a name="remarks"></a>Poznámky
 
-Události jsou užitečné v případě, kdy vlákno musí zjistit, kdy se má provést jeho úloha. Například vlákno, které kopíruje data do archivu dat, musí být oznámeno, když jsou k dispozici nová data. Pomocí `CEvent` objektu pro upozorňování vlákna kopírování, když jsou k dispozici nová data, vlákno může svou úlohu co nejdříve provést.
+Události jsou užitečné, když vlákno musí vědět, kdy má provést svůj úkol. Například vlákno, které kopíruje data do archivu dat, musí být upozorněno, když jsou k dispozici nová data. Pomocí objektu `CEvent` upozornit vlákno kopie, když jsou k dispozici nová data, může vlákno provést svůj úkol co nejdříve.
 
-`CEvent`objekty mají dva typy: ruční a automatická.
+`CEvent`objekty mají dva typy: ruční a automatické.
 
-Automatický `CEvent` objekt se automaticky vrátí do stavu bez signálu (není k dispozici) po uvolnění alespoň jednoho vlákna. Ve výchozím nastavení je `CEvent` objekt automaticky, pokud `TRUE` nepředáte parametru *bManualReset* během vytváření.
+Automatický `CEvent` objekt se automaticky vrátí do nesignalizovaného (nedostupného) stavu po uvolnění alespoň jednoho vlákna. Ve výchozím `CEvent` nastavení je objekt `TRUE` automatický, pokud nepředáte parametr *bManualReset* během výstavby.
 
-Ruční `CEvent` objekt zůstane ve stavu nastaveném funkcí [SetEvent](#setevent) nebo [ResetEvent](#resetevent) , dokud není volána jiná funkce. Chcete-li vytvořit `CEvent` ruční objekt, `TRUE` předejte `bManualReset` parametr během konstrukce.
+Ruční `CEvent` objekt zůstane ve stavu nastaveném [setEvent](#setevent) nebo [ResetEvent,](#resetevent) dokud nebude volána druhá funkce. Chcete-li `CEvent` vytvořit ruční `TRUE` objekt, předajte `bManualReset` parametr během výstavby.
 
-Chcete-li `CEvent` použít objekt, `CEvent` Sestavte objekt, když je vyžadován. Zadejte název události, na které chcete čekat, a také určete, že aplikace by ji měla zpočátku vlastnit. Pak můžete k události přistupovat, když se konstruktor vrátí. Zavolejte [SetEvent](#setevent) k signalizaci (zpřístupnit) objektu události a potom zavolejte na [odemknout](#unlock) , když jste dokončili přístup k řízenému prostředku.
+Chcete-li `CEvent` použít objekt, vytvořte objekt, `CEvent` pokud je požadován. Zadejte název události, na kterou chcete čekat, a také určete, že aplikace by ji měla zpočátku vlastnit. Potom můžete získat přístup k události, když se vrátí konstruktor. Volání [SetEvent](#setevent) signál (zpřístupnit) objekt události a pak volat [Odemknout](#unlock) po dokončení přístupu k řízenému prostředku.
 
-Alternativním způsobem použití `CEvent` objektů je přidat proměnnou typu `CEvent` jako datový člen do třídy, kterou chcete ovládat. Během konstrukce kontrolovaného objektu zavolejte konstruktor `CEvent` datového členu a určete, zda je událost zpočátku signalizována, a také specifythe typ objektu události, který chcete, název události (Pokud se bude používat napříč procesy). hranice) a všechny požadované atributy zabezpečení.
+Alternativní metodou pro `CEvent` použití objektů je přidání `CEvent` proměnné typu jako datového člena do třídy, kterou chcete řídit. Během vytváření řízeného objektu zavolejte `CEvent` konstruktor datového člena a určete, zda je událost původně signalizována, a také určete požadovaný typ objektu události, název události (pokud bude použita přes hranice procesu) a všechny požadované atributy zabezpečení.
 
-Chcete-li získat přístup k prostředku `CEvent` , který ovládá objekt tímto způsobem, nejprve vytvořte proměnnou typu [CSingleLock](../../mfc/reference/csinglelock-class.md) nebo zadejte [CMultiLock](../../mfc/reference/cmultilock-class.md) v metodě přístupu svého prostředku. Pak zavolejte `Lock` metodu objektu Lock (například [CMultiLock:: Lock](../../mfc/reference/cmultilock-class.md#lock)). V tomto okamžiku vaše vlákno získá přístup k prostředku, počká na uvolnění prostředku a získá přístup, nebo počkejte na uvolnění prostředku, vypršení časového limitu a nepodaří se mu získat přístup k prostředku. V každém případě byl k vašemu prostředku přístup bezpečným způsobem. Chcete-li uvolnit prostředek, `SetEvent` zavolejte k signalizaci objektu události a pak `Unlock` použijte metodu objektu Lock (například [CMultiLock:: Unlock](../../mfc/reference/cmultilock-class.md#unlock)), nebo nechte objekt zámku mimo rozsah.
+Chcete-li získat přístup `CEvent` k prostředku řízenému objektem tímto způsobem, nejprve vytvořte proměnnou typu [CSingleLock](../../mfc/reference/csinglelock-class.md) nebo [cmultilock](../../mfc/reference/cmultilock-class.md) v metodě přístupu vašeho prostředku. Potom volání `Lock` metody objektu lock (například [CMultiLock::Lock).](../../mfc/reference/cmultilock-class.md#lock) V tomto okamžiku vlákno buď získat přístup k prostředku, počkejte na prostředek, který má být uvolněn a získat přístup, nebo čekat na prostředek, který má být uvolněn, časový režim a nepodaří získat přístup k prostředku. V každém případě byl přístup k prostředku přístupným způsobem bezpečným pro přístup z více vláken. Chcete-li uvolnit `SetEvent` prostředek, volání signál objektu `Unlock` události a potom použijte metodu objektu lock (například [CMultiLock::Unlock)](../../mfc/reference/cmultilock-class.md#unlock)nebo nechte objekt zámku vypadnout z oboru.
 
-Další informace o použití `CEvent` objektů naleznete v tématu [Multithreading: Jak používat synchronizační třídy](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).
+Další informace o použití `CEvent` objektů naleznete v [tématu Multithreading: How to Use the Synchronizační třídy](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).
 
 ## <a name="example"></a>Příklad
 
@@ -76,17 +76,17 @@ Další informace o použití `CEvent` objektů naleznete v tématu [Multithread
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[CObject](../../mfc/reference/cobject-class.md)
+[CObjekt](../../mfc/reference/cobject-class.md)
 
-[CSyncObject](../../mfc/reference/csyncobject-class.md)
+[Objekt CSyncObject](../../mfc/reference/csyncobject-class.md)
 
 `CEvent`
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxmt. h
+**Záhlaví:** afxmt.h
 
-##  <a name="cevent"></a>CEvent::CEvent
+## <a name="ceventcevent"></a><a name="cevent"></a>CEvent::CEvent
 
 Vytvoří pojmenovaný nebo nepojmenovaný `CEvent` objekt.
 
@@ -101,29 +101,29 @@ CEvent(
 ### <a name="parameters"></a>Parametry
 
 *bInitiallyOwn*<br/>
-Je-li nastaveno na hodnotu true `CMultilock` , `CSingleLock` je vlákno objektu nebo povoleno. V opačném případě musí počkat všechna vlákna, která chtějí získat přístup k prostředku.
+Pokud true, vlákno `CMultilock` pro `CSingleLock` objekt nebo je povolena. V opačném případě musí čekat všechna vlákna, která chtějí získat přístup k prostředku.
 
 *bManualReset*<br/>
-Pokud je nastaveno na TRUE, určuje, že objekt události je ruční událost, jinak objekt události je automatická událost.
+Pokud true, určuje, že objekt události je ruční událost, jinak objekt události je automatická událost.
 
-*lpszName*<br/>
-`CEvent` Název objektu. Je nutné zadat, pokud se objekt bude používat napříč hranicemi procesu. Pokud název odpovídá existující události, konstruktor vytvoří nový `CEvent` objekt, který bude odkazovat na událost daného názvu. Pokud se název shoduje se stávajícím synchronizačním objektem, který není událost, konstrukce se nezdaří. Pokud má hodnotu NULL, bude mít název hodnotu null.
+*název lpsz*<br/>
+Název objektu. `CEvent` Musí být zadán, pokud bude objekt použit přes hranice procesu. Pokud název odpovídá existující události, konstruktor vytvoří `CEvent` nový objekt, který odkazuje na událost tohoto názvu. Pokud název odpovídá existující musynchronizační objekt, který není událostí, konstrukce se nezdaří. Pokud null, název bude null.
 
-*lpsaAttribute*<br/>
-Atributy zabezpečení pro objekt události Úplný popis této struktury naleznete v tématu [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) v Windows SDK.
+*Atribut lpsa*<br/>
+Atributy zabezpečení pro objekt události. Úplný popis této struktury naleznete v [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) sady Windows SDK.
 
 ### <a name="remarks"></a>Poznámky
 
-Chcete-li získat přístup `CEvent` k objektu nebo ho uvolnit, vytvořte objekt [CMultiLock](../../mfc/reference/cmultilock-class.md) nebo [CSingleLock](../../mfc/reference/csinglelock-class.md) a zavolejte jeho funkci [Lock](../../mfc/reference/csinglelock-class.md#lock) a [Odemkněte](../../mfc/reference/csinglelock-class.md#unlock) členské funkce.
+Chcete-li získat `CEvent` přístup nebo uvolnit objekt, vytvořte objekt [CMultiLock](../../mfc/reference/cmultilock-class.md) nebo [CSingleLock](../../mfc/reference/csinglelock-class.md) a zavolejte jeho členské funkce [Lock](../../mfc/reference/csinglelock-class.md#lock) and [Unlock.](../../mfc/reference/csinglelock-class.md#unlock)
 
-Chcete-li změnit stav `CEvent` objektu na signál (vlákna nemusí čekat), zavolejte [SetEvent](#setevent) nebo [PulseEvent](#pulseevent). Chcete-li nastavit stav `CEvent` objektu na nesignálný (vlákna musí čekat), zavolejte [ResetEvent](#resetevent).
+Chcete-li změnit `CEvent` stav objektu na signalizované (vlákna nemusí čekat), volání [SetEvent](#setevent) nebo [PulseEvent](#pulseevent). Chcete-li nastavit `CEvent` stav objektu na nesignalizované (vlákna musí počkat), volejte [ResetEvent](#resetevent).
 
 > [!IMPORTANT]
->  Po vytvoření `CEvent` objektu použijte příkaz [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror) , aby se zajistilo, že mutex ještě neexistoval. Pokud Mutex neočekávaně existoval, může to znamenat, že neoprávněný proces je squatting a může vycházet z škodlivého použití mutexu. V tomto případě je doporučený postup pro zaznamenání zabezpečení zavřít a pokračovat, jako kdyby došlo k chybě při vytváření objektu.
+> Po vytvoření `CEvent` objektu použijte [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror) k zajištění, že mutex ještě neexistoval. Pokud mutex existoval neočekávaně, může to znamenat, že proces rogue je squatting a může být v úmyslu použít mutex zlomyslně. V tomto případě je doporučená procedura s ohledem na zabezpečení zavřít popisovač a pokračovat, jako by došlo k chybě při vytváření objektu.
 
-##  <a name="pulseevent"></a>CEvent::P ulseEvent
+## <a name="ceventpulseevent"></a><a name="pulseevent"></a>CEvent::PulseEvent
 
-Nastaví stav události na signál (k dispozici), uvolní všechna čekací vlákna a obnoví je na nesignální (není k dispozici) automaticky.
+Nastaví stav události na signalizované (k dispozici), uvolní všechny čekající vlákna a automaticky ji obnoví na nesignalizovanou (nedostupnou).
 
 ```
 BOOL PulseEvent();
@@ -131,19 +131,19 @@ BOOL PulseEvent();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud byla funkce úspěšná; v opačném případě 0.
+Nenulová, pokud byla funkce úspěšná; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud je událost ruční, jsou uvolněna všechna čekající vlákna, událost je nastavena na nesignalizaci a `PulseEvent` vrátí. Pokud je událost automaticky, jedno vlákno je uvolněno, událost je nastavena na nesignalizaci a `PulseEvent` vrátí.
+Pokud je událost ruční, jsou uvolněny všechny čekající podprocesy, `PulseEvent` událost je nastavena na nesignalizované a vrátí. Pokud je událost automatická, je uvolněno jedno vlákno, událost je `PulseEvent` nastavena na nesignalizovanou a vrátí se.
 
-Pokud nečekají žádná vlákna, nebo není možné okamžitě uvolnit žádná vlákna, `PulseEvent` nastaví stav události na nesignalizaci a vrátí.
+Pokud žádné podprocesy čekají nebo žádná vlákna `PulseEvent` mohou být uvolněny okamžitě, nastaví stav události na nesignalizované a vrátí.
 
-`PulseEvent`používá základní funkci Win32 `PulseEvent` , která může být koncovým programem odebrána ze stavu čekání pomocí asynchronní procedury v režimu jádra. `PulseEvent` Proto je nespolehlivá a neměla by být používána novými aplikacemi. Další informace najdete v tématu [funkce PulseEvent](/windows/win32/api/winbase/nf-winbase-pulseevent).
+`PulseEvent`používá základní funkci `PulseEvent` Win32, která může být na okamžik odebrána ze stavu čekání voláním asynchronní procedury v režimu jádra. Proto `PulseEvent` je nespolehlivé a by neměly být používány nové aplikace. Další informace naleznete v [tématu PulseEvent funkce](/windows/win32/api/winbase/nf-winbase-pulseevent).
 
-##  <a name="resetevent"></a>CEvent::ResetEvent
+## <a name="ceventresetevent"></a><a name="resetevent"></a>CEvent::ResetEvent
 
-Nastaví stav události na nesignalizaci, dokud není explicitně nastaveno na signál členskou funkcí [SetEvent](#setevent) .
+Nastaví stav události na nesignalizovanou, dokud není explicitně nastavena na signalizovanou členovou funkcí [SetEvent.](#setevent)
 
 ```
 BOOL ResetEvent();
@@ -151,17 +151,17 @@ BOOL ResetEvent();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud byla funkce úspěšná; v opačném případě 0.
+Nenulová, pokud byla funkce úspěšná; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-To způsobí, že všechna vlákna, která chtějí získat přístup k této události, budou čekat.
+To způsobí, že všechna vlákna, kteří chtějí získat přístup k této události čekat.
 
-Tato členská funkce se nepoužívá v automatických událostech.
+Tato členská funkce není používána automatickými událostmi.
 
-##  <a name="setevent"></a>CEvent:: SetEvent
+## <a name="ceventsetevent"></a><a name="setevent"></a>CEvent::SetEvent
 
-Nastaví stav události k signalizaci a uvolnění všech čekajících vláken.
+Nastaví stav události signalizované, uvolnění všech čekajících podprocesů.
 
 ```
 BOOL SetEvent();
@@ -169,13 +169,13 @@ BOOL SetEvent();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud byla funkce úspěšná, jinak 0.
+Nenulová, pokud byla funkce úspěšná, jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud je událost ruční, zůstane událost signalizována až po volání [ResetEvent](#resetevent) . V tomto případě lze vydat více než jedno vlákno. Pokud je událost automatická, událost zůstane signalizována, dokud se neuvolní jedno vlákno. Systém pak nastaví stav události na nesignalizace. Pokud žádná vlákna nečekají, stav zůstane signalizována, dokud se neuvolní jedno vlákno.
+Pokud je událost ruční, událost zůstane signalizována, dokud nebude volána [resetevent.](#resetevent) V tomto případě lze uvolnit více než jedno vlákno. Pokud je událost automatická, událost zůstane signalizována, dokud nebude uvolněno jedno vlákno. Systém pak nastaví stav události na nesignalizovanou. Pokud žádné podprocesy čekají, stav zůstane signalizován, dokud je uvolněno jedno vlákno.
 
-##  <a name="unlock"></a>CEvent:: Unlock
+## <a name="ceventunlock"></a><a name="unlock"></a>CEvent::Odemknout
 
 Uvolní objekt události.
 
@@ -185,13 +185,13 @@ BOOL Unlock();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud vlákno vlastně objekt události a událost je automatická událost; v opačném případě 0.
+Nenulová, pokud vlákno vlastnilo objekt události a událost je automatická událost; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce je volána vlákny, které aktuálně vlastní událost pro uvolnění po jejich dokončení, pokud je jejich objekt zámku znovu použit. Pokud objekt zámku není znovu použit, bude tato funkce volána destruktorem objektu zámku.
+Tato členská funkce je volána vlákny, které aktuálně vlastní automatickou událost, aby ji uvolnily po dokončení, pokud má být jejich objekt zámku znovu použit. Pokud objekt zámku není znovu použít, bude tato funkce volána destruktorem objektu zámku.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [CSyncObject – třída](../../mfc/reference/csyncobject-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)

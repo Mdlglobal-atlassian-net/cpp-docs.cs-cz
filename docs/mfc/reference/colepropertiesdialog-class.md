@@ -1,5 +1,5 @@
 ---
-title: COlePropertiesDialog – třída
+title: Třída COlePropertiesDialog
 ms.date: 11/04/2016
 f1_keywords:
 - COlePropertiesDialog
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - COlePropertiesDialog [MFC], m_psh
 - COlePropertiesDialog [MFC], m_vp
 ms.assetid: a54dbc89-1447-4329-bd01-00e98ec9e935
-ms.openlocfilehash: b819bc430868717a2df01a086b482dfe6d56cc0f
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: f065894ff49af755ab4020f71b0213b19db49054
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69504168"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374886"
 ---
-# <a name="colepropertiesdialog-class"></a>COlePropertiesDialog – třída
+# <a name="colepropertiesdialog-class"></a>Třída COlePropertiesDialog
 
-Zapouzdřuje dialogové okno běžné vlastnosti objektu OLE systému Windows.
+Zapouzdřuje dialogové okno Vlastnosti objektu OLE pro prostředí Windows.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -43,46 +43,46 @@ class COlePropertiesDialog : public COleDialog
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[COlePropertiesDialog::COlePropertiesDialog](#colepropertiesdialog)|`COlePropertiesDialog` Vytvoří objekt.|
+|[COlePropertiesDialog::COlePropertiesDialog](#colepropertiesdialog)|Vytvoří `COlePropertiesDialog` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[COlePropertiesDialog::DoModal](#domodal)|Zobrazí dialogové okno a umožní uživateli provést výběr.|
-|[COlePropertiesDialog::OnApplyScale](#onapplyscale)|Volá se rozhraním, když se změnilo měřítko položky dokumentu.|
+|[COlePropertiesDialog::DoModální](#domodal)|Zobrazí dialogové okno a umožní uživateli provést výběr.|
+|[COlePropertiesDialog::OnApplyScale](#onapplyscale)|Volat rámci při změně škálování položky dokumentu.|
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Name|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[COlePropertiesDialog::m_gp](#m_gp)|Struktura používaná k inicializaci stránky `COlePropertiesDialog` "Obecné" objektu.|
-|[COlePropertiesDialog::m_lp](#m_lp)|Struktura používaná k inicializaci stránky `COlePropertiesDialog` "propojení" objektu.|
-|[COlePropertiesDialog::m_op](#m_op)|Struktura používaná k inicializaci `COlePropertiesDialog` objektu.|
-|[COlePropertiesDialog::m_psh](#m_psh)|Struktura používaná k přidání dalších vlastních stránek vlastností.|
-|[COlePropertiesDialog::m_vp](#m_vp)|Struktura používaná k přizpůsobení stránky `COlePropertiesDialog` "zobrazení" objektu.|
+|[COlePropertiesDialog::m_gp](#m_gp)|Struktura slouží k inicializaci "Obecné" `COlePropertiesDialog` stránky objektu.|
+|[COlePropertiesDialog::m_lp](#m_lp)|Struktura slouží k inicializaci stránky "Odkaz" objektu. `COlePropertiesDialog`|
+|[COlePropertiesDialog::m_op](#m_op)|Struktura slouží k inicializaci objektu. `COlePropertiesDialog`|
+|[COlePropertiesDialog::m_psh](#m_psh)|Struktura slouží k přidání další chod vlastní chod stránky.|
+|[COlePropertiesDialog::m_vp](#m_vp)|Struktura používaná k přizpůsobení stránky Zobrazení `COlePropertiesDialog` objektu.|
 
 ## <a name="remarks"></a>Poznámky
 
-Dialogová okna vlastností objektů OLE poskytují snadný způsob, jak zobrazit a upravit vlastnosti položky dokumentu OLE způsobem konzistentním s normami systému Windows. Tyto vlastnosti zahrnují mimo jiné informace o souboru reprezentovaného položkou dokumentu, možnosti pro zobrazení ikony a měřítka obrázku a informace o odkazu položky (Pokud je položka propojená).
+Běžná dialogová okna vlastností objektu OLE poskytují snadný způsob zobrazení a úpravy vlastností položky dokumentu OLE způsobem konzistentním se standardy systému Windows. Mezi tyto vlastnosti patří mimo jiné informace o souboru reprezentovaném položkou dokumentu, možnosti zobrazení ikony a změny velikosti obrazu a informace o propojení položky (pokud je položka propojena).
 
-Chcete-li `COlePropertiesDialog` použít objekt, nejprve vytvořte objekt `COlePropertiesDialog` pomocí konstruktoru. Po sestavení dialogového okna volejte `DoModal` členskou funkci pro zobrazení dialogového okna a umožněte uživateli upravovat jakékoli vlastnosti položky. `DoModal`Vrátí, zda uživatel vybral tlačítko OK (IDOK) nebo zrušit (IDCANCEL). Kromě tlačítek OK a Storno je k dispozici tlačítko použít. Když uživatel vybere použít, všechny změny vlastností položky dokumentu se aplikují na položku a její obrázek se automaticky aktualizuje, ale zůstane aktivní.
+Chcete-li `COlePropertiesDialog` použít objekt, nejprve `COlePropertiesDialog` vytvořte objekt pomocí konstruktoru. Po vytvoření dialogového okna zavolejte `DoModal` členská funkce, aby zobrazila dialogové okno a umožnila uživateli upravit všechny vlastnosti položky. `DoModal`vrátí, zda uživatel zvolil tlačítko OK (IDOK) nebo Cancel (IDCANCEL). Kromě tlačítek OK a Storno je k dispozici tlačítko Použít. Když uživatel vybere použít, všechny změny provedené ve vlastnostech položky dokumentu se použijí na položku a její obraz se automaticky aktualizuje, ale zůstane aktivní.
 
-Datový člen [m_psh](#m_psh) je ukazatel na `PROPSHEETHEADER` strukturu a ve většině případů k němu nebudete mít přístup explicitně. Jedinou výjimkou je, že potřebujete další stránky vlastností nad rámec výchozích stránek Obecné, zobrazení a propojení. V takovém případě můžete změnit `m_psh` datového člena tak, aby zahrnoval vlastní stránky před `DoModal` voláním členské funkce.
+Datový [člen m_psh](#m_psh) je ukazatel `PROPSHEETHEADER` na strukturu a ve většině případů k němu nebudete muset přistupovat explicitně. Jednou výjimkou je, když potřebujete další stránky vlastností nad rámec výchozích stránek Obecné, Zobrazení a Odkaz. V takovém případě můžete `m_psh` upravit datový člen tak, aby `DoModal` zahrnoval vlastní stránky před voláním členské funkce.
 
-Další informace o dialogových oknech OLE naleznete v dialogových oknech článku [v tématu OLE](../../mfc/dialog-boxes-in-ole.md).
+Další informace o dialogových oknech OLE naleznete v článku [Dialogová okna v ole](../../mfc/dialog-boxes-in-ole.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[CObject](../../mfc/reference/cobject-class.md)
+[CObjekt](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[CCmdCíl](../../mfc/reference/ccmdtarget-class.md)
 
-[CWnd](../../mfc/reference/cwnd-class.md)
+[Cwnd](../../mfc/reference/cwnd-class.md)
 
-[CDialog](../../mfc/reference/cdialog-class.md)
+[Cdialog](../../mfc/reference/cdialog-class.md)
 
 [CCommonDialog](../../mfc/reference/ccommondialog-class.md)
 
@@ -92,11 +92,11 @@ Další informace o dialogových oknech OLE naleznete v dialogových oknech čl�
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxodlgs. h
+**Záhlaví:** afxodlgs.h
 
-##  <a name="colepropertiesdialog"></a>COlePropertiesDialog::COlePropertiesDialog
+## <a name="colepropertiesdialogcolepropertiesdialog"></a><a name="colepropertiesdialog"></a>COlePropertiesDialog::COlePropertiesDialog
 
-`COlePropertiesDialog` Vytvoří objekt.
+Vytvoří `COlePropertiesDialog` objekt.
 
 ```
 COlePropertiesDialog(
@@ -108,41 +108,41 @@ COlePropertiesDialog(
 
 ### <a name="parameters"></a>Parametry
 
-*pItem*<br/>
-Ukazatel na položku dokumentu, jejíž vlastnosti jsou k dispozici.
+*pPoložka*<br/>
+Ukazatel na položku dokumentu, jejíž vlastnosti jsou prostupovány.
 
 *nScaleMin*<br/>
-Minimální procentuální hodnota měřítka pro obrázek položky dokumentu
+Minimální procento změny měřítka pro obrázek položky dokumentu.
 
 *nScaleMax*<br/>
-Maximální procentuální hodnota měřítka pro obrázek položky dokumentu
+Maximální procento změny měřítka pro obraz položky dokumentu
 
 *pParentWnd*<br/>
-Ukazatel na nadřazenou položku nebo vlastníka dialogového okna.
+Ukazatel na nadřazeného nebo vlastníka dialogového okna.
 
 ### <a name="remarks"></a>Poznámky
 
-Chcete-li implementovat škálování pro položky dokumentu, `COlePropertiesDialog` odvodit vlastní třídu dialogového okna vlastností objektu OLE z důvodu implementace škálování. Všechna dialogová okna, která jsou implementována instancí této třídy, nebudou podporovat škálování položky dokumentu.
+Odvodit běžné vlastnosti `COlePropertiesDialog` objektu OLE třídy dialogového okna z za účelem implementace změny měřítka pro položky dokumentu. Všechna dialogová okna implementovaná instancí této třídy nebudou podporovat změnu měřítka položky dokumentu.
 
-Ve výchozím nastavení má dialogové okno společné vlastnosti objektu OLE tři výchozí stránky:
+Ve výchozím nastavení má společné dialogové okno Vlastnosti objektu OLE tři výchozí stránky:
 
 - Obecné
 
-   Tato stránka obsahuje systémové informace pro soubor reprezentovaný vybranou položkou dokumentu. Na této stránce může uživatel převést vybranou položku na jiný typ.
+   Tato stránka obsahuje systémové informace pro soubor reprezentované vybranou položkou dokumentu. Na této stránce může uživatel převést vybranou položku na jiný typ.
 
-- Zobrazit
+- Zobrazení
 
-   Tato stránka obsahuje možnosti pro zobrazení položky, změnu ikony a změnu měřítka obrázku.
+   Tato stránka obsahuje možnosti zobrazení položky, změny ikony a změny měřítka obrazu.
 
 - Odkaz
 
-   Tato stránka obsahuje možnosti pro změnu umístění propojené položky a aktualizaci propojené položky. Na této stránce může uživatel přerušit odkaz na vybranou položku.
+   Tato stránka obsahuje možnosti pro změnu umístění propojené položky a aktualizaci propojené položky. Na této stránce může uživatel přerušit propojení vybrané položky.
 
-Chcete-li přidat stránky nad rámec těch, které jsou [](#m_psh) k dispozici ve výchozím nastavení, upravte členskou proměnnou `COlePropertiesDialog`m_psh před ukončením konstruktoru vaší odvozené třídy. Toto je pokročilá implementace `COlePropertiesDialog` konstruktoru.
+Chcete-li přidat stránky nad rámec stránek, které jsou k dispozici `COlePropertiesDialog`ve výchozím nastavení, upravte [proměnnou m_psh](#m_psh) člen před ukončením konstruktoru odvozené třídy. Toto je pokročilá `COlePropertiesDialog` implementace konstruktoru.
 
-##  <a name="domodal"></a>COlePropertiesDialog::D oModal
+## <a name="colepropertiesdialogdomodal"></a><a name="domodal"></a>COlePropertiesDialog::DoModální
 
-Zavolejte tuto členskou funkci pro zobrazení dialogového okna běžné vlastnosti objektu OLE systému Windows a umožněte uživateli zobrazit a změnit různé vlastnosti položky dokumentu.
+Volánítéto členské funkce zobrazí dialogové okno Vlastnosti objektu OLE pro systém Windows a umožní uživateli zobrazit nebo změnit různé vlastnosti položky dokumentu.
 
 ```
 virtual INT_PTR DoModal();
@@ -150,13 +150,13 @@ virtual INT_PTR DoModal();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-IDOK nebo IDCANCEL v případě úspěchu; v opačném případě 0. IDOK a IDCANCEL jsou konstanty, které označují, zda uživatel vybral tlačítko OK nebo Storno.
+IDOK nebo IDCANCEL v případě úspěchu; jinak 0. IDOK a IDCANCEL jsou konstanty, které označují, zda uživatel zvolil tlačítko OK nebo Cancel.
 
-Pokud se vrátí IDCANCEL, můžete zavolat funkci Windows [CommDlgExtendedError](/windows/win32/api/commdlg/nf-commdlg-commdlgextendederror) a zjistit, jestli došlo k chybě.
+Pokud je vrácena funkce IDCANCEL, můžete volat funkci Windows [CommDlgExtendedError](/windows/win32/api/commdlg/nf-commdlg-commdlgextendederror) a zjistit, zda došlo k chybě.
 
-##  <a name="m_gp"></a>  COlePropertiesDialog::m_gp
+## <a name="colepropertiesdialogm_gp"></a><a name="m_gp"></a>COlePropertiesDialog::m_gp
 
-Struktura typu [OLEUIGNRLPROPS](/windows/win32/api/oledlg/ns-oledlg-oleuignrlpropsw)používaná k inicializaci stránky Obecné dialogového okna vlastnosti objektu OLE.
+Struktura typu [OLEUIGNRLPROPS](/windows/win32/api/oledlg/ns-oledlg-oleuignrlpropsw), která slouží k inicializaci stránky Obecné v dialogovém okně Vlastnosti objektu OLE.
 
 ```
 OLEUIGNRLPROPS m_gp;
@@ -164,13 +164,13 @@ OLEUIGNRLPROPS m_gp;
 
 ### <a name="remarks"></a>Poznámky
 
-Tato stránka zobrazuje typ a velikost vložení a umožňuje uživateli přístup k dialogovému oknu převést. Tato stránka obsahuje také cíl propojení, pokud je objekt odkazem.
+Na této stránce se zobrazuje typ a velikost vložení a umožňuje uživateli přístup k dialogovému oknu Převést. Tato stránka také zobrazuje cíl odkazu, pokud je objekt emitační.
 
-Další informace o `OLEUIGNRLPROPS` struktuře najdete v Windows SDK.
+Další informace o `OLEUIGNRLPROPS` struktuře naleznete v souboru Windows SDK.
 
-##  <a name="m_lp"></a>  COlePropertiesDialog::m_lp
+## <a name="colepropertiesdialogm_lp"></a><a name="m_lp"></a>COlePropertiesDialog::m_lp
 
-Struktura typu [OLEUILINKPROPS](/windows/win32/api/oledlg/ns-oledlg-oleuilinkpropsw), která se používá k inicializaci stránky odkazu v dialogovém okně Vlastnosti objektu OLE.
+Struktura typu [OLEUILINKPROPS](/windows/win32/api/oledlg/ns-oledlg-oleuilinkpropsw), která slouží k inicializaci stránky Propojení dialogového okna Vlastnosti objektu OLE.
 
 ```
 OLEUILINKPROPS m_lp;
@@ -178,13 +178,13 @@ OLEUILINKPROPS m_lp;
 
 ### <a name="remarks"></a>Poznámky
 
-Tato stránka zobrazuje umístění propojené položky a umožňuje uživateli aktualizovat nebo přerušit odkaz na položku.
+Na této stránce je zobrazeno umístění propojené položky a umožňuje uživateli aktualizovat nebo přerušit odkaz na položku.
 
-Další informace o `OLEUILINKPROPS` struktuře najdete v Windows SDK.
+Další informace o `OLEUILINKPROPS` struktuře naleznete v souboru Windows SDK.
 
-##  <a name="m_op"></a>  COlePropertiesDialog::m_op
+## <a name="colepropertiesdialogm_op"></a><a name="m_op"></a>COlePropertiesDialog::m_op
 
-Struktura typu [OLEUIOBJECTPROPS](/windows/win32/api/oledlg/ns-oledlg-oleuiobjectpropsw)používaná k inicializaci běžných dialogových oken vlastností objektu OLE.
+Struktura typu [OLEUIOBJECTPROPS](/windows/win32/api/oledlg/ns-oledlg-oleuiobjectpropsw), která slouží k inicializaci společného dialogového okna Vlastnosti objektu OLE.
 
 ```
 OLEUIOBJECTPROPS m_op;
@@ -192,13 +192,13 @@ OLEUIOBJECTPROPS m_op;
 
 ### <a name="remarks"></a>Poznámky
 
-Tato struktura obsahuje členy používané k inicializaci stránek Obecné, propojení a zobrazení.
+Tato struktura obsahuje členy používané k inicializaci obecné, odkaz a zobrazit stránky.
 
-Další informace naleznete v tématu struktury OLEUIOBJECTPROPS a [OLEUILINKPROPS](/windows/win32/api/oledlg/ns-oledlg-oleuilinkpropsw) v Windows SDK.
+Další informace naleznete v oleuiobjectprops a [OLEUILINKPROPS](/windows/win32/api/oledlg/ns-oledlg-oleuilinkpropsw) struktury v sadě Windows SDK.
 
-##  <a name="m_psh"></a>  COlePropertiesDialog::m_psh
+## <a name="colepropertiesdialogm_psh"></a><a name="m_psh"></a>COlePropertiesDialog::m_psh
 
-Struktura typu [PROPSHEETHEADER](/windows/win32/api/prsht/ns-prsht-propsheetheadera_v2), jejíž členové ukládají charakteristiky objektu dialogového okna.
+Struktura typu [PROPSHEETHEADER](/windows/win32/api/prsht/ns-prsht-propsheetheadera_v2), jejíž členové ukládají vlastnosti objektu dialogového okna.
 
 ```
 PROPSHEETHEADER m_psh;
@@ -206,15 +206,15 @@ PROPSHEETHEADER m_psh;
 
 ### <a name="remarks"></a>Poznámky
 
-Po sestavení `COlePropertiesDialog` objektu lze použít `m_psh` k nastavení různých aspektů `DoModal` dialogového okna před voláním členské funkce.
+Po vytvoření `COlePropertiesDialog` objektu můžete `m_psh` před voláním `DoModal` členské funkce nastavit různé aspekty dialogového okna.
 
-Změníte-li datový člen přímo, přepíšete všechny výchozí chování. `m_psh`
+Pokud změníte `m_psh` datový člen přímo, přepíšete jakékoli výchozí chování.
 
-Další informace o `PROPSHEETHEADER` struktuře najdete v Windows SDK.
+Další informace o `PROPSHEETHEADER` struktuře naleznete v souboru Windows SDK.
 
-##  <a name="m_vp"></a>  COlePropertiesDialog::m_vp
+## <a name="colepropertiesdialogm_vp"></a><a name="m_vp"></a>COlePropertiesDialog::m_vp
 
-Struktura typu [OLEUIVIEWPROPS](/windows/win32/api/oledlg/ns-oledlg-oleuiviewpropsw), která slouží k inicializaci stránky zobrazení dialogového okna vlastnosti objektu OLE.
+Struktura typu [OLEUIVIEWPROPS](/windows/win32/api/oledlg/ns-oledlg-oleuiviewpropsw), která slouží k inicializaci stránky Zobrazení dialogového okna Vlastnosti objektu OLE.
 
 ```
 OLEUIVIEWPROPS m_vp;
@@ -222,13 +222,13 @@ OLEUIVIEWPROPS m_vp;
 
 ### <a name="remarks"></a>Poznámky
 
-Tato stránka umožňuje uživateli přepínání mezi zobrazeními obsahu a ikonickým objektu a změnou jeho škálování v rámci kontejneru. Umožňuje také uživateli přístup k dialogovému oknu změnit ikonu změny, když se objekt zobrazuje jako ikona.
+Tato stránka umožňuje uživateli přepínat mezi "obsah" a "ikonické" zobrazení objektu a změnit jeho škálování v kontejneru. Umožňuje také uživateli přístup k dialogovému oknu Změnit ikonu, když je objekt zobrazen jako ikona.
 
-Další informace o `OLEUIVIEWPROPS` struktuře najdete v Windows SDK.
+Další informace o `OLEUIVIEWPROPS` struktuře naleznete v souboru Windows SDK.
 
-##  <a name="onapplyscale"></a>COlePropertiesDialog::OnApplyScale
+## <a name="colepropertiesdialogonapplyscale"></a><a name="onapplyscale"></a>COlePropertiesDialog::OnApplyScale
 
-Volá se rozhraním, když se změnila hodnota škálování a vybraná možnost OK nebo použít.
+Volat rámci při změně hodnoty škálování a buď OK nebo Použít byla vybrána.
 
 ```
 virtual BOOL OnApplyScale(
@@ -239,29 +239,29 @@ virtual BOOL OnApplyScale(
 
 ### <a name="parameters"></a>Parametry
 
-*pItem*<br/>
-Ukazatel na položku dokumentu, jejíž vlastnosti jsou k dispozici.
+*pPoložka*<br/>
+Ukazatel na položku dokumentu, jejíž vlastnosti jsou prostupovány.
 
 *nCurrentScale*<br/>
-Číselná hodnota měřítka dialogového okna
+Číselná hodnota dialogového okna.
 
 *bRelativeToOrig*<br/>
-Určuje, zda se měřítko vztahuje na původní velikost položky dokumentu.
+Označuje, zda se změna měřítka vztahuje na původní velikost položky dokumentu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud se zpracovává; v opačném případě 0.
+Nenulová, pokud je zpracována; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Výchozí implementace neprovádí žádnou akci. Chcete-li povolit ovládací prvky škálování, je nutné tuto funkci přepsat.
+Výchozí implementace neprovede žádné provádění. Chcete-li povolit ovládací prvky škálování, je nutné tuto funkci přepsat.
 
 > [!NOTE]
->  Před zobrazením dialogového okna společné vlastnosti objektu OLE rozhraní volá tuto funkci s hodnotou NULL pro *pItem* a-1 pro *nCurrentScale*. K tomu je potřeba určit, jestli se mají povolit ovládací prvky škálování.
+> Před zobrazením společného dialogového okna Vlastnosti objektu OLE nazývá rozhraní tuto funkci s hodnotou NULL pro *položku pItem* a a - 1 pro *nCurrentScale*. To se provádí k určení, pokud by měly být povoleny ovládací prvky škálování.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Ukázka MFC – ukázkový oběžník](../../overview/visual-cpp-samples.md)<br/>
+[Vzorek knihovny MFC CIRC](../../overview/visual-cpp-samples.md)<br/>
 [COleDialog – třída](../../mfc/reference/coledialog-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [COleDialog – třída](../../mfc/reference/coledialog-class.md)<br/>

@@ -19,16 +19,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::WeakReference::~WeakReference, destructor
 - Microsoft::WRL::Details::WeakReference::WeakReference, constructor
 ms.assetid: 3f4c956b-dbbd-49b1-8cfa-9509a9956c97
-ms.openlocfilehash: a3372a176a158dd9c89eb888c8deb0244eef9a84
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a80c0ec14da2a955a95ac84dd3975212ef20ae04
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387536"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374221"
 ---
 # <a name="weakreference-class"></a>WeakReference – třída
 
-Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.
+Podporuje infrastrukturu WRL a není určen pro použití přímo z vašeho kódu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -38,31 +38,31 @@ class WeakReference;
 
 ## <a name="remarks"></a>Poznámky
 
-Představuje *nestálý odkaz* , který je možné pomocí prostředí Windows Runtime nebo klasického modelu COM. Slabý odkaz představuje objekt, který může nebo nemusí být dostupný.
+Představuje *slabý odkaz,* který lze použít s prostředím Windows Runtime nebo klasické com. Slabý odkaz představuje objekt, který může nebo nemusí být přístupný.
 
-A `WeakReference` udržuje objekt *silného odkazu*, což je ukazatel na objekt a *silného odkazu počet*, což je počet kopií silného odkazu, který byl distribuován podle `Resolve()` metody. Počet silného odkazu je nenulová, silný odkaz je platný a je přístupný objekt. Když počet odkazů silné klesne na nulu, silný odkaz je neplatný a objekt je nedostupný.
+Objekt `WeakReference` zachová *silný odkaz*, což je ukazatel na objekt a *počet silných odkazů*, což je počet `Resolve()` kopií silného odkazu, které byly distribuovány metodou. Zatímco počet silných odkazů je nenulová, silný odkaz je platný a objekt je přístupný. Pokud se počet silných odkazů změní na nulu, silný odkaz je neplatný a objekt je nepřístupný.
 
-A `WeakReference` objekt se obvykle používá k reprezentaci objektu, jehož existence je řízena vnějším vláknem nebo aplikací. Například sestavit `WeakReference` objekt z odkazu na objekt souboru. Když je soubor otevřen, silný odkaz je platný. Ale pokud se soubor zavře, silný odkaz níže uvedených situací.
+Objekt `WeakReference` se obvykle používá k reprezentaci objektu, jehož existence je řízena externím vláknem nebo aplikací. Například vytvořte `WeakReference` objekt z odkazu na objekt souboru. Když je soubor otevřený, silný odkaz je platný. Pokud je však soubor uzavřen, silný odkaz se stane neplatným.
 
-`WeakReference` Metody jsou bezpečné pro vlákna.
+Metody `WeakReference` jsou bezpečné pro přístup z více vláken.
 
 ## <a name="members"></a>Členové
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-Název                                                  | Popis
+Name (Název)                                                  | Popis
 ----------------------------------------------------- | ---------------------------------------------------------------------------
-[Weakreference::weakreference –](#weakreference)        | Inicializuje novou instanci třídy `WeakReference` třídy.
-[WeakReference:: ~ weakreference –](#tilde-weakreference) | Zruší inicializaci (odstraní) aktuální instancí třídy `WeakReference` třídy.
+[WeakReference::WeakReference](#weakreference)        | Inicializuje novou instanci třídy. `WeakReference`
+[WeakReference::~WeakReference](#tilde-weakreference) | Deinitializes (zničí) aktuální instance `WeakReference` třídy.
 
 ### <a name="public-methods"></a>Veřejné metody
 
-Název                                                                 | Popis
+Name (Název)                                                                 | Popis
 -------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------
-[WeakReference::DecrementStrongReference](#decrementstrongreference) | Sníží počet silné referenční aktuálního `WeakReference` objektu.
-[Weakreference::incrementstrongreference –](#incrementstrongreference) | Zvýší počet odkazů silné aktuálního `WeakReference` objektu.
-[Weakreference::Resolve –](#resolve)                                   | Nastaví zadaný ukazatel na aktuální hodnotu silného odkazu, pokud je počet odkazů silné nenulové.
-[Weakreference::setunknown –](#setunknown)                             | Nastaví silný odkaz aktuální `WeakReference` objektu na zadané rozhraní ukazatel.
+[WeakReference::DecrementStrongReference](#decrementstrongreference) | Sníží počet silných odkazů aktuálního `WeakReference` objektu.
+[WeakReference::IncrementStrongReference](#incrementstrongreference) | Zintáží silný počet odkazů `WeakReference` aktuálního objektu.
+[WeakReference::Vyřešit](#resolve)                                   | Nastaví zadaný ukazatel na aktuální silnou referenční hodnotu, pokud je počet silných odkazů nenulový.
+[WeakReference::SetUnknown](#setunknown)                             | Nastaví silný odkaz `WeakReference` aktuálního objektu na zadaný ukazatel rozhraní.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -72,11 +72,11 @@ Název                                                                 | Popis
 
 **Záhlaví:** implements.h
 
-**Namespace:** Microsoft::WRL::Details
+**Obor názvů:** Microsoft::WRL::Details
 
-## <a name="tilde-weakreference"></a>WeakReference:: ~ weakreference –
+## <a name="weakreferenceweakreference"></a><a name="tilde-weakreference"></a>WeakReference::~WeakReference
 
-Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.
+Podporuje infrastrukturu WRL a není určen pro použití přímo z vašeho kódu.
 
 ```cpp
 virtual ~WeakReference();
@@ -86,11 +86,11 @@ virtual ~WeakReference();
 
 ### <a name="remarks"></a>Poznámky
 
-Zruší inicializaci aktuální instance `WeakReference` třídy.
+Deinitializes aktuální instance `WeakReference` třídy.
 
-## <a name="decrementstrongreference"></a>WeakReference::DecrementStrongReference
+## <a name="weakreferencedecrementstrongreference"></a><a name="decrementstrongreference"></a>WeakReference::DecrementStrongReference
 
-Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.
+Podporuje infrastrukturu WRL a není určen pro použití přímo z vašeho kódu.
 
 ```cpp
 ULONG DecrementStrongReference();
@@ -98,17 +98,17 @@ ULONG DecrementStrongReference();
 
 ### <a name="remarks"></a>Poznámky
 
-Sníží počet silné referenční aktuálního `WeakReference` objektu.
+Sníží počet silných odkazů aktuálního `WeakReference` objektu.
 
-Když počet odkazů silné klesne na nulu, silného odkazu se nastaví na `nullptr`.
+Pokud se počet silných odkazů změní na `nullptr`nulu, je nastaven a )
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Počet odkazů sníží silné.
+Snížený počet silných odkazů.
 
-## <a name="incrementstrongreference"></a>Weakreference::incrementstrongreference –
+## <a name="weakreferenceincrementstrongreference"></a><a name="incrementstrongreference"></a>WeakReference::IncrementStrongReference
 
-Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.
+Podporuje infrastrukturu WRL a není určen pro použití přímo z vašeho kódu.
 
 ```cpp
 ULONG IncrementStrongReference();
@@ -116,15 +116,15 @@ ULONG IncrementStrongReference();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Počet zvýšena silného odkazu.
+Počet přírůstcích silných odkazů.
 
 ### <a name="remarks"></a>Poznámky
 
-Zvýší počet odkazů silné aktuálního `WeakReference` objektu.
+Zintáží silný počet odkazů `WeakReference` aktuálního objektu.
 
-## <a name="resolve"></a>Weakreference::Resolve –
+## <a name="weakreferenceresolve"></a><a name="resolve"></a>WeakReference::Vyřešit
 
-Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.
+Podporuje infrastrukturu WRL a není určen pro použití přímo z vašeho kódu.
 
 ```cpp
 STDMETHOD(Resolve)
@@ -135,27 +135,27 @@ STDMETHOD(Resolve)
 
 ### <a name="parameters"></a>Parametry
 
-*riid*<br/>
-Identifikátor rozhraní.
+*riid řekl:*<br/>
+ID rozhraní.
 
-*ppvObject*<br/>
-Když tato operace dokončí, kopii aktuální silného odkazu, pokud je počet odkazů silné nenulové.
+*ppvObjekt*<br/>
+Po dokončení této operace, kopie aktuální silný odkaz, pokud je silný počet odkazů nenulová.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-- S_OK, pokud je tato operace úspěšná, a počet silného odkazu je nula. *PpvObject* parametr je nastaven na `nullptr`.
+- S_OK pokud je tato operace úspěšná a počet silných odkazů je nula. Parametr *ppvObject* je `nullptr`nastaven na hodnotu .
 
-- S_OK, pokud je tato operace úspěšná a počet silného odkazu není nenulová. *PpvObject* parametr je nastaven na silný odkaz.
+- S_OK pokud je tato operace úspěšná a počet silných odkazů je nenulová. Parametr *ppvObject* je nastaven na silný odkaz.
 
-- V opačném případě HRESULT, který označuje důvod tato operace se nezdařila.
+- V opačném případě HRESULT, který označuje důvod, proč se tato operace nezdařila.
 
 ### <a name="remarks"></a>Poznámky
 
-Nastaví zadaný ukazatel na aktuální hodnotu silného odkazu, pokud je počet odkazů silné nenulové.
+Nastaví zadaný ukazatel na aktuální silnou referenční hodnotu, pokud je počet silných odkazů nenulový.
 
-## <a name="setunknown"></a>Weakreference::setunknown –
+## <a name="weakreferencesetunknown"></a><a name="setunknown"></a>WeakReference::SetUnknown
 
-Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.
+Podporuje infrastrukturu WRL a není určen pro použití přímo z vašeho kódu.
 
 ```cpp
 void SetUnknown(
@@ -165,16 +165,16 @@ void SetUnknown(
 
 ### <a name="parameters"></a>Parametry
 
-*UNK*<br/>
-Ukazatel `IUnknown` rozhraní objektu.
+*unk*<br/>
+Ukazatel na `IUnknown` rozhraní objektu.
 
 ### <a name="remarks"></a>Poznámky
 
-Nastaví silný odkaz aktuální `WeakReference` objektu na zadané rozhraní ukazatel.
+Nastaví silný odkaz `WeakReference` aktuálního objektu na zadaný ukazatel rozhraní.
 
-## <a name="weakreference"></a>Weakreference::weakreference –
+## <a name="weakreferenceweakreference"></a><a name="weakreference"></a>WeakReference::WeakReference
 
-Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.
+Podporuje infrastrukturu WRL a není určen pro použití přímo z vašeho kódu.
 
 ```cpp
 WeakReference();
@@ -182,6 +182,6 @@ WeakReference();
 
 ### <a name="remarks"></a>Poznámky
 
-Inicializuje novou instanci třídy `WeakReference` třídy.
+Inicializuje novou instanci třídy. `WeakReference`
 
-Ukazatele silného odkazu `WeakReference` objekt je inicializován na `nullptr`, a počet silného odkazu je inicializován na hodnotu 1.
+Silný referenční ukazatel `WeakReference` pro objekt je `nullptr`inicializován na , a silný počet odkazů je inicializován na 1.

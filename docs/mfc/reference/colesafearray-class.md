@@ -1,5 +1,5 @@
 ---
-title: COleSafeArray – třída
+title: Třída COleSafeArray
 ms.date: 08/29/2019
 f1_keywords:
 - COleSafeArray
@@ -60,16 +60,16 @@ helpviewer_keywords:
 - COleSafeArray [MFC], UnaccessData
 - COleSafeArray [MFC], Unlock
 ms.assetid: f45a5224-5f48-40ec-9ddd-287ef9740150
-ms.openlocfilehash: a0ce0fc03923806c9e044a7edae3178fd3429b76
-ms.sourcegitcommit: e10a5feea193c249ddc5a6faba48e7c6d8784e73
+ms.openlocfilehash: a7be9910b573cb5bc430d6608e75ce6661b71bc2
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70177396"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374866"
 ---
-# <a name="colesafearray-class"></a>COleSafeArray – třída
+# <a name="colesafearray-class"></a>Třída COleSafeArray
 
-Třída pro práci s poli libovolného typu a rozměru.
+Třída pro práci s poli libovolného typu a dimenze.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -81,54 +81,54 @@ class COleSafeArray : public tagVARIANT
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[COleSafeArray::COleSafeArray](#colesafearray)|`COleSafeArray` Vytvoří objekt.|
+|[COleSafeArray::COleSafeArray](#colesafearray)|Vytvoří `COleSafeArray` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[COleSafeArray::AccessData](#accessdata)|Načte ukazatel na data pole.|
-|[COleSafeArray::AllocData](#allocdata)|Přidělí paměť poli.|
-|[COleSafeArray::AllocDescriptor](#allocdescriptor)|Přidělí paměť pro bezpečný popisovač pole.|
-|[COleSafeArray::Attach](#attach)|Poskytuje ovládací prvek `COleSafeArray` pro existující `VARIANT` pole objektu.|
-|[COleSafeArray:: Clear](#clear)|Uvolní všechna data v podkladu `VARIANT`.|
-|[COleSafeArray::Copy](#copy)|Vytvoří kopii existujícího pole.|
-|[COleSafeArray:: Create](#create)|Vytvoří zabezpečené pole.|
-|[COleSafeArray::CreateOneDim](#createonedim)|Vytvoří jednorozměrného `COleSafeArray` objektu.|
-|[COleSafeArray::D estroy](#destroy)|Odstraní existující pole.|
+|[COleSafeArray::Přístupová data](#accessdata)|Načte ukazatel na data pole.|
+|[COleSafeArray::AllocData](#allocdata)|Přiděluje paměť pro pole.|
+|[COleSafeArray::AllocDeskriptor](#allocdescriptor)|Přidělí paměť pro popisovač bezpečného pole.|
+|[COleSafeArray::Připojit](#attach)|Poskytuje objektu `VARIANT` kontrolu nad `COleSafeArray` existujícím polem.|
+|[COleSafeArray::Vymazat](#clear)|Uvolní všechna data v `VARIANT`podkladovém objektu .|
+|[COleSafeArray::Kopírovat](#copy)|Vytvoří kopii existujícího pole.|
+|[COleSafeArray::Vytvořit](#create)|Vytvoří bezpečné pole.|
+|[COleSafeArray::CreateOneDim](#createonedim)|Vytvoří jednorozměrný `COleSafeArray` objekt.|
+|[COleSafeArray::Destroy](#destroy)|Zničí existující pole.|
 |[COleSafeArray::DestroyData](#destroydata)|Zničí data v bezpečném poli.|
-|[COleSafeArray::DestroyDescriptor](#destroydescriptor)|Odstraní popisovač bezpečného pole.|
-|[COleSafeArray::Detach](#detach)|Odpojí pole variant od `COleSafeArray` objektu (takže data nebudou uvolněna).|
-|[COleSafeArray::GetByteArray](#getbytearray)|Zkopíruje obsah pole Safe do [CByteArray](../../mfc/reference/cbytearray-class.md).|
-|[COleSafeArray::GetDim](#getdim)|Vrátí počet rozměrů v poli.|
-|[COleSafeArray:: Get– element](#getelement)|Načte jeden prvek bezpečného pole.|
-|[COleSafeArray::GetElemSize](#getelemsize)|Vrátí velikost (v bajtech) jednoho prvku v bezpečném poli.|
+|[COleSafeArray::DestroyDeskriptor](#destroydescriptor)|Zničí popisovač bezpečného pole.|
+|[COleSafeArray::Detach](#detach)|Odpojí pole VARIANT od `COleSafeArray` objektu (tak, aby data nebyla uvolněna).|
+|[COleSafeArray::GetByteArray](#getbytearray)|Zkopíruje obsah bezpečného pole do [cbytearray](../../mfc/reference/cbytearray-class.md).|
+|[COleSafeArray::GetDim](#getdim)|Vrátí počet dimenzí v poli.|
+|[COleSafeArray::GetElement](#getelement)|Načte jeden prvek bezpečnépole.|
+|[COleSafeArray::GetElemSize](#getelemsize)|Vrátí velikost jednoho prvku v bezpečném poli v bajtech.|
 |[COleSafeArray::GetLBound](#getlbound)|Vrátí dolní mez pro libovolnou dimenzi bezpečného pole.|
-|[COleSafeArray::GetOneDimSize](#getonedimsize)|Vrátí počet prvků v `COleSafeArray` jednorozměrném objektu.|
-|[COleSafeArray::GetUBound](#getubound)|Vrátí horní mez pro libovolnou dimenzi bezpečného pole.|
-|[COleSafeArray::Lock](#lock)|Zvýší počet zámků pole a umístí ukazatel na data pole v popisovači pole.|
-|[COleSafeArray::PtrOfIndex](#ptrofindex)|Vrátí ukazatel na indexovaný element.|
-|[COleSafeArray::P utElement](#putelement)|Přiřadí jeden prvek k poli.|
-|[COleSafeArray:: ReDim](#redim)|Změní nejméně významnou (pravé) hranici bezpečného pole.|
-|[COleSafeArray::ResizeOneDim](#resizeonedim)|Změní počet prvků v `COleSafeArray` jednorozměrném objektu.|
-|[COleSafeArray::UnaccessData](#unaccessdata)|Sníží počet zámků pole a neověřuje ukazatel, který získá `AccessData`.|
-|[COleSafeArray:: Unlock](#unlock)|Sníží počet zámků pole tak, aby se mohl uvolnit nebo změnit jeho velikost.|
+|[COleSafeArray::GetonedimSize](#getonedimsize)|Vrátí počet prvků v jednorozměrném `COleSafeArray` objektu.|
+|[COleSafeArray::GetuBound](#getubound)|Vrátí horní mez pro libovolnou dimenzi bezpečného pole.|
+|[COleSafeArray::Zamknout](#lock)|Zvětšuje počet zámků pole a umístí ukazatel na data pole v popisovači pole.|
+|[COleSafeArray::PtrOfIndex](#ptrofindex)|Vrátí ukazatel na indexovaný prvek.|
+|[COleSafeArray::PutElement](#putelement)|Přiřadí jeden prvek do pole.|
+|[COleSafeArray::Redim](#redim)|Změní nejméně významné (rightmost) vázána bezpečné pole.|
+|[COleSafeArray::ResizeOneDim](#resizeonedim)|Změní počet prvků v jednorozměrném `COleSafeArray` objektu.|
+|[COleSafeArray::UnaccessData](#unaccessdata)|Sníží počet zámků pole a zruší platnost ukazatele načteného `AccessData`.|
+|[COleSafeArray::Odemknout](#unlock)|Sníží počet zámků pole, takže může být uvolněna nebo velikost.|
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Name|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[COleSafeArray:: operator LPCVARIANT](#operator_lpcvariant)|Přistupuje k podkladové `VARIANT` struktuře `COleSafeArray` objektu.|
-|[COleSafeArray:: operator LPVARIANT](#operator_lpvariant)|Přistupuje k podkladové `VARIANT` struktuře `COleSafeArray` objektu.|
-|[COleSafeArray:: operator =](#operator_eq)|Kopíruje hodnoty do `COleSafeArray` objektu (`SAFEARRAY`, `VARIANT`, `COleVariant`nebo `COleSafeArray` Array).|
-|[COleSafeArray:: operator = = – operátor](#operator_eq_eq)|Porovná dvě pole variant`SAFEARRAY`( `VARIANT`, `COleVariant`, nebo `COleSafeArray` pole).|
-|[COleSafeArray:: operator&lt;&lt;](#operator_lt_lt)|Vypíše obsah `COleSafeArray` objektu do kontextu výpisu paměti.|
+|[COleSafeArray::operátor LPCVARIANT](#operator_lpcvariant)|Přistupuje k základní `VARIANT` struktuře objektu. `COleSafeArray`|
+|[COleSafeArray::operátor LPVARIANT](#operator_lpvariant)|Přistupuje k základní `VARIANT` struktuře objektu. `COleSafeArray`|
+|[COleSafeArray::operátor =](#operator_eq)|Zkopíruje hodnoty `COleSafeArray` do`SAFEARRAY` `VARIANT`objektu ( , , `COleVariant`nebo `COleSafeArray` matice).|
+|[COleSafeArray::operátor ==](#operator_eq_eq)|Porovná dvě pole varianty `VARIANT` `COleVariant`(`SAFEARRAY` `COleSafeArray` , , , nebo pole).|
+|[COleSafeArray::operátor&lt;&lt;](#operator_lt_lt)|Výstupy obsah objektu `COleSafeArray` do kontextu výpisu.|
 
 ## <a name="remarks"></a>Poznámky
 
-`COleSafeArray`je odvozen ze struktury OLE `VARIANT` . Členské funkce `SAFEARRAY` OLE jsou k dispozici `COleSafeArray`prostřednictvím a také sada členských funkcí navržených speciálně pro jednorozměrné pole bajtů.
+`COleSafeArray`pochází ze struktury `VARIANT` OLE. Členské `SAFEARRAY` funkce OLE jsou `COleSafeArray`k dispozici prostřednictvím , stejně jako sada členských funkcí speciálně navržených pro jednorozměrná pole bajtů.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -138,9 +138,9 @@ class COleSafeArray : public tagVARIANT
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxdisp. h
+**Záhlaví:** afxdisp.h
 
-##  <a name="accessdata"></a>COleSafeArray::AccessData
+## <a name="colesafearrayaccessdata"></a><a name="accessdata"></a>COleSafeArray::Přístupová data
 
 Načte ukazatel na data pole.
 
@@ -161,9 +161,9 @@ Při chybě funkce vyvolá [CMemoryException](../../mfc/reference/cmemoryexcepti
 
 [!code-cpp[NVC_MFCOleContainer#26](../../mfc/codesnippet/cpp/colesafearray-class_1.cpp)]
 
-##  <a name="allocdata"></a>  COleSafeArray::AllocData
+## <a name="colesafearrayallocdata"></a><a name="allocdata"></a>COleSafeArray::AllocData
 
-Přidělí paměť bezpečnému poli.
+Přiděluje paměť pro bezpečné pole.
 
 ```
 void AllocData();
@@ -173,7 +173,7 @@ void AllocData();
 
 Při chybě funkce vyvolá [CMemoryException](../../mfc/reference/cmemoryexception-class.md) nebo [COleException](../../mfc/reference/coleexception-class.md).
 
-##  <a name="allocdescriptor"></a>COleSafeArray::AllocDescriptor
+## <a name="colesafearrayallocdescriptor"></a><a name="allocdescriptor"></a>COleSafeArray::AllocDeskriptor
 
 Přidělí paměť pro popisovač bezpečného pole.
 
@@ -184,15 +184,15 @@ void AllocDescriptor(DWORD dwDims);
 ### <a name="parameters"></a>Parametry
 
 *dwDims*<br/>
-Počet rozměrů v poli Safe.
+Počet dimenzí v bezpečném poli.
 
 ### <a name="remarks"></a>Poznámky
 
 Při chybě funkce vyvolá [CMemoryException](../../mfc/reference/cmemoryexception-class.md) nebo [COleException](../../mfc/reference/coleexception-class.md).
 
-##  <a name="attach"></a>  COleSafeArray::Attach
+## <a name="colesafearrayattach"></a><a name="attach"></a>COleSafeArray::Připojit
 
-Poskytuje řízení dat v existujícím `VARIANT` poli `COleSafeArray` objektu.
+Poskytuje objektu kontrolu nad `VARIANT` daty `COleSafeArray` v existujícím poli.
 
 ```
 void Attach(VARIANT& varSrc);
@@ -201,19 +201,19 @@ void Attach(VARIANT& varSrc);
 ### <a name="parameters"></a>Parametry
 
 *varSrc*<br/>
-A `VARIANT` objektu. Parametr *varSrc* musí mít parametr VARTYPE [VT_ARRAY](/windows/win32/api/wtypes/ne-wtypes-varenum).
+Objekt. `VARIANT` Parametr *varSrc* musí mít [VT_ARRAY](/windows/win32/api/wtypes/ne-wtypes-varenum)VARTYPE .
 
 ### <a name="remarks"></a>Poznámky
 
-Typ zdroje `VARIANT`je nastavený na VT_EMPTY. Tato funkce vymaže aktuální data pole, pokud existují.
+Typ `VARIANT`zdroje je nastaven na VT_EMPTY. Tato funkce vymaže aktuální pole data, pokud existuje.
 
 ### <a name="example"></a>Příklad
 
-  Podívejte se na příklad pro [COleSafeArray:: AccessData](#accessdata).
+  Viz příklad [cOleSafeArray::AccessData](#accessdata).
 
-##  <a name="clear"></a>COleSafeArray:: Clear
+## <a name="colesafearrayclear"></a><a name="clear"></a>COleSafeArray::Vymazat
 
-Vymaže pole Safe.
+Vymaže bezpečné pole.
 
 ```
 void Clear();
@@ -221,11 +221,11 @@ void Clear();
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce vymaže bezpečné pole `VARTYPE` nastavením objektu na VT_EMPTY. Aktuální obsah se uvolní a pole se uvolní.
+Funkce vymaže bezpečné `VARTYPE` pole nastavením objektu na VT_EMPTY. Aktuální obsah jsou uvolněny a pole je uvolněno.
 
-##  <a name="colesafearray"></a>COleSafeArray::COleSafeArray
+## <a name="colesafearraycolesafearray"></a><a name="colesafearray"></a>COleSafeArray::COleSafeArray
 
-`COleSafeArray` Vytvoří objekt.
+Vytvoří `COleSafeArray` objekt.
 
 ```
 COleSafeArray();
@@ -246,28 +246,28 @@ COleSafeArray(const COleVariant& varSrc);
 
 ### <a name="parameters"></a>Parametry
 
-*saSrc*<br/>
-Existující `COleSafeArray` objekt nebo `SAFEARRAY` bude zkopírován do nového `COleSafeArray` objektu.
+*saSrc řekl:*<br/>
+Existující `COleSafeArray` objekt `SAFEARRAY` nebo chcete-li zkopírovat do nového `COleSafeArray` objektu.
 
-*vtSrc*<br/>
+*vtSrc řekl:*<br/>
 VARTYPE nového `COleSafeArray` objektu.
 
 *psaSrc*<br/>
-Ukazatel `SAFEARRAY` na objekt, který má být zkopírován do nového `COleSafeArray` objektu.
+Ukazatel na `SAFEARRAY` a, které mají `COleSafeArray` být zkopírovány do nového objektu.
 
 *varSrc*<br/>
-Existující `VARIANT` objekt nebo `COleVariant` objekt, který má být zkopírován do `COleSafeArray` nového objektu.
+Existující `VARIANT` nebo `COleVariant` objekt, který má `COleSafeArray` být zkopírován do nového objektu.
 
 *pSrc*<br/>
-Ukazatel na `VARIANT` objekt, který má být zkopírován do nového `COleSafeArray` objektu.
+Ukazatel na `VARIANT` objekt, který má být `COleSafeArray` zkopírován do nového objektu.
 
 ### <a name="remarks"></a>Poznámky
 
-Všechny tyto konstruktory vytvoří nové `COleSafeArray` objekty. Není-li parametr zadán, je vytvořen `COleSafeArray` prázdný objekt (VT_EMPTY). Pokud je `COleSafeArray` zkopírován z jiného pole, jehož parametr VARTYPE je známý implicitně ( `COleSafeArray`a `COleVariant`, nebo `VARIANT`), je objekt VARTYPE zdrojového pole zachován a nemusí být zadán. Pokud je `COleSafeArray` zkopírován z jiného pole, jehož ukazatel VARTYPE není znám (`SAFEARRAY`), musí být v parametru *vtSrc* zadán VARTYPE.
+Všechny tyto konstruktory `COleSafeArray` vytvořit nové objekty. Pokud není žádný parametr, `COleSafeArray` je vytvořen prázdný objekt (VT_EMPTY). Pokud `COleSafeArray` je zkopírován z jiného pole, `COleSafeArray`jehož VARTYPE je znám implicitně (, , `COleVariant`nebo `VARIANT`), VARTYPE zdrojového pole je zachována a nemusí být zadán. Pokud `COleSafeArray` je zkopírován z jiného pole, jehož VARTYPE není znám (`SAFEARRAY`), vartype musí být zadán v *parametru vtSrc.*
 
 Při chybě funkce vyvolá [CMemoryException](../../mfc/reference/cmemoryexception-class.md) nebo [COleException](../../mfc/reference/coleexception-class.md).
 
-##  <a name="copy"></a>COleSafeArray:: Copy
+## <a name="colesafearraycopy"></a><a name="copy"></a>COleSafeArray::Kopírovat
 
 Vytvoří kopii existujícího bezpečného pole.
 
@@ -278,15 +278,15 @@ void Copy(LPSAFEARRAY* ppsa);
 ### <a name="parameters"></a>Parametry
 
 *ppsa*<br/>
-Ukazatel na umístění, ve kterém má být vrácen nový popisovač pole.
+Ukazatel na umístění, ve kterém chcete vrátit nový popisovač pole.
 
 ### <a name="remarks"></a>Poznámky
 
 Při chybě funkce vyvolá [CMemoryException](../../mfc/reference/cmemoryexception-class.md) nebo [COleException](../../mfc/reference/coleexception-class.md).
 
-##  <a name="create"></a>COleSafeArray:: Create
+## <a name="colesafearraycreate"></a><a name="create"></a>COleSafeArray::Vytvořit
 
-Přidělí a inicializuje data pro pole.
+Přiděluje a inicializuje data pro pole.
 
 ```
 void Create(
@@ -302,29 +302,29 @@ void Create(
 
 ### <a name="parameters"></a>Parametry
 
-*vtSrc*<br/>
-Základní typ pole (tj. typ VARTYPE každého prvku pole). Typ VARTYPE je omezen na podmnožinu variantních typů. Není možné nastavit VT_ARRAY ani příznak VT_BYREF. VT_EMPTY a VT_NULL nejsou platnými základními typy pro pole. Všechny ostatní typy jsou právní.
+*vtSrc řekl:*<br/>
+Základní typ pole (to znamená VARTYPE každého prvku pole). VARTYPE je omezen na podmnožinu typů variant. Nelze nastavit příznak VT_ARRAY ani VT_BYREF. VT_EMPTY a VT_NULL nejsou platné základní typy pro pole. Všechny ostatní typy jsou legální.
 
 *dwDims*<br/>
-Počet rozměrů v poli To lze změnit poté, co je pole Vytvořeno pomocí [ReDim](#redim).
+Počet dimenzí v poli. To lze změnit po vytvoření pole pomocí [Redim](#redim).
 
 *rgElements*<br/>
-Ukazatel na pole s počtem prvků pro každou dimenzi v poli.
+Ukazatel na pole počet prvků pro každou dimenzi v poli.
 
 *rgsabounds*<br/>
-Ukazatel na vektor mezí (jeden pro každou dimenzi), který se má pro pole přidělit.
+Ukazatel na vektor hranice (jeden pro každou dimenzi) pro pole.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce vymaže v případě potřeby aktuální data pole. Při chybě funkce vyvolá výjimku [CMemoryException](../../mfc/reference/cmemoryexception-class.md).
+Tato funkce vymaže aktuální data pole v případě potřeby. Při chybě funkce vyvolá [CMemoryException](../../mfc/reference/cmemoryexception-class.md).
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCOleContainer#27](../../mfc/codesnippet/cpp/colesafearray-class_2.cpp)]
 
-##  <a name="createonedim"></a>COleSafeArray::CreateOneDim
+## <a name="colesafearraycreateonedim"></a><a name="createonedim"></a>COleSafeArray::CreateOneDim
 
-Vytvoří nový jednorozměrné `COleSafeArray` objekt.
+Vytvoří nový jednorozměrný `COleSafeArray` objekt.
 
 ```
 void CreateOneDim(
@@ -336,31 +336,31 @@ void CreateOneDim(
 
 ### <a name="parameters"></a>Parametry
 
-*vtSrc*<br/>
-Základní typ pole (tj. typ VARTYPE každého prvku pole).
+*vtSrc řekl:*<br/>
+Základní typ pole (to znamená VARTYPE každého prvku pole).
 
 *dwElements*<br/>
-Počet prvků v poli. To lze změnit poté, co je pole Vytvořeno pomocí [ResizeOneDim](#resizeonedim).
+Počet prvků v poli. To lze změnit po vytvoření pole s [ResizeOneDim](#resizeonedim).
 
 *pvSrcData*<br/>
-Ukazatel na data, která se mají zkopírovat do pole.
+Ukazatel na data, která chcete zkopírovat do pole.
 
 *nLBound*<br/>
-Dolní mez pole
+Dolní mez pole.
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce přiděluje a inicializuje data pro pole a kopíruje zadaná data, pokud ukazatel *pvSrcData* není null.
+Funkce přiděluje a inicializuje data pro pole, kopírování zadaných dat, pokud ukazatel *pvSrcData* není NULL.
 
-Při chybě funkce vyvolá výjimku [CMemoryException](../../mfc/reference/cmemoryexception-class.md).
+Při chybě funkce vyvolá [CMemoryException](../../mfc/reference/cmemoryexception-class.md).
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCOleContainer#28](../../mfc/codesnippet/cpp/colesafearray-class_3.cpp)]
 
-##  <a name="destroy"></a>COleSafeArray::D estroy
+## <a name="colesafearraydestroy"></a><a name="destroy"></a>COleSafeArray::Destroy
 
-Odstraní existující popisovač pole a všechna data v poli.
+Zničí existující popisovač pole a všechna data v poli.
 
 ```
 void Destroy();
@@ -370,7 +370,7 @@ void Destroy();
 
 Pokud jsou objekty uloženy v poli, každý objekt je uvolněn. Při chybě funkce vyvolá [CMemoryException](../../mfc/reference/cmemoryexception-class.md) nebo [COleException](../../mfc/reference/coleexception-class.md).
 
-##  <a name="destroydata"></a>  COleSafeArray::DestroyData
+## <a name="colesafearraydestroydata"></a><a name="destroydata"></a>COleSafeArray::DestroyData
 
 Zničí všechna data v bezpečném poli.
 
@@ -382,9 +382,9 @@ void DestroyData();
 
 Pokud jsou objekty uloženy v poli, každý objekt je uvolněn. Při chybě funkce vyvolá [CMemoryException](../../mfc/reference/cmemoryexception-class.md) nebo [COleException](../../mfc/reference/coleexception-class.md).
 
-##  <a name="destroydescriptor"></a>COleSafeArray::D estroyDescriptor
+## <a name="colesafearraydestroydescriptor"></a><a name="destroydescriptor"></a>COleSafeArray::DestroyDeskriptor
 
-Odstraní popisovač bezpečného pole.
+Zničí popisovač bezpečného pole.
 
 ```
 void DestroyDescriptor();
@@ -394,9 +394,9 @@ void DestroyDescriptor();
 
 Při chybě funkce vyvolá [CMemoryException](../../mfc/reference/cmemoryexception-class.md) nebo [COleException](../../mfc/reference/coleexception-class.md).
 
-##  <a name="detach"></a>COleSafeArray::D etach
+## <a name="colesafearraydetach"></a><a name="detach"></a>COleSafeArray::Detach
 
-Odpojí `COleSafeArray` data od objektu. `VARIANT`
+Odpojí `VARIANT` data od `COleSafeArray` objektu.
 
 ```
 VARIANT Detach();
@@ -404,21 +404,21 @@ VARIANT Detach();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Podkladová `VARIANT` hodnota `COleSafeArray` objektu.
+Základní `VARIANT` hodnota v `COleSafeArray` objektu.
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce odpojí data v bezpečném poli nastavením VARTYPE objektu na VT_EMPTY. Je zodpovědností volajícího uvolnit pole voláním funkce Windows [VariantClear](/windows/win32/api/oleauto/nf-oleauto-variantclear).
+Funkce odpojí data v bezpečném poli nastavením typu VARTYPE objektu na VT_EMPTY. Je odpovědností volajícího uvolnit pole voláním funkce Windows [VariantClear](/windows/win32/api/oleauto/nf-oleauto-variantclear).
 
-Při chybě funkce vyvolá výjimku [COleException](../../mfc/reference/coleexception-class.md).
+Při chybě funkce vyvolá [COleException](../../mfc/reference/coleexception-class.md).
 
 ### <a name="example"></a>Příklad
 
-  Podívejte se na příklad pro [COleSafeArray::P utelement](#putelement).
+  Viz příklad [cOleSafeArray::PutElement](#putelement).
 
-##  <a name="getbytearray"></a>COleSafeArray:: getbytearray
+## <a name="colesafearraygetbytearray"></a><a name="getbytearray"></a>COleSafeArray::GetByteArray
 
-Zkopíruje obsah bezpečného pole do `CByteArray`.
+Zkopíruje obsah bezpečného pole `CByteArray`do .
 
 ```
 void GetByteArray(CByteArray& bytes);
@@ -426,12 +426,12 @@ void GetByteArray(CByteArray& bytes);
 
 ### <a name="parameters"></a>Parametry
 
-*psaný*<br/>
-Odkaz na objekt [CByteArray](../../mfc/reference/cbytearray-class.md) .
+*Bajtů*<br/>
+Odkaz na objekt [CByteArray.](../../mfc/reference/cbytearray-class.md)
 
-##  <a name="getdim"></a>COleSafeArray::GetDim
+## <a name="colesafearraygetdim"></a><a name="getdim"></a>COleSafeArray::GetDim
 
-Vrátí počet rozměrů v `COleSafeArray` objektu.
+Vrátí počet dimenzí v objektu. `COleSafeArray`
 
 ```
 DWORD GetDim();
@@ -439,15 +439,15 @@ DWORD GetDim();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Počet rozměrů v poli trezoru.
+Počet dimenzí v bezpečném poli.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCOleContainer#27](../../mfc/codesnippet/cpp/colesafearray-class_2.cpp)]
 
-##  <a name="getelement"></a>COleSafeArray:: Get– element
+## <a name="colesafearraygetelement"></a><a name="getelement"></a>COleSafeArray::GetElement
 
-Načte jeden prvek bezpečného pole.
+Načte jeden prvek bezpečnépole.
 
 ```
 void GetElement(
@@ -457,15 +457,15 @@ void GetElement(
 
 ### <a name="parameters"></a>Parametry
 
-*rgIndices*<br/>
+*rgIndexy*<br/>
 Ukazatel na pole indexů pro každou dimenzi pole.
 
 *pvData*<br/>
-Ukazatel na umístění pro umístění elementu pole.
+Ukazatel na umístění umístit prvek pole.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce automaticky volá funkce `SafeArrayLock` systému Windows a `SafeArrayUnlock` před a po načtení prvku. Je-li datový prvek řetězec, objekt nebo varianta, funkce zkopíruje prvek správným způsobem. Parametr *pvData* by měl ukazovat na velkou vyrovnávací paměť, která bude obsahovat element.
+Tato funkce automaticky volá `SafeArrayLock` `SafeArrayUnlock` funkce systému Windows a před a po načtení prvku. Pokud datový prvek je řetězec, objekt nebo varianta, funkce zkopíruje prvek správným způsobem. Parametr *pvData* by měl překážet na dostatečně velkou vyrovnávací paměť, která by prvek obsahovala.
 
 Při chybě funkce vyvolá [CMemoryException](../../mfc/reference/cmemoryexception-class.md) nebo [COleException](../../mfc/reference/coleexception-class.md).
 
@@ -473,9 +473,9 @@ Při chybě funkce vyvolá [CMemoryException](../../mfc/reference/cmemoryexcepti
 
 [!code-cpp[NVC_MFCOleContainer#29](../../mfc/codesnippet/cpp/colesafearray-class_4.cpp)]
 
-##  <a name="getelemsize"></a>COleSafeArray::GetElemSize
+## <a name="colesafearraygetelemsize"></a><a name="getelemsize"></a>COleSafeArray::GetElemSize
 
-Načte velikost elementu v `COleSafeArray` objektu.
+Načte velikost prvku v `COleSafeArray` objektu.
 
 ```
 DWORD GetElemSize();
@@ -485,9 +485,9 @@ DWORD GetElemSize();
 
 Velikost prvků bezpečného pole v bajtech.
 
-##  <a name="getlbound"></a>COleSafeArray::GetLBound
+## <a name="colesafearraygetlbound"></a><a name="getlbound"></a>COleSafeArray::GetLBound
 
-Vrátí dolní mez pro libovolnou dimenzi `COleSafeArray` objektu.
+Vrátí dolní mez pro `COleSafeArray` libovolnou dimenzi objektu.
 
 ```
 void GetLBound(
@@ -498,22 +498,22 @@ void GetLBound(
 ### <a name="parameters"></a>Parametry
 
 *dwDim*<br/>
-Dimenze pole, pro kterou chcete získat dolní mez.
+Dimenze pole, pro které chcete získat dolní mez.
 
 *pLBound*<br/>
-Ukazatel na umístění pro návrat dolní meze.
+Ukazatel na umístění vrátit dolní mez.
 
 ### <a name="remarks"></a>Poznámky
 
-Při chybě funkce vyvolá výjimku [COleException](../../mfc/reference/coleexception-class.md).
+Při chybě funkce vyvolá [COleException](../../mfc/reference/coleexception-class.md).
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCOleContainer#30](../../mfc/codesnippet/cpp/colesafearray-class_5.cpp)]
 
-##  <a name="getonedimsize"></a>COleSafeArray::GetOneDimSize
+## <a name="colesafearraygetonedimsize"></a><a name="getonedimsize"></a>COleSafeArray::GetonedimSize
 
-Vrátí počet prvků v `COleSafeArray` jednorozměrném objektu.
+Vrátí počet prvků v jednorozměrném `COleSafeArray` objektu.
 
 ```
 DWORD GetOneDimSize();
@@ -521,13 +521,13 @@ DWORD GetOneDimSize();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Počet elementů v jednorozměrném poli zabezpečení.
+Počet prvků v jednorozměrném bezpečném poli.
 
 ### <a name="example"></a>Příklad
 
-  Podívejte se na příklad pro [COleSafeArray:: CreateOneDim](#createonedim).
+  Viz příklad [cOleSafeArray::CreateOneDim](#createonedim).
 
-##  <a name="getubound"></a>COleSafeArray::GetUBound
+## <a name="colesafearraygetubound"></a><a name="getubound"></a>COleSafeArray::GetuBound
 
 Vrátí horní mez pro libovolnou dimenzi bezpečného pole.
 
@@ -540,22 +540,22 @@ void GetUBound(
 ### <a name="parameters"></a>Parametry
 
 *dwDim*<br/>
-Dimenze pole, pro kterou se má získat horní mez
+Dimenze pole, pro které chcete získat horní mez.
 
 *pUBound*<br/>
-Ukazatel na umístění pro návrat horní meze.
+Ukazatel na umístění vrátit horní mez.
 
 ### <a name="remarks"></a>Poznámky
 
-Při chybě funkce vyvolá výjimku [COleException](../../mfc/reference/coleexception-class.md).
+Při chybě funkce vyvolá [COleException](../../mfc/reference/coleexception-class.md).
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCOleContainer#31](../../mfc/codesnippet/cpp/colesafearray-class_6.cpp)]
 
-##  <a name="lock"></a>COleSafeArray:: Lock
+## <a name="colesafearraylock"></a><a name="lock"></a>COleSafeArray::Zamknout
 
-Zvýší počet zámků pole a umístí ukazatel na data pole v popisovači pole.
+Zvětšuje počet zámků pole a umístí ukazatel na data pole v popisovači pole.
 
 ```
 void Lock();
@@ -565,21 +565,21 @@ void Lock();
 
 Při chybě vyvolá [COleException](../../mfc/reference/coleexception-class.md).
 
-Ukazatel v popisovači pole je platný, dokud `Unlock` není voláno. Volání mohou být vnořena; je požadován stejný počet `Unlock` volání. `Lock`
+Ukazatel v popisovači pole je `Unlock` platný, dokud není volána. Volání `Lock` lze vnořit; stejný počet volání `Unlock` jsou požadovány.
 
-Pole nelze odstranit, je-li uzamčeno.
+Pole nelze odstranit, pokud je uzamčeno.
 
-##  <a name="operator_lpcvariant"></a>COleSafeArray:: operator LPCVARIANT
+## <a name="colesafearrayoperator-lpcvariant"></a><a name="operator_lpcvariant"></a>COleSafeArray::operátor LPCVARIANT
 
-Zavolejte Tento operátor přetypování pro přístup k `VARIANT` podkladové `COleSafeArray` struktuře pro tento objekt.
+Volání tohoto operátoru přetypování pro přístup k základní `VARIANT` struktuře pro tento `COleSafeArray` objekt.
 
 ```
 operator LPCVARIANT() const;
 ```
 
-##  <a name="operator_lpvariant"></a>COleSafeArray:: operator LPVARIANT
+## <a name="colesafearrayoperator-lpvariant"></a><a name="operator_lpvariant"></a>COleSafeArray::operátor LPVARIANT
 
-Zavolejte Tento operátor přetypování pro přístup k `VARIANT` podkladové `COleSafeArray` struktuře pro tento objekt.
+Volání tohoto operátoru přetypování pro přístup k základní `VARIANT` struktuře pro tento `COleSafeArray` objekt.
 
 ```
 operator LPVARIANT();
@@ -587,11 +587,11 @@ operator LPVARIANT();
 
 ### <a name="remarks"></a>Poznámky
 
-Všimněte si, že změna hodnoty ve `VARIANT` struktuře, ke které se přistupovalo pomocí ukazatele vráceného touto funkcí, `COleSafeArray` změní hodnotu tohoto objektu.
+Všimněte si, že `VARIANT` změna hodnoty ve struktuře, ke které má `COleSafeArray` přístup ukazatel vrácený touto funkcí, změní hodnotu tohoto objektu.
 
-##  <a name="operator_eq"></a>COleSafeArray:: operator =
+## <a name="colesafearrayoperator-"></a><a name="operator_eq"></a>COleSafeArray::operátor =
 
-Tyto přetížené operátory přiřazení zkopírují zdrojové hodnoty do tohoto `COleSafeArray` objektu.
+Tyto přetížené operátory přiřazení zkopírují zdrojovou hodnotu do tohoto `COleSafeArray` objektu.
 
 ```
 COleSafeArray& operator=(const COleSafeArray& saSrc);
@@ -602,17 +602,17 @@ COleSafeArray& operator=(const COleVariant& varSrc);
 
 ### <a name="remarks"></a>Poznámky
 
-Následuje stručný popis každého operátoru:
+Stručný popis každého operátora je následující:
 
-- **operator = (** *saSrc* **)** – operátor Zkopíruje existující `COleSafeArray` objekt do tohoto objektu.
+- **operátor =(** *saSrc* **)** Zkopíruje `COleSafeArray` existující objekt do tohoto objektu.
 
-- **operator = (** *varSrc* **)** – operátor Zkopíruje existující `VARIANT` pole nebo `COleVariant` do tohoto objektu.
+- **operátor =(** *varSrc* **)** Zkopíruje `VARIANT` existující `COleVariant` nebo matice do tohoto objektu.
 
-- **operator = (** *pSrc* **)** – operátor Zkopíruje objekt `VARIANT` Array, k němuž přistupoval *pSrc* , do tohoto objektu.
+- **operátor =(** *pSrc* **)** Zkopíruje `VARIANT` objekt pole, ke kterým *pSrc přistupuje,* do tohoto objektu.
 
-##  <a name="operator_eq_eq"></a>COleSafeArray:: operator = = – operátor
+## <a name="colesafearrayoperator-"></a><a name="operator_eq_eq"></a>COleSafeArray::operátor ==
 
-Tento operátor porovná dvě pole`SAFEARRAY`( `VARIANT`, `COleVariant`, nebo `COleSafeArray` pole) a vrátí nenulovou hodnotu, pokud jsou stejné; jinak 0.
+Tento operátor porovná dvě`SAFEARRAY`pole `VARIANT` `COleVariant`( `COleSafeArray` , , , nebo pole) a vrátí nenulovou hodnotu, pokud jsou rovna; jinak 0.
 
 ```
 BOOL operator==(const SAFEARRAY& saSrc) const;  BOOL operator==(LPCSAFEARRAY pSrc) const;
@@ -624,11 +624,11 @@ BOOL operator==(LPCVARIANT pSrc) const;  BOOL operator==(const COleVariant& varS
 
 ### <a name="remarks"></a>Poznámky
 
-Dvě pole jsou shodná, pokud mají stejný počet rozměrů, stejnou velikost v každé dimenzi a stejné hodnoty prvků.
+Dvě pole jsou stejné, pokud mají stejný počet dimenzí, stejnou velikost v každé dimenzi a stejné hodnoty prvků.
 
-##  <a name="operator_lt_lt"></a>COleSafeArray:: operator&lt;&lt;
+## <a name="colesafearrayoperator-ltlt"></a><a name="operator_lt_lt"></a>COleSafeArray::operátor&lt;&lt;
 
-Operátor vložení (< <) podporuje diagnostický dumping a ukládání `COleSafeArray` objektu do archivu. `COleSafeArray`
+Operátor `COleSafeArray` vložení (<<) podporuje diagnostický dumping a ukládání `COleSafeArray` objektu do archivu.
 
 ```
 CDumpContext& AFXAPI operator<<(
@@ -636,9 +636,9 @@ CDumpContext& AFXAPI operator<<(
     COleSafeArray& saSrc);
 ```
 
-##  <a name="ptrofindex"></a>COleSafeArray::P trOfIndex
+## <a name="colesafearrayptrofindex"></a><a name="ptrofindex"></a>COleSafeArray::PtrOfIndex
 
-Vrací ukazatel na prvek určený hodnotami indexu.
+Vrátí ukazatel na prvek určený hodnotami indexu.
 
 ```
 void PtrOfIndex(
@@ -648,15 +648,15 @@ void PtrOfIndex(
 
 ### <a name="parameters"></a>Parametry
 
-*rgIndices*<br/>
-Pole hodnot indexu, které identifikují prvek pole. Musí být zadány všechny indexy elementu.
+*rgIndexy*<br/>
+Pole hodnot indexu, které identifikují prvek pole. Musí být zadány všechny indexy pro prvek.
 
 *ppvData*<br/>
-Při návratu se ukazatel na prvek identifikovaný hodnotami v *rgIndices*.
+Po návratu ukazatel na prvek identifikovaný hodnotami v *rgIndices*.
 
-##  <a name="putelement"></a>COleSafeArray::P utElement
+## <a name="colesafearrayputelement"></a><a name="putelement"></a>COleSafeArray::PutElement
 
-Přiřadí jeden prvek k poli.
+Přiřadí jeden prvek do pole.
 
 ```
 void PutElement(
@@ -666,17 +666,17 @@ void PutElement(
 
 ### <a name="parameters"></a>Parametry
 
-*rgIndices*<br/>
+*rgIndexy*<br/>
 Ukazatel na pole indexů pro každou dimenzi pole.
 
 *pvData*<br/>
-Ukazatel na data, která chcete přiřadit poli. Typy variant VT_DISPATCH, VT_UNKNOWN a VT_BSTR jsou ukazatele a nevyžadují jinou úroveň dereference.
+Ukazatel na data, která chcete přiřadit k poli. VT_DISPATCH, VT_UNKNOWN a VT_BSTR typy variant jsou ukazatele a nevyžadují jinou úroveň dereference.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce automaticky volá funkci Windows Functions [SafeArrayLock](/windows/win32/api/oleauto/nf-oleauto-safearraylock) a [SafeArrayUnlock](/windows/win32/api/oleauto/nf-oleauto-safearrayunlock) před a po přiřazení elementu. Je-li datový prvek řetězec, objekt nebo varianta, funkce jej zkopíruje správně a pokud je existující prvek řetězec, objekt nebo varianta, je vymazána správně.
+Tato funkce automaticky volá funkce systému Windows [SafeArrayLock](/windows/win32/api/oleauto/nf-oleauto-safearraylock) a [SafeArrayUnlock](/windows/win32/api/oleauto/nf-oleauto-safearrayunlock) před a po přiřazení prvku. Pokud je datový prvek řetězec, objekt nebo varianta, funkce jej správně zkopíruje a pokud je existující prvek řetězec, objekt nebo varianta, je správně vymazán.
 
-Všimněte si, že můžete mít více zámků v poli, takže můžete umístit prvky do pole, když je pole uzamčeno jinými operacemi.
+Všimněte si, že můžete mít více zámků v poli, takže můžete umístit prvky do pole, zatímco pole je uzamčeno jinými operacemi.
 
 Při chybě funkce vyvolá [CMemoryException](../../mfc/reference/cmemoryexception-class.md) nebo [COleException](../../mfc/reference/coleexception-class.md).
 
@@ -684,9 +684,9 @@ Při chybě funkce vyvolá [CMemoryException](../../mfc/reference/cmemoryexcepti
 
 [!code-cpp[NVC_MFCOleContainer#32](../../mfc/codesnippet/cpp/colesafearray-class_7.cpp)]
 
-##  <a name="redim"></a>COleSafeArray:: ReDim
+## <a name="colesafearrayredim"></a><a name="redim"></a>COleSafeArray::Redim
 
-Změní nejméně významnou (pravé) hranici bezpečného pole.
+Změní nejméně významné (rightmost) vázána bezpečné pole.
 
 ```
 void Redim(SAFEARRAYBOUND* psaboundNew);
@@ -694,16 +694,16 @@ void Redim(SAFEARRAYBOUND* psaboundNew);
 
 ### <a name="parameters"></a>Parametry
 
-*psaboundNew*<br/>
-Ukazatel na novou strukturu svázanou v bezpečném poli obsahující nové pole vázaného. Je možné změnit pouze nejmenší důležitou dimenzi pole.
+*psaboundNovinka*<br/>
+Ukazatel na novou bezpečnou strukturu vázané na pole obsahující novou vazbu pole. Může být změněna pouze nejméně významná dimenze pole.
 
 ### <a name="remarks"></a>Poznámky
 
-Při chybě funkce vyvolá výjimku [COleException](../../mfc/reference/coleexception-class.md).
+Při chybě funkce vyvolá [COleException](../../mfc/reference/coleexception-class.md).
 
-##  <a name="resizeonedim"></a>COleSafeArray::ResizeOneDim
+## <a name="colesafearrayresizeonedim"></a><a name="resizeonedim"></a>COleSafeArray::ResizeOneDim
 
-Změní počet prvků v `COleSafeArray` jednorozměrném objektu.
+Změní počet prvků v jednorozměrném `COleSafeArray` objektu.
 
 ```
 void ResizeOneDim(DWORD dwElements);
@@ -712,19 +712,19 @@ void ResizeOneDim(DWORD dwElements);
 ### <a name="parameters"></a>Parametry
 
 *dwElements*<br/>
-Počet prvků v jednorozměrném poli s jedním rozměrem.
+Počet prvků v jednorozměrném bezpečném poli.
 
 ### <a name="remarks"></a>Poznámky
 
-Při chybě funkce vyvolá výjimku [COleException](../../mfc/reference/coleexception-class.md).
+Při chybě funkce vyvolá [COleException](../../mfc/reference/coleexception-class.md).
 
 ### <a name="example"></a>Příklad
 
-  Podívejte se na příklad pro [COleSafeArray:: CreateOneDim](#createonedim).
+  Viz příklad [cOleSafeArray::CreateOneDim](#createonedim).
 
-##  <a name="unaccessdata"></a>COleSafeArray::UnaccessData
+## <a name="colesafearrayunaccessdata"></a><a name="unaccessdata"></a>COleSafeArray::UnaccessData
 
-Sníží počet zámků pole a neověřuje ukazatel, který získá `AccessData`.
+Sníží počet zámků pole a zruší platnost ukazatele načteného `AccessData`.
 
 ```
 void UnaccessData();
@@ -732,15 +732,15 @@ void UnaccessData();
 
 ### <a name="remarks"></a>Poznámky
 
-Při chybě funkce vyvolá výjimku [COleException](../../mfc/reference/coleexception-class.md).
+Při chybě funkce vyvolá [COleException](../../mfc/reference/coleexception-class.md).
 
 ### <a name="example"></a>Příklad
 
-  Podívejte se na příklad pro [COleSafeArray:: AccessData](#accessdata).
+  Viz příklad [cOleSafeArray::AccessData](#accessdata).
 
-##  <a name="unlock"></a>COleSafeArray:: Unlock
+## <a name="colesafearrayunlock"></a><a name="unlock"></a>COleSafeArray::Odemknout
 
-Sníží počet zámků pole tak, aby se mohl uvolnit nebo změnit jeho velikost.
+Sníží počet zámků pole, takže může být uvolněna nebo velikost.
 
 ```
 void Unlock();
@@ -748,11 +748,11 @@ void Unlock();
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce se volá po dokončení přístupu k datům v poli. Při chybě vyvolá [COleException](../../mfc/reference/coleexception-class.md).
+Tato funkce je volána po dokončení přístupu k datům v poli. Při chybě vyvolá [COleException](../../mfc/reference/coleexception-class.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
-[COleVariant – třída](../../mfc/reference/colevariant-class.md)<br/>
+[COleVariant třída](../../mfc/reference/colevariant-class.md)<br/>
 [CRecordset – třída](../../mfc/reference/crecordset-class.md)<br/>
 [CDatabase – třída](../../mfc/reference/cdatabase-class.md)<br/>

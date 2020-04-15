@@ -1,5 +1,5 @@
 ---
-title: CMFCPopupMenuBar Class
+title: CMFCPopupMenuBar – třída
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCPopupMenuBar
@@ -46,16 +46,16 @@ helpviewer_keywords:
 - CMFCPopupMenuBar [MFC], StartPopupMenuTimer
 - CMFCPopupMenuBar [MFC], m_bDisableSideBarInXPMode
 ms.assetid: 4c93c459-7f70-4240-8c63-280bb811e374
-ms.openlocfilehash: acb1e2be7d40e5e0c569fffcc92c57c750be8f91
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b4693e316fd78948cfae262433fee8ca8b6ab23c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62374022"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375365"
 ---
-# <a name="cmfcpopupmenubar-class"></a>CMFCPopupMenuBar Class
+# <a name="cmfcpopupmenubar-class"></a>CMFCPopupMenuBar – třída
 
-Panel nabídek vložený do místní nabídky.
+Řádek nabídek vložený do rozbalovací nabídky.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -67,51 +67,51 @@ class CMFCPopupMenuBar : public CMFCToolBar
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CMFCPopupMenuBar::AdjustSizeImmediate](#adjustsizeimmediate)|Okamžitě přepočítá rozložení na stavového řádku. (Přepíše [CPane::AdjustSizeImmediate](../../mfc/reference/cpane-class.md#adjustsizeimmediate).)|
-|[CMFCPopupMenuBar::BuildOrigItems](#buildorigitems)|Načte položky místní nabídky z nabídky prostředků.|
-|[CMFCPopupMenuBar::CloseDelayedSubMenu](#closedelayedsubmenu)|Tlačítka s nabídkou zpožděné automaticky otevírané okno se zavře.|
-|[CMFCPopupMenuBar::ExportToMenu](#exporttomenu)|Sestavení z místní nabídky tlačítka nabídky.|
-|[CMFCPopupMenuBar::FindDestintationToolBar](#finddestintationtoolbar)|Pokud je zadaný bod vyhledá panelu nástrojů.|
-|[CMFCPopupMenuBar::GetCurrentMenuImageSize](#getcurrentmenuimagesize)|Určuje velikost obrázků tlačítka nabídky.|
-|[CMFCPopupMenuBar::GetDefaultMenuId](#getdefaultmenuid)|Vrátí identifikátor výchozí položku nabídky.|
-|[CMFCPopupMenuBar::GetLastCommandIndex](#getlastcommandindex)|Získá index nedávno vyvolaný příkazu nabídky.|
-|[CMFCPopupMenuBar::GetOffset](#getoffset)|Získá posun řádku nabídek automaticky otevíraného okna.|
-|[CMFCPopupMenuBar::ImportFromMenu](#importfrommenu)|Importuje místní nabídky tlačítka ze zadaného nabídky.|
-|[CMFCPopupMenuBar::IsDropDownListMode](#isdropdownlistmode)|Označuje, zda je panel nabídek automaticky otevírané okno v rozevíracím seznamu vyberte režim.|
-|[CMFCPopupMenuBar::IsPaletteMode](#ispalettemode)|Označuje, zda je panel nabídek automaticky otevírané okno v režimu palety.|
-|[CMFCPopupMenuBar::IsRibbonPanel](#isribbonpanel)|Určuje, zda je panel pásu karet (FALSE ve výchozím nastavení).|
-|[CMFCPopupMenuBar::IsRibbonPanelInRegularMode](#isribbonpanelinregularmode)|Určuje, zda tento panel pásu karet do normálního režimu (ve výchozím nastavení FALSE).|
-|[CMFCPopupMenuBar::LoadFromHash](#loadfromhash)|Načte archivované nabídky.|
-|[CMFCPopupMenuBar::RestoreDelayedSubMenu](#restoredelayedsubmenu)|Obnoví zpožděné tlačítko pro uzavření nabídek automaticky otevíraného okna.|
-|[CMFCPopupMenuBar::SetButtonStyle](#setbuttonstyle)|Nastaví styl tlačítka panelu nástrojů na daném indexu. (Přepíše [CMFCToolBar::SetButtonStyle](../../mfc/reference/cmfctoolbar-class.md#setbuttonstyle).)|
-|[CMFCPopupMenuBar::SetOffset](#setoffset)|Nastavuje posun řádku nabídek automaticky otevíraného okna.|
-|[CMFCPopupMenuBar::StartPopupMenuTimer](#startpopupmenutimer)|Spustí časovač pro tlačítko zadané zpožděné místní nabídky.|
+|[CMFCPopupMenuBar::AdjustSizeImmediate](#adjustsizeimmediate)|Okamžitě přepočítá rozložení podokna. (Přepíše [CPane::AdjustSizeImmediate](../../mfc/reference/cpane-class.md#adjustsizeimmediate).)|
+|[CMFCPopupMenuBar::BuildOrigItems](#buildorigitems)|Načte položky místní nabídky ze zadaného prostředku nabídky.|
+|[CMFCPopupMenuBar::CloseDelayedSubMenu](#closedelayedsubmenu)|Zavře tlačítko zpožděné rozbalovací nabídky.|
+|[CMFCPopupMenuBar::ExportToMenu](#exporttomenu)|Vytvoří nabídku z tlačítek místní nabídky.|
+|[CMFCPopupMenuBar::FindDestintationToolBar](#finddestintationtoolbar)|Vyhledá panel nástrojů, kde leží zadaný bod.|
+|[CMFCPopupMenuBar::GetCurrentMenuImageSize](#getcurrentmenuimagesize)|Označuje velikost obrázků s tlačítkem nabídky.|
+|[CMFCPopupMenuBar::GetDefaultMenuId](#getdefaultmenuid)|Vrátí identifikátor výchozí položky nabídky.|
+|[CMFCPopupMenuBar::GetLastCommandIndex](#getlastcommandindex)|Získá index naposledy vyvolané příkazu nabídky.|
+|[CMFCPopupMenuBar::GetOffset](#getoffset)|Získá řádek posun řádku rozbalovací panel nabídek.|
+|[CMFCPopupMenuBar::ImportFromMenu](#importfrommenu)|Importuje tlačítka místní nabídky ze zadané nabídky.|
+|[CMFCPopupMenuBar::Režim IsDropDownListMode](#isdropdownlistmode)|Označuje, zda je automaticky otevíraný řádek nabídek v režimu rozevíracího seznamu.|
+|[CMFCPopupMenuBar::Režim IsPaletteMode](#ispalettemode)|Označuje, zda je místní panel nabídek v režimu palety.|
+|[CMFCPopupMenuBar::IsRibbonPanel](#isribbonpanel)|Označuje, zda se jedná o panel pásu karet (ve výchozím nastavení NEPRAVDA).|
+|[CMFCPopupMenuBar::IsRibbonPanelInRegularMode](#isribbonpanelinregularmode)|Označuje, zda se jedná o panel pásu karet v běžném režimu (ve výchozím nastavení NEPRAVDA).|
+|[CMFCPopupMenuBar::NačístFromHash](#loadfromhash)|Načte archivovované menu.|
+|[CMFCPopupMenuBar::RestoreDelayedSubMenu](#restoredelayedsubmenu)|Obnoví tlačítko zpožděné nabídky pro zavření místního řádku nabídek.|
+|[CMFCPopupMenuBar::SetButtonStyle](#setbuttonstyle)|Nastaví styl tlačítka panelu nástrojů v daném indexu. (Přepíše [CMFCToolBar::SetButtonStyle](../../mfc/reference/cmfctoolbar-class.md#setbuttonstyle).)|
+|[CMFCPopupMenuBar::SetOffset](#setoffset)|Nastaví odsazení řádku rozbalovacího řádku nabídek.|
+|[CMFCPopupMenuBar::StartPopupMenuTimer](#startpopupmenutimer)|Spustí časovač pro zadané tlačítko zpožděné rozbalovací nabídky.|
 
-### <a name="data-members"></a>Datové členy
+### <a name="data-members"></a>Členové dat
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CMFCPopupMenuBar::m_bDisableSideBarInXPMode](#m_bdisablesidebarinxpmode)|Určuje, zda šedé postranního panelu se zobrazí, když má aplikace vzhledu Windows XP.|
+|[CMFCPopupMenuBar::m_bDisableSideBarInXPMode](#m_bdisablesidebarinxpmode)|Určuje, zda bude šedý postranní panel zobrazen, pokud má aplikace vzhled systému Windows XP.|
 
 ## <a name="remarks"></a>Poznámky
 
-`CMFCPopupMenuBar` Se vytvoří ve stejnou dobu jako [cmfcpopupmenu – třída](../../mfc/reference/cmfcpopupmenu-class.md) a vložené dovnitř. `CMFCPopupMenuBar` Pokrývá celou klientskou oblast `CMFCPopupMenu` objektu. Podporuje klávesnice a myši. Také komunikaci, která vstup `CMFCPopupMenu` a v okně rámce nejvyšší úrovně.
+Je `CMFCPopupMenuBar` vytvořen ve stejnou dobu jako [CMFCPopupMenu třídy](../../mfc/reference/cmfcpopupmenu-class.md) a vložené uvnitř něj. Pokrývá `CMFCPopupMenuBar` celou klientskou oblast `CMFCPopupMenu` objektu. Podporuje vstup z klávesnice a myši. Také komunikuje, že vstup `CMFCPopupMenu` do okna a do okna rámce nejvyšší úrovně.
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak inicializovat `CMFCPopupMenuBar` objektu z `CMFCPopupMenu` objektu. Tento fragment kódu je součástí [nakreslit Client sample](../../overview/visual-cpp-samples.md).
+Následující příklad ukazuje, jak inicializovat `CMFCPopupMenuBar` `CMFCPopupMenu` objekt z objektu. Tento fragment kódu je součástí [ukázky klienta Draw](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_DrawClient#7](../../mfc/reference/codesnippet/cpp/cmfcpopupmenubar-class_1.cpp)]
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObjekt](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[CCmdCíl](../../mfc/reference/ccmdtarget-class.md)
 
-[CWnd](../../mfc/reference/cwnd-class.md)
+[Cwnd](../../mfc/reference/cwnd-class.md)
 
 [CBasePane](../../mfc/reference/cbasepane-class.md)
 
@@ -119,17 +119,17 @@ Následující příklad ukazuje, jak inicializovat `CMFCPopupMenuBar` objektu z
 
 [CMFCBaseToolBar](../../mfc/reference/cmfcbasetoolbar-class.md)
 
-[CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md)
+[CMFCPanel](../../mfc/reference/cmfctoolbar-class.md)
 
-[CMFCPopupMenuBar](../../mfc/reference/cmfcpopupmenubar-class.md)
+[CmFCPopupMenuBar](../../mfc/reference/cmfcpopupmenubar-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
 **Záhlaví:** afxpopupmenubar.h
 
-##  <a name="adjustsizeimmediate"></a>  CMFCPopupMenuBar::AdjustSizeImmediate
+## <a name="cmfcpopupmenubaradjustsizeimmediate"></a><a name="adjustsizeimmediate"></a>CMFCPopupMenuBar::AdjustSizeImmediate
 
-Okamžitě přepočítá rozložení panelu stavového řádku nabídky automaticky otevíraného okna. (Přepíše [CPane::AdjustSizeImmediate](../../mfc/reference/cpane-class.md#adjustsizeimmediate).
+Okamžitě přepočítá rozložení podokna místnínabídky nabídek. (Přepíše [CPane::AdjustSizeImmediate](../../mfc/reference/cpane-class.md#adjustsizeimmediate).
 
 ```
 virtual void AdjustSizeImmediate(BOOL bRecalcLayout);
@@ -137,14 +137,14 @@ virtual void AdjustSizeImmediate(BOOL bRecalcLayout);
 
 ### <a name="parameters"></a>Parametry
 
-*bRecalcLayout*<br/>
-[in] TRUE, pokud chcete automaticky přepočítat rozložení panelu stavového řádku nabídky automaticky otevírané okno; v opačném případě hodnota FALSE.
+*bRozložení a rozložení*<br/>
+[v] TRUE pro automatický přepočet rozložení podokna automaticky vyskakovacínabídky nabídek; jinak NEPRAVDA.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="buildorigitems"></a>  CMFCPopupMenuBar::BuildOrigItems
+## <a name="cmfcpopupmenubarbuildorigitems"></a><a name="buildorigitems"></a>CMFCPopupMenuBar::BuildOrigItems
 
-Načte položky místní nabídky z nabídky prostředků.
+Načte položky místní nabídky ze zadaného prostředku nabídky.
 
 ```
 BOOL BuildOrigItems(UINT uiMenuResID);
@@ -153,17 +153,17 @@ BOOL BuildOrigItems(UINT uiMenuResID);
 ### <a name="parameters"></a>Parametry
 
 *uiMenuResID*<br/>
-[in] Určuje ID nabídky prostředku nabídky pro načtení.
+[v] Určuje ID nabídky prostředku nabídky, který má být načíst.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu TRUE v případě úspěchu, nebo hodnotu NEPRAVDA, pokud tomu tak není.
+Vrátí hodnotu PRAVDA, pokud je úspěšná, nebo nehodnotit, pokud ne.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="closedelayedsubmenu"></a>  CMFCPopupMenuBar::CloseDelayedSubMenu
+## <a name="cmfcpopupmenubarclosedelayedsubmenu"></a><a name="closedelayedsubmenu"></a>CMFCPopupMenuBar::CloseDelayedSubMenu
 
-Zavře tlačítko nabídky automaticky otevírané okno, které byla odložena.
+Zavře tlačítko místní nabídky, které bylo zpožděno.
 
 ```
 virtual void CloseDelayedSubMenu();
@@ -171,9 +171,9 @@ virtual void CloseDelayedSubMenu();
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="exporttomenu"></a>  CMFCPopupMenuBar::ExportToMenu
+## <a name="cmfcpopupmenubarexporttomenu"></a><a name="exporttomenu"></a>CMFCPopupMenuBar::ExportToMenu
 
-Sestaví nabídky z místní nabídky tlačítka nabídky.
+Vytvoří nabídku z tlačítek místní nabídky.
 
 ```
 virtual HMENU ExportToMenu() const;
@@ -185,9 +185,9 @@ Vrátí popisovač do nové nabídky.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="finddestintationtoolbar"></a>  CMFCPopupMenuBar::FindDestintationToolBar
+## <a name="cmfcpopupmenubarfinddestintationtoolbar"></a><a name="finddestintationtoolbar"></a>CMFCPopupMenuBar::FindDestintationToolBar
 
-Pokud je zadaný bod vyhledá panelu nástrojů.
+Vyhledá panel nástrojů, kde leží zadaný bod.
 
 ```
 CMFCToolBar* FindDestintationToolBar(CPoint point);
@@ -195,18 +195,18 @@ CMFCToolBar* FindDestintationToolBar(CPoint point);
 
 ### <a name="parameters"></a>Parametry
 
-*point*<br/>
-[in] Bod na obrazovce.
+*Bod*<br/>
+[v] Bod na obrazovce.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí popisovač do panelu nástrojů ve kterém je místo, pokud existuje, nebo hodnota NULL, pokud není.
+Vrátí popisovač na panelu nástrojů, kde leží bod, pokud existuje, nebo NULL, pokud ne.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="getcurrentmenuimagesize"></a>  CMFCPopupMenuBar::GetCurrentMenuImageSize
+## <a name="cmfcpopupmenubargetcurrentmenuimagesize"></a><a name="getcurrentmenuimagesize"></a>CMFCPopupMenuBar::GetCurrentMenuImageSize
 
-Určuje velikost obrázků tlačítka nabídky.
+Označuje velikost obrázků s tlačítkem nabídky.
 
 ```
 virtual CSize GetCurrentMenuImageSize() const;
@@ -214,13 +214,13 @@ virtual CSize GetCurrentMenuImageSize() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí velikost obrázků tlačítko nabídky na panelu nástrojů.
+Vrátí velikost obrazů tlačítek nabídky na panelu nástrojů.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="getdefaultmenuid"></a>  CMFCPopupMenuBar::GetDefaultMenuId
+## <a name="cmfcpopupmenubargetdefaultmenuid"></a><a name="getdefaultmenuid"></a>CMFCPopupMenuBar::GetDefaultMenuId
 
-Vrátí identifikátor výchozí položku nabídky.
+Vrátí identifikátor výchozí položky nabídky.
 
 ```
 UINT GetDefaultMenuId() const;
@@ -228,13 +228,13 @@ UINT GetDefaultMenuId() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí identifikátor výchozí položky nabídky na řádku nabídek automaticky otevíraného okna.
+Vrátí identifikátor výchozí položky nabídky v rozbalovacím řádku nabídek.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="getlastcommandindex"></a>  CMFCPopupMenuBar::GetLastCommandIndex
+## <a name="cmfcpopupmenubargetlastcommandindex"></a><a name="getlastcommandindex"></a>CMFCPopupMenuBar::GetLastCommandIndex
 
-Získá index nedávno vyvolaný příkazu nabídky.
+Získá index naposledy vyvolané příkazu nabídky.
 
 ```
 static int __stdcall GetLastCommandIndex();
@@ -242,13 +242,13 @@ static int __stdcall GetLastCommandIndex();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí index posledního příkazu v nabídce, která byla vyvolána.
+Vrátí index posledního příkazu nabídky, který byl vyvolán.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="getoffset"></a>  CMFCPopupMenuBar::GetOffset
+## <a name="cmfcpopupmenubargetoffset"></a><a name="getoffset"></a>CMFCPopupMenuBar::GetOffset
 
-Získá posun řádku nabídek automaticky otevíraného okna.
+Získá řádek posun řádku rozbalovací panel nabídek.
 
 ```
 int GetOffset() const;
@@ -256,15 +256,15 @@ int GetOffset() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí posun řádku nabídek automaticky otevíraného okna.
+Vrátí odsazení řádku řádku nabídky automaticky otevíraných panelů.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato hodnota se nastavuje pomocí [CMFCPopupMenuBar::SetOffset](#setoffset).
+Tato hodnota je nastavena pomocí [cmfcpopupmenubar::SetOffset](#setoffset).
 
-##  <a name="importfrommenu"></a>  CMFCPopupMenuBar::ImportFromMenu
+## <a name="cmfcpopupmenubarimportfrommenu"></a><a name="importfrommenu"></a>CMFCPopupMenuBar::ImportFromMenu
 
-Importuje místní nabídky tlačítka ze zadaného nabídky.
+Importuje tlačítka místní nabídky ze zadané nabídky.
 
 ```
 virtual BOOL ImportFromMenu(
@@ -274,21 +274,21 @@ virtual BOOL ImportFromMenu(
 
 ### <a name="parameters"></a>Parametry
 
-*hMenu*<br/>
-[in] V nabídce, ze kterých chcete importovat tlačítka nabídky automaticky otevírané okno.
+*hNabídka*<br/>
+[v] Nabídka, ze které chcete importovat tlačítka místní nabídky.
 
-*bShowAllCommands*<br/>
-[in] Hodnota TRUE, pokud všechny příkazy v nabídce jsou importované, nebo hodnotu NEPRAVDA, pokud zřídka používané ty mohou být skryty.
+*bZobrazitAllPříkazy*<br/>
+[v] TRUE, pokud mají být importovány všechny příkazy v nabídce, nebo nepravda, pokud se používají jen zřídka, mohou být skryté.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu PRAVDA, pokud tlačítka nabídky úspěšně importováno z nabídky, nebo FALSE, pokud není.
+Vrátí hodnotu PRAVDA, pokud byla tlačítka nabídky úspěšně importována z nabídky, nebo nepravda, pokud ne.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="isdropdownlistmode"></a>  CMFCPopupMenuBar::IsDropDownListMode
+## <a name="cmfcpopupmenubarisdropdownlistmode"></a><a name="isdropdownlistmode"></a>CMFCPopupMenuBar::Režim IsDropDownListMode
 
-Označuje, zda je panel nabídek automaticky otevírané okno v rozevíracím seznamu vyberte režim.
+Označuje, zda je automaticky otevíraný řádek nabídek v režimu rozevíracího seznamu.
 
 ```
 BOOL IsDropDownListMode() const;
@@ -296,13 +296,13 @@ BOOL IsDropDownListMode() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu PRAVDA, pokud nabídek automaticky otevíraného okna je v rozevíracím seznamu vyberte režim, nebo FALSE, pokud není.
+Vrátí hodnotu PRAVDA, pokud je rozbalovací řádek nabídek v rozevíracím seznamu, nebo nepravda, pokud ne.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="ispalettemode"></a>  CMFCPopupMenuBar::IsPaletteMode
+## <a name="cmfcpopupmenubarispalettemode"></a><a name="ispalettemode"></a>CMFCPopupMenuBar::Režim IsPaletteMode
 
-Označuje, zda je panel nabídek automaticky otevírané okno v režimu palety.
+Označuje, zda je místní panel nabídek v režimu palety.
 
 ```
 BOOL IsPaletteMode() const;
@@ -310,15 +310,15 @@ BOOL IsPaletteMode() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu TRUE, pokud je povolený režim palety nebo hodnotu NEPRAVDA, pokud tomu tak není.
+Vrátí hodnotu PRAVDA, pokud je povolen režim palety, nebo NEPRAVDA, pokud ne.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud nabídek nastaven na režim palety, položky nabídky zobrazí ve více sloupcích a omezený počet řádků.
+Pokud je řádek nabídek nastaven na režim palety, položky nabídky se zobrazí ve více sloupcích a v omezeném počtu řádků.
 
-##  <a name="isribbonpanel"></a>  CMFCPopupMenuBar::IsRibbonPanel
+## <a name="cmfcpopupmenubarisribbonpanel"></a><a name="isribbonpanel"></a>CMFCPopupMenuBar::IsRibbonPanel
 
-Určuje, zda je panel pásu karet (FALSE ve výchozím nastavení).
+Označuje, zda se jedná o panel pásu karet (ve výchozím nastavení NEPRAVDA).
 
 ```
 virtual BOOL IsRibbonPanel() const;
@@ -326,13 +326,13 @@ virtual BOOL IsRibbonPanel() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ve výchozím nastavení, která udává, že to není panel pásu karet, vrací hodnotu FALSE.
+Ve výchozím nastavení vrátí hodnotu NEPRAVDA, což znamená, že se nejedná o panel pásu karet.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="isribbonpanelinregularmode"></a>  CMFCPopupMenuBar::IsRibbonPanelInRegularMode
+## <a name="cmfcpopupmenubarisribbonpanelinregularmode"></a><a name="isribbonpanelinregularmode"></a>CMFCPopupMenuBar::IsRibbonPanelInRegularMode
 
-Určuje, zda tento panel pásu karet do normálního režimu (ve výchozím nastavení FALSE).
+Označuje, zda se jedná o panel pásu karet v běžném režimu (ve výchozím nastavení NEPRAVDA).
 
 ```
 virtual BOOL IsRibbonPanelInRegularMode() const;
@@ -340,13 +340,13 @@ virtual BOOL IsRibbonPanelInRegularMode() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ve výchozím nastavení, označující, že to není panel pásu karet do normálního režimu, vrátí hodnotu FALSE.
+Ve výchozím nastavení vrátí hodnotu NEPRAVDA, což znamená, že se nejedná o panel pásu karet v normálním režimu.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="loadfromhash"></a>  CMFCPopupMenuBar::LoadFromHash
+## <a name="cmfcpopupmenubarloadfromhash"></a><a name="loadfromhash"></a>CMFCPopupMenuBar::NačístFromHash
 
-Načte archivované nabídky.
+Načte archivovované menu.
 
 ```
 BOOL LoadFromHash(HMENU hMenu);
@@ -354,18 +354,18 @@ BOOL LoadFromHash(HMENU hMenu);
 
 ### <a name="parameters"></a>Parametry
 
-*hMenu*<br/>
-[in] Popisovač nabídky archivované načíst.
+*hNabídka*<br/>
+[v] Popisovač archivované nabídky, kterou chcete načíst.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu PRAVDA, pokud se nabídka úspěšně načteny, nebo hodnotu FALSE, pokud není.
+Vrátí hodnotu PRAVDA, pokud je nabídka úspěšně načtena, nebo nepravda, pokud ne.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="m_bdisablesidebarinxpmode"></a>  CMFCPopupMenuBar::m_bDisableSideBarInXPMode
+## <a name="cmfcpopupmenubarm_bdisablesidebarinxpmode"></a><a name="m_bdisablesidebarinxpmode"></a>CMFCPopupMenuBar::m_bDisableSideBarInXPMode
 
-Parametr logické hodnoty označující, zda má vaše aplikace šedé postranního panelu po vzhledu Windows XP.
+Logický parametr, který označuje, zda má aplikace šedý postranní panel, pokud má vzhled systému Windows XP.
 
 ```
 BOOL m_bDisableSideBarInXPMode;
@@ -373,13 +373,13 @@ BOOL m_bDisableSideBarInXPMode;
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud tato členská proměnná je nastavena na hodnotu FALSE a vaše aplikace má vzhledu Windows XP, nakreslí rozhraní šedé postranního panelu ve vaší aplikaci.
+Pokud je tato členská proměnná nastavena na hodnotu FALSE a aplikace má vzhled systému Windows XP, nakreslí rozhraní v aplikaci šedý postranní panel.
 
 Výchozí hodnota je FALSE.
 
-##  <a name="restoredelayedsubmenu"></a>  CMFCPopupMenuBar::RestoreDelayedSubMenu
+## <a name="cmfcpopupmenubarrestoredelayedsubmenu"></a><a name="restoredelayedsubmenu"></a>CMFCPopupMenuBar::RestoreDelayedSubMenu
 
-Obnoví zpožděné tlačítko pro uzavření nabídek automaticky otevíraného okna.
+Obnoví tlačítko zpožděné nabídky pro zavření místního řádku nabídek.
 
 ```
 virtual void RestoreDelayedSubMenu();
@@ -387,9 +387,9 @@ virtual void RestoreDelayedSubMenu();
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="setbuttonstyle"></a>  CMFCPopupMenuBar::SetButtonStyle
+## <a name="cmfcpopupmenubarsetbuttonstyle"></a><a name="setbuttonstyle"></a>CMFCPopupMenuBar::SetButtonStyle
 
-Nastaví styl tlačítka panelu nástrojů na daném indexu. (Přepíše [CMFCToolBar::SetButtonStyle](../../mfc/reference/cmfctoolbar-class.md#setbuttonstyle).)
+Nastaví styl tlačítka panelu nástrojů v daném indexu. (Přepíše [CMFCToolBar::SetButtonStyle](../../mfc/reference/cmfctoolbar-class.md#setbuttonstyle).)
 
 ```
 virtual void SetButtonStyle(
@@ -400,16 +400,16 @@ virtual void SetButtonStyle(
 ### <a name="parameters"></a>Parametry
 
 *nIndex*<br/>
-[in] Z nuly vycházející index panelu nástrojů, jehož styl, je možné nastavit.
+[v] Nulový index tlačítka panelu nástrojů, jehož styl má být nastaven.
 
-*nStyle*<br/>
-[in] Styl tlačítka. Zobrazit [– styly ovládacího prvku panel nástrojů](../../mfc/reference/toolbar-control-styles.md) seznam dostupných nástrojů styly.
+*nStyl*<br/>
+[v] Styl tlačítka. Seznam dostupných stylů tlačítek panelu nástrojů naleznete v tématu [Styly ovládacích prvků nástrojů.](../../mfc/reference/toolbar-control-styles.md)
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="setoffset"></a>  CMFCPopupMenuBar::SetOffset
+## <a name="cmfcpopupmenubarsetoffset"></a><a name="setoffset"></a>CMFCPopupMenuBar::SetOffset
 
-Nastavuje posun řádku nabídek automaticky otevíraného okna.
+Nastaví odsazení řádku rozbalovacího řádku nabídek.
 
 ```
 void SetOffset(int iOffset);
@@ -418,13 +418,13 @@ void SetOffset(int iOffset);
 ### <a name="parameters"></a>Parametry
 
 *iOffset*<br/>
-[in] Počet řádků, že by měl posun řádku nabídek automaticky otevíraného okna.
+[v] Počet řádků, které rozbalovací panel nabídek by měl y být posunuty.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="startpopupmenutimer"></a>  CMFCPopupMenuBar::StartPopupMenuTimer
+## <a name="cmfcpopupmenubarstartpopupmenutimer"></a><a name="startpopupmenutimer"></a>CMFCPopupMenuBar::StartPopupMenuTimer
 
-Spustí časovač pro tlačítko zadané zpožděné místní nabídky.
+Spustí časovač pro zadané tlačítko zpožděné rozbalovací nabídky.
 
 ```
 void StartPopupMenuTimer(
@@ -435,16 +435,16 @@ void StartPopupMenuTimer(
 ### <a name="parameters"></a>Parametry
 
 *pMenuButton*<br/>
-[in] Ukazatel na tlačítko nabídky, pro kterou chcete nastavit zpoždění časovače.
+[v] Ukazatel na tlačítko nabídky, pro které chcete nastavit časovač zpoždění.
 
 *nDelayFactor*<br/>
-[in] Faktor zpoždění, rovno alespoň jeden, kterým se má vynásobit ve standardní nabídce zpoždění (obecně mezi půl sekundy a pět sekund).
+[v] Faktor zpoždění, který se rovná alespoň jednomu, vynásobí standardní dobou zpoždění nabídky (obvykle mezi půl sekundou a pěti sekundami).
 
 ### <a name="remarks"></a>Poznámky
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>
-[CMFCColorBar – třída](../../mfc/reference/cmfccolorbar-class.md)<br/>
-[CMFCPopupMenu – třída](../../mfc/reference/cmfcpopupmenu-class.md)
+[Třída CMFCColorBar](../../mfc/reference/cmfccolorbar-class.md)<br/>
+[Třída cmfcpopupmenu](../../mfc/reference/cmfcpopupmenu-class.md)

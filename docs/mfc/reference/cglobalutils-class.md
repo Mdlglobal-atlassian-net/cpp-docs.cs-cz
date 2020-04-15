@@ -1,5 +1,5 @@
 ---
-title: Cglobalutils – třída
+title: CGlobalUtils – třída
 ms.date: 10/18/2018
 f1_keywords:
 - CGlobalUtils
@@ -38,16 +38,16 @@ helpviewer_keywords:
 - CGlobalUtils [MFC], StringFromCy
 - CGlobalUtils [MFC], StringFromDecimal
 ms.assetid: 2c5bd1a6-f80c-4e79-a476-b4ceebabfb2f
-ms.openlocfilehash: 5c92d3d74bac5e14ed791c6d77cca21eb66a4735
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 66c1663774076fcc4b62b766b1781efc8cc33c93
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182013"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373725"
 ---
-# <a name="cglobalutils-class"></a>Cglobalutils – třída
+# <a name="cglobalutils-class"></a>CGlobalUtils – třída
 
-Další podrobnosti najdete ve zdrojovém kódu v **VC\\atlmfc\\src\\mfc** složce instalace sady Visual Studio.
+Další podrobnosti naleznete ve zdrojovém kódu umístěném ve složce **MFC\\knihovny\\VC src\\** instalace sady Visual Studio.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -59,17 +59,17 @@ class CGlobalUtils
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
 |[CGlobalUtils::AdjustRectToWorkArea](#adjustrecttoworkarea)||
 |[CGlobalUtils::CalcExpectedDockedRect](#calcexpecteddockedrect)||
 |[CGlobalUtils::CanBeAttached](#canbeattached)||
-|[CGlobalUtils::CanPaneBeInFloatingMultiPaneFrameWnd](#canpanebeinfloatingmultipaneframewnd)||
+|[CGlobalUtils::CanPaneBeInFloatingMultiPanePaneWnd](#canpanebeinfloatingmultipaneframewnd)||
 |[CGlobalUtils::CheckAlignment](#checkalignment)||
 |[CGlobalUtils::CyFromString](#cyfromstring)||
 |[CGlobalUtils::DecimalFromString](#decimalfromstring)||
 |[CGlobalUtils::FlipRect](#fliprect)||
-|[CGlobalUtils::ForceAdjustLayout](#forceadjustlayout)||
+|[CGlobalUtils::Rozložení ForceAdjustLayout](#forceadjustlayout)||
 |[CGlobalUtils::GetDockingManager](#getdockingmanager)||
 |[CGlobalUtils::GetOppositeAlignment](#getoppositealignment)||
 |[CGlobalUtils::GetPaneAndAlignFromPoint](#getpaneandalignfrompoint)||
@@ -88,7 +88,7 @@ class CGlobalUtils
 
 **Záhlaví:** afxglobalutils.h
 
-##  <a name="adjustrecttoworkarea"></a>  CGlobalUtils::AdjustRectToWorkArea
+## <a name="cglobalutilsadjustrecttoworkarea"></a><a name="adjustrecttoworkarea"></a>CGlobalUtils::AdjustRectToWorkArea
 
 ```
 void AdjustRectToworkArea(
@@ -98,12 +98,12 @@ void AdjustRectToworkArea(
 
 ### <a name="parameters"></a>Parametry
 
-[out v] *rect*<br/>
-[in] *pRectDelta*<br/>
+[dovnitř, ven] *rect*<br/>
+[v] *pRectDelta*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="calcexpecteddockedrect"></a>  CGlobalUtils::CalcExpectedDockedRect
+## <a name="cglobalutilscalcexpecteddockedrect"></a><a name="calcexpecteddockedrect"></a>CGlobalUtils::CalcExpectedDockedRect
 
 ```
 void CalcExpectedDockedRect(
@@ -117,21 +117,21 @@ void CalcExpectedDockedRect(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *barContainerManager*<br/>
+[v] *barContainerManager*<br/>
 
-[in] *pWndTodock*<br/>
+[v] *pWndTodock*<br/>
 
-[in] *ptMouse*<br/>
+[v] *ptMouse*<br/>
 
-[out] *rectResult*<br/>
+[out] *rectVýsledek*<br/>
 
 [out] *bDrawTab*<br/>
 
-[out] *ppTargetBar*<br/>
+[out] *ppCílový bar*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="canbeattached"></a>  CGlobalUtils::CanBeAttached
+## <a name="cglobalutilscanbeattached"></a><a name="canbeattached"></a>CGlobalUtils::CanBeAttached
 
 ```
 BOOL CanBeAttached(CWnd* pWnd) const;
@@ -139,13 +139,13 @@ BOOL CanBeAttached(CWnd* pWnd) const;
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pWnd*<br/>
+[v] *pWnd*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="canpanebeinfloatingmultipaneframewnd"></a>  CGlobalUtils::CanPaneBeInFloatingMultiPaneFrameWnd
+## <a name="cglobalutilscanpanebeinfloatingmultipaneframewnd"></a><a name="canpanebeinfloatingmultipaneframewnd"></a>CGlobalUtils::CanPaneBeInFloatingMultiPanePaneWnd
 
 ```
 BOOL CanPaneBeInFloatingMultiPaneFrameWnd(CWnd* pWnd) const;
@@ -153,13 +153,13 @@ BOOL CanPaneBeInFloatingMultiPaneFrameWnd(CWnd* pWnd) const;
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pWnd*<br/>
+[v] *pWnd*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="checkalignment"></a>  CGlobalUtils::CheckAlignment
+## <a name="cglobalutilscheckalignment"></a><a name="checkalignment"></a>CGlobalUtils::CheckAlignment
 
 ```
 BOOL CheckAlignment(
@@ -175,27 +175,27 @@ BOOL CheckAlignment(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *bodu*<br/>
+[v] *bod*<br/>
 
-[in] *pBar*<br/>
+[v] *pBar*<br/>
 
-[in] *nSensitivity*<br/>
+[v] *nCitlivost*<br/>
 
-[in] *pDockManager*<br/>
+[v] *pDockManager*<br/>
 
-[in] *bOuterEdge*<br/>
+[v] *bOuterEdge*<br/>
 
 [out] *dwAlignment*<br/>
 
-[in] *dwEnabledDockBars*<br/>
+[v] *dwEnabledDockBars*<br/>
 
-[in] *lpRectBounds*<br/>
+[v] *lpRectBounds*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="cyfromstring"></a>  CGlobalUtils::CyFromString
+## <a name="cglobalutilscyfromstring"></a><a name="cyfromstring"></a>CGlobalUtils::CyFromString
 
 ```
 BOOL CyFromString(
@@ -207,13 +207,13 @@ BOOL CyFromString(
 
 [out] *cy*<br/>
 
-[in] *psz*<br/>
+[v] *psz*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="decimalfromstring"></a>  CGlobalUtils::DecimalFromString
+## <a name="cglobalutilsdecimalfromstring"></a><a name="decimalfromstring"></a>CGlobalUtils::DecimalFromString
 
 ```
 BOOL DecimalFromString(
@@ -223,15 +223,15 @@ BOOL DecimalFromString(
 
 ### <a name="parameters"></a>Parametry
 
-[out] *decimal*<br/>
+[out] *desítkové místo*<br/>
 
-[in] *psz*<br/>
+[v] *psz*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="fliprect"></a>  CGlobalUtils::FlipRect
+## <a name="cglobalutilsfliprect"></a><a name="fliprect"></a>CGlobalUtils::FlipRect
 
 ```
 void FlipRect(
@@ -241,12 +241,12 @@ void FlipRect(
 
 ### <a name="parameters"></a>Parametry
 
-[out v] *rect*<br/>
-[in] *nDegrees*<br/>
+[dovnitř, ven] *rect*<br/>
+[v] *nStupně*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="forceadjustlayout"></a>  CGlobalUtils::ForceAdjustLayout
+## <a name="cglobalutilsforceadjustlayout"></a><a name="forceadjustlayout"></a>CGlobalUtils::Rozložení ForceAdjustLayout
 
 ```
 void ForceAdjustLayout(
@@ -257,15 +257,15 @@ void ForceAdjustLayout(
 
 ### <a name="parameters"></a>Parametry
 
-[in, out] *pDockManager*<br/>
+[dovnitř, ven] *pDockManager*<br/>
 
-[in] *bForce*<br/>
+[v] *bSíla*<br/>
 
-[in] *bForceInvisible*<br/>
+[v] *bForceInvisible*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="getdockingmanager"></a>  CGlobalUtils::GetDockingManager
+## <a name="cglobalutilsgetdockingmanager"></a><a name="getdockingmanager"></a>CGlobalUtils::GetDockingManager
 
 ```
 CDockingManager* GetDockingManager(CWnd* pWnd);
@@ -273,13 +273,13 @@ CDockingManager* GetDockingManager(CWnd* pWnd);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pWnd*<br/>
+[v] *pWnd*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="getoppositealignment"></a>  CGlobalUtils::GetOppositeAlignment
+## <a name="cglobalutilsgetoppositealignment"></a><a name="getoppositealignment"></a>CGlobalUtils::GetOppositeAlignment
 
 ```
 DWORD GetOppositeAlignment(DWORD dwAlign);
@@ -287,13 +287,13 @@ DWORD GetOppositeAlignment(DWORD dwAlign);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *dwAlign*<br/>
+[v] *dwZarovnat*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="getpaneandalignfrompoint"></a>  CGlobalUtils::GetPaneAndAlignFromPoint
+## <a name="cglobalutilsgetpaneandalignfrompoint"></a><a name="getpaneandalignfrompoint"></a>CGlobalUtils::GetPaneAndAlignFromPoint
 
 ```
 BOOL GetPaneAndAlignFromPoint(
@@ -307,9 +307,9 @@ BOOL GetPaneAndAlignFromPoint(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *barContainerManager*<br/>
+[v] *barContainerManager*<br/>
 
-[in] *pt*<br/>
+[v] *pt*<br/>
 
 [out] *ppTargetControlBar*<br/>
 
@@ -317,13 +317,13 @@ BOOL GetPaneAndAlignFromPoint(
 
 [out] *bTabArea*<br/>
 
-[out] *bCaption*<br/>
+[out] *bTitulek*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="getwndicon"></a>  CGlobalUtils::GetWndIcon
+## <a name="cglobalutilsgetwndicon"></a><a name="getwndicon"></a>CGlobalUtils::GetWndIcon
 
 ```
 HICON GetWndIcon(CWnd* pWnd);
@@ -331,13 +331,13 @@ HICON GetWndIcon(CWnd* pWnd);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pWnd*<br/>
+[v] *pWnd*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="setnewparent"></a>  CGlobalUtils::SetNewParent
+## <a name="cglobalutilssetnewparent"></a><a name="setnewparent"></a>CGlobalUtils::SetNewParent
 
 ```
 void SetNewParent(
@@ -348,15 +348,15 @@ void SetNewParent(
 
 ### <a name="parameters"></a>Parametry
 
-[in] *lstControlBars*<br/>
+[v] *LstControlBars*<br/>
 
-[in] *pNewParent*<br/>
+[v] *pNewParent*<br/>
 
-[in] *bCheckVisibility*<br/>
+[v] *bCheckVisibility*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="stringfromcy"></a>  CGlobalUtils::StringFromCy
+## <a name="cglobalutilsstringfromcy"></a><a name="stringfromcy"></a>CGlobalUtils::StringFromCy
 
 ```
 BOOL StringFromCy(
@@ -368,13 +368,13 @@ BOOL StringFromCy(
 
 [out] *str*<br/>
 
-[in] *cy*<br/>
+[v] *cy*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="stringfromdecimal"></a>  CGlobalUtils::StringFromDecimal
+## <a name="cglobalutilsstringfromdecimal"></a><a name="stringfromdecimal"></a>CGlobalUtils::StringFromDecimal
 
 ```
 BOOL StringFromDecimal(
@@ -386,13 +386,13 @@ BOOL StringFromDecimal(
 
 [out] *str*<br/>
 
-[in] *decimal*<br/>
+[v] *desítkové místo*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)
