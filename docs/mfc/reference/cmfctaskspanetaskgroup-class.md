@@ -1,5 +1,5 @@
 ---
-title: Cmfctaskspanetaskgroup – třída
+title: Třída CMFCTasksPaneTaskGroup
 ms.date: 11/19/2018
 f1_keywords:
 - CMFCTasksPaneTaskGroup
@@ -24,16 +24,16 @@ helpviewer_keywords:
 - CMFCTasksPaneTaskGroup [MFC], m_rectGroup
 - CMFCTasksPaneTaskGroup [MFC], m_strName
 ms.assetid: 2111640b-a46e-4b27-b033-29e88632b86a
-ms.openlocfilehash: a28f00fb732727ec1334946a9e752679307cd3a0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4c24eba646bede462a5f3cfb85715278cfa7daee
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62222231"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366259"
 ---
-# <a name="cmfctaskspanetaskgroup-class"></a>Cmfctaskspanetaskgroup – třída
+# <a name="cmfctaskspanetaskgroup-class"></a>Třída CMFCTasksPaneTaskGroup
 
-`CMFCTasksPaneTaskGroup` Třída je pomocná třída, používá [cmfctaskspane –](../../mfc/reference/cmfctaskspane-class.md) ovládacího prvku. Objekty typu `CMFCTasksPaneTaskGroup` představují *skupiny úloh*. Skupina úloh je seznam položek, které zobrazí rozhraní v rámci samostatného pole, které má tlačítko Sbalit. Pole může mít nepovinný titulek (název skupiny). Pokud je skupina sbalena, seznam úkolů není viditelný.
+Třída `CMFCTasksPaneTaskGroup` je pomocná třída používaná ovládacím prvkem [CMFCTasksPane.](../../mfc/reference/cmfctaskspane-class.md) Objekty `CMFCTasksPaneTaskGroup` typu představují *skupinu úkolů*. Skupina úloh je seznam položek, které se v rámci zobrazí v samostatném poli, které má tlačítko sbalit. Pole může mít volitelný titulek (název skupiny). Pokud je skupina sbalena, seznam úkolů není viditelný.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -45,60 +45,60 @@ class CMFCTasksPaneTaskGroup : public CObject
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CMFCTasksPaneTaskGroup::CMFCTasksPaneTaskGroup](#cmfctaskspanetaskgroup)|Vytvoří `CMFCTasksPaneTaskGroup` objektu.|
+|[CMFCTasksPaneTaskGroup::CMFCTasksPaneTaskGroup](#cmfctaskspanetaskgroup)|Vytvoří `CMFCTasksPaneTaskGroup` objekt.|
 |`CMFCTasksPaneTaskGroup::~CMFCTasksPaneTaskGroup`|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CMFCTasksPaneTaskGroup::SetACCData](#setaccdata)|Určuje usnadnění dat pro danou skupinu úloh.|
+|[CMFCTasksPaneTaskGroup::SetACCData](#setaccdata)|Určuje data usnadnění pro aktuální skupinu úkolů.|
 
-### <a name="data-members"></a>Datové členy
+### <a name="data-members"></a>Členové dat
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CMFCTasksPaneTaskGroup::m_bIsBottom](#m_bisbottom)|Určuje, zda skupina úloh je umístěno na dolní podokno úloh ovládacího prvku.|
-|[CMFCTasksPaneTaskGroup::m_bIsCollapsed](#m_biscollapsed)|Určuje, zda je sbalen skupiny úloh.|
-|[CMFCTasksPaneTaskGroup::m_bIsSpecial](#m_bisspecial)|Určuje, zda je skupina úloh *speciální.* Speciální popisky zobrazí rozhraní v různých barev.|
-|[CMFCTasksPaneTaskGroup::m_lstTasks](#m_lsttasks)|Obsahuje vnitřní seznam úkolů.|
-|[CMFCTasksPaneTaskGroup::m_rect](#m_rect)|Určuje titulek skupiny ohraničující obdélník.|
-|[CMFCTasksPaneTaskGroup::m_rectGroup](#m_rectgroup)|Určuje ohraničující obdélník skupiny.|
+|[CMFCTasksPaneTaskGroup::m_bIsBottom](#m_bisbottom)|Určuje, zda je skupina úkolů zarovnána k dolnímu konci ovládacího prvku podokna úloh.|
+|[CMFCTasksPaneTaskGroup::m_bIsCollapsed](#m_biscollapsed)|Určuje, zda je skupina úkolů sbalena.|
+|[CMFCTasksPaneTaskGroup::m_bIsSpecial](#m_bisspecial)|Určuje, zda je skupina úkolů *zvláštní.* Rámec zobrazí speciální titulky v jiné barvě.|
+|[CMFCTasksPaneTaskGroup::m_lstTasks](#m_lsttasks)|Obsahuje interní seznam úkolů.|
+|[CMFCTasksPaneTaskGroup::m_rect](#m_rect)|Určuje ohraničovací obdélník titulku skupiny.|
+|[CMFCTasksPaneTaskGroup::m_rectGroup](#m_rectgroup)|Určuje ohraničovací obdélník skupiny.|
 |[CMFCTasksPaneTaskGroup::m_strName](#m_strname)|Určuje název skupiny.|
 
 ## <a name="remarks"></a>Poznámky
 
-Následující obrázek znázorňuje skupinu rozšířené úloh:
+Následující obrázek znázorňuje rozbalené skupiny úkolů:
 
-![Skupiny úloh, rozbalení](../../mfc/reference/media/nexttaskgrpexpand.png "skupiny úloh, rozbalení")
+![Skupina úkolů, rozbalená](../../mfc/reference/media/nexttaskgrpexpand.png "Skupina úkolů, rozbalená")
 
-Následující obrázek znázorňuje úkolu sbalené skupiny:
+Následující obrázek znázorňuje sbalenou skupinu úkolů:
 
-![Skupina úloh sbalené](../../mfc/reference/media/nexttaskgrpcollapse.png "sbalené skupiny úloh")
+![Sbalená skupina úkolů](../../mfc/reference/media/nexttaskgrpcollapse.png "Sbalená skupina úkolů")
 
-Následující obrázek znázorňuje skupinu úloh bez titulku:
+Následující obrázek znázorňuje skupinu úkolů bez titulku:
 
-![Skupina úloh bez titulku](../../mfc/reference/media/nexttaskgrpnocapt.png "skupiny úloh bez titulku")
+![Skupina úkolů bez titulku](../../mfc/reference/media/nexttaskgrpnocapt.png "Skupina úkolů bez titulku")
 
-Následující obrázek znázorňuje dvě skupiny úloh. První skupiny úloh, která je označena jako speciální tak, že nastavíte `m_bIsSpecial` příznak na hodnotu TRUE, zatímco druhý úkol skupiny není speciální. Všimněte si, jak je o něco tmavší než druhé skupině úloh titulek pro první skupina úloh:
+Následující obrázek znázorňuje dvě skupiny úkolů. První skupina úkolů je označena `m_bIsSpecial` jako zvláštní nastavením příznaku TRUE, zatímco druhá skupina úkolů není zvláštní. Všimněte si, jak je titulek pro první skupinu úkolů tmavší než druhá skupina úkolů:
 
-![Skupina úloh speciální](../../mfc/reference/media/nexttaskgrpspecial.png "zvláštní skupina úloh")
+![Zvláštní skupina úkolů](../../mfc/reference/media/nexttaskgrpspecial.png "Zvláštní skupina úkolů")
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObjekt](../../mfc/reference/cobject-class.md)
 
-[CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md)
+[CMFCTasksPaneSkupina úloh](../../mfc/reference/cmfctaskspanetaskgroup-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
 **Záhlaví:** afxTasksPane.h
 
-##  <a name="cmfctaskspanetaskgroup"></a>  CMFCTasksPaneTaskGroup::CMFCTasksPaneTaskGroup
+## <a name="cmfctaskspanetaskgroupcmfctaskspanetaskgroup"></a><a name="cmfctaskspanetaskgroup"></a>CMFCTasksPaneTaskGroup::CMFCTasksPaneTaskGroup
 
-Vytvoří `CMFCTasksPaneTaskGroup` objektu.
+Vytvoří `CMFCTasksPaneTaskGroup` objekt.
 
 ```
 CMFCTasksPaneTaskGroup(
@@ -112,29 +112,29 @@ CMFCTasksPaneTaskGroup(
 
 ### <a name="parameters"></a>Parametry
 
-*lpszName*<br/>
-Určuje název skupiny v popiscích skupiny.
+*název lpsz*<br/>
+Určuje název skupiny v titulku skupiny.
 
 *bIsBottom*<br/>
-Určuje, zda skupina zarovnán do dolní podokno úloh ovládacího prvku.
+Určuje, zda je skupina zarovnána k dolnímu konci ovládacího prvku podokna úloh.
 
-*bIsSpecial*<br/>
-Určuje, jestli skupiny je určený jako *speciální* a díky tomu se určuje, zda popisek skupiny je vyplněna jinou barvu.
+*bIsZvláštní*<br/>
+Určuje, zda je skupina označena jako *zvláštní* a tedy zda je titulek skupiny vyplněn jinou barvou.
 
-*bIsCollapsed*<br/>
+*bIsSbalené*<br/>
 Určuje, zda je skupina sbalena.
 
-*pPage*<br/>
-Určuje stránku vlastností patřící do této skupiny úloh.
+*pStránka*<br/>
+Určuje stránku vlastností, ke které tato skupina úkolů patří.
 
-*hIcon*<br/>
-Určuje ikonu, která se zobrazí v záhlaví skupiny.
+*hIkona*<br/>
+Určuje ikonu, která se zobrazí v titulku skupiny.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="m_bisbottom"></a>  CMFCTasksPaneTaskGroup::m_bIsBottom
+## <a name="cmfctaskspanetaskgroupm_bisbottom"></a><a name="m_bisbottom"></a>CMFCTasksPaneTaskGroup::m_bIsBottom
 
-Určuje, zda skupina úloh je umístěno na dolní podokno úloh ovládacího prvku.
+Určuje, zda je skupina úkolů zarovnána k dolnímu konci ovládacího prvku podokna úloh.
 
 ```
 BOOL m_bIsBottom;
@@ -142,11 +142,11 @@ BOOL m_bIsBottom;
 
 ### <a name="remarks"></a>Poznámky
 
-Jenom jedna skupina může být zarovnaný na dolní podokno úloh ovládacího prvku. Tato skupina úkolů musí být přidáni jako poslední. Další informace najdete v tématu [CMFCTasksPane::AddGroup](../../mfc/reference/cmfctaskspane-class.md#addgroup).
+K dolnímu konci ovládacího prvku podokna úloh lze zarovnat pouze jednu skupinu. Tato skupina úkolů musí být přidána jako poslední. Další informace naleznete v tématu [CMFCTasksPane::AddGroup](../../mfc/reference/cmfctaskspane-class.md#addgroup).
 
-##  <a name="m_biscollapsed"></a>  CMFCTasksPaneTaskGroup::m_bIsCollapsed
+## <a name="cmfctaskspanetaskgroupm_biscollapsed"></a><a name="m_biscollapsed"></a>CMFCTasksPaneTaskGroup::m_bIsCollapsed
 
-Určuje, zda je sbalen skupiny úloh.
+Určuje, zda je skupina úkolů sbalena.
 
 ```
 BOOL m_bIsCollapsed;
@@ -154,11 +154,11 @@ BOOL m_bIsCollapsed;
 
 ### <a name="remarks"></a>Poznámky
 
-Můžete povolit nebo zakázat možnost sbalit skupiny v podokně úloh voláním [CMFCTasksPane::EnableGroupCollapse](../../mfc/reference/cmfctaskspane-class.md#enablegroupcollapse).
+Možnost sbalení skupin v podokně úloh můžete povolit nebo zakázat voláním [CMFCTasksPane::EnableGroupCollapse](../../mfc/reference/cmfctaskspane-class.md#enablegroupcollapse).
 
-##  <a name="m_bisspecial"></a>  CMFCTasksPaneTaskGroup::m_bIsSpecial
+## <a name="cmfctaskspanetaskgroupm_bisspecial"></a><a name="m_bisspecial"></a>CMFCTasksPaneTaskGroup::m_bIsSpecial
 
-Určuje, zda je skupina úloh *speciální* a určuje, zda se mají titulek pro skupinu úloh speciální identifikovat pomocí různých barev.
+Určuje, zda je skupina úkolů *zvláštní* a zda má být titulek pro zvláštní skupinu úkolů identifikován jinou barvou.
 
 ```
 BOOL m_bIsSpecial;
@@ -166,11 +166,11 @@ BOOL m_bIsSpecial;
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud vaše aplikace používá vizuální motiv Windows XP a `m_bIsSpecial` má hodnotu FALSE, volání rozhraní framework `DrawThemeBackground` s příznakem EBP_NORMALGROUPBACKGROUND. Pokud `m_bIsSpecial` má hodnotu TRUE, rámec volá `DrawThemeBackground` s příznakem EBP_SPECIALGROUPBACKGROUND.
+Pokud vaše aplikace používá vizuální motiv `m_bIsSpecial` systému Windows XP `DrawThemeBackground` a je FALSE, rozhraní framework volá s příznakem EBP_NORMALGROUPBACKGROUND. Pokud `m_bIsSpecial` je TRUE, `DrawThemeBackground` rozhraní framework volá s příznakem EBP_SPECIALGROUPBACKGROUND.
 
-##  <a name="m_lsttasks"></a>  CMFCTasksPaneTaskGroup::m_lstTasks
+## <a name="cmfctaskspanetaskgroupm_lsttasks"></a><a name="m_lsttasks"></a>CMFCTasksPaneTaskGroup::m_lstTasks
 
-Obsahuje vnitřní seznam úkolů.
+Obsahuje interní seznam úkolů.
 
 ```
 CObList m_lstTasks;
@@ -180,9 +180,9 @@ CObList m_lstTasks;
 
 Chcete-li vyplnit tento seznam, zavolejte [CMFCTasksPane::AddTask](../../mfc/reference/cmfctaskspane-class.md#addtask).
 
-##  <a name="m_rect"></a>  CMFCTasksPaneTaskGroup::m_rect
+## <a name="cmfctaskspanetaskgroupm_rect"></a><a name="m_rect"></a>CMFCTasksPaneTaskGroup::m_rect
 
-Určuje titulek skupiny ohraničující obdélník.
+Určuje ohraničovací obdélník titulku skupiny.
 
 ```
 CRect m_rect;
@@ -190,11 +190,11 @@ CRect m_rect;
 
 ### <a name="remarks"></a>Poznámky
 
-Tato hodnota se vypočítá automaticky podle rozhraní.
+Tato hodnota je automaticky vypočítána rozhraním.
 
-##  <a name="m_rectgroup"></a>  CMFCTasksPaneTaskGroup::m_rectGroup
+## <a name="cmfctaskspanetaskgroupm_rectgroup"></a><a name="m_rectgroup"></a>CMFCTasksPaneTaskGroup::m_rectGroup
 
-Určuje ohraničující obdélník skupiny.
+Určuje ohraničovací obdélník skupiny.
 
 ```
 CRect m_rectGroup;
@@ -202,9 +202,9 @@ CRect m_rectGroup;
 
 ### <a name="remarks"></a>Poznámky
 
-Tato hodnota se vypočítá automaticky podle rozhraní.
+Tato hodnota je vypočítána automaticky rámci.
 
-##  <a name="m_strname"></a>  CMFCTasksPaneTaskGroup::m_strName
+## <a name="cmfctaskspanetaskgroupm_strname"></a><a name="m_strname"></a>CMFCTasksPaneTaskGroup::m_strName
 
 Určuje název skupiny.
 
@@ -214,11 +214,11 @@ CString m_strName;
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud tato hodnota je prázdný, není zobrazen titulek skupiny a skupiny nelze sbalené.
+Pokud je tato hodnota prázdná, titulek skupiny se nezobrazí a skupinu nelze sbalit.
 
-##  <a name="setaccdata"></a>  CMFCTasksPaneTaskGroup::SetACCData
+## <a name="cmfctaskspanetaskgroupsetaccdata"></a><a name="setaccdata"></a>CMFCTasksPaneTaskGroup::SetACCData
 
-Určuje usnadnění dat pro danou skupinu úloh.
+Určuje data usnadnění pro aktuální skupinu úkolů.
 
 ```
 virtual BOOL SetACCData(
@@ -229,20 +229,20 @@ virtual BOOL SetACCData(
 ### <a name="parameters"></a>Parametry
 
 *pParent*<br/>
-[in] Představuje nadřazené okno aktuální skupiny úlohy.
+[v] Představuje nadřazené okno aktuální skupiny úkolů.
 
-*data*<br/>
-[out] Objekt typu `CAccessibilityData` , který je naplněný daty usnadnění aktuální skupiny úlohy.
+*Dat*<br/>
+[out] Objekt typu, `CAccessibilityData` který je naplněn daty usnadnění aktuální skupiny úkolů.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE, pokud *data* parametr byl úspěšně naplněný daty usnadnění aktuální skupiny úlohy; v opačném případě hodnota FALSE.
+PRAVDA, pokud byl parametr *dat* úspěšně naplněn daty usnadnění aktuální skupiny úkolů; jinak NEPRAVDA.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>
 [CMFCTasksPane – třída](../../mfc/reference/cmfctaskspane-class.md)<br/>
-[CMFCTasksPaneTask – třída](../../mfc/reference/cmfctaskspanetask-class.md)<br/>
+[Třída úloh CMFCTasksPane](../../mfc/reference/cmfctaskspanetask-class.md)<br/>
 [CMFCOutlookBar – třída](../../mfc/reference/cmfcoutlookbar-class.md)<br/>
 [CObject – třída](../../mfc/reference/cobject-class.md)

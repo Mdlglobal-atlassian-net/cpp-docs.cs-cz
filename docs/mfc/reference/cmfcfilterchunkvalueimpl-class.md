@@ -1,5 +1,5 @@
 ---
-title: CMFCFilterChunkValueImpl Class
+title: CMFCFilterChunkValueImpl – třída
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCFilterChunkValueImpl
@@ -46,16 +46,16 @@ helpviewer_keywords:
 - CMFCFilterChunkValueImpl [MFC], SetTextValue
 - CMFCFilterChunkValueImpl [MFC], SetChunk
 ms.assetid: 3c833f23-5b88-4d08-9e09-ca6a8aec88bf
-ms.openlocfilehash: b883d442342dd9fbbd074d9f8fcab76f81ef9864
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2c90a873033516710077d31c8bb8af5fb5172ca6
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62237554"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367512"
 ---
-# <a name="cmfcfilterchunkvalueimpl-class"></a>CMFCFilterChunkValueImpl Class
+# <a name="cmfcfilterchunkvalueimpl-class"></a>CMFCFilterChunkValueImpl – třída
 
-Toto je třída, která zjednodušuje logiku párování hodnot bloku dat a vlastnosti.
+Toto je třída, která zjednodušuje logiku dvojice hodnot bloku a vlastností.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -67,53 +67,53 @@ class CMFCFilterChunkValueImpl : public ATL::IFilterChunkValue;
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CMFCFilterChunkValueImpl::~CMFCFilterChunkValueImpl](#_dtorcmfcfilterchunkvalueimpl)|Destructs objektu.|
-|[CMFCFilterChunkValueImpl::CMFCFilterChunkValueImpl](#cmfcfilterchunkvalueimpl)|Vytvoří objekt.|
+|[CMFCFilterChunkValueImpl::~CMFCFilterChunkValueImpl](#_dtorcmfcfilterchunkvalueimpl)|Zničí objekt.|
+|[CMFCFilterChunkValueImpl:::CMFCFilterChunkValueImpl](#cmfcfilterchunkvalueimpl)|Vytvoří objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CMFCFilterChunkValueImpl::Clear](#clear)|Vymaže ChunkValue.|
-|[CMFCFilterChunkValueImpl::CopyChunk](#copychunk)|Tento blok dat zkopíruje do struktury popisující vlastnosti blok.|
-|[CMFCFilterChunkValueImpl::CopyFrom](#copyfrom)|Inicializuje tuto hodnotu bloků dat z jiné hodnoty.|
-|[CMFCFilterChunkValueImpl::GetChunkGUID](#getchunkguid)|Načte bloků dat identifikátoru GUID.|
-|[CMFCFilterChunkValueImpl::GetChunkPID](#getchunkpid)|Načte bloků PID (ID vlastnosti).|
-|[CMFCFilterChunkValueImpl::GetChunkType](#getchunktype)|Získá bloku dat typu.|
+|[CMFCFilterChunkValueImpl::Vymazat](#clear)|Vymaže ChunkValue.|
+|[CMFCFilterChunkValueImpl::CopyChunk](#copychunk)|Zkopíruje tento blok do struktury popisující vlastnosti bloku.|
+|[CMFCFilterChunkValueImpl::CopyFrom](#copyfrom)|Inicializuje tuto hodnotu bloku dat z jiné hodnoty.|
+|[CMFCFilterChunkValueImpl::GetChunkGUID](#getchunkguid)|Načte identifikátor GUID bloku.|
+|[CMFCFilterChunkValueImpl::GetChunkPID](#getchunkpid)|Načte blok PID (ID vlastnosti).|
+|[CMFCFilterChunkValueImpl::GetChunkType](#getchunktype)|Získá typ bloku.|
 |[CMFCFilterChunkValueImpl::GetString](#getstring)|Načte hodnotu řetězce.|
-|[CMFCFilterChunkValueImpl::GetValue](#getvalue)|Načte hodnotu jako přidělené sestavování propvariant.|
-|[CMFCFilterChunkValueImpl::GetValueNoAlloc](#getvaluenoalloc)|Hodnota vrátí nepřidělený (vnitřní hodnotu).|
-|[CMFCFilterChunkValueImpl::IsValid](#isvalid)|Kontroluje, zda hodnota této vlastnosti je platný, nebo ne.|
-|[CMFCFilterChunkValueImpl::SetBoolValue](#setboolvalue)|Přetíženo. Nastaví vlastnost klíčem na logickou hodnotu.|
-|[CMFCFilterChunkValueImpl::SetDwordValue](#setdwordvalue)|Nastaví vlastnost klíčem k typu DWORD.|
-|[CMFCFilterChunkValueImpl::SetFileTimeValue](#setfiletimevalue)|Klíčem k FileTime – nastaví vlastnost.|
-|[CMFCFilterChunkValueImpl::SetInt64Value](#setint64value)|Nastaví vlastnost klíčem pro typ int64.|
-|[CMFCFilterChunkValueImpl::SetIntValue](#setintvalue)|Nastaví vlastnost klíčem na celé číslo|
-|[CMFCFilterChunkValueImpl::SetLongValue](#setlongvalue)|Nastaví vlastnost klíčem k typu LONG.|
-|[CMFCFilterChunkValueImpl::SetSystemTimeValue](#setsystemtimevalue)|Klíčem k SYSTEMTIME – nastaví vlastnost.|
-|[CMFCFilterChunkValueImpl::SetTextValue](#settextvalue)|Nastaví vlastnost klíčem na řetězec znaků Unicode.|
+|[CMFCFilterChunkValueImpl::GetValue](#getvalue)|Načte hodnotu jako přidělenou propvariantu.|
+|[CMFCFilterChunkValueImpl::GetValueNoAlloc](#getvaluenoalloc)|Vrátí nepřidělenou (interní hodnotu).|
+|[CMFCFilterChunkValueImpl::IsValid](#isvalid)|Zkontroluje, zda je tato hodnota vlastnosti platná či nikoli.|
+|[CMFCFilterChunkValueImpl::SetBoolValue](#setboolvalue)|Přetíženo. Nastaví vlastnost podle klíče na logickou hodnotu.|
+|[CMFCFilterChunkValueImpl::SetDwordValue](#setdwordvalue)|Nastaví vlastnost podle klíče dword.|
+|[CMFCFilterChunkValueImpl::SetFileTimeValue](#setfiletimevalue)|Nastaví vlastnost podle klíče na soubor.|
+|[CMFCFilterChunkValueImpl::SetInt64Value](#setint64value)|Nastaví vlastnost podle klíče na int64.|
+|[CMFCFilterChunkValueImpl::SetIntValue](#setintvalue)|Nastaví vlastnost podle klíče na int.|
+|[CMFCFilterChunkValueImpl::SetLongValue](#setlongvalue)|Nastaví vlastnost klíčem long.|
+|[CMFCFilterChunkValueImpl::SetSystemTimeValue](#setsystemtimevalue)|Nastaví vlastnost podle klíče na SystemTime.|
+|[CMFCFilterChunkValueImpl::SetTextValue](#settextvalue)|Nastaví vlastnost podle klíče na řetězec Unicode.|
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CMFCFilterChunkValueImpl::SetChunk](#setchunk)|Pomocná funkce, která nastavuje společné vlastnosti u bloku.|
+|[CMFCFilterChunkValueImpl::SetChunk](#setchunk)|Pomocná funkce, která nastavuje společné vlastnosti bloku.|
 
 ## <a name="remarks"></a>Poznámky
 
-Pokud chcete použít, jednoduše vytvořte cmfcfilterchunkvalueimpl – třída typu vpravo
+Chcete-li použít, jednoduše vytvořit CMFCFilterChunkValueImpl třídy správného druhu
 
 Příklad:
 
-Cmfcfilterchunkvalueimpl – bloku;
+CMFCFilterChunkValueImpl blok;
 
-hr = bloku. SetBoolValue(PKEY_IsAttachment, true);
+hod = kus. SetBoolValue(PKEY_IsAttachment, true);
 
-or
+– nebo –
 
-hr = bloku. SetFileTimeValue (PKEY_ItemDate, ftLastModified);
+hod = kus. SetFileTimeValue (PKEY_ItemDate, ftLastModified);
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -125,7 +125,7 @@ hr = bloku. SetFileTimeValue (PKEY_ItemDate, ftLastModified);
 
 **Záhlaví:** afxwin.h
 
-##  <a name="clear"></a>  CMFCFilterChunkValueImpl::Clear
+## <a name="cmfcfilterchunkvalueimplclear"></a><a name="clear"></a>CMFCFilterChunkValueImpl::Vymazat
 
 Vymaže ChunkValue.
 
@@ -135,7 +135,7 @@ void Clear();
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="cmfcfilterchunkvalueimpl"></a>  CMFCFilterChunkValueImpl::CMFCFilterChunkValueImpl
+## <a name="cmfcfilterchunkvalueimplcmfcfilterchunkvalueimpl"></a><a name="cmfcfilterchunkvalueimpl"></a>CMFCFilterChunkValueImpl:::CMFCFilterChunkValueImpl
 
 Vytvoří objekt.
 
@@ -145,9 +145,9 @@ CMFCFilterChunkValueImpl();
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="_dtorcmfcfilterchunkvalueimpl"></a>  CMFCFilterChunkValueImpl::~CMFCFilterChunkValueImpl
+## <a name="cmfcfilterchunkvalueimplcmfcfilterchunkvalueimpl"></a><a name="_dtorcmfcfilterchunkvalueimpl"></a>CMFCFilterChunkValueImpl::~CMFCFilterChunkValueImpl
 
-Destructs objektu.
+Zničí objekt.
 
 ```
 virtual ~CMFCFilterChunkValueImpl();
@@ -155,9 +155,9 @@ virtual ~CMFCFilterChunkValueImpl();
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="copychunk"></a>  CMFCFilterChunkValueImpl::CopyChunk
+## <a name="cmfcfilterchunkvalueimplcopychunk"></a><a name="copychunk"></a>CMFCFilterChunkValueImpl::CopyChunk
 
-Tento blok dat zkopíruje do struktury popisující vlastnosti blok.
+Zkopíruje tento blok do struktury popisující vlastnosti bloku.
 
 ```
 HRESULT CopyChunk(STAT_CHUNK* pStatChunk);
@@ -166,17 +166,17 @@ HRESULT CopyChunk(STAT_CHUNK* pStatChunk);
 ### <a name="parameters"></a>Parametry
 
 *pStatChunk*<br/>
-Ukazatel na cílové hodnoty popisující vlastnosti bloků.
+Ukazatel na cílovou hodnotu popisující charakteristiky bloku dat.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-S_OK v případě úspěchu; jinak kód chyby.
+S_OK v případě úspěchu; v opačném případě kód chyby.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="copyfrom"></a>  CMFCFilterChunkValueImpl::CopyFrom
+## <a name="cmfcfilterchunkvalueimplcopyfrom"></a><a name="copyfrom"></a>CMFCFilterChunkValueImpl::CopyFrom
 
-Inicializuje tuto hodnotu bloků dat z jiné hodnoty.
+Inicializuje tuto hodnotu bloku dat z jiné hodnoty.
 
 ```
 void CopyFrom (IFilterChunkValue* pValue);
@@ -184,14 +184,14 @@ void CopyFrom (IFilterChunkValue* pValue);
 
 ### <a name="parameters"></a>Parametry
 
-*pValue*<br/>
-Určuje hodnotu zdroje ke zkopírování z.
+*pHodnota*<br/>
+Určuje zdrojovou hodnotu, ze které se má kopírovat.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="getchunkguid"></a>  CMFCFilterChunkValueImpl::GetChunkGUID
+## <a name="cmfcfilterchunkvalueimplgetchunkguid"></a><a name="getchunkguid"></a>CMFCFilterChunkValueImpl::GetChunkGUID
 
-Načte bloků dat identifikátoru GUID.
+Načte identifikátor GUID bloku.
 
 ```
 REFGUID GetChunkGUID() const;
@@ -199,13 +199,13 @@ REFGUID GetChunkGUID() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Odkaz na identifikátor GUID identifikující bloků.
+Odkaz na identifikátor GUID identifikující blok dat.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="getchunkpid"></a>  CMFCFilterChunkValueImpl::GetChunkPID
+## <a name="cmfcfilterchunkvalueimplgetchunkpid"></a><a name="getchunkpid"></a>CMFCFilterChunkValueImpl::GetChunkPID
 
-Načte bloků PID (ID vlastnosti).
+Načte blok PID (ID vlastnosti).
 
 ```
 DWORD GetChunkPID() const;
@@ -217,9 +217,9 @@ Hodnota DWORD obsahující ID vlastnosti.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="getchunktype"></a>  CMFCFilterChunkValueImpl::GetChunkType
+## <a name="cmfcfilterchunkvalueimplgetchunktype"></a><a name="getchunktype"></a>CMFCFilterChunkValueImpl::GetChunkType
 
-Získá typ bloku.
+Načte typ bloku.
 
 ```
 CHUNKSTATE GetChunkType() const;
@@ -227,11 +227,11 @@ CHUNKSTATE GetChunkType() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota CHUNKSTATE výčtu, která určuje, zda aktuální blok dat je vlastnost text – typ nebo typ hodnoty vlastnosti.
+A CHUNKSTATE výčtu hodnota, která určuje, zda aktuální blok je vlastnost typu textu nebo vlastnost typu value.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="getstring"></a>  CMFCFilterChunkValueImpl::GetString
+## <a name="cmfcfilterchunkvalueimplgetstring"></a><a name="getstring"></a>CMFCFilterChunkValueImpl::GetString
 
 Načte hodnotu řetězce.
 
@@ -241,13 +241,13 @@ CString &GetString();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Řetězec obsahující hodnotu bloku.
+Řetězec obsahující hodnotu bloku dat.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="getvalue"></a>  CMFCFilterChunkValueImpl::GetValue
+## <a name="cmfcfilterchunkvalueimplgetvalue"></a><a name="getvalue"></a>CMFCFilterChunkValueImpl::GetValue
 
-Načte hodnotu jako přidělené sestavování propvariant.
+Načte hodnotu jako přidělenou propvariantu.
 
 ```
 HRESULT GetValue(PROPVARIANT** ppPropVariant);
@@ -256,17 +256,17 @@ HRESULT GetValue(PROPVARIANT** ppPropVariant);
 ### <a name="parameters"></a>Parametry
 
 *ppPropVariant*<br/>
-Po návratu funkce tento parametr obsahuje hodnotu bloku.
+Když funkce vrátí, tento parametr obsahuje hodnotu bloku.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-S_OK, pokud byla úspěšně přidělena sestavování PROPVARIANT a hodnota bloků dat byl úspěšně zkopírován do *ppPropVariant*; jinak kód chyby.
+S_OK pokud byla úspěšně přidělena hodnota PROPVARIANT a hodnota bloku dat byla úspěšně zkopírována do *ppPropVariant*; v opačném případě kód chyby.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="getvaluenoalloc"></a>  CMFCFilterChunkValueImpl::GetValueNoAlloc
+## <a name="cmfcfilterchunkvalueimplgetvaluenoalloc"></a><a name="getvaluenoalloc"></a>CMFCFilterChunkValueImpl::GetValueNoAlloc
 
-Vrátí hodnotu-přidělené (interní hodnota).
+Vrátí nepřidělenou (interní hodnotu).
 
 ```
 PROPVARIANT GetValueNoAlloc ();
@@ -274,13 +274,13 @@ PROPVARIANT GetValueNoAlloc ();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí aktuální hodnotu bloku.
+Vrátí aktuální hodnotu bloku dat.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="isvalid"></a>  CMFCFilterChunkValueImpl::IsValid
+## <a name="cmfcfilterchunkvalueimplisvalid"></a><a name="isvalid"></a>CMFCFilterChunkValueImpl::IsValid
 
-Kontroluje, zda hodnota této vlastnosti je platný, nebo ne.
+Zkontroluje, zda je tato hodnota vlastnosti platná či nikoli.
 
 ```
 BOOL IsValid() const;
@@ -288,13 +288,13 @@ BOOL IsValid() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE, pokud je aktuální blok dat hodnota platná; v opačném případě FALSE.
+PRAVDA, pokud je aktuální hodnota bloku dat platná; jinak FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="setboolvalue"></a>  CMFCFilterChunkValueImpl::SetBoolValue
+## <a name="cmfcfilterchunkvalueimplsetboolvalue"></a><a name="setboolvalue"></a>CMFCFilterChunkValueImpl::SetBoolValue
 
-Přetíženo. Nastaví vlastnost klíčem na logickou hodnotu.
+Přetíženo. Nastaví vlastnost podle klíče na logickou hodnotu.
 
 ```
 HRESULT SetBoolValue(
@@ -318,36 +318,36 @@ HRESULT SetBoolValue(
 
 ### <a name="parameters"></a>Parametry
 
-*pkey*<br/>
+*pklíč*<br/>
 Určuje klíč vlastnosti.
 
 *bVal*<br/>
-Určuje hodnotu bloků dat pro nastavení.
+Určuje hodnotu bloku, kterou chcete nastavit.
 
 *chunkType*<br/>
-Příznaky označoval, zda tento blok obsahuje text – typ nebo typ hodnoty vlastnosti. Příznak hodnoty pocházejí z CHUNKSTATE výčtu.
+Příznaky označují, zda tento blok obsahuje text typu nebo vlastnost typu value. Hodnoty příznaku jsou převzaty z výčtu CHUNKSTATE.
 
 *Národní prostředí*<br/>
-Jazyk a dílčího přidružený blok textu. Národní prostředí bloků dat používá indexery dokumentu provést řádné dělení slov textu. Jestliže u bloku není typu text ani typ hodnoty s datovým typem VT_LPWSTR, VT_LPSTR nebo VT_BSTR, toto pole se ignoruje.
+Jazyk a podjazyk přidružený k bloku textu. Národní prostředí bloku dat používá indexery dokumentů k provedení správné horečné rozdělení textu. Pokud blok dat není textový ani typ hodnoty s datovým typem VT_LPWSTR, VT_LPSTR nebo VT_BSTR, bude toto pole ignorováno.
 
 *cwcLenSource*<br/>
-Délka ve znacích zdrojový text, ze kterého aktuální blok dat odvozený. Nulová hodnota označuje, že propojeni znak po znaku zdrojového textu a odvozené text. Nenulová hodnota znamená, že neexistuje žádné přímé komunikaci.
+Délka zdrojového textu, ze kterého byl odvozen aktuální blok dat, ve znacích. Nulová hodnota označuje korespondenci po znaku mezi zdrojovým textem a odvozeným textem. Nenulová hodnota znamená, že taková přímá korespondence neexistuje.
 
 *cwcStartSource*<br/>
-Posun, ze kterého zdrojový text pro odvozené blok začíná v bloku dat zdroje.
+Posun, ze kterého zdrojový text pro odvozený blok začíná ve zdrojovém bloku.
 
 *chunkBreakType*<br/>
-Typu break, který odděluje od aktuální blok dat u předchozího bloku. Hodnoty jsou od CHUNK_BREAKTYPE výčtu.
+Typ přerušení, který odděluje předchozí blok od aktuálního bloku. Hodnoty jsou z CHUNK_BREAKTYPE výčtu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-S_OK v případě úspěchu; jinak kód chyby.
+S_OK v případě úspěchu; v opačném případě kód chyby.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="setchunk"></a>  CMFCFilterChunkValueImpl::SetChunk
+## <a name="cmfcfilterchunkvalueimplsetchunk"></a><a name="setchunk"></a>CMFCFilterChunkValueImpl::SetChunk
 
-Pomocná funkce, která nastavuje společné vlastnosti u bloku.
+Pomocná funkce, která nastavuje společné vlastnosti bloku.
 
 ```
 HRESULT SetChunk(
@@ -361,33 +361,33 @@ HRESULT SetChunk(
 
 ### <a name="parameters"></a>Parametry
 
-*pkey*<br/>
+*pklíč*<br/>
 Určuje klíč vlastnosti.
 
 *chunkType*<br/>
-Příznaky označoval, zda tento blok obsahuje text – typ nebo typ hodnoty vlastnosti. Příznak hodnoty pocházejí z CHUNKSTATE výčtu.
+Příznaky označují, zda tento blok obsahuje text typu nebo vlastnost typu value. Hodnoty příznaku jsou převzaty z výčtu CHUNKSTATE.
 
 *Národní prostředí*<br/>
-Jazyk a dílčího přidružený blok textu. Národní prostředí bloků dat používá indexery dokumentu provést řádné dělení slov textu. Jestliže u bloku není typu text ani typ hodnoty s datovým typem VT_LPWSTR, VT_LPSTR nebo VT_BSTR, toto pole se ignoruje.
+Jazyk a podjazyk přidružený k bloku textu. Národní prostředí bloku dat používá indexery dokumentů k provedení správné horečné rozdělení textu. Pokud blok dat není textový ani typ hodnoty s datovým typem VT_LPWSTR, VT_LPSTR nebo VT_BSTR, bude toto pole ignorováno.
 
 *cwcLenSource*<br/>
-Délka ve znacích zdrojový text, ze kterého aktuální blok dat odvozený. Nulová hodnota označuje, že propojeni znak po znaku zdrojového textu a odvozené text. Nenulová hodnota znamená, že neexistuje žádné přímé komunikaci.
+Délka zdrojového textu, ze kterého byl odvozen aktuální blok dat, ve znacích. Nulová hodnota označuje korespondenci po znaku mezi zdrojovým textem a odvozeným textem. Nenulová hodnota znamená, že taková přímá korespondence neexistuje.
 
 *cwcStartSource*<br/>
-Posun, ze kterého zdrojový text pro odvozené blok začíná v bloku dat zdroje.
+Posun, ze kterého zdrojový text pro odvozený blok začíná ve zdrojovém bloku.
 
 *chunkBreakType*<br/>
-Typu break, který odděluje od aktuální blok dat u předchozího bloku. Hodnoty jsou od CHUNK_BREAKTYPE výčtu.
+Typ přerušení, který odděluje předchozí blok od aktuálního bloku. Hodnoty jsou z CHUNK_BREAKTYPE výčtu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-S_OK v případě úspěchu; jinak kód chyby.
+S_OK v případě úspěchu; v opačném případě kód chyby.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="setdwordvalue"></a>  CMFCFilterChunkValueImpl::SetDwordValue
+## <a name="cmfcfilterchunkvalueimplsetdwordvalue"></a><a name="setdwordvalue"></a>CMFCFilterChunkValueImpl::SetDwordValue
 
-Nastavte vlastnost klíčem k typu DWORD.
+Nastavte vlastnost podle klíče na DWORD.
 
 ```
 HRESULT SetDwordValue(
@@ -402,36 +402,36 @@ HRESULT SetDwordValue(
 
 ### <a name="parameters"></a>Parametry
 
-*pkey*<br/>
+*pklíč*<br/>
 Určuje klíč vlastnosti.
 
-*dwVal*<br/>
-Určuje hodnotu bloků dat pro nastavení.
+*dwVal řekl:*<br/>
+Určuje hodnotu bloku, kterou chcete nastavit.
 
 *chunkType*<br/>
-Příznaky označoval, zda tento blok obsahuje text – typ nebo typ hodnoty vlastnosti. Příznak hodnoty pocházejí z CHUNKSTATE výčtu.
+Příznaky označují, zda tento blok obsahuje text typu nebo vlastnost typu value. Hodnoty příznaku jsou převzaty z výčtu CHUNKSTATE.
 
 *Národní prostředí*<br/>
-Jazyk a dílčího přidružený blok textu. Národní prostředí bloků dat používá indexery dokumentu provést řádné dělení slov textu. Jestliže u bloku není typu text ani typ hodnoty s datovým typem VT_LPWSTR, VT_LPSTR nebo VT_BSTR, toto pole se ignoruje.
+Jazyk a podjazyk přidružený k bloku textu. Národní prostředí bloku dat používá indexery dokumentů k provedení správné horečné rozdělení textu. Pokud blok dat není textový ani typ hodnoty s datovým typem VT_LPWSTR, VT_LPSTR nebo VT_BSTR, bude toto pole ignorováno.
 
 *cwcLenSource*<br/>
-Délka ve znacích zdrojový text, ze kterého aktuální blok dat odvozený. Nulová hodnota označuje, že propojeni znak po znaku zdrojového textu a odvozené text. Nenulová hodnota znamená, že neexistuje žádné přímé komunikaci.
+Délka zdrojového textu, ze kterého byl odvozen aktuální blok dat, ve znacích. Nulová hodnota označuje korespondenci po znaku mezi zdrojovým textem a odvozeným textem. Nenulová hodnota znamená, že taková přímá korespondence neexistuje.
 
 *cwcStartSource*<br/>
-Posun, ze kterého zdrojový text pro odvozené blok začíná v bloku dat zdroje.
+Posun, ze kterého zdrojový text pro odvozený blok začíná ve zdrojovém bloku.
 
 *chunkBreakType*<br/>
-Typu break, který odděluje od aktuální blok dat u předchozího bloku. Hodnoty jsou od CHUNK_BREAKTYPE výčtu.
+Typ přerušení, který odděluje předchozí blok od aktuálního bloku. Hodnoty jsou z CHUNK_BREAKTYPE výčtu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-S_OK v případě úspěchu; jinak kód chyby.
+S_OK v případě úspěchu; v opačném případě kód chyby.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="setfiletimevalue"></a>  CMFCFilterChunkValueImpl::SetFileTimeValue
+## <a name="cmfcfilterchunkvalueimplsetfiletimevalue"></a><a name="setfiletimevalue"></a>CMFCFilterChunkValueImpl::SetFileTimeValue
 
-Nastavte vlastnost klíč hodnota filetime.
+Nastavte vlastnost podle klíče na soubor.
 
 ```
 HRESULT SetFileTimeValue(
@@ -446,36 +446,36 @@ HRESULT SetFileTimeValue(
 
 ### <a name="parameters"></a>Parametry
 
-*pkey*<br/>
+*pklíč*<br/>
 Určuje klíč vlastnosti.
 
 *dtVal*<br/>
-Určuje hodnotu bloků dat pro nastavení.
+Určuje hodnotu bloku, kterou chcete nastavit.
 
 *chunkType*<br/>
-Příznaky označoval, zda tento blok obsahuje text – typ nebo typ hodnoty vlastnosti. Příznak hodnoty pocházejí z CHUNKSTATE výčtu.
+Příznaky označují, zda tento blok obsahuje text typu nebo vlastnost typu value. Hodnoty příznaku jsou převzaty z výčtu CHUNKSTATE.
 
 *Národní prostředí*<br/>
-Jazyk a dílčího přidružený blok textu. Národní prostředí bloků dat používá indexery dokumentu provést řádné dělení slov textu. Jestliže u bloku není typu text ani typ hodnoty s datovým typem VT_LPWSTR, VT_LPSTR nebo VT_BSTR, toto pole se ignoruje.
+Jazyk a podjazyk přidružený k bloku textu. Národní prostředí bloku dat používá indexery dokumentů k provedení správné horečné rozdělení textu. Pokud blok dat není textový ani typ hodnoty s datovým typem VT_LPWSTR, VT_LPSTR nebo VT_BSTR, bude toto pole ignorováno.
 
 *cwcLenSource*<br/>
-Délka ve znacích zdrojový text, ze kterého aktuální blok dat odvozený. Nulová hodnota označuje, že propojeni znak po znaku zdrojového textu a odvozené text. Nenulová hodnota znamená, že neexistuje žádné přímé komunikaci.
+Délka zdrojového textu, ze kterého byl odvozen aktuální blok dat, ve znacích. Nulová hodnota označuje korespondenci po znaku mezi zdrojovým textem a odvozeným textem. Nenulová hodnota znamená, že taková přímá korespondence neexistuje.
 
 *cwcStartSource*<br/>
-Posun, ze kterého zdrojový text pro odvozené blok začíná v bloku dat zdroje.
+Posun, ze kterého zdrojový text pro odvozený blok začíná ve zdrojovém bloku.
 
 *chunkBreakType*<br/>
-Typu break, který odděluje od aktuální blok dat u předchozího bloku. Hodnoty jsou od CHUNK_BREAKTYPE výčtu.
+Typ přerušení, který odděluje předchozí blok od aktuálního bloku. Hodnoty jsou z CHUNK_BREAKTYPE výčtu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-S_OK v případě úspěchu; jinak kód chyby.
+S_OK v případě úspěchu; v opačném případě kód chyby.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="setint64value"></a>  CMFCFilterChunkValueImpl::SetInt64Value
+## <a name="cmfcfilterchunkvalueimplsetint64value"></a><a name="setint64value"></a>CMFCFilterChunkValueImpl::SetInt64Value
 
-Nastavte vlastnost klíčem pro typ int64.
+Nastavte vlastnost podle klíče na int64.
 
 ```
 HRESULT SetInt64Value(
@@ -490,36 +490,36 @@ HRESULT SetInt64Value(
 
 ### <a name="parameters"></a>Parametry
 
-*pkey*<br/>
+*pklíč*<br/>
 Určuje klíč vlastnosti.
 
 *nVal*<br/>
-Určuje hodnotu bloků dat pro nastavení.
+Určuje hodnotu bloku, kterou chcete nastavit.
 
 *chunkType*<br/>
-Příznaky označoval, zda tento blok obsahuje text – typ nebo typ hodnoty vlastnosti. Příznak hodnoty pocházejí z CHUNKSTATE výčtu.
+Příznaky označují, zda tento blok obsahuje text typu nebo vlastnost typu value. Hodnoty příznaku jsou převzaty z výčtu CHUNKSTATE.
 
 *Národní prostředí*<br/>
-Jazyk a dílčího přidružený blok textu. Národní prostředí bloků dat používá indexery dokumentu provést řádné dělení slov textu. Jestliže u bloku není typu text ani typ hodnoty s datovým typem VT_LPWSTR, VT_LPSTR nebo VT_BSTR, toto pole se ignoruje.
+Jazyk a podjazyk přidružený k bloku textu. Národní prostředí bloku dat používá indexery dokumentů k provedení správné horečné rozdělení textu. Pokud blok dat není textový ani typ hodnoty s datovým typem VT_LPWSTR, VT_LPSTR nebo VT_BSTR, bude toto pole ignorováno.
 
 *cwcLenSource*<br/>
-Délka ve znacích zdrojový text, ze kterého aktuální blok dat odvozený. Nulová hodnota označuje, že propojeni znak po znaku zdrojového textu a odvozené text. Nenulová hodnota znamená, že neexistuje žádné přímé komunikaci.
+Délka zdrojového textu, ze kterého byl odvozen aktuální blok dat, ve znacích. Nulová hodnota označuje korespondenci po znaku mezi zdrojovým textem a odvozeným textem. Nenulová hodnota znamená, že taková přímá korespondence neexistuje.
 
 *cwcStartSource*<br/>
-Posun, ze kterého zdrojový text pro odvozené blok začíná v bloku dat zdroje.
+Posun, ze kterého zdrojový text pro odvozený blok začíná ve zdrojovém bloku.
 
 *chunkBreakType*<br/>
-Typu break, který odděluje od aktuální blok dat u předchozího bloku. Hodnoty jsou od CHUNK_BREAKTYPE výčtu.
+Typ přerušení, který odděluje předchozí blok od aktuálního bloku. Hodnoty jsou z CHUNK_BREAKTYPE výčtu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-S_OK v případě úspěchu; jinak kód chyby.
+S_OK v případě úspěchu; v opačném případě kód chyby.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="setintvalue"></a>  CMFCFilterChunkValueImpl::SetIntValue
+## <a name="cmfcfilterchunkvalueimplsetintvalue"></a><a name="setintvalue"></a>CMFCFilterChunkValueImpl::SetIntValue
 
-Nastavte vlastnost klíčem na celé číslo
+Nastavte vlastnost podle klíče na int.
 
 ```
 HRESULT SetIntValue(
@@ -534,36 +534,36 @@ HRESULT SetIntValue(
 
 ### <a name="parameters"></a>Parametry
 
-*pkey*<br/>
+*pklíč*<br/>
 Určuje klíč vlastnosti.
 
 *nVal*<br/>
-Určuje hodnotu bloků dat pro nastavení.
+Určuje hodnotu bloku, kterou chcete nastavit.
 
 *chunkType*<br/>
-Příznaky označoval, zda tento blok obsahuje text – typ nebo typ hodnoty vlastnosti. Příznak hodnoty pocházejí z CHUNKSTATE výčtu.
+Příznaky označují, zda tento blok obsahuje text typu nebo vlastnost typu value. Hodnoty příznaku jsou převzaty z výčtu CHUNKSTATE.
 
 *Národní prostředí*<br/>
-Jazyk a dílčího přidružený blok textu. Národní prostředí bloků dat používá indexery dokumentu provést řádné dělení slov textu. Jestliže u bloku není typu text ani typ hodnoty s datovým typem VT_LPWSTR, VT_LPSTR nebo VT_BSTR, toto pole se ignoruje.
+Jazyk a podjazyk přidružený k bloku textu. Národní prostředí bloku dat používá indexery dokumentů k provedení správné horečné rozdělení textu. Pokud blok dat není textový ani typ hodnoty s datovým typem VT_LPWSTR, VT_LPSTR nebo VT_BSTR, bude toto pole ignorováno.
 
 *cwcLenSource*<br/>
-Délka ve znacích zdrojový text, ze kterého aktuální blok dat odvozený. Nulová hodnota označuje, že propojeni znak po znaku zdrojového textu a odvozené text. Nenulová hodnota znamená, že neexistuje žádné přímé komunikaci.
+Délka zdrojového textu, ze kterého byl odvozen aktuální blok dat, ve znacích. Nulová hodnota označuje korespondenci po znaku mezi zdrojovým textem a odvozeným textem. Nenulová hodnota znamená, že taková přímá korespondence neexistuje.
 
 *cwcStartSource*<br/>
-Posun, ze kterého zdrojový text pro odvozené blok začíná v bloku dat zdroje.
+Posun, ze kterého zdrojový text pro odvozený blok začíná ve zdrojovém bloku.
 
 *chunkBreakType*<br/>
-Typu break, který odděluje od aktuální blok dat u předchozího bloku. Hodnoty jsou od CHUNK_BREAKTYPE výčtu.
+Typ přerušení, který odděluje předchozí blok od aktuálního bloku. Hodnoty jsou z CHUNK_BREAKTYPE výčtu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-S_OK v případě úspěchu; jinak kód chyby.
+S_OK v případě úspěchu; v opačném případě kód chyby.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="setlongvalue"></a>  CMFCFilterChunkValueImpl::SetLongValue
+## <a name="cmfcfilterchunkvalueimplsetlongvalue"></a><a name="setlongvalue"></a>CMFCFilterChunkValueImpl::SetLongValue
 
-Nastavte vlastnost klíčem k typu LONG.
+Nastavte vlastnost podle klíče na LONG.
 
 ```
 HRESULT SetLongValue(
@@ -578,36 +578,36 @@ HRESULT SetLongValue(
 
 ### <a name="parameters"></a>Parametry
 
-*pkey*<br/>
+*pklíč*<br/>
 Určuje klíč vlastnosti.
 
 *lVal*<br/>
-Určuje hodnotu bloků dat pro nastavení.
+Určuje hodnotu bloku, kterou chcete nastavit.
 
 *chunkType*<br/>
-Příznaky označoval, zda tento blok obsahuje text – typ nebo typ hodnoty vlastnosti. Příznak hodnoty pocházejí z CHUNKSTATE výčtu.
+Příznaky označují, zda tento blok obsahuje text typu nebo vlastnost typu value. Hodnoty příznaku jsou převzaty z výčtu CHUNKSTATE.
 
 *Národní prostředí*<br/>
-Jazyk a dílčího přidružený blok textu. Národní prostředí bloků dat používá indexery dokumentu provést řádné dělení slov textu. Jestliže u bloku není typu text ani typ hodnoty s datovým typem VT_LPWSTR, VT_LPSTR nebo VT_BSTR, toto pole se ignoruje.
+Jazyk a podjazyk přidružený k bloku textu. Národní prostředí bloku dat používá indexery dokumentů k provedení správné horečné rozdělení textu. Pokud blok dat není textový ani typ hodnoty s datovým typem VT_LPWSTR, VT_LPSTR nebo VT_BSTR, bude toto pole ignorováno.
 
 *cwcLenSource*<br/>
-Délka ve znacích zdrojový text, ze kterého aktuální blok dat odvozený. Nulová hodnota označuje, že propojeni znak po znaku zdrojového textu a odvozené text. Nenulová hodnota znamená, že neexistuje žádné přímé komunikaci.
+Délka zdrojového textu, ze kterého byl odvozen aktuální blok dat, ve znacích. Nulová hodnota označuje korespondenci po znaku mezi zdrojovým textem a odvozeným textem. Nenulová hodnota znamená, že taková přímá korespondence neexistuje.
 
 *cwcStartSource*<br/>
-Posun, ze kterého zdrojový text pro odvozené blok začíná v bloku dat zdroje.
+Posun, ze kterého zdrojový text pro odvozený blok začíná ve zdrojovém bloku.
 
 *chunkBreakType*<br/>
-Typu break, který odděluje od aktuální blok dat u předchozího bloku. Hodnoty jsou od CHUNK_BREAKTYPE výčtu.
+Typ přerušení, který odděluje předchozí blok od aktuálního bloku. Hodnoty jsou z CHUNK_BREAKTYPE výčtu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-S_OK v případě úspěchu; jinak kód chyby.
+S_OK v případě úspěchu; v opačném případě kód chyby.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="setsystemtimevalue"></a>  CMFCFilterChunkValueImpl::SetSystemTimeValue
+## <a name="cmfcfilterchunkvalueimplsetsystemtimevalue"></a><a name="setsystemtimevalue"></a>CMFCFilterChunkValueImpl::SetSystemTimeValue
 
-Klíčem k SYSTEMTIME – nastaví vlastnost.
+Nastaví vlastnost podle klíče na SystemTime.
 
 ```
 HRESULT SetSystemTimeValue(
@@ -622,36 +622,36 @@ HRESULT SetSystemTimeValue(
 
 ### <a name="parameters"></a>Parametry
 
-*pkey*<br/>
+*pklíč*<br/>
 Určuje klíč vlastnosti.
 
 *systemTime*<br/>
-Určuje hodnotu bloků dat pro nastavení.
+Určuje hodnotu bloku, kterou chcete nastavit.
 
 *chunkType*<br/>
-Příznaky označoval, zda tento blok obsahuje text – typ nebo typ hodnoty vlastnosti. Příznak hodnoty pocházejí z CHUNKSTATE výčtu.
+Příznaky označují, zda tento blok obsahuje text typu nebo vlastnost typu value. Hodnoty příznaku jsou převzaty z výčtu CHUNKSTATE.
 
 *Národní prostředí*<br/>
-Jazyk a dílčího přidružený blok textu. Národní prostředí bloků dat používá indexery dokumentu provést řádné dělení slov textu. Jestliže u bloku není typu text ani typ hodnoty s datovým typem VT_LPWSTR, VT_LPSTR nebo VT_BSTR, toto pole se ignoruje.
+Jazyk a podjazyk přidružený k bloku textu. Národní prostředí bloku dat používá indexery dokumentů k provedení správné horečné rozdělení textu. Pokud blok dat není textový ani typ hodnoty s datovým typem VT_LPWSTR, VT_LPSTR nebo VT_BSTR, bude toto pole ignorováno.
 
 *cwcLenSource*<br/>
-Délka ve znacích zdrojový text, ze kterého aktuální blok dat odvozený. Nulová hodnota označuje, že propojeni znak po znaku zdrojového textu a odvozené text. Nenulová hodnota znamená, že neexistuje žádné přímé komunikaci.
+Délka zdrojového textu, ze kterého byl odvozen aktuální blok dat, ve znacích. Nulová hodnota označuje korespondenci po znaku mezi zdrojovým textem a odvozeným textem. Nenulová hodnota znamená, že taková přímá korespondence neexistuje.
 
 *cwcStartSource*<br/>
-Posun, ze kterého zdrojový text pro odvozené blok začíná v bloku dat zdroje.
+Posun, ze kterého zdrojový text pro odvozený blok začíná ve zdrojovém bloku.
 
 *chunkBreakType*<br/>
-Typu break, který odděluje od aktuální blok dat u předchozího bloku. Hodnoty jsou od CHUNK_BREAKTYPE výčtu.
+Typ přerušení, který odděluje předchozí blok od aktuálního bloku. Hodnoty jsou z CHUNK_BREAKTYPE výčtu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-S_OK v případě úspěchu; jinak kód chyby.
+S_OK v případě úspěchu; v opačném případě kód chyby.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="settextvalue"></a>  CMFCFilterChunkValueImpl::SetTextValue
+## <a name="cmfcfilterchunkvalueimplsettextvalue"></a><a name="settextvalue"></a>CMFCFilterChunkValueImpl::SetTextValue
 
-Nastaví vlastnost klíčem na řetězec znaků Unicode.
+Nastaví vlastnost podle klíče na řetězec Unicode.
 
 ```
 HRESULT SetTextValue(
@@ -666,33 +666,33 @@ HRESULT SetTextValue(
 
 ### <a name="parameters"></a>Parametry
 
-*pkey*<br/>
+*pklíč*<br/>
 Určuje klíč vlastnosti.
 
 *pszValue*<br/>
-Určuje hodnotu bloků dat pro nastavení.
+Určuje hodnotu bloku, kterou chcete nastavit.
 
 *chunkType*<br/>
-Příznaky označoval, zda tento blok obsahuje text – typ nebo typ hodnoty vlastnosti. Příznak hodnoty pocházejí z CHUNKSTATE výčtu.
+Příznaky označují, zda tento blok obsahuje text typu nebo vlastnost typu value. Hodnoty příznaku jsou převzaty z výčtu CHUNKSTATE.
 
 *Národní prostředí*<br/>
-Jazyk a dílčího přidružený blok textu. Národní prostředí bloků dat používá indexery dokumentu provést řádné dělení slov textu. Jestliže u bloku není typu text ani typ hodnoty s datovým typem VT_LPWSTR, VT_LPSTR nebo VT_BSTR, toto pole se ignoruje.
+Jazyk a podjazyk přidružený k bloku textu. Národní prostředí bloku dat používá indexery dokumentů k provedení správné horečné rozdělení textu. Pokud blok dat není textový ani typ hodnoty s datovým typem VT_LPWSTR, VT_LPSTR nebo VT_BSTR, bude toto pole ignorováno.
 
 *cwcLenSource*<br/>
-Délka ve znacích zdrojový text, ze kterého aktuální blok dat odvozený. Nulová hodnota označuje, že propojeni znak po znaku zdrojového textu a odvozené text. Nenulová hodnota znamená, že neexistuje žádné přímé komunikaci.
+Délka zdrojového textu, ze kterého byl odvozen aktuální blok dat, ve znacích. Nulová hodnota označuje korespondenci po znaku mezi zdrojovým textem a odvozeným textem. Nenulová hodnota znamená, že taková přímá korespondence neexistuje.
 
 *cwcStartSource*<br/>
-Posun, ze kterého zdrojový text pro odvozené blok začíná v bloku dat zdroje.
+Posun, ze kterého zdrojový text pro odvozený blok začíná ve zdrojovém bloku.
 
 *chunkBreakType*<br/>
-Typu break, který odděluje od aktuální blok dat u předchozího bloku. Hodnoty jsou od CHUNK_BREAKTYPE výčtu.
+Typ přerušení, který odděluje předchozí blok od aktuálního bloku. Hodnoty jsou z CHUNK_BREAKTYPE výčtu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-S_OK v případě úspěchu; jinak kód chyby.
+S_OK v případě úspěchu; v opačném případě kód chyby.
 
 ### <a name="remarks"></a>Poznámky
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Třídy](../../mfc/reference/mfc-classes.md)

@@ -1,5 +1,5 @@
 ---
-title: CD2DTextFormat Class
+title: Třída cd2DTextFormat
 ms.date: 03/27/2019
 f1_keywords:
 - CD2DTextFormat
@@ -24,14 +24,14 @@ helpviewer_keywords:
 - CD2DTextFormat [MFC], ReCreate
 - CD2DTextFormat [MFC], m_pTextFormat
 ms.assetid: db194cec-9dae-4644-ab84-7c43b7164117
-ms.openlocfilehash: fa2f3b663cb5258c64ec0405abacf2e4eedeb987
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f7310fd3ca2ac34df7cc1a99cd5527ea8ba709c4
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396207"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81369036"
 ---
-# <a name="cd2dtextformat-class"></a>CD2DTextFormat Class
+# <a name="cd2dtextformat-class"></a>Třída cd2DTextFormat
 
 Obálka pro IDWriteTextFormat.
 
@@ -45,58 +45,58 @@ class CD2DTextFormat : public CD2DResource;
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CD2DTextFormat::CD2DTextFormat](#cd2dtextformat)|Vytvoří objekt cd2dtextformat –.|
-|[CD2DTextFormat::~CD2DTextFormat](#_dtorcd2dtextformat)|Destruktor. Volá se, když se likviduje objektu D2D textového formátu.|
+|[CD2DTextFormat::CD2DTextový formát](#cd2dtextformat)|Vytvoří objekt CD2DTextFormat.|
+|[CD2DTextFormat::~CD2DTextFormat](#_dtorcd2dtextformat)|Destruktor. Nazývá se při zničení objektu formátu textu D2D.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CD2DTextFormat::Create](#create)|Vytvoří cd2dtextformat –. (Přepíše [CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create).)|
-|[CD2DTextFormat::Destroy](#destroy)|Odstraní objekt cd2dtextformat –. (Přepíše [CD2DResource::Destroy](../../mfc/reference/cd2dresource-class.md#destroy).)|
-|[CD2DTextFormat::Get](#get)|Vrátí IDWriteTextFormat rozhraní|
-|[CD2DTextFormat::GetFontFamilyName](#getfontfamilyname)|Získá kopii objektu název rodiny písem.|
-|[CD2DTextFormat::GetLocaleName](#getlocalename)|Získá kopii objektu název národního prostředí.|
-|[CD2DTextFormat::IsValid](#isvalid)|Zkontroluje platnost prostředku (přepíše [CD2DResource::IsValid](../../mfc/reference/cd2dresource-class.md#isvalid).)|
-|[CD2DTextFormat::ReCreate](#recreate)|Znovu vytvoří cd2dtextformat –. (Přepíše [CD2DResource::ReCreate](../../mfc/reference/cd2dresource-class.md#recreate).)|
+|[CD2DTextFormat::Vytvořit](#create)|Vytvoří formát CD2DTextFormat. (Přepíše [CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create).)|
+|[CD2DTextFormát::Destroy](#destroy)|Zničí objekt CD2DTextFormat. (Přepíše [CD2DResource::Destroy](../../mfc/reference/cd2dresource-class.md#destroy).)|
+|[CD2DTextový formát::Získat](#get)|Vrátí rozhraní IDWriteTextFormat.|
+|[CD2DTextFormat::GetFontFamilyName](#getfontfamilyname)|Získá kopii názvu rodiny písma.|
+|[CD2DTextFormat::GetLocaleName](#getlocalename)|Získá kopii názvu národního prostředí.|
+|[CD2DTextFormat::isValid](#isvalid)|Zkontroluje platnost prostředku (přepíše [CD2DResource::IsValid](../../mfc/reference/cd2dresource-class.md#isvalid).)|
+|[CD2DTextFormat::Znovu vytvořit](#recreate)|Znovu vytvoří formát CD2DTextFormat. (Přepíše [CD2DResource::ReCreate](../../mfc/reference/cd2dresource-class.md#recreate).)|
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CD2DTextFormat::operator IDWriteTextFormat*](#operator_idwritetextformat_star)|Vrátí IDWriteTextFormat rozhraní|
+|[CD2DTextFormat::operátor IDWriteTextFormat*](#operator_idwritetextformat_star)|Vrátí rozhraní IDWriteTextFormat.|
 
-### <a name="protected-data-members"></a>Chránění členové dat
+### <a name="protected-data-members"></a>Členové chráněných dat
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CD2DTextFormat::m_pTextFormat](#m_ptextformat)|Ukazatel IDWriteTextFormat.|
+|[CD2DTextFormat::m_pTextFormat](#m_ptextformat)|Ukazatel na formát IDWriteTextFormat.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObjekt](../../mfc/reference/cobject-class.md)
 
-[CD2DResource](../../mfc/reference/cd2dresource-class.md)
+[Zdroj CD2D](../../mfc/reference/cd2dresource-class.md)
 
-[CD2DTextFormat](../../mfc/reference/cd2dtextformat-class.md)
+[Formát CD2DText](../../mfc/reference/cd2dtextformat-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
 **Záhlaví:** afxrendertarget.h
 
-##  <a name="_dtorcd2dtextformat"></a>  CD2DTextFormat::~CD2DTextFormat
+## <a name="cd2dtextformatcd2dtextformat"></a><a name="_dtorcd2dtextformat"></a>CD2DTextFormat::~CD2DTextFormat
 
-Destruktor. Volá se, když se likviduje objektu D2D textového formátu.
+Destruktor. Nazývá se při zničení objektu formátu textu D2D.
 
 ```
 virtual ~CD2DTextFormat();
 ```
 
-##  <a name="cd2dtextformat"></a>  CD2DTextFormat::CD2DTextFormat
+## <a name="cd2dtextformatcd2dtextformat"></a><a name="cd2dtextformat"></a>CD2DTextFormat::CD2DTextový formát
 
-Vytvoří objekt cd2dtextformat –.
+Vytvoří objekt CD2DTextFormat.
 
 ```
 CD2DTextFormat(
@@ -114,35 +114,35 @@ CD2DTextFormat(
 ### <a name="parameters"></a>Parametry
 
 *pParentTarget*<br/>
-Ukazatel na cíl vykreslování.
+Ukazatel na cíl vykreslení.
 
 *strFontFamilyName*<br/>
-CString – objekt, který obsahuje název rodiny písem.
+CString objekt, který obsahuje název rodiny písem.
 
-*fontSize*<br/>
-Logická velikost písma v jednotkách vyhrazené IP adresy ("pixelech nezávislých na zařízení"). DIPequals 1/96 palce.
+*Fontsize*<br/>
+Logická velikost písma v jednotkách DIP ("pixel nezávislý na zařízení"). DIProvná 1/96 palce.
 
-*fontWeight*<br/>
-Hodnota, která určuje tloušťku písma pro objekt textu.
+*Fontweight*<br/>
+Hodnota, která označuje tloušťku písma pro textový objekt.
 
-*fontStyle*<br/>
-Hodnota, která určuje styl písma textu objektu.
+*Fontstyle*<br/>
+Hodnota, která označuje styl písma pro textový objekt.
 
-*fontStretch*<br/>
-Hodnota, která určuje stretch písmo pro text objektu.
+*Fontstretch*<br/>
+Hodnota, která označuje roztažení písma pro textový objekt.
 
 *strFontLocale*<br/>
-CString – objekt, který obsahuje název národního prostředí.
+CString objekt, který obsahuje název národního prostředí.
 
-*pFontCollection*<br/>
-Ukazatel na objekt kolekce písma. V případě, že toto je NULL, označuje kolekce písem systémové.
+*kolekce pFontCollection*<br/>
+Ukazatel na objekt kolekce písma. Pokud je hodnota NULL, označuje kolekci systémových písem.
 
 *bAutoDestroy*<br/>
-Označuje, že bude objekt zničen. vlastník (pParentTarget).
+Označuje, že objekt bude zničen vlastníkem (pParentTarget).
 
-##  <a name="create"></a>  CD2DTextFormat::Create
+## <a name="cd2dtextformatcreate"></a><a name="create"></a>CD2DTextFormat::Vytvořit
 
-Vytvoří cd2dtextformat –.
+Vytvoří formát CD2DTextFormat.
 
 ```
 virtual HRESULT Create(CRenderTarget* */);
@@ -150,19 +150,19 @@ virtual HRESULT Create(CRenderTarget* */);
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud metoda uspěje, vrátí hodnotu S_OK. V opačném případě vrátí kód chyby HRESULT.
+Pokud je metoda úspěšná, vrátí S_OK. V opačném případě vrátí kód chyby HRESULT.
 
-##  <a name="destroy"></a>  CD2DTextFormat::Destroy
+## <a name="cd2dtextformatdestroy"></a><a name="destroy"></a>CD2DTextFormát::Destroy
 
-Odstraní objekt cd2dtextformat –.
+Zničí objekt CD2DTextFormat.
 
 ```
 virtual void Destroy();
 ```
 
-##  <a name="get"></a>  CD2DTextFormat::Get
+## <a name="cd2dtextformatget"></a><a name="get"></a>CD2DTextový formát::Získat
 
-Vrátí IDWriteTextFormat rozhraní
+Vrátí rozhraní IDWriteTextFormat.
 
 ```
 IDWriteTextFormat* Get();
@@ -170,11 +170,11 @@ IDWriteTextFormat* Get();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na rozhraní IDWriteTextFormat nebo hodnota NULL, pokud objekt ještě není inicializován.
+Ukazatel na rozhraní IDWriteTextFormat nebo NULL, pokud objekt ještě není inicializován.
 
-##  <a name="getfontfamilyname"></a>  CD2DTextFormat::GetFontFamilyName
+## <a name="cd2dtextformatgetfontfamilyname"></a><a name="getfontfamilyname"></a>CD2DTextFormat::GetFontFamilyName
 
-Získá kopii objektu název rodiny písem.
+Získá kopii názvu rodiny písma.
 
 ```
 CString GetFontFamilyName() const;
@@ -182,11 +182,11 @@ CString GetFontFamilyName() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-CString – objekt, který obsahuje aktuální název rodiny písem.
+CString objekt, který obsahuje aktuální název rodiny písma.
 
-##  <a name="getlocalename"></a>  CD2DTextFormat::GetLocaleName
+## <a name="cd2dtextformatgetlocalename"></a><a name="getlocalename"></a>CD2DTextFormat::GetLocaleName
 
-Získá kopii objektu název národního prostředí.
+Získá kopii názvu národního prostředí.
 
 ```
 CString GetLocaleName() const;
@@ -194,11 +194,11 @@ CString GetLocaleName() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-CString – objekt, který obsahuje název aktuální národní prostředí.
+CString objekt, který obsahuje aktuální název národního prostředí.
 
-##  <a name="isvalid"></a>  CD2DTextFormat::IsValid
+## <a name="cd2dtextformatisvalid"></a><a name="isvalid"></a>CD2DTextFormat::isValid
 
-Kontrola platnosti prostředků
+Zkontroluje platnost prostředků.
 
 ```
 virtual BOOL IsValid() const;
@@ -206,19 +206,19 @@ virtual BOOL IsValid() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE, pokud prostředek je platná. v opačném případě FALSE.
+PRAVDA, pokud je prostředek platný; jinak FALSE.
 
-##  <a name="m_ptextformat"></a>  CD2DTextFormat::m_pTextFormat
+## <a name="cd2dtextformatm_ptextformat"></a><a name="m_ptextformat"></a>CD2DTextFormat::m_pTextFormat
 
-Ukazatel IDWriteTextFormat.
+Ukazatel na formát IDWriteTextFormat.
 
 ```
 IDWriteTextFormat* m_pTextFormat;
 ```
 
-##  <a name="operator_idwritetextformat_star"></a>  CD2DTextFormat::Operator IDWriteTextFormat *
+## <a name="cd2dtextformatoperator-idwritetextformat"></a><a name="operator_idwritetextformat_star"></a>CD2DTextFormat::operátor IDWriteTextFormat*
 
-Vrátí IDWriteTextFormat rozhraní
+Vrátí rozhraní IDWriteTextFormat.
 
 ```
 operator IDWriteTextFormat*();
@@ -226,11 +226,11 @@ operator IDWriteTextFormat*();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na rozhraní IDWriteTextFormat nebo hodnota NULL, pokud objekt ještě není inicializován.
+Ukazatel na rozhraní IDWriteTextFormat nebo NULL, pokud objekt ještě není inicializován.
 
-##  <a name="recreate"></a>  CD2DTextFormat::ReCreate
+## <a name="cd2dtextformatrecreate"></a><a name="recreate"></a>CD2DTextFormat::Znovu vytvořit
 
-Znovu vytvoří cd2dtextformat –.
+Znovu vytvoří formát CD2DTextFormat.
 
 ```
 virtual HRESULT ReCreate(CRenderTarget* */);
@@ -238,8 +238,8 @@ virtual HRESULT ReCreate(CRenderTarget* */);
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud metoda uspěje, vrátí hodnotu S_OK. V opačném případě vrátí kód chyby HRESULT.
+Pokud je metoda úspěšná, vrátí S_OK. V opačném případě vrátí kód chyby HRESULT.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Třídy](../../mfc/reference/mfc-classes.md)

@@ -21,16 +21,16 @@ helpviewer_keywords:
 - Microsoft::WRL::ActivationFactory::QueryInterface method
 - Microsoft::WRL::ActivationFactory::Release method
 ms.assetid: 5faddf1f-43b6-4f8a-97de-8c9d3ae1e1ff
-ms.openlocfilehash: 8e5132f4a8711f6420cd9b52751550a96d10d8fc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0655caeb3f49a18e9c57c78f0008901aaaedda4a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62303887"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368709"
 ---
 # <a name="activationfactory-class"></a>ActivationFactory – třída
 
-Umožňuje jednu nebo více tříd aktivováno modulu Windows Runtime.
+Umožňuje aktivaci jedné nebo více tříd prostředím Windows Runtime.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -57,23 +57,23 @@ class ActivationFactory :
 ### <a name="parameters"></a>Parametry
 
 *I0*<br/>
-ID nultého rozhraní.
+Nultý rozhraní.
 
 *I1*<br/>
 První rozhraní.
 
 *I2*<br/>
-Druhé síťové rozhraní.
+Druhé rozhraní.
 
 ## <a name="remarks"></a>Poznámky
 
-`ActivationFactory` poskytuje metody registrace a základní funkce pro `IActivationFactory` rozhraní. `ActivationFactory` Můžete také poskytnout implementaci vlastní objekt pro vytváření.
+`ActivationFactory`poskytuje metody registrace a základní `IActivationFactory` funkce pro rozhraní. `ActivationFactory`také umožňuje poskytnout vlastní implementaci z výroby.
 
-Následující fragment kódu symbolicky ukazuje, jak používat activationfactory –.
+Následující fragment kódu symbolicky ilustruje, jak používat ActivationFactory.
 
 [!code-cpp[wrl-microsoft__wrl__activationfactory#1](../codesnippet/CPP/activationfactory-class_1.cpp)]
 
-Následující fragment kódu ukazuje způsob použití [implementuje](implements-structure.md) struktury zadat více než tři ID rozhraní.
+Následující fragment kódu ukazuje, jak použít [implements](implements-structure.md) strukturu určit více než tři ID rozhraní.
 
 `struct MyFactory : ActivationFactory<Implements<I1, I2, I3>, I4, I5>;`
 
@@ -81,20 +81,20 @@ Následující fragment kódu ukazuje způsob použití [implementuje](implement
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-Název                                                       | Popis
+Name (Název)                                                       | Popis
 ---------------------------------------------------------- | ------------------------------------------
-[ActivationFactory::ActivationFactory](#activationfactory) | Inicializuje `ActivationFactory` třídy.
+[ActivationFactory::ActivationFactory](#activationfactory) | Inicializuje `ActivationFactory` třídu.
 
 ### <a name="public-methods"></a>Veřejné metody
 
-Název                                                           | Popis
+Name (Název)                                                           | Popis
 -------------------------------------------------------------- | --------------------------------------------------------------------------------------------
-[Activationfactory::addref –](#addref)                           | Zvýší počet odkazů aktuálního `ActivationFactory` objektu.
-[Activationfactory::getiids –](#getiids)                         | Načte pole ID implementovaného rozhraní.
-[ActivationFactory::GetRuntimeClassName](#getruntimeclassname) | Získá název třídy runtime objektu, který aktuální `ActivationFactory` vytvoří instanci.
-[ActivationFactory::GetTrustLevel](#gettrustlevel)             | Získá úroveň důvěryhodnosti objektu, který aktuální `ActivationFactory` vytvoří instanci.
-[ActivationFactory::QueryInterface](#queryinterface)           | Načte ukazatel na rozhraní zadané.
-[Activationfactory::Release –](#release)                         | Sníží počet odkaz na aktuální `ActivationFactory` objektu.
+[ActivationFactory::Addref](#addref)                           | Zintáží počet odkazů `ActivationFactory` aktuálního objektu.
+[ActivationFactory::GetIIds](#getiids)                         | Načte pole implementovaných ID rozhraní.
+[ActivationFactory::GetRuntimeClassName](#getruntimeclassname) | Získá název třídy runtime objektu, který aktuální `ActivationFactory` instance.
+[ActivationFactory::GetTrustLevel](#gettrustlevel)             | Získá úroveň důvěryhodnosti objektu, `ActivationFactory` který aktuální instance.
+[ActivationFactory::QueryInterface](#queryinterface)           | Načte ukazatel na zadané rozhraní.
+[ActivationFactory::Vydání](#release)                         | Sníží počet odkazů aktuálního `ActivationFactory` objektu.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -122,19 +122,19 @@ Název                                                           | Popis
 
 **Záhlaví:** module.h
 
-**Namespace:** Microsoft::WRL
+**Obor názvů:** Microsoft::WRL
 
-## <a name="activationfactory"></a>ActivationFactory::ActivationFactory
+## <a name="activationfactoryactivationfactory"></a><a name="activationfactory"></a>ActivationFactory::ActivationFactory
 
-Inicializuje `ActivationFactory` třídy.
+Inicializuje `ActivationFactory` třídu.
 
 ```cpp
 ActivationFactory();
 ```
 
-## <a name="addref"></a>Activationfactory::addref –
+## <a name="activationfactoryaddref"></a><a name="addref"></a>ActivationFactory::Addref
 
-Zvýší počet odkazů aktuálního `ActivationFactory` objektu.
+Zintáží počet odkazů `ActivationFactory` aktuálního objektu.
 
 ```cpp
 STDMETHOD_(
@@ -145,11 +145,11 @@ STDMETHOD_(
 
 ### <a name="return-value"></a>Návratová hodnota
 
-S_OK v případě úspěchu; v opačném případě HRESULT s popisem chyby.
+S_OK v případě úspěchu; jinak HRESULT, který popisuje selhání.
 
-## <a name="getiids"></a>Activationfactory::getiids –
+## <a name="activationfactorygetiids"></a><a name="getiids"></a>ActivationFactory::GetIIds
 
-Načte pole ID implementovaného rozhraní.
+Načte pole implementovaných ID rozhraní.
 
 ```cpp
 STDMETHOD(
@@ -160,18 +160,18 @@ STDMETHOD(
 ### <a name="parameters"></a>Parametry
 
 *iidCount*<br/>
-Když tato operace dokončí, počet ID uživatelského rozhraní v *IID* pole.
+Po dokončení této operace počet Interace ID v poli *IIDs.*
 
-*iids*<br/>
-Po dokončení této operace implementované pole ID rozhraní.
+*IIDs*<br/>
+Po dokončení této operace pole implementovaných ID rozhraní.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-S_OK v případě úspěchu; v opačném případě HRESULT s popisem chyby. E_OUTOFMEMORY je možné selhání hodnoty HRESULT.
+S_OK v případě úspěchu; jinak HRESULT, který popisuje selhání. E_OUTOFMEMORY je možné selhání HRESULT.
 
-## <a name="getruntimeclassname"></a>Activationfactory::getruntimeclassname –
+## <a name="activationfactorygetruntimeclassname"></a><a name="getruntimeclassname"></a>ActivationFactory::GetRuntimeClassName
 
-Získá název třídy runtime objektu, který aktuální `ActivationFactory` vytvoří instanci.
+Získá název třídy runtime objektu, který aktuální `ActivationFactory` instance.
 
 ```cpp
 STDMETHOD(
@@ -182,15 +182,15 @@ STDMETHOD(
 ### <a name="parameters"></a>Parametry
 
 *runtimeName*<br/>
-Když tato operace dokončí, popisovač pro řetězec, který obsahuje název třídy runtime objektu, který aktuální `ActivationFactory` vytvoří instanci.
+Po dokončení této operace popisovač řetězce, který obsahuje název třídy runtime objektu, který aktuální `ActivationFactory` instance.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-S_OK v případě úspěchu; v opačném případě HRESULT s popisem chyby.
+S_OK v případě úspěchu; jinak HRESULT, který popisuje selhání.
 
-## <a name="gettrustlevel"></a>ActivationFactory::GetTrustLevel
+## <a name="activationfactorygettrustlevel"></a><a name="gettrustlevel"></a>ActivationFactory::GetTrustLevel
 
-Získá úroveň důvěryhodnosti objektu, který aktuální `ActivationFactory` vytvoří instanci.
+Získá úroveň důvěryhodnosti objektu, `ActivationFactory` který aktuální instance.
 
 ```cpp
 STDMETHOD(
@@ -200,16 +200,16 @@ STDMETHOD(
 
 ### <a name="parameters"></a>Parametry
 
-*trustLvl*<br/>
-Po dokončení této operace úroveň důvěryhodnosti modulu runtime třídy, která `ActivationFactory` vytvoří instanci.
+*důvěraLvl*<br/>
+Po dokončení této operace úroveň důvěryhodnosti runtime `ActivationFactory` třídy, která instancí.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-S_OK v případě úspěchu; v opačném případě je vygenerován chybu kontrolní výraz a *trustLvl* je nastavena na `FullTrust`.
+S_OK v případě úspěchu; v opačném případě je vyzařována chyba `FullTrust`kontrolního výrazu a *trustLvl* je nastavena na .
 
-## <a name="queryinterface"></a>ActivationFactory::QueryInterface
+## <a name="activationfactoryqueryinterface"></a><a name="queryinterface"></a>ActivationFactory::QueryInterface
 
-Načte ukazatel na rozhraní zadané.
+Načte ukazatel na zadané rozhraní.
 
 ```cpp
 STDMETHOD(
@@ -219,19 +219,19 @@ STDMETHOD(
 
 ### <a name="parameters"></a>Parametry
 
-*riid*<br/>
-Identifikátor rozhraní.
+*riid řekl:*<br/>
+ID rozhraní.
 
-*ppvObject*<br/>
-Po dokončení této operace, ukazatel na rozhraní určené typem parametru *riid*.
+*ppvObjekt*<br/>
+Po dokončení této operace ukazatel na rozhraní určené parametrem *riid*.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-S_OK v případě úspěchu; v opačném případě HRESULT s popisem chyby.
+S_OK v případě úspěchu; jinak HRESULT, který popisuje selhání.
 
-## <a name="release"></a>Activationfactory::Release –
+## <a name="activationfactoryrelease"></a><a name="release"></a>ActivationFactory::Vydání
 
-Sníží počet odkaz na aktuální `ActivationFactory` objektu.
+Sníží počet odkazů aktuálního `ActivationFactory` objektu.
 
 ```cpp
 STDMETHOD_(
@@ -242,4 +242,4 @@ STDMETHOD_(
 
 ### <a name="return-value"></a>Návratová hodnota
 
-S_OK v případě úspěchu; v opačném případě HRESULT s popisem chyby.
+S_OK v případě úspěchu; jinak HRESULT, který popisuje selhání.

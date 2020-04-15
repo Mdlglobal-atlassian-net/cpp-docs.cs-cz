@@ -1,5 +1,5 @@
 ---
-title: '&lt;Regex&gt; definice typedef'
+title: '&lt;regex&gt; typedefs'
 ms.date: 11/04/2016
 f1_keywords:
 - regex/std::cmatch
@@ -21,27 +21,27 @@ f1_keywords:
 - regex/std::wsregex_token_iterator
 - regex/std::wssub_match
 ms.assetid: e6a69067-106c-4a24-9e08-7c867a3a2260
-ms.openlocfilehash: 4321d9ea6fd9ba57074b25e084553fe1f0846213
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 5dbda2df4877da7594dd633e9f203a3780b4adb1
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79419572"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368548"
 ---
-# <a name="ltregexgt-typedefs"></a>&lt;Regex&gt; definice typedef
+# <a name="ltregexgt-typedefs"></a>&lt;regex&gt; typedefs
 
 ||||
 |-|-|-|
-|[cmatch –](#cmatch)|[cregex_iterator](#cregex_iterator)|[cregex_token_iterator](#cregex_token_iterator)|
-|[csub_match](#csub_match)|[regulární](#regex)|[Smatch –](#smatch)|
+|[cmatch](#cmatch)|[cregex_iterator](#cregex_iterator)|[cregex_token_iterator](#cregex_token_iterator)|
+|[csub_match](#csub_match)|[Regex](#regex)|[shodu](#smatch)|
 |[sregex_iterator](#sregex_iterator)|[sregex_token_iterator](#sregex_token_iterator)|[ssub_match](#ssub_match)|
-|[wcmatch –](#wcmatch)|[wcregex_iterator](#wcregex_iterator)|[wcregex_token_iterator](#wcregex_token_iterator)|
-|[wcsub_match](#wcsub_match)|[wregex –](#wregex)|[wsmatch –](#wsmatch)|
+|[wcmatch](#wcmatch)|[wcregex_iterator](#wcregex_iterator)|[wcregex_token_iterator](#wcregex_token_iterator)|
+|[wcsub_match](#wcsub_match)|[wregex](#wregex)|[wsmatch (wsmatch)](#wsmatch)|
 |[wsregex_iterator](#wsregex_iterator)|[wsregex_token_iterator](#wsregex_token_iterator)|[wssub_match](#wssub_match)|
 
-## <a name="cmatch"></a>cmatch – – typedef
+## <a name="cmatch-typedef"></a><a name="cmatch"></a>cmatch Typedef
 
-Zadejte definici typu char match_results.
+Definice typu pro char match_results.
 
 ```cpp
 typedef match_results<const char*> cmatch;
@@ -49,11 +49,11 @@ typedef match_results<const char*> cmatch;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ popisuje specializaci třídy template [match_results](../standard-library/match-results-class.md) pro iterátory typu `const char*`.
+Typ popisuje specializaci šablony třídy [match_results Class](../standard-library/match-results-class.md) pro iterátory typu `const char*`.
 
-## <a name="cregex_iterator"></a>cregex_iterator typedef – definice
+## <a name="cregex_iterator-typedef"></a><a name="cregex_iterator"></a>cregex_iterator Typedef
 
-Zadejte definici typu char regex_iterator.
+Definice typu pro regex_iterator znaku.
 
 ```cpp
 typedef regex_iterator<const char*> cregex_iterator;
@@ -61,11 +61,11 @@ typedef regex_iterator<const char*> cregex_iterator;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ popisuje specializaci třídy template [regex_iterator](../standard-library/regex-iterator-class.md) pro iterátory typu `const char*`.
+Typ popisuje specializaci šablony třídy [regex_iterator Class](../standard-library/regex-iterator-class.md) pro iterátory typu `const char*`.
 
-## <a name="cregex_token_iterator"></a>cregex_token_iterator typedef – definice
+## <a name="cregex_token_iterator-typedef"></a><a name="cregex_token_iterator"></a>cregex_token_iterator Typedef
 
-Definice typu pro char regex_token_iterator
+Definice typu pro regex_token_iterator znaku
 
 ```cpp
 typedef regex_token_iterator<const char*> cregex_token_iterator;
@@ -73,11 +73,11 @@ typedef regex_token_iterator<const char*> cregex_token_iterator;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ popisuje specializaci třídy template [regex_token_iterator](../standard-library/regex-token-iterator-class.md) pro iterátory typu `const char*`.
+Typ popisuje specializaci šablony třídy [regex_token_iterator Class](../standard-library/regex-token-iterator-class.md) pro iterátory typu `const char*`.
 
-## <a name="csub_match"></a>csub_match typedef – definice
+## <a name="csub_match-typedef"></a><a name="csub_match"></a>csub_match Typedef
 
-Zadejte definici typu char sub_match.
+Definice typu pro sub_match znaku
 
 ```cpp
 typedef sub_match<const char*> csub_match;
@@ -85,11 +85,11 @@ typedef sub_match<const char*> csub_match;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ popisuje specializaci třídy template [sub_match](../standard-library/sub-match-class.md) pro iterátory typu `const char*`.
+Typ popisuje specializaci šablony třídy [sub_match Class](../standard-library/sub-match-class.md) pro iterátory typu `const char*`.
 
-## <a name="regex"></a>Regex – typedef
+## <a name="regex-typedef"></a><a name="regex"></a>regex Typedef
 
-Zadejte definici typu char basic_regex.
+Definice typu pro basic_regex znaku.
 
 ```cpp
 typedef basic_regex<char> regex;
@@ -97,14 +97,14 @@ typedef basic_regex<char> regex;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ popisuje specializaci třídy template [Basic_regex Class](../standard-library/basic-regex-class.md) pro prvky typu **char**.
+Typ popisuje specializaci šablony třídy [basic_regex Class](../standard-library/basic-regex-class.md) pro prvky typu **char**.
 
 > [!NOTE]
-> Rozšířené znaky budou mít nepředvídatelné výsledky s `regex`. Hodnoty mimo rozsah 0 až 127 mohou mít za následek nedefinované chování.
+> High-bit znaky budou mít `regex`nepředvídatelné výsledky s . Hodnoty mimo rozsah 0 až 127 může mít za následek nedefinované chování.
 
-## <a name="smatch"></a>Smatch – – typedef
+## <a name="smatch-typedef"></a><a name="smatch"></a>shoda Typedef
 
-Zadejte definici typu String match_results.
+Definice typu pro match_results řetězců.
 
 ```cpp
 typedef match_results<string::const_iterator> smatch;
@@ -112,11 +112,11 @@ typedef match_results<string::const_iterator> smatch;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ popisuje specializaci třídy template [match_results](../standard-library/match-results-class.md) pro iterátory typu `string::const_iterator`.
+Typ popisuje specializaci šablony třídy [match_results Class](../standard-library/match-results-class.md) pro iterátory typu `string::const_iterator`.
 
-## <a name="sregex_iterator"></a>sregex_iterator typedef – definice
+## <a name="sregex_iterator-typedef"></a><a name="sregex_iterator"></a>sregex_iterator Typedef
 
-Zadejte definici typu String regex_iterator.
+Definice typu pro regex_iterator řetězců.
 
 ```cpp
 typedef regex_iterator<string::const_iterator> sregex_iterator;
@@ -124,11 +124,11 @@ typedef regex_iterator<string::const_iterator> sregex_iterator;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ popisuje specializaci třídy template [regex_iterator](../standard-library/regex-iterator-class.md) pro iterátory typu `string::const_iterator`.
+Typ popisuje specializaci šablony třídy [regex_iterator Class](../standard-library/regex-iterator-class.md) pro iterátory typu `string::const_iterator`.
 
-## <a name="sregex_token_iterator"></a>sregex_token_iterator typedef – definice
+## <a name="sregex_token_iterator-typedef"></a><a name="sregex_token_iterator"></a>sregex_token_iterator Typedef
 
-Zadejte definici typu String regex_token_iterator.
+Definice typu pro regex_token_iterator řetězců.
 
 ```cpp
 typedef regex_token_iterator<string::const_iterator> sregex_token_iterator;
@@ -136,11 +136,11 @@ typedef regex_token_iterator<string::const_iterator> sregex_token_iterator;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ popisuje specializaci třídy template [regex_token_iterator](../standard-library/regex-token-iterator-class.md) pro iterátory typu `string::const_iterator`.
+Typ popisuje specializaci šablony třídy [regex_token_iterator Class](../standard-library/regex-token-iterator-class.md) pro iterátory typu `string::const_iterator`.
 
-## <a name="ssub_match"></a>ssub_match typedef – definice
+## <a name="ssub_match-typedef"></a><a name="ssub_match"></a>ssub_match Typedef
 
-Zadejte definici typu String sub_match.
+Definice typu pro sub_match řetězců.
 
 ```cpp
 typedef sub_match<string::const_iterator> ssub_match;
@@ -148,11 +148,11 @@ typedef sub_match<string::const_iterator> ssub_match;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ popisuje specializaci třídy template [sub_match](../standard-library/sub-match-class.md) pro iterátory typu `string::const_iterator`.
+Typ popisuje specializaci šablony třídy [sub_match Class](../standard-library/sub-match-class.md) pro iterátory typu `string::const_iterator`.
 
-## <a name="wcmatch"></a>wcmatch – – typedef
+## <a name="wcmatch-typedef"></a><a name="wcmatch"></a>wcmatch Typedef
 
-Zadejte definici pro match_results wchar_t.
+Definice typu pro wchar_t match_results.
 
 ```cpp
 typedef match_results<const wchar_t *> wcmatch;
@@ -160,11 +160,11 @@ typedef match_results<const wchar_t *> wcmatch;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ popisuje specializaci třídy template [match_results](../standard-library/match-results-class.md) pro iterátory typu `const wchar_t*`.
+Typ popisuje specializaci šablony třídy [match_results Class](../standard-library/match-results-class.md) pro iterátory typu `const wchar_t*`.
 
-## <a name="wcregex_iterator"></a>wcregex_iterator typedef – definice
+## <a name="wcregex_iterator-typedef"></a><a name="wcregex_iterator"></a>wcregex_iterator Typedef
 
-Zadejte definici pro regex_iterator wchar_t.
+Definice typu pro wchar_t regex_iterator.
 
 ```cpp
 typedef regex_iterator<const wchar_t*> wcregex_iterator;
@@ -172,11 +172,11 @@ typedef regex_iterator<const wchar_t*> wcregex_iterator;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ popisuje specializaci třídy template [regex_iterator](../standard-library/regex-iterator-class.md) pro iterátory typu `const wchar_t*`.
+Typ popisuje specializaci šablony třídy [regex_iterator Class](../standard-library/regex-iterator-class.md) pro iterátory typu `const wchar_t*`.
 
-## <a name="wcregex_token_iterator"></a>wcregex_token_iterator typedef – definice
+## <a name="wcregex_token_iterator-typedef"></a><a name="wcregex_token_iterator"></a>wcregex_token_iterator Typedef
 
-Zadejte definici pro regex_token_iterator wchar_t.
+Definice typu pro wchar_t regex_token_iterator.
 
 ```cpp
 typedef regex_token_iterator<const wchar_t*> wcregex_token_iterator;
@@ -184,11 +184,11 @@ typedef regex_token_iterator<const wchar_t*> wcregex_token_iterator;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ popisuje specializaci třídy template [regex_token_iterator](../standard-library/regex-token-iterator-class.md) pro iterátory typu `const wchar_t*`.
+Typ popisuje specializaci šablony třídy [regex_token_iterator Class](../standard-library/regex-token-iterator-class.md) pro iterátory typu `const wchar_t*`.
 
-## <a name="wcsub_match"></a>wcsub_match typedef – definice
+## <a name="wcsub_match-typedef"></a><a name="wcsub_match"></a>wcsub_match Typedef
 
-Zadejte definici pro sub_match wchar_t.
+Definice typu pro wchar_t sub_match.
 
 ```cpp
 typedef sub_match<const wchar_t*> wcsub_match;
@@ -196,11 +196,11 @@ typedef sub_match<const wchar_t*> wcsub_match;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ popisuje specializaci třídy template [sub_match](../standard-library/sub-match-class.md) pro iterátory typu `const wchar_t*`.
+Typ popisuje specializaci šablony třídy [sub_match Class](../standard-library/sub-match-class.md) pro iterátory typu `const wchar_t*`.
 
-## <a name="wregex"></a>wregex – – typedef
+## <a name="wregex-typedef"></a><a name="wregex"></a>wregex Typedef
 
-Zadejte definici pro basic_regex wchar_t.
+Definice typu pro wchar_t basic_regex.
 
 ```cpp
 typedef basic_regex<wchar_t> wregex;
@@ -208,11 +208,11 @@ typedef basic_regex<wchar_t> wregex;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ popisuje specializaci třídy template [Basic_regex Class](../standard-library/basic-regex-class.md) pro prvky typu **wchar_t**.
+Typ popisuje specializaci šablony třídy [basic_regex Class](../standard-library/basic-regex-class.md) pro prvky typu **wchar_t**.
 
-## <a name="wsmatch"></a>wsmatch – – typedef
+## <a name="wsmatch-typedef"></a><a name="wsmatch"></a>wsmatch Typedef
 
-Zadejte definici pro wstring match_results.
+Definice typu pro match_results wstring.
 
 ```cpp
 typedef match_results<wstring::const_iterator> wsmatch;
@@ -220,11 +220,11 @@ typedef match_results<wstring::const_iterator> wsmatch;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ popisuje specializaci třídy template [match_results](../standard-library/match-results-class.md) pro iterátory typu `wstring::const_iterator`.
+Typ popisuje specializaci šablony třídy [match_results Class](../standard-library/match-results-class.md) pro iterátory typu `wstring::const_iterator`.
 
-## <a name="wsregex_iterator"></a>wsregex_iterator typedef – definice
+## <a name="wsregex_iterator-typedef"></a><a name="wsregex_iterator"></a>wsregex_iterator Typedef
 
-Zadejte definici pro wstring regex_iterator.
+Definice typu pro regex_iterator wstring.
 
 ```cpp
 typedef regex_iterator<wstring::const_iterator> wsregex_iterator;
@@ -232,11 +232,11 @@ typedef regex_iterator<wstring::const_iterator> wsregex_iterator;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ popisuje specializaci třídy template [regex_iterator](../standard-library/regex-iterator-class.md) pro iterátory typu `wstring::const_iterator`.
+Typ popisuje specializaci šablony třídy [regex_iterator Class](../standard-library/regex-iterator-class.md) pro iterátory typu `wstring::const_iterator`.
 
-## <a name="wsregex_token_iterator"></a>wsregex_token_iterator typedef – definice
+## <a name="wsregex_token_iterator-typedef"></a><a name="wsregex_token_iterator"></a>wsregex_token_iterator Typedef
 
-Zadejte definici pro wstring regex_token_iterator.
+Definice typu pro regex_token_iterator wstring.
 
 ```cpp
 typedef regex_token_iterator<wstring::const_iterator> wsregex_token_iterator;
@@ -244,11 +244,11 @@ typedef regex_token_iterator<wstring::const_iterator> wsregex_token_iterator;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ popisuje specializaci třídy template [regex_token_iterator](../standard-library/regex-token-iterator-class.md) pro iterátory typu `wstring::const_iterator`.
+Typ popisuje specializaci šablony třídy [regex_token_iterator Class](../standard-library/regex-token-iterator-class.md) pro iterátory typu `wstring::const_iterator`.
 
-## <a name="wssub_match"></a>wssub_match typedef – definice
+## <a name="wssub_match-typedef"></a><a name="wssub_match"></a>wssub_match Typedef
 
-Zadejte definici pro wstring sub_match.
+Definice typu pro sub_match wstring.
 
 ```cpp
 typedef sub_match<wstring::const_iterator> wssub_match;
@@ -256,15 +256,15 @@ typedef sub_match<wstring::const_iterator> wssub_match;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ popisuje specializaci třídy template [sub_match](../standard-library/sub-match-class.md) pro iterátory typu `wstring::const_iterator`.
+Typ popisuje specializaci šablony třídy [sub_match Class](../standard-library/sub-match-class.md) pro iterátory typu `wstring::const_iterator`.
 
 ## <a name="see-also"></a>Viz také
 
-[\<regulárního výrazu >](../standard-library/regex.md)\
-[regex_constants\ třídy](../standard-library/regex-constants-class.md)
-[regex_error\ třídy](../standard-library/regex-error-class.md)
-[\<funkce regulárního výrazu >](../standard-library/regex-functions.md)\
-[regex_iterator\ třídy](../standard-library/regex-iterator-class.md)
-[\<operátory regulárního výrazu >](../standard-library/regex-operators.md)\
-[regex_token_iterator\ třídy](../standard-library/regex-token-iterator-class.md)
+[\<regulární>](../standard-library/regex.md)\
+[regex_constants třída](../standard-library/regex-constants-class.md)\
+[regex_error třída](../standard-library/regex-error-class.md)\
+[\<funkce> regulárních výrazů](../standard-library/regex-functions.md)\
+[regex_iterator třída](../standard-library/regex-iterator-class.md)\
+[\<operátory> regulárních výrazů](../standard-library/regex-operators.md)\
+[regex_token_iterator třída](../standard-library/regex-token-iterator-class.md)\
 [regex_traits – třída](../standard-library/regex-traits-class.md)

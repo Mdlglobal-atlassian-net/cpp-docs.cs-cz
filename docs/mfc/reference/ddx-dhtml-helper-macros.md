@@ -1,5 +1,5 @@
 ---
-title: Makra pomocná DDX_DHtml
+title: DDX_DHtml pomocná makra
 ms.date: 11/04/2016
 f1_keywords:
 - AFXDHTML/DDX_DHtml_ElementValue
@@ -17,14 +17,14 @@ helpviewer_keywords:
 - DDX (dialog data exchange), DHtml helper macros
 - macros [MFC], DDX_DHtml helpers
 ms.assetid: c46302d2-ea43-4fea-bfc2-6f590d99f267
-ms.openlocfilehash: 90c80dbc5c8b6788f3afad3cf77d796139fbd946
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: f78a923a498713867c13ccc88e3e30c1f0a23885
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79420832"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81365874"
 ---
-# <a name="ddx_dhtml-helper-macros"></a>Makra pomocná DDX_DHtml
+# <a name="ddx_dhtml-helper-macros"></a>DDX_DHtml pomocná makra
 
 Pomocná makra DDX_DHtml umožňují snadný přístup k běžně používaným vlastnostem ovládacích prvků na stránce HTML.
 
@@ -34,20 +34,20 @@ Pomocná makra DDX_DHtml umožňují snadný přístup k běžně používaným 
 |-|-|
 |[DDX_DHtml_ElementValue](#ddx_dhtml_elementvalue)|Nastaví nebo načte vlastnost Value z vybraného ovládacího prvku.|
 |[DDX_DHtml_ElementInnerText](#ddx_dhtml_elementinnertext)|Nastaví nebo načte text mezi počátečními a koncovými značkami aktuálního prvku.|
-|[DDX_DHtml_ElementInnerHtml](#ddx_dhtml_elementinnerhtml)|Nastaví nebo načte kód HTML mezi počátečními a koncovými značkami aktuálního prvku.|
-|[DDX_DHtml_Anchor_Href](#ddx_dhtml_anchor_href)|Nastaví nebo načte cílovou adresu URL nebo kotvicí bod.|
-|[DDX_DHtml_Anchor_Target](#ddx_dhtml_anchor_target)|Nastaví nebo načte cílové okno nebo rámec.|
+|[DDX_DHtml_ElementInnerHtml](#ddx_dhtml_elementinnerhtml)|Nastaví nebo načte HTML mezi počáteční a koncovou značkou aktuálního prvku.|
+|[DDX_DHtml_Anchor_Href](#ddx_dhtml_anchor_href)|Nastaví nebo načte cílovou adresu URL nebo kotevní bod.|
+|[DDX_DHtml_Anchor_Target](#ddx_dhtml_anchor_target)|Nastaví nebo načte cílové okno nebo rámeček.|
 |[DDX_DHtml_Img_Src](#ddx_dhtml_img_src)|Nastaví nebo načte název obrázku nebo videoklipu v dokumentu.|
 |[DDX_DHtml_Frame_Src](#ddx_dhtml_frame_src)|Nastaví nebo načte adresu URL přidruženého rámce.|
 |[DDX_DHtml_IFrame_Src](#ddx_dhtml_iframe_src)|Nastaví nebo načte adresu URL přidruženého rámce.|
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxdhtml. h
+**Záhlaví:** afxdhtml.h
 
-## <a name="ddx_dhtml_anchor_href"></a>DDX_DHtml_Anchor_Href
+## <a name="ddx_dhtml_anchor_href"></a><a name="ddx_dhtml_anchor_href"></a>DDX_DHtml_Anchor_Href
 
-Nastaví nebo načte cílovou adresu URL nebo kotvicí bod.
+Nastaví nebo načte cílovou adresu URL nebo kotevní bod.
 
 ```
 DDX_DHtml_Anchor_Href(
@@ -58,22 +58,22 @@ DDX_DHtml_Anchor_Href(
 
 #### <a name="parameters"></a>Parametry
 
-*DX*<br/>
-Ukazatel na objekt [CDataExchange –](../../mfc/reference/cdataexchange-class.md) .
+*Dx*<br/>
+Ukazatel na objekt [CDataExchange.](../../mfc/reference/cdataexchange-class.md)
 
 *Jméno*<br/>
 Hodnota, kterou jste zadali pro parametr ID ovládacího prvku HTML.
 
 *var*<br/>
-Hodnota, která se má vyměňovat
+Hodnota, která je vyměňována.
 
 ## <a name="remarks"></a>Poznámky
 
-Toto makro volá funkci [CDHtmlDialog::D DX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) pomocí DISPID_IHTMLANCHORELEMENT_HREFho ID odeslání.
+Toto makro volá funkci [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) pomocí id odeslání DISPID_IHTMLANCHORELEMENT_HREF.
 
-## <a name="ddx_dhtml_anchor_target"></a>DDX_DHtml_Anchor_Target
+## <a name="ddx_dhtml_anchor_target"></a><a name="ddx_dhtml_anchor_target"></a>DDX_DHtml_Anchor_Target
 
-Nastaví nebo načte cílové okno nebo rámec.
+Nastaví nebo načte cílové okno nebo rámeček.
 
 ```
 DDX_DHtml_Anchor_Target(
@@ -84,22 +84,22 @@ DDX_DHtml_Anchor_Target(
 
 #### <a name="parameters"></a>Parametry
 
-*DX*<br/>
-Ukazatel na objekt [CDataExchange –](../../mfc/reference/cdataexchange-class.md) .
+*Dx*<br/>
+Ukazatel na objekt [CDataExchange.](../../mfc/reference/cdataexchange-class.md)
 
 *Jméno*<br/>
 Hodnota, kterou jste zadali pro parametr ID ovládacího prvku HTML.
 
 *var*<br/>
-Hodnota, která se má vyměňovat
+Hodnota, která je vyměňována.
 
 ## <a name="remarks"></a>Poznámky
 
-Toto makro volá funkci [CDHtmlDialog::D DX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) pomocí DISPID_IHTMLANCHORELEMENT_TARGETho ID odeslání.
+Toto makro volá funkci [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) pomocí id DISPID_IHTMLANCHORELEMENT_TARGET odeslání.
 
-## <a name="ddx_dhtml_elementinnerhtml"></a>DDX_DHtml_ElementInnerHtml
+## <a name="ddx_dhtml_elementinnerhtml"></a><a name="ddx_dhtml_elementinnerhtml"></a>DDX_DHtml_ElementInnerHtml
 
-Nastaví nebo načte kód HTML mezi počátečními a koncovými značkami aktuálního prvku.
+Nastaví nebo načte HTML mezi počáteční a koncovou značkou aktuálního prvku.
 
 ```
 DDX_DHtml_ElementInnerHtml(
@@ -110,20 +110,20 @@ DDX_DHtml_ElementInnerHtml(
 
 #### <a name="parameters"></a>Parametry
 
-*DX*<br/>
-Ukazatel na objekt [CDataExchange –](../../mfc/reference/cdataexchange-class.md) .
+*Dx*<br/>
+Ukazatel na objekt [CDataExchange.](../../mfc/reference/cdataexchange-class.md)
 
 *Jméno*<br/>
 Hodnota, kterou jste zadali pro parametr ID ovládacího prvku HTML.
 
 *var*<br/>
-Hodnota, která se má vyměňovat
+Hodnota, která je vyměňována.
 
 ## <a name="remarks"></a>Poznámky
 
-Toto makro volá funkci [CDHtmlDialog::D DX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) pomocí DISPID_IHTMLELEMENT_INNERHTMLho ID odeslání.
+Toto makro volá funkci [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) pomocí id DISPID_IHTMLELEMENT_INNERHTML odeslání.
 
-## <a name="ddx_dhtml_elementinnertext"></a>DDX_DHtml_ElementInnerText
+## <a name="ddx_dhtml_elementinnertext"></a><a name="ddx_dhtml_elementinnertext"></a>DDX_DHtml_ElementInnerText
 
 Nastaví nebo načte text mezi počátečními a koncovými značkami aktuálního prvku.
 
@@ -136,20 +136,20 @@ DDX_DHtml_ElementInnerText(
 
 #### <a name="parameters"></a>Parametry
 
-*DX*<br/>
-Ukazatel na objekt [CDataExchange –](../../mfc/reference/cdataexchange-class.md) .
+*Dx*<br/>
+Ukazatel na objekt [CDataExchange.](../../mfc/reference/cdataexchange-class.md)
 
 *Jméno*<br/>
 Hodnota, kterou jste zadali pro parametr ID ovládacího prvku HTML.
 
 *var*<br/>
-Hodnota, která se má vyměňovat
+Hodnota, která je vyměňována.
 
 ## <a name="remarks"></a>Poznámky
 
-Toto makro volá funkci [CDHtmlDialog::D DX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) pomocí DISPID_IHTMLELEMENT_INNERTEXTho ID odeslání.
+Toto makro volá funkci [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) pomocí id DISPID_IHTMLELEMENT_INNERTEXT odeslání.
 
-## <a name="ddx_dhtml_elementvalue"></a>DDX_DHtml_ElementValue
+## <a name="ddx_dhtml_elementvalue"></a><a name="ddx_dhtml_elementvalue"></a>DDX_DHtml_ElementValue
 
 Nastaví nebo načte vlastnost Value z vybraného ovládacího prvku.
 
@@ -162,22 +162,22 @@ DDX_DHtml_ElementValue(
 
 #### <a name="parameters"></a>Parametry
 
-*DX*<br/>
-Ukazatel na objekt [CDataExchange –](../../mfc/reference/cdataexchange-class.md) .
+*Dx*<br/>
+Ukazatel na objekt [CDataExchange.](../../mfc/reference/cdataexchange-class.md)
 
 *Jméno*<br/>
 Hodnota, kterou jste zadali pro parametr ID ovládacího prvku HTML.
 
 *var*<br/>
-Hodnota, která se má vyměňovat Zobrazit *hodnotu* v [CDHtmlDialog::D DX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext).
+Hodnota, která je vyměňována. Viz *hodnota* v [cdhtmldialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext).
 
 ## <a name="remarks"></a>Poznámky
 
-Toto makro bude úspěšné pouze při spuštění u ovládacích prvků, které mají vlastnost Value. Ovládací prvky, které mají vlastnost Value, zahrnují pole pro úpravy, seznamy a pole se seznamem.
+Toto makro bude úspěšné pouze při spuštění na ovládací prvky, které mají Value vlastnost. Ovládací prvky, které mají vlastnost Value, zahrnují editační pole, seznamy a pole se seznamem.
 
-Toto makro volá funkci [CDHtmlDialog::D DX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) pomocí DISPID_A_VALUEho ID odeslání.
+Toto makro volá funkci [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) pomocí id DISPID_A_VALUE odeslání.
 
-## <a name="ddx_dhtml_frame_src"></a>DDX_DHtml_Frame_Src
+## <a name="ddx_dhtml_frame_src"></a><a name="ddx_dhtml_frame_src"></a>DDX_DHtml_Frame_Src
 
 Nastaví nebo načte adresu URL přidruženého rámce.
 
@@ -190,20 +190,20 @@ DDX_DHtml_Frame_Src(
 
 #### <a name="parameters"></a>Parametry
 
-*DX*<br/>
-Ukazatel na objekt [CDataExchange –](../../mfc/reference/cdataexchange-class.md) .
+*Dx*<br/>
+Ukazatel na objekt [CDataExchange.](../../mfc/reference/cdataexchange-class.md)
 
 *Jméno*<br/>
 Hodnota, kterou jste zadali pro parametr ID ovládacího prvku HTML.
 
 *var*<br/>
-Hodnota, která se má vyměňovat
+Hodnota, která je vyměňována.
 
 ## <a name="remarks"></a>Poznámky
 
-Toto makro volá funkci [CDHtmlDialog::D DX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) pomocí DISPID_IHTMLFRAMEBASE_SRCho ID odeslání.
+Toto makro volá funkci [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) pomocí id odeslání DISPID_IHTMLFRAMEBASE_SRC.
 
-## <a name="ddx_dhtml_iframe_src"></a>DDX_DHtml_IFrame_Src
+## <a name="ddx_dhtml_iframe_src"></a><a name="ddx_dhtml_iframe_src"></a>DDX_DHtml_IFrame_Src
 
 Nastaví nebo načte adresu URL přidruženého rámce.
 
@@ -216,20 +216,20 @@ DDX_DHtml_IFrame_Src(
 
 #### <a name="parameters"></a>Parametry
 
-*DX*<br/>
-Ukazatel na objekt [CDataExchange –](../../mfc/reference/cdataexchange-class.md) .
+*Dx*<br/>
+Ukazatel na objekt [CDataExchange.](../../mfc/reference/cdataexchange-class.md)
 
 *Jméno*<br/>
 Hodnota, kterou jste zadali pro parametr ID ovládacího prvku HTML.
 
 *var*<br/>
-Hodnota, která se má vyměňovat
+Hodnota, která je vyměňována.
 
 ## <a name="remarks"></a>Poznámky
 
-Toto makro volá funkci [CDHtmlDialog::D DX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) pomocí DISPID_IHTMLFRAMEBASE_SRCho ID odeslání.
+Toto makro volá funkci [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) pomocí id odeslání DISPID_IHTMLFRAMEBASE_SRC.
 
-## <a name="ddx_dhtml_img_src"></a>DDX_DHtml_Img_Src
+## <a name="ddx_dhtml_img_src"></a><a name="ddx_dhtml_img_src"></a>DDX_DHtml_Img_Src
 
 Získá nebo načte název obrázku nebo videoklipu v dokumentu.
 
@@ -242,21 +242,21 @@ DDX_DHtml_Img_Src(
 
 #### <a name="parameters"></a>Parametry
 
-*DX*<br/>
-Ukazatel na objekt [CDataExchange –](../../mfc/reference/cdataexchange-class.md) .
+*Dx*<br/>
+Ukazatel na objekt [CDataExchange.](../../mfc/reference/cdataexchange-class.md)
 
 *Jméno*<br/>
 Hodnota, kterou jste zadali pro parametr ID ovládacího prvku HTML.
 
 *var*<br/>
-Hodnota, která se má vyměňovat
+Hodnota, která je vyměňována.
 
 ## <a name="remarks"></a>Poznámky
 
-Při použití makra DDX_DHtml_Img_Src k načtení vlastnosti src pro prvek obrázku, objekt obrázku aplikace Internet Explorer vrátí úplnou řídicí adresu URL pro zdroj obrázku. Například pokud použijete makro DDX_DHtml_Img_Src k nastavení vlastnosti src elementu IMAGE na řetězec "zajímavého obrázku", aplikace Internet Explorer vrátí řetězec "Res://d: \ MyApplication \ MyApp. exe/část %2 0 zajímavého %2 0 obrázku."
+Při použití DDX_DHtml_Img_Src makro k načtení vlastnosti src pro element IMAGE vrátí objekt obrázku aplikace Internet Explorer plně uvozenou adresu URL pro zdroj obrázku. Pokud například použijete makro DDX_DHtml_Img_Src k nastavení vlastnosti src prvku IMAGE na řetězec "nějaký zajímavý obrázek", když tuto vlastnost načtete, aplikace Internet Explorer vrátí řetězec "res://d:\myapplication\myapp.exe/some%20interesting%20picture".
 
-Toto makro volá funkci [CDHtmlDialog::D DX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) pomocí DISPID_IHTMLIMGELEMENT_SRCho ID odeslání.
+Toto makro volá funkci [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) pomocí id odeslání DISPID_IHTMLIMGELEMENT_SRC.
 
 ## <a name="see-also"></a>Viz také
 
-[CDHtmlDialog – třída](../../mfc/reference/cdhtmldialog-class.md)
+[Třída CDHtmlDialog](../../mfc/reference/cdhtmldialog-class.md)

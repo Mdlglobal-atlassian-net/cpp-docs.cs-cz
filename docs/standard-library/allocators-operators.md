@@ -1,26 +1,26 @@
 ---
-title: '&lt;přidělování&gt; operátory'
+title: '&lt;operátory&gt; přidělování'
 ms.date: 11/04/2016
 f1_keywords:
 - allocators/std::operator!=
 - allocators/std::operator==
 ms.assetid: b55d67cb-3c69-46bf-ad40-e845fb096c4e
-ms.openlocfilehash: b7429e298cdf14d727fc481db6c4a3bf8574b5e7
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 7bc37e98ed85582cac8fc7ae21e54a6d5da9e06f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79416898"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364965"
 ---
-# <a name="ltallocatorsgt-operators"></a>&lt;přidělování&gt; operátory
+# <a name="ltallocatorsgt-operators"></a>&lt;operátory&gt; přidělování
 
-Jedná se o funkce operátoru globálních šablon definované v&gt;&lt;přidělování. Funkce operátoru členů třídy naleznete v dokumentaci třídy.
+Jedná se o funkce operátoru globální šablony definované v &lt;alokátory&gt;. Funkce operátoru člena třídy naleznete v dokumentaci ke třídě.
 
 |||
 |-|-|
-|[operator!=](#op_neq)|[operator = = – operátor](#op_eq_eq)|
+|[operátor!=](#op_neq)|[operátor==](#op_eq_eq)|
 
-## <a name="op_neq"></a>! = – operátor
+## <a name="operator"></a><a name="op_neq"></a>operátor!=
 
 Testy pro nerovnost mezi objekty přidělování z dané třídy.
 
@@ -35,18 +35,18 @@ bool operator!=(
 
 |Parametr|Popis|
 |---------------|-----------------|
-|*zbývá*|Jeden z objektů přidělování, který má být testován na nerovnost.|
-|*Kliknutím*|Jeden z objektů přidělování, který má být testován na nerovnost.|
+|*Vlevo*|Jeden z objektů alokátoru, které mají být testovány na nerovnost.|
+|*Právo*|Jeden z objektů alokátoru, které mají být testovány na nerovnost.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**true** , pokud objekty přidělování nejsou stejné; **false** , pokud jsou objekty přidělování stejné.
+**true,** pokud alokátor objekty nejsou stejné; **false,** pokud alokátor objekty jsou stejné.
 
 ### <a name="remarks"></a>Poznámky
 
-Operátor šablony vrací `!(left == right)`.
+Operátor šablony `!(left == right)`vrátí .
 
-## <a name="op_eq_eq"></a>operator = = – operátor
+## <a name="operator"></a><a name="op_eq_eq"></a>operátor==
 
 Testy pro rovnost mezi objekty přidělování z dané třídy.
 
@@ -61,17 +61,17 @@ bool operator==(
 
 |Parametr|Popis|
 |---------------|-----------------|
-|*zbývá*|Jeden z objektů přidělování, který má být testován pro rovnost.|
-|*Kliknutím*|Jeden z objektů přidělování, který má být testován pro rovnost.|
+|*Vlevo*|Jeden z objektů alokátoru, které mají být testovány na rovnost.|
+|*Právo*|Jeden z objektů alokátoru, které mají být testovány na rovnost.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**true** , pokud jsou objekty přidělování stejné; **false** , pokud objekty přidělování nejsou stejné.
+**true,** pokud jsou alokátorové objekty stejné; **false,** pokud alokátor objekty nejsou stejné.
 
 ### <a name="remarks"></a>Poznámky
 
-Tento operátor šablony vrací `left.equals(right)`.
+Tento operátor `left.equals(right)`šablony vrátí .
 
 ## <a name="see-also"></a>Viz také
 
-[\<přidělování >](../standard-library/allocators-header.md)
+[\<alokátory>](../standard-library/allocators-header.md)

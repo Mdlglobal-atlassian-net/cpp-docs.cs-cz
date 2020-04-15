@@ -1,5 +1,5 @@
 ---
-title: Mutex – TřídaC++ (standardní knihovna) | Microsoft Docs
+title: třída mutex (standardní knihovna Jazyka C++)| Dokumenty společnosti Microsoft
 ms.date: 11/04/2016
 f1_keywords:
 - mutex/std::mutex
@@ -16,16 +16,16 @@ helpviewer_keywords:
 - std::mutex [C++], native_handle
 - std::mutex [C++], try_lock
 - std::mutex [C++], unlock
-ms.openlocfilehash: 099cf17db7b99f9cd1d953a603db70f75c33358e
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 84e6e3a46903a204444df9886556ae2c563304a9
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457058"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364849"
 ---
-# <a name="mutex-class-c-standard-library"></a>Mutex – TřídaC++ (standardní knihovna)
+# <a name="mutex-class-c-standard-library"></a>třída mutex (standardní knihovna Jazyka C++)
 
-Představuje *typ mutex*. Objekty tohoto typu lze použít k prosazování vzájemného vyloučení v rámci programu.
+Představuje *typ mutex*. Objekty tohoto typu lze použít k vynucení vzájemnévyloučení v rámci programu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -37,29 +37,29 @@ class mutex;
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[objekt](#mutex)|`mutex` Vytvoří objekt.|
-|[mutex:: ~ mutex – destruktor](#dtormutex_destructor)|Uvolní všechny prostředky, které byly použity `mutex` objektem.|
+|[Mutex](#mutex)|Vytvoří `mutex` objekt.|
+|[mutex::~mutex Destructor](#dtormutex_destructor)|Uvolní všechny prostředky, které `mutex` byly použity objektem.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[lock](#lock)|Blokuje volající vlákno, dokud vlákno nezíská vlastnictví `mutex`.|
-|[native_handle](#native_handle)|Vrátí typ specifický pro implementaci, který reprezentuje popisovač mutex.|
+|[Zámek](#lock)|Blokuje volající vlákno, dokud vlákno nezíská vlastnictví `mutex`rozhraní .|
+|[native_handle](#native_handle)|Vrátí typ specifický pro implementaci, který představuje popisovač mutex.|
 |[try_lock](#try_lock)|Pokusí se získat vlastnictví `mutex` bez blokování.|
-|[Uzamknout](#unlock)|Uvolňuje vlastnictví `mutex`.|
+|[Odemknout](#unlock)|Uvolní vlastnictví . `mutex`|
 
 ## <a name="requirements"></a>Požadavky
 
-**Hlavička:** \<> mutex
+**Záhlaví:** \<> mutex
 
 **Obor názvů:** std
 
-## <a name="lock"></a>mutex:: Lock
+## <a name="mutexlock"></a><a name="lock"></a>mutex::zámek
 
-Blokuje volající vlákno, dokud vlákno nezíská vlastnictví `mutex`.
+Blokuje volající vlákno, dokud vlákno nezíská vlastnictví `mutex`rozhraní .
 
 ```cpp
 void lock();
@@ -67,19 +67,19 @@ void lock();
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud volající vlákno již vlastní `mutex`, chování není definováno.
+Pokud volající vlákno již `mutex`vlastní , chování není definováno.
 
-## <a name="mutex"></a>mutex:: mutex – konstruktor
+## <a name="mutexmutex-constructor"></a><a name="mutex"></a>mutex::konstruktor objektu mutex
 
-`mutex` Vytvoří objekt, který není uzamčen.
+Vytvoří `mutex` objekt, který není uzamčen.
 
 ```cpp
 constexpr mutex() noexcept;
 ```
 
-## <a name="dtormutex_destructor"></a>mutex:: ~ mutex – destruktor
+## <a name="mutexmutex-destructor"></a><a name="dtormutex_destructor"></a>mutex::~mutex Destructor
 
-Uvolní všechny prostředky, které jsou používány `mutex` objektem.
+Uvolní všechny prostředky, které `mutex` jsou používány objektem.
 
 ```cpp
 ~mutex();
@@ -89,9 +89,9 @@ Uvolní všechny prostředky, které jsou používány `mutex` objektem.
 
 Pokud je objekt uzamčen při spuštění destruktoru, chování není definováno.
 
-## <a name="native_handle"></a>mutex:: native_handle
+## <a name="mutexnative_handle"></a><a name="native_handle"></a>mutex::native_handle
 
-Vrátí typ specifický pro implementaci, který reprezentuje popisovač mutex. Popisovač mutex lze použít v způsobech specifických pro implementaci.
+Vrátí typ specifický pro implementaci, který představuje popisovač mutex. Popisovač mutex lze použít v konkrétních způsobů implementace.
 
 ```cpp
 native_handle_type native_handle();
@@ -99,9 +99,9 @@ native_handle_type native_handle();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`native_handle_type`je definován jako `Concurrency::critical_section *` přetypování jako `void *`.
+`native_handle_type`je definována `Concurrency::critical_section *` jako, že `void *`je obsazení jako .
 
-## <a name="try_lock"></a>mutex:: try_lock
+## <a name="mutextry_lock"></a><a name="try_lock"></a>mutex::try_lock
 
 Pokusí se získat vlastnictví `mutex` bez blokování.
 
@@ -111,15 +111,15 @@ bool try_lock();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**true** , pokud metoda úspěšně získá vlastnictví `mutex`, v opačném případě **false**.
+**true,** pokud metoda úspěšně získá `mutex`vlastnictví ; jinak **false**.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud volající vlákno již vlastní `mutex`, chování není definováno.
+Pokud volající vlákno již `mutex`vlastní , chování není definováno.
 
-## <a name="unlock"></a>mutex:: Unlock
+## <a name="mutexunlock"></a><a name="unlock"></a>mutex::odemknutí
 
-Uvolňuje vlastnictví `mutex`.
+Uvolní vlastnictví . `mutex`
 
 ```cpp
 void unlock();
@@ -129,7 +129,7 @@ void unlock();
 
 Pokud volající vlákno nevlastní `mutex`, chování není definováno.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Odkazy na hlavičkové soubory](../standard-library/cpp-standard-library-header-files.md)\
-[\<mutex>](../standard-library/mutex.md)
+[Odkaz na soubory záhlaví](../standard-library/cpp-standard-library-header-files.md)\
+[\<>mutex](../standard-library/mutex.md)

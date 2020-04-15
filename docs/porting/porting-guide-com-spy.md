@@ -2,40 +2,42 @@
 title: 'Průvodce přenosem: COM Spy'
 ms.date: 11/04/2016
 ms.assetid: 24aa0d52-4014-4acb-8052-f4e2e4bbc3bb
-ms.openlocfilehash: 791b2e88166caae39c3b8e645ca1cc053f0b9379
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: f4fece07b9ea4541d8bf21dd81fd659b44f39718
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66451182"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368461"
 ---
 # <a name="porting-guide-com-spy"></a>Průvodce přenosem: COM Spy
 
-Toto téma je sekundy v sérii článků, které ukazuje upgradu starší sadě Visual Studio C++ projekty na nejnovější verzi sady Visual Studio. Pomocí sady Visual Studio 2005 poslední kompilaci kódu příklad v tomto tématu.
+Toto téma je druhé z řady článků, které demonstruje proces upgradu starších projektů sady Visual Studio C++ na nejnovější verzi sady Visual Studio. Ukázkový kód v tomto tématu byl naposledy zkompilován pomocí sady Visual Studio 2005.
 
 ## <a name="comspy"></a>COMSpy
 
-COMSpy je program, který sleduje a protokoluje aktivitu obsluhované komponenty v počítači. Obsluhované komponenty jsou komponenty COM +, které v počítači a můžou používat počítače ve stejné síti. Jsou spravovaná přes funkci Služba komponent v Ovládacích panelech Windows.
+COMSpy je program, který monitoruje a zaznamenává činnost servisovaných součástí na počítači. Servisované součásti jsou komponenty modelu COM+, které běží v systému a mohou být používány počítači ve stejné síti. Jsou spravovány funkcí Služby komponent v Ovládacích panelech systému Windows.
 
-### <a name="step-1-converting-the-project-file"></a>Krok 1. Převádí se projektový soubor.
-Soubor projektu převede snadno a vytváří sestavy migrace. Existuje několik položek v sestavě, která nás informuje o problémech, které se musíme zabývat. Tady je jeden problém, který se použije v hlášení (Všimněte si, že v tomto tématu se chybové zprávy jsou někdy zkrátila pro lepší čitelnost, třeba když chcete odebrat úplné cesty):
+### <a name="step-1-converting-the-project-file"></a>Krok 1. Převod souboru projektu
+
+Soubor projektu se snadno převede a vytvoří sestavu migrace. V sestavě je několik poznámek, které nám dávají vědět o problémech, které bychom mohli potřebovat řešit. Zde je jeden problém, který je hlášen (všimněte si, že v celém tomto tématu jsou chybové zprávy někdy zkráceny pro čitelnost, například k odstranění úplných cest):
 
 ```Output
 ComSpyAudit\ComSpyAudit.vcproj: MSB8012: $(TargetPath) ('C:\Users\UserName\Desktop\spy\spy\ComSpyAudit\.\XP32_DEBUG\ComSpyAudit.dll') does not match the Librarian's OutputFile property value '.\XP32_DEBUG\ComSpyAudit.dll' ('C:\Users\UserName\Desktop\spy\spy\XP32_DEBUG\ComSpyAudit.dll') in project configuration 'Unicode Debug|Win32'. This may cause your project to build incorrectly. To correct this, please make sure that $(TargetPath) property value matches the value specified in %(Lib.OutputFile).
 ```
 
-Jednou z častých problémech v provádění upgrade projektů, která je **Linkeru OutputFile** nastavení v dialogovém okně Vlastnosti projektu může být nutné zkontrolovat. Pro projekty před Visual Studio 2010 OutputFile je jedním z nastavení, která v Průvodci převodem automatické má potíže s tím, pokud je nastavena na hodnotu nestandardní. Cesty pro výstupní soubory v tomto případě byla nastavena na složku nestandardní XP32_DEBUG. Najít další informace o této chybě, jsme konzultaci [blogový příspěvek](https://devblogs.microsoft.com/cppblog/visual-studio-2010-c-project-upgrade-guide/) související s upgrade projektu Visual Studio 2010, která byla upgradu, které se podílejí změna vcbuild msbuild, významnou změnu. Podle těchto informací se výchozí hodnota pro **výstupní soubor** nastavení při vytváření nového projektu je `$(OutDir)$(TargetName)$(TargetExt)`, ale to není nastaven při převodu, protože není možné u převedený projektů a ověřte, zda všechno, co je správná. Ale můžeme zkuste uvedení, že pro výstupní soubor a pokud to funguje.  Ano, takže se můžeme přesunout. Pokud neexistuje žádný konkrétní důvod pro používání nestandardní výstupní složky, doporučujeme použít standardní umístění. V tomto případě jsme zvolili ponechat umístění výstupu jako nestandardní během procesu přenos a upgrade. `$(OutDir)` přeloží do složky XP32_DEBUG v **ladění** konfigurace a ReleaseU složku **vydání** konfigurace.
+Jedním z častých problémů při upgradu projektů je, že nastavení **Propojovací výstupsouboru** v dialogovém okně vlastností projektu může být nutné zkontrolovat. Pro projekty před Visual Studio 2010 OutputFile je jedno nastavení, které průvodce automatickýpřevod má potíže s, pokud je nastavena na nestandardní hodnotu. V tomto případě byly cesty pro výstupní soubory nastaveny na nestandardní složku, XP32_DEBUG. Chcete-li se dozvědět více o této chybě, jsme konzultovali [příspěvek blogu](https://devblogs.microsoft.com/cppblog/visual-studio-2010-c-project-upgrade-guide/) týkající se upgradu projektu Visual Studio 2010, což byl upgrade, který zahrnoval změnu z vcbuild na msbuild, což je významná změna. Podle těchto informací je `$(OutDir)$(TargetName)$(TargetExt)`výchozí hodnota pro nastavení **výstupního souboru** při vytváření nového projektu , ale to není nastaveno během převodu, protože není možné, aby převedené projekty ověřily, že je vše správné. Nicméně, zkusme uvedení, že v pro OutputFile a uvidíme, jestli to funguje.  Ano, takže můžeme jít dál. Pokud neexistuje žádný konkrétní důvod pro použití nestandardní výstupní složky, doporučujeme použít standardní umístění. V tomto případě jsme se rozhodli ponechat výstupní umístění jako nestandardní během procesu přenosu a upgradu; `$(OutDir)` překládá do složky XP32_DEBUG v konfiguraci **ladění** a do složky ReleaseU pro konfiguraci **vydání.**
 
-### <a name="step-2-getting-it-to-build"></a>Krok 2. Načítání sestavení
-Sestavení přenesená projektu, dojde k počtu chyb a upozornění.
+### <a name="step-2-getting-it-to-build"></a>Krok 2. Jak se stavět
 
-`ComSpyCtl` i když kvůli této chybě kompilátoru nebude kompilace:
+Vytváření portovaného projektu dochází k řadě chyb a upozornění.
+
+`ComSpyCtl`nekompiluje i když kvůli této chybě kompilátoru:
 
 ```Output
 atlcom.h(611): error C2664: 'HRESULT CComSpy::IPersistStreamInit_Save(LPSTREAM,BOOL,ATL::ATL_PROPMAP_ENTRY *)': cannot convert argument 3 from 'const ATL::ATL_PROPMAP_ENTRY *' to 'ATL::ATL_PROPMAP_ENTRY *'atlcom.h(611): note: Conversion loses qualifiersatlcom.h(608): note: while compiling class template member function 'HRESULT ATL::IPersistStreamInitImpl<CComSpy>::Save(LPSTREAM,BOOL)'\spy\spy\comspyctl\ccomspy.h(28): note: see reference to class template instantiation 'ATL::IPersistStreamInitImpl<CComSpy>' being compiled
 ```
 
-Chyba odkazy `Save` metodu `IPersistStreamInitImpl` třídy v atlcom.
+Chyba odkazuje na `Save` metodu `IPersistStreamInitImpl` třídy v atlcom.h.
 
 ```cpp
 STDMETHOD(Save)(_Inout_ LPSTREAM pStm, _In_ BOOL fClearDirty)
@@ -46,36 +48,37 @@ STDMETHOD(Save)(_Inout_ LPSTREAM pStm, _In_ BOOL fClearDirty)
 }
 ```
 
-Problém je, že převod, který starší verzi kompilátoru přijetí již není platný. Aby bylo možné v souladu se standardem jazyka C++, kód, který byl dřív povolen již není povolena. V takovém případě není bezpečné k předání nekonstantního ukazatele na funkci, která očekává ukazatel const.  Toto řešení je k vyhledání deklarace `IPersistStreamInit_Save` na `CComSpy` tříd a přidejte const modifikátor třetí parametr.
+Problém je, že převod, který starší verze kompilátoru přijat a již není platný. Aby bylo možné v souladu se standardem C++, některé kód, který dříve byl povolen již není povoleno. V tomto případě není bezpečné předat ukazatel bez const na funkci, která očekává ukazatel const.  Řešením je najít deklaraci `IPersistStreamInit_Save` na `CComSpy` třídu a přidat modifikátor const do třetího parametru.
 
 ```cpp
 HRESULT CComSpy::IPersistStreamInit_Save(LPSTREAM pStm, BOOL /* fClearDirty */, const ATL_PROPMAP_ENTRY* pMap)
 ```
 
-A podobné změny `IPersistStreamInit_Load`.
+A podobná změna `IPersistStreamInit_Load`.
 
 ```cpp
 HRESULT IPersistStreamInit_Load(LPSTREAM pStm, const ATL_PROPMAP_ENTRY* pMap);
 ```
 
-Další chyba se zabývá registrace.
+Další chyba se zabývá registrací.
 
 ```Output
 error MSB3073: The command "regsvr32 /s /c "C:\Users\username\Desktop\spy\spy\ComSpyCtl\.\XP32_DEBUG\ComSpyCtl.lib"error MSB3073: echo regsvr32 exec. time > ".\XP32_DEBUG\regsvr32.trg"error MSB3073:error MSB3073: :VCEnd" exited with code 3.
 ```
 
-Tento příkaz pro registraci. po sestavení už nepotřebujeme. Místo toho jsme jednoduše odeberte příkaz, který vlastní sestavení a zadejte v **Linkeru** nastavení registrovat výstup.
+Už nepotřebujeme tento příkaz k registraci po sestavení. Místo toho jednoduše odebereme příkaz vlastní sestavení a určíme v nastavení **linkeru** pro registraci výstupu.
 
-### <a name="dealing-with-warnings"></a>Práce s upozorněními.
-Projekt vytvoří následující linker upozornění.
+### <a name="dealing-with-warnings"></a>Nakládání s varováními
+
+Projekt vytvoří následující upozornění propojovacího systému.
 
 ```Output
 warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
 ```
 
-`/SAFESEH` – Možnost kompilátoru není užitečný v režimu ladění, což je při `/EDITANDCONTINUE` je užitečné, protože zde opravy je zakázat `/SAFESEH` pro **ladění** pouze konfigurace. K tomu v dialogovém okně Vlastnosti nám otevřít dialogové okno vlastností pro projekt, který vytváří tato chyba, a doporučujeme nejdříve nastavit **konfigurace** k **ladění** (ve skutečnosti **ladění Unicode**) a pak v **Linker Advanced** části, resetovat **bitové kopie má bezpečné obslužné rutiny výjimek** vlastnost **č** (`/SAFESEH:NO`).
+Možnost `/SAFESEH` kompilátoru není užitečná v režimu ladění, což je, `/EDITANDCONTINUE` `/SAFESEH` když je užitečné, takže oprava je zakázáno pouze pro **konfigurace ladění.** Chcete-li to provést v dialogovém okně vlastností, otevřeme dialogové okno vlastností pro projekt, který vytváří tuto chybu, a nejprve nastavíme **konfiguraci** na **ladění** (ve skutečnosti **ladění Unicode**) a potom v části **Linker Advanced** resetuje vlastnost **Image Has Safe Exception Handlers** na **Ne** (`/SAFESEH:NO`).
 
-Kompilátor vás upozorní, USA, který `PROP_ENTRY_EX` je zastaralý. Není bezpečné a je doporučenou náhrada `PROP_ENTRY_TYPE_EX`.
+Kompilátor nás `PROP_ENTRY_EX` varuje, že je zastaralé. Není to bezpečné a doporučená `PROP_ENTRY_TYPE_EX`náhrada je .
 
 ```cpp
 BEGIN_PROPERTY_MAP(CComSpy)
@@ -87,7 +90,7 @@ BEGIN_PROPERTY_MAP(CComSpy)
 END_PROPERTY_MAP()
 ```
 
-Jsme kód v ccomspy.h odpovídajícím způsobem měnit, přidávání typů modelu COM podle potřeby.
+Změníme kód v ccomspy.h odpovídajícím způsobem, přidání maškarní typy podle potřeby.
 
 ```cpp
 BEGIN_PROPERTY_MAP(CComSpy)
@@ -99,30 +102,31 @@ BEGIN_PROPERTY_MAP(CComSpy)
 END_PROPERTY_MAP()
 ```
 
-Opakují na poslední několik upozornění, která jsou také způsobeno přísnější kontroly shody kompilátoru:
+Dostáváme se k několika posledním upozorněním, která jsou také způsobena přísnějšími kontrolami shody kompilátoru:
 
 ```Output
 \spy\comspyctl\usersub.h(70): warning C4457: declaration of 'var' hides function parameter\spy\comspyctl\usersub.h(48): note: see declaration of 'var'\spy\comspyctl\usersub.h(94): warning C4018: '<': signed/unsigned mismatch  ComSpy.cpp\spy\comspyctl\comspy.cpp(186): warning C4457: declaration of 'bHandled' hides function parameter\spy\spy\comspyctl\comspy.cpp(177): note: see declaration of 'bHandled'
 ```
 
-Upozornění C4018 pochází z tento kód:
+Upozornění C4018 pochází z tohoto kódu:
 
 ```cpp
 for (i=0;i<lCount;i++)
     CoTaskMemFree(pKeys[i]);
 ```
 
-Problém je, že `i` je deklarován jako `UINT` a `lCount` je deklarován jako **dlouhé**, proto neshoda podepsané nebo nepodepsané. Je vhodná, chcete-li změnit typ `lCount` k `UINT`, protože získá svou hodnotu z `IMtsEventInfo::get_Count`, který používá typ **dlouhé**a není v uživatelském kódu. Proto jsme do kódu přidat přetypování. Přetypování C-style byste to udělali pro číselné přetypování takovou situaci, ale **static_cast** je doporučené styl.
+Problém je, `i` že `UINT` je `lCount` deklarován jako a je deklarován jako **dlouho**, proto podepsané/nepodepsané neshody. Bylo by nepohodlné změnit typ `lCount` `UINT`do , protože získá `IMtsEventInfo::get_Count`jeho hodnotu z , který používá typ **long**a není v uživatelském kódu. Takže přidáme obsazení do kódu. Nádech ve stylu C by udělal pro číselné přetypované, jako je tento, ale **static_cast** je doporučený styl.
 
 ```cpp
 for (i=0;i<static_cast<UINT>(lCount);i++)
     CoTaskMemFree(pKeys[i]);
 ```
 
-Upozornění jsou případy, kde byla proměnná deklarovaná ve funkci, která má parametr se stejným názvem, což vede k potenciálně matoucí kódu. Jsme odstranili, změníte názvy místních proměnných.
+Tato upozornění jsou případy, kdy byla proměnná deklarována ve funkci, která má parametr se stejným názvem, což vede k potenciálně matoucí kód. Opravili jsme to změnou názvů místních proměnných.
 
 ### <a name="step-3-testing-and-debugging"></a>Krok 3. Testování a ladění
-Otestovali jsme aplikaci nejprve spuštěním prostřednictvím různých nabídek a příkazů, a pak ukončit aplikaci. Pouze problémy, které jste si poznamenali byly kontrolní výraz ladění při ukončete aplikaci. Tento problém objevil v destruktoru pro `CWindowImpl`, základní třídu `CSpyCon` objektu, komponenty modelu COM hlavní aplikace. V následujícím kódu v atlwin.h došlo k selhání kontrolního výrazu.
+
+Testovali jsme aplikaci nejprve spuštěním různých nabídek a příkazů a zavřením aplikace. Jediným známým problémem bylo tvrzení o ladění při zavření aplikace. Problém se objevil v destruktoru pro `CWindowImpl` `CSpyCon` , základní třídy objektu, hlavní komponenty COM aplikace. K selhání kontrolního výrazu došlo v následujícím kódu v souboru atlwin.h.
 
 ```cpp
 virtual ~CWindowImplRoot()
@@ -137,11 +141,11 @@ virtual ~CWindowImplRoot()
 }
 ```
 
-`hWnd` Je obvykle nastavena na nulu `WindowProc` funkce, ale neměli dojít, protože místo výchozího `WindowProc`, se nazývá vlastní obslužné rutiny zprávy Windows (WM_SYSCOMMAND), zavře okno. Nebyl nastavení vlastní obslužné rutiny `hWnd` na nulu. Podívejte se na podobný kód v knihovně MFC `CWnd` třídy, ukazuje, že při zničení okno `OnNcDestroy` je názvem a v knihovně MFC, dokumentaci, která doporučí při přepisování `CWnd::OnNcDestroy`, základní `NcDestroy` by měla být volána, abyste měli jistotu, že vpravo dojde k vyčištění operace, včetně oddělení popisovač okna z okna, nebo jinými slovy, nastavení `hWnd` na nulu. Tento kontrolní výraz může být byla aktivována v původní verzi ukázky, protože byla k dispozici ve starší verzi atlwin.h stejný kód kontrolní výraz.
+Je `hWnd` obvykle nastavena na `WindowProc` nulu ve funkci, ale to `WindowProc`se nestalo, protože místo výchozího , vlastní obslužná rutina je volána pro zprávu systému Windows (WM_SYSCOMMAND), která zavře okno. Vlastní obslužná `hWnd` rutina nebyla nastavení na nulu. Podívejte se na podobný kód `CWnd` ve třídě knihovny MFC, `OnNcDestroy` ukazuje, že při zničení okna, je volána a v knihovně MFC dokumentace radí, že při přepsání `CWnd::OnNcDestroy`, základna `NcDestroy` by měla být `hWnd` volána, aby se ujistil, že dojde k správné operace vyčištění, včetně oddělení popisovače okna z okna nebo jinými slovy, nastavení na nulu. Toto tvrzení mohlo být spuštěno také v původní verzi ukázky, protože stejný kód kontrolního výrazu byl přítomen ve staré verzi souboru atlwin.h.
 
-Pokud chcete otestovat funkčnost aplikace, jsme vytvořili **obsluhované komponenty** pomocí šablony projektu ATL, se rozhodli přidat Průvodce projektem ATL COM + podporu. Pokud jste ještě nepracovali s obsluhované komponenty před, není složité ho vytvořit a získat registrované a k dispozici v systému nebo v síti pro jiné aplikace, které používají. Aplikace modelu COM Spy je určené k monitorování aktivit obsluhované komponenty jako diagnostickou pomůcku.
+Chcete-li otestovat funkce aplikace, jsme **vytvořili serviced component** pomocí šablony projektu KNIHOVNY ATL, rozhodli se přidat podporu modelu COM + v průvodci projektu KNIHOVNY ATL. Pokud jste s obsluhovanými součástmi nepracovali dříve, není těžké ji vytvořit a získat ji zaregistrovanou a dostupnou v systému nebo v síti pro jiné aplikace. Aplikace COM Spy je navržena tak, aby sledovala činnost servisovaných komponent jako diagnostickou pomůcku.
 
-Potom jsme přidali třídy, zvolili objekt knihovny ATL a zadat název objektu jako `Dog`. Potom v dog.h a dog.cpp jsme přidali implementace.
+Pak jsme přidali třídu, zvolili objekt KNIHOVNY ATL a zadali název objektu jako `Dog`. Pak v dog.h a dog.cpp jsme přidali implementaci.
 
 ```cpp
 STDMETHODIMP CDog::Wag(LONG* lDuration)
@@ -152,7 +156,7 @@ STDMETHODIMP CDog::Wag(LONG* lDuration)
 }
 ```
 
-Dále jsme vytvořené a registrované ho (bude nutné spustit sadu Visual Studio jako správce) a aktivovat ji pomocí **obsluhované komponenty** aplikace v Ovládacích panelech Windows. Jsme vytvořili projekt C# Windows Forms, přetáhnout tlačítka do formuláře z panelu nástrojů a který dvakrát kliknuli na obslužnou rutinu události click. Přidali jsme následující kód k vytvoření instance `Dog` komponenty.
+Dále jsme jej vytvořili a zaregistrovali (budete muset spustit Visual Studio jako správce) a aktivovali ji pomocí aplikace **Serviced Component** v Ovládacích panelech systému Windows. Vytvořili jsme projekt C# Windows Forms, přetáhli tlačítko do formuláře z panelu nástrojů a poklepali na něj na obslužnou rutinu události kliknutí. Přidali jsme následující kód pro `Dog` vytvoření instance komponenty.
 
 ```cpp
 private void button1_Click(object sender, EventArgs e)
@@ -162,10 +166,10 @@ private void button1_Click(object sender, EventArgs e)
 }
 ```
 
-To běžel bez problémů a s COM Spy zprovozněný a konfiguruje pro monitorování `Dog` součástí, zobrazí se velké množství dat znázorňující aktivity.
+To běželo bez problémů, a s COM Spy `Dog` a běží a nakonfigurován pro sledování komponenty, spousta dat se objeví ukazuje činnost.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Přenos a upgrade: Příklady a případové studie](../porting/porting-and-upgrading-examples-and-case-studies.md)<br/>
-[Následující příklad: Spy++](../porting/porting-guide-spy-increment.md)<br/>
-[Předchozí příklad: MFC Scribble](../porting/porting-guide-mfc-scribble.md)
+[Další příklad: Spy++](../porting/porting-guide-spy-increment.md)<br/>
+[Předchozí příklad: Klikačnice knihovny MFC](../porting/porting-guide-mfc-scribble.md)

@@ -1,5 +1,5 @@
 ---
-title: COleControl – – Třída
+title: Třída COleControl
 ms.date: 08/27/2018
 f1_keywords:
 - COleControl
@@ -334,14 +334,14 @@ helpviewer_keywords:
 - COleControl [MFC], IsInvokeAllowed
 - COleControl [MFC], SetInitialDataFormats
 ms.assetid: 53e95299-38e8-447b-9c5f-a381d27f5123
-ms.openlocfilehash: 97c605426ed0ac869714f0f83d4957f7f6ce7d87
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 8e931b03dc09926d44fa5cb4125dd2ffa41c5813
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79421588"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366199"
 ---
-# <a name="colecontrol-class"></a>COleControl – – Třída
+# <a name="colecontrol-class"></a>Třída COleControl
 
 Výkonná základní třída pro vývoj ovládacích prvků OLE.
 
@@ -355,226 +355,226 @@ class COleControl : public CWnd
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[COleControl –:: COleControl –](#colecontrol)|Vytvoří objekt `COleControl`.|
+|[COleControl::COleControl](#colecontrol)|Vytvoří `COleControl` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[COleControl –:: AmbientAppearance](#ambientappearance)|Načte aktuální vzhled ovládacího prvku.|
-|[COleControl –:: AmbientBackColor](#ambientbackcolor)|Vrátí hodnotu vlastnosti ambiented BackColor.|
-|[COleControl –:: AmbientDisplayName](#ambientdisplayname)|Vrátí název ovládacího prvku, který je určen kontejnerem.|
-|[COleControl –:: AmbientFont](#ambientfont)|Vrátí hodnotu vlastnosti okolního písma.|
-|[COleControl –:: AmbientForeColor](#ambientforecolor)|Vrátí hodnotu vlastnosti okolního popředí.|
-|[COleControl –:: AmbientLocaleID](#ambientlocaleid)|Vrátí ID národního prostředí kontejneru.|
-|[COleControl –:: AmbientScaleUnits](#ambientscaleunits)|Vrátí typ jednotek používaných kontejnerem.|
-|[COleControl –:: AmbientShowGrabHandles](#ambientshowgrabhandles)|Určuje, zda mají být zobrazeny popisovače přidaných hodnot.|
-|[COleControl –:: AmbientShowHatching](#ambientshowhatching)|Určuje, zda má být zobrazeno šrafování.|
-|[COleControl –:: AmbientTextAlign](#ambienttextalign)|Vrátí typ zarovnání textu určeného kontejnerem.|
-|[COleControl –:: AmbientUIDead](#ambientuidead)|Určuje, zda má ovládací prvek reagovat na akce uživatelského rozhraní.|
-|[COleControl –:: AmbientUserMode](#ambientusermode)|Určuje režim kontejneru.|
-|[COleControl –:: BoundPropertyChanged](#boundpropertychanged)|Upozorní kontejner, že došlo ke změně vlastnosti Bound.|
-|[COleControl –:: BoundPropertyRequestEdit](#boundpropertyrequestedit)|Požaduje oprávnění k úpravě hodnoty vlastnosti.|
-|[COleControl –:: ClientToParent](#clienttoparent)|Přeloží bod vzhledem k počátku ovládacího prvku na bod vzhledem ke zdroji jeho kontejneru.|
-|[COleControl –:: ClipCaretRect](#clipcaretrect)|Upraví obdélník blikajícího kurzoru, pokud je překrytý ovládacím prvkem.|
-|[COleControl –:: ControlInfoChanged](#controlinfochanged)|Tuto funkci volejte poté, co se změní sada instrukcí zpracovávaných ovládacím prvkem.|
-|[COleControl –::D isplayError](#displayerror)|Zobrazí chybové události akcií pro uživatele ovládacího prvku.|
-|[COleControl –::D oClick](#doclick)|Implementace skladové `DoClick` metody|
-|[COleControl –::D oPropExchange](#dopropexchange)|Zaserializace vlastnosti objektu `COleControl`.|
-|[COleControl –::D oSuperclassPaint](#dosuperclasspaint)|Překreslí ovládací prvek OLE, který byl podtřídou z ovládacího prvku Windows.|
-|[COleControl –:: EnableSimpleFrame](#enablesimpleframe)|Povoluje podporu jednoduchého rámce pro ovládací prvek.|
-|[COleControl –:: ExchangeExtent](#exchangeextent)|Zaserializace šířky a výšky ovládacího prvku.|
-|[COleControl –:: ExchangeStockProps](#exchangestockprops)|Zaserializace stavové vlastnosti ovládacího prvku.|
-|[COleControl –:: ExchangeVersion](#exchangeversion)|Zaserializace číslo verze ovládacího prvku.|
-|[COleControl –:: FireClick](#fireclick)|Aktivuje událost skladové `Click`.|
-|[COleControl –:: FireDblClick](#firedblclick)|Aktivuje událost skladové `DblClick`.|
-|[COleControl –:: FireError –](#fireerror)|Aktivuje událost skladové `Error`.|
-|[COleControl –:: FireEvent](#fireevent)|Aktivuje se vlastní událost.|
-|[COleControl –:: FireKeyDown](#firekeydown)|Aktivuje událost skladové `KeyDown`.|
-|[COleControl –:: FireKeyPress](#firekeypress)|Aktivuje událost skladové `KeyPress`.|
-|[COleControl –:: FireKeyUp](#firekeyup)|Aktivuje událost skladové `KeyUp`.|
-|[COleControl –:: FireMouseDown](#firemousedown)|Aktivuje událost skladové `MouseDown`.|
-|[COleControl –:: FireMouseMove](#firemousemove)|Aktivuje událost skladové `MouseMove`.|
-|[COleControl –:: FireMouseUp](#firemouseup)|Aktivuje událost skladové `MouseUp`.|
-|[COleControl –:: FireReadyStateChange](#firereadystatechange)|Aktivuje událost, když se změní stav připravenosti ovládacího prvku.|
-|[COleControl –:: GetActivationPolicy](#getactivationpolicy)|Mění výchozí chování aktivace ovládacího prvku, který podporuje rozhraní `IPointerInactive`.|
-|[COleControl –:: GetAmbientProperty](#getambientproperty)|Vrátí hodnotu zadané ambientní vlastnosti.|
-|[COleControl –:: Get– zobrazení](#getappearance)|Vrátí hodnotu vlastnosti vzhledu akcie.|
-|[COleControl –:: GetBackColor](#getbackcolor)|Vrátí hodnotu základní vlastnosti BackColor.|
-|[COleControl –:: getborderstyle](#getborderstyle)|Vrátí hodnotu vlastnosti BorderStyle pro doplňování.|
-|[COleControl –:: getcapture](#getcapture)|Určuje, zda ovládací prvek aktivovaného ovládacího prvku bez okna obsahuje zachycení myši.|
-|[COleControl –:: GetClassID](#getclassid)|Načte ID třídy OLE ovládacího prvku.|
-|[COleControl –:: GetClientOffset](#getclientoffset)|Načte rozdíl mezi levým horním rohem obdélníkové oblasti ovládacího prvku a levým horním rohem jeho klientské oblasti.|
-|[COleControl –:: GetClientRect](#getclientrect)|Načte velikost klientské oblasti ovládacího prvku.|
-|[COleControl –:: GetClientSite](#getclientsite)|Zadá dotaz na objekt pro ukazatel na jeho aktuální klientský server v rámci svého kontejneru.|
-|[COleControl –:: GetControlFlags](#getcontrolflags)|Načte nastavení příznaku ovládacího prvku.|
-|[COleControl –:: GetControlSize](#getcontrolsize)|Vrátí pozici a velikost ovládacího prvku OLE.|
-|[COleControl –:: GetDC](#getdc)|Poskytuje způsob řízení bez oken pro získání kontextu zařízení z jeho kontejneru.|
-|[COleControl –:: getenable](#getenabled)|Vrátí hodnotu vlastnosti enabled s povolenými zásobami.|
-|[COleControl –:: GetExtendedControl](#getextendedcontrol)|Načte ukazatel na rozšířený objekt ovládacího prvku patřící do kontejneru.|
-|[COleControl –:: GetFocus](#getfocus)|Určuje, zda má ovládací prvek fokus.|
-|[COleControl –:: GetFont](#getfont)|Vrátí hodnotu vlastnosti burzovního písma.|
-|[COleControl –:: GetFontTextMetrics](#getfonttextmetrics)|Vrátí metriku objektu `CFontHolder`.|
-|[COleControl –:: GetForeColor](#getforecolor)|Vrátí hodnotu základní vlastnosti ForeColor.|
-|[COleControl –:: GetHwnd](#gethwnd)|Vrátí hodnotu uložené vlastnosti hWnd.|
-|[COleControl –:: GetMessageString](#getmessagestring)|Poskytuje text stavového řádku pro položku nabídky.|
-|[COleControl –:: GetNotSupported](#getnotsupported)|Zabrání přístupu uživatele k hodnotě vlastnosti ovládacího prvku.|
-|[COleControl –:: GetReadyState](#getreadystate)|Vrátí stav připravenosti ovládacího prvku.|
-|[COleControl –:: GetRectInContainer](#getrectincontainer)|Vrátí obdélník ovládacího prvku vzhledem k jeho kontejneru.|
-|[COleControl –:: GetStockTextMetrics](#getstocktextmetrics)|Vrátí metriku vlastnosti burzovního písma.|
-|[COleControl –:: GetText](#gettext)|Vrátí hodnotu vlastnosti uloženého textu nebo titulku.|
-|[COleControl –:: GetWindowlessDropTarget](#getwindowlessdroptarget)|Přepsáním umožníte, aby řízení bez oken bylo cílem operací přetažení.|
-|[COleControl –:: InitializeIIDs](#initializeiids)|Informuje základní třídu IID, kterou bude ovládací prvek používat.|
-|[COleControl –:: InternalGetFont](#internalgetfont)|Vrátí objekt `CFontHolder` pro vlastnost burzovního písma.|
-|[COleControl –:: InternalGetText](#internalgettext)|Načte vlastnost titulku nebo textu.|
-|[COleControl –:: funkci InternalSetReadyState](#internalsetreadystate)|Nastaví stav připravenosti ovládacího prvku a aktivuje událost Read-State-Change.|
-|[COleControl –:: InvalidateControl](#invalidatecontrol)|Zruší platnost oblasti zobrazeného ovládacího prvku, což způsobí jeho překreslení.|
-|[COleControl –:: InvalidateRgn](#invalidatergn)|Zruší platnost klientské oblasti okna kontejneru v rámci dané oblasti. Dá se použít k překreslení ovládacích prvků bez oken v oblasti.|
-|[COleControl –:: IsConvertingVBX](#isconvertingvbx)|Umožňuje specializované načítání ovládacího prvku OLE.|
-|[COleControl –::-Modified](#ismodified)|Určuje, zda došlo ke změně stavu ovládacího prvku.|
-|[COleControl –:: IsOptimizedDraw](#isoptimizeddraw)|Určuje, zda kontejner podporuje optimalizované vykreslování pro aktuální operaci kreslení.|
-|[COleControl –:: IsSubclassedControl](#issubclassedcontrol)|Volá se, aby se určilo, jestli ovládací prvek podtřídí ovládací prvek Windows.|
-|[COleControl –:: Load](#load)|Obnoví všechna předchozí asynchronní data a inicializuje nové zatížení asynchronní vlastnosti ovládacího prvku.|
-|[COleControl –:: LockInPlaceActive](#lockinplaceactive)|Určuje, zda může být ovládací prvek dezaktivován kontejnerem.|
-|[COleControl –:: OnAmbientPropertyChange](#onambientpropertychange)|Volá se, když se změní ambientní vlastnost.|
-|[COleControl –:: OnAppearanceChanged](#onappearancechanged)|Volá se, když se změní vlastnost vzhled akcie.|
-|[COleControl –:: OnBackColorChanged](#onbackcolorchanged)|Volá se, když se změní vlastnost BackColor.|
-|[COleControl –:: OnBorderStyleChanged](#onborderstylechanged)|Volá se při změně vlastnosti okraje s uloženým okrajem.|
-|[COleControl –:: Click](#onclick)|Volá se, aby se aktivovala událost kliknutí na akcií.|
-|[COleControl –::-Close](#onclose)|Oznamuje ovládacímu prvku, že byl volán `IOleControl::Close`.|
-|[COleControl –:: OnDoVerb](#ondoverb)|Volá se po provedení příkazu ovládacího prvku.|
-|[COleControl –:: Draw](#ondraw)|Volá se, když se požaduje ovládací prvek pro překreslení.|
-|[COleControl –:: OnDrawMetafile](#ondrawmetafile)|Volá se kontejnerem, když se vyžaduje ovládací prvek pro překreslení pomocí kontextu zařízení metasouboru.|
-|[COleControl –:: s úpravami](#onedit)|Volá se kontejnerem do uživatelského rozhraní, které aktivuje ovládací prvek OLE.|
-|[COleControl –:: OnEnabledChanged](#onenabledchanged)|Volá se, když se změní vlastnost s povoleným zásobou.|
-|[COleControl –:: OnEnumVerbs](#onenumverbs)|Volá se kontejnerem, aby se vytvořil výčet sloves ovládacího prvku.|
-|[COleControl –:: OnEventAdvise](#oneventadvise)|Volá se, když jsou obslužné rutiny události připojené nebo odpojené od ovládacího prvku.|
-|[COleControl –:: OnFontChanged](#onfontchanged)|Volá se při změně vlastnosti zásobed Font.|
-|[COleControl –:: OnForeColorChanged](#onforecolorchanged)|Volá se při změně vlastnosti% ForeColor.|
-|[COleControl –:: OnFreezeEvents](#onfreezeevents)|Volá se, když jsou události ovládacího prvku zmrazené nebo nezmrazené.|
-|[COleControl –:: OnGetColorSet](#ongetcolorset)|Oznamuje ovládacímu prvku, že byl volán `IOleObject::GetColorSet`.|
-|[COleControl –:: OnGetControlInfo](#ongetcontrolinfo)|Poskytuje symbolické informace kontejneru.|
-|[COleControl –:: OnGetDisplayString](#ongetdisplaystring)|Volá se, aby se získal řetězec představující hodnotu vlastnosti.|
-|[COleControl –:: OnGetInPlaceMenu](#ongetinplacemenu)|Vyžádá popisovač nabídky ovládacího prvku, který se sloučí s nabídkou kontejneru.|
-|[COleControl –:: OnGetNaturalExtent](#ongetnaturalextent)|Přepište, aby se načetla velikost zobrazení ovládacího prvku, která je nejblíže navrhovaným režimům velikosti a rozsahu.|
-|[COleControl –:: OnGetPredefinedStrings](#ongetpredefinedstrings)|Vrátí řetězce představující možné hodnoty pro vlastnost.|
-|[COleControl –:: OnGetPredefinedValue](#ongetpredefinedvalue)|Vrátí hodnotu odpovídající předdefinovanému řetězci.|
-|[COleControl –:: OnGetViewExtent](#ongetviewextent)|Přepište pro načtení velikosti zobrazovaných oblastí ovládacího prvku (lze použít k povolení oboustranného vykreslování).|
-|[COleControl –:: OnGetViewRect](#ongetviewrect)|Přepište pro převedení velikosti ovládacího prvku na obdélník, který začíná na konkrétní pozici.|
-|[COleControl –:: OnGetViewStatus](#ongetviewstatus)|Přepsáním načtěte stav zobrazení ovládacího prvku.|
-|[COleControl –:: OnHideToolBars](#onhidetoolbars)|Volá se kontejnerem, když je ovládací prvek deaktivován z uživatelského rozhraní.|
-|[COleControl –:: OnInactiveMouseMove](#oninactivemousemove)|Přepište, aby měl kontejner pro neaktivní ovládací prvek pod ukazatelem myši pro odeslání WM_MOUSEMOVE zpráv do ovládacího prvku.|
-|[COleControl –:: OnInactiveSetCursor](#oninactivesetcursor)|Přepište, aby měl kontejner pro neaktivní ovládací prvek pod ukazatelem myši pro odeslání WM_SETCURSOR zpráv do ovládacího prvku.|
-|[COleControl –:: OnKeyDownEvent](#onkeydownevent)|Volá se po vyvolání události zásobníku zásob.|
-|[COleControl –:: OnKeyPressEvent](#onkeypressevent)|Volá se po tom, co se aktivuje událost KeyPress.|
-|[COleControl –:: OnKeyUpEvent](#onkeyupevent)|Volá se po tom, co se vyvolala událost KeyUp KeyUp.|
-|[COleControl –:: OnMapPropertyToPage](#onmappropertytopage)|Určuje, která stránka vlastností se má použít pro úpravu vlastnosti.|
-|[COleControl –::-Symbolickéy](#onmnemonic)|Volá se, když se stiskne symbolický klíč ovládacího prvku.|
-|[COleControl –::-Properties](#onproperties)|Volána, když byla vyvolána operace "Properties" ovládacího prvku.|
-|[COleControl –:: OnQueryHitPoint](#onqueryhitpoint)|Přepište pro dotaz, zda se zobrazení ovládacího prvku překrývá s daným bodem.|
-|[COleControl –:: OnQueryHitRect](#onqueryhitrect)|Přepište pro dotaz, zda se zobrazení ovládacího prvku překrývá s jakýmkoli bodem v daném obdélníku.|
-|[COleControl –:: OnRenderData](#onrenderdata)|Volá se rozhraním, aby se načetla data v zadaném formátu.|
-|[COleControl –:: OnRenderFileData](#onrenderfiledata)|Volá se rozhraním, aby se načetla data ze souboru v zadaném formátu.|
-|[COleControl –:: OnRenderGlobalData](#onrenderglobaldata)|Volá se rozhraním, aby se načetla data z globální paměti v zadaném formátu.|
-|[COleControl –:: OnResetState](#onresetstate)|Obnoví výchozí hodnoty vlastností ovládacího prvku.|
-|[COleControl –:: OnSetClientSite](#onsetclientsite)|Oznamuje ovládacímu prvku, že byl volán `IOleControl::SetClientSite`.|
-|[COleControl –::-SetData](#onsetdata)|Nahradí data ovládacího prvku jinou hodnotou.|
-|[COleControl –:: OnSetExtent](#onsetextent)|Volá se po změně rozsahu ovládacího prvku.|
-|[COleControl –:: OnSetObjectRects](#onsetobjectrects)|Volá se po změně dimenzí ovládacího prvku.|
-|[COleControl –:: OnShowToolBars](#onshowtoolbars)|Volá se, když se aktivuje ovládací prvek v uživatelském rozhraní.|
-|[COleControl –:: OnTextChanged.](#ontextchanged)|Volá se při změně vlastnosti uloženého textu nebo popisku.|
-|[COleControl –:: OnWindowlessMessage](#onwindowlessmessage)|Zpracovává zprávy oken (kromě zpráv myši a klávesnic) pro ovládací prvky bez oken.|
-|[COleControl –::P arentToClient](#parenttoclient)|Přeloží bod vzhledem k počátku kontejneru na bod vzhledem k počátku ovládacího prvku.|
-|[COleControl –::P ostModalDialog](#postmodaldialog)|Upozorní kontejner, že modální dialogové okno bylo zavřeno.|
-|[COleControl –::P reModalDialog](#premodaldialog)|Upozorní kontejner, že se chystá zobrazení modálního dialogového okna.|
-|[COleControl –:: RecreateControlWindow](#recreatecontrolwindow)|Zničí a znovu vytvoří okno ovládacího prvku.|
-|[COleControl –:: Refresh](#refresh)|Vynutí překreslení vzhledu ovládacího prvku.|
-|[COleControl –:: ReleaseCapture](#releasecapture)|Uvolňuje zachycení myši.|
-|[COleControl –:: ReleaseDC](#releasedc)|Uvolní kontext zobrazovaného zařízení kontejneru ovládacího prvku bez oken.|
-|[COleControl –:: ReparentControlWindow](#reparentcontrolwindow)|Obnoví nadřazený ovládací prvek okna.|
-|[COleControl –:: ResetStockProps](#resetstockprops)|Inicializuje výchozí hodnoty `COleControl` uložených vlastností.|
-|[COleControl –:: ResetVersion](#resetversion)|Inicializuje číslo verze na danou hodnotu.|
-|[COleControl –:: ScrollWindow](#scrollwindow)|Umožňuje ovládacímu prvku bez oken posouvání oblasti v rámci aktivního obrázku na místě zobrazení.|
-|[COleControl –:: SelectFontObject](#selectfontobject)|Vybere vlastní vlastnost písma v kontextu zařízení.|
-|[COleControl –:: SelectStockFont](#selectstockfont)|Vybere vlastnost písma zásob v kontextu zařízení.|
-|[COleControl –:: SerializeExtent](#serializeextent)|Serializace nebo inicializuje prostor zobrazení ovládacího prvku.|
-|[COleControl –:: SerializeStockProps](#serializestockprops)|Zaserializace nebo inicializuje vlastnosti `COleControl`ch uložených vlastností.|
-|[COleControl –:: SerializeVersion](#serializeversion)|Serializace nebo inicializuje informace o verzi ovládacího prvku.|
-|[COleControl –:: SetAppearance](#setappearance)|Nastaví hodnotu vlastnosti vzhled akcie.|
-|[COleControl –:: SetBackColor](#setbackcolor)|Nastaví hodnotu vlastnosti rebarva pozadí.|
-|[COleControl –:: SetBorderStyle](#setborderstyle)|Nastaví hodnotu vlastnosti BorderStyle pro doplňování.|
-|[COleControl –:: SetCapture](#setcapture)|Způsobí, že okno kontejneru ovládacího prvku provede zachycení myši jménem ovládacího prvku.|
-|[COleControl –:: SetControlSize](#setcontrolsize)|Nastaví pozici a velikost ovládacího prvku OLE.|
-|[COleControl –:: SetEnabled](#setenabled)|Nastaví hodnotu vlastnosti enabled s povolenými zásobami.|
-|[COleControl –:: SetFocus](#setfocus)|Způsobí, že okno kontejneru ovládacího prvku převezme fokus vstupu v zastoupení ovládacího prvku.|
-|[COleControl –:: SetFont](#setfont)|Nastaví hodnotu vlastnosti burzovního písma.|
-|[COleControl –:: SetForeColor](#setforecolor)|Nastaví hodnotu vlastnosti Barva popředí.|
-|[COleControl –:: SetInitialSize](#setinitialsize)|Nastaví velikost ovládacího prvku OLE při prvním zobrazení v kontejneru.|
-|[COleControl –:: SetModifiedFlag](#setmodifiedflag)|Změní upravený stav ovládacího prvku.|
-|[COleControl –:: SetNotPermitted](#setnotpermitted)|Indikuje, že žádost o úpravu se nezdařila.|
-|[COleControl –:: SetNotSupported](#setnotsupported)|Brání uživateli v úpravách hodnoty vlastnosti ovládacího prvku.|
-|[COleControl –:: SetRectInContainer](#setrectincontainer)|Nastaví obdélník ovládacího prvku relativně k jeho kontejneru.|
-|[COleControl –:: SetText](#settext)|Nastaví hodnotu vlastnosti burzovní text nebo titulek.|
-|[COleControl –:: ThrowError](#throwerror)|Signalizuje, že došlo k chybě v ovládacím prvku OLE.|
-|[COleControl –:: TransformCoords](#transformcoords)|Transformuje hodnoty souřadnic mezi kontejnerem a ovládacím prvkem.|
-|[COleControl –:: TranslateColor](#translatecolor)|Převede hodnotu OLE_COLOR na hodnotu COLORREF.|
-|[COleControl –:: WillAmbientsBeValidDuringLoad](#willambientsbevalidduringload)|Určuje, zda budou při příštím načtení ovládacího prvku k dispozici vlastnosti okolí.|
-|[COleControl –:: WindowProc](#windowproc)|Poskytuje proceduru Windows pro objekt `COleControl`.|
+|[COleControl::Ambientappearance](#ambientappearance)|Načte aktuální vzhled ovládacího prvku.|
+|[COleControl::AmbientBackColor](#ambientbackcolor)|Vrátí hodnotu okolní vlastnosti BackColor.|
+|[COleControl::AmbientDisplayName](#ambientdisplayname)|Vrátí název ovládacího prvku určeného kontejnerem.|
+|[COleControl::AmbientFont](#ambientfont)|Vrátí hodnotu vlastnosti ambient Font.|
+|[COleControl::AmbientForeColor](#ambientforecolor)|Vrátí hodnotu vlastnosti Ambient ForeColor.|
+|[COleControl::AmbientLocaleID](#ambientlocaleid)|Vrátí ID národního prostředí kontejneru.|
+|[COleControl::AmbientScaleUnits](#ambientscaleunits)|Vrátí typ jednotek používaných kontejnerem.|
+|[COleControl::AmbientShowGrabHandles](#ambientshowgrabhandles)|Určuje, zda by měly být zobrazeny úchyty pro uchopení.|
+|[COleControl::AmbientShowHatching](#ambientshowhatching)|Určuje, zda má být zobrazeno šrafování.|
+|[COleControl::AmbientTextAlign](#ambienttextalign)|Vrátí typ zarovnání textu určenékontejnerem.|
+|[COleControl::AmbientUiDead](#ambientuidead)|Určuje, zda by měl ovládací prvek reagovat na akce uživatelského rozhraní.|
+|[COleControl::AmbientUserMode](#ambientusermode)|Určuje režim kontejneru.|
+|[COleControl::BoundPropertyChanged](#boundpropertychanged)|Upozorní kontejner, že byla změněna vázaná vlastnost.|
+|[COleControl::BoundPropertyRequestEdit](#boundpropertyrequestedit)|Požaduje oprávnění k úpravě hodnoty vlastnosti.|
+|[COleControl::ClientToParent](#clienttoparent)|Převede bod vzhledem k počátku ovládacího prvku do bodu vzhledem k jeho původu kontejneru.|
+|[COleControl::ClipCaretRect](#clipcaretrect)|Upraví obdélník stříšky, pokud je překryt ovládacím prvkem.|
+|[COleControl::ControlInfoChanged](#controlinfochanged)|Volání této funkce po změně sady mnemotechnické pomůcky zpracované ovládacím prvkem.|
+|[COleControl::Dchyba při přehrávání](#displayerror)|Zobrazí události chyby skladu uživateli ovládacího prvku.|
+|[COleControl::DoClick](#doclick)|Implementace skladové `DoClick` metody.|
+|[COleControl::DoPropExchange](#dopropexchange)|Serializuje vlastnosti objektu. `COleControl`|
+|[COleControl::DoSuperclassPaint](#dosuperclasspaint)|Překreslí ovládací prvek OLE, který byl podtřídy z ovládacího prvku systému Windows.|
+|[COleControl::EnableSimpleFrame](#enablesimpleframe)|Umožňuje jednoduchou podporu rámu pro ovládací prvek.|
+|[COleControl::ExchangeExtent](#exchangeextent)|Serializuje šířku a výšku ovládacího prvku.|
+|[COleControl::ExchangeStockProps](#exchangestockprops)|Serializuje vlastnosti zásob ovládacího prvku.|
+|[COleControl::ExchangeVersion](#exchangeversion)|Serializuje číslo verze ovládacího prvku.|
+|[COleControl::FireClick](#fireclick)|Vypustí `Click` akci.|
+|[COleControl::FireDblClick](#firedblclick)|Vypustí `DblClick` akci.|
+|[COleControl::FireError](#fireerror)|Vypustí `Error` akci.|
+|[COleControl::FireEvent](#fireevent)|Vyvolá vlastní událost.|
+|[COleControl::FireKeyDown](#firekeydown)|Vypustí `KeyDown` akci.|
+|[COleControl::FireKeyPress](#firekeypress)|Vypustí `KeyPress` akci.|
+|[COleControl::FireKeyUp](#firekeyup)|Vypustí `KeyUp` akci.|
+|[COleControl::FireMouseDown](#firemousedown)|Vypustí `MouseDown` akci.|
+|[COleControl::FireMouseMove](#firemousemove)|Vypustí `MouseMove` akci.|
+|[COleControl::FireMouseUp](#firemouseup)|Vypustí `MouseUp` akci.|
+|[COleControl::FireReadyStateChange](#firereadystatechange)|Vyvolá událost, když se změní stav připravenosti ovládacího prvku.|
+|[COleControl::Zásady aktivace](#getactivationpolicy)|Změní výchozí chování aktivace ovládacího prvku, který podporuje `IPointerInactive` rozhraní.|
+|[COleControl::GetAmbientProperty](#getambientproperty)|Vrátí hodnotu zadané vlastnosti ambient.|
+|[COleControl::GetAppearance](#getappearance)|Vrátí hodnotu vlastnosti Vzhled akcií.|
+|[COleControl::GetBackColor](#getbackcolor)|Vrátí hodnotu stock BackColor vlastnost.|
+|[COleControl::GetBorderStyle](#getborderstyle)|Vrátí hodnotu vlastnosti BorderStyle.|
+|[COleControl::GetCapture](#getcapture)|Určuje, zda objekt s aktivovaným ovládacím prvkem bez oken má zachycení myši.|
+|[COleControl::GetClassID](#getclassid)|Načte ID třídy OLE ovládacího prvku.|
+|[COleControl::GetClientOffset](#getclientoffset)|Načte rozdíl mezi levým horním rohem obdélníkové oblasti ovládacího prvku a levým horním rohem klientské oblasti.|
+|[COleControl::GetClientRect](#getclientrect)|Načte velikost klientské oblasti ovládacího prvku.|
+|[COleControl::GetClientSite](#getclientsite)|Dotazuje objekt pro ukazatel na aktuální klientskou lokalitu v rámci svého kontejneru.|
+|[COleControl::GetControlFlags](#getcontrolflags)|Načte nastavení příznaku ovládacího prvku.|
+|[COleControl::GetControlSize](#getcontrolsize)|Vrátí pozici a velikost ovládacího prvku OLE.|
+|[COleControl::GetDC](#getdc)|Poskytuje prostředky pro ovládací prvek bez oken získat kontext zařízení z jeho kontejneru.|
+|[COleControl::GetEnabled](#getenabled)|Vrátí hodnotu vlastnosti Stock Enabled.|
+|[COleControl::GetExtendedControl](#getextendedcontrol)|Načte ukazatel na objekt rozšířeného ovládacího prvku, který patří do kontejneru.|
+|[COleControl::GetFocus](#getfocus)|Určuje, zda má ovládací prvek fokus.|
+|[COleControl::GetFont](#getfont)|Vrátí hodnotu vlastnosti Stock Font.|
+|[COleControl::GetFontTextMetrics](#getfonttextmetrics)|Vrátí metriky objektu. `CFontHolder`|
+|[COleControl::GetForeColor](#getforecolor)|Vrátí hodnotu vlastnosti ForeColor.|
+|[COleControl::GetHwnd](#gethwnd)|Vrátí hodnotu stock hWnd vlastnost.|
+|[COleControl::GetMessageString](#getmessagestring)|Poskytuje text stavového řádku pro položku nabídky.|
+|[COleControl::GetNotSupported](#getnotsupported)|Zabraňuje přístupu uživatele k hodnotě vlastnosti ovládacího prvku.|
+|[COleControl::GetReadyState](#getreadystate)|Vrátí stav připravenosti ovládacího prvku.|
+|[COleControl::GetRectInContainer](#getrectincontainer)|Vrátí obdélník ovládacího prvku vzhledem k jeho kontejneru.|
+|[COleControl::GetStockTextMetrics](#getstocktextmetrics)|Vrátí metriky stock Font vlastnost.|
+|[COleControl::GetText](#gettext)|Vrátí hodnotu vlastnosti Text nebo Caption.|
+|[COleControl::GetWindowlessDropTarget](#getwindowlessdroptarget)|Přepsat, aby ovládací prvek bez oken byl cílem operací přetažení.|
+|[COleControl::InicializovatIDy](#initializeiids)|Informuje základní třídu IID, které bude ovládací prvek používat.|
+|[COleControl::InternalGetFont](#internalgetfont)|Vrátí `CFontHolder` objekt pro vlastnost Stock Font.|
+|[COleControl::InternalGetText](#internalgettext)|Načte stock Caption nebo Text vlastnost.|
+|[COleControl::InternalSetReadyState](#internalsetreadystate)|Nastaví stav připravenosti ovládacího prvku a vyvolá událost ready-state change.|
+|[COleControl::Zneplatněnícontrol](#invalidatecontrol)|Zruší platnost oblasti zobrazeného ovládacího prvku a způsobí jeho překreslit.|
+|[COleControl::Zneplatnitrgn](#invalidatergn)|Zruší platnost klientské oblasti okna kontejneru v rámci dané oblasti. Lze překreslit ovládací prvky bez oken v oblasti.|
+|[COleControl::IsConvertingVBX](#isconvertingvbx)|Umožňuje specializované načítání ovládacího prvku OLE.|
+|[COleControl::IsModified](#ismodified)|Určuje, zda se změnil stav ovládacího prvku.|
+|[COleControl::IsOptimizedDraw](#isoptimizeddraw)|Označuje, zda kontejner podporuje optimalizovaný výkres pro aktuální operaci výkresu.|
+|[COleControl::IsSubclassedControl](#issubclassedcontrol)|Volána k určení, zda ovládací prvek podtřídy ovládacího prvku systému Windows.|
+|[COleControl::Načíst](#load)|Obnoví všechna předchozí asynchronní data a iniciuje nové zatížení asynchronní vlastnosti ovládacího prvku.|
+|[COleControl::LockInPlaceActive](#lockinplaceactive)|Určuje, zda může být ovládací prvek deaktivován kontejnerem.|
+|[COleControl::OnAmbientPropertyChange](#onambientpropertychange)|Nazývá při změně vlastnosti okolí.|
+|[COleControl::OnAppearanceChanged](#onappearancechanged)|Volána při změně vlastnosti Vzhled skladu.|
+|[COleControl::OnBackColorChanged](#onbackcolorchanged)|Volána při změně vlastnosti Stock BackColor.|
+|[COleControl::OnBorderStyleChanged](#onborderstylechanged)|Nazývá při změně vlastnosti borderstyle zásob.|
+|[COleControl::OnClick](#onclick)|Povolán k požáru populace Klepněte na událost.|
+|[COleControl::OnClose](#onclose)|Upozorní ovládací prvek, `IOleControl::Close` který byl volán.|
+|[COleControl::Ondoverb](#ondoverb)|Volána po spuštění ovládacího slovesa.|
+|[COleControl::Ondraw](#ondraw)|Nazývá se, když je požadováno ovládací prvek překreslit sám.|
+|[COleControl::Soubor OnDrawMetafile](#ondrawmetafile)|Volat kontejneru při ovládacíprvek je požadováno překreslit sám pomocí kontextu metasouboru zařízení.|
+|[COleControl::OnEdit](#onedit)|Volat kontejneru do ui Aktivovat ovládací prvek OLE.|
+|[COleControl::OnEnabledChanged](#onenabledchanged)|Volána při změně vlastnosti Stock Enabled.|
+|[COleControl::OnEnumVerbs](#onenumverbs)|Volána kontejneru výčet slovesovládacích prvku.|
+|[COleControl::OnEventAdvise](#oneventadvise)|Nazývá se, když jsou obslužné rutiny událostí připojeny nebo odpojeny od ovládacího prvku.|
+|[COleControl::OnFontChanged](#onfontchanged)|Volána při změně vlastnosti Stock Font.|
+|[COleControl::OnForeColorChanged](#onforecolorchanged)|Volána při změně vlastnosti ForeColor.|
+|[COleControl::Události onfreeze](#onfreezeevents)|Nazývá se, když jsou události ovládacího prvku zmrazeny nebo nezmrazeny.|
+|[COleControl::OnGetColorSet](#ongetcolorset)|Upozorní ovládací prvek, `IOleObject::GetColorSet` který byl volán.|
+|[COleControl::OnGetControlInfo](#ongetcontrolinfo)|Poskytuje mnemotechnické informace do kontejneru.|
+|[COleControl::OnGetDisplayString](#ongetdisplaystring)|Volána k získání řetězce představující hodnotu vlastnosti.|
+|[COleControl::OnGetInplaceMenu](#ongetinplacemenu)|Požaduje popisovač nabídky ovládacího prvku, který bude sloučen s nabídkou kontejneru.|
+|[COleControl::OnGetNaturalExtent](#ongetnaturalextent)|Přepsáním načtete velikost zobrazení ovládacího prvku, která je nejblíže navrhované velikosti a rozsahu.|
+|[COleControl::OnGetPredefinedStrings](#ongetpredefinedstrings)|Vrátí řetězce představující možné hodnoty pro vlastnost.|
+|[COleControl::OnGetPredefinedValue](#ongetpredefinedvalue)|Vrátí hodnotu odpovídající předdefinovanému řetězci.|
+|[COleControl::OnGetViewExtent](#ongetviewextent)|Přepsáním načtete velikost zobrazovacích oblastí ovládacího prvku (lze použít k povolení dvouprůchodového výkresu).|
+|[COleControl::OnGetViewRect](#ongetviewrect)|Přepsáním převedete velikost ovládacího prvku na obdélník začínající na určité pozici.|
+|[COleControl::OnGetViewStatus](#ongetviewstatus)|Přepsáním načtete stav zobrazení ovládacího prvku.|
+|[COleControl::OnhideToolBars](#onhidetoolbars)|Volat kontejneru při ovládacího prvku je deaktivován.|
+|[COleControl::OnInactiveMouseMove](#oninactivemousemove)|Přepsat mít kontejner pro neaktivní ovládací prvek pod ukazatele myši odeslání WM_MOUSEMOVE zprávy ovládacího prvku.|
+|[COleControl::OnInactiveSetCursor](#oninactivesetcursor)|Přepsat mít kontejner pro neaktivní ovládací prvek pod ukazatele myši odeslání WM_SETCURSOR zprávy ovládacího prvku.|
+|[COleControl::OnKeyDownEvent](#onkeydownevent)|Volána po akci KeyDown stock byla aktivována.|
+|[COleControl::OnKeyPressEvent](#onkeypressevent)|Volána po akci KeyPress událost byla aktivována.|
+|[COleControl::OnKeyUpEvent](#onkeyupevent)|Volána po akci KeyUp stock byla aktivována.|
+|[COleControl::OnMapPropertyToPage](#onmappropertytopage)|Označuje stránku vlastností, která se má použít pro úpravy vlastnosti.|
+|[COleControl::OnMnemonic](#onmnemonic)|Volána, když byla stisknuta mnemotechnická klávesa ovládacího prvku.|
+|[COleControl::OnProperties](#onproperties)|Nazývá se, když byl vyvolán příkaz "Vlastnosti" ovládacího prvku.|
+|[COleControl::OnQueryHitPoint](#onqueryhitpoint)|Přepsání dotazu, zda zobrazení ovládacího prvku překrývá daný bod.|
+|[COleControl::OnQueryHitRect](#onqueryhitrect)|Přepište dotaz, zda zobrazení ovládacího prvku překrývá libovolný bod v daném obdélníku.|
+|[COleControl::OnRenderData](#onrenderdata)|Volat rámci načíst data v zadaném formátu.|
+|[COleControl::OnRenderFileData](#onrenderfiledata)|Volat rámci načíst data ze souboru v zadaném formátu.|
+|[COleControl::OnRenderGlobalData](#onrenderglobaldata)|Volat rámci načíst data z globální paměti v zadaném formátu.|
+|[COleControl::OnResetState](#onresetstate)|Obnoví vlastnosti ovládacího prvku na výchozí hodnoty.|
+|[COleControl::OnSetClientSite](#onsetclientsite)|Upozorní ovládací prvek, `IOleControl::SetClientSite` který byl volán.|
+|[COleControl::OnSetData](#onsetdata)|Nahradí data ovládacího prvku jinou hodnotou.|
+|[COleControl::Délka](#onsetextent)|Volána po změně rozsahu ovládacího prvku.|
+|[COleControl::OnSetObjectRects](#onsetobjectrects)|Volána po změně dimenzí ovládacího prvku.|
+|[COleControl::OnShowPanely nástrojů](#onshowtoolbars)|Volána, když byl aktivován ovládací prvek.|
+|[COleControl::OnTextChanged](#ontextchanged)|Volána při změně vlastnosti text nebo titulek.|
+|[COleControl::OnWindowlessMessage](#onwindowlessmessage)|Zpracovává zprávy oken (jiné než zprávy myši a klávesnice) pro ovládací prvky bez oken.|
+|[COleControl::ParentToClient](#parenttoclient)|Převede bod vzhledem k počátku kontejneru do bodu vzhledem k počátku ovládacího prvku.|
+|[COleControl::Pmodmodlální dialog](#postmodaldialog)|Upozorní kontejner, že modální dialogové okno bylo uzavřeno.|
+|[COleControl::Premodlodálnídialog](#premodaldialog)|Upozorní kontejner, že modální dialogové okno se chystá zobrazit.|
+|[COleControl::RecreateControlWindow](#recreatecontrolwindow)|Zničí a znovu vytvoří okno ovládacího prvku.|
+|[COleControl::Aktualizovat](#refresh)|Vynutí překreslení vzhledu ovládacího prvku.|
+|[COleControl::ReleaseCapture](#releasecapture)|Uvolní zachycení myši.|
+|[COleControl::ReleaseDC](#releasedc)|Uvolní kontext zobrazovacího zařízení kontejneru ovládacího prvku bez oken.|
+|[COleControl::ReparentControlWindow](#reparentcontrolwindow)|Obnoví nadřazenou položku ovládacího okna.|
+|[COleControl::ResetStockProps](#resetstockprops)|Inicializuje `COleControl` vlastnosti zásob na výchozí hodnoty.|
+|[COleControl::ResetVersion](#resetversion)|Inicializuje číslo verze na danou hodnotu.|
+|[COleControl::ScrollWindow](#scrollwindow)|Umožňuje ovládacímu prvku bez oken posouvat oblast v rámci aktivního obrazu na místě na displeji.|
+|[COleControl::SelectFontObject](#selectfontobject)|Vybere vlastní vlastnost Font do kontextu zařízení.|
+|[COleControl::SelectStockFont](#selectstockfont)|Vybere vlastnost Stock Font do kontextu zařízení.|
+|[COleControl::SerializovatRozsah](#serializeextent)|Serializuje nebo inicializuje prostor zobrazení ovládacího prvku.|
+|[COleControl::SerializeStockProps](#serializestockprops)|Serializuje nebo inicializuje `COleControl` vlastnosti zásob.|
+|[COleControl::SerializeVersion](#serializeversion)|Serializuje nebo inicializuje informace o verzi ovládacího prvku.|
+|[COleControl::SetAppearance](#setappearance)|Nastaví hodnotu vlastnosti Vzhled na skladě.|
+|[COleControl::SetbackColor](#setbackcolor)|Nastaví hodnotu stock BackColor vlastnost.|
+|[COleControl::SetBorderStyle](#setborderstyle)|Nastaví hodnotu vlastnosti BorderStyle.|
+|[COleControl::SetCapture](#setcapture)|Způsobí, že okno kontejneru ovládacího prvku převzít zachycení myši jménem ovládacího prvku.|
+|[COleControl::SetControlSize](#setcontrolsize)|Nastaví umístění a velikost ovládacího prvku OLE.|
+|[COleControl::SetEnabled](#setenabled)|Nastaví hodnotu vlastnosti Stock Enabled.|
+|[COleControl::SetFocus](#setfocus)|Způsobí, že okno kontejneru ovládacího prvku převzít vstupní fokus na ovládací prvek.|
+|[COleControl::SetFont](#setfont)|Nastaví hodnotu vlastnosti Stock Font.|
+|[COleControl::SetForeColor](#setforecolor)|Nastaví hodnotu stock UreColor vlastnost.|
+|[COleControl::SetInitialSize](#setinitialsize)|Nastaví velikost ovládacího prvku OLE při prvním zobrazení v kontejneru.|
+|[COleControl::SetModifiedFlag](#setmodifiedflag)|Změní změněný stav ovládacího prvku.|
+|[COleControl::SetNotPovoleno](#setnotpermitted)|Označuje, že požadavek na úpravu se nezdařil.|
+|[COleControl::SetNotSupported](#setnotsupported)|Zabrání úpravám hodnoty vlastnosti ovládacího prvku uživatelem.|
+|[COleControl::SetRectInContainer](#setrectincontainer)|Nastaví obdélník ovládacího prvku vzhledem k jeho kontejneru.|
+|[COleControl::SetText](#settext)|Nastaví hodnotu vlastnosti Text nebo Caption.|
+|[COleControl::ThrowError](#throwerror)|Signalizuje, že došlo k chybě v ovládacím prvku OLE.|
+|[COleControl::TransformCoords](#transformcoords)|Transformuje hodnoty souřadnic mezi kontejnerem a ovládacím prvkem.|
+|[COleControl::Přeložitbarvu](#translatecolor)|Převede hodnotu OLE_COLOR na hodnotu COLORREF.|
+|[COleControl::WillAmbientsBeValidDuringLoad](#willambientsbevalidduringload)|Určuje, zda okolní vlastnosti budou k dispozici při příštím načtení ovládacího prvku.|
+|[COleControl::WindowProc](#windowproc)|Poskytuje postup systému `COleControl` Windows pro objekt.|
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[COleControl –::D rawContent](#drawcontent)|Volá se rozhraním, když je potřeba aktualizovat vzhled ovládacího prvku.|
-|[COleControl –::D rawMetafile](#drawmetafile)|Volá se rozhraním, když se používá kontext zařízení Metafile.|
-|[COleControl –:: IsInvokeAllowed](#isinvokeallowed)|Povoluje vyvolání metody automatizace.|
-|[COleControl –:: SetInitialDataFormats](#setinitialdataformats)|Volá se rozhraním, aby se inicializoval seznam formátů dat, které ovládací prvek podporuje.|
+|[COleControl::DrawContent](#drawcontent)|Volat rámci při ovládacího prvku vzhled musí být aktualizován.|
+|[COleControl::DrawMetafile](#drawmetafile)|Volat rámci při použití kontextu zařízení metasouboru.|
+|[COleControl::IsInvokeAllowed](#isinvokeallowed)|Umožňuje vyvolání metody automatizace.|
+|[COleControl::SetInitialDataFormats](#setinitialdataformats)|Volat rámci inicializovat seznam formátů dat podporovaných ovládacím prvkem.|
 
 ## <a name="remarks"></a>Poznámky
 
-Tato třída je odvozena od `CWnd`dědí všechny funkce objektu okna systému Windows a další funkce specifické pro OLE, jako je například vypálení událostí a schopnost podporovat metody a vlastnosti.
+Odvozeno `CWnd`z , tato třída dědí všechny funkce objektu okna systému Windows plus další funkce specifické pro OLE, jako je například spuštění událostí a schopnost podporovat metody a vlastnosti.
 
-Ovládací prvky OLE lze vložit do aplikace typu kontejner OLE a komunikovat s kontejnerem pomocí obousměrného systému pro vyvolávání událostí a vystavení metod a vlastností kontejneru. Všimněte si, že standardní kontejnery OLE podporují pouze základní funkce ovládacího prvku OLE. Nemůžou podporovat rozšířené funkce ovládacího prvku OLE. K vyvolání události dojde, když jsou události odesílány do kontejneru v důsledku provedení určitých akcí v rámci ovládacího prvku. Kontejner pak komunikuje s ovládacím prvkem pomocí exponované sady metod a vlastností, které jsou podobné členským funkcím a datovým členům C++ třídy. Tento přístup umožňuje vývojáři řídit vzhled ovládacího prvku a upozorňovat kontejner, když dojde k určitým akcím.
+Ole ovládací prvky lze vložit do aplikací kontejneru OLE a komunikovat s kontejnerem pomocí obousměrného systému události spouštění a vystavení metody a vlastnosti kontejneru. Všimněte si, že standardní kontejnery OLE podporují pouze základní funkce ovládacího prvku OLE. Nejsou schopni podporovat rozšířené funkce ovládacího prvku OLE. K událostem dojde, když jsou události odeslány do kontejneru v důsledku určitých akcí, které probíhají v ovládacím prvku. Kontejner zase komunikuje s ovládacím prvkem pomocí vystavené sady metod a vlastností analogických s členskými funkcemi a datovými členy třídy C++. Tento přístup umožňuje vývojáři řídit vzhled ovládacího prvku a upozornit kontejner, když dojde k určité akce.
 
 ## <a name="windowless-controls"></a>Ovládací prvky bez oken
 
-Ovládací prvky OLE lze použít místně aktivní bez okna. Ovládací prvky bez oken mají významné výhody:
+Ole ovládací prvky lze použít na místě aktivní bez okna. Ovládací prvky bez oken mají významné výhody:
 
-- Ovládací prvky bez oken můžou být transparentní a nepravoúhlé.
+- Ovládací prvky bez oken mohou být průhledné a nepravoúhlé
 
-- Ovládací prvky bez oken zmenšují velikost instance a čas vytvoření objektu.
+- Ovládací prvky bez oken zmenšují velikost instance a čas vytvoření objektu
 
-Ovládací prvky nepotřebují okno. Služby, které nabízí okno, lze snadno poskytnout prostřednictvím jediného sdíleného okna (obvykle kontejneru) a bitu pro odeslání kódu. V případě, že okno je většinou zbytečné komplikace na objektu.
+Ovládací prvky nepotřebují okno. Služby, které okno nabízí, lze snadno poskytnout prostřednictvím jednoho sdíleného okna (obvykle kontejneru) a trochu dispečerského kódu. Mít okno je většinou zbytečnou komplikací na objektu.
 
-Pokud se používá aktivace bez oken, je kontejner (který má okno) zodpovědný za poskytování služeb, které by jinak poskytoval vlastní okno ovládacího prvku. Například pokud váš ovládací prvek potřebuje zadat dotaz na fokus klávesnice, zadat dotaz na zachycení myši nebo získat kontext zařízení, tyto operace jsou spravovány kontejnerem. Členské funkce `COleControl` bez oken vyvolávají tyto operace na kontejneru.
+Při použití aktivace bez oken kontejneru (který má okno) je zodpovědný za poskytování služeb, které by jinak byly poskytnuty vlastní okno ovládacího prvku. Například pokud ovládací prvek potřebuje dotaz na fokus klávesnice, dotaz zachycení myši nebo získat kontext zařízení, tyto operace jsou spravovány kontejneru. Funkce `COleControl` člena bez oken vyvolávají tyto operace v kontejneru.
 
-Pokud je povolená aktivace bez oken, kontejner deleguje vstupní zprávy na rozhraní `IOleInPlaceObjectWindowless` ovládacího prvku (rozšíření [IOleInPlaceObject](/windows/win32/api/oleidl/nn-oleidl-ioleinplaceobject) pro podporu bez oken). `COleControl`implementace tohoto rozhraní bude odesílat tyto zprávy přes mapu zpráv vašeho ovládacího prvku, a to tak, že se odpovídajícím způsobem upraví souřadnice myši. Tyto zprávy můžete zpracovat jako běžné zprávy o oknech přidáním odpovídajících položek do mapy zpráv.
+Pokud je povolena aktivace bez oken, kontejner deleguje vstupní zprávy do rozhraní ovládacího `IOleInPlaceObjectWindowless` prvku (rozšíření [IOleInPlaceObject](/windows/win32/api/oleidl/nn-oleidl-ioleinplaceobject) pro podporu bez oken). `COleControl`Implementace tohoto rozhraní odešle tyto zprávy prostřednictvím mapy zpráv ovládacího prvku po odpovídajícím nastavení souřadnic myši. Tyto zprávy můžete zpracovat jako běžné zprávy okna přidáním odpovídajících položek do mapy zpráv.
 
-V ovládacím prvku bez oken byste měli vždy použít `COleControl` členské funkce namísto odpovídajících `CWnd` členských funkcí nebo jejich souvisejících funkcí rozhraní Windows API.
+V ovládacím prvku bez oken `COleControl` byste měli vždy `CWnd` používat členské funkce namísto odpovídajících členských funkcí nebo souvisejících funkcí rozhraní API systému Windows.
 
-Objekty ovládacího prvku OLE mohou také vytvořit okno pouze v případě, že se stanou aktivní, ale množství práce potřebné pro přechod neaktivní – aktivní přejde nahoru a rychlost přechodu skončí. Existují případy, kdy se jedná o problém: jako příklad můžete uvažovat o mřížce textových polí. Při přesunutí nahoru a dolů přes sloupec musí být každý ovládací prvek na místě aktivované a pak deaktivován. Rychlost neaktivního/aktivního přechodu ovlivní přímo rychlost posouvání.
+Ole řídicí objekty můžete také vytvořit okno pouze v případě, že se stanou aktivní, ale množství práce potřebné pro neaktivní aktivní přechod přejde nahoru a rychlost přechodu přejde dolů. Existují případy, kdy se jedná o problém: jako příklad zvažte mřížku textových polí. Při kurzoru nahoru a dolů přes sloupec, každý ovládací prvek musí být na místě aktivován a poté deaktivován. Rychlost neaktivního/aktivního přechodu bude mít přímý vliv na rychlost posouvání.
 
-Další informace o vývoji rozhraní ovládacího prvku OLE naleznete v článcích [ovládací prvky ActiveX knihovny MFC](../../mfc/mfc-activex-controls.md) a [Přehled: vytvoření programu ovládacího prvku ActiveX knihovny MFC](../../mfc/reference/mfc-activex-control-wizard.md). Informace o optimalizaci ovládacích prvků OLE, včetně ovládacích prvků bez oken a blikání, naleznete v tématu [MFC ActiveX Controls: Optimization](../../mfc/mfc-activex-controls-optimization.md).
+Další informace o vývoji řídicího rámce OLE naleznete v článcích [Ovládací prvky activexu knihovny MFC](../../mfc/mfc-activex-controls.md) a [přehled: Vytvoření programu řízení activexů knihovny MFC](../../mfc/reference/mfc-activex-control-wizard.md). Informace o optimalizaci ovládacích prvků OLE, včetně ovládacích prvků bez oken a bez blikání, naleznete v [tématu Ovládací prvky ActiveX knihovny MFC: Optimalizace](../../mfc/mfc-activex-controls-optimization.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[CObject](../../mfc/reference/cobject-class.md)
+[CObjekt](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[CCmdCíl](../../mfc/reference/ccmdtarget-class.md)
 
-[CWnd](../../mfc/reference/cwnd-class.md)
+[Cwnd](../../mfc/reference/cwnd-class.md)
 
 `COleControl`
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** AFXCTL. h
+**Záhlaví:** afxctl.h
 
-##  <a name="ambientbackcolor"></a>COleControl –:: AmbientBackColor
+## <a name="colecontrolambientbackcolor"></a><a name="ambientbackcolor"></a>COleControl::AmbientBackColor
 
-Vrátí hodnotu vlastnosti ambiented BackColor.
+Vrátí hodnotu okolní vlastnosti BackColor.
 
 ```
 OLE_COLOR AmbientBackColor();
@@ -582,15 +582,15 @@ OLE_COLOR AmbientBackColor();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Aktuální hodnota vlastnosti okolní pozadí kontejneru, pokud existuje. Pokud vlastnost není podporována, vrátí tato funkce barvu pozadí definovanou systémem Windows.
+Aktuální hodnota okolní vlastnosti backcolor kontejneru, pokud existuje. Pokud vlastnost není podporována, vrátí tato funkce systémem definovanou barvu pozadí systému Windows.
 
 ### <a name="remarks"></a>Poznámky
 
-Vlastnost Ambient BackColor je k dispozici pro všechny ovládací prvky a je definována kontejnerem. Všimněte si, že kontejner není vyžadován k podpoře této vlastnosti.
+Ambient BackColor Vlastnost je k dispozici pro všechny ovládací prvky a je definován kontejneru. Všimněte si, že kontejner není nutné pro podporu této vlastnosti.
 
-##  <a name="ambientdisplayname"></a>COleControl –:: AmbientDisplayName
+## <a name="colecontrolambientdisplayname"></a><a name="ambientdisplayname"></a>COleControl::AmbientDisplayName
 
-Název, který se má kontejneru přiřadit k ovládacímu prvku, se dá použít v chybových zprávách zobrazených uživateli.
+Název, který kontejner přiřadil ovládacímu prvku, lze použít v chybových zprávách zobrazených uživateli.
 
 ```
 CString AmbientDisplayName();
@@ -598,15 +598,15 @@ CString AmbientDisplayName();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Název ovládacího prvku OLE Výchozí hodnota je řetězec s nulovou délkou.
+Název ovládacího prvku OLE. Výchozí hodnota je řetězec nulové délky.
 
 ### <a name="remarks"></a>Poznámky
 
-Všimněte si, že kontejner není vyžadován k podpoře této vlastnosti.
+Všimněte si, že kontejner není nutné pro podporu této vlastnosti.
 
-##  <a name="ambientfont"></a>COleControl –:: AmbientFont
+## <a name="colecontrolambientfont"></a><a name="ambientfont"></a>COleControl::AmbientFont
 
-Vrátí hodnotu vlastnosti okolního písma.
+Vrátí hodnotu vlastnosti ambient Font.
 
 ```
 LPFONTDISP AmbientFont();
@@ -614,15 +614,15 @@ LPFONTDISP AmbientFont();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na rozhraní pro expedici písma v kontejneru. Výchozí hodnota je NULL. Pokud se vrácení nerovná hodnotě NULL, zodpovídáte za uvolnění písma voláním členské funkce [IUnknown:: Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release) .
+Ukazatel na rozhraní odeslání okolí písma kontejneru. Výchozí hodnota je NULL. Pokud návrat není rovna NULL, jste zodpovědní za uvolnění písma voláním jeho [IUnknown::Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release) členské funkce.
 
 ### <a name="remarks"></a>Poznámky
 
-Vlastnost okolí písma je definována kontejnerem a je k dispozici pro všechny ovládací prvky. Všimněte si, že kontejner není vyžadován k podpoře této vlastnosti.
+Ambient Font Vlastnost je definována kontejneru a je k dispozici pro všechny ovládací prvky. Všimněte si, že kontejner není nutné pro podporu této vlastnosti.
 
-##  <a name="ambientforecolor"></a>COleControl –:: AmbientForeColor
+## <a name="colecontrolambientforecolor"></a><a name="ambientforecolor"></a>COleControl::AmbientForeColor
 
-Vrátí hodnotu vlastnosti okolního popředí.
+Vrátí hodnotu vlastnosti Ambient ForeColor.
 
 ```
 OLE_COLOR AmbientForeColor();
@@ -630,13 +630,13 @@ OLE_COLOR AmbientForeColor();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Aktuální hodnota vlastnosti okolního popředí kontejneru, pokud existuje. Pokud není podporováno, vrátí tato funkce textovou barvu definovanou systémem Windows.
+Aktuální hodnota okolí kontejneru ForeColor vlastnost, pokud existuje. Pokud tato funkce není podporována, vrátí systémem definovanou barvu textu systému Windows.
 
 ### <a name="remarks"></a>Poznámky
 
-Vlastnost Ambient ForeColor je k dispozici pro všechny ovládací prvky a je definována kontejnerem. Všimněte si, že kontejner není vyžadován k podpoře této vlastnosti.
+Vlastnost Ambient ForeColor je k dispozici pro všechny ovládací prvky a je definována kontejnerem. Všimněte si, že kontejner není nutné pro podporu této vlastnosti.
 
-##  <a name="ambientlocaleid"></a>COleControl –:: AmbientLocaleID
+## <a name="colecontrolambientlocaleid"></a><a name="ambientlocaleid"></a>COleControl::AmbientLocaleID
 
 Vrátí ID národního prostředí kontejneru.
 
@@ -646,15 +646,15 @@ LCID AmbientLocaleID();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota vlastnosti LocaleID kontejneru, pokud existuje. Pokud tato vlastnost není podporována, vrátí tato funkce 0.
+Hodnota vlastnosti LocaleID kontejneru, pokud existuje. Pokud tato vlastnost není podporována, tato funkce vrátí 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Ovládací prvek může použít LocaleID k přizpůsobení uživatelského rozhraní pro konkrétní národní prostředí. Všimněte si, že kontejner není vyžadován k podpoře této vlastnosti.
+Ovládací prvek můžete použít LocaleID přizpůsobit své uživatelské rozhraní pro konkrétní národní prostředí. Všimněte si, že kontejner není nutné pro podporu této vlastnosti.
 
-##  <a name="ambientappearance"></a>COleControl –:: AmbientAppearance
+## <a name="colecontrolambientappearance"></a><a name="ambientappearance"></a>COleControl::Ambientappearance
 
-Načte aktuální nastavení vzhledu pro objekt ovládacího prvku.
+Načte aktuální nastavení vzhledu objektu ovládacího prvku.
 
 ```
 short AmbientAppearance();
@@ -664,15 +664,15 @@ short AmbientAppearance();
 
 Vzhled ovládacího prvku:
 
-- **0** plochý vzhled
+- **0** Plochý vzhled
 
-- **1** prostorový vzhled
+- **1** 3D vzhled
 
 ### <a name="remarks"></a>Poznámky
 
-Voláním této funkce načtete aktuální hodnotu vlastnosti DISPID_AMBIENT_APPEARANCE ovládacího prvku.
+Volání této funkce načíst aktuální hodnotu vlastnosti DISPID_AMBIENT_APPEARANCE pro ovládací prvek.
 
-##  <a name="ambientscaleunits"></a>COleControl –:: AmbientScaleUnits
+## <a name="colecontrolambientscaleunits"></a><a name="ambientscaleunits"></a>COleControl::AmbientScaleUnits
 
 Vrátí typ jednotek používaných kontejnerem.
 
@@ -682,15 +682,15 @@ CString AmbientScaleUnits();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Řetězec obsahující ambientní ScaleUnits kontejneru. Pokud tato vlastnost není podporována, vrátí tato funkce řetězec s nulovou délkou.
+Řetězec obsahující okolní ScaleUnits kontejneru. Pokud tato vlastnost není podporována, vrátí tato funkce řetězec nulové délky.
 
 ### <a name="remarks"></a>Poznámky
 
-Vlastnost ScaleUnits kontejneru lze použít k zobrazení pozic nebo dimenzí s popiskem zvolené jednotky, jako je například twip nebo centimetry. Všimněte si, že kontejner není vyžadován k podpoře této vlastnosti.
+Vlastnost okolního kontejneru ScaleUnits lze použít k zobrazení pozic nebo kót, označených vybranou jednotkou, například twips nebo centimetry. Všimněte si, že kontejner není nutné pro podporu této vlastnosti.
 
-##  <a name="ambientshowgrabhandles"></a>COleControl –:: AmbientShowGrabHandles
+## <a name="colecontrolambientshowgrabhandles"></a><a name="ambientshowgrabhandles"></a>COleControl::AmbientShowGrabHandles
 
-Určuje, zda kontejner umožňuje ovládacímu prvku zobrazit obslužné rutiny pro sebe samé, pokud je aktivní.
+Určuje, zda kontejner umožňuje ovládacímu prvku zobrazit úchyty pro sebe, když je aktivní.
 
 ```
 BOOL AmbientShowGrabHandles();
@@ -698,15 +698,15 @@ BOOL AmbientShowGrabHandles();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud by se měly zobrazit obslužné rutiny přidaných hodnot; v opačném případě 0. Pokud tato vlastnost není podporována, vrátí tato funkce nenulovou hodnotu.
+Nenulová, pokud by měly být zobrazeny úchyty pro uchopení; jinak 0. Pokud tato vlastnost není podporována, tato funkce vrátí nenulovou hodnotu.
 
 ### <a name="remarks"></a>Poznámky
 
-Všimněte si, že kontejner není vyžadován k podpoře této vlastnosti.
+Všimněte si, že kontejner není nutné pro podporu této vlastnosti.
 
-##  <a name="ambientshowhatching"></a>COleControl –:: AmbientShowHatching
+## <a name="colecontrolambientshowhatching"></a><a name="ambientshowhatching"></a>COleControl::AmbientShowHatching
 
-Určuje, zda kontejner umožňuje ovládacímu prvku, aby se při aktivním uživatelském rozhraní zobrazoval s šrafovaném vzorem.
+Určuje, zda kontejner umožňuje ovládacímu prvku zobrazit sám se šrafovaným vzorkem, když je aktivní ui.
 
 ```
 BOOL AmbientShowHatching();
@@ -714,15 +714,15 @@ BOOL AmbientShowHatching();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud by měl být zobrazený vzorek šrafování; v opačném případě 0. Pokud tato vlastnost není podporována, vrátí tato funkce nenulovou hodnotu.
+Nenulová, pokud by měl být zobrazen šrafovaný vzor; jinak 0. Pokud tato vlastnost není podporována, tato funkce vrátí nenulovou hodnotu.
 
 ### <a name="remarks"></a>Poznámky
 
-Všimněte si, že kontejner není vyžadován k podpoře této vlastnosti.
+Všimněte si, že kontejner není nutné pro podporu této vlastnosti.
 
-##  <a name="ambienttextalign"></a>COleControl –:: AmbientTextAlign
+## <a name="colecontrolambienttextalign"></a><a name="ambienttextalign"></a>COleControl::AmbientTextAlign
 
-Určuje zarovnání okolního textu preferované kontejnerem ovládacího prvku.
+Určuje zarovnání textu okolí upřednostňované kontejnerem ovládacího prvku.
 
 ```
 short AmbientTextAlign();
@@ -730,24 +730,24 @@ short AmbientTextAlign();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Stav vlastnosti s okolním zarovnáním kontejneru. Pokud tato vlastnost není podporována, vrátí tato funkce 0.
+Stav okolní vlastnosti kontejneru TextAlign. Pokud tato vlastnost není podporována, tato funkce vrátí 0.
 
-Následuje seznam platných návratových hodnot:
+Následuje seznam platných vrácených hodnot:
 
 |Návratová hodnota|Význam|
 |------------------|-------------|
 |0|Obecné zarovnání (čísla vpravo, text vlevo).|
 |1|Zarovnat doleva|
-|2|Center|
-|3|Zarovnat vpravo|
+|2|Střed|
+|3|Odůvodnění vpravo|
 
 ### <a name="remarks"></a>Poznámky
 
-Tato vlastnost je k dispozici pro všechny vložené ovládací prvky a je definována kontejnerem. Všimněte si, že kontejner není vyžadován k podpoře této vlastnosti.
+Tato vlastnost je k dispozici pro všechny vložené ovládací prvky a je definována kontejnerem. Všimněte si, že kontejner není nutné pro podporu této vlastnosti.
 
-##  <a name="ambientuidead"></a>COleControl –:: AmbientUIDead
+## <a name="colecontrolambientuidead"></a><a name="ambientuidead"></a>COleControl::AmbientUiDead
 
-Určuje, zda kontejner chce ovládací prvek reagovat na akce uživatelského rozhraní.
+Určuje, zda kontejner chce, aby ovládací prvek reagoval na akce uživatelského rozhraní.
 
 ```
 BOOL AmbientUIDead();
@@ -755,15 +755,15 @@ BOOL AmbientUIDead();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud by měl ovládací prvek reagovat na akce uživatelského rozhraní; v opačném případě 0. Pokud tato vlastnost není podporována, vrátí tato funkce 0.
+Nenulová, pokud by měl ovládací prvek reagovat na akce uživatelského rozhraní; jinak 0. Pokud tato vlastnost není podporována, tato funkce vrátí 0.
 
 ### <a name="remarks"></a>Poznámky
 
 Kontejner může například nastavit hodnotu TRUE v režimu návrhu.
 
-##  <a name="ambientusermode"></a>COleControl –:: AmbientUserMode
+## <a name="colecontrolambientusermode"></a><a name="ambientusermode"></a>COleControl::AmbientUserMode
 
-Určuje, zda je kontejner v režimu návrhu nebo v uživatelském režimu.
+Určuje, zda je kontejner v režimu návrhu nebo uživatelského režimu.
 
 ```
 BOOL AmbientUserMode();
@@ -771,13 +771,13 @@ BOOL AmbientUserMode();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je kontejner v uživatelském režimu; v opačném případě 0 (v návrhovém režimu). Pokud tato vlastnost není podporována, vrátí tato funkce hodnotu TRUE.
+Nenulová, pokud je kontejner v uživatelském režimu; jinak 0 (v režimu návrhu). Pokud tato vlastnost není podporována, vrátí tato funkce hodnotu PRAVDA.
 
 ### <a name="remarks"></a>Poznámky
 
-Kontejner může například nastavit hodnotu FALSE v režimu návrhu.
+Kontejner může například nastavit na hodnotu FALSE v režimu návrhu.
 
-##  <a name="boundpropertychanged"></a>COleControl –:: BoundPropertyChanged
+## <a name="colecontrolboundpropertychanged"></a><a name="boundpropertychanged"></a>COleControl::BoundPropertyChanged
 
 Signalizuje, že hodnota vázané vlastnosti se změnila.
 
@@ -787,16 +787,16 @@ void BoundPropertyChanged(DISPID dispid);
 
 ### <a name="parameters"></a>Parametry
 
-*DISPID*<br/>
+*Dispid*<br/>
 ID odeslání vázané vlastnosti ovládacího prvku.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato hodnota musí být volána pokaždé, když se změní hodnota vlastnosti, a to i v případech, kdy změna nebyla provedena prostřednictvím metody set vlastnosti. Buďte obzvláště vědomi vlastností vazeb, které jsou namapovány na členské proměnné. Při každé změně takové členské proměnné `BoundPropertyChanged` nutné volat.
+To musí být volána pokaždé, když se změní hodnota vlastnosti, a to i v případech, kdy změna nebyla provedena prostřednictvím metody property Set. Buďte zvláště vědomi vázané vlastnosti, které jsou mapovány na členské proměnné. Pokaždé, když se taková `BoundPropertyChanged` proměnná člena změní, musí být volána.
 
-##  <a name="boundpropertyrequestedit"></a>COleControl –:: BoundPropertyRequestEdit
+## <a name="colecontrolboundpropertyrequestedit"></a><a name="boundpropertyrequestedit"></a>COleControl::BoundPropertyRequestEdit
 
-Požaduje oprávnění z rozhraní `IPropertyNotifySink` pro změnu hodnoty vázané vlastnosti poskytované ovládacím prvkem.
+Požaduje oprávnění z `IPropertyNotifySink` rozhraní ke změně hodnoty vázané vlastnosti poskytované ovládacího prvku.
 
 ```
 BOOL BoundPropertyRequestEdit(DISPID dispid);
@@ -804,20 +804,20 @@ BOOL BoundPropertyRequestEdit(DISPID dispid);
 
 ### <a name="parameters"></a>Parametry
 
-*DISPID*<br/>
+*Dispid*<br/>
 ID odeslání vázané vlastnosti ovládacího prvku.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je změna povolena; v opačném případě 0. Výchozí hodnota je nenulová.
+Nenulová, pokud je změna povolena; jinak 0. Výchozí hodnota je nenulová.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud je oprávnění odepřeno, ovládací prvek nesmí umožnit hodnotu změny vlastnosti. To lze provést ignorováním nebo selháním akce, která se pokusila změnit hodnotu vlastnosti.
+Pokud je oprávnění odepřeno, ovládací prvek nesmí nechat hodnotu vlastnosti změnit. To lze provést ignorováním nebo selháním akce, která se pokusila změnit hodnotu vlastnosti.
 
-##  <a name="clienttoparent"></a>COleControl –:: ClientToParent
+## <a name="colecontrolclienttoparent"></a><a name="clienttoparent"></a>COleControl::ClientToParent
 
-Přeloží souřadnice *pPoint* do nadřazených souřadnic.
+Převede souřadnice *pPoint* do nadřazených souřadnic.
 
 ```
 virtual void ClientToParent(
@@ -828,18 +828,18 @@ virtual void ClientToParent(
 ### <a name="parameters"></a>Parametry
 
 *lprcBounds*<br/>
-Ukazatel na hranice ovládacího prvku OLE v rámci kontejneru. Ne klientská oblast, ale oblast celého ovládacího prvku, včetně ohraničení a posuvníků.
+Ukazatel na hranice ovládacího prvku OLE v kontejneru. Ne klientská oblast, ale oblast celého ovládacího prvku včetně ohraničení a posuvníků.
 
-*pPoint*<br/>
-Ukazatel na bod oblasti klienta OLE, který se má přeložit do souřadnic nadřazeného objektu (kontejneru).
+*pBod*<br/>
+Ukazatel na bod oblasti klienta OLE, který má být přeložen do souřadnic nadřazeného (kontejneru).
 
 ### <a name="remarks"></a>Poznámky
 
-Vstupní *pPoint* je relativní vzhledem k počátku klientské oblasti ovládacího prvku OLE (levý horní roh oblasti klienta ovládacího prvku). Výstup *pPoint* je relativní vzhledem k počátku nadřazeného objektu (v levém horním rohu kontejneru).
+Na vstupní *pPoint* je relativní k původu klientské oblasti ovládacího prvku OLE (levý horní roh klientské oblasti ovládacího prvku). Na výstupu *pPoint* je relativní k původu nadřazené (levý horní roh kontejneru).
 
-##  <a name="clipcaretrect"></a>COleControl –:: ClipCaretRect
+## <a name="colecontrolclipcaretrect"></a><a name="clipcaretrect"></a>COleControl::ClipCaretRect
 
-Upraví obdélník blikajícího kurzoru, pokud je zcela nebo částečně pokrytý překrývajícími se neprůhledné objekty.
+Upraví obdélník stříšky, pokud je zcela nebo částečně zakryt překrývajícími se neprůhlednými objekty.
 
 ```
 BOOL ClipCaretRect(LPRECT lpRect);
@@ -848,23 +848,23 @@ BOOL ClipCaretRect(LPRECT lpRect);
 ### <a name="parameters"></a>Parametry
 
 *lpRect*<br/>
-U vstupu ukazatel na strukturu [Rect](/windows/win32/api/windef/ns-windef-rect) obsahující oblast blikajícího kurzoru, která se má upravit. Pro výstup, upravenou oblast stříšky nebo hodnotu NULL, pokud je obdélník blikajícího kurzoru zcela pokrytý.
+Na vstupu ukazatel na [rect](/windows/win32/api/windef/ns-windef-rect) strukturu, která obsahuje oblast stříšky, které mají být upraveny. Na výstupu upravená oblast stříšky nebo NULL, pokud je obdélník stříšky zcela zakrytý.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud bylo úspěšné; v opačném případě 0.
+Nenulová, pokud je úspěšná; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Blikající kurzor je blikající čára, blok nebo rastrový obrázek, který obvykle indikuje, kde budou vloženy texty nebo grafiky.
+Stříška je blikající čára, blok nebo bitmapa, která obvykle označuje, kam bude vložen text nebo grafika.
 
-Objekt bez oken nemůže bezpečně zobrazit blikající kurzor bez prvotní kontroly, zda je blikající kurzor částečně nebo zcela skrytý překrývajícími se objekty. Aby to bylo možné, může objekt pomocí `ClipCaretRect` získat upravený blikající kurzor (zmenšen) a zajistit tak jeho umístění v oblasti oříznutí.
+Objekt bez oken nemůže bezpečně zobrazit stříšku bez předchozí kontroly, zda je stříška částečně nebo zcela skryta překrývajícími se objekty. Aby to bylo možné, může `ClipCaretRect` objekt použít k nastavení stříšky (snížené) a zajistit tak, aby se vešla do oblasti oříznutí.
 
-Objekty, které vytvářejí stříšku, by měly odeslat obdélník blikajícího kurzoru, aby `ClipCaretRect` a používaly pro něj upravený obdélník. Pokud je blikající kurzor zcela skrytý, vrátí tato metoda hodnotu FALSE a kurzor by neměl být v tomto případě zobrazen vůbec.
+Objekty vytvářející stříšku by `ClipCaretRect` měly odeslat obdélník stříšky a použít upravený obdélník pro stříšku. Pokud je stříška zcela skrytá, tato metoda vrátí FALSE a stříška by neměla být v tomto případě zobrazena vůbec.
 
-##  <a name="colecontrol"></a>COleControl –:: COleControl –
+## <a name="colecontrolcolecontrol"></a><a name="colecontrol"></a>COleControl::COleControl
 
-Vytvoří objekt `COleControl`.
+Vytvoří `COleControl` objekt.
 
 ```
 COleControl();
@@ -872,11 +872,11 @@ COleControl();
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce se obvykle nevolá přímo. Místo toho je ovládací prvek OLE většinou vytvořen jeho objektem pro vytváření tříd.
+Tato funkce obvykle není volána přímo. Místo toho je ovládací prvek OLE obvykle vytvořen jeho factory třídy.
 
-##  <a name="controlinfochanged"></a>COleControl –:: ControlInfoChanged
+## <a name="colecontrolcontrolinfochanged"></a><a name="controlinfochanged"></a>COleControl::ControlInfoChanged
 
-Tuto funkci volejte, pokud se změní sada instrukcí, které ovládací prvek podporuje.
+Volání této funkce při změně sady mnemotechnické pomůcky podporované ovládacím prvkem.
 
 ```
 void ControlInfoChanged();
@@ -884,11 +884,11 @@ void ControlInfoChanged();
 
 ### <a name="remarks"></a>Poznámky
 
-Po přijetí tohoto oznámení kontejner ovládacího prvku získá novou sadu instrukcí voláním metody [IOleControl:: GetControlInfo](/windows/win32/api/ocidl/nf-ocidl-iolecontrol-getcontrolinfo). Všimněte si, že kontejner není vyžadován k reakci na toto oznámení.
+Po obdržení tohoto oznámení kontejneru ovládacího prvku získá novou sadu mnemotechnické pomůcky voláním [IOleControl::GetControlInfo](/windows/win32/api/ocidl/nf-ocidl-iolecontrol-getcontrolinfo). Všimněte si, že kontejner není nutné reagovat na toto oznámení.
 
-##  <a name="displayerror"></a>COleControl –::D isplayError
+## <a name="colecontroldisplayerror"></a><a name="displayerror"></a>COleControl::Dchyba při přehrávání
 
-Volá se rozhraním po zpracování chybové události akcie (Pokud obslužná rutina události potlačila zobrazení chyby).
+Volat rámci po stock Error událost byla zpracována (pokud obslužná rutina události potlačil zobrazení chyby).
 
 ```
 virtual void DisplayError(
@@ -901,30 +901,30 @@ virtual void DisplayError(
 
 ### <a name="parameters"></a>Parametry
 
-*Code*<br/>
-Hodnota stavového kódu, který se má ohlásit Úplný seznam možných kódů naleznete v článku [ovládací prvky ActiveX: Pokročilá témata](../../mfc/mfc-activex-controls-advanced-topics.md).
+*kód*<br/>
+Hodnota stavového kódu, která má být vykázána. Úplný seznam možných kódů naleznete v článku [Ovládací prvky ActiveX: Rozšířená témata](../../mfc/mfc-activex-controls-advanced-topics.md).
 
 *lpszDescription*<br/>
-Popis chyby, která je hlášena.
+Popis hlášené chyby.
 
-*lpszSource*<br/>
-Název modulu, který generuje chybu (obvykle název modulu ovládacího prvku OLE).
+*lpszZdroj*<br/>
+Název modulu, který chybu generuje (obvykle název řídicího modulu OLE).
 
-*lpszHelpFile*<br/>
-Název souboru Help obsahujícího popis chyby
+*soubor lpszHelpFile*<br/>
+Název souboru nápovědy obsahující popis chyby.
 
 *nHelpID*<br/>
-ID kontextové zprávy o chybě, která je hlášena.
+ID kontextu nápovědy hlášené chyby.
 
 ### <a name="remarks"></a>Poznámky
 
-Výchozí chování zobrazí okno se zprávou obsahující popis chyby, která je obsažena v *lpszDescription*.
+Výchozí chování zobrazí okno se zprávou obsahující popis chyby obsažené v *lpszDescription*.
 
-Potlačením této funkce upravíte způsob zobrazení chyb.
+Přepište tuto funkci a přizpůsobte způsob zobrazení chyb.
 
-##  <a name="doclick"></a>COleControl –::D oClick
+## <a name="colecontroldoclick"></a><a name="doclick"></a>COleControl::DoClick
 
-Simuluje akci kliknutí myší na ovládací prvek.
+Simuluje akci kliknutí myší na ovládací mase.
 
 ```
 void DoClick();
@@ -932,13 +932,13 @@ void DoClick();
 
 ### <a name="remarks"></a>Poznámky
 
-Bude volána přepisovatelný `COleControl::OnClick` členská funkce a událost kliknutí na akcií bude vyvolána, pokud je podporována ovládacím prvkem.
+Overridable `COleControl::OnClick` člen funkce bude volána a populace Click událost bude aktivována, pokud je podporován ovládacím prvkem.
 
-Tato funkce je podporována `COleControl` základní třídou jako uloženou metodou s názvem DoClick. Další informace naleznete v článku [ovládací prvky ActiveX: metody](../../mfc/mfc-activex-controls-methods.md).
+Tato funkce je `COleControl` podporována základní třídou jako burzovní metodou nazvanou DoClick. Další informace naleznete v článku [Ovládací prvky ActiveX: Metody](../../mfc/mfc-activex-controls-methods.md).
 
-##  <a name="dopropexchange"></a>COleControl –::D oPropExchange
+## <a name="colecontroldopropexchange"></a><a name="dopropexchange"></a>COleControl::DoPropExchange
 
-Volá se rozhraním při načítání nebo ukládání ovládacího prvku z trvalé reprezentace úložiště, jako je například datový proud nebo sada vlastností.
+Volat rámci při načítání nebo ukládání ovládacího prvku z reprezentace trvaléúložiště, jako je například datový proud nebo sada vlastností.
 
 ```
 virtual void DoPropExchange(CPropExchange* pPX);
@@ -947,17 +947,17 @@ virtual void DoPropExchange(CPropExchange* pPX);
 ### <a name="parameters"></a>Parametry
 
 *pPX*<br/>
-Ukazatel na objekt `CPropExchange`. Rozhraní poskytuje tento objekt pro vytvoření kontextu výměny vlastností, včetně jeho směru.
+Ukazatel na `CPropExchange` objekt. Rozhraní Framework poskytuje tento objekt k vytvoření kontextu výměny vlastností, včetně jeho směr.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce obvykle volá **PX_** rodině funkcí k načtení nebo uložení specifických vlastností definovaných uživatelem ovládacího prvku OLE.
+Tato funkce obvykle provádí volání **PX_** rodiny funkcí k načtení nebo uložení konkrétních uživatelem definovaných vlastností ovládacího prvku OLE.
 
-Pokud byl Průvodce ovládacím prvkem použit k vytvoření projektu ovládacího prvku OLE, přepsaná verze této funkce provede serializaci uložených vlastností, které jsou podporovány `COleControl` voláním funkce základní třídy `COleControl::DoPropExchange`. Při přidávání uživatelsky definovaných vlastností do ovládacího prvku OLE budete muset tuto funkci upravit, aby se vaše nové vlastnosti serializovány. Další informace o serializaci naleznete v článku [ovládací prvky ActiveX: serializace](../../mfc/mfc-activex-controls-serializing.md).
+Pokud byl k vytvoření řídicího projektu OLE použit Průvodce řízením, bude potlačená `COleControl` verze této funkce serializovat `COleControl::DoPropExchange`vlastnosti zásob podporované voláním funkce základní třídy . Při přidávání uživatelem definovaných vlastností do ovládacího prvku OLE bude nutné tuto funkci upravit a serializovat nové vlastnosti. Další informace o serializaci naleznete v článku [Ovládací prvky ActiveX: Serializace](../../mfc/mfc-activex-controls-serializing.md).
 
-##  <a name="dosuperclasspaint"></a>COleControl –::D oSuperclassPaint
+## <a name="colecontroldosuperclasspaint"></a><a name="dosuperclasspaint"></a>COleControl::DoSuperclassPaint
 
-Překreslí ovládací prvek OLE, který byl podtřídou z ovládacího prvku Windows.
+Překreslí ovládací prvek OLE, který byl podtřídy z ovládacího prvku systému Windows.
 
 ```
 void DoSuperclassPaint(
@@ -967,21 +967,21 @@ void DoSuperclassPaint(
 
 ### <a name="parameters"></a>Parametry
 
-*Emulátor*<br/>
+*Pdc*<br/>
 Ukazatel na kontext zařízení kontejneru ovládacího prvku.
 
 *rcBounds*<br/>
-Oblast, ve které se má ovládací prvek vykreslovat
+Oblast, ve které má být ovládací prvek nakreslena.
 
 ### <a name="remarks"></a>Poznámky
 
-Voláním této funkce zajistíte správné zpracování vykreslování neaktivního ovládacího prvku OLE. Tato funkce by měla být použita pouze v případě, že podtřídy ovládacího prvku OLE řídí ovládací prvek systému Windows a měl by být volána ve funkci `OnDraw` ovládacího prvku.
+Volání této funkce správně zpracovat malování neaktivní ovládací prvek OLE. Tato funkce by měla být použita pouze v případě, že `OnDraw` ovládací prvek OLE podtřídy ovládací prvek systému Windows a by měla být volána ve funkci ovládacího prvku.
 
-Další informace o této funkci a podtřídění ovládacího prvku systému Windows naleznete v článku [ovládací prvky ActiveX: podtřídy ovládacího prvku systému Windows](../../mfc/mfc-activex-controls-subclassing-a-windows-control.md).
+Další informace o této funkci a podřadných třídách ovládacího prvku systému Windows naleznete v článku [Ovládací prvky ActiveX: Podřazení ovládacího prvku systému Windows](../../mfc/mfc-activex-controls-subclassing-a-windows-control.md).
 
-##  <a name="drawcontent"></a>COleControl –::D rawContent
+## <a name="colecontroldrawcontent"></a><a name="drawcontent"></a>COleControl::DrawContent
 
-Volá se rozhraním, když je potřeba aktualizovat vzhled ovládacího prvku.
+Volat rámci při ovládacího prvku vzhled musí být aktualizován.
 
 ```
 void DrawContent(
@@ -991,19 +991,19 @@ void DrawContent(
 
 ### <a name="parameters"></a>Parametry
 
-*Emulátor*<br/>
+*Pdc*<br/>
 Ukazatel na kontext zařízení.
 
-*RC*<br/>
-Obdélníková oblast, která se má vykreslit.
+*Rc*<br/>
+Obdélníková plocha, která má být nakreslena.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce přímo volá přepsatelné `OnDraw` funkce.
+Tato funkce přímo volá `OnDraw` overridable funkce.
 
-##  <a name="drawmetafile"></a>COleControl –::D rawMetafile
+## <a name="colecontroldrawmetafile"></a><a name="drawmetafile"></a>COleControl::DrawMetafile
 
-Volá se rozhraním, když se používá kontext zařízení Metafile.
+Volat rámci při použití kontextu zařízení metasouboru.
 
 ```
 void DrawMetafile(
@@ -1013,15 +1013,15 @@ void DrawMetafile(
 
 ### <a name="parameters"></a>Parametry
 
-*Emulátor*<br/>
-Ukazatel na kontext zařízení Metafile.
+*Pdc*<br/>
+Ukazatel na kontext zařízení metasouboru.
 
-*RC*<br/>
-Obdélníková oblast, která se má vykreslit.
+*Rc*<br/>
+Obdélníková plocha, která má být nakreslena.
 
-##  <a name="enablesimpleframe"></a>COleControl –:: EnableSimpleFrame
+## <a name="colecontrolenablesimpleframe"></a><a name="enablesimpleframe"></a>COleControl::EnableSimpleFrame
 
-Povoluje vlastnost jednoduchého rámce pro ovládací prvek OLE.
+Umožňuje jednoduchou charakteristiku rámce pro ovládací prvek OLE.
 
 ```
 void EnableSimpleFrame();
@@ -1029,11 +1029,11 @@ void EnableSimpleFrame();
 
 ### <a name="remarks"></a>Poznámky
 
-Tato vlastnost umožňuje ovládacímu prvku podporovat vizuální zahrnutí jiných ovládacích prvků, ale ne omezení technologie OLE. Příkladem může být skupinový rámeček s několika ovládacími prvky v rámci. Tyto ovládací prvky nejsou obsažené v OLE, ale jsou ve stejném skupinovém poli.
+Tato charakteristika umožňuje ovládací prvek pro podporu vizuální uzavření jiných ovládacích prvků, ale není pravda, OLE uzavření. Příkladem může být skupinové pole s několika ovládacími prvky uvnitř. Tyto ovládací prvky nejsou ole obsaženy, ale jsou ve stejné skupině pole.
 
-##  <a name="exchangeextent"></a>COleControl –:: ExchangeExtent
+## <a name="colecontrolexchangeextent"></a><a name="exchangeextent"></a>COleControl::ExchangeExtent
 
-Serializace nebo inicializuje stav rozsahu ovládacího prvku (jeho rozměry v jednotkách HIMETRIC).
+Serializuje nebo inicializuje stav rozsahu ovládacího prvku (jeho rozměry v jednotkách HIMETRIC).
 
 ```
 BOOL ExchangeExtent(CPropExchange* pPX);
@@ -1042,19 +1042,19 @@ BOOL ExchangeExtent(CPropExchange* pPX);
 ### <a name="parameters"></a>Parametry
 
 *pPX*<br/>
-Ukazatel na objekt [CPropExchange](../../mfc/reference/cpropexchange-class.md) . Rozhraní poskytuje tento objekt pro vytvoření kontextu výměny vlastností, včetně jeho směru.
+Ukazatel na objekt [CPropExchange.](../../mfc/reference/cpropexchange-class.md) Rozhraní Framework poskytuje tento objekt k vytvoření kontextu výměny vlastností, včetně jeho směr.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je funkce úspěšná; 0, jinak.
+Nenulová, pokud byla funkce úspěšná; 0 jinak.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce je obvykle volána výchozí implementací `COleControl::DoPropExchange`.
+Tato funkce je obvykle volána `COleControl::DoPropExchange`výchozí implementací aplikace .
 
-##  <a name="exchangestockprops"></a>COleControl –:: ExchangeStockProps
+## <a name="colecontrolexchangestockprops"></a><a name="exchangestockprops"></a>COleControl::ExchangeStockProps
 
-Serializace nebo inicializuje stav vlastností akcií ovládacího prvku.
+Serializuje nebo inicializuje stav vlastností zásob ovládacího prvku.
 
 ```
 void ExchangeStockProps(CPropExchange* pPX);
@@ -1063,15 +1063,15 @@ void ExchangeStockProps(CPropExchange* pPX);
 ### <a name="parameters"></a>Parametry
 
 *pPX*<br/>
-Ukazatel na objekt [CPropExchange](../../mfc/reference/cpropexchange-class.md) . Rozhraní poskytuje tento objekt pro vytvoření kontextu výměny vlastností, včetně jeho směru.
+Ukazatel na objekt [CPropExchange.](../../mfc/reference/cpropexchange-class.md) Rozhraní Framework poskytuje tento objekt k vytvoření kontextu výměny vlastností, včetně jeho směr.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce je obvykle volána výchozí implementací `COleControl::DoPropExchange`.
+Tato funkce je obvykle volána `COleControl::DoPropExchange`výchozí implementací aplikace .
 
-##  <a name="exchangeversion"></a>COleControl –:: ExchangeVersion
+## <a name="colecontrolexchangeversion"></a><a name="exchangeversion"></a>COleControl::ExchangeVersion
 
-Serializace nebo inicializuje stav informací o verzi ovládacího prvku.
+Serializuje nebo inicializuje stav informací o verzi ovládacího prvku.
 
 ```
 BOOL ExchangeVersion(
@@ -1083,27 +1083,27 @@ BOOL ExchangeVersion(
 ### <a name="parameters"></a>Parametry
 
 *pPX*<br/>
-Ukazatel na objekt `CPropExchange`. Rozhraní poskytuje tento objekt pro vytvoření kontextu výměny vlastností, včetně jeho směru.
+Ukazatel na `CPropExchange` objekt. Rozhraní Framework poskytuje tento objekt k vytvoření kontextu výměny vlastností, včetně jeho směr.
 
 *dwVersionDefault*<br/>
 Aktuální číslo verze ovládacího prvku.
 
-*bConvert*<br/>
-Určuje, zda mají být trvalá data při uložení převedena do nejnovějšího formátu nebo udržována ve stejném formátu, který byl načten.
+*bPřevést*<br/>
+Označuje, zda mají být trvalá data při uložení převedena do nejnovějšího formátu nebo udržována ve stejném formátu, který byl načten.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulová hodnota funkce byla úspěšná; 0, jinak.
+Nenulová funkce byla úspěšná. 0 jinak.
 
 ### <a name="remarks"></a>Poznámky
 
-Obvykle se jedná o první funkci volanou přepsáním `COleControl::DoPropExchange`ovládacího prvku. Při načítání Tato funkce přečte číslo verze trvalých dat a odpovídajícím způsobem nastaví atribut verze objektu [CPropExchange](../../mfc/reference/cpropexchange-class.md) . Při ukládání Tato funkce zapisuje číslo verze trvalých dat.
+Obvykle se jedná o první funkci volanou přepsáním ovládacího `COleControl::DoPropExchange`prvku . Při načítání tato funkce přečte číslo verze trvalých dat a odpovídajícím způsobem nastaví atribut verze objektu [CPropExchange.](../../mfc/reference/cpropexchange-class.md) Při ukládání tato funkce zapíše číslo verze trvalých dat.
 
-Další informace o persistenci a správy verzí naleznete v článku [ovládací prvky ActiveX: serializace](../../mfc/mfc-activex-controls-serializing.md).
+Další informace o trvalosti a správu verzí naleznete v článku [Ovládací prvky ActiveX: Serializace](../../mfc/mfc-activex-controls-serializing.md).
 
-##  <a name="fireclick"></a>COleControl –:: FireClick
+## <a name="colecontrolfireclick"></a><a name="fireclick"></a>COleControl::FireClick
 
-Volá se rozhraním, když se na ukazatel myši klikne přes aktivní ovládací prvek.
+Volat rámci při klepnutí myší přes aktivní ovládací prvek.
 
 ```
 void FireClick();
@@ -1111,13 +1111,13 @@ void FireClick();
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud je tato událost definovaná jako vlastní událost, určíte, kdy se událost aktivuje.
+Pokud je tato událost definována jako vlastní událost, určíte, kdy je událost aktivována.
 
-Pro automatické vyvolávání události Click musí mít mapa událostí ovládacího prvku nadefinovanou událost kliknutí na akci.
+Aby mohlo dojít k automatickému vypálení události Click, musí být na mapě události ovládacího prvku definována událost Click.
 
-##  <a name="firedblclick"></a>COleControl –:: FireDblClick
+## <a name="colecontrolfiredblclick"></a><a name="firedblclick"></a>COleControl::FireDblClick
 
-Volá se rozhraním, když se na ukazateli myši pokliká přes aktivní ovládací prvek.
+Volat rámci při poklepání myší přes aktivní ovládací prvek.
 
 ```
 void FireDblClick();
@@ -1125,13 +1125,13 @@ void FireDblClick();
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud je tato událost definovaná jako vlastní událost, určíte, kdy se událost aktivuje.
+Pokud je tato událost definována jako vlastní událost, určíte, kdy je událost aktivována.
 
-Aby došlo k automatickému vyvolávání události DblClick, musí mít mapa událostí ovládacího prvku nadefinovanou uloženou událost DblClick.
+Aby mohlo dojít k automatickému spuštění události DblClick, musí mít mapa událostí ovládacího prvku definována událost DblClick.
 
-##  <a name="fireerror"></a>COleControl –:: FireError –
+## <a name="colecontrolfireerror"></a><a name="fireerror"></a>COleControl::FireError
 
-Aktivuje chybovou událost akcie.
+Spustí událost Stock Error.
 
 ```
 void FireError(
@@ -1142,28 +1142,28 @@ void FireError(
 
 ### <a name="parameters"></a>Parametry
 
-*Code*<br/>
-Hodnota stavového kódu, který se má ohlásit Úplný seznam možných kódů naleznete v článku [ovládací prvky ActiveX: Pokročilá témata](../../mfc/mfc-activex-controls-advanced-topics.md).
+*kód*<br/>
+Hodnota stavového kódu, která má být vykázána. Úplný seznam možných kódů naleznete v článku [Ovládací prvky ActiveX: Rozšířená témata](../../mfc/mfc-activex-controls-advanced-topics.md).
 
 *lpszDescription*<br/>
-Popis chyby, která je hlášena.
+Popis hlášené chyby.
 
 *nHelpID*<br/>
-ID, které je hlášené k chybě.
+ID nápovědy hlášené chyby.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato událost poskytuje způsob signalizace na vhodných místech v kódu, na kterých došlo k chybě v rámci vašeho ovládacího prvku. Na rozdíl od jiných uložených událostí, jako je například Click nebo MouseMove, není chyba nikdy aktivována rozhraním.
+Tato událost poskytuje způsob signalizace na příslušných místech v kódu, že došlo k chybě v rámci ovládacího prvku. Na rozdíl od jiných událostí akcií, jako je například Click nebo MouseMove, Error je nikdy aktivován a rozhraní.
 
-Chcete-li ohlásit chybu, ke které dojde během funkce Get vlastnosti, funkce set vlastnosti nebo metody automatizace, zavolejte na [COleControl –:: ThrowError](#throwerror).
+Chcete-li ohlásit chybu, ke které dochází během vlastnosti get funkce, funkce sady vlastností nebo metody automatizace, volejte [COleControl::ThrowError](#throwerror).
 
-Implementace události skladové chyby ovládacího prvku OLE používá hodnotu Code. Pokud váš ovládací prvek používá tuto událost a je určen k použití v Visual Basic 4,0, zobrazí se chyby, protože hodnota Code není v Visual Basic podporována.
+Implementace události Stock Error ovládacího prvku OLE používá hodnotu SCODE. Pokud ovládací prvek používá tuto událost a je určen pro použití v jazyce Visual Basic 4.0, obdržíte chyby, protože hodnota SCODE není podporována v jazyce Visual Basic.
 
-Chcete-li tento problém vyřešit, ručně změňte parametr Code v ovládacím prvku. Soubor ODL na **dlouhou dobu**. Kromě toho jakákoli vlastní událost, metoda nebo vlastnost, která používá parametr Code, také způsobuje stejný problém.
+Chcete-li tento problém vyřešit, ručně změňte parametr SCODE v ovládacím prvku . ODL soubor na **dlouhou**. Kromě toho všechny vlastní události, metody nebo vlastnosti, která používá parametr SCODE také způsobí stejný problém.
 
-##  <a name="fireevent"></a>COleControl –:: FireEvent
+## <a name="colecontrolfireevent"></a><a name="fireevent"></a>COleControl::FireEvent
 
-Aktivuje uživatelsky definovanou událost z ovládacího prvku s libovolným počtem volitelných argumentů.
+Vyvolá uživatelem definovanou událost z ovládacího prvku s libovolným počtem volitelných argumentů.
 
 ```
 void AFX_CDECL FireEvent(
@@ -1174,25 +1174,25 @@ void AFX_CDECL FireEvent(
 
 ### <a name="parameters"></a>Parametry
 
-*DISPID*<br/>
-ID odeslání události, která má být aktivována.
+*Dispid*<br/>
+ID odeslání události, která má být vypálena.
 
 *pbParams*<br/>
 Popisovač pro typy parametrů události.
 
 ### <a name="remarks"></a>Poznámky
 
-Obvykle by tato funkce neměla být volána přímo. Místo toho zavoláte funkce pro spouštění událostí v části mapa události v deklaraci třídy vašeho ovládacího prvku.
+Obvykle by tato funkce neměla být volána přímo. Místo toho budete volat funkce spouštění událostí v části mapy událostí deklarace třídy ovládacího prvku.
 
-Argument *pbParams* je seznam oddělený mezerami **VTS_** . Jedna nebo více těchto hodnot oddělených mezerami (nejedná se o čárky), určuje seznam parametrů funkce. Možné hodnoty jsou následující:
+Argument *pbParams* je seznam **VTS_** oddělený ch od místa . Jedna nebo více těchto hodnot oddělených mezerami (nikoli čárkami) určuje seznam parametrů funkce. Možné hodnoty jsou následující:
 
-|Písmeno|Typ parametru|
+|Symbol|Typ parametru|
 |------------|--------------------|
 |VTS_COLOR|OLE_COLOR|
 |VTS_FONT|`IFontDisp*`|
 |VTS_HANDLE|HWND|
 |VTS_PICTURE|`IPictureDisp*`|
-|VTS_OPTEXCLUSIVE|OLE_OPTEXCLUSIVE *|
+|VTS_OPTEXCLUSIVE|OLE_OPTEXCLUSIVE*|
 |VTS_TRISTATE|OLE_TRISTATE|
 |VTS_XPOS_HIMETRIC|OLE_XPOS_HIMETRIC|
 |VTS_YPOS_HIMETRIC|OLE_YPOS_HIMETRIC|
@@ -1204,11 +1204,11 @@ Argument *pbParams* je seznam oddělený mezerami **VTS_** . Jedna nebo více t�
 |VTS_YSIZE_HIMETRIC|OLE_XSIZE_HIMETRIC|
 
 > [!NOTE]
->  Pro všechny typy variant byly definovány další konstanty variant s výjimkou VTS_FONT a VTS_PICTURE, které poskytují ukazatel na konstantu dat variant. Tyto konstanty jsou pojmenovány pomocí **VTS_P**`constantname` konvence. Například VTS_PCOLOR je ukazatel na konstantu VTS_COLOR.
+> Další konstanty variant byly definovány pro všechny typy variant, s výjimkou VTS_FONT a VTS_PICTURE, které poskytují ukazatel na konstantu dat varianty. Tyto konstanty jsou pojmenovány pomocí **VTS_P** `constantname` konvence. Například VTS_PCOLOR je ukazatel na VTS_COLOR konstantu.
 
-##  <a name="firekeydown"></a>COleControl –:: FireKeyDown
+## <a name="colecontrolfirekeydown"></a><a name="firekeydown"></a>COleControl::FireKeyDown
 
-Volá se rozhraním, když se stiskne klávesa, když je ovládací prvek aktivní uživatelského rozhraní.
+Volat rámci při stisknutí klávesy, zatímco ovládací prvek je aktivní.
 
 ```
 void FireKeyDown(
@@ -1219,26 +1219,26 @@ void FireKeyDown(
 ### <a name="parameters"></a>Parametry
 
 *pnChar*<br/>
-Ukazatel na hodnotu kódu virtuálního klíče stisknuté klávesy. Seznam standardních kódů virtuálních klíčů naleznete v tématu Winuser. h.
+Ukazatel na hodnotu kódu virtuálního klíče stisknuté klávesy. Seznam standardních virtuálních kódů klíčů naleznete v tématu Winuser.h
 
 *nShiftState*<br/>
 Obsahuje kombinaci následujících příznaků:
 
-- SHIFT_MASK stisknutí klávesy SHIFT během akce.
+- SHIFT_MASK Během akce byla stisknuta klávesa SHIFT.
 
-- CTRL_MASK stisknutí klávesy CTRL během akce.
+- CTRL_MASK Během akce byla stisknuta klávesa CTRL.
 
-- ALT_MASK stisknutí klávesy ALT během akce.
+- ALT_MASK Během akce byla stisknuta klávesa ALT.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud je tato událost definovaná jako vlastní událost, určíte, kdy se událost aktivuje.
+Pokud je tato událost definována jako vlastní událost, určíte, kdy je událost aktivována.
 
-Pro automatické vyvolávání události KeyDown musí být mapa událostí ovládacího prvku definována jako událost skladové události.
+Aby mohlo dojít k automatickému spuštění události KeyDown, musí mít mapa událostí ovládacího prvku definována událost KeyDown.
 
-##  <a name="firekeypress"></a>COleControl –:: FireKeyPress
+## <a name="colecontrolfirekeypress"></a><a name="firekeypress"></a>COleControl::FireKeyPress
 
-Volá se rozhraním, když se stiskne a uvolní klíč, zatímco vlastní ovládací prvek je v rámci kontejneru aktivní.
+Volat rámci při stisknutí klíče a uvolnění, zatímco vlastní ovládací prvek je aktivní rozhraní v rámci kontejneru.
 
 ```
 void FireKeyPress(USHORT* pnChar);
@@ -1251,15 +1251,15 @@ Ukazatel na hodnotu znaku stisknuté klávesy.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud je tato událost definovaná jako vlastní událost, určíte, kdy se událost aktivuje.
+Pokud je tato událost definována jako vlastní událost, určíte, kdy je událost aktivována.
 
-Příjemce události může upravit *pnChar*, například převést všechna malá písmena na velká. Pokud chcete ověřit upravený znak, přepište `OnKeyPressEvent`.
+Příjemce události může změnit *pnChar*, například převést všechna malá písmena na velká písmena. Chcete-li zkontrolovat změněný znak, `OnKeyPressEvent`přepište .
 
-Aby došlo k automatickému vyvolávání události KeyPress, musí mít mapa události ovládacího prvku definovanou událost stisknutí.
+Aby mohlo dojít k automatickému vypalování události KeyPress, musí mít mapa událostí ovládacího prvku definována událost KeyPress.
 
-##  <a name="firekeyup"></a>COleControl –:: FireKeyUp
+## <a name="colecontrolfirekeyup"></a><a name="firekeyup"></a>COleControl::FireKeyUp
 
-Volá se rozhraním, když se uvolní klíč, zatímco vlastní ovládací prvek je v rámci kontejneru aktivní.
+Volat rámci při uvolnění klíče, zatímco vlastní ovládací prvek je aktivní rozhraní v rámci kontejneru.
 
 ```
 void FireKeyUp(
@@ -1270,26 +1270,26 @@ void FireKeyUp(
 ### <a name="parameters"></a>Parametry
 
 *pnChar*<br/>
-Ukazatel na hodnotu kódu virtuálního klíče pro vydaný klíč. Seznam standardních kódů virtuálních klíčů naleznete v tématu Winuser. h.
+Ukazatel na hodnotu kódu virtuálního klíče vydaného klíče. Seznam standardních virtuálních kódů klíčů naleznete v tématu Winuser.h
 
 *nShiftState*<br/>
 Obsahuje kombinaci následujících příznaků:
 
-- SHIFT_MASK stisknutí klávesy SHIFT během akce.
+- SHIFT_MASK Během akce byla stisknuta klávesa SHIFT.
 
-- CTRL_MASK stisknutí klávesy CTRL během akce.
+- CTRL_MASK Během akce byla stisknuta klávesa CTRL.
 
-- ALT_MASK stisknutí klávesy ALT během akce.
+- ALT_MASK Během akce byla stisknuta klávesa ALT.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud je tato událost definovaná jako vlastní událost, určíte, kdy se událost aktivuje.
+Pokud je tato událost definována jako vlastní událost, určíte, kdy je událost aktivována.
 
-Pro automatické vyvolávání události KeyUp musí být mapa událostí ovládacího prvku definována jako definovaná událost KeyUp.
+Aby mohlo dojít k automatickému spuštění události KeyUp, musí mít mapa událostí ovládacího prvku definována událost KeyUp.
 
-##  <a name="firemousedown"></a>COleControl –:: FireMouseDown
+## <a name="colecontrolfiremousedown"></a><a name="firemousedown"></a>COleControl::FireMouseDown
 
-Volá se rozhraním, když se na aktivním vlastním ovládacím prvku stiskne tlačítko myši.
+Volat rámci při stisknutí tlačítka myši přes aktivní vlastní ovládací prvek.
 
 ```
 void FireMouseDown(
@@ -1301,39 +1301,39 @@ void FireMouseDown(
 
 ### <a name="parameters"></a>Parametry
 
-*nNový*<br/>
-Číselná hodnota stisknutého tlačítka myši Může obsahovat jednu z následujících hodnot:
+*nTlačítko*<br/>
+Číselná hodnota stisknutého tlačítka myši. Může obsahovat jednu z následujících hodnot:
 
-- LEFT_BUTTON stisknutí levého tlačítka myši.
+- LEFT_BUTTON Levé tlačítko myši bylo stisknuto.
 
-- MIDDLE_BUTTON se stisklo prostřední tlačítko myši.
+- MIDDLE_BUTTON Prostřední tlačítko myši bylo stisknuto.
 
-- RIGHT_BUTTON stisknutí pravého tlačítka myši.
+- RIGHT_BUTTON Pravé tlačítko myši bylo stisknuto.
 
 *nShiftState*<br/>
 Obsahuje kombinaci následujících příznaků:
 
-- SHIFT_MASK stisknutí klávesy SHIFT během akce.
+- SHIFT_MASK Během akce byla stisknuta klávesa SHIFT.
 
-- CTRL_MASK stisknutí klávesy CTRL během akce.
+- CTRL_MASK Během akce byla stisknuta klávesa CTRL.
 
-- ALT_MASK stisknutí klávesy ALT během akce.
+- ALT_MASK Během akce byla stisknuta klávesa ALT.
 
-*znak*<br/>
-Souřadnice x kurzoru při stisknutí tlačítka myši Souřadnice jsou relativní vzhledem k levému hornímu rohu okna ovládacího prvku.
+*X*<br/>
+Souřadnice x kurzoru při stisknutí tlačítka myši. Souřadnice je relativní vzhledem k levému hornímu rohu ovládacího okna.
 
-*požadované*<br/>
-Souřadnice y kurzoru při stisknutí tlačítka myši Souřadnice jsou relativní vzhledem k levému hornímu rohu okna ovládacího prvku.
+*Y*<br/>
+Souřadnice y kurzoru při stisknutí tlačítka myši. Souřadnice je relativní vzhledem k levému hornímu rohu ovládacího okna.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud je tato událost definovaná jako vlastní událost, určíte, kdy se událost aktivuje.
+Pokud je tato událost definována jako vlastní událost, určíte, kdy je událost aktivována.
 
-Aby došlo k automatickému vyvolávání události MouseDown, musí mít mapa událostí ovládacího prvku nadefinovanou uloženou událost MouseDown.
+Aby mohlo dojít k automatickému spouštění události MouseDown, musí být na mapě události ovládacího prvku definována událost MouseDown.
 
-##  <a name="firemousemove"></a>COleControl –:: FireMouseMove
+## <a name="colecontrolfiremousemove"></a><a name="firemousemove"></a>COleControl::FireMouseMove
 
-Volá se rozhraním, když se kurzor přesune přes aktivní vlastní ovládací prvek.
+Volat rámci při přesunutí kurzoru přes aktivní vlastní ovládací prvek.
 
 ```
 void FireMouseMove(
@@ -1345,39 +1345,39 @@ void FireMouseMove(
 
 ### <a name="parameters"></a>Parametry
 
-*nNový*<br/>
-Číselná hodnota stisknutých tlačítek myši Obsahuje kombinaci následujících hodnot:
+*nTlačítko*<br/>
+Číselná hodnota stisknutých tlačítek myši. Obsahuje kombinaci následujících hodnot:
 
-- LEFT_BUTTON levé tlačítko myši bylo během akce stisknuto.
+- LEFT_BUTTON Levé tlačítko myši bylo během akce stisknuto.
 
-- MIDDLE_BUTTON prostřední tlačítko myši bylo během akce stisknuto.
+- MIDDLE_BUTTON Během akce bylo stisknuto prostřední tlačítko myši.
 
-- RIGHT_BUTTON stisknutí pravého tlačítka myši v průběhu akce.
+- RIGHT_BUTTON Pravé tlačítko myši bylo během akce stisknuto.
 
 *nShiftState*<br/>
 Obsahuje kombinaci následujících příznaků:
 
-- SHIFT_MASK stisknutí klávesy SHIFT během akce.
+- SHIFT_MASK Během akce byla stisknuta klávesa SHIFT.
 
-- CTRL_MASK stisknutí klávesy CTRL během akce.
+- CTRL_MASK Během akce byla stisknuta klávesa CTRL.
 
-- ALT_MASK stisknutí klávesy ALT během akce.
+- ALT_MASK Během akce byla stisknuta klávesa ALT.
 
-*znak*<br/>
-Souřadnice x kurzoru Souřadnice jsou relativní vzhledem k levému hornímu rohu okna ovládacího prvku.
+*X*<br/>
+Souřadnice x kurzoru. Souřadnice je relativní vzhledem k levému hornímu rohu ovládacího okna.
 
-*požadované*<br/>
-Souřadnice y kurzoru Souřadnice jsou relativní vzhledem k levému hornímu rohu okna ovládacího prvku.
+*Y*<br/>
+Souřadnice y kurzoru. Souřadnice je relativní vzhledem k levému hornímu rohu ovládacího okna.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud je tato událost definovaná jako vlastní událost, určíte, kdy se událost aktivuje.
+Pokud je tato událost definována jako vlastní událost, určíte, kdy je událost aktivována.
 
-Aby došlo k automatickému vyvolávání události MouseMove, musí mít mapa událostí ovládacího prvku nadefinovanou neuloženou událost MouseMove.
+Aby mohlo dojít k automatickému spouštění události MouseMove, musí mít mapa událostí ovládacího prvku stock stock MouseMove definovanou.
 
-##  <a name="firemouseup"></a>COleControl –:: FireMouseUp
+## <a name="colecontrolfiremouseup"></a><a name="firemouseup"></a>COleControl::FireMouseUp
 
-Volá se rozhraním, když se uvolní tlačítko myši nad aktivním vlastním ovládacím prvkem.
+Volat rámci při uvolnění tlačítka myši přes aktivní vlastní ovládací prvek.
 
 ```
 void FireMouseUp(
@@ -1389,39 +1389,39 @@ void FireMouseUp(
 
 ### <a name="parameters"></a>Parametry
 
-*nNový*<br/>
-Číselná hodnota tlačítka myši uvolněno. Může mít jednu z následujících hodnot:
+*nTlačítko*<br/>
+Číselná hodnota uvolněného tlačítka myši. Může mít jednu z následujících hodnot:
 
-- LEFT_BUTTON bylo uvolněno levé tlačítko myši.
+- LEFT_BUTTON Levé tlačítko myši bylo uvolněno.
 
-- MIDDLE_BUTTON bylo uvolněno prostřední tlačítko myši.
+- MIDDLE_BUTTON Bylo uvolněno prostřední tlačítko myši.
 
-- RIGHT_BUTTON bylo uvolněno pravé tlačítko myši.
+- RIGHT_BUTTON Bylo uvolněno pravé tlačítko myši.
 
 *nShiftState*<br/>
 Obsahuje kombinaci následujících příznaků:
 
-- SHIFT_MASK stisknutí klávesy SHIFT během akce.
+- SHIFT_MASK Během akce byla stisknuta klávesa SHIFT.
 
-- CTRL_MASK stisknutí klávesy CTRL během akce.
+- CTRL_MASK Během akce byla stisknuta klávesa CTRL.
 
-- ALT_MASK stisknutí klávesy ALT během akce.
+- ALT_MASK Během akce byla stisknuta klávesa ALT.
 
-*znak*<br/>
-Souřadnice x kurzoru při uvolnění tlačítka myši Souřadnice jsou relativní vzhledem k levému hornímu rohu okna ovládacího prvku.
+*X*<br/>
+Souřadnice x kurzoru při uvolnění tlačítka myši. Souřadnice je relativní vzhledem k levému hornímu rohu ovládacího okna.
 
-*požadované*<br/>
-Souřadnice y kurzoru při uvolnění tlačítka myši Souřadnice jsou relativní vzhledem k levému hornímu rohu okna ovládacího prvku.
+*Y*<br/>
+Souřadnice y kurzoru při uvolnění tlačítka myši. Souřadnice je relativní vzhledem k levému hornímu rohu ovládacího okna.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud je tato událost definovaná jako vlastní událost, určíte, kdy se událost aktivuje.
+Pokud je tato událost definována jako vlastní událost, určíte, kdy je událost aktivována.
 
-Aby došlo k automatickému vyvolávání události MouseUp, musí mít mapa událostí ovládacího prvku nadefinovanou uloženou událost MouseUp.
+Aby mohlo dojít k automatickému spouštění události MouseUp, musí mít mapa událostí ovládacího prvku stock mouseup definovanou událost.
 
-##  <a name="firereadystatechange"></a>COleControl –:: FireReadyStateChange
+## <a name="colecontrolfirereadystatechange"></a><a name="firereadystatechange"></a>COleControl::FireReadyStateChange
 
-Aktivuje událost s aktuální hodnotou stavu ovládacího prvku připraveno.
+Vyvolá událost s aktuální hodnotou stavu řízení připravenosti.
 
 ```
 void FireReadyStateChange();
@@ -1429,23 +1429,23 @@ void FireReadyStateChange();
 
 ### <a name="remarks"></a>Poznámky
 
-Stav připraveno může být jedna z následujících hodnot:
+Stav připraven může být jedna z následujících hodnot:
 
 |||
 |-|-|
 |READYSTATE_UNINITIALIZED|Výchozí stav inicializace|
-|READYSTATE_LOADING|Ovládací prvek aktuálně načítá jeho vlastnosti.|
-|READYSTATE_LOADED|Ovládací prvek byl inicializován|
-|READYSTATE_INTERACTIVE|Ovládací prvek má dostatek dat pro interaktivní, ale ne všechna asynchronní data jsou ještě načtena.|
-|READYSTATE_COMPLETE|Ovládací prvek má všechna jeho data|
+|READYSTATE_LOADING|Ovládací prvek právě načítá své vlastnosti.|
+|READYSTATE_LOADED|Ovládací prvek byl inicializován.|
+|READYSTATE_INTERACTIVE|Ovládací prvek má dostatek dat, aby bylo interaktivní, ale ne všechna asynchronní data jsou ještě načtena|
+|READYSTATE_COMPLETE|Ovládací prvek má všechna data|
 
-Pomocí [GetReadyState](#getreadystate) určete aktuální připravenost ovládacího prvku.
+Pomocí [GetReadyState](#getreadystate) určit aktuální připravenost ovládacího prvku.
 
-[Funkci InternalSetReadyState](#internalsetreadystate) změní stav připraveno na poskytnutou hodnotu a potom zavolá `FireReadyStateChange`.
+[InternalSetReadyState](#internalsetreadystate) změní stav připravenosti na zadanou hodnotu a poté zavolá `FireReadyStateChange`.
 
-##  <a name="getactivationpolicy"></a>COleControl –:: GetActivationPolicy
+## <a name="colecontrolgetactivationpolicy"></a><a name="getactivationpolicy"></a>COleControl::Zásady aktivace
 
-Mění výchozí chování aktivace ovládacího prvku, který podporuje rozhraní `IPointerInactive`.
+Změní výchozí chování aktivace ovládacího prvku, který podporuje `IPointerInactive` rozhraní.
 
 ```
 virtual DWORD GetActivationPolicy();
@@ -1453,41 +1453,41 @@ virtual DWORD GetActivationPolicy();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Kombinace příznaků z výčtu POINTERINACTIVE. Možné příznaky:
+Kombinace příznaků z výčtu POINTERINACTIVE. Možné příznaky jsou:
 
 |||
 |-|-|
-|POINTERINACTIVE_ACTIVATEONENTRY|Objekt by měl být na místě aktivovaný, když ho ukazatel myši vloží během operace přesunutí myši.|
-|POINTERINACTIVE_DEACTIVATEONLEAVE|Objekt by měl být dezaktivován, pokud ukazatel myši opustí objekt během operace přesunutí myši.|
-|POINTERINACTIVE_ACTIVATEONDRAG|Objekt by měl být umístěn na místě aktivované, když je ukazatel myši během operace přetažení přetažen myší.|
+|POINTERINACTIVE_ACTIVATEONENTRY|Objekt by měl být aktivován na místě, když ho myš zadá během operace pohybu myši.|
+|POINTERINACTIVE_DEACTIVATEONLEAVE|Objekt by měl být deaktivován, když myš opustí objekt během operace přesunutí myši.|
+|POINTERINACTIVE_ACTIVATEONDRAG|Objekt by měl být aktivován na místě, když je myš přetažena přes něj během operace přetažení.|
 
 ### <a name="remarks"></a>Poznámky
 
-Když je povoleno rozhraní `IPointerInactive`, kontejner bude delegovat WM_SETCURSOR a WM_MOUSEMOVE zprávy. `COleControl`implementace tohoto rozhraní bude odesílat tyto zprávy přes mapu zpráv vašeho ovládacího prvku, a to tak, že se odpovídajícím způsobem upraví souřadnice myši.
+Pokud `IPointerInactive` je povoleno rozhraní, kontejner deleguje WM_SETCURSOR a WM_MOUSEMOVE zprávy. `COleControl`Implementace tohoto rozhraní odešle tyto zprávy prostřednictvím mapy zpráv ovládacího prvku po odpovídajícím nastavení souřadnic myši.
 
-Pokaždé, když kontejner obdrží WM_SETCURSOR nebo WM_MOUSEMOVE zprávu s ukazatelem myši nad neaktivním objektem podporujícím `IPointerInactive`, měl by volat `GetActivationPolicy` na rozhraní a vracet příznaky z výčtu POINTERINACTIVE.
+Vždy, když kontejner obdrží zprávu WM_SETCURSOR nebo WM_MOUSEMOVE s ukazatelem `IPointerInactive`myši nad `GetActivationPolicy` neaktivní objekt podporující , by měl volat rozhraní a vrátit příznaky z výčtu POINTERINACTIVE.
 
-Tyto zprávy můžete zpracovat stejně jako běžné zprávy okna tím, že přidáte odpovídající položky do mapy zpráv. V obslužných rutinách nepoužívejte členskou proměnnou `m_hWnd` (nebo jakékoli členské funkce, které ji používají) bez prvotní kontroly, zda její hodnota je jiná než NULL.
+Tyto zprávy můžete zpracovat stejně jako běžné zprávy okna přidáním odpovídajících položek do mapy zpráv. V obslužné `m_hWnd` rutiny, vyhněte se použití členské proměnné (nebo všechny členské funkce, které ji používá) bez předchozí kontroly, že jeho hodnota je non-NULL.
 
-Libovolný objekt, který má dělat více než nastavit ukazatel myši nebo vyvolat událost přesunutí myši, jako je například poskytnutí speciální vizuální zpětné vazby, by měl vrátit příznak POINTERINACTIVE_ACTIVATEONENTRY a vykreslit zpětnou vazbu pouze v případě, že je aktivní. Pokud objekt vrátí tento příznak, kontejner by měl okamžitě aktivovat místní a pak přeslat stejnou zprávu, která aktivovala volání `GetActivationPolicy`.
+Jakýkoli objekt, který má udělat více než nastavit kurzor myši a/nebo vypálit událost přesunutí myši, například poskytnout zvláštní vizuální zpětnou vazbu, by měl vrátit příznak POINTERINACTIVE_ACTIVATEONENTRY a nakreslit zpětnou vazbu pouze v případě, že je aktivní. Pokud objekt vrátí tento příznak, kontejner by měl aktivovat na místě okamžitě a `GetActivationPolicy`potom předat dál stejnou zprávu, která spustila volání .
 
-Pokud jsou vraceny příznaky POINTERINACTIVE_ACTIVATEONENTRY i POINTERINACTIVE_DEACTIVATEONLEAVE, bude objekt aktivován pouze v případě, že je ukazatel myši nad objektem. Je-li vrácen pouze příznak POINTERINACTIVE_ACTIVATEONENTRY, bude objekt aktivován pouze jednou při prvním vložení myši do objektu.
+Pokud jsou vráceny příznaky POINTERINACTIVE_ACTIVATEONENTRY i POINTERINACTIVE_DEACTIVATEONLEAVE, objekt bude aktivován pouze v případě, že je nad objektem pouze myš. Pokud je vrácen pouze příznak POINTERINACTIVE_ACTIVATEONENTRY, bude objekt aktivován pouze jednou, když myš poprvé vstoupí do objektu.
 
-Můžete také chtít, aby neaktivní ovládací prvek byl cílem operace přetažení OLE. To vyžaduje aktivaci ovládacího prvku v okamžiku, kdy uživatel přetahuje objekt na něj, aby bylo možné zaregistrovat okno ovládacího prvku jako cíl přetažení. Pokud chcete, aby během tažení došlo k aktivaci, vraťte příznak POINTERINACTIVE_ACTIVATEONDRAG:
+Můžete také chtít neaktivní ovládací prvek být cílem operace přetažení OLE. To vyžaduje aktivaci ovládacího prvku v okamžiku, kdy uživatel přetáhne objekt přes něj, takže okno ovládacího prvku lze zaregistrovat jako cíl přetažení. Chcete-li způsobit aktivaci během přetahování, vraťte příznak POINTERINACTIVE_ACTIVATEONDRAG:
 
 [!code-cpp[NVC_MFCAxCtl#1](../../mfc/reference/codesnippet/cpp/colecontrol-class_1.cpp)]
 
-Informace, které sděluje `GetActivationPolicy`, by neměly ukládat do mezipaměti kontejnerem. Místo toho by měla být tato metoda volána pokaždé, když ukazatel myši přejde do neaktivního objektu.
+Informace sdělené `GetActivationPolicy` kontejnerem by neměly být ukládány do mezipaměti. Místo toho by tato metoda měla být volána pokaždé, když myš zadá neaktivní objekt.
 
-Pokud neaktivní objekt nepožaduje místní aktivaci, když ho myš dokončí, měl by jeho kontejner odeslat následné WM_SETCURSOR zprávy do tohoto objektu voláním [OnInactiveSetCursor](#oninactivesetcursor) , dokud ukazatel myši zůstane nad objektem.
+Pokud neaktivní objekt nepožaduje, aby byl aktivován na místě, když jej zadáte myš, jeho kontejner by měl odeslat následné WM_SETCURSOR zprávy k tomuto objektu voláním [OnInactiveSetCursor](#oninactivesetcursor) tak dlouho, dokud ukazatel myši zůstane nad objektem.
 
-Povolení rozhraní `IPointerInactive` obvykle znamená, že chcete, aby byl ovládací prvek schopný zpracovávat zprávy myši. Chcete-li získat toto chování v kontejneru, který nepodporuje rozhraní `IPointerInactive`, budete muset mít ovládací prvek vždycky aktivovaný, pokud je viditelný, což znamená, že ovládací prvek by měl mít příznak OLEMISC_ACTIVATEWHENVISIBLE mezi jeho různými příznaky. Pokud ale chcete zabránit tomu, aby se tento příznak projevil v kontejneru, který podporuje `IPointerInactive`, můžete také zadat příznak OLEMISC_IGNOREACTIVATEWHENVISIBLE:
+Povolení `IPointerInactive` rozhraní obvykle znamená, že chcete, aby ovládací prvek byl schopen zpracování zpráv myši za všech okolností. Chcete-li získat toto chování v `IPointerInactive` kontejneru, který nepodporuje rozhraní, budete muset mít ovládací prvek vždy aktivován, když je viditelný, což znamená, že ovládací prvek by měl mít příznak OLEMISC_ACTIVATEWHENVISIBLE mezi jeho různé příznaky. Chcete-li však zabránit tomu, aby se `IPointerInactive`tento příznak projevil v kontejneru, který podporuje , můžete také zadat příznak OLEMISC_IGNOREACTIVATEWHENVISIBLE:
 
 [!code-cpp[NVC_MFCAxCtl#10](../../mfc/reference/codesnippet/cpp/colecontrol-class_2.cpp)]
 
-##  <a name="getambientproperty"></a>COleControl –:: GetAmbientProperty
+## <a name="colecontrolgetambientproperty"></a><a name="getambientproperty"></a>COleControl::GetAmbientProperty
 
-Získá hodnotu ambientní vlastnosti kontejneru.
+Získá hodnotu ambient vlastnost kontejneru.
 
 ```
 BOOL GetAmbientProperty(
@@ -1499,13 +1499,13 @@ BOOL GetAmbientProperty(
 ### <a name="parameters"></a>Parametry
 
 *dwDispid*<br/>
-ID odeslání požadované vnější vlastnosti.
+ID odeslání požadované vlastnosti okolí.
 
 *vtProp*<br/>
-Variantní typ značky, který určuje typ hodnoty, která se má vrátit v *pvProp*.
+Značka typu varianty, která určuje typ hodnoty, která má být vrácena v *pvProp*.
 
 *pvProp*<br/>
-Ukazatel na adresu proměnné, která bude přijímat hodnotu vlastnosti nebo návratovou hodnotu. Skutečný typ tohoto ukazatele musí odpovídat typu zadanému parametrem *vtProp*.
+Ukazatel na adresu proměnné, která obdrží hodnotu vlastnosti nebo vrácenou hodnotu. Skutečný typ tohoto ukazatele se musí shodovat s typem určeným *vtProp*.
 
 |vtProp|Typ pvProp|
 |------------|--------------------|
@@ -1522,17 +1522,17 @@ Ukazatel na adresu proměnné, která bude přijímat hodnotu vlastnosti nebo n�
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je vlastnost ambientd podporována; v opačném případě 0.
+Nenulová, pokud je podporována vlastnost okolí; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud použijete `GetAmbientProperty` k načtení vlastností Ambient DisplayName a ScaleUnits, nastavte *vtProp* na VT_BSTR a *pvProp* na `CString*`. Pokud načítáte vlastnost okolí písma, nastavte *vtProp* na VT_FONT a *pvProp* na LPFONTDISP *.
+`GetAmbientProperty` Pokud sloužík k načtení okolních vlastností DisplayName a ScaleUnits, `CString*`nastavte *vtProp* na VT_BSTR a *pvProp* na . Pokud načítáte vlastnost ambient Font, nastavte *vtProp* na VT_FONT a *pvProp* na LPFONTDISP*.
 
-Všimněte si, že funkce již byly k dispozici pro běžné ambientní vlastnosti, jako jsou [AmbientBackColor](#ambientbackcolor) a [AmbientFont](#ambientfont).
+Všimněte si, že funkce již byly poskytnuty pro společné vlastnosti okolí, jako je [například AmbientBackColor](#ambientbackcolor) a [AmbientFont](#ambientfont).
 
-##  <a name="getappearance"></a>COleControl –:: Get– zobrazení
+## <a name="colecontrolgetappearance"></a><a name="getappearance"></a>COleControl::GetAppearance
 
-Implementuje funkci get vlastnosti vzhledu akcií ovládacího prvku.
+Implementuje Get funkce vašeho ovládacího prvku populace Vzhled vlastnost.
 
 ```
 short GetAppearance ();
@@ -1540,11 +1540,11 @@ short GetAppearance ();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Návratová hodnota určuje aktuální nastavení vzhledu jako **krátkou** (VT_I2) hodnotu, pokud je úspěšná. Tato hodnota je nula, pokud je vzhled ovládacího prvku plochý a 1, pokud je vzhled ovládacího prvku 3D.
+Vrácená hodnota určuje aktuální nastavení vzhledu jako **krátkou** (VT_I2) hodnotu, pokud je úspěšná. Tato hodnota je nulová, pokud je vzhled ovládacího prvku plochý, a 1, pokud je vzhled ovládacího prvku 3D.
 
-##  <a name="getbackcolor"></a>COleControl –:: GetBackColor
+## <a name="colecontrolgetbackcolor"></a><a name="getbackcolor"></a>COleControl::GetBackColor
 
-Implementuje funkci get pro základní vlastnost BackColor ovládacího prvku.
+Implementuje Get funkce vašeho ovládacího prvku zásob BackColor vlastnost.
 
 ```
 OLE_COLOR GetBackColor();
@@ -1552,11 +1552,11 @@ OLE_COLOR GetBackColor();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Návratová hodnota určuje aktuální barvu pozadí jako hodnotu OLE_COLOR, pokud byla úspěšná. Tuto hodnotu lze přeložit na hodnotu COLORREF voláním `TranslateColor`.
+Vrácená hodnota určuje aktuální barvu pozadí jako OLE_COLOR hodnotu, pokud je úspěšná. Tuto hodnotu lze přeložit na hodnotu COLORREF s voláním `TranslateColor`.
 
-##  <a name="getborderstyle"></a>COleControl –:: getborderstyle
+## <a name="colecontrolgetborderstyle"></a><a name="getborderstyle"></a>COleControl::GetBorderStyle
 
-Implementuje funkci get pro burzovní vlastnost BorderStyle ovládacího prvku.
+Implementuje Get funkce vašeho ovládacího prvku borderstyle vlastnost.
 
 ```
 short GetBorderStyle();
@@ -1564,11 +1564,11 @@ short GetBorderStyle();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-1, pokud má ovládací prvek normální ohraničení; 0, pokud ovládací prvek nemá ohraničení.
+.1 pokud má kontrola normální hranici; 0, pokud ovládací prvek nemá žádné ohraničení.
 
-##  <a name="getcapture"></a>COleControl –:: getcapture
+## <a name="colecontrolgetcapture"></a><a name="getcapture"></a>COleControl::GetCapture
 
-Určuje, zda objekt `COleControl` má zachycení myši.
+Určuje, `COleControl` zda má objekt zachycení myši.
 
 ```
 CWnd* GetCapture();
@@ -1576,17 +1576,17 @@ CWnd* GetCapture();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud je ovládací prvek aktivován a bez okna, vrátí **tuto** hodnotu, pokud ovládací prvek aktuálně má zachycení myši (jak je určeno kontejnerem ovládacího prvku), nebo hodnotu null, pokud nemá zachycení.
+Pokud je aktivován ovládací prvek a bez oken, vrátí **tuto hodnotu,** pokud ovládací prvek aktuálně má zachycení myši (podle kontejneru ovládacího prvku) nebo NULL, pokud nemá zachycení.
 
-V opačném případě vrátí objekt `CWnd`, který má zachycení myši (totéž jako `CWnd::GetCapture`).
+V opačném `CWnd` případě vrátí objekt, který `CWnd::GetCapture`má zachycení myši (stejné jako ).
 
 ### <a name="remarks"></a>Poznámky
 
-Aktivovaný ovládací prvek bez oken obdrží při volání [SetCapture](#setcapture) , zachycení myši.
+Aktivovaný ovládací prvek bez oken obdrží zachycení myši při volání [SetCapture.](#setcapture)
 
-##  <a name="getclassid"></a>COleControl –:: GetClassID
+## <a name="colecontrolgetclassid"></a><a name="getclassid"></a>COleControl::GetClassID
 
-Volá se rozhraním, aby se načetlo ID třídy OLE ovládacího prvku.
+Volat rámci načíst ID třídy OLE ovládacího prvku.
 
 ```
 virtual HRESULT GetClassID(LPCLSID pclsid) = 0;
@@ -1594,20 +1594,20 @@ virtual HRESULT GetClassID(LPCLSID pclsid) = 0;
 
 ### <a name="parameters"></a>Parametry
 
-*pclsid*<br/>
+*pclsid (pclsid)*<br/>
 Ukazatel na umístění ID třídy.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud volání nebylo úspěšné; v opačném případě 0.
+Nenulová, pokud volání nebylo úspěšné; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Obvykle je implementována [IMPLEMENT_OLECREATE_EX](class-factories-and-licensing.md#implement_olecreate_ex).
+Obvykle provádí [IMPLEMENT_OLECREATE_EX](class-factories-and-licensing.md#implement_olecreate_ex).
 
-##  <a name="getclientoffset"></a>COleControl –:: GetClientOffset
+## <a name="colecontrolgetclientoffset"></a><a name="getclientoffset"></a>COleControl::GetClientOffset
 
-Načte rozdíl mezi levým horním rohem obdélníkové oblasti ovládacího prvku a levým horním rohem jeho klientské oblasti.
+Načte rozdíl mezi levým horním rohem obdélníkové oblasti ovládacího prvku a levým horním rohem klientské oblasti.
 
 ```
 virtual void GetClientOffset(long* pdxOffset, long* pdyOffset) const;
@@ -1616,16 +1616,16 @@ virtual void GetClientOffset(long* pdxOffset, long* pdyOffset) const;
 ### <a name="parameters"></a>Parametry
 
 *pdxOffset*<br/>
-Ukazatel na vodorovný posun klientské oblasti ovládacího prvku OLE.
+Ukazatel na vodorovné odsazení klientské oblasti ovládacího prvku OLE.
 
 *pdyOffset*<br/>
-Ukazatel na svislé posunutí klientské oblasti ovládacího prvku OLE.
+Ukazatel na svislé odsazení klientské oblasti ovládacího prvku OLE.
 
 ### <a name="remarks"></a>Poznámky
 
-Ovládací prvek OLE má v kontejneru obdélníkovou oblast. Klientská oblast ovládacího prvku je ovládací oblast, která vylučuje ohraničení a posuvníky. Posun načtený pomocí `GetClientOffset` je rozdíl mezi levým horním rohem obdélníkové oblasti ovládacího prvku a levým horním rohem jeho klientské oblasti. Pokud má váš ovládací prvek jiné než klientské prvky než standardní ohraničení a posuvníky, přepište tuto členskou funkci, aby určovala posun.
+Ovládací prvek OLE má obdélníkovou oblast v rámci kontejneru. Klientská oblast ovládacího prvku je oblast řízení s výjimkou ohraničení a posuvníků. Posun načtený `GetClientOffset` je rozdíl mezi levým horním rohem obdélníkové oblasti ovládacího prvku a levým horním rohem klientské oblasti. Pokud ovládací prvek má jiné prvky než standardní ohraničení a posuvníky, přepište tuto členskou funkci a určete posun.
 
-##  <a name="getclientrect"></a>COleControl –:: GetClientRect
+## <a name="colecontrolgetclientrect"></a><a name="getclientrect"></a>COleControl::GetClientRect
 
 Načte velikost klientské oblasti ovládacího prvku.
 
@@ -1636,11 +1636,11 @@ virtual void GetClientRect(LPRECT lpRect) const;
 ### <a name="parameters"></a>Parametry
 
 *lpRect*<br/>
-Ukazatel na `RECT`ovou strukturu obsahující rozměry klientské oblasti ovládacího prvku bez oken; To znamená, že velikost ovládacího prvku mínus ohraničení oken, rámečky, posuvníky atd. Parametr *lpRect* určuje velikost obdélníku klienta ovládacího prvku, nikoli jeho umístění.
+Ukazatel na `RECT` strukturu obsahující rozměry klientské oblasti ovládacího prvku bez oken; to znamená velikost ovládacího prvku mínus ohraničení oken, rámce, posuvníky a tak dále. Parametr *lpRect* označuje velikost obdélníku klienta ovládacího prvku, nikoli jeho umístění.
 
-##  <a name="getclientsite"></a>COleControl –:: GetClientSite
+## <a name="colecontrolgetclientsite"></a><a name="getclientsite"></a>COleControl::GetClientSite
 
-Zadá dotaz na objekt pro ukazatel na jeho aktuální klientský server v rámci svého kontejneru.
+Dotazuje objekt pro ukazatel na aktuální klientskou lokalitu v rámci svého kontejneru.
 
 ```
 LPOLECLIENTSITE GetClientSite();
@@ -1648,13 +1648,13 @@ LPOLECLIENTSITE GetClientSite();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na aktuální klientský web ovládacího prvku ve svém kontejneru.
+Ukazatel na aktuální klientskou lokalitu ovládacího prvku v jeho kontejneru.
 
 ### <a name="remarks"></a>Poznámky
 
-Vrácený ukazatel ukazuje na instanci `IOleClientSite`. Rozhraní `IOleClientSite` implementované kontejnery, je zobrazením kontextu objektu jeho kontextu: kde je ukotven v dokumentu, kde se nachází jeho úložiště, uživatelské rozhraní a další prostředky.
+Vrácený ukazatel odkazuje na `IOleClientSite`instanci aplikace . Rozhraní, `IOleClientSite` implementované kontejnery, je zobrazení objektu jeho kontextu: kde je ukotven v dokumentu, kde získá jeho úložiště, uživatelské rozhraní a další prostředky.
 
-##  <a name="getcontrolflags"></a>COleControl –:: GetControlFlags
+## <a name="colecontrolgetcontrolflags"></a><a name="getcontrolflags"></a>COleControl::GetControlFlags
 
 Načte nastavení příznaku ovládacího prvku.
 
@@ -1664,7 +1664,7 @@ virtual DWORD GetControlFlags();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-ORed kombinace příznaků ve výčtu ControlFlags:
+Kombinace ORed příznaků ve výčtu ControlFlags:
 
 ```
 enum ControlFlags {
@@ -1679,20 +1679,20 @@ enum ControlFlags {
 
 ### <a name="remarks"></a>Poznámky
 
-Ve výchozím nastavení `GetControlFlags` vrátí `fastBeginPaint | clipPaintDC`.
+Ve výchozím `GetControlFlags` `fastBeginPaint | clipPaintDC`nastavení vrátí .
 
 |||
 |-|-|
-|`fastBeginPaint`|Je-li nastaveno, používá funkci Begin-Paint přizpůsobenou ovládacím prvkům OLE namísto rozhraní [BeginPaint](/windows/win32/api/winuser/nf-winuser-beginpaint) API (nastaveno ve výchozím nastavení).|
-|`clipPaintDC`|Pokud není nastavené, zakáže volání `IntersectClipRect` vytvořeného pomocí `COleControl` a získá malou výhodu. Pokud používáte aktivaci bez oken, příznak nemá žádný vliv.|
-|`pointerInactive`|Pokud je nastaveno, poskytuje interakci myši, pokud je ovládací prvek neaktivní, povolením implementace `COleControl`rozhraní `IPointerInactive`, které je ve výchozím nastavení zakázáno.|
-|`noFlickerActivate`|Pokud nastavíte, eliminují se nadbytečné operace kreslení a doprovodné vizuální blikání. Použijte v případě, že se ovládací prvek v neaktivních a aktivních stavech přesně nakreslí. Pokud používáte aktivaci bez oken, příznak nemá žádný vliv.|
-|`windowlessActivate`|Pokud je nastaveno, znamená to, že ovládací prvek používá aktivaci bez oken.|
-|`canOptimizeDraw`|Pokud je nastaveno, označuje, že ovládací prvek provede optimalizované vykreslování, pokud ho kontejner podporuje.|
+|`fastBeginPaint`|Pokud je nastavena, používá funkci begin-paint přizpůsobenou pro ovládací prvky OLE namísto rozhraní [BeginPaint](/windows/win32/api/winuser/nf-winuser-beginpaint) API (nastavené ve výchozím nastavení).|
+|`clipPaintDC`|Pokud není nastavena, zakáže volání `IntersectClipRect` provedené `COleControl` a získá malou rychlost výhodu. Pokud používáte aktivaci bez oken, příznak nemá žádný vliv.|
+|`pointerInactive`|Pokud set, poskytuje interakci myši, zatímco `COleControl`ovládací prvek je `IPointerInactive` neaktivní povolením 's implementace rozhraní, která je ve výchozím nastavení zakázána.|
+|`noFlickerActivate`|Pokud je nastaveno, eliminuje další operace kreslení a doprovodné vizuální blikání. Použijte, když ovládací prvek kreslí sám identicky v neaktivní a aktivní stavy. Pokud používáte aktivaci bez oken, příznak nemá žádný vliv.|
+|`windowlessActivate`|Pokud nastaveno, označuje ovládací prvek používá aktivaci bez oken.|
+|`canOptimizeDraw`|Pokud je nastaveno, znamená, že ovládací prvek provede optimalizovaný výkres, pokud jej kontejner podporuje.|
 
-Další informace o `GetControlFlags` a dalších optimalizacích ovládacích prvků OLE naleznete v tématu [ovládací prvky ActiveX: optimalizace](../../mfc/mfc-activex-controls-optimization.md).
+Další informace `GetControlFlags` o dalších optimalizacích ovládacích prvků OLE naleznete v [tématu ActiveX Controls: Optimization](../../mfc/mfc-activex-controls-optimization.md).
 
-##  <a name="getcontrolsize"></a>COleControl –:: GetControlSize
+## <a name="colecontrolgetcontrolsize"></a><a name="getcontrolsize"></a>COleControl::GetControlSize
 
 Načte velikost okna ovládacího prvku OLE.
 
@@ -1704,19 +1704,19 @@ void GetControlSize(
 
 ### <a name="parameters"></a>Parametry
 
-*formátu*<br/>
-Určuje šířku ovládacího prvku v pixelech.
+*Pcx*<br/>
+Určuje šířku ovládacího prvku v obrazových bodech.
 
 *pcy*<br/>
-Určuje výšku ovládacího prvku v pixelech.
+Určuje výšku ovládacího prvku v obrazových bodech.
 
 ### <a name="remarks"></a>Poznámky
 
-Všimněte si, že všechny souřadnice pro okna ovládacích prvků jsou relativní vzhledem k levému hornímu rohu ovládacího prvku.
+Všimněte si, že všechny souřadnice pro ovládací okna jsou relativní vzhledem k levému hornímu rohu ovládacího prvku.
 
-##  <a name="getdc"></a>COleControl –:: GetDC
+## <a name="colecontrolgetdc"></a><a name="getdc"></a>COleControl::GetDC
 
-Poskytuje pro objekt bez oken pro získání kontextu obrazovky (nebo kompatibilního) zařízení z jeho kontejneru.
+Poskytuje objekt bez oken získat obrazovku (nebo kompatibilní) kontext zařízení z jeho kontejneru.
 
 ```
 CDC* GetDC(
@@ -1727,28 +1727,28 @@ CDC* GetDC(
 ### <a name="parameters"></a>Parametry
 
 *lprcRect*<br/>
-Ukazatel na obdélník, který se bude řídit ovládacím prvkem bez oken, se chce znovu kreslit v souřadnicích klienta ovládacího prvku. Hodnota NULL znamená rozsah celého objektu.
+Ukazatel na obdélník ovládací prvek bez oken chce překreslit, v souřadnicích klienta ovládacího prvku. Null znamená rozsah celého objektu.
 
 *dwFlags*<br/>
-Atributy kreslení kontextu zařízení Možnosti:
+Atributy výkresu kontextu zařízení. Volby jsou:
 
-- OLEDC_NODRAW označuje, že objekt nebude používat kontext zařízení k provádění jakýchkoli kreseb, ale pouze k získání informací o zobrazovacím zařízení. Kontejner by měl jednoduše předat řadič domény okna bez dalšího zpracování.
+- OLEDC_NODRAW Označuje, že objekt nebude používat kontext zařízení k provedení výkresu, ale pouze k získání informací o zobrazovacím zařízení. Kontejner by měl jednoduše projít řadičem domény okna bez dalšího zpracování.
 
-- OLEDC_PAINTBKGND vyžaduje, aby kontejner vybarví pozadí před vrácením řadiče domény. Objekt by měl používat tento příznak, pokud požaduje řadič domény pro překreslení oblasti s průhledným pozadím.
+- OLEDC_PAINTBKGND Požaduje, aby kontejner malovat pozadí před vrácením dc. Objekt by měl použít tento příznak, pokud požaduje řadič domény pro překreslení oblasti s průhledným pozadím.
 
-- OLEDC_OFFSCREEN informuje kontejner o tom, že se objekt chce vykreslit do rastrového obrázku mimo obrazovku, který by se měl zkopírovat na obrazovku. Objekt by měl používat tento příznak, pokud operace vykreslování, která má být provedena, generuje hodně blikání. Kontejner je bezplatný pro přijetí této žádosti nebo ne. Pokud však tento příznak není nastaven, kontejner musí předat záložní řadič domény na obrazovce. To umožňuje, aby objekty prováděly přímé operace obrazovky, jako je například zobrazení výběru (prostřednictvím operace **XOR** ).
+- OLEDC_OFFSCREEN Informuje kontejner, že objekt chce vykreslit do bitmapy mimo obrazovku, která by pak měla být zkopírována na obrazovku. Objekt by měl použít tento příznak, když operace kreslení, kterou se chystá provést, generuje velké množství blikání. Kontejner je zdarma k vyhotovení této žádosti, nebo ne. Pokud však tento příznak není nastaven, kontejner musí vrátit řadič domény na obrazovce. To umožňuje objektům provádět operace přímé obrazovky, jako je zobrazení výběru (prostřednictvím operace **XOR).**
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na zobrazovací kontext zařízení pro kontejner `CWnd` klientské oblasti, pokud bylo úspěšné. v opačném případě návratová hodnota má hodnotu NULL. Kontext zobrazovaného zařízení se dá použít v dalších funkcích GDI k vykreslování v klientské oblasti okna kontejneru.
+Ukazatel na kontext zobrazovacího `CWnd` zařízení pro oblast klienta kontejneru, pokud je úspěšná; v opačném případě je vrácená hodnota NULL. Kontext zobrazovacího zařízení lze použít v následujících funkcích GDI k kreslení v klientské oblasti okna kontejneru.
 
 ### <a name="remarks"></a>Poznámky
 
-Aby bylo možné uvolnit kontext po malování, je nutné volat členskou funkci [ReleaseDC](#releasedc) . Při volání `GetDC`objekty předávají obdélník, ve kterém chtějí kreslit do vlastních souřadnic klienta. `GetDC` je přeloží na souřadnice klientské oblasti kontejneru. Objekt by neměl vyžadovat požadovaný nakreslený obdélník větší než jeho vlastní rámeček oblasti klienta, velikost, kterou lze načíst pomocí [GetClientRect](#getclientrect). To brání v neúmyslném vykreslování objektů, kde se nepředpokládá.
+Členská funkce [ReleaseDC](#releasedc) musí být volána, aby se uvolnil kontext po malování. Při `GetDC`volání objekty předat obdélník, které chtějí čerpat do vlastní souřadnice klienta. `GetDC`překládá je na souřadnice oblasti klienta kontejneru. Objekt by neměl požadovat požadovaný obdélník kreslení větší než jeho vlastní obdélník klientské oblasti, jehož velikost lze načíst pomocí [GetClientRect](#getclientrect). Tím zabráníte objektům v neúmyslném kreslení tam, kde by neměly.
 
-##  <a name="getenabled"></a>COleControl –:: getenable
+## <a name="colecontrolgetenabled"></a><a name="getenabled"></a>COleControl::GetEnabled
 
-Implementuje funkci get vlastnosti povoleného objektu na ovládacím prvku.
+Implementuje Get funkce vašeho ovládacího prvku populace Enabled vlastnost.
 
 ```
 BOOL GetEnabled();
@@ -1756,9 +1756,9 @@ BOOL GetEnabled();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je ovládací prvek povolen; v opačném případě 0.
+Nenulová, pokud je ovládací prvek povolen; jinak 0.
 
-##  <a name="getextendedcontrol"></a>COleControl –:: GetExtendedControl
+## <a name="colecontrolgetextendedcontrol"></a><a name="getextendedcontrol"></a>COleControl::GetExtendedControl
 
 Získá ukazatel na objekt udržovaný kontejnerem, který představuje ovládací prvek s rozšířenou sadou vlastností.
 
@@ -1770,15 +1770,15 @@ LPDISPATCH GetExtendedControl();
 
 Ukazatel na objekt rozšířeného ovládacího prvku kontejneru. Pokud není k dispozici žádný objekt, hodnota je NULL.
 
-Tento objekt může být manipulován prostřednictvím jeho `IDispatch`ho rozhraní. Můžete také použít `QueryInterface` k získání dalších dostupných rozhraní poskytovaných objektem. Objekt však není vyžadován k podpoře konkrétní sady rozhraní. Všimněte si, že spoléhání na konkrétní funkce objektu rozšířeného ovládacího prvku kontejneru omezí přenositelnost vašeho ovládacího prvku na jiné libovolné kontejnery.
+S tímto objektem `IDispatch` může být manipulováno prostřednictvím jeho rozhraní. Můžete také `QueryInterface` získat další dostupná rozhraní poskytovaná objektem. Objekt však není nutné podporovat konkrétní sadu rozhraní. Všimněte si, že spoléhání se na specifické funkce objektu rozšířeného ovládacího prvku kontejneru omezuje přenositelnost ovládacího prvku na jiné libovolné kontejnery.
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce, která volá tuto funkci, zodpovídá za uvolnění ukazatele po dokončení objektu. Všimněte si, že kontejner není vyžadován pro podporu tohoto objektu.
+Funkce, která volá tuto funkci je zodpovědný za uvolnění ukazatele po dokončení s objektem. Všimněte si, že kontejner není nutné pro podporu tohoto objektu.
 
-##  <a name="getfocus"></a>COleControl –:: GetFocus
+## <a name="colecontrolgetfocus"></a><a name="getfocus"></a>COleControl::GetFocus
 
-Určuje, zda objekt `COleControl` má fokus.
+Určuje, `COleControl` zda má objekt fokus.
 
 ```
 CWnd* GetFocus();
@@ -1786,17 +1786,17 @@ CWnd* GetFocus();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud je ovládací prvek aktivován a bez okna, vrátí **tuto** hodnotu, pokud ovládací prvek aktuálně má fokus klávesnice (jak je určen kontejnerem ovládacího prvku), nebo hodnotu null, pokud nemá fokus.
+Pokud je aktivován ovládací prvek a bez oken, vrátí **tuto** hodnotu, pokud ovládací prvek aktuálně má fokus klávesnice (podle kontejneru ovládacího prvku) nebo NULL, pokud nemá fokus.
 
-V opačném případě vrátí objekt `CWnd`, který má fokus (totéž jako `CWnd::GetFocus`).
+V opačném `CWnd` případě vrátí objekt, který `CWnd::GetFocus`má fokus (stejné jako ).
 
 ### <a name="remarks"></a>Poznámky
 
-Aktivovaný ovládací prvek bez oken obdrží fokus při volání metody [SetFocus](#setfocus) .
+Aktivovaný ovládací prvek bez oken obdrží fokus při [volání SetFocus.](#setfocus)
 
-##  <a name="getfont"></a>COleControl –:: GetFont
+## <a name="colecontrolgetfont"></a><a name="getfont"></a>COleControl::GetFont
 
-Implementuje funkci get vlastnosti burzovního písma.
+Implementuje Get funkce stock Font vlastnost.
 
 ```
 LPFONTDISP GetFont();
@@ -1804,15 +1804,15 @@ LPFONTDISP GetFont();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na rozhraní odeslání písma pro vlastnost písma ovládacího prvku.
+Ukazatel na rozhraní pro odesílání písma vlastnosti Font ovládacího prvku.
 
 ### <a name="remarks"></a>Poznámky
 
-Všimněte si, že volající musí uvolnit objekt po dokončení. V rámci implementace ovládacího prvku použijte `InternalGetFont` pro přístup k objektu fontu ovládacího prvku. Další informace o používání písem v ovládacím prvku naleznete v článku [ovládací prvky ActiveX: použití písem v ovládacím prvku ActiveX](../../mfc/mfc-activex-controls-using-fonts.md).
+Všimněte si, že volající musí uvolnit objekt po dokončení. V rámci provádění ovládacího `InternalGetFont` prvku použijte pro přístup k objektu font základní ho ovládacího prvku. Další informace o používání písem v ovládacím prvku naleznete v článku [Ovládací prvky ActiveX: Použití písem v ovládacím prvku ActiveX](../../mfc/mfc-activex-controls-using-fonts.md).
 
-##  <a name="getfonttextmetrics"></a>COleControl –:: GetFontTextMetrics
+## <a name="colecontrolgetfonttextmetrics"></a><a name="getfonttextmetrics"></a>COleControl::GetFontTextMetrics
 
-Měří metriku textu pro libovolný objekt `CFontHolder` vlastněný ovládacím prvkem.
+Měří textové metriky `CFontHolder` pro libovolný objekt vlastněný ovládacím prvkem.
 
 ```
 void GetFontTextMetrics(
@@ -1823,20 +1823,20 @@ void GetFontTextMetrics(
 ### <a name="parameters"></a>Parametry
 
 *lptm*<br/>
-Ukazatel na strukturu [TEXTMETRIC](/windows/win32/api/wingdi/ns-wingdi-textmetricw) .
+Ukazatel na strukturu [TEXTMETRIC.](/windows/win32/api/wingdi/ns-wingdi-textmetricw)
 
 *fontHolder*<br/>
-Odkaz na objekt [CFontHolder](../../mfc/reference/cfontholder-class.md) .
+Odkaz na [cfontholder](../../mfc/reference/cfontholder-class.md) objekt.
 
 ### <a name="remarks"></a>Poznámky
 
-Toto písmo lze vybrat pomocí funkce [COleControl –:: SelectFontObject](#selectfontobject) . `GetFontTextMetrics` inicializuje strukturu `TEXTMETRIC`, na kterou odkazoval *lptm* , s platnými informacemi o metrikách `fontHolder`v případě úspěchu, nebo pokud neproběhne úspěšně, vyplní strukturu nulami. Tuto funkci byste měli použít místo [GetTextMetrics](/windows/win32/api/wingdi/nf-wingdi-gettextmetrics) při vykreslování ovládacího prvku, protože ovládací prvky, jako je libovolný vložený objekt OLE, mohou být nutné k vykreslování do metasouboru.
+Takové písmo lze vybrat pomocí funkce [COleControl::SelectFontObject.](#selectfontobject) `GetFontTextMetrics`inicializuje `TEXTMETRIC` strukturu, na kterou poukazuje *lptm* `fontHolder`s platnými informacemi metrik o písmu 's, pokud je úspěšné, nebo vyplní strukturu nulami, pokud není úspěšný. Tuto funkci byste měli použít místo [GetTextMetrics](/windows/win32/api/wingdi/nf-wingdi-gettextmetrics) při malování ovládacího prvku, protože ovládací prvky, stejně jako všechny vložené objekty OLE, může být nutné k vykreslení sami do metasouboru.
 
-Struktura `TEXTMETRIC` pro výchozí písmo je aktualizována při volání funkce [SelectFontObject](#selectfontobject) . `GetFontTextMetrics` byste měli volat až po výběru vlastnosti zásobed Font, která zajistí, že informace, které poskytuje, jsou platné.
+Struktura `TEXTMETRIC` výchozího písma se aktualizuje při volání funkce [SelectFontObject.](#selectfontobject) Měli byste `GetFontTextMetrics` volat pouze po výběru vlastnosti Font stock, abyste zajistili, že informace, které poskytuje, jsou platné.
 
-##  <a name="getforecolor"></a>COleControl –:: GetForeColor
+## <a name="colecontrolgetforecolor"></a><a name="getforecolor"></a>COleControl::GetForeColor
 
-Implementuje funkci get vlastnosti ' burzovní barva ForeColor.
+Implementuje Get funkce stock ForeColor vlastnost.
 
 ```
 OLE_COLOR GetForeColor();
@@ -1844,11 +1844,11 @@ OLE_COLOR GetForeColor();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Návratová hodnota určuje aktuální barvu popředí jako hodnotu OLE_COLOR, pokud byla úspěšná. Tuto hodnotu lze přeložit na hodnotu [COLORREF](/windows/win32/gdi/colorref) voláním `TranslateColor`.
+Vrácená hodnota určuje aktuální barvu popředí jako OLE_COLOR hodnotu, pokud je úspěšná. Tuto hodnotu lze přeložit na hodnotu [COLORREF](/windows/win32/gdi/colorref) s voláním `TranslateColor`.
 
-##  <a name="gethwnd"></a>COleControl –:: GetHwnd
+## <a name="colecontrolgethwnd"></a><a name="gethwnd"></a>COleControl::GetHwnd
 
-Implementuje funkci get pro uloženou vlastnost hWnd.
+Implementuje Get funkce stock hWnd vlastnost.
 
 ```
 OLE_HANDLE GetHwnd();
@@ -1858,9 +1858,9 @@ OLE_HANDLE GetHwnd();
 
 Popisovač okna ovládacího prvku OLE, pokud existuje; jinak NULL.
 
-##  <a name="getmessagestring"></a>COleControl –:: GetMessageString
+## <a name="colecontrolgetmessagestring"></a><a name="getmessagestring"></a>COleControl::GetMessageString
 
-Volá se rozhraním, aby se získal krátký řetězec, který popisuje účel položky nabídky identifikované pomocí *NID*.
+Volat rámci získat krátký řetězec, který popisuje účel položky nabídky identifikované *nID*.
 
 ```
 virtual void GetMessageString(
@@ -1870,19 +1870,19 @@ virtual void GetMessageString(
 
 ### <a name="parameters"></a>Parametry
 
-*nID*<br/>
-ID položky nabídky
+*Nid*<br/>
+ID položky nabídky.
 
-*rMessage*<br/>
-Odkaz na objekt [CString](../../atl-mfc-shared/reference/cstringt-class.md) , pomocí kterého bude vrácen řetězec.
+*rZpráva*<br/>
+Odkaz na [CString](../../atl-mfc-shared/reference/cstringt-class.md) objekt, jehož prostřednictvím bude vrácen řetězec.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato možnost slouží k získání zprávy pro zobrazení ve stavovém řádku, zatímco je zvýrazněna položka nabídky. Výchozí implementace se pokusí načíst prostředek řetězce identifikovaný pomocí *NID*.
+To lze získat zprávu pro zobrazení ve stavovém řádku, zatímco položka nabídky je zvýrazněna. Výchozí implementace se pokusí načíst řetězec prostředku identifikovaného *nID*.
 
-##  <a name="getnotsupported"></a>COleControl –:: GetNotSupported
+## <a name="colecontrolgetnotsupported"></a><a name="getnotsupported"></a>COleControl::GetNotSupported
 
-Zabrání přístupu uživatele k hodnotě vlastnosti ovládacího prvku.
+Zabraňuje přístupu uživatele k hodnotě vlastnosti ovládacího prvku.
 
 ```
 void GetNotSupported();
@@ -1890,9 +1890,9 @@ void GetNotSupported();
 
 ### <a name="remarks"></a>Poznámky
 
-Voláním této funkce místo funkce Get jakékoli vlastnosti, kde je načítání vlastnosti uživatelem ovládacího prvku není podporováno. Příkladem může být vlastnost, která je pouze pro zápis.
+Volání této funkce namísto Get funkce jakékoli vlastnosti, kde není podporováno načítání vlastnosti uživatelem ovládacího prvku. Jedním z příkladů by vlastnost, která je pouze pro zápis.
 
-##  <a name="getreadystate"></a>COleControl –:: GetReadyState
+## <a name="colecontrolgetreadystate"></a><a name="getreadystate"></a>COleControl::GetReadyState
 
 Vrátí stav připravenosti ovládacího prvku.
 
@@ -1907,18 +1907,18 @@ Stav připravenosti ovládacího prvku, jedna z následujících hodnot:
 |||
 |-|-|
 |READYSTATE_UNINITIALIZED|Výchozí stav inicializace|
-|READYSTATE_LOADING|Ovládací prvek aktuálně načítá jeho vlastnosti.|
-|READYSTATE_LOADED|Ovládací prvek byl inicializován|
-|READYSTATE_INTERACTIVE|Ovládací prvek má dostatek dat pro interaktivní, ale ne všechna asynchronní data jsou ještě načtena.|
-|READYSTATE_COMPLETE|Ovládací prvek má všechna jeho data|
+|READYSTATE_LOADING|Ovládací prvek právě načítá své vlastnosti.|
+|READYSTATE_LOADED|Ovládací prvek byl inicializován.|
+|READYSTATE_INTERACTIVE|Ovládací prvek má dostatek dat, aby bylo interaktivní, ale ne všechna asynchronní data jsou ještě načtena|
+|READYSTATE_COMPLETE|Ovládací prvek má všechna data|
 
 ### <a name="remarks"></a>Poznámky
 
-Většina jednoduchých ovládacích prvků nikdy nemusí rozlišovat mezi nahranými a INTERAKTIVNÍmi prvky. Nicméně ovládací prvky, které podporují vlastnosti cesty k datům, nemusí být připravené k interaktivním, dokud se nejméně některá data neobdrží asynchronně. Ovládací prvek by se měl považovat za interaktivní, jakmile to bude možné.
+Nejjednodušší ovládací prvky nikdy není třeba rozlišovat mezi LOADED a INTERACTIVE. Ovládací prvky, které podporují vlastnosti cesty dat, však nemusí být připraveny k interaktivní, dokud alespoň některá data jsou přijata asynchronně. Ovládací prvek by se měl pokusit co nejdříve interaktivní.
 
-##  <a name="getrectincontainer"></a>COleControl –:: GetRectInContainer
+## <a name="colecontrolgetrectincontainer"></a><a name="getrectincontainer"></a>COleControl::GetRectInContainer
 
-Získá souřadnice obdélníku ovládacího prvku relativně ke kontejneru vyjádřené v jednotkách zařízení.
+Získá souřadnice obdélníku ovládacího prvku vzhledem ke kontejneru, vyjádřené v jednotkách zařízení.
 
 ```
 BOOL GetRectInContainer(LPRECT lpRect);
@@ -1927,19 +1927,19 @@ BOOL GetRectInContainer(LPRECT lpRect);
 ### <a name="parameters"></a>Parametry
 
 *lpRect*<br/>
-Ukazatel na strukturu obdélníku, do které budou zkopírovány souřadnice ovládacího prvku.
+Ukazatel na obdélníkovou strukturu, do které budou zkopírovány souřadnice ovládacího prvku.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je ovládací prvek na místě aktivní; v opačném případě 0.
+Nenulová, pokud je ovládací prvek aktivní na místě; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Obdélník je platný pouze v případě, že je ovládací prvek na místě aktivní.
+Obdélník je platný pouze v případě, že je ovládací prvek aktivní na místě.
 
-##  <a name="getstocktextmetrics"></a>COleControl –:: GetStockTextMetrics
+## <a name="colecontrolgetstocktextmetrics"></a><a name="getstocktextmetrics"></a>COleControl::GetStockTextMetrics
 
-Měří metriku textu pro vlastnost burzovního písma ovládacího prvku, kterou lze vybrat pomocí funkce [SelectStockFont](#selectstockfont) .
+Měří textové metriky pro vlastnost Font na skladě ovládacího prvku, kterou lze vybrat pomocí funkce [SelectStockFont.](#selectstockfont)
 
 ```
 void GetStockTextMetrics(LPTEXTMETRIC lptm);
@@ -1948,17 +1948,17 @@ void GetStockTextMetrics(LPTEXTMETRIC lptm);
 ### <a name="parameters"></a>Parametry
 
 *lptm*<br/>
-Ukazatel na strukturu [TEXTMETRIC](/windows/win32/api/wingdi/ns-wingdi-textmetricw) .
+Ukazatel na strukturu [TEXTMETRIC.](/windows/win32/api/wingdi/ns-wingdi-textmetricw)
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce `GetStockTextMetrics` inicializuje strukturu `TEXTMETRIC`, na kterou odkazoval *lptm* , s platnými informacemi o metrikách, pokud jsou úspěšné, nebo vyplní strukturu nulami, pokud neproběhne úspěšně. Tuto funkci použijte místo [GetTextMetrics](/windows/win32/api/wingdi/nf-wingdi-gettextmetrics) při malování ovládacího prvku, protože ovládací prvky, jako je libovolný vložený objekt OLE, mohou být nutné k vykreslování do metasouboru.
+Funkce `GetStockTextMetrics` inicializuje `TEXTMETRIC` strukturu, na kterou poukazuje *lptm* s platnými informacemi metriky, pokud je úspěšná, nebo vyplní strukturu nulami, pokud není úspěšná. Tuto funkci použijte místo [GetTextMetrics](/windows/win32/api/wingdi/nf-wingdi-gettextmetrics) při malování ovládacího prvku, protože ovládací prvky, stejně jako všechny vložené objekty OLE, může být nutné vykreslit sami do metasouboru.
 
-Struktura `TEXTMETRIC` pro výchozí písmo je aktualizována při volání funkce `SelectStockFont`. Tuto funkci byste měli zavolat až po výběru burzovního písma, aby se zajistilo, že informace, které poskytuje, jsou platné.
+Struktura `TEXTMETRIC` výchozího písma se aktualizuje `SelectStockFont` při volání funkce. Tuto funkci byste měli volat pouze po výběru základního písma, abyste zajistili, že informace, které poskytuje, jsou platné.
 
-##  <a name="gettext"></a>COleControl –:: GetText
+## <a name="colecontrolgettext"></a><a name="gettext"></a>COleControl::GetText
 
-Implementuje funkci get vlastnosti uloženého textu nebo popisku.
+Implementuje Get funkce stock Text nebo Caption vlastnost.
 
 ```
 BSTR GetText();
@@ -1969,15 +1969,15 @@ BSTR GetText();
 Aktuální hodnota textového řetězce ovládacího prvku nebo řetězce nulové délky, pokud není k dispozici žádný řetězec.
 
 > [!NOTE]
->  Další informace o datovém typu BSTR naleznete v tématu [datové typy](../../mfc/reference/data-types-mfc.md) v části makra a Globals.
+> Další informace o datovém typu BSTR naleznete v [tématu Datové typy](../../mfc/reference/data-types-mfc.md) v části Makra a globální.
 
 ### <a name="remarks"></a>Poznámky
 
-Všimněte si, že volající této funkce musí volat `SysFreeString` u řetězce vráceného za účelem uvolnění prostředku. V rámci implementace ovládacího prvku použijte `InternalGetText` pro přístup k vlastnosti ovládacího prvku text nebo Caption.
+Všimněte si, že volající `SysFreeString` této funkce musí volat na řetězec vrácena k uvolnění prostředku. V rámci provádění ovládacího `InternalGetText` prvku použijte pro přístup k základní text ovládacího prvku nebo Caption vlastnost.
 
-##  <a name="getwindowlessdroptarget"></a>COleControl –:: GetWindowlessDropTarget
+## <a name="colecontrolgetwindowlessdroptarget"></a><a name="getwindowlessdroptarget"></a>COleControl::GetWindowlessDropTarget
 
-Přepište `GetWindowlessDropTarget`, pokud chcete, aby ovládací prvek bez oken byl cílem operace přetažení OLE.
+Přepište, `GetWindowlessDropTarget` pokud chcete, aby byl ovládací prvek bez oken cílem operace přetažení OLE.
 
 ```
 virtual IDropTarget* GetWindowlessDropTarget();
@@ -1985,17 +1985,17 @@ virtual IDropTarget* GetWindowlessDropTarget();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na `IDropTarget` rozhraní objektu. Vzhledem k tomu, že nemá okno, objekt bez oken nemůže registrovat `IDropTarget` rozhraní. Chcete-li se však zúčastnit přetahování, objekt bez oken může přesto implementovat rozhraní a vrátit jej v `GetWindowlessDropTarget`.
+Ukazatel na `IDropTarget` rozhraní objektu. Vzhledem k tomu, že nemá okno, `IDropTarget` objekt bez oken nemůže zaregistrovat rozhraní. Chcete-li se však zúčastnit přetažení, objekt bez oken `GetWindowlessDropTarget`může stále implementovat rozhraní a vrátit jej do aplikace .
 
 ### <a name="remarks"></a>Poznámky
 
-Obvykle by to vyžadovalo, aby bylo okno ovládacího prvku registrováno jako cíl přetažení. Ale vzhledem k tomu, že ovládací prvek nemá žádné vlastní okno, kontejner použije vlastní okno jako cíl přetažení. Ovládací prvek stačí poskytnout implementaci rozhraní `IDropTarget`, ke kterému kontejner může delegovat volání v příslušném čase. Příklad:
+Za normálních okolností by to vyžadovalo, aby okno ovládacího prvku být registrovány jako cíl přetažení. Ale protože ovládací prvek nemá vlastní okno, kontejner bude používat vlastní okno jako cíl přetažení. Ovládací prvek jednoduše potřebuje poskytnout `IDropTarget` implementaci rozhraní, na které kontejner můžete delegovat volání ve vhodnou dobu. Příklad:
 
 [!code-cpp[NVC_MFCAxCtl#2](../../mfc/reference/codesnippet/cpp/colecontrol-class_3.cpp)]
 
-##  <a name="initializeiids"></a>COleControl –:: InitializeIIDs
+## <a name="colecontrolinitializeiids"></a><a name="initializeiids"></a>COleControl::InicializovatIDy
 
-Informuje základní třídu IID, kterou bude ovládací prvek používat.
+Informuje základní třídu IID, které bude ovládací prvek používat.
 
 ```
 void InitializeIIDs(
@@ -2005,19 +2005,19 @@ void InitializeIIDs(
 
 ### <a name="parameters"></a>Parametry
 
-*piidPrimary*<br/>
-Ukazatel na ID rozhraní primárního odesílajícího rozhraní ovládacího prvku.
+*piidPrimární*<br/>
+Ukazatel na ID rozhraní primárního rozhraní odeslání ovládacího prvku.
 
-*piidEvents*<br/>
-Ukazatel na ID rozhraní ovládacího prvku události ovládacího prvku.
+*události piid*<br/>
+Ukazatel na ID rozhraní rozhraní ovládacího prvku události rozhraní.
 
 ### <a name="remarks"></a>Poznámky
 
-Zavolejte tuto funkci v konstruktoru ovládacího prvku a informujte základní třídu identifikátorů rozhraní, které bude váš ovládací prvek používat.
+Volání této funkce v konstruktoru ovládacího prvku informovat základní třídy ID rozhraní bude váš ovládací prvek používat.
 
-##  <a name="internalgetfont"></a>COleControl –:: InternalGetFont
+## <a name="colecontrolinternalgetfont"></a><a name="internalgetfont"></a>COleControl::InternalGetFont
 
-Přistupuje k vlastnosti burzovního písma vašeho ovládacího prvku.
+Přistupuje k vlastnosti Stock Font vašeho ovládacího prvku.
 
 ```
 CFontHolder& InternalGetFont();
@@ -2025,11 +2025,11 @@ CFontHolder& InternalGetFont();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Odkaz na objekt [CFontHolder](../../mfc/reference/cfontholder-class.md) , který obsahuje burzovní objekt Font.
+Odkaz na [cfontholder](../../mfc/reference/cfontholder-class.md) objekt, který obsahuje stock Font objektu.
 
-##  <a name="internalgettext"></a>COleControl –:: InternalGetText
+## <a name="colecontrolinternalgettext"></a><a name="internalgettext"></a>COleControl::InternalGetText
 
-Přistupuje k uloženému textu nebo vlastnosti titulků vašeho ovládacího prvku.
+Přistupuje k vlastnosti Text nebo Caption ovládacího prvku.
 
 ```
 const CString& InternalGetText();
@@ -2039,7 +2039,7 @@ const CString& InternalGetText();
 
 Odkaz na textový řetězec ovládacího prvku.
 
-##  <a name="internalsetreadystate"></a>COleControl –:: funkci InternalSetReadyState
+## <a name="colecontrolinternalsetreadystate"></a><a name="internalsetreadystate"></a>COleControl::InternalSetReadyState
 
 Nastaví stav připravenosti ovládacího prvku.
 
@@ -2050,23 +2050,23 @@ void InternalSetReadyState(long lNewReadyState);
 ### <a name="parameters"></a>Parametry
 
 *lNewReadyState*<br/>
-Stav připravenosti, který se má nastavit pro ovládací prvek, jednu z následujících hodnot:
+Stav připravenosti nastavit pro ovládací prvek, jedna z následujících hodnot:
 
 |||
 |-|-|
 |READYSTATE_UNINITIALIZED|Výchozí stav inicializace|
-|READYSTATE_LOADING|Ovládací prvek aktuálně načítá jeho vlastnosti.|
-|READYSTATE_LOADED|Ovládací prvek byl inicializován|
-|READYSTATE_INTERACTIVE|Ovládací prvek má dostatek dat pro interaktivní, ale ne všechna asynchronní data jsou ještě načtena.|
-|READYSTATE_COMPLETE|Ovládací prvek má všechna jeho data|
+|READYSTATE_LOADING|Ovládací prvek právě načítá své vlastnosti.|
+|READYSTATE_LOADED|Ovládací prvek byl inicializován.|
+|READYSTATE_INTERACTIVE|Ovládací prvek má dostatek dat, aby bylo interaktivní, ale ne všechna asynchronní data jsou ještě načtena|
+|READYSTATE_COMPLETE|Ovládací prvek má všechna data|
 
 ### <a name="remarks"></a>Poznámky
 
-Většina jednoduchých ovládacích prvků nikdy nemusí rozlišovat mezi nahranými a INTERAKTIVNÍmi prvky. Nicméně ovládací prvky, které podporují vlastnosti cesty k datům, nemusí být připravené k interaktivním, dokud se nejméně některá data neobdrží asynchronně. Ovládací prvek by se měl považovat za interaktivní, jakmile to bude možné.
+Nejjednodušší ovládací prvky nikdy není třeba rozlišovat mezi LOADED a INTERACTIVE. Ovládací prvky, které podporují vlastnosti cesty dat, však nemusí být připraveny k interaktivní, dokud alespoň některá data jsou přijata asynchronně. Ovládací prvek by se měl pokusit co nejdříve interaktivní.
 
-##  <a name="invalidatecontrol"></a>COleControl –:: InvalidateControl
+## <a name="colecontrolinvalidatecontrol"></a><a name="invalidatecontrol"></a>COleControl::Zneplatněnícontrol
 
-Vynutí, aby se ovládací prvek znovu nakreslil.
+Vynutí překreslení ovládacího prvku.
 
 ```
 void InvalidateControl(
@@ -2077,16 +2077,16 @@ void InvalidateControl(
 ### <a name="parameters"></a>Parametry
 
 *lpRect*<br/>
-Ukazatel na oblast ovládacího prvku, který má být vyhodnocen jako neplatný.
+Ukazatel na oblast ovládacího prvku, který má být zrušena.
 
 *bErase*<br/>
-Určuje, zda má být pozadí v rámci oblasti aktualizace smazáno při zpracování oblasti aktualizace.
+Určuje, zda má být pozadí v oblasti aktualizace při zpracování oblasti aktualizace vymazáno.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud má *lpRect* hodnotu null, celý ovládací prvek se překreslí. Pokud *lpRect* není null, znamená to, že část obdélníku ovládacího prvku, která má být neověřena. V případech, kdy ovládací prvek nemá žádné okno nebo není aktuálně aktivní, je obdélník ignorován a je provedeno volání členské funkce [IAdviseSink:: OnViewChange](/windows/win32/api/objidl/nf-objidl-iadvisesink-onviewchange) klientského webu. Tuto funkci použijte místo `CWnd::InvalidateRect` nebo `InvalidateRect`.
+Pokud *lpRect* má hodnotu NULL, celý ovládací prvek bude překreslen. Pokud *lpRect* není NULL, označuje část obdélníku ovládacího prvku, který má být zrušena. V případech, kdy ovládací prvek nemá žádné okno nebo aktuálně není aktivní, obdélník je ignorována a volání na klientské sítě [IAdviseSink::OnViewChange](/windows/win32/api/objidl/nf-objidl-iadvisesink-onviewchange) členská funkce. Tuto funkci použijte `CWnd::InvalidateRect` `InvalidateRect`místo nebo .
 
-##  <a name="invalidatergn"></a>COleControl –:: InvalidateRgn
+## <a name="colecontrolinvalidatergn"></a><a name="invalidatergn"></a>COleControl::Zneplatnitrgn
 
 Zruší platnost klientské oblasti okna kontejneru v rámci dané oblasti.
 
@@ -2097,18 +2097,18 @@ void InvalidateRgn(CRgn* pRgn, BOOL bErase = TRUE);
 ### <a name="parameters"></a>Parametry
 
 *pRgn*<br/>
-Ukazatel na objekt [CRgn](../../mfc/reference/crgn-class.md) , který identifikuje zobrazovanou oblast objektu OLE k Invalidate, v souřadnicích klienta nadřazeného okna. Pokud má tento parametr hodnotu NULL, je rozsah celý objekt.
+Ukazatel na [cRgn](../../mfc/reference/crgn-class.md) objekt, který identifikuje oblast zobrazení objektu OLE zneplatnit, v souřadnicích klienta obsahující okno. Pokud je tento parametr NULL, rozsah je celý objekt.
 
 *bErase*<br/>
-Určuje, zda bude pozadí v rámci neověřené oblasti smazáno. Při hodnotě TRUE se pozadí smaže. Pokud má hodnotu FALSE, pozadí zůstane beze změny.
+Určuje, zda má být pozadí v neplatné oblasti vymazáno. Pokud je hodnota PRAVDA, pozadí se vymaže. Pokud false, pozadí zůstane beze změny.
 
 ### <a name="remarks"></a>Poznámky
 
-To lze použít k překreslení ovládacích prvků bez oken v rámci kontejneru. Neověřená oblast spolu se všemi ostatními oblastmi v oblasti aktualizace je označena pro malování při odeslání další [WM_PAINT](/windows/win32/gdi/wm-paint) zprávy.
+To lze překreslit ovládací prvky bez oken v rámci kontejneru. Neplatná oblast, spolu se všemi ostatními oblastmi v oblasti aktualizace, je označena pro malování při odeslání další [WM_PAINT](/windows/win32/gdi/wm-paint) zprávy.
 
-Pokud má *bErase* hodnotu true pro libovolnou část oblasti aktualizace, je vymazáno pozadí v celé oblasti, nikoli pouze v dané části.
+Pokud *bErase* je PRAVDA pro libovolnou část oblasti aktualizace, pozadí v celé oblasti, a to nejen v dané části, je vymazán.
 
-##  <a name="isconvertingvbx"></a>COleControl –:: IsConvertingVBX
+## <a name="colecontrolisconvertingvbx"></a><a name="isconvertingvbx"></a>COleControl::IsConvertingVBX
 
 Umožňuje specializované načítání ovládacího prvku OLE.
 
@@ -2118,25 +2118,25 @@ BOOL IsConvertingVBX();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je ovládací prvek převáděn; v opačném případě 0.
+Nenulová, pokud je ovládací prvek převáděn; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Při převodu formuláře, který používá ovládací prvky VBX na jeden, který používá ovládací prvky OLE, může být vyžadováno speciální kód pro načítání ovládacích prvků OLE. Například pokud načítáte instanci ovládacího prvku OLE, může být volání [PX_Font](persistence-of-ole-controls.md#px_font) v `DoPropExchange`:
+Při převodu formuláře, který používá ovládací prvky VBX na ten, který používá ovládací prvky OLE, může být vyžadován speciální kód načítání pro ovládací prvky OLE. Například pokud načítáte instanci ovládacího prvku OLE, [PX_Font](persistence-of-ole-controls.md#px_font) může `DoPropExchange`mít volání PX_Font ve vašem :
 
 [!code-cpp[NVC_MFCAxCtl#3](../../mfc/reference/codesnippet/cpp/colecontrol-class_4.cpp)]
 
-Nicméně ovládací prvky VBX neobsahují objekt Font; jednotlivé vlastnosti písma byly uloženy jednotlivě. V takovém případě použijete `IsConvertingVBX` k rozlišení mezi těmito dvěma případy:
+Ovládací prvky VBX však neměly objekt Font; každá vlastnost písma byla uložena jednotlivě. V takovém případě byste `IsConvertingVBX` použít k rozlišení mezi těmito dvěma případy:
 
 [!code-cpp[NVC_MFCAxCtl#4](../../mfc/reference/codesnippet/cpp/colecontrol-class_5.cpp)]
 
-Další případ by byl v případě, že ovládací prvek VBX uložil proprietární binární data (v obslužné rutině zprávy VBM_SAVEPROPERTY) a ovládací prvek OLE ukládá svá binární data v jiném formátu. Pokud chcete, aby byl ovládací prvek OLE zpětně kompatibilní s ovládacím prvkem VBX, mohli byste načíst staré i nové formáty pomocí funkce `IsConvertingVBX`, a to tak, že rozlišíte, zda byl ovládací prvek VBX nebo ovládací prvek OLE načten.
+Dalším případem by bylo, pokud váš ovládací prvek VBX uloženy proprietární binární data (v jeho VBM_SAVEPROPERTY obslužné rutiny zprávy) a ovládací prvek OLE uloží jeho binární data v jiném formátu. Pokud chcete, aby byl ovládací prvek OLE zpětně kompatibilní s ovládacím prvkem VBX, můžete číst staré i nové formáty pomocí `IsConvertingVBX` funkce tak, že rozlišujete, zda byl načten ovládací prvek VBX nebo ovládací prvek OLE.
 
-Ve funkci `DoPropExchange` ovládacího prvku můžete vyhledat tuto podmínku a v případě hodnoty true spustit zátěžový kód specifický pro tento převod (například předchozí příklady). Pokud se ovládací prvek nepřevádí, můžete spustit normální zátěžový kód. Tato možnost se vztahuje pouze na ovládací prvky, které jsou převáděny ze strany VBX.
+Ve funkci ovládacího `DoPropExchange` prvku můžete zkontrolovat tuto podmínku a pokud true, spustit kód zatížení specifické pro tento převod (například v předchozích příkladech). Pokud ovládací prvek není převáděn, můžete spustit kód normálního zatížení. Tato možnost je použitelná pouze pro ovládací prvky, které jsou převáděny z protějšků VBX.
 
-##  <a name="isinvokeallowed"></a>COleControl –:: IsInvokeAllowed
+## <a name="colecontrolisinvokeallowed"></a><a name="isinvokeallowed"></a>COleControl::IsInvokeAllowed
 
-Povoluje vyvolání metody automatizace.
+Umožňuje vyvolání metody automatizace.
 
 ```
 BOOL IsInvokeAllowed(DISPID dispid);
@@ -2144,13 +2144,13 @@ BOOL IsInvokeAllowed(DISPID dispid);
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud byl ovládací prvek inicializován; v opačném případě 0.
+Nenulová, pokud byl ovládací prvek inicializován; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Implementace rozhraní `IDispatch::Invoke` volá `IsInvokeAllowed` k určení, zda může být vyvolána daná funkce (identifikovaná `dispid`). Výchozím chováním ovládacího prvku OLE je umožnění vyvolání metod automatizace pouze v případě, že byl ovládací prvek inicializován. `IsInvokeAllowed` je však virtuální funkce a v případě potřeby může být přepsána (například při použití ovládacího prvku jako automatizačního serveru).
+Provádění rámce `IDispatch::Invoke` volání `IsInvokeAllowed` k určení, zda dané funkce `dispid`(identifikované ) mohou být vyvolány. Výchozí chování pro ovládací prvek OLE je povolit metody automatizace, které mají být vyvolány pouze v případě, že ovládací prvek byl inicializován; je `IsInvokeAllowed` však virtuální funkce a může být přepsána v případě potřeby (například při použití ovládacího prvku jako automatizační server).
 
-##  <a name="ismodified"></a>COleControl –::-Modified
+## <a name="colecontrolismodified"></a><a name="ismodified"></a>COleControl::IsModified
 
 Určuje, zda byl změněn stav ovládacího prvku.
 
@@ -2160,15 +2160,15 @@ BOOL IsModified();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud byl stav ovládacího prvku změněn od posledního uložení; v opačném případě 0.
+Nenulová, pokud byl stav ovládacího prvku od posledního uložení změněn; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Stav ovládacího prvku je upraven při změně hodnoty vlastnosti.
+Stav ovládacího prvku je změněn při změně hodnoty vlastnosti.
 
-##  <a name="isoptimizeddraw"></a>COleControl –:: IsOptimizedDraw
+## <a name="colecontrolisoptimizeddraw"></a><a name="isoptimizeddraw"></a>COleControl::IsOptimizedDraw
 
-Určuje, zda kontejner podporuje optimalizované vykreslování pro aktuální operaci kreslení.
+Určuje, zda kontejner podporuje optimalizovaný výkres pro aktuální operaci výkresu.
 
 ```
 BOOL IsOptimizedDraw();
@@ -2176,15 +2176,15 @@ BOOL IsOptimizedDraw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-TRUE, pokud kontejner podporuje optimalizované vykreslování pro aktuální operaci kreslení; v opačném případě FALSE.
+PRAVDA, pokud kontejner podporuje optimalizovaný výkres pro aktuální operaci kreslení; jinak FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud je podporováno optimalizované vykreslování, ovládací prvek po dokončení vykreslování nemusí vybrat staré objekty (pera, štětce, písma atd.) do kontextu zařízení.
+Pokud je optimalizovaný výkres podporován, nemusí ovládací prvek při dokončení kreslení do kontextu zařízení vybírat staré objekty (pera, stopy, písma atd.).
 
-##  <a name="issubclassedcontrol"></a>COleControl –:: IsSubclassedControl
+## <a name="colecontrolissubclassedcontrol"></a><a name="issubclassedcontrol"></a>COleControl::IsSubclassedControl
 
-Volá se rozhraním, aby se určilo, jestli ovládací prvek podtřídí ovládací prvek Windows.
+Volat rámci k určení, pokud ovládací prvek podtřídy ovládacíprvek systému Windows.
 
 ```
 virtual BOOL IsSubclassedControl();
@@ -2192,15 +2192,15 @@ virtual BOOL IsSubclassedControl();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je ovládací prvek roztříděný; v opačném případě 0.
+Nenulová, pokud je ovládací prvek podtřídou; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Tuto funkci je nutné přepsat a vrátit hodnotu TRUE, pokud ovládací prvek OLE podtřídí ovládací prvek systému Windows.
+Tuto funkci je nutné přepsat a vrátit hodnotu TRUE, pokud ovládací prvek OLE podřcovává ovládací prvek systému Windows.
 
-##  <a name="load"></a>COleControl –:: Load
+## <a name="colecontrolload"></a><a name="load"></a>COleControl::Načíst
 
-Obnoví asynchronně načtená data a iniciuje nové načtení asynchronní vlastnosti ovládacího prvku.
+Obnoví všechna předchozí data načtená asynchronně a iniciuje nové načítání asynchronní vlastnosti ovládacího prvku.
 
 ```
 void Load(LPCTSTR strNewPath, CDataPathProperty& prop);
@@ -2211,12 +2211,12 @@ void Load(LPCTSTR strNewPath, CDataPathProperty& prop);
 *strNewPath*<br/>
 Ukazatel na řetězec obsahující cestu, která odkazuje na absolutní umístění vlastnosti asynchronního ovládacího prvku.
 
-*Úprava*<br/>
+*Prop*<br/>
 Objekt [CDataPathProperty](../../mfc/reference/cdatapathproperty-class.md) implementující vlastnost asynchronního ovládacího prvku.
 
-##  <a name="lockinplaceactive"></a>COleControl –:: LockInPlaceActive
+## <a name="colecontrollockinplaceactive"></a><a name="lockinplaceactive"></a>COleControl::LockInPlaceActive
 
-Zabraňuje kontejneru v deaktivaci vašeho ovládacího prvku.
+Zabrání kontejneru deaktivace ovládacího prvku.
 
 ```
 BOOL LockInPlaceActive(BOOL bLock);
@@ -2224,20 +2224,20 @@ BOOL LockInPlaceActive(BOOL bLock);
 
 ### <a name="parameters"></a>Parametry
 
-*Blokované*<br/>
-TRUE, pokud má být místní aktivní stav ovládacího prvku uzamčen; FALSE, pokud má být odemčen.
+*Blok*<br/>
+PRAVDA, pokud má být aktivní stav ovládacího prvku na místě uzamčen; FALSE, pokud má být odemčena.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud zámek byl úspěšný; v opačném případě 0.
+Nenulová, pokud byl zámek úspěšný; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Všimněte si, že každé uzamknutí ovládacího prvku musí být spárováno s odemknutím ovládacího prvku po dokončení. Měli byste uzamknout pouze ovládací prvek pro krátká období, například při vyvolávání události.
+Všimněte si, že každé uzamčení ovládacího prvku musí být spárováno s odemknutím ovládacího prvku po dokončení. Ovládací prvek byste měli uzamknout pouze na krátkou dobu, například při spouštění události.
 
-##  <a name="onambientpropertychange"></a>COleControl –:: OnAmbientPropertyChange
+## <a name="colecontrolonambientpropertychange"></a><a name="onambientpropertychange"></a>COleControl::OnAmbientPropertyChange
 
-Volá se rozhraním, když se změní hodnota vlastnosti okolí kontejneru.
+Volat rámci při okolní vlastnost kontejneru změnila hodnotu.
 
 ```
 virtual void OnAmbientPropertyChange(DISPID dispid);
@@ -2245,12 +2245,12 @@ virtual void OnAmbientPropertyChange(DISPID dispid);
 
 ### <a name="parameters"></a>Parametry
 
-*dispID*<br/>
-ID odeslání vlastnosti ambientd, která se změnila nebo DISPID_UNKNOWN, pokud se změnilo více vlastností.
+*Dispid*<br/>
+ID odeslání vlastnosti okolí, která se změnila, nebo DISPID_UNKNOWN, pokud došlo ke změně více vlastností.
 
-##  <a name="onappearancechanged"></a>COleControl –:: OnAppearanceChanged
+## <a name="colecontrolonappearancechanged"></a><a name="onappearancechanged"></a>COleControl::OnAppearanceChanged
 
-Volá se rozhraním, když se změní hodnota vlastnosti burzovní vzhled.
+Volat rámci při změně hodnoty vlastnosti vzhledu akcií.
 
 ```
 virtual void OnAppearanceChanged ();
@@ -2258,11 +2258,11 @@ virtual void OnAppearanceChanged ();
 
 ### <a name="remarks"></a>Poznámky
 
-Tuto funkci můžete přepsat, pokud chcete po změně této vlastnosti oznámení změnit. Výchozí implementace volá `InvalidateControl`.
+Přepsat tuto funkci, pokud chcete oznámení po této změně vlastnosti. Výchozí volání `InvalidateControl`implementace .
 
-##  <a name="onbackcolorchanged"></a>COleControl –:: OnBackColorChanged
+## <a name="colecontrolonbackcolorchanged"></a><a name="onbackcolorchanged"></a>COleControl::OnBackColorChanged
 
-Volá se rozhraním, když se změní hodnota vlastnosti Barva pozadí.
+Volat rámci při změně hodnoty vlastnosti backcolor skladu.
 
 ```
 virtual void OnBackColorChanged();
@@ -2270,11 +2270,11 @@ virtual void OnBackColorChanged();
 
 ### <a name="remarks"></a>Poznámky
 
-Tuto funkci můžete přepsat, pokud chcete po změně této vlastnosti oznámení změnit. Výchozí implementace volá `InvalidateControl`.
+Přepsat tuto funkci, pokud chcete oznámení po této změně vlastnosti. Výchozí volání `InvalidateControl`implementace .
 
-##  <a name="onborderstylechanged"></a>COleControl –:: OnBorderStyleChanged
+## <a name="colecontrolonborderstylechanged"></a><a name="onborderstylechanged"></a>COleControl::OnBorderStyleChanged
 
-Volá se rozhraním, když se změní hodnota vlastnosti okraje na populaci.
+Volat rámci při změně hodnoty vlastnosti borderstyle skladu.
 
 ```
 virtual void OnBorderStyleChanged();
@@ -2282,13 +2282,13 @@ virtual void OnBorderStyleChanged();
 
 ### <a name="remarks"></a>Poznámky
 
-Výchozí implementace volá `InvalidateControl`.
+Výchozí volání `InvalidateControl`implementace .
 
-Tuto funkci můžete přepsat, pokud chcete po změně této vlastnosti oznámení změnit.
+Přepsat tuto funkci, pokud chcete oznámení po této změně vlastnosti.
 
-##  <a name="onclick"></a>COleControl –:: Click
+## <a name="colecontrolonclick"></a><a name="onclick"></a>COleControl::OnClick
 
-Volá se rozhraním, když se kliklo na tlačítko myši, nebo se vyvolala DoClicka uložená metoda.
+Volat rámci po klepnutí na tlačítko myši nebo DoClick stock metoda byla vyvolána.
 
 ```
 virtual void OnClick(USHORT iButton);
@@ -2296,24 +2296,24 @@ virtual void OnClick(USHORT iButton);
 
 ### <a name="parameters"></a>Parametry
 
-*iButton*<br/>
-Index tlačítka myši Může mít jednu z následujících hodnot:
+*tlačítko iButton*<br/>
+Index tlačítka myši. Může mít jednu z následujících hodnot:
 
-- LEFT_BUTTON kliknutí levým tlačítkem myši.
+- LEFT_BUTTON Bylo kliknuto na levé tlačítko myši.
 
-- MIDDLE_BUTTON bylo kliknuto na prostřední tlačítko myši.
+- MIDDLE_BUTTON Bylo kliknuto na prostřední tlačítko myši.
 
-- RIGHT_BUTTON stisknutí pravého tlačítka myši.
+- RIGHT_BUTTON Bylo kliknuto pravým tlačítkem myši.
 
 ### <a name="remarks"></a>Poznámky
 
-Výchozí implementace volá `COleControl::FireClick`.
+Výchozí volání `COleControl::FireClick`implementace .
 
-Přepište tuto členskou funkci pro úpravu nebo rozšiřování výchozího zpracování.
+Přepište tuto členovou funkci a upravte nebo rozšiřte výchozí zpracování.
 
-##  <a name="onclose"></a>COleControl –::-Close
+## <a name="colecontrolonclose"></a><a name="onclose"></a>COleControl::OnClose
 
-Volá se rozhraním, když se kontejner nazývá funkce `IOleControl::Close` ovládacího prvku.
+Volat rámci při kontejneru volá funkce `IOleControl::Close` ovládacího prvku.
 
 ```
 virtual void OnClose(DWORD dwSaveOption);
@@ -2322,7 +2322,7 @@ virtual void OnClose(DWORD dwSaveOption);
 ### <a name="parameters"></a>Parametry
 
 *dwSaveOption*<br/>
-Příznak, který označuje, zda má být objekt před načtením uložen. Platné hodnoty:
+Příznak, který označuje, zda má být objekt uložen před načtením. Platné hodnoty jsou:
 
 - OLECLOSE_SAVEIFDIRTY
 
@@ -2332,11 +2332,11 @@ Příznak, který označuje, zda má být objekt před načtením uložen. Platn
 
 ### <a name="remarks"></a>Poznámky
 
-Ve výchozím nastavení `OnClose` uloží objekt ovládacího prvku, pokud byl změněn a *dwSaveOption* je buď OLECLOSE_SAVEIFDIRTY nebo OLECLOSE_PROMPTSAVE.
+Ve výchozím `OnClose` nastavení uloží objekt ovládacího prvku, pokud byl změněn a *dwSaveOption* je buď OLECLOSE_SAVEIFDIRTY nebo OLECLOSE_PROMPTSAVE.
 
-##  <a name="ondoverb"></a>COleControl –:: OnDoVerb
+## <a name="colecontrolondoverb"></a><a name="ondoverb"></a>COleControl::Ondoverb
 
-Volá se rozhraním, když kontejner volá členskou funkci `IOleObject::DoVerb`.
+Volat rámci při volání kontejneru `IOleObject::DoVerb` členské funkce.
 
 ```
 virtual BOOL OnDoVerb(
@@ -2348,31 +2348,31 @@ virtual BOOL OnDoVerb(
 
 ### <a name="parameters"></a>Parametry
 
-*iVerb*<br/>
-Index příkazu ovládacího prvku, který má být vyvolán.
+*iSponož*<br/>
+Index ovládacího slovesa, které má být vyvoláno.
 
 *lpMsg*<br/>
-Ukazatel na zprávu systému Windows, která způsobila vyvolání příkazu.
+Ukazatel na zprávu systému Windows, která způsobila vyvolání slovesa.
 
 *hWndParent*<br/>
-Popisovač nadřazeného okna ovládacího prvku. Pokud spuštění příkazu vytvoří okno (nebo Windows), *hwndParent* by mělo být použito jako nadřazené.
+Popisovač nadřazeného okna ovládacího prvku. Pokud provádění slovesa vytvoří okno (nebo okna), *hWndParent* by měl být použit jako nadřazený.
 
 *lpRect*<br/>
-Ukazatel na strukturu RECT, do které se zkopírují souřadnice ovládacího prvku vzhledem k kontejneru, se zkopírují.
+Ukazatel na rect strukturu, do které budou zkopírovány souřadnice ovládacího prvku vzhledem ke kontejneru.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud bylo volání úspěšné; v opačném případě 0.
+Nenulová, pokud bylo volání úspěšné; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Výchozí implementace používá ON_OLEVERB a ON_STDOLEVERB položky mapování zpráv k určení správné funkce k vyvolání.
+Výchozí implementace používá ON_OLEVERB a ON_STDOLEVERB položky mapy zpráv k určení správné funkce vyvolat.
 
-Přepsáním této funkce změníte výchozí zpracování příkazu.
+Přepsáním této funkce změníte výchozí zpracování slovesa.
 
-##  <a name="ondraw"></a>COleControl –:: Draw
+## <a name="colecontrolondraw"></a><a name="ondraw"></a>COleControl::Ondraw
 
-Volá se rozhraním, aby se nakreslil ovládací prvek OLE v zadaném ohraničujícím obdélníku pomocí zadaného kontextu zařízení.
+Volat rámci nakreslit ovládací prvek OLE v zadaném ohraničovacím obdélníku pomocí kontextu zadaného zařízení.
 
 ```
 virtual void OnDraw(
@@ -2383,22 +2383,22 @@ virtual void OnDraw(
 
 ### <a name="parameters"></a>Parametry
 
-*Emulátor*<br/>
-Kontext zařízení, ve kterém probíhá vykreslování.
+*Pdc*<br/>
+Kontext zařízení, ve kterém dochází k výkresu.
 
 *rcBounds*<br/>
 Obdélníková oblast ovládacího prvku, včetně ohraničení.
 
-*rcInvalid*<br/>
-Obdélníková oblast ovládacího prvku, která je neplatná.
+*rcNeplatné*<br/>
+Obdélníková oblast ovládacího prvku, který je neplatný.
 
 ### <a name="remarks"></a>Poznámky
 
-`OnDraw` se obvykle volá pro zobrazení obrazovky a při předávání kontextu zařízení obrazovky jako *primárního řadiče domény*. Parametr *rcBounds* identifikuje obdélník v kontextu cílového zařízení (vzhledem k aktuálnímu režimu mapování). Parametr *rcInvalid* je skutečný obdélník, který je neplatný. V některých případech bude tato oblast menší než *rcBounds*.
+`OnDraw`obvykle volána pro zobrazení na obrazovce, předávání kontextu obrazovky zařízení jako *pDC*. Parametr *rcBounds* identifikuje obdélník v kontextu cílového zařízení (vzhledem k jeho aktuálnímu režimu mapování). Parametr *rcInvalid* je skutečný obdélník, který je neplatný. V některých případech to bude menší oblast než *rcBounds*.
 
-##  <a name="ondrawmetafile"></a>COleControl –:: OnDrawMetafile
+## <a name="colecontrolondrawmetafile"></a><a name="ondrawmetafile"></a>COleControl::Soubor OnDrawMetafile
 
-Volá se rozhraním, aby se nakreslil ovládací prvek OLE v zadaném ohraničujícím obdélníku pomocí zadaného kontextu zařízení v metasouboru.
+Volat rámci nakreslit ovládací prvek OLE v zadaném ohraničovacím obdélníku pomocí zadaného kontextu zařízení metasouboru.
 
 ```
 virtual void OnDrawMetafile(
@@ -2408,19 +2408,19 @@ virtual void OnDrawMetafile(
 
 ### <a name="parameters"></a>Parametry
 
-*Emulátor*<br/>
-Kontext zařízení, ve kterém probíhá vykreslování.
+*Pdc*<br/>
+Kontext zařízení, ve kterém dochází k výkresu.
 
 *rcBounds*<br/>
 Obdélníková oblast ovládacího prvku, včetně ohraničení.
 
 ### <a name="remarks"></a>Poznámky
 
-Výchozí implementace volá funkci [nakreslit](#ondraw) .
+Výchozí implementace volá funkci [OnDraw.](#ondraw)
 
-##  <a name="onedit"></a>COleControl –:: s úpravami
+## <a name="colecontrolonedit"></a><a name="onedit"></a>COleControl::OnEdit
 
-Způsobí, že se ovládací prvek aktivuje v uživatelském rozhraní.
+Způsobí, že ovládací prvek má být aktivován.
 
 ```
 virtual BOOL OnEdit(
@@ -2432,29 +2432,29 @@ virtual BOOL OnEdit(
 ### <a name="parameters"></a>Parametry
 
 *lpMsg*<br/>
-Ukazatel na zprávu systému Windows, která vyvolala příkaz.
+Ukazatel na zprávu systému Windows, která vyvolala sloveso.
 
 *hWndParent*<br/>
 Popisovač nadřazeného okna ovládacího prvku.
 
 *lpRect*<br/>
-Ukazatel na obdélník, který je použit ovládacím prvkem v kontejneru.
+Ukazatel na obdélník používaný ovládacím prvkem v kontejneru.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je volání úspěšné; v opačném případě 0.
+Nenulová, pokud je volání úspěšné; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-To má stejný účinek jako vyvolání operace OLEIVERB_UIACTIVATE ovládacího prvku.
+To má stejný účinek jako vyvolání OLEIVERB_UIACTIVATE slovesa ovládacího prvku.
 
-Tato funkce se obvykle používá jako funkce obslužné rutiny pro položku ON_OLEVERB mapování zpráv. Tím se příkaz Edit zpřístupní v nabídce "objekt" ovládacího prvku. Příklad:
+Tato funkce se obvykle používá jako funkce obslužné rutiny pro ON_OLEVERB položku mapy zpráv. Tím se zpřístupní sloveso "Upravit" v nabídce "Objekt" ovládacího prvku. Příklad:
 
 [!code-cpp[NVC_MFCAxCtl#5](../../mfc/reference/codesnippet/cpp/colecontrol-class_6.cpp)]
 
-##  <a name="onenabledchanged"></a>COleControl –:: OnEnabledChanged
+## <a name="colecontrolonenabledchanged"></a><a name="onenabledchanged"></a>COleControl::OnEnabledChanged
 
-Volá se rozhraním, když se změní hodnota vlastnosti s povoleným zásobou.
+Volat rámci při změně hodnoty vlastnosti Enabled skladového souboru.
 
 ```
 virtual void OnEnabledChanged();
@@ -2462,11 +2462,11 @@ virtual void OnEnabledChanged();
 
 ### <a name="remarks"></a>Poznámky
 
-Tuto funkci můžete přepsat, pokud chcete po změně této vlastnosti oznámení změnit. Výchozí implementace volá [InvalidateControl](#invalidatecontrol).
+Přepsat tuto funkci, pokud chcete oznámení po této změně vlastnosti. Výchozí implementace volá [InvalidateControl](#invalidatecontrol).
 
-##  <a name="onenumverbs"></a>COleControl –:: OnEnumVerbs
+## <a name="colecontrolonenumverbs"></a><a name="onenumverbs"></a>COleControl::OnEnumVerbs
 
-Volá se rozhraním, když kontejner volá členskou funkci `IOleObject::EnumVerbs`.
+Volat rámci při volání kontejneru `IOleObject::EnumVerbs` členské funkce.
 
 ```
 virtual BOOL OnEnumVerbs(LPENUMOLEVERB* ppenumOleVerb);
@@ -2475,21 +2475,21 @@ virtual BOOL OnEnumVerbs(LPENUMOLEVERB* ppenumOleVerb);
 ### <a name="parameters"></a>Parametry
 
 *ppenumOleVerb*<br/>
-Ukazatel na objekt `IEnumOLEVERB`, který vytvoří výčet sloves ovládacího prvku.
+Ukazatel na `IEnumOLEVERB` objekt, který vyjmenovává slovesa ovládacího prvku.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud jsou k dispozici příkazy; v opačném případě 0.
+Nenulová, pokud jsou k dispozici slovesa; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Výchozí implementace vytvoří výčet položek ON_OLEVERB v mapě zpráv.
+Výchozí implementace vyjmenovává ON_OLEVERB položky v mapě zpráv.
 
-Přepsáním této funkce změníte výchozí způsob vytváření výčtu operací.
+Přepsáním této funkce změníte výchozí způsob výčtu sloves.
 
-##  <a name="oneventadvise"></a>COleControl –:: OnEventAdvise
+## <a name="colecontroloneventadvise"></a><a name="oneventadvise"></a>COleControl::OnEventAdvise
 
-Volá se rozhraním, když je obslužná rutina události připojená k ovládacímu prvku OLE nebo se k němu odpojila.
+Volat rámci při obslužné rutiny události je připojen nebo odpojen od ovládacího prvku OLE.
 
 ```
 virtual void OnEventAdvise(BOOL bAdvise);
@@ -2497,12 +2497,12 @@ virtual void OnEventAdvise(BOOL bAdvise);
 
 ### <a name="parameters"></a>Parametry
 
-*bAdvise*<br/>
-Hodnota TRUE označuje, že byla k ovládacímu prvku připojena obslužná rutina události. Hodnota FALSE označuje, že obslužná rutina události byla odpojena od ovládacího prvku.
+*bPoradit*<br/>
+True označuje, že obslužná rutina události byla připojena k ovládacímu prvku. NEPRAVDA označuje, že obslužná rutina události byla odpojena od ovládacího prvku.
 
-##  <a name="onfontchanged"></a>COleControl –:: OnFontChanged
+## <a name="colecontrolonfontchanged"></a><a name="onfontchanged"></a>COleControl::OnFontChanged
 
-Volá se rozhraním, když se změní hodnota vlastnosti zásobed Font.
+Volat rámci při změně hodnoty vlastnosti stock Font.
 
 ```
 virtual void OnFontChanged();
@@ -2510,17 +2510,17 @@ virtual void OnFontChanged();
 
 ### <a name="remarks"></a>Poznámky
 
-Výchozí implementace volá `COleControl::InvalidateControl`. Pokud ovládací prvek roztřídí ovládací prvek systému Windows, výchozí implementace také pošle WM_SETFONTovou zprávu do okna ovládacího prvku.
+Výchozí volání `COleControl::InvalidateControl`implementace . Pokud ovládací prvek podřadné třídy ovládacího prvku systému Windows, výchozí implementace také odešle zprávu WM_SETFONT do okna ovládacího prvku.
 
-Tuto funkci můžete přepsat, pokud chcete po změně této vlastnosti oznámení změnit.
+Přepsat tuto funkci, pokud chcete oznámení po této změně vlastnosti.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCAxCtl#6](../../mfc/reference/codesnippet/cpp/colecontrol-class_7.cpp)]
 
-##  <a name="onforecolorchanged"></a>COleControl –:: OnForeColorChanged
+## <a name="colecontrolonforecolorchanged"></a><a name="onforecolorchanged"></a>COleControl::OnForeColorChanged
 
-Volá se rozhraním, když se změní hodnota vlastnosti zásobovaná barva.
+Volat rámci při změně hodnoty vlastnosti ForeColor zásob.
 
 ```
 virtual void OnForeColorChanged();
@@ -2528,13 +2528,13 @@ virtual void OnForeColorChanged();
 
 ### <a name="remarks"></a>Poznámky
 
-Výchozí implementace volá `InvalidateControl`.
+Výchozí volání `InvalidateControl`implementace .
 
-Tuto funkci můžete přepsat, pokud chcete po změně této vlastnosti oznámení změnit.
+Přepsat tuto funkci, pokud chcete oznámení po této změně vlastnosti.
 
-##  <a name="onfreezeevents"></a>COleControl –:: OnFreezeEvents
+## <a name="colecontrolonfreezeevents"></a><a name="onfreezeevents"></a>COleControl::Události onfreeze
 
-Volá se rozhraním, když kontejner volá `IOleControl::FreezeEvents`.
+Volat rámci po volání `IOleControl::FreezeEvents`kontejneru .
 
 ```
 virtual void OnFreezeEvents(BOOL bFreeze);
@@ -2542,18 +2542,18 @@ virtual void OnFreezeEvents(BOOL bFreeze);
 
 ### <a name="parameters"></a>Parametry
 
-*bFreeze*<br/>
-TRUE, pokud je zablokováno zpracování událostí ovládacího prvku; v opačném případě FALSE.
+*bZmrazení*<br/>
+TRUE, pokud zpracování událostí ovládacího prvku je zmrazen; jinak FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Výchozí implementace neprovádí žádnou akci.
+Výchozí implementace neprovede žádné provádění.
 
-Tuto funkci můžete přepsat, pokud chcete další chování při zmrazení nebo nezmrazení události.
+Přepsat tuto funkci, pokud chcete další chování při zpracování událostí je zmrazené nebo nezmrazené.
 
-##  <a name="ongetcolorset"></a>COleControl –:: OnGetColorSet
+## <a name="colecontrolongetcolorset"></a><a name="ongetcolorset"></a>COleControl::OnGetColorSet
 
-Volá se rozhraním, když kontejner volá členskou funkci `IViewObject::GetColorSet`.
+Volat rámci při volání kontejneru `IViewObject::GetColorSet` členské funkce.
 
 ```
 virtual BOOL OnGetColorSet(
@@ -2564,28 +2564,28 @@ virtual BOOL OnGetColorSet(
 
 ### <a name="parameters"></a>Parametry
 
-*ptd*<br/>
-Odkazuje na cílové zařízení, pro které se má obrázek vykreslovat. Pokud je tato hodnota NULL, měl by se obrázek vykreslovat pro výchozí cílové zařízení, obvykle pro zobrazovací zařízení.
+*Ptd*<br/>
+Odkazuje na cílové zařízení, pro které by měl být obrázek vykreslen. Pokud je tato hodnota null, obrázek by měl být vykreslen pro výchozí cílové zařízení, obvykle zobrazovací zařízení.
 
 *hicTargetDev*<br/>
-Určuje informační kontext na cílovém zařízení, které indikuje *PTD*. Tento parametr může být kontextem zařízení, ale není jednou nutně. Pokud má *PTD* hodnotu null, *hicTargetDev* by měl mít také hodnotu null.
+Určuje kontext informací na cílovém zařízení označeném *ptd*. Tento parametr může být kontext zařízení, ale není nutně jeden. Pokud *ptd* je NULL, *hicTargetDev* by měl být také NULL.
 
 *ppColorSet*<br/>
-Ukazatel na umístění, do kterého se mají zkopírovat sadu barev, které by se měly použít. Pokud funkce nevrátí sadu barev, je vrácena hodnota NULL.
+Ukazatel na umístění, do kterého by měla být zkopírována sada barev, které by měly být použity. Pokud funkce nevrátí sadu barev, null je vrácena.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je vrácena platná sada barev; v opačném případě 0.
+Nenulová, pokud je vrácena platná sada barev; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Kontejner volá tuto funkci, aby získal všechny barvy potřebné k vykreslení ovládacího prvku OLE. Kontejner může použít sady barev získané ve spojení s barvami, které musí nastavovat celkovou paletu barev. Výchozí implementace vrátí hodnotu FALSE.
+Kontejner volá tuto funkci získat všechny barvy potřebné k nakreslení ovládacího prvku OLE. Kontejner může použít sady barev získané ve spojení s barvami, které potřebuje k nastavení celkové palety barev. Výchozí implementace vrátí hodnotu NEPRAVDA.
 
-Přepsáním této funkce proveďte jakékoli speciální zpracování této žádosti.
+Přepsat tuto funkci provést jakékoli zvláštní zpracování tohoto požadavku.
 
-##  <a name="ongetcontrolinfo"></a>COleControl –:: OnGetControlInfo
+## <a name="colecontrolongetcontrolinfo"></a><a name="ongetcontrolinfo"></a>COleControl::OnGetControlInfo
 
-Volá se rozhraním, když kontejner ovládacího prvku požaduje informace o ovládacím prvku.
+Volat rámci při kontejneru ovládacího prvku požadované informace o ovládacíprvek.
 
 ```
 virtual void OnGetControlInfo(LPCONTROLINFO pControlInfo);
@@ -2594,17 +2594,17 @@ virtual void OnGetControlInfo(LPCONTROLINFO pControlInfo);
 ### <a name="parameters"></a>Parametry
 
 *pControlInfo*<br/>
-Ukazatel na strukturu [CONTROLINFO](/windows/win32/api/ocidl/ns-ocidl-controlinfo) , která se má vyplnit.
+Ukazatel na [controlinfo](/windows/win32/api/ocidl/ns-ocidl-controlinfo) strukturu, která má být vyplněna.
 
 ### <a name="remarks"></a>Poznámky
 
-Tyto informace se skládají hlavně z popisu popisných kláves ovládacího prvku. Výchozí implementace vyplní *pControlInfo* výchozími informacemi.
+Tyto informace se skládají především z popisu mnemotechnické klíče ovládacího prvku. Výchozí implementace vyplní *pControlInfo* výchozími informacemi.
 
-Tuto funkci přepište, pokud váš ovládací prvek potřebuje zpracovat klávesové zkratky.
+Přepsat tuto funkci, pokud vaše ovládací prvek potřebuje ke zpracování mnemotechnické klávesy.
 
-##  <a name="ongetdisplaystring"></a>COleControl –:: OnGetDisplayString
+## <a name="colecontrolongetdisplaystring"></a><a name="ongetdisplaystring"></a>COleControl::OnGetDisplayString
 
-Volá se rozhraním, aby se získal řetězec, který představuje aktuální hodnotu vlastnosti identifikované identifikátorem *DISPID*.
+Volat rámci získat řetězec, který představuje aktuální hodnotu vlastnosti identifikované *dispid*.
 
 ```
 virtual BOOL OnGetDisplayString(
@@ -2614,23 +2614,23 @@ virtual BOOL OnGetDisplayString(
 
 ### <a name="parameters"></a>Parametry
 
-*DISPID*<br/>
+*Dispid*<br/>
 ID odeslání vlastnosti ovládacího prvku.
 
 *strValue*<br/>
-Odkaz na objekt [CString](../../atl-mfc-shared/reference/cstringt-class.md) , pomocí kterého bude vrácen řetězec.
+Odkaz na [CString](../../atl-mfc-shared/reference/cstringt-class.md) objekt, jehož prostřednictvím bude vrácen řetězec.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud byl v StrValue vrácen řetězec *;* v opačném případě 0.
+Nenulová, pokud byl řetězec vrácen v *strValue;* jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Tuto funkci přepište, pokud má váš ovládací prvek vlastnost, jejíž hodnota nemůže být převedena přímo na řetězec a chcete, aby se hodnota vlastnosti zobrazovala v prohlížeči vlastností dodaných kontejnerem.
+Přepsat tuto funkci, pokud ovládací prvek má vlastnost, jejíž hodnotu nelze přímo převést na řetězec a chcete, aby hodnota vlastnosti se zobrazí v prohlížeči vlastností dodaného kontejnerem.
 
-##  <a name="ongetinplacemenu"></a>COleControl –:: OnGetInPlaceMenu
+## <a name="colecontrolongetinplacemenu"></a><a name="ongetinplacemenu"></a>COleControl::OnGetInplaceMenu
 
-Volá se rozhraním, když je ovládací prvek aktivovaný, aby se získala nabídka, která se sloučí do existující nabídky kontejneru.
+Volat rámci při aktivaci ovládacího prvku pro získání nabídky, které mají být sloučeny do existující nabídky kontejneru.
 
 ```
 virtual HMENU OnGetInPlaceMenu();
@@ -2638,15 +2638,15 @@ virtual HMENU OnGetInPlaceMenu();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Popisovač nabídky ovládacího prvku nebo hodnotu NULL, pokud ovládací prvek nemá žádný. Výchozí implementace vrací hodnotu NULL.
+Popisovač nabídky ovládacího prvku nebo NULL, pokud ovládací prvek nemá žádné. Výchozí implementace vrátí hodnotu NULL.
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace o slučování prostředků OLE najdete v článcích [nabídky a prostředky (OLE)](../../mfc/menus-and-resources-ole.md).
+Další informace o slučování prostředků OLE naleznete v článku [Nabídky a prostředky (OLE).](../../mfc/menus-and-resources-ole.md)
 
-##  <a name="ongetnaturalextent"></a>COleControl –:: OnGetNaturalExtent
+## <a name="colecontrolongetnaturalextent"></a><a name="ongetnaturalextent"></a>COleControl::OnGetNaturalExtent
 
-Volá se rozhraním v reakci na požadavek `IViewObjectEx::GetNaturalExtent` kontejneru.
+Volat rámci v reakci na `IViewObjectEx::GetNaturalExtent` požadavek kontejneru.
 
 ```
 virtual BOOL OnGetNaturalExtent(
@@ -2661,19 +2661,19 @@ virtual BOOL OnGetNaturalExtent(
 ### <a name="parameters"></a>Parametry
 
 *dwAspect*<br/>
-Určuje způsob reprezentace objektu. Reprezentace zahrnují obsah, ikonu, miniaturu nebo vytištěný dokument. Platné hodnoty jsou pořízeny z výčtu [DVASPECT](/windows/win32/api/wtypes/ne-wtypes-dvaspect) nebo DVASPECT2.
+Určuje, jak má být objekt reprezentován. Reprezentace zahrnují obsah, ikonu, miniaturu nebo tištěný dokument. Platné hodnoty jsou převzaty z výčtu [DVASPECT](/windows/win32/api/wtypes/ne-wtypes-dvaspect) nebo DVASPECT2.
 
-*lindex*<br/>
-Část objektu, která je zajímavá. V současné době je platná pouze-1.
+*Lindex*<br/>
+Část objektu, který je v zájmu. V současné době je platný pouze -1.
 
-*ptd*<br/>
-Odkazuje na strukturu [DVTARGETDEVICE](/windows/win32/api/objidl/ns-objidl-dvtargetdevice) definující cílové zařízení, pro které by měla být vrácena velikost objektu.
+*Ptd*<br/>
+Odkazuje na [dvtargetdevice](/windows/win32/api/objidl/ns-objidl-dvtargetdevice) struktury definování cílové zařízení, pro které by měla být vrácena velikost objektu.
 
 *hicTargetDev*<br/>
-Určuje kontext informací pro cílové zařízení, které je uvedené v parametru *PTD* , ze kterého může objekt extrahovat metriky zařízení a testovat schopnosti zařízení. Pokud má *PTD* hodnotu null, objekt by měl ignorovat hodnotu v parametru *hicTargetDev* .
+Určuje kontext informací pro cílové zařízení označené parametrem *ptd,* ze kterého může objekt extrahovat metriky zařízení a otestovat možnosti zařízení. Pokud *ptd* je NULL, objekt by měl ignorovat hodnotu v *parametru hicTargetDev.*
 
 *pExtentInfo*<br/>
-Odkazuje na strukturu `DVEXTENTINFO`, která určuje data o velikosti. Struktura `DVEXTENTINFO`:
+Odkazuje na `DVEXTENTINFO` strukturu, která určuje data velikosti. Struktura `DVEXTENTINFO` je:
 
 ```cpp
 typedef struct tagExtentInfo
@@ -2684,26 +2684,26 @@ typedef struct tagExtentInfo
 }   DVEXTENTINFO;
 ```
 
-`dwExtentMode` členů struktury může mít jednu ze dvou hodnot:
+Člen `dwExtentMode` struktury může mít jednu ze dvou hodnot:
 
-- DVEXTENT_CONTENT Dotázat se na to, jak velký by měl ovládací prvek odpovídat obsahu (přichycení k velikosti)
+- DVEXTENT_CONTENT Dotaz, jak velký ovládací prvek by měl být přesně přizpůsobit obsah (snap-to-size)
 
-- Při změně velikosti předejte navrhovanou velikost pro řízení DVEXTENT_INTEGRAL.
+- DVEXTENT_INTEGRAL Při změně velikosti přejděte navrhovanou velikost k řízení
 
 *psizel*<br/>
-Odkazuje na velikost dat vrácených ovládacím prvkem. Vrácená data změny velikosti jsou nastavena na hodnotu-1 pro libovolnou dimenzi, která nebyla upravena.
+Odkazuje na velikost dat vrácených ovládacím prvkem. Vrácená data velikosti jsou nastavena na -1 pro všechny dimenze, které nebyly upraveny.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud úspěšně vrátí nebo upraví velikost; v opačném případě 0.
+Nenulová, pokud úspěšně vrátí nebo upraví velikost; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Přepsáním této funkce vrátíte velikost zobrazované velikosti objektu, která je nejblíže navržené velikosti a režimu rozsahu ve struktuře `DVEXTENTINFO`. Výchozí implementace vrátí hodnotu FALSE a neprovede žádné úpravy velikosti.
+Přepsáním této funkce vrátíte velikost zobrazení objektu co nejblíže `DVEXTENTINFO` navrhované velikosti a rozsahu režimu ve struktuře. Výchozí implementace vrátí hodnotu FALSE a neprovede žádné úpravy velikosti.
 
-##  <a name="ongetpredefinedstrings"></a>COleControl –:: OnGetPredefinedStrings
+## <a name="colecontrolongetpredefinedstrings"></a><a name="ongetpredefinedstrings"></a>COleControl::OnGetPredefinedStrings
 
-Volá se rozhraním, aby se získala sada předdefinovaných řetězců, které představují možné hodnoty pro vlastnost.
+Volat rámci získat sadu předdefinovaných řetězců představující možné hodnoty pro vlastnost.
 
 ```
 virtual BOOL OnGetPredefinedStrings(
@@ -2714,26 +2714,26 @@ virtual BOOL OnGetPredefinedStrings(
 
 ### <a name="parameters"></a>Parametry
 
-*DISPID*<br/>
+*Dispid*<br/>
 ID odeslání vlastnosti ovládacího prvku.
 
-*pStringArray*<br/>
-Pole řetězců, které se má vyplnit návratovými hodnotami.
+*pole pStringArray*<br/>
+Pole řetězce, které má být vyplněno vrácenými hodnotami.
 
-*pCookieArray*<br/>
-Pole DWORD, které se má vyplnit návratovými hodnotami.
+*pole pCookieArray*<br/>
+Pole DWORD, které má být vyplněno vrácenými hodnotami.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud byly přidány prvky do *pStringArray* a *pCookieArray*.
+Nenulová, pokud byly přidány prvky do *pStringArray* a *pCookieArray*.
 
 ### <a name="remarks"></a>Poznámky
 
-Tuto funkci přepište, pokud má váš ovládací prvek vlastnost se sadou možných hodnot, které mohou být reprezentovány řetězci. Pro každý prvek přidaný do *pStringArray*byste měli přidat odpovídající prvek "cookie" do *pCookieArray.* Tyto hodnoty "cookie" mohou být později předány rozhraním funkce `COleControl::OnGetPredefinedValue`.
+Přepsat tuto funkci, pokud ovládací prvek má vlastnost se sadou možných hodnot, které mohou být reprezentovány řetězce. Pro každý prvek přidaný do *pStringArray*byste měli do *pCookieArray* přidat odpovídající prvek "cookie". Tyto hodnoty "cookie" mohou být později `COleControl::OnGetPredefinedValue` předány rámci funkce.
 
-##  <a name="ongetpredefinedvalue"></a>COleControl –:: OnGetPredefinedValue
+## <a name="colecontrolongetpredefinedvalue"></a><a name="ongetpredefinedvalue"></a>COleControl::OnGetPredefinedValue
 
-Volá se rozhraním, aby se získala hodnota odpovídající jednomu z předdefinovaných řetězců dříve vráceného přepsáním `COleControl::OnGetPredefinedStrings`.
+Volat rámci získat hodnotu odpovídající jeden z předdefinovaných řetězců dříve vrácena přepsání `COleControl::OnGetPredefinedStrings`.
 
 ```
 virtual BOOL OnGetPredefinedValue(
@@ -2744,22 +2744,22 @@ virtual BOOL OnGetPredefinedValue(
 
 ### <a name="parameters"></a>Parametry
 
-*DISPID*<br/>
+*Dispid*<br/>
 ID odeslání vlastnosti ovládacího prvku.
 
 *dwCookie*<br/>
-Hodnota souboru cookie dříve vrácená přepsáním `COleControl::OnGetPredefinedStrings`.
+Hodnota souboru cookie, která `COleControl::OnGetPredefinedStrings`byla dříve vrácena přepsáním aplikace .
 
 *lpvarOut*<br/>
-Ukazatel na strukturu `VARIANT`, pomocí které se vrátí hodnota vlastnosti.
+Ukazatel na `VARIANT` strukturu, jehož prostřednictvím bude vrácena hodnota vlastnosti.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud byla vrácena hodnota v *lpvarOut*; v opačném případě 0.
+Nenulová, pokud byla vrácena hodnota v *lpvarOut*; jinak 0.
 
-##  <a name="ongetviewextent"></a>COleControl –:: OnGetViewExtent
+## <a name="colecontrolongetviewextent"></a><a name="ongetviewextent"></a>COleControl::OnGetViewExtent
 
-Volá se rozhraním v reakci na požadavek [IViewObject2:: getrozsahu](/windows/win32/api/oleidl/nf-oleidl-iviewobject2-getextent) kontejneru.
+Volat rámci v reakci na kontejneru [IViewObject2::GetExtent](/windows/win32/api/oleidl/nf-oleidl-iviewobject2-getextent) požadavek.
 
 ```
 virtual BOOL OnGetViewExtent(
@@ -2772,28 +2772,28 @@ virtual BOOL OnGetViewExtent(
 ### <a name="parameters"></a>Parametry
 
 *dwDrawAspect*<br/>
-Hodnota DWORD popisující, který formulář nebo aspekt objektu má být zobrazen. Platné hodnoty jsou pořízeny z výčtu [DVASPECT](/windows/win32/api/wtypes/ne-wtypes-dvaspect) nebo DVASPECT2.
+DWORD popisující, který formulář nebo aspekt objektu má být zobrazen. Platné hodnoty jsou převzaty z výčtu [DVASPECT](/windows/win32/api/wtypes/ne-wtypes-dvaspect) nebo DVASPECT2.
 
-*lindex*<br/>
-Část objektu, která je zajímavá. V současné době je platná pouze-1.
+*Lindex*<br/>
+Část objektu, který je v zájmu. V současné době je platný pouze -1.
 
-*ptd*<br/>
-Odkazuje na strukturu [DVTARGETDEVICE](/windows/win32/api/objidl/ns-objidl-dvtargetdevice) definující cílové zařízení, pro které by měla být vrácena velikost objektu.
+*Ptd*<br/>
+Odkazuje na [dvtargetdevice](/windows/win32/api/objidl/ns-objidl-dvtargetdevice) struktury definování cílové zařízení, pro které by měla být vrácena velikost objektu.
 
 *lpsizel*<br/>
 Odkazuje na umístění, kde je vrácena velikost objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud jsou informace o rozsahu úspěšně vráceny; v opačném případě 0.
+Nenulová, pokud jsou informace o rozsahu úspěšně vráceny; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Tuto funkci přepište, pokud váš ovládací prvek používá oboustranný výkres, přičemž jeho neprůhledné a transparentní součásti mají různé rozměry.
+Tuto funkci přepište, pokud ovládací prvek používá dvouprůchodový výkres a jeho neprůhledné a průhledné součásti mají různé rozměry.
 
-##  <a name="ongetviewrect"></a>COleControl –:: OnGetViewRect
+## <a name="colecontrolongetviewrect"></a><a name="ongetviewrect"></a>COleControl::OnGetViewRect
 
-Volá se rozhraním v reakci na požadavek `IViewObjectEx::GetRect` kontejneru.
+Volat rámci v reakci na `IViewObjectEx::GetRect` požadavek kontejneru.
 
 ```
 virtual BOOL OnGetViewRect(DWORD dwAspect, LPRECTL pRect);
@@ -2802,28 +2802,28 @@ virtual BOOL OnGetViewRect(DWORD dwAspect, LPRECTL pRect);
 ### <a name="parameters"></a>Parametry
 
 *dwAspect*<br/>
-Hodnota DWORD popisující, který formulář nebo aspekt objektu má být zobrazen. Platné hodnoty jsou pořízeny z výčtu [DVASPECT](/windows/win32/api/wtypes/ne-wtypes-dvaspect) nebo DVASPECT2:
+DWORD popisující, který formulář nebo aspekt objektu má být zobrazen. Platné hodnoty jsou převzaty z výčtu [DVASPECT](/windows/win32/api/wtypes/ne-wtypes-dvaspect) nebo DVASPECT2:
 
-- DVASPECT_CONTENT ohraničující obdélník celého objektu. Levý horní roh na počátku a velikost objektu, který se rovná rozsahu vrácenému `GetViewExtent` *.*
+- DVASPECT_CONTENT Ohraničující obdélník celého objektu. Levý horní roh v počátku a velikosti objektu `GetViewExtent`rovnající se rozsahu vráceného *.*
 
-- DVASPECT_OPAQUE objektů s obdélníkovou neprůhlednou oblastí vrátí tento obdélník. Ostatní selžou.
+- DVASPECT_OPAQUE Objekty s obdélníkovou neprůhlednou oblastí vrátí tento obdélník. Jiní selžou.
 
-- DVASPECT_TRANSPARENT obdélník, který pokrývá všechny transparentní nebo nedovolené části.
+- DVASPECT_TRANSPARENT Obdélník pokrývající všechny průhledné nebo nepravidelné části.
 
 *pRect*<br/>
-Odkazuje na strukturu [Rect](/previous-versions/dd162907\(v=vs.85\)) určující obdélník, ve kterém má být objekt vykreslen. Tento parametr řídí umístění a roztažení objektu.
+Odkazuje na [rectl](/previous-versions/dd162907\(v=vs.85\)) strukturu určující obdélník, ve kterém má být objekt nakreslena. Tento parametr řídí umístění a roztažení objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je velikost rámečku na objekt úspěšně vrácena; v opačném případě 0.
+Nenulová, pokud je obdélník velikosti objektu úspěšně vrácena; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Velikost objektu je převedena pomocí `OnGetViewRect` do obdélníku, který začíná na konkrétní pozici (výchozí je levý horní roh zobrazení). Tuto funkci přepište, pokud váš ovládací prvek používá oboustranný výkres, přičemž jeho neprůhledné a transparentní součásti mají různé rozměry.
+Velikost objektu je převedena `OnGetViewRect` na obdélník začínající na určité pozici (výchozí hodnota je levý horní roh displeje). Tuto funkci přepište, pokud ovládací prvek používá dvouprůchodový výkres a jeho neprůhledné a průhledné součásti mají různé rozměry.
 
-##  <a name="ongetviewstatus"></a>COleControl –:: OnGetViewStatus
+## <a name="colecontrolongetviewstatus"></a><a name="ongetviewstatus"></a>COleControl::OnGetViewStatus
 
-Volá se rozhraním v reakci na požadavek `IViewObjectEx::GetViewStatus` kontejneru.
+Volat rámci v reakci na `IViewObjectEx::GetViewStatus` požadavek kontejneru.
 
 ```
 virtual DWORD OnGetViewStatus();
@@ -2831,22 +2831,22 @@ virtual DWORD OnGetViewStatus();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Jedna z hodnot výčtu VIEWSTATUS, pokud je úspěšná; v opačném případě 0. Možné hodnoty jsou jakékoli kombinace následujících:
+Jedna z hodnot výčtu VIEWSTATUS, pokud je úspěšný; jinak 0. Možné hodnoty jsou libovolnou kombinací následujících hodnot:
 
 |||
 |-|-|
-|VIEWSTATUS_OPAQUE|Objekt je zcela neprůhledný. Pokud tento bit není nastaven, objekt obsahuje průhledné části. Tento bit se vztahuje pouze na aspekty související s obsahem a nikoli na DVASPECT_ICON ani DVASPECT_DOCPRINT.|
-|VIEWSTATUS_SOLIDBKGND|Objekt má plné pozadí (tvořené plnou barvou, ne vzorkem štětce). Tento bit má smysl pouze v případě, že je nastavena VIEWSTATUS_OPAQUE a vztahuje se pouze na aspekty související s obsahem a nikoli na DVASPECT_ICON nebo DVASPECT_DOCPRINT.|
-|VIEWSTATUS_DVASPECTOPAQUE|Objekt podporuje DVASPECT_OPAQUE. Všechny metody IViewObjectEx, které přijímají aspekty vykreslování jako parametr, lze s tímto aspektem volat.|
-|VIEWSTATUS_DVASPECTTRANSPARENT|Objekt podporuje DVASPECT_TRANSPARENT. Všechny metody `IViewObjectEx`, které přijímají aspekty vykreslování jako parametr, lze s tímto aspektem volat.|
+|VIEWSTATUS_OPAQUE|Objekt je zcela neprůhledný. Pokud tento bit není nastaven, objekt obsahuje průhledné části. Tento bit se vztahuje pouze na aspekty související s obsahem a nikoli na DVASPECT_ICON nebo DVASPECT_DOCPRINT.|
+|VIEWSTATUS_SOLIDBKGND|Objekt má plné pozadí (skládající se z plné barvy, nikoli v vzorku stopy). Tento bit je smysluplný pouze v případě, VIEWSTATUS_OPAQUE je nastavena a vztahuje se pouze na aspekty související s obsahem a nikoli na DVASPECT_ICON nebo DVASPECT_DOCPRINT.|
+|VIEWSTATUS_DVASPECTOPAQUE|Objekt podporuje DVASPECT_OPAQUE. Všechny metody IViewObjectEx, které berou aspekt kreslení jako parametr lze volat s tímto aspektem.|
+|VIEWSTATUS_DVASPECTTRANSPARENT|Objekt podporuje DVASPECT_TRANSPARENT. Všechny `IViewObjectEx` metody, které berou aspekt výkresu jako parametr lze volat s tímto aspektem.|
 
 ### <a name="remarks"></a>Poznámky
 
-Tuto funkci přepište, pokud váš ovládací prvek používá oboustranný výkres. Výchozí implementace vrací VIEWSTATUS_OPAQUE.
+Přepsat tuto funkci, pokud ovládací prvek používá dvouprůchodový výkres. Výchozí implementace vrátí VIEWSTATUS_OPAQUE.
 
-##  <a name="onhidetoolbars"></a>COleControl –:: OnHideToolBars
+## <a name="colecontrolonhidetoolbars"></a><a name="onhidetoolbars"></a>COleControl::OnhideToolBars
 
-Volá se rozhraním, když je ovládací prvek deaktivován z uživatelského rozhraní.
+Volat rámci při ovládacího prvku je deaktivován.
 
 ```
 virtual void OnHideToolBars();
@@ -2854,11 +2854,11 @@ virtual void OnHideToolBars();
 
 ### <a name="remarks"></a>Poznámky
 
-Implementace by měla skrývat všechny panely nástrojů zobrazené `OnShowToolbars`.
+Implementace by měla skrýt všechny `OnShowToolbars`panely nástrojů zobrazené v .
 
-##  <a name="oninactivemousemove"></a>COleControl –:: OnInactiveMouseMove
+## <a name="colecontroloninactivemousemove"></a><a name="oninactivemousemove"></a>COleControl::OnInactiveMouseMove
 
-Volá se kontejnerem pro neaktivní objekt pod ukazatelem myši při přijetí zprávy WM_MOUSEMOVE.
+Volat kontejneru pro neaktivní objekt pod ukazatelem myši při příjmu zprávy WM_MOUSEMOVE.
 
 ```
 virtual void OnInactiveMouseMove(
@@ -2871,24 +2871,24 @@ virtual void OnInactiveMouseMove(
 ### <a name="parameters"></a>Parametry
 
 *lprcBounds*<br/>
-Objekt ohraničující obdélník v souřadnicích klienta nadřazeného okna. Upozorní objekt na jeho přesné umístění a velikost na obrazovce při přijetí WM_MOUSEMOVE zprávy.
+Obdélník ohraničující objekt v souřadnicích klienta obsahujícího okna. Sděluje objektu jeho přesnou polohu a velikost na obrazovce při přijetí WM_MOUSEMOVE zprávy.
 
-*znak*<br/>
-Souřadnice x umístění myši v souřadnicích klienta nadřazeného okna
+*X*<br/>
+X souřadnice umístění myši v souřadnicích klienta obsahující okno.
 
-*požadované*<br/>
-Souřadnice y umístění myši v souřadnicích klienta nadřazeného okna
+*Y*<br/>
+Y souřadnice umístění myši v souřadnicích klienta obsahující okno.
 
 *dwKeyState*<br/>
-Určuje aktuální stav klávesových zkratek klávesnice na klávesnici. Platné hodnoty mohou být kombinace všech příznaků MK_CONTROL, MK_SHIFT, MK_ALT, MK_BUTTON, MK_LBUTTON, MK_MBUTTON a MK_RBUTTON.
+Identifikuje aktuální stav kláves modifikátoru klávesnice na klávesnici. Platné hodnoty mohou být kombinací některého z příznaků MK_CONTROL, MK_SHIFT, MK_ALT, MK_BUTTON, MK_LBUTTON, MK_MBUTTON a MK_RBUTTON.
 
 ### <a name="remarks"></a>Poznámky
 
-Všimněte si, že souřadnice klienta okna (pixely) se používají k předání pozice kurzoru myši. To je možné také předáním ohraničujícího obdélníku objektu ve stejném souřadnicovém systému.
+Všimněte si, že souřadnice klienta okna (pixely) se používají k průchodu pozice kurzoru myši. To je možné také předáním ohraničující obdélník objektu ve stejném souřadnicovém systému.
 
-##  <a name="oninactivesetcursor"></a>COleControl –:: OnInactiveSetCursor
+## <a name="colecontroloninactivesetcursor"></a><a name="oninactivesetcursor"></a>COleControl::OnInactiveSetCursor
 
-Volá se kontejnerem pro neaktivní objekt pod ukazatelem myši při přijetí zprávy WM_SETCURSOR.
+Volat kontejneru pro neaktivní objekt pod ukazatelem myši při příjmu zprávy WM_SETCURSOR.
 
 ```
 virtual BOOL OnInactiveSetCursor(
@@ -2902,31 +2902,31 @@ virtual BOOL OnInactiveSetCursor(
 ### <a name="parameters"></a>Parametry
 
 *lprcBounds*<br/>
-Objekt ohraničující obdélník v souřadnicích klienta nadřazeného okna. Upozorní objekt na jeho přesné umístění a velikost na obrazovce při přijetí WM_SETCURSOR zprávy.
+Obdélník ohraničující objekt v souřadnicích klienta obsahujícího okna. Sděluje objektu jeho přesnou polohu a velikost na obrazovce při přijetí WM_SETCURSOR zprávy.
 
-*znak*<br/>
-Souřadnice x umístění myši v souřadnicích klienta nadřazeného okna
+*X*<br/>
+X souřadnice umístění myši v souřadnicích klienta obsahující okno.
 
-*požadované*<br/>
-Souřadnice y umístění myši v souřadnicích klienta nadřazeného okna
+*Y*<br/>
+Y souřadnice umístění myši v souřadnicích klienta obsahující okno.
 
 *dwMouseMsg*<br/>
-Identifikátor zprávy myši, pro kterou došlo k WM_SETCURSOR.
+Identifikátor zprávy myši, pro které došlo k WM_SETCURSOR.
 
 *bSetAlways*<br/>
-Určuje, zda objekt musí nastavit kurzor. Je-li nastaveno na hodnotu TRUE, musí objekt nastavit kurzor. Pokud je hodnota FALSE, kurzor není povinný nastavit kurzor a měl by v takovém případě vracet S_FALSE.
+Určuje, zda musí objekt nastavit kurzor. Pokud true, musí objekt nastavit kurzor; Pokud false, kurzor není povinen nastavit kurzor a by měl vrátit S_FALSE v takovém případě.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud bylo úspěšné; v opačném případě 0.
+Nenulová, pokud je úspěšná; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Všimněte si, že souřadnice klienta okna (pixely) se používají k předání pozice kurzoru myši. To je možné také předáním ohraničujícího obdélníku objektu ve stejném souřadnicovém systému.
+Všimněte si, že souřadnice klienta okna (pixely) se používají k průchodu pozice kurzoru myši. To je možné také předáním ohraničující obdélník objektu ve stejném souřadnicovém systému.
 
-##  <a name="onkeydownevent"></a>COleControl –:: OnKeyDownEvent
+## <a name="colecontrolonkeydownevent"></a><a name="onkeydownevent"></a>COleControl::OnKeyDownEvent
 
-Volá se rozhraním, když se zpracovává událost skladové události.
+Volat rámci po skladové keydown událost byla zpracována.
 
 ```
 virtual void OnKeyDownEvent(
@@ -2936,25 +2936,25 @@ virtual void OnKeyDownEvent(
 
 ### <a name="parameters"></a>Parametry
 
-*nChar*<br/>
-Hodnota kódu virtuálního klíče vylisovaných kláves. Seznam standardních kódů virtuálních klíčů naleznete v tématu Winuser. h.
+*Nchar*<br/>
+Hodnota kódu virtuálního klíče stisknuté klávesy. Seznam standardních virtuálních kódů klíčů naleznete v tématu Winuser.h
 
 *nShiftState*<br/>
 Obsahuje kombinaci následujících příznaků:
 
-- SHIFT_MASK stisknutí klávesy SHIFT během akce.
+- SHIFT_MASK Během akce byla stisknuta klávesa SHIFT.
 
-- CTRL_MASK stisknutí klávesy CTRL během akce.
+- CTRL_MASK Během akce byla stisknuta klávesa CTRL.
 
-- ALT_MASK stisknutí klávesy ALT během akce.
+- ALT_MASK Během akce byla stisknuta klávesa ALT.
 
 ### <a name="remarks"></a>Poznámky
 
-Tuto funkci přepište, pokud váš ovládací prvek potřebuje přístup k informacím o klíči poté, co byla událost aktivována.
+Přepsat tuto funkci, pokud ovládací prvek potřebuje přístup k informacím klíče po události byla aktivována.
 
-##  <a name="onkeypressevent"></a>COleControl –:: OnKeyPressEvent
+## <a name="colecontrolonkeypressevent"></a><a name="onkeypressevent"></a>COleControl::OnKeyPressEvent
 
-Volá se rozhraním, když se aktivuje událost KeyPress.
+Volat rámci po akci KeyPress událost byla aktivována.
 
 ```
 virtual void OnKeyPressEvent(USHORT nChar);
@@ -2962,18 +2962,18 @@ virtual void OnKeyPressEvent(USHORT nChar);
 
 ### <a name="parameters"></a>Parametry
 
-*nChar*<br/>
-Obsahuje hodnotu kódu virtuálního klíče pro stisknutí klávesy. Seznam standardních kódů virtuálních klíčů naleznete v tématu Winuser. h.
+*Nchar*<br/>
+Obsahuje hodnotu kódu virtuálního klíče stisknuté klávesy. Seznam standardních virtuálních kódů klíčů naleznete v tématu Winuser.h
 
 ### <a name="remarks"></a>Poznámky
 
-Všimněte si, že hodnota *nchar* mohla být upravena kontejnerem.
+Všimněte si, že hodnota *nChar* může být změněna kontejnerem.
 
-Tuto funkci popište, pokud chcete po této události obejít oznámení.
+Přepsat tuto funkci, pokud chcete oznámení po výskytu této události.
 
-##  <a name="onkeyupevent"></a>COleControl –:: OnKeyUpEvent
+## <a name="colecontrolonkeyupevent"></a><a name="onkeyupevent"></a>COleControl::OnKeyUpEvent
 
-Volá se rozhraním, když se zpracovává událost skladové události.
+Volat rámci po skladové keydown událost byla zpracována.
 
 ```
 virtual void OnKeyUpEvent(
@@ -2983,25 +2983,25 @@ virtual void OnKeyUpEvent(
 
 ### <a name="parameters"></a>Parametry
 
-*nChar*<br/>
-Hodnota kódu virtuálního klíče vylisovaných kláves. Seznam standardních kódů virtuálních klíčů naleznete v tématu Winuser. h.
+*Nchar*<br/>
+Hodnota kódu virtuálního klíče stisknuté klávesy. Seznam standardních virtuálních kódů klíčů naleznete v tématu Winuser.h
 
 *nShiftState*<br/>
 Obsahuje kombinaci následujících příznaků:
 
-- SHIFT_MASK stisknutí klávesy SHIFT během akce.
+- SHIFT_MASK Během akce byla stisknuta klávesa SHIFT.
 
-- CTRL_MASK stisknutí klávesy CTRL během akce.
+- CTRL_MASK Během akce byla stisknuta klávesa CTRL.
 
-- ALT_MASK stisknutí klávesy ALT během akce.
+- ALT_MASK Během akce byla stisknuta klávesa ALT.
 
 ### <a name="remarks"></a>Poznámky
 
-Tuto funkci přepište, pokud váš ovládací prvek potřebuje přístup k informacím o klíči poté, co byla událost aktivována.
+Přepsat tuto funkci, pokud ovládací prvek potřebuje přístup k informacím klíče po události byla aktivována.
 
-##  <a name="onmappropertytopage"></a>COleControl –:: OnMapPropertyToPage
+## <a name="colecontrolonmappropertytopage"></a><a name="onmappropertytopage"></a>COleControl::OnMapPropertyToPage
 
-Volá se rozhraním, aby se získal identifikátor třídy stránky vlastností, která implementuje úpravy zadané vlastnosti.
+Volat rámci získat ID třídy stránky vlastností, která implementuje úpravy zadané vlastnosti.
 
 ```
 virtual BOOL OnMapPropertyToPage(
@@ -3012,26 +3012,26 @@ virtual BOOL OnMapPropertyToPage(
 
 ### <a name="parameters"></a>Parametry
 
-*DISPID*<br/>
+*Dispid*<br/>
 ID odeslání vlastnosti ovládacího prvku.
 
-*lpclsid*<br/>
-Ukazatel na strukturu `CLSID`, pomocí které se vrátí ID třídy.
+*lpclsid (lpclsid)*<br/>
+Ukazatel na `CLSID` strukturu, přes kterou bude vráceno ID třídy.
 
-*pbPageOptional*<br/>
+*pbPageNepovinné*<br/>
 Vrátí indikátor, zda je použití zadané stránky vlastností volitelné.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulová, pokud bylo vráceno ID třídy v *lpClsid*; v opačném případě 0.
+Nenulová, pokud bylo v *lpclsidu*vráceno ID třídy ; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Přepište tuto funkci, pokud chcete poskytnout způsob, jak vyvolat stránky vlastností ovládacího prvku z prohlížeče vlastností kontejneru.
+Přepsat tuto funkci poskytnout způsob, jak vyvolat stránky vlastností ovládacího prvku z prohlížeče vlastností kontejneru.
 
-##  <a name="onmnemonic"></a>COleControl –::-Symbolickéy
+## <a name="colecontrolonmnemonic"></a><a name="onmnemonic"></a>COleControl::OnMnemonic
 
-Volá se rozhraním, když kontejner zjistil, že se stiskl symbolický klíč ovládacího prvku OLE.
+Volat rámci, když kontejner zjistil, že byl stisknut mnemotechnické klávesy ovládacího prvku OLE.
 
 ```
 virtual void OnMnemonic(LPMSG pMsg);
@@ -3040,11 +3040,11 @@ virtual void OnMnemonic(LPMSG pMsg);
 ### <a name="parameters"></a>Parametry
 
 *pMsg*<br/>
-Ukazatel na zprávu Windows generovanou stisknutím klávesové zkratky.
+Ukazatel na zprávu systému Windows vygenerovanou mnemotechnické klávesy.
 
-##  <a name="onproperties"></a>COleControl –::-Properties
+## <a name="colecontrolonproperties"></a><a name="onproperties"></a>COleControl::OnProperties
 
-Volá se rozhraním, když se v kontejneru vyvolala operace vlastností ovládacího prvku.
+Volat rámci při vlastnosti ovládacího prvku sloveso byl vyvolán kontejneru.
 
 ```
 virtual BOOL OnProperties(
@@ -3056,27 +3056,27 @@ virtual BOOL OnProperties(
 ### <a name="parameters"></a>Parametry
 
 *lpMsg*<br/>
-Ukazatel na zprávu systému Windows, která vyvolala příkaz.
+Ukazatel na zprávu systému Windows, která vyvolala sloveso.
 
 *hWndParent*<br/>
 Popisovač nadřazeného okna ovládacího prvku.
 
 *lpRect*<br/>
-Ukazatel na obdélník, který je použit ovládacím prvkem v kontejneru.
+Ukazatel na obdélník používaný ovládacím prvkem v kontejneru.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je volání úspěšné; v opačném případě 0.
+Nenulová, pokud je volání úspěšné; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Výchozí implementace zobrazí dialogové okno modální vlastnost.
+Výchozí implementace zobrazí dialogové okno modální vlastnosti.
 
-Tuto funkci můžete také využít k tomu, aby se zobrazily stránky vlastností ovládacího prvku. Zavolejte funkci `OnProperties`, která předá popisovači nadřazeného prvku ovládacího prvku v parametru *hwndParent* . V tomto případě jsou hodnoty parametrů *lpMsg* a *lpRect* ignorovány.
+Tuto funkci můžete také použít k zobrazení stránek vlastností ovládacího prvku. Proveďte volání `OnProperties` funkce, předávání popisovač nadřazeného ovládacího prvku v *hWndParent* parametr. V tomto případě jsou ignorovány hodnoty parametrů *lpMsg* a *lpRect.*
 
-##  <a name="onqueryhitpoint"></a>COleControl –:: OnQueryHitPoint
+## <a name="colecontrolonqueryhitpoint"></a><a name="onqueryhitpoint"></a>COleControl::OnQueryHitPoint
 
-Volá se rozhraním v reakci na požadavek `IViewObjectEx::QueryHitPoint` kontejneru.
+Volat rámci v reakci na `IViewObjectEx::QueryHitPoint` požadavek kontejneru.
 
 ```
 virtual BOOL OnQueryHitPoint(
@@ -3090,39 +3090,39 @@ virtual BOOL OnQueryHitPoint(
 ### <a name="parameters"></a>Parametry
 
 *dwAspect*<br/>
-Určuje způsob reprezentace objektu. Platné hodnoty jsou pořízeny z výčtu [DVASPECT](/windows/win32/api/wtypes/ne-wtypes-dvaspect) nebo DVASPECT2.
+Určuje způsob reprezentace objektu. Platné hodnoty jsou převzaty z výčtu [DVASPECT](/windows/win32/api/wtypes/ne-wtypes-dvaspect) nebo DVASPECT2.
 
 *pRectBounds*<br/>
-Ukazatel na strukturu `RECT` určující ohraničující obdélník klientské oblasti ovládacího prvku OLE.
+Ukazatel na `RECT` strukturu určující ohraničující obdélník klientské oblasti ovládacího prvku OLE.
 
 *ptlLoc*<br/>
-Ukazatel na strukturu `POINT` určující bod, který má být zkontrolován pro dosažení pozice. Bod je určen v souřadnicích klientské oblasti technologie OLE.
+Ukazatel na `POINT` strukturu určující bod, který má být zkontrolován pro přístup. Bod je určen v souřadnicích oblasti klienta OLE.
 
 *lCloseHint*<br/>
-Vzdálenost definující "Close" do bodu kontrolovaného pro dosažení pozice.
+Vzdálenost, která definuje "zavřít" k bodu zkontrolovanému pro zásah.
 
-*pHitResult*<br/>
-Ukazatel na výsledek dotazu na volání. Jedna z následujících hodnot:
+*pHitVýsledek*<br/>
+Ukazatel na výsledek dotazu na přístup. Jedna z následujících hodnot:
 
-- HITRESULT_OUTSIDE *ptlLoc* je mimo objekt OLE a nemůže být zavřen.
+- HITRESULT_OUTSIDE *ptlLoc* je mimo objekt OLE a není blízko.
 
-- HITRESULT_TRANSPARENT *ptlLoc* je v mezích objektu OLE, ale ne blízko k imagi. Například bod uprostřed průhledného kruhu může být HITRESULT_TRANSPARENT.
+- HITRESULT_TRANSPARENT *ptlLoc* je v rámci hranice objektu OLE, ale není blízko k obrazu. Například bod uprostřed průhledného kruhu může být HITRESULT_TRANSPARENT.
 
-- HITRESULT_CLOSE *ptlLoc* je uvnitř nebo vně objektu OLE, ale je dostatečně blízko objektu, který má být považován za uvnitř. Tuto hodnotu mohou používat malé, tenké nebo podrobné objekty. I v případě, že je bod mimo ohraničující obdélník objektu, může být stále zavřen (to je nutné pro povýšení malých objektů).
+- HITRESULT_CLOSE *ptlLoc* je uvnitř nebo vně objektu OLE, ale dostatečně blízko k objektu, který lze považovat uvnitř. Malé, tenké nebo podrobné objekty mohou použít tuto hodnotu. I v případě, že bod je mimo ohraničující obdélník objektu může být stále blízko (to je nutné pro zasažení malých objektů).
 
-- HITRESULT_HIT *ptlLoc* je v rámci obrázku objektu.
+- HITRESULT_HIT *ptlLoc* je v obraze objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je výsledek volání úspěšně vrácen; v opačném případě 0. Pozice je překrytí v oblasti zobrazení ovládacího prvku OLE.
+Nenulová, pokud je úspěšně vrácen výsledek přístupu; jinak 0. Přístupový prvek je překrytí s oblastí zobrazení ovládacího prvku OLE.
 
 ### <a name="remarks"></a>Poznámky
 
-Dotazuje se na to, zda se má obdélník zobrazení objektu překrývat s daným bodem (při výskytu tohoto bodu). `QueryHitPoint` může být přepsána na test přístupů pro jiné než obdélníkové objekty.
+Dotazuje se, zda obdélník zobrazení objektu překrývá daný bod (zasáhne bod). `QueryHitPoint`lze přepsat, aby bylo možné testovat přístupy k neobdélníkovým objektům.
 
-##  <a name="onqueryhitrect"></a>COleControl –:: OnQueryHitRect
+## <a name="colecontrolonqueryhitrect"></a><a name="onqueryhitrect"></a>COleControl::OnQueryHitRect
 
-Volá se rozhraním v reakci na požadavek `IViewObjectEx::QueryHitRect` kontejneru.
+Volat rámci v reakci na `IViewObjectEx::QueryHitRect` požadavek kontejneru.
 
 ```
 virtual BOOL OnQueryHitRect(
@@ -3136,35 +3136,35 @@ virtual BOOL OnQueryHitRect(
 ### <a name="parameters"></a>Parametry
 
 *dwAspect*<br/>
-Určuje způsob reprezentace objektu. Platné hodnoty jsou pořízeny z výčtu [DVASPECT](/windows/win32/api/wtypes/ne-wtypes-dvaspect) nebo DVASPECT2.
+Určuje, jak má být objekt reprezentován. Platné hodnoty jsou převzaty z výčtu [DVASPECT](/windows/win32/api/wtypes/ne-wtypes-dvaspect) nebo DVASPECT2.
 
 *pRectBounds*<br/>
-Ukazatel na strukturu `RECT` určující ohraničující obdélník klientské oblasti ovládacího prvku OLE.
+Ukazatel na `RECT` strukturu určující ohraničující obdélník klientské oblasti ovládacího prvku OLE.
 
 *prcLoc*<br/>
-Ukazatel na strukturu `RECT` určující obdélník, který má být vybrán (překrývá se s obdélníkem objektu), relativně k levému hornímu rohu objektu.
+Ukazatel na `RECT` strukturu určující obdélník, který má být zkontrolován pro přístup k přístupu (překrytí obdélníkem objektu) vzhledem k levému hornímu rohu objektu.
 
 *lCloseHint*<br/>
 Nepoužívá se.
 
-*pHitResult*<br/>
-Ukazatel na výsledek dotazu na volání. Jedna z následujících hodnot:
+*pHitVýsledek*<br/>
+Ukazatel na výsledek dotazu na přístup. Jedna z následujících hodnot:
 
-- Objekt OLE neHITRESULT_OUTSIDE žádný bod v obdélníku.
+- HITRESULT_OUTSIDE žádný bod v obdélníku je zasažen objektem OLE.
 
-- HITRESULT_HIT alespoň jeden bod v obdélníku by byl zásahem objektu.
+- HITRESULT_HIT alespoň jeden bod v obdélníku by být přístupů na objekt.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je výsledek volání úspěšně vrácen; v opačném případě 0.
+Nenulová, pokud je úspěšně vrácen výsledek přístupu; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Dotazuje se na to, zda se má obdélník zobrazení objektu překrývat s jakýmkoli bodem v daném obdélníku (výsledkem je obdélník). `QueryHitRect` může být přepsána na test přístupů pro jiné než obdélníkové objekty.
+Dotazuje se, zda obdélník zobrazení objektu překrývá libovolný bod v daném obdélníku (zasáhne obdélník). `QueryHitRect`lze přepsat, aby bylo možné testovat přístupy k neobdélníkovým objektům.
 
-##  <a name="onrenderdata"></a>COleControl –:: OnRenderData
+## <a name="colecontrolonrenderdata"></a><a name="onrenderdata"></a>COleControl::OnRenderData
 
-Volá se rozhraním, aby se načetla data v zadaném formátu.
+Volat rámci načíst data v zadaném formátu.
 
 ```
 virtual BOOL OnRenderData(
@@ -3175,28 +3175,28 @@ virtual BOOL OnRenderData(
 ### <a name="parameters"></a>Parametry
 
 *lpFormatEtc*<br/>
-Odkazuje na strukturu [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) s určením formátu, ve kterém jsou požadovány informace.
+Odkazuje na [formatetc](/windows/win32/api/objidl/ns-objidl-formatetc) strukturu určující formát, ve kterém jsou požadovány informace.
 
-*lpStgMedium*<br/>
-Odkazuje na strukturu [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) , ve které se mají vrátit data.
+*lpStgStřední*<br/>
+Odkazuje na [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) strukturu, ve kterém mají být vrácena data.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud bylo úspěšné; v opačném případě 0.
+Nenulová, pokud je úspěšná; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Zadaný formát je ten dřív umístěný do objektu Control pomocí členských funkcí [DelayRenderData](../../mfc/reference/coledatasource-class.md#delayrenderdata) nebo [DelayRenderFileData](../../mfc/reference/coledatasource-class.md#delayrenderfiledata) pro zpožděné vykreslování. Výchozí implementace této funkce volá `OnRenderFileData` nebo `OnRenderGlobalData`, v případě, že zadané paměťové médium je buď soubor, nebo paměť. Pokud je požadovaný formát CF_METAFILEPICT nebo formát nastavený jako trvalá vlastnost, výchozí implementace Vykreslí příslušná data a vrátí nenulovou hodnotu. V opačném případě vrátí 0 a neprovede žádnou akci.
+Zadaný formát je dříve umístěn v objektu ovládacího prvku pomocí členských funkcí [DelayRenderData](../../mfc/reference/coledatasource-class.md#delayrenderdata) nebo [DelayRenderFileData](../../mfc/reference/coledatasource-class.md#delayrenderfiledata) pro zpožděné vykreslování. Výchozí implementace této funkce `OnRenderFileData` `OnRenderGlobalData`volá nebo , v uvedeném pořadí, pokud je dodané paměťové médium soubor emitační nebo paměť. Pokud je požadovaný formát CF_METAFILEPICT nebo formát trvalé sady vlastností, výchozí implementace vykreslí příslušná data a vrátí nenulovou hodnotu. V opačném případě vrátí 0 a neprovede žádné.
 
-Pokud je TYMED_NULL *lpStgMedium-> TYMED* , STGMEDIUM by měl být přidělen a vyplněn podle zadání v *lpFormatEtc-> TYMED*. Pokud není TYMED_NULL, STGMEDIUM by měl být vyplněn s daty.
+Pokud *lpStgMedium->tymed* je TYMED_NULL, STGMEDIUM by měla být přidělena a vyplněna podle *boduLpFormatEtc->tymed*. Pokud není TYMED_NULL, STGMEDIUM by měla být vyplněna na místě s daty.
 
-Tuto funkci potlačíte tak, aby poskytovala data v požadovaném formátu a na středních médiích. V závislosti na vašich datech možná budete chtít místo toho přepsat jednu z dalších verzí této funkce. Pokud jsou vaše data malá a pevná velikost, přepište `OnRenderGlobalData`. Pokud jsou vaše data v souboru nebo mají proměnlivou velikost, popište `OnRenderFileData`.
+Přepište tuto funkci a poskytněte data v požadovaném formátu a médiu. V závislosti na datech můžete místo toho přepsat jednu z dalších verzí této funkce. Pokud jsou data malá a pevná, přepište . `OnRenderGlobalData` Pokud jsou data v souboru nebo mají proměnnou velikost, přepište to `OnRenderFileData`.
 
-Další informace naleznete v tématu `FORMATETC` a `STGMEDIUM` struktury v Windows SDK.
+Další informace naleznete `FORMATETC` v `STGMEDIUM` části a struktury sady Windows SDK.
 
-##  <a name="onrenderfiledata"></a>COleControl –:: OnRenderFileData
+## <a name="colecontrolonrenderfiledata"></a><a name="onrenderfiledata"></a>COleControl::OnRenderFileData
 
-Volá se rozhraním, aby se načetla data v zadaném formátu, když je paměťové médium soubor.
+Volat rámci načíst data v zadaném formátu, když médium úložiště je soubor.
 
 ```
 virtual BOOL OnRenderFileData(
@@ -3207,26 +3207,26 @@ virtual BOOL OnRenderFileData(
 ### <a name="parameters"></a>Parametry
 
 *lpFormatEtc*<br/>
-Odkazuje na strukturu [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) s určením formátu, ve kterém jsou požadovány informace.
+Odkazuje na [formatetc](/windows/win32/api/objidl/ns-objidl-formatetc) strukturu určující formát, ve kterém jsou požadovány informace.
 
-*pFile*<br/>
-Odkazuje na objekt [CFile –](../../mfc/reference/cfile-class.md) , ve kterém se mají data vykreslovat.
+*pSoubor*<br/>
+Odkazuje na [cfile](../../mfc/reference/cfile-class.md) objekt, ve kterém mají být vykresleny data.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud bylo úspěšné; v opačném případě 0.
+Nenulová, pokud je úspěšná; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Zadaný formát je ten dřív umístěný v ovládacím prvku pomocí členské funkce [DelayRenderData](../../mfc/reference/coledatasource-class.md#delayrenderdata) pro zpožděné vykreslování. Výchozí implementace této funkce jednoduše vrátí hodnotu FALSE.
+Zadaný formát je dříve umístěn v objektu ovládacího prvku pomocí členské funkce [DelayRenderData](../../mfc/reference/coledatasource-class.md#delayrenderdata) pro zpožděné vykreslování. Výchozí implementace této funkce jednoduše vrátí hodnotu NEPRAVDA.
 
-Tuto funkci potlačíte tak, aby poskytovala data v požadovaném formátu a na středních médiích. V závislosti na vašich datech možná budete chtít místo toho přepsat jednu z dalších verzí této funkce. Pokud chcete zpracovat více úložných médií, přepište `OnRenderData`. Pokud jsou vaše data v souboru nebo mají proměnlivou velikost, popište `OnRenderFileData`.
+Přepište tuto funkci a poskytněte data v požadovaném formátu a médiu. V závislosti na datech můžete místo toho přepsat jednu z dalších verzí této funkce. Pokud chcete zpracovat více paměťových `OnRenderData`médií, přepište . Pokud jsou data v souboru nebo mají proměnnou velikost, přepište to `OnRenderFileData`.
 
-Další informace najdete v tématu Struktura `FORMATETC` v Windows SDK.
+Další informace naleznete `FORMATETC` ve struktuře sady Windows SDK.
 
-##  <a name="onrenderglobaldata"></a>COleControl –:: OnRenderGlobalData
+## <a name="colecontrolonrenderglobaldata"></a><a name="onrenderglobaldata"></a>COleControl::OnRenderGlobalData
 
-Volá se rozhraním, aby se načetla data v zadaném formátu, pokud je zadané paměťové médium globální paměti.
+Volat rámci načíst data v zadaném formátu, pokud zadané paměťové médium je globální paměti.
 
 ```
 virtual BOOL OnRenderGlobalData(
@@ -3237,28 +3237,28 @@ virtual BOOL OnRenderGlobalData(
 ### <a name="parameters"></a>Parametry
 
 *lpFormatEtc*<br/>
-Odkazuje na strukturu [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) s určením formátu, ve kterém jsou požadovány informace.
+Odkazuje na [formatetc](/windows/win32/api/objidl/ns-objidl-formatetc) strukturu určující formát, ve kterém jsou požadovány informace.
 
-*phGlobal*<br/>
-Odkazuje na popisovač globální paměti, ve které mají být vrácena data. Pokud není přidělena žádná paměť, tento parametr může mít hodnotu NULL.
+*phGlobální*<br/>
+Odkazuje na popisovač globální paměti, ve kterém mají být vrácena data. Pokud nebyla přidělena žádná paměť, může být tento parametr null.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud bylo úspěšné; v opačném případě 0.
+Nenulová, pokud je úspěšná; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Zadaný formát je ten dřív umístěný v ovládacím prvku pomocí členské funkce [DelayRenderData](../../mfc/reference/coledatasource-class.md#delayrenderdata) pro zpožděné vykreslování. Výchozí implementace této funkce jednoduše vrátí hodnotu FALSE.
+Zadaný formát je dříve umístěn v objektu ovládacího prvku pomocí členské funkce [DelayRenderData](../../mfc/reference/coledatasource-class.md#delayrenderdata) pro zpožděné vykreslování. Výchozí implementace této funkce jednoduše vrátí hodnotu NEPRAVDA.
 
-Pokud má *phGlobal* hodnotu null, měl by se přidělit a vrátit nový HGLOBAL v *phGlobal*. V opačném případě by měl být HGLOBAL zadaný pomocí *phGlobal* vyplněn daty. Množství dat umístěných v HGLOBAL nesmí překročit aktuální velikost bloku paměti. Blok nelze také přidělit větší velikosti.
+Pokud *phGlobal* je NULL, pak nový HGLOBAL by měly být přiděleny a vráceny v *phGlobal*. V opačném případě hglobal určené *phGlobal* by měla být vyplněna data. Množství dat umístěných v HGLOBAL nesmí překročit aktuální velikost bloku paměti. Také blok nelze přerozděleny na větší velikost.
 
-Tuto funkci potlačíte tak, aby poskytovala data v požadovaném formátu a na středních médiích. V závislosti na vašich datech možná budete chtít místo toho přepsat jednu z dalších verzí této funkce. Pokud chcete zpracovat více úložných médií, přepište `OnRenderData`. Pokud jsou vaše data v souboru nebo mají proměnlivou velikost, popište `OnRenderFileData`.
+Přepište tuto funkci a poskytněte data v požadovaném formátu a médiu. V závislosti na datech můžete místo toho přepsat jednu z dalších verzí této funkce. Pokud chcete zpracovat více paměťových `OnRenderData`médií, přepište . Pokud jsou data v souboru nebo mají proměnnou velikost, přepište to `OnRenderFileData`.
 
-Další informace najdete v tématu Struktura `FORMATETC` v Windows SDK.
+Další informace naleznete `FORMATETC` ve struktuře sady Windows SDK.
 
-##  <a name="onresetstate"></a>COleControl –:: OnResetState
+## <a name="colecontrolonresetstate"></a><a name="onresetstate"></a>COleControl::OnResetState
 
-Volá se rozhraním, když by měly být vlastnosti ovládacího prvku nastavené na výchozí hodnoty.
+Volat rámci při vlastnosti ovládacího prvku by měla být nastavena na jejich výchozí hodnoty.
 
 ```
 virtual void OnResetState();
@@ -3266,13 +3266,13 @@ virtual void OnResetState();
 
 ### <a name="remarks"></a>Poznámky
 
-Výchozí implementace volá [DoPropExchange](#dopropexchange), který předává objekt `CPropExchange`, který způsobí, že vlastnosti budou nastaveny na výchozí hodnoty.
+Výchozí implementace volá [DoPropExchange](#dopropexchange) `CPropExchange` , předávání objektu, který způsobí, že vlastnosti mají být nastaveny na jejich výchozí hodnoty.
 
-Zapisovač ovládacího prvku může vložit inicializační kód pro ovládací prvek OLE v této přepsatelné. Tato funkce se volá, když se volá rozhraní [IPersistStream:: Load](/windows/win32/api/objidl/nf-objidl-ipersiststream-load) nebo [IPersistStorage:: Load](/windows/win32/api/objidl/nf-objidl-ipersiststorage-load) , nebo [IPersistStreamInit:: InitNew](/windows/win32/api/ocidl/nf-ocidl-ipersiststreaminit-initnew) nebo [IPersistStorage:: InitNew](/windows/win32/api/objidl/nf-objidl-ipersiststorage-initnew) , aniž byste nejdřív navolali buď `IPersistStream::Load`, nebo `IPersistStorage::Load`.
+Zapisovač ovládacího prvku může vložit inicializační kód pro ovládací prvek OLE v tomto overridable. Tato funkce je volána, když je volána [iPersistStream::Load](/windows/win32/api/objidl/nf-objidl-ipersiststream-load) nebo [IPersistStorage::Load](/windows/win32/api/objidl/nf-objidl-ipersiststorage-load) se nezdaří nebo [IPersistStreamInit::InitNew](/windows/win32/api/ocidl/nf-ocidl-ipersiststreaminit-initnew) nebo [IPersistStorage::InitNew](/windows/win32/api/objidl/nf-objidl-ipersiststorage-initnew) je volána, bez prvního volání buď `IPersistStream::Load` nebo `IPersistStorage::Load`.
 
-##  <a name="onsetclientsite"></a>COleControl –:: OnSetClientSite
+## <a name="colecontrolonsetclientsite"></a><a name="onsetclientsite"></a>COleControl::OnSetClientSite
 
-Volá se rozhraním, když se kontejner nazývá funkce `IOleControl::SetClientSite` ovládacího prvku.
+Volat rámci při kontejneru volá funkce `IOleControl::SetClientSite` ovládacího prvku.
 
 ```
 virtual void OnSetClientSite();
@@ -3280,13 +3280,13 @@ virtual void OnSetClientSite();
 
 ### <a name="remarks"></a>Poznámky
 
-Ve výchozím nastavení `OnSetClientSite` kontroluje, zda jsou načteny vlastnosti cesty k datům a, pokud jsou, volání `DoDataPathPropExchange`.
+Ve výchozím `OnSetClientSite` nastavení kontroluje, zda jsou načteny vlastnosti datové cesty a pokud ano, volání `DoDataPathPropExchange`.
 
-Tuto funkci můžete přepsat, chcete-li provést jakékoli zvláštní zpracování tohoto oznámení. Konkrétně by přepsání této funkce měla volat základní třídu.
+Přepsat tuto funkci provést jakékoli zvláštní zpracování tohoto oznámení. Zejména přepsání této funkce by měla volat základní třídy.
 
-##  <a name="onsetdata"></a>COleControl –::-SetData
+## <a name="colecontrolonsetdata"></a><a name="onsetdata"></a>COleControl::OnSetData
 
-Volá se rozhraním, aby se data ovládacího prvku nahradila zadanými daty.
+Volat rámci nahradit data ovládacího prvku zadanými daty.
 
 ```
 virtual BOOL OnSetData(
@@ -3298,29 +3298,29 @@ virtual BOOL OnSetData(
 ### <a name="parameters"></a>Parametry
 
 *lpFormatEtc*<br/>
-Ukazatel na strukturu [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) , která určuje formát dat.
+Ukazatel na [formatetc](/windows/win32/api/objidl/ns-objidl-formatetc) strukturu určující formát dat.
 
-*lpStgMedium*<br/>
-Ukazatel na strukturu [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) , ve které jsou uložena data.
+*lpStgStřední*<br/>
+Ukazatel na [stgmedium](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) strukturu, ve kterém jsou data umístěna.
 
-*bRelease*<br/>
-TRUE, pokud by měl ovládací prvek uvolnit paměťové médium; FALSE, pokud by neměl ovládací prvek uvolnit paměťové médium.
+*bUvolnění*<br/>
+TRUE, pokud ovládací prvek by měl uvolnit paměťové médium; FALSE, pokud ovládací prvek by neměl uvolnit paměťové médium.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud bylo úspěšné; v opačném případě 0.
+Nenulová, pokud je úspěšná; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud jsou data ve formátu trvalé sady vlastností, výchozí implementace upraví stav ovládacího prvku odpovídajícím způsobem. V opačném případě výchozí implementace neprovede žádnou akci. Pokud má *bRelease* hodnotu true, pak je prováděno volání `ReleaseStgMedium`; v opačném případě ne.
+Pokud jsou data ve formátu trvalé sady vlastností, výchozí implementace odpovídajícím způsobem upraví stav ovládacího prvku. V opačném případě výchozí implementace neprovede žádné. Pokud *bRelease* je TRUE, `ReleaseStgMedium` pak je volání; jinak ne.
 
-Přepište tuto funkci, aby se data ovládacího prvku nahradila zadanými daty.
+Přepište tuto funkci a nahraďte data ovládacího prvku zadanými daty.
 
-Další informace naleznete v tématu `FORMATETC` a `STGMEDIUM` struktury v Windows SDK.
+Další informace naleznete `FORMATETC` v `STGMEDIUM` části a struktury sady Windows SDK.
 
-##  <a name="onsetextent"></a>COleControl –:: OnSetExtent
+## <a name="colecontrolonsetextent"></a><a name="onsetextent"></a>COleControl::Délka
 
-Volá se rozhraním, když se musí změnit rozsah ovládacího prvku, v důsledku volání metody [IOleObject:: SetExtent](/windows/win32/api/oleidl/nf-oleidl-ioleobject-setextent).
+Volat rámci při je třeba změnit rozsah ovládacího prvku, v důsledku volání [IOleObject::SetExtent](/windows/win32/api/oleidl/nf-oleidl-ioleobject-setextent).
 
 ```
 virtual BOOL OnSetExtent(LPSIZEL lpSizeL);
@@ -3329,21 +3329,21 @@ virtual BOOL OnSetExtent(LPSIZEL lpSizeL);
 ### <a name="parameters"></a>Parametry
 
 *lpSizeL*<br/>
-Ukazatel na `SIZEL` strukturu, která používá dlouhé celočíselné hodnoty k reprezentaci šířky a výšky ovládacího prvku vyjádřeného v jednotkách HIMETRIC
+Ukazatel na `SIZEL` strukturu, která používá dlouhá celá čísla k reprezentaci šířky a výšky ovládacího prvku, vyjádřené v jednotkách HIMETRIC.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud byla změna velikosti přijata; v opačném případě 0.
+Nenulová, pokud byla přijata změna velikosti; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Výchozí implementace zpracovává změnu velikosti rozsahu ovládacího prvku. Pokud je ovládací prvek na místě aktivní, pak se provede volání `OnPosRectChanged` kontejneru.
+Výchozí implementace zpracovává změna velikosti rozsahu ovládacího prvku. Pokud je ovládací prvek aktivní na místě, `OnPosRectChanged` je provedeno volání kontejneru.
 
-Tuto funkci potlačíte, chcete-li změnit výchozí velikost ovládacího prvku.
+Přepsáním této funkce změníte výchozí změnu velikosti ovládacího prvku.
 
-##  <a name="onsetobjectrects"></a>COleControl –:: OnSetObjectRects
+## <a name="colecontrolonsetobjectrects"></a><a name="onsetobjectrects"></a>COleControl::OnSetObjectRects
 
-Volá se rozhraním, aby se implementovalo volání [IOleInPlaceObject:: SetObjectRects](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceobject-setobjectrects).
+Volat rámci implementovat volání [IOleInPlaceObject::SetObjectRects](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceobject-setobjectrects).
 
 ```
 virtual BOOL OnSetObjectRects(
@@ -3354,24 +3354,24 @@ virtual BOOL OnSetObjectRects(
 ### <a name="parameters"></a>Parametry
 
 *lpRectPos*<br/>
-Ukazatel na `RECT` strukturu indikující novou polohu a velikost ovládacího prvku vzhledem ke kontejneru.
+Ukazatel na `RECT` strukturu označující novou pozici a velikost ovládacího prvku vzhledem ke kontejneru.
 
 *lpRectClip*<br/>
-Ukazatel na `RECT` strukturu indikující obdélníkovou oblast, do které má být ovládací prvek oříznut.
+Ukazatel na `RECT` strukturu označující obdélníkovou oblast, na kterou má být ovládací prvek oříznut.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud bylo přemístění přijato; v opačném případě 0.
+Nenulová, pokud bylo přemístění přijato; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Výchozí implementace automaticky zpracuje změnu umístění a velikost okna ovládacího prvku a vrátí hodnotu TRUE.
+Výchozí implementace automaticky zpracovává přemístění a změna velikosti okna ovládacího prvku a vrátí hodnotu TRUE.
 
-Tuto funkci potlačíte, chcete-li změnit výchozí chování této funkce.
+Přepsáním této funkce změníte výchozí chování této funkce.
 
-##  <a name="onshowtoolbars"></a>COleControl –:: OnShowToolBars
+## <a name="colecontrolonshowtoolbars"></a><a name="onshowtoolbars"></a>COleControl::OnShowPanely nástrojů
 
-Volá se rozhraním, když je ovládací prvek aktivovaný.
+Volat rámci při aktivaci ovládacího prvku.
 
 ```
 virtual void OnShowToolBars();
@@ -3379,11 +3379,11 @@ virtual void OnShowToolBars();
 
 ### <a name="remarks"></a>Poznámky
 
-Výchozí implementace neprovádí žádnou akci.
+Výchozí implementace neprovede žádné provádění.
 
-##  <a name="ontextchanged"></a>COleControl –:: OnTextChanged.
+## <a name="colecontrolontextchanged"></a><a name="ontextchanged"></a>COleControl::OnTextChanged
 
-Volá se rozhraním, když se změní hodnota vlastnosti titulkového titulu nebo textu.
+Volat rámci při změně hodnoty vlastnosti titulek nebo text stock.
 
 ```
 virtual void OnTextChanged();
@@ -3391,13 +3391,13 @@ virtual void OnTextChanged();
 
 ### <a name="remarks"></a>Poznámky
 
-Výchozí implementace volá `InvalidateControl`.
+Výchozí volání `InvalidateControl`implementace .
 
-Tuto funkci můžete přepsat, pokud chcete po změně této vlastnosti oznámení změnit.
+Přepsat tuto funkci, pokud chcete oznámení po této změně vlastnosti.
 
-##  <a name="onwindowlessmessage"></a>COleControl –:: OnWindowlessMessage
+## <a name="colecontrolonwindowlessmessage"></a><a name="onwindowlessmessage"></a>COleControl::OnWindowlessMessage
 
-Volá se rozhraním v reakci na požadavek `IOleInPlaceObjectWindowless::OnWindowMessage` kontejneru.
+Volat rámci v reakci na `IOleInPlaceObjectWindowless::OnWindowMessage` požadavek kontejneru.
 
 ```
 virtual BOOL OnWindowlessMessage(
@@ -3409,31 +3409,31 @@ virtual BOOL OnWindowlessMessage(
 
 ### <a name="parameters"></a>Parametry
 
-*MSG*<br/>
+*msg*<br/>
 Identifikátor zprávy předaný systémem Windows.
 
 *wParam*<br/>
-Jak je předáno systémem Windows. Určuje další informace specifické pro zprávu. Obsah tohoto parametru závisí na hodnotě parametru *MSG* .
+Jak prošel Windows. Určuje další informace specifické pro zprávu. Obsah tohoto parametru závisí na hodnotě parametru *msg.*
 
-*lParam*<br/>
-Jak je předáno systémem Windows. Určuje další informace specifické pro zprávu. Obsah tohoto parametru závisí na hodnotě parametru *MSG* .
+*Lparam*<br/>
+Jak prošel Windows. Určuje další informace specifické pro zprávu. Obsah tohoto parametru závisí na hodnotě parametru *msg.*
 
-*plResult*<br/>
-Kód výsledku Windows Určuje výsledek zpracování zprávy a závisí na odeslané zprávě.
+*plVýsledek*<br/>
+Kód výsledků systému Windows. Určuje výsledek zpracování zprávy a závisí na odeslané zprávě.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud bylo úspěšné; v opačném případě 0.
+Nenulová, pokud je úspěšná; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Zpracuje zprávy okna pro ovládací prvky bez oken. `OnWindowlessMessage` `COleControl`by se měly používat pro zprávy oken jiné než zprávy myši a klávesnice. `COleControl` poskytuje [SetCapture](#setcapture) a [SetFocus](#setfocus) konkrétně k získání zachytávání myší a zaostření klávesnice pro objekty OLE bez oken.
+Zpracovává zprávy oken pro ovládací prvky bez oken. `COleControl`'s `OnWindowlessMessage` by měl y být použity pro zprávy v okně jiné než zprávy myši a klávesnice zprávy. `COleControl`poskytuje [SetCapture](#setcapture) a [SetFocus](#setfocus) konkrétně získat zachycení myši a fokus klávesnice pro objekty OLE bez oken.
 
-Vzhledem k tomu, že objekty bez oken nemají okno, potřebují mechanismus, který jim umožní odeslat do kontejneru zprávy. Objekt OLE bez oken získává zprávy z jeho kontejneru prostřednictvím metody `OnWindowMessage` v rozhraní `IOleInPlaceObjectWindowless` (rozšíření [IOleInPlaceObject](/windows/win32/api/oleidl/nn-oleidl-ioleinplaceobject) pro podporu bez oken). `OnWindowMessage` nepřijímá parametr `HWND`.
+Protože objekty bez oken nemají okno, potřebují mechanismus, aby jim kontejner odeslání zpráv. Objekt OLE bez oken získává zprávy ze `OnWindowMessage` svého `IOleInPlaceObjectWindowless` kontejneru prostřednictvím metody na rozhraní (rozšíření [IOleInPlaceObject](/windows/win32/api/oleidl/nn-oleidl-ioleinplaceobject) pro podporu bez oken). `OnWindowMessage`nepřevezme `HWND` parametr.
 
-##  <a name="parenttoclient"></a>COleControl –::P arentToClient
+## <a name="colecontrolparenttoclient"></a><a name="parenttoclient"></a>COleControl::ParentToClient
 
-Přeloží souřadnice *pPoint* do souřadnic klientů.
+Převádí souřadnice *pPoint* do souřadnic klienta.
 
 ```
 virtual UINT ParentToClient(
@@ -3445,73 +3445,73 @@ virtual UINT ParentToClient(
 ### <a name="parameters"></a>Parametry
 
 *lprcBounds*<br/>
-Ukazatel na hranice ovládacího prvku OLE v rámci kontejneru. Ne klientská oblast, ale oblast celého ovládacího prvku, včetně ohraničení a posuvníků.
+Ukazatel na hranice ovládacího prvku OLE v kontejneru. Ne klientská oblast, ale oblast celého ovládacího prvku včetně ohraničení a posuvníků.
 
-*pPoint*<br/>
-Ukazatel na nadřazený (kontejner) bod, který má být přeložen do souřadnic oblasti klienta ovládacího prvku.
+*pBod*<br/>
+Ukazatel na nadřazený bod (kontejner), který má být přeložen do souřadnic klientské oblasti ovládacího prvku.
 
 *bHitTest*<br/>
-Určuje, zda má být v daném bodě provedeno testování volání.
+Určuje, zda má být testování přístupů provedeno v bodě.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud je *BHITTEST* false, vrátí HTNOWHERE. Pokud má *bHitTest* hodnotu true, vrátí umístění, ve kterém byl nadřazený (kontejner) bod vyloženo v klientské oblasti ovládacího prvku OLE a je jednou z následujících hodnot testu při volání myši:
+Pokud *bHitTest* je FALSE, vrátí HTNOWHERE. Pokud *bHitTest* je PRAVDA, vrátí umístění, ve kterém nadřazený (kontejner) bod přistál v klientské oblasti ovládacího prvku OLE a je jedním z následujících myší hit-test hodnoty:
 
-- HTBORDER na okraji okna, které nemá ohraničení pro změnu velikosti.
+- HTBORDER Na hranici okna, které nemá ohraničení velikosti.
 
-- HTBOTTOM v dolním horizontálním okraji okna.
+- HTBOTTOM V dolním vodorovném okraji okna.
 
-- HTBOTTOMLEFT v levém dolním rohu ohraničení okna.
+- HTBOTTOMLEFT V levém dolním rohu ohraničení okna.
 
-- HTBOTTOMRIGHT v pravém dolním rohu ohraničení okna.
+- HTBOTTOMRIGHT V pravém dolním rohu ohraničení okna.
 
-- HTCAPTION v oblasti záhlaví.
+- HTCAPTION V oblasti záhlaví.
 
-- HTCLIENT v klientské oblasti.
+- HTCLIENT V klientské oblasti.
 
-- HTERROR na pozadí obrazovky nebo na rozdělení čáry mezi Windows (stejné jako HTNOWHERE s tím rozdílem, že funkce `DefWndProc` Windows vytvoří zvukový signál systému k indikaci chyby).
+- HTERROR Na pozadí obrazovky nebo na dělicí čáře mezi okny (stejně jako HTNOWHERE s tím rozdílem, že funkce `DefWndProc` systému windows vytváří systémové pípnutí označující chybu).
 
-- HTGROWBOX v poli velikosti.
+- HTGROWBOX V krabičce o velikosti.
 
-- HTHSCROLL na vodorovný posuvník.
+- HTHSCROLL Ve vodorovném posuvníku.
 
-- HTLEFT na levém okraji okna.
+- HTLEFT V levém okraji okna.
 
-- HTMAXBUTTON na tlačítko maximalizovat.
+- HTMAXBUTTON V tlačítku Maximalizovat.
 
-- HTMENU v oblasti nabídek.
+- HTMENU V oblasti menu.
 
-- HTMINBUTTON na tlačítko minimalizovat.
+- HTMINBUTTON V minimalizovat tlačítko.
 
-- HTNOWHERE na pozadí obrazovky nebo na rozdělení čáry mezi Windows.
+- HTNOWHERE Na pozadí obrazovky nebo na dělící čáry mezi okny.
 
-- HTREDUCE na tlačítko minimalizovat.
+- HTREDUCE V minimalizovat tlačítko.
 
-- HTRIGHT na pravém okraji okna.
+- HTRIGHT V pravém okraji okna.
 
-- HTSIZE v poli velikosti (stejné jako HTGROWBOX).
+- HTSIZE V poli velikosti (stejné jako HTGROWBOX).
 
-- HTSYSMENU v nabídce ovládacího prvku nebo v tlačítku Zavřít v podřízeném okně.
+- HTSYSMENU V ovládací nabídce nebo v tlačítko Zavřít v podřízeném okně.
 
-- HTTOP v horním vodorovném okraji okna.
+- HTTOP V horním vodorovném okraji okna.
 
-- HTTOPLEFT v levém horním rohu ohraničení okna.
+- HTTOPLEFT V levém horním rohu okraje okna.
 
-- HTTOPRIGHT v pravém horním rohu ohraničení okna.
+- HTTOPRIGHT V pravém horním rohu okraje okna.
 
-- HTTRANSPARENT v okně, které aktuálně pokrývá jiné okno.
+- HTTRANSPARENT V okně aktuálně zakrytém jiným oknem.
 
-- HTVSCROLL na svislém posuvníku.
+- HTVSCROLL Ve svislém posuvníku.
 
-- HTZOOM na tlačítko maximalizovat.
+- HTZOOM V tlačítku Maximalizovat.
 
 ### <a name="remarks"></a>Poznámky
 
-Vstupní *pPoint* je relativní vzhledem k počátku nadřazeného objektu (v levém horním rohu kontejneru). Ve výstupní *pPoint* je relativní vzhledem k počátku klientské oblasti ovládacího prvku OLE (levý horní roh oblasti klienta ovládacího prvku).
+Na vstupní *pPoint* je relativní k původu nadřazené (levý horní roh kontejneru). Na výstupu *pPoint* je relativní k původu klientské oblasti ovládacího prvku OLE (levý horní roh klientské oblasti ovládacího prvku).
 
-##  <a name="postmodaldialog"></a>COleControl –::P ostModalDialog
+## <a name="colecontrolpostmodaldialog"></a><a name="postmodaldialog"></a>COleControl::Pmodmodlální dialog
 
-Upozorní kontejner, že modální dialogové okno bylo zavřeno.
+Upozorní kontejner, že modální dialogové okno bylo uzavřeno.
 
 ```
 void PostModalDialog(HWND hWndParent = NULL);
@@ -3520,15 +3520,15 @@ void PostModalDialog(HWND hWndParent = NULL);
 ### <a name="parameters"></a>Parametry
 
 *hWndParent*<br/>
-Popisovač do nadřazeného okna modálního dialogového okna.
+Zpracovat nadřazené okno modálního dialogového okna.
 
 ### <a name="remarks"></a>Poznámky
 
-Tuto funkci volejte po zobrazení modálního dialogového okna. Tuto funkci je třeba zavolat, aby kontejner mohl povolit jakékoli Windows nejvyšší úrovně zakázané `PreModalDialog`. Tato funkce by měla být spárována s voláním `PreModalDialog`.
+Tuto funkci zavolejte po zobrazení libovolného modálního dialogového okna. Tuto funkci je nutné volat, aby kontejner mohl povolit všechna okna nejvyšší úrovně zakázaná programem `PreModalDialog`. Tato funkce by měla být `PreModalDialog`spárována s voláním aplikace .
 
-##  <a name="premodaldialog"></a>COleControl –::P reModalDialog
+## <a name="colecontrolpremodaldialog"></a><a name="premodaldialog"></a>COleControl::Premodlodálnídialog
 
-Upozorní kontejner, že se chystá zobrazení modálního dialogového okna.
+Upozorní kontejner, že modální dialogové okno se chystá zobrazit.
 
 ```
 void PreModalDialog(HWND hWndParent = NULL);
@@ -3537,13 +3537,13 @@ void PreModalDialog(HWND hWndParent = NULL);
 ### <a name="parameters"></a>Parametry
 
 *hWndParent*<br/>
-Popisovač do nadřazeného okna modálního dialogového okna.
+Zpracovat nadřazené okno modálního dialogového okna.
 
 ### <a name="remarks"></a>Poznámky
 
-Před zobrazením modálního dialogového okna volejte tuto funkci. Tato funkce musí být volána, aby kontejner mohl zakázat všechna okna nejvyšší úrovně. Po zobrazení modálního dialogového okna musíte zavolat `PostModalDialog`.
+Volání této funkce před zobrazením libovolného modálního dialogového okna. Tuto funkci je nutné volat, aby kontejner mohl zakázat všechna okna nejvyšší úrovně. Po zobrazení modálního dialogového okna je `PostModalDialog`nutné zavolat .
 
-##  <a name="recreatecontrolwindow"></a>COleControl –:: RecreateControlWindow
+## <a name="colecontrolrecreatecontrolwindow"></a><a name="recreatecontrolwindow"></a>COleControl::RecreateControlWindow
 
 Zničí a znovu vytvoří okno ovládacího prvku.
 
@@ -3553,9 +3553,9 @@ void RecreateControlWindow();
 
 ### <a name="remarks"></a>Poznámky
 
-To může být nutné v případě, že potřebujete změnit bity stylu okna.
+To může být nezbytné, pokud potřebujete změnit bity stylu okna.
 
-##  <a name="refresh"></a>COleControl –:: Refresh
+## <a name="colecontrolrefresh"></a><a name="refresh"></a>COleControl::Aktualizovat
 
 Vynutí překreslení ovládacího prvku OLE.
 
@@ -3565,11 +3565,11 @@ void Refresh();
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce je podporována `COleControl` základní třídou jako zásobovaná metoda, která se nazývá aktualizovat. To umožňuje uživatelům ovládacího prvku OLE překreslit ovládací prvek v určitou dobu. Další informace o této metodě naleznete v článku [ovládací prvky ActiveX: metody](../../mfc/mfc-activex-controls-methods.md).
+Tato funkce je `COleControl` podporována základní třídou jako skladovou metodou nazvanou Aktualizovat. To umožňuje uživatelům ovládacího prvku OLE překreslit ovládací prvek v určitém čase. Další informace o této metodě naleznete v článku [Ovládací prvky ActiveX: Metody](../../mfc/mfc-activex-controls-methods.md).
 
-##  <a name="releasecapture"></a>COleControl –:: ReleaseCapture
+## <a name="colecontrolreleasecapture"></a><a name="releasecapture"></a>COleControl::ReleaseCapture
 
-Uvolňuje zachycení myši.
+Uvolní zachycení myši.
 
 ```
 BOOL ReleaseCapture();
@@ -3577,15 +3577,15 @@ BOOL ReleaseCapture();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud bylo úspěšné; v opačném případě 0.
+Nenulová, pokud je úspěšná; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud má ovládací prvek v současné době zachycení myši, zachytávání se uvolní. V opačném případě tato funkce nemá žádný vliv.
+Pokud ovládací prvek aktuálně má zachycení myši, zachycení je uvolněna. V opačném případě tato funkce nemá žádný vliv.
 
-##  <a name="releasedc"></a>COleControl –:: ReleaseDC
+## <a name="colecontrolreleasedc"></a><a name="releasedc"></a>COleControl::ReleaseDC
 
-Uvolní kontext zobrazovaného zařízení kontejneru řízení bez oken a uvolní kontext zařízení pro použití jinými aplikacemi.
+Uvolní kontext zobrazovacího zařízení kontejneru ovládacího prvku bez oken, čímž uvolní kontext zařízení pro použití jinými aplikacemi.
 
 ```
 int ReleaseDC(CDC* pDC);
@@ -3593,20 +3593,20 @@ int ReleaseDC(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-*Emulátor*<br/>
-Identifikuje kontext zařízení kontejneru, který se má uvolnit.
+*Pdc*<br/>
+Identifikuje kontext kontejneru zařízení, které mají být uvolněny.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud bylo úspěšné; v opačném případě 0.
+Nenulová, pokud je úspěšná; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Aplikace musí volat `ReleaseDC` pro každé volání do [GetDC](#getdc).
+Aplikace musí `ReleaseDC` volat pro každé volání [GetDC](#getdc).
 
-##  <a name="reparentcontrolwindow"></a>COleControl –:: ReparentControlWindow
+## <a name="colecontrolreparentcontrolwindow"></a><a name="reparentcontrolwindow"></a>COleControl::ReparentControlWindow
 
-Nastaví nadřazený ovládací prvek.
+Nastaví nadřazenou položku ovládacího prvku.
 
 ```
 virtual void ReparentControlWindow(
@@ -3617,18 +3617,18 @@ virtual void ReparentControlWindow(
 ### <a name="parameters"></a>Parametry
 
 *hWndOuter*<br/>
-Popisovač okna ovládacího prvku.
+Popisovač ovládacího okna.
 
 *hWndParent*<br/>
-Popisovač nového nadřazeného okna.
+Popisovač novénadřazené okno.
 
 ### <a name="remarks"></a>Poznámky
 
-Voláním této funkce resetujete nadřazené okno ovládacího prvku.
+Volání této funkce obnovit nadřazené ovládacího okna.
 
-##  <a name="resetstockprops"></a>COleControl –:: ResetStockProps
+## <a name="colecontrolresetstockprops"></a><a name="resetstockprops"></a>COleControl::ResetStockProps
 
-Inicializuje stav `COleControl` uložených vlastností na jejich výchozí hodnoty.
+Inicializuje stav vlastností `COleControl` zásob na jejich výchozí hodnoty.
 
 ```
 void ResetStockProps();
@@ -3636,17 +3636,17 @@ void ResetStockProps();
 
 ### <a name="remarks"></a>Poznámky
 
-Vlastnosti jsou: vzhled, BackColor, BorderStyle, Caption, Enabled, Font, ForeColor, hWnd a text. Popis uložených vlastností naleznete v tématu [ovládací prvky ActiveX: Přidání uložených vlastností](../../mfc/mfc-activex-controls-adding-stock-properties.md).
+Vlastnosti jsou: Vzhled, BackColor, BorderStyle, Caption, Povoleno, Písmo, ForeColor, hWnd a Text. Popis vlastností zásob naleznete v [tématu ActiveX Controls: Adding Stock Properties](../../mfc/mfc-activex-controls-adding-stock-properties.md).
 
-Můžete zlepšit výkon binární inicializace ovládacího prvku pomocí `ResetStockProps` a `ResetVersion` přepsat `COleControl::OnResetState`. Viz následující příklad. Další informace o optimalizaci inicializace naleznete v tématu [ovládací prvky ActiveX: optimalizace](../../mfc/mfc-activex-controls-optimization.md).
+Binární inicializační výkon ovládacího prvku `ResetStockProps` `ResetVersion` můžete zlepšit `COleControl::OnResetState`pomocí a přepsáním . Viz následující příklad. Další informace o optimalizaci inicializace naleznete v [tématu ActiveX Controls: Optimization](../../mfc/mfc-activex-controls-optimization.md).
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCAxCtl#7](../../mfc/reference/codesnippet/cpp/colecontrol-class_8.cpp)]
 
-##  <a name="resetversion"></a>COleControl –:: ResetVersion
+## <a name="colecontrolresetversion"></a><a name="resetversion"></a>COleControl::ResetVersion
 
-Inicializuje číslo verze na určenou hodnotu.
+Inicializuje číslo verze na zadanou hodnotu.
 
 ```
 void ResetVersion(DWORD dwVersionDefault);
@@ -3655,15 +3655,15 @@ void ResetVersion(DWORD dwVersionDefault);
 ### <a name="parameters"></a>Parametry
 
 *dwVersionDefault*<br/>
-Číslo verze, která má být přiřazena k ovládacímu prvku.
+Číslo verze, které má být přiřazeno ovládacímu prvku.
 
 ### <a name="remarks"></a>Poznámky
 
-Můžete zlepšit výkon binární inicializace ovládacího prvku pomocí `ResetVersion` a `ResetStockProps` přepsat `COleControl::OnResetState`. Podívejte se na příklad na adrese [ResetStockProps](#resetstockprops). Další informace o optimalizaci inicializace naleznete v tématu [ovládací prvky ActiveX: optimalizace](../../mfc/mfc-activex-controls-optimization.md).
+Binární inicializační výkon ovládacího prvku `ResetVersion` `ResetStockProps` můžete zlepšit `COleControl::OnResetState`pomocí a přepsáním . Viz příklad na [ResetStockProps](#resetstockprops). Další informace o optimalizaci inicializace naleznete v [tématu ActiveX Controls: Optimization](../../mfc/mfc-activex-controls-optimization.md).
 
-##  <a name="scrollwindow"></a>COleControl –:: ScrollWindow
+## <a name="colecontrolscrollwindow"></a><a name="scrollwindow"></a>COleControl::ScrollWindow
 
-Umožňuje objektu OLE bez oken posouvání oblasti v rámci místní aktivní image na obrazovce.
+Umožňuje objektu OLE bez oken posouvat oblast v rámci aktivního obrazu na místě na obrazovce.
 
 ```
 void ScrollWindow(
@@ -3675,21 +3675,21 @@ void ScrollWindow(
 
 ### <a name="parameters"></a>Parametry
 
-*xAmount*<br/>
-Určuje velikost vodorovného posouvání v jednotkách zařízení. Tento parametr musí být záporná hodnota pro posouvání doleva.
+*xČástka*<br/>
+Určuje velikost vodorovného posouvání v jednotkách zařízení. Tento parametr musí být záporná hodnota pro posun doleva.
 
-*yAmount*<br/>
-Určuje velikost svislého posouvání v jednotkách zařízení. Tento parametr musí být záporná hodnota pro posouvání směrem nahoru.
+*yČástka*<br/>
+Určuje velikost svislého posouvání v jednotkách zařízení. Tento parametr musí být záporná hodnota pro posun směrem nahoru.
 
 *lpRect*<br/>
-Odkazuje na objekt [CRect](../../atl-mfc-shared/reference/crect-class.md) nebo strukturu Rect, která určuje část klientské oblasti objektu OLE pro posouvání, v souřadnicích klienta obsahujícího okna. Pokud má *lpRect* hodnotu null, je posunuta celá klientská oblast objektu OLE.
+Odkazuje na [cRect](../../atl-mfc-shared/reference/crect-class.md) objekt nebo RECT strukturu, která určuje část oblasti klienta objektu OLE posunout, v klientských souřadnicích obsahující okno. Pokud *lpRect* je NULL, je posunuta celá klientská oblast objektu OLE.
 
 *lpClipRect*<br/>
-Odkazuje na objekt `CRect` nebo strukturu `RECT`, která určuje obdélník, ke kterému se má vystřihnout. Budou posunuty pouze pixely uvnitř obdélníku. Bity mimo obdélník nejsou ovlivněny ani v případě, že jsou v obdélníku *lpRect* . Pokud má *lpClipRect* hodnotu null, na posuvníku se neprovede žádné oříznutí.
+Odkazuje na `CRect` objekt `RECT` nebo strukturu, která určuje obdélník, na který se má mít klip. Posouvá se pouze obrazové body uvnitř obdélníku. Bity mimo obdélník nejsou ovlivněny, i když jsou v *obdélníku lpRect.* Pokud *lpClipRect* je NULL, žádné oříznutí se provádí na obdélníku posouvání.
 
-##  <a name="selectfontobject"></a>COleControl –:: SelectFontObject
+## <a name="colecontrolselectfontobject"></a><a name="selectfontobject"></a>COleControl::SelectFontObject
 
-Vybere písmo v kontextu zařízení.
+Vybere písmo do kontextu zařízení.
 
 ```
 CFont* SelectFontObject(
@@ -3699,7 +3699,7 @@ CFont* SelectFontObject(
 
 ### <a name="parameters"></a>Parametry
 
-*Emulátor*<br/>
+*Pdc*<br/>
 Ukazatel na objekt kontextu zařízení.
 
 *fontHolder*<br/>
@@ -3707,11 +3707,11 @@ Odkaz na objekt [CFontHolder](../../mfc/reference/cfontholder-class.md) předsta
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na dříve vybrané písmo. Když volající dokončí všechny operace kreslení, které používají *fontHolder,* měl by znovu vybrat dříve vybrané písmo tak, že ho předáte jako parametr pro [CDC:: VybratObjekt](../../mfc/reference/cdc-class.md#selectobject).
+Ukazatel na dříve vybrané písmo. Po dokončení všech operací kreslení, které používají *fontHolder,* by měl znovu vybrat dříve vybrané písmo předáním jako parametr [cdc::SelectObject](../../mfc/reference/cdc-class.md#selectobject).
 
-##  <a name="selectstockfont"></a>COleControl –:: SelectStockFont
+## <a name="colecontrolselectstockfont"></a><a name="selectstockfont"></a>COleControl::SelectStockFont
 
-Vybere vlastnost písma zásob v kontextu zařízení.
+Vybere vlastnost Stock Font do kontextu zařízení.
 
 ```
 CFont* SelectStockFont(CDC* pDC);
@@ -3719,16 +3719,16 @@ CFont* SelectStockFont(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-*Emulátor*<br/>
-Kontext zařízení, do kterého bude písmo vybráno.
+*Pdc*<br/>
+Kontext zařízení, do kterého bude vybráno písmo.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na dříve vybraný objekt `CFont`. Po dokončení použijte příkaz [CDC:: VybratObjekt](../../mfc/reference/cdc-class.md#selectobject) k výběru tohoto písma zpátky do kontextu zařízení.
+Ukazatel na dříve `CFont` vybraný objekt. Měli byste použít [CDC::SelectObject](../../mfc/reference/cdc-class.md#selectobject) vybrat toto písmo zpět do kontextu zařízení po dokončení.
 
-##  <a name="serializeextent"></a>COleControl –:: SerializeExtent
+## <a name="colecontrolserializeextent"></a><a name="serializeextent"></a>COleControl::SerializovatRozsah
 
-Zaserializace nebo inicializuje stav zobrazovaného prostoru přiděleného ovládacímu prvku.
+Serializuje nebo inicializuje stav místa zobrazení přiděleného ovládacímu prvku.
 
 ```
 void SerializeExtent(CArchive& ar);
@@ -3736,20 +3736,20 @@ void SerializeExtent(CArchive& ar);
 
 ### <a name="parameters"></a>Parametry
 
-*snížen*<br/>
-Objekt `CArchive` k serializaci do nebo z.
+*ar*<br/>
+Objekt `CArchive` serializovat do nebo z.
 
 ### <a name="remarks"></a>Poznámky
 
-Můžete zlepšit výkon binárního trvalosti ovládacího prvku pomocí `SerializeExtent`, `SerializeStockProps`a `SerializeVersion` přepsat `COleControl::Serialize`. Viz následující příklad. Další informace o optimalizaci inicializace naleznete v tématu [ovládací prvky ActiveX: optimalizace](../../mfc/mfc-activex-controls-optimization.md).
+Pomocí aplikace `SerializeExtent`, a `SerializeStockProps` `SerializeVersion` přepsáním `COleControl::Serialize`můžete zlepšit výkon binární trvalosti ovládacího prvku . Viz následující příklad. Další informace o optimalizaci inicializace naleznete v [tématu ActiveX Controls: Optimization](../../mfc/mfc-activex-controls-optimization.md).
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCAxCtl#8](../../mfc/reference/codesnippet/cpp/colecontrol-class_9.cpp)]
 
-##  <a name="serializestockprops"></a>COleControl –:: SerializeStockProps
+## <a name="colecontrolserializestockprops"></a><a name="serializestockprops"></a>COleControl::SerializeStockProps
 
-Serializace nebo inicializuje stav `COleControl` uložených vlastností: vzhled, BackColor, BorderStyle, titulek, povoleno, písmo, ForeColor a text.
+Serializuje nebo inicializuje stav vlastností `COleControl` zásob: Vzhled, BackColor, BorderStyle, Caption, Enabled, Font, ForeColor a Text.
 
 ```
 void SerializeStockProps(CArchive& ar);
@@ -3757,18 +3757,18 @@ void SerializeStockProps(CArchive& ar);
 
 ### <a name="parameters"></a>Parametry
 
-*snížen*<br/>
-Objekt `CArchive` k serializaci do nebo z.
+*ar*<br/>
+Objekt `CArchive` serializovat do nebo z.
 
 ### <a name="remarks"></a>Poznámky
 
-Popis uložených vlastností naleznete v tématu [ovládací prvky ActiveX: Přidání uložených vlastností](../../mfc/mfc-activex-controls-adding-stock-properties.md).
+Popis vlastností zásob naleznete v [tématu ActiveX Controls: Adding Stock Properties](../../mfc/mfc-activex-controls-adding-stock-properties.md).
 
-Můžete zlepšit výkon binárního trvalosti ovládacího prvku pomocí `SerializeStockProps`, `SerializeExtent`a `SerializeVersion` přepsat `COleControl::Serialize`. Příklad naleznete v kódu na adrese [SerializeExtent](#serializeextent). Další informace o optimalizaci inicializace naleznete v tématu [ovládací prvky ActiveX: optimalizace](../../mfc/mfc-activex-controls-optimization.md).
+Pomocí aplikace `SerializeStockProps`, a `SerializeExtent` `SerializeVersion` přepsáním `COleControl::Serialize`můžete zlepšit výkon binární trvalosti ovládacího prvku . Příklad naleznete v kódu na [SerializeExtent](#serializeextent). Další informace o optimalizaci inicializace naleznete v [tématu ActiveX Controls: Optimization](../../mfc/mfc-activex-controls-optimization.md).
 
-##  <a name="serializeversion"></a>COleControl –:: SerializeVersion
+## <a name="colecontrolserializeversion"></a><a name="serializeversion"></a>COleControl::SerializeVersion
 
-Serializace nebo inicializuje stav informací o verzi ovládacího prvku.
+Serializuje nebo inicializuje stav informací o verzi ovládacího prvku.
 
 ```
 DWORD SerializeVersion(
@@ -3779,26 +3779,26 @@ DWORD SerializeVersion(
 
 ### <a name="parameters"></a>Parametry
 
-*snížen*<br/>
-Objekt `CArchive` k serializaci do nebo z.
+*ar*<br/>
+Objekt `CArchive` serializovat do nebo z.
 
 *dwVersionDefault*<br/>
 Aktuální číslo verze ovládacího prvku.
 
-*bConvert*<br/>
-Určuje, zda mají být trvalá data při uložení převedena do nejnovějšího formátu nebo udržována ve stejném formátu, v jakém byly načteny.
+*bPřevést*<br/>
+Označuje, zda mají být trvalá data při uložení převedena do nejnovějšího formátu nebo udržována ve stejném formátu, který měla při načítání.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Číslo verze ovládacího prvku. Pokud se načte zadaný archiv, `SerializeVersion` vrátí verzi načtenou z tohoto archivu. V opačném případě vrátí aktuálně načtenou verzi.
+Číslo verze ovládacího prvku. Pokud se zadaný `SerializeVersion` archiv načítá, vrátí verzi načtenou z tohoto archivu. V opačném případě vrátí aktuálně načtenou verzi.
 
 ### <a name="remarks"></a>Poznámky
 
-Můžete zlepšit výkon binárního trvalosti ovládacího prvku pomocí `SerializeVersion`, `SerializeExtent`a `SerializeStockProps` přepsat `COleControl::Serialize`. Příklad naleznete v kódu na adrese [SerializeExtent](#serializeextent). Další informace o optimalizaci inicializace naleznete v tématu [ovládací prvky ActiveX: optimalizace](../../mfc/mfc-activex-controls-optimization.md).
+Pomocí aplikace `SerializeVersion`, a `SerializeExtent` `SerializeStockProps` přepsáním `COleControl::Serialize`můžete zlepšit výkon binární trvalosti ovládacího prvku . Příklad naleznete v kódu na [SerializeExtent](#serializeextent). Další informace o optimalizaci inicializace naleznete v [tématu ActiveX Controls: Optimization](../../mfc/mfc-activex-controls-optimization.md).
 
-##  <a name="setappearance"></a>COleControl –:: SetAppearance
+## <a name="colecontrolsetappearance"></a><a name="setappearance"></a>COleControl::SetAppearance
 
-Nastaví hodnotu vlastnosti burzovní vzhled ovládacího prvku.
+Nastaví hodnotu vlastnosti vzhledu vašeho ovládacího prvku.
 
 ```
 void SetAppearance (short sAppearance);
@@ -3806,16 +3806,16 @@ void SetAppearance (short sAppearance);
 
 ### <a name="parameters"></a>Parametry
 
-*sAppearance*<br/>
-**Krátká** hodnota (VT_I2), která se má použít pro vzhled ovládacího prvku. Hodnota 0 nastaví vzhled ovládacího prvku na plochý a hodnota 1 nastaví vzhled ovládacího prvku na 3D.
+*sVzhled*<br/>
+**Krátká** (VT_I2) hodnota, která má být použita pro vzhled ovládacího prvku. Nulová hodnota nastaví vzhled ovládacího prvku na plochý a hodnota 1 nastaví vzhled ovládacího prvku na 3D.
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace o uložených vlastnostech naleznete v tématu [ovládací prvky ActiveX: vlastnosti](../../mfc/mfc-activex-controls-properties.md).
+Další informace o vlastnostech zásob naleznete [v tématu ActiveX Controls: Properties](../../mfc/mfc-activex-controls-properties.md).
 
-##  <a name="setbackcolor"></a>COleControl –:: SetBackColor
+## <a name="colecontrolsetbackcolor"></a><a name="setbackcolor"></a>COleControl::SetbackColor
 
-Nastaví hodnotu vlastnosti Barva pozadí ovládacího prvku na zásobu.
+Nastaví hodnotu vlastnosti BackColor vašeho ovládacího prvku.
 
 ```
 void SetBackColor(OLE_COLOR dwBackColor);
@@ -3824,15 +3824,15 @@ void SetBackColor(OLE_COLOR dwBackColor);
 ### <a name="parameters"></a>Parametry
 
 *dwBackColor*<br/>
-OLE_COLOR hodnota, která se má použít pro vykreslování ovládacího prvku na pozadí.
+Hodnota OLE_COLOR, která má být použita pro kreslení ovládacího prvku na pozadí.
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace o použití této vlastnosti a dalších souvisejících vlastností naleznete v článku [ovládací prvky ActiveX: vlastnosti](../../mfc/mfc-activex-controls-properties.md).
+Další informace o použití této vlastnosti a dalších souvisejících vlastností naleznete v článku [Ovládací prvky ActiveX: Vlastnosti](../../mfc/mfc-activex-controls-properties.md).
 
-##  <a name="setborderstyle"></a>COleControl –:: SetBorderStyle
+## <a name="colecontrolsetborderstyle"></a><a name="setborderstyle"></a>COleControl::SetBorderStyle
 
-Nastaví hodnotu vlastnosti okraje akcie ovládacího prvku.
+Nastaví hodnotu vlastnosti BorderStyle vašeho ovládacího prvku.
 
 ```
 void SetBorderStyle(short sBorderStyle);
@@ -3841,15 +3841,15 @@ void SetBorderStyle(short sBorderStyle);
 ### <a name="parameters"></a>Parametry
 
 *sBorderStyle*<br/>
-Nový styl ohraničení ovládacího prvku; 0 znamená bez ohraničení a 1 označuje normální ohraničení.
+Nový styl ohraničení pro ovládací prvek; 0 označuje žádné ohraničení a 1 normální ohraničení.
 
 ### <a name="remarks"></a>Poznámky
 
-Okno ovládacího prvku se pak znovu vytvoří a `OnBorderStyleChanged` se zavolá.
+Ovládací okno bude poté znovu `OnBorderStyleChanged` vytvořeno a voláno.
 
-##  <a name="setcapture"></a>COleControl –:: SetCapture
+## <a name="colecontrolsetcapture"></a><a name="setcapture"></a>COleControl::SetCapture
 
-Způsobí, že okno kontejneru ovládacího prvku provede zachycení myši jménem ovládacího prvku.
+Způsobí, že okno kontejneru ovládacího prvku převzít zachycení myši jménem ovládacího prvku.
 
 ```
 CWnd* SetCapture();
@@ -3857,15 +3857,15 @@ CWnd* SetCapture();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na objekt okna `CWnd`, který dříve přijal vstup myši.
+Ukazatel na `CWnd` objekt okna, který dříve přijal vstup myši.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud je ovládací prvek aktivován a bez okna, tato funkce způsobí, že okno kontejneru ovládacího prvku provede zachycení myši, a to jménem ovládacího prvku. V opačném případě tato funkce způsobí, že ovládací prvek převezme zachycení myši (stejné jako `CWnd::SetCapture`).
+Pokud je aktivován ovládací prvek a bez oken, tato funkce způsobí, že okno kontejneru ovládacího prvku převzít zachycení myši, jménem ovládacího prvku. V opačném případě tato funkce způsobí, že samotný ovládací `CWnd::SetCapture`prvek převezme zachycení myši (stejné jako ).
 
-##  <a name="setcontrolsize"></a>COleControl –:: SetControlSize
+## <a name="colecontrolsetcontrolsize"></a><a name="setcontrolsize"></a>COleControl::SetControlSize
 
-Nastaví velikost okna ovládacího prvku OLE a upozorní kontejner, který mění lokalita ovládacího prvku.
+Nastaví velikost okna ovládacího prvku OLE a upozorní kontejner, který mění lokalitu ovládacích prvku.
 
 ```
 BOOL SetControlSize(int cx, int cy);
@@ -3873,25 +3873,25 @@ BOOL SetControlSize(int cx, int cy);
 
 ### <a name="parameters"></a>Parametry
 
-*CX*<br/>
-Určuje novou šířku ovládacího prvku v pixelech.
+*Cx*<br/>
+Určuje novou šířku ovládacího prvku v obrazových bodech.
 
-*kr*<br/>
-Určuje novou výšku ovládacího prvku v pixelech.
+*Cy*<br/>
+Určuje novou výšku ovládacího prvku v obrazových bodech.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud bylo volání úspěšné; v opačném případě 0.
+Nenulová, pokud bylo volání úspěšné; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
 Tato funkce by neměla být použita v konstruktoru ovládacího prvku.
 
-Všimněte si, že všechny souřadnice pro okna ovládacích prvků jsou relativní vzhledem k levému hornímu rohu ovládacího prvku.
+Všimněte si, že všechny souřadnice pro ovládací okna jsou relativní vzhledem k levému hornímu rohu ovládacího prvku.
 
-##  <a name="setenabled"></a>COleControl –:: SetEnabled
+## <a name="colecontrolsetenabled"></a><a name="setenabled"></a>COleControl::SetEnabled
 
-Nastaví hodnotu vlastnosti povolenou pro datovou sadu ovládacího prvku.
+Nastaví hodnotu vlastnosti Enabled ovládacího prvku.
 
 ```
 void SetEnabled(BOOL bEnabled);
@@ -3899,16 +3899,16 @@ void SetEnabled(BOOL bEnabled);
 
 ### <a name="parameters"></a>Parametry
 
-*bEnabled*<br/>
-TRUE, pokud má být ovládací prvek povolen; v opačném případě FALSE.
+*bPovoleno*<br/>
+PRAVDA, pokud má být ovládací prvek povolen; jinak FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Po nastavení této vlastnosti se zavolá `OnEnabledChange`.
+Po nastavení této `OnEnabledChange` vlastnosti se nazývá.
 
-##  <a name="setfocus"></a>COleControl –:: SetFocus
+## <a name="colecontrolsetfocus"></a><a name="setfocus"></a>COleControl::SetFocus
 
-Způsobí, že okno kontejneru ovládacího prvku převezme fokus vstupu v zastoupení ovládacího prvku.
+Způsobí, že okno kontejneru ovládacího prvku převzít vstupní fokus na ovládací prvek.
 
 ```
 CWnd* SetFocus();
@@ -3916,17 +3916,17 @@ CWnd* SetFocus();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na objekt okna `CWnd`, který dříve měl vstupní fokus, nebo hodnotu NULL, pokud takové okno neexistuje.
+Ukazatel na `CWnd` objekt okna, který dříve měl vstupní fokus nebo NULL, pokud neexistuje žádné takové okno.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud je ovládací prvek aktivován a bez okna, tato funkce způsobí, že okno kontejneru ovládacího prvku bude moci převzít fokus vstupu, a to jménem ovládacího prvku. Vstupní fokus směruje vstup z klávesnice do okna kontejneru a kontejner odesílá všechny následné zprávy klávesnice objektu OLE, který volá `SetFocus`. Jakékoli okno, které dříve mělo fokus vstupu, ztratí.
+Pokud je aktivován ovládací prvek a bez oken, tato funkce způsobí, že okno kontejneru ovládacího prvku převzít vstupní fokus, na účet ovládacího prvku. Vstupní fokus směruje vstup z klávesnice do okna kontejneru a kontejner odešle všechny `SetFocus`následné zprávy klávesnice na objekt OLE, který volá . Všechna okna, která dříve měla vstupní fokus ztratí.
 
-Pokud ovládací prvek není bez okna, tato funkce způsobí, že samotný ovládací prvek převezme fokus vstupu (totéž jako `CWnd::SetFocus`).
+Pokud ovládací prvek není bez oken, tato funkce způsobí, že samotný `CWnd::SetFocus`ovládací prvek převezme vstupní fokus (stejně jako ).
 
-##  <a name="setfont"></a>COleControl –:: SetFont
+## <a name="colecontrolsetfont"></a><a name="setfont"></a>COleControl::SetFont
 
-Nastaví vlastnost burzovního písma vašeho ovládacího prvku.
+Nastaví vlastnost stock Font ovládacího prvku.
 
 ```
 void SetFont(LPFONTDISP pFontDisp);
@@ -3935,11 +3935,11 @@ void SetFont(LPFONTDISP pFontDisp);
 ### <a name="parameters"></a>Parametry
 
 *pFontDisp*<br/>
-Ukazatel na rozhraní pro expedici písma.
+Ukazatel na rozhraní odeslání písma.
 
-##  <a name="setforecolor"></a>COleControl –:: SetForeColor
+## <a name="colecontrolsetforecolor"></a><a name="setforecolor"></a>COleControl::SetForeColor
 
-Nastaví hodnotu vlastnosti Barva ForeColor ovládacího prvku na burzovní.
+Nastaví hodnotu vlastnosti ForeColor vašeho ovládacího prvku.
 
 ```
 void SetForeColor(OLE_COLOR dwForeColor);
@@ -3948,15 +3948,15 @@ void SetForeColor(OLE_COLOR dwForeColor);
 ### <a name="parameters"></a>Parametry
 
 *dwForeColor*<br/>
-Hodnota OLE_COLOR, která se má použít pro vykreslování ovládacího prvku na popředí.
+OLE_COLOR hodnota, která má být použita pro kreslení ovládacího prvku v popředí.
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace o použití této vlastnosti a dalších souvisejících vlastností naleznete v článku [ovládací prvky ActiveX: vlastnosti](../../mfc/mfc-activex-controls-properties.md).
+Další informace o použití této vlastnosti a dalších souvisejících vlastností naleznete v článku [Ovládací prvky ActiveX: Vlastnosti](../../mfc/mfc-activex-controls-properties.md).
 
-##  <a name="setinitialdataformats"></a>COleControl –:: SetInitialDataFormats
+## <a name="colecontrolsetinitialdataformats"></a><a name="setinitialdataformats"></a>COleControl::SetInitialDataFormats
 
-Volá se rozhraním, aby se inicializoval seznam formátů dat, které ovládací prvek podporuje.
+Volat rámci inicializovat seznam formátů dat podporovaných ovládacím prvkem.
 
 ```
 virtual void SetInitialDataFormats();
@@ -3964,9 +3964,9 @@ virtual void SetInitialDataFormats();
 
 ### <a name="remarks"></a>Poznámky
 
-Výchozí implementace určuje dva formáty: CF_METAFILEPICT a trvalou sadu vlastností.
+Výchozí implementace určuje dva formáty: CF_METAFILEPICT a trvalé nastavení vlastností.
 
-##  <a name="setinitialsize"></a>COleControl –:: SetInitialSize
+## <a name="colecontrolsetinitialsize"></a><a name="setinitialsize"></a>COleControl::SetInitialSize
 
 Nastaví velikost ovládacího prvku OLE při prvním zobrazení v kontejneru.
 
@@ -3978,19 +3978,19 @@ void SetInitialSize(
 
 ### <a name="parameters"></a>Parametry
 
-*CX*<br/>
-Počáteční šířka ovládacího prvku OLE v pixelech
+*Cx*<br/>
+Počáteční šířka ovládacího prvku OLE v pixelech.
 
-*kr*<br/>
-Počáteční výška ovládacího prvku OLE v pixelech
+*Cy*<br/>
+Počáteční výška ovládacího prvku OLE v pixelech.
 
 ### <a name="remarks"></a>Poznámky
 
-Voláním této funkce v konstruktoru nastavte počáteční velikost ovládacího prvku. Počáteční velikost se měří v jednotkách zařízení nebo v pixelech. Doporučuje se, aby toto volání bylo provedeno v konstruktoru ovládacího prvku.
+Volání této funkce v konstruktoru nastavit počáteční velikost ovládacího prvku. Počáteční velikost se měří v jednotkách zařízení nebo pixelech. Doporučuje se, aby toto volání provést v konstruktoru ovládacího prvku.
 
-##  <a name="setmodifiedflag"></a>COleControl –:: SetModifiedFlag
+## <a name="colecontrolsetmodifiedflag"></a><a name="setmodifiedflag"></a>COleControl::SetModifiedFlag
 
-Změní upravený stav ovládacího prvku.
+Změní změněný stav ovládacího prvku.
 
 ```
 void SetModifiedFlag(BOOL bModified = TRUE);
@@ -3998,16 +3998,16 @@ void SetModifiedFlag(BOOL bModified = TRUE);
 
 ### <a name="parameters"></a>Parametry
 
-*bModified*<br/>
-Nová hodnota příznaku pro úpravu ovládacího prvku Hodnota TRUE označuje, že došlo ke změně stavu ovládacího prvku. Hodnota FALSE označuje, že byl stav ovládacího prvku právě uložen.
+*bZměněno*<br/>
+Nová hodnota pro upravený příznak ovládacího prvku. True označuje, že stav ovládacího prvku byl změněn; FALSE označuje, že stav ovládacího prvku byl právě uložen.
 
 ### <a name="remarks"></a>Poznámky
 
-Tuto funkci volejte, když dojde ke změně, která by ovlivnila trvalý stav ovládacího prvku. Například pokud se změní hodnota trvalé vlastnosti, zavolejte tuto funkci s *bModified* **true**.
+Volání této funkce vždy, když dojde ke změně, která by mohla ovlivnit trvalý stav ovládacího prvku. Pokud se například změní hodnota trvalé vlastnosti, zavolejte tuto funkci *pomocí funkce bModified* **TRUE**.
 
-##  <a name="setnotpermitted"></a>COleControl –:: SetNotPermitted
+## <a name="colecontrolsetnotpermitted"></a><a name="setnotpermitted"></a>COleControl::SetNotPovoleno
 
-Indikuje, že žádost o úpravu se nezdařila.
+Označuje, že požadavek na úpravu se nezdařil.
 
 ```
 void SetNotPermitted();
@@ -4015,11 +4015,11 @@ void SetNotPermitted();
 
 ### <a name="remarks"></a>Poznámky
 
-Tuto funkci volejte, když `BoundPropertyRequestEdit` selžou. Tato funkce vyvolá výjimku typu `COleDispScodeException` pro indikaci, že operace set nebyla povolena.
+Volání této `BoundPropertyRequestEdit` funkce při selhání. Tato funkce vyvolá výjimku `COleDispScodeException` typu označující, že operace sady nebyla povolena.
 
-##  <a name="setnotsupported"></a>COleControl –:: SetNotSupported
+## <a name="colecontrolsetnotsupported"></a><a name="setnotsupported"></a>COleControl::SetNotSupported
 
-Brání uživateli v úpravách hodnoty vlastnosti ovládacího prvku.
+Zabrání úpravám hodnoty vlastnosti ovládacího prvku uživatelem.
 
 ```
 void SetNotSupported();
@@ -4027,11 +4027,11 @@ void SetNotSupported();
 
 ### <a name="remarks"></a>Poznámky
 
-Volání této funkce namísto funkce Set u jakékoli vlastnosti, kde změna hodnoty vlastnosti uživatelem ovládacího prvku není podporována. Jedním z příkladů může být vlastnost, která je jen pro čtení.
+Volání této funkce namísto Set funkce jakékoli vlastnosti, kde není podporována změna hodnoty vlastnosti uživatelem ovládacího prvku. Jedním z příkladů by vlastnost, která je jen pro čtení.
 
-##  <a name="setrectincontainer"></a>COleControl –:: SetRectInContainer
+## <a name="colecontrolsetrectincontainer"></a><a name="setrectincontainer"></a>COleControl::SetRectInContainer
 
-Nastaví souřadnice obdélníku ovládacího prvku vzhledem ke kontejneru vyjádřené v jednotkách zařízení.
+Nastaví souřadnice obdélníku ovládacího prvku vzhledem ke kontejneru, vyjádřené v jednotkách zařízení.
 
 ```
 BOOL SetRectInContainer(LPCRECT lpRect);
@@ -4044,15 +4044,15 @@ Ukazatel na obdélník obsahující nové souřadnice ovládacího prvku vzhlede
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud bylo volání úspěšné; v opačném případě 0.
+Nenulová, pokud bylo volání úspěšné; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud je ovládací prvek otevřen, změní se jeho velikost. v opačném případě se zavolá funkce `OnPosRectChanged` kontejneru.
+Pokud je ovládací prvek otevřený, jeho velikost se mění; jinak je volána funkce kontejneru. `OnPosRectChanged`
 
-##  <a name="settext"></a>COleControl –:: SetText
+## <a name="colecontrolsettext"></a><a name="settext"></a>COleControl::SetText
 
-Nastaví hodnotu vlastnosti titulkového titulu nebo textu ovládacího prvku.
+Nastaví hodnotu vlastnosti Titulek nebo Text ovládacího prvku.
 
 ```
 void SetText(LPCTSTR pszText);
@@ -4061,15 +4061,15 @@ void SetText(LPCTSTR pszText);
 ### <a name="parameters"></a>Parametry
 
 *pszText*<br/>
-Ukazatel na řetězec znaků.
+Ukazatel na řetězec znaku.
 
 ### <a name="remarks"></a>Poznámky
 
-Všimněte si, že burzovní popisky a vlastnosti textu jsou namapovány na stejnou hodnotu. To znamená, že všechny změny provedené u obou vlastností budou automaticky měnit obě vlastnosti. Obecně platí, že ovládací prvek by měl podporovat buď vlastnost titulku nebo text, ale ne obojí.
+Všimněte si, že vlastnosti Titulek na skladě a Text jsou mapovány na stejnou hodnotu. To znamená, že všechny změny provedené v obou vlastnostech automaticky změní obě vlastnosti. Obecně platí, že ovládací prvek by měl podporovat burzovní caption nebo text vlastnost, ale ne obojí.
 
-##  <a name="throwerror"></a>COleControl –:: ThrowError
+## <a name="colecontrolthrowerror"></a><a name="throwerror"></a>COleControl::ThrowError
 
-Signalizuje výskyt chyby ve vašem ovládacím prvku.
+Signalizuje výskyt chyby v ovládacím prvku.
 
 ```
 void ThrowError(
@@ -4085,25 +4085,25 @@ void ThrowError(
 
 ### <a name="parameters"></a>Parametry
 
-*příkaz*<br/>
-Hodnota stavového kódu, který se má ohlásit Úplný seznam možných kódů naleznete v článku [ovládací prvky ActiveX: Pokročilá témata](../../mfc/mfc-activex-controls-advanced-topics.md).
+*Sc*<br/>
+Hodnota stavového kódu, která má být vykázána. Úplný seznam možných kódů naleznete v článku [Ovládací prvky ActiveX: Rozšířená témata](../../mfc/mfc-activex-controls-advanced-topics.md).
 
 *nDescriptionID*<br/>
-ID prostředku řetězce výjimky, která má být hlášena.
+ID řetězce prostředku výjimky, které mají být hlášeny.
 
 *nHelpID*<br/>
-ID nápovědy k tématu, které má být oznámeno.
+ID nápovědy k tématu, o které se má oznamovat.
 
 *pszDescription*<br/>
-Řetězec obsahující vysvětlení výjimky, která má být hlášena.
+Řetězec obsahující vysvětlení výjimky, které mají být hlášeny.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce by měla být volána pouze v rámci funkce Get nebo set pro vlastnost OLE nebo implementaci metody automatizace OLE. Pokud potřebujete signalizovat chyby, ke kterým dochází v jiné době, měli byste vyvolat událost s chybou akcie.
+Tato funkce by měla být volána pouze z v rámci Get nebo Set funkce pro vlastnost OLE nebo implementace metody automatizace OLE. Pokud potřebujete signalizovat chyby, ke kterým dochází jindy, měli byste zapálit akci Stock Error.
 
-##  <a name="transformcoords"></a>COleControl –:: TransformCoords
+## <a name="colecontroltransformcoords"></a><a name="transformcoords"></a>COleControl::TransformCoords
 
-Transformuje hodnoty souřadnic mezi HIMETRIC jednotkami a nativními jednotkami kontejneru.
+Transformuje hodnoty souřadnic mezi jednotkami HIMETRIC a nativními jednotkami kontejneru.
 
 ```
 void TransformCoords(
@@ -4114,30 +4114,30 @@ void TransformCoords(
 
 ### <a name="parameters"></a>Parametry
 
-*lpptlHimetric*<br/>
-Ukazatel na strukturu `POINTL` obsahující souřadnice v jednotkách HIMETRIC
+*lpptlHimetricko*<br/>
+Ukazatel na `POINTL` strukturu obsahující souřadnice v jednotkách HIMETRIC.
 
-*lpptfContainer*<br/>
-Ukazatel na strukturu `POINTF` obsahující souřadnice v velikosti jednotky kontejneru.
+*Kontejner lpptf*<br/>
+Ukazatel na `POINTF` strukturu obsahující souřadnice ve velikosti jednotky kontejneru.
 
-*Flag*<br/>
+*příznaky*<br/>
 Kombinace následujících hodnot:
 
-- XFORMCOORDS_POSITION pozici v kontejneru.
+- XFORMCOORDS_POSITION Pozice A v kontejneru.
 
-- XFORMCOORDS_SIZE velikost v kontejneru.
+- XFORMCOORDS_SIZE Velikost i v kontejneru.
 
-- XFORMCOORDS_HIMETRICTOCONTAINER transformovat jednotky HIMETRIC na jednotky kontejneru.
+- XFORMCOORDS_HIMETRICTOCONTAINER Jednotky HIMETRIC transformujte na jednotky kontejneru.
 
-- XFORMCOORDS_CONTAINERTOHIMETRIC transformovat jednotky kontejneru na jednotky HIMETRIC.
+- XFORMCOORDS_CONTAINERTOHIMETRIC Jednotky kontejneru přeměňte na jednotky HIMETRIC.
 
 ### <a name="remarks"></a>Poznámky
 
-První dva příznaky XFORMCOORDS_POSITION a XFORMCOORDS_SIZE označují, zda by měly být souřadnice považovány za pozici nebo velikost. Zbývající dva příznaky označují směr transformace.
+První dva příznaky, XFORMCOORDS_POSITION a XFORMCOORDS_SIZE, označují, zda mají být souřadnice považovány za pozici nebo velikost. Zbývající dva příznaky označují směr transformace.
 
-##  <a name="translatecolor"></a>COleControl –:: TranslateColor
+## <a name="colecontroltranslatecolor"></a><a name="translatecolor"></a>COleControl::Přeložitbarvu
 
-Převede hodnotu barvy z OLE_COLOR datového typu na datový typ [COLORREF](/windows/win32/gdi/colorref) .
+Převede hodnotu barvy z datového typu OLE_COLOR na datový typ [COLORREF.](/windows/win32/gdi/colorref)
 
 ```
 COLORREF TranslateColor(
@@ -4148,22 +4148,22 @@ COLORREF TranslateColor(
 ### <a name="parameters"></a>Parametry
 
 *clrColor*<br/>
-OLE_COLOR datový typ. Další informace najdete v tématu funkce Windows [OleTranslateColor](/windows/win32/api/olectl/nf-olectl-oletranslatecolor) .
+Datový typ OLE_COLOR. Další informace naleznete v tématu Windows [OleTranslateColor](/windows/win32/api/olectl/nf-olectl-oletranslatecolor) funkce.
 
 *hpal*<br/>
-Popisovač k volitelné paletě. může mít hodnotu NULL.
+Úchyt pro volitelnou paletu; může být null.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota barevné barvy RGB (červená, zelená, modrá 32), která definuje plnou barvu nejbližší hodnotě *clrColor* , kterou může zařízení reprezentovat.
+RGB (červená, zelená, modrá) 32bitová hodnota barvy, která definuje plnou barvu nejblíže hodnotě *clrColor,* kterou může zařízení představovat.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce je užitečná pro přeložení vlastností barva barva barvy barvy a pozadí na COLORREF typy používané členskými funkcemi [CDC](../../mfc/reference/cdc-class.md) .
+Tato funkce je užitečná pro překlad vlastností ForeColor a BackColor na typy COLORREF používané členskými funkcemi [CDC.](../../mfc/reference/cdc-class.md)
 
-##  <a name="willambientsbevalidduringload"></a>COleControl –:: WillAmbientsBeValidDuringLoad
+## <a name="colecontrolwillambientsbevalidduringload"></a><a name="willambientsbevalidduringload"></a>COleControl::WillAmbientsBeValidDuringLoad
 
-Určuje, zda má ovládací prvek použít hodnoty vlastností okolí jako výchozí hodnoty, pokud je následně načten z jeho trvalého stavu.
+Určuje, zda ovládací prvek by měl použít hodnoty okolních vlastností jako výchozí hodnoty, když je následně načten z jeho trvalého stavu.
 
 ```
 BOOL WillAmbientsBeValidDuringLoad();
@@ -4171,15 +4171,15 @@ BOOL WillAmbientsBeValidDuringLoad();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové znamená, že vlastnosti okolí budou platné; v opačném případě vlastnosti okolí nebudou platné.
+Nenulová označuje, že vlastnosti okolí budou platné; v opačném případě nebudou vlastnosti okolí platné.
 
 ### <a name="remarks"></a>Poznámky
 
-V některých kontejnerech může mít ovládací prvek během počátečního volání přepsaného `COleControl::DoPropExchange`mít přístup k jeho okolním vlastnostem. Jedná se o případ, že kontejner volá [IPersistStreamInit:: Load](/windows/win32/api/ocidl/nf-ocidl-ipersiststreaminit-load) nebo [IPersistStorage:: Load](/windows/win32/api/objidl/nf-objidl-ipersiststorage-load) před voláním [IOleObject:: SetClientSite](/windows/win32/api/oleidl/nf-oleidl-ioleobject-setclientsite) (to znamená, pokud nedodržuje stavový bit OLEMISC_SETCLIENTSITEFIRST).
+V některých kontejnerech ovládací prvek nemusí mít přístup k jeho okolí `COleControl::DoPropExchange`vlastnosti během počáteční volání přepsat . To je případ, pokud kontejner volá [iPersistStreamInit:::Load](/windows/win32/api/ocidl/nf-ocidl-ipersiststreaminit-load) nebo [IPersistStorage::Load](/windows/win32/api/objidl/nf-objidl-ipersiststorage-load) před voláním [IOleObject::SetClientSite](/windows/win32/api/oleidl/nf-oleidl-ioleobject-setclientsite) (to znamená, pokud nerespektuje OLEMISC_SETCLIENTSITEFIRST stavový bit).
 
-##  <a name="windowproc"></a>COleControl –:: WindowProc
+## <a name="colecontrolwindowproc"></a><a name="windowproc"></a>COleControl::WindowProc
 
-Poskytuje proceduru Windows pro objekt `COleControl`.
+Poskytuje postup systému `COleControl` Windows pro objekt.
 
 ```
 virtual LRESULT WindowProc(
@@ -4190,27 +4190,27 @@ virtual LRESULT WindowProc(
 
 ### <a name="parameters"></a>Parametry
 
-*message*<br/>
-Určuje zprávu Windows, která se má zpracovat.
+*Zprávu*<br/>
+Určuje zprávu systému Windows, která má být zpracována.
 
 *wParam*<br/>
-Poskytuje další informace, které se používají při zpracování zprávy. Hodnota parametru závisí na zprávě.
+Obsahuje další informace používané při zpracování zprávy. Hodnota parametru závisí na zprávě.
 
-*lParam*<br/>
-Poskytuje další informace, které se používají při zpracování zprávy. Hodnota parametru závisí na zprávě.
+*Lparam*<br/>
+Obsahuje další informace používané při zpracování zprávy. Hodnota parametru závisí na zprávě.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Návratová hodnota zprávy byla odeslána.
+Vrácená hodnota odeslané zprávy.
 
 ### <a name="remarks"></a>Poznámky
 
-Voláním této funkce odešlete konkrétní zprávy přes mapu zprávy ovládacího prvku.
+Volání této funkce k odeslání konkrétní zprávy prostřednictvím mapy zpráv ovládacího prvku.
 
 ## <a name="see-also"></a>Viz také
 
-[CIRC3 Sample MFC](../../overview/visual-cpp-samples.md)<br/>
-[TESTHELP Sample MFC](../../overview/visual-cpp-samples.md)<br/>
+[Vzorek knihovny MFC CIRC3](../../overview/visual-cpp-samples.md)<br/>
+[Testhelp vzorku knihovny MFC](../../overview/visual-cpp-samples.md)<br/>
 [COlePropertyPage – třída](../../mfc/reference/colepropertypage-class.md)<br/>
 [CWnd – třída](../../mfc/reference/cwnd-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>

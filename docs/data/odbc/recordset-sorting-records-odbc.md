@@ -6,28 +6,28 @@ helpviewer_keywords:
 - ODBC recordsets, sorting
 - recordsets, sorting
 ms.assetid: b40b152e-0a91-452e-be7b-e5bc27f744c7
-ms.openlocfilehash: 4bbe635cdda9152be6ba178b863147db93b7c706
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 8b4deea1d8cbd4abe01ccc7a4114131378abe463
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80212742"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366929"
 ---
 # <a name="recordset-sorting-records-odbc"></a>Sada záznamů: Řazení záznamů (ODBC)
 
-Toto téma se vztahuje na třídy knihovny MFC rozhraní ODBC.
+Toto téma se vztahuje na třídy Knihovny MFC ODBC.
 
-Toto téma vysvětluje, jak sadu záznamů seřadit. Můžete určit jeden nebo více sloupců, na kterých se má řazení založit, a můžete zadat vzestupné nebo sestupné pořadí (**ASC** nebo **DESC**). U každého zadaného sloupce je výchozí hodnota **ASC** . Pokud například zadáte dva sloupce, záznamy jsou nejprve řazeny do prvního sloupce s názvem a následně do druhého sloupce s názvem. Klauzule **ORDER by** SQL definuje řazení. Když rozhraní připojí klauzuli **ORDER by** k dotazu SQL sady záznamů, klauzule řídí řazení výběru.
+Toto téma vysvětluje, jak seřadit sadu záznamů. Můžete určit jeden nebo více sloupců, na kterých má být řazení zakládáno, a můžete určit vzestupné nebo sestupné pořadí (**ASC** nebo **DESC**; **ASC** je výchozí) pro každý zadaný sloupec. Pokud například zadáte dva sloupce, záznamy se seřadí nejprve v prvním sloupci s názvem a potom na druhém s názvem sloupce. Klauzule SQL **ORDER BY** definuje řazení. Když rozhraní připojí **klauzuli ORDER BY** k dotazu SQL sady záznamů, klauzule řídí pořadí výběru.
 
-Pořadí řazení sady záznamů je nutné vytvořit po vytvoření objektu, ale před voláním jeho členské funkce `Open` (nebo před voláním členské funkce `Requery` pro existující objekt recordset, jehož `Open` členské funkce již byla volána dříve).
+Pořadí řazení sady záznamů je nutné vytvořit po vytvoření objektu, ale před voláním jeho `Open` členské funkce (nebo před voláním `Requery` členské funkce pro existující objekt sady záznamů, jehož `Open` členská funkce byla volána dříve).
 
 #### <a name="to-specify-a-sort-order-for-a-recordset-object"></a>Určení pořadí řazení pro objekt sady záznamů
 
-1. Vytvořte nový objekt sady záznamů (nebo Připravte volání `Requery` pro stávající).
+1. Vytvořte nový objekt sady záznamů `Requery` (nebo se připravte na volání existujícího objektu).
 
-1. Nastavte hodnotu datového členu [m_strSort](../../mfc/reference/crecordset-class.md#m_strsort) objektu.
+1. Nastavte hodnotu [datového](../../mfc/reference/crecordset-class.md#m_strsort) člena m_strSort objektu.
 
-   Řazení je řetězec zakončený hodnotou null. Obsahuje obsah klauzule **ORDER by** , ale nejedná se **o klíčové slovo ORDER by**. Například můžete použít:
+   Řazení je řetězec ukončený nulou. Obsahuje obsah klauzule **ORDER BY,** nikoli však klíčové slovo **ORDER BY**. Například můžete použít:
 
     ```
     recordset.m_strSort = "LastName DESC, FirstName DESC";
@@ -41,9 +41,9 @@ Pořadí řazení sady záznamů je nutné vytvořit po vytvoření objektu, ale
 
 1. Nastavte další možnosti, které potřebujete, například filtr, režim uzamčení nebo parametry.
 
-1. Pro nový objekt (nebo `Requery` pro existující objekt) volejte `Open`.
+1. Volání `Open` nového objektu `Requery` (nebo existujícího objektu).
 
-Vybrané záznamy jsou seřazené podle zadání. Pokud například chcete seřadit sadu záznamů studenta v sestupném pořadí podle příjmení, pak postupujte takto:
+Vybrané záznamy jsou seřazeny podle zadaných. Chcete-li například seřadit sadu záznamů studentů v sestupném pořadí podle příjmení, pak křestní jméno, postupujte takto:
 
 ```cpp
 // Construct the recordset
@@ -54,10 +54,10 @@ rsStudent.m_strSort = "LastName DESC, FirstName DESC";
 rsStudent.Open( );
 ```
 
-Sada záznamů obsahuje všechny záznamy studentů seřazené v sestupném pořadí (od do A) podle příjmení a pak podle křestního jména.
+Sada záznamů obsahuje všechny záznamy studentů seřazené v sestupném pořadí (Z až A) podle příjmení a poté podle křestního jména.
 
 > [!NOTE]
->  Pokud se rozhodnete přepsat výchozí řetězec SQL sady záznamů předáním vlastního řetězce SQL do `Open`, nenastavte řazení, pokud vlastní řetězec obsahuje klauzuli **ORDER by** .
+> Pokud se rozhodnete přepsat výchozí řetězec SQL sady záznamů předáním `Open`vlastního řetězce SQL , nenastavujte řazení, pokud má vlastní řetězec klauzuli **ORDER BY.**
 
 ## <a name="see-also"></a>Viz také
 

@@ -1,5 +1,5 @@
 ---
-title: Crecttracker – třída
+title: Třída CRectTracker
 ms.date: 11/19/2018
 f1_keywords:
 - CRectTracker
@@ -38,16 +38,16 @@ helpviewer_keywords:
 - CRectTracker [MFC], m_rect
 - CRectTracker [MFC], m_sizeMin
 ms.assetid: 99caa7f2-3c0d-4a42-bbee-e5d1d342d4ee
-ms.openlocfilehash: 9c54cdfecfa6c4ff0eef7e16003ab2097553953d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4d262ab5f88481d56de1c236effb66fcbf6a706a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62372264"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368379"
 ---
-# <a name="crecttracker-class"></a>Crecttracker – třída
+# <a name="crecttracker-class"></a>Třída CRectTracker
 
-Umožňuje položku, která má být zobrazen, přesouvat a různými způsoby se změněnou velikostí.
+Umožňuje zobrazení, přesunutí a velikost položky různými způsoby.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -59,46 +59,46 @@ class CRectTracker
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CRectTracker::CRectTracker](#crecttracker)|Vytvoří `CRectTracker` objektu.|
+|[CRectTracker::CRectTracker](#crecttracker)|Vytvoří `CRectTracker` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CRectTracker::AdjustRect](#adjustrect)|Volá se při změně velikosti obdélníku.|
-|[CRectTracker::Draw](#draw)|Vykresluje obdélník.|
-|[CRectTracker::DrawTrackerRect](#drawtrackerrect)|Volá se při vykreslování ohraničení `CRectTracker` objektu.|
-|[CRectTracker::GetHandleMask](#gethandlemask)|Volá za účelem získání maska `CRectTracker` úchyty pro změnu velikosti položky.|
-|[CRectTracker::GetTrueRect](#gettruerect)|Vrátí šířku a výšku obdélníku, včetně úchyty pro změnu velikosti.|
-|[CRectTracker::HitTest](#hittest)|Vrátí aktuální pozici kurzoru souvisí `CRectTracker` objektu.|
-|[CRectTracker::NormalizeHit](#normalizehit)|Normalizuje kód spuštění testu.|
-|[CRectTracker::OnChangedRect](#onchangedrect)|Volá se, když byl obdélník se změněnou velikostí nebo přesunut.|
-|[CRectTracker::SetCursor](#setcursor)|Nastaví kurzor, v závislosti na jeho pozice v obdélníku.|
-|[CRectTracker::Track](#track)|Umožňuje uživateli manipulovat s obdélníku.|
-|[CRectTracker::TrackRubberBand](#trackrubberband)|Umožňuje uživateli "pružných" výběr.|
+|[CRectTracker::AdjustRect](#adjustrect)|Nazývá se při velikosti obdélníku.|
+|[CRectTracker::Draw](#draw)|Vykreslí obdélník.|
+|[CRectTracker::DrawTrackerRect](#drawtrackerrect)|Nazývá se při kreslení `CRectTracker` ohraničení objektu.|
+|[CRectTracker::GetHandleMask](#gethandlemask)|Volána získat masku `CRectTracker` popisovače změny velikosti položky.|
+|[CRectTracker::GetTrueRect](#gettruerect)|Vrátí šířku a výšku obdélníku, včetně úchyty pro změny velikosti.|
+|[CRectTracker::HitTest](#hittest)|Vrátí aktuální pozici kurzoru `CRectTracker` souvisejícího s objektem.|
+|[CRectTracker::NormalizeHit](#normalizehit)|Normalizuje kód testu přístupů.|
+|[CRectTracker::OnChangedRect](#onchangedrect)|Nazývá se, když byla změněna velikost obdélníku nebo přesunuta.|
+|[CRectTracker::SetKurzor](#setcursor)|Nastaví kurzor v závislosti na jeho umístění nad obdélníkem.|
+|[CRectTracker::Sledovat](#track)|Umožňuje uživateli manipulovat s obdélníkem.|
+|[CRectTracker::TrackRubberBand](#trackrubberband)|Umožňuje uživateli "gumový pás" výběr.|
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CRectTracker::m_nHandleSize](#m_nhandlesize)|Určuje velikost úchyty pro změnu velikosti.|
-|[CRectTracker::m_nStyle](#m_nstyle)|Aktuální style(s) sledovacímu modulu.|
-|[CRectTracker::m_rect](#m_rect)|Aktuální pozice (v pixelech) obdélníku.|
-|[CRectTracker::m_sizeMin](#m_sizemin)|Určuje minimální obdélník šířku a výšku.|
+|[CRectTracker::m_nHandleSize](#m_nhandlesize)|Určuje velikost úchytů pro měnit velikost.|
+|[CRectTracker::m_nStyle](#m_nstyle)|Aktuální styl (y) trackeru.|
+|[CRectTracker::m_rect](#m_rect)|Aktuální pozice (v obrazových bodech) obdélníku.|
+|[CRectTracker::m_sizeMin](#m_sizemin)|Určuje minimální šířku a výšku obdélníku.|
 
 ## <a name="remarks"></a>Poznámky
 
-`CRectTracker` nemá základní třídu.
+`CRectTracker`nemá základní třídu.
 
-I když `CRectTracker` třída je navržena k umožnění uživatelům pracovat s položkami OLE pomocí grafického rozhraní, jeho použití se neomezuje na aplikace pro práci s OLE. Dá se použít kdekoli uživatelské rozhraní je povinný.
+Přestože `CRectTracker` třída je navržen tak, aby uživatel i nadále pracovat s položkami OLE pomocí grafického rozhraní, jeho použití není omezena na aplikace s podporou OLE. Může být použit kdekoli takové uživatelské rozhraní je vyžadováno.
 
-`CRectTracker` ohraničení může být plná nebo tečkované čáry. Položky můžete daný šrafované ohraničení nebo překrývající se šrafované vzorem k označení různých stavů položky. Můžete umístit na vnější nebo vnitřní osm úchyty pro změnu velikosti ohraničení položky. (Vysvětlení úchyty pro změnu velikosti, najdete v článku [GetHandleMask](#gethandlemask).) A konečně `CRectTracker` vám umožní změnit orientaci ovládacího prvku položky během změny velikosti.
+`CRectTracker`ohraničení může být plné nebo tečkované čáry. Položka může mít šrafované ohraničení nebo překryté šrafovaným vzorem, které označuje různé stavy položky. Na vnější nebo vnitřní okraj položky můžete umístit osm úchytů pro změna velikosti. (Vysvětlení úchyty pro změny velikosti naleznete v tématu [GetHandleMask](#gethandlemask).) Nakonec a `CRectTracker` umožňuje změnit orientaci položky během změny velikosti.
 
-Použití `CRectTracker`, sestavit `CRectTracker` a určení, které stavy zobrazení jsou inicializovány. Pak můžete toto rozhraní poskytnout uživateli vizuální zpětnou vazbu na aktuální stav přidružené položky OLE `CRectTracker` objektu.
+Chcete-li `CRectTracker`použít `CRectTracker` , vytvořte objekt a určete, které stavy zobrazení budou inicializovány. Toto rozhraní pak můžete poskytnout uživateli vizuální zpětnou vazbu na `CRectTracker` aktuální stav položky OLE přidružené k objektu.
 
-Další informace o používání `CRectTracker`, najdete v článku [snímače](../../mfc/trackers.md).
+Další informace o `CRectTracker`používání naleznete v článku [Sledování](../../mfc/trackers.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -108,9 +108,9 @@ Další informace o používání `CRectTracker`, najdete v článku [snímače]
 
 **Záhlaví:** afxext.h
 
-##  <a name="adjustrect"></a>  CRectTracker::AdjustRect
+## <a name="crecttrackeradjustrect"></a><a name="adjustrect"></a>CRectTracker::AdjustRect
 
-Volá se rozhraním při změně velikosti obdélník sledování pomocí úchyt pro změnu velikosti.
+Volat rámci při změně velikosti obdélníku sledování pomocí popisovač změnit velikost.
 
 ```
 virtual void AdjustRect(
@@ -120,23 +120,23 @@ virtual void AdjustRect(
 
 ### <a name="parameters"></a>Parametry
 
-*nHandle*<br/>
-Index popisovač použitý.
+*nPopisovat*<br/>
+Index použitého popisovače.
 
 *lpRect*<br/>
-Ukazatel na aktuální velikost pravoúhelníku. (Velikost obdélníku je dán jeho výška a šířka.)
+Ukazatel na aktuální velikost obdélníku. (Velikost obdélníku je dána jeho výškou a šířkou.)
 
 ### <a name="remarks"></a>Poznámky
 
-Výchozí chování této funkce umožňuje změnit pouze tehdy, když orientaci v obdélníku `Track` a `TrackRubberBand` jsou volány pomocí převrácení povolené.
+Výchozí chování této funkce umožňuje orientaci obdélníku `Track` změnit `TrackRubberBand` pouze v případě, a jsou volány s invertování povoleno.
 
-Přepsání této funkce ovládací prvek úprav obdélník sledování během operace přetahování. Jedním ze způsobů je upravit podle zadané souřadnice *lprect –* před vrácením.
+Přepište tuto funkci a ovládejte nastavení sledovacího obdélníku během operace přetažení. Jednou z metod je upravit souřadnice určené *lpRect* před návratem.
 
-Speciální funkce, které nejsou přímo podporované `CRectTracker`, jako jsou přichycení k mřížce nebo keep poměr stran, lze provést tak, že přepíšete této funkce.
+Přepsáním této funkce `CRectTracker`lze implementovat speciální funkce, které nejsou přímo podporovány , například přichycení k mřížce nebo poměr zachování strany.
 
-##  <a name="crecttracker"></a>  CRectTracker::CRectTracker
+## <a name="crecttrackercrecttracker"></a><a name="crecttracker"></a>CRectTracker::CRectTracker
 
-Vytvoří a inicializuje `CRectTracker` objektu.
+Vytvoří a inicializuje `CRectTracker` objekt.
 
 ```
 CRectTracker();
@@ -149,30 +149,30 @@ CRectTracker(
 ### <a name="parameters"></a>Parametry
 
 *lpSrcRect*<br/>
-Souřadnice objektu obdélník.
+Souřadnice objektu obdélníku.
 
-*nStyle*<br/>
-Určuje styl `CRectTracker` objektu. Podporují se tyto styly:
+*nStyl*<br/>
+Určuje styl objektu. `CRectTracker` Podporovány jsou následující styly:
 
-- `CRectTracker::solidLine` Použijte plnou čáru ohraničení obdélníku.
+- `CRectTracker::solidLine`Pro ohraničení obdélníku použijte plnou čáru.
 
-- `CRectTracker::dottedLine` Použijte tečkovaná čára ohraničení obdélníku.
+- `CRectTracker::dottedLine`Pro ohraničení obdélníku použijte tečkovanou čáru.
 
-- `CRectTracker::hatchedBorder` Použití vzoru šrafované ohraničení obdélníku.
+- `CRectTracker::hatchedBorder`Pro ohraničení obdélníku použijte šrafovaný vzorek.
 
-- `CRectTracker::resizeInside` Změna velikosti popisovače umístěný uvnitř obdélníku.
+- `CRectTracker::resizeInside`Změna velikosti úchyty umístěné uvnitř obdélníku.
 
-- `CRectTracker::resizeOutside` Změna velikosti popisovače nacházejících se mimo obdélníku.
+- `CRectTracker::resizeOutside`Změna velikosti úchyty umístěné mimo obdélník.
 
-- `CRectTracker::hatchInside` Zasílána modelu zahrnuje celou obdélník.
+- `CRectTracker::hatchInside`Šrafovaný vzorek pokrývá celý obdélník.
 
 ### <a name="remarks"></a>Poznámky
 
-Výchozí konstruktor inicializuje `CRectTracker` objektu s hodnotami z *lpSrcRect* a inicializuje výchozí systémové nastavení dalších velikostí. Pokud objekt je vytvořen bez parametrů, `m_rect` a `m_nStyle` neinicializované datové členy.
+Výchozí konstruktor inicializuje `CRectTracker` objekt s hodnotami z *lpSrcRect* a inicializuje jiné velikosti na výchozí hodnoty systému. Pokud je objekt vytvořen bez parametrů, jsou členy `m_rect` a `m_nStyle` data neinicializovány.
 
-##  <a name="draw"></a>  CRectTracker::Draw
+## <a name="crecttrackerdraw"></a><a name="draw"></a>CRectTracker::Draw
 
-Voláním této funkce kreslení obdélníku vnější čar a vnitřní oblasti.
+Volání této funkce nakreslit obdélníku vnější čáry a vnitřní oblasti.
 
 ```
 void Draw(CDC* pDC) const;
@@ -180,16 +180,16 @@ void Draw(CDC* pDC) const;
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
-Ukazatel na kontext zařízení na základě které chcete kreslit.
+*Pdc*<br/>
+Ukazatel na kontext zařízení, na kterém chcete kreslit.
 
 ### <a name="remarks"></a>Poznámky
 
-Styl sledovacímu modulu za Určuje, jak se dělá výkresu. Zobrazit v konstruktoru pro `CRectTracker` Další informace o dostupných stylů.
+Styl sledování určuje, jak se výkres provádí. Další informace o `CRectTracker` dostupných stylech naleznete v konstruktoru.
 
-##  <a name="drawtrackerrect"></a>  CRectTracker::DrawTrackerRect
+## <a name="crecttrackerdrawtrackerrect"></a><a name="drawtrackerrect"></a>CRectTracker::DrawTrackerRect
 
-Volá se rozhraním, když došlo ke změně pozice sledovacímu modulu za while uvnitř `Track` nebo `TrackRubberBand` členskou funkci.
+Volat rámci vždy, když se změní pozice `Track` trackeru, zatímco uvnitř funkce nebo `TrackRubberBand` člena.
 
 ```
 virtual void DrawTrackerRect(
@@ -202,26 +202,26 @@ virtual void DrawTrackerRect(
 ### <a name="parameters"></a>Parametry
 
 *lpRect*<br/>
-Ukazatel `RECT` nakreslit obdélník, který obsahuje.
+Ukazatel `RECT` na, který obsahuje obdélník kreslit.
 
 *pWndClipTo*<br/>
-Ukazatel na okno pro použití v obdélníku oříznutí.
+Ukazatel na okno pro oříznutí obdélníku.
 
-*pDC*<br/>
-Ukazatel na kontext zařízení na základě které chcete kreslit.
+*Pdc*<br/>
+Ukazatel na kontext zařízení, na kterém chcete kreslit.
 
 *pWnd*<br/>
-Ukazatel na okno, ve kterém bude probíhat výkresu.
+Ukazatel na okno, ve kterém dojde k výkresu.
 
 ### <a name="remarks"></a>Poznámky
 
-Výchozí implementace volá `CDC::DrawFocusRect`, které kreslí tečkovaná obdélník.
+Výchozí implementace provede volání `CDC::DrawFocusRect`, který kreslí tečkovaný obdélník.
 
-Přepsání této funkce můžete zadat jinou zpětnou vazbu během operace sledování.
+Přepsat tuto funkci poskytnout různé zpětnou vazbu během operace sledování.
 
-##  <a name="gethandlemask"></a>  CRectTracker::GetHandleMask
+## <a name="crecttrackergethandlemask"></a><a name="gethandlemask"></a>CRectTracker::GetHandleMask
 
-Rozhraní volá tuto funkci člena k načtení maska pro obdélníku úchyty pro změnu velikosti.
+Rozhraní Framework volá tuto člennou funkci k načtení masky pro popisovače změny velikosti obdélníku.
 
 ```
 virtual UINT GetHandleMask() const;
@@ -229,23 +229,23 @@ virtual UINT GetHandleMask() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Maska `CRectTracker` úchyty pro změnu velikosti položky.
+Maska úchyty pro měnit velikost `CRectTracker` položky.
 
 ### <a name="remarks"></a>Poznámky
 
-Úchyty pro změnu velikosti objeví na strany a rohů obdélníku a umožní uživateli řídit tvaru a velikosti obdélníku.
+Úchyty pro změně velikosti se zobrazí po stranách a rozích obdélníku a umožní uživateli ovládat tvar a velikost obdélníku.
 
-Obdélník má číslované 0-7 8 úchyty pro změnu velikosti. Každý úchyt pro změnu velikosti je reprezentován trochu v masce; Hodnota této verze je 2 ^ *n*, kde *n* je číslo popisovač změny velikosti. Služba BITS 0 – 3 odpovídají úchyty pro změnu velikosti roh, počínaje nahoře vlevo přesunutí po směru hodinových ručiček. BITS 4 – 7 odpovídají na straně změnit velikost v horní části po směru hodinových ručiček od obslužné rutiny. Následující obrázek znázorňuje úchyty pro změnu velikosti obdélníku a jejich odpovídající velikost popisovač čísla a hodnoty:
+Obdélník má 8 popisovačů pro změny velikosti číslovaných 0-7. Každý úchyt pro změně velikosti je v masce reprezentován bitem; hodnota tohoto bitu je 2^ *n*, kde *n* je číslo popisovače změny velikosti. Bity 0-3 odpovídají rohovým úchytům pro měnit velikost, počínaje levým horním bodem ve směru hodinových ručiček. Bity 4-7 odpovídají bočním úchytům pro změny velikosti začínajícím v horní části pohybu ve směru hodinových ručiček. Následující obrázek znázorňuje úchyty pro změně velikosti obdélníku a jejich odpovídající čísla a hodnoty popisovačů velikosti:
 
-![Změnit velikost čísla popisovač](../../mfc/reference/media/vc35dp1.gif "čísla popisovač změny velikosti")
+![Změna velikosti čísel popisovačů](../../mfc/reference/media/vc35dp1.gif "Změna velikosti čísel popisovačů")
 
-Výchozí implementace `GetHandleMask` vrátí maska bitů tak, aby zobrazily úchyty pro změnu velikosti. Pokud jeden bit zapnutý, bude vykreslen odpovídající úchyt pro změnu velikosti.
+Výchozí implementace `GetHandleMask` vrátí masku bitů tak, aby se zobrazily úchyty pro změny velikosti. Pokud je jeden bit zapnutý, bude vykreslen odpovídající úchyt pro změně velikosti.
 
-Přepište tato členská funkce pro skrytí nebo zobrazení, že na zadaný úchyty pro změnu velikosti.
+Přepsáním této členské funkce skryjte nebo zobrazte uvedené úchyty pro měnit velikost.
 
-##  <a name="gettruerect"></a>  CRectTracker::GetTrueRect
+## <a name="crecttrackergettruerect"></a><a name="gettruerect"></a>CRectTracker::GetTrueRect
 
-Volání této funkce načtete souřadnice obdélníku.
+Volání této funkce načíst souřadnice obdélníku.
 
 ```
 void GetTrueRect(LPRECT lpTrueRect) const;
@@ -254,15 +254,15 @@ void GetTrueRect(LPRECT lpTrueRect) const;
 ### <a name="parameters"></a>Parametry
 
 *lpTrueRect*<br/>
-Ukazatel `RECT` struktura, která bude obsahovat zařízení souřadnice `CRectTracker` objektu.
+Ukazatel na `RECT` strukturu, která bude obsahovat `CRectTracker` souřadnice zařízení objektu.
 
 ### <a name="remarks"></a>Poznámky
 
-Dimenze obdélníku zahrnují výšku a šířku jakékoli úchyty pro změnu velikosti umístěn na vnější okraj. Při vrácení, *lpTrueRect* je vždy normalizované rámečku v souřadnicích zařízení.
+Rozměry obdélníku zahrnují výšku a šířku všech úchytů pro změny velikosti umístěných na vnějším okraji. Po návratu *lpTrueRect* je vždy normalizovaný obdélník v souřadnicích zařízení.
 
-##  <a name="hittest"></a>  CRectTracker::HitTest
+## <a name="crecttrackerhittest"></a><a name="hittest"></a>CRectTracker::HitTest
 
-Voláním této funkce zjistěte, zda má uživatel obstaral úchyt pro změnu velikosti.
+Volání této funkce zjistit, zda uživatel má popadl popisovač změny velikosti.
 
 ```
 int HitTest(CPoint point) const;
@@ -270,36 +270,36 @@ int HitTest(CPoint point) const;
 
 ### <a name="parameters"></a>Parametry
 
-*point*<br/>
-Bod, v souřadnicích zařízení pro testování.
+*Bod*<br/>
+Bod, v souřadnicích zařízení, k testování.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrácená hodnota je založena na Výčtový typ `CRectTracker::TrackerHit` a může mít jednu z následujících hodnot:
+Vrácená hodnota je založena na ve `CRectTracker::TrackerHit` výčtu typu a může mít jednu z následujících hodnot:
 
-- `CRectTracker::hitNothing` -1
+- `CRectTracker::hitNothing`-1
 
-- `CRectTracker::hitTopLeft` 0
+- `CRectTracker::hitTopLeft`0
 
-- `CRectTracker::hitTopRight` 1
+- `CRectTracker::hitTopRight`1
 
-- `CRectTracker::hitBottomRight` 2
+- `CRectTracker::hitBottomRight`2
 
-- `CRectTracker::hitBottomLeft` 3
+- `CRectTracker::hitBottomLeft`3
 
-- `CRectTracker::hitTop` 4
+- `CRectTracker::hitTop`4
 
-- `CRectTracker::hitRight` 5
+- `CRectTracker::hitRight`5
 
-- `CRectTracker::hitBottom` 6
+- `CRectTracker::hitBottom`6
 
-- `CRectTracker::hitLeft` 7
+- `CRectTracker::hitLeft`7
 
-- `CRectTracker::hitMiddle` 8
+- `CRectTracker::hitMiddle`8
 
-##  <a name="m_nhandlesize"></a>  CRectTracker::m_nHandleSize
+## <a name="crecttrackerm_nhandlesize"></a><a name="m_nhandlesize"></a>CRectTracker::m_nHandleSize
 
-Velikost v pixelech, o `CRectTracker` úchyty pro změnu velikosti.
+Velikost úchytů `CRectTracker` pro změny velikosti v obrazových bodech.
 
 ```
 int m_nHandleSize;
@@ -307,19 +307,19 @@ int m_nHandleSize;
 
 ### <a name="remarks"></a>Poznámky
 
-Inicializovat výchozí systém hodnotou.
+Inicializováno s výchozí systémovou hodnotou.
 
-##  <a name="m_rect"></a>  CRectTracker::m_rect
+## <a name="crecttrackerm_rect"></a><a name="m_rect"></a>CRectTracker::m_rect
 
-Aktuální pozice rámečku v souřadnicích klienta (v pixelech).
+Aktuální pozice obdélníku v souřadnicích klienta (pixely).
 
 ```
 CRect m_rect;
 ```
 
-##  <a name="m_sizemin"></a>  CRectTracker::m_sizeMin
+## <a name="crecttrackerm_sizemin"></a><a name="m_sizemin"></a>CRectTracker::m_sizeMin
 
-Minimální velikost pravoúhelníku.
+Minimální velikost obdélníku.
 
 ```
 CSize m_sizeMin;
@@ -327,11 +327,11 @@ CSize m_sizeMin;
 
 ### <a name="remarks"></a>Poznámky
 
-Obě hodnoty výchozí `cx` a `cy`, se počítají na základě systému výchozí hodnota pro šířku ohraničení. Tento datový člen je používán pouze `AdjustRect` členskou funkci.
+Obě výchozí `cx` hodnoty `cy`a aplikace jsou vypočteny z výchozí systémové hodnoty pro šířku ohraničení. Tento datový člen používá `AdjustRect` pouze členská funkce.
 
-##  <a name="m_nstyle"></a>  CRectTracker::m_nStyle
+## <a name="crecttrackerm_nstyle"></a><a name="m_nstyle"></a>CRectTracker::m_nStyle
 
-Aktuální styl rámečku.
+Aktuální styl obdélníku.
 
 ```
 UINT m_nStyle;
@@ -339,11 +339,11 @@ UINT m_nStyle;
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit [CRectTracker::CRectTracker](#crecttracker) seznam možných styly.
+Seznam možných stylů najdete v tématu [CRectTracker::CRectTracker.](#crecttracker)
 
-##  <a name="normalizehit"></a>  CRectTracker::NormalizeHit
+## <a name="crecttrackernormalizehit"></a><a name="normalizehit"></a>CRectTracker::NormalizeHit
 
-Volání této funkce převedete potenciálně obrácenou popisovač.
+Volání této funkce převést potenciálně obrácený popisovač.
 
 ```
 int NormalizeHit(int nHandle) const;
@@ -351,20 +351,20 @@ int NormalizeHit(int nHandle) const;
 
 ### <a name="parameters"></a>Parametry
 
-*nHandle*<br/>
-Obslužná rutina vybraný uživatelem.
+*nPopisovat*<br/>
+Popisovač vybraný uživatelem.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Index normalizované popisovač.
+Index normalizovaného popisovače.
 
 ### <a name="remarks"></a>Poznámky
 
-Když `CRectTracker::Track` nebo `CRectTracker::TrackRubberBand` se volá s převrácení povoleny, je možné pro obdélník obrácený na ose x a osy y. Pokud k tomu dojde, `HitTest` vrátí popisovačů, které se také převrátí s ohledem na obdélníku. Totiž nevhodný pro kreslení zpětnou vazbu kurzor zpětnou vazbu, závisí na obrazovce pozici obdélníku, ne část obdélník datová struktura, která budou upraveny.
+Když `CRectTracker::Track` `CRectTracker::TrackRubberBand` nebo je volána s invertování povoleno, je možné pro obdélník, který má být obrácený na ose x, osy y nebo obojí. V takovém `HitTest` případě vrátí popisovače, které jsou také invertované vzhledem k obdélníku. To je nevhodné pro kreslení zpětné vazby kurzoru, protože zpětná vazba závisí na umístění na obrazovce obdélníku, nikoli na části obdélníkové datové struktury, která bude změněna.
 
-##  <a name="onchangedrect"></a>  CRectTracker::OnChangedRect
+## <a name="crecttrackeronchangedrect"></a><a name="onchangedrect"></a>CRectTracker::OnChangedRect
 
-Volá se rozhraním, pokaždé, když se obdélník sledovací modul byl změněn během volání `Track`.
+Volat rámci vždy, když se během volání `Track`do aplikace změnil obdélník sledování .
 
 ```
 virtual void OnChangedRect(const CRect& rectOld);
@@ -373,17 +373,17 @@ virtual void OnChangedRect(const CRect& rectOld);
 ### <a name="parameters"></a>Parametry
 
 *rectOld*<br/>
-Obsahuje staré souřadnice zařízení `CRectTracker` objektu.
+Obsahuje staré souřadnice `CRectTracker` zařízení objektu.
 
 ### <a name="remarks"></a>Poznámky
 
-V době je tato funkce volána, veškerá zpětná vazba nakreslit `DrawTrackerRect` byla odebrána. Výchozí implementace této funkce nemá žádný účinek.
+V době, kdy je tato funkce `DrawTrackerRect` volána, byla odebrána veškerá zpětná vazba nakreslená. Výchozí implementace této funkce neprovede žádné provádění.
 
-Tato funkce přepište, pokud chcete provádět všechny akce po změně velikosti obdélníku.
+Tuto funkci přepište, pokud chcete provést jakékoli akce po změněné velikosti obdélníku.
 
-##  <a name="setcursor"></a>  CRectTracker::SetCursor
+## <a name="crecttrackersetcursor"></a><a name="setcursor"></a>CRectTracker::SetKurzor
 
-Voláním této funkce změnit tvar ukazatele, zatímco je nad `CRectTracker` objektu oblasti.
+Volánítéto funkce změnit obrazec kurzoru, zatímco je nad oblasti objektu. `CRectTracker`
 
 ```
 BOOL SetCursor(
@@ -397,19 +397,19 @@ BOOL SetCursor(
 Odkazuje na okno, které aktuálně obsahuje kurzor.
 
 *nHitTest*<br/>
-Výsledky předchozí volání testu ze zprávy ovládací prvky WM_SETCURSOR.
+Výsledky předchozího testu přístupů, ze zprávy WM_SETCURSOR.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud předchozí položka prostřednictvím sledování obdélník; jinak 0.
+Nenulová, pokud předchozí zásah byl přes obdélník sledování; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Voláním této funkce z uvnitř funkce, která zpracovává zprávu WM_SETCURSOR okno (obvykle `OnSetCursor`).
+Volání této funkce zevnitř funkce okna, která zpracovává zprávu `OnSetCursor`WM_SETCURSOR (obvykle).
 
-##  <a name="track"></a>  CRectTracker::Track
+## <a name="crecttrackertrack"></a><a name="track"></a>CRectTracker::Sledovat
 
-Voláním této funkce k zobrazení uživatelského rozhraní pro změnu velikosti obdélníku.
+Volání této funkce zobrazí uživatelské rozhraní pro změna velikosti obdélníku.
 
 ```
 BOOL Track(
@@ -422,32 +422,32 @@ BOOL Track(
 ### <a name="parameters"></a>Parametry
 
 *pWnd*<br/>
-Okno objekt, který obsahuje obdélníku.
+Window objekt, který obsahuje obdélník.
 
-*point*<br/>
-Souřadnice zařízení aktuální pozice myši vzhledem ke klientské oblasti.
+*Bod*<br/>
+Souřadnice zařízení aktuální polohy myši vzhledem k oblasti klienta.
 
 *bAllowInvert*<br/>
-Při hodnotě TRUE se obdélník můžete obrácený společně osu x nebo y; v opačném případě FALSE.
+Pokud TRUE, obdélník může být obrácený podél osy x nebo y; jinak FALSE.
 
 *pWndClipTo*<br/>
-Okno, které kreslicí operace bude oříznut, aby. Pokud má hodnotu NULL, *pWnd* slouží jako obdélník oříznutí.
+Okno, na které budou oříznuty operace kreslení. Pokud null, *pWnd* se používá jako ořezový obdélník.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud se stiskne klávesu ESC, zastavení procesu sledování, obdélník uložené v nástroji Sledování se nezmění, a vrátí se 0. Pokud změna se potvrdí, hýbání myší a uvolněním levé tlačítko myši, novou pozici a velikost je zaznamenán v nástroji Sledování obdélníku a vrátí nenulovou hodnotu.
+Pokud je stisknuto klávesa ESC, proces sledování je zastaven, obdélník uložený v trackeru se nezmění a 0 je vrácena. Pokud je změna potvrzena, přesunutím myši a uvolněním levého tlačítka myši je v obdélníku sledování zaznamenána nová pozice a/nebo velikost a je vrácena nenulová.
 
 ### <a name="remarks"></a>Poznámky
 
-To je obvykle volána z uvnitř funkce aplikace, která zpracovává `WM_LBUTTONDOWN` zprávy (obvykle `OnLButtonDown`).
+To je obvykle volána zuvnitř funkce aplikace, která zpracovává `WM_LBUTTONDOWN` zprávu (obvykle `OnLButtonDown`).
 
-Tuto funkci bude zachycení myši, dokud uživatel uvolní levé tlačítko myši, stiskne klávesu ESC nebo stiskne pravé tlačítko myši. Jak uživatel přesouvá ukazatel myši, zpětná vazba se aktualizuje voláním `DrawTrackerRect` a `OnChangedRect`.
+Tato funkce zachytí myš, dokud uživatel neuvolní levé tlačítko myši, nestiskne klávesu ESC nebo nestiskne pravé tlačítko myši. Když uživatel přesune kurzor myši, zpětná `DrawTrackerRect` `OnChangedRect`vazba se aktualizuje voláním a .
 
-Pokud *bAllowInvert* má hodnotu TRUE, obdélník sledování můžete obrácený na osu x nebo osu y.
+Pokud *je hodnota bAllowInvert* TRUE, lze měřicí obdélník převrátit na ose x nebo ose y.
 
-##  <a name="trackrubberband"></a>  CRectTracker::TrackRubberBand
+## <a name="crecttrackertrackrubberband"></a><a name="trackrubberband"></a>CRectTracker::TrackRubberBand
 
-Voláním této funkce dělat výběr metodou pružných.
+Volání této funkce pro výběr gumičky.
 
 ```
 BOOL TrackRubberBand(
@@ -459,30 +459,30 @@ BOOL TrackRubberBand(
 ### <a name="parameters"></a>Parametry
 
 *pWnd*<br/>
-Okno objekt, který obsahuje obdélníku.
+Window objekt, který obsahuje obdélník.
 
-*point*<br/>
-Souřadnice zařízení aktuální pozice myši vzhledem ke klientské oblasti.
+*Bod*<br/>
+Souřadnice zařízení aktuální polohy myši vzhledem k oblasti klienta.
 
 *bAllowInvert*<br/>
-Při hodnotě TRUE se obdélník můžete obrácený společně osu x nebo y; v opačném případě FALSE.
+Pokud TRUE, obdélník může být obrácený podél osy x nebo y; jinak FALSE.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud se přesunul myš a rámeček není prázdná. jinak 0.
+Nenulová, pokud se myš přesunula a obdélník není prázdný; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Je obvykle volána z uvnitř funkce aplikace, která zpracovává zprávu WM_LBUTTONDOWN (obvykle `OnLButtonDown`).
+Obvykle je volána zevnitř funkce aplikace, která zpracovává zprávu `OnLButtonDown`WM_LBUTTONDOWN (obvykle ).
 
-Tuto funkci bude zachycení myši, dokud uživatel uvolní levé tlačítko myši, stiskne klávesu ESC nebo stiskne pravé tlačítko myši. Jak uživatel přesouvá ukazatel myši, zpětná vazba se aktualizuje voláním `DrawTrackerRect` a `OnChangedRect`.
+Tato funkce zachytí myš, dokud uživatel neuvolní levé tlačítko myši, nestiskne klávesu ESC nebo nestiskne pravé tlačítko myši. Když uživatel přesune kurzor myši, zpětná `DrawTrackerRect` `OnChangedRect`vazba se aktualizuje voláním a .
 
-Sledování probíhá s typ pružné pásma výběr z pravého dolního popisovače. Pokud převrácení je povolený, můžou mít velikost obdélník přetažením buď nahoru a vlevo nebo dolů a doprava.
+Sledování se provádí s gumovým páskem typu výběru z pravého dolního rukojeti. Pokud je invertování povoleno, může být velikost obdélníku velikosti přetažením nahoru a doleva nebo dolů a doprava.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Ukázky knihovny MFC sledovací modul](../../overview/visual-cpp-samples.md)<br/>
-[Ukázky knihovny MFC DRAWCLI](../../overview/visual-cpp-samples.md)<br/>
+[Sledování vzorků mfc](../../overview/visual-cpp-samples.md)<br/>
+[Vzorek mfc DRAWCLI](../../overview/visual-cpp-samples.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [COleResizeBar – třída](../../mfc/reference/coleresizebar-class.md)<br/>
 [CRect – třída](../../atl-mfc-shared/reference/crect-class.md)

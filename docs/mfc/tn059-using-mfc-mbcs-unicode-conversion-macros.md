@@ -1,5 +1,5 @@
 ---
-title: 'TN059: Použití převodních maker MBCS-Unicode knihovny MFC'
+title: 'TN059: Použití převodních maker MBCS-Unicode prostředí MFC'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - MFCANS32.DLL
@@ -11,25 +11,25 @@ helpviewer_keywords:
 - macros [MFC], MBCS conversion macros
 - TN059
 ms.assetid: a2aab748-94d0-4e2f-8447-3bd07112a705
-ms.openlocfilehash: 6c182ff584404fb91de8ff5e8020ec2e6ef9f950
-ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
+ms.openlocfilehash: 0d63a87d0fddde30dd5cbb18207297a345d74b9c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65611856"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366579"
 ---
-# <a name="tn059-using-mfc-mbcsunicode-conversion-macros"></a>TN059: Použití maker převodu znakové sady MBCS/Unicode prostředí MFC
+# <a name="tn059-using-mfc-mbcsunicode-conversion-macros"></a>TN059: Použití převodních maker MBCS/Unicode prostředí MFC
 
 > [!NOTE]
->  Následující Technická poznámka nebyla aktualizována, protože byla poprvé zahrnuta v online dokumentaci. V důsledku toho některé postupy a témata mohou být nesprávné nebo zastaralé. Nejnovější informace se doporučuje vyhledat téma zájmu v dokumentaci online index.
+> Následující technická poznámka nebyla aktualizována od doby, kdy byla poprvé zahrnuta do online dokumentace. V důsledku toho mohou být některé postupy a témata zastaralé nebo nesprávné. Chcete-li získat nejnovější informace, doporučujeme vyhledat téma zájmu v online indexu dokumentace.
 
-Tato poznámka popisuje způsob použití makra převodu znakové sady MBCS/Unicode, které jsou definovány v AFXPRIV. H. Tato makra jsou nejužitečnější tehdy, pokud svých obchodů používáte aplikaci přímo s rozhraním OLE API nebo z nějakého důvodu, často potřebuje pro převod mezi kódování Unicode a MBCS.
+Tato poznámka popisuje použití maker pro převod MBCS/Unicode, které jsou definovány v AFXPRIV. H. Tato makra jsou nejužitečnější, pokud vaše aplikace řeší přímo rozhraní OLE API nebo z nějakého důvodu často potřebuje převést mezi Unicode a MBCS.
 
 ## <a name="overview"></a>Přehled
 
-V prostředí MFC 3.x, speciální knihovny DLL se používá (MFCANS32. Knihovny DLL) mají automaticky převádět mezi kódování Unicode a MBCS, když byly volány rozhraní OLE. Tato knihovna DLL byla téměř transparentní vrstvu, která povolené OLE – aplikace má být zapsán jako šlo OLE API a rozhraní MBCS, i když jsou vždy kódování Unicode (s výjimkou Macintosh). Zatímco tato vrstva pohodlný a povolená aplikace rychle přenést z Win16 na Win32 (MFC, aplikace Microsoft Word, Microsoft Excelu a VBA, jsou jen některé z aplikací Microsoftu, které tuto technologii využívala), bylo v některých případech významné výkonnostní přístupů. Z tohoto důvodu MFC 4.x nepoužívá tuto knihovnu DLL a místo toho komunikuje přímo na rozhraní OLE kódování Unicode. K tomuto účelu MFC je potřeba převést do kódování Unicode do znakové sady MBCS při volání do rozhraní OLE a často je potřeba převést do znakové sady MBCS z kódování Unicode při implementaci rozhraní OLE. Pokud chcete se o to postarají efektivní a snadno, počtu maker byly vytvořeny pro usnadnění tohoto převodu.
+V knihovně MFC 3.x byla použita speciální knihovna DLL (MFCANS32. DLL) pro automatický převod mezi unicode a mbcs při volání rozhraní OLE. Tato knihovna DLL byla téměř průhledná vrstva, která umožňovala zápis aplikací OLE, jako by rozhraní OLE API a rozhraní byla MBCS, i když jsou vždy Unicode (s výjimkou macintosh). Zatímco tato vrstva byla pohodlná a umožnila aplikacím rychle přenést z Win16 na Win32 (MFC, Microsoft Word, Microsoft Excel a VBA, jsou jen některé z aplikací společnosti Microsoft, které používaly tuto technologii), měly někdy významný výkon. Z tohoto důvodu knihovna MFC 4.x nepoužívá tuto knihovnu DLL a místo toho hovoří přímo s rozhraními UNICODE OLE. Chcete-li to provést, mfc musí převést na Unicode mbcs při volání rozhraní OLE a často potřebuje převést na MBCS z Unicode při implementaci rozhraní OLE. Aby bylo možné tento účel a snadno zpracovat, byla vytvořena řada maker, která tento převod usnadňují.
 
-Jednou z největších mezní hodnoty vytvoření sady makra je přidělení paměti. Protože řetězce nelze převést na místě, musí být přiděleny nové paměti k ukládání převedený výsledků. To může jsme udělali s kódem podobný následujícímu:
+Jednou z největších překážek vytvoření takové sady maker je přidělení paměti. Vzhledem k tomu, že řetězce nelze převést na místě, musí být přidělena nová paměť pro uložení převedených výsledků. To by mohlo být provedeno s kódem podobným následujícímu:
 
 ```
 // we want to convert an MBCS string in lpszA
@@ -53,9 +53,9 @@ pI->SomeFunctionThatNeedsUnicode(lpszW);
 delete[] lpszW;
 ```
 
-Tento přístup jako různé problémy. Hlavní problém je, že je velké množství kódu pro zápis, testování a ladění. Něco, co bylo volání jednoduchou funkci, je teď mnohem složitější. Režie při tom je navíc významné modul runtime. Paměť musí být přidělený k haldě a uvolnění pokaždé, když se provádí převod. Nakonec se výše uvedený kód byste potřebovali mít odpovídající `#ifdefs` přidání pro kódování Unicode a Macintosh sestavení (které nevyžadují tento převod uskutečnit).
+Tento přístup jako řada problémů. Hlavním problémem je, že je hodně kódu pro psaní, testování a ladění. Něco, co bylo jednoduché volání funkce, je nyní mnohem složitější. Kromě toho je významné režie runtime v tom. Paměť musí být přidělena na haldě a uvolněna při každém převodu. Nakonec výše uvedený kód bude `#ifdefs` muset mít vhodné přidány pro sestavení Unicode a Macintosh (které nevyžadují tento převod uskutečnit).
 
-Řešení, které jsme přišli s je vytvořit některé makra, které (1) maska rozdíl mezi různými platformami a (2) použití režimu přidělení paměti efektivní a 3) jsou snadno vkládat do existující zdrojový kód. Tady je příklad jednoho z definice:
+Řešení, které jsme přišli s je vytvořit některé makra, které 1) maskovat rozdíl mezi různými platformami a 2) použít efektivní schéma přidělení paměti, a 3) jsou snadno vložit do existujícího zdrojového kódu. Zde je příklad jedné z definic:
 
 ```
 #define A2W(lpa) (\
@@ -66,7 +66,7 @@ Tento přístup jako různé problémy. Hlavní problém je, že je velké množ
     _convert)\)\)
 ```
 
-Pomocí tohoto makra namísto výše uvedený kód a co jsou mnohem jednodušší:
+Použití tohoto makra namísto výše uvedeného kódu a věci jsou mnohem jednodušší:
 
 ```
 // use it to call OLE here
@@ -74,17 +74,17 @@ USES_CONVERSION;
 pI->SomeFunctionThatNeedsUnicode(T2OLE(lpszA));
 ```
 
-Existují další volání, kde převodu je nezbytné, ale pomocí makra je snadné a efektivní.
+Existují další volání, kde je nutný převod, ale použití maker je jednoduché a efektivní.
 
-Provádění jednotlivých – makro používá funkci _alloca() je přidělit paměť ze zásobníku namísto haldy. Přidělování paměti ze zásobníku je mnohem rychlejší než přidělování paměti v haldě a paměť je automaticky uvolněn, když funkce skončí. Kromě toho se vyhnout volání makra `MultiByteToWideChar` (nebo `WideCharToMultiByte`) více než jednou. To se provádí přidělením trochu více paměti, než je nezbytné. Víme, že MBC převede na nejvýše jedna **WCHAR** a že pro každou **WCHAR** budeme mít maximálně dva bajty MBC. Přidělením trochu více než nezbytné, ale vždy dostatečně ke zpracování převodu druhé volání za druhé volání funkce pro převod je vyloučeno. Volání funkce pomocné rutiny `AfxA2Whelper` snižuje počet argumentů nabízených oznámení, které je třeba provést, aby bylo možné provést převod (výsledkem je menší kód, než pokud volána `MultiByteToWideChar` přímo).
+Implementace každého makra používá funkci _alloca() k přidělení paměti ze zásobníku namísto haldy. Přidělování paměti ze zásobníku je mnohem rychlejší než přidělování paměti na haldě a paměť je automaticky uvolněna při ukončení funkce. Kromě toho se makra vyhýbají volání `MultiByteToWideChar` (nebo `WideCharToMultiByte`) více než jednomu času. To se provádí přidělením trochu více paměti, než je nutné. Víme, že MBC převede na maximálně jeden **WCHAR** a že pro každý **WCHAR** budeme mít maximálně dva bajty MBC. Přidělením o něco více, než je nutné, ale vždy dost pro zpracování převodu druhé volání druhé volání funkce převodu je zabráněno. Volání pomocné funkce `AfxA2Whelper` snižuje počet argument pushy, které musí být provedeny za účelem provedení převodu `MultiByteToWideChar` (to má za následek menší kód, než kdyby je volána přímo).
 
-Aby maker na místa k uložení dočasné délku, je potřeba deklarovat lokální proměnnou s názvem _převést, který to dělá v každé funkci, která používá makra převodů. To se provádí vyvoláním makra USES_CONVERSION, jak je znázorněno v příkladu výše.
+Chcete-li, aby makra měla prostor pro uložení dočasné délky, je nutné deklarovat místní proměnnou nazvanou _convert, která to provádí v každé funkci, která používá makra převodu. To se provádí vyvoláním USES_CONVERSION makro, jak je vidět výše v příkladu.
 
-Existují obecný převodních maker a konkrétní makra OLE. Tyto dvě různé – makro sady jsou popsány níže. Všechna makra jsou umístěny v AFXPRIV. H.
+Existují obecná makra převodu a makra specifická pro OLE. Tyto dvě různé sady maker jsou popsány níže. Všechna makra jsou umístěna v AFXPRIV. H.
 
-## <a name="generic-conversion-macros"></a>Obecný převodních maker
+## <a name="generic-conversion-macros"></a>Obecná makra převodu
 
-Obecný převodních maker tvoří základní mechanismus. Příklad makra a implementace uvedené v předchozí části, A2W, je jedno "generic" makro. Nesouvisí se OLE zvlášť. Sada obecné makra jsou uvedeny níže:
+Obecná makra převodu tvoří základní mechanismus. Příklad maker a implementace zobrazená v předchozí části A2W je jedním z takových "obecných" maker. Nesouvisí konkrétně s OLE. Sada obecných maker je uvedena níže:
 
 ```
 A2CW      (LPCSTR) -> (LPCWSTR)
@@ -93,13 +93,13 @@ W2CA      (LPCWSTR) -> (LPCSTR)
 W2A      (LPCWSTR) -> (LPSTR)
 ```
 
-Kromě provádění text převody, jsou k dispozici také makra a pomocné funkce pro převod `TEXTMETRIC`, `DEVMODE`, `BSTR`a OLE přidělené řetězce. Tato makra jsou nad rámec této diskuse – AFXPRIV odkazovat. Další informace o těchto maker H.
+Kromě převodu textu existují také makra a pomocné `DEVMODE` `BSTR`funkce pro převod `TEXTMETRIC`řetězců , , a OLE. Tato makra jsou nad rámec této diskuse – viz AFXPRIV. H pro další informace o těchto maker.
 
-## <a name="ole-conversion-macros"></a>Makra převodů OLE
+## <a name="ole-conversion-macros"></a>Makra převodu OLE
 
-Makra převodů OLE jsou navrženy speciálně pro zpracování funkcí, které očekávají **OLESTR** znaků. Když si zblízka záhlaví OLE, zobrazí se mnoho odkazů na **LPCOLESTR** a **OLECHAR**. Tyto typy se používají k odkazování na typ znaky použité v rozhraní OLE, které nejsou specifické pro platformu způsobem. **OLECHAR** mapuje **char** Win16 a Macintosh platforem a **WCHAR** v systému Win32.
+Makra převodu OLE jsou navrženy speciálně pro zpracování funkcí, které očekávají znaky **OLESTR.** Pokud zkontrolujete hlavičky OLE, zobrazí se mnoho odkazů na **LPCOLESTR** a **OLECHAR**. Tyto typy se používají k odkazování na typ znaků používaných v rozhraní OLE způsobem, který není specifický pro platformu. **OLECHAR** mapuje **char** v Win16 a Macintosh platformy a **WCHAR** v Win32.
 
-Aby bylo možné zachovat počet **#ifdef** direktivy v MFC kód na minimum máme podobné – makro pro každý převod, kde se podílejí řetězce OLE. Nejčastěji se používají následující makra:
+Aby byl počet **direktiv #ifdef** v kódu knihovny MFC na minimum, máme podobné makro pro každý převod, který se týká, pokud jsou zapojeny řetězce OLE. Nejčastěji se používají následující makra:
 
 ```
 T2COLE   (LPCTSTR) -> (LPCOLESTR)
@@ -108,11 +108,11 @@ OLE2CT   (LPCOLESTR) -> (LPCTSTR)
 OLE2T   (LPCOLESTR) -> (LPCSTR)
 ```
 
-Znovu jsou makra podobná TEXTMETRIC, DEVMODE, BSTR a OLE přidělené řetězce. Odkazovat na AFXPRIV. H Další informace.
+Opět existují podobné makra pro práci TEXTMETRIC, DEVMODE, BSTR a OLE přidělené řetězce. Viz AFXPRIV. H pro více informací.
 
 ## <a name="other-considerations"></a>Ostatní úvahy
 
-Nepoužívejte makra v těsné smyčce. Například nechcete napsat následující druh kódu:
+Nepoužívejte makra v těsné smyčce. Například nechcete psát následující druh kódu:
 
 ```
 void BadIterateCode(LPCTSTR lpsz)
@@ -124,7 +124,7 @@ void BadIterateCode(LPCTSTR lpsz)
 }
 ```
 
-Výše uvedený kód by mohlo způsobit přidělování megabajtů paměti na zásobníku v závislosti na tom, jaký obsah řetězce `lpsz` je! Přijímá také čas pro převod řetězce pro každou iteraci smyčky. Místo toho přesuňte takové konstantním převodům smyčka:
+Výše uvedený kód může mít za následek přidělení megabajtů paměti v zásobníku `lpsz` v závislosti na tom, jaký je obsah řetězce! Také trvá nějakou dobu převést řetězec pro každou iteraci smyčky. Místo toho přesuňte tyto konstantní převody mimo smyčku:
 
 ```
 void MuchBetterIterateCode(LPCTSTR lpsz)
@@ -138,7 +138,7 @@ void MuchBetterIterateCode(LPCTSTR lpsz)
 }
 ```
 
-Pokud řetězec není konstantní, pak zapouzdření volání metody na funkci. To vám umožní převod vyrovnávací paměti k uvolnění pokaždé, když. Příklad:
+Pokud řetězec není konstantní, pak zapouzdřte volání metody do funkce. To umožní vyrovnávací paměti převodu uvolnit pokaždé. Příklad:
 
 ```
 void CallSomeMethod(int ii, LPCTSTR lpsz)
@@ -156,7 +156,7 @@ void MuchBetterIterateCode2(LPCTSTR* lpszArray)
 }
 ```
 
-Nikdy nevracet výsledkem jednoho z makra, pokud vrácená hodnota znamená, že zkopíruje data před vrácení. Například tento kód je chybný:
+Nikdy vrátit výsledek jednoho z maker, pokud vrácená hodnota znamená vytvoření kopie dat před vrácení. Například tento kód je chybný:
 
 ```
 LPTSTR BadConvert(ISomeInterface* pI)
@@ -173,7 +173,7 @@ return lpszT; // bad! returning alloca memory
 }
 ```
 
-Výše uvedený kód může napravit změnou návratovou hodnotu na něco, který kopíruje hodnotu:
+Výše uvedený kód může být opraven změnou vrácené hodnoty na něco, co zkopíruje hodnotu:
 
 ```
 CString BetterConvert(ISomeInterface* pI)
@@ -190,9 +190,9 @@ return lpszT; // CString makes copy
 }
 ```
 
-Makra jsou snadno použitelné a snadno vkládat do kódu, ale jak vidíte z výše uvedených upozornění, musíte být opatrní při jejich používání.
+Makra se snadno používají a snadno se vkládají do kódu, ale jak můžete zjistit z výše uvedených upozornění, musíte být opatrní při jejich použití.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Technické poznámky podle čísel](../mfc/technical-notes-by-number.md)<br/>
 [Technické poznámky podle kategorií](../mfc/technical-notes-by-category.md)

@@ -10,16 +10,16 @@ helpviewer_keywords:
 - stdext::cache_chunklist [C++], allocate
 - stdext::cache_chunklist [C++], deallocate
 ms.assetid: af19eccc-4ae7-4a34-bbb2-81e397424cb9
-ms.openlocfilehash: 035e5153b4e4c84743a64bcc9cec24920a6a0336
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: d0dd6176a34bd625069511106c491225d1467d08
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688355"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366760"
 ---
 # <a name="cache_chunklist-class"></a>cache_chunklist – třída
 
-Definuje [přidělování bloků](../standard-library/allocators-header.md) , které přiděluje a odděluje bloky paměti s jednou velikostí.
+Definuje [blok přidělování,](../standard-library/allocators-header.md) který přiděluje a navrací paměťové bloky jedné velikosti.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -32,13 +32,13 @@ class cache_chunklist
 
 |Parametr|Popis|
 |---------------|-----------------|
-|*'S*|Počet prvků v poli, které mají být přiděleny.|
+|*Sz*|Počet prvků v poli, které mají být přiděleny.|
 
 ## <a name="remarks"></a>Poznámky
 
-Tato šablona třídy používá **operátor New** pro přidělení bloků nezpracované paměti, přidělení bloků pro přidělení úložiště pro blok paměti v případě potřeby; ukládá navrácené bloky paměti do samostatného bezplatného seznamu pro každý blok a pomocí **operátoru delete** zruší přidělení bloku, když se nepoužívá žádný z jeho bloků paměti.
+Tato šablona třídy používá **operátor new** k přidělení bloků nezpracované paměti a v případě potřeby přiděluje bloky pro přidělení úložiště pro blok paměti. ukládá blokované paměťové bloky v samostatném seznamu volných pro každý blok a používá **operátor delete** k napřidělení bloku, pokud není používán žádný z jeho bloků paměti.
 
-Každý blok paměti obsahuje hodnotu *SZ* bajtů použitelné paměti a ukazatel na blok, ke kterému patří. Každý blok obsahuje `Nelts` bloky paměti, tři ukazatele, int a data, která **operátor New** a **operátor delete** vyžaduje.
+Každý blok paměti obsahuje *bajty Sz* použitelné paměti a ukazatel na blok, ke kterému patří. Každý blok `Nelts` obsahuje bloky paměti, tři ukazatele, int a data, která **vyžadují nový operátor** a odstranění **operátoru.**
 
 ### <a name="constructors"></a>Konstruktory
 
@@ -51,15 +51,15 @@ Každý blok paměti obsahuje hodnotu *SZ* bajtů použitelné paměti a ukazate
 |Členská funkce|Popis|
 |-|-|
 |[allocate](#allocate)|Přidělí blok paměti.|
-|[uvolnit](#deallocate)|Uvolní zadaný počet objektů od úložiště, které začínají na zadané pozici.|
+|[Navrátit](#deallocate)|Uvolní zadaný počet objektů z úložiště začínající na zadané pozici.|
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<allocators >
+**Záhlaví:** \<alokátory>
 
 **Obor názvů:** stdext
 
-## <a name="allocate"></a>cache_chunklist:: allocate
+## <a name="cache_chunklistallocate"></a><a name="allocate"></a>cache_chunklist::přidělit
 
 Přidělí blok paměti.
 
@@ -71,7 +71,7 @@ void *allocate(std::size_t count);
 
 |Parametr|Popis|
 |---------------|-----------------|
-|*výpočtu*|Počet prvků v poli, které mají být přiděleny.|
+|*Počet*|Počet prvků v poli, které mají být přiděleny.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -79,7 +79,7 @@ Ukazatel na přidělený objekt.
 
 ### <a name="remarks"></a>Poznámky
 
-## <a name="cache_chunklist"></a>cache_chunklist::cache_chunklist
+## <a name="cache_chunklistcache_chunklist"></a><a name="cache_chunklist"></a>cache_chunklist::cache_chunklist
 
 Vytvoří objekt typu `cache_chunklist`.
 
@@ -89,9 +89,9 @@ cache_chunklist();
 
 ### <a name="remarks"></a>Poznámky
 
-## <a name="deallocate"></a>cache_chunklist::d eallocate
+## <a name="cache_chunklistdeallocate"></a><a name="deallocate"></a>cache_chunklist::deallocate
 
-Uvolní zadaný počet objektů od úložiště, které začínají na zadané pozici.
+Uvolní zadaný počet objektů z úložiště začínající na zadané pozici.
 
 ```cpp
 void deallocate(void* ptr, std::size_t count);
@@ -101,11 +101,11 @@ void deallocate(void* ptr, std::size_t count);
 
 |Parametr|Popis|
 |---------------|-----------------|
-|*ptr*|Ukazatel na první objekt, který má být vrácen z úložiště.|
-|*výpočtu*|Počet objektů, které se mají uvolnit z úložiště|
+|*Ptr*|Ukazatel na první objekt, který má být deallocated z úložiště.|
+|*Počet*|Počet objektů, které mají být deallocated z úložiště.|
 
 ### <a name="remarks"></a>Poznámky
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[\<allocators >](../standard-library/allocators-header.md)
+[\<alokátory>](../standard-library/allocators-header.md)

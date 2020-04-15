@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 f1_keywords:
 - ppltasks/concurrency::task_options
 ms.assetid: f93d146b-70f7-46ec-8c2f-c33b8bb0af69
-ms.openlocfilehash: 5f60a07d709a79f3ce4845c8fbd1c40cb2ee7328
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: e79dd7979b587ae807c8984a04b79be362b03758
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142535"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368594"
 ---
 # <a name="task_options-class-concurrency-runtime"></a>task_options – třída (Concurrency Runtime)
 
-Představuje povolené možnosti pro vytvoření úlohy.
+Představuje povolené možnosti pro vytvoření úkolu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -25,21 +25,21 @@ class task_options;
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[task_options:: task_options – konstruktor (Concurrency Runtime)](#ctor)|Přetíženo. Výchozí seznam možností vytvoření úlohy|
+|[task_options::task_options konstruktor (souběžnost runtime)](#ctor)|Přetíženo. Výchozí seznam možností vytvoření úkolu|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[task_options:: get_cancellation_token – metoda (Concurrency Runtime)](#get_cancellation_token)|Vrátí token zrušení.|
-|[task_options:: get_continuation_context – metoda (Concurrency Runtime)](#get_continuation_context)|Vrátí kontext pokračování.|
-|[task_options:: get_scheduler – metoda (Concurrency Runtime)](#get_scheduler)|Vrátí Scheduler.|
-|[task_options:: has_cancellation_token – metoda (Concurrency Runtime)](#has_cancellation_token)|Indikuje, jestli byl token zrušení zadaný uživatelem.|
-|[task_options:: has_scheduler – metoda (Concurrency Runtime)](#has_scheduler)|Indikuje, jestli uživatel zadal Scheduler n.|
-|[task_options:: set_cancellation_token – metoda (Concurrency Runtime)](#set_cancellation_token)|Nastaví daný token v možnostech.|
-|[task_options:: set_continuation_context – metoda (Concurrency Runtime)](#set_continuation_context)|Nastaví daný kontext pokračování v možnostech.|
+|[task_options::get_cancellation_token metoda (souběžnost runtime)](#get_cancellation_token)|Vrátí token zrušení.|
+|[task_options::get_continuation_context metoda (souběžnost runtime)](#get_continuation_context)|Vrátí kontext pokračování.|
+|[task_options::get_scheduler metoda (souběžnost runtime)](#get_scheduler)|Vrátí plánovač.|
+|[task_options::has_cancellation_token metoda (souběžnost runtime)](#has_cancellation_token)|Označuje, zda byl token zrušení určen uživatelem.|
+|[task_options::has_scheduler metoda (souběžnost runtime)](#has_scheduler)|Označuje, zda byl plánovač n určen uživatelem.|
+|[task_options::set_cancellation_token metoda (souběžnost runtime)](#set_cancellation_token)|Nastaví daný token v možnostech|
+|[task_options::set_continuation_context metoda (souběžnost runtime)](#set_continuation_context)|Nastaví daný kontext pokračování v možnostech.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -47,11 +47,11 @@ class task_options;
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** ppltasks. h
+**Záhlaví:** ppltasks.h
 
 **Obor názvů:** souběžnost
 
-## <a name="get_cancellation_token"></a>task_options:: get_cancellation_token – metoda (Concurrency Runtime)
+## <a name="task_optionsget_cancellation_token-method-concurrency-runtime"></a><a name="get_cancellation_token"></a>task_options::get_cancellation_token metoda (souběžnost runtime)
 
 Vrátí token zrušení.
 
@@ -61,7 +61,7 @@ cancellation_token get_cancellation_token() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-## <a name="get_continuation_context"></a>task_options:: get_continuation_context – metoda (Concurrency Runtime)
+## <a name="task_optionsget_continuation_context-method-concurrency-runtime"></a><a name="get_continuation_context"></a>task_options::get_continuation_context metoda (souběžnost runtime)
 
 Vrátí kontext pokračování.
 
@@ -71,9 +71,9 @@ task_continuation_context get_continuation_context() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-## <a name="get_scheduler"></a>task_options:: get_scheduler – metoda (Concurrency Runtime)
+## <a name="task_optionsget_scheduler-method-concurrency-runtime"></a><a name="get_scheduler"></a>task_options::get_scheduler metoda (souběžnost runtime)
 
-Vrátí Scheduler.
+Vrátí plánovač.
 
 ```cpp
 scheduler_ptr get_scheduler() const;
@@ -81,9 +81,9 @@ scheduler_ptr get_scheduler() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-## <a name="has_cancellation_token"></a>task_options:: has_cancellation_token – metoda (Concurrency Runtime)
+## <a name="task_optionshas_cancellation_token-method-concurrency-runtime"></a><a name="has_cancellation_token"></a>task_options::has_cancellation_token metoda (souběžnost runtime)
 
-Indikuje, jestli byl token zrušení zadaný uživatelem.
+Označuje, zda byl token zrušení určen uživatelem.
 
 ```cpp
 bool has_cancellation_token() const;
@@ -91,9 +91,9 @@ bool has_cancellation_token() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-## <a name="has_scheduler"></a>task_options:: has_scheduler – metoda (Concurrency Runtime)
+## <a name="task_optionshas_scheduler-method-concurrency-runtime"></a><a name="has_scheduler"></a>task_options::has_scheduler metoda (souběžnost runtime)
 
-Indikuje, jestli uživatel zadal Scheduler n.
+Označuje, zda byl plánovač n určen uživatelem.
 
 ```cpp
 bool has_scheduler() const;
@@ -101,9 +101,9 @@ bool has_scheduler() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-## <a name="set_cancellation_token"></a>task_options:: set_cancellation_token – metoda (Concurrency Runtime)
+## <a name="task_optionsset_cancellation_token-method-concurrency-runtime"></a><a name="set_cancellation_token"></a>task_options::set_cancellation_token metoda (souběžnost runtime)
 
-Nastaví daný token v možnostech.
+Nastaví daný token v možnostech
 
 ```cpp
 void set_cancellation_token(cancellation_token _Token);
@@ -113,7 +113,7 @@ void set_cancellation_token(cancellation_token _Token);
 
 `_Token`
 
-## <a name="set_continuation_context"></a>task_options:: set_continuation_context – metoda (Concurrency Runtime)
+## <a name="task_optionsset_continuation_context-method-concurrency-runtime"></a><a name="set_continuation_context"></a>task_options::set_continuation_context metoda (souběžnost runtime)
 
 Nastaví daný kontext pokračování v možnostech.
 
@@ -125,9 +125,9 @@ void set_continuation_context(task_continuation_context _ContinuationContext);
 
 `_ContinuationContext`
 
-## <a name="ctor"></a>task_options:: task_options – konstruktor (Concurrency Runtime)
+## <a name="task_optionstask_options-constructor-concurrency-runtime"></a><a name="ctor"></a>task_options::task_options konstruktor (souběžnost runtime)
 
-Výchozí seznam možností vytvoření úlohy
+Výchozí seznam možností vytvoření úkolu
 
 ```cpp
 task_options();
@@ -170,4 +170,4 @@ task_options(
 
 ## <a name="see-also"></a>Viz také
 
-[concurrency – obor názvů](concurrency-namespace.md)
+[obor názvů souběžnosti](concurrency-namespace.md)

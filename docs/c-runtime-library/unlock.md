@@ -23,19 +23,19 @@ helpviewer_keywords:
 - unlock function
 - _unlock function
 ms.assetid: 2eda2507-a134-4997-aa12-f2f8cb319e14
-ms.openlocfilehash: 5535b19a2419bf58f22bc39d87fc615c19265cd4
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 185cb1e5f582fd5eeb1dbcb337c402319ab78f00
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957260"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81365686"
 ---
 # <a name="_unlock"></a>_unlock
 
 Uvolní zámek s více vlákny.
 
 > [!IMPORTANT]
->  Tato funkce je zastaralá. Počínaje verzí Visual Studio 2015 není k dispozici v CRT.
+> Tato funkce je zastaralá. Počínaje Visual Studio 2015, není k dispozici v CRT.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -48,13 +48,13 @@ void __cdecl _unlock(
 #### <a name="parameters"></a>Parametry
 
 *locknum*<br/>
-pro Identifikátor zámku, který se má uvolnit.
+[v] Identifikátor zámku uvolnit.
 
 ## <a name="requirements"></a>Požadavky
 
-**Zdroj:** mlock. c
+**Zdroj:** mlock.c
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Abecední seznam odkazů na funkce](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
 [_lock](../c-runtime-library/lock.md)

@@ -4,20 +4,20 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - enum class, specifying underlying types
 ms.assetid: df8f2b91-b9d2-4fab-9be4-b1d58b8bc570
-ms.openlocfilehash: 68f8e113f6199d3b320bc6d241ee3396d2b70a1a
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: cf3bb23069b2692c0ca4ce270a5b8060195becf7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988222"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81370178"
 ---
 # <a name="how-to-define-and-consume-enums-in-ccli"></a>Postupy: Definice a používání výčtů v jazyce C++/CLI
 
-Toto téma popisuje výčty C++v/CLI.
+Toto téma popisuje výčty v jazyce C++/CLI.
 
 ## <a name="specifying-the-underlying-type-of-an-enum"></a>Určení základního typu výčtu
 
-Ve výchozím nastavení je nadřízený typ výčtu `int`.  Můžete však určit typ, který má být podepsán, nebo nepodepsané formuláře `int`, `short`, `long`, `__int32`nebo `__int64`.  Můžete také použít `char`.
+Ve výchozím nastavení je `int`základní typ výčtu .  Můžete však určit typ, který má být `int` `short`podepsán `long` `__int32`nebo `__int64`podepsán, formuláře , , , nebo .  Můžete také `char`použít .
 
 ```cpp
 // mcppv2_enum_3.cpp
@@ -38,7 +38,7 @@ int main() {
 }
 ```
 
-**Output**
+**Výstup**
 
 ```Output
 sun
@@ -47,9 +47,9 @@ sun
 2
 ```
 
-## <a name="how-to-convert-between-managed-and-standard-enumerations"></a>Jak převést spravované a standardní výčty
+## <a name="how-to-convert-between-managed-and-standard-enumerations"></a>Převod mezi spravovanými a standardními výčty
 
-Neexistuje žádný standardní převod mezi výčtem a integrálním typem. přetypování je povinné.
+Neexistuje žádný standardní převod mezi výčtu a integrální typ; je vyžadováno obsazení.
 
 ```cpp
 // mcppv2_enum_4.cpp
@@ -69,7 +69,7 @@ int main() {
 }
 ```
 
-**Output**
+**Výstup**
 
 ```Output
 a and day2 are the same
@@ -77,22 +77,22 @@ a and day2 are the same
 
 ## <a name="operators-and-enums"></a>Operátory a výčty
 
-Následující operátory jsou platné pro výčty v C++/CLI:
+Následující operátory jsou platné na výčty v jazyce C++/CLI:
 
 |Operátor|
 |--------------|
-|== != \< > \<= >=|
+|== != \<  >  \<= >=|
 |+ -|
 |&#124; ^ & ~|
 |++ --|
 |sizeof|
 
-Operátory &#124; ^ & ~ + +--jsou definovány pouze pro výčty s celočíselnými podkladovými typy bez zahrnutí bool.  Oba operandy musí být výčtového typu.
+Operátory &#124; ^ & ~ ++ -- jsou definovány pouze pro výčty s integrální základní typy, bez bool.  Oba operandy musí být typu výčtu.
 
-Kompilátor neprovede žádnou statickou ani dynamickou kontrolu výsledku operace Enum; výsledkem operace může být hodnota, která není v rozsahu platných enumerátorů výčtu.
+Kompilátor neprovádí žádnou statickou nebo dynamickou kontrolu výsledku operace výčtu. operace může mít za následek hodnotu není v rozsahu platných výčtu výčtu.
 
 > [!NOTE]
->  C++ 11 zavádí typy třídy výčtu v nespravovaném kódu, které jsou významně odlišné od spravovaných tříd výčtu v C++/CLI. Konkrétně typ třídy výčtu C++ 11 nepodporuje stejné operátory jako typ třídy spravovaného výčtu v C++/CLI a C++zdrojový kód/CLI musí poskytnout specifikátor přístupnosti v deklaracích spravované třídy výčtu, aby bylo možné je odlišit od nespravovaných (c++ 11) deklarací třídy výčtu. Další informace o třídách enum v C++/CLI, C++/CX a c++ 11 naleznete v tématu [enum class](../extensions/enum-class-cpp-component-extensions.md).
+> C++ 11 zavádí výčtu typy tříd v nespravovaném kódu, které se výrazně liší od spravované třídy výčtu v Jazyce C++/CLI. Zejména typ třídy výčtu C++11 nepodporuje stejné operátory jako typ třídy spravovaného výčtu v jazyce C++/CLI a zdrojový kód C++/CLI musí poskytnout specifikátor přístupnosti ve spravovaných deklaracích tříd výčtu, aby je odlišil od nespravovaných deklarací tříd (C ++ 11). Další informace o výčtu tříd v C++/CLI, C++/CX a C++11, naleznete [v tématu výčtu třídy](../extensions/enum-class-cpp-component-extensions.md).
 
 ```cpp
 // mcppv2_enum_5.cpp
@@ -127,7 +127,7 @@ int main() {
 }
 ```
 
-**Output**
+**Výstup**
 
 ```Output
 4
@@ -135,6 +135,6 @@ int main() {
 True
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [enum class](../extensions/enum-class-cpp-component-extensions.md)

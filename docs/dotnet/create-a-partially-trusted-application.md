@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Vytvoření částečně důvěryhodné aplikace (C++vyhodnocovací)'
+title: 'Postup: Vytvoření částečně důvěryhodné aplikace (C++/CLI)'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,33 +10,33 @@ helpviewer_keywords:
 - interop [C++], partially trusted applications
 - /clr compiler option [C++], partially trusted applications
 ms.assetid: 4760cd0c-4227-4f23-a7fb-d25b51bf246e
-ms.openlocfilehash: afdfb8ca11753d7def9d7da6f431082b1a90c345
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9df3a751f4073472b9495425599aaf43878db99a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209119"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364405"
 ---
-# <a name="how-to-create-a-partially-trusted-application-by-removing-dependency-on-the-crt-library-dll"></a>Postupy: Vytvoření částečně důvěryhodné aplikace odebráním závislosti na knihovně DLL knihovny CRT
+# <a name="how-to-create-a-partially-trusted-application-by-removing-dependency-on-the-crt-library-dll"></a>Postupy: Vytvoření částečně důvěryhodné aplikace odebráním závislosti na modulu DLL knihovny CRT
 
-Toto téma popisuje, jak vytvořit pomocí jazyka Visual C++ odebráním závislosti na msvcm90.dll částečně důvěryhodné aplikace Common Language Runtime.
+Toto téma popisuje, jak vytvořit částečně důvěryhodnou aplikaci Common Language Runtime pomocí visual c++ odebráním závislosti na souboru msvcm90.dll.
 
-Sestavován aplikace Visual C++ **/CLR** bude mít závislost na msvcm90.dll, která je součástí knihovny C Runtime. Pokud chcete, aby vaše aplikace pro použití v prostředí s částečným vztahem důvěryhodnosti, modul CLR bude vynucovat určitá pravidla zabezpečení přístupu kódu na vaše knihovna DLL. Proto je potřeba tuto závislost odeberete, protože msvcm90.dll obsahující nativní kód a na něm nedají vynutit zásady zabezpečení přístupu kódu.
+Aplikace Visual C++ vytvořená pomocí **/clr** bude mít závislost na souboru msvcm90.dll, který je součástí knihovny C-Runtime. Pokud chcete, aby vaše aplikace byla použita v prostředí částečné důvěryhodnosti, CLR vynutí určitá pravidla zabezpečení přístupu kódu na vaší dll. Proto bude nutné tuto závislost odebrat, protože soubor msvcm90.dll obsahuje nativní kód a nelze v ní vynutit zásady zabezpečení přístupu kódu.
 
-Pokud chcete odebrat závislost na tuto knihovnu v kódu aplikace nepoužívá žádné funkce knihovny C Runtime, budete muset použít **/NODEFAULTLIB:msvcmrt.lib** – možnost linkeru a propojení s knihovnou ptrustm.lib nebo ptrustmd.lib. Tyto knihovny obsahovat objektové soubory pro inicializaci a rušení inicializace aplikace, používá inicializační kód třídy výjimek a spravovaného kódu pro zpracování výjimek. Propojení v jednom z těchto knihoven odebere závislost na msvcm90.dll.
+Pokud vaše aplikace nepoužívá žádné funkce knihovny C-Runtime a chcete odebrat závislost na této knihovně z vašeho kódu, budete muset použít **/NODEFAULTLIB:msvcmrt.lib** linker možnost a propojení s ptrustm.lib nebo ptrustmd.lib. Tyto knihovny obsahují soubory objektů pro inicializaci a zrušení inicializace aplikace, třídy výjimek používané inicializačním kódem a kód zpracování spravovaných výjimek. Propojení v jedné z těchto knihoven odebere všechny závislosti na souboru msvcm90.dll.
 
 > [!NOTE]
->  Pořadí sestavení rušení inicializace se mohou lišit pro aplikace, které používají ptrust knihovny. Pro běžné aplikace sestavení jsou obvykle byla uvolněna v obráceném pořadí, která jsou načtena, ale to není zaručeno. Pro aplikace s částečnou důvěryhodností sestavení jsou obvykle byla uvolněna ve stejném pořadí, že jsou načteny. To také, není zaručeno.
+> Pořadí neinicializace sestavení se může lišit pro aplikace, které používají knihovny ptrust. U běžných aplikací jsou sestavení obvykle uvolněna v opačném pořadí, ve které jsou načtena, ale to není zaručeno. U aplikací s částečnou důvěryhodností jsou sestavení obvykle uvolněna ve stejném pořadí, v jakém jsou načtena. To také není zaručeno.
 
-### <a name="to-create-a-partially-trusted-mixed-clr-application"></a>K vytvoření částečně důvěryhodné smíšený (/ clr) aplikace
+### <a name="to-create-a-partially-trusted-mixed-clr-application"></a>Vytvoření částečně důvěryhodné smíšené (/clr) aplikace
 
-1. Odebrat závislost na msvcm90.dll, je nutné zadat linkeru, aby vložit tuto knihovnu pomocí **/NODEFAULTLIB:msvcmrt.lib** – možnost linkeru. Informace o tom, jak to udělat pomocí vývojového prostředí sady Visual Studio nebo prostřednictvím kódu programu, najdete v článku [: / NODEFAULTLIB (ignorování knihoven)](../build/reference/nodefaultlib-ignore-libraries.md).
+1. Chcete-li odebrat závislost na souboru msvcm90.dll, je nutné zadat propojovacímu programu, aby tuto knihovnu nezahrnoval, pomocí možnosti propojovacího programu **/NODEFAULTLIB:msvcmrt.lib.** Informace o tom, jak to provést pomocí vývojového prostředí sady Visual Studio nebo programově, naleznete [v tématu /NODEFAULTLIB (Ignorovat knihovny).](../build/reference/nodefaultlib-ignore-libraries.md)
 
-1. Přidejte jeden z knihovny ptrustm vstupní závislostí linkeru. Pokud vytváříte aplikaci v režimu vydání, použijte ptrustm.lib. U režimu ladění použijte ptrustmd.lib. Informace o tom, jak to udělat pomocí vývojového prostředí sady Visual Studio nebo prostřednictvím kódu programu, najdete v článku [. Lib soubory jako vstup Linkeru](../build/reference/dot-lib-files-as-linker-input.md).
+1. Přidejte jednu z knihoven ptrustm do závislostí vstupu linkeru. Pokud vytváříte aplikaci v režimu vydání, použijte soubor ptrustm.lib. Pro režim ladění použijte ptrustmd.lib. Informace o tom, jak to provést pomocí vývojového prostředí sady Visual Studio nebo programově, naleznete v tématu [. Lib soubory jako linker vstup](../build/reference/dot-lib-files-as-linker-input.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Smíšená (nativní a spravovaná) sestavení](../dotnet/mixed-native-and-managed-assemblies.md)<br/>
-[Inicializace smíšených sestavení](../dotnet/initialization-of-mixed-assemblies.md)<br/>
+[Inicializace smíšených sestav](../dotnet/initialization-of-mixed-assemblies.md)<br/>
 [Podpora knihovny pro smíšená sestavení](../dotnet/library-support-for-mixed-assemblies.md)<br/>
-[/link (předání možností do linkeru)](../build/reference/link-pass-options-to-linker.md)
+[/link (předání možností linkeru)](../build/reference/link-pass-options-to-linker.md)

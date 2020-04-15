@@ -1,5 +1,5 @@
 ---
-title: CRichEditCntrItem – třída
+title: Třída CRichEditCntrItem
 ms.date: 11/04/2016
 f1_keywords:
 - CRichEditCntrItem
@@ -10,16 +10,16 @@ helpviewer_keywords:
 - CRichEditCntrItem [MFC], CRichEditCntrItem
 - CRichEditCntrItem [MFC], SyncToRichEditObject
 ms.assetid: 6c0b4efe-0fb8-4621-b5e1-fdcb8ec48c3b
-ms.openlocfilehash: 8e242504c8ab0f59f6dec0602d4a5352a2d84867
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: b8158105d09d5cfc7c25512567a98121b194a82a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69502727"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368291"
 ---
-# <a name="cricheditcntritem-class"></a>CRichEditCntrItem – třída
+# <a name="cricheditcntritem-class"></a>Třída CRichEditCntrItem
 
-Pomocí [CRichEditView –](../../mfc/reference/cricheditview-class.md) a [CRichEditDoc](../../mfc/reference/cricheditdoc-class.md)poskytuje funkce ovládacího prvku Rich Edit v rámci kontextu architektury zobrazení dokumentu knihovny MFC.
+S [CRichEditView](../../mfc/reference/cricheditview-class.md) a [CRichEditDoc](../../mfc/reference/cricheditdoc-class.md)poskytuje funkce bohaté upravit řízení v kontextu architektury zobrazení dokumentu knihovny MFC.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -31,31 +31,31 @@ class CRichEditCntrItem : public COleClientItem
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CRichEditCntrItem::CRichEditCntrItem](#cricheditcntritem)|`CRichEditCntrItem` Vytvoří objekt.|
+|[CRichEditCntrItem::CRichEditCntrItem](#cricheditcntritem)|Vytvoří `CRichEditCntrItem` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
 |[CRichEditCntrItem::SyncToRichEditObject](#synctoricheditobject)|Aktivuje položku jako jiný typ.|
 
 ## <a name="remarks"></a>Poznámky
 
-"Ovládací prvek" Rich Edit "je okno, ve kterém může uživatel text zadat a upravit. Textu lze přiřadit formátování znaků a odstavců a může obsahovat vložené objekty OLE. Ovládací prvky s bohatým úpravou poskytují programovací rozhraní pro formátování textu. Aplikace však musí implementovat všechny součásti uživatelského rozhraní, které jsou nezbytné k zpřístupnění operací formátování uživateli.
+"Rich edit control" je okno, ve kterém může uživatel zadávat a upravovat text. Text může být přiřazen k formátování znaků a odstavců a může obsahovat vložené objekty OLE. Ovládací prvky pro úpravy rich poskytují programovací rozhraní pro formátování textu. Aplikace však musí implementovat všechny součásti uživatelského rozhraní nezbytné k tomu, aby byly operace formátování dostupné uživateli.
 
-`CRichEditView`zachová text a formátuje charakteristiky textu. `CRichEditDoc`udržuje seznam položek klienta OLE, které jsou v zobrazení. `CRichEditCntrItem`poskytuje přístup na straně kontejneru k položce klienta OLE.
+`CRichEditView`zachová text a formátování charakteristiky textu. `CRichEditDoc`udržuje seznam položek klienta OLE, které jsou v zobrazení. `CRichEditCntrItem`poskytuje přístup na straně kontejneru k položce klienta OLE.
 
-Tento běžný ovládací prvek systému Windows (a proto [CRichEditCtrl](../../mfc/reference/cricheditctrl-class.md) a související třídy) je k dispozici pouze pro programy, které jsou spuštěny v systémech Windows 95/98 a Windows NT verze 3,51 a novější.
+Tento ovládací prvek Windows Common (a tedy [CRichEditCtrl](../../mfc/reference/cricheditctrl-class.md) a související třídy) je k dispozici pouze pro programy spuštěné v systémech Windows 95/98 a Windows NT verze 3.51 a novější.
 
-Příklad použití bohatě upravených položek kontejneru v aplikaci knihovny MFC naleznete v ukázkové aplikaci [WordPad](../../overview/visual-cpp-samples.md) .
+Příklad použití položek kontejneru s bohatou úpravou v aplikaci knihovny MFC naleznete v ukázkové aplikaci [wordpadu.](../../overview/visual-cpp-samples.md)
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[CObject](../../mfc/reference/cobject-class.md)
+[CObjekt](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[CCmdCíl](../../mfc/reference/ccmdtarget-class.md)
 
 [CDocItem](../../mfc/reference/cdocitem-class.md)
 
@@ -65,11 +65,11 @@ Příklad použití bohatě upravených položek kontejneru v aplikaci knihovny 
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxrich. h
+**Záhlaví:** afxrich.h
 
-##  <a name="cricheditcntritem"></a>CRichEditCntrItem::CRichEditCntrItem
+## <a name="cricheditcntritemcricheditcntritem"></a><a name="cricheditcntritem"></a>CRichEditCntrItem::CRichEditCntrItem
 
-Voláním této funkce vytvoříte `CRichEditCntrItem` objekt a přidáte ho do kontejneru dokumentů.
+Volání této funkce `CRichEditCntrItem` k vytvoření objektu a jeho přidání do dokumentu kontejneru.
 
 ```
 CRichEditCntrItem(
@@ -80,20 +80,20 @@ CRichEditCntrItem(
 ### <a name="parameters"></a>Parametry
 
 *preo*<br/>
-Ukazatel na přeobjektovou strukturu, která popisuje položku OLE. [](/windows/win32/api/richole/ns-richole-reobject) Nový `CRichEditCntrItem` objekt je vytvořen kolem této položky OLE. Pokud má *preo* hodnotu null, položka klienta je prázdná.
+Ukazatel na strukturu [REOBJECT,](/windows/win32/api/richole/ns-richole-reobject) která popisuje položku OLE. Nový `CRichEditCntrItem` objekt je vytvořen kolem této položky OLE. Pokud *preo* je NULL, položka klienta je prázdný.
 
-*pContainer*<br/>
-Ukazatel na kontejnerový dokument, který bude obsahovat tuto položku. Pokud má *pContainer může* hodnotu null, je nutné explicitně volat [COleDocument:: AddItem](../../mfc/reference/coledocument-class.md#additem) , aby bylo možné tuto položku klienta přidat do dokumentu.
+*pKontejner*<br/>
+Ukazatel na dokument kontejneru, který bude obsahovat tuto položku. Pokud *pContainer* je NULL, musíte explicitně volat [COleDocument::AddItem](../../mfc/reference/coledocument-class.md#additem) přidat tuto položku klienta do dokumentu.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce neprovádí žádnou inicializaci technologie OLE.
+Tato funkce neprovádí žádnou inicializaci OLE.
 
-Další informace naleznete v tématu struktura [přeobjektů](/windows/win32/api/richole/ns-richole-reobject) v Windows SDK.
+Další informace naleznete v části Struktura [REOBJECT](/windows/win32/api/richole/ns-richole-reobject) v sadě Windows SDK.
 
-##  <a name="synctoricheditobject"></a>  CRichEditCntrItem::SyncToRichEditObject
+## <a name="cricheditcntritemsynctoricheditobject"></a><a name="synctoricheditobject"></a>CRichEditCntrItem::SyncToRichEditObject
 
-Voláním této funkce synchronizujte aspekt zařízení [DVASPECT](/windows/win32/api/wtypes/ne-wtypes-dvaspect), `CRichEditCntrltem` který určuje *REO*.
+Volání této funkce pro synchronizaci aspekt zařízení, `CRichEditCntrltem` [DVASPECT](/windows/win32/api/wtypes/ne-wtypes-dvaspect), to, že zadaný *reo*.
 
 ```
 void SyncToRichEditObject(REOBJECT& reo);
@@ -101,17 +101,17 @@ void SyncToRichEditObject(REOBJECT& reo);
 
 ### <a name="parameters"></a>Parametry
 
-*reo*<br/>
-Odkaz na reobjektovou strukturu, která popisuje položku OLE. [](/windows/win32/api/richole/ns-richole-reobject)
+*Reo*<br/>
+Odkaz na strukturu [REOBJECT,](/windows/win32/api/richole/ns-richole-reobject) která popisuje položku OLE.
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace najdete v tématu [DVASPECT](/windows/win32/api/wtypes/ne-wtypes-dvaspect) v Windows SDK.
+Další informace naleznete v tématu [DVASPECT](/windows/win32/api/wtypes/ne-wtypes-dvaspect) v sadě Windows SDK.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Ukázka knihovny MFC v programu WORDPAD](../../overview/visual-cpp-samples.md)<br/>
+[MFC Ukázka WORDPAD](../../overview/visual-cpp-samples.md)<br/>
 [COleClientItem – třída](../../mfc/reference/coleclientitem-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
-[CRichEditDoc – třída](../../mfc/reference/cricheditdoc-class.md)<br/>
+[Třída CrichEditDoc](../../mfc/reference/cricheditdoc-class.md)<br/>
 [CRichEditView – třída](../../mfc/reference/cricheditview-class.md)

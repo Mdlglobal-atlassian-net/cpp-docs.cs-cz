@@ -1,5 +1,5 @@
 ---
-title: Creversaltransition – třída
+title: CReversalTransition – třída
 ms.date: 11/04/2016
 f1_keywords:
 - CReversalTransition
@@ -12,16 +12,16 @@ helpviewer_keywords:
 - CReversalTransition [MFC], Create
 - CReversalTransition [MFC], m_duration
 ms.assetid: e89516be-2d07-4885-95a8-fc278f46e3ad
-ms.openlocfilehash: 4bd60ca13ff4a162ddd674e271291a1a3f09a856
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 73d12fb6bbaefcfac1437248ebe11f3a5c24c45b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62372124"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368320"
 ---
-# <a name="creversaltransition-class"></a>Creversaltransition – třída
+# <a name="creversaltransition-class"></a>CReversalTransition – třída
 
-Zapouzdřuje opačný přechod.
+Zapouzdřuje obrácený přechod.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,41 +33,41 @@ class CReversalTransition : public CBaseTransition;
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CReversalTransition::CReversalTransition](#creversaltransition)|Vytvoří objekt opačný přechod a inicializuje vlastnost duration.|
+|[CReversalTransition::CReversalTransition](#creversaltransition)|Vytvoří objekt obráceného přechodu a inicializuje jeho trvání.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CReversalTransition::Create](#create)|Knihovna přechod k vytvoření objektu přechod zapouzdřený objekt modelu COM zavolá. (Přepíše [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|
+|[CReversalTransition::Vytvořit](#create)|Volá knihovnu přechodu k vytvoření zapouzdřený přechod ový objekt COM. (Přepíše [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CReversalTransition::m_duration](#m_duration)|Doba trvání přechodu.|
+|[CReversalTransitionTransition::m_duration](#m_duration)|Doba trvání přechodu.|
 
 ## <a name="remarks"></a>Poznámky
 
-Opačný přechod hladký změní směr průběhu dané doby trvání. Konečná hodnota bude stejná jako počáteční hodnota a finální rychlosti bude záporné hodnoty počáteční. Protože všechny přechody jsou automaticky vymazány, doporučuje se je přidělena pomocí operátoru nové. Zapouzdřený objekt IUIAnimationTransition COM je vytvořené CAnimationController::AnimateGroup, dokud je NULL. Změna členské proměnné po vytvoření tohoto objektu COM nemá žádný vliv.
+Obrácení přechodu hladce mění směr v průběhu dané doby trvání. Konečná hodnota bude stejná jako počáteční hodnota a konečná rychlost bude záporná počáteční rychlosti. Vzhledem k tomu, že všechny přechody jsou vymazány automaticky, doporučuje se jim přidělit pomocí operátoru new. Zapouzdřený objekt IUIAnimationTransition COM je vytvořen CAnimationController::AnimateGroup, do té doby je null. Změna členských proměnných po vytvoření tohoto objektu COM nemá žádný vliv.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObjekt](../../mfc/reference/cobject-class.md)
 
 [CBaseTransition](../../mfc/reference/cbasetransition-class.md)
 
-[CReversalTransition](../../mfc/reference/creversaltransition-class.md)
+[CReversalTransitionTransition](../../mfc/reference/creversaltransition-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
 **Záhlaví:** afxanimationcontroller.h
 
-##  <a name="create"></a>  CReversalTransition::Create
+## <a name="creversaltransitioncreate"></a><a name="create"></a>CReversalTransition::Vytvořit
 
-Knihovna přechod k vytvoření objektu přechod zapouzdřený objekt modelu COM zavolá.
+Volá knihovnu přechodu k vytvoření zapouzdřený přechod ový objekt COM.
 
 ```
 virtual BOOL Create(
@@ -77,16 +77,16 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>Parametry
 
-*pLibrary*<br/>
-Ukazatel na přechod knihovny, který je zodpovědný za vytváření standardní přechodů.
+*pKnihovna*<br/>
+Ukazatel na knihovnu přechodů, která je zodpovědná za vytváření standardních přechodů.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE, pokud úspěšně; vytvoření přechodu v opačném případě FALSE.
+PRAVDA, pokud je přechod úspěšně vytvořen; jinak FALSE.
 
-##  <a name="creversaltransition"></a>  CReversalTransition::CReversalTransition
+## <a name="creversaltransitioncreversaltransition"></a><a name="creversaltransition"></a>CReversalTransition::CReversalTransition
 
-Vytvoří objekt opačný přechod a inicializuje vlastnost duration.
+Vytvoří objekt obráceného přechodu a inicializuje jeho trvání.
 
 ```
 CReversalTransition(UI_ANIMATION_SECONDS duration);
@@ -97,7 +97,7 @@ CReversalTransition(UI_ANIMATION_SECONDS duration);
 *Doba trvání*<br/>
 Doba trvání přechodu.
 
-##  <a name="m_duration"></a>  CReversalTransition::m_duration
+## <a name="creversaltransitionm_duration"></a><a name="m_duration"></a>CReversalTransitionTransition::m_duration
 
 Doba trvání přechodu.
 
@@ -105,6 +105,6 @@ Doba trvání přechodu.
 UI_ANIMATION_SECONDS m_duration;
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Třídy](../../mfc/reference/mfc-classes.md)

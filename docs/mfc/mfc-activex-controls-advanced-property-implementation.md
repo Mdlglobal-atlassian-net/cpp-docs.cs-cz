@@ -6,74 +6,74 @@ helpviewer_keywords:
 - properties [MFC], ActiveX controls
 - MFC ActiveX controls [MFC], properties
 ms.assetid: ec2e6759-5a8e-41d8-a275-99af8ff6f32e
-ms.openlocfilehash: 438c95c56961cc587b64e494678ade191f18ab6b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d4f1265e6540e9f84bdb680e7948a4e308d31bb0
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392801"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364654"
 ---
 # <a name="mfc-activex-controls-advanced-property-implementation"></a>MFC – ovládací prvky ActiveX: Implementace rozšířených vlastností
 
-Tento článek popisuje témat souvisejících s implementací rozšířené vlastnosti v ovládacím prvku ActiveX.
+Tento článek popisuje témata související s implementací rozšířených vlastností v ovládacím prvku ActiveX.
 
 >[!IMPORTANT]
-> ActiveX je starší technologie, která by neměla být používána při novém vývoji. Další informace o moderních technologií, které nahrazují ActiveX naleznete v tématu [ovládací prvky ActiveX](activex-controls.md).
+> ActiveX je starší technologie, která by neměla být použita pro nový vývoj. Další informace o moderních technologiích, které nahrazují ovládací prvky ActiveX, naleznete [v tématu ActiveX Controls](activex-controls.md).
 
-- [Vlastnosti jen pro čtení a jen pro zápis](#_core_read2donly_and_write2donly_properties)
+- [Vlastnosti jen pro čtení a zápis](#_core_read2donly_and_write2donly_properties)
 
-- [Vrácení chybových kódů z vlastnosti](#_core_returning_error_codes_from_a_property)
+- [Vrácení kódů chyb z vlastnosti](#_core_returning_error_codes_from_a_property)
 
-##  <a name="_core_read2donly_and_write2donly_properties"></a> Vlastnosti jen pro čtení a jen pro zápis
+## <a name="read-only-and-write-only-properties"></a><a name="_core_read2donly_and_write2donly_properties"></a>Vlastnosti jen pro čtení a zápis
 
-Průvodce přidáním vlastnosti způsobem rychle a snadno implementovat jen pro čtení nebo jen pro zápis vlastnosti ovládacího prvku.
+Průvodce přidáním vlastností poskytuje rychlou a snadnou metodu implementace vlastností ovládacího prvku jen pro čtení nebo zápis.
 
 #### <a name="to-implement-a-read-only-or-write-only-property"></a>Implementace vlastnosti jen pro čtení nebo jen pro zápis
 
-1. Načtení projektu ovládacího prvku.
+1. Načtěte projekt ovládacího prvku.
 
 1. V zobrazení tříd rozbalte uzel knihovny ovládacího prvku.
 
-1. Klikněte pravým tlačítkem na uzel rozhraní pro ovládací prvek (druhý uzel uzlu knihovny) otevřete místní nabídku.
+1. Klepnutím pravým tlačítkem myši na uzel rozhraní ovládacího prvku (druhý uzel uzlu knihovny) otevřete místní nabídku.
 
-1. V místní nabídce klikněte na tlačítko **přidat** a potom klikněte na tlačítko **přidat vlastnost**.
+1. V místní nabídce klikněte na **Přidat** a potom na **Přidat vlastnost**.
 
-   Tím se otevře [Průvodce přidáním vlastnosti](../ide/names-add-property-wizard.md).
+   Otevře se [Průvodce přidáním vlastností](../ide/names-add-property-wizard.md).
 
-1. V **název vlastnosti** zadejte název vašeho vlastnosti.
+1. Do pole **Název vlastnosti** zadejte název vaší vlastnosti.
 
-1. Pro **typ implementace**, klikněte na tlačítko **metody Get/Set**.
+1. V **souboru Typ implementace**klepněte na tlačítko Získat nebo nastavit **metody**.
 
-1. V **typ vlastnosti** vyberte správný typ pro vlastnost.
+1. V poli **Typ vlastnosti** vyberte správný typ vlastnosti.
 
-1. Pokud chcete vlastnost jen pro čtení, vymažte název funkce Set. Pokud chcete vlastnost jen pro zápis, vymažte název funkce Get.
+1. Pokud chcete vlastnost jen pro čtení, zrušte zaškrtnutí názvu funkce Set. Pokud chcete vlastnost pouze pro zápis, zrušte název funkce Get.
 
-9. Klikněte na tlačítko **Dokončit**.
+1. Klikněte na **Finish** (Dokončit).
 
-Když toto provedete, Průvodce přidáním vlastnosti vloží funkci `SetNotSupported` nebo `GetNotSupported` v položce mapy odbavení místo normální nastavit nebo získat funkce.
+Když toto provedete, Průvodce přidáním `SetNotSupported` `GetNotSupported` vlastností vloží funkci nebo do položky mapy odeslání namísto normální funkce Set nebo Get.
 
-Pokud chcete změnit existující vlastnosti jen pro čtení nebo jen pro zápis, můžete ručně upravit mapa odbavení a odeberte nepotřebné funkci Set nebo Get ze třídy control.
+Pokud chcete změnit existující vlastnost, která má být jen pro čtení nebo jen pro zápis, můžete upravit mapu odeslání ručně a odebrat nepotřebnou funkci Set nebo Get z třídy ovládacího prvku.
 
-Pokud chcete vlastnost, která má být podmíněně jen pro čtení nebo jen pro zápis (například pouze v případě, že ovládací prvek funguje v určitém režimu), můžete poskytnout funkci Set nebo Get jako za normálních okolností a volat `SetNotSupported` nebo `GetNotSupported` funkce, kde je to vhodné. Příklad:
+Pokud chcete, aby vlastnost byla podmíněně jen pro čtení nebo jen pro zápis (například pouze v případě, že ovládací prvek pracuje `SetNotSupported` `GetNotSupported` v určitém režimu), můžete zadat Set nebo Get funkce, jako normální a volání nebo funkce, kde je to vhodné. Příklad:
 
 [!code-cpp[NVC_MFC_AxUI#29](../mfc/codesnippet/cpp/mfc-activex-controls-advanced-property-implementation_1.cpp)]
 
-Tento vzorový kód volá `SetNotSupported` Pokud `m_bReadOnlyMode` je datový člen **TRUE**. Pokud **FALSE**, pak je nastavena na novou hodnotu.
+Tento ukázkový `SetNotSupported` kód `m_bReadOnlyMode` volá, pokud je datový člen **TRUE**. Pokud **false**, pak vlastnost je nastavena na novou hodnotu.
 
-##  <a name="_core_returning_error_codes_from_a_property"></a> Vrácení chybových kódů z vlastnosti
+## <a name="returning-error-codes-from-a-property"></a><a name="_core_returning_error_codes_from_a_property"></a>Vrácení kódů chyb z vlastnosti
 
-Chcete-li označit, že došlo k chybě při pokusu o získání nebo nastavení vlastnosti, použijte `COleControl::ThrowError` funkce, která přebírá SCODE (stavový kód) jako parametr. Můžete použít předdefinované SCODE nebo definovat svůj vlastní. Seznam předdefinovaných SCODEs a pokyny k definování vlastní SCODEs najdete v tématu [zpracování chyb v svůj ovládací prvek ActiveX](../mfc/mfc-activex-controls-advanced-topics.md) v ovládacích prvcích ActiveX článku: Pokročilá témata.
+Chcete-li označit, že došlo k chybě při pokusu `COleControl::ThrowError` o získání nebo nastavení vlastnosti, použijte funkci, která bere SCODE (stavový kód) jako parametr. Můžete použít předdefinovaný SCODE nebo definovat jeden z vašich vlastních. Seznam předdefinovaných sconetů a pokyny pro definování vlastních scones naleznete [v tématu Zpracování chyb v ovládacím prvku ActiveX](../mfc/mfc-activex-controls-advanced-topics.md) v článku Ovládací prvky ActiveX: Rozšířená témata.
 
-Neexistuje pomocné funkce, nejběžnější předdefinované SCODEs, jako například [COleControl::SetNotSupported](../mfc/reference/colecontrol-class.md#setnotsupported), [COleControl::GetNotSupported](../mfc/reference/colecontrol-class.md#getnotsupported), a [COleControl::SetNotPermitted](../mfc/reference/colecontrol-class.md#setnotpermitted).
+Pomocné funkce existují pro nejběžnější předdefinované moduly SCONE, například [COleControl::SetNotSupported](../mfc/reference/colecontrol-class.md#setnotsupported), [COleControl::GetNotSupported](../mfc/reference/colecontrol-class.md#getnotsupported)a [COleControl::SetNotPovoleno](../mfc/reference/colecontrol-class.md#setnotpermitted).
 
 > [!NOTE]
->  `ThrowError` je určen pro použití pouze jako způsob vrátit chybu z v rámci vlastnosti Get nebo Set funkci nebo metodu služby automation. Jedná se o jediný případů, kdy se obslužná rutina příslušné výjimky budou k dispozici v zásobníku.
+> `ThrowError`je určen pouze jako prostředek vrácení chyby z funkce Get nebo Set vlastnosti nebo metody automatizace. Toto jsou pouze časy, které příslušné obslužné rutiny výjimky bude k dispozici v zásobníku.
 
-Další informace o vytváření sestav výjimky v jiných oblastech kód, naleznete v tématu [COleControl::FireError](../mfc/reference/colecontrol-class.md#fireerror) a v části [zpracování chyb v svůj ovládací prvek ActiveX](../mfc/mfc-activex-controls-advanced-topics.md) v následujícím článku – ovládací prvky ActiveX: Pokročilá témata.
+Další informace o vykazování výjimek v jiných oblastech kódu naleznete v [tématu COleControl::FireError](../mfc/reference/colecontrol-class.md#fireerror) a v části [Zpracování chyb v ovládacím prvku ActiveX v](../mfc/mfc-activex-controls-advanced-topics.md) článku Ovládací prvky ActiveX: Rozšířená témata.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [MFC – ovládací prvky ActiveX](../mfc/mfc-activex-controls.md)<br/>
 [MFC – ovládací prvky ActiveX: Vlastnosti](../mfc/mfc-activex-controls-properties.md)<br/>
 [MFC – ovládací prvky ActiveX: Metody](../mfc/mfc-activex-controls-methods.md)<br/>
-[COleControl – třída](../mfc/reference/colecontrol-class.md)
+[Třída COleControl](../mfc/reference/colecontrol-class.md)

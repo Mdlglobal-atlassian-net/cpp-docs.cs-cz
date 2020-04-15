@@ -6,81 +6,81 @@ helpviewer_keywords:
 - notifications, support in providers
 - OLE DB providers, creating
 ms.assetid: bdfd5c9f-1c6f-4098-822c-dd650e70ab82
-ms.openlocfilehash: 2811cd56bdc87282b9d4395a9a79ba9b333dadee
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 720ceba397d17642402de4d44cbb4481852fa153
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80211390"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81365561"
 ---
 # <a name="creating-an-updatable-provider"></a>Vytvoření aktualizovatelného zprostředkovatele
 
-Vizuál C++ podporuje aktualizovatelné zprostředkovatele nebo poskytovatele, kteří můžou aktualizovat (zapisovat do) úložiště dat. Toto téma popisuje, jak vytvořit aktualizovatelné zprostředkovatele pomocí šablon OLE DB.
+Visual C++ podporuje aktualizovatelné zprostředkovatele nebo zprostředkovatele, kteří mohou aktualizovat (zapisovat) úložiště dat. Toto téma popisuje, jak vytvořit aktualizovatelné zprostředkovatele pomocí šablon TECHNOLOGIE OLE DB.
 
-V tomto tématu se předpokládá, že začínáte s funkčním zprostředkovatelem. Existují dva kroky pro vytvoření aktualizovatelného zprostředkovatele. Nejprve musíte určit, jak bude poskytovatel provádět změny v úložišti dat; konkrétně bez ohledu na to, jestli se změny mají provést hned nebo odložit, dokud se nevydá příkaz k aktualizaci. Oddíl "[vytváření aktualizovatelných zprostředkovatelů](#vchowmakingprovidersupdatable)" popisuje změny a nastavení, které je třeba provést v kódu poskytovatele.
+Toto téma předpokládá, že začínáte s funkčnízprostředkovatele. Existují dva kroky k vytvoření aktualizovatelného zprostředkovatele. Musíte se nejprve rozhodnout, jak bude zprostředkovatel provádět změny v úložišti dat; konkrétně zda změny mají být provedeny okamžitě nebo odloženo, dokud není vydán příkaz aktualizace. Část["Vytváření zprostředkovatelů aktualizovatelných"](#vchowmakingprovidersupdatable)popisuje změny a nastavení, které je třeba provést v kódu zprostředkovatele.
 
-V dalším kroku se musíte ujistit, že váš poskytovatel obsahuje všechny funkce pro podporu cokoli, co si ho příjemce může vyžádat. Pokud chce příjemce aktualizovat úložiště dat, poskytovatel musí obsahovat kód, který uchovává data v úložišti dat. Například můžete použít knihovnu run-time jazyka C nebo MFC k provedení takových operací na zdroji dat. Oddíl "[zápis do zdroje dat](#vchowwritingtothedatasource)" popisuje, jak zapisovat do zdroje dat, pracovat s hodnotami null a výchozích hodnot a nastavit příznaky sloupců.
+Dále je nutné se ujistit, že váš poskytovatel obsahuje všechny funkce pro podporu všeho, co spotřebitel může požadovat. Pokud chce příjemce aktualizovat úložiště dat, zprostředkovatel musí obsahovat kód, který uchovává data do úložiště dat. Můžete například použít c run-time library nebo mfc k provedení těchto operací na zdroj dat. Část[Zápis do zdroje dat](#vchowwritingtothedatasource)popisuje, jak zapisovat do zdroje dat, řešit hodnoty NULL a výchozí hodnoty a nastavit příznaky sloupců.
 
 > [!NOTE]
-> [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV) je příkladem aktualizovatelného zprostředkovatele. UpdatePV je stejná jako MyProv, ale s aktualizovatelnou podporou.
+> [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV) je příkladem aktualizovatelného zprostředkovatele. UpdatePV je stejný jako MyProv, ale s aktualizovatelnou podporou.
 
-##  <a name="making-providers-updatable"></a><a name="vchowmakingprovidersupdatable"></a>Vytváření aktualizovatelných zprostředkovatelů
+## <a name="making-providers-updatable"></a><a name="vchowmakingprovidersupdatable"></a>Vytváření aktualizovatelných zprostředkovatelů
 
-Klíč k provedení aktualizovatelného zprostředkovatele je porozumění operacím, které chcete, aby poskytovatel prováděl v úložišti dat a jak chcete, aby poskytovatel prováděl tyto operace. Konkrétně závažná chyba je, jestli se aktualizace úložiště dat mají dělat hned nebo odložit (v dávce) až do vydání příkazu Update.
+Klíčem k tomu, aby zprostředkovatel aktualizovatelný je pochopení, jaké operace chcete, aby váš poskytovatel provádět v úložišti dat a jak chcete, aby zprostředkovatel provádět tyto operace. Konkrétně hlavní problém je, zda aktualizace úložiště dat mají být provedeny okamžitě nebo odložené (dávkové) až do vydání příkazu aktualizace.
 
-Musíte se nejprve rozhodnout, zda má být děděna z `IRowsetChangeImpl` nebo `IRowsetUpdateImpl` ve vaší třídě sady řádků. V závislosti na tom, které z těchto možností implementujete, budou ovlivněny funkce tří metod: `SetData`, `InsertRows`a `DeleteRows`.
+Musíte se nejprve rozhodnout, zda dědit z `IRowsetChangeImpl` nebo `IRowsetUpdateImpl` ve třídě řádků. V závislosti na tom, kterou z nich se rozhodnete implementovat, bude ovlivněna funkce tří metod: `SetData`, `InsertRows`, a `DeleteRows`.
 
 - Pokud dědíte z [IRowsetChangeImpl](../../data/oledb/irowsetchangeimpl-class.md), volání těchto tří metod okamžitě změní úložiště dat.
 
-- Pokud převezmete z [IRowsetUpdateImpl](../../data/oledb/irowsetupdateimpl-class.md), metody odloží změny do úložiště dat, dokud nebudete volat `Update`, `GetOriginalData`nebo `Undo`. Pokud aktualizace zahrnuje několik změn, provedou se v dávkovém režimu (Všimněte si, že dávkové změny můžou znamenat značnou režii v paměti).
+- Pokud dědíte z [IRowsetUpdateImpl](../../data/oledb/irowsetupdateimpl-class.md), metody odložit změny `Update` `GetOriginalData`úložiště `Undo`dat, dokud volat , , nebo . Pokud aktualizace zahrnuje několik změn, jsou prováděny v dávkovém režimu (všimněte si, že dávkové změny mohou přidat značné nároky na paměť).
 
-Všimněte si, že `IRowsetUpdateImpl` jsou odvozeny z `IRowsetChangeImpl`. Proto `IRowsetUpdateImpl` poskytuje možnost změny a funkce dávky.
+Všimněte `IRowsetUpdateImpl` si, `IRowsetChangeImpl`že je odvozen od . To `IRowsetUpdateImpl` znamená, že vám umožňuje změnit schopnost plus dávkové schopnosti.
 
-### <a name="to-support-updatability-in-your-provider"></a>Podpora možností aktualizace ve zprostředkovateli
+### <a name="to-support-updatability-in-your-provider"></a>Podpora aktualizovatelnosti ve vašem poskytovateli
 
-1. V třídě sady řádků dědí z `IRowsetChangeImpl` nebo `IRowsetUpdateImpl`. Tyto třídy poskytují vhodná rozhraní pro změnu úložiště dat:
+1. Ve třídě sady řádků `IRowsetChangeImpl` dědí z nebo `IRowsetUpdateImpl`. Tyto třídy poskytují vhodná rozhraní pro změnu úložiště dat:
 
    **Přidání IRowsetChange**
 
-   Pomocí tohoto formuláře přidejte `IRowsetChangeImpl` do svého řetězce dědičnosti:
+   Přidejte `IRowsetChangeImpl` do řetězce dědičnosti pomocí tohoto formuláře:
 
     ```cpp
     IRowsetChangeImpl< rowset-name, storage-name >
     ```
 
-   Přidejte také `COM_INTERFACE_ENTRY(IRowsetChange)` do oddílu `BEGIN_COM_MAP` ve vaší třídě sady řádků.
+   Přidejte `COM_INTERFACE_ENTRY(IRowsetChange)` také `BEGIN_COM_MAP` do oddílu ve třídě sady řádků.
 
-   **Přidání IRowsetUpdate**
+   **Přidání aktualizace IRowsetUpdate**
 
-   Pomocí tohoto formuláře přidejte `IRowsetUpdate` do svého řetězce dědičnosti:
+   Přidejte `IRowsetUpdate` do řetězce dědičnosti pomocí tohoto formuláře:
 
     ```cpp
     IRowsetUpdateImpl< rowset-name, storage>
     ```
 
    > [!NOTE]
-   > `IRowsetChangeImpl` řádek byste měli odebrat z řetězce dědičnosti. Tato výjimka z výše zmíněné směrnice musí zahrnovat kód pro `IRowsetChangeImpl`.
+   > Měli byste `IRowsetChangeImpl` odebrat řádek z řetězce dědičnosti. Tato jedna výjimka z výše uvedené směrnice `IRowsetChangeImpl`musí obsahovat kód pro .
 
-1. Přidejte následující do mapy COM (`BEGIN_COM_MAP ... END_COM_MAP`):
+1. Do mapy COM přidejte`BEGIN_COM_MAP ... END_COM_MAP`následující položky ( ):
 
-   |  Pokud implementujete   |           Přidat k mapě modelu COM             |
+   |  Pokud implementujete   |           Přidat do mapy COM             |
    |---------------------|--------------------------------------|
    | `IRowsetChangeImpl` | `COM_INTERFACE_ENTRY(IRowsetChange)` |
    | `IRowsetUpdateImpl` | `COM_INTERFACE_ENTRY(IRowsetUpdate)` |
 
-   | Pokud implementujete | Přidat k mapě sady vlastností |
+   | Pokud implementujete | Přidat do mapy sady vlastností |
    |----------------------|-----------------------------|
    | `IRowsetChangeImpl` | `PROPERTY_INFO_ENTRY_VALUE(IRowsetChange, VARIANT_FALSE)` |
    | `IRowsetUpdateImpl` | `PROPERTY_INFO_ENTRY_VALUE(IRowsetUpdate, VARIANT_FALSE)` |
 
-1. V příkazu přidejte následující do mapy sady vlastností (`BEGIN_PROPSET_MAP ... END_PROPSET_MAP`):
+1. Do příkazu přidejte do mapy sady`BEGIN_PROPSET_MAP ... END_PROPSET_MAP`vlastností následující položky ( ):
 
-   |  Pokud implementujete   |                                             Přidat k mapě sady vlastností                                              |
+   |  Pokud implementujete   |                                             Přidat do mapy sady vlastností                                              |
    |---------------------|------------------------------------------------------------------------------------------------------------------|
    | `IRowsetChangeImpl` |                            `PROPERTY_INFO_ENTRY_VALUE(IRowsetChange, VARIANT_FALSE)`                             |
    | `IRowsetUpdateImpl` | `PROPERTY_INFO_ENTRY_VALUE(IRowsetChange, VARIANT_FALSE)PROPERTY_INFO_ENTRY_VALUE(IRowsetUpdate, VARIANT_FALSE)` |
 
-1. V mapě sady vlastností byste měli také zahrnout všechna následující nastavení, jak jsou uvedena níže:
+1. V mapě sady vlastností byste měli také zahrnout všechna následující nastavení, která jsou uvedena níže:
 
     ```cpp
     PROPERTY_INFO_ENTRY_VALUE(UPDATABILITY, DBPROPVAL_UP_CHANGE |
@@ -100,83 +100,83 @@ Všimněte si, že `IRowsetUpdateImpl` jsou odvozeny z `IRowsetChangeImpl`. Prot
       DBPROPFLAGS_READ, VARIANT_FALSE, 0)
     ```
 
-   Hodnoty používané v těchto voláních makra můžete najít tak, že v Atldb. h vyhledáte ID a hodnoty vlastností (Pokud se Atldb. h liší od online dokumentace, Atldb. h nahrazuje dokumentaci).
+   Hodnoty použité v těchto voláních maker najdete v Souboru Atldb.h pro ID vlastností a hodnoty (pokud se Atldb.h liší od online dokumentace, atldb.h nahrazuje dokumentaci).
 
    > [!NOTE]
-   > Mnohé z nastavení `VARIANT_FALSE` a `VARIANT_TRUE` jsou vyžadovány šablonami OLE DB; Specifikace OLE DB říká, že může být pro čtení a zápis, ale šablony OLE DB můžou podporovat jenom jednu hodnotu.
+   > Mnoho nastavení `VARIANT_FALSE` `VARIANT_TRUE` a jsou vyžadovány šablony TECHNOLOGIE OLE DB; Specifikace TECHNOLOGIE OLE DB říká, že mohou číst a zapisovat, ale šablony TECHNOLOGIE OLE DB mohou podporovat pouze jednu hodnotu.
 
    **Pokud implementujete IRowsetChangeImpl**
 
-   Pokud implementujete `IRowsetChangeImpl`, musíte na svém poskytovateli nastavit následující vlastnosti. Tyto vlastnosti se primárně používají k vyžádání rozhraní prostřednictvím `ICommandProperties::SetProperties`.
+   Pokud implementujete `IRowsetChangeImpl`, je nutné nastavit následující vlastnosti na zprostředkovatele. Tyto vlastnosti se používají především `ICommandProperties::SetProperties`k vyžádání rozhraní prostřednictvím .
 
-   - `DBPROP_IRowsetChange`: Toto nastavení automaticky nastaví `DBPROP_IRowsetChange`.
+   - `DBPROP_IRowsetChange`: Nastavení tohoto `DBPROP_IRowsetChange`nastavení se automaticky nastaví .
 
-   - `DBPROP_UPDATABILITY`: Bitová maska, která určuje podporované metody pro `IRowsetChange`: `SetData`, `DeleteRows`nebo `InsertRow`.
+   - `DBPROP_UPDATABILITY`: Bitová maska určující `IRowsetChange`podporované `SetData` `DeleteRows`metody `InsertRow`na : , , nebo .
 
-   - `DBPROP_CHANGEINSERTEDROWS`: příjemce může pro nově vložené řádky volat `IRowsetChange::DeleteRows` nebo `SetData`.
+   - `DBPROP_CHANGEINSERTEDROWS`: Spotřebitel `IRowsetChange::DeleteRows` může `SetData` volat nebo pro nově vložené řádky.
 
-   - `DBPROP_IMMOBILEROWS`: sada řádků nebude přeuspořádat vložené nebo aktualizované řádky.
+   - `DBPROP_IMMOBILEROWS`: Sada řádků nezmění pořadí vložených nebo aktualizovaných řádků.
 
    **Pokud implementujete IRowsetUpdateImpl**
 
-   Pokud implementujete `IRowsetUpdateImpl`, musíte kromě nastavení všech vlastností `IRowsetChangeImpl` uvedených v tomto poskytovateli nastavit následující vlastnosti:
+   Pokud provádíte `IRowsetUpdateImpl`, musíte nastavit následující vlastnosti na zprostředkovatele, `IRowsetChangeImpl` kromě nastavení všech vlastností pro dříve uvedené:
 
    - `DBPROP_IRowsetUpdate`.
 
-   - `DBPROP_OWNINSERT`: musí být READ_ONLY a VARIANT_TRUE.
+   - `DBPROP_OWNINSERT`: Musí být READ_ONLY a VARIANT_TRUE.
 
-   - `DBPROP_OWNUPDATEDELETE`: musí být READ_ONLY a VARIANT_TRUE.
+   - `DBPROP_OWNUPDATEDELETE`: Musí být READ_ONLY a VARIANT_TRUE.
 
-   - `DBPROP_OTHERINSERT`: musí být READ_ONLY a VARIANT_TRUE.
+   - `DBPROP_OTHERINSERT`: Musí být READ_ONLY a VARIANT_TRUE.
 
-   - `DBPROP_OTHERUPDATEDELETE`: musí být READ_ONLY a VARIANT_TRUE.
+   - `DBPROP_OTHERUPDATEDELETE`: Musí být READ_ONLY a VARIANT_TRUE.
 
-   - `DBPROP_REMOVEDELETED`: musí být READ_ONLY a VARIANT_TRUE.
+   - `DBPROP_REMOVEDELETED`: Musí být READ_ONLY a VARIANT_TRUE.
 
    - `DBPROP_MAXPENDINGROWS`.
 
    > [!NOTE]
-   > Pokud budete podporovat oznámení, můžete také mít i některé další vlastnosti. seznam najdete v části `IRowsetNotifyCP`.
+   > Pokud podporujete oznámení, můžete mít také některé další vlastnosti; naleznete v `IRowsetNotifyCP` části pro tento seznam.
 
-##  <a name="writing-to-the-data-source"></a><a name="vchowwritingtothedatasource"></a>Zápis do zdroje dat
+## <a name="writing-to-the-data-source"></a><a name="vchowwritingtothedatasource"></a>Zápis do zdroje dat
 
-Chcete-li číst ze zdroje dat, zavolejte funkci `Execute`. Chcete-li zapisovat do zdroje dat, zavolejte funkci `FlushData`. (Obecně platí, že vyprázdní znamená, že se změny provedené v tabulce nebo indexu uloží na disk.)
+Chcete-li číst ze zdroje `Execute` dat, volání funkce. Chcete-li zapisovat `FlushData` do zdroje dat, zavolejte funkci. (V obecném smyslu vyprázdnění znamená uložit změny provedené v tabulce nebo indexu na disk.)
 
 ```cpp
 FlushData(HROW, HACCESSOR);
 ```
 
-Argumenty popisovač řádku (HROW) a popisovač přistupujícího objektu (HACCESSOR) umožňují zadat oblast, která se má zapsat. Obvykle napíšete jedno datové pole najednou.
+Popisovač řádku (HROW) a popisovač přistupujícího zařízení (HACCESSOR) argumenty umožňují určit oblast zápisu. Obvykle zapisujete jedno datové pole najednou.
 
-Metoda `FlushData` zapisuje data ve formátu, ve kterém byla původně uložena. Pokud tuto funkci nepřepisujete, poskytovatel bude správně fungovat, ale změny nebudou vyprázdněny do úložiště dat.
+Metoda `FlushData` zapisuje data ve formátu, ve kterém byla původně uložena. Pokud tuto funkci nepřepíšete, bude poskytovatel fungovat správně, ale změny nebudou vyprázdněny do úložiště dat.
 
-### <a name="when-to-flush"></a>Kdy se má vyprázdnit
+### <a name="when-to-flush"></a>Kdy vyprázdnit
 
-Šablony poskytovatele volají FlushData vždy, když je nutné zapsat data do úložiště dat; k tomu obvykle dochází (ale ne vždy) v důsledku volání následujících funkcí:
+Šablony zprostředkovatele volání FlushData vždy, když data je třeba zapsat do úložiště dat; k tomu obvykle (ale ne vždy) dochází v důsledku volání následujících funkcí:
 
 - `IRowsetChange::DeleteRows`
 
 - `IRowsetChange::SetData`
 
-- `IRowsetChange::InsertRows` (pokud existují nová data, která se mají vložit do řádku)
+- `IRowsetChange::InsertRows`(pokud jsou do řádku vložena nová data)
 
 - `IRowsetUpdate::Update`
 
 ### <a name="how-it-works"></a>Jak to funguje
 
-Příjemce provede volání, které vyžaduje vyprázdnění (například aktualizace) a toto volání je předáno poskytovateli, který vždy provede následující:
+Příjemce provede volání, které vyžaduje flush (například Update) a toto volání je předán zprostředkovateli, který vždy provede následující:
 
-- Volá `SetDBStatus` vždy, když máte vázanou hodnotu stavu.
+- Volání `SetDBStatus` vždy, když máte stav hodnotu vázána.
 
-- Kontroluje příznaky sloupce.
+- Zkontroluje příznaky sloupce.
 
-- Volá `IsUpdateAllowed`.
+- Volání `IsUpdateAllowed`.
 
-Tyto tři kroky vám pomůžou zajistit zabezpečení. Poté zprostředkovatel zavolá `FlushData`.
+Tyto tři kroky pomáhají zajistit zabezpečení. Pak poskytovatel `FlushData`volá .
 
 ### <a name="how-to-implement-flushdata"></a>Jak implementovat FlushData
 
-K implementaci `FlushData`musíte vzít v úvahu několik problémů:
+Chcete-li implementovat `FlushData`, je třeba vzít v úvahu několik otázek:
 
 Ujistěte se, že úložiště dat může zpracovávat změny.
 
@@ -184,9 +184,9 @@ Zpracování hodnot NULL.
 
 ### <a name="handling-default-values"></a>Zpracování výchozích hodnot.
 
-Chcete-li implementovat vlastní metodu `FlushData`, je nutné provést následující kroky:
+Chcete-li `FlushData` implementovat vlastní metodu, musíte:
 
-- Přejít do vaší třídy sady řádků.
+- Přejděte do třídy sady řádků.
 
 - Do třídy sady řádků vložte deklaraci:
 
@@ -197,21 +197,21 @@ Chcete-li implementovat vlastní metodu `FlushData`, je nutné provést následu
    }
    ```
 
-- Poskytněte implementaci `FlushData`.
+- Poskytnout implementaci `FlushData`.
 
-Dobrá implementace `FlushData` ukládá pouze řádky a sloupce, které jsou skutečně aktualizovány. Pomocí parametrů HROW a HACCESSOR lze určit aktuální řádek a sloupec, který je uložen pro optimalizaci.
+Dobrá implementace `FlushData` ukládá pouze řádky a sloupce, které jsou skutečně aktualizovány. Parametry HROW a HACCESSOR můžete použít k určení aktuálního řádku a sloupce, které jsou uloženy pro optimalizaci.
 
-Největší výzvou často funguje s vaším vlastním nativním úložištěm dat. Pokud je to možné, zkuste:
+Obvykle je největší výzvou práce s vlastním nativním úložištěm dat. Pokud je to možné, zkuste:
 
-- Ponechte metodu zapisování do úložiště dat co nejjednodušší.
+- Způsob zápisu do úložiště dat udržujte co nejjednodušší.
 
-- Zpracování hodnot NULL (volitelné, ale doporučené).
+- Zpracování hodnot NULL (volitelné, ale doporučeno).
 
-- Zpracuje výchozí hodnoty (volitelné, ale doporučené).
+- Zpracování výchozích hodnot (volitelné, ale doporučeno).
 
-Nejlepší je, aby v úložišti dat byly skutečné zadané hodnoty pro hodnoty NULL a výchozí hodnoty. Je to nejlepší, pokud tato data můžete odvodit. V takovém případě doporučujeme, abyste nepovolili hodnoty NULL a výchozí hodnoty.
+Nejlepší věc, kterou musíte udělat, je mít skutečné zadané hodnoty v úložišti dat pro hodnoty NULL a výchozí hodnoty. Nejlepší je, pokud můžete extrapolovat tato data. Pokud ne, doporučujeme nepovolit hodnoty NULL a výchozí hodnoty.
 
-Následující příklad ukazuje, jak je implementována `FlushData` ve třídě `RUpdateRowset` v ukázce `UpdatePV` (viz Rowset. h v ukázkovém kódu):
+Následující příklad ukazuje, jak `FlushData` `RUpdateRowset` je implementována ve třídě v `UpdatePV` ukázce (viz Rowset.h v ukázkovém kódu):
 
 ```cpp
 ///////////////////////////////////////////////////////////////////////////
@@ -295,25 +295,25 @@ HRESULT FlushData(HROW, HACCESSOR)
 
 ### <a name="handling-changes"></a>Zpracování změn
 
-Aby mohl váš poskytovatel zpracovávat změny, musíte nejdřív zkontrolovat, že úložiště dat (například textový soubor nebo videosoubor) má zařízení, které vám umožní provádět na něm změny. Pokud tomu tak není, měli byste vytvořit tento kód odděleně od projektu poskytovatele.
+Aby poskytovatel mohl zpracovávat změny, musíte nejprve zajistit, aby úložiště dat (například textový soubor nebo videosoubor) mělo k dispozici zařízení, která umožňují provádět změny. Pokud tomu tak není, měli byste vytvořit tento kód odděleně od projektu zprostředkovatele.
 
-### <a name="handling-null-data"></a>Zpracování dat s hodnotou NULL
+### <a name="handling-null-data"></a>Zpracování dat NULL
 
-Je možné, že koncový uživatel bude odesílat data NULL. Když zapisujete hodnoty NULL do polí ve zdroji dat, může docházet k potenciálním problémům. Představte si aplikaci s objednávkami, která přijímá hodnoty pro město a poštovní směrovací číslo. může přijmout buď jednu, nebo obě hodnoty, ale ne ani, protože v takovém případě by nebylo možné doručení způsobit. Proto je nutné omezit určité kombinace hodnot NULL v polích, která jsou vhodná pro vaši aplikaci.
+Je možné, že koncový uživatel odešle data NULL. Při zápisu hodnoty NULL do polí ve zdroji dat může dojít k potenciálním problémům. Představte si, že objednávka-přičemž aplikace, která přijímá hodnoty pro město a PSČ; mohl přijmout jednu nebo obě hodnoty, ale ani jedno, protože v takovém případě by doručení nebylo možné. Proto je třeba omezit určité kombinace hodnot NULL v polích, které mají smysl pro vaši aplikaci.
 
-Jako vývojář poskytovatele musíte zvážit, jak budete ukládat tato data, jak budete číst tato data z úložiště dat a jak je určíte pro uživatele. Konkrétně musíte zvážit, jak změnit stav dat dat sady řádků ve zdroji dat (například DataStatus = NULL). Rozhodnete, jaká hodnota se má vrátit, když spotřebitel přistupuje k poli obsahujícímu hodnotu NULL.
+Jako vývojář zprostředkovatele je třeba zvážit, jak budou tato data ukládat, jak budete tato data číst z úložiště dat a jak je zadáváte uživateli. Konkrétně je třeba zvážit, jak změnit stav dat sady řádků ve zdroji dat (například DataStatus = NULL). Můžete se rozhodnout, jakou hodnotu vrátit, když spotřebitel přistupuje k poli obsahujícímu hodnotu NULL.
 
-Podívejte se na kód v ukázce UpdatePV; ukazuje, jak může zprostředkovatel zpracovat data s hodnotou NULL. V UpdatePV poskytovatel ukládá prázdná data zápisem řetězce "NULL" v úložišti dat. Když čte data NULL z úložiště dat, uvidí tento řetězec a pak vyprázdní vyrovnávací paměť a vytvoří řetězec s hodnotou NULL. Má také přepsání `IRowsetImpl::GetDBStatus`, ve kterém vrátí DBSTATUS_S_ISNULL, pokud je tato hodnota dat prázdná.
+Podívejte se na kód v updatePV vzorku; ukazuje, jak zprostředkovatel může zpracovat data NULL. V UpdatePV zprostředkovatel ukládá data NULL zápisem řetězce "NULL" v úložišti dat. Při čtení dat NULL z úložiště dat, vidí, že řetězec a potom vyprázdní vyrovnávací paměti, vytvoření řetězce NULL. Má také `IRowsetImpl::GetDBStatus` přepsání, ve kterém vrátí DBSTATUS_S_ISNULL pokud je tato hodnota dat prázdná.
 
-### <a name="marking-nullable-columns"></a>Označení sloupců s možnou hodnotou null
+### <a name="marking-nullable-columns"></a>Označení sloupců s možnou hodnotou Null
 
-Pokud implementujete i sady řádků schématu (viz `IDBSchemaRowsetImpl`), měla by vaše implementace určovat v DBSCHEMA_COLUMNS sadě řádků (obvykle označené poskytovatelem CxxxSchemaColSchemaRowset), že sloupec může mít hodnotu null.
+Pokud také implementujete sady řádků `IDBSchemaRowsetImpl`schématu (viz ), vaše implementace by měla určit v DBSCHEMA_COLUMNS sada řádků (obvykle označeny ve vašem zprostředkovateli CxxxSchemaColSchemaRowset), že sloupec je nullable.
 
-Musíte také určit, že všechny sloupce s možnou hodnotou null obsahují hodnotu DBCOLUMNFLAGS_ISNULLABLE ve vaší verzi `GetColumnInfo`.
+Je také třeba zadat, že všechny sloupce s možnou `GetColumnInfo`hodnotou null obsahují hodnotu DBCOLUMNFLAGS_ISNULLABLE ve vaší verzi .
 
-Pokud v implementaci šablon OLE DB neoznačíte sloupce jako Nullable, zprostředkovatel předpokládá, že musí obsahovat hodnotu a neumožní příjemci odesílat hodnoty null.
+V implementaci šablon OLE DB, pokud se vám nepodaří označit sloupce jako nullable, zprostředkovatel předpokládá, že musí obsahovat hodnotu a neumožní spotřebiteli odeslat hodnoty null.
 
-Následující příklad ukazuje, jak je funkce `CommonGetColInfo` implementována v CUpdateCommand (viz UpProvRS. cpp) v UpdatePV. Všimněte si, že tyto sloupce mají tento DBCOLUMNFLAGS_ISNULLABLE pro sloupce s možnou hodnotou null.
+Následující příklad ukazuje, `CommonGetColInfo` jak je funkce implementována v CUpdateCommand (viz UpProvRS.cpp) v UpdatePV. Všimněte si, jak mají sloupce tento DBCOLUMNFLAGS_ISNULLABLE pro sloupce s možnou hodnotou null.
 
 ```cpp
 /////////////////////////////////////////////////////////////////////////////
@@ -370,11 +370,11 @@ ATLCOLUMNINFO* CommonGetColInfo(IUnknown* pPropsUnk, ULONG* pcCols, bool bBookma
 
 ### <a name="default-values"></a>Výchozí hodnoty
 
-Stejně jako u dat s hodnotou NULL máte odpovědnost za to, abyste se zabývat měnícími se výchozími hodnotami.
+Stejně jako u dat NULL máte odpovědnost za změnu výchozích hodnot.
 
-Výchozí hodnotou `FlushData` a `Execute` je vrácení S_OK. Proto pokud tuto funkci nepřepisujete, změny se zobrazí jako úspěšné (S_OK budou vráceny), ale nebudou přeneseny do úložiště dat.
+Výchozí `FlushData` a `Execute` je vrátit S_OK. Proto pokud tuto funkci nepřepíšete, změny se zobrazí jako úspěšné (S_OK budou vráceny), ale nebudou přeneseny do úložiště dat.
 
-V ukázce `UpdatePV` (v Rowset. h) metoda `SetDBStatus` zpracovává výchozí hodnoty následujícím způsobem:
+V `UpdatePV` ukázce (v souboru `SetDBStatus` Rowset.h) metoda zpracovává výchozí hodnoty následujícím způsobem:
 
 ```cpp
 virtual HRESULT SetDBStatus(DBSTATUS* pdbStatus, CSimpleRow* pRow,
@@ -411,13 +411,13 @@ virtual HRESULT SetDBStatus(DBSTATUS* pdbStatus, CSimpleRow* pRow,
 }
 ```
 
-### <a name="column-flags"></a>Příznaky sloupce
+### <a name="column-flags"></a>Příznaky sloupců
 
-Pokud ve sloupcích podporujete výchozí hodnoty, je nutné ji nastavit pomocí metadat ve třídě poskytovatele \<\>třídy SchemaRowset. Nastavte `m_bColumnHasDefault = VARIANT_TRUE`.
+Pokud podporujete výchozí hodnoty ve sloupcích, je třeba \<nastavit\>pomocí metadat ve třídě zprostředkovatele SchemaRowset třídy. Nastavte `m_bColumnHasDefault = VARIANT_TRUE`.
 
-Máte také odpovědnost za nastavení příznaků sloupců, které jsou zadány pomocí výčtového typu DBCOLUMNFLAGS. Příznaky sloupce popisují charakteristiky sloupců.
+Máte také odpovědnost nastavit příznaky sloupce, které jsou určeny pomocí typu s výčtu DBCOLUMNFLAGS. Příznaky sloupce popisují vlastnosti sloupce.
 
-Například ve třídě `CUpdateSessionColSchemaRowset` v `UpdatePV` (v Session. h) se nastaví první sloupec tímto způsobem:
+Například ve `CUpdateSessionColSchemaRowset` třídě `UpdatePV` v (v Session.h) je první sloupec nastaven takto:
 
 ```cpp
 // Set up column 1
@@ -432,8 +432,8 @@ lstrcpyW(trData[0].m_szColumnDefault, OLESTR("0"));
 m_rgRowData.Add(trData[0]);
 ```
 
-Tento kód určuje mimo jiné, že sloupec podporuje výchozí hodnotu 0, že je zapisovatelný a že všechna data ve sloupci mají stejnou délku. Pokud chcete, aby data ve sloupci měla proměnlivou délku, nemusíte tento příznak nastavit.
+Tento kód mimo jiné určuje, že sloupec podporuje výchozí hodnotu 0, aby byl zapisovatelný a aby všechna data ve sloupci měla stejnou délku. Pokud chcete, aby data ve sloupci měla proměnnou délku, tento příznak byste nenastavili.
 
 ## <a name="see-also"></a>Viz také
 
-[Vytvoření zprostředkovatele OLE DB](creating-an-ole-db-provider.md)
+[Vytvoření zprostředkovatele TECHNOLOGIE OLE DB](creating-an-ole-db-provider.md)

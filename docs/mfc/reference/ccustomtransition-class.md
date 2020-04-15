@@ -1,5 +1,5 @@
 ---
-title: Ccustomtransition – třída
+title: CCustomTransition – třída
 ms.date: 11/04/2016
 f1_keywords:
 - CCustomTransition
@@ -24,14 +24,14 @@ helpviewer_keywords:
 - CCustomTransition [MFC], m_initialVelocity
 - CCustomTransition [MFC], m_pInterpolator
 ms.assetid: 5bd3f492-940f-4290-a38b-fa68eb8f8401
-ms.openlocfilehash: e0e5250b27ce6b902939ebcbfa03bf022a202788
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8bdd0ebab0a6e4138e24edff38da9b444745f83a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391280"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81369332"
 ---
-# <a name="ccustomtransition-class"></a>Ccustomtransition – třída
+# <a name="ccustomtransition-class"></a>CCustomTransition – třída
 
 Implementuje vlastní přechod.
 
@@ -45,35 +45,35 @@ class CCustomTransition : public CBaseTransition;
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CCustomTransition::CCustomTransition](#ccustomtransition)|Vytvoří objekt vlastní přechod.|
+|[CCustomTransition::CCustomTransition](#ccustomtransition)|Vytvoří vlastní objekt přechodu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CCustomTransition::Create](#create)|Knihovna přechod k vytvoření objektu přechod zapouzdřený objekt modelu COM zavolá. (Přepíše [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|
-|[CCustomTransition::SetInitialValue](#setinitialvalue)|Nastaví počáteční hodnotu, která se použijí pro proměnnou animace přidružené k tento přechod.|
-|[CCustomTransition::SetInitialVelocity](#setinitialvelocity)|Nastaví počáteční rychlosti, která se použijí pro proměnnou animace přidružené k tento přechod.|
+|[CCustomTransition::Vytvořit](#create)|Volá knihovnu přechodu k vytvoření zapouzdřený přechod ový objekt COM. (Přepíše [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|
+|[CCustomTransition::SetInitialValue](#setinitialvalue)|Nastaví počáteční hodnotu, která bude použita na proměnnou animace přidruženou k tomuto přechodu.|
+|[CCustomTransition::SetInitialVelocity](#setinitialvelocity)|Nastaví počáteční rychlost, která bude použita na proměnnou animace přidruženou k tomuto přechodu.|
 
-### <a name="protected-data-members"></a>Chránění členové dat
+### <a name="protected-data-members"></a>Členové chráněných dat
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CCustomTransition::m_bInitialValueSpecified](#m_binitialvaluespecified)|Určuje, zda byl zadán SetInitialValue počáteční hodnota.|
-|[CCustomTransition::m_bInitialVelocitySpecified](#m_binitialvelocityspecified)|Určuje, zda byl zadaný počáteční SetInitialVelocity.|
-|[CCustomTransition::m_initialValue](#m_initialvalue)|Uloží počáteční hodnotu.|
-|[CCustomTransition::m_initialVelocity](#m_initialvelocity)|Ukládá počáteční.|
-|[CCustomTransition::m_pInterpolator](#m_pinterpolator)|Uchovává ukazatel na vlastní interpolator.|
+|[CCustomTransition::m_bInitialValueSpecified](#m_binitialvaluespecified)|Určuje, zda byla počáteční hodnota zadána pomocí parametru SetInitialValue.|
+|[CCustomTransition::m_bInitialVelocitySpecified](#m_binitialvelocityspecified)|Určuje, zda byla počáteční rychlost zadána pomocí parametru SetInitialVelocity.|
+|[CCustomTransition::m_initialValue](#m_initialvalue)|Ukládá počáteční hodnotu.|
+|[CCustomTransition::m_initialVelocity](#m_initialvelocity)|Ukládá počáteční rychlost.|
+|[CCustomTransition::m_pInterpolator](#m_pinterpolator)|Uloží ukazatel na vlastní interpolátor.|
 
 ## <a name="remarks"></a>Poznámky
 
-Třída CCustomTransitions umožňuje vývojářům implementovat vlastní přechodů. Má vytvořit a použít jako standardní přechod, ale jeho konstruktor přijímá jako parametr ukazatel na vlastní interpolator. Proveďte následující kroky a použít vlastní přechodů: 1. Odvodit třídu z ccustominterpolator – a implementovat alespoň InterpolateValue metody. 2. Ujistěte se, že doba života objektu vlastní interpolator musí být delší než doba trvání animace ve kterém se používá. 3. Vytvoření (pomocí operátoru new) instance objektu ccustomtransition – a předat ukazatel vlastní interpolator v konstruktoru. 4. Pokud tyto parametry jsou požadovány pro vlastní interpolace volání CCustomTransition::SetInitialValue a CCustomTransition::SetInitialVelocity. 5. Přesune ukazatel na vlastní přechod AddTransition metody objektu animace, jehož hodnota by měla být animován pomocí vlastního algoritmu. 6. Pokud by měl změnit hodnotu objektu animace Windows API animace v ccustominterpolator – volání InterpolateValue (a další relevantní metody).
+Třída CCustomTransitions umožňuje vývojářům implementovat vlastní přechody. Je vytvořen a používán jako standardní přechod, ale jeho konstruktor přijímá jako parametr ukazatel na vlastní interpolátor. Chcete-li použít vlastní přechody, proveďte následující kroky: 1. Odvodit třídu z CCustomInterpolator a implementovat alespoň InterpolateValue metoda. 2. Ujistěte se, že životnost vlastního interpolátoru objektu musí být delší než doba trvání animace, kde se používá. 3. Konstanci (pomocí operátoru new) CCustomTransition objekt a předat ukazatel na vlastní interpolátor v konstruktoru. 4. Volání CCustomTransition::SetInitialValue a CCustomTransition::SetInitialVelocity, pokud jsou tyto parametry vyžadovány pro vlastní interpolaci. 5. Předajte ukazatel na vlastní přechod na metodu AddTransition objektu animace, jehož hodnota by měla být animována pomocí vlastního algoritmu. 6. Když hodnota objektu animace by měla změnit rozhraní API animace systému Windows bude volat InterpolateValue (a další relevantní metody) v CCustomInterpolator.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObjekt](../../mfc/reference/cobject-class.md)
 
 [CBaseTransition](../../mfc/reference/cbasetransition-class.md)
 
@@ -83,9 +83,9 @@ Třída CCustomTransitions umožňuje vývojářům implementovat vlastní přec
 
 **Záhlaví:** afxanimationcontroller.h
 
-##  <a name="ccustomtransition"></a>  CCustomTransition::CCustomTransition
+## <a name="ccustomtransitionccustomtransition"></a><a name="ccustomtransition"></a>CCustomTransition::CCustomTransition
 
-Vytvoří objekt vlastní přechod.
+Vytvoří vlastní objekt přechodu.
 
 ```
 CCustomTransition(CCustomInterpolator* pInterpolator);
@@ -93,12 +93,12 @@ CCustomTransition(CCustomInterpolator* pInterpolator);
 
 ### <a name="parameters"></a>Parametry
 
-*pInterpolator*<br/>
-Ukazatel na vlastní interpolator.
+*pInterpolátor*<br/>
+Ukazatel na vlastní interpolátor.
 
-##  <a name="create"></a>  CCustomTransition::Create
+## <a name="ccustomtransitioncreate"></a><a name="create"></a>CCustomTransition::Vytvořit
 
-Knihovna přechod k vytvoření objektu přechod zapouzdřený objekt modelu COM zavolá.
+Volá knihovnu přechodu k vytvoření zapouzdřený přechod ový objekt COM.
 
 ```
 virtual BOOL Create(
@@ -109,57 +109,57 @@ virtual BOOL Create(
 ### <a name="parameters"></a>Parametry
 
 *pFactory*<br/>
-Ukazatel na přechod factory, který je zodpovědný za vytváření vlastních přechodů.
+Ukazatel na továrnu přechodu, která je zodpovědná za vytváření vlastních přechodů.
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda také nastavit výchozí hodnoty a rychlosti počáteční použít proměnnou animace, který je přidružen tohoto přechodu. Pro tento účel je nutné volat SetInitialValue a SetInitialVelocity rozhraní vytvoří objekt modelu COM zapouzdřený přechodu (to se stane, když voláte CAnimationController::AnimateGroup).
+Tato metoda také můžete nastavit počáteční hodnotu a počáteční rychlost, která má být použita na proměnnou animace, která je spojena s tímto přechodem. Pro tento účel budete muset volat SetInitialValue a SetInitialVelocity před rámec vytvoří zapouzdřený přechod COM objekt (stane se při volání CAnimationController::AnimateGroup).
 
-##  <a name="m_binitialvaluespecified"></a>  CCustomTransition::m_bInitialValueSpecified
+## <a name="ccustomtransitionm_binitialvaluespecified"></a><a name="m_binitialvaluespecified"></a>CCustomTransition::m_bInitialValueSpecified
 
-Určuje, zda byl zadán SetInitialValue počáteční hodnota.
+Určuje, zda byla počáteční hodnota zadána pomocí parametru SetInitialValue.
 
 ```
 BOOL m_bInitialValueSpecified;
 ```
 
-##  <a name="m_binitialvelocityspecified"></a>  CCustomTransition::m_bInitialVelocitySpecified
+## <a name="ccustomtransitionm_binitialvelocityspecified"></a><a name="m_binitialvelocityspecified"></a>CCustomTransition::m_bInitialVelocitySpecified
 
-Určuje, zda byl zadaný počáteční SetInitialVelocity.
+Určuje, zda byla počáteční rychlost zadána pomocí parametru SetInitialVelocity.
 
 ```
 BOOL m_bInitialVelocitySpecified;
 ```
 
-##  <a name="m_initialvalue"></a>  CCustomTransition::m_initialValue
+## <a name="ccustomtransitionm_initialvalue"></a><a name="m_initialvalue"></a>CCustomTransition::m_initialValue
 
-Uloží počáteční hodnotu.
+Ukládá počáteční hodnotu.
 
 ```
 DOUBLE m_initialValue;
 ```
 
-##  <a name="m_initialvelocity"></a>  CCustomTransition::m_initialVelocity
+## <a name="ccustomtransitionm_initialvelocity"></a><a name="m_initialvelocity"></a>CCustomTransition::m_initialVelocity
 
-Ukládá počáteční.
+Ukládá počáteční rychlost.
 
 ```
 DOUBLE m_initialVelocity;
 ```
 
-##  <a name="m_pinterpolator"></a>  CCustomTransition::m_pInterpolator
+## <a name="ccustomtransitionm_pinterpolator"></a><a name="m_pinterpolator"></a>CCustomTransition::m_pInterpolator
 
-Uchovává ukazatel na vlastní interpolator.
+Uloží ukazatel na vlastní interpolátor.
 
 ```
 CCustomInterpolator* m_pInterpolator;
 ```
 
-##  <a name="setinitialvalue"></a>  CCustomTransition::SetInitialValue
+## <a name="ccustomtransitionsetinitialvalue"></a><a name="setinitialvalue"></a>CCustomTransition::SetInitialValue
 
-Nastaví počáteční hodnotu, která se použijí pro proměnnou animace přidružené k tento přechod.
+Nastaví počáteční hodnotu, která bude použita na proměnnou animace přidruženou k tomuto přechodu.
 
 ```
 void SetInitialValue(DOUBLE initialValue);
@@ -167,11 +167,11 @@ void SetInitialValue(DOUBLE initialValue);
 
 ### <a name="parameters"></a>Parametry
 
-*initialValue*
+*Initialvalue*
 
-##  <a name="setinitialvelocity"></a>  CCustomTransition::SetInitialVelocity
+## <a name="ccustomtransitionsetinitialvelocity"></a><a name="setinitialvelocity"></a>CCustomTransition::SetInitialVelocity
 
-Nastaví počáteční rychlosti, která se použijí pro proměnnou animace přidružené k tento přechod.
+Nastaví počáteční rychlost, která bude použita na proměnnou animace přidruženou k tomuto přechodu.
 
 ```
 void SetInitialVelocity(DOUBLE initialVelocity);
@@ -179,8 +179,8 @@ void SetInitialVelocity(DOUBLE initialVelocity);
 
 ### <a name="parameters"></a>Parametry
 
-*initialVelocity*
+*počáteční rychlost*
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Třídy](../../mfc/reference/mfc-classes.md)

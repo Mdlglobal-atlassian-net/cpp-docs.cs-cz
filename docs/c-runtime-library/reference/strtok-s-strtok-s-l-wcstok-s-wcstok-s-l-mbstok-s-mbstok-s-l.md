@@ -1,6 +1,6 @@
 ---
 title: strtok_s, _strtok_s_l, wcstok_s, _wcstok_s_l, _mbstok_s, _mbstok_s_l
-ms.date: 03/25/2019
+ms.date: 4/2/2020
 api_name:
 - _wcstok_s_l
 - _mbstok_s_l
@@ -8,6 +8,10 @@ api_name:
 - strtok_s
 - wcstok_s
 - _strtok_s_l
+- _o__mbstok_s
+- _o__mbstok_s_l
+- _o_strtok_s
+- _o_wcstok_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -22,6 +26,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -51,19 +56,19 @@ helpviewer_keywords:
 - _mbstok_s function
 - strtok_s function
 ms.assetid: 7696c972-f83b-4617-8c82-95973e9fdb46
-ms.openlocfilehash: 1bbc5910e6242a0df262cc43b58815ea80ff9681
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 9fe89fb897a5459b16c49060359b4bb40bc062a7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946460"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81365224"
 ---
 # <a name="strtok_s-_strtok_s_l-wcstok_s-_wcstok_s_l-_mbstok_s-_mbstok_s_l"></a>strtok_s, _strtok_s_l, wcstok_s, _wcstok_s_l, _mbstok_s, _mbstok_s_l
 
-Vyhledá další token v řetězci pomocí aktuálního národního prostředí nebo pomocí předaného národního prostředí. Tyto verze [strtok, _strtok_l, wcstok, _wcstok_l, _mbstok, _mbstok_l](strtok-strtok-l-wcstok-wcstok-l-mbstok-mbstok-l.md) mají vylepšení zabezpečení, jak je popsáno v [části funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Vyhledá další token v řetězci pomocí aktuálního národního prostředí nebo pomocí předaného národního prostředí. Tyto verze [strtok, _strtok_l, wcstok, _wcstok_l, _mbstok, _mbstok_l](strtok-strtok-l-wcstok-wcstok-l-mbstok-mbstok-l.md) mají vylepšení zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 > [!IMPORTANT]
-> **_mbstok_s** a **_mbstok_s_l** nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime. Další informace najdete v tématu [funkce CRT nejsou v aplikacích Univerzální platforma Windows podporovány](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbstok_s** a **_mbstok_s_l** nelze použít v aplikacích, které se spouštějí v prostředí Windows Runtime. Další informace naleznete v tématu [funkce CRT, které nejsou podporovány v aplikacích univerzální platformy Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -110,60 +115,62 @@ unsigned char* _mbstok_s_l(
 
 ### <a name="parameters"></a>Parametry
 
-*str*<br/>
-Řetězec obsahující token nebo tokeny, které se mají najít.
+*Str*<br/>
+Řetězec obsahující token nebo tokeny najít.
 
-*oddělovače*<br/>
-Sada oddělovačových znaků, které se mají použít.
+*Oddělovače*<br/>
+Sada znaků oddělovače, které chcete použít.
 
-*context*<br/>
+*Kontextu*<br/>
 Slouží k ukládání informací o poloze mezi voláními funkce.
 
-*jazyka*<br/>
+*Národní prostředí*<br/>
 Národní prostředí, které se má použít
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Vrátí ukazatel na další token, který byl nalezen v *str*. Vrátí **hodnotu null** , pokud nejsou nalezeny žádné další tokeny. Každé volání upravuje *str* pomocí nahrazení znaku null pro první oddělovač, který nastane po vráceném tokenu.
+Vrátí ukazatel na další token nalezený v *str*. Vrátí **hodnotu NULL,** pokud nejsou nalezeny žádné další tokeny. Každé volání upraví *str* nahrazením znaku null pro první oddělovač, ke kterému dochází po vrácený token.
 
 ### <a name="error-conditions"></a>Chybové stavy
 
-|*str*|*oddělovače*|*context*|Návratová hodnota|**errno**|
+|*Str*|*Oddělovače*|*Kontextu*|Návratová hodnota|**errno**|
 |----------------|------------------|---------------|------------------|-------------|
-|**NULL**|Jakýmikoli|ukazatel na ukazatel s hodnotou null|**NULL**|**EINVAL**|
-|Jakýmikoli|**NULL**|Jakýmikoli|**NULL**|**EINVAL**|
-|Jakýmikoli|Jakýmikoli|**NULL**|**NULL**|**EINVAL**|
+|**Null**|jakékoli|ukazatel na ukazatel s hodnotou null|**Null**|**EINVAL**|
+|jakékoli|**Null**|jakékoli|**Null**|**EINVAL**|
+|jakékoli|jakékoli|**Null**|**Null**|**EINVAL**|
 
-Pokud je str **null** , ale *kontext* je ukazatel na platný kontextový ukazatel, není k dispozici žádná chyba.
+Pokud *str* je **NULL,** ale *kontext* je ukazatel na platný ukazatel kontextu, neexistuje žádná chyba.
 
 ## <a name="remarks"></a>Poznámky
 
-Rodina funkcí **strtok_s** vyhledá další token v *str*. Sada znaků v *oddělovačích* určuje možné oddělovače tokenu, který se má najít v *str* pro aktuální volání. **wcstok_s** a **_mbstok_s** jsou verze s velkým znakem a vícebajtovým znakem **strtok_s**. Argumenty a návratové hodnoty hodnot **wcstok_s** a **_wcstok_s_l** jsou řetězce s velkým počtem znaků; ty z **_mbstok_s** a **_mbstok_s_l** jsou vícebajtové znakové řetězce. Tyto funkce se chovají identicky jinak.
+**Strtok_s** rodina funkcí najde další token v *str*. Sada znaků v *oddělovači* určuje možné oddělovače tokenu, který se nachází v *str* na aktuální volání. **wcstok_s** a **_mbstok_s** jsou verze **strtok_s**s širokými znaky a vícebajtovými znaky . Argumenty a vrácené hodnoty **wcstok_s** a **_wcstok_s_l** jsou řetězce s širokými znaky; **_mbstok_s** a **_mbstok_s_l** jsou řetězce vícebajtových znaků. Tyto funkce se chovají stejně jinak.
 
-Tato funkce ověří své parametry. Pokud dojde k chybě, jako v tabulce chybové podmínky, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, tyto funkce nastaví **errno** na **EINVAL** a vrátí **hodnotu null**.
+Tato funkce ověřuje její parametry. Pokud dojde k chybovému stavu, jako v tabulce Chybové podmínky, je vyvolána neplatná obslužná rutina parametru, jak je popsáno v [části Ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je spuštění povoleno pokračovat, tyto funkce nastavit **errno** **eINVAL** a vrátit **NULL**.
 
-Při prvním volání **strtok_s**funkce přeskočí úvodní oddělovače a vrátí ukazatel na první token v *str*a ukončí token pomocí znaku null. Další tokeny lze rozdělit z zbývající části *str* řadou volání na **strtok_s**. Každé volání **strtok_s** upravuje *str* vložením znaku null za token vrácený tímto voláním. *Kontextový* ukazatel uchovává přehled o tom, který řetězec je čten a kde v řetězci je třeba číst další token. Chcete-li číst další token z *str*, zavolejte **Strtok_s** s hodnotou **null** pro argument *str* a předejte stejný *kontextový* parametr. Argument **null** *str* způsobí, že **strtok_s** vyhledá další token v upraveném *str*. Argument *oddělovače* může mít libovolnou hodnotu z jednoho volání na další, aby se sada oddělovačů mohla lišit.
+Při prvním volání **strtok_s**funkce přeskočí úvodní oddělovače a vrátí ukazatel na první token v *str*a ukončí token s nulovým znakem. Další tokeny mohou být rozděleny ze zbytku *str* řadou volání **strtok_s**. Každé volání **strtok_s** upravuje *str* vložením nulového znaku za token vrácený tímto voláním. Ukazatel *kontextu* sleduje, který řetězec se čte a kde v řetězci má být přečten další token. Chcete-li číst další token z *str*, volání **strtok_s** s hodnotou **NULL** pro argument *str* a předat stejný parametr *kontextu.* Argument **NULL** *str* **způsobí, že strtok_s** hledat další token v modifikovanéstr . *str* *Oddělovače* argument může trvat libovolnou hodnotu z jednoho volání na další tak, aby sada oddělovačů se může lišit.
 
-Vzhledem k tomu, že parametr *Context* nahrazuje statické vyrovnávací paměti používané v **strtok** a **_strtok_l**, je možné rozložit dva řetězce současně ve stejném vlákně.
+Vzhledem k tomu, že parametr *kontextu* nahrazuje statické vyrovnávací paměti používané v **strtok** a **_strtok_l**, je možné analyzovat dva řetězce současně ve stejném vlákně.
 
-Výstupní hodnota je ovlivněna nastavením kategorie **LC_CTYPE** národního prostředí. Další informace naleznete v tématu [setlocale](setlocale-wsetlocale.md).
+Výstupní hodnota je ovlivněna nastavením nastavení **kategorie LC_CTYPE** národního prostředí. Další informace naleznete v tématu [setlocale](setlocale-wsetlocale.md).
 
-Verze těchto funkcí bez přípony **_l** používají aktuální národní prostředí vlákna pro toto chování závislé na národním prostředí. Verze s příponou **_l** jsou stejné s tím rozdílem, že místo toho používají národní prostředí určené parametrem *národního prostředí* . Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
+Verze těchto funkcí bez **přípony _l** pro toto chování závislé na národním prostředí používají aktuální národní prostředí vlákna. Verze s **příponou _l** jsou identické s tím rozdílem, že místo toho používají národní prostředí určené parametrem *národního prostředí.* Další informace naleznete v [tématu Locale](../../c-runtime-library/locale.md).
+
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**strtok_s**|\<String. h >|
-|**_strtok_s_l**|\<String. h >|
-|**wcstok_s**,<br />**_wcstok_s_l**|\<String. h > nebo \<WCHAR. h >|
-|**_mbstok_s**,<br />**_mbstok_s_l**|\<Mbstring. h >|
+|**strtok_s**|\<string.h>|
+|**_strtok_s_l**|\<string.h>|
+|**wcstok_s**,<br />**_wcstok_s_l**|\<string.h> \<nebo wchar.h>|
+|**_mbstok_s**,<br />**_mbstok_s_l**|\<mbstring.h>|
 
-Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|\_Kódování Unicode \_& znakové sady MBCS není definováno.|\_Definice znakové sady MBCS|_UNICODE definováno|
+|Rutina TCHAR.H|\_Nedefinována \_& mbcs UNICODE|\_MBCS definice|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcstok_s**|**strtok_s**|**_mbstok_s**|**wcstok_s**|
 |**_tcstok_s_l**|**_strtok_s_l**|**_mbstok_s_l**|**_wcstok_s_l**|
@@ -234,9 +241,9 @@ more
 tokens
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Manipulace s řetězci](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Zacházení s řetězci](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [Národní prostředí](../../c-runtime-library/locale.md)<br/>
 [Výklad sekvencí vícebajtových znaků](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [strcspn, wcscspn, _mbscspn, _mbscspn_l](strcspn-wcscspn-mbscspn-mbscspn-l.md)<br/>

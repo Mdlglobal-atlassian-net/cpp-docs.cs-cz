@@ -11,16 +11,16 @@ f1_keywords:
 helpviewer_keywords:
 - IThreadProxy structure
 ms.assetid: feb89241-a555-4e61-ad48-40add54daeca
-ms.openlocfilehash: b87694393af4634ec97d05070aa5513cd132098a
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: fc2fb2df06225a5c963fe39178c1b4a10f77953d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79417157"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368133"
 ---
 # <a name="ithreadproxy-structure"></a>IThreadProxy – struktura
 
-Abstrakce pro vlákno provádění. V závislosti na klíči zásad `SchedulerType` plánovače, který vytvoříte, vám Správce prostředků udělí proxy vlákna, které je zajištěné buď regulárním vláknem Win32, nebo podprocesem plánovatelná (UMS) v uživatelském režimu. UMS vlákna jsou podporována v 64 operačních systémech s verzí Windows 7 a vyšší.
+Abstrakce pro vlákno provádění. V závislosti `SchedulerType` na klíč zásad plánovače, který vytvoříte, správce prostředků udělí proxy podproces, který je zálohován buď běžné vlákno Win32 nebo user-mode schedulable (UMS) vlákno. Vlákna služby UMS jsou podporována v 64bitových operačních systémech s verzí Windows 7 a vyšší.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -32,16 +32,16 @@ struct IThreadProxy;
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[IThreadProxy:: getId –](#getid)|Vrátí jedinečný identifikátor proxy vlákna.|
-|[IThreadProxy:: Switch](#switchout)|Zruší přidružení kontextu k základnímu kořenu virtuálního procesoru.|
-|[IThreadProxy:: SwitchTo –](#switchto)|Provede přepnutí kontextu družstva z aktuálně spuštěného kontextu do jiného.|
-|[IThreadProxy:: YieldToSystem –](#yieldtosystem)|Způsobí, že volající vlákno zaznamená provádění do jiného vlákna, které je připraveno ke spuštění na aktuálním procesoru. Operační systém vybírá další vlákno, které se má provést.|
+|[IThreadProxy::GetId](#getid)|Vrátí jedinečný identifikátor proxy vlákna.|
+|[iThreadProxy::Přepnutí](#switchout)|Odpojí kontext od kořenového kořene virtuálního procesoru.|
+|[iThreadProxy::Přepnout](#switchto)|Provede kooperativní přepnutí kontextu z aktuálně spuštěného kontextu do jiného kontextu.|
+|[iThreadProxy::YieldToSystem](#yieldtosystem)|Způsobí, že volající vlákno výnos spuštění do jiného vlákna, který je připraven ke spuštění na aktuální procesor. Operační systém vybere další vlákno, které má být provedeno.|
 
 ## <a name="remarks"></a>Poznámky
 
-Proxy vlákna jsou propojena s kontexty spuštění, které jsou reprezentovány rozhraním `IExecutionContext` jako způsob odesílání práce.
+Proxy vlákna jsou spojeny s kontexty `IExecutionContext` spuštění reprezentované rozhraní jako prostředek expedice práce.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -49,11 +49,11 @@ Proxy vlákna jsou propojena s kontexty spuštění, které jsou reprezentovány
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** concrtrm. h
+**Záhlaví:** concrtrm.h
 
 **Obor názvů:** souběžnost
 
-## <a name="getid"></a>IThreadProxy:: getId – – metoda
+## <a name="ithreadproxygetid-method"></a><a name="getid"></a>IThreadProxy::Metoda GetId
 
 Vrátí jedinečný identifikátor proxy vlákna.
 
@@ -63,11 +63,11 @@ virtual unsigned int GetId() const = 0;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Jedinečný celočíselný identifikátor.
+Jedinečný identifikátor celého čísla.
 
-## <a name="switchout"></a>IThreadProxy:: Switch – metoda
+## <a name="ithreadproxyswitchout-method"></a><a name="switchout"></a>iThreadProxy::Metoda přepnutí
 
-Zruší přidružení kontextu k základnímu kořenu virtuálního procesoru.
+Odpojí kontext od kořenového kořene virtuálního procesoru.
 
 ```cpp
 virtual void SwitchOut(SwitchingProxyState switchState = Blocking) = 0;
@@ -76,25 +76,25 @@ virtual void SwitchOut(SwitchingProxyState switchState = Blocking) = 0;
 ### <a name="parameters"></a>Parametry
 
 *switchState*<br/>
-Určuje stav proxy vlákna, které spouští přepínač. Parametr je typu `SwitchingProxyState`.
+Označuje stav proxy vlákna, který provádí přepínač. Parametr je typu `SwitchingProxyState`.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud potřebujete zrušit přidružení kontextu od kořene virtuálního procesoru, na kterém je spuštěný, z jakéhokoli důvodu použijte `SwitchOut`. V závislosti na hodnotě předané parametru `switchState`a bez ohledu na to, zda je prováděna v kořenovém adresáři virtuálního procesoru, volání vrátí buď okamžitě, nebo zablokuje proxy vlákna přidruženého k tomuto kontextu. Je-li volána `SwitchOut` s parametrem nastaveným na hodnotu `Idle`, jedná se o chybu. Výsledkem bude [invalid_argument](../../../standard-library/invalid-argument-class.md) výjimka.
+Použijte, `SwitchOut` pokud potřebujete zrušit přidružení kontextu od kořene virtuálního procesoru, ve které je spuštěn, z jakéhokoli důvodu. V závislosti na hodnotě, `switchState`kterou předáte parametru , a na tom, zda je či není spuštěn v kořenovém adresáři virtuálního procesoru, se volání vrátí okamžitě nebo zablokuje proxy vlákna přidruženého k kontextu. Volání `SwitchOut` s parametrem nastaveným na `Idle`. Pokud tak učiníte, bude [invalid_argument](../../../standard-library/invalid-argument-class.md) výjimka.
 
-`SwitchOut` je užitečné, pokud chcete snížit počet kořenových adresářů virtuálních procesorů, které má váš Plánovač, buď protože vám Správce prostředků na to, že jste to udělali, nebo proto, že jste si vyžádali dočasný kořen virtuálního procesoru, na který jste se dohlásili, a s ním se dokončí. V takovém případě byste měli vyvolat metodu [IVirtualProcessorRoot:: Remove](iexecutionresource-structure.md#remove) v kořenovém adresáři virtuálního procesoru před provedením volání `SwitchOut` s parametrem `switchState` nastaveným na `Blocking`. Tím se zablokuje proxy vlákna a bude pokračovat v provádění, pokud je k dispozici jiný kořen virtuálního procesoru v plánovači. Proxy blokujícího vlákna lze obnovit voláním funkce `SwitchTo` pro přepnutí na kontext spuštění tohoto proxy vlákna. Můžete také obnovit proxy vlákna pomocí jeho přidruženého kontextu a aktivovat tak kořenový adresář virtuálního procesoru. Další informace o tom, jak to provést, naleznete v tématu [IVirtualProcessorRoot:: Activate](ivirtualprocessorroot-structure.md#activate).
+`SwitchOut`Je užitečné, pokud chcete snížit počet kořenů virtuálního procesoru, které má plánovač, buď proto, že správce prostředků vás k tomu dal pokyn, nebo proto, že jste požádali o dočasný kořen virtuálního procesoru a jste s ním hotovi. V takovém případě byste měli vyvolat metodu [IVirtualProcessorRoot::Remove](iexecutionresource-structure.md#remove) v kořenovém `switchState` adresáři `Blocking`virtuálního procesoru, před voláním `SwitchOut` s parametrem nastaveným na . Tím se zablokuje proxy podprocesu a bude pokračovat v provádění, když je k dispozici jiný kořen virtuálního procesoru v plánovači k jeho spuštění. Blokující proxy podproces lze obnovit `SwitchTo` voláním funkce přepnout do kontextu spuštění tohoto vlákna proxy. Můžete také obnovit proxy vlákna pomocí jeho přidruženého kontextu k aktivaci kořenového adresáře virtuálního procesoru. Další informace o tom, jak to provést, naleznete v [tématu IVirtualProcessorRoot::Activate](ivirtualprocessorroot-structure.md#activate).
 
-`SwitchOut` můžete použít i v případě, že chcete virtuální procesor znovu inicializovat, aby se mohl aktivovat v budoucnu, a to buď blokováním proxy vlákna, nebo jeho dočasným odpojením od kořene virtuálního procesoru, na kterém je spuštěný, a plánovače, pro který odesílá práci. Pokud chcete blokovat proxy vlákna, použijte `SwitchOut` s parametrem `switchState` nastaveným na `Blocking`. Můžete ho později obnovit pomocí `SwitchTo` nebo `IVirtualProcessorRoot::Activate`, jak je uvedeno výše. Použijte `SwitchOut` s parametrem nastaveným na `Nesting`, pokud chcete dočasně odpojit toto proxy vlákna od kořene virtuálního procesoru, na kterém je spuštěný, a plánovače, ke kterému je přidružen virtuální procesor. Volání `SwitchOut` s parametrem `switchState` nastaveným na `Nesting` při jeho spuštění v kořenu virtuálního procesoru způsobí opětovnou inicializaci kořenového adresáře a aktuální proxy vlákna, aby bylo možné pokračovat v provádění bez nutnosti pro jeden. Proxy vlákna se považuje za podobu plánovače, dokud nevolá metodu [IThreadProxy:: Switch](#switchout) s `Blocking` v pozdějším okamžiku. Druhé volání `SwitchOut` s parametrem nastaveným na `Blocking` je určeno pro návrat kontextu do blokovaného stavu, aby jej bylo možné obnovit buď `SwitchTo` nebo `IVirtualProcessorRoot::Activate` v plánovači, ze kterého se odpojila. Vzhledem k tomu, že se neprovádí v kořenu virtuálního procesoru, nebude provedena žádná opětovná inicializace.
+`SwitchOut`může být také použit, pokud chcete znovu inicializovat virtuální procesor, takže může být aktivován v budoucnu při blokování proxy podprocesu nebo dočasně odpojení od kořene virtuálního procesoru, na kterém je spuštěn, a plánovač, pro který odesílá práci. Použijte `SwitchOut` s `switchState` parametrem `Blocking` nastaveným na, pokud chcete blokovat proxy vlákna. To může být později `SwitchTo` `IVirtualProcessorRoot::Activate` obnovena pomocí buď nebo jak je uvedeno výše. Použijte `SwitchOut` s parametrem `Nesting` nastaveným na, pokud chcete dočasně odpojit tento proxy podproces od kořenového adresáře virtuálního procesoru, ve kterém je spuštěn, a plánovač, ke kterém je virtuální procesor přidružen. Volání `SwitchOut` s `switchState` parametrem `Nesting` nastaveným na při provádění v kořenovém adresáři virtuálního procesoru způsobí, že kořen bude znovu inicializován a aktuální proxy podproces bude pokračovat v provádění bez nutnosti. Proxy podproces udává, že opustil plánovač, dokud nezavolá metodu `Blocking` [IThreadProxy::SwitchOut](#switchout) později v čase. Druhé volání `SwitchOut` s parametrem `Blocking` nastaveným na je určena k návratu kontextu do blokovaného stavu tak, aby jej mohl obnovit buď `SwitchTo` nebo `IVirtualProcessorRoot::Activate` v plánovači, od kterého byl odpojen. Vzhledem k tomu, že nebyl spuštěn v kořenovém adresáři virtuálního procesoru, neprobíhá žádná reinicializace.
 
-Nově inicializovaný kořen virtuálního procesoru se neliší od značky nového kořene virtuálního procesoru, který byl plánovačem udělen Správce prostředků. Můžete ji použít ke spuštění aktivací pomocí kontextu spuštění pomocí `IVirtualProcessorRoot::Activate`.
+Reinicializovaný kořen virtuálního procesoru se neliší od zcela nového kořene virtuálního procesoru, který vašemu plánovači udělil Správce prostředků. Můžete jej použít pro spuštění aktivací s `IVirtualProcessorRoot::Activate`kontextem spuštění pomocí .
 
-`SwitchOut` musí být volána na rozhraní `IThreadProxy`, které představuje aktuálně spuštěné vlákno, nebo jsou výsledky nedefinovány.
+`SwitchOut`musí být volána na `IThreadProxy` rozhraní, které představuje aktuálně spuštěné vlákno nebo výsledky nejsou definovány.
 
-V knihovnách a hlavičkách, které byly dodávány se sadou Visual Studio 2010, tato metoda nepřijala parametr a neinicializuje kořen virtuálního procesoru. Aby se zachovalo staré chování, zadala se výchozí hodnota parametru `Blocking`.
+V knihovnách a záhlavích dodaných se souborem Visual Studio 2010 tato metoda nepřijala parametr a neinicializovala kořenový adresář virtuálního procesoru. Chcete-li zachovat staré chování, `Blocking` je zadána výchozí hodnota parametru.
 
-## <a name="switchto"></a>IThreadProxy:: SwitchTo – – metoda
+## <a name="ithreadproxyswitchto-method"></a><a name="switchto"></a>iThreadProxy::Metoda SwitchTo
 
-Provede přepnutí kontextu družstva z aktuálně spuštěného kontextu do jiného.
+Provede kooperativní přepnutí kontextu z aktuálně spuštěného kontextu do jiného kontextu.
 
 ```cpp
 virtual void SwitchTo(
@@ -104,27 +104,27 @@ virtual void SwitchTo(
 
 ### <a name="parameters"></a>Parametry
 
-*pContext*<br/>
-Kontext spuštění pro kooperativní přepnutí na.
+*pKontext*<br/>
+Kontext provádění kooperativně přepnout.
 
 *switchState*<br/>
-Určuje stav proxy vlákna, které spouští přepínač. Parametr je typu `SwitchingProxyState`.
+Označuje stav proxy vlákna, který provádí přepínač. Parametr je typu `SwitchingProxyState`.
 
 ### <a name="remarks"></a>Poznámky
 
-Tuto metodu použijte, chcete-li přepnout z jednoho kontextu spuštění do jiného, z metody [IExecutionContext::D](iexecutioncontext-structure.md#dispatch) ' prvního kontextu spuštění. Metoda přidruží kontext spuštění `pContext` k proxy vlákna, pokud ještě není přidružena k jednomu. Vlastnictví aktuálního proxy vlákna je určeno hodnotou, kterou zadáte v argumentu `switchState`.
+Pomocí této metody můžete přepnout z jednoho kontextu spuštění do jiného, z metody [IExecutionContext::Dispatch](iexecutioncontext-structure.md#dispatch) prvního kontextu spuštění. Metoda přidruží `pContext` kontext spuštění k proxy vlákna, pokud již není přidružena k jednomu. Vlastnictví aktuálního proxy vlákna je určeno hodnotou, kterou zadáte pro `switchState` argument.
 
-Použijte hodnotu `Idle`, pokud chcete vrátit aktuálně spuštěné proxy vlákna do Správce prostředků. Volání `SwitchTo` s parametrem `switchState` nastaveným na `Idle` způsobí, že kontext spuštění `pContext` spuštění na podkladovém prostředku spuštění. Vlastnictví tohoto proxy vlákna se přenáší do Správce prostředků a za účelem dokončení přenosu se očekává, že se hned po `SwitchTo` vrátí, že se vrátíte z `Dispatch` metody kontextu spuštění. Kontext spuštění, který proxy vlákna odeslal, je zrušením přidružení od proxy vlákna a Scheduler ho bude moct znovu použít nebo zničit, jak se podle potřeby dohlíží.
+Hodnotu `Idle` použijte, pokud chcete vrátit aktuálně spuštěný proxy podproces správci prostředků. Volání `SwitchTo` s `switchState` parametrem `Idle` nastaveným na `pContext` způsobí spuštění kontextu spuštění provádění na základní prostředek spuštění. Vlastnictví tohoto proxy podprocesu je převedena do Správce prostředků a očekává `Dispatch` se, `SwitchTo` že vrátí z metody kontextu spuštění brzy po vrátí, za účelem dokončení převodu. Kontext spuštění, který byl odesílán proxy vlákna je odpojen od proxy vlákna a plánovač je zdarma k jeho opětovnému použití nebo zničit, jak uzná za vhodné.
 
-Použijte hodnotu `Blocking`, pokud chcete, aby tento proxy vlákna zadal blokovaný stav. Volání `SwitchTo` s parametrem `switchState` nastaveným na `Blocking` způsobí, že kontext spuštění `pContext` spustí spuštění a zablokuje aktuální proxy vlákna, dokud nebude obnoven. Pokud je proxy vlákna ve stavu `Blocking`, Scheduler zachová vlastnictví proxy vlákna. Proxy blokujícího vlákna lze obnovit voláním funkce `SwitchTo` pro přepnutí na kontext spuštění tohoto proxy vlákna. Můžete také obnovit proxy vlákna pomocí jeho přidruženého kontextu a aktivovat tak kořenový adresář virtuálního procesoru. Další informace o tom, jak to provést, naleznete v tématu [IVirtualProcessorRoot:: Activate](ivirtualprocessorroot-structure.md#activate).
+Hodnotu `Blocking` použijte, pokud chcete, aby tento proxy server podprocesu zaujíměl blokovaný stav. Volání `SwitchTo` s `switchState` parametrem `Blocking` nastaveným na `pContext` způsobí spuštění kontextu spuštění a blokovat aktuální proxy vlákna, dokud nebude obnovena. Plánovač si zachová vlastnictví proxy vlákna, když `Blocking` je proxy vlákno ve stavu. Blokující proxy podproces lze obnovit `SwitchTo` voláním funkce přepnout do kontextu spuštění tohoto vlákna proxy. Můžete také obnovit proxy vlákna pomocí jeho přidruženého kontextu k aktivaci kořenového adresáře virtuálního procesoru. Další informace o tom, jak to provést, naleznete v [tématu IVirtualProcessorRoot::Activate](ivirtualprocessorroot-structure.md#activate).
 
-Použijte `Nesting` hodnoty, pokud chcete dočasně odpojit toto proxy vlákna od kořene virtuálního procesoru, na kterém je spuštěný, a plánovače, pro který pracovní postup odesílá. Volání `SwitchTo` s parametrem `switchState` nastaveným na `Nesting` způsobí, že kontext spuštění `pContext` spuštění a aktuální proxy server vlákna také pokračuje ve spouštění bez nutnosti kořene virtuálního procesoru. Proxy vlákno je považováno za to, že opustí Plánovač, dokud nevolá metodu [IThreadProxy:: Switching](#switchout) v pozdějším okamžiku. Metoda `IThreadProxy::SwitchOut` by mohla blokovat proxy vlákna, dokud není k dispozici kořen virtuálního procesoru k jeho naplánování.
+Hodnotu `Nesting` použijte, pokud chcete dočasně odpojit tento proxy podproces od kořene virtuálního procesoru, ve kterém je spuštěn, a plánovač, pro který odesílá práci. Volání `SwitchTo` s `switchState` parametrem `Nesting` nastaveným na `pContext` způsobí spuštění kontextu spuštění a aktuální proxy podproces také pokračuje v provádění bez nutnosti kořenového virtuálního procesoru. Proxy podprocesu je považován za opustil plánovač, dokud volá [IThreadProxy::SwitchOut](#switchout) metoda později v čase. Metoda `IThreadProxy::SwitchOut` může blokovat proxy vlákna, dokud kořenový virtuální procesor je k dispozici pro přeplánování.
 
-`SwitchTo` musí být volána na rozhraní `IThreadProxy`, které představuje aktuálně spuštěné vlákno, nebo jsou výsledky nedefinovány. Funkce vyvolá `invalid_argument`, pokud je parametr `pContext` nastaven na `NULL`.
+`SwitchTo`musí být volána na `IThreadProxy` rozhraní, které představuje aktuálně spuštěné vlákno nebo výsledky nejsou definovány. Funkce `invalid_argument` vyvolá, pokud `pContext` je parametr `NULL`nastaven na .
 
-## <a name="yieldtosystem"></a>IThreadProxy:: YieldToSystem – – metoda
+## <a name="ithreadproxyyieldtosystem-method"></a><a name="yieldtosystem"></a>iThreadProxy::Metoda YieldToSystem
 
-Způsobí, že volající vlákno zaznamená provádění do jiného vlákna, které je připraveno ke spuštění na aktuálním procesoru. Operační systém vybírá další vlákno, které se má provést.
+Způsobí, že volající vlákno výnos spuštění do jiného vlákna, který je připraven ke spuštění na aktuální procesor. Operační systém vybere další vlákno, které má být provedeno.
 
 ```cpp
 virtual void YieldToSystem() = 0;
@@ -132,13 +132,13 @@ virtual void YieldToSystem() = 0;
 
 ### <a name="remarks"></a>Poznámky
 
-Když je volána proxy vlákna, které je zajištěno běžným vláknem systému Windows, `YieldToSystem` se chová stejně jako `SwitchToThread`funkcí systému Windows. Nicméně při volání z vlákna v uživatelském režimu plánovatelná (UMS), funkce `SwitchToThread` deleguje úkol vyzvednutí dalšího vlákna ke spuštění do plánovače uživatelského režimu, nikoli z operačního systému. Chcete-li dosáhnout požadovaného účinku přepnutí do jiného připraveného vlákna v systému, použijte `YieldToSystem`.
+Při volání proxy vlákna podporované ho regulérní podproces `YieldToSystem` `SwitchToThread`windows, se chová přesně jako funkce systému Windows . Však při volání z uživatelského režimu schedulable (UMS) vlákna, `SwitchToThread` funkce deleguje úlohu výběru další vlákno spustit do plánovače uživatelského režimu, nikoli operační systém. Chcete-li dosáhnout požadovaného účinku přepnutí na jiný `YieldToSystem`připravený závit v systému, použijte .
 
-`YieldToSystem` musí být volána na rozhraní `IThreadProxy`, které představuje aktuálně spuštěné vlákno, nebo jsou výsledky nedefinovány.
+`YieldToSystem`musí být volána na `IThreadProxy` rozhraní, které představuje aktuálně spuštěné vlákno nebo výsledky nejsou definovány.
 
 ## <a name="see-also"></a>Viz také
 
-[concurrency – obor názvů](concurrency-namespace.md)<br/>
+[obor názvů souběžnosti](concurrency-namespace.md)<br/>
 [IExecutionContext – struktura](iexecutioncontext-structure.md)<br/>
 [IScheduler – struktura](ischeduler-structure.md)<br/>
 [IVirtualProcessorRoot – struktura](ivirtualprocessorroot-structure.md)

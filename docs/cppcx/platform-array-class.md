@@ -1,5 +1,5 @@
 ---
-title: 'Platform:: Array – třída'
+title: Platforma::Třída pole
 ms.date: 12/30/2016
 ms.topic: reference
 f1_keywords:
@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Array Class
 ms.assetid: 7815ab40-88c5-42b0-83b8-081cef0cda31
-ms.openlocfilehash: 7d9fca4de954b5ba9c7cbcb3bdfce0fe3263dbd7
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: d625d80df67a3c8207467ad629afd4c2bf88db18
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79445798"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81318660"
 ---
-# <a name="platformarray-class"></a>Platform:: Array – třída
+# <a name="platformarray-class"></a>Platforma::Třída pole
 
-Představuje jednorozměrné, upravitelné pole, které lze přijmout a předat přes binární rozhraní aplikace (ABI).
+Představuje jednorozměrné, upravitelné pole, které lze přijímat a předávána přes binární rozhraní aplikace (ABI).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -30,41 +30,41 @@ private ref class Array<TArg, 1> :
 
 ### <a name="members"></a>Členové
 
-Platform:: Array dědí všechny metody z [třídy Platform:: WriteOnlyArray](../cppcx/platform-writeonlyarray-class.md) a implementuje vlastnost `Value` [rozhraní Platform:: IBoxArray](../cppcx/platform-iboxarray-interface.md).
+Platforma::Array zdědí všechny své metody z [platformy::WriteOnlyArray Class](../cppcx/platform-writeonlyarray-class.md) a implementuje `Value` vlastnost rozhraní [Platform::IBoxArray .](../cppcx/platform-iboxarray-interface.md)
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[Konstruktory Array](#ctor)|Inicializuje jednorozměrné pole s upravitelnými typy určené parametrem šablony třídy *T*.|
+|[Konstruktory polí](#ctor)|Inicializuje jednorozměrné, upravitelné pole typů určených parametrem šablony třídy *T*.|
 
 ### <a name="methods"></a>Metody
 
-Viz [Třída Platform:: WriteOnlyArray](../cppcx/platform-writeonlyarray-class.md).
+Viz [Platform::WriteOnlyArray Class](../cppcx/platform-writeonlyarray-class.md).
 
 ### <a name="properties"></a>Vlastnosti
 
 |||
 |-|-|
-|[Array:: Value](#value)|Načte popisovač k aktuálnímu poli.|
+|[Pole::Hodnota](#value)|Načte popisovač do aktuálního pole.|
 
 ### <a name="remarks"></a>Poznámky
 
-Třída Array je zapečetěná a nelze ji zdědit.
+Třída Array je zapečetěna a nelze ji zdědit.
 
-Systém typů prostředí Windows Runtime nepodporuje koncept vícenásobných polí, a proto nelze předat IVector < Platform:: Array\<T > > jako návratovou hodnotu nebo parametr metody. Chcete-li předat vícenásobné pole nebo sekvenci sekvencí v rámci ABI, použijte `IVector<IVector<T>^>`.
+Systém typu Prostředí Windows Runtime nepodporuje koncept zubatých polí, a proto nelze\<předat platformu IVector<::Array T>> jako parametr návratové hodnoty nebo metody. Chcete-li předat zubaté pole nebo posloupnost `IVector<IVector<T>^>`sekvencí přes ABI, použijte .
 
-Další informace o tom, kdy a jak používat Platform:: Array naleznete v tématu [Array a WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md).
+Další informace o tom, kdy a jak používat platformu::Array, naleznete [v tématech Array a WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md).
 
-Tato třída je definována v hlavičce vccorlib. h, která je automaticky obsažena v kompilátoru. Je viditelný v technologii IntelliSense, ale ne v Prohlížeč objektů, protože se nejedná o veřejný typ definovaný v objektu Platform. winmd.
+Tato třída je definována v záhlaví vccorlib.h, která je automaticky zahrnuta kompilátorem. Je viditelná v IntelliSense, ale ne v prohlížeči objektů, protože se nejedná o veřejný typ definovaný v platform.winmd.
 
 ### <a name="requirements"></a>Požadavky
 
 Možnost kompilátoru: **/ZW**
 
-## <a name="ctor"></a>Konstruktory Array
+## <a name="array-constructors"></a><a name="ctor"></a>Konstruktory polí
 
-Inicializuje jednorozměrné pole s upravitelnými typy určené parametrem šablony třídy *T*.
+Inicializuje jednorozměrné, upravitelné pole typů určených parametrem šablony třídy *T*.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -75,20 +75,20 @@ Array(T* data, unsigned int size);
 
 #### <a name="parameters"></a>Parametry
 
-*Š*<br/>
+*T*<br/>
 Parametr šablony třídy.
 
-*hodnota*<br/>
+*Velikost*<br/>
 Počet prvků v poli.
 
-*údajů*<br/>
-Ukazatel na pole dat typu `T`, který se používá k inicializaci tohoto objektu Array.
+*Dat*<br/>
+Ukazatel na pole dat typu, `T` které se používá k inicializaci tohoto objektu Array.
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace o vytváření instancí Platform:: Array naleznete v tématu [Array a WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md).
+Další informace o vytváření instancí platformy Platform::Array naleznete v [tématech Array a WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md).
 
-## <a name="get"></a>Array:: get – metoda
+## <a name="arrayget-method"></a><a name="get"></a>Pole::metoda get
 
 Načte odkaz na prvek pole v zadaném umístění indexu.
 
@@ -100,16 +100,16 @@ T& get(unsigned int index)  const;
 
 #### <a name="parameters"></a>Parametry
 
-*indexovacím*<br/>
-Index založený na nule, který identifikuje prvek v poli. Minimální index je 0 a maximální index je hodnota zadaná parametrem `size` v [konstruktoru Array](#ctor).
+*Index*<br/>
+Index založený na nule, který identifikuje prvek v poli. Minimální index je 0 a maximální index je `size` hodnota určená parametrem v [konstruktoru Array](#ctor).
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Prvek pole určený parametrem `index`.
+Prvek pole určený `index` parametrem.
 
-## <a name="value"></a>Array:: Value – vlastnost
+## <a name="arrayvalue-property"></a><a name="value"></a>Pole::Vlastnost Value
 
-Načte popisovač k aktuálnímu poli.
+Načte popisovač do aktuálního pole.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -119,7 +119,7 @@ property Array^ Value;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Popisovač k aktuálnímu poli.
+Popisovač aktuálního pole.
 
 ## <a name="see-also"></a>Viz také
 

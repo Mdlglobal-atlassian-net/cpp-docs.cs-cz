@@ -1,5 +1,5 @@
 ---
-title: Cd2droundedrect – třída
+title: Třída CD2DRoundedRect
 ms.date: 11/04/2016
 f1_keywords:
 - CD2DRoundedRect
@@ -8,14 +8,14 @@ f1_keywords:
 helpviewer_keywords:
 - CD2DRoundedRect [MFC], CD2DRoundedRect
 ms.assetid: 06207fb5-e92b-41c0-bceb-b45d8f466531
-ms.openlocfilehash: 51913a0d261a0bc91aef8f8504547a10c3e1cf36
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5189f3d824c008845570eac6eead4a35be1e483d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396259"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81369078"
 ---
-# <a name="cd2droundedrect-class"></a>Cd2droundedrect – třída
+# <a name="cd2droundedrect-class"></a>Třída CD2DRoundedRect
 
 Obálka pro `D2D1_ROUNDED_RECT`.
 
@@ -29,9 +29,9 @@ class CD2DRoundedRect : public D2D1_ROUNDED_RECT;
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CD2DRoundedRect::CD2DRoundedRect](#cd2droundedrect)|Přetíženo. Vytvoří `CD2DRoundedRect` objektu z `D2D1_ROUNDED_RECT` objektu.|
+|[CD2DRoundRect::CD2DRoundedRect](#cd2droundedrect)|Přetíženo. Vytvoří `CD2DRoundedRect` objekt z `D2D1_ROUNDED_RECT` objektu.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -43,9 +43,9 @@ class CD2DRoundedRect : public D2D1_ROUNDED_RECT;
 
 **Záhlaví:** afxrendertarget.h
 
-##  <a name="cd2droundedrect"></a>  CD2DRoundedRect::CD2DRoundedRect
+## <a name="cd2droundedrectcd2droundedrect"></a><a name="cd2droundedrect"></a>CD2DRoundRect::CD2DRoundedRect
 
-Vytvoří objekt cd2droundedrect – z cd2drectf – objektu.
+Vytvoří objekt CD2DRoundedRect z objektu CD2DRectF.
 
 ```
 CD2DRoundedRect(
@@ -59,11 +59,11 @@ CD2DRoundedRect(const D2D1_ROUNDED_RECT* rectIn);
 ### <a name="parameters"></a>Parametry
 
 *rectIn*<br/>
-zdrojového obdélníku
+zdrojový obdélník
 
 *sizeRadius*<br/>
-velikost protokolu RADIUS
+velikost poloměru
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Třídy](../../mfc/reference/mfc-classes.md)

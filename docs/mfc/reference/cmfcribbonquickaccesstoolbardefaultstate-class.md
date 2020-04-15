@@ -1,5 +1,5 @@
 ---
-title: Cmfcribbonquickaccesstoolbardefaultstate – třída
+title: CMFCRibbonQuickAccessToolBarDefaultState – třída
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCRibbonQuickAccessToolBarDefaultState
@@ -14,16 +14,16 @@ helpviewer_keywords:
 - CMFCRibbonQuickAccessToolBarDefaultState [MFC], CopyFrom
 - CMFCRibbonQuickAccessToolBarDefaultState [MFC], RemoveAll
 ms.assetid: eca99200-b87b-47ba-b2e8-2f3f2444b176
-ms.openlocfilehash: 0ea9ec8de0b657fa4e7c601f9c3e676f550defa9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 56219e8ed1833f4b448ec6ffd3c16e9db3c66ada
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62380250"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368875"
 ---
-# <a name="cmfcribbonquickaccesstoolbardefaultstate-class"></a>Cmfcribbonquickaccesstoolbardefaultstate – třída
+# <a name="cmfcribbonquickaccesstoolbardefaultstate-class"></a>CMFCRibbonQuickAccessToolBarDefaultState – třída
 
-Pomocná třída, která spravuje výchozího stavu pro panel nástrojů Rychlý přístup, který je umístěn na pásu karet ( [CMFCRibbonBar – třída](../../mfc/reference/cmfcribbonbar-class.md)).
+Pomocná třída, která spravuje výchozí stav panelu nástrojů Rychlý přístup, který je umístěn na panelu pásu karet ( [třída CMFCRibbonBar](../../mfc/reference/cmfcribbonbar-class.md)).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -35,29 +35,29 @@ class CMFCRibbonQuickAccessToolBarDefaultState
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CMFCRibbonQuickAccessToolBarDefaultState::CMFCRibbonQuickAccessToolBarDefaultState](#cmfcribbonquickaccesstoolbardefaultstate)|Vytvoří `CMFCRibbonQuickAccessToolbarDefaultState` objektu.|
+|[CMFCRibbonRibbonQuickAccessToolBarDefaultState:::CMFCRibbonQuickAccessToolBarDefaultState](#cmfcribbonquickaccesstoolbardefaultstate)|Vytvoří `CMFCRibbonQuickAccessToolbarDefaultState` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CMFCRibbonQuickAccessToolBarDefaultState::AddCommand](#addcommand)|Přidá příkaz do výchozího stavu pro panel nástrojů Rychlý přístup. Nezmění se samotný panel nástrojů.|
-|[CMFCRibbonQuickAccessToolBarDefaultState::CopyFrom](#copyfrom)|Kopíruje vlastnosti z jednoho panelu nástrojů Rychlý přístup do jiného.|
-|[CMFCRibbonQuickAccessToolBarDefaultState::RemoveAll](#removeall)|Odebere všechny příkazy z panelu nástrojů Rychlý přístup. Nezmění se samotný panel nástrojů.|
+|[CMFCRibbonRibbonQuickAccessToolBarDefaultState::AddCommand](#addcommand)|Přidá příkaz do výchozího stavu panelu nástrojů Rychlý přístup. Tím se nezmění samotný panel nástrojů.|
+|[CMFCRibbonRibbonQuickAccessToolBarDefaultState::CopyFrom](#copyfrom)|Zkopíruje vlastnosti jednoho panelu nástrojů Rychlý přístup do jiného.|
+|[CMFCRibbonRibbonQuickAccessToolBarDefaultState::RemoveAll](#removeall)|Odebere všechny příkazy z panelu nástrojů Rychlý přístup. Tím se nezmění samotný panel nástrojů.|
 
 ## <a name="remarks"></a>Poznámky
 
-Po vytvoření panelu nástrojů Rychlý přístup ve vaší aplikaci, doporučujeme nastavit výchozího stavu voláním [CMFCRibbonBar::SetQuickAccessDefaultState](../../mfc/reference/cmfcribbonbar-class.md#setquickaccessdefaultstate). Tato výchozí stav se obnoví, když uživatel klikne **resetování** tlačítko **vlastní** stránky vaší aplikace **možnosti** dialogové okno.
+Po vytvoření panelu nástrojů Rychlý přístup v aplikaci doporučujeme nastavit jeho výchozí stav voláním [CMFCRibbonBar::SetQuickAccessDefaultState](../../mfc/reference/cmfcribbonbar-class.md#setquickaccessdefaultstate). Tento výchozí stav se obnoví, když uživatel klepne na tlačítko **Obnovit** na stránce **Přizpůsobit** dialogovéokno **Možnosti** aplikace.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[CMFCRibbonQuickAccessToolBarDefaultState](../../mfc/reference/cmfcribbonquickaccesstoolbardefaultstate-class.md)
+[CMFCRibbonRibbonQuickAccessToolBarDefaultState](../../mfc/reference/cmfcribbonquickaccesstoolbardefaultstate-class.md)
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak vytvořit objekt `CMFCRibbonQuickAccessToolbarDefaultState` třídy a tom, jak přidat příkaz do výchozího stavu pro panel nástrojů Rychlý přístup.
+Následující příklad ukazuje, jak vytvořit objekt `CMFCRibbonQuickAccessToolbarDefaultState` třídy a jak přidat příkaz do výchozího stavu panelu nástrojů Rychlý přístup.
 
 [!code-cpp[NVC_MFC_RibbonApp#21](../../mfc/reference/codesnippet/cpp/cmfcribbonquickaccesstoolbardefaultstate-class_1.cpp)]
 
@@ -65,9 +65,9 @@ Následující příklad ukazuje, jak vytvořit objekt `CMFCRibbonQuickAccessToo
 
 **Záhlaví:** afxribbonquickaccesstoolbar.h
 
-##  <a name="addcommand"></a>  CMFCRibbonQuickAccessToolBarDefaultState::AddCommand
+## <a name="cmfcribbonquickaccesstoolbardefaultstateaddcommand"></a><a name="addcommand"></a>CMFCRibbonRibbonQuickAccessToolBarDefaultState::AddCommand
 
-Přidá příkaz do výchozího stavu pro panel nástrojů Rychlý přístup.
+Přidá příkaz do výchozího stavu panelu nástrojů Rychlý přístup.
 
 ```
 void AddCommand(
@@ -77,19 +77,19 @@ void AddCommand(
 
 ### <a name="parameters"></a>Parametry
 
-*[in] uiCmd*<br/>
+*[v] uiCmd*<br/>
 Určuje ID příkazu.
 
 *[in] bIsVisible*<br/>
-Nastaví, zda se příkaz panelu nástrojů Rychlý přístup je ve výchozím stavu.
+Nastaví viditelnost příkazu, když je panel nástrojů Rychlý přístup ve výchozím stavu.
 
 ### <a name="remarks"></a>Poznámky
 
-Přidání příkazu cmfcribbonquickaccesstoolbardefaultstate – provede tři výsledky. Každé přidání příkazu je nejprve uvedená na rozevírací nabídku na pravé straně panelu nástrojů Rychlý přístup. Tímto způsobem můžete uživatele snadno přidat nebo odebrat tento příkaz z panelu nástrojů Rychlý přístup. Za druhé, je obnovit zobrazit pouze příkazy, které jsou uvedeny jako viditelný ve výchozím stavu po kliknutí na panel nástrojů Rychlý přístup **resetování** tlačítko **vlastní** dialogové okno. Třetí, pokud nebyla volána [CMFCRibbonBar::SetQuickAccessCommands](../../mfc/reference/cmfcribbonbar-class.md#setquickaccesscommands), panel nástrojů Rychlý přístup používá viditelné příkazy z tohoto seznamu jako výchozí viditelné příkazy při prvním spuštění aplikace uživatelem. Po přidání všech příkazů, které chcete volat [CMFCRibbonBar::SetQuickAccessDefaultState](../../mfc/reference/cmfcribbonbar-class.md#setquickaccessdefaultstate) nastavení této instance jako výchozího stavu pro panel nástrojů Rychlý přístup z tento panel pásu karet.
+Přidání příkazu do CMFCRibbonQuickAccessToolBarDefaultState dosáhne tři výsledky. Nejprve je každý přidaný příkaz uveden v rozevíracím seznamu na pravé straně panelu nástrojů Rychlý přístup. Tímto způsobem může uživatel tento příkaz snadno přidat nebo odebrat z panelu nástrojů Rychlý přístup. Za druhé, panel nástrojů Rychlý přístup se resetuje tak, aby zobrazoval pouze ty příkazy, které jsou uvedeny jako viditelné ve výchozím stavu, když uživatel klepne na tlačítko **Obnovit** v dialogovém okně **Přizpůsobit.** Za třetí, pokud jste nevolali [CMFCRibbonBar::SetQuickAccessCommands](../../mfc/reference/cmfcribbonbar-class.md#setquickaccesscommands), panel nástrojů Rychlý přístup používá viditelné příkazy z tohoto seznamu jako výchozí viditelné příkazy při prvním spuštění aplikace uživatelem. Po přidání všech požadovaných příkazů zavolejte [CMFCRibbonBar::SetQuickAccessDefaultState](../../mfc/reference/cmfcribbonbar-class.md#setquickaccessdefaultstate) a nastavte tuto instanci jako výchozí stav panelu nástrojů Rychlý přístup na tomto panelu pásu karet.
 
-##  <a name="copyfrom"></a>  CMFCRibbonQuickAccessToolBarDefaultState::CopyFrom
+## <a name="cmfcribbonquickaccesstoolbardefaultstatecopyfrom"></a><a name="copyfrom"></a>CMFCRibbonRibbonQuickAccessToolBarDefaultState::CopyFrom
 
-Kopíruje vlastnosti z jednoho panelu nástrojů Rychlý přístup do jiného.
+Zkopíruje vlastnosti jednoho panelu nástrojů Rychlý přístup do jiného.
 
 ```
 void CopyFrom(const CMFCRibbonQuickAccessToolBarDefaultState& src);
@@ -98,15 +98,15 @@ void CopyFrom(const CMFCRibbonQuickAccessToolBarDefaultState& src);
 ### <a name="parameters"></a>Parametry
 
 *src*<br/>
-[in] Odkaz na zdroj `CMFCRibbonQuickAccessToolBarDefaultState` objektu, který chcete kopírovat.
+[v] Odkaz na zdrojový `CMFCRibbonQuickAccessToolBarDefaultState` objekt, ze který chcete kopírovat.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda zkopíruje každý příkaz ze zdroje `CMFCRibbonQuickAccessToolBarDefaultState` do tohoto objektu pomocí [CMFCRibbonQuickAccessToolBarDefaultState::AddCommand](#addcommand) metody.
+Tato metoda zkopíruje každý `CMFCRibbonQuickAccessToolBarDefaultState` příkaz ze zdrojového objektu do tohoto objektu pomocí metody [CMFCRibbonQuickAccessToolBarDefaultState::AddCommand.](#addcommand)
 
-##  <a name="cmfcribbonquickaccesstoolbardefaultstate"></a>  CMFCRibbonQuickAccessToolBarDefaultState::CMFCRibbonQuickAccessToolBarDefaultState
+## <a name="cmfcribbonquickaccesstoolbardefaultstatecmfcribbonquickaccesstoolbardefaultstate"></a><a name="cmfcribbonquickaccesstoolbardefaultstate"></a>CMFCRibbonRibbonQuickAccessToolBarDefaultState:::CMFCRibbonQuickAccessToolBarDefaultState
 
-Vytvoří výchozí objekt stav panelu nástrojů Rychlý přístup.
+Vytvoří výchozí objekt stavu panelu nástrojů Rychlý přístup.
 
 ```
 CMFCRibbonQuickAccessToolBarDefaultState();
@@ -114,11 +114,11 @@ CMFCRibbonQuickAccessToolBarDefaultState();
 
 ### <a name="remarks"></a>Poznámky
 
-Ve výchozím nastavení, seznam příkazů, které novou instanci [CMFRibbonQuickAccessToolBarDefaultState](../../mfc/reference/cmfcribbonquickaccesstoolbardefaultstate-class.md) obsahuje je prázdný.
+Ve výchozím nastavení je seznam příkazů, které nová instance [CMFRibbonQuickAccessToolDefaultState](../../mfc/reference/cmfcribbonquickaccesstoolbardefaultstate-class.md) obsahuje, prázdný.
 
-##  <a name="removeall"></a>  CMFCRibbonQuickAccessToolBarDefaultState::RemoveAll
+## <a name="cmfcribbonquickaccesstoolbardefaultstateremoveall"></a><a name="removeall"></a>CMFCRibbonRibbonQuickAccessToolBarDefaultState::RemoveAll
 
-Vymaže seznam výchozích příkazů v panelu nástrojů Rychlý přístup.
+Vymaže seznam výchozích příkazů na panelu nástrojů Rychlý přístup.
 
 ```
 void RemoveAll();
@@ -126,9 +126,9 @@ void RemoveAll();
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce se odebere z této instance všechny příkazy, které předchozí volání [CMFCRibbonQuickAccessToolBarDefaultState::AddCommand](#addcommand) přidán.
+Tato funkce odebere z této instance všechny příkazy, které předchozí volání [CMFCRibbonQuickAccessToolBarDefaultState::AddCommand](#addcommand) přidána.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>

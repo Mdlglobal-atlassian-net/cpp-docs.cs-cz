@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CD2DEllipse [MFC], CD2DEllipse
 ms.assetid: e9f02f54-acf2-427e-b349-db50cd9a77df
-ms.openlocfilehash: 21087682d40dac521cc949a39ef4b1aab23e7d71
-ms.sourcegitcommit: e10a5feea193c249ddc5a6faba48e7c6d8784e73
+ms.openlocfilehash: 82ad2fbfb8558486134f85d7ec9bcaa6eb4e7507
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70177210"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81369262"
 ---
 # <a name="cd2dellipse-class"></a>CD2DEllipse – třída
 
@@ -29,9 +29,9 @@ class CD2DEllipse : public D2D1_ELLIPSE;
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CD2DEllipse::CD2DEllipse](#cd2dellipse)|Přetíženo. Vytvoří objekt z `D2D1_ELLIPSE`objektu. `CD2DEllipse`|
+|[CD2DEllipse::CD2DEllipse](#cd2dellipse)|Přetíženo. Vytvoří `CD2DEllipse` objekt z `D2D1_ELLIPSE` objektu.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -41,9 +41,9 @@ class CD2DEllipse : public D2D1_ELLIPSE;
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxrendertarget. h
+**Záhlaví:** afxrendertarget.h
 
-##  <a name="cd2dellipse"></a>CD2DEllipse::CD2DEllipse
+## <a name="cd2dellipsecd2dellipse"></a><a name="cd2dellipse"></a>CD2DEllipse::CD2DEllipse
 
 Vytvoří objekt CD2DEllipse z objektu CD2DRectF.
 
@@ -59,18 +59,18 @@ CD2DEllipse(
 
 ### <a name="parameters"></a>Parametry
 
-*OBD*<br/>
+*Rect*<br/>
 zdrojový obdélník
 
-*elipsy*<br/>
-Elipsa zdrojového kódu
+*ellipse*<br/>
+zdrojová elipsa
 
 *ptCenter*<br/>
-Středový bod elipsy
+Středový bod elipsy.
 
 *sizeRadius*<br/>
-X-RADIUS a Y-poloměr elipsy.
+Poloměr X a Poloměr Y elipsy.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Třídy](../../mfc/reference/mfc-classes.md)

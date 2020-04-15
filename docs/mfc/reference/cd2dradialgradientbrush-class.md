@@ -1,5 +1,5 @@
 ---
-title: Cd2dradialgradientbrush – třída
+title: CD2DRadialGradientBrush – třída
 ms.date: 11/04/2016
 f1_keywords:
 - CD2DRadialGradientBrush
@@ -38,14 +38,14 @@ helpviewer_keywords:
 - CD2DRadialGradientBrush [MFC], m_pRadialGradientBrush
 - CD2DRadialGradientBrush [MFC], m_RadialGradientBrushProperties
 ms.assetid: 6c76d84a-d831-4ee2-96f1-82c1f5b0d6a9
-ms.openlocfilehash: 22029ebcf8cf519571e81e11c84de146c9d54b26
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aca9606271040e5c5c9aee81be0a08b64cf2bab7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396324"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81369134"
 ---
-# <a name="cd2dradialgradientbrush-class"></a>Cd2dradialgradientbrush – třída
+# <a name="cd2dradialgradientbrush-class"></a>CD2DRadialGradientBrush – třída
 
 Obálka pro ID2D1RadialGradientBrush.
 
@@ -59,47 +59,47 @@ class CD2DRadialGradientBrush : public CD2DGradientBrush;
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CD2DRadialGradientBrush::CD2DRadialGradientBrush](#cd2dradialgradientbrush)|Vytvoří objekt cd2dlineargradientbrush –.|
-|[CD2DRadialGradientBrush::~CD2DRadialGradientBrush](#_dtorcd2dradialgradientbrush)|Destruktor. Volá se, když se likviduje objektu D2D štětec paprskového přechodu.|
+|[CD2DRadialGradientBrush::CD2DRadialGradientBrush](#cd2dradialgradientbrush)|Vytvoří objekt CD2DLinearGradientBrush.|
+|[CD2DRadialGradientBrush::~CD2DRadialGradientBrush](#_dtorcd2dradialgradientbrush)|Destruktor. Nazývá se při zničení objektu stopy kruhového přechodu D2D.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CD2DRadialGradientBrush::Attach](#attach)|Bude k obrazci existujících prostředků rozhraní pro objekt|
-|[CD2DRadialGradientBrush::Create](#create)|Vytvoří cd2dradialgradientbrush –. (Přepíše [CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create).)|
-|[CD2DRadialGradientBrush::Destroy](#destroy)|Odstraní objekt cd2dradialgradientbrush –. (Přepíše [CD2DGradientBrush::Destroy](../../mfc/reference/cd2dgradientbrush-class.md#destroy).)|
-|[CD2DRadialGradientBrush::Detach](#detach)|Odpojí prostředků rozhraní z objektu|
-|[CD2DRadialGradientBrush::Get](#get)|Vrátí ID2D1RadialGradientBrush rozhraní|
-|[CD2DRadialGradientBrush::GetCenter](#getcenter)|Načte centra přechodu elipsa|
-|[CD2DRadialGradientBrush::GetGradientOriginOffset](#getgradientoriginoffset)|Načte posun počátek přechodu vzhledem k přechodu elipsa center|
-|[CD2DRadialGradientBrush::GetRadiusX](#getradiusx)|Načte x poloměr elipsy přechodu|
-|[CD2DRadialGradientBrush::GetRadiusY](#getradiusy)|Načte poloměr y přechodu elipsa|
-|[CD2DRadialGradientBrush::SetCenter](#setcenter)|Určuje centra přechodu elipsy v souřadnicového prostoru štětec|
-|[CD2DRadialGradientBrush::SetGradientOriginOffset](#setgradientoriginoffset)|Určuje posun počátek přechodu vzhledem k přechodu elipsa center|
-|[CD2DRadialGradientBrush::SetRadiusX](#setradiusx)|Určuje poloměr x přechodu elipsy v souřadnicového prostoru štětec|
-|[CD2DRadialGradientBrush::SetRadiusY](#setradiusy)|Určuje poloměr y přechodu elipsy v souřadnicového prostoru štětec|
+|[CD2DRadialGradientBrush::Připojit](#attach)|Připojí k objektu existující rozhraní prostředků.|
+|[CD2DRadialGradientBrush::Vytvořit](#create)|Vytvoří CD2DRadialGradientBrush. (Přepíše [CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create).)|
+|[CD2DRadialGradientBrush::Destroy](#destroy)|Zničí objekt CD2DRadialGradientBrush. (Přepíše [CD2DGradientBrush::Destroy](../../mfc/reference/cd2dgradientbrush-class.md#destroy).)|
+|[CD2DRadialGradientBrush::Detach](#detach)|Odpojí rozhraní prostředků od objektu.|
+|[CD2DRadialGradientBrush::Získat](#get)|Vrátí rozhraní ID2D1RadialGradientBrush.|
+|[CD2DRadialGradientBrush::GetCenter](#getcenter)|Načte střed elipsy přechodu.|
+|[CD2DRadialGradientBrush::GetGradientOriginOffset](#getgradientoriginoffset)|Načte posun počátku přechodu vzhledem ke středu elipsy přechodu.|
+|[CD2DRadialGradientBrush::GetRadiusX](#getradiusx)|Načte poloměr x elipsy přechodu.|
+|[CD2DRadialGradientBrush::GetRadiusY](#getradiusy)|Načte poloměr y elipsy přechodu.|
+|[CD2DRadialGradientBrush::SetCenter](#setcenter)|Určuje střed elipsy přechodu v souřadnicovém prostoru stopy.|
+|[CD2DRadialGradientBrush::SetGradientOriginOffset](#setgradientoriginoffset)|Určuje odsazení počátku přechodu vzhledem ke středu elipsy přechodu.|
+|[CD2DRadialGradientBrush::SetRadiusX](#setradiusx)|Určuje x-poloměr elipsy přechodu v souřadnicovém prostoru stopy.|
+|[CD2DRadialGradientBrush::SetRadiusY](#setradiusy)|Určuje poloměr y elipsy přechodu v souřadnicovém prostoru stopy.|
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CD2DRadialGradientBrush::Operator ID2D1RadialGradientBrush *](#operator_id2d1radialgradientbrush_star)|Vrátí ID2D1RadialGradientBrush rozhraní|
+|[CD2DRadialGradientBrush::operátor ID2D1RadialGradientBrush*](#operator_id2d1radialgradientbrush_star)|Vrátí rozhraní ID2D1RadialGradientBrush.|
 
-### <a name="protected-data-members"></a>Chránění členové dat
+### <a name="protected-data-members"></a>Členové chráněných dat
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CD2DRadialGradientBrush::m_pRadialGradientBrush](#m_pradialgradientbrush)|Ukazatel ID2D1RadialGradientBrush.|
-|[CD2DRadialGradientBrush::m_RadialGradientBrushProperties](#m_radialgradientbrushproperties)|System center, posun přechodu původu a x-radius a poloměr y štětce vaší přechodu.|
+|[CD2DRadialGradientBrush::m_pRadialGradientBrush](#m_pradialgradientbrush)|Ukazatel na ID2D1RadialGradientBrush.|
+|[CD2DRadialGradientBrush::m_RadialGradientBrushProperties](#m_radialgradientbrushproperties)|Střed, odsazení počátku přechodu a poloměr x a poloměr y přechodu stopy.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObjekt](../../mfc/reference/cobject-class.md)
 
-[CD2DResource](../../mfc/reference/cd2dresource-class.md)
+[Zdroj CD2D](../../mfc/reference/cd2dresource-class.md)
 
 [CD2DBrush](../../mfc/reference/cd2dbrush-class.md)
 
@@ -111,17 +111,17 @@ class CD2DRadialGradientBrush : public CD2DGradientBrush;
 
 **Záhlaví:** afxrendertarget.h
 
-##  <a name="_dtorcd2dradialgradientbrush"></a>  Cd2dradialgradientbrush –:: ~ cd2dradialgradientbrush –
+## <a name="cd2dradialgradientbrushcd2dradialgradientbrush"></a><a name="_dtorcd2dradialgradientbrush"></a>CD2DRadialGradientBrush::~CD2DRadialGradientBrush
 
-Destruktor. Volá se, když se likviduje objektu D2D štětec paprskového přechodu.
+Destruktor. Nazývá se při zničení objektu stopy kruhového přechodu D2D.
 
 ```
 virtual ~CD2DRadialGradientBrush();
 ```
 
-##  <a name="attach"></a>  CD2DRadialGradientBrush::Attach
+## <a name="cd2dradialgradientbrushattach"></a><a name="attach"></a>CD2DRadialGradientBrush::Připojit
 
-Bude k obrazci existujících prostředků rozhraní pro objekt
+Připojí k objektu existující rozhraní prostředků.
 
 ```
 void Attach(ID2D1RadialGradientBrush* pResource);
@@ -129,12 +129,12 @@ void Attach(ID2D1RadialGradientBrush* pResource);
 
 ### <a name="parameters"></a>Parametry
 
-*pResource*<br/>
-Rozhraní existující prostředek. Nesmí být NULL.
+*pZdroj*<br/>
+Existující rozhraní prostředků. Nelze získat hodnotu NULL.
 
-##  <a name="cd2dradialgradientbrush"></a>  CD2DRadialGradientBrush::CD2DRadialGradientBrush
+## <a name="cd2dradialgradientbrushcd2dradialgradientbrush"></a><a name="cd2dradialgradientbrush"></a>CD2DRadialGradientBrush::CD2DRadialGradientBrush
 
-Vytvoří objekt cd2dlineargradientbrush –.
+Vytvoří objekt CD2DLinearGradientBrush.
 
 ```
 CD2DRadialGradientBrush(
@@ -151,32 +151,32 @@ CD2DRadialGradientBrush(
 ### <a name="parameters"></a>Parametry
 
 *pParentTarget*<br/>
-Ukazatel na cíl vykreslování.
+Ukazatel na cíl vykreslení.
 
-*gradientStops*<br/>
+*přechodové zarážky*<br/>
 Ukazatel na pole D2D1_GRADIENT_STOP struktur.
 
 *gradientStopsCount*<br/>
-Hodnota větší než nebo rovna 1, která určuje počet Přechodové zarážky v poli gradientStops.
+Hodnota větší nebo rovna 1, která určuje počet zarážek přechodu v poli gradientStops.
 
-*RadialGradientBrushProperties*<br/>
-System center, posun přechodu původu a x-radius a poloměr y štětce vaší přechodu.
+*Vlastnosti radiálního gradientu*<br/>
+Střed, odsazení počátku přechodu a poloměr x a poloměr y přechodu stopy.
 
-*colorInterpolationGamma*<br/>
-Místo barvou, které se provádí interpolaci mezi Přechodové zarážky.
+*barvaInterpolaceGamma*<br/>
+Prostor, ve kterém se provádí interpolace barev mezi přechodem.
 
 *extendMode*<br/>
-Chování přechodu mimo rozsah [0,1] normalizovaná.
+Chování přechodu mimo [0,1] normalizované oblasti.
 
-*pBrushProperties*<br/>
-Ukazatel na krytí a transformace štětce.
+*pVlastnosti brushu*<br/>
+Ukazatel na krytí a transformaci stopy.
 
 *bAutoDestroy*<br/>
-Označuje, že bude objekt zničen. vlastník (pParentTarget).
+Označuje, že objekt bude zničen vlastníkem (pParentTarget).
 
-##  <a name="create"></a>  CD2DRadialGradientBrush::Create
+## <a name="cd2dradialgradientbrushcreate"></a><a name="create"></a>CD2DRadialGradientBrush::Vytvořit
 
-Vytvoří cd2dradialgradientbrush –.
+Vytvoří CD2DRadialGradientBrush.
 
 ```
 virtual HRESULT Create(CRenderTarget* pRenderTarget);
@@ -185,23 +185,23 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget);
 ### <a name="parameters"></a>Parametry
 
 *pRenderTarget*<br/>
-Ukazatel na cíl vykreslování.
+Ukazatel na cíl vykreslení.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud metoda uspěje, vrátí hodnotu S_OK. V opačném případě vrátí kód chyby HRESULT.
+Pokud je metoda úspěšná, vrátí S_OK. V opačném případě vrátí kód chyby HRESULT.
 
-##  <a name="destroy"></a>  CD2DRadialGradientBrush::Destroy
+## <a name="cd2dradialgradientbrushdestroy"></a><a name="destroy"></a>CD2DRadialGradientBrush::Destroy
 
-Odstraní objekt cd2dradialgradientbrush –.
+Zničí objekt CD2DRadialGradientBrush.
 
 ```
 virtual void Destroy();
 ```
 
-##  <a name="detach"></a>  CD2DRadialGradientBrush::detach
+## <a name="cd2dradialgradientbrushdetach"></a><a name="detach"></a>CD2DRadialGradientBrush::Detach
 
-Odpojí prostředků rozhraní z objektu
+Odpojí rozhraní prostředků od objektu.
 
 ```
 ID2D1RadialGradientBrush* Detach();
@@ -209,11 +209,11 @@ ID2D1RadialGradientBrush* Detach();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na rozhraní odpojit prostředek.
+Ukazatel na rozhraní odpojeného prostředku.
 
-##  <a name="get"></a>  CD2DRadialGradientBrush::Get
+## <a name="cd2dradialgradientbrushget"></a><a name="get"></a>CD2DRadialGradientBrush::Získat
 
-Vrátí ID2D1RadialGradientBrush rozhraní
+Vrátí rozhraní ID2D1RadialGradientBrush.
 
 ```
 ID2D1RadialGradientBrush* Get();
@@ -221,11 +221,11 @@ ID2D1RadialGradientBrush* Get();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na rozhraní ID2D1RadialGradientBrush nebo hodnota NULL, pokud objekt ještě není inicializován.
+Ukazatel na rozhraní ID2D1RadialGradientBrush nebo NULL, pokud objekt ještě není inicializován.
 
-##  <a name="getcenter"></a>  CD2DRadialGradientBrush::GetCenter
+## <a name="cd2dradialgradientbrushgetcenter"></a><a name="getcenter"></a>CD2DRadialGradientBrush::GetCenter
 
-Načte centra přechodu elipsa
+Načte střed elipsy přechodu.
 
 ```
 CD2DPointF GetCenter() const;
@@ -233,11 +233,11 @@ CD2DPointF GetCenter() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-System center přechodu elipsy. Tato hodnota je vyjádřena v souřadnicového prostoru štětec
+Střed elipsy přechodu. Tato hodnota je vyjádřena v souřadnicovém prostoru stopy.
 
-##  <a name="getgradientoriginoffset"></a>  CD2DRadialGradientBrush::GetGradientOriginOffset
+## <a name="cd2dradialgradientbrushgetgradientoriginoffset"></a><a name="getgradientoriginoffset"></a>CD2DRadialGradientBrush::GetGradientOriginOffset
 
-Načte posun počátek přechodu vzhledem k přechodu elipsa center
+Načte posun počátku přechodu vzhledem ke středu elipsy přechodu.
 
 ```
 CD2DPointF GetGradientOriginOffset() const;
@@ -245,11 +245,11 @@ CD2DPointF GetGradientOriginOffset() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Posun počátek přechodu z centra přechodu elipsy. Tato hodnota je vyjádřena v souřadnicového prostoru štětec
+Odsazení počátku přechodu od středu elipsy přechodu. Tato hodnota je vyjádřena v souřadnicovém prostoru stopy.
 
-##  <a name="getradiusx"></a>  CD2DRadialGradientBrush::GetRadiusX
+## <a name="cd2dradialgradientbrushgetradiusx"></a><a name="getradiusx"></a>CD2DRadialGradientBrush::GetRadiusX
 
-Načte x poloměr elipsy přechodu
+Načte poloměr x elipsy přechodu.
 
 ```
 FLOAT GetRadiusX() const;
@@ -257,11 +257,11 @@ FLOAT GetRadiusX() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-X poloměr elipsy přechodu. Tato hodnota je vyjádřena v souřadnicového prostoru štětec
+X-poloměr elipsy přechodu. Tato hodnota je vyjádřena v souřadnicovém prostoru stopy.
 
-##  <a name="getradiusy"></a>  CD2DRadialGradientBrush::GetRadiusY
+## <a name="cd2dradialgradientbrushgetradiusy"></a><a name="getradiusy"></a>CD2DRadialGradientBrush::GetRadiusY
 
-Načte poloměr y přechodu elipsa
+Načte poloměr y elipsy přechodu.
 
 ```
 FLOAT GetRadiusY() const;
@@ -269,27 +269,27 @@ FLOAT GetRadiusY() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Y poloměr elipsy přechodu. Tato hodnota je vyjádřena v souřadnicového prostoru štětec
+Poloměr y elipsy přechodu. Tato hodnota je vyjádřena v souřadnicovém prostoru stopy.
 
-##  <a name="m_pradialgradientbrush"></a>  CD2DRadialGradientBrush::m_pRadialGradientBrush
+## <a name="cd2dradialgradientbrushm_pradialgradientbrush"></a><a name="m_pradialgradientbrush"></a>CD2DRadialGradientBrush::m_pRadialGradientBrush
 
-Ukazatel ID2D1RadialGradientBrush.
+Ukazatel na ID2D1RadialGradientBrush.
 
 ```
 ID2D1RadialGradientBrush* m_pRadialGradientBrush;
 ```
 
-##  <a name="m_radialgradientbrushproperties"></a>  CD2DRadialGradientBrush::m_RadialGradientBrushProperties
+## <a name="cd2dradialgradientbrushm_radialgradientbrushproperties"></a><a name="m_radialgradientbrushproperties"></a>CD2DRadialGradientBrush::m_RadialGradientBrushProperties
 
-System center, posun přechodu původu a x-radius a poloměr y štětce vaší přechodu.
+Střed, odsazení počátku přechodu a poloměr x a poloměr y přechodu stopy.
 
 ```
 D2D1_RADIAL_GRADIENT_BRUSH_PROPERTIES m_RadialGradientBrushProperties;
 ```
 
-##  <a name="operator_id2d1radialgradientbrush_star"></a>  CD2DRadialGradientBrush::Operator ID2D1RadialGradientBrush *
+## <a name="cd2dradialgradientbrushoperator-id2d1radialgradientbrush"></a><a name="operator_id2d1radialgradientbrush_star"></a>CD2DRadialGradientBrush::operátor ID2D1RadialGradientBrush*
 
-Vrátí ID2D1RadialGradientBrush rozhraní
+Vrátí rozhraní ID2D1RadialGradientBrush.
 
 ```
 operator ID2D1RadialGradientBrush*();
@@ -297,11 +297,11 @@ operator ID2D1RadialGradientBrush*();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na rozhraní ID2D1RadialGradientBrush nebo hodnota NULL, pokud objekt ještě není inicializován.
+Ukazatel na rozhraní ID2D1RadialGradientBrush nebo NULL, pokud objekt ještě není inicializován.
 
-##  <a name="setcenter"></a>  CD2DRadialGradientBrush::SetCenter
+## <a name="cd2dradialgradientbrushsetcenter"></a><a name="setcenter"></a>CD2DRadialGradientBrush::SetCenter
 
-Určuje centra přechodu elipsy v souřadnicového prostoru štětec
+Určuje střed elipsy přechodu v souřadnicovém prostoru stopy.
 
 ```
 void SetCenter(CD2DPointF point);
@@ -309,12 +309,12 @@ void SetCenter(CD2DPointF point);
 
 ### <a name="parameters"></a>Parametry
 
-*point*<br/>
-System center přechodu elipsy v souřadnicového prostoru štětec
+*Bod*<br/>
+Střed elipsy přechodu v souřadnicovém prostoru stopy
 
-##  <a name="setgradientoriginoffset"></a>  CD2DRadialGradientBrush::SetGradientOriginOffset
+## <a name="cd2dradialgradientbrushsetgradientoriginoffset"></a><a name="setgradientoriginoffset"></a>CD2DRadialGradientBrush::SetGradientOriginOffset
 
-Určuje posun počátek přechodu vzhledem k přechodu elipsa center
+Určuje odsazení počátku přechodu vzhledem ke středu elipsy přechodu.
 
 ```
 void SetGradientOriginOffset(CD2DPointF gradientOriginOffset);
@@ -323,11 +323,11 @@ void SetGradientOriginOffset(CD2DPointF gradientOriginOffset);
 ### <a name="parameters"></a>Parametry
 
 *gradientOriginOffset*<br/>
-Posun počátek přechodu z centra přechodu elipsa
+Odsazení počátku přechodu od středu elipsy přechodu
 
-##  <a name="setradiusx"></a>  CD2DRadialGradientBrush::SetRadiusX
+## <a name="cd2dradialgradientbrushsetradiusx"></a><a name="setradiusx"></a>CD2DRadialGradientBrush::SetRadiusX
 
-Určuje poloměr x přechodu elipsy v souřadnicového prostoru štětec
+Určuje x-poloměr elipsy přechodu v souřadnicovém prostoru stopy.
 
 ```
 void SetRadiusX(FLOAT radiusX);
@@ -336,11 +336,11 @@ void SetRadiusX(FLOAT radiusX);
 ### <a name="parameters"></a>Parametry
 
 *radiusX*<br/>
-X poloměr elipsy přechodu. Tato hodnota je v souřadnicového prostoru štětec
+X-poloměr elipsy přechodu. Tato hodnota je v souřadnicovém prostoru stopy.
 
-##  <a name="setradiusy"></a>  CD2DRadialGradientBrush::SetRadiusY
+## <a name="cd2dradialgradientbrushsetradiusy"></a><a name="setradiusy"></a>CD2DRadialGradientBrush::SetRadiusY
 
-Určuje poloměr y přechodu elipsy v souřadnicového prostoru štětec
+Určuje poloměr y elipsy přechodu v souřadnicovém prostoru stopy.
 
 ```
 void SetRadiusY(FLOAT radiusY);
@@ -349,8 +349,8 @@ void SetRadiusY(FLOAT radiusY);
 ### <a name="parameters"></a>Parametry
 
 *radiusY*<br/>
-Y poloměr elipsy přechodu. Tato hodnota je v souřadnicového prostoru štětec
+Poloměr y elipsy přechodu. Tato hodnota je v souřadnicovém prostoru stopy.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Třídy](../../mfc/reference/mfc-classes.md)

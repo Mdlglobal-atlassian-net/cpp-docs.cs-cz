@@ -1,5 +1,5 @@
 ---
-title: Cnotsupportedexception – třída
+title: CNotSupportedException – třída
 ms.date: 11/04/2016
 f1_keywords:
 - CNotSupportedException
@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CNotSupportedException [MFC], CNotSupportedException
 ms.assetid: e517391b-eb94-4c39-ae32-87b45bf7d624
-ms.openlocfilehash: c3af508cd39e277ca4ae0a9aad5e639f66edc53b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b859b939baef018e69b245e597eea90e608253ca
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407923"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81363196"
 ---
-# <a name="cnotsupportedexception-class"></a>Cnotsupportedexception – třída
+# <a name="cnotsupportedexception-class"></a>CNotSupportedException – třída
 
-Představuje výjimku, která je výsledkem požadavku nepodporované funkce.
+Představuje výjimku, která je výsledkem požadavku na nepodporovanou funkci.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -29,21 +29,21 @@ class CNotSupportedException : public CSimpleException
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CNotSupportedException::CNotSupportedException](#cnotsupportedexception)|Vytvoří `CNotSupportedException` objektu.|
+|[CNotSupportedException::CNotSupportedException](#cnotsupportedexception)|Vytvoří `CNotSupportedException` objekt.|
 
 ## <a name="remarks"></a>Poznámky
 
-Žádné další kvalifikace je nezbytné nebo je to možné.
+Žádná další kvalifikace není nutná ani možná.
 
-Další informace o používání `CNotSupportedException`, najdete v článku [zpracování výjimek (MFC)](../../mfc/exception-handling-in-mfc.md).
+Další informace o `CNotSupportedException`použití naleznete v článku [Zpracování výjimek (MFC).](../../mfc/exception-handling-in-mfc.md)
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObjekt](../../mfc/reference/cobject-class.md)
 
-[Cexception –](../../mfc/reference/cexception-class.md)
+[CException](../../mfc/reference/cexception-class.md)
 
 [CSimpleException](../../mfc/reference/csimpleexception-class.md)
 
@@ -53,9 +53,9 @@ Další informace o používání `CNotSupportedException`, najdete v článku [
 
 **Záhlaví:** afx.h
 
-##  <a name="cnotsupportedexception"></a>  CNotSupportedException::CNotSupportedException
+## <a name="cnotsupportedexceptioncnotsupportedexception"></a><a name="cnotsupportedexception"></a>CNotSupportedException::CNotSupportedException
 
-Vytvoří `CNotSupportedException` objektu.
+Vytvoří `CNotSupportedException` objekt.
 
 ```
 CNotSupportedException();
@@ -63,9 +63,9 @@ CNotSupportedException();
 
 ### <a name="remarks"></a>Poznámky
 
-Nepoužívejte tento konstruktor přímo, ale místo toho volat funkci globální [afxthrownotsupportedexception –](exception-processing.md#afxthrownotsupportedexception). Další informace o zpracování výjimek naleznete v článku [zpracování výjimek v prostředí MFC](../exception-handling-in-mfc.md).
+Nepoužívejte tento konstruktor přímo, ale spíše volat globální funkce [AfxThrowNotSupportedException](exception-processing.md#afxthrownotsupportedexception). Další informace o zpracování výjimek naleznete v článku [Zpracování výjimek v knihovně MFC](../exception-handling-in-mfc.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [CException – třída](cexception-class.md)<br/>
 [Graf hierarchie](../hierarchy-chart.md)

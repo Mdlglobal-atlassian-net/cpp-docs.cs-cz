@@ -1,5 +1,5 @@
 ---
-title: CMFCCustomColorsPropertyPage Class
+title: CMFCCustomColorsPropertyPage – třída
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCCustomColorsPropertyPage
@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCCustomColorsPropertyPage [MFC], Setup
 ms.assetid: 46a45ba2-1fda-440d-8018-d4dcd44f5816
-ms.openlocfilehash: b28711991835dd14929e5387709046c3867c715e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 01b73f44fcf26a820e43eb87a65e99c2ec186e64
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403695"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367668"
 ---
-# <a name="cmfccustomcolorspropertypage-class"></a>CMFCCustomColorsPropertyPage Class
+# <a name="cmfccustomcolorspropertypage-class"></a>CMFCCustomColorsPropertyPage – třída
 
-Představuje stránku vlastností, která můžete vybrat vlastní barvy v dialogovém okně barev.
+Představuje stránku vlastností, která může vybrat vlastní barvy v dialogovém okně barvy.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -31,49 +31,49 @@ class CMFCCustomColorsPropertyPage : public CPropertyPage
 
 |||
 |-|-|
-|Název|Popis|
+|Name (Název)|Popis|
 |`CMFCCustomColorsPropertyPage::CMFCCustomColorsPropertyPage`|Výchozí konstruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
 |||
 |-|-|
-|Název|Popis|
-|`CMFCCustomColorsPropertyPage::CreateObject`|Rozhraní používá k vytvoření dynamické instance tohoto typu třídy.|
-|`CMFCCustomColorsPropertyPage::GetThisClass`|Používá k získání ukazatele na rámec [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objekt, který je přidružený k typu třídy.|
-|[CMFCCustomColorsPropertyPage::Setup](#setup)|Nastaví barvu součástí na stránce vlastností.|
+|Name (Název)|Popis|
+|`CMFCCustomColorsPropertyPage::CreateObject`|Používá rámci k vytvoření dynamické instance tohoto typu třídy.|
+|`CMFCCustomColorsPropertyPage::GetThisClass`|Používá rozhraní k získání ukazatele na [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objektu, který je přidružen k tomuto typu třídy.|
+|[CMFCCustomColorsPropertyPage::Instalace](#setup)|Nastaví barevné komponenty stránky vlastností.|
 
 ### <a name="remarks"></a>Poznámky
 
-`CMFCColorDialog` Třída používá tuto třídu zobrazíte na stránce vlastností vlastní barvy. Další informace o `CMFCColorDialog`, naleznete v tématu [cmfccolordialog – třída](../../mfc/reference/cmfccolordialog-class.md).
+Třída `CMFCColorDialog` používá tuto třídu k zobrazení vlastní stránky vlastností color. Další informace `CMFCColorDialog`naleznete v tématu [CMFCColorDialog Class](../../mfc/reference/cmfccolordialog-class.md).
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak vytvořit `CMFCCustomColorsPropertyPage` objektu a nastavit barvu součástí na stránce vlastností.
+Následující příklad ukazuje, jak `CMFCCustomColorsPropertyPage` vytvořit objekt a nastavit barevné komponenty stránky vlastností.
 
 [!code-cpp[NVC_MFC_RibbonApp#35](../../mfc/reference/codesnippet/cpp/cmfccustomcolorspropertypage-class_1.cpp)]
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObjekt](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[CCmdCíl](../../mfc/reference/ccmdtarget-class.md)
 
-[CWnd](../../mfc/reference/cwnd-class.md)
+[Cwnd](../../mfc/reference/cwnd-class.md)
 
-[CDialog](../../mfc/reference/cdialog-class.md)
+[Cdialog](../../mfc/reference/cdialog-class.md)
 
-[CPropertyPage](../../mfc/reference/cpropertypage-class.md)
+[Stránka CPropertyPage](../../mfc/reference/cpropertypage-class.md)
 
-[CMFCCustomColorsPropertyPage](../../mfc/reference/cmfccustomcolorspropertypage-class.md)
+[CmFCCustomColorsPropertyPage](../../mfc/reference/cmfccustomcolorspropertypage-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
 **Záhlaví:** afxcustomcolorspropertypage.h
 
-##  <a name="setup"></a>  CMFCCustomColorsPropertyPage::Setup
+## <a name="cmfccustomcolorspropertypagesetup"></a><a name="setup"></a>CMFCCustomColorsPropertyPage::Instalace
 
-Nastaví barvu součástí na stránce vlastností.
+Nastaví barevné komponenty stránky vlastností.
 
 ```
 void Setup(
@@ -87,17 +87,17 @@ void Setup(
 |||
 |-|-|
 |Parametr|Popis|
-|*R*|[in] Červené složku hodnoty RGB.|
-|*G*|[in] Zelená složku hodnoty RGB.|
-|*B*|[in] Modrou složku hodnoty RGB.|
+|*R*|[v] Červená součást hodnoty RGB.|
+|*G*|[v] Zelená součást hodnoty RGB.|
+|*B*|[v] Modrá součást hodnoty RGB.|
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda aktualizuje aktuální RGB a přidružené HLS (hue, světlosti a sytost) hodnot barev stránky vlastností. [CMFCColorDialog::SetPageTwo](../../mfc/reference/cmfccolordialog-class.md#setpagetwo) metoda volá tuto metodu při rozhraní inicializuje dialogové okno barev nebo uživatel stiskne levé tlačítko myši. Další informace o `CMFCColorDialog`, naleznete v tématu [cmfccolordialog – třída](../../mfc/reference/cmfccolordialog-class.md).
+Tato metoda aktualizuje aktuální RGB a přidružené HODNOTY barev HLS (odstín, světlost a sytost) stránky vlastností. Metoda [CMFCColorDialog::SetPageTwo](../../mfc/reference/cmfccolordialog-class.md#setpagetwo) volá tuto metodu, když rozhraní inicializuje dialogové okno barva nebo uživatel stiskne levé tlačítko myši. Další informace `CMFCColorDialog`naleznete v tématu [CMFCColorDialog Class](../../mfc/reference/cmfccolordialog-class.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>
-[CMFCColorDialog – třída](../../mfc/reference/cmfccolordialog-class.md)<br/>
+[Třída CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md)<br/>
 [CMFCStandardColorsPropertyPage – třída](../../mfc/reference/cmfcstandardcolorspropertypage-class.md)

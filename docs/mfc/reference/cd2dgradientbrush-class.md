@@ -1,5 +1,5 @@
 ---
-title: Cd2dgradientbrush – třída
+title: Třída CD2DGradientBrush
 ms.date: 03/27/2019
 f1_keywords:
 - CD2DGradientBrush
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - CD2DGradientBrush [MFC], m_extendMode
 - CD2DGradientBrush [MFC], m_pGradientStops
 ms.assetid: 5bf133e6-16b7-4e3a-845d-0ce63fafe5ec
-ms.openlocfilehash: 2e04d714e3479224cfc4e207b70483786be33db8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 861bc32382737bd6482a3d51eb8470bf834e8508
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62173376"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81369219"
 ---
-# <a name="cd2dgradientbrush-class"></a>Cd2dgradientbrush – třída
+# <a name="cd2dgradientbrush-class"></a>Třída CD2DGradientBrush
 
-Základní třída cd2dlineargradientbrush – a cd2dradialgradientbrush – třídy.
+Základní třída tříd cd2DLinearGradientBrush a třídy CD2DRadialGradientBrush.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -39,31 +39,31 @@ class CD2DGradientBrush : public CD2DBrush;
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CD2DGradientBrush::CD2DGradientBrush](#cd2dgradientbrush)|Vytvoří objekt cd2dgradientbrush –.|
-|[CD2DGradientBrush::~CD2DGradientBrush](#_dtorcd2dgradientbrush)|Destruktor. Volá se, když se likviduje objektu D2D štětce přechodu.|
+|[CD2DGradientBrush::CD2DGradientBrush](#cd2dgradientbrush)|Vytvoří objekt CD2DGradientBrush.|
+|[CD2DGradientBrush::~CD2DGradientBrush](#_dtorcd2dgradientbrush)|Destruktor. Nazývá se při zničení objektu stopy přechodu D2D.|
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CD2DGradientBrush::Destroy](#destroy)|Odstraní objekt cd2dgradientbrush –. (Přepíše [CD2DBrush::Destroy](../../mfc/reference/cd2dbrush-class.md#destroy).)|
+|[CD2DGradientBrush::Destroy](#destroy)|Zničí objekt CD2DGradientBrush. (Přepíše [CD2DBrush::Destroy](../../mfc/reference/cd2dbrush-class.md#destroy).)|
 
-### <a name="protected-data-members"></a>Chránění členové dat
+### <a name="protected-data-members"></a>Členové chráněných dat
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CD2DGradientBrush::m_arGradientStops](#m_argradientstops)|Pole struktur D2D1_GRADIENT_STOP.|
-|[CD2DGradientBrush::m_colorInterpolationGamma](#m_colorinterpolationgamma)|Místo barvou, které se provádí interpolaci mezi Přechodové zarážky.|
-|[CD2DGradientBrush::m_extendMode](#m_extendmode)|Chování přechodu mimo rozsah [0,1] normalizovaná.|
+|[CD2DGradientBrush::m_arGradientStops](#m_argradientstops)|Pole D2D1_GRADIENT_STOP struktur.|
+|[CD2DGradientBrush::m_colorInterpolationGamma](#m_colorinterpolationgamma)|Prostor, ve kterém se provádí interpolace barev mezi přechodem.|
+|[CD2DGradientBrush::m_extendMode](#m_extendmode)|Chování přechodu mimo [0,1] normalizované oblasti.|
 |[CD2DGradientBrush::m_pGradientStops](#m_pgradientstops)|Ukazatel na pole D2D1_GRADIENT_STOP struktur.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObjekt](../../mfc/reference/cobject-class.md)
 
-[CD2DResource](../../mfc/reference/cd2dresource-class.md)
+[Zdroj CD2D](../../mfc/reference/cd2dresource-class.md)
 
 [CD2DBrush](../../mfc/reference/cd2dbrush-class.md)
 
@@ -73,17 +73,17 @@ class CD2DGradientBrush : public CD2DBrush;
 
 **Záhlaví:** afxrendertarget.h
 
-##  <a name="_dtorcd2dgradientbrush"></a>  CD2DGradientBrush::~CD2DGradientBrush
+## <a name="cd2dgradientbrushcd2dgradientbrush"></a><a name="_dtorcd2dgradientbrush"></a>CD2DGradientBrush::~CD2DGradientBrush
 
-Destruktor. Volá se, když se likviduje objektu D2D štětce přechodu.
+Destruktor. Nazývá se při zničení objektu stopy přechodu D2D.
 
 ```
 virtual ~CD2DGradientBrush();
 ```
 
-##  <a name="cd2dgradientbrush"></a>  CD2DGradientBrush::CD2DGradientBrush
+## <a name="cd2dgradientbrushcd2dgradientbrush"></a><a name="cd2dgradientbrush"></a>CD2DGradientBrush::CD2DGradientBrush
 
-Vytvoří objekt cd2dgradientbrush –.
+Vytvoří objekt CD2DGradientBrush.
 
 ```
 CD2DGradientBrush(
@@ -99,59 +99,59 @@ CD2DGradientBrush(
 ### <a name="parameters"></a>Parametry
 
 *pParentTarget*<br/>
-Ukazatel na cíl vykreslování.
+Ukazatel na cíl vykreslení.
 
-*gradientStops*<br/>
+*přechodové zarážky*<br/>
 Ukazatel na pole D2D1_GRADIENT_STOP struktur.
 
 *gradientStopsCount*<br/>
-Hodnota větší než nebo rovna 1, která určuje počet Přechodové zarážky v poli gradientStops.
+Hodnota větší nebo rovna 1, která určuje počet zarážek přechodu v poli gradientStops.
 
-*colorInterpolationGamma*<br/>
-Místo barvou, které se provádí interpolaci mezi Přechodové zarážky.
+*barvaInterpolaceGamma*<br/>
+Prostor, ve kterém se provádí interpolace barev mezi přechodem.
 
 *extendMode*<br/>
-Chování přechodu mimo rozsah [0,1] normalizovaná.
+Chování přechodu mimo [0,1] normalizované oblasti.
 
-*pBrushProperties*<br/>
-Ukazatel na krytí a transformace štětce.
+*pVlastnosti brushu*<br/>
+Ukazatel na krytí a transformaci stopy.
 
 *bAutoDestroy*<br/>
-Označuje, že bude objekt zničen. vlastník (pParentTarget).
+Označuje, že objekt bude zničen vlastníkem (pParentTarget).
 
-##  <a name="destroy"></a>  CD2DGradientBrush::Destroy
+## <a name="cd2dgradientbrushdestroy"></a><a name="destroy"></a>CD2DGradientBrush::Destroy
 
-Odstraní objekt cd2dgradientbrush –.
+Zničí objekt CD2DGradientBrush.
 
 ```
 virtual void Destroy();
 ```
 
-##  <a name="m_argradientstops"></a>  CD2DGradientBrush::m_arGradientStops
+## <a name="cd2dgradientbrushm_argradientstops"></a><a name="m_argradientstops"></a>CD2DGradientBrush::m_arGradientStops
 
-Pole struktur D2D1_GRADIENT_STOP.
+Pole D2D1_GRADIENT_STOP struktur.
 
 ```
 CArray<D2D1_GRADIENT_STOP, D2D1_GRADIENT_STOP> m_arGradientStops;
 ```
 
-##  <a name="m_colorinterpolationgamma"></a>  CD2DGradientBrush::m_colorInterpolationGamma
+## <a name="cd2dgradientbrushm_colorinterpolationgamma"></a><a name="m_colorinterpolationgamma"></a>CD2DGradientBrush::m_colorInterpolationGamma
 
-Místo barvou, které se provádí interpolaci mezi Přechodové zarážky.
+Prostor, ve kterém se provádí interpolace barev mezi přechodem.
 
 ```
 D2D1_GAMMA m_colorInterpolationGamma;
 ```
 
-##  <a name="m_extendmode"></a>  CD2DGradientBrush::m_extendMode
+## <a name="cd2dgradientbrushm_extendmode"></a><a name="m_extendmode"></a>CD2DGradientBrush::m_extendMode
 
-Chování přechodu mimo rozsah [0,1] normalizovaná.
+Chování přechodu mimo [0,1] normalizované oblasti.
 
 ```
 D2D1_EXTEND_MODE m_extendMode;
 ```
 
-##  <a name="m_pgradientstops"></a>  CD2DGradientBrush::m_pGradientStops
+## <a name="cd2dgradientbrushm_pgradientstops"></a><a name="m_pgradientstops"></a>CD2DGradientBrush::m_pGradientStops
 
 Ukazatel na pole D2D1_GRADIENT_STOP struktur.
 
@@ -159,6 +159,6 @@ Ukazatel na pole D2D1_GRADIENT_STOP struktur.
 ID2D1GradientStopCollection* m_pGradientStops;
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Třídy](../../mfc/reference/mfc-classes.md)

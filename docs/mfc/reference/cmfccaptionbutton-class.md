@@ -1,5 +1,5 @@
 ---
-title: Cmfccaptionbutton – třída
+title: CMFCCaptionButton – třída
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCCaptionButton
@@ -24,16 +24,16 @@ helpviewer_keywords:
 - CMFCCaptionButton [MFC], OnDraw
 - CMFCCaptionButton [MFC], SetMiniFrameButton
 ms.assetid: c5774b38-c0dd-414a-9ede-3b2f78f233ec
-ms.openlocfilehash: 2020f6cb2f0feec28996f69791899c648600b600
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fb47e4373bf53e66dd4af17c89fe2f761858fbfd
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403812"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367761"
 ---
-# <a name="cmfccaptionbutton-class"></a>Cmfccaptionbutton – třída
+# <a name="cmfccaptionbutton-class"></a>CMFCCaptionButton – třída
 
-`CMFCCaptionButton` Třída implementuje tlačítka, který se zobrazí v záhlaví pro ukotvené podokno nebo okno s minirámcem. Obvykle rozhraní vytvoří titulek tlačítka automaticky.
+Třída `CMFCCaptionButton` implementuje tlačítko, které se zobrazí na panelu titulků pro dokovací podokno nebo okno minirámečku. Rámec obvykle vytvoří tlačítka titulků automaticky.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -45,52 +45,52 @@ class CMFCCaptionButton : public CObject
 
 ### <a name="constructors"></a>Konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CMFCCaptionButton::CMFCCaptionButton](#cmfccaptionbutton)|Vytvoří objekt cmfccaptionbutton –.|
+|[CMFCCaptionButton::CMFCCaptionButton](#cmfccaptionbutton)|Vytvoří objekt CMFCCaptionButton.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CMFCCaptionButton::GetHit](#gethit)|Vrátí příkaz, reprezentovaný tlačítka.|
-|[CMFCCaptionButton::GetIconID](#geticonid)|Vrátí ID bitové kopie přidružený k tlačítku.|
-|[CMFCCaptionButton::GetRect](#getrect)|Vrací obdélník obsazena na tlačítko.|
+|[CMFCCaptionButton::GetHit](#gethit)|Vrátí příkaz reprezentované tlačítkem.|
+|[CMFCcaptionButton::GeticonID](#geticonid)|Vrátí ID obrázku přidružené k tlačítku.|
+|[CMFCCaptionButton::GetRect](#getrect)|Vrátí obdélník obsazený tlačítkem.|
 |[CMFCCaptionButton::GetSize](#getsize)|Vrátí šířku a výšku tlačítka.|
-|[CMFCCaptionButton::IsMiniFrameButton](#isminiframebutton)|Označuje, zda height název řádku je nastavena na minimální velikost.|
-|[CMFCCaptionButton::Move](#move)|Nastaví umístění příkazu pro vykreslení tlačítko a zobrazit stav okna.|
-|[CMFCCaptionButton::OnDraw](#ondraw)|Nakreslí titulek tlačítka.|
-|[CMFCCaptionButton::SetMiniFrameButton](#setminiframebutton)|Nastaví minimální velikost záhlaví okna.|
+|[CMFCcaptionButton::isminiframebutton](#isminiframebutton)|Označuje, zda je výška záhlaví nastavena na minimální velikost.|
+|[CMFCCaptionButton::Přesunout](#move)|Nastaví umístění kreslení tlačítek a stav zobrazení okna.|
+|[CMFCCaptionButton::Ondraw](#ondraw)|Nakreslí tlačítko titulku.|
+|[CMFCCaptionButton::SetMiniFrameButton](#setminiframebutton)|Nastaví mini velikost záhlaví.|
 
 ## <a name="remarks"></a>Poznámky
 
-Můžete odvozovat třídu z [cpaneframewnd – třída](../../mfc/reference/cpaneframewnd-class.md) a používat chráněné metody `AddButton`, přidejte popisek tlačítka mini rámce okna.
+Třídu můžete odvodit z [třídy CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md) a použít chráněnou metodu `AddButton`, k přidání tlačítek titulků do okna mini rámečku.
 
-CPaneFrameWnd.h definuje ID příkazu pro dva druhy titulek tlačítka:
+CPaneFrameWnd.h definuje ID příkazů pro dva typy tlačítek titulků:
 
-- AFX_CAPTION_BTN_PIN, které se zobrazí tlačítko Připnutí po ukotvené podokno podporuje režim automatického skrytí.
+- AFX_CAPTION_BTN_PIN, který zobrazí tlačítko pin, když dokovací podokno podporuje režim automatického skrytí.
 
-- AFX_CAPTION_BTN_CLOSE, který se zobrazí **Zavřít** tlačítko podokna můžete uzavřeny nebo skrytý.
+- AFX_CAPTION_BTN_CLOSE, který zobrazí tlačítko **Zavřít,** když může být podokno zavřeno nebo skryto.
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak vytvořit `CMFCCaptionButton` objektu a nastavíte minimální velikost záhlaví.
+Následující příklad ukazuje, jak `CMFCCaptionButton` vytvořit objekt a nastavit mini velikost záhlaví.
 
 [!code-cpp[NVC_MFC_RibbonApp#43](../../mfc/reference/codesnippet/cpp/cmfccaptionbutton-class_1.cpp)]
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObjekt](../../mfc/reference/cobject-class.md)
 
-[CMFCCaptionButton](../../mfc/reference/cmfccaptionbutton-class.md)
+[CmFCCaptionButton](../../mfc/reference/cmfccaptionbutton-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
 **Záhlaví:** afxcaptionbutton.h
 
-##  <a name="cmfccaptionbutton"></a>  CMFCCaptionButton::CMFCCaptionButton
+## <a name="cmfccaptionbuttoncmfccaptionbutton"></a><a name="cmfccaptionbutton"></a>CMFCCaptionButton::CMFCCaptionButton
 
-Vytvoří `CMFCCaptionButton` objektu.
+Vytvoří `CMFCCaptionButton` objekt.
 
 ```
 CMFCCaptionButton();
@@ -103,32 +103,32 @@ CMFCCaptionButton(
 ### <a name="parameters"></a>Parametry
 
 *nHit*<br/>
-[in] Příkaz přidružený k tlačítku.
+[v] Příkaz přidružený k tlačítku.
 
 *bLeftAlign*<br/>
-[in] Určuje, zda tlačítko je umístěno na levé straně.
+[v] Určuje, zda je tlačítko zarovnáno doleva.
 
-V následující tabulce jsou uvedeny možné hodnoty pro *nHit* parametru.
+V následující tabulce jsou uvedeny možné hodnoty parametru *nHit.*
 
 |Hodnota|Příkaz|
 |-----------|-------------|
 |AFX_HTCLOSE|Tlačítko Zavřít.|
-|HTMINBUTTON|Tlačítko minimalizujte.|
-|HTMAXBUTTON|Tlačítko maximalizace.|
-|AFX_HTLEFTBUTTON|Tlačítko šipka vlevo.|
-|AFX_HTRIGHTBUTTON|Tlačítko se šipkou vpravo.|
-|AFX_HTMENU|Šipku dolů nabídky.|
-|HTNOWHERE|Výchozí hodnota. představuje žádný příkaz.|
+|HTMINBUTTON|Minimalizovat tlačítko.|
+|HTMAXBUTTON|Tlačítko Maximalizovat.|
+|AFX_HTLEFTBUTTON|Tlačítko se šipkou doleva.|
+|AFX_HTRIGHTBUTTON|Tlačítko se šipkou doprava.|
+|AFX_HTMENU|Tlačítko nabídky šipky dolů.|
+|HTNOWHERE|Výchozí hodnota; nepředstavuje žádný příkaz.|
 
 ### <a name="remarks"></a>Poznámky
 
-Ve výchozím nastavení nejsou přidružené příkaz Titulek tlačítka.
+Ve výchozím nastavení nejsou tlačítka titulků přidružena k příkazu.
 
-Titulek tlačítka jsou zarovnána doprava nebo doleva.
+Tlačítka titulků jsou zarovnána vpravo nebo vlevo.
 
-##  <a name="gethit"></a>  CMFCCaptionButton::GetHit
+## <a name="cmfccaptionbuttongethit"></a><a name="gethit"></a>CMFCCaptionButton::GetHit
 
-Vrátí příkaz, reprezentovaný tlačítka.
+Vrátí příkaz reprezentované tlačítkem.
 
 ```
 UINT GetHit() const;
@@ -136,23 +136,23 @@ UINT GetHit() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Příkaz, reprezentovaný tlačítka.
+Příkaz reprezentované tlačítkem.
 
-Následující tabulka obsahuje seznam možných vrácených hodnot.
+V následující tabulce jsou uvedeny možné vrácené hodnoty.
 
-|Value|Příkaz|
+|Hodnota|Příkaz|
 |-----------|-------------|
 |AFX_HTCLOSE|Tlačítko Zavřít.|
-|HTMINBUTTON|Tlačítko minimalizujte.|
-|HTMAXBUTTON|Tlačítko maximalizace.|
-|AFX_HTLEFTBUTTON|Tlačítko šipka vlevo.|
-|AFX_HTRIGHTBUTTON|Tlačítko se šipkou vpravo.|
-|AFX_HTMENU|Šipku dolů nabídky.|
-|HTNOWHERE|Výchozí hodnota. představuje žádný příkaz.|
+|HTMINBUTTON|Minimalizovat tlačítko.|
+|HTMAXBUTTON|Tlačítko Maximalizovat.|
+|AFX_HTLEFTBUTTON|Tlačítko se šipkou doleva.|
+|AFX_HTRIGHTBUTTON|Tlačítko se šipkou doprava.|
+|AFX_HTMENU|Tlačítko nabídky šipky dolů.|
+|HTNOWHERE|Výchozí hodnota; nepředstavuje žádný příkaz.|
 
-##  <a name="geticonid"></a>  CMFCCaptionButton::GetIconID
+## <a name="cmfccaptionbuttongeticonid"></a><a name="geticonid"></a>CMFCcaptionButton::GeticonID
 
-Vrátí ID bitové kopie přidružený k tlačítku.
+Vrátí ID obrázku přidružené k tlačítku.
 
 ```
 virtual CMenuImages::IMAGES_IDS GetIconID(
@@ -163,22 +163,22 @@ virtual CMenuImages::IMAGES_IDS GetIconID(
 ### <a name="parameters"></a>Parametry
 
 *bHorz*<br/>
-[in] Hodnota TRUE pro image šipka doleva nebo doprava ID; FALSE pro navýšení nebo snížení kapacity obrázku šipky ID.
+[v] TRUE pro ID obrázku se šipkou vlevo nebo vpravo; FALSE pro ID obrázku šipky nahoru nebo dolů.
 
-*bMaximized*<br/>
-[in] Hodnota TRUE pro ID bitové kopie maximalizovat; FALSE pro ID minimalizovat bitové kopie.
+*bMaximalizace*<br/>
+[v] TRUE pro maximalizovat ID obrazu; FALSE pro minimalizaci ID obrázku.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-ID bitové kopie.
+ID obrázku.
 
 ### <a name="remarks"></a>Poznámky
 
-Parametry zadejte ID obrázku pro minimalizovat nebo maximalizovat titulek tlačítka.
+Parametry určují ID obrazu pro minimalizaci nebo maximalizaci tlačítek titulků.
 
-##  <a name="getrect"></a>  CMFCCaptionButton::GetRect
+## <a name="cmfccaptionbuttongetrect"></a><a name="getrect"></a>CMFCCaptionButton::GetRect
 
-Vrací obdélník obsazena na tlačítko.
+Vrátí obdélník obsazený tlačítkem.
 
 ```
 virtual CRect GetRect() const;
@@ -190,9 +190,9 @@ Obdélník, který představuje umístění tlačítka.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud tlačítko nevidíte, je velikost vrátí 0.
+Pokud tlačítko nevidíte, vrácená velikost je 0.
 
-##  <a name="getsize"></a>  CMFCCaptionButton::GetSize
+## <a name="cmfccaptionbuttongetsize"></a><a name="getsize"></a>CMFCCaptionButton::GetSize
 
 Vrátí šířku a výšku tlačítka.
 
@@ -202,15 +202,15 @@ static CSize GetSize();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vnější dimenze na tlačítko.
+Vnější rozměry tlačítka.
 
 ### <a name="remarks"></a>Poznámky
 
-Velikostí vrácenou obsahuje tlačítko okraj a okraj.
+Vrácená velikost zahrnuje okraj tlačítka a ohraničení.
 
-##  <a name="isminiframebutton"></a>  CMFCCaptionButton::IsMiniFrameButton
+## <a name="cmfccaptionbuttonisminiframebutton"></a><a name="isminiframebutton"></a>CMFCcaptionButton::isminiframebutton
 
-Označuje, zda height název řádku je nastavena na minimální velikost.
+Označuje, zda je výška záhlaví nastavena na minimální velikost.
 
 ```
 BOOL IsMiniFrameButton() const;
@@ -218,13 +218,13 @@ BOOL IsMiniFrameButton() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE, pokud je popisek nastavený na minimální velikost. v opačném případě FALSE.
+TRUE, pokud je titulek nastaven na mini velikost; jinak FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="move"></a>  CMFCCaptionButton::Move
+## <a name="cmfccaptionbuttonmove"></a><a name="move"></a>CMFCCaptionButton::Přesunout
 
-Nastaví umístění příkazu pro vykreslení tlačítko a zobrazit stav okna.
+Nastaví umístění kreslení tlačítek a stav zobrazení okna.
 
 ```
 void Move(
@@ -235,14 +235,14 @@ void Move(
 ### <a name="parameters"></a>Parametry
 
 *ptTo*<br/>
-[in] Nové umístění.
+[v] Nové umístění.
 
-*bHide*<br/>
-[in] Určuje, zda je zobrazeno tlačítko.
+*bSkrýt*<br/>
+[v] Zda se má tlačítko zobrazit.
 
-##  <a name="ondraw"></a>  CMFCCaptionButton::OnDraw
+## <a name="cmfccaptionbuttonondraw"></a><a name="ondraw"></a>CMFCCaptionButton::Ondraw
 
-Nakreslí titulek tlačítka.
+Nakreslí tlačítko titulku.
 
 ```
 virtual void OnDraw(
@@ -255,28 +255,28 @@ virtual void OnDraw(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
-[in] Ukazatel na kontext zařízení pro tlačítko.
+*Pdc*<br/>
+[v] Ukazatel na kontext zařízení pro tlačítko.
 
-*bActive*<br/>
-[in] Určuje, zda vykreslení obrázku tlačítka aktivní.
+*bAktivní*<br/>
+[v] Určuje, zda se má nakreslit obrázek aktivního tlačítka.
 
 *bHorz*<br/>
-[in] Vyhrazené pro použití v odvozené třídě.
+[v] Vyhrazeno pro použití v odvozené třídě.
 
-*bMaximized*<br/>
-[in] Určuje, zda chcete-li nakreslit obrázek maximalizované tlačítka.
+*bMaximalizace*<br/>
+[v] Určuje, zda chcete nakreslit obrázek maximalizovaného tlačítka.
 
-*bDisabled*<br/>
-[in] Určuje, zda vykreslení obrázku povolené tlačítko.
+*bZakázáno.*<br/>
+[v] Určuje, zda se má nakreslit obrázek povoleného tlačítka.
 
 ### <a name="remarks"></a>Poznámky
 
-*BMaximized* parametr se používá, když je tlačítko Maximalizovat nebo tlačítko Minimalizovat.
+Parametr *bMaximized* se používá, když je tlačítko maximalizovat nebo minimalizovat.
 
-##  <a name="setminiframebutton"></a>  CMFCCaptionButton::SetMiniFrameButton
+## <a name="cmfccaptionbuttonsetminiframebutton"></a><a name="setminiframebutton"></a>CMFCCaptionButton::SetMiniFrameButton
 
-Nastaví minimální velikost záhlaví okna.
+Nastaví mini velikost záhlaví.
 
 ```
 void SetMiniFramebutton(BOOL bSet = TRUE);
@@ -285,11 +285,11 @@ void SetMiniFramebutton(BOOL bSet = TRUE);
 ### <a name="parameters"></a>Parametry
 
 *bSet*<br/>
-[in] Hodnota TRUE pro Výška pruhu mini názvu; FALSE pro Výška pruhu výchozí název.
+[v] TRUE pro mini výšku záhlaví; NEPRAVDA pro výchozí výšku záhlaví.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>
-[CPaneFrameWnd – třída](../../mfc/reference/cpaneframewnd-class.md)<br/>
-[CDockablePane – třída](../../mfc/reference/cdockablepane-class.md)
+[Třída CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md)<br/>
+[Třída CDockablePane](../../mfc/reference/cdockablepane-class.md)

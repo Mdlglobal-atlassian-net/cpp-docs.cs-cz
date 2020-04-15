@@ -1,5 +1,5 @@
 ---
-title: Cmemoryexception – třída
+title: CMemoryException – třída
 ms.date: 11/04/2016
 f1_keywords:
 - CMemoryException
@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CMemoryException [MFC], CMemoryException
 ms.assetid: 9af0ed57-d12a-45ca-82b5-c910a60f7edf
-ms.openlocfilehash: 11be0eba080085c507ed718ea23219ca1c93aeba
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 375b4227a25ae4c18cfd263eff4c3ec13f1304e1
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64341166"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81369998"
 ---
-# <a name="cmemoryexception-class"></a>Cmemoryexception – třída
+# <a name="cmemoryexception-class"></a>CMemoryException – třída
 
-Představuje podmínku výjimky na více instancí z důvodu nedostatku paměti.
+Představuje podmínku výjimky mimo paměť.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -29,21 +29,21 @@ class CMemoryException : public CSimpleException
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CMemoryException::CMemoryException](#cmemoryexception)|Vytvoří `CMemoryException` objektu.|
+|[CMemoryException::CMemoryException](#cmemoryexception)|Vytvoří `CMemoryException` objekt.|
 
 ## <a name="remarks"></a>Poznámky
 
-Žádné další kvalifikace je nezbytné nebo je to možné. Paměť výjimky jsou vyvolány automaticky **nové**. Pokud píšete vašich vlastních funkcích paměť, používá `malloc`pro příklad, a zodpovídají za vyvolání výjimky paměti.
+Žádná další kvalifikace není nutná ani možná. Výjimky paměti jsou vyvolány automaticky **novým**. Pokud píšete vlastní paměťové `malloc`funkce, pomocí , například, pak jste zodpovědní za vyvolání výjimky paměti.
 
-Další informace o `CMemoryException`, najdete v článku [zpracování výjimek (MFC)](../../mfc/exception-handling-in-mfc.md).
+Další informace `CMemoryException`naleznete v článku [Zpracování výjimek (MFC).](../../mfc/exception-handling-in-mfc.md)
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObjekt](../../mfc/reference/cobject-class.md)
 
-[Cexception –](../../mfc/reference/cexception-class.md)
+[CException](../../mfc/reference/cexception-class.md)
 
 [CSimpleException](../../mfc/reference/csimpleexception-class.md)
 
@@ -53,9 +53,9 @@ Další informace o `CMemoryException`, najdete v článku [zpracování výjime
 
 **Záhlaví:** afx.h
 
-##  <a name="cmemoryexception"></a>  CMemoryException::CMemoryException
+## <a name="cmemoryexceptioncmemoryexception"></a><a name="cmemoryexception"></a>CMemoryException::CMemoryException
 
-Vytvoří `CMemoryException` objektu.
+Vytvoří `CMemoryException` objekt.
 
 ```
 CMemoryException();
@@ -63,9 +63,9 @@ CMemoryException();
 
 ### <a name="remarks"></a>Poznámky
 
-Nepoužívejte tento konstruktor přímo, ale místo toho volat funkci globální [afxthrowmemoryexception –](exception-processing.md#afxthrowmemoryexception). Tato globální funkce můžete v situaci paměti úspěšná, protože vytvoří objekt výjimky v dříve přidělené paměti. Další informace o zpracování výjimek naleznete v článku [výjimky](../exception-handling-in-mfc.md).
+Nepoužívejte tento konstruktor přímo, ale spíše volat globální funkce [AfxThrowMemoryException](exception-processing.md#afxthrowmemoryexception). Tato globální funkce může být úspěšná v situaci nedostatku paměti, protože vytváří objekt výjimky v dříve přidělené paměti. Další informace o zpracování výjimek naleznete v [článku výjimky](../exception-handling-in-mfc.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [CException – třída](cexception-class.md)<br/>
 [Graf hierarchie](../hierarchy-chart.md)

@@ -1,8 +1,9 @@
 ---
 title: tmpfile_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - tmpfile_s
+- _o_tmpfile_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -26,16 +28,16 @@ helpviewer_keywords:
 - tmpfile_s function
 - temporary files, creating
 ms.assetid: 50879c69-215e-425a-a2a3-8b5467121eae
-ms.openlocfilehash: 64107f26fa651739f4d5bdd7521b15d9d458df65
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 8f9dd58abdf1d3225341e40661c14ae3a5013257
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946059"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81362465"
 ---
 # <a name="tmpfile_s"></a>tmpfile_s
 
-Vytvoří dočasný soubor. Jedná se o verzi [tmpfile](tmpfile.md) s vylepšením zabezpečení, jak je popsáno v [části funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Vytvoří dočasný soubor. Jedná se o verzi [souboru tmpfile](tmpfile.md) s vylepšeními zabezpečení, jak je popsáno v [části Funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -48,7 +50,7 @@ errno_t tmpfile_s(
 ### <a name="parameters"></a>Parametry
 
 *pFilePtr*<br/>
-Adresa ukazatele pro uložení adresy vygenerovaného ukazatele do datového proudu.
+Adresa ukazatele pro uložení adresy generovaného ukazatele do datového proudu.
 
 ## <a name="return-value"></a>Návratová hodnota
 
@@ -56,19 +58,21 @@ Vrátí hodnotu 0, pokud je úspěšná, kód chyby při selhání.
 
 ### <a name="error-conditions"></a>Chybové stavy
 
-|*pFilePtr*|**Návratová hodnota**|**Obsah** *pFilePtr*|
+|*pFilePtr*|**Návratová hodnota**|**Obsah**  *pFilePtr*|
 |----------------|----------------------|---------------------------------|
-|**NULL**|**EINVAL**|nezměněno|
+|**Null**|**EINVAL**|se nezměnilo|
 
-Pokud dojde k chybě ověření výše uvedeného parametru, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, **errno** je nastaven na **EINVAL** a návratová hodnota je **EINVAL**.
+Pokud dojde k chybě ověření výše uvedeného parametru, je vyvolána neplatná obslužná rutina parametru, jak je popsáno v [části Ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je spuštění povoleno pokračovat, **errno** je nastavena na **EINVAL** a vrácená hodnota je **EINVAL**.
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce **tmpfile_s** vytvoří dočasný soubor a do argumentu *pFilePtr* vloží ukazatel na tento datový proud. Dočasný soubor se vytvoří v kořenovém adresáři. Chcete-li vytvořit dočasný soubor v jiném než kořenovém adresáři, použijte [tmpnam_s](tmpnam-s-wtmpnam-s.md) nebo [tempnam](tempnam-wtempnam-tmpnam-wtmpnam.md) ve spojení s [fopen](fopen-wfopen.md).
+Funkce **tmpfile_s** vytvoří dočasný soubor a umístí ukazatel na tento datový proud v argumentu *pFilePtr.* Dočasný soubor je vytvořen v kořenovém adresáři. Chcete-li vytvořit dočasný soubor v jiném adresáři než v kořenovém adresáři, použijte [tmpnam_s](tmpnam-s-wtmpnam-s.md) nebo [tempnam](tempnam-wtempnam-tmpnam-wtmpnam.md) ve spojení s [fopen](fopen-wfopen.md).
 
-Pokud soubor nelze otevřít, **tmpfile_s** zapíše **hodnotu null** do parametru *pFilePtr* . Tento dočasný soubor se automaticky odstraní při zavření souboru, když se program normálně ukončí, nebo když se zavolá **_rmtmp** . za předpokladu, že se aktuální pracovní adresář nemění. Dočasný soubor je otevřen v režimu **w + b** (binární režim pro čtení a zápis).
+Pokud soubor nelze otevřít, **tmpfile_s** zapíše **hodnotu NULL** do parametru *pFilePtr.* Tento dočasný soubor je automaticky odstraněn při zavření souboru, při ukončení programu normálně, nebo **při _rmtmp** je volána, za předpokladu, že aktuální pracovní adresář nezmění. Dočasný soubor je otevřen v **režimu w+b** (binární čtení a zápis).
 
-K selhání může dojít, pokud se pokusíte o více než **TMP_MAX_S** (viz stdio. H) volání s **tmpfile_s**.
+Selhání může dojít, pokud se pokusíte více než **TMP_MAX_S** (viz STDIO. H) volá s **tmpfile_s**.
+
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
@@ -76,7 +80,7 @@ K selhání může dojít, pokud se pokusíte o více než **TMP_MAX_S** (viz st
 |-------------|---------------------|
 |**tmpfile_s**|\<stdio.h>|
 
-Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -120,8 +124,8 @@ Temporary file 3 was created
 3 temporary files deleted
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Vstup/výstup datového proudu](../../c-runtime-library/stream-i-o.md)<br/>
+[I/O proudu](../../c-runtime-library/stream-i-o.md)<br/>
 [_rmtmp](rmtmp.md)<br/>
 [_tempnam, _wtempnam, tmpnam, _wtmpnam](tempnam-wtempnam-tmpnam-wtmpnam.md)<br/>

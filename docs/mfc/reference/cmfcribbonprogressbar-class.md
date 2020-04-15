@@ -1,5 +1,5 @@
 ---
-title: Cmfcribbonprogressbar – třída
+title: Třída CMFCRibbonRibbonBar
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCRibbonProgressBar
@@ -26,16 +26,16 @@ helpviewer_keywords:
 - CMFCRibbonProgressBar [MFC], SetPos
 - CMFCRibbonProgressBar [MFC], SetRange
 ms.assetid: de3d9f2e-ed59-480e-aa7d-08a33ab36c67
-ms.openlocfilehash: 7c16217378cb8825ca4605687770de177e720c1d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 063f8ce560af84d350abc0114644f6a63f969f95
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391111"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368865"
 ---
-# <a name="cmfcribbonprogressbar-class"></a>Cmfcribbonprogressbar – třída
+# <a name="cmfcribbonprogressbar-class"></a>Třída CMFCRibbonRibbonBar
 
-Implementuje ovládací prvek, který vizuálně označuje průběh déletrvající operace.
+Implementuje ovládací prvek, který vizuálně označuje průběh zdlouhavé operace.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -47,49 +47,49 @@ class CMFCRibbonProgressBar : public CMFCRibbonBaseElement
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CMFCRibbonProgressBar::CMFCRibbonProgressBar](#cmfcribbonprogressbar)|Vytvoří a inicializuje `CMFCRibbonProgressBar` objektu.|
+|[CMFCRibbonRibbonProgressBar::CMFCRibbonProgressBar](#cmfcribbonprogressbar)|Vytvoří a inicializuje `CMFCRibbonProgressBar` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
 |[CMFCRibbonProgressBar::GetPos](#getpos)|Vrátí aktuální průběh.|
-|[CMFCRibbonProgressBar::GetRangeMax](#getrangemax)|Vrátí maximální hodnotu aktuálního rozsahu.|
-|[CMFCRibbonProgressBar::GetRangeMin](#getrangemin)|Vrátí minimální hodnotu rozsahu aktuální.|
-|[CMFCRibbonProgressBar::GetRegularSize](#getregularsize)|Vrátí regulární velikost elementu pásu karet. (Přepíše [CMFCRibbonBaseElement::GetRegularSize](../../mfc/reference/cmfcribbonbaseelement-class.md#getregularsize).)|
-|[CMFCRibbonProgressBar::IsInfiniteMode](#isinfinitemode)|Určuje, zda je indikátor průběhu práce v nekonečné režimu.|
-|[CMFCRibbonProgressBar::OnDraw](#ondraw)|Volá se rozhraním, chcete-li nakreslit prvek pásu karet. (Přepíše [CMFCRibbonBaseElement::OnDraw](../../mfc/reference/cmfcribbonbaseelement-class.md#ondraw).)|
-|[CMFCRibbonProgressBar::SetInfiniteMode](#setinfinitemode)|Nastaví indikátoru průběhu pro práci v nekonečné režimu.|
-|[CMFCRibbonProgressBar::SetPos](#setpos)|Nastaví aktuální průběh.|
-|[CMFCRibbonProgressBar::SetRange](#setrange)|Nastaví minimální a maximální hodnoty.|
+|[CMFCRibbonRibbonProgressBar::GetRangeMax](#getrangemax)|Vrátí maximální hodnotu aktuálního rozsahu.|
+|[CMFCRibbonProgressBar::GetRangeMin](#getrangemin)|Vrátí minimální hodnotu aktuálního rozsahu.|
+|[CMFCRibbonRibbonInterval::GetRegularSize](#getregularsize)|Vrátí běžnou velikost prvku pásu karet. (Přepíše [CMFCRibbonBaseElement::GetRegularSize](../../mfc/reference/cmfcribbonbaseelement-class.md#getregularsize).)|
+|[CMFCRibbonRibbonProgressBar::IsInfiniteMode](#isinfinitemode)|Určuje, zda indikátor průběhu pracuje v nekonečném režimu.|
+|[CMFCRibbonRibbonProgressBar::OnDraw](#ondraw)|Volat rámci k nakreslení prvku pásu karet. (Přepíše [CMFCRibbonBaseElement::OnDraw](../../mfc/reference/cmfcribbonbaseelement-class.md#ondraw).)|
+|[CMFCRibbonRibbonProgressBar::SetInfiniteMode](#setinfinitemode)|Nastaví indikátor průběhu tak, aby fungoval v nekonečném režimu.|
+|[CMFCRibbonRibbonProgressBar::SetPos](#setpos)|Nastaví aktuální průběh.|
+|[CMFCRibbonRibbonProgressBar::SetRange](#setrange)|Nastaví minimální a maximální hodnoty.|
 
 ## <a name="remarks"></a>Poznámky
 
-A `CMFCRibbonProgressBar` můžete pracovat ve dvou režimech: pravidelné a nekonečné. V pravidelných režimu indikátor průběhu naplní zleva doprava a zastaví, když dosáhl maximální hodnoty. V nekonečné režimu je indikátor průběhu vyplněna na základě minimální hodnota na maximální hodnotu opakovaně. Nekonečné režimu můžete použít k označení, že probíhá operace, ale, že čas dokončení neznámý.
+A `CMFCRibbonProgressBar` může pracovat ve dvou režimech: pravidelné a nekonečné. V normálním režimu je indikátor průběhu vyplněn zleva doprava a zastaví se, když dosáhne maximální hodnoty. V nekonečném režimu je indikátor průběhu opakovaně vyplněn z minimální hodnoty na maximální hodnotu. Můžete použít nekonečný režim k označení, že operace probíhá, ale že doba dokončení není známa.
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak použít různé metody v `CMFCRibbonProgressBar` třídy. Příklad ukazuje, jak nastavit indikátoru průběhu pro práci v nekonečné režimu (kde čas dokončení operace neznámá), nastavit minimální a maximální hodnoty pro indikátor průběhu a nastavit aktuální pozici indikátor průběhu. Tento fragment kódu je součástí [MS Office 2007 demonstrační ukázka](../../overview/visual-cpp-samples.md).
+Následující příklad ukazuje, jak používat různé `CMFCRibbonProgressBar` metody ve třídě. Příklad ukazuje, jak nastavit indikátor průběhu pracovat v nekonečném režimu (kde doba dokončení operace není známa), nastavte minimální a maximální hodnoty pro indikátor průběhu a nastavte aktuální pozici indikátoru průběhu. Tento fragment kódu je součástí [ukázky ukázky ukázky ukázky ms office 2007](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_MSOffice2007Demo#11](../../mfc/reference/codesnippet/cpp/cmfcribbonprogressbar-class_1.cpp)]
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObjekt](../../mfc/reference/cobject-class.md)
 
-[Cmfcribbonbaseelement –](../../mfc/reference/cmfcribbonbaseelement-class.md)
+[CMFC4RibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)
 
-[CMFCRibbonProgressBar](../../mfc/reference/cmfcribbonprogressbar-class.md)
+[CmFCRibbonProgressBar](../../mfc/reference/cmfcribbonprogressbar-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
 **Záhlaví:** afxRibbonProgressBar.h
 
-##  <a name="cmfcribbonprogressbar"></a>  CMFCRibbonProgressBar::CMFCRibbonProgressBar
+## <a name="cmfcribbonprogressbarcmfcribbonprogressbar"></a><a name="cmfcribbonprogressbar"></a>CMFCRibbonRibbonProgressBar::CMFCRibbonProgressBar
 
-Vytvoří a inicializuje [cmfcribbonprogressbar –](../../mfc/reference/cmfcribbonprogressbar-class.md) objektu.
+Vytvoří a inicializuje objekt [CMFCRibbonProgressBar.](../../mfc/reference/cmfcribbonprogressbar-class.md)
 
 ```
 CMFCRibbonProgressBar();
@@ -102,18 +102,18 @@ CMFCRibbonProgressBar(
 
 ### <a name="parameters"></a>Parametry
 
-*nID*<br/>
-[in] Určuje ID příkazu pro indikátor průběhu pásu karet.
+*Nid*<br/>
+[v] Určuje ID příkazu pro indikátor průběhu pásu karet.
 
-*nWidth*<br/>
-[in] Určuje šířku v pixelech, indikátor průběhu pásu karet.
+*nŠířka*<br/>
+[v] Určuje šířku pruhu průběhu pásu karet v obrazových bodech.
 
-*nHeight*<br/>
-[in] Určuje výšku v pixelech, indikátor průběhu pásu karet.
+*nVýška*<br/>
+[v] Určuje výšku pruhu průběhu pásu karet v obrazových bodech.
 
-##  <a name="getpos"></a>  CMFCRibbonProgressBar::GetPos
+## <a name="cmfcribbonprogressbargetpos"></a><a name="getpos"></a>CMFCRibbonProgressBar::GetPos
 
-Vrátí aktuální pozici indikátor průběhu.
+Vrátí aktuální pozici indikátoru průběhu.
 
 ```
 int GetPos () const;
@@ -121,15 +121,15 @@ int GetPos () const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota představující aktuální pozici indikátor průběhu.
+Hodnota představující aktuální pozici indikátoru průběhu.
 
 ### <a name="remarks"></a>Poznámky
 
-Rozsah nastavování musí být v rozsahu určeném [CMFCRibbonProgressBar::SetRange](#setrange) metody.
+Nastavený rozsah musí být v rozsahu určeném metodou [CMFCRibbonProgressBar::SetRange.](#setrange)
 
-##  <a name="getrangemax"></a>  CMFCRibbonProgressBar::GetRangeMax
+## <a name="cmfcribbonprogressbargetrangemax"></a><a name="getrangemax"></a>CMFCRibbonRibbonProgressBar::GetRangeMax
 
-Vrátí uživatele indikátor průběhu aktuální maximální hodnota.
+Vrátí aktuální maximální hodnotu indikátoru průběhu.
 
 ```
 int GetRangeMax() const;
@@ -137,13 +137,13 @@ int GetRangeMax() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Maximální hodnota v aktuálním rozsahu.
+Maximální hodnota aktuálního rozsahu.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="getrangemin"></a>  CMFCRibbonProgressBar::GetRangeMin
+## <a name="cmfcribbonprogressbargetrangemin"></a><a name="getrangemin"></a>CMFCRibbonProgressBar::GetRangeMin
 
-Vrátí uživatele indikátor průběhu aktuální minimální hodnotu rozsahu.
+Vrátí aktuální hodnotu minimálního rozsahu indikátoru průběhu.
 
 ```
 int GetRangeMin() const;
@@ -151,11 +151,11 @@ int GetRangeMin() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Minimální hodnota v aktuálním rozsahu.
+Minimální hodnota aktuálního rozsahu.
 
-##  <a name="getregularsize"></a>  CMFCRibbonProgressBar::GetRegularSize
+## <a name="cmfcribbonprogressbargetregularsize"></a><a name="getregularsize"></a>CMFCRibbonRibbonInterval::GetRegularSize
 
-Další podrobnosti najdete ve zdrojovém kódu v **VC\\atlmfc\\src\\mfc** složce instalace sady Visual Studio.
+Další podrobnosti naleznete ve zdrojovém kódu umístěném ve složce **MFC\\knihovny\\VC src\\** instalace sady Visual Studio.
 
 ```
 virtual CSize GetRegularSize(CDC* pDC);
@@ -163,15 +163,15 @@ virtual CSize GetRegularSize(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pDC*<br/>
+[v] *pDC*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="isinfinitemode"></a>  CMFCRibbonProgressBar::IsInfiniteMode
+## <a name="cmfcribbonprogressbarisinfinitemode"></a><a name="isinfinitemode"></a>CMFCRibbonRibbonProgressBar::IsInfiniteMode
 
-Určuje, zda je indikátor průběhu práce v nekonečné režimu.
+Určuje, zda indikátor průběhu pracuje v nekonečném režimu.
 
 ```
 BOOL IsInfiniteMode() const;
@@ -179,15 +179,15 @@ BOOL IsInfiniteMode() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE, pokud je indikátor průběhu v nekonečné režimu. v opačném případě hodnota FALSE.
+PRAVDA, pokud je indikátor průběhu v nekonečném režimu; jinak NEPRAVDA.
 
 ### <a name="remarks"></a>Poznámky
 
-V nekonečné režimu indikátor průběhu vyplní opakovaně od minimální hodnoty na maximální hodnotu. Nekonečné režimu můžete použít k označení, že probíhá operace, ale, že čas dokončení neznámý.
+V nekonečném režimu indikátor průběhu vyplňuje opakovaně z minimální hodnoty na maximální hodnotu. Můžete použít nekonečný režim k označení, že operace probíhá, ale že doba dokončení není známa.
 
-##  <a name="ondraw"></a>  CMFCRibbonProgressBar::OnDraw
+## <a name="cmfcribbonprogressbarondraw"></a><a name="ondraw"></a>CMFCRibbonRibbonProgressBar::OnDraw
 
-Další podrobnosti najdete ve zdrojovém kódu v **VC\\atlmfc\\src\\mfc** složce instalace sady Visual Studio.
+Další podrobnosti naleznete ve zdrojovém kódu umístěném ve složce **MFC\\knihovny\\VC src\\** instalace sady Visual Studio.
 
 ```
 virtual void OnDraw(CDC* pDC);
@@ -195,13 +195,13 @@ virtual void OnDraw(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *pDC*<br/>
+[v] *pDC*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="setinfinitemode"></a>  CMFCRibbonProgressBar::SetInfiniteMode
+## <a name="cmfcribbonprogressbarsetinfinitemode"></a><a name="setinfinitemode"></a>CMFCRibbonRibbonProgressBar::SetInfiniteMode
 
-Nastaví indikátoru průběhu pro práci v nekonečné režimu.
+Nastaví indikátor průběhu tak, aby fungoval v nekonečném režimu.
 
 ```
 void SetInfiniteMode(BOOL bSet = TRUE);
@@ -210,15 +210,15 @@ void SetInfiniteMode(BOOL bSet = TRUE);
 ### <a name="parameters"></a>Parametry
 
 *bSet*<br/>
-[in] TRUE, pokud chcete určit, že indikátor průběhu v nekonečné režimu. v opačném případě hodnota FALSE.
+[v] TRUE určit, že indikátor průběhu je v nekonečném režimu; jinak NEPRAVDA.
 
 ### <a name="remarks"></a>Poznámky
 
-Obvykle Pokud indikátor průběhu v nekonečné režimu, je sděluje uživateli, že probíhá operace, ale, že čas dokončení neznámý. Tak indikátor průběhu vyplní opakovaně od minimální hodnoty na maximální hodnotu.
+Obvykle pokud indikátor průběhu je v nekonečném režimu, je říkat uživateli, že operace probíhá, ale že doba dokončení není známa. Proto indikátor průběhu vyplňuje opakovaně z minimální hodnoty na maximální hodnotu.
 
-##  <a name="setpos"></a>  CMFCRibbonProgressBar::SetPos
+## <a name="cmfcribbonprogressbarsetpos"></a><a name="setpos"></a>CMFCRibbonRibbonProgressBar::SetPos
 
-Nastaví aktuální pozici indikátor průběhu.
+Nastaví aktuální pozici indikátoru průběhu.
 
 ```
 void SetPos(
@@ -229,18 +229,18 @@ void SetPos(
 ### <a name="parameters"></a>Parametry
 
 *nPos*<br/>
-[in] Určuje umístění, ke kterému je nastaven indikátor průběhu.
+[v] Určuje polohu, na kterou je nastaven indikátor průběhu.
 
-*bRedraw*<br/>
-[in] Určuje, zda by měl překreslit indikátor průběhu.
+*bPřekreslit*<br/>
+[v] Určuje, zda má být indikátor průběhu překreslen.
 
 ### <a name="remarks"></a>Poznámky
 
-Rozsah nastavování musí být v rozsahu určeném [CMFCRibbonProgressBar::SetRange](#setrange) metody.
+Nastavený rozsah musí být v rozsahu určeném metodou [CMFCRibbonProgressBar::SetRange.](#setrange)
 
-##  <a name="setrange"></a>  CMFCRibbonProgressBar::SetRange
+## <a name="cmfcribbonprogressbarsetrange"></a><a name="setrange"></a>CMFCRibbonRibbonProgressBar::SetRange
 
-Nastaví minimální a maximální hodnoty pro indikátor průběhu.
+Nastaví minimální a maximální hodnoty indikátoru průběhu.
 
 ```
 void SetRange(
@@ -251,16 +251,16 @@ void SetRange(
 ### <a name="parameters"></a>Parametry
 
 *nMin*<br/>
-[in] Určuje minimální hodnotu rozsahu.
+[v] Určuje minimální hodnotu rozsahu.
 
 *nMax*<br/>
-[in] Určuje maximální hodnotu rozsahu.
+[v] Určuje maximální hodnotu rozsahu.
 
 ### <a name="remarks"></a>Poznámky
 
-Tuto metodu použijte k definování rozsahu indikátoru průběhu nastavením minimální a maximální hodnoty.
+Tato metoda slouží k definování rozsahu indikátoru průběhu nastavením minimálních a maximálních hodnot.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>

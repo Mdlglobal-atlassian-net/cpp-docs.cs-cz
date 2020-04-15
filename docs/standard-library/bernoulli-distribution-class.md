@@ -23,14 +23,14 @@ helpviewer_keywords:
 - std::bernoulli_distribution [C++], param_type
 - std::bernoulli_distribution [C++], param_type
 ms.assetid: 586bcde1-95ca-411a-bf17-4aaf19482f34
-ms.openlocfilehash: faadc99b6351af884331e6658e1e11de8def2195
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 6a53707d823ced7316604f75691194dc6e05545e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68447776"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364850"
 ---
-# <a name="bernoullidistribution-class"></a>bernoulli_distribution – třída
+# <a name="bernoulli_distribution-class"></a>bernoulli_distribution – třída
 
 Generuje Bernoulliho rozdělení.
 
@@ -67,30 +67,30 @@ public:
 ### <a name="parameters"></a>Parametry
 
 *URNG*\
-Jednotný modul generátoru náhodných čísel. Možné typy naleznete v tématu [ \<Random >](../standard-library/random.md).
+Jednotný generátor náhodných čísel. Možné typy naleznete v [ \<tématu náhodné>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Poznámky
 
-Třída popisuje distribuci, která vytváří hodnoty typu **bool**, distribuované podle funkce Bernoulliho rozdělení diskrétní distribuce. Následující tabulka obsahuje odkazy na články týkající se jednotlivých členů.
+Třída popisuje rozdělení, které vytváří hodnoty typu **bool**, distribuované podle Bernoulliho rozdělení diskrétní pravděpodobnostfunkce. Následující tabulka odkazuje na články o jednotlivých členech.
 
 ||||
 |-|-|-|
 |[bernoulli_distribution](#bernoulli_distribution)|`bernoulli_distribution::p`|`bernoulli_distribution::param`|
 |`bernoulli_distribution::operator()`||[param_type](#param_type)|
 
-Člen `p()` vlastnosti vrátí aktuálně uloženou hodnotu `p`distribučního parametru.
+Člen `p()` vlastnosti vrátí hodnotu aktuálně `p`uloženého parametru distribuce .
 
-Člen `param()` vlastnosti nastaví nebo `param_type` vrátí uložený balíček parametrů distribuce.
+Člen `param()` vlastnosti nastaví `param_type` nebo vrátí balíček parametrů uložené distribuce.
 
-Členské funkce `max()` a vracejí nejmenší možný výsledek a největší možný výsledek, v uvedeném pořadí. `min()`
+A `min()` `max()` členské funkce vrátí nejmenší možný výsledek a největší možný výsledek.
 
-Členská funkce zahodí všechny hodnoty uložené v mezipaměti, takže výsledek dalšího `operator()` volání není závislý na všech hodnotách získaných z modulu před voláním. `reset()`
+Členská `reset()` funkce zahodí všechny hodnoty uložené v mezipaměti, `operator()` takže výsledek dalšího volání nezávisí na žádné hodnoty získané z motoru před voláním.
 
-`operator()` Členské funkce vrátí další vygenerovanou hodnotu založenou na modulu URNG, buď z aktuálního balíčku parametrů, nebo pomocí zadaného balíčku parametrů.
+Členské `operator()` funkce vrátí další vygenerovanou hodnotu na základě modulu URNG, buď z aktuálního balíčku parametrů, nebo ze zadaného balíčku parametrů.
 
-Další informace o třídách distribuce a jejich členech naleznete v tématu [ \<Random >](../standard-library/random.md).
+Další informace o distribučních třídách a jejich členech naleznete [ \<v tématu Random>](../standard-library/random.md).
 
-Podrobné informace o funkci rozdělení dílčí pravděpodobnosti distribuce naleznete v článku o [Bernoulliho distribuci](https://go.microsoft.com/fwlink/p/?linkid=398467)v Wolfram MathWorld.
+Podrobné informace o funkci diskrétní pravděpodobnosti bernoulliho distribuce naleznete v článku Wolfram MathWorld [Bernoulli Distribution](https://go.microsoft.com/fwlink/p/?linkid=398467).
 
 ## <a name="example"></a>Příklad
 
@@ -154,13 +154,13 @@ true :::::::::::::::::::::::::::::::::::::::::
 
 ## <a name="requirements"></a>Požadavky
 
-**Hlavička:** \<náhodné >
+**Záhlaví:** \<náhodné>
 
 **Obor názvů:** std
 
-## <a name="bernoulli_distribution"></a>bernoulli_distribution::bernoulli_distribution
+## <a name="bernoulli_distributionbernoulli_distribution"></a><a name="bernoulli_distribution"></a>bernoulli_distribution::bernoulli_distribution
 
-Sestaví rozdělení.
+Vytvoří rozdělení.
 
 ```cpp
 explicit bernoulli_distribution(double p = 0.5);
@@ -169,39 +169,39 @@ explicit bernoulli_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parametry
 
-*trub*\
-Uložený `p` parametr distribuce.
+*P*\
+Parametr `p` uložené distribuce.
 
-*parametr*\
-`param_type` Struktura použitá k sestavení distribuce.
+*parm*\
+Struktura `param_type` slouží k vytvoření distribuce.
 
 ### <a name="remarks"></a>Poznámky
 
-**Předběžná podmínka:** `0.0 ≤ p ≤ 1.0`
+**Předpokladem:**`0.0 ≤ p ≤ 1.0`
 
-První konstruktor vytvoří objekt, jehož uložená `p` hodnota obsahuje hodnotu *p*.
+První konstruktor zkonstruovat objekt, jehož uložená `p` hodnota obsahuje hodnotu *p*.
 
-Druhý konstruktor vytvoří objekt, jehož uložené parametry jsou inicializovány z *parametr*. Můžete získat a nastavit aktuální parametry existující distribuce voláním `param()` členské funkce.
+Druhý konstruktor vytvoří objekt, jehož uložené parametry jsou inicializovány z *parm*. Aktuální parametry existující distribuce můžete získat a nastavit `param()` voláním členské funkce.
 
-## <a name="param_type"></a>bernoulli_distribution::p aram_type
+## <a name="bernoulli_distributionparam_type"></a><a name="param_type"></a>bernoulli_distribution::param_type
 
 Obsahuje parametry distribuce.
 
-struct param_type {typedef bernoulli_distribution distribution_type; param_type (Double p = 0,5); dvojitá p () const;
+struktura param_type { typedef bernoulli_distribution distribution_type; param_type(double p = 0,5); double p() const;
 
-   bool – operátor = = (const param_type & Right) const; bool – operátor! = (const param_type & Right) const; };
+   bool operator==(const param_type& right) const; bool operátor!=(const param_type& vpravo) const; };
 
 ### <a name="parameters"></a>Parametry
 
-*trub*\
-Uložený `p` parametr distribuce.
+*P*\
+Parametr `p` uložené distribuce.
 
 ### <a name="remarks"></a>Poznámky
 
-**Předběžná podmínka:** `0.0 ≤ p ≤ 1.0`
+**Předpokladem:**`0.0 ≤ p ≤ 1.0`
 
-Tuto strukturu lze předat konstruktoru třídy distribuce při vytváření instance, `param()` členské funkci pro nastavení uložených parametrů stávající distribuce a k `operator()` použití namísto uložených parametrů.
+Tato struktura může být předána konstruktoru třídy distribuce `param()` při vytváření instancí, členské funkci pro `operator()` nastavení uložených parametrů existující distribuce a k použití namísto uložených parametrů.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[\<náhodné >](../standard-library/random.md)
+[\<náhodné>](../standard-library/random.md)

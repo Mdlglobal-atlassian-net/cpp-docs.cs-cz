@@ -1,5 +1,5 @@
 ---
-title: CAtlFileMapping Class
+title: Třída CAtlFileMapping
 ms.date: 11/04/2016
 f1_keywords:
 - CAtlFileMapping
@@ -7,19 +7,19 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlFileMapping class
 ms.assetid: 899fc058-e05e-48b5-aca9-340403bb9e26
-ms.openlocfilehash: d0a47a6cf0cc86409ceb9ef40d6fc6d738c86aa9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ca46ccdacf5ea24f1de26cdc75bf808c4ecfaa40
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62247168"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81318961"
 ---
-# <a name="catlfilemapping-class"></a>CAtlFileMapping Class
+# <a name="catlfilemapping-class"></a>Třída CAtlFileMapping
 
-Tato třída reprezentuje soubor mapovaných do paměti, přidání operátor přetypování na metody [catlfilemappingbase –](../../atl/reference/catlfilemappingbase-class.md).
+Tato třída představuje soubor mapovaný v paměti, přidání operátoru přetypování k metodám [CAtlFileMappingBase](../../atl/reference/catlfilemappingbase-class.md).
 
 > [!IMPORTANT]
->  Tato třída a jejích členů nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.
+> Tuto třídu a její členy nelze použít v aplikacích, které se spouštějí v prostředí Windows Runtime.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -31,19 +31,19 @@ class CAtlFileMapping : public CAtlFileMappingBase
 #### <a name="parameters"></a>Parametry
 
 *T*<br/>
-Typ dat použité pro operátor přetypování.
+Typ dat použitých pro operátor přetypovaného vysílání.
 
 ## <a name="members"></a>Členové
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CAtlFileMapping::operator T *](#operator_t_star)|Umožňuje implicitní převod `CAtlFileMapping` objektů `T*`.|
+|[CAtlFileMapping::operátor T*](#operator_t_star)|Umožňuje implicitní `CAtlFileMapping` převod `T*`objektů na .|
 
 ## <a name="remarks"></a>Poznámky
 
-Tato třída přidává operátor přetypování jedné povolit implicitní převod `CAtlFileMapping` objektů `T*`. Ostatní členové jsou poskytována v základní třídě, [catlfilemappingbase –](../../atl/reference/catlfilemappingbase-class.md).
+Tato třída přidá jeden operátor přetypádka, který umožňuje implicitní `CAtlFileMapping` převod objektů na `T*`. Ostatní členy jsou dodávány základní třídou [CAtlFileMappingBase](../../atl/reference/catlfilemappingbase-class.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -55,9 +55,9 @@ Tato třída přidává operátor přetypování jedné povolit implicitní pře
 
 **Záhlaví:** atlfile.h
 
-##  <a name="operator_t_star"></a>  CAtlFileMapping::operator T *
+## <a name="catlfilemappingoperator-t"></a><a name="operator_t_star"></a>CAtlFileMapping::operátor T*
 
-Umožňuje implicitní převod `CAtlFileMapping` objektů `T*`.
+Umožňuje implicitní `CAtlFileMapping` převod `T*`objektů na .
 
 ```
 operator T*() const throw();
@@ -65,13 +65,13 @@ operator T*() const throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí `T*` ukazatel na začátek souboru mapovaných do paměti.
+Vrátí `T*` ukazatel na začátek souboru mapované ho paměti.
 
 ### <a name="remarks"></a>Poznámky
 
-Volání [CAtlFileMappingBase::GetData](../../atl/reference/catlfilemappingbase-class.md#getdata) a opětovně interpretuje objekt vrácený ukazatel jako `T*` kde *T* je typ použitý jako parametr této třídy šablony.
+Volá [CAtlFileMappingBase::GetData](../../atl/reference/catlfilemappingbase-class.md#getdata) a reinterpretuje `T*` vrácený ukazatel jako kde *T* je typ používaný jako parametr šablony této třídy.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[CAtlFileMappingBase – třída](../../atl/reference/catlfilemappingbase-class.md)<br/>
-[Přehled tříd](../../atl/atl-class-overview.md)
+[Třída CAtlFileMappingBase](../../atl/reference/catlfilemappingbase-class.md)<br/>
+[Přehled třídy](../../atl/atl-class-overview.md)

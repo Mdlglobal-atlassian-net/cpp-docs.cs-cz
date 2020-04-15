@@ -7,19 +7,19 @@ f1_keywords:
 helpviewer_keywords:
 - restrict clause (C++ AMP)
 ms.assetid: 07d3291f-7edf-456b-8828-283ac8673661
-ms.openlocfilehash: a100ece1a0c67be01b31f38bdca17e78c2e1b6f9
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 5a0011d11e4a59c9ca3a5e18f44d4cf831b21582
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80179104"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366649"
 ---
 # <a name="restrict-c-amp"></a>restrict (C++ AMP)
 
 Specifikátor omezení lze použít pro deklarace funkce i výrazu lambda. Vynucuje omezení kódu ve funkci a chování funkce v aplikacích používajících modul runtime C++ Accelerated Massive Parallelism (C++ AMP).
 
 > [!NOTE]
->  Informace o klíčovém slovu **omezení** , které je součástí **__declspec** atributů třídy úložiště, naleznete v tématu [restrict](../cpp/restrict.md).
+> Informace o **klíčovém** slově restrict, které je součástí atributů **třídy** úložiště __declspec, naleznete v [tématu omezení](../cpp/restrict.md).
 
 Klauzule **restrict** má následující formy:
 
@@ -31,7 +31,7 @@ Klauzule **restrict** má následující formy:
 
 ## <a name="remarks"></a>Poznámky
 
-Klíčové slovo **restrict** je kontextové klíčové slovo. Specifikátory omezení `cpu` a `amp` nejsou vyhrazenými slovy. Seznam specifikátorů nelze rozšířit. Funkce, která nemá klauzuli **restrict** , je stejná jako funkce, která má klauzuli `restrict(cpu)`.
+Klíčové slovo **restrict** je kontextové klíčové slovo. Specifikátory omezení `cpu` a `amp` nejsou vyhrazenými slovy. Seznam specifikátorů nelze rozšířit. Funkce, která nemá **klauzuli restrict,** je stejná `restrict(cpu)` jako funkce, která má klauzuli.
 
 Funkce obsahující klauzuli `restrict(amp)` má následující omezení:
 
@@ -39,7 +39,7 @@ Funkce obsahující klauzuli `restrict(amp)` má následující omezení:
 
 - Funkci musí být možné vložit.
 
-- Funkce může deklarovat pouze **int**, **unsigned int**, **float**a **Double** a třídy a struktury, které obsahují pouze tyto typy. **logická** hodnota je také povolena, ale pokud ji použijete ve složeném typu, musí být zarovnána na 4 bajty.
+- Funkce může deklarovat pouze **int**, **nepodepsané int**, **float**a **dvojité** proměnné a třídy a struktury, které obsahují pouze tyto typy. **bool** je také povolena, ale musí být zarovnána 4 bajty, pokud jej používáte ve složeném typu.
 
 - Funkce lambda nedokážou zachytit ukazatele a hodnoty dle reference.
 
@@ -47,43 +47,43 @@ Funkce obsahující klauzuli `restrict(amp)` má následující omezení:
 
 - Následující položky nejsou povoleny:
 
-   - Rekurze.
+  - Rekurze.
 
-   - Proměnné deklarované s klíčovým slovem [volatile](../cpp/volatile-cpp.md) .
+  - Proměnné deklarované pomocí klíčového slova [volatile.](../cpp/volatile-cpp.md)
 
-   - Virtuální funkce.
+  - Virtuální funkce.
 
-   - Ukazatele na funkce.
+  - Ukazatele na funkce.
 
-   - Ukazatele na členské funkce.
+  - Ukazatele na členské funkce.
 
-   - Ukazatele ve strukturách.
+  - Ukazatele ve strukturách.
 
-   - Ukazatele na ukazatele.
+  - Ukazatele na ukazatele.
 
-   - příkazy **goto** .
+  - **goto** prohlášení.
 
-   - Příkazy s popisky.
+  - Příkazy s popisky.
 
-   - příkazy **Try**, **catch**nebo **throw** .
+  - **try**, **catch**nebo **throw** statements .
 
-   - Globální proměnné.
+  - Globální proměnné.
 
-   - Statické proměnné. Místo toho použijte [klíčové slovo tile_static](../cpp/tile-static-keyword.md) .
+  - Statické proměnné. Místo toho použijte [klíčové slovo tile_static.](../cpp/tile-static-keyword.md)
 
-   - přetypování **dynamic_cast** .
+  - **dynamic_cast** odlitky.
 
-   - Operátor **typeid** .
+  - Operátor **typeid.**
 
-   - Deklarace asm.
+  - Deklarace asm.
 
-   - Argumenty vararg.
+  - Argumenty vararg.
 
-Diskuzi o omezeních funkcí najdete v tématu [omezení restrict (amp)](https://blogs.msdn.microsoft.com/nativeconcurrency/2011/12/19/restrictamp-restrictions-part-0-of-n-introduction/).
+Diskuse o omezení funkcí naleznete v tématu [omezení (amp) Omezení](https://blogs.msdn.microsoft.com/nativeconcurrency/2011/12/19/restrictamp-restrictions-part-0-of-n-introduction/).
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak použít klauzuli `restrict(amp)`.
+Následující příklad ukazuje, jak `restrict(amp)`používat klauzuli.
 
 ```cpp
 void functionAmp() restrict(amp) {}

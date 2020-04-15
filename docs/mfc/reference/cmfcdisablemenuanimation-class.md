@@ -1,5 +1,5 @@
 ---
-title: CMFCDisableMenuAnimation Class
+title: Třída CMFCDisableMenuAnimation
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCDisableMenuAnimation
@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCDisableMenuAnimation [MFC], Restore
 ms.assetid: c6eb07da-c382-43d6-8028-007f2320e50e
-ms.openlocfilehash: bf8c598e9e105569e0a5676267e205b3d3939712
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 990f41d2dfa6491d246797322ee275c9648d52a9
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62345601"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367573"
 ---
-# <a name="cmfcdisablemenuanimation-class"></a>CMFCDisableMenuAnimation Class
+# <a name="cmfcdisablemenuanimation-class"></a>Třída CMFCDisableMenuAnimation
 
-Zakáže animace rozbalovací nabídky.
+Zakáže animaci rozbalovací nabídky.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -31,35 +31,35 @@ class CMFCDisableMenuAnimation
 
 |||
 |-|-|
-|Název|Popis|
-|`CMFCDisableMenuAnimation::CMFCDisableMenuAnimation`|Vytvoří `CMFCDisableMenuAnimation` objektu.|
+|Name (Název)|Popis|
+|`CMFCDisableMenuAnimation::CMFCDisableMenuAnimation`|Vytvoří `CMFCDisableMenuAnimation` objekt.|
 |`CMFCDisableMenuAnimation::~CMFCDisableMenuAnimation`|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
 |||
 |-|-|
-|Název|Popis|
-|[CMFCDisableMenuAnimation::Restore](#restore)|Obnoví předchozí animace, která rozhraní použité k zobrazení místní nabídky.|
+|Name (Název)|Popis|
+|[CMFCDisableMenuAnimation::Obnovit](#restore)|Obnoví předchozí animaci, kterou rámec slouží k zobrazení rozbalovací nabídky.|
 
-### <a name="data-members"></a>Datové členy
+### <a name="data-members"></a>Členové dat
 
 |||
 |-|-|
-|Název|Popis|
+|Name (Název)|Popis|
 |`CMFCDisableMenuAnimation::m_animType`|Ukládá předchozí typ animace rozbalovací nabídky.|
 
 ### <a name="remarks"></a>Poznámky
 
-Pomocí této pomocné rutiny třídy dočasně zakázat místní nabídka animace (třeba při zpracování příkazů myš či klávesnice).
+Pomocí této pomocné třídy můžete dočasně zakázat animaci rozbalovací nabídky (například při zpracování příkazů myši nebo klávesnice).
 
-A `CMFCDisableMenuAnimation` zakáže rozbalovací nabídky animace průběhu svého životního cyklu objektu. Uloží aktuální typ animace místní nabídky v konstruktoru `m_animType` pole a nastaví aktuální animace typ, který `CMFCPopupMenu::NO_ANIMATION`. Destruktor obnoví předchozí typ animace.
+Objekt `CMFCDisableMenuAnimation` zakáže animaci rozbalovací nabídky během jeho životnosti. Konstruktor uloží aktuální typ animace rozbalovací `m_animType` nabídky do pole a `CMFCPopupMenu::NO_ANIMATION`nastaví aktuální typ animace na . Destruktor obnoví předchozí typ animace.
 
-Můžete vytvořit `CMFCDisableMenuAnimation` objekt v zásobníku zakázat místní nabídka animace v rámci jedné funkce. Pokud chcete zakázat místní nabídka animace mezi funkcemi, vytvořte `CMFCDisableMenuAnimation` objektů na haldě a odstraňte ji. Pokud chcete obnovit animace rozbalovací nabídky.
+Můžete vytvořit `CMFCDisableMenuAnimation` objekt v zásobníku zakázat animace rozbalovací nabídky v rámci jedné funkce. Pokud chcete zakázat animaci rozbalovací `CMFCDisableMenuAnimation` nabídky mezi funkcemi, vytvořte objekt na haldě a odstraňte jej, pokud chcete obnovit animaci rozbalovací nabídky.
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje způsob použití zásobníku dočasně zakázat nabídky animace.
+Následující příklad ukazuje, jak použít zásobník udočasně zakázat animaci nabídky.
 
 [!code-cpp[NVC_MFC_Misc#1](../../mfc/reference/codesnippet/cpp/cmfcdisablemenuanimation-class_1.h)]
 
@@ -71,9 +71,9 @@ Následující příklad ukazuje způsob použití zásobníku dočasně zakáza
 
 **Záhlaví:** afxpopupmenu.h
 
-##  <a name="restore"></a>  CMFCDisableMenuAnimation::Restore
+## <a name="cmfcdisablemenuanimationrestore"></a><a name="restore"></a>CMFCDisableMenuAnimation::Obnovit
 
-Obnoví předchozí animace, která rozhraní použité k zobrazení místní nabídky.
+Obnoví předchozí animaci, kterou rámec slouží k zobrazení rozbalovací nabídky.
 
 ```
 void Restore ();
@@ -81,10 +81,10 @@ void Restore ();
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda je volána metodou `CMFCDisableMenuAnimation` destruktor obnovit předchozí animace, která rozhraní použité k zobrazení místní nabídky.
+Tato metoda je `CMFCDisableMenuAnimation` volána destruktorem k obnovení předchozí animace, která framework slouží k zobrazení rozbalovací nabídky.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>
-[CMFCPopupMenu – třída](../../mfc/reference/cmfcpopupmenu-class.md)
+[Třída cmfcpopupmenu](../../mfc/reference/cmfcpopupmenu-class.md)

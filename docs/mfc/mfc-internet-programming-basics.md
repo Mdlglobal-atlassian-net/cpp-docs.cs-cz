@@ -16,23 +16,23 @@ helpviewer_keywords:
 - Internet content [MFC]
 - WinInet classes [MFC]
 ms.assetid: 6df2dfd0-6e3f-4587-9d01-2a32f00f8a6f
-ms.openlocfilehash: eee045e198f61c088e302c40deb2de406adab428
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 5a8fb7bf07ec631869075c5977dcec468143ad56
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66449719"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366291"
 ---
 # <a name="mfc-internet-programming-basics"></a>Základy internetového programování v prostředí MFC
 
-Společnost Microsoft poskytuje řadu rozhraní API pro programování klientských i serverových aplikací. Jsou zapisovaná mnoho nových aplikací pro Internet, a technologií, možnosti prohlížeče a změnit možnosti zabezpečení, se zapíšou nových typů aplikací. Prohlížeče spustit na klientských počítačích, zajištění přístupu k webu a zobrazování stránky HTML, které obsahují text, grafiku, ovládací prvky ActiveX a dokumenty. Servery FTP, HTTP a gopher služby a spuštění serverové aplikace rozšíření rozhraní CGI. Vlastní aplikace můžete načíst informace a poskytují data na Internetu.
+Společnost Microsoft poskytuje mnoho rozhraní API pro programování klientských i serverových aplikací. Mnoho nových aplikací jsou psány pro Internet, a jako technologie, možnosti prohlížeče a možnosti zabezpečení změnit, nové typy aplikací budou zapsány. Prohlížeče běží v klientských počítačích, poskytují přístup k webu a zobrazují stránky HTML, které obsahují text, grafiku, ovládací prvky ActiveX a dokumenty. Servery poskytují služby FTP, HTTP a gopher a spouštějí aplikace pro rozšíření serveru pomocí rozhraní CGI. Vlastní aplikace může načítat informace a poskytovat data na Internetu.
 
 >[!IMPORTANT]
-> ActiveX je starší technologie, která by neměla být používána při novém vývoji. Další informace najdete v tématu [ovládací prvky ActiveX](activex-controls.md).
+> ActiveX je starší technologie, která by neměla být použita pro nový vývoj. Další informace naleznete [v tématu ActiveX Controls](activex-controls.md).
 
-![Klientské a serverové aplikace](../mfc/media/vc38bq1.gif "klientské a serverové aplikace")
+![Klientské a serverové aplikace](../mfc/media/vc38bq1.gif "Klientské a serverové aplikace")
 
-Knihovna MFC poskytuje třídy, které podporují programování na Internetu. Můžete použít [COleControl](../mfc/reference/colecontrol-class.md) a [cdocobjectserver –](../mfc/reference/cdocobjectserver-class.md) a související třídy knihovny MFC k tvorbě ovládacích prvků ActiveX a aktivní dokumenty. MFC – třídy můžete použít například [cinternetsession –](../mfc/reference/cinternetsession-class.md), [cftpconnection –](../mfc/reference/cftpconnection-class.md), a [casyncmonikerfile –](../mfc/reference/casyncmonikerfile-class.md) načíst soubory a informace, pomocí protokolů sítě Internet, jako je například FTP, HTTP a gopher.
+Knihovna MFC poskytuje třídy, které podporují programování v Internetu. [COleControl](../mfc/reference/colecontrol-class.md) a [CDocObjectServer](../mfc/reference/cdocobjectserver-class.md) a související třídy knihovny MFC můžete použít k zápisu ovládacích prvků ActiveX a aktivních dokumentů. Třídy knihovny MFC, například [CInternetSession](../mfc/reference/cinternetsession-class.md), [CFtpConnection](../mfc/reference/cftpconnection-class.md)a [CAsyncMonikerFile,](../mfc/reference/casyncmonikerfile-class.md) můžete použít k načtení souborů a informací pomocí internetových protokolů, jako jsou FTP, HTTP a gopher.
 
 ## <a name="in-this-section"></a>V tomto oddílu
 
@@ -42,7 +42,7 @@ Knihovna MFC poskytuje třídy, které podporují programování na Internetu. M
 
 - [Internetové informace podle úloh](../mfc/internet-information-by-task.md)
 
-- [Technologie Active na internetu](../mfc/active-technology-on-the-internet.md)
+- [Technologie Active na Internetu](../mfc/active-technology-on-the-internet.md)
 
 - [WinInet – základy](../mfc/wininet-basics.md)
 
@@ -50,9 +50,9 @@ Knihovna MFC poskytuje třídy, které podporují programování na Internetu. M
 
 ## <a name="related-sections"></a>Související oddíly
 
-- [Ovládací prvky ActiveX na internetu](../mfc/activex-controls-on-the-internet.md)
+- [Ovládací prvky ActiveXna Internetu](../mfc/activex-controls-on-the-internet.md)
 
-- [Asynchronní monikery na internetu](../mfc/asynchronous-monikers-on-the-internet.md)
+- [Asynchronní monikery na Internetu](../mfc/asynchronous-monikers-on-the-internet.md)
 
 - [Win32 – internetová rozšíření (WinInet)](../mfc/win32-internet-extensions-wininet.md)
 
@@ -64,18 +64,18 @@ Knihovna MFC poskytuje třídy, které podporují programování na Internetu. M
 
 - [Testování internetových aplikací](../mfc/testing-internet-applications.md)
 
-- [Internetové zabezpečení](../mfc/internet-security-cpp.md)
+- [Zabezpečení Internetu](../mfc/internet-security-cpp.md)
 
-- [ATL – podpora ovládacích prvků DHTML](../atl/atl-support-for-dhtml-controls.md)
+- [ATL – podpora pro ovládací prvky DHTML](../atl/atl-support-for-dhtml-controls.md)
 
-##  <a name="_core_web_sites_for_more_information"></a> Weby pro další informace
+## <a name="web-sites-for-more-information"></a><a name="_core_web_sites_for_more_information"></a>Další informace naleznete na webech
 
-Další informace o technologii Microsoft Internet, najdete v článku [Microsoft Developer Network (MSDN)](https://go.microsoft.com/fwlink/p/?linkid=56322) webu. (Odkazy mohou změnit bez předchozího upozornění.)
+Další informace o internetových technologiích společnosti Microsoft naleznete na webu [microsoft developer network (MSDN).](https://go.microsoft.com/fwlink/p/?linkid=56322) (Odkazy se mohou změnit bez předchozího upozornění.)
 
-Tento web pro vývojáře obsahuje informace o použití Microsoft vývojářské nástroje a technologie a hlavní zprávy o poslední a nadcházející konference. Na této stránce můžete přejít na mnoho související vývojářské weby, včetně .NET a centra pro vývojáře XML. Můžete také stáhnout beta verze sady SDK a ukázky.
+Tento web pro vývojáře obsahuje informace o používání vývojových nástrojů a technologií společnosti Microsoft a hlavní informace o nedávných a nadcházejících konferencích. Na této stránce můžete přejít na mnoho souvisejících webů pro vývojáře, včetně center pro vývojáře .NET a XML. Můžete si také stáhnout beta sady SDK a ukázky.
 
-[World Wide Web Consortium (W3C)](https://go.microsoft.com/fwlink/p/?linkid=37125) publikuje specifikace HTML, protokolu HTTP, CGI a jiné webové technologie.
+[Konsorcium W3C (World Wide Web Consortium)](https://go.microsoft.com/fwlink/p/?linkid=37125) publikuje specifikace pro technologie HTML, HTTP, CGI a další chod webu.
 
-##  <a name="_core_more_internet_help"></a> Další nápovědu Internet
+## <a name="more-internet-help"></a><a name="_core_more_internet_help"></a>Další nápověda k Internetu
 
-OLE – část sady Windows SDK obsahuje další informace o programování technologie OLE. Tyto informace obsahuje podrobnosti o použití funkce rozhraní Win32 WinInet přímo, namísto prostřednictvím třídy knihovny MFC. Také obsahuje souhrnné informace o technologiích Internet.
+Část OLE sady Windows SDK obsahuje další informace o programování OLE. Tyto informace poskytují podrobnosti o použití wininet wininet funkce přímo, nikoli prostřednictvím třídknihovny MFC. Obsahuje také přehled informací o internetových technologiích.

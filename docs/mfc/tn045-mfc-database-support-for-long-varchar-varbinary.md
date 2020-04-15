@@ -1,49 +1,49 @@
 ---
-title: 'TN045: Podpora MFC a databáze pro Long Varchar a Varbinary'
+title: 'TN045: Podpora prostředí MFC a databáze pro typy Long Varchar a Varbinary'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - TN045
 - Varbinary data type
 - Varchar data type
 ms.assetid: cf572c35-5275-45b5-83df-5f0e36114f40
-ms.openlocfilehash: 3e8b356027e5c5b7c604a0354624d9f11e32fb9a
-ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
+ms.openlocfilehash: f67d159fb600dcacd8eedd40e672edf18bddee9a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65611053"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81365500"
 ---
-# <a name="tn045-mfcdatabase-support-for-long-varcharvarbinary"></a>TN045: Podpora knihovny MFC a databáze pro typy Long Varchar/Varbinary
+# <a name="tn045-mfcdatabase-support-for-long-varcharvarbinary"></a>TN045: Podpora prostředí MFC a databáze pro typy Long Varchar/Varbinary
 
 > [!NOTE]
->  Následující Technická poznámka nebyla aktualizována, protože byla poprvé zahrnuta v online dokumentaci. V důsledku toho některé postupy a témata mohou být nesprávné nebo zastaralé. Nejnovější informace se doporučuje vyhledat téma zájmu v dokumentaci online index.
+> Následující technická poznámka nebyla aktualizována od doby, kdy byla poprvé zahrnuta do online dokumentace. V důsledku toho mohou být některé postupy a témata zastaralé nebo nesprávné. Chcete-li získat nejnovější informace, doporučujeme vyhledat téma zájmu v online indexu dokumentace.
 
-Tato poznámka popisuje, jak načíst a odeslat rozhraní ODBC **SQL_LONGVARCHAR** a **SQL_LONGVARBINARY** databáze tříd datových typů pomocí knihovny MFC.
+Tato poznámka popisuje, jak načíst a odeslat **SQL_LONGVARCHAR** odbc a **SQL_LONGVARBINARY** datových typů pomocí tříd y databáze knihovny MFC.
 
 ## <a name="overview-of-long-varcharvarbinary-support"></a>Přehled podpory Long Varchar/Varbinary
 
-Rozhraní ODBC **SQL_LONG_VARCHAR** a **SQL_LONGBINARY** datové typy (dále jako dlouho datových sloupců do tohoto místa) může obsahovat velké objemy dat. Tato data můžete zpracovávat 3 způsoby:
+Datové typy **SQL_LONG_VARCHAR** a **SQL_LONGBINARY** ODBC (označované zde jako dlouhé datové sloupce) mohou obsahovat obrovské množství dat. Tato data lze zpracovat 3 způsoby:
 
-- Vytvořte mu vazbu k `CString` / `CByteArray`.
+- Svázat ji `CString` / `CByteArray`na .
 
-- Vytvořte mu vazbu k `CLongBinary`.
+- Svázat ji `CLongBinary`na .
 
-- Nelze vytvořit vazbu na všech a načíst a odesílání hodnotu long – datový ručně, nezávisle na databázové třídy.
+- Nesvazovat vůbec a načíst a odeslat dlouhou hodnotu dat ručně, nezávisle na databázové třídy.
 
-Každá ze tří metod obsahuje výhody a nevýhody.
+Každá ze tří metod má své výhody a nevýhody.
 
-Long – datový sloupce nejsou podporovány pro parametry dotazu. Jsou podporovány pouze pro outputColumns.
+Dlouhé datové sloupce nejsou podporovány pro parametry dotazu. Jsou podporovány pouze pro outputColumns.
 
-## <a name="binding-a-long-data-column-to-a-cstringcbytearray"></a>Vazba na CString/CByteArray – Long – datový sloupec
+## <a name="binding-a-long-data-column-to-a-cstringcbytearray"></a>Vazba dlouhého datového sloupce na cstring/CByteArray
 
 Výhody:
 
-Tento přístup je srozumitelný a práci s známé třídy. Poskytuje rozhraní `CFormView` podporu `CString` s `DDX_Text`. Máte spoustu obecné řetězec nebo kolekce funkcí pomocí `CString` a `CByteArray` třídy kde můžete určit množství paměti přidělené místně pro uchování hodnoty data. Rozhraní framework udržuje staré kopii dat pole během `Edit` nebo `AddNew` volání funkce a rozhraní framework může automaticky rozpoznat změny dat za vás.
+Tento přístup je jednoduchý na pochopení a pracujete se známými třídami. Rámec poskytuje `CFormView` podporu `CString` `DDX_Text`pro s . Máte spoustu obecné funkce řetězce nebo `CString` kolekce `CByteArray` s a třídy a můžete řídit množství paměti přidělené místně pro uložení hodnoty dat. Rozhraní Framework udržuje starou kopii `Edit` dat `AddNew` pole během volání nebo funkce a rozhraní framework může automaticky rozpoznat změny dat za vás.
 
 > [!NOTE]
->  Protože `CString` je navržená pro práci s daty znak a `CByteArray` ke zpracování binárních dat, doporučujeme umístit znaková data (**SQL_LONGVARCHAR**) do `CString`a binárních dat ( **SQL_LONGVARBINARY**) do `CByteArray`.
+> Vzhledem k tomu, `CString` že `CByteArray` je určen pro práci na znakových datech a pro `CString`práci s binárními daty, doporučujeme vložit znaková data (**SQL_LONGVARCHAR**) do aplikace a binární data (**SQL_LONGVARBINARY**) do . `CByteArray`
 
-Pro funkce RFX `CString` a `CByteArray` mají další argument, který umožní přepsat výchozí velikost přidělené paměti pro uložení načtené hodnoty pro sloupec data. Poznámka: argument nMaxLength v deklaracích následující funkce:
+Funkce RFX `CString` pro `CByteArray` a mají další argument, který umožňuje přepsat výchozí velikost přidělené paměti držet načtenou hodnotu pro sloupec dat. Všimněte si argumentu nMaxLength v následujících deklaracích funkcí:
 
 ```
 void AFXAPI RFX_Text(CFieldExchange* pFX,
@@ -59,64 +59,64 @@ void AFXAPI RFX_Binary(CFieldExchange* pFX,
     int nMaxLength = 255);
 ```
 
-Pokud načtete long – datový sloupec do `CString` nebo `CByteArray`, vrátí maximální množství dat je ve výchozím nastavení, 255 bajtů. Nic nad tuto hranici se ignoruje. V tomto případě rozhraní vyvolá výjimku **AFX_SQL_ERROR_DATA_TRUNCATED**. Naštěstí můžete explicitně zvýšit nMaxLength vyšší hodnoty, až **MAXINT**.
+Pokud načtete dlouhý datový `CString` `CByteArray`sloupec do nebo , maximální vrácené množství dat je ve výchozím nastavení 255 bajtů. Cokoliv kromě toho je ignorováno. V tomto případě bude rámec vyvolat výjimku **AFX_SQL_ERROR_DATA_TRUNCATED**. Naštěstí můžete explicitně zvýšit nMaxLength na větší hodnoty, až **maxint**.
 
 > [!NOTE]
->  Je hodnota nMaxLength využívané prostředím MFC se nastavit místní vyrovnávací paměť `SQLBindColumn` funkce. Toto je místní vyrovnávací paměti pro ukládání dat a nemá vliv na skutečně množství dat vrácených ovladač ODBC. `RFX_Text` a `RFX_Binary` pouze si ho volat pomocí `SQLFetch` k načtení dat z databáze back-end. Každý ovladač ODBC má jiné omezení množství dat, která může vrátit do jednoho načtení. Toto omezení může být mnohem menší než hodnotu nastavenou v nMaxLength, ve kterémžto případě výjimku **AFX_SQL_ERROR_DATA_TRUNCATED** bude vyvolána výjimka. Za těchto okolností, přejít k používání `RFX_LongBinary` místo `RFX_Text` nebo `RFX_Binary` tak, aby se dá načíst všechna data.
+> Hodnota nMaxLength používá knihovna MFC k nastavení `SQLBindColumn` místní vyrovnávací paměti funkce. Toto je místní vyrovnávací paměť pro ukládání dat a ve skutečnosti nemá vliv na množství dat vrácených ovladačem ODBC. `RFX_Text`a `RFX_Binary` provést pouze `SQLFetch` jedno volání pomocí načíst data z back-end databáze. Každý ovladač ROZHRANÍ ODBC má jiné omezení množství dat, které mohou vrátit v jednom načtení. Toto omezení může být mnohem menší než hodnota nastavená v nMaxLength, v takovém případě bude vyvolána výjimka **AFX_SQL_ERROR_DATA_TRUNCATED.** Za těchto okolností přepněte `RFX_Text` na `RFX_Binary` using `RFX_LongBinary` namísto nebo tak, aby všechna data lze načíst.
 
-Vytvoří vazbu ClassWizard **SQL_LONGVARCHAR** k `CString`, nebo **SQL_LONGVARBINARY** k `CByteArray` za vás. Pokud chcete přidělit víc než 255 bajtů, do kterých můžete získat vaše long – datový sloupec, můžete potom zadejte explicitní hodnotu pro nMaxLength.
+ClassWizard sváže **SQL_LONGVARCHAR** `CString`na , nebo `CByteArray` **SQL_LONGVARBINARY** pro vás. Pokud chcete přidělit více než 255 bajtů, do kterých načtete sloupec dlouhých dat, můžete zadat explicitní hodnotu pro nMaxLength.
 
-Long – datový sloupec je vázána k `CString` nebo `CByteArray`, aktualizuje pole funguje stejně jako když je vázán na SQL_**VARCHAR** nebo SQL_**VARBINARY**. Během `Edit`, hodnota dat se uloží do mezipaměti okamžitě a později při porovnání `Update` je volána k zjištění změny v datech hodnotu a nastavit čistý a odpovídajícím způsobem Null hodnoty pro sloupec.
+Pokud je dlouhý datový sloupec `CString` `CByteArray`vázán na nebo , aktualizace pole funguje stejně jako při vazbě na SQL_**VARCHAR** nebo SQL_**VARBINARY**. Během `Edit`, hodnota dat je uložena do `Update` mezipaměti a později porovnány, když je volána ke zjištění změn hodnoty dat a nastavte Dirty a Null hodnoty pro sloupec odpovídajícím způsobem.
 
-## <a name="binding-a-long-data-column-to-a-clongbinary"></a>Vazba Long – datový sloupec CLongBinary
+## <a name="binding-a-long-data-column-to-a-clongbinary"></a>Vazba dlouhý datový sloupec clongbinary
 
-Pokud vaše long – datový sloupec může obsahovat více **MAXINT** bajtů dat, měli byste pravděpodobně zvážit načítání do `CLongBinary`.
+Pokud váš dlouhý datový sloupec může obsahovat více **bajtů MAXINT** dat, měli byste pravděpodobně zvážit jeho načtení do . `CLongBinary`
 
 Výhody:
 
-To obnoví na celý long – datový sloupec až dostupné paměti.
+Tím se načte celý dlouhý datový sloupec až do dostupné paměti.
 
 Nevýhody:
 
-Jsou data uložená v paměti. Tento přístup je také pro opravdu velké objemy dat nepřekonatelně drahé. Je nutné volat `SetFieldDirty` vázaných dat člen zajistit, pole je součástí `Update` operace.
+Data jsou uložena v paměti. Tento přístup je také nepřiměřeně nákladný u velmi velkého množství dat. Musíte volat `SetFieldDirty` vázaného datového člena, abyste zajistili, že pole bude zahrnuto do `Update` operace.
 
-Pokud načtete dlouhé datových sloupců do `CLongBinary`, databázové třídy zkontrolujte celková velikost long – datový sloupec a potom přidělit `HGLOBAL` dostatečně velký pro uložení je hodnota celého datového segmentu paměti. Databázové třídy pak načíst hodnotu všechna data do přidělená `HGLOBAL`.
+Pokud načtete dlouhé `CLongBinary`datové sloupce do aplikace , budou třídy databáze kontrolovat `HGLOBAL` celkovou velikost dlouhého datového sloupce a pak přidělit dostatečně velký segment paměti, aby byl obsahovat celou hodnotu dat. Třídy databáze pak načíst celou hodnotu dat do přidělené `HGLOBAL`.
 
-Pokud zdroj dat nelze očekávanou velikost long – datový sloupec, rozhraní vyvolá výjimku **AFX_SQL_ERROR_SQL_NO_TOTAL**. Pokud se pokus o přidělení `HGLOBAL` selže, je vyvolána výjimka standardní paměti.
+Pokud zdroj dat nemůže vrátit očekávanou velikost dlouhého sloupce dat, rozhraní v rámci vyvolá výjimku **AFX_SQL_ERROR_SQL_NO_TOTAL**. Pokud se nezdaří `HGLOBAL` pokus o přidělení, je vyvolána výjimka standardní paměti.
 
-Vytvoří vazbu ClassWizard **SQL_LONGVARCHAR** nebo **SQL_LONGVARBINARY** k `CLongBinary` za vás. Vyberte `CLongBinary` jako typ proměnné v dialogovém okně Přidat členskou proměnnou. Poté přidá ClassWizard `RFX_LongBinary` volání vaše `DoFieldExchange` volání a zvýšit celkový počet vázaného pole.
+ClassWizard sváže **SQL_LONGVARCHAR** nebo `CLongBinary` **SQL_LONGVARBINARY** na pro vás. V `CLongBinary` dialogovém okně Přidat proměnnou vyberte jako typ proměnné. ClassWizard pak přidá `RFX_LongBinary` volání `DoFieldExchange` do vašeho volání a zvýší celkový počet vázaných polí.
 
-K aktualizaci dlouho hodnoty dat sloupců, nejdřív Ujistěte se, že přidělená `HGLOBAL` je dostatečně velký pro nová data voláním **:: GlobalSize** na *m_hData* člena `CLongBinary`. Pokud je příliš malá, uvolněte `HGLOBAL` a přidělte jednu odpovídající velikost. Potom nastavte *m_dwDataLength* tak, aby odrážely novou velikost.
+Chcete-li aktualizovat hodnoty dlouhých datových `HGLOBAL` sloupců, nejprve zkontrolujte, zda je přidělená hodnota `CLongBinary`dostatečně velká pro uložení nových dat voláním **::GlobalSize** na *m_hData* člen . Pokud je příliš malý, `HGLOBAL` uvolněte a přidělit jeden odpovídající velikost. Pak nastavte *m_dwDataLength* tak, aby odrážely novou velikost.
 
-Jinak, pokud *m_dwDataLength* je větší než velikost dat, kterého nahrazujete, můžete zdarma a přidělit jinému uživateli `HGLOBAL`, nebo ponechat přiděleny. Ujistěte se, že označující počet bajtů v skutečně spotřebujete *m_dwDataLength*.
+V opačném případě, pokud *m_dwDataLength* je větší než velikost dat, které nahrazujete, můžete buď uvolnit a přerozdělit `HGLOBAL`, nebo je nechat přidělené. Nezapomeňte uvést počet bajtů skutečně použitých v *m_dwDataLength*.
 
-## <a name="how-updating-a-clongbinary-works"></a>Jak aktualizovat CLongBinary funguje
+## <a name="how-updating-a-clongbinary-works"></a>Jak aktualizace clongbinary works
 
-Není nutné pochopit, jak aktualizovat `CLongBinary` funguje, ale může být užitečné například o tom, jak odeslat hodnoty long – datový zdroj dat, pokud se rozhodnete tento třetí způsob popsaný níže.
+Není nutné pochopit, jak `CLongBinary` funguje aktualizace, ale může být užitečné jako příklad, jak odeslat dlouhé hodnoty dat do zdroje dat, pokud zvolíte tuto třetí metodu, popsané níže.
 
 > [!NOTE]
->  Aby se `CLongBinary` pole mají být zahrnuty v aktualizaci, musí explicitně volat `SetFieldDirty` pro pole. Pokud provedete změny pole, včetně nastavení jeho hodnoty Null, musí volat `SetFieldDirty`. Musíte také zavolat `SetFieldNull`, s druhý parametr je **FALSE**, označte pole tak, že má hodnotu.
+> Aby bylo `CLongBinary` pole zahrnuto do aktualizace, musíte `SetFieldDirty` toto pole explicitně volat. Pokud provedete jakoukoli změnu pole, včetně jeho `SetFieldDirty`nastavení Null, musíte volat . Musíte také `SetFieldNull`volat , přičemž druhý parametr je **FALSE**, chcete-li pole označit jako pole s hodnotou.
 
-Při aktualizaci `CLongBinary` pole, ODBC pro databázové třídy použít **DATA_AT_EXEC** mechanismus (na najdete v dokumentaci k rozhraní ODBC `SQLSetPos`společnosti rgbValue argument). Když rozhraní připraví příkazu insert nebo update místo přejdete `HGLOBAL` obsahující data, *adresu* z `CLongBinary` je nastaven jako *hodnotu* sloupce Místo toho a délka indikátor nastavena na **SQL_DATA_AT_EXEC**. Později, při odesílání příkazu update ke zdroji dat `SQLExecDirect` vrátí **SQL_NEED_DATA**. Toto upozornění rozhraní framework, že hodnota parametru pro tento sloupec je ve skutečnosti adresu `CLongBinary`. Rámec volá `SQLGetData` jednou očekává ovladač vrátit skutečná délka dat s malou vyrovnávací pamětí. Pokud ovladač vrátí skutečná délka binární velkých objektů (BLOB), znovu alokuje MFC tolik místa potřebného k načtení objektu BLOB. Pokud zdroj dat vrátí **SQL_NO_TOTAL**, označující, že nelze určit velikost objektu BLOB, budou knihovny MFC vytvořte menší bloky. Výchozí počáteční velikost je 64 kB a následné bloky bude dvojnásobek velikosti; například druhá bude 128 kb / s, třetí je 256 kB a tak dále. Počáteční velikost je možné konfigurovat.
+Při aktualizaci `CLongBinary` pole používají třídy databáze **mechanismus DATA_AT_EXEC** rozhraní `SQLSetPos`ODBC (viz dokumentace od rozhraní ODBC k argumentu rgbValue společnosti ). Když framework připraví příkaz insert nebo update, místo `HGLOBAL` toho, aby ukazoval na `CLongBinary` obsahující data, *adresa* je nastavena jako *hodnota* sloupce a indikátor délky nastaven ý na **SQL_DATA_AT_EXEC**. Později, když je příkaz aktualizace odeslán `SQLExecDirect` do zdroje dat, vrátí **SQL_NEED_DATA**. To upozorní na rámec, že hodnota param pro tento `CLongBinary`sloupec je ve skutečnosti adresa . Rozhraní framework `SQLGetData` volání jednou s malou vyrovnávací paměti, očekává, že ovladač vrátit skutečnou délku dat. Pokud ovladač vrátí skutečnou délku binární velký objekt (BLOB), knihovna MFC přerozdělí tolik místa, jak je potřeba k načtení objektu BLOB. Pokud zdroj dat vrátí **SQL_NO_TOTAL**, což znamená, že nemůže určit velikost objektu BLOB, knihovna MFC vytvoří menší bloky. Výchozí počáteční velikost je 64 kB a následné bloky budou mít dvojnásobnou velikost; například druhý bude 128 kM, třetí je 256 kK a tak dále. Počáteční velikost je konfigurovatelná.
 
-## <a name="not-binding-retrievingsending-data-directly-from-odbc-with-sqlgetdata"></a>Vazba není: Načítání/odesílání dat přímo z rozhraní ODBC s SQLGetData
+## <a name="not-binding-retrievingsending-data-directly-from-odbc-with-sqlgetdata"></a>Nevazba: Načítání a odesílání dat přímo z ROZHRANÍ ODBC pomocí SQLGetData
 
-Pomocí této metody můžete úplně obejít databázové třídy a řešil long – datový sloupec.
+Pomocí této metody zcela obejít třídy databáze a vypořádat se s dlouhou datovou sloupec sami.
 
 Výhody:
 
-Můžete ukládat do mezipaměti dat na disk v případě potřeby nebo rozhodnout dynamicky, kolik dat k načtení.
+V případě potřeby můžete data ukládat do mezipaměti na disk nebo dynamicky rozhodnout, kolik dat chcete načíst.
 
 Nevýhody:
 
-Neobdržíte rozhraní framework `Edit` nebo `AddNew` podpory který musíte napsat kód sami sebe k provádění základních funkcí (`Delete` funguje, protože se nejedná o úrovni operace sloupce).
+Nezískáte rozhraní nebo `Edit` `AddNew` podporu a musíte napsat kód sami k provedení základní`Delete` funkce (funguje i když, protože to není operace na úrovni sloupce).
 
-Long – datový sloupec v tomto případě musí být v seznamu pro výběr sady záznamů, ale by neměl být vázán na rozhraním. Můžete provést například jde zadat vlastní příkaz jazyka SQL přes `GetDefaultSQL` nebo jako argument Ipszsql `CRecordset`společnosti `Open` funkce a další sloupec s volání funkce rozhraní RFX_ vazbu. ODBC vyžaduje nevázaný pole, které se zobrazí napravo od vázaného pole, proto přidat nevázaný sloupec nebo sloupce na konec seznamu příkazu select.
+V tomto případě dlouhý sloupec dat musí být ve výběrovém seznamu sady záznamů, ale nesmí být vázán a rámci. Jedním ze způsobů, jak to provést, `GetDefaultSQL` je zadat vlastní příkaz `CRecordset`SQL `Open` prostřednictvím nebo jako argument lpszSQL do funkce 's a nevázat sloupec navíc s voláním funkce RFX_. Rozhraní ODBC vyžaduje, aby se nevázaná pole zobrazovala vpravo od vázaných polí, proto přidejte nevázaný sloupec nebo sloupce na konec seznamu výběru.
 
 > [!NOTE]
->  Protože dlouhý datový sloupec není vázán v rámci rozhraní, změny k němu nebude zpracován s `CRecordset::Update` volání. Musíte vytvořit a odeslat vyžaduje SQL **vložit** a **aktualizace** příkazy sami.
+> Vzhledem k tomu, že váš dlouhý sloupec dat není `CRecordset::Update` vázán rámci, změny v něm nebudou zpracovány s voláním. Musíte vytvořit a odeslat požadované příkazy SQL **INSERT** a **UPDATE** sami.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Technické poznámky podle čísel](../mfc/technical-notes-by-number.md)<br/>
 [Technické poznámky podle kategorií](../mfc/technical-notes-by-category.md)

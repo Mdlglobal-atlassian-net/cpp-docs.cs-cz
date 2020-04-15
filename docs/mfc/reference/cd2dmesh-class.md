@@ -1,5 +1,5 @@
 ---
-title: Cd2dmesh – třída
+title: CD2DMesh – třída
 ms.date: 11/04/2016
 f1_keywords:
 - CD2DMesh
@@ -24,14 +24,14 @@ helpviewer_keywords:
 - CD2DMesh [MFC], Open
 - CD2DMesh [MFC], m_pMesh
 ms.assetid: 11a2c78a-1367-40e8-a34f-44aa0509a4c9
-ms.openlocfilehash: f4ad6fd054eeb8576c2fdb2dc924f70034b3abad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 64f5dd7b40853a86dc7f964ecd3701f132a94e16
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396363"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81369184"
 ---
-# <a name="cd2dmesh-class"></a>Cd2dmesh – třída
+# <a name="cd2dmesh-class"></a>CD2DMesh – třída
 
 Obálka pro ID2D1Mesh.
 
@@ -45,40 +45,40 @@ class CD2DMesh : public CD2DResource;
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CD2DMesh::CD2DMesh](#cd2dmesh)|Vytvoří objekt cd2dmesh –.|
-|[CD2DMesh::~CD2DMesh](#_dtorcd2dmesh)|Destruktor. Volá se, když se likviduje objektu D2D mřížky.|
+|[CD2DMesh::CD2DMesh](#cd2dmesh)|Vytvoří objekt CD2DMesh.|
+|[CD2DMesh::~CD2DMesh](#_dtorcd2dmesh)|Destruktor. Nazývá se při zničení objektu sítě D2D.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CD2DMesh::Attach](#attach)|Bude k obrazci existujících prostředků rozhraní pro objekt|
-|[CD2DMesh::Create](#create)|Vytvoří cd2dmesh –. (Přepíše [CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create).)|
-|[CD2DMesh::Destroy](#destroy)|Odstraní objekt cd2dmesh –. (Přepíše [CD2DResource::Destroy](../../mfc/reference/cd2dresource-class.md#destroy).)|
-|[CD2DMesh::Detach](#detach)|Odpojí prostředků rozhraní z objektu|
-|[CD2DMesh::Get](#get)|Vrátí ID2D1Mesh rozhraní|
+|[CD2DMesh::Připojit](#attach)|Připojí k objektu existující rozhraní prostředků.|
+|[CD2DMesh::Vytvořit](#create)|Vytvoří cd2DMesh. (Přepíše [CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create).)|
+|[CD2DMesh::Destroy](#destroy)|Zničí objekt CD2DMesh. (Přepíše [CD2DResource::Destroy](../../mfc/reference/cd2dresource-class.md#destroy).)|
+|[CD2DMesh::Detach](#detach)|Odpojí rozhraní prostředků od objektu.|
+|[CD2DMesh::Získat](#get)|Vrátí rozhraní ID2D1Mesh.|
 |[CD2DMesh::IsValid](#isvalid)|Zkontroluje platnost prostředku (přepíše [CD2DResource::IsValid](../../mfc/reference/cd2dresource-class.md#isvalid).)|
-|[CD2DMesh::Open](#open)|Otevře se síť pro naplnění.|
+|[CD2DMesh::Otevřít](#open)|Otevře síť pro plnění.|
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CD2DMesh::Operator ID2D1Mesh *](#operator_id2d1mesh_star)|Vrátí ID2D1Mesh rozhraní|
+|[CD2DMesh::operátor ID2D1Mesh*](#operator_id2d1mesh_star)|Vrátí rozhraní ID2D1Mesh.|
 
-### <a name="protected-data-members"></a>Chránění členové dat
+### <a name="protected-data-members"></a>Členové chráněných dat
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CD2DMesh::m_pMesh](#m_pmesh)|Ukazatel ID2D1Mesh.|
+|[CD2DMesh::m_pMesh](#m_pmesh)|Ukazatel na ID2D1Mesh.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObjekt](../../mfc/reference/cobject-class.md)
 
-[CD2DResource](../../mfc/reference/cd2dresource-class.md)
+[Zdroj CD2D](../../mfc/reference/cd2dresource-class.md)
 
 `CD2DMesh`
 
@@ -86,17 +86,17 @@ class CD2DMesh : public CD2DResource;
 
 **Záhlaví:** afxrendertarget.h
 
-##  <a name="_dtorcd2dmesh"></a>  CD2DMesh::~CD2DMesh
+## <a name="cd2dmeshcd2dmesh"></a><a name="_dtorcd2dmesh"></a>CD2DMesh::~CD2DMesh
 
-Destruktor. Volá se, když se likviduje objektu D2D mřížky.
+Destruktor. Nazývá se při zničení objektu sítě D2D.
 
 ```
 virtual ~CD2DMesh();
 ```
 
-##  <a name="attach"></a>  CD2DMesh::Attach
+## <a name="cd2dmeshattach"></a><a name="attach"></a>CD2DMesh::Připojit
 
-Bude k obrazci existujících prostředků rozhraní pro objekt
+Připojí k objektu existující rozhraní prostředků.
 
 ```
 void Attach(ID2D1Mesh* pResource);
@@ -104,12 +104,12 @@ void Attach(ID2D1Mesh* pResource);
 
 ### <a name="parameters"></a>Parametry
 
-*pResource*<br/>
-Rozhraní existující prostředek. Nesmí být NULL.
+*pZdroj*<br/>
+Existující rozhraní prostředků. Nelze získat hodnotu NULL.
 
-##  <a name="cd2dmesh"></a>  CD2DMesh::CD2DMesh
+## <a name="cd2dmeshcd2dmesh"></a><a name="cd2dmesh"></a>CD2DMesh::CD2DMesh
 
-Vytvoří objekt cd2dmesh –.
+Vytvoří objekt CD2DMesh.
 
 ```
 CD2DMesh(
@@ -120,14 +120,14 @@ CD2DMesh(
 ### <a name="parameters"></a>Parametry
 
 *pParentTarget*<br/>
-Ukazatel na cíl vykreslování.
+Ukazatel na cíl vykreslení.
 
 *bAutoDestroy*<br/>
-Označuje, že bude objekt zničen. vlastník (pParentTarget).
+Označuje, že objekt bude zničen vlastníkem (pParentTarget).
 
-##  <a name="create"></a>  CD2DMesh::Create
+## <a name="cd2dmeshcreate"></a><a name="create"></a>CD2DMesh::Vytvořit
 
-Vytvoří cd2dmesh –.
+Vytvoří cd2DMesh.
 
 ```
 virtual HRESULT Create(CRenderTarget* pRenderTarget);
@@ -136,23 +136,23 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget);
 ### <a name="parameters"></a>Parametry
 
 *pRenderTarget*<br/>
-Ukazatel na cíl vykreslování.
+Ukazatel na cíl vykreslení.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud metoda uspěje, vrátí hodnotu S_OK. V opačném případě vrátí kód chyby HRESULT.
+Pokud je metoda úspěšná, vrátí S_OK. V opačném případě vrátí kód chyby HRESULT.
 
-##  <a name="destroy"></a>  CD2DMesh::Destroy
+## <a name="cd2dmeshdestroy"></a><a name="destroy"></a>CD2DMesh::Destroy
 
-Odstraní objekt cd2dmesh –.
+Zničí objekt CD2DMesh.
 
 ```
 virtual void Destroy();
 ```
 
-##  <a name="detach"></a>  CD2DMesh::detach
+## <a name="cd2dmeshdetach"></a><a name="detach"></a>CD2DMesh::Detach
 
-Odpojí prostředků rozhraní z objektu
+Odpojí rozhraní prostředků od objektu.
 
 ```
 ID2D1Mesh* Detach();
@@ -160,11 +160,11 @@ ID2D1Mesh* Detach();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na rozhraní odpojit prostředek.
+Ukazatel na rozhraní odpojeného prostředku.
 
-##  <a name="get"></a>  CD2DMesh::Get
+## <a name="cd2dmeshget"></a><a name="get"></a>CD2DMesh::Získat
 
-Vrátí ID2D1Mesh rozhraní
+Vrátí rozhraní ID2D1Mesh.
 
 ```
 ID2D1Mesh* Get();
@@ -172,11 +172,11 @@ ID2D1Mesh* Get();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na rozhraní ID2D1Mesh nebo hodnota NULL, pokud objekt ještě není inicializován.
+Ukazatel na rozhraní ID2D1Mesh nebo NULL, pokud objekt ještě není inicializován.
 
-##  <a name="isvalid"></a>  CD2DMesh::IsValid
+## <a name="cd2dmeshisvalid"></a><a name="isvalid"></a>CD2DMesh::IsValid
 
-Kontrola platnosti prostředků
+Zkontroluje platnost prostředků.
 
 ```
 virtual BOOL IsValid() const;
@@ -184,19 +184,19 @@ virtual BOOL IsValid() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE, pokud prostředek je platná. v opačném případě FALSE.
+PRAVDA, pokud je prostředek platný; jinak FALSE.
 
-##  <a name="m_pmesh"></a>  CD2DMesh::m_pMesh
+## <a name="cd2dmeshm_pmesh"></a><a name="m_pmesh"></a>CD2DMesh::m_pMesh
 
-Ukazatel ID2D1Mesh.
+Ukazatel na ID2D1Mesh.
 
 ```
 ID2D1Mesh* m_pMesh;
 ```
 
-##  <a name="open"></a>  CD2DMesh::Open
+## <a name="cd2dmeshopen"></a><a name="open"></a>CD2DMesh::Otevřít
 
-Otevře se síť pro naplnění.
+Otevře síť pro plnění.
 
 ```
 ID2D1TessellationSink* Open();
@@ -204,11 +204,11 @@ ID2D1TessellationSink* Open();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na ID2D1TessellationSink, který se používá k naplnění mřížky.
+Ukazatel na ID2D1TessellationSink, který se používá k naplnění sítě.
 
-##  <a name="operator_id2d1mesh_star"></a>  CD2DMesh::Operator ID2D1Mesh *
+## <a name="cd2dmeshoperator-id2d1mesh"></a><a name="operator_id2d1mesh_star"></a>CD2DMesh::operátor ID2D1Mesh*
 
-Vrátí ID2D1Mesh rozhraní
+Vrátí rozhraní ID2D1Mesh.
 
 ```
 operator ID2D1Mesh*();
@@ -216,8 +216,8 @@ operator ID2D1Mesh*();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na rozhraní ID2D1Mesh nebo hodnota NULL, pokud objekt ještě není inicializován.
+Ukazatel na rozhraní ID2D1Mesh nebo NULL, pokud objekt ještě není inicializován.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Třídy](../../mfc/reference/mfc-classes.md)

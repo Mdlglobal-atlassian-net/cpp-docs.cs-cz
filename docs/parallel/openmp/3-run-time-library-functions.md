@@ -2,30 +2,30 @@
 title: 3. Funkce knihovny prostředí Runtime
 ms.date: 05/13/2019
 ms.assetid: b226e512-6822-4cbe-a2ca-74cc2bb7e880
-ms.openlocfilehash: 6155eb87bd7a1a0533caf99afb3db8417854df30
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 767c006b0a2d81af4d1f8f2e23f84d7847326f31
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79417059"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81370272"
 ---
-# <a name="3-run-time-library-functions"></a>3. funkce běhové knihovny
+# <a name="3-run-time-library-functions"></a>3. Funkce knihovny run-time
 
-Tato část popisuje funkce OpenMP C a C++ Run-Time Library. Hlavička **\<OMP. h >** deklaruje dva typy, několik funkcí, které lze použít k řízení a dotazování prostředí paralelního spuštění a funkce zámku, které lze použít k synchronizaci přístupu k datům.
+Tato část popisuje funkce knihovny OpenMP C a C++. Hlavička ** \<omp.h>** deklaruje dva typy, několik funkcí, které lze použít k řízení a dotazování paralelní spuštění prostředí a uzamčení funkce, které lze použít k synchronizaci přístupu k datům.
 
-Typ `omp_lock_t` je typ objektu schopný reprezentovat, že je k dispozici zámek, nebo že vlákno vlastní zámek. Tyto zámky se označují jako *jednoduché zámky*.
+Typ `omp_lock_t` je typ objektu, který může představovat, že zámek je k dispozici nebo že vlákno vlastní zámek. Tyto zámky jsou označovány jako *jednoduché zámky*.
 
-Typ `omp_nest_lock_t` je typ objektu schopný reprezentovat buď zámek, nebo identitu vlákna, které vlastní zámek, a *počet vnoření* (popsaných níže). Tyto zámky se označují jako *vnořené zámky*.
+Typ `omp_nest_lock_t` je typ objektu, který může představovat buď, že zámek je k dispozici, nebo identitu podprocesu, který vlastní zámek a *počet vnoření* (je popsáno níže). Tyto zámky jsou označovány jako *nestabilní zámky*.
 
-Funkce knihovny jsou externí funkce s propojením "C".
+Funkce knihovny jsou externí funkce s vazbou "C".
 
-Popisy v této kapitole jsou rozdělené do následujících témat:
+Popisy v této kapitole jsou rozděleny do následujících témat:
 
-- [Funkce prostředí pro spuštění](#31-execution-environment-functions)
-- [Funkce Lock](#32-lock-functions)
-- [Rutiny časování](#33-timing-routines)
+- [Funkce prostředí provádění](#31-execution-environment-functions)
+- [Funkce zámku](#32-lock-functions)
+- [Časovací rutiny](#33-timing-routines)
 
-## <a name="31-execution-environment-functions"></a>funkce prostředí pro spouštění 3,1
+## <a name="31-execution-environment-functions"></a>3.1 Funkce prostředí provádění
 
 Funkce popsané v této části ovlivňují a monitorují vlákna, procesory a paralelní prostředí:
 
@@ -40,44 +40,44 @@ Funkce popsané v této části ovlivňují a monitorují vlákna, procesory a p
 - [omp_set_nested](#319-omp_set_nested-function)
 - [omp_get_nested](#3110-omp_get_nested-function)
 
-### <a name="311-omp_set_num_threads-function"></a>3.1.1 – funkce omp_set_num_threads
+### <a name="311-omp_set_num_threads-function"></a><a name="311-omp_set_num_threads-function"></a>3.1.1 omp_set_num_threads funkce
 
-Funkce `omp_set_num_threads` nastaví výchozí počet vláken, která se mají použít pro pozdější paralelní oblasti, které neurčují klauzuli `num_threads`. Formát je následující:
+Funkce `omp_set_num_threads` nastaví výchozí počet podprocesů pro pozdější paralelní oblasti, `num_threads` které neurčují klauzuli. Formát je následující:
 
 ```cpp
 #include <omp.h>
 void omp_set_num_threads(int num_threads);
 ```
 
-Hodnota parametru *num_threads* musí být kladné celé číslo. Jeho efekt závisí na tom, zda je dynamická úprava počtu vláken povolena. Komplexní sadu pravidel o interakci mezi funkcí `omp_set_num_threads` a dynamickou úpravou vláken naleznete v [části 2,3](2-directives.md#23-parallel-construct).
+Hodnota parametru *num_threads* musí být kladné celé číslo. Jeho účinek závisí na tom, zda je povoleno dynamické nastavení počtu vláken. Komplexní soubor pravidel týkajících se interakce `omp_set_num_threads` mezi funkcí a dynamickým nastavením závitů naleznete [v části 2.3](2-directives.md#23-parallel-construct).
 
-Tato funkce má důsledky popsané výše při volání z části programu, kde funkce `omp_in_parallel` vrátí hodnotu nula. Pokud je volána z části programu, kde funkce `omp_in_parallel` vrátí nenulovou hodnotu, chování této funkce není definováno.
+Tato funkce má účinky popsané výše při volání z `omp_in_parallel` části programu, kde funkce vrátí nulu. Pokud je volána z části programu, `omp_in_parallel` kde funkce vrátí nenulovou hodnotu, chování této funkce není definováno.
 
-Toto volání má přednost před proměnnou prostředí `OMP_NUM_THREADS`. Výchozí hodnota pro počet vláken, která mohou být vytvořena voláním `omp_set_num_threads` nebo nastavením proměnné prostředí `OMP_NUM_THREADS` lze explicitně přepsat jednou `parallel` direktivou zadáním klauzule `num_threads`.
+Toto volání má `OMP_NUM_THREADS` přednost před proměnnou prostředí. Výchozí hodnotu pro počet podprocesů, které mohou `omp_set_num_threads` být vytvořeny `OMP_NUM_THREADS` voláním nebo nastavením proměnné `parallel` prostředí, lze `num_threads` explicitně přepsat na jednu direktivu zadáním klauzule.
 
-Další informace najdete v tématu [omp_set_dynamic](#317-omp_set_dynamic-function).
+Další informace naleznete [v tématu omp_set_dynamic](#317-omp_set_dynamic-function).
 
 #### <a name="cross-references"></a>Křížové odkazy
 
 - [omp_set_dynamic](#317-omp_set_dynamic-function) funkce
 - [omp_get_dynamic](#318-omp_get_dynamic-function) funkce
-- [OMP_NUM_THREADS](4-environment-variables.md#42-omp_num_threads) proměnná prostředí
-- klauzule [num_threads](2-directives.md#23-parallel-construct)
+- [OMP_NUM_THREADS](4-environment-variables.md#42-omp_num_threads) proměnné prostředí
+- [num_threads](2-directives.md#23-parallel-construct) doložka
 
-### <a name="312-omp_get_num_threads-function"></a>3.1.2 omp_get_num_threads – funkce
+### <a name="312-omp_get_num_threads-function"></a><a name="312-omp_get_num_threads-function"></a>3.1.2 omp_get_num_threads funkce
 
-Funkce `omp_get_num_threads` vrací počet vláken, která jsou aktuálně v týmu, spouštějící paralelní oblast, ze které se volá. Formát je následující:
+Funkce `omp_get_num_threads` vrátí počet podprocesů aktuálně v týmu provádění paralelní oblasti, ze které je volána. Formát je následující:
 
 ```cpp
 #include <omp.h>
 int omp_get_num_threads(void);
 ```
 
-Klauzule `num_threads`, funkce `omp_set_num_threads` a proměnná prostředí `OMP_NUM_THREADS` řídí počet vláken v týmu.
+Klauzule, `num_threads` `omp_set_num_threads` funkce a `OMP_NUM_THREADS` proměnná prostředí řídí počet vláken v týmu.
 
-Pokud byl počet vláken explicitně nastaven uživatelem, je výchozí hodnota definována implementací. Tato funkce se váže k nejbližší nadřazené direktivě `parallel`. Pokud je volána z sériové části programu nebo z vnořené paralelní oblasti, která je serializována, tato funkce vrátí hodnotu 1.
+Pokud počet podprocesů nebyl explicitně nastaven uživatelem, výchozí hodnota je definována implementací. Tato funkce se váže na `parallel` nejbližší ohraničující směrnice. Pokud volána ze sériové části programu nebo z vnořené paralelní oblasti, která je serializována, tato funkce vrátí 1.
 
-Další informace najdete v tématu [omp_set_dynamic](#317-omp_set_dynamic-function).
+Další informace naleznete [v tématu omp_set_dynamic](#317-omp_set_dynamic-function).
 
 #### <a name="cross-references"></a>Křížové odkazy
 
@@ -85,9 +85,9 @@ Další informace najdete v tématu [omp_set_dynamic](#317-omp_set_dynamic-funct
 - [num_threads](2-directives.md#23-parallel-construct)
 - [parallel](2-directives.md#23-parallel-construct)
 
-### <a name="313-omp_get_max_threads-function"></a>3.1.3 omp_get_max_threads funkce
+### <a name="313-omp_get_max_threads-function"></a><a name="313-omp_get_max_threads-function"></a>3.1.3 omp_get_max_threads funkce
 
-Funkce `omp_get_max_threads` vrací celé číslo, které je zaručené aspoň tak velké jako počet vláken, která by se použila k vytvoření týmu, pokud by se v tomto okamžiku v kódu zobrazila paralelní oblast bez klauzule `num_threads`. Formát je následující:
+Funkce `omp_get_max_threads` vrátí celé číslo, které je zaručeno, že je alespoň tak velký jako počet podprocesů, které `num_threads` by byly použity k vytvoření týmu, pokud paralelní oblast bez klauzule byly vidět v tomto okamžiku v kódu. Formát je následující:
 
 ```cpp
 #include <omp.h>
@@ -96,11 +96,11 @@ int omp_get_max_threads(void);
 
 Následující vyjadřuje dolní mez hodnoty `omp_get_max_threads`:
 
-> *vlákna-použití-for-Next-team* <= `omp_get_max_threads`
+> *závity použité pro další tým* <= `omp_get_max_threads`
 
-Všimněte si, že pokud jiná paralelní oblast používá klauzuli `num_threads` pro vyžádání konkrétního počtu vláken, záruka dolní meze výsledku `omp_get_max_threads` již nedrží.
+Všimněte si, že `num_threads` pokud jiná paralelní oblast používá klauzuli k vyžádání určitého `omp_get_max_threads` počtu podprocesů, záruka na dolní hranici výsledku již nedrží.
 
-Návratovou hodnotu funkce `omp_get_max_threads` lze použít k dynamickému přidělení dostatečného úložiště pro všechna vlákna v týmu vytvořená v další paralelní oblasti.
+Vrácená `omp_get_max_threads` hodnota funkce lze dynamicky přidělit dostatečné úložiště pro všechna vlákna v týmu vytvořeném v další paralelní oblasti.
 
 #### <a name="cross-references"></a>Křížové odkazy
 
@@ -109,9 +109,9 @@ Návratovou hodnotu funkce `omp_get_max_threads` lze použít k dynamickému př
 - [omp_set_dynamic](#317-omp_set_dynamic-function)
 - [num_threads](2-directives.md#23-parallel-construct)
 
-### <a name="314-omp_get_thread_num-function"></a>3.1.4 omp_get_thread_num – funkce
+### <a name="314-omp_get_thread_num-function"></a><a name="314-omp_get_thread_num-function"></a>3.1.4 omp_get_thread_num funkce
 
-Funkce `omp_get_thread_num` vrací číslo vlákna v rámci svého týmu vlákna, které provádí funkci. Číslo vlákna leží mezi 0 a `omp_get_num_threads()`-1 včetně. Hlavní vlákno týmu je vlákno 0.
+Funkce `omp_get_thread_num` vrátí číslo vlákna v rámci svého týmu, podprocesu provádění funkce. Číslo vlákna leží `omp_get_num_threads()`mezi 0 a -1, včetně. Hlavní vlákno týmu je podproces 0.
 
 Formát je následující:
 
@@ -120,56 +120,56 @@ Formát je následující:
 int omp_get_thread_num(void);
 ```
 
-Pokud je volána ze sériové oblasti, `omp_get_thread_num` vrátí hodnotu 0. Pokud je volána v rámci vnořené paralelní oblasti, která je serializována, tato funkce vrátí 0.
+Pokud volána ze `omp_get_thread_num` sériové oblasti, vrátí 0. Pokud volána z vnořené paralelní oblasti, která je serializována, tato funkce vrátí 0.
 
 #### <a name="cross-references"></a>Křížové odkazy
 
 - [omp_get_num_threads](#312-omp_get_num_threads-function) funkce
 
-### <a name="315-omp_get_num_procs-function"></a>3.1.5 omp_get_num_procs – funkce
+### <a name="315-omp_get_num_procs-function"></a><a name="315-omp_get_num_procs-function"></a>3.1.5 omp_get_num_procs funkce
 
-Funkce `omp_get_num_procs` vrátí počet procesorů, které jsou k dispozici pro program v době volání funkce. Formát je následující:
+Funkce `omp_get_num_procs` vrátí počet procesorů, které jsou k dispozici pro program v době, kdy je funkce volána. Formát je následující:
 
 ```cpp
 #include <omp.h>
 int omp_get_num_procs(void);
 ```
 
-### <a name="316-omp_in_parallel-function"></a>3.1.6 omp_in_parallel – funkce
+### <a name="316-omp_in_parallel-function"></a><a name="316-omp_in_parallel-function"></a>3.1.6 omp_in_parallel funkce
 
-Funkce `omp_in_parallel` vrací nenulovou hodnotu, pokud je volána v dynamickém rozsahu paralelního provádění paralelních oblastí; v opačném případě vrátí 0. Formát je následující:
+Funkce `omp_in_parallel` vrátí nenulovou hodnotu, pokud je volána v rámci dynamického rozsahu paralelní oblasti, která se provádí paralelně; v opačném případě vrátí 0. Formát je následující:
 
 ```cpp
 #include <omp.h>
 int omp_in_parallel(void);
 ```
 
-Tato funkce vrací nenulovou hodnotu při volání z oblasti prováděné paralelně, včetně vnořených oblastí, které jsou serializovány.
+Tato funkce vrátí nenulovou hodnotu při volání z v rámci oblasti provádění paralelně, včetně vnořené oblasti, které jsou serializovány.
 
-### <a name="317-omp_set_dynamic-function"></a>3.1.7 omp_set_dynamic – funkce
+### <a name="317-omp_set_dynamic-function"></a><a name="317-omp_set_dynamic-function"></a>3.1.7 omp_set_dynamic funkce
 
-Funkce `omp_set_dynamic` povoluje nebo zakazuje dynamickou úpravu počtu vláken dostupných pro provádění paralelních oblastí. Formát je následující:
+Funkce `omp_set_dynamic` umožňuje nebo zakazuje dynamické nastavení počtu podprocesů, které jsou k dispozici pro spuštění paralelních oblastí. Formát je následující:
 
 ```cpp
 #include <omp.h>
 void omp_set_dynamic(int dynamic_threads);
 ```
 
-Pokud je *dynamic_threads* vyhodnocena jako nenulová hodnota, počet vláken, která se používají pro spuštění nadcházejících paralelních oblastí, lze automaticky upravit prostředím za běhu, aby se co nejlépe používaly systémové prostředky. V důsledku toho je počet vláken určený uživatelem maximální počet vláken. Počet vláken v týmu, který spouští paralelní oblast, zůstane pevně daný po dobu trvání této paralelní oblasti a je hlášena funkcí `omp_get_num_threads`.
+Pokud *dynamic_threads* vyhodnotí na nenulovou hodnotu, počet podprocesů, které se používají pro provádění nadcházející paralelní oblasti mohou být upraveny automaticky prostředí za běhu, aby co nejlépe využívat systémové prostředky. V důsledku toho je počet podprocesů určených uživatelem maximální počet podprocesů. Počet podprocesů v týmu provádějící paralelní oblast zůstane pevná po dobu trvání `omp_get_num_threads` této paralelní oblasti a je hlášena funkce.
 
-Pokud je *dynamic_threads* vyhodnocena jako 0, je dynamická úprava zakázána.
+Pokud *dynamic_threads* vyhodnotí 0, dynamické úpravy je zakázáno.
 
-Tato funkce má důsledky popsané výše při volání z části programu, kde funkce `omp_in_parallel` vrátí hodnotu nula. Pokud je volána z části programu, kde funkce `omp_in_parallel` vrátí nenulovou hodnotu, chování této funkce není definováno.
+Tato funkce má účinky popsané výše při volání z `omp_in_parallel` části programu, kde funkce vrátí nulu. Pokud je volána z části programu, `omp_in_parallel` kde funkce vrátí nenulovou hodnotu, chování této funkce není definováno.
 
-Volání `omp_set_dynamic` má přednost před proměnnou prostředí `OMP_DYNAMIC`.
+Volání `omp_set_dynamic` má přednost před `OMP_DYNAMIC` proměnnou prostředí.
 
-Výchozí hodnota pro dynamickou úpravu vláken je definovaná implementací. V důsledku toho by uživatelské kódy, které závisí na konkrétním počtu vláken pro správné provedení, měly explicitně zakázat dynamická vlákna. Implementace se nevyžadují, aby poskytovaly možnost dynamického přizpůsobení počtu vláken, ale jsou potřeba k tomu, aby poskytovaly rozhraní pro podporu přenositelnosti napříč všemi platformami.
+Výchozí hodnota pro dynamické nastavení podprocesů je definována implementací. V důsledku toho uživatelské kódy, které závisí na určitý počet podprocesů pro správné spuštění by měl explicitně zakázat dynamická vlákna. Implementace nejsou nutné k poskytování možnosti dynamicky upravit počet podprocesů, ale jsou nutné poskytnout rozhraní pro podporu přenositelnost napříč všemi platformami.
 
 #### <a name="microsoft-specific"></a>specifické pro společnost Microsoft
 
-Aktuální podpora `omp_get_dynamic` a `omp_set_dynamic` je následující:
+Současná podpora `omp_get_dynamic` `omp_set_dynamic` a je následující:
 
-Vstupní parametr `omp_set_dynamic` nemá vliv na zásady vláken a nemění počet vláken. `omp_get_num_threads` vždy vrátí buď uživatelem definované číslo, pokud je nastaveno, nebo výchozí číslo vlákna. V současné implementaci společnosti Microsoft `omp_set_dynamic(0)` vypne dynamické zřetězení, aby se existující sada vláken mohla znovu použít pro následující paralelní oblast. `omp_set_dynamic(1)` zapne dynamické zřetězení tím, že zahodí stávající sadu vláken a vytvoří novou sadu pro nadcházející paralelní oblast. Počet vláken v nové sadě je stejný jako stará sada a je založen na vrácené hodnotě `omp_get_num_threads`. Proto pro nejlepší výkon použijte `omp_set_dynamic(0)` k opakovanému použití stávajících vláken.
+Vstupní parametr `omp_set_dynamic` do nemá vliv na zásady podprocesu a nemění počet podprocesů. `omp_get_num_threads`vždy vrátí buď uživatelem definované číslo, pokud je nastaveno, nebo výchozí číslo vlákna. V aktuální implementaci `omp_set_dynamic(0)` společnosti Microsoft vypne dynamické podprocesy tak, aby existující sadu vláken lze znovu použít pro následující paralelní oblasti. `omp_set_dynamic(1)`zapne dynamické podprocesy zahozením existující sady vláken a vytvořením nové sady pro nadcházející paralelní oblast. Počet podprocesů v nové sadě je stejný jako stará sada a je `omp_get_num_threads`založen na vrácené hodnotě . Proto pro nejlepší výkon, použijte `omp_set_dynamic(0)` k opětovnému použití existující podprocesy.
 
 #### <a name="cross-references"></a>Křížové odkazy
 
@@ -177,79 +177,79 @@ Vstupní parametr `omp_set_dynamic` nemá vliv na zásady vláken a nemění po�
 - [OMP_DYNAMIC](4-environment-variables.md#43-omp_dynamic)
 - [omp_in_parallel](#316-omp_in_parallel-function)
 
-### <a name="318-omp_get_dynamic-function"></a>3.1.8 omp_get_dynamic – funkce
+### <a name="318-omp_get_dynamic-function"></a><a name="318-omp_get_dynamic-function"></a>3.1.8 omp_get_dynamic funkce
 
-Funkce `omp_get_dynamic` vrací nenulovou hodnotu, pokud je povolena dynamická úprava vláken a vrátí hodnotu 0 v opačném případě. Formát je následující:
+Funkce `omp_get_dynamic` vrátí nenulovou hodnotu, pokud je povolena dynamická úprava podprocesů, a jinak vrátí hodnotu 0. Formát je následující:
 
 ```cpp
 #include <omp.h>
 int omp_get_dynamic(void);
 ```
 
-Pokud implementace neimplementuje dynamickou úpravu počtu vláken, tato funkce vždycky vrátí 0. Další informace najdete v tématu [omp_set_dynamic](#317-omp_set_dynamic-function).
+Pokud implementace neimplementuje dynamické úpravy počtu podprocesů, tato funkce vždy vrátí 0. Další informace naleznete [v tématu omp_set_dynamic](#317-omp_set_dynamic-function).
 
 #### <a name="cross-references"></a>Křížové odkazy
 
-- Popis dynamického nastavení vlákna naleznete v tématu [omp_set_dynamic](#317-omp_set_dynamic-function).
+- Popis dynamického nastavení závitu naleznete [v omp_set_dynamic](#317-omp_set_dynamic-function).
 
-### <a name="319-omp_set_nested-function"></a>3.1.9 omp_set_nested – funkce
+### <a name="319-omp_set_nested-function"></a><a name="319-omp_set_nested-function"></a>3.1.9 omp_set_nested funkce
 
-Funkce `omp_set_nested` povoluje nebo zakazuje vnořené paralelismuy. Formát je následující:
+Funkce `omp_set_nested` povolí nebo zakáže vnořený paralelismus. Formát je následující:
 
 ```cpp
 #include <omp.h>
 void omp_set_nested(int nested);
 ```
 
-Pokud je *vnořené* vyhodnoceno jako 0, vnořený paralelismus je zakázán, což je výchozí a vnořené paralelní oblasti jsou serializovány a spouštěny aktuálním vláknem. V opačném případě je povolen vnořený paralelismus a paralelní oblasti, které jsou vnořené, mohou nasazovat další vlákna pro vytvoření vnořených týmů.
+Pokud *vnořené* vyhodnotí 0, vnořené paralelismus je zakázáno, což je výchozí a vnořené paralelní oblasti jsou serializovány a provedeny aktuální vlákno. V opačném případě je povoleno vnořené paralelismu a paralelní oblasti, které jsou vnořené může nasadit další vlákna tvořit vnořené týmy.
 
-Tato funkce má důsledky popsané výše při volání z části programu, kde funkce `omp_in_parallel` vrátí hodnotu nula. Pokud je volána z části programu, kde funkce `omp_in_parallel` vrátí nenulovou hodnotu, chování této funkce není definováno.
+Tato funkce má účinky popsané výše při volání z `omp_in_parallel` části programu, kde funkce vrátí nulu. Pokud je volána z části programu, `omp_in_parallel` kde funkce vrátí nenulovou hodnotu, chování této funkce není definováno.
 
-Toto volání má přednost před proměnnou prostředí `OMP_NESTED`.
+Toto volání má `OMP_NESTED` přednost před proměnnou prostředí.
 
-Je-li povolen vnořený paralelismus, je počet vláken použitých k provedení vnořených paralelních oblastí definován implementací. V důsledku toho implementace vyhovující OpenMP můžou serializovat vnořené paralelní oblasti i v případě, že je povolený vnořený paralelismu.
+Je-li povoleno vnořené paralelismus, počet podprocesů používaných ke spuštění vnořené paralelní oblasti je implementován. V důsledku toho openmp kompatibilní implementace mohou serializovat vnořené paralelní oblasti i v případě, že je povolen vnořený paralelismus.
 
 #### <a name="cross-references"></a>Křížové odkazy
 
 - [OMP_NESTED](4-environment-variables.md#44-omp_nested)
 - [omp_in_parallel](#316-omp_in_parallel-function)
 
-### <a name="3110-omp_get_nested-function"></a>3.1.10 omp_get_nested – funkce
+### <a name="3110-omp_get_nested-function"></a><a name="3110-omp_get_nested-function"></a>3.1.10 omp_get_nested funkce
 
-Funkce `omp_get_nested` vrací nenulovou hodnotu, pokud je povolen vnořený paralelismus a 0, pokud je zakázán. Další informace o vnořených paralelismuách naleznete v tématu [omp_set_nested](#319-omp_set_nested-function). Formát je následující:
+Funkce `omp_get_nested` vrátí nenulovou hodnotu, pokud je povolen vnořený paralelismus, a 0, pokud je zakázán. Další informace o vnořené paralelismu naleznete [v tématu omp_set_nested](#319-omp_set_nested-function). Formát je následující:
 
 ```cpp
 #include <omp.h>
 int omp_get_nested(void);
 ```
 
-Pokud implementace neimplementuje vnořené paralelismus, tato funkce vždycky vrátí 0.
+Pokud implementace neimplementuje vnořený paralelismus, tato funkce vždy vrátí 0.
 
-## <a name="32-lock-functions"></a>3,2 funkce zámku
+## <a name="32-lock-functions"></a>3.2 Funkce zámku
 
-Funkce popsané v této části pracují s zámky použitými pro synchronizaci.
+Funkce popsané v této části manipulovat zámky používané pro synchronizaci.
 
-Pro následující funkce musí mít proměnná zámku typ `omp_lock_t`. Tato proměnná musí být dostupná jenom prostřednictvím těchto funkcí. Všechny funkce zámku vyžadují argument, který má ukazatel na `omp_lock_t` typ.
+Pro následující funkce musí mít proměnná lock typ `omp_lock_t`. Tato proměnná musí být přístupná pouze prostřednictvím těchto funkcí. Všechny funkce zámku vyžadují argument, `omp_lock_t` který má ukazatel na text.
 
 - Funkce [omp_init_lock](#321-omp_init_lock-and-omp_init_nest_lock-functions) inicializuje jednoduchý zámek.
-- Funkce [omp_destroy_lock](#322-omp_destroy_lock-and-omp_destroy_nest_lock-functions) odebere jednoduchý zámek.
-- Funkce [omp_set_lock](#323-omp_set_lock-and-omp_set_nest_lock-functions) počká, dokud nebude k dispozici jednoduchý zámek.
+- Funkce [omp_destroy_lock](#322-omp_destroy_lock-and-omp_destroy_nest_lock-functions) odstraní jednoduchý zámek.
+- Funkce [omp_set_lock](#323-omp_set_lock-and-omp_set_nest_lock-functions) čeká, dokud není k dispozici jednoduchý zámek.
 - Funkce [omp_unset_lock](#324-omp_unset_lock-and-omp_unset_nest_lock-functions) uvolní jednoduchý zámek.
 - Funkce [omp_test_lock](#325-omp_test_lock-and-omp_test_nest_lock-functions) testuje jednoduchý zámek.
 
-Pro následující funkce musí mít proměnná zámku typ `omp_nest_lock_t`.  Tato proměnná musí být dostupná jenom prostřednictvím těchto funkcí. Všechny funkce s vnořenými zámky vyžadují argument, který má ukazatel na `omp_nest_lock_t` typ.
+Pro následující funkce musí mít proměnná lock typ `omp_nest_lock_t`.  Tato proměnná musí být přístupná pouze prostřednictvím těchto funkcí. Všechny funkce nestabilní zámek vyžadují argument, `omp_nest_lock_t` který má ukazatel na text.
 
-- Funkce [omp_init_nest_lock](#321-omp_init_lock-and-omp_init_nest_lock-functions) inicializuje vnořený zámek.
-- Funkce [omp_destroy_nest_lock](#322-omp_destroy_lock-and-omp_destroy_nest_lock-functions) odebere vnořený zámek.
-- Funkce [omp_set_nest_lock](#323-omp_set_lock-and-omp_set_nest_lock-functions) počká, dokud nebude k dispozici vnořený zámek.
-- Funkce [omp_unset_nest_lock](#324-omp_unset_lock-and-omp_unset_nest_lock-functions) uvolní vnořený zámek.
-- Funkce [omp_test_nest_lock](#325-omp_test_lock-and-omp_test_nest_lock-functions) testuje vnořený zámek.
+- Funkce [omp_init_nest_lock](#321-omp_init_lock-and-omp_init_nest_lock-functions) inicializuje zámek nestable.
+- Funkce [omp_destroy_nest_lock](#322-omp_destroy_lock-and-omp_destroy_nest_lock-functions) odstraní nestabilní zámek.
+- Funkce [omp_set_nest_lock](#323-omp_set_lock-and-omp_set_nest_lock-functions) čeká, dokud není k dispozici zámek nestable.
+- Funkce [omp_unset_nest_lock](#324-omp_unset_lock-and-omp_unset_nest_lock-functions) uvolní zámek nestable.
+- Funkce [omp_test_nest_lock](#325-omp_test_lock-and-omp_test_nest_lock-functions) testuje nestabilní zámek.
 
-Funkce zámku OpenMP přistupují k proměnné zámku takovým způsobem, že vždy čtou a aktualizují nejaktuálnější hodnotu proměnné zámku. Proto není nutné, aby program OpenMP zahrnoval explicitní direktivy `flush`, aby se zajistilo, že hodnota proměnné zámku je konzistentní mezi různými vlákny. (Aby se hodnoty jiných proměnných shodovaly, může být potřeba direktivy `flush`.)
+Funkce zámku OpenMP přistupují k proměnné zámku tak, že vždy čtou a aktualizují nejaktuálnější hodnotu proměnné zámku. Proto není nutné, aby program OpenMP obsahoval `flush` explicitní direktivy, aby se ujistil, že hodnota proměnné zámku je konzistentní mezi různými vlákny. (Může být potřeba, `flush` aby směrnice odpovídaly hodnotám jiných proměnných.)
 
-### <a name="321-omp_init_lock-and-omp_init_nest_lock-functions"></a>3.2.1 omp_init_lock a omp_init_nest_lock funkce
+### <a name="321-omp_init_lock-and-omp_init_nest_lock-functions"></a><a name="321-omp_init_lock-and-omp_init_nest_lock-functions"></a>3.2.1 omp_init_lock a omp_init_nest_lock funkce
 
-Tyto funkce poskytují pouze způsob inicializace zámku. Každá funkce inicializuje zámek spojený s parametrem *Lock* pro použití v nadcházejících voláních. Formát je následující:
+Tyto funkce poskytují jediný způsob inicializace zámku. Každá funkce inicializuje zámek přidružený k *zámku* parametrů pro použití v nadcházejících voláních. Formát je následující:
 
 ```cpp
 #include <omp.h>
@@ -257,11 +257,11 @@ void omp_init_lock(omp_lock_t *lock);
 void omp_init_nest_lock(omp_nest_lock_t *lock);
 ```
 
-Počáteční stav je odemčený (to znamená, že zámek nevlastní žádné vlákno). Pro vnořený zámek je počáteční počet vnoření nula. Je nekompatibilní se voláním některé z těchto rutin s proměnnou zámku, která již byla inicializována.
+Počáteční stav je odemčen (to znamená, že zámek nevlastní žádné vlákno). Pro nestabilní zámek počáteční počet vnoření je nula. Je nekompatibilní volat některou z těchto rutin s proměnnou zámku, která již byla inicializována.
 
-### <a name="322-omp_destroy_lock-and-omp_destroy_nest_lock-functions"></a>funkce 3.2.2 omp_destroy_lock a omp_destroy_nest_lock
+### <a name="322-omp_destroy_lock-and-omp_destroy_nest_lock-functions"></a><a name="322-omp_destroy_lock-and-omp_destroy_nest_lock-functions"></a>3.2.2 omp_destroy_lock a omp_destroy_nest_lock funkce
 
-Tyto funkce zajistí, že odkaz na *Zámek proměnné není* inicializovaný. Formát je následující:
+Tyto funkce ujistěte se, že ukázal na zámek *proměnné* zámku je neinicializován. Formát je následující:
 
 ```cpp
 #include <omp.h>
@@ -269,11 +269,11 @@ void omp_destroy_lock(omp_lock_t *lock);
 void omp_destroy_nest_lock(omp_nest_lock_t *lock);
 ```
 
-Není nekompatibilní s voláním některé z těchto rutin s proměnnou zámku, která je neinicializovaná nebo odemčená.
+Je nekompatibilní volat některou z těchto rutin s proměnnou zámku, která je neinicializovaná nebo odemčená.
 
-### <a name="323-omp_set_lock-and-omp_set_nest_lock-functions"></a>3.2.3 omp_set_lock a omp_set_nest_lock funkce
+### <a name="323-omp_set_lock-and-omp_set_nest_lock-functions"></a><a name="323-omp_set_lock-and-omp_set_nest_lock-functions"></a>3.2.3 omp_set_lock a omp_set_nest_lock funkce
 
-Každá z těchto funkcí blokuje vlákno vykonávající funkci, dokud není k dispozici zadaný zámek, a poté nastaví zámek. Pokud je odemčený, je k dispozici jednoduchý zámek. Vnořený zámek je k dispozici, pokud je odemčený nebo je již vlastněn vláknem, který funkci provádí. Formát je následující:
+Každá z těchto funkcí blokuje podproces provádění funkce, dokud zadaný zámek je k dispozici a potom nastaví zámek. Jednoduchý zámek je k dispozici, pokud je odemčený. Nestabilní zámek je k dispozici, pokud je odemčený nebo pokud je již vlastněn vláknem provádějícím funkci. Formát je následující:
 
 ```cpp
 #include <omp.h>
@@ -281,13 +281,13 @@ void omp_set_lock(omp_lock_t *lock);
 void omp_set_nest_lock(omp_nest_lock_t *lock);
 ```
 
-Pro jednoduchý zámek musí argument funkce `omp_set_lock` odkazovat na inicializovaná proměnnou zámku. Vlastnictví zámku je uděleno vláknu, které provádí funkci.
+Pro jednoduchý zámek argument `omp_set_lock` funkce musí směřovat na inicializovanou proměnnou zámku. Vlastnictví zámku je uděleno podprocesu vykonávajícímu funkci.
 
-Pro vnořený zámek musí argument funkce `omp_set_nest_lock` ukazovat na inicializovaná proměnnou zámku. Počet vnoření je zvýšen a vlákno je uděleno, nebo zachovává vlastnictví zámku.
+Pro nestabilní zámek argument `omp_set_nest_lock` funkce musí směřovat na inicializovanou proměnnou zámku. Počet vnoření se zvětšuje a vlákno je uděleno nebo udržuje vlastnictví zámku.
 
-### <a name="324-omp_unset_lock-and-omp_unset_nest_lock-functions"></a>funkce 3.2.4 omp_unset_lock a omp_unset_nest_lock
+### <a name="324-omp_unset_lock-and-omp_unset_nest_lock-functions"></a><a name="324-omp_unset_lock-and-omp_unset_nest_lock-functions"></a>3.2.4 omp_unset_lock a omp_unset_nest_lock funkce
 
-Tyto funkce poskytují prostředky pro uvolnění vlastnictví zámku. Formát je následující:
+Tyto funkce poskytují prostředky uvolnění vlastnictví zámku. Formát je následující:
 
 ```cpp
 #include <omp.h>
@@ -295,15 +295,15 @@ void omp_unset_lock(omp_lock_t *lock);
 void omp_unset_nest_lock(omp_nest_lock_t *lock);
 ```
 
-Argument pro každou z těchto funkcí musí odkazovat na inicializovaná proměnnou zámku, která je majetkem vlákna vykonávajícího funkci. Chování není definováno, pokud vlákno nevlastní zámek.
+Argument pro každou z těchto funkcí musí ukazovat na inicializovanou proměnnou zámku vlastněnou podprocesem provádějícím funkci. Chování není definována, pokud vlákno nevlastní tento zámek.
 
-Pro jednoduchý zámek funkce `omp_unset_lock` uvolní vlákno, které spouští funkci z vlastnictví zámku.
+Pro jednoduchý zámek `omp_unset_lock` funkce uvolní vlákno provádění funkce z vlastnictví zámku.
 
-Pro vnořování zámku funkce `omp_unset_nest_lock` sníží počet vnoření a uvolní vlákno vykonávající funkci z vlastnictví zámku, pokud je výsledný počet nula.
+Pro nestabilní zámek `omp_unset_nest_lock` funkce sníží počet vnoření a uvolní vlákno provádění funkce z vlastnictví zámku, pokud výsledný počet je nula.
 
-### <a name="325-omp_test_lock-and-omp_test_nest_lock-functions"></a>3.2.5 omp_test_lock a omp_test_nest_lock funkce
+### <a name="325-omp_test_lock-and-omp_test_nest_lock-functions"></a><a name="325-omp_test_lock-and-omp_test_nest_lock-functions"></a>3.2.5 omp_test_lock a omp_test_nest_lock funkce
 
-Tyto funkce se pokoušejí nastavit zámek, ale neblokují provádění vlákna. Formát je následující:
+Tyto funkce se pokusí nastavit zámek, ale neblokují spuštění vlákna. Formát je následující:
 
 ```cpp
 #include <omp.h>
@@ -311,29 +311,29 @@ int omp_test_lock(omp_lock_t *lock);
 int omp_test_nest_lock(omp_nest_lock_t *lock);
 ```
 
-Argument musí ukazovat na inicializovaná proměnnou zámku. Tyto funkce se pokoušejí nastavit zámek stejným způsobem jako `omp_set_lock` a `omp_set_nest_lock`, s tím rozdílem, že neblokují provádění vlákna.
+Argument musí ukazovat na inicializovanou proměnnou zámku. Tyto funkce se pokusí nastavit zámek `omp_set_lock` stejným `omp_set_nest_lock`způsobem jako a , s tím rozdílem, že neblokují spuštění vlákna.
 
-Pro jednoduchý zámek vrátí funkce `omp_test_lock` nenulovou hodnotu, pokud je zámek úspěšně nastaven. v opačném případě vrátí hodnotu nula.
+Pro jednoduchý zámek `omp_test_lock` funkce vrátí nenulovou hodnotu, pokud je zámek úspěšně nastaven; v opačném případě vrátí nulu.
 
-Pro vnořený zámek vrátí funkce `omp_test_nest_lock` nový počet vnoření, pokud je zámek úspěšně nastaven. v opačném případě vrátí hodnotu nula.
+Pro nestabilní zámek `omp_test_nest_lock` funkce vrátí nový počet vnoření, pokud je zámek úspěšně nastaven; v opačném případě vrátí nulu.
 
-## <a name="33-timing-routines"></a>rutiny časování 3,3
+## <a name="33-timing-routines"></a>3.3 Časovací rutiny
 
-Funkce popsané v této části podporují přenosnou hodinovou časovač:
+Funkce popsané v této části podporují přenosný časovač nástěnných hodin:
 
-- Funkce [omp_get_wtime](#331-omp_get_wtime-function) vrací uplynulý čas na zdi.
-- Funkce [omp_get_wtick](#332-omp_get_wtick-function) vrací sekundy mezi po sobě jdoucí takty.
+- Funkce [omp_get_wtime](#331-omp_get_wtime-function) vrátí uplynulý čas nástěnných hodin.
+- Funkce [omp_get_wtick](#332-omp_get_wtick-function) vrátí sekundy mezi po sobě jdoucími tiky hodin.
 
-### <a name="331-omp_get_wtime-function"></a>3.3.1 – funkce omp_get_wtime
+### <a name="331-omp_get_wtime-function"></a><a name="331-omp_get_wtime-function"></a>3.3.1 omp_get_wtime funkce
 
-Funkce `omp_get_wtime` vrací hodnotu s plovoucí desetinnou čárkou s dvojitou přesností, která se rovná uplynulé hodinové době v sekundách od času v minulosti.  Skutečný "čas v minulosti" je libovolný, ale během provádění aplikačního programu je zaručeno, že se nemění. Formát je následující:
+Funkce `omp_get_wtime` vrátí hodnotu s dvojitou přesností s plovoucí desetinnou hodnotou rovnou uplynulé době nástěnných hodin v sekundách od určitého "času v minulosti".  Skutečné "čas v minulosti" je libovolný, ale je zaručeno, že se nezmění během provádění aplikačního programu. Formát je následující:
 
 ```cpp
 #include <omp.h>
 double omp_get_wtime(void);
 ```
 
-Očekává se, že funkce bude použita k měření uplynulých časů, jak je znázorněno v následujícím příkladu:
+Předpokládá se, že funkce bude použita k měření uplynulých časů, jak je znázorněno v následujícím příkladu:
 
 ```cpp
 double start;
@@ -344,11 +344,11 @@ end = omp_get_wtime();
 printf_s("Work took %f sec. time.\n", end-start);
 ```
 
-Počet vrácených časů je "doba na vlákno", což znamená, že nemusí být globálně konzistentní napříč všemi vlákny zapojenými do aplikace.
+Vrácené časy jsou "za vlákno časy", což znamená, že nemusí být globálně konzistentní ve všech vláknech, které se účastní aplikace.
 
-### <a name="332-omp_get_wtick-function"></a>3.3.2 omp_get_wtick funkce
+### <a name="332-omp_get_wtick-function"></a><a name="332-omp_get_wtick-function"></a>3.3.2 omp_get_wtick funkce
 
-Funkce `omp_get_wtick` vrací hodnotu s plovoucí desetinnou čárkou s dvojitou přesností, která se rovná počtu sekund mezi po sobě jdoucích taktech. Formát je následující:
+Funkce `omp_get_wtick` vrátí hodnotu s dvojitou přesností s plovoucí desetinnou hodnotou rovnající se počtu sekund mezi po sobě jdoucími značkami hodin. Formát je následující:
 
 ```cpp
 #include <omp.h>

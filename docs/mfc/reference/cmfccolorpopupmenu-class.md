@@ -1,5 +1,5 @@
 ---
-title: CMFCColorPopupMenu Class
+title: CMFCColorPopupMenu – třída
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCColorPopupMenu
@@ -14,16 +14,16 @@ helpviewer_keywords:
 - CMFCColorPopupMenu [MFC], GetMenuBar
 - CMFCColorPopupMenu [MFC], SetPropList
 ms.assetid: 0bf9efe8-aed5-4ab7-b23b-eb284b4668be
-ms.openlocfilehash: 0c2fed4aa239faa96abf692a46a27102ce9820a1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bcdf60c974ecdc437b90891d2b46a5eec94859d1
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403682"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367683"
 ---
-# <a name="cmfccolorpopupmenu-class"></a>CMFCColorPopupMenu Class
+# <a name="cmfccolorpopupmenu-class"></a>CMFCColorPopupMenu – třída
 
-Představuje místní nabídka, která uživatelům umožňuje vybírat barvy v dokumentu nebo aplikace.
+Představuje rozbalovací nabídku, kterou uživatelé používají k výběru barev v dokumentu nebo aplikaci.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -37,57 +37,57 @@ class CMFCColorPopupMenu : public CMFCPopupMenu
 
 |||
 |-|-|
-|Název|Popis|
-|[CMFCColorPopupMenu::CMFCColorPopupMenu](#cmfccolorpopupmenu)|Vytvoří `CMFCColorPopupMenu` objektu.|
+|Name (Název)|Popis|
+|[CMFCColorPopupMenu::CMFCColorPopupMenu](#cmfccolorpopupmenu)|Vytvoří `CMFCColorPopupMenu` objekt.|
 |`CMFCColorPopupMenu::~CMFCColorPopupMenu`|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
 |||
 |-|-|
-|Název|Popis|
-|[CMFCColorPopupMenu::CreateTearOffBar](#createtearoffbar)|Vytvoří panel barev ukotvitelné odnímatelnými nabídkami. (Overrides [CMFCPopupMenu::CreateTearOffBar](../../mfc/reference/cmfcpopupmenu-class.md#createtearoffbar).)|
-|[CMFCColorPopupMenu::GetMenuBar](#getmenubar)|Vrátí [cmfcpopupmenubar –](../../mfc/reference/cmfcpopupmenubar-class.md) , který je vložená do místní nabídky. (Přepíše [CMFCPopupMenu::GetMenuBar](../../mfc/reference/cmfcpopupmenu-class.md#getmenubar).)|
-|`CMFCColorPopupMenu::GetThisClass`|Používá k získání ukazatele na rámec [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objekt, který je přidružený k typu třídy.|
-|[CMFCColorPopupMenu::SetPropList](#setproplist)|Nastaví objekt ovládacího prvku mřížky vlastností Embedded `CMFCColorBar` objektu.|
+|Name (Název)|Popis|
+|[CMFCColorPopupMenu::CreateTearOffBar](#createtearoffbar)|Vytvoří ukotvitelný odtrhnutelný barevný pruh. (Přepíše [CMFCPopupMenu::CreateTearOffBar](../../mfc/reference/cmfcpopupmenu-class.md#createtearoffbar).)|
+|[CMFCColorPopupMenu::GetMenuBar](#getmenubar)|Vrátí [panel CMFCPopupMenuBar](../../mfc/reference/cmfcpopupmenubar-class.md) vložený do rozbalovací nabídky. (Přepíše [CMFCPopupMenu::GetMenuBar](../../mfc/reference/cmfcpopupmenu-class.md#getmenubar).)|
+|`CMFCColorPopupMenu::GetThisClass`|Používá rozhraní k získání ukazatele na [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objektu, který je přidružen k tomuto typu třídy.|
+|[CMFCColorPopupMenu::SetPropList](#setproplist)|Nastaví objekt řízení mřížky `CMFCColorBar` vlastností vloženého objektu.|
 
-### <a name="data-members"></a>Datové členy
+### <a name="data-members"></a>Členové dat
 
 |||
 |-|-|
-|Název|Popis|
-|`m_bEnabledInCustomizeMode`|Logická hodnota, která určuje, jestli se má zobrazit pruhu barev.|
-|`m_wndColorBar`|`CMFCColorBar` Objekt, který poskytuje výběr barvy.|
+|Name (Název)|Popis|
+|`m_bEnabledInCustomizeMode`|Logická hodnota, která určuje, zda se má zobrazit barevný pruh.|
+|`m_wndColorBar`|Objekt, `CMFCColorBar` který poskytuje výběr barev.|
 
 ### <a name="remarks"></a>Poznámky
 
-Tato třída dědí funkce rozbalovací nabídky `CMFCPopupMenu` třídy a spravuje `CMFCColorBar` objekt, který poskytuje výběr barvy. Když rozhraní nástrojů je v režimu úprav a `m_bEnabledInCustomizeMode` člen je nastavený na hodnotu NEPRAVDA, nezobrazí se objekt pruhu barev. Další informace o režimu přizpůsobení, najdete v části [CMFCToolBar::IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode)
+Tato třída zdědí funkce rozbalovací `CMFCPopupMenu` nabídky třídy `CMFCColorBar` a spravuje objekt, který poskytuje výběr barev. Pokud je rozhraní panelu nástrojů `m_bEnabledInCustomizeMode` v režimu přizpůsobení a člen je nastaven na hodnotu FALSE, objekt pruhu barev se nezobrazí. Další informace o režimu vlastního nastavení naleznete v tématu [CMFCToolBar::IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode)
 
-Další informace o `CMFCColorBar`, naleznete v tématu [cmfccolorbar – třída](../../mfc/reference/cmfccolorbar-class.md).
+Další informace `CMFCColorBar`naleznete v [tématu CMFCColorBar Class](../../mfc/reference/cmfccolorbar-class.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObjekt](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[CCmdCíl](../../mfc/reference/ccmdtarget-class.md)
 
-[CWnd](../../mfc/reference/cwnd-class.md)
+[Cwnd](../../mfc/reference/cwnd-class.md)
 
 [CFrameWnd](../../mfc/reference/cframewnd-class.md)
 
-[Cminiframewnd –](../../mfc/reference/cminiframewnd-class.md)
+[CMiniFrameWnd](../../mfc/reference/cminiframewnd-class.md)
 
-[CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)
+[CmFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)
 
-[CMFCColorPopupMenu](../../mfc/reference/cmfccolorpopupmenu-class.md)
+[CmFCColorPopupMenu](../../mfc/reference/cmfccolorpopupmenu-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
 **Záhlaví:** afxcolorpopupmenu.h
 
-##  <a name="cmfccolorpopupmenu"></a>  CMFCColorPopupMenu::CMFCColorPopupMenu
+## <a name="cmfccolorpopupmenucmfccolorpopupmenu"></a><a name="cmfccolorpopupmenu"></a>CMFCColorPopupMenu::CMFCColorPopupMenu
 
-Vytvoří `CMFCColorPopupMenu` objektu.
+Vytvoří `CMFCColorPopupMenu` objekt.
 
 ```
 CMFCColorPopupMenu(
@@ -128,64 +128,64 @@ CMFCColorPopupMenu(
 ### <a name="parameters"></a>Parametry
 
 *Barvy*<br/>
-[in] Pole barvy, které zobrazí rozhraní v místní nabídce.
+[v] Pole barev, které se zobrazí v rozbalovací nabídce.
 
 *color*<br/>
-[in] Výchozí vybraná barva.
+[v] Výchozí vybraná barva.
 
 *lpszAutoColor*<br/>
-[in] Textový popisek *automatické* tlačítko barvy (výchozí), nebo hodnota NULL.
+[v] Textový popisek *automatického* (výchozího) tlačítka barvy nebo NULL.
 
-Standardní popisek bude automatické tlačítka je **automatické**.
+Standardní štítek pro automatické tlačítko je **Automatické**.
 
 *lpszOtherColor*<br/>
-[in] Textový popisek *jiných* tlačítko, které zobrazuje více volby barev, nebo hodnotu NULL.
+[v] Textový popisek *druhého* tlačítka, který zobrazuje více voleb barev, nebo NULL.
 
-Standardní popisek pro jiné tlačítko je **Další barvy...** .
+Standardní popisek pro druhé tlačítko je **Více barev...**.
 
-*lpszDocColors*<br/>
-[in] Textový popisek tlačítka pro barvy dokumentu. Barevná paleta dokumentu jsou uvedeny všechny barvy, které aktuálně používá dokumentu.
+*lpszDocBarvy*<br/>
+[v] Textový popis tlačítka barvy dokumentu. Paleta barev dokumentu obsahuje seznam všech barev, které dokument aktuálně používá.
 
-*lstDocColors*<br/>
-[in] Seznam barvy, které se aktuálně používá dokumentu.
+*Barvy lstDoc*<br/>
+[v] Seznam barev, které dokument aktuálně používá.
 
-*nColumns*<br/>
-[in] Počet sloupců, které má škály barev.
+*nSloupce*<br/>
+[v] Počet sloupců, které má pole barev.
 
 *nHorzDockRows*<br/>
-[in] Počet řádků, které nemá pruhu barev, pokud je ukotven vodorovně.
+[v] Počet řádků, které má barevný pruh, když je ukotven vodorovně.
 
 *nVertDockColumns*<br/>
-[in] Počet sloupců, které nemá pruhu barev, pokud je ukotven svisle.
+[v] Počet sloupců, které má barevný pruh, když je ukotven svisle.
 
-*colorAutomatic*<br/>
-[in] Výchozí barva, která se použije rozhraní po kliknutí na tlačítko Automatické.
+*colorAutomaticky*<br/>
+[v] Výchozí barva, kterou rozhraní použije po klepnutí na tlačítko automatické.
 
 *uiCommandID*<br/>
-[in] ID příkazu pro ovládací prvek pruhu barev.
+[v] ID příkazu ovládacího prvku color bar.
 
 *bStdColorDlg*<br/>
-[in] Logická hodnota, která určuje, jestli se má zobrazit dialogové okno Barva standardní systém nebo [cmfccolordialog –](../../mfc/reference/cmfccolordialog-class.md) dialogové okno.
+[v] Logická hodnota, která označuje, zda se má zobrazit dialogové okno standardní barvy systému nebo dialogové okno [CMFCColorDialog.](../../mfc/reference/cmfccolordialog-class.md)
 
 *pParentBtn*<br/>
-[in] Ukazatel na tlačítku nadřazené.
+[v] Ukazatel na nadřazené tlačítko.
 
-*nID*<br/>
-[in] ID příkazu.
+*Nid*<br/>
+[v] ID příkazu.
 
 ### <a name="remarks"></a>Poznámky
 
-Každý přetížení konstruktoru sady `m_bEnabledInCustomizeMode` člena na hodnotu FALSE.
+Každý přetížený konstruktor `m_bEnabledInCustomizeMode` nastaví člen na HODNOTU FALSE.
 
 ### <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak vytvořit `CMFCColorPopupMenu` objektu.
+Následující příklad ukazuje, jak `CMFCColorPopupMenu` vytvořit objekt.
 
 [!code-cpp[NVC_MFC_RibbonApp#34](../../mfc/reference/codesnippet/cpp/cmfccolorpopupmenu-class_1.cpp)]
 
-##  <a name="createtearoffbar"></a>  CMFCColorPopupMenu::CreateTearOffBar
+## <a name="cmfccolorpopupmenucreatetearoffbar"></a><a name="createtearoffbar"></a>CMFCColorPopupMenu::CreateTearOffBar
 
-Vytvoří panel barev ukotvitelné odnímatelnými nabídkami.
+Vytvoří ukotvitelný odtrhnutelný barevný pruh.
 
 ```
 virtual CPane* CreateTearOffBar(
@@ -199,21 +199,21 @@ virtual CPane* CreateTearOffBar(
 |||
 |-|-|
 |Parametr|Popis|
-|*pWndMain*|[in] Ukazatel na nadřazené okno přemístitelný panel.|
-|*uiID*|[in] ID příkazu přemístitelný panel.|
-|*lpszName*|[in] Text okna přemístitelný panel.|
+|*pWndMain*|[v] Ukazatel na nadřazené okno panelu odtržení.|
+|*uiID*|[v] ID příkazu odtrhávací lišty.|
+|*název lpsz*|[v] Text okna odtrhávací lišty.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na nový objekt panelu odtržených ovládacího prvku.
+Ukazatel na nový odtrhávací ovládací panel objektu.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda vytvoří [cmfccolorbar – třída](../../mfc/reference/cmfccolorbar-class.md) objektu a tak přetypování [cpane – třída](../../mfc/reference/cpane-class.md) ukazatele. Tuto hodnotu můžete přetypovat zpět [cmfccolorbar – třída](../../mfc/reference/cmfccolorbar-class.md) ukazatele pomocí jednoho z makra přetypování je popsáno v [typu přetypování třídy knihovny MFC objektů](../../mfc/reference/type-casting-of-mfc-class-objects.md).
+Tato metoda vytvoří objekt [třídy CMFCColorBar](../../mfc/reference/cmfccolorbar-class.md) a přehodí jej do ukazatele [třídy CPane.](../../mfc/reference/cpane-class.md) Tuto hodnotu můžete přetypovat zpět na ukazatel [třídy CMFCColorBar](../../mfc/reference/cmfccolorbar-class.md) pomocí jednoho z maker přetypování popsaných v [části Typ lití objektů třídy knihovny MFC](../../mfc/reference/type-casting-of-mfc-class-objects.md).
 
-##  <a name="getmenubar"></a>  CMFCColorPopupMenu::GetMenuBar
+## <a name="cmfccolorpopupmenugetmenubar"></a><a name="getmenubar"></a>CMFCColorPopupMenu::GetMenuBar
 
-Vrátí [cmfcpopupmenubar –](../../mfc/reference/cmfcpopupmenubar-class.md) , který je vložená do místní nabídky.
+Vrátí [panel CMFCPopupMenuBar](../../mfc/reference/cmfcpopupmenubar-class.md) vložený do rozbalovací nabídky.
 
 ```
 virtual CMFCPopupMenuBar* GetMenuBar();
@@ -221,15 +221,15 @@ virtual CMFCPopupMenuBar* GetMenuBar();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na vložený `CMFCPopupMenuBar`.
+Ukazatel na vložené `CMFCPopupMenuBar`.
 
 ### <a name="remarks"></a>Poznámky
 
-V rozbalovací nabídce Barva obsahuje vložený [cmfcpopupmenubar – třída](../../mfc/reference/cmfcpopupmenubar-class.md) objektu. Pokud vaše aplikace používá jiné vložený typ, přepište tuto metodu v odvozené třídě.
+Rozbalovací nabídka barva obsahuje vložený objekt [třídy CMFCPopupMenuBar.](../../mfc/reference/cmfcpopupmenubar-class.md) Přepsat tuto metodu v odvozené třídě, pokud vaše aplikace používá jiný vložený typ.
 
-##  <a name="setproplist"></a>  CMFCColorPopupMenu::SetPropList
+## <a name="cmfccolorpopupmenusetproplist"></a><a name="setproplist"></a>CMFCColorPopupMenu::SetPropList
 
-Nastaví objekt ovládacího prvku mřížky vlastností Embedded `CMFCColorBar` objektu.
+Nastaví objekt řízení mřížky `CMFCColorBar` vlastností vloženého objektu.
 
 ```
 void SetPropList(CMFCPropertyGridCtrl* pWndList);
@@ -238,9 +238,9 @@ void SetPropList(CMFCPropertyGridCtrl* pWndList);
 ### <a name="parameters"></a>Parametry
 
 *pWndList*<br/>
-[in] Ukazatel na objekt ovládacího prvku mřížky vlastností.
+[v] Ukazatel na objekt ovládacího prvku mřížky vlastností.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)

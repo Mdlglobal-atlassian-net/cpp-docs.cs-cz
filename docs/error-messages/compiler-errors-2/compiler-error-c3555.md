@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - C3555
 ms.assetid: b4311bd3-851b-479a-9965-d03f39dd8fd4
-ms.openlocfilehash: f5b3ba45d64b23cdfb4d157193e826ac0c90998f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: ef4be5cdbee66b72da7a639b0920bd18bb6ebe87
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80200587"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366658"
 ---
 # <a name="compiler-error-c3555"></a>Chyba kompilátoru C3555
 
-> nesprávný argument pro decltype
+> nesprávný argument na 'decltype'
 
-Argument pro *výraz* `decltype(``)` specifikátor typu není platný výraz.
+Argument specifikátoru `decltype(`typu *výrazu* `)` není platný výraz.
 
 > [!NOTE]
->  C3555 se nejspíš nevyskytuje. Pokud kompilátor vygeneruje C3555, je pravděpodobné, že došlo k vnitřní chybě kompilátoru.
+> C3555 není pravděpodobné, že by došlo k němu. Pokud kompilátor vydává C3555, je to pravděpodobně proto, že došlo k chybě interního kompilátoru.
 
 ## <a name="see-also"></a>Viz také
 

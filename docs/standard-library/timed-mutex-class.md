@@ -18,16 +18,16 @@ helpviewer_keywords:
 - std::timed_mutex [C++], try_lock_for
 - std::timed_mutex [C++], try_lock_until
 - std::timed_mutex [C++], unlock
-ms.openlocfilehash: 6b9785dc41791be63d585d18802953eade370b2a
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 6c9840d9b8c00d4b03e6ea329c7707a0edff9512
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68459926"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368021"
 ---
-# <a name="timedmutex-class"></a>timed_mutex – třída
+# <a name="timed_mutex-class"></a>timed_mutex – třída
 
-Představuje *typ*nečasovaného mutexu. Objekty tohoto typu slouží k prosazování vzájemného vyloučení prostřednictvím blokování omezeného časem v rámci programu.
+Představuje *časovaný typ mutex*. Objekty tohoto typu se používají k vynucení vzájemného vyloučení prostřednictvím časově omezeného blokování v rámci programu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -39,30 +39,30 @@ class timed_mutex;
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[timed_mutex](#timed_mutex)|`timed_mutex` Vytvoří objekt, který není uzamčen.|
-|[timed_mutex::~timed_mutex Destructor](#dtortimed_mutex_destructor)|Uvolní všechny prostředky, které jsou používány `timed_mutex` objektem.|
+|[timed_mutex](#timed_mutex)|Vytvoří `timed_mutex` objekt, který není uzamčen.|
+|[timed_mutex::~timed_mutex Destruktor](#dtortimed_mutex_destructor)|Uvolní všechny prostředky, které `timed_mutex` jsou používány objektem.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[lock](#lock)|Blokuje volající vlákno, dokud vlákno nezíská vlastnictví `mutex`.|
+|[Zámek](#lock)|Blokuje volající vlákno, dokud vlákno nezíská vlastnictví `mutex`rozhraní .|
 |[try_lock](#try_lock)|Pokusí se získat vlastnictví `mutex` bez blokování.|
 |[try_lock_for](#try_lock_for)|Pokusí se získat vlastnictví `mutex` pro zadaný časový interval.|
-|[try_lock_until](#try_lock_until)|Pokusí se získat vlastnictví `mutex` do určeného času.|
-|[Uzamknout](#unlock)|Uvolňuje vlastnictví `mutex`.|
+|[try_lock_until](#try_lock_until)|Pokusí se získat vlastnictví `mutex` až do zadaného času.|
+|[Odemknout](#unlock)|Uvolní vlastnictví . `mutex`|
 
 ## <a name="requirements"></a>Požadavky
 
-**Hlavička:** \<> mutex
+**Záhlaví:** \<> mutex
 
 **Obor názvů:** std
 
-## <a name="lock"></a>timed_mutex:: Lock
+## <a name="timed_mutexlock"></a><a name="lock"></a>timed_mutex::zámek
 
-Blokuje volající vlákno, dokud vlákno nezíská vlastnictví `mutex`.
+Blokuje volající vlákno, dokud vlákno nezíská vlastnictví `mutex`rozhraní .
 
 ```cpp
 void lock();
@@ -70,19 +70,19 @@ void lock();
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud volající vlákno již vlastní `mutex`, chování není definováno.
+Pokud volající vlákno již `mutex`vlastní , chování není definováno.
 
-## <a name="timed_mutex"></a>timed_mutex:: timed_mutex – konstruktor
+## <a name="timed_mutextimed_mutex-constructor"></a><a name="timed_mutex"></a>timed_mutex::timed_mutex konstruktor
 
-`timed_mutex` Vytvoří objekt, který není uzamčen.
+Vytvoří `timed_mutex` objekt, který není uzamčen.
 
 ```cpp
 timed_mutex();
 ```
 
-## <a name="dtortimed_mutex_destructor"></a>timed_mutex:: ~ timed_mutex – destruktor
+## <a name="timed_mutextimed_mutex-destructor"></a><a name="dtortimed_mutex_destructor"></a>timed_mutex::~timed_mutex Destruktor
 
-Uvolní všechny prostředky, které jsou používány `mutex` objektem.
+Uvolní všechny prostředky, které `mutex` jsou používány objektem.
 
 ```cpp
 ~timed_mutex();
@@ -92,7 +92,7 @@ Uvolní všechny prostředky, které jsou používány `mutex` objektem.
 
 Pokud je objekt uzamčen při spuštění destruktoru, chování není definováno.
 
-## <a name="try_lock"></a>timed_mutex::try_lock
+## <a name="timed_mutextry_lock"></a><a name="try_lock"></a>timed_mutex::try_lock
 
 Pokusí se získat vlastnictví `mutex` bez blokování.
 
@@ -102,13 +102,13 @@ bool try_lock();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**true** , pokud metoda úspěšně získá vlastnictví `mutex`, v opačném případě **false**.
+**true,** pokud metoda úspěšně získá `mutex`vlastnictví ; jinak **false**.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud volající vlákno již vlastní `mutex`, chování není definováno.
+Pokud volající vlákno již `mutex`vlastní , chování není definováno.
 
-## <a name="try_lock_for"></a>timed_mutex::try_lock_for
+## <a name="timed_mutextry_lock_for"></a><a name="try_lock_for"></a>timed_mutex::try_lock_for
 
 Pokusí se získat vlastnictví `mutex` bez blokování.
 
@@ -120,17 +120,17 @@ bool try_lock_for(const chrono::duration<Rep, Period>& Rel_time);
 ### <a name="parameters"></a>Parametry
 
 *Rel_time*\
-Objekt [chrono::d uration](../standard-library/duration-class.md) , který určuje maximální dobu, po kterou se metoda pokusí získat vlastnictví `mutex`.
+[Chrono::duration](../standard-library/duration-class.md) objekt, který určuje maximální dobu, po kterou se metoda `mutex`pokusí získat vlastnictví .
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**true** , pokud metoda úspěšně získá vlastnictví `mutex`, v opačném případě **false**.
+**true,** pokud metoda úspěšně získá `mutex`vlastnictví ; jinak **false**.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud volající vlákno již vlastní `mutex`, chování není definováno.
+Pokud volající vlákno již `mutex`vlastní , chování není definováno.
 
-## <a name="try_lock_until"></a>timed_mutex::try_lock_until
+## <a name="timed_mutextry_lock_until"></a><a name="try_lock_until"></a>timed_mutex::try_lock_until
 
 Pokusí se získat vlastnictví `mutex` bez blokování.
 
@@ -144,19 +144,19 @@ bool try_lock_until(const xtime* Abs_time);
 ### <a name="parameters"></a>Parametry
 
 *Abs_time*\
-Bod v čase, který určuje prahovou hodnotu, po jejímž uplynutí se metoda již nepokouší získat vlastnictví `mutex`.
+Bod v čase, který určuje prahovou hodnotu, po které `mutex`se metoda již nepokouší získat vlastnictví .
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**true** , pokud metoda úspěšně získá vlastnictví `mutex`, v opačném případě **false**.
+**true,** pokud metoda úspěšně získá `mutex`vlastnictví ; jinak **false**.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud volající vlákno již vlastní `mutex`, chování není definováno.
+Pokud volající vlákno již `mutex`vlastní , chování není definováno.
 
-## <a name="unlock"></a>timed_mutex:: Unlock
+## <a name="timed_mutexunlock"></a><a name="unlock"></a>timed_mutex::odemknutí
 
-Uvolňuje vlastnictví `mutex`.
+Uvolní vlastnictví . `mutex`
 
 ```cpp
 void unlock();
@@ -166,7 +166,7 @@ void unlock();
 
 Pokud volající vlákno nevlastní `mutex`, chování není definováno.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Odkazy na hlavičkové soubory](../standard-library/cpp-standard-library-header-files.md)\
-[\<mutex>](../standard-library/mutex.md)
+[Odkaz na soubory záhlaví](../standard-library/cpp-standard-library-header-files.md)\
+[\<>mutex](../standard-library/mutex.md)

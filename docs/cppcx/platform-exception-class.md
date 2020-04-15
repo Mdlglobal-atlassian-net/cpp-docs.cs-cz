@@ -1,5 +1,5 @@
 ---
-title: Platform::Exception – třída
+title: Platforma::Třída výjimek
 ms.date: 12/30/2016
 ms.topic: reference
 f1_keywords:
@@ -10,16 +10,16 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Exception Class
 ms.assetid: ca1d5a67-3a5a-48fe-8099-f9c38a2d2dce
-ms.openlocfilehash: d37d55c56e3c23d8d9129c985cb4272d2e3ee47a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4604769d9d1bc5fa848d15459327dc87d82f7016
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62368731"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81363773"
 ---
-# <a name="platformexception-class"></a>Platform::Exception – třída
+# <a name="platformexception-class"></a>Platforma::Třída výjimek
 
-Reprezentuje chyby, ke kterým dochází při spuštění aplikace. Vlastní výjimky třídy nemůže být odvozen od `Platform::Exception`. Pokud budete potřebovat vlastní výjimky, můžete použít `Platform::COMException` a zadejte HRESULT konkrétní aplikace.
+Představuje chyby, ke kterým dochází během provádění aplikace. Vlastní třídy výjimek nelze `Platform::Exception`odvodit z . Pokud požadujete vlastní výjimku, `Platform::COMException` můžete použít a zadat HRESULT specifické pro aplikaci.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -29,46 +29,46 @@ public ref class Exception : Object,    IException,    IPrintable,    IEquatable
 
 ### <a name="members"></a>Členové
 
-`Exception` Třída dědí z `Object` třídy a `IException`, `IPrintable`, a `IEquatable` rozhraní.
+Třída `Exception` dědí z `Object` třídy `IException` `IPrintable`a `IEquatable` , a rozhraní.
 
-`Exception` Třída také obsahuje následující druhy členů.
+Třída `Exception` má také následující druhy členů.
 
 ### <a name="constructors"></a>Konstruktory
 
 |Člen|Popis|
 |------------|-----------------|
-|[Exception::Exception](#ctor)|Inicializuje novou instanci třídy `Exception` třídy.|
+|[Výjimka::Výjimka](#ctor)|Inicializuje novou instanci třídy. `Exception`|
 
 ### <a name="methods"></a>Metody
 
-`Exception` Třída dědí `Equals()`, `Finalize()`,`GetHashCode()`,`GetType()`,`MemberwiseClose()`, a `ToString()` metody ze [Platform::Object – třída](../cppcx/platform-object-class.md). `Exception` Třída má také následující metodu.
+Třída `Exception` dědí `Equals()`, `Finalize()``GetHashCode()`,`GetType()``MemberwiseClose()`, `ToString()` a metody z [Platform::Object Class](../cppcx/platform-object-class.md). Třída `Exception` má také následující metodu.
 
 |Člen|Popis|
 |------------|-----------------|
-|[Exception::CreateException](#createexception)|Vytvoří výjimku, která představuje zadanou hodnotu HRESULT.|
+|[Výjimka::Vytvořitvýjimku](#createexception)|Vytvoří výjimku, která představuje zadanou hodnotu HRESULT.|
 
 ### <a name="properties"></a>Vlastnosti
 
-Třídy výjimek má také následující vlastnosti.
+Třída Exception má také následující vlastnosti.
 
 |Člen|Popis|
 |------------|-----------------|
-|[Exception::HResult](#hresult)|Hodnota HRESULT, která odpovídá na výjimku.|
-|[Exception::Message](#message)|Zpráva popisující výjimku Tato hodnota je jen pro čtení a nelze změnit po `Exception` je vytvořený.|
+|[Výjimka::HVýsledek](#hresult)|HRESULT, který odpovídá výjimce.|
+|[Výjimka::Zpráva](#message)|Zpráva popisující výjimku Tato hodnota je jen pro čtení `Exception` a nelze ji po vytvoření vytvořit.|
 
 ### <a name="requirements"></a>Požadavky
 
-**Minimální podporovaná klienta:** Windows 8
+**Minimální podporovaný klient:** Windows 8
 
-**Minimální podporovaná serveru:** Windows Server 2012
+**Minimální podporovaný server:** Windows Server 2012
 
-**Namespace:** Platforma
+**Obor názvů:** Platforma
 
 **Metadata:** platform.winmd
 
-## <a name="createexception"></a> Exception::CreateException – metoda
+## <a name="exceptioncreateexception-method"></a><a name="createexception"></a>Výjimka::Metoda CreateException
 
-Vytvoří Platform::Exception ^ ze zadané hodnoty HRESULT.
+Vytvoří platformu::Exception^ ze zadané hodnoty HRESULT.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -79,11 +79,11 @@ Exception^ CreateException(int32 hr, Platform::String^ message);
 
 ### <a name="parameters"></a>Parametry
 
-*hr*<br/>
-Hodnota HRESULT, která tyto informace obvykle získáte z volání metody COM. Pokud je hodnota 0, což je rovna S_OK, tato metoda vyvolá [Platform::InvalidArgumentException](../cppcx/platform-invalidargumentexception-class.md) protože metody modelu COM, které úspěšná by neměla vyvolávat výjimky.
+*Hr*<br/>
+Hodnota HRESULT, kterou obvykle získáte z volání metody COM. Pokud je hodnota 0, která se rovná S_OK, tato metoda vyvolá [Platform::InvalidArgumentException](../cppcx/platform-invalidargumentexception-class.md) protože metody COM, které jsou úspěšné, by neměly vyvolávat výjimky.
 
-*message*<br/>
-Řetězec popisující chybu.
+*Zprávu*<br/>
+Řetězec, který popisuje chybu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -91,13 +91,13 @@ Výjimka, která představuje chybu HRESULT.
 
 ### <a name="remarks"></a>Poznámky
 
-Pomocí této metody můžete vytvořit výjimka z HRESULT, která je vrácena, například z volání metody COM rozhraní. Můžete použít přetížení, která přebírá řetězec ^ parametr zadejte vlastní zprávu.
+Pomocí této metody můžete vytvořit výjimku z HRESULT, která je vrácena například z volání metody rozhraní COM. Můžete použít přetížení, které trvá String^ parametr poskytnout vlastní zprávu.
 
-Je důrazně doporučujeme vytvořit výjimku silného typu pomocí CreateException místo vytváření [Platform::COMException –](../cppcx/platform-comexception-class.md) obsahující pouze hodnota HRESULT.
+Důrazně doporučujeme použít CreateException k vytvoření výjimky silného typu, nikoli k vytvoření [platformy::COMException,](../cppcx/platform-comexception-class.md) která obsahuje pouze HRESULT.
 
-## <a name="ctor"></a>  Exception::Exception konstruktor
+## <a name="exceptionexception-constructor"></a><a name="ctor"></a>Výjimka::Konstruktor výjimek
 
-Inicializuje novou instanci třídy výjimek.
+Intializes novou instanci Exception třídy.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -108,15 +108,15 @@ Exception(int32 hresult, ::Platform::String^ message);
 
 ### <a name="parameters"></a>Parametry
 
-*Hodnota HRESULT*<br/>
-Chyba HRESULT, která je reprezentována výjimku.
+*Hresult*<br/>
+Chyba HRESULT, která je reprezentována výjimkou.
 
-*message*<br/>
-Zprávy zadané uživatelem, jako je doporučené text, který souvisí s výjimkou. Obecně byste měli dát přednost druhé přetížení negace popisnou zprávou, která je co nejkonkrétnější o tom, jak a proč došlo k chybě.
+*Zprávu*<br/>
+Zpráva zadaná uživatelem, například normativní text, která je přidružena k výjimce. Obecně byste měli dát přednost druhé přetížení za účelem poskytnutí popisné zprávy, která je co nejkonkrétnější o tom, jak a proč došlo k chybě.
 
-## <a name="hresult"></a>  Vlastnost Exception::HResult
+## <a name="exceptionhresult-property"></a><a name="hresult"></a>Výjimka::Vlastnost HResult
 
-Hodnota HRESULT, která odpovídá na výjimku.
+HRESULT, který odpovídá výjimce.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -127,15 +127,15 @@ public:
 
 ## <a name="property-value"></a>Hodnota vlastnosti
 
-Hodnotu HRESULT.
+Hodnota HRESULT.
 
 ### <a name="remarks"></a>Poznámky
 
-Většina výjimek začíná jako chyby modelu COM, které jsou následně vráceny jako hodnoty HRESULT. C++/CX převede tyto hodnoty na Platform::Exception ^ objekty a tato vlastnost slouží k uložení hodnoty původní kód chyby.
+Většina výjimek začíná jako chyby COM, které jsou vráceny jako hodnoty HRESULT. C++/CX převede tyto hodnoty na objekty Platform::Exception^ a tato vlastnost ukládá hodnotu původního kódu chyby.
 
-## <a name="message"></a> Vlastnost Exception::Message
+## <a name="exceptionmessage-property"></a><a name="message"></a>Výjimka::Vlastnost Zprávy
 
-Zpráva popisující chybu.
+Zpráva, která popisuje chybu.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -145,12 +145,12 @@ public:property String^ Message;
 
 ## <a name="property-value"></a>Hodnota vlastnosti
 
-V výjimky vzniklé v modulu Windows Runtime je to poskytnuté systémem popis chyby.
+Ve výjimečných výjimkách, které pocházejí z prostředí Windows Runtime, se jedná o systémově zadaný popis chyby.
 
 ### <a name="remarks"></a>Poznámky
 
-V systému Windows 8 Tato vlastnost je jen pro čtení vzhledem k tomu, že jsou napříč ABI pouze jako HRESULTS přenosu výjimek v této verzi systému Windows Runtime. Ve Windows 8.1 bohatší informace o výjimkách přenosu napříč ABI a můžete zadat vlastní zprávu, ke kterému programově přístup jiných komponent. Další informace najdete v tématu [výjimky (C++/CX)](../cppcx/exceptions-c-cx.md).
+V systému Windows 8 je tato vlastnost jen pro čtení, protože výjimky v této verzi prostředí Windows Runtime jsou přenášeny přes ABI pouze jako HRESULTS. Ve Windows 8.1 bohatší informace o výjimce jsou přenášeny přes ABI a můžete poskytnout vlastní zprávu, že ostatní součásti přístup programově. Další informace naleznete v [tématu Výjimky (C++/CX)](../cppcx/exceptions-c-cx.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Platform – obor názvů](../cppcx/platform-namespace-c-cx.md)

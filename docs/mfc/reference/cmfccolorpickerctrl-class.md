@@ -1,5 +1,5 @@
 ---
-title: CMFCColorPickerCtrl Class
+title: Třída CMFCColorPickerCtrl
 ms.date: 11/19/2018
 f1_keywords:
 - CMFCColorPickerCtrl
@@ -40,16 +40,16 @@ helpviewer_keywords:
 - CMFCColorPickerCtrl [MFC], SetType
 - CMFCColorPickerCtrl [MFC], DrawCursor
 ms.assetid: b9bbd03c-beb0-4b55-9765-9985fd05e5dc
-ms.openlocfilehash: 1977717ee590acb63655ba21bfa5eb6bfe7c9bd8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c3c11db448ab31324367b7f314cd6bfe44c2e96d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403783"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367688"
 ---
-# <a name="cmfccolorpickerctrl-class"></a>CMFCColorPickerCtrl Class
+# <a name="cmfccolorpickerctrl-class"></a>Třída CMFCColorPickerCtrl
 
-`CMFCColorPickerCtrl` Třída poskytuje funkce pro ovládací prvek, který se používá pro výběr barvy.
+Třída `CMFCColorPickerCtrl` poskytuje funkce pro ovládací prvek, který se používá k výběru barev.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -61,68 +61,68 @@ class CMFCColorPickerCtrl : public CButton
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CMFCColorPickerCtrl::CMFCColorPickerCtrl](#cmfccolorpickerctrl)|Vytvoří `CMFCColorPickerCtrl` objektu.|
+|[CMFCColorPickerCtrl::CMFCColorPickerCtrl](#cmfccolorpickerctrl)|Vytvoří `CMFCColorPickerCtrl` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CMFCColorPickerCtrl::GetColor](#getcolor)|Zjišťuje barvu, kterou uživatel vybere.|
-|[CMFCColorPickerCtrl::GetHLS](#gethls)|Načte hodnoty hue, světelnost a sytost barev, které uživatel vybere.|
-|[CMFCColorPickerCtrl::GetHue](#gethue)|Obnoví komponenty odstín barvy, kterou uživatel vybere.|
-|[CMFCColorPickerCtrl::GetLuminance](#getluminance)|Obnoví komponenty jasu barvy, kterou uživatel vybere.|
-|[CMFCColorPickerCtrl::GetSaturation](#getsaturation)|Obnoví komponenty sytost barev, které uživatel vybere.|
-|[CMFCColorPickerCtrl::SelectCellHexagon](#selectcellhexagon)|Nastaví aktuální barvu na barvu definované zadané součásti barva RGB nebo zadaná buňka šestiúhelník.|
-|[CMFCColorPickerCtrl::SetColor](#setcolor)|Nastaví zadanou hodnotu barvy RGB aktuální barvu.|
+|[CMFCColorPickerCtrl::GetColor](#getcolor)|Načte barvu, kterou uživatel vybere.|
+|[CMFCColorPickerCtrl::GetHLS](#gethls)|Načte hodnoty odstínu, jasu a sytosti barvy, kterou uživatel vybere.|
+|[CMFCColorPickerCtrl::GetHue](#gethue)|Načte komponentu odstínu barvy, kterou uživatel vybere.|
+|[CMFCColorPickerCtrl:GetLuminance](#getluminance)|Načte složku jasu barvy, kterou uživatel vybere.|
+|[CMFCColorPickerCtrl::Možnost Saturace](#getsaturation)|Načte složku sytosti barvy, kterou uživatel vybere.|
+|[CMFCColorPickerCtrl::SelectCellHexagon](#selectcellhexagon)|Nastaví aktuální barvu na barvu definovanou zadanými barevnými složkami RGB nebo zadaným šestiúhelníkem buňky.|
+|[CMFCColorPickerCtrl::SetColor](#setcolor)|Nastaví aktuální barvu na zadanou hodnotu barvy RGB.|
 |[CMFCColorPickerCtrl::SetHLS](#sethls)|Nastaví aktuální barvu na zadanou hodnotu barvy HLS.|
-|[CMFCColorPickerCtrl::SetHue](#sethue)|Komponenta odstín, který aktuálně vybraná barva se změní.|
-|[CMFCColorPickerCtrl::SetLuminance](#setluminance)|Komponenta světelnost aktuálně vybraná barva se změní.|
-|[CMFCColorPickerCtrl::SetLuminanceBarWidth](#setluminancebarwidth)|Šířka pruhu světelnost nastaví v ovládacím prvku pro výběr barvy.|
-|[CMFCColorPickerCtrl::SetOriginalColor](#setoriginalcolor)|Nastaví počáteční barvu vybrané.|
-|[CMFCColorPickerCtrl::SetPalette](#setpalette)|Nastaví aktuální palety barev.|
-|[CMFCColorPickerCtrl::SetSaturation](#setsaturation)|Sytost součást aktuálně vybraná barva se změní.|
-|[CMFCColorPickerCtrl::SetType](#settype)|Nastaví typ ovládacího prvku pro výběr barev k zobrazení.|
+|[CMFCColorPickerCtrl::SetHue](#sethue)|Změní složku odstínu aktuálně vybrané barvy.|
+|[CMFCColorPickerCtrl:SetLuminance](#setluminance)|Změní složku jasu aktuálně vybrané barvy.|
+|[CMFCColorPickerCtrl::SetLuminanceBarWidth](#setluminancebarwidth)|Nastaví šířku pruhu jasu v ovládacím prvku pro výběr barvy.|
+|[CMFCColorPickerCtrl::SetOriginalColor](#setoriginalcolor)|Nastaví počáteční vybranou barvu.|
+|[CMFCColorPickerCtrl::SetPalette](#setpalette)|Nastaví aktuální paletu barev.|
+|[CMFCColorPickerCtrl:SetSaturace](#setsaturation)|Změní složku sytosti aktuálně vybrané barvy.|
+|[CMFCColorPickerCtrl::SetType](#settype)|Nastaví typ ovládacího prvku pro výběr barev, který se má zobrazit.|
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CMFCColorPickerCtrl::DrawCursor](#drawcursor)|Volá se rozhraním, než se zobrazí kurzor, který odkazuje na vybraném barevném.|
+|[CMFCColorPickerCtrl::DrawCursor](#drawcursor)|Volat rámci před kurzor, který odkazuje na vybranou barvu se zobrazí.|
 
 ## <a name="remarks"></a>Poznámky
 
-Standardní barvy jsou vybrány z palety barev šestiúhelníkový a vlastních barev jsou vybrány z panelu světelnost tam, kde jsou barvy definované pomocí notace červená, zelená/modrá nebo zápis hue/satuaration/světelnost.
+Standardní barvy jsou vybrány z šestihranné palety barev a vlastní barvy jsou vybrány z pruhu jasu, kde jsou barvy určeny buď červenou/zelenou/modrou notací nebo zápisem odstínu/sytosti/jasu.
 
-Následující obrázek znázorňuje několik `CMFCColorPickerCtrl` objekty.
+Následující obrázek znázorňuje několik `CMFCColorPickerCtrl` objektů.
 
-![Dialogové okno CMFCColorPickerCtrl](../../mfc/reference/media/colorpicker.png "CMFCColorPickerCtrl – dialogové okno")
+![Dialogové okno CMFCColorPickerCtrl](../../mfc/reference/media/colorpicker.png "Dialogové okno CMFCColorPickerCtrl")
 
-`CMFCColorPickerCtrl` Podporuje dvě dvojice stylů. HEX a HEX_GREYSCALE styly jsou vhodné pro výběr standardní barvy. Výběr a SVĚTLOSTI styly jsou vhodné pro výběr vlastní barvy.
+Podporuje `CMFCColorPickerCtrl` dva páry stylů. Styly HEX a HEX_GREYSCALE jsou vhodné pro standardní výběr barev. Styly PICKER a LUMINANCE jsou vhodné pro vlastní výběr barev.
 
-Proveďte následující kroky, abyste zapracovali `CMFCColorPickerCtrl` řízení na vašem dialogovém okně:
+Chcete-li ovládací prvek `CMFCColorPickerCtrl` začlenit do dialogového okna, proveďte následující kroky:
 
-1. Pokud používáte **ClassWizard**, vložte nový ovládací prvek tlačítko do vaší šablony dialogového okna (protože `CMFCColorPickerCtrl` třída dědí z `CButton` třídy).
+1. Pokud používáte **ClassWizard**, vložte nový ovládací prvek tlačítka `CMFCColorPickerCtrl` do šablony dialogového okna (protože třída je zděděna z `CButton` třídy).
 
-1. Vložte členské proměnné, která souvisí s nový ovládací prvek tlačítko do vaší třídy dialogového okna. Potom změnit typ proměnné z `CButton` k `CMFCColorPickerCtrl`.
+1. Vložte členská proměnnou, která je přidružena k novému ovládacímu prvku tlačítka, do třídy dialogového okna. Potom změňte typ `CButton` `CMFCColorPickerCtrl`proměnné z na .
 
-1. Vložit `WM_INITDIALOG` obslužné rutiny zpráv pro třídy dialogového okna. V obslužné rutině nastavit typ, palety a počáteční vybranou barvu `CMFCColorPickerCtrl` ovládacího prvku.
+1. Vložte `WM_INITDIALOG` obslužnou rutinu zprávy pro třídu dialogového okna. V obslužné rutině nastavte typ, `CMFCColorPickerCtrl` paletu a počáteční vybranou barvu ovládacího prvku.
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak nakonfigurovat `CMFCColorPickerCtrl` pomocí různých metod v objektu `CMFCColorPickerCtrl` třídy. Příklad ukazuje, jak nastavit typ ovládacího prvku pro výběr a jak nastavit její barvu, hue, světelnost a sytost. V příkladu je součástí [nové ovládací prvky ukázka](../../overview/visual-cpp-samples.md).
+Následující příklad ukazuje, jak `CMFCColorPickerCtrl` nakonfigurovat objekt pomocí `CMFCColorPickerCtrl` různých metod ve třídě. Příklad ukazuje, jak nastavit typ ovládacího prvku výběru a jak nastavit jeho barvu, odstín, jas a sytost. Příklad je součástí [ukázky Nové ovládací prvky](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#4](../../mfc/reference/codesnippet/cpp/cmfccolorpickerctrl-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#5](../../mfc/reference/codesnippet/cpp/cmfccolorpickerctrl-class_2.cpp)]
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObjekt](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[CCmdCíl](../../mfc/reference/ccmdtarget-class.md)
 
-[CWnd](../../mfc/reference/cwnd-class.md)
+[Cwnd](../../mfc/reference/cwnd-class.md)
 
 [CButton](../../mfc/reference/cbutton-class.md)
 
@@ -132,9 +132,9 @@ Následující příklad ukazuje, jak nakonfigurovat `CMFCColorPickerCtrl` pomoc
 
 **Záhlaví:** afxcolorpickerctrl.h
 
-##  <a name="cmfccolorpickerctrl"></a>  CMFCColorPickerCtrl::CMFCColorPickerCtrl
+## <a name="cmfccolorpickerctrlcmfccolorpickerctrl"></a><a name="cmfccolorpickerctrl"></a>CMFCColorPickerCtrl::CMFCColorPickerCtrl
 
-Vytvoří `CMFCColorPickerCtrl` objektu.
+Vytvoří `CMFCColorPickerCtrl` objekt.
 
 ```
 CMFCColorPickerCtrl();
@@ -144,9 +144,9 @@ CMFCColorPickerCtrl();
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="drawcursor"></a>  CMFCColorPickerCtrl::DrawCursor
+## <a name="cmfccolorpickerctrldrawcursor"></a><a name="drawcursor"></a>CMFCColorPickerCtrl::DrawCursor
 
-Volá se rozhraním, než se zobrazí kurzor, který odkazuje na vybraném barevném.
+Volat rámci před kurzor, který odkazuje na vybranou barvu se zobrazí.
 
 ```
 virtual void DrawCursor(
@@ -156,19 +156,19 @@ virtual void DrawCursor(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
-[in] Ukazatel na kontext zařízení.
+*Pdc*<br/>
+[v] Ukazatel na kontext zařízení.
 
 *Rect*<br/>
-[in] Určuje obdélníkovou oblast kolem vybrané barvy.
+[v] Určuje obdélníkovou oblast kolem vybrané barvy.
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačí tuto metodu, když budete chtít změnit tvar, který odkazuje na vybraném barevném kurzor.
+Tuto metodu přepište, když potřebujete změnit tvar kurzoru, který odkazuje na vybranou barvu.
 
-##  <a name="getcolor"></a>  CMFCColorPickerCtrl::GetColor
+## <a name="cmfccolorpickerctrlgetcolor"></a><a name="getcolor"></a>CMFCColorPickerCtrl::GetColor
 
-Zjišťuje barvu, kterou uživatel vybere.
+Načte barvu, kterou uživatel vybere.
 
 ```
 COLORREF GetColor() const;
@@ -176,13 +176,13 @@ COLORREF GetColor() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota vybraná barva RGB.
+Hodnota RGB vybrané barvy.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="gethls"></a>  CMFCColorPickerCtrl::GetHLS
+## <a name="cmfccolorpickerctrlgethls"></a><a name="gethls"></a>CMFCColorPickerCtrl::GetHLS
 
-Načte hodnoty hue, světelnost a sytost barev, které uživatel vybere.
+Načte hodnoty odstínu, jasu a sytosti barvy, kterou uživatel vybere.
 
 ```
 void GetHLS(
@@ -193,20 +193,20 @@ void GetHLS(
 
 ### <a name="parameters"></a>Parametry
 
-*HUE*<br/>
-[out] Ukazatel na proměnnou typu double, která přijímá informace odstín.
+*Odstín*<br/>
+[out] Ukazatel na proměnnou typu double, která přijímá informace o odstínu.
 
-*Světlosti*<br/>
-[out] Ukazatel na proměnnou typu double, která přijímá informace světelnost.
+*Světlostí*<br/>
+[out] Ukazatel na proměnnou typu double, která přijímá informace o svítivosti.
 
 *Sytost*<br/>
-[out] Ukazatel na proměnnou typu double, která přijímá sytost informace.
+[out] Ukazatel na proměnnou typu double, která přijímá informace o sytosti.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="gethue"></a>  CMFCColorPickerCtrl::GetHue
+## <a name="cmfccolorpickerctrlgethue"></a><a name="gethue"></a>CMFCColorPickerCtrl::GetHue
 
-Obnoví komponenty odstín barvy, kterou uživatel vybere.
+Načte komponentu odstínu barvy, kterou uživatel vybere.
 
 ```
 double GetHue() const;
@@ -214,13 +214,13 @@ double GetHue() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Odstín, který je součást vybraná barva.
+Složka odstínu vybrané barvy.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="getluminance"></a>  CMFCColorPickerCtrl::GetLuminance
+## <a name="cmfccolorpickerctrlgetluminance"></a><a name="getluminance"></a>CMFCColorPickerCtrl:GetLuminance
 
-Obnoví komponenty jasu barvy, kterou uživatel vybere.
+Načte složku jasu barvy, kterou uživatel vybere.
 
 ```
 double GetLuminance() const;
@@ -228,13 +228,13 @@ double GetLuminance() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Komponenta světelnost vybranou barvu.
+Složka jasu vybrané barvy.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="getsaturation"></a>  CMFCColorPickerCtrl::GetSaturation
+## <a name="cmfccolorpickerctrlgetsaturation"></a><a name="getsaturation"></a>CMFCColorPickerCtrl::Možnost Saturace
 
-Načte hodnotu sytost barev, které uživatel vybere.
+Načte hodnotu sytosti barvy, kterou uživatel vybere.
 
 ```
 double GetSaturation() const;
@@ -242,13 +242,13 @@ double GetSaturation() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Komponenta sytost vybranou barvu.
+Složka sytosti vybrané barvy.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="selectcellhexagon"></a>  CMFCColorPickerCtrl::SelectCellHexagon
+## <a name="cmfccolorpickerctrlselectcellhexagon"></a><a name="selectcellhexagon"></a>CMFCColorPickerCtrl::SelectCellHexagon
 
-Nastaví aktuální barvu na barvu definované zadané součásti barva RGB nebo zadaná buňka šestiúhelník.
+Nastaví aktuální barvu na barvu definovanou zadanými barevnými složkami RGB nebo zadaným šestiúhelníkem buňky.
 
 ```
 void SelectCellHexagon(
@@ -264,33 +264,33 @@ BOOL SelectCellHexagon(
 ### <a name="parameters"></a>Parametry
 
 *R*<br/>
-[in] Komponenta červenou barvou.
+[v] Červená barevná složka.
 
 *G*<br/>
-[in] Zelenou barvu, která komponenta.
+[v] Složka zelené barvy.
 
 *B*<br/>
-[in] Komponenta modrou barvou.
+[v] Modrá barevná složka.
 
-*x*<br/>
-[in] Souřadnice x kurzoru, která odkazuje na šestiúhelník buňky.
+*X*<br/>
+[v] Souřadnice x kurzoru, která ukazuje na šestiúhelník buňky.
 
-*y*<br/>
-[in] Souřadnice y kurzoru, která odkazuje na šestiúhelník buňky.
+*Y*<br/>
+[v] Souřadnice y kurzoru, která ukazuje na šestiúhelník buňky.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Druhé přetížení této metody vždy vrátí hodnotu FALSE.
+Druhé přetížení této metody vždy vrátí FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-První přetížení této metody nastaví aktuální barvu na barvu, která odpovídá ovládacího prvku pro výběr barvy určené komponenty červené, zelené a modré barvu.
+První přetížení této metody nastaví aktuální barvu na barvu, která odpovídá ovládacímu prvku výběru barev zadané červené, zelené a modré barevné komponenty.
 
-Druhé přetížení této metody nastaví aktuální barvu na barvu šestiúhelník buňky, které ukazuje pomocí umístění zadaného kurzoru.
+Druhé přetížení této metody nastaví aktuální barvu na barvu šestiúhelníku buňky, na kterou se vztahuje zadané umístění kurzoru.
 
-##  <a name="setcolor"></a>  CMFCColorPickerCtrl::SetColor
+## <a name="cmfccolorpickerctrlsetcolor"></a><a name="setcolor"></a>CMFCColorPickerCtrl::SetColor
 
-Nastaví zadanou hodnotu barvy RGB aktuální barvu.
+Nastaví aktuální barvu na zadanou hodnotu barvy RGB.
 
 ```
 void SetColor(COLORREF Color);
@@ -298,12 +298,12 @@ void SetColor(COLORREF Color);
 
 ### <a name="parameters"></a>Parametry
 
-*Barva*<br/>
-[in] Hodnota barvy RGB.
+*Barev*<br/>
+[v] Hodnota barvy RGB.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="sethls"></a>  CMFCColorPickerCtrl::SetHLS
+## <a name="cmfccolorpickerctrlsethls"></a><a name="sethls"></a>CMFCColorPickerCtrl::SetHLS
 
 Nastaví aktuální barvu na zadanou hodnotu barvy HLS.
 
@@ -317,23 +317,23 @@ void SetHLS(
 
 ### <a name="parameters"></a>Parametry
 
-*HUE*<br/>
-[in] Hue hodnotu.
+*Odstín*<br/>
+[v] Hodnota odstínu.
 
-*Světlosti*<br/>
-[in] Hodnota, světelnost.
+*Světlostí*<br/>
+[v] Hodnota jasu.
 
 *Sytost*<br/>
-[in] Sytost hodnotu.
+[v] Hodnota sytosti.
 
 *bInvalidate*<br/>
-[in] TRUE, pokud chcete vynutit v okně se okamžitě aktualizovat na novou barvu; v opačném případě hodnota FALSE. Výchozí hodnota je TRUE.
+[v] TRUE vynutit okno okamžitě aktualizovat na novou barvu; jinak NEPRAVDA. Výchozí hodnota je TRUE.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="sethue"></a>  CMFCColorPickerCtrl::SetHue
+## <a name="cmfccolorpickerctrlsethue"></a><a name="sethue"></a>CMFCColorPickerCtrl::SetHue
 
-Hue aktuálně vybraná barva se změní.
+Změní odstín aktuálně vybrané barvy.
 
 ```
 void SetHue(double Hue);
@@ -341,14 +341,14 @@ void SetHue(double Hue);
 
 ### <a name="parameters"></a>Parametry
 
-*HUE*<br/>
-[in] Hue hodnotu.
+*Odstín*<br/>
+[v] Hodnota odstínu.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="setluminance"></a>  CMFCColorPickerCtrl::SetLuminance
+## <a name="cmfccolorpickerctrlsetluminance"></a><a name="setluminance"></a>CMFCColorPickerCtrl:SetLuminance
 
-Změní světelnost aktuálně vybranou barvu.
+Změní svítivost aktuálně vybrané barvy.
 
 ```
 void SetLuminance(double Luminance);
@@ -356,14 +356,14 @@ void SetLuminance(double Luminance);
 
 ### <a name="parameters"></a>Parametry
 
-*Světlosti*<br/>
-[in] Hodnota, světelnost.
+*Světlostí*<br/>
+[v] Hodnota jasu.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="setluminancebarwidth"></a>  CMFCColorPickerCtrl::SetLuminanceBarWidth
+## <a name="cmfccolorpickerctrlsetluminancebarwidth"></a><a name="setluminancebarwidth"></a>CMFCColorPickerCtrl::SetLuminanceBarWidth
 
-Šířka pruhu světelnost nastaví v ovládacím prvku pro výběr barvy.
+Nastaví šířku pruhu jasu v ovládacím prvku pro výběr barvy.
 
 ```
 void SetLuminanceBarWidth(int w);
@@ -371,16 +371,16 @@ void SetLuminanceBarWidth(int w);
 
 ### <a name="parameters"></a>Parametry
 
-*w*<br/>
-[in] Šířka pruhu světelnost měřená v pixelech.
+*W*<br/>
+[v] Šířka pruhu jasu měřená v obrazových bodech.
 
 ### <a name="remarks"></a>Poznámky
 
-Pomocí této metody můžete změnit velikost panelu světelnost, který je na **vlastní** kartu ovládacího prvku pro výběr barvy. *w* parametr určuje novou šířku panelu světelnost. Hodnota šířky se ignoruje, pokud se překročí tři čtvrtiny Šířka oblasti klienta.
+Tuto metodu použijte ke změně velikosti pruhu jasu, který je na kartě **Vlastní** ovládacího prvku pro výběr barvy. Parametr *w* určuje novou šířku pruhu jasu. Hodnota šířky je ignorována, pokud přesahuje tři čtvrtiny šířky klientské oblasti.
 
-##  <a name="setoriginalcolor"></a>  CMFCColorPickerCtrl::SetOriginalColor
+## <a name="cmfccolorpickerctrlsetoriginalcolor"></a><a name="setoriginalcolor"></a>CMFCColorPickerCtrl::SetOriginalColor
 
-Nastaví počáteční barvu vybrané.
+Nastaví počáteční vybranou barvu.
 
 ```
 void SetOriginalColor(COLORREF ref);
@@ -389,15 +389,15 @@ void SetOriginalColor(COLORREF ref);
 ### <a name="parameters"></a>Parametry
 
 *ref*<br/>
-[in] Hodnota barvy RGB.
+[v] Hodnota barvy RGB.
 
 ### <a name="remarks"></a>Poznámky
 
-Tuto metodu volejte, když se inicializuje ovládací prvek Výběr barvy.
+Tuto metodu zavolejte při inicializování ovládacího prvku výběru barev.
 
-##  <a name="setpalette"></a>  CMFCColorPickerCtrl::SetPalette
+## <a name="cmfccolorpickerctrlsetpalette"></a><a name="setpalette"></a>CMFCColorPickerCtrl::SetPalette
 
-Nastaví aktuální palety barev.
+Nastaví aktuální paletu barev.
 
 ```
 void SetPalette(CPalette* pPalette);
@@ -405,16 +405,16 @@ void SetPalette(CPalette* pPalette);
 
 ### <a name="parameters"></a>Parametry
 
-*pPalette*<br/>
-[in] Ukazatel na paletu barev.
+*pPaleta*<br/>
+[v] Ukazatel na paletu barev.
 
 ### <a name="remarks"></a>Poznámky
 
-Palety barev definuje pole barev, které se zobrazí v ovládacím prvku pro výběr barvy.
+Paleta barev definuje pole barev, které je zobrazeno v ovládacím prvku pro výběr barev.
 
-##  <a name="setsaturation"></a>  CMFCColorPickerCtrl::SetSaturation
+## <a name="cmfccolorpickerctrlsetsaturation"></a><a name="setsaturation"></a>CMFCColorPickerCtrl:SetSaturace
 
-Sytost aktuálně vybraná barva se změní.
+Změní sytost aktuálně vybrané barvy.
 
 ```
 void SetSaturation(double Saturation);
@@ -423,13 +423,13 @@ void SetSaturation(double Saturation);
 ### <a name="parameters"></a>Parametry
 
 *Sytost*<br/>
-[in] Sytost hodnotu.
+[v] Hodnota sytosti.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="settype"></a>  CMFCColorPickerCtrl::SetType
+## <a name="cmfccolorpickerctrlsettype"></a><a name="settype"></a>CMFCColorPickerCtrl::SetType
 
-Nastaví typ ovládacího prvku pro výběr barev k zobrazení.
+Nastaví typ ovládacího prvku pro výběr barev, který se má zobrazit.
 
 ```
 void SetType(COLORTYPE colorType);
@@ -438,16 +438,16 @@ void SetType(COLORTYPE colorType);
 ### <a name="parameters"></a>Parametry
 
 *colorType*<br/>
-[in] Typ ovládacího prvku pro výběr barvy.
+[v] Typ ovládacího prvku pro výběr barvy.
 
-Typy jsou definovány `CMFCColorPickerCtrl::COLORTYPE` výčtu. Možné typy jsou SVĚTELNOST, výběr, HEX a HEX_GREYSCALE. Výchozí typ je výběr.
+Typy jsou definovány `CMFCColorPickerCtrl::COLORTYPE` výčtu. Možné typy jsou LUMINANCE, PICKER, HEX a HEX_GREYSCALE. Výchozí typ je PICKER.
 
 ### <a name="remarks"></a>Poznámky
 
-Chcete-li určit typ ovládacího prvku pro výběr barev, volejte tuto metodu, před vytvořením ovládacím prvku Windows.
+Chcete-li určit typ ovládacího prvku pro výběr barvy, zavolejte tuto metodu před vytvořením ovládacího prvku systému Windows.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>
-[CMFCColorDialog – třída](../../mfc/reference/cmfccolordialog-class.md)
+[Třída CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md)

@@ -1,5 +1,5 @@
 ---
-title: Cmfcacceleratorkey – třída
+title: CMFCAcceleratorKey – třída
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCAcceleratorKey
@@ -12,16 +12,16 @@ helpviewer_keywords:
 - CMFCAcceleratorKey [MFC], Format
 - CMFCAcceleratorKey [MFC], SetAccelerator
 ms.assetid: d140fbf7-23db-45ea-a63e-414a5ec7b3d5
-ms.openlocfilehash: 6a99ad00a43ac7912320ee469d542b6bf9cca3de
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7d66e7043325bbbd324f3ac443368787a653ebe1
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403955"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81369927"
 ---
-# <a name="cmfcacceleratorkey-class"></a>Cmfcacceleratorkey – třída
+# <a name="cmfcacceleratorkey-class"></a>CMFCAcceleratorKey – třída
 
-Pomocná třída, která implementuje virtuální mapování kláves a formátování.
+Pomocná třída, která implementuje mapování a formátování virtuálních klíčů.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,32 +33,32 @@ class CMFCAcceleratorKey : public CObject
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CMFCAcceleratorKey::CMFCAcceleratorKey](#cmfcacceleratorkey)|Vytvoří `CMFCAcceleratorKey` objektu.|
+|[CMFCAcceleratorKey::CMFCAcceleratorKey](#cmfcacceleratorkey)|Vytvoří `CMFCAcceleratorKey` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CMFCAcceleratorKey::Format](#format)|Přeloží AKCELERACE struktury na jeho vizuální reprezentace.|
-|[CMFCAcceleratorKey::SetAccelerator](#setaccelerator)|Nastaví klávesovou zkratku `CMFCAcceleratorKey` objektu.|
+|[CMFCAcceleratorKey::Formát](#format)|Překládá strukturu ACCEL do její vizuální reprezentace.|
+|[CMFCAcceleratorKey::SetAccelerator](#setaccelerator)|Nastaví klávesovou `CMFCAcceleratorKey` zkratku pro objekt.|
 
 ## <a name="remarks"></a>Poznámky
 
-Klávesy akcelerátoru jsou také známé jako klávesové zkratky. Pokud chcete zobrazit klávesové zkratky, které uživatel zadá, [cmfcacceleratorkeyassignctrl – třída](../../mfc/reference/cmfcacceleratorkeyassignctrl-class.md) mapy klávesové zkratky, jako je například Alt + Shift + S, na vlastní textovém formátu, jako je například "Alt + Shift + S". Každý `CMFCAcceleratorKey` objektu se mapuje na formátu textu s jednoklávesovou zkratkou.
+Klávesy akcelerátoru jsou také známé jako klávesové zkratky. Pokud chcete zobrazit klávesové zkratky, které uživatel zadá, [cmfcacceleratorKeyAssignCtrl třída](../../mfc/reference/cmfcacceleratorkeyassignctrl-class.md) mapuje klávesové zkratky, jako je Alt + Shift + S, na vlastní textový formát, například "Alt + Shift + S". Každý `CMFCAcceleratorKey` objekt mapuje jednu klávesovou zkratku na textový formát.
 
-Další informace o tom, jak používat klávesové zkratky a tabulek akcelerátorů najdete v tématu [ckeyboardmanager – třída](../../mfc/reference/ckeyboardmanager-class.md).
+Další informace o použití klávesových zkratek a tabulek akcelerátorů naleznete v [tématu CKeyboardManager Class](../../mfc/reference/ckeyboardmanager-class.md).
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak vytvořit `CMFCAcceleratorKey` objekt a jak používat jeho `Format` metoda.
+Následující příklad ukazuje, jak `CMFCAcceleratorKey` vytvořit objekt a `Format` jak používat jeho metodu.
 
 [!code-cpp[NVC_MFC_RibbonApp#30](../../mfc/reference/codesnippet/cpp/cmfcacceleratorkey-class_1.cpp)]
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObjekt](../../mfc/reference/cobject-class.md)
 
 `CMFCAcceleratorKey`
 
@@ -66,9 +66,9 @@ Následující příklad ukazuje, jak vytvořit `CMFCAcceleratorKey` objekt a ja
 
 **Záhlaví:** afxacceleratorkey.h
 
-##  <a name="cmfcacceleratorkey"></a>  CMFCAcceleratorKey::CMFCAcceleratorKey
+## <a name="cmfcacceleratorkeycmfcacceleratorkey"></a><a name="cmfcacceleratorkey"></a>CMFCAcceleratorKey::CMFCAcceleratorKey
 
-Vytvoří [cmfcacceleratorkey –](../../mfc/reference/cmfcacceleratorkey-class.md) objektu.
+Vytvoří objekt [CMFCAcceleratorKey.](../../mfc/reference/cmfcacceleratorkey-class.md)
 
 ```
 CMFCAcceleratorKey();
@@ -78,15 +78,15 @@ CMFCAcceleratorKey(LPACCEL lpAccel);
 ### <a name="parameters"></a>Parametry
 
 *lpAccel*<br/>
-[in] Ukazatel na klávesovou zkratku.
+[v] Ukazatel na klávesovou zkratku.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud nezadáte klávesovou zkratku při vytváření `CMFCAccleratorKey`, použijte [CMFCAcceleratorKey::SetAccelerator](#setaccelerator) metoda, jak přidružit klávesovou zkratku s vaší `CMFCAcceleratorKey` objektu.
+Pokud při vytváření klávesové zkratky `CMFCAccleratorKey`nezadáte , přidružte k `CMFCAcceleratorKey` objektu metodu [CMFCAcceleratorKey::SetAccelerator.](#setaccelerator)
 
-##  <a name="format"></a>  CMFCAcceleratorKey::Format
+## <a name="cmfcacceleratorkeyformat"></a><a name="format"></a>CMFCAcceleratorKey::Formát
 
-Přeloží AKCELERACE struktura jeho přidružené řetězcovou hodnotu.
+Přeloží strukturu ACCEL na přidruženou hodnotu řetězce.
 
 ```
 void Format(CString& str) const;
@@ -94,16 +94,16 @@ void Format(CString& str) const;
 
 ### <a name="parameters"></a>Parametry
 
-*str*<br/>
-[out] Odkaz na `CString` objektu, ve kterém Metoda zapíše přeložené klávesovou zkratku.
+*Str*<br/>
+[out] Odkaz na `CString` objekt, kde metoda zapíše přeloženou klávesovou zkratku.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda načte řetězec formátu přidružené klávesovou zkratku. Můžete nastavit formát řetězce [cmfcacceleratorkey –](../../mfc/reference/cmfcacceleratorkey-class.md) pomocí konstruktoru nebo metody [CMFCAcceleratorKey::SetAccelerator](#setaccelerator).
+Tato metoda načte formát řetězce přidružené klávesové zkratky. Můžete nastavit formát řetězce objektu [CMFCAcceleratorKey](../../mfc/reference/cmfcacceleratorkey-class.md) pomocí konstruktoru nebo metody [CMFCAcceleratorKey::SetAccelerator](#setaccelerator).
 
-##  <a name="setaccelerator"></a>  CMFCAcceleratorKey::SetAccelerator
+## <a name="cmfcacceleratorkeysetaccelerator"></a><a name="setaccelerator"></a>CMFCAcceleratorKey::SetAccelerator
 
-Nastaví klávesovou zkratku [cmfcacceleratorkey –](../../mfc/reference/cmfcacceleratorkey-class.md) objektu.
+Nastaví klávesovou zkratku pro objekt [CMFCAcceleratorKey.](../../mfc/reference/cmfcacceleratorkey-class.md)
 
 ```
 void SetAccelerator(LPACCEL lpAccel);
@@ -112,13 +112,13 @@ void SetAccelerator(LPACCEL lpAccel);
 ### <a name="parameters"></a>Parametry
 
 *lpAccel*<br/>
-[in] Ukazatel na klávesovou zkratku.
+[v] Ukazatel na klávesovou zkratku.
 
 ### <a name="remarks"></a>Poznámky
 
-Tuto metodu použijte k nastavení klávesovou zkratku `CMFCAcceleratorKey` Pokud jste neposkytl klávesovou zkratku při vytváření `CMFCAcceleratorKey`.
+Pomocí této metody můžete nastavit `CMFCAcceleratorKey` klávesovou zkratku pro a, pokud `CMFCAcceleratorKey`jste při vytváření klávesy nezadali klávesovou zkratku.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>

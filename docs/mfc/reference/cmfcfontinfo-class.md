@@ -1,5 +1,5 @@
 ---
-title: CMFCFontInfo – třída
+title: Třída CMFCFontInfo
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCFontInfo
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - CMFCFontInfo [MFC], m_strName
 - CMFCFontInfo [MFC], m_strScript
 ms.assetid: f88329b2-d74e-4921-9441-a3bb6536a049
-ms.openlocfilehash: a27606b494b13cd7b50f01b38fa95a918bacc7aa
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 6e87971e2afefc9cf1574abe951920c254dcd2ae
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69505274"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367482"
 ---
-# <a name="cmfcfontinfo-class"></a>CMFCFontInfo – třída
+# <a name="cmfcfontinfo-class"></a>Třída CMFCFontInfo
 
-`CMFCFontInfo` Třída popisuje název a další atributy písma.
+Třída `CMFCFontInfo` popisuje název a další atributy písma.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -39,43 +39,43 @@ class CMFCFontInfo : public CObject
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|`CMFCFontInfo`|`CMFCFontInfo` Vytvoří objekt.|
+|`CMFCFontInfo`|Vytvoří `CMFCFontInfo` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CMFCFontInfo::GetFullName](#getfullname)|Načte zřetězené názvy písma a jeho znakové sady (skriptu).|
+|[CMFCFontInfo::GetfullName](#getfullname)|Načte zřetězené názvy písma a jeho znakovou sadu (skript).|
 
-### <a name="data-members"></a>Datové členy
+### <a name="data-members"></a>Členové dat
 
-|Name|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CMFCFontInfo::m_nCharSet](#m_ncharset)|Hodnota, která určuje znakovou sadu (skript) spojenou s fontem.|
-|[CMFCFontInfo::m_nPitchAndFamily](#m_npitchandfamily)|Hodnota, která určuje rozteč a rodinu písma.|
+|[CMFCFontInfo::m_nCharSet](#m_ncharset)|Hodnota, která určuje znakovou sadu (skript) přidruženou k písmu.|
+|[CMFCFontInfo::m_nPitchAndFamily](#m_npitchandfamily)|Hodnota, která určuje výšku a rodinu písma.|
 |[CMFCFontInfo::m_nType](#m_ntype)|Hodnota, která určuje typ písma.|
 |[CMFCFontInfo::m_strName](#m_strname)|Název písma; například **Arial**.|
-|[CMFCFontInfo::m_strScript](#m_strscript)|Název znakové sady (skriptu) přidružené k danému písmu.|
+|[CMFCFontInfo::m_strScript](#m_strscript)|Název znakové sady (skriptu) přidružené k písmu.|
 
 ## <a name="remarks"></a>Poznámky
 
-`CMFCFontInfo` Objekt lze připojit k položce třídy třídy [CMFCToolBarFontComboBox](../../mfc/reference/cmfctoolbarfontcombobox-class.md) . Voláním metody [CMFCToolBarFontComboBox:: GetFontDesc](../../mfc/reference/cmfctoolbarfontcombobox-class.md#getfontdesc) načtěte ukazatel na `CMFCFontInfo` objekt.
+Objekt můžete `CMFCFontInfo` připojit k položce třídy [TŘÍDY CMFCToolBarFontComboBox.](../../mfc/reference/cmfctoolbarfontcombobox-class.md) Volání [CMFCToolBarFontComboBox::GetFontDesc](../../mfc/reference/cmfctoolbarfontcombobox-class.md#getfontdesc) metoda načíst ukazatel `CMFCFontInfo` na objekt.
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak použít různé členy `CMFCFontInfo` třídy. Příklad ukazuje `CMFCFontInfo` `CMFCRibbonFontComboBox`, jak získat objekt z a, jak přistupovat k místním proměnným. Tento příklad je součástí [ukázky ukázky MSOffice 2007](../../overview/visual-cpp-samples.md).
+Následující příklad ukazuje, jak používat různé `CMFCFontInfo` členy třídy. Příklad ukazuje, jak získat `CMFCFontInfo` objekt `CMFCRibbonFontComboBox`z , a jak získat přístup k jeho místní proměnné. Tento příklad je součástí [ukázky ukázky ukázky msoffice 2007](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_MSOffice2007Demo#6](../../mfc/reference/codesnippet/cpp/cmfcfontinfo-class_1.cpp)]
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxtoolbarfontcombobox. h
+**Záhlaví:** afxtoolbarfontcombobox.h
 
-##  <a name="cmfcfontinfo"></a>CMFCFontInfo::CMFCFontInfo
+## <a name="cmfcfontinfocmfcfontinfo"></a><a name="cmfcfontinfo"></a>CMFCFontInfo::CMFCFontInfo
 
-`CMFCFontInfo` Vytvoří objekt.
+Vytvoří `CMFCFontInfo` objekt.
 
 ```
 CMFCFontInfo(
@@ -90,33 +90,33 @@ CMFCFontInfo(const CMFCFontInfo& src);
 
 ### <a name="parameters"></a>Parametry
 
-*lpszName*<br/>
-pro Název písma Další informace naleznete v tématu `lfFaceName` člen struktury [LOGFONT](/windows/win32/api/wingdi/ns-wingdi-logfontw) .
+*název lpsz*<br/>
+[v] Název písma. Další informace naleznete `lfFaceName` v člen [logfont](/windows/win32/api/wingdi/ns-wingdi-logfontw) struktury.
 
 *lpszScript*<br/>
-pro Název skriptu (znakové sady) písma.
+[v] Název skriptu (znakové sady) písma.
 
-*nCharSet*<br/>
-pro Hodnota, která určuje znakovou sadu (skript) písma. Další informace naleznete v tématu `lfCharSet` člen struktury [LOGFONT](/windows/win32/api/wingdi/ns-wingdi-logfontw) .
+*nSada char*<br/>
+[v] Hodnota, která určuje znakovou sadu (skript) písma. Další informace naleznete `lfCharSet` v člen [logfont](/windows/win32/api/wingdi/ns-wingdi-logfontw) struktury.
 
 *nPitchAndFamily*<br/>
-pro Hodnota, která určuje rozteč a rodinu písma. Další informace naleznete v tématu `lfPitchAndFamily` člen struktury [LOGFONT](/windows/win32/api/wingdi/ns-wingdi-logfontw) .
+[v] Hodnota, která určuje výšku a rodinu písma. Další informace naleznete `lfPitchAndFamily` v člen [logfont](/windows/win32/api/wingdi/ns-wingdi-logfontw) struktury.
 
-*nType*<br/>
-pro Hodnota, která určuje typ písma. Tento parametr může být bitovou kombinací (nebo) hodnot DEVICE_FONTTYPE, RASTER_FONTTYPE a TRUETYPE_FONTTYPE.
+*nTyp*<br/>
+[v] Hodnota, která určuje typ písma. Tento parametr může být bitovou kombinací (OR) DEVICE_FONTTYPE, RASTER_FONTTYPE a TRUETYPE_FONTTYPE.
 
 *src*<br/>
-pro Existující `CMFCFontInfo` objekt, jehož členové jsou použity k vytvoření tohoto `CMFCFontInfo` objektu.
+[v] Existující `CMFCFontInfo` objekt, jehož členy `CMFCFontInfo` se používají k vytvoření tohoto objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
-Tato dokumentace používá znaková *sada* pro výrazy a zaměnitelné *skripty* . *Skript*, který se také označuje jako systém pro zápis, je kolekce znaků a pravidel pro zápis těchto znaků v jednom nebo více jazycích. Kolekce znaků obsahuje abecední a interpunkční znaménko použité v tomto skriptu. Například skript latinky se používá pro angličtinu, protože se používá v USA a jeho abeceda obsahuje znaky z A až Z. Člen struktury LOGFONT určuje znakovou sadu. [](/windows/win32/api/wingdi/ns-wingdi-logfontw) `lfCharSet` Například hodnota ANSI_CHARSET určuje znakovou sadu ANSI, která obsahuje abecední znak skriptu latinky.
+Tato dokumentace používá termíny *znakové sady* a *skript* zaměnitelně. *Skript*, který je také známý jako systém zápisu, je kolekce znaků a pravidel pro psaní těchto znaků v jednom nebo více jazycích. Kolekce znaků zahrnuje abecedu a interpunkci použitou v tomto skriptu. Například latinka se používá pro angličtinu, jak se mluví ve Spojených státech a jeho abeceda obsahuje znaky od A do Z. Člen `lfCharSet` struktury [LOGFONT](/windows/win32/api/wingdi/ns-wingdi-logfontw) určuje znakovou sadu. Například hodnota ANSI_CHARSET určuje znakovou sadu ANSI, která obsahuje abecedu latinky.
 
-##  <a name="getfullname"></a>CMFCFontInfo:: getfull
+## <a name="cmfcfontinfogetfullname"></a><a name="getfullname"></a>CMFCFontInfo::GetfullName
 
-Načte zřetězené názvy písma a jeho znakové sady (skriptu).
+Načte zřetězené názvy písma a jeho znakovou sadu (skript).
 
 ```
 CString GetFullName() const;
@@ -124,15 +124,15 @@ CString GetFullName() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Řetězec, který obsahuje název a skript písma.
+Řetězec, který obsahuje název písma a skript.
 
 ### <a name="remarks"></a>Poznámky
 
-Tuto metodu použijte, chcete-li získat úplný název písma. Například pokud je název písma písmo **Arial** a skript písma je **cyrilice**, vrátí tato metoda "Arial (cyrilice)".
+Pomocí této metody získat úplný název písma. Pokud je například název **písma Arial** a skript písma je **Cyrilice**, vrátí tato metoda hodnotu Arial (Cyrilice)".
 
-##  <a name="m_ncharset"></a>CMFCFontInfo::m_nCharSet
+## <a name="cmfcfontinfom_ncharset"></a><a name="m_ncharset"></a>CMFCFontInfo::m_nCharSet
 
-Hodnota, která určuje znakovou sadu (skript) spojenou s fontem.
+Hodnota, která určuje znakovou sadu (skript) přidruženou k písmu.
 
 ```
 const BYTE m_nCharSet;
@@ -140,11 +140,11 @@ const BYTE m_nCharSet;
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace naleznete v parametru *nCharSet* konstruktoru [CMFCFontInfo:: CMFCFontInfo](#cmfcfontinfo) .
+Další informace naleznete v parametru *nCharSet* konstruktoru [CMFCFontInfo::CMFCFontInfo.](#cmfcfontinfo)
 
-##  <a name="m_npitchandfamily"></a>CMFCFontInfo::m_nPitchAndFamily
+## <a name="cmfcfontinfom_npitchandfamily"></a><a name="m_npitchandfamily"></a>CMFCFontInfo::m_nPitchAndFamily
 
-Hodnota, která určuje rozteč (velikost bodu) a rodinu (například Serif, Sans-Serif a neproporcionální) písma.
+Hodnota, která určuje výšku (velikost bodu) a rodinu (například patka, bez patkové a monospace) písma.
 
 ```
 const BYTE m_nPitchAndFamily;
@@ -152,9 +152,9 @@ const BYTE m_nPitchAndFamily;
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace naleznete v parametru *nPitchAndFamily* konstruktoru [CMFCFontInfo:: CMFCFontInfo](#cmfcfontinfo) .
+Další informace naleznete v parametru *nPitchAndFamily* konstruktoru [CMFCFontInfo::CMFCFontInfo.](#cmfcfontinfo)
 
-##  <a name="m_ntype"></a>  CMFCFontInfo::m_nType
+## <a name="cmfcfontinfom_ntype"></a><a name="m_ntype"></a>CMFCFontInfo::m_nType
 
 Hodnota, která určuje typ písma.
 
@@ -164,9 +164,9 @@ const int m_nType;
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace naleznete v parametru *noznámení* konstruktoru [CMFCFontInfo:: CMFCFontInfo](#cmfcfontinfo) .
+Další informace naleznete v parametru *nType* konstruktoru [CMFCFontInfo::CMFCFontInfo.](#cmfcfontinfo)
 
-##  <a name="m_strname"></a>CMFCFontInfo::m_strName
+## <a name="cmfcfontinfom_strname"></a><a name="m_strname"></a>CMFCFontInfo::m_strName
 
 Název písma: například **Arial**.
 
@@ -176,11 +176,11 @@ const CString m_strName;
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace naleznete v parametru *lpszName* konstruktoru [CMFCFontInfo:: CMFCFontInfo](#cmfcfontinfo) .
+Další informace naleznete v parametru *lpszName* konstruktoru [CMFCFontInfo::CMFCFontInfo.](#cmfcfontinfo)
 
-##  <a name="m_strscript"></a>  CMFCFontInfo::m_strScript
+## <a name="cmfcfontinfom_strscript"></a><a name="m_strscript"></a>CMFCFontInfo::m_strScript
 
-Název znakové sady (skriptu) přidružené k danému písmu.
+Název znakové sady (skriptu) přidružené k písmu.
 
 ```
 const CString m_strScript;
@@ -188,9 +188,9 @@ const CString m_strScript;
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace naleznete v parametru *lpszScript* konstruktoru [CMFCFontInfo:: CMFCFontInfo](#cmfcfontinfo) .
+Další informace naleznete v parametru *lpszScript* konstruktoru [CMFCFontInfo::CMFCFontInfo.](#cmfcfontinfo)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>

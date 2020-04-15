@@ -18,16 +18,16 @@ helpviewer_keywords:
 - CStdioFile [MFC], WriteString
 - CStdioFile [MFC], m_pStream
 ms.assetid: 88c2274c-4f0e-4327-882a-557ba4b3ae15
-ms.openlocfilehash: 4b667f4121d92863335befda3a7beef74f29ad1a
-ms.sourcegitcommit: e10a5feea193c249ddc5a6faba48e7c6d8784e73
+ms.openlocfilehash: 80ee65aa339a38b3d8434bc4c7cb977e263f037b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70177493"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366019"
 ---
 # <a name="cstdiofile-class"></a>CStdioFile – třída
 
-Představuje soubor běhového streamu jazyka C, který je otevřen funkcí run-time [fopen](../../c-runtime-library/reference/fopen-wfopen.md).
+Představuje soubor datového proudu C, který byl otevřen [fopen](../../c-runtime-library/reference/fopen-wfopen.md)funkcí run-time .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -39,50 +39,50 @@ class CStdioFile : public CFile
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CStdioFile::CStdioFile](#cstdiofile)|`CStdioFile` Vytvoří objekt z cesty nebo ukazatele na soubor.|
+|[CStdioFile::CStdioFile](#cstdiofile)|Vytvoří `CStdioFile` objekt z cesty nebo ukazatele souboru.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CStdioFile::Open](#open)|Přetíženo. Otevřít je navrženo pro použití s výchozím `CStdioFile` konstruktorem (Overrides [CFile –:: Open](../../mfc/reference/cfile-class.md#open)).|
-|[CStdioFile::ReadString](#readstring)|Přečte jeden řádek textu.|
-|[CStdioFile:: Seek](#seek)|Umístí ukazatel na aktuální soubor.|
-|[CStdioFile::WriteString](#writestring)|Zapíše jeden řádek textu.|
+|[CStdioFile::Otevřít](#open)|Přetíženo. Open je určen pro `CStdioFile` použití s výchozím konstruktorem (Přepsání [CFile::Open).](../../mfc/reference/cfile-class.md#open)|
+|[CStdioFile::Řetězec čtení](#readstring)|Přečte jeden řádek textu.|
+|[CStdioFile::Hledat](#seek)|Umístí aktuální ukazatel souboru.|
+|[CStdioFile::Zápis](#writestring)|Zapíše jeden řádek textu.|
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Name|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
 |[CStdioFile::m_pStream](#m_pstream)|Obsahuje ukazatel na otevřený soubor.|
 
 ## <a name="remarks"></a>Poznámky
 
-Soubory streamu se ukládají do vyrovnávací paměti a dají se otevřít v textovém režimu (ve výchozím nastavení) nebo v binárním režimu.
+Soubory datového proudu jsou uloženy do vyrovnávací paměti a lze je otevřít v textovém režimu (výchozí) nebo v binárním režimu.
 
-Režim textu poskytuje speciální zpracování pro páry kanálů návratového řádku. Když do objektu textového režimu `CStdioFile` napíšete znak řádku (nový řádek) (0x0A), do souboru se pošle pár bajtů (0x0D, 0x0A). Při čtení je dvojice bajtů (0x0D, 0x0A) přeložena na jeden bajt 0x0A.
+Režim textu poskytuje speciální zpracování pro dvojice posuvu zpětného řádku vozíku. Při zápisu znaku přívozního řádku (nový řádek) `CStdioFile` (0x0A) do objektu textového režimu je do souboru odeslán bajtový pár (0x0D, 0x0A). Při čtení je bajtový pár (0x0D, 0x0A) přeložen na jeden bajt 0x0A.
 
-Funkce [CFile –](../../mfc/reference/cfile-class.md) jsou [duplicitní](../../mfc/reference/cfile-class.md#duplicate), [LockRange](../../mfc/reference/cfile-class.md#lockrange)a [UnlockRange](../../mfc/reference/cfile-class.md#unlockrange) nejsou podporovány pro `CStdioFile`.
+[Funkce CFile](../../mfc/reference/cfile-class.md) [Duplicate](../../mfc/reference/cfile-class.md#duplicate), [LockRange](../../mfc/reference/cfile-class.md#lockrange)a [UnlockRange](../../mfc/reference/cfile-class.md#unlockrange) nejsou podporovány pro `CStdioFile`.
 
-Pokud voláte tyto funkce na `CStdioFile`, získáte [CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md).
+Pokud voláte tyto `CStdioFile`funkce na , získáte [CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md).
 
-Další `CStdioFile`informace o použití naleznete v článcích [soubory v knihovně MFC](../../mfc/files-in-mfc.md) a [zpracování souborů](../../c-runtime-library/file-handling.md) v *Referenční příručce ke knihovně run-time*.
+Další informace o `CStdioFile`použití naleznete v článcích [Soubory v knihovně MFC](../../mfc/files-in-mfc.md) a [Zpracování souborů](../../c-runtime-library/file-handling.md) v *odkazu knihovny run-time*.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[CObject](../../mfc/reference/cobject-class.md)
+[CObjekt](../../mfc/reference/cobject-class.md)
 
-[CFile –](../../mfc/reference/cfile-class.md)
+[Soubor C](../../mfc/reference/cfile-class.md)
 
 `CStdioFile`
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** AFX –. h
+**Záhlaví:** afx.h
 
-##  <a name="cstdiofile"></a>CStdioFile::CStdioFile
+## <a name="cstdiofilecstdiofile"></a><a name="cstdiofile"></a>CStdioFile::CStdioFile
 
 Vytvoří a inicializuje `CStdioFile` objekt.
 
@@ -104,38 +104,38 @@ CStdioFile(
 ### <a name="parameters"></a>Parametry
 
 *pOpenStream*<br/>
-Určuje ukazatel na soubor vrácený voláním běhové funkce jazyka C [fopen](../../c-runtime-library/reference/fopen-wfopen.md).
+Určuje ukazatel souboru vrácený voláním funkce c [fopen](../../c-runtime-library/reference/fopen-wfopen.md)run-time.
 
-*lpszFileName*<br/>
+*název souboru lpsz*<br/>
 Určuje řetězec, který je cestou k požadovanému souboru. Cesta může být relativní nebo absolutní.
 
 *nOpenFlags*<br/>
-Určuje možnosti pro vytvoření souboru, sdílení souborů a režimy přístupu k souborům. Pomocí bitového operátoru OR ( **|** ) lze zadat více možností.
+Určuje možnosti pro režimy vytváření souborů, sdílení souborů a přístupu k souborům. Můžete určit více možností pomocí bitového **|** operátoru OR ( ).
 
-Jedna možnost režimu přístupu k souboru je povinná; jiné režimy jsou volitelné. Seznam možností režimu a dalších příznaků naleznete v tématu [CFile –:: CFile –](../../mfc/reference/cfile-class.md#cfile) . V knihovně MFC verze 3,0 a novější jsou příznaky sdílení povoleny.
+Je vyžadována jedna možnost režimu přístupu k souborům; ostatní režimy jsou volitelné. Seznam možností režimu a dalších příznaků naleznete v tématu [CFile::CFile.](../../mfc/reference/cfile-class.md#cfile) V knihovně MFC verze 3.0 a novější chod sdílené položky jsou povoleny.
 
-*pTM*<br/>
-Ukazatel na objekt CAtlTransactionManager.
+*Ptm*<br/>
+Ukazatel na catltransactionmanager objektu.
 
 ### <a name="remarks"></a>Poznámky
 
-Výchozí konstruktor nepřipojuje soubor k `CStdioFile` objektu. Při použití tohoto konstruktoru je nutné použít `CStdioFile::Open` metodu k otevření souboru a jeho připojení `CStdioFile` k objektu.
+Výchozí konstruktor nepřipojí k objektu `CStdioFile` soubor. Při použití tohoto konstruktoru `CStdioFile::Open` je nutné použít metodu k `CStdioFile` otevření souboru a jeho připojení k objektu.
 
-Konstruktor s jedním parametrem připojí k `CStdioFile` objektu otevřený datový proud souboru. Povolené hodnoty ukazatelů zahrnují předdefinované vstupně-výstupní vstupy ukazatelů *stdin*, *stdout*nebo *stderr*.
+Jednoparametrový konstruktor připojí k objektu `CStdioFile` otevřený datový proud souboru. Povolené hodnoty ukazatele zahrnují předdefinované ukazatele vstupního/výstupního souboru *stdin*, *stdout*nebo *stderr*.
 
-Konstruktor dvou parametrů vytvoří `CStdioFile` objekt a otevře odpovídající soubor s danou cestou.
+Dvouparametrový konstruktor vytvoří `CStdioFile` objekt a otevře odpovídající soubor s danou cestou.
 
-Pokud předáte hodnotu NULL pro buď *pOpenStream* nebo *lpszFileName*, `CInvalidArgException*`konstruktor vyvolá.
+Pokud předáte null pro *pOpenStream* nebo *lpszFileName* `CInvalidArgException*`, konstruktor vyvolá .
 
-Pokud soubor nelze otevřít nebo vytvořit, vyvolá `CFileException*`konstruktor.
+Pokud soubor nelze otevřít nebo vytvořit, konstruktor `CFileException*`vyvolá .
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCFiles#37](../../atl-mfc-shared/reference/codesnippet/cpp/cstdiofile-class_1.cpp)]
 
-##  <a name="m_pstream"></a>  CStdioFile::m_pStream
+## <a name="cstdiofilem_pstream"></a><a name="m_pstream"></a>CStdioFile::m_pStream
 
-Datový člen je ukazatel na otevřený soubor, který byl vrácen funkcí `fopen`run-time jazyka C. `m_pStream`
+Datový `m_pStream` člen je ukazatel na otevřený soubor vrácený funkcí `fopen`run-time jazyka C .
 
 ```
 FILE* m_pStream;
@@ -143,11 +143,11 @@ FILE* m_pStream;
 
 ### <a name="remarks"></a>Poznámky
 
-Má hodnotu NULL, pokud soubor nebyl nikdy otevřen nebo byl zavřen.
+Je null, pokud soubor nebyl nikdy otevřen nebo byl uzavřen.
 
-##  <a name="open"></a>CStdioFile:: Open
+## <a name="cstdiofileopen"></a><a name="open"></a>CStdioFile::Otevřít
 
-Přetíženo. Otevřít je navrženo pro použití s výchozím `CStdioFile` konstruktorem.
+Přetíženo. Open je určen pro `CStdioFile` použití s výchozím konstruktorem.
 
 ```
 virtual BOOL Open(
@@ -164,27 +164,27 @@ virtual BOOL Open(
 
 ### <a name="parameters"></a>Parametry
 
-*lpszFileName*<br/>
-Řetězec, který představuje cestu k požadovanému souboru. Cesta může být relativní nebo absolutní.
+*název souboru lpsz*<br/>
+Řetězec, který je cesta k požadovanému souboru. Cesta může být relativní nebo absolutní.
 
 *nOpenFlags*<br/>
-Režim sdílení a přístupu. Určuje akci, která se má provést při otevírání souboru. Možnosti lze kombinovat pomocí operátoru bitového operátoru OR&#124;(). Vyžaduje se jedno oprávnění k přístupu a jedna možnost sdílení. režimy modeCreate a modeNoInherit jsou volitelné.
+Režim sdílení a přístupu. Určuje akci, která má být vyřízení při otevírání souboru. Možnosti můžete kombinovat pomocí operátoru bitové-OR (&#124;). Je vyžadováno jedno přístupové oprávnění a jedna možnost sdílení. režimCreate a modeNoInherit režimy jsou volitelné.
 
-*pError*<br/>
-Ukazatel na existující objekt s výjimkou souboru, který obdrží stav operace, která selhala.
+*chyba*<br/>
+Ukazatel na existující objekt výjimky souboru, který obdrží stav neúspěšné operace.
 
-*pTM*<br/>
+*Ptm*<br/>
 Ukazatel na `CAtlTransactionManager` objekt.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-TRUE v případě úspěchu; v opačném případě FALSE.
+PRAVDA v případě úspěchu; jinak FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="readstring"></a>CStdioFile::ReadString
+## <a name="cstdiofilereadstring"></a><a name="readstring"></a>CStdioFile::Řetězec čtení
 
-Přečte textová data do vyrovnávací paměti, až do limitu *nmaximum*-1 znaků, ze souboru přidruženého `CStdioFile` k objektu.
+Načte textová data do vyrovnávací paměti až do limitu *nMax* `CStdioFile` -1 znaků ze souboru přidruženého k objektu.
 
 ```
 virtual LPTSTR ReadString(
@@ -197,32 +197,32 @@ virtual BOOL ReadString(CString& rString);
 ### <a name="parameters"></a>Parametry
 
 *lpsz*<br/>
-Určuje ukazatel na vyrovnávací paměť zadanou uživatelem, která bude přijímat textový řetězec zakončený hodnotou null.
+Určuje ukazatel myši na vyrovnávací paměť dodanou uživatelem, která obdrží textový řetězec ukončený nulou.
 
-*Nmaximum*<br/>
-Určuje maximální počet znaků, které mají být čteny, a nepočítá ukončující znak null.
+*nMax*<br/>
+Určuje maximální počet znaků ke čtení, nepočítá ukončující znak null.
 
 *rString*<br/>
-Odkaz na `CString` objekt, který bude obsahovat řetězec, když funkce vrátí.
+Odkaz na `CString` objekt, který bude obsahovat řetězec, když se vrátí funkce.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na vyrovnávací paměť obsahující textová data. Hodnota NULL, pokud bylo dosaženo konce souboru bez čtení dat; nebo pokud logická hodnota, FALSE, pokud bylo dosaženo konce souboru, bez čtení jakýchkoli dat.
+Ukazatel na vyrovnávací paměť obsahující textová data. NULL, pokud bylo dosaženo konce souboru bez čtení dat; nebo pokud logické, FALSE, pokud bylo dosaženo konce souboru bez čtení dat.
 
 ### <a name="remarks"></a>Poznámky
 
-Čtení je zastaveno prvním znakem nového řádku. Pokud v takovém případě bylo přečteno méně než *nmaximum*znaků, bude ve vyrovnávací paměti uložen znak nového řádku. Znak null (' \ 0 ') je připojen v obou případech.
+Čtení je zastaveno prvním znakem nového řádku. Pokud v takovém případě byly přečteny méně než *nMax*-1 znaků, znak nového řádku je uložen ve vyrovnávací paměti. V obou případech je připojen znak null (\0).
 
-[CFile –:: Read](../../mfc/reference/cfile-class.md#read) je také k dispozici pro vstup v textovém režimu, ale nekončí dvojicí kanálu návratového řádku.
+[CFile::Read](../../mfc/reference/cfile-class.md#read) je také k dispozici pro vstup v textovém režimu, ale nekončí na dvojici přísunu řádku řádku vozíku.
 
 > [!NOTE]
->  Verze této funkce `'\n'` odebere, pokud je k dispozici; verze LPTStr není. `CString`
+> Verze `CString` této funkce odebere `'\n'` if present; verze LPTSTR není.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCFiles#38](../../atl-mfc-shared/reference/codesnippet/cpp/cstdiofile-class_2.cpp)]
 
-##  <a name="seek"></a>CStdioFile:: Seek
+## <a name="cstdiofileseek"></a><a name="seek"></a>CStdioFile::Hledat
 
 Přemístí ukazatel v dříve otevřeném souboru.
 
@@ -234,39 +234,39 @@ virtual ULONGLONG Seek(
 
 ### <a name="parameters"></a>Parametry
 
-*lOff*<br/>
-Počet bajtů, na které se má ukazatel přesunout
+*lVypnuto*<br/>
+Počet bajtů pro přesunutí ukazatele.
 
-*Nze*<br/>
-Režim pohybu ukazatele Musí být jedna z následujících hodnot:
+*nFrom*<br/>
+Režim pohybu ukazatele. Toto musí být jedna z následujících hodnot:
 
-- `CFile::begin`: Přesuňte ukazatel na soubor *lOff* bajty vpřed od začátku souboru.
+- `CFile::begin`: Přesunutí ukazatele souboru *lOff* bajtů vpřed od začátku souboru.
 
-- `CFile::current`: Přesuňte ukazatel na soubor *lOff* bajtů z aktuální pozice v souboru.
+- `CFile::current`: Přesuňte ukazatel souboru *lOff* bajtů z aktuální pozice v souboru.
 
-- `CFile::end`: Přesuňte ukazatel na soubor *lOff* bajtů z konce souboru. Všimněte si, že *lOff* musí být negativní, aby bylo možné hledat v existujícím souboru. kladné hodnoty budou hledat za koncem souboru.
+- `CFile::end`: Přesuňte ukazatel souboru *lOff* bajtů z konce souboru. Všimněte si, že *lOff* musí být negativní hledat do existujícího souboru; kladné hodnoty budou usilovat o konec souboru.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud je požadovaná pozice platná, `Seek` vrátí nový posun bajtů od začátku souboru. V opačném případě není návratová hodnota definována a `CFileException` je vyvolána výjimka objektu.
+Pokud je požadovaná `Seek` pozice legální, vrátí nový posun bajtů od začátku souboru. V opačném případě je vrácená `CFileException` hodnota nedefinovaná a je vyvolán objekt.
 
 ### <a name="remarks"></a>Poznámky
 
-`Seek` Funkce umožňuje náhodný přístup k obsahu souboru přesunutím ukazatele na určenou hodnotu, absolutní nebo relativně. Během hledání nejsou ve skutečnosti čtena žádná data. Pokud je požadovaná pozice větší než velikost souboru, bude délka souboru rozšířena na tuto pozici a nebude vyvolána žádná výjimka.
+Funkce `Seek` umožňuje náhodný přístup k obsahu souboru přesunutím ukazatele o zadanou částku, absolutně nebo relativně. Během hledání se ve skutečnosti nečtou žádná data. Pokud je požadovaná pozice větší než velikost souboru, délka souboru bude prodloužena na tuto pozici a nebude vyvolána žádná výjimka.
 
-Když se soubor otevře, ukazatel na soubor se umístí na posun 0, začátek souboru.
+Při otevření souboru je ukazatel souboru umístěn na odsazení 0, začátek souboru.
 
-Tato implementace `Seek` je založena na funkci `fseek`knihovny run-time (CRT). Existuje několik omezení používání `Seek` na datových proudech otevřených v textovém režimu. Další informace najdete v tématu [fseek, _fseeki64](../../c-runtime-library/reference/fseek-fseeki64.md).
+Tato implementace `Seek` je založena na funkci `fseek`Knihovna run-time (CRT). Existuje několik omezení pro `Seek` použití na datových proudech otevřených v textovém režimu. Další informace naleznete v [tématu fseek, _fseeki64](../../c-runtime-library/reference/fseek-fseeki64.md).
 
 ### <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak použít `Seek` k přesunutí ukazatele 1000 bajtů od začátku `cfile` souboru. Všimněte si `Seek` , že nečtou data, takže musíte následně zavolat [CStdioFile:: ReadString](#readstring) pro čtení dat.
+Následující příklad ukazuje, `Seek` jak přesunout ukazatel 1000 bajtů `cfile` od začátku souboru. Všimněte `Seek` si, že nečte data, takže je nutné následně volat [CStdioFile::ReadString](#readstring) pro čtení dat.
 
 [!code-cpp[NVC_MFCFiles#39](../../atl-mfc-shared/reference/codesnippet/cpp/cstdiofile-class_3.cpp)]
 
-##  <a name="writestring"></a>CStdioFile::WriteString
+## <a name="cstdiofilewritestring"></a><a name="writestring"></a>CStdioFile::Zápis
 
-Zapisuje data z vyrovnávací paměti do souboru přidruženého `CStdioFile` k objektu.
+Zapíše data z vyrovnávací paměti `CStdioFile` do souboru přidruženého k objektu.
 
 ```
 virtual void WriteString(LPCTSTR lpsz);
@@ -275,28 +275,28 @@ virtual void WriteString(LPCTSTR lpsz);
 ### <a name="parameters"></a>Parametry
 
 *lpsz*<br/>
-Určuje ukazatel na vyrovnávací paměť, která obsahuje řetězec zakončený hodnotou null.
+Určuje ukazatel na vyrovnávací paměť, která obsahuje řetězec s ukončeným hodnotou null.
 
 ### <a name="remarks"></a>Poznámky
 
-Ukončující znak null ( `\0`) není zapsán do souboru. Tato metoda zapisuje znaky nového řádku v *lpsz* do souboru jako dvojici kanálů pro návrat na začátek řádku.
+Ukončující znak `\0`null ( ) není zapsán do souboru. Tato metoda zapisuje znaky nového řádku v *lpsz* do souboru jako dvojice zpětného posuvu řádku vozíku.
 
-Pokud chcete zapisovat data, která nejsou zakončená hodnotou null, do souboru, použijte `CStdioFile::Write` nebo [CFile –:: Write](../../mfc/reference/cfile-class.md#write).
+Pokud chcete zapisovat data, která nejsou ukončena `CStdioFile::Write` nulou do souboru, použijte nebo [CFile::Write](../../mfc/reference/cfile-class.md#write).
 
-Tato metoda vyvolá výjimku `CInvalidArgException*` , pokud pro parametr *lpsz* zadáte hodnotu null.
+Tato metoda vyvolá, `CInvalidArgException*` pokud zadáte NULL pro parametr *lpsz.*
 
-Tato metoda vyvolá výjimku `CFileException*` v reakci na chyby systému souborů.
+Tato metoda vyvolá `CFileException*` v reakci na chyby systému souborů.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCFiles#40](../../atl-mfc-shared/reference/codesnippet/cpp/cstdiofile-class_4.cpp)]
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [CFile – třída](../../mfc/reference/cfile-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [CFile – třída](../../mfc/reference/cfile-class.md)<br/>
-[CFile –::D uplikovat](../../mfc/reference/cfile-class.md#duplicate)<br/>
-[CFile –:: LockRange](../../mfc/reference/cfile-class.md#lockrange)<br/>
-[CFile –:: UnlockRange](../../mfc/reference/cfile-class.md#unlockrange)<br/>
+[CFile::Duplicate](../../mfc/reference/cfile-class.md#duplicate)<br/>
+[CFile::LockRange](../../mfc/reference/cfile-class.md#lockrange)<br/>
+[CFile::UnlockRange](../../mfc/reference/cfile-class.md#unlockrange)<br/>
 [CNotSupportedException – třída](../../mfc/reference/cnotsupportedexception-class.md)
