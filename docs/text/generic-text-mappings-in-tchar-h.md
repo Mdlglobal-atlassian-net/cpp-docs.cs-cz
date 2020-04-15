@@ -10,86 +10,86 @@ helpviewer_keywords:
 - TCHAR.H data types, mapping
 - mappings [C++], TCHAR.H
 ms.assetid: 01e1bb74-5a01-4093-8720-68b6c1fdda80
-ms.openlocfilehash: 779702aa33e2aa24bf5a380bd8435745cc0aadbd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bf872df2e6fb49e64a973e8799eef98dec1cb472
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410704"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81361346"
 ---
 # <a name="generic-text-mappings-in-tcharh"></a>Mapování obecného textu v souboru tchar.h
 
-Pro zjednodušení, přenos kódu pro mezinárodní použití, běhové knihovny Microsoft poskytuje mapování obecného textu specifické pro společnost Microsoft pro mnoho typů dat, rutiny a dalších objektů. Můžete použít tato mapování, které jsou definovány v souboru tchar.h se zapsat obecný kód, který může být sestaven pro jednobajtové, vícebajtové, nebo nastaví znak Unicode, v závislosti na konstanta manifestu, který definujete pomocí `#define` příkazu. Mapování obecného textu jsou rozšíření společnosti Microsoft, které nejsou kompatibilní ANSI.
+Pro zjednodušení přenosu kódu pro mezinárodní použití poskytuje knihovna microsoft run-time pro mnoho datových typů, rutin a dalších objektů mapování obecného textu specifické pro společnost Microsoft. Tato mapování, která jsou definována v souboru tchar.h, můžete použít k zápisu obecného kódu, který lze zkompilovat pro jednobajtové, vícebajtové nebo jednobajtové nebo unicode znakové sady, v závislosti na konstantě manifestu, kterou definujete pomocí příkazu. `#define` Mapování obecného textu jsou rozšíření společnosti Microsoft, která nejsou kompatibilní s rozhraním ANSI.
 
-Pomocí tchar.h, můžete vytvořit jednobajtové vícebajtové znakové sady (MBCS) a Unicode aplikace ze stejného zdroje. Definuje Tchar.h makra (která mají předponu `_tcs`) s správné definice preprocesoru, které mapují na `str`, `_mbs`, nebo `wcs` funkcí, podle potřeby. Pokud chcete vytvořit znakové sady MBCS, definujte symbol `_MBCS`. Chcete-li sestavit Unicode, definujte symbol `_UNICODE`. Chcete-li sestavit aplikaci jednobajtové, definovat ani (výchozí). Ve výchozím nastavení `_UNICODE` je definováno pro aplikace knihovny MFC.
+Pomocí souboru tchar.h můžete vytvářet jednobajtové, vícebajtové znakové sady (MBCS) a aplikace Unicode ze stejných zdrojů. tchar.h definuje makra (která `_tcs`mají předponu), která se správnými `str` `_mbs`definicemi `wcs` preprocesoru mapují podle potřeby na , nebo funkce. Chcete-li vytvořit sadu MBCS, definujte symbol `_MBCS`. Chcete-li vytvořit unicode, definujte symbol `_UNICODE`. Chcete-li vytvořit jednobajtovou aplikaci, nedefinujte ani jednobajtovou (výchozí). Ve výchozím `_UNICODE` nastavení je definována pro aplikace knihovny MFC.
 
-`_TCHAR` Datový typ je definován v souboru tchar.h. Pokud se symbol `_UNICODE` je definována pro sestavení, `_TCHAR` je definován jako **wchar_t**; v opačném případě jednobajtové a znakové sady MBCS sestavení, je definován jako **char**. (**wchar_t**, je základní typ dat širokého znaku Unicode protějškem 16 bitů 8 bitů podepsané **char**.) Mezinárodní aplikace, použijte `_tcs` řadu funkcí, které fungují v `_TCHAR` jednotky, ne v bajtech. Například `_tcsncpy` kopie `n` `_TCHARs`, nikoli `n` bajtů.
+Datový `_TCHAR` typ je definován podmíněně v souboru tchar.h. Pokud je `_UNICODE` symbol definován pro `_TCHAR` sestavení, je definován jako **wchar_t**; jinak pro jednobajtové a MBCS sestavení je definovánjako **char**. **(wchar_t**, základní datový typ unicode wide-character, je 16bitový protějšek 8bitového podepsaného **znaku**.) Pro mezinárodní aplikace `_tcs` použijte řadu funkcí, `_TCHAR` které pracují v jednotkách, nikoli v bajtech. Například `_tcsncpy` kopie `n` `_TCHARs`, `n` nikoli bajty.
 
-Protože některé řetězce zpracování jeden bajt znakových sad (SBCS) funkce vzít (se znaménkem) `char*` parametry, výsledků upozornění kompilátoru Neshoda typů při `_MBCS` je definována. Chcete tomuto upozornění předejít třemi způsoby:
+Vzhledem k tomu, že některé funkce zpracování řetězců s `char*` jedním bajtem (SBCS) berou `_MBCS` (podepsané) parametry, výsledky upozornění kompilátoru neshody typů, když je definován. Toto upozornění lze vyhnout třem způsobům:
 
-1. V souboru tchar.h pomocí převodní rutiny zajišťující bezpečnost typů vložené funkce. Toto je výchozí chování.
+1. Použijte textově bezpečné funkce v souborech tchar.h. Toto je výchozí chování.
 
-1. Použijte přímý makra v souboru tchar.h definováním `_MB_MAP_DIRECT` na příkazovém řádku. Pokud to uděláte, musíte ručně odpovídají typům. Toto je nejrychlejší způsob, ale není typově bezpečný.
+1. Pomocí přímých maker v souboru tchar.h definujte `_MB_MAP_DIRECT` na příkazovém řádku. Pokud tak učiníte, je nutné ručně odpovídat typy. Jedná se o nejrychlejší metodu, ale není typově bezpečná.
 
-1. V souboru tchar.h pomocí převodní rutiny funkce staticky propojené knihovny typově bezpečné. Uděláte to tak, definujte konstantu `_NO_INLINING` na příkazovém řádku. Toto je metoda nejpomalejší ale nejvíce typově bezpečné.
+1. Použijte typově bezpečné staticky propojené funkce knihovny thunks v tchar.h. Chcete-li tak učinit, definujte konstantu `_NO_INLINING` na příkazovém řádku. Toto je nejpomalejší metoda, ale nejvíce typově bezpečná.
 
 ### <a name="preprocessor-directives-for-generic-text-mappings"></a>Direktivy preprocesoru pro mapování obecného textu
 
-|definování #|Kompilovaná verze|Příklad|
+|# definovat|Zkompilovaná verze|Příklad|
 |---------------|----------------------|-------------|
-|`_UNICODE`|Kódování Unicode (širokého znaku)|`_tcsrev` Mapuje se na `_wcsrev`|
-|`_MBCS`|Vícebajtových znaků|`_tcsrev` Mapuje se na `_mbsrev`|
-|None (výchozí nastavení nemá žádný `_UNICODE` ani `_MBCS` definované)|SBCS (ASCII)|`_tcsrev` Mapuje se na `strrev`|
+|`_UNICODE`|Unicode (široký znak)|`_tcsrev`mapy do`_wcsrev`|
+|`_MBCS`|Vícebajtový znak|`_tcsrev`mapy do`_mbsrev`|
+|Žádné (výchozí nastavení `_UNICODE` nemá `_MBCS` ani definováno)|SBCS (ASCII)|`_tcsrev`mapy do`strrev`|
 
-Například obecná textová funkce `_tcsrev`, která je definovaná v souboru tchar.h se mapuje na `_mbsrev` Pokud jste definovali `_MBCS` v aplikaci nebo na `_wcsrev` Pokud jste definovali `_UNICODE`. V opačném případě `_tcsrev` mapuje `strrev`. Mapování jiných datových typů jsou k dispozici v souboru tchar.h ke zvýšení pohodlí programování, ale `_TCHAR` je nejužitečnější.
+Například `_tcsrev`funkce obecného textu , která je definována v `_mbsrev` souboru `_MBCS` tchar.h, se mapuje na if you defined in your program, or to `_wcsrev` if you defined `_UNICODE`. V `_tcsrev` opačném `strrev`případě mapuje na . Ostatní mapování datových typů jsou k dispozici v tchar.h pro programování pohodlí, ale `_TCHAR` je nejužitečnější.
 
-### <a name="generic-text-data-type-mappings"></a>Mapování obecného textu datových typů
+### <a name="generic-text-data-type-mappings"></a>Mapování datových typů obecného textu
 
-|Generic-Text<br /> Název datového typu|_UNICODE &AMP;<br /> _MBCS nejsou definovány|_MBCS<br /> Definice|_UNICODE<br /> Definice|
+|Obecný text<br /> Název datového typu|_UNICODE &<br /> _MBCS není definováno|_mbcs<br /> Definovány|_unicode<br /> Definovány|
 |--------------------------------------|----------------------------------------|------------------------|---------------------------|
 |`_TCHAR`|**char**|**char**|**wchar_t**|
 |`_TINT`|**int**|**unsigned int**|`wint_t`|
-|`_TSCHAR`|**podepsané char**|**podepsané char**|**wchar_t**|
+|`_TSCHAR`|**podepsaný znak**|**podepsaný znak**|**wchar_t**|
 |`_TUCHAR`|**unsigned char**|**unsigned char**|**wchar_t**|
 |`_TXCHAR`|**char**|**unsigned char**|**wchar_t**|
-|`_T` Nebo `_TEXT`|Žádný vliv (odebral preprocesoru)|Žádný vliv (odebral preprocesoru)|`L` (převede následující znak nebo řetězec k jeho protějšku Unicode)|
+|`_T` nebo `_TEXT`|Žádný efekt (odstraněn preprocesorem)|Žádný efekt (odstraněn preprocesorem)|`L`(převede následující znak nebo řetězec na jeho protějšek Unicode)|
 
-Seznam mapování obecného textu rutiny, proměnných a dalších objektů najdete v tématu [mapování obecného textu](../c-runtime-library/generic-text-mappings.md) v referenční dokumentace knihoven Run-Time.
+Seznam mapování obecného textu rutin, proměnných a dalších objektů naleznete v [tématu Mapování obecného textu](../c-runtime-library/generic-text-mappings.md) v odkazu knihovny run-time.
 
 > [!NOTE]
->  Nepoužívejte `str` řady funkcí s řetězců v kódu Unicode, které by mohly obsahovat vložený bajty s hodnotou null. Podobně, nepoužívejte `wcs` řady funkcí s znakové sady MBCS (nebo SBCS).
+> Nepoužívejte `str` rodinu funkcí s řetězci Unicode, které mohou obsahovat vložené nula bajtů. Podobně nepoužívejte `wcs` rodinu funkcí s řetězci MBCS (nebo SBCS).
 
-Následující fragmenty kódu ukazují použití `_TCHAR` a `_tcsrev` mapování znakové sady MBCS, Unicode a knihovna SBCS modely.
+Následující fragmenty kódu ilustrují použití `_TCHAR` a `_tcsrev` pro mapování na modely MBCS, Unicode a SBCS.
 
 ```cpp
 _TCHAR *RetVal, *szString;
 RetVal = _tcsrev(szString);
 ```
 
-Pokud `_MBCS` byl definován, preprocesor mapuje na tento kód tento fragment:
+Pokud `_MBCS` byla definována, preprocesor mapuje tento fragment na tento kód:
 
 ```cpp
 char *RetVal, *szString;
 RetVal = _mbsrev(szString);
 ```
 
-Pokud `_UNICODE` byl definován, preprocesor mapuje na tento kód tento fragment:
+Pokud `_UNICODE` byla definována, preprocesor mapuje tento fragment na tento kód:
 
 ```cpp
 wchar_t *RetVal, *szString;
 RetVal = _wcsrev(szString);
 ```
 
-Pokud ani `_MBCS` ani `_UNICODE` byly definovány, preprocesor mapuje fragment kódu ASCII jednobajtové, následujícím způsobem:
+Pokud ani `_MBCS` `_UNICODE` nebyly definovány, preprocesor mapuje fragment na jednobajtovský kód ASCII takto:
 
 ```cpp
 char *RetVal, *szString;
 RetVal = strrev(szString);
 ```
 
-Proto můžete psát, udržovat a zkompilujte soubor jeden zdrojový kód pro spuštění rutiny, které jsou specifické pro všechny tři druhy znakových sad.
+Proto můžete psát, udržovat a zkompilovat soubor kódu s jedním zdrojem ke spuštění s rutiny, které jsou specifické pro některý ze tří druhů znakových sad.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Text a řetězce](../text/text-and-strings-in-visual-cpp.md)<br/>
 [Použití datových typů TCHAR.H s kódováním _MBCS](../text/using-tchar-h-data-types-with-mbcs-code.md)

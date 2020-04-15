@@ -1,9 +1,10 @@
 ---
 title: _cexit, _c_exit
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _c_exit
 - _cexit
+- _o__cexit
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +17,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -32,16 +34,16 @@ helpviewer_keywords:
 - _cexit function
 - c_exit function
 ms.assetid: f3072045-9924-4b1a-9fef-b0dcd6d12663
-ms.openlocfilehash: aa25d73bef1d85adfed77ba926e2d381e02e45e8
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 9eb856efca054423465aa7d30092edaf83a65eeb
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939258"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81333535"
 ---
 # <a name="_cexit-_c_exit"></a>_cexit, _c_exit
 
-Provede operace vyčištění a vrátí se bez ukončení procesu.
+Provádí operace vyčištění a vrátí bez ukončení procesu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -52,37 +54,39 @@ void _c_exit( void );
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce **_cexit** volá v pořadí posledních v, First-out (LIFO) funkce zaregistrované v **atexit** a **_onexit**. **_Cexit** vyprázdní všechny vstupně-výstupní vyrovnávací paměti a před vrácením zavře všechny otevřené streamy. **_c_exit** je stejná jako **_exit** , ale vrátí se do volajícího procesu bez zpracování **atexit** nebo **_onexit** nebo vyprázdnění vyrovnávací paměti datového proudu. V následující tabulce je uvedeno chování funkce **Exit**, **_exit**, **_cexit**a **_c_exit** .
+Funkce **_cexit** volání v pořadí last-in, first-out (LIFO), funkce registrované **atexit** a **_onexit**. Potom **_cexit** vyprázdní všechny vstupně-v vyrovnávací paměti a zavře všechny otevřené datové proudy před návratem. **_c_exit** je stejný jako **_exit** ale vrátí se do volajícího procesu bez zpracování **atexit** nebo **_onexit** nebo vyprázdnění datové ho dpuštěné. Chování **ukončovací**, **_exit**, **_cexit**a **_c_exit** je uvedeno v následující tabulce.
 
 |Funkce|Chování|
 |--------------|--------------|
-|**exit**|Provede kompletní postupy ukončení knihovny jazyka C, ukončí proces a ukončí se zadaným kódem stavu.|
-|**_exit**|Provádí rychlé postupy ukončení knihovny jazyka C, ukončí proces a ukončí se zadaným stavovým kódem.|
-|**_cexit**|Provede kompletní postupy ukončení knihovny jazyka C a vrátí se volajícímu, ale neukončí proces.|
-|**_c_exit**|Provede rychlé postupy ukončení knihovny jazyka C a vrátí se volajícímu, ale neukončí proces.|
+|**Ukončit**|Provádí úplné procedury ukončení knihovny C, ukončí proces a ukončí zadaný stavový kód.|
+|**_exit**|Provádí rychlé postupy ukončení knihovny C, ukončí proces a ukončí s zadaným stavovým kódem.|
+|**_cexit**|Provádí úplné procedury ukončení knihovny C a vrátí volajícímu, ale neukončí proces.|
+|**_c_exit**|Provádí rychlé postupy ukončení knihovny C a vrátí volajícímu, ale neukončí proces.|
 
-Při volání funkce **_cexit** nebo **_c_exit** nejsou volány destruktory pro všechny dočasné nebo automatické objekty, které existují v době volání. Automatický objekt je objekt, který je definován ve funkci, kde objekt není deklarován jako static. Dočasný objekt je objekt vytvořený kompilátorem. Chcete-li odstranit automatický objekt před voláním **_cexit** nebo **_c_exit**, explicitně zavolejte destruktor pro objekt následujícím způsobem:
+Při volání **_cexit** nebo **_c_exit** funkce, nejsou volány destruktory pro všechny dočasné nebo automatické objekty, které existují v době volání. Automatický objekt je objekt, který je definován ve funkci, kde objekt není deklarován jako statický. Dočasný objekt je objekt vytvořený kompilátorem. Chcete-li zničit automatický objekt před voláním **_cexit** nebo **_c_exit**, explicitně volání destruktoru pro objekt, a to následovně:
 
 ```cpp
 myObject.myClass::~myClass( );
 ```
 
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
+
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_cexit**|\<Process. h >|
-|**_c_exit**|\<Process. h >|
+|**_cexit**|\<process.h>|
+|**_c_exit**|\<process.h>|
 
-Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Řízení procesů a prostředí](../../c-runtime-library/process-and-environment-control.md)<br/>
-[abort](abort.md)<br/>
+[Přerušení](abort.md)<br/>
 [atexit](atexit.md)<br/>
-[_exec, _wexec – funkce](../../c-runtime-library/exec-wexec-functions.md)<br/>
+[_exec, _wexec funkce](../../c-runtime-library/exec-wexec-functions.md)<br/>
 [exit, _Exit, _exit](exit-exit-exit.md)<br/>
 [_onexit, _onexit_m](onexit-onexit-m.md)<br/>
-[_spawn, _wspawn – funkce](../../c-runtime-library/spawn-wspawn-functions.md)<br/>
+[_spawn, _wspawn funkce](../../c-runtime-library/spawn-wspawn-functions.md)<br/>
 [system, _wsystem](system-wsystem.md)<br/>

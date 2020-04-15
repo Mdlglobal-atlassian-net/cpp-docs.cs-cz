@@ -1,8 +1,9 @@
 ---
 title: _unlock_file
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _unlock_file
+- _o__unlock_file
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -28,16 +30,16 @@ helpviewer_keywords:
 - _unlock_file function
 - unlocking files
 ms.assetid: cf380a51-6d3a-4f38-bd64-2d4fb57b4369
-ms.openlocfilehash: 2983408f066ea00c0b7ab111d9a6349700ecaece
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 46d07a8b3645ae0d68276d96271be0a246716f0b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957481"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81361212"
 ---
 # <a name="_unlock_file"></a>_unlock_file
 
-Odemkne soubor a umožní jiným procesům přístup k souboru.
+Odemkne soubor, který umožní přístup k souboru jiným procesům.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -49,12 +51,14 @@ void _unlock_file(
 
 ### <a name="parameters"></a>Parametry
 
-*souborů*<br/>
+*Soubor*<br/>
 Popisovač souboru.
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce **_unlock_file** odemkne soubor určený parametrem *File*. Odemknutí souboru umožňuje přístup k souboru jiným procesům. Tato funkce by neměla být volána, pokud jste předtím nevolali **_lock_file** na ukazatel *souboru* . Volání **_unlock_file** na Neuzamčený soubor může způsobit zablokování. Příklad naleznete v tématu [_lock_file](lock-file.md).
+Funkce **_unlock_file** odemkne soubor určený *souborem*. Odemknutí souboru umožňuje přístup k souboru jinými procesy. Tato funkce by neměla být volána, pokud **_lock_file** dříve volána na ukazatel *souboru.* Volání **_unlock_file** na soubor, který není uzamčen může mít za následek zablokování. Viz například [_lock_file](lock-file.md).
+
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
@@ -62,9 +66,9 @@ Funkce **_unlock_file** odemkne soubor určený parametrem *File*. Odemknutí so
 |-------------|---------------------|
 |**_unlock_file**|\<stdio.h>|
 
-Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Zpracování souborů](../../c-runtime-library/file-handling.md)<br/>
 [_creat, _wcreat](creat-wcreat.md)<br/>

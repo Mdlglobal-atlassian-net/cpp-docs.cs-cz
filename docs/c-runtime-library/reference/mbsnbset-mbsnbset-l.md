@@ -1,9 +1,11 @@
 ---
 title: _mbsnbset, _mbsnbset_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbsnbset
 - _mbsnbset_l
+- _o__mbsnbset
+- _o__mbsnbset_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -35,19 +38,19 @@ helpviewer_keywords:
 - tcsnset_l function
 - mbsnbset function
 ms.assetid: 8e46ef75-9a56-42d2-a522-a08450c67c19
-ms.openlocfilehash: 8ba619dba07f102387d70c3bb3a2af729e44b495
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 57c6d1a81c9aac817b0028e8eccad38d03b0eef7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952157"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81340548"
 ---
 # <a name="_mbsnbset-_mbsnbset_l"></a>_mbsnbset, _mbsnbset_l
 
-Nastaví prvních **n** bajtů řetězce vícebajtových znaků na zadaný znak. K dispozici jsou bezpečnější verze těchto funkcí; viz [_mbsnbset_s, _mbsnbset_s_l](mbsnbset-s-mbsnbset-s-l.md).
+Nastaví první **n** bajtů vícebajtového znakového řetězce na zadaný znak. K dispozici jsou bezpečnější verze těchto funkcí. viz [_mbsnbset_s, _mbsnbset_s_l](mbsnbset-s-mbsnbset-s-l.md).
 
 > [!IMPORTANT]
-> Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime. Další informace najdete v tématu [funkce CRT nejsou v aplikacích Univerzální platforma Windows podporovány](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Toto rozhraní API nelze použít v aplikacích, které se spouštějí v prostředí Windows Runtime. Další informace naleznete v tématu [funkce CRT, které nejsou podporovány v aplikacích univerzální platformy Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -67,33 +70,35 @@ unsigned char *_mbsnbset_l(
 
 ### <a name="parameters"></a>Parametry
 
-*str*<br/>
+*Str*<br/>
 Řetězec, který má být změněn.
 
-*c*<br/>
-Nastavení s jedním bajtem nebo vícebajtovým znakem.
+*C*<br/>
+Jednobajtové nebo vícebajtové znakové nastavení.
 
-*výpočtu*<br/>
+*Počet*<br/>
 Počet bajtů, které mají být nastaveny.
 
-*jazyka*<br/>
-Národní prostředí, které se má použít.
+*Národní prostředí*<br/>
+Národní prostředí použít.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**_mbsnbset** vrací ukazatel na upravený řetězec.
+**_mbsnbset** vrátí ukazatel na změněný řetězec.
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce **_mbsnbset** a **_mbsnbset_l** nastaví maximálně první *počet* bajtů *str* na *c*. Pokud je *počet* větší než délka *str*, místo funkce *Count*se použije délka *str* . Pokud *c* je vícebajtový znak a nelze jej nastavit zcela na poslední bajt určený parametrem *Count*, je poslední bajt doplněn prázdným znakem. **_mbsnbset** a **_mbsnbset_l** neumístí ukončující hodnotu null na konci *str*.
+Funkce **_mbsnbset** a **_mbsnbset_l** nastavují maximálně první *bajty počtu* *bajtů str* až *c*. Pokud *je počet* větší než délka *str*, použije se místo *počtu*délka *str* . Pokud *c* je vícebajtový znak a nelze jej nastavit zcela do posledního bajtu určeného *počtem*, je poslední bajt doplněn prázdným znakem. **_mbsnbset** a **_mbsnbset_l** neumístí ukončující null na konec *str*.
 
-**_mbsnbset** a **_mbsnbset_l** se podobá **_mbsnset**, s tím rozdílem, že nastavuje *počet* bajtů místo *počtu* znaků *jazyka c*.
+**_mbsnbset** a **_mbsnbset_l** je podobná **_mbsnset**, s tím rozdílem, že nastavuje *počet* bajtů spíše než *počet* znaků *c*.
 
-Pokud má str **hodnotu null** nebo je *počet* nula, tato funkce vygeneruje výjimku neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, **errno** je nastaven na **EINVAL** a funkce vrátí **hodnotu null**. Kromě toho, pokud *c* není platný vícebajtový znak, je **errno** nastaven na **EINVAL** a místo toho se použije místo.
+Pokud *str* je **NULL** nebo *count* je nula, tato funkce generuje neplatný parametr výjimku, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je spuštění povoleno pokračovat, **je chybné číslo** nastaveno na **hodnotu EINVAL** a funkce vrátí **hodnotu NULL**. Také pokud *c* není platný vícebajtový znak, **errno** je nastavena na **EINVAL** a místo toho se použije mezera.
 
-Výstupní hodnota je ovlivněna nastavením kategorie **LC_CTYPE** národního prostředí; Další informace naleznete v tématu [setlocale](setlocale-wsetlocale.md) . Verze **_mbsnbset** této funkce používá aktuální národní prostředí pro toto chování závislé na národním prostředí; verze **_mbsnbset_l** je shodná s tím rozdílem, že místo toho používá parametr národního prostředí. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
+Výstupní hodnota je ovlivněna nastavením nastavení **LC_CTYPE** kategorie národního prostředí; další informace naleznete [v tématu setlocale.](setlocale-wsetlocale.md) Verze **_mbsnbset** této funkce používá aktuální národní prostředí pro toto chování závislé na národním prostředí; **verze _mbsnbset_l** je identická s tím rozdílem, že místo toho používá parametr národního prostředí. Další informace naleznete v [tématu Locale](../../c-runtime-library/locale.md).
 
-**Poznámka k zabezpečení** Toto rozhraní API způsobuje potenciální hrozbu, o kterou vznikají problémy s přetečením vyrovnávací paměti. Problémy s přetečením vyrovnávací paměti představují častější způsob útoku na systém, což vede k neoprávněnému zvýšení oprávnění. Další informace najdete v tématu [předcházení přetečení vyrovnávací paměti](/windows/win32/SecBP/avoiding-buffer-overruns).
+**Poznámka k zabezpečení** Toto rozhraní API vznikne potenciální hrozbu způsobené problém přetečení vyrovnávací paměti. Problémy s přetečením vyrovnávací paměti jsou častou metodou systémového útoku, což vede k neoprávněnému zvýšení oprávnění. Další informace naleznete v [tématu Zabránění přetečení vyrovnávací paměti](/windows/win32/SecBP/avoiding-buffer-overruns).
+
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
@@ -106,10 +111,10 @@ Výstupní hodnota je ovlivněna nastavením kategorie **LC_CTYPE** národního 
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_mbsnbset**|\<Mbstring. h >|
-|**_mbsnbset_l**|\<Mbstring. h >|
+|**_mbsnbset**|\<mbstring.h>|
+|**_mbsnbset_l**|\<mbstring.h>|
 
-Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -137,9 +142,9 @@ Before: This is a test
 After:  **** is a test
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Manipulace s řetězci](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Zacházení s řetězci](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [_mbsnbcat, _mbsnbcat_l](mbsnbcat-mbsnbcat-l.md)<br/>
 [_strnset, _strnset_l, _wcsnset, _wcsnset_l, _mbsnset, _mbsnset_l](strnset-strnset-l-wcsnset-wcsnset-l-mbsnset-mbsnset-l.md)<br/>
 [_strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l](strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)<br/>

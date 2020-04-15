@@ -1,8 +1,9 @@
 ---
 title: setbuf
-ms.date: 04/08/2019
+ms.date: 4/2/2020
 api_name:
 - setbuf
+- _o_setbuf
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -25,16 +27,16 @@ helpviewer_keywords:
 - setbuf function
 - stream buffering
 ms.assetid: 13beda22-7b56-455d-8a6c-f2eb636885b9
-ms.openlocfilehash: c6c78297b1818131dcfcb10f4f2eaadd752d8ef4
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: f96cffb8770cda78ebff8d873b441ddc288bc41f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948281"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81332080"
 ---
 # <a name="setbuf"></a>setbuf
 
-Řídí ukládání datových proudů do vyrovnávací paměti. Tato funkce je zastaralá. místo toho použijte [setvbuf –](setvbuf.md) .
+Řídí ukládání do vyrovnávací paměti datového proudu. Tato funkce je zastaralá; místo toho použijte [setvbuf.](setvbuf.md)
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -47,17 +49,19 @@ void setbuf(
 
 ### <a name="parameters"></a>Parametry
 
-*stream*<br/>
-Ukazatel na strukturu **souborů** .
+*Proudu*<br/>
+Ukazatel na **strukturu FILE.**
 
-*vyrovnávací paměti*<br/>
-Vyrovnávací paměť přidělená uživatelem
+*Vyrovnávací paměti*<br/>
+Uživatelem přidělená vyrovnávací paměť.
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce **setbuf** řídí ukládání do vyrovnávací paměti pro *Stream*. Argument *Stream* musí odkazovat na otevřený soubor, který se nečetl nebo nezapsal. Pokud má argument *buffer* **hodnotu null**, datový proud je neuložený do vyrovnávací paměti. V takovém případě musí vyrovnávací paměť ukazovat na pole znaků s délkou **BUFSIZ**, kde **BUFSIZ** je velikost vyrovnávací paměti, jak je definováno v stdio. Y. Pro vstupně-výstupní ukládání do vyrovnávací paměti se používá uživatelem zadaná vyrovnávací paměť namísto výchozí systémem přidělené vyrovnávací paměti pro daný datový proud. Datový proud **stderr** ve výchozím nastavení není uložen do vyrovnávací paměti, ale můžete použít **setbuf** k přiřazení vyrovnávacích pamětí do **stderr**.
+Funkce **setbuf** řídí ukládání do vyrovnávací paměti pro *datový proud*. Argument *datového proudu* musí odkazovat na otevřený soubor, který nebyl přečten nebo zapsán. Pokud je argument *vyrovnávací paměti* **NULL**, datový proud není ve vyrovnávací paměti. Pokud tomu tak není, vyrovnávací paměť musí ukazovat na pole znaků délky **BUFSIZ**, kde **BUFSIZ** je velikost vyrovnávací paměti, jak je definována v STDIO. H. Uživatelem zadaná vyrovnávací paměť namísto výchozí vyrovnávací paměti přidělené systémem pro daný datový proud se používá pro ukládání do vyrovnávací paměti vstupně-v. **Stderr** stream je ve výchozím nastavení bez vyrovnávací paměti, ale můžete použít **setbuf** přiřadit vyrovnávací paměti **stderr**.
 
-**setbuf** byl nahrazen [setvbuf –](setvbuf.md), což je upřednostňovaná rutina pro nový kód. Na rozdíl od **setvbuf –** nemá **setbuf** žádný způsob, jak hlásit chyby. **setvbuf –** také umožňuje řídit režim ukládání do vyrovnávací paměti i velikost vyrovnávací paměti. **setbuf** existuje pro kompatibilitu s existujícím kódem.
+**setbuf** byl nahrazen [setvbuf](setvbuf.md), což je upřednostňovaná rutina pro nový kód. Na rozdíl od **setvbuf**, **setbuf** nemá žádný způsob, jak hlášení chyb. **setvbuf** také umožňuje řídit režim ukládání do vyrovnávací paměti i velikost vyrovnávací paměti. **setbuf** existuje pro kompatibilitu s existujícím kódem.
+
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
@@ -65,7 +69,7 @@ Funkce **setbuf** řídí ukládání do vyrovnávací paměti pro *Stream*. Arg
 |-------------|---------------------|
 |**setbuf**|\<stdio.h>|
 
-Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -106,9 +110,9 @@ stream1 set to user-defined buffer at: 0012FCDC
 stream2 buffering disabled
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Vstup/výstup datového proudu](../../c-runtime-library/stream-i-o.md)<br/>
+[I/O proudu](../../c-runtime-library/stream-i-o.md)<br/>
 [fclose, _fcloseall](fclose-fcloseall.md)<br/>
 [fflush](fflush.md)<br/>
 [fopen, _wfopen](fopen-wfopen.md)<br/>

@@ -1,9 +1,11 @@
 ---
 title: getchar, getwchar
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - getchar
 - getwchar
+- _o_getchar
+- _o_getwchar
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - _gettchar function
 - standard input, reading from
 ms.assetid: 19fda588-3e33-415c-bb60-dd73c028086a
-ms.openlocfilehash: b969dc48e949efa02b807ec0ea442da7cb793e15
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 4311b5b896a5a406ebe14f09e7bb525cb47951b9
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70955418"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81344616"
 ---
 # <a name="getchar-getwchar"></a>getchar, getwchar
 
@@ -50,17 +53,19 @@ wint_t getwchar();
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Vrátí přečtený znak. Chcete-li indikovat chybu čtení nebo stav konce souboru, funkce **GetChar** vrátí znak **EOF**a **getwchar** vrátí hodnotu **WEOF**. V případě **GetChar**použijte k vyhledání chyby nebo konce souboru použití metody **trajekt** nebo **feof** .
+Vrátí přečtený znak. Chcete-li označit chybu čtení nebo podmínku konce souboru, **vrátí funkce getchar** **hodnotu EOF**a **funkce getwchar** vrátí **hodnotu WEOF**. Pro **getchar**, použijte **ferror** nebo **feof** zkontrolovat chybu nebo konec souboru.
 
 ## <a name="remarks"></a>Poznámky
 
-Každá rutina přečte jeden znak ze **standardního vstupu** a zvýší přidružený ukazatel na soubor tak, aby odkazoval na další znak. **GetChar** je stejné jako [_fgetchar](fgetc-fgetwc.md), ale je implementováno jako funkce a jako makro.
+Každá rutina přečte jeden znak z **stdin** a zvýrazní ukazatel přidruženého souboru tak, aby přecšlápne na další znak. **getchar** je stejný jako [_fgetchar](fgetc-fgetwc.md), ale je implementován jako funkce a jako makro.
 
-Tyto funkce zamkne volající vlákno a jsou proto bezpečná pro přístup z více vláken. Neuzamykání verze naleznete v tématu [_getchar_nolock, _getwchar_nolock](getchar-nolock-getwchar-nolock.md).
+Tyto funkce zamknout volající vlákno a jsou proto bezpečné pro přístup z více vláken. O verzi bez zamykání naleznete [v _getchar_nolock _getwchar_nolock](getchar-nolock-getwchar-nolock.md).
+
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE & _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE & _MBCS není definováno|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_gettchar**|**getchar**|**getchar**|**getwchar**|
 
@@ -69,9 +74,9 @@ Tyto funkce zamkne volající vlákno a jsou proto bezpečná pro přístup z v�
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
 |**getchar**|\<stdio.h>|
-|**getwchar**|\<stdio. h > nebo \<WCHAR. h >|
+|**getwchar**|\<stdio.h> \<nebo wchar.h>|
 
-Konzola není v aplikacích Univerzální platforma Windows (UWP) podporována. Standardní popisovače streamů, které jsou spojeny s konzolou, **stdin**, **stdout**a **stderr**, musí být přesměrované před tím, než je funkce modulu runtime jazyka C můžou použít v aplikacích pro UWP. Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
+Konzola není podporována v aplikacích univerzální platformy Windows (UPW). Standardní popisovače datového proudu, které jsou přidruženy ke **konzole, stdin**, **stdout**a **stderr**, musí být přesměrovány před c run-time funkce je možné použít v aplikacích UPW. Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -103,9 +108,9 @@ int main()
 This textInput was: This text
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Vstup/výstup datového proudu](../../c-runtime-library/stream-i-o.md)<br/>
+[I/O proudu](../../c-runtime-library/stream-i-o.md)<br/>
 [getc, getwc](getc-getwc.md)<br/>
 [fgetc, fgetwc](fgetc-fgetwc.md)<br/>
 [_getch, _getwch](getch-getwch.md)<br/>

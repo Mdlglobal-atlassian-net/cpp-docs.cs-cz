@@ -1,6 +1,6 @@
 ---
 title: StopAndRelogTracingSessionW
-description: Reference C++ k funkci StopAndRelogTracingSessionW sady SDK pro Build Insights
+description: C++ Build Insights SDK StopAndRelogTracingSessionW odkaz na funkci.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 021ea5986714fa3432ab6e2831c6069356f380d5
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: c542ba8f313f30cf5adb069dd02cf3db29ffc532
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78332598"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81323693"
 ---
 # <a name="stopandrelogtracingsessionw"></a>StopAndRelogTracingSessionW
 
 ::: moniker range="<=vs-2015"
 
-Sada C++ SDK pro Build Insights je kompatibilní se sadou Visual Studio 2017 a novější. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek selektor verzí sady Visual Studio pro tento článek na sadu Visual Studio 2017 nebo Visual Studio 2019.
+Sada C++ Build Insights SDK je kompatibilní s Visual Studio 2017 a vyšší. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek pro výběr **verze** sady Visual Studio pro tento článek na Visual Studio 2017 nebo Visual Studio 2019. Nachází se v horní části obsahu na této stránce.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Funkce `StopAndRelogTracingSessionW` zastaví probíhající relaci trasování a uloží výsledné trasování do dočasného souboru. Relace, která se znovu zaznamená, pak okamžitě začne používat dočasný soubor jako vstup. Konečné přeprotokolované trasování vytvořené relací znovu protokolování je uloženo v souboru určeném volajícím. Spustitelné soubory volající tuto funkci musí mít oprávnění správce.
+Funkce `StopAndRelogTracingSessionW` zastaví probíhající relaci trasování a uloží výsledné trasování do dočasného souboru. Relace opětovného přihlášení je pak okamžitě začít používat dočasný soubor jako vstup. Konečné relogged trasování vytvořené relogging relace je uložen v souboru určeném volajícím. Spustitelné soubory volající tuto funkci musí mít oprávnění správce.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -39,17 +39,17 @@ enum RESULT_CODE StopAndRelogTracingSessionW(
 
 ### <a name="parameters"></a>Parametry
 
-*název_relace*\
-Název relace trasování, která se má zastavit. Použijte stejný název relace jako ten předaný do [StartTracingSession](start-tracing-session.md), [StartTracingSessionA](start-tracing-session-a.md)nebo [StartTracingSessionW](start-tracing-session-w.md).
+*Název_relace*\
+Název relace trasování zastavit. Použijte stejný název relace jako název předané [StartTracingSession](start-tracing-session.md), [StartTracingSessionA](start-tracing-session-a.md)nebo [StartTracingSessionW](start-tracing-session-w.md).
 
 *outputLogFile*\
-Soubor, ve kterém se má zapsat přeprotokolované trasování vytvořené relací znovu protokolování.
+Soubor, ve kterém chcete zapsat relogged trasování vytvořené relogging relace.
 
-\ *statistiky*
-Ukazatel na objekt [TRACING_SESSION_STATISTICS](../other-types/tracing-session-statistics-struct.md) . před vrácením `StopAndRelogTracingSessionW` zapisuje statistiky shromažďování trasování v tomto objektu.
+*Statistiky*\
+Ukazatel na [TRACING_SESSION_STATISTICS](../other-types/tracing-session-statistics-struct.md) objekt. `StopAndRelogTracingSessionW`zapíše statistiky shromažďování trasování v tomto objektu před vrácením.
 
 *analysisDescriptor*\
-Ukazatel na objekt [RELOG_DESCRIPTOR](../other-types/analysis-descriptor-struct.md) . Pomocí tohoto objektu můžete nakonfigurovat relaci znovu protokolovaných protokolů spuštěnou v `StopAndRelogTracingSessionW`.
+Ukazatel na [RELOG_DESCRIPTOR](../other-types/analysis-descriptor-struct.md) objekt. Tento objekt slouží ke konfiguraci relace opětovného správě, která je spuštěna aplikací `StopAndRelogTracingSessionW`.
 
 ### <a name="return-value"></a>Návratová hodnota
 

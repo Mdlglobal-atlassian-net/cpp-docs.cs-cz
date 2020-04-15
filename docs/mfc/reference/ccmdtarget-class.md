@@ -46,16 +46,16 @@ helpviewer_keywords:
 - CCmdTarget [MFC], OnFinalRelease
 - CCmdTarget [MFC], RestoreWaitCursor
 ms.assetid: 8883b132-2057-4ce0-a5f2-88979f8f2b13
-ms.openlocfilehash: 583b685295bf77910ef134776c1c4fa39baf93ad
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 5ee4101302322a5212a80b32f095cdd13d9769e0
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79420524"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81352288"
 ---
 # <a name="ccmdtarget-class"></a>CCmdTarget – třída
 
-Základní třída architektury mapy zpráv knihovna Microsoft Foundation Class.
+Základní třída pro architekturu mapy zpráv knihovny tříd microsoft foundation.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -67,59 +67,59 @@ class CCmdTarget : public CObject
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CCmdTarget:: CCmdTarget](#ccmdtarget)|Vytvoří objekt `CCmdTarget`.|
+|[CCmdTarget::CCmdTarget](#ccmdtarget)|Vytvoří `CCmdTarget` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CCmdTarget:: BeginWaitCursor](#beginwaitcursor)|Zobrazí kurzor jako ukazatel na přesýpací hodiny.|
-|[CCmdTarget::D oOleVerb](#dooleverb)|Způsobí provedení akce zadané v příkazu OLE.|
-|[CCmdTarget:: EnableAutomation](#enableautomation)|Povoluje automatizaci OLE pro objekt `CCmdTarget`.|
-|[CCmdTarget:: EnableConnections](#enableconnections)|Povolí vypínání událostí prostřednictvím bodů připojení.|
-|[CCmdTarget:: EnableTypeLib](#enabletypelib)|Povoluje knihovnu typů objektu.|
-|[CCmdTarget:: EndWaitCursor](#endwaitcursor)|Vrátí se na předchozí kurzor.|
-|[CCmdTarget:: EnumOleVerbs](#enumoleverbs)|Vytvoří výčet příkazů OLE objektu.|
-|[CCmdTarget:: FromIDispatch](#fromidispatch)|Vrátí ukazatel na objekt `CCmdTarget` přidružený k ukazateli `IDispatch`.|
-|[CCmdTarget:: GetDispatchIID](#getdispatchiid)|Získá primární ID odesílajícího rozhraní.|
-|[CCmdTarget:: GetIDispatch](#getidispatch)|Vrátí ukazatel na objekt `IDispatch` přidružený k objektu `CCmdTarget`.|
-|[CCmdTarget:: GetTypeInfoCount](#gettypeinfocount)|Načte počet rozhraní informací o typu, které objekt poskytuje.|
-|[CCmdTarget:: GetTypeInfoOfGuid](#gettypeinfoofguid)|Načte popis typu, který odpovídá zadanému identifikátoru GUID.|
-|[CCmdTarget:: GetTypeLib](#gettypelib)|Získá ukazatel na knihovnu typů.|
-|[CCmdTarget:: GetTypeLibCache](#gettypelibcache)|Získá mezipaměť knihovny typů.|
-|[CCmdTarget:: IsInvokeAllowed](#isinvokeallowed)|Povoluje vyvolání metody automatizace.|
-|[CCmdTarget:: IsResultExpected](#isresultexpected)|Vrátí nenulovou hodnotu, pokud má funkce automatizace vracet hodnotu.|
-|[CCmdTarget:: OnCmdMsg –](#oncmdmsg)|Směruje a odesílá zprávy příkazů.|
-|[CCmdTarget:: OnFinalRelease](#onfinalrelease)|Vyčistí se po uvolnění posledního odkazu OLE.|
-|[CCmdTarget:: RestoreWaitCursor](#restorewaitcursor)|Obnoví kurzor přesýpací hodiny.|
+|[CCmdTarget::BeginWaitCursor](#beginwaitcursor)|Zobrazí kurzor jako kurzor přesýpacích hodin.|
+|[CCmdTarget::DoOleVerb](#dooleverb)|Způsobí, že akce určená slovesem OLE má být provedena.|
+|[CCmdTarget::EnableAutomation](#enableautomation)|Umožňuje automatizaci `CCmdTarget` OLE pro objekt.|
+|[CCmdTarget::EnableConnections](#enableconnections)|Povolí spuštění události přes spojovací body.|
+|[CCmdTarget::EnableTypeLib](#enabletypelib)|Povolí knihovnu typů objektu.|
+|[CCmdTarget::EndWaitCursor](#endwaitcursor)|Vrátí se na předchozí kurzor.|
+|[CCmdTarget::EnumOleVerbs](#enumoleverbs)|Vyjmenovává slovesa OLE objektu.|
+|[CCmdTarget::FromIDispatch](#fromidispatch)|Vrátí ukazatel na `CCmdTarget` objekt přidružený `IDispatch` k ukazateli.|
+|[CCmdTarget::GetDispatchIID](#getdispatchiid)|Získá ID primárního rozhraní odeslání.|
+|[CCmdTarget::GetIDispatch](#getidispatch)|Vrátí ukazatel na `IDispatch` objekt přidružený `CCmdTarget` k objektu.|
+|[CCmdTarget::GetTypeInfoCount](#gettypeinfocount)|Načte počet rozhraní informace o typu, které poskytuje objekt.|
+|[CCmdTarget::GetTypeInfoOfGuid](#gettypeinfoofguid)|Načte popis typu, který odpovídá zadanému identifikátoru GUID.|
+|[CCmdTarget::GetTypeLib](#gettypelib)|Získá ukazatel na knihovnu typů.|
+|[CCmdTarget::GetTypeLibCache](#gettypelibcache)|Získá mezipaměti knihovny typů.|
+|[CCmdTarget::IsInvokeAllowed](#isinvokeallowed)|Umožňuje vyvolání metody automatizace.|
+|[CCmdTarget::IsResultExpected](#isresultexpected)|Vrátí nenulovou, pokud by funkce automatizace měla vrátit hodnotu.|
+|[CCmdTarget::OnCmdMsg](#oncmdmsg)|Trasy a odesílá příkazové zprávy.|
+|[CCmdTarget::OnFinalRelease](#onfinalrelease)|Vyčistí po vydání posledního odkazu OLE.|
+|[CCmdTarget::RestoreWaitCursor](#restorewaitcursor)|Obnoví kurzor přesýpacích hodin.|
 
 ## <a name="remarks"></a>Poznámky
 
-Mapa zpráv směruje příkazy nebo zprávy na členské funkce, které zapisujete pro jejich zpracování. (Příkaz je zpráva z položky nabídky, příkazového tlačítka nebo klávesy akcelerátoru.)
+Mapa zpráv směruje příkazy nebo zprávy do členských funkcí, které zapisujete, aby je zvládala. (Příkaz je zpráva z položky nabídky, příkazového tlačítka nebo klávesy akcelerátoru.)
 
-Třídy klíčového rozhraní odvozené od `CCmdTarget` zahrnují [CView](../../mfc/reference/cview-class.md), [CWinApp](../../mfc/reference/cwinapp-class.md), [objektu CDocument](../../mfc/reference/cdocument-class.md), [CWnd](../../mfc/reference/cwnd-class.md)a [CFrameWnd](../../mfc/reference/cframewnd-class.md). Pokud máte v úmyslu pro zpracování zpráv novou třídou, odvodit třídu z jedné z těchto tříd odvozených od `CCmdTarget`. Třídu nebudete jen zřídka odvodit z `CCmdTarget` přímo.
+Klíčové framework třídy `CCmdTarget` odvozené z patří [CView](../../mfc/reference/cview-class.md), [CWinApp](../../mfc/reference/cwinapp-class.md), [CDocument](../../mfc/reference/cdocument-class.md), [CWnd](../../mfc/reference/cwnd-class.md)a [CFrameWnd](../../mfc/reference/cframewnd-class.md). Pokud máte v úmyslu pro novou třídu pro zpracování `CCmdTarget`zpráv, odvodit třídu z jedné z těchto odvozených tříd. Zřídka bude odvodit `CCmdTarget` třídu přímo.
 
-Přehled cílů příkazů a směrování `OnCmdMsg` najdete v tématech [cíle příkazů](../../mfc/command-targets.md), [směrování příkazů](../../mfc/command-routing.md)a [mapování zpráv](../../mfc/mapping-messages.md).
+Přehled cílů příkazů a `OnCmdMsg` směrování naleznete v [tématu Command Targets](../../mfc/command-targets.md), [Command Routing](../../mfc/command-routing.md)a Mapping [Messages](../../mfc/mapping-messages.md).
 
-`CCmdTarget` zahrnuje členské funkce, které zpracovávají zobrazení ukazatele přesýpací hodiny. Pokud očekáváte, že se má příkaz Spustit včas, zobrazte ukazatel přesýpacích hodin.
+`CCmdTarget`obsahuje členské funkce, které zpracovávají zobrazení kurzoru přesýpacích hodin. Zobrazení kurzor přesýpacích hodin, pokud očekáváte, že příkaz trvat znatelný časový interval ke spuštění.
 
-Mapy odeslání, podobně jako mapy zpráv, se používají k vystavení funkcí automatizace OLE `IDispatch`. Po vystavení tohoto rozhraní můžou další aplikace (například Visual Basic) volat do vaší aplikace.
+Odeslání mapy, podobně jako mapy zpráv, `IDispatch` se používají k vystavení funkce automatizace OLE. Vystavením tohoto rozhraní mohou do aplikace volat jiné aplikace (například Visual Basic).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[CObject](../../mfc/reference/cobject-class.md)
+[CObjekt](../../mfc/reference/cobject-class.md)
 
 `CCmdTarget`
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxwin. h
+**Záhlaví:** afxwin.h
 
-##  <a name="beginwaitcursor"></a>CCmdTarget:: BeginWaitCursor
+## <a name="ccmdtargetbeginwaitcursor"></a><a name="beginwaitcursor"></a>CCmdTarget::BeginWaitCursor
 
-Voláním této funkce zobrazíte kurzor jako přesýpací hodiny, pokud očekáváte, že příkaz bude při spuštění trvat znatelné časové intervaly.
+Volání této funkce zobrazí kurzor jako přesýpací hodiny, když očekáváte, že příkaz trvat znatelný časový interval spustit.
 
 ```
 void BeginWaitCursor();
@@ -127,27 +127,27 @@ void BeginWaitCursor();
 
 ### <a name="remarks"></a>Poznámky
 
-Rozhraní volá tuto funkci, aby zobrazila uživatele, který je zaneprázdněný, například když se objekt `CDocument` načítá nebo ukládá do souboru.
+Rozhraní Framework volá tuto funkci, aby uživateli zobrazilo, že je zaneprázdněn, například když se `CDocument` objekt načte nebo uloží do souboru.
 
-Akce `BeginWaitCursor` nejsou vždy platné mimo jednu obslužnou rutinu zprávy, protože jiné akce, jako je například zpracování `OnSetCursor`, mohou změnit kurzor.
+Akce `BeginWaitCursor` nejsou vždy účinné mimo jednu obslužnou `OnSetCursor` rutinu zprávy jako jiné akce, jako je například zpracování, může změnit kurzor.
 
-Volání `EndWaitCursor` k obnovení předchozího kurzoru.
+Volání `EndWaitCursor` obnovit předchozí kurzor.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCDocView#43](../../mfc/codesnippet/cpp/ccmdtarget-class_1.cpp)]
 
-##  <a name="ccmdtarget"></a>CCmdTarget:: CCmdTarget
+## <a name="ccmdtargetccmdtarget"></a><a name="ccmdtarget"></a>CCmdTarget::CCmdTarget
 
-Vytvoří objekt `CCmdTarget`.
+Vytvoří `CCmdTarget` objekt.
 
 ```
 CCmdTarget();
 ```
 
-##  <a name="dooleverb"></a>CCmdTarget::D oOleVerb
+## <a name="ccmdtargetdooleverb"></a><a name="dooleverb"></a>CCmdTarget::DoOleVerb
 
-Způsobí provedení akce zadané v příkazu OLE.
+Způsobí, že akce určená slovesem OLE má být provedena.
 
 ```
 BOOL DoOleVerb(
@@ -159,29 +159,29 @@ BOOL DoOleVerb(
 
 ### <a name="parameters"></a>Parametry
 
-*iVerb*<br/>
-Číselný identifikátor příkazu
+*iSponož*<br/>
+Číselný identifikátor slovesa.
 
 *lpMsg*<br/>
-Ukazatel na strukturu [zprávy](/windows/win32/api/winuser/ns-winuser-msg) popisující událost (například poklikání), která vyvolala příkaz.
+Ukazatel na strukturu [MSG](/windows/win32/api/winuser/ns-winuser-msg) popisující událost (například poklepání), která vyvolala sloveso.
 
 *hWndParent*<br/>
-Popisovač okna dokumentu obsahujícího objekt
+Popisovač okna dokumentu obsahujícího objekt.
 
 *lpRect*<br/>
-Ukazatel na strukturu [Rect](/previous-versions/dd162897\(v=vs.85\)) obsahující souřadnice v pixelech, které definují ohraničující obdélník objektu v *hwndParent*.
+Ukazatel na [rect](/previous-versions/dd162897\(v=vs.85\)) struktury obsahující souřadnice v obrazových bodech, které definují ohraničující obdélník objektu v *hwndParent*.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-TRUE, pokud je to úspěšné, jinak FALSE.
+PRAVDA v případě úspěchu, jinak FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce je v podstatě implementace [IOleObject::D overb](/windows/win32/api/oleidl/nf-oleidl-ioleobject-doverb). Možné akce jsou vyčísleny pomocí [CCmdTarget:: EnumOleVerbs](#enumoleverbs).
+Tato členská funkce je v podstatě implementace [IOleObject::DoVerb](/windows/win32/api/oleidl/nf-oleidl-ioleobject-doverb). Možné akce jsou výčtu [CCmdTarget::EnumOleVerbs](#enumoleverbs).
 
-##  <a name="enableautomation"></a>CCmdTarget:: EnableAutomation
+## <a name="ccmdtargetenableautomation"></a><a name="enableautomation"></a>CCmdTarget::EnableAutomation
 
-Voláním této funkce povolíte automatizaci OLE pro objekt.
+Volání této funkce povolit automatizaci OLE pro objekt.
 
 ```
 void EnableAutomation();
@@ -189,11 +189,11 @@ void EnableAutomation();
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce je obvykle volána z konstruktoru vašeho objektu a měla by být volána pouze v případě, že byla pro třídu deklarována mapa odeslání. Další informace o automatizaci najdete v článcích [Automatizace](../../mfc/automation-clients.md) a [automatizační servery](../../mfc/automation-servers.md).
+Tato funkce je obvykle volána z konstruktoru objektu a měla by být volána pouze v případě, že byla deklarována mapa odeslání pro třídu. Další informace o automatizaci naleznete v článcích [Automation Clients](../../mfc/automation-clients.md) and [Automation Servers](../../mfc/automation-servers.md).
 
-##  <a name="enableconnections"></a>CCmdTarget:: EnableConnections
+## <a name="ccmdtargetenableconnections"></a><a name="enableconnections"></a>CCmdTarget::EnableConnections
 
-Povolí vypínání událostí prostřednictvím bodů připojení.
+Povolí spuštění události přes spojovací body.
 
 ```
 void EnableConnections();
@@ -201,11 +201,11 @@ void EnableConnections();
 
 ### <a name="remarks"></a>Poznámky
 
-Chcete-li povolit spojovací body, zavolejte tuto členskou funkci v konstruktoru vaší odvozené třídy.
+Chcete-li povolit spojovací body, volání této členské funkce v konstruktoru odvozené třídy.
 
-##  <a name="enabletypelib"></a>CCmdTarget:: EnableTypeLib
+## <a name="ccmdtargetenabletypelib"></a><a name="enabletypelib"></a>CCmdTarget::EnableTypeLib
 
-Povoluje knihovnu typů objektu.
+Povolí knihovnu typů objektu.
 
 ```
 void EnableTypeLib();
@@ -213,11 +213,11 @@ void EnableTypeLib();
 
 ### <a name="remarks"></a>Poznámky
 
-Volejte tuto členskou funkci v konstruktoru objektu odvozeného od `CCmdTarget`, pokud poskytuje informace o typu.
+Volání této členské funkce v `CCmdTarget`konstruktoru objektu odvozeného, pokud poskytuje informace o typu.
 
-##  <a name="endwaitcursor"></a>CCmdTarget:: EndWaitCursor
+## <a name="ccmdtargetendwaitcursor"></a><a name="endwaitcursor"></a>CCmdTarget::EndWaitCursor
 
-Tuto funkci volejte poté, co jste volali členskou funkci `BeginWaitCursor`, která se má vrátit z kurzoru na předchozí kurzor.
+Volání této funkce po `BeginWaitCursor` volání členské funkce pro návrat z kurzoru přesýpacích hodin na předchozí kurzor.
 
 ```
 void EndWaitCursor();
@@ -225,15 +225,15 @@ void EndWaitCursor();
 
 ### <a name="remarks"></a>Poznámky
 
-Rozhraní také volá tuto členskou funkci poté, co se nazývá kurzor přesýpací hodiny.
+Rozhraní Framework také volá tuto členská funkci poté, co volá kurzor přesýpacích hodin.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCDocView#43](../../mfc/codesnippet/cpp/ccmdtarget-class_1.cpp)]
 
-##  <a name="enumoleverbs"></a>CCmdTarget:: EnumOleVerbs
+## <a name="ccmdtargetenumoleverbs"></a><a name="enumoleverbs"></a>CCmdTarget::EnumOleVerbs
 
-Vytvoří výčet příkazů OLE objektu.
+Vyjmenovává slovesa OLE objektu.
 
 ```
 BOOL EnumOleVerbs(LPENUMOLEVERB* ppenumOleVerb);
@@ -242,19 +242,19 @@ BOOL EnumOleVerbs(LPENUMOLEVERB* ppenumOleVerb);
 ### <a name="parameters"></a>Parametry
 
 *ppenumOleVerb*<br/>
-Ukazatel na ukazatel na rozhraní [IEnumOLEVERB](/windows/win32/api/oleidl/nn-oleidl-ienumoleverb) .
+Ukazatel na ukazatel rozhraní [IEnumOLEVERB.](/windows/win32/api/oleidl/nn-oleidl-ienumoleverb)
 
 ### <a name="return-value"></a>Návratová hodnota
 
-TRUE, pokud objekt podporuje alespoň jednu akci OLE (v takovém případě \* *ppenumOleVerb* odkazuje na rozhraní `IEnumOLEVERB` enumerátor), jinak false.
+TRUE Pokud objekt podporuje alespoň jedno sloveso OLE (v takovém případě \* *ppenumOleVerb* odkazuje na rozhraní čítače výčtu), `IEnumOLEVERB` jinak FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce je v podstatě implementace [IOleObject:: EnumVerbs](/windows/win32/api/oleidl/nf-oleidl-ioleobject-enumverbs).
+Tato členská funkce je v podstatě implementace [IOleObject::EnumVerbs](/windows/win32/api/oleidl/nf-oleidl-ioleobject-enumverbs).
 
-##  <a name="fromidispatch"></a>CCmdTarget:: FromIDispatch
+## <a name="ccmdtargetfromidispatch"></a><a name="fromidispatch"></a>CCmdTarget::FromIDispatch
 
-Voláním této funkce namapujete ukazatel `IDispatch` přijatý od členských funkcí automatizace třídy, do objektu `CCmdTarget`, který implementuje rozhraní objektu `IDispatch`.
+Volání této funkce `IDispatch` mapovat ukazatel, přijaté z automatizace `CCmdTarget` členské funkce třídy do `IDispatch` objektu, který implementuje rozhraní objektu.
 
 ```
 static CCmdTarget* PASCAL FromIDispatch(LPDISPATCH lpDispatch);
@@ -263,19 +263,19 @@ static CCmdTarget* PASCAL FromIDispatch(LPDISPATCH lpDispatch);
 ### <a name="parameters"></a>Parametry
 
 *lpDispatch*<br/>
-Ukazatel na objekt `IDispatch`.
+Ukazatel na `IDispatch` objekt.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na objekt `CCmdTarget` přidružený k *LPDISPATCH*. Tato funkce vrátí hodnotu NULL, pokud objekt `IDispatch` není rozpoznán jako objekt `IDispatch` Microsoft Foundation Class.
+Ukazatel na `CCmdTarget` objekt přidružený k *lpDispatch*. Tato funkce vrátí `IDispatch` hodnotu NULL, pokud objekt `IDispatch` není rozpoznán jako objekt třídy Microsoft Foundation.
 
 ### <a name="remarks"></a>Poznámky
 
-Výsledek této funkce je inverzní k volání členské funkce `GetIDispatch`.
+Výsledkem této funkce je inverzní volání členské `GetIDispatch`funkce .
 
-##  <a name="getdispatchiid"></a>CCmdTarget:: GetDispatchIID
+## <a name="ccmdtargetgetdispatchiid"></a><a name="getdispatchiid"></a>CCmdTarget::GetDispatchIID
 
-Získá primární ID odesílajícího rozhraní.
+Získá ID primárního rozhraní odeslání.
 
 ```
 virtual BOOL GetDispatchIID(IID* pIID);
@@ -283,20 +283,20 @@ virtual BOOL GetDispatchIID(IID* pIID);
 
 ### <a name="parameters"></a>Parametry
 
-*pIID*<br/>
-Ukazatel na ID rozhraní ( [identifikátor GUID](/previous-versions/cc317743(v%3dmsdn.10)).
+*iid*<br/>
+Ukazatel na ID rozhraní [(identifikátor GUID](/previous-versions/cc317743(v%3dmsdn.10)).
 
 ### <a name="return-value"></a>Návratová hodnota
 
-TRUE, pokud je to úspěšné, jinak FALSE. V případě úspěchu je \* *piid* nastaveno na primární ID odesílajícího rozhraní.
+PRAVDA v případě úspěchu, jinak FALSE. Pokud je \* *úspěšná, pIID* je nastavena na ID primárního rozhraní odeslání.
 
 ### <a name="remarks"></a>Poznámky
 
-Odvozené třídy by měly přepsat tuto členskou funkci (Pokud není přepsána, `GetDispatchIID` vrátí hodnotu FALSE). Viz [COleControl –](../../mfc/reference/colecontrol-class.md).
+Odvozené třídy by měly přepsat tuto `GetDispatchIID` členská funkci (pokud není přepsána, vrátí hodnotu FALSE). Viz [COleControl](../../mfc/reference/colecontrol-class.md).
 
-##  <a name="getidispatch"></a>CCmdTarget:: GetIDispatch
+## <a name="ccmdtargetgetidispatch"></a><a name="getidispatch"></a>CCmdTarget::GetIDispatch
 
-Zavolejte tuto členskou funkci, aby načetla `IDispatch` ukazatel z metody automatizace, která vrátí ukazatel `IDispatch` nebo převezme ukazatel `IDispatch` odkazem.
+Volání této členské funkce `IDispatch` načíst ukazatel z metody `IDispatch` automatizace, `IDispatch` která buď vrátí ukazatel nebo má ukazatel odkazem.
 
 ```
 LPDISPATCH GetIDispatch(BOOL bAddRef);
@@ -305,19 +305,19 @@ LPDISPATCH GetIDispatch(BOOL bAddRef);
 ### <a name="parameters"></a>Parametry
 
 *bAddRef*<br/>
-Určuje, zda se má zvýšit počet odkazů pro objekt.
+Určuje, zda se má počet odkazů pro objekt narůstat.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`IDispatch` ukazatel přidružený k objektu
+Ukazatel `IDispatch` přidružený k objektu.
 
 ### <a name="remarks"></a>Poznámky
 
-Pro objekty, které volají `EnableAutomation` ve svých konstruktorech, aby byly povoleny automatizace, tato funkce vrátí ukazatel na implementaci `IDispatch` základní třídy, kterou používají klienti, kteří komunikují prostřednictvím rozhraní `IDispatch`. Volání této funkce automaticky přidá odkaz na ukazatel, takže není nutné volat rozhraní [IUnknown:: AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref).
+Pro objekty, které volají `EnableAutomation` ve svých konstruktorech, což je automatizace `IDispatch` povolena, tato funkce vrátí `IDispatch` ukazatel na implementaci třídy nadace, která je používána klienty, kteří komunikují prostřednictvím rozhraní. Volání této funkce automaticky přidá odkaz na ukazatel, takže není nutné volat [iUnknown::AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref).
 
-##  <a name="gettypeinfocount"></a>CCmdTarget:: GetTypeInfoCount
+## <a name="ccmdtargetgettypeinfocount"></a><a name="gettypeinfocount"></a>CCmdTarget::GetTypeInfoCount
 
-Načte počet rozhraní informací o typu, které objekt poskytuje.
+Načte počet rozhraní informace o typu, které poskytuje objekt.
 
 ```
 virtual UINT GetTypeInfoCount();
@@ -329,11 +329,11 @@ Počet rozhraní informací o typu.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce v podstatě implementuje rozhraní [IDispatch:: GetTypeInfoCount](/windows/win32/api/oaidl/nf-oaidl-idispatch-gettypeinfocount).
+Tato členská funkce v podstatě implementuje [IDispatch::GetTypeInfoCount](/windows/win32/api/oaidl/nf-oaidl-idispatch-gettypeinfocount).
 
-Odvozené třídy by měly přepsat tuto funkci, aby vracely počet zadaných rozhraní informací o typu (0 nebo 1). Pokud není přepsán, `GetTypeInfoCount` vrátí hodnotu 0. K přepsání použijte [IMPLEMENT_OLETYPELIB](../../mfc/reference/type-library-access.md#implement_oletypelib) makro, které také implementuje `GetTypeLib` a `GetTypeLibCache`.
+Odvozené třídy by měly přepsat tuto funkci vrátit počet typů informačnírozhraní k dispozici (buď 0 nebo 1). Pokud není přepsána, `GetTypeInfoCount` vrátí hodnotu 0. Chcete-li přepsat, použijte [IMPLEMENT_OLETYPELIB](../../mfc/reference/type-library-access.md#implement_oletypelib) makro, `GetTypeLib` `GetTypeLibCache`které také implementuje a .
 
-##  <a name="gettypeinfoofguid"></a>CCmdTarget:: GetTypeInfoOfGuid
+## <a name="ccmdtargetgettypeinfoofguid"></a><a name="gettypeinfoofguid"></a>CCmdTarget::GetTypeInfoOfGuid
 
 Načte popis typu, který odpovídá zadanému identifikátoru GUID.
 
@@ -347,19 +347,19 @@ HRESULT GetTypeInfoOfGuid(
 ### <a name="parameters"></a>Parametry
 
 *lcid*<br/>
-Identifikátor národního prostředí (`LCID`).
+Identifikátor národního `LCID`prostředí ( ).
 
-*hlavních*<br/>
-[Identifikátor GUID](/previous-versions/cc317743(v%3dmsdn.10)) popisu typu
+*Identifikátor guid*<br/>
+[Identifikátor GUID](/previous-versions/cc317743(v%3dmsdn.10)) popisu typu.
 
 *ppTypeInfo*<br/>
-Ukazatel na ukazatel na `ITypeInfo` rozhraní.
+Ukazatel na ukazatel `ITypeInfo` na rozhraní.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota HRESULT označující úspěch nebo neúspěch volání. V případě úspěchu \* *ppTypeInfo* odkazuje na rozhraní typu informace.
+HRESULT označující úspěch nebo neúspěch volání. Pokud je \* úspěšná, *ppTypeInfo* odkazuje na rozhraní informace o typu.
 
-##  <a name="gettypelib"></a>CCmdTarget:: GetTypeLib
+## <a name="ccmdtargetgettypelib"></a><a name="gettypelib"></a>CCmdTarget::GetTypeLib
 
 Získá ukazatel na knihovnu typů.
 
@@ -379,15 +379,15 @@ Ukazatel na ukazatel na `ITypeLib` rozhraní.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota HRESULT označující úspěch nebo neúspěch volání. V případě úspěchu \* *ppTypeLib* odkazuje na rozhraní knihovny typů.
+HRESULT označující úspěch nebo neúspěch volání. Pokud je \* úspěšná, *ppTypeLib* odkazuje na rozhraní knihovny typů.
 
 ### <a name="remarks"></a>Poznámky
 
-Odvozené třídy by měly přepsat tuto členskou funkci (Pokud není přepsána, `GetTypeLib` vrátí TYPE_E_CANTLOADLIBRARY). Použijte makro [IMPLEMENT_OLETYPELIB](../../mfc/reference/type-library-access.md#implement_oletypelib) , které také implementuje `GetTypeInfoCount` a `GetTypeLibCache`.
+Odvozené třídy by měly přepsat tuto `GetTypeLib` členskou funkci (pokud není přepsána, vrátí TYPE_E_CANTLOADLIBRARY). Použijte [makro IMPLEMENT_OLETYPELIB,](../../mfc/reference/type-library-access.md#implement_oletypelib) které `GetTypeInfoCount` také `GetTypeLibCache`implementuje a .
 
-##  <a name="gettypelibcache"></a>CCmdTarget:: GetTypeLibCache
+## <a name="ccmdtargetgettypelibcache"></a><a name="gettypelibcache"></a>CCmdTarget::GetTypeLibCache
 
-Získá mezipaměť knihovny typů.
+Získá mezipaměti knihovny typů.
 
 ```
 virtual CTypeLibCache* GetTypeLibCache();
@@ -395,15 +395,15 @@ virtual CTypeLibCache* GetTypeLibCache();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na objekt `CTypeLibCache`.
+Ukazatel na `CTypeLibCache` objekt.
 
 ### <a name="remarks"></a>Poznámky
 
-Odvozené třídy by měly přepsat tuto členskou funkci (Pokud není přepsána, `GetTypeLibCache` vrátí hodnotu NULL). Použijte makro [IMPLEMENT_OLETYPELIB](../../mfc/reference/type-library-access.md#implement_oletypelib) , které také implementuje `GetTypeInfoCount` a `GetTypeLib`.
+Odvozené třídy by měly přepsat tuto `GetTypeLibCache` člennou funkci (pokud není přepsána, vrátí hodnotu NULL). Použijte [makro IMPLEMENT_OLETYPELIB,](../../mfc/reference/type-library-access.md#implement_oletypelib) které `GetTypeInfoCount` také `GetTypeLib`implementuje a .
 
-##  <a name="isinvokeallowed"></a>CCmdTarget:: IsInvokeAllowed
+## <a name="ccmdtargetisinvokeallowed"></a><a name="isinvokeallowed"></a>CCmdTarget::IsInvokeAllowed
 
-Tato funkce je volána implementací knihovny MFC `IDispatch::Invoke` k určení, zda lze vyvolat danou metodu automatizace (identifikovanou identifikátorem *DISPID*).
+Tato funkce je volána implementací knihovny `IDispatch::Invoke` MFC k určení, zda lze vyvolat danou metodu automatizace (identifikovanou *dispidem).*
 
 ```
 virtual BOOL IsInvokeAllowed(DISPID dispid);
@@ -411,22 +411,22 @@ virtual BOOL IsInvokeAllowed(DISPID dispid);
 
 ### <a name="parameters"></a>Parametry
 
-*DISPID*<br/>
+*Dispid*<br/>
 ID odeslání.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-TRUE, pokud je možné metodu vyvolat, jinak FALSE.
+TRUE, pokud lze metodu vyvolat, jinak FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud `IsInvokeAllowed` vrátí hodnotu TRUE, `Invoke` pokračuje v volání metody; v opačném případě se `Invoke` nezdaří a vrátí E_UNEXPECTED.
+Pokud `IsInvokeAllowed` vrátí `Invoke` true, pokračuje volání metody; v `Invoke` opačném případě se nezdaří, vrací E_UNEXPECTED.
 
-Odvozené třídy mohou přepsat tuto funkci, aby vracely příslušné hodnoty (pokud nejsou přepsány, `IsInvokeAllowed` vrátí hodnotu TRUE). Viz zejména [COleControl –:: IsInvokeAllowed](../../mfc/reference/colecontrol-class.md#isinvokeallowed).
+Odvozené třídy mohou přepsat tuto funkci vrátit příslušné `IsInvokeAllowed` hodnoty (pokud nejsou přepsány, vrátí hodnotu TRUE). Viz zejména [COleControl::IsInvokeAllowed](../../mfc/reference/colecontrol-class.md#isinvokeallowed).
 
-##  <a name="isresultexpected"></a>CCmdTarget:: IsResultExpected
+## <a name="ccmdtargetisresultexpected"></a><a name="isresultexpected"></a>CCmdTarget::IsResultExpected
 
-Použijte `IsResultExpected` k zjištění, zda klient očekává návratovou hodnotu z volání funkce automatizace.
+Slouží `IsResultExpected` ke zjištění, zda klient očekává vrácenou hodnotu z jeho volání funkce automatizace.
 
 ```
 BOOL IsResultExpected();
@@ -434,19 +434,19 @@ BOOL IsResultExpected();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud by funkce automatizace měla vracet hodnotu; v opačném případě 0.
+Nenulová, pokud by funkce automatizace měla vrátit hodnotu; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Rozhraní OLE poskytuje informace do knihovny MFC o tom, zda klient používá nebo ignoruje výsledek volání funkce, a knihovna MFC následně používá tyto informace k určení výsledku volání `IsResultExpected`. Pokud je produkce návratové hodnoty náročná na čas nebo prostředky, můžete zvýšit efektivitu voláním této funkce před výpočtem návratové hodnoty.
+Rozhraní OLE poskytuje knihovně MFC informace o tom, zda klient používá nebo ignoruje výsledek volání funkce a knihovna MFC zase používá tyto informace k určení výsledku volání `IsResultExpected`. Pokud je výroba vrácené hodnoty časově nebo prostředky náročná, můžete zvýšit efektivitu voláním této funkce před výpočtem vrácené hodnoty.
 
-Tato funkce vrací 0 pouze jednou, takže budete platné návratové hodnoty z jiných funkcí automatizace, pokud je voláte z funkce automatizace, kterou klient volal.
+Tato funkce vrátí 0 pouze jednou, takže získáte platné vrácené hodnoty z jiných funkcí automatizace, pokud je zavoláte z funkce automatizace, kterou klient zavolal.
 
-`IsResultExpected` vrací nenulovou hodnotu, pokud je volána, když volání funkce automatizace neprobíhá.
+`IsResultExpected`vrátí nenulovou hodnotu, pokud je volána, když neprobíhá volání funkce automatizace.
 
-##  <a name="oncmdmsg"></a>CCmdTarget:: OnCmdMsg –
+## <a name="ccmdtargetoncmdmsg"></a><a name="oncmdmsg"></a>CCmdTarget::OnCmdMsg
 
-Volá se rozhraním, aby se odeslaly zprávy příkazů pro směrování a odeslání a aby se zpracovala aktualizace objektů uživatelského rozhraní příkazu.
+Volat rámci směrovat a odesílat příkazzprávy a zpracování aktualizace příkazu objekty uživatelského rozhraní.
 
 ```
 virtual BOOL OnCmdMsg(
@@ -458,37 +458,37 @@ virtual BOOL OnCmdMsg(
 
 ### <a name="parameters"></a>Parametry
 
-*nID*<br/>
+*Nid*<br/>
 Obsahuje ID příkazu.
 
-*nCode*<br/>
-Identifikuje kód oznámení příkazu. Další informace o hodnotách pro *nCode*najdete v tématu **poznámky** .
+*nKód*<br/>
+Identifikuje kód oznámení příkazu. Další informace o hodnotách pro *nCode*naleznete v **tématu Poznámky.**
 
 *pExtra*<br/>
-Používá se v závislosti na hodnotě *nCode*. Další informace o *pExtra*najdete v tématu **poznámky** .
+Používá se podle hodnoty *nCode*. Další **Remarks** informace o *pExtra*.
 
 *pHandlerInfo*<br/>
-Pokud není NULL, `OnCmdMsg` vyplní *PMF* členy struktury *pHandlerInfo* místo odeslání příkazu. Tento parametr obvykle by měl mít hodnotu NULL.
+Pokud ne `OnCmdMsg` NULL, vyplní *pTarget* a *pmf* členy *pHandlerInfo* struktury namísto odeslání příkazu. Tento parametr by měl být obvykle null.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je zpráva zpracována; v opačném případě 0.
+Nenulová, pokud je zpráva zpracována; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Toto je hlavní rutina implementace architektury příkazu architektury.
+Toto je hlavní implementace rutiny architektury příkazu rozhraní.
 
-V době běhu `OnCmdMsg` odesílá příkaz jiným objektům nebo zpracovává samotný příkaz voláním kořenové třídy `CCmdTarget::OnCmdMsg`, která provádí vlastní vyhledávání map zpráv. Úplný popis výchozího směrování příkazů najdete v [tématech o zpracování a mapování zpráv](../../mfc/message-handling-and-mapping.md).
+Za běhu `OnCmdMsg` odešle příkaz do jiných objektů nebo zpracovává samotný příkaz `CCmdTarget::OnCmdMsg`voláním kořenové třídy , která provádí skutečné vyhledávání mapy zpráv. Úplný popis výchozího směrování příkazů naleznete v tématu [Témata zpracování zpráv a mapování](../../mfc/message-handling-and-mapping.md).
 
-Ve výjimečných případech může být vhodné přepsat tuto členskou funkci tak, aby rozšířila standardní směrování příkazů rozhraní. Podrobné informace o architektuře směrování příkazů najdete v [technické poznámce 21](../../mfc/tn021-command-and-message-routing.md) .
+Ve výjimečných případech můžete chtít přepsat tuto členskou funkci rozšířit rozhraní standardní příkaz směrování. Další podrobnosti o architektuře směrování příkazů naleznete v [technické poznámce 21.](../../mfc/tn021-command-and-message-routing.md)
 
-Pokud přepíšete `OnCmdMsg`, je nutné dodat příslušnou hodnotu pro *nCode*, kód oznámení příkazu a *pExtra*, což závisí na hodnotě *nCode*. Následující tabulka uvádí jejich příslušné hodnoty:
+`OnCmdMsg`Pokud přepíšete , musíte zadat příslušnou hodnotu pro *nCode*, kód oznámení příkazu a *pExtra*, který závisí na hodnotě *nCode*. V následující tabulce jsou uvedeny odpovídající hodnoty:
 
-|hodnota *nCode*|hodnota *pExtra*|
+|*nHodnota Kódu*|hodnota *pExtra*|
 |-------------------|--------------------|
-|CN_COMMAND|[Ccmdui –](../../mfc/reference/ccmdui-class.md)\*|
+|CN_COMMAND|[CCmdUI](../../mfc/reference/ccmdui-class.md)\*|
 |CN_EVENT|AFX_EVENT\*|
-|CN_UPDATE_COMMAND_UI|CCmdUI –\*|
+|CN_UPDATE_COMMAND_UI|CCmdUI\*|
 |CN_OLECOMMAND|[COleCmdUI](../../mfc/reference/colecmdui-class.md)\*|
 |CN_OLE_UNREGISTER|NULL|
 
@@ -498,9 +498,9 @@ Pokud přepíšete `OnCmdMsg`, je nutné dodat příslušnou hodnotu pro *nCode*
 
 [!code-cpp[NVC_MFCDocView#45](../../mfc/codesnippet/cpp/ccmdtarget-class_3.cpp)]
 
-##  <a name="onfinalrelease"></a>CCmdTarget:: OnFinalRelease
+## <a name="ccmdtargetonfinalrelease"></a><a name="onfinalrelease"></a>CCmdTarget::OnFinalRelease
 
-Volá se rozhraním, když se uvolní poslední odkaz OLE na nebo z objektu.
+Volat rámci při uvolnění poslední ole odkaz na nebo z objektu.
 
 ```
 virtual void OnFinalRelease();
@@ -508,11 +508,11 @@ virtual void OnFinalRelease();
 
 ### <a name="remarks"></a>Poznámky
 
-Potlačením této funkce zajistíte speciální zpracování této situace. Výchozí implementace odstraní objekt.
+Přepsat tuto funkci poskytnout zvláštní zpracování pro tuto situaci. Výchozí implementace odstraní objekt.
 
-##  <a name="restorewaitcursor"></a>CCmdTarget:: RestoreWaitCursor
+## <a name="ccmdtargetrestorewaitcursor"></a><a name="restorewaitcursor"></a>CCmdTarget::RestoreWaitCursor
 
-Voláním této funkce obnovíte vhodný ukazatel na přesýpací hodiny po změně systémového kurzoru (například po otevření okna se zprávou a následném uzavření v průběhu operace s délkou).
+Volání této funkce obnovit odpovídající kurzor přesýpacích hodin po změně kurzoru systému (například po otevření a zavření okna se zprávou, zatímco uprostřed zdlouhavé operace).
 
 ```
 void RestoreWaitCursor();
@@ -524,14 +524,14 @@ void RestoreWaitCursor();
 
 ## <a name="see-also"></a>Viz také
 
-[ACDUAL Sample MFC](../../overview/visual-cpp-samples.md)<br/>
+[Ukázka knihovny MFC ACDUAL](../../overview/visual-cpp-samples.md)<br/>
 [CObject – třída](../../mfc/reference/cobject-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [CCmdUI – třída](../../mfc/reference/ccmdui-class.md)<br/>
 [CDocument – třída](../../mfc/reference/cdocument-class.md)<br/>
-[CDocTemplate – třída](../../mfc/reference/cdoctemplate-class.md)<br/>
+[Třída CDocTemplate](../../mfc/reference/cdoctemplate-class.md)<br/>
 [CWinApp – třída](../../mfc/reference/cwinapp-class.md)<br/>
 [CWnd – třída](../../mfc/reference/cwnd-class.md)<br/>
-[CView – třída](../../mfc/reference/cview-class.md)<br/>
-[CFrameWnd – třída](../../mfc/reference/cframewnd-class.md)<br/>
+[Třída CView](../../mfc/reference/cview-class.md)<br/>
+[Třída CFrameWnd](../../mfc/reference/cframewnd-class.md)<br/>
 [COleDispatchDriver – třída](../../mfc/reference/coledispatchdriver-class.md)

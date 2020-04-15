@@ -1,9 +1,11 @@
 ---
 title: _unlink, _wunlink
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _unlink
 - _wunlink
+- _o__unlink
+- _o__wunlink
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -35,16 +38,16 @@ helpviewer_keywords:
 - files [C++], removing
 - _tunlink function
 ms.assetid: 5e4f5f1b-1e99-4391-9b18-9ac63c32fae8
-ms.openlocfilehash: 878a1b4aa009bc8528dfac1908ed26c7e3b269ae
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: ffc1a64c60d41246773d5e262523000355b0de3b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957395"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81361264"
 ---
 # <a name="_unlink-_wunlink"></a>_unlink, _wunlink
 
-Odstraní soubor.
+Odstraňte soubor.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -59,22 +62,24 @@ int _wunlink(
 
 ### <a name="parameters"></a>Parametry
 
-*Bitmap*<br/>
-Název souboru, který se má odebrat
+*Název_souboru*<br/>
+Název souboru, který chcete odebrat.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Každá z těchto funkcí vrátí 0, pokud bylo úspěšné. V opačném případě funkce vrátí hodnotu-1 a nastaví **errno** na **EACCES**, což znamená, že cesta Určuje soubor, který je jen pro čtení, nebo adresář, nebo na **ENOENT**, což znamená, že soubor nebo cestu nenaleznou.
+Každá z těchto funkcí vrátí 0 v případě úspěchu. V opačném případě funkce vrátí -1 a nastaví **errno** na **EACCES**, což znamená, že cesta určuje soubor jen pro čtení nebo adresář nebo **ENOENT**, což znamená, že soubor nebo cesta nebyla nalezena.
 
-Další informace o těchto a dalších návratových kódech naleznete v tématech [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) .
+Další informace o těchto a dalších návratových kódech naleznete v [_doserrno, errno, _sys_errlist a _sys_nerr.](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce **_unlink** odstraní soubor určený parametrem *filename*. **_wunlink** je **_unlink**verze s velkým znakem; Argument *filename* pro **_wunlink** je řetězec s velkým znakem. Tyto funkce se chovají identicky jinak.
+Funkce **_unlink** odstraní soubor určený *názvem souboru*. **_wunlink** je širokoznaková verze **_unlink**; argument *název souboru,* který **má _wunlink,** je řetězec s širokým znakem. Tyto funkce se chovají stejně jinak.
+
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE & _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE & _MBCS není definováno|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tunlink**|**_unlink**|**_unlink**|**_wunlink**|
 
@@ -82,14 +87,14 @@ Funkce **_unlink** odstraní soubor určený parametrem *filename*. **_wunlink**
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_unlink**|\<IO. h > a \<stdio. h >|
-|**_wunlink**|\<IO. h > nebo \<WCHAR. h >|
+|**_unlink**|\<io.h> \<a stdio.h>|
+|**_wunlink**|\<io.h> \<nebo wchar.h>|
 
-Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="code-example"></a>Příklad kódu
 
-Tento program používá _unlink k odstranění CRT_UNLINK. TXT.
+Tento program používá _unlink k odstranění CRT_UNLINK. Txt.
 
 ```C
 // crt_unlink.c
@@ -105,7 +110,7 @@ int main( void )
 }
 ```
 
-### <a name="input-crt_unlinktxt"></a>Vstup: crt_unlink. txt
+### <a name="input-crt_unlinktxt"></a>Vstup: crt_unlink.txt
 
 ```Input
 This file will be deleted.
@@ -117,7 +122,7 @@ This file will be deleted.
 Deleted 'CRT_UNLINK.TXT'
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Zpracování souborů](../../c-runtime-library/file-handling.md)<br/>
 [_close](close.md)<br/>

@@ -1,5 +1,5 @@
 ---
-title: '&lt;shared_mutex &gt;'
+title: '&lt;shared_mutex&gt;'
 ms.date: 03/27/2019
 f1_keywords:
 - <shared_mutex>
@@ -45,28 +45,28 @@ f1_keywords:
 - shared_mutex/std::shared_timed_mutex::try_lock_shared_until
 - shared_mutex/std::shared_timed_mutex::unlock_shared
 ms.assetid: 0b37a97d-ee5d-4050-b29f-09db9f76beb3
-ms.openlocfilehash: bd5df2917d377e7bc119d1aa85a32c4d5149c305
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 5dfb0e858bb412daf159ee9efc7dcc13be690886
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72686438"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81336730"
 ---
-# <a name="ltshared_mutex"></a>&lt;shared_mutex >
+# <a name="ltshared_mutex"></a>&lt;shared_mutex>
 
-Hlavička &lt;shared_mutex > poskytuje prvky synchronizace pro ochranu sdílených dat, ke kterým může být přistupovaná více vlákny. Kromě výhradního řízení přístupu, které poskytuje třídy mutex, sdílené třídy Mutex také umožňují sdílení vlastnictví více vlákny pro nevýhradní přístup. Sdílené mutexy lze použít k řízení prostředků, které mohou být čteny několika vlákny, aniž by došlo ke konfliktu časování, ale musí být zapsány výhradně jediným vláknem.
+Záhlaví &lt;shared_mutex> poskytuje synchronizační primitiva pro ochranu sdílených dat, ke kterým lze přistupovat více vlákny. Kromě výhradní řízení přístupu poskytované mutex třídy sdílené mutex třídy také umožňují sdílené vlastnictví více vláken pro nevýhradní přístup. Sdílené objekty mutex lze použít k řízení prostředků, které lze číst v několika vláknech bez vyvolání spor, ale musí být zapsány výhradně jedním vláknem.
 
-Hlavička &lt;shared_mutex > definuje třídy `shared_mutex` a `shared_timed_mutex`, šablonu třídy `shared_lock` a funkci šablony `swap` pro sdílenou podporu mutex.
+&lt;Záhlaví shared_mutex> definuje `shared_mutex` třídy a `shared_timed_mutex` `shared_lock`, šablonu `swap` třídy a funkci šablony pro podporu sdíleného objektu mutex.
 
 |Třídy|Popis|
 |-------------|-----------------|
-|[shared_mutex – třída](#class_shared_mutex)|Sdílený typ mutex, který může být uzamčen výhradně jedním agentem nebo sdíleným neexkluzivně pomocí více agentů.|
-|[shared_timed_mutex – třída](#class_shared_timed_mutex)|Sdílený typ objektu mutex, který může být uzamčen výhradně jedním agentem nebo sdíleným neexkluzivně pomocí více agentů.|
-|[shared_lock – třída](#class_shared_lock)|Šablona třídy, která zabalí sdílený mutex, aby podporovala operace s vypršenou zámkou a neexkluzivní sdílení více agentů.|
+|[shared_mutex třída](#class_shared_mutex)|Sdílený typ mutex, který může být uzamčen výhradně jedním agentem nebo sdílen nevýhradně více agenty.|
+|[shared_timed_mutex třída](#class_shared_timed_mutex)|Sdílený časovaný typ mutex, který může být uzamčen výhradně jedním agentem nebo sdílen nevýhradně více agenty.|
+|[shared_lock třída](#class_shared_lock)|Šablona třídy, která zabalí sdílený objekt mutex pro podporu operací uzamčení načasované hodu a nevýhradní sdílení více agenty.|
 
-|Funkce|Popis|
+|Functions|Popis|
 |---------------|-----------------|
-|[adresu](#function_swap)|Zamění obsah sdílených objektů mutex, na které odkazují parametry funkce.|
+|[Swap](#function_swap)|Zamění obsah sdílených objektů mutex, na které odkazují parametry funkce.|
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -83,34 +83,34 @@ void swap(shared_lock<Mutex>& x, shared_lock<Mutex>& y) noexcept;
 
 ## <a name="remarks"></a>Poznámky
 
-Instance `shared_mutex` třídy je *sdílený typ mutex*, což je typ, který řídí sdílené vlastnictví mutex v rámci oboru. Sdílený typ mutex splňuje všechny požadavky typu mutex a také členy pro podporu sdíleného nevýhradního vlastnictví.
+Instance třídy `shared_mutex` je *sdílený typ mutex*, typ, který řídí sdílené vlastnictví mutex v rámci oboru. Sdílený typ mutex splňuje všechny požadavky typu mutex, stejně jako členy pro podporu sdíleného nevýhradního vlastnictví.
 
-Sdílený typ mutex podporuje další metody `lock_shared`, `unlock_shared` a `try_lock_shared`:
+Sdílený typ mutex podporuje `lock_shared`další `unlock_shared`metody `try_lock_shared`, a :
 
-- Metoda `lock_shared` blokuje volající vlákno, dokud vlákno nezíská sdílené vlastnictví mutexu.
+- Metoda `lock_shared` blokuje volající vlákno, dokud vlákno získá sdílené vlastnictví mutex.
 
-- Metoda `unlock_shared` uvolní sdílené vlastnictví mutexu uloženého volajícím vláknem.
+- Metoda `unlock_shared` uvolní sdílené vlastnictví mutex držené volající vlákno.
 
-- Metoda `try_lock_shared` se pokusí získat sdílené vlastnictví mutexu bez blokování. Jeho návratový typ je převoditelný na **bool** a má **hodnotu true** , pokud metoda získá vlastnictví, ale je v opačném případě **false**.
+- Metoda `try_lock_shared` se pokusí získat sdílené vlastnictví mutex bez blokování. Jeho návratový typ je převoditelný na **bool** a **je true,** pokud metoda získá vlastnictví, ale je jinak **false**.
 
-@No__t_0 třídy je *sdílený typ nesdíleného objektu mutex*, typ, který splňuje požadavky sdíleného typu mutex i časovaného typu mutex.
+Třída `shared_timed_mutex` je *sdílený časovaný typ mutex*, typ, který splňuje požadavky typu sdílenému objektu mutex a časovanému mutexu.
 
-Sdílený typ objektu mutex s časovým limitem podporuje další metody `try_lock_shared_for` a `try_lock_shared_until`:
+Sdílený typ mutex s časem `try_lock_shared_for` `try_lock_shared_until`podporuje další metody a :
 
-- Metoda `try_lock_shared_for` se pokusí získat sdílené vlastnictví mutexu, dokud neuplyne doba zadaná parametrem. Pokud doba trvání není kladná, je metoda ekvivalentní `try_lock_shared`. Metoda se nevrátí v zadané době trvání, pokud se nezíská sdílené vlastnictví. Vrácená hodnota je **true** , pokud metoda získá vlastnictví, ale je v opačném případě **false**.
+- Metoda `try_lock_shared_for` se pokusí získat sdílené vlastnictví mutex, dokud neuplyne doba trvání určená parametrem. Pokud doba trvání není kladná, `try_lock_shared`metoda je ekvivalentní . Metoda se nevrátí v rámci zadané doby trvání, pokud je získáno sdílené vlastnictví. Jeho vrácená hodnota je **true,** pokud metoda získá vlastnictví, ale je jinak **false**.
 
-- Metoda `try_lock_shared_until` se pokusí získat sdílené vlastnictví mutexu, dokud neuplyne zadaný absolutní čas. Pokud již zadaný čas uplynul, je metoda ekvivalentní `try_lock_shared`. Metoda se nevrátí před zadanou dobu, pokud se nezíská sdílené vlastnictví. Vrácená hodnota je **true** , pokud metoda získá vlastnictví, ale je v opačném případě **false**.
+- Metoda `try_lock_shared_until` se pokusí získat sdílené vlastnictví mutex, dokud neuplyne zadaný absolutní čas. Pokud již uplynul zadaný čas, je `try_lock_shared`metoda ekvivalentní . Metoda nevrátí před čas emitovat, pokud sdílené vlastnictví je získán. Jeho vrácená hodnota je **true,** pokud metoda získá vlastnictví, ale je jinak **false**.
 
-Šablona třídy `shared_lock` rozšiřuje podporu pro časované uzamykání a přenos vlastnictví na sdílený mutex. Vlastnictví mutexu lze získat na nebo po konstrukci a lze je přenést do jiného objektu `shared_lock`. Objekty typu `shared_lock` lze přesunout, ale nikoli kopírovat.
+Šablona `shared_lock` třídy rozšiřuje podporu pro časované uzamčení a převod vlastnictví na sdílený objekt mutex. Vlastnictví mutexu lze získat při výstavbě nebo po ní `shared_lock` a může být převedeno na jiný objekt. Objekty `shared_lock` typu lze přesunout, ale ne kopírovat.
 
 > [!WARNING]
-> Počínaje verzí Visual Studio 2015 jsou C++ standardní typy synchronizace knihovny založené na prostředích synchronizace systému Windows a již nepoužívají ConcRT (s výjimkou případů, kdy je cílová platforma Windows XP). Typy definované v &lt;shared_mutex > by neměly být použity s žádnými ConcRT typy ani funkcemi.
+> Počínaje Visual Studio 2015, C++ Standardní knihovna typy synchronizace jsou založeny na synchronizaci systému Windows primitiv a již používat ConcRT (s výjimkou případů, kdy cílová platforma je Windows XP). Typy definované &lt;v shared_mutex> by neměly být používány s žádnými typy nebo funkcemi ConcRT.
 
 ## <a name="classes"></a>Třídy
 
-###  <a name="class_shared_mutex"></a>shared_mutex – třída
+### <a name="shared_mutex-class"></a><a name="class_shared_mutex"></a>shared_mutex třída
 
-Třída `shared_mutex` implementuje nerekurzivní mutex se sémantikou sdíleného vlastnictví.
+Třída `shared_mutex` implementuje nerekurzivní objekt mutex se sémantikou sdíleného vlastnictví.
 
 ```cpp
 class shared_mutex {
@@ -135,9 +135,9 @@ public:
    };
 ```
 
-###  <a name="class_shared_timed_mutex"></a>shared_timed_mutex – třída
+### <a name="shared_timed_mutex-class"></a><a name="class_shared_timed_mutex"></a>shared_timed_mutex třída
 
-Třída `shared_timed_mutex` implementuje nerekurzivní mutex se sémantikou sdíleného vlastnictví, která splňuje požadavky typu s časovým rozhraním mutex.
+Třída `shared_timed_mutex` implementuje nerekurzivní objekt mutex se sémantikou sdíleného vlastnictví, která splňuje požadavky na časovaný typ mutex.
 
 ```cpp
 class shared_timed_mutex {
@@ -167,9 +167,9 @@ public:
    };
 ```
 
-###  <a name="class_shared_lock"></a>shared_lock – třída
+### <a name="shared_lock-class"></a><a name="class_shared_lock"></a>shared_lock třída
 
-Šablona třídy `shared_lock` řídí sdílené vlastnictví sdíleného objektu mutex v rámci oboru. Parametr šablony musí být sdílený typ mutex.
+Šablona `shared_lock` třídy řídí sdílené vlastnictví sdíleného objektu mutex v rámci oboru. Parametr šablony musí být sdílený typ mutex.
 
 ```cpp
 class shared_lock {
@@ -213,9 +213,9 @@ private:
    };
 ```
 
-## <a name="functions"></a>Funkce
+## <a name="functions"></a>Functions
 
-###  <a name="function_swap"></a>adresu
+### <a name="swap"></a><a name="function_swap"></a>Swap
 
 Zamění `shared_lock` objekty.
 
@@ -224,15 +224,15 @@ template <class Mutex>
 void swap(shared_lock<Mutex>& x, shared_lock<Mutex>& y) noexcept;
 ```
 
-Vyměňuje obsah dvou `shared_lock` objektů. Efektivně stejné jako `x.swap(y)`.
+Vymění obsah `shared_lock` dvou objektů. Účinně stejné jako `x.swap(y)`.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** &lt;shared_mutex >
+**Záhlaví:** &lt;shared_mutex>
 
 **Obor názvů:** std
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-@No__t_1 [referenčních souborů hlaviček](../standard-library/cpp-standard-library-header-files.md)
-[&lt;mutex >](../standard-library/mutex.md)
+[Odkaz na soubory záhlaví](../standard-library/cpp-standard-library-header-files.md)\
+[&lt;>mutex](../standard-library/mutex.md)

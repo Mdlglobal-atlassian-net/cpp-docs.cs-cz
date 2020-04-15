@@ -1,10 +1,13 @@
 ---
 title: log2, log2f, log2l
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - log2
 - log2l
 - log2f
+- _o_log2
+- _o_log2f
+- _o_log2l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,21 +20,22 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
 - apiref
 ms.assetid: 94d11b38-70b7-4d3a-94ac-523153c92b2e
-ms.openlocfilehash: bf1734ea2f96fa1c09b3b0d1f43b681fc31c8f9f
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 29a1a9e2003091944a4587036c62a49d76333080
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953158"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81341723"
 ---
 # <a name="log2-log2f-log2l"></a>log2, log2f, log2l
 
-Určuje dvojkový logaritmus (dekadický-2) zadané hodnoty.
+Určuje binární (base-2) logaritmus zadané hodnoty.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -59,40 +63,42 @@ long double log2l(
 
 ### <a name="parameters"></a>Parametry
 
-*x*<br/>
-Hodnota, která určuje logaritmus o základu 2.
+*X*<br/>
+Hodnota k určení logaritmu základní 2.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Po úspěšném návratu vrátí log2 – *x*.
+Při úspěchu vrátí vrátí log2 *x*.
 
-V opačném případě může vracet jednu z následujících hodnot:
+V opačném případě může vrátit jednu z následujících hodnot:
 
-|Problém|vrátit|
+|Problém|Vrátit|
 |-----------|------------|
-|*x* < 0|NaN|
-|*x* = ±0|– NEKONEČNO|
+|*x* < 0|Není číslo|
+|*x* = ±0|-NEKONEČNO|
 |*x* = 1|+0|
-|\+ NEKONEČNO|\+ NEKONEČNO|
-|NaN|NaN|
-|Chyba domény|NaN|
-|Chyba pole|-HUGE_VAL,-HUGE_VALF nebo-HUGE_VALL|
+|+NEKONEČNO|+NEKONEČNO|
+|Není číslo|Není číslo|
+|chyba domény|Není číslo|
+|pole chyba|-HUGE_VAL, -HUGE_VALF nebo -HUGE_VALL|
 
-Chyby jsou hlášeny podle zadání v [_matherr](matherr.md).
+Chyby jsou hlášeny podle _matherr [.](matherr.md)
 
 ## <a name="remarks"></a>Poznámky
 
-Pokud x je celé číslo, tato funkce v podstatě vrátí index s nejvýraznějším 1 bitem hodnoty *x*od nuly.
+Pokud x je celé číslo, tato funkce v podstatě vrátí nulový index nejvýznamnější 1 bit *x*.
+
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
-|Funkce|Hlavička jazyka C|C++hlaviček|
+|Funkce|Hlavička C|Hlavička C++|
 |--------------|--------------|------------------|
-|**log2 –** , **log2f –** , **log2l**|\<Math. h >|\<cmath >|
+|**log2**, **log2f**, **log2l**|\<math.h>|\<cmath>|
 
-Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Abecední seznam odkazů na funkce](crt-alphabetical-function-reference.md)<br/>
 [exp2, exp2f, exp2l](exp2-exp2f-exp2l.md)<br/>

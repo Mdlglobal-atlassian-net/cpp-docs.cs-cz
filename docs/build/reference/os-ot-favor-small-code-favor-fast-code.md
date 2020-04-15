@@ -17,16 +17,16 @@ helpviewer_keywords:
 - Os compiler option [C++]
 - -Os compiler option [C++]
 ms.assetid: 9a340806-fa15-4308-892c-355d83cac0f2
-ms.openlocfilehash: 5bbdda07eacdb003515a40a93a232c0f8626ca89
-ms.sourcegitcommit: aed09c9c05e6b031c8a9f87a8d6bbdaf253485e8
+ms.openlocfilehash: 0eda9461b3ef730e0e0a832aa94a688e03c7e1bb
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67412246"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81336178"
 ---
 # <a name="os-ot-favor-small-code-favor-fast-code"></a>/Os, /Ot (Upřednostnit malý kód, upřednostnit rychlý kód)
 
-Minimalizuje nebo maximalizuje velikost souborů exe a DLL.
+Minimalizuje nebo maximalizuje velikost exes a knihovny DLL.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -37,21 +37,21 @@ Minimalizuje nebo maximalizuje velikost souborů exe a DLL.
 
 ## <a name="remarks"></a>Poznámky
 
-**/OS** (upřednostnit malý kód) minimalizuje velikost souborů exe a DLL tím, že kompilátor, aby velikost upřednostnil před rychlostí. Kompilátor může snížit mnoho konstrukcí jazyka C a C++ funkčně podobné pořadí strojového kódu. Tyto rozdíly občas nabízet kompromisy velikost a rychlost. **/Os** a **/Ot** možností vám umožňují určit předvolby pro některého z nich:
+**/Os** (Favor Small Code) minimalizuje velikost EXEs a DLL tím, že dává kompilátoru pokyn, aby upřednostňoval velikost před rychlostí. Kompilátor může snížit mnoho C a C++ konstrukce funkčně podobné sekvence strojového kódu. Občas tyto rozdíly nabízejí kompromisy velikosti versus rychlost. Možnosti **/Os** a **/Ot** umožňují určit předvolbu pro jeden před druhým:
 
-**/Ot** (upřednostnit rychlý kód) maximalizuje rychlost souborů exe a DLL tím, že kompilátor, aby rychlost upřednostnil před velikostí. (Toto je výchozí.) Kompilátor může snížit mnoho konstrukcí jazyka C a C++ funkčně podobné pořadí strojového kódu. Tyto rozdíly v některých případech nabízejí kompromisy velikost a rychlost. **/Ot** předpokládá možnost maximalizovat rychlost ([/O2](o1-o2-minimize-size-maximize-speed.md)) možnost. **/O2** možnost kombinuje několik možností, jak vytvořit velmi rychlý kód.
+**/Ot** (Favor Fast Code) maximalizuje rychlost EXEs a DLL instruováním kompilátoru, aby upřednostňoval rychlost nad velikostí. (Toto je výchozí nastavení.) Kompilátor může snížit mnoho C a C++ konstrukce funkčně podobné sekvence strojového kódu. Občas tyto rozdíly nabízejí kompromisy velikosti versus rychlost. Možnost **/Ot** je implikována volbou Maximalizovat rychlost ([/O2).](o1-o2-minimize-size-maximize-speed.md) Možnost **/O2** kombinuje několik možností pro vytvoření velmi rychlého kódu.
 
-Pokud používáte **/Os** nebo **/Ot**, pak musíte zadat také [/og](og-global-optimizations.md) optimalizovat kód.
-
-> [!NOTE]
->  Informace shromážděné z testovacích běhů profilování přepíšou optimalizace, které by jinak byly v vliv, pokud zadáte **/Ob**, **/Os**, nebo **/Ot**. Další informace najdete [Profile-Guided optimalizace](../profile-guided-optimizations.md).
-
-**x86 konkrétní**
-
-Následující příklad kódu ukazuje rozdíl mezi upřednostnit malý kód ( **/Os**) možnosti a upřednostnit rychlý kód ( **/Ot**) možnost:
+Pokud používáte **/Os** nebo **/Ot**, pak je nutné také zadat [/Og](og-global-optimizations.md) pro optimalizaci kódu.
 
 > [!NOTE]
->  Následující text popisuje očekávaný chování při použití **/Os** nebo **/Ot**. Nicméně chování kompilátoru jednotlivých verzí může vést k jiné optimalizace pro kód uvedený níže.
+> Informace shromážděné z profilování testovacích běhů přepíší optimalizace, které by jinak byly platné, pokud zadáte **/Ob**, **/Os**nebo **/Ot**. Další informace, [optimalizace s asistencí profilu](../profile-guided-optimizations.md).
+
+**x86 Specifické**
+
+Následující ukázkový kód ukazuje rozdíl mezi možnostmi Favor Small Code (**/Os**) a možností Favor Fast Code (**/Ot**) :
+
+> [!NOTE]
+> Následující popisuje očekávané chování při použití **/Os** nebo **/Ot**. Chování kompilátoru od vydání do vydání však může mít za následek různé optimalizace pro níže uvedený kód.
 
 ```
 /* differ.c
@@ -65,14 +65,14 @@ int differ(int x)
 }
 ```
 
-Jak znázorňuje fragment strojového kódu níže, když DIFFER.c je zkompilován pro velikost ( **/OS**), kompilátor implementuje vynásobit výrazu v příkaz return explicitně jako vícenásobně k vytvoření krátkým, ale nižší pořadí kódu:
+Jak je znázorněno v fragmentu strojového kódu níže, když differ.c je kompilován pro velikost (**/Os**), kompilátor implementuje multiply výraz v příkazu return explicitně jako násobit k vytvoření krátké, ale pomalejší sekvence kódu:
 
 ```
 mov    eax, DWORD PTR _x$[ebp]
 imul   eax, 71                  ; 00000047H
 ```
 
-Alternativně, pokud je DIFFER.c zkompiluje pro vyšší rychlost ( **/Ot**), kompilátor implementuje vynásobit výrazu v návratový příkaz jako řadu objektů shift a `LEA` pokyny k vytvoření rychlé, ale delší posloupnost kódu:
+Alternativně při DIFFER.c je kompilován pro rychlost (**/Ot**), kompilátor implementuje `LEA` multiply výraz v příkazu return jako řadu shift a pokyny k vytvoření rychlé, ale delší posloupnost kódu:
 
 ```
 mov    eax, DWORD PTR _x$[ebp]
@@ -82,24 +82,24 @@ lea    eax, DWORD PTR [eax+eax*8]
 sub    eax, ecx
 ```
 
-**END x86 konkrétní**
+**SPECIFICKÉ PRO END x86**
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
 
-1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
+1. Otevřete dialogové okno **Stránky vlastností** projektu. Podrobnosti naleznete v [tématu Nastavení kompilátoru jazyka C++ a vlastnosti sestavení v sadě Visual Studio](../working-with-project-properties.md).
 
-1. Klikněte na tlačítko **C/C++** složky.
+1. Klikněte na složku **C/C++.**
 
-1. Klikněte na tlačítko **optimalizace** stránku vlastností.
+1. Klikněte na stránku **vlastností Optimalizace.**
 
-1. Upravit **upřednostnit velikost nebo rychlost** vlastnost.
+1. Upravte vlastnost **Velikost nebo rychlost laskavosti.**
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru
 
-- Viz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.FavorSizeOrSpeed%2A>.
+- Viz třída <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.FavorSizeOrSpeed%2A>.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[/O – možnosti (optimalizace kódu)](o-options-optimize-code.md)<br/>
+[/O možnosti (optimalizace kódu)](o-options-optimize-code.md)<br/>
 [Parametry kompilátoru MSVC](compiler-options.md)<br/>
 [Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)

@@ -1,10 +1,13 @@
 ---
 title: lgamma, lgammaf, lgammal
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - lgamma
 - lgammaf
 - lgammal
+- _o_lgamma
+- _o_lgammaf
+- _o_lgammal
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -33,16 +37,16 @@ helpviewer_keywords:
 - lgammal function
 - lgammaf function
 ms.assetid: 6e326c58-7077-481a-a329-c82ae56ae9e6
-ms.openlocfilehash: 9baf8f0fefb50cea6a5301aac9ffd48ff3cd5bde
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: e2bdfbeac7b995be0b589156437a3ded39114adf
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953373"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81342165"
 ---
 # <a name="lgamma-lgammaf-lgammal"></a>lgamma, lgammaf, lgammal
 
-Určuje přirozený logaritmus absolutní hodnoty funkce gamma zadané hodnoty.
+Určuje přirozený logaritmus absolutní hodnoty funkce gama zadané hodnoty.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -59,39 +63,41 @@ long double lgamma( long double x ); //C++ only
 
 ### <a name="parameters"></a>Parametry
 
-*x*<br/>
-Hodnota, která se má vypočítat
+*X*<br/>
+Hodnota pro výpočet.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-V případě úspěchu vrátí přirozený logaritmus absolutní hodnoty funkce gamma *x*.
+V případě úspěchu vraťte přirozený logaritmus absolutní hodnoty funkce gama *x*.
 
-|Problém|vrátit|
+|Problém|Vrátit|
 |-----------|------------|
-|*x* = NaN|NaN|
-|*x* = ±0|\+ NEKONEČNO|
-|*x*= záporné celé číslo|\+ NEKONEČNO|
-|± NEKONEČNO|\+ NEKONEČNO|
-|Chyba pole|\+ HUGE_VAL, + HUGE_VALF nebo + HUGE_VALL|
-|Chyba rozsahu přetečení|± HUGE_VAL, ± HUGE_VALF nebo ± HUGE_VALL|
+|*x* = NaN|Není číslo|
+|*x* = ±0|+NEKONEČNO|
+|*x*= záporné celé číslo|+NEKONEČNO|
+|±NEKONEČNO|+NEKONEČNO|
+|pole chyba|+HUGE_VAL, +HUGE_VALF nebo +HUGE_VALL|
+|chyba rozsahu přetečení|±HUGE_VAL, ±HUGE_VALF nebo ±HUGE_VALL|
 
-Chyby jsou hlášeny podle zadání v [_matherr](matherr.md).
+Chyby jsou hlášeny podle _matherr [.](matherr.md)
 
 ## <a name="remarks"></a>Poznámky
 
-Vzhledem C++ k tomu, že umožňuje přetížení, můžete volat přetížení **lgamma –** , která přijímají a vracejí typ **float** a **Long** **Double** . V programu v jazyce C **lgamma –** vždycky přebírá a vrací **Double**.
+Protože C++ umožňuje přetížení, můžete volat přetížení **lgamma,** které take a return **float** a **long** **double** typy. V programu C **lgamma** vždy trvá a vrací **double**.
 
-Pokud x je racionální číslo, vrátí tato funkce logaritmus faktoriál (x-1).
+Pokud x je racionální číslo, tato funkce vrátí logaritmus faktoriálu (x - 1).
+
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
-|Funkce|Hlavička jazyka C|C++hlaviček|
+|Funkce|Hlavička C|Hlavička C++|
 |--------------|--------------|------------------|
-|**lgamma –** , **lgammaf –** , **lgammal**|\<Math. h >|\<cmath >|
+|**lgamma**, **lgammaf**, **lgammální**|\<math.h>|\<cmath>|
 
-Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Abecední seznam odkazů na funkce](crt-alphabetical-function-reference.md)<br/>
 [tgamma, tgammaf, tgammal](tgamma-tgammaf-tgammal.md)<br/>

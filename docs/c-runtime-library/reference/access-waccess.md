@@ -1,9 +1,11 @@
 ---
 title: _access, _waccess
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _access
 - _waccess
+- _o__access
+- _o__waccess
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -34,16 +37,16 @@ helpviewer_keywords:
 - _waccess function
 - taccess function
 ms.assetid: ba34f745-85c3-49e5-a7d4-3590bd249dd3
-ms.openlocfilehash: 54e112db1e0d7d4ec5495d02cf56a62b51607140
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 98726726e14aacec75ed99adfa33016b40affd17
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80170381"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81350864"
 ---
 # <a name="_access-_waccess"></a>_access, _waccess
 
-Určuje, zda je soubor určen jen pro čtení, nebo ne. K dispozici jsou bezpečnější verze; viz [_access_s, _waccess_s](access-s-waccess-s.md).
+Určuje, zda je soubor jen pro čtení nebo ne. K dispozici jsou bezpečnější verze. viz [_access_s, _waccess_s](access-s-waccess-s.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -60,40 +63,42 @@ int _waccess(
 
 ### <a name="parameters"></a>Parametry
 
-*dílčí*<br/>
+*Cestu*<br/>
 Cesta k souboru nebo adresáři.
 
-*Mode*<br/>
+*Režimu*<br/>
 Atribut pro čtení a zápis.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Každá funkce vrátí hodnotu 0, pokud soubor má daný režim. Funkce vrátí hodnotu-1, pokud pojmenovaný soubor neexistuje nebo nemá daný režim; v tomto případě je `errno` nastaveno, jak je uvedeno v následující tabulce.
+Každá funkce vrátí hodnotu 0, pokud má soubor daný režim. Funkce vrátí -1, pokud pojmenovaný soubor neexistuje nebo nemá daný režim; v tomto `errno` případě je nastavena tak, jak je uvedeno v následující tabulce.
 
 |||
 |-|-|
-`EACCES`|Přístup byl odepřen: nastavení oprávnění souboru nepovoluje zadaný přístup.
+`EACCES`|Přístup byl odepřen: Nastavení oprávnění souboru neumožňuje určený přístup.
 `ENOENT`|Název souboru nebo cesta nebyla nalezena.
-`EINVAL`|Neplatný parametr
+`EINVAL`|Neplatný parametr.
 
-Další informace o těchto a dalších návratových kódech naleznete v tématu [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Další informace o těchto a dalších návratových kódech naleznete [v tématech _doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Poznámky
 
-Při použití se soubory funkce **_access** určuje, zda zadaný soubor nebo adresář existuje a má atributy určené hodnotou *Mode*. Při použití s adresáři **_access** určuje pouze to, zda existuje zadaný adresář. ve Windows 2000 a novějších operačních systémech mají všechny adresáře přístup pro čtení a zápis.
+Při použití se soubory **_access** funkce určuje, zda zadaný soubor nebo adresář existuje a má atributy určené hodnotou *režimu*. Při použití s adresáři **_access** určuje pouze, zda zadaný adresář existuje; V operačních systémech Windows 2000 a novějších mají všechny adresáře přístup pro čtení a zápis.
 
-|hodnota *režimu*|Kontroluje soubor pro|
+|hodnota *režimu*|Zkontroluje, zda soubor obsahuje|
 |------------------|---------------------|
 |00|Pouze existence|
-|02|Jen pro zápis|
+|02|Pouze pro zápis|
 |04|Jen pro čtení|
 |06|Čtení a zápis|
 
-Tato funkce pouze kontroluje, zda je soubor a adresář jen pro čtení, nebo ne, nekontroluje nastavení zabezpečení systému souborů. Potřebujete přístupový token. Další informace o zabezpečení systému souborů najdete v tématu [přístupové tokeny](/windows/win32/SecAuthZ/access-tokens). Pro poskytnutí této funkce existuje třída ATL. viz [Třída CAccessToken](../../atl/reference/caccesstoken-class.md).
+Tato funkce pouze kontroluje, zda soubor a adresář jsou jen pro čtení nebo ne, nekontroluje nastavení zabezpečení souborového systému. K tomu potřebujete přístupový token. Další informace o zabezpečení souborového systému naleznete [v tématu Access Tokens](/windows/win32/SecAuthZ/access-tokens). Existuje třída ATL, která poskytuje tuto funkci; viz [CAccessToken Class](../../atl/reference/caccesstoken-class.md).
 
-**_waccess** je verze **_access**s velkým znakem; Argument *cesty* pro **_waccess** je řetězec s velkým znakem. **_waccess** a **_access** se chovají identicky jinak.
+**_waccess** je širokoznaková verze **_access**; argument *cesty* k **_waccess** je řetězec s širokým znakem. **_waccess** a **_access** se chovají stejně jinak.
 
-Tato funkce ověří své parametry. Pokud je *cesta* null nebo *režim* neurčuje platný režim, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, funkce nastaví `errno` `EINVAL` a vrátí-1.
+Tato funkce ověřuje její parametry. Pokud je *cesta* NULL nebo *režim* neurčuje platný režim, je vyvolána neplatná obslužná rutina parametru, jak je popsáno v [části Ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je povoleno spuštění pokračovat, `errno` `EINVAL` funkce nastaví a vrátí -1.
+
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
@@ -103,14 +108,14 @@ Tato funkce ověří své parametry. Pokud je *cesta* null nebo *režim* neurču
 
 ## <a name="requirements"></a>Požadavky
 
-|Rutina|Požadovaný hlavičkový soubor|Volitelné hlavičky|
+|Rutina|Požadovaný hlavičkový soubor|Volitelná záhlaví|
 |-------------|---------------------|----------------------|
-|**_access**|\<IO. h >|\<errno. h >|
-|**_waccess**|\<WCHAR. h > nebo \<IO. h >|\<errno. h >|
+|**_access**|\<io.h>|\<errno.h>|
+|**_waccess**|\<wchar.h> \<nebo io.h>|\<errno.h>|
 
 ## <a name="example"></a>Příklad
 
-Následující příklad používá **_access** ke kontrole souboru s názvem crt_ACCESS. C pro zjištění, zda existuje a zda je zápis povolen.
+Následující příklad používá **_access** ke kontrole souboru s názvem crt_ACCESS. C zjistit, zda existuje a zda je povoleno psaní.
 
 ```C
 // crt_access.c

@@ -1,8 +1,9 @@
 ---
 title: _get_timezone
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _get_timezone
+- _o__get_timezone
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -27,16 +29,16 @@ helpviewer_keywords:
 - get_timezone function
 - _get_timezone function
 ms.assetid: 30ab0838-0ae9-4a2f-bfe6-a49ee443b21e
-ms.openlocfilehash: cf77ca21383bcae6919b6c1d00b99c082ef99919
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 94dfae1aaaddf9c545af4309d3ddc62a0bcb33f6
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70955638"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81344909"
 ---
 # <a name="_get_timezone"></a>_get_timezone
 
-Načte rozdíl v sekundách mezi koordinovaným světovým časem (UTC) a místním časem.
+Načte rozdíl v sekundách mezi koordinovaným univerzálním časem (UTC) a místním časem.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -48,18 +50,20 @@ error_t _get_timezone(
 
 ### <a name="parameters"></a>Parametry
 
-*Second*<br/>
-Rozdíl v sekundách mezi časem UTC a místním časem.
+*Sekund*<br/>
+Rozdíl v sekundách mezi UTC a místním časem.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Nula v případě úspěchu nebo **errno** hodnoty, pokud dojde k chybě.
+Nula, pokud je úspěšná, nebo hodnota **errno,** pokud dojde k chybě.
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce **_get_timezone** načítá rozdíl v sekundách mezi časem UTC a místním časem jako celé číslo. Výchozí hodnota je 28 800 sekund, pro Tichomoří (běžný čas) (osm hodin za časem UTC).
+Funkce **_get_timezone** načte rozdíl v sekundách mezi časem UTC a místním časem jako celé číslo. Výchozí hodnota je 28 800 sekund pro tichomořský standardní čas (osm hodin za časem UTC).
 
-Pokud jsou sekundy **null**, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, tato funkce nastaví **errno** na **EINVAL** a vrátí **EINVAL**.
+Pokud je *hodnota 000 000* **000**000 , je vyvolána neplatná obslužná rutina parametru, jak je popsáno v části [Ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je spuštění povoleno pokračovat, tato funkce nastaví **errno** na **EINVAL** a vrátí **Funkce EINVAL**.
+
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
@@ -67,11 +71,11 @@ Pokud jsou sekundy **null**, je vyvolána obslužná rutina neplatného parametr
 |-------------|---------------------|
 |**_get_timezone**|\<time.h>|
 
-Další informace najdete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Správa času](../../c-runtime-library/time-management.md)<br/>
+[Časová správa](../../c-runtime-library/time-management.md)<br/>
 [errno, _doserrno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)<br/>
 [_get_daylight](get-daylight.md)<br/>
 [_get_dstbias](get-dstbias.md)<br/>

@@ -1,6 +1,6 @@
 ---
-title: Výčet TRANSLATION_UNIT_PASS_CODE
-description: Odkaz C++ na výčet TRANSLATION_UNIT_PASS_CODE Build Insights SDK
+title: TRANSLATION_UNIT_PASS_CODE výčtu
+description: C++ Build Insights SDK TRANSLATION_UNIT_PASS_CODE výčtu odkaz.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,33 +9,33 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 1219eed98fd01e8c91d8750977e2d8ca4498d649
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: b0162d7e53bb7ee7035b94a6b640f6db87cd8b8d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78333578"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81325293"
 ---
-# <a name="translation_unit_pass_code-enum"></a>Výčet TRANSLATION_UNIT_PASS_CODE
+# <a name="translation_unit_pass_code-enum"></a>TRANSLATION_UNIT_PASS_CODE výčtu
 
 ::: moniker range="<=vs-2015"
 
-Sada C++ SDK pro Build Insights je kompatibilní se sadou Visual Studio 2017 a novější. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek selektor verzí sady Visual Studio pro tento článek na sadu Visual Studio 2017 nebo Visual Studio 2019.
+Sada C++ Build Insights SDK je kompatibilní s Visual Studio 2017 a vyšší. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek pro výběr **verze** sady Visual Studio pro tento článek na Visual Studio 2017 nebo Visual Studio 2019. Nachází se v horní části obsahu na této stránce.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Výčet `TRANSLATION_UNIT_PASS_CODE`.
+Výčet. `TRANSLATION_UNIT_PASS_CODE`
 
 ## <a name="members"></a>Členové
 
-| Název | Hodnota | Popis |
+| Name (Název) | Hodnota | Popis |
 |--|--|--|
-| `TRANSLATION_UNIT_PASS_CODE_FRONT_END` | 0 (0x00000000) | Front-end průchod, který zodpovídá za analýzu zdrojového kódu a převádí ho do zprostředkujícího jazyka. |
-| `TRANSLATION_UNIT_PASS_CODE_BACK_END` | 1 (0x00000001) | Back-endové průchod, zodpovídá za optimalizaci zprostředkujícího jazyka a jeho převádění do strojového kódu. |
+| `TRANSLATION_UNIT_PASS_CODE_FRONT_END` | 0 (0x00000000) | Front-end pass, zodpovědný za analýzu zdrojového kódu a jeho převod na zprostředkující jazyk. |
+| `TRANSLATION_UNIT_PASS_CODE_BACK_END` | 1 (0x00000001) | Back-end pass, zodpovědný za optimalizaci zprostředkující jazyk a jeho převod na strojový kód. |
 
 ## <a name="remarks"></a>Poznámky
 
-Používáno funkcemi sady C SDK.
+Používá funkce C SDK.
 
 ::: moniker-end

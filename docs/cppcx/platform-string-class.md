@@ -1,5 +1,5 @@
 ---
-title: 'Platform:: String – Třída'
+title: Platforma::Třída řetězce
 ms.date: 10/16/2019
 ms.topic: reference
 f1_keywords:
@@ -19,16 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::String
 ms.assetid: 72dd04a4-a694-40d3-b899-eaa0b503eab8
-ms.openlocfilehash: 3c8c179c416ca744cace26cff3def0829f425664
-ms.sourcegitcommit: 8178d22701047d24f69f10d01ba37490e3d67241
+ms.openlocfilehash: 3f29c60d0d6a4618d97d8f750a048fcc18f976b5
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72587922"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81322117"
 ---
-# <a name="platformstring-class"></a>Platform:: String – Třída
+# <a name="platformstring-class"></a>Platforma::Třída řetězce
 
-Představuje sekvenční kolekci znaků Unicode, která se používá k reprezentaci textu. Další informace a příklady naleznete v tématu [strings](../cppcx/strings-c-cx.md).
+Představuje sekvenční kolekci znaků Unicode, která se používá k reprezentaci textu. Další informace a příklady naleznete v tématu [Řetězce](../cppcx/strings-c-cx.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,68 +41,68 @@ public ref class String sealed : Object,
 
 ## <a name="iterators"></a>Iterátory
 
-Dvě funkce iterátoru, které nejsou členy třídy String, lze použít s funkcí šablony `std::for_each` pro zobrazení výčtu znaků v objektu String.
+Dvě iterátorové funkce, které nejsou členy třídy String, `std::for_each` lze použít s funkcí šablony k vytvoření výčtu znaků znaků v objektu String.
 
 |Člen|Popis|
 |------------|-----------------|
-|`const char16* begin(String^ s)`|Vrátí ukazatel na začátek zadaného objektu řetězce.|
-|`const char16* end(String^ s)`|Vrátí ukazatel za konec zadaného objektu řetězce.|
+|`const char16* begin(String^ s)`|Vrátí ukazatel na začátek zadaného objektu String.|
+|`const char16* end(String^ s)`|Vrátí ukazatel za konec zadaného objektu String.|
 
-### <a name="members"></a>Členové
+## <a name="members"></a>Členové
 
-Třída String dědí z objektu a rozhraní IDisposable, IEquatable a IPrintable.
+String třída dědí z Object a IDisposable, IEquatable a IPrintable rozhraní.
 
 Třída String má také následující typy členů.
 
-**Konstruktory**
+### <a name="constructors"></a>Konstruktory
 
 |Člen|Popis|
 |------------|-----------------|
-|[String:: String](#ctor)|Inicializuje novou instanci třídy String.|
+|[Řetězec::Řetězec](#ctor)|Inicializuje novou instanci třídy String.|
 
-**Metody**
+### <a name="methods"></a>Metody
 
-Třída String dědí metody Equals (), Finalize (), GetHashCode (), GetType (), MemberwiseClose () a ToString () z [třídy Platform:: Object](../cppcx/platform-object-class.md). Řetězec má také následující metody.
+Třída String zdědí metody Equals(), Finalize(), GetHashCode(), GetType(), MemberwiseClose(), a ToString() z [třídy Platform::Object .](../cppcx/platform-object-class.md) Řetězec má také následující metody.
 
 |Metoda|Popis|
 |------------|-----------------|
-|[Řetězec:: begin](#begin)|Vrátí ukazatel na začátek aktuálního řetězce.|
-|[Řetězec:: CompareOrdinal](#compareordinal)|Porovná dva `String` objekty vyhodnocením číselných hodnot odpovídajících znaků ve dvou řetězcových hodnotách reprezentovaných objekty.|
-|[Řetězec:: Concat](#concat)|Zřetězí hodnoty dvou řetězcových objektů.|
-|[Řetězec::D ATA](#data)|Vrátí ukazatel na začátek aktuálního řetězce.|
-|[Řetězec::D pozice](#dispose)|Uvolňuje nebo uvolňuje prostředky.|
-|[Řetězec:: end](#end)|Vrátí ukazatel za konec aktuálního řetězce.|
-|[String:: Equals](#equals)|Označuje, zda je zadaný objekt stejný jako aktuální objekt.|
-|[Řetězec:: GetHashCode](#gethashcode)|Vrátí kód hash této instance.|
-|[String::-Empty](#isempty)|Určuje, zda je aktuální objekt řetězce prázdný.|
-|[Řetězec:: IsFastPass](#isfastpass)|Určuje, zda je aktuální objekt řetězce zapojen do operace *rychlá operace Pass* . V operaci rychlého předání je počítání odkazů pozastaveno.|
-|[String:: Length](#length)|Načte délku aktuálního objektu řetězce.|
-|[String:: ToString](#tostring)|Vrátí objekt typu String, jehož hodnota je shodná s aktuálním řetězcem.|
+|[Řetězec::Začátek](#begin)|Vrátí ukazatel na začátek aktuálního řetězce.|
+|[Řetězec::PorovnatOrdinální](#compareordinal)|Porovná dva `String` objekty vyhodnocením číselných hodnot odpovídajících znaků ve dvou řetězcových hodnotách reprezentovanéobjekty.|
+|[Řetězec::Concat](#concat)|Zřetězí hodnoty dvou objektů String.|
+|[Řetězec::Data](#data)|Vrátí ukazatel na začátek aktuálního řetězce.|
+|[Řetězec::Dispose](#dispose)|Uvolní nebo uvolní prostředky.|
+|[Řetězec::Konec](#end)|Vrátí ukazatel za konec aktuálního řetězce.|
+|[Řetězec::Rovná se](#equals)|Označuje, zda je zadaný objekt roven aktuálnímu objektu.|
+|[Řetězec::GetHashCode](#gethashcode)|Vrátí hodnotu hash pro tuto instanci.|
+|[Řetězec::IsEmpty](#isempty)|Označuje, zda je aktuální objekt String prázdný.|
+|[Řetězec::IsfastPass](#isfastpass)|Označuje, zda se aktuální objekt String účastní operace *rychlého průchodu.* Při operaci rychlého průchodu je počítání odkazů pozastaveno.|
+|[Řetězec::Délka](#length)|Načte délku aktuálního objektu String.|
+|[Řetězec::ToString](#tostring)|Vrátí objekt String, jehož hodnota je stejná jako aktuální řetězec.|
 
-**Operátory**
+### <a name="operators"></a>Operátory
 
 Třída String má následující operátory.
 
 |Člen|Popis|
 |------------|-----------------|
-|[String:: operator = = – operátor](#operator-equality)|Určuje, zda dva zadané objekty řetězce mají stejnou hodnotu.|
-|[operator + – operátor](#operator-plus)|Zřetězí dva objekty řetězce do nového objektu String.|
-|[String:: operator > – operátor](#operator-greater-than)|Určuje, zda je hodnota jednoho objektu řetězce větší než hodnota druhého řetězcového objektu.|
-|[String:: operator > = – operátor](#operator-greater-than-or-equals)|Určuje, zda je hodnota jednoho objektu řetězce větší než nebo rovna hodnotě druhého objektu řetězce.|
-|[String:: operator! = – operátor](#operator-inequality)|Určuje, zda dva zadané objekty řetězce mají různé hodnoty.|
-|[String:: operator < – operátor](#operator-less-than)|Určuje, zda je hodnota jednoho objektu řetězce menší než hodnota druhého řetězcového objektu.|
+|[Řetězec::operator== Operátor](#operator-equality)|Označuje, zda mají dva zadané objekty String stejnou hodnotu.|
+|[operátor+ Operátor](#operator-plus)|Zřetězí dva objekty String do nového objektu String.|
+|[Řetězec::operátor> operátor](#operator-greater-than)|Označuje, zda je hodnota jednoho objektu String větší než hodnota druhého objektu String.|
+|[Řetězec::operátor>= Operátor](#operator-greater-than-or-equals)|Označuje, zda je hodnota jednoho objektu String větší nebo rovna hodnotě druhého objektu String.|
+|[Řetězec::operátor!= Operátor](#operator-inequality)|Označuje, zda mají dva zadané objekty String různé hodnoty.|
+|[Řetězec::operátor< operátor](#operator-less-than)|Označuje, zda je hodnota jednoho objektu String menší než hodnota druhého objektu String.|
 
 ### <a name="requirements"></a>Požadavky
 
-**Minimální podporovaný klient:** Systém Windows 8
+**Minimální podporovaný klient:** Windows 8
 
-**Minimální podporovaný Server:** Windows Server 2012
+**Minimální podporovaný server:** Windows Server 2012
 
-**Obor názvů:** Platformy
+**Obor názvů:** Platforma
 
-**Header** vccorlib. h (zahrnuto ve výchozím nastavení)
+**Záhlaví** vccorlib.h (ve výchozím nastavení zahrnuto)
 
-## <a name="begin"></a>String:: begin – metoda
+## <a name="stringbegin-method"></a><a name="begin"></a>Řetězec::Begin Metoda
 
 Vrátí ukazatel na začátek aktuálního řetězce.
 
@@ -116,9 +116,9 @@ char16* Begin();
 
 Ukazatel na začátek aktuálního řetězce.
 
-## <a name="compareordinal"></a>String:: CompareOrdinal – metoda
+## <a name="stringcompareordinal-method"></a><a name="compareordinal"></a>Řetězec::CompareOrdinal metoda
 
-Statická metoda, která porovnává dva `String` objekty vyhodnocením číselných hodnot odpovídajících znaků ve dvou řetězcových hodnotách reprezentovaných objekty.
+Statická metoda, `String` která porovnává dva objekty vyhodnocením číselných hodnot odpovídajících znaků ve dvou řetězcových hodnotách reprezentovanéobjekty.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -129,24 +129,24 @@ static int CompareOrdinal( String^ str1, String^ str2 );
 ### <a name="parameters"></a>Parametry
 
 *str1*<br/>
-První objekt řetězce.
+První String objekt.
 
 *str2*<br/>
-Druhý objekt řetězce.
+Druhý String objekt.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Celé číslo, které označuje lexikální vztah mezi dvěma komparand. V následující tabulce jsou uvedeny možné návratové hodnoty.
+Celé číslo, které označuje lexikální vztah mezi dvěma comparands. V následující tabulce jsou uvedeny možné vrácené hodnoty.
 
 |Hodnota|Podmínka|
 |-----------|---------------|
-|– 1|`str1` je menší než `str2`.|
-|0,8|`str1` se rovná `str2`.|
-|první|`str1` je větší než `str2`.|
+|-1|`str1`je menší `str2`než .|
+|0|`str1`je rovna `str2`.|
+|1|`str1`je větší `str2`než .|
 
-## <a name="concat"></a>String:: Concat – metoda
+## <a name="stringconcat-method"></a><a name="concat"></a>Řetězec::Metoda Concat
 
-Zřetězí hodnoty dvou řetězcových objektů.
+Zřetězí hodnoty dvou objektů String.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -157,38 +157,38 @@ String^ Concat( String^ str1, String^ str2);
 ### <a name="parameters"></a>Parametry
 
 *str1*<br/>
-První objekt řetězce nebo `null`.
+První String objekt, `null`nebo .
 
 *str2*<br/>
-Druhý objekt String nebo `null`.
+Druhý String objekt `null`nebo .
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nový objekt String ^, jehož hodnota je zřetězení hodnot `str1` a `str2`.
+Nový String^ objekt, jehož hodnota je zřetězení hodnoty `str1` a `str2`.
 
-Pokud je `str1` `null` a `str2` není, `str1` se vrátí. Pokud je `str2` `null` a `str1` není, `str2` se vrátí. Jsou-li `str1` a `str2` `null`, je vrácen prázdný řetězec (L).
+Pokud `str1` `null` je `str2` a `str1` není, je vrácena. Pokud `str2` `null` je `str1` a `str2` není, je vrácena. Pokud `str1` `str2` a `null`jsou obojí , je vrácen prázdný řetězec (L").
 
-## <a name="data"></a>String::D metoda ATA
+## <a name="stringdata-method"></a><a name="data"></a>String::Data Metoda
 
-Vrátí ukazatel na začátek vyrovnávací paměti dat objektu jako pole ve stylu jazyka C `char16` (`wchar_t`) prvků.
+Vrátí ukazatel na začátek vyrovnávací paměti dat objektu jako `char16` pole`wchar_t`elementů ve stylu C .
 
 ### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 const char16* Data();
 ```
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na začátek `const char16` pole znaků Unicode (`char16` je definice typu `wchar_t`).
+Ukazatel na začátek `const char16` pole znaků Unicode`char16` ( je `wchar_t`typedef pro ).
 
 ### <a name="remarks"></a>Poznámky
 
-Tuto metodu použijte, chcete-li převést z `Platform::String^` na `wchar_t*`. Když se objekt `String` přestane mimo rozsah, ukazatel na data už není zaručený platný. Chcete-li uložit data po dobu životnosti původního objektu `String`, použijte [wcscpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md) k zkopírování pole do paměti, kterou jste přidělili sami.
+Tuto metodu použijte `Platform::String^` `wchar_t*`k převodu z do . Když `String` objekt přejde mimo rozsah, ukazatel data již není zaručeno, že je platný. Chcete-li data uložit i `String` po uplynutí doby životnosti původního objektu, použijte [wcscpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md) zkopírovat pole do paměti, kterou jste sami přidělili.
 
-## <a name="dispose"></a>String::D metoda transpozice
+## <a name="stringdispose-method"></a><a name="dispose"></a>String::Dispose Metoda
 
-Uvolňuje nebo uvolňuje prostředky.
+Uvolní nebo uvolní prostředky.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -196,7 +196,7 @@ Uvolňuje nebo uvolňuje prostředky.
 virtual override void Dispose();
 ```
 
-## <a name="end"></a>String:: end – metoda
+## <a name="stringend-method"></a><a name="end"></a>Řetězec::Endmetoda
 
 Vrátí ukazatel za konec aktuálního řetězce.
 
@@ -212,11 +212,11 @@ Ukazatel na konec aktuálního řetězce.
 
 ### <a name="remarks"></a>Poznámky
 
-End () vrátí hodnotu begin () + length.
+End() vrátí Begin() + Length.
 
-## <a name="equals"></a>String:: Equals – metoda
+## <a name="stringequals-method"></a><a name="equals"></a>Řetězec::Metoda rovná se
 
-Určuje, zda má zadaný řetězec stejnou hodnotu jako aktuální objekt.
+Označuje, zda zadaný řetězec má stejnou hodnotu jako aktuální objekt.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -227,20 +227,20 @@ bool String::Equals(String^ str);
 
 ### <a name="parameters"></a>Parametry
 
-*str*<br/>
-Objekt, který chcete porovnat.
+*Str*<br/>
+Objekt k porovnání
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**true** , pokud je `str` rovno aktuálnímu objektu; v opačném případě **false**.
+**true,** pokud `str` se rovná aktuálnímu objektu; jinak **false**.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda je ekvivalentní se statickým [řetězcem:: CompareOrdinal](#compareordinal). V prvním přetížení se očekává, že parametr `str` lze přetypovat na objekt typu String ^.
+Tato metoda je ekvivalentní statické [String::CompareOrdinal](#compareordinal). V prvním přetížení se očekává, že `str` parametr může být přetypován string^ objektu.
 
-## <a name="gethashcode"></a>String:: GetHashCode – metoda
+## <a name="stringgethashcode-method"></a><a name="gethashcode"></a>String::Metoda GetHashCode
 
-Vrátí kód hash této instance.
+Vrátí hodnotu hash pro tuto instanci.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -252,9 +252,9 @@ virtual override int GetHashCode();
 
 Kód hash této instance
 
-## <a name="isempty"></a>String::-Empty – metoda
+## <a name="stringisempty-method"></a><a name="isempty"></a>Řetězec::IsEmpty Metoda
 
-Určuje, zda je aktuální objekt řetězce prázdný.
+Označuje, zda je aktuální objekt String prázdný.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -264,11 +264,11 @@ bool IsEmpty();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**true** , pokud je aktuální objekt `String` **null** nebo prázdný řetězec (L ""); v opačném případě **false**.
+**true,** pokud `String` je aktuální objekt **null** nebo prázdný řetězec (L""); jinak **false**.
 
-## <a name="isfastpass"></a>String:: IsFastPass – metoda
+## <a name="stringisfastpass-method"></a><a name="isfastpass"></a>String::Metoda isfastpass
 
-Určuje, zda je aktuální objekt řetězce zapojen do operace *rychlá operace Pass* . V operaci rychlého předání je počítání odkazů pozastaveno.
+Označuje, zda se aktuální objekt String účastní operace *rychlého průchodu.* Při operaci rychlého průchodu je počítání odkazů pozastaveno.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -278,15 +278,15 @@ bool IsFastPass();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**true** , pokud je aktuální objekt `String` rychlým v minulosti; v opačném případě **false**.
+**true,** pokud `String` je aktuální objekt rychle minulostí; jinak **false**.
 
 ### <a name="remarks"></a>Poznámky
 
-Ve volání funkce, kde je objekt počítaného odkazu parametr, a volaná funkce pouze přečte tento objekt, kompilátor může bezpečně pozastavit počítání odkazů a zvýšit výkon volání. Neexistuje žádné užitečné, aby váš kód mohl s touto vlastností dělat. Systém zpracuje všechny podrobnosti.
+Při volání funkce, kde odkaz počítal objekt je parametr a volaná funkce pouze čte tento objekt, kompilátor může bezpečně pozastavit počítání odkazů a zlepšit výkon volání. Není nic užitečného, co váš kód může dělat s touto vlastností. Systém zpracovává všechny detaily.
 
-## <a name="length"></a>String:: Length – metoda
+## <a name="stringlength-method"></a><a name="length"></a>Řetězec::Metoda délky
 
-Načte počet znaků v aktuálním objektu `String`.
+Načte počet znaků v `String` aktuálním objektu.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -296,22 +296,22 @@ unsigned int Length();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Počet znaků v aktuálním objektu `String`.
+Počet znaků v aktuálním `String` objektu.
 
 ### <a name="remarks"></a>Poznámky
 
-Délka řetězce bez znaků je nula. Délka následujícího řetězce je 5:
+Délka String bez znaků je nula. Délka následujícího řetězce je 5:
 
 ```cpp
 String^ str = "Hello";
 int len = str->Length(); //len = 5
 ```
 
-Pole znaků vrácené [řetězcem::D ATA](#data) má jeden další znak, což je ukončující hodnota null nebo \ 0. Tento znak je také dlouhý dva bajty.
+Pole znaků vrácené [string::Data](#data) má jeden další znak, což je ukončující null nebo '\0'. Tento znak je také dlouhý dva bajty.
 
-## <a name="operator-plus"></a>String:: operator + – operátor
+## <a name="stringoperator-operator"></a><a name="operator-plus"></a>Řetězec::operátor+ operátor
 
-Zřetězí dva objekty [řetězce](../cppcx/platform-string-class.md) do nového objektu [String](../cppcx/platform-string-class.md) .
+Zřetězí dva objekty [String](../cppcx/platform-string-class.md) do nového objektu [String.](../cppcx/platform-string-class.md)
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -322,22 +322,22 @@ bool String::operator+( String^ str1, String^ str2);
 ### <a name="parameters"></a>Parametry
 
 *str1*<br/>
-První objekt `String`.
+První `String` objekt.
 
 *str2*<br/>
-Druhý objekt `String`, jehož obsah bude přidán do `str1`.
+Druhý `String` objekt, jehož obsah bude `str1`připojen k aplikaci .
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**true** , pokud je *str1* rovno *str2*; v opačném případě **false**.
+**true,** pokud *str1* se rovná *str2*; jinak **false**.
 
 ### <a name="remarks"></a>Poznámky
 
-Tento operátor vytvoří objekt `String^`, který obsahuje data z obou operandů. Využijte ji pro pohodlí, pokud extrémní výkon není kritický. Několik volání "`+`" ve funkci pravděpodobně nebude patrné, ale pokud pracujete s velkými objekty nebo textovými daty v těsné smyčce, pak použijte standardní C++ mechanismy a typy.
+Tento operátor `String^` vytvoří objekt, který obsahuje data ze dvou operandů. Použijte jej pro pohodlí, když extrémní výkon není rozhodující. Několik volání "`+`" ve funkci pravděpodobně nebude patrné, ale pokud manipulujete s velkými objekty nebo textovými daty v těsné smyčce, použijte standardní mechanismy a typy jazyka C++.
 
-##  <a name="operator-equality"></a>String:: operator = = – operátor
+## <a name="stringoperator-operator"></a><a name="operator-equality"></a>Řetězec::operator== Operátor
 
-Určuje, zda dva zadané objekty řetězce mají stejnou textovou hodnotu.
+Označuje, zda mají dva zadané objekty String stejnou textovou hodnotu.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -348,22 +348,22 @@ bool String::operator==( String^ str1, String^ str2);
 ### <a name="parameters"></a>Parametry
 
 *str1*<br/>
-První objekt `String`, který se má porovnat.
+První `String` objekt porovnat.
 
 *str2*<br/>
-Druhý objekt `String`, který se má porovnat.
+Druhý `String` objekt porovnat.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**true** , pokud je obsah `str1` rovný `str2`; v opačném případě **false**.
+**true,** pokud `str1` je obsah `str2`rovny ; jinak **false**.
 
 ### <a name="remarks"></a>Poznámky
 
-Tento operátor je ekvivalentní [řetězci:: CompareOrdinal](#compareordinal).
+Tento operátor je ekvivalentní [String::CompareOrdinal](#compareordinal).
 
-##  <a name="operator-greater-than"></a>String:: operator &gt;
+## <a name="stringoperatorgt"></a><a name="operator-greater-than"></a>Řetězec::operátor&gt;
 
-Určuje, zda je hodnota jednoho `String` objektu větší než hodnota druhého objektu `String`.
+Označuje, zda je `String` hodnota jednoho objektu větší `String` než hodnota druhého objektu.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -374,22 +374,22 @@ bool String::operator>( String^ str1, String^ str2);
 ### <a name="parameters"></a>Parametry
 
 *str1*<br/>
-První objekt `String`.
+První `String` objekt.
 
 *str2*<br/>
-Druhý objekt `String`.
+Druhý `String` objekt.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**true** , pokud je hodnota `str1` větší než hodnota `str2`; v opačném případě **false**.
+**true,** pokud `str1` je hodnota vyšší `str2`než hodnota ; jinak **false**.
 
 ### <a name="remarks"></a>Poznámky
 
-Tento operátor je ekvivalentní k explicitnímu volání [řetězce:: CompareOrdinal](#compareordinal) a získání výsledku většího než nula.
+Tento operátor je ekvivalentní explicitně volat [String::CompareOrdinal](#compareordinal) a získání výsledku větší než nula.
 
-## <a name="operator-greater-than-or-equals"></a>String:: operator &gt; =
+## <a name="stringoperatorgt"></a><a name="operator-greater-than-or-equals"></a>Řetězec::operátor&gt;=
 
-Určuje, zda je hodnota jednoho `String` objektu větší nebo rovna hodnotě druhého objektu `String`.
+Označuje, zda je `String` hodnota jednoho objektu větší nebo `String` rovna hodnotě druhého objektu.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -400,18 +400,18 @@ bool String::operator>=( String^ str1, String^ str2);
 ### <a name="parameters"></a>Parametry
 
 *str1*<br/>
-První objekt `String`.
+První `String` objekt.
 
 *str2*<br/>
-Druhý objekt `String`.
+Druhý `String` objekt.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**true** , pokud je hodnota `str1` větší nebo rovna hodnotě `str2`; v opačném případě **false**.
+**true,** pokud `str1` je hodnota vyšší nebo rovna hodnotě `str2`; jinak **false**.
 
-## <a name="operator-inequality"></a>String:: operator! =
+## <a name="stringoperator"></a><a name="operator-inequality"></a>Řetězec::operátor!=
 
-Určuje, zda dva zadané `String` objekty mají jiné hodnoty.
+Označuje, zda `String` mají dva zadané objekty různé hodnoty.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -422,18 +422,18 @@ bool String::operator!=( String^ str1, String^ str2);
 ### <a name="parameters"></a>Parametry
 
 *str1*<br/>
-První objekt `String`, který se má porovnat.
+První `String` objekt porovnat.
 
 *str2*<br/>
-Druhý objekt `String`, který se má porovnat.
+Druhý `String` objekt porovnat.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**true** , pokud `str1` není rovno `str2`; v opačném případě **false**.
+**true,** pokud `str1` se `str2`nerovná ; jinak **false**.
 
-## <a name="operator-less-than"></a>String:: operator &lt;
+## <a name="stringoperatorlt"></a><a name="operator-less-than"></a>Řetězec::operátor&lt;
 
-Určuje, zda je hodnota jednoho objektu `String` menší než hodnota druhého objektu `String`.
+Označuje, zda je `String` hodnota jednoho objektu menší `String` než hodnota druhého objektu.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -444,18 +444,18 @@ bool String::operator<( String^ str1, String^ str2);
 ### <a name="parameters"></a>Parametry
 
 *str1*<br/>
-První objekt `String`.
+První `String` objekt.
 
 *str2*<br/>
-Druhý objekt `String`.
+Druhý `String` objekt.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**true** , pokud je hodnota *str1* menší než hodnota *str2*; v opačném případě **false**.
+**true,** pokud je hodnota *str1* menší než hodnota *str2*; jinak **false**.
 
-## <a name="ctor"></a>String:: String – konstruktor
+## <a name="stringstring-constructor"></a><a name="ctor"></a>Řetězec::Konstruktor řetězce
 
-Inicializuje novou instanci třídy `String` s kopií vstupních řetězcových dat.
+Inicializuje novou instanci `String` třídy s kopií dat vstupního řetězce.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -467,24 +467,25 @@ String(char16* s, unsigned int n);
 
 ### <a name="parameters"></a>Parametry
 
-*pracují*<br/>
-Řada velkých znaků, které inicializují řetězec. Char16
+*S*<br/>
+Řada širokých znaků, které inicializují řetězec. znak16
 
-*n*<br/>
+*N*<br/>
 Číslo, které určuje délku řetězce.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud je výkon kritický a Vy ovládáte životnost zdrojového řetězce, můžete místo řetězce použít [Platform:: StringReference](../cppcx/platform-stringreference-class.md) .
+Pokud je výkon kritický a řídíte životnost zdrojového řetězce, můžete místo String použít [platformu::StringReference.](../cppcx/platform-stringreference-class.md)
+
 ### <a name="example"></a>Příklad
 
 ```cpp
 String^ s = L"Hello!";
 ```
 
-## <a name="tostring"></a>String:: ToString
+## <a name="stringtostring"></a><a name="tostring"></a>Řetězec::ToString
 
-Vrátí objekt `String`, jehož hodnota je shodná s aktuálním řetězcem.
+Vrátí `String` objekt, jehož hodnota je stejná jako aktuální řetězec.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -494,8 +495,8 @@ String^ String::ToString();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Objekt `String`, jehož hodnota je shodná s aktuálním řetězcem.
+Objekt, `String` jehož hodnota je stejná jako aktuální řetězec.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Platform – obor názvů](../cppcx/platform-namespace-c-cx.md)

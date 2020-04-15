@@ -1,6 +1,6 @@
 ---
-title: OnRelogEventFunc – typedef
-description: Referenční C++ materiály k OnRelogEventFunc sestavení sady SDK pro Build Insights
+title: OnRelogEventFunc typedef
+description: C++ Sestavení Insights SDK OnRelogEventFunc typedef odkaz.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 619f9a142ad19a7809b867eda93f2db634825a8f
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 2df8646d530c089b1239978d716b2b619a5b4b61
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78332388"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81329066"
 ---
-# <a name="onrelogeventfunc-typedef"></a>OnRelogEventFunc – typedef
+# <a name="onrelogeventfunc-typedef"></a>OnRelogEventFunc typedef
 
 ::: moniker range="<=vs-2015"
 
-Sada C++ SDK pro Build Insights je kompatibilní se sadou Visual Studio 2017 a novější. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek selektor verzí sady Visual Studio pro tento článek na sadu Visual Studio 2017 nebo Visual Studio 2019.
+Sada C++ Build Insights SDK je kompatibilní s Visual Studio 2017 a vyšší. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek pro výběr **verze** sady Visual Studio pro tento článek na Visual Studio 2017 nebo Visual Studio 2019. Nachází se v horní části obsahu na této stránce.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-`OnRelogEventFunc` typedef je jedním z signatur funkcí použitých ve struktuře [RELOG_CALLBACKS](relog-callbacks-struct.md) .
+Typedef `OnRelogEventFunc` je jedním z podpisů funkce používaných ve struktuře [RELOG_CALLBACKS.](relog-callbacks-struct.md)
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -39,16 +39,16 @@ typedef enum CALLBACK_CODE (BUILD_INSIGHTS_API *OnRelogEventFunc)(
 ### <a name="parameters"></a>Parametry
 
 *eventStack*\
-Zásobník událostí pro aktuální událost. Další informace o zásobníkech událostí najdete v tématu [události](../event-table.md).
+Zásobník událostí pro aktuální událost. Další informace o hromádkách událostí naleznete v [tématu Události](../event-table.md).
 
-*relogSession*\
-Ukazatel relace opakovaného protokolování, který se má použít při volání [InjectEvent](../functions/inject-event.md).
+*relogsession*\
+Ukazatel relace pro opětovné nasávání, který se má použít při volání [události InjectEvent](../functions/inject-event.md).
 
 *callbackContext*\
 Hodnota kontextu, která byla nastavena pro toto zpětné volání v [RELOG_DESCRIPTOR](analysis-descriptor-struct.md).
 
 ### <a name="return-value"></a>Návratová hodnota
 
-[CALLBACK_CODE](callback-code-enum.md) hodnota, která určuje, co by mělo proběhnout příště.
+Hodnota [CALLBACK_CODE,](callback-code-enum.md) která určuje, co by se mělo stát dál.
 
 ::: moniker-end

@@ -25,19 +25,19 @@ helpviewer_keywords:
 - _set_output_format function
 - set_output_format function
 ms.assetid: 1cb48df8-44b4-4400-bd27-287831d6b3ff
-ms.openlocfilehash: b67abb58f4d62c7c54b61d1b1699f09c1bd51b40
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c855df4c29a53fd898b920f6446afe4e568ba5bb
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957315"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81360923"
 ---
 # <a name="_set_output_format"></a>_set_output_format
 
-Přizpůsobí výstupní formáty používané ve formátovaných vstupně-výstupních funkcích.
+Přizpůsobí výstupní formáty používané formátované vstupně-výstupními funkcemi.
 
 > [!IMPORTANT]
->  Tato funkce je zastaralá. Počínaje verzí Visual Studio 2015 není k dispozici v CRT.
+> Tato funkce je zastaralá. Počínaje Visual Studio 2015, není k dispozici v CRT.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -49,8 +49,8 @@ unsigned int _set_output_format(
 
 #### <a name="parameters"></a>Parametry
 
-*format*<br/>
-pro Hodnota, která představuje formát, který má být použit.
+*Formát*<br/>
+[v] Hodnota představující formát, který chcete použít.
 
 ## <a name="return-value"></a>Návratová hodnota
 
@@ -58,11 +58,11 @@ Předchozí výstupní formát.
 
 ## <a name="remarks"></a>Poznámky
 
-`_set_output_format`slouží ke konfiguraci výstupu formátovaných vstupně-výstupních funkcí, jako je [printf_s](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md). V současné době jediná konvence formátování, kterou lze změnit pomocí této funkce, je počet číslic zobrazených v exponentech ve výstupu čísel s plovoucí desetinnou čárkou.
+`_set_output_format`slouží ke konfiguraci výstupu formátovaných vstupně-výstupních funkcí, jako je [printf_s](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md). V současné době je jedinou konvencí formátování, kterou lze změnit touto funkcí, počet číslic zobrazených v exponentech ve výstupu čísel s plovoucí desetinnou položkou.
 
-Ve výchozím nastavení výstupy čísel s plovoucí desetinnou čárkou podle `printf_s`funkcí `wprintf_s`, jako je, a související funkce C++ v knihovně jazyka Visual Standard jazyka C, tisknou tři číslice pro exponent, i když tři číslice nejsou požadovány pro reprezentaci hodnoty exponent. K vyplnění hodnoty třemi číslicemi se používají nuly. `_set_output_format`umožňuje změnit toto chování tak, aby se na exponent tiskly jenom dvě číslice, pokud velikost exponentu nepožaduje třetí číslice.
+Ve výchozím nastavení vytiskne výstup `printf_s`čísel `wprintf_s`s plovoucí desetinnou úseček podle funkcí, jako je například , , a související funkce v knihovně Visual C++ Standard C tři číslice pro exponent, i když tři číslice nejsou nutné k reprezentaci hodnoty exponentu. Nuly se používají k vyložce hodnoty na tři číslice. `_set_output_format`umožňuje změnit toto chování tak, aby v exponentu byly vytištěny pouze dvě číslice, pokud není třetí číslice vyžadována velikostí exponentu.
 
-Chcete-li povolit dvojúrovňové exponenty, zavolejte tuto funkci s parametrem `_TWO_DIGIT_EXPONENT`, jak je znázorněno v příkladu. Chcete-li zakázat dvě exponenty číslic, zavolejte tuto funkci s argumentem 0.
+Chcete-li povolit dvoumístné exponenty, `_TWO_DIGIT_EXPONENT`zavolejte tuto funkci s parametrem , jak je znázorněno v příkladu. Chcete-li zakázat dvoumístné exponenty, zavolejte tuto funkci s argumentem 0.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -70,7 +70,7 @@ Chcete-li povolit dvojúrovňové exponenty, zavolejte tuto funkci s parametrem 
 |-------------|---------------------|
 |`_set_output_format`|\<stdio.h>|
 
-Další informace o kompatibilitě naleznete v úvodu v tématu [Kompatibilita](../c-runtime-library/compatibility.md) .
+Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../c-runtime-library/compatibility.md) v úvodu.
 
 ## <a name="example"></a>Příklad
 
@@ -122,7 +122,7 @@ int main()
 1.211E-005  2.306E-112
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [printf_s, _printf_s_l, wprintf_s, _wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)<br/>
 [_get_output_format](../c-runtime-library/get-output-format.md)

@@ -1,6 +1,6 @@
 ---
-title: CommandLine – třída
-description: Referenční C++ dokumentace třídy příkazového řádku sady Build Insights SDK
+title: Třída CommandLine
+description: C++ Build Insights SDK CommandLine odkaz na třídu.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: ff16646920fe77f7f3b4cb8a194a38984c3e6c32
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: b35d688acf06579cc27f2fee053ef58032e204e0
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78333508"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81325051"
 ---
-# <a name="commandline-class"></a>CommandLine – třída
+# <a name="commandline-class"></a>Třída CommandLine
 
 ::: moniker range="<=vs-2015"
 
-Sada C++ SDK pro Build Insights je kompatibilní se sadou Visual Studio 2017 a novější. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek selektor verzí sady Visual Studio pro tento článek na sadu Visual Studio 2017 nebo Visual Studio 2019.
+Sada C++ Build Insights SDK je kompatibilní s Visual Studio 2017 a vyšší. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek pro výběr **verze** sady Visual Studio pro tento článek na Visual Studio 2017 nebo Visual Studio 2019. Nachází se v horní části obsahu na této stránce.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Třída `CommandLine` se používá s funkcemi [MatchEvent](../functions/match-event.md), [MatchEventInMemberFunction](../functions/match-event-in-member-function.md), [MatchEventStack](../functions/match-event-stack.md)a [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md) . Použijte ho ke spárování [COMMAND_LINE](../event-table.md#command-line) události.
+Třída `CommandLine` se používá s funkcemi [MatchEvent](../functions/match-event.md), [MatchEventInMemberFunction](../functions/match-event-in-member-function.md), [MatchEventStack](../functions/match-event-stack.md)a [MatchEventStackInMemberFunction.](../functions/match-event-stack-in-member-function.md) Slouží k tomu, aby odpovídala [události COMMAND_LINE.](../event-table.md#command-line)
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,17 +41,17 @@ public:
 
 ## <a name="members"></a>Členové
 
-Společně s děděnými členy ze své základní třídy [SimpleEvent](simple-event.md) obsahuje Třída `CommandLine` následující členy:
+Spolu s zděděnými členy ze základní `CommandLine` třídy [SimpleEvent](simple-event.md) obsahuje třída následující členy:
 
 ### <a name="constructors"></a>Konstruktory
 
-[Řádek](#command-line)
+[Commandline](#command-line)
 
 ### <a name="functions"></a>Functions
 
 [Hodnota](#value)
 
-## <a name="command-line"></a>Řádek
+## <a name="commandline"></a><a name="command-line"></a>Commandline
 
 ```cpp
 CommandLine(const RawEvent& event);
@@ -59,10 +59,10 @@ CommandLine(const RawEvent& event);
 
 ### <a name="parameters"></a>Parametry
 
-\ *události*
-Událost [COMMAND_LINE](../event-table.md#command-line) .
+*Událost*\
+[Událost COMMAND_LINE.](../event-table.md#command-line)
 
-## <a name="value"></a>Osa
+## <a name="value"></a><a name="value"></a>Hodnotu
 
 ```cpp
 const wchar_t Value() const;
@@ -70,6 +70,6 @@ const wchar_t Value() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Řetězec obsahující příkazový řádek. Hodnota zahrnuje argumenty, které byly získány ze souboru odpovědí a z proměnných prostředí, jako je CL, \_CL\_, odkaz a \_propojení\_.
+Řetězec obsahující příkazový řádek. Hodnota zahrnuje argumenty, které byly získány ze souboru odpovědí \_\_a z \_proměnných prostředí, jako je CL, CL , Link a LINK\_.
 
 ::: moniker-end

@@ -1,5 +1,5 @@
 ---
-title: Ccomobjectstack – třída
+title: Třída CComObjectStack
 ms.date: 11/04/2016
 f1_keywords:
 - CComObjectStack
@@ -12,16 +12,16 @@ f1_keywords:
 helpviewer_keywords:
 - CComObjectStack class
 ms.assetid: 3da72c40-c834-45f6-bb76-6ac204028d80
-ms.openlocfilehash: 19fd226e617e4cdb1bba8a113b8984c36bf28d59
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8c3fd56635da8b80c84f6151009586b7bd2b4341
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62259583"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81327577"
 ---
-# <a name="ccomobjectstack-class"></a>Ccomobjectstack – třída
+# <a name="ccomobjectstack-class"></a>Třída CComObjectStack
 
-Tato třída se vytvoří dočasný objekt modelu COM a poskytuje základní implementaci `IUnknown`.
+Tato třída vytvoří dočasný objekt COM a poskytuje `IUnknown`mu kosterní implementaci .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -32,41 +32,41 @@ class CComObjectStack : public Base
 
 #### <a name="parameters"></a>Parametry
 
-*základ*<br/>
-Vaše třída odvozena od [ccomobjectroot –](../../atl/reference/ccomobjectroot-class.md) nebo [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), jak dobře jako z jiných rozhraní, které chcete podporovat na objekt.
+*Základní*<br/>
+Vaše třída, odvozená z [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) nebo [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), stejně jako z jakéhokoli jiného rozhraní, které chcete podporovat na objektu.
 
 ## <a name="members"></a>Členové
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
 |[CComObjectStack::CComObjectStack](#ccomobjectstack)|Konstruktor|
 |[CComObjectStack::~CComObjectStack](#dtor)|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CComObjectStack::AddRef](#addref)|Vrátí nulu. V režimu ladění, volá `_ASSERTE`.|
-|[CComObjectStack::QueryInterface](#queryinterface)|Vrátí E_NOINTERFACE. V režimu ladění, volá `_ASSERTE`.|
-|[CComObjectStack::Release](#release)|Vrátí nulu. V režimu ladění, volá `_ASSERTE`. ~|
+|[CComObjectStack::Addref](#addref)|Vrátí nula. V režimu ladění `_ASSERTE`volání .|
+|[CComObjectStack::QueryInterface](#queryinterface)|Vrátí E_NOINTERFACE. V režimu ladění `_ASSERTE`volání .|
+|[CComObjectStack::Vydání](#release)|Vrátí nula. V režimu ladění `_ASSERTE`volání . ~|
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CComObjectStack::m_hResFinalConstruct](#m_hresfinalconstruct)|Obsahuje HRESULT vrátil během procesu vytváření `CComObjectStack` objektu.|
+|[CComObjectStack::m_hResFinalConstruct](#m_hresfinalconstruct)|Obsahuje HRESULT vrácené během `CComObjectStack` konstrukce objektu.|
 
 ## <a name="remarks"></a>Poznámky
 
-`CComObjectStack` slouží k vytvoření dočasného objektu COM a poskytnout objekt základní implementaci `IUnknown`. Objekt se obvykle používá jako místní proměnné v rámci jedné funkce, (, který se vloží do zásobníku). Protože objekt je zničen při dokončení funkce, počítání odkazů se neprovádí ke zvýšení efektivity.
+`CComObjectStack`slouží k vytvoření dočasného objektu COM a `IUnknown`poskytnutí objektu kosterní implementaci . Objekt se obvykle používá jako místní proměnná v rámci jedné funkce (to znamená, že je posunuta do zásobníku). Vzhledem k tomu, že objekt je zničen po dokončení funkce, počítání odkazů se neprovádí ke zvýšení efektivity.
 
-Následující příklad ukazuje, jak vytvořit objekt modelu COM použít uvnitř funkce:
+Následující příklad ukazuje, jak vytvořit objekt COM použitý uvnitř funkce:
 
 [!code-cpp[NVC_ATL_COM#42](../../atl/codesnippet/cpp/ccomobjectstack-class_1.cpp)]
 
-Dočasný objekt `Tempobj` vloženo do zásobníku a automaticky při dokončení funkce zmizí.
+Dočasný objekt `Tempobj` je posunut do zásobníku a automaticky zmizí po dokončení funkce.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -76,11 +76,11 @@ Dočasný objekt `Tempobj` vloženo do zásobníku a automaticky při dokončen�
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlcom
+**Záhlaví:** atlcom.h
 
-##  <a name="addref"></a>  CComObjectStack::AddRef
+## <a name="ccomobjectstackaddref"></a><a name="addref"></a>CComObjectStack::Addref
 
-Vrátí nulu.
+Vrátí nula.
 
 ```
 STDMETHOD_(ULONG, AddRef)();
@@ -88,13 +88,13 @@ STDMETHOD_(ULONG, AddRef)();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí nulu.
+Vrátí nula.
 
 ### <a name="remarks"></a>Poznámky
 
-V režimu ladění, volá `_ASSERTE`.
+V režimu ladění `_ASSERTE`volání .
 
-##  <a name="ccomobjectstack"></a>  CComObjectStack::CComObjectStack
+## <a name="ccomobjectstackccomobjectstack"></a><a name="ccomobjectstack"></a>CComObjectStack::CComObjectStack
 
 Konstruktor
 
@@ -104,9 +104,9 @@ CComObjectStack(void* = NULL);
 
 ### <a name="remarks"></a>Poznámky
 
-Volání `FinalConstruct` a pak nastaví [m_hResFinalConstruct](#m_hresfinalconstruct) HRESULT vrácený `FinalConstruct`. Pokud ještě odvozené ze základní třídy [ccomobjectroot –](../../atl/reference/ccomobjectroot-class.md), je nutné zadat vlastní `FinalConstruct` metody. Volání destruktoru `FinalRelease`.
+Volá `FinalConstruct` a potom nastaví [m_hResFinalConstruct](#m_hresfinalconstruct) `FinalConstruct`hresult vrácené . Pokud jste neodvodili základní třídu z [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md), musíte zadat vlastní `FinalConstruct` metodu. Destruktor `FinalRelease`volá .
 
-##  <a name="dtor"></a>  Ccomobjectstack –:: ~ ccomobjectstack –
+## <a name="ccomobjectstackccomobjectstack"></a><a name="dtor"></a>CComObjectStack::~CComObjectStack
 
 Destruktor.
 
@@ -118,15 +118,15 @@ CComObjectStack();
 
 Uvolní všechny přidělené prostředky a volání [FinalRelease](ccomobjectrootex-class.md#finalrelease).
 
-##  <a name="m_hresfinalconstruct"></a>  CComObjectStack::m_hResFinalConstruct
+## <a name="ccomobjectstackm_hresfinalconstruct"></a><a name="m_hresfinalconstruct"></a>CComObjectStack::m_hResFinalConstruct
 
-Obsahuje HRESULT vrácená z volání `FinalConstruct` během procesu vytváření `CComObjectStack` objektu.
+Obsahuje HRESULT vrácené `FinalConstruct` z volání `CComObjectStack` během konstrukce objektu.
 
 ```
 HRESULT    m_hResFinalConstruct;
 ```
 
-##  <a name="queryinterface"></a>  CComObjectStack::QueryInterface
+## <a name="ccomobjectstackqueryinterface"></a><a name="queryinterface"></a>CComObjectStack::QueryInterface
 
 Vrátí E_NOINTERFACE.
 
@@ -140,11 +140,11 @@ Vrátí E_NOINTERFACE.
 
 ### <a name="remarks"></a>Poznámky
 
-V režimu ladění, volá `_ASSERTE`.
+V režimu ladění `_ASSERTE`volání .
 
-##  <a name="release"></a>  CComObjectStack::Release
+## <a name="ccomobjectstackrelease"></a><a name="release"></a>CComObjectStack::Vydání
 
-Vrátí nulu.
+Vrátí nula.
 
 ```
 STDMETHOD_(ULONG, Release)();
@@ -152,15 +152,15 @@ STDMETHOD_(ULONG, Release)();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí nulu.
+Vrátí nula.
 
 ### <a name="remarks"></a>Poznámky
 
-V režimu ladění, volá `_ASSERTE`.
+V režimu ladění `_ASSERTE`volání .
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[CComAggObject – třída](../../atl/reference/ccomaggobject-class.md)<br/>
-[CComObject – třída](../../atl/reference/ccomobject-class.md)<br/>
-[CComObjectGlobal – třída](../../atl/reference/ccomobjectglobal-class.md)<br/>
-[Přehled tříd](../../atl/atl-class-overview.md)
+[Třída CComAggObject](../../atl/reference/ccomaggobject-class.md)<br/>
+[Třída CComObject](../../atl/reference/ccomobject-class.md)<br/>
+[Třída CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md)<br/>
+[Přehled třídy](../../atl/atl-class-overview.md)

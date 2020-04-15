@@ -1,12 +1,16 @@
 ---
 title: strerror, _strerror, _wcserror, __wcserror
-description: Popisuje funkce knihovny CRT (Microsoft C Runtime Library) strerror –, _strerror, _wcserror a __wcserror.
-ms.date: 01/07/2020
+description: Popisuje funkce strerror funkce Knihovna runtime (Microsoft C Runtime), _strerror, _wcserror a __wcserror.
+ms.date: 4/2/2020
 api_name:
 - strerror
 - _strerror
 - _wcserror
 - __wcserror
+- _o___wcserror
+- _o__strerror
+- _o__wcserror
+- _o_strerror
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -19,6 +23,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -47,16 +52,16 @@ helpviewer_keywords:
 - __wcserror function
 - error messages, getting
 ms.assetid: 27b72255-f627-43c0-8836-bcda8b003e14
-ms.openlocfilehash: 8c9c6850d6620407897b2a3a1dbf32e61f6719c0
-ms.sourcegitcommit: 7bd3567fc6a0e7124aab51cad63bbdb44a99a848
+ms.openlocfilehash: 9eecb7376cf476f0128dc20c8884746a3b4d47d9
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75755037"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81337333"
 ---
 # <a name="strerror-_strerror-_wcserror-__wcserror"></a>strerror, _strerror, _wcserror, __wcserror
 
-Získá řetězec systémové chybové zprávy (**strerror –** , **_wcserror**) nebo zformátuje řetězec chybové zprávy zadaný uživatelem ( **_strerror**, **__wcserror**). K dispozici jsou bezpečnější verze těchto funkcí; viz [strerror_s, _strerror_s, _wcserror_s \__wcserror_s](strerror-s-strerror-s-wcserror-s-wcserror-s.md).
+Získá řetězec systémové chybové zprávy (**strerror**, **_wcserror**) nebo zformátuje řetězec chybové zprávy zadaný uživatelem (**_strerror**, **__wcserror**). K dispozici jsou bezpečnější verze těchto funkcí. viz [strerror_s, _strerror_s, \__wcserror_s, _wcserror_s](strerror-s-strerror-s-wcserror-s-wcserror-s.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -80,34 +85,36 @@ wchar_t * __wcserror(
 Číslo chyby.
 
 *strErrMsg*\
-Zpráva zadaná uživatelem
+Zpráva dodaná uživatelem.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Všechny tyto funkce vrací ukazatel na řetězec chybové zprávy ve vyrovnávací paměti místního vlákna, které vlastní modul runtime. Pozdější volání ve stejném vlákně mohou tento řetězec přepsat.
+Všechny tyto funkce vrátí ukazatel na řetězec chybové zprávy ve vyrovnávací paměti místního vlákna vlastněné runtime. Pozdější volání ve stejném vlákně můžete přepsat tento řetězec.
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce **strerror –** mapuje *errnum* na řetězec chybové zprávy a vrátí ukazatel na řetězec. Funkce **strerror –** a **_strerror** ve skutečnosti zprávy netiskou. Chcete-li tisknout, zavolejte výstupní funkci, jako je například [fprintf –](fprintf-fprintf-l-fwprintf-fwprintf-l.md):
+Funkce **strerror** *mapuje chybovost* na řetězec chybové zprávy a vrací ukazatel na řetězec. **Funkce strerror** a **_strerror** ve skutečnosti zprávu nevytisknou. Chcete-li tisknout, zavolejte výstupní funkci, [například fprintf](fprintf-fprintf-l-fwprintf-fwprintf-l.md):
 
 ```C
 if (( _access( "datafile", 2 )) == -1 )
    fprintf( stderr, _strerror(NULL) );
 ```
 
-Pokud je *strErrMsg* předán jako **null**, **_strerror** vrátí ukazatel na řetězec. Obsahuje chybovou zprávu systému pro poslední volání knihovny, které vytvořilo chybu. Řetězec chybové zprávy je ukončen znakem nového řádku (' \n '). Pokud *strErrMsg* není **null**, řetězec obsahuje, v pořadí: váš *strErrMsg* řetězec, dvojtečka, mezera, systémová chybová zpráva a znak nového řádku. Vaše řetězcová zpráva může být delší než 94 znaků, a to buď v úzkých ( **_strerror**), nebo ve velkých ( **__wcserror**) znacích.
+Pokud *strErrMsg* je předán jako **NULL**, **_strerror** vrátí ukazatel na řetězec. Obsahuje systémovou chybovou zprávu pro poslední volání knihovny, která způsobila chybu. Řetězec chybové zprávy je ukončen znakem nového řádku (\n"). Když *strErrMsg* není **NULL**, řetězec obsahuje, v pořadí: *strErrMsg* řetězec, dvojtečka, mezera, chybová zpráva systému a znak nového řádku. Zpráva o řetězci může být maximálně 94 znaků dlouhá, buď úzkými (**_strerror)** nebo širokými **(__wcserror)** znaky.
 
-Skutečné číslo chyby pro **_strerror** je uloženo v proměnné [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Chcete-li vytvořit přesné výsledky, zavolejte **_strerror** ihned poté, co rutina knihovny vrátí chybu. V opačném případě může pozdější volání rutin knihovny přepsat hodnotu **errno** .
+Skutečné číslo chyby pro **_strerror** je uloženo v proměnné [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Chcete-li vytvořit přesné výsledky, volání **_strerror** ihned poté, co rutina knihovny vrátí chybu. V opačném případě může pozdější volání rutin knihovny přepsat hodnotu **errno.**
 
-**_wcserror** a **__wcserror** jsou verze **strerror –** a **_strerror**, v uvedeném pořadí.
+**_wcserror** a **__wcserror** jsou verze **strerror** s širokými znaky a **_strerror**.
 
-**_strerror**, **_wcserror**a **__Wcserror** jsou specifické pro společnost Microsoft, nikoli součástí standardní knihovny jazyka C. Nedoporučujeme je používat tam, kde chcete použít přenosný kód. V případě kompatibility Standard C použijte místo toho **strerror –** .
+**_strerror**, **_wcserror**a **__wcserror** jsou specifické pro společnost Microsoft, nikoli součástí knihovny Standard C. Nedoporučujeme je používat tam, kde chcete přenosný kód. Pro kompatibilitu se standardem C použijte místo toho **strerror.**
 
-Chcete-li získat chybové řetězce, doporučujeme namísto zastaralých maker [_sys_errlist](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) a [_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) použít **strerror –** nebo **_wcserror** a nepoužívané interní funkce **__sys_errlist** a **__sys_nerr**.
+Chcete-li získat chybové řetězce, doporučujeme **strerror** nebo **_wcserror** namísto zastaralé makra [_sys_errlist](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) a [_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) a zastaralé vnitřní funkce **__sys_errlist** a **__sys_nerr**.
 
-### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
 
-|Rutina TCHAR.H|_UNICODE & _MBCS není definováno.|_MBCS definováno|_UNICODE definováno|
+### <a name="generic-text-routine-mappings"></a>Mapování rutin obecných textů
+
+|Rutina TCHAR.H|_UNICODE & _MBCS není definováno|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcserror**|**strerror**|**strerror**|**_wcserror**|
 
@@ -115,19 +122,19 @@ Chcete-li získat chybové řetězce, doporučujeme namísto zastaralých maker 
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**strerror**|\<String. h >|
-|**_strerror**|\<String. h >|
-|**_wcserror** **__wcserror**|\<String. h >|
+|**strerror**|\<string.h>|
+|**_strerror**|\<string.h>|
+|**_wcserror** **, __wcserror**|\<string.h>|
 
-Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [pError](perror-wperror.md).
+Viz příklad pro [perror](perror-wperror.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-\ [manipulace s řetězci](../../c-runtime-library/string-manipulation-crt.md)
-[clearerr](clearerr.md)\
-\ pro [trajekty](ferror.md)
+[Manipulace s řetězci](../../c-runtime-library/string-manipulation-crt.md)\
+[jasnější](clearerr.md)\
+[ferror](ferror.md)\
 [perror, _wperror](perror-wperror.md)

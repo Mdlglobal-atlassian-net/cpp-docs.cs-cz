@@ -1,6 +1,6 @@
 ---
-title: Struktura INVOCATION_DATA
-description: Odkaz C++ na strukturu INVOCATION_DATA Build Insights SDK
+title: INVOCATION_DATA struktura
+description: C++ Build Insights SDK INVOCATION_DATA odkaz na strukturu.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: b2e8ddcf79201d8bcbbb8eb298b96b5c7680f90e
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 4e1f428facac413d7a4a5c059452dd8cdb07be4c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78333690"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81325485"
 ---
-# <a name="invocation_data-structure"></a>Struktura INVOCATION_DATA
+# <a name="invocation_data-structure"></a>INVOCATION_DATA struktura
 
 ::: moniker range="<=vs-2015"
 
-Sada C++ SDK pro Build Insights je kompatibilní se sadou Visual Studio 2017 a novější. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek selektor verzí sady Visual Studio pro tento článek na sadu Visual Studio 2017 nebo Visual Studio 2019.
+Sada C++ Build Insights SDK je kompatibilní s Visual Studio 2017 a vyšší. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek pro výběr **verze** sady Visual Studio pro tento článek na Visual Studio 2017 nebo Visual Studio 2019. Nachází se v horní části obsahu na této stránce.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Struktura `INVOCATION_DATA` popisuje vyvolání kompilátoru nebo linkeru.
+Struktura `INVOCATION_DATA` popisuje vyvolání kompilátoru nebo propojovacího serveru.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -47,10 +47,10 @@ typedef struct INVOCATION_DATA_TAG
 
 |  |  |
 |--|--|
-| `MSVCToolCode` | Kód, který identifikuje typ volání. Další informace najdete v tématu [MSVC_TOOL_CODE](msvc-tool-code-enum.md). |
+| `MSVCToolCode` | Kód, který identifikuje typ vyvolání. Další informace naleznete [v tématu MSVC_TOOL_CODE](msvc-tool-code-enum.md). |
 | `ToolVersion` | Objekt, který ukládá verzi vyvolaného nástroje jako skupinu integrálních hodnot. |
-| `ToolVersionString` | Popisuje verzi vyvolaného nástroje v textovém formátu. |
-| `WorkingDirectory` | Adresář, ze kterého bylo provedeno vyvolání. |
-| `ToolPath` | Absolutní cesta k vyvolanému nástroji. |
+| `ToolVersionString` | Popisuje verzi vyvolaný nástroj v textové podobě. |
+| `WorkingDirectory` | Adresář, ze kterého byla vyvolání provedena. |
+| `ToolPath` | Absolutní cesta vyvolaný nástroj. |
 
 ::: moniker-end

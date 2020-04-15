@@ -1,5 +1,5 @@
 ---
-title: Důležité informace k zápisu kódu prologu / epilogu
+title: Důležité informace při psaní kódu Prolog-Epilog
 ms.date: 11/04/2016
 helpviewer_keywords:
 - layouts, stack frame
@@ -7,20 +7,20 @@ helpviewer_keywords:
 - __LOCAL_SIZE constant
 - stack, stack frame layout
 ms.assetid: 3b8addec-e809-48e4-b1d0-5bad133bd4b8
-ms.openlocfilehash: 52403fc45bbb68d693ef154bf39c5dd366dd10c5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e1559c75808a72cd3f9674399bec036cf392b44f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62312511"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81334585"
 ---
 # <a name="considerations-when-writing-prologepilog-code"></a>Důležité informace k zápisu kódu prologu/epilogu
 
-**Microsoft Specific**
+**Specifické pro Microsoft**
 
-Před psaním vlastních sekvencí kódu prologu a epilogu je zapotřebí porozumět rozložení rámce zásobníku. Také je užitečné vědět, jak používat **__LOCAL_SIZE** předdefinovanou konstantu.
+Před zápisem vlastní prolog a epilog sekvence kódu, je důležité pochopit, jak je rozložen rámec zásobníku. Je také užitečné vědět, jak používat **__LOCAL_SIZE** předdefinované konstanty.
 
-##  <a name="_clang_c_stack_frame_layout"></a> Rozložení rámce zásobníku jazyka C
+## <a name="cstack-frame-layout"></a><a name="_clang_c_stack_frame_layout"></a>Rozložení rámce CStack
 
 Tento příklad ukazuje standardní kód prologu, který se může vyskytnout v 32bitové funkci:
 
@@ -42,18 +42,18 @@ ret                          ; Return from function
 
 Zásobník roste vždy směrem dolů (od vysokých po nízké adresy paměti). Základní ukazatel (`ebp`) ukazuje na vloženou hodnotu proměnné `ebp`. Oblast místních proměnných začíná na adrese `ebp-2`. Chcete-li přistoupit k místním proměnným, vypočítejte posun vůči adrese `ebp` odečtením příslušné hodnoty od adresy `ebp`.
 
-##  <a name="_clang_the___local_size_constant"></a> __LOCAL_SIZE – konstanta
+## <a name="the-__local_size-constant"></a><a name="_clang_the___local_size_constant"></a>Konstanta __LOCAL_SIZE
 
-Kompilátor poskytuje konstantu **__LOCAL_SIZE**, pro použití ve vloženém bloku assembleru daného kódu prologu funkce. Tato konstanta se používá k přidělení místa pro místní proměnné v rámci zásobníku ve vlastním kódu prologu.
+Kompilátor poskytuje **konstantu, __LOCAL_SIZE**, pro použití v inline assembler bloku kódu prologu funkce. Tato konstanta se používá k přidělení místa pro místní proměnné v rámci zásobníku ve vlastním kódu prologu.
 
-Kompilátor Určuje hodnotu **__LOCAL_SIZE**. Hodnotou je celkový počet bajtů všech místních proměnných definovaných uživatelem a dočasných proměnných generovaných kompilátorem. **__LOCAL_SIZE** lze použít pouze jako přímý operand; nelze použít ve výrazu. Hodnota této konstanty nesmí být v kódu měněna nebo předefinována. Příklad:
+Kompilátor určuje hodnotu **__LOCAL_SIZE**. Hodnotou je celkový počet bajtů všech místních proměnných definovaných uživatelem a dočasných proměnných generovaných kompilátorem. **__LOCAL_SIZE** lze použít pouze jako okamžitý operand; nelze jej použít ve výrazu. Hodnota této konstanty nesmí být v kódu měněna nebo předefinována. Příklad:
 
 ```
 mov      eax, __LOCAL_SIZE           ;Immediate operand--Okay
 mov      eax, [ebp - __LOCAL_SIZE]   ;Error
 ```
 
-Následující příklad neviditelné funkce obsahující vlastní sekvence prologu a epilogu pořadí použití **__LOCAL_SIZE** v sekvenci prologu:
+Následující příklad funkce naked obsahující vlastní sekvence prologu a epilogu používá **__LOCAL_SIZE** v sekvenci prologu:
 
 ```
 __declspec ( naked ) func()
@@ -79,8 +79,8 @@ __declspec ( naked ) func()
 }
 ```
 
-**Specifické pro END Microsoft**
+**END Microsoft Specifické**
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Holé funkce](../c-language/naked-functions.md)

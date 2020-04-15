@@ -1,10 +1,13 @@
 ---
 title: atanh, atanhf, atanhl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - atanhl
 - atanhf
 - atanh
+- _o_atanh
+- _o_atanhf
+- _o_atanhl
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -30,16 +34,16 @@ helpviewer_keywords:
 - atanhl function
 - atanh funciton
 ms.assetid: 83a43b5b-2580-4461-854f-dc84236d9f32
-ms.openlocfilehash: 539d015d5691f62f990faf650ab738f60066a2a6
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: ef4a37c1ae76a88fd547b76c510097994a160253
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939586"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81350126"
 ---
 # <a name="atanh-atanhf-atanhl"></a>atanh, atanhf, atanhl
 
-Vypočítá inverzní hyperbolický tangens.
+Vypočítá inverzní hyperbolickou tečnu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -56,29 +60,31 @@ long double atanh( long double x );  // C++ only
 
 ### <a name="parameters"></a>Parametry
 
-*x*<br/>
-Hodnota s plovoucí desetinnou čárkou.
+*X*<br/>
+Hodnota s plovoucí desetinnou táceckou.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Funkce **atanh –** vrátí inverzní arkustangens tangens (oblouk hyperbolický tangens) *x*. Pokud je *x* větší než 1 nebo menší než-1, **errno** je nastaveno na **EDOM** a výsledek je tiché NaN. Pokud je *x* rovno 1 nebo-1, vrátí se kladné nebo záporné nekonečno, v uvedeném pořadí a **errno** je nastavena na **ERANGE**.
+**Atanh** funkce vrátí inverzní hyberbolické tečny (oblouk hyperbolické tečny) *x*. Pokud *x* je větší než 1 nebo menší než -1, **errno** je nastavena na **EDOM** a výsledkem je tichý NaN. Pokud *x* se rovná 1 nebo -1, je vrácena kladná nebo záporná nekonečno, příslušně a **errno** je nastavena na **ERANGE**.
 
-|Vstup|Výjimka SEH|**Matherr** Jímka|
+|Vstup|Výjimka SEH|**Matherr (Rak.)** Výjimka|
 |-----------|-------------------|-------------------------|
-|QNAN, ZASÁHNOUT|žádná|žádná|
-|*X* ≥ 1; *x* ≤ -1|žádná|žádná|
+|± QNAN,IND|Žádná|Žádná|
+|*X* ≥ 1; *x* ≤ -1|Žádná|Žádná|
 
 ## <a name="remarks"></a>Poznámky
 
-Vzhledem C++ k tomu, že umožňuje přetížení, můžete volat přetížení **atanh –** , která přijímají a vracejí hodnoty **float** nebo **Long** **Double** . V programu v jazyce C **atanh –** vždycky přebírá a vrací **Double**.
+Protože C++ umožňuje přetížení, můžete volat přetížení **atanh,** které trvat a vrátit **float** nebo **dlouhé** **dvojité** hodnoty. V programu C **atanh** vždy bere a vrací **double**.
+
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
-|Funkce|Hlavička jazyka C|C++hlaviček|
+|Funkce|Hlavička C|Hlavička C++|
 |--------------|--------------|------------------|
-|**atanh –** , **atanhf –** , **atanhl**|\<Math. h >|\<cmath > nebo \<Math. h >|
+|**atanh**, **atanhf**, **atanhl**|\<math.h>|\<cmath> \<nebo math.h>|
 
-Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -108,9 +114,9 @@ tanh( 0.785398 ) = 0.655794
 atanh( 0.655794 ) = 0.785398
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)<br/>
+[Podpora s plovoucí desetinnou tálicí](../../c-runtime-library/floating-point-support.md)<br/>
 [acosh, acoshf, acoshl](acosh-acoshf-acoshl.md)<br/>
 [asinh, asinhf, asinhl](asinh-asinhf-asinhl.md)<br/>
 [cosh, coshf, coshl](cosh-coshf-coshl.md)<br/>

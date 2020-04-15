@@ -1,6 +1,6 @@
 ---
 title: atan, atanf, atanl, atan2, atan2f, atan2l
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - atan2f
 - atan2l
@@ -8,6 +8,8 @@ api_name:
 - atanf
 - atan
 - atanl
+- _o_atan
+- _o_atan2
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,6 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -41,16 +44,16 @@ helpviewer_keywords:
 - trigonometric functions
 - atan2f function
 ms.assetid: 7a87a18e-c94d-4727-9cb1-1bb5c2725ae4
-ms.openlocfilehash: 8c485dea281d2b754628c9663e38ea10a9b6ab57
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 3b8411f9839022477dff3100792e271e2f0b572b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939607"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81334119"
 ---
 # <a name="atan-atanf-atanl-atan2-atan2f-atan2l"></a>atan, atanf, atanl, atan2, atan2f, atan2l
 
-Vypočítá arkustangens **x** (**Atan**, **atanf –** a **atanl**) nebo arkustangens **y**/**x** (**ARCTG2**, **atan2f –** a **atan2l**).
+Vypočítá arctangent **x** (**atan**, **atanf**, a **atanl**) nebo arctangent **y**/**x** (**atan2**, **atan2f**, a **atan2l**).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -75,31 +78,33 @@ long double atan2( long double y, long double x );  // C++ only
 ### <a name="parameters"></a>Parametry
 
 *x*, *y*<br/>
-Libovolná čísla.
+Všechna čísla.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**Atan** Vrátí arkustangens *x* v rozsahu-π/2 na π/2 radiány. funkce **ARCTG2** vrací arkustangens *y*/*x* v rozsahu od-π do π radiánů. Pokud je *x* 0, funkce **Atan** vrátí hodnotu 0. Pokud jsou oba parametry funkce **ARCTG2** 0, vrátí funkce hodnotu 0. Všechny výsledky jsou v radiánech.
+**atan** vrátí arctangent *x* v rozsahu -π/2 až π/2 radiánů. **atan2** vrátí arctangent *y*/*x* v rozsahu -π to π radiány. Pokud *x* je 0, **atan** vrátí 0. Pokud oba parametry **atan2** jsou 0, funkce vrátí 0. Všechny výsledky jsou v radiánech.
 
-funkce **ARCTG2** používá znaménka obou parametrů k určení kvadrantu návratové hodnoty.
+**atan2** používá znaménky obou parametrů k určení kvadrantu vrácené hodnoty.
 
-|Vstup|Výjimka SEH|Výjimka matherr|
+|Vstup|Výjimka SEH|Výjimka Matherr|
 |-----------|-------------------|-----------------------|
-|± **QNAN**, **IND**|žádná|**_DOMAIN**|
+|± **QNAN**, **IND**|Žádná|**_DOMAIN**|
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce **Atan** vypočítá arkustangens (funkci inverzní tangens) *x*. funkce **ARCTG2** vypočítá arkustangens *y*/*x* (Pokud *x* Equals 0, funkce **ARCTG2** vrátí π/2, pokud *y* je kladné,-π/2, pokud *y* je záporné nebo 0, pokud je *y* 0.)
+Funkce **atan** vypočítá arctangen (inverzní tečovou funkci) *x*. **atan2** vypočítá arctangent *y*/*x* (pokud *x* rovná 0, **atan2** vrátí π/2, pokud *y* je kladná, -π/2, pokud *y* je záporná, nebo 0, pokud *y* je 0.)
 
-**Atan** má implementaci, která používá streaming SIMD Extensions 2 (SSE2). Informace a omezení týkající se použití implementace SSE2 naleznete v tématu [_set_SSE2_enable](set-sse2-enable.md).
+**atan** má implementaci, která používá streaming SIMD rozšíření 2 (SSE2). Informace a omezení týkající se použití implementace SSE2 naleznete [v tématu _set_SSE2_enable](set-sse2-enable.md).
 
-Vzhledem C++ k tomu, že umožňuje přetížení, můžete volat přetížení funkce **Atan** a **ARCTG2** , které přebírají argumenty **typu float** nebo **Long** **Double** . V programu v jazyce C mají funkce **Atan** a **ARCTG2** vždycky argumenty **Double** a vracet hodnotu **Double**.
+Protože C++ umožňuje přetížení, můžete volat přetížení **atan** a **atan2,** které trvat **float** nebo **dlouhé** **dvojité** argumenty. V programu C **atan** a **atan2** vždy vzít **dvojité** argumenty a vrátit **double**.
+
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
-|Rutina|Požadovaná hlavička (C)|Požadovaná hlavička (C++)|
+|Rutina|Povinná hlavička (C)|Povinné záhlaví (C++)|
 |-------------|---------------------|-|
-|**Atan**, **ARCTG2**, **atanf –** , **atan2f –** , **atanl**, **atan2l**|\<Math. h >|\<cmath > nebo \<Math. h >|
+|**atan**, **atan2**, **atanf**, **atan2f**, **atanl**, **atan2l**|\<math.h>|\<cmath> \<nebo math.h>|
 
 ## <a name="example"></a>Příklad
 
@@ -132,9 +137,9 @@ Arctangent of 5.000000: 1.373401
 Arctangent of 0.500000 / 5.000000: 0.099669
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)<br/>
+[Podpora s plovoucí desetinnou tálicí](../../c-runtime-library/floating-point-support.md)<br/>
 [acos, acosf, acosl](acos-acosf-acosl.md)<br/>
 [asin, asinf, asinl](asin-asinf-asinl.md)<br/>
 [cos, cosf, cosl](cos-cosf-cosl.md)<br/>

@@ -37,60 +37,60 @@ helpviewer_keywords:
 - security IDs [C++]
 - SIDs [C++], returning SID objects
 ms.assetid: 85404dcb-c59b-4535-ab3d-66cfa37e87de
-ms.openlocfilehash: ab5d743c7c6abf7ee3a849a28916ebd32788ef40
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 83326c13de7585806ab841f728f587f1131b5e8d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62274942"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81325997"
 ---
 # <a name="security-identifier-global-functions"></a>Globální funkce identifikátoru zabezpečení
 
-Tyto funkce vrátí objekty společné známého identifikátoru SID.
+Tyto funkce vrátí společné známé objekty SID.
 
 > [!IMPORTANT]
->  Funkce uvedené v následující tabulce nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.
+> Funkce uvedené v následující tabulce nelze použít v aplikacích, které se spouštějí v prostředí Windows Runtime.
 
 |||
 |-|-|
-|[SIDs::AccountOps](#accountops)|Vrátí identifikátor SID DOMAIN_ALIAS_RID_ACCOUNT_OPS.|
-|[SIDs::Admins](#admins)|Vrátí identifikátor SID DOMAIN_ALIAS_RID_ADMINS.|
-|[SIDs::AnonymousLogon](#anonymouslogon)|Vrátí identifikátor SID SECURITY_ANONYMOUS_LOGON_RID.|
-|[Sids::AuthenticatedUser](#authenticateduser)|Vrátí identifikátor SID SECURITY_AUTHENTICATED_USER_RID.|
-|[SIDs::BackupOps](#backupops)|Vrátí identifikátor SID DOMAIN_ALIAS_RID_BACKUP_OPS.|
-|[SIDs::batch](#batch)|Vrátí identifikátor SID SECURITY_BATCH_RID.|
-|[Sids::CreatorGroup](#creatorgroup)|Vrátí identifikátor SID SECURITY_CREATOR_GROUP_RID.|
+|[Sids::AccountOps](#accountops)|Vrátí identifikátor SID DOMAIN_ALIAS_RID_ACCOUNT_OPS.|
+|[Sids::Správci](#admins)|Vrátí identifikátor SID DOMAIN_ALIAS_RID_ADMINS.|
+|[Sids::Anonymní přihlášení](#anonymouslogon)|Vrátí identifikátor SID SECURITY_ANONYMOUS_LOGON_RID.|
+|[Sids::Ověřený uživatel](#authenticateduser)|Vrátí identifikátor SID SECURITY_AUTHENTICATED_USER_RID.|
+|[Sids::ZálohyOps](#backupops)|Vrátí identifikátor SID DOMAIN_ALIAS_RID_BACKUP_OPS.|
+|[Sids::Dávka](#batch)|Vrátí identifikátor SID SECURITY_BATCH_RID.|
+|[Sids::Skupina pro autory](#creatorgroup)|Vrátí identifikátor SID SECURITY_CREATOR_GROUP_RID.|
 |[Sids::CreatorGroupServer](#creatorgroupserver)|Vrátí identifikátor SID SECURITY_CREATOR_GROUP_SERVER_RID.|
-|[SIDs::CreatorOwner](#creatorowner)|Vrátí identifikátor SID SECURITY_CREATOR_OWNER_RID.|
+|[Sids::CreatorOwner](#creatorowner)|Vrátí identifikátor SID SECURITY_CREATOR_OWNER_RID.|
 |[Sids::CreatorOwnerServer](#creatorownerserver)|Vrátí identifikátor SID SECURITY_CREATOR_OWNER_SERVER_RID.|
-|[SIDs::Dialup](#dialup)|Vrátí identifikátor SID SECURITY_DIALUP_RID.|
-|[SIDs::Guests](#guests)|Vrátí identifikátor SID DOMAIN_ALIAS_RID_GUESTS.|
-|[SIDs::Interactive](#interactive)|Vrátí identifikátor SID SECURITY_INTERACTIVE_RID.|
-|[SIDs::Local](#local)|Vrátí identifikátor SID SECURITY_LOCAL_RID.|
-|[SIDs::Network](#network)|Vrátí identifikátor SID SECURITY_NETWORK_RID.|
+|[Sids::Dialup](#dialup)|Vrátí identifikátor SID SECURITY_DIALUP_RID.|
+|[Sids::Hosté](#guests)|Vrátí identifikátor SID DOMAIN_ALIAS_RID_GUESTS.|
+|[Sids::Interaktivní](#interactive)|Vrátí identifikátor SID SECURITY_INTERACTIVE_RID.|
+|[Sids::Místní](#local)|Vrátí identifikátor SID SECURITY_LOCAL_RID.|
+|[Sids::Síť](#network)|Vrátí identifikátor SID SECURITY_NETWORK_RID.|
 |[Sids::NetworkService](#networkservice)|Vrátí identifikátor SID SECURITY_NETWORK_SERVICE_RID.|
-|[SIDs::Null](#null)|Vrátí identifikátor SID SECURITY_NULL_RID.|
+|[Sids::Null](#null)|Vrátí identifikátor SID SECURITY_NULL_RID.|
 |[Sids::PreW2KAccess](#prew2kaccess)|Vrátí identifikátor SID DOMAIN_ALIAS_RID_PREW2KCOMPACCESS.|
-|[Sids::PowerUsers](#powerusers)|Vrátí identifikátor SID DOMAIN_ALIAS_RID_POWER_USERS.|
-|[SIDs::PrintOps](#printops)|Vrátí identifikátor SID DOMAIN_ALIAS_RID_PRINT_OPS.|
-|[SIDs::proxy](#proxy)|Vrátí identifikátor SID SECURITY_PROXY_RID.|
-|[SIDs::RasServers](#rasservers)|Vrátí identifikátor SID DOMAIN_ALIAS_RID_RAS_SERVERS.|
-|[SIDs::Replicator](#replicator)|Vrátí identifikátor SID DOMAIN_ALIAS_RID_REPLICATOR.|
-|[SIDs::RestrictedCode](#restrictedcode)|Vrátí identifikátor SID SECURITY_RESTRICTED_CODE_RID.|
-|[SIDs::Self](#self)|Vrátí identifikátor SID SECURITY_PRINCIPAL_SELF_RID.|
+|[Sids::PowerUživatelé](#powerusers)|Vrátí identifikátor SID DOMAIN_ALIAS_RID_POWER_USERS.|
+|[Sids::PrintOps](#printops)|Vrátí identifikátor SID DOMAIN_ALIAS_RID_PRINT_OPS.|
+|[Sids::Proxy](#proxy)|Vrátí identifikátor SID SECURITY_PROXY_RID.|
+|[Sids::RasServers](#rasservers)|Vrátí identifikátor SID DOMAIN_ALIAS_RID_RAS_SERVERS.|
+|[Sids::Replikátor](#replicator)|Vrátí identifikátor SID DOMAIN_ALIAS_RID_REPLICATOR.|
+|[Sids::RestrictedCode](#restrictedcode)|Vrátí identifikátor SID SECURITY_RESTRICTED_CODE_RID.|
+|[Sids::Vlastní](#self)|Vrátí identifikátor SID SECURITY_PRINCIPAL_SELF_RID.|
 |[Sids::ServerLogon](#serverlogon)|Vrátí identifikátor SID SECURITY_SERVER_LOGON_RID.|
-|[SIDs::Service](#service)|Vrátí identifikátor SID SECURITY_SERVICE_RID.|
-|[SIDs::System](#system)|Vrátí identifikátor SID SECURITY_LOCAL_SYSTEM_RID.|
-|[SIDs::SystemOps](#systemops)|Vrátí identifikátor SID DOMAIN_ALIAS_RID_SYSTEM_OPS.|
-|[Sids::TerminalServer](#terminalserver)|Vrátí identifikátor SID SECURITY_TERMINAL_SERVER_RID.|
-|[SIDs::Users](#users)|Vrátí identifikátor SID DOMAIN_ALIAS_RID_USERS.|
-|[SIDs::World](#world)|Vrátí identifikátor SID SECURITY_WORLD_RID.|
+|[Sids::Servis](#service)|Vrátí identifikátor SID SECURITY_SERVICE_RID.|
+|[Sids::Systém](#system)|Vrátí identifikátor SID SECURITY_LOCAL_SYSTEM_RID.|
+|[Sids::SystemOps](#systemops)|Vrátí identifikátor SID DOMAIN_ALIAS_RID_SYSTEM_OPS.|
+|[Sids::Terminální server](#terminalserver)|Vrátí identifikátor SID SECURITY_TERMINAL_SERVER_RID.|
+|[Sids::Uživatelé](#users)|Vrátí identifikátor SID DOMAIN_ALIAS_RID_USERS.|
+|[Sids::Svět](#world)|Vrátí identifikátor SID SECURITY_WORLD_RID.|
 
 ### <a name="requirements"></a>Požadavky
 
 **Záhlaví:** atlsecurity.h
 
-##  <a name="accountops"></a>  SIDs::AccountOps
+## <a name="sidsaccountops"></a><a name="accountops"></a>Sids::AccountOps
 
 Vrátí identifikátor SID DOMAIN_ALIAS_RID_ACCOUNT_OPS.
 
@@ -98,7 +98,7 @@ Vrátí identifikátor SID DOMAIN_ALIAS_RID_ACCOUNT_OPS.
 CSid AccountOps() throw(...);
 ```
 
-##  <a name="admins"></a>  SIDs::Admins
+## <a name="sidsadmins"></a><a name="admins"></a>Sids::Správci
 
 Vrátí identifikátor SID DOMAIN_ALIAS_RID_ADMINS.
 
@@ -106,7 +106,7 @@ Vrátí identifikátor SID DOMAIN_ALIAS_RID_ADMINS.
 CSid Admins() throw(...);
 ```
 
-##  <a name="anonymouslogon"></a>  SIDs::AnonymousLogon
+## <a name="sidsanonymouslogon"></a><a name="anonymouslogon"></a>Sids::Anonymní přihlášení
 
 Vrátí identifikátor SID SECURITY_ANONYMOUS_LOGON_RID.
 
@@ -114,7 +114,7 @@ Vrátí identifikátor SID SECURITY_ANONYMOUS_LOGON_RID.
 CSid AnonymousLogon() throw(...);
 ```
 
-##  <a name="authenticateduser"></a>  SIDs::AuthenticatedUser
+## <a name="sidsauthenticateduser"></a><a name="authenticateduser"></a>Sids::Ověřený uživatel
 
 Vrátí identifikátor SID SECURITY_AUTHENTICATED_USER_RID.
 
@@ -122,7 +122,7 @@ Vrátí identifikátor SID SECURITY_AUTHENTICATED_USER_RID.
 CSid AuthenticatedUser() throw(...);
 ```
 
-##  <a name="backupops"></a>  SIDs::BackupOps
+## <a name="sidsbackupops"></a><a name="backupops"></a>Sids::ZálohyOps
 
 Vrátí identifikátor SID DOMAIN_ALIAS_RID_BACKUP_OPS.
 
@@ -130,7 +130,7 @@ Vrátí identifikátor SID DOMAIN_ALIAS_RID_BACKUP_OPS.
 CSid BackupOps() throw(...);
 ```
 
-##  <a name="batch"></a>  SIDs::batch
+## <a name="sidsbatch"></a><a name="batch"></a>Sids::Dávka
 
 Vrátí identifikátor SID SECURITY_BATCH_RID.
 
@@ -138,7 +138,7 @@ Vrátí identifikátor SID SECURITY_BATCH_RID.
 CSid Batch() throw(...);
 ```
 
-##  <a name="creatorgroup"></a>  SIDs::CreatorGroup
+## <a name="sidscreatorgroup"></a><a name="creatorgroup"></a>Sids::Skupina pro autory
 
 Vrátí identifikátor SID SECURITY_CREATOR_GROUP_RID.
 
@@ -146,7 +146,7 @@ Vrátí identifikátor SID SECURITY_CREATOR_GROUP_RID.
 CSid CreatorGroup() throw(...);
 ```
 
-##  <a name="creatorgroupserver"></a>  Sids::CreatorGroupServer
+## <a name="sidscreatorgroupserver"></a><a name="creatorgroupserver"></a>Sids::CreatorGroupServer
 
 Vrátí identifikátor SID SECURITY_CREATOR_GROUP_SERVER_RID.
 
@@ -154,7 +154,7 @@ Vrátí identifikátor SID SECURITY_CREATOR_GROUP_SERVER_RID.
 CSid CreatorGroupServer() throw(...);
 ```
 
-##  <a name="creatorowner"></a>  SIDs::CreatorOwner
+## <a name="sidscreatorowner"></a><a name="creatorowner"></a>Sids::CreatorOwner
 
 Vrátí identifikátor SID SECURITY_CREATOR_OWNER_RID.
 
@@ -162,7 +162,7 @@ Vrátí identifikátor SID SECURITY_CREATOR_OWNER_RID.
 CSid CreatorOwner() throw(...);
 ```
 
-##  <a name="creatorownerserver"></a>  SIDs::CreatorOwnerServer
+## <a name="sidscreatorownerserver"></a><a name="creatorownerserver"></a>Sids::CreatorOwnerServer
 
 Vrátí identifikátor SID SECURITY_CREATOR_OWNER_SERVER_RID.
 
@@ -170,7 +170,7 @@ Vrátí identifikátor SID SECURITY_CREATOR_OWNER_SERVER_RID.
 CSid CreatorOwnerServer() throw(...);
 ```
 
-##  <a name="dialup"></a>  SIDs::Dialup
+## <a name="sidsdialup"></a><a name="dialup"></a>Sids::Dialup
 
 Vrátí identifikátor SID SECURITY_DIALUP_RID.
 
@@ -178,7 +178,7 @@ Vrátí identifikátor SID SECURITY_DIALUP_RID.
 CSid Dialup() throw(...);
 ```
 
-##  <a name="guests"></a>  SIDs::Guests
+## <a name="sidsguests"></a><a name="guests"></a>Sids::Hosté
 
 Vrátí identifikátor SID DOMAIN_ALIAS_RID_GUESTS.
 
@@ -186,7 +186,7 @@ Vrátí identifikátor SID DOMAIN_ALIAS_RID_GUESTS.
 CSid Guests() throw(...);
 ```
 
-##  <a name="interactive"></a>  SIDs::Interactive
+## <a name="sidsinteractive"></a><a name="interactive"></a>Sids::Interaktivní
 
 Vrátí identifikátor SID SECURITY_INTERACTIVE_RID.
 
@@ -194,7 +194,7 @@ Vrátí identifikátor SID SECURITY_INTERACTIVE_RID.
 CSid Interactive() throw(...);
 ```
 
-##  <a name="local"></a>  SIDs::Local
+## <a name="sidslocal"></a><a name="local"></a>Sids::Místní
 
 Vrátí identifikátor SID SECURITY_LOCAL_RID.
 
@@ -202,7 +202,7 @@ Vrátí identifikátor SID SECURITY_LOCAL_RID.
 CSid Local() throw(...);
 ```
 
-##  <a name="network"></a>  SIDs::Network
+## <a name="sidsnetwork"></a><a name="network"></a>Sids::Síť
 
 Vrátí identifikátor SID SECURITY_NETWORK_RID.
 
@@ -210,7 +210,7 @@ Vrátí identifikátor SID SECURITY_NETWORK_RID.
 CSid Network() throw(...);
 ```
 
-##  <a name="networkservice"></a>  Sids::NetworkService
+## <a name="sidsnetworkservice"></a><a name="networkservice"></a>Sids::NetworkService
 
 Vrátí identifikátor SID SECURITY_NETWORK_SERVICE_RID.
 
@@ -220,11 +220,11 @@ CSid NetworkService() throw(...);
 
 ### <a name="remarks"></a>Poznámky
 
-Použití NetworkService umožňující uživateli NT AUTHORITY\NetworkService čtení CPerfMon objektu zabezpečení. NetworkService přidá třídy SecurityAttribute ATLServer kód, který vám umožní knihovny DLL se přihlaste pod účtem NetworkService na Windows XP Home Edition, Windows XP Professional, Windows Server 2003 a vyšší operačního systému.
+Pomocí služby NetworkService můžete uživateli NT AUTHORITY\NetworkService povolit čtení objektu zabezpečení CPerfMon. NetworkService přidá do kódu atlserveru atribut SecurityAttribute, který umožní knihovně DLL přihlásit se pod účtem NetworkService v systémech Windows XP Home Edition, Windows XP Professional, Windows Server 2003 a vyšším operačním systému.
 
-Při vytváření vlastního protokolu čítače s třídou ATLServer CPerfMon v konzole MMC pro nástroj Perfmon, se nemusí zobrazit čítače při prohlížení souboru protokolu, i když se zobrazí správně v zobrazení v reálném čase. CPerfMon vlastní čítače výkonu nemají potřebná oprávnění ke spuštění v rámci služby "A výstrahy a protokolování výkonu" (smlogsvc.exe) v systému Windows XP Home Edition, Windows XP Professional, Windows Server 2003 (nebo vyšší) operační systémy. Tato služba je spuštěna pod účtem "NT AUTHORITY\NetworkService".
+Při vlastní čítače protokolu jsou vytvořeny s ATLServer CPerfMon třídy v Perfmon MMC, čítače nemusí zobrazit při zobrazení souboru protokolu, i když se zobrazí správně v zobrazení v reálném čase. Vlastní čítače výkonu CPerfMon nemají potřebná oprávnění ke spuštění v rámci služby Protokoly a výstrahy výkonu (smlogsvc.exe) v operačních systémech Windows XP Home Edition, Windows XP Professional, Windows Server 2003 (nebo vyšší). Tato služba je spuštěna pod účtem NT AUTHORITY\NetworkService.
 
-##  <a name="null"></a>  SIDs::Null
+## <a name="sidsnull"></a><a name="null"></a>Sids::Null
 
 Vrátí identifikátor SID SECURITY_NULL_RID.
 
@@ -232,7 +232,7 @@ Vrátí identifikátor SID SECURITY_NULL_RID.
 CSid Null() throw(...);
 ```
 
-##  <a name="prew2kaccess"></a>  Sids::PreW2KAccess
+## <a name="sidsprew2kaccess"></a><a name="prew2kaccess"></a>Sids::PreW2KAccess
 
 Vrátí identifikátor SID DOMAIN_ALIAS_RID_PREW2KCOMPACCESS.
 
@@ -240,7 +240,7 @@ Vrátí identifikátor SID DOMAIN_ALIAS_RID_PREW2KCOMPACCESS.
 CSid PreW2KAccess() throw(...);
 ```
 
-##  <a name="powerusers"></a>  SIDs::PowerUsers
+## <a name="sidspowerusers"></a><a name="powerusers"></a>Sids::PowerUživatelé
 
 Vrátí identifikátor SID DOMAIN_ALIAS_RID_POWER_USERS.
 
@@ -248,7 +248,7 @@ Vrátí identifikátor SID DOMAIN_ALIAS_RID_POWER_USERS.
 CSid PowerUsers() throw(...);
 ```
 
-##  <a name="printops"></a>  SIDs::PrintOps
+## <a name="sidsprintops"></a><a name="printops"></a>Sids::PrintOps
 
 Vrátí identifikátor SID DOMAIN_ALIAS_RID_PRINT_OPS.
 
@@ -256,7 +256,7 @@ Vrátí identifikátor SID DOMAIN_ALIAS_RID_PRINT_OPS.
 CSid PrintOps() throw(...);
 ```
 
-##  <a name="proxy"></a>  SIDs::proxy
+## <a name="sidsproxy"></a><a name="proxy"></a>Sids::Proxy
 
 Vrátí identifikátor SID SECURITY_PROXY_RID.
 
@@ -264,7 +264,7 @@ Vrátí identifikátor SID SECURITY_PROXY_RID.
 CSid Proxy() throw(...);
 ```
 
-##  <a name="rasservers"></a>  SIDs::RasServers
+## <a name="sidsrasservers"></a><a name="rasservers"></a>Sids::RasServers
 
 Vrátí identifikátor SID DOMAIN_ALIAS_RID_RAS_SERVERS.
 
@@ -272,7 +272,7 @@ Vrátí identifikátor SID DOMAIN_ALIAS_RID_RAS_SERVERS.
 CSid RasServers() throw(...);
 ```
 
-##  <a name="replicator"></a>  SIDs::Replicator
+## <a name="sidsreplicator"></a><a name="replicator"></a>Sids::Replikátor
 
 Vrátí identifikátor SID DOMAIN_ALIAS_RID_REPLICATOR.
 
@@ -280,7 +280,7 @@ Vrátí identifikátor SID DOMAIN_ALIAS_RID_REPLICATOR.
 CSid Replicator() throw(...);
 ```
 
-##  <a name="restrictedcode"></a>  SIDs::RestrictedCode
+## <a name="sidsrestrictedcode"></a><a name="restrictedcode"></a>Sids::RestrictedCode
 
 Vrátí identifikátor SID SECURITY_RESTRICTED_CODE_RID.
 
@@ -288,7 +288,7 @@ Vrátí identifikátor SID SECURITY_RESTRICTED_CODE_RID.
 CSid RestrictedCode() throw(...);
 ```
 
-##  <a name="self"></a>  SIDs::Self
+## <a name="sidsself"></a><a name="self"></a>Sids::Vlastní
 
 Vrátí identifikátor SID SECURITY_PRINCIPAL_SELF_RID.
 
@@ -296,7 +296,7 @@ Vrátí identifikátor SID SECURITY_PRINCIPAL_SELF_RID.
 CSid Self() throw(...);
 ```
 
-##  <a name="serverlogon"></a>  SIDs::ServerLogon
+## <a name="sidsserverlogon"></a><a name="serverlogon"></a>Sids::ServerLogon
 
 Vrátí identifikátor SID SECURITY_SERVER_LOGON_RID.
 
@@ -304,7 +304,7 @@ Vrátí identifikátor SID SECURITY_SERVER_LOGON_RID.
 CSid ServerLogon() throw(...);
 ```
 
-##  <a name="service"></a>  SIDs::Service
+## <a name="sidsservice"></a><a name="service"></a>Sids::Servis
 
 Vrátí identifikátor SID SECURITY_SERVICE_RID.
 
@@ -312,7 +312,7 @@ Vrátí identifikátor SID SECURITY_SERVICE_RID.
 CSid Service() throw(...);
 ```
 
-##  <a name="system"></a>  SIDs::System
+## <a name="sidssystem"></a><a name="system"></a>Sids::Systém
 
 Vrátí identifikátor SID SECURITY_LOCAL_SYSTEM_RID.
 
@@ -320,7 +320,7 @@ Vrátí identifikátor SID SECURITY_LOCAL_SYSTEM_RID.
 CSid System() throw(...);
 ```
 
-##  <a name="systemops"></a>  SIDs::SystemOps
+## <a name="sidssystemops"></a><a name="systemops"></a>Sids::SystemOps
 
 Vrátí identifikátor SID DOMAIN_ALIAS_RID_SYSTEM_OPS.
 
@@ -328,7 +328,7 @@ Vrátí identifikátor SID DOMAIN_ALIAS_RID_SYSTEM_OPS.
 CSid SystemOps() throw(...);
 ```
 
-##  <a name="terminalserver"></a>  SIDs::TerminalServer
+## <a name="sidsterminalserver"></a><a name="terminalserver"></a>Sids::Terminální server
 
 Vrátí identifikátor SID SECURITY_TERMINAL_SERVER_RID.
 
@@ -336,7 +336,7 @@ Vrátí identifikátor SID SECURITY_TERMINAL_SERVER_RID.
 CSid TerminalServer() throw(...);
 ```
 
-##  <a name="users"></a>  SIDs::Users
+## <a name="sidsusers"></a><a name="users"></a>Sids::Uživatelé
 
 Vrátí identifikátor SID DOMAIN_ALIAS_RID_USERS.
 
@@ -344,7 +344,7 @@ Vrátí identifikátor SID DOMAIN_ALIAS_RID_USERS.
 CSid Users() throw(...);
 ```
 
-##  <a name="world"></a>  SIDs::World
+## <a name="sidsworld"></a><a name="world"></a>Sids::Svět
 
 Vrátí identifikátor SID SECURITY_WORLD_RID.
 
@@ -352,6 +352,6 @@ Vrátí identifikátor SID SECURITY_WORLD_RID.
 CSid World() throw(...);
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Funkce](../../atl/reference/atl-functions.md)
+[Functions](../../atl/reference/atl-functions.md)

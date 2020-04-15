@@ -1,5 +1,5 @@
 ---
-title: Cdefaulthashtraits – třída
+title: Třída CDefaultHashTraits
 ms.date: 11/04/2016
 f1_keywords:
 - CDefaultHashTraits
@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CDefaultHashTraits class
 ms.assetid: d8ec4b37-6d58-447b-a0c1-8580c5b1ab85
-ms.openlocfilehash: a51b4460d7fcdf778fce24b6e404b75190f598f6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 43932092621d44cfc8b07270df92e2765665f23f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62245830"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81327087"
 ---
-# <a name="cdefaulthashtraits-class"></a>Cdefaulthashtraits – třída
+# <a name="cdefaulthashtraits-class"></a>Třída CDefaultHashTraits
 
-Tato třída poskytuje statické funkce pro výpočet hodnoty hash.
+Tato třída poskytuje statickou funkci pro výpočet hodnot hash.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -29,29 +29,29 @@ class CDefaultHashTraits
 #### <a name="parameters"></a>Parametry
 
 *T*<br/>
-Typ dat uložených v kolekci.
+Typ dat, která mají být uložena v kolekci.
 
 ## <a name="members"></a>Členové
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CDefaultHashTraits::Hash](#hash)|(Statické) Voláním této funkce pro výpočet hodnoty hash pro daný element.|
+|[CDefaultHashTraits::Hash](#hash)|(Statické) Volání této funkce k výpočtu hodnoty hash pro daný prvek.|
 
 ## <a name="remarks"></a>Poznámky
 
-Tato třída obsahuje jednu statickou funkci, která vrátí hodnotu hash pro daný element. Tato třída je využíváno [cdefaultelementtraits – třída](../../atl/reference/cdefaultelementtraits-class.md).
+Tato třída obsahuje jednu statickou funkci, která vrací hodnotu hash pro daný prvek. Tato třída je využívána [třídou CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md).
 
-Další informace najdete v tématu [ATL – třídy kolekce](../../atl/atl-collection-classes.md).
+Další informace naleznete v tématu [třídy kolekce klíčů ATL](../../atl/atl-collection-classes.md).
 
 ## <a name="requirements"></a>Požadavky
 
 **Záhlaví:** atlcoll.h
 
-##  <a name="hash"></a>  CDefaultHashTraits::Hash
+## <a name="cdefaulthashtraitshash"></a><a name="hash"></a>CDefaultHashTraits::Hash
 
-Voláním této funkce pro výpočet hodnoty hash pro daný element.
+Volání této funkce k výpočtu hodnoty hash pro daný prvek.
 
 ```
 static ULONG Hash(const T& element) throw();
@@ -59,8 +59,8 @@ static ULONG Hash(const T& element) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*– Element*<br/>
-Element.
+*Prvek*<br/>
+Prvek.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -68,8 +68,8 @@ Vrátí hodnotu hash.
 
 ### <a name="remarks"></a>Poznámky
 
-Výchozí algoritmus hash je velmi jednoduchý: Vrácená hodnota je číslo prvku. Potlačí tuto funkci v případě složitější algoritmus je povinný.
+Výchozí algoritmus hash je velmi jednoduchý: vrácená hodnota je číslo prvku. Přepsat tuto funkci, pokud je vyžadován složitější algoritmus.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Přehled tříd](../../atl/atl-class-overview.md)
+[Přehled třídy](../../atl/atl-class-overview.md)

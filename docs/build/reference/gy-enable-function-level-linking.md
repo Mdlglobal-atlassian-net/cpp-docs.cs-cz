@@ -13,16 +13,16 @@ helpviewer_keywords:
 - /Gy compiler option [C++]
 - packaged functions
 ms.assetid: 0d3cf14c-ed7d-4ad3-b4b6-104e56f61046
-ms.openlocfilehash: 9643b8b4b4b26b3f7a8a59ed0085601b1a53094d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8724ae4d018948c0f6aa9456f229db96878d7bf2
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62270721"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81328283"
 ---
 # <a name="gy-enable-function-level-linking"></a>/Gy (povolení propojení na úrovni funkcí)
 
-Umožňuje kompilátoru vytvořit balíček individuálních funkcí ve formě zabalených funkcí (sekvence Comdat).
+Umožňuje kompilátoru sbalit jednotlivé funkce ve formě balených funkcí (COMDAts).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -32,32 +32,32 @@ Umožňuje kompilátoru vytvořit balíček individuálních funkcí ve formě z
 
 ## <a name="remarks"></a>Poznámky
 
-Propojovací program vyžaduje funkce, ke které balí samostatně jako sekvence Comdat vyloučit nebo pořadí jednotlivých funkcí v souboru DLL nebo .exe.
+Propojovací systém vyžaduje, aby funkce byly zabaleny samostatně jako comdats vyloučit nebo objednat jednotlivé funkce v souboru DLL nebo EXE.
 
-Můžete použít možnost linkeru [/OPT (optimalizace)](opt-optimizations.md) neodkazované zabalené funkce vyloučení ze souboru .exe.
+Pomocí možnosti propojovacího programu [/OPT (Optimalizace)](opt-optimizations.md) můžete vyloučit neodkazované sbalené funkce ze souboru EXE.
 
-Můžete použít možnost linkeru [/Order (Put funkcí v pořadí)](order-put-functions-in-order.md) zahrnout zabalené funkce v zadaném pořadí v souboru .exe.
+Možnost propojovacího zařízení [/ORDER (Put Functions in Order)](order-put-functions-in-order.md) můžete použít k zahrnutí zabalených funkcí v zadaném pořadí do souboru EXE.
 
-Vložené funkce jsou vždy zabaleny, pokud jsou vytvořeny jako volání (které dojde, například pokud vkládání je vypnout nebo vzít adresu funkce). Kromě toho jsou zabaleny automaticky členských funkcí jazyka C++ definované v deklaraci třídy; Další funkce nejsou, a výběrem této možnosti je potřeba kompilovat jako zabalené funkce.
+Vložkové funkce jsou vždy zabaleny, pokud jsou vytvořena instance jako volání (ke kterému dochází, například pokud je vkládání vypnuto nebo máte adresu funkce). Kromě toho jsou členské funkce Jazyka C++ definované v deklaraci třídy automaticky zabaleny; ostatní funkce nejsou a výběr této možnosti je nutné zkompilovat jako zabalené funkce.
 
 > [!NOTE]
->  [/Zi](z7-zi-zi-debug-information-format.md) možnost použít pro funkce upravit a pokračovat, automaticky nastaví **/Gy** možnost.
+> Možnost [/ZI](z7-zi-zi-debug-information-format.md) použitá pro úpravy a pokračování automaticky nastaví volbu **/Gy.**
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
 
-1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
+1. Otevřete dialogové okno **Stránky vlastností** projektu. Podrobnosti naleznete v [tématu Nastavení kompilátoru jazyka C++ a vlastnosti sestavení v sadě Visual Studio](../working-with-project-properties.md).
 
-1. Klikněte na tlačítko **C/C++** složky.
+1. Klikněte na složku **C/C++.**
 
-1. Klikněte na tlačítko **generování kódu** stránku vlastností.
+1. Klikněte na stránku **vlastností Generování kódu.**
 
-1. Upravit **povolit propojování na úrovní funkcí** vlastnost.
+1. Upravte vlastnost **Povolit propojení na úrovni funkce.**
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Programové nastavení tohoto parametru kompilátoru
 
-- Viz <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.EnableFunctionLevelLinking%2A>.
+- Viz třída <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.EnableFunctionLevelLinking%2A>.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Parametry kompilátoru MSVC](compiler-options.md)<br/>
 [Syntaxe příkazového řádku kompilátoru MSVC](compiler-command-line-syntax.md)

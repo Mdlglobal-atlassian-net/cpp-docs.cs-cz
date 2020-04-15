@@ -1,11 +1,13 @@
 ---
 title: strchr, wcschr, _mbschr, _mbschr_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - strchr
 - wcschr
 - _mbschr_l
 - _mbschr
+- _o__mbschr
+- _o__mbschr_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,6 +22,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -44,19 +47,19 @@ helpviewer_keywords:
 - tcschr function
 - mbschr_l function
 ms.assetid: 2639905d-e983-43b7-b885-abef32cfac43
-ms.openlocfilehash: fb0b170473ae48b8d339f5e3db8350087997bfeb
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: ddfb90efdda4b5eccfcb8d8b4efeea528604fa68
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70940821"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81354087"
 ---
 # <a name="strchr-wcschr-_mbschr-_mbschr_l"></a>strchr, wcschr, _mbschr, _mbschr_l
 
-Vyhledá znak v řetězci pomocí aktuálního národního prostředí nebo zadané kategorie konverze LC_CTYPE-State.
+Vyhledá znak v řetězci pomocí aktuálního národního prostředí nebo zadané kategorie LC_CTYPE stavu převodu.
 
 > [!IMPORTANT]
-> `_mbschr`a `_mbschr_l` nelze je použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime. Další informace najdete v tématu [funkce CRT nejsou v aplikacích Univerzální platforma Windows podporovány](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> `_mbschr`a `_mbschr_l` nelze jej použít v aplikacích, které se spouštějí v prostředí Windows Runtime. Další informace naleznete v tématu [funkce CRT, které nejsou podporovány v aplikacích univerzální platformy Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -116,45 +119,47 @@ const unsigned char *_mbschr_l(
 
 ### <a name="parameters"></a>Parametry
 
-*str*<br/>
-Zdrojový řetězec zakončený hodnotou null.
+*Str*<br/>
+Zdrojový řetězec ukončený hodnotou Null.
 
-*c*<br/>
-Znak, který se má umístit.
+*C*<br/>
+Znak, který má být umístěn.
 
-*jazyka*<br/>
-Národní prostředí, které se má použít.
+*Národní prostředí*<br/>
+Národní prostředí použít.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Každá z těchto funkcí vrátí ukazatel na první výskyt *c* v *str*nebo hodnotu null, pokud není nalezen jazyk *c* .
+Každá z těchto funkcí vrátí ukazatel na první výskyt *c* v *str*nebo NULL, pokud *c* nebyl nalezen.
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce vyhledá první výskyt *c* v *str*nebo vrátí hodnotu null, pokud není nalezeno *c.* `strchr` Ve vyhledávání je obsažen ukončovací znak null.
+Funkce `strchr` vyhledá první výskyt *c* v *str*, nebo vrátí hodnotu NULL, pokud *c* nebyl nalezen. Do hledání je zahrnut nulový ukončující znak.
 
-`wcschr`a jsou verze s velkým znakem a `strchr`vícebajtovým znakem. `_mbschr_l` `_mbschr` Argumenty a návratová hodnota `wcschr` jsou řetězce `_mbschr` s velkým počtem znaků. hodnoty jsou vícebajtové znakové řetězce. `_mbschr`rozpozná sekvence vícebajtových znaků. Také, pokud je řetězec ukazatel s hodnotou null, `_mbschr` vyvolá neplatnou obslužnou rutinu parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, `_mbschr` vrátí hodnotu null a nastaví `errno` na EINVAL. `strchr`a `wcschr` neověřuje jejich parametry. Tyto tři funkce se chovají identicky jinak.
+`wcschr`a `_mbschr` `_mbschr_l` jsou širokoúhlé a vícebajtové `strchr`verze aplikace . Argumenty a vrácená `wcschr` hodnota jsou řetězce širokých znaků; tyto `_mbschr` jsou vícebajtové řetězce znaků. `_mbschr`rozpoznává vícebajtové sekvence znaků. Také pokud řetězec je ukazatel `_mbschr` null, vyvolá neplatný obslužnou rutinu parametru, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je spuštění povoleno `_mbschr` pokračovat, `errno` vrátí hodnotu NULL a nastaví na EINVAL. `strchr`a `wcschr` neověřujte jejich parametry. Tyto tři funkce se chovají stejně jinak.
 
-Výstupní hodnota je ovlivněna nastavením kategorie LC_CTYPE národního prostředí; Další informace naleznete v tématu [setlocale](setlocale-wsetlocale.md). Verze těchto funkcí bez přípony **_l** používají aktuální národní prostředí pro toto chování závislé na národním prostředí; verze s příponou **_l** jsou stejné s tím rozdílem, že místo toho používají předaný parametr národního prostředí. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
+Výstupní hodnota je ovlivněna nastavením nastavení kategorie LC_CTYPE národního prostředí; Další informace naleznete [v tématu setlocale](setlocale-wsetlocale.md). Verze těchto funkcí bez **přípony _l** pro toto chování závislé na národním prostředí používají aktuální národní prostředí. verze s **příponou _l** jsou identické s tím rozdílem, že místo toho používají parametr národního prostředí. Další informace naleznete v [tématu Locale](../../c-runtime-library/locale.md).
 
-V jazyce C tyto funkce přebírají ukazatel **const** pro první argument. V C++jsou k dispozici dvě přetížení. Přetížení přebírající ukazatel na **konstantu** vrací ukazatel na **const**; verze, která přebírá ukazatel na jiný typ než**const** , vrací ukazatel na**nekonstantní**hodnotu. Makro _CRT_CONST_CORRECT_OVERLOADS je definováno, pokud jsou k dispozici obě verze **const** i non-**const** . Pokud pro C++ přetížení vyžadujete**nekonstantní** chování, definujte symbol _CONST_RETURN.
+V C tyto funkce trvat **const** ukazatel pro první argument. V jazyce C++ jsou k dispozici dvě přetížení. Přetížení s ukazatelem **const** vrátí ukazatel **const**; verze, která má ukazatel na**non-const** vrátí ukazatel na**non-const**. Makro _CRT_CONST_CORRECT_OVERLOADS je definována, pokud jsou k dispozici verze těchto funkcí **const** i non-const.**const** Pokud požadujete chování bez**const** pro obě přetížení jazyka C++, definujte symbol _CONST_RETURN.
+
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE & _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE & _MBCS není definováno|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |`_tcschr`|`strchr`|`_mbschr`|`wcschr`|
-|**_n/a**|**není k dispozici**|`_mbschr_l`|**není k dispozici**|
+|**_n/a**|**N/a**|`_mbschr_l`|**N/a**|
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|`strchr`|\<String. h >|
-|`wcschr`|\<String. h > nebo \<WCHAR. h >|
-|`_mbschr`, `_mbschr_l`|\<Mbstring. h >|
+|`strchr`|\<string.h>|
+|`wcschr`|\<string.h> \<nebo wchar.h>|
+|`_mbschr`, `_mbschr_l`|\<mbstring.h>|
 
-Další informace o kompatibilitě najdete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -213,9 +218,9 @@ Result:   first r found at position 12
 Result:   last r found at position 30
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Manipulace s řetězci](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Zacházení s řetězci](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [Národní prostředí](../../c-runtime-library/locale.md)<br/>
 [Výklad sekvencí vícebajtových znaků](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [strcspn, wcscspn, _mbscspn, _mbscspn_l](strcspn-wcscspn-mbscspn-mbscspn-l.md)<br/>

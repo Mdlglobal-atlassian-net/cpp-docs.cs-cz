@@ -1,25 +1,25 @@
 ---
-title: x64 kódu prologu a epilogu
+title: x64 – prolog a epilog
 ms.date: 12/17/2018
 ms.assetid: 0453ed1a-3ff1-4bee-9cc2-d6d3d6384984
-ms.openlocfilehash: a225786853fcc2eb7b6a21de29f1ccf4901e4377
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d0b7444af6e434a09f6af5f5b1c144b46c79ad56
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62295230"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81328434"
 ---
-# <a name="x64-prolog-and-epilog"></a>x64 kódu prologu a epilogu
+# <a name="x64-prolog-and-epilog"></a>x64 – prolog a epilog
 
-Každá funkce, která přiděluje místo v zásobníku, volání dalších funkcí, uloží stálé registry nebo používá zpracování výjimek, musí mít prologu, jejíž adresa omezení jsou popsány v unwind data přidružená k položce tabulky příslušné funkce. Další informace najdete v tématu [x64 zpracování výjimek](../build/exception-handling-x64.md). Prologu uloží argument registry v jejich domovské adresy v případě potřeby nabízených oznámení stálé registrech do zásobníku, přidělí pevnou součástí zásobníku pro místní hodnoty a dočasné objekty a volitelně vytvoří ukazatel na rámec. Přidružená data unwind musí popisovat akce prologu a poskytne informace potřebné k účinek kód prologu vrátit zpět.
+Každá funkce, která přiděluje místo v zásobníku, volá další funkce, ukládá stálé registry nebo používá zpracování výjimek, musí mít prolog, jehož limity adres jsou popsány v datech unwind přidružených k příslušné položce tabulky funkcí. Další informace naleznete v tématu [zpracování výjimek x64](../build/exception-handling-x64.md). Prolog ukládá argument registry v jejich domovské adresy v případě potřeby, tlačí stálé registry v zásobníku, přiděluje pevnou část zásobníku pro místní a dočasné a volitelně vytvoří ukazatel rámce. Přidružená unwind data musí popisovat akci prologu a musí poskytnout informace potřebné k odčinit účinek kódu prologu.
 
-Pokud pevně přidělených v zásobníku je více než jednu stránku (to znamená větší než 4096 bajtů), je možné, že přidělení zásobníku může zahrnovat více než jedné stránky virtuální paměti, a proto přidělení musí být zaškrtnuto, než je přidělená. Speciální rutině, která lze volat z prologu a která nebude zničit některý z argumentů registrů je k dispozici pro tento účel.
+Pokud je pevné přidělení v zásobníku více než jedna stránka (to znamená větší než 4096 bajtů), pak je možné, že přidělení zásobníku může span více než jednu stránku virtuální paměti, a proto přidělení musí být kontrolovány před přidělením. Pro tento účel je k dispozici speciální rutina, která je volatelná z prologu a která nezničí žádný z registrů argumentů.
 
-Přesunout do zásobníku před pevné přidělení zásobníku je upřednostňovanou metodou pro ukládání stálé registry. Pokud pevné přidělení zásobníku se provádí před uložením stálé registry, potom pravděpodobností 32bitovým posunem je potřeba vyřešit oblasti uložené registrace. (Údajně nabízených oznámení v ceně registrů jsou stejně rychlé jako přesune a tak by mělo zůstat v dohledné budoucnosti budou Přestože předpokládaná závislost mezi nabízených oznámení.) Stálé registry je ukládat v libovolném pořadí. Však musí být prvním použití stálé registru v prologu ji uložit.
+Upřednostňovanou metodou pro ukládání stálých registrů je přesunout je do zásobníku před přidělením pevného zásobníku. Pokud je přidělení pevného zásobníku provedeno před uložením stálých registrů, je s největší pravděpodobností k adresování oblasti uloženého registru vyžadováno 32bitové posunutí. (Údajně, tlačí registrů jsou stejně rychlé jako pohyby a měly by zůstat tak v dohledné budoucnosti i přes implicitní závislost mezi tlačí.) Stálé registry lze uložit v libovolném pořadí. První použití stálého registru v prologu však musí být k jeho uložení.
 
-## <a name="prolog-code"></a>Kód prologu
+## <a name="prolog-code"></a>Kód Prologu
 
-Kód pro typické prologu může být:
+Kód pro typický prolog může být:
 
 ```MASM
     mov    [RSP + 8], RCX
@@ -31,9 +31,9 @@ Kód pro typické prologu může být:
     ...
 ```
 
-Tato sekvence prologu obchodů s aplikacemi argument registru RCX v jeho umístění, uloží stálé zaregistruje R13 R15 přidělí pevnou součástí rámce zásobníku a naváže ukazatel na rámec, který odkazuje 128 bajtů do oblasti pevně přidělených. Použití Posun umožňuje více pevně přidělených oblastí řešit pomocí jeden bajtové posunů.
+Tento prolog ukládá registr argumentů RCX do svého domovského umístění, ukládá stálé registry R13-R15, přiděluje pevnou část rámce zásobníku a vytvoří ukazatel rámce, který odkazuje na 128 bajtů do oblasti pevného přidělení. Použití posunu umožňuje více pevné přidělení oblasti, které mají být řešeny s jednobajtovým posunem.
 
-Pokud je pevně přidělených velikost větší než nebo rovna hodnotě jednu stránku paměti, pomocná funkce musí být volána před změnou RSP. Tato pomocná `__chkstk`, sondy zásobníku přidělený k rozsahu zajistit, že je správně rozšířená zásobníku. V takovém případě by místo toho byl v předchozím příkladu kódu prologu:
+Pokud je pevná velikost přidělení větší nebo rovna jedné stránce paměti, musí být před úpravou RSP volána pomocná funkce. Tento pomocník `__chkstk`, sondy k přidělení rozsah zásobníku k zajištění správné rozšíření zásobníku zásobníku. V takovém případě by předchozí příklad prologu byl:
 
 ```MASM
     mov    [RSP + 8], RCX
@@ -47,15 +47,15 @@ Pokud je pevně přidělených velikost větší než nebo rovna hodnotě jednu 
     ...
 ```
 
-`__chkstk` Pomocné rutiny nezmění žádné registry kromě R10 R11 a kódy stavu. Konkrétně se vrátí RAX beze změny a všechny stálé registry a předání argumentu registrů bez jakýchkoli úprav.
+Pomocník `__chkstk` nebude upravovat žádné jiné registry než R10, R11 a kódy podmínek. Zejména vrátí RAX beze změny a ponechat všechny stálé registry a argument-předávání registrů beze změny.
 
-## <a name="epilog-code"></a>Kód epilogu
+## <a name="epilog-code"></a>Kód Epilogu
 
-Kód epilogu existuje na konci každé funkci. Zatímco je obvykle pouze jeden prolog, může být mnoho epilogu funkce. Kód epilogu ořízne zásobníku pevně přidělených velikost (v případě potřeby), zruší přidělení pevné přidělení zásobníku, obnoví stálé registry pomocí automaticky otevíraného jejich uložené hodnoty ze zásobníku a vrátí.
+Kód Epilogu existuje při každém ukončení funkce. Vzhledem k tomu, že obvykle existuje pouze jeden prolog, může existovat mnoho epilogů. Kód Epilogu ořízne zásobník na jeho pevnou velikost přidělení (v případě potřeby), zruší přidělení pevného zásobníku, obnoví stálé registry tím, že odprýskává jejich uložené hodnoty ze zásobníku a vrátí.
 
-Kód epilogu musí postupovat při striktní sadu pravidel pro kód unwind spolehlivě unwind výjimek a přerušení. Tato pravidla snížení množství potřebných unwind dat, protože je potřeba žádná další data k popisu jednotlivých epilogu. Unwind kódu místo toho můžete určit, že se tím, že kontroluje vpřed prostřednictvím datového proudu kódu k identifikaci epilogu zpracovává epilogu.
+Kód epilogu musí dodržovat přísnou sadu pravidel pro unwind kód spolehlivě unwind prostřednictvím výjimek a přerušení. Tato pravidla snižují množství dat unwind, protože k popisu každého epilogu nejsou potřeba žádná další data. Místo toho unwind kód můžete určit, že epilog je spuštěn skenování vpřed prostřednictvím datového proudu kódu k identifikaci epilogu.
 
-Pokud není ukazatel na rámec se používá v funkci a pak epilogu musí nejprve zrušte přidělení pevnou součástí zásobníku, stálé registry jsou odebrány a ovládací prvek je vrácena volající funkci. Například
+Pokud žádný ukazatel rámce se používá ve funkci, pak epilog musí nejprve navrátit pevnou část zásobníku, jsou odebrány stálé registry a ovládací prvek je vrácena do volající funkce. Například:
 
 ```MASM
     add      RSP, fixed-allocation-size
@@ -65,7 +65,7 @@ Pokud není ukazatel na rámec se používá v funkci a pak epilogu musí nejprv
     ret
 ```
 
-Pokud ukazatel na rámec se používá ve funkci, musí k jeho pevně přidělených před provedením epilogu oříznut zásobníku. Tato akce je technicky vzato není součástí epilogu. Například následující epilog může vrátit zpět prologu používali dříve:
+Pokud je ve funkci použit ukazatel rámce, musí být zásobník před spuštěním epilogu oříznut na pevné přidělení. Tato akce technicky není součástí epilogu. Například následující epilog může být použit k odformátování dříve použitého prologu:
 
 ```MASM
     lea      RSP, -128[R13]
@@ -77,7 +77,7 @@ Pokud ukazatel na rámec se používá ve funkci, musí k jeho pevně přidělen
     ret
 ```
 
-V praxi při použití ukazatel na rámec, neexistuje žádný dobrý důvod k úpravě RSP ve dvou krocích, takže následující epilogu by místo toho použít:
+V praxi při použití ukazatele rámce neexistuje žádný dobrý důvod k úpravě RSP ve dvou krocích, takže místo toho by se použil následující epilog:
 
 ```MASM
     lea      RSP, fixed-allocation-size - 128[R13]
@@ -87,12 +87,12 @@ V praxi při použití ukazatel na rámec, neexistuje žádný dobrý důvod k �
     ret
 ```
 
-Tyto formy jsou pouze ty, které pro epilogu. Musí obsahovat buď `add RSP,constant` nebo `lea RSP,constant[FPReg]`následovaný posloupnost nula nebo více bodů POP 8bajtový registru a `return` nebo `jmp`. (Pouze podmnožinu `jmp` příkazy nejsou povolené v epilogu. Dílčí je výhradně třída `jmp` příkazů s odkazy na paměť ModRM kde ModRM mod pole hodnota je 00. Použití `jmp` příkazy v epilogu pomocí ModRM mod pole Hodnota 01 nebo 10 je zakázána. Zobrazit tabulku A-15 ruční hromadně AMD x86 – x 64 architektura programátora ve 3: Obecné účely a pokyny k systému, další informace o Instructions.) Žádný další kód se nemůže objevit. Konkrétně se nic nemůže být naplánováno v rámci epilogu, včetně načítání návratovou hodnotu.
+Tyto formuláře jsou jediné legální pro epilog. Musí se skládat `add RSP,constant` `lea RSP,constant[FPReg]`buď z nebo , následuje řada nula nebo více `return` 8-bajtů registru pops a nebo nebo `jmp`. (V epilogu `jmp` je přípustná pouze podmnožina příkazů. Podmnožina je výhradně `jmp` třída příkazů s odkazy na paměť ModRM, kde hodnota pole mod mod Mod je 00. Použití `jmp` příkazů v epilogu s hodnotou pole ModRM mod 01 nebo 10 je zakázáno. Další informace o povolených referencích ModRM naleznete v tabulce A-15 v příručním svazku AMD x86-64 Architecture Programmer 3: Obecné účely a systémové pokyny.) Žádný jiný kód se nemůže zobrazit. Zejména nic nelze naplánovat v rámci epilogu, včetně načítání vrácené hodnoty.
 
-Když se nepoužívá ukazatel na rámec, musíte použít epilogu `add RSP,constant` se uvolnit pevnou součástí do zásobníku. Nesmíte používat `lea RSP,constant[RSP]` místo. Toto omezení existuje, a proto unwind kód má menší počet vzorků k rozpoznání při hledání epilogu funkce.
+Pokud se ukazatel rámce nepoužívá, epilog `add RSP,constant` musí použít k navrátit pevnou část zásobníku. Místo toho `lea RSP,constant[RSP]` se nesmí použít. Toto omezení existuje, takže unwind kód má méně vzorů rozpoznat při hledání epilogs.
 
-Těchto pravidel umožňuje unwind kódu k určení, že se aktuálně zpracovává epilog a simulují provádění zbytek epilogu, aby se povolilo kontext volání funkce.
+Následující pravidla umožňuje unwind kód k určení, že epilog je právě spuštěna a simulovat provádění zbývající epilogu povolit opětovné vytvoření kontextu volající funkce.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [x64 – softwarové konvence](x64-software-conventions.md)

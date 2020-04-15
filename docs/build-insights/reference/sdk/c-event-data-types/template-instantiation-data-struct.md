@@ -1,6 +1,6 @@
 ---
-title: Struktura TEMPLATE_INSTANTIATION_DATA
-description: Odkaz C++ na strukturu TEMPLATE_INSTANTIATION_DATA Build Insights SDK
+title: TEMPLATE_INSTANTIATION_DATA struktura
+description: C++ Build Insights SDK TEMPLATE_INSTANTIATION_DATA odkaz na strukturu.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,18 +9,18 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 9aa669d715dbe56ce7e889330f46f307f520710f
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: a38d19368e7c0a9912907f1da6e7a2e31ffe8d90
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78333620"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81325332"
 ---
-# <a name="template_instantiation_data-structure"></a>Struktura TEMPLATE_INSTANTIATION_DATA
+# <a name="template_instantiation_data-structure"></a>TEMPLATE_INSTANTIATION_DATA struktura
 
 ::: moniker range="<=vs-2015"
 
-Sada C++ SDK pro Build Insights je kompatibilní se sadou Visual Studio 2017 a novější. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek selektor verzí sady Visual Studio pro tento článek na sadu Visual Studio 2017 nebo Visual Studio 2019.
+Sada C++ Build Insights SDK je kompatibilní s Visual Studio 2017 a vyšší. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek pro výběr **verze** sady Visual Studio pro tento článek na Visual Studio 2017 nebo Visual Studio 2019. Nachází se v horní části obsahu na této stránce.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
@@ -43,12 +43,12 @@ typedef struct TEMPLATE_INSTANTIATION_DATA_TAG
 
 |  |  |
 |--|--|
-| `SpecializationSymbolKey` | Klíč pro typ specializace šablony Tato hodnota je jedinečná v rámci analyzovaného trasování. |
-| `PrimaryTemplateSymbolKey` | Klíč pro typ primární šablony, který byl specializovaný. Tato hodnota je jedinečná v rámci analyzovaného trasování. |
-| `KindCode` | Typ instance šablony. Další informace najdete v tématu [TEMPLATE_INSTANTIATION_KIND_CODE](template-instantiation-kind-code-enum.md). |
+| `SpecializationSymbolKey` | Klíč pro typ specializace šablony. Tato hodnota je jedinečný v rámci trasování analyzovány. |
+| `PrimaryTemplateSymbolKey` | Klíč pro typ primární šablony, který byl specializovaný. Tato hodnota je jedinečný v rámci trasování analyzovány. |
+| `KindCode` | Typ instance šablony. Další informace naleznete [v tématu TEMPLATE_INSTANTIATION_KIND_CODE](template-instantiation-kind-code-enum.md). |
 
 ## <a name="remarks"></a>Poznámky
 
-Klíče ve struktuře `TEMPLATE_INSTANTIATION_DATA` jsou jedinečné v rámci analyzovaného trasování. Nicméně dva různé klíče přicházející z různých front-endové průchody kompilátoru mohou odkazovat na dva identické typy. Při využívání informací `TEMPLATE_INSTANTIATION_DATA` z více front-endového průchodu kompilátoru, použijte události [SYMBOL_NAME](../event-table.md#symbol-name) k určení, zda jsou dva typy stejné. události `SymbolName` jsou generovány na konci front-endu kompilátoru, poté, co byly provedeny všechny instance šablon.
+Klíče ve `TEMPLATE_INSTANTIATION_DATA` struktuře jsou jedinečné v rámci trasování analyzovány. Dva různé klíče pocházející z různých průchodů front-endkompilátoru však může ukazovat na dva identické typy. Při využívání `TEMPLATE_INSTANTIATION_DATA` informací z více front-endových průchodů kompilátoru použijte [SYMBOL_NAME](../event-table.md#symbol-name) události k určení, zda jsou dva typy stejné. `SymbolName`události jsou vyzařovány na konci front-endu kompilátoru, po všechny instance šablony.
 
 ::: moniker-end
