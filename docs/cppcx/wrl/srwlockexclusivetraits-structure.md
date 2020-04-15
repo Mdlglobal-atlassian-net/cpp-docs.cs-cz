@@ -11,16 +11,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HandleTraits::SRWLockExclusiveTraits::GetInvalidValue method
 - Microsoft::WRL::Wrappers::HandleTraits::SRWLockExclusiveTraits::Unlock method
 ms.assetid: 38a996ef-c2d7-4886-b413-a426ecee8f05
-ms.openlocfilehash: 25249b8823b8c182133e85aa4cd07d38f5874cf2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eb7b30915d6061e8470601df33fecec310d1bbca
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393869"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374312"
 ---
 # <a name="srwlockexclusivetraits-structure"></a>SRWLockExclusiveTraits – struktura
 
-Popisuje běžné vlastnosti `SRWLock` třídy ve výhradním režimu zámku.
+Popisuje společné charakteristiky `SRWLock` třídy v režimu výhradní zámek.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -30,18 +30,18 @@ struct SRWLockExclusiveTraits;
 
 ## <a name="members"></a>Členové
 
-### <a name="public-typedefs"></a>Veřejné definice TypeDef
+### <a name="public-typedefs"></a>Veřejné typedefs
 
-Název   | Popis
+Name (Název)   | Popis
 ------ | --------------------------------------------------------------------------
-`Type` | Synonymum pro ukazatel [SRWLOCK](srwlock-class.md) třídy.
+`Type` | Synonymum pro ukazatel na třídu [SRWLOCK.](srwlock-class.md)
 
 ### <a name="public-methods"></a>Veřejné metody
 
-Název                                                        | Popis
+Name (Název)                                                        | Popis
 ----------------------------------------------------------- | --------------------------------------------------------------------
-[Srwlockexclusivetraits::getinvalidvalue –](#getinvalidvalue) | Načte `SRWLockExclusiveTraits` objekt, který je pořád platný.
-[Srwlockexclusivetraits::Unlock –](#unlock)                   | Uvolní výhradní kontrolu zadaného `SRWLock` objektu.
+[SRWLockExclusiveTraits::GetInvalidValue](#getinvalidvalue) | Načte `SRWLockExclusiveTraits` objekt, který je vždy neplatný.
+[SRWLockExclusiveTraits::Odemknout](#unlock)                   | Uvolní výhradní řízení zadaného `SRWLock` objektu.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -51,11 +51,11 @@ Název                                                        | Popis
 
 **Záhlaví:** corewrappers.h
 
-**Namespace:** Microsoft::WRL::Wrappers::HandleTraits
+**Obor názvů:** Microsoft::WRL::Obálky::HandleTraits
 
-## <a name="getinvalidvalue"></a>Srwlockexclusivetraits::getinvalidvalue –
+## <a name="srwlockexclusivetraitsgetinvalidvalue"></a><a name="getinvalidvalue"></a>SRWLockExclusiveTraits::GetInvalidValue
 
-Načte `SRWLockExclusiveTraits` objekt, který je pořád platný.
+Načte `SRWLockExclusiveTraits` objekt, který je vždy neplatný.
 
 ```cpp
 inline static Type GetInvalidValue();
@@ -63,11 +63,11 @@ inline static Type GetInvalidValue();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Prázdná `SRWLockExclusiveTraits` objektu.
+Prázdný `SRWLockExclusiveTraits` objekt.
 
-## <a name="unlock"></a>Srwlockexclusivetraits::Unlock –
+## <a name="srwlockexclusivetraitsunlock"></a><a name="unlock"></a>SRWLockExclusiveTraits::Odemknout
 
-Uvolní výhradní kontrolu zadaného `SRWLock` objektu.
+Uvolní výhradní řízení zadaného `SRWLock` objektu.
 
 ```cpp
 inline static void Unlock(

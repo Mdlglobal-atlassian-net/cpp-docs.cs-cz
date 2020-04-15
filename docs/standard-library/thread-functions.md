@@ -1,5 +1,5 @@
 ---
-title: funkce&gt; &lt;vlákna
+title: '&lt;funkce&gt; vlákna'
 ms.date: 11/04/2016
 f1_keywords:
 - thread/std::get_id
@@ -14,21 +14,21 @@ helpviewer_keywords:
 - std::sleep_until [C++]
 - std::swap [C++]
 - std::yield [C++]
-ms.openlocfilehash: 8064cec7e94a909d7dc2e1b22142d362bb7b9488
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: bb0a0a12ec2882701447804f9c88d1776a196cb7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79420734"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375842"
 ---
-# <a name="ltthreadgt-functions"></a>funkce&gt; &lt;vlákna
+# <a name="ltthreadgt-functions"></a>&lt;funkce&gt; vlákna
 
 ||||
 |-|-|-|
 |[get_id](#get_id)|[sleep_for](#sleep_for)|[sleep_until](#sleep_until)|
-|[adresu](#swap)|[yield](#yield)|
+|[Swap](#swap)|[yield](#yield)|
 
-## <a name="get_id"></a>get_id
+## <a name="get_id"></a><a name="get_id"></a>get_id
 
 Jednoznačně identifikuje aktuální vlákno provádění.
 
@@ -38,9 +38,9 @@ thread::id this_thread::get_id() noexcept;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Objekt typu [thread:: ID](../standard-library/thread-class.md) , který jednoznačně identifikuje aktuální vlákno provádění.
+Objekt typu [thread::id,](../standard-library/thread-class.md) který jednoznačně identifikuje aktuální vlákno spuštění.
 
-## <a name="sleep_for"></a>sleep_for
+## <a name="sleep_for"></a><a name="sleep_for"></a>sleep_for
 
 Blokuje volající vlákno.
 
@@ -53,13 +53,13 @@ inline void sleep_for(const chrono::duration<Rep, Period>& Rel_time);
 ### <a name="parameters"></a>Parametry
 
 *Rel_time*\
-Objekt [Duration](../standard-library/duration-class.md) , který určuje časový interval.
+Objekt [duration,](../standard-library/duration-class.md) který určuje časový interval.
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce blokuje volající vlákno alespoň v čase určeném pomocí *Rel_time*. Tato funkce nevyvolá žádné výjimky.
+Funkce blokuje volající vlákno alespoň po dobu určenou *Rel_time*. Tato funkce nevyvolá žádné výjimky.
 
-## <a name="sleep_until"></a>sleep_until
+## <a name="sleep_until"></a><a name="sleep_until"></a>sleep_until
 
 Blokuje volající vlákno alespoň do zadaného času.
 
@@ -79,9 +79,9 @@ Představuje bod v čase.
 
 Tato funkce nevyvolá žádné výjimky.
 
-## <a name="swap"></a>adresu
+## <a name="swap"></a><a name="swap"></a>Swap
 
-Zamění stavy dvou objektů **vlákna** .
+Zamění stavy dvou objektů **podprocesu.**
 
 ```cpp
 void swap(thread& Left, thread& Right) noexcept;
@@ -89,19 +89,19 @@ void swap(thread& Left, thread& Right) noexcept;
 
 ### <a name="parameters"></a>Parametry
 
-*Levý*\
-Levý objekt **vlákna** .
+*Vlevo*\
+Objekt **levého vlákna.**
 
-*Pravé*\
-Pravý objekt **vlákna** .
+*Právo*\
+Objekt **pravého vlákna.**
 
 ### <a name="remarks"></a>Poznámky
 
 Funkce volá `Left.swap(Right)`.
 
-## <a name="yield"></a>Výsledkem
+## <a name="yield"></a><a name="yield"></a>Výnos
 
-Signalizuje operačnímu systému, aby spouštěl další vlákna, i v případě, že aktuální vlákno obvykle pokračuje v běhu.
+Signalizuje operačnímu systému spustit jiná vlákna, i v případě, že aktuální vlákno by obvykle nadále spustit.
 
 ```cpp
 inline void yield() noexcept;
@@ -109,4 +109,4 @@ inline void yield() noexcept;
 
 ## <a name="see-also"></a>Viz také
 
-[> \<vlákna](../standard-library/thread.md)
+[\<>vláken](../standard-library/thread.md)

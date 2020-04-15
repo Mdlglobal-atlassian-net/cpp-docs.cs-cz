@@ -12,16 +12,16 @@ helpviewer_keywords:
 - std::ostrstream [C++], rdbuf
 - std::ostrstream [C++], str
 ms.assetid: e2e34679-b266-4728-a8e1-8eda5d400e46
-ms.openlocfilehash: c73ab13d3cb2531ff3d741766bc86f8354a0be9d
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: b52ba70607a5214a6aa28f04cdded0b19a56b2f6
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458064"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373535"
 ---
 # <a name="ostrstream-class"></a>ostrstream – třída
 
-Popisuje objekt, který řídí vložení prvků a zakódovaných objektů do vyrovnávací paměti datového proudu třídy [strstreambuf](../standard-library/strstreambuf-class.md).
+Popisuje objekt, který řídí vkládání prvků a kódovaných objektů do vyrovnávací paměti datového proudu třídy [strstreambuf](../standard-library/strstreambuf-class.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -34,7 +34,7 @@ class ostrstream : public ostream
 Objekt ukládá objekt třídy `strstreambuf`.
 
 > [!NOTE]
-> Tato třída je zastaralá. Místo toho zvažte použití [ostringstream –](../standard-library/sstream-typedefs.md#ostringstream) nebo [wostringstream –](../standard-library/sstream-typedefs.md#wostringstream) .
+> Tato třída je zastaralá. Zvažte použití [ostringstream](../standard-library/sstream-typedefs.md#ostringstream) nebo [wostringstream](../standard-library/sstream-typedefs.md#wostringstream) místo.
 
 ### <a name="constructors"></a>Konstruktory
 
@@ -46,20 +46,20 @@ Objekt ukládá objekt třídy `strstreambuf`.
 
 |Členská funkce|Popis|
 |-|-|
-|[uvolnění](#freeze)|Způsobí, že vyrovnávací paměť datového proudu nebude k dispozici prostřednictvím operací vyrovnávací paměti datového proudu.|
-|[pcount](#pcount)|Vrátí počet prvků zapsaných do řízené sekvence.|
+|[Zmrazit](#freeze)|Způsobí, že vyrovnávací paměť datového proudu není k dispozici prostřednictvím operací vyrovnávací paměti datového proudu.|
+|[pcount](#pcount)|Vrátí počet počtu prvků zapsaných do řízené sekvence.|
 |[rdbuf](#rdbuf)|Vrátí ukazatel na přidružený `strstreambuf` objekt datového proudu.|
-|[str](#str)|Volání [](../standard-library/strstreambuf-class.md#freeze)se zablokují a pak vrátí ukazatel na začátek řízené sekvence.|
+|[Str](#str)|Volání [zmrazit](../standard-library/strstreambuf-class.md#freeze)a potom vrátí ukazatel na začátek řízené sekvence.|
 
 ## <a name="requirements"></a>Požadavky
 
-**Hlavička:** \<strstream >
+**Záhlaví:** \<strstream>
 
 **Obor názvů:** std
 
-## <a name="freeze"></a>ostrstream:: zmrazit
+## <a name="ostrstreamfreeze"></a><a name="freeze"></a>ostrstream::zmrazení
 
-Způsobí, že vyrovnávací paměť datového proudu nebude k dispozici prostřednictvím operací vyrovnávací paměti datového proudu.
+Způsobí, že vyrovnávací paměť datového proudu není k dispozici prostřednictvím operací vyrovnávací paměti datového proudu.
 
 ```cpp
 void freeze(bool _Freezeit = true);
@@ -68,17 +68,17 @@ void freeze(bool _Freezeit = true);
 ### <a name="parameters"></a>Parametry
 
 *_Freezeit*\
-**Logická** hodnota označující, zda má být datový proud zmrazen.
+**Bool** označující, zda chcete, aby byl datový proud zmrazen.
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce volá [rdbuf](#rdbuf) -> [zmrazení](../standard-library/strstreambuf-class.md#freeze)(_ *Freezeit*).
+Členská funkce volá [rdbuf](#rdbuf) -> [freeze](../standard-library/strstreambuf-class.md#freeze)(_ *Freezeit).*
 
 ### <a name="example"></a>Příklad
 
-Viz [strstream:: zmrazit](../standard-library/strstreambuf-class.md#freeze) pro příklad, který používá `freeze`.
+Viz [strstream::freeze](../standard-library/strstreambuf-class.md#freeze) pro příklad, který používá `freeze`.
 
-## <a name="ostrstream"></a>ostrstream:: ostrstream
+## <a name="ostrstreamostrstream"></a><a name="ostrstream"></a>ostrstream::ostrstream
 
 Vytvoří objekt typu `ostrstream`.
 
@@ -92,26 +92,26 @@ ostrstream(char* ptr,
 
 ### <a name="parameters"></a>Parametry
 
-*střed*\
+*Ptr*\
 Vyrovnávací paměť.
 
-*výpočtu*\
-Velikost vyrovnávací paměti v bajtech.
+*Počet*\
+Velikost vyrovnávací paměti v bajtů.
 
 *_Mode*\
-Vstupní a výstupní režim vyrovnávací paměti. Další informace naleznete v tématu [ios_base:: openmode](../standard-library/ios-base-class.md#openmode) .
+Vstupní a výstupní režim vyrovnávací paměti. Další informace naleznete [ios_base::openmode.](../standard-library/ios-base-class.md#openmode)
 
 ### <a name="remarks"></a>Poznámky
 
-Oba konstruktory inicializují základní třídu voláním [ostream](../standard-library/ostream-typedefs.md#ostream)(**SB**), kde `sb` je uložený objekt třídy [strstreambuf](../standard-library/strstreambuf-class.md). První konstruktor se také inicializuje `sb` voláním `strstreambuf`. Druhý konstruktor inicializuje základní třídu jedním ze dvou způsobů:
+Oba konstruktory inicializovat základní třídy voláním `sb` [ostream](../standard-library/ostream-typedefs.md#ostream)(**sb**), kde je uložený objekt třídy [strstreambuf](../standard-library/strstreambuf-class.md). První konstruktor také `sb` inicializuje `strstreambuf`voláním . Druhý konstruktor inicializuje základní třídu jedním ze dvou způsobů:
 
-- Pokud `_Mode` **ios_base::** `count` `strstreambuf` `count``ptr`App = = 0, jenutnéurčitprvníprvekpoleprvkůakonstruktorvolá(,,`ptr`  &  `ptr`).
+- Pokud `_Mode`  &  **ios_base::app**== `ptr` 0, pak musí určit `count` první prvek pole prvků `strstreambuf``ptr`a `count` `ptr`konstruktor volání ( , , ).
 
-- `ptr` `ptr` `strstreambuf`V opačném případě `count`je nutné určit první prvek pole počtu prvků, který obsahuje řetězec jazyka C, jehož první prvek je určen a konstruktor volá (,, `ptr` `ptr` + `strlen`( `ptr`) ).
+- V `ptr` opačném případě musí být určen první prvek pole elementů počtu, `ptr`který obsahuje řetězec `strstreambuf`C, jehož první prvek je určen aplikací , a volání konstruktoru`ptr`( `count`, , `ptr`  +  `strlen`, ). `ptr`
 
-## <a name="pcount"></a>ostrstream: počet:p
+## <a name="ostrstreampcount"></a><a name="pcount"></a>ostrstream::ppočet
 
-Vrátí počet prvků zapsaných do řízené sekvence.
+Vrátí počet počtu prvků zapsaných do řízené sekvence.
 
 ```cpp
 streamsize pcount() const;
@@ -127,9 +127,9 @@ Počet prvků zapsaných do řízené sekvence.
 
 ### <a name="example"></a>Příklad
 
-Viz [strstream::p Count](../standard-library/strstreambuf-class.md#pcount) pro ukázku, která používá `pcount`.
+Viz [strstream::pcount](../standard-library/strstreambuf-class.md#pcount) pro vzorek, který používá `pcount`.
 
-## <a name="rdbuf"></a>ostrstream:: rdbuf
+## <a name="ostrstreamrdbuf"></a><a name="rdbuf"></a>ostrstream::rdbuf
 
 Vrátí ukazatel na přidružený objekt strstreambuf datového proudu.
 
@@ -143,15 +143,15 @@ Ukazatel na přidružený objekt strstreambuf datového proudu.
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrací adresu vyrovnávací paměti uloženého datového proudu typu `pointer` do [strstreambuf](../standard-library/strstreambuf-class.md).
+Členská funkce vrátí adresu uložené hodové vyrovnávací paměti typu `pointer` [strstreambuf](../standard-library/strstreambuf-class.md).
 
 ### <a name="example"></a>Příklad
 
-Viz [strstreambuf::p Count](../standard-library/strstreambuf-class.md#pcount) pro ukázku, která používá `rdbuf`.
+Viz [strstreambuf::pcount](../standard-library/strstreambuf-class.md#pcount) pro vzorek, který používá `rdbuf`.
 
-## <a name="str"></a>ostrstream:: str
+## <a name="ostrstreamstr"></a><a name="str"></a>ostrstream::str
 
-Volání [](../standard-library/strstreambuf-class.md#freeze)se zablokují a pak vrátí ukazatel na začátek řízené sekvence.
+Volání [zmrazit](../standard-library/strstreambuf-class.md#freeze)a potom vrátí ukazatel na začátek řízené sekvence.
 
 ```cpp
 char *str();
@@ -163,15 +163,15 @@ Ukazatel na začátek řízené sekvence.
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí [rdbuf](#rdbuf) -> [str](../standard-library/strstreambuf-class.md#str).
+Členská funkce vrátí [hodnotu rdbuf](#rdbuf) -> [str](../standard-library/strstreambuf-class.md#str).
 
 ### <a name="example"></a>Příklad
 
-Ukázku, kterou používá `str`, najdete v tématu [strstream:: str](../standard-library/strstreambuf-class.md#str) .
+Viz [strstream::str](../standard-library/strstreambuf-class.md#str) pro vzorek, který používá `str`.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [ostream](../standard-library/ostream-typedefs.md#ostream)\
-[Bezpečnost vlákna ve C++ standardní knihovně](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[Programování iostream –](../standard-library/iostream-programming.md)\
-[iostreams – konvence](../standard-library/iostreams-conventions.md)
+[Bezpečnost vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[programování iostreamu](../standard-library/iostream-programming.md)\
+[iostreams úmluvy](../standard-library/iostreams-conventions.md)

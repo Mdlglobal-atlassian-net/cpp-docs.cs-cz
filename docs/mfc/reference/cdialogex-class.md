@@ -1,5 +1,5 @@
 ---
-title: Cdialogex – třída
+title: Třída CDialogEx
 ms.date: 11/04/2016
 f1_keywords:
 - CDialogEx
@@ -12,16 +12,16 @@ helpviewer_keywords:
 - CDialogEx [MFC], SetBackgroundColor
 - CDialogEx [MFC], SetBackgroundImage
 ms.assetid: a6ed3b1f-aef8-4b66-ac78-2160faf63c13
-ms.openlocfilehash: f92058d1aa0dabccf6623d20a248fed8eb99ab26
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b34c441ac63b023ae6272a1646151aad4be1bfbc
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62168047"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375638"
 ---
-# <a name="cdialogex-class"></a>Cdialogex – třída
+# <a name="cdialogex-class"></a>Třída CDialogEx
 
-`CDialogEx` Třída určuje barvu pozadí a obrázek pozadí dialogového okna.
+Třída `CDialogEx` určuje barvu pozadí a obrázek pozadí dialogového okna.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,45 +33,45 @@ class CDialogEx : public CDialog
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CDialogEx::CDialogEx](#cdialogex)|Vytvoří `CDialogEx` objektu.|
+|[CDialogEx::CDialogEx](#cdialogex)|Vytvoří `CDialogEx` objekt.|
 |`CDialogEx::~CDialogEx`|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CDialogEx::SetBackgroundColor](#setbackgroundcolor)|Nastaví barvu pozadí dialogového okna.|
+|[CDialogex::SetBackgroundColor](#setbackgroundcolor)|Nastaví barvu pozadí dialogového okna.|
 |[CDialogEx::SetBackgroundImage](#setbackgroundimage)|Nastaví obrázek pozadí dialogového okna.|
 
 ## <a name="remarks"></a>Poznámky
 
-Použít `CDialogEx` třídy, odvoďte vlastní třídy dialogového okna pole z `CDialogEx` místo na třídě `CDialog` třídy.
+Chcete-li `CDialogEx` použít třídu, odvodit třídu dialogového `CDialogEx` okna z třídy namísto třídy. `CDialog`
 
-Dialogové okno pole Image se ukládají do souboru prostředků. Rozhraní automaticky odstraní všechny image, která jsou načtená ze souboru prostředků. Chcete-li programově odstranit aktuální obrázek na pozadí, zavolejte [CDialogEx::SetBackgroundImage](#setbackgroundimage) metody nebo implementovat `OnDestroy` obslužné rutiny události. Při volání [CDialogEx::SetBackgroundImage](#setbackgroundimage) metoda, předejte `HBITMAP` parametr jako popisovač bitové kopie. `CDialogEx` Objekt převzít vlastnictví na obrázku, který se odstranit, pokud `m_bAutoDestroyBmp` příznak je `TRUE`.
+Obrázky dialogového okna jsou uloženy v souboru prostředků. Rozhraní framework automaticky odstraní všechny bitové kopie, která je načtena ze souboru prostředků. Chcete-li programově odstranit aktuální obrázek pozadí, zavolejte metodu [CDialogEx::SetBackgroundImage](#setbackgroundimage) nebo implementujte obslužnou rutinu `OnDestroy` události. Při volání [CDialogEx::SetBackgroundImage](#setbackgroundimage) metoda, předat `HBITMAP` parametr jako popisovač obrazu. Objekt `CDialogEx` převezme vlastnictví obrázku a odstraní `m_bAutoDestroyBmp` jej, `TRUE`pokud je příznak .
 
-A `CDialogEx` objekt může být nadřazená [cmfcpopupmenu – třída](../../mfc/reference/cmfcpopupmenu-class.md) objektu. [Cmfcpopupmenu – třída](../../mfc/reference/cmfcpopupmenu-class.md) objektu volání `CDialogEx::SetActiveMenu` metoda při [cmfcpopupmenu – třída](../../mfc/reference/cmfcpopupmenu-class.md) objektu se otevře. Následně `CDialogEx` objekt zpracovává událost všechny nabídky do [cmfcpopupmenu – třída](../../mfc/reference/cmfcpopupmenu-class.md) objekt je zavřený.
+Objekt `CDialogEx` může být nadřazený objekt [třídy CMFCPopupMenu.](../../mfc/reference/cmfcpopupmenu-class.md) Objekt [TŘÍDY CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) volá metodu `CDialogEx::SetActiveMenu` při otevření objektu [třídy CMFCPopupMenu.](../../mfc/reference/cmfcpopupmenu-class.md) Poté `CDialogEx` objekt zpracovává všechny události nabídky, dokud [cmFCPopupMenu třídy](../../mfc/reference/cmfcpopupmenu-class.md) objektu je uzavřen.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObjekt](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[CCmdCíl](../../mfc/reference/ccmdtarget-class.md)
 
-[CWnd](../../mfc/reference/cwnd-class.md)
+[Cwnd](../../mfc/reference/cwnd-class.md)
 
-[CDialog](../../mfc/reference/cdialog-class.md)
+[Cdialog](../../mfc/reference/cdialog-class.md)
 
 [CDialogEx](../../mfc/reference/cdialogex-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxdialogex.h
+**Záhlaví:** afxDialogex.h
 
-##  <a name="cdialogex"></a>  CDialogEx::CDialogEx
+## <a name="cdialogexcdialogex"></a><a name="cdialogex"></a>CDialogEx::CDialogEx
 
-Vytvoří `CDialogEx` objektu.
+Vytvoří `CDialogEx` objekt.
 
 ```
 CDialogEx(
@@ -85,23 +85,23 @@ CDialogEx(
 
 ### <a name="parameters"></a>Parametry
 
-*nIDTemplate*<br/>
-[in] ID prostředku šablony dialogového okna.
+*nIDŠablona*<br/>
+[v] ID prostředku šablony dialogového okna.
 
 *lpszTemplateName*<br/>
-[in] Název prostředku šablony dialogového okna.
+[v] Název prostředku šablony dialogového okna.
 
 *pParent*<br/>
-[in] Ukazatel do nadřazeného okna. Výchozí hodnota je NULL.
+[v] Ukazatel na nadřazené okno. Výchozí hodnota je NULL.
 
 *pParentWnd*<br/>
-[in] Ukazatel do nadřazeného okna. Výchozí hodnota je NULL.
+[v] Ukazatel na nadřazené okno. Výchozí hodnota je NULL.
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="setbackgroundcolor"></a>  CDialogEx::SetBackgroundColor
+## <a name="cdialogexsetbackgroundcolor"></a><a name="setbackgroundcolor"></a>CDialogex::SetBackgroundColor
 
 Nastaví barvu pozadí dialogového okna.
 
@@ -114,14 +114,14 @@ void SetBackgroundColor(
 ### <a name="parameters"></a>Parametry
 
 *color*<br/>
-[in] Hodnota barvy RGB.
+[v] Hodnota barvy RGB.
 
-*bRepaint*<br/>
-[in] TRUE, pokud chcete okamžitě aktualizovat obrazovce. v opačném případě hodnota FALSE. Výchozí hodnota je TRUE.
+*bPřekreslit*<br/>
+[v] TRUE okamžitě aktualizovat obrazovku; jinak NEPRAVDA. Výchozí hodnota je TRUE.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="setbackgroundimage"></a>  CDialogEx::SetBackgroundImage
+## <a name="cdialogexsetbackgroundimage"></a><a name="setbackgroundimage"></a>CDialogEx::SetBackgroundImage
 
 Nastaví obrázek pozadí dialogového okna.
 
@@ -141,31 +141,31 @@ BOOL SetBackgroundImage(
 ### <a name="parameters"></a>Parametry
 
 *hBitmap*<br/>
-[in] Popisovač pro obrázek na pozadí.
+[v] Úchyt k obrázku pozadí.
 
 *uiBmpResId*<br/>
-[in] ID prostředku obrázku pozadí.
+[v] ID prostředku obrázku na pozadí.
 
-*location*<br/>
-[in] Jeden z `CDialogEx::BackgroundLocation` hodnoty, které určují umístění bitové kopie. Platné hodnoty jsou BACKGR_TILE BACKGR_TOPLEFT, BACKGR_TOPRIGHT, BACKGR_BOTTOMLEFT a BACKGR_BOTTOMRIGHT. Výchozí hodnota je BACKGR_TILE.
+*Umístění*<br/>
+[v] Jedna z `CDialogEx::BackgroundLocation` hodnot, které určují umístění obrazu. Mezi platné hodnoty patří BACKGR_TILE, BACKGR_TOPLEFT, BACKGR_TOPRIGHT, BACKGR_BOTTOMLEFT a BACKGR_BOTTOMRIGHT. Výchozí hodnota je BACKGR_TILE.
 
 *bAutoDestroy*<br/>
-[in] TRUE, pokud chcete automaticky odstranit obrázek pozadí; v opačném případě hodnota FALSE.
+[v] TRUE automaticky zničit obrázek na pozadí; jinak NEPRAVDA.
 
-*bRepaint*<br/>
-[in] TRUE, pokud chcete okamžitě ho překreslit dialogové okno. v opačném případě hodnota FALSE.
+*bPřekreslit*<br/>
+[v] TRUE pro okamžité překreslení dialogového okna; jinak NEPRAVDA.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ve druhé metodě přetížení syntaxe, hodnotu TRUE Pokud je metoda úspěšná. v opačném případě hodnota FALSE.
+V syntaxi přetížení druhé metody TRUE, pokud je metoda úspěšná; jinak NEPRAVDA.
 
 ### <a name="remarks"></a>Poznámky
 
-Klientskou oblast dialogového okna není roztažení obrázku, který zadáte.
+Zadaná bitová kopie není roztažená tak, aby se vešla do klientské oblasti dialogového okna.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>
-[CMFCPopupMenu – třída](../../mfc/reference/cmfcpopupmenu-class.md)<br/>
-[CContextMenuManager – třída](../../mfc/reference/ccontextmenumanager-class.md)
+[Třída cmfcpopupmenu](../../mfc/reference/cmfcpopupmenu-class.md)<br/>
+[Třída CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md)

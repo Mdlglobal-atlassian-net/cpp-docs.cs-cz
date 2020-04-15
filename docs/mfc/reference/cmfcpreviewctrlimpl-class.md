@@ -1,5 +1,5 @@
 ---
-title: CMFCPreviewCtrlImpl Class
+title: Třída CMFCPreviewCtrlImpl
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCPreviewCtrlImpl
@@ -36,16 +36,16 @@ helpviewer_keywords:
 - CMFCPreviewCtrlImpl [MFC], m_font
 - CMFCPreviewCtrlImpl [MFC], m_pDocument
 ms.assetid: 06257fa0-54c9-478d-9d68-c9698c3f93ed
-ms.openlocfilehash: f66ed8478023bd42e185da4f21740d1de2536140
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 060e601901fa5725d7ca62f244f66784af3dc11d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403630"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375340"
 ---
-# <a name="cmfcpreviewctrlimpl-class"></a>CMFCPreviewCtrlImpl Class
+# <a name="cmfcpreviewctrlimpl-class"></a>Třída CMFCPreviewCtrlImpl
 
-Tato třída implementuje okno, které se umístí do hostitelského okna poskytnutého shellem pro náhled ve formátu RTF.
+Tato třída implementuje okno, které je umístěno v okně hostitele poskytované prostředí pro rich preview.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -57,39 +57,39 @@ class CMFCPreviewCtrlImpl : public CWnd;
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CMFCPreviewCtrlImpl::~CMFCPreviewCtrlImpl](#dtor)|Destructs objekt ovládacího prvku ve verzi preview.|
-|[CMFCPreviewCtrlImpl::CMFCPreviewCtrlImpl](#cmfcpreviewctrlimpl)|Vytvoří objekt ovládacího prvku ve verzi preview.|
+|[CMFCPreviewCtrlImpl::~CMFCPreviewCtrlImpl](#dtor)|Zničí objekt ovládacího prvku náhledu.|
+|[CMFCPreviewCtrlImpl::CMFCPreviewCtrlImpl](#cmfcpreviewctrlimpl)|Vytvoří objekt ovládacího prvku náhledu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CMFCPreviewCtrlImpl::Create](#create)|Přetíženo. Volá obslužnou rutinou náhledu k vytvoření okna Windows.|
-|[CMFCPreviewCtrlImpl::Destroy](#destroy)|Když je nutné odstranit tento ovládací prvek volány obslužné rutiny náhledu.|
-|[CMFCPreviewCtrlImpl::Focus](#focus)|Nastaví vstupní fokus na tento ovládací prvek.|
-|[CMFCPreviewCtrlImpl::GetDocument](#getdocument)|Vrátí dokument připojené na tento ovládací prvek ve verzi preview.|
-|[CMFCPreviewCtrlImpl::Redraw](#redraw)|Říká tento ovládací prvek pro překreslení.|
-|[CMFCPreviewCtrlImpl::SetDocument](#setdocument)|Volá obslužnou rutinou ve verzi preview k vytvoření vztahu mezi implementace dokumentu a ovládací prvek náhledu.|
-|[CMFCPreviewCtrlImpl::SetHost](#sethost)|Nastaví novou nadřazenou položku pro tento ovládací prvek.|
-|[CMFCPreviewCtrlImpl::SetPreviewVisuals](#setpreviewvisuals)|Volá obslužnou rutinou náhledu když je nutné nastavit vizuální znázornění bohaté možnosti ve verzi preview obsahu.|
-|[CMFCPreviewCtrlImpl::SetRect](#setrect)|Nastaví nové ohraničující obdélník tohoto ovládacího prvku.|
+|[CMFCPreviewCtrlImpl::Vytvořit](#create)|Přetíženo. Volána obslužnou rutinou Rich Preview k vytvoření okna systému Windows.|
+|[CMFCPreviewCtrlImpl::Destroy](#destroy)|Volána obslužnou rutinou rich preview, když potřebuje zničit tento ovládací prvek.|
+|[CMFCPreviewCtrlImpl::Fokus](#focus)|Nastaví zaostření vstupu na tento ovládací prvek.|
+|[CMFCPreviewCtrlImpl::GetDocument](#getdocument)|Vrátí dokument připojený k tomuto ovládacímu prvku náhledu.|
+|[CMFCPreviewCtrlImpl::Překreslit](#redraw)|Říká tento ovládací prvek překreslit.|
+|[CMFCPreviewCtrlImpl::SetDocument](#setdocument)|Volána obslužnou rutinou náhledu k vytvoření vztahu mezi implementací dokumentu a ovládacím prvkem náhledu.|
+|[CMFCPreviewCtrlImpl::SetHost](#sethost)|Nastaví nový nadřazený prvek pro tento ovládací prvek.|
+|[CMFCPreviewCtrlImpl::SetPreviewVisuals](#setpreviewvisuals)|Nazývá rich preview obslužné rutiny, když potřebuje nastavit vizuály bohatého obsahu náhledu.|
+|[CMFCPreviewCtrlImpl::SetRect](#setrect)|Nastaví nový ohraničovací obdélník pro tento ovládací prvek.|
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CMFCPreviewCtrlImpl::DoPaint](#dopaint)|Volá se rozhraním vykreslit v náhledu.|
+|[CMFCPreviewCtrlImpl::DoPaint](#dopaint)|Volat rámci k vykreslení náhledu.|
 
-### <a name="protected-data-members"></a>Chránění členové dat
+### <a name="protected-data-members"></a>Členové chráněných dat
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CMFCPreviewCtrlImpl::m_clrBackColor](#m_clrbackcolor)|Barva pozadí okno náhledu.|
-|[CMFCPreviewCtrlImpl::m_clrTextColor](#m_clrtextcolor)|Barva textu okno náhledu.|
-|[CMFCPreviewCtrlImpl::m_font](#m_font)|Písmo použité k zobrazení textu v okně verze preview.|
-|[CMFCPreviewCtrlImpl::m_pDocument](#m_pdocument)|Ukazatel na dokument, jejíž obsah je zobrazen v ovládacím prvku.|
+|[CMFCPreviewCtrlImpl::m_clrBackColor](#m_clrbackcolor)|Barva pozadí okna náhledu.|
+|[CMFCPreviewCtrlImpl::m_clrTextColor](#m_clrtextcolor)|Barva textu okna náhledu.|
+|[CMFCPreviewCtrlImpl::m_font](#m_font)|Písmo použité k zobrazení textu v okně náhledu.|
+|[CMFCPreviewCtrlImpl::m_pDocument](#m_pdocument)|Ukazatel na dokument, jehož obsah je zobrazen v ovládacím prvku.|
 
 ## <a name="requirements"></a>Požadavky
 
@@ -97,25 +97,25 @@ class CMFCPreviewCtrlImpl : public CWnd;
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObjekt](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[CCmdCíl](../../mfc/reference/ccmdtarget-class.md)
 
-[CWnd](../../mfc/reference/cwnd-class.md)
+[Cwnd](../../mfc/reference/cwnd-class.md)
 
 [CMFCPreviewCtrlImpl](../../mfc/reference/cmfcpreviewctrlimpl-class.md)
 
-## <a name="cmfcpreviewctrlimpl"></a> CMFCPreviewCtrlImpl::CMFCPreviewCtrlImpl
+## <a name="cmfcpreviewctrlimplcmfcpreviewctrlimpl"></a><a name="cmfcpreviewctrlimpl"></a>CMFCPreviewCtrlImpl::CMFCPreviewCtrlImpl
 
-Vytvoří objekt ovládacího prvku ve verzi preview.
+Vytvoří objekt ovládacího prvku náhledu.
 
 ### <a name="syntax"></a>Syntaxe
 
 CMFCPreviewCtrlImpl();
 
-## <a name="create"></a> CMFCPreviewCtrlImpl::Create
+## <a name="cmfcpreviewctrlimplcreate"></a><a name="create"></a>CMFCPreviewCtrlImpl::Vytvořit
 
-Přetíženo. Volá obslužnou rutinou náhledu k vytvoření okna Windows.
+Přetíženo. Volána obslužnou rutinou Rich Preview k vytvoření okna systému Windows.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -134,21 +134,21 @@ virtual BOOL Create(
 ### <a name="parameters"></a>Parametry
 
 *hWndParent*<br/>
-Popisovač okna hostitele zadaný shellem pro náhled ve formátu RTF.
+Popisovač do okna hostitele dodané prostředí pro rich preview.
 
-*prc*<br/>
-Určuje počáteční velikost a pozice okna.
+*Člr*<br/>
+Určuje počáteční velikost a umístění okna.
 
-*pContext*<br/>
-Ukazatel na vytvoření kontextu.
+*pKontext*<br/>
+Ukazatel na kontext vytvoření.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE, pokud byla úspěšně vytvořena; v opačném případě FALSE.
+PRAVDA, pokud je vytvoření úspěšné; jinak FALSE.
 
-## <a name="destroy"></a> CMFCPreviewCtrlImpl::Destroy
+## <a name="cmfcpreviewctrlimpldestroy"></a><a name="destroy"></a>CMFCPreviewCtrlImpl::Destroy
 
-Když je nutné odstranit tento ovládací prvek volány obslužné rutiny náhledu.
+Volána obslužnou rutinou rich preview, když potřebuje zničit tento ovládací prvek.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -156,9 +156,9 @@ Když je nutné odstranit tento ovládací prvek volány obslužné rutiny náhl
 virtual void Destroy();
 ```
 
-## <a name="dopaint"></a> CMFCPreviewCtrlImpl::DoPaint
+## <a name="cmfcpreviewctrlimpldopaint"></a><a name="dopaint"></a>CMFCPreviewCtrlImpl::DoPaint
 
-Volá se rozhraním vykreslit v náhledu.
+Volat rámci k vykreslení náhledu.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -170,12 +170,12 @@ virtual void DoPaint(
 
 ### <a name="parameters"></a>Parametry
 
-*pDC*<br/>
-Ukazatel na kontext zařízení pro kreslení.
+*Pdc*<br/>
+Ukazatel na kontext zařízení pro malování.
 
-## <a name="focus"></a> CMFCPreviewCtrlImpl::Focus
+## <a name="cmfcpreviewctrlimplfocus"></a><a name="focus"></a>CMFCPreviewCtrlImpl::Fokus
 
-Nastaví vstupní fokus na tento ovládací prvek.
+Nastaví zaostření vstupu na tento ovládací prvek.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -183,9 +183,9 @@ Nastaví vstupní fokus na tento ovládací prvek.
 virtual void Focus();
 ```
 
-## <a name="getdocument"></a> CMFCPreviewCtrlImpl::GetDocument
+## <a name="cmfcpreviewctrlimplgetdocument"></a><a name="getdocument"></a>CMFCPreviewCtrlImpl::GetDocument
 
-Vrátí dokument připojené na tento ovládací prvek ve verzi preview.
+Vrátí dokument připojený k tomuto ovládacímu prvku náhledu.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -195,11 +195,11 @@ ATL::IDocument* GetDocument();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na dokument, jejíž obsah je zobrazen v ovládacím prvku.
+Ukazatel na dokument, jehož obsah je zobrazen v ovládacím prvku.
 
-## <a name="m_clrbackcolor"></a> CMFCPreviewCtrlImpl::m_clrBackColor
+## <a name="cmfcpreviewctrlimplm_clrbackcolor"></a><a name="m_clrbackcolor"></a>CMFCPreviewCtrlImpl::m_clrBackColor
 
-Barva pozadí okno náhledu.
+Barva pozadí okna náhledu.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -207,9 +207,9 @@ Barva pozadí okno náhledu.
 COLORREF m_clrBackColor;
 ```
 
-## <a name="m_clrtextcolor"></a> CMFCPreviewCtrlImpl::m_clrTextColor
+## <a name="cmfcpreviewctrlimplm_clrtextcolor"></a><a name="m_clrtextcolor"></a>CMFCPreviewCtrlImpl::m_clrTextColor
 
-Barva textu v okně verze preview.
+Barva textu okna náhledu.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -217,7 +217,7 @@ Barva textu v okně verze preview.
 COLORREF m_clrTextColor;
 ```
 
-## <a name="m_font"></a> CMFCPreviewCtrlImpl::m_font písmo použité k zobrazení textu v okně verze preview.
+## <a name="cmfcpreviewctrlimplm_font--font-used-to-display-text-in-the-preview-window"></a><a name="m_font"></a>CMFCPreviewCtrlImpl::m_font Písmo použité k zobrazení textu v okně náhledu.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -225,9 +225,9 @@ COLORREF m_clrTextColor;
 CFont m_font;
 ```
 
-## <a name="m_pdocument"></a> CMFCPreviewCtrlImpl::m_pDocument
+## <a name="cmfcpreviewctrlimplm_pdocument"></a><a name="m_pdocument"></a>CMFCPreviewCtrlImpl::m_pDocument
 
-Ukazatel na dokument, jejíž obsah je zobrazen v ovládacím prvku.
+Ukazatel na dokument, jehož obsah je zobrazen v ovládacím prvku.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -235,9 +235,9 @@ Ukazatel na dokument, jejíž obsah je zobrazen v ovládacím prvku.
 ATL::IDocument* m_pDocument;
 ```
 
-## <a name="redraw"></a> CMFCPreviewCtrlImpl::Redraw
+## <a name="cmfcpreviewctrlimplredraw"></a><a name="redraw"></a>CMFCPreviewCtrlImpl::Překreslit
 
-Říká tento ovládací prvek pro překreslení.
+Říká tento ovládací prvek překreslit.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -245,9 +245,9 @@ ATL::IDocument* m_pDocument;
 virtual void Redraw();
 ```
 
-## <a name="setdocument"></a> CMFCPreviewCtrlImpl::SetDocument
+## <a name="cmfcpreviewctrlimplsetdocument"></a><a name="setdocument"></a>CMFCPreviewCtrlImpl::SetDocument
 
-Volá obslužnou rutinou ve verzi preview k vytvoření vztahu mezi implementace dokumentu a ovládací prvek náhledu.
+Volána obslužnou rutinou náhledu k vytvoření vztahu mezi implementací dokumentu a ovládacím prvkem náhledu.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -259,12 +259,12 @@ void SetDocument(
 
 ### <a name="parameters"></a>Parametry
 
-*pDocument*<br/>
+*pDokument*<br/>
 Ukazatel na implementaci dokumentu.
 
-## <a name="sethost"></a> CMFCPreviewCtrlImpl::SetHost
+## <a name="cmfcpreviewctrlimplsethost"></a><a name="sethost"></a>CMFCPreviewCtrlImpl::SetHost
 
-Nastaví novou nadřazenou položku pro tento ovládací prvek.
+Nastaví nový nadřazený prvek pro tento ovládací prvek.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -279,9 +279,9 @@ virtual void SetHost(
 *hWndParent*<br/>
 Popisovač do nového nadřazeného okna.
 
-## <a name="setpreviewvisuals"></a> CMFCPreviewCtrlImpl::SetPreviewVisuals
+## <a name="cmfcpreviewctrlimplsetpreviewvisuals"></a><a name="setpreviewvisuals"></a>CMFCPreviewCtrlImpl::SetPreviewVisuals
 
-Volá obslužnou rutinou náhledu když je nutné nastavit vizuální znázornění bohaté možnosti ve verzi preview obsahu.
+Nazývá rich preview obslužné rutiny, když potřebuje nastavit vizuály bohatého obsahu náhledu.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -295,18 +295,18 @@ virtual void SetPreviewVisuals(
 
 ### <a name="parameters"></a>Parametry
 
-*clrBack*<br/>
-Barva pozadí okno náhledu.
+*zpět*<br/>
+Barva pozadí okna náhledu.
 
 *clrText*<br/>
-Barva textu okno náhledu.
+Barva textu okna náhledu.
 
-*PLF*<br/>
-Písmo použité k zobrazení textu v okně verze preview.
+*plf*<br/>
+Písmo použité k zobrazení textu v okně náhledu.
 
-##  <a name="setrect"></a> CMFCPreviewCtrlImpl::SetRect
+## <a name="cmfcpreviewctrlimplsetrect"></a><a name="setrect"></a>CMFCPreviewCtrlImpl::SetRect
 
-Nastaví nové ohraničující obdélník tohoto ovládacího prvku.
+Nastaví nový ohraničovací obdélník pro tento ovládací prvek.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -319,19 +319,19 @@ virtual void SetRect(
 
 ### <a name="parameters"></a>Parametry
 
-*prc*<br/>
-Určuje novou velikost a pozice ovládacího prvku ve verzi preview.
+*Člr*<br/>
+Určuje novou velikost a umístění ovládacího prvku náhledu.
 
-*bRedraw*<br/>
-Určuje, zda by měl překreslit ovládací prvek.
+*bPřekreslit*<br/>
+Určuje, zda má být ovládací prvek překreslen.
 
 ### <a name="remarks"></a>Poznámky
 
-Při změně velikosti hostitelský ovládací prvek je obvykle nastavena nové ohraničující obdélník.
+Obvykle nový ohraničovací obdélník je nastavena při velikosti ovládacího prvku hostitele.
 
-## <a name="dtor"></a> CMFCPreviewCtrlImpl::~CMFCPreviewCtrlImpl
+## <a name="cmfcpreviewctrlimplcmfcpreviewctrlimpl"></a><a name="dtor"></a>CMFCPreviewCtrlImpl::~CMFCPreviewCtrlImpl
 
-Destructs objekt ovládacího prvku ve verzi preview.
+Zničí objekt ovládacího prvku náhledu.
 
 ### <a name="syntax"></a>Syntaxe
 

@@ -1,5 +1,5 @@
 ---
-title: CPalette – – třída
+title: CPalette – třída
 ms.date: 11/04/2016
 f1_keywords:
 - CPalette
@@ -26,14 +26,14 @@ helpviewer_keywords:
 - CPalette [MFC], ResizePalette
 - CPalette [MFC], SetPaletteEntries
 ms.assetid: 8cd95498-53ed-4852-85e1-70e522541114
-ms.openlocfilehash: 27f4f14c9e93091728e256c890dcffee26a43de4
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 83cd125fa7ab64aa39c606bc048022400d158e72
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79421658"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374761"
 ---
-# <a name="cpalette-class"></a>CPalette – – třída
+# <a name="cpalette-class"></a>CPalette – třída
 
 Zapouzdřuje paletu barev systému Windows.
 
@@ -47,53 +47,53 @@ class CPalette : public CGdiObject
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CPalette –:: CPalette –](#cpalette)|Vytvoří objekt `CPalette` bez připojené palety Windows. Než bude možné použít, je nutné inicializovat objekt `CPalette` s jednou z funkcí členů inicializace.|
+|[CPalette::CPalette](#cpalette)|Vytvoří `CPalette` objekt bez připojené palety Systému Windows. Před použitím je `CPalette` nutné objekt inicializovat jednou z funkcí inicializačního člena.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CPalette –:: AnimatePalette](#animatepalette)|Nahradí položky v logické paletě identifikované objektem `CPalette`. Aplikace nemusí aktualizovat její klientskou oblast, protože Windows mapuje nové položky do systémové palety hned.|
-|[CPalette –:: CreateHalftonePalette](#createhalftonepalette)|Vytvoří paletu polotónů pro kontext zařízení a připojí ho k objektu `CPalette`.|
-|[CPalette –:: CreatePalette](#createpalette)|Vytvoří barevnou paletu Windows a připojí ji k objektu `CPalette`.|
-|[CPalette –:: FromHandle](#fromhandle)|Vrací ukazatel na objekt `CPalette`, pokud je předána popisovač objektu palety systému Windows.|
-|[CPalette –:: GetEntryCount](#getentrycount)|Načte počet položek palety v logické paletě.|
-|[CPalette –:: GetNearestPaletteIndex](#getnearestpaletteindex)|Vrátí index záznamu v logické paletě, který nejlépe odpovídá hodnotě barvy.|
-|[CPalette –:: GetPaletteEntries](#getpaletteentries)|Načte rozsah položek palety v logické paletě.|
-|[CPalette –:: ResizePalette](#resizepalette)|Změní velikost logické palety určené objektem `CPalette` na zadaný počet položek.|
-|[CPalette –:: SetPaletteEntries](#setpaletteentries)|Nastaví hodnoty barev RGB a příznaky v rozsahu položek v logické paletě.|
+|[CPalette::AnimatePalette](#animatepalette)|Nahradí položky v logické paletě identifikované objektem. `CPalette` Aplikace nemusí aktualizovat svou klientskou oblast, protože systém Windows okamžitě mapuje nové položky do systémové palety.|
+|[CPalette::Vytvořitpolotónpaleta](#createhalftonepalette)|Vytvoří polotónovou paletu pro kontext zařízení a `CPalette` připojí ji k objektu.|
+|[CPalette::CreatePalette](#createpalette)|Vytvoří paletu barev systému Windows `CPalette` a připojí ji k objektu.|
+|[CPalette::FromHandle](#fromhandle)|Vrátí ukazatel na `CPalette` objekt, když je daný popisovač objektu palety systému Windows.|
+|[CPalette::GetEntryCount](#getentrycount)|Načte počet položek palety v logické paletě.|
+|[CPalette::GetNearestPaletteIndex](#getnearestpaletteindex)|Vrátí index položky v logické paletě, která nejvíce odpovídá hodnotě barvy.|
+|[CPalette::GetPaletteEntries](#getpaletteentries)|Načte rozsah položek palety v logické paletě.|
+|[CPalette::Změna velikostiPaleta](#resizepalette)|Změní velikost logické palety určené `CPalette` objektem na zadaný počet položek.|
+|[CPalette::SetPaletteEntries](#setpaletteentries)|Nastaví hodnoty barev A označí RGB v rozsahu položek v logické paletě.|
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CPalette –:: operator HPALETTE](#operator_hpalette)|Vrátí HPALETTE připojenou k `CPalette`.|
+|[CPalette::operátor HPALETTE](#operator_hpalette)|Vrátí hodnotu HPALETTE `CPalette`připojenou k rozhraní .|
 
 ## <a name="remarks"></a>Poznámky
 
-Paleta poskytuje rozhraní mezi aplikací a barevným výstupním zařízením (například zobrazovací zařízení). Rozhraní umožňuje aplikaci plně využít možnosti barev výstupního zařízení bez závažného rušivého vlivu na barvy zobrazené jinými aplikacemi. Systém Windows používá logickou paletu aplikace (seznam potřebných barev) a systémovou paletu (která definuje dostupné barvy) k určení použitých barev.
+Paleta poskytuje rozhraní mezi aplikací a barevným výstupním zařízením (například zobrazovacím zařízením). Rozhraní umožňuje aplikaci plně využít barevné schopnosti výstupního zařízení, aniž by vážně zasahovaly do barev zobrazených jinými aplikacemi. Systém Windows používá k určení použitých barev logickou paletu aplikace (seznam potřebných barev) a systémovou paletu (která definuje dostupné barvy).
 
-Objekt `CPalette` poskytuje členské funkce pro manipulaci s paletou, na kterou odkazuje objekt. Sestavte `CPalette` objekt a pomocí jeho členských funkcí vytvořte vlastní paletu, objekt rozhraní GDI (Graphics Device Interface) a manipulaci s jeho položkami a dalšími vlastnostmi.
+Objekt `CPalette` poskytuje členské funkce pro manipulaci s paletou, na kterou objekt odkazuje. Vytvořte `CPalette` objekt a použijte jeho členské funkce k vytvoření skutečné palety, objektu rozhraní grafického zařízení (GDI) a k manipulaci s jeho položkami a dalšími vlastnostmi.
 
-Další informace o použití `CPalette`naleznete v tématu [Graphics Objects](../../mfc/graphic-objects.md).
+Další informace o `CPalette`použití naleznete v [tématu Grafické objekty](../../mfc/graphic-objects.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[CObject](../../mfc/reference/cobject-class.md)
+[CObjekt](../../mfc/reference/cobject-class.md)
 
-[CGdiObject](../../mfc/reference/cgdiobject-class.md)
+[Objekt CGdi](../../mfc/reference/cgdiobject-class.md)
 
 `CPalette`
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxwin. h
+**Záhlaví:** afxwin.h
 
-##  <a name="animatepalette"></a>CPalette –:: AnimatePalette
+## <a name="cpaletteanimatepalette"></a><a name="animatepalette"></a>CPalette::AnimatePalette
 
-Nahradí položky v logické paletě připojené k objektu `CPalette`.
+Nahradí položky v logické paletě `CPalette` připojené k objektu.
 
 ```
 void AnimatePalette(
@@ -105,23 +105,23 @@ void AnimatePalette(
 ### <a name="parameters"></a>Parametry
 
 *nStartIndex*<br/>
-Určuje první položku v paletě, která se má animovat.
+Určuje první položku v paletě, která má být animována.
 
-*nNumEntries*<br/>
+*nPoložky výčtu*<br/>
 Určuje počet položek v paletě, které mají být animovány.
 
-*lpPaletteColors*<br/>
-Odkazuje na prvního člena pole struktur [PALETTEENTRY](/previous-versions/dd162769\(v=vs.85\)) , aby nahradil položky palety identifikované *nStartIndex* a *nNumEntries*.
+*lpPaletteBarvy*<br/>
+Odkazuje na prvního člena pole [struktur PALETTEENTRY,](/previous-versions/dd162769\(v=vs.85\)) který nahradí položky palety identifikované *položkami nStartIndex* a *nNumEntries*.
 
 ### <a name="remarks"></a>Poznámky
 
-Když aplikace volá `AnimatePalette`, není nutné aktualizovat její klientskou oblast, protože systém Windows provede okamžité mapování nových položek do systémové palety.
+Pokud aplikace `AnimatePalette`volá , nemusí aktualizovat svou klientskou oblast, protože systém Windows okamžitě mapuje nové položky do systémové palety.
 
-Funkce `AnimatePalette` bude měnit pouze položky s příznakem PC_RESERVED nastaveným v odpovídajícím `palPaletteEntry`m členu struktury [LOGPALETTE](/windows/win32/api/wingdi/ns-wingdi-logpalette) , která je připojena k objektu `CPalette`. Další informace o této struktuře naleznete v tématu LOGPALETTE v Windows SDK.
+Funkce `AnimatePalette` změní pouze položky s příznakem `palPaletteEntry` PC_RESERVED nastaveným v odpovídajícím členu `CPalette` struktury [LOGPALETTE,](/windows/win32/api/wingdi/ns-wingdi-logpalette) který je připojen k objektu. Další informace o této struktuře naleznete v tématu LOGPALETTE v ksouboru Windows SDK.
 
-##  <a name="cpalette"></a>CPalette –:: CPalette –
+## <a name="cpalettecpalette"></a><a name="cpalette"></a>CPalette::CPalette
 
-Vytvoří objekt `CPalette`.
+Vytvoří `CPalette` objekt.
 
 ```
 CPalette();
@@ -129,11 +129,11 @@ CPalette();
 
 ### <a name="remarks"></a>Poznámky
 
-Objekt nemá připojenou paletu, dokud nebudete volat `CreatePalette` k připojení.
+Objekt nemá žádnou připojenou `CreatePalette` paletu, dokud ji nezavoláte.
 
-##  <a name="createhalftonepalette"></a>CPalette –:: CreateHalftonePalette
+## <a name="cpalettecreatehalftonepalette"></a><a name="createhalftonepalette"></a>CPalette::Vytvořitpolotónpaleta
 
-Vytvoří paletu polotónů pro kontext zařízení.
+Vytvoří polotónovou paletu pro kontext zařízení.
 
 ```
 BOOL CreateHalftonePalette(CDC* pDC);
@@ -141,7 +141,7 @@ BOOL CreateHalftonePalette(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-*Emulátor*<br/>
+*Pdc*<br/>
 Identifikuje kontext zařízení.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -150,13 +150,13 @@ Nenulové, pokud je funkce úspěšná; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Aplikace by měla vytvořit polotónovou paletu, když je režim roztažení kontextu zařízení nastaven na polotón. Paleta logického polotónu vrácená členskou funkcí [CreateHalftonePalette](/windows/win32/api/wingdi/nf-wingdi-createhalftonepalette) by měla být vybrána a realizována do kontextu zařízení před voláním funkce [CDC:: StretchBlt](../../mfc/reference/cdc-class.md#stretchblt) nebo [StretchDIBits](/windows/win32/api/wingdi/nf-wingdi-stretchdibits) .
+Aplikace by měla vytvořit polotónovou paletu, pokud je režim roztahování kontextu zařízení nastaven na HALFTONE. Paleta logických polotónů vrácená členovou funkcí [CreateHalftonePalette](/windows/win32/api/wingdi/nf-wingdi-createhalftonepalette) by pak měla být vybrána a realizována do kontextu zařízení před voláním funkce [CDC::StretchBlt](../../mfc/reference/cdc-class.md#stretchblt) nebo [StretchDIBits.](/windows/win32/api/wingdi/nf-wingdi-stretchdibits)
 
-Další informace o `CreateHalftonePalette` a `StretchDIBits`najdete v Windows SDK.
+Další informace o souboru Windows `CreateHalftonePalette` `StretchDIBits`SDK naleznete v souboru Windows SDK.
 
-##  <a name="createpalette"></a>CPalette –:: CreatePalette
+## <a name="cpalettecreatepalette"></a><a name="createpalette"></a>CPalette::CreatePalette
 
-Inicializuje objekt `CPalette` vytvořením logické palety barev systému Windows a jeho připojením k objektu `CPalette`.
+Inicializuje `CPalette` objekt vytvořením logické palety barev systému `CPalette` Windows a jejím připojením k objektu.
 
 ```
 BOOL CreatePalette(LPLOGPALETTE lpLogPalette);
@@ -165,19 +165,19 @@ BOOL CreatePalette(LPLOGPALETTE lpLogPalette);
 ### <a name="parameters"></a>Parametry
 
 *lpLogPalette*<br/>
-Odkazuje na strukturu [LOGPALETTE](/windows/win32/api/wingdi/ns-wingdi-logpalette) , která obsahuje informace o barvách v logické paletě.
+Odkazuje na strukturu [LOGPALETTE,](/windows/win32/api/wingdi/ns-wingdi-logpalette) která obsahuje informace o barvách v logické paletě.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud bylo úspěšné; v opačném případě 0.
+Nenulová, pokud je úspěšná; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace o struktuře `LOGPALETTE` najdete v Windows SDK.
+Další informace o `LOGPALETTE` struktuře naleznete v části Sada Windows SDK.
 
-##  <a name="fromhandle"></a>CPalette –:: FromHandle
+## <a name="cpalettefromhandle"></a><a name="fromhandle"></a>CPalette::FromHandle
 
-Vrací ukazatel na objekt `CPalette`, pokud je předána popisovač objektu palety systému Windows.
+Vrátí ukazatel na `CPalette` objekt, když je daný popisovač objektu palety systému Windows.
 
 ```
 static CPalette* PASCAL FromHandle(HPALETTE hPalette);
@@ -185,20 +185,20 @@ static CPalette* PASCAL FromHandle(HPALETTE hPalette);
 
 ### <a name="parameters"></a>Parametry
 
-*hPalette*<br/>
-Popisovač palety barev Windows GDI.
+*hPaleta*<br/>
+Úchyt palety barev Windows GDI.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na objekt `CPalette` v případě úspěchu; jinak NULL.
+Ukazatel na `CPalette` objekt, pokud je úspěšný; jinak NULL.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud objekt `CPalette` ještě není připojený k paletě Windows, vytvoří se a připojí dočasný objekt `CPalette`. Tento dočasný `CPalette` objekt je platný pouze do okamžiku, kdy aplikace bude mít čas nečinnosti ve smyčce události, kdy jsou odstraněny všechny dočasné grafické objekty. Jinými slovy, dočasný objekt je platný pouze během zpracování jedné zprávy okna.
+Pokud `CPalette` objekt ještě není připojen k paletě `CPalette` systému Windows, je vytvořen a připojen dočasný objekt. Tento `CPalette` dočasný objekt je platný pouze do příště aplikace má nečinnosti čas ve smyčce událostí, kdy jsou odstraněny všechny dočasné grafické objekty. Jinými slovy dočasný objekt je platný pouze při zpracování jedné zprávy okna.
 
-##  <a name="getentrycount"></a>CPalette –:: GetEntryCount
+## <a name="cpalettegetentrycount"></a><a name="getentrycount"></a>CPalette::GetEntryCount
 
-Zavolejte tuto členskou funkci pro načtení počtu položek v dané logické paletě.
+Volání této členské funkce načíst počet položek v dané logické palety.
 
 ```
 int GetEntryCount();
@@ -208,9 +208,9 @@ int GetEntryCount();
 
 Počet položek v logické paletě.
 
-##  <a name="getnearestpaletteindex"></a>CPalette –:: GetNearestPaletteIndex
+## <a name="cpalettegetnearestpaletteindex"></a><a name="getnearestpaletteindex"></a>CPalette::GetNearestPaletteIndex
 
-Vrátí index záznamu v logické paletě, který nejlépe odpovídá zadané hodnotě barvy.
+Vrátí index položky v logické paletě, který nejvíce odpovídá zadané hodnotě barvy.
 
 ```
 UINT GetNearestPaletteIndex(COLORREF crColor) const;
@@ -219,13 +219,13 @@ UINT GetNearestPaletteIndex(COLORREF crColor) const;
 ### <a name="parameters"></a>Parametry
 
 *crColor*<br/>
-Určuje barvu, která má být shodná.
+Určuje barvu, která má být spárována.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Index položky v logické paletě. Položka obsahuje barvu, která téměř odpovídá zadané barvě.
+Index položky v logické paletě. Položka obsahuje barvu, která nejvíce odpovídá zadané barvě.
 
-##  <a name="getpaletteentries"></a>CPalette –:: GetPaletteEntries
+## <a name="cpalettegetpaletteentries"></a><a name="getpaletteentries"></a>CPalette::GetPaletteEntries
 
 Načte rozsah položek palety v logické paletě.
 
@@ -239,21 +239,21 @@ UINT GetPaletteEntries(
 ### <a name="parameters"></a>Parametry
 
 *nStartIndex*<br/>
-Určuje první položku v logické paletě, která se má načíst.
+Určuje první položku v logické paletě, která má být načtena.
 
-*nNumEntries*<br/>
-Určuje počet položek v logické paletě, která se má načíst.
+*nPoložky výčtu*<br/>
+Určuje počet položek v logické paletě, které mají být načteny.
 
-*lpPaletteColors*<br/>
-Odkazuje na pole [PALETTEENTRY](/previous-versions/dd162769\(v=vs.85\)) datových struktur pro příjem položek palety. Pole musí obsahovat alespoň tolik datových struktur, jak Určuje *nNumEntries*.
+*lpPaletteBarvy*<br/>
+Odkazuje na pole [palety](/previous-versions/dd162769\(v=vs.85\)) dat struktury přijímat položky palety. Pole musí obsahovat alespoň tolik datových struktur, kolik je určeno *nNumEntries*.
 
 ### <a name="return-value"></a>Návratová hodnota
 
 Počet položek načtených z logické palety; 0, pokud se funkce nezdařila.
 
-##  <a name="operator_hpalette"></a>CPalette –:: operator HPALETTE
+## <a name="cpaletteoperator-hpalette"></a><a name="operator_hpalette"></a>CPalette::operátor HPALETTE
 
-Tento operátor použijte k získání připojené obslužné rutiny Windows GDI objektu `CPalette`.
+Pomocí tohoto operátoru získáte připojený popisovač GDI systému Windows objektu. `CPalette`
 
 ```
 operator HPALETTE() const;
@@ -261,17 +261,17 @@ operator HPALETTE() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Je-li to úspěšné, popisovač objektu GDI systému Windows reprezentovaného objektem `CPalette`; jinak NULL.
+Pokud je úspěšná, popisovač objektu GDI systému Windows reprezentovaný objektem; `CPalette` jinak NULL.
 
 ### <a name="remarks"></a>Poznámky
 
 Tento operátor je operátor přetypování, který podporuje přímé použití objektu HPALETTE.
 
-Další informace o použití grafických objektů naleznete v článku [grafické objekty](/windows/win32/gdi/graphic-objects) v Windows SDK.
+Další informace o používání grafických objektů naleznete v článku [Grafické objekty](/windows/win32/gdi/graphic-objects) v sadě Windows SDK.
 
-##  <a name="resizepalette"></a>CPalette –:: ResizePalette
+## <a name="cpaletteresizepalette"></a><a name="resizepalette"></a>CPalette::Změna velikostiPaleta
 
-Změní velikost logické palety připojené k objektu `CPalette` na počet položek určených parametrem *nNumEntries*.
+Změní velikost logické palety připojené `CPalette` k objektu na počet položek určených *nNumEntries*.
 
 ```
 BOOL ResizePalette(UINT nNumEntries);
@@ -279,22 +279,22 @@ BOOL ResizePalette(UINT nNumEntries);
 
 ### <a name="parameters"></a>Parametry
 
-*nNumEntries*<br/>
-Určuje počet položek v paletě po změně velikosti.
+*nPoložky výčtu*<br/>
+Určuje počet položek v paletě po jeho změněné velikosti.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud se úspěšně změnila velikost palety; v opačném případě 0.
+Nenulová, pokud byla velikost palety úspěšně měkcí; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud aplikace zavolá `ResizePalette` ke zmenšení velikosti palety, položky zbývající v paletě se změněnou velikostí se nezměnily. Pokud aplikace volá `ResizePalette` ke zvětšení palety, jsou další položky palety nastaveny na černou (hodnoty červené, zelené a modré jsou všechny 0) a příznaky pro všechny další položky jsou nastaveny na hodnotu 0.
+Pokud aplikace `ResizePalette` volá ke zmenšení velikosti palety, položky zbývající v paletě velikosti se nezmění. Pokud aplikace `ResizePalette` volá pro zvětšení palety, další položky palety jsou nastaveny na černou (červené, zelené a modré hodnoty jsou všechny 0) a příznaky pro všechny další položky jsou nastaveny na 0.
 
-Další informace o `ResizePalette`rozhraní API Windows najdete v tématu [ResizePalette](/windows/win32/api/wingdi/nf-wingdi-resizepalette) v Windows SDK.
+Další informace o rozhraní `ResizePalette`API systému Windows naleznete v tématu [ResizePalette](/windows/win32/api/wingdi/nf-wingdi-resizepalette) v sadě Windows SDK.
 
-##  <a name="setpaletteentries"></a>CPalette –:: SetPaletteEntries
+## <a name="cpalettesetpaletteentries"></a><a name="setpaletteentries"></a>CPalette::SetPaletteEntries
 
-Nastaví hodnoty barev RGB a příznaky v rozsahu položek v logické paletě.
+Nastaví hodnoty barev A označí RGB v rozsahu položek v logické paletě.
 
 ```
 UINT SetPaletteEntries(
@@ -306,13 +306,13 @@ UINT SetPaletteEntries(
 ### <a name="parameters"></a>Parametry
 
 *nStartIndex*<br/>
-Určuje první položku v logické paletě, která se má nastavit.
+Určuje první položku v logické paletě, která má být nastavena.
 
-*nNumEntries*<br/>
-Určuje počet položek v logické paletě, která se má nastavit.
+*nPoložky výčtu*<br/>
+Určuje počet položek v logické paletě, která má být nastavena.
 
-*lpPaletteColors*<br/>
-Odkazuje na pole [PALETTEENTRY](/previous-versions/dd162769\(v=vs.85\)) datových struktur pro příjem položek palety. Pole musí obsahovat alespoň tolik datových struktur, jak Určuje *nNumEntries*.
+*lpPaletteBarvy*<br/>
+Odkazuje na pole [palety](/previous-versions/dd162769\(v=vs.85\)) dat struktury přijímat položky palety. Pole musí obsahovat alespoň tolik datových struktur, kolik je určeno *nNumEntries*.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -320,14 +320,14 @@ Počet položek nastavených v logické paletě; 0, pokud se funkce nezdařila.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud je logická paleta vybrána do kontextu zařízení, když aplikace volá `SetPaletteEntries`, změny se projeví až po volání funkce [CDC:: RealizePalette](../../mfc/reference/cdc-class.md#realizepalette).
+Pokud je logická paleta vybrána do `SetPaletteEntries`kontextu zařízení při volání aplikace , změny se projeví, dokud aplikace nezavolá [CDC::RealizePalette](../../mfc/reference/cdc-class.md#realizepalette).
 
-Další informace najdete v tématu [PALETTEENTRY](/previous-versions/dd162769\(v=vs.85\)) v Windows SDK.
+Další informace naleznete v tématu [PALETTEENTRY](/previous-versions/dd162769\(v=vs.85\)) v sadě Windows SDK.
 
 ## <a name="see-also"></a>Viz také
 
-[DIBLOOK Sample MFC](../../overview/visual-cpp-samples.md)<br/>
+[Ukázka knihovny MFC DIBLOOK](../../overview/visual-cpp-samples.md)<br/>
 [CGdiObject – třída](../../mfc/reference/cgdiobject-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
-[CPalette –:: GetPaletteEntries](#getpaletteentries)<br/>
-[CPalette –:: SetPaletteEntries](#setpaletteentries)
+[CPalette::GetPaletteEntries](#getpaletteentries)<br/>
+[CPalette::SetPaletteEntries](#setpaletteentries)

@@ -1,5 +1,5 @@
 ---
-title: COleDocObjectItem Class
+title: COleDocObjectItem – třída
 ms.date: 11/04/2016
 f1_keywords:
 - COleDocObjectItem
@@ -24,16 +24,16 @@ helpviewer_keywords:
 - COleDocObjectItem [MFC], QueryCommand
 - COleDocObjectItem [MFC], Release
 ms.assetid: d150d306-8fd3-4831-b06d-afbe71d8fc9b
-ms.openlocfilehash: c6e00bf42cf20b46c949c218efe1820cc7ce0f9b
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: a696226185dd99b9e277e74d92cbe15c95cc900a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69504012"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375042"
 ---
-# <a name="coledocobjectitem-class"></a>COleDocObjectItem Class
+# <a name="coledocobjectitem-class"></a>COleDocObjectItem – třída
 
-Implementuje zahrnutí aktivního dokumentu.
+Implementuje aktivní uzavření dokumentu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -45,44 +45,44 @@ class COleDocObjectItem : public COleClientItem
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[COleDocObjectItem::COleDocObjectItem](#coledocobjectitem)|`COleDocObject` Vytvoří položku.|
+|[COleDocObjectItem::COleDocObjectItem](#coledocobjectitem)|Vytvoří položku. `COleDocObject`|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
 |[COleDocObjectItem::DoDefaultPrinting](#dodefaultprinting)|Vytiskne dokument aplikace kontejneru pomocí výchozího nastavení tiskárny.|
-|[COleDocObjectItem::ExecCommand](#execcommand)|Provede příkaz zadaný uživatelem.|
+|[COleDocObjectItem::ExecCommand](#execcommand)|Provede příkaz určený uživatelem.|
 |[COleDocObjectItem::GetActiveView](#getactiveview)|Načte aktivní zobrazení dokumentu.|
 |[COleDocObjectItem::GetPageCount](#getpagecount)|Načte počet stránek v dokumentu aplikace kontejneru.|
 |[COleDocObjectItem::OnPreparePrinting](#onprepareprinting)|Připraví dokument aplikace kontejneru pro tisk.|
 |[COleDocObjectItem::OnPrint](#onprint)|Vytiskne dokument aplikace kontejneru.|
-|[COleDocObjectItem::QueryCommand](#querycommand)|Dotaz na stav jednoho nebo více příkazů generovaných událostmi uživatelského rozhraní.|
-|[COleDocObjectItem:: Release](#release)|Uvolní připojení k propojené položce OLE a zavře je, pokud byla otevřená. Nezničí položku klienta.|
+|[COleDocObjectItem::QueryCommand](#querycommand)|Dotazy na stav jednoho nebo více příkazů generovaných událostmi uživatelského rozhraní.|
+|[COleDocObjectItem::Vydání](#release)|Uvolní připojení k propojené položce OLE a zavře ji, pokud byla otevřena. Nezničí položku klienta.|
 
 ## <a name="remarks"></a>Poznámky
 
-V knihovně MFC je aktivní dokument zpracováván podobně jako běžné a místní upravitelné vkládání s následujícími rozdíly:
+V knihovně MFC je aktivní dokument zpracován podobně jako běžné, na místě upravitelné vkládání, s následujícími rozdíly:
 
-- Třída-Derived stále udržuje seznam aktuálně vložených položek; tyto položky však mohou být `COleDocObjectItem`odvozeny položky. `COleDocument`
+- -derived `COleDocument`třídy stále udržuje seznam aktuálně vložené položky; tyto položky však mohou být `COleDocObjectItem`odvozené položky.
 
-- Když je aktivní dokument aktivní, zabírá celou klientskou oblast zobrazení, když je aktivní na místě.
+- Pokud je aktivní dokument aktivní, zabírá celou klientskou oblast zobrazení, když je aktivní na místě.
 
-- Aktivní kontejner dokumentu má úplnou kontrolu nad nabídkou **help** .
+- Kontejner aktivního dokumentu má plnou kontrolu nad nabídkou **Nápověda.**
 
-- Nabídka **help** obsahuje položky nabídky pro kontejner aktivního dokumentu i server.
+- Nabídka **Nápověda** obsahuje položky nabídky pro kontejner aktivního dokumentu i server.
 
-Vzhledem k tomu, že kontejner aktivního dokumentu je vlastníkem nabídky **help** , je kontejner zodpovědný za předávání zpráv nabídky serveru v **nápovědě** serveru. Tato integrace je zpracovávána `COleDocObjectItem`nástrojem.
+Vzhledem k tomu, že kontejner aktivního dokumentu vlastní nabídku **Nápověda,** je kontejner zodpovědný za předávání zpráv nabídky **nápovědy** serveru na server. Tato integrace je `COleDocObjectItem`zpracována .
 
-Další informace o slučování nabídek a aktivaci aktivních dokumentů najdete v tématu Přehled [zahrnutí aktivního dokumentu](../../mfc/active-document-containment.md).
+Další informace o slučování nabídek a aktivaci aktivního dokumentu naleznete v tématu Přehled [aktivního zadržování dokumentů](../../mfc/active-document-containment.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[CObject](../../mfc/reference/cobject-class.md)
+[CObjekt](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[CCmdCíl](../../mfc/reference/ccmdtarget-class.md)
 
 [CDocItem](../../mfc/reference/cdocitem-class.md)
 
@@ -92,11 +92,11 @@ Další informace o slučování nabídek a aktivaci aktivních dokumentů najde
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** AFXOLE. h
+**Záhlaví:** afxole.h
 
-##  <a name="coledocobjectitem"></a>  COleDocObjectItem::COleDocObjectItem
+## <a name="coledocobjectitemcoledocobjectitem"></a><a name="coledocobjectitem"></a>COleDocObjectItem::COleDocObjectItem
 
-Zavolejte tuto členskou funkci pro inicializaci `COleDocObjectItem` objektu.
+Volání této členské funkce k `COleDocObjectItem` inicializaci objektu.
 
 ```
 COleDocObjectItem(COleDocument* pContainerDoc = NULL);
@@ -105,11 +105,11 @@ COleDocObjectItem(COleDocument* pContainerDoc = NULL);
 ### <a name="parameters"></a>Parametry
 
 *pContainerDoc*<br/>
-Ukazatel na `COleDocument` objekt, který funguje jako kontejner aktivního dokumentu. Aby bylo možné povolit IMPLEMENT_SERIALIZE, musí mít tento parametr hodnotu NULL. Obvykle jsou položky OLE vytvořeny s ukazatelem dokumentu, který není NULL.
+Ukazatel na `COleDocument` objekt, který funguje jako aktivní kontejner dokumentu. Tento parametr musí být NULL povolit IMPLEMENT_SERIALIZE. Normálně ole položky jsou vytvořeny s non-NULL ukazatel dokumentu.
 
-##  <a name="dodefaultprinting"></a>COleDocObjectItem::D oDefaultPrinting
+## <a name="coledocobjectitemdodefaultprinting"></a><a name="dodefaultprinting"></a>COleDocObjectItem::DoDefaultPrinting
 
-Volá se rozhraním pro dokument s použitím výchozích nastavení.
+Volat rámci do dokumentu pomocí výchozí nastavení.
 
 ```
 static HRESULT DoDefaultPrinting(
@@ -119,15 +119,15 @@ static HRESULT DoDefaultPrinting(
 
 ### <a name="parameters"></a>Parametry
 
-*pCaller*<br/>
-Ukazatel na objekt [CView](../../mfc/reference/cview-class.md) , který odesílá příkaz Print.
+*pVolající*<br/>
+Ukazatel na [cview](../../mfc/reference/cview-class.md) objekt, který odesílá příkaz print.
 
-*pInfo*<br/>
-Ukazatel na objekt [CPrintInfo –](../../mfc/reference/cprintinfo-structure.md) , který popisuje úlohu, která má být vytištěna.
+*pInformace*<br/>
+Ukazatel na objekt [CPrintInfo,](../../mfc/reference/cprintinfo-structure.md) který popisuje úlohu, která má být vytištěna.
 
-##  <a name="execcommand"></a>COleDocObjectItem:: ExecCommand
+## <a name="coledocobjectitemexeccommand"></a><a name="execcommand"></a>COleDocObjectItem::ExecCommand
 
-Zavolejte tuto členskou funkci pro provedení příkazu zadaného uživatelem.
+Volání této členské funkce k provedení příkazu určeného uživatelem.
 
 ```
 HRESULT ExecCommand(
@@ -139,36 +139,36 @@ HRESULT ExecCommand(
 ### <a name="parameters"></a>Parametry
 
 *nCmdID*<br/>
-Identifikátor příkazu, který má být spuštěn. Musí být ve skupině určené pomocí *pguidCmdGroup*.
+Identifikátor příkazu, který má být proveden. Musí být ve skupině označené *pguidCmdGroup*.
 
 *nCmdExecOpt*<br/>
-Určuje možnosti spuštění příkazu. Ve výchozím nastavení se nastaví na spouštění příkazu bez zobrazení výzvy uživateli. Seznam hodnot naleznete v tématu [OLECMDEXECOPT](/windows/win32/api/docobj/ne-docobj-olecmdexecopt) .
+Určuje možnosti spuštění příkazu. Ve výchozím nastavení nastavte spuštění příkazu bez zobrazení výzvy uživateli. Seznam hodnot najdete v tématu [OLECMDEXECOPT.](/windows/win32/api/docobj/ne-docobj-olecmdexecopt)
 
 *pguidCmdGroup*<br/>
-Jedinečný identifikátor skupiny příkazů Ve výchozím nastavení má hodnotu NULL, která určuje standardní skupinu. Příkaz předaný v *nCmdID* musí patřit do skupiny.
+Jedinečný identifikátor skupiny příkazů Ve výchozím nastavení null, který určuje standardní skupinu. Příkaz předaný v *nCmdID* musí patřit do skupiny.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí S_OK, pokud bylo úspěšné. v opačném případě vrátí jeden z následujících kódů chyb.
+Vrátí S_OK v případě úspěchu. v opačném případě vrátí jeden z následujících kódů chyb.
 
-|Value|Popis|
+|Hodnota|Popis|
 |-----------|-----------------|
 |E_UNEXPECTED|Došlo k neočekávané chybě.|
-|E_FAIL|Došlo k chybě.|
-|E_NOTIMPL|Indikuje, že by se sama knihovna MFC měla pokusit přeložit a odeslat příkaz.|
-|OLECMDERR_E_UNKNOWNGROUP|*pguidCmdGroup* je jiný než null, ale neurčuje rozpoznanou skupinu příkazů.|
-|OLECMDERR_E_NOTSUPPORTED|*nCmdID* není ve skupině pGroup rozpoznán jako platný příkaz.|
-|OLECMDERR_DISABLED|Příkaz identifikovaný *nCmdID* je zakázaný a nedá se spustit.|
-|OLECMDERR_NOHELP|Volající objekt požádal o nápovědu k příkazu identifikovanému funkcí *nCmdID* , ale není k dispozici žádná nápovědu.|
-|OLECMDERR_CANCELLED|Uživatel zrušil provádění.|
+|E_fail|Došlo k chybě.|
+|E_NOTIMPL|Označuje, že mfc sám by se měl pokusit přeložit a odeslat příkaz.|
+|OLECMDERR_E_UNKNOWNGROUP|*pguidCmdGroup* není null, ale neurčuje rozpoznanou skupinu příkazů.|
+|OLECMDERR_E_NOTSUPPORTED|*nCmdID* není rozpoznán jako platný příkaz ve skupině pGroup.|
+|OLECMDERR_DISABLED|Příkaz identifikovaný *nCmdID* je zakázán a nelze jej provést.|
+|OLECMDERR_NOHELP|Volající požádal o pomoc na příkaz identifikován *nCmdID,* ale žádná pomoc je k dispozici.|
+|OLECMDERR_CANCELLED|Uživatel zrušil spuštění.|
 
 ### <a name="remarks"></a>Poznámky
 
-Parametry *pguidCmdGroup* a *nCmdID* společně jednoznačně identifikují příkaz, který se má vyvolat. Parametr *nCmdExecOpt* určuje přesnou akci, která má být provedena.
+*PguidCmdGroup* a *parametry nCmdID* společně jednoznačně identifikují příkaz, který chcete vyvolat. Parametr *nCmdExecOpt* určuje přesnou akci, která má být vykonat.
 
-##  <a name="getactiveview"></a>  COleDocObjectItem::GetActiveView
+## <a name="coledocobjectitemgetactiveview"></a><a name="getactiveview"></a>COleDocObjectItem::GetActiveView
 
-Chcete-li získat ukazatel na `IOleDocumentView` rozhraní aktuálně aktivního zobrazení, zavolejte tuto členskou funkci.
+Volání této členské funkce získat `IOleDocumentView` ukazatel na rozhraní aktuálně aktivní zobrazení.
 
 ```
 LPOLEDOCUMENTVIEW GetActiveView() const;
@@ -176,15 +176,15 @@ LPOLEDOCUMENTVIEW GetActiveView() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na rozhraní [IOleDocumentView](/windows/win32/api/docobj/nn-docobj-ioledocumentview) aktuálně aktivního zobrazení. Pokud není k dispozici aktuální zobrazení, vrátí hodnotu NULL.
+Ukazatel na rozhraní [IOleDocumentView](/windows/win32/api/docobj/nn-docobj-ioledocumentview) aktuálně aktivního zobrazení. Pokud neexistuje žádné aktuální zobrazení, vrátí hodnotu NULL.
 
 ### <a name="remarks"></a>Poznámky
 
-Počet odkazů u vráceného `IOleDocumentView` ukazatele není zvýšen před jeho vrácením pomocí této funkce.
+Počet odkazů na `IOleDocumentView` vrácený ukazatel není zvýšil před vrácení mne touto funkcí.
 
-##  <a name="getpagecount"></a>COleDocObjectItem:: GetPageCount
+## <a name="coledocobjectitemgetpagecount"></a><a name="getpagecount"></a>COleDocObjectItem::GetPageCount
 
-Voláním této členské funkce načtete počet stránek v dokumentu.
+Volání této členské funkce načíst počet stránek v dokumentu.
 
 ```
 BOOL GetPageCount(
@@ -195,18 +195,18 @@ BOOL GetPageCount(
 ### <a name="parameters"></a>Parametry
 
 *pnFirstPage*<br/>
-Ukazatel na číslo první stránky dokumentu. Může mít hodnotu NULL, což znamená, že volající toto číslo nepotřebuje.
+Ukazatel na číslo první stránky dokumentu. Může být NULL, což znamená, že volající nepotřebuje toto číslo.
 
-*pcPages*<br/>
-Ukazatel na celkový počet stránek v dokumentu. Může mít hodnotu NULL, což znamená, že volající toto číslo nepotřebuje.
+*pcStránky*<br/>
+Ukazatel na celkový počet stránek v dokumentu. Může být NULL, což znamená, že volající nepotřebuje toto číslo.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud bylo úspěšné; v opačném případě 0.
+Nenulová, pokud je úspěšná; jinak 0.
 
-##  <a name="onprepareprinting"></a>  COleDocObjectItem::OnPreparePrinting
+## <a name="coledocobjectitemonprepareprinting"></a><a name="onprepareprinting"></a>COleDocObjectItem::OnPreparePrinting
 
-Tato členská funkce je volána rozhraním pro přípravu dokumentu pro tisk.
+Tato členská funkce je volána rámci připravit dokument pro tisk.
 
 ```
 static BOOL OnPreparePrinting(
@@ -217,22 +217,22 @@ static BOOL OnPreparePrinting(
 
 ### <a name="parameters"></a>Parametry
 
-*pCaller*<br/>
-Ukazatel na objekt [CView](../../mfc/reference/cview-class.md) , který odesílá příkaz Print.
+*pVolající*<br/>
+Ukazatel na [cview](../../mfc/reference/cview-class.md) objekt, který odesílá příkaz print.
 
-*pInfo*<br/>
-Ukazatel na objekt [CPrintInfo –](../../mfc/reference/cprintinfo-structure.md) , který popisuje úlohu, která má být vytištěna.
+*pInformace*<br/>
+Ukazatel na objekt [CPrintInfo,](../../mfc/reference/cprintinfo-structure.md) který popisuje úlohu, která má být vytištěna.
 
 *bPrintAll*<br/>
-Určuje, zda bude vytištěn celý dokument.
+Určuje, zda má být vytištěn celý dokument.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud bylo úspěšné; v opačném případě 0.
+Nenulová, pokud je úspěšná; jinak 0.
 
-##  <a name="onprint"></a>  COleDocObjectItem::OnPrint
+## <a name="coledocobjectitemonprint"></a><a name="onprint"></a>COleDocObjectItem::OnPrint
 
-Tato členská funkce je volána rozhraním pro tisk dokumentu.
+Tato členská funkce je volána rámci pro tisk dokumentu.
 
 ```
 static void OnPrint(
@@ -243,18 +243,18 @@ static void OnPrint(
 
 ### <a name="parameters"></a>Parametry
 
-*pCaller*<br/>
-Ukazatel na objekt CView, který odesílá příkaz Print.
+*pVolající*<br/>
+Ukazatel na cview objekt, který odesílá příkaz print.
 
-*pInfo*<br/>
-Ukazatel na objekt [CPrintInfo –](../../mfc/reference/cprintinfo-structure.md) , který popisuje úlohu, která má být vytištěna.
+*pInformace*<br/>
+Ukazatel na objekt [CPrintInfo,](../../mfc/reference/cprintinfo-structure.md) který popisuje úlohu, která má být vytištěna.
 
 *bPrintAll*<br/>
-Určuje, zda bude vytištěn celý dokument.
+Určuje, zda má být vytištěn celý dokument.
 
-##  <a name="querycommand"></a>  COleDocObjectItem::QueryCommand
+## <a name="coledocobjectitemquerycommand"></a><a name="querycommand"></a>COleDocObjectItem::QueryCommand
 
-Dotaz na stav jednoho nebo více příkazů generovaných událostmi uživatelského rozhraní.
+Dotazy na stav jednoho nebo více příkazů generovaných událostmi uživatelského rozhraní.
 
 ```
 HRESULT QueryCommand(
@@ -267,28 +267,28 @@ HRESULT QueryCommand(
 ### <a name="parameters"></a>Parametry
 
 *nCmdID*<br/>
-identifikátor příkazu, pro který se má dotazovat
+identifikátor dotazovaného příkazu.
 
 *pdwStatus*<br/>
-Ukazatel na příznaky vracený jako výsledek dotazu. Seznam možných hodnot naleznete v tématu [OLECMDF](/windows/win32/api/docobj/ne-docobj-olecmdf).
+Ukazatel na příznaky vrácené v důsledku dotazu. Seznam možných hodnot naleznete v tématu [OLECMDF](/windows/win32/api/docobj/ne-docobj-olecmdf).
 
 *pCmdText*<br/>
-Ukazatel na strukturu [OLECMDTEXT](/windows/win32/api/docobj/ns-docobj-olecmdtext) , ve které se mají vrátit informace o názvu a stavu pro jeden příkaz. Může mít hodnotu NULL, která označuje, že volající nepotřebuje tyto informace.
+Ukazatel na strukturu [OLECMDTEXT,](/windows/win32/api/docobj/ns-docobj-olecmdtext) ve které chcete vrátit informace o názvu a stavu pro jeden příkaz. Může být NULL označuje, že volající nepotřebuje tyto informace.
 
 *pguidCmdGroup*<br/>
-Jedinečný identifikátor skupiny příkazů; může mít hodnotu NULL a zadat standardní skupinu.
+Jedinečný identifikátor skupiny příkazů; může být NULL pro určení standardní skupiny.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Úplný seznam vrácených hodnot naleznete v tématu [IOleCommandTarget –:: QueryStatus](/windows/win32/api/docobj/nf-docobj-iolecommandtarget-querystatus) v Windows SDK.
+Úplný seznam vrácených hodnot naleznete v [tématu IOleCommandTarget::QueryStatus](/windows/win32/api/docobj/nf-docobj-iolecommandtarget-querystatus) v sadě Windows SDK.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce emuluje funkce metody [IOleCommandTarget –:: QueryStatus](/windows/win32/api/docobj/nf-docobj-iolecommandtarget-querystatus) , jak je popsáno v Windows SDK.
+Tato členská funkce emuluje funkce metody [IOleCommandTarget::QueryStatus,](/windows/win32/api/docobj/nf-docobj-iolecommandtarget-querystatus) jak je popsáno v sadě Windows SDK.
 
-##  <a name="release"></a>COleDocObjectItem:: Release
+## <a name="coledocobjectitemrelease"></a><a name="release"></a>COleDocObjectItem::Vydání
 
-Uvolní připojení k propojené položce OLE a zavře je, pokud byla otevřená. Nezničí položku klienta.
+Uvolní připojení k propojené položce OLE a zavře ji, pokud byla otevřena. Nezničí položku klienta.
 
 ```
 virtual void Release(OLECLOSE dwCloseOption = OLECLOSE_NOSAVE);
@@ -297,16 +297,16 @@ virtual void Release(OLECLOSE dwCloseOption = OLECLOSE_NOSAVE);
 ### <a name="parameters"></a>Parametry
 
 *dwCloseOption*<br/>
-Příznak určující, za jakých okolností se položka OLE uloží při návratu do načteného stavu. Seznam možných hodnot naleznete v tématu [COleClientItem:: Close](../../mfc/reference/coleclientitem-class.md#close).
+Příznak určující, za jakých okolností je položka OLE uložena, když se vrátí do načteného stavu. Seznam možných hodnot naleznete v tématu [COleClientItem::Close](../../mfc/reference/coleclientitem-class.md#close).
 
 ### <a name="remarks"></a>Poznámky
 
 Nezničí položku klienta.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[MFCBIND Sample MFC](../../overview/visual-cpp-samples.md)<br/>
+[Knihovna MFC Ukázka knihovny MFCBIND](../../overview/visual-cpp-samples.md)<br/>
 [COleClientItem – třída](../../mfc/reference/coleclientitem-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [COleClientItem – třída](../../mfc/reference/coleclientitem-class.md)<br/>
-[CDocObjectServerItem – třída](../../mfc/reference/cdocobjectserveritem-class.md)
+[Třída CDocObjectServerItem](../../mfc/reference/cdocobjectserveritem-class.md)

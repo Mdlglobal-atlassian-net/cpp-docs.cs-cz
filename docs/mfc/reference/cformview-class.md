@@ -10,16 +10,16 @@ helpviewer_keywords:
 - CFormView [MFC], CFormView
 - CFormView [MFC], IsInitDlgCompleted
 ms.assetid: a99ec313-36f0-4f28-9d2b-de11de14ac19
-ms.openlocfilehash: 8a0c11352ffab37f50ede5c67aa810fa20e838ed
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a9b897c661731878f0bf78c9d04ae7c4ba28cd42
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182000"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373804"
 ---
 # <a name="cformview-class"></a>CFormView – třída
 
-Základní třída použitá pro zobrazení formuláře.
+Základní třída používaná pro zobrazení formuláře.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -31,35 +31,35 @@ class CFormView : public CScrollView
 
 ### <a name="protected-constructors"></a>Chráněné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CFormView::CFormView](#cformview)|Vytvoří `CFormView` objektu.|
+|[CFormView::CFormView](#cformview)|Vytvoří `CFormView` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CFormView::IsInitDlgCompleted](#isinitdlgcompleted)|Používán k synchronizaci během inicializace.|
+|[CFormView::IsInitDlgCompleted CFormView::IsInitDlgCompleted CFormView::IsInitDlgCompleted CForm](#isinitdlgcompleted)|Používá se pro synchronizaci během inicializace.|
 
 ## <a name="remarks"></a>Poznámky
 
-Zobrazení formuláře je v podstatě zobrazení, která obsahuje ovládací prvky. Tyto ovládací prvky jsou podrobně popsány podle prostředku šablony dialogového okna. Použití `CFormView` Pokud chcete, aby formuláře v aplikaci. Podporují se tato zobrazení posouvání, podle potřeby [cscrollview –](../../mfc/reference/cscrollview-class.md) funkce.
+Zobrazení formuláře je v podstatě zobrazení, které obsahuje ovládací prvky. Tyto ovládací prvky jsou rozloženy na základě prostředku šablony dialogu. Použijte, `CFormView` pokud chcete formuláře v žádosti. Tato zobrazení podporují posouvání, podle potřeby pomocí funkce [CScrollView.](../../mfc/reference/cscrollview-class.md)
 
-Až budete [vytvoření aplikace založené na formulářích](../../mfc/reference/creating-a-forms-based-mfc-application.md), jeho třída zobrazení můžete založit na `CFormView`, takže aplikace založené na formulářích.
+Při [vytváření aplikace založené na formulářích](../../mfc/reference/creating-a-forms-based-mfc-application.md)můžete založit `CFormView`její třídu zobrazení na aplikaci založené na formulářích.
 
-Můžete také vložit nový [formuláře témata](../../mfc/form-views-mfc.md) do aplikace pro systém zobrazení dokumentu. I když aplikace nepodporují zpočátku formulářů, Visual C++ se přidání této podpory, když vložíte nový formulář.
+Do aplikací založených na zobrazení dokumentu můžete také vložit nová [témata formuláře.](../../mfc/form-views-mfc.md) I v případě, že vaše aplikace zpočátku nepodporovala formuláře, visual c++ přidá tuto podporu při vložení nového formuláře.
 
-Průvodce aplikací knihovny MFC a příkaz Přidat třídu, jsou upřednostňovanou metodou pro vytvoření aplikace založené na formulářích. Pokud je potřeba vytvořit aplikaci založené na formulářích bez použití těchto metod, viz [vytvoření aplikace založené na formulářích](../../mfc/reference/creating-a-forms-based-mfc-application.md).
+Průvodce aplikací knihovny MFC a příkaz Přidat třídu jsou upřednostňované metody pro vytváření aplikací založených na formulářích. Pokud potřebujete vytvořit aplikaci založenou na formulářích bez použití těchto metod, přečtěte si informace [o vytvoření aplikace založené na formulářích](../../mfc/reference/creating-a-forms-based-mfc-application.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObjekt](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[CCmdCíl](../../mfc/reference/ccmdtarget-class.md)
 
-[CWnd](../../mfc/reference/cwnd-class.md)
+[Cwnd](../../mfc/reference/cwnd-class.md)
 
-[CView](../../mfc/reference/cview-class.md)
+[Cview](../../mfc/reference/cview-class.md)
 
 [CScrollView](../../mfc/reference/cscrollview-class.md)
 
@@ -69,9 +69,9 @@ Průvodce aplikací knihovny MFC a příkaz Přidat třídu, jsou upřednostňov
 
 **Záhlaví:** afxext.h
 
-##  <a name="cformview"></a>  CFormView::CFormView
+## <a name="cformviewcformview"></a><a name="cformview"></a>CFormView::CFormView
 
-Vytvoří `CFormView` objektu.
+Vytvoří `CFormView` objekt.
 
 ```
 CFormView(LPCTSTR lpszTemplateName);
@@ -81,19 +81,19 @@ CFormView(UINT nIDTemplate);
 ### <a name="parameters"></a>Parametry
 
 *lpszTemplateName*<br/>
-Obsahuje řetězec zakončený hodnotou null, který je název prostředku šablony dialogového okna.
+Obsahuje řetězec s ukončeným hodnotou null, který je názvem prostředku šablony dialogu.
 
-*nIDTemplate*<br/>
-Obsahuje identifikační číslo prostředku šablony dialogového okna.
+*nIDŠablona*<br/>
+Obsahuje id číslo prostředku šablony dialogu.
 
 ### <a name="remarks"></a>Poznámky
 
-Při vytváření objektu typu odvozené z `CFormView`, vyvolat jeden z konstruktorů k vytvoření objektu zobrazení a k identifikaci prostředku dialogového okna, na kterých je založena zobrazení. Název (pass řetězec jako argument konstruktoru) nebo jeho ID (pass celé číslo bez znaménka jako argument) můžete identifikovat prostředek.
+Když vytvoříte objekt typu odvozeného `CFormView`z , vyvoláte jeden z konstruktorů k vytvoření objektu zobrazení a identifikaci prostředku dialogu, na kterém je zobrazení založeno. Prostředek můžete identifikovat buď podle názvu (předejte řetězec jako argument konstruktoru) nebo jeho ID (předat nepodepsané celé číslo jako argument).
 
-Formulářové zobrazení okna a podřízené ovládací prvky nejsou vytvořeny až do `CWnd::Create` je volána. `CWnd::Create` je voláno rozhraním jako součást dokumentů a zobrazení proces vytváření, který doprovází šablonu dokumentu.
+Okno zobrazení formuláře a podřízené ovládací `CWnd::Create` prvky nejsou vytvořeny, dokud není volána. `CWnd::Create`je volána rámci jako součást procesu vytváření dokumentu a zobrazení, který je řízen šablonou dokumentu.
 
 > [!NOTE]
->  Odvozené třídy *musí* zadat vlastní konstruktor. V konstruktoru, vyvolání konstruktoru, `CFormView::CFormView`, s názvem prostředku nebo ID jako argument, jak je znázorněno v předchozí přehled třídy.
+> Odvozené třídy *musí* dodávat vlastní konstruktor. V konstruktoru vyvoláte konstruktor , `CFormView::CFormView`s názvem prostředku nebo ID jako argument, jak je znázorněno v přehledu předchozí třídy.
 
 ### <a name="example"></a>Příklad
 
@@ -101,9 +101,9 @@ Formulářové zobrazení okna a podřízené ovládací prvky nejsou vytvořeny
 
 [!code-cpp[NVC_MFCDocView#91](../../mfc/codesnippet/cpp/cformview-class_2.cpp)]
 
-##  <a name="isinitdlgcompleted"></a>  CFormView::IsInitDlgCompleted
+## <a name="cformviewisinitdlgcompleted"></a><a name="isinitdlgcompleted"></a>CFormView::IsInitDlgCompleted CFormView::IsInitDlgCompleted CFormView::IsInitDlgCompleted CForm
 
-Využívané prostředím MFC zajistit, že inicializace je dokončena před prováděním dalších operací.
+Používá knihovny MFC k zajištění dokončení inicializace před provedením jiných operací.
 
 ```
 BOOL IsInitDlgCompleted() const;
@@ -111,12 +111,12 @@ BOOL IsInitDlgCompleted() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-True, pokud byla dokončena inicializace funkce pro tento dialog.
+True, pokud byla dokončena funkce inicializace pro tento dialog.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Ukázky knihovny MFC SNAPVW](../../overview/visual-cpp-samples.md)<br/>
-[Ukázky knihovny MFC VIEWEX](../../overview/visual-cpp-samples.md)<br/>
+[Ukázka knihovny MFC SNAPVW](../../overview/visual-cpp-samples.md)<br/>
+[Ukázka knihovny MFC VIEWEX](../../overview/visual-cpp-samples.md)<br/>
 [CScrollView – třída](../../mfc/reference/cscrollview-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [CDialog – třída](../../mfc/reference/cdialog-class.md)<br/>

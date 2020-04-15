@@ -10,19 +10,19 @@ helpviewer_keywords:
 - SafeInt class
 - SafeInt class, constructor
 ms.assetid: 27a8f087-2511-46f9-8d76-2aeb66ca272f
-ms.openlocfilehash: c69dc7ed5e34d98d5acff8f2bc28c34761bd31c6
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: c365b5cab5814d3992e6570949a69fc5d39c1dd3
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80076823"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373443"
 ---
 # <a name="safeint-class"></a>SafeInt – třída
 
-Rozšiřuje primitivní prvky Integer, aby se zabránilo přetečení celého čísla, a umožňuje porovnat různé typy celých čísel.
+Rozšiřuje celá základní primitiva, aby se zabránilo přetečení celého čísla a umožňuje porovnat různé typy celá čísla.
 
 > [!NOTE]
-> Nejnovější verzi této knihovny najdete na adrese [https://github.com/dcleblanc/SafeInt](https://github.com/dcleblanc/SafeInt).
+> Nejnovější verze této knihovny [https://github.com/dcleblanc/SafeInt](https://github.com/dcleblanc/SafeInt)je umístěna na adrese .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -35,27 +35,27 @@ class SafeInt;
 
 | Šablona  |  Popis |
 |--------|------------|
-| T         |  Typ celého čísla nebo logického parametru, který `SafeInt` nahrazovat. |
+| T         |  Typ celého čísla nebo logického `SafeInt` parametru, který nahrazuje. |
 | E         |  Výčtový datový typ, který definuje zásady zpracování chyb. |
 | U         |  Typ celého čísla nebo logického parametru pro sekundární operand. |
 
 | Parametr  |  Popis |
 |---------|-----------------|
-| *zarovnání indirekce RHS*      |  pro Vstupní parametr, který představuje hodnotu na pravé straně operátoru v několika samostatných funkcích. |
-| *došlo*        |  pro Vstupní parametr, který představuje hodnotu na pravé straně operátoru v několika samostatných funkcích. |
-| *bit*     |  pro Vstupní parametr, který představuje hodnotu na pravé straně operátoru v několika samostatných funkcích. |
+| *rhs*      |  [v] Vstupní parametr, který představuje hodnotu na pravé straně operátoru v několika samostatných funkcích. |
+| *I*        |  [v] Vstupní parametr, který představuje hodnotu na pravé straně operátoru v několika samostatných funkcích. |
+| *Bitů*     |  [v] Vstupní parametr, který představuje hodnotu na pravé straně operátoru v několika samostatných funkcích. |
 
 ## <a name="members"></a>Členové
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-| Název                          |  Popis |
+| Name (Název)                          |  Popis |
 |---------------------------|--------------------|
-| [SafeInt::SafeInt](#safeint)  |  Výchozí konstruktor |
+| [SafeInt::SafeInt](#safeint)  |  Výchozí konstruktor. |
 
 ### <a name="assignment-operators"></a>Operátory přiřazení
 
-| Název  |  Syntaxe |
+| Name (Název)  |  Syntaxe |
 |----|---------|
 | =     |  `template<typename U>`<br />`SafeInt<T,E>& operator= (const U& rhs)` |
 | =     |  `SafeInt<T,E>& operator= (const T& rhs) throw()` |
@@ -64,25 +64,25 @@ class SafeInt;
 
 ### <a name="casting-operators"></a>Operátory přetypování
 
-| Název              |  Syntaxe |
+| Name (Název)              |  Syntaxe |
 |------|---------------------------------|
 | bool              |  `operator bool() throw()` |
 | char              |  `operator char() const` |
-| signed char       |  `operator signed char() const` |
+| podepsaný znak       |  `operator signed char() const` |
 | unsigned char     |  `operator unsigned char() const` |
 | __int16           |  `operator __int16() const` |
-| Nepodepsaný __int16  |  `operator unsigned __int16() const` |
+| nepodepsané __int16  |  `operator unsigned __int16() const` |
 | __int32           |  `operator __int32() const` |
-| Nepodepsaný __int32  |  `operator unsigned __int32() const` |
+| nepodepsané __int32  |  `operator unsigned __int32() const` |
 | long              |  `operator long() const` |
 | unsigned long     |  `operator unsigned long() const` |
 | __int64           |  `operator __int64() const` |
-| Nepodepsaný __int64  |  `operator unsigned __int64() const` |
+| nepodepsané __int64  |  `operator unsigned __int64() const` |
 | wchar_t           |  `operator wchar_t() const` |
 
 ### <a name="comparison-operators"></a>Operátory porovnání
 
-| Název  |  Syntaxe |
+| Name (Název)  |  Syntaxe |
 |----|----------------|
 | \<     |  `template<typename U>`<br /><br /> `bool operator< (U rhs) const throw()` |
 | \<     |  `bool operator< (SafeInt<T,E> rhs) const throw()` |
@@ -101,7 +101,7 @@ class SafeInt;
 
 ### <a name="arithmetic-operators"></a>Aritmetické operátory
 
-| Název  |  Syntaxe |
+| Name (Název)  |  Syntaxe |
 |----|--------------|
 | +     |  `const SafeInt<T,E>& operator+ () const throw()` |
 | -     |  `SafeInt<T,E> operator- () const` |
@@ -134,7 +134,7 @@ class SafeInt;
 
 ### <a name="logical-operators"></a>Logické operátory
 
-| Název     |  Syntaxe |
+| Name (Název)     |  Syntaxe |
 |------|--------------|
 | !        |  `bool operator !() const throw()` |
 | ~        |  `SafeInt<T,E> operator~ () const throw()` |
@@ -164,60 +164,60 @@ class SafeInt;
 
 ## <a name="remarks"></a>Poznámky
 
-Třída `SafeInt` chrání proti přetečení celého čísla v matematických operacích. Zvažte například přidání dvou 8bitových celých čísel: jedna má hodnotu 200 a druhá má hodnotu 100. Správná Matematická operace by byla 200 + 100 = 300. Vzhledem k 8bitové celočíselné celočíselné velikosti se však ztratí horní bit a kompilátor vrátí 44 (300-2<sup>8</sup>) jako výsledek. Jakákoli operace, která závisí na této matematické rovnici, bude generovat neočekávané chování.
+Třída `SafeInt` chrání před přetečení celé číslo v matematických operacích. Zvažte například přidání dvou 8bitových celá čísla: jeden má hodnotu 200 a druhý má hodnotu 100. Správná matematická operace by byla 200 + 100 = 300. Z důvodu limitu 8bitového celého čísla však dojde ke ztrátě horního bitu a výsledkem je kompilátor 44 (300 - 2<sup>8).</sup> Každá operace, která závisí na této matematické rovnici, bude generovat neočekávané chování.
 
-Třída `SafeInt` kontroluje, zda dojde k aritmetickému přetečení nebo zda se kód pokusí dělit nulou. V obou případech třída volá obslužnou rutinu chyb a upozorní program na potenciální problém.
+Třída `SafeInt` zkontroluje, zda dojde k aritmetickému přetečení nebo zda se kód pokusí vydělit nulou. V obou případech třída volá obslužnou rutinu chyby upozornit program potenciální problém.
 
-Tato třída také umožňuje porovnat dva různé typy celých čísel, pokud jsou `SafeInt` objekty. Když porovnání provedete, je třeba nejprve převést čísla na stejný typ. Přetypování jednoho čísla na jiný typ často vyžaduje kontroly, aby se zajistilo, že nedochází ke ztrátě dat.
+Tato třída také umožňuje porovnat dva různé typy celých čísel, pokud se jedná `SafeInt` o objekty. Obvykle při porovnání, musíte nejprve převést čísla na stejný typ. Přetypování jednoho čísla na jiný typ často vyžaduje kontroly, aby se ujistil, že nedojde ke ztrátě dat.
 
-Tabulka Operators v tomto tématu uvádí matematické operátory a operátory porovnání podporované třídou `SafeInt`. Většina matematických operátorů vrací objekt `SafeInt` typu `T`.
+V tabulce Operátory v tomto tématu jsou `SafeInt` uvedeny matematické a porovnávací operátory podporované třídou. Většina matematických `SafeInt` operátorů `T`vrací objekt typu .
 
-Operace porovnání mezi `SafeInt` a integrálním typem lze provádět v obou směrech. Například `SafeInt<int>(x) < y` i `y> SafeInt<int>(x)` jsou platné a vrátí stejný výsledek.
+Srovnávací operace `SafeInt` mezi a integrální typ lze provádět v obou směrech. Například oba `SafeInt<int>(x) < y` `y> SafeInt<int>(x)` a jsou platné a vrátí stejný výsledek.
 
-Mnoho binárních operátorů nepodporuje použití dvou různých typů `SafeInt`. Jedním z příkladů je operátor `&`. `SafeInt<T, E> & int` se podporuje, ale `SafeInt<T, E> & SafeInt<U, E>` ne. V druhém příkladu kompilátor neví, jaký typ parametru má být vrácen. Jedním z řešení tohoto problému je přetypovat druhý parametr zpět na základní typ. Pomocí stejných parametrů lze to provést s `SafeInt<T, E> & (U)SafeInt<U, E>`.
+Mnoho binárních operátorů nepodporuje použití dvou různých `SafeInt` typů. Jedním z příkladů `&` je operátor. `SafeInt<T, E> & int`je podporován, `SafeInt<T, E> & SafeInt<U, E>` ale není. V druhém příkladu kompilátor neví, jaký typ parametru vrátit. Jedním z řešení tohoto problému je přetypovat druhý parametr zpět na základní typ. Pomocí stejných parametrů to lze provést `SafeInt<T, E> & (U)SafeInt<U, E>`pomocí aplikace .
 
 > [!NOTE]
-> U všech bitových operací by měly mít dva různé parametry stejnou velikost. Pokud se velikosti liší, kompilátor vyvolá výjimku [vyhodnocení](../mfc/reference/diagnostic-services.md#assert) . Výsledky této operace nelze zaručit, aby byly přesné. Chcete-li vyřešit tento problém, přetypování menšího parametru, dokud nemá stejnou velikost jako větší parametr.
+> Pro všechny bitové operace by měly mít dva různé parametry stejnou velikost. Pokud se velikosti liší, kompilátor vyvolá výjimku [ASSERT.](../mfc/reference/diagnostic-services.md#assert) Výsledky této operace nelze zaručit, že budou přesné. Chcete-li tento problém vyřešit, přetypovat menší parametr, dokud je stejná velikost jako větší parametr.
 
-Pro operátory posunutí se při posunování více bitů, než je existence pro typ šablony, vyvolá výjimka vyhodnocení. To nebude mít žádný vliv na režim vydání. Kombinování dvou typů parametrů SafeInt je možné pro operátory posunutí, protože návratový typ je stejný jako původní typ. Číslo na pravé straně operátoru určuje počet bitů, které se mají posunout.
+Pro operátory shift posunvíce bitů, než existují pro typ šablony vyvolá výjimku ASSERT. To nebude mít žádný vliv v režimu vydání. Míchání dvou typů parametrů SafeInt je možné pro operátory směny, protože návratový typ je stejný jako původní typ. Číslo na pravé straně operátoru označuje pouze počet bitů, které mají být posunuty.
 
-Při provádění logického porovnání s objektem SafeInt je porovnání čistě aritmetické. Zvažte například tyto výrazy:
+Při provádění logické porovnání s Objekt SafeInt, porovnání je přísně aritmetické. Zvažte například tyto výrazy:
 
 - `SafeInt<uint>((uint)~0) > -1`
 
 - `((uint)~0) > -1`
 
-První příkaz se přeloží na **true**, ale druhý příkaz se přeloží na `false`. Bitový operátor negace 0 je 0xFFFFFFFF. Ve druhém příkazu porovnává výchozí operátor porovnání 0xFFFFFFFF až 0xFFFFFFFF a považuje se za rovné. Relační operátor pro třídu `SafeInt` si uvědomuje, že druhý parametr je záporný, zatímco první parametr je nepodepsaný. Proto i když je bitová reprezentace identická, `SafeInt` logický operátor, že unsigned integer je větší než-1.
+První příkaz se překládá na **hodnotu**true `false`, ale druhý příkaz se překládá na . Bitové negace 0 je 0xFFFFFFFF. Ve druhém příkazu výchozí operátor porovnání porovná 0xFFFFFFFF na 0xFFFFFFFF a považuje je za stejné. Operátor porovnání pro `SafeInt` třídu si uvědomí, že druhý parametr je záporný vzhledem k tomu, že první parametr není podepsán. Proto i když bit reprezentace `SafeInt` je totožný, logický operátor si uvědomí, že nepodepsané celé číslo je větší než -1.
 
-Buďte opatrní při použití třídy `SafeInt` společně s operátorem `?:` Ternární. Vezměte v úvahu následující řádek kódu.
+Buďte opatrní při `SafeInt` použití třídy `?:` společně s ternární operátor. Zvažte následující řádek kódu.
 
 ```cpp
 Int x = flag ? SafeInt<unsigned int>(y) : -1;
 ```
 
-Kompilátor ho převede na toto:
+Kompilátor jej převede na toto:
 
 ```cpp
 Int x = flag ? SafeInt<unsigned int>(y) : SafeInt<unsigned int>(-1);
 ```
 
-Pokud je `flag` `false`, kompilátor vyvolá výjimku namísto přiřazení hodnoty-1 k `x`. Proto chcete-li se tomuto chování vyhnout, správný kód, který se má použít, je následující řádek.
+Pokud `flag` `false`je , kompilátor vyvolá výjimku namísto přiřazení `x`hodnoty -1 . Proto, aby se zabránilo toto chování, správný kód, který chcete použít, je následující řádek.
 
 ```cpp
 Int x = flag ? (int) SafeInt<unsigned int>(y) : -1;
 ```
 
-`T` a `U` lze přiřadit logický typ, typ znaku nebo typ Integer. Celočíselné typy mohou být podepsány nebo bez znaménka a libovolná velikost od 8 do 64 bitů.
+`T`a `U` může být přiřazen logický typ, typ znaku nebo typ celého čísla. Typy celého čísla mohou být podepsané nebo nepodepsané a libovolná velikost od 8 bitů do 64 bitů.
 
 > [!NOTE]
-> I když třída `SafeInt` akceptuje libovolný typ celého čísla, funguje efektivněji s typy bez znaménka.
+> Přestože `SafeInt` třída přijímá jakýkoli druh celéčíslo, provádí efektivněji s nepodepsané typy.
 
-`E` je mechanismus zpracování chyb, který `SafeInt` používá. V knihovně SafeInt jsou k dispozici dva mechanismy zpracování chyb. Výchozí zásada je `SafeIntErrorPolicy_SafeIntException`, což vyvolá výjimku [třídy SafeIntException –](../safeint/safeintexception-class.md) při výskytu chyby. Druhá zásada je `SafeIntErrorPolicy_InvalidParameter`, která zastaví program, pokud dojde k chybě.
+`E`je mechanismus zpracování `SafeInt` chyb, který používá. S knihovnou SafeInt jsou k dispozici dva mechanismy zpracování chyb. Výchozí zásada `SafeIntErrorPolicy_SafeIntException`je , která při výskytu chyby vyvolá [výjimku třídy SafeIntException.](../safeint/safeintexception-class.md) Další zásadou `SafeIntErrorPolicy_InvalidParameter`je , která zastaví program, pokud dojde k chybě.
 
-Existují dvě možnosti přizpůsobení zásady chyb. První možností je nastavit parametr `E` při vytváření `SafeInt`. Tuto možnost použijte, pokud chcete změnit zásady zpracování chyb pouze pro jednu `SafeInt`. Druhou možností je definovat _SAFEINT_DEFAULT_ERROR_POLICY jako vlastní třídu pro zpracování chyb, než bude zahrnuta do knihovny `SafeInt`. Tuto možnost použijte, pokud chcete změnit výchozí zásady zpracování chyb pro všechny instance `SafeInt` třídy v kódu.
+Existují dvě možnosti přizpůsobení zásad chyb. První možností je nastavení `E` parametru při `SafeInt`vytváření . Tuto možnost použijte, pokud chcete změnit zásady `SafeInt`zpracování chyb pouze pro jednu možnost . Druhou možností je definovat _SAFEINT_DEFAULT_ERROR_POLICY, aby se vaše vlastní třída `SafeInt` zpracování chyb před zahrnutím knihovny. Tuto možnost použijte, pokud chcete změnit výchozí zásady zpracování `SafeInt` chyb pro všechny instance třídy v kódu.
 
 > [!NOTE]
-> Přizpůsobená třída, která zpracovává chyby z knihovny SafeInt, by neměla vracet řízení kódu, který se nazývá obslužná rutina chyb. Po volání obslužné rutiny chyby nemůže být výsledek operace `SafeInt` důvěryhodný.
+> Vlastní třída, která zpracovává chyby z knihovny SafeInt, by neměla vrátit ovládací prvek kódu, který volal obslužnou rutinu chyby. Po volání obslužné rutiny chyby nelze důvěřovat výsledku `SafeInt` operace.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -225,13 +225,13 @@ Existují dvě možnosti přizpůsobení zásady chyb. První možností je nast
 
 ## <a name="requirements"></a>Požadavky
 
-**Hlavička:** SafeInt. h
+**Záhlaví:** safeint.h
 
-**Obor názvů:** MSL:: Utilities
+**Obor názvů:** msl::nástroje
 
-## <a name="safeintsafeint"></a><a name="safeint"></a>SafeInt:: SafeInt
+## <a name="safeintsafeint"></a><a name="safeint"></a>BezpečnéInt::SafeInt
 
-Vytvoří objekt `SafeInt`.
+Vytvoří `SafeInt` objekt.
 
 ```cpp
 SafeInt() throw
@@ -257,21 +257,21 @@ SafeInt (
 
 ### <a name="parameters"></a>Parametry
 
-*došlo*<br/>
-pro Hodnota nového objektu `SafeInt`. Toto musí být parametr typu T nebo U v závislosti na konstruktoru.
+*I*<br/>
+[v] Hodnota pro nový `SafeInt` objekt. To musí být parametr typu T nebo U, v závislosti na konstruktoru.
 
-*b*<br/>
-pro Logická hodnota nového objektu `SafeInt`.
+*B*<br/>
+[v] Logická hodnota pro `SafeInt` nový objekt.
 
-*h*<br/>
-pro `SafeInt` typu U. Nový objekt `SafeInt` bude mít stejnou hodnotu jako *u*, ale bude typu t.
+*U*<br/>
+[v] A `SafeInt` typu U. Nový `SafeInt` objekt bude mít stejnou hodnotu jako *u*, ale bude typu T.
 
-U typ dat uložených v `SafeInt`. Může se jednat o logický, znakový nebo celočíselný typ. Pokud se jedná o celočíselný typ, může být podepsán nebo bez znaménka a musí být mezi 8 a 64 bity.
+U Typ dat uložených `SafeInt`v . Může se jedná o logický, znakový nebo celý typ. Pokud se jedná o typ celé číslo, může být podepsánnebo nepodepsaný a být mezi 8 a 64 bitů.
 
 ### <a name="remarks"></a>Poznámky
 
-Vstupní parametr pro konstruktor, *i i* *u*musí být logický, znakový nebo celočíselný typ. Pokud je to jiný typ parametru, třída `SafeInt` volá [static_assert](../cpp/static-assert.md) , aby označovala Neplatný vstupní parametr.
+Vstupní parametr pro *konstruktor, i* nebo *u*, musí být logický, znakový nebo lýtkový typ. Pokud se jedná o jiný `SafeInt` typ parametru, třída volá [static_assert](../cpp/static-assert.md) k označení neplatného vstupního parametru.
 
-Konstruktory, které používají typ šablony `U` automaticky převádí vstupní parametr na typ určený parametrem `T`. Třída `SafeInt` převádí data bez ztráty dat. Oznamuje `E` obslužné rutině chyb, pokud nemůže převést data na typ `T` bez ztráty dat.
+Konstruktory, které používají `U` typ šablony, automaticky převedou `T`vstupní parametr na typ určený programem . Třída `SafeInt` převádí data bez ztráty dat. Hlásí obslužné rutině `E` chyby, `T` pokud nemůže převést data na typ bez ztráty dat.
 
-Pokud vytvoříte `SafeInt` z logického parametru, musíte hodnotu inicializovat hned. Nelze vytvořit `SafeInt` pomocí `SafeInt<bool> sb;`kódu. Tím se vygeneruje chyba kompilace.
+Pokud vytvoříte `SafeInt` z logického parametru, je třeba hodnotu okamžitě inicializovat. Nelze vytvořit `SafeInt` pomocí kódu `SafeInt<bool> sb;`. To vygeneruje chybu kompilace.

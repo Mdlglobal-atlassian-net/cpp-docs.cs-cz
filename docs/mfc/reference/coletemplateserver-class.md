@@ -1,5 +1,5 @@
 ---
-title: COleTemplateServer – třída
+title: Třída COleTemplateServer
 ms.date: 11/04/2016
 f1_keywords:
 - COleTemplateServer
@@ -14,16 +14,16 @@ helpviewer_keywords:
 - COleTemplateServer [MFC], Unregister
 - COleTemplateServer [MFC], UpdateRegistry
 ms.assetid: 47a2887d-8162-4993-a842-a784177c7f5c
-ms.openlocfilehash: 4a1997497f3bddb405b712b5534f76e577dabfa8
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: ddd7a8ce70fe49e66e1175e413418fd59a89c917
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69503083"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374856"
 ---
-# <a name="coletemplateserver-class"></a>COleTemplateServer – třída
+# <a name="coletemplateserver-class"></a>Třída COleTemplateServer
 
-Používá se pro servery vizuálních úprav OLE, automatizační servery a kontejnery odkazů (aplikace, které podporují odkazy na vložení).
+Používá se pro servery vizuální úpravy OLE, automatizační servery a kontejnery propojení (aplikace, které podporují odkazy na vkládání).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -35,31 +35,31 @@ class COleTemplateServer : public COleObjectFactory
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[COleTemplateServer::COleTemplateServer](#coletemplateserver)|`COleTemplateServer` Vytvoří objekt.|
+|[COleTemplateServer::COleTemplateServer](#coletemplateserver)|Vytvoří `COleTemplateServer` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[COleTemplateServer:: ConnectTemplate](#connecttemplate)|Připojí šablonu dokumentu k základnímu `COleObjectFactory` objektu.|
-|[COleTemplateServer::Unregister](#unregister)|Zruší registraci přidružené šablony dokumentu.|
-|[COleTemplateServer::UpdateRegistry](#updateregistry)|Registruje typ dokumentu pomocí systémového registru OLE.|
+|[COleTemplateServer::Šablona ConnectTemplate](#connecttemplate)|Připojí šablonu dokumentu k `COleObjectFactory` podkladovému objektu.|
+|[COleTemplateServer::Zrušit registraci](#unregister)|Zruší registraci přidružené šablony dokumentu.|
+|[COleTemplateServer::UpdateRegistry](#updateregistry)|Zaregistruje typ dokumentu pomocí systémového registru OLE.|
 
 ## <a name="remarks"></a>Poznámky
 
-Tato třída je odvozena od třídy [COleObjectFactory](../../mfc/reference/coleobjectfactory-class.md); obvykle můžete použít `COleTemplateServer` přímo místo odvozování vlastní třídy. `COleTemplateServer`ke správě dokumentů na serveru používá objekt [CDocTemplate –](../../mfc/reference/cdoctemplate-class.md) . Použijte `COleTemplateServer` při implementaci úplného serveru, tedy serveru, který lze spustit jako samostatnou aplikaci. Úplné servery jsou obvykle aplikace s více dokumenty (MDI), přestože jsou podporovány aplikace rozhraní SDI (Single Document Interface). Jeden `COleTemplateServer` objekt je potřeba pro každý typ dokumentu serveru, který podporuje aplikace. to znamená, že pokud vaše serverová aplikace podporuje listy i grafy, musíte mít dva `COleTemplateServer` objekty.
+Tato třída je odvozena z třídy [COleObjectFactory](../../mfc/reference/coleobjectfactory-class.md); obvykle, můžete `COleTemplateServer` použít přímo, spíše než odvodit své vlastní třídy. `COleTemplateServer`ke správě dokumentů serveru používá objekt [CDocTemplate.](../../mfc/reference/cdoctemplate-class.md) Použití `COleTemplateServer` při implementaci úplného serveru, to znamená serveru, který lze spustit jako samostatnou aplikaci. Úplné servery jsou obvykle více aplikací rozhraní dokumentů (MDI), i když jsou podporovány aplikace rozhraní s jedním dokumentem (SDI). Jeden `COleTemplateServer` objekt je potřeba pro každý typ dokumentu serveru, který aplikace podporuje; To znamená, že pokud serverová aplikace podporuje listy `COleTemplateServer` i grafy, musíte mít dva objekty.
 
-`COleTemplateServer`přepíše členskou funkci definovanou pomocí `COleObjectFactory`. `OnCreateInstance` Tato členská funkce je volána rozhraním pro vytvoření C++ objektu správného typu.
+`COleTemplateServer`přepíše `OnCreateInstance` členská funkce `COleObjectFactory`definovaná . Tato členská funkce je volána rámci k vytvoření objektu Jazyka C++ správného typu.
 
-Další informace o serverech najdete v článku [servery: Implementace serveru](../../mfc/servers-implementing-a-server.md).
+Další informace o serverech naleznete v článku [Servery: Implementace serveru](../../mfc/servers-implementing-a-server.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[CObject](../../mfc/reference/cobject-class.md)
+[CObjekt](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[CCmdCíl](../../mfc/reference/ccmdtarget-class.md)
 
 [COleObjectFactory](../../mfc/reference/coleobjectfactory-class.md)
 
@@ -67,11 +67,11 @@ Další informace o serverech najdete v článku [servery: Implementace serveru]
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxdisp. h
+**Záhlaví:** afxdisp.h
 
-##  <a name="coletemplateserver"></a>COleTemplateServer:: COleTemplateServer
+## <a name="coletemplateservercoletemplateserver"></a><a name="coletemplateserver"></a>COleTemplateServer::COleTemplateServer
 
-`COleTemplateServer` Vytvoří objekt.
+Vytvoří `COleTemplateServer` objekt.
 
 ```
 COleTemplateServer();
@@ -79,11 +79,11 @@ COleTemplateServer();
 
 ### <a name="remarks"></a>Poznámky
 
-Stručný popis použití `COleTemplateServer` třídy naleznete v přehledu třídy [COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md) .
+Stručný popis použití `COleTemplateServer` třídy naleznete v přehledu třídy [COleLinkingDoc.](../../mfc/reference/colelinkingdoc-class.md)
 
-##  <a name="connecttemplate"></a>COleTemplateServer:: ConnectTemplate
+## <a name="coletemplateserverconnecttemplate"></a><a name="connecttemplate"></a>COleTemplateServer::Šablona ConnectTemplate
 
-Připojí šablonu dokumentu, na kterou odkazuje *pDocTemplate* , na podkladový objekt [COleObjectFactory](../../mfc/reference/coleobjectfactory-class.md) .
+Připojí šablonu dokumentu, na kterou *pDocTemplate* ukazuje, k podkladovému objektu [COleObjectFactory.](../../mfc/reference/coleobjectfactory-class.md)
 
 ```
 void ConnectTemplate(
@@ -94,20 +94,20 @@ void ConnectTemplate(
 
 ### <a name="parameters"></a>Parametry
 
-*CLSID*<br/>
-Odkaz na ID třídy OLE, kterou šablona požaduje
+*Identifikátor clsid*<br/>
+Odkaz na ID třídy OLE, které šablona požaduje.
 
-*pDocTemplate*<br/>
+*pDocŠablona*<br/>
 Ukazatel na šablonu dokumentu.
 
 *bMultiInstance*<br/>
-Označuje, zda jedna instance aplikace může podporovat více instancí. Při hodnotě TRUE se pro každý požadavek na vytvoření objektu spustí více instancí aplikace.
+Označuje, zda jedna instance aplikace může podporovat více instancí. Pokud TRUE, více instancí aplikace jsou spuštěny pro každý požadavek na vytvoření objektu.
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace najdete v tématu [klíč CLSID](/windows/win32/com/clsid-key-hklm) v Windows SDK.
+Další informace naleznete v tématu [KLÍČ CLSID](/windows/win32/com/clsid-key-hklm) v sadě Windows SDK.
 
-##  <a name="unregister"></a>COleTemplateServer:: Unregister
+## <a name="coletemplateserverunregister"></a><a name="unregister"></a>COleTemplateServer::Zrušit registraci
 
 Zruší registraci přidružené šablony dokumentu.
 
@@ -117,13 +117,13 @@ BOOL Unregister();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-TRUE v případě úspěchu; v opačném případě FALSE.
+PRAVDA v případě úspěchu; jinak FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-EnterRemarks
+Zadejte poznámky
 
-##  <a name="updateregistry"></a>COleTemplateServer:: UpdateRegistry
+## <a name="coletemplateserverupdateregistry"></a><a name="updateregistry"></a>COleTemplateServer::UpdateRegistry
 
 Načte informace o typu souboru z řetězce šablony dokumentu a umístí tyto informace do systémového registru OLE.
 
@@ -137,42 +137,42 @@ void UpdateRegistry(
 
 ### <a name="parameters"></a>Parametry
 
-*nAppType*<br/>
-Hodnota z výčtu OLE_APPTYPE, která je definována v AFXDISP. Y. Může mít jednu z následujících hodnot:
+*nTyp aplikace*<br/>
+Hodnota z OLE_APPTYPE výčtu, který je definován v AFXDISP. H. Může mít některou z následujících hodnot:
 
-- Server OAT_INPLACE_SERVER má úplné uživatelské rozhraní serveru.
+- OAT_INPLACE_SERVER Server má úplné uživatelské rozhraní serveru.
 
 - OAT_SERVER Server podporuje pouze vkládání.
 
-- Kontejner OAT_CONTAINER podporuje odkazy na vložené objekty.
+- OAT_CONTAINER Container podporuje odkazy na vložené objekty.
 
-- Objekt OAT_DISPATCH_OBJECT je `IDispatch`schopný.
+- OAT_DISPATCH_OBJECT Objekt `IDispatch`je schopen.
 
-- Server OAT_DOC_OBJECT_SERVER podporuje vkládání i model komponent objektu dokumentu.
+- OAT_DOC_OBJECT_SERVER Server podporuje vkládání i model komponenty Objekt dokumentu.
 
-*rglpszRegister*<br/>
-Seznam záznamů, které jsou zapsány do registru pouze v případě, že žádné položky neexistují.
+*rglpszRegistr*<br/>
+Seznam položek, které jsou zapsány do registru pouze v případě, že neexistují žádné položky.
 
 *rglpszOverwrite*<br/>
-Seznam záznamů, které jsou zapsány do registru bez ohledu na to, zda nějaké předchozí položky existují.
+Seznam položek, které jsou zapsány do registru bez ohledu na to, zda existují některé předchozí položky.
 
-*bRegister*<br/>
-Určuje, zda má být třída registrována. Pokud má *bRegister* hodnotu true, třída je zaregistrována v registru systému. V opačném případě zruší registraci třídy.
+*bRegistrovat*<br/>
+Určuje, zda má být třída registrována. Pokud *bRegister* je TRUE, třída je registrována v systémovém registru. V opačném případě zruší registraci třídy.
 
 ### <a name="remarks"></a>Poznámky
 
-Informace o registraci jsou načteny prostřednictvím volání metody [CDocTemplate –:: GetDocString](../../mfc/reference/cdoctemplate-class.md#getdocstring). Načtené podřetězce jsou ty, které jsou identifikovány `regFileTypeId`indexy `regFileTypeName`, a `fileNewName`, jak je popsáno `GetDocString` na odkazových stránkách.
+Registrační informace se načítají voláním [CDocTemplate::GetDocString](../../mfc/reference/cdoctemplate-class.md#getdocstring). Načtené podřetězce jsou řetězce identifikované `regFileTypeId`indexy `regFileTypeName` `fileNewName`, a , `GetDocString` jak je popsáno v referenčních stránkách.
 
-Pokud je podřetězec prázdný nebo pokud se `GetDocString` volání nezdařilo z jiného důvodu, tato funkce se nezdařila a informace o souboru nejsou v registru zadány. `regFileTypeId`
+Pokud `regFileTypeId` je podřetězec prázdný nebo `GetDocString` volání nezdaří z jiného důvodu, tato funkce se nezdaří a informace o souboru není zadán do registru.
 
-Informace v argumentech *rglpszRegister* a *rglpszOverwrite* se zapisují do registru prostřednictvím volání [AfxOleRegisterServerClass](application-control.md#afxoleregisterserverclass). Výchozí informace, které jsou registrovány v případě, že jsou dva argumenty NULL, jsou vhodné pro většinu aplikací. Informace o struktuře informací v těchto argumentech naleznete v tématu `AfxOleRegisterServerClass`.
+Informace v argumentech *rglpszRegister* a *rglpszOverwrite* jsou zapsány do registru prostřednictvím volání [AfxOleRegisterServerClass](application-control.md#afxoleregisterserverclass). Výchozí informace, která je registrována, pokud jsou dva argumenty NULL, je vhodná pro většinu aplikací. Informace o struktuře informací v těchto argumentech naleznete v tématu `AfxOleRegisterServerClass`.
 
-Další informace naleznete v tématu [implementace rozhraní IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface).
+Další informace naleznete [v tématu Implementace rozhraní IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[HIERSVR Sample MFC](../../overview/visual-cpp-samples.md)<br/>
+[Ukázka knihovny MFC HIERSVR](../../overview/visual-cpp-samples.md)<br/>
 [COleObjectFactory – třída](../../mfc/reference/coleobjectfactory-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
-[COleServerDoc – třída](../../mfc/reference/coleserverdoc-class.md)<br/>
+[Třída COleServerDoc](../../mfc/reference/coleserverdoc-class.md)<br/>
 [COleServerItem – třída](../../mfc/reference/coleserveritem-class.md)

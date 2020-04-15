@@ -1,5 +1,5 @@
 ---
-title: Coledispatchexception – třída
+title: Třída COleDispatchException
 ms.date: 11/04/2016
 f1_keywords:
 - COleDispatchException
@@ -16,16 +16,16 @@ helpviewer_keywords:
 - COleDispatchException [MFC], m_strSource
 - COleDispatchException [MFC], m_wCode
 ms.assetid: 0e95c8be-e21a-490c-99ec-181c6a9a26d0
-ms.openlocfilehash: 2d5b9d2a0dc1e716ea8cb20f0d0dcb4c5d765079
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 4572b639b757569d8e3cfa731f99c123762f3900
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64341629"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375067"
 ---
-# <a name="coledispatchexception-class"></a>Coledispatchexception – třída
+# <a name="coledispatchexception-class"></a>Třída COleDispatchException
 
-Zpracovává výjimky, které jsou specifické pro OLE `IDispatch` rozhraní, které je klíčovou součástí automatizace OLE.
+Zpracovává výjimky specifické pro `IDispatch` rozhraní OLE, které je klíčovou součástí automatizace OLE.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -37,37 +37,37 @@ class COleDispatchException : public CException
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[COleDispatchException::m_dwHelpContext](#m_dwhelpcontext)|Kontextové nápovědy pro chybu.|
-|[COleDispatchException::m_strDescription](#m_strdescription)|Popis slovní chyby.|
-|[COleDispatchException::m_strHelpFile](#m_strhelpfile)|Soubor pro použití s nápovědy `m_dwHelpContext`.|
-|[COleDispatchException::m_strSource](#m_strsource)|Aplikace, která generují výjimku.|
-|[COleDispatchException::m_wCode](#m_wcode)|`IDispatch`-určitý kód chyby.|
+|[COleDispatchException::m_dwHelpContext](#m_dwhelpcontext)|Kontext nápovědy pro chybu.|
+|[COleDispatchException::m_strDescription](#m_strdescription)|Slovní popis chyby.|
+|[COleDispatchException::m_strHelpFile](#m_strhelpfile)|Soubor nápovědy, `m_dwHelpContext`který chcete použít s .|
+|[COleDispatchException::m_strSource](#m_strsource)|Aplikace, která vygenerovala výjimku.|
+|[COleDispatchException::m_wCode](#m_wcode)|`IDispatch`-specifický kód chyby.|
 
 ## <a name="remarks"></a>Poznámky
 
-Stejně jako ostatní výjimky třídy odvozené z `CException` základní třídy, `COleDispatchException` jde použít s THROW, THROW_LAST, TRY, CATCH, AND_CATCH a END_CATCH makra.
+Stejně jako ostatní třídy `CException` výjimek `COleDispatchException` odvozené ze základní třídy lze použít s makry THROW, THROW_LAST, TRY, CATCH, AND_CATCH a END_CATCH.
 
-Obecně byste měli volat [afxthrowoledispatchexception –](exception-processing.md#afxthrowoledispatchexception) a vytvořte výjimku `COleDispatchException` objektu.
+Obecně byste měli volat [AfxThrowOleDispatchException](exception-processing.md#afxthrowoledispatchexception) k `COleDispatchException` vytvoření a vyvolání objektu.
 
-Další informace o výjimkách, najdete v článcích [zpracování výjimek (MFC)](../../mfc/exception-handling-in-mfc.md) a [výjimky: OLE – výjimky](../../mfc/exceptions-ole-exceptions.md).
+Další informace o výjimkách naleznete v článcích [Zpracování výjimek (MFC)](../../mfc/exception-handling-in-mfc.md) a [Výjimky: Ole Výjimky](../../mfc/exceptions-ole-exceptions.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObjekt](../../mfc/reference/cobject-class.md)
 
-[Cexception –](../../mfc/reference/cexception-class.md)
+[CException](../../mfc/reference/cexception-class.md)
 
 `COleDispatchException`
 
 ## <a name="requirements"></a>Požadavky
 
-**Header:** afxdisp.h
+**Záhlaví:** afxdisp.h
 
-##  <a name="m_dwhelpcontext"></a>  COleDispatchException::m_dwHelpContext
+## <a name="coledispatchexceptionm_dwhelpcontext"></a><a name="m_dwhelpcontext"></a>COleDispatchException::m_dwHelpContext
 
-Identifikuje kontextové nápovědy v nápovědě aplikace (. Soubor HLP).
+Identifikuje kontext nápovědy v nápovědě aplikace (. HLP).
 
 ```
 DWORD m_dwHelpContext;
@@ -75,15 +75,15 @@ DWORD m_dwHelpContext;
 
 ### <a name="remarks"></a>Poznámky
 
-Tento člen je nastavený podle funkce [afxthrowoledispatchexception –](exception-processing.md#afxthrowoledispatchexception) když dojde k výjimce.
+Tento člen je nastaven funkcí [AfxThrowOleDispatchException](exception-processing.md#afxthrowoledispatchexception) při vyvolání výjimky.
 
 ### <a name="example"></a>Příklad
 
-  Podívejte se na příklad pro [COleDispatchDriver::CreateDispatch](../../mfc/reference/coledispatchdriver-class.md#createdispatch).
+  Viz příklad [cOleDispatchDriver::CreateDispatch](../../mfc/reference/coledispatchdriver-class.md#createdispatch).
 
-##  <a name="m_strdescription"></a>  COleDispatchException::m_strDescription
+## <a name="coledispatchexceptionm_strdescription"></a><a name="m_strdescription"></a>COleDispatchException::m_strDescription
 
-Obsahuje popis slovní chyby, jako je například "Disk je plný."
+Obsahuje popis slovní chyby, například "Disk je plný".
 
 ```
 CString m_strDescription;
@@ -91,23 +91,23 @@ CString m_strDescription;
 
 ### <a name="remarks"></a>Poznámky
 
-Tento člen je nastavený podle funkce [afxthrowoledispatchexception –](exception-processing.md#afxthrowoledispatchexception) když dojde k výjimce.
+Tento člen je nastaven funkcí [AfxThrowOleDispatchException](exception-processing.md#afxthrowoledispatchexception) při vyvolání výjimky.
 
 ### <a name="example"></a>Příklad
 
-  Podívejte se na příklad pro [COleDispatchDriver::CreateDispatch](../../mfc/reference/coledispatchdriver-class.md#createdispatch).
+  Viz příklad [cOleDispatchDriver::CreateDispatch](../../mfc/reference/coledispatchdriver-class.md#createdispatch).
 
-##  <a name="m_strhelpfile"></a>  COleDispatchException::m_strHelpFile
+## <a name="coledispatchexceptionm_strhelpfile"></a><a name="m_strhelpfile"></a>COleDispatchException::m_strHelpFile
 
-Rozhraní framework vyplní tento řetězec s názvem souboru nápovědy aplikace.
+Rozhraní framework vyplní tento řetězec názvem souboru nápovědy aplikace.
 
 ```
 CString m_strHelpFile;
 ```
 
-##  <a name="m_strsource"></a>  COleDispatchException::m_strSource
+## <a name="coledispatchexceptionm_strsource"></a><a name="m_strsource"></a>COleDispatchException::m_strSource
 
-Rozhraní framework vyplní tento řetězec s názvem aplikace, která generovala výjimku.
+Rozhraní framework vyplní tento řetězec s názvem aplikace, která vygenerovala výjimku.
 
 ```
 CString m_strSource;
@@ -115,11 +115,11 @@ CString m_strSource;
 
 ### <a name="example"></a>Příklad
 
-  Podívejte se na příklad pro [COleDispatchDriver::CreateDispatch](../../mfc/reference/coledispatchdriver-class.md#createdispatch).
+  Viz příklad [cOleDispatchDriver::CreateDispatch](../../mfc/reference/coledispatchdriver-class.md#createdispatch).
 
-##  <a name="m_wcode"></a>  COleDispatchException::m_wCode
+## <a name="coledispatchexceptionm_wcode"></a><a name="m_wcode"></a>COleDispatchException::m_wCode
 
-Obsahuje kód chyby, která je specifická pro vaši aplikaci.
+Obsahuje kód chyby specifický pro vaši aplikaci.
 
 ```
 WORD m_wCode;
@@ -127,11 +127,11 @@ WORD m_wCode;
 
 ### <a name="remarks"></a>Poznámky
 
-Tento člen je nastavený podle funkce [afxthrowoledispatchexception –](exception-processing.md#afxthrowoledispatchexception) když dojde k výjimce.
+Tento člen je nastaven funkcí [AfxThrowOleDispatchException](exception-processing.md#afxthrowoledispatchexception) při vyvolání výjimky.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Ukázky knihovny MFC CALCDRIV](../../overview/visual-cpp-samples.md)<br/>
+[Vzorek knihovny MFC CALCDRIV](../../overview/visual-cpp-samples.md)<br/>
 [CException – třída](../../mfc/reference/cexception-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [COleDispatchDriver – třída](../../mfc/reference/coledispatchdriver-class.md)<br/>

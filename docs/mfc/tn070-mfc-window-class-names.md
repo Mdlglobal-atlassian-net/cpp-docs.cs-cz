@@ -5,42 +5,42 @@ helpviewer_keywords:
 - window class names [MFC]
 - TN070 [MFC]
 ms.assetid: 90617912-dd58-4a7c-9082-ced71736d7cd
-ms.openlocfilehash: 1d9b5de07bcc2545df6294557d1ac9f9d29e856c
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: ad43f5af5d2e90cb5fc2bc90f0909c2b495b4a4c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69513352"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373488"
 ---
 # <a name="tn070-mfc-window-class-names"></a>TN070: MFC – názvy tříd oken
 
 > [!NOTE]
->  Následující technická Poznámka nebyla od prvního zařazení do online dokumentace aktualizována. V důsledku toho mohou být některé postupy a témata neaktuální nebo nesprávné. Nejnovější informace najdete v tématu informace o tom, co je důležité v online katalogu dokumentace najít.
+> Následující technická poznámka nebyla aktualizována od doby, kdy byla poprvé zahrnuta do online dokumentace. V důsledku toho mohou být některé postupy a témata zastaralé nebo nesprávné. Chcete-li získat nejnovější informace, doporučujeme vyhledat téma zájmu v online indexu dokumentace.
 
-MFC Windows používá dynamicky vytvořený název třídy, který odráží funkce okna. Knihovna MFC generuje dynamicky názvy tříd pro okna oken, zobrazení a automaticky otevíraná okna vytvořená v rámci aplikace. Dialogová okna a ovládací prvky vytvářené aplikací knihovny MFC mají název zadaný v systému Windows pro příslušnou třídu okna.
+Okna knihovny MFC používají dynamicky vytvořený název třídy, který odráží funkce okna. Knihovna MFC dynamicky generuje názvy tříd pro okna, zobrazení a automaticky otevíraná okna vytvářená aplikací. Dialogová okna a ovládací prvky vytvořené aplikací knihovny MFC mají název dodaný systémem Windows pro danou třídu okna.
 
-Dynamicky poskytnutý název třídy můžete nahradit registrací vlastní třídy okna a jeho použitím v přepsání. [](../mfc/reference/cwnd-class.md#precreatewindow) Názvy tříd poskytovaných v knihovně MFC odpovídají jednomu z těchto dvou forem:
+Dynamicky zadaný název třídy můžete nahradit registrací vlastní třídy okna a jeho použitím v přepsání [precreatewindow](../mfc/reference/cwnd-class.md#precreatewindow). Jejich názvy tříd dodaných knihovnou MFC odpovídají jedné ze dvou následujících forem:
 
 ```
 Afx:%x:%x
 Afx:%x:%x:%x:%x:%x
 ```
 
-Šestnáctkové číslice, které nahrazují `%x` znaky, jsou vyplněny z dat ze struktury [WNDCLASS](/windows/win32/api/winuser/ns-winuser-wndclassw) . Knihovna MFC používá tuto techniku, takže C++ více tříd vyžadujících identické struktury **WNDCLASS** může sdílet stejnou registrovanou třídu okna. Na rozdíl od většiny jednoduchých aplikací Win32 mají aplikace MFC pouze jeden **WndProc**, takže můžete snadno sdílet struktury **WNDCLASS** a ušetřit tak čas a paměť. Nahraditelné hodnoty pro `%x` výše zobrazené znaky jsou následující:
+Šestnáctkové číslice, `%x` které nahrazují znaky, jsou vyplněny z dat ze struktury [WNDCLASS.](/windows/win32/api/winuser/ns-winuser-wndclassw) Knihovna MFC používá tuto techniku tak, aby více tříd jazyka C++ vyžadujících identické struktury **WNDCLASS** mohlo sdílet stejnou registrovanou třídu okna. Na rozdíl od většiny jednoduchých aplikací Win32 mají aplikace Knihovny MFC pouze **jednu službu WNDPROC**, takže můžete snadno sdílet struktury **WNDCLASS,** abyste ušetřili čas a paměť. Nahraditelné hodnoty výše `%x` uvedených znaků jsou následující:
 
-- **WNDCLASS. hInstance**
+- **INSTANCE WNDCLASS.hInstance**
 
-- **WNDCLASS. Style**
+- **WNDCLASS.styl**
 
-- **WNDCLASS.hCursor**
+- **WNDCLASS.hKurzor**
 
-- **WNDCLASS.hbrBackground**
+- **WNDCLASS.hbrPozadí**
 
-- **WNDCLASS.hIcon**
+- **Ikona souboru WNDCLASS.hIkona**
 
-`Afx:%x:%x`První tvar () se používá v případě, že jsou **hCursor**, **hbrBackground**a **HICON** všechny **hodnoty null**.
+První formulář`Afx:%x:%x`( ) se používá, když **hCursor**, **hbrBackground**a **hIcon** jsou všechny **NULL**.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Technické poznámky podle čísel](../mfc/technical-notes-by-number.md)<br/>
 [Technické poznámky podle kategorií](../mfc/technical-notes-by-category.md)<br/>

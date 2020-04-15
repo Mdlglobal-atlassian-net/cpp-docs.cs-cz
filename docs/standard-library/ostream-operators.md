@@ -1,25 +1,25 @@
 ---
-title: '&lt;operátory&gt; ostream'
+title: '&lt;provozovatelé&gt; ostream'
 ms.date: 11/04/2016
 f1_keywords:
 - ostream/std::operator&lt;&lt;
 ms.assetid: 9282a62e-a3d1-4371-a284-fbc9515bb9a2
-ms.openlocfilehash: c80abcb08423b4bb269e7d60ac43ef97d197a0e9
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: d8b6f4e0f0b5bca41f8d895415fff4003231ad1d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79419684"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373609"
 ---
-# <a name="ltostreamgt-operators"></a>&lt;operátory&gt; ostream
+# <a name="ltostreamgt-operators"></a>&lt;provozovatelé&gt; ostream
 
 ||
 |-|
-|[operátor&lt;&lt;](#op_lt_lt)|
+|[Operátor&lt;&lt;](#op_lt_lt)|
 
-## <a name="op_lt_lt"></a>operátor&lt;&lt;
+## <a name="operatorltlt"></a><a name="op_lt_lt"></a>Operátor&lt;&lt;
 
-Zapisuje do datového proudu různé typy.
+Zapisuje různé typy do datového proudu.
 
 ```cpp
 template <class _Elem, class _Tr>
@@ -81,30 +81,30 @@ basic_ostream <_Elem, _Tr>& operator<<(
 ### <a name="parameters"></a>Parametry
 
 *_Ch*\
-Znak.
+Postava.
 
 *_Elem*\
-Typ elementu.
+Typ prvku.
 
 *_Ostr*\
-Objekt `basic_ostream`.
+Objekt. `basic_ostream`
 
-\ *str*
+*Str*\
 Řetězec znaků.
 
 *_Tr*\
-Vlastnosti znaků.
+Charakterové rysy.
 
-\ *Val*
+*Val*\
 Typ
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Datový proud.
+Proud.
 
 ### <a name="remarks"></a>Poznámky
 
-Třída `basic_ostream` také definuje několik operátorů vložení. Další informace naleznete v tématu [basic_ostream:: operator&lt;&lt;](../standard-library/basic-ostream-class.md#basic_ostream_operator_lt_lt).
+Třída `basic_ostream` také definuje několik operátorů vložení. Další informace naleznete v [tématu basic_ostream::operator&lt;](../standard-library/basic-ostream-class.md#basic_ostream_operator_lt_lt).
 
 Funkce šablony
 
@@ -115,7 +115,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     const Elem *str);
 ```
 
-Určuje délku N = `traits_type::`[délku](../standard-library/char-traits-struct.md#length)(`str`) sekvence začínající na *str*a vloží sekvenci. Pokud N < `_Ostr.`[šířku](../standard-library/ios-base-class.md#width), funkce také vloží opakování `_Ostr.width` znaků N. Opakování předchází sekvenci if (`_Ostr`. [příznaky](../standard-library/ios-base-class.md#flags) & `adjustfield`! = [Left](../standard-library/ios-functions.md#left). V opačném případě bude opakování postupovat podle sekvence. Funkce vrátí *_Ostr*.
+určuje délku N `traits_type::`=`str` [délku](../standard-library/char-traits-struct.md#length)( ) sekvence začínající na *str*a vloží sekvenci. Pokud N `_Ostr.`< [šířku](../standard-library/ios-base-class.md#width), pak funkce `_Ostr.width` také vloží opakování - N výplní znaků. Opakování předchází sekvenci if (`_Ostr`. [flags](../standard-library/ios-base-class.md#flags) &  příznaky`adjustfield` != [vlevo](../standard-library/ios-functions.md#left). V opačném případě opakování následuje posloupnost. Funkce vrátí *_Ostr*.
 
 Funkce šablony
 
@@ -126,7 +126,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     Elem _Ch);
 ```
 
-Vloží prvek `_Ch`. Pokud se 1 < `_Ostr.width`, funkce také vloží opakování `_Ostr.width`-1 znaků výplně. Opakování předchází sekvenci, pokud `_Ostr.flags & adjustfield != left`. V opačném případě bude opakování postupovat podle sekvence. Vrátí *_Ostr*.
+vloží prvek `_Ch`. Pokud 1 `_Ostr.width`< , pak funkce také `_Ostr.width` vloží opakování - 1 výplň znaky. Opakování předchází sekvence `_Ostr.flags & adjustfield != left`if . V opačném případě opakování následuje posloupnost. Vrátí *_Ostr*.
 
 Funkce šablony
 
@@ -137,7 +137,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     const char *str);
 ```
 
-se chová stejně jako
+chová se stejně jako
 
 ```cpp
 template <class _Elem, class _Tr>
@@ -146,7 +146,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     const Elem *str);
 ```
 
-s výjimkou toho, že každý prvek *_Ch* sekvence začínající na *str* , je převeden na objekt typu `Elem` voláním `_Ostr.`[put](../standard-library/basic-ostream-class.md#put)(`_Ostr.`[rozšířit](../standard-library/basic-ios-class.md#widen)(`_Ch`)).
+s tím, že každý prvek *_Ch* sekvence začínající na *str* je převeden na objekt typu `Elem` voláním `_Ostr.` [put](../standard-library/basic-ostream-class.md#put)`_Ostr.`([widen](../standard-library/basic-ios-class.md#widen)(`_Ch`)).
 
 Funkce šablony
 
@@ -157,7 +157,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     char _Ch);
 ```
 
-se chová stejně jako
+chová se stejně jako
 
 ```cpp
 template <class _Elem, class _Tr>
@@ -166,7 +166,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     Elem _Ch);
 ```
 
-s výjimkou, že *_Ch* je převeden na objekt typu `Elem` voláním `_Ostr.put`(`_Ostr.widen`(`_Ch`)).
+s tím, že *_Ch* je `Elem` převeden `_Ostr.put`na `_Ostr.widen` `_Ch`objekt typu voláním ( ( ).).
 
 Funkce šablony
 
@@ -177,7 +177,7 @@ basic_ostream<char, _Tr>& operator<<(
     const char *str);
 ```
 
-se chová stejně jako
+chová se stejně jako
 
 ```cpp
 template <class _Elem, class _Tr>
@@ -186,7 +186,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     const Elem *str);
 ```
 
-(Není nutné elementy rozšiřovat před jejich vložením.)
+(Není nutné rozšířit prvky před jejich vložením.)
 
 Funkce šablony
 
@@ -197,7 +197,7 @@ basic_ostream<char, Tr>& operator<<(
     char _Ch);
 ```
 
-se chová stejně jako
+chová se stejně jako
 
 ```cpp
 template <class _Elem, class _Tr>
@@ -206,7 +206,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     Elem _Ch);
 ```
 
-(Před vložením není nutné rozšíření *_Ch* .)
+(Před vložením nemusí *_Ch* rozšiřovat.)
 
 Funkce šablony
 
@@ -217,7 +217,7 @@ basic_ostream<char, _Tr>& operator<<(
     const signed char *str);
 ```
 
-Vrátí `_Ostr` < < (`const char *`) `str`.
+vrátí `_Ostr` `const char *` << ( `str`).
 
 Funkce šablony
 
@@ -228,7 +228,7 @@ basic_ostream<char, _Tr>& operator<<(
     signed char _Ch);
 ```
 
-Vrátí `_Ostr` < < (`char`) `_Ch`.
+vrátí `_Ostr` `char` << ( `_Ch`).
 
 Funkce šablony:
 
@@ -239,7 +239,7 @@ basic_ostream<char, _Tr>& operator<<(
     const unsigned char *str);
 ```
 
-Vrátí `_Ostr` < < (`const char *`) `str`.
+vrátí `_Ostr` `const char *` << ( `str`).
 
 Funkce šablony:
 
@@ -250,7 +250,7 @@ basic_ostream<char, _Tr>& operator<<(
     unsigned char _Ch);
 ```
 
-Vrátí `_Ostr` < < (`char`) `_Ch`.
+vrátí `_Ostr` `char` << ( `_Ch`).
 
 Funkce šablony:
 
@@ -261,12 +261,12 @@ basic_ostream<_Elem, _Tr>& operator<<(
     T val);
 ```
 
-Vrátí `_Ostr` `<<` `val` (a převede [odkaz rvalue](../cpp/rvalue-reference-declarator-amp-amp.md) na `_Ostr` na lvalue v procesu).
+`_Ostr` `<<` vrátí `val` (a převede odkaz `_Ostr` [RValue na](../cpp/rvalue-reference-declarator-amp-amp.md) lvalue v procesu).
 
 ### <a name="example"></a>Příklad
 
-Příklad použití `operator<<`naleznete v tématu [flush](../standard-library/ostream-functions.md#flush) .
+Viz [flush](../standard-library/ostream-functions.md#flush) pro `operator<<`příklad pomocí .
 
 ## <a name="see-also"></a>Viz také
 
-[\<ostream >](../standard-library/ostream.md)
+[\<ostream>](../standard-library/ostream.md)

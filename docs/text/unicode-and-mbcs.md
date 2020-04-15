@@ -11,35 +11,35 @@ helpviewer_keywords:
 - multibyte characters [C++]
 - runtime [C++], language portability
 ms.assetid: 677baec6-71b4-4579-94df-64f18bc117c4
-ms.openlocfilehash: e884dcfaa22bf720e9579bf2d5d866d595501887
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 063c8b39ee0d29403b382b57a236f2a3e8759e3f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410522"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375744"
 ---
 # <a name="unicode-and-mbcs"></a>Unicode a MBCS
 
-Knihovny Microsoft Foundation Classes (MFC), knihovny run-time jazyka C pro Visual C++ a vývojové prostředí Visual C++ jsou povolené pomáhat mezinárodní programování. Poskytují:
+Knihovna Tříd y Microsoft Foundation (MFC), knihovna C run-time pro visual c++ a vývojové prostředí Visual C++ jsou povoleny pro mezinárodní programování. Čím se vyznačují:
 
-- Podpora standardu Unicode na Windows. Znaková sada Unicode je aktuálním standardem a měla by být použita vždy, kdy je to možné.
+- Podpora standardu Unicode v systému Windows. Znaková sada Unicode je aktuálním standardem a měla by být použita vždy, kdy je to možné.
 
-   Kódování Unicode je 16bitový znak kódování, poskytuje dostatek kódování pro všechny jazyky. Všechny znaky ASCII jsou zahrnuty v kódování Unicode, jako rozšířené znaky.
+   Unicode je 16bitové kódování znaků, které poskytuje dostatek kódování pro všechny jazyky. Všechny znaky ASCII jsou zahrnuty v Unicode jako rozšířené znaky.
 
-- Podpora pro formuláře vícebajtové znakové sady (MBCS s) názvem dvoubajtové znakové sady (DBCS) na všech platformách.
+- Podpora pro formu vícebajtové znakové sady (MBCS) nazývané dvoubajtová znaková sada (DBCS) na všech platformách.
 
-   Znaky DBCS se skládají z 1 nebo 2 bajty. Některé rozsahů bajtů jsou vyhrazeny pro použití jako úvodní bajty. Vedoucí bajt určuje, že ho a následující bajt tvoří jeden znak 2 bajty dlouhý. Musí udržovat přehled o které bajty jsou vedoucí bajty. V konkrétní vícebajtové znakové sady úvodní bajty spadají do určitého rozsahu, stejně jako záznam pro bajty. Pokud tyto rozsahy překrývají, může být nutné vyhodnotit kontextu k určení, zda je dané bajtové funguje jako vedoucí bajt nebo druhý bajt.
+   Znaky DBCS se skládají z 1 nebo 2 bajtů. Některé rozsahy bajtů jsou vyhrazeny pro použití jako olověné bajty. Úvodní bajt určuje, že jej a následující bajt stopy tvoří jeden znak o 2 bajtů. Je nutné sledovat, které bajty jsou úvodní bajty. V určité vícebajtové znakové sadě spadají úvodní bajty do určitého rozsahu, stejně jako bajty stopy. Pokud se tyto rozsahy překrývají, může být nutné vyhodnotit kontext k určení, zda daný bajt funguje jako úvodní bajt nebo bajt stopy.
 
-- Podpora pro nástroje, které zjednodušují programování znakové sady MBCS aplikací určených pro mezinárodní trhy.
+- Podpora nástrojů, které zjednodušují mbcs programování aplikací napsaných pro mezinárodní trhy.
 
-   Při spuštění na znakové sady MBCS povolené verzi operačního systému Windows, vývoj pro systém Visual C++ – včetně integrovaného editoru zdrojového kódu, ladicí program a nástroje příkazového řádku, je zcela znakové sady MBCS povolen. Další informace najdete v tématu [podporu znakové sady MBCS v jazyku Visual C++](../text/mbcs-support-in-visual-cpp.md).
+   Při spuštění na verzi operačního systému Windows s podporou mbcs je vývojový systém Visual C++ – včetně integrovaného editoru zdrojového kódu, ladicího programu a nástrojů příkazového řádku – zcela povolen mbcs. Další informace naleznete [v tématu Podpora mbcs ve visual c++](../text/mbcs-support-in-visual-cpp.md).
 
 > [!NOTE]
->  V této dokumentaci znakové sady MBCS slouží k popisu veškerou podporu kódování Unicode pro vícebajtové znaky. Znakové sady MBCS v jazyce Visual C++ vždy znamená DBCS. Znakových sad větší než 2 bajty nejsou podporovány.
+> V této dokumentaci mbcs slouží k popisu všech non-Unicode podporu pro vícebajtové znaky. V jazyce Visual C++ mbcs vždy znamená DBCS. Znakové sady širší než 2 bajty nejsou podporovány.
 
-Podle definice je znaková sada ASCII podmnožinou všech vícebajtových znakových sad. V mnoha vícebajtové znakové sady každý znak v rozsahu 0x00 – 0x7F je stejný jako znak, který má stejnou hodnotu ve znakové sadě ASCII. V řetězce znaků ASCII a znakové sady MBCS, například 1bajtových znak NULL ('\0') má hodnotu 0x00 a označuje ukončujícího znaku null.
+Podle definice je znaková sada ASCII podmnožinou všech vícebajtových znakových sad. V mnoha vícebajtových znakových sadách je každý znak v rozsahu 0x00 - 0x7F shodný se znakem, který má stejnou hodnotu v znakové sadě ASCII. Například v řetězcích znaků ASCII i MBCS má znak NULL o 1 bajty (\0) hodnotu 0x00 a označuje ukončující znak null.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Text a řetězce](../text/text-and-strings-in-visual-cpp.md)<br/>
 [Podpora národních prostředí](../text/international-enabling.md)

@@ -1,5 +1,5 @@
 ---
-title: Cmfcimagepaintarea – třída
+title: CMFCImagePaintArea – třída
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCImagePaintArea
@@ -16,16 +16,16 @@ helpviewer_keywords:
 - CMFCImagePaintArea [MFC], SetColor
 - CMFCImagePaintArea [MFC], SetMode
 ms.assetid: c59eec22-f15a-4e58-8c4d-4a18a41f4452
-ms.openlocfilehash: 37d975ace4d144cc6274b49a3406382f0fb300ee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4e73bd7bc1a28317dbfc452df1f45541dfcbfd21
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62374178"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374438"
 ---
-# <a name="cmfcimagepaintarea-class"></a>Cmfcimagepaintarea – třída
+# <a name="cmfcimagepaintarea-class"></a>CMFCImagePaintArea – třída
 
-Poskytuje oblast obrázku, který můžete použít ke změně obrázku v dialogovém okně editor obrázků.
+Poskytuje oblast obrázku, kterou používáte k úpravě obrazu v dialogovém okně editoru obrázků.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -39,39 +39,39 @@ class CMFCImagePaintArea : public CButton
 
 |||
 |-|-|
-|Název|Popis|
-|[CMFCImagePaintArea::CMFCImagePaintArea](#cmfcimagepaintarea)|Vytvoří `CMFCImagePaintArea` objektu.|
+|Name (Název)|Popis|
+|[CMFCImagePaintArea::CMFCImagePaintArea](#cmfcimagepaintarea)|Vytvoří `CMFCImagePaintArea` objekt.|
 |`CMFCImagePaintArea::~CMFCImagePaintArea`|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
 |||
 |-|-|
-|Název|Popis|
-|[CMFCImagePaintArea::GetMode](#getmode)|Načte aktuální režim vykreslování.|
-|[CMFCImagePaintArea::SetBitmap](#setbitmap)|Nastavuje rastrový obrázek pro oblasti obrázku.|
-|[CMFCImagePaintArea::SetColor](#setcolor)|Nastaví aktuální vykreslení barvy.|
-|[CMFCImagePaintArea::SetMode](#setmode)|Nastaví aktuální režim vykreslování.|
+|Name (Název)|Popis|
+|[CMFCImagePaintArea::GetMode](#getmode)|Načte aktuální režim výkresu.|
+|[CMFCImagePaintArea::SetBitmap](#setbitmap)|Nastaví bitmapový obraz pro oblast obrázku.|
+|[CMFCImagePaintarea::SetColor](#setcolor)|Nastaví aktuální barvu výkresu.|
+|[CMFCImagePaintArea::SetMode](#setmode)|Nastaví aktuální režim kreslení.|
 
 ### <a name="remarks"></a>Poznámky
 
-Tato třída není určena pro použití přímo v kódu.
+Tato třída není určena pro použití přímo z vašeho kódu.
 
-Rozhraní používá tuto třídu pro zobrazení oblasti obrázku v dialogovém okně editor obrázků. Další informace o dialogové okno editoru obrázků, naleznete v tématu [CMFCImageEditorDialog – třída](../../mfc/reference/cmfcimageeditordialog-class.md).
+Rozhraní framework používá tuto třídu k zobrazení oblasti obrázku v dialogovém okně editoru obrázků. Další informace o dialogovém okně editoru obrázků naleznete v tématu [CMFCImageEditorDialog Class](../../mfc/reference/cmfcimageeditordialog-class.md).
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak vytvořit objekt `CMFCImagePaintArea` třídy, nastavte aktuální vykreslení barvy, nastavte aktuální režim vykreslování a nastavte rastrový obrázek pro oblasti obrázku.
+Následující příklad ukazuje, jak vytvořit objekt `CMFCImagePaintArea` třídy, nastavit aktuální barvu výkresu, nastavit aktuální režim kreslení a nastavit bitmapový obraz pro oblast obrázku.
 
 [!code-cpp[NVC_MFC_RibbonApp#37](../../mfc/reference/codesnippet/cpp/cmfcimagepaintarea-class_1.cpp)]
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObjekt](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[CCmdCíl](../../mfc/reference/ccmdtarget-class.md)
 
-[CWnd](../../mfc/reference/cwnd-class.md)
+[Cwnd](../../mfc/reference/cwnd-class.md)
 
 [CButton](../../mfc/reference/cbutton-class.md)
 
@@ -81,9 +81,9 @@ Následující příklad ukazuje, jak vytvořit objekt `CMFCImagePaintArea` tř�
 
 **Záhlaví:** afximagepaintarea.h
 
-##  <a name="cmfcimagepaintarea"></a>  CMFCImagePaintArea::CMFCImagePaintArea
+## <a name="cmfcimagepaintareacmfcimagepaintarea"></a><a name="cmfcimagepaintarea"></a>CMFCImagePaintArea::CMFCImagePaintArea
 
-Vytvoří `CMFCImagePaintArea` objektu.
+Vytvoří `CMFCImagePaintArea` objekt.
 
 ```
 CMFCImagePaintArea(CMFCImageEditorDialog* pParentDlg);
@@ -94,11 +94,11 @@ CMFCImagePaintArea(CMFCImageEditorDialog* pParentDlg);
 |||
 |-|-|
 |Parametr|Popis|
-|*pParentDlg*|[in] Ukazatel na dialogovém okně, které je nadřazené editoru obrázků.|
+|*pParentDlg*|[v] Ukazatel na dialogové okno, které je nadřazenou položkou editoru obrázků.|
 
-##  <a name="getmode"></a>  CMFCImagePaintArea::GetMode
+## <a name="cmfcimagepaintareagetmode"></a><a name="getmode"></a>CMFCImagePaintArea::GetMode
 
-Načte aktuální režim vykreslování.
+Načte aktuální režim výkresu.
 
 ```
 IMAGE_EDIT_MODE GetMode() const;
@@ -106,11 +106,11 @@ IMAGE_EDIT_MODE GetMode() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-[IMAGE_EDIT_MODE](cmfcimagepaintarea-image-edit-mode-enumeration.md) hodnotu, která určuje aktuální režim vykreslování.
+Hodnota [IMAGE_EDIT_MODE,](cmfcimagepaintarea-image-edit-mode-enumeration.md) která určuje aktuální režim výkresu.
 
-##  <a name="setbitmap"></a>  CMFCImagePaintArea::SetBitmap
+## <a name="cmfcimagepaintareasetbitmap"></a><a name="setbitmap"></a>CMFCImagePaintArea::SetBitmap
 
-Nastavuje rastrový obrázek pro oblasti obrázku.
+Nastaví bitmapový obraz pro oblast obrázku.
 
 ```
 void SetBitmap(CBitmap* pBitmap);
@@ -121,15 +121,15 @@ void SetBitmap(CBitmap* pBitmap);
 |||
 |-|-|
 |Parametr|Popis|
-|*pBitmap*|[in] Nový rastrový obrázek k zobrazení.|
+|*pBitmap*|[v] Nový bitmapový obraz, který se má zobrazit.|
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud *pBitmap* má hodnotu NULL, tato metoda nastaví velikost oblasti lze měnit barvy na nulu. Jinak nastaví velikost oblasti upravitelná malířského velikost zadaná rastrový obrázek.
+Pokud *pBitmap* je NULL, tato metoda nastaví velikost upravitelné oblasti malování na nulu. V opačném případě nastaví velikost upravitelné oblasti malby na velikost poskytnutého bitmapového obrazu.
 
-##  <a name="setcolor"></a>  CMFCImagePaintArea::SetColor
+## <a name="cmfcimagepaintareasetcolor"></a><a name="setcolor"></a>CMFCImagePaintarea::SetColor
 
-Nastaví aktuální vykreslení barvy.
+Nastaví aktuální barvu výkresu.
 
 ```
 void SetColor(COLORREF color);
@@ -140,17 +140,17 @@ void SetColor(COLORREF color);
 |||
 |-|-|
 |Parametr|Popis|
-|*color*|[in] Nové vykreslení barvy.|
+|*color*|[v] Nová barva výkresu.|
 
 ### <a name="remarks"></a>Poznámky
 
-Když vyberte barvu z palety panelu editor image nebo výběr barev, rozhraní volá tuto metodu za účelem aktualizace aktuální vykreslení barvy. Počáteční barva vykreslování je černá (COLORREF hodnotu 0).
+Když vyberete barvu z panelu palety editoru obrázků nebo výběru barev, rozhraní framework zavolá tuto metodu k aktualizaci aktuální barvy výkresu. Počáteční barva výkresu je černá (hodnota COLORREF 0).
 
-Dialogové okno editor obrázků pro kreslení režimy všechny s výjimkou IMAGE_EDIT_MODE_COLOR používá vykreslení barvy. Další informace o vykreslování režimech najdete v tématu [cmfcimagepaintarea::image_edit_mode – výčet](cmfcimagepaintarea-image-edit-mode-enumeration.md).
+Barva výkresu je používána v dialogovém okně editoru obrázků pro všechny režimy kreslení s výjimkou IMAGE_EDIT_MODE_COLOR. Další informace o režimech kreslení naleznete v tématu [CMFCImagePaintArea::IMAGE_EDIT_MODE Výčet](cmfcimagepaintarea-image-edit-mode-enumeration.md).
 
-##  <a name="setmode"></a>  CMFCImagePaintArea::SetMode
+## <a name="cmfcimagepaintareasetmode"></a><a name="setmode"></a>CMFCImagePaintArea::SetMode
 
-Nastaví aktuální režim vykreslování.
+Nastaví aktuální režim kreslení.
 
 ```
 void SetMode(IMAGE_EDIT_MODE mode);
@@ -161,9 +161,9 @@ void SetMode(IMAGE_EDIT_MODE mode);
 |||
 |-|-|
 |Parametr|Popis|
-|*Režim*|[in] [IMAGE_EDIT_MODE](cmfcimagepaintarea-image-edit-mode-enumeration.md) hodnotu, která určuje aktuální režim vykreslování.|
+|*Režimu*|[v] Hodnota [IMAGE_EDIT_MODE,](cmfcimagepaintarea-image-edit-mode-enumeration.md) která určuje aktuální režim výkresu.|
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>

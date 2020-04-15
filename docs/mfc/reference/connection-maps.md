@@ -4,45 +4,45 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - connection maps
 ms.assetid: 1f25a9bc-6d09-4614-99cf-dc38e8ddfa73
-ms.openlocfilehash: a36c112de8c760f91afd5cf544b355f7cb8e1bed
-ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
+ms.openlocfilehash: 947cd09023ef4028a32db8e2e4e8b33f7e04e0dd
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65612269"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374804"
 ---
 # <a name="connection-maps"></a>Mapy připojení
 
-Ovládací prvky OLE se zveřejňují rozhraní k ostatním aplikacím. Tato rozhraní povolení přístupu jenom z kontejneru do ovládacího prvku. Pokud ovládací prvek OLE požaduje pro přístup k externí rozhraní dalšími objekty OLE, musí vytvořit bod připojení. Tento spojovací bod umožňuje odchozí přístup k externím expediční mapy, jako je mapa událostí nebo funkce oznámení ovládacího prvku.
+Ole ovládací prvky jsou schopny vystavit rozhraní pro jiné aplikace. Tato rozhraní umožňují pouze přístup z kontejneru do tohoto ovládacího prvku. Pokud ovládací prvek OLE chce získat přístup k externím rozhraním jiných objektů OLE, musí být vytvořen spojovací bod. Tento spojovací bod umožňuje ovládací prvek odchozí přístup k externí masy odeslání, jako jsou mapy událostí nebo funkce oznámení.
 
-Knihovny Microsoft Foundation Class nabízí programovací model, který podporuje spojovací body. V tomto modelu "připojení mapuje" se používají k určení rozhraní nebo přípojných bodů ovládacího prvku OLE. Mapy připojení obsahovat jedno makro pro každý bod připojení. Další informace o připojení mapy, najdete v článku [cconnectionpoint –](../../mfc/reference/cconnectionpoint-class.md) třídy.
+Knihovna tříd Microsoft Foundation nabízí programovací model, který podporuje spojovací body. V tomto modelu "mapy připojení" se používají k určení rozhraní nebo spojovací body pro ovládací prvek OLE. Mapy připojení obsahují jedno makro pro každý spojovací bod. Další informace o mapách připojení naleznete v třídě [CConnectionPoint.](../../mfc/reference/cconnectionpoint-class.md)
 
-Obvykle bude ovládací prvek podporovat pouze dvě spojovací body: jeden pro události a jeden pro vlastnost oznámení. Tyto jsou implementované `COleControl` základní třídy a vyžadovat žádná další činnost tvůrci ovládacího prvku. Žádné další spojovací body, které chcete implementovat ve třídě musí přidat ručně. Pro podporu připojení mapy a body, knihovna MFC poskytuje následující makra:
+Ovládací prvek obvykle podporuje pouze dva body připojení: jeden pro události a jeden pro oznámení vlastností. Ty jsou implementovány `COleControl` základní třídy a vyžadují žádné další práce zapisovačovládacího prvku. Všechny další spojovací body, které chcete implementovat ve vaší třídě, musí být přidány ručně. Pro podporu map připojení a bodů knihovna MFC poskytuje následující makra:
 
-### <a name="connection-map-declaration-and-demarcation"></a>Připojení mapování deklarace a Rozhraničení
-
-|||
-|-|-|
-|[BEGIN_CONNECTION_PART](#begin_connection_part)|Deklaruje vložené třídy, která implementuje na další připojovací bod (musí se použít v deklaraci třídy).|
-|[END_CONNECTION_PART](#end_connection_part)|Ukončí deklarace spojovací bod (musí se použít v deklaraci třídy).|
-|[CONNECTION_IID](#connection_iid)|Určuje rozhraní ID bodu připojení ovládacího prvku.|
-|[DECLARE_CONNECTION_MAP](#declare_connection_map)|Deklaruje, že připojení mapy se použije ve třídě (musí se použít v deklaraci třídy).|
-|[BEGIN_CONNECTION_MAP](#begin_connection_map)|Začíná definici mapy připojení (musí být použitý v implementaci třídy).|
-|[END_CONNECTION_MAP](#end_connection_map)|Ukončí definici mapy připojení (musí být použitý v implementaci třídy).|
-|[CONNECTION_PART](#connection_part)|Určuje spojovací bod v mapování ovládacího prvku připojení.|
-
-Následující funkce pomáhají jímka při navazování a odpojí připojení pomocí spojovací body:
-
-### <a name="initializationtermination-of-connection-points"></a>Inicializace nebo ukončení spojovacích bodů
+### <a name="connection-map-declaration-and-demarcation"></a>Deklarace a vymezení mapy připojení
 
 |||
 |-|-|
-|[AfxConnectionAdvise](#afxconnectionadvise)|Naváže připojení mezi zdroj a jímku.|
-|[AfxConnectionUnadvise](#afxconnectionunadvise)|Zruší připojení mezi zdroj a jímku.|
+|[BEGIN_CONNECTION_PART](#begin_connection_part)|Deklaruje vložené třídy, která implementuje další bod připojení (musí být použit v deklaraci třídy).|
+|[END_CONNECTION_PART](#end_connection_part)|Ukončí deklaraci spojovacího bodu (musí být použit v deklaraci třídy).|
+|[CONNECTION_IID](#connection_iid)|Určuje ID rozhraní spojovacího bodu ovládacího prvku.|
+|[DECLARE_CONNECTION_MAP](#declare_connection_map)|Deklaruje, že mapa připojení bude použita ve třídě (musí být použita v deklaraci třídy).|
+|[BEGIN_CONNECTION_MAP](#begin_connection_map)|Začíná definice mapy připojení (musí být použitv implementaci třídy).|
+|[END_CONNECTION_MAP](#end_connection_map)|Ukončí definici mapy připojení (musí být použitv implementaci třídy).|
+|[CONNECTION_PART](#connection_part)|Určuje spojovací bod v mapě připojení ovládacího prvku.|
 
-##  <a name="begin_connection_part"></a>  BEGIN_CONNECTION_PART
+Následující funkce pomáhají jímce při navazování a odpojení připojení pomocí spojovacích bodů:
 
-Použíjte BEGIN_CONNECTION_PART – makro zahájíte definice další spojovací body nad rámec spojovací body oznámení událostí a vlastností.
+### <a name="initializationtermination-of-connection-points"></a>Inicializace/ukončení spojovacích bodů
+
+|||
+|-|-|
+|[AfxConnectionAdvise](#afxconnectionadvise)|Naváže spojení mezi zdrojem a jímkou.|
+|[AfxConnectionUnadvise](#afxconnectionunadvise)|Přeruší spojení mezi zdrojem a jímkou.|
+
+## <a name="begin_connection_part"></a><a name="begin_connection_part"></a>BEGIN_CONNECTION_PART
+
+Pomocí BEGIN_CONNECTION_PART makru zahajte definici dalších spojovacích bodů nad rámec bodů připojení událostí a vlastností.
 
 ```
 BEGIN_CONNECTION_PART(theClass, localClass)
@@ -51,22 +51,22 @@ BEGIN_CONNECTION_PART(theClass, localClass)
 ### <a name="parameters"></a>Parametry
 
 *theClass*<br/>
-Určuje, že je název třídy ovládacího prvku, jehož přípojný bod to.
+Určuje název třídy ovládacího prvku, jejíž spojovací bod se nachází.
 
 *localClass*<br/>
-Určuje název místní třídy, která implementuje bod připojení.
+Určuje název místní třídy, která implementuje spojovací bod.
 
 ### <a name="remarks"></a>Poznámky
 
-V deklaraci (.h) souboru, který definuje členské funkce třídy je spojovací bod začínat BEGIN_CONNECTION_PART – makro pak přidejte CONNECTION_IID – makro a další členské funkce, které chcete implementovat a dokončete připojení bod mapy s END_CONNECTION_PART – makro
+V souboru deklarace (.h), který definuje členské funkce pro vaši třídu, spusťte spojovací bod s BEGIN_CONNECTION_PART makra, přidejte makro CONNECTION_IID a všechny další členské funkce, které chcete implementovat, a dokončete mapu spojovacího bodu pomocí END_CONNECTION_PART makra.
 
 ### <a name="requirements"></a>Požadavky
 
-  **Header** afxdisp.h
+  **Záhlaví** afxdisp.h
 
-##  <a name="end_connection_part"></a>  END_CONNECTION_PART
+## <a name="end_connection_part"></a><a name="end_connection_part"></a>END_CONNECTION_PART
 
-Ukončí deklarace spojovací bod.
+Ukončí deklaraci spojovacího bodu.
 
 ```
 END_CONNECTION_PART(localClass)
@@ -75,15 +75,15 @@ END_CONNECTION_PART(localClass)
 ### <a name="parameters"></a>Parametry
 
 *localClass*<br/>
-Určuje název místní třídy, která implementuje bod připojení.
+Určuje název místní třídy, která implementuje spojovací bod.
 
 ### <a name="requirements"></a>Požadavky
 
-  **Header** afxdisp.h
+  **Záhlaví** afxdisp.h
 
-##  <a name="connection_iid"></a>  CONNECTION_IID
+## <a name="connection_iid"></a><a name="connection_iid"></a>CONNECTION_IID
 
-Použijte mezi BEGIN_CONNECTION_PART a END_CONNECTION_PART makra k definování rozhraní ID bodu připojení nepodporuje ovládacího prvku OLE.
+Pomocí maker BEGIN_CONNECTION_PART a END_CONNECTION_PART definujte ID rozhraní pro bod připojení podporovaný ovládacím prvkem OLE.
 
 ```
 CONNECTION_IID(iid)
@@ -91,24 +91,24 @@ CONNECTION_IID(iid)
 
 ### <a name="parameters"></a>Parametry
 
-*iid*<br/>
-ID rozhraní rozhraní s názvem podle spojovací bod.
+*Iid*<br/>
+ID rozhraní volaného spojovacím bodem.
 
 ### <a name="remarks"></a>Poznámky
 
-*Iid* argument je rozhraní ID sloužící k identifikaci rozhraní, které je spojovací bod zavolá na jeho připojené jímky. Příklad:
+Argument *iid* je ID rozhraní používané k identifikaci rozhraní, které bude spojovací bod volat na připojených jímky. Příklad:
 
 [!code-cpp[NVC_MFCConnectionPoints#10](../../mfc/codesnippet/cpp/connection-maps_1.h)]
 
-Určuje bod připojení, která volá `ISinkInterface` rozhraní.
+určuje spojovací bod, který `ISinkInterface` volá rozhraní.
 
 ### <a name="requirements"></a>Požadavky
 
-  **Header** afxdisp.h
+  **Záhlaví** afxdisp.h
 
-##  <a name="declare_connection_map"></a>  DECLARE_CONNECTION_MAP
+## <a name="declare_connection_map"></a><a name="declare_connection_map"></a>DECLARE_CONNECTION_MAP
 
-Každý `COleControl`-odvozené třídy ve svém programu můžete zadat mapu připojení k určení dalších spojovací body, které podporuje ovládacího prvku.
+Každá `COleControl`-derived třída v programu může poskytnout mapování připojení k určení dalších bodů připojení, které podporuje ovládací prvek.
 
 ```
 DECLARE_CONNECTION_MAP()
@@ -116,15 +116,15 @@ DECLARE_CONNECTION_MAP()
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud váš ovládací prvek podporuje další body, použijte DECLARE_CONNECTION_MAP – makro na konci deklaraci vaší třídy. Poté v souboru .cpp, který definuje členské funkce třídy, pomocí BEGIN_CONNECTION_MAP – makro CONNECTION_PART makra pro každou z ovládacího prvku spojovací body a END_CONNECTION_MAP – makro můžete deklarovat konec mapování připojení.
+Pokud ovládací prvek podporuje další body, použijte makro DECLARE_CONNECTION_MAP na konci deklarace třídy. Potom v souboru CPP, který definuje členské funkce pro třídu, použijte makro BEGIN_CONNECTION_MAP, CONNECTION_PART makra pro každý z bodů připojení ovládacího prvku a END_CONNECTION_MAP makro deklarovat konec mapy připojení.
 
 ### <a name="requirements"></a>Požadavky
 
-  **Header** afxdisp.h
+  **Záhlaví** afxdisp.h
 
-##  <a name="begin_connection_map"></a>  BEGIN_CONNECTION_MAP
+## <a name="begin_connection_map"></a><a name="begin_connection_map"></a>BEGIN_CONNECTION_MAP
 
-Každý `COleControl`-odvozené třídy ve svém programu můžete zadat mapu připojení k určení spojovací body, které bude váš ovládací prvek podporovat.
+Každá `COleControl`-derived třída v programu může poskytnout mapu připojení k určení spojovacíbody, které bude podporovat ovládací prvek.
 
 ```
 BEGIN_CONNECTION_MAP(theClass, theBase)
@@ -133,20 +133,20 @@ BEGIN_CONNECTION_MAP(theClass, theBase)
 ### <a name="parameters"></a>Parametry
 
 *theClass*<br/>
-Určuje, že je název třídy ovládacího prvku, namapujte tento parametr jehož připojení.
+Určuje název třídy ovládacího prvku, jejíž mapování připojení se jedná.
 
-*theBase*<br/>
-Určuje název základní třídy *theClass*.
+*základna*<br/>
+Určuje název základní třídy *Class*.
 
 ### <a name="remarks"></a>Poznámky
 
-V implementaci (. Soubor CPP), který definuje člena funkce pro třídu, začínat BEGIN_CONNECTION_MAP – makro mapu připojení a pak přidat makro položky pro každý z vašich bodů připojení pomocí [CONNECTION_PART](#connection_part) – makro. Nakonec proveďte mapování připojení se [END_CONNECTION_MAP](#end_connection_map) – makro.
+V implementaci (. CPP), který definuje členské funkce pro vaši třídu, spusťte mapu připojení s BEGIN_CONNECTION_MAP makra a přidejte položky maker pro každý z připojovacích bodů pomocí [CONNECTION_PART](#connection_part) makra. Nakonec dokončete mapu připojení s [END_CONNECTION_MAP](#end_connection_map) makru.
 
 ### <a name="requirements"></a>Požadavky
 
-  **Header** afxdisp.h
+  **Záhlaví** afxdisp.h
 
-##  <a name="end_connection_map"></a>  END_CONNECTION_MAP
+## <a name="end_connection_map"></a><a name="end_connection_map"></a>END_CONNECTION_MAP
 
 Ukončí definici mapy připojení.
 
@@ -156,11 +156,11 @@ END_CONNECTION_MAP()
 
 ### <a name="requirements"></a>Požadavky
 
-  **Header** afxdisp.h
+  **Záhlaví** afxdisp.h
 
-##  <a name="connection_part"></a>  CONNECTION_PART
+## <a name="connection_part"></a><a name="connection_part"></a>CONNECTION_PART
 
-Bod připojení pro ovládací prvek OLE se mapuje na ID konkrétní rozhraní.
+Mapuje spojovací bod pro ovládací prvek OLE na konkrétní ID rozhraní.
 
 ```
 CONNECTION_PART(theClass, iid, localClass)
@@ -169,13 +169,13 @@ CONNECTION_PART(theClass, iid, localClass)
 ### <a name="parameters"></a>Parametry
 
 *theClass*<br/>
-Určuje, že je název třídy ovládacího prvku, jehož přípojný bod to.
+Určuje název třídy ovládacího prvku, jejíž spojovací bod se nachází.
 
-*iid*<br/>
-ID rozhraní rozhraní s názvem podle spojovací bod.
+*Iid*<br/>
+ID rozhraní volaného spojovacím bodem.
 
 *localClass*<br/>
-Určuje název místní třídy, která implementuje bod připojení.
+Určuje název místní třídy, která implementuje spojovací bod.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -183,15 +183,15 @@ Příklad:
 
 [!code-cpp[NVC_MFCConnectionPoints#2](../../mfc/codesnippet/cpp/connection-maps_2.cpp)]
 
-implementuje mapu připojení se spojovacím bodem, který volá `IID_ISinkInterface` rozhraní.
+implementuje mapu připojení s bodem připojení, `IID_ISinkInterface` který volá rozhraní .
 
 ### <a name="requirements"></a>Požadavky
 
-  **Header** afxdisp.h
+  **Záhlaví** afxdisp.h
 
-##  <a name="afxconnectionadvise"></a>  AfxConnectionAdvise
+## <a name="afxconnectionadvise"></a><a name="afxconnectionadvise"></a>AfxConnectionAdvise
 
-Voláním této funkce k navázání připojení mezi zdrojem určená *pUnkSrc*a jímky, určené *pUnkSink*.
+Volání této funkce k navázání spojení mezi zdrojem, určené *pUnkSrc*a jímky, určené *pUnkSink*.
 
 ```
 BOOL AFXAPI AfxConnectionAdvise(
@@ -210,18 +210,18 @@ Ukazatel na objekt, který volá rozhraní.
 *pUnkSink*<br/>
 Ukazatel na objekt, který implementuje rozhraní.
 
-*iid*<br/>
+*Iid*<br/>
 ID rozhraní připojení.
 
 *bRefCount*<br/>
-Hodnota TRUE označuje, že vytváří připojení by měl způsobit, že počet odkazů *pUnkSink* k navýšení. Hodnota FALSE označuje, že by neměl být zvýšen počet odkazů.
+True označuje, že vytvoření připojení by mělo způsobit zvýšení počtu odkazů *pUnkSink.* FALSE označuje, že počet odkazů by neměl být zpřísněn.
 
 *pdwCookie*<br/>
-Ukazatel na DWORD, kde se vrátí identifikátor připojení. Tato hodnota by měla předávat jako *dwCookie* parametr `AfxConnectionUnadvise` při odpojení připojení.
+Ukazatel na DWORD, kde je vrácenidentifikátor připojení. Tato hodnota by měla být předána `AfxConnectionUnadvise` jako parametr *dwCookie* při odpojení připojení.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud bylo vytvořeno připojení; jinak 0.
+Nenulová, pokud bylo navázáno připojení; jinak 0.
 
 ### <a name="example"></a>Příklad
 
@@ -231,9 +231,9 @@ Nenulové, pokud bylo vytvořeno připojení; jinak 0.
 
 **Záhlaví:** afxctl.h
 
-##  <a name="afxconnectionunadvise"></a>  AfxConnectionUnadvise
+## <a name="afxconnectionunadvise"></a><a name="afxconnectionunadvise"></a>AfxConnectionUnadvise
 
-Voláním této funkce se odpojit připojení mezi zdrojem určená *pUnkSrc*a jímky, určené *pUnkSink*.
+Volání této funkce odpojit připojení mezi zdrojem, určené *pUnkSrc*a jímky, určené *pUnkSink*.
 
 ```
 BOOL AFXAPI AfxConnectionUnadvise(
@@ -252,18 +252,18 @@ Ukazatel na objekt, který volá rozhraní.
 *pUnkSink*<br/>
 Ukazatel na objekt, který implementuje rozhraní.
 
-*iid*<br/>
-Rozhraní ID bodu rozhraní připojení.
+*Iid*<br/>
+ID rozhraní rozhraní spojovacího bodu.
 
 *bRefCount*<br/>
-Hodnota TRUE označuje, že odpojení připojení by se měl počet odkazů *pUnkSink* chcete snížit. Hodnota FALSE označuje, že by neměl být snížen počet odkazů.
+True označuje, že odpojení připojení by mělo způsobit snížení počtu odkazů *pUnkSink.* FALSE označuje, že počet odkazů by neměl být snížen.
 
 *dwCookie*<br/>
-Identifikátor připojení vrácených `AfxConnectionAdvise`.
+Identifikátor připojení vrácený společností `AfxConnectionAdvise`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud bylo ukončeno připojení; jinak 0.
+Nenulová, pokud bylo připojení odpojeno; jinak 0.
 
 ### <a name="example"></a>Příklad
 
@@ -273,6 +273,6 @@ Nenulové, pokud bylo ukončeno připojení; jinak 0.
 
 **Záhlaví:** afxctl.h
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Makra a globální prvky](../../mfc/reference/mfc-macros-and-globals.md)
+[Makra a globální](../../mfc/reference/mfc-macros-and-globals.md)

@@ -17,16 +17,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::Details::SyncLockT::~SyncLockT, destructor
 - Microsoft::WRL::Wrappers::Details::SyncLockT::Unlock method
 ms.assetid: a967f6f7-3555-43d1-b210-2bb65d63d15e
-ms.openlocfilehash: d27e6ba8601d0e822113bf3a4a65269c89437271
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 52c4404fa28f680a9a7a4592d03f535e8406d1a4
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398157"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374287"
 ---
 # <a name="synclockt-class"></a>SyncLockT – třída
 
-Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.
+Podporuje infrastrukturu WRL a není určen pro použití přímo z vašeho kódu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -42,37 +42,37 @@ Typ, který může převzít vlastnictví prostředku.
 
 ## <a name="remarks"></a>Poznámky
 
-Představuje typ, který může trvat exkluzivní nebo sdílené vlastnictví prostředku.
+Představuje typ, který může mít výhradní nebo sdílené vlastnictví prostředku.
 
-`SyncLockT` Třída se používá, třeba k implementaci [SRWLock](srwlock-class.md) třídy.
+Třída `SyncLockT` se používá například k implementaci třídy [SRWLock.](srwlock-class.md)
 
 ## <a name="members"></a>Členové
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-Název                                      | Popis
+Name (Název)                                      | Popis
 ----------------------------------------- | ----------------------------------------------------
-[SyncLockT::SyncLockT](#synclockt)        | Inicializuje novou instanci třídy `SyncLockT` třídy.
-[SyncLockT::~SyncLockT](#tilde-synclockt) | Uvolní instanci `SyncLockT` třídy.
+[SyncLockT::SyncLockT](#synclockt)        | Inicializuje novou instanci třídy. `SyncLockT`
+[SyncLockT::~SyncLockT](#tilde-synclockt) | Deinitializes instance třídy. `SyncLockT`
 
 ### <a name="protected-constructors"></a>Chráněné konstruktory
 
-Název                               | Popis
+Name (Název)                               | Popis
 ---------------------------------- | ----------------------------------------------------
-[SyncLockT::SyncLockT](#synclockt) | Inicializuje novou instanci třídy `SyncLockT` třídy.
+[SyncLockT::SyncLockT](#synclockt) | Inicializuje novou instanci třídy. `SyncLockT`
 
 ### <a name="public-methods"></a>Veřejné metody
 
-Název                             | Popis
+Name (Název)                             | Popis
 -------------------------------- | --------------------------------------------------------------------------------------------------------------
-[SyncLockT::IsLocked](#islocked) | Označuje, zda aktuální `SyncLockT` vlastní prostředek objektu; to znamená, `SyncLockT` objekt je *uzamčen*.
-[Synclockt::Unlock –](#unlock)     | Verze ovládacího prvku prostředku držené aktuální `SyncLockT` objektu, pokud existuje.
+[SyncLockT::Uzamčeno](#islocked) | Označuje, zda `SyncLockT` aktuální objekt vlastní prostředek; to znamená, `SyncLockT` že objekt je *uzamčen*.
+[SyncLockT::Odemknout](#unlock)     | Uvolní řízení prostředku drženého aktuálním `SyncLockT` objektem, pokud existuje.
 
-### <a name="protected-data-members"></a>Chránění členové dat
+### <a name="protected-data-members"></a>Členové chráněných dat
 
-Název                      | Popis
+Name (Název)                      | Popis
 ------------------------- | -------------------------------------------------------------------
-[SyncLockT::sync_](#sync) | Obsahuje základní prostředku reprezentovaného `SyncLockT` třídy.
+[SyncLockT::sync_](#sync) | Obsahuje základní prostředek reprezentované třídou. `SyncLockT`
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -82,11 +82,11 @@ Název                      | Popis
 
 **Záhlaví:** corewrappers.h
 
-**Namespace:** Microsoft::WRL::Wrappers::Details
+**Obor názvů:** Microsoft::WRL::Obálky::Details
 
-## <a name="tilde-synclockt"></a>SyncLockT::~SyncLockT
+## <a name="synclocktsynclockt"></a><a name="tilde-synclockt"></a>SyncLockT::~SyncLockT
 
-Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.
+Podporuje infrastrukturu WRL a není určen pro použití přímo z vašeho kódu.
 
 ```cpp
 ~SyncLockT();
@@ -94,13 +94,13 @@ Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v k�
 
 ### <a name="remarks"></a>Poznámky
 
-Uvolní instanci `SyncLockT` třídy.
+Deinitializes instance třídy. `SyncLockT`
 
-Tento destruktor také odemkne aktuální `SyncLockT` instance.
+Tento destruktor také `SyncLockT` odemkne aktuální instanci.
 
-## <a name="islocked"></a>SyncLockT::IsLocked
+## <a name="synclocktislocked"></a><a name="islocked"></a>SyncLockT::Uzamčeno
 
-Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.
+Podporuje infrastrukturu WRL a není určen pro použití přímo z vašeho kódu.
 
 ```cpp
 bool IsLocked() const;
@@ -108,15 +108,15 @@ bool IsLocked() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** Pokud `SyncLockT` objekt je uzamčena, jinak **false**.
+**true,** `SyncLockT` pokud je objekt uzamčen; jinak **false**.
 
 ### <a name="remarks"></a>Poznámky
 
-Označuje, zda aktuální `SyncLockT` vlastní prostředek objektu; to znamená, `SyncLockT` objekt je *uzamčen*.
+Označuje, zda `SyncLockT` aktuální objekt vlastní prostředek; to znamená, `SyncLockT` že objekt je *uzamčen*.
 
-## <a name="sync"></a>SyncLockT::sync_
+## <a name="synclocktsync_"></a><a name="sync"></a>SyncLockT::sync_
 
-Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.
+Podporuje infrastrukturu WRL a není určen pro použití přímo z vašeho kódu.
 
 ```cpp
 typename SyncTraits::Type sync_;
@@ -124,11 +124,11 @@ typename SyncTraits::Type sync_;
 
 ### <a name="remarks"></a>Poznámky
 
-Obsahuje základní prostředku reprezentovaného `SyncLockT` třídy.
+Obsahuje základní prostředek reprezentované třídou. `SyncLockT`
 
-## <a name="synclockt"></a>SyncLockT::SyncLockT
+## <a name="synclocktsynclockt"></a><a name="synclockt"></a>SyncLockT::SyncLockT
 
-Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.
+Podporuje infrastrukturu WRL a není určen pro použití přímo z vašeho kódu.
 
 ```cpp
 SyncLockT(
@@ -142,21 +142,21 @@ explicit SyncLockT(
 
 ### <a name="parameters"></a>Parametry
 
-*Ostatní*<br/>
-Odkaz rvalue na jiný `SyncLockT` objektu.
+*Další*<br/>
+Rvalue odkaz na `SyncLockT` jiný objekt.
 
-*sync*<br/>
-Odkaz na jiný `SyncLockWithStatusT` objektu.
+*synchronizace*<br/>
+Odkaz na `SyncLockWithStatusT` jiný objekt.
 
 ### <a name="remarks"></a>Poznámky
 
-Inicializuje novou instanci třídy `SyncLockT` třídy.
+Inicializuje novou instanci třídy. `SyncLockT`
 
-První konstruktor inicializuje aktuální `SyncLockT` objektu z jiného `SyncLockT` objekt zadaný parametrem *jiných*a pak zruší platnost druhé `SyncLockT` objektu. Druhý konstruktor není `protected`a inicializuje aktuální `SyncLockT` objekt má neplatný stav.
+První konstruktor inicializuje `SyncLockT` aktuální objekt `SyncLockT` z jiného objektu určeného *jiným*parametrem a potom zruší platnost druhého `SyncLockT` objektu. Druhý konstruktor `protected`je a inicializuje `SyncLockT` aktuální objekt do neplatného stavu.
 
-## <a name="unlock"></a>Synclockt::Unlock –
+## <a name="synclocktunlock"></a><a name="unlock"></a>SyncLockT::Odemknout
 
-Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.
+Podporuje infrastrukturu WRL a není určen pro použití přímo z vašeho kódu.
 
 ```cpp
 void Unlock();
@@ -164,4 +164,4 @@ void Unlock();
 
 ### <a name="remarks"></a>Poznámky
 
-Verze ovládacího prvku prostředku držené aktuální `SyncLockT` objektu, pokud existuje.
+Uvolní řízení prostředku drženého aktuálním `SyncLockT` objektem, pokud existuje.

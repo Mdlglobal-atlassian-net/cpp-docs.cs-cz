@@ -1,5 +1,5 @@
 ---
-title: '&lt;iOS&gt; definice typedef'
+title: '&lt;ios&gt; typedefs'
 ms.date: 11/04/2016
 f1_keywords:
 - iosfwd/std::ios
@@ -9,18 +9,18 @@ f1_keywords:
 - iosfwd/std::wios
 - iosfwd/std::wstreampos
 ms.assetid: 0b962632-3439-44de-bf26-20c67a7f0ff3
-ms.openlocfilehash: 20bffbeb7720274302633c5dda9e6364c06d5b54
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 0f63f65fb4c10fbe2ad538852222e6468b9061d0
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79418963"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375403"
 ---
-# <a name="ltiosgt-typedefs"></a>&lt;iOS&gt; definice typedef
+# <a name="ltiosgt-typedefs"></a>&lt;ios&gt; typedefs
 
-## <a name="ios"></a>iOS
+## <a name="ios"></a><a name="ios"></a>Ios
 
-Podporuje třídu iOS z staré knihovny iostream –.
+Podporuje třídu ios ze staré knihovny iostream.
 
 ```cpp
 typedef basic_ios<char, char_traits<char>> ios;
@@ -28,9 +28,9 @@ typedef basic_ios<char, char_traits<char>> ios;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ je synonymum pro šablonu třídy [basic_ios](../standard-library/basic-ios-class.md)specializované pro prvky typu **char** s výchozími vlastnostmi znaků.
+Typ je synonymem pro šablonu třídy [basic_ios](../standard-library/basic-ios-class.md), specializované na prvky typu **char** s výchozí znakové znaky.
 
-## <a name="streamoff"></a>streamoff
+## <a name="streamoff"></a><a name="streamoff"></a>streamoff
 
 Podporuje interní operace.
 
@@ -44,11 +44,11 @@ Podporuje interní operace.
 
 ### <a name="remarks"></a>Poznámky
 
-Typ je celé číslo se znaménkem, které popisuje objekt, který může ukládat posun bajtů v různých operacích umísťování datových proudů. Jeho reprezentace má minimálně 32 bitů hodnoty. Není dostatečně velká, aby představovala v datovém proudu libovolné místo v bajtech. Hodnota `streamoff(-1)` obecně označuje chybné posunutí.
+Typ je podepsané celé číslo, které popisuje objekt, který může uložit posun bajtu zapojený do různých operací umístění datového proudu. Jeho reprezentace má alespoň 32 bitů hodnoty. Není nutně dostatečně velký, aby představoval pozici libovolného bajtu v rámci datového proudu. Hodnota `streamoff(-1)` obecně označuje chybné posun.
 
-## <a name="streampos"></a>streampos
+## <a name="streampos"></a><a name="streampos"></a>streampos
 
-Obsahuje aktuální pozici ukazatele vyrovnávací paměti nebo ukazatele na soubor.
+Drží aktuální pozici ukazatele vyrovnávací paměti nebo ukazatele souboru.
 
 ```cpp
 typedef fpos<mbstate_t> streampos;
@@ -56,7 +56,7 @@ typedef fpos<mbstate_t> streampos;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ je synonymum pro [fpos](../standard-library/fpos-class.md)< `mbstate_t`>.
+Typ je synonymem pro [fpos](../standard-library/fpos-class.md) <  `mbstate_t`>.
 
 ### <a name="example"></a>Příklad
 
@@ -81,7 +81,7 @@ int main( )
 7
 ```
 
-## <a name="streamsize"></a>StreamSize
+## <a name="streamsize"></a><a name="streamsize"></a>velikost datového proudu
 
 Označuje velikost datového proudu.
 
@@ -95,11 +95,11 @@ Označuje velikost datového proudu.
 
 ### <a name="remarks"></a>Poznámky
 
-Typ je celé číslo se znaménkem, které popisuje objekt, který může ukládat počet prvků, které jsou součástí různých operací streamování. Jeho reprezentace má alespoň 16 bitů. Není dostatečně velká, aby představovala v datovém proudu libovolné místo v bajtech.
+Typ je podepsané celé číslo, které popisuje objekt, který může uložit počet prvků zapojených do různých operací datového proudu. Jeho reprezentace má alespoň 16 bitů. Není nutně dostatečně velký, aby představoval pozici libovolného bajtu v rámci datového proudu.
 
 ### <a name="example"></a>Příklad
 
-Po zkompilování a spuštění následujícího programu zkontrolujte soubor test. txt, abyste viděli účinek nastavení `streamsize`.
+Po kompilaci a spuštění následujícího programu se podívejte na soubor test.txt, abyste viděli vliv nastavení `streamsize`.
 
 ```cpp
 // ios_streamsize.cpp
@@ -117,9 +117,9 @@ int main( )
 }
 ```
 
-## <a name="wios"></a>wios
+## <a name="wios"></a><a name="wios"></a>wios
 
-Podporuje třídu wios ze staré knihovny iostream –.
+Podporuje třídu wios ze staré knihovny iostream.
 
 ```cpp
 typedef basic_ios<wchar_t, char_traits<wchar_t>> wios;
@@ -127,11 +127,11 @@ typedef basic_ios<wchar_t, char_traits<wchar_t>> wios;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ je synonymum pro šablonu třídy [basic_ios](../standard-library/basic-ios-class.md)specializované pro prvky typu **wchar_t** s výchozími vlastnostmi znaků.
+Typ je synonymem pro šablonu třídy [basic_ios](../standard-library/basic-ios-class.md), specializované na prvky typu **wchar_t** s výchozími znakovými znaky.
 
-## <a name="wstreampos"></a>wstreampos
+## <a name="wstreampos"></a><a name="wstreampos"></a>wstreampos
 
-Obsahuje aktuální pozici ukazatele vyrovnávací paměti nebo ukazatele na soubor.
+Drží aktuální pozici ukazatele vyrovnávací paměti nebo ukazatele souboru.
 
 ```cpp
 typedef fpos<mbstate_t> wstreampos;
@@ -139,7 +139,7 @@ typedef fpos<mbstate_t> wstreampos;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ je synonymum pro [fpos](../standard-library/fpos-class.md)< `mbstate_t`>.
+Typ je synonymem pro [fpos](../standard-library/fpos-class.md) <  `mbstate_t`>.
 
 ### <a name="example"></a>Příklad
 

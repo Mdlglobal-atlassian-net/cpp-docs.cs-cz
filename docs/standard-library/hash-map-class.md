@@ -88,19 +88,19 @@ helpviewer_keywords:
 - stdext::hash_map::upper_bound
 - stdext::hash_map::value_comp
 ms.assetid: 40879dfc-51ba-4a59-9f9e-26208de568a8
-ms.openlocfilehash: 4e13402fbff40ff810e71f78f43060cb59f03cd9
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: e8c0da199d8a1e9ba388b960fe07ab6ad6fcf4bc
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79441638"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375469"
 ---
 # <a name="hash_map-class"></a>hash_map – třída
 
 > [!NOTE]
-> Toto rozhraní API je zastaralé. Alternativa je [Unordered_map třídy](../standard-library/unordered-map-class.md).
+> Toto rozhraní API je zastaralé. Alternativou je [třída unordered_map](../standard-library/unordered-map-class.md).
 
-Rychle ukládá a načítá data z kolekce, ve které je každý prvek dvojice, která má klíč řazení, jehož hodnota je jedinečná a přidružená hodnota dat.
+Ukládá a načítá data rychle z kolekce, ve kterém každý prvek je pár, který má klíč řazení, jehož hodnota je jedinečná a související hodnotu dat.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -114,17 +114,17 @@ class hash_map
 
 ### <a name="parameters"></a>Parametry
 
-\ *klíčů*
-Klíčový datový typ, který bude uložen v hash_map.
+*Klíč*\
+Datový typ klíče, který má být uložen v hash_map.
 
-*Zadejte*\
-Typ dat prvku, který bude uložen v hash_map.
+*Typ*\
+Datový typ prvku, který má být uložen v hash_map.
 
-\ *vlastností*
-Typ, který obsahuje dva objekty funkce, jeden z porovnání třídy může porovnat dvě hodnoty prvků jako klíče řazení pro určení jejich relativního pořadí a funkci hash, která je unárním predikátem mapování hodnot klíčů prvků na nepodepsaná celá čísla typu `size_t`. Tento argument je nepovinný a hash_compare <`Key`. výchozí hodnota je menší <`Key`> >.
+*Vlastnosti*\
+Typ, který obsahuje dva objekty funkce, jeden z třídy porovnat schopen porovnat dvě hodnoty elementu jako klíče řazení k určení jejich relativní pořadí a hash `size_t`funkce, která je unární predikát mapování klíčových hodnot prvků neznatelná celá čísla typu . Tento argument je volitelný `Key`a hash_compare `Key`<, výchozí hodnotou je menší<> > .
 
-\ *přidělování*
-Typ, který představuje uložený objekt přidělování, který zapouzdřuje informace o přidělování a navracení paměti hash_map. Tento argument je nepovinný a výchozí hodnota je\<párování < const `Key`, `Type`> >.
+*Přidělování*\
+Typ, který představuje uložený objekt přidělování, který zapouzdřuje podrobnosti o přidělení hash_map a přidělení paměti. Tento argument je volitelný a výchozí hodnotou\<je alokátor dvojice <const `Key`, `Type`>>.
 
 ## <a name="remarks"></a>Poznámky
 
@@ -134,104 +134,104 @@ Hash_map je:
 
 - Oboustranný, protože poskytuje obousměrný iterátor pro přístup k jeho prvkům.
 
-- Hash, protože jeho prvky jsou seskupeny do kontejnerů na základě hodnoty funkce hash použité pro klíčové hodnoty prvků.
+- Hashed, protože jeho prvky jsou seskupeny do bloků na základě hodnoty funkce hash aplikované na klíčové hodnoty prvků.
 
 - Jedinečný v tom smyslu, že každý z jeho prvků musí mít jedinečný klíč.
 
 - Kontejner asociativních párů, protože jeho prvky hodnoty dat se liší od hodnot klíčů.
 
-- Šablona třídy, protože funkce, které poskytuje, jsou obecné a nezávisle na konkrétním typu dat obsažených jako elementy nebo klíče. Datové typy použité pro prvky a klíče jsou místo toho zadány jako parametry v šabloně třídy společně s funkcí porovnání a alokátorem.
+- Šablona třídy, protože funkce, které poskytuje, je obecná a tak nezávislá na konkrétním typu dat obsažených jako prvky nebo klíče. Datové typy použité pro prvky a klíče jsou místo toho zadány jako parametry v šabloně třídy společně s funkcí porovnání a alokátorem.
 
-Hlavní výhodou použití algoritmu hash pro řazení je vyšší efektivita; úspěšné hashování provádí vložení, odstranění a vyhledá v konstantním průměrném čase v porovnání s časem, který je úměrný logaritmu počtu prvků v kontejneru pro řazení technik. Hodnota prvku v hash_map, ale ne jeho přidružená hodnota klíče, může být změněna přímo. Namísto toho hodnoty klíčů přidružené ke starým prvkům musí být odstraněny a vloženy nové hodnoty klíče související s novými prvky.
+Hlavní výhodou hašování nad tříděním je větší účinnost; úspěšné zapisování provádí vložení, odstranění a najde v konstantní mzda v průměru čas ve srovnání s časem úměrná logaritmu počtu prvků v kontejneru pro řazení techniky. Hodnota prvku v hash_map, ale není jeho přidruženou hodnotou klíče, může být změněna přímo. Namísto toho hodnoty klíčů přidružené ke starým prvkům musí být odstraněny a vloženy nové hodnoty klíče související s novými prvky.
 
-Volba typu kontejneru by měla obecně vycházet z typu vyhledávání a vkládání vyžadovaného aplikací. Asociativní kontejnery s algoritmem hash jsou optimalizované pro operace vyhledávání, vkládání a odebírání. Členské funkce, které explicitně podporují tyto operace, jsou efektivní při použití s dobře navrženou funkcí hash a jejich provádění v čase s průměrnou konstantou a nezávisle na počtu prvků v kontejneru. Dobře navržená funkce hash vytváří jednotnou distribuci hodnot hash a minimalizuje počet kolizí, kde je zřejmé, že se vyskytne při mapování jedinečných klíčových hodnot na stejnou hodnotu hash. V nejhorším případě s nejhorší možnou funkcí hash je počet operací úměrný počtu prvků v sekvenci (lineární čas).
+Volba typu kontejneru by měla obecně vycházet z typu vyhledávání a vkládání vyžadovaného aplikací. Hashed asociativní kontejnery jsou optimalizovány pro operace vyhledávání, vkládání a odstraňování. Členské funkce, které explicitně podporují tyto operace jsou efektivní při použití s dobře navržené funkce hash, jejich provádění v čase, který je v průměru konstantní a není závislý na počtu prvků v kontejneru. Dobře navržená funkce hash vytváří rovnoměrné rozložení hodnot hash a minimalizuje počet kolizí, kde se říká, že ke kolizi dochází, když jsou odlišné hodnoty klíče mapovány na stejnou hodnotu hash. V nejhorším případě s nejhorší možnou funkcí hash je počet operací úměrný počtu prvků v sekvenci (lineární čas).
 
-Hash_map by měl být asociativní kontejner výběru, pokud podmínky přidružování hodnot k jejich klíčům jsou splněné aplikací. Model pro tento typ struktury je uspořádaný seznam jednoznačně se vyskytujících klíčových slov s přidruženými řetězcovými hodnotami, které poskytují, říká, definice. Pokud místo toho měla slova více než jednu správnou definici, takže klíče nebyly jedinečné, pak hash_multimap by měl být zvoleným kontejnerem. Pokud na druhé straně je jenom uložený seznam slov, hash_set by byl správným kontejnerem. Pokud bylo povoleno více výskytů slov, bude hash_multiset příslušná struktura kontejneru.
+Hash_map by měl být asociativní kontejner volby při podmínky přisouvání hodnoty s jejich klíče jsou splněny aplikací. Model pro tento typ struktury je seřazený seznam jedinečně se vyskytujících klíčových slov s přidruženými řetězcovými hodnotami, které poskytují například definice. Pokud místo toho slova měla více než jednu správnou definici, takže klíče nebyly jedinečné, pak by hash_multimap byl kontejner volby. Pokud by na druhé straně byl uložen pouze seznam slov, pak by hash_set byl správný kontejner. Pokud bylo povoleno více výskytů slov, pak by hash_multiset byla příslušnou strukturou kontejneru.
 
-Hash_map řadí sekvenci, kterou ovládá, voláním uloženého objektu zatřiďovacích *vlastností* třídy [value_compare](../standard-library/value-compare-class.md). K tomuto uloženému objektu je možné přistupovat voláním členské funkce [key_comp](#key_comp). Takový objekt funkce se musí chovat stejně jako objekt třídy [hash_compare](../standard-library/hash-compare-class.md)< klíč, méně\<klíče > >. Konkrétně pro všechny hodnoty *klíče* typu *klíč*, volání `Traits`(`Key`) poskytuje distribuci hodnot typu `size_t`.
+Hash_map seřadí sekvenci, kterou řídí, voláním *objektu* vlastností hash třídy [value_compare](../standard-library/value-compare-class.md). K tomuto uloženému objektu lze přistupovat voláním key_comp členské [funkce](#key_comp). Takový objekt funkce se musí chovat stejně [hash_compare](../standard-library/hash-compare-class.md) jako objekt\<třídy hash_compare<Klíč, méně>> klíč. Konkrétně pro všechny hodnoty *Klíč* typu `Traits` *Klíč*, volání ( `Key` ) `size_t`dává rozdělení hodnot typu .
 
-Obecně, tyto prvky musí být menší než srovnatelné pro toto pořadí, což znamená, že když jsou uvedeny dva prvky, může být stanoveno, zda jsou ekvivalentní (v tom smyslu, že ani jeden není menší než ten druhý), nebo že jeden je menší než druhý. To má za výsledek řazení mezi neekvivalentními prvky. Technicky je funkce porovnání binárním predikátem, který indukuje přísné slabé řazení, standardním matematickým způsobem. Binární predikát f (x y) je objekt funkce, který má dva objekty argumentu `x` a `y` a návratovou hodnotu **true** nebo **false**. Řazení uložené na hash_map je přísné slabé seřazení, pokud je binární predikát Nereflexivní, antisymetrický a tranzitivní a je-li ekvivalence tranzitivní, kde jsou dva objekty x a y definovány jako ekvivalentní, když mají hodnoty f (x, y) i f (y, x) hodnotu false. Pokud silnější podmínka rovnosti mezi klíči nahradí ekvivalenci, stane se pořadí celkovým (v tom smyslu, že všechny prvky jsou uspořádány ve vztahu k sobě navzájem) a odpovídající klíče budou od sebe nerozeznatelné.
+Obecně, tyto prvky musí být menší než srovnatelné pro toto pořadí, což znamená, že když jsou uvedeny dva prvky, může být stanoveno, zda jsou ekvivalentní (v tom smyslu, že ani jeden není menší než ten druhý), nebo že jeden je menší než druhý. To má za výsledek řazení mezi neekvivalentními prvky. Technicky je funkce porovnání binárním predikátem, který indukuje přísné slabé řazení, standardním matematickým způsobem. Binární predikát f(x y) je objekt funkce, `x` `y` který má dva objekty argumentů a vrácenou hodnotu **true** nebo **false**. Řazení uložené na hash_map je přísné slabé řazení, pokud binární predikát je nereflexivní, antisymetrické a tranzitivní a pokud je ekvivalence přenositá, kde jsou dva objekty x a y definovány jako ekvivalentní, pokud jsou f(x, y) a f(y, x) false. Pokud silnější podmínka rovnosti mezi klíči nahradí ekvivalenci, stane se pořadí celkovým (v tom smyslu, že všechny prvky jsou uspořádány ve vztahu k sobě navzájem) a odpovídající klíče budou od sebe nerozeznatelné.
 
-Skutečné pořadí prvků v řízené sekvenci závisí na funkci hash, funkci řazení a aktuální velikosti zatřiďovací tabulky uložené v objektu kontejneru. Nelze určit aktuální velikost zatřiďovací tabulky, takže nemůžete obecné předpovědět pořadí prvků v řízené sekvenci. Vkládání prvků nezruší platnost žádných iterátorů a odstranění prvků zruší platnost pouze těch iterátorů, které výslovně odkazovaly na odstraněné prvky.
+Skutečné pořadí prvků v řízené sekvenci závisí na funkci hash, funkci řazení a aktuální velikost tabulky hash uložené v objektu kontejneru. Nelze určit aktuální velikost tabulky hash, takže obecně nelze předpovědět pořadí prvků v řízené sekvenci. Vkládání prvků nezruší platnost žádných iterátorů a odstranění prvků zruší platnost pouze těch iterátorů, které výslovně odkazovaly na odstraněné prvky.
 
-Iterátor poskytnutý hash_map třídou je obousměrný iterátor, ale členské funkce třídy [vkládají](#insert) a [hash_map](#hash_map) mají verze, které přebírají jako parametry šablony slabší vstupní iterátor, jehož požadavky na funkce jsou více minimální než ty, které jsou zaručeny třídou Obousměrných iterátorů. Různé koncepty iterátorů tvoří rodinu týkající se upřesnění jejich funkčnosti. Každý koncept iterátoru má vlastní sadu požadavků a algoritmy, které s nimi pracují, musí omezit jejich předpoklady na požadavky podle typu iterátoru. Lze předpokládat, že ke vstupnímu iterátoru lze přistoupit přes ukazatel pro odkazování na některý objekt a že může být zvýšen na další iterátor v pořadí. Toto je minimální sada funkcí, ale je dostatečná pro to, aby bylo možné mluvit smysluplně o rozsahu iterátorů `[First, Last)` v kontextu funkcí členských tříd.
+Iterátor poskytované hash_map třídy je obousměrný iterátor, ale funkce členů třídy [insert](#insert) a [hash_map](#hash_map) mají verze, které berou jako parametry šablony slabší vstupní iterátor, jehož požadavky na funkčnost jsou minimální než ty, které jsou zaručeny třídou obousměrných iterátorů. Různé koncepty iterátorů tvoří rodinu týkající se upřesnění jejich funkčnosti. Každý koncept iterátoru má vlastní sadu požadavků a algoritmy, které s nimi pracují, musí omezit jejich předpoklady na požadavky podle typu iterátoru. Lze předpokládat, že ke vstupnímu iterátoru lze přistoupit přes ukazatel pro odkazování na některý objekt a že může být zvýšen na další iterátor v pořadí. Toto je minimální sada funkcí, ale stačí, abyste mohli smysluplně hovořit o rozsahu `[First, Last)` iterátorů v kontextu funkcí členů třídy.
 
 ### <a name="constructors"></a>Konstruktory
 
 |Konstruktor|Popis|
 |-|-|
-|[hash_map](#hash_map)|Vytvoří `hash_map`, který je prázdný nebo který je kopií všech nebo částí jiných `hash_map`.|
+|[hash_map](#hash_map)|Konstrukce, `hash_map` který je prázdný nebo který je kopií celé `hash_map`nebo části některé jiné .|
 
 ### <a name="typedefs"></a>Typedefs
 
 |Název typu|Popis|
 |-|-|
-|[allocator_type](#allocator_type)|Typ, který představuje třídu `allocator` pro objekt `hash_map`.|
-|[const_iterator](#const_iterator)|Typ, který poskytuje obousměrný iterátor, který může číst `const` prvek v `hash_map`.|
-|[const_pointer](#const_pointer)|Typ, který poskytuje ukazatel na prvek **const** v `hash_map`.|
-|[const_reference](#const_reference)|Typ, který poskytuje odkaz na prvek **const** uložený v `hash_map` pro čtení a provádění operací **const** .|
-|[const_reverse_iterator](#const_reverse_iterator)|Typ, který poskytuje obousměrný iterátor, který může číst libovolný prvek **const** v `hash_map`.|
-|[difference_type](#difference_type)|Typ se znaménkem typu Integer, který lze použít k reprezentaci počtu prvků `hash_map` v rozsahu mezi prvky, na které odkazují iterátory.|
-|[iterátor](#iterator)|Typ, který poskytuje obousměrný iterátor, který může číst nebo upravovat libovolný prvek v `hash_map`.|
-|[key_compare](#key_compare)|Typ, který poskytuje objekt funkce, který může porovnat dva klíče řazení pro určení relativního pořadí dvou prvků v `hash_map`.|
-|[key_type](#key_type)|Typ popisuje objekt třídicího klíče, který představuje jednotlivé prvky `hash_map`.|
-|[mapped_type](#mapped_type)|Typ, který představuje datový typ uložený v `hash_map`.|
-|[ukazatele](#pointer)|Typ, který poskytuje ukazatel na prvek v `hash_map`.|
-|[odkaz](#reference)|Typ, který poskytuje odkaz na prvek uložený v `hash_map`.|
-|[reverse_iterator](#reverse_iterator)|Typ, který poskytuje obousměrný iterátor, který může číst nebo upravovat prvek v obráceném `hash_map`.|
-|[size_type](#size_type)|Typ unsigned integer, který může představovat počet prvků v `hash_map`.|
-|[value_type](#value_type)|Typ, který poskytuje objekt funkce, který může porovnat dva prvky jako klíče řazení pro určení jejich relativního pořadí v `hash_map`.|
+|[allocator_type](#allocator_type)|Typ, který `allocator` představuje třídu `hash_map` pro objekt.|
+|[const_iterator](#const_iterator)|Typ, který poskytuje obousměrný iterátor, který `const` může `hash_map`číst prvek v .|
+|[const_pointer](#const_pointer)|Typ, který poskytuje ukazatel na **const** element v `hash_map`.|
+|[const_reference](#const_reference)|Typ, který poskytuje odkaz na **const** `hash_map` prvek uložený v a pro čtení a provádění **const** operací.|
+|[const_reverse_iterator](#const_reverse_iterator)|Typ, který poskytuje obousměrný iterátor, který může číst `hash_map`libovolný **prvek const** v .|
+|[difference_type](#difference_type)|Podepsaný typ celé číslo, který lze použít k reprezentaci počtu prvků `hash_map` a v rozsahu mezi prvky, na které iterátory poukázaly.|
+|[Iterace](#iterator)|Typ, který poskytuje obousměrný iterátor, který může číst `hash_map`nebo upravovat libovolný prvek v rozhraní .|
+|[key_compare](#key_compare)|Typ, který poskytuje objekt funkce, který může porovnat dva klíče řazení `hash_map`k určení relativní pořadí dvou prvků v .|
+|[key_type](#key_type)|Typ popisuje objekt klíče řazení, který představuje `hash_map`každý prvek .|
+|[mapped_type](#mapped_type)|Typ, který představuje datový typ `hash_map`uložený v aplikaci .|
+|[ukazatel](#pointer)|Typ, který poskytuje ukazatel na `hash_map`prvek v .|
+|[Odkaz](#reference)|Typ, který poskytuje odkaz na prvek `hash_map`uložený v .|
+|[reverse_iterator](#reverse_iterator)|Typ, který poskytuje obousměrný iterátor, který může číst nebo `hash_map`upravovat prvek v obráceném .|
+|[size_type](#size_type)|Nepodepsaný podnosný typ, který může představovat počet prvků v . `hash_map`|
+|[value_type](#value_type)|Typ, který poskytuje objekt funkce, který může porovnat dva prvky `hash_map`jako klíče řazení k určení jejich relativní pořadí v .|
 
 ### <a name="member-functions"></a>Členské funkce
 
 |Členská funkce|Popis|
 |-|-|
-|[Počínaje](#at)|Vyhledá prvek v `hash_map` se zadanou hodnotou klíče.|
-|[ifunctiondiscovery](#begin)|Vrátí iterátor adresující první prvek v `hash_map`.|
-|[cbegin](#cbegin)|Vrátí konstantní iterátor adresující první prvek v `hash_map`.|
-|[cend](#cend)|Vrátí konstantní iterátor, který adresuje umístění následující po posledním prvku v `hash_map`.|
-|[jejich](#clear)|Smaže všechny prvky `hash_map`.|
-|[count](#count)|Vrátí počet prvků v `hash_map`, jejichž klíč odpovídá klíči určenému parametrem.|
-|[crbegin –](#crbegin)|Vrátí konstantní iterátor adresující první prvek v obráceném `hash_map`.|
-|[crend](#crend)|Vrátí konstantní iterátor, který adresuje umístění následující po posledním prvku v obráceném `hash_map`.|
-|[emplace](#emplace)|Vloží prvek konstruovaný na místo do `hash_map`.|
-|[emplace_hint](#emplace_hint)|Vloží prvek konstruovaný na místo do `hash_map`s pomocným parametrem umístění.|
-|[obsahovat](#empty)|Testuje, zda je `hash_map` prázdné.|
-|[účelu](#end)|Vrátí iterátor, který adresuje umístění následující po posledním prvku v `hash_map`.|
-|[equal_range](#equal_range)|Vrátí dvojici iterátorů v uvedeném pořadí na první prvek v `hash_map` s klíčem, který je větší než zadaný klíč a na první prvek v `hash_map` s klíčem, který je roven nebo větší než klíč.|
-|[ověřování](#erase)|Odebere prvek nebo rozsah prvků v `hash_map` ze zadané pozice.|
-|[find](#find)|Vrátí iterátor adresující umístění elementu v `hash_map`, který má klíč shodný se zadaným klíčem.|
-|[get_allocator](#get_allocator)|Vrátí kopii objektu `allocator`, který se používá k vytvoření `hash_map`.|
-|[zadat](#insert)|Vloží prvek nebo rozsah prvků do `hash_map`.|
-|[key_comp](#key_comp)|Vrátí iterátor na první prvek v `hash_map` s hodnotou klíče, která je větší nebo rovna hodnotě zadaného klíče.|
-|[lower_bound](#lower_bound)|Vrátí iterátor na první prvek v `hash_map` s hodnotou klíče, která je větší nebo rovna hodnotě zadaného klíče.|
+|[Na](#at)|Najde prvek v `hash_map` a s zadanou hodnotou klíče.|
+|[Začít](#begin)|Vrátí iterátor adresující první prvek `hash_map`v rozhraní .|
+|[cbegin](#cbegin)|Vrátí const iterator adresující první `hash_map`prvek v rozhraní .|
+|[cend](#cend)|Vrátí const iterátor, který řeší umístění, které následuje `hash_map`poslední prvek v .|
+|[Jasné](#clear)|Vymaže všechny `hash_map`prvky .|
+|[Počet](#count)|Vrátí počet prvků v `hash_map` klíči, jejichž klíč odpovídá klíči zadanému parametrem.|
+|[crbegin](#crbegin)|Vrátí const iterator adresování první `hash_map`prvek v obrácené .|
+|[crend](#crend)|Vrátí const iterator, který řeší umístění, které následuje `hash_map`poslední prvek v obráceném .|
+|[místo](#emplace)|Vloží prvek vytvořený na místě `hash_map`do .|
+|[emplace_hint](#emplace_hint)|Vloží prvek vytvořený na místě `hash_map`do aplikace s nápovědou k umístění.|
+|[empty](#empty)|Testuje, `hash_map` pokud je prázdný.|
+|[Konec](#end)|Vrátí iterátor, který řeší umístění, které následuje `hash_map`poslední prvek v rozhraní .|
+|[equal_range](#equal_range)|Vrátí dvojici iterátorů, respektive první prvek v `hash_map` klíč, který je větší než zadaný klíč a `hash_map` první prvek v s klíčem, který je roven nebo větší než klíč.|
+|[Vymazat](#erase)|Odstraní prvek nebo rozsah prvků v `hash_map` a ze zadaných pozic.|
+|[find](#find)|Vrátí iterátor adresování umístění prvku `hash_map` v, který má klíč ekvivalentní zadaný klíč.|
+|[get_allocator](#get_allocator)|Vrátí kopii `allocator` objektu použitého `hash_map`k vytvoření .|
+|[Vložit](#insert)|Vloží prvek nebo rozsah prvků do `hash_map`.|
+|[key_comp](#key_comp)|Vrátí iterátor k prvnímu prvku `hash_map` v a s hodnotou klíče, která je rovna nebo větší než hodnota zadaného klíče.|
+|[lower_bound](#lower_bound)|Vrátí iterátor k prvnímu prvku `hash_map` v a s hodnotou klíče, která je rovna nebo větší než hodnota zadaného klíče.|
 |[max_size](#max_size)|Vrátí maximální délku `hash_map`.|
-|[rbegin](#rbegin)|Vrátí iterátor adresující první prvek v obráceném `hash_map`.|
-|[rend](#rend)|Vrátí iterátor, který adresuje umístění následující po posledním prvku v obráceném `hash_map`.|
-|[hodnota](#size)|Vrátí počet prvků v `hash_map`.|
-|[adresu](#swap)|Vyměňuje prvky dvou `hash_map`s.|
-|[upper_bound](#upper_bound)|Vrátí iterátor na první prvek v `hash_map`, který má hodnotu klíče, která je větší než zadaný klíč.|
-|[value_comp](#value_comp)|Načte kopii objektu porovnání, která se používá k seřazení hodnot prvků v `hash_map`.|
+|[rbegin](#rbegin)|Vrátí iterátor adresující první prvek `hash_map`v obráceném .|
+|[rend](#rend)|Vrátí iterátor, který řeší umístění, které následuje poslední `hash_map`prvek v obráceném .|
+|[Velikost](#size)|Vrátí počet prvků v `hash_map`rozhraní .|
+|[Swap](#swap)|Vyměňuje prvky `hash_map`dvou s.|
+|[upper_bound](#upper_bound)|Vrátí iterátor prvnímu prvku v `hash_map` prvku, který má hodnotu klíče, která je větší než hodnota zadaného klíče.|
+|[value_comp](#value_comp)|Načte kopii objektu porovnání použitého k `hash_map`pořadí hodnot prvků v rozhraní .|
 
 ### <a name="operators"></a>Operátory
 
 |Operátor|Popis|
 |-|-|
-|[podnikatel&#91;&#93;](#op_at)|Vloží prvek do `hash_map` se zadanou hodnotou klíče.|
-|[hash_map:: operator =](#op_eq)|Nahradí prvky `hash_map` kopií jiného `hash_map`.|
+|[operátor&#91;&#93;](#op_at)|Vloží prvek do `hash_map` a se zadanou hodnotou klíče.|
+|[hash_map::operátor=](#op_eq)|Nahradí prvky a `hash_map` kopií jiného `hash_map`.|
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<hash_map >
+**Záhlaví:** \<hash_map>
 
 **Obor názvů:** stdext
 
-## <a name="allocator_type"></a>hash_map:: allocator_type
+## <a name="hash_mapallocator_type"></a><a name="allocator_type"></a>hash_map::allocator_type
 
 > [!NOTE]
-> Toto rozhraní API je zastaralé. Alternativa je [Unordered_map třídy](../standard-library/unordered-map-class.md).
+> Toto rozhraní API je zastaralé. Alternativou je [třída unordered_map](../standard-library/unordered-map-class.md).
 
-Typ, který představuje třídu přidělování pro objekt hash_map.
+Typ, který představuje třídu alokátoru pro objekt hash_map.
 
 ```cpp
 typedef list<typename Traits::value_type, typename Traits::allocator_type>::allocator_type allocator_type;
@@ -239,14 +239,14 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::allo
 
 ### <a name="example"></a>Příklad
 
-Příklad použití `allocator_type`naleznete v tématu příklad pro [get_allocator](#get_allocator) .
+Viz příklad pro [get_allocator](#get_allocator) `allocator_type`příklad pomocí aplikace .
 
-## <a name="at"></a>hash_map:: at
+## <a name="hash_mapat"></a><a name="at"></a>hash_map::at
 
 > [!NOTE]
-> Toto rozhraní API je zastaralé. Alternativa je [Unordered_map třídy](../standard-library/unordered-map-class.md).
+> Toto rozhraní API je zastaralé. Alternativou je [třída unordered_map](../standard-library/unordered-map-class.md).
 
-Vyhledá prvek v hash_map se zadanou hodnotou klíče.
+Najde prvek v hash_map s zadanou hodnotou klíče.
 
 ```cpp
 Type& at(const Key& key);
@@ -258,15 +258,15 @@ const Type& at(const Key& key) const;
 
 |Parametr|Popis|
 |-|-|
-|*key*|Hodnota klíče elementu, který má být nalezen.|
+|*key*|Hodnota klíče prvku, který má být nalezen.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Odkaz na hodnotu dat nalezeného prvku.
+Odkaz na datovou hodnotu nalezeného prvku.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud hodnota klíče argumentu nebyla nalezena, funkce vyvolá objekt třídy [Out_of_range třídy](../standard-library/out-of-range-class.md).
+Pokud není nalezena hodnota klíče argumentu, pak funkce vyvolá objekt třídy [out_of_range Class](../standard-library/out-of-range-class.md).
 
 ### <a name="example"></a>Příklad
 
@@ -295,10 +295,10 @@ int main( )
 }
 ```
 
-## <a name="begin"></a>hash_map:: begin
+## <a name="hash_mapbegin"></a><a name="begin"></a>hash_map::začátek
 
 > [!NOTE]
-> Toto rozhraní API je zastaralé. Alternativa je [Unordered_map třídy](../standard-library/unordered-map-class.md).
+> Toto rozhraní API je zastaralé. Alternativou je [třída unordered_map](../standard-library/unordered-map-class.md).
 
 Vrátí iterátor adresující první prvek v hash_map.
 
@@ -310,7 +310,7 @@ iterator begin();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Obousměrný iterátor, který adresuje první prvek v hash_map nebo umístění, které je úspěšně prázdné hash_map.
+Obousměrný itečelní objekt adresující první prvek v hash_map nebo umístění, které následuje prázdný hash_map.
 
 ### <a name="example"></a>Příklad
 
@@ -356,12 +356,12 @@ The first element of hm1 is 0.
 The first element of hm1 is now 1.
 ```
 
-## <a name="cbegin"></a>hash_map:: cbegin
+## <a name="hash_mapcbegin"></a><a name="cbegin"></a>hash_map::cbegin
 
 > [!NOTE]
-> Toto rozhraní API je zastaralé. Alternativa je [Unordered_map třídy](../standard-library/unordered-map-class.md).
+> Toto rozhraní API je zastaralé. Alternativou je [třída unordered_map](../standard-library/unordered-map-class.md).
 
-Vrátí konstantní iterátor adresující první prvek v hash_map.
+Vrátí const iterator adresování první prvek v hash_map.
 
 ```cpp
 const_iterator cbegin() const;
@@ -369,7 +369,7 @@ const_iterator cbegin() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Konstantní obousměrný iterátor, který adresuje první prvek v [hash_map](../standard-library/hash-map-class.md) nebo umístění, které je úspěšně prázdné `hash_map`.
+Konstovat obousměrný iterátor adresování první prvek v [hash_map](../standard-library/hash-map-class.md) nebo `hash_map`umístění, které následuje prázdné .
 
 ### <a name="example"></a>Příklad
 
@@ -400,12 +400,12 @@ int main( )
 The first element of hm1 is 2.
 ```
 
-## <a name="cend"></a>hash_map:: cend
+## <a name="hash_mapcend"></a><a name="cend"></a>hash_map::cenzura
 
 > [!NOTE]
-> Toto rozhraní API je zastaralé. Alternativa je [Unordered_map třídy](../standard-library/unordered-map-class.md).
+> Toto rozhraní API je zastaralé. Alternativou je [třída unordered_map](../standard-library/unordered-map-class.md).
 
-Vrátí konstantní iterátor, který adresuje umístění následující po posledním prvku v hash_map.
+Vrátí const iterator, který řeší umístění, které následuje poslední prvek v hash_map.
 
 ```cpp
 const_iterator cend() const;
@@ -413,13 +413,13 @@ const_iterator cend() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Konstantní obousměrný iterátor, který adresuje umístění následující po posledním prvku v [hash_map](../standard-library/hash-map-class.md). Pokud je `hash_map` prázdné, `hash_map::cend == hash_map::begin`.
+Konstovat obousměrný iterátor, který řeší umístění, které následuje poslední prvek v [hash_map](../standard-library/hash-map-class.md). Pokud `hash_map` je prázdný, `hash_map::cend == hash_map::begin`pak .
 
 ### <a name="remarks"></a>Poznámky
 
-`cend` slouží k otestování, zda iterátor dosáhl konce jeho `hash_map`.
+`cend`se používá k testování, zda iterátor dosáhl `hash_map`konce svého .
 
-Hodnota vrácená `cend` by neměla být zpětně odkazovaná.
+Hodnota vrácená `cend` by neměla být odkazována.
 
 ### <a name="example"></a>Příklad
 
@@ -451,12 +451,12 @@ int main( )
 The value of last element of hm1 is 30.
 ```
 
-## <a name="clear"></a>hash_map:: Clear
+## <a name="hash_mapclear"></a><a name="clear"></a>hash_map::vymazat
 
 > [!NOTE]
-> Toto rozhraní API je zastaralé. Alternativa je [Unordered_map třídy](../standard-library/unordered-map-class.md).
+> Toto rozhraní API je zastaralé. Alternativou je [třída unordered_map](../standard-library/unordered-map-class.md).
 
-Smaže všechny prvky hash_map.
+Vymaže všechny prvky hash_map.
 
 ```cpp
 void clear();
@@ -466,7 +466,7 @@ void clear();
 
 ### <a name="example"></a>Příklad
 
-Následující příklad ukazuje použití členské funkce hash_map:: Clear.
+Následující příklad ukazuje použití hash_map::clear členské funkce.
 
 ```cpp
 // hash_map_clear.cpp
@@ -501,12 +501,12 @@ The size of the hash_map is initially 2.
 The size of the hash_map after clearing is 0.
 ```
 
-## <a name="const_iterator"></a>hash_map:: const_iterator
+## <a name="hash_mapconst_iterator"></a><a name="const_iterator"></a>hash_map::const_iterator
 
 > [!NOTE]
-> Toto rozhraní API je zastaralé. Alternativa je [Unordered_map třídy](../standard-library/unordered-map-class.md).
+> Toto rozhraní API je zastaralé. Alternativou je [třída unordered_map](../standard-library/unordered-map-class.md).
 
-Typ, který poskytuje obousměrný iterátor, který může číst prvek **const** v hash_map.
+Typ, který poskytuje obousměrný iterátor, který může číst **const** prvek v hash_map.
 
 ```cpp
 typedef list<typename Traits::value_type, typename Traits::allocator_type>::const_iterator const_iterator;
@@ -514,24 +514,24 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
 
 ### <a name="remarks"></a>Poznámky
 
-Typ `const_iterator` nelze použít pro úpravu hodnoty prvku.
+Typ `const_iterator` nelze použít ke změně hodnoty prvku.
 
-`const_iterator` definované pomocí hash_map odkazuje na prvky, které jsou objekty [value_type](#value_type), které jsou typu `pair< const Key, Type >`, jejichž prvním členem je klíč k elementu a jehož druhým členem je mapované datum uchovávané prvkem.
+Definované `const_iterator` hash_map odkazuje na prvky, které jsou objekty [value_type](#value_type), který je typu `pair< const Key, Type >`, jehož první člen je klíčem k prvku a jehož druhý člen je mapované datum držené elementem.
 
-Chcete-li přesměrovat `const_iterator` `cIter` ukazovat na prvek v hash_map, použijte operátor `->`.
+Chcete-li `const_iterator` `cIter` odkazovat na odkaz ukazující na `->` prvek v hash_map, použijte operátor.
 
-Chcete-li získat přístup k hodnotě klíče pro element, použijte `cIter->first`, který je ekvivalentní `(*cIter).first`. Pro přístup k hodnotě mapovaného pole Datum elementu použijte `cIter->second`, který je ekvivalentní `(*cIter).second`.
+Chcete-li získat přístup k hodnotě `cIter->first`klíče pro `(*cIter).first`prvek, použijte , což je ekvivalentní . Chcete-li získat přístup k hodnotě mapované základny pro prvek, použijte `cIter->second`, což je ekvivalentní `(*cIter).second`.
 
 ### <a name="example"></a>Příklad
 
-Viz příklad pro [začátek](#begin) příkladu pomocí `const_iterator`.
+Viz příklad pro [začátek](#begin) pro příklad pomocí `const_iterator`.
 
-## <a name="const_pointer"></a>hash_map:: const_pointer
+## <a name="hash_mapconst_pointer"></a><a name="const_pointer"></a>hash_map::const_pointer
 
 > [!NOTE]
-> Toto rozhraní API je zastaralé. Alternativa je [Unordered_map třídy](../standard-library/unordered-map-class.md).
+> Toto rozhraní API je zastaralé. Alternativou je [třída unordered_map](../standard-library/unordered-map-class.md).
 
-Typ, který poskytuje ukazatel na prvek **const** v hash_map.
+Typ, který poskytuje ukazatel na **const** prvek v hash_map.
 
 ```cpp
 typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::const_pointer const_pointer;
@@ -539,16 +539,16 @@ typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::co
 
 ### <a name="remarks"></a>Poznámky
 
-Typ `const_pointer` nelze použít pro úpravu hodnoty prvku.
+Typ `const_pointer` nelze použít ke změně hodnoty prvku.
 
-Ve většině případů by měl být použit [iterátor](#iterator) pro přístup k prvkům v objektu hash_map.
+Ve většině případů [iterátor](#iterator) by měl být použit pro přístup k prvkům v hash_map objektu.
 
-## <a name="const_reference"></a>hash_map:: const_reference
+## <a name="hash_mapconst_reference"></a><a name="const_reference"></a>hash_map::const_reference
 
 > [!NOTE]
-> Toto rozhraní API je zastaralé. Alternativa je [Unordered_map třídy](../standard-library/unordered-map-class.md).
+> Toto rozhraní API je zastaralé. Alternativou je [třída unordered_map](../standard-library/unordered-map-class.md).
 
-Typ, který poskytuje odkaz na prvek **const** uložený v hash_map pro čtení a provádění operací **const** .
+Typ, který poskytuje odkaz na **prvek const** uložený v hash_map pro čtení a provádění operací **const.**
 
 ```cpp
 typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::const_reference const_reference;
@@ -599,12 +599,12 @@ The key of the first element in the hash_map is 1.
 The data value of the first element in the hash_map is 10.
 ```
 
-## <a name="const_reverse_iterator"></a>hash_map:: const_reverse_iterator
+## <a name="hash_mapconst_reverse_iterator"></a><a name="const_reverse_iterator"></a>hash_map::const_reverse_iterator
 
 > [!NOTE]
-> Toto rozhraní API je zastaralé. Alternativa je [Unordered_map třídy](../standard-library/unordered-map-class.md).
+> Toto rozhraní API je zastaralé. Alternativou je [třída unordered_map](../standard-library/unordered-map-class.md).
 
-Typ, který poskytuje obousměrný iterátor, který může číst libovolný prvek **const** v hash_map.
+Typ, který poskytuje obousměrný iterátor, který může číst libovolný **prvek const** v hash_map.
 
 ```cpp
 typedef list<typename Traits::value_type, typename Traits::allocator_type>::const_reverse)iterator const_reverse_iterator;
@@ -612,24 +612,24 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
 
 ### <a name="remarks"></a>Poznámky
 
-Typ `const_reverse_iterator` nemůže změnit hodnotu prvku a používá se k iterování skrze hash_map v opačném případě.
+Typ `const_reverse_iterator` nemůže změnit hodnotu prvku a používá se k iterátu přes hash_map v opačném směru.
 
-`const_reverse_iterator` definované pomocí hash_map Points na prvky, které jsou objekty [value_type](#value_type), které jsou typu `pair`\< **const Key, Type**>, jehož prvním členem je klíč k elementu a druhý člen je mapované datum uchovávané prvkem.
+Definované `const_reverse_iterator` hash_map odkazuje na prvky, které jsou objekty [value_type](#value_type), který je typu `pair` \< **const Key, Type**>, jehož první člen je klíčem k prvku a jehož druhý člen je mapované základny držené elementem.
 
-Chcete-li přesměrovat `const_reverse_iterator` `crIter` ukazovat na prvek v hash_map, použijte operátor **->** .
+Chcete-li `const_reverse_iterator` `crIter` odkazovat na odkaz ukazující na **->** prvek v hash_map, použijte operátor.
 
-Chcete-li získat přístup k hodnotě klíče pro element, použijte **nejprve**`crIter` -> , který je ekvivalentní (\* `crIter`) **. First**. Pro přístup k hodnotě mapovaného pole pro prvek použijte `crIter` -> **Second**, který je ekvivalentní (\* `crIter`). **nejprve**.
+Chcete-li získat přístup k hodnotě `crIter`  -> klíče pro prvek,\* `crIter`použijte **nejprve**, což je ekvivalentní ( **).** Chcete-li získat přístup k hodnotě mapované základny pro prvek, použijte `crIter`  ->  **second**, což je ekvivalentní (\* `crIter`). **nejprve**.
 
 ### <a name="example"></a>Příklad
 
-Příklad, jak deklarovat a použít `const_reverse_iterator`, naleznete v příkladu pro [rend](#rend) .
+Příklad pro [rend](#rend) naleznete v příkladu, jak `const_reverse_iterator`deklarovat a používat .
 
-## <a name="count"></a>hash_map:: Count
+## <a name="hash_mapcount"></a><a name="count"></a>hash_map::počet
 
 > [!NOTE]
-> Toto rozhraní API je zastaralé. Alternativa je [Unordered_map třídy](../standard-library/unordered-map-class.md).
+> Toto rozhraní API je zastaralé. Alternativou je [třída unordered_map](../standard-library/unordered-map-class.md).
 
-Vrátí počet prvků v hash_map, jejichž klíč odpovídá klíči určenému parametrem.
+Vrátí počet prvků v hash_map jehož klíč odpovídá klíči zadanému parametrem.
 
 ```cpp
 size_type count(const Key& key) const;
@@ -637,24 +637,24 @@ size_type count(const Key& key) const;
 
 ### <a name="parameters"></a>Parametry
 
-\ *klíčů*
-Hodnota klíče prvků, které mají být porovnány od hash_map.
+*Klíč*\
+Hodnota klíče prvků, které mají být spárovány z hash_map.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-1 Pokud hash_map obsahuje element, jehož klíč řazení odpovídá klíči parametru; 0, pokud hash_map neobsahuje element se shodným klíčem.
+1 pokud hash_map obsahuje prvek, jehož klíč řazení odpovídá klíči parametru; 0, pokud hash_map neobsahuje prvek s odpovídající klíč.
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí počet prvků *x* v rozsahu.
+Členská funkce vrátí počet prvků *x* v rozsahu
 
-\[ lower_bound (*klíč*), Upper_bound (*klíč*))
+\[lower_bound(*klíč*), upper_bound(*klíč*)
 
 což je 0 nebo 1 v případě hash_map, což je jedinečný asociativní kontejner.
 
 ### <a name="example"></a>Příklad
 
-Následující příklad ukazuje použití členské funkce hash_map:: Count.
+Následující příklad ukazuje použití hash_map::count členské funkce.
 
 ```cpp
 // hash_map_count.cpp
@@ -696,12 +696,12 @@ The number of elements in hm1 with a sort key of 2 is: 1.
 The number of elements in hm1 with a sort key of 3 is: 0.
 ```
 
-## <a name="crbegin"></a>hash_map:: crbegin –
+## <a name="hash_mapcrbegin"></a><a name="crbegin"></a>hash_map::crbegin
 
 > [!NOTE]
-> Toto rozhraní API je zastaralé. Alternativa je [Unordered_map třídy](../standard-library/unordered-map-class.md).
+> Toto rozhraní API je zastaralé. Alternativou je [třída unordered_map](../standard-library/unordered-map-class.md).
 
-Vrátí konstantní iterátor adresující první prvek v obráceném hash_map.
+Vrátí const iterator adresování první prvek v obrácené hash_map.
 
 ```cpp
 const_reverse_iterator crbegin() const;
@@ -709,15 +709,15 @@ const_reverse_iterator crbegin() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Const reverzní obousměrný iterátor, který adresuje první prvek v obráceném [hash_map](../standard-library/hash-map-class.md) nebo řeší, co byl posledním prvkem v neobráceném `hash_map`.
+Const reverzní obousměrný iterátor adresování první prvek v obrácené [hash_map](../standard-library/hash-map-class.md) nebo řešení toho, co bylo poslední prvek v unreverse `hash_map`.
 
 ### <a name="remarks"></a>Poznámky
 
-`crbegin` se používá s obráceným hash_map stejně jako [Begin](#begin) se používá s `hash_map`.
+`crbegin`se používá s obráceným [begin](#begin) hash_map stejně `hash_map`jako begin se používá s .
 
-S návratovou hodnotou `crbegin`nelze změnit objekt `hash_map`.
+S vrácenou `crbegin`hodnotou `hash_map` aplikace nelze objekt změnit.
 
-`crbegin` lze použít k iteraci `hash_map` zpět.
+`crbegin`lze použít k iterovat přes `hash_map` dozadu.
 
 ### <a name="example"></a>Příklad
 
@@ -748,12 +748,12 @@ int main( )
 The first element of the reversed hash_map hm1 is 3.
 ```
 
-## <a name="crend"></a>hash_map:: crend
+## <a name="hash_mapcrend"></a><a name="crend"></a>hash_map::crend
 
 > [!NOTE]
-> Toto rozhraní API je zastaralé. Alternativa je [Unordered_map třídy](../standard-library/unordered-map-class.md).
+> Toto rozhraní API je zastaralé. Alternativou je [třída unordered_map](../standard-library/unordered-map-class.md).
 
-Vrátí konstantní iterátor, který adresuje umístění následující po posledním prvku v obráceném hash_map.
+Vrátí const iterátor, který řeší umístění, které následuje poslední prvek v obráceném hash_map.
 
 ```cpp
 const_reverse_iterator crend() const;
@@ -761,17 +761,17 @@ const_reverse_iterator crend() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Const reverzní obousměrný iterátor, který adresuje umístění následující po posledním prvku v obráceném [hash_map](../standard-library/hash-map-class.md) (umístění, které předchází prvnímu prvku v neobráceném `hash_map`).
+Const reverzní obousměrný iterátor, který řeší umístění, které následuje poslední prvek v obrácené [masovém](../standard-library/hash-map-class.md) hash_map `hash_map`(umístění, které předcházelo první prvek v unreverse).
 
 ### <a name="remarks"></a>Poznámky
 
-`crend` se používá s obráceným `hash_map` stejně jako [hash_map:: end](#end) se používá s `hash_map`.
+`crend`se používá s `hash_map` obráceným stejně [jako hash_map::end](#end) se používá s `hash_map`.
 
-S návratovou hodnotou `crend`nelze změnit objekt `hash_map`.
+S vrácenou `crend`hodnotou `hash_map` aplikace nelze objekt změnit.
 
-`crend` lze použít k otestování, zda reverzní iterátor dosáhl konce jeho `hash_map`.
+`crend`lze použít k testování, zda reverzní iterátor dosáhl `hash_map`konce svého .
 
-Hodnota vrácená `crend` by neměla být zpětně odkazovaná.
+Hodnota vrácená `crend` by neměla být odkazována.
 
 ### <a name="example"></a>Příklad
 
@@ -803,12 +803,12 @@ int main( )
 The last element of the reversed hash_map hm1 is 3.
 ```
 
-## <a name="difference_type"></a>hash_map::d ifference_type
+## <a name="hash_mapdifference_type"></a><a name="difference_type"></a>hash_map::difference_type
 
 > [!NOTE]
-> Toto rozhraní API je zastaralé. Alternativa je [Unordered_map třídy](../standard-library/unordered-map-class.md).
+> Toto rozhraní API je zastaralé. Alternativou je [třída unordered_map](../standard-library/unordered-map-class.md).
 
-Typ se znaménkem typu Integer, který lze použít k reprezentaci počtu prvků hash_map v rozsahu mezi prvky, na které odkazují iterátory.
+Podepsaný typ celé číslo, který lze použít k reprezentaci počtu prvků hash_map v rozsahu mezi prvky, na které se iterátory upozorují.
 
 ```cpp
 typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::difference_type difference_type;
@@ -873,12 +873,12 @@ The keys of the mapped elements are: 1 2 3.
 The values of the mapped elements are: 10 20 20.
 ```
 
-## <a name="emplace"></a>hash_map:: emplace
+## <a name="hash_mapemplace"></a><a name="emplace"></a>hash_map::emplace
 
 > [!NOTE]
-> Toto rozhraní API je zastaralé. Alternativa je [Unordered_map třídy](../standard-library/unordered-map-class.md).
+> Toto rozhraní API je zastaralé. Alternativou je [třída unordered_map](../standard-library/unordered-map-class.md).
 
-Vloží prvek konstruovaný na místo do hash_map.
+Vloží prvek vytvořený na místě do hash_map.
 
 ```cpp
 template <class ValTy>
@@ -891,17 +891,17 @@ emplace(
 
 |Parametr|Popis|
 |-|-|
-|*počítává*|Hodnota, která se používá k přesunutí konstrukce elementu, který má být vložen do [hash_map](../standard-library/hash-map-class.md) , pokud `hash_map` již tento prvek neobsahuje (nebo obecněji je prvek, jehož klíč je ekvivalentně seřazen).|
+|*Val*|Hodnota slouží k přesunutí konstrukce prvek, který [hash_map](../standard-library/hash-map-class.md) má `hash_map` být vložen do hash_map pokud již obsahuje tento prvek (nebo obecněji prvek, jehož klíč je ekvivalentní objednané).|
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Členská funkce `emplace` vrátí dvojici, jejíž logická komponenta vrátí hodnotu true, pokud bylo provedeno vložení, a hodnotu false, pokud `hash_map` již obsahovala element, jehož klíč má ekvivalentní hodnotu v pořadí řazení a jehož komponenta iterátoru vrátí adresu, kam byl vložen nový prvek nebo kde byl prvek již umístěn.
+Členská `emplace` funkce vrátí dvojici, jejíž komponenta bool vrátí hodnotu true, pokud byl proveden vložení, a false, pokud `hash_map` již obsahoval prvek, jehož klíč měl v řazení ekvivalentní hodnotu a jehož komponenta iterátoru vrací adresu, kde byl vložen nový prvek nebo kde byl již umístěn.
 
-Chcete-li získat přístup k součásti iterátoru páru `pr` vráceného touto členskou funkcí, použijte `pr.first`a k jeho zpětnému odkazování použijte `*(pr.first)`. Chcete-li získat přístup ke komponentě **bool** páru `pr` vrácený touto členskou funkcí, použijte `pr.second`a k jejímu odkázání použijte `*(pr.second)`.
+Chcete-li získat přístup k součásti iterátoru `pr` `pr.first`dvojice vrácené touto členovou funkcí, použijte a pro její odkaz použijte `*(pr.first)`. Chcete-li získat přístup k `pr` **bool** součásti `pr.second`dvojice vrácené touto členovou funkcí, použijte a chcete-li na něj odkazovat, použijte `*(pr.second)`.
 
 ### <a name="remarks"></a>Poznámky
 
-[Hash_map:: value_type](#value_type) elementu je dvojice, takže hodnota elementu bude seřazená dvojice s první komponentou, která se rovná hodnotě klíče a druhá komponenta se rovná hodnotě dat elementu.
+[hash_map::value_type](#value_type) prvku je pár, takže hodnota prvku bude uspořádaný pár s první komponentou rovnající se hodnotě klíče a druhou komponentou rovnající se hodnotě dat prvku.
 
 ### <a name="example"></a>Příklad
 
@@ -932,12 +932,12 @@ After the emplace insertion, hm1 contains:
 1 => a
 ```
 
-## <a name="emplace_hint"></a>hash_map:: emplace_hint
+## <a name="hash_mapemplace_hint"></a><a name="emplace_hint"></a>hash_map::emplace_hint
 
 > [!NOTE]
-> Toto rozhraní API je zastaralé. Alternativa je [Unordered_map třídy](../standard-library/unordered-map-class.md).
+> Toto rozhraní API je zastaralé. Alternativou je [třída unordered_map](../standard-library/unordered-map-class.md).
 
-Vloží prvek konstruovaný na místo do hash_map s pomocným parametrem umístění.
+Vloží prvek vytvořený na místě do hash_map s nápovědou k umístění.
 
 ```cpp
 template <class ValTy>
@@ -950,18 +950,18 @@ iterator emplace_hint(
 
 |Parametr|Popis|
 |-|-|
-|*počítává*|Hodnota, která se používá k přesunutí konstrukce elementu, který má být vložen do [hash_map](../standard-library/hash-map-class.md) , pokud `hash_map` již tento prvek neobsahuje (nebo obecněji je prvek, jehož klíč je ekvivalentně seřazen).|
-|*_Where*|Nápověda týkající se místa, kde lze začít hledat správný bod vložení.|
+|*Val*|Hodnota slouží k přesunutí konstrukce prvek, který [hash_map](../standard-library/hash-map-class.md) má `hash_map` být vložen do hash_map pokud již obsahuje tento prvek (nebo obecněji prvek, jehož klíč je ekvivalentní objednané).|
+|*_Where*|Nápověda týkající se místa, kde chcete začít hledat správný bod vložení.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Členská funkce [hash_multimap:: emplace](../standard-library/hash-multimap-class.md#emplace) vrací iterátor, který odkazuje na pozici, kam byl nový element vložen do `hash_map`nebo kde se nachází existující element s ekvivalentním řazením.
+Členská funkce [hash_multimap::emplace](../standard-library/hash-multimap-class.md#emplace) vrátí iterátor, který odkazuje na `hash_map`pozici, kde byl vložen nový prvek do , nebo kde je umístěn existující prvek s ekvivalentním řazením.
 
 ### <a name="remarks"></a>Poznámky
 
-[Hash_map:: value_type](#value_type) elementu je dvojice, takže hodnota elementu bude seřazená dvojice s první komponentou, která se rovná hodnotě klíče a druhá komponenta se rovná hodnotě dat elementu.
+[hash_map::value_type](#value_type) prvku je pár, takže hodnota prvku bude uspořádaný pár s první komponentou rovnající se hodnotě klíče a druhou komponentou rovnající se hodnotě dat prvku.
 
-Vložení se může vyskytnout v konstantním čase, namísto logaritmické doby, pokud se kurzor okamžitě *_Where*.
+Vložení může dojít v amortizované konstantní čas, namísto logaritmického času, pokud kurzor bezprostředně následuje *_Where*.
 
 ### <a name="example"></a>Příklad
 
@@ -992,12 +992,12 @@ After the emplace insertion, hm1 contains:
 1 => a
 ```
 
-## <a name="empty"></a>hash_map:: Empty
+## <a name="hash_mapempty"></a><a name="empty"></a>hash_map::prázdný
 
 > [!NOTE]
-> Toto rozhraní API je zastaralé. Alternativa je [Unordered_map třídy](../standard-library/unordered-map-class.md).
+> Toto rozhraní API je zastaralé. Alternativou je [třída unordered_map](../standard-library/unordered-map-class.md).
 
-Testuje, zda je hash_map prázdné.
+Testuje, pokud je hash_map prázdný.
 
 ```cpp
 bool empty() const;
@@ -1005,7 +1005,7 @@ bool empty() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**true** , pokud je hash_map prázdné. **false** , pokud je hash_map neprázdné.
+**true,** pokud je hash_map prázdná; **false,** pokud hash_map není prázdný.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1043,12 +1043,12 @@ The hash_map hm1 is not empty.
 The hash_map hm2 is empty.
 ```
 
-## <a name="end"></a>hash_map:: end
+## <a name="hash_mapend"></a><a name="end"></a>hash_map::konec
 
 > [!NOTE]
-> Toto rozhraní API je zastaralé. Alternativa je [Unordered_map třídy](../standard-library/unordered-map-class.md).
+> Toto rozhraní API je zastaralé. Alternativou je [třída unordered_map](../standard-library/unordered-map-class.md).
 
-Vrátí iterátor, který adresuje umístění následující po posledním prvku v hash_map.
+Vrátí iterátor, který řeší umístění, které následuje poslední prvek v hash_map.
 
 ```cpp
 const_iterator end() const;
@@ -1058,13 +1058,13 @@ iterator end();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Obousměrný iterátor, který adresuje umístění následující po posledním prvku v hash_map. Pokud je hash_map prázdné, pak hash_map:: end = = hash_map:: begin.
+Obousměrný iterátor, který řeší umístění, které následuje poslední prvek v hash_map. Pokud je hash_map prázdný, pak hash_map::end == hash_map::begin.
 
 ### <a name="remarks"></a>Poznámky
 
-`end` slouží k otestování, zda iterátor dosáhl konce jeho hash_map.
+`end`se používá k testování, zda iterátor dosáhl konce svého hash_map.
 
-Hodnota vrácená `end` by neměla být zpětně odkazovaná.
+Hodnota vrácená `end` by neměla být odkazována.
 
 ### <a name="example"></a>Příklad
 
@@ -1114,12 +1114,12 @@ The value of last element of hm1 is 30.
 The value of last element of hm1 is now 20.
 ```
 
-## <a name="equal_range"></a>hash_map:: equal_range
+## <a name="hash_mapequal_range"></a><a name="equal_range"></a>hash_map::equal_range
 
 > [!NOTE]
-> Toto rozhraní API je zastaralé. Alternativa je [Unordered_map třídy](../standard-library/unordered-map-class.md).
+> Toto rozhraní API je zastaralé. Alternativou je [třída unordered_map](../standard-library/unordered-map-class.md).
 
-Vrátí dvojici iterátorů v uvedeném pořadí na první prvek v hash_map s klíčem, který je větší než zadaný klíč a na první prvek v hash_map s klíčem, který je roven nebo větší než klíč.
+Vrátí dvojici iterátorů respektive první prvek v hash_map s klíčem, který je větší než zadaný klíč a první prvek v hash_map s klíčem, který je roven nebo větší než klíč.
 
 ```cpp
 pair <const_iterator, const_iterator> equal_range (const Key& key) const;
@@ -1129,14 +1129,14 @@ pair <iterator, iterator> equal_range (const Key& key);
 
 ### <a name="parameters"></a>Parametry
 
-\ *klíčů*
-Hodnota klíče argumentu, která má být porovnána s klíčem řazení prvku z vyhledaného hash_map.
+*Klíč*\
+Hodnota klíče argumentu, která má být porovnána s klíčem řazení prvku z hash_map prohledávány.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pár iterátorů, jako je první [lower_bound](#lower_bound) klíče a druhý je [Upper_bound](#upper_bound) klíče.
+Dvojice iterátorů tak, že první je [lower_bound](#lower_bound) klíče a druhý je [upper_bound](#upper_bound) klíče.
 
-Chcete-li získat přístup k prvnímu iterátoru páru `pr` vráceném členskou funkcí, použijte `pr`. **nejprve** a pro zpětnou vazbu dolního iterátoru použijte \*(`pr`. **první**). Pro přístup k druhému iterátoru páru `pr` vráceném členskou funkcí použijte `pr`. **sekundy** a pro zpětnou vazbu horního iterátoru, použijte \*(`pr`. **sekundy**).
+Chcete-li získat přístup k prvnímu iterátoru `pr` `pr`dvojice vrácené členovou funkcí, použijte . **nejprve** a dereference dolní mez iterátoru, použití \*( `pr`. **první**). Chcete-li získat přístup k druhému iterátoru `pr` `pr`dvojice vrácené členovou funkcí, použijte . **a** pro dereferenci horní mez iterátoru, použití \*( `pr`. **za druhé**).
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1201,12 +1201,12 @@ matching the 2nd element of the pair returned by equal_range( 2 ).
 The hash_map hm1 doesn't have an element with a key less than 40.
 ```
 
-## <a name="erase"></a>hash_map:: Erase
+## <a name="hash_maperase"></a><a name="erase"></a>hash_map::vymazat
 
 > [!NOTE]
-> Toto rozhraní API je zastaralé. Alternativa je [Unordered_map třídy](../standard-library/unordered-map-class.md).
+> Toto rozhraní API je zastaralé. Alternativou je [třída unordered_map](../standard-library/unordered-map-class.md).
 
-Odebere prvek nebo rozsah prvků v hash_map ze zadané pozice nebo odstraní prvky, které odpovídají zadanému klíči.
+Odebere prvek nebo rozsah prvků v hash_map ze zadaných pozic nebo odebere prvky, které odpovídají zadanému klíči.
 
 ```cpp
 iterator erase(iterator _Where);
@@ -1221,28 +1221,28 @@ size_type erase(const key_type& key);
 *_Where*\
 Pozice prvku, který má být odebrán z hash_map.
 
-*první*\
-Pozice prvního prvku byla odebrána z hash_map.
+*První*\
+Pozice prvního prvku odebrána z hash_map.
 
-*poslední*\
-Pozice bezprostředně za posledním prvkem odebraným z hash_map.
+*Poslední*\
+Umístěte těsně za poslední prvek odstraněný z hash_map.
 
-\ *klíčů*
+*Klíč*\
 Hodnota klíče prvků, které mají být odebrány z hash_map.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pro první dvě členské funkce obousměrný iterátor, který určuje první prvek zbývající za odebranými prvky, nebo ukazatel na konec hash_map, pokud žádný takový prvek neexistuje.
+Pro první dvě členské funkce obousměrný iterátor, který označuje první prvek zbývající za všechny prvky odebrány nebo ukazatel na konec hash_map pokud žádný takový prvek neexistuje.
 
-Třetí členská funkce vrátí počet prvků, které byly odebrány z hash_map.
+Pro třetí členskou funkci vrátí počet prvků, které byly odebrány z hash_map.
 
 ### <a name="remarks"></a>Poznámky
 
-Členské funkce nikdy nevyvolají výjimku.
+Členské funkce nikdy vyvolat výjimku.
 
 ### <a name="example"></a>Příklad
 
-Následující příklad ukazuje použití členské funkce hash_map:: Erase.
+Následující příklad ukazuje použití hash_map::erase členské funkce.
 
 ```cpp
 // hash_map_erase.cpp
@@ -1325,12 +1325,12 @@ After another element with a key equal to that
 of the 2nd element is deleted, the hash_map hm3 is: 0 3.
 ```
 
-## <a name="find"></a>hash_map:: Find
+## <a name="hash_mapfind"></a><a name="find"></a>hash_map::najít
 
 > [!NOTE]
-> Toto rozhraní API je zastaralé. Alternativa je [Unordered_map třídy](../standard-library/unordered-map-class.md).
+> Toto rozhraní API je zastaralé. Alternativou je [třída unordered_map](../standard-library/unordered-map-class.md).
 
-Vrátí iterátor adresující umístění elementu v hash_map, který má klíč shodný se zadaným klíčem.
+Vrátí iterátor adresující umístění prvku v hash_map, který má klíč ekvivalentní zadanému klíči.
 
 ```cpp
 iterator find(const Key& key);
@@ -1340,18 +1340,18 @@ const_iterator find(const Key& key) const;
 
 ### <a name="parameters"></a>Parametry
 
-\ *klíčů*
-Hodnota klíče, která má být porovnána klíčem řazení prvku z hledaného hash_map.
+*Klíč*\
+Hodnota klíče, která má být porovnána s klíčem řazení prvku z hash_map prohledávány.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Iterátor, který adresuje umístění elementu se zadaným klíčem, nebo umístění, které následuje po posledním prvku v hash_map, pokud se pro klíč nenajde shoda.
+Iterátor, který řeší umístění prvku se zadaným klíčem nebo umístění, které následuje poslední prvek v hash_map pokud pro klíč není nalezena žádná shoda.
 
 ### <a name="remarks"></a>Poznámky
 
-`find` Vrátí iterátor, který adresuje prvek v hash_map, jehož klíč řazení je ekvivalentem klíče argumentu v binárním predikátu, který vystaví řazení na základě vztahu menšího, než je srovnatelnost.
+`find`vrátí iterátor, který řeší prvek v hash_map jehož klíč řazení je ekvivalentní klíč argumentu pod binární predikát, který indukuje řazení na základě méně než vztah srovnatelnosti.
 
-Pokud je vrácená hodnota `find` přiřazená k [const_iterator](#const_iterator), objekt hash_map nelze upravit. Pokud je vrácená hodnota `find` přiřazena [iterátoru](#iterator), lze objekt hash_map upravit.
+Pokud `find` je vrácená hodnota přiřazena [const_iterator](#const_iterator), nelze objekt hash_map změnit. Pokud `find` je vrácená hodnota přiřazena [iterátoru](#iterator), lze hash_map objekt změnit
 
 ### <a name="example"></a>Příklad
 
@@ -1404,12 +1404,12 @@ The hash_map hm1 doesn't have an element with a key of 4.
 The element of hm1 with a key matching that of the last element is: 30.
 ```
 
-## <a name="get_allocator"></a>hash_map:: get_allocator
+## <a name="hash_mapget_allocator"></a><a name="get_allocator"></a>hash_map::get_allocator
 
 > [!NOTE]
-> Toto rozhraní API je zastaralé. Alternativa je [Unordered_map třídy](../standard-library/unordered-map-class.md).
+> Toto rozhraní API je zastaralé. Alternativou je [třída unordered_map](../standard-library/unordered-map-class.md).
 
-Vrátí kopii objektu přidělování, která se používá k vytvoření hash_map.
+Vrátí kopii objektu alokátoru použitého ke vytvoření hash_map.
 
 ```cpp
 Allocator get_allocator() const;
@@ -1421,7 +1421,7 @@ Alokátor používaný hash_map.
 
 ### <a name="remarks"></a>Poznámky
 
-Přidělování pro třídu hash_map určují, jak Třída spravuje úložiště. Výchozí přidělující třídy kontejnerů C++ standardní knihovny jsou dostačující pro většinu programovacích potřeb. Psaní a používání vlastního třídy přidělování je pokročilým C++ tématem.
+Alokátory pro třídu hash_map určují, jak třída spravuje úložiště. Výchozí alokátory dodávané s třídami kontejneru standardní knihovny jazyka C++ jsou dostatečné pro většinu potřeb programování. Psaní a používání vlastní třídy přidělování je pokročilé téma jazyka C++.
 
 ### <a name="example"></a>Příklad
 
@@ -1480,12 +1480,12 @@ int main( )
 }
 ```
 
-## <a name="hash_map"></a>hash_map:: hash_map
+## <a name="hash_maphash_map"></a><a name="hash_map"></a>hash_map::hash_map
 
 > [!NOTE]
-> Toto rozhraní API je zastaralé. Alternativa je [Unordered_map třídy](../standard-library/unordered-map-class.md).
+> Toto rozhraní API je zastaralé. Alternativou je [třída unordered_map](../standard-library/unordered-map-class.md).
 
-Vytvoří hash_map, který je prázdný nebo je kopií všech nebo částí jiných hash_map.
+Vytvoří hash_map, která je prázdná nebo je kopií celého jiného hash_map nebo jeho části.
 
 ```cpp
 hash_map();
@@ -1535,33 +1535,33 @@ hash_map(
 
 |Parametr|Popis|
 |-|-|
-|*VŠ*|Třída přidělování úložiště, která se má použít pro tento objekt hash_map, který má výchozí hodnotu `Allocator`.|
-|*Zajištění*|Funkce porovnání typu const `Traits` slouží k uspořádání prvků v hash_map, které mají výchozí hodnotu `hash_compare`.|
-|*Kliknutím*|Hash_map, ze kterého má být vytvořená mapa kopie.|
-|*První*|Pozice prvního prvku v rozsahu prvků, které mají být zkopírovány.|
-|*Posledního*|Pozice prvního prvku mimo rozsah prvků, které mají být zkopírovány.|
-|*IList*|Initializer_list|
+|*Al*|Třída alokátoru úložiště, která má být použita `Allocator`pro tento hash_map objekt, který je ve výchozím nastavení .|
+|*Comp*|Funkce porovnání typu const `Traits` slouží k pořadí prvků v hash_map, který výchozí . `hash_compare`|
+|*Právo*|hash_map, které je vytvořená mapa kopie.|
+|*První*|Umístění prvního prvku v rozsahu prvků, které mají být zkopírovány.|
+|*Poslední*|Pozice první prvek mimo rozsah prvků, které mají být zkopírovány.|
+|*Ilist*|Initializer_list|
 
 ### <a name="remarks"></a>Poznámky
 
-Všechny konstruktory ukládají typ objektu přidělování, který spravuje úložiště paměti pro hash_map a může být později vrácen voláním [get_allocator](#get_allocator). Parametr allocator je často v deklaraci třídy vynechán a makra předběžného zpracování jsou použita k nahrazení alternativních alokátorů.
+Všechny konstruktory uložit typ objektu alokátoru, který spravuje úložiště paměti pro hash_map a může být později vrácena voláním [get_allocator](#get_allocator). Parametr allocator je často v deklaraci třídy vynechán a makra předběžného zpracování jsou použita k nahrazení alternativních alokátorů.
 
 Všechny konstruktory inicializují své hash_map.
 
-Všechny konstruktory ukládají objekt funkce typu `Traits`, který se používá k navázání objednávky mezi klíči hash_map a které mohou být později vráceny voláním [key_comp](#key_comp).
+Všechny konstruktory uložit objekt `Traits` funkce typu, který se používá k vytvoření pořadí mezi klíči hash_map a které mohou být později vráceny voláním [key_comp](#key_comp).
 
-První tři konstruktory určují prázdné počáteční hash_map, navíc druhý určuje typ funkce porovnání (*comp*), která se použije při stanovení pořadí prvků, a třetí explicitně určuje typ přidělujícího objektu (*Al*), který se má použít. Klíčové slovo **Explicit** potlačí určité druhy automatických převodů typu.
+První tři konstruktory určují prázdnou počáteční hash_map, navíc druhá určuje typ funkce porovnání (*Comp),* která má být použita při stanovení pořadí prvků a třetí explicitně určuje typ alokátoru (*Al*), který má být použit. Klíčové slovo **explicitní** potlačí určité druhy automatického převodu typu.
 
-Čtvrtý konstruktor určuje kopii hash_map *vpravo*.
+Čtvrtý konstruktor určuje kopii hash_map *Right*.
 
-Následující tři konstruktory kopírují rozsah `[First, Last)` hash_map se zvýšením explicitního určení typu funkce porovnání třídy `Traits` a přidělování.
+Další tři konstruktory zkopírují rozsah `[First, Last)` hash_map s rostoucí explicitní při určování typu `Traits` funkce porovnání třídy a alokátoru.
 
-Poslední konstruktor přesune *pravé*hash_map.
+Poslední konstruktor přesune hash_map *Doprava*.
 
-## <a name="insert"></a>hash_map:: INSERT
+## <a name="hash_mapinsert"></a><a name="insert"></a>hash_map::vložit
 
 > [!NOTE]
-> Toto rozhraní API je zastaralé. Alternativa je [Unordered_map třídy](../standard-library/unordered-map-class.md).
+> Toto rozhraní API je zastaralé. Alternativou je [třída unordered_map](../standard-library/unordered-map-class.md).
 
 Vloží prvek nebo rozsah prvků do hash_map.
 
@@ -1593,28 +1593,28 @@ iterator insert(
 
 |Parametr|Popis|
 |-|-|
-|*počítává*|Hodnota prvku, který má být vložen do hash_map, pokud hash_map již tento prvek neobsahuje (nebo všeobecně obecně, element, jehož klíč je ekvivalentně seřazen).|
-|*_Where*|Nápověda týkající se místa, kde lze začít hledat správný bod vložení.|
-|*první*|Pozice prvního prvku, který má být zkopírován z hash_map.|
-|*posledního*|Pozice bezprostředně za posledním prvkem, který má být zkopírován z hash_map.|
+|*Val*|Hodnota prvku, který má být vložen do hash_map, pokud hash_map již obsahuje tento prvek (nebo obecněji prvek, jehož klíč je rovnocenně objednán).|
+|*_Where*|Nápověda týkající se místa, kde chcete začít hledat správný bod vložení.|
+|*První*|Pozice prvního prvku, který má být zkopírován z hash_map.|
+|*Poslední*|Pozice těsně za poslední prvek, který má být zkopírován z hash_map.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
-První `insert` členská funkce vrátí dvojici, jejíž logická komponenta vrátí hodnotu true, pokud bylo provedeno vložení, a hodnotu false, pokud hash_map již obsahovala element, jehož klíč měl ekvivalentní hodnotu v pořadí řazení a jehož komponenta iterátoru vrátí adresu, kam byl vložen nový prvek nebo kde již byl prvek umístěn.
+První `insert` členská funkce vrátí dvojici, jejíž komponenta bool vrátí hodnotu true, pokud byl proveden vložení, a false, pokud hash_map již obsahoval prvek, jehož klíč měl ekvivalentní hodnotu v řazení a jehož komponenta iterátoru vrátí adresu, kde byl vložen nový prvek nebo kde byl již umístěn prvek.
 
-Pro přístup k součásti iterátoru páru `pr` vrácené touto členskou funkcí použijte `pr`. **nejprve**a k jejímu odkázání použijte \*(`pr`. **první**). Chcete-li získat přístup ke komponentě **bool** páru `pr` vrácená touto členskou funkcí, použijte `pr`. za **druhé**a pro její odkázání použijte \*(`pr`. **sekundy**).
+Chcete-li získat přístup k součásti iterátoru `pr` `pr`dvojice vrácené touto členovou funkcí, použijte . **a**chcete-li na něj \* `pr`odkazovat, použijte ( . **první**). Chcete-li získat přístup k `pr` **bool** součásti `pr`dvojice vrácené touto člennou funkcí, použijte . **a**pro dereferencování použijte \* `pr`( . **za druhé**).
 
-Druhá členská funkce `insert`, verze nápovědy, vrátí iterátor, který odkazuje na pozici, kam byl nový prvek vložen do hash_map.
+Druhá `insert` členská funkce, verze nápovědy, vrátí iterátor, který odkazuje na pozici, kde byl vložen nový prvek do hash_map.
 
-Poslední dvě `insert` členské funkce se chovají stejně jako první dvě, s tím rozdílem, že přesouvá konstrukce vložené hodnoty.
+Poslední dvě `insert` členské funkce se chovají stejně jako první dvě, s tím rozdílem, že přesunou tahovku vvloženou hodnotu.
 
 ### <a name="remarks"></a>Poznámky
 
-[Value_type](../standard-library/map-class.md#value_type) prvku je dvojice, takže hodnota elementu bude seřazená dvojice s první komponentou rovnající se hodnotě klíče a druhá komponenta se rovná hodnotě dat elementu.
+Value_type [value_type](../standard-library/map-class.md#value_type) prvku je pár, takže hodnota prvku bude uspořádaný pár s první komponentou rovnající se hodnotě klíče a druhou komponentou rovnající se hodnotě dat prvku.
 
-Vložení se může vyskytnout v konstantním konstantním čase pro verzi pomocného parametru INSERT, namísto logaritmické doby, pokud se bod vložení hned *_Where*.
+Vložení může dojít v amortizované konstantní čas pro nápovědu verzi vložit, namísto logaritmického času, pokud kurzor bezprostředně následuje *_Where*.
 
-Třetí členská funkce vloží sekvenci hodnot prvků do hash_map odpovídající každému prvku, který je adresován v rozsahu *[First, Last)* zadané sady.
+Třetí členská funkce vloží posloupnost hodnot prvků do hash_map odpovídající každému prvku adresovanému iterátorem v rozsahu *[First, Last)* zadané sady.
 
 ### <a name="example"></a>Příklad
 
@@ -1724,10 +1724,10 @@ After the move insertion, hm4 contains:
 2 => b
 ```
 
-## <a name="iterator"></a>hash_map:: iterátor
+## <a name="hash_mapiterator"></a><a name="iterator"></a>hash_map::iterátor
 
 > [!NOTE]
-> Toto rozhraní API je zastaralé. Alternativa je [Unordered_map třídy](../standard-library/unordered-map-class.md).
+> Toto rozhraní API je zastaralé. Alternativou je [třída unordered_map](../standard-library/unordered-map-class.md).
 
 Typ, který poskytuje obousměrný iterátor, který může číst nebo upravovat libovolný prvek v hash_map.
 
@@ -1737,24 +1737,24 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::iter
 
 ### <a name="remarks"></a>Poznámky
 
-`iterator` definované pomocí hash_map Points na prvky, které jsou objekty [value_type](#value_type), které jsou typu **páry\<const key, Type >,** jehož prvním členem je klíč k elementu a druhý člen je mapovaným argumentem, který je držen prvkem.
+Definované `iterator` hash_map odkazuje na prvky, které jsou objekty [value_type](#value_type), který je typu **dvojice\<const Key, Type>,** jehož první člen je klíčem k prvku a jehož druhý člen je mapované základny držené elementem.
 
-Chcete-li přesměrovat **iterátor**`Iter` odkazovat na prvek v multimap, použijte operátor `->`.
+Chcete-li odkazovat **na iterátor** `Iter` ukazující na prvek `->` v multimap, použijte operátor.
 
-Chcete-li získat přístup k hodnotě klíče pro element, použijte **nejprve**`Iter` -> , který je ekvivalentní (\* `Iter`). **nejprve**. Pro přístup k hodnotě mapovaného pole pro prvek použijte `Iter` -> **Second**, který je ekvivalentní (\* `Iter`). **sekunda**.
+Chcete-li získat přístup k hodnotě `Iter`  -> klíče pro prvek, použijte **nejprve**, což je ekvivalentní (\* `Iter`). **nejprve**. Chcete-li získat přístup k hodnotě mapované základny pro prvek, použijte `Iter`  ->  **second**, což je ekvivalentní (\* `Iter`). **druhé**.
 
-Typ `iterator` lze použít pro úpravu hodnoty prvku.
+Typ `iterator` lze změnit hodnotu prvku.
 
 ### <a name="example"></a>Příklad
 
-Viz příklad pro [začátek](#begin) pro příklad, jak deklarovat a použít `iterator`.
+Viz příklad pro [začátek](#begin) pro příklad, `iterator`jak deklarovat a používat .
 
-## <a name="key_comp"></a>hash_map:: key_comp
+## <a name="hash_mapkey_comp"></a><a name="key_comp"></a>hash_map::key_comp
 
 > [!NOTE]
-> Toto rozhraní API je zastaralé. Alternativa je [Unordered_map třídy](../standard-library/unordered-map-class.md).
+> Toto rozhraní API je zastaralé. Alternativou je [třída unordered_map](../standard-library/unordered-map-class.md).
 
-Načte kopii objektu porovnání, která se používá k řazení klíčů v hash_map.
+Načte kopii objektu porovnání použitého k objednání klíčů v hash_map.
 
 ```cpp
 key_compare key_comp() const;
@@ -1762,15 +1762,15 @@ key_compare key_comp() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí objekt funkce, který hash_map používá k seřazení jeho prvků.
+Vrátí objekt funkce, který hash_map používá k objednání jeho prvků.
 
 ### <a name="remarks"></a>Poznámky
 
-Uložený objekt definuje členskou funkci.
+Uložený objekt definuje členovou funkci
 
-**bool – operátor**( **const Key &** `left` **, const Key &** `right`);
+**bool operátor** **(const Key&** `left` **, const Key&);** `right`
 
-Vrátí **hodnotu true** , pokud `left` předchází a není rovna `right` v pořadí řazení.
+, který `left` vrátí **hodnotu true,** pokud předchází a není rovna `right` v pořadí řazení.
 
 ### <a name="example"></a>Příklad
 
@@ -1825,12 +1825,12 @@ int main( )
 }
 ```
 
-## <a name="key_compare"></a>hash_map:: key_compare
+## <a name="hash_mapkey_compare"></a><a name="key_compare"></a>hash_map::key_compare
 
 > [!NOTE]
-> Toto rozhraní API je zastaralé. Alternativa je [Unordered_map třídy](../standard-library/unordered-map-class.md).
+> Toto rozhraní API je zastaralé. Alternativou je [třída unordered_map](../standard-library/unordered-map-class.md).
 
-Typ, který poskytuje objekt funkce, který může porovnat dva klíče řazení pro určení relativního pořadí dvou prvků v mapě.
+Typ, který poskytuje objekt funkce, který může porovnat dva klíče řazení k určení relativní pořadí dvou prvků v mapě.
 
 ```cpp
 typedef Traits key_compare;
@@ -1838,20 +1838,20 @@ typedef Traits key_compare;
 
 ### <a name="remarks"></a>Poznámky
 
-`key_compare` je synonymum pro parametr šablony `Traits`.
+`key_compare`je synonymem pro `Traits`parametr šablony .
 
-Další informace o `Traits` naleznete v tématu [hash_map třídy](../standard-library/hash-map-class.md) .
+Další informace `Traits` naleznete v tématu [hash_map Třída.](../standard-library/hash-map-class.md)
 
 ### <a name="example"></a>Příklad
 
-Příklad, jak deklarovat a používat `key_compare`, naleznete v tématu příklad pro [key_comp](#key_comp) .
+Příklad pro [key_comp](#key_comp) naleznete příklad deklarace `key_compare`a používání .
 
-## <a name="key_type"></a>hash_map:: key_type
+## <a name="hash_mapkey_type"></a><a name="key_type"></a>hash_map::key_type
 
 > [!NOTE]
-> Toto rozhraní API je zastaralé. Alternativa je [Unordered_map třídy](../standard-library/unordered-map-class.md).
+> Toto rozhraní API je zastaralé. Alternativou je [třída unordered_map](../standard-library/unordered-map-class.md).
 
-Typ popisuje objekt třídicího klíče, který představuje jednotlivé prvky hash_map.
+Typ popisuje objekt klíče řazení, který představuje každý prvek hash_map.
 
 ```cpp
 typedef Key key_type;
@@ -1859,20 +1859,20 @@ typedef Key key_type;
 
 ### <a name="remarks"></a>Poznámky
 
-`key_type` je synonymum pro parametr šablony `Key`.
+`key_type`je synonymem pro `Key`parametr šablony .
 
-Další informace o `Key`naleznete v části poznámky v tématu [hash_map třídy](../standard-library/hash-map-class.md) .
+Další informace `Key`naleznete v části Poznámky v tématu [hash_map třída.](../standard-library/hash-map-class.md)
 
 ### <a name="example"></a>Příklad
 
-Příklad, jak deklarovat a používat `key_type`, naleznete v tématu příklad pro [value_type](#value_type) .
+Příklad pro [value_type](#value_type) například, jak deklarovat a používat `key_type`.
 
-## <a name="lower_bound"></a>hash_map:: lower_bound
+## <a name="hash_maplower_bound"></a><a name="lower_bound"></a>hash_map::lower_bound
 
 > [!NOTE]
-> Toto rozhraní API je zastaralé. Alternativa je [Unordered_map třídy](../standard-library/unordered-map-class.md).
+> Toto rozhraní API je zastaralé. Alternativou je [třída unordered_map](../standard-library/unordered-map-class.md).
 
-Vrátí iterátor na první prvek v hash_map s hodnotou klíče, která je větší nebo rovna hodnotě zadaného klíče.
+Vrátí iterátor prvnímu prvku v hash_map s hodnotou klíče, která je rovna nebo větší než hodnota zadaného klíče.
 
 ```cpp
 iterator lower_bound(const Key& key);
@@ -1882,14 +1882,14 @@ const_iterator lower_bound(const Key& key) const;
 
 ### <a name="parameters"></a>Parametry
 
-\ *klíčů*
-Hodnota klíče argumentu, která má být porovnána s klíčem řazení prvku z vyhledaného hash_map.
+*Klíč*\
+Hodnota klíče argumentu, která má být porovnána s klíčem řazení prvku z hash_map prohledávány.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-[Iterátor](#iterator) nebo [const_iterator](#const_iterator) , které řeší umístění elementu v hash_map, který má klíč, který je roven nebo větší než klíč argumentu nebo který řeší umístění, které následuje po posledním prvku v hash_map, pokud se pro klíč nenašly žádné shody.
+[Iterátor](#iterator) nebo [const_iterator,](#const_iterator) který řeší umístění prvku v hash_map, který s klíčem, který je roven nebo větší než klíč argumentu, nebo který řeší umístění, které následuje poslední prvek v hash_map pokud pro klíč není nalezena žádná shoda.
 
-Pokud je vrácená hodnota `lower_bound` přiřazená k `const_iterator`, objekt hash_map nelze upravit. Pokud je vrácená hodnota `lower_bound` přiřazena k `iterator`, lze objekt hash_map upravit.
+Pokud `lower_bound` je vrácená hodnota `const_iterator`přiřazena aplikaci , nelze objekt hash_map změnit. Pokud `lower_bound` je vrácená hodnota `iterator`přiřazena , lze změnit objekt hash_map.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -1944,10 +1944,10 @@ The hash_map hm1 doesn't have an element with a key of 4.
 The element of hm1 with a key matching that of the last element is: 30.
 ```
 
-## <a name="mapped_type"></a>hash_map:: mapped_type
+## <a name="hash_mapmapped_type"></a><a name="mapped_type"></a>hash_map::mapped_type
 
 > [!NOTE]
-> Toto rozhraní API je zastaralé. Alternativa je [Unordered_map třídy](../standard-library/unordered-map-class.md).
+> Toto rozhraní API je zastaralé. Alternativou je [třída unordered_map](../standard-library/unordered-map-class.md).
 
 Typ, který představuje datový typ uložený v hash_map.
 
@@ -1957,18 +1957,18 @@ typedef Type mapped_type;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ `mapped_type` je synonymum pro parametr šablony `Type`.
+Typ `mapped_type` je synonymem pro `Type`parametr šablony .
 
-Další informace o `Type` naleznete v tématu [hash_map třídy](../standard-library/hash-map-class.md) .
+Další informace `Type` naleznete v tématu [hash_map Třída.](../standard-library/hash-map-class.md)
 
 ### <a name="example"></a>Příklad
 
-Příklad, jak deklarovat a používat `key_type`, naleznete v tématu příklad pro [value_type](#value_type) .
+Příklad pro [value_type](#value_type) například, jak deklarovat a používat `key_type`.
 
-## <a name="max_size"></a>hash_map:: max_size
+## <a name="hash_mapmax_size"></a><a name="max_size"></a>hash_map::max_size
 
 > [!NOTE]
-> Toto rozhraní API je zastaralé. Alternativa je [Unordered_map třídy](../standard-library/unordered-map-class.md).
+> Toto rozhraní API je zastaralé. Alternativou je [třída unordered_map](../standard-library/unordered-map-class.md).
 
 Vrátí maximální délku hash_map.
 
@@ -2004,12 +2004,12 @@ int main( )
 }
 ```
 
-## <a name="op_at"></a>hash_map:: operator [] – operátor
+## <a name="hash_mapoperator"></a><a name="op_at"></a>hash_map::operátor[]
 
 > [!NOTE]
-> Toto rozhraní API je zastaralé. Alternativa je [Unordered_map třídy](../standard-library/unordered-map-class.md).
+> Toto rozhraní API je zastaralé. Alternativou je [třída unordered_map](../standard-library/unordered-map-class.md).
 
-Vloží prvek do `hash_map` se zadanou hodnotou klíče.
+Vloží prvek do `hash_map` a se zadanou hodnotou klíče.
 
 ```cpp
 Type& operator[](const Key& key);
@@ -2031,13 +2031,13 @@ Odkaz na hodnotu dat vloženého prvku.
 
 Pokud není nalezena hodnota klíče argumentu, je vložen spolu s výchozí hodnotou datového typu.
 
-`operator[]` lze použít k vložení prvků do `hash_map m` pomocí
+`operator[]`mohou být použity k `hash_map m` vložení prvků do
 
 `m[ key] = DataValue`;
 
-kde DataValue je hodnota `mapped_type` elementu s klíčovou hodnotou *Key*.
+kde DataValue je hodnota `mapped_type` prvku s hodnotou *klíče*.
 
-Při použití `operator[]` pro vložení prvků, vrácený odkaz neurčuje, zda vložení mění existující prvek nebo vytváří nový. Členské funkce [find](../standard-library/map-class.md#find) a [INSERT](../standard-library/map-class.md#insert) lze použít k určení, zda je prvek se zadaným klíčem již přítomen před vložením.
+Při `operator[]` použití vložení prvků vrácený odkaz neznamená, zda vložení mění již existující prvek nebo vytváří nový. Členské funkce [najít](../standard-library/map-class.md#find) a [vložit](../standard-library/map-class.md#insert) lze určit, zda prvek s zadaným klíčem je již přítomen před vložením.
 
 ### <a name="example"></a>Příklad
 
@@ -2101,10 +2101,10 @@ int main( )
 }
 ```
 
-## <a name="op_eq"></a>hash_map:: operator =
+## <a name="hash_mapoperator"></a><a name="op_eq"></a>hash_map::operátor=
 
 > [!NOTE]
-> Toto rozhraní API je zastaralé. Alternativa je [Unordered_map třídy](../standard-library/unordered-map-class.md).
+> Toto rozhraní API je zastaralé. Alternativou je [třída unordered_map](../standard-library/unordered-map-class.md).
 
 Nahradí prvky hash_map kopií jiného hash_map.
 
@@ -2118,11 +2118,11 @@ hash_map& operator=(hash_map&& right);
 
 |Parametr|Popis|
 |-|-|
-|*Kliknutím*|[Třída hash_map](../standard-library/hash-map-class.md) se kopíruje do `hash_map`.|
+|*Právo*|[Třída hash_map](../standard-library/hash-map-class.md) zkopírována do . `hash_map`|
 
 ### <a name="remarks"></a>Poznámky
 
-Po vymazání všech existujících prvků v `hash_map``operator=` buď zkopírování nebo přesunutí obsahu *přímo* do `hash_map`.
+Po vymazání všech existujících `hash_map` `operator=` prvků v aplikaci zkopíruje `hash_map`nebo přesune obsah *vpravo* do .
 
 ### <a name="example"></a>Příklad
 
@@ -2162,10 +2162,10 @@ int main( )
 }
 ```
 
-## <a name="pointer"></a>hash_map::p ointer
+## <a name="hash_mappointer"></a><a name="pointer"></a>hash_map::pointer
 
 > [!NOTE]
-> Toto rozhraní API je zastaralé. Alternativa je [Unordered_map třídy](../standard-library/unordered-map-class.md).
+> Toto rozhraní API je zastaralé. Alternativou je [třída unordered_map](../standard-library/unordered-map-class.md).
 
 Typ, který poskytuje ukazatel na prvek v hash_map.
 
@@ -2175,16 +2175,16 @@ typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::po
 
 ### <a name="remarks"></a>Poznámky
 
-Typ `pointer` lze použít pro úpravu hodnoty prvku.
+Typ `pointer` lze změnit hodnotu prvku.
 
-Ve většině případů by měl být použit [iterátor](#iterator) pro přístup k prvkům v objektu hash_map.
+Ve většině případů [iterátor](#iterator) by měl být použit pro přístup k prvkům v hash_map objektu.
 
-## <a name="rbegin"></a>hash_map:: rbegin
+## <a name="hash_maprbegin"></a><a name="rbegin"></a>hash_map::rbegin
 
 > [!NOTE]
-> Toto rozhraní API je zastaralé. Alternativa je [Unordered_map třídy](../standard-library/unordered-map-class.md).
+> Toto rozhraní API je zastaralé. Alternativou je [třída unordered_map](../standard-library/unordered-map-class.md).
 
-Vrátí iterátor adresující první prvek v obráceném hash_map.
+Vrátí iterátor adresování první prvek v obrácené mašveru hash_map.
 
 ```cpp
 const_reverse_iterator rbegin() const;
@@ -2194,15 +2194,15 @@ reverse_iterator rbegin();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Reverzní obousměrný iterátor, který adresuje první prvek v obráceném hash_map nebo řeší, co byl posledním prvkem v neobráceném hash_map.
+Reverzní obousměrný iterátor adresování první prvek v obrácené hash_map nebo adresování, co bylo poslední prvek v unreverse hash_map.
 
 ### <a name="remarks"></a>Poznámky
 
-`rbegin` se používá s obráceným hash_map stejně jako [Begin](#begin) se používá s hash_map.
+`rbegin`se používá s obráceným hash_map stejně jako [začátek](#begin) se používá s hash_map.
 
-Pokud je vrácená hodnota `rbegin` přiřazena k [const_reverse_iterator](#const_reverse_iterator), nelze objekt hash_map změnit. Pokud je vrácená hodnota `rbegin` přiřazena k [reverse_iterator](#reverse_iterator), lze objekt hash_map upravit.
+Pokud `rbegin` je vrácená hodnota přiřazena [const_reverse_iterator](#const_reverse_iterator), nelze objekt hash_map změnit. Pokud `rbegin` je vrácená hodnota přiřazena [reverse_iterator](#reverse_iterator), lze změnit objekt hash_map.
 
-`rbegin` lze použít k iteraci hash_map zpět.
+`rbegin`lze itetovat přes hash_map dozadu.
 
 ### <a name="example"></a>Příklad
 
@@ -2263,10 +2263,10 @@ The reversed hash_map is: 3 2 1 .
 After the erasure, the first element in the reversed hash_map is 2.
 ```
 
-## <a name="reference"></a>hash_map:: Reference
+## <a name="hash_mapreference"></a><a name="reference"></a>hash_map::odkaz
 
 > [!NOTE]
-> Toto rozhraní API je zastaralé. Alternativa je [Unordered_map třídy](../standard-library/unordered-map-class.md).
+> Toto rozhraní API je zastaralé. Alternativou je [třída unordered_map](../standard-library/unordered-map-class.md).
 
 Typ, který poskytuje odkaz na prvek uložený v hash_map.
 
@@ -2326,12 +2326,12 @@ The data value of first element in the hash_map is 10.
 The modified data value of first element is 15.
 ```
 
-## <a name="rend"></a>hash_map:: rend
+## <a name="hash_maprend"></a><a name="rend"></a>hash_map::rend
 
 > [!NOTE]
-> Toto rozhraní API je zastaralé. Alternativa je [Unordered_map třídy](../standard-library/unordered-map-class.md).
+> Toto rozhraní API je zastaralé. Alternativou je [třída unordered_map](../standard-library/unordered-map-class.md).
 
-Vrátí iterátor, který adresuje umístění následující po posledním prvku v obráceném hash_map.
+Vrátí iterátor, který řeší umístění, které následuje poslední prvek v obráceném hash_map.
 
 ```cpp
 const_reverse_iterator rend() const;
@@ -2341,17 +2341,17 @@ reverse_iterator rend();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Zpětný obousměrný iterátor, který adresuje umístění následující po posledním prvku v obráceném hash_map (umístění, které předchází prvnímu prvku v neobráceném hash_map).
+Reverzní obousměrný iterátor, který řeší umístění, které následuje poslední prvek v obráceném hash_map (umístění, které předcházelo prvnímu prvku v neobráceném hash_map).
 
 ### <a name="remarks"></a>Poznámky
 
-`rend` se používá s obráceným hash_map stejně jako [End](#end) se používá s hash_map.
+`rend`se používá s obráceným hash_map [stejně](#end) jako konec se používá s hash_map.
 
-Pokud je vrácená hodnota `rend` přiřazena k [const_reverse_iterator](#const_reverse_iterator), nelze objekt hash_map změnit. Pokud je vrácená hodnota `rend` přiřazena k [reverse_iterator](#reverse_iterator), lze objekt hash_map upravit.
+Pokud `rend` je vrácená hodnota přiřazena [const_reverse_iterator](#const_reverse_iterator), nelze objekt hash_map změnit. Pokud `rend` je vrácená hodnota přiřazena [reverse_iterator](#reverse_iterator), lze změnit objekt hash_map.
 
-`rend` lze použít k otestování, zda reverzní iterátor dosáhl konce jeho hash_map.
+`rend`lze použít k testování, zda reverzní iterátor dosáhl konce svého hash_map.
 
-Hodnota vrácená `rend` by neměla být zpětně odkazovaná.
+Hodnota vrácená `rend` by neměla být odkazována.
 
 ### <a name="example"></a>Příklad
 
@@ -2416,10 +2416,10 @@ The reversed hash_map is: 3 2 1 .
 After the erasure, the last element in the reversed hash_map is 2.
 ```
 
-## <a name="reverse_iterator"></a>hash_map:: reverse_iterator
+## <a name="hash_mapreverse_iterator"></a><a name="reverse_iterator"></a>hash_map::reverse_iterator
 
 > [!NOTE]
-> Toto rozhraní API je zastaralé. Alternativa je [Unordered_map třídy](../standard-library/unordered-map-class.md).
+> Toto rozhraní API je zastaralé. Alternativou je [třída unordered_map](../standard-library/unordered-map-class.md).
 
 Typ, který poskytuje obousměrný iterátor, který může číst nebo upravovat prvek v obráceném hash_map.
 
@@ -2429,22 +2429,22 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::reve
 
 ### <a name="remarks"></a>Poznámky
 
-Typ `reverse_iterator` nemůže změnit hodnotu prvku a používá se k iterování skrze hash_map v opačném případě.
+Typ `reverse_iterator` nemůže změnit hodnotu prvku a používá se k iterátu přes hash_map v opačném směru.
 
-`reverse_iterator` definované pomocí hash_map Points na prvky, které jsou objekty [value_type](#value_type), které jsou typu **páry\<const key, Type >** , jehož prvním členem je klíč k elementu a druhý člen je mapovaným argumentem, který je držen prvkem.
+Definované `reverse_iterator` hash_map odkazuje na prvky, které jsou objekty [value_type](#value_type), který je typu **dvojice\<const Key, Typ>**, jehož první člen je klíčem k prvku a jehož druhý člen je mapované základny držené elementem.
 
-Chcete-li přesměrovat `reverse_iterator` `rIter` ukazovat na prvek v hash_map, použijte operátor->.
+Chcete-li `reverse_iterator` `rIter` odkazovat na odkaz ukazující na prvek v hash_map, použijte operátor ->.
 
-Chcete-li získat přístup k hodnotě klíče pro element, použijte **nejprve**`rIter` -> , který je ekvivalentní (\* `rIter`). **nejprve**. Pro přístup k hodnotě mapovaného pole pro prvek použijte `rIter` -> **Second**, který je ekvivalentní (\* `rIter`). **nejprve**.
+Chcete-li získat přístup k hodnotě `rIter`  -> klíče pro prvek, použijte **nejprve**, což je ekvivalentní (\* `rIter`). **nejprve**. Chcete-li získat přístup k hodnotě mapované základny pro prvek, použijte `rIter`  ->  **second**, což je ekvivalentní (\* `rIter`). **nejprve**.
 
 ### <a name="example"></a>Příklad
 
-Příklad, jak deklarovat a používat `reverse_iterator`, naleznete v tématu příklad pro [rbegin](#rbegin) .
+Příklad pro [rbegin](#rbegin) pro příklad, jak `reverse_iterator`deklarovat a používat .
 
-## <a name="size"></a>hash_map:: size
+## <a name="hash_mapsize"></a><a name="size"></a>hash_map::velikost
 
 > [!NOTE]
-> Toto rozhraní API je zastaralé. Alternativa je [Unordered_map třídy](../standard-library/unordered-map-class.md).
+> Toto rozhraní API je zastaralé. Alternativou je [třída unordered_map](../standard-library/unordered-map-class.md).
 
 Vrátí počet prvků v hash_map.
 
@@ -2460,7 +2460,7 @@ Aktuální délka hash_map.
 
 ### <a name="example"></a>Příklad
 
-Následující příklad ukazuje použití členské funkce hash_map:: size.
+Následující příklad ukazuje použití hash_map::size členské funkce.
 
 ```cpp
 // hash_map_size.cpp
@@ -2491,12 +2491,12 @@ The hash_map length is 1.
 The hash_map length is now 2.
 ```
 
-## <a name="size_type"></a>hash_map:: size_type
+## <a name="hash_mapsize_type"></a><a name="size_type"></a>hash_map::size_type
 
 > [!NOTE]
-> Toto rozhraní API je zastaralé. Alternativa je [Unordered_map třídy](../standard-library/unordered-map-class.md).
+> Toto rozhraní API je zastaralé. Alternativou je [třída unordered_map](../standard-library/unordered-map-class.md).
 
-Typ unsigned integer, který může představovat počet prvků v hash_map.
+Nepodepsaný podnosný typ, který může představovat počet prvků v hash_map.
 
 ```cpp
 typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::size_type size_type;
@@ -2506,12 +2506,12 @@ typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::si
 
 ### <a name="example"></a>Příklad
 
-Viz příklad pro [Velikost](#size) pro příklad, jak deklarovat a použít `size_type`
+Příklad [velikosti](#size) naleznete v příkladu, jak deklarovat a používat`size_type`
 
-## <a name="swap"></a>hash_map:: swap
+## <a name="hash_mapswap"></a><a name="swap"></a>hash_map::swap
 
 > [!NOTE]
-> Toto rozhraní API je zastaralé. Alternativa je [Unordered_map třídy](../standard-library/unordered-map-class.md).
+> Toto rozhraní API je zastaralé. Alternativou je [třída unordered_map](../standard-library/unordered-map-class.md).
 
 Vyměňuje prvky dvou hash_maps.
 
@@ -2521,12 +2521,12 @@ void swap(hash_map& right);
 
 ### <a name="parameters"></a>Parametry
 
-*pravé*\
-Argument hash_map poskytnutí prvků, které mají být nahrazeny cílovým hash_map.
+*Právo*\
+Argument hash_map poskytuje prvky, které mají být vyměněny za cílovou hash_map.
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce neověřuje žádné odkazy, ukazatele nebo iterátory, které určují elementy ze dvou hash_maps, jejichž prvky se vyměňují.
+Členská funkce zruší platnost žádné odkazy, ukazatele nebo iterátory, které označují prvky ve dvou hash_maps jejichž prvky jsou vyměňovány.
 
 ### <a name="example"></a>Příklad
 
@@ -2582,12 +2582,12 @@ After swapping with hm2, hash_map hm1 is: 100 200.
 After swapping with hm3, hash_map hm1 is: 300.
 ```
 
-## <a name="upper_bound"></a>hash_map:: upper_bound
+## <a name="hash_mapupper_bound"></a><a name="upper_bound"></a>hash_map::upper_bound
 
 > [!NOTE]
-> Toto rozhraní API je zastaralé. Alternativa je [Unordered_map třídy](../standard-library/unordered-map-class.md).
+> Toto rozhraní API je zastaralé. Alternativou je [třída unordered_map](../standard-library/unordered-map-class.md).
 
-Vrátí iterátor na první prvek v hash_map, který má klíč s hodnotou, která je větší než zadaný klíč.
+Vrátí iterátor prvnímu prvku v hash_map, který s klíčem s hodnotou, která je větší než hodnota zadaného klíče.
 
 ```cpp
 iterator upper_bound(const Key& key);
@@ -2597,14 +2597,14 @@ const_iterator upper_bound(const Key& key) const;
 
 ### <a name="parameters"></a>Parametry
 
-\ *klíčů*
-Hodnota klíče argumentu, která má být porovnána s hodnotou klíče řazení prvku z vyhledaného hash_map.
+*Klíč*\
+Hodnota klíče argumentu, která má být porovnána s hodnotou klíče řazení prvku z hash_map prohledávány.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-[Iterátor](#iterator) nebo [const_iterator](#const_iterator) , které řeší umístění elementu v hash_map s klíčem, který je větší než klíč argumentu, nebo který řeší umístění, které následuje po posledním prvku v hash_map, pokud se pro klíč nenajde žádná shoda.
+[Iterátor](#iterator) nebo [const_iterator,](#const_iterator) který řeší umístění prvku v hash_map, který s klíčem, který je větší než klíč argumentu, nebo který řeší umístění, které následuje poslední prvek v hash_map pokud pro klíč není nalezena žádná shoda.
 
-Pokud je vrácená hodnota přiřazena k `const_iterator`, nelze objekt hash_map změnit. Pokud je vrácená hodnota přiřazena k `iterator`, lze objekt hash_map upravit.
+Pokud je vrácená hodnota `const_iterator`přiřazena aplikaci , nelze hash_map objekt změnit. Pokud je vrácená hodnota `iterator`přiřazena k aplikaci , lze změnit hash_map objekt.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -2660,10 +2660,10 @@ The 1st element of hm1 with a key greater than that
 of the initial element of hm1 is: 20.
 ```
 
-## <a name="value_comp"></a>hash_map:: value_comp
+## <a name="hash_mapvalue_comp"></a><a name="value_comp"></a>hash_map::value_comp
 
 > [!NOTE]
-> Toto rozhraní API je zastaralé. Alternativa je [Unordered_map třídy](../standard-library/unordered-map-class.md).
+> Toto rozhraní API je zastaralé. Alternativou je [třída unordered_map](../standard-library/unordered-map-class.md).
 
 Vrátí objekt funkce, který určuje pořadí prvků v hash_map porovnáním jejich hodnot klíče.
 
@@ -2673,15 +2673,15 @@ value_compare value_comp() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí objekt funkce porovnání, který hash_map používá k seřazení jeho prvků.
+Vrátí objekt funkce porovnání, který hash_map používá k objednání jeho prvků.
 
 ### <a name="remarks"></a>Poznámky
 
-Pro hash_map *m*platí, že pokud jsou dva prvky *E1* (*K1*, *D1*) a *E2* (*K2*, *D2*) objekty typu [value_type](#value_type), kde *K1* a *k2* jsou jejich klíče typu [key_type](#key_type) a *D1* a *D2* jsou jejich data typu [mapped_type](#mapped_type), pak `m.value_comp()(e1, e2)` odpovídá `m.key_comp()(k1, k2)`. Uložený objekt definuje členskou funkci.
+Pro hash_map *m*, jestliže dva prvky *e1* (*k1*, *d1*) a *e2* (*k2*, *d2*) jsou objekty typu [value_type](#value_type), `m.value_comp()(e1, e2)` kde *k1* a *k2* jsou jejich klíče typu [key_type](#key_type) a *d1* a *d2* jsou jejich údaje typu [mapped_type](#mapped_type), pak jsou ekvivalentní . `m.key_comp()(k1, k2)` Uložený objekt definuje členovou funkci
 
 `bool operator(value_type& left, value_type& right);`
 
-Vrátí hodnotu **true** , pokud hodnota klíče `left` předchází a není rovna hodnotě klíče `right` v pořadí řazení.
+který vrátí **hodnotu true,** pokud hodnota klíče `left` předchází `right` a není rovna hodnotě klíče v pořadí řazení.
 
 ### <a name="example"></a>Příklad
 
@@ -2728,12 +2728,12 @@ int main( )
 }
 ```
 
-## <a name="value_type"></a>hash_map:: value_type
+## <a name="hash_mapvalue_type"></a><a name="value_type"></a>hash_map::value_type
 
 > [!NOTE]
-> Toto rozhraní API je zastaralé. Alternativa je [Unordered_map třídy](../standard-library/unordered-map-class.md).
+> Toto rozhraní API je zastaralé. Alternativou je [třída unordered_map](../standard-library/unordered-map-class.md).
 
-Typ, který představuje typ objektu uložený v hash_map.
+Typ, který představuje typ objektu uloženého v hash_map.
 
 ```cpp
 typedef pair<const Key, Type> value_type;
@@ -2741,7 +2741,7 @@ typedef pair<const Key, Type> value_type;
 
 ### <a name="remarks"></a>Poznámky
 
-`value_type` je deklarována jako `pair<const key_type, mapped_type>` a nikoli `pair<key_type, mapped_type>`, protože klíče asociativního kontejneru nelze změnit pomocí nekonstantního iterátoru nebo odkazu.
+`value_type`je prohlášena `pair<const key_type, mapped_type>` za, a nikoli `pair<key_type, mapped_type>` proto, že klíče asociativní kontejneru nelze změnit pomocí nekonstantní iterátor nebo odkaz.
 
 ### <a name="example"></a>Příklad
 
@@ -2805,5 +2805,5 @@ The values of the mapped elements are: 10 20 30.
 
 ## <a name="see-also"></a>Viz také
 
-[Bezpečnost vlákna ve C++ standardní knihovně](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)
+[Bezpečnost vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Referenční příručka standardní knihovny jazyka C++](../standard-library/cpp-standard-library-reference.md)

@@ -7,16 +7,16 @@ f1_keywords:
 - AMP_SHORT_VECTORS/Concurrency::graphics::short_vector_traits::short_vector_traits
 - AMP_SHORT_VECTORS/Concurrency::graphics::short_vector_traits::size Constant
 ms.assetid: cd9492da-9e02-4a6e-9d50-b61252cdb460
-ms.openlocfilehash: 7531a57dddcc85392380029afc6edd577bbc5cf3
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: d743f74deaea5cb31cd609ece90891c8cfe2258f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77126370"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374737"
 ---
 # <a name="short_vector_traits-structure"></a>short_vector_traits – struktura
 
-short_vector_traits umožňuje načtení základní délky vektoru a skalárního typu typu krátkého vektoru nebo skalárního typu.
+short_vector_traits umožňuje načtení základní délky vektoru a skalárního typu krátkého vektorového typu nebo skalárního typu
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -81,23 +81,23 @@ struct short_vector_traits<double_4>;
 
 ## <a name="members"></a>Členové
 
-### <a name="public-typedefs"></a>Veřejné definice typedef
+### <a name="public-typedefs"></a>Veřejné typedefs
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[short_vector_traits:: short_vector_traits – konstruktor](#ctor)||
+|[short_vector_traits::short_vector_traits konstruktor](#ctor)||
 
 ### <a name="public-constants"></a>Veřejné konstanty
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[short_vector_traits:: size – konstanta](#size)||
+|[short_vector_traits::Konstanta velikosti](#size)||
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -105,17 +105,17 @@ struct short_vector_traits<double_4>;
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** amp_short_vectors. h
+**Záhlaví:** amp_short_vectors.h
 
-**Obor názvů:** Concurrency:: Graphics
+**Obor názvů:** Souběžnost::grafiky
 
-## <a name="ctor"></a>short_vector_traits:: short_vector_traits – konstruktor
+## <a name="short_vector_traitsshort_vector_traits-constructor"></a><a name="ctor"></a>short_vector_traits::short_vector_traits konstruktor
 
 ```cpp
 short_vector_traits();
 ```
 
-## <a name="size"></a>short_vector_traits:: size – konstanta
+## <a name="short_vector_traitssize-constant"></a><a name="size"></a>short_vector_traits::Konstanta velikosti
 
 ```cpp
 static int const size = 1;

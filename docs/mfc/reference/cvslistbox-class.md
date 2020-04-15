@@ -1,5 +1,5 @@
 ---
-title: CVSListBox – třída
+title: Třída CVSListBox
 ms.date: 11/19/2018
 f1_keywords:
 - CVSListBox
@@ -28,16 +28,16 @@ helpviewer_keywords:
 - CVSListBox [MFC], SetItemData
 - CVSListBox [MFC], GetListHwnd
 ms.assetid: c79be7b4-46ed-4af8-a41e-68962782d8ef
-ms.openlocfilehash: 6a33f5b64c5094bfe2ca2ff259b5cd8654058ed3
-ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
+ms.openlocfilehash: 4ea48a263a01133419067979ee5fa3e62105c7f5
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "69502233"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373192"
 ---
-# <a name="cvslistbox-class"></a>CVSListBox – třída
+# <a name="cvslistbox-class"></a>Třída CVSListBox
 
-`CVSListBox` Třída podporuje upravitelný ovládací prvek seznamu.
+Třída `CVSListBox` podporuje upravitelný seznam ovládacího prvku.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -49,53 +49,53 @@ class CVSListBox : public CVSListBoxBase
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CVSListBox::CVSListBox](#cvslistbox)|`CVSListBox` Vytvoří objekt.|
+|[CVSlistBox::CVSListBox](#cvslistbox)|Vytvoří `CVSListBox` objekt.|
 |`CVSListBox::~CVSListBox`|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CVSListBox::AddItem](#additem)|Přidá řetězec do ovládacího prvku seznamu. (Overrides `CVSListBoxBase::AddItem`.)|
-|[CVSListBox::EditItem](#edititem)|Spustí operaci Edit na textu položky ovládacího prvku seznamu. (Overrides `CVSListBoxBase::EditItem`.)|
-|[CVSListBox:: GetCount](#getcount)|Načte počet řetězců v ovládacím prvku upravitelný seznam. (Overrides `CVSListBoxBase::GetCount`.)|
-|[CVSListBox::GetItemData](#getitemdata)|Načte hodnotu 32 specifickou pro aplikaci, která je přidružena k položce ovládacího prvku seznamu, kterou lze upravovat. (Overrides `CVSListBoxBase::GetItemData`.)|
-|[CVSListBox::GetItemText](#getitemtext)|Načte text položky ovládacího prvku upravitelný seznam. (Overrides `CVSListBoxBase::GetItemText`.)|
-|[CVSListBox::GetSelItem](#getselitem)|Načte index aktuálně vybrané položky v rámci upravitelného ovládacího prvku seznamu s nulovým základem. (Overrides `CVSListBoxBase::GetSelItem`.)|
-|`CVSListBox::PreTranslateMessage`|Přeloží zprávy oken před odesláním do funkcí Windows [TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage) a [DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage) . Další informace a syntaxi metod naleznete v tématu [CWnd::P retranslatemessage](../../mfc/reference/cwnd-class.md#pretranslatemessage). (Overrides `CVSListBoxBase::PreTranslateMessage`.)|
-|[CVSListBox:: RemoveItem](#removeitem)|Odebere položku z upravitelného ovládacího prvku seznamu. (Overrides `CVSListBoxBase::RemoveItem`.)|
-|[CVSListBox::SelectItem](#selectitem)|Vybere upravitelný řetězec ovládacího prvku seznamu. (Overrides `CVSListBoxBase::SelectItem`.)|
-|[CVSListBox::SetItemData](#setitemdata)|Přidruží hodnotu 32-bit specifickou pro aplikaci s upravitelnou položkou ovládacího prvku seznamu. (Overrides `CVSListBoxBase::SetItemData`.)|
+|[CVSlistBox::Přidat položku](#additem)|Přidá řetězec do ovládacího prvku seznamu. (Přepíše `CVSListBoxBase::AddItem`.)|
+|[CVSListBox::Upravit položku](#edititem)|Spustí operaci úprav textu položky ovládacího prvku seznamu. (Přepíše `CVSListBoxBase::EditItem`.)|
+|[CVSListBox::GetCount](#getcount)|Načte počet řetězců v ovládacím prvku upravitelného seznamu. (Přepíše `CVSListBoxBase::GetCount`.)|
+|[CVSlistBox::GetItemData](#getitemdata)|Načte 32bitovou hodnotu specifickou pro aplikaci, která je přidružena k upravitelné položce ovládacího prvku seznamu. (Přepíše `CVSListBoxBase::GetItemData`.)|
+|[CVSlistBox::GetItemText](#getitemtext)|Načte text upravitelné položky ovládacího prvku seznamu. (Přepíše `CVSListBoxBase::GetItemText`.)|
+|[CVSListBox::GetSelItem](#getselitem)|Načte index aktuálně vybrané položky založený na nule v ovládacím prvku upravitelného seznamu. (Přepíše `CVSListBoxBase::GetSelItem`.)|
+|`CVSListBox::PreTranslateMessage`|Přeloží zprávy okna před jejich odesláním do funkcí [TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage) a [DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage) systému Windows. Další informace a syntaxe metody naleznete [v tématu CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage). (Přepíše `CVSListBoxBase::PreTranslateMessage`.)|
+|[CVSListBox::Odebrat položku](#removeitem)|Odebere položku z ovládacího prvku upravitelného seznamu. (Přepíše `CVSListBoxBase::RemoveItem`.)|
+|[CVSListBox::Vybrat položku](#selectitem)|Vybere upravitelný řetězec ovládacího prvku seznamu. (Přepíše `CVSListBoxBase::SelectItem`.)|
+|[CVSListBox::SetItemData](#setitemdata)|Přidruží 32bitovou hodnotu specifickou pro aplikaci k upravitelné položce ovládacího prvku seznamu. (Přepíše `CVSListBoxBase::SetItemData`.)|
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Name|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CVSListBox::GetListHwnd](#getlisthwnd)|Vrátí popisovač k aktuálnímu ovládacímu prvku zobrazení seznamu.|
+|[CVSListBox::GetListHwnd](#getlisthwnd)|Vrátí popisovač aktuálního ovládacího prvku zobrazení vloženého seznamu.|
 
 ## <a name="remarks"></a>Poznámky
 
-`CVSListBox` Třída poskytuje sadu tlačítek pro úpravy, které uživateli umožňují vytvořit, upravit, odstranit nebo změnit uspořádání položek v ovládacím prvku seznam.
+Třída `CVSListBox` poskytuje sadu tlačítek pro úpravy, které umožňují uživateli vytvářet, upravovat, odstraňovat nebo měnit uspořádání položek v ovládacím prvku seznamu.
 
-Následuje obrázek ovládacího prvku upravitelný seznam. Druhá položka seznamu, která má názvem "Item2", je vybrána pro úpravy.
+Následuje obrázek upravitelného ovládacího prvku seznamu. Pro úpravy je vybrána druhá položka seznamu s názvem "Položka 2".
 
 ![Ovládací prvek CVSListBox](../../mfc/reference/media/cvslistbox.png "Ovládací prvek CVSListBox")
 
-Použijete-li Editor prostředků k přidání ovládacího prvku upravitelný seznam, Všimněte si, že podokno **sady nástrojů** editoru neposkytuje předem definovaný ovládací prvek seznamu, který lze upravit. Místo toho přidejte statický ovládací prvek, jako je například ovládací prvek **skupinový rámeček** . Rozhraní používá statický ovládací prvek jako zástupný symbol k určení velikosti a umístění ovládacího prvku upravitelný seznam.
+Pokud pomocí editoru prostředků přidáte upravitelný ovládací prvek seznamu, všimněte si, že podokno **panelu nástrojů** editoru neposkytuje předdefinovaný ovládací prvek upravitelného seznamu. Místo toho přidejte statický ovládací prvek, jako je například ovládací prvek **Pole skupiny.** Rozhraní framework používá statický ovládací prvek jako zástupný symbol k určení velikosti a umístění upravitelného ovládacího prvku seznamu.
 
-Chcete-li použít upravitelný ovládací prvek seznamu v šabloně dialogového okna, `CVSListBox` deklarujte proměnnou ve třídě dialogového okna. Pro podporu výměny dat mezi proměnnou a ovládacím prvkem definujte `DDX_Control` položku makra `DoDataExchange` v metodě dialogového okna. Ve výchozím nastavení je ovládací prvek upravitelný seznam vytvořen bez tlačítek pro úpravy. Pomocí zděděné metody CVSListBoxBase:: SetStandardButtons povolte tlačítka pro úpravy.
+Chcete-li použít upravitelný ovládací prvek seznamu `CVSListBox` v šabloně dialogového okna, deklarujte proměnnou ve třídě dialogového okna. Chcete-li podporovat výměnu dat mezi proměnnou a `DoDataExchange` ovládacím prvkem, definujte položku `DDX_Control` makra v metodě dialogového okna. Ve výchozím nastavení je upravitelný ovládací prvek seznamu vytvořen bez tlačítek pro úpravy. Pomocí zděděné metody CVSListBoxBase::SetStandardButtons povolte tlačítka pro úpravy.
 
-Další informace naleznete v adresáři Samples, `New Controls` Sample, PAGE3. cpp a PAGE3. h Files.
+Další informace naleznete v adresáři `New Controls` Ukázky, v vzorce, v souborech Page3.cpp a Page3.h.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[CObject](../../mfc/reference/cobject-class.md)
+[CObjekt](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[CCmdCíl](../../mfc/reference/ccmdtarget-class.md)
 
-[CWnd](../../mfc/reference/cwnd-class.md)
+[Cwnd](../../mfc/reference/cwnd-class.md)
 
 [CStatic](../../mfc/reference/cstatic-class.md)
 
@@ -105,9 +105,9 @@ Další informace naleznete v adresáři Samples, `New Controls` Sample, PAGE3. 
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxvslistbox. h
+**Záhlaví:** afxvslistbox.h
 
-##  <a name="additem"></a>CVSListBox:: AddItem
+## <a name="cvslistboxadditem"></a><a name="additem"></a>CVSlistBox::Přidat položku
 
 Přidá řetězec do ovládacího prvku seznamu.
 
@@ -121,25 +121,25 @@ virtual int AddItem(
 ### <a name="parameters"></a>Parametry
 
 *strIext*<br/>
-pro Odkaz na řetězec.
+[v] Odkaz na řetězec.
 
 *dwData*<br/>
-pro Hodnota 32 specifická pro aplikaci, která je přidružena k řetězci. Výchozí hodnota je 0.
+[v] 32bitová hodnota specifická pro aplikaci, která je přidružena k řetězci. Výchozí hodnota je 0.
 
 *iIndex*<br/>
-pro Index na základě nuly pozice, která bude obsahovat řetězec. Pokud je parametr *iIndex* -1, řetězec se přidá na konec seznamu. Výchozí hodnota je-1.
+[v] Nula na základě indexu pozice, která bude držet řetězec. Pokud je parametr *iIndex* -1, řetězec je přidán na konec seznamu. Výchozí hodnota je -1.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Index založený na nule pozice řetězce v ovládacím prvku seznamu.
+Index na základě nuly pozice řetězce v ovládacím prvku seznamu.
 
 ### <a name="remarks"></a>Poznámky
 
-Použijte metodu [CVSListBox:: GetItemData](#getitemdata) k načtení hodnoty, která je určena parametrem *dwData* . Tato hodnota může být celé číslo specifické pro aplikaci nebo ukazatel na jiná data.
+Pomocí metody [CVSListBox::GetItemData](#getitemdata) načtěte hodnotu, která je určena parametrem *dwData.* Tato hodnota může být celé číslo specifické pro aplikaci nebo ukazatel na jiná data.
 
-##  <a name="cvslistbox"></a>CVSListBox::CVSListBox
+## <a name="cvslistboxcvslistbox"></a><a name="cvslistbox"></a>CVSlistBox::CVSListBox
 
-`CVSListBox` Vytvoří objekt.
+Vytvoří `CVSListBox` objekt.
 
 ```
 CVSListBox();
@@ -149,9 +149,9 @@ CVSListBox();
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="edititem"></a>CVSListBox:: EditItem
+## <a name="cvslistboxedititem"></a><a name="edititem"></a>CVSListBox::Upravit položku
 
-Spustí operaci Edit na textu položky ovládacího prvku seznamu.
+Spustí operaci úprav textu položky ovládacího prvku seznamu.
 
 ```
 virtual BOOL EditItem(int iIndex);
@@ -160,19 +160,19 @@ virtual BOOL EditItem(int iIndex);
 ### <a name="parameters"></a>Parametry
 
 *iIndex*<br/>
-pro Index založený na nule položky ovládacího prvku seznamu
+[v] Nulový index položky ovládacího prvku seznamu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-TRUE, pokud se operace úpravy spustí úspěšně; v opačném případě FALSE.
+PRAVDA, pokud se operace úprav spustí úspěšně; jinak NEPRAVDA.
 
 ### <a name="remarks"></a>Poznámky
 
-Uživatel spustí operaci úprav Poklikáním na popisek položky nebo stisknutím klávesy **F2** nebo **MEZERNÍK** , pokud má položka fokus.
+Uživatel spustí operaci úprav poklepáním na popisek položky nebo stisknutím klávesy **F2** nebo **MEZERNÍK,** pokud má položka fokus.
 
-##  <a name="getcount"></a>CVSListBox:: GetCount
+## <a name="cvslistboxgetcount"></a><a name="getcount"></a>CVSListBox::GetCount
 
-Načte počet řetězců v ovládacím prvku upravitelný seznam.
+Načte počet řetězců v ovládacím prvku upravitelného seznamu.
 
 ```
 virtual int GetCount() const;
@@ -180,15 +180,15 @@ virtual int GetCount() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Počet položek v ovládacím prvku seznam.
+Počet položek v ovládacím prvku seznamu.
 
 ### <a name="remarks"></a>Poznámky
 
-Všimněte si, že počet je větší než hodnota indexu poslední položky, protože index je založený na nule.
+Všimněte si, že počet je o jeden větší než hodnota indexu poslední položky, protože index je založen na nule.
 
-##  <a name="getitemdata"></a>CVSListBox::GetItemData
+## <a name="cvslistboxgetitemdata"></a><a name="getitemdata"></a>CVSlistBox::GetItemData
 
-Načte hodnotu 32 specifickou pro aplikaci, která je přidružena k položce ovládacího prvku seznamu, kterou lze upravovat.
+Načte 32bitovou hodnotu specifickou pro aplikaci, která je přidružena k upravitelné položce ovládacího prvku seznamu.
 
 ```
 virtual DWORD_PTR GetItemData(int iIndex) const;
@@ -197,19 +197,19 @@ virtual DWORD_PTR GetItemData(int iIndex) const;
 ### <a name="parameters"></a>Parametry
 
 *iIndex*<br/>
-pro Index založený na nule pro upravitelnou položku ovládacího prvku seznamu.
+[v] Index ovládacího prvku na základě nuly upravitelné položky seznamu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota 32, která je přidružena k zadané položce.
+32bitová hodnota, která je přidružena k zadané položce.
 
 ### <a name="remarks"></a>Poznámky
 
-Použijte metodu [CVSListBox:: SetItemData](#setitemdata) nebo [CVSListBox:: AddItem](#additem) k přidružení hodnoty 32-bit k položce ovládacího prvku seznamu. Tato hodnota může být celé číslo specifické pro aplikaci nebo ukazatel na jiná data.
+Pomocí metody [CVSListBox::SetItemData](#setitemdata) nebo [CVSListBox::AddItem](#additem) přidružte 32bitovou hodnotu k položce ovládacího prvku seznamu. Tato hodnota může být celé číslo specifické pro aplikaci nebo ukazatel na jiná data.
 
-##  <a name="getitemtext"></a>CVSListBox::GetItemText
+## <a name="cvslistboxgetitemtext"></a><a name="getitemtext"></a>CVSlistBox::GetItemText
 
-Načte text položky ovládacího prvku upravitelný seznam.
+Načte text upravitelné položky ovládacího prvku seznamu.
 
 ```
 virtual CString GetItemText(int iIndex) const;
@@ -218,17 +218,17 @@ virtual CString GetItemText(int iIndex) const;
 ### <a name="parameters"></a>Parametry
 
 *iIndex*<br/>
-pro Index založený na nule pro upravitelnou položku ovládacího prvku seznamu.
+[v] Index ovládacího prvku na základě nuly upravitelné položky seznamu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Objekt [CString](../../atl-mfc-shared/reference/cstringt-class.md) , který obsahuje text zadané položky.
+[CString](../../atl-mfc-shared/reference/cstringt-class.md) objekt, který obsahuje text zadané položky.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="getlisthwnd"></a>CVSListBox::GetListHwnd
+## <a name="cvslistboxgetlisthwnd"></a><a name="getlisthwnd"></a>CVSListBox::GetListHwnd
 
-Vrátí popisovač k aktuálnímu ovládacímu prvku zobrazení seznamu.
+Vrátí popisovač aktuálního ovládacího prvku zobrazení vloženého seznamu.
 
 ```
 virtual HWND GetListHwnd() const;
@@ -236,15 +236,15 @@ virtual HWND GetListHwnd() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Popisovač pro ovládací prvek vloženého zobrazení seznamu.
+Popisovač prvku zobrazení vloženého seznamu.
 
 ### <a name="remarks"></a>Poznámky
 
-Tuto metodu použijte, chcete-li načíst popisovač do ovládacího prvku zobrazení seznamu, který `CVSListBox` podporuje třídu.
+Pomocí této metody můžete načíst popisovač do ovládacího prvku zobrazení vloženého seznamu, který podporuje třídu. `CVSListBox`
 
-##  <a name="getselitem"></a>CVSListBox::GetSelItem
+## <a name="cvslistboxgetselitem"></a><a name="getselitem"></a>CVSListBox::GetSelItem
 
-Načte index aktuálně vybrané položky v rámci upravitelného ovládacího prvku seznamu s nulovým základem.
+Načte index aktuálně vybrané položky založený na nule v ovládacím prvku upravitelného seznamu.
 
 ```
 virtual int GetSelItem() const;
@@ -252,13 +252,13 @@ virtual int GetSelItem() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud je tato metoda úspěšná, index založený na nule aktuálně vybrané položky; v opačném případě-1.
+Pokud je tato metoda úspěšná, index aktuálně vybrané položky založený na nule; jinak -1.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="removeitem"></a>CVSListBox:: RemoveItem
+## <a name="cvslistboxremoveitem"></a><a name="removeitem"></a>CVSListBox::Odebrat položku
 
-Odebere položku z upravitelného ovládacího prvku seznamu.
+Odebere položku z ovládacího prvku upravitelného seznamu.
 
 ```
 virtual BOOL RemoveItem(int iIndex);
@@ -267,15 +267,15 @@ virtual BOOL RemoveItem(int iIndex);
 ### <a name="parameters"></a>Parametry
 
 *iIndex*<br/>
-pro Index založený na nule pro upravitelnou položku ovládacího prvku seznamu.
+[v] Index ovládacího prvku na základě nuly upravitelné položky seznamu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-TRUE, pokud je zadaná položka odebrána; v opačném případě FALSE.
+PRAVDA, pokud je zadaná položka odebrána; jinak NEPRAVDA.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="selectitem"></a>CVSListBox::SelectItem
+## <a name="cvslistboxselectitem"></a><a name="selectitem"></a>CVSListBox::Vybrat položku
 
 Vybere upravitelný řetězec ovládacího prvku seznamu.
 
@@ -285,20 +285,20 @@ virtual BOOL SelectItem(int iItem);
 
 ### <a name="parameters"></a>Parametry
 
-*iItem*<br/>
-pro Index založený na nule pro upravitelnou položku ovládacího prvku seznamu.
+*iPoložka*<br/>
+[v] Index ovládacího prvku na základě nuly upravitelné položky seznamu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-TRUE, pokud je tato metoda úspěšná; v opačném případě FALSE.
+TRUE, pokud je tato metoda úspěšná; jinak NEPRAVDA.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda vybere určenou položku a pokud je vyžadována, posuňte položku do zobrazení.
+Tato metoda vybere zadanou položku a pokud je požadována, posune položku do zobrazení.
 
-##  <a name="setitemdata"></a>CVSListBox::SetItemData
+## <a name="cvslistboxsetitemdata"></a><a name="setitemdata"></a>CVSListBox::SetItemData
 
-Přidruží hodnotu 32-bit specifickou pro aplikaci s upravitelnou položkou ovládacího prvku seznamu.
+Přidruží 32bitovou hodnotu specifickou pro aplikaci k upravitelné položce ovládacího prvku seznamu.
 
 ```
 virtual void SetItemData(
@@ -309,14 +309,14 @@ virtual void SetItemData(
 ### <a name="parameters"></a>Parametry
 
 *iIndex*<br/>
-pro Index založený na nule pro upravitelnou položku ovládacího prvku seznamu.
+[v] Index ovládacího prvku na základě nuly upravitelné položky seznamu.
 
 *dwData*<br/>
-pro Hodnota 32. Tato hodnota může být celé číslo specifické pro aplikaci nebo ukazatel na jiná data.
+[v] 32bitová hodnota. Tato hodnota může být celé číslo specifické pro aplikaci nebo ukazatel na jiná data.
 
 ### <a name="remarks"></a>Poznámky
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)

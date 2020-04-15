@@ -20,46 +20,46 @@ helpviewer_keywords:
 - Input Method Editor [C++]
 - MBCS [C++], enabling
 ms.assetid: 6179f6b7-bc61-4a48-9267-fb7951223e38
-ms.openlocfilehash: b5f2b6dd56d3a755ee73058c024152e12157a6bd
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 404fcee5e48d8db28e56a005f24f8cac5892240e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501948"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375783"
 ---
 # <a name="mbcs-support-in-visual-c"></a>Podpora znakové sady MBCS v jazyku Visual C++
 
-Při spuštění ve verzi Windows s podporou znakové sady MBCS má Visual C++ Development systém (včetně editoru integrovaného zdrojového kódu, ladicího programu a nástrojů příkazového řádku) znakovou sadu MBCS s výjimkou okna paměti.
+Při spuštění v mbcs s podporou verze systému Windows, Visual C++ vývojový systém (včetně integrovaného editoru zdrojového kódu, ladicí program a nástroje příkazového řádku) je mbcs povoleno, s výjimkou okna paměti.
 
-Okno paměti neinterpretuje bajty dat jako znaky znakové sady MBCS, a to i v případě, že je může interpretovat jako znaky ANSI nebo Unicode. Znaky ANSI mají velikost vždy 1 bajt a znaky Unicode mají velikost 2 bajty. Se znakovou sadou MBCS mohou mít znaky velikost 1 nebo 2 bajty a jejich interpretace závisí na tom, která znaková stránka je používána. Z tohoto důvodu je obtížné, aby okno paměti spolehlivě zobrazovalo znaky znakové sady MBCS. Okno paměti nemůže zjistit, který bajt je začátek znaku. Vývojář může zobrazit hodnoty bajtů v okně paměti a vyhledat hodnotu v tabulkách a zjistit reprezentace znaků. To je možné, protože vývojář zná počáteční adresu řetězce na základě zdrojového kódu.
+Okno paměti neinterpretuje bajty dat jako znaky MBCS, přestože je může interpretovat jako znaky ANSI nebo Unicode. Znaky ANSI mají vždy velikost 1 bajt a znaky Unicode mají velikost 2 bajty. S MBCS znaky mohou být 1 nebo 2 bajty ve velikosti a jejich interpretace závisí na tom, která znaková stránka je používán. Z tohoto důvodu je obtížné pro okno paměti spolehlivě zobrazit znaky MBCS. Okno paměti nemůže vědět, který bajt je začátek znaku. Vývojář může zobrazit hodnoty bajtů v okně paměti a vyhledat hodnotu v tabulkách k určení reprezentace znaků. To je možné, protože vývojář zná počáteční adresu řetězce na základě zdrojového kódu.
 
-Vizuál C++ přijímá dvoubajtové znaky, kdykoli je to vhodné. To zahrnuje názvy cest a názvů souborů v dialogových oknech a textových položkách v C++ editoru vizuálních prostředků (například statický text v editoru dialogového okna a statické textové položky v editoru ikon). Kromě toho preprocesor rozpoznává některé dvoubajtové směrnice – například názvy souborů v `#include` příkazech a jako argumenty `code_seg` direktiv pragma a `data_seg` . V editoru zdrojového kódu jsou dvoubajtové znaky v komentářích a řetězcové literály přijaty, i když nejsou v prvcích C/C++ jazyka (například názvy proměnných).
+Visual C++ přijímá dvoubajtové znaky všude tam, kde je to vhodné. To zahrnuje názvy cest a názvů souborů v dialogových polích a textové položky v editoru prostředků Visual C++ (například statický text v editoru dialogů a statické textové položky v editoru ikon). Kromě toho preprocesor rozpozná některé dvoubajtové direktivy `#include` – například názvy `code_seg` souborů `data_seg` v příkazech a jako argumenty pro a pragmas. V editoru zdrojového kódu jsou přijímány dvoubajtové znaky v komentářích a řetězcových literálech, i když ne v elementech jazyka C/C++ (například názvy proměnných).
 
-##  <a name="_core_support_for_the_input_method_editor_.28.ime.29"></a>Podpora editoru IME (Input Method Editor)
+## <a name="support-for-the-input-method-editor-ime"></a><a name="_core_support_for_the_input_method_editor_.28.ime.29"></a>Podpora editoru IME (IME)
 
-Aplikace napsané pro východní asijské trhy, které používají znakovou sadu MBCS (například Japonsko), standardně podporují Windows IME pro zadávání jednoduchých i dvoubajtových znaků. Prostředí pro C++ vizuální vývoj obsahuje úplnou podporu pro Editor IME.
+Aplikace napsané pro východoasijské trhy, které používají mbcs (například Japonsko) obvykle podporují ime Windows IME pro zadávání jednobajtových i dvoubajtových znaků. Vývojové prostředí Visual C++ obsahuje plnou podporu pro ime.
 
-Japonské klávesnice nepodporují přímo znaky kanji. Editor IME převede fonetický řetězec zadaný v jedné z ostatních japonských abeced (Romaji, Katakana nebo Hiragana) do jeho možné reprezentace Kanji. Pokud dojde k nejednoznačnosti, můžete vybrat z několika alternativ. Pokud jste vybrali zamýšlený znak Kanji, editor IME předá do řídicí `WM_CHAR` aplikace dvě zprávy.
+Japonské klávesnice přímo nepodporují znaky Kanji. IME převede fonetický řetězec zadaný v jedné z dalších japonských abeced (Romaji, Katakana nebo Hiragana) na jeho možné reprezentace Kanji. Pokud je nejednoznačnost, můžete si vybrat z několika alternativ. Pokud jste vybrali zamýšlený znak Kanji, ime předá dvě `WM_CHAR` zprávy řídící aplikaci.
 
-Editor IME aktivovaný kombinací kláves ALT +\` se zobrazí jako sada tlačítek (indikátor) a okno pro převod. Aplikace umístí okno na místo vložení textu. Aplikace musí zpracovat `WM_MOVE` a `WM_SIZE` zprávy přeumístěním okna převodu tak, aby odpovídalo novému umístění nebo velikosti cílového okna.
+IME, aktivovaný kombinací\` kláves ALT+, se zobrazí jako sada tlačítek (indikátor) a konverzního okna. Aplikace umístí okno v textovém kurzoru. Aplikace musí `WM_MOVE` zpracovávat a `WM_SIZE` zprávy přemístěním okna převodu tak, aby odpovídalo novému umístění nebo velikosti cílového okna.
 
-Pokud chcete, aby uživatelé vaší aplikace měli možnost zadat znaky kanji, musí aplikace zpracovat zprávy Windows IME. Další informace o programování IME naleznete v tématu [správce metod vstupu](/windows/win32/intl/input-method-manager).
+Pokud chcete, aby uživatelé vaší aplikace měli možnost zadávat znaky Kanji, musí aplikace zpracovávat zprávy ime systému Windows. Další informace o programování editoru IME naleznete [ve Správci vstupů](/windows/win32/intl/input-method-manager).
 
-## <a name="visual-c-debugger"></a>Vizuální C++ ladicí program
+## <a name="visual-c-debugger"></a>Ladicí program Visual C++
 
-Vizuální C++ ladicí program poskytuje možnost nastavovat zarážky pro zprávy editoru IME. Kromě toho okno paměti může zobrazit dvoubajtové znaky.
+Ladicí program Visual C++ umožňuje nastavit zarážky u zpráv IME. Kromě toho může okno Paměť zobrazit dvoubajtové znaky.
 
 ## <a name="command-line-tools"></a>Nástroje příkazového řádku
 
-Nástroje příkazového řádku jazyka Visual C++ , včetně kompilátoru, NMAKE a kompilátoru prostředků (RC. EXE), jsou povoleny znakové sady MBCS. Pro změnu výchozí znakové stránky při kompilování prostředků vaší aplikace můžete použít možnost/c kompilátoru prostředků.
+Nástroje příkazového řádku Visual C++, včetně kompilátoru, NMAKE a kompilátoru prostředků (RC. EXE), jsou mbcs-enabled. Můžete použít kompilátor prostředků /c možnost změnit výchozí znakovou stránku při kompilaci prostředků aplikace.
 
 Chcete-li změnit výchozí národní prostředí v době kompilace zdrojového kódu, použijte [#pragma setlocale](../preprocessor/setlocale.md).
 
 ## <a name="graphical-tools"></a>Grafické nástroje
 
-Nástroje pro C++ Visual v systému Windows, například Spy + + a nástroje pro úpravu prostředků, plně podporují řetězce editoru IME.
+Nástroje visual C++ pro Windows, jako je Spy++ a nástroje pro úpravy prostředků, plně podporují řetězce editoru IME.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Podpora vícebajtových znakových sad (MBCS)](../text/support-for-multibyte-character-sets-mbcss.md)<br/>
 [MBCS – tipy pro programování](../text/mbcs-programming-tips.md)

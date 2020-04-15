@@ -1,5 +1,5 @@
 ---
-title: Cmfcribbonlabel – třída
+title: CMFCRibbonLabel – třída
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCRibbonLabel
@@ -10,16 +10,16 @@ helpviewer_keywords:
 - CMFCRibbonLabel [MFC], CMFCRibbonLabel
 - CMFCRibbonLabel [MFC], SetACCData
 ms.assetid: 0346c891-83bf-4f20-b8a1-c84cf2aadced
-ms.openlocfilehash: b79d6191d2deb0a295e81da1150cc7b38fd81232
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cd30e374441661368d3ea7abf5177424f8dffb3c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388407"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375127"
 ---
-# <a name="cmfcribbonlabel-class"></a>Cmfcribbonlabel – třída
+# <a name="cmfcribbonlabel-class"></a>CMFCRibbonLabel – třída
 
-Implementuje neklikatelné textový popisek pro pás karet.
+Implementuje textový popisek pásu karet, na který se neklikat.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -31,42 +31,42 @@ class CMFCRibbonLabel : public CMFCRibbonButton
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CMFCRibbonLabel::CMFCRibbonLabel](#cmfcribbonlabel)|Vytvoří a inicializuje `CMFCRibbonLabel` objektu zadaného textovým řetězcem.|
+|[CMFCRibbonLabel::CMFCRibbonLabel](#cmfcribbonlabel)|Vytvoří a inicializuje `CMFCRibbonLabel` objekt se zadaným textovým řetězcem.|
 |`CMFCRibbonLabel::~CMFCRibbonLabel`|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|`CMFCRibbonLabel::CreateObject`|Rozhraní používá k vytvoření dynamické instance tohoto typu třídy.|
-|`CMFCRibbonLabel::GetThisClass`|Používá k získání ukazatele na rámec [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objekt, který je přidružený k typu třídy.|
-|[CMFCRibbonLabel::SetACCData](#setaccdata)|Určuje usnadnění dat pro aktuální popisek prvek pásu karet. (Přepíše [CMFCRibbonButton::SetACCData](../../mfc/reference/cmfcribbonbutton-class.md#setaccdata).)|
+|`CMFCRibbonLabel::CreateObject`|Používá rámci k vytvoření dynamické instance tohoto typu třídy.|
+|`CMFCRibbonLabel::GetThisClass`|Používá rozhraní k získání ukazatele na [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objektu, který je přidružen k tomuto typu třídy.|
+|[CMFCRibbonLabel::SetACCData](#setaccdata)|Určuje data usnadnění pro aktuální prvek popisku pásu karet. (Přepíše [CMFCRibbonButton::SetACCData](../../mfc/reference/cmfcribbonbutton-class.md#setaccdata).)|
 
 ### <a name="remarks"></a>Poznámky
 
-Po vytvoření popisku pásu karet, přidejte ho do panelu voláním [CMFCRibbonPanel::Add](../../mfc/reference/cmfcribbonpanel-class.md#add).
+Po vytvoření štítku pásu karet jej přidejte do panelu voláním [CMFCRibbonPanel::Add](../../mfc/reference/cmfcribbonpanel-class.md#add).
 
-Nelze přidat popisek pásu karet na panelu nástrojů Rychlý přístup.
+Popisek pásu karet nelze přidat na panel nástrojů Rychlý přístup.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObjekt](../../mfc/reference/cobject-class.md)
 
-[Cmfcribbonbaseelement –](../../mfc/reference/cmfcribbonbaseelement-class.md)
+[CMFC4RibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)
 
-[CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md)
+[CmFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md)
 
-[CMFCRibbonLabel](../../mfc/reference/cmfcribbonlabel-class.md)
+[CmFCještítek](../../mfc/reference/cmfcribbonlabel-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
 **Záhlaví:** afxRibbonLabel.h
 
-##  <a name="cmfcribbonlabel"></a>  CMFCRibbonLabel::CMFCRibbonLabel
+## <a name="cmfcribbonlabelcmfcribbonlabel"></a><a name="cmfcribbonlabel"></a>CMFCRibbonLabel::CMFCRibbonLabel
 
-Vytvoří a inicializuje [cmfcribbonlabel –](../../mfc/reference/cmfcribbonlabel-class.md) objekt, který zobrazí zadaný text řetězce.
+Vytvoří a inicializuje objekt [CMFCRibbonLabel,](../../mfc/reference/cmfcribbonlabel-class.md) který zobrazuje zadaný textový řetězec.
 
 ```
 CMFCRibbonLabel(
@@ -77,14 +77,14 @@ CMFCRibbonLabel(
 ### <a name="parameters"></a>Parametry
 
 *lpszText*<br/>
-[in] Text, který se zobrazí v popisku.
+[v] Text, který se zobrazí v popisku.
 
 *bIsMultiLine*<br/>
-[in] TRUE, pokud chcete určit, že popisek je Víceřádkový popisek; v opačném případě hodnota FALSE.
+[v] TRUE, chcete-li určit, že popisek je víceřádkový popisek; jinak NEPRAVDA.
 
-##  <a name="setaccdata"></a>  CMFCRibbonLabel::SetACCData
+## <a name="cmfcribbonlabelsetaccdata"></a><a name="setaccdata"></a>CMFCRibbonLabel::SetACCData
 
-Určuje usnadnění dat pro aktuální popisek prvek pásu karet.
+Určuje data usnadnění pro aktuální prvek popisku pásu karet.
 
 ```
 virtual BOOL SetACCData(
@@ -95,16 +95,16 @@ virtual BOOL SetACCData(
 ### <a name="parameters"></a>Parametry
 
 *pParent*<br/>
-[in] Představuje nadřazené okno aktuální popisku pásu karet.
+[v] Představuje nadřazené okno aktuálního popisku pásu karet.
 
-*data*<br/>
-[out] Objekt typu `CAccessibilityData` , který je naplněný daty usnadnění aktuální popisku pásu karet.
+*Dat*<br/>
+[out] Objekt typu, `CAccessibilityData` který je naplněn daty usnadnění aktuálního popisku pásu karet.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE, pokud *data* parametr byl úspěšně naplněný daty usnadnění aktuální popisku pásu karet; v opačném případě hodnota FALSE.
+PRAVDA, pokud byl parametr *dat* úspěšně naplněn daty usnadnění aktuálního štítku pásu karet; jinak NEPRAVDA.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>

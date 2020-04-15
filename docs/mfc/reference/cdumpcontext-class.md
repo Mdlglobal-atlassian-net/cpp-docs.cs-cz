@@ -1,5 +1,5 @@
 ---
-title: Cdumpcontext – třída
+title: Třída CDumpContext
 ms.date: 11/04/2016
 f1_keywords:
 - CDumpContext
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - CDumpContext [MFC], HexDump
 - CDumpContext [MFC], SetDepth
 ms.assetid: 98c52b2d-14b5-48ed-b423-479a4d1c60fa
-ms.openlocfilehash: a5b53ced4e20c920aab8e7ebcda3e3f6f8798ba5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aa549e5347bf2bd357fa3c28e81a0309ea4f4aff
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62164095"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374009"
 ---
-# <a name="cdumpcontext-class"></a>Cdumpcontext – třída
+# <a name="cdumpcontext-class"></a>Třída CDumpContext
 
-Diagnostický výstup orientovaný na stream podporuje ve formě čitelné textu.
+Podporuje datový proud orientovaný diagnostický výstup ve formě textu čitelného pro člověka.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -39,47 +39,47 @@ class CDumpContext
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CDumpContext::CDumpContext](#cdumpcontext)|Vytvoří `CDumpContext` objektu.|
+|[CDumpContext::CDumpContext](#cdumpcontext)|Vytvoří `CDumpContext` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CDumpContext::DumpAsHex](#dumpashex)|Výpisy stavu systému uvedené položky v šestnáctkovém formátu.|
-|[CDumpContext::Flush](#flush)|Vyprázdní data do vyrovnávací paměti kontextu s výpisem paměti.|
-|[CDumpContext::GetDepth](#getdepth)|Získá odpovídající do hloubky výpis celého čísla.|
-|[CDumpContext::HexDump](#hexdump)|Vypíše bajtů obsažených v poli v šestnáctkovém formátu.|
-|[CDumpContext::SetDepth](#setdepth)|Nastaví hloubku výpisu paměti.|
+|[CDumpContext::DumpAsHex](#dumpashex)|Vypíše uvedenou položku v šestnáctkovém formátu.|
+|[CDumpContext::Flush](#flush)|Vyprázdní všechna data ve vyrovnávací paměti kontextu výpisu.|
+|[CDumpContext::GetDepth](#getdepth)|Získá celé číslo odpovídající hloubce výpisu.|
+|[CDumpContext::HexDump](#hexdump)|Zazdá bajty obsažené v poli v šestnáctkovém formátu.|
+|[CDumpContext::Hloubka nastavení](#setdepth)|Nastaví hloubku výpisu.|
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CDumpContext::operator &lt;&lt;](#operator_lt_lt)|Vloží proměnných a objektů do kontextu s výpisem paměti.|
+|[CDumpContext::operátor&lt;&lt;](#operator_lt_lt)|Vloží proměnné a objekty do kontextu výpisu.|
 
 ## <a name="remarks"></a>Poznámky
 
-`CDumpContext` nemá základní třídu.
+`CDumpContext`nemá základní třídu.
 
-Můžete použít [afxDump](diagnostic-services.md#afxdump), předem deklarovaná `CDumpContext` objektu pro většinu váš výpis. `afxDump` Objekt je k dispozici pouze v ladicí verzi knihovny Microsoft Foundation Class.
+Můžete použít [afxDump](diagnostic-services.md#afxdump), `CDumpContext` předdeclared objekt, pro většinu vašeho dumpingu. Objekt `afxDump` je k dispozici pouze v ladicí verzi knihovny tříd Microsoft Foundation.
 
-Některé z paměti [diagnostické služby](../../mfc/reference/diagnostic-services.md) použít `afxDump` pro jejich výstup.
+Několik [diagnostických služeb](../../mfc/reference/diagnostic-services.md) `afxDump` paměti používá pro svůj výstup.
 
-V rámci prostředí Windows, výstup z předdefinovaného `afxDump` objektu, koncepčně podobné `cerr` datového proudu, se směruje do ladicího programu pomocí funkce Windows `OutputDebugString`.
+V prostředí systému Windows je `afxDump` výstup z předdefinovaného `cerr` objektu, koncepčně podobný datovému `OutputDebugString`proudu, směrován do ladicího programu prostřednictvím funkce systému Windows .
 
-`CDumpContext` Třída nemá přetížení vložení ( **<<**) operátor pro `CObject` ukazatele, které vypíše dat tohoto objektu. Pokud potřebujete formátu vlastní s výpisem paměti pro objekt odvozené, přepište [CObject::Dump](../../mfc/reference/cobject-class.md#dump). Většina tříd Microsoft Foundation implementovat překryté `Dump` členskou funkci.
+Třída `CDumpContext` má přetížené vkládání ( **<<**) `CObject` operátor pro ukazatele, které vypisuje data objektu. Pokud potřebujete vlastní formát výpisu pro odvozený objekt, přepište [CObject::Dump](../../mfc/reference/cobject-class.md#dump). Většina tříd Microsoft Foundation `Dump` implementuje potlačenou člennou funkci.
 
-Třídy, které nejsou odvozeny od `CObject`, jako například `CString`, `CTime`, a `CTimeSpan`, mají své vlastní přetížené `CDumpContext` operátorů insertion jako struktury často používá jako `CFileStatus`, `CPoint`, a `CRect`.
+Třídy, které nejsou `CObject`odvozeny `CString` `CTime`od `CTimeSpan`, například , `CDumpContext` a , mají své vlastní přetížené `CFileStatus`vkládání `CPoint`operátory, stejně jako často používané struktury, jako jsou , , a `CRect`.
 
-Pokud používáte [IMPLEMENT_DYNAMIC](../../mfc/reference/run-time-object-model-services.md#implement_dynamic) nebo [IMPLEMENT_SERIAL](../../mfc/reference/run-time-object-model-services.md#implement_serial) – makro v implementaci třídy, pak `CObject::Dump` vytiskne název vaší `CObject`-odvozené třídy. V opačném případě bude tisk `CObject`.
+Pokud použijete [IMPLEMENT_DYNAMIC](../../mfc/reference/run-time-object-model-services.md#implement_dynamic) nebo [IMPLEMENT_SERIAL](../../mfc/reference/run-time-object-model-services.md#implement_serial) makro v implementaci `CObject::Dump` vaší třídy, `CObject`vytiskne název vaší odvozené třídy. V opačném případě `CObject`se vytiskne .
 
-`CDumpContext` Třídy je dostupná v ladění i vydání verze knihoven, ale `Dump` členská funkce je definováno pouze v ladicí verzi. Použití **#ifdef _DEBUG**  /  `#endif` příkazy párování diagnostiky kódu, včetně vaší vlastní `Dump` členské funkce.
+Třída `CDumpContext` je k dispozici s ladicí a release verze `Dump` knihovny, ale členská funkce je definována pouze v ladicí verzi. Pomocí **příkazů #ifdef _DEBUG**  /  `#endif` můžete vytvořit závorku diagnostického kódu, včetně vlastních `Dump` členských funkcí.
 
-Před vytvořením vlastní `CDumpContext` objektu, je nutné vytvořit `CFile` objektů, které slouží jako cíl s výpisem paměti.
+Před vytvořením `CDumpContext` vlastního objektu `CFile` je nutné vytvořit objekt, který slouží jako cíl výpisu.
 
-Další informace o `CDumpContext`, naleznete v tématu [ladění aplikací MFC](/visualstudio/debugger/mfc-debugging-techniques).
+Další informace `CDumpContext`naleznete v tématu [Ladění aplikací knihovny MFC](/visualstudio/debugger/mfc-debugging-techniques).
 
 **#define _DEBUG**
 
@@ -91,7 +91,7 @@ Další informace o `CDumpContext`, naleznete v tématu [ladění aplikací MFC]
 
 **Záhlaví:** afx.h
 
-##  <a name="cdumpcontext"></a>  CDumpContext::CDumpContext
+## <a name="cdumpcontextcdumpcontext"></a><a name="cdumpcontext"></a>CDumpContext::CDumpContext
 
 Vytvoří objekt třídy `CDumpContext`.
 
@@ -101,22 +101,22 @@ CDumpContext(CFile* pFile = NULL);
 
 ### <a name="parameters"></a>Parametry
 
-*pFile*<br/>
-Ukazatel `CFile` objekt, který je cílem s výpisem paměti.
+*pSoubor*<br/>
+Ukazatel na `CFile` objekt, který je cíl výpisu.
 
 ### <a name="remarks"></a>Poznámky
 
-`afxDump` Objekt je vytvořen automaticky.
+Objekt `afxDump` je vytvořen automaticky.
 
-Nezapisujte do základního `CFile` kontextu s výpisem paměti je aktivní; jinak vrátí hodnotu, bude kolidovat s výpisem paměti. V rámci prostředí Windows, výstup se směruje na ladicí program prostřednictvím funkce Windows `OutputDebugString`.
+Nezapisovat `CFile` do podkladového, když je aktivní kontext výpisu; v opačném případě budete zasahovat do skládky. V prostředí systému Windows je výstup směrován do ladicího programu prostřednictvím funkce `OutputDebugString`systému Windows .
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFC_Utilities#12](../../mfc/codesnippet/cpp/cdumpcontext-class_1.cpp)]
 
-##  <a name="dumpashex"></a>  CDumpContext::DumpAsHex
+## <a name="cdumpcontextdumpashex"></a><a name="dumpashex"></a>CDumpContext::DumpAsHex
 
-Vypíše zadaného typu naformátovaná jako šestnáctková čísla.
+Zapíše zadaný typ formátovaný jako šestnáctková čísla.
 
 ```
 CDumpContext& DumpAsHex(BYTE b);
@@ -131,19 +131,19 @@ CDumpContext& DumpAsHex(WORD w);
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Odkaz na `CDumpContext` objektu.
+Odkaz na `CDumpContext` objekt.
 
 ### <a name="remarks"></a>Poznámky
 
-Voláním této členské funkce pro výpis položky zadaného typu jako šestnáctkové číslo. Chcete-li vypsat pole, volejte [CDumpContext::HexDump](#hexdump).
+Volání této členské funkce vypisovat položku zadaného typu jako šestnáctkové číslo. Chcete-li vyřadit pole, zavolejte [CDumpContext::HexDump](#hexdump).
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFC_Utilities#13](../../mfc/codesnippet/cpp/cdumpcontext-class_2.cpp)]
 
-##  <a name="flush"></a>  CDumpContext::Flush
+## <a name="cdumpcontextflush"></a><a name="flush"></a>CDumpContext::Flush
 
-Vynutí veškerá data ve vyrovnávací paměti k zápisu do souboru zbývá připojit ke kontextu s výpisem paměti.
+Vynutí všechna zbývající data ve vyrovnávacích pamětnicích, které mají být zapsány do souboru připojeného k kontextu výpisu stavu.
 
 ```
 void Flush();
@@ -153,9 +153,9 @@ void Flush();
 
 [!code-cpp[NVC_MFC_Utilities#14](../../mfc/codesnippet/cpp/cdumpcontext-class_3.cpp)]
 
-##  <a name="getdepth"></a>  CDumpContext::GetDepth
+## <a name="cdumpcontextgetdepth"></a><a name="getdepth"></a>CDumpContext::GetDepth
 
-Určuje, zda je hloubkové nebo bez podstruktury s výpisem paměti v procesu.
+Určuje, zda je zpracováván hluboký nebo mělký výpis.
 
 ```
 int GetDepth() const;
@@ -163,15 +163,15 @@ int GetDepth() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hloubka výpis paměti jako sady podle `SetDepth`.
+Hloubka výpisu, jak `SetDepth`je nastavena .
 
 ### <a name="example"></a>Příklad
 
-  Podívejte se na příklad pro [SetDepth](#setdepth).
+  Viz příklad pro [SetDepth](#setdepth).
 
-##  <a name="hexdump"></a>  CDumpContext::HexDump
+## <a name="cdumpcontexthexdump"></a><a name="hexdump"></a>CDumpContext::HexDump
 
-Vypíše pole bajtů ve formátu jako šestnáctková čísla.
+Vypíše pole bajtů formátovaných jako šestnáctková čísla.
 
 ```
 void HexDump(
@@ -184,28 +184,28 @@ void HexDump(
 ### <a name="parameters"></a>Parametry
 
 *lpszLine*<br/>
-Řetězec k výstupu na začátku nového řádku.
+Řetězec pro výstup na začátku nového řádku.
 
 *pby*<br/>
-Ukazatel do vyrovnávací paměti, který obsahuje počet bajtů k výpisu paměti.
+Ukazatel na vyrovnávací paměť obsahující bajty, které mají být uloženy.
 
-*nBytes*<br/>
-Počet bajtů pro výpis.
+*nBajtu bajtů*<br/>
+Počet bajtů, které mají být uloženy.
 
-*nWidth*<br/>
-Maximální počet bajtů zálohované na řádek (ne šířku Vypsat řádek).
+*nŠířka*<br/>
+Maximální počet bajtů vynechaných na řádek (nikoli šířka výstupního řádku).
 
 ### <a name="remarks"></a>Poznámky
 
-Chcete-li vypsat typu jeden, konkrétní položky jako šestnáctkové číslo, zavolejte [CDumpContext::DumpAsHex](#dumpashex).
+Chcete-li vyřadit jeden konkrétní typ položky jako šestnáctkové číslo, zavolejte [CDumpContext::DumpAsHex](#dumpashex).
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFC_Utilities#15](../../mfc/codesnippet/cpp/cdumpcontext-class_4.cpp)]
 
-##  <a name="operator_lt_lt"></a>  CDumpContext::operator &lt;&lt;
+## <a name="cdumpcontextoperator-ltlt"></a><a name="operator_lt_lt"></a>CDumpContext::operátor&lt;&lt;
 
-Zadaný výstupní data odesílá do kontextu s výpisem paměti.
+Výstupy zadaných dat do kontextu výpisu.
 
 ```
 CDumpContext& operator<<(const CObject* pOb);
@@ -233,21 +233,21 @@ CDumpContext& operator<<(HFONT h);
 
 ### <a name="return-value"></a>Návratová hodnota
 
-A `CDumpContext` odkaz. Používat návratovou hodnotu, můžete napsat více vložení na jednom řádku zdrojového kódu.
+Odkaz. `CDumpContext` Pomocí vrácené hodnoty můžete zapsat více vložení na jeden řádek zdrojového kódu.
 
 ### <a name="remarks"></a>Poznámky
 
-Operátor vkládání je přetížena pro `CObject` ukazatele stejně jako u nejvíce primitivní typy. Ukazatel na znak výsledkem výpisu obsahu řetězce; ukazatel na **void** výsledkem adresy pouze hexadecimální s výpisem paměti. LONGLONG výsledkem výpisu 64bitové celé číslo se znaménkem; ULONGLONG výsledkem výpisu 64-bit znaménka.
+Operátor vložení je přetížený `CObject` pro ukazatele i pro většinu primitivních typů. Ukazatel na znak má za následek výpis obsahu řetězce; ukazatel **void** má za následek šestnáctkový výpis adresy pouze. Longlong výsledkem výpis u 64bitové podepsané celé číslo; ULONGLONG výsledky výpisu 64bitové nepodepsané celé číslo.
 
-Pokud používáte IMPLEMENT_DYNAMIC nebo IMPLEMENT_SERIAL – makro v implementaci vaší třídy, pak operátor vkládání prostřednictvím `CObject::Dump`, vytiskne se název vašeho `CObject`-odvozené třídy. V opačném případě bude tisk `CObject`. Pokud přepíšete `Dump` funkce třídy, pak může poskytnout lépe vystihuje výstup obsahu objektu namísto šestnáctkové s výpisem paměti.
+Pokud použijete IMPLEMENT_DYNAMIC nebo IMPLEMENT_SERIAL makro v implementaci vaší třídy, `CObject::Dump`vytiskne operátor `CObject`vložení , a vytiskne název vaší odvozené třídy. V opačném případě `CObject`se vytiskne . Pokud přepíšete `Dump` funkci třídy, můžete poskytnout smysluplnější výstup obsahu objektu namísto šestnáctkového výpisu.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFC_Utilities#17](../../mfc/codesnippet/cpp/cdumpcontext-class_5.cpp)]
 
-##  <a name="setdepth"></a>  CDumpContext::SetDepth
+## <a name="cdumpcontextsetdepth"></a><a name="setdepth"></a>CDumpContext::Hloubka nastavení
 
-Nastaví hloubku pro výpis paměti.
+Nastaví hloubku pro výpis.
 
 ```
 void SetDepth(int nNewDepth);
@@ -255,21 +255,21 @@ void SetDepth(int nNewDepth);
 
 ### <a name="parameters"></a>Parametry
 
-*nNewDepth*<br/>
+*nNová hloubka*<br/>
 Nová hodnota hloubky.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud jsou vypsání primitivní typ nebo jednoduchý `CObject` , který neobsahuje žádné ukazatele na jiné objekty, pak stačí hodnotu 0. Hodnotu větší než 0 určuje hloubkové výpisu paměti, ve kterém jsou všechny objekty zálohované rekurzivně. Například hloubkové s výpisem paměti kolekce se vypsat všechny elementy z kolekce. Můžete použít jiné hodnoty konkrétní hloubka v odvozených třídách.
+Pokud vypouštíte primitivní `CObject` typ nebo jednoduchý, který neobsahuje žádné ukazatele na jiné objekty, je dostatečná hodnota 0. Hodnota větší než 0 určuje hluboký výpis, kde jsou všechny objekty vypovězeny rekurzivně. Například hluboký výpis kolekce vypíše všechny prvky kolekce. V odvozených třídách můžete použít jiné specifické hodnoty hloubky.
 
 > [!NOTE]
->  Cyklické odkazy nejsou zjištěny v hloubkové výpisů paměti a může vést k nekonečné smyčky.
+> Cyklické odkazy nejsou zjištěny v hluboké výpisy a může mít za následek nekonečné smyčky.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFC_Utilities#16](../../mfc/codesnippet/cpp/cdumpcontext-class_6.cpp)]
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [CFile – třída](../../mfc/reference/cfile-class.md)<br/>

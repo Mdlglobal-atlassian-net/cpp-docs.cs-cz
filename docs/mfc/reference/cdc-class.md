@@ -1,5 +1,5 @@
 ---
-title: CDC – třída
+title: Třída CDC
 ms.date: 11/19/2018
 f1_keywords:
 - CDC
@@ -402,14 +402,14 @@ helpviewer_keywords:
 - CDC [MFC], m_hAttribDC
 - CDC [MFC], m_hDC
 ms.assetid: 715b3334-cb2b-4c9c-8067-02eb7c66c8b2
-ms.openlocfilehash: bae2f9a5a4f39c4eeffe68cc33e744e44c6800c8
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 830c6d068a5074d0918107ca601c51d198a8a912
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79420678"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375712"
 ---
-# <a name="cdc-class"></a>CDC – třída
+# <a name="cdc-class"></a>Třída CDC
 
 Definuje třídu objektů kontextu zařízení.
 
@@ -423,243 +423,243 @@ class CDC : public CObject
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CDC:: CDC](#cdc)|Vytvoří objekt `CDC`.|
+|[CDC::CDC](#cdc)|Vytvoří `CDC` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CDC:: AbortDoc](#abortdoc)|Ukončí aktuální tiskovou úlohu a vymaže vše, co aplikace do zařízení zapsala od posledního volání členské funkce `StartDoc`.|
-|[CDC:: AbortPath](#abortpath)|Zavře a zahodí všechny cesty v kontextu zařízení.|
-|[CDC:: AddMetaFileComment](#addmetafilecomment)|Zkopíruje komentář z vyrovnávací paměti do určeného formátu Enhanced-Format.|
-|[CDC:: AlphaBlend](#alphablend)|Zobrazí rastrové obrázky, které mají transparentní nebo poloprůhledný pixel.|
-|[CDC:: AngleArc](#anglearc)|Nakreslí segment čáry a oblouk a přesune aktuální pozici do koncového bodu oblouku.|
-|[CDC:: Arc](#arc)|Nakreslí eliptický oblouk.|
-|[CDC:: ArcTo](#arcto)|Nakreslí eliptický oblouk. Tato funkce je podobná `Arc`, s tím rozdílem, že aktuální pozice je aktualizována.|
-|[CDC:: Attach](#attach)|Připojí kontext zařízení systému Windows k tomuto objektu `CDC`.|
-|[CDC:: BeginPath](#beginpath)|Otevře v kontextu zařízení vymezovač v cestě.|
-|[CDC:: BitBlt](#bitblt)|Zkopíruje rastrový obrázek z určeného kontextu zařízení.|
-|[CDC:: CTR](#chord)|Nakreslí CTR (uzavřený obrázek, který je ohraničen průsečíkem elipsy a segmentu čáry).|
-|[CDC:: CloseFigure](#closefigure)|Zavře otevřený obrázek v cestě.|
-|[CDC:: CreateCompatibleDC](#createcompatibledc)|Vytvoří kontext paměťového zařízení, který je kompatibilní s jiným kontextem zařízení. Můžete ho použít k přípravě imagí v paměti.|
-|[CDC:: CreateDC](#createdc)|Vytvoří kontext zařízení pro konkrétní zařízení.|
-|[CDC:: Create](#createic)|Vytvoří kontext informací pro konkrétní zařízení. Díky tomu získáte rychlý způsob, jak získat informace o zařízení bez vytvoření kontextu zařízení.|
-|[CDC::D eleteDC](#deletedc)|Odstraní kontext zařízení Windows přidružený k tomuto objektu `CDC`.|
-|[CDC::D eleteTempMap](#deletetempmap)|Volá se `CWinApp` obslužná rutina doby nečinnosti k odstranění dočasného objektu `CDC` vytvořeného `FromHandle`. Také odpojí kontext zařízení.|
-|[CDC::D etach](#detach)|Odpojí kontext zařízení s Windows od tohoto objektu `CDC`.|
-|[CDC::D PtoHIMETRIC](#dptohimetric)|Převede jednotky zařízení na jednotky HIMETRIC.|
-|[CDC::D PtoLP](#dptolp)|Převede jednotky zařízení na logické jednotky.|
-|[CDC::D raw3dRect](#draw3drect)|Nakreslí trojrozměrného obdélníku.|
-|[CDC::D rawDragRect](#drawdragrect)|Smaže a překreslí obdélník při jeho přetahování.|
-|[CDC::D rawEdge](#drawedge)|Kreslí okraje obdélníku.|
-|[CDC::D rawEscape](#drawescape)|Přistupuje k funkcím zobrazení videa, která nejsou přímo dostupná přes rozhraní GDI (Graphics Device Interface).|
-|[CDC::D rawFocusRect](#drawfocusrect)|Nakreslí obdélník ve stylu použitém k označení fokusu.|
-|[CDC::D rawFrameControl](#drawframecontrol)|Nakreslete ovládací prvek Frame.|
-|[CDC::D rawIcon](#drawicon)|Nakreslí ikonu.|
-|[CDC::D rawState](#drawstate)|Zobrazí obrázek a použije vizuální efekt k označení stavu.|
-|[CDC::D rawText](#drawtext)|Nakreslí formátovaný text v zadaném obdélníku.|
-|[CDC::D rawTextEx](#drawtextex)|Nakreslí formátovaný text v zadaném obdélníku pomocí dalších formátů.|
-|[CDC:: elipsa](#ellipse)|Nakreslí elipsu.|
-|[CDC:: EndDoc](#enddoc)|Ukončí tiskovou úlohu spuštěnou členskou funkcí `StartDoc`.|
-|[CDC:: EndPage](#endpage)|Informuje ovladač zařízení o ukončení stránky.|
-|[CDC:: EndPath](#endpath)|Uzavře vymezovač (Path) a vybere cestu definovanou v závorkách do kontextu zařízení.|
-|[CDC:: EnumObjects](#enumobjects)|Vytvoří výčet per a štětců dostupných v kontextu zařízení.|
-|[CDC:: Escape](#escape)|Umožňuje aplikacím přístup k zařízením, která nejsou přímo dostupná z konkrétního zařízení prostřednictvím rozhraní GDI. Také umožňuje přístup k řídicím funkcím systému Windows. Řídicí volání prováděná aplikací jsou přeložena a odeslána do ovladače zařízení.|
-|[CDC:: ExcludeClipRect](#excludecliprect)|Vytvoří novou oblast oříznutí, která se skládá z existující oblasti oříznutí mínus zadaný obdélník.|
-|[CDC:: ExcludeUpdateRgn](#excludeupdatergn)|Znemožní vykreslování v neplatných oblastech okna vyloučením aktualizované oblasti v okně z oblasti oříznutí.|
-|[CDC:: ExtFloodFill](#extfloodfill)|Vyplní oblast aktuálním štětcem. Poskytuje větší flexibilitu než členská funkce [CDC:: FloodFill](#floodfill) .|
-|[CDC:: ExtTextOut](#exttextout)|Zapíše řetězec znaků v obdélníkové oblasti pomocí aktuálně vybraného písma.|
-|[CDC:: FillPath](#fillpath)|Zavře všechny otevřené obrázky v aktuální cestě a naplní vnitřní cestu pomocí aktuálního režimu štětce a mnohoúhelníku.|
-|[CDC:: FillRect](#fillrect)|Vyplní daný obdélník pomocí konkrétního štětce.|
-|[CDC:: FillRgn](#fillrgn)|Vyplní konkrétní oblast zadaným štětcem.|
-|[CDC:: FillSolidRect](#fillsolidrect)|Vyplní obdélník plnou barvou.|
-|[CDC:: FlattenPath](#flattenpath)|Transformuje všechny křivky v cestě vybrané do aktuálního kontextu zařízení a zapíná každou křivku na sekvenci řádků.|
-|[CDC:: FloodFill](#floodfill)|Vyplní oblast aktuálním štětcem.|
-|[CDC:: FrameRect](#framerect)|Nakreslí ohraničení kolem obdélníku.|
-|[CDC:: FrameRgn](#framergn)|Vykreslí ohraničení kolem konkrétní oblasti pomocí štětce.|
-|[CDC:: FromHandle](#fromhandle)|Vrací ukazatel na objekt `CDC`, pokud je předána obslužná rutina kontextu zařízení. Pokud objekt `CDC` není připojen k popisovači, je vytvořen a připojen dočasný objekt `CDC`.|
-|[CDC:: GetArcDirection](#getarcdirection)|Vrátí aktuální směr oblouku pro kontext zařízení.|
-|[CDC:: GetAspectRatioFilter](#getaspectratiofilter)|Načte nastavení pro aktuální filtr poměru stran.|
-|[CDC:: GetBkColor](#getbkcolor)|Načte aktuální barvu pozadí.|
-|[CDC:: GetBkMode](#getbkmode)|Načte režim pozadí.|
-|[CDC:: GetBoundsRect](#getboundsrect)|Vrátí aktuální sečtený ohraničující obdélník pro určený kontext zařízení.|
-|[CDC:: GetBrushOrg](#getbrushorg)|Načte počátek aktuálního štětce.|
-|[CDC:: GetCharABCWidths](#getcharabcwidths)|Načte šířky (v logických jednotkách) po sobě jdoucích znaků v daném rozsahu od aktuálního písma.|
-|[CDC:: GetCharABCWidthsI](#getcharabcwidthsi)|Načte šířky (v logických jednotkách) po sobě jdoucí indexy glyfů v zadaném rozsahu od aktuálního písma TrueType.|
-|[CDC:: GetCharacterPlacement](#getcharacterplacement)|Načte různé typy informací o řetězci znaků.|
-|[CDC:: GetCharWidth](#getcharwidth)|Načte zlomkové šířky po sobě jdoucích znaků v daném rozsahu od aktuálního písma.|
-|[CDC:: GetCharWidthI](#getcharwidthi)|Načte šířky (v logických souřadnicích) po sobě jdoucí indexy glyfů v zadaném rozsahu od aktuálního písma.|
-|[CDC:: GetClipBox](#getclipbox)|Načte rozměry nejužšího ohraničujícího obdélníku kolem aktuální hranice oříznutí.|
-|[CDC:: GetColorAdjustment](#getcoloradjustment)|Načte hodnoty nastavení barev pro kontext zařízení.|
-|[CDC:: GetCurrentBitmap](#getcurrentbitmap)|Vrátí ukazatel na aktuálně vybraný objekt `CBitmap`.|
-|[CDC:: GetCurrentBrush](#getcurrentbrush)|Vrátí ukazatel na aktuálně vybraný objekt `CBrush`.|
-|[CDC:: GetCurrentFont](#getcurrentfont)|Vrátí ukazatel na aktuálně vybraný objekt `CFont`.|
-|[CDC:: GetCurrentPalette](#getcurrentpalette)|Vrátí ukazatel na aktuálně vybraný objekt `CPalette`.|
-|[CDC:: GetCurrentPen](#getcurrentpen)|Vrátí ukazatel na aktuálně vybraný objekt `CPen`.|
-|[CDC:: GetCurrentPosition](#getcurrentposition)|Načte aktuální pozici pera (v logických souřadnicích).|
-|[CDC:: GetDCBrushColor](#getdcbrushcolor)|Načte aktuální barvu štětce.|
-|[CDC:: GetDCPenColor](#getdcpencolor)|Načte aktuální barvu pera.|
-|[CDC:: GetDeviceCaps](#getdevicecaps)|Načte zadaný druh informací specifických pro konkrétní zařízení, které se týkají daných možností zobrazovacího zařízení.|
-|[CDC:: GetFontData](#getfontdata)|Načte informace o metrikě písma ze souboru škálovatelného písma. Informace, které se mají načíst, se identifikují zadáním posunu do souboru písma a délky informací, které se mají vrátit.|
-|[CDC:: GetFontLanguageInfo](#getfontlanguageinfo)|Vrátí informace o aktuálně vybraném písmu pro zadaný kontext zobrazení.|
-|[CDC:: GetGlyphOutline](#getglyphoutline)|Načte křivku nebo rastrový obrázek pro obrysový znak v aktuálním písmu.|
-|[CDC:: GetGraphicsMode](#getgraphicsmode)|Načte aktuální grafický režim pro zadaný kontext zařízení.|
-|[CDC:: GetHalftoneBrush](#gethalftonebrush)|Načte štětec polotónů.|
-|[CDC:: GetKerningPairs](#getkerningpairs)|Načte páry znaků párování pro písmo, které je aktuálně vybráno v zadaném kontextu zařízení.|
-|[CDC:: GetLayout](#getlayout)|Načte rozložení kontextu zařízení (DC). Rozložení může být buď zleva doprava (výchozí) nebo zprava doleva (Zrcadleno).|
-|[CDC:: GetMapMode](#getmapmode)|Načte aktuální režim mapování.|
-|[CDC:: GetMiterLimit](#getmiterlimit)|Vrátí limit úkosu pro kontext zařízení.|
-|[CDC:: GetNearestColor](#getnearestcolor)|Načte nejbližší logickou barvu na zadanou logickou barvu, kterou může dané zařízení reprezentovat.|
-|[CDC:: GetOutlineTextMetrics](#getoutlinetextmetrics)|Načte informace o metrikách písma pro písma TrueType.|
-|[CDC:: GetOutputCharWidth](#getoutputcharwidth)|Načte šířky jednotlivých znaků v po sobě jdoucích skupinách znaků od aktuálního písma pomocí kontextu výstupního zařízení.|
-|[CDC:: GetOutputTabbedTextExtent](#getoutputtabbedtextextent)|Vypočítá šířku a výšku řetězce znaků v kontextu výstupního zařízení.|
-|[CDC:: GetOutputTextExtent](#getoutputtextextent)|Vypočítá šířku a výšku řádku textu v kontextu výstupního zařízení pomocí aktuálního písma k určení dimenzí.|
-|[CDC:: GetOutputTextMetrics](#getoutputtextmetrics)|Načte metriky pro aktuální písmo z kontextu výstupního zařízení.|
-|[CDC:: GetPath](#getpath)|Načte souřadnice definující koncové body čar a řídicí body křivek nalezené v cestě, která je vybrána v kontextu zařízení.|
-|[CDC:: GetPixel](#getpixel)|Načte hodnotu barvy RGB pixelu v zadaném bodě.|
-|[CDC:: GetPolyFillMode](#getpolyfillmode)|Načte aktuální režim vyplňování mnohoúhelníku.|
-|[CDC:: GetROP2](#getrop2)|Načte aktuální režim kreslení.|
-|[CDC:: GetSafeHdc](#getsafehdc)|Vrátí [CDC:: m_hDC](#m_hdc), kontext výstupního zařízení.|
-|[CDC:: GetStretchBltMode](#getstretchbltmode)|Načte aktuální režim roztažení do rastrového obrázku.|
-|[CDC:: GetTabbedTextExtent](#gettabbedtextextent)|Vypočítá šířku a výšku řetězce znaků v kontextu zařízení s atributem.|
-|[CDC:: gettextalign](#gettextalign)|Načte příznaky zarovnání textu.|
-|[CDC:: GetTextCharacterExtra](#gettextcharacterextra)|Načte aktuální nastavení pro velikost rozestupu znaků.|
-|[CDC:: GetTextColor](#gettextcolor)|Načte aktuální barvu textu.|
-|[CDC:: GetTextExtent](#gettextextent)|Vypočítá šířku a výšku řádku textu v kontextu zařízení s atributem pomocí aktuálního písma k určení dimenzí.|
-|[CDC:: GetTextExtentExPointI](#gettextextentexpointi)|Načte počet znaků v zadaném řetězci, které se vejdou do určeného místa, a vyplní pole textem pro každý z těchto znaků.|
-|[CDC:: GetTextExtentPointI](#gettextextentpointi)|Načte šířku a výšku zadaného pole indexů glyfů.|
-|[CDC:: GetTextFace](#gettextface)|Zkopíruje název řezu aktuálního písma do vyrovnávací paměti jako řetězec zakončený hodnotou null.|
-|[CDC:: GetTextMetrics](#gettextmetrics)|Načte metriky pro aktuální písmo z kontextu zařízení s atributem.|
-|[CDC:: GetViewportExt](#getviewportext)|Načte rozsahy x a y zobrazení.|
-|[CDC:: GetViewportOrg](#getviewportorg)|Načte souřadnice x a y zdroje zobrazení.|
-|[CDC:: GetWindow](#getwindow)|Vrátí okno přidružené k kontextu zobrazovacího zařízení.|
-|[CDC:: GetWindowExt](#getwindowext)|Načte rozsahy x a y přidruženého okna.|
-|[CDC:: GetWindowOrg](#getwindoworg)|Načte souřadnice x a y počátku přidruženého okna.|
-|[CDC:: GetWorldTransform](#getworldtransform)|Načte aktuální světový prostor na transformaci místa na stránce.|
-|[CDC:: GradientFill](#gradientfill)|Naplní struktury obdélníku a trojúhelníku barvou gradating.|
-|[CDC:: GrayString](#graystring)|Nakreslí ztlumený (šedý) text na daném místě.|
-|[CDC:: HIMETRICtoDP](#himetrictodp)|Převede jednotky HIMETRIC na jednotky zařízení.|
-|[CDC:: HIMETRICtoLP](#himetrictolp)|Převede jednotky HIMETRIC na logické jednotky.|
-|[CDC:: IntersectClipRect](#intersectcliprect)|Vytvoří novou oblast oříznutí vytvořením průsečíku aktuální oblasti a obdélníku.|
-|[CDC:: InvertRect](#invertrect)|Obrátí obsah obdélníku.|
-|[CDC:: InvertRgn](#invertrgn)|Obrátí barvy v oblasti.|
-|[CDC:: deprinting](#isprinting)|Určuje, zda se pro tisk používá kontext zařízení.|
-|[CDC:: LineTo](#lineto)|Nakreslí čáru od aktuální pozice až do, ale ne včetně, bodu.|
-|[CDC:: LPtoDP](#lptodp)|Převede logické jednotky na jednotky zařízení.|
-|[CDC:: LPtoHIMETRIC](#lptohimetric)|Převede logické jednotky na jednotky HIMETRIC.|
-|[CDC:: MaskBlt](#maskblt)|Kombinuje barevná data pro zdrojové a cílové bitmapy pomocí dané masky a operace rastrového obrázku.|
-|[CDC:: ModifyWorldTransform](#modifyworldtransform)|Změní světovou transformaci kontextu zařízení v zadaném režimu.|
-|[CDC:: MoveTo](#moveto)|Přesune aktuální pozici.|
-|[CDC:: OffsetClipRgn](#offsetcliprgn)|Přesune oblast oříznutí daného zařízení.|
-|[CDC:: OffsetViewportOrg](#offsetviewportorg)|Upraví počátek zobrazení relativně k souřadnicím aktuálního počátku zobrazení.|
-|[CDC:: OffsetWindowOrg](#offsetwindoworg)|Upraví počátek okna relativně k souřadnicím aktuálního počátku okna.|
-|[CDC::P aintRgn](#paintrgn)|Vyplní oblast vybraným štětcem.|
-|[CDC::P atBlt](#patblt)|Vytvoří bitový vzorek.|
-|[CDC::P IE](#pie)|Kreslí klín ve tvaru výsečového grafu.|
-|[CDC::P layMetaFile](#playmetafile)|Přehraje obsah zadaného metasouboru na daném zařízení. Vylepšená verze `PlayMetaFile` zobrazuje obrázek uložený v daném metasouboru Enhanced-Format. Metasoubor lze přehrát libovolným počtem.|
-|[CDC::P lgBlt](#plgblt)|Provádí přenos bitového bloku bitů dat barev ze zadaného obdélníku v kontextu zdrojového zařízení na zadaný Kosoúhelník v daném kontextu zařízení.|
-|[CDC::P olyBezier](#polybezier)|Kreslí jednu nebo více Bzierých křivek. Aktuální pozice se nepoužívá ani není aktualizována.|
-|[CDC::P olyBezierTo](#polybezierto)|Vykreslí jednu nebo více Bzierých křivek a přesune aktuální pozici na koncový bod poslední Bzier křivky.|
-|[CDC::P olyDraw](#polydraw)|Nakreslí sadu segmentů čáry a Bzier křivky. Tato funkce aktualizuje aktuální pozici.|
-|[CDC::P olygon](#polygon)|Nakreslí mnohoúhelník skládající se ze dvou nebo více bodů (vrcholy) propojených řádky.|
-|[CDC::P olyline](#polyline)|Nakreslí sadu segmentů čar připojujících se ke stanoveným bodům.|
-|[CDC::P olylineTo](#polylineto)|Vykreslí jednu nebo více přímých čar a přesune aktuální pozici na koncový bod posledního řádku.|
-|[CDC::P olyPolygon](#polypolygon)|Vytvoří dva nebo více mnohoúhelníků, které jsou vyplněny pomocí aktuálního režimu vyplňování mnohoúhelníků. Mnohoúhelníky mohou být nesouvislé nebo se mohou překrývat.|
-|[CDC::P olyPolyline](#polypolyline)|Kreslí více sérií propojených segmentů čáry. Aktuální pozice není použita ani není aktualizována touto funkcí.|
-|[CDC::P tVisible](#ptvisible)|Určuje, zda je daný bod v oblasti oříznutí.|
-|[CDC:: RealizePalette](#realizepalette)|Mapuje položky palety v aktuální logické paletě na paletu systému.|
-|[CDC:: Rectangle](#rectangle)|Nakreslí obdélník pomocí aktuálního pera a vyplní ho pomocí aktuálního štětce.|
-|[CDC:: RectVisible](#rectvisible)|Určuje, zda jakákoli část daného obdélníku leží v oblasti oříznutí.|
-|[CDC:: ReleaseAttribDC](#releaseattribdc)|Vydává `m_hAttribDC`, atribut kontext zařízení.|
-|[CDC:: ReleaseOutputDC](#releaseoutputdc)|Vydává `m_hDC`, kontext výstupního zařízení.|
-|[CDC:: ResetDC](#resetdc)|Aktualizuje kontext zařízení `m_hAttribDC`.|
-|[CDC:: RestoreDC](#restoredc)|Obnoví kontext zařízení do předchozího stavu uloženého s `SaveDC`.|
-|[CDC:: RoundRect](#roundrect)|Nakreslí obdélník se zaoblenými rohy pomocí aktuálního pera a vyplní aktuálním štětcem.|
-|[CDC:: SaveDC](#savedc)|Uloží aktuální stav kontextu zařízení.|
-|[CDC:: ScaleViewportExt](#scaleviewportext)|Upraví rozsah zobrazení vzhledem k aktuálním hodnotám.|
-|[CDC:: ScaleWindowExt](#scalewindowext)|Upraví rozsahy oken relativně vzhledem k aktuálním hodnotám.|
-|[CDC:: ScrollDC](#scrolldc)|Posune obdélník bitů vodorovně a svisle.|
-|[CDC:: SelectClipPath](#selectclippath)|Vybere aktuální cestu jako ořezovou oblast pro kontext zařízení a zkombinuje novou oblast se stávající oblastí oříznutí pomocí zadaného režimu.|
-|[CDC:: SelectClipRgn](#selectcliprgn)|Kombinuje danou oblast s aktuální oblastí oříznutí pomocí zadaného režimu.|
-|[CDC:: VybratObjekt](#selectobject)|Vybere nakreslený objekt GDI, jako je třeba pero.|
-|[CDC:: SelectPalette](#selectpalette)|Vybere logickou paletu.|
-|[CDC:: SelectStockObject](#selectstockobject)|Vybere jedno z předdefinovaných uložených per, štětců nebo písem poskytovaných systémem Windows.|
-|[CDC:: SetAbortProc](#setabortproc)|Nastaví funkci zpětného volání poskytnutou programátorem, kterou systém Windows volá, pokud je potřeba tiskovou úlohu zrušit.|
-|[CDC:: SetArcDirection](#setarcdirection)|Nastaví směr vykreslování, který se má použít pro funkce oblouku a Rectangle.|
-|[CDC:: SetAttribDC](#setattribdc)|Nastaví `m_hAttribDC`, atribut kontext zařízení.|
-|[CDC:: SetBkColor](#setbkcolor)|Nastaví aktuální barvu pozadí.|
-|[CDC:: SetBkMode](#setbkmode)|Nastaví režim pozadí.|
-|[CDC:: SetBoundsRect](#setboundsrect)|Ovládá akumulaci informací vázaného rámečku v zadaném kontextu zařízení.|
-|[CDC:: SetBrushOrg](#setbrushorg)|Určuje počátek další štětce vybraný v kontextu zařízení.|
-|[CDC:: SetColorAdjustment](#setcoloradjustment)|Nastaví hodnoty nastavení barev pro kontext zařízení pomocí zadaných hodnot.|
-|[CDC:: SetDCBrushColor](#setdcbrushcolor)|Nastaví aktuální barvu štětce.|
-|[CDC:: SetDCPenColor](#setdcpencolor)|Nastaví aktuální barvu pera.|
-|[CDC:: SetGraphicsMode](#setgraphicsmode)|Nastaví aktuální grafický režim pro zadaný kontext zařízení.|
-|[CDC:: SetLayout](#setlayout)|Změní rozložení kontextu zařízení (DC).|
-|[CDC:: SetMapMode](#setmapmode)|Nastaví aktuální režim mapování.|
-|[CDC:: SetMapperFlags](#setmapperflags)|Mění algoritmus, který používá Mapovač písem při mapování logických písem na fyzická písma.|
-|[CDC:: SetMiterLimit](#setmiterlimit)|Nastaví limit pro délku ostrých spojení pro kontext zařízení.|
-|[CDC:: SetOutputDC](#setoutputdc)|Nastaví `m_hDC`kontext výstupního zařízení.|
-|[CDC:: funkce SetPixel](#setpixel)|Nastaví pixel v zadaném bodě na nejbližší přibližnou určenou barvu.|
-|[CDC:: SetPixelV](#setpixelv)|Nastaví pixel na zadaných souřadnicích na nejbližší přibližnou určenou barvu. `SetPixelV` je rychlejší než `SetPixel`, protože nemusí vracet hodnotu barvy bodu, který je ve skutečnosti vykreslený.|
-|[CDC:: SetPolyFillMode](#setpolyfillmode)|Nastaví režim vyplňování mnohoúhelníku.|
-|[CDC:: SetROP2](#setrop2)|Nastaví aktuální režim kreslení.|
-|[CDC:: SetStretchBltMode](#setstretchbltmode)|Nastaví režim roztažení rastrového obrázku.|
-|[CDC:: členskou](#settextalign)|Nastaví příznaky zarovnání textu.|
-|[CDC:: SetTextCharacterExtra](#settextcharacterextra)|Nastaví množství meziznakových mezer.|
-|[CDC:: SetTextColor](#settextcolor)|Nastaví barvu textu.|
-|[CDC:: SetTextJustification](#settextjustification)|Přidá mezeru k znakům zalomení v řetězci.|
-|[CDC:: SetViewportExt](#setviewportext)|Nastaví rozsahy x a y zobrazení.|
-|[CDC:: SetViewportOrg](#setviewportorg)|Nastaví počátek zobrazení.|
-|[CDC:: SetWindowExt](#setwindowext)|Nastaví rozsah x a y přidruženého okna.|
-|[CDC:: SetWindowOrg](#setwindoworg)|Nastaví počátek okna kontextu zařízení.|
-|[CDC:: SetWorldTransform](#setworldtransform)|Nastaví aktuální světový prostor na transformaci místa na stránce.|
-|[CDC:: StartDoc](#startdoc)|Informuje ovladač zařízení, že se spouští nová tisková úloha.|
-|[CDC:: StartPage](#startpage)|Informuje ovladač zařízení o tom, že se spouští nová stránka.|
-|[CDC:: StretchBlt](#stretchblt)|Přesune rastrový obrázek ze zdrojového obdélníku a zařízení do cílového obdélníku, pokud je to nutné, aby se vešly rozměry cílového obdélníku.|
-|[CDC:: StrokeAndFillPath](#strokeandfillpath)|Zavře všechny otevřené obrázky v cestě, zaškrtne osnovu cesty pomocí aktuálního pera a vyplní vnitřní objekt pomocí aktuálního štětce.|
-|[CDC:: StrokePath](#strokepath)|Vykreslí zadanou cestu pomocí aktuálního pera.|
-|[CDC:: TabbedTextOut](#tabbedtextout)|Zapíše řetězec znaků v zadaném umístění a rozbalí karty na hodnoty zadané v poli pozice zastavení tabulátoru.|
-|[CDC:: text](#textout)|Zapíše řetězec znaků v zadaném umístění pomocí aktuálně vybraného písma.|
-|[CDC:: TransparentBlt](#transparentblt)|Přenese do kontextu cílového zařízení bit dat barev z určeného kontextu zdrojového zařízení a vykreslit určenou barvu průhlednou v přenosu.|
-|[CDC:: UpdateColors](#updatecolors)|Aktualizuje klientskou oblast kontextu zařízení porovnáním aktuálních barev v klientské oblasti se systémovou paletou na základě pixelu.|
-|[CDC:: WidenPath](#widenpath)|Předefinuje aktuální cestu jako oblast, která se vykreslit, pokud byla cesta zatažena pomocí pera aktuálně vybraného do kontextu zařízení.|
+|[CDC::AbortDoc](#abortdoc)|Ukončí aktuální tiskovou úlohu a vymaže vše, co aplikace `StartDoc` napsala do zařízení od posledního volání členské funkce.|
+|[CDC::AbortPath](#abortpath)|Zavře a zahodí všechny cesty v kontextu zařízení.|
+|[CDC::AddMetaFileComment](#addmetafilecomment)|Zkopíruje komentář z vyrovnávací paměti do určeného metasouboru rozšířeného formátu.|
+|[CDC::AlphaBlend](#alphablend)|Zobrazí bitmapy s průhlednými nebo poloprůhlednými obrazovými body.|
+|[CDC::AngleArc](#anglearc)|Nakreslí segment čáry a oblouk a přesune aktuální pozici do koncového bodu oblouku.|
+|[CDC::Oblouk](#arc)|Nakreslí eliptický oblouk.|
+|[CDC::Arcto](#arcto)|Nakreslí eliptický oblouk. Tato funkce je `Arc`podobná aplikaci s tím rozdílem, že aktuální pozice je aktualizována.|
+|[CDC::Připojit](#attach)|Připojí k tomuto `CDC` objektu kontext zařízení systému Windows.|
+|[CDC::BeginPath](#beginpath)|Otevře závorku cesty v kontextu zařízení.|
+|[CDC::BitBlt](#bitblt)|Zkopíruje bitmapu ze zadaného kontextu zařízení.|
+|[CDC::Akord](#chord)|Nakreslí akord (uzavřený obrázek ohraničený průsečíkem elipsy a segmentu čáry).|
+|[CDC::CloseFigure](#closefigure)|Zavře otevřenou postavu v cestě.|
+|[CDC::CreateCompatibleDC](#createcompatibledc)|Vytvoří kontext zařízení paměti, který je kompatibilní s jiným kontextem zařízení. Můžete ji použít k přípravě obrázků v paměti.|
+|[CDC::VytvořitDC](#createdc)|Vytvoří kontext zařízení pro konkrétní zařízení.|
+|[CDC::CreateIC](#createic)|Vytvoří informační kontext pro konkrétní zařízení. To poskytuje rychlý způsob, jak získat informace o zařízení bez vytvoření kontextu zařízení.|
+|[CDC::DeleteDC](#deletedc)|Odstraní kontext zařízení systému `CDC` Windows přidružený k tomuto objektu.|
+|[CDC::DeleteTempMap](#deletetempmap)|Volána `CWinApp` obslužnou rutinou `CDC` doby `FromHandle`nečinnosti k odstranění libovolného dočasného objektu vytvořeného společností . Také odpojí kontext zařízení.|
+|[CDC::Detach](#detach)|Odpojí kontext zařízení windows `CDC` od tohoto objektu.|
+|[CDC::DPtoHIMETRICKÝ](#dptohimetric)|Převádí jednotky zařízení na jednotky HIMETRIC.|
+|[CDC::DPtoLP](#dptolp)|Převede jednotky zařízení na logické jednotky.|
+|[CDC::Draw3dRect](#draw3drect)|Nakreslí trojrozměrný obdélník.|
+|[CDC::DrawDragRect](#drawdragrect)|Vymaže a překreslí obdélník při jeho přetažení.|
+|[CDC: :DrawEdge](#drawedge)|Nakreslí okraje obdélníku.|
+|[CDC: :DrawEscape](#drawescape)|Přistupuje k možnostem kreslení zobrazení videa, které nejsou přímo dostupné prostřednictvím rozhraní grafického zařízení (GDI).|
+|[CDC::DrawFocusRect](#drawfocusrect)|Nakreslí obdélník ve stylu použitém k označení fokusu.|
+|[CDC::DrawFrameControl](#drawframecontrol)|Nakreslete ovládací prvek rámce.|
+|[CDC: :DrawIcon](#drawicon)|Nakreslí ikonu.|
+|[CDC::DsurStát](#drawstate)|Zobrazí obraz a použije vizuální efekt k označení stavu.|
+|[CDC::DrawText](#drawtext)|Nakreslí formátovaný text v zadaném obdélníku.|
+|[CDC::DrawTextEx](#drawtextex)|Nakreslí formátovaný text v zadaném obdélníku pomocí dalších formátů.|
+|[CDC::Elipsa](#ellipse)|Nakreslí elipsu.|
+|[CDC::EndDoc](#enddoc)|Ukončí tiskovou úlohu `StartDoc` spuštěnou členovou funkcí.|
+|[CDC::Koncová stránka](#endpage)|Informuje ovladač zařízení, že stránka končí.|
+|[CDC::Koncovka](#endpath)|Zavře závorku cesty a vybere cestu definovanou závorkou do kontextu zařízení.|
+|[CDC::EnumObjects](#enumobjects)|Vyjmenovává pera a stopy dostupné v kontextu zařízení.|
+|[CDC::Útěk](#escape)|Umožňuje aplikacím přístup k zařízením, která nejsou přímo dostupná z konkrétního zařízení prostřednictvím rozhraní GDI. Také umožňuje přístup k funkcím windows escape. Úniková volání provedená aplikací jsou přeložena a odeslána ovladači zařízení.|
+|[CDC::ExcludeClipRect](#excludecliprect)|Vytvoří novou oblast oříznutí, která se skládá z existující oblasti oříznutí mínus zadaný obdélník.|
+|[CDC::ExcludeUpdateRgn](#excludeupdatergn)|Zabrání kreslení v neplatných oblastech okna vyloučením aktualizované oblasti v okně z oblasti oříznutí.|
+|[CDC::ExtFloodFill](#extfloodfill)|Vyplní oblast aktuální stopou. Poskytuje větší flexibilitu než členská funkce [CDC::FloodFill.](#floodfill)|
+|[CDC::ExtTextOut](#exttextout)|Zapíše řetězec znaků v obdélníkové oblasti pomocí aktuálně vybraného písma.|
+|[CDC::FillPath](#fillpath)|Zavře všechny otevřené obrázky v aktuální cestě a vyplní vnitřek cesty pomocí aktuálního štětce a režimu plnění polygonů.|
+|[CDC::FillRect](#fillrect)|Vyplní daný obdélník pomocí určité stopy.|
+|[CDC::FillRgn](#fillrgn)|Vyplní určitou oblast zadanou stopou.|
+|[CDC::FillSolidRect](#fillsolidrect)|Vyplní obdélník plnou barvou.|
+|[CDC::Sploštění](#flattenpath)|Transformuje všechny křivky v cestě vybrané do aktuálního kontextu zařízení a změní každou křivku na posloupnost čar.|
+|[CDC::Záplavová výplň](#floodfill)|Vyplní oblast aktuální stopou.|
+|[CDC::FrameRect](#framerect)|Nakreslí ohraničení kolem obdélníku.|
+|[CDC::FrameRgn](#framergn)|Nakreslí ohraničení kolem určité oblasti pomocí stopy.|
+|[CDC::FromHandle](#fromhandle)|Vrátí ukazatel na `CDC` objekt, když daný popisovač kontextu zařízení. Pokud `CDC` objekt není připojen k popisovač, `CDC` dočasný objekt je vytvořen a připojen.|
+|[CDC::GetArcDirection](#getarcdirection)|Vrátí aktuální směr oblouku pro kontext zařízení.|
+|[CDC::GetAspectRatioFilter](#getaspectratiofilter)|Načte nastavení pro aktuální filtr poměru stran.|
+|[CDC::GetBkColor](#getbkcolor)|Načte aktuální barvu pozadí.|
+|[CDC::GetBkMode](#getbkmode)|Načte režim pozadí.|
+|[CDC::GetBoundsRect](#getboundsrect)|Vrátí aktuální akumulovaný ohraničovací obdélník pro zadaný kontext zařízení.|
+|[CDC::GetBrushOrg](#getbrushorg)|Načte počátek aktuální stopy.|
+|[CDC::GetCharABCŠířky](#getcharabcwidths)|Načte šířky po sobě jdoucích znaků v daném rozsahu v logických jednotkách z aktuálního písma.|
+|[CDC::GetCharABCWidthsI](#getcharabcwidthsi)|Načte šířky po sobě jdoucích indexů glyfů v zadaném rozsahu v logických jednotkách z aktuálního písma TrueType.|
+|[CDC::GetCharacterPlacement](#getcharacterplacement)|Načte různé typy informací o řetězci znaků.|
+|[CDC::GetCharWidth](#getcharwidth)|Načte zlomkové šířky po sobě jdoucích znaků v daném rozsahu z aktuálního písma.|
+|[CDC::GetcharWidthI](#getcharwidthi)|Načte šířky po sobě jdoucích indexů glyfů v zadaném rozsahu v logickésou souřadnice z aktuálního písma.|
+|[CDC::GetClipBox](#getclipbox)|Načte rozměry nejtěsnějšího ohraničovacího obdélníku kolem aktuální hranice oříznutí.|
+|[CDC::GetColorÚprava](#getcoloradjustment)|Načte hodnoty úprav barev pro kontext zařízení.|
+|[CDC::GetCurrentBitmap](#getcurrentbitmap)|Vrátí ukazatel na aktuálně `CBitmap` vybraný objekt.|
+|[CDC::GetCurrentBrush](#getcurrentbrush)|Vrátí ukazatel na aktuálně `CBrush` vybraný objekt.|
+|[CDC::GetCurrentFont](#getcurrentfont)|Vrátí ukazatel na aktuálně `CFont` vybraný objekt.|
+|[CDC::GetCurrentPalette](#getcurrentpalette)|Vrátí ukazatel na aktuálně `CPalette` vybraný objekt.|
+|[CDC::GetCurrentPen](#getcurrentpen)|Vrátí ukazatel na aktuálně `CPen` vybraný objekt.|
+|[CDC::GetCurrentPosition](#getcurrentposition)|Načte aktuální pozici pera (v logických souřadnicích).|
+|[CDC::GetDCBrushColor](#getdcbrushcolor)|Načte aktuální barvu stopy.|
+|[CDC::GetDCPenColor](#getdcpencolor)|Načte aktuální barvu pera.|
+|[CDC::GetDeviceCaps](#getdevicecaps)|Načte určitý druh informací specifických pro zařízení o možnostech daného zobrazovacího zařízení.|
+|[CDC::GetFontData](#getfontdata)|Načte informace o metrikách písma ze souboru škálovatelného písma. Informace k načtení je identifikován zadáním posun do souboru písma a délka informace vrátit.|
+|[CDC::GetFontLanguageInfo](#getfontlanguageinfo)|Vrátí informace o aktuálně vybraném písmu pro zadaný kontext zobrazení.|
+|[CDC::GetGlyphOutline](#getglyphoutline)|Načte křivku obrysu nebo bitmapu pro znak obrysu v aktuálním písmu.|
+|[CDC::GetGraphicsMode](#getgraphicsmode)|Načte aktuální grafický režim pro zadaný kontext zařízení.|
+|[CDC::GetHalftoneBrush](#gethalftonebrush)|Načte polotónový štětec.|
+|[CDC::GetKerningPáry](#getkerningpairs)|Načte dvojice vyrovnání párů znaků pro písmo, které je aktuálně vybráno v zadaném kontextu zařízení.|
+|[CDC::GetLayout](#getlayout)|Načte rozložení kontextu zařízení (DC). Rozložení může být zleva doprava (výchozí) nebo zprava doleva (zrcadlené).|
+|[CDC::GetMapMode](#getmapmode)|Načte aktuální režim mapování.|
+|[CDC::GetMiterLimit](#getmiterlimit)|Vrátí limit potu pro kontext zařízení.|
+|[CDC::GetNearestBarva](#getnearestcolor)|Načte nejbližší logickou barvu na zadanou logickou barvu, kterou může dané zařízení představovat.|
+|[CDC::GetOutlineTextMetrics](#getoutlinetextmetrics)|Načte informace o metrikách písma pro písma TrueType.|
+|[CDC::GetOutputCharWidth](#getoutputcharwidth)|Načte šířky jednotlivých znaků v po sobě jdoucí skupině znaků z aktuálního písma pomocí kontextu výstupního zařízení.|
+|[CDC::GetOutputTabbedTextExtent](#getoutputtabbedtextextent)|Vypočítá šířku a výšku řetězce znaků v kontextu výstupního zařízení.|
+|[CDC::GetOutputTextExtent](#getoutputtextextent)|Vypočítá šířku a výšku řádku textu v kontextu výstupního zařízení pomocí aktuálního písma k určení rozměrů.|
+|[CDC::GetOutputTextMetrics](#getoutputtextmetrics)|Načte metriky pro aktuální písmo z kontextu výstupního zařízení.|
+|[CDC::GetPath](#getpath)|Načte souřadnice definující koncové body čar a řídicí body křivek nalezených v cestě vybrané do kontextu zařízení.|
+|[CDC::GetPixel](#getpixel)|Načte hodnotu barvy RGB obrazového bodu v určeném bodě.|
+|[CDC::GetPolyFillMode](#getpolyfillmode)|Načte aktuální režim plnění polygonů.|
+|[CDC::GetROP2](#getrop2)|Načte aktuální režim výkresu.|
+|[CDC::GetSafeHdc](#getsafehdc)|Vrátí [funkce CDC::m_hDC](#m_hdc), kontextu výstupního zařízení.|
+|[CDC::GetStretchBltMode](#getstretchbltmode)|Načte aktuální režim roztahování bitmapy.|
+|[CDC::GetTabbedTextExtent](#gettabbedtextextent)|Vypočítá šířku a výšku řetězce znaků v kontextu atributu zařízení.|
+|[CDC::GetTextAlign](#gettextalign)|Načte příznaky zarovnání textu.|
+|[CDC::GetTextCharacterExtra](#gettextcharacterextra)|Načte aktuální nastavení pro velikost mezer mezi znaky.|
+|[CDC::GetTextColor](#gettextcolor)|Načte aktuální barvu textu.|
+|[CDC::GetTextExtent](#gettextextent)|Vypočítá šířku a výšku řádku textu v kontextu atributu zařízení pomocí aktuálního písma k určení rozměrů.|
+|[CDC::GetTextExtentExpointI](#gettextextentexpointi)|Načte počet znaků v zadaném řetězci, který se vejde do zadaného prostoru a vyplní pole s rozsahem textu pro každý z těchto znaků.|
+|[CDC::GetTextExtentpointI](#gettextextentpointi)|Načte šířku a výšku zadaného pole indexů glyfů.|
+|[CDC::GetTextFace](#gettextface)|Zkopíruje název písma aktuálního písma do vyrovnávací paměti jako řetězec s nulovým ukončením.|
+|[CDC::GetTextMetrics](#gettextmetrics)|Načte metriky pro aktuální písmo z kontextu atributu zařízení.|
+|[CDC::GetViewportExt](#getviewportext)|Načte rozsahy x a y výřezu.|
+|[CDC::GetViewportOrg](#getviewportorg)|Načte souřadnice x a y počátku výřezu.|
+|[CDC::GetWindow](#getwindow)|Vrátí okno přidružené k kontextu zobrazovacího zařízení.|
+|[CDC::GetWindowExt](#getwindowext)|Načte rozsahy x a y přidruženého okna.|
+|[CDC::GetWindowOrg](#getwindoworg)|Načte souřadnice x a y původu přidruženého okna.|
+|[CDC::GetWorldTransformace](#getworldtransform)|Načte aktuální svět prostor pro transformaci prostor stránky.|
+|[CDC::GradientFill](#gradientfill)|Vyplní struktury obdélníku a trojúhelníku gradating barvou.|
+|[CDC::Štěňata](#graystring)|Nakreslí šedě (šedě) text v daném umístění.|
+|[CDC::HIMETRICtoDP](#himetrictodp)|Převádí jednotky HIMETRIC na jednotky zařízení.|
+|[CDC::HIMETRICtoLP](#himetrictolp)|Převede jednotky HIMETRIC na logické jednotky.|
+|[CDC::IntersectClipRect](#intersectcliprect)|Vytvoří novou oblast oříznutí vytvořením průsečíku aktuální oblasti a obdélníku.|
+|[CDC::InvertovatRect](#invertrect)|Invertuje obsah obdélníku.|
+|[CDC::InvertovatRgn](#invertrgn)|Invertuje barvy v oblasti.|
+|[CDC::Tisk](#isprinting)|Určuje, zda je kontext zařízení používán pro tisk.|
+|[CDC::LineTo](#lineto)|Nakreslí čáru z aktuální pozice až do bodu, ale ne včetně.|
+|[CDC::LPtoDP](#lptodp)|Převede logické jednotky na jednotky zařízení.|
+|[CDC::LPtoHIMETRIC](#lptohimetric)|Převede logické jednotky na jednotky HIMETRIC.|
+|[CDC::MaskBlt](#maskblt)|Kombinuje barevná data pro zdrojové a cílové bitmapy pomocí dané masky a rastrové operace.|
+|[CDC::ModifyWorldTransform](#modifyworldtransform)|Změní transformaci světa pro kontext zařízení pomocí zadaného režimu.|
+|[CDC::Přesun](#moveto)|Přesune aktuální pozici.|
+|[CDC::OffsetClipRgn](#offsetcliprgn)|Přesune oblast oříznutí daného zařízení.|
+|[CDC::OffsetViewportOrg](#offsetviewportorg)|Upraví původ výřezu vzhledem ke souřadnicím aktuálního počátku výřezu.|
+|[CDC::OffsetWindowOrg](#offsetwindoworg)|Upraví počátek okna vzhledem ke souřadnicím aktuálního počátku okna.|
+|[CDC::PaintRgn](#paintrgn)|Vyplní oblast vybranou stopou.|
+|[CDC::PatBlt](#patblt)|Vytvoří bitový vzorek.|
+|[CDC::Pie](#pie)|Nakreslí klín ve tvaru výsečového tvaru.|
+|[CDC::PlayMetaFile](#playmetafile)|Přehraje obsah zadaného metasouboru na daném zařízení. Vylepšená verze `PlayMetaFile` zobrazí obrázek uložený v daném rozšířeném formátu metasouboru. Metasoubor lze přehrát libovolný počet opakování.|
+|[CDC::PlgBlt](#plgblt)|Provádí přenos bitových bloků bitů barevných dat ze zadaného obdélníku v kontextu zdrojového zařízení do zadaného rovnoběžníku v daném kontextu zařízení.|
+|[CDC::PolyBezier](#polybezier)|Nakreslí jednu nebo více křivky spline Bzier. Aktuální pozice není použita ani aktualizována.|
+|[CDC::PolyBezierTo](#polybezierto)|Nakreslí jednu nebo více křivky spline Bzier a přesune aktuální pozici do koncového bodu poslední křivky Křivky spline Bzier.|
+|[CDC::PolyDraw](#polydraw)|Nakreslí sadu úsečkových segmentů a křivky spline Bzier. Tato funkce aktualizuje aktuální pozici.|
+|[CDC::Polygon](#polygon)|Nakreslí mnohonožku skládající se ze dvou nebo více bodů (vrcholů) připojených čarami.|
+|[CDC::Polyline](#polyline)|Nakreslí sadu úsečkových segmentů spojujících zadané body.|
+|[CDC::PolylineTo](#polylineto)|Nakreslí jednu nebo více přímých čar a přesune aktuální pozici do koncového bodu posledního řádku.|
+|[CDC::PolyPolygon](#polypolygon)|Vytvoří dva nebo více polygonů, které jsou vyplněny v aktuálním režimu plnění polygonů. Polygony mohou být nesouvislé nebo se mohou překrývat.|
+|[CDC::PolyPolyline](#polypolyline)|Nakreslí více řad propojených úsečkových segmentů. Tato funkce nepoužívá ani neaktualizuje aktuální pozici.|
+|[CDC::PtVisible](#ptvisible)|Určuje, zda se daný bod nachází v oblasti oříznutí.|
+|[CDC::RealizePalette](#realizepalette)|Mapuje položky palety v aktuální logické paletě na systémovou paletu.|
+|[CDC::Obdélník](#rectangle)|Nakreslí obdélník pomocí aktuálního pera a vyplní jej pomocí aktuální stopy.|
+|[CDC::RectVisible](#rectvisible)|Určuje, zda některá část daného obdélníku leží v oblasti oříznutí.|
+|[CDC::VydáníAttribDC](#releaseattribdc)|Zprávy `m_hAttribDC`, kontext zařízení atribut.|
+|[CDC::ReleaseOutputDC](#releaseoutputdc)|Zprávy `m_hDC`, kontext výstupního zařízení.|
+|[CDC::ResetDC](#resetdc)|Aktualizuje `m_hAttribDC` kontext zařízení.|
+|[CDC::ObnovitDC](#restoredc)|Obnoví kontext zařízení do předchozího `SaveDC`stavu uloženého pomocí aplikace .|
+|[CDC::RoundRect](#roundrect)|Nakreslí obdélník se zaoblenými rohy pomocí aktuálního pera a vyplní se pomocí aktuální stopy.|
+|[CDC::UložitDC](#savedc)|Uloží aktuální stav kontextu zařízení.|
+|[CDC::ScaleViewportExt](#scaleviewportext)|Upraví rozsah výřezu vzhledem k aktuálním hodnotám.|
+|[CDC::ScaleWindowExt](#scalewindowext)|Upraví rozsahy oken vzhledem k aktuálním hodnotám.|
+|[CDC::ScrollDC](#scrolldc)|Posune obdélník bitů vodorovně a svisle.|
+|[CDC::Aplikace SelectClipPath](#selectclippath)|Vybere aktuální cestu jako oblast oříznutí pro kontext zařízení a kombinuje novou oblast s existující oblastí oříznutí pomocí zadaného režimu.|
+|[CDC::SelectClipRgn](#selectcliprgn)|Zkombinuje danou oblast s aktuální ořezovou oblastí pomocí zadaného režimu.|
+|[CDC::SelectObject](#selectobject)|Vybere nakreslený objekt GDI, například pero.|
+|[CDC::SelectPalette](#selectpalette)|Vybere logickou paletu.|
+|[CDC::SelectStockObject](#selectstockobject)|Vybere jedno z předdefinovaných skladových per, stop nebo písem poskytovaných systémem Windows.|
+|[CDC::SetAbortProc](#setabortproc)|Nastaví programátordodané funkce zpětného volání, které systém Windows volá, pokud musí být tisková úloha přerušena.|
+|[CDC::SetArcDirection](#setarcdirection)|Nastaví směr výkresu, který se má použít pro funkce oblouku a obdélníku.|
+|[CDC::SetAttribDC](#setattribdc)|Sady `m_hAttribDC`, kontext zařízení atributu.|
+|[CDC::SetBkColor](#setbkcolor)|Nastaví aktuální barvu pozadí.|
+|[CDC::SetBkMode](#setbkmode)|Nastaví režim pozadí.|
+|[CDC::SetBoundsRect](#setboundsrect)|Řídí akumulaci informací ohraničující obdélník pro kontext zadaného zařízení.|
+|[CDC::SetBrushOrg](#setbrushorg)|Určuje počátek dalšího štětce vybraného do kontextu zařízení.|
+|[CDC::SetColorAdjustment](#setcoloradjustment)|Nastaví hodnoty úprav barev pro kontext zařízení pomocí zadaných hodnot.|
+|[CDC::SetDCBrushColor](#setdcbrushcolor)|Nastaví aktuální barvu stopy.|
+|[CDC::SetDCPenColor](#setdcpencolor)|Nastaví aktuální barvu pera.|
+|[CDC::SetGraphicsMode](#setgraphicsmode)|Nastaví aktuální grafický režim pro zadaný kontext zařízení.|
+|[CDC::SetLayout](#setlayout)|Změní rozložení kontextu zařízení (DC).|
+|[CDC::SetMapMode](#setmapmode)|Nastaví aktuální režim mapování.|
+|[CDC::SetMapperFlags](#setmapperflags)|Změní algoritmus, který mapovač písem používá, když mapuje logická písma na fyzická písma.|
+|[CDC::SetMiterLimit](#setmiterlimit)|Nastaví limit pro délku pokosových spojení pro kontext zařízení.|
+|[CDC::SetOutputDC](#setoutputdc)|Sady `m_hDC`, kontext výstupního zařízení.|
+|[CDC::SetPixel](#setpixel)|Nastaví obrazový bod v určeném bodě na nejbližší přiblížení zadané barvy.|
+|[CDC::SetPixelV](#setpixelv)|Nastaví obrazový bod na určených souřadnicích na nejbližší přiblížení zadané barvy. `SetPixelV`je rychlejší `SetPixel` než proto, že není nutné vrátit hodnotu barvy bodu skutečně malované.|
+|[CDC::SetPolyFillMode](#setpolyfillmode)|Nastaví režim plnění polygonů.|
+|[CDC::SetROP2](#setrop2)|Nastaví aktuální režim kreslení.|
+|[CDC::SetStretchBltMode](#setstretchbltmode)|Nastaví režim bitmapy-roztahování.|
+|[CDC::SetTextAlign](#settextalign)|Nastaví příznaky zarovnání textu.|
+|[CDC::SetTextCharacterExtra](#settextcharacterextra)|Nastaví velikost mezer mezi znaky.|
+|[CDC::SetTextColor](#settextcolor)|Nastaví barvu textu.|
+|[CDC::SetTextJustification](#settextjustification)|Přidá mezeru do znaků přerušení v řetězci.|
+|[CDC::SetViewportExt](#setviewportext)|Nastaví rozsahy x a y výřezu.|
+|[CDC::SetViewportOrg](#setviewportorg)|Nastaví počátek výřezu.|
+|[CDC::SetWindowExt](#setwindowext)|Nastaví rozsahy x a y přidruženého okna.|
+|[CDC::SetWindowOrg](#setwindoworg)|Nastaví původ okna kontextu zařízení.|
+|[CDC::SetWorldTransformace](#setworldtransform)|Nastaví aktuální světový prostor na transformaci prostor stránky.|
+|[CDC::StartDoc](#startdoc)|Informuje ovladač zařízení, že se spouští nová tisková úloha.|
+|[CDC::Úvodní stránka](#startpage)|Informuje ovladač zařízení, že se spouští nová stránka.|
+|[CDC::StretchBlt](#stretchblt)|Přesune bitmapu ze zdrojového obdélníku a zařízení do cílového obdélníku a v případě potřeby bitmapu roztáhne nebo zreprimuje tak, aby odpovídala rozměrům cílového obdélníku.|
+|[CDC::StrokeandFillPath](#strokeandfillpath)|Zavře všechny otevřené obrázky v cestě, udeří obrys cesty pomocí aktuálního pera a vyplní jeho vnitřek pomocí aktuální stopy.|
+|[CDC::StrokePath](#strokepath)|Vykreslí zadanou cestu pomocí aktuálního pera.|
+|[CDC::TabbedTextOut](#tabbedtextout)|Zapíše řetězec znaků na určeném místě a rozbalí karty na hodnoty zadané v poli pozic zazastavení tabulátoru.|
+|[CDC::TextOut](#textout)|Zapíše řetězec znaků na určené mši pomocí aktuálně vybraného písma.|
+|[CDC::TransparentníBlt](#transparentblt)|Přenese bitový blok barevných dat ze zadaného kontextu zdrojového zařízení do kontextu cílového zařízení a vykresluje v přenosu průhlednou barvu.|
+|[CDC::Aktualizovatbarvy](#updatecolors)|Aktualizuje klientskou oblast kontextu zařízení porovnáním aktuálních barev v klientské oblasti systémové paletě na základě obrazových bodů po obrazových bodech.|
+|[CDC::RozšířeníCesty](#widenpath)|Předefinuje aktuální cestu jako oblast, která by byla vybarvena, pokud by byla cesta vytažena pomocí pera aktuálně vybraného do kontextu zařízení.|
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CDC:: operator HDC](#operator_hdc)|Načte popisovač kontextu zařízení.|
+|[CDC::operátor HDC](#operator_hdc)|Načte popisovač kontextu zařízení.|
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CDC:: m_hAttribDC](#m_hattribdc)|Atribut – kontext zařízení používaný tímto objektem `CDC`.|
-|[CDC:: m_hDC](#m_hdc)|Kontext výstupního zařízení používaný tímto objektem `CDC`.|
+|[CDC::m_hAttribDC](#m_hattribdc)|Kontext atributu zařízení používaný `CDC` tímto objektem.|
+|[CDC::m_hDC](#m_hdc)|Kontext výstupního zařízení používaný `CDC` tímto objektem.|
 
 ## <a name="remarks"></a>Poznámky
 
-Objekt `CDC` poskytuje členské funkce pro práci s kontextem zařízení, jako je například zobrazení nebo tiskárna, a také členy pro práci s kontextem zobrazení přidruženým k klientské oblasti okna.
+Objekt `CDC` poskytuje členské funkce pro práci s kontextem zařízení, jako je například zobrazení nebo tiskárna, stejně jako členy pro práci s kontextem zobrazení přidruženým k klientské oblasti okna.
 
-Vykreslí všechny členské funkce objektu `CDC`. Třída poskytuje členské funkce pro operace v kontextu zařízení, práci s nástroji kreslení, výběr objektu s bezpečným grafickým rozhraním (GDI) a práci s barvami a paletami. Poskytuje také členské funkce pro načítání a nastavování atributů kreslení, mapování, práci s zobrazeními, práci s rozsahem okna, převod souřadnic, práci s oblastmi, oříznutí, kreslení čar a Kreslení jednoduchých tvarů, tří teček a mnohoúhelníky. Členské funkce jsou také k dispozici pro kreslení textu, práci s písmy, použití řídicích cest, posouvání a přehrávání metasouborů.
+Proveďte všechny kreslení prostřednictvím `CDC` členských funkcí objektu. Třída poskytuje členské funkce pro operace kontextu zařízení, práci s kreslicími nástroji, výběr objektů GDI (Bezpečné uživatelské rozhraní pro bezpečné typy typů) a práce s barvami a paletami. Poskytuje také členské funkce pro získávání a nastavování atributů výkresu, mapování, práci s výřezem, práci s rozsahem okna, převod souřadnic, práci s oblastmi, oříznutí, kreslení čar a kreslení jednoduchých tvarů, elips a mnohoúhelníků. Členské funkce jsou také k dispozici pro kreslení textu, práci s písmy, pomocí tiskárny uniká, posouvání a přehrávání metasouborů.
 
-Chcete-li použít objekt `CDC`, sestavte jej a potom zavolejte své členské funkce, které jsou paralelní funkce systému Windows, které používají kontexty zařízení.
+Chcete-li `CDC` použít objekt, vytvořte jej a pak volejte jeho členské funkce, které paralelní funkce systému Windows, které používají kontexty zařízení.
 
 > [!NOTE]
->  V systému Windows 95/98 jsou všechny souřadnice obrazovky omezeny na 16 bitů. Proto musí být **int** předaná do členské funkce `CDC` v rozsahu od-32768 do 32767.
+> V systému Windows 95/98 jsou všechny souřadnice obrazovky omezeny na 16 bitů. Proto **int** `CDC` předánčlenské funkce musí ležet v rozsahu -32768 až 32767.
 
-Pro konkrétní použití knihovna Microsoft Foundation Class poskytuje několik tříd odvozených od `CDC`. `CPaintDC` zapouzdřuje volání `BeginPaint` a `EndPaint`. `CClientDC` spravuje kontext zobrazení přidružený k klientské oblasti okna. `CWindowDC` spravuje kontext zobrazení přidružený k celému oknu, včetně jeho rámce a ovládacích prvků. `CMetaFileDC` přidruží kontext zařízení k metasouboru.
+Pro konkrétní použití knihovna tříd Microsoft Foundation `CDC` poskytuje několik tříd odvozených z . `CPaintDC`zapouzdření volání `BeginPaint` `EndPaint`a . `CClientDC`spravuje kontext zobrazení přidružený k klientské oblasti okna. `CWindowDC`spravuje kontext zobrazení přidružený k celému oknu, včetně jeho rámce a ovládacích prvků. `CMetaFileDC`přidruží kontext zařízení k metasouboru.
 
-`CDC` poskytuje dvě členské funkce, [GetLayout](#getlayout) a [SetLayout](#setlayout)pro obrácené rozložení kontextu zařízení, které nedědí jeho rozložení z okna. Tato orientace zprava doleva je nutná pro aplikace napsané pro jazykové verze, jako je arabština nebo hebrejština, kde rozložení znaků není Evropské Standard.
+`CDC`poskytuje dvě členské funkce [GetLayout](#getlayout) a [SetLayout](#setlayout)pro stornování rozložení kontextu zařízení, který nedědí jeho rozložení z okna. Tato orientace zprava doleva je nezbytná pro aplikace napsané pro jazykové verze, jako je arabština nebo hebrejština, kde rozložení znaků není evropským standardem.
 
-`CDC` obsahuje dva kontexty zařízení [m_hDC](#m_hdc) a [m_hAttribDC](#m_hattribdc), které při vytváření objektu `CDC` odkazují na stejné zařízení. `CDC` směruje všechna volání GDI do `m_hDC` a většina atributů volá do `m_hAttribDC`. (Příklad volání atributu je `GetTextColor`, zatímco `SetTextColor` je výstupní volání.)
+`CDC`obsahuje dva kontexty zařízení, [m_hDC](#m_hdc) a [m_hAttribDC](#m_hattribdc) `CDC` , které při vytváření objektu odkazují na stejné zařízení. `CDC`přesměruje všechna výstupní volání `m_hDC` GDI a většinu `m_hAttribDC`atributů volání GDI na . (Příkladem volání atributu `GetTextColor`je `SetTextColor` , zatímco je výstupní volání.)
 
-Rozhraní například používá tyto dva kontexty zařízení k implementaci objektu `CMetaFileDC`, který při čtení atributů z fyzického zařízení pošle výstup do metasouboru. Náhled tisku je v rozhraní implementován podobným způsobem. Dva kontexty zařízení můžete také použít podobným způsobem v kódu specifickém pro danou aplikaci.
+Například rozhraní používá tyto dva kontexty `CMetaFileDC` zařízení k implementaci objektu, který odešle výstup do metasouboru při čtení atributů z fyzického zařízení. Náhled tisku je implementován v rámci podobným způsobem. Můžete také použít dva kontexty zařízení podobným způsobem v kódu specifické pro aplikaci.
 
-K dispozici jsou situace, kdy možná budete potřebovat informace o metrikách v `m_hDC` i `m_hAttribDC`ch zařízení. Tuto funkci poskytují následující páry funkcí:
+Jsou chvíle, kdy můžete potřebovat informace o `m_hDC` `m_hAttribDC` textové metriky z kontextu i zařízení. Následující dvojice funkcí poskytují tuto funkci:
 
 |Používá m_hAttribDC|Používá m_hDC|
 |-----------------------|-----------------|
@@ -668,21 +668,21 @@ K dispozici jsou situace, kdy možná budete potřebovat informace o metrikách 
 |[GetTextMetrics](#gettextmetrics)|[GetOutputTextMetrics](#getoutputtextmetrics)|
 |[GetCharWidth](#getcharwidth)|[GetOutputCharWidth](#getoutputcharwidth)|
 
-Další informace o `CDC`najdete v tématu [Kontexty zařízení](../../mfc/device-contexts.md).
+Další informace `CDC`naleznete v tématu [Kontexty zařízení](../../mfc/device-contexts.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[CObject](../../mfc/reference/cobject-class.md)
+[CObjekt](../../mfc/reference/cobject-class.md)
 
 `CDC`
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxwin. h
+**Záhlaví:** afxwin.h
 
-##  <a name="abortdoc"></a>CDC:: AbortDoc
+## <a name="cdcabortdoc"></a><a name="abortdoc"></a>CDC::AbortDoc
 
-Ukončí aktuální tiskovou úlohu a vymaže všechno, co aplikace do zařízení zapsala od posledního volání členské funkce [StartDoc](#startdoc) .
+Ukončí aktuální tiskovou úlohu a vymaže vše, co aplikace napsala do zařízení od posledního volání členské funkce [StartDoc.](#startdoc)
 
 ```
 int AbortDoc();
@@ -690,37 +690,37 @@ int AbortDoc();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota větší nebo rovna 0 v případě úspěchu nebo záporná hodnota, pokud došlo k chybě. V následujícím seznamu jsou uvedeny běžné chybové hodnoty a jejich význam:
+Hodnota větší nebo rovna 0, pokud byla úspěšná, nebo záporná hodnota, pokud došlo k chybě. V následujícím seznamu jsou uvedeny běžné chybové hodnoty a jejich význam:
 
 - SP_ERROR Obecná chyba.
 
-- SP_OUTOFDISK není v současné době k dispozici dostatek místa na disku pro zařazování a nebude k dispozici žádné místo.
+- SP_OUTOFDISK Pro zařazování není aktuálně k dispozici dostatek místa na disku a nebude k dispozici žádné další místo.
 
-- SP_OUTOFMEMORY není k dispozici dostatek paměti pro zařazování.
+- SP_OUTOFMEMORY Pro zařazování není k dispozici dostatek paměti.
 
-- SP_USERABORT uživatel ukončil úlohu prostřednictvím Správce tisku.
+- SP_USERABORT Uživatel ukončil úlohu prostřednictvím Správce tisku.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce nahradí řídicí ABORTDOC tiskárny.
+Tato členská funkce nahrazuje escape tiskárny ABORTDOC.
 
-k ukončení tohoto `AbortDoc` by se měla použít následující:
+`AbortDoc`by měly být použity k ukončení následujícího:
 
-- Tisk operací, které nespecifikují funkci Abort pomocí [SetAbortProc](#setabortproc).
+- Tiskové operace, které neurčují funkci přerušení pomocí [Funkce SetAbortProc](#setabortproc).
 
-- Operace tisku, které ještě nedorazily na první NEWFRAME nebo řídicí volání NEXTBAND
+- Tiskové operace, které ještě nedosáhly svého prvního únikového volání NEWFRAME nebo NEXTBAND.
 
-Pokud aplikace narazí na chybu při tisku nebo na zrušenou tiskovou operaci, nesmí se pokusit ukončit operaci pomocí členské funkce [EndDoc](#enddoc) nebo `AbortDoc` třídy `CDC`. GDI automaticky ukončí operaci před vrácením hodnoty chyby.
+Pokud aplikace narazí na chybu tisku nebo zrušenou tiskovou operaci, nesmí se pokusit operaci `AbortDoc` ukončit `CDC`pomocí [enddoc](#enddoc) nebo členských funkcí třídy . GDI automaticky ukončí operaci před vrácením chybové hodnoty.
 
-Pokud aplikace zobrazí dialogové okno, které uživateli umožní zrušit tiskovou operaci, musí volat `AbortDoc` před zničením dialogového okna.
+Pokud aplikace zobrazí dialogové okno, které uživateli umožní zrušit `AbortDoc` tiskovou operaci, musí před zničením dialogového okna zavolat.
 
-Pokud se k zahájení tiskové úlohy použil správce tisku, volání `AbortDoc` vymaže celou úlohu zařazování – tiskárna neobdrží nic. Pokud se k zahájení tiskové úlohy nepoužil správce tisku, data mohla být před zavoláním `AbortDoc` odeslána na tiskárnu. V takovém případě by ovladač tiskárny mohl resetovat tiskárnu (Pokud je to možné) a zavřít tiskovou úlohu.
+Pokud správce tisku byl použit ke `AbortDoc` spuštění tiskové úlohy, volání vymaže celou úlohu zařazování – tiskárna neobdrží nic. Pokud správce tisku nebyl použit ke spuštění tiskové úlohy, data `AbortDoc` mohla být odeslána do tiskárny před tím, než byla volána. V takovém případě by ovladač tiskárny resetoval tiskárnu (pokud je to možné) a zavřel tiskovou úlohu.
 
 ### <a name="example"></a>Příklad
 
-  Podívejte se na příklad pro [CDC:: StartDoc](#startdoc).
+  Viz příklad pro [CDC::StartDoc](#startdoc).
 
-##  <a name="abortpath"></a>CDC:: AbortPath
+## <a name="cdcabortpath"></a><a name="abortpath"></a>CDC::AbortPath
 
 Zavře a zahodí všechny cesty v kontextu zařízení.
 
@@ -734,11 +734,11 @@ Nenulové, pokud je funkce úspěšná; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud je v kontextu zařízení otevřená hranatá závorka, je jednoduchá a cesta zahozena. Pokud je v kontextu zařízení uzavřená cesta, cesta se zahodí.
+Pokud je v kontextu zařízení otevřená závorka cesty, závorka cesty je uzavřena a cesta je zahozena. Pokud je uzavřená cesta v kontextu zařízení, cesta je zahozena.
 
-##  <a name="addmetafilecomment"></a>CDC:: AddMetaFileComment
+## <a name="cdcaddmetafilecomment"></a><a name="addmetafilecomment"></a>CDC::AddMetaFileComment
 
-Zkopíruje komentář z vyrovnávací paměti do určeného formátu Enhanced-Format.
+Zkopíruje komentář z vyrovnávací paměti do určeného metasouboru rozšířeného formátu.
 
 ```
 BOOL AddMetaFileComment(
@@ -748,8 +748,8 @@ BOOL AddMetaFileComment(
 
 ### <a name="parameters"></a>Parametry
 
-*nDataSize*<br/>
-Určuje délku vyrovnávací paměti pro komentáře (v bajtech).
+*nVelikost dat*<br/>
+Určuje délku vyrovnávací paměti poznámky v bajtech.
 
 *pCommentData*<br/>
 Odkazuje na vyrovnávací paměť, která obsahuje komentář.
@@ -760,11 +760,11 @@ Nenulové, pokud je funkce úspěšná; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Komentář může obsahovat libovolné soukromé informace, například zdroj obrázku a datum vytvoření. Komentář by měl začínat signaturou aplikace, po kterém následují data. Komentáře nesmí obsahovat data specifická pro danou pozici. Data specifická pro pozici určují umístění záznamu a nesmí být zahrnuto, protože jeden metasoubor může být vložen do jiného metasouboru. Tato funkce se dá použít jenom s rozšířenými metasoubory.
+Komentář může obsahovat jakékoli soukromé informace, například zdroj obrázku a datum jeho vytvoření. Komentář by měl začínat podpisem aplikace následovaný daty. Komentáře by neměly obsahovat údaje specifické pro danou pozici. Data specifická pro danou pozici určují umístění záznamu a neměla by být zahrnuta, protože jeden metasoubor může být vložen do jiného metasouboru. Tuto funkci lze použít pouze s rozšířenými metasoubory.
 
-##  <a name="alphablend"></a>CDC:: AlphaBlend
+## <a name="cdcalphablend"></a><a name="alphablend"></a>CDC::AlphaBlend
 
-Zavolejte tuto členskou funkci pro zobrazení rastrových obrázků, které mají transparentní nebo poloprůhledný pixel.
+Volání této členské funkce zobrazí bitmapy, které mají průhledné nebo poloprůhledné obrazové body.
 
 ```
 BOOL AlphaBlend(
@@ -783,46 +783,46 @@ BOOL AlphaBlend(
 ### <a name="parameters"></a>Parametry
 
 *xDest*<br/>
-Určuje souřadnici x (v logických jednotkách) levého horního rohu cílového obdélníku.
+Určuje souřadnice x v logických jednotkách levého horního rohu cílového obdélníku.
 
 *yDest*<br/>
-Určuje souřadnici y (v logických jednotkách) levého horního rohu cílového obdélníku.
+Určuje souřadnici y v logických jednotkách levého horního rohu cílového obdélníku.
 
 *nDestWidth*<br/>
-Určuje šířku obdélníku (v logických jednotkách) cílového obdélníku.
+Určuje šířku cílového obdélníku v logických jednotkách.
 
-*nDestHeight*<br/>
+*nDestVýška*<br/>
 Určuje výšku cílového obdélníku v logických jednotkách.
 
 *pSrcDC*<br/>
 Ukazatel na kontext zdrojového zařízení.
 
 *xSrc*<br/>
-Určuje souřadnici x (v logických jednotkách) levého horního rohu zdrojového obdélníku.
+Určuje souřadnice x v logických jednotkách levého horního rohu zdrojového obdélníku.
 
-*ySrc*<br/>
-Určuje souřadnici y (v logických jednotkách) levého horního rohu zdrojového obdélníku.
+*ySrc řekl:*<br/>
+Určuje souřadnici y v logických jednotkách levého horního rohu zdrojového obdélníku.
 
 *nSrcWidth*<br/>
 Určuje šířku zdrojového obdélníku v logických jednotkách.
 
-*nSrcHeight*<br/>
+*nSrcVýška*<br/>
 Určuje výšku zdrojového obdélníku v logických jednotkách.
 
-*chmel*<br/>
-Určuje strukturu [BLENDFUNCTION](/windows/win32/api/wingdi/ns-wingdi-blendfunction) .
+*Směs*<br/>
+Určuje strukturu [BLENDFUNCTION.](/windows/win32/api/wingdi/ns-wingdi-blendfunction)
 
 ### <a name="return-value"></a>Návratová hodnota
 
-TRUE v případě úspěchu; v opačném případě FALSE.
+PRAVDA v případě úspěchu; jinak FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace najdete v tématu [AlphaBlend](/windows/win32/api/wingdi/nf-wingdi-alphablend) v Windows SDK.
+Další informace naleznete v části [AlphaBlend](/windows/win32/api/wingdi/nf-wingdi-alphablend) v kontě Windows SDK.
 
-##  <a name="anglearc"></a>CDC:: AngleArc
+## <a name="cdcanglearc"></a><a name="anglearc"></a>CDC::AngleArc
 
-Kreslí segment čáry a oblouk.
+Nakreslí segment čáry a oblouk.
 
 ```
 BOOL AngleArc(
@@ -835,10 +835,10 @@ BOOL AngleArc(
 
 ### <a name="parameters"></a>Parametry
 
-*znak*<br/>
-Určuje logickou souřadnici středu kružnice.
+*X*<br/>
+Určuje logickou souřadnici x středu kružnice.
 
-*požadované*<br/>
+*Y*<br/>
 Určuje logickou souřadnici y středu kružnice.
 
 *nRadius*<br/>
@@ -847,22 +847,22 @@ Určuje poloměr kružnice v logických jednotkách. Tato hodnota musí být kla
 *fStartAngle*<br/>
 Určuje počáteční úhel ve stupních vzhledem k ose x.
 
-*fSweepAngle*<br/>
-Určuje úhel oblouku ve stupních, který je relativní vzhledem ke počátečnímu úhlu.
+*fÚhel*<br/>
+Určuje úhel tažení ve stupních vzhledem k počátečnímu úhlu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud bylo úspěšné; v opačném případě 0.
+Nenulová, pokud je úspěšná; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Segment čáry se vykreslí z aktuální pozice na začátek oblouku. Oblouk se vykreslí podél hranice kruhu s daným poloměrem a centrem. Délka oblouku je definována daným počátečním a rozmazáním úhlů.
+Segment čáry je nakreslen z aktuální polohy na začátek oblouku. Oblouk je nakreslen po obvodu kruhu s daným poloměrem a středem. Délka oblouku je definována daným úhlem zahájení a tažení.
 
-`AngleArc` Posune aktuální pozici do koncového bodu oblouku. Oblouk vykreslený touto funkcí může vypadat jako eliptický, v závislosti na aktuální transformaci a režimu mapování. Před kreslením oblouku Tato funkce nakreslí segment čáry od aktuální pozice k začátku oblouku. Oblouk je vykreslen pomocí konstrukce imaginární kružnice se zadaným poloměrem kolem zadaného centrálního bodu. Počáteční bod oblouku je určen pomocí měření hodinových ručiček od osy x kružnice o počet stupňů v počátečním úhlu. Koncový bod se podobně měří pomocí měření hodinových ručiček od počátečního bodu podle počtu stupňů v úhlu oblouku.
+`AngleArc`přesune aktuální pozici do koncového bodu oblouku. Oblouk nakreslený touto funkcí se může v závislosti na aktuální transformaci a režimu mapování jevit jako eliptický. Před nakreslením oblouku tato funkce nakreslí segment čáry z aktuální polohy na začátek oblouku. Oblouk je nakreslen vytvořením imaginárního kruhu se zadaným poloměrem kolem zadaného středového bodu. Počáteční bod oblouku je určen měřením proti směru hodinových ručiček od osy x kružnice počtem stupňů v počátečním úhlu. Koncový bod je podobně umístěn měřením proti směru hodinových ručiček od počátečního bodu počtem stupňů v úhlu tažení.
 
-Je-li úhel oblouku větší než 360 stupňů, je oblouk Swept několikrát. Tato funkce kreslí řádky pomocí aktuálního pera. Obrázek není vyplněn.
+Pokud je úhel tažení větší než 360 stupňů, oblouk se několikrát přemetne. Tato funkce kreslí čáry pomocí aktuálního pera. Obrázek není vyplněn.
 
-##  <a name="arc"></a>CDC:: Arc
+## <a name="cdcarc"></a><a name="arc"></a>CDC::Oblouk
 
 Nakreslí eliptický oblouk.
 
@@ -886,37 +886,37 @@ BOOL Arc(
 ### <a name="parameters"></a>Parametry
 
 *x1*<br/>
-Určuje souřadnici x levého horního rohu ohraničujícího obdélníku (v logických jednotkách).
+Určuje souřadnici x levého horního rohu ohraničovacího obdélníku (v logických jednotkách).
 
-*Y1*<br/>
-Určuje souřadnici y levého horního rohu ohraničujícího obdélníku (v logických jednotkách).
+*y1*<br/>
+Určuje souřadnici y levého horního rohu ohraničovacího obdélníku (v logických jednotkách).
 
-*X2*<br/>
-Určuje souřadnici x pravého dolního rohu ohraničujícího obdélníku (v logických jednotkách).
+*x2*<br/>
+Určuje souřadnici x pravého dolního rohu ohraničovacího obdélníku (v logických jednotkách).
 
-*Y2*<br/>
-Určuje souřadnici y pravého dolního rohu ohraničujícího obdélníku (v logických jednotkách).
+*y2*<br/>
+Určuje souřadnici y pravého dolního rohu ohraničovacího obdélníku (v logických jednotkách).
 
-*X3*<br/>
-Určuje souřadnici x bodu, který definuje počáteční bod oblouku (v logických jednotkách). Tento bod není nutné přesně nacházet na oblouku.
+*x3*<br/>
+Určuje souřadnici x bodu, který definuje počáteční bod oblouku (v logických jednotkách). Tento bod nemusí ležet přesně na oblouku.
 
-*Y3*<br/>
-Určuje souřadnici y bodu, který definuje počáteční bod oblouku (v logických jednotkách). Tento bod není nutné přesně nacházet na oblouku.
+*y3*<br/>
+Určuje souřadnici y bodu, který definuje počáteční bod oblouku (v logických jednotkách). Tento bod nemusí ležet přesně na oblouku.
 
-*X4*<br/>
-Určuje souřadnici x bodu, který definuje koncový bod oblouku (v logických jednotkách). Tento bod není nutné přesně nacházet na oblouku.
+*x4*<br/>
+Určuje souřadnici x bodu, který definuje koncový bod oblouku (v logických jednotkách). Tento bod nemusí ležet přesně na oblouku.
 
-*Y4*<br/>
-Určuje souřadnici y bodu, který definuje koncový bod oblouku (v logických jednotkách). Tento bod není nutné přesně nacházet na oblouku.
+*y4*<br/>
+Určuje souřadnici y bodu, který definuje koncový bod oblouku (v logických jednotkách). Tento bod nemusí ležet přesně na oblouku.
 
 *lpRect*<br/>
-Určuje ohraničující obdélník (v logických jednotkách). Pro tento parametr můžete předat buď LPRECT, nebo objekt [CRect](../../atl-mfc-shared/reference/crect-class.md) .
+Určuje ohraničovací obdélník (v logických jednotkách). Pro tento parametr můžete předat buď objekt LPRECT nebo [CRect.](../../atl-mfc-shared/reference/crect-class.md)
 
 *ptStart*<br/>
-Určuje souřadnice x a y bodu, který definuje počáteční bod oblouku (v logických jednotkách). Tento bod není nutné přesně nacházet na oblouku. Pro tento parametr můžete předat strukturu [bodu](/windows/win32/api/windef/ns-windef-point) nebo objekt [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) .
+Určuje souřadnice x a y bodu, který definuje počáteční bod oblouku (v logických jednotkách). Tento bod nemusí ležet přesně na oblouku. Pro tento parametr můžete předat strukturu [POINT](/windows/win32/api/windef/ns-windef-point) nebo objekt [CPoint.](../../atl-mfc-shared/reference/cpoint-class.md)
 
 *ptEnd*<br/>
-Určuje souřadnice x a y bodu, který definuje koncový bod oblouku (v logických jednotkách). Tento bod není nutné přesně nacházet na oblouku. Pro tento parametr můžete předat buď strukturu `POINT`, nebo objekt `CPoint`.
+Určuje souřadnice x a y bodu, který definuje koncový bod oblouku (v logických jednotkách). Tento bod nemusí ležet přesně na oblouku. Pro tento parametr `POINT` můžete `CPoint` předat strukturu nebo objekt.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -924,15 +924,15 @@ Nenulové, pokud je funkce úspěšná; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Oblouk vykreslený pomocí funkce je segment elipsy definované zadaným ohraničujícím obdélníkem.
+Oblouk nakreslený pomocí funkce je segment elipsy definovaný zadaným ohraničovacím obdélníkem.
 
-Skutečným počátečním bodem oblouku je bod, ve kterém je paprsk nakreslený od středu ohraničujícího obdélníku procházející zadaným počátečním bodem průsečíkem elipsy. Skutečným koncovým bodem oblouku je bod, ve kterém je paprsk nakreslený od středu ohraničujícího obdélníku procházející zadaným koncovým bodem protínající elipsu. Oblouk se vykresluje směrem proti směru hodinových ručiček. Vzhledem k tomu, že oblouk není uzavřený, není vyplněn. Šířka i výška obdélníku musí být větší než 2 jednotky a musí být menší než 32 767 jednotek.
+Skutečný počáteční bod oblouku je bod, ve kterém paprsek nakreslený ze středu ohraničovacího obdélníku přes určený počáteční bod protíná elipsu. Skutečný koncový bod oblouku je bod, ve kterém paprsek nakreslený ze středu ohraničovacího obdélníku přes zadaný koncový bod protíná elipsu. Oblouk je nakreslen proti směru hodinových ručiček. Vzhledem k tomu, že oblouk není uzavřená postava, není vyplněna. Šířka a výška obdélníku musí být větší než 2 jednotky a menší než 32 767 jednotek.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCDocView#29](../../mfc/codesnippet/cpp/cdc-class_1.cpp)]
 
-##  <a name="arcto"></a>CDC:: ArcTo
+## <a name="cdcarcto"></a><a name="arcto"></a>CDC::Arcto
 
 Nakreslí eliptický oblouk.
 
@@ -956,37 +956,37 @@ BOOL ArcTo(
 ### <a name="parameters"></a>Parametry
 
 *x1*<br/>
-Určuje souřadnici x levého horního rohu ohraničujícího obdélníku (v logických jednotkách).
+Určuje souřadnici x levého horního rohu ohraničovacího obdélníku (v logických jednotkách).
 
-*Y1*<br/>
-Určuje souřadnici y levého horního rohu ohraničujícího obdélníku (v logických jednotkách).
+*y1*<br/>
+Určuje souřadnici y levého horního rohu ohraničovacího obdélníku (v logických jednotkách).
 
-*X2*<br/>
-Určuje souřadnici x pravého dolního rohu ohraničujícího obdélníku (v logických jednotkách).
+*x2*<br/>
+Určuje souřadnici x pravého dolního rohu ohraničovacího obdélníku (v logických jednotkách).
 
-*Y2*<br/>
-Určuje souřadnici y pravého dolního rohu ohraničujícího obdélníku (v logických jednotkách).
+*y2*<br/>
+Určuje souřadnici y pravého dolního rohu ohraničovacího obdélníku (v logických jednotkách).
 
-*X3*<br/>
-Určuje souřadnici x bodu, který definuje počáteční bod oblouku (v logických jednotkách). Tento bod není nutné přesně nacházet na oblouku.
+*x3*<br/>
+Určuje souřadnici x bodu, který definuje počáteční bod oblouku (v logických jednotkách). Tento bod nemusí ležet přesně na oblouku.
 
-*Y3*<br/>
-Určuje souřadnici y bodu, který definuje počáteční bod oblouku (v logických jednotkách). Tento bod není nutné přesně nacházet na oblouku.
+*y3*<br/>
+Určuje souřadnici y bodu, který definuje počáteční bod oblouku (v logických jednotkách). Tento bod nemusí ležet přesně na oblouku.
 
-*X4*<br/>
-Určuje souřadnici x bodu, který definuje koncový bod oblouku (v logických jednotkách). Tento bod není nutné přesně nacházet na oblouku.
+*x4*<br/>
+Určuje souřadnici x bodu, který definuje koncový bod oblouku (v logických jednotkách). Tento bod nemusí ležet přesně na oblouku.
 
-*Y4*<br/>
-Určuje souřadnici y bodu, který definuje koncový bod oblouku (v logických jednotkách). Tento bod není nutné přesně nacházet na oblouku.
+*y4*<br/>
+Určuje souřadnici y bodu, který definuje koncový bod oblouku (v logických jednotkách). Tento bod nemusí ležet přesně na oblouku.
 
 *lpRect*<br/>
-Určuje ohraničující obdélník (v logických jednotkách). Pro tento parametr můžete předat buď ukazatel na strukturu dat [Rect](/windows/win32/api/windef/ns-windef-rect) , nebo objekt [CRect](../../atl-mfc-shared/reference/crect-class.md) .
+Určuje ohraničovací obdélník (v logických jednotkách). Můžete předat buď ukazatel na strukturu dat [RECT](/windows/win32/api/windef/ns-windef-rect) nebo [CRect](../../atl-mfc-shared/reference/crect-class.md) objekt pro tento parametr.
 
 *ptStart*<br/>
-Určuje souřadnice x a y bodu, který definuje počáteční bod oblouku (v logických jednotkách). Tento bod není nutné přesně nacházet na oblouku. Pro tento parametr můžete předat datovou strukturu [bodu](/windows/win32/api/windef/ns-windef-point) nebo objekt [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) .
+Určuje souřadnice x a y bodu, který definuje počáteční bod oblouku (v logických jednotkách). Tento bod nemusí ležet přesně na oblouku. Pro tento parametr můžete předat datovou strukturu [POINT](/windows/win32/api/windef/ns-windef-point) nebo objekt [CPoint.](../../atl-mfc-shared/reference/cpoint-class.md)
 
 *ptEnd*<br/>
-Určuje souřadnice x a y bodu, který definuje koncový bod oblouku (v logických jednotkách). Tento bod není nutné přesně nacházet na oblouku. Pro tento parametr můžete předat buď datovou strukturu `POINT`, nebo objekt `CPoint`.
+Určuje souřadnice x a y bodu, který definuje koncový bod oblouku (v logických jednotkách). Tento bod nemusí ležet přesně na oblouku. Pro tento parametr `POINT` můžete předat `CPoint` datovou strukturu nebo objekt.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -994,13 +994,13 @@ Nenulové, pokud je funkce úspěšná; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce je podobná `CDC::Arc`, s tím rozdílem, že aktuální pozice je aktualizována. Body ( *x1*, *Y1*) a ( *X2*, *Y2*) určují ohraničující obdélník. Elipsa vytvořená daným ohraničujícím obdélníkem definuje křivku oblouku. Oblouk rozšiřuje směrem doleva (výchozí směr oblouku) z místa, kde protíná paprskovou čáru od středu ohraničujícího obdélníku k ( *X3*, *Y3*). Oblouk končí, kde protíná paprskovou čáru od středu ohraničujícího obdélníku k ( *X4*, *Y4*). Pokud je výchozí bod a koncový bod stejný, je vykreslena kompletní elipsa.
+Tato funkce je `CDC::Arc`podobná aplikaci s tím rozdílem, že aktuální pozice je aktualizována. Body ( *x1*, *y1*) a ( *x2*, *y2*) určují ohraničovací obdélník. Elipsa vytvořená daným ohraničovacím obdélníkem definuje křivku oblouku. Oblouk se rozprostírá proti směru hodinových ručiček (výchozí směr oblouku) od bodu, kde protíná radiální čáru od středu ohraničovacího obdélníku do ( *x3*, *y3*). Oblouk končí tam, kde protíná radiální čáru od středu ohraničovacího obdélníku do ( *x4*, *y4*). Pokud jsou počáteční a koncový bod stejné, je nakreslena úplná elipsa.
 
-Čára je vykreslena z aktuální pozice do počátečního bodu oblouku. Pokud nedojde k žádné chybě, aktuální pozice je nastavena na koncový bod oblouku. Oblouk se vykreslí pomocí aktuálního pera; není vyplněno.
+Čára je nakreslena z aktuální polohy do počátečního bodu oblouku. Pokud nedojde k žádné chybě, aktuální pozice je nastavena na koncový bod oblouku. Oblouk je nakreslen pomocí aktuálního pera; není vyplněna.
 
-##  <a name="attach"></a>CDC:: Attach
+## <a name="cdcattach"></a><a name="attach"></a>CDC::Připojit
 
-Tato členská funkce slouží k připojení *HDC* k objektu `CDC`.
+Tato členská funkce slouží k `CDC` připojení *hDC* k objektu.
 
 ```
 BOOL Attach(HDC hDC);
@@ -1008,8 +1008,8 @@ BOOL Attach(HDC hDC);
 
 ### <a name="parameters"></a>Parametry
 
-*hDC*<br/>
-Kontext zařízení s Windows
+*Hdc*<br/>
+Kontext zařízení windows.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1017,11 +1017,11 @@ Nenulové, pokud je funkce úspěšná; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-*HDC* je uložený v `m_hDC`, kontextu výstupního zařízení a v `m_hAttribDC`kontext zařízení.
+*HDC* je uložen `m_hDC`v obou , kontextu `m_hAttribDC`výstupního zařízení a v kontextu atributu zařízení.
 
-##  <a name="beginpath"></a>CDC:: BeginPath
+## <a name="cdcbeginpath"></a><a name="beginpath"></a>CDC::BeginPath
 
-Otevře v kontextu zařízení vymezovač v cestě.
+Otevře závorku cesty v kontextu zařízení.
 
 ```
 BOOL BeginPath();
@@ -1033,17 +1033,17 @@ Nenulové, pokud je funkce úspěšná; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Po otevření cesty pro aplikaci může aplikace začít volat funkce kreslení GDI, aby definovala body, které se nacházejí v cestě. Aplikace může uzavřít levou cestu stisknutím voláním členské funkce `EndPath`. Když aplikace zavolá `BeginPath`, všechny předchozí cesty se zahodí.
+Po otevření závorky cesty může aplikace začít volat kreslicí funkce GDI a definovat body, které leží v cestě. Aplikace může zavřít otevřenou závorku cesty voláním `EndPath` členské funkce. Při volání `BeginPath`aplikace jsou všechny předchozí cesty zahozeny.
 
-Seznam funkcí kreslení, které definují body v cestě, najdete v tématu [BeginPath](/windows/win32/api/wingdi/nf-wingdi-beginpath) v Windows SDK.
+Seznam kreslicích funkcí, které definují body v cestě, naleznete v části [BeginPath](/windows/win32/api/wingdi/nf-wingdi-beginpath) v sadě Windows SDK.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCDocView#30](../../mfc/codesnippet/cpp/cdc-class_2.cpp)]
 
-##  <a name="bitblt"></a>CDC:: BitBlt
+## <a name="cdcbitblt"></a><a name="bitblt"></a>CDC::BitBlt
 
-Zkopíruje rastrový obrázek z kontextu zdrojového zařízení do tohoto aktuálního kontextu zařízení.
+Zkopíruje bitmapu z kontextu zdrojového zařízení do tohoto aktuálního kontextu zařízení.
 
 ```
 BOOL BitBlt(
@@ -1059,31 +1059,31 @@ BOOL BitBlt(
 
 ### <a name="parameters"></a>Parametry
 
-*znak*<br/>
+*X*<br/>
 Určuje logickou souřadnici x levého horního rohu cílového obdélníku.
 
-*požadované*<br/>
-Určuje logickou souřadnici y v levém horním rohu cílového obdélníku.
+*Y*<br/>
+Určuje logickou souřadnici y levého horního rohu cílového obdélníku.
 
-*nWidth*<br/>
+*nŠířka*<br/>
 Určuje šířku (v logických jednotkách) cílového obdélníku a zdrojové bitmapy.
 
-*nHeight*<br/>
+*nVýška*<br/>
 Určuje výšku (v logických jednotkách) cílového obdélníku a zdrojové bitmapy.
 
 *pSrcDC*<br/>
-Ukazatel na objekt `CDC`, který identifikuje kontext zařízení, ze kterého se bude bitmapa kopírovat. Musí mít hodnotu NULL, pokud *dwRop* určuje rastrovou operaci, která nezahrnuje zdroj.
+Ukazatel na `CDC` objekt, který identifikuje kontext zařízení, ze kterého bude bitmapa zkopírována. Musí být null, pokud *dwRop* určuje rastrovou operaci, která neobsahuje zdroj.
 
 *xSrc*<br/>
 Určuje logickou souřadnici x levého horního rohu zdrojové bitmapy.
 
-*ySrc*<br/>
-Určuje logickou souřadnici y v levém horním rohu zdrojové bitmapy.
+*ySrc řekl:*<br/>
+Určuje logickou souřadnici y levého horního rohu zdrojové bitmapy.
 
 *dwRop*<br/>
-Určuje rastrovou operaci, která má být provedena. Kódy rastrových operací definují, jak GDI kombinuje barvy ve výstupních operacích, které zahrnují aktuální štětec, možnou zdrojovou bitmapu a cílový rastrový obrázek. Seznam kódů rastrových operací pro *dwRop* a jejich popis najdete v tématu [BitBlt](/windows/win32/api/wingdi/nf-wingdi-bitblt) v Windows SDK.
+Určuje rastrovou operaci, která má být provedena. Kódy rastrových operací definují, jak GDI kombinuje barvy ve výstupních operacích, které zahrnují aktuální stopu, možnou zdrojovou bitmapu a cílovou bitmapu. Seznam kódů rastrových operací pro *dwRop* a jejich popisy naleznete v části [BitBlt](/windows/win32/api/wingdi/nf-wingdi-bitblt) v kanisu Windows SDK.
 
-Úplný seznam kódů s rastrovou operací naleznete v tématu [o kódech rastrových operací](/windows/win32/gdi/raster-operation-codes) v Windows SDK.
+Úplný seznam kódů rastrových operací naleznete v části [O kódech rastrových operací](/windows/win32/gdi/raster-operation-codes) v sadě Windows SDK.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1091,33 +1091,33 @@ Nenulové, pokud je funkce úspěšná; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Aplikace může zarovnat oblasti systému Windows nebo klienta o hranicích bajtů, aby se zajistilo, že `BitBlt` operace proběhne na obdélníkech zarovnaných na bajt. (Nastavení příznaků CS_BYTEALIGNWINDOW nebo CS_BYTEALIGNCLIENT při registraci tříd okna.)
+Aplikace může zarovnat okna nebo klientské oblasti na `BitBlt` hranice bajtů, aby bylo zajištěno, že operace probíhají na obdélníkech zarovnaných bajtů. (Při registraci tříd okna nastavte příznaky CS_BYTEALIGNWINDOW nebo CS_BYTEALIGNCLIENT.)
 
-operace `BitBlt` na obdélníkech zarovnaných na bajtech jsou výrazně rychlejší než `BitBlt` operace u obdélníků, které nejsou zarovnané na bajty. Chcete-li určit styly tříd, jako je například zarovnání bajtů pro vlastní kontext zařízení, bude nutné zaregistrovat třídu okna a nespoléhat se na to, že by to za vás bylo záviset na třídách Microsoft Foundation. Použijte globální funkci [AfxRegisterWndClass –](../../mfc/reference/application-information-and-management.md#afxregisterwndclass).
+`BitBlt`operace na obdélníky zarovnané bajtem jsou podstatně rychlejší než `BitBlt` operace na obdélníky, které nejsou zarovnané bajtů. Pokud chcete zadat styly tříd, jako je zarovnání bajtů pro vlastní kontext zařízení, budete muset zaregistrovat třídu okna, nikoli se spoléhat na třídy Microsoft Foundation, které to udělají za vás. Použijte globální funkci [AfxRegisterWndClass](../../mfc/reference/application-information-and-management.md#afxregisterwndclass).
 
-GDI transformuje *nWidth* a *nHeight*, jednou pomocí kontextu cílového zařízení a jednou pomocí kontextu zdrojového zařízení. Pokud se výsledné rozsahy neshodují, GDI použije funkci Windows `StretchBlt` pro komprimaci nebo roztažení zdrojové bitmapy podle potřeby.
+GDI transformuje *nWidth* a *nHeight*, jednou pomocí kontextu cílového zařízení a jednou pomocí kontextu zdrojového zařízení. Pokud výsledné rozsahy neodpovídají, GDI používá `StretchBlt` funkci systému Windows komprimovat nebo roztáhnout zdrojovou bitmapu podle potřeby.
 
-Pokud umístění, zdrojové a vzorové bitmapy nemají stejný formát barvy, funkce `BitBlt` převede rastry zdroje a vzorku tak, aby odpovídaly cíli. V převodu se používají barvy popředí a pozadí cílového rastrového obrázku.
+Pokud bitmapy cíl, zdroj a vzorek nemají stejný `BitBlt` barevný formát, funkce převede datové a vzorové bitmapy tak, aby odpovídaly cíli. Při převodu se používají barvy popředí a pozadí cílové bitmapy.
 
-Když funkce `BitBlt` převede monochromatický rastrový obrázek na barvu, nastaví bílé bity (1) na barvu pozadí a černé bity (0) na barvu popředí. Použijí se barvy popředí a pozadí kontextu cílového zařízení. Chcete-li převést barvu na monochromatickou, `BitBlt` nastaví pixely, které odpovídají barvám pozadí, na bílou a nastaví všechny ostatní pixely na černou. `BitBlt` používá barvy popředí a pozadí kontextu barevného zařízení pro převod z barvy na monochromatický.
+Když `BitBlt` funkce převede monochromatický bitmapu na barvu, nastaví bílé bity (1) na barvu pozadí a černé bity (0) na barvu popředí. Používají se barvy popředí a pozadí kontextu cílového zařízení. Chcete-li převést `BitBlt` barvu na monochromatickou, nastaví obrazové body, které odpovídají barvě pozadí, na bílou a všechny ostatní obrazové body na černé. `BitBlt`Používá barvy popředí a pozadí kontextu barevného zařízení k převodu z barvy na monochromatickou.
 
-Všimněte si, že ne všechny kontexty zařízení podporují `BitBlt`. Chcete-li ověřit, zda daný kontext zařízení podporuje `BitBlt`, použijte členskou funkci `GetDeviceCaps` a zadejte index RASTERCAPS.
+Všimněte si, že `BitBlt`ne všechny kontexty zařízení podporují . Chcete-li zkontrolovat, zda `BitBlt`daný kontext `GetDeviceCaps` zařízení podporuje , použijte členovou funkci a zadejte index RASTERCAPS.
 
 ### <a name="example"></a>Příklad
 
-  Podívejte se na příklad pro [CDC:: CreateCompatibleDC](#createcompatibledc).
+  Viz příklad pro [CDC::CreateCompatibleDC](#createcompatibledc).
 
-##  <a name="cdc"></a>CDC:: CDC
+## <a name="cdccdc"></a><a name="cdc"></a>CDC::CDC
 
-Vytvoří objekt `CDC`.
+Vytvoří `CDC` objekt.
 
 ```
 CDC();
 ```
 
-##  <a name="chord"></a>CDC:: CTR
+## <a name="cdcchord"></a><a name="chord"></a>CDC::Akord
 
-Nakreslí CTR (uzavřený obrázek, který je ohraničen průsečíkem elipsy a segmentu čáry).
+Nakreslí akord (uzavřený obrázek ohraničený průsečíkem elipsy a segmentu čáry).
 
 ```
 BOOL Chord(
@@ -1139,37 +1139,37 @@ BOOL Chord(
 ### <a name="parameters"></a>Parametry
 
 *x1*<br/>
-Určuje souřadnici x levého horního rohu ohraničujícího obdélníku CTR (v logických jednotkách).
+Určuje souřadnici x levého horního rohu ohraničovacího obdélníku akordu (v logických jednotkách).
 
-*Y1*<br/>
-Určuje souřadnici y levého horního rohu ohraničujícího obdélníku CTR (v logických jednotkách).
+*y1*<br/>
+Určuje souřadnici y levého horního rohu ohraničovacího obdélníku akordu (v logických jednotkách).
 
-*X2*<br/>
-Určuje souřadnici x pravého dolního rohu ohraničujícího obdélníku CTR (v logických jednotkách).
+*x2*<br/>
+Určuje souřadnici x pravého dolního rohu ohraničovacího obdélníku akordu (v logických jednotkách).
 
-*Y2*<br/>
-Určuje souřadnici y pravého dolního rohu ohraničujícího obdélníku CTR (v logických jednotkách).
+*y2*<br/>
+Určuje souřadnici y pravého dolního rohu ohraničovacího obdélníku akordu (v logických jednotkách).
 
-*X3*<br/>
-Určuje souřadnici x bodu, který definuje počáteční bod CTR (v logických jednotkách).
+*x3*<br/>
+Určuje souřadnici x bodu, který definuje počáteční bod akordu (v logických jednotkách).
 
-*Y3*<br/>
-Určuje souřadnici y bodu, který definuje počáteční bod CTR (v logických jednotkách).
+*y3*<br/>
+Určuje souřadnici y bodu, který definuje počáteční bod akordu (v logických jednotkách).
 
-*X4*<br/>
-Určuje souřadnici x bodu, který definuje koncový bod CTR (v logických jednotkách).
+*x4*<br/>
+Určuje souřadnici x bodu, který definuje koncový bod akordu (v logických jednotkách).
 
-*Y4*<br/>
-Určuje souřadnici y bodu, který definuje koncový bod CTR (v logických jednotkách).
+*y4*<br/>
+Určuje souřadnici y bodu, který definuje koncový bod akordu (v logických jednotkách).
 
 *lpRect*<br/>
-Určuje ohraničující obdélník (v logických jednotkách). Pro tento parametr můžete předat buď LPRECT, nebo objekt [CRect](../../atl-mfc-shared/reference/crect-class.md) .
+Určuje ohraničovací obdélník (v logických jednotkách). Pro tento parametr můžete předat buď objekt LPRECT nebo [CRect.](../../atl-mfc-shared/reference/crect-class.md)
 
 *ptStart*<br/>
-Určuje souřadnice x a y bodu, který definuje počáteční bod CTR (v logických jednotkách). Tento bod nemusí být přesně na CTR. Pro tento parametr můžete předat buď strukturu `POINT`, nebo objekt `CPoint`.
+Určuje souřadnice x a y bodu, který definuje počáteční bod akordu (v logických jednotkách). Tento bod nemusí ležet přesně na akordu. Pro tento parametr `POINT` můžete `CPoint` předat strukturu nebo objekt.
 
 *ptEnd*<br/>
-Určuje souřadnice x a y bodu, který definuje koncový bod CTR (v logických jednotkách). Tento bod nemusí být přesně na CTR. Pro tento parametr můžete předat strukturu [bodu](/windows/win32/api/windef/ns-windef-point) nebo objekt [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) .
+Určuje souřadnice x a y bodu, který definuje koncový bod akordu (v logických jednotkách). Tento bod nemusí ležet přesně na akordu. Pro tento parametr můžete předat strukturu [POINT](/windows/win32/api/windef/ns-windef-point) nebo objekt [CPoint.](../../atl-mfc-shared/reference/cpoint-class.md)
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1177,17 +1177,17 @@ Nenulové, pokud je funkce úspěšná; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Parametry ( *x1*, *Y1*) a ( *X2*, *Y2*) určují v levém horním a pravém dolním rohu obdélníku ohraničující elipsu, která je součástí ctru. Parametry ( *X3*, *Y3*) a ( *X4*, *Y4*) určují koncové body čáry, která protíná elipsu. CTR se vykreslí pomocí vybraného pera a vyplní se pomocí vybraného štětce.
+Parametry ( *x1*, *y1*) a ( *x2*, *y2*) určují levý horní a pravý dolní roh obdélníku ohraničujícího elipsu, která je součástí akordu. Parametry ( *x3*, *y3*) a ( *x4*, *y4*) určují koncové body čáry, která protíná elipsu. Akord je nakreslen pomocí vybraného pera a vyplněn vybraným štětcem.
 
-Obrázek vykreslený funkcí `Chord` rozšiřuje až, ale nezahrnuje pravé a dolní souřadnici. To znamená, že výška obrázku je *y2* - *Y1* a šířka obrázku je *X2* - *x1*.
+Obrázek nakreslený `Chord` funkcí sahá až k pravé a dolní souřadnici, ale nezahrnuje ji. To znamená, že výška obrázku je *y2* - *y1* a šířka obrázku je *x2* - *x1*.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCDocView#31](../../mfc/codesnippet/cpp/cdc-class_3.cpp)]
 
-##  <a name="closefigure"></a>CDC:: CloseFigure
+## <a name="cdcclosefigure"></a><a name="closefigure"></a>CDC::CloseFigure
 
-Zavře otevřený obrázek v cestě.
+Zavře otevřenou postavu v cestě.
 
 ```
 BOOL CloseFigure();
@@ -1199,13 +1199,13 @@ Nenulové, pokud je funkce úspěšná; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce uzavře obrázek sekreslením čáry od aktuální pozice k prvnímu bodu obrázku (obvykle bod určený posledním voláním členské funkce `MoveTo`) a spojí řádky pomocí stylu spojení čáry. Pokud je obrázek uzavřen pomocí `LineTo` členské funkce místo `CloseFigure`, k vytvoření rohu místo spojení se použijí koncová písmena. `CloseFigure` by měla být volána pouze v případě, že v kontextu zařízení je otevřená jednoduchá cesta.
+Funkce zavře obrázek nakreslením čáry z aktuální polohy k prvnímu bodu obrázku (obvykle bod `MoveTo` určený posledním voláním členské funkce) a spojuje čáry pomocí stylu spojení čáry. Pokud je obrázek uzavřen `LineTo` pomocí členské `CloseFigure`funkce namísto , koncová písmena se používají k vytvoření rohu namísto spojení. `CloseFigure`by měla být volána pouze v případě, že je otevřená závorka cesty v kontextu zařízení.
 
-Obrázek v cestě je otevřený, pokud není explicitně uzavřen pomocí této funkce. (Obrázek lze otevřít i v případě, že je aktuální bod a počáteční bod obrázku stejný.) Všechny řádky nebo křivky přidané do cesty po `CloseFigure` spustí nový obrázek.
+Obrázek v cestě je otevřen, pokud není explicitně uzavřen pomocí této funkce. (Obrázek může být otevřený i v případě, že aktuální bod a počáteční bod obrázku jsou stejné.) Jakákoli čára nebo křivka `CloseFigure` přidaná k cestě po spuštění nového obrázku.
 
-##  <a name="createcompatibledc"></a>CDC:: CreateCompatibleDC
+## <a name="cdccreatecompatibledc"></a><a name="createcompatibledc"></a>CDC::CreateCompatibleDC
 
-Vytvoří kontext paměťového zařízení, který je kompatibilní se zařízením určeným *primárním řadičem domény*.
+Vytvoří kontext paměťového zařízení, který je kompatibilní se zařízením určeným *programem pDC*.
 
 ```
 BOOL CreateCompatibleDC(CDC* pDC);
@@ -1213,8 +1213,8 @@ BOOL CreateCompatibleDC(CDC* pDC);
 
 ### <a name="parameters"></a>Parametry
 
-*Emulátor*<br/>
-Ukazatel na kontext zařízení. Pokud má *primární řadič domény* hodnotu null, funkce vytvoří kontext paměťového zařízení, který je kompatibilní se systémovým zobrazením.
+*Pdc*<br/>
+Ukazatel na kontext zařízení. Pokud *je hodnota pDC* null, funkce vytvoří kontext paměťového zařízení, který je kompatibilní se systémovým displejem.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1222,17 +1222,17 @@ Nenulové, pokud je funkce úspěšná; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Kontext paměťového zařízení je blok paměti, který představuje zobrazovací plochu. Dá se použít k přípravě imagí v paměti před jejich zkopírováním na skutečnou plochu zařízení kompatibilního zařízení.
+Kontext paměťového zařízení je blok paměti, který představuje povrch zobrazení. Může být použit k přípravě obrázků v paměti před jejich zkopírováním na skutečný povrch zařízení kompatibilního zařízení.
 
-Když se vytvoří kontext paměťového zařízení, GDI pro něj automaticky vybírá monochromatickou skladovou bitovou kopii 1:1. Výstupní funkce GDI lze použít s kontextem paměťového zařízení pouze v případě, že byl obrázek vytvořen a vybrán do tohoto kontextu.
+Když je vytvořen kontext paměťového zařízení, GDI automaticky vybere monochromatický obrázek zásob 1 po 1 pro něj. Výstupní funkce GDI lze použít s kontextem paměťového zařízení pouze v případě, že bitmapa byla vytvořena a vybrána do tohoto kontextu.
 
-Tato funkce se dá použít jenom k vytvoření kontextů kompatibilních zařízení pro zařízení, která podporují rastrové operace. Informace týkající se přenosů bitových bloků mezi kontexty zařízení naleznete v tématu členská funkce [CDC:: BitBlt](#bitblt) . Chcete-li zjistit, zda kontext zařízení podporuje rastrové operace, přečtěte si část RC_BITBLT funkce rastrového rámečku `CDC::GetDeviceCaps`členské funkce.
+Tuto funkci lze použít pouze k vytvoření kompatibilních kontextů zařízení pro zařízení, která podporují rastrové operace. Informace týkající se přenosů bitových bloků mezi kontexty zařízení naleznete v členské funkci [CDC::BitBlt.](#bitblt) Chcete-li zjistit, zda kontext zařízení podporuje rastrové operace, `CDC::GetDeviceCaps`přečtěte si RC_BITBLT možnost rastrového zařízení v členské funkci .
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCDocView#32](../../mfc/codesnippet/cpp/cdc-class_4.cpp)]
 
-##  <a name="createdc"></a>CDC:: CreateDC
+## <a name="cdccreatedc"></a><a name="createdc"></a>CDC::VytvořitDC
 
 Vytvoří kontext zařízení pro zadané zařízení.
 
@@ -1247,16 +1247,16 @@ BOOL CreateDC(
 ### <a name="parameters"></a>Parametry
 
 *lpszDriverName*<br/>
-Odkazuje na řetězec zakončený hodnotou null, který určuje název souboru (bez přípony) ovladače zařízení (například EPSON). Pro tento parametr můžete také předat objekt `CString`.
+Odkazuje na řetězec s nulovým ukončením, který určuje název souboru (bez přípony) ovladače zařízení (například "EPSON"). Můžete také předat `CString` objekt pro tento parametr.
 
 *lpszDeviceName*<br/>
-Odkazuje na řetězec zakončený hodnotou null, který určuje název konkrétního zařízení, které se má podporovat (například "EPSON FX-80"). Parametr *lpszDeviceName* se používá, pokud modul podporuje více než jedno zařízení. Pro tento parametr můžete také předat objekt `CString`.
+Odkazuje na řetězec s ukončeným hodnotou null, který určuje název konkrétního zařízení, které má být podporováno (například "EPSON FX-80"). Parametr *lpszDeviceName* se používá, pokud modul podporuje více než jedno zařízení. Můžete také předat `CString` objekt pro tento parametr.
 
 *lpszOutput*<br/>
-Odkazuje na řetězec zakončený hodnotou null, který určuje název souboru nebo zařízení pro fyzické výstupní médium (soubor nebo výstupní port). Pro tento parametr můžete také předat objekt `CString`.
+Odkazuje na řetězec s nulovým ukončením, který určuje název souboru nebo zařízení pro fyzické výstupní médium (soubor nebo výstupní port). Můžete také předat `CString` objekt pro tento parametr.
 
 *lpInitData*<br/>
-Odkazuje na strukturu `DEVMODE` obsahující inicializační data specifická pro zařízení pro ovladač zařízení. Funkce Windows `DocumentProperties` načte tuto strukturu vyplněnou pro dané zařízení. Parametr *lpInitData* musí mít hodnotu null, pokud má ovladač zařízení použít výchozí inicializaci (pokud existuje) zadané uživatelem prostřednictvím ovládacích panelů.
+Odkazuje na `DEVMODE` strukturu obsahující inicializační data pro konkrétní zařízení pro ovladač zařízení. Funkce `DocumentProperties` systému Windows načte tuto strukturu vyplněnou pro dané zařízení. Parametr *lpInitData* musí být null, pokud má ovladač zařízení použít výchozí inicializaci (pokud existuje) určenou uživatelem prostřednictvím ovládacího panelu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1264,13 +1264,13 @@ Nenulové, pokud je funkce úspěšná; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Tisk. Pokud se používá struktura [DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea) , je požadován soubor hlaviček H.
+Tisk. H hlavičkový soubor je vyžadován, pokud je použita struktura [DEVMODE.](/windows/win32/api/wingdi/ns-wingdi-devmodea)
 
-Názvy zařízení dodržují tyto konvence: koncová dvojtečka (:) je doporučeno, ale volitelné. Systém Windows odříznout koncovou dvojtečku tak, aby byl název zařízení končící dvojtečkou namapován na stejný port bez dvojtečky. Název ovladače a portu nesmí obsahovat mezery na začátku nebo na konci. Výstupní funkce GDI nelze použít s kontexty informací.
+Názvy zařízení se řídí těmito konvencemi: koncová dvojtečka (:) je doporučeno, ale volitelné. Systém Windows proužkuje ukončující dvojtečku tak, aby byl název zařízení končící dvojtečkou mapován na stejný port jako stejný název bez dvojtečky. Názvy ovladačů a portů nesmí obsahovat úvodní nebo koncové mezery. Výstupní funkce GDI nelze použít s informačními kontexty.
 
-##  <a name="createic"></a>CDC:: Create
+## <a name="cdccreateic"></a><a name="createic"></a>CDC::CreateIC
 
-Vytvoří kontext informací pro zadané zařízení.
+Vytvoří informační kontext pro zadané zařízení.
 
 ```
 BOOL CreateIC(
@@ -1283,30 +1283,30 @@ BOOL CreateIC(
 ### <a name="parameters"></a>Parametry
 
 *lpszDriverName*<br/>
-Odkazuje na řetězec zakončený hodnotou null, který určuje název souboru (bez přípony) ovladače zařízení (například EPSON). Pro tento parametr můžete předat objekt `CString`.
+Odkazuje na řetězec s nulovým ukončením, který určuje název souboru (bez přípony) ovladače zařízení (například "EPSON"). Můžete předat `CString` objekt pro tento parametr.
 
 *lpszDeviceName*<br/>
-Odkazuje na řetězec zakončený hodnotou null, který určuje název konkrétního zařízení, které se má podporovat (například "EPSON FX-80"). Parametr *lpszDeviceName* se používá, pokud modul podporuje více než jedno zařízení. Pro tento parametr můžete předat objekt `CString`.
+Odkazuje na řetězec s ukončeným hodnotou null, který určuje název konkrétního zařízení, které má být podporováno (například "EPSON FX-80"). Parametr *lpszDeviceName* se používá, pokud modul podporuje více než jedno zařízení. Můžete předat `CString` objekt pro tento parametr.
 
 *lpszOutput*<br/>
-Odkazuje na řetězec zakončený hodnotou null, který určuje název souboru nebo zařízení pro fyzické výstupní médium (soubor nebo port). Pro tento parametr můžete předat objekt `CString`.
+Odkazuje na řetězec s nulovým ukončením, který určuje název souboru nebo zařízení pro fyzické výstupní médium (soubor nebo port). Můžete předat `CString` objekt pro tento parametr.
 
 *lpInitData*<br/>
-Odkazuje na inicializační data specifická pro zařízení pro ovladač zařízení. Parametr *lpInitData* musí mít hodnotu null, pokud má ovladač zařízení použít výchozí inicializaci (pokud existuje) zadané uživatelem prostřednictvím ovládacích panelů. V tématu `CreateDC` pro formát dat pro inicializaci specifickou pro zařízení.
+Odkazuje na inicializační data pro konkrétní zařízení pro ovladač zařízení. Parametr *lpInitData* musí být null, pokud má ovladač zařízení použít výchozí inicializaci (pokud existuje) určenou uživatelem prostřednictvím ovládacího panelu. Viz `CreateDC` formát dat pro inicializaci specifické pro zařízení.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud bylo úspěšné; v opačném případě 0.
+Nenulová, pokud je úspěšná; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Informační kontext poskytuje rychlý způsob, jak získat informace o zařízení bez vytvoření kontextu zařízení.
+Kontext informací poskytuje rychlý způsob, jak získat informace o zařízení bez vytvoření kontextu zařízení.
 
-Názvy zařízení dodržují tyto konvence: koncová dvojtečka (:) je doporučeno, ale volitelné. Systém Windows odříznout koncovou dvojtečku tak, aby byl název zařízení končící dvojtečkou namapován na stejný port bez dvojtečky. Název ovladače a portu nesmí obsahovat mezery na začátku nebo na konci. Výstupní funkce GDI nelze použít s kontexty informací.
+Názvy zařízení se řídí těmito konvencemi: koncová dvojtečka (:) je doporučeno, ale volitelné. Systém Windows proužkuje ukončující dvojtečku tak, aby byl název zařízení končící dvojtečkou mapován na stejný port jako stejný název bez dvojtečky. Názvy ovladačů a portů nesmí obsahovat úvodní nebo koncové mezery. Výstupní funkce GDI nelze použít s informačními kontexty.
 
-##  <a name="deletedc"></a>CDC::D eleteDC
+## <a name="cdcdeletedc"></a><a name="deletedc"></a>CDC::DeleteDC
 
-Obecně Nevolejte tuto funkci; destruktor to provede za vás.
+Obecně platí, že tuto funkci nevolejte; destruktor to udělá za vás.
 
 ```
 BOOL DeleteDC();
@@ -1314,33 +1314,33 @@ BOOL DeleteDC();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud se funkce úspěšně dokončila; v opačném případě 0.
+Nenulová, pokud byla funkce úspěšně dokončena; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce `DeleteDC` odstraní kontexty zařízení s Windows, které jsou přidružené k `m_hDC` v aktuálním objektu `CDC`. Pokud je tento objekt `CDC` posledním aktivním kontextem zařízení pro dané zařízení, zařízení se oznámí a uvolní se všechny úložné a systémové prostředky používané zařízením.
+Členská `DeleteDC` funkce odstraní kontexty zařízení systému `m_hDC` Windows, `CDC` které jsou přidruženy k aktuálnímu objektu. Pokud `CDC` je tento objekt posledním kontextem aktivního zařízení pro dané zařízení, zařízení se upozorní a uvolní se všechna úložiště a systémové prostředky používané zařízením.
 
-Aplikace by neměla volat `DeleteDC`, pokud byly objekty vybrány do kontextu zařízení. Než se objekty odstraní, musí se nejdřív vybrat z kontextu zařízení.
+Aplikace by neměla volat, `DeleteDC` pokud byly objekty vybrány do kontextu zařízení. Objekty musí být nejprve vybrány z kontextu zařízení před odstraněním.
 
-Aplikace nesmí odstranit kontext zařízení, jehož popisovač byl získán voláním [CWnd:: GetDC](../../mfc/reference/cwnd-class.md#getdc). Místo toho musí volat příkaz [CWnd:: ReleaseDC](../../mfc/reference/cwnd-class.md#releasedc) , aby se uvolnil kontext zařízení. Pro zabalení této funkce jsou k dispozici třídy [CClientDC –](../../mfc/reference/cclientdc-class.md) a [CWindowDC](../../mfc/reference/cwindowdc-class.md) .
+Aplikace nesmí odstranit kontext zařízení, jehož popisovač byl získán voláním [CWnd::GetDC](../../mfc/reference/cwnd-class.md#getdc). Místo toho musí volat [CWnd::ReleaseDC](../../mfc/reference/cwnd-class.md#releasedc) k uvolnění kontextu zařízení. [Třídy CClientDC](../../mfc/reference/cclientdc-class.md) a [CWindowDC](../../mfc/reference/cwindowdc-class.md) jsou k dispozici pro zalomení této funkce.
 
-Funkce `DeleteDC` se obecně používá k odstranění kontextů zařízení vytvořených pomocí [CreateDC](#createdc), [Vytvoření](#createic)nebo [CreateCompatibleDC](#createcompatibledc).
+Tato `DeleteDC` funkce se obecně používá k odstranění kontextů zařízení vytvořených pomocí [createdc](#createdc), [CreateIC](#createic)nebo [CreateCompatibleDC](#createcompatibledc).
 
 ### <a name="example"></a>Příklad
 
-  Podívejte se na příklad pro [CPrintDialog:: GetPrinterDC](../../mfc/reference/cprintdialog-class.md#getprinterdc).
+  Viz příklad [cprintdialog::GetPrinterDC](../../mfc/reference/cprintdialog-class.md#getprinterdc).
 
-##  <a name="deletetempmap"></a>CDC::D eleteTempMap
+## <a name="cdcdeletetempmap"></a><a name="deletetempmap"></a>CDC::DeleteTempMap
 
-Je automaticky volána `CWinApp` obslužným rutinou nečinného času, `DeleteTempMap` odstraní všechny dočasné `CDC` objekty vytvořené `FromHandle`, ale nezničí popisovače kontextu zařízení (`hDC`s), které jsou dočasně přidruženy k objektům `CDC`.
+Automaticky volána `CWinApp` obslužnou rutinou doby `DeleteTempMap` nečinnosti, odstraní všechny `CDC` dočasné objekty vytvořené rozhraním `FromHandle`, ale nezničí popisovače kontextu zařízení ( `hDC`y) dočasně přidružené k objektům. `CDC`
 
 ```
 static void PASCAL DeleteTempMap();
 ```
 
-##  <a name="detach"></a>CDC::D etach
+## <a name="cdcdetach"></a><a name="detach"></a>CDC::Detach
 
-Voláním této funkce se odpojí `m_hDC` (kontext výstupního zařízení) z objektu `CDC` a nastavte `m_hDC` i `m_hAttribDC` na hodnotu NULL.
+Volání této funkce `m_hDC` odpojit (kontext výstupního zařízení) od objektu `CDC` a nastavit i `m_hDC` `m_hAttribDC` null.
 
 ```
 HDC Detach();
@@ -1348,11 +1348,11 @@ HDC Detach();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Kontext zařízení s Windows
+Kontext zařízení windows.
 
-##  <a name="dptohimetric"></a>CDC::D PtoHIMETRIC
+## <a name="cdcdptohimetric"></a><a name="dptohimetric"></a>CDC::DPtoHIMETRICKÝ
 
-Tuto funkci použijte, když dáte HIMETRIC velikosti pro OLE, což převede pixely na HIMETRIC.
+Tuto funkci použijte, když přidáváte velikosti HIMETRIC ole a převádíte obrazové body na HIMETRIC.
 
 ```
 void DPtoHIMETRIC(LPSIZE lpSize) const;
@@ -1360,14 +1360,14 @@ void DPtoHIMETRIC(LPSIZE lpSize) const;
 
 ### <a name="parameters"></a>Parametry
 
-*lpSize*<br/>
-Odkazuje na strukturu [velikosti](/windows/win32/api/windef/ns-windef-size) nebo objekt [CSize](../../atl-mfc-shared/reference/csize-class.md) .
+*lpVelikost*<br/>
+Odkazuje na strukturu [SIZE](/windows/win32/api/windef/ns-windef-size) nebo objekt [CSize.](../../atl-mfc-shared/reference/csize-class.md)
 
 ### <a name="remarks"></a>Poznámky
 
-Je-li režim mapování objektu kontextu zařízení MM_LOENGLISH, MM_HIENGLISH, MM_LOMETRIC nebo MM_HIMETRIC, je převod založen na počtu pixelů ve fyzické palci. Pokud je režim mapování jedním z ostatních neomezených režimů (například MM_TEXT), pak je převod založen na počtu pixelů v logické palci.
+Pokud je režim mapování objektu kontextu zařízení MM_LOENGLISH, MM_HIENGLISH, MM_LOMETRIC nebo MM_HIMETRIC, je převod založen na počtu pixelů ve fyzickém palci. Pokud je režim mapování jedním z dalších režimů bez omezení (např. MM_TEXT), je převod založen na počtu pixelů v logickém inch.
 
-##  <a name="dptolp"></a>CDC::D PtoLP
+## <a name="cdcdptolp"></a><a name="dptolp"></a>CDC::DPtoLP
 
 Převede jednotky zařízení na logické jednotky.
 
@@ -1383,24 +1383,24 @@ void DPtoLP(LPSIZE lpSize) const;
 ### <a name="parameters"></a>Parametry
 
 *lpPoints*<br/>
-Odkazuje na pole struktur [bodů](/windows/win32/api/windef/ns-windef-point) nebo [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objektů.
+Odkazuje na pole [point](/windows/win32/api/windef/ns-windef-point) struktury nebo [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objekty.
 
 *nCount*<br/>
 Počet bodů v poli.
 
 *lpRect*<br/>
-Odkazuje na strukturu [Rect](/windows/win32/api/windef/ns-windef-rect) nebo objekt [CRect](../../atl-mfc-shared/reference/crect-class.md) . Tento parametr se používá pro jednoduchý případ převodu jednoho obdélníku z bodů zařízení na logické body.
+Odkazuje na [rect](/windows/win32/api/windef/ns-windef-rect) strukturu nebo [CRect](../../atl-mfc-shared/reference/crect-class.md) objektu. Tento parametr se používá pro jednoduchý případ převodu jednoho obdélníku z bodů zařízení na logické body.
 
-*lpSize*<br/>
-Odkazuje na strukturu [velikosti](/windows/win32/api/windef/ns-windef-size) nebo objekt [CSize](../../atl-mfc-shared/reference/csize-class.md) .
+*lpVelikost*<br/>
+Odkazuje na strukturu [SIZE](/windows/win32/api/windef/ns-windef-size) nebo objekt [CSize.](../../atl-mfc-shared/reference/csize-class.md)
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce mapuje souřadnice jednotlivých bodů nebo rozměry velikosti ze systému souřadnic zařízení do logického systému souřadnic GDI. Převod závisí na aktuálním režimu mapování a nastavení původu a rozsahu okna a zobrazení zařízení.
+Funkce mapuje souřadnice každého bodu nebo dimenze velikosti z souřadnicového systému zařízení do logického souřadnicového systému GDI. Převod závisí na aktuálním režimu mapování a nastavení počátků a rozsahů okna a výřezu zařízení.
 
-##  <a name="draw3drect"></a>CDC::D raw3dRect
+## <a name="cdcdraw3drect"></a><a name="draw3drect"></a>CDC::Draw3dRect
 
-K nakreslení trojrozměrného obdélníku volejte tuto členskou funkci.
+Volání této členské funkce nakreslit trojrozměrný obdélník.
 
 ```
 void Draw3dRect(
@@ -1420,37 +1420,37 @@ void Draw3dRect(
 ### <a name="parameters"></a>Parametry
 
 *lpRect*<br/>
-Určuje ohraničující obdélník (v logických jednotkách). Pro tento parametr můžete předat buď ukazatel na strukturu [Rect](/windows/win32/api/windef/ns-windef-rect) , nebo objekt [CRect](../../atl-mfc-shared/reference/crect-class.md) .
+Určuje ohraničovací obdélník (v logických jednotkách). Můžete předat buď ukazatel [rect](/windows/win32/api/windef/ns-windef-rect) struktury nebo [CRect](../../atl-mfc-shared/reference/crect-class.md) objekt pro tento parametr.
 
 *clrTopLeft*<br/>
-Určuje barvu horních a levých stran trojrozměrného obdélníku.
+Určuje barvu horní a levé strany trojrozměrného obdélníku.
 
 *clrBottomRight*<br/>
 Určuje barvu dolní a pravé strany trojrozměrného obdélníku.
 
-*znak*<br/>
+*X*<br/>
 Určuje logickou souřadnici x levého horního rohu trojrozměrného obdélníku.
 
-*požadované*<br/>
+*Y*<br/>
 Určuje logickou souřadnici y levého horního rohu trojrozměrného obdélníku.
 
-*CX*<br/>
+*Cx*<br/>
 Určuje šířku trojrozměrného obdélníku.
 
-*kr*<br/>
+*Cy*<br/>
 Určuje výšku trojrozměrného obdélníku.
 
 ### <a name="remarks"></a>Poznámky
 
-Obdélník bude vykreslen s horní a levou stěnou barvy určenou parametrem *clrTopLeft* a dolní a pravou stěnou barvy určené parametrem *clrBottomRight*.
+Obdélník bude nakreslena s horní a levé strany v barvě určené *clrTopLeft* a dolní a pravé strany v barvě určené *clrBottomRight*.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCDocView#33](../../mfc/codesnippet/cpp/cdc-class_5.cpp)]
 
-##  <a name="drawdragrect"></a>CDC::D rawDragRect
+## <a name="cdcdrawdragrect"></a><a name="drawdragrect"></a>CDC::DrawDragRect
 
-Zavolejte tuto členskou funkci opakovaně pro překreslení obdélníku přetažením.
+Volání této členské funkce opakovaně překreslit obdélník přetažení.
 
 ```
 void DrawDragRect(
@@ -1465,32 +1465,32 @@ void DrawDragRect(
 ### <a name="parameters"></a>Parametry
 
 *lpRect*<br/>
-Odkazuje na strukturu [Rect](/windows/win32/api/windef/ns-windef-rect) nebo objekt [CRect](../../atl-mfc-shared/reference/crect-class.md) , který určuje logické souřadnice obdélníku – v tomto případě se jedná o koncovou pozici obdélníku, který se má překreslit.
+Odkazuje na [rect](/windows/win32/api/windef/ns-windef-rect) struktury nebo [CRect](../../atl-mfc-shared/reference/crect-class.md) objekt, který určuje logické souřadnice obdélníku – v tomto případě koncová poloha obdélníku překreslování.
 
-*hodnota*<br/>
-Určuje posun z levého horního rohu vnějšího ohraničení do levého horního rohu vnitřního ohraničení (tj. Tloušťka ohraničení) obdélníku.
+*Velikost*<br/>
+Určuje posunutí z levého horního rohu vnějšího ohraničení do levého horního rohu vnitřního ohraničení (tj. tloušťky ohraničení) obdélníku.
 
 *lpRectLast*<br/>
-Odkazuje na strukturu [Rect](/windows/win32/api/windef/ns-windef-rect) nebo objekt [CRect](../../atl-mfc-shared/reference/crect-class.md) , který určuje logické souřadnice pozice obdélníku – v tomto případě se jedná o původní pozici překresleného obdélníku.
+Odkazuje na [rect](/windows/win32/api/windef/ns-windef-rect) struktury nebo [CRect](../../atl-mfc-shared/reference/crect-class.md) objekt, který určuje logické souřadnice pozice obdélníku – v tomto případě původní umístění obdélníku překreslování.
 
 *sizeLast*<br/>
-Určuje posun z levého horního rohu vnějšího ohraničení do levého horního rohu vnitřního ohraničení (tj. Tloušťka ohraničení) původního obdélníku, který se překreslí.
+Určuje posunutí z levého horního rohu vnějšího ohraničení do levého horního rohu vnitřního ohraničení (tj. tloušťky ohraničení) původního obdélníku, který se překreslí.
 
-*pBrush*<br/>
-Ukazatel na objekt štětce. Nastavte na NULL pro použití výchozího polotónového štětce.
+*pŠtětec*<br/>
+Ukazatel na objekt stopy. Nastavte hodnotu NULL, chcete-li použít výchozí polotónovou stopu.
 
 *pBrushLast*<br/>
-Ukazatel na poslední použitý objekt štětce. Nastavte na NULL pro použití výchozího polotónového štětce.
+Ukazatel na poslední použitý objekt stopy. Nastavte hodnotu NULL, chcete-li použít výchozí polotónovou stopu.
 
 ### <a name="remarks"></a>Poznámky
 
-Volejte ho ve smyčce jako ukázku pozice myši, aby se dala vizuální zpětná vazba. Při volání `DrawDragRect`se vymaže předchozí obdélník a vykreslí se nový. Například když uživatel přetáhne obdélník na obrazovku, `DrawDragRect` smaže původní obdélník a znovu nakreslí nový v nové pozici. Ve výchozím nastavení `DrawDragRect` obdélník nakreslí pomocí polotónového štětce, aby se vyloučila blikání a vytvořil se vzhled hladkého přesunutí obdélníku.
+Nazvěme to ve smyčce, jak si vzorek polohy myši, aby se vizuální zpětnou vazbu. Při volání `DrawDragRect`se předchozí obdélník vymaže a nakreslí se nový obdélník. Například jako uživatel přetáhne obdélník přes `DrawDragRect` obrazovku, vymaže původní obdélník a překreslit nový v nové pozici. Ve výchozím `DrawDragRect` nastavení nakreslí obdélník pomocí polotónové stopy, abyste eliminovali blikání a vytvořili vzhled plynule se pohybujícího obdélníku.
 
-Při prvním volání `DrawDragRect`by měl mít parametr *lpRectLast* hodnotu null.
+Při prvním volání `DrawDragRect`by měl být parametr *lpRectLast* null.
 
-##  <a name="drawedge"></a>CDC::D rawEdge
+## <a name="cdcdrawedge"></a><a name="drawedge"></a>CDC: :DrawEdge
 
-Voláním této členské funkce Nakreslete okraje obdélníku zadaného typu a stylu.
+Volání této členské funkce k nakreslení okrajů obdélníku zadaného typu a stylu.
 
 ```
 BOOL DrawEdge(
@@ -1502,21 +1502,21 @@ BOOL DrawEdge(
 ### <a name="parameters"></a>Parametry
 
 *lpRect*<br/>
-Ukazatel na strukturu `RECT`, která obsahuje logické souřadnice obdélníku.
+Ukazatel na `RECT` strukturu, která obsahuje logické souřadnice obdélníku.
 
 *nEdge*<br/>
-Určuje typ vnitřního a vnějšího okraje, který se má vykreslit. Tento parametr musí být kombinací jednoho příznaku vnitřní ohraničení a jednoho příznaku vnějšího ohraničení. Tabulku typů parametrů naleznete v tématu [DrawEdge](/windows/win32/api/winuser/nf-winuser-drawedge) v Windows SDK.
+Určuje typ vnitřní a vnější hrany, kterou chcete nakreslit. Tento parametr musí být kombinací jednoho příznaku vnitřního ohraničení a jednoho příznaku vnějšího ohraničení. Tabulka typů parametrů najdete v tématu [DrawEdge](/windows/win32/api/winuser/nf-winuser-drawedge) v sadě Windows SDK.
 
-*nFlags*<br/>
-Příznaky určující typ ohraničení, který má být vykreslen. Tabulku hodnot parametrů naleznete v tématu `DrawEdge` v Windows SDK. Pro diagonální čáry BF_RECT příznaky určují koncový bod vektoru ohraničený parametrem Rectangle.
+*nPříznaky*<br/>
+Příznaky, které určují typ ohraničení, které mají být vykresleny. Tabulka `DrawEdge` hodnot parametru naleznete v sadě Windows SDK. U diagonálních čar BF_RECT příznaky určují koncový bod vektoru ohraničeného parametrem obdélníku.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud bylo úspěšné; v opačném případě 0.
+Nenulová, pokud je úspěšná; jinak 0.
 
-##  <a name="drawescape"></a>CDC::D rawEscape
+## <a name="cdcdrawescape"></a><a name="drawescape"></a>CDC: :DrawEscape
 
-Přistupuje k funkcím zobrazení videa, která nejsou přímo dostupná přes rozhraní GDI (Graphics Device Interface).
+Přistupuje k možnostem kreslení zobrazení videa, které nejsou přímo dostupné prostřednictvím rozhraní grafického zařízení (GDI).
 
 ```
 int DrawEscape(
@@ -1527,26 +1527,26 @@ int DrawEscape(
 
 ### <a name="parameters"></a>Parametry
 
-*nEscape*<br/>
-Určuje řídicí funkci, která má být provedena.
+*nUniknout*<br/>
+Určuje funkci escape, která má být provedena.
 
 *nInputSize*<br/>
-Určuje počet bajtů dat, na které odkazuje parametr *lpszInputData* .
+Určuje počet bajtů dat, na které je parametr *lpszInputData* odkazováno.
 
 *lpszInputData*<br/>
-Odkazuje na vstupní strukturu požadovanou pro zadaný řídicí znak.
+Odkazuje na vstupní strukturu potřebnou pro zadaný únik.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Určuje výsledek funkce. Větší než nula, pokud bylo úspěšné, s výjimkou řídicího panelu QUERYESCSUPPORT Draw, který kontroluje pouze implementaci; nebo nula, pokud řídicí znak není implementován; nebo je menší než nula, pokud došlo k chybě.
+Určuje výsledek funkce. Větší než nula, pokud je úspěšná, s výjimkou queryescSUPPORT losování, který kontroluje pouze pro implementaci; nebo nula, pokud není proveden únik; nebo menší než nula, pokud došlo k chybě.
 
 ### <a name="remarks"></a>Poznámky
 
-Když aplikace volá `DrawEscape`, data identifikovaná *nInputSize* a *lpszInputData* se předávají přímo do určeného ovladače zobrazení.
+Když aplikace `DrawEscape`volá , data identifikovaná *nInputSize* a *lpszInputData* jsou předána přímo zadanému ovladači zobrazení.
 
-##  <a name="drawfocusrect"></a>CDC::D rawFocusRect
+## <a name="cdcdrawfocusrect"></a><a name="drawfocusrect"></a>CDC::DrawFocusRect
 
-Nakreslí obdélník ve stylu používaném k označení, že obdélník má fokus.
+Nakreslí obdélník ve stylu, který slouží k označení, že obdélník má fokus.
 
 ```
 void DrawFocusRect(LPCRECT lpRect);
@@ -1555,18 +1555,18 @@ void DrawFocusRect(LPCRECT lpRect);
 ### <a name="parameters"></a>Parametry
 
 *lpRect*<br/>
-Odkazuje na strukturu [Rect](/windows/win32/api/windef/ns-windef-rect) nebo objekt [CRect](../../atl-mfc-shared/reference/crect-class.md) , který určuje logické souřadnice obdélníku, který se má vykreslit.
+Odkazuje na [rect](/windows/win32/api/windef/ns-windef-rect) struktury nebo [CRect](../../atl-mfc-shared/reference/crect-class.md) objekt, který určuje logické souřadnice obdélníku, který má být vypracován.
 
 ### <a name="remarks"></a>Poznámky
 
-Vzhledem k tomu, že se jedná o logickou funkci XOR, volání této funkce podruhé se stejným obdélníkem odstraní obdélník ze zobrazení. Obdélník vykreslený touto funkcí nelze posouvat. Chcete-li posunout oblast obsahující obdélník vykreslený touto funkcí, nejprve zavolejte `DrawFocusRect`, aby se odstranil obdélník ze zobrazení, pak se posuňte do oblasti a potom zavolejte `DrawFocusRect` znovu pro vykreslení obdélníku na nové pozici.
+Vzhledem k tomu, že se jedná o logickou funkci XOR, volání této funkce podruhé se stejným obdélníkem odebere obdélník z displeje. Obdélník nakreslený touto funkcí nelze posouvat. Chcete-li posouvat oblast obsahující obdélník nakreslený touto funkcí, nejprve voláním `DrawFocusRect` odeberte `DrawFocusRect` obdélník ze zobrazení, potom posuňte oblast a pak znovu zavolejte, abyste nakreslili obdélník v nové pozici.
 
 > [!CAUTION]
-> `DrawFocusRect` funguje pouze v režimu MM_TEXT. V jiných režimech Tato funkce nekreslí rámeček fokusu správně, ale nevrací hodnoty chyb.
+> `DrawFocusRect`funguje pouze v MM_TEXT režimu. V jiných režimech tato funkce nekreslí obdélník fokusu správně, ale nevrací chybové hodnoty.
 
-##  <a name="drawframecontrol"></a>CDC::D rawFrameControl
+## <a name="cdcdrawframecontrol"></a><a name="drawframecontrol"></a>CDC::DrawFrameControl
 
-Voláním této členské funkce nakreslete ovládací prvek Frame zadaného typu a stylu.
+Volání této členské funkce nakreslit ovládací prvek rámce zadaný typ a styl.
 
 ```
 BOOL DrawFrameControl(
@@ -1578,79 +1578,79 @@ BOOL DrawFrameControl(
 ### <a name="parameters"></a>Parametry
 
 *lpRect*<br/>
-Ukazatel na strukturu `RECT`, která obsahuje logické souřadnice obdélníku.
+Ukazatel na `RECT` strukturu, která obsahuje logické souřadnice obdélníku.
 
-*Noznámení*<br/>
-Určuje typ ovládacího prvku Frame, který se má vykreslit. Seznam možných hodnot tohoto parametru naleznete v parametru *uType* v [DrawFrameControl](/windows/win32/api/winuser/nf-winuser-drawframecontrol) v Windows SDK.
+*nTyp*<br/>
+Určuje typ ovládacího prvku rámce, který chcete kreslit. Seznam možných hodnot tohoto parametru naleznete v parametru *uType* v [ovládacím prvku DrawFrameControl](/windows/win32/api/winuser/nf-winuser-drawframecontrol) v sadě Windows SDK.
 
-*nInformace*<br/>
-Určuje počáteční stav ovládacího prvku rámce. Může se jednat o jednu nebo více hodnot, které jsou popsány pro parametr *uState* v `DrawFrameControl` Windows SDK. K úpravě ohraničujícího obdélníku použijte DFCS_ADJUSTRECT Value *nInformace* , aby se vyloučil okolní okraj tlačítka.
+*nStát*<br/>
+Určuje počáteční stav ovládacího prvku rámce. Může být jedna nebo více hodnot popsaných pro `DrawFrameControl` parametr *uState* v sadě Windows SDK. Pomocí hodnoty *nState* DFCS_ADJUSTRECT nastavte ohraničovací obdélník tak, aby byl okolní okraj tlačítka vyloučen.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud bylo úspěšné; v opačném případě 0.
+Nenulová, pokud je úspěšná; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-V několika případech *nInformace* závisí na parametru *noznámení* . V následujícím seznamu se zobrazuje vztah mezi čtyřmi hodnotami *noznámení* a *nInformace*:
+V několika případech *nState* závisí na *parametru nType.* V následujícím seznamu je uveden vztah mezi čtyřmi hodnotami *nType* a *nState*:
 
 - DFC_BUTTON
 
-    - DFCS_BUTTON3STATE tlačítko se třemi stavy
+  - tlačítko DFCS_BUTTON3STATE tří stavů
 
-    - DFCS_BUTTONCHECK zaškrtávací políčko
+  - zaškrtávací políčko DFCS_BUTTONCHECK
 
-    - DFCS_BUTTONPUSH – tlačítko pro vložení
+  - DFCS_BUTTONPUSH Tlačítko
 
-    - Přepínač DFCS_BUTTONRADIO
+  - tlačítko DFCS_BUTTONRADIO Rádio
 
-    - Obrázek DFCS_BUTTONRADIOIMAGE pro přepínač (obrázek nutný jako nečtvercové)
+  - DFCS_BUTTONRADIOIMAGE Obrázek pro přepínací tlačítko (nonsquare potřebuje obrázek)
 
-    - DFCS_BUTTONRADIOMASK maska pro přepínač (maska nečtverců vyžaduje)
+  - DFCS_BUTTONRADIOMASK maska pro přepínací tlačítko (nonsquare potřebuje masku)
 
 - DFC_CAPTION
 
-    - DFCS_CAPTIONCLOSE – tlačítko Zavřít
+  - DFCS_CAPTIONCLOSE tlačítko Zavřít
 
-    - Tlačítko Help DFCS_CAPTIONHELP
+  - tlačítko nápovědy DFCS_CAPTIONHELP
 
-    - Tlačítko Maximalizovat DFCS_CAPTIONMAX
+  - DFCS_CAPTIONMAX tlačítko Maximalizovat
 
-    - Tlačítko pro minimalizaci DFCS_CAPTIONMIN
+  - tlačítko minimalizovat DFCS_CAPTIONMIN
 
-    - Tlačítko pro obnovení DFCS_CAPTIONRESTORE
+  - tlačítko obnovení DFCS_CAPTIONRESTORE
 
 - DFC_MENU
 
-    - Šipka v podnabídce DFCS_MENUARROW
+  - DFCS_MENUARROW šipka podnabídky
 
-    - DFCS_MENUBULLET Bullet
+  - DFCS_MENUBULLET odrážka
 
-    - DFCS_MENUCHECK zaškrtnutí
+  - DFCS_MENUCHECK Zaškrtnutí
 
 - DFC_SCROLL
 
-    - DFCS_SCROLLCOMBOBOX posuvník pole se seznamem
+  - posuvník DFCS_SCROLLCOMBOBOX pole se seznamem
 
-    - DFCS_SCROLLDOWN šipka dolů na posuvníku
+  - DFCS_SCROLLDOWN Šipka dolů posuvníku
 
-    - DFCS_SCROLLLEFT šipka vlevo od posuvníku
+  - DFCS_SCROLLLEFT Šipka doleva posuvníku
 
-    - DFCS_SCROLLRIGHT šipka doprava se šipkou na posuvníku
+  - DFCS_SCROLLRIGHT šipka vpravo na posuvníku
 
-    - Úchyt pro velikost DFCS_SCROLLSIZEGRIP v pravém dolním rohu okna
+  - DFCS_SCROLLSIZEGRIP Velikost uzlu v pravém dolním rohu okna
 
-    - DFCS_SCROLLUP šipky nahoru posuvníku
+  - DFCS_SCROLLUP šipka nahoru posuvníku
 
 ### <a name="example"></a>Příklad
 
-Tento kód nakreslí úchyt velikosti v pravém dolním rohu okna. Je vhodný pro obslužnou rutinu `OnPaint` dialogového okna, která nemá žádné styly a obvykle neobsahuje jiné ovládací prvky (například stavový řádek), která může dát úchytu velikosti.
+Tento kód nakreslí velikost úchopu v pravém dolním rohu okna. Je vhodný pro `OnPaint` obslužnou rutinu dialogového okna, která nemá žádné styly a obvykle neobsahuje jiné ovládací prvky (například stavový řádek), které mu mohou poskytnout velikost úchyt.
 
 [!code-cpp[NVC_MFCDocView#34](../../mfc/codesnippet/cpp/cdc-class_6.cpp)]
 
-##  <a name="drawicon"></a>CDC::D rawIcon
+## <a name="cdcdrawicon"></a><a name="drawicon"></a>CDC: :DrawIcon
 
-Nakreslí ikonu na zařízení reprezentované aktuálním objektem `CDC`.
+Nakreslí ikonu na zařízení reprezentované aktuálníobjekt. `CDC`
 
 ```
 BOOL DrawIcon(
@@ -1665,38 +1665,38 @@ BOOL DrawIcon(
 
 ### <a name="parameters"></a>Parametry
 
-*znak*<br/>
+*X*<br/>
 Určuje logickou souřadnici x levého horního rohu ikony.
 
-*požadované*<br/>
+*Y*<br/>
 Určuje logickou souřadnici y levého horního rohu ikony.
 
-*hIcon*<br/>
-Určuje popisovač ikony, která se má vykreslit.
+*hIkona*<br/>
+Identifikuje popisovač ikony, která má být vykreslena.
 
-*Vyberte*<br/>
-Určuje logické souřadnice x a y v levém horním rohu ikony. Pro tento parametr můžete předat strukturu [bodu](/windows/win32/api/windef/ns-windef-point) nebo objekt [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) .
+*Bod*<br/>
+Určuje logické souřadnice x a y levého horního rohu ikony. Pro tento parametr můžete předat strukturu [POINT](/windows/win32/api/windef/ns-windef-point) nebo objekt [CPoint.](../../atl-mfc-shared/reference/cpoint-class.md)
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud se funkce úspěšně dokončila; v opačném případě 0.
+Nenulová, pokud byla funkce úspěšně dokončena; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce umístí levý horní roh ikony do umístění určeného *x* a *y*. Umístění podléhá aktuálnímu režimu mapování kontextu zařízení.
+Funkce umístí levý horní roh ikony do umístění určeného *písmenem x* a *y*. Umístění podléhá aktuálnímu režimu mapování kontextu zařízení.
 
-Prostředek ikony musí být dřív načtený pomocí funkcí `CWinApp::LoadIcon`, `CWinApp::LoadStandardIcon`nebo `CWinApp::LoadOEMIcon`. Před použitím této funkce je nutné vybrat režim mapování `MM_TEXT`.
+Prostředek ikony musí být dříve načten `CWinApp::LoadIcon`pomocí `CWinApp::LoadStandardIcon`funkcí `CWinApp::LoadOEMIcon`, . nebo . Před `MM_TEXT` použitím této funkce je nutné zvolit režim mapování.
 
 ### <a name="example"></a>Příklad
 
-  Podívejte se na příklad pro [CWnd:: Deicond](../../mfc/reference/cwnd-class.md#isiconic).
+  Viz příklad pro [CWnd::IsIconic](../../mfc/reference/cwnd-class.md#isiconic).
 
-##  <a name="drawstate"></a>CDC::D rawState
+## <a name="cdcdrawstate"></a><a name="drawstate"></a>CDC::DsurStát
 
-Volejte tuto členskou funkci pro zobrazení obrázku a použití vizuálního efektu k označení stavu, jako je například zakázaný nebo výchozí stav.
+Volání této členské funkce zobrazí obraz a použít vizuální efekt k označení stavu, například zakázáno nebo výchozí stav.
 
 > [!NOTE]
->  Pro všechny *načit* stavy kromě DSS_NORMAL se obrázek převede na monochromatický, než se použije vizuální efekt.
+> Pro všechny stavy *nFlag* s výjimkou DSS_NORMAL je obraz před použitím vizuálního efektu převeden na monochromatický.
 
 ```
 BOOL DrawState(
@@ -1764,52 +1764,52 @@ BOOL DrawState(
 
 ### <a name="parameters"></a>Parametry
 
-*bodů*<br/>
+*Pt*<br/>
 Určuje umístění obrázku.
 
-*hodnota*<br/>
+*Velikost*<br/>
 Určuje velikost obrázku.
 
 *hBitmap*<br/>
-Popisovač rastrového obrázku.
+Úchyt rastrového plánu.
 
-*nFlags*<br/>
-Příznaky, které určují typ a stav obrázku. Dostupné typy a stavy *nFlags* najdete v tématu [DrawState](/windows/win32/api/winuser/nf-winuser-drawstatew) v Windows SDK.
+*nPříznaky*<br/>
+Příznaky, které určují typ a stav obrazu. Viz [DrawState](/windows/win32/api/winuser/nf-winuser-drawstatew) v sadě Windows SDK pro možné typy a *stavy nFlags.*
 
-*hBrush*<br/>
-Popisovač štětce.
+*hŠtětec*<br/>
+Úchyt ke štětce.
 
 *pBitmap*<br/>
-Ukazatel na objekt CBitmap –.
+Ukazatel na objekt CBitmap.
 
-*pBrush*<br/>
-Ukazatel na objekt CBrush –.
+*pŠtětec*<br/>
+Ukazatel na cbrush objektu.
 
-*hIcon*<br/>
-Popisovač ikony.
+*hIkona*<br/>
+Úchyt k ikoně.
 
 *lpszText*<br/>
 Ukazatel na text.
 
 *bPrefixText*<br/>
-Text, který může obsahovat klávesové zkratky. Parametr *lData* Určuje adresu řetězce a parametr *nTextLen* určuje délku. Pokud je *nTextLen* 0, předpokládá se, že řetězec je zakončený hodnotou null.
+Text, který může obsahovat mnemotechnické pomůcky akcelerátoru. Parametr *lData* určuje adresu řetězce a parametr *nTextLen* určuje délku. Pokud *nTextLen* je 0, řetězec se předpokládá, že null ukončena.
 
 *nTextLen*<br/>
-Délka textového řetězce, na který odkazuje *lpszText* Pokud je *nTextLen* 0, předpokládá se, že řetězec je zakončený hodnotou null.
+Délka textového řetězce, na který je odkazován *lpszText*. Pokud *nTextLen* je 0, řetězec se předpokládá, že null ukončena.
 
 *lpDrawProc*<br/>
-Ukazatel na funkci zpětného volání použitý k vykreslení obrázku. Tento parametr je požadován, pokud je typ obrázku v *nFlags* DST_COMPLEX. Je volitelná a může mít hodnotu NULL, pokud je typ obrázku DST_TEXT. U všech ostatních typů obrázků se tento parametr ignoruje. Další informace o funkci zpětného volání naleznete ve funkci [DrawStateProc](/windows/win32/api/winuser/nc-winuser-drawstateproc) v Windows SDK.
+Ukazatel na funkci zpětného volání použitou k vykreslení obrazu. Tento parametr je vyžadován, pokud je typ obrázku v *nFlags* DST_COMPLEX. Je volitelný a může být null, pokud je typ obrázku DST_TEXT. U všech ostatních typů obrázků je tento parametr ignorován. Další informace o funkci zpětného volání naleznete v tématu [DrawStateProc](/windows/win32/api/winuser/nc-winuser-drawstateproc) funkce v sadě Windows SDK.
 
 *lData*<br/>
-Určuje informace o imagi. Význam tohoto parametru závisí na typu obrázku.
+Určuje informace o obrázku. Význam tohoto parametru závisí na typu obrázku.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud bylo úspěšné; v opačném případě 0.
+Nenulová, pokud je úspěšná; jinak 0.
 
-##  <a name="drawtext"></a>CDC::D rawText
+## <a name="cdcdrawtext"></a><a name="drawtext"></a>CDC::DrawText
 
-Zavolejte tuto členskou funkci pro formátování textu v daném obdélníku. Chcete-li zadat další možnosti formátování, použijte příkaz [CDC::D rawtextex](#drawtextex).
+Volání této členské funkce pro formátování textu v daném obdélníku. Chcete-li zadat další možnosti formátování, použijte [CDC::DrawTextEx](#drawtextex).
 
 ```
 virtual int DrawText(
@@ -1827,42 +1827,42 @@ int DrawText(
 ### <a name="parameters"></a>Parametry
 
 *lpszString*<br/>
-Odkazuje na řetězec, který má být vykreslen. Pokud je *nCount* -1, řetězec musí být zakončený hodnotou null.
+Odkazuje na řetězec, který má být vykreslen. Pokud *nCount* je -1, řetězec musí být null ukončen.
 
 *nCount*<br/>
-Určuje počet znaků v řetězci. Pokud je *nCount* -1, předpokládá se, že *lpszString* je dlouhý ukazatel na řetězec zakončený hodnotou null a `DrawText` vypočítá počet znaků automaticky.
+Určuje počet znaků v řetězci. Pokud *nCount* je -1, pak *lpszString* se předpokládá, že je `DrawText` dlouhý ukazatel na řetězec ukončený null a vypočítá počet znaků automaticky.
 
 *lpRect*<br/>
-Odkazuje na strukturu [Rect](/windows/win32/api/windef/ns-windef-rect) nebo objekt [CRect](../../atl-mfc-shared/reference/crect-class.md) , který obsahuje obdélník (v logických souřadnicích), ve kterém má být text formátován.
+Odkazuje na [rect](/windows/win32/api/windef/ns-windef-rect) struktury nebo [CRect](../../atl-mfc-shared/reference/crect-class.md) objekt, který obsahuje obdélník (v logické souřadnice), ve kterém má být formátován text.
 
-*str*<br/>
-Objekt [CString](../../atl-mfc-shared/reference/cstringt-class.md) obsahující zadané znaky, které mají být vykresleny.
+*Str*<br/>
+[CString](../../atl-mfc-shared/reference/cstringt-class.md) objekt, který obsahuje zadané znaky, které mají být vypracovány.
 
-*nFormat*<br/>
-Určuje metodu formátování textu. Může to být libovolná kombinace hodnot popsaných pro parametr *uFormat* v [DrawText](/windows/win32/api/winuser/nf-winuser-drawtext) v Windows SDK. (kombinovat pomocí bitového operátoru OR):
+*nFormát*<br/>
+Určuje způsob formátování textu. Může se jedná o libovolnou kombinaci hodnot popsaných pro parametr *uFormat* v [drawtextu](/windows/win32/api/winuser/nf-winuser-drawtext) v sadě Windows SDK. (kombinovat pomocí bitového operátoru OR):
 
 > [!NOTE]
->  Některé kombinace příznaků *uFormat* můžou způsobit změnu předávaného řetězce. Použití DT_MODIFYSTRING s buď DT_END_ELLIPSIS nebo DT_PATH_ELLIPSIS může způsobit změnu řetězce, což způsobilo kontrolní výraz v přepsání `CString`. Hodnoty DT_CALCRECT, DT_EXTERNALLEADING, DT_INTERNAL, DT_NOCLIP a DT_NOPREFIX nelze použít s hodnotou DT_TABSTOP.
+> Některé kombinace *příznaku uFormat* mohou způsobit změnu předávaný řetězec. Použití DT_MODIFYSTRING s DT_END_ELLIPSIS nebo DT_PATH_ELLIPSIS může způsobit změnu řetězce, `CString` což způsobí kontrolní výraz v přepsání. Hodnoty DT_CALCRECT, DT_EXTERNALLEADING, DT_INTERNAL, DT_NOCLIP a DT_NOPREFIX nelze použít s DT_TABSTOP hodnotou.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Výška textu, je-li funkce úspěšná
+Výška textu, pokud je funkce úspěšná.
 
 ### <a name="remarks"></a>Poznámky
 
-Formátuje text rozbalením karet na vhodné mezery, zarovnání textu doleva, doprava nebo středu daného obdélníku a rozdělení textu na čáry, které se vejdou do daného obdélníku. Typ formátování je určený parametrem *nFormat*.
+Formátuje text rozbalením tabulátorů na příslušné mezery, zarovnáním textu doleva, doprava nebo do středu daného obdélníku a rozdělením textu na řádky, které se vejdou do daného obdélníku. Typ formátování je určen *nFormat*.
 
-Tato členská funkce používá pro vykreslení textu vybrané písmo, barvu textu a barvu pozadí kontextu zařízení. Pokud se nepoužije formát DT_NOCLIP, `DrawText` klip ořízne tak, aby se text neobjevil mimo daný obdélník. U všech formátování se předpokládá, že má více řádků, pokud není zadán formát DT_SINGLELINE.
+Tato členská funkce používá k nakreslení textu vybrané písmo, barvu textu a barvu pozadí kontextu zařízení. Pokud není použit formát `DrawText` DT_NOCLIP, ořízne text tak, aby se text nezobrazoval mimo daný obdélník. Předpokládá se, že veškeré formátování má více řádků, pokud není uveden DT_SINGLELINE formát.
 
-Pokud je vybrané písmo pro zadaný obdélník příliš velké, nepokusí se členská funkce `DrawText` nahradit menší písmo.
+Pokud je vybrané písmo pro zadaný `DrawText` obdélník příliš velké, členská funkce se nepokusí nahradit menší písmo.
 
-Je-li zadán příznak DT_CALCRECT, bude obdélník určený parametrem *lpRect* aktualizován tak, aby odrážel šířku a výšku potřebnou k nakreslení textu.
+Pokud je zadán příznak DT_CALCRECT, obdélník určený *lpRect* bude aktualizován tak, aby odrážel šířku a výšku potřebnou k nakreslení textu.
 
-Pokud byl nastaven příznak zarovnání textu TA_UPDATECP (viz [CDC:: členskou](#settextalign)), `DrawText` zobrazí text začínající na aktuální pozici místo vlevo od daného obdélníku. `DrawText` nebude při nastavení příznaku TA_UPDATECP zalomit text (to znamená, že příznak DT_WORDBREAK nebude mít žádný účinek).
+Pokud byl nastaven příznak zarovnání textu TA_UPDATECP (viz `DrawText` [CDC::SetTextAlign),](#settextalign)zobrazí se text začínající na aktuální pozici, nikoli na levé straně daného obdélníku. `DrawText`nebude zalamovat text, pokud byl nastaven příznak TA_UPDATECP (to znamená, že příznak DT_WORDBREAK nebude mít žádný vliv).
 
-Barvu textu lze nastavit pomocí funkce [CDC:: SetTextColor](#settextcolor).
+Barvu textu může nastavit [CDC::SetTextColor](#settextcolor).
 
-##  <a name="drawtextex"></a>CDC::D rawTextEx
+## <a name="cdcdrawtextex"></a><a name="drawtextex"></a>CDC::DrawTextEx
 
 Formátuje text v daném obdélníku.
 
@@ -1884,33 +1884,33 @@ int DrawTextEx(
 ### <a name="parameters"></a>Parametry
 
 *lpszString*<br/>
-Odkazuje na řetězec, který má být vykreslen. Pokud je *nCount* -1, řetězec musí být ukončen znakem null.
+Odkazuje na řetězec, který má být vykreslen. Pokud *nCount* je -1, řetězec musí být null ukončen.
 
 *nCount*<br/>
-Určuje počet znaků v řetězci. Pokud je *nCount* -1, předpokládá se, že *lpszString* je dlouhý ukazatel na řetězec zakončený hodnotou null a `DrawText` vypočítá počet znaků automaticky.
+Určuje počet znaků v řetězci. Pokud *nCount* je -1, pak *lpszString* se předpokládá, že je `DrawText` dlouhý ukazatel na řetězec ukončený null a vypočítá počet znaků automaticky.
 
 *lpRect*<br/>
-Odkazuje na strukturu [Rect](/windows/win32/api/windef/ns-windef-rect) nebo objekt [CRect](../../atl-mfc-shared/reference/crect-class.md) , který obsahuje obdélník (v logických souřadnicích), ve kterém má být text formátován.
+Odkazuje na [rect](/windows/win32/api/windef/ns-windef-rect) struktury nebo [CRect](../../atl-mfc-shared/reference/crect-class.md) objekt, který obsahuje obdélník (v logické souřadnice), ve kterém má být formátován text.
 
-*str*<br/>
-Objekt [CString](../../atl-mfc-shared/reference/cstringt-class.md) obsahující zadané znaky, které mají být vykresleny.
+*Str*<br/>
+[CString](../../atl-mfc-shared/reference/cstringt-class.md) objekt, který obsahuje zadané znaky, které mají být vypracovány.
 
-*nFormat*<br/>
-Určuje metodu formátování textu. Může to být libovolná kombinace hodnot popsaných pro parametr *uFormat* v [DrawText](/windows/win32/api/winuser/nf-winuser-drawtext) v Windows SDK. (Kombinovat pomocí bitového operátoru **or** ):
+*nFormát*<br/>
+Určuje způsob formátování textu. Může se jedná o libovolnou kombinaci hodnot popsaných pro parametr *uFormat* v [drawtextu](/windows/win32/api/winuser/nf-winuser-drawtext) v sadě Windows SDK. (Kombinujte pomocí bitového operátoru **OR):**
 
 > [!NOTE]
->  Některé kombinace příznaků *uFormat* můžou způsobit změnu předávaného řetězce. Použití DT_MODIFYSTRING s buď DT_END_ELLIPSIS nebo DT_PATH_ELLIPSIS může způsobit změnu řetězce, což způsobilo kontrolní výraz v přepsání `CString`. Hodnoty DT_CALCRECT, DT_EXTERNALLEADING, DT_INTERNAL, DT_NOCLIP a DT_NOPREFIX nelze použít s hodnotou DT_TABSTOP.
+> Některé kombinace *příznaku uFormat* mohou způsobit změnu předávaný řetězec. Použití DT_MODIFYSTRING s DT_END_ELLIPSIS nebo DT_PATH_ELLIPSIS může způsobit změnu řetězce, `CString` což způsobí kontrolní výraz v přepsání. Hodnoty DT_CALCRECT, DT_EXTERNALLEADING, DT_INTERNAL, DT_NOCLIP a DT_NOPREFIX nelze použít s DT_TABSTOP hodnotou.
 
 *lpDTParams*<br/>
-Ukazatel na strukturu [DRAWTEXTPARAMS](/windows/win32/api/winuser/ns-winuser-drawtextparams) , která určuje další možnosti formátování. Tento parametr může mít hodnotu NULL.
+Ukazatel na strukturu [DRAWTEXTPARAMS,](/windows/win32/api/winuser/ns-winuser-drawtextparams) která určuje další možnosti formátování. Tento parametr může být NULL.
 
 ### <a name="remarks"></a>Poznámky
 
-Formátuje text rozbalením karet na vhodné mezery, zarovnání textu doleva, doprava nebo středu daného obdélníku a rozdělení textu na čáry, které se vejdou do daného obdélníku. Typ formátování je určen *nFormat* a *lpDTParams*. Další informace naleznete v tématu [CDC::D rawtext](#drawtext) a [DrawTextEx](/windows/win32/api/winuser/nf-winuser-drawtextexw) v Windows SDK.
+Formátuje text rozbalením tabulátorů na příslušné mezery, zarovnáním textu doleva, doprava nebo do středu daného obdélníku a rozdělením textu na řádky, které se vejdou do daného obdélníku. Typ formátování je určen *nFormat* a *lpDTParams*. Další informace naleznete [v tématu CDC::DrawText](#drawtext) a [DrawTextEx](/windows/win32/api/winuser/nf-winuser-drawtextexw) v sadě Windows SDK.
 
-Barvu textu lze nastavit pomocí funkce [CDC:: SetTextColor](#settextcolor).
+Barvu textu může nastavit [CDC::SetTextColor](#settextcolor).
 
-##  <a name="ellipse"></a>CDC:: elipsa
+## <a name="cdcellipse"></a><a name="ellipse"></a>CDC::Elipsa
 
 Nakreslí elipsu.
 
@@ -1929,17 +1929,17 @@ BOOL Ellipse(LPCRECT lpRect);
 *x1*<br/>
 Určuje logickou souřadnici x levého horního rohu ohraničujícího obdélníku elipsy.
 
-*Y1*<br/>
+*y1*<br/>
 Určuje logickou souřadnici y levého horního rohu ohraničujícího obdélníku elipsy.
 
-*X2*<br/>
+*x2*<br/>
 Určuje logickou souřadnici x pravého dolního rohu ohraničujícího obdélníku elipsy.
 
-*Y2*<br/>
+*y2*<br/>
 Určuje logickou souřadnici y pravého dolního rohu ohraničujícího obdélníku elipsy.
 
 *lpRect*<br/>
-Určuje ohraničující obdélník kolem elipsy. Pro tento parametr můžete také předat objekt [CRect](../../atl-mfc-shared/reference/crect-class.md) .
+Určuje ohraničující obdélník elipsy. Můžete také předat [CRect](../../atl-mfc-shared/reference/crect-class.md) objekt pro tento parametr.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1947,15 +1947,15 @@ Nenulové, pokud je funkce úspěšná; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Uprostřed elipsy je střed ohraničujícího obdélníku určeného *x1*, *Y1*, *X2*a *Y2*nebo *lpRect*. Elipsa se vykreslí pomocí aktuálního pera a jeho vnitřek se vyplní aktuálním štětcem.
+Střed elipsy je střed ohraničovacího obdélníku určený *x1*, *y1*, *x2*a *y2*nebo *lpRect*. Elipsa je nakreslena aktuálním perem a jeho vnitřek je vyplněn aktuálním štětcem.
 
-Obrázek vykreslený touto funkcí rozšiřuje až, ale nezahrnuje souřadnice pravého a dolního okraje. To znamená, že výška obrázku je *y2* - *Y1* a šířka obrázku je *X2* - *x1*.
+Obrázek nakreslený touto funkcí sahá až k pravé a dolní souřadnici, ale nezahrnuje ji. To znamená, že výška obrázku je *y2* - *y1* a šířka obrázku je *x2* - *x1*.
 
-Pokud je šířka nebo výška ohraničujícího obdélníku 0, není vykreslena žádná elipsa.
+Pokud je šířka nebo výška ohraničujícího obdélníku 0, není nakreslena žádná elipsa.
 
-##  <a name="enddoc"></a>CDC:: EndDoc
+## <a name="cdcenddoc"></a><a name="enddoc"></a>CDC::EndDoc
 
-Ukončí tiskovou úlohu spuštěnou voláním členské funkce [StartDoc](#startdoc) .
+Ukončí tiskovou úlohu spuštěnou voláním členské funkce [StartDoc.](#startdoc)
 
 ```
 int EndDoc();
@@ -1963,21 +1963,21 @@ int EndDoc();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Větší nebo rovno 0, pokud je funkce úspěšná, nebo záporná hodnota, pokud došlo k chybě.
+Větší než nebo rovno 0, pokud je funkce úspěšná, nebo zápornou hodnotu, pokud došlo k chybě.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce nahradí řídicí ENDDOC tiskárny a měla by být volána hned po dokončení úspěšné tiskové úlohy.
+Tato členská funkce nahradí escape tiskárny ENDDOC a měla by být volána ihned po dokončení úspěšné tiskové úlohy.
 
-Pokud aplikace narazí na chybu při tisku nebo na zrušenou tiskovou operaci, nesmí se pokusit o ukončení operace pomocí `EndDoc` nebo [AbortDoc](#abortdoc). GDI automaticky ukončí operaci před vrácením hodnoty chyby.
+Pokud aplikace narazí na chybu tisku nebo zrušenou tiskovou operaci, nesmí se `EndDoc` pokusit ukončit operaci pomocí příkazu [AbortDoc](#abortdoc). GDI automaticky ukončí operaci před vrácením chybové hodnoty.
 
-Tato funkce by se neměla používat uvnitř metasouborů.
+Tato funkce by neměla být použita uvnitř metasouborů.
 
 ### <a name="example"></a>Příklad
 
-  Podívejte se na příklad pro [CDC:: StartDoc](#startdoc).
+  Viz příklad pro [CDC::StartDoc](#startdoc).
 
-##  <a name="endpage"></a>CDC:: EndPage
+## <a name="cdcendpage"></a><a name="endpage"></a>CDC::Koncová stránka
 
 Informuje zařízení, že aplikace dokončila zápis na stránku.
 
@@ -1987,21 +1987,21 @@ int EndPage();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Větší nebo rovno 0, pokud je funkce úspěšná, nebo záporná hodnota, pokud došlo k chybě.
+Větší než nebo rovno 0, pokud je funkce úspěšná, nebo zápornou hodnotu, pokud došlo k chybě.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce se obvykle používá k přímému nasměrování ovladače zařízení na novou stránku.
+Tato členská funkce se obvykle používá k nasměrování ovladače zařízení na novou stránku.
 
-Tato členská funkce nahradí řídicí NEWFRAME tiskárny. Na rozdíl od NEWFRAME je tato funkce vždy volána po vytištění stránky.
+Tato členská funkce nahrazuje únik tiskárny NEWFRAME. Na rozdíl od NEWFRAME je tato funkce vždy volána po vytištění stránky.
 
 ### <a name="example"></a>Příklad
 
-  Podívejte se na příklad pro [CDC:: StartDoc](#startdoc).
+  Viz příklad pro [CDC::StartDoc](#startdoc).
 
-##  <a name="endpath"></a>CDC:: EndPath
+## <a name="cdcendpath"></a><a name="endpath"></a>CDC::Koncovka
 
-Uzavře vymezovač (Path) a vybere cestu definovanou v závorkách do kontextu zařízení.
+Zavře závorku cesty a vybere cestu definovanou závorkou do kontextu zařízení.
 
 ```
 BOOL EndPath();
@@ -2013,11 +2013,11 @@ Nenulové, pokud je funkce úspěšná; jinak 0.
 
 ### <a name="example"></a>Příklad
 
-  Podívejte se na příklad pro [CDC:: BeginPath](#beginpath).
+  Viz příklad pro [CDC::BeginPath](#beginpath).
 
-##  <a name="enumobjects"></a>CDC:: EnumObjects
+## <a name="cdcenumobjects"></a><a name="enumobjects"></a>CDC::EnumObjects
 
-Vytvoří výčet per a štětců dostupných v kontextu zařízení.
+Vyjmenovává pera a stopy dostupné v kontextu zařízení.
 
 ```
 int EnumObjects(
@@ -2030,11 +2030,11 @@ int EnumObjects(
 
 ### <a name="parameters"></a>Parametry
 
-*nObjectType*<br/>
+*nType Objektu*<br/>
 Určuje typ objektu. Může mít hodnoty OBJ_BRUSH nebo OBJ_PEN.
 
 *lpfn*<br/>
-Je adresa instance procedury funkce zpětného volání dodané aplikací. Viz část "poznámky" níže.
+Je adresa instance procedury funkce zpětného volání dodané aplikací. Viz část "Poznámky" níže.
 
 *lpData*<br/>
 Odkazuje na data dodaná aplikací. Data jsou předána funkci zpětného volání spolu s informacemi o objektu.
@@ -2045,27 +2045,27 @@ Určuje poslední hodnotu vrácenou [funkcí zpětného volání](callback-funct
 
 ### <a name="remarks"></a>Poznámky
 
-Pro každý objekt daného typu je funkce zpětného volání, kterou předáte, volána s informacemi pro daný objekt. Systém zavolá funkci zpětného volání, dokud neexistují žádné další objekty, nebo funkce zpětného volání vrátí hodnotu 0.
+Pro každý objekt daného typu je volána funkce zpětného volání, kterou předáte, s informacemi pro daný objekt. Systém volá funkci zpětného volání, dokud nejsou žádné další objekty nebo funkce zpětného volání vrátí 0.
 
-Všimněte si, že nové funkce Microsoft C++ Visual vám umožňují používat běžnou funkci jako funkci předanou `EnumObjects`. Adresa předaná do `EnumObjects` je ukazatel na funkci exportovanou s funkcí **Export** a s konvencí volání Pascal. V aplikacích v chráněném režimu není nutné vytvořit tuto funkci s funkcí Windows MakeProcInstance nebo uvolnit funkci po použití s funkcí FreeProcInstance Windows.
+Všimněte si, že nové funkce aplikace Microsoft Visual C++ `EnumObjects`umožňují používat běžnou funkci jako funkci předanou aplikaci . Adresa předaná `EnumObjects` je ukazatel na funkci exportované s **EXPORT** a s konvence volání Pascal. V aplikacích v režimu ochrany není třeba vytvářet tuto funkci pomocí funkce Windows MakeProcInstance nebo po použití s funkcí FreeProcInstance Windows tuto funkci uvolnit.
 
-Nemusíte také exportovat název funkce v příkazu **EXPORTS** v souboru definice modulu aplikace. Místo toho můžete použít modifikátor funkce **exportu** , jako v
+Také není třeba exportovat název funkce v **příkazu EXPORTS** v souboru definice modulu aplikace. Místo toho můžete použít modifikátor funkce **EXPORT,** jako v
 
-**Export zpětného volání int** AFunction **(typem LPStr**, **typem LPStr);**
+**int CALLBACK EXPORT** afunction **(LPSTR**, **LPSTR);**
 
-aby kompilátor vygeneroval vhodný záznam exportu pro export podle názvu bez aliasing. To funguje pro většinu potřeb. U některých zvláštních případů, jako je například exportování funkce podle pořadového čísla nebo vytváření aliasů exportu, je stále nutné použít příkaz **EXPORTS** v souboru definice modulu.
+způsobí, že kompilátor vyzařuje správný exportní záznam pro export podle názvu bez aliasingu. To funguje pro většinu potřeb. Pro některé zvláštní případy, jako je například export funkce řadovým nebo aliasingexportu, stále je třeba použít **příkaz EXPORTS** v souboru definice modulu.
 
-Pro kompilaci programů Microsoft Foundation budou normálně použity možnosti kompilátoru/GA a/GEs. Možnost kompilátoru/GW se nepoužívá společně s třídami Microsoft Foundation. (Pokud používáte funkci Windows `MakeProcInstance`, budete muset explicitně přetypovat ukazatel na vrácenou funkci z FARPROC na typ potřebný v tomto rozhraní API.) Rozhraní pro registraci zpětného volání jsou nyní typově bezpečná (musíte předat ukazatel na funkci, který odkazuje na správný druh funkce pro konkrétní zpětné volání).
+Pro kompilaci programů Microsoft Foundation, budete obvykle používat /GA a /GEs kompilátor možnosti. Možnost kompilátoru /Gw se nepoužívá s třídami Microsoft Foundation. (Pokud používáte funkci `MakeProcInstance`systému Windows , budete muset explicitně přetypovat ukazatel vrácené funkce z FARPROC na typ potřebný v tomto rozhraní API.) Rozhraní pro registraci zpětného volání jsou nyní typově bezpečná (musíte předat ukazatel funkce, který odkazuje na správný druh funkce pro konkrétní zpětné volání).
 
-Všimněte si také, že všechny funkce zpětného volání musí před návratem do systému Windows zachytit výjimky Microsoft Foundation, protože výjimky nelze vyvolat přes hranice zpětného volání. Další informace o výjimkách najdete v článku [výjimky](../../mfc/exception-handling-in-mfc.md).
+Všimněte si také, že všechny funkce zpětného volání musí soutisk Microsoft Foundation výjimky před návratem do systému Windows, protože výjimky nelze vyvolat přes hranice zpětného volání. Další informace o výjimkách naleznete v článku [Výjimky](../../mfc/exception-handling-in-mfc.md).
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCDocView#35](../../mfc/codesnippet/cpp/cdc-class_7.cpp)]
 
-##  <a name="escape"></a>CDC:: Escape
+## <a name="cdcescape"></a><a name="escape"></a>CDC::Útěk
 
-Tato členská funkce je prakticky zastaralá pro programování v systému Win32.
+Tato členská funkce je prakticky zastaralá pro programování Win32.
 
 ```
 virtual int Escape(
@@ -2084,69 +2084,69 @@ int Escape(
 
 ### <a name="parameters"></a>Parametry
 
-*nEscape*<br/>
-Určuje řídicí funkci, která má být provedena.
+*nUniknout*<br/>
+Určuje funkci escape, která má být provedena.
 
-Úplný seznam řídicích funkcí naleznete v části [Escape](/windows/win32/api/wingdi/nf-wingdi-escape) v Windows SDK.
+Úplný seznam funkcí escape naleznete v tématu [Escape](/windows/win32/api/wingdi/nf-wingdi-escape) v sadě Windows SDK.
 
 *nCount*<br/>
-Určuje počet bajtů dat, na které odkazuje *lpszInData*.
+Určuje počet bajtů dat, na které je odkazován odkazem *lpszInData*.
 
 *lpszInData*<br/>
-Odkazuje na vstupní datovou strukturu požadovanou pro tento řídicí znak.
+Odkazuje na strukturu vstupních dat potřebnou pro tento únik.
 
 *lpOutData*<br/>
-Odkazuje na strukturu, která bude přijímat výstup z tohoto řídicího bodu. Pokud nejsou vracena žádná data, parametr *lpOutData* má hodnotu null.
+Odkazuje na strukturu, která má přijímat výstup z tohoto escape. Parametr *lpOutData* je null, pokud nejsou vrácena žádná data.
 
 *nInputSize*<br/>
-Určuje počet bajtů dat, na které odkazuje parametr *lpszInputData* .
+Určuje počet bajtů dat, na které je parametr *lpszInputData* odkazováno.
 
 *lpszInputData*<br/>
-Odkazuje na vstupní strukturu požadovanou pro zadaný řídicí znak.
+Odkazuje na vstupní strukturu potřebnou pro zadaný únik.
 
 *nOutputSize*<br/>
-Určuje počet bajtů dat, na které odkazuje parametr *lpszOutputData* .
+Určuje počet bajtů dat, na které je parametr *lpszOutputData* odkazováno.
 
 *lpszOutputData*<br/>
-Odkazuje na strukturu, která přijímá výstup z tohoto řídicího panelu. Tento parametr by měl mít hodnotu NULL, pokud se nevrátí žádná data.
+Odkazuje na strukturu, která přijímá výstup z tohoto escape. Tento parametr by měl být null, pokud jsou vrácena žádná data.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud je funkce úspěšná, vrátí se kladná hodnota, s výjimkou řídicího panelu QUERYESCSUPPORT, který kontroluje pouze implementaci. Pokud řídicí znak není implementován, vrátí se nula. Pokud došlo k chybě, vrátí se záporná hodnota. Následují běžné chybové hodnoty:
+Kladná hodnota je vrácena, pokud je funkce úspěšná, s výjimkou escape QUERYESCSUPPORT, který pouze kontroluje implementaci. Nula je vrácena, pokud není implementována escape. Záporná hodnota je vrácena, pokud došlo k chybě. Následují běžné chybové hodnoty:
 
 - SP_ERROR Obecná chyba.
 
-- SP_OUTOFDISK není v současné době k dispozici dostatek místa na disku pro zařazování a nebude k dispozici žádné místo.
+- SP_OUTOFDISK Pro zařazování není aktuálně k dispozici dostatek místa na disku a nebude k dispozici žádné další místo.
 
-- SP_OUTOFMEMORY není k dispozici dostatek paměti pro zařazování.
+- SP_OUTOFMEMORY Pro zařazování není k dispozici dostatek paměti.
 
-- Uživatel SP_USERABORT úlohu ukončil prostřednictvím Správce tisku.
+- SP_USERABORT Uživatel ukončil úlohu prostřednictvím Správce tisku.
 
 ### <a name="remarks"></a>Poznámky
 
-Z původních řídicích sekvencí tiskárny se pro aplikace Win32 podporuje jenom QUERYESCSUPPORT. Všechny ostatní řídicí sekvence tiskárny jsou zastaralé a podporují se jenom pro kompatibilitu s 16bitovými aplikacemi.
+Z původní tiskárny unikne, pouze QUERYESCSUPPORT je podporována pro aplikace Win32. Všechny ostatní úniky z tiskárny jsou zastaralé a jsou podporovány pouze pro kompatibilitu s 16bitovými aplikacemi.
 
-V případě programování v systému Win32 teď `CDC` poskytuje šest členských funkcí, které nahrazují jejich odpovídající řídicí sekvence tiskárny:
+Pro programování Win32 `CDC` nyní poskytuje šest členských funkcí, které nahrazují jejich odpovídající tiskárny unikne:
 
-- [CDC:: AbortDoc](#abortdoc)
+- [CDC::AbortDoc](#abortdoc)
 
-- [CDC:: EndDoc](#enddoc)
+- [CDC::EndDoc](#enddoc)
 
-- [CDC:: EndPage](#endpage)
+- [CDC::Koncová stránka](#endpage)
 
-- [CDC:: SetAbortProc](#setabortproc)
+- [CDC::SetAbortProc](#setabortproc)
 
-- [CDC:: StartDoc](#startdoc)
+- [CDC::StartDoc](#startdoc)
 
-- [CDC:: StartPage](#startpage)
+- [CDC::Úvodní stránka](#startpage)
 
-Kromě toho funkce [CDC:: GetDeviceCaps](#getdevicecaps) podporuje indexy Win32, které nahrazují jiné řídicí znaky tiskárny. Další informace najdete v tématu [GetDeviceCaps](/windows/win32/api/wingdi/nf-wingdi-getdevicecaps) v Windows SDK.
+Kromě toho [CDC::GetDeviceCaps](#getdevicecaps) podporuje indexy Win32, které nahrazují jiné tiskové úniky. Další informace naleznete v tématu [GetDeviceCaps](/windows/win32/api/wingdi/nf-wingdi-getdevicecaps) v sadě Windows SDK.
 
-Tato členská funkce umožňuje aplikacím přístup k zařízením určitého zařízení, která nejsou přímo dostupná přes GDI.
+Tato členská funkce umožňuje aplikacím přístup k zařízením konkrétního zařízení, které nejsou přímo dostupné prostřednictvím rozhraní GDI.
 
-Pokud vaše aplikace používá předdefinované řídicí hodnoty, použijte první verzi. Druhou verzi použijte v případě, že vaše aplikace definuje privátní řídicí hodnoty. Další informace o druhé verzi najdete v tématu [ExtEscape](/windows/win32/api/wingdi/nf-wingdi-extescape) v Windows SDK.
+První verzi použijte, pokud aplikace používá předdefinované řídicí hodnoty. Druhá verze použijte, pokud aplikace definuje soukromé hodnoty escape. Další informace o druhé verzi naleznete v části [ExtEscape](/windows/win32/api/wingdi/nf-wingdi-extescape) v ksouboru Windows SDK.
 
-##  <a name="excludecliprect"></a>CDC:: ExcludeClipRect
+## <a name="cdcexcludecliprect"></a><a name="excludecliprect"></a>CDC::ExcludeClipRect
 
 Vytvoří novou oblast oříznutí, která se skládá z existující oblasti oříznutí mínus zadaný obdélník.
 
@@ -2165,37 +2165,37 @@ int ExcludeClipRect(LPCRECT lpRect);
 *x1*<br/>
 Určuje logickou souřadnici x levého horního rohu obdélníku.
 
-*Y1*<br/>
+*y1*<br/>
 Určuje logickou souřadnici y levého horního rohu obdélníku.
 
-*X2*<br/>
+*x2*<br/>
 Určuje logickou souřadnici x pravého dolního rohu obdélníku.
 
-*Y2*<br/>
-Určuje logickou souřadnici y v pravém dolním rohu obdélníku.
+*y2*<br/>
+Určuje logickou souřadnici y pravého dolního rohu obdélníku.
 
 *lpRect*<br/>
-Určuje obdélník. Může to být také objekt `CRect`.
+Určuje obdélník. Může být `CRect` také objekt.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Určuje nový typ oblasti oříznutí. Může to být kterákoli z následujících hodnot:
+Určuje typ nové oblasti oříznutí. Může to být některá z následujících hodnot:
 
-- COMPLEXREGION oblast obsahuje překrývající se ohraničení.
+- COMPLEXREGION Oblast má překrývající se ohraničení.
 
-- Chyba: nebyla vytvořena žádná oblast.
+- CHYBA Nebyla vytvořena žádná oblast.
 
-- NULLREGION oblast je prázdná.
+- NULLREGION Oblast je prázdná.
 
-- SIMPLEREGION v oblasti nejsou žádná překrývající se ohraničení.
+- SIMPLEREGION Oblast nemá žádné překrývající se hranice.
 
 ### <a name="remarks"></a>Poznámky
 
-Šířka obdélníku určeného absolutní hodnotou *x2* - *x1*nesmí překročit 32 767 jednotek. Toto omezení platí i pro výšku obdélníku.
+Šířka obdélníku určená absolutní hodnotou *x2* - *x1*nesmí překročit 32 767 jednotek. Toto omezení platí také pro výšku obdélníku.
 
-##  <a name="excludeupdatergn"></a>CDC:: ExcludeUpdateRgn
+## <a name="cdcexcludeupdatergn"></a><a name="excludeupdatergn"></a>CDC::ExcludeUpdateRgn
 
-Znemožní vykreslování v neplatných oblastech okna vyloučením aktualizované oblasti v okně z oblasti oříznutí přidružené k objektu `CDC`.
+Zabrání kreslení v neplatných oblastech okna vyloučením aktualizované oblasti v okně `CDC` z oblasti oříznutí přidružené k objektu.
 
 ```
 int ExcludeUpdateRgn(CWnd* pWnd);
@@ -2204,23 +2204,23 @@ int ExcludeUpdateRgn(CWnd* pWnd);
 ### <a name="parameters"></a>Parametry
 
 *pWnd*<br/>
-Odkazuje na objekt Window, jehož okno se aktualizuje.
+Odkazuje na objekt okna, jehož okno se aktualizuje.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Typ vyloučené oblasti. Může to být jedna z následujících hodnot:
+Typ vyloučené oblasti. Může to být některá z následujících hodnot:
 
-- COMPLEXREGION oblast obsahuje překrývající se ohraničení.
+- COMPLEXREGION Oblast má překrývající se ohraničení.
 
-- Chyba: nebyla vytvořena žádná oblast.
+- CHYBA Nebyla vytvořena žádná oblast.
 
-- NULLREGION oblast je prázdná.
+- NULLREGION Oblast je prázdná.
 
-- SIMPLEREGION v oblasti nejsou žádná překrývající se ohraničení.
+- SIMPLEREGION Oblast nemá žádné překrývající se hranice.
 
-##  <a name="extfloodfill"></a>CDC:: ExtFloodFill
+## <a name="cdcextfloodfill"></a><a name="extfloodfill"></a>CDC::ExtFloodFill
 
-Vyplní oblast zobrazované plochy aktuálním štětcem.
+Vyplní oblast povrchu zobrazení aktuální stopou.
 
 ```
 BOOL ExtFloodFill(
@@ -2232,39 +2232,39 @@ BOOL ExtFloodFill(
 
 ### <a name="parameters"></a>Parametry
 
-*znak*<br/>
+*X*<br/>
 Určuje logickou souřadnici x bodu, kde začíná vyplňování.
 
-*požadované*<br/>
+*Y*<br/>
 Určuje logickou souřadnici y bodu, kde začíná vyplňování.
 
 *crColor*<br/>
-Určuje barvu hranice nebo oblasti, která má být vyplněna. Výklad *crColor* závisí na hodnotě *nFillType*.
+Určuje barvu hranice nebo oblasti, která má být vyplněna. Interpretace *crColor* závisí na hodnotě *nFillType*.
 
 *nFillType*<br/>
-Určuje typ výplně zaplavení, který má být proveden. Musí to být jedna z následujících hodnot:
+Určuje typ zaplavovací výplně, která má být provedena. Musí se jednat o jednu z následujících hodnot:
 
-- FLOODFILLBORDER oblast výplně je ohraničena barvou určenou parametrem *crColor*. Tento styl je stejný jako vyplňování provedené `FloodFill`.
+- FLOODFILLBORDER Oblast výplně je ohraničena barvou určenou *crColor*. Tento styl je shodný `FloodFill`s výplní prováděnou společností .
 
-- FLOODFILLSURFACE oblast výplně je definována barvou určenou parametrem *crColor*. Naplnění pokračuje směrem ven ve všech směrech, pokud je barva zjištěna. Tento styl je vhodný pro vyplňování oblastí s více barevnými hranicemi.
+- FLOODFILLSURFACE Oblast výplně je definována barvou určenou *crColor*. Vyplňování pokračuje směrem ven ve všech směrech, dokud se vyskytne barva. Tento styl je užitečný pro vyplnění oblastí vícebarevnými hranicemi.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je funkce úspěšná; v opačném případě 0, pokud je vyplňování dokončeno, pokud má daný bod barvu hranice určenou parametrem *crColor* (pokud byl požadován FLOODFILLBORDER), pokud daný bod nemá barvu určenou v *crColor* (Pokud se požaduje FLOODFILLSURFACE), nebo pokud je bod mimo oblast oříznutí.
+Nenulová, pokud je funkce úspěšná; jinak 0, pokud výplň nelze dokončit, pokud daný bod má hraniční barvu určenou *crColor* (pokud byl požadován FLOODFILLBORDER), pokud daný bod nemá barvu určenou *crColor* (pokud floodfillsurface byl požadován), nebo pokud je bod mimo oblast oříznutí.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce nabízí větší flexibilitu než `FloodFill`, protože v *nFillType*můžete zadat typ výplně.
+Tato členská funkce nabízí `FloodFill` větší flexibilitu než proto, že můžete zadat typ výplně v *nFillType*.
 
-Pokud je *nFillType* nastaveno na FLOODFILLBORDER, předpokládá se, že oblast bude zcela ohraničena barvou určenou parametrem *crColor*. Funkce začíná v bodě určeném *x* a *y* a vyplní všechny směry na hranici barvy.
+Pokud je *parametr nFillType* nastaven na FLOODFILLBORDER, předpokládá se, že oblast je zcela ohraničena barvou určenou *crColor*. Funkce začíná v bodě určeném *x* a *y* a vyplňuje se všemi směry k hranici barvy.
 
-Pokud je *nFillType* nastaveno na FLOODFILLSURFACE, funkce začíná v bodě určeném *x* a *y* a pokračuje ve všech směrech a vyplní všechny sousední oblasti obsahující barvu určenou funkcí *crColor*.
+Pokud je *parametr nFillType* nastaven na FLOODFILLSURFACE, funkce začíná v bodě určeném *x* a *y* a pokračuje ve všech směrech a vyplňuje všechny přilehlé oblasti obsahující barvu určenou *crColor*.
 
-`ExtFloodFill`pouze kontexty paměťových zařízení a zařízení, které podporují technologii rastrového zobrazení. Další informace naleznete v tématu členská funkce [GetDeviceCaps](#getdevicecaps) .
+Podporují `ExtFloodFill`pouze kontexty paměťového zařízení a zařízení, která podporují technologii rastrového zobrazení . Další informace naleznete v členské funkci [GetDeviceCaps.](#getdevicecaps)
 
-##  <a name="exttextout"></a>CDC:: ExtTextOut
+## <a name="cdcexttextout"></a><a name="exttextout"></a>CDC::ExtTextOut
 
-Tuto členskou funkci volejte pro zápis znaku řetězce v obdélníkové oblasti pomocí aktuálně vybraného písma.
+Volání této členské funkce k zápisu znakového řetězce v obdélníkové oblasti pomocí aktuálně vybraného písma.
 
 ```
 virtual BOOL ExtTextOut(
@@ -2287,33 +2287,33 @@ BOOL ExtTextOut(
 
 ### <a name="parameters"></a>Parametry
 
-*znak*<br/>
-Určuje logickou souřadnici x znaku buňky pro první znak v zadaném řetězci.
+*X*<br/>
+Určuje logickou souřadnici x buňky znaku pro první znak v zadaném řetězci.
 
-*požadované*<br/>
-Určuje logickou souřadnici y horní části buňky znaků pro první znak v zadaném řetězci.
+*Y*<br/>
+Určuje logickou souřadnici y horní části buňky znaku pro první znak v zadaném řetězci.
 
-*nOptions*<br/>
-Určuje typ obdélníku. Tento parametr může být jedna nebo žádná z následujících hodnot:
+*nMožnosti*<br/>
+Určuje typ obdélníku. Tento parametr může být jedna, obě nebo ani jedna z následujících hodnot:
 
-- ETO_CLIPPED určuje, zda je text pro obdélník oříznutý.
+- ETO_CLIPPED Určuje, že text je oříznut do obdélníku.
 
-- ETO_OPAQUE určuje, zda má aktuální barva pozadí vyplňovat obdélník. (Můžete nastavit a zadat dotaz na aktuální barvu pozadí pomocí členských funkcí [SetBkColor](#setbkcolor) a [GetBkColor](#getbkcolor) .)
+- ETO_OPAQUE Určuje, že aktuální barva pozadí vyplní obdélník. (Můžete nastavit a dotaz aktuální barvu pozadí s [SetBkColor](#setbkcolor) a [GetBkColor](#getbkcolor) členské funkce.)
 
 *lpRect*<br/>
-Odkazuje na strukturu [Rect](/windows/win32/api/windef/ns-windef-rect) , která určuje rozměry obdélníku. Tento parametr může mít hodnotu NULL. Pro tento parametr můžete také předat objekt [CRect](../../atl-mfc-shared/reference/crect-class.md) .
+Odkazuje na [rect](/windows/win32/api/windef/ns-windef-rect) strukturu, která určuje rozměry obdélníku. Tento parametr může být NULL. Můžete také předat [CRect](../../atl-mfc-shared/reference/crect-class.md) objekt pro tento parametr.
 
 *lpszString*<br/>
-Odkazuje na zadaný řetězec znaků, který se má vykreslit. Pro tento parametr můžete také předat objekt [CString](../../atl-mfc-shared/reference/cstringt-class.md) .
+Odkazuje na zadaný řetězec znaků, který má být nakreslen. Můžete také předat [CString](../../atl-mfc-shared/reference/cstringt-class.md) objekt pro tento parametr.
 
 *nCount*<br/>
 Určuje počet znaků v řetězci.
 
 *lpDxWidths*<br/>
-Odkazuje na pole hodnot, které určují vzdálenost mezi zdroji sousedících znakových buněk. Například *lpDxWidths*[ *i*] logické jednotky oddělují původ buňky znaků *i* a buňky znaků *i* + 1. Pokud má *lpDxWidths* hodnotu NULL, `ExtTextOut` použije výchozí mezery mezi znaky.
+Odkazuje na pole hodnot, které označují vzdálenost mezi počátky sousedních znakových buněk. Například logické jednotky *lpDxWidths*[ *i*] oddělí počátky buňky i znaku *i* a buňky znaků *i* + 1. Pokud *je hodnota lpDxWidths* null, `ExtTextOut` použije se výchozí mezery mezi znaky.
 
-*str*<br/>
-Objekt `CString`, který obsahuje zadané znaky, které mají být vykresleny.
+*Str*<br/>
+Objekt, `CString` který obsahuje zadané znaky, které mají být nakresleny.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -2321,13 +2321,13 @@ Nenulové, pokud je funkce úspěšná; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Obdélníková oblast může být neprůhledná (vyplněna aktuální barvou pozadí) a může se jednat o oblast oříznutí.
+Obdélníková oblast může být neprůhledná (vyplněná aktuální barvou pozadí) a může se jedná o oblast oříznutí.
 
-Pokud je *nOptions* 0 a *lpRect* má hodnotu null, funkce zapisuje text do kontextu zařízení bez použití obdélníkové oblasti. Ve výchozím stavu aktuální pozice není funkcí používána ani aktualizována. Pokud aplikace potřebuje aktualizovat aktuální pozici při volání `ExtTextOut`, aplikace může zavolat členskou funkci `CDC` [členskou](#settextalign) s *nFlags* nastavenou na TA_UPDATECP. Pokud je tento příznak nastaven, systém Windows ignoruje *x* a *y* při následném volání `ExtTextOut` a místo toho použije aktuální pozici. Když aplikace používá TA_UPDATECP k aktualizaci aktuální pozice, `ExtTextOut` nastaví aktuální pozici buď na konec předchozího řádku textu, nebo na pozici určenou posledním prvkem pole, na který odkazuje *lpDxWidths*, podle toho, co je větší.
+Pokud *nOptions* je 0 a *lpRect* je NULL, funkce zapíše text do kontextu zařízení bez použití obdélníkové oblasti. Ve výchozím stavu aktuální pozice není funkcí používána ani aktualizována. Pokud aplikace potřebuje aktualizovat aktuální pozici `ExtTextOut`při volání , `CDC` aplikace může volat členskou funkci [SetTextAlign](#settextalign) s *nFlags* nastavenou na TA_UPDATECP. Je-li tento příznak nastaven, systém Windows ignoruje `ExtTextOut` *x* a *y* při následných voláních a místo toho použije aktuální pozici. Pokud aplikace používá TA_UPDATECP k aktualizaci aktuální pozice, `ExtTextOut` nastaví aktuální pozici buď na konec předchozího řádku textu, nebo na pozici určenou posledním prvkem pole, na který je odkazováno *lpDxWidths*, podle toho, která hodnota je větší.
 
-##  <a name="fillpath"></a>CDC:: FillPath
+## <a name="cdcfillpath"></a><a name="fillpath"></a>CDC::FillPath
 
-Zavře všechny otevřené obrázky v aktuální cestě a naplní vnitřní cestu pomocí aktuálního režimu štětce a mnohoúhelníku.
+Zavře všechny otevřené obrázky v aktuální cestě a vyplní vnitřek cesty pomocí aktuálního štětce a režimu plnění polygonů.
 
 ```
 BOOL FillPath();
@@ -2339,11 +2339,11 @@ Nenulové, pokud je funkce úspěšná; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Po vyplnění jeho vnitřku se cesta zahodí z kontextu zařízení.
+Po vyplnění jeho vnitřku je cesta zahozena z kontextu zařízení.
 
-##  <a name="fillrect"></a>CDC:: FillRect
+## <a name="cdcfillrect"></a><a name="fillrect"></a>CDC::FillRect
 
-Zavolejte tuto členskou funkci pro vyplnění daného obdélníku pomocí zadaného štětce.
+Volání této členské funkce vyplnit daný obdélník pomocí zadané stopy.
 
 ```
 void FillRect(
@@ -2354,24 +2354,24 @@ void FillRect(
 ### <a name="parameters"></a>Parametry
 
 *lpRect*<br/>
-Odkazuje na strukturu [Rect](/windows/win32/api/windef/ns-windef-rect) obsahující logické souřadnice obdélníku, který má být vyplněn. Pro tento parametr můžete také předat objekt [CRect](../../atl-mfc-shared/reference/crect-class.md) .
+Odkazuje na [rect](/windows/win32/api/windef/ns-windef-rect) strukturu, která obsahuje logické souřadnice obdélníku, který má být vyplněn. Můžete také předat [CRect](../../atl-mfc-shared/reference/crect-class.md) objekt pro tento parametr.
 
-*pBrush*<br/>
-Určuje štětec, který se použije k vyplnění obdélníku.
+*pŠtětec*<br/>
+Identifikuje stopu použitou k vyplnění obdélníku.
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce vyplní celý obdélník, včetně levého a horního ohraničení, ale neplní pravé a dolní ohraničení.
+Funkce vyplní celý obdélník, včetně levého a horního okraje, ale nevyplňuje pravé a dolní ohraničení.
 
-Štětec se musí vytvořit buď pomocí [CBrush –](../../mfc/reference/cbrush-class.md) členských funkcí [CreateHatchBrush](../../mfc/reference/cbrush-class.md#createhatchbrush), [CreatePatternBrush](../../mfc/reference/cbrush-class.md#createpatternbrush)a [CreateSolidBrush](../../mfc/reference/cbrush-class.md#createsolidbrush), nebo načteného funkcí `GetStockObject` Windows.
+Stopa musí být vytvořena buď pomocí [cbrush](../../mfc/reference/cbrush-class.md) členské funkce [CreateHatchBrush](../../mfc/reference/cbrush-class.md#createhatchbrush), [CreatePatternBrush](../../mfc/reference/cbrush-class.md#createpatternbrush)a `GetStockObject` [CreateSolidBrush](../../mfc/reference/cbrush-class.md#createsolidbrush)nebo načteny funkcí systému Windows.
 
-Při vyplňování zadaného obdélníku `FillRect` nezahrnuje pravé a dolní okraje obdélníku. GDI vyplní obdélník až do, ale nezahrnuje do pravého sloupce a dolního řádku bez ohledu na aktuální režim mapování. `FillRect` porovnává hodnoty `top`, `bottom`, `left`a `right` členů zadaného obdélníku. Pokud je `bottom` menší nebo rovno `top`nebo pokud `right` je menší nebo rovno `left`, obdélník se nevykreslí.
+Při vyplňování zadaného obdélníku `FillRect` nezahrnuje pravou a dolní stranu obdélníku. GDI vyplní obdélník až do pravého sloupce a dolního řádku bez ohledu na aktuální režim mapování, ale nezahrnuje jej. `FillRect`porovná hodnoty `top`, `bottom`, `left`a `right` členy zadaného obdélníku. Pokud `bottom` je menší než `top`nebo `right` rovno , nebo `left`pokud je menší než nebo rovno , obdélník není nakreslena.
 
-`FillRect` je podobná jako [CDC:: FillSolidRect](#fillsolidrect); `FillRect` ale přebírá štětec, takže se dá použít k vyplnění obdélníku plnou barvou, barevně Vyšrafované štětce nebo vzorem. `FillSolidRect` používá pouze plné barvy (označené parametrem COLORREF). `FillRect` obvykle je pomalejší než `FillSolidRect`.
+`FillRect`je podobný [CDC::FillSolidRect](#fillsolidrect); však `FillRect` trvá stopu, a proto lze použít k vyplnění obdélníku s plnou barvou, roztřesenou barvou, šrafovanými stopami nebo vzorkem. `FillSolidRect`používá pouze plné barvy (označené parametrem COLORREF). `FillRect`obvykle je pomalejší `FillSolidRect`než .
 
-##  <a name="fillrgn"></a>CDC:: FillRgn
+## <a name="cdcfillrgn"></a><a name="fillrgn"></a>CDC::FillRgn
 
-Vyplní oblast určenou v *pRgn* štětcem určeným parametrem *pBrush*.
+Vyplní oblast určenou *pRgn* stopou určenou *parametrem pBrush*.
 
 ```
 BOOL FillRgn(
@@ -2382,10 +2382,10 @@ BOOL FillRgn(
 ### <a name="parameters"></a>Parametry
 
 *pRgn*<br/>
-Ukazatel na oblast, která má být vyplněna. Souřadnice pro danou oblast jsou zadány v logických jednotkách.
+Ukazatel na oblast, která má být vyplněna. Souřadnice pro danou oblast jsou určeny v logických jednotkách.
 
-*pBrush*<br/>
-Určuje štětec, který má být použit k vyplnění oblasti.
+*pŠtětec*<br/>
+Identifikuje stopu, která má být použita k vyplnění oblasti.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -2393,15 +2393,15 @@ Nenulové, pokud je funkce úspěšná; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Štětec musí být buď vytvořen pomocí `CBrush` členských funkcí `CreateHatchBrush`, `CreatePatternBrush`, `CreateSolidBrush`nebo musí být načten `GetStockObject`.
+Stopa musí být vytvořena `CBrush` pomocí `CreateHatchBrush` `CreatePatternBrush`členských `CreateSolidBrush`funkcí , , `GetStockObject`nebo musí být načtena .
 
 ### <a name="example"></a>Příklad
 
-  Podívejte se na příklad pro [CRgn:: CreateRoundRectRgn](../../mfc/reference/crgn-class.md#createroundrectrgn).
+  Viz příklad pro [CRgn::CreateRoundRectRgn](../../mfc/reference/crgn-class.md#createroundrectrgn).
 
-##  <a name="fillsolidrect"></a>CDC:: FillSolidRect
+## <a name="cdcfillsolidrect"></a><a name="fillsolidrect"></a>CDC::FillSolidRect
 
-Zavolejte tuto členskou funkci pro vyplnění daného obdélníku zadanou plnou barvou.
+Volání této členské funkce vyplnit daný obdélník se zadanou plnou barvou.
 
 ```
 void FillSolidRect(
@@ -2419,32 +2419,32 @@ void FillSolidRect(
 ### <a name="parameters"></a>Parametry
 
 *lpRect*<br/>
-Určuje ohraničující obdélník (v logických jednotkách). Pro tento parametr můžete předat buď ukazatel na strukturu dat [Rect](/windows/win32/api/windef/ns-windef-rect) , nebo objekt `CRect`.
+Určuje ohraničovací obdélník (v logických jednotkách). Můžete předat buď ukazatel na strukturu dat `CRect` [RECT](/windows/win32/api/windef/ns-windef-rect) nebo objekt pro tento parametr.
 
-*modul CLR* Určuje barvu, která má být použita k vyplnění obdélníku.
+*clr* Určuje barvu, která má být použita k vyplnění obdélníku.
 
-*znak*<br/>
+*X*<br/>
 Určuje logickou souřadnici x levého horního rohu obdélníku.
 
-*požadované*<br/>
-Určuje logickou souřadnici y v levém horním rohu cílového obdélníku.
+*Y*<br/>
+Určuje logickou souřadnici y levého horního rohu cílového obdélníku.
 
-*CX*<br/>
+*Cx*<br/>
 Určuje šířku obdélníku.
 
-*kr*<br/>
+*Cy*<br/>
 Určuje výšku obdélníku.
 
 ### <a name="remarks"></a>Poznámky
 
-`FillSolidRect` je velmi podobné jako [CDC:: FillRect](#fillrect); `FillSolidRect` ale používá jenom plné barvy (označené parametrem COLORREF), zatímco `FillRect` přebírá štětec, takže se dá použít k vyplnění obdélníku plnou barvou, barvou, šrafované štětce nebo vzorem. `FillSolidRect` obvykle je rychlejší než `FillRect`.
+`FillSolidRect`je velmi podobný [CDC::FillRect](#fillrect); používá `FillSolidRect` však pouze plné barvy (označené parametrem `FillRect` COLORREF), zatímco zabírá stopu, a proto ji lze použít k vyplnění obdélníku plnou barvou, barvou roztřepí, šrafovanými štětci nebo vzorkem. `FillSolidRect`obvykle je `FillRect`rychlejší než .
 
 > [!NOTE]
->  Při volání `FillSolidRect`je barva pozadí, která byla dříve nastavena pomocí [SetBkColor](#setbkcolor), nastavena na barvu určenou *modulem CLR*.
+> Při volání `FillSolidRect`je barva pozadí, která byla dříve nastavena pomocí [SetBkColor](#setbkcolor), nastavena na barvu označenou *clr*.
 
-##  <a name="flattenpath"></a>CDC:: FlattenPath
+## <a name="cdcflattenpath"></a><a name="flattenpath"></a>CDC::Sploštění
 
-Transformuje všechny křivky v cestě vybrané do aktuálního kontextu zařízení a zapíná každou křivku na sekvenci řádků.
+Transformuje všechny křivky v cestě vybrané do aktuálního kontextu zařízení a změní každou křivku na posloupnost čar.
 
 ```
 BOOL FlattenPath();
@@ -2454,9 +2454,9 @@ BOOL FlattenPath();
 
 Nenulové, pokud je funkce úspěšná; jinak 0.
 
-##  <a name="floodfill"></a>CDC:: FloodFill
+## <a name="cdcfloodfill"></a><a name="floodfill"></a>CDC::Záplavová výplň
 
-Vyplní oblast zobrazované plochy aktuálním štětcem.
+Vyplní oblast povrchu zobrazení aktuální stopou.
 
 ```
 BOOL FloodFill(
@@ -2467,10 +2467,10 @@ BOOL FloodFill(
 
 ### <a name="parameters"></a>Parametry
 
-*znak*<br/>
+*X*<br/>
 Určuje logickou souřadnici x bodu, kde začíná vyplňování.
 
-*požadované*<br/>
+*Y*<br/>
 Určuje logickou souřadnici y bodu, kde začíná vyplňování.
 
 *crColor*<br/>
@@ -2478,19 +2478,19 @@ Určuje barvu hranice.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je funkce úspěšná; v opačném případě se vrátí 0, pokud nelze dokončit vyplňování, má daný bod barvu hranice určenou funkcí *crColor*nebo je bod mimo oblast oříznutí.
+Nenulová, pokud je funkce úspěšná; jinak 0 je vrácena, pokud výplň nelze dokončit, daný bod má barvu hranice určenou *crColor*, nebo bod je mimo oblast oříznutí.
 
 ### <a name="remarks"></a>Poznámky
 
-Předpokládá se, že oblast bude ohraničena jako zadaná v *crColor*. Funkce `FloodFill` začíná v bodě určeném *x* a *y* a pokračuje ve všech směrech na hranici barvy.
+Předpokládá se, že oblast je ohraničena, jak je určeno *crColor*. Funkce `FloodFill` začíná v bodě určeném *x* a *y* a pokračuje ve všech směrech k hranici barvy.
 
-Pouze kontexty paměťových zařízení a zařízení, které podporují technologii rastrového zobrazení, podporují `FloodFill` členskou funkci. Informace o schopnostech RC_BITBLT naleznete v tématu `GetDeviceCaps` členská funkce.
+Pouze kontexty paměťového zařízení a zařízení, která `FloodFill` podporují technologii rastrového zobrazení, podporují členní funkci. Informace o schopnosti RC_BITBLT `GetDeviceCaps` naleznete v členské funkci.
 
-Funkce `ExtFloodFill` nabízí podobnou funkci, ale větší flexibilitu.
+Funkce `ExtFloodFill` poskytuje podobné schopnosti, ale větší flexibilitu.
 
-##  <a name="framerect"></a>CDC:: FrameRect
+## <a name="cdcframerect"></a><a name="framerect"></a>CDC::FrameRect
 
-Vykreslí ohraničení kolem obdélníku určeného parametrem *lpRect*.
+Nakreslí ohraničení kolem obdélníku *určeného lpRect*.
 
 ```
 void FrameRect(
@@ -2501,22 +2501,22 @@ void FrameRect(
 ### <a name="parameters"></a>Parametry
 
 *lpRect*<br/>
-Odkazuje na strukturu [Rect](/windows/win32/api/windef/ns-windef-rect) nebo objekt [CRect](../../atl-mfc-shared/reference/crect-class.md) , který obsahuje logické souřadnice levého horního a pravého dolního rohu obdélníku. Pro tento parametr můžete také předat objekt `CRect`.
+Odkazuje na [rect](/windows/win32/api/windef/ns-windef-rect) struktury nebo [CRect](../../atl-mfc-shared/reference/crect-class.md) objekt, který obsahuje logické souřadnice levého horního a pravého dolního rohu obdélníku. Můžete také předat `CRect` objekt pro tento parametr.
 
-*pBrush*<br/>
-Určuje štětec, který se má použít k orámování obdélníku.
+*pŠtětec*<br/>
+Identifikuje stopu, která má být použita pro rámování obdélníku.
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce vykreslí ohraničení pomocí dané štětce. Šířka a výška ohraničení je vždy 1 logická jednotka.
+Funkce používá daný štětec k nakreslení ohraničení. Šířka a výška ohraničení je vždy 1 logická jednotka.
 
-Pokud je souřadnice `bottom` obdélníku menší než nebo rovna `top`nebo pokud je `right` menší nebo rovna `left`, obdélník se nevykreslí.
+Pokud `bottom` je souřadnice obdélníku `top`menší nebo `right` rovna , `left`nebo pokud je menší než nebo rovno , obdélník není nakreslena.
 
-Ohraničení vytažené `FrameRect` je ve stejné pozici jako ohraničení vykreslené `Rectangle` členskou funkcí pomocí stejných souřadnic (Pokud `Rectangle` používá pero, které je 1 logická jednotka v šířce). Vnitřní část obdélníku není vyplněna `FrameRect`.
+Ohraničení nakreslené je `FrameRect` ve stejné poloze `Rectangle` jako ohraničení nakreslené `Rectangle` členská funkce pomocí stejné souřadnice (pokud používá pero, které je 1 logické jednotky široký). Vnitřek obdélníku není vyplněn `FrameRect`.
 
-##  <a name="framergn"></a>CDC:: FrameRgn
+## <a name="cdcframergn"></a><a name="framergn"></a>CDC::FrameRgn
 
-Vykreslí ohraničení kolem oblasti určené *pRgn* pomocí štětce určeného parametrem *pBrush*.
+Nakreslí ohraničení kolem oblasti určené *pRgn* pomocí stopy určené *pBrush*.
 
 ```
 BOOL FrameRgn(
@@ -2529,16 +2529,16 @@ BOOL FrameRgn(
 ### <a name="parameters"></a>Parametry
 
 *pRgn*<br/>
-Odkazuje na objekt `CRgn`, který určuje oblast, která má být ohraničena ohraničením. Souřadnice pro danou oblast jsou zadány v logických jednotkách.
+Odkazuje na `CRgn` objekt, který identifikuje oblast, která má být uzavřena v ohraničení. Souřadnice pro danou oblast jsou určeny v logických jednotkách.
 
-*pBrush*<br/>
-Odkazuje na objekt `CBrush`, který určuje štětec, který má být použit k vykreslení ohraničení.
+*pŠtětec*<br/>
+Odkazuje na `CBrush` objekt, který identifikuje stopu, která má být použita k nakreslení ohraničení.
 
-*nWidth*<br/>
-Určuje šířku ohraničení svislých tahů štětce v jednotkách zařízení.
+*nŠířka*<br/>
+Určuje šířku ohraničení ve svislých tahech štětce v jednotkách zařízení.
 
-*nHeight*<br/>
-Určuje výšku ohraničení v horizontálních tazích štětce v jednotkách zařízení.
+*nVýška*<br/>
+Určuje výšku ohraničení v vodorovných tahech štětcem v jednotkách zařízení.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -2546,11 +2546,11 @@ Nenulové, pokud je funkce úspěšná; jinak 0.
 
 ### <a name="example"></a>Příklad
 
-  Podívejte se na příklad pro [CRgn:: CombineRgn](../../mfc/reference/crgn-class.md#combinergn).
+  Viz příklad pro [CRgn::CombineRgn](../../mfc/reference/crgn-class.md#combinergn).
 
-##  <a name="fromhandle"></a>CDC:: FromHandle
+## <a name="cdcfromhandle"></a><a name="fromhandle"></a>CDC::FromHandle
 
-Vrací ukazatel na objekt `CDC`, pokud je předána obslužná rutina kontextu zařízení.
+Vrátí ukazatel na `CDC` objekt, když daný popisovač kontextu zařízení.
 
 ```
 static CDC* PASCAL FromHandle(HDC hDC);
@@ -2558,22 +2558,22 @@ static CDC* PASCAL FromHandle(HDC hDC);
 
 ### <a name="parameters"></a>Parametry
 
-*hDC*<br/>
-Obsahuje popisovač pro kontext zařízení s Windows.
+*Hdc*<br/>
+Obsahuje popisovač kontextu zařízení se systémem Windows.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel může být dočasný a neměl by být uložený nad rámec okamžitého použití.
+Ukazatel může být dočasné a by neměly být uloženy mimo okamžité použití.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud objekt `CDC` není připojen k popisovači, je vytvořen a připojen dočasný objekt `CDC`.
+Pokud `CDC` objekt není připojen k popisovač, `CDC` dočasný objekt je vytvořen a připojen.
 
 ### <a name="example"></a>Příklad
 
-  Podívejte se na příklad pro [CPrintDialog:: GetPrinterDC](../../mfc/reference/cprintdialog-class.md#getprinterdc).
+  Viz příklad [cprintdialog::GetPrinterDC](../../mfc/reference/cprintdialog-class.md#getprinterdc).
 
-##  <a name="getarcdirection"></a>CDC:: GetArcDirection
+## <a name="cdcgetarcdirection"></a><a name="getarcdirection"></a>CDC::GetArcDirection
 
 Vrátí aktuální směr oblouku pro kontext zařízení.
 
@@ -2583,19 +2583,19 @@ int GetArcDirection() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Určuje aktuální směr oblouku, pokud je úspěšný. Níže jsou uvedené platné návratové hodnoty:
+Určuje aktuální směr oblouku, pokud je úspěšný. Následují platné vrácené hodnoty:
 
-- AD_COUNTERCLOCKWISE oblouky a obdélníky vykreslené zprava doleva.
+- AD_COUNTERCLOCKWISE Oblouky a obdélníky nakreslené proti směru hodinových ručiček.
 
-- AD_CLOCKWISE oblouky a obdélníky vykreslené po směru hodinových ručiček.
+- AD_CLOCKWISE Oblouky a obdélníky nakreslené ve směru hodinových ručiček.
 
 Pokud dojde k chybě, vrácená hodnota je nula.
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce oblouku a Rectangle používají směr oblouku.
+Funkce oblouku a obdélníku používají směr oblouku.
 
-##  <a name="getaspectratiofilter"></a>CDC:: GetAspectRatioFilter
+## <a name="cdcgetaspectratiofilter"></a><a name="getaspectratiofilter"></a>CDC::GetAspectRatioFilter
 
 Načte nastavení pro aktuální filtr poměru stran.
 
@@ -2605,13 +2605,13 @@ CSize GetAspectRatioFilter() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Objekt `CSize` reprezentující poměr stran, který používá aktuální filtr poměru stran.
+Objekt `CSize` představující poměr stran používaný aktuálním filtrem poměru stran.
 
 ### <a name="remarks"></a>Poznámky
 
-Poměr stran je poměr, který je tvořen šířkou a výškou v zařízení. Informace o poměru stran zařízení se používají při vytváření, výběru a zobrazování písem. Systém Windows poskytuje speciální filtr, filtr poměru stran pro výběr písem navržených pro určitý poměr stran ze všech dostupných písem. Filtr používá poměr stran určený `SetMapperFlags` členskou funkcí.
+Poměr stran je poměr tvořený šířkou a výškou pixelů zařízení. Informace o poměru stran zařízení se používají při vytváření, výběru a zobrazení písem. Systém Windows poskytuje speciální filtr, filtr poměru stran, pro výběr písem navržených pro určitý poměr stran ze všech dostupných písem. Filtr používá poměr stran určený `SetMapperFlags` členovou funkcí.
 
-##  <a name="getbkcolor"></a>CDC:: GetBkColor
+## <a name="cdcgetbkcolor"></a><a name="getbkcolor"></a>CDC::GetBkColor
 
 Vrátí aktuální barvu pozadí.
 
@@ -2625,9 +2625,9 @@ Hodnota barvy RGB.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud je režim pozadí neprůhledný, systém pomocí barvy pozadí vyplní mezery v stylových řádcích, mezery mezi šrafované řádky v štětci a pozadí v buňkách znaků. Systém také používá barvu pozadí při převodu rastrových obrázků mezi barevným a monochromatickým kontextem zařízení.
+Pokud je režim pozadí NEPRŮHLEDNÝ, systém použije barvu pozadí k vyplnění mezer ve stylovaných čarách, mezery mezi šrafovanými čarami v stopách a pozadí v buňkách znaků. Systém také používá barvu pozadí při převodu bitmap mezi barevnými a monochromatickými kontexty zařízení.
 
-##  <a name="getbkmode"></a>CDC:: GetBkMode
+## <a name="cdcgetbkmode"></a><a name="getbkmode"></a>CDC::GetBkMode
 
 Vrátí režim pozadí.
 
@@ -2637,15 +2637,15 @@ int GetBkMode() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Aktuální režim pozadí, který může být neprůhledný nebo transparentní.
+Aktuální režim pozadí, který může být OPAQUE nebo TRANSPARENT.
 
 ### <a name="remarks"></a>Poznámky
 
-Režim pozadí definuje, zda systém odstraní stávající barvy pozadí na kreslicí ploše před kreslením textu, Vyšrafované štětce nebo libovolného stylu pera, který není plná čára.
+Režim pozadí definuje, zda systém odstraní existující barvy pozadí na kreslicí ploše před kreslením textu, šrafovanými stopami nebo jakýmkoli stylem pera, který není plnou čárou.
 
-##  <a name="getboundsrect"></a>CDC:: GetBoundsRect
+## <a name="cdcgetboundsrect"></a><a name="getboundsrect"></a>CDC::GetBoundsRect
 
-Vrátí aktuální sečtený ohraničující obdélník pro určený kontext zařízení.
+Vrátí aktuální akumulovaný ohraničovací obdélník pro zadaný kontext zařízení.
 
 ```
 UINT GetBoundsRect(
@@ -2656,30 +2656,30 @@ UINT GetBoundsRect(
 ### <a name="parameters"></a>Parametry
 
 *lpRectBounds*<br/>
-Odkazuje na vyrovnávací paměť, která dostane aktuální ohraničovací rámeček. Obdélník se vrátí v logických souřadnicích.
+Odkazuje na vyrovnávací paměť, která obdrží aktuální ohraničovací obdélník. Obdélník je vrácen v logických souřadnicích.
 
-*Flag*<br/>
-Určuje, zda má být po vrácení ohraničený obdélník smazán. Tento parametr by měl být nulový nebo nastavený na následující hodnotu:
+*příznaky*<br/>
+Určuje, zda má být ohraničovací obdélník po vrácení vymazán. Tento parametr by měl být nulový nebo nastaven na následující hodnotu:
 
-- DCB_RESET vynutí vymazání ohraničujícího obdélníku po jeho vrácení.
+- DCB_RESET Vynutí, aby byl ohraničovací obdélník po vrácení vymazán.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Určuje aktuální stav ohraničujícího obdélníku, pokud je funkce úspěšná. Může se jednat o kombinaci následujících hodnot:
+Určuje aktuální stav ohraničovacího obdélníku, pokud je funkce úspěšná. Může to být kombinace následujících hodnot:
 
-- Dochází k akumulaci DCB_ACCUMULATE ohraničující obdélník.
+- DCB_ACCUMULATE dochází k akumulaci ohraničujícího obdélníku.
 
-- Ohraničující obdélník DCB_RESET je prázdný.
+- DCB_RESET Ohraničovací obdélník je prázdný.
 
-- Ohraničující obdélník DCB_SET není prázdný.
+- DCB_SET Ohraničovací obdélník není prázdný.
 
-- Je zapnutá akumulace DCB_ENABLEho navázání.
+- DCB_ENABLE je zapnutá akumulace ohraničování.
 
-- Akumulace s DCB_DISABLEem je mimo rozsah.
+- DCB_DISABLE Ohraničovací akumulace je vypnutá.
 
-##  <a name="getbrushorg"></a>CDC:: GetBrushOrg
+## <a name="cdcgetbrushorg"></a><a name="getbrushorg"></a>CDC::GetBrushOrg
 
-Načte počátek (v jednotkách zařízení) štětce aktuálně vybraného pro kontext zařízení.
+Načte počátek (v jednotkách zařízení) stopy aktuálně vybrané pro kontext zařízení.
 
 ```
 CPoint GetBrushOrg() const;
@@ -2687,13 +2687,13 @@ CPoint GetBrushOrg() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Aktuální počátek štětce (v jednotkách zařízení) jako objekt [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) .
+Aktuální původ stopy (v jednotkách zařízení) jako objekt [CPoint.](../../atl-mfc-shared/reference/cpoint-class.md)
 
 ### <a name="remarks"></a>Poznámky
 
-Počáteční počátek štětce je v oblasti klienta (0, 0). Vrácená hodnota určuje tento bod v jednotkách zařízení relativně ke zdroji okna plochy.
+Počáteční počátek stopy je na (0,0) klientské oblasti. Vrácená hodnota určuje tento bod v jednotkách zařízení vzhledem k počátku okna plochy.
 
-##  <a name="getcharacterplacement"></a>CDC:: GetCharacterPlacement
+## <a name="cdcgetcharacterplacement"></a><a name="getcharacterplacement"></a>CDC::GetCharacterPlacement
 
 Načte různé typy informací o řetězci znaků.
 
@@ -2715,36 +2715,36 @@ DWORD GetCharacterPlacement(
 ### <a name="parameters"></a>Parametry
 
 *lpString*<br/>
-Ukazatel na řetězec znaků, který má být zpracován.
+Ukazatel na řetězec znaků ke zpracování.
 
 *nCount*<br/>
-Určuje délku řetězce. V případě verze ANSI se jedná o počet bajtů a funkce Unicode je počet slov. Další informace najdete v tématu [GetCharacterPlacement](/windows/win32/api/wingdi/nf-wingdi-getcharacterplacementw).
+Určuje délku řetězce. Pro verzi ANSI se jedná o počet BYTE a pro funkci Unicode je počet WORD. Další informace naleznete v tématu [GetCharacterPlacement](/windows/win32/api/wingdi/nf-wingdi-getcharacterplacementw).
 
 *nMaxExtent*<br/>
-Určuje maximální rozsah (v logických jednotkách), do kterého se řetězec zpracovává. Znaky, které jsou při zpracování, by překročily tento rozsah, se ignorují. Výpočty pro všechna požadovaná pole řazení nebo glyfů se vztahují pouze na zahrnuté znaky. Tento parametr se používá pouze v případě, že je v parametru *dwFlags* zadána hodnota GCP_MAXEXTENT. Jak funkce zpracovává vstupní řetězec, každý znak a jeho rozsah je přidán do výstupu, rozsahu a dalších polí pouze v případě, že celková velikost ještě nepřekročila maximální hodnotu. Po dosažení limitu se zpracování zastaví.
+Určuje maximální rozsah (v logických jednotkách), do kterého je řetězec zpracován. Znaky, které by v případě zpracování překročily tento rozsah, jsou ignorovány. Výpočty pro všechny požadované řazení nebo glyfpole platí pouze pro zahrnuté znaky. Tento parametr se používá pouze v případě, že je v parametru *dwFlags* zadána hodnota GCP_MAXEXTENT. Jako funkce zpracovává vstupní řetězec, každý znak a jeho rozsah je přidán do výstupu, rozsahu a dalších polí pouze v případě, že celkový rozsah ještě nepřekročil maximum. Po dosažení limitu se zpracování zastaví.
 
-*lpResults*<br/>
-Ukazatel na strukturu [GCP_Results](/windows/win32/api/wingdi/ns-wingdi-gcp_resultsw) , která přijímá výsledky funkce.
+*lpVýsledky*<br/>
+Ukazatel na [GCP_Results](/windows/win32/api/wingdi/ns-wingdi-gcp_resultsw) strukturu, která přijímá výsledky funkce.
 
 *dwFlags*<br/>
-Určuje způsob zpracování řetězce do požadovaných polí. Tento parametr může být jednou nebo více hodnotami, které jsou uvedeny v části *dwFlags* tématu [GetCharacterPlacement](/windows/win32/api/wingdi/nf-wingdi-getcharacterplacementw) .
+Určuje způsob zpracování řetězce do požadovaných polí. Tento parametr může být jedna nebo více hodnot uvedených v části *dwFlags* v tématu [GetCharacterPlacement.](/windows/win32/api/wingdi/nf-wingdi-getcharacterplacementw)
 
-*str*<br/>
-Ukazatel na objekt [CString](../../atl-mfc-shared/reference/cstringt-class.md) , který se má zpracovat.
+*Str*<br/>
+Ukazatel na [CString](../../atl-mfc-shared/reference/cstringt-class.md) objekt u zpracovatelského procesu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud je funkce úspěšná, návratová hodnota je šířka a výška řetězce v logických jednotkách.
+Pokud je funkce úspěšná, vrácená hodnota je šířka a výška řetězce v logických jednotkách.
 
-Pokud dojde k chybě funkce, vrácená hodnota je nula.
+Pokud funkce selže, vrácená hodnota je nula.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce emuluje funkčnost funkce [GetCharacterPlacement](/windows/win32/api/wingdi/nf-wingdi-getcharacterplacementw), jak je popsáno v Windows SDK.
+Tato členská funkce emuluje funkce [funkce GetCharacterPlacement](/windows/win32/api/wingdi/nf-wingdi-getcharacterplacementw), jak je popsáno v sadě Windows SDK.
 
-##  <a name="getcharabcwidths"></a>CDC:: GetCharABCWidths
+## <a name="cdcgetcharabcwidths"></a><a name="getcharabcwidths"></a>CDC::GetCharABCŠířky
 
-Načte šířku po sobě jdoucích znaků v zadaném rozsahu od aktuálního písma TrueType.
+Načte šířky po sobě jdoucích znaků v zadaném rozsahu z aktuálního písma TrueType.
 
 ```
 BOOL GetCharABCWidths(
@@ -2761,16 +2761,16 @@ BOOL GetCharABCWidths(
 ### <a name="parameters"></a>Parametry
 
 *nFirstChar*<br/>
-Určuje první znak v rozsahu znaků od aktuálního písma, pro který jsou vraceny znaky šířky.
+Určuje první znak v rozsahu znaků z aktuálního písma, pro které jsou vráceny šířky znaků.
 
 *nLastChar*<br/>
-Určuje poslední znak v rozsahu znaků od aktuálního písma, pro který jsou vraceny znaky šířky.
+Určuje poslední znak v rozsahu znaků z aktuálního písma, pro které jsou vráceny šířky znaků.
 
-*lpabc*<br/>
-Odkazuje na pole struktury [ABC](/windows/win32/api/wingdi/ns-wingdi-abc) , které obdrží tloušťku znaků při návratu funkce. Toto pole musí obsahovat alespoň tolik `ABC` struktur, protože v rozsahu zadaném parametry *nFirstChar* a *nLastChar* jsou znaky.
+*lpabc (Šp.)*<br/>
+Odkazuje na pole [struktury ABC,](/windows/win32/api/wingdi/ns-wingdi-abc) které obdrží šířky znaků, když funkce vrátí. Toto pole musí obsahovat alespoň tolik `ABC` struktur, kolik je znaků v rozsahu určeném parametry *nFirstChar* a *nLastChar.*
 
 *lpABCF*<br/>
-Odkazuje na vyrovnávací paměť poskytnutou aplikací s polem struktur [abcfloat –](/windows/win32/api/wingdi/ns-wingdi-abcfloat) , aby bylo možné získat šířky znaků při návratu funkce. Šířka vrácená touto funkcí jsou ve formátu s plovoucí desetinnou čárkou standardu IEEE.
+Odkazuje na vyrovnávací paměť dodanou aplikací s polem [struktur ABCFLOAT](/windows/win32/api/wingdi/ns-wingdi-abcfloat) pro příjem šířky znaků, když se funkce vrátí. Šířky vrácené touto funkcí jsou ve formátu s plovoucí desetinnou desetinnou tácek IEEE.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -2778,21 +2778,21 @@ Nenulové, pokud je funkce úspěšná; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Šířky jsou vraceny v logických jednotkách. Tato funkce je úspěšná jenom u písem TrueType.
+Šířky jsou vráceny v logických jednotkách. Tato funkce je úspěšná pouze u písem TrueType.
 
-Rastrové písmo TrueType poskytuje mezery mezi znaky "ABC" po výběru velikosti konkrétního bodu. Mezera mezi "A" je vzdálenost, která je přidána k aktuální pozici před vložením glyfu. Mezera "B" je šířka černé části glyfu. Mezery "C" jsou přidány do aktuální pozice k účtu pro prázdné místo napravo od glyfu. Celková Pokročilá šířka je dána A + B + C.
+Rastrovač TrueType poskytuje mezery mezi znaky ABC po výběru určité velikosti bodu. Rozteč "A" je vzdálenost, která je přidána do aktuální polohy před umístěním glyfu. Rozteč "B" je šířka černé části glyfu. Mezery "C" se přidají k aktuální pozici, aby se zohlednilo prázdné místo vpravo od glyfu. Celková pokročilá šířka je dána A + B + C.
 
-Když členská funkce `GetCharABCWidths` načte pro znak negativní šířky "A" nebo "C", tento znak zahrnuje podtržítka nebo přeblokování.
+Když `GetCharABCWidths` členská funkce načte negativní šířky "A" nebo "C" pro znak, tento znak zahrnuje podhodnutí nebo převisy.
 
-Chcete-li převést šířku ABC na jednotky návrhu písem, aplikace by měla vytvořit písmo, jehož výška (uvedená v `lfHeight` členu struktury [LOGFONT](/windows/win32/api/wingdi/ns-wingdi-logfontw) ) se rovná hodnotě uložené v `ntmSizeEM`m členu struktury [NEWTEXTMETRIC](/windows/win32/api/wingdi/ns-wingdi-newtextmetricw) . (Hodnotu člena `ntmSizeEM` lze načíst voláním funkce systému Windows [EnumFontFamilies](/windows/win32/api/wingdi/nf-wingdi-enumfontfamiliesw) .)
+Chcete-li převést šířky ABC na jednotky návrhu písma, aplikace `lfHeight` by měla vytvořit písmo, jehož výška (jak je uvedeno v člen [logfont](/windows/win32/api/wingdi/ns-wingdi-logfontw) struktury) se rovná hodnotě uložené v `ntmSizeEM` člen [newtextmetric](/windows/win32/api/wingdi/ns-wingdi-newtextmetricw) struktury. (Hodnotu `ntmSizeEM` člena lze načíst voláním funkce [EnumFontFamilies](/windows/win32/api/wingdi/nf-wingdi-enumfontfamiliesw) Windows.)
 
 Šířky ABC výchozího znaku se používají pro znaky, které jsou mimo rozsah aktuálně vybraného písma.
 
-Aby bylo možné načíst šířky znaků v písmech jiných než TrueType, aplikace by měly používat funkci [GetCharWidth](/windows/win32/api/wingdi/nf-wingdi-getcharwidthw) Windows.
+Chcete-li načíst šířky znaků v písmech jiných než TrueType, měly by aplikace používat funkci [GetCharWidth](/windows/win32/api/wingdi/nf-wingdi-getcharwidthw) Windows.
 
-##  <a name="getcharabcwidthsi"></a>CDC:: GetCharABCWidthsI
+## <a name="cdcgetcharabcwidthsi"></a><a name="getcharabcwidthsi"></a>CDC::GetCharABCWidthsI
 
-Načte šířky (v logických jednotkách) po sobě jdoucí indexy glyfů v zadaném rozsahu od aktuálního písma TrueType.
+Načte šířky po sobě jdoucích indexů glyfů v zadaném rozsahu v logických jednotkách z aktuálního písma TrueType.
 
 ```
 BOOL GetCharABCWidthsI(
@@ -2804,17 +2804,17 @@ BOOL GetCharABCWidthsI(
 
 ### <a name="parameters"></a>Parametry
 
-*giFirst*<br/>
-Určuje první index glyfu ve skupině po sobě jdoucích indexů glyfů z aktuálního písma. Tento parametr se používá pouze v případě, že má parametr *CHZO* hodnotu null.
+*giPrvní*<br/>
+Určuje první index glyfu ve skupině po sobě jdoucích indexů glyfů z aktuálního písma. Tento parametr se používá pouze v případě, že parametr *PGI* je NULL.
 
-*rozhraní*<br/>
+*Cgi*<br/>
 Určuje počet indexů glyfů.
 
-*CHZO*<br/>
-Ukazatel na pole obsahující indexy glyfů. Pokud je hodnota NULL, použije se místo toho parametr *giFirst* . Parametr *CGI* určuje počet indexů glyfů v tomto poli.
+*Chzo*<br/>
+Ukazatel na pole obsahující indexy glyfů. Pokud je hodnota NULL, *giFirst* parametr se používá místo. Parametr *cgi* určuje počet indexů glyfů v tomto poli.
 
-*lpabc*<br/>
-Ukazatel na pole struktury [ABC](/windows/win32/api/wingdi/ns-wingdi-abc) přijímající šířky znaků. Toto pole musí obsahovat alespoň tolik `ABC` struktur, protože jsou indexy glyfů určené parametrem *CGI* .
+*lpabc (Šp.)*<br/>
+Ukazatel na pole [struktury ABC](/windows/win32/api/wingdi/ns-wingdi-abc) přijímající šířky znaků. Toto pole musí obsahovat alespoň tolik `ABC` struktur, kolik je indexů glyfů určených parametrem *cgi.*
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -2822,11 +2822,11 @@ Nenulové, pokud je funkce úspěšná; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce emuluje funkčnost funkce [GetCharABCWidthsI](/windows/win32/api/wingdi/nf-wingdi-getcharabcwidthsi), jak je popsáno v Windows SDK.
+Tato členská funkce emuluje funkce [funkce GetCharABCWidthsI](/windows/win32/api/wingdi/nf-wingdi-getcharabcwidthsi), jak je popsáno v sadě Windows SDK.
 
-##  <a name="getcharwidth"></a>CDC:: GetCharWidth
+## <a name="cdcgetcharwidth"></a><a name="getcharwidth"></a>CDC::GetCharWidth
 
-Načte šířky jednotlivých znaků v po sobě jdoucích skupinách znaků od aktuálního písma pomocí `m_hAttribDC`kontext vstupního zařízení.
+Načte šířky jednotlivých znaků v po sobě jdoucí skupině `m_hAttribDC`znaků z aktuálního písma pomocí kontextu vstupního zařízení.
 
 ```
 BOOL GetCharWidth(
@@ -2843,16 +2843,16 @@ BOOL GetCharWidth(
 ### <a name="parameters"></a>Parametry
 
 *nFirstChar*<br/>
-Určuje první znak v po sobě jdoucí skupinu znaků v aktuálním písmu.
+Určuje první znak v po sobě jdoucí skupině znaků v aktuálním písmu.
 
 *nLastChar*<br/>
-Určuje poslední znak v po sobě jdoucí skupinu znaků v aktuálním písmu.
+Určuje poslední znak v po sobě jdoucí skupině znaků v aktuálním písmu.
 
 *lpBuffer*<br/>
-Odkazuje na vyrovnávací paměť, která získá hodnoty šířky pro po sobě jdoucí skupinu znaků v aktuálním písmu.
+Odkazuje na vyrovnávací paměť, která obdrží hodnoty šířky pro po sobě jdoucí skupinu znaků v aktuálním písmu.
 
 *lpFloatBuffer*<br/>
-Odkazuje na vyrovnávací paměť, aby přijímala šířky znaků. Vracené šířky jsou ve formátu standardu IEEE s plovoucí desetinnou čárkou (32 bitů). (Šířky se měří podél základní čáry znaků.)
+Odkazuje na vyrovnávací paměť pro příjem šířky znaků. Vrácené šířky jsou ve formátu 32bitové ieee s plovoucí desetinnou desetinnou tištěnou. (Šířky se měří podél základní čáry znaků.)
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -2860,15 +2860,15 @@ Nenulové, pokud je funkce úspěšná; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Například pokud *nFirstChar* identifikuje písmeno "a" a *nLastChar* označuje písmeno "z", funkce načte šířky všech malých písmen.
+Například pokud *nFirstChar* identifikuje písmeno 'a' a *nLastChar* identifikuje písmeno 'z', funkce načte šířky všech malých písmen.
 
-Funkce ukládá hodnoty do vyrovnávací paměti, na kterou odkazuje *lpBuffer*. Tato vyrovnávací paměť musí být dostatečně velká, aby se vešly všechny šířky. To znamená, že v uvedeném příkladu musí být alespoň 26 záznamů.
+Funkce ukládá hodnoty ve vyrovnávací paměti, na kterou poukazuje *lpBuffer*. Tato vyrovnávací paměť musí být dostatečně velká, aby uchovávala všechny šířky. To znamená, že v uvedeném příkladu musí být alespoň 26 položek.
 
-Pokud znak v po sobě jdoucích skupinách znaků neexistuje v konkrétním písmu, bude mu přiřazena hodnota šířky výchozího znaku.
+Pokud znak v po sobě jdoucí skupině znaků neexistuje v určitém písmu, bude mu přiřazena hodnota šířky výchozího znaku.
 
-##  <a name="getcharwidthi"></a>CDC:: GetCharWidthI
+## <a name="cdcgetcharwidthi"></a><a name="getcharwidthi"></a>CDC::GetcharWidthI
 
-Načte šířky (v logických souřadnicích) po sobě jdoucí indexy glyfů v zadaném rozsahu od aktuálního písma.
+Načte šířky po sobě jdoucích indexů glyfů v zadaném rozsahu v logickésou souřadnice z aktuálního písma.
 
 ```
 BOOL GetCharWidthI(
@@ -2880,14 +2880,14 @@ BOOL GetCharWidthI(
 
 ### <a name="parameters"></a>Parametry
 
-*giFirst*<br/>
-Určuje první index glyfu ve skupině po sobě jdoucích indexů glyfů z aktuálního písma. Tento parametr se používá pouze v případě, že má parametr *CHZO* hodnotu null.
+*giPrvní*<br/>
+Určuje první index glyfu ve skupině po sobě jdoucích indexů glyfů z aktuálního písma. Tento parametr se používá pouze v případě, že parametr *PGI* je NULL.
 
-*rozhraní*<br/>
+*Cgi*<br/>
 Určuje počet indexů glyfů.
 
-*CHZO*<br/>
-Ukazatel na pole obsahující indexy glyfů. Pokud je hodnota NULL, použije se místo toho parametr *giFirst* . Parametr *CGI* určuje počet indexů glyfů v tomto poli.
+*Chzo*<br/>
+Ukazatel na pole obsahující indexy glyfů. Pokud je hodnota NULL, *giFirst* parametr se používá místo. Parametr *cgi* určuje počet indexů glyfů v tomto poli.
 
 *lpBuffer*<br/>
 Ukazatel na vyrovnávací paměť, která přijímá šířky.
@@ -2898,11 +2898,11 @@ Nenulové, pokud je funkce úspěšná; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce emuluje funkčnost funkce [GetCharWidthI](/windows/win32/api/wingdi/nf-wingdi-getcharwidthi), jak je popsáno v Windows SDK.
+Tato členská funkce emuluje funkce [funkce GetCharWidthI](/windows/win32/api/wingdi/nf-wingdi-getcharwidthi), jak je popsáno v sadě Windows SDK.
 
-##  <a name="getclipbox"></a>CDC:: GetClipBox
+## <a name="cdcgetclipbox"></a><a name="getclipbox"></a>CDC::GetClipBox
 
-Načte rozměry nejužšího ohraničujícího obdélníku kolem aktuální hranice oříznutí.
+Načte rozměry nejtěsnějšího ohraničovacího obdélníku kolem aktuální hranice oříznutí.
 
 ```
 virtual int GetClipBox(LPRECT lpRect) const;
@@ -2911,27 +2911,27 @@ virtual int GetClipBox(LPRECT lpRect) const;
 ### <a name="parameters"></a>Parametry
 
 *lpRect*<br/>
-Odkazuje na strukturu [Rect](/windows/win32/api/windef/ns-windef-rect) nebo objekt [CRect](../../atl-mfc-shared/reference/crect-class.md) , který má přijmout rozměry obdélníku.
+Odkazuje na [rect](/windows/win32/api/windef/ns-windef-rect) struktury nebo [CRect](../../atl-mfc-shared/reference/crect-class.md) objekt, který má přijímat rozměry obdélníku.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Typ oblasti oříznutí. Může to být kterákoli z následujících hodnot:
+Typ oblasti oříznutí. Může to být některá z následujících hodnot:
 
-- Oblast COMPLEXREGION oříznutí má překrývající se ohraničení.
+- COMPLEXREGION Oblast oříznutí má překrývající se ohraničení.
 
-- Kontext CHYBového zařízení není platný.
+- CHYBA Kontext zařízení není platný.
 
-- Oblast oříznutí NULLREGION je prázdná.
+- NullREGION Oblast oříznutí je prázdná.
 
-- Oblast oříznutí SIMPLEREGION neobsahuje žádná překrývající se ohraničení.
+- SIMPLEREGION Oblast oříznutí nemá žádné překrývající se ohraničení.
 
 ### <a name="remarks"></a>Poznámky
 
-Dimenze jsou zkopírovány do vyrovnávací paměti, na kterou odkazuje *lpRect*.
+Rozměry jsou zkopírovány do vyrovnávací paměti, na kterou poukazuje *lpRect*.
 
-##  <a name="getcoloradjustment"></a>CDC:: GetColorAdjustment
+## <a name="cdcgetcoloradjustment"></a><a name="getcoloradjustment"></a>CDC::GetColorÚprava
 
-Načte hodnoty nastavení barev pro kontext zařízení.
+Načte hodnoty úprav barev pro kontext zařízení.
 
 ```
 BOOL GetColorAdjustment(LPCOLORADJUSTMENT lpColorAdjust) const;
@@ -2940,15 +2940,15 @@ BOOL GetColorAdjustment(LPCOLORADJUSTMENT lpColorAdjust) const;
 ### <a name="parameters"></a>Parametry
 
 *lpColorAdjust*<br/>
-Odkazuje na strukturu dat [coloradjustment –](/windows/win32/api/wingdi/ns-wingdi-coloradjustment) , aby přijímala hodnoty pro úpravu barev.
+Odkazuje na datovou strukturu [COLORADJUSTMENT,](/windows/win32/api/wingdi/ns-wingdi-coloradjustment) aby získala hodnoty úprav barev.
 
 ### <a name="return-value"></a>Návratová hodnota
 
 Nenulové, pokud je funkce úspěšná; jinak 0.
 
-##  <a name="getcurrentbitmap"></a>CDC:: GetCurrentBitmap
+## <a name="cdcgetcurrentbitmap"></a><a name="getcurrentbitmap"></a>CDC::GetCurrentBitmap
 
-Vrátí ukazatel na aktuálně vybraný objekt `CBitmap`.
+Vrátí ukazatel na aktuálně `CBitmap` vybraný objekt.
 
 ```
 CBitmap* GetCurrentBitmap() const;
@@ -2956,15 +2956,15 @@ CBitmap* GetCurrentBitmap() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na objekt `CBitmap`, pokud je úspěšný; jinak NULL.
+Ukazatel na `CBitmap` objekt, pokud je úspěšný; jinak NULL.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce může vracet dočasné objekty.
+Tato členská funkce může vrátit dočasné objekty.
 
-##  <a name="getcurrentbrush"></a>CDC:: GetCurrentBrush
+## <a name="cdcgetcurrentbrush"></a><a name="getcurrentbrush"></a>CDC::GetCurrentBrush
 
-Vrátí ukazatel na aktuálně vybraný objekt `CBrush`.
+Vrátí ukazatel na aktuálně `CBrush` vybraný objekt.
 
 ```
 CBrush* GetCurrentBrush() const;
@@ -2972,15 +2972,15 @@ CBrush* GetCurrentBrush() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na objekt `CBrush`, pokud je úspěšný; jinak NULL.
+Ukazatel na `CBrush` objekt, pokud je úspěšný; jinak NULL.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce může vracet dočasné objekty.
+Tato členská funkce může vrátit dočasné objekty.
 
-##  <a name="getcurrentfont"></a>CDC:: GetCurrentFont
+## <a name="cdcgetcurrentfont"></a><a name="getcurrentfont"></a>CDC::GetCurrentFont
 
-Vrátí ukazatel na aktuálně vybraný objekt `CFont`.
+Vrátí ukazatel na aktuálně `CFont` vybraný objekt.
 
 ```
 CFont* GetCurrentFont() const;
@@ -2988,15 +2988,15 @@ CFont* GetCurrentFont() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na objekt `CFont`, pokud je úspěšný; jinak NULL.
+Ukazatel na `CFont` objekt, pokud je úspěšný; jinak NULL.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce může vracet dočasné objekty.
+Tato členská funkce může vrátit dočasné objekty.
 
-##  <a name="getcurrentpalette"></a>CDC:: GetCurrentPalette
+## <a name="cdcgetcurrentpalette"></a><a name="getcurrentpalette"></a>CDC::GetCurrentPalette
 
-Vrátí ukazatel na aktuálně vybraný objekt `CPalette`.
+Vrátí ukazatel na aktuálně `CPalette` vybraný objekt.
 
 ```
 CPalette* GetCurrentPalette() const;
@@ -3004,15 +3004,15 @@ CPalette* GetCurrentPalette() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na objekt `CPalette`, pokud je úspěšný; jinak NULL.
+Ukazatel na `CPalette` objekt, pokud je úspěšný; jinak NULL.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce může vracet dočasné objekty.
+Tato členská funkce může vrátit dočasné objekty.
 
-##  <a name="getcurrentpen"></a>CDC:: GetCurrentPen
+## <a name="cdcgetcurrentpen"></a><a name="getcurrentpen"></a>CDC::GetCurrentPen
 
-Vrátí ukazatel na aktuálně vybraný objekt `CPen`.
+Vrátí ukazatel na aktuálně `CPen` vybraný objekt.
 
 ```
 CPen* GetCurrentPen() const;
@@ -3020,13 +3020,13 @@ CPen* GetCurrentPen() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na objekt `CPen`, pokud je úspěšný; jinak NULL.
+Ukazatel na `CPen` objekt, pokud je úspěšný; jinak NULL.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce může vracet dočasné objekty.
+Tato členská funkce může vrátit dočasné objekty.
 
-##  <a name="getcurrentposition"></a>CDC:: GetCurrentPosition
+## <a name="cdcgetcurrentposition"></a><a name="getcurrentposition"></a>CDC::GetCurrentPosition
 
 Načte aktuální pozici (v logických souřadnicích).
 
@@ -3036,15 +3036,15 @@ CPoint GetCurrentPosition() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Aktuální pozice jako objekt `CPoint`.
+Aktuální pozice jako `CPoint` objekt.
 
 ### <a name="remarks"></a>Poznámky
 
-Aktuální pozici lze nastavit pomocí členské funkce `MoveTo`.
+Aktuální pozici lze nastavit `MoveTo` pomocí členské funkce.
 
-##  <a name="getdcbrushcolor"></a>CDC:: GetDCBrushColor
+## <a name="cdcgetdcbrushcolor"></a><a name="getdcbrushcolor"></a>CDC::GetDCBrushColor
 
-Načte aktuální barvu štětce.
+Načte aktuální barvu stopy.
 
 ```
 COLORREF GetDCBrushColor() const;
@@ -3052,15 +3052,15 @@ COLORREF GetDCBrushColor() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud je funkce úspěšná, návratová hodnota je hodnota [COLORREF](/windows/win32/gdi/colorref) pro aktuální barvu štětce.
+Pokud je funkce úspěšná, vrácená hodnota je hodnota [COLORREF](/windows/win32/gdi/colorref) pro aktuální barvu stopy.
 
-Pokud dojde k chybě funkce, vrácená hodnota je CLR_INVALID.
+Pokud funkce selže, vrácená hodnota je CLR_INVALID.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce emuluje funkčnost funkce [GetDCBrushColor](/windows/win32/api/wingdi/nf-wingdi-getdcbrushcolor), jak je popsáno v Windows SDK.
+Tato členská funkce emuluje funkce [funkce GetDCBrushColor](/windows/win32/api/wingdi/nf-wingdi-getdcbrushcolor), jak je popsáno v sadě Windows SDK.
 
-##  <a name="getdcpencolor"></a>CDC:: GetDCPenColor
+## <a name="cdcgetdcpencolor"></a><a name="getdcpencolor"></a>CDC::GetDCPenColor
 
 Načte aktuální barvu pera.
 
@@ -3070,17 +3070,17 @@ COLORREF GetDCPenColor() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud je funkce úspěšná, návratová hodnota je [COLORREF](/windows/win32/gdi/colorref) hodnotou aktuální barvy pera.
+Pokud je funkce úspěšná, vrácená hodnota je hodnota [COLORREF](/windows/win32/gdi/colorref) pro aktuální barvu pera.
 
-Pokud dojde k chybě funkce, vrácená hodnota je CLR_INVALID.
+Pokud funkce selže, vrácená hodnota je CLR_INVALID.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce využívá [GetDCPenColor](/windows/win32/api/wingdi/nf-wingdi-getdcpencolor)funkce Win32, jak je popsáno v Windows SDK.
+Tato členská funkce využívá funkci Win32 [GetDCPenColor](/windows/win32/api/wingdi/nf-wingdi-getdcpencolor), jak je popsáno v sadě Windows SDK.
 
-##  <a name="getdevicecaps"></a>CDC:: GetDeviceCaps
+## <a name="cdcgetdevicecaps"></a><a name="getdevicecaps"></a>CDC::GetDeviceCaps
 
-Načte široké množství informací specifických pro zařízení zobrazovacího zařízení.
+Načte širokou škálu informací o zobrazovacím zařízení specifických pro zařízení.
 
 ```
 int GetDeviceCaps(int nIndex) const;
@@ -3089,7 +3089,7 @@ int GetDeviceCaps(int nIndex) const;
 ### <a name="parameters"></a>Parametry
 
 *nIndex*<br/>
-Určuje typ informací, které mají být vráceny. Seznam hodnot naleznete v tématu [GetDeviceCaps](/windows/win32/api/wingdi/nf-wingdi-getdevicecaps) v Windows SDK.
+Určuje typ informací, které mají být vráceny. Seznam hodnot najdete v tématu [GetDeviceCaps](/windows/win32/api/wingdi/nf-wingdi-getdevicecaps) v sadě Windows SDK.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -3097,11 +3097,11 @@ Hodnota požadované schopnosti, pokud je funkce úspěšná.
 
 ### <a name="example"></a>Příklad
 
-  Podívejte se na příklad pro [CPrintDialog:: GetDefaults](../../mfc/reference/cprintdialog-class.md#getdefaults).
+  Viz příklad [cprintdialog::GetDefaults](../../mfc/reference/cprintdialog-class.md#getdefaults).
 
-##  <a name="getfontdata"></a>CDC:: GetFontData
+## <a name="cdcgetfontdata"></a><a name="getfontdata"></a>CDC::GetFontData
 
-Načte informace o metrikách písma z škálovatelného souboru písma.
+Načte informace o metrikách písma ze souboru škálovatelného písma.
 
 ```
 DWORD GetFontData(
@@ -3113,33 +3113,33 @@ DWORD GetFontData(
 
 ### <a name="parameters"></a>Parametry
 
-*dwTable*<br/>
-Určuje název tabulky metriky, která se má vrátit. Tento parametr může být jednou z tabulek metrik, které jsou zdokumentovány ve specifikaci souborů písem TrueType publikovaných společností Microsoft Corporation. Pokud je tento parametr 0, informace jsou načteny počínaje na začátku souboru písma.
+*dwTabulka*<br/>
+Určuje název tabulky metriky, která má být vrácena. Tento parametr může být jednou z tabulk metrik zdokumentovaných ve specifikaci TrueType Font Files publikované společností Microsoft Corporation. Pokud je tento parametr 0, informace se načtou od začátku souboru písma.
 
 *dwOffset*<br/>
-Určuje posun od začátku tabulky, od které se mají začít načítat informace. Pokud je tento parametr 0, informace jsou načteny počínaje počátkem tabulky určené parametrem *dwTable* . Pokud je tato hodnota větší než nebo rovna velikosti tabulky, `GetFontData` vrátí hodnotu 0.
+Určuje posun od začátku tabulky, ve kterém chcete začít načítat informace. Pokud je tento parametr 0, informace jsou načteny počínaje začátkem tabulky určené parametrem *dwTable.* Pokud je tato hodnota větší nebo rovna `GetFontData` velikosti tabulky, vrátí hodnotu 0.
 
 *lpData*<br/>
-Odkazuje na vyrovnávací paměť, která bude dostávat informace o písmech. Pokud je tato hodnota NULL, funkce vrátí velikost vyrovnávací paměti požadované pro data písma zadaná v parametru *dwTable* .
+Odkazuje na vyrovnávací paměť, která obdrží informace o písmu. Pokud je tato hodnota NULL, funkce vrátí velikost vyrovnávací paměti požadované pro data písma zadaná v parametru *dwTable.*
 
-*cbData*<br/>
-Určuje délku informací, které mají být načteny (v bajtech). Pokud je tento parametr 0, `GetFontData` vrátí velikost dat zadaných v parametru *dwTable* .
+*Cbdata*<br/>
+Určuje délku informací, které mají být načteny v bajtech. Pokud je tento `GetFontData` parametr 0, vrátí velikost dat zadaných v parametru *dwTable.*
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Určuje počet bajtů vrácených ve vyrovnávací paměti, na které odkazuje *lpData* , pokud je funkce úspěšná. v opačném případě-1.
+Určuje počet bajtů vrácených ve vyrovnávací paměti, na které je uvedeno *lpData,* pokud je funkce úspěšná; jinak -1.
 
 ### <a name="remarks"></a>Poznámky
 
-Informace, které se mají načíst, se identifikují zadáním posunu do souboru písma a délky informací, které se mají vrátit.
+Informace k načtení je identifikován zadáním posun do souboru písma a délka informace vrátit.
 
-Aplikace může někdy použít členskou funkci `GetFontData` k uložení písma TrueType s dokumentem. K tomu aplikace určuje, zda může být písmo vloženo, a poté načte celý soubor písma, zadáním 0 pro parametry *dwTable*, *dwOffset*a *cbData* .
+Aplikace může někdy `GetFontData` použít členská funkce k uložení písma TrueType s dokumentem. Chcete-li to provést, aplikace určuje, zda písmo může být vložena a potom načte celý soubor písma, zadáním 0 pro *dwTable*, *dwOffset*a *cbData* parametry.
 
-Aplikace mohou určit, zda může být písmo vloženo pomocí kontroly `otmfsType` člena struktury [OUTLINETEXTMETRIC](/windows/win32/api/wingdi/ns-wingdi-outlinetextmetricw) . Pokud je nastaven bit 1 `otmfsType`, vkládání není pro písmo povoleno. Pokud je bit 1 jasný, může být písmo vloženo. Pokud je nastaven bit 2, vkládání je jen pro čtení.
+Aplikace mohou určit, zda písmo může `otmfsType` být vloženo kontrolou člena struktury [OUTLINETEXTMETRIC.](/windows/win32/api/wingdi/ns-wingdi-outlinetextmetricw) Pokud `otmfsType` je nastaven bit 1, vkládání není povoleno pro písmo. Pokud bit 1 je jasné, písmo může být vložen. Pokud je nastaven bit 2, vkládání je jen pro čtení.
 
-Pokud se aplikace pokusí použít tuto funkci, aby načetla informace pro písmo jiného typu než TrueType, vrátí členská funkce `GetFontData` hodnotu-1.
+Pokud se aplikace pokusí použít tuto funkci k načtení informací `GetFontData` pro písmo jiného typu než TrueType, vrátí členská funkce -1.
 
-##  <a name="getfontlanguageinfo"></a>CDC:: GetFontLanguageInfo
+## <a name="cdcgetfontlanguageinfo"></a><a name="getfontlanguageinfo"></a>CDC::GetFontLanguageInfo
 
 Vrátí informace o aktuálně vybraném písmu pro zadaný kontext zobrazení.
 
@@ -3149,15 +3149,15 @@ DWORD GetFontLanguageInfo() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrácená hodnota identifikuje vlastnosti aktuálně vybraného písma. Úplný seznam možných hodnot naleznete v tématu [GetFontLanguageInfo](/windows/win32/api/wingdi/nf-wingdi-getfontlanguageinfo).
+Vrácená hodnota identifikuje charakteristiky aktuálně vybraného písma. Úplný seznam možných hodnot naleznete v tématu [GetFontLanguageInfo](/windows/win32/api/wingdi/nf-wingdi-getfontlanguageinfo).
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce emuluje funkčnost funkce [GetFontLanguageInfo](/windows/win32/api/wingdi/nf-wingdi-getfontlanguageinfo), jak je popsáno v Windows SDK.
+Tato členská funkce emuluje funkce funkce [GetFontLanguageInfo](/windows/win32/api/wingdi/nf-wingdi-getfontlanguageinfo), jak je popsáno v sadě Windows SDK.
 
-##  <a name="getglyphoutline"></a>CDC:: GetGlyphOutline
+## <a name="cdcgetglyphoutline"></a><a name="getglyphoutline"></a>CDC::GetGlyphOutline
 
-Načte křivku nebo rastrový obrázek pro obrysový znak v aktuálním písmu.
+Načte křivku obrysu nebo bitmapu pro znak obrysu v aktuálním písmu.
 
 ```
 DWORD GetGlyphOutline(
@@ -3171,42 +3171,42 @@ DWORD GetGlyphOutline(
 
 ### <a name="parameters"></a>Parametry
 
-*nChar*<br/>
+*Nchar*<br/>
 Určuje znak, pro který mají být vráceny informace.
 
-*nFormat*<br/>
+*nFormát*<br/>
 Určuje formát, ve kterém má funkce vracet informace. Může to být jedna z následujících hodnot nebo 0:
 
 |Hodnota|Význam|
 |-----------|-------------|
-|GGO_BITMAP|Vrátí rastrový obrázek glyfu. Když se funkce vrátí, vyrovnávací paměť, na kterou odkazuje *lpBuffer* , obsahuje obrázek o velikosti 1 bitové čárky, jehož řádky začínají na hranicích doubleword.|
-|GGO_NATIVE|Vrátí body dat křivky v nativním formátu rastrového pomocí jednotek zařízení. Pokud je tato hodnota zadaná, všechny transformace zadané v *lpmat2* se ignorují.|
+|GGO_BITMAP|Vrátí bitmapu glyfu. Když funkce vrátí, vyrovnávací paměť, na kterou odkazová *hodnota lpBuffer* obsahuje bitmapu 1 bitový bod na pixel, jejíž řádky začínají na hranicích dvojitého slova.|
+|GGO_NATIVE|Vrátí datové body křivky v nativním formátu rastrového zařízení pomocí jednotek zařízení. Pokud je tato hodnota zadána, je ignorována jakákoli transformace zadaná v *lpmat2.*|
 
-Pokud je hodnota *nFormat* 0, funkce vyplní strukturu [GLYPHMETRICS](/windows/win32/api/wingdi/ns-wingdi-glyphmetrics) , ale nevrátí data obrysu glyfů.
+Pokud je hodnota *nFormat* 0, funkce vyplní strukturu [GLYPHMETRICS,](/windows/win32/api/wingdi/ns-wingdi-glyphmetrics) ale nevrátí data glyfů.
 
 *lpgm*<br/>
-Odkazuje na strukturu GLYPHMETRICS, která popisuje umístění glyfu v buňce znaků.
+Odkazuje na strukturu glyfrie, která popisuje umístění glyfu v buňce znaku.
 
 *cbBuffer*<br/>
-Určuje velikost vyrovnávací paměti, do které funkce kopíruje informace o znaku obrysu. Pokud je tato hodnota 0 a parametr *nFormat* je buď hodnota GGO_BITMAP, nebo GGO_NATIVE, funkce vrátí požadovanou velikost vyrovnávací paměti.
+Určuje velikost vyrovnávací paměti, do které funkce zkopíruje informace o znaku osnovy. Pokud je tato hodnota 0 a parametr *nFormat* je GGO_BITMAP nebo GGO_NATIVE hodnoty, vrátí funkce požadovanou velikost vyrovnávací paměti.
 
 *lpBuffer*<br/>
-Odkazuje na vyrovnávací paměť, do které funkce kopíruje informace o znaku obrysu. Pokud *nFormat* určuje hodnotu GGO_NATIVE, informace se zkopírují ve formě struktur TTPOLYGONHEADER a TTPOLYCURVE. Pokud je tato hodnota NULL a *nFormat* je buď hodnota GGO_BITMAP, nebo GGO_NATIVE, funkce vrátí požadovanou velikost vyrovnávací paměti.
+Odkazuje na vyrovnávací paměť, do které funkce zkopíruje informace o znaku osnovy. Pokud *nFormat* určuje hodnotu GGO_NATIVE, informace se zkopírují ve formě struktur TTPOLYGONHEADER a TTPOLYCURVE. Pokud je tato hodnota NULL a *nFormat* je hodnota GGO_BITMAP nebo GGO_NATIVE, vrátí funkce požadovanou velikost vyrovnávací paměti.
 
 *lpmat2*<br/>
-Odkazuje na strukturu [MAT2](/windows/win32/api/wingdi/ns-wingdi-mat2) , která obsahuje transformační matici pro daný znak. Tento parametr nemůže mít hodnotu NULL ani v případě, že je pro *nFormat*zadána hodnota GGO_NATIVE.
+Odkazuje na strukturu [MAT2,](/windows/win32/api/wingdi/ns-wingdi-mat2) která obsahuje transformační matici pro znak. Tento parametr nemůže být null, i když je zadána hodnota GGO_NATIVE pro *nFormat*.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Velikost vyrovnávací paměti (v bajtech) požadovaná pro načtené informace, je-li *cbBuffer* 0 nebo *lpBuffer* má hodnotu null. Jinak je kladná hodnota, pokud je funkce úspěšná, nebo-1, pokud dojde k chybě.
+Velikost vyrovnávací paměti v bajtech v podporovaných pro načtené informace, pokud je *cbBuffer* 0 nebo *lpBuffer* je NULL. V opačném případě je kladná hodnota, pokud je funkce úspěšná, nebo -1, pokud dojde k chybě.
 
 ### <a name="remarks"></a>Poznámky
 
-Aplikace může otáčet znaky načtené ve formátu rastrového obrázku zadáním transformační matice 2 – 2 ve struktuře, na kterou odkazuje *lpmat2*.
+Aplikace může otáčet znaky načtené ve formátu bitmapy zadáním transformační matice 2 krát 2 ve struktuře, na kterou poukazuje *lpmat2*.
 
-Obrys glyfu se vrátí jako série kokolací. Každý rozvrh je definován strukturou [TTPOLYGONHEADER](/windows/win32/api/wingdi/ns-wingdi-ttpolygonheader) a následováním řady `TTPOLYCURVE` struktury, které jsou požadovány k jeho popisu. Všechny body jsou vráceny jako [POINTFX](/windows/win32/api/wingdi/ns-wingdi-pointfx) struktury a představují absolutní umístění, nikoli relativní přesuny. Výchozím bodem, který je dán `pfxStart` členem struktury [TTPOLYGONHEADER](/windows/win32/api/wingdi/ns-wingdi-ttpolygonheader) , je bod, ve kterém je začátek obrysu obrysu. [TTPOLYCURVE](/windows/win32/api/wingdi/ns-wingdi-ttpolycurve) struktury, které následují, mohou být buď záznamy lomené čáry, nebo záznamy křivky. Záznamy lomené čáry jsou série bodů. čáry vykreslené mezi body popisují obrys znaku. Záznamy křivky reprezentují kvadratické křivky používané TrueType (tj. kvadratické b-křivky).
+Obrys glyfu je vrácen jako řada obrysů. Každý obrys je definován strukturou [TTPOLYGONHEADER](/windows/win32/api/wingdi/ns-wingdi-ttpolygonheader) následovanou tolika `TTPOLYCURVE` strukturami, kolik je potřeba k jeho popisu. Všechny body jsou vráceny jako [pointfx](/windows/win32/api/wingdi/ns-wingdi-pointfx) struktury a představují absolutní pozice, ne relativní pohyby. Počáteční bod daný `pfxStart` členem struktury [TTPOLYGONHEADER](/windows/win32/api/wingdi/ns-wingdi-ttpolygonheader) je bod, ve kterém začíná obrys pro obrys. Následující struktury [TTPOLYCURVE](/windows/win32/api/wingdi/ns-wingdi-ttpolycurve) mohou být záznamy křivky nebo spline. Záznam v polylii je řada bodů; čáry mezi body popisují obrys znaku. Záznamy spline představují kvadratické křivky používané truetype (to znamená kvadratické křivky b-splines).
 
-##  <a name="getgraphicsmode"></a>CDC:: GetGraphicsMode
+## <a name="cdcgetgraphicsmode"></a><a name="getgraphicsmode"></a>CDC::GetGraphicsMode
 
 Načte aktuální grafický režim pro zadaný kontext zařízení.
 
@@ -3216,19 +3216,19 @@ int GetGraphicsMode() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí aktuální režim grafiky při úspěchu. Seznam hodnot, které může tato metoda vracet, naleznete v tématu [GetGraphicsMode](/windows/win32/api/wingdi/nf-wingdi-getgraphicsmode).
+Vrátí aktuální grafický režim na úspěch. Seznam hodnot, které tato metoda může vrátit, naleznete v tématu [GetGraphicsMode](/windows/win32/api/wingdi/nf-wingdi-getgraphicsmode).
 
-Vrátí 0 při selhání.
+Vrátí hodnotu 0 při selhání.
 
-Chcete-li získat rozšířené informace o chybě, volejte příkaz [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror).
+Chcete-li získat rozšířené informace o chybě, volejte [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda zabalí funkci GDI systému Windows [GetGraphicsMode](/windows/win32/api/wingdi/nf-wingdi-getgraphicsmode).
+Tato metoda zalomí funkci Windows GDI [GetGraphicsMode](/windows/win32/api/wingdi/nf-wingdi-getgraphicsmode).
 
-##  <a name="gethalftonebrush"></a>CDC:: GetHalftoneBrush
+## <a name="cdcgethalftonebrush"></a><a name="gethalftonebrush"></a>CDC::GetHalftoneBrush
 
-Zavolejte tuto členskou funkci pro načtení polotónového štětce.
+Volání této členské funkce načíst polotónový štětec.
 
 ```
 static CBrush* PASCAL GetHalftoneBrush();
@@ -3236,17 +3236,17 @@ static CBrush* PASCAL GetHalftoneBrush();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na objekt `CBrush` v případě úspěchu; jinak NULL.
+Ukazatel na `CBrush` objekt, pokud je úspěšný; jinak NULL.
 
 ### <a name="remarks"></a>Poznámky
 
-Polotónový štětec zobrazuje pixely, které jsou Alternativně barvy popředí a pozadí k vytvoření vytvořeného vzoru. Následuje příklad vytvořeného vzoru, který byl vytvořen pomocí polotónového štětce.
+Polotónová stopa zobrazuje obrazové body, které jsou střídavě barvami popředí a pozadí, a vytvoří roztavit se vzorek. Následuje příklad roztíreného vzoru vytvořeného polotónovým štětcem.
 
-![Podrobnosti o prostředcích přeškrtnutého pera](../../mfc/reference/media/vc318s1.gif "Podrobnosti o prostředcích přeškrtnutého pera")
+![Detail roztírého tahu perem](../../mfc/reference/media/vc318s1.gif "Detail roztírého tahu perem")
 
-##  <a name="getkerningpairs"></a>CDC:: GetKerningPairs
+## <a name="cdcgetkerningpairs"></a><a name="getkerningpairs"></a>CDC::GetKerningPáry
 
-Načte páry znaků párování pro písmo, které je aktuálně vybráno v zadaném kontextu zařízení.
+Načte dvojice vyrovnání párů znaků pro písmo, které je aktuálně vybráno v zadaném kontextu zařízení.
 
 ```
 int GetKerningPairs(
@@ -3256,19 +3256,19 @@ int GetKerningPairs(
 
 ### <a name="parameters"></a>Parametry
 
-*nPairs*<br/>
-Určuje počet [KERNINGPAIR](/windows/win32/api/wingdi/ns-wingdi-kerningpair) struktur, na které odkazuje *lpkrnpair*. Funkce nebude kopírovat více párů párů, než je určeno *nPairs*.
+*nPáry*<br/>
+Určuje počet struktur [KERNINGPAIR,](/windows/win32/api/wingdi/ns-wingdi-kerningpair) na které je odkazováno *lpkrnpair*. Funkce nebude kopírovat více párů vyrovnání párů, než je určeno *nPairs*.
 
 *lpkrnpair*<br/>
-Odkazuje na pole `KERNINGPAIR` struktury, které přijímají páry párů při návratu funkce. Toto pole musí obsahovat alespoň tolik struktur, jak Určuje *nPairs*. Pokud má tento parametr hodnotu NULL, funkce vrátí celkový počet párů párů pro dané písmo.
+Odkazuje na pole `KERNINGPAIR` struktur, které přijímají dvojice vyrovnání párů, když se vrátí funkce. Toto pole musí obsahovat alespoň tolik struktur, kolik je určeno *nPairs*. Pokud je tento parametr NULL, funkce vrátí celkový počet párů vyrovnání párů pro písmo.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Určuje počet načtených párů párů nebo celkový počet párů párů v písmu, pokud je funkce úspěšná. Nula se vrátí, pokud se funkce nezdařila nebo pro toto písmo nejsou k dispozici žádné páry párů.
+Určuje počet načtených párů vyrovnání párů vyrovnání párů nebo celkový počet párů vyrovnání párů v písmu, pokud je funkce úspěšná. Nula je vrácena, pokud funkce selže nebo neexistují žádné dvojice vyrovnání párů pro písmo.
 
-##  <a name="getlayout"></a>CDC:: GetLayout
+## <a name="cdcgetlayout"></a><a name="getlayout"></a>CDC::GetLayout
 
-Voláním této členské funkce určíte rozložení textu a grafiky pro kontext zařízení, jako je například tiskárna nebo metasoubor.
+Volání této členské funkce k určení rozložení textu a grafiky pro kontext zařízení, jako je například tiskárna nebo metasoubor.
 
 ```
 DWORD GetLayout() const;
@@ -3276,13 +3276,13 @@ DWORD GetLayout() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-V případě úspěchu se pro aktuální kontext zařízení přihlásily příznaky rozložení. V opačném případě GDI_ERROR. Pro rozšířené informace o chybě volejte [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror). Seznam příznaků rozložení naleznete v tématu [CDC:: SetLayout](#setlayout).
+Pokud je úspěšná, rozložení příznaky pro aktuální kontext zařízení. Jinak GDI_ERROR. Rozšířené informace o chybě získáte voláním [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror). Seznam příznaků rozložení naleznete v tématu [CDC::SetLayout](#setlayout).
 
 ### <a name="remarks"></a>Poznámky
 
-Výchozí rozložení je ponecháno vpravo.
+Výchozí rozložení je zleva doprava.
 
-##  <a name="getmapmode"></a>CDC:: GetMapMode
+## <a name="cdcgetmapmode"></a><a name="getmapmode"></a>CDC::GetMapMode
 
 Načte aktuální režim mapování.
 
@@ -3296,14 +3296,14 @@ Režim mapování.
 
 ### <a name="remarks"></a>Poznámky
 
-Popis režimů mapování naleznete v tématu `SetMapMode` členská funkce.
+Popis režimů mapování naleznete v `SetMapMode` členské funkci.
 
 > [!NOTE]
->  Pokud zavoláte [SetLayout](#setlayout) ke změně rozložení řadiče domény na rozložení zprava doleva, `SetLayout` automaticky změní režim mapování na MM_ISOTROPIC. V důsledku toho bude jakékoli následné volání `GetMapMode` vracet MM_ISOTROPIC.
+> Pokud zavoláte [SetLayout](#setlayout) změnit rozložení řadič domény na `SetLayout` právo-doleva, automaticky změní režim mapování na MM_ISOTROPIC. V důsledku toho jakékoli `GetMapMode` následné volání vrátí MM_ISOTROPIC.
 
-##  <a name="getmiterlimit"></a>CDC:: GetMiterLimit
+## <a name="cdcgetmiterlimit"></a><a name="getmiterlimit"></a>CDC::GetMiterLimit
 
-Vrátí limit úkosu pro kontext zařízení.
+Vrátí limit potu pro kontext zařízení.
 
 ```
 float GetMiterLimit() const;
@@ -3315,9 +3315,9 @@ Nenulové, pokud je funkce úspěšná; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Limit úkosu se používá při kreslení geometrických řádků, které mají ostré spojení.
+Limit poklice se používá při kreslení geometrických čar, které mají pokrývačové spoje.
 
-##  <a name="getnearestcolor"></a>CDC:: GetNearestColor
+## <a name="cdcgetnearestcolor"></a><a name="getnearestcolor"></a>CDC::GetNearestBarva
 
 Vrátí plnou barvu, která nejlépe odpovídá zadané logické barvě.
 
@@ -3328,17 +3328,17 @@ COLORREF GetNearestColor(COLORREF crColor) const;
 ### <a name="parameters"></a>Parametry
 
 *crColor*<br/>
-Určuje barvu, která má být shodná.
+Určuje barvu, která má být spárována.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota barvy RGB (červená, zelená, modrá), která definuje plnou barvu nejbližší hodnotě *crColor* , kterou může zařízení reprezentovat.
+Hodnota barvy RGB (červená, zelená, modrá), která definuje plnou barvu, která je nejblíže hodnotě *crColor,* kterou může zařízení představovat.
 
 ### <a name="remarks"></a>Poznámky
 
-Dané zařízení musí být schopné tuto barvu reprezentovat.
+Dané zařízení musí být schopno reprezentovat tuto barvu.
 
-##  <a name="getoutlinetextmetrics"></a>CDC:: GetOutlineTextMetrics
+## <a name="cdcgetoutlinetextmetrics"></a><a name="getoutlinetextmetrics"></a>CDC::GetOutlineTextMetrics
 
 Načte informace o metrikách pro písma TrueType.
 
@@ -3351,13 +3351,13 @@ UINT GetOutlineTextMetrics(
 ### <a name="parameters"></a>Parametry
 
 *lpotm*<br/>
-Odkazuje na pole [OUTLINETEXTMETRIC](/windows/win32/api/wingdi/ns-wingdi-outlinetextmetricw) struktury. Pokud má tento parametr hodnotu NULL, funkce vrátí velikost vyrovnávací paměti požadované pro načtená data metriky.
+Odkazuje na pole [outlinetextmetric](/windows/win32/api/wingdi/ns-wingdi-outlinetextmetricw) struktur. Pokud je tento parametr NULL, funkce vrátí velikost vyrovnávací paměti požadované pro načtená data metriky.
 
-*cbData*<br/>
-Určuje velikost vyrovnávací paměti (v bajtech), na kterou se vracejí informace.
+*Cbdata*<br/>
+Určuje velikost vyrovnávací paměti, do které jsou vráceny informace v bajtech.
 
 *lpotm*<br/>
-Odkazuje na strukturu `OUTLINETEXTMETRIC`. Pokud má tento parametr hodnotu NULL, funkce vrátí velikost vyrovnávací paměti požadované pro načtené informace o metrikách.
+Ukazuje na `OUTLINETEXTMETRIC` strukturu. Pokud je tento parametr NULL, funkce vrátí velikost vyrovnávací paměti požadované pro načtené informace metriky.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -3365,11 +3365,11 @@ Nenulové, pokud je funkce úspěšná; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Struktura [OUTLINETEXTMETRIC](/windows/win32/api/wingdi/ns-wingdi-outlinetextmetricw) obsahuje většinu informací o metrikách písem, které jsou k dispozici ve formátu TrueType, včetně struktury [TEXTMETRIC](/windows/win32/api/wingdi/ns-wingdi-textmetricw) . Poslední čtyři členy `OUTLINETEXTMETRIC` struktury jsou ukazatele na řetězce. Aplikace by měly přidělit prostor pro tyto řetězce kromě prostoru požadovaného pro ostatní členy. Vzhledem k tomu, že velikost řetězce neomezuje systém, je nejjednodušší metodou přidělování paměti načtení požadované velikosti zadáním hodnoty NULL pro *lpotm* při prvním volání funkce `GetOutlineTextMetrics`.
+Struktura [OUTLINETEXTMETRIC](/windows/win32/api/wingdi/ns-wingdi-outlinetextmetricw) obsahuje většinu informací o metrikách písma poskytovaných ve formátu TrueType, včetně struktury [TEXTMETRIC.](/windows/win32/api/wingdi/ns-wingdi-textmetricw) Poslední čtyři členy `OUTLINETEXTMETRIC` struktury jsou ukazatele na řetězce. Aplikace by měly přidělit místo pro tyto řetězce kromě místa potřebného pro ostatní členy. Vzhledem k tomu, že neexistuje žádný systémem uložený limit velikosti řetězců, nejjednodušší metodou pro přidělení paměti je načíst požadovanou `GetOutlineTextMetrics` velikost zadáním null pro *lpotm* v prvním volání funkce.
 
-##  <a name="getoutputcharwidth"></a>CDC:: GetOutputCharWidth
+## <a name="cdcgetoutputcharwidth"></a><a name="getoutputcharwidth"></a>CDC::GetOutputCharWidth
 
-Používá kontext výstupního zařízení `m_hDC`a načítá šířky jednotlivých znaků v po sobě jdoucích skupinách znaků od aktuálního písma.
+Použije kontext `m_hDC`výstupního zařízení a načte šířky jednotlivých znaků v po sobě jdoucí skupině znaků z aktuálního písma.
 
 ```
 BOOL GetOutputCharWidth(
@@ -3381,13 +3381,13 @@ BOOL GetOutputCharWidth(
 ### <a name="parameters"></a>Parametry
 
 *nFirstChar*<br/>
-Určuje první znak v po sobě jdoucí skupinu znaků v aktuálním písmu.
+Určuje první znak v po sobě jdoucí skupině znaků v aktuálním písmu.
 
 *nLastChar*<br/>
-Určuje poslední znak v po sobě jdoucí skupinu znaků v aktuálním písmu.
+Určuje poslední znak v po sobě jdoucí skupině znaků v aktuálním písmu.
 
 *lpBuffer*<br/>
-Odkazuje na vyrovnávací paměť, která získá hodnoty šířky pro po sobě jdoucí skupinu znaků v aktuálním písmu.
+Odkazuje na vyrovnávací paměť, která obdrží hodnoty šířky pro po sobě jdoucí skupinu znaků v aktuálním písmu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -3395,15 +3395,15 @@ Nenulové, pokud je funkce úspěšná; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Například pokud *nFirstChar* identifikuje písmeno "a" a *nLastChar* označuje písmeno "z", funkce načte šířky všech malých písmen.
+Například pokud *nFirstChar* identifikuje písmeno 'a' a *nLastChar* identifikuje písmeno 'z', funkce načte šířky všech malých písmen.
 
-Funkce ukládá hodnoty do vyrovnávací paměti, na kterou odkazuje *lpBuffer*. Tato vyrovnávací paměť musí být dostatečně velká pro udržení všech šířek; To znamená, že v uvedeném příkladu musí být alespoň 26 záznamů.
+Funkce ukládá hodnoty ve vyrovnávací paměti, na kterou poukazuje *lpBuffer*. Tato vyrovnávací paměť musí být dostatečně velká, aby uchovávala všechny šířky; to znamená, že v uvedeném příkladu musí být alespoň 26 položek.
 
-Pokud znak v po sobě jdoucích skupinách znaků neexistuje v konkrétním písmu, bude mu přiřazena hodnota šířky výchozího znaku.
+Pokud znak v po sobě jdoucí skupině znaků neexistuje v určitém písmu, bude mu přiřazena hodnota šířky výchozího znaku.
 
-##  <a name="getoutputtabbedtextextent"></a>CDC:: GetOutputTabbedTextExtent
+## <a name="cdcgetoutputtabbedtextextent"></a><a name="getoutputtabbedtextextent"></a>CDC::GetOutputTabbedTextExtent
 
-Zavolejte tuto členskou funkci pro výpočet šířky a výšky řetězce znaků pomocí [m_hDC](#m_hdc), kontextu výstupního zařízení.
+Volání této členské funkce pro výpočet šířky a výšky řetězce znaků pomocí [m_hDC](#m_hdc), kontextu výstupního zařízení.
 
 ```
 CSize GetOutputTabbedTextExtent(
@@ -3421,37 +3421,37 @@ CSize GetOutputTabbedTextExtent(
 ### <a name="parameters"></a>Parametry
 
 *lpszString*<br/>
-Odkazuje na řetězec znaků, který se má měřit. Pro tento parametr můžete také předat objekt [CString](../../atl-mfc-shared/reference/cstringt-class.md) .
+Odkazuje na řetězec znaků, který se má měřit. Můžete také předat [CString](../../atl-mfc-shared/reference/cstringt-class.md) objekt pro tento parametr.
 
 *nCount*<br/>
-Určuje [délku řetězce,](/windows/win32/gdi/specifying-length-of-text-output-string) na který odkazuje *lpszString*.
+Určuje [délku řetězce,](/windows/win32/gdi/specifying-length-of-text-output-string) na který je odkazová hodnota *lpszString*.
 
-*nTabPositions*<br/>
-Určuje počet pozic zarážek tabulátorů v poli, na které odkazuje *lpnTabStopPositions*.
+*nZáložky*<br/>
+Určuje počet pozic zazastavení tabulátoru v poli, na které je odkazováno *lpnTabStopPositions*.
 
 *lpnTabStopPositions*<br/>
-Odkazuje na pole celých čísel obsahující pozice zarážky tabulátoru v logických jednotkách. Zarážky tabulátoru musí být seřazeny ve vzestupném pořadí; nejmenší hodnota x-Value by měla být první položka v poli. Zpětná ouška nejsou povolena.
+Odkazuje na pole celá čísla obsahující pozice stop tabulátoru v logických jednotkách. Zarážky tabulátoru musí být seřazeny ve vzestupném pořadí; nejmenší hodnota x by měla být první položkou v poli. Zpět karty nejsou povoleny.
 
-*str*<br/>
-Objekt `CString`, který obsahuje zadané znaky, které mají být měřeny.
+*Str*<br/>
+Objekt, `CString` který obsahuje zadané znaky, které mají být měřeny.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Rozměry řetězce (v logických jednotkách) v objektu [CSize](../../atl-mfc-shared/reference/csize-class.md) .
+Rozměry řetězce (v logických jednotkách) v objektu [CSize.](../../atl-mfc-shared/reference/csize-class.md)
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud řetězec obsahuje jeden nebo více znaků tabulátoru, Šířka řetězce je založena na zarážky tabulátoru určené parametrem *lpnTabStopPositions*. Funkce používá aktuálně vybrané písmo k výpočtu rozměrů řetězce.
+Pokud řetězec obsahuje jeden nebo více znaků tabulátoru, je šířka řetězce založena na zarazovacích zarážkách tabulátoru určených *lpnTabStopPositions*. Funkce používá aktuálně vybrané písmo k výpočtu rozměrů řetězce.
 
-Aktuální oblast oříznutí neposune šířku a výšku vrácenou funkcí `GetOutputTabbedTextExtent`.
+Aktuální oblast oříznutí neodsazení šířky a výšky `GetOutputTabbedTextExtent` vrácené funkcí.
 
-Vzhledem k tomu, že některá zařízení neumísťují znaky do polí regulárních buněk (to znamená, že prorovnávají znaky), součet rozsahů znaků v řetězci nesmí být roven rozsahu řetězce.
+Vzhledem k tomu, že některá zařízení neumisťují znaky do běžných polí buněk (to znamená, že jsou rovny znaky), součet rozsahů znaků v řetězci nemusí být roven rozsahu řetězce.
 
-Pokud je *nTabPositions* 0 a *lpnTabStopPositions* má hodnotu null, tabulátory se rozšíří na osm průměrných šířek znaků. Pokud je *nTabPositions* 1, zarážky tabulátoru budou odděleny vzdáleností určenou první hodnotou v poli, na kterou *lpnTabStopPositions* body. Pokud *lpnTabStopPositions* odkazuje na více než jednu hodnotu, je pro každou hodnotu v poli nastavena zarážka tabulátoru až do čísla určeného parametrem *nTabPositions*.
+Pokud *nTabPositions* je 0 a *lpnTabStopPositions* je NULL, karty jsou rozbaleny na osm průměrné šířky znaků. Pokud je *nTabPositions* 1, zarážky tabulátoru budou odděleny vzdáleností určenou první hodnotou v poli, na které *lpnTabStopPositions* boduje. Pokud *lpnTabStopPositions* odkazuje na více než jednu hodnotu, je pro každou hodnotu v poli nastavena zarážka tabulátoru, a to až do počtu určeného *nTabPositions*.
 
-##  <a name="getoutputtextextent"></a>CDC:: GetOutputTextExtent
+## <a name="cdcgetoutputtextextent"></a><a name="getoutputtextextent"></a>CDC::GetOutputTextExtent
 
-Tuto členskou funkci volejte, pokud chcete použít kontext výstupního zařízení, [m_hDC](#m_hdc)a vypočítat šířku a výšku řádku textu s použitím aktuálního písma.
+Volání této členské funkce použít kontext výstupního zařízení, [m_hDC](#m_hdc)a vypočítat šířku a výšku řádku textu pomocí aktuálnípísmo.
 
 ```
 CSize GetOutputTextExtent(
@@ -3464,27 +3464,27 @@ CSize GetOutputTextExtent(const CString& str) const;
 ### <a name="parameters"></a>Parametry
 
 *lpszString*<br/>
-Odkazuje na řetězec znaků. Pro tento parametr můžete také předat objekt [CString](../../atl-mfc-shared/reference/cstringt-class.md) .
+Odkazuje na řetězec znaků. Můžete také předat [CString](../../atl-mfc-shared/reference/cstringt-class.md) objekt pro tento parametr.
 
 *nCount*<br/>
-Určuje [délku řetězce,](/windows/win32/gdi/specifying-length-of-text-output-string) na který odkazuje *lpszString*.
+Určuje [délku řetězce,](/windows/win32/gdi/specifying-length-of-text-output-string) na který je odkazová hodnota *lpszString*.
 
-*str*<br/>
-Objekt `CString`, který obsahuje zadané znaky, které mají být měřeny.
+*Str*<br/>
+Objekt, `CString` který obsahuje zadané znaky, které mají být měřeny.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Rozměry řetězce (v logických jednotkách) vrácených v objektu [CSize](../../atl-mfc-shared/reference/csize-class.md) .
+Rozměry řetězce (v logických jednotkách) vrácené v objektu [CSize.](../../atl-mfc-shared/reference/csize-class.md)
 
 ### <a name="remarks"></a>Poznámky
 
 Aktuální oblast oříznutí nemá vliv na šířku a výšku vrácenou `GetOutputTextExtent`.
 
-Vzhledem k tomu, že některá zařízení neumísťují znaky do polí regulárních buněk (to znamená, že provádějí prokládání), součet rozsahů znaků v řetězci nesmí být roven rozsahu řetězce.
+Vzhledem k tomu, že některá zařízení neumisťují znaky do normálních polí buněk (tj. provádějí vyrovnání párů), nemusí být součet rozsahů znaků v řetězci roven rozsahu řetězce.
 
-##  <a name="getoutputtextmetrics"></a>CDC:: GetOutputTextMetrics
+## <a name="cdcgetoutputtextmetrics"></a><a name="getoutputtextmetrics"></a>CDC::GetOutputTextMetrics
 
-Načte metriky pro aktuální písmo pomocí `m_hDC`ho kontextu výstupního zařízení.
+Načte metriky pro aktuální `m_hDC`písmo pomocí kontextu výstupního zařízení.
 
 ```
 BOOL GetOutputTextMetrics(LPTEXTMETRIC lpMetrics) const;
@@ -3493,15 +3493,15 @@ BOOL GetOutputTextMetrics(LPTEXTMETRIC lpMetrics) const;
 ### <a name="parameters"></a>Parametry
 
 *lpMetrics*<br/>
-Odkazuje na strukturu [TEXTMETRIC](/windows/win32/api/wingdi/ns-wingdi-textmetricw) , která přijímá metriky.
+Odkazuje na strukturu [TEXTMETRIC,](/windows/win32/api/wingdi/ns-wingdi-textmetricw) která přijímá metriky.
 
 ### <a name="return-value"></a>Návratová hodnota
 
 Nenulové, pokud je funkce úspěšná; jinak 0.
 
-##  <a name="getpath"></a>CDC:: GetPath
+## <a name="cdcgetpath"></a><a name="getpath"></a>CDC::GetPath
 
-Načte souřadnice definující koncové body čar a řídicí body křivek nalezené v cestě, která je vybrána v kontextu zařízení.
+Načte souřadnice definující koncové body čar a řídicí body křivek nalezených v cestě vybrané do kontextu zařízení.
 
 ```
 int GetPath(
@@ -3513,41 +3513,41 @@ int GetPath(
 ### <a name="parameters"></a>Parametry
 
 *lpPoints*<br/>
-Odkazuje na pole datových struktur [bodů](/windows/win32/api/windef/ns-windef-point) nebo objektů `CPoint`, kde jsou umístěny koncové body řádků a řídicí body křivky.
+Odkazuje na pole [POINT](/windows/win32/api/windef/ns-windef-point) datových struktur `CPoint` POINT nebo objektů, kde jsou umístěny koncové body čáry a řídicí body křivky.
 
-*lpTypes*<br/>
-Odkazuje na pole bajtů, kde jsou umístěny typy vrcholu. Hodnoty jsou jedna z následujících hodnot:
+*lpTypy*<br/>
+Odkazuje na pole bajtů, kde jsou umístěny typy vrcholů. Hodnoty jsou jedny z následujících hodnot:
 
-- PT_MOVETO určuje, zda odpovídající bod v *lpPoints* spustí nesouvislý obrázek.
+- PT_MOVETO Určuje, že odpovídající bod v *lpPoints* spustí nesouvislý obrázek.
 
-- PT_LINETO určuje, zda předchozí bod a odpovídající bod v *lpPoints* jsou koncové body řádku.
+- PT_LINETO Určuje, že předchozí bod a odpovídající bod v *lpPoints* jsou koncové body čáry.
 
-- PT_BEZIERTO určuje, zda je odpovídajícím bodem v *lpPoints* řídicí bod nebo koncový bod pro křivku Bzier.
+- PT_BEZIERTO Určuje, že odpovídající bod v *lpPoints* je řídicí bod nebo koncový bod pro Bzierovu křivku.
 
-PT_BEZIERTO typy se vždy vyskytují v sadách tři. Bod v cestě bezprostředně před ním definuje počáteční bod pro křivku Bzier. První dva body PT_BEZIERTO jsou řídicí body a třetí PT_BEZIERTO bod je koncový bod (Pokud je pevně zakódovaný).
+PT_BEZIERTO typy se vždy vyskytují v sadách po třech. Bod v cestě bezprostředně před nimi definuje počáteční bod Bzierovy křivky. První dva body PT_BEZIERTO jsou kontrolní body a třetí PT_BEZIERTO bod je koncový bod (pokud je pevně zakódován).
 
-   Typ PT_LINETO nebo PT_BEZIERTO lze kombinovat s následujícím příznakem (pomocí bitového operátoru **nebo**), aby označoval, že odpovídajícím bodem je poslední bod na obrázku a zda má být obrázek uzavřen:
+   Typ PT_LINETO nebo PT_BEZIERTO lze kombinovat s následujícím příznakem (pomocí bitového operátoru **OR),** který označuje, že odpovídající bod je posledním bodem na obrázku a že by měl být údaj uzavřen:
 
-- PT_CLOSEFIGURE určuje, zda je obrázek automaticky zavřen po vykreslení odpovídající čáry nebo křivky. Obrázek je uzavřený kreslením čáry z řádku nebo koncového bodu křivky do bodu, který odpovídá poslednímu PT_MOVETO.
+- PT_CLOSEFIGURE Určuje, že se po nakreslivně automaticky zazavře po nakreslené odpovídající úsečce nebo křivce. Obrázek je uzavřen nakreslením čáry od koncového bodu úsecí nebo křivky k bodu odpovídajícímu poslední PT_MOVETO.
 
 *nCount*<br/>
-Určuje celkový počet datových struktur [bodů](/windows/win32/api/windef/ns-windef-point) , které mohou být umístěny v poli *lpPoints* . Tato hodnota musí být stejná jako počet bajtů, které mohou být umístěny v poli *lpTypes* .
+Určuje celkový počet datových struktur [POINT,](/windows/win32/api/windef/ns-windef-point) které mohou být umístěny v poli *lpPoints.* Tato hodnota musí být stejná jako počet bajtů, které mohou být umístěny v poli *lpTypes.*
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud je parametr *nCount* nenulový, je vyhodnocen počet bodů. Pokud je *nCount* 0, celkový počet bodů v cestě (a `GetPath` nezapisuje nic do vyrovnávací paměti). Pokud *nCount* je nenulové a je menší než počet bodů v cestě, návratová hodnota je-1.
+Pokud je parametr *nCount* nenulový, počet bodů uvedených. Pokud *nCount* je 0, celkový počet bodů `GetPath` v cestě (a zapíše nic do vyrovnávacích pamětí). Pokud *nCount* je nenulová a je menší než počet bodů v cestě, vrácená hodnota je -1.
 
 ### <a name="remarks"></a>Poznámky
 
-Kontext zařízení musí obsahovat uzavřenou cestu. Body cesty jsou vraceny v logických souřadnicích. Body jsou uloženy v cestě v souřadnicích zařízení, takže `GetPath` mění body z souřadnic zařízení na logické souřadnice pomocí inverzní hodnoty k aktuální transformaci. Členská funkce `FlattenPath` může být volána před `GetPath`, aby převedla všechny křivky v cestě na segmenty čar.
+Kontext zařízení musí obsahovat uzavřenou cestu. Body cesty jsou vráceny v logických souřadnicích. Body jsou uloženy v cestě v `GetPath` souřadnicích zařízení, takže změní body z souřadnic zařízení na logické souřadnice pomocí inverzní aktuální transformace. Členská `FlattenPath` funkce může `GetPath`být volána před , převést všechny křivky v cestě do úsečkových segmentů.
 
 ### <a name="example"></a>Příklad
 
-  Podívejte se na příklad pro [CDC:: BeginPath](#beginpath).
+  Viz příklad pro [CDC::BeginPath](#beginpath).
 
-##  <a name="getpixel"></a>CDC:: GetPixel
+## <a name="cdcgetpixel"></a><a name="getpixel"></a>CDC::GetPixel
 
-Načte hodnotu barvy RGB pixelu v bodě určeném *x* a *y*.
+Načte hodnotu barvy RGB obrazového bodu v bodě určeném *hodnotami x* a *y*.
 
 ```
 COLORREF GetPixel(
@@ -3559,30 +3559,30 @@ COLORREF GetPixel(POINT point) const;
 
 ### <a name="parameters"></a>Parametry
 
-*znak*<br/>
-Určuje logickou souřadnici x bodu, který se má prozkoumat.
+*X*<br/>
+Určuje logickou souřadnici x bodu, který má být zkontrolován.
 
-*požadované*<br/>
-Určuje logickou souřadnici y bodu, který se má prozkoumat.
+*Y*<br/>
+Určuje logickou souřadnici y bodu, který má být zkontrolován.
 
-*Vyberte*<br/>
-Určuje logické souřadnice x a y bodu, který se má prozkoumat.
+*Bod*<br/>
+Určuje logické souřadnice x a y bodu, který má být zkontrolován.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pro obě verze funkce se jedná o hodnotu barvy RGB pro barvu daného bodu. Je-1, pokud souřadnice neurčují bod v oblasti oříznutí.
+Pro obě verze funkce, hodnota barvy RGB pro barvu daného bodu. Je -1, pokud souřadnice neurčují bod v oblasti oříznutí.
 
 ### <a name="remarks"></a>Poznámky
 
-Bod musí být v oblasti oříznutí. Pokud bod není v oblasti oříznutí, funkce nemá žádný vliv a vrátí-1.
+Bod musí být v oblasti oříznutí. Pokud bod není v oblasti oříznutí, funkce nemá žádný vliv a vrátí -1.
 
-Ne všechna zařízení podporují funkci `GetPixel`. Další informace naleznete v tématu funkce RC_BITBLT rastru v rámci členské funkce [GetDeviceCaps](#getdevicecaps) .
+Ne všechna zařízení `GetPixel` podporují funkci. Další informace naleznete v RC_BITBLT rastrové funkce v rámci funkce člena [GetDeviceCaps.](#getdevicecaps)
 
-Členská funkce `GetPixel` má dva formuláře. První přebírá dvě hodnoty souřadnic. druhý má buď strukturu [bodu](/windows/win32/api/windef/ns-windef-point) , nebo objekt [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) .
+Členská `GetPixel` funkce má dva formuláře. První trvá dvě hodnoty souřadnic; druhý trvá buď [POINT](/windows/win32/api/windef/ns-windef-point) struktury nebo [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objektu.
 
-##  <a name="getpolyfillmode"></a>CDC:: GetPolyFillMode
+## <a name="cdcgetpolyfillmode"></a><a name="getpolyfillmode"></a>CDC::GetPolyFillMode
 
-Načte aktuální režim vyplňování mnohoúhelníku.
+Načte aktuální režim plnění polygonů.
 
 ```
 int GetPolyFillMode() const;
@@ -3590,15 +3590,15 @@ int GetPolyFillMode() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Aktuální režim vyplněný mnohoúhelníkem, ALTERNATIVou nebo VINUTÍm, pokud je funkce úspěšná.
+Aktuální režim naplněné polygonem, ALTERNATE nebo WINDING, pokud je funkce úspěšná.
 
 ### <a name="remarks"></a>Poznámky
 
-Popis režimů pro vyplňování mnohoúhelníku naleznete v tématu `SetPolyFillMode` členské funkce.
+Popis `SetPolyFillMode` režimů plnění polygonů naleznete v členské funkci.
 
-##  <a name="getrop2"></a>CDC:: GetROP2
+## <a name="cdcgetrop2"></a><a name="getrop2"></a>CDC::GetROP2
 
-Načte aktuální režim kreslení.
+Načte aktuální režim výkresu.
 
 ```
 int GetROP2() const;
@@ -3606,15 +3606,15 @@ int GetROP2() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Režim kreslení. Seznam hodnot režimu kreslení naleznete v tématu `SetROP2` členská funkce.
+Režim kreslení. Seznam hodnot režimu kreslení naleznete `SetROP2` v členské funkci.
 
 ### <a name="remarks"></a>Poznámky
 
-Režim kreslení určuje, jak jsou barvy pera a vnitřku vyplněných objektů kombinovány se barvou, která je již na zobrazovací ploše.
+Režim kreslení určuje, jak se barvy pera a vnitřek vyplněných objektů kombinují s barvou, která je již na povrchu zobrazení.
 
-##  <a name="getsafehdc"></a>CDC:: GetSafeHdc
+## <a name="cdcgetsafehdc"></a><a name="getsafehdc"></a>CDC::GetSafeHdc
 
-Voláním této členské funkce získáte [m_hDC](#m_hdc)kontext výstupního zařízení.
+Volání této členské funkce získat [m_hDC](#m_hdc), kontextu výstupního zařízení.
 
 ```
 HDC GetSafeHdc() const;
@@ -3626,11 +3626,11 @@ Popisovač kontextu zařízení.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce funguje také s nulovými ukazateli.
+Tato členská funkce také pracuje s nulovými ukazateli.
 
-##  <a name="getstretchbltmode"></a>CDC:: GetStretchBltMode
+## <a name="cdcgetstretchbltmode"></a><a name="getstretchbltmode"></a>CDC::GetStretchBltMode
 
-Načte aktuální režim roztažení do rastrového obrázku.
+Načte aktuální režim roztahování bitmapy.
 
 ```
 int GetStretchBltMode() const;
@@ -3638,17 +3638,17 @@ int GetStretchBltMode() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Návratová hodnota určuje aktuální režim roztažení do rastrového obrázku – STRETCH_ANDSCANS, STRETCH_DELETESCANS nebo STRETCH_ORSCANS – Pokud je funkce úspěšná.
+Vrácená hodnota určuje aktuální režim roztahování bitmapy – STRETCH_ANDSCANS, STRETCH_DELETESCANS nebo STRETCH_ORSCANS – pokud je funkce úspěšná.
 
 ### <a name="remarks"></a>Poznámky
 
-Režim rastrování Bitmap definuje způsob odebrání informací z rastrových obrázků, které jsou roztaženy nebo komprimovány pomocí členské funkce `StretchBlt`.
+Režim roztahování bitmapy definuje, jak jsou informace odstraněny z bitmap, `StretchBlt` které jsou roztaženy nebo komprimovány členovou funkcí.
 
-Režimy STRETCH_ANDSCANS a STRETCH_ORSCANS se obvykle používají k zachování pixelů na pozadí v monochromatických rastrových obrázkůch. Režim STRETCH_DELETESCANS se obvykle používá k zachování barvy v barevných rastrech.
+Režimy STRETCH_ANDSCANS a STRETCH_ORSCANS se obvykle používají k zachování obrazových bodů popředí v monochromatických rastrcích. Režim STRETCH_DELETESCANS se obvykle používá k zachování barev v barevných bitmapách.
 
-##  <a name="gettabbedtextextent"></a>CDC:: GetTabbedTextExtent
+## <a name="cdcgettabbedtextextent"></a><a name="gettabbedtextextent"></a>CDC::GetTabbedTextExtent
 
-Volejte tuto členskou funkci pro výpočet šířky a výšky řetězce znaků pomocí [m_hAttribDC](#m_hattribdc), kontext zařízení atributu.
+Volání této členské funkce pro výpočet šířky a výšky řetězce znaků pomocí [m_hAttribDC](#m_hattribdc), kontext zařízení atribut.
 
 ```
 CSize GetTabbedTextExtent(
@@ -3666,35 +3666,35 @@ CSize GetTabbedTextExtent(
 ### <a name="parameters"></a>Parametry
 
 *lpszString*<br/>
-Odkazuje na řetězec znaků. Pro tento parametr můžete také předat objekt [CString](../../atl-mfc-shared/reference/cstringt-class.md) .
+Odkazuje na řetězec znaků. Můžete také předat [CString](../../atl-mfc-shared/reference/cstringt-class.md) objekt pro tento parametr.
 
 *nCount*<br/>
-Určuje [délku řetězce,](/windows/win32/gdi/specifying-length-of-text-output-string) na který odkazuje *lpszString*.
+Určuje [délku řetězce,](/windows/win32/gdi/specifying-length-of-text-output-string) na který je odkazová hodnota *lpszString*.
 
-*nTabPositions*<br/>
-Určuje počet pozic zarážek tabulátorů v poli, na které odkazuje *lpnTabStopPositions*.
+*nZáložky*<br/>
+Určuje počet pozic zazastavení tabulátoru v poli, na které je odkazováno *lpnTabStopPositions*.
 
 *lpnTabStopPositions*<br/>
-Odkazuje na pole celých čísel obsahující pozice zarážky tabulátoru v logických jednotkách. Zarážky tabulátoru musí být seřazeny ve vzestupném pořadí; nejmenší hodnota x-Value by měla být první položka v poli. Zpětná ouška nejsou povolena.
+Odkazuje na pole celá čísla obsahující pozice stop tabulátoru v logických jednotkách. Zarážky tabulátoru musí být seřazeny ve vzestupném pořadí; nejmenší hodnota x by měla být první položkou v poli. Zpět karty nejsou povoleny.
 
-*str*<br/>
-Objekt `CString`, který obsahuje zadané znaky, které mají být vykresleny.
+*Str*<br/>
+Objekt, `CString` který obsahuje zadané znaky, které mají být nakresleny.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Rozměry řetězce (v logických jednotkách) v objektu [CSize](../../atl-mfc-shared/reference/csize-class.md) .
+Rozměry řetězce (v logických jednotkách) v objektu [CSize.](../../atl-mfc-shared/reference/csize-class.md)
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud řetězec obsahuje jeden nebo více znaků tabulátoru, Šířka řetězce je založena na zarážky tabulátoru určené parametrem *lpnTabStopPositions*. Funkce používá aktuálně vybrané písmo k výpočtu rozměrů řetězce.
+Pokud řetězec obsahuje jeden nebo více znaků tabulátoru, je šířka řetězce založena na zarazovacích zarážkách tabulátoru určených *lpnTabStopPositions*. Funkce používá aktuálně vybrané písmo k výpočtu rozměrů řetězce.
 
-Aktuální oblast oříznutí neposune šířku a výšku vrácenou funkcí `GetTabbedTextExtent`.
+Aktuální oblast oříznutí neodsazení šířky a výšky `GetTabbedTextExtent` vrácené funkcí.
 
-Vzhledem k tomu, že některá zařízení neumísťují znaky do polí regulárních buněk (to znamená, že prorovnávají znaky), součet rozsahů znaků v řetězci nesmí být roven rozsahu řetězce.
+Vzhledem k tomu, že některá zařízení neumisťují znaky do běžných polí buněk (to znamená, že jsou rovny znaky), součet rozsahů znaků v řetězci nemusí být roven rozsahu řetězce.
 
-Pokud je *nTabPositions* 0 a *lpnTabStopPositions* má hodnotu null, tabulátory se rozšíří na osm znaků, které mají průměrnou šířku. Pokud je *nTabPositions* 1, zarážky tabulátoru budou odděleny vzdáleností určenou první hodnotou v poli, na kterou *lpnTabStopPositions* body. Pokud *lpnTabStopPositions* odkazuje na více než jednu hodnotu, je pro každou hodnotu v poli nastavena zarážka tabulátoru až do čísla určeného parametrem *nTabPositions*.
+Pokud *nTabPositions* je 0 a *lpnTabStopPositions* je NULL, karty jsou rozbaleny na osmkrát průměrnou šířku znaku. Pokud je *nTabPositions* 1, zarážky tabulátoru budou odděleny vzdáleností určenou první hodnotou v poli, na které *lpnTabStopPositions* boduje. Pokud *lpnTabStopPositions* odkazuje na více než jednu hodnotu, je pro každou hodnotu v poli nastavena zarážka tabulátoru, a to až do počtu určeného *nTabPositions*.
 
-##  <a name="gettextalign"></a>CDC:: gettextalign
+## <a name="cdcgettextalign"></a><a name="gettextalign"></a>CDC::GetTextAlign
 
 Načte stav příznaků zarovnání textu pro kontext zařízení.
 
@@ -3706,41 +3706,41 @@ UINT GetTextAlign() const;
 
 Stav příznaků zarovnání textu. Vrácená hodnota je jedna nebo více z následujících hodnot:
 
-- TA_BASELINE určuje zarovnání osy x a směrného plánu zvoleného písma v ohraničujícím obdélníku.
+- TA_BASELINE Určuje zarovnání osy x a účaří vybraného písma v ohraničujícím obdélníku.
 
-- TA_BOTTOM určuje zarovnání osy x a dolní meze ohraničujícího obdélníku.
+- TA_BOTTOM Určuje zarovnání osy x a dolníčásti ohraničovacího obdélníku.
 
-- TA_CENTER určuje zarovnání osy y a středu ohraničujícího obdélníku.
+- TA_CENTER Určuje zarovnání osy y a středu ohraničovacího obdélníku.
 
-- TA_LEFT určuje zarovnání osy y a levé strany ohraničujícího obdélníku.
+- TA_LEFT Určuje zarovnání osy y a levé strany ohraničovacího obdélníku.
 
-- TA_NOUPDATECP určuje, zda není aktuální pozice aktualizována.
+- TA_NOUPDATECP Určuje, že aktuální pozice není aktualizována.
 
-- TA_RIGHT určuje zarovnání osy y a pravé strany ohraničovacího rámečku.
+- TA_RIGHT Určuje zarovnání osy y a pravé strany ohraničovacího obdélníku.
 
-- TA_TOP určuje zarovnání osy x a horní části ohraničujícího obdélníku.
+- TA_TOP Určuje zarovnání osy x a horní části ohraničovacího obdélníku.
 
-- TA_UPDATECP určuje, zda je aktuální pozice aktualizována.
+- TA_UPDATECP Určuje, že aktuální pozice je aktualizována.
 
 ### <a name="remarks"></a>Poznámky
 
-Příznaky zarovnání textu určují způsob, jakým členské funkce `TextOut` a `ExtTextOut` zarovnají textový řetězec ve vztahu k počátečnímu bodu řetězce. Příznaky zarovnání textu nejsou nutně bitové příznaky a můžou být rovny 0. Chcete-li otestovat, zda je nastaven příznak, aplikace by měla postupovat podle následujících kroků:
+Příznaky zarovnání textu `TextOut` určují, jak `ExtTextOut` členské funkce zarovnávají řetězec textu vzhledem k počátečnímu bodu řetězce. Příznaky zarovnání textu nejsou nutně jednobitové příznaky a mohou být rovny 0. Chcete-li otestovat, zda je nastaven příznak, aplikace by měla postupovat takto:
 
-1. Použijte bitový operátor OR na příznak a jeho související příznaky seskupené následujícím způsobem:
+1. Použijte bitový operátor OR na příznak a související příznaky seskupené takto:
 
-    - TA_LEFT, TA_CENTER a TA_RIGHT
+   - TA_LEFT, TA_CENTER a TA_RIGHT
 
-    - TA_BASELINE, TA_BOTTOM a TA_TOP
+   - TA_BASELINE, TA_BOTTOM a TA_TOP
 
-    - TA_NOUPDATECP a TA_UPDATECP
+   - TA_NOUPDATECP a TA_UPDATECP
 
-1. Použijte bitový operátor AND na výsledek a návratovou hodnotu `GetTextAlign`.
+1. Použijte bitový operátor AND na výsledek a `GetTextAlign`vrácenou hodnotu .
 
-1. Otestujte rovnost tohoto výsledku a příznaku.
+1. Test rovnosti tohoto výsledku a příznak.
 
-##  <a name="gettextcharacterextra"></a>CDC:: GetTextCharacterExtra
+## <a name="cdcgettextcharacterextra"></a><a name="gettextcharacterextra"></a>CDC::GetTextCharacterExtra
 
-Načte aktuální nastavení pro velikost rozestupu znaků.
+Načte aktuální nastavení pro velikost mezer mezi znaky.
 
 ```
 int GetTextCharacterExtra() const;
@@ -3748,15 +3748,15 @@ int GetTextCharacterExtra() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Velikost mezery mezi znaky.
+Velikost mezer mezi znaky.
 
 ### <a name="remarks"></a>Poznámky
 
-GDI při zápisu řádku textu do kontextu zařízení přidá toto řádkování do každého znaku, včetně znaků přerušení.
+GDI přidá toto mezery ke každému znaku, včetně znaků přerušení, když zapíše řádek textu do kontextu zařízení.
 
-Výchozí hodnota pro velikost meziznaku mezery je 0.
+Výchozí hodnota pro velikost mezer mezi znaky je 0.
 
-##  <a name="gettextcolor"></a>CDC:: GetTextColor
+## <a name="cdcgettextcolor"></a><a name="gettextcolor"></a>CDC::GetTextColor
 
 Načte aktuální barvu textu.
 
@@ -3770,11 +3770,11 @@ Aktuální barva textu jako hodnota barvy RGB.
 
 ### <a name="remarks"></a>Poznámky
 
-Barva textu je barva popředí znaků vykreslených pomocí [textových](#textout)funkcí rozhraní GDI pro výstup textu, [ExtTextOut](#exttextout)a [TabbedTextOut](#tabbedtextout).
+Barva textu je barva popředí znaků nakreslených pomocí členských funkcí výstupu textu GDI [TextOut](#textout), [ExtTextOut](#exttextout)a [TabbedTextOut](#tabbedtextout).
 
-##  <a name="gettextextent"></a>CDC:: GetTextExtent
+## <a name="cdcgettextextent"></a><a name="gettextextent"></a>CDC::GetTextExtent
 
-Tuto členskou funkci volejte pro výpočet šířky a výšky řádku textu pomocí aktuálního písma k určení dimenzí.
+Volání této členské funkce pro výpočet šířky a výšky řádku textu pomocí aktuálního písma k určení rozměrů.
 
 ```
 CSize GetTextExtent(
@@ -3787,31 +3787,31 @@ CSize GetTextExtent(const CString& str) const;
 ### <a name="parameters"></a>Parametry
 
 *lpszString*<br/>
-Odkazuje na řetězec znaků. Pro tento parametr můžete také předat objekt [CString](../../atl-mfc-shared/reference/cstringt-class.md) .
+Odkazuje na řetězec znaků. Můžete také předat [CString](../../atl-mfc-shared/reference/cstringt-class.md) objekt pro tento parametr.
 
 *nCount*<br/>
 Určuje počet znaků v řetězci.
 
-*str*<br/>
-Objekt `CString`, který obsahuje zadané znaky.
+*Str*<br/>
+Objekt, `CString` který obsahuje zadané znaky.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Rozměry řetězce (v logických jednotkách) v objektu [CSize](../../atl-mfc-shared/reference/csize-class.md) .
+Rozměry řetězce (v logických jednotkách) v objektu [CSize.](../../atl-mfc-shared/reference/csize-class.md)
 
 ### <a name="remarks"></a>Poznámky
 
-Informace jsou načteny z [m_hAttribDC](#m_hattribdc), atribut kontext zařízení.
+Informace jsou načteny z [m_hAttribDC](#m_hattribdc), kontextu zařízení atribut.
 
-Ve výchozím nastavení `GetTextExtent` předpokládá, že text, pro který je dimenze načte, je nastaven podél vodorovné čáry (to znamená, že je řídicí znak 0). Pokud vytvoříte písmo určující nenulovou řídicí sekvenci, je nutné explicitně převést úhel textu, aby se získaly rozměry řetězce.
+Ve výchozím `GetTextExtent` nastavení předpokládá, že text, pro který načte kótu, je nastaven podél vodorovné čáry (to znamená, že escapement je 0). Pokud vytvoříte písmo určující nenulový únik, musíte převést úhel textu explicitně získat rozměry řetězce.
 
 Aktuální oblast oříznutí nemá vliv na šířku a výšku vrácenou `GetTextExtent`.
 
-Vzhledem k tomu, že některá zařízení neumísťují znaky do polí regulárních buněk (to znamená, že provádějí prokládání), součet rozsahů znaků v řetězci nesmí být roven rozsahu řetězce.
+Vzhledem k tomu, že některá zařízení neumisťují znaky do normálních polí buněk (tj. provádějí vyrovnání párů), nemusí být součet rozsahů znaků v řetězci roven rozsahu řetězce.
 
-##  <a name="gettextextentexpointi"></a>CDC:: GetTextExtentExPointI
+## <a name="cdcgettextextentexpointi"></a><a name="gettextextentexpointi"></a>CDC::GetTextExtentExpointI
 
-Načte počet znaků v zadaném řetězci, které se vejdou do určeného místa, a vyplní pole textem pro každý z těchto znaků.
+Načte počet znaků v zadaném řetězci, který se vejde do zadaného prostoru a vyplní pole s rozsahem textu pro každý z těchto znaků.
 
 ```
 BOOL GetTextExtentExPointI(
@@ -3828,20 +3828,20 @@ BOOL GetTextExtentExPointI(
 *pgiIn*<br/>
 Ukazatel na pole indexů glyfů, pro které mají být načteny rozsahy.
 
-*rozhraní*<br/>
-Určuje počet glyfů v poli, na které ukazuje *pgiIn*.
+*Cgi*<br/>
+Určuje počet glyfů v poli, na které se ukazuje *pgiIn*.
 
 *nMaxExtent*<br/>
-Určuje maximální povolenou šířku formátovaného řetězce v logických jednotkách.
+Určuje maximální přípustnou šířku formátovaného řetězce v logických jednotkách.
 
 *lpnFit*<br/>
-Ukazatel na celé číslo, který přijímá počet maximálních znaků, které se vejdou do prostoru určeného hodnotou *nMaxExtent*. Pokud má *lpnFit* hodnotu null, *nMaxExtent* se ignoruje.
+Ukazatel na celé číslo, které obdrží počet maximální počet znaků, které se vejdou do místa určeného *nMaxExtent*. Pokud je *lpnFit* NULL, *nMaxExtent* je ignorován.
 
 *alpDx*<br/>
-Ukazatel na pole celých čísel, která obdrží částečné rozsahy glyfů. Každý prvek v poli poskytuje vzdálenost, v logických jednotkách, mezi začátkem pole indexů glyfů a jedním z glyfů, které se vejdou do prostoru určeného parametrem *nMaxExtent*. I když by toto pole mělo mít alespoň tolik prvků jako glyfy, které jsou určeny *rozhraním CGI*, funkce vyplní pole rozsahy pouze pro tolik indexů glyfů, jak jsou určeny funkcí *lpnFit*. Pokud má *lpnDx* hodnotu null, funkce nevypočítá částečné řetězcové šířky.
+Ukazatel na pole celá čísla, která přijímá částečné glyfy rozsahy. Každý prvek v poli udává vzdálenost v logických jednotkách mezi začátkem pole indexů glyfů a jedním z glyfů, který se vejde do prostoru určeného *nMaxExtent*. Přestože toto pole by mělo mít alespoň tolik prvků jako glyfové indexy určené *cgi*, funkce vyplní pole rozsahy pouze pro tolik indexů glyfů, kolik je určeno *lpnFit*. Pokud *lpnDx* je NULL, funkce nepočítá částečné šířky řetězce.
 
-*lpSize*<br/>
-Ukazatel na [Velikost](/windows/win32/api/windef/ns-windef-size) struktury, která přijímá rozměry pole indexů glyfů v logických jednotkách. Tato hodnota nemůže být NULL.
+*lpVelikost*<br/>
+Ukazatel na strukturu [SIZE,](/windows/win32/api/windef/ns-windef-size) která přijímá rozměry pole indexů glyfů v logických jednotkách. Tato hodnota nemůže být null.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -3849,9 +3849,9 @@ Nenulové, pokud je funkce úspěšná; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce emuluje funkčnost funkce [GetTextExtentExPointI](/windows/win32/api/wingdi/nf-wingdi-gettextextentexpointi), jak je popsáno v Windows SDK.
+Tato členská funkce emuluje funkce funkce [GetTextExtentExPointI](/windows/win32/api/wingdi/nf-wingdi-gettextextentexpointi), jak je popsáno v sadě Windows SDK.
 
-##  <a name="gettextextentpointi"></a>CDC:: GetTextExtentPointI
+## <a name="cdcgettextextentpointi"></a><a name="gettextextentpointi"></a>CDC::GetTextExtentpointI
 
 Načte šířku a výšku zadaného pole indexů glyfů.
 
@@ -3867,11 +3867,11 @@ BOOL GetTextExtentPointI(
 *pgiIn*<br/>
 Ukazatel na pole indexů glyfů, pro které mají být načteny rozsahy.
 
-*rozhraní*<br/>
-Určuje počet glyfů v poli, na které ukazuje *pgiIn*.
+*Cgi*<br/>
+Určuje počet glyfů v poli, na které se ukazuje *pgiIn*.
 
-*lpSize*<br/>
-Ukazatel na [Velikost](/windows/win32/api/windef/ns-windef-size) struktury, která přijímá rozměry pole indexů glyfů v logických jednotkách. Tato hodnota nemůže být NULL.
+*lpVelikost*<br/>
+Ukazatel na strukturu [SIZE,](/windows/win32/api/windef/ns-windef-size) která přijímá rozměry pole indexů glyfů v logických jednotkách. Tato hodnota nemůže být null.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -3879,11 +3879,11 @@ Nenulové, pokud je funkce úspěšná; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce emuluje funkčnost funkce [GetTextExtentPointI](/windows/win32/api/wingdi/nf-wingdi-gettextextentpointi), jak je popsáno v Windows SDK.
+Tato členská funkce emuluje funkce funkce [GetTextExtentPointI](/windows/win32/api/wingdi/nf-wingdi-gettextextentpointi), jak je popsáno v sadě Windows SDK.
 
-##  <a name="gettextface"></a>CDC:: GetTextFace
+## <a name="cdcgettextface"></a><a name="gettextface"></a>CDC::GetTextFace
 
-Zavolejte tuto členskou funkci pro zkopírování názvu písma aktuálního písma do vyrovnávací paměti.
+Volání této členské funkce zkopírovat název řezu aktuálního písma do vyrovnávací paměti.
 
 ```
 int GetTextFace(
@@ -3896,25 +3896,25 @@ int GetTextFace(CString& rString) const;
 ### <a name="parameters"></a>Parametry
 
 *nCount*<br/>
-Určuje velikost vyrovnávací paměti (v bajtech). Pokud je název řezu delší než počet bajtů určený tímto parametrem, název se zkrátí.
+Určuje velikost vyrovnávací paměti (v bajtů). Pokud je název řezu písma delší než počet bajtů určených tímto parametrem, bude název zkrácen.
 
 *lpszFacename*<br/>
-Odkazuje na vyrovnávací paměť pro název řezu.
+Odkazuje na vyrovnávací paměť pro název písma.
 
 *rString*<br/>
-Odkaz na objekt [CString](../../atl-mfc-shared/reference/cstringt-class.md) .
+Odkaz na [CString](../../atl-mfc-shared/reference/cstringt-class.md) objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Počet bajtů zkopírovaných do vyrovnávací paměti, včetně ukončujícího znaku null. Pokud dojde k chybě, je 0.
+Počet bajtů zkopírovaných do vyrovnávací paměti, bez ukončujícího znaku null. Je 0, pokud dojde k chybě.
 
 ### <a name="remarks"></a>Poznámky
 
-Název řezu se zkopíruje jako řetězec zakončený hodnotou null.
+Název písma je zkopírován jako řetězec s ukončeným hodnotou null.
 
-##  <a name="gettextmetrics"></a>CDC:: GetTextMetrics
+## <a name="cdcgettextmetrics"></a><a name="gettextmetrics"></a>CDC::GetTextMetrics
 
-Načte metriky pro aktuální písmo pomocí kontextu zařízení s atributem.
+Načte metriky pro aktuální písmo pomocí kontextu atributu zařízení.
 
 ```
 BOOL GetTextMetrics(LPTEXTMETRIC lpMetrics) const;
@@ -3923,15 +3923,15 @@ BOOL GetTextMetrics(LPTEXTMETRIC lpMetrics) const;
 ### <a name="parameters"></a>Parametry
 
 *lpMetrics*<br/>
-Odkazuje na strukturu [TEXTMETRIC](/windows/win32/api/wingdi/ns-wingdi-textmetricw) , která přijímá metriky.
+Odkazuje na strukturu [TEXTMETRIC,](/windows/win32/api/wingdi/ns-wingdi-textmetricw) která přijímá metriky.
 
 ### <a name="return-value"></a>Návratová hodnota
 
 Nenulové, pokud je funkce úspěšná; jinak 0.
 
-##  <a name="getviewportext"></a>CDC:: GetViewportExt
+## <a name="cdcgetviewportext"></a><a name="getviewportext"></a>CDC::GetViewportExt
 
-Načte rozsahy x a y v zobrazení kontextu zařízení.
+Načte rozsahy x a y výřezu kontextu zařízení.
 
 ```
 CSize GetViewportExt() const;
@@ -3939,11 +3939,11 @@ CSize GetViewportExt() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Rozsahy x a y (v jednotkách zařízení) jako objekt `CSize`.
+Rozsahy x a y (v jednotkách `CSize` zařízení) jako objekt.
 
-##  <a name="getviewportorg"></a>CDC:: GetViewportOrg
+## <a name="cdcgetviewportorg"></a><a name="getviewportorg"></a>CDC::GetViewportOrg
 
-Načte souřadnice x a y počátku zobrazení přidruženého k kontextu zařízení.
+Načte souřadnice x a y počátku výřezu přidruženého k kontextu zařízení.
 
 ```
 CPoint GetViewportOrg() const;
@@ -3951,9 +3951,9 @@ CPoint GetViewportOrg() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Počátek zobrazení (v souřadnicích zařízení) jako objekt `CPoint`.
+Počátek výřezu (v souřadnicích zařízení) jako objektu. `CPoint`
 
-##  <a name="getwindow"></a>CDC:: GetWindow
+## <a name="cdcgetwindow"></a><a name="getwindow"></a>CDC::GetWindow
 
 Vrátí okno přidružené k kontextu zobrazovacího zařízení.
 
@@ -3963,13 +3963,13 @@ CWnd* GetWindow() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-V případě úspěchu ukazatel na objekt `CWnd`; jinak NULL.
+Ukazatel na `CWnd` objekt v případě úspěchu; jinak NULL.
 
 ### <a name="remarks"></a>Poznámky
 
-Toto je pokročilá funkce. Tato členská funkce například nemusí vracet okno zobrazení při tisku nebo v náhledu tisku. Vždycky vrátí okno spojené s výstupem. Do tohoto okna se nakreslí výstupní funkce, které používají daný řadič domény.
+Jedná se o pokročilou funkci. Tato členská funkce například nemusí vrátit okno zobrazení při tisku nebo v náhledu. Vždy vrátí okno přidružené k výstupu. Výstupní funkce, které používají dané DC čerpat do tohoto okna.
 
-##  <a name="getwindowext"></a>CDC:: GetWindowExt
+## <a name="cdcgetwindowext"></a><a name="getwindowext"></a>CDC::GetWindowExt
 
 Načte rozsahy x a y okna přidruženého k kontextu zařízení.
 
@@ -3979,11 +3979,11 @@ CSize GetWindowExt() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Rozsahy x a y (v logických jednotkách) jako objekt `CSize`.
+Rozsahy x a y (v logických `CSize` jednotkách) jako objekt.
 
-##  <a name="getwindoworg"></a>CDC:: GetWindowOrg
+## <a name="cdcgetwindoworg"></a><a name="getwindoworg"></a>CDC::GetWindowOrg
 
-Načte souřadnice x a y počátku okna přidruženého k kontextu zařízení.
+Načte souřadnice x a y původu okna přidruženého k kontextu zařízení.
 
 ```
 CPoint GetWindowOrg() const;
@@ -3991,11 +3991,11 @@ CPoint GetWindowOrg() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Počátek okna (v logických souřadnicích) jako objekt `CPoint`.
+Původ okna (v logických souřadnicích) jako objektu. `CPoint`
 
-##  <a name="getworldtransform"></a>CDC:: GetWorldTransform
+## <a name="cdcgetworldtransform"></a><a name="getworldtransform"></a>CDC::GetWorldTransformace
 
-Načte aktuální světový prostor na transformaci místa na stránce.
+Načte aktuální svět prostor pro transformaci prostor stránky.
 
 ```
 BOOL GetWorldTransform(XFORM& rXform) const;
@@ -4004,23 +4004,23 @@ BOOL GetWorldTransform(XFORM& rXform) const;
 ### <a name="parameters"></a>Parametry
 
 *rXform*<br/>
-Odkaz na strukturu [Xform –](/windows/win32/api/wingdi/ns-wingdi-xform) , která přijímá aktuální světový prostor pro transformaci místa na stránce.
+Odkaz na strukturu [XFORM,](/windows/win32/api/wingdi/ns-wingdi-xform) která přijímá aktuální svět prostor pro transformaci prostor stránky.
 
 ### <a name="return-value"></a>Návratová hodnota
 
 Vrátí nenulovou hodnotu při úspěchu.
 
-Vrátí 0 při selhání.
+Vrátí hodnotu 0 při selhání.
 
-Chcete-li získat rozšířené informace o chybě, volejte příkaz [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror).
+Chcete-li získat rozšířené informace o chybě, volejte [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda zabalí funkci GDI systému Windows [GetWorldTransform](/windows/win32/api/wingdi/nf-wingdi-getworldtransform).
+Tato metoda zabalí funkci Windows GDI [GetWorldTransform](/windows/win32/api/wingdi/nf-wingdi-getworldtransform).
 
-##  <a name="gradientfill"></a>CDC:: GradientFill
+## <a name="cdcgradientfill"></a><a name="gradientfill"></a>CDC::GradientFill
 
-Voláním této členské funkce naplníte struktury obdélníku a trojúhelníku barvou, která se hladce zesílí od jedné strany k druhé.
+Volání této členské funkce vyplnit obdélník a trojúhelník struktury s barvou, která hladce zmizí z jedné strany na druhou.
 
 ```
 BOOL GradientFill(
@@ -4033,32 +4033,32 @@ BOOL GradientFill(
 
 ### <a name="parameters"></a>Parametry
 
-*pVertices*<br/>
-Ukazatel na pole [TRIVERTEX](/windows/win32/api/wingdi/ns-wingdi-trivertex) struktury, které každá definuje vrchol trojúhelníku.
+*pVertice*<br/>
+Ukazatel na pole struktur [TRIVERTEX,](/windows/win32/api/wingdi/ns-wingdi-trivertex) které každý definuje vrchol trojúhelníku.
 
-*nVertices*<br/>
+*nVertice*<br/>
 Počet vrcholů.
 
 *pMesh*<br/>
-Pole struktur [GRADIENT_TRIANGLE](/windows/win32/api/wingdi/ns-wingdi-gradient_triangle) v režimu trojúhelníku nebo pole [GRADIENT_RECT](/windows/win32/api/wingdi/ns-wingdi-gradient_rect) struktury v režimu Rectangle.
+Pole [GRADIENT_TRIANGLE](/windows/win32/api/wingdi/ns-wingdi-gradient_triangle) struktur v trojúhelníkovém režimu nebo pole [GRADIENT_RECT](/windows/win32/api/wingdi/ns-wingdi-gradient_rect) struktur v obdélníkovém režimu.
 
 *nMeshElements*<br/>
-Počet elementů (trojúhelníky nebo obdélníky) v *pMesh*.
+Počet prvků (trojúhelníky nebo obdélníky) v *pMesh*.
 
 *dwMode*<br/>
-Určuje režim přechodu výplně. Seznam možných hodnot naleznete v tématu [GradientFill](/windows/win32/api/wingdi/nf-wingdi-gradientfill) v Windows SDK.
+Určuje režim výplně přechodem. Seznam možných hodnot naleznete v tématu [GradientFill](/windows/win32/api/wingdi/nf-wingdi-gradientfill) v sadě Windows SDK.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-TRUE v případě úspěchu; v opačném případě FALSE.
+PRAVDA v případě úspěchu; jinak FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace najdete v tématu `GradientFill` v Windows SDK.
+Další informace naleznete `GradientFill` v sadě Windows SDK.
 
-##  <a name="graystring"></a>CDC:: GrayString
+## <a name="cdcgraystring"></a><a name="graystring"></a>CDC::Štěňata
 
-Nakreslí neaktivní (šedý) text na dané místo zápisem textu do rastrové paměti, ztlumeným rastrovým obrázkem a zkopírováním rastrového obrázku do zobrazení.
+Nakreslí šedě (šedý) text na dané místo zápisem textu do paměťové bitmapy, ztlumením bitmapy a následným zkopírováním bitmapy do zobrazení.
 
 ```
 virtual BOOL GrayString(
@@ -4077,51 +4077,51 @@ virtual BOOL GrayString(
 
 ### <a name="parameters"></a>Parametry
 
-*pBrush*<br/>
-Určuje štětec, který se má použít k ztlumení (šedé).
+*pŠtětec*<br/>
+Identifikuje stopu, která má být použita pro stmívání (šedivění).
 
-*lpfnOutput*<br/>
-Určuje proceduru instance funkce zpětného volání dodaného aplikací, která nakreslí řetězec. Další informace najdete v popisu [funkce zpětného volání](callback-functions-used-by-mfc.md#graystring)Windows `OutputFunc`. Pokud má tento parametr hodnotu NULL, systém použije funkci Windows `TextOut` k nakreslení řetězce a předpokládá se, že *lpData* je dlouhý ukazatel na řetězec znaků, který má být výstup.
+*lpfnVýstup*<br/>
+Určuje adresu instance procedury funkce zpětného volání dodané aplikací, která nakreslí řetězec. Další informace naleznete v popisu `OutputFunc` [funkce zpětného volání](callback-functions-used-by-mfc.md#graystring)systému Windows . Pokud je tento parametr NULL, `TextOut` systém používá funkci systému Windows k nakreslení řetězce a *lpData* se předpokládá, že je dlouhý ukazatel na řetězec znaků, který má být výstupem.
 
 *lpData*<br/>
-Určuje úplně ukazatel na data, která mají být předána do výstupní funkce. Pokud má *lpfnOutput* hodnotu null, musí být *lpData* typu Long ukazatel na řetězec, který má být výstupem.
+Určuje daleko ukazatel na data, která mají být předána výstupní funkci. Pokud *lpfnOutput* je NULL, *lpData* musí být dlouhý ukazatel na řetězec, který má být výstup.
 
 *nCount*<br/>
-Určuje počet znaků, které mají být výstupem. Pokud je tento parametr 0, `GrayString` vypočítá délku řetězce (za předpokladu, že *lpData* je ukazatel na řetězec). Pokud má *nCount* hodnotu 1 a funkce, na kterou odkazuje *lpfnOutput* , vrátí hodnotu 0, obrázek se zobrazí, ale není ztlumený.
+Určuje počet znaků, které mají být output. Pokud je tento `GrayString` parametr 0, vypočítá délku řetězce (za předpokladu, že *lpData* je ukazatel na řetězec). Pokud *nCount* je 1 a funkce na odkaz podle *lpfnOutput* vrátí 0, obrázek je zobrazen, ale není ztlumený.
 
-*znak*<br/>
-Určuje logickou souřadnici x počáteční pozice obdélníku, která obklopuje řetězec.
+*X*<br/>
+Určuje logickou souřadnici x počáteční pozice obdélníku, který řetězec obklopuje.
 
-*požadované*<br/>
-Určuje logickou souřadnici y počáteční pozice obdélníku, která obklopuje řetězec.
+*Y*<br/>
+Určuje logickou souřadnici y počáteční pozice obdélníku, který řetězec obklopuje.
 
-*nWidth*<br/>
-Určuje šířku (v logických jednotkách) obdélníku, který obklopuje řetězec. Pokud je *nWidth* 0, `GrayString` vypočítá šířku oblasti, za předpokladu, že *lpData* je ukazatel na řetězec.
+*nŠířka*<br/>
+Určuje šířku (v logických jednotkách) obdélníku, který řetězec obklopuje. Pokud *nWidth* je `GrayString` 0, vypočítá šířku oblasti, za předpokladu, *lpData* je ukazatel na řetězec.
 
-*nHeight*<br/>
-Určuje výšku obdélníku, který obklopuje řetězec (v logických jednotkách). Pokud je *nHeight* 0, `GrayString` vypočítá výšku oblasti, za předpokladu, že *lpData* je ukazatel na řetězec.
+*nVýška*<br/>
+Určuje výšku (v logických jednotkách) obdélníku, který řetězec obklopuje. Pokud *nHeight* je `GrayString` 0, vypočítá výšku oblasti, za předpokladu, *lpData* je ukazatel na řetězec.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je řetězec vykreslený, nebo 0, pokud funkce `TextOut` nebo funkce výstupu dodaného aplikací vrátila hodnotu 0 nebo pokud není dostatek paměti k vytvoření rastrové paměti pro funkci Dimming.
+Nenulová, pokud je řetězec nakreslena, nebo 0, pokud `TextOut` buď funkce nebo aplikace dodané výstupní funkce vrátil 0, nebo pokud nebyldostatek paměti k vytvoření paměti rastrový obrázek pro stmívání.
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce ztlumí text bez ohledu na vybraný štětec a pozadí. Členská funkce `GrayString` používá aktuálně vybrané písmo. Před použitím této funkce je nutné vybrat režim mapování MM_TEXT.
+Funkce ztlumí text bez ohledu na vybranou stopu a pozadí. Členská `GrayString` funkce používá aktuálně vybrané písmo. Před použitím této funkce je nutné vybrat MM_TEXT režimmapování.
 
-Aplikace může kreslit DIMM (šedě) řetězce na zařízeních, která podporují plnou šedou barvu bez volání `GrayString` členské funkce. Systémová barva COLOR_GRAYTEXT je jednobarevné šedá systémová barva použitá k vykreslování neaktivního textu. Aplikace může zavolat funkci Windows `GetSysColor`, aby načetla hodnotu barvy COLOR_GRAYTEXT. Pokud je barva jiná než 0 (černá), může aplikace zavolat členskou funkci `SetTextColor` pro nastavení barvy textu na hodnotu barvy a následně přímo nakreslit řetězec. Pokud je načtená barva černá, aplikace musí volat `GrayString` k ztlumení (šedé) textu.
+Aplikace může kreslit šedě (šedě) řetězce na zařízeních, která `GrayString` podporují plnou šedou barvu bez volání členské funkce. Systémová barva COLOR_GRAYTEXT je plná šedá systémová barva používaná k kreslení zakázaného textu. Aplikace může volat `GetSysColor` funkci systému Windows k načtení hodnoty barvy COLOR_GRAYTEXT. Pokud je barva jiná než 0 (černá), `SetTextColor` aplikace může volat členskou funkci nastavit barvu textu na hodnotu barvy a pak nakreslit řetězec přímo. Pokud je načtená barva černá, `GrayString` musí aplikace volat na text ztlumený (šedý).
 
-Pokud má *lpfnOutput* hodnotu null, GDI používá funkci [text](/windows/win32/api/wingdi/nf-wingdi-textoutw) systému Windows a předpokládá se, že *lpData* je zcela ukazatel na znak, který má být výstup. Pokud znaky, které mají být výstupem, nemohou být zpracovány `TextOut` členskou funkcí (například řetězec je uložen jako rastrový obrázek), aplikace musí dodat svou vlastní výstupní funkci.
+Pokud *lpfnOutput* je NULL, GDI používá windows [textout](/windows/win32/api/wingdi/nf-wingdi-textoutw) funkce a *lpData* se předpokládá, že je daleko ukazatel na znak, který má být výstup. Pokud znaky, které mají být `TextOut` výstup nemůže být zpracovány členská funkce (například řetězec je uložen jako bitmapa), aplikace musí zadat vlastní výstupní funkce.
 
-Všimněte si také, že všechny funkce zpětného volání musí před návratem do systému Windows zachytit výjimky Microsoft Foundation, protože výjimky nelze vyvolat přes hranice zpětného volání. Další informace o výjimkách najdete v článku [výjimky](../../mfc/exception-handling-in-mfc.md).
+Všimněte si také, že všechny funkce zpětného volání musí soutisk Microsoft Foundation výjimky před návratem do systému Windows, protože výjimky nelze vyvolat přes hranice zpětného volání. Další informace o výjimkách naleznete v článku [Výjimky](../../mfc/exception-handling-in-mfc.md).
 
-Funkce zpětného volání předaná `GrayString` musí používat konvenci volání `__stdcall` a musí být exportována s `__declspec`.
+Předávaná `GrayString` funkce zpětného volání musí používat `__stdcall` `__declspec`konvenci volání a musí být exportována s programem .
 
-Když je rozhraní v režimu náhledu, volání členské funkce `GrayString` je přeloženo na volání `TextOut` a funkce zpětného volání není volána.
+Pokud je rozhraní v režimu náhledu, volání `GrayString` členské `TextOut` funkce je přeloženo do volání a funkce zpětného volání není volána.
 
-##  <a name="himetrictodp"></a>CDC:: HIMETRICtoDP
+## <a name="cdchimetrictodp"></a><a name="himetrictodp"></a>CDC::HIMETRICtoDP
 
-Tuto funkci použijte při převodu HIMETRIC velikostí z OLE na pixely.
+Tuto funkci použijte při převodu velikosti HIMETRIC z OLE na obrazové body.
 
 ```
 void HIMETRICtoDP(LPSIZE lpSize) const;
@@ -4129,16 +4129,16 @@ void HIMETRICtoDP(LPSIZE lpSize) const;
 
 ### <a name="parameters"></a>Parametry
 
-*lpSize*<br/>
-Odkazuje na strukturu [velikosti](/windows/win32/api/windef/ns-windef-size) nebo objekt [CSize](../../atl-mfc-shared/reference/csize-class.md) .
+*lpVelikost*<br/>
+Odkazuje na strukturu [SIZE](/windows/win32/api/windef/ns-windef-size) nebo objekt [CSize.](../../atl-mfc-shared/reference/csize-class.md)
 
 ### <a name="remarks"></a>Poznámky
 
-Je-li režim mapování objektu kontextu zařízení MM_LOENGLISH, MM_HIENGLISH, MM_LOMETRIC nebo MM_HIMETRIC, je převod založen na počtu pixelů ve fyzické palci. Pokud je režim mapování jedním z ostatních neomezených režimů (například MM_TEXT), pak je převod založen na počtu pixelů v logické palci.
+Pokud je režim mapování objektu kontextu zařízení MM_LOENGLISH, MM_HIENGLISH, MM_LOMETRIC nebo MM_HIMETRIC, je převod založen na počtu pixelů ve fyzickém palci. Pokud je režim mapování jedním z dalších režimů bez omezení (např. MM_TEXT), je převod založen na počtu pixelů v logickém inch.
 
-##  <a name="himetrictolp"></a>CDC:: HIMETRICtoLP
+## <a name="cdchimetrictolp"></a><a name="himetrictolp"></a>CDC::HIMETRICtoLP
 
-Voláním této funkce převedete jednotky HIMETRIC na logické jednotky.
+Volání této funkce převést HIMETRIC jednotky do logické jednotky.
 
 ```
 void HIMETRICtoLP(LPSIZE lpSize) const;
@@ -4146,18 +4146,18 @@ void HIMETRICtoLP(LPSIZE lpSize) const;
 
 ### <a name="parameters"></a>Parametry
 
-*lpSize*<br/>
-Odkazuje na strukturu [velikosti](/windows/win32/api/windef/ns-windef-size) nebo objekt [CSize](../../atl-mfc-shared/reference/csize-class.md) .
+*lpVelikost*<br/>
+Odkazuje na strukturu [SIZE](/windows/win32/api/windef/ns-windef-size) nebo objekt [CSize.](../../atl-mfc-shared/reference/csize-class.md)
 
 ### <a name="remarks"></a>Poznámky
 
-Tuto funkci použijte, když získáte velikost HIMETRIC od OLE a chcete je převést na režim přirozeného mapování vaší aplikace.
+Tuto funkci použijte, pokud získáte himetrické velikosti z OLE a chcete je převést do přirozeného režimu mapování aplikace.
 
-Převod se provádí tak, že nejprve převede HIMETRIC jednotky na pixely a pak tyto jednotky převedete na logické jednotky pomocí aktuálních jednotek mapování v kontextu zařízení. Všimněte si, že rozsahy okna zařízení a zobrazení budou mít vliv na výsledek.
+Převod se provádí nejprve převedením jednotek HIMETRIC na obrazové body a poté převodem těchto jednotek na logické jednotky pomocí aktuálních mapovacích jednotek kontextu zařízení. Všimněte si, že rozsah okna a výřezu zařízení ovlivní výsledek.
 
-##  <a name="intersectcliprect"></a>CDC:: IntersectClipRect
+## <a name="cdcintersectcliprect"></a><a name="intersectcliprect"></a>CDC::IntersectClipRect
 
-Vytvoří novou oblast oříznutí vytvořením průsečíku aktuální oblasti a obdélníku určeného pomocí *x1*, *Y1*, *X2*a *Y2*.
+Vytvoří novou oblast oříznutí vytvořením průsečíku aktuální oblasti a obdélníku určeného *x1*, *y1*, *x2*a *y2*.
 
 ```
 int IntersectClipRect(
@@ -4174,35 +4174,35 @@ int IntersectClipRect(LPCRECT lpRect);
 *x1*<br/>
 Určuje logickou souřadnici x levého horního rohu obdélníku.
 
-*Y1*<br/>
+*y1*<br/>
 Určuje logickou souřadnici y levého horního rohu obdélníku.
 
-*X2*<br/>
+*x2*<br/>
 Určuje logickou souřadnici x pravého dolního rohu obdélníku.
 
-*Y2*<br/>
-Určuje logickou souřadnici y v pravém dolním rohu obdélníku.
+*y2*<br/>
+Určuje logickou souřadnici y pravého dolního rohu obdélníku.
 
 *lpRect*<br/>
-Určuje obdélník. Pro tento parametr můžete předat buď objekt `CRect`, nebo ukazatel na `RECT` strukturu.
+Určuje obdélník. Objekt nebo ukazatel `CRect` můžete předat `RECT` struktuře pro tento parametr.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nový typ oblasti oříznutí. Může to být jedna z následujících hodnot:
+Nový typ oblasti oříznutí. Může to být některá z následujících hodnot:
 
-- COMPLEXREGION nové oblasti oříznutí má překrývající se ohraničení.
+- COMPLEXREGION Nová oblast oříznutí má překrývající se ohraničení.
 
-- Kontext CHYBového zařízení není platný.
+- CHYBA Kontext zařízení není platný.
 
-- NULLREGION nová oblast oříznutí je prázdná.
+- NULLREGION Nová oblast oříznutí je prázdná.
 
-- SIMPLEREGION nové oblasti oříznutí nemá žádná překrývající se ohraničení.
+- SIMPLEREGION Nová oblast oříznutí nemá žádné překrývající se ohraničení.
 
 ### <a name="remarks"></a>Poznámky
 
-GDI vypíše všechny následné výstupy, aby se vešly do nové hranice. Šířka a výška nesmí překročit 32 767.
+GDI ořízne všechny následné výstupy tak, aby se vešly do nové hranice. Šířka a výška nesmí překročit 32 767.
 
-##  <a name="invertrect"></a>CDC:: InvertRect
+## <a name="cdcinvertrect"></a><a name="invertrect"></a>CDC::InvertovatRect
 
 Invertuje obsah daného obdélníku.
 
@@ -4213,21 +4213,21 @@ void InvertRect(LPCRECT lpRect);
 ### <a name="parameters"></a>Parametry
 
 *lpRect*<br/>
-Odkazuje na `RECT`, který obsahuje logické souřadnice obdélníku, které mají být obráceny. Pro tento parametr můžete také předat objekt `CRect`.
+Odkazuje `RECT` na, který obsahuje logické souřadnice obdélníku, který má být obrácen. Můžete také předat `CRect` objekt pro tento parametr.
 
 ### <a name="remarks"></a>Poznámky
 
-Inverze je logická operace, která Překlopí bity každého pixelu. U monochromatických displejů funkce zpřístupňuje bílé pixely černou a černou pixelů bíle. V zobrazení Barva inverze závisí na způsobu generování barev pro zobrazení. Volání `InvertRect` dvakrát se stejným obdélníkem obnoví zobrazení na předchozí barvy.
+Inverze je logická operace NOT a překlopí bity každého pixelu. Na monochromatických displejích funkce zbarveje bílé pixely černé a černé pixely bílé. Na barevných displejích závisí inverze na tom, jak jsou pro displej generovány barvy. Volání `InvertRect` dvakrát se stejným obdélníkem obnoví zobrazení na předchozí barvy.
 
-Pokud je obdélník prázdný, není nic vykresleno.
+Pokud je obdélník prázdný, nic není nakreslena.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCDocView#36](../../mfc/codesnippet/cpp/cdc-class_8.cpp)]
 
-##  <a name="invertrgn"></a>CDC:: InvertRgn
+## <a name="cdcinvertrgn"></a><a name="invertrgn"></a>CDC::InvertovatRgn
 
-Obrátí barvy v oblasti určené parametrem *pRgn*.
+Invertuje barvy v oblasti určené *pRgn*.
 
 ```
 BOOL InvertRgn(CRgn* pRgn);
@@ -4236,7 +4236,7 @@ BOOL InvertRgn(CRgn* pRgn);
 ### <a name="parameters"></a>Parametry
 
 *pRgn*<br/>
-Identifikuje oblast, která se má vrátit. Souřadnice pro oblast jsou zadány v logických jednotkách.
+Identifikuje oblast, která má být obrácena. Souřadnice pro oblast jsou určeny v logických jednotkách.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -4244,11 +4244,11 @@ Nenulové, pokud je funkce úspěšná; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-U monochromatických displejů funkce zpřístupňuje bílé pixely černou a černou pixelů bíle. V zobrazení barev závisí inverze na způsobu generování barev pro zobrazení.
+Na monochromatických displejích funkce zbarveje bílé pixely černé a černé pixely bílé. Na barevných displejích závisí inverze na tom, jak jsou barvy generovány pro zobrazení.
 
-##  <a name="isprinting"></a>CDC:: deprinting
+## <a name="cdcisprinting"></a><a name="isprinting"></a>CDC::Tisk
 
-Určuje, zda se pro tisk používá kontext zařízení.
+Určuje, zda je kontext zařízení používán pro tisk.
 
 ```
 BOOL IsPrinting() const;
@@ -4256,11 +4256,11 @@ BOOL IsPrinting() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulová, pokud je objekt `CDC` tiskárna DC; v opačném případě 0.
+Nenulová, `CDC` pokud je objektem řadič domény tiskárny; jinak 0.
 
-##  <a name="lineto"></a>CDC:: LineTo
+## <a name="cdclineto"></a><a name="lineto"></a>CDC::LineTo
 
-Nakreslí čáru od aktuální pozice až do, ale ne včetně, bodu určeného *x* a *y* (nebo *Point*).
+Nakreslí čáru z aktuální pozice až do bodu určeného *x* a *y* (nebo *bodem)*, ale nezahrnuje ho.
 
 ```
 BOOL LineTo(
@@ -4272,28 +4272,28 @@ BOOL LineTo(POINT point);
 
 ### <a name="parameters"></a>Parametry
 
-*znak*<br/>
-Určuje logickou souřadnici x koncového bodu pro řádek.
+*X*<br/>
+Určuje logickou souřadnici x koncového bodu pro čáru.
 
-*požadované*<br/>
-Určuje logickou souřadnici y koncového bodu pro řádek.
+*Y*<br/>
+Určuje logickou souřadnici y koncového bodu pro čáru.
 
-*Vyberte*<br/>
-Určuje koncový bod pro řádek. Pro tento parametr můžete předat buď strukturu `POINT`, nebo objekt `CPoint`.
+*Bod*<br/>
+Určuje koncový bod čáry. Pro tento parametr `POINT` můžete `CPoint` předat strukturu nebo objekt.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je čára vykreslena; v opačném případě 0.
+Nenulová, pokud je čára nakreslena; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Čára se vykreslí vybraným perem. Aktuální pozice je nastavena na *x*, *y* nebo na *Point*.
+Čára je nakreslena vybraným perem. Aktuální pozice je nastavena na *x*, *y* nebo *na bod*.
 
 ### <a name="example"></a>Příklad
 
-  Podívejte se na příklad pro [CRect:: Centerpoint](../../atl-mfc-shared/reference/crect-class.md#centerpoint).
+  Viz příklad pro [CRect::CenterPoint](../../atl-mfc-shared/reference/crect-class.md#centerpoint).
 
-##  <a name="lptodp"></a>CDC:: LPtoDP
+## <a name="cdclptodp"></a><a name="lptodp"></a>CDC::LPtoDP
 
 Převede logické jednotky na jednotky zařízení.
 
@@ -4309,26 +4309,26 @@ void LPtoDP(LPSIZE lpSize) const;
 ### <a name="parameters"></a>Parametry
 
 *lpPoints*<br/>
-Odkazuje na pole bodů. Každý bod v poli je struktura [bodu](/windows/win32/api/windef/ns-windef-point) nebo objekt [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) .
+Odkazuje na pole bodů. Každý bod v poli je [point](/windows/win32/api/windef/ns-windef-point) struktura nebo [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objekt.
 
 *nCount*<br/>
 Počet bodů v poli.
 
 *lpRect*<br/>
-Odkazuje na strukturu [Rect](/windows/win32/api/windef/ns-windef-rect) nebo objekt [CRect](../../atl-mfc-shared/reference/crect-class.md) . Tento parametr se používá pro běžný případ mapování obdélníku z logických jednotek na jednotky zařízení.
+Odkazuje na [rect](/windows/win32/api/windef/ns-windef-rect) struktury nebo [CRect](../../atl-mfc-shared/reference/crect-class.md) objektu. Tento parametr se používá pro běžný případ mapování obdélníku z logické jednotky zařízení.
 
-*lpSize*<br/>
-Odkazuje na strukturu [velikosti](/windows/win32/api/windef/ns-windef-size) nebo na objekt [CSize](../../atl-mfc-shared/reference/csize-class.md) .
+*lpVelikost*<br/>
+Odkazuje na strukturu [SIZE](/windows/win32/api/windef/ns-windef-size) nebo objekt [CSize.](../../atl-mfc-shared/reference/csize-class.md)
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce mapuje souřadnice jednotlivých bodů nebo rozměry velikosti od logického systému souřadnic GDI do systému souřadnic zařízení. Převod závisí na aktuálním režimu mapování a na nastavení zdroje a rozsahů okna a zobrazení zařízení.
+Funkce mapuje souřadnice každého bodu nebo rozměry velikosti z logického souřadnicového systému GDI do souřadnicového systému zařízení. Převod závisí na aktuálním režimu mapování a nastavení počátků a rozsahů okna a výřezu zařízení.
 
-Souřadnice x a y bodů jsou celá čísla se znaménkem na 2 bajt v rozsahu od-32 768 do 32 767. V případech, kdy by režim mapování způsobil hodnoty větší než tato omezení, systém nastaví hodnoty na-32 768 a 32 767 v uvedeném pořadí.
+Souřadnice x a y bodů jsou 2bajtová podepsaná celá čísla v rozsahu -32 768 až 32 767. V případech, kdy by režim mapování vedl k hodnotám větším než tyto limity, systém nastaví hodnoty na -32 768 a 32 767.
 
-##  <a name="lptohimetric"></a>CDC:: LPtoHIMETRIC
+## <a name="cdclptohimetric"></a><a name="lptohimetric"></a>CDC::LPtoHIMETRIC
 
-Voláním této funkce převedete logické jednotky na jednotky HIMETRIC.
+Volání této funkce převést logické jednotky na jednotky HIMETRIC.
 
 ```
 void LPtoHIMETRIC(LPSIZE lpSize) const;
@@ -4336,18 +4336,18 @@ void LPtoHIMETRIC(LPSIZE lpSize) const;
 
 ### <a name="parameters"></a>Parametry
 
-*lpSize*<br/>
-Odkazuje na strukturu `SIZE` nebo objekt `CSize`.
+*lpVelikost*<br/>
+Odkazuje na `SIZE` strukturu `CSize` nebo objekt.
 
 ### <a name="remarks"></a>Poznámky
 
-Tuto funkci použijte, když udělujete HIMETRIC velikosti pro OLE a převod z režimu přirozeného mapování vaší aplikace. Všimněte si, že rozsahy okna zařízení a zobrazení budou mít vliv na výsledek.
+Tuto funkci použijte, když dáte HIMETRIC velikosti OLE, převod z přirozeného režimu mapování aplikace. Všimněte si, že rozsah okna a výřezu zařízení ovlivní výsledek.
 
-Převod se provádí tak, že nejprve převedete logické jednotky na pixely pomocí aktuálních jednotek mapování zařízení a pak tyto jednotky převedete na jednotky HIMETRIC.
+Převod se provádí nejprve převedením logických jednotek na obrazové body pomocí aktuálních mapovacích jednotek kontextu zařízení a poté převodem těchto jednotek na jednotky HIMETRIC.
 
-##  <a name="m_hattribdc"></a>CDC:: m_hAttribDC
+## <a name="cdcm_hattribdc"></a><a name="m_hattribdc"></a>CDC::m_hAttribDC
 
-Atribut kontext zařízení pro tento objekt `CDC`.
+Kontext zařízení atribut `CDC` pro tento objekt.
 
 ```
 HDC m_hAttribDC;
@@ -4355,11 +4355,11 @@ HDC m_hAttribDC;
 
 ### <a name="remarks"></a>Poznámky
 
-Ve výchozím nastavení je tento kontext zařízení stejný jako `m_hDC`. Obecně je `CDC` volání GDI, která vyžadují informace z kontextu zařízení, směrována na `m_hAttribDC`. Další informace o použití těchto dvou kontextů zařízení najdete v popisu třídy [CDC](../../mfc/reference/cdc-class.md) .
+Ve výchozím nastavení je tento `m_hDC`kontext zařízení roven . Obecně platí `CDC` GDI volání, které požadují informace `m_hAttribDC`z kontextu zařízení jsou směrovány do . Další informace o použití těchto dvou kontextů zařízení naleznete v popisu třídy [CDC.](../../mfc/reference/cdc-class.md)
 
-##  <a name="m_hdc"></a>CDC:: m_hDC
+## <a name="cdcm_hdc"></a><a name="m_hdc"></a>CDC::m_hDC
 
-Kontext výstupního zařízení pro tento objekt `CDC`.
+Kontext výstupního zařízení `CDC` pro tento objekt.
 
 ```
 HDC m_hDC;
@@ -4367,11 +4367,11 @@ HDC m_hDC;
 
 ### <a name="remarks"></a>Poznámky
 
-Ve výchozím nastavení je `m_hDC` rovna `m_hAttribDC`, druhý kontext zařízení je zabalen `CDC`. Obecně `CDC` volání GDI, která vytvoří výstup, přejít do kontextu zařízení `m_hDC`. Můžete inicializovat `m_hDC` a `m_hAttribDC` tak, aby odkazovaly na různá zařízení. Další informace o použití těchto dvou kontextů zařízení najdete v popisu třídy [CDC](../../mfc/reference/cdc-class.md) .
+Ve výchozím `m_hDC` nastavení `m_hAttribDC`je rovna , ostatní `CDC`kontext zařízení zabalené . Obecně platí `CDC` GDI volání, které `m_hDC` vytvářejí výstup přejít do kontextu zařízení. Můžete `m_hDC` inicializovat `m_hAttribDC` a přejděte na různá zařízení. Další informace o použití těchto dvou kontextů zařízení naleznete v popisu třídy [CDC.](../../mfc/reference/cdc-class.md)
 
-##  <a name="maskblt"></a>CDC:: MaskBlt
+## <a name="cdcmaskblt"></a><a name="maskblt"></a>CDC::MaskBlt
 
-Kombinuje barevná data pro zdrojové a cílové bitmapy pomocí dané masky a operace rastrového obrázku.
+Kombinuje barevná data pro zdrojové a cílové bitmapy pomocí dané masky a rastrové operace.
 
 ```
 BOOL MaskBlt(
@@ -4390,38 +4390,38 @@ BOOL MaskBlt(
 
 ### <a name="parameters"></a>Parametry
 
-*znak*<br/>
+*X*<br/>
 Určuje logickou souřadnici x levého horního rohu cílového obdélníku.
 
-*požadované*<br/>
-Určuje logickou souřadnici y v levém horním rohu cílového obdélníku.
+*Y*<br/>
+Určuje logickou souřadnici y levého horního rohu cílového obdélníku.
 
-*nWidth*<br/>
-Určuje šířku (v logických jednotkách) cílového obdélníku a zdrojové bitmapy.
+*nŠířka*<br/>
+Určuje šířku cílového obdélníku a zdrojové bitmapy v logických jednotkách.
 
-*nHeight*<br/>
-Určuje výšku (v logických jednotkách) cílového obdélníku a zdrojové bitmapy.
+*nVýška*<br/>
+Určuje výšku cílového obdélníku a zdrojové bitmapy v logických jednotkách.
 
 *pSrcDC*<br/>
-Identifikuje kontext zařízení, ze kterého se má rastrový obrázek zkopírovat. Hodnota musí být nula, pokud parametr *dwRop* určuje rastrovou operaci, která nezahrnuje zdroj.
+Identifikuje kontext zařízení, ze kterého má být bitmapa zkopírována. Musí být nula, pokud parametr *dwRop* určuje rastrovou operaci, která neobsahuje zdroj.
 
 *xSrc*<br/>
 Určuje logickou souřadnici x levého horního rohu zdrojové bitmapy.
 
-*ySrc*<br/>
-Určuje logickou souřadnici y v levém horním rohu zdrojové bitmapy.
+*ySrc řekl:*<br/>
+Určuje logickou souřadnici y levého horního rohu zdrojové bitmapy.
 
-*maskBitmap*<br/>
-Určuje rastrový obrázek monochromatické masky v kombinaci s barevným rastrovým obrázkem v kontextu zdrojového zařízení.
+*maskaBitmap*<br/>
+Identifikuje monochromatickou bitmapu masky v kombinaci s barevnou bitmapu v kontextu zdrojového zařízení.
 
 *xMask*<br/>
-Určuje vodorovný posun pixelu pro rastrový obrázek masky určený parametrem *maskBitmap* .
+Určuje vodorovný posun obrazových bodů pro bitmapu masky určenou parametrem *maskaBitmap.*
 
 *yMask*<br/>
-Určuje posun svislého pixelu pro rastrový obrázek masky určený parametrem *maskBitmap* .
+Určuje svislé odsazení obrazových bodů pro bitmapu masky určenou parametrem *maskaBitmap.*
 
 *dwRop*<br/>
-Určuje kódy operací rastrového typu v popředí a na pozadí, které funkce používá k řízení kombinace zdrojových a cílových dat. Kód operace rastrového pozadí je uložený v horním bajtu vysokého slova této hodnoty; kód operace rastrového slova na popředí je uložený v nízkém bajtu s vysokým slovem této hodnoty; nízká hodnota tohoto slova je ignorována a měla by být nulová. Makro MAKEROP4 vytvoří takové kombinace kódů operací rastrového popředí a pozadí. Diskuzi o popředí a pozadí najdete v části poznámky v kontextu této funkce. Seznam běžných kódů rastrových operací naleznete v tématu `BitBlt` členské funkce.
+Určuje kódy operací ternárního rastrového rastru na popředí i pozadí, které tato funkce používá k řízení kombinace zdrojových a cílových dat. Kód rastrové operace na pozadí je uložen ve vysokém bajtu vysokého slova této hodnoty; kód rastrové operace na popředí je uložen v nízkém bajtu vysokého slova této hodnoty; nízké slovo této hodnoty je ignorováno a měla by být nula. Makro MAKEROP4 vytváří takové kombinace kódů rastrových operací na popředí a pozadí. V části Poznámky naleznete diskusi o popředí a pozadí v kontextu této funkce. Seznam `BitBlt` běžných kódů rastrových operací naleznete v členské funkci.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -4429,15 +4429,15 @@ Nenulové, pokud je funkce úspěšná; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Hodnota 1 v masce určené parametrem *maskBitmap* značí, že se v tomto umístění má použít kód operace rastrového pozadí určený parametrem *dwRop* . Hodnota 0 v masce označuje, že se na tomto místě má použít kód operace rastrového pozadí určený parametrem *dwRop* . Pokud rastrové operace vyžadují zdroj, musí rámeček masky pokrývat zdrojový obdélník. V opačném případě se funkce nezdaří. Pokud rastrové operace nevyžadují zdroj, obdélník masky musí pokrývat cílový obdélník. V opačném případě se funkce nezdaří.
+Hodnota 1 v masce určené *maskouBitmap* označuje, že kód rastrové operace v popředí určený *dwRop* by měl být použit v tomto umístění. Hodnota 0 v masce označuje, že kód rastrové operace na pozadí určený *dwRop* by měl být použit v tomto umístění. Pokud rastrové operace vyžadují zdroj, obdélník masky musí pokrýt zdrojový obdélník. Pokud tomu tak není, funkce se nezdaří. Pokud rastrové operace nevyžadují zdroj, obdélník masky musí pokrýt cílový obdélník. Pokud tomu tak není, funkce se nezdaří.
 
-Pokud je transformace rotace nebo zkosení platná pro kontext zdrojového zařízení při volání této funkce, dojde k chybě. Jsou však povoleny jiné typy transformací.
+Pokud je pro kontext zdrojového zařízení při volání této funkce v platnosti transformace otočení nebo zkosení, dojde k chybě. Jiné typy transformace jsou však povoleny.
 
-Pokud se barevné formáty zdrojových, vzorů a cílových rastrových obrázků liší, tato funkce převede vzorek nebo formát zdroje, případně obojí, tak, aby odpovídaly formátu cíle. Pokud rastrový obrázek masky není monochromatický, dojde k chybě. Při nahrávání rozšířeného metasouboru dojde k chybě (a funkce vrátí hodnotu 0), pokud kontext zdrojového zařízení identifikuje kontext zařízení s rozšířeným metasouborem. Ne všechna zařízení podporují `MaskBlt`. Aplikace by měla volat `GetDeviceCaps`, aby zjistila, jestli zařízení tuto funkci podporuje. Pokud není zadán rastrový obrázek masky, tato funkce se chová stejně jako `BitBlt`pomocí kódu operace rastrového obrázku na popředí. Posunutí pixelů v mapě rastrového obrázku masky na bod (0, 0) v bitmapě kontextu zdrojového zařízení. To je užitečné v případech, kdy bitmapa masky obsahuje sadu masek. aplikace může snadno použít libovolnou z nich na úlohu Mask-blitting úpravou odsazení a velikosti rámečků v pixelech odesílaných do `MaskBlt`.
+Pokud se barevné formáty zdrojových, vzorových a cílových bitmap liší, tato funkce převede vzorek nebo zdrojový formát nebo obojí tak, aby odpovídalcílovému formátu. Pokud bitmapa masky není monochromatická rastrová mapa, dojde k chybě. Při zaznamenávání rozšířeného metasouboru dojde k chybě (a funkce vrátí 0), pokud kontext zdrojového zařízení identifikuje kontext zařízení rozšířené metasouboru. Ne všechna `MaskBlt`zařízení podporují . Aplikace by `GetDeviceCaps` měla volat k určení, zda zařízení podporuje tuto funkci. Pokud není zadána žádná bitmapa masky, `BitBlt`tato funkce se chová přesně tak , pomocí kódu rastrové operace popředí. Odsazení obrazových bodů v bitmapové mapě masky k bodu (0,0) v rastrové mapě kontextu zdrojového zařízení. To je užitečné v případech, kdy bitmapa masky obsahuje sadu masek; aplikace může snadno použít některý z nich na úlohu maska-blitting úpravou odsazení obrazových bodů a velikosti obdélníků odeslané do aplikace `MaskBlt`.
 
-##  <a name="modifyworldtransform"></a>CDC:: ModifyWorldTransform
+## <a name="cdcmodifyworldtransform"></a><a name="modifyworldtransform"></a>CDC::ModifyWorldTransform
 
-Změní světovou transformaci kontextu zařízení v zadaném režimu.
+Změní transformaci světa pro kontext zařízení pomocí zadaného režimu.
 
 ```
 BOOL ModifyWorldTransform(
@@ -4448,26 +4448,26 @@ BOOL ModifyWorldTransform(
 ### <a name="parameters"></a>Parametry
 
 *rXform*<br/>
-Odkaz na strukturu [Xform –](/windows/win32/api/wingdi/ns-wingdi-xform) , která slouží k úpravě Světové transformace daného kontextu zařízení.
+Odkaz na strukturu [XFORM](/windows/win32/api/wingdi/ns-wingdi-xform) slouží k úpravě transformace světa pro daný kontext zařízení.
 
 *iMode*<br/>
-Určuje, jak transformovaná data mění aktuální světový převod. Seznam hodnot, které tento parametr může mít, najdete v tématu [ModifyWorldTransform](/windows/win32/api/wingdi/nf-wingdi-modifyworldtransform).
+Určuje, jak data transformace upraví aktuální transformaci světa. Seznam hodnot, které tento parametr může trvat, naleznete v [tématu ModifyWorldTransform](/windows/win32/api/wingdi/nf-wingdi-modifyworldtransform).
 
 ### <a name="return-value"></a>Návratová hodnota
 
 Vrátí nenulovou hodnotu při úspěchu.
 
-Vrátí 0 při selhání.
+Vrátí hodnotu 0 při selhání.
 
-Chcete-li získat rozšířené informace o chybě, volejte příkaz [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror).
+Chcete-li získat rozšířené informace o chybě, volejte [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda zabalí funkci GDI systému Windows [ModifyWorldTransform](/windows/win32/api/wingdi/nf-wingdi-modifyworldtransform).
+Tato metoda zabalí funkci Windows GDI [ModifyWorldTransform](/windows/win32/api/wingdi/nf-wingdi-modifyworldtransform).
 
-##  <a name="moveto"></a>CDC:: MoveTo
+## <a name="cdcmoveto"></a><a name="moveto"></a>CDC::Přesun
 
-Přesune aktuální pozici k bodu určenému *x* a *y* (nebo podle *bodu*).
+Přesune aktuální pozici do bodu určeného *x* a *y* (nebo *bodem).*
 
 ```
 CPoint MoveTo(
@@ -4479,26 +4479,26 @@ CPoint MoveTo(POINT point);
 
 ### <a name="parameters"></a>Parametry
 
-*znak*<br/>
+*X*<br/>
 Určuje logickou souřadnici x nové pozice.
 
-*požadované*<br/>
+*Y*<br/>
 Určuje logickou souřadnici y nové pozice.
 
-*Vyberte*<br/>
-Určuje novou pozici. Pro tento parametr můžete předat buď strukturu `POINT`, nebo objekt `CPoint`.
+*Bod*<br/>
+Určuje novou pozici. Pro tento parametr `POINT` můžete `CPoint` předat strukturu nebo objekt.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Souřadnice x a y předchozí pozice jako objekt `CPoint`.
+Souřadnice x a y předchozí pozice `CPoint` jako objekt.
 
 ### <a name="example"></a>Příklad
 
-  Podívejte se na příklad pro [CRect:: Centerpoint](../../atl-mfc-shared/reference/crect-class.md#centerpoint).
+  Viz příklad pro [CRect::CenterPoint](../../atl-mfc-shared/reference/crect-class.md#centerpoint).
 
-##  <a name="offsetcliprgn"></a>CDC:: OffsetClipRgn
+## <a name="cdcoffsetcliprgn"></a><a name="offsetcliprgn"></a>CDC::OffsetClipRgn
 
-Přesune oblast oříznutí kontextu zařízení podle zadaného posunu.
+Přesune oblast oříznutí kontextu zařízení o zadané posuny.
 
 ```
 int OffsetClipRgn(
@@ -4510,34 +4510,34 @@ int OffsetClipRgn(SIZE size);
 
 ### <a name="parameters"></a>Parametry
 
-*znak*<br/>
-Určuje počet logických jednotek, které mají být vlevo nebo vpravo přesunuty.
+*X*<br/>
+Určuje počet logických jednotek, které mají být posunuty doleva nebo doprava.
 
-*požadované*<br/>
-Určuje počet logických jednotek, které se mají přesunout nahoru nebo dolů.
+*Y*<br/>
+Určuje počet logických jednotek, které mají být posunuty nahoru nebo dolů.
 
-*hodnota*<br/>
-Určuje velikost posunutí.
+*Velikost*<br/>
+Určuje částku, která má být vyrovnána.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Typ nové oblasti Může to být jedna z následujících hodnot:
+Nový typ regionu. Může to být některá z následujících hodnot:
 
-- Oblast COMPLEXREGION oříznutí má překrývající se ohraničení.
+- COMPLEXREGION Oblast oříznutí má překrývající se ohraničení.
 
-- Kontext CHYBového zařízení není platný.
+- CHYBA Kontext zařízení není platný.
 
-- Oblast oříznutí NULLREGION je prázdná.
+- NullREGION Oblast oříznutí je prázdná.
 
-- Oblast oříznutí SIMPLEREGION neobsahuje žádná překrývající se ohraničení.
+- SIMPLEREGION Oblast oříznutí nemá žádné překrývající se ohraničení.
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce přesune jednotky *x* oblasti podél osy x a jednotky *y* podél osy y.
+Funkce přesune jednotky oblasti *x* podél osy x a *jednotek y* podél osy y.
 
-##  <a name="offsetviewportorg"></a>CDC:: OffsetViewportOrg
+## <a name="cdcoffsetviewportorg"></a><a name="offsetviewportorg"></a>CDC::OffsetViewportOrg
 
-Upraví souřadnice počátku zobrazení relativně vzhledem k souřadnicím pro počátek aktuálního zobrazení.
+Upraví souřadnice počátku výřezu vzhledem ke souřadnicím aktuálního počátku výřezu.
 
 ```
 virtual CPoint OffsetViewportOrg(
@@ -4547,19 +4547,19 @@ virtual CPoint OffsetViewportOrg(
 
 ### <a name="parameters"></a>Parametry
 
-*nWidth*<br/>
-Určuje počet jednotek zařízení, které se mají přidat do souřadnic x aktuálního počátku.
+*nŠířka*<br/>
+Určuje počet jednotek zařízení, které mají být přidány do souřadnice x aktuálního počátku.
 
-*nHeight*<br/>
-Určuje počet jednotek zařízení, které se mají přidat do souřadnic y aktuálního počátku.
+*nVýška*<br/>
+Určuje počet jednotek zařízení, které mají být přidány do souřadnice y aktuálního počátku.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Předchozí počátek zobrazení (v souřadnicích zařízení) jako objekt `CPoint`.
+Předchozí počátek výřezu (v souřadnicích zařízení) jako objekt. `CPoint`
 
-##  <a name="offsetwindoworg"></a>CDC:: OffsetWindowOrg
+## <a name="cdcoffsetwindoworg"></a><a name="offsetwindoworg"></a>CDC::OffsetWindowOrg
 
-Upraví souřadnice počátku okna relativně vzhledem k souřadnicím aktuálního počátku okna.
+Upraví souřadnice počátku okna vzhledem ke souřadnicím aktuálního počátku okna.
 
 ```
 CPoint OffsetWindowOrg(
@@ -4569,19 +4569,19 @@ CPoint OffsetWindowOrg(
 
 ### <a name="parameters"></a>Parametry
 
-*nWidth*<br/>
-Určuje počet logických jednotek, které se mají přidat do souřadnic x aktuálního počátku.
+*nŠířka*<br/>
+Určuje počet logických jednotek, které mají být přidány do souřadnice x aktuálního počátku.
 
-*nHeight*<br/>
-Určuje počet logických jednotek, které se mají přidat do souřadnic y aktuálního počátku.
+*nVýška*<br/>
+Určuje počet logických jednotek, které mají být přidány do souřadnice y aktuálního počátku.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Původní počátek okna (v logických souřadnicích) jako objekt `CPoint`.
+Předchozí počátek okna (v logických `CPoint` souřadnicích) jako objekt.
 
-##  <a name="operator_hdc"></a>CDC:: operator HDC
+## <a name="cdcoperator-hdc"></a><a name="operator_hdc"></a>CDC::operátor HDC
 
-Tento operátor použijte k načtení popisovače kontextu zařízení `CDC` objektu.
+Tento operátor slouží k načtení `CDC` popisovače kontextu zařízení objektu.
 
 ```
 operator HDC() const;
@@ -4589,15 +4589,15 @@ operator HDC() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud je úspěšná, popisovač objektu kontextu zařízení; v opačném případě hodnota NULL.
+Pokud je úspěšná, popisovač objektu kontextu zařízení; jinak NULL.
 
 ### <a name="remarks"></a>Poznámky
 
-Můžete použít popisovač k přímému volání rozhraní API systému Windows.
+Pomocí popisovače můžete volat přímo windows api.
 
-##  <a name="paintrgn"></a>CDC::P aintRgn
+## <a name="cdcpaintrgn"></a><a name="paintrgn"></a>CDC::PaintRgn
 
-Vyplní oblast určenou v *pRgn* pomocí aktuálního štětce.
+Vyplní oblast určenou *pRgn* pomocí aktuální stopy.
 
 ```
 BOOL PaintRgn(CRgn* pRgn);
@@ -4606,15 +4606,15 @@ BOOL PaintRgn(CRgn* pRgn);
 ### <a name="parameters"></a>Parametry
 
 *pRgn*<br/>
-Určuje oblast, která má být vyplněna. Souřadnice pro danou oblast jsou zadány v logických jednotkách.
+Identifikuje oblast, která má být vyplněna. Souřadnice pro danou oblast jsou určeny v logických jednotkách.
 
 ### <a name="return-value"></a>Návratová hodnota
 
 Nenulové, pokud je funkce úspěšná; jinak 0.
 
-##  <a name="patblt"></a>CDC::P atBlt
+## <a name="cdcpatblt"></a><a name="patblt"></a>CDC::PatBlt
 
-Vytvoří na zařízení bitovou masku.
+Vytvoří bitový vzor na zařízení.
 
 ```
 BOOL PatBlt(
@@ -4627,30 +4627,30 @@ BOOL PatBlt(
 
 ### <a name="parameters"></a>Parametry
 
-*znak*<br/>
-Určuje logickou souřadnici x levého horního rohu obdélníku, který má obdržet vzorek.
+*X*<br/>
+Určuje logickou souřadnici x levého horního rohu obdélníku, který má přijmout vzorek.
 
-*požadované*<br/>
-Určuje logickou souřadnici y levého horního rohu obdélníku, který má obdržet vzorek.
+*Y*<br/>
+Určuje logickou souřadnici y levého horního rohu obdélníku, který má vzorek přijmout.
 
-*nWidth*<br/>
-Určuje šířku (v logických jednotkách) obdélníku, který má přijmout vzorek.
+*nŠířka*<br/>
+Určuje šířku (v logických jednotkách) obdélníku, který má vzorek přijmout.
 
-*nHeight*<br/>
+*nVýška*<br/>
 Určuje výšku (v logických jednotkách) obdélníku, který má přijmout vzorek.
 
 *dwRop*<br/>
-Určuje kód pro rastrovou operaci. Kódy rastrových operací (ROPs) definují, jak GDI kombinuje barvy ve výstupních operacích, které zahrnují aktuální štětec, možnou zdrojovou bitmapu a cílový rastrový obrázek. Tento parametr může být jedna z následujících hodnot:
+Určuje kód rastrové operace. Rastrové kódy operací (ROPs) definují, jak GDI kombinuje barvy ve výstupních operacích, které zahrnují aktuální stopu, možnou zdrojovou bitmapu a cílovou bitmapu. Tento parametr může být jedna z následujících hodnot:
 
-- PATCOPY kopíruje vzor do cílového rastrového obrázku.
+- PATCOPY Zkopíruje vzorek do cílové bitmapy.
 
-- PATINVERT kombinuje cílovou bitmapu se vzorem pomocí logického operátoru XOR.
+- PATINVERT Kombinuje cílovou bitmapu se vzorkem pomocí logického operátoru XOR.
 
-- DSTINVERT obrátí cílový rastrový obrázek.
+- DSTINVERT Invertuje cílovou bitmapu.
 
-- ČERNÁ, zapíná všechny výstupy černě.
+- BLACKNESS Otočí veškerý výstup černě.
 
-- WHITENESS zapíná všechny výstupy bíle.
+- BĚLOST Otočí veškerý výstup bílý.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -4658,13 +4658,13 @@ Nenulové, pokud je funkce úspěšná; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Vzor je kombinací vybrané stopy štětce a vzoru, který už je na zařízení. Kód operace rastru určený parametrem *dwRop* definuje způsob, jakým se mají kombinovat vzorce. Rastrové operace uvedené pro tuto funkci jsou omezené podmnožinou úplných kódů s 256ými rastrovými operacemi. Konkrétně nelze použít kód operace rastru, který odkazuje na zdroj.
+Vzorek je kombinací vybrané stopy a vzoru, který je již na zařízení. Kód rastrové operace určený *dwRop* definuje, jak mají být vzorky kombinovány. Rastrové operace uvedené pro tuto funkci jsou omezenou podmnožinou úplných 256 kódů ternárních rastrových operací. zejména kód rastrové operace, který odkazuje na zdroj, nelze použít.
 
-Ne všechny kontexty zařízení podporují funkci `PatBlt`. Chcete-li určit, zda kontext zařízení podporuje `PatBlt`, zavolejte členskou funkci `GetDeviceCaps` s indexem RASTERCAPS a zkontrolujte návratovou hodnotu příznaku RC_BITBLT.
+Ne všechny kontexty `PatBlt` zařízení podporují funkci. Chcete-li zjistit, `PatBlt`zda kontext `GetDeviceCaps` zařízení podporuje , volání členské funkce s indexem RASTERCAPS a zkontrolujte vrácenou hodnotu příznaku RC_BITBLT.
 
-##  <a name="pie"></a>CDC::P IE
+## <a name="cdcpie"></a><a name="pie"></a>CDC::Pie
 
-Vykreslí klínový tvar, jehož střed a dva koncové body jsou spojeny pomocí čar.
+Nakreslí klín ve tvaru výsečového nakreslíte eliptický oblouk, jehož střed a dva koncové body jsou spojeny čarami.
 
 ```
 BOOL Pie(
@@ -4686,37 +4686,37 @@ BOOL Pie(
 ### <a name="parameters"></a>Parametry
 
 *x1*<br/>
-Určuje souřadnici x levého horního rohu ohraničujícího obdélníku (v logických jednotkách).
+Určuje souřadnici x levého horního rohu ohraničovacího obdélníku (v logických jednotkách).
 
-*Y1*<br/>
-Určuje souřadnici y levého horního rohu ohraničujícího obdélníku (v logických jednotkách).
+*y1*<br/>
+Určuje souřadnici y levého horního rohu ohraničovacího obdélníku (v logických jednotkách).
 
-*X2*<br/>
-Určuje souřadnici x pravého dolního rohu ohraničujícího obdélníku (v logických jednotkách).
+*x2*<br/>
+Určuje souřadnici x pravého dolního rohu ohraničovacího obdélníku (v logických jednotkách).
 
-*Y2*<br/>
-Určuje souřadnici y pravého dolního rohu ohraničujícího obdélníku (v logických jednotkách).
+*y2*<br/>
+Určuje souřadnici y pravého dolního rohu ohraničovacího obdélníku (v logických jednotkách).
 
-*X3*<br/>
-Určuje souřadnici x počátečního bodu oblouku (v logických jednotkách). Tento bod není nutné přesně nacházet na oblouku.
+*x3*<br/>
+Určuje souřadnici x počátečního bodu oblouku (v logických jednotkách). Tento bod nemusí ležet přesně na oblouku.
 
-*Y3*<br/>
-Určuje souřadnici y počátečního bodu oblouku (v logických jednotkách). Tento bod není nutné přesně nacházet na oblouku.
+*y3*<br/>
+Určuje souřadnici y počátečního bodu oblouku (v logických jednotkách). Tento bod nemusí ležet přesně na oblouku.
 
-*X4*<br/>
-Určuje souřadnici x koncového bodu oblouku (v logických jednotkách). Tento bod není nutné přesně nacházet na oblouku.
+*x4*<br/>
+Určuje souřadnici x koncového bodu oblouku (v logických jednotkách). Tento bod nemusí ležet přesně na oblouku.
 
-*Y4*<br/>
-Určuje souřadnici y koncového bodu oblouku (v logických jednotkách). Tento bod není nutné přesně nacházet na oblouku.
+*y4*<br/>
+Určuje souřadnici y koncového bodu oblouku (v logických jednotkách). Tento bod nemusí ležet přesně na oblouku.
 
 *lpRect*<br/>
-Určuje ohraničující obdélník. Pro tento parametr můžete předat buď objekt `CRect`, nebo ukazatel na `RECT` strukturu.
+Určuje ohraničovací obdélník. Objekt nebo ukazatel `CRect` můžete předat `RECT` struktuře pro tento parametr.
 
 *ptStart*<br/>
-Určuje počáteční bod oblouku. Tento bod není nutné přesně nacházet na oblouku. Pro tento parametr můžete předat strukturu [bodu](/windows/win32/api/windef/ns-windef-point) nebo objekt [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) .
+Určuje počáteční bod oblouku. Tento bod nemusí ležet přesně na oblouku. Pro tento parametr můžete předat strukturu [POINT](/windows/win32/api/windef/ns-windef-point) nebo objekt [CPoint.](../../atl-mfc-shared/reference/cpoint-class.md)
 
 *ptEnd*<br/>
-Určuje koncový bod oblouku. Tento bod není nutné přesně nacházet na oblouku. Pro tento parametr můžete předat buď strukturu `POINT`, nebo objekt `CPoint`.
+Určuje koncový bod oblouku. Tento bod nemusí ležet přesně na oblouku. Pro tento parametr `POINT` můžete `CPoint` předat strukturu nebo objekt.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -4724,17 +4724,17 @@ Nenulové, pokud je funkce úspěšná; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Střed oblouku je střed ohraničujícího obdélníku určeného *x1*, *Y1*, *X2*a *Y2* (nebo *lpRect*). Počáteční a koncové body ARC jsou určeny pomocí *X3*, *Y3*, *X4*a *Y4* (nebo pomocí *ptStart* a *ptEnd*).
+Střed oblouku je střed ohraničovacího obdélníku určený *x1*, *y1*, *x2*a *y2* (nebo *lpRect).* Počáteční a koncový bod oblouku jsou určeny *x3*, *y3*, *x4*a *y4* (nebo *ptStart* a *ptEnd*).
 
-Oblouk se vykreslí vybraným perem a pohybuje se směrem proti směru hodinových ručiček. Z každého koncového bodu do středu oblouku se vykreslí dva další řádky. Oblast ve tvaru výsečového grafu je vyplněna aktuálním štětcem. Pokud se *X3* rovná *X4* a *Y3* rovná se *Y4*, výsledkem je elipsa s jedním řádkem od středu elipsy k bodu ( *X3*, *Y3*) nebo ( *X4*, *Y4*).
+Oblouk je kreslen vybraným perem a pohybuje se proti směru hodinových ručiček. Od každého koncového bodu ke středu oblouku jsou nakresleny dvě další čáry. Oblast ve tvaru výseče je vyplněna aktuální stopou. Pokud *x3* rovná se *x4* a *y3* rovná *y4*, výsledkem je elipsa s jednou čárou od středu elipsy k bodu ( *x3*, *y3*) nebo ( *x4*, *y4*).
 
-Obrázek vykreslený touto funkcí rozšiřuje až, ale nezahrnuje pravé a dolní souřadnici. To znamená, že výška obrázku je *y2* - *Y1* a šířka obrázku je *X2* - *x1*. Šířka i výška ohraničujícího obdélníku musí být větší než 2 jednotky a musí být menší než 32 767 jednotek.
+Obrázek nakreslený touto funkcí sahá až k pravé a dolní souřadnici, ale nezahrnuje ji. To znamená, že výška obrázku je *y2* - *y1* a šířka obrázku je *x2* - *x1*. Šířka i výška ohraničovacího obdélníku musí být větší než 2 jednotky a menší než 32 767 jednotek.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCDocView#37](../../mfc/codesnippet/cpp/cdc-class_9.cpp)]
 
-##  <a name="playmetafile"></a>CDC::P layMetaFile
+## <a name="cdcplaymetafile"></a><a name="playmetafile"></a>CDC::PlayMetaFile
 
 Přehraje obsah zadaného metasouboru v kontextu zařízení.
 
@@ -4749,13 +4749,13 @@ BOOL PlayMetaFile(
 ### <a name="parameters"></a>Parametry
 
 *hMF*<br/>
-Určuje metasoubor, který se má přehrát.
+Identifikuje metasoubor, který má být přehrán.
 
-*hEnhMetaFile*<br/>
+*hEnhMetaSoubor*<br/>
 Identifikuje rozšířený metasoubor.
 
 *lpBounds*<br/>
-Odkazuje na strukturu `RECT` nebo objekt `CRect`, který obsahuje souřadnice ohraničujícího obdélníku používaného k zobrazení obrázku. Souřadnice jsou zadány v logických jednotkách.
+Odkazuje na `RECT` strukturu `CRect` nebo objekt, který obsahuje souřadnice ohraničovacího obdélníku použitého k zobrazení obrázku. Souřadnice jsou určeny v logických jednotkách.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -4763,17 +4763,17 @@ Nenulové, pokud je funkce úspěšná; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Metasoubor lze přehrát libovolným počtem.
+Metasoubor lze přehrát libovolný počet opakování.
 
-Druhá verze `PlayMetaFile` zobrazuje obrázek uložený v daném metasouboru Enhanced-Format. Když aplikace volá druhou verzi `PlayMetaFile`, používá systém Windows snímek obrázku v záhlaví Enhanced-Metafile k namapování obrázku na obdélník, na který odkazuje parametr *lpBounds* . (Tento obrázek se může zkosit nebo otočit nastavením transformace světa na výstupním zařízení před voláním `PlayMetaFile`.) Body podél okrajů obdélníku jsou zahrnuty v obrázku. Obrázek Enhanced Metafile se dá oříznout definováním oblasti oříznutí na výstupním zařízení před přehráním Enhanced Metafile.
+Druhá verze `PlayMetaFile` zobrazí obrázek uložený v daném rozšířeném formátu metasouboru. Když aplikace volá druhou `PlayMetaFile`verzi aplikace , systém Windows použije rámeček obrázku v záhlaví rozšířeného metasouboru k mapování obrázku na obdélník, na který je odkazováno parametrem *lpBounds.* (Tento obrázek může být stříhán nebo otočen `PlayMetaFile`nastavením transformace světa ve výstupním zařízení před voláním .) Body podél okrajů obdélníku jsou zahrnuty na obrázku. Rozšířený obraz metasouboru lze ořezat definováním oblasti oříznutí ve výstupním zařízení před přehráním rozšířeného metasouboru.
 
-Pokud rozšířený metasoubor obsahuje volitelnou paletu, aplikace může dosáhnout konzistentních barev nastavením palety barev na výstupním zařízení před voláním druhé verze `PlayMetaFile`. K načtení volitelné palety použijte funkci `GetEnhMetaFilePaletteEntries` Windows. Rozšířený metasoubor může být vložen do nově vytvořeného formátu EMF voláním druhé verze `PlayMetaFile` a přehráním zdrojového rozšířeného metasouboru do kontextu zařízení pro nový rozšířený metasoubor.
+Pokud rozšířený metasoubor obsahuje volitelnou paletu, může aplikace dosáhnout konzistentních barev nastavením palety `PlayMetaFile`barev na výstupním zařízení před voláním druhé verze aplikace . Chcete-li načíst volitelnou paletu, použijte funkci systému `GetEnhMetaFilePaletteEntries` Windows. Rozšířený metasoubor lze vložit do nově vytvořeného rozšířeného metasouboru `PlayMetaFile` voláním druhé verze zdrojového rozšířeného metasouboru do kontextu zařízení pro nový rozšířený metasoubor.
 
-Tato funkce zachová stavy kontextu výstupního zařízení. Pomocí této funkce se odstraní libovolný objekt, který se vytvořil, ale neodstranil v rozšířeném metasouboru. Chcete-li zastavit tuto funkci, aplikace může volat `CancelDC` funkci systému Windows z jiného vlákna pro ukončení operace. V tomto případě vrátí funkce hodnotu nula.
+Stavy kontextu výstupního zařízení jsou zachovány touto funkcí. Tato funkce odstraní libovolný objekt vytvořený, ale neodstraněný v rozšířeném metasouboru. Chcete-li tuto funkci zastavit, `CancelDC` může aplikace volat funkci systému Windows z jiného vlákna a ukončit operaci. V tomto případě funkce vrátí nulu.
 
-##  <a name="plgblt"></a>CDC::P lgBlt
+## <a name="cdcplgblt"></a><a name="plgblt"></a>CDC::PlgBlt
 
-Provádí přenos bitového bloku bitů dat barev ze zadaného obdélníku v kontextu zdrojového zařízení na zadaný Kosoúhelník v daném kontextu zařízení.
+Provádí přenos bitových bloků bitů barevných dat ze zadaného obdélníku v kontextu zdrojového zařízení do zadaného rovnoběžníku v daném kontextu zařízení.
 
 ```
 BOOL PlgBlt(
@@ -4791,31 +4791,31 @@ BOOL PlgBlt(
 ### <a name="parameters"></a>Parametry
 
 *lpPoint*<br/>
-Odkazuje na pole tří bodů v logickém prostoru, které identifikují tři rohy cílové kosoúhelníke. Levý horní roh zdrojového obdélníku je namapován na první bod v tomto poli, v pravém horním rohu druhého bodu v tomto poli a v levém dolním rohu na třetí bod. Pravý dolní roh zdrojového obdélníku je namapován na implicitní čtvrtý bod v kosoúhelníki.
+Odkazuje na pole tří bodů v logickém prostoru, které identifikuje tři rohy cílového rovnoběžníku. Levý horní roh zdrojového obdélníku je mapován na první bod v tomto poli, do pravého horního rohu do druhého bodu v tomto poli a do levého dolního rohu do třetího bodu. Pravý dolní roh zdrojového obdélníku je mapován na implicitní čtvrtý bod v rovnoběžníku.
 
 *pSrcDC*<br/>
 Identifikuje kontext zdrojového zařízení.
 
 *xSrc*<br/>
-Určuje souřadnici x (v logických jednotkách) levého horního rohu zdrojového obdélníku.
+Určuje souřadnice x v logických jednotkách levého horního rohu zdrojového obdélníku.
 
-*ySrc*<br/>
-Určuje souřadnici y (v logických jednotkách) levého horního rohu zdrojového obdélníku.
+*ySrc řekl:*<br/>
+Určuje souřadnici y v logických jednotkách levého horního rohu zdrojového obdélníku.
 
-*nWidth*<br/>
+*nŠířka*<br/>
 Určuje šířku zdrojového obdélníku v logických jednotkách.
 
-*nHeight*<br/>
+*nVýška*<br/>
 Určuje výšku zdrojového obdélníku v logických jednotkách.
 
-*maskBitmap*<br/>
-Určuje volitelný monochromatický rastrový obrázek, který se používá k maskování barev zdrojového obdélníku.
+*maskaBitmap*<br/>
+Identifikuje volitelnou monochromatickou bitmapu, která se používá k maskování barev zdrojového obdélníku.
 
 *xMask*<br/>
-Určuje souřadnici x levého horního rohu monochromatického rastrového obrázku.
+Určuje souřadnici x levého horního rohu monochromatické bitmapy.
 
 *yMask*<br/>
-Určuje souřadnici y v levém horním rohu monochromatického rastrového obrázku.
+Určuje souřadnici y levého horního rohu monochromatické bitmapy.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -4823,23 +4823,23 @@ Nenulové, pokud je funkce úspěšná; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud daný popisovač bitové masky identifikuje platnou monochromatický rastrový obrázek, funkce použije tento rastrový obrázek k maskování bitů dat barev ze zdrojového obdélníku.
+Pokud daný popisovač bitové masky identifikuje platný monochromatický rastrový obrázek, funkce používá tuto bitmapu k maskování bitů barevných dat ze zdrojového obdélníku.
 
-Čtvrtý vrchol kosoúhelníke (D) je definován tak, že se první tři body (A, B a C) považují za vektory a výpočetní prostředí D = B + C-A.
+Čtvrtý vrchol rovnoběžníku (D) je definován tak, že první tři body (A, B a C) považujete za vektory a výpočetní D = B + C - A.
 
-Pokud Bitová maska existuje, hodnota 1 v masce označuje, že by se měla zkopírovat barva zdrojového pixelu do cíle. Hodnota 0 v masce označuje, že barva cílového pixelu se nemění.
+Pokud bitová maska existuje, hodnota 1 v masce označuje, že zdrojová barva obrazového bodu by měla být zkopírována do cíle. Hodnota 0 v masce označuje, že barvu cílového obrazového bodu nelze změnit.
 
-Pokud je obdélník masky menší než zdrojový a cílový obdélník, funkce replikuje vzor masky.
+Pokud je obdélník masky menší než zdrojový a cílový obdélník, funkce replikuje vzorek masky.
 
-Transformace velikosti, překladu a reflexe jsou povolené v kontextu zdrojového zařízení. ale transformace rotace a zkosení nejsou. Pokud rastrový obrázek masky není monochromatický, dojde k chybě. Režim roztažení pro kontext cílového zařízení se používá k určení toho, jak se mají obrazové body roztáhnout nebo komprimovat, pokud je to nutné. Při nahrávání rozšířeného metasouboru dojde k chybě, pokud kontext zdrojového zařízení identifikuje kontext zařízení Enhanced Metafile.
+Změna velikosti, překladace a reflexe transformace jsou povoleny v kontextu zdrojového zařízení; však transformace otočení a zkosení nejsou. Pokud bitmapa masky není monochromatická rastrová mapa, dojde k chybě. Režim roztahování pro kontext cílového zařízení se používá k určení, jak roztáhnout nebo komprimovat obrazové body, pokud je to nezbytné. Při zaznamenávání rozšířeného metasouboru dojde k chybě, pokud kontext zdrojového zařízení identifikuje kontext zařízení rozšířené metasouboru.
 
-Cílové souřadnice jsou transformovány podle kontextu cílového zařízení; zdrojové souřadnice jsou transformovány podle kontextu zdrojového zařízení; Pokud má transformace zdroje otočení nebo zkosení, je vrácena chyba. Pokud cílový a zdrojový obdélník nemají stejný formát barvy, `PlgBlt` převede zdrojový obdélník tak, aby odpovídal cílovému obdélníku. Ne všechna zařízení podporují `PlgBlt`. Další informace naleznete v popisu funkce RC_BITBLT rastrového zobrazení v členské funkci `CDC::GetDeviceCaps`.
+Cílové souřadnice jsou transformovány podle kontextu cílového zařízení; zdrojové souřadnice jsou transformovány podle kontextu zdrojového zařízení; Pokud má transformace zdroje otočení nebo zkosení, je vrácena chyba. Pokud cílové a zdrojové obdélníky nemají stejný `PlgBlt` barevný formát, převede zdrojový obdélník tak, aby odpovídal cílovému obdélníku. Ne všechna `PlgBlt`zařízení podporují . Další informace naleznete v popisu RC_BITBLT rastrové `CDC::GetDeviceCaps` funkce v členské funkci.
 
-Pokud zdrojové a cílové kontexty zařízení reprezentují nekompatibilní zařízení, `PlgBlt` vrátí chybu.
+Pokud kontexty zdrojového a cílového `PlgBlt` zařízení představují nekompatibilní zařízení, vrátí chybu.
 
-##  <a name="polybezier"></a>CDC::P olyBezier
+## <a name="cdcpolybezier"></a><a name="polybezier"></a>CDC::PolyBezier
 
-Kreslí jednu nebo více Bzierých křivek.
+Nakreslí jednu nebo více křivky spline Bzier.
 
 ```
 BOOL PolyBezier(
@@ -4850,10 +4850,10 @@ BOOL PolyBezier(
 ### <a name="parameters"></a>Parametry
 
 *lpPoints*<br/>
-Odkazuje na pole datových struktur [bodů](/windows/win32/api/windef/ns-windef-point) , které obsahují koncové body a řídicí body křivky (y).
+Odkazuje na pole [point](/windows/win32/api/windef/ns-windef-point) datových struktur, které obsahují koncové body a řídicí body křivky spline(s).
 
 *nCount*<br/>
-Určuje počet bodů v poli *lpPoints* . Tato hodnota musí být více než třikrát počet křivek, které mají být vykresleny, protože každá Bzierá křivka vyžaduje dva řídicí body a koncový bod a počáteční křivka vyžaduje další počáteční bod.
+Určuje počet bodů v poli *lpPoints.* Tato hodnota musí být více než trojnásobek počtu křivky spline, které mají být nakresleny, protože každý Bzier spline vyžaduje dva řídicí body a koncový bod a počáteční křivka spline vyžaduje další počáteční bod.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -4861,13 +4861,13 @@ Nenulové, pokud je funkce úspěšná; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce kreslí krychli Bzier křivky pomocí koncových bodů a řídicích bodů určených parametrem *lpPoints* . První křivka je vykreslena z prvního bodu na čtvrtý bod pomocí druhého a třetího bodu jako řídicí body. Každá následná křivka v sekvenci potřebuje přesně tři další body: koncový bod předchozí křivky se používá jako výchozí bod, další dva body v sekvenci jsou řídicí body a třetí je koncový bod.
+Tato funkce nakreslí kubické křivky Bzier pomocí koncových bodů a řídicích bodů určených parametrem *lpPoints.* První křivka spline je nakreslena z prvního bodu do čtvrtého bodu pomocí druhého a třetího bodu jako kontrolníbody. Každá následující křivka spline v sekvenci potřebuje přesně tři další body: koncový bod předchozí křivky spline se používá jako výchozí bod, další dva body v sekvenci jsou řídicí body a třetí je koncový bod.
 
-Aktuální pozice se nepoužívá ani není aktualizována funkcí `PolyBezier`. Obrázek není vyplněn. Tato funkce kreslí řádky pomocí aktuálního pera.
+Aktuální pozice není používána ani `PolyBezier` aktualizována funkcí. Obrázek není vyplněn. Tato funkce kreslí čáry pomocí aktuálního pera.
 
-##  <a name="polybezierto"></a>CDC::P olyBezierTo
+## <a name="cdcpolybezierto"></a><a name="polybezierto"></a>CDC::PolyBezierTo
 
-Kreslí jednu nebo více Bzierých křivek.
+Nakreslí jednu nebo více křivky spline Bzier.
 
 ```
 BOOL PolyBezierTo(
@@ -4878,10 +4878,10 @@ BOOL PolyBezierTo(
 ### <a name="parameters"></a>Parametry
 
 *lpPoints*<br/>
-Odkazuje na pole datových struktur [bodů](/windows/win32/api/windef/ns-windef-point) , které obsahují koncové body a řídicí body.
+Odkazuje na pole [point](/windows/win32/api/windef/ns-windef-point) datových struktur, které obsahuje koncové body a řídicí body.
 
 *nCount*<br/>
-Určuje počet bodů v poli *lpPoints* . Tato hodnota musí být třikrát počet křivek, které mají být vykresleny, protože každá Bzierá křivka vyžaduje dva řídicí body a koncový bod.
+Určuje počet bodů v poli *lpPoints.* Tato hodnota musí být trojnásobek počtu křivky spline, které mají být nakresleny, protože každý Bzier spline vyžaduje dva řídicí body a koncový bod.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -4889,15 +4889,15 @@ Nenulové, pokud je funkce úspěšná; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce kreslí krychli Bzier křivky pomocí řídicích bodů určených parametrem *lpPoints* . První křivka je vykreslena z aktuální pozice do třetího bodu pomocí prvních dvou bodů jako řídicích bodů. Pro každou následnou křivku funkce potřebuje přesně tři body a jako výchozí bod pro další použije koncový bod předchozí křivky. `PolyBezierTo` přesune aktuální pozici na koncový bod poslední Bzier křivky. Obrázek není vyplněn. Tato funkce kreslí řádky pomocí aktuálního pera.
+Tato funkce nakreslí kubické křivky Křivky spline Bzier pomocí řídicích bodů určených parametrem *lpPoints.* První křivka spline je nakreslena z aktuální pozice do třetího bodu pomocí prvních dvou bodů jako kontrolních bodů. Pro každou následující křivku spline potřebuje funkce přesně tři další body a jako výchozí bod pro další použije koncový bod předchozí křivky spline. `PolyBezierTo`posune aktuální pozici do koncového bodu poslední křivky Bzier. Obrázek není vyplněn. Tato funkce kreslí čáry pomocí aktuálního pera.
 
 ### <a name="example"></a>Příklad
 
-  Podívejte se na příklad pro [CDC:: BeginPath](#beginpath).
+  Viz příklad pro [CDC::BeginPath](#beginpath).
 
-##  <a name="polydraw"></a>CDC::P olyDraw
+## <a name="cdcpolydraw"></a><a name="polydraw"></a>CDC::PolyDraw
 
-Nakreslí sadu segmentů čáry a Bzier křivky.
+Nakreslí sadu úsečkových segmentů a křivky spline Bzier.
 
 ```
 BOOL PolyDraw(
@@ -4909,27 +4909,27 @@ BOOL PolyDraw(
 ### <a name="parameters"></a>Parametry
 
 *lpPoints*<br/>
-Odkazuje na pole datových struktur [bodů](/windows/win32/api/windef/ns-windef-point) , které obsahují koncové body pro každý segment čáry a koncové body a řídicí body pro každou Bzier křivku.
+Odkazuje na pole [point](/windows/win32/api/windef/ns-windef-point) datových struktur, které obsahuje koncové body pro každý segment čáry a koncové body a řídicí body pro každou křivku Bzier spline.
 
-*lpTypes*<br/>
-Odkazuje na pole, které určuje, jak se používá každý bod v poli *lpPoints* . Hodnoty mohou být jedna z následujících:
+*lpTypy*<br/>
+Odkazuje na pole, které určuje, jak se používá každý bod v poli *lpPoints.* Hodnoty mohou být jednu z následujících hodnot:
 
-- PT_MOVETO určuje, zda se v tomto bodě začíná nesouvislý obrázek. Tento bod se stal novou aktuální pozicí.
+- PT_MOVETO Určuje, že tento bod spustí nesouvislý obrázek. Tento bod se stane novou aktuální pozicí.
 
-- PT_LINETO určuje, že řádek má být vykreslen z aktuální pozice do tohoto bodu, což se následně bude přicházet k nové aktuální pozici.
+- PT_LINETO Určuje, že čára má být nakreslena z aktuální pozice do tohoto bodu, který se pak stane novou aktuální pozicí.
 
-- PT_BEZIERTO určuje, zda je tento bod řídicím bodem nebo koncovým bodem pro Bzier křivku.
+- PT_BEZIERTO Určuje, že tento bod je řídicím bodem nebo koncovým bodem pro křivku spline Bzier.
 
-PT_BEZIERTO typy se vždy vyskytují v sadách tři. Aktuální pozice definuje počáteční bod pro Bzier křivku. První dva body PT_BEZIERTO jsou řídicí body a třetí PT_BEZIERTO bod je koncovým bodem. Koncový bod se stala novou aktuální pozicí. Pokud nejsou tři po sobě jdoucí PT_BEZIERTO body, dojde k chybě.
+PT_BEZIERTO typy se vždy vyskytují v sadách po třech. Aktuální pozice definuje počáteční bod pro křivku Bzier. První dva PT_BEZIERTO body jsou kontrolní body a třetí PT_BEZIERTO bodem je koncový bod. Koncový bod se stane novou aktuální pozicí. Pokud nejsou k dispozici tři po sobě jdoucí PT_BEZIERTO body, dojde k chybě.
 
-   Typ PT_LINETO nebo PT_BEZIERTO lze kombinovat s následující konstantou pomocí bitového operátoru nebo pro indikaci, že odpovídající bod je posledním bodem na obrázku a obrázek je uzavřen:
+   Typ PT_LINETO nebo PT_BEZIERTO lze kombinovat s následující konstantou pomocí bitového operátoru OR, který označuje, že odpovídající bod je posledním bodem na obrázku a je postava uzavřena:
 
-- PT_CLOSEFIGURE určuje, že po dokončení PT_LINETO nebo PT_BEZIERTO typu pro tento bod se obrázek automaticky zavře. Čára se z tohoto bodu vykreslí na nejnovější PT_MOVETO nebo `MoveTo` bod.
+- PT_CLOSEFIGURE Určuje, že po dokončení PT_LINETO nebo PT_BEZIERTO typu pro tento bod se automaticky zavře. Čára je nakreslena od tohoto `MoveTo` bodu k poslednímu PT_MOVETO nebo bodu.
 
-   Tento příznak je kombinován s typem PT_LINETO pro řádek nebo s PT_BEZIERTO typ koncového bodu pro Bzier křivku pomocí bitového operátoru **or** . Aktuální pozice je nastavena na koncový bod koncového řádku.
+   Tento příznak je kombinován s typem PT_LINETO pro čáru nebo s typem PT_BEZIERTO koncového bodu pro křivku Křivky spline Bzier pomocí bitového operátoru **OR.** Aktuální pozice je nastavena na koncový bod uzavírací čáry.
 
 *nCount*<br/>
-Určuje celkový počet bodů v poli *lpPoints* , který je stejný jako počet bajtů v poli *lpTypes* .
+Určuje celkový počet bodů v poli *lpPoints,* stejný jako počet bajtů v poli *lpTypes.*
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -4937,15 +4937,15 @@ Nenulové, pokud je funkce úspěšná; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce se dá použít k vykreslování nesouvislých obrázků namísto po sobě jdoucích volání na `CDC::MoveTo`, `CDC::LineTo`a `CDC::PolyBezierTo` členských funkcí. Řádky a křivky jsou vykresleny pomocí aktuálního pera a obrázky nejsou vyplněny. Pokud je aktivní cesta zahájena voláním členské funkce `CDC::BeginPath`, `PolyDraw` přidá do cesty. Body obsažené v poli *lpPoints* a v *lpTypes* označují, zda je každý bod součástí `CDC::MoveTo`, `CDC::LineTo`nebo operace `CDC::BezierTo`. Je také možné zavřít hodnoty. Tato funkce aktualizuje aktuální pozici.
+Tuto funkci lze použít k nakreslení nesouvislých `CDC::MoveTo` `CDC::LineTo`číslic `CDC::PolyBezierTo` namísto po sobě jdoucích volání , a členské funkce. Čáry a křivky spline jsou nakresleny pomocí aktuálního pera a obrázky nejsou vyplněny. Pokud je aktivní cesta spuštěna `CDC::BeginPath` voláním `PolyDraw` členské funkce, přidá k cestě. Body obsažené v poli *lpPoints* a v *lpTypes* označují, `CDC::MoveTo`zda `CDC::LineTo`je každý `CDC::BezierTo` bod součástí , a nebo operace. Je také možné uzavřít čísla. Tato funkce aktualizuje aktuální pozici.
 
 ### <a name="example"></a>Příklad
 
-  Podívejte se na příklad pro [CDC:: BeginPath](#beginpath).
+  Viz příklad pro [CDC::BeginPath](#beginpath).
 
-##  <a name="polygon"></a>CDC::P olygon
+## <a name="cdcpolygon"></a><a name="polygon"></a>CDC::Polygon
 
-Nakreslí mnohoúhelník skládající se ze dvou nebo více bodů (vrcholy), které jsou spojeny pomocí čar, pomocí aktuálního pera.
+Nakreslí mnohonožku skládající se ze dvou nebo více bodů (vrcholů) připojených čarami pomocí aktuálního pera.
 
 ```
 BOOL Polygon(
@@ -4956,7 +4956,7 @@ BOOL Polygon(
 ### <a name="parameters"></a>Parametry
 
 *lpPoints*<br/>
-Odkazuje na pole bodů, které určují vrcholy mnohoúhelníku. Každý bod v poli je `POINT` struktura nebo objekt `CPoint`.
+Odkazuje na pole bodů, které určuje vrcholy polygonu. Každý bod v poli `POINT` je `CPoint` struktura nebo objekt.
 
 *nCount*<br/>
 Určuje počet vrcholů v poli.
@@ -4967,17 +4967,17 @@ Nenulové, pokud je funkce úspěšná; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Systém automaticky uzavře mnohoúhelník, pokud je to nutné, kreslením čáry z posledního vrcholu vrcholu do prvního.
+Systém v případě potřeby automaticky uzavře polygon nakreslením čáry od posledního vrcholu k prvnímu.
 
-Aktuální režim vyplňování mnohoúhelníku lze načíst nebo nastavit pomocí funkcí `GetPolyFillMode` a `SetPolyFillMode` členů.
+Aktuální režim plnění polygonů lze načíst nebo `GetPolyFillMode` `SetPolyFillMode` nastavit pomocí členských funkcí a.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCDocView#38](../../mfc/codesnippet/cpp/cdc-class_10.cpp)]
 
-##  <a name="polyline"></a>CDC::P olyline
+## <a name="cdcpolyline"></a><a name="polyline"></a>CDC::Polyline
 
-Nakreslí sadu segmentů čar připojujících body určené parametrem *lpPoints*.
+Nakreslí sadu úsečkových segmentů spojujících body určené *lpPoints*.
 
 ```
 BOOL Polyline(
@@ -4988,10 +4988,10 @@ BOOL Polyline(
 ### <a name="parameters"></a>Parametry
 
 *lpPoints*<br/>
-Odkazuje na pole `POINT` struktur nebo objektů `CPoint`, které se mají připojit.
+Odkazuje na pole `POINT` struktur `CPoint` nebo objektů, které mají být připojeny.
 
 *nCount*<br/>
-Určuje počet bodů v poli. Tato hodnota musí být aspoň 2.
+Určuje počet bodů v poli. Tato hodnota musí být alespoň 2.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -4999,13 +4999,13 @@ Nenulové, pokud je funkce úspěšná; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Řádky se vykreslují z prvního bodu prostřednictvím dalších bodů pomocí aktuálního pera. Na rozdíl od `LineTo` členské funkce `Polyline` funkce ani nepoužívá ani neaktualizuje aktuální pozici.
+Čáry jsou nakresleny od prvního bodu přes následující body pomocí aktuálního pera. Na `LineTo` rozdíl od `Polyline` členské funkce funkce nepoužívá ani aktualizuje aktuální pozici.
 
-Další informace naleznete v části [lomené čáry](/windows/win32/api/wingdi/nf-wingdi-polyline) v Windows SDK.
+Další informace naleznete [v tématu PolyLine](/windows/win32/api/wingdi/nf-wingdi-polyline) v sadě Windows SDK.
 
-##  <a name="polylineto"></a>CDC::P olylineTo
+## <a name="cdcpolylineto"></a><a name="polylineto"></a>CDC::PolylineTo
 
-Vykreslí jednu nebo více přímých čar.
+Nakreslí jednu nebo více přímých čar.
 
 ```
 BOOL PolylineTo(
@@ -5016,7 +5016,7 @@ BOOL PolylineTo(
 ### <a name="parameters"></a>Parametry
 
 *lpPoints*<br/>
-Odkazuje na pole datových struktur [bodů](/windows/win32/api/windef/ns-windef-point) , které obsahují vrcholy čáry.
+Odkazuje na pole datových struktur [POINT,](/windows/win32/api/windef/ns-windef-point) které obsahuje vrcholy čáry.
 
 *nCount*<br/>
 Určuje počet bodů v poli.
@@ -5027,11 +5027,11 @@ Nenulové, pokud je funkce úspěšná; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Čára je vykreslena z aktuální pozice do prvního bodu zadaného parametrem *lpPoints* pomocí aktuálního pera. Pro každý další řádek funkce kreslí z koncového bodu předchozího řádku na další bod určený parametrem *lpPoints*. `PolylineTo` přesune aktuální pozici na koncový bod posledního řádku. Pokud segmenty čar vykreslené touto funkcí tvoří uzavřený útvar, obrázek není vyplněn.
+Čára je nakreslena z aktuální pozice na první bod určený parametrem *lpPoints* pomocí aktuálního pera. Pro každý další řádek se funkce nakreslí z koncového bodu předchozího řádku do dalšího bodu určeného *lpPoints*. `PolylineTo`přesune aktuální pozici do koncového bodu posledního řádku. Pokud úsečkové segmenty nakreslené touto funkcí tvoří uzavřený obrázek, obrázek není vyplněn.
 
-##  <a name="polypolygon"></a>CDC::P olyPolygon
+## <a name="cdcpolypolygon"></a><a name="polypolygon"></a>CDC::PolyPolygon
 
-Vytvoří dva nebo více mnohoúhelníků, které jsou vyplněny pomocí aktuálního režimu vyplňování mnohoúhelníků.
+Vytvoří dva nebo více polygonů, které jsou vyplněny v aktuálním režimu plnění polygonů.
 
 ```
 BOOL PolyPolygon(
@@ -5043,13 +5043,13 @@ BOOL PolyPolygon(
 ### <a name="parameters"></a>Parametry
 
 *lpPoints*<br/>
-Odkazuje na pole `POINT` struktur nebo objektů `CPoint` definující vrcholy mnohoúhelníků.
+Odkazuje na pole `POINT` struktur `CPoint` nebo objektů, které definují vrcholy polygonů.
 
 *lpPolyCounts*<br/>
-Odkazuje na pole celých čísel, z nichž každý Určuje počet bodů v jednom z mnohoúhelníků v poli *lpPoints* .
+Odkazuje na pole celá čísla, z nichž každý určuje počet bodů v jednom z mnohonoly v *lpPoints* pole.
 
 *nCount*<br/>
-Počet položek v poli *lpPolyCounts* . Toto číslo určuje počet mnohoúhelníků, které mají být vykresleny. Tato hodnota musí být aspoň 2.
+Počet položek v poli *lpPolyCounts.* Toto číslo určuje počet mnohonoly, které mají být vykresleny. Tato hodnota musí být alespoň 2.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -5057,17 +5057,17 @@ Nenulové, pokud je funkce úspěšná; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Mnohoúhelníky můžou být nesouvislé nebo překrývající se.
+Polygony mohou být nesouvislé nebo překrývající se.
 
-Každý mnohoúhelník určený v volání funkce `PolyPolygon` musí být uzavřen. Na rozdíl od mnohoúhelníků vytvořených členskou funkcí `Polygon` nejsou mnohoúhelníky vytvořené pomocí `PolyPolygon` uzavřeny automaticky.
+Každý polygon zadaný ve `PolyPolygon` volání funkce musí být uzavřen. Na rozdíl od vícemocnů vytvořených členovou `Polygon` funkcí `PolyPolygon` nejsou polygony vytvořené automaticky uzavřeny.
 
-Funkce vytvoří dva nebo více mnohoúhelníků. Chcete-li vytvořit jeden mnohoúhelník, aplikace by měla používat členskou funkci `Polygon`.
+Funkce vytvoří dva nebo více polygonů. Chcete-li vytvořit jeden polygon, `Polygon` aplikace by měla používat členská funkce.
 
-Aktuální režim vyplňování mnohoúhelníku lze načíst nebo nastavit pomocí funkcí `GetPolyFillMode` a `SetPolyFillMode` členů.
+Aktuální režim plnění polygonů lze načíst nebo `GetPolyFillMode` `SetPolyFillMode` nastavit pomocí členských funkcí a.
 
-##  <a name="polypolyline"></a>CDC::P olyPolyline
+## <a name="cdcpolypolyline"></a><a name="polypolyline"></a>CDC::PolyPolyline
 
-Kreslí více sérií propojených segmentů čáry.
+Nakreslí více řad propojených úsečkových segmentů.
 
 ```
 BOOL PolyPolyline(
@@ -5079,13 +5079,13 @@ BOOL PolyPolyline(
 ### <a name="parameters"></a>Parametry
 
 *lpPoints*<br/>
-Odkazuje na pole struktury, které obsahují vrcholy lomených čar. Lomené čáry jsou zadány po sobě.
+Odkazuje na pole struktur, které obsahuje vrcholy předl. Předily jsou určeny postupně.
 
 *lpPolyPoints*<br/>
-Odkazuje na pole proměnných určující počet bodů v poli *lpPoints* pro odpovídající mnohoúhelník. Každá položka musí být větší než nebo rovna 2.
+Odkazuje na pole proměnných určující počet bodů v poli *lpPoints* pro odpovídající mnohonožce. Každá položka musí být větší nebo rovna 2.
 
 *nCount*<br/>
-Určuje celkový počet počtů v poli *lpPolyPoints* .
+Určuje celkový počet počtů v poli *lpPolyPoints.*
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -5093,11 +5093,11 @@ Nenulové, pokud je funkce úspěšná; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Segmenty čar jsou vykresleny pomocí aktuálního pera. Hodnoty vytvořené segmenty nejsou vyplněny. Aktuální pozice není použita ani není aktualizována touto funkcí.
+Segmenty čáry jsou nakresleny pomocí aktuálního pera. Hodnoty tvořené segmenty nejsou vyplněny. Tato funkce nepoužívá ani neaktualizuje aktuální pozici.
 
-##  <a name="ptvisible"></a>CDC::P tVisible
+## <a name="cdcptvisible"></a><a name="ptvisible"></a>CDC::PtVisible
 
-Určuje, zda je daný bod v oblasti oříznutí kontextu zařízení.
+Určuje, zda je daný bod v rámci oblasti oříznutí kontextu zařízení.
 
 ```
 virtual BOOL PtVisible(
@@ -5109,22 +5109,22 @@ BOOL PtVisible(POINT point) const;
 
 ### <a name="parameters"></a>Parametry
 
-*znak*<br/>
+*X*<br/>
 Určuje logickou souřadnici x bodu.
 
-*požadované*<br/>
+*Y*<br/>
 Určuje logickou souřadnici y bodu.
 
-*Vyberte*<br/>
-Určuje bod pro kontrolu logických souřadnic. Pro tento parametr můžete předat buď strukturu `POINT`, nebo objekt `CPoint`.
+*Bod*<br/>
+Určuje bod, který má být sezměnami logických souřadnic. Pro tento parametr `POINT` můžete `CPoint` předat strukturu nebo objekt.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je zadaný bod v oblasti oříznutí; v opačném případě 0.
+Nenulová, pokud se zadaný bod nachází v oblasti oříznutí; jinak 0.
 
-##  <a name="queryabort"></a>CDC:: QueryAbort
+## <a name="cdcqueryabort"></a><a name="queryabort"></a>CDC::Přerušení dotazu
 
-Zavolá funkci Abort nainstalovanou členskou funkcí [SetAbortProc](#setabortproc) pro tiskovou aplikaci a provede dotaz, zda má být tisk ukončen.
+Zavolá funkci abort nainstalovanou členskou funkcí [SetAbortProc](#setabortproc) pro tiskovou aplikaci a dotazuje se, zda má být tisk ukončen.
 
 ```
 BOOL QueryAbort() const;
@@ -5132,11 +5132,11 @@ BOOL QueryAbort() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Návratová hodnota je nenulová, pokud by tisk mělo pokračovat nebo pokud neexistuje žádná procedura přerušení. Pokud chcete tiskovou úlohu ukončit, je 0. Návratová hodnota je poskytnuta funkcí Abort.
+Vrácená hodnota je nenulová, pokud by měl tisk pokračovat nebo pokud neexistuje žádný postup přerušení. Je 0, pokud by měla být tisková úloha ukončena. Vrácená hodnota je dodávána funkcí abort.
 
-##  <a name="realizepalette"></a>CDC:: RealizePalette
+## <a name="cdcrealizepalette"></a><a name="realizepalette"></a>CDC::RealizePalette
 
-Mapuje položky z aktuální logické palety na paletu systému.
+Mapuje položky z aktuální logické palety na systémovou paletu.
 
 ```
 UINT RealizePalette();
@@ -5144,19 +5144,19 @@ UINT RealizePalette();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Určuje, kolik položek v logické paletě bylo namapováno na jiné položky v systémové paletě. Představuje počet položek, které se tato funkce přemapovala tak, aby odpovídala změnám v systémové paletě od posledního spuštění logické palety.
+Označuje, kolik položek v logické paletě bylo mapováno na různé položky v systémové paletě. To představuje počet položek, které tato funkce přemapovala tak, aby vyhovovaly změnám v systémové paletě od poslední realizace logické palety.
 
 ### <a name="remarks"></a>Poznámky
 
-Barevná paleta barev funguje jako vyrovnávací paměť mezi aplikacemi náročnými na barvy a systémem, což umožňuje aplikaci použít tolik barev podle potřeby, aniž by došlo ke konfliktu s vlastními zobrazenými barvami nebo s barvami zobrazenými jinými okny.
+Logická paleta barev funguje jako vyrovnávací paměť mezi aplikacemi náročnými na barvy a systémem, což umožňuje aplikaci používat tolik barev, kolik je potřeba, aniž by zasahovala do vlastních zobrazených barev nebo s barvami zobrazenými jinými okny.
 
-Pokud má okno vstupní fokus a volá `RealizePalette`, systém Windows zajistí, že okno zobrazí všechny požadované barvy až do maximálního počtu současně dostupného na obrazovce. Systém Windows také zobrazuje barvy nenalezené v paletě okna tak, že je porovná s dostupnými barvami.
+Pokud je v okně vstupní `RealizePalette`fokus a volání , systém Windows zajistí, že okno zobrazí všechny požadované barvy, a to až do maximálního počtu současně k dispozici na obrazovce. Systém Windows také zobrazuje barvy, které nebyly nalezeny v paletě okna, tak, že je přiřazuje k dostupným barvám.
 
-Kromě toho Windows odpovídá barvám požadovaným neaktivním Windows, které na dostupné barvy co nejpřesněji volají funkci. To významně snižuje nežádoucí změny barev zobrazených v neaktivních oknech.
+Kromě toho systém Windows odpovídá barvy požadované neaktivní okna, které volají funkci co nejblíže k dispozici barvy. To výrazně snižuje nežádoucí změny v barvách zobrazených v neaktivních oknech.
 
-##  <a name="rectangle"></a>CDC:: Rectangle
+## <a name="cdcrectangle"></a><a name="rectangle"></a>CDC::Obdélník
 
-Nakreslí obdélník pomocí aktuálního pera.
+Nakreslí obdélník pomocí aktuální pero.
 
 ```
 BOOL Rectangle(
@@ -5173,17 +5173,17 @@ BOOL Rectangle(LPCRECT lpRect);
 *x1*<br/>
 Určuje souřadnici x levého horního rohu obdélníku (v logických jednotkách).
 
-*Y1*<br/>
+*y1*<br/>
 Určuje souřadnici y levého horního rohu obdélníku (v logických jednotkách).
 
-*X2*<br/>
+*x2*<br/>
 Určuje souřadnici x pravého dolního rohu obdélníku (v logických jednotkách).
 
-*Y2*<br/>
+*y2*<br/>
 Určuje souřadnici y pravého dolního rohu obdélníku (v logických jednotkách).
 
 *lpRect*<br/>
-Určuje obdélník v logických jednotkách. Pro tento parametr můžete předat buď objekt `CRect`, nebo ukazatel na `RECT` strukturu.
+Určuje obdélník v logických jednotkách. Objekt nebo ukazatel `CRect` můžete předat `RECT` struktuře pro tento parametr.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -5191,17 +5191,17 @@ Nenulové, pokud je funkce úspěšná; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Vnitřek obdélníku je vyplněn pomocí aktuálního štětce.
+Vnitřek obdélníku je vyplněn pomocí aktuální stopy.
 
-Obdélník rozšiřuje až, ale nezahrnuje, souřadnice pravého a dolního okraje. To znamená, že výška obdélníku je *y2* - *Y1* a šířka obdélníku je *X2* - *x1*. Šířka i výška obdélníku musí být větší než 2 jednotky a musí být menší než 32 767 jednotek.
+Obdélník rozšiřuje až do, ale nezahrnuje, pravé a dolní souřadnice. To znamená, že výška obdélníku je *y2* - *y1* a šířka obdélníku je *x2* - *x1*. Šířka a výška obdélníku musí být větší než 2 jednotky a menší než 32 767 jednotek.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCDocView#39](../../mfc/codesnippet/cpp/cdc-class_11.cpp)]
 
-##  <a name="rectvisible"></a>CDC:: RectVisible
+## <a name="cdcrectvisible"></a><a name="rectvisible"></a>CDC::RectVisible
 
-Určuje, zda jakákoli část daného obdélníku leží v oblasti oříznutí kontextu zobrazení.
+Určuje, zda některá část daného obdélníku leží v oblasti oříznutí kontextu zobrazení.
 
 ```
 virtual BOOL RectVisible(LPCRECT lpRect) const;
@@ -5210,15 +5210,15 @@ virtual BOOL RectVisible(LPCRECT lpRect) const;
 ### <a name="parameters"></a>Parametry
 
 *lpRect*<br/>
-Odkazuje na strukturu `RECT` nebo objekt `CRect`, který obsahuje logické souřadnice zadaného obdélníku.
+Odkazuje na `RECT` strukturu `CRect` nebo objekt, který obsahuje logické souřadnice zadaného obdélníku.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud jakákoli část daného obdélníku leží v oblasti oříznutí; v opačném případě 0.
+Nenulová, pokud některá část daného obdélníku leží v oblasti oříznutí; jinak 0.
 
-##  <a name="releaseattribdc"></a>CDC:: ReleaseAttribDC
+## <a name="cdcreleaseattribdc"></a><a name="releaseattribdc"></a>CDC::VydáníAttribDC
 
-Chcete-li nastavit `m_hAttribDC` na hodnotu NULL, zavolejte tuto členskou funkci.
+Volání této členské `m_hAttribDC` funkce nastavit hodnotu NULL.
 
 ```
 virtual void ReleaseAttribDC();
@@ -5226,11 +5226,11 @@ virtual void ReleaseAttribDC();
 
 ### <a name="remarks"></a>Poznámky
 
-To nezpůsobí, že dojde k `Detach`. Pouze kontext výstupního zařízení je připojen k objektu `CDC` a lze jej odpojit pouze.
+To nezpůsobí `Detach` dojít. K objektu je připojen pouze `CDC` kontext výstupního zařízení a lze jej odpojit pouze.
 
-##  <a name="releaseoutputdc"></a>CDC:: ReleaseOutputDC
+## <a name="cdcreleaseoutputdc"></a><a name="releaseoutputdc"></a>CDC::ReleaseOutputDC
 
-Voláním této členské funkce nastavte člena `m_hDC` na hodnotu NULL.
+Volání této členské funkce `m_hDC` nastavit člen na HODNOTU NULL.
 
 ```
 virtual void ReleaseOutputDC();
@@ -5238,11 +5238,11 @@ virtual void ReleaseOutputDC();
 
 ### <a name="remarks"></a>Poznámky
 
-Tuto členskou funkci nelze volat, pokud je kontext výstupního zařízení připojen k objektu `CDC`. Pomocí členské funkce `Detach` odpojte kontext výstupního zařízení.
+Tuto členovou funkci nelze volat, pokud je `CDC` k objektu připojen kontext výstupního zařízení. Pomocí `Detach` členské funkce odpojte kontext výstupního zařízení.
 
-##  <a name="resetdc"></a>CDC:: ResetDC
+## <a name="cdcresetdc"></a><a name="resetdc"></a>CDC::ResetDC
 
-Zavolejte tuto členskou funkci, aby se aktualizoval kontext zařízení zabalený objektem `CDC`.
+Volání této členské funkce aktualizovat kontext zařízení `CDC` zabalené objektem.
 
 ```
 BOOL ResetDC(const DEVMODE* lpDevMode);
@@ -5251,7 +5251,7 @@ BOOL ResetDC(const DEVMODE* lpDevMode);
 ### <a name="parameters"></a>Parametry
 
 *lpDevMode*<br/>
-Ukazatel na strukturu `DEVMODE` Windows.
+Ukazatel na strukturu `DEVMODE` systému Windows.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -5259,17 +5259,17 @@ Nenulové, pokud je funkce úspěšná; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Kontext zařízení je aktualizován z informací uvedených ve struktuře `DEVMODE` systému Windows. Tato členská funkce obnoví pouze kontext zařízení atributu.
+Kontext zařízení je aktualizován z informací `DEVMODE` zadaných ve struktuře systému Windows. Tato členská funkce pouze obnoví kontext atributu zařízení.
 
-Aplikace bude obvykle používat členskou funkci `ResetDC`, když okno zpracuje zprávu `WM_DEVMODECHANGE`. Tuto členskou funkci můžete také použít ke změně orientace papíru nebo papírového přihrádky při tisku dokumentu.
+Aplikace obvykle používá členské `ResetDC` funkce při okno `WM_DEVMODECHANGE` zpracovává zprávu. Tuto členskou funkci můžete také použít ke změně orientace papíru nebo přihrádek papíru při tisku dokumentu.
 
-Tuto členskou funkci nemůžete použít ke změně názvu ovladače, názvu zařízení nebo výstupního portu. Když uživatel změní připojení portu nebo název zařízení, musíte odstranit původní kontext zařízení a vytvořit nový kontext zařízení s novými informacemi.
+Tuto členovou funkci nelze použít ke změně názvu ovladače, názvu zařízení nebo výstupního portu. Když uživatel změní připojení portu nebo název zařízení, je nutné odstranit původní kontext zařízení a vytvořit nový kontext zařízení s novými informacemi.
 
-Před voláním této členské funkce je nutné zajistit, aby byly vybrány všechny objekty (jiné než skladové objekty), které byly vybrány v kontextu zařízení.
+Před voláním této členské funkce je nutné zajistit, aby byly vybrány všechny objekty (jiné než stock objekty), které byly vybrány do kontextu zařízení.
 
-##  <a name="restoredc"></a>CDC:: RestoreDC
+## <a name="cdcrestoredc"></a><a name="restoredc"></a>CDC::ObnovitDC
 
-Obnoví kontext zařízení na předchozí stav identifikovaný *nSavedDC*.
+Obnoví kontext zařízení do předchozího stavu identifikovaného *nSavedDC*.
 
 ```
 virtual BOOL RestoreDC(int nSavedDC);
@@ -5278,21 +5278,21 @@ virtual BOOL RestoreDC(int nSavedDC);
 ### <a name="parameters"></a>Parametry
 
 *nSavedDC*<br/>
-Určuje kontext zařízení, který se má obnovit. Může to být hodnota vrácená předchozím `SaveDC` volání funkce. Pokud je *nSavedDC* -1, obnoví se poslední uložený kontext zařízení.
+Určuje kontext zařízení, který má být obnoven. Může se jedná o hodnotu vrácenou předchozím `SaveDC` voláním funkce. Pokud *nSavedDC* je -1, obnoví se naposledy uložený kontext zařízení.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud se zadaný kontext obnovil; v opačném případě 0.
+Nenulová, pokud byl zadaný kontext obnoven; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-`RestoreDC` obnoví kontext zařízení odebráním informací o stavu ze zásobníku vytvořeného předchozími voláními do členské funkce `SaveDC`.
+`RestoreDC`obnoví kontext zařízení odprýskáváním informací o stavu z `SaveDC` zásobníku vytvořeného dřívějšími voláními členské funkce.
 
-Zásobník může obsahovat informace o stavu několika kontextů zařízení. Pokud kontext určený parametrem *nSavedDC* není v horní části zásobníku, `RestoreDC` odstraní všechny informace o stavu mezi kontextem zařízení zadaným parametrem *nSavedDC* a horním okrajem zásobníku. Odstraněné informace se ztratí.
+Zásobník může obsahovat informace o stavu pro několik kontextů zařízení. Pokud kontext určený *nSavedDC* není v horní části `RestoreDC` zásobníku, odstraní všechny informace o stavu mezi kontextem zařízení určeným *nSavedDC* a horní části zásobníku. Odstraněné informace budou ztraceny.
 
-##  <a name="roundrect"></a>CDC:: RoundRect
+## <a name="cdcroundrect"></a><a name="roundrect"></a>CDC::RoundRect
 
-Nakreslí obdélník s zaoblenými rohy pomocí aktuálního pera.
+Nakreslí obdélník se zaoblenými rohy pomocí aktuálního pera.
 
 ```
 BOOL RoundRect(
@@ -5313,26 +5313,26 @@ BOOL RoundRect(
 *x1*<br/>
 Určuje souřadnici x levého horního rohu obdélníku (v logických jednotkách).
 
-*Y1*<br/>
+*y1*<br/>
 Určuje souřadnici y levého horního rohu obdélníku (v logických jednotkách).
 
-*X2*<br/>
+*x2*<br/>
 Určuje souřadnici x pravého dolního rohu obdélníku (v logických jednotkách).
 
-*Y2*<br/>
+*y2*<br/>
 Určuje souřadnici y pravého dolního rohu obdélníku (v logických jednotkách).
 
-*X3*<br/>
-Určuje šířku elipsy použité k vykreslení zaoblených rohů (v logických jednotkách).
+*x3*<br/>
+Určuje šířku elipsy použité k nakreslení zaoblených rohů (v logických jednotkách).
 
-*Y3*<br/>
-Určuje výšku elipsy použité k vykreslení zaoblených rohů (v logických jednotkách).
+*y3*<br/>
+Určuje výšku elipsy použité k nakreslení zaoblených rohů (v logických jednotkách).
 
 *lpRect*<br/>
-Určuje ohraničující obdélník v logických jednotkách. Pro tento parametr můžete předat buď objekt `CRect`, nebo ukazatel na `RECT` strukturu.
+Určuje ohraničovací obdélník v logických jednotkách. Objekt nebo ukazatel `CRect` můžete předat `RECT` struktuře pro tento parametr.
 
-*Vyberte*<br/>
-Souřadnice x *bodu* určuje šířku elipsy, která vykreslí zaoblené rohy (v logických jednotkách). Souřadnice y *bodu* určuje výšku elipsy, aby se nakreslily zaoblené rohy (v logických jednotkách). Pro tento parametr můžete předat buď strukturu `POINT`, nebo objekt `CPoint`.
+*Bod*<br/>
+Souřadnice *bodu* x určuje šířku elipsy pro kreslení zaoblených rohů (v logických jednotkách). Souřadnice *y bodu* určuje výšku elipsy pro kreslení zaoblených rohů (v logických jednotkách). Pro tento parametr `POINT` můžete `CPoint` předat strukturu nebo objekt.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -5340,17 +5340,17 @@ Nenulové, pokud je funkce úspěšná; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Vnitřek obdélníku je vyplněn pomocí aktuálního štětce.
+Vnitřek obdélníku je vyplněn pomocí aktuální stopy.
 
-Obrázek, který tato funkce kreslí, se rozšíří až do, ale nezahrnuje souřadnice pravého a dolního okraje. To znamená, že výška obrázku je *y2* - *Y1* a šířka obrázku je *X2* - *x1*. Výška i šířka ohraničujícího obdélníku musí být větší než 2 jednotky a musí být menší než 32 767 jednotek.
+Obrázek, který tato funkce nakreslí, sahá až k pravé a dolní souřadnici, ale nezahrnuje ji. To znamená, že výška obrázku je *y2* - *y1* a šířka obrázku je *x2* - *x1*. Výška i šířka ohraničovacího obdélníku musí být větší než 2 jednotky a menší než 32 767 jednotek.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCDocView#40](../../mfc/codesnippet/cpp/cdc-class_12.cpp)]
 
-##  <a name="savedc"></a>CDC:: SaveDC
+## <a name="cdcsavedc"></a><a name="savedc"></a>CDC::UložitDC
 
-Uloží aktuální stav kontextu zařízení zkopírováním informací o stavu (například oblast oříznutí, vybrané objekty a režim mapování) do kontextu kontextu spravovaného systémem Windows.
+Uloží aktuální stav kontextu zařízení zkopírováním informací o stavu (například oblast oříznutí, vybrané objekty a režim mapování) do zásobníku kontextu spravovaného systémem Windows.
 
 ```
 virtual int SaveDC();
@@ -5358,17 +5358,17 @@ virtual int SaveDC();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Celé číslo identifikující uložený kontext zařízení. Pokud dojde k chybě, je 0. Tato návratová hodnota se dá použít k obnovení kontextu zařízení voláním `RestoreDC`.
+Celé číslo identifikující kontext uloženého zařízení. Je 0, pokud dojde k chybě. Tuto vrácenou hodnotu lze použít k `RestoreDC`obnovení kontextu zařízení voláním .
 
 ### <a name="remarks"></a>Poznámky
 
-Uložený kontext zařízení můžete později obnovit pomocí `RestoreDC`.
+Kontext uloženého zařízení lze později `RestoreDC`obnovit pomocí aplikace .
 
-`SaveDC` lze použít několikrát k uložení libovolného počtu stavů kontextu zařízení.
+`SaveDC`lze použít libovolný počet časů k uložení libovolného počtu stavů kontextu zařízení.
 
-##  <a name="scaleviewportext"></a>CDC:: ScaleViewportExt
+## <a name="cdcscaleviewportext"></a><a name="scaleviewportext"></a>CDC::ScaleViewportExt
 
-Upraví rozsahy zobrazení vzhledem k aktuálním hodnotám.
+Upraví rozsahy výřezu vzhledem k aktuálním hodnotám.
 
 ```
 virtual CSize ScaleViewportExt(
@@ -5381,34 +5381,34 @@ virtual CSize ScaleViewportExt(
 ### <a name="parameters"></a>Parametry
 
 *xNum*<br/>
-Určuje hodnotu, o kterou se má vynásobit aktuální rozsah x.
+Určuje částku, o kterou se má vynásobit aktuální x-rozsah.
 
 *xDenom*<br/>
-Určuje hodnotu, o kterou se má rozdělit výsledek násobení aktuálního rozsahu x hodnotou parametru *xNum* .
+Určuje částku, o kterou se má výsledek vynásobení aktuálního x-rozsahu vyčlenit hodnotou parametru *xNum.*
 
-*yNum*<br/>
-Určuje hodnotu, o kterou se má vynásobit aktuální rozsah y.
+*výroku*<br/>
+Určuje částku, o kterou se má vynásobit aktuální rozsah y.
 
 *yDenom*<br/>
-Určuje hodnotu, o kterou se má rozdělit výsledek násobení aktuálního rozsahu y hodnotou parametru *yNum* .
+Určuje částku, o kterou se má výsledek vynásobení aktuálního rozsahu y vyčlenit hodnotou parametru *yNum.*
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Předchozí rozsahy zobrazení (v jednotkách zařízení) jako objekt `CSize`.
+Předchozí rozsahy výřezu (v jednotkách zařízení) jako `CSize` objekt.
 
 ### <a name="remarks"></a>Poznámky
 
-Vzorce jsou zapsány takto:
+Vzorce jsou napsány takto:
 
 `xNewVE = ( xOldVE * xNum ) / xDenom`
 
 `yNewVE = ( yOldVE * yNum ) / yDenom`
 
-Nové rozsahy zobrazení jsou vypočítány vynásobením aktuálních rozsahů daným čitatelem a následným dělením daným jmenovatelem.
+Nové rozsahy výřezu se vypočítají vynásobením aktuálních rozsahů daným čitatelem a vydělením daným jmenovatelem.
 
-##  <a name="scalewindowext"></a>CDC:: ScaleWindowExt
+## <a name="cdcscalewindowext"></a><a name="scalewindowext"></a>CDC::ScaleWindowExt
 
-Upraví rozsahy oken relativně vzhledem k aktuálním hodnotám.
+Upraví rozsahy oken vzhledem k aktuálním hodnotám.
 
 ```
 virtual CSize ScaleWindowExt(
@@ -5421,32 +5421,32 @@ virtual CSize ScaleWindowExt(
 ### <a name="parameters"></a>Parametry
 
 *xNum*<br/>
-Určuje hodnotu, o kterou se má vynásobit aktuální rozsah x.
+Určuje částku, o kterou se má vynásobit aktuální x-rozsah.
 
 *xDenom*<br/>
-Určuje hodnotu, o kterou se má rozdělit výsledek násobení aktuálního rozsahu x hodnotou parametru *xNum* .
+Určuje částku, o kterou se má výsledek vynásobení aktuálního x-rozsahu vyčlenit hodnotou parametru *xNum.*
 
-*yNum*<br/>
-Určuje hodnotu, o kterou se má vynásobit aktuální rozsah y.
+*výroku*<br/>
+Určuje částku, o kterou se má vynásobit aktuální rozsah y.
 
 *yDenom*<br/>
-Určuje hodnotu, o kterou se má rozdělit výsledek násobení aktuálního rozsahu y hodnotou parametru *yNum* .
+Určuje částku, o kterou se má výsledek vynásobení aktuálního rozsahu y vyčlenit hodnotou parametru *yNum.*
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Velikost předchozího okna (v logických jednotkách) jako objekt `CSize`.
+Předchozí okno rozsahy (v logických `CSize` jednotkách) jako objekt.
 
 ### <a name="remarks"></a>Poznámky
 
-Vzorce jsou zapsány takto:
+Vzorce jsou napsány takto:
 
 `xNewWE = ( xOldWE * xNum ) / xDenom`
 
 `yNewWE = ( yOldWE * yNum ) / yDenom`
 
-Nové rozsahy oken se počítají vynásobením aktuálních rozsahů daným čitatelem a následným dělením daným jmenovatelem.
+Nové rozsahy oken se vypočítají vynásobením aktuálních rozsahů daným čitatelem a vydělením daným jmenovatelem.
 
-##  <a name="scrolldc"></a>CDC:: ScrollDC
+## <a name="cdcscrolldc"></a><a name="scrolldc"></a>CDC::ScrollDC
 
 Posune obdélník bitů vodorovně a svisle.
 
@@ -5462,37 +5462,37 @@ BOOL ScrollDC(
 
 ### <a name="parameters"></a>Parametry
 
-*DX*<br/>
-Určuje počet horizontálních jednotek pro posouvání.
+*Dx*<br/>
+Určuje počet jednotek vodorovného posouvání.
 
 *dy*<br/>
-Určuje počet svislých jednotek Scroll.
+Určuje počet jednotek svislého posouvání.
 
 *lpRectScroll*<br/>
-Odkazuje na strukturu `RECT` nebo objekt `CRect`, který obsahuje souřadnice posouvaného obdélníku.
+Odkazuje na `RECT` strukturu `CRect` nebo objekt, který obsahuje souřadnice rolovacího obdélníku.
 
 *lpRectClip*<br/>
-Odkazuje na strukturu `RECT` nebo objekt `CRect`, který obsahuje souřadnice obdélníku oříznutí. Pokud je tento obdélník menší než původní, na který odkazuje *lpRectScroll*, dojde k posouvání pouze v menším obdélníku.
+Odkazuje na `RECT` strukturu `CRect` nebo objekt, který obsahuje souřadnice ořezového obdélníku. Pokud je tento obdélník menší než původní obdélník, na který poukazuje *lpRectScroll*, posouvání dochází pouze v menším obdélníku.
 
 *pRgnUpdate*<br/>
-Identifikuje oblast, která je odkrytá procesem posouvání. Tato oblast je definována funkcí `ScrollDC`. nemusí nutně být obdélník.
+Identifikuje oblast odkrytou procesem posouvání. Funkce `ScrollDC` definuje tuto oblast; to není nutně obdélník.
 
 *lpRectUpdate*<br/>
-Odkazuje na `RECT` strukturu nebo objekt `CRect`, která přijímá souřadnice obdélníku, který je ohraničený oblastí aktualizace posouvání. Toto je největší obdélníková oblast, která vyžaduje překreslení. Hodnoty ve struktuře nebo objektu, když se funkce vrátí, jsou v souřadnicích klienta bez ohledu na režim mapování pro daný kontext zařízení.
+Odkazuje na `RECT` strukturu `CRect` nebo objekt, který přijímá souřadnice obdélníku, který ohraničuje oblast aktualizace posouvání. Jedná se o největší obdélníkovou oblast, která vyžaduje překreslení. Hodnoty ve struktuře nebo objektu, když vrátí funkce jsou v souřadnicích klienta, bez ohledu na režim mapování pro daný kontext zařízení.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je provedeno posouvání; v opačném případě 0.
+Nenulová, pokud je posouvání spuštěno; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud má *lpRectUpdate* hodnotu null, Windows nebude počítat obdélník aktualizace. Pokud mají hodnoty *pRgnUpdate* i *lpRectUpdate* hodnotu null, systém Windows nevypočítá oblast aktualizace. Pokud *pRgnUpdate* není null, systém Windows předpokládá, že obsahuje platný ukazatel na oblast, která je odkryta procesem posouvání (definovaném členskou funkcí `ScrollDC`). Oblast aktualizace vrácená v *lpRectUpdate* lze předat `CWnd::InvalidateRgn` v případě potřeby.
+Pokud *lpRectUpdate* je NULL, systém Windows nevypočítá obdélník aktualizace. Pokud *jsou hodnota pRgnUpdate* i *lpRectUpdate* null, systém Windows nevypočítá oblast aktualizace. Pokud *pRgnUpdate* není NULL, systém Windows předpokládá, že obsahuje platný ukazatel na oblast odkryté procesem posouvání (definované `ScrollDC` členskou funkcí). Oblast aktualizace vrácená v *lpRectUpdate* může být v `CWnd::InvalidateRgn` případě potřeby předána.
 
-Aplikace by měla používat členskou funkci `ScrollWindow` třídy `CWnd`, pokud je nutné přejít na celou klientskou oblast okna. V opačném případě by měl použít `ScrollDC`.
+Aplikace by měla `ScrollWindow` používat členskou funkci třídy, `CWnd` pokud je nutné posouvat celou klientskou oblast okna. V opačném případě `ScrollDC`by měl použít .
 
-##  <a name="selectclippath"></a>CDC:: SelectClipPath
+## <a name="cdcselectclippath"></a><a name="selectclippath"></a>CDC::Aplikace SelectClipPath
 
-Vybere aktuální cestu jako ořezovou oblast pro kontext zařízení a zkombinuje novou oblast se stávající oblastí oříznutí pomocí zadaného režimu.
+Vybere aktuální cestu jako oblast oříznutí pro kontext zařízení a kombinuje novou oblast s existující oblastí oříznutí pomocí zadaného režimu.
 
 ```
 BOOL SelectClipPath(int nMode);
@@ -5500,18 +5500,18 @@ BOOL SelectClipPath(int nMode);
 
 ### <a name="parameters"></a>Parametry
 
-*nMode*<br/>
+*nRežim*<br/>
 Určuje způsob použití cesty. Jsou povoleny následující hodnoty:
 
-- RGN_AND nová oblast oříznutí obsahuje průnik průsečíku (překrývajících se oblastí) aktuální oblasti oříznutí a aktuální cesty.
+- RGN_AND Nová oblast oříznutí zahrnuje průsečík (překrývající se oblasti) aktuální oblasti oříznutí a aktuální cestu.
 
-- RGN_COPY nová oblast oříznutí je aktuální cesta.
+- RGN_COPY Nová oblast oříznutí je aktuální cesta.
 
-- RGN_DIFF nová oblast oříznutí zahrnuje oblasti aktuální oblasti oříznutí a jsou vyloučeny z aktuální cesty.
+- RGN_DIFF Nová oblast oříznutí zahrnuje oblasti aktuální ořezové oblasti a oblasti aktuální cesty jsou vyloučeny.
 
-- RGN_OR nová oblast oříznutí zahrnuje sjednocení (kombinované oblasti) aktuální oblasti pro oříznutí a aktuální cestu.
+- RGN_OR Nová oblast oříznutí zahrnuje sjednocení (kombinované oblasti) aktuální oblasti oříznutí a aktuální cestu.
 
-- RGN_XOR nová oblast oříznutí zahrnuje sjednocení aktuální oblasti oříznutí a aktuální cesty, ale bez překrývajících se oblastí.
+- RGN_XOR Nová oblast oříznutí zahrnuje sjednocení aktuální oblasti oříznutí a aktuální cesty, ale bez překrývajících se oblastí.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -5521,7 +5521,7 @@ Nenulové, pokud je funkce úspěšná; jinak 0.
 
 Identifikovaný kontext zařízení musí obsahovat uzavřenou cestu.
 
-##  <a name="selectcliprgn"></a>CDC:: SelectClipRgn
+## <a name="cdcselectcliprgn"></a><a name="selectcliprgn"></a>CDC::SelectClipRgn
 
 Vybere danou oblast jako aktuální oblast oříznutí pro kontext zařízení.
 
@@ -5536,48 +5536,48 @@ int SelectClipRgn(
 ### <a name="parameters"></a>Parametry
 
 *pRgn*<br/>
-Identifikuje oblast, která se má vybrat.
+Identifikuje oblast, která má být vybrána.
 
-- U první verze této funkce, pokud je tato hodnota NULL, je vybrána celá klientská oblast a výstup je stále oříznutý na okno.
+- Pro první verzi této funkce, pokud je tato hodnota NULL, je vybrána celá klientská oblast a výstup je stále oříznut do okna.
 
-- U druhé verze této funkce může mít tento popisovač hodnotu NULL pouze v případě, že je zadán režim RGN_COPY.
+- Pro druhou verzi této funkce může být tento popisovač null pouze v případě, že je zadán RGN_COPY režim.
 
-*nMode*<br/>
-Určuje operaci, která má být provedena. Musí to být jedna z následujících hodnot:
+*nRežim*<br/>
+Určuje operaci, která má být provedena. Musí se jednat o jednu z následujících hodnot:
 
-- RGN_AND nová oblast oříznutí kombinuje překrývající se oblasti aktuální oblasti oříznutí a oblasti určené *pRgn*.
+- RGN_AND Nová oblast oříznutí kombinuje překrývající se oblasti aktuální oblasti oříznutí a oblast určenou *pomocí pRgn*.
 
-- RGN_COPY nové oblasti oříznutí je kopie oblasti identifikované pomocí *pRgn*. Tato funkce je stejná jako u první verze `SelectClipRgn`. Pokud má oblast identifikovaná *pRgn* hodnotu null, nová oblast oříznutí se zobrazí jako výchozí oblast oříznutí (oblast s hodnotou null).
+- RGN_COPY Nová oblast oříznutí je kopií oblasti identifikované *pomocí příkazu pRgn*. Tato funkce je shodná s `SelectClipRgn`první verzí aplikace . Pokud je oblast identifikovaná *pomocí pRgn* NULL, nová oblast oříznutí se stane výchozí oblastí oříznutí (null region).
 
-- RGN_DIFF nová oblast oříznutí kombinuje oblasti aktuální oblasti oříznutí s těmito oblastmi, které jsou vyloučené z oblasti určené pomocí *pRgn*.
+- RGN_DIFF Nová oblast oříznutí kombinuje oblasti aktuální oblasti oříznutí s oblastmi vyloučenými z oblasti identifikované *pomocí pRgn*.
 
-- RGN_OR nová oblast oříznutí kombinuje aktuální oblast oříznutí a oblast identifikovanou *pRgn*.
+- RGN_OR Nová oblast oříznutí kombinuje aktuální oblast oříznutí a oblast určená *pomocí pRgn*.
 
-- RGN_XOR nová oblast oříznutí kombinuje aktuální oblast oříznutí a oblast identifikovanou *pRgn* , ale vyloučí všechny překrývající se oblasti.
+- RGN_XOR Nová oblast oříznutí kombinuje aktuální oblast oříznutí a oblast určená *pRgn,* ale vylučuje všechny překrývající se oblasti.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Typ oblasti. Může to být kterákoli z následujících hodnot:
+Typ oblasti. Může to být některá z následujících hodnot:
 
-- COMPLEXREGION nové oblasti oříznutí má překrývající se ohraničení.
+- COMPLEXREGION Nová oblast oříznutí má překrývající se ohraničení.
 
-- Kontext nebo oblast CHYBového zařízení není platná.
+- CHYBA Kontext nebo oblast zařízení není platná.
 
-- NULLREGION nová oblast oříznutí je prázdná.
+- NULLREGION Nová oblast oříznutí je prázdná.
 
-- SIMPLEREGION nové oblasti oříznutí nemá žádná překrývající se ohraničení.
+- SIMPLEREGION Nová oblast oříznutí nemá žádné překrývající se ohraničení.
 
 ### <a name="remarks"></a>Poznámky
 
-Použije se jenom kopie vybrané oblasti. Tuto oblast lze vybrat pro libovolný počet dalších kontextů zařízení nebo je lze odstranit.
+Je použita pouze kopie vybrané oblasti. Samotná oblast může být vybrána pro libovolný počet jiných kontextů zařízení nebo ji lze odstranit.
 
-Funkce předpokládá, že souřadnice pro danou oblast jsou zadány v jednotkách zařízení. Některá zařízení tiskárny podporují výstup textu s vyšším rozlišením, než je výstup grafiky, aby bylo možné zachovat přesnost potřebnou pro expresní textovou metriku. Tato zařízení nahlásí jednotky zařízení s vyšším rozlišením, tj. v textových jednotkách. Tato zařízení pak škálují souřadnice pro grafiku, takže několik hlášených jednotek zařízení se mapuje jenom na 1 grafickou jednotku. Vždy byste měli volat funkci `SelectClipRgn` pomocí textových jednotek.
+Funkce předpokládá, že souřadnice pro danou oblast jsou určeny v jednotkách zařízení. Některá zařízení tiskárny podporují textový výstup s vyšším rozlišením než grafický výstup, aby byla zachována přesnost potřebná k vyjádření textových metrik. Tato zařízení hlásí jednotky zařízení s vyšším rozlišením, tedy v textových jednotkách. Tato zařízení pak měřítko souřadnice pro grafiku tak, aby několik hlášených jednotek zařízení mapovat pouze 1 grafické jednotky. Vždy byste měli `SelectClipRgn` volat funkci pomocí textových jednotek.
 
-Aplikace, které musí převzít škálování grafických objektů v GDI, můžou pomocí řídicího panelu GETSCALINGFACTOR tiskárny určit faktor škálování. Tento faktor škálování má vliv na oříznutí. Pokud se k vytvoření klipu použije oblast, GDI rozděluje souřadnice podle faktoru škálování. Pokud se oblast používá k oříznutí textu, GDI neprovede žádné úpravy měřítka. Faktor škálování 1 způsobí, že souřadnice budou rozděleny podle 2. faktor škálování 2 způsobí rozdělení souřadnic o 4. a tak dále.
+Aplikace, které musí mít měřítko grafických objektů v GDI můžete použít getscaleingfactor tiskárny uniknout k určení faktoru měřítka. Tento faktor měřítka ovlivňuje oříznutí. Pokud oblast slouží k oříznutí grafiky, GDI vydělí souřadnice faktorem měřítka. Pokud se oblast používá k oříznutí textu, GDI neprovede žádné úpravy měřítka. Faktor měřítka 1 způsobí, že souřadnice budou děleny 2; faktor měřítka 2 způsobí, že souřadnice budou děleny 4; a tak dále.
 
-##  <a name="selectobject"></a>CDC:: VybratObjekt
+## <a name="cdcselectobject"></a><a name="selectobject"></a>CDC::SelectObject
 
-Vybere objekt v kontextu zařízení.
+Vybere objekt do kontextu zařízení.
 
 ```
 CPen* SelectObject(CPen* pPen);
@@ -5591,48 +5591,48 @@ CGdiObject* SelectObject(CGdiObject* pObject);
 ### <a name="parameters"></a>Parametry
 
 *pPen*<br/>
-Ukazatel na objekt [CPen –](../../mfc/reference/cpen-class.md) , který má být vybrán.
+Ukazatel na [cpen](../../mfc/reference/cpen-class.md) objekt, který má být vybrán.
 
-*pBrush*<br/>
-Ukazatel na objekt [CBrush –](../../mfc/reference/cbrush-class.md) , který má být vybrán.
+*pŠtětec*<br/>
+Ukazatel na objekt [CBrush,](../../mfc/reference/cbrush-class.md) který má být vybrán.
 
-*pFont*<br/>
-Ukazatel na objekt [CFont –](../../mfc/reference/cfont-class.md) , který má být vybrán.
+*písmo*<br/>
+Ukazatel na vybraný objekt [CFont.](../../mfc/reference/cfont-class.md)
 
 *pBitmap*<br/>
-Ukazatel na objekt [CBitmap –](../../mfc/reference/cbitmap-class.md) , který má být vybrán.
+Ukazatel na vybraný objekt [CBitmap.](../../mfc/reference/cbitmap-class.md)
 
 *pRgn*<br/>
-Ukazatel na objekt [CRgn](../../mfc/reference/crgn-class.md) , který má být vybrán.
+Ukazatel na [cRgn](../../mfc/reference/crgn-class.md) objekt, který má být vybrán.
 
-*pObject*<br/>
-Ukazatel na objekt [CGdiObject](../../mfc/reference/cgdiobject-class.md) , který má být vybrán.
+*pObjekt*<br/>
+Ukazatel na objekt [CGdiObject,](../../mfc/reference/cgdiobject-class.md) který má být vybrán.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na objekt, který má být nahrazen. Toto je ukazatel na objekt jedné ze tříd odvozených od `CGdiObject`, jako je například `CPen`, v závislosti na tom, která verze funkce je použita. Pokud dojde k chybě, vrácená hodnota je NULL. Tato funkce může vrátit ukazatel na dočasný objekt. Tento dočasný objekt je platný pouze během zpracování jedné zprávy systému Windows. Další informace najdete v tématu `CGdiObject::FromHandle`.
+Ukazatel na nahraný objekt. Toto je ukazatel na objekt jedné z `CGdiObject`tříd odvozených z , například `CPen`v závislosti na tom, která verze funkce se používá. Vrácená hodnota je NULL, pokud dojde k chybě. Tato funkce může vrátit ukazatel na dočasný objekt. Tento dočasný objekt je platný pouze během zpracování jedné zprávy systému Windows. Další informace naleznete v tématu `CGdiObject::FromHandle`.
 
-Verze členské funkce, která přijímá parametr region, provádí stejný úkol jako členská funkce `SelectClipRgn`. Vrácená hodnota může být libovolná z následujících:
+Verze členské funkce, která přebírá parametr region, provádí `SelectClipRgn` stejnou úlohu jako členská funkce. Jeho vrácená hodnota může být některá z následujících:
 
-- COMPLEXREGION nové oblasti oříznutí má překrývající se ohraničení.
+- COMPLEXREGION Nová oblast oříznutí má překrývající se ohraničení.
 
-- Kontext nebo oblast CHYBového zařízení není platná.
+- CHYBA Kontext nebo oblast zařízení není platná.
 
-- NULLREGION nová oblast oříznutí je prázdná.
+- NULLREGION Nová oblast oříznutí je prázdná.
 
-- SIMPLEREGION nové oblasti oříznutí nemá žádná překrývající se ohraničení.
+- SIMPLEREGION Nová oblast oříznutí nemá žádné překrývající se ohraničení.
 
 ### <a name="remarks"></a>Poznámky
 
-`CDC` třídy poskytuje pět verzí specializovaných na konkrétní typy objektů GDI, včetně per, štětců, písem, rastrových obrázků a oblastí. Nově vybraný objekt nahradí předchozí objekt stejného typu. Například pokud *pObject* obecné verze `SelectObject` odkazuje na objekt [CPen –](../../mfc/reference/cpen-class.md) , funkce nahradí aktuální pero perem určenou parametrem *pObject*.
+Třída `CDC` poskytuje pět verzí specializovaných pro určité druhy objektů GDI, včetně pera, stopy, písma, rastrové obrázky a oblasti. Nově vybraný objekt nahradí předchozí objekt stejného typu. Pokud například *pObject* obecné verze `SelectObject` bodů [cpen](../../mfc/reference/cpen-class.md) objektu, funkce nahradí aktuální pero pero pero určené *pObject*.
 
-Aplikace může vybrat rastrový obrázek pouze do kontextů paměťových zařízení a do jediného kontextu paměťového zařízení v jednom okamžiku. Formát rastrového obrázku musí být buď monochromatický, nebo kompatibilní s kontextem zařízení. Pokud tomu tak není, `SelectObject` vrátí chybu.
+Aplikace může vybrat rastrový obrázek do kontextu paměťového zařízení pouze a do kontextu pouze jednoho paměťového zařízení najednou. Formát rastrového obrázku musí být buď monochromatický, nebo kompatibilní s kontextem zařízení; Pokud tomu tak `SelectObject` není, vrátí chybu.
 
-Pro systém Windows 3,1 a novější funkce `SelectObject` vrací stejnou hodnotu, ať už je použita v metasouboru, nebo ne. V předchozích verzích systému Windows `SelectObject` vrátil nenulovou hodnotu pro úspěch a 0 pro selhání při použití v metasouboru.
+Pro Windows 3.1 a `SelectObject` novější funkce vrátí stejnou hodnotu, zda se používá v metasouboru nebo ne. V předchozích verzích `SelectObject` systému Windows vrátil nenulovou hodnotu pro úspěch a 0 pro selhání, když byl použit v metasouboru.
 
-##  <a name="selectpalette"></a>CDC:: SelectPalette
+## <a name="cdcselectpalette"></a><a name="selectpalette"></a>CDC::SelectPalette
 
-Vybere logickou paletu určenou v *pPalette* jako objekt vybrané palety kontextu zařízení.
+Vybere logickou paletu, která je určena *pPalette* jako vybraný objekt palety kontextu zařízení.
 
 ```
 CPalette* SelectPalette(
@@ -5642,25 +5642,25 @@ CPalette* SelectPalette(
 
 ### <a name="parameters"></a>Parametry
 
-*pPalette*<br/>
-Určuje logickou paletu, která se má vybrat. Tato paleta už musí být vytvořená s `CPalette` členskou funkcí [CreatePalette](../../mfc/reference/cpalette-class.md#createpalette).
+*pPaleta*<br/>
+Identifikuje logickou paletu, která má být vybrána. Tato paleta již musí `CPalette` být vytvořena pomocí členské funkce [CreatePalette](../../mfc/reference/cpalette-class.md#createpalette).
 
 *bForceBackground*<br/>
-Určuje, zda má být logická paleta nucená paleta pozadí. Pokud je *bForceBackground* nenulové, vybraná paleta vždy obsahuje paletu na pozadí bez ohledu na to, zda má okno vstupní fokus. Pokud je *bForceBackground* 0 a kontext zařízení je připojen k oknu, logická paleta je paleta popředí, pokud má okno vstupní fokus.
+Určuje, zda je logická paleta vynucena jako paleta pozadí. Pokud *je bForceBackground* nenulová, vybraná paleta je vždy paleta pozadí, bez ohledu na to, zda má okno vstupní fokus. Pokud *bForceBackground* je 0 a kontext zařízení je připojen k oknu, logická paleta je paleta popředí, když okno má vstupní fokus.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na objekt `CPalette` identifikující logickou paletu nahrazenou paletou určenou v *pPalette*. Pokud dojde k chybě, má hodnotu NULL.
+Ukazatel na `CPalette` objekt identifikující logickou paletu nahrazenou paletou určenou *parametrem pPalette*. Je null, pokud je chyba.
 
 ### <a name="remarks"></a>Poznámky
 
-Nová paleta se aktivuje pomocí objektu palety používaného rozhraním GDI k ovládání barev zobrazených v kontextu zařízení a nahrazení předchozí palety.
+Nová paleta se stane objektem palety používaným rozhraním GDI k ovládání barev zobrazených v kontextu zařízení a nahradí předchozí paletu.
 
-Aplikace může vybrat logickou paletu do více než jednoho kontextu zařízení. Změny logické palety ale budou mít vliv na všechny kontexty zařízení, pro které je vybraná. Pokud aplikace vybere paletu do více než jednoho kontextu zařízení, musí všechny kontexty zařízení patřit do stejného fyzického zařízení.
+Aplikace může vybrat logickou paletu do více než jednoho kontextu zařízení. Změny logické palety však ovlivní všechny kontexty zařízení, pro které je vybrán. Pokud aplikace vybere paletu do více než jednoho kontextu zařízení, musí všechny kontexty zařízení patřit do stejného fyzického zařízení.
 
-##  <a name="selectstockobject"></a>CDC:: SelectStockObject
+## <a name="cdcselectstockobject"></a><a name="selectstockobject"></a>CDC::SelectStockObject
 
-Vybere objekt [CGdiObject](../../mfc/reference/cgdiobject-class.md) , který odpovídá jednomu z předdefinovaných uložených per, štětců nebo písem.
+Vybere objekt [CGdiObject,](../../mfc/reference/cgdiobject-class.md) který odpovídá jednomu z předdefinovaných skladových per, stop nebo písem.
 
 ```
 virtual CGdiObject* SelectStockObject(int nIndex);
@@ -5669,47 +5669,47 @@ virtual CGdiObject* SelectStockObject(int nIndex);
 ### <a name="parameters"></a>Parametry
 
 *nIndex*<br/>
-Určuje druh požadovaného objektu zásob. Může to být jedna z následujících hodnot:
+Určuje požadovaný druh objektu zásob. Může to být jedna z následujících hodnot:
 
-- BLACK_BRUSH černého štětce.
+- BLACK_BRUSH Černý štětec.
 
-- DKGRAY_BRUSH tmavě šedá štětce.
+- DKGRAY_BRUSH tmavě šedý štětec.
 
-- GRAY_BRUSH šedý štětec.
+- GRAY_BRUSH šedou štětinu.
 
-- HOLLOW_BRUSH prázdný štětec.
+- HOLLOW_BRUSH dutý kartáč.
 
-- LTGRAY_BRUSH světle šedé štětce.
+- LTGRAY_BRUSH Světle šedý štětec.
 
-- NULL_BRUSH štětce null.
+- NULL_BRUSH nulový štětec.
 
-- WHITE_BRUSHa bílá štětce.
+- WHITE_BRUSH Bílý štětec.
 
-- BLACK_PEN černé pero.
+- BLACK_PEN Černé pero.
 
-- NULL_PEN prázdné pero.
+- NULL_PEN pero Null.
 
 - WHITE_PEN bílé pero.
 
-- ANSI_FIXED_FONT písmo systému ANSI s pevnými znaky.
+- ANSI_FIXED_FONT ansi pevné systémové písmo.
 
-- ANSI_VAR_FONT písmo systému proměnných ANSI.
+- ANSI_VAR_FONT systémové písmo proměnné ANSI.
 
-- DEVICE_DEFAULT_FONT písmo závislé na zařízení.
+- DEVICE_DEFAULT_FONT Písmo závislé na zařízení.
 
-- Pevné písmo závislé na výrobci OEM OEM_FIXED_FONT.
+- OEM_FIXED_FONT pevné písmo závislé na oem.
 
-- SYSTEM_FONT systémové písmo. Ve výchozím nastavení používá systém Windows písmo systému k vykreslování nabídek, ovládacích prvků dialogového okna a dalšího textu. Je ale nejlepší, ale nespoléhat na SYSTEM_FONT k získání písma používaného v dialogových oknech a oknech. Místo toho použijte funkci `SystemParametersInfo` s parametrem SPI_GETNONCLIENTMETRICS pro načtení aktuálního písma. `SystemParametersInfo` bere v úvahu aktuální motiv a poskytuje informace o písmu pro popisky, nabídky a dialogy zpráv.
+- SYSTEM_FONT Systémové písmo. Ve výchozím nastavení systém Windows používá systémové písmo k kreslení nabídek, ovládacích prvků dialogového okna a dalšího textu. Je však nejlepší nespoléhat se na SYSTEM_FONT získat písmo používané dialogy a okny. Místo toho `SystemParametersInfo` použijte funkci s parametrem SPI_GETNONCLIENTMETRICS k načtení aktuálního písma. `SystemParametersInfo`bere v úvahu aktuální motiv a poskytuje informace o písmu pro titulky, nabídky a dialogová okna zpráv.
 
-- SYSTEM_FIXED_FONT písmo systému s pevnou šířkou používané v systému Windows před verzí 3,0. Tento objekt je k dispozici pro kompatibilitu se staršími verzemi Windows.
+- SYSTEM_FIXED_FONT Systémové písmo s pevnou šířkou používané v systému Windows před verzí 3.0. Tento objekt je k dispozici pro kompatibilitu se staršími verzemi systému Windows.
 
-- DEFAULT_PALETTE výchozí palety barev. Tato paleta se skládá z 20 statických barev v systémové paletě.
+- DEFAULT_PALETTE Výchozí paleta barev. Tato paleta se skládá z 20 statických barev v systémové paletě.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na objekt `CGdiObject`, který byl nahrazen, pokud je funkce úspěšná. Skutečný objekt, na který ukazuje, je objekt [CPen –](../../mfc/reference/cpen-class.md), [CBrush –](../../mfc/reference/cbrush-class.md)nebo [CFont –](../../mfc/reference/cfont-class.md) . Pokud je volání neúspěšné, vrácená hodnota je NULL.
+Ukazatel na `CGdiObject` objekt, který byl nahrazen, pokud je funkce úspěšná. Skutečný objekt, na který je odkazován, je [cpen](../../mfc/reference/cpen-class.md), [cbrush](../../mfc/reference/cbrush-class.md)nebo [cfont](../../mfc/reference/cfont-class.md) objekt. Pokud je volání neúspěšné, vrácená hodnota je NULL.
 
-##  <a name="setabortproc"></a>CDC:: SetAbortProc
+## <a name="cdcsetabortproc"></a><a name="setabortproc"></a>CDC::SetAbortProc
 
 Nainstaluje postup přerušení pro tiskovou úlohu.
 
@@ -5720,39 +5720,39 @@ int SetAbortProc(BOOL (CALLBACK* lpfn)(HDC, int));
 ### <a name="parameters"></a>Parametry
 
 *lpfn*<br/>
-Ukazatel na funkci Abort, která se nainstaluje jako procedura přerušení. Další informace o funkci zpětného volání naleznete v tématu [funkce zpětného volání pro funkci CDC:: SetAbortProc](callback-functions-used-by-mfc.md#setabortproc).
+Ukazatel na funkci abort, která se má nainstalovat jako procedura přerušení. Další informace o funkci zpětného volání naleznete v tématu [Funkce zpětného volání pro CDC::SetAbortProc](callback-functions-used-by-mfc.md#setabortproc).
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Určuje výsledek funkce `SetAbortProc`. Některé z následujících hodnot jsou více pravděpodobné než jiné, ale jsou všechny možné.
+Určuje výsledek `SetAbortProc` funkce. Některé z následujících hodnot jsou pravděpodobnější než jiné, ale všechny jsou možné.
 
 - SP_ERROR Obecná chyba.
 
-- SP_OUTOFDISK není v současné době k dispozici dostatek místa na disku pro zařazování a nebude k dispozici žádné místo.
+- SP_OUTOFDISK Pro zařazování není aktuálně k dispozici dostatek místa na disku a nebude k dispozici žádné další místo.
 
-- SP_OUTOFMEMORY není k dispozici dostatek paměti pro zařazování.
+- SP_OUTOFMEMORY Pro zařazování není k dispozici dostatek paměti.
 
-- Uživatel SP_USERABORT úlohu ukončil prostřednictvím Správce tisku.
+- SP_USERABORT Uživatel ukončil úlohu prostřednictvím Správce tisku.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud aplikace umožňuje zrušit tiskovou úlohu během zařazování, musí před zahájením tiskové úlohy pomocí členské funkce [StartDoc](#startdoc) nastavit funkci Abort. Správce tisku volá funkci Abort během zařazování, aby mohla aplikace zrušit tiskovou úlohu nebo zpracovat podmínky mimo místo na disku. Pokud není nastavená žádná funkce přerušení, tisková úloha selže, pokud není k dispozici dostatek místa na disku pro zařazování.
+Pokud má aplikace povolit zrušení tiskové úlohy během zařazování, musí nastavit funkci přerušení před spuštěním tiskové úlohy pomocí členské funkce [StartDoc.](#startdoc) Správce tisku volá funkci přerušení během zařazování, aby aplikace mohla zrušit tiskovou úlohu nebo zpracovat podmínky mimo místo na disku. Pokud není nastavena žádná funkce přerušení, tisková úloha se nezdaří, pokud není dostatek místa na disku pro zařazování.
 
-Všimněte si, že funkce Microsoft vizuálu C++ zjednodušují vytváření funkce zpětného volání předané do `SetAbortProc`. Adresa předaná do členské funkce `EnumObjects` je ukazatel na funkci exportovanou pomocí `__declspec(dllexport)` a s konvencí volání `__stdcall`.
+Všimněte si, že funkce aplikace Microsoft Visual C++ `SetAbortProc`zjednodušují vytváření funkce zpětného volání předané aplikaci . Adresa předaná `EnumObjects` členské funkci je ukazatelem na `__declspec(dllexport)` funkci `__stdcall` exportovoji s konvencí volání a s ní.
 
-Nemusíte také exportovat název funkce v příkazu **EXPORTS** v souboru definice modulu aplikace. Místo toho můžete použít modifikátor funkce **exportu** , jako v
+Také není třeba exportovat název funkce v **příkazu EXPORTS** v souboru definice modulu aplikace. Místo toho můžete použít modifikátor funkce **EXPORT,** jako v
 
-**Export zpětného volání bool** AFunction ( **HDC**, `int` **);**
+**BOOL CALLBACK EXPORT** Afunction( **HDC**, `int` **);**
 
-aby kompilátor vygeneroval vhodný záznam exportu pro export podle názvu bez aliasing. To funguje pro většinu potřeb. U některých zvláštních případů, jako je například exportování funkce podle pořadového čísla nebo vytváření aliasů exportu, je stále nutné použít příkaz **EXPORTS** v souboru definice modulu.
+způsobí, že kompilátor vyzařuje správný exportní záznam pro export podle názvu bez aliasingu. To funguje pro většinu potřeb. Pro některé zvláštní případy, jako je například export funkce řadovým nebo aliasingexportu, stále je třeba použít **příkaz EXPORTS** v souboru definice modulu.
 
-Rozhraní pro registraci zpětného volání jsou nyní typově bezpečná (musíte předat ukazatel na funkci, který odkazuje na správný druh funkce pro konkrétní zpětné volání).
+Rozhraní pro registraci zpětného volání jsou nyní typově bezpečná (musíte předat ukazatel funkce, který odkazuje na správný druh funkce pro konkrétní zpětné volání).
 
-Všimněte si také, že všechny funkce zpětného volání musí před návratem do systému Windows zachytit výjimky Microsoft Foundation, protože výjimky nelze vyvolat přes hranice zpětného volání. Další informace o výjimkách najdete v článku [výjimky](../../mfc/exception-handling-in-mfc.md).
+Všimněte si také, že všechny funkce zpětného volání musí soutisk Microsoft Foundation výjimky před návratem do systému Windows, protože výjimky nelze vyvolat přes hranice zpětného volání. Další informace o výjimkách naleznete v článku [Výjimky](../../mfc/exception-handling-in-mfc.md).
 
-##  <a name="setarcdirection"></a>CDC:: SetArcDirection
+## <a name="cdcsetarcdirection"></a><a name="setarcdirection"></a>CDC::SetArcDirection
 
-Nastaví směr vykreslování, který se má použít pro funkce oblouku a Rectangle.
+Nastaví směr výkresu, který se má použít pro funkce oblouku a obdélníku.
 
 ```
 int SetArcDirection(int nArcDirection);
@@ -5760,30 +5760,30 @@ int SetArcDirection(int nArcDirection);
 
 ### <a name="parameters"></a>Parametry
 
-*nArcDirection*<br/>
-Určuje nový směr oblouku. Tento parametr může mít jednu z následujících hodnot:
+*nSměrsměru*<br/>
+Určuje nový směr oblouku. Tento parametr může být některá z následujících hodnot:
 
-- AD_COUNTERCLOCKWISE obrázky vykreslené zprava doleva.
+- AD_COUNTERCLOCKWISE Obrázky nakreslené proti směru hodinových ručiček.
 
-- AD_CLOCKWISE obrázky vykreslené po směru hodinových ručiček.
+- AD_CLOCKWISE Počitadla nakreslená ve směru hodinových ručiček.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Určuje původní směr oblouku, pokud je úspěšný; v opačném případě 0.
+Určuje starý směr oblouku, pokud je úspěšný; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Výchozí směr je zprava doleva. Funkce `SetArcDirection` určuje směr, ve kterém následující funkce kreslí:
+Výchozí směr je proti směru hodinových ručiček. Funkce `SetArcDirection` určuje směr, ve kterém natahují následující funkce:
 
-|Oblouk|Výsečový|
+|Arc|Výsečový|
 |---------|---------|
 |`ArcTo`|`Rectangle`|
 |`Chord`|`RoundRect`|
 |`Ellipse`||
 
-##  <a name="setattribdc"></a>CDC:: SetAttribDC
+## <a name="cdcsetattribdc"></a><a name="setattribdc"></a>CDC::SetAttribDC
 
-Voláním této funkce nastavíte kontext zařízení atributů `m_hAttribDC`.
+Volánítéto funkce pro nastavení kontextu `m_hAttribDC`atributu zařízení .
 
 ```
 virtual void SetAttribDC(HDC hDC);
@@ -5791,16 +5791,16 @@ virtual void SetAttribDC(HDC hDC);
 
 ### <a name="parameters"></a>Parametry
 
-*hDC*<br/>
-Kontext zařízení s Windows
+*Hdc*<br/>
+Kontext zařízení windows.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce nepřipojuje kontext zařízení k objektu `CDC`. K objektu `CDC` je připojen pouze kontext výstupního zařízení.
+Tato členská funkce nepřipojí kontext `CDC` zařízení k objektu. K objektu je připojen pouze `CDC` kontext výstupního zařízení.
 
-##  <a name="setbkcolor"></a>CDC:: SetBkColor
+## <a name="cdcsetbkcolor"></a><a name="setbkcolor"></a>CDC::SetBkColor
 
-Nastaví aktuální barvu pozadí na určenou barvu.
+Nastaví aktuální barvu pozadí na zadanou barvu.
 
 ```
 virtual COLORREF SetBkColor(COLORREF crColor);
@@ -5813,15 +5813,15 @@ Určuje novou barvu pozadí.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Předchozí barva pozadí jako hodnota barvy RGB Pokud dojde k chybě, návratová hodnota je 0x80000000.
+Předchozí barva pozadí jako hodnota barvy RGB. Pokud dojde k chybě, vrácená hodnota je 0x8000000.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud je režim pozadí neprůhledný, systém pomocí barvy pozadí vyplní mezery v stylových řádcích, mezery mezi šrafované řádky v štětci a pozadí v buňkách znaků. Systém také používá barvu pozadí při převodu rastrových obrázků mezi barevným a monochromatickým kontextem zařízení.
+Pokud je režim pozadí NEPRŮHLEDNÝ, systém použije barvu pozadí k vyplnění mezer ve stylovaných čarách, mezery mezi šrafovanými čarami v stopách a pozadí v buňkách znaků. Systém také používá barvu pozadí při převodu bitmap mezi barevnými a monochromatickými kontexty zařízení.
 
 Pokud zařízení nemůže zobrazit zadanou barvu, systém nastaví barvu pozadí na nejbližší fyzickou barvu.
 
-##  <a name="setbkmode"></a>CDC:: SetBkMode
+## <a name="cdcsetbkmode"></a><a name="setbkmode"></a>CDC::SetBkMode
 
 Nastaví režim pozadí.
 
@@ -5832,11 +5832,11 @@ int SetBkMode(int nBkMode);
 ### <a name="parameters"></a>Parametry
 
 *nBkMode*<br/>
-Určuje režim, který se má nastavit. Tento parametr může mít jednu z následujících hodnot:
+Určuje režim, který má být nastaven. Tento parametr může být některá z následujících hodnot:
 
-- Neprůhledné pozadí je vyplněno aktuální barvou pozadí před vykreslením textu, šrafování štětce nebo pera. Toto je výchozí režim na pozadí.
+- NEPRŮHLEDNÉ Pozadí je vyplněno aktuální barvou pozadí před nakresleným textem, šrafovaným štětcem nebo perem. Toto je výchozí režim pozadí.
 
-- TRANSPARENTNÍ pozadí se před kreslením nezmění.
+- PRŮHLEDNÉ Pozadí se před kreslením nezmění.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -5844,15 +5844,15 @@ Předchozí režim pozadí.
 
 ### <a name="remarks"></a>Poznámky
 
-Režim pozadí definuje, zda systém odstraní stávající barvy pozadí na kreslicí ploše před kreslením textu, Vyšrafované štětce nebo libovolného stylu pera, který není plná čára.
+Režim pozadí definuje, zda systém odstraní existující barvy pozadí na kreslicí ploše před kreslením textu, šrafovanými stopami nebo jakýmkoli stylem pera, který není plnou čárou.
 
 ### <a name="example"></a>Příklad
 
-  Podívejte se na příklad pro [CWnd:: OnCtlColor](../../mfc/reference/cwnd-class.md#onctlcolor).
+  Viz příklad pro [CWnd::OnCtlColor](../../mfc/reference/cwnd-class.md#onctlcolor).
 
-##  <a name="setboundsrect"></a>CDC:: SetBoundsRect
+## <a name="cdcsetboundsrect"></a><a name="setboundsrect"></a>CDC::SetBoundsRect
 
-Ovládá akumulaci informací vázaného rámečku v zadaném kontextu zařízení.
+Řídí akumulaci informací ohraničující obdélník pro kontext zadaného zařízení.
 
 ```
 UINT SetBoundsRect(
@@ -5863,34 +5863,34 @@ UINT SetBoundsRect(
 ### <a name="parameters"></a>Parametry
 
 *lpRectBounds*<br/>
-Odkazuje na strukturu `RECT` nebo objekt `CRect`, který se používá k nastavení ohraničujícího obdélníku. Dimenze Rectangle jsou uvedeny v logických souřadnicích. Tento parametr může mít hodnotu NULL.
+Odkazuje na `RECT` strukturu `CRect` nebo objekt, který slouží k nastavení ohraničovacího obdélníku. Rozměry obdélníku jsou uvedeny v logických souřadnicích. Tento parametr může být NULL.
 
-*Flag*<br/>
-Určuje, jak se bude nový obdélník kombinovat se sečteným obdélníkem. Tento parametr může být kombinací následujících hodnot:
+*příznaky*<br/>
+Určuje, jak bude nový obdélník kombinován s akumulovaný obdélník. Tento parametr může být kombinací následujících hodnot:
 
-- DCB_ACCUMULATE do ohraničujícího obdélníku přidejte obdélník určený *lpRectBoundsem* (pomocí operace sjednocení obdélníku).
+- DCB_ACCUMULATE Přidejte obdélník určený *lpRectBounds* do ohraničovacího obdélníku (pomocí operace obdélníkové sjednocení).
 
-- DCB_DISABLE vypnout akumulaci hranic.
+- DCB_DISABLE Vypněte akumulaci hranic.
 
-- DCB_ENABLE zapnout akumulaci hranic. (Výchozí nastavení pro akumulace vázaných na hranice je zakázané.)
+- DCB_ENABLE Zapněte akumulaci hranic. (Výchozí nastavení pro akumulaci hranic je zakázáno.)
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Aktuální stav ohraničujícího obdélníku, pokud je funkce úspěšná. Jako *příznaky*by návratová hodnota mohla být kombinací hodnot **DCB_** :
+Aktuální stav ohraničujícího obdélníku, pokud je funkce úspěšná. Podobně jako *příznaky*může být vrácená hodnota kombinací **DCB_** hodnot:
 
-- DCB_ACCUMULATE ohraničující obdélník není prázdný. Tato hodnota bude vždy nastavena.
+- DCB_ACCUMULATE Ohraničovací obdélník není prázdný. Tato hodnota bude vždy nastavena.
 
-- Akumulace s DCB_DISABLEmi hranicemi je vypnutá.
+- DCB_DISABLE hranice akumulace je vypnuto.
 
-- Je zapnutá akumulace s rozsahy DCB_ENABLE.
+- DCB_ENABLE hranice akumulace je na.
 
 ### <a name="remarks"></a>Poznámky
 
-Systém Windows může zachovat ohraničovací obdélník pro všechny operace kreslení. Tento obdélník lze dotazovat a obnovit v aplikaci. Hranice vykreslování jsou užitečné pro invalidování mezipamětí Bitmap.
+Systém Windows může udržovat ohraničující obdélník pro všechny operace kreslení. Tento obdélník může být dotazován a resetován aplikací. Hranice výkresu jsou užitečné pro zrušení mezipamětí bitmap.
 
-##  <a name="setbrushorg"></a>CDC:: SetBrushOrg
+## <a name="cdcsetbrushorg"></a><a name="setbrushorg"></a>CDC::SetBrushOrg
 
-Určuje počátek, který GDI přiřadí k následujícímu štětci, který aplikace vybírá v kontextu zařízení.
+Určuje počátek, který gdi přiřadí další stopu, kterou aplikace vybere do kontextu zařízení.
 
 ```
 CPoint SetBrushOrg(
@@ -5902,28 +5902,28 @@ CPoint SetBrushOrg(POINT point);
 
 ### <a name="parameters"></a>Parametry
 
-*znak*<br/>
-Určuje souřadnici x (v jednotkách zařízení) nového zdroje. Tato hodnota musí být v rozsahu 0-7.
+*X*<br/>
+Určuje souřadnice x (v jednotkách zařízení) nového počátku. Tato hodnota musí být v rozsahu 0-7.
 
-*požadované*<br/>
-Určuje souřadnici y (v jednotkách zařízení) nového zdroje. Tato hodnota musí být v rozsahu 0-7.
+*Y*<br/>
+Určuje souřadnici y (v jednotkách zařízení) nového počátku. Tato hodnota musí být v rozsahu 0-7.
 
-*Vyberte*<br/>
-Určuje souřadnice x a y nového zdroje. Každá hodnota musí být v rozsahu 0-7. Pro tento parametr můžete předat buď strukturu `POINT`, nebo objekt `CPoint`.
+*Bod*<br/>
+Určuje souřadnice x a y nového počátku. Každá hodnota musí být v rozsahu 0-7. Pro tento parametr `POINT` můžete `CPoint` předat strukturu nebo objekt.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Předchozí původ štětce v jednotkách zařízení.
+Předchozí počátek stopy v jednotkách zařízení.
 
 ### <a name="remarks"></a>Poznámky
 
-Výchozí souřadnice pro počátek štětce jsou (0, 0). Chcete-li změnit počátek štětce, zavolejte funkci `UnrealizeObject` pro objekt `CBrush`, zavolejte `SetBrushOrg`a potom zavolejte členskou funkci `SelectObject` a vyberte štětec do kontextu zařízení.
+Výchozí souřadnice pro počátek stopy jsou (0, 0). Chcete-li změnit původ stopy, `UnrealizeObject` zavolejte funkci objektu, `CBrush` volání `SetBrushOrg`a potom volání `SelectObject` majestátné funkce a vyberte stopu do kontextu zařízení.
 
-Nepoužívejte `SetBrushOrg` s uloženými `CBrush` objekty.
+Nepoužívejte `SetBrushOrg` s `CBrush` skladovými předměty.
 
-##  <a name="setcoloradjustment"></a>CDC:: SetColorAdjustment
+## <a name="cdcsetcoloradjustment"></a><a name="setcoloradjustment"></a>CDC::SetColorAdjustment
 
-Nastaví hodnoty nastavení barev pro kontext zařízení pomocí zadaných hodnot.
+Nastaví hodnoty úprav barev pro kontext zařízení pomocí zadaných hodnot.
 
 ```
 BOOL SetColorAdjustment(const COLORADJUSTMENT* lpColorAdjust);
@@ -5932,19 +5932,19 @@ BOOL SetColorAdjustment(const COLORADJUSTMENT* lpColorAdjust);
 ### <a name="parameters"></a>Parametry
 
 *lpColorAdjust*<br/>
-Odkazuje na strukturu dat [coloradjustment –](/windows/win32/api/wingdi/ns-wingdi-coloradjustment) obsahující hodnoty pro úpravu barev.
+Odkazuje na datovou strukturu [COLORADJUSTMENT](/windows/win32/api/wingdi/ns-wingdi-coloradjustment) obsahující hodnoty úprav barev.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud bylo úspěšné; v opačném případě 0.
+Nenulová, pokud je úspěšná; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Hodnoty úprav barev slouží k úpravě vstupní barvy zdrojové bitmapy pro volání `CDC::StretchBlt` členské funkce v případě, že je nastaven režim POLOTÓNování.
+Hodnoty úprav barev se používají k úpravě vstupní barvy zdrojové bitmapy pro volání `CDC::StretchBlt` členské funkce, když je nastaven režim HALFTONE.
 
-##  <a name="setdcbrushcolor"></a>CDC:: SetDCBrushColor
+## <a name="cdcsetdcbrushcolor"></a><a name="setdcbrushcolor"></a>CDC::SetDCBrushColor
 
-Nastaví barvu štětce aktuálního kontextu zařízení na zadanou hodnotu barvy.
+Nastaví aktuální kontext zařízení (DC) barvu stopy na zadanou hodnotu barvy.
 
 ```
 COLORREF SetDCBrushColor(COLORREF crColor);
@@ -5953,19 +5953,19 @@ COLORREF SetDCBrushColor(COLORREF crColor);
 ### <a name="parameters"></a>Parametry
 
 *crColor*<br/>
-Určuje novou barvu štětce.
+Určuje novou barvu stopy.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud je funkce úspěšná, vrácená hodnota určuje předchozí barvu štětce DC jako hodnotu COLORREF.
+Pokud je funkce úspěšná, vrácená hodnota určuje předchozí barvu stopy dc jako hodnotu COLORREF.
 
-Pokud dojde k chybě funkce, vrácená hodnota je CLR_INVALID.
+Pokud funkce selže, vrácená hodnota je CLR_INVALID.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda emuluje funkčnost funkce [SetDCBrushColor](/windows/win32/api/wingdi/nf-wingdi-setdcbrushcolor), jak je popsáno v Windows SDK.
+Tato metoda emuluje funkce funkce [SetDCBrushColor](/windows/win32/api/wingdi/nf-wingdi-setdcbrushcolor), jak je popsáno v sadě Windows SDK.
 
-##  <a name="setdcpencolor"></a>CDC:: SetDCPenColor
+## <a name="cdcsetdcpencolor"></a><a name="setdcpencolor"></a>CDC::SetDCPenColor
 
 Nastaví barvu pera aktuálního kontextu zařízení (DC) na zadanou hodnotu barvy.
 
@@ -5984,11 +5984,11 @@ Nenulové, pokud je funkce úspěšná; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce využívá [SetDCPenColor](/windows/win32/api/wingdi/nf-wingdi-setdcpencolor)funkce Win32, jak je popsáno v Windows SDK.
+Tato členská funkce využívá funkci Win32 [SetDCPenColor](/windows/win32/api/wingdi/nf-wingdi-setdcpencolor), jak je popsáno v sadě Windows SDK.
 
-##  <a name="setgraphicsmode"></a>CDC:: SetGraphicsMode
+## <a name="cdcsetgraphicsmode"></a><a name="setgraphicsmode"></a>CDC::SetGraphicsMode
 
-Nastaví režim grafiky pro zadaný kontext zařízení.
+Nastaví grafický režim pro zadaný kontext zařízení.
 
 ```
 int SetGraphicsMode(int iMode);
@@ -5997,21 +5997,21 @@ int SetGraphicsMode(int iMode);
 ### <a name="parameters"></a>Parametry
 
 *iMode*<br/>
-Určuje režim grafiky. Seznam hodnot, které tento parametr může mít, najdete v tématu [SetGraphicsMode](/windows/win32/api/wingdi/nf-wingdi-setgraphicsmode).
+Určuje grafický režim. Seznam hodnot, které tento parametr může trvat, naleznete v tématu [SetGraphicsMode](/windows/win32/api/wingdi/nf-wingdi-setgraphicsmode).
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí režim staré grafiky při úspěchu.
+Vrátí starý grafický režim na úspěch.
 
-Vrátí 0 při selhání. Chcete-li získat rozšířené informace o chybě, volejte příkaz [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror).
+Vrátí hodnotu 0 při selhání. Chcete-li získat rozšířené informace o chybě, volejte [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda zabalí funkci GDI systému Windows [SetGraphicsMode](/windows/win32/api/wingdi/nf-wingdi-setgraphicsmode).
+Tato metoda zalomí funkci Windows GDI [SetGraphicsMode](/windows/win32/api/wingdi/nf-wingdi-setgraphicsmode).
 
-##  <a name="setlayout"></a>CDC:: SetLayout
+## <a name="cdcsetlayout"></a><a name="setlayout"></a>CDC::SetLayout
 
-Zavolejte tuto členskou funkci pro změnu rozložení textu a grafiky pro kontext zařízení zprava doleva. standardní rozložení pro jazykové verze, jako je arabština a hebrejština.
+Volání této členské funkce změnit rozložení textu a grafiky pro kontext zařízení zprava doleva, standardní rozložení pro jazykové verze, jako je arabština a hebrejština.
 
 ```
 DWORD SetLayout(DWORD dwLayout);
@@ -6020,31 +6020,31 @@ DWORD SetLayout(DWORD dwLayout);
 ### <a name="parameters"></a>Parametry
 
 *dwLayout*<br/>
-Rozložení kontextu zařízení a řídicí příznaky rastrového obrázku. Může se jednat o kombinaci následujících hodnot.
+Rozložení kontextu zařízení a příznaky ovládacího prvku bitmapy. Může se jedná o kombinaci následujících hodnot.
 
 |Hodnota|Význam|
 |-----------|-------------|
-|LAYOUT_BITMAPORIENTATIONPRESERVED|Zakáže jakékoli reflexi pro volání [CDC:: BitBlt](#bitblt) a [CDC:: StretchBlt](#stretchblt).|
+|LAYOUT_BITMAPORIENTATIONPRESERVED|Zakáže jakékoli odraz pro volání [CDC::BitBlt](#bitblt) a [CDC::StretchBlt](#stretchblt).|
 |LAYOUT_RTL|Nastaví výchozí vodorovné rozložení zprava doleva.|
 |LAYOUT_LTR|Nastaví výchozí rozložení zleva doprava.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
-V případě úspěchu bude předchozí rozložení kontextu zařízení.
+Pokud je úspěšná, předchozí rozložení kontextu zařízení.
 
-Pokud to neproběhne úspěšně, GDI_ERROR. Chcete-li získat rozšířené informace o chybě, volejte příkaz [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror).
+Pokud neuspějete, GDI_ERROR. Chcete-li získat rozšířené informace o chybě, volejte [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
 ### <a name="remarks"></a>Poznámky
 
-Normálně byste nevolali `SetLayout` pro okno. Místo toho můžete v okně řídit rozložení zprava doleva nastavením [rozšířených stylů oken](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) , jako je například WS_EX_RTLREADING. Kontext zařízení, jako je například tiskárna nebo metasoubor, toto rozložení nedědí. Jediným způsobem, jak nastavit kontext zařízení pro rozložení zprava doleva, je volání `SetLayout`.
+Za normálních okolností byste nevolali `SetLayout` okno. Místo toho můžete v okně řídit rozložení zprava doleva nastavením [rozšířených stylů oken,](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) jako je WS_EX_RTLREADING. Kontext zařízení, například tiskárna nebo metasoubor, nedědí toto rozložení. Jediný způsob, jak nastavit kontext zařízení pro rozložení zprava doleva, je voláním `SetLayout`.
 
-Pokud voláte **SetLayout (LAYOUT_RTL** ), `SetLayout` automaticky změní režim mapování na MM_ISOTROPIC. V důsledku toho bude následné volání [GetMapMode](#getmapmode) vracet MM_ISOTROPIC místo MM_TEXT.
+Pokud zavoláte **SetLayout(LAYOUT_RTL** ), `SetLayout` automaticky změní režim mapování na MM_ISOTROPIC. V důsledku toho následné volání [GetMapMode](#getmapmode) vrátí MM_ISOTROPIC namísto MM_TEXT.
 
-V některých případech, například u mnoha rastrových obrázků, můžete chtít zachovat rozložení zleva doprava. V těchto případech vykreslí obrázek voláním `BitBlt` nebo `StretchBlt`a pak nastavte příznak ovládacího prvku rastrový obrázek pro *dwLayout* na LAYOUT_BITMAPORIENTATIONPRESERVED.
+V některých případech, například u mnoha bitmap, můžete chtít zachovat rozložení zleva doprava. V těchto případech vykreslujte obrázek voláním `BitBlt` nebo `StretchBlt`, pak nastavte příznak ovládacího prvku bitmapy pro *dwLayout* na LAYOUT_BITMAPORIENTATIONPRESERVED.
 
-Jakmile změníte rozložení pomocí příznaku LAYOUT_RTL, příznaky obvykle určující pravou nebo levou stranu budou obráceny. Chcete-li předejít nejasnostem, je vhodné definovat alternativní názvy standardních příznaků. Seznam navrhovaných alternativních názvů příznaků najdete v tématu [SetLayout](/windows/win32/api/wingdi/nf-wingdi-setlayout) v Windows SDK.
+Jakmile změníte rozložení pomocí příznaku LAYOUT_RTL, příznaky obvykle určující vpravo nebo vlevo jsou obrácené. Chcete-li se vyhnout nejasnostem, můžete definovat alternativní názvy pro standardní příznaky. Seznam navržených názvů alternativních názvů příznaku naleznete v tématu [SetLayout](/windows/win32/api/wingdi/nf-wingdi-setlayout) v sadě Windows SDK.
 
-##  <a name="setmapmode"></a>CDC:: SetMapMode
+## <a name="cdcsetmapmode"></a><a name="setmapmode"></a>CDC::SetMapMode
 
 Nastaví režim mapování.
 
@@ -6054,24 +6054,24 @@ virtual int SetMapMode(int nMapMode);
 
 ### <a name="parameters"></a>Parametry
 
-*nMapMode*<br/>
-Určuje nový režim mapování. Může to být jedna z následujících hodnot:
+*nRežim Mapy*<br/>
+Určuje nový režim mapování. Může to být některá z následujících hodnot:
 
-- MM_ANISOTROPIC logické jednotky se převedou na libovolné jednotky s libovolně zvětšenými osami. Nastavení režimu mapování na MM_ANISOTROPIC nemění aktuální nastavení okna nebo zobrazení. Chcete-li změnit jednotky, orientaci a škálování, zavolejte členské funkce [SetWindowExt](#setwindowext) a [SetViewportExt](#setviewportext) .
+- MM_ANISOTROPIC Logické jednotky jsou převedeny na libovolné jednotky s libovolně měnit osy. Nastavení režimu mapování na MM_ANISOTROPIC nezmění aktuální nastavení okna nebo výřezu. Chcete-li změnit jednotky, orientaci a změnu měřítka, zavolejte členské funkce [SetWindowExt](#setwindowext) a [SetViewportExt.](#setviewportext)
 
-- MM_HIENGLISH se každá logická jednotka převede na 0,001 palců. Kladné x je pravé; kladné y je nahoru.
+- MM_HIENGLISH Každá logická jednotka je převedena na 0,001 palce. Pozitivní x je vpravo; pozitivní y je nahoru.
 
-- MM_HIMETRIC se každá logická jednotka převede na 0,01 milimetr. Kladné x je pravé; kladné y je nahoru.
+- MM_HIMETRIC Každá logická jednotka je převedena na 0,01 milimetru. Pozitivní x je vpravo; pozitivní y je nahoru.
 
-- MM_ISOTROPIC logické jednotky se převedou na libovolné jednotky s rovnoměrně zvětšenými osami; To znamená, že 1 jednotka podél osy x je rovna 1 jednotce podél osy y. K určení požadovaných jednotek a orientace OS použijte členské funkce `SetWindowExt` a `SetViewportExt`. GDI způsobuje úpravy podle potřeby, aby jednotky x a y zůstaly stejné velikosti.
+- MM_ISOTROPIC Logické jednotky jsou převedeny na libovolné jednotky se stejně měřítkem osy; to znamená, že 1 jednotka podél osy x se rovná 1 jednotce podél osy y. Pomocí `SetWindowExt` členské `SetViewportExt` funkce a určete požadované jednotky a orientaci os. GDI provádí úpravy podle potřeby, aby bylo zajištěno, že jednotky x a y zůstanou stejné velikosti.
 
-- MM_LOENGLISH se každá logická jednotka převede na 0,01 palců. Kladné x je pravé; kladné y je nahoru.
+- MM_LOENGLISH Každá logická jednotka je převedena na 0,01 palce. Pozitivní x je vpravo; pozitivní y je nahoru.
 
-- MM_LOMETRIC se každá logická jednotka převede na 0,1 milimetr. Kladné x je pravé; kladné y je nahoru.
+- MM_LOMETRIC Každá logická jednotka je převedena na 0,1 milimetru. Pozitivní x je vpravo; pozitivní y je nahoru.
 
-- MM_TEXT jsou jednotlivé logické jednotky převedeny na 1 pixel zařízení. Kladné x je pravé; kladné y je mimo provoz.
+- MM_TEXT Každá logická jednotka je převedena na 1 pixel zařízení. Pozitivní x je vpravo; pozitivní y je dole.
 
-- MM_TWIPS se každá logická jednotka převede na 1/20 bodu. (Protože bod je 1/72 palce, twip je 1/1440 palce.) Kladné x je pravé; kladné y je nahoru.
+- MM_TWIPS Každá logická jednotka je převedena na 1/20 bodu. (Vzhledem k tomu, že bod je 1/72 palce, twip je 1/1440 palce.) Pozitivní x je vpravo; pozitivní y je nahoru.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -6079,18 +6079,18 @@ Předchozí režim mapování.
 
 ### <a name="remarks"></a>Poznámky
 
-V režimu mapování je definována jednotka míry, která se používá k převodu logických jednotek na jednotky zařízení. definuje také orientaci os x a y zařízení. GDI používá režim mapování k převodu logických souřadnic na příslušné souřadnice zařízení. Režim MM_TEXT umožňuje aplikacím pracovat v pixelech zařízení, kde 1 jednotka je rovna 1 pixelu. Velikost fyzického bodu se liší od zařízení po zařízení.
+Režim mapování definuje měrnou jednotku použitou k převodu logických jednotek na jednotky zařízení; definuje také orientaci os x a y zařízení. GDI používá režim mapování k převodu logických souřadnic na příslušné souřadnice zařízení. Režim MM_TEXT umožňuje aplikacím pracovat v pixelech zařízení, kde se 1 jednotka rovná 1 pixelu. Fyzická velikost pixelu se u jednotlivých zařízení liší.
 
-Režimy MM_HIENGLISH, MM_HIMETRIC, MM_LOENGLISH, MM_LOMETRIC a MM_TWIPS jsou užitečné pro aplikace, které musí vykreslovat fyzicky smysluplné jednotky (například palce nebo milimetry). Režim MM_ISOTROPIC zajišťuje poměr stran 1:1, což je užitečné, pokud je důležité zachovat přesný tvar obrázku. Režim MM_ANISOTROPIC umožňuje, aby byly souřadnice x a y upravovány nezávisle.
+Režimy MM_HIENGLISH, MM_HIMETRIC, MM_LOENGLISH, MM_LOMETRIC a MM_TWIPS jsou užitečné pro aplikace, které musí čerpat fyzicky smysluplné jednotky (například palce nebo milimetry). MM_ISOTROPIC režim zajišťuje poměr stran 1:1, což je užitečné, když je důležité zachovat přesný tvar obrazu. Režim MM_ANISOTROPIC umožňuje nezávislé nastavení souřadnic x a y.
 
 > [!NOTE]
->  Pokud zavoláte [SetLayout](#setlayout) , abyste změnili řadič domény (kontext zařízení) na rozložení zprava doleva, `SetLayout` automaticky změní režim mapování na MM_ISOTROPIC.
+> Pokud zavoláte [SetLayout](#setlayout) změnit DC (kontext zařízení) na pravé-k-levé rozložení, `SetLayout` automaticky změní režim mapování na MM_ISOTROPIC.
 
 ### <a name="example"></a>Příklad
 
-  Podívejte se na příklad pro [CView:: OnPrepareDC](../../mfc/reference/cview-class.md#onpreparedc).
+  Viz příklad [cview::OnPrepareDC](../../mfc/reference/cview-class.md#onpreparedc).
 
-##  <a name="setmapperflags"></a>CDC:: SetMapperFlags
+## <a name="cdcsetmapperflags"></a><a name="setmapperflags"></a>CDC::SetMapperFlags
 
 Změní metodu použitou mapovačem písma při převodu logického písma na fyzické písmo.
 
@@ -6101,23 +6101,23 @@ DWORD SetMapperFlags(DWORD dwFlag);
 ### <a name="parameters"></a>Parametry
 
 *dwFlag*<br/>
-Určuje, zda se při mapovači písem pokusí vyhledat výšku a šířku aspektu písma na zařízení. Pokud je tato hodnota ASPECT_FILTERING, Mapovač vybere pouze písma, jejichž x-aspekt a y se přesně shodují s hodnotami zadaného zařízení.
+Určuje, zda se mapovač písma pokusí přizpůsobit zařízení výšku a šířku aspektu písma. Pokud je tato hodnota ASPECT_FILTERING, mapovač vybere pouze písma, jejichž x-aspect a y-aspect přesně odpovídají písmům zadaného zařízení.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Předchozí hodnota příznaku mapovače písma
+Předchozí hodnota příznaku mapovač písma.
 
 ### <a name="remarks"></a>Poznámky
 
-Aplikace může použít `SetMapperFlags` a způsobit tak, že se Mapovač písem pokusí zvolit pouze fyzické písmo, které přesně odpovídá poměru stran určeného zařízení.
+Aplikace může `SetMapperFlags` způsobit mapovač písma pokusit se vybrat pouze fyzické písmo, které přesně odpovídá poměr stran zadaného zařízení.
 
-Aplikace, která používá pouze rastrová písma, může používat funkci `SetMapperFlags`, aby bylo zajištěno, že písmo vybrané v mapovači písma je přitažlivé a čitelné na určeném zařízení. Aplikace používající škálovatelná písma (TrueType) obvykle nepoužívají `SetMapperFlags`.
+Aplikace, která používá pouze rastrová `SetMapperFlags` písma, může tuto funkci použít k zajištění, že písmo vybrané mapovačem písem je na určeném zařízení atraktivní a čitelné. Aplikace, které používají škálovatelná písma (TrueType), obvykle nepoužívají `SetMapperFlags`.
 
-Pokud žádný fyzický Font nemá poměr stran, který odpovídá specifikaci v logickém písmu, GDI zvolí nový poměr stran a vybere písmo, které odpovídá tomuto novému poměru stran.
+Pokud žádné fyzické písmo má poměr stran, který odpovídá specifikaci v logické písmo, GDI zvolí nový poměr stran a vybere písmo, které odpovídá tento nový poměr stran.
 
-##  <a name="setmiterlimit"></a>CDC:: SetMiterLimit
+## <a name="cdcsetmiterlimit"></a><a name="setmiterlimit"></a>CDC::SetMiterLimit
 
-Nastaví limit pro délku ostrých spojení pro kontext zařízení.
+Nastaví limit pro délku pokosových spojení pro kontext zařízení.
 
 ```
 BOOL SetMiterLimit(float fMiterLimit);
@@ -6126,7 +6126,7 @@ BOOL SetMiterLimit(float fMiterLimit);
 ### <a name="parameters"></a>Parametry
 
 *fMiterLimit*<br/>
-Určuje nový limit úkosu pro kontext zařízení.
+Určuje nový limit rozhraní pro kontext zařízení.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -6134,11 +6134,11 @@ Nenulové, pokud je funkce úspěšná; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Délka úkosu je definována jako vzdálenost od průsečíku na stěnách čar v rámci spojení s průsečíkem stěn čar na vnější straně spojení. Limit úkosu je maximální povolený poměr délky ostrých délek k šířce čáry. Výchozí limit úkosu je 10,0.
+Délka pokožky je definována jako vzdálenost od průsečíku stěn čáry na vnitřní straně spojení k průsečíku stěn čáry na vnější straně spojení. Limit pokory je maximální povolený poměr délky pokory k šířce čáry. Výchozí limit poučování je 10,0.
 
-##  <a name="setoutputdc"></a>CDC:: SetOutputDC
+## <a name="cdcsetoutputdc"></a><a name="setoutputdc"></a>CDC::SetOutputDC
 
-Voláním této členské funkce nastavte kontext výstupního zařízení `m_hDC`.
+Volání této členské funkce pro nastavení `m_hDC`kontextu výstupního zařízení .
 
 ```
 virtual void SetOutputDC(HDC hDC);
@@ -6146,16 +6146,16 @@ virtual void SetOutputDC(HDC hDC);
 
 ### <a name="parameters"></a>Parametry
 
-*hDC*<br/>
-Kontext zařízení s Windows
+*Hdc*<br/>
+Kontext zařízení windows.
 
 ### <a name="remarks"></a>Poznámky
 
-Tuto členskou funkci lze volat pouze v případě, že kontext zařízení nebyl připojen k objektu `CDC`. Tato členská funkce nastavuje `m_hDC`, ale nepřipojuje kontext zařízení k objektu `CDC`.
+Tuto členovou funkci lze volat pouze v případě, `CDC` že kontext zařízení nebyl připojen k objektu. Tato členská `m_hDC` funkce nastaví, ale `CDC` nepřipojí kontext zařízení k objektu.
 
-##  <a name="setpixel"></a>CDC:: funkce SetPixel
+## <a name="cdcsetpixel"></a><a name="setpixel"></a>CDC::SetPixel
 
-Nastaví pixel v bodu určeném na nejbližší aproximaci barvy určené parametrem *crColor*.
+Nastaví obrazový bod v bodě určeném k nejbližšímu přiblížení barvy určené *crColor*.
 
 ```
 COLORREF SetPixel(
@@ -6170,31 +6170,31 @@ COLORREF SetPixel(
 
 ### <a name="parameters"></a>Parametry
 
-*znak*<br/>
-Určuje logickou souřadnici x bodu, který má být nastaven.
+*X*<br/>
+Určuje logickou souřadnici x nastaveného bodu.
 
-*požadované*<br/>
+*Y*<br/>
 Určuje logickou souřadnici y bodu, který má být nastaven.
 
 *crColor*<br/>
-Hodnota COLORREF RGB, která určuje barvu použitou k vykreslení bodu. Popis této hodnoty naleznete v tématu [COLORREF](/windows/win32/gdi/colorref) v Windows SDK.
+Colorref RGB hodnota, která určuje barvu použitou k malování bodu. Popis této hodnoty naleznete v části [COLORREF](/windows/win32/gdi/colorref) v kani s sadou Windows SDK.
 
-*Vyberte*<br/>
-Určuje logické souřadnice x a y bodu, který má být nastaven. Pro tento parametr můžete předat buď strukturu `POINT`, nebo objekt `CPoint`.
+*Bod*<br/>
+Určuje logické souřadnice x a y nastaveného bodu. Pro tento parametr `POINT` můžete `CPoint` předat strukturu nebo objekt.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota RGB barvy, kterou je bod skutečně vybarvený. Tato hodnota se může lišit od hodnoty určené parametrem *crColor* , pokud je použita aproximace této barvy. Pokud se funkce nezdařila (Pokud je bod mimo oblast oříznutí), vrácená hodnota je-1.
+Hodnota RGB pro barvu, kterou je bod skutečně vybarvený. Tato hodnota se může lišit od hodnoty určené *crColor,* pokud je použita aproximace této barvy. Pokud funkce selže (pokud je bod mimo oblast oříznutí), vrácená hodnota je -1.
 
 ### <a name="remarks"></a>Poznámky
 
-Bod musí být v oblasti oříznutí. Pokud bod není v oblasti oříznutí, funkce neprovede žádnou akci.
+Bod musí být v oblasti oříznutí. Pokud bod není v oblasti oříznutí, funkce neprovede žádné provede.
 
-Ne všechna zařízení podporují funkci `SetPixel`. Chcete-li zjistit, zda zařízení podporuje `SetPixel`, zavolejte členskou funkci `GetDeviceCaps` s indexem RASTERCAPS a zkontrolujte návratovou hodnotu příznaku RC_BITBLT.
+Ne všechna zařízení `SetPixel` podporují funkci. Chcete-li zjistit, `SetPixel`zda `GetDeviceCaps` zařízení podporuje , volejte členskou funkci s indexem RASTERCAPS a zkontrolujte vrácenou hodnotu příznaku RC_BITBLT.
 
-##  <a name="setpixelv"></a>CDC:: SetPixelV
+## <a name="cdcsetpixelv"></a><a name="setpixelv"></a>CDC::SetPixelV
 
-Nastaví pixel na zadaných souřadnicích na nejbližší přibližnou určenou barvu.
+Nastaví obrazový bod na určených souřadnicích na nejbližší přiblížení zadané barvy.
 
 ```
 BOOL SetPixelV(
@@ -6209,17 +6209,17 @@ BOOL SetPixelV(
 
 ### <a name="parameters"></a>Parametry
 
-*znak*<br/>
-Určuje souřadnici x (v logických jednotkách) bodu, který má být nastaven.
+*X*<br/>
+Určuje souřadnici x v logických jednotkách nastaveného bodu.
 
-*požadované*<br/>
-Určuje souřadnici y (v logických jednotkách) bodu, který má být nastaven.
+*Y*<br/>
+Určuje souřadnici y v logických jednotkách nastaveného bodu.
 
 *crColor*<br/>
-Určuje barvu, která má být použita k vykreslení bodu.
+Určuje barvu, která má být použita k malování bodu.
 
-*Vyberte*<br/>
-Určuje logické souřadnice x a y bodu, který má být nastaven. Pro tento parametr můžete předat datovou strukturu [bodu](/windows/win32/api/windef/ns-windef-point) nebo objekt [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) .
+*Bod*<br/>
+Určuje logické souřadnice x a y nastaveného bodu. Pro tento parametr můžete předat datovou strukturu [POINT](/windows/win32/api/windef/ns-windef-point) nebo objekt [CPoint.](../../atl-mfc-shared/reference/cpoint-class.md)
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -6227,11 +6227,11 @@ Nenulové, pokud je funkce úspěšná; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Bod musí být v oblasti oříznutí i viditelné části povrchu zařízení. Ne všechna zařízení podporují členskou funkci. Další informace najdete v tématu funkce RC_BITBLT v členské funkci `CDC::GetDeviceCaps`. `SetPixelV` je rychlejší než `SetPixel`, protože nemusí vracet hodnotu barvy bodu, který je ve skutečnosti vykreslený.
+Bod musí být jak v oblasti oříznutí, tak ve viditelné části povrchu zařízení. Ne všechna zařízení podporují členská funkci. Další informace naleznete v RC_BITBLT `CDC::GetDeviceCaps` funkce v členské funkci. `SetPixelV`je rychlejší `SetPixel` než proto, že není nutné vrátit hodnotu barvy bodu skutečně malované.
 
-##  <a name="setpolyfillmode"></a>CDC:: SetPolyFillMode
+## <a name="cdcsetpolyfillmode"></a><a name="setpolyfillmode"></a>CDC::SetPolyFillMode
 
-Nastaví režim vyplňování mnohoúhelníku.
+Nastaví režim plnění polygonů.
 
 ```
 int SetPolyFillMode(int nPolyFillMode);
@@ -6240,19 +6240,19 @@ int SetPolyFillMode(int nPolyFillMode);
 ### <a name="parameters"></a>Parametry
 
 *nPolyFillMode*<br/>
-Určuje nový režim vyplňování. Tato hodnota může být buď alternativní, nebo vinutí. Výchozí režim nastavený v systému Windows je ALTERNATIVNÍM.
+Určuje nový režim plnění. Tato hodnota může být buď ALTERNATE nebo WINDING. Výchozí režim nastavený v systému Windows je ALTERNATE.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Předchozí režim vyplňování, pokud je úspěšný; v opačném případě 0.
+Předchozí režim plnění, pokud je úspěšný; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Když je režim vyplňování mnohoúhelníku ALTERNATIVně jiný, systém vyplní oblast mezi lichými a sudými mnohoúhelníky na jednotlivých řádcích skenování. To znamená, že systém vyplní oblast mezi první a druhou stranou mezi třetí a čtvrtou stranou atd. Tento režim je výchozí.
+Pokud je režim plnění mnohostranných spojů ALTERNATE, systém vyplní oblast mezi lichými a sudými polygonovými stranami na každé linii skenování. To znamená, že systém vyplňuje oblast mezi první a druhou stranou, mezi třetí a čtvrtou stranou a tak dále. Tento režim je výchozí.
 
-Když je režim vyplňování mnohoúhelníku větru, systém použije směr, ve kterém byl obrázek vykreslen, aby určil, zda má být oblast vyplněna. Každý segment čáry v mnohoúhelníku je vykreslen buď po směru hodinových ručiček, nebo směrem proti směru hodinových ručiček. Pokaždé, když se na imaginární řádek nakreslený z uzavřené oblasti mimo obrázek projde segmentem čáry po směru hodinových ručiček, zvýší se počet. Když řádek projde segmentem čáry proti směru hodinových ručiček, počet se sníží. Oblast je vyplněna, pokud je počet nenulový, když řádek dosáhne mimo obrázek.
+Pokud je režim plnění polygonů winding, systém používá směr, ve kterém byl obrázek nakreslena k určení, zda má být vyplnit oblast. Každý segment čáry v polygonu je nakreslen buď ve směru hodinových ručiček, nebo proti směru hodinových ručiček. Kdykoli pomyslná čára nakreslená z uzavřené oblasti na vnější stranu polymeje prochází segmentem čáry ve směru hodinových ručiček, poroste se počet. Když čára prochází segmentem čáry proti směru hodinových ručiček, počet se sníží. Oblast je vyplněna, pokud je počet nenulový, když čára dosáhne vnější strany obrázku.
 
-##  <a name="setrop2"></a>CDC:: SetROP2
+## <a name="cdcsetrop2"></a><a name="setrop2"></a>CDC::SetROP2
 
 Nastaví aktuální režim kreslení.
 
@@ -6262,56 +6262,56 @@ int SetROP2(int nDrawMode);
 
 ### <a name="parameters"></a>Parametry
 
-*nDrawMode*<br/>
-Určuje nový režim kreslení. Může to být kterákoli z následujících hodnot:
+*nRežim drawmode*<br/>
+Určuje nový režim kreslení. Může to být některá z následujících hodnot:
 
-- R2_BLACK pixel je vždy černý.
+- R2_BLACK Pixel je vždy černá.
 
-- R2_WHITE pixel je vždy bílá.
+- R2_WHITE Pixel je vždy bílý.
 
-- R2_NOP pixel zůstává beze změny.
+- R2_NOP Pixel zůstane nezměněn.
 
-- R2_NOT pixel je inverzní barva obrazovky.
+- R2_NOT Pixel je inverzní barva obrazovky.
 
-- R2_COPYPEN pixel je Barva pera.
+- R2_COPYPEN Pixel je barva pera.
 
-- R2_NOTCOPYPEN pixel je inverzní Barva pera.
+- R2_NOTCOPYPEN Pixel je inverzní barva pera.
 
-- R2_MERGEPENNOT pixel je kombinací barvy pera a inverzní barvy obrazovky (konečný pixel = (ne pixelů obrazovky) nebo pero).
+- R2_MERGEPENNOT Pixel je kombinací barvy pera a inverzní barvy obrazovky (konečný pixel = (NOT screen pixel) OR pero).
 
-- R2_MASKPENNOT pixel je kombinací barev společných pro pero i pro inverzní obrazovku (konečný pixel = (ne pixel) a pero).
+- R2_MASKPENNOT Pixel je kombinací barev společných jak pro pero, tak pro inverzní obrazovku (konečný pixel = (NOT screen pixel) a pero).
 
-- R2_MERGENOTPEN pixel je kombinací barvy obrazovky a inverzní barvy k barvě pera (konečný pixel = (ne pero) nebo pixelu obrazovky).
+- R2_MERGENOTPEN Pixel je kombinací barvy obrazovky a inverzní barvy pera (konečný pixel = (NOT pero) NEBO obrazový bod obrazovky).
 
-- R2_MASKNOTPEN pixel je kombinací barev, které jsou společné pro obrazovku i pro invertování pera (konečný pixel = (ne pero) a pixel obrazovky).
+- R2_MASKNOTPEN Pixel je kombinací barev společných jak na obrazovce, tak pro inverzní pero (konečný pixel = (NOT pero) A obrazový bod obrazovky).
 
-- R2_MERGEPEN pixel je kombinací barvy pera a barvy obrazovky (konečný pixel = pero nebo pixel obrazovky).
+- R2_MERGEPEN Pixel je kombinace barvy pera a barvy obrazovky (konečný pixel = pero NEBO obrazový bod obrazovky).
 
-- R2_NOTMERGEPEN pixel je inverzní barva R2_MERGEPEN (konečný pixel = NOT (pero nebo pixel)).
+- R2_NOTMERGEPEN Pixel je inverzní R2_MERGEPEN barva (konečný pixel = NOT (pero nebo obrazový bod obrazovky)).
 
-- R2_MASKPEN pixel je kombinací barev společných pro pero i obrazovku (konečný pixel = pero a obrazové body obrazovky).
+- R2_MASKPEN Pixel je kombinace barev společných jak pro pero, tak pro obrazovku (konečný pixel = pero a obrazový bod obrazovky).
 
-- R2_NOTMASKPEN pixel je inverzní barva R2_MASKPEN (konečný pixel = NOT (pero a obrazovka)).
+- R2_NOTMASKPEN Pixel je inverzní barva R2_MASKPEN (konečný pixel = NOT (pero a obrazový bod obrazovky)).
 
-- R2_XORPEN pixel je kombinací barev, které se nachází na pero nebo na obrazovce, ale ne v obou (finální pixel = pixel – pixel obrazovky).
+- R2_XORPEN Pixel je kombinace barev, které jsou v peru nebo na obrazovce, ale ne v obou (konečný pixel = pero XOR obrazový bod obrazovky).
 
-- R2_NOTXORPEN pixel je inverzní barva R2_XORPEN (konečný pixel = NOT (pixel obrazovky funkce XOR)).
+- R2_NOTXORPEN Pixel je inverzní barva R2_XORPEN (konečný pixel = NOT (pixel obrazovky XOR pera)).
 
 ### <a name="return-value"></a>Návratová hodnota
 
 Předchozí režim kreslení.
 
-Může to být kterákoli z hodnot uvedených v Windows SDK.
+Může se jedná o libovolnou hodnotu uvedenou v sadě Windows SDK.
 
 ### <a name="remarks"></a>Poznámky
 
-Režim kreslení určuje, jak jsou barvy pera a vnitřku vyplněných objektů kombinovány se barvou, která je již na zobrazovací ploše.
+Režim kreslení určuje, jak se barvy pera a vnitřek vyplněných objektů kombinují s barvou, která je již na povrchu zobrazení.
 
-Režim kreslení je jenom pro rastrová zařízení. nevztahuje se na vektorová zařízení. Režimy kreslení jsou binární kódy operace s rastrovou operací reprezentující všechny možné logické kombinace dvou proměnných, pomocí binárních operátorů a, nebo a XOR (Exclusive nebo) a unární operace ne.
+Režim kreslení je určen pouze pro rastrová zařízení; nevztahuje se na vektorová zařízení. Režimy kreslení jsou binární kódy rastrových operací představující všechny možné logické kombinace dvou proměnných pomocí binárních operátorů AND, OR a XOR (výhradní OR) a unární operace NOT.
 
-##  <a name="setstretchbltmode"></a>CDC:: SetStretchBltMode
+## <a name="cdcsetstretchbltmode"></a><a name="setstretchbltmode"></a>CDC::SetStretchBltMode
 
-Nastaví režim roztažení rastrového obrázku pro členskou funkci `StretchBlt`.
+Nastaví režim bitmapy roztahování pro členovou `StretchBlt` funkci.
 
 ```
 int SetStretchBltMode(int nStretchMode);
@@ -6320,35 +6320,35 @@ int SetStretchBltMode(int nStretchMode);
 ### <a name="parameters"></a>Parametry
 
 *nStretchMode*<br/>
-Určuje režim roztažení. Může to být kterákoli z následujících hodnot:
+Určuje režim roztahování. Může to být některá z následujících hodnot:
 
 |Hodnota|Popis|
 |-----------|-----------------|
-|BLACKONWHITE|Provede logickou hodnotu a operaci s použitím hodnot barvy pro eliminováné a existující pixely. Pokud je rastrový obrázek monochromatický, tento režim zachovává černé pixely na úkor bílých pixelů.|
-|COLORONCOLOR|Odstraní pixely. Tento režim odstraní všechny vyloučené řádky v pixelech, aniž by se musely zachovat jejich informace.|
-|BARVÁCH|Mapuje pixely ze zdrojového obdélníku do bloků pixelů v cílovém obdélníku. Průměrná barva nad cílovým blokem pixelů se blíží barvě zdrojových pixelů.|
-||Po nastavení režimu roztažení do POLOTÓNů musí aplikace zavolat funkci Win32 [SetBrushOrgEx](/windows/win32/api/wingdi/nf-wingdi-setbrushorgex) , aby nastavila počátek štětce. Pokud to uděláte, dojde k chybnému zarovnání štětce.|
-|STRETCH_ANDSCANS|**Windows 95/98**: totéž jako BLACKONWHITE|
-|STRETCH_DELETESCANS|**Windows 95/98**: totéž jako COLORONCOLOR|
-|STRETCH_HALFTONE|**Windows 95/98**: stejné jako polotónování.|
-|STRETCH_ORSCANS|**Windows 95/98**: totéž jako WHITEONBLACK|
-|WHITEONBLACK|Provede logickou hodnotu nebo operaci s použitím hodnot barvy pro eliminováné a existující pixely. Pokud je rastrový obrázek monochromatický, tento režim zachovává bílé pixely na úkor černých pixelů.|
+|ČERNÁNABÍLO|Provede logickou operaci and pomocí hodnot barev pro vyřazené a existující obrazové body. Pokud je bitmapa monochromatická, tento režim zachová černé obrazové body na úkor bílých obrazových bodů.|
+|BARVA BARVY|Odstraní obrazové body. Tento režim odstraní všechny odstraněné řádky obrazových bodů, aniž by se pokusil zachovat jejich informace.|
+|Polotónování|Mapuje obrazové body ze zdrojového obdélníku na bloky obrazových bodů v cílovém obdélníku. Průměrná barva nad cílovým blokem obrazových bodů se blíží barvě zdrojových obrazových bodů.|
+||Po nastavení režimu roztahování HALFTONE musí aplikace volat funkci Win32 [SetBrushOrgEx,](/windows/win32/api/wingdi/nf-wingdi-setbrushorgex) aby nastavila počátek stopy. Pokud se to nepodaří, dojde k vychýlení stopy.|
+|STRETCH_ANDSCANS|**Windows 95/98**: Stejné jako BLACKONWHITE|
+|STRETCH_DELETESCANS|**Windows 95/98**: Stejné jako COLORONCOLOR|
+|STRETCH_HALFTONE|**Windows 95/98**: Stejné jako HALFTONE.|
+|STRETCH_ORSCANS|**Windows 95/98**: Stejné jako WHITEONBLACK|
+|WHITEONČERNÁ|Provede logickou operaci OR s použitím barevných hodnot pro vyřazené a existující obrazové body. Pokud je bitmapa monochromatická, tento režim zachová bílé obrazové body na úkor černých obrazových bodů.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Předchozí režim roztažení. Může být STRETCH_ANDSCANS, STRETCH_DELETESCANS nebo STRETCH_ORSCANS.
+Předchozí režim roztahování. Může to být STRETCH_ANDSCANS, STRETCH_DELETESCANS nebo STRETCH_ORSCANS.
 
 ### <a name="remarks"></a>Poznámky
 
-Režim roztažení rastrového obrázku definuje způsob odebrání informací z rastrových obrázků, které jsou komprimovány pomocí funkce.
+Režim roztahování bitmapy definuje, jak jsou informace odstraněny z bitmap, které jsou komprimovány pomocí funkce.
 
-Režimy BLACKONWHITE (STRETCH_ANDSCANS) a WHITEONBLACK (STRETCH_ORSCANS) se obvykle používají k zachování pixelů na pozadí v monochromatických rastrových obrázkůch. Režim COLORONCOLOR (STRETCH_DELETESCANS) se obvykle používá k zachování barvy v barevných rastrech.
+Režimy BLACKONWHITE (STRETCH_ANDSCANS) a WHITEONBLACK (STRETCH_ORSCANS) se obvykle používají k zachování obrazových bodů popředí v monochromatických bitmapách. Režim COLORONCOLOR ( STRETCH_DELETESCANS) se obvykle používá k zachování barev v barevných bitmapách.
 
-Režim POLOTÓNování vyžaduje více zpracování zdrojového obrázku, než ostatní tři režimy; je pomalejší než ostatní, ale vytváří vyšší kvality obrazu. Všimněte si také, že `SetBrushOrgEx` musí být voláni po nastavení režimu POLOTÓNování, aby nedocházelo k chybnému zarovnání štětce.
+Režim HALFTONE vyžaduje více zpracování zdrojového obrazu než ostatní tři režimy; je pomalejší než ostatní, ale vytváří obrázky vyšší kvality. Všimněte `SetBrushOrgEx` si také, že musí být volána po nastavení režimu HALFTONE, aby se zabránilo vychýlení kartáče.
 
-V závislosti na možnostech ovladače zařízení mohou být k dispozici také další režimy roztažení.
+V závislosti na možnostech ovladače zařízení mohou být k dispozici také další režimy roztahování.
 
-##  <a name="settextalign"></a>CDC:: členskou
+## <a name="cdcsettextalign"></a><a name="settextalign"></a>CDC::SetTextAlign
 
 Nastaví příznaky zarovnání textu.
 
@@ -6358,40 +6358,40 @@ UINT SetTextAlign(UINT nFlags);
 
 ### <a name="parameters"></a>Parametry
 
-*nFlags*<br/>
-Určuje příznaky zarovnání textu. Příznaky určují vztah mezi bodem a obdélníkem, který je ohraničen textem. Bodem může být buď aktuální pozice, nebo souřadnice určené funkcí textové-výstup. Obdélník, který je ohraničen textem, je definován sousedícími buňkami znaků v textovém řetězci. Parametr *nFlags* může být jeden nebo více příznaků z následujících tří kategorií. Vyberte pouze jeden příznak z každé kategorie. První kategorie má vliv na zarovnání textu ve směru x:
+*nPříznaky*<br/>
+Určuje příznaky zarovnání textu. Příznaky určují vztah mezi bodem a obdélníkem, který ohraničuje text. Bodem může být buď aktuální pozice, nebo souřadnice určené funkcí textového výstupu. Obdélník, který ohraničuje text, je definován sousedními buňkami znaků v textovém řetězci. Parametr *nFlags* může být jeden nebo více příznaků z následujících tří kategorií. Z každé kategorie zvolte pouze jeden příznak. První kategorie ovlivňuje zarovnání textu ve směru x:
 
-- TA_CENTER Zarovná bod vodorovným středem ohraničovacího rámečku.
+- TA_CENTER Zarovná bod s vodorovným středem ohraničovacího obdélníku.
 
-- TA_LEFT zarovnává bod s levou stranou ohraničujícího obdélníku. Toto je výchozí nastavení.
+- TA_LEFT Zarovná bod s levou stranou ohraničovacího obdélníku. Toto je výchozí nastavení.
 
-- TA_RIGHT zarovnává bod s pravou stranou ohraničujícího obdélníku.
+- TA_RIGHT Zarovná bod s pravou stranou ohraničovacího obdélníku.
 
-Druhá kategorie má vliv na zarovnání textu ve směru y:
+Druhá kategorie ovlivňuje zarovnání textu ve směru y:
 
-- TA_BASELINE zarovnává bod se základním řádkem vybraného písma.
+- TA_BASELINE Zarovná bod se základním řádkem vybraného písma.
 
-- TA_BOTTOM zarovnává bod s dolním okrajem ohraničujícího obdélníku.
+- TA_BOTTOM Zarovná bod se spodní částí ohraničovacího obdélníku.
 
-- TA_TOP zarovnává bod s horním okrajem ohraničovacího rámečku. Toto je výchozí nastavení.
+- TA_TOP Zarovná bod s horní částí ohraničovacího obdélníku. Toto je výchozí nastavení.
 
 Třetí kategorie určuje, zda je aktuální pozice aktualizována při zápisu textu:
 
-- TA_NOUPDATECP neaktualizuje aktuální pozici po každém volání funkce textové-výstup. Toto je výchozí nastavení.
+- TA_NOUPDATECP Neaktualizuje aktuální pozici po každém volání funkce textového výstupu. Toto je výchozí nastavení.
 
-- TA_UPDATECP aktualizuje aktuální x-Position po každém volání funkce text-Output. Nová pozice je na pravé straně ohraničujícího obdélníku textu. Pokud je tento příznak nastaven, budou souřadnice zadané v voláních členské funkce `TextOut` ignorovány.
+- TA_UPDATECP Aktualizuje aktuální pozici x po každém volání funkce textového výstupu. Nová pozice je na pravé straně ohraničovacího obdélníku pro text. Je-li tento příznak nastaven, jsou souřadnice zadané ve volání `TextOut` členské funkce ignorovány.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Předchozí nastavení zarovnání textu, pokud bylo úspěšné. Bajty s nižším pořadím obsahují horizontální nastavení a horní bajtový bajt obsahuje vertikální nastavení; v opačném případě 0.
+Předchozí nastavení zarovnání textu, pokud je úspěšné. Bajt nízkého řádu obsahuje vodorovné nastavení a bajt vysokého řádu obsahuje svislé nastavení; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Členské funkce `TextOut` a `ExtTextOut` používají tyto příznaky při umísťování řetězce textu na zobrazení nebo zařízení. Příznaky určují vztah mezi konkrétním bodem a obdélníkem, který je ohraničený textem. Souřadnice tohoto bodu jsou předány jako parametry členské funkci `TextOut`. Obdélník, který je ohraničen textem, je vytvořen sousedními buňkami znaků v textovém řetězci.
+A `TextOut` `ExtTextOut` členské funkce používají tyto příznaky při umístění řetězce textu na displeji nebo zařízení. Příznaky určují vztah mezi určitým bodem a obdélníkem, který ohraničuje text. Souřadnice tohoto bodu jsou předány `TextOut` jako parametry členské funkci. Obdélník, který ohraničuje text, je tvořen sousedními buňkami znaků v textovém řetězci.
 
-##  <a name="settextcharacterextra"></a>CDC:: SetTextCharacterExtra
+## <a name="cdcsettextcharacterextra"></a><a name="settextcharacterextra"></a>CDC::SetTextCharacterExtra
 
-Nastaví množství meziznakových mezer.
+Nastaví velikost mezer mezi znaky.
 
 ```
 int SetTextCharacterExtra(int nCharExtra);
@@ -6400,17 +6400,17 @@ int SetTextCharacterExtra(int nCharExtra);
 ### <a name="parameters"></a>Parametry
 
 *nCharExtra*<br/>
-Určuje množství nadbytečného místa (v logických jednotkách), které se mají přidat k jednotlivým znakům. Pokud není aktuální režim mapování `MM_TEXT`, *nCharExtra* se transformuje a zaokrouhlí na nejbližší pixel.
+Určuje velikost mezery navíc (v logických jednotkách), která má být přidána ke každému znaku. Pokud aktuální režim mapování `MM_TEXT`není , *nCharExtra* je transformována a zaokrouhlena na nejbližší pixel.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Velikost předchozího meziznaku mezery.
+Velikost předchozímezery mezi znaky.
 
 ### <a name="remarks"></a>Poznámky
 
-GDI při zápisu řádku textu do kontextu zařízení přidá toto řádkování do každého znaku, včetně znaků přerušení. Výchozí hodnota pro velikost meziznaku mezery je 0.
+GDI přidá toto mezery ke každému znaku, včetně znaků přerušení, když zapíše řádek textu do kontextu zařízení. Výchozí hodnota pro velikost mezer mezi znaky je 0.
 
-##  <a name="settextcolor"></a>CDC:: SetTextColor
+## <a name="cdcsettextcolor"></a><a name="settextcolor"></a>CDC::SetTextColor
 
 Nastaví barvu textu na zadanou barvu.
 
@@ -6429,17 +6429,17 @@ Hodnota RGB pro předchozí barvu textu.
 
 ### <a name="remarks"></a>Poznámky
 
-Systém bude tuto barvu textu používat při psaní textu do tohoto kontextu zařízení a také při převodu Bitmap mezi barevným a monochromatickým kontextem zařízení.
+Systém použije tuto barvu textu při psaní textu do tohoto kontextu zařízení a také při převodu bitmap mezi barevnými a monochromatickými kontexty zařízení.
 
-Pokud zařízení nemůže zastupovat určenou barvu, systém nastaví barvu textu na nejbližší fyzickou barvu. Barva pozadí pro znak je určena `SetBkColor` a `SetBkMode` členské funkce.
+Pokud zařízení nemůže reprezentovat zadanou barvu, systém nastaví barvu textu na nejbližší fyzickou barvu. Barva pozadí znaku je určena `SetBkColor` `SetBkMode` členskými funkcemi a.
 
 ### <a name="example"></a>Příklad
 
-  Podívejte se na příklad pro [CWnd:: OnCtlColor](../../mfc/reference/cwnd-class.md#onctlcolor).
+  Viz příklad pro [CWnd::OnCtlColor](../../mfc/reference/cwnd-class.md#onctlcolor).
 
-##  <a name="settextjustification"></a>CDC:: SetTextJustification
+## <a name="cdcsettextjustification"></a><a name="settextjustification"></a>CDC::SetTextJustification
 
-Přidá mezeru k znakům zalomení v řetězci.
+Přidá mezeru do znaků přerušení v řetězci.
 
 ```
 int SetTextJustification(
@@ -6450,32 +6450,32 @@ int SetTextJustification(
 ### <a name="parameters"></a>Parametry
 
 *nBreakExtra*<br/>
-Určuje celkový dodatečný prostor, který se má přidat na řádek textu (v logických jednotkách). Pokud není aktuální režim mapování `MM_TEXT`, hodnota zadaná v tomto parametru se převede na aktuální režim mapování a zaokrouhluje na nejbližší jednotku zařízení.
+Určuje celkový počet mezer navíc, které mají být přidány do řádku textu (v logických jednotkách). Pokud aktuální režim mapování `MM_TEXT`není , hodnota daná tímto parametrem je převedena na aktuální režim mapování a zaokrouhlena na nejbližší jednotku zařízení.
 
 *nBreakCount*<br/>
-Určuje počet znaků zalomení na řádku.
+Určuje počet znaků přerušení v řádku.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Jedna, pokud je funkce úspěšná; v opačném případě 0.
+Jeden, pokud je funkce úspěšná; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Aplikace může pomocí `GetTextMetrics` členských funkcí načíst znak přerušení písma.
+Aplikace může použít `GetTextMetrics` členské funkce k načtení znaku přerušení písma.
 
-Po volání členské funkce `SetTextJustification`, volání funkce text-Output (například `TextOut`) distribuuje zadané místo navíc mezi zadaný počet znaků zalomení. Znakem Break je obvykle znak mezery (ASCII 32), ale může být definován písmem jako nějaký jiný znak.
+Po `SetTextJustification` volání členské funkce, volání funkce textového výstupu `TextOut`(například ) rovnoměrně rozdělí zadaný nadbytečný prostor mezi zadaný počet znaků přerušení. Znak break je obvykle znak mezery (ASCII 32), ale může být definován písmem jako nějaký jiný znak.
 
-Členská funkce `GetTextExtent` se obvykle používá s `SetTextJustification`. `GetTextExtent` vypočítá šířku daného řádku před zarovnáním. Aplikace může určit, kolik místa pro zadání v parametru *nBreakExtra* odečte hodnotu vrácenou `GetTextExtent` od šířky řetězce po zarovnání.
+Členská `GetTextExtent` funkce se obvykle `SetTextJustification`používá s . `GetTextExtent`vypočítá šířku dané čáry před zarovnáním. Aplikace můžete určit, kolik místa určit v *parametru nBreakExtra* odečtením hodnoty vrácené `GetTextExtent` od šířky řetězce po zarovnání.
 
-Funkci `SetTextJustification` lze použít k zarovnání čáry, která obsahuje více spuštění v různých písmech. V takovém případě musí být řádek vytvořen postupného zarovnáním a zápisem každého spuštění samostatně.
+Funkci `SetTextJustification` lze použít k zarovnání řádku, který obsahuje více spuštění v různých písmech. V tomto případě musí být řádek vytvořen po částech zarovnáním a zápisem každého spuštění samostatně.
 
-Vzhledem k tomu, že chyby zaokrouhlení mohou nastat během zarovnání, systém udržuje běžící chybový výraz, který definuje aktuální chybu. Při zarovnání řádku, který obsahuje více spuštění, `GetTextExtent` automaticky používá tento chybový výraz při výpočtu rozsahu dalšího spuštění. To umožňuje, aby funkce text-Output prolnout chybu do nového běhu.
+Vzhledem k tomu, že během zarovnání může dojít k chybám zaokrouhlení, systém zachová spuštěný chybový termín, který definuje aktuální chybu. Při zarovnání řádku, který `GetTextExtent` obsahuje více spuštění, automaticky použije tento chybový termín při výpočtu rozsahu dalšího spuštění. To umožňuje funkci výstupu textu prolnutí chyby do nového spuštění.
 
-Po zarovnání každého řádku se musí tento chybový výraz vymazat, aby se zabránilo jeho začlenění do dalšího řádku. Termín lze vymazat voláním `SetTextJustification` s *nBreakExtra* nastavenou na hodnotu 0.
+Po zarovnání každého řádku musí být tento chybový termín vymazán, aby se zabránilo jeho začlenění do dalšího řádku. Termín lze vymazat voláním `SetTextJustification` s *nBreakExtra* nastavena na 0.
 
-##  <a name="setviewportext"></a>CDC:: SetViewportExt
+## <a name="cdcsetviewportext"></a><a name="setviewportext"></a>CDC::SetViewportExt
 
-Nastaví rozsah x a y zobrazení kontextu zařízení.
+Nastaví rozsahy x a y v y kontextu zařízení.
 
 ```
 virtual CSize SetViewportExt(
@@ -6487,39 +6487,39 @@ CSize SetViewportExt(SIZE size);
 
 ### <a name="parameters"></a>Parametry
 
-*CX*<br/>
-Určuje x – rozsah zobrazení (v jednotkách zařízení).
+*Cx*<br/>
+Určuje x-rozsah výřezu (v jednotkách zařízení).
 
-*kr*<br/>
-Určuje rozsah y zobrazení (v jednotkách zařízení).
+*Cy*<br/>
+Určuje rozsah y výřezu (v jednotkách zařízení).
 
-*hodnota*<br/>
-Určuje rozsahy x a y zobrazení (v jednotkách zařízení).
+*Velikost*<br/>
+Určuje rozsahy x a y výřezu (v jednotkách zařízení).
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Předchozí rozsahy zobrazení jako objekt [CSize](../../atl-mfc-shared/reference/csize-class.md) . Pokud dojde k chybě, souřadnice x a y vráceného objektu `CSize` jsou nastaveny na hodnotu 0.
+Předchozí rozsahy výřezu jako [CSize](../../atl-mfc-shared/reference/csize-class.md) objektu. Dojde-li k chybě, souřadnice x a `CSize` y vráceného objektu jsou nastaveny na 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazení, společně s oknem kontext zařízení, definuje, jak mapy GDI body v logickém systému souřadnic odkazují na body v souřadnicovém systému skutečného zařízení. Jinými slovy, definují, jak GDI převádí logické souřadnice na souřadnice zařízení.
+Výřez spolu s oknem kontextu zařízení definuje, jak GDI mapuje body v logickém souřadnicovém systému na body v souřadnicovém systému skutečného zařízení. Jinými slovy definují, jak GDI převádí logické souřadnice na souřadnice zařízení.
 
-Pokud jsou nastaveny následující režimy mapování, volání `SetWindowExt` a `SetViewportExt` jsou ignorována:
+Pokud jsou nastaveny následující režimy mapování, volání `SetWindowExt` a `SetViewportExt` jsou ignorovány:
 
 |MM_HIENGLISH|MM_LOMETRIC|
 |-------------------|------------------|
 |MM_HIMETRIC|MM_TEXT|
 |MM_LOENGLISH|MM_TWIPS|
 
-Pokud je nastaven režim MM_ISOTROPIC, aplikace musí volat členskou funkci `SetWindowExt` před tím, než volá `SetViewportExt`.
+Pokud je nastaven MM_ISOTROPIC režim, `SetWindowExt` aplikace musí před `SetViewportExt`voláním volat členskou funkci .
 
 ### <a name="example"></a>Příklad
 
-  Podívejte se na příklad pro [CView:: OnPrepareDC](../../mfc/reference/cview-class.md#onpreparedc).
+  Viz příklad [cview::OnPrepareDC](../../mfc/reference/cview-class.md#onpreparedc).
 
-##  <a name="setviewportorg"></a>CDC:: SetViewportOrg
+## <a name="cdcsetviewportorg"></a><a name="setviewportorg"></a>CDC::SetViewportOrg
 
-Nastaví počátek zobrazení kontextu zařízení.
+Nastaví počátek výřezu kontextu zařízení.
 
 ```
 virtual CPoint SetViewportOrg(
@@ -6531,32 +6531,32 @@ CPoint SetViewportOrg(POINT point);
 
 ### <a name="parameters"></a>Parametry
 
-*znak*<br/>
-Určuje souřadnici x (v jednotkách zařízení) počátku zobrazení. Hodnota musí být v rozsahu souřadnicového systému zařízení.
+*X*<br/>
+Určuje souřadnice x (v jednotkách zařízení) počátku výřezu. Hodnota musí být v dosahu souřadnicového systému zařízení.
 
-*požadované*<br/>
-Určuje souřadnici y (v jednotkách zařízení) počátku zobrazení. Hodnota musí být v rozsahu souřadnicového systému zařízení.
+*Y*<br/>
+Určuje souřadnici y (v jednotkách zařízení) počátku výřezu. Hodnota musí být v dosahu souřadnicového systému zařízení.
 
-*Vyberte*<br/>
-Určuje počátek zobrazení. Hodnoty musí být v rozsahu souřadnicového systému zařízení. Pro tento parametr můžete předat buď strukturu `POINT`, nebo objekt `CPoint`.
+*Bod*<br/>
+Určuje počátek výřezu. Hodnoty musí být v dosahu souřadnicového systému zařízení. Pro tento parametr `POINT` můžete `CPoint` předat strukturu nebo objekt.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Předchozí počátek zobrazení (v souřadnicích zařízení) jako objekt `CPoint`.
+Předchozí počátek výřezu (v souřadnicích zařízení) jako objektu. `CPoint`
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazení, společně s oknem kontext zařízení, definuje, jak mapy GDI body v logickém systému souřadnic odkazují na body v souřadnicovém systému skutečného zařízení. Jinými slovy, definují, jak GDI převádí logické souřadnice na souřadnice zařízení.
+Výřez spolu s oknem kontextu zařízení definuje, jak GDI mapuje body v logickém souřadnicovém systému na body v souřadnicovém systému skutečného zařízení. Jinými slovy definují, jak GDI převádí logické souřadnice na souřadnice zařízení.
 
-Počátek zobrazení označuje bod v systému souřadnic zařízení, ke kterému GDI namapuje počátek okna, bod v logickém systému souřadnic určený `SetWindowOrg` členskou funkcí. GDI namapuje všechny ostatní body podle stejného procesu potřebného k namapování počátku okna na počátek zobrazení. Například všechny body kružnice kolem bodu v počátek okna budou v kruhu kolem bodu v zobrazení počátek. Podobně všechny body v řádku, který projde počátkem okna, budou v řádku, který projde počátkem zobrazení.
+Počátek výřezu označuje bod v souřadnicovém systému zařízení, na který GDI mapuje počátek okna, bod v logickém souřadnicovém systému určeném `SetWindowOrg` členovou funkcí. GDI mapuje všechny ostatní body podle stejného postupu, který je nutný k mapování počátku okna na počátek výřezu. Například všechny body v kruhu kolem bodu v počátku okna budou v kruhu kolem bodu v počátku výřezu. Podobně budou všechny body v řádku, který prochází počátkem okna, v řádku, který prochází počátkem výřezu.
 
 ### <a name="example"></a>Příklad
 
-  Podívejte se na příklad pro [CView:: OnPrepareDC](../../mfc/reference/cview-class.md#onpreparedc).
+  Viz příklad [cview::OnPrepareDC](../../mfc/reference/cview-class.md#onpreparedc).
 
-##  <a name="setwindowext"></a>CDC:: SetWindowExt
+## <a name="cdcsetwindowext"></a><a name="setwindowext"></a>CDC::SetWindowExt
 
-Nastaví rozsah x a y okna přidruženého k kontextu zařízení.
+Nastaví rozsahy x a y okna přidruženého k kontextu zařízení.
 
 ```
 virtual CSize SetWindowExt(
@@ -6568,24 +6568,24 @@ CSize SetWindowExt(SIZE size);
 
 ### <a name="parameters"></a>Parametry
 
-*CX*<br/>
+*Cx*<br/>
 Určuje rozsah x (v logických jednotkách) okna.
 
-*kr*<br/>
+*Cy*<br/>
 Určuje rozsah y (v logických jednotkách) okna.
 
-*hodnota*<br/>
+*Velikost*<br/>
 Určuje rozsahy x a y (v logických jednotkách) okna.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Předchozí rozsahy okna (v logických jednotkách) jako objekt `CSize`. Pokud dojde k chybě, souřadnice x a y vráceného objektu `CSize` jsou nastaveny na hodnotu 0.
+Předchozí rozsahy okna (v logických jednotkách) jako objektu. `CSize` Pokud dojde k chybě, souřadnice x a `CSize` y vráceného objektu jsou nastaveny na 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Okno spolu s zobrazením kontextu zařízení definuje, jak mapy GDI body v logickém systému souřadnic odkazují na body v systému souřadnic zařízení.
+Okno spolu s výřezem kontextu zařízení definuje, jak GDI mapuje body v logickém souřadnicovém systému na body v souřadnicovém systému zařízení.
 
-Pokud jsou nastaveny následující režimy mapování, volání funkcí `SetWindowExt` a `SetViewportExt` jsou ignorována:
+Pokud jsou nastaveny následující režimy mapování, volání `SetWindowExt` a `SetViewportExt` funkce jsou ignorovány:
 
 - MM_HIENGLISH
 
@@ -6599,15 +6599,15 @@ Pokud jsou nastaveny následující režimy mapování, volání funkcí `SetWin
 
 - MM_TWIPS
 
-Pokud je nastaven režim MM_ISOTROPIC, aplikace musí před voláním `SetViewportExt`volat členskou funkci `SetWindowExt`.
+Pokud je nastaven MM_ISOTROPIC režim, `SetWindowExt` musí aplikace `SetViewportExt`před voláním volat členskou funkci .
 
 ### <a name="example"></a>Příklad
 
-  Podívejte se na příklad pro [CView:: OnPrepareDC](../../mfc/reference/cview-class.md#onpreparedc).
+  Viz příklad [cview::OnPrepareDC](../../mfc/reference/cview-class.md#onpreparedc).
 
-##  <a name="setwindoworg"></a>CDC:: SetWindowOrg
+## <a name="cdcsetwindoworg"></a><a name="setwindoworg"></a>CDC::SetWindowOrg
 
-Nastaví počátek okna kontextu zařízení.
+Nastaví původ okna kontextu zařízení.
 
 ```
 CPoint SetWindowOrg(
@@ -6619,28 +6619,28 @@ CPoint SetWindowOrg(POINT point);
 
 ### <a name="parameters"></a>Parametry
 
-*znak*<br/>
-Určuje logickou souřadnici x nového zdroje okna.
+*X*<br/>
+Určuje logickou souřadnici x nového původu okna.
 
-*požadované*<br/>
-Určuje logickou souřadnici y nového zdroje okna.
+*Y*<br/>
+Určuje logickou souřadnici y nového původu okna.
 
-*Vyberte*<br/>
-Určuje logické souřadnice nového zdroje okna. Pro tento parametr můžete předat buď strukturu `POINT`, nebo objekt `CPoint`.
+*Bod*<br/>
+Určuje logické souřadnice nového původu okna. Pro tento parametr `POINT` můžete `CPoint` předat strukturu nebo objekt.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Předchozí původ okna jako objekt `CPoint`.
+Předchozí počátek okna jako `CPoint` objekt.
 
 ### <a name="remarks"></a>Poznámky
 
-Okno spolu s zobrazením kontextu zařízení definuje, jak mapy GDI body v logickém systému souřadnic odkazují na body v systému souřadnic zařízení.
+Okno spolu s výřezem kontextu zařízení definuje, jak GDI mapuje body v logickém souřadnicovém systému na body v souřadnicovém systému zařízení.
 
-Počátek okna označuje bod v logickém systému souřadnic, ze kterého GDI mapuje počátek zobrazení, bod v systému souřadnic zařízení určený funkcí `SetWindowOrg`. GDI namapuje všechny ostatní body podle stejného procesu potřebného k namapování počátku okna na počátek zobrazení. Například všechny body kružnice kolem bodu v počátek okna budou v kruhu kolem bodu v zobrazení počátek. Podobně všechny body v řádku, který projde počátkem okna, budou v řádku, který projde počátkem zobrazení.
+Počátek okna označuje bod v logickém souřadnicovém systému, ze kterého GDI `SetWindowOrg` mapuje počátek výřezu, bod v souřadnicovém systému zařízení určeném funkcí. GDI mapuje všechny ostatní body podle stejného postupu, který je nutný k mapování počátku okna na počátek výřezu. Například všechny body v kruhu kolem bodu v počátku okna budou v kruhu kolem bodu v počátku výřezu. Podobně budou všechny body v řádku, který prochází počátkem okna, v řádku, který prochází počátkem výřezu.
 
-##  <a name="setworldtransform"></a>CDC:: SetWorldTransform
+## <a name="cdcsetworldtransform"></a><a name="setworldtransform"></a>CDC::SetWorldTransformace
 
-Nastaví dvourozměrnou lineární transformaci mezi světovým prostorem a prostorem stránky pro určený kontext zařízení. Tuto transformaci lze použít pro škálování, otočení, zkosení nebo převod výstupu grafiky.
+Nastaví dvourozměrnou lineární transformaci mezi světovým prostorem a prostorem stránky pro zadaný kontext zařízení. Tuto transformaci lze použít ke změna měřítka, otočení, zkosení nebo překladu grafického výstupu.
 
 ```
 BOOL SetWorldTransform(const XFORM& rXform);
@@ -6649,23 +6649,23 @@ BOOL SetWorldTransform(const XFORM& rXform);
 ### <a name="parameters"></a>Parametry
 
 *rXform*<br/>
-Odkaz na strukturu [Xform –](/windows/win32/api/wingdi/ns-wingdi-xform) , která obsahuje data transformace.
+Odkaz na strukturu [XFORM,](/windows/win32/api/wingdi/ns-wingdi-xform) která obsahuje data transformace.
 
 ### <a name="return-value"></a>Návratová hodnota
 
 Vrátí nenulovou hodnotu při úspěchu.
 
-Vrátí 0 při selhání.
+Vrátí hodnotu 0 při selhání.
 
-Chcete-li získat rozšířené informace o chybě, volejte příkaz [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror).
+Chcete-li získat rozšířené informace o chybě, volejte [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda zabalí funkci GDI systému Windows [SetWorldTransform](/windows/win32/api/wingdi/nf-wingdi-setworldtransform).
+Tato metoda zabalí funkci Windows GDI [SetWorldTransform](/windows/win32/api/wingdi/nf-wingdi-setworldtransform).
 
-##  <a name="startdoc"></a>CDC:: StartDoc
+## <a name="cdcstartdoc"></a><a name="startdoc"></a>CDC::StartDoc
 
-Informuje ovladač zařízení, že se spouští nová tisková úloha a že všechny následné `StartPage` a `EndPage` volání by měly být zařazeny do stejné úlohy, dokud nedojde k volání `EndDoc`.
+Informuje ovladač zařízení, že se spouští nová `StartPage` tisková `EndPage` úloha a že všechny následné `EndDoc` a volání by měly být zařazeny pod stejnou úlohu, dokud nedojde k volání.
 
 ```
 int StartDoc(LPDOCINFO lpDocInfo);
@@ -6677,32 +6677,32 @@ int StartDoc(LPCTSTR lpszDocName);
 *lpDocInfo*<br/>
 Odkazuje na strukturu [DOCINFO](/windows/win32/api/wingdi/ns-wingdi-docinfow) obsahující název souboru dokumentu a název výstupního souboru.
 
-*lpszDocName*<br/>
+*lpszDocNázev*<br/>
 Ukazatel na řetězec obsahující název souboru dokumentu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud je funkce úspěšná, vrácená hodnota je větší než nula. Tato hodnota je identifikátor tiskové úlohy pro dokument.
+Pokud je funkce úspěšná, vrácená hodnota je větší než nula. Tato hodnota je identifikátor tiskové úlohy dokumentu.
 
-Pokud dojde k chybě funkce, vrácená hodnota je menší nebo rovna nule.
+Pokud funkce selže, vrácená hodnota je menší nebo rovna nule.
 
 ### <a name="remarks"></a>Poznámky
 
-Tím se zajistí, že dokumenty delší než jedna stránka nebudou přecházet mezi ostatními úlohami.
+Tím je zajištěno, že dokumenty delší než jedna stránka nebudou proloženy jinými úlohami.
 
-Pro Windows verze 3,1 a novější tato funkce nahradí řídicí STARTDOC tiskárny. Pomocí této funkce zajistíte, aby dokumenty obsahující více než jednu stránku nebyly probíhají s jinými tiskovými úlohami.
+Pro windows verze 3.1 a novější tato funkce nahradí startdoc tiskárny escape. Použití této funkce zajišťuje, že dokumenty obsahující více než jednu stránku nejsou proloženy jinými tiskovými úlohami.
 
-`StartDoc` by se neměly používat v metasouborech.
+`StartDoc`by neměl být používán uvnitř metasouborů.
 
 ### <a name="example"></a>Příklad
 
-Tento fragment kódu získá výchozí tiskárnu, otevře tiskovou úlohu a zařadí jednu stránku s "Hello, World!". na něm. Vzhledem k tomu, že text vytištěný pomocí tohoto kódu se škáluje na logické jednotky tiskárny, může být výstupní text malými písmeny, jejichž výsledek je nečitelný. Funkce škálování CDC, například `SetMapMode`, `SetViewportOrg`a `SetWindowExt`, lze použít k opravě škálování.
+Tento fragment kódu získá výchozí tiskárnu, otevře tiskovou úlohu a zařazuje jednu stránku s "Hello, World!" na něm. Vzhledem k tomu, že velikost textu vytištěného tímto kódem není na základě velikosti logické jednotky tiskárny, může být výstupní text tak malými písmeny, že výsledek je nečitelný. Funkce škálování CDC, `SetMapMode`například `SetViewportOrg` `SetWindowExt`, a , lze použít k opravě škálování.
 
 [!code-cpp[NVC_MFCDocView#41](../../mfc/codesnippet/cpp/cdc-class_13.cpp)]
 
-##  <a name="startpage"></a>CDC:: StartPage
+## <a name="cdcstartpage"></a><a name="startpage"></a>CDC::Úvodní stránka
 
-Zavolejte tuto členskou funkci pro přípravu ovladače tiskárny pro příjem dat.
+Volání této členské funkce připravit ovladač tiskárny přijímat data.
 
 ```
 int StartPage();
@@ -6710,21 +6710,21 @@ int StartPage();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Větší nebo rovno 0, pokud je funkce úspěšná, nebo záporná hodnota, pokud došlo k chybě.
+Větší než nebo rovno 0, pokud je funkce úspěšná, nebo zápornou hodnotu, pokud došlo k chybě.
 
 ### <a name="remarks"></a>Poznámky
 
-`StartPage` nahrazuje řídicí znaky NEWFRAME a BANDINFO.
+`StartPage`nahrazuje úniky NEWFRAME a BANDINFO.
 
-Přehled sekvence volání tisku naleznete v tématu členská funkce [StartDoc](#startdoc) .
+Přehled posloupnosti tiskových hovorů naleznete v členské funkci [StartDoc.](#startdoc)
 
-Systém zakáže `ResetDC` členskou funkci mezi voláními `StartPage` a `EndPage`.
+Systém zakáže `ResetDC` členská funkce `StartPage` `EndPage`mezi voláními a .
 
 ### <a name="example"></a>Příklad
 
-  Podívejte se na příklad pro [CDC:: StartDoc](#startdoc).
+  Viz příklad pro [CDC::StartDoc](#startdoc).
 
-##  <a name="stretchblt"></a>CDC:: StretchBlt
+## <a name="cdcstretchblt"></a><a name="stretchblt"></a>CDC::StretchBlt
 
 Zkopíruje bitmapu ze zdrojového obdélníku do cílového obdélníku a roztáhne nebo ji zkomprimuje tak, aby odpovídala rozměrům cílového obdélníku.
 
@@ -6744,16 +6744,16 @@ BOOL StretchBlt(
 
 ### <a name="parameters"></a>Parametry
 
-*znak*<br/>
+*X*<br/>
 Určuje souřadnici x (v logických jednotkách) levého horního rohu cílového obdélníku.
 
-*požadované*<br/>
+*Y*<br/>
 Určuje souřadnici y (v logických jednotkách) levého horního rohu cílového obdélníku.
 
-*nWidth*<br/>
+*nŠířka*<br/>
 Určuje šířku (v logických jednotkách) cílového obdélníku.
 
-*nHeight*<br/>
+*nVýška*<br/>
 Určuje výšku (v logických jednotkách) cílového obdélníku.
 
 *pSrcDC*<br/>
@@ -6762,47 +6762,47 @@ Určuje kontext zdrojového zařízení.
 *xSrc*<br/>
 Určuje souřadnici x (v logických jednotkách) levého horního rohu zdrojového obdélníku.
 
-*ySrc*<br/>
+*ySrc řekl:*<br/>
 Určuje souřadnici y (v logických jednotkách) levého horního rohu zdrojového obdélníku.
 
 *nSrcWidth*<br/>
 Určuje šířku (v logických jednotkách) zdrojového obdélníku.
 
-*nSrcHeight*<br/>
+*nSrcVýška*<br/>
 Určuje výšku (v logických jednotkách) zdrojového obdélníku.
 
 *dwRop*<br/>
 Určuje rastrovou operaci, která má být provedena. Kódy rastrové operace určují, jak rozhraní GDI kombinuje barvy ve výstupních operacích, které zahrnují aktuální štětec, možnou zdrojovou bitmapu a cílovou bitmapu. Tento parametr může mít jednu z následujících hodnot:
 
-- ČERNÁ, zapíná všechny výstupy černě.
+- BLACKNESS Otočí veškerý výstup černě.
 
-- DSTINVERT obrátí cílový rastrový obrázek.
+- DSTINVERT Invertuje cílovou bitmapu.
 
-- MERGECOPY kombinuje vzor a zdrojovou bitmapu pomocí logického operátoru AND.
+- MERGECOPY Kombinuje vzorek a zdrojovou bitmapu pomocí logického operátoru and.
 
-- MERGEPAINT kombinuje obrácenou zdrojovou bitmapu s cílovou bitmapou pomocí logického operátoru OR.
+- MERGEPAINT Kombinuje obrácený zdrojový bitmapu s cílovou bitmapou pomocí logického operátoru OR.
 
-- NOTSRCCOPY zkopíruje opačnou zdrojovou bitmapu do cílového umístění.
+- NOTSRCCOPY Zkopíruje obrácený zdrojový bitmapu do cíle.
 
-- NOTSRCERASE invertuje výsledek kombinování cílové a zdrojové bitmapy pomocí logického operátoru OR.
+- NOTSRCERASE invertuje výsledek kombinování cílových a zdrojových bitmap pomocí logického operátoru OR.
 
-- PATCOPY zkopíruje vzor do cílového rastrového obrázku.
+- PATCOPY Zkopíruje vzorek do cílové bitmapy.
 
-- PATINVERT kombinuje cílovou bitmapu se vzorem pomocí logického operátoru XOR.
+- PATINVERT Kombinuje cílovou bitmapu se vzorkem pomocí logického operátoru XOR.
 
-- PATPAINT kombinuje obrácenou zdrojovou bitmapu se vzorem pomocí logického operátoru OR. Kombinuje výsledek této operace s cílovou bitmapou pomocí logického operátoru OR.
+- PATPAINT Kombinuje obrácený zdrojový bitmapu se vzorkem pomocí logického operátoru OR. Kombinuje výsledek této operace s cílovou bitmapou pomocí logického operátoru OR.
 
-- SRCAND kombinuje pixely cílové a zdrojové bitmapy pomocí logického operátoru AND.
+- SRCAND kombinuje obrazové body cílové a zdrojové bitmapy pomocí logického operátoru and.
 
-- SRCCOPY zkopíruje zdrojovou bitmapu do cílového rastrového obrázku.
+- SRCCOPY Zkopíruje zdrojový bitmapu do cílové bitmapy.
 
-- SRCERASE obrátí cílovou bitmapu a zkombinuje výsledek se zdrojovou bitmapou pomocí logického operátoru AND.
+- SRCERASE invertuje cílovou bitmapu a kombinuje výsledek se zdrojovou bitmapou pomocí logického operátoru AND.
 
-- SRCINVERT kombinuje pixely cílové a zdrojové bitmapy pomocí logického operátoru XOR.
+- SRCINVERT kombinuje obrazové body cílové a zdrojové bitmapy pomocí logického operátoru XOR.
 
-- SRCPAINT kombinuje pixely cílové a zdrojové bitmapy pomocí logického operátoru OR.
+- SRCPAINT Kombinuje obrazové body cílové a zdrojové bitmapy pomocí logického operátoru OR.
 
-- WHITENESS zapíná všechny výstupy bíle.
+- BĚLOST Otočí veškerý výstup bílý.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -6810,23 +6810,23 @@ Nenulové, pokud je bitmapa nakreslena; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce používá režim roztažení kontextu cílového zařízení (nastaveno `SetStretchBltMode`) k určení způsobu roztažení nebo komprimace rastrového obrázku.
+Funkce používá režim roztahování kontextu cílového `SetStretchBltMode`zařízení (nastaveno) k určení, jak roztáhnout nebo komprimovat bitmapu.
 
-Funkce `StretchBlt` přesune rastrový obrázek ze zdrojového zařízení zadaného funkcí *pSrcDC* do cílového zařízení reprezentovaného objektem kontextu zařízení, jehož členská funkce je volána. Parametry *xSrc*, *ySrc*, *nSrcWidth*a *nSrcHeight* definují levý horní roh a rozměry zdrojového obdélníku. Parametry *x*, *y*, *nWidth*a *nHeight* poskytují levý horní roh a rozměry cílového obdélníku. Rastrová operace určená parametrem *dwRop* definuje, jak se sloučí zdrojová bitmapa a bity na cílovém zařízení.
+Funkce `StretchBlt` přesune bitmapu ze zdrojového zařízení dané *pSrcDC* do cílového zařízení reprezentovaného objektem kontextu zařízení, jehož je volána členská funkce. Parametry *xSrc*, *ySrc*, *nSrcWidth*a *nSrcHeight* definují levý horní roh a rozměry zdrojového obdélníku. Parametry *x*, *y*, *nWidth*a *nHeight* poskytují levému hornímu rohu a rozměrům cílového obdélníku. Rastrová operace určená *dwRop* definuje, jak jsou kombinovány zdrojové bitmapy a bitové verze, které jsou již na cílovém zařízení.
 
-Funkce `StretchBlt` vytvoří zrcadlový obraz rastrového obrázku, pokud se liší znaménko parametrů *nSrcWidth* a *nWidth* nebo *nSrcHeight* a *nHeight* . Pokud má *nSrcWidth* a *nWidth* různé znaménka, funkce vytvoří zrcadlový obraz rastrového obrázku podél osy x. Pokud má *nSrcHeight* a *nHeight* různé znaménka, funkce vytvoří zrcadlový obraz rastrového obrázku podél osy y.
+Funkce `StretchBlt` vytvoří zrcadlový obraz bitmapy, pokud se liší znaky parametrů *nSrcWidth* a *nWidth* nebo *nSrcHeight* a *nHeight.* Pokud *nSrcWidth* a *nWidth* mají různé znaky, funkce vytvoří zrcadlový obraz bitmapy podél osy x. Pokud *nSrcHeight* a *nHeight* mají různé znaky, funkce vytvoří zrcadlový obraz rastru podél osy y.
 
-Funkce `StretchBlt` roztáhne nebo zkomprimuje zdrojovou bitmapu v paměti a pak zkopíruje výsledek do cílového umístění. Pokud je třeba s výsledkem sloučit vzor, vzor se nesloučí, dokud se rozložená zdrojová bitmapa nezkopíruje do cíle. Pokud se používá štětec, jedná se o štětec vybraný v kontextu cílového zařízení. Cílové souřadnice jsou transformovány podle kontextu cílového zařízení; zdrojové souřadnice jsou transformovány podle kontextu zdrojového zařízení;
+Funkce `StretchBlt` roztáhne nebo zkomprimuje zdrojový bitmapu v paměti a potom zkopíruje výsledek do cíle. Pokud je třeba s výsledkem sloučit vzor, vzor se nesloučí, dokud se rozložená zdrojová bitmapa nezkopíruje do cíle. Pokud se používá štětec, jedná se o štětec vybraný v kontextu cílového zařízení. Cílové souřadnice jsou transformovány podle kontextu cílového zařízení; zdrojové souřadnice jsou transformovány podle kontextu zdrojového zařízení;
 
-Pokud zdrojové a vzorové rastrové obrázky nemají stejný formát barev, `StretchBlt` převede bitmapy zdroje a vzorku tak, aby odpovídaly cílovým rastrovým obrázkům. Během převodu se použijí barvy popředí a pozadí kontextu cílového zařízení.
+Pokud bitmapy cíle, zdroje a vzorku nemají stejný `StretchBlt` barevný formát, převedou bitmapy zdroje a vzorku tak, aby odpovídaly cílovým bitmapám. Během převodu se použijí barvy popředí a pozadí kontextu cílového zařízení.
 
-Pokud `StretchBlt` musí převést monochromatický rastrový obrázek na barvu, nastaví bílé bity (1) na barvu pozadí a černé bity (0) na barvu popředí. V případě převodu barevného na černobílé zobrazení nastaví pixely, které odpovídají barvě pozadí, na bílé (1) a všechny ostatní pixely nastaví na černé (0). Použijí se barvy popředí a pozadí kontextu cílového zařízení s barvou.
+Pokud `StretchBlt` musí být monochromatický bitový obrázek převeden na barvu, nastaví bílé bity (1) na barvu pozadí a černé bity (0) na barvu popředí. V případě převodu barevného na černobílé zobrazení nastaví pixely, které odpovídají barvě pozadí, na bílé (1) a všechny ostatní pixely nastaví na černé (0). Použijí se barvy popředí a pozadí kontextu cílového zařízení s barvou.
 
-Ne všechna zařízení podporují funkci `StretchBlt`. Chcete-li zjistit, zda zařízení podporuje `StretchBlt`, zavolejte členskou funkci `GetDeviceCaps` s indexem RASTERCAPS a zkontrolujte návratovou hodnotu příznaku RC_STRETCHBLT.
+Ne všechna zařízení `StretchBlt` podporují funkci. Chcete-li zjistit, `StretchBlt`zda `GetDeviceCaps` zařízení podporuje , volejte členskou funkci s indexem RASTERCAPS a zkontrolujte vrácenou hodnotu příznaku RC_STRETCHBLT.
 
-##  <a name="strokeandfillpath"></a>CDC:: StrokeAndFillPath
+## <a name="cdcstrokeandfillpath"></a><a name="strokeandfillpath"></a>CDC::StrokeandFillPath
 
-Zavře všechny otevřené obrázky v cestě, přetahy obrysu cesty pomocí aktuálního pera a vyplní vnitřní objekt pomocí aktuálního štětce.
+Zavře všechny otevřené obrázky v cestě, tahne obrys cesty pomocí aktuálního pera a vyplní její vnitřek pomocí aktuální stopy.
 
 ```
 BOOL StrokeAndFillPath();
@@ -6838,9 +6838,9 @@ Nenulové, pokud je funkce úspěšná; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Kontext zařízení musí obsahovat uzavřenou cestu. Členská funkce `StrokeAndFillPath` má stejný účinek jako zavření všech otevřených obrázků v cestě a vytažení a vyplnění cesty samostatně, s tím rozdílem, že vyplněná oblast nebude překrývat vytaženou oblast, i když je pero široké.
+Kontext zařízení musí obsahovat uzavřenou cestu. Členská `StrokeAndFillPath` funkce má stejný účinek jako zavření všech otevřených osledváky v cestě a vytažení a vyplnění cesty samostatně, s tím rozdílem, že vyplněná oblast nebude překrývat vytrhnutou oblast, i když je pero široké.
 
-##  <a name="strokepath"></a>CDC:: StrokePath
+## <a name="cdcstrokepath"></a><a name="strokepath"></a>CDC::StrokePath
 
 Vykreslí zadanou cestu pomocí aktuálního pera.
 
@@ -6856,9 +6856,9 @@ Nenulové, pokud je funkce úspěšná; jinak 0.
 
 Kontext zařízení musí obsahovat uzavřenou cestu.
 
-##  <a name="tabbedtextout"></a>CDC:: TabbedTextOut
+## <a name="cdctabbedtextout"></a><a name="tabbedtextout"></a>CDC::TabbedTextOut
 
-Zavolejte tuto členskou funkci pro zápis znakového řetězce v zadaném umístění a rozbalování tabulátorů na hodnoty zadané v poli pozice zastavení tabulátoru.
+Volání této členské funkce k zápisu znakového řetězce v zadaném umístění, rozbalení tabulátorů na hodnoty zadané v poli pozic stop tabulátoru.
 
 ```
 virtual CSize TabbedTextOut(
@@ -6881,43 +6881,43 @@ CSize TabbedTextOut(
 
 ### <a name="parameters"></a>Parametry
 
-*znak*<br/>
+*X*<br/>
 Určuje logickou souřadnici x počátečního bodu řetězce.
 
-*požadované*<br/>
+*Y*<br/>
 Určuje logickou souřadnici y počátečního bodu řetězce.
 
 *lpszString*<br/>
-Odkazuje na řetězec znaků, který má být nakreslen. Pro tento parametr můžete předat buď ukazatel na pole znaků, nebo objekt [CString](../../atl-mfc-shared/reference/cstringt-class.md) .
+Odkazuje na řetězec znaků, který chcete nakreslit. Můžete předat buď ukazatel pole znaků nebo [CString](../../atl-mfc-shared/reference/cstringt-class.md) objekt pro tento parametr.
 
 *nCount*<br/>
-Určuje [délku řetězce,](/windows/win32/gdi/specifying-length-of-text-output-string) na který odkazuje *lpszString*.
+Určuje [délku řetězce,](/windows/win32/gdi/specifying-length-of-text-output-string) na který je odkazová hodnota *lpszString*.
 
-*nTabPositions*<br/>
-Určuje počet hodnot v poli pozic zarážky tabulátoru.
+*nZáložky*<br/>
+Určuje počet hodnot v poli pozic stop tabulátoru.
 
 *lpnTabStopPositions*<br/>
-Odkazuje na pole obsahující pozice zarážky tabulátoru (v logických jednotkách). Zarážky tabulátoru musí být seřazeny ve vzestupném pořadí; nejmenší hodnota x-Value by měla být první položka v poli.
+Odkazuje na pole obsahující pozice zarážky tabulátoru (v logických jednotkách). Zarážky tabulátoru musí být seřazeny ve vzestupném pořadí; nejmenší hodnota x by měla být první položkou v poli.
 
 *nTabOrigin*<br/>
 Určuje souřadnici x počáteční pozice, ze které jsou rozbaleny karty (v logických jednotkách).
 
-*str*<br/>
-Objekt `CString`, který obsahuje zadané znaky.
+*Str*<br/>
+Objekt, `CString` který obsahuje zadané znaky.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Rozměry řetězce (v logických jednotkách) jako objekt `CSize`.
+Rozměry řetězce (v logických jednotkách) jako objektu. `CSize`
 
 ### <a name="remarks"></a>Poznámky
 
-Do aktuálně vybraného písma se zapisuje text. Pokud je *nTabPositions* 0 a *lpnTabStopPositions* má hodnotu null, tabulátory se rozšíří na osm znaků, které mají průměrnou šířku.
+Text je zapsán v aktuálně vybraném písmu. Pokud *nTabPositions* je 0 a *lpnTabStopPositions* je NULL, karty jsou rozbaleny na osmkrát průměrnou šířku znaku.
 
-Pokud je *nTabPositions* 1, zarážky tabulátoru se oddělují o vzdálenost určenou první hodnotou v poli *lpnTabStopPositions* . Pokud pole *lpnTabStopPositions* obsahuje více než jednu hodnotu, je pro každou hodnotu v poli nastavena zarážka tabulátoru až do čísla určeného parametrem *nTabPositions*. Parametr *nTabOrigin* umožňuje aplikaci zavolat funkci `TabbedTextOut` několikrát pro jeden řádek. Pokud aplikace volá funkci více než jednou u *nTabOrigin* sady na stejnou hodnotu, funkce rozbalí všechny karty vzhledem k pozici určené parametrem *nTabOrigin*.
+Pokud je *nTabPositions* 1, zarážky tabulátoru jsou odděleny vzdáleností určenou první hodnotou v poli *lpnTabStopPositions.* Pokud pole *lpnTabStopPositions* obsahuje více než jednu hodnotu, je pro každou hodnotu v poli nastavena zarážka tabulátoru, a to až do počtu určeného *nTabPositions*. Parametr *nTabOrigin* umožňuje aplikaci `TabbedTextOut` volat funkci několikrát pro jeden řádek. Pokud aplikace volá funkci více než jednou s *nTabOrigin* nastavena na stejnou hodnotu pokaždé, funkce rozbalí všechny karty vzhledem k pozici určené *nTabOrigin*.
 
-Ve výchozím stavu aktuální pozice není funkcí používána ani aktualizována. Pokud aplikace potřebuje při volání funkce aktualizovat aktuální pozici, může aplikace zavolat členskou funkci [členskou](#settextalign) s *nFlags* nastavenou na TA_UPDATECP. Pokud je tento příznak nastaven, systém Windows ignoruje parametry *x* a *y* při dalších voláních `TabbedTextOut`, přičemž místo toho použije aktuální pozici.
+Ve výchozím stavu aktuální pozice není funkcí používána ani aktualizována. Pokud aplikace potřebuje aktualizovat aktuální pozici při volání funkce, aplikace může volat Členskou funkci [SetTextAlign](#settextalign) s *nFlags* nastavenou na TA_UPDATECP. Pokud je tento příznak nastaven, systém Windows ignoruje parametry `TabbedTextOut` *x* a *y* při následných voláních pomocí aktuální pozice.
 
-##  <a name="textout"></a>CDC:: text
+## <a name="cdctextout"></a><a name="textout"></a>CDC::TextOut
 
 Zapíše řetězec znaků v zadaném umístění pomocí aktuálně vybraného písma.
 
@@ -6936,10 +6936,10 @@ BOOL TextOut(
 
 ### <a name="parameters"></a>Parametry
 
-*znak*<br/>
+*X*<br/>
 Určuje logickou souřadnici x počátečního bodu textu.
 
-*požadované*<br/>
+*Y*<br/>
 Určuje logickou souřadnici y počátečního bodu textu.
 
 *lpszString*<br/>
@@ -6948,8 +6948,8 @@ Odkazuje na řetězec znaků, který chcete kreslit.
 *nCount*<br/>
 Určuje počet znaků v řetězci.
 
-*str*<br/>
-Objekt `CString`, který obsahuje znaky, které mají být vykresleny.
+*Str*<br/>
+Objekt, `CString` který obsahuje znaky, které mají být nakresleny.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -6959,15 +6959,15 @@ Nenulové, pokud je funkce úspěšná; jinak 0.
 
 Počátky znaku jsou v levém horním rohu buňky znaku. Ve výchozím stavu aktuální pozice není funkcí používána ani aktualizována.
 
-Pokud aplikace potřebuje aktualizovat aktuální pozici při volání `TextOut`, aplikace může volat členskou funkci `SetTextAlign` s *nFlags* nastavenou na TA_UPDATECP. Pokud je tento příznak nastaven, systém Windows ignoruje parametry *x* a *y* při dalších voláních `TextOut`, přičemž místo toho použije aktuální pozici.
+Pokud aplikace potřebuje aktualizovat aktuální pozici `TextOut`při volání , `SetTextAlign` aplikace může volat členskou funkci s *nFlags* nastavenou na TA_UPDATECP. Pokud je tento příznak nastaven, systém Windows ignoruje parametry `TextOut` *x* a *y* při následných voláních pomocí aktuální pozice.
 
 ### <a name="example"></a>Příklad
 
-  Podívejte se na příklad pro [CDC:: BeginPath](#beginpath).
+  Viz příklad pro [CDC::BeginPath](#beginpath).
 
-##  <a name="transparentblt"></a>CDC:: TransparentBlt
+## <a name="cdctransparentblt"></a><a name="transparentblt"></a>CDC::TransparentníBlt
 
-Tuto členskou funkci volejte pro přenos bitového bloku dat barev, který odpovídá obdélníku pixelů ze zadaného kontextu zdrojového zařízení, do kontextu cílového zařízení.
+Volání této členské funkce k přenosu bitového bloku barevných dat, který odpovídá obdélníku pixelů ze zadaného kontextu zdrojového zařízení, do kontextu cílového zařízení.
 
 ```
 BOOL TransparentBlt(
@@ -6986,48 +6986,48 @@ BOOL TransparentBlt(
 ### <a name="parameters"></a>Parametry
 
 *xDest*<br/>
-Určuje souřadnici x (v logických jednotkách) levého horního rohu cílového obdélníku.
+Určuje souřadnice x v logických jednotkách levého horního rohu cílového obdélníku.
 
 *yDest*<br/>
-Určuje souřadnici y (v logických jednotkách) levého horního rohu cílového obdélníku.
+Určuje souřadnici y v logických jednotkách levého horního rohu cílového obdélníku.
 
 *nDestWidth*<br/>
-Určuje šířku obdélníku (v logických jednotkách) cílového obdélníku.
+Určuje šířku cílového obdélníku v logických jednotkách.
 
-*nDestHeight*<br/>
+*nDestVýška*<br/>
 Určuje výšku cílového obdélníku v logických jednotkách.
 
 *pSrcDC*<br/>
 Ukazatel na kontext zdrojového zařízení.
 
 *xSrc*<br/>
-Určuje souřadnici x (v logických jednotkách) zdrojového obdélníku.
+Určuje souřadnici x zdrojového obdélníku v logických jednotkách.
 
-*ySrc*<br/>
-Určuje souřadnici y (v logických jednotkách) zdrojového obdélníku.
+*ySrc řekl:*<br/>
+Určuje souřadnici y zdrojového obdélníku v logických jednotkách.
 
 *nSrcWidth*<br/>
 Určuje šířku zdrojového obdélníku v logických jednotkách.
 
-*nSrcHeight*<br/>
+*nSrcVýška*<br/>
 Určuje výšku zdrojového obdélníku v logických jednotkách.
 
 *clrTransparent*<br/>
-Barva RGB ve zdrojové bitmapě, která bude považována za průhlednou.
+Barva RGB ve zdrojové bitmapě, která se považuje za průhlednou.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-TRUE v případě úspěchu; v opačném případě FALSE.
+PRAVDA v případě úspěchu; jinak FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-`TransparentBlt` umožňuje průhlednost; To znamená, že barva RGB označená *clrTransparent* je pro přenos vykreslena jako průhledná.
+`TransparentBlt`umožňuje transparentnost; to znamená, že barva RGB označená *clrTransparent* je pro přenos průhledná.
 
-Další informace najdete v tématu [TransparentBlt](/windows/win32/api/wingdi/nf-wingdi-transparentblt) v Windows SDK.
+Další informace naleznete v tématu [TransparentBlt](/windows/win32/api/wingdi/nf-wingdi-transparentblt) v sadě Windows SDK.
 
-##  <a name="updatecolors"></a>CDC:: UpdateColors
+## <a name="cdcupdatecolors"></a><a name="updatecolors"></a>CDC::Aktualizovatbarvy
 
-Aktualizuje klientskou oblast kontextu zařízení porovnáním aktuálních barev v klientské oblasti se systémovou paletou na základě pixelu.
+Aktualizuje klientskou oblast kontextu zařízení porovnáním aktuálních barev v klientské oblasti systémové paletě na základě obrazových bodů po obrazových bodech.
 
 ```
 void UpdateColors();
@@ -7035,15 +7035,15 @@ void UpdateColors();
 
 ### <a name="remarks"></a>Poznámky
 
-Neaktivní okno s realizovanými logickými paletami může volat `UpdateColors` jako alternativu k překreslení jeho klientské oblasti, když se změní paleta systému.
+Neaktivní okno s realizovanou logickou paletou může volat `UpdateColors` jako alternativu k překreslování klientské oblasti při změně systémové palety.
 
-Další informace o použití barevných palet naleznete v tématu [UpdateColors](/windows/win32/api/wingdi/nf-wingdi-updatecolors) v Windows SDK.
+Další informace o používání palet barev najdete v tématu [UpdateColors](/windows/win32/api/wingdi/nf-wingdi-updatecolors) v sadě Windows SDK.
 
-Členská funkce `UpdateColors` obvykle aktualizuje oblast klienta rychleji než vykreslení oblasti. Vzhledem k tomu, že funkce provádí převod barev na základě barvy jednotlivých pixelů před změnou systémové palety, každé volání této funkce způsobí ztrátu určité přesnosti barvy.
+Členská `UpdateColors` funkce obvykle aktualizuje klientskou oblast rychleji než překreslování oblasti. Protože však funkce provádí překlad barev na základě barvy každého obrazového bodu před změnou systémové palety, každé volání této funkce vede ke ztrátě určité přesnosti barev.
 
-##  <a name="widenpath"></a>CDC:: WidenPath
+## <a name="cdcwidenpath"></a><a name="widenpath"></a>CDC::RozšířeníCesty
 
-Předefinuje aktuální cestu jako oblast, která se vykreslit, pokud byla cesta zatažena pomocí pera aktuálně vybraného do kontextu zařízení.
+Předefinuje aktuální cestu jako oblast, která by byla vybarvena, pokud by byla cesta vytažena pomocí pera aktuálně vybraného do kontextu zařízení.
 
 ```
 BOOL WidenPath();
@@ -7055,13 +7055,13 @@ Nenulové, pokud je funkce úspěšná; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce je úspěšná pouze v případě, že aktuální pero je geometrické pero vytvořené druhou verzí `CreatePen` členské funkce, nebo pokud je pero vytvořeno s první verzí `CreatePen` a má šířku, v jednotkách zařízení, které jsou větší než 1. Kontext zařízení musí obsahovat uzavřenou cestu. Všechny Bzier křivky v cestě se převedou na sekvence přímých čar, které se blíží rozšířeným křivce. V takovém případě žádné Bzier křivky nezůstanou v cestě po volání `WidenPath`.
+Tato funkce je úspěšná pouze v případě, že aktuální `CreatePen` pero je geometrické pero vytvořené `CreatePen` druhou verzí členské funkce, nebo pokud je pero vytvořeno s první verzí aplikace a má šířku v jednotkách zařízení větší než 1. Kontext zařízení musí obsahovat uzavřenou cestu. Všechny Bzierovy křivky v dráze se převedou na sekvence přímkových čar aproximujících rozšířené křivky. Jako takové žádné Bzierovy křivky `WidenPath` nezůstávají v cestě po je volána.
 
 ## <a name="see-also"></a>Viz také
 
 [CObject – třída](../../mfc/reference/cobject-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [CPaintDC – třída](../../mfc/reference/cpaintdc-class.md)<br/>
-[CWindowDC – třída](../../mfc/reference/cwindowdc-class.md)<br/>
-[CClientDC – třída](../../mfc/reference/cclientdc-class.md)<br/>
+[Třída CWindowDC](../../mfc/reference/cwindowdc-class.md)<br/>
+[Třída CClientDC](../../mfc/reference/cclientdc-class.md)<br/>
 [CMetaFileDC – třída](../../mfc/reference/cmetafiledc-class.md)

@@ -1,5 +1,5 @@
 ---
-title: CFile – – Třída
+title: CFile – třída
 ms.date: 06/12/2018
 f1_keywords:
 - CFile
@@ -60,16 +60,16 @@ helpviewer_keywords:
 - CFile [MFC], m_hFile
 - CFile [MFC], m_pTM
 ms.assetid: b2eb5757-d499-4e67-b044-dd7d1abaa0f8
-ms.openlocfilehash: a9161764f6c8646766a73add01c25cce5619ad19
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 4ba37d481db73fb0556659ede267b3474c3f32f5
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79418704"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373923"
 ---
-# <a name="cfile-class"></a>CFile – – Třída
+# <a name="cfile-class"></a>CFile – třída
 
-Základní třída pro třídy souborů Microsoft Foundation Class.
+Základní třída pro třídy souborů třídy Třídy Microsoft Foundation.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -81,82 +81,82 @@ class CFile : public CObject
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CFile –:: CFile –](#cfile)|Vytvoří objekt `CFile` z cesty nebo popisovače souboru.|
+|[CFile::CFile](#cfile)|Vytvoří `CFile` objekt z cesty nebo popisovače souboru.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CFile –:: Abort](#abort)|Zavře soubor ignoruje všechna upozornění a chyby.|
-|[CFile –:: Close](#close)|Zavře soubor a odstraní objekt.|
-|[CFile –::D uplikovat](#duplicate)|Vytvoří duplicitní objekt na základě tohoto souboru.|
-|[CFile –:: flush](#flush)|Vyprázdní všechna data, která se ještě budou zapisovat.|
-|[CFile –:: getsoubor](#getfilename)|Načte název souboru vybraného souboru.|
-|[CFile –:: GetFilePath](#getfilepath)|Načte úplnou cestu k souboru vybraného souboru.|
-|[CFile –:: GetFileTitle](#getfiletitle)|Načte název vybraného souboru.|
-|[CFile –:: GetLength](#getlength)|Načte délku souboru.|
-|[CFile –:: GetPosition](#getposition)|Načte aktuální ukazatel na soubor.|
-|[CFile –:: GetStatus](#getstatus)|Načte stav otevřeného souboru nebo ve statické verzi načte stav zadaného souboru (statická, virtuální funkce).|
-|[CFile –:: LockRange](#lockrange)|Zamkne rozsah bajtů v souboru.|
-|[CFile –:: Open](#open)|Bezpečně otevře soubor s možností testování chyb.|
-|[CFile –:: Read](#read)|Načte (nebufferovaná) data ze souboru na aktuální pozici souboru.|
-|[CFile –:: Remove](#remove)|Odstraní zadaný soubor (statická funkce).|
-|[CFile –:: rename](#rename)|Přejmenuje zadaný soubor (statická funkce).|
-|[CFile –:: Seek](#seek)|Umístí ukazatel na aktuální soubor.|
-|[CFile –:: SeekToBegin](#seektobegin)|Umístí ukazatel na aktuální soubor na začátek souboru.|
-|[CFile –:: SeekToEnd](#seektoend)|Umístí ukazatel na aktuální soubor na konec souboru.|
-|[CFile –:: SetFilePath](#setfilepath)|Nastaví úplnou cestu k souboru pro vybraný soubor.|
-|[CFile –:: SetLength](#setlength)|Změní délku souboru.|
-|[CFile –:: SetStatus](#setstatus)|Nastaví stav zadaného souboru (statická, virtuální funkce).|
-|[CFile –:: UnlockRange](#unlockrange)|Odemkne rozsah bajtů v souboru.|
-|[CFile –:: Write](#write)|Zapisuje (nebufferovaná) data do souboru do aktuální pozice souboru.|
+|[CFile::Přerušit](#abort)|Zavře soubor, který ignoruje všechna upozornění a chyby.|
+|[CFile::Zavřít](#close)|Zavře soubor a odstraní objekt.|
+|[CFile::Duplicate](#duplicate)|Vytvoří duplicitní objekt na základě tohoto souboru.|
+|[CFile::Vyprázdnění](#flush)|Vyprázdní všechna data, která ještě nebyla zapsána.|
+|[CFile::GetFileName](#getfilename)|Načte název vybraného souboru.|
+|[CFile::GetFilePath](#getfilepath)|Načte úplnou cestu k souboru vybraného souboru.|
+|[CFile::GetFileTitle](#getfiletitle)|Načte název vybraného souboru.|
+|[CFile::GetLength](#getlength)|Načte délku souboru.|
+|[CFile::GetPosition](#getposition)|Načte ukazatel aktuálního souboru.|
+|[CFile::GetStatus](#getstatus)|Načte stav otevřeného souboru nebo ve statické verzi načte stav zadaného souboru (statická virtuální funkce).|
+|[CFile::LockRange](#lockrange)|Uzamkne rozsah bajtů v souboru.|
+|[CFile::Otevřít](#open)|Bezpečně otevře soubor s možností testování chyb.|
+|[CFile::Číst](#read)|Čte (bez vyrovnávací paměti) data ze souboru na aktuální pozici souboru.|
+|[CFile::Odebrat](#remove)|Odstraní zadaný soubor (statická funkce).|
+|[CFile::Přejmenovat](#rename)|Přejmenuje zadaný soubor (statická funkce).|
+|[CFile::Hledat](#seek)|Umístí aktuální ukazatel souboru.|
+|[cFile::SeekToBegin](#seektobegin)|Umístí ukazatel aktuálního souboru na začátek souboru.|
+|[cFile::SeekToend](#seektoend)|Umístí ukazatel aktuálního souboru na konec souboru.|
+|[CFile::SetFilePath](#setfilepath)|Nastaví úplnou cestu k souboru vybraného souboru.|
+|[CFile::SetLength](#setlength)|Změní délku souboru.|
+|[CFile::SetStatus](#setstatus)|Nastaví stav zadaného souboru (statická, virtuální funkce).|
+|[CFile::UnlockRange](#unlockrange)|Odemkne rozsah bajtů v souboru.|
+|[CFile::Zápis](#write)|Zapíše (bez vyrovnávací paměti) data v souboru na aktuální pozici souboru.|
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CFile –:: operator – popisovač](#operator_handle)|Popisovač objektu `CFile`.|
+|[CFile::POPISOVAČ operátora](#operator_handle)|Úchyt `CFile` k objektu.|
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CFile –:: hFileNull](#hfilenull)|Určuje, zda má objekt `CFile` platný popisovač.|
-|[CFile –:: m_hFile](#m_hfile)|Obvykle obsahuje popisovač souborů operačního systému.|
+|[CFile::hSouborNull](#hfilenull)|Určuje, zda `CFile` má objekt platný popisovač.|
+|[CFile::m_hFile](#m_hfile)|Obvykle obsahuje popisovač souborů operačního systému.|
 
-### <a name="protected-data-members"></a>Chránění členové dat
+### <a name="protected-data-members"></a>Členové chráněných dat
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CFile –:: m_pTM](#m_ptm)|Ukazatel na objekt `CAtlTransactionManager`.|
+|[CFile::m_pTM](#m_ptm)|Ukazatel `CAtlTransactionManager` na objekt.|
 
 ## <a name="remarks"></a>Poznámky
 
-Přímo poskytuje neuložené vyrovnávací paměti, binární vstupně-výstupní služby disku a nepřímo podporuje textové soubory a paměťové soubory prostřednictvím jejich odvozených tříd. `CFile` pracuje ve spojení s `CArchive` třídou pro podporu serializace objektů Microsoft Foundation Class.
+Poskytuje přímo nebufferované, binární disk vstupní a výstupní služby, a nepřímo podporuje textové soubory a paměťové soubory prostřednictvím svých odvozených tříd. `CFile`pracuje ve spojení `CArchive` s třídou pro podporu serializace objektů třídy Microsoft Foundation.
 
-Hierarchický vztah mezi touto třídou a jeho odvozenou třídou umožňuje vašemu programu pracovat na všech objektech souborů prostřednictvím polymorfního `CFile` rozhraní. Soubor paměti se například chová jako soubor na disku.
+Hierarchický vztah mezi touto třídou a jejími odvozenými třídami umožňuje programu `CFile` pracovat na všech objektech souborů prostřednictvím polymorfního rozhraní. Paměťový soubor se například chová jako soubor na disku.
 
-Pro účely vstupu/výstupu disku pro obecné účely použijte `CFile` a jeho odvozené třídy. Pro formátovaný text odeslaný do souboru na disku použijte `ofstream` nebo jiné třídy Microsoft `iostream`.
+Použití `CFile` a jeho odvozené třídy pro vstupně-va disku pro obecné účely. Pro `ofstream` formátovaný `iostream` text odeslaný do souboru na disku použijte nebo jiné třídy společnosti Microsoft.
 
-V normálním případě je soubor na disku otevřen automaticky při `CFile` konstrukci a zavřen při zničení. Statické členské funkce umožňují dotazování stav souboru bez otevření souboru.
+Za normálních okolností je `CFile` soubor disku otevřen automaticky na konstrukci a uzavřen na zničení. Statické členské funkce umožňují vyslýchat stav souboru bez otevření souboru.
 
-Další informace o použití `CFile`naleznete v článcích [soubory v knihovně MFC](../../mfc/files-in-mfc.md) a [zpracování souborů](../../c-runtime-library/file-handling.md) v *Referenční příručce ke knihovně run-time*.
+Další informace o `CFile`použití naleznete v článcích [Soubory v knihovně MFC](../../mfc/files-in-mfc.md) a [Zpracování souborů](../../c-runtime-library/file-handling.md) v *odkazu knihovny run-time*.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[CObject](../../mfc/reference/cobject-class.md)
+[CObjekt](../../mfc/reference/cobject-class.md)
 
 `CFile`
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** AFX –. h
+**Záhlaví:** afx.h
 
-##  <a name="abort"></a>CFile –:: Abort
+## <a name="cfileabort"></a><a name="abort"></a>CFile::Přerušit
 
-Zavře soubor přidružený k tomuto objektu a nastaví soubor jako nedostupný pro čtení nebo zápis.
+Zavře soubor přidružený k tomuto objektu a znepřístupní soubor pro čtení nebo zápis.
 
 ```
 virtual void Abort();
@@ -164,19 +164,19 @@ virtual void Abort();
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud jste soubor nezavřeli před zničením objektu, destruktor ho uzavře za vás.
+Pokud jste soubor nezavřeli před zničením objektu, destruktor jej zavře za vás.
 
-Při zpracování výjimek se `CFile::Abort` liší od `CFile::Close` dvěma důležitými způsoby. Nejprve funkce `Abort` nevyvolá výjimku při selhání, protože chyby jsou ignorovány pomocí `Abort`. Druhý `Abort` **neuplatní** , pokud soubor nebyl otevřen nebo byl dříve uzavřen.
+Při zpracování výjimek `CFile::Abort` se `CFile::Close` liší od dvěma důležitými způsoby. Nejprve `Abort` funkce nebude vyvolat výjimku na selhání, protože chyby `Abort`jsou ignorovány . Za `Abort` druhé nebude **ASSERT,** pokud soubor nebyl otevřen nebo byl uzavřen dříve.
 
-Pokud jste použili **New** pro přidělení objektu `CFile` na haldě, je nutné jej po zavření souboru odstranit. `Abort` nastaví `m_hFile` na `CFile::hFileNull`.
+Pokud jste **new** použili `CFile` nový přidělit objekt na haldě, pak je nutné odstranit po zavření souboru. `Abort``m_hFile` nastaví `CFile::hFileNull`na .
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCFiles#5](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_1.cpp)]
 
-##  <a name="cfile"></a>CFile –:: CFile –
+## <a name="cfilecfile"></a><a name="cfile"></a>CFile::CFile
 
-Vytvoří a inicializuje objekt `CFile`.
+Vytvoří a inicializuje `CFile` objekt.
 
 ```
 CFile();
@@ -195,86 +195,86 @@ CAtlTransactionManager* pTM);
 
 ### <a name="parameters"></a>Parametry
 
-*hFile*<br/>
-Popisovač souboru, který se má připojit k objektu `CFile`.
+*hSoubor*<br/>
+Popisovač souboru připojit `CFile` k objektu.
 
-*lpszFileName*<br/>
-Relativní nebo úplná cesta k souboru, který se má připojit k objektu `CFile`
+*název souboru lpsz*<br/>
+Relativní nebo úplná cesta k `CFile` souboru připojit k objektu.
 
 *nOpenFlags*<br/>
-Bitová kombinace možností přístupu k souboru pro zadaný soubor. Možné možnosti najdete v části poznámky.
+Bitová kombinace (OR) možností přístupu k souboru pro zadaný soubor. Možné možnosti naleznete v části Poznámky.
 
-*pTM*<br/>
+*Ptm*<br/>
 Ukazatel na objekt CAtlTransactionManager
 
 ### <a name="remarks"></a>Poznámky
 
-Následující pět tabulek uvádí možné možnosti pro parametr *nOpenFlags* .
+V následujících pěti tabulkách jsou uvedeny možné možnosti parametru *nOpenFlags.*
 
-Vyberte jenom jednu z následujících možností režimu přístupu k souborům. Výchozí režim přístupu k souborům je `CFile::modeRead`, který je jen pro čtení.
+Zvolte pouze jednu z následujících možností režimu přístupu k souborům. Výchozí režim přístupu `CFile::modeRead`k souborům je , který je jen pro čtení.
 
 |Hodnota|Popis|
 |-----------|-----------------|
-|`CFile::modeRead`|Vyžádá jenom přístup pro čtení.|
-|`CFile::modeWrite`|Vyžádá jenom přístup pro zápis.|
-|`CFile::modeReadWrite`|Vyžádá přístup pro čtení a zápis.|
+|`CFile::modeRead`|Požadavky pouze pro čtení.|
+|`CFile::modeWrite`|Požaduje pouze přístup pro zápis.|
+|`CFile::modeReadWrite`|Požadavky na přístup pro čtení a zápis.|
 
-Vyberte jednu z následujících možností režimu znaků.
+Zvolte jednu z následujících možností režimu znaků.
 
 |Hodnota|Popis|
 |-----------|-----------------|
 |`CFile::typeBinary`|Nastaví binární režim (používá se pouze v odvozených třídách).|
-|`CFile::typeText`|Nastaví režim textu se speciálním zpracováním pro páry kanálů návratového řádku (používá se pouze v odvozených třídách).|
-|`CFile::typeUnicode`|Nastaví režim kódování Unicode (používá se pouze v odvozených třídách). Text se zapisuje do souboru ve formátu Unicode, když je aplikace sestavená v konfiguraci Unicode. Do souboru se nezapisuje žádný kusovník.|
+|`CFile::typeText`|Nastaví textový režim se speciálním zpracováním pro dvojice posuvu zpětného řádku vozíku (používá se pouze v odvozených třídách).|
+|`CFile::typeUnicode`|Nastaví režim Unicode (používá se pouze v odvozených třídách). Text je zapsán do souboru ve formátu Unicode, když je aplikace postavena v konfiguraci Unicode. Do souboru není zapsán žádný kusovník.|
 
-Vyberte jenom jednu z následujících možností režimu sdílení souborů. Výchozím režimem sdílení souborů je `CFile::shareExclusive`, což je exkluzivní.
+Zvolte pouze jednu z následujících možností režimu sdílení souborů. Výchozí režim sdílení `CFile::shareExclusive`souborů je , který je výhradní.
 
 |Hodnota|Popis|
 |-----------|-----------------|
 |`CFile::shareDenyNone`|Žádná omezení sdílení.|
 |`CFile::shareDenyRead`|Odepře přístup pro čtení všem ostatním.|
-|`CFile::shareDenyWrite`|Zakazuje přístup pro zápis všem ostatním.|
+|`CFile::shareDenyWrite`|Odepře přístup pro zápis všem ostatním.|
 |`CFile::shareExclusive`|Odepře přístup pro čtení a zápis všem ostatním.|
 
-Vyberte první nebo obojí z následujících možností režimu vytváření souborů. Výchozí režim vytváření je `CFile::modeNoTruncate`, který je otevřen existující.
+Zvolte první nebo obě následující možnosti režimu vytváření souborů. Výchozí režim vytváření `CFile::modeNoTruncate`je , který je otevřený existující.
 
 |Hodnota|Popis|
 |-----------|-----------------|
-|`CFile::modeCreate`|Vytvoří nový soubor, pokud žádný soubor neexistuje. Pokud soubor již existuje, bude přepsán a zpočátku nastaven na nulovou délku.|
-|`CFile::modeNoTruncate`|Vytvoří nový soubor, pokud žádný soubor neexistuje. v opačném případě, pokud soubor již existuje, je připojen k objektu `CFile`.|
+|`CFile::modeCreate`|Vytvoří nový soubor, pokud neexistuje žádný soubor. Pokud soubor již existuje, je přepsán a zpočátku nastaven na nulovou délku.|
+|`CFile::modeNoTruncate`|Vytvoří nový soubor, pokud neexistuje žádný soubor; v opačném případě, pokud soubor již existuje, `CFile` je připojen k objektu.|
 
-Vyberte následující možnosti ukládání do mezipaměti, jak je popsáno níže. Ve výchozím nastavení systém používá schéma ukládání do mezipaměti pro obecné účely, které není dostupné jako možnost.
-
-|Hodnota|Popis|
-|-----------|-----------------|
-|`CFile::osNoBuffer`|Systém pro tento soubor nepoužívá zprostředkující mezipaměť. Tato možnost zruší následující dvě možnosti.|
-|`CFile::osRandomAccess`|Mezipaměť souborů je optimalizována pro náhodný přístup. Nepoužívejte tuto možnost a možnost sekvenčního prohledávání.|
-|`CFile::osSequentialScan`|Mezipaměť souborů je optimalizována pro sekvenční přístup. Tuto možnost nepoužívejte a možnost náhodný přístup.|
-|`CFile::osWriteThrough`|Operace zápisu se provádějí bez zpoždění.|
-
-Chcete-li zabránit dědění popisovače souboru, vyberte následující možnost zabezpečení. Ve výchozím nastavení mohou všechny nové podřízené procesy použít popisovač souboru.
+Zvolte následující možnosti ukládání souborů do mezipaměti, jak je popsáno. Ve výchozím nastavení systém používá schéma ukládání do mezipaměti pro obecné účely, které není k dispozici jako možnost.
 
 |Hodnota|Popis|
 |-----------|-----------------|
-|`CFile::modeNoInherit`|Zabraňuje všem podřízeným procesům v použití popisovače souboru.|
+|`CFile::osNoBuffer`|Systém nepoužívá pro soubor mezipaměť. Tato možnost zruší následující 2 možnosti.|
+|`CFile::osRandomAccess`|Mezipaměť souborů je optimalizována pro náhodný přístup. Nepoužívejte tuto možnost ani možnost sekvenčního skenování.|
+|`CFile::osSequentialScan`|Mezipaměť souborů je optimalizována pro sekvenční přístup. Nepoužívejte tuto možnost i možnost přístupu s náhodným přístupem.|
+|`CFile::osWriteThrough`|Operace zápisu jsou prováděny bez prodlení.|
 
-Výchozí konstruktor inicializuje členy, ale nepřipojí soubor k objektu `CFile`. Po použití tohoto konstruktoru použijte metodu [CFile –:: Open](#open) k otevření souboru a jeho připojení k objektu `CFile`.
+Zvolte následující možnost zabezpečení, abyste zabránili zdědění popisovače souboru. Ve výchozím nastavení mohou všechny nové podřízené procesy používat popisovač souboru.
 
-Konstruktor s jedním parametrem inicializuje členy a připojí existující soubor k objektu `CFile`.
+|Hodnota|Popis|
+|-----------|-----------------|
+|`CFile::modeNoInherit`|Zabrání všem podřízeným procesům v použití popisovače souboru.|
 
-Konstruktor se dvěma parametry inicializuje členy a pokusí se otevřít zadaný soubor. Pokud tento konstruktor úspěšně otevře zadaný soubor, soubor je připojen k objektu `CFile`; v opačném případě tento konstruktor vyvolá ukazatel na objekt `CInvalidArgException`. Další informace o zpracování výjimek naleznete v tématu [výjimky](../../mfc/exception-handling-in-mfc.md).
+Výchozí konstruktor inicializuje členy, ale nepřipojí `CFile` k objektu soubor. Po použití tohoto konstruktoru použijte metodu [CFile::Open](#open) k `CFile` otevření souboru a jeho připojení k objektu.
 
-Pokud objekt `CFile` úspěšně otevře zadaný soubor, tento soubor automaticky zavře, když dojde k zničení objektu `CFile`; v opačném případě je nutné soubor explicitně zavřít poté, co již není připojen k objektu `CFile`.
+Konstruktor s jedním parametrem inicializuje členy a `CFile` připojí k objektu existující soubor.
+
+Konstruktor se dvěma parametry inicializuje členy a pokusí se otevřít zadaný soubor. Pokud tento konstruktor úspěšně otevře zadaný soubor, soubor `CFile` je připojen k objektu; jinak tento konstruktor vyvolá ukazatel `CInvalidArgException` na objekt. Další informace o zpracování výjimek naleznete v [tématu Výjimky](../../mfc/exception-handling-in-mfc.md).
+
+Pokud `CFile` objekt úspěšně otevře zadaný soubor, automaticky jej `CFile` zavře, jakmile bude objekt zničen. v opačném případě je nutné explicitně zavřít soubor poté, co již není připojen k objektu. `CFile`
 
 ### <a name="example"></a>Příklad
 
-Následující kód ukazuje, jak použít `CFile`.
+Následující kód ukazuje, jak `CFile`používat .
 
 [!code-cpp[NVC_MFCFiles#4](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_2.cpp)]
 
-##  <a name="close"></a>CFile –:: Close
+## <a name="cfileclose"></a><a name="close"></a>CFile::Zavřít
 
-Zavře soubor přidružený k tomuto objektu a nastaví soubor jako nedostupný pro čtení nebo zápis.
+Zavře soubor přidružený k tomuto objektu a znepřístupní soubor pro čtení nebo zápis.
 
 ```
 virtual void Close();
@@ -282,17 +282,17 @@ virtual void Close();
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud jste soubor nezavřeli před zničením objektu, destruktor ho uzavře za vás.
+Pokud jste soubor nezavřeli před zničením objektu, destruktor jej zavře za vás.
 
-Pokud jste použili **New** pro přidělení objektu `CFile` na haldě, je nutné jej po zavření souboru odstranit. `Close` nastaví `m_hFile` na `CFile::hFileNull`.
+Pokud jste **new** použili `CFile` nový přidělit objekt na haldě, pak je nutné odstranit po zavření souboru. `Close``m_hFile` nastaví `CFile::hFileNull`na .
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [CFile –:: CFile –](#cfile).
+Viz příklad pro [CFile::CFile](#cfile).
 
-##  <a name="duplicate"></a>CFile –::D uplikovat
+## <a name="cfileduplicate"></a><a name="duplicate"></a>CFile::Duplicate
 
-Vytvoří duplicitní objekt `CFile` pro daný soubor.
+Vytvoří duplicitní `CFile` objekt pro daný soubor.
 
 ```
 virtual CFile* Duplicate() const;
@@ -300,15 +300,15 @@ virtual CFile* Duplicate() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na duplicitní objekt `CFile`.
+Ukazatel na duplicitní `CFile` objekt.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce je ekvivalentní k `_dup`běhové funkce jazyka C.
+Tato funkce je ekvivalentní funkci `_dup`c run-time .
 
-##  <a name="flush"></a>CFile –:: flush
+## <a name="cfileflush"></a><a name="flush"></a>CFile::Vyprázdnění
 
-Vynutí zápis všech dat zbývajících do vyrovnávací paměti souborů do souboru.
+Vynutí všechna zbývající data ve vyrovnávací paměti souboru, která mají být zapsána do souboru.
 
 ```
 virtual void Flush();
@@ -316,15 +316,15 @@ virtual void Flush();
 
 ### <a name="remarks"></a>Poznámky
 
-Použití `Flush` nezaručuje vyprázdnění `CArchive` vyrovnávací paměti. Pokud používáte archiv, zavolejte nejprve [CArchive:: flush](../../mfc/reference/carchive-class.md#flush) .
+Použití `Flush` nezaručuje vyprázdnění `CArchive` vyrovnávacích pamětí. Pokud používáte archiv, zavolejte [nejprve CArchive::Flush.](../../mfc/reference/carchive-class.md#flush)
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [CFile –:: SetFilePath](#setfilepath).
+Podívejte se na příklad [pro CFile::SetFilePath](#setfilepath).
 
-##  <a name="getfilename"></a>CFile –:: getsoubor
+## <a name="cfilegetfilename"></a><a name="getfilename"></a>CFile::GetFileName
 
-Zavolejte tuto členskou funkci, aby se načetl název zadaného souboru.
+Volání této členské funkce načíst název zadaného souboru.
 
 ```
 virtual CString GetFileName() const;
@@ -332,23 +332,23 @@ virtual CString GetFileName() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Název souboru
+Název souboru.
 
 ### <a name="remarks"></a>Poznámky
 
-Například při volání `GetFileName` k vygenerování zprávy uživateli o `c:\windows\write\myfile.wri`souboru se vrátí název souboru `myfile.wri`.
+Například při volání `GetFileName` generovat zprávu pro uživatele o `c:\windows\write\myfile.wri`souboru , `myfile.wri`název souboru, , je vrácena.
 
-Chcete-li vrátit celou cestu k souboru, včetně názvu, volejte metodu [GetFilePath](#getfilepath). Chcete-li vrátit název souboru (`myfile`), zavolejte [GetFileTitle](#getfiletitle).
+Chcete-li vrátit celou cestu k souboru, včetně názvu, zavolejte [GetFilePath](#getfilepath). Chcete-li vrátit název `myfile`souboru ( ), volejte [GetFileTitle](#getfiletitle).
 
 ### <a name="example"></a>Příklad
 
-Tento fragment kódu otevře systém. Soubor INI v adresáři WINDOWS Pokud je tato funkce nalezena, bude v příkladu vytištěn název a cesta a název, jak je uvedeno v části výstup:
+Tento fragment kódu otevře SYSTEM. INI v adresáři windows. Pokud je nalezen, v příkladu se vytiskne název a cesta a název, jak je znázorněno v části Výstup:
 
 [!code-cpp[NVC_MFCFiles#6](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_3.cpp)]
 
-##  <a name="getfilepath"></a>CFile –:: GetFilePath
+## <a name="cfilegetfilepath"></a><a name="getfilepath"></a>CFile::GetFilePath
 
-Zavolejte tuto členskou funkci, aby se načetla úplná cesta k zadanému souboru.
+Volání této členské funkce načíst úplnou cestu k zadanému souboru.
 
 ```
 virtual CString GetFilePath() const;
@@ -360,17 +360,17 @@ virtual CString GetFilePath() const;
 
 ### <a name="remarks"></a>Poznámky
 
-Například při volání `GetFilePath` k vygenerování zprávy uživateli o `c:\windows\write\myfile.wri`souboru se vrátí cesta k souboru `c:\windows\write\myfile.wri`.
+Například při volání `GetFilePath` generovat zprávu pro uživatele o `c:\windows\write\myfile.wri`souboru , `c:\windows\write\myfile.wri`cesta k souboru , je vrácena.
 
-Chcete-li vrátit pouze název souboru (`myfile.wri`), zavolejte metodu [getsouboru](#getfilename). Chcete-li vrátit název souboru (`myfile`), zavolejte [GetFileTitle](#getfiletitle).
+Chcete-li vrátit pouze název`myfile.wri`souboru ( ), volejte [GetFileName](#getfilename). Chcete-li vrátit název`myfile`souboru ( ), volejte [GetFileTitle](#getfiletitle).
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [getsouboru](#getfilename).
+Viz příklad pro [GetFileName](#getfilename).
 
-##  <a name="getfiletitle"></a>CFile –:: GetFileTitle
+## <a name="cfilegetfiletitle"></a><a name="getfiletitle"></a>CFile::GetFileTitle
 
-Chcete-li načíst název souboru (zobrazovaný název) pro daný soubor, zavolejte tuto členskou funkci.
+Volánítéto členské funkce načíst název souboru (zobrazovaný název) pro soubor.
 
 ```
 virtual CString GetFileTitle() const;
@@ -382,17 +382,17 @@ Název podkladového souboru.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda volá [GetFileTitle](/windows/win32/api/commdlg/nf-commdlg-getfiletitlew) , aby načetla název souboru. V případě úspěchu metoda vrátí řetězec, který by systém použil k zobrazení názvu souboru uživateli. V opačném případě metoda volá [PathFindFileName](/windows/win32/api/shlwapi/nf-shlwapi-pathfindfilenamew) , aby získala název souboru (včetně přípony souboru) podkladového souboru. To znamená, že Přípona souboru není vždy obsažena v řetězci vráceného názvu souboru. Další informace najdete v tématu [GetFileTitle](/windows/win32/api/commdlg/nf-commdlg-getfiletitlew) a [PathFindFileName](/windows/win32/api/shlwapi/nf-shlwapi-pathfindfilenamew) v Windows SDK.
+Tato metoda volá [GetFileTitle](/windows/win32/api/commdlg/nf-commdlg-getfiletitlew) načíst název souboru. Pokud je metoda úspěšná, vrátí řetězec, který by systém použil k zobrazení názvu souboru uživateli. V opačném případě metoda volá [PathFindFileName](/windows/win32/api/shlwapi/nf-shlwapi-pathfindfilenamew) k načtení názvu souboru (včetně přípony souboru) podkladového souboru. To znamená, že přípona souboru není vždy zahrnuta v řetězci vráceného názvu souboru. Další informace naleznete v [tématech GetFileTitle](/windows/win32/api/commdlg/nf-commdlg-getfiletitlew) a [PathFindFileName](/windows/win32/api/shlwapi/nf-shlwapi-pathfindfilenamew) v sadě Windows SDK.
 
-Chcete-li vrátit celou cestu k souboru, včetně názvu, volejte metodu [GetFilePath](#getfilepath). Chcete-li vrátit pouze název souboru, zavolejte metodu [getsouboru](#getfilename).
+Chcete-li vrátit celou cestu k souboru, včetně názvu, zavolejte [GetFilePath](#getfilepath). Chcete-li vrátit pouze název souboru, zavolejte [GetFileName](#getfilename).
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [getsouboru](#getfilename).
+Viz příklad pro [GetFileName](#getfilename).
 
-##  <a name="getlength"></a>CFile –:: GetLength
+## <a name="cfilegetlength"></a><a name="getlength"></a>CFile::GetLength
 
-Získá aktuální logickou délku souboru v bajtech.
+Získá aktuální logickou délku souboru v bajtů.
 
 ```
 virtual ULONGLONG GetLength() const;
@@ -400,15 +400,15 @@ virtual ULONGLONG GetLength() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Délka souboru
+Délka souboru.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCFiles#7](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_4.cpp)]
 
-##  <a name="getposition"></a>CFile –:: GetPosition
+## <a name="cfilegetposition"></a><a name="getposition"></a>CFile::GetPosition
 
-Získá aktuální hodnotu ukazatele na soubor, který lze použít v pozdějších voláních `Seek`.
+Získá aktuální hodnotu ukazatele souboru, který lze použít `Seek`v pozdějších voláních .
 
 ```
 virtual ULONGLONG GetPosition() const;
@@ -416,15 +416,15 @@ virtual ULONGLONG GetPosition() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na soubor.
+Ukazatel souboru.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCFiles#8](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_5.cpp)]
 
-##  <a name="getstatus"></a>CFile –:: GetStatus
+## <a name="cfilegetstatus"></a><a name="getstatus"></a>CFile::GetStatus
 
-Tato metoda načte informace o stavu související s danou instancí `CFile` objektu nebo danou cestou k souboru.
+Tato metoda načte informace o `CFile` stavu související s danou instancí objektu nebo s danou cestou k souboru.
 
 ```
 BOOL GetStatus(CFileStatus& rStatus) const;
@@ -437,36 +437,36 @@ static BOOL PASCAL GetStatus(
 
 ### <a name="parameters"></a>Parametry
 
-*rStatus*<br/>
-Odkaz na uživatelsky dodanou strukturu `CFileStatus`, která obdrží informace o stavu. Struktura `CFileStatus` obsahuje následující pole:
+*rStav*<br/>
+Odkaz na uživatelem `CFileStatus` zadanou strukturu, která obdrží informace o stavu. Struktura `CFileStatus` má následující pole:
 
-- `CTime m_ctime` datum a čas vytvoření souboru.
+- `CTime m_ctime`Datum a čas vytvoření souboru.
 
-- `CTime m_mtime` datum a čas poslední změny souboru.
+- `CTime m_mtime`Datum a čas poslední změny souboru.
 
-- `CTime m_atime` datum a čas posledního otevření souboru pro čtení.
+- `CTime m_atime`Datum a čas, kdy byl soubor naposledy zpřístupněn pro čtení.
 
-- `ULONGLONG m_size` logickou velikost souboru v bajtech, jak je uvedeno v příkazu DIR.
+- `ULONGLONG m_size`Logická velikost souboru v bajtů, jak je uvedeno příkazem DIR.
 
-- `BYTE m_attribute` bajt atributu souboru.
+- `BYTE m_attribute`Bajt atributu souboru.
 
-- `char m_szFullName[_MAX_PATH]` absolutní název souboru ve znakové sadě Windows.
+- `char m_szFullName[_MAX_PATH]`Absolutní název souboru v znakové sadě systému Windows.
 
-*lpszFileName*<br/>
-Řetězec ve znakové sadě systému Windows, který je cestou k požadovanému souboru. Cesta může být relativní nebo absolutní nebo může obsahovat název síťové cesty.
+*název souboru lpsz*<br/>
+Řetězec v znakové sadě systému Windows, který je cestou k požadovanému souboru. Cesta může být relativní nebo absolutní nebo může obsahovat název síťové cesty.
 
-*pTM*<br/>
+*Ptm*<br/>
 Ukazatel na objekt CAtlTransactionManager
 
 ### <a name="return-value"></a>Návratová hodnota
 
-TRUE, pokud se informace o stavu zadaného souboru úspěšně získávají; v opačném případě FALSE.
+TRUE, pokud jsou informace o stavu zadaného souboru úspěšně získány; jinak NEPRAVDA.
 
 ### <a name="remarks"></a>Poznámky
 
-Nestatická verze `GetStatus` načítá informace o stavu otevřeného souboru přidruženého k danému objektu `CFile`.  Statická verze `GetStatus` Získá stav souboru z dané cesty k souboru, aniž by soubor skutečně otevřel. Tato verze je užitečná pro testování existence a přístupových práv k souboru.
+Nestatická verze `GetStatus` načte informace o stavu otevřeného `CFile` souboru přidruženého k danému objektu.  Statická verze `GetStatus` získá stav souboru z dané cesty k souboru bez skutečného otevření souboru. Tato verze je užitečná pro testování existence a přístupových práv souboru.
 
-`m_attribute` člen struktury `CFileStatus` odkazuje na sadu atributů souboru. Třída `CFile` poskytuje typ výčtu **atributu** , takže atributy souboru lze zadat symbolické:
+Člen `m_attribute` `CFileStatus` struktury odkazuje na sadu atributů souboru. Třída `CFile` poskytuje typ výčtu **atributů,** takže atributy souboru lze zadat symbolicky:
 
 ```
 enum Attribute {
@@ -484,9 +484,9 @@ enum Attribute {
 
 [!code-cpp[NVC_MFCFiles#10](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_6.cpp)]
 
-##  <a name="hfilenull"></a>CFile –:: hFileNull
+## <a name="cfilehfilenull"></a><a name="hfilenull"></a>CFile::hSouborNull
 
-Určuje přítomnost platné obslužné rutiny souboru pro objekt `CFile`.
+Určuje přítomnost platného popisovače souboru `CFile` pro objekt.
 
 ```
 static AFX_DATA const HANDLE hFileNull;
@@ -494,15 +494,15 @@ static AFX_DATA const HANDLE hFileNull;
 
 ### <a name="remarks"></a>Poznámky
 
-Tato konstanta slouží k určení, zda má objekt `CFile` platnou obslužnou rutinu souboru.
+Tato konstanta se používá `CFile` k určení, pokud má objekt platný popisovač souboru.
 
-Následující příklad demonstruje tuto operaci:
+Následující příklad ukazuje tuto operaci:
 
 [!code-cpp[NVC_MFCFiles#22](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_7.cpp)]
 
-##  <a name="lockrange"></a>CFile –:: LockRange
+## <a name="cfilelockrange"></a><a name="lockrange"></a>CFile::LockRange
 
-Zamkne rozsah bajtů v otevřeném souboru a vyvolává výjimku, pokud je soubor již uzamčen.
+Uzamkne rozsah bajtů v otevřeném souboru a vyvolá výjimku, pokud je soubor již uzamčen.
 
 ```
 virtual void LockRange(
@@ -513,27 +513,27 @@ virtual void LockRange(
 ### <a name="parameters"></a>Parametry
 
 *dwPos*<br/>
-Posun bajtů začátku rozsahu bajtů, který se má zamknout.
+Posun bajtu začátku rozsahu bajtů pro uzamčení.
 
 *dwCount*<br/>
-Počet bajtů v rozsahu, který se má zamknout.
+Počet bajtů v rozsahu k uzamčení.
 
 ### <a name="remarks"></a>Poznámky
 
-Uzamykání bajtů v souboru brání v přístupu k těmto bajtům jiným procesům. Můžete uzamknout více než jednu oblast souboru, ale nejsou povoleny žádné překrývající se oblasti.
+Zamykání bajtů v souboru zabraňuje přístupu k těmto bajtům jinými procesy. Můžete zamknout více než jednu oblast souboru, ale nejsou povoleny žádné překrývající se oblasti.
 
-Když oblast odemknete pomocí `UnlockRange` členské funkce, rozsah bajtů musí přesně odpovídat oblasti, která byla dříve uzamčena. Funkce `LockRange` neslučuje sousední oblasti. Pokud se dvě uzamčené oblasti sousedí, je nutné každou oblast odemknout samostatně.
+Když odemknete `UnlockRange` oblast pomocí členské funkce, rozsah bajtů musí přesně odpovídat oblasti, která byla dříve uzamčena. Funkce `LockRange` neslučuje sousední oblasti. Pokud jsou dvě zamknuté oblasti sousedící, je nutné odemknout každou oblast zvlášť.
 
 > [!NOTE]
->  Tato funkce není k dispozici pro třídu odvozenou od `CMemFile`.
+> Tato funkce není k `CMemFile`dispozici pro -derived třídy.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCFiles#12](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_8.cpp)]
 
-##  <a name="m_hfile"></a>CFile –:: m_hFile
+## <a name="cfilem_hfile"></a><a name="m_hfile"></a>CFile::m_hFile
 
-Obsahuje popisovač souborů operačního systému pro otevřený soubor.
+Obsahuje popisovač souboru operačního systému pro otevřený soubor.
 
 ```
 HANDLE m_hFile;
@@ -541,13 +541,13 @@ HANDLE m_hFile;
 
 ### <a name="remarks"></a>Poznámky
 
-`m_hFile` je veřejná proměnná typu UINT. Obsahuje `CFile::hFileNull`indikátor prázdného souboru nezávisle na operačním systému, pokud nebyl popisovač přiřazen.
+`m_hFile`je veřejná proměnná typu UINT. Obsahuje `CFile::hFileNull`, indikátor prázdného souboru nezávislý na operačním systému, pokud popisovač nebyl přiřazen.
 
-Použití `m_hFile` není doporučeno, protože význam člena závisí na odvozené třídě. `m_hFile` je veřejným členem pro usnadnění v podpoře nepolymorfního použití třídy.
+`m_hFile` Použití není doporučeno, protože význam člena závisí na odvozené třídy. `m_hFile`je veřejným členem pro usnadnění při podpoře nepolymorfní použití třídy.
 
-##  <a name="m_ptm"></a>CFile –:: m_pTM
+## <a name="cfilem_ptm"></a><a name="m_ptm"></a>CFile::m_pTM
 
-Ukazatel na objekt `CAtlTransactionManager`.
+Ukazatel na `CAtlTransactionManager` objekt.
 
 ```
 CAtlTransactionManager* m_pTM;
@@ -555,9 +555,9 @@ CAtlTransactionManager* m_pTM;
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="open"></a>CFile –:: Open
+## <a name="cfileopen"></a><a name="open"></a>CFile::Otevřít
 
-Přetíženo. `Open` je určený pro použití s výchozím konstruktorem `CFile`.
+Přetíženo. `Open`je určen pro použití `CFile` s výchozím konstruktorem.
 
 ```
 virtual BOOL Open(
@@ -574,36 +574,36 @@ virtual BOOL Open(
 
 ### <a name="parameters"></a>Parametry
 
-*lpszFileName*<br/>
+*název souboru lpsz*<br/>
 Řetězec, který obsahuje cestu k požadovanému souboru. Cesta může být relativní, absolutní nebo název sítě (UNC).
 
 *nOpenFlags*<br/>
-UINT, který definuje režim sdílení a přístupu souboru. Určuje akci, která se má provést při otevírání souboru. Možnosti lze kombinovat pomocí operátoru bitového operátoru OR **&#124;** (). Vyžaduje se jedno oprávnění k přístupu a jedna možnost sdílení. režimy `modeCreate` a `modeNoInherit` jsou volitelné. Seznam možností režimu naleznete v konstruktoru [CFile –](#cfile) .
+UINT, který definuje režim sdílení a přístupu souboru. Určuje akci, která má být vyřízení při otevírání souboru. Možnosti můžete kombinovat pomocí operátoru Bitwise-OR ( **&#124;** ). Je vyžadováno jedno přístupové oprávnění a jedna možnost sdílení. `modeCreate` režimy `modeNoInherit` a jsou volitelné. Seznam možností režimu naleznete v konstruktoru [CFile.](#cfile)
 
-*pError*<br/>
-Ukazatel na existující objekt s výjimkou souboru, který obdrží stav operace, která selhala.
+*chyba*<br/>
+Ukazatel na existující objekt výjimky souboru, který obdrží stav neúspěšné operace.
 
-*pTM*<br/>
+*Ptm*<br/>
 Ukazatel na objekt CAtlTransactionManager
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud bylo otevření úspěšné; v opačném případě 0. Parametr *pError* má smysl pouze v případě, že je vrácena hodnota 0.
+Nenulová, pokud byla otevřená zpráva úspěšná; jinak 0. Parametr *pError* má smysl pouze v případě, že je vrácena hodnota 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Dvě `Open` funkce jsou "bezpečné" metody pro otevření souboru, kde selhání je normální, očekávaná podmínka.
+Tyto `Open` dvě funkce jsou "bezpečné" metody pro otevření souboru, kde selhání je normální, očekávaný stav.
 
-Zatímco konstruktor `CFile` vyvolá výjimku v chybovém stavu, `Open` vrátí hodnotu FALSE pro chybové podmínky. `Open` může stále inicializovat objekt [CFileException](../../mfc/reference/cfileexception-class.md) , aby popsal chybu, ale. Pokud parametr *pError* nezadáte, nebo Pokud předáte hodnotu null pro *pError*, `Open` vrátí hodnotu FALSE a nevyvolá `CFileException`. Pokud předáte ukazatel na existující `CFileException`a `Open` dojde k chybě, funkce ji vyplní informacemi, které popisují tuto chybu. `Open` nevyvolá výjimku v obou případech.
+Zatímco `CFile` konstruktor vyvolá výjimku v chybovém stavu, `Open` vrátí hodnotu FALSE pro chybové stavy. `Open`stále inicializovat [CFileException](../../mfc/reference/cfileexception-class.md) objekt popsat chybu, nicméně. Pokud nezadáte parametr *pError* nebo předáte hodnotu `CFileException`NULL `Open` pro chybu *pError*, vrátí funkce NEPRAVDA a nevyvolá . Pokud předáte ukazatel existujícímu `CFileException` `Open` a dojde k chybě, funkce jej vyplní informacemi popisujícími tuto chybu. `Open`nevyvolá výjimku v obou případech.
 
-Následující tabulka popisuje možné výsledky `Open`.
+Následující tabulka popisuje možné výsledky `Open`souboru .
 
-|`pError`|Došlo k chybě|Návratová hodnota|CFileException obsah|
+|`pError`|Došlo k chybě.|Návratová hodnota|CFileException obsah|
 |--------------|------------------------|------------------|----------------------------|
-|NULL|Ne|PRAVDA|neuvedeno|
-|PTR na `CFileException`|Ne|PRAVDA|oproti|
-|NULL|Ano|CHYBNÉ|neuvedeno|
-|PTR na `CFileException`|Ano|CHYBNÉ|inicializováno k popisu chyby|
+|NULL|Ne|TRUE|neuvedeno|
+|ptr až`CFileException`|Ne|TRUE|Nezměněn|
+|NULL|Ano|FALSE|neuvedeno|
+|ptr až`CFileException`|Ano|FALSE|inicializována pro popis chyby|
 
 ### <a name="example"></a>Příklad
 
@@ -611,17 +611,17 @@ Následující tabulka popisuje možné výsledky `Open`.
 
 [!code-cpp[NVC_MFCFiles#14](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_10.cpp)]
 
-##  <a name="operator_handle"></a>CFile –:: operator – popisovač
+## <a name="cfileoperator-handle"></a><a name="operator_handle"></a>CFile::POPISOVAČ operátora
 
-Tento operátor použijte k předání popisovače objektu `CFile` do funkce, jako je například [ReadFileEx](/windows/win32/api/fileapi/nf-fileapi-readfileex) a [funkce GetFileTime](/windows/win32/api/fileapi/nf-fileapi-getfiletime) , které očekávají `HANDLE`.
+Pomocí tohoto operátoru předejte `CFile` popisovač objektu funkcím, jako jsou `HANDLE` [ReadFileEx](/windows/win32/api/fileapi/nf-fileapi-readfileex) a [GetFileTime,](/windows/win32/api/fileapi/nf-fileapi-getfiletime) které očekávají .
 
 ```
 operator HANDLE() const;
 ```
 
-##  <a name="read"></a>CFile –:: Read
+## <a name="cfileread"></a><a name="read"></a>CFile::Číst
 
-Načte data do vyrovnávací paměti ze souboru přidruženého k objektu `CFile`.
+Přečte data do vyrovnávací paměti `CFile` ze souboru přidruženého k objektu.
 
 ```
 virtual UINT Read(
@@ -632,22 +632,22 @@ virtual UINT Read(
 ### <a name="parameters"></a>Parametry
 
 *lpBuf*<br/>
-Ukazatel na vyrovnávací paměť zadanou uživatelem, která bude přijímat data načtená ze souboru.
+Ukazatel na uživatelem zadanou vyrovnávací paměť, která má přijímat data přečtená ze souboru.
 
 *nCount*<br/>
-Maximální počet bajtů, které mají být ze souboru načteny. Pro soubory v textovém režimu se páry návratového řádku započítávají jako jednotlivé znaky.
+Maximální počet bajtů, které mají být přečteny ze souboru. U souborů v textovém režimu se dvojice datového kanálu řádku vozíku počítají jako jednotlivé znaky.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Počet bajtů přenesených do vyrovnávací paměti. Pro všechny `CFile` třídy může být návratová hodnota menší než *nCount* , pokud bylo dosaženo konce souboru.
+Počet bajtů přenesených do vyrovnávací paměti. Pro `CFile` všechny třídy může být vrácená hodnota menší než *nCount,* pokud bylo dosaženo konce souboru.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCFiles#15](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_11.cpp)]
 
-Další příklad naleznete v tématu [CFile –:: Open](#open).
+Další příklad naleznete v tématu [CFile::Open](#open).
 
-##  <a name="remove"></a>CFile –:: Remove
+## <a name="cfileremove"></a><a name="remove"></a>CFile::Odebrat
 
 Tato statická funkce odstraní soubor určený cestou.
 
@@ -659,23 +659,23 @@ static void PASCAL Remove(
 
 ### <a name="parameters"></a>Parametry
 
-*lpszFileName*<br/>
-Řetězec, který představuje cestu k požadovanému souboru. Cesta může být relativní nebo absolutní a může obsahovat název sítě.
+*název souboru lpsz*<br/>
+Řetězec, který je cesta k požadovanému souboru. Cesta může být relativní nebo absolutní a může obsahovat název sítě.
 
-*pTM*<br/>
+*Ptm*<br/>
 Ukazatel na objekt CAtlTransactionManager
 
 ### <a name="remarks"></a>Poznámky
 
-`Remove` neodstraní adresář.
+`Remove`neodebere adresář.
 
-Členská funkce `Remove` vyvolá výjimku, pokud je připojený soubor otevřen nebo pokud soubor nelze odebrat. Tato funkce je ekvivalentní příkazu DEL.
+Členská `Remove` funkce vyvolá výjimku, pokud je připojený soubor otevřený nebo pokud soubor nelze odebrat. Tato funkce je ekvivalentní příkazu DEL.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCFiles#17](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_12.cpp)]
 
-##  <a name="rename"></a>CFile –:: rename
+## <a name="cfilerename"></a><a name="rename"></a>CFile::Přejmenovat
 
 Tato statická funkce přejmenuje zadaný soubor.
 
@@ -694,7 +694,7 @@ Stará cesta.
 *lpszNewName*<br/>
 Nová cesta.
 
-*pTM*<br/>
+*Ptm*<br/>
 Ukazatel na objekt CAtlTransactionManager
 
 ### <a name="remarks"></a>Poznámky
@@ -705,9 +705,9 @@ Adresáře nelze přejmenovat. Tato funkce je ekvivalentní příkazu REN.
 
 [!code-cpp[NVC_MFCFiles#18](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_13.cpp)]
 
-##  <a name="seek"></a>CFile –:: Seek
+## <a name="cfileseek"></a><a name="seek"></a>CFile::Hledat
 
-Přemístí ukazatel na soubor v otevřeném souboru.
+Přemístí ukazatel souboru do otevřeného souboru.
 
 ```
 virtual ULONGLONG Seek(
@@ -717,37 +717,37 @@ UINT nFrom);
 
 ### <a name="parameters"></a>Parametry
 
-*lOff*<br/>
-Počet bajtů, které mají přesunout ukazatel na soubor. Kladné hodnoty posunou ukazatel souboru směrem ke konci souboru; záporné hodnoty přesunou ukazatel souboru směrem k začátku souboru.
+*lVypnuto*<br/>
+Počet bajtů pro přesunutí ukazatele souboru. Kladné hodnoty posunou ukazatel souboru na konec souboru; záporné hodnoty posunou ukazatel souboru směrem k začátku souboru.
 
-*Nze*<br/>
-Pozice pro hledání. Možné hodnoty jsou uvedeny v části poznámky.
+*nFrom*<br/>
+Pozice, o které se můžete snažit. Možné hodnoty naleznete v části Poznámky.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pozice ukazatele souboru, pokud byla metoda úspěšná; v opačném případě není návratová hodnota definována a je vyvolána ukazatel na výjimku `CFileException`.
+Pozice ukazatele souboru, pokud byla metoda úspěšná; jinak vrácená hodnota není definována a `CFileException` je vyvolán ukazatel na výjimku.
 
 ### <a name="remarks"></a>Poznámky
 
-V následující tabulce jsou uvedeny možné hodnoty parametru *Nze* .
+V následující tabulce jsou uvedeny možné hodnoty parametru *nFrom.*
 
 |Hodnota|Popis|
 |-----------|-----------------|
-|`CFile::begin`|Hledání od začátku souboru.|
-|`CFile::current`|Vyhledejte z aktuálního umístění ukazatele souboru.|
-|`CFile::end`|Vyhledejte z konce souboru.|
+|`CFile::begin`|Hledat od začátku souboru.|
+|`CFile::current`|Hledat z aktuálního umístění ukazatele souboru.|
+|`CFile::end`|Hledat od konce souboru.|
 
-Když je otevřen soubor, ukazatel na soubor je umístěný na 0, začátek souboru.
+Při otevření souboru je ukazatel souboru umístěn na 0, začátek souboru.
 
-Ukazatel na soubor můžete nastavit na pozici za koncem souboru. Pokud tak učiníte, velikost souboru se nezvýší, dokud nebudete zapisovat do souboru.
+Ukazatel souboru můžete nastavit na pozici za koncem souboru. Pokud tak učiníte, velikost souboru se nezvětší, dokud do něj nezapíšete.
 
-Obslužná rutina výjimky pro tuto metodu musí po zpracování výjimky odstranit objekt výjimky.
+Obslužná rutina výjimky pro tuto metodu musí odstranit objekt výjimky po zpracování výjimky.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCFiles#9](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_14.cpp)]
 
-##  <a name="seektobegin"></a>CFile –:: SeekToBegin
+## <a name="cfileseektobegin"></a><a name="seektobegin"></a>cFile::SeekToBegin
 
 Nastaví hodnotu ukazatele souboru na začátek souboru.
 
@@ -757,13 +757,13 @@ void SeekToBegin();
 
 ### <a name="remarks"></a>Poznámky
 
-`SeekToBegin()` je ekvivalentem `Seek( 0L, CFile::begin )`.
+`SeekToBegin()`je ekvivalentní `Seek( 0L, CFile::begin )`.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCFiles#19](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_15.cpp)]
 
-##  <a name="seektoend"></a>CFile –:: SeekToEnd
+## <a name="cfileseektoend"></a><a name="seektoend"></a>cFile::SeekToend
 
 Nastaví hodnotu ukazatele souboru na logický konec souboru.
 
@@ -773,19 +773,19 @@ ULONGLONG SeekToEnd();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Délka souboru v bajtech
+Délka souboru v bajtů.
 
 ### <a name="remarks"></a>Poznámky
 
-`SeekToEnd()` je ekvivalentem `CFile::Seek( 0L, CFile::end )`.
+`SeekToEnd()`je ekvivalentní `CFile::Seek( 0L, CFile::end )`.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCFiles#19](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_15.cpp)]
 
-##  <a name="setfilepath"></a>CFile –:: SetFilePath
+## <a name="cfilesetfilepath"></a><a name="setfilepath"></a>CFile::SetFilePath
 
-Voláním této funkce určíte cestu k souboru. Například pokud cesta k souboru není k dispozici, když je vytvořen objekt [CFile –](../../mfc/reference/cfile-class.md) , zavolejte `SetFilePath` k jeho poskytnutí.
+Volánítéto funkce určit cestu k souboru. Například pokud cesta k souboru není k dispozici při vytvoření [cfile](../../mfc/reference/cfile-class.md) objektu, volání `SetFilePath` poskytnout.
 
 ```
 virtual void SetFilePath(LPCTSTR lpszNewName);
@@ -799,15 +799,15 @@ Ukazatel na řetězec určující novou cestu.
 ### <a name="remarks"></a>Poznámky
 
 > [!NOTE]
-> `SetFilePath` soubor neotevře, nebo soubor nevytvoří. jednoduše přidružuje objekt `CFile` k názvu cesty, který lze použít.
+> `SetFilePath`neotevře soubor ani soubor nevytvoří; jednoduše přidruží objekt k `CFile` názvu cesty, který pak lze použít.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCFiles#20](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_16.cpp)]
 
-##  <a name="setlength"></a>CFile –:: SetLength
+## <a name="cfilesetlength"></a><a name="setlength"></a>CFile::SetLength
 
-Voláním této funkce změníte délku souboru.
+Voláním této funkce změňte délku souboru.
 
 ```
 virtual void SetLength(ULONGLONG dwNewLen);
@@ -816,18 +816,18 @@ virtual void SetLength(ULONGLONG dwNewLen);
 ### <a name="parameters"></a>Parametry
 
 *dwNewLen*<br/>
-Požadovaná délka souboru v bajtech Tato hodnota může být větší nebo menší než aktuální délka souboru. Soubor bude v případě potřeby rozšířen nebo zkrácen.
+Požadovaná délka souboru v bajtech. Tato hodnota může být větší nebo menší než aktuální délka souboru. Soubor bude podle potřeby rozšířen nebo zkrácen.
 
 ### <a name="remarks"></a>Poznámky
 
 > [!NOTE]
->  Pomocí `CMemFile`může tato funkce vyvolat objekt `CMemoryException`.
+> Pomocí `CMemFile`aplikace může tato `CMemoryException` funkce vyvolat objekt.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCFiles#11](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_17.cpp)]
 
-##  <a name="setstatus"></a>CFile –:: SetStatus
+## <a name="cfilesetstatus"></a><a name="setstatus"></a>CFile::SetStatus
 
 Nastaví stav souboru přidruženého k tomuto umístění souboru.
 
@@ -840,26 +840,26 @@ static void PASCAL SetStatus(
 
 ### <a name="parameters"></a>Parametry
 
-*lpszFileName*<br/>
-Řetězec, který představuje cestu k požadovanému souboru. Cesta může být relativní nebo absolutní a může obsahovat název sítě.
+*název souboru lpsz*<br/>
+Řetězec, který je cesta k požadovanému souboru. Cesta může být relativní nebo absolutní a může obsahovat název sítě.
 
-*stav*<br/>
-Vyrovnávací paměť obsahující nové informace o stavu. Zavolejte členskou funkci `GetStatus`, pokud chcete předvyplnit strukturu `CFileStatus` aktuálními hodnotami a pak podle potřeby provést změny. Pokud je hodnota 0, odpovídající stavová položka nebude aktualizována. Popis `CFileStatus` struktury naleznete v tématu členské funkce [GetStatus](#getstatus) .
+*Stav*<br/>
+Vyrovnávací paměť obsahující nové informace o stavu. Volání `GetStatus` členské funkce předvyplnit `CFileStatus` strukturu s aktuální hodnoty, pak provést změny podle potřeby. Pokud je hodnota 0, odpovídající položka stavu není aktualizována. Popis `CFileStatus` struktury naleznete v členské funkci [GetStatus.](#getstatus)
 
-*pTM*<br/>
+*Ptm*<br/>
 Ukazatel na objekt CAtlTransactionManager
 
 ### <a name="remarks"></a>Poznámky
 
-Chcete-li nastavit čas, upravte pole `m_mtime` *stav*.
+Chcete-li nastavit čas, upravte `m_mtime` pole *stavu*.
 
-Když zavoláte `SetStatus` v pokusu o změnu pouze atributů souboru a `m_mtime` člen struktury stavu souboru je nenulový, mohou být ovlivněny i atributy (změna časového razítka může mít vedlejší účinky na atributy). Chcete-li změnit pouze atributy souboru, nejprve nastavte `m_mtime` člena struktury stav souboru na hodnotu nula a pak zavolejte na `SetStatus`.
+Při volání `SetStatus` do pokusu o změnu pouze atributy souboru `m_mtime` a člen struktury stavu souboru je nenulová, atributy mohou být také ovlivněny (změna časového razítka může mít vedlejší účinky na atributy). Pokud chcete pouze změnit atributy souboru, nejprve nastavte `m_mtime` člena struktury stavu souboru na `SetStatus`nulu a pak proveďte volání .
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCFiles#21](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_18.cpp)]
 
-##  <a name="unlockrange"></a>CFile –:: UnlockRange
+## <a name="cfileunlockrange"></a><a name="unlockrange"></a>CFile::UnlockRange
 
 Odemkne rozsah bajtů v otevřeném souboru.
 
@@ -872,25 +872,25 @@ virtual void UnlockRange(
 ### <a name="parameters"></a>Parametry
 
 *dwPos*<br/>
-Posun bajtů začátku rozsahu bajtů, který se má odemknout
+Posun bajtu začátku rozsahu bajtů odemknout.
 
 *dwCount*<br/>
-Počet bajtů v rozsahu, který se má odemknout
+Počet bajtů v rozsahu odemknout.
 
 ### <a name="remarks"></a>Poznámky
 
-Podrobnosti najdete v popisu členské funkce [LockRange](#lockrange) .
+Podrobnosti naleznete v popisu členské funkce [LockRange.](#lockrange)
 
 > [!NOTE]
->  Tato funkce není k dispozici pro třídu odvozenou od `CMemFile`.
+> Tato funkce není k `CMemFile`dispozici pro -derived třídy.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCFiles#12](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_8.cpp)]
 
-##  <a name="write"></a>CFile –:: Write
+## <a name="cfilewrite"></a><a name="write"></a>CFile::Zápis
 
-Zapisuje data z vyrovnávací paměti do souboru přidruženého k objektu `CFile`.
+Zapíše data z vyrovnávací paměti `CFile` do souboru přidruženého k objektu.
 
 ```
 virtual void Write(
@@ -901,24 +901,24 @@ virtual void Write(
 ### <a name="parameters"></a>Parametry
 
 *lpBuf*<br/>
-Ukazatel na vyrovnávací paměť zadanou uživatelem, která obsahuje data, která mají být zapsána do souboru.
+Ukazatel na uživatelem zadanou vyrovnávací paměť, která obsahuje data, která mají být zapsána do souboru.
 
 *nCount*<br/>
-Počet bajtů, které mají být přeneseny z vyrovnávací paměti. Pro soubory v textovém režimu se páry návratového řádku započítávají jako jednotlivé znaky.
+Počet bajtů, které mají být přeneseny z vyrovnávací paměti. U souborů v textovém režimu se dvojice datového kanálu řádku vozíku počítají jako jednotlivé znaky.
 
 ### <a name="remarks"></a>Poznámky
 
-`Write` vyvolá výjimku v reakci na několik podmínek, včetně podmínky úplného disku.
+`Write`vyvolá výjimku v reakci na několik podmínek, včetně podmínky úplné ho disku.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCFiles#16](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_19.cpp)]
 
-Podívejte se také na příklady pro [CFile –:: CFile –](#cfile) a [CFile –:: Open](#open).
+Viz také příklady pro [CFile::CFile](#cfile) a [CFile::Open](#open).
 
 ## <a name="see-also"></a>Viz také
 
-[DRAWCLI Sample MFC](../../overview/visual-cpp-samples.md)<br/>
+[Vzorek mfc DRAWCLI](../../overview/visual-cpp-samples.md)<br/>
 [CObject – třída](../../mfc/reference/cobject-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [CStdioFile – třída](../../mfc/reference/cstdiofile-class.md)<br/>

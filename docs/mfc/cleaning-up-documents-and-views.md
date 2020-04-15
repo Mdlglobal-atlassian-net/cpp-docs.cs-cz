@@ -6,22 +6,22 @@ helpviewer_keywords:
 - documents [MFC], cleaning up
 - documents [MFC], closing
 ms.assetid: 0c454db2-3644-434d-9e53-8108a7aedfe1
-ms.openlocfilehash: 940c768823d26950d9710fb1d1a52e6a1955fead
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 06ff60a2cf6245f64e80d899c13a8444558fcf0b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62327155"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374625"
 ---
 # <a name="cleaning-up-documents-and-views"></a>Uklízení dokumentů a zobrazení
 
-Pokud dokument se zavírá, nejprve volá rámec jeho [DeleteContents](../mfc/reference/cdocument-class.md#deletecontents) členskou funkci. Pokud jste přidělili paměti v haldě v průběhu operace dokumentu `DeleteContents` je nejlepším místem k jeho uvolnění.
+Při zavření dokumentu framework nejprve volá jeho [DeleteContents](../mfc/reference/cdocument-class.md#deletecontents) členské funkce. Pokud jste přidělili všechny paměti na haldě v `DeleteContents` průběhu operace dokumentu, je nejlepší místo pro navrátit.
 
 > [!NOTE]
->  Data dokumentu v dokumentu destruktoru by neměl uvolnit. V případě aplikace SDI objekt dokument znova.
+> V destruktoru dokumentu byste neměli navrátit data dokumentu. V případě aplikace SDI může být objekt dokumentu znovu použit.
 
-Můžete přepsat zobrazení destruktor pro uvolnění paměti, které jste přidělili v haldě.
+Můžete přepsat destruktor zobrazení a navrátit paměť, kterou jste přidělili na haldě.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Inicializace a uklízení dokumentů a zobrazení](../mfc/initializing-and-cleaning-up-documents-and-views.md)

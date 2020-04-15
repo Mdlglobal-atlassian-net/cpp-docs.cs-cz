@@ -1,5 +1,5 @@
 ---
-title: CTypedPtrArray Class
+title: Třída CTypedPtrArray
 ms.date: 11/04/2016
 f1_keywords:
 - CTypedPtrArray
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - CTypedPtrArray [MFC], SetAt
 - CTypedPtrArray [MFC], SetAtGrow
 ms.assetid: e3ecdf1a-a889-4156-92dd-ddbd36ccd919
-ms.openlocfilehash: 080e47746b83b6ff12db9f6df0fc27bcd202bb51
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: a996bca471ce82a7c2adaaad67670ddef417eda1
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64346088"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373282"
 ---
-# <a name="ctypedptrarray-class"></a>CTypedPtrArray Class
+# <a name="ctypedptrarray-class"></a>Třída CTypedPtrArray
 
-Poskytuje typově "zabezpečenou obálku" pro objekty třídy `CPtrArray` nebo `CObArray`.
+Poskytuje typově bezpečné "obálky" pro `CPtrArray` `CObArray`objekty třídy nebo .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -43,7 +43,7 @@ class CTypedPtrArray : public BASE_CLASS
 #### <a name="parameters"></a>Parametry
 
 *BASE_CLASS*<br/>
-Základní třída typované ukazatele pole třídy; musí být třída pole ( `CObArray` nebo `CPtrArray`).
+Základní třída zadané třídy pole ukazatele; musí být třída `CObArray` pole `CPtrArray`(nebo).
 
 *TYP*<br/>
 Typ prvků uložených v poli základní třídy.
@@ -52,32 +52,32 @@ Typ prvků uložených v poli základní třídy.
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CTypedPtrArray::Add](#add)|Přidá nový prvek na konec pole. V případě potřeby roste pole|
-|[CTypedPtrArray::Append](#append)|Přidá na konec jiné obsah jedno pole. V případě potřeby roste pole|
-|[CTypedPtrArray::Copy](#copy)|Zkopíruje jiného objektu array do pole. v případě potřeby se zvětší pole.|
-|[CTypedPtrArray::ElementAt](#elementat)|Vrátí dočasný odkaz na ukazatel na prvek v poli.|
-|[CTypedPtrArray::GetAt](#getat)|Vrátí hodnotu na daném indexu.|
-|[CTypedPtrArray::InsertAt](#insertat)|Vloží zadaný index elementu (nebo všechny prvky v jiného objektu array).|
+|[CTypedPtrArray::Přidat](#add)|Přidá nový prvek na konec pole. V případě potřeby pole zvětší|
+|[CTypedPtrArray::Připojit](#append)|Přidá obsah jednoho pole na konec jiného. V případě potřeby pole zvětší|
+|[CTypedPtrArray::Kopírovat](#copy)|Zkopíruje do pole jiné pole. v případě potřeby pole zvětší.|
+|[CTypedPtrArray::ElementAt](#elementat)|Vrátí dočasný odkaz na ukazatel prvku v rámci pole.|
+|[CTypedPtrArray::GetAt](#getat)|Vrátí hodnotu v daném indexu.|
+|[CTypedPtrArray::InsertAt](#insertat)|Vloží prvek (nebo všechny prvky v jiném poli) v zadaném indexu.|
 |[CTypedPtrArray::SetAt](#setat)|Nastaví hodnotu pro daný index; pole nesmí růst.|
-|[CTypedPtrArray::SetAtGrow](#setatgrow)|Nastaví hodnotu pro daný index; v případě potřeby se zvětší pole.|
+|[CTypedPtrArray::SetAtGrow](#setatgrow)|Nastaví hodnotu pro daný index; v případě potřeby pole zvětší.|
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CTypedPtrArray::operator \[ \]](#operator_at)|Nastaví nebo získá prvek na zadaném indexu.|
+|[CTypedPtrArray::operátor \[\]](#operator_at)|Nastaví nebo získá prvek na zadaný index.|
 
 ## <a name="remarks"></a>Poznámky
 
-Při použití `CTypedPtrArray` spíše než `CPtrArray` nebo `CObArray`, kontroly typů zařízení C++ pomáhá eliminovat chyby způsobené typy neodpovídající ukazatelů.
+Při použití `CTypedPtrArray` spíše `CPtrArray` `CObArray`než nebo , c++ zařízení kontroly typu pomáhá eliminovat chyby způsobené neodpovídající typy ukazatelů.
 
-Kromě toho `CTypedPtrArray` obálky provádí velkou část přetypování, které by bylo zapotřebí, pokud jste použili `CObArray` nebo `CPtrArray`.
+Kromě toho `CTypedPtrArray` obálka provádí velkou část odlitku, `CObArray` `CPtrArray`která by byla vyžadována, pokud jste použili nebo .
 
-Protože všechny `CTypedPtrArray` jsou vložené funkce, použijte tato šablona nemá vliv na výrazně velikost nebo rychlost kódu.
+Vzhledem `CTypedPtrArray` k tomu, že všechny funkce jsou vřadit, použití této šablony nemá významný vliv na velikost nebo rychlost kódu.
 
-Další informace o používání `CTypedPtrArray`, najdete v článcích [kolekce](../../mfc/collections.md) a [založené na šablonách třídy](../../mfc/template-based-classes.md).
+Další informace o `CTypedPtrArray`použití naleznete v článcích Kolekce a [Třídy](../../mfc/collections.md) [založené na šablonách](../../mfc/template-based-classes.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -89,9 +89,9 @@ Další informace o používání `CTypedPtrArray`, najdete v článcích [kolek
 
 **Záhlaví:** afxtempl.h
 
-##  <a name="add"></a>  CTypedPtrArray::Add
+## <a name="ctypedptrarrayadd"></a><a name="add"></a>CTypedPtrArray::Přidat
 
-Tato členská funkce volá `BASE_CLASS` **:: Přidat**.
+Tato členská `BASE_CLASS`funkce volá **::Add**.
 
 ```
 INT_PTR Add(TYPE newElement);
@@ -100,22 +100,22 @@ INT_PTR Add(TYPE newElement);
 ### <a name="parameters"></a>Parametry
 
 *TYP*<br/>
-Parametr šablony určující typ prvku, které mají být přidány do pole.
+Parametr šablony určující typ prvku, který má být přidán do pole.
 
 *newElement*<br/>
-Elementu, který chcete přidat do tohoto pole.
+Prvek, který má být přidán do tohoto pole.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Index elementu přidal.
+Index přidaného prvku.
 
 ### <a name="remarks"></a>Poznámky
 
-Podrobné poznámky, naleznete v tématu [CObArray::Add](../../mfc/reference/cobarray-class.md#add).
+Podrobnější poznámky naleznete v tématu [CObArray::Add](../../mfc/reference/cobarray-class.md#add).
 
-##  <a name="append"></a>  CTypedPtrArray::Append
+## <a name="ctypedptrarrayappend"></a><a name="append"></a>CTypedPtrArray::Připojit
 
-Tato členská funkce volá `BASE_CLASS`:: připojit **.
+Tato členská `BASE_CLASS`funkce volá ::Append**.
 
 ```
 INT_PTR Append(const CTypedPtrArray<BASE_CLASS, TYPE>& src);
@@ -124,25 +124,25 @@ INT_PTR Append(const CTypedPtrArray<BASE_CLASS, TYPE>& src);
 ### <a name="parameters"></a>Parametry
 
 *BASE_CLASS*<br/>
-Základní třída typované ukazatele pole třídy; musí být třída pole ( [cobarray –](../../mfc/reference/cobarray-class.md) nebo [cptrarray –](../../mfc/reference/cptrarray-class.md)).
+Základní třída zadané třídy pole ukazatele; musí být třída pole [(CObArray](../../mfc/reference/cobarray-class.md) nebo [CPtrArray).](../../mfc/reference/cptrarray-class.md)
 
 *TYP*<br/>
 Typ prvků uložených v poli základní třídy.
 
 *src*<br/>
-Zdroj prvky, které je připojeno k matici.
+Zdroj prvků, které mají být připojeny k poli.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Index první připojený prvek.
+Index první ho připojit prvek.
 
 ### <a name="remarks"></a>Poznámky
 
-Podrobné poznámky, naleznete v tématu [CObArray::Append](../../mfc/reference/cobarray-class.md#append).
+Podrobnější poznámky naleznete v tématu [CObArray::Append](../../mfc/reference/cobarray-class.md#append).
 
-##  <a name="copy"></a>  CTypedPtrArray::Copy
+## <a name="ctypedptrarraycopy"></a><a name="copy"></a>CTypedPtrArray::Kopírovat
 
-Tato členská funkce volá `BASE_CLASS` **:: kopírování**.
+Tato členská `BASE_CLASS`funkce volá **::Copy**.
 
 ```
 void Copy(const CTypedPtrArray<BASE_CLASS, TYPE>& src);
@@ -151,21 +151,21 @@ void Copy(const CTypedPtrArray<BASE_CLASS, TYPE>& src);
 ### <a name="parameters"></a>Parametry
 
 *BASE_CLASS*<br/>
-Základní třída typované ukazatele pole třídy; musí být třída pole ( [cobarray –](../../mfc/reference/cobarray-class.md) nebo [cptrarray –](../../mfc/reference/cptrarray-class.md)).
+Základní třída zadané třídy pole ukazatele; musí být třída pole [(CObArray](../../mfc/reference/cobarray-class.md) nebo [CPtrArray).](../../mfc/reference/cptrarray-class.md)
 
 *TYP*<br/>
 Typ prvků uložených v poli základní třídy.
 
 *src*<br/>
-Zdroj prvky, které mají být zkopírovány do pole.
+Zdroj prvků, které mají být zkopírovány do pole.
 
 ### <a name="remarks"></a>Poznámky
 
-Podrobné poznámky, naleznete v tématu [CObArray::Copy](../../mfc/reference/cobarray-class.md#copy).
+Podrobnější poznámky naleznete v tématu [CObArray::Copy](../../mfc/reference/cobarray-class.md#copy).
 
-##  <a name="elementat"></a>  CTypedPtrArray::ElementAt
+## <a name="ctypedptrarrayelementat"></a><a name="elementat"></a>CTypedPtrArray::ElementAt
 
-Tato vložená funkce zavolá `BASE_CLASS` **:: ElementAt**.
+Tato inline `BASE_CLASS`funkce volá **::ElementAt**.
 
 ```
 TYPE& ElementAt(INT_PTR nIndex);
@@ -177,19 +177,19 @@ TYPE& ElementAt(INT_PTR nIndex);
 Parametr šablony určující typ prvků uložených v tomto poli.
 
 *nIndex*<br/>
-Celočíselný index, který je větší než nebo rovna 0 a menší nebo rovna hodnotě vrácené `BASE_CLASS` **:: GetUpperBound**.
+Index celéčíslo, který je větší nebo roven 0 a menší `BASE_CLASS`než nebo rovno hodnotě vrácené **::GetUpperBound**.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Dočasný odkaz na prvek v umístění určeném *nIndex*. Tento element je určeného parametrem šablony typu *typ*.
+Dočasný odkaz na prvek v umístění určeném *nIndex*. Tento prvek je typu určeného parametrem šablony *TYPE*.
 
 ### <a name="remarks"></a>Poznámky
 
-Podrobné poznámky, naleznete v tématu [CObArray::ElementAt](../../mfc/reference/cobarray-class.md#elementat).
+Podrobnější poznámky naleznete v tématu [CObArray::ElementAt](../../mfc/reference/cobarray-class.md#elementat).
 
-##  <a name="getat"></a>  CTypedPtrArray::GetAt
+## <a name="ctypedptrarraygetat"></a><a name="getat"></a>CTypedPtrArray::GetAt
 
-Tato vložená funkce zavolá `BASE_CLASS` **:: GetAt**.
+Tato inline `BASE_CLASS`funkce volá **::GetAt**.
 
 ```
 TYPE GetAt(INT_PTR nIndex) const;
@@ -201,19 +201,19 @@ TYPE GetAt(INT_PTR nIndex) const;
 Parametr šablony určující typ prvků uložených v poli.
 
 *nIndex*<br/>
-Celočíselný index, který je větší než nebo rovna 0 a menší nebo rovna hodnotě vrácené `BASE_CLASS` **:: GetUpperBound**.
+Index celéčíslo, který je větší nebo roven 0 a menší `BASE_CLASS`než nebo rovno hodnotě vrácené **::GetUpperBound**.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Zkopírovat element v místě určeném *nIndex*. Tento element je určeného parametrem šablony typu *typ*.
+Kopie prvku v umístění určeném *nIndex*. Tento prvek je typu určeného parametrem šablony *TYPE*.
 
 ### <a name="remarks"></a>Poznámky
 
-Podrobné poznámky, naleznete v tématu [CObArray::GetAt](../../mfc/reference/cobarray-class.md#getat)
+Podrobnější poznámky naleznete v tématu [CObArray::GetAt](../../mfc/reference/cobarray-class.md#getat)
 
-##  <a name="insertat"></a>  CTypedPtrArray::InsertAt
+## <a name="ctypedptrarrayinsertat"></a><a name="insertat"></a>CTypedPtrArray::InsertAt
 
-Tato členská funkce volá `BASE_CLASS` **:: InsertAt**.
+Tato členská `BASE_CLASS`funkce volá **::InsertAt**.
 
 ```
 void InsertAt(
@@ -229,33 +229,33 @@ void InsertAt(
 ### <a name="parameters"></a>Parametry
 
 *nIndex*<br/>
-Celočíselný index, který může být větší než hodnota vrácená [CObArray::GetUpperBound](../../mfc/reference/cobarray-class.md#getupperbound).
+Index celéčíslo, který může být větší než hodnota vrácená [CObArray::GetUpperBound](../../mfc/reference/cobarray-class.md#getupperbound).
 
 *TYP*<br/>
 Typ prvků uložených v poli základní třídy.
 
 *newElement*<br/>
-Ukazatel objektu budou umístěny v tomto poli. A *newElement* hodnoty **NULL** je povolen.
+Ukazatel objektu, který má být umístěn v tomto poli. *NewElement* hodnoty **NULL** je povolena.
 
 *nCount*<br/>
-Počet pokusů, které tento prvek by měl být vložen (výchozí nastavení: 1).
+Počet, kolikrát by měl být tento prvek vložen (výchozí hodnota je 1).
 
 *nStartIndex*<br/>
-Celočíselný index, který může být větší než hodnota vrácená `CObArray::GetUpperBound`.
+Index celého čísla, který může být `CObArray::GetUpperBound`větší než hodnota vrácená .
 
 *BASE_CLASS*<br/>
-Základní třída typované ukazatele pole třídy; musí být třída pole ( [cobarray –](../../mfc/reference/cobarray-class.md) nebo [cptrarray –](../../mfc/reference/cptrarray-class.md)).
+Základní třída zadané třídy pole ukazatele; musí být třída pole [(CObArray](../../mfc/reference/cobarray-class.md) nebo [CPtrArray).](../../mfc/reference/cptrarray-class.md)
 
 *pNewArray*<br/>
-Další pole obsahující prvky, které mají být přidány do tohoto pole.
+Jiné pole, které obsahuje prvky, které mají být přidány do tohoto pole.
 
 ### <a name="remarks"></a>Poznámky
 
-Podrobné poznámky, naleznete v tématu [CObArray::InsertAt](../../mfc/reference/cobarray-class.md#insertat).
+Podrobnější poznámky naleznete v tématu [CObArray::InsertAt](../../mfc/reference/cobarray-class.md#insertat).
 
-##  <a name="operator_at"></a>  CTypedPtrArray::operator [ ]
+## <a name="ctypedptrarrayoperator--"></a><a name="operator_at"></a>CTypedPtrArray::operátor [ ]
 
-Tyto vložené operátory volání `BASE_CLASS` **:: operator []**.
+Tyto inline `BASE_CLASS`operátory volají **::operator [ ]**.
 
 ```
 TYPE& operator[ ](int_ptr nindex);
@@ -268,17 +268,17 @@ TYPE operator[ ](int_ptr nindex) const;
 Parametr šablony určující typ prvků uložených v poli.
 
 *nIndex*<br/>
-Celočíselný index, který je větší než nebo rovna 0 a menší nebo rovna hodnotě vrácené `BASE_CLASS` **:: GetUpperBound**.
+Index celéčíslo, který je větší nebo roven 0 a menší `BASE_CLASS`než nebo rovno hodnotě vrácené **::GetUpperBound**.
 
 ### <a name="remarks"></a>Poznámky
 
-Volá se, první operátor pro pole, která nejsou **const**, lze použít na pravé straně (r) nebo (l hodnota) levé straně příkazu přiřazení. Druhá s názvem vyvolána **const** pole, lze použít pouze na pravé straně.
+První operátor, volaný pro pole, která nejsou **const**, lze použít buď vpravo (hodnota r) nebo vlevo (l-hodnota) příkazu přiřazení. Druhý, vyvolána pro **const** pole, lze použít pouze na pravé straně.
 
-Ladicí verze knihovny vyhodnotí, pokud hodnota argumentu subscript (buď v levé nebo pravé straně příkazu přiřazení) je mimo rozsah.
+Ladicí verze knihovny uplatňuje, pokud je dolní index (na levé nebo pravé straně příkazu přiřazení) mimo hranice.
 
-##  <a name="setat"></a>  CTypedPtrArray::SetAt
+## <a name="ctypedptrarraysetat"></a><a name="setat"></a>CTypedPtrArray::SetAt
 
-Tato členská funkce volá `BASE_CLASS` **:: SetAt**.
+Tato členská `BASE_CLASS`funkce volá **::SetAt**.
 
 ```
 void SetAt(
@@ -289,21 +289,21 @@ void SetAt(
 ### <a name="parameters"></a>Parametry
 
 *nIndex*<br/>
-Celočíselný index, který je větší než nebo rovna 0 a menší nebo rovna hodnotě vrácené [CObArray::GetUpperBound](../../mfc/reference/cobarray-class.md#getupperbound).
+Index celéčíslo, který je větší nebo roven 0 a menší než nebo rovno hodnotě vrácené [CObArray::GetUpperBound](../../mfc/reference/cobarray-class.md#getupperbound).
 
 *TYP*<br/>
 Typ prvků uložených v poli základní třídy.
 
-*ptr*<br/>
-Ukazatel na prvek, který má být vložen do pole na nIndex. Je povolena hodnota NULL.
+*Ptr*<br/>
+Ukazatel na prvek, který má být vložen do pole na nIndex. Hodnota NULL je povolena.
 
 ### <a name="remarks"></a>Poznámky
 
-Podrobné poznámky, naleznete v tématu [CObArray::SetAt](../../mfc/reference/cobarray-class.md#setat).
+Podrobnější poznámky naleznete v tématu [CObArray::SetAt](../../mfc/reference/cobarray-class.md#setat).
 
-##  <a name="setatgrow"></a>  CTypedPtrArray::SetAtGrow
+## <a name="ctypedptrarraysetatgrow"></a><a name="setatgrow"></a>CTypedPtrArray::SetAtGrow
 
-Tato členská funkce volá `BASE_CLASS` **:: SetAtGrow**.
+Tato členská `BASE_CLASS`funkce volá **::SetAtGrow**.
 
 ```
 void SetAtGrow(
@@ -314,21 +314,21 @@ void SetAtGrow(
 ### <a name="parameters"></a>Parametry
 
 *nIndex*<br/>
-Celočíselný index, který je větší než nebo rovna 0.
+Index celého čísla, který je větší nebo roven 0.
 
 *TYP*<br/>
 Typ prvků uložených v poli základní třídy.
 
 *newElement*<br/>
-Ukazatel objektu, který chcete přidat do tohoto pole. A **NULL** povolená hodnota.
+Ukazatel objektu, který má být přidán do tohoto pole. Hodnota **NULL** je povolena.
 
 ### <a name="remarks"></a>Poznámky
 
-Podrobné poznámky, naleznete v tématu [CObArray::SetAtGrow](../../mfc/reference/cobarray-class.md#setatgrow).
+Podrobnější poznámky naleznete v tématu [CObArray::SetAtGrow](../../mfc/reference/cobarray-class.md#setatgrow).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Ukázky knihovny MFC shromažďování](../../overview/visual-cpp-samples.md)<br/>
+[Odběr vzorku knihovny MFC](../../overview/visual-cpp-samples.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
-[CPtrArray – třída](../../mfc/reference/cptrarray-class.md)<br/>
-[CObArray – třída](../../mfc/reference/cobarray-class.md)
+[Třída CPtrArray](../../mfc/reference/cptrarray-class.md)<br/>
+[Třída CObArray](../../mfc/reference/cobarray-class.md)

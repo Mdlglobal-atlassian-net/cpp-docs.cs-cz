@@ -1,5 +1,5 @@
 ---
-title: CFileDialog – třída
+title: Třída CFileDialog
 ms.date: 11/04/2016
 f1_keywords:
 - CFileDialog
@@ -132,16 +132,16 @@ helpviewer_keywords:
 - CFileDialog [MFC], OnTypeChange
 - CFileDialog [MFC], m_ofn
 ms.assetid: fda4fd3c-08b8-4ce0-8e9d-7bab23f8c6c0
-ms.openlocfilehash: c301766b64af7fc1523b39adad91d9b52a5e88f7
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 197dec23b4c715b0bca35976f9fa53a055cdd78f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69506599"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373907"
 ---
-# <a name="cfiledialog-class"></a>CFileDialog – třída
+# <a name="cfiledialog-class"></a>Třída CFileDialog
 
-Zapouzdřuje společné dialogové okno, které se používá pro operace otevírání souborů nebo ukládání souborů.
+Zapouzdřuje společné dialogové okno, které se používá pro operace otevření souboru nebo uložení souborů.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -153,146 +153,146 @@ class CFileDialog : public CCommonDialog
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CFileDialog::CFileDialog](#cfiledialog)|`CFileDialog` Vytvoří objekt.|
+|[CFileDialog::CFileDialog](#cfiledialog)|Vytvoří `CFileDialog` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CFileDialog::AddCheckButton](#addcheckbutton)|Přidá k dialogovému oknu tlačítko pro kontrolu.|
+|[CFileDialog::AddCheckButton](#addcheckbutton)|Přidá do dialogového okna tlačítko kontroly.|
 |[CFileDialog::AddComboBox](#addcombobox)|Přidá do dialogového okna pole se seznamem.|
 |[CFileDialog::AddControlItem](#addcontrolitem)|Přidá položku do ovládacího prvku kontejneru v dialogovém okně.|
-|[CFileDialog::AddEditBox](#addeditbox)|Přidá do dialogového okna textové pole.|
+|[CFileDialog::AddEditBox](#addeditbox)|Přidá do dialogového okna dialogové pole.|
 |[CFileDialog::AddMenu](#addmenu)|Přidá nabídku do dialogového okna.|
-|[CFileDialog::AddPlace](#addplace)|Přetíženo. Přidá složku do seznamu míst, která jsou k dispozici pro uživatele k otevření nebo uložení položek.|
+|[CFileDialog::Přidat místo](#addplace)|Přetíženo. Přidá složku do seznamu míst, která má uživatel k dispozici k otevření nebo uložení položek.|
 |[CFileDialog::AddPushButton](#addpushbutton)|Přidá do dialogu tlačítko.|
-|[CFileDialog::AddRadioButtonList](#addradiobuttonlist)|Přidá do dialogového okna možnost (také označované jako přepínač).|
-|[CFileDialog::AddSeparator](#addseparator)|Přidá oddělovač do dialogového okna.|
-|[CFileDialog::AddText](#addtext)|Přidá textový obsah do dialogového okna.|
-|[CFileDialog::ApplyOFNToShellDialog](#applyofntoshelldialog)|Aktualizuje stav `CFileDialog` tak, aby odpovídal parametrům a příznakům uloženým `m_ofn` v členské proměnné.|
-|[CFileDialog::DoModal](#domodal)|Zobrazí dialogové okno a umožní uživateli provést výběr.|
-|[CFileDialog::EnableOpenDropDown](#enableopendropdown)|Povoluje rozevírací seznam v tlačítku **otevřít** nebo **Uložit** v dialogovém okně.|
-|[CFileDialog::EndVisualGroup](#endvisualgroup)|Zastaví přidávání prvků do skupiny vizuálů v dialogovém okně.|
-|[CFileDialog::GetCheckButtonState](#getcheckbuttonstate)|Získá aktuální stav tlačítka pro kontrolu (zaškrtávací políčko) v dialogovém okně.|
-|[CFileDialog::GetControlItemState](#getcontrolitemstate)|Načte aktuální stav položky v ovládacím prvku kontejneru, který se nachází v dialogovém okně.|
-|[CFileDialog::GetControlState](#getcontrolstate)|Získá aktuální viditelnost a povolený stav daného ovládacího prvku.|
-|[CFileDialog::GetEditBoxText](#geteditboxtext)|Získá aktuální text v ovládacím prvku textové pole.|
+|[CFileDialog::AddRadioButtonList](#addradiobuttonlist)|Přidá do dialogu skupinu přepínačů (označované také jako přepínací tlačítko).|
+|[CFileDialog::Oddělovač přidání](#addseparator)|Přidá do dialogu oddělovač.|
+|[CFileDialog::AddText](#addtext)|Přidá do dialogu textový obsah.|
+|[CFileDialog::ApplyOFNToShellDialog](#applyofntoshelldialog)|Aktualizuje stav, `CFileDialog` aby odpovídal parametrům a příznakům uloženým v `m_ofn` členské proměnné.|
+|[CFileDialog::DoModální](#domodal)|Zobrazí dialogové okno a umožní uživateli provést výběr.|
+|[CFileDialog::Povolitopendropdown](#enableopendropdown)|Povolí rozevírací seznam na tlačítku **Otevřít** nebo **Uložit** v dialogovém okně.|
+|[CFileDialog::EndVisualGroup](#endvisualgroup)|Zastaví přidávání prvků do vizuální skupiny v dialogovém okně.|
+|[CFileDialog::GetCheckButtonState](#getcheckbuttonstate)|Získá aktuální stav zaškrtávacího tlačítka (zaškrtávací políčko) v dialogovém okně.|
+|[CFileDialog::GetControlItemState](#getcontrolitemstate)|Získá aktuální stav položky v ovládacím prvku kontejneru nalezené v dialogovém okně.|
+|[CFileDialog::GetControlState](#getcontrolstate)|Získá aktuální viditelnost a povolené stavy daného ovládacího prvku.|
+|[CFileDialog::GetEditBoxText](#geteditboxtext)|Získá aktuální text v ovládacím prvku upravit pole.|
 |[CFileDialog::GetFileExt](#getfileext)|Vrátí příponu vybraného souboru.|
-|[CFileDialog:: getsoubor](#getfilename)|Vrátí název souboru vybraného souboru.|
+|[CFileDialog::GetFileName](#getfilename)|Vrátí název vybraného souboru.|
 |[CFileDialog::GetFileTitle](#getfiletitle)|Vrátí název vybraného souboru.|
-|[CFileDialog::GetFolderPath](#getfolderpath)|Načte cestu aktuálně otevřené složky nebo adresáře pro dialogové okno **otevřít** nebo **Uložit jako** běžné ve stylu Průzkumníka.|
-|[CFileDialog::GetIFileDialogCustomize](#getifiledialogcustomize)|Načte vnitřní objekt modelu COM pro přizpůsobený `CFileDialog` objekt.|
-|[CFileDialog::GetIFileOpenDialog](#getifileopendialog)|Načte vnitřní objekt modelu COM pro `CFileDialog` , který se používá jako dialogové okno **otevřít** soubor.|
-|[CFileDialog::GetIFileSaveDialog](#getifilesavedialog)|Načte vnitřní objekt modelu COM pro `CFileDialog` , který se používá jako dialogové okno **Uložit** soubor.|
+|[CFileDialog::GetFolderPath](#getfolderpath)|Načte cestu k aktuálně otevřené složce nebo adresáři pro běžné dialogové okno **Otevřít** nebo **Uložit jako** v průzkumníku.|
+|[cfiledialog::getifiledialogCustomize](#getifiledialogcustomize)|Načte interní objekt COM pro `CFileDialog` vlastní objekt.|
+|[CFileDialog::getifileopendialog](#getifileopendialog)|Načte interní objekt COM `CFileDialog` pro objekt, který se používá jako dialogové okno **Otevřít** soubor.|
+|[cfiledialog::getifilesavedialog](#getifilesavedialog)|Načte interní objekt COM `CFileDialog` pro který se používá jako dialogové okno **Uložit** soubor.|
 |[CFileDialog::GetNextPathName](#getnextpathname)|Vrátí úplnou cestu k dalšímu vybranému souboru.|
-|[CFileDialog::GetOFN](#getofn)|`OPENFILENAME` Načte strukturu`CFileDialog` objektu.|
-|[CFileDialog:: getcesta](#getpathname)|Vrátí úplnou cestu k vybranému souboru.|
-|[CFileDialog::GetReadOnlyPref](#getreadonlypref)|Vrátí stav jen pro čtení vybraného souboru.|
-|[CFileDialog:: GetResult](#getresult)|Získá výběr, který uživatel provedl v dialogovém okně.|
-|[CFileDialog:: GetResults](#getresults)|Získá volby uživatele v dialogovém okně, které umožňuje vícenásobný výběr.|
-|[CFileDialog::GetSelectedControlItem](#getselectedcontrolitem)|Načte konkrétní položku ze zadaných ovládacích prvků kontejneru v dialogovém okně.|
-|[CFileDialog::GetStartPosition](#getstartposition)|Vrátí pozici prvního prvku seznamu název souboru.|
-|[CFileDialog::HideControl](#hidecontrol)|Skryje určený ovládací prvek ve stylu prohlížeče **otevřít** nebo **Uložit jako** společné.|
-|[CFileDialog::IsPickFoldersMode](#ispickfoldersmode)|Určuje, zda aktuální dialog v režimu výběru složky.|
-|[CFileDialog::MakeProminent](#makeprominent)|Umístí ovládací prvek do dialogového okna tak, aby se v porovnání s jinými přidanými ovládacími prvky.|
+|[CFileDialog::GetOFN](#getofn)|Načte `OPENFILENAME` strukturu objektu. `CFileDialog`|
+|[CFileDialog::GetPathName](#getpathname)|Vrátí úplnou cestu k vybranému souboru.|
+|[CFileDialog::GetReadOnlyPref](#getreadonlypref)|Vrátí stav vybraného souboru jen pro čtení.|
+|[CFileDialog::GetResult](#getresult)|Získá volbu, kterou uživatel provedl v dialogovém okně.|
+|[CFileDialog::Výsledky](#getresults)|Získá volby uživatele v dialogovém okně, který umožňuje více výběrů.|
+|[CFileDialog::GetSelectedControlItem](#getselectedcontrolitem)|Získá určitou položku z zadaných ovládacích prvků kontejneru v dialogovém okně.|
+|[CFileDialog::GetStartPosition](#getstartposition)|Vrátí pozici prvního prvku seznamu názvů souborů.|
+|[CFileDialog::HideControl](#hidecontrol)|Skryje zadaný ovládací prvek v dialogovém okně **Otevřít** nebo **Uložit jako** běžný ve stylu Průzkumníka.|
+|[CFileDialog::ispickFoldersMode](#ispickfoldersmode)|Určuje, zda je aktuální dialog v režimu výběru složek.|
+|[CFileDialog::MakeProminent](#makeprominent)|Umístí ovládací prvek do dialogového okna tak, aby vyčnívá ve srovnání s jinými přidanými ovládacími prvky.|
 |[CFileDialog::RemoveControlItem](#removecontrolitem)|Odebere položku z ovládacího prvku kontejneru v dialogovém okně.|
-|[CFileDialog::SetCheckButtonState](#setcheckbuttonstate)|Nastaví aktuální stav tlačítka check (zaškrtávací políčko) v dialogovém okně.|
-|[CFileDialog::SetControlItemState](#setcontrolitemstate)|Nastaví aktuální stav položky v ovládacím prvku kontejneru, který se nachází v dialogovém okně.|
-|[CFileDialog::SetControlItemText](#setcontrolitemtext)|Nastaví text položky ovládacího prvku. Například text doprovázející přepínač nebo položku v nabídce.|
-|[CFileDialog::SetControlLabel](#setcontrollabel)|Nastaví text přidružený k ovládacímu prvku, jako je například text tlačítka nebo popisek pro textové pole.|
-|[CFileDialog::SetControlState](#setcontrolstate)|Nastaví aktuální viditelnost a povolený stav daného ovládacího prvku.|
-|[CFileDialog::SetControlText](#setcontroltext)|Nastaví text pro určený ovládací prvek v dialogovém okně **otevřít** nebo **Uložit jako** společné ve stylu Průzkumníka.|
-|[CFileDialog::SetDefExt](#setdefext)|Nastaví výchozí příponu názvu souboru pro dialogové okno **otevřít** nebo **Uložit jako** společné ve stylu Průzkumníka.|
-|[CFileDialog::SetEditBoxText](#seteditboxtext)|Nastaví aktuální text v ovládacím prvku textové pole.|
-|[CFileDialog:: SetProperties](#setproperties)|Poskytuje úložiště vlastností, které definuje výchozí hodnoty, které se mají použít pro položku, která se ukládá.|
-|[CFileDialog::SetSelectedControlItem](#setselectedcontrolitem)|Nastaví vybraný stav konkrétní položky ve skupině přepínačů nebo pole se seznamem, které najdete v dialogovém okně.|
-|[CFileDialog::SetTemplate](#settemplate)|Nastaví šablonu dialogového okna pro daný `CFileDialog` objekt.|
-|[CFileDialog::StartVisualGroup](#startvisualgroup)|Deklaruje vizuální skupinu v dialogovém okně. Následná volání jakékoli metody "Add" přidají tyto prvky do této skupiny.|
-|[CFileDialog::UpdateOFNFromShellDialog](#updateofnfromshelldialog)|Aktualizuje data uložená v `m_ofn` proměnné členu tak, aby odpovídala aktuálnímu stavu dialogového okna soubor.|
+|[CFileDialog::SetCheckButtonState](#setcheckbuttonstate)|Nastaví aktuální stav zaškrtávacího tlačítka (zaškrtávacího políčka) v dialogovém okně.|
+|[CFileDialog::SetControlItemState](#setcontrolitemstate)|Nastaví aktuální stav položky v ovládacím prvku kontejneru nalezeném v dialogovém okně.|
+|[CFileDialog::SetControlItemText](#setcontrolitemtext)|Nastaví text ovládací položky. Například text, který doprovází přepínací tlačítko nebo položku v nabídce.|
+|[CFileDialog::SetControlLabel](#setcontrollabel)|Nastaví text přidružený k ovládacímu prvku, například text tlačítka nebo popisek textového pole.|
+|[CFileDialog::SetControlState](#setcontrolstate)|Nastaví aktuální viditelnost a povolené stavy daného ovládacího prvku.|
+|[CFileDialog::SetControlText](#setcontroltext)|Nastaví text pro zadaný ovládací prvek v dialogovém okně **Otevřít** nebo **Uložit jako** běžný ve stylu Průzkumníka.|
+|[CFileDialog::SetDefExt](#setdefext)|Nastaví výchozí příponu názvu souboru pro běžné dialogové okno **Otevřít** nebo **Uložit jako** v průzkumníku.|
+|[CFileDialog::SetEditBoxText](#seteditboxtext)|Nastaví aktuální text v ovládacím prvku textového pole.|
+|[CFileDialog::SetProperties](#setproperties)|Poskytuje úložiště vlastností, které definuje výchozí hodnoty, které mají být použity pro uloženou položku.|
+|[CFileDialog::SetSelectedControlItem](#setselectedcontrolitem)|Nastaví vybraný stav určité položky ve skupině přepínačů nebo v poli se seznamem, které se nachází v dialogovém okně.|
+|[CFileDialog::SetTemplate](#settemplate)|Nastaví šablonu dialogového `CFileDialog` okna pro objekt.|
+|[CFileDialog::StartVisualGroup](#startvisualgroup)|Deklaruje vizuální skupinu v dialogovém okně. Následná volání jakékoli metody "add" přidávají tyto prvky do této skupiny.|
+|[CFileDialog::UpdateOFNFromShellDialog](#updateofnfromshelldialog)|Aktualizuje data uložená `m_ofn` v členské proměnné tak, aby odpovídala aktuálnímu stavu dialogového okna souboru.|
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Name|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CFileDialog::OnButtonClicked](#onbuttonclicked)|Volá se při kliknutí na tlačítko.|
-|[CFileDialog::OnCheckButtonToggled](#oncheckbuttontoggled)|Volá se, když je zaškrtávací políčko zaškrtnuté nebo nezaškrtnuté.|
-|[CFileDialog::OnControlActivating](#oncontrolactivating)|Volá se, když se ovládací prvek aktivuje.|
-|[CFileDialog::OnFileNameChange](#onfilenamechange)|Zpracovává zprávu WM_NOTIFY CDN_SELCHANGE.|
+|[CFileDialog::OnButtonClicked](#onbuttonclicked)|Volána po klepnutí na tlačítko.|
+|[CFileDialog::OnCheckButtonToggled](#oncheckbuttontoggled)|Volána, když je zaškrtnuto nebo nezaškrtnuto políčko.|
+|[CFileDialog::OnControlAktivace](#oncontrolactivating)|Volána, když je ovládací prvek aktivní.|
+|[cfiledialog::OnFileNameChange](#onfilenamechange)|Zpracovává zprávu CDN_SELCHANGE WM_NOTIFY.|
 |[CFileDialog::OnFileNameOK](#onfilenameok)|Ověří název souboru zadaný v dialogovém okně.|
-|[CFileDialog::OnFolderChange](#onfolderchange)|Zpracovává zprávu WM_NOTIFY CDN_FOLDERCHANGE.|
-|[CFileDialog::OnInitDone](#oninitdone)|Zpracovává zprávu WM_NOTIFY CDN_INITDONE.|
-|[CFileDialog::OnItemSelected](#onitemselected)|Volá se při výběru položky kontejneru.|
-|[CFileDialog::OnLBSelChangedNotify](#onlbselchangednotify)|Umožňuje provádět vlastní akce, když se změní výběr souboru.|
-|[CFileDialog::OnShareViolation](#onshareviolation)|Zpracovává narušení sdílení.|
-|[CFileDialog::OnTypeChange](#ontypechange)|Zpracovává zprávu WM_NOTIFY CDN_TYPECHANGE.|
+|[cfiledialog::onFolderChange](#onfolderchange)|Zpracovává zprávu WM_NOTIFY CDN_FOLDERCHANGE.|
+|[CFileDialog::OnInitDone](#oninitdone)|Zpracovává zprávu CDN_INITDONE WM_NOTIFY.|
+|[CFileDialog::OnItemSelected](#onitemselected)|Volána při výběru položky kontejneru.|
+|[CFileDialog::OnLBSelChangedNotify](#onlbselchangednotify)|Umožňuje provádět vlastní akce při změně výběru souboru.|
+|[cfiledialog::onshareviolation](#onshareviolation)|Zpracovává porušení sdílení.|
+|[cfiledialog::ontypechange](#ontypechange)|Zpracovává zprávu WM_NOTIFY CDN_TYPECHANGE.|
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Name|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CFileDialog::m_ofn](#m_ofn)|Struktura Windows `OPENFILENAME` Poskytuje přístup k základním parametrům dialogového okna souboru.|
+|[CFileDialog::m_ofn](#m_ofn)|Struktura `OPENFILENAME` systému Windows. Poskytuje přístup k základním parametrům dialogového okna souboru.|
 
 ## <a name="remarks"></a>Poznámky
 
-Dialogová okna běžných souborů vám umožňují implementovat dialogová okna pro výběr souborů, například **otevřít soubor** a **Uložit jako**, způsobem, který je konzistentní s normami Windows.
+Běžná dialogová okna souborů umožňují implementovat dialogová okna pro výběr souborů, například **Otevřít soubor** a **Uložit jako**, a to způsobem, který je konzistentní se standardy systému Windows.
 
-Můžete použít `CFileDialog` as s poskytnutým konstruktorem nebo můžete odvodit vlastní třídu dialogových oken z `CFileDialog` a napsat konstruktor, který bude vyhovovat vašim potřebám. V obou případech se tato dialogová okna budou chovat jako standardní dialogová okna knihovny MFC, protože jsou odvozena od [třídy CCommonDialog](../../mfc/reference/ccommondialog-class.md). `CFileDialog`spoléhá na COMMDLG. Soubor DLL, který je součástí systému Windows.
+Můžete použít, `CFileDialog` jak je s konstruktorem k dispozici, nebo `CFileDialog` můžete odvodit vlastní dialogové okno třídy z a napsat konstruktor, aby vyhovoval vašim potřebám. V obou případech se tato dialogová okna budou chovat jako standardní dialogová okna knihovny MFC, protože jsou odvozena z [třídy CCommonDialog](../../mfc/reference/ccommondialog-class.md). `CFileDialog`spoléhá na COMMDLG. Soubor DLL, který je součástí systému Windows.
 
-Vzhled i funkce v `CFileDialog` systému Windows Vista nebo novějším se liší od předchozích verzí systému Windows. Výchozí `CFileDialog` automaticky používá nový styl Windows Vista nebo novější bez změny kódu, pokud je program kompilován a spuštěn v systému Windows Vista nebo novějším. Použijte parametr *bVistaStyle* v konstruktoru k ručnímu přepsání této automatické aktualizace. Výjimkou z dialogových oken automatické aktualizace je přizpůsobená. Nebudou převedeny na nový styl. Další informace o konstruktoru naleznete v tématu [CFileDialog:: CFileDialog](#cfiledialog).
+Vzhled i funkčnost systému `CFileDialog` Windows Vista nebo novější se liší od předchozích verzí systému Windows. Výchozí `CFileDialog` nastavení automaticky použije nový styl systému Windows Vista nebo novější ho bez změn kódu, pokud je program zkompilován a spuštěn v systému Windows Vista nebo novějším. Pomocí parametru *bVistaStyle* v konstruktoru ručně přepište tuto automatickou aktualizaci. Výjimkou z automatické aktualizace jsou přizpůsobená dialogová okna. Nebudou převedeny na nový styl. Další informace o konstruktoru naleznete v tématu [CFileDialog::CFileDialog](#cfiledialog).
 
 > [!NOTE]
->  Systém ID ovládacího prvku se liší v systému Windows Vista nebo novějším z dřívějších verzí Windows při použití `CFileDialog`. Je nutné aktualizovat všechny odkazy na `CFileDialog` ovládací prvky v kódu předtím, než budete moci přenést projekt z dřívější verze systému Windows.
+> Systém ID ovládacího prvku se v systému Windows Vista nebo `CFileDialog`novějším liší od dřívějších verzí systému Windows při použití aplikace . Před přenosem projektu `CFileDialog` ze starší verze systému Windows je nutné aktualizovat všechny odkazy na ovládací prvky v kódu.
 
-Některé `CFileDialog` metody nejsou podporovány v systému Windows Vista nebo novějším. Informace o tom, jestli je metoda podporovaná, najdete v tématu o jednotlivých metodách. Následující zděděné funkce se navíc v systému Windows Vista nebo novějším nepodporují:
+Některé `CFileDialog` metody nejsou v systému Windows Vista nebo novějším podporovány. Informace o tom, zda je metoda podporována, naleznete v tématu jednotlivých metod. Kromě toho nejsou v systému Windows Vista nebo novějších podporovány následující zděděné funkce:
 
 - [CDialog::OnInitDialog](../../mfc/reference/cdialog-class.md#oninitdialog)
 
 - [CDialog::OnSetFont](../../mfc/reference/cdialog-class.md#onsetfont)
 
-Zprávy systému Windows pro třídu `CFileDialog` se liší v závislosti na operačním systému, který používáte. Například systém Windows XP nepodporuje pro třídu `CFileDialog` pole [CDialog::-Cancel](../../mfc/reference/cdialog-class.md#oncancel) a [CDialog:: OnOK –](../../mfc/reference/cdialog-class.md#onok) . Windows Vista a novější operační systémy je ale podporují. Další informace o různých generovaných zprávách a pořadí, ve kterém jsou přijímány, najdete v tématu [CFileDialog Sample: Pořadí](../../overview/visual-cpp-samples.md)událostí protokolování.
+Zprávy systému `CFileDialog` Windows pro třídu se liší v závislosti na operačním systému, který používáte. Systém Windows XP například nepodporuje [cDialog::OnCancel](../../mfc/reference/cdialog-class.md#oncancel) a [CDialog::OnOK](../../mfc/reference/cdialog-class.md#onok) pro třídu. `CFileDialog` Systém Windows Vista a novější operační systémy je však podporují. Další informace o různých zprávách, které jsou generovány, a pořadí, ve kterém jsou přijímány, naleznete v [tématu CFileDialog Sample: Logging Event Order](../../overview/visual-cpp-samples.md).
 
-Chcete-li `CFileDialog` použít objekt, nejprve vytvořte objekt `CFileDialog` pomocí konstruktoru. Po vytvoření dialogového okna můžete nastavit nebo změnit libovolné hodnoty ve struktuře [CFileDialog:: m_ofn](#m_ofn) pro inicializaci hodnot nebo stavů ovládacích prvků dialogového okna. Struktura je typu `OPENFILENAME`. `m_ofn` Další informace najdete v tématu struktura [lpstrFile](/windows/win32/api/commdlg/ns-commdlg-openfilenamew) v Windows SDK.
+Chcete-li `CFileDialog` použít objekt, nejprve `CFileDialog` vytvořte objekt pomocí konstruktoru. Po vytvoření dialogového okna můžete nastavit nebo upravit libovolné hodnoty ve struktuře [CFileDialog::m_ofn](#m_ofn) pro inicializaci hodnot nebo stavů ovládacích prvků dialogového okna. Struktura `m_ofn` je typu `OPENFILENAME`. Další informace naleznete [openfilename](/windows/win32/api/commdlg/ns-commdlg-openfilenamew) struktury v sadě Windows SDK.
 
-Po inicializaci ovládacích prvků dialogového okna zavolejte metodu [CFileDialog::D omodal](#domodal) pro zobrazení dialogového okna tak, aby uživatel mohl zadat cestu a název souboru. `DoModal`Vrátí, zda uživatel kliknul na tlačítko OK (IDOK) nebo zrušit (IDCANCEL). Pokud `DoModal` vrátí IDOK, můžete použít jednu `CFileDialog` z veřejných členských funkcí k načtení informací, které uživatel vloží.
+Po inicializaci ovládacích prvků dialogového okna zavolejte metodu [CFileDialog::DoModal,](#domodal) která zobrazí dialogové okno tak, aby uživatel mohl zadat cestu a název souboru. `DoModal`vrátí, zda uživatel klepnul na tlačítko OK (IDOK) nebo Cancel (IDCANCEL). Pokud `DoModal` vrátí IDOK, můžete použít `CFileDialog` jednu z veřejných členských funkcí k načtení informací vložkou uživatelem.
 
 > [!NOTE]
-> V systému Windows Vista nebo novějším je několik volání [IFileDialog:: SetFileTypes](/windows/win32/api/shobjidl_core/nf-shobjidl_core-ifiledialog-setfiletypes) způsobilo chybu. Druhé volání metody `SetFileTypes` pro všechny instance a `CFileDialog` vrátí E_UNEXPECTED v systému Windows Vista nebo novějším. Některé `CFileDialog` funkce metody volají `SetFileTypes`. Například dvě volání `CFileDialog::DoModal` pro pro stejnou instanci `CFileDialog` vygeneruje [Assert](diagnostic-services.md#assert).
+> V systému Windows Vista nebo novějším způsobí chybu více volání [iFileDialog::SetFileTypes.](/windows/win32/api/shobjidl_core/nf-shobjidl_core-ifiledialog-setfiletypes) Druhá výzva `SetFileTypes` pro všechny instance `CFileDialog` vrátí E_UNEXPECTED v systému Windows Vista nebo novější. Některé `CFileDialog` funkce `SetFileTypes`metody volání . Například dvě volání `CFileDialog::DoModal` pro stejnou instanci `CFileDialog` generuje [ASSERT](diagnostic-services.md#assert).
 
-`CFileDialog`zahrnuje několik chráněných členů, které umožňují vlastní zpracování narušení sdílení, ověření názvu souboru a oznámení o změně seznamu. Tyto chráněné členy jsou funkce zpětného volání, které není nutné používat pro většinu aplikací, protože výchozí zpracování je prováděno automaticky. Položky mapování zpráv pro tyto funkce nejsou vyžadovány, protože jsou standardními virtuálními funkcemi.
+`CFileDialog`obsahuje několik chráněných členů, které umožňují vlastní zpracování narušení sdílení, ověření názvu souboru a oznámení o změně seznamu. Tyto chráněné členy jsou funkce zpětného volání, které většina aplikací není třeba používat, protože výchozí zpracování se provádí automaticky. Položky mapy zpráv pro tyto funkce nejsou vyžadovány, protože se jedná o standardní virtuální funkce.
 
-Pomocí funkce Windows [CommDlgExtendedError](/windows/win32/api/commdlg/nf-commdlg-commdlgextendederror) můžete zjistit, jestli při inicializaci dialogového okna došlo k chybě, a získat další informace o chybě.
+Pomocí funkce Windows [CommDlgExtendedError](/windows/win32/api/commdlg/nf-commdlg-commdlgextendederror) můžete určit, zda došlo k chybě během inicializace dialogového okna a získat další informace o chybě.
 
-Zničení `CFileDialog` objektů je prováděno automaticky. Nemusíte volat funkci [CDialog:: EndDialog](../../mfc/reference/cdialog-class.md#enddialog).
+Zničení `CFileDialog` objektů je zpracováno automaticky. Není třeba volat [CDialog::EndDialog](../../mfc/reference/cdialog-class.md#enddialog).
 
-Chcete-li uživateli umožnit výběr více souborů, nastavte příznak OFN_ALLOWMULTISELECT před voláním `DoModal`. Aby bylo možné přizpůsobit vrácený seznam více názvů souborů, je nutné, abyste zadali vlastní vyrovnávací paměť pro název souboru. To uděláte tak, `m_ofn.lpstrFile` že nahradíte ukazatel na vyrovnávací paměť, kterou jste přidělili, `CFileDialog`po sestavení, ale před `DoModal`voláním.
+Chcete-li uživateli ponechat vybrat více souborů, nastavte příznak OFN_ALLOWMULTISELECT před voláním `DoModal`. Je nutné zadat vlastní vyrovnávací paměť názvu souboru, aby se přizpůsobily vrácený seznam více názvů souborů. To provést nahrazením `m_ofn.lpstrFile` ukazatelem vyrovnávací paměti, které jste přidělili, po vytvoření `CFileDialog`, ale před voláním `DoModal`.
 
-Kromě toho je nutné nastavit `m_ofn.nMaxFile` pomocí počtu znaků ve vyrovnávací paměti, `m_ofn.lpstrFile`na které ukazuje. Pokud nastavíte maximální počet souborů, které mají být vybrány na `n`, je `n * (_MAX_PATH + 1) + 1`požadovaná velikost vyrovnávací paměti. První položka vrácená ve vyrovnávací paměti je cesta ke složce, ve které byly soubory vybrány. V dialogových oknech Windows Vista a vyšších stylech jsou řetězce adresářů a názvů souborů zakončené hodnotou null a za posledním názvem souboru má navíc znak null. Tento formát umožňuje, aby dialogová okna ve stylu Průzkumníka vracela dlouhé názvy souborů, které obsahují mezery. V případě dialogových oken ve starém stylu jsou řetězce adresářů a souborů odděleny mezerami a funkce používá krátké názvy souborů pro názvy souborů s mezerami.
+Kromě toho je `m_ofn.nMaxFile` nutné nastavit pomocí počtu znaků ve `m_ofn.lpstrFile`vyrovnávací paměti, na které je odkazováno . Pokud nastavíte maximální počet souborů, `n`které mají být `n * (_MAX_PATH + 1) + 1`vybrány , bude požadovaná velikost vyrovnávací paměti . První položka vrácená do vyrovnávací paměti je cesta ke složce, kde byly vybrány soubory. V dialogových oknech systému Windows Vista nebo novějším stylu jsou řetězce názvů adresářů a souborů ukončeny hodnotou null s extra nulovým znakem za názvem posledního souboru. Tento formát umožňuje dialogovým oknům ve stylu průzkumníka vrátit dlouhé názvy souborů, které obsahují mezery. U starých dialogových oken jsou řetězce adresářů a názvů souborů odděleny mezerami a funkce používá krátké názvy souborů pro názvy souborů s mezerami.
 
-Následující příklad ukazuje, jak použít vyrovnávací paměť pro načtení a výpis více názvů souborů.
+Následující příklad ukazuje, jak pomocí vyrovnávací paměti načíst a seznam více názvů souborů.
 
 [!code-cpp[NVC_MFCFiles#23](../../atl-mfc-shared/reference/codesnippet/cpp/cfiledialog-class_1.cpp)]
 
-Chcete-li změnit velikost vyrovnávací paměti v reakci na uživatele, který vybírá více názvů souborů, musíte odvodit `CFileDialog` novou třídu z a přepsat metodu [CFileDialog:: OnFileNameChange](#onfilenamechange) .
+Chcete-li změnit velikost vyrovnávací paměti v odpovědi na to, že `CFileDialog` uživatel vybere více názvů souborů, musíte odvodit novou třídu z metody [CFileDialog::OnFileNameChange](#onfilenamechange) a přepsat ji.
 
-Pokud odvodit novou třídu z `CFileDialog`, můžete použít mapu zpráv pro zpracování všech zpráv. Chcete-li zvětšit výchozí zpracování zprávy, odvodit třídu `CFileDialog`z, přidat do nové třídy mapu zprávy a poskytnout členské funkce pro nové zprávy. K přizpůsobení dialogového okna není nutné zadávat funkci zavěšení.
+Pokud odvodíte `CFileDialog`novou třídu z aplikace , můžete ke zpracování všech zpráv použít mapu zpráv. Chcete-li rozšířit výchozí zpracování zpráv, odvodit třídu z `CFileDialog`, přidat mapu zpráv do nové třídy a poskytnout členské funkce pro nové zprávy. Není třeba zadat funkci zavěšení k přizpůsobení dialogového okna.
 
-Chcete-li přizpůsobit dialogové okno, odvodit třídu `CFileDialog`z, poskytnout vlastní šablonu dialogového okna a přidat mapu zpráv pro zpracování zpráv s oznámením z rozšířených ovládacích prvků. Předejte všechny nezpracované zprávy do základní třídy. Funkci zavěšení není nutné přizpůsobovat.
+Chcete-li dialogové okno přizpůsobit, `CFileDialog`odvoděte třídu z aplikace , zadejte vlastní šablonu dialogového okna a přidejte mapu zpráv pro zpracování zpráv s oznámením z rozšířených ovládacích prvků. Předají všechny nezpracované zprávy do základní třídy. Není třeba přizpůsobit funkci háku.
 
-Pokud používáte styl `CFileDialog`Windows Vista nebo novější, nemůžete použít šablony zpráv a dialogová okna. Místo toho je nutné použít rozhraní COM pro podobné funkce.
+Používáte-li systém Windows Vista nebo `CFileDialog`novější styl aplikace , nelze použít mapy zpráv a šablony dialogových oken. Místo toho je nutné použít rozhraní COM pro podobné funkce.
 
-Další informace o tom, jak používat `CFileDialog`, najdete v tématu [společné třídy dialogových oken](../../mfc/common-dialog-classes.md).
+Další informace o použití `CFileDialog`naleznete v [tématu Common Dialog Classes](../../mfc/common-dialog-classes.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[CObject](../../mfc/reference/cobject-class.md)
+[CObjekt](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[CCmdCíl](../../mfc/reference/ccmdtarget-class.md)
 
-[CWnd](../../mfc/reference/cwnd-class.md)
+[Cwnd](../../mfc/reference/cwnd-class.md)
 
-[CDialog](../../mfc/reference/cdialog-class.md)
+[Cdialog](../../mfc/reference/cdialog-class.md)
 
 [CCommonDialog](../../mfc/reference/ccommondialog-class.md)
 
@@ -300,11 +300,11 @@ Další informace o tom, jak používat `CFileDialog`, najdete v tématu [spole�
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxdlgs. h
+**Záhlaví:** afxdlgs.h
 
-##  <a name="addcheckbutton"></a>CFileDialog::AddCheckButton
+## <a name="cfiledialogaddcheckbutton"></a><a name="addcheckbutton"></a>CFileDialog::AddCheckButton
 
-Přidá k dialogovému oknu tlačítko pro kontrolu.
+Přidá do dialogového okna tlačítko kontroly.
 
 ```
 HRESULT AddCheckButton(
@@ -316,17 +316,17 @@ HRESULT AddCheckButton(
 ### <a name="parameters"></a>Parametry
 
 *dwIDCtl*<br/>
-ID tlačítka pro kontrolu, které se má přidat
+ID tlačítka zaškrtnutí, které chcete přidat.
 
 *strLabel*<br/>
-Název tlačítka pro kontrolu.
+Název kontrolního tlačítka.
 
-*bChecked*<br/>
-Logická hodnota označující aktuální stav tlačítka pro kontrolu. TRUE, pokud je zaškrtnuto; NEPRAVDA, jinak
+*bZaškrtnuto*<br/>
+Logická hodnota označující aktuální stav tlačítka kontroly. PRAVDA, pokud je zaškrtnuto; FALSE jinak
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="addcombobox"></a>CFileDialog::AddComboBox
+## <a name="cfiledialogaddcombobox"></a><a name="addcombobox"></a>CFileDialog::AddComboBox
 
 Přidá do dialogového okna pole se seznamem.
 
@@ -337,11 +337,11 @@ HRESULT AddComboBox(DWORD dwIDCtl);
 ### <a name="parameters"></a>Parametry
 
 *dwIDCtl*<br/>
-ID pole se seznamem, které se má přidat
+ID pole se seznamem přidat.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="addcontrolitem"></a>CFileDialog::AddControlItem
+## <a name="cfiledialogaddcontrolitem"></a><a name="addcontrolitem"></a>CFileDialog::AddControlItem
 
 Přidá položku do ovládacího prvku kontejneru v dialogovém okně.
 
@@ -355,19 +355,19 @@ HRESULT AddControlItem(
 ### <a name="parameters"></a>Parametry
 
 *dwIDCtl*<br/>
-ID ovládacího prvku kontejneru, do kterého se má přidat položka
+ID ovládacího prvku kontejneru přidat položku.
 
-*dwIDItem*<br/>
-ID položky
+*dwIDPoložka*<br/>
+ID položky.
 
 *strLabel*<br/>
-Text položky
+Text položky.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="addeditbox"></a>CFileDialog::AddEditBox
+## <a name="cfiledialogaddeditbox"></a><a name="addeditbox"></a>CFileDialog::AddEditBox
 
-Přidá do dialogového okna textové pole.
+Přidá do dialogového okna dialogové pole.
 
 ```
 HRESULT AddEditBox(
@@ -378,14 +378,14 @@ HRESULT AddEditBox(
 ### <a name="parameters"></a>Parametry
 
 *dwIDCtl*<br/>
-ID pole pro úpravy, které se má přidat
+ID textového pole, které chcete přidat.
 
 *strText*<br/>
-Název pole pro úpravy
+Název pole pro úpravy.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="addmenu"></a>CFileDialog:: PřidatNabídku
+## <a name="cfiledialogaddmenu"></a><a name="addmenu"></a>CFileDialog::AddMenu
 
 Přidá nabídku do dialogového okna.
 
@@ -398,16 +398,16 @@ HRESULT AddMenu(
 ### <a name="parameters"></a>Parametry
 
 *dwIDCtl*<br/>
-ID nabídky, která se má přidat
+ID nabídky, kterou chcete přidat.
 
 *strLabel*<br/>
-Název nabídky
+Název nabídky.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="addplace"></a>CFileDialog::AddPlace
+## <a name="cfiledialogaddplace"></a><a name="addplace"></a>CFileDialog::Přidat místo
 
-Přidá složku do seznamu míst, která jsou k dispozici pro uživatele k otevření nebo uložení položek.
+Přidá složku do seznamu míst, která má uživatel k dispozici k otevření nebo uložení položek.
 
 ```
 void AddPlace(
@@ -421,18 +421,18 @@ void AddPlace(
 
 ### <a name="parameters"></a>Parametry
 
-*lpszFolder*<br/>
-Cesta ke složce, která má být uživateli k dispozici. Může to být jenom složka.
+*lpszSložka*<br/>
+Cesta ke složce, která má být zpřístupněna uživateli. Může se jedná pouze o složku.
 
 *fdap*<br/>
-Určuje, kde je složka umístěna v seznamu.
+Určuje, kam je složka umístěna v seznamu.
 
 *psi*<br/>
-Ukazatel na IShellItem, který představuje složku, která má být uživateli k dispozici. Může to být jenom složka.
+Ukazatel na položku IShellItem, která představuje složku, která má být zpřístupněna uživateli. Může se jedná pouze o složku.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="addpushbutton"></a>CFileDialog::AddPushButton
+## <a name="cfiledialogaddpushbutton"></a><a name="addpushbutton"></a>CFileDialog::AddPushButton
 
 Přidá do dialogu tlačítko.
 
@@ -445,16 +445,16 @@ HRESULT AddPushButton(
 ### <a name="parameters"></a>Parametry
 
 *dwIDCtl*<br/>
-ID tlačítka, které se má přidat
+ID tlačítka, které chcete přidat.
 
 *strLabel*<br/>
-Název tlačítka
+Název tlačítka.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="addradiobuttonlist"></a>CFileDialog::AddRadioButtonList
+## <a name="cfiledialogaddradiobuttonlist"></a><a name="addradiobuttonlist"></a>CFileDialog::AddRadioButtonList
 
-Přidá do dialogového okna možnost (také označované jako přepínač).
+Přidá do dialogu skupinu přepínačů (označované také jako přepínací tlačítko).
 
 ```
 HRESULT AddRadioButtonList(DWORD dwIDCtl);
@@ -463,13 +463,13 @@ HRESULT AddRadioButtonList(DWORD dwIDCtl);
 ### <a name="parameters"></a>Parametry
 
 *dwIDCtl*<br/>
-ID skupiny přepínačů, která se má přidat
+ID skupiny přepínačů, které chcete přidat.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="addseparator"></a>CFileDialog::AddSeparator
+## <a name="cfiledialogaddseparator"></a><a name="addseparator"></a>CFileDialog::Oddělovač přidání
 
-Přidá oddělovač do dialogového okna.
+Přidá do dialogu oddělovač.
 
 ```
 HRESULT AddSeparator(DWORD dwIDCtl);
@@ -478,13 +478,13 @@ HRESULT AddSeparator(DWORD dwIDCtl);
 ### <a name="parameters"></a>Parametry
 
 *dwIDCtl*<br/>
-ID oddělovače, který se má přidat
+ID oddělovače přidat.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="addtext"></a>CFileDialog::AddText
+## <a name="cfiledialogaddtext"></a><a name="addtext"></a>CFileDialog::AddText
 
-Přidá text do dialogového okna.
+Přidá do dialogu text.
 
 ```
 HRESULT AddText(
@@ -495,16 +495,16 @@ HRESULT AddText(
 ### <a name="parameters"></a>Parametry
 
 *dwIDCtl*<br/>
-ID textu, který se má přidat
+ID textu, který chcete přidat.
 
 *strText*<br/>
-Název textu
+Textový název.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="applyofntoshelldialog"></a>CFileDialog::ApplyOFNToShellDialog
+## <a name="cfiledialogapplyofntoshelldialog"></a><a name="applyofntoshelldialog"></a>CFileDialog::ApplyOFNToShellDialog
 
-Aktualizuje aktuální stav [CFileDialog](../../mfc/reference/cfiledialog-class.md) na základě hodnot uložených v `m_ofn` datové struktuře.
+Aktualizuje aktuální stav [CFileDialog](../../mfc/reference/cfiledialog-class.md) na základě hodnot `m_ofn` uložených v datové struktuře.
 
 ```
 void ApplyOFNToShellDialog();
@@ -512,19 +512,19 @@ void ApplyOFNToShellDialog();
 
 ### <a name="remarks"></a>Poznámky
 
-Ve verzích Windows před Windows Vista byla struktura dat členských [lpstrFile](/previous-versions/windows/embedded/ms911906\(v=msdn.10\)) průběžně synchronizovaná se stavem `CFileDialog`. Jakékoli změny členské proměnné [m_ofn](#m_ofn) byly okamžitě promítnuty do stavu dialogového okna. Také všechny změny stavu dialogového okna aktualizují `m_ofn` členskou proměnnou okamžitě.
+Ve verzích systému Windows před systémem Windows Vista byla datová struktura `CFileDialog`člena [OPENFILENAME](/previous-versions/windows/embedded/ms911906\(v=msdn.10\)) průběžně synchronizována se stavem . Všechny změny proměnné [m_ofn](#m_ofn) člen se okamžitě projevily ve stavu dialogového okna. Všechny změny stavu dialogového okna také okamžitě `m_ofn` aktualizují proměnnou člena.
 
-V systému Windows Vista nebo novějších nejsou hodnoty v `m_ofn` členské proměnné a stavu `CFileDialog` pro synchronizaci zaručeny. Tato funkce vynutí aktualizaci stavu `CFileDialog` , aby `m_ofn` odpovídalo struktuře. Systém Windows volá tuto funkci automaticky během [CFileDialog::D omodal](#domodal).
+V systému Windows Vista nebo `m_ofn` novějším není `CFileDialog` zaručeno, že hodnoty v členské proměnné a stavu členské proměnné budou synchronizovány. Tato funkce vynutí `CFileDialog` stav aktualizovat tak, aby odpovídaly `m_ofn` struktury. Systém Windows volá tuto funkci automaticky během [CFileDialog::DoModal](#domodal).
 
-Další informace o tom, jak použít `CFileDialog` třídu v systému Windows Vista nebo novější, naleznete v tématu [Třída CFileDialog](../../mfc/reference/cfiledialog-class.md).
+Další informace o použití `CFileDialog` třídy v systému Windows Vista nebo novějším naleznete v [tématu CFileDialog Class](../../mfc/reference/cfiledialog-class.md).
 
 ### <a name="example"></a>Příklad
 
-  Podívejte se na příklad pro [CFileDialog:: UpdateOFNFromShellDialog](#updateofnfromshelldialog).
+  Viz příklad [cfiledialog::UpdateOFNFromShellDialog](#updateofnfromshelldialog).
 
-##  <a name="cfiledialog"></a>CFileDialog::CFileDialog
+## <a name="cfiledialogcfiledialog"></a><a name="cfiledialog"></a>CFileDialog::CFileDialog
 
-Voláním této funkce vytvoříte standardní dialogové okno souboru systému Windows.
+Volánítéto funkce k vytvoření standardního dialogového okna soubor systému Windows.
 
 ```
 explicit CFileDialog(
@@ -540,63 +540,63 @@ explicit CFileDialog(
 
 ### <a name="parameters"></a>Parametry
 
-*bOpenFileDialog*<br/>
-pro Parametr, který určuje typ dialogového okna, který se má vytvořit. Nastavte ji na TRUE pro vytvoření dialogového okna **otevřít soubor** . Nastavte na hodnotu FALSE, chcete-li vytvořit **soubor uložit jako** .
+*bOtevřítdialog*<br/>
+[v] Parametr, který určuje, jaký typ dialogového okna chcete vytvořit. Nastavte ji na HODNOTU TRUE, aby se vytvořilo dialogové okno **Otevřít soubor.** Nastavte ji na HODNOTU NEPRAVDA, chcete-li vytvořit dialogové okno **Uložit jako soubor.**
 
 *lpszDefExt*<br/>
-pro Výchozí přípona názvu souboru. Pokud uživatel neobsahuje známé rozšíření (které má v počítači uživatele přidružení), do pole název souboru se automaticky připojí přípona určená nástrojem *lpszDefExt* . Pokud má tento parametr hodnotu NULL, není připojena žádná přípona.
+[v] Výchozí přípona názvu souboru. Pokud uživatel nezahrne známou příponu (tu, která má přidružení v počítači uživatele) do pole Název souboru, bude k názvu souboru automaticky připojena přípona určená *lpszDefExt.* Pokud je tento parametr NULL, není připojeno žádné rozšíření.
 
-*lpszFileName*<br/>
-pro Počáteční název souboru, který se zobrazí v poli název souboru. Pokud má hodnotu NULL, neobjeví se žádný počáteční název souboru.
+*název souboru lpsz*<br/>
+[v] Počáteční název souboru, který se zobrazí v poli Název souboru. Pokud null, nezobrazí se žádný název počátečního souboru.
 
 *dwFlags*<br/>
-pro Kombinace jednoho nebo více příznaků, které lze použít k přizpůsobení dialogového okna. Popis těchto příznaků naleznete v tématu struktura [lpstrFile](/windows/win32/api/commdlg/ns-commdlg-openfilenamew) v Windows SDK. Pokud upravíte `m_ofn.Flags` člena struktury, použijte ve svých změnách bitový operátor OR, abyste zachovali výchozí chování beze změny.
+[v] Kombinace jednoho nebo více příznaků, které můžete použít k přizpůsobení dialogového okna. Popis těchto příznaků naleznete v části [OpenFILENAME](/windows/win32/api/commdlg/ns-commdlg-openfilenamew) ve struktuře Windows SDK. Pokud změníte `m_ofn.Flags` člen struktury, použijte bitový operátor OR ve změnách, aby výchozí chování zůstalo beze změny.
 
-*lpszFilter*<br/>
-pro Řada dvojic řetězců, které určují filtry, které můžete použít na soubor. Pokud zadáte filtry souborů, v seznamu soubory se zobrazí pouze soubory, které odpovídají kritériím filtru. Další informace o tom, jak pracovat s filtry souborů, najdete v části s poznámkami.
+*lpszFiltr*<br/>
+[v] Řada párů řetězců, které určují filtry, které můžete použít na soubor. Pokud zadáte filtry souborů, zobrazí se v seznamu Soubory pouze soubory, které odpovídají kritériím filtru. Další informace o práci s filtry souborů naleznete v části Poznámky.
 
 *pParentWnd*<br/>
-pro Ukazatel na nadřazené nebo vlastnický dialog v dialogovém okně soubor.
+[v] Ukazatel na nadřazené nebo vlastníjméno okna dialogového okna souboru.
 
-*nenulového dwSize funkci*<br/>
-pro Velikost `OPENFILENAME` struktury Tato hodnota závisí na verzi operačního systému. Knihovna MFC použila tento parametr k určení vhodného druhu dialogového okna k vytvoření. Výchozí velikost 0 znamená, že kód knihovny MFC určí správnou velikost dialogového okna pro použití v závislosti na verzi operačního systému, ve které je program spuštěn.
+*dwVelikost*<br/>
+[v] Velikost `OPENFILENAME` struktury. Tato hodnota závisí na verzi operačního systému. Knihovna MFC použila tento parametr k určení vhodného druhu dialogového okna, které chcete vytvořit. Výchozí velikost 0 znamená, že kód knihovny MFC určí správnou velikost dialogového okna, která se má použít na základě verze operačního systému, na které je program spuštěn.
 
 *bVistaStyle*<br/>
-pro **Poznámka:** Tento parametr je k dispozici v aplikaci Visual Studio 2008 a novější a způsobí, že se dialogové okno nového stylu používá pouze v případě, že používáte systém Windows Vista nebo novější.
+[v] **Poznámka:** Tento parametr je k dispozici v sadě Visual Studio 2008 a novější a způsobí, že dialogové okno nového stylu lze použít pouze v případě, že používáte systém Windows Vista nebo novější.
 
-Parametr, který určuje styl dialogového okna souboru. Nastavte na hodnotu TRUE, chcete-li použít nové dialogy pro soubory ve stylu Vista. V opačném případě budou použity staré styly dialogových oken. Další informace o běhu v systému Vista najdete v části s poznámkami.
+Parametr, který určuje styl dialogového okna souboru. Nastavte hodnotu TRUE, aby se používala nová dialogová okna souboru stylu Vista. V opačném případě bude použit starý styl dialogových oken. Další informace o spuštění v části Vista naleznete v části Poznámky.
 
 ### <a name="remarks"></a>Poznámky
 
-Dialogové okno **otevřít soubor** nebo **soubor uložit jako** je konstruováno v závislosti na hodnotě *bOpenFileDialog*.
+V závislosti na hodnotě *bOpenFileDialog*je vytvořen dialogové okno **Otevřít soubor** nebo **Uložit jako** soubor.
 
-Zadání výchozího rozšíření pomocí *lpszDefExt* nemusí způsobit očekávané chování, protože je zřídka předvídatelné, jaká rozšíření mají přidružení souborů v počítači uživatele. Pokud potřebujete větší kontrolu nad připojením výchozího rozšíření, můžete odvodit svou vlastní třídu z `CFileDialog`a `CFileDialog::OnFileNameOK` přepsat metodu pro provádění vlastního zpracování rozšíření.
+Zadání výchozí přípony pomocí *lpszDefExt* nemusí způsobit chování, které očekáváte, protože je zřídka předvídatelné, jaké přípony mají přidružení souborů v počítači uživatele. Pokud potřebujete větší kontrolu nad připojením výchozí rozšíření, můžete odvodit vlastní třídy z `CFileDialog`aplikace a přepsat metodu `CFileDialog::OnFileNameOK` k provedení vlastní zpracování rozšíření.
 
-Chcete-li uživateli povolit výběr více souborů, nastavte příznak OFN_ALLOWMULTISELECT před voláním [DoModal](#domodal). Pro uložení vráceného seznamu více názvů souborů je nutné uvést vlastní vyrovnávací paměť pro název souboru. To uděláte tak, `m_ofn.lpstrFile` že nahradíte ukazatel na vyrovnávací paměť, kterou jste přidělili, po sestavení [CFileDialog](../../mfc/reference/cfiledialog-class.md), ale před `DoModal`voláním. Kromě toho je nutné nastavit `m_ofn.nMaxFile` s počtem znaků ve vyrovnávací paměti, `m_ofn.lpstrFile`na které ukazuje. Pokud nastavíte maximální počet souborů, které se mají vybrat na *n*, je `n`požadovaná velikost vyrovnávací paměti * (_MAX_PATH + 1) + 1. Příklad:
+Chcete-li uživateli povolit výběr více souborů, nastavte příznak OFN_ALLOWMULTISELECT před [voláním domodální](#domodal). Chcete-li uložit vrácený seznam více názvů souborů, je nutné zadat vlastní vyrovnávací paměť názvu souboru. To provést nahrazením `m_ofn.lpstrFile` ukazatelem vyrovnávací paměti, které jste přidělili, po vytvoření [CFileDialog](../../mfc/reference/cfiledialog-class.md), ale před voláním `DoModal`. Kromě toho je `m_ofn.nMaxFile` nutné nastavit s počtem znaků ve `m_ofn.lpstrFile`vyrovnávací paměti, na které je odkazováno . Pokud nastavíte maximální počet souborů, *n*které mají být `n`vybrány na n , potřebná velikost vyrovnávací paměti je *(_MAX_PATH + 1) + 1. Příklad:
 
 [!code-cpp[NVC_MFCFiles#23](../../atl-mfc-shared/reference/codesnippet/cpp/cfiledialog-class_1.cpp)]
 
-Chcete-li uživateli povolit změnu velikosti dialogového okna ve stylu Průzkumníka pomocí myši nebo klávesnice, nastavte příznak OFN_ENABLESIZING. Nastavení tohoto příznaku je nezbytné jenom v případě, že zadáváte proceduru zavěšení nebo vlastní šablonu. Příznak funguje pouze v dialogovém okně se stylem Průzkumníka; Nepovedlo se změnit velikost dialogových oken ve starém stylu.
+Chcete-li uživateli povolit změnit velikost dialogového okna ve stylu průzkumníka pomocí myši nebo klávesnice, nastavte příznak OFN_ENABLESIZING. Nastavení tohoto příznaku je nutné pouze v případě, že zadáte proceduru zavěšení nebo vlastní šablonu. Příznak funguje pouze s dialogovým oknem ve stylu průzkumníka; velikost dialogového okna starého stylu nelze změnit.
 
-Parametr *lpszFilter* slouží k určení typu názvu souboru, který musí být v seznamu souborů zobrazen. První řetězec ve dvojici řetězců popisuje filtr. druhý řetězec označuje příponu názvu souboru, která se má použít. Více rozšíření lze zadat pomocí středníku (znak ";") jako oddělovače. Řetězec končí dvěma znaky&#124;' ', následované znakem null. Pro tento parametr můžete použít také objekt [CString](../../atl-mfc-shared/using-cstring.md) .
+Parametr *lpszFilter* se používá k určení typu názvu souboru, který musí být soubor zobrazen v seznamu souborů. První řetězec v páru řetězců popisuje filtr; druhý řetězec označuje příponu názvu souboru, která má být použita. Více rozšíření může být zadáno pomocí středníku (znak ';' jako oddělovač. Řetězec končí dvěma znaky &#124;, následovaným znakem NULL. Pro tento parametr můžete také použít objekt [CString.](../../atl-mfc-shared/using-cstring.md)
 
-Například Microsoft Excel umožňuje uživatelům otevírat soubory s příponou. xlc (graf) nebo. xls (list), a to mimo jiné. Filtr pro Excel může být zapsaný jako:
+Aplikace Microsoft Excel například umožňuje uživatelům mimo jiné otevírat soubory s příponami .xlc (graf) nebo XLS (list). Filtr pro aplikaci Excel může být napsán takto:
 
 [!code-cpp[NVC_MFCFiles#24](../../atl-mfc-shared/reference/codesnippet/cpp/cfiledialog-class_2.cpp)]
 
-Pokud však plánujete použít tento řetězec k přímé aktualizaci `OPENFILENAME` struktury, měli byste své řetězce místo svislých pruhů ('&#124;') vyhodnotit pomocí znaku null, ' \ 0 '.
+Pokud však chcete použít tento řetězec `OPENFILENAME` k přímé aktualizaci struktury, měli byste vymezit řetězce nulovým znakem \0 namísto svislých pruhů (&#124;).
 
-Parametr *bVistaStyle* se dá použít jenom v případě, že je spuštěný v systému Windows Vista nebo novějším. V dřívějších verzích Windows se tento parametr ignoruje. Pokud je *bVistaStyle* nastavené na hodnotu true, použije se při kompilování programu v sadě Visual Studio 2008 nebo novější **dialog nový soubor** ve stylu Vista. V opačném případě bude použit předchozí **dialog souboru** stylu MFC.
+Parametr *bVistaStyle* je použitelný pouze v případě, že je spuštěn v systému Windows Vista nebo novějším. V dřívějších verzích systému Windows je tento parametr ignorován. Pokud je *hodnota bVistaStyle* nastavena na hodnotu TRUE, bude při kompilaci programu pomocí sady Visual Studio 2008 nebo novější použit nový dialog souborů ve stylu **systému** Vista. V opačném případě bude použit předchozí **dialog souborů** ve stylu knihovny MFC.
 
-Šablony dialogových oken nejsou podporovány v dialogových oknech založených na *bVistaStyle* .
+Šablony dialogů nejsou podporovány v dialogových oknech založených na *stylu bVistaStyle*
 
 ### <a name="example"></a>Příklad
 
-  Podívejte se na příklad pro [CFileDialog::D omodal](#domodal).
+  Viz příklad [cfiledialog::DoModal](#domodal).
 
-##  <a name="domodal"></a>CFileDialog::D oModal
+## <a name="cfiledialogdomodal"></a><a name="domodal"></a>CFileDialog::DoModální
 
-Voláním této funkce zobrazíte dialogové okno běžný soubor systému Windows a povolíte uživateli procházet soubory a adresáře a zadat název souboru.
+Voláním této funkce zobrazíte dialogové okno Společný soubor systému Windows a umožníte uživateli procházet soubory a adresáře a zadávat název souboru.
 
 ```
 virtual INT_PTR DoModal();
@@ -604,27 +604,27 @@ virtual INT_PTR DoModal();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-IDOK nebo IDCANCEL. Pokud se vrátí IDCANCEL, zavolejte funkci Windows [CommDlgExtendedError](/windows/win32/api/commdlg/nf-commdlg-commdlgextendederror) a určete, jestli došlo k chybě.
+IDOK nebo IDCANCEL. Pokud je vrácena funkce IDCANCEL, zavolejte funkci Windows [CommDlgExtendedError](/windows/win32/api/commdlg/nf-commdlg-commdlgextendederror) a zjistěte, zda došlo k chybě.
 
-IDOK a IDCANCEL jsou konstanty, které označují, zda uživatel vybral tlačítko OK nebo Storno.
+IDOK a IDCANCEL jsou konstanty, které označují, zda uživatel zvolil tlačítko OK nebo Cancel.
 
 ### <a name="remarks"></a>Poznámky
 
-Chcete-li inicializovat různé možnosti dialogového okna souboru nastavením členů `m_ofn` struktury, měli byste to provést před voláním `DoModal`, ale po sestavení objektu dialogového okna.
+Chcete-li inicializovat různé možnosti dialogového okna `m_ofn` souboru nastavením členů `DoModal`struktury, měli byste to provést před voláním , ale po vytvoření objektu dialogového okna.
 
-Například pokud chcete, aby uživatel mohl vybrat více souborů, nastavte před voláním `DoModal`příznak OFN_ALLOWMULTISELECT, jak je znázorněno v příkladu kódu v tomto tématu.
+Chcete-li například povolit uživateli vybrat více souborů, nastavte `DoModal`příznak OFN_ALLOWMULTISELECT před voláním , jak je znázorněno v příkladu kódu v tomto tématu.
 
-Když uživatel klikne na tlačítko OK nebo Storno v dialogovém okně nebo vybere možnost Zavřít v nabídce ovládacího prvku dialogového okna, ovládací prvek se vrátí do vaší aplikace. Potom můžete zavolat jiné členské funkce a načíst nastavení nebo informace o vstupech uživatele do dialogového okna.
+Když uživatel klepne na tlačítko OK nebo Zrušit dialogové okno nebo vybere možnost Zavřít z ovládací nabídky dialogového okna, ovládací prvek se vrátí do vaší aplikace. Potom můžete volat další členské funkce a načíst nastavení nebo informace, které uživatel zadá do dialogového okna.
 
-`DoModal`je virtuální funkce přepsaná z třídy `CDialog`.
+`DoModal`je virtuální funkce přepsána z třídy `CDialog`.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCFiles#25](../../atl-mfc-shared/reference/codesnippet/cpp/cfiledialog-class_3.cpp)]
 
-##  <a name="enableopendropdown"></a>CFileDialog::EnableOpenDropDown
+## <a name="cfiledialogenableopendropdown"></a><a name="enableopendropdown"></a>CFileDialog::Povolitopendropdown
 
-Povoluje rozevírací seznam v tlačítku otevřít nebo uložit v dialogovém okně.
+Povolí rozevírací seznam na tlačítku Otevřít nebo Uložit v dialogovém okně.
 
 ```
 HRESULT EnableOpenDropDown(DWORD dwIDCtl);
@@ -633,13 +633,13 @@ HRESULT EnableOpenDropDown(DWORD dwIDCtl);
 ### <a name="parameters"></a>Parametry
 
 *dwIDCtl*<br/>
-ID rozevíracího seznamu
+ID rozevíracího seznamu.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="endvisualgroup"></a>CFileDialog::EndVisualGroup
+## <a name="cfiledialogendvisualgroup"></a><a name="endvisualgroup"></a>CFileDialog::EndVisualGroup
 
-Zastaví přidávání prvků do skupiny vizuálů v dialogovém okně.
+Zastaví přidávání prvků do vizuální skupiny v dialogovém okně.
 
 ```
 HRESULT EndVisualGroup();
@@ -647,13 +647,13 @@ HRESULT EndVisualGroup();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí S_OK, pokud bylo úspěšné. v opačném případě se jedná o chybovou hodnotu.
+Vrátí S_OK v případě úspěchu. chybová hodnota jinak.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="getcheckbuttonstate"></a>CFileDialog::GetCheckButtonState
+## <a name="cfiledialoggetcheckbuttonstate"></a><a name="getcheckbuttonstate"></a>CFileDialog::GetCheckButtonState
 
-Načte aktuální stav tlačítka pro kontrolu (zaškrtávací políčko) v dialogovém okně.
+Načte aktuální stav zaškrtávacího tlačítka (zaškrtávacího políčka) v dialogovém okně.
 
 ```
 HRESULT GetCheckButtonState(
@@ -664,16 +664,16 @@ HRESULT GetCheckButtonState(
 ### <a name="parameters"></a>Parametry
 
 *dwIDCtl*<br/>
-ID zaškrtávacího políčka
+ID zaškrtávacího políčka.
 
-*bChecked*<br/>
-Stav zaškrtávacího políčka. Hodnota TRUE označuje zaškrtnuto; Hodnota FALSE označuje nezaškrtnuté.
+*bZaškrtnuto*<br/>
+Stav zaškrtávacího políčka. TRUE označuje zaškrtnuto; FALSE označuje nezaškrtnuté.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="getcontrolitemstate"></a>CFileDialog::GetControlItemState
+## <a name="cfiledialoggetcontrolitemstate"></a><a name="getcontrolitemstate"></a>CFileDialog::GetControlItemState
 
-Načte aktuální stav položky v ovládacím prvku kontejneru, který se nachází v dialogovém okně.
+Načte aktuální stav položky v ovládacím prvku kontejneru nalezeném v dialogovém okně.
 
 ```
 HRESULT GetControlItemState(
@@ -685,19 +685,19 @@ HRESULT GetControlItemState(
 ### <a name="parameters"></a>Parametry
 
 *dwIDCtl*<br/>
-ID ovládacího prvku kontejneru
+ID ovládacího prvku kontejneru.
 
-*dwIDItem*<br/>
-ID položky
+*dwIDPoložka*<br/>
+ID položky.
 
 *dwState*<br/>
-Odkaz na proměnnou, která přijímá jednu z více hodnot z výčtu CDCONTROLSTATE, která označuje aktuální stav ovládacího prvku.
+Odkaz na proměnnou, která přijímá jednu z více hodnot z výčtu CDCONTROLSTATE, který označuje aktuální stav ovládacího prvku.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="getcontrolstate"></a>CFileDialog::GetControlState
+## <a name="cfiledialoggetcontrolstate"></a><a name="getcontrolstate"></a>CFileDialog::GetControlState
 
-Načte aktuální viditelnost a povolený stav daného ovládacího prvku.
+Načte aktuální viditelnost a povolené stavy daného ovládacího prvku.
 
 ```
 HRESULT GetControlState(
@@ -708,16 +708,16 @@ HRESULT GetControlState(
 ### <a name="parameters"></a>Parametry
 
 *dwIDCtl*<br/>
-ID ovládacího prvku
+ID ovládacího prvku.
 
 *dwState*<br/>
-Odkaz na proměnnou, která přijímá jednu nebo více hodnot z výčtu CDCONTROLSTATE, která označuje aktuální stav ovládacího prvku.
+Odkaz na proměnnou, která přijímá jednu nebo více hodnot z výčtu CDCONTROLSTATE, který označuje aktuální stav ovládacího prvku.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="geteditboxtext"></a>CFileDialog::GetEditBoxText
+## <a name="cfiledialoggeteditboxtext"></a><a name="geteditboxtext"></a>CFileDialog::GetEditBoxText
 
-Načte aktuální text v ovládacím prvku textové pole.
+Načte aktuální text v ovládacím prvku textového pole.
 
 ```
 HRESULT GetEditBoxText(
@@ -728,16 +728,16 @@ HRESULT GetEditBoxText(
 ### <a name="parameters"></a>Parametry
 
 *dwIDCtl*<br/>
-ID pole pro úpravy
+ID editačního pole.
 
 *strText*<br/>
-Textová hodnota
+Hodnota textu.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="getfileext"></a>CFileDialog::GetFileExt
+## <a name="cfiledialoggetfileext"></a><a name="getfileext"></a>CFileDialog::GetFileExt
 
-Voláním této funkce načtete rozšíření názvu souboru zadaného do dialogového okna.
+Voláním této funkce načtěte příponu názvu souboru zadaného do dialogového okna.
 
 ```
 CString GetFileExt() const;
@@ -749,13 +749,13 @@ Přípona názvu souboru.
 
 ### <a name="remarks"></a>Poznámky
 
-Například pokud je zadaný název souboru DATA. `GetFileExt` Txt vrátí "txt".
+Pokud je například název zadaného souboru DATA. TXT, `GetFileExt` vrátí "TXT".
 
-Pokud `m_ofn.Flags` má nastavený příznak OFN_ALLOWMULTISELECT, obsahuje tento řetězec sekvenci řetězců zakončených hodnotou null a prvním řetězcem, který je cestou k adresáři vybrané skupiny souborů, a za ním názvy všech souborů vybraných uživatelem. K načtení cest k souborům použijte členské funkce [GetStartPosition](#getstartposition) a [GetNextPathName](#getnextpathname) .
+Pokud `m_ofn.Flags` má OFN_ALLOWMULTISELECT příznak nastaven, tento řetězec obsahuje posloupnost řetězců ukončených nulou, přičemž prvním řetězcem je vybraná cesta k adresáři skupiny souborů následovaná názvy všech souborů vybraných uživatelem. Chcete-li načíst názvy cest souborů, použijte členské funkce [GetStartPosition](#getstartposition) a [GetNextPathName.](#getnextpathname)
 
-##  <a name="getfilename"></a>CFileDialog:: getsoubor
+## <a name="cfiledialoggetfilename"></a><a name="getfilename"></a>CFileDialog::GetFileName
 
-Voláním této funkce načtete název souboru zadaný v dialogovém okně.
+Voláním této funkce načtěte název názvu souboru zadaný v dialogovém okně.
 
 ```
 CString GetFileName() const;
@@ -763,17 +763,17 @@ CString GetFileName() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Název souboru
+Název souboru.
 
 ### <a name="remarks"></a>Poznámky
 
-Název souboru obsahuje předponu i příponu. Například `GetFileName` vrátí "text". DAT pro soubor C:\FILES\TEXT.DAT.
+Název souboru obsahuje předponu i příponu. Například `GetFileName` vrátí "TEXT. DAT" pro soubor C:\FILES\TEXT.DAT.
 
-Pokud `m_ofn.Flags` [má nastavený](#getstartposition) příznak, měli byste zavolat GetStartPosition a GetNextPathName a načíst cestu k souboru. [](#getnextpathname) `OFN_ALLOWMULTISELECT`
+Pokud `m_ofn.Flags` má `OFN_ALLOWMULTISELECT` příznak nastaven, měli byste zavolat [GetStartPosition](#getstartposition) a [GetNextPathName](#getnextpathname) k načtení cesty k souboru.
 
-##  <a name="getfiletitle"></a>CFileDialog::GetFileTitle
+## <a name="cfiledialoggetfiletitle"></a><a name="getfiletitle"></a>CFileDialog::GetFileTitle
 
-Voláním této funkce načtete název souboru zadaného v dialogovém okně.
+Voláním této funkce načtěte název souboru zadaný v dialogovém okně.
 
 ```
 CString GetFileTitle() const;
@@ -781,21 +781,21 @@ CString GetFileTitle() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Název souboru
+Název souboru.
 
 ### <a name="remarks"></a>Poznámky
 
-Název souboru obsahuje pouze předponu bez cesty nebo rozšíření. Například `GetFileTitle` vrátí "text" pro soubor C:\FILES\TEXT.dat.
+Název souboru obsahuje pouze jeho předponu bez cesty nebo přípony. Například `GetFileTitle` vrátí "TEXT" pro soubor C:\FILES\TEXT.DAT.
 
-Pokud `m_ofn.Flags` má nastavený příznak OFN_ALLOWMULTISELECT, obsahuje tento řetězec sekvenci řetězců zakončených hodnotou null a prvním řetězcem, který je cestou k adresáři vybrané skupiny souborů, a za ním názvy všech souborů vybraných uživatelem. Z tohoto důvodu použijte členské funkce [GetStartPosition](#getstartposition) a [GetNextPathName](#getnextpathname) k načtení dalšího názvu souboru v seznamu.
+Pokud `m_ofn.Flags` má OFN_ALLOWMULTISELECT příznak nastaven, tento řetězec obsahuje posloupnost řetězců ukončených nulou, přičemž prvním řetězcem je vybraná cesta k adresáři skupiny souborů následovaná názvy všech souborů vybraných uživatelem. Z tohoto důvodu použijte [getstartposition](#getstartposition) a [GetNextPathName](#getnextpathname) členské funkce načíst další název souboru v seznamu.
 
 ### <a name="example"></a>Příklad
 
-  Podívejte se na příklad pro [CFileDialog::D omodal](#domodal).
+  Viz příklad [cfiledialog::DoModal](#domodal).
 
-##  <a name="getfolderpath"></a>CFileDialog:: GetFolderPath
+## <a name="cfiledialoggetfolderpath"></a><a name="getfolderpath"></a>CFileDialog::GetFolderPath
 
-Zavolejte tuto členskou funkci, aby se načetla cesta aktuálně otevřené složky nebo adresáře pro otevření nebo uložení ve stylu prohlížeče nebo jako společné.
+Voláním této členské funkce načtěte cestu k aktuálně otevřené složce nebo adresáři pro společné dialogové okno Otevřít nebo Uložit jako v průzkumníku.
 
 ```
 CString GetFolderPath() const;
@@ -803,17 +803,17 @@ CString GetFolderPath() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Objekt [CString](../../atl-mfc-shared/reference/cstringt-class.md) obsahující aktuálně otevřenou složku nebo adresář.
+[CString](../../atl-mfc-shared/reference/cstringt-class.md) objekt obsahující aktuálně otevřenou složku nebo adresář.
 
 ### <a name="remarks"></a>Poznámky
 
-Dialogové okno se musí vytvořit se stylem OFN_EXPLORER. v opačném případě se metoda nezdařila s kontrolním výrazem.
+Dialogové okno musí být vytvořeno se stylem OFN_EXPLORER; v opačném případě se metoda nezdaří s kontrolním výrazem.
 
-Tuto metodu můžete zavolat pouze v případě, že se zobrazí dialogové okno. Po zavření dialogového okna nebude tato funkce nadále fungovat a metoda se nezdaří s kontrolním výrazem.
+Tuto metodu můžete volat pouze v případě, že se zobrazí dialogové okno. Po zavření dialogového okna tato funkce již nebude fungovat a metoda se nezdaří s kontrolním výrazem.
 
-##  <a name="getifiledialogcustomize"></a>CFileDialog::GetIFileDialogCustomize
+## <a name="cfiledialoggetifiledialogcustomize"></a><a name="getifiledialogcustomize"></a>cfiledialog::getifiledialogCustomize
 
-Načte ukazatel na vnitřní objekt modelu COM pro daný [CFileDialog](../../mfc/reference/cfiledialog-class.md).
+Načte ukazatel na interní objekt COM pro daný [cfiledialog](../../mfc/reference/cfiledialog-class.md).
 
 ```
 IFileDialogCustomize* GetIFileDialogCustomize();
@@ -821,23 +821,23 @@ IFileDialogCustomize* GetIFileDialogCustomize();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na vnitřní objekt modelu COM pro `CFileDialog`. Je vaše zodpovědnost za vhodné uvolnění tohoto ukazatele.
+Ukazatel na vnitřní objekt COM `CFileDialog`pro . Je vaší odpovědností uvolnit tento ukazatel odpovídajícím způsobem.
 
 ### <a name="remarks"></a>Poznámky
 
-Tuto funkci použijte pouze v systému Windows Vista nebo novějším s objektem, který má *bVistaStyle* nastaven na hodnotu true. Použijete-li tuto funkci, pokud je *BVISTASTYLE* false, vrátí hodnotu null v režimu vydání a vyvolá kontrolní výraz v režimu ladění.
+Tuto funkci používejte pouze v systému Windows Vista nebo novějším s objektem, který má *hodnotu bVistaStyle* nastavenou na hodnotu TRUE. Pokud použijete tuto funkci, když *je bVistaStyle* FALSE, vrátí hodnotu NULL v režimu vydání a vyvolá kontrolní výraz v režimu ladění.
 
 Další informace o `IFileDialogCustomize` rozhraní naleznete v tématu [IFileDialogCustomize](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ifiledialogcustomize).
 
 ### <a name="example"></a>Příklad
 
-Tento příklad načte vnitřní objekt modelu COM. Chcete-li spustit tento příklad kódu, je nutné jej zkompilovat v systému Windows Vista nebo novějším.
+Tento příklad načte vnitřní objekt COM. Chcete-li spustit tento příklad kódu, je nutné jej zkompilovat v systému Windows Vista nebo novějším.
 
 [!code-cpp[NVC_MFC_CFileDialog#4](../../mfc/reference/codesnippet/cpp/cfiledialog-class_4.cpp)]
 
-##  <a name="getifileopendialog"></a>CFileDialog::GetIFileOpenDialog
+## <a name="cfiledialoggetifileopendialog"></a><a name="getifileopendialog"></a>CFileDialog::getifileopendialog
 
-Načte ukazatel na vnitřní objekt modelu COM pro daný `CFileDialog`objekt.
+Načte ukazatel na vnitřní objekt COM `CFileDialog`pro daný .
 
 ```
 IFileOpenDialog* GetIFileOpenDialog();
@@ -845,23 +845,23 @@ IFileOpenDialog* GetIFileOpenDialog();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na vnitřní objekt modelu COM pro `CFileDialog`. Je vaše zodpovědnost za vhodné uvolnění tohoto ukazatele.
+Ukazatel na vnitřní objekt COM `CFileDialog`pro . Je vaší odpovědností uvolnit tento ukazatel odpovídajícím způsobem.
 
 ### <a name="remarks"></a>Poznámky
 
-Tuto funkci použijte pouze v systému Windows Vista nebo novějším s objektem, který má *bVistaStyle* nastaven na hodnotu true. Tato funkce vrátí hodnotu null, `CFileDialog` Pokud se nejedná o **otevřené** dialogové okno, nebo pokud je *bVistaStyle* nastaveno na false. V tomto posledním případě funkce vrací hodnotu NULL pouze v režimu vydání – v režimu ladění vyvolá kontrolní výraz.
+Tuto funkci používejte pouze v systému Windows Vista nebo novějším s objektem, který má *hodnotu bVistaStyle* nastavenou na hodnotu TRUE. Tato funkce vrátí `CFileDialog` hodnotu NULL, pokud se nejedná o dialogové okno **Otevřít** nebo pokud je *hodnota bVistaStyle* nastavena na hodnotu NEPRAVDA. V tomto posledním případě funkce vrátí pouze NULL v režimu vydání - v režimu ladění vyvolá kontrolní výraz.
 
 Další informace o `IFileOpenDialog` rozhraní naleznete v tématu [IFileOpenDialog](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ifileopendialog).
 
 ### <a name="example"></a>Příklad
 
-Tento příklad načte vnitřní objekt modelu COM. Chcete-li spustit tento kód, je nutné jej zkompilovat v systému Windows Vista nebo novějším.
+Tento příklad načte vnitřní objekt COM. Chcete-li spustit tento kód, je nutné jej zkompilovat v systému Windows Vista nebo novějším.
 
 [!code-cpp[NVC_MFC_CFileDialog#2](../../mfc/reference/codesnippet/cpp/cfiledialog-class_5.cpp)]
 
-##  <a name="getifilesavedialog"></a>CFileDialog::GetIFileSaveDialog
+## <a name="cfiledialoggetifilesavedialog"></a><a name="getifilesavedialog"></a>cfiledialog::getifilesavedialog
 
-Načte ukazatel na vnitřní objekt modelu COM pro daný `CFileDialog`objekt.
+Načte ukazatel na vnitřní objekt COM `CFileDialog`pro daný .
 
 ```
 IFileSaveDialog* GetIFileSaveDialog();
@@ -869,23 +869,23 @@ IFileSaveDialog* GetIFileSaveDialog();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na vnitřní objekt modelu COM pro `CFileDialog`. Je vaše zodpovědnost za vhodné uvolnění tohoto ukazatele.
+Ukazatel na vnitřní objekt COM `CFileDialog`pro . Je vaší odpovědností uvolnit tento ukazatel odpovídajícím způsobem.
 
 ### <a name="remarks"></a>Poznámky
 
-Tuto funkci použijte pouze v systému Windows Vista nebo novějším s objektem, který má *bVistaStyle* nastaven na hodnotu true. Tato funkce vrátí hodnotu null, pokud `CFileDialog` není dialogové okno **Uložit** , nebo pokud je *bVistaStyle* nastaveno na false. V tomto posledním případě funkce vrací hodnotu NULL pouze v režimu vydání – v režimu ladění vyvolá kontrolní výraz.
+Tuto funkci používejte pouze v systému Windows Vista nebo novějším s objektem, který má *hodnotu bVistaStyle* nastavenou na hodnotu TRUE. Tato funkce vrátí hodnotu NULL, `CFileDialog` pokud se nejedná o dialogové okno **Uložit** nebo pokud je hodnota *bVistaStyle* nastavena na hodnotu NEPRAVDA. V tomto posledním případě funkce vrátí pouze NULL v režimu vydání - v režimu ladění vyvolá kontrolní výraz.
 
 Další informace o `IFileSaveDialog` rozhraní naleznete v tématu [IFileSaveDialog](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ifilesavedialog).
 
 ### <a name="example"></a>Příklad
 
-Tento příklad načte vnitřní objekt modelu COM. Chcete-li spustit tento příklad kódu, je nutné jej zkompilovat v systému Windows Vista nebo novějším.
+Tento příklad načte vnitřní objekt COM. Chcete-li spustit tento příklad kódu, je nutné jej zkompilovat v systému Windows Vista nebo novějším.
 
 [!code-cpp[NVC_MFC_CFileDialog#3](../../mfc/reference/codesnippet/cpp/cfiledialog-class_6.cpp)]
 
-##  <a name="getnextpathname"></a>CFileDialog::GetNextPathName
+## <a name="cfiledialoggetnextpathname"></a><a name="getnextpathname"></a>CFileDialog::GetNextPathName
 
-Voláním této funkce načtete další název souboru ze skupiny vybrané v dialogovém okně.
+Voláním této funkce načtěte další název souboru ze skupiny vybrané v dialogovém okně.
 
 ```
 CString GetNextPathName(POSITION& pos) const;
@@ -893,8 +893,8 @@ CString GetNextPathName(POSITION& pos) const;
 
 ### <a name="parameters"></a>Parametry
 
-*POS*<br/>
-Odkaz na hodnotu pozice vrácenou předchozím `GetNextPathName` nebo `GetStartPosition` voláním funkce. Hodnota NULL, pokud bylo dosaženo konce seznamu.
+*Pos*<br/>
+Odkaz na hodnotu POSITION vrácenou předchozím `GetNextPathName` voláním nebo `GetStartPosition` voláním funkce. Null, pokud bylo dosaženo konce seznamu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -902,13 +902,13 @@ Odkaz na hodnotu pozice vrácenou předchozím `GetNextPathName` nebo `GetStartP
 
 ### <a name="remarks"></a>Poznámky
 
-Cesta k názvu souboru obsahuje název souboru a cestu k celému adresáři. `GetNextPathName` Bude například vracet "C:\FILES\TEXT. DAT pro soubor C:\FILES\TEXT.DAT. Můžete použít `GetNextPathName` ve smyčce dopředné iteraci, pokud vytvoříte počáteční pozici s `GetStartPosition`voláním.
+Cesta názvu souboru obsahuje název souboru plus celou cestu k adresáři. Například `GetNextPathName` vrátí "C:\FILES\TEXT. DAT" pro soubor C:\FILES\TEXT.DAT. Můžete použít `GetNextPathName` ve smyčce iterace vpřed, pokud `GetStartPosition`navážete počáteční pozici s voláním .
 
 Pokud se výběr skládá pouze z jednoho souboru, bude tento název souboru vrácen.
 
-##  <a name="getofn"></a>CFileDialog::GetOFN
+## <a name="cfiledialoggetofn"></a><a name="getofn"></a>CFileDialog::GetOFN
 
-Načte přidruženou `OPENFILENAME` strukturu.
+Načte přidružené `OPENFILENAME` struktury.
 
 ```
 const OPENFILENAME& GetOFN() const;
@@ -918,15 +918,15 @@ OPENFILENAME& GetOFN();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Struktura [lpstrFile](/windows/win32/api/commdlg/ns-commdlg-openfilenamew)
+[OpenFILENAME](/windows/win32/api/commdlg/ns-commdlg-openfilenamew) struktury.
 
 ### <a name="remarks"></a>Poznámky
 
-Pomocí druhé verze této funkce můžete inicializovat vzhled dialogového okna **otevřít soubor** nebo **soubor uložit jako** po jeho vytvoření, ale před jeho `DoModal` zobrazením s členskou funkcí. Můžete například nastavit `lpstrTitle` `m_ofn` člena na titulek, který má mít dialogové okno.
+Druhou verzí této funkce můžete inicializovat vzhled dialogového okna **Otevřít soubor** nebo **Uložit jako** soubor po `DoModal` jeho vytvoření, ale před jeho zobrazením pomocí členské funkce. Můžete například nastavit `lpstrTitle` člen `m_ofn` na titulek, který má dialogové okno mít.
 
-##  <a name="getpathname"></a>CFileDialog:: getcesta
+## <a name="cfiledialoggetpathname"></a><a name="getpathname"></a>CFileDialog::GetPathName
 
-Voláním této funkce načtete úplnou cestu k souboru zadanému v dialogovém okně.
+Voláním této funkce načtěte úplnou cestu k souboru zadanému v dialogovém okně.
 
 ```
 CString GetPathName() const;
@@ -938,17 +938,17 @@ CString GetPathName() const;
 
 ### <a name="remarks"></a>Poznámky
 
-Cesta k názvu souboru obsahuje název souboru a cestu k celému adresáři. `GetPathName` Bude například vracet "C:\FILES\TEXT. DAT pro soubor C:\FILES\TEXT.DAT.
+Cesta názvu souboru obsahuje název souboru plus celou cestu k adresáři. Například `GetPathName` vrátí "C:\FILES\TEXT. DAT" pro soubor C:\FILES\TEXT.DAT.
 
-Pokud `m_ofn.Flags` má nastavený příznak OFN_ALLOWMULTISELECT, tento řetězec obsahuje sekvenci řetězců s hodnotou null-teminated a prvním řetězcem, který je cestou k adresáři vybrané skupiny souborů, a potom názvy všech souborů vybraných uživatelem. Z tohoto důvodu použijte členské funkce [GetStartPosition](#getstartposition) a [GetNextPathName](#getnextpathname) k načtení dalšího názvu souboru v seznamu.
+Pokud `m_ofn.Flags` má OFN_ALLOWMULTISELECT příznak nastavit, tento řetězec obsahuje posloupnost řetězce null-teminated, přičemž první řetězec je cesta k adresáři skupiny souborů vybrané, následovaný názvy všech souborů vybraných uživatelem. Z tohoto důvodu použijte [getstartposition](#getstartposition) a [GetNextPathName](#getnextpathname) členské funkce načíst další název souboru v seznamu.
 
 ### <a name="example"></a>Příklad
 
-  Podívejte se na příklad pro [CFileDialog::D omodal](#domodal).
+  Viz příklad [cfiledialog::DoModal](#domodal).
 
-##  <a name="getreadonlypref"></a>CFileDialog::GetReadOnlyPref
+## <a name="cfiledialoggetreadonlypref"></a><a name="getreadonlypref"></a>CFileDialog::GetReadOnlyPref
 
-Voláním této funkce zjistíte, zda bylo zaškrtnuto políčko jen pro čtení v dialogových oknech standardní soubor pro Windows otevřít a uložit jako soubor.
+Voláním této funkce určete, zda bylo zaškrtnuto políčko Jen pro čtení v dialogových oknech Standardní soubor otevřený soubor systému Windows a Uložit jako soubor.
 
 ```
 BOOL GetReadOnlyPref() const;
@@ -956,16 +956,16 @@ BOOL GetReadOnlyPref() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulová, pokud je zaškrtnuto políčko jen pro čtení v dialogovém okně; v opačném případě 0.
+Nenulová, pokud je v dialogovém okně zaškrtnuto políčko Jen pro čtení; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Zaškrtávací políčko jen pro čtení lze skrýt nastavením stylu OFN_HIDEREADONLY v `CFileDialog` konstruktoru.
+Zaškrtávací políčko Jen pro čtení `CFileDialog` můžete skrýt nastavením OFN_HIDEREADONLY stylu v konstruktoru.
 
 > [!NOTE]
-> Objekty stylu `CFileDialog` Windows Vista nebo novější tuto funkci nepodporují. Při pokusu o použití této funkce ve stylu `CFileDialog` Windows Vista nebo novějším se vyvolá [CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md).
+> Objekty stylu `CFileDialog` systému Windows Vista nebo novějšího stylu tuto funkci nepodporují. Při pokusu o použití této funkce `CFileDialog` v systému Windows Vista nebo novějším stylu dojde k vyvolání [výjimky CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md).
 
-##  <a name="getresult"></a>CFileDialog:: GetResult
+## <a name="cfiledialoggetresult"></a><a name="getresult"></a>CFileDialog::GetResult
 
 Načte volbu, kterou uživatel provedl v dialogovém okně.
 
@@ -975,13 +975,13 @@ IShellItem* GetResult() throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na IShellItem, který představuje volbu uživatele.
+Ukazatel na položku IShellItem, která představuje volbu uživatele.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="getresults"></a>CFileDialog:: GetResults
+## <a name="cfiledialoggetresults"></a><a name="getresults"></a>CFileDialog::Výsledky
 
-Načte volby uživatele v dialogovém okně, které umožňuje vícenásobný výběr.
+Načte volby uživatele v dialogovém okně, které umožňuje více výběrů.
 
 ```
 IShellItemArray* GetResults() throw();
@@ -989,13 +989,13 @@ IShellItemArray* GetResults() throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na IShellItemArray, pomocí kterého lze použít položky vybrané v dialogovém okně.
+Ukazatel na pole IShellItemArray, jehož prostřednictvím lze přistupovat k položkám vybraným v dialogovém okně.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="getselectedcontrolitem"></a>CFileDialog::GetSelectedControlItem
+## <a name="cfiledialoggetselectedcontrolitem"></a><a name="getselectedcontrolitem"></a>CFileDialog::GetSelectedControlItem
 
-Načte konkrétní položku ze zadaného ovládacího prvku kontejneru v dialogovém okně.
+Načte určitou položku ze zadaného ovládacího prvku kontejneru v dialogovém okně.
 
 ```
 HRESULT GetSelectedControlItem(
@@ -1006,16 +1006,16 @@ HRESULT GetSelectedControlItem(
 ### <a name="parameters"></a>Parametry
 
 *dwIDCtl*<br/>
-ID ovládacího prvku kontejneru
+ID ovládacího prvku kontejneru.
 
-*dwIDItem*<br/>
-ID položky, kterou uživatel vybral v ovládacím prvku
+*dwIDPoložka*<br/>
+ID položky, kterou uživatel vybral v ovládacím prvku.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="getstartposition"></a>CFileDialog::GetStartPosition
+## <a name="cfiledialoggetstartposition"></a><a name="getstartposition"></a>CFileDialog::GetStartPosition
 
-Volejte tuto členskou funkci pro načtení pozice první cesty souboru v seznamu, pokud `m_ofn.Flags` má nastaven příznak OFN_ALLOWMULTISELECT.
+Volání této členské funkce načíst pozici prvního názvu cesty `m_ofn.Flags` souboru v seznamu, pokud má nastaven příznak OFN_ALLOWMULTISELECT.
 
 ```
 POSITION GetStartPosition() const;
@@ -1023,11 +1023,11 @@ POSITION GetStartPosition() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota pozice, kterou lze použít pro iteraci. Hodnota NULL, pokud je seznam prázdný.
+Hodnota POSITION, kterou lze použít pro iteraci; Null, pokud je seznam prázdný.
 
-##  <a name="hidecontrol"></a>CFileDialog::HideControl
+## <a name="cfiledialoghidecontrol"></a><a name="hidecontrol"></a>CFileDialog::HideControl
 
-Zavolejte tuto členskou funkci pro skrytí zadaného ovládacího prvku v dialogovém okně Otevřít nebo Uložit jako běžné ve stylu prohlížeče.
+Voláním této členské funkce skryjte zadaný ovládací prvek v dialogovém okně Otevřít nebo Uložit jako běžné.
 
 ```
 void HideControl(int nID);
@@ -1035,16 +1035,16 @@ void HideControl(int nID);
 
 ### <a name="parameters"></a>Parametry
 
-*nID*<br/>
-ID ovládacího prvku, který se má skrýt
+*Nid*<br/>
+ID ovládacího prvku skrýt.
 
 ### <a name="remarks"></a>Poznámky
 
-Dialogové okno se musí vytvořit se stylem OFN_EXPLORER. v opačném případě se funkce nezdaří s kontrolním výrazem.
+Dialogové okno musí být vytvořeno se stylem OFN_EXPLORER; v opačném případě funkce se nezdaří s kontrolním výrazem.
 
-##  <a name="ispickfoldersmode"></a>  CFileDialog::IsPickFoldersMode
+## <a name="cfiledialogispickfoldersmode"></a><a name="ispickfoldersmode"></a>CFileDialog::ispickFoldersMode
 
-Určuje, zda je aktuální dialogové okno v režimu výběru složky.
+Určuje, zda je aktuální dialog v režimu výběru složek.
 
 ```
 BOOL IsPickFoldersMode() const;
@@ -1052,23 +1052,23 @@ BOOL IsPickFoldersMode() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-TRUE, pokud je dialogové okno v režimu výběru složky; v opačném případě FALSE.
+TRUE, pokud je dialogové okno v režimu výběru složek; jinak FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="m_ofn"></a>CFileDialog::m_ofn
+## <a name="cfiledialogm_ofn"></a><a name="m_ofn"></a>CFileDialog::m_ofn
 
-`m_ofn`je struktura typu `OPENFILENAME`. Data v této struktuře představují aktuální stav `CFileDialog`.
+`m_ofn`je struktura typu `OPENFILENAME`. Data v této struktuře představuje `CFileDialog`aktuální stav .
 
 ### <a name="remarks"></a>Poznámky
 
-Tuto strukturu použijte k inicializaci vzhledu dialogového okna **otevřít soubor** nebo **soubor uložit jako** po jeho sestavení, ale před jeho zobrazením pomocí metody [DoModal](#domodal) . Například můžete nastavit člena `m_ofn` *lpstrTitle* na titulek, který má dialogové okno mít.
+Pomocí této struktury můžete inicializovat vzhled dialogového okna **Otevřít soubor** nebo **Uložit jako** soubor po jeho vytvoření, ale před jeho zobrazením metodou [DoModal.](#domodal) Můžete například nastavit člena *lpstrTitle* `m_ofn` na titulek, který chcete mít v dialogovém okně.
 
-S Windows Vista nebo novějším stylem [CFileDialog](../../mfc/reference/cfiledialog-class.md)není `m_ofn` zaručeno, že vždy bude odpovídat stavu dialogového okna. Je synchronizován s dialogovým oknem v dřívějších verzích systému Windows. `CFileDialog` Další informace [](#updateofnfromshelldialog) `m_ofn` o synchronizaci struktury a stavu v systému Windows Vista nebo novějším naleznete v tématu [CFileDialog:: ApplyOFNToShellDialog](#applyofntoshelldialog) a CFileDialog:: UpdateOFNFromShellDialog.
+U systému Windows Vista nebo novějšího stylu [CFileDialog](../../mfc/reference/cfiledialog-class.md)není zaručeno, `m_ofn` že vždy odpovídá stavu dialogového okna. Je synchronizován s dialogovým oknem v dřívějších verzích systému Windows. Další informace o synchronizaci `m_ofn` struktury a `CFileDialog` stavu v systému Windows Vista nebo novějším naleznete v tématu [CFileDialog::ApplyOFNToShellDialog](#applyofntoshelldialog) and [CFileDialog::UpdateOFNFromShellDialog.](#updateofnfromshelldialog)
 
-Dialogová okna souboru s `CFileDialog`Windows Vista nebo novějším nepodporují určité členy a příznaky. V důsledku toho nebude mít žádný vliv.
+Dialogová okna souborů se systémem Windows Vista nebo `CFileDialog`novějším stylem nepodporují určité členy a příznaky souboru . V důsledku toho nebudou mít žádný účinek.
 
-Následuje seznam členů, kteří nejsou podporováni systémem Windows Vista nebo novějším:
+Následuje seznam členů, které nejsou podporovány systémem Windows Vista nebo novějším:
 
 - `lpstrCustomFilter`
 
@@ -1080,7 +1080,7 @@ Následuje seznam členů, kteří nejsou podporováni systémem Windows Vista n
 
 - `lpTemplateName`
 
-Následující příznaky nejsou podporovány, a proto nemají žádný vliv, pokud používáte systém Windows Vista nebo novější styl `CFileDialog`:
+Následující příznaky nejsou podporovány, a proto nemají žádný vliv při `CFileDialog`použití systému Windows Vista nebo novější styl :
 
 - OFN_ENABLEHOOK
 
@@ -1096,21 +1096,21 @@ Následující příznaky nejsou podporovány, a proto nemají žádný vliv, po
 
 - OFN_HIDEREADONLY
 
-- OFN_LONGNAMES – účinně v systému Windows Vista nebo novějším
+- OFN_LONGNAMES – v systému Windows Vista nebo novějším vždy zapnuto
 
-- OFN_NOLONGNAMES – efektivně vždy vypnuto v systému Windows Vista nebo novějším
+- OFN_NOLONGNAMES – v systému Windows Vista nebo novějším vždy vypnuto
 
-- OFN_NONETWORKBUTTON – účinně v systému Windows Vista nebo novějším
+- OFN_NONETWORKBUTTON – v systému Windows Vista nebo novějším vždy zapnuto
 
 - OFN_READONLY
 
 - OFN_SHOWHELP
 
-Další informace o této struktuře naleznete v tématu struktura [lpstrFile](/windows/win32/api/commdlg/ns-commdlg-openfilenamew) v Windows SDK.
+Další informace o této struktuře naleznete [openfilename](/windows/win32/api/commdlg/ns-commdlg-openfilenamew) struktury v sadě Windows SDK.
 
-##  <a name="makeprominent"></a>CFileDialog::MakeProminent
+## <a name="cfiledialogmakeprominent"></a><a name="makeprominent"></a>CFileDialog::MakeProminent
 
-Umístí ovládací prvek do dialogového okna tak, aby se v porovnání s jinými ovládacími prvky.
+Umístí ovládací prvek do dialogového okna tak, aby vyčnívá ve srovnání s jinými ovládacími prvky.
 
 ```
 HRESULT MakeProminent(DWORD dwIDCtl);
@@ -1119,13 +1119,13 @@ HRESULT MakeProminent(DWORD dwIDCtl);
 ### <a name="parameters"></a>Parametry
 
 *dwIDCtl*<br/>
-ID ovládacího prvku
+ID ovládacího prvku.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="onbuttonclicked"></a>CFileDialog::OnButtonClicked
+## <a name="cfiledialogonbuttonclicked"></a><a name="onbuttonclicked"></a>CFileDialog::OnButtonClicked
 
-Volá se při kliknutí na tlačítko.
+Volána po klepnutí na tlačítko.
 
 ```
 virtual void OnButtonClicked(DWORD dwIDCtl);
@@ -1134,13 +1134,13 @@ virtual void OnButtonClicked(DWORD dwIDCtl);
 ### <a name="parameters"></a>Parametry
 
 *dwIDCtl*<br/>
-ID tlačítka
+ID tlačítka.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="oncheckbuttontoggled"></a>CFileDialog::OnCheckButtonToggled
+## <a name="cfiledialogoncheckbuttontoggled"></a><a name="oncheckbuttontoggled"></a>CFileDialog::OnCheckButtonToggled
 
-Volá se, když je zaškrtávací políčko zaškrtnuté nebo nezaškrtnuté.
+Volána, když je zaškrtnuto nebo nezaškrtnuto políčko.
 
 ```
 virtual void OnCheckButtonToggled(
@@ -1151,16 +1151,16 @@ virtual void OnCheckButtonToggled(
 ### <a name="parameters"></a>Parametry
 
 *dwIDCtl*<br/>
-ID zaškrtávacího políčka
+ID zaškrtávacího políčka.
 
-*bChecked*<br/>
+*bZaškrtnuto*<br/>
 Zaškrtnuto nebo nezaškrtnuto.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="oncontrolactivating"></a>CFileDialog::OnControlActivating
+## <a name="cfiledialogoncontrolactivating"></a><a name="oncontrolactivating"></a>CFileDialog::OnControlAktivace
 
-Volá se, když se aktivuje ovládací prvek.
+Volána při aktivaci ovládacího prvku.
 
 ```
 virtual void OnControlActivating(DWORD dwIDCtl);
@@ -1169,13 +1169,13 @@ virtual void OnControlActivating(DWORD dwIDCtl);
 ### <a name="parameters"></a>Parametry
 
 *dwIDCtl*<br/>
-ID ovládacího prvku
+ID ovládacího prvku.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="onfilenamechange"></a>CFileDialog::OnFileNameChange
+## <a name="cfiledialogonfilenamechange"></a><a name="onfilenamechange"></a>cfiledialog::OnFileNameChange
 
-Tuto metodu přepište, pokud chcete zpracovat zprávu WM_NOTIFY CDN_SELCHANGE.
+Přepsat tuto metodu, pokud chcete zpracovat zprávu CDN_SELCHANGE WM_NOTIFY.
 
 ```
 virtual void OnFileNameChange();
@@ -1183,13 +1183,13 @@ virtual void OnFileNameChange();
 
 ### <a name="remarks"></a>Poznámky
 
-Systém odesílá zprávu CDN_SELCHANGE, když uživatel vybere nový soubor nebo složku v seznamu souborů v dialogovém okně **otevřít** nebo **Uložit jako** . Tuto metodu přepište, pokud chcete provádět jakékoli akce v reakci na tuto zprávu.
+Systém odešle zprávu CDN_SELCHANGE, když uživatel vybere nový soubor nebo složku v seznamu souborů dialogového okna **Otevřít** nebo **Uložit jako.** Přepište tuto metodu, pokud chcete provést všechny akce v reakci na tuto zprávu.
 
-Systém tuto zprávu pošle jenom v případě, že se dialogové okno vytvořilo se zapnutým příznakem OFN_EXPLORER. Další informace o tomto oznámení najdete v tématu [CDN_SELCHANGE](/windows/win32/dlgbox/cdn-selchange). Informace o příznaku OFN_EXPLORER najdete v dialogových oknech struktura [lpstrFile](/windows/win32/api/commdlg/ns-commdlg-openfilenamew) a [otevřít a uložit jako](/windows/win32/dlgbox/open-and-save-as-dialog-boxes).
+Systém odešle tuto zprávu pouze v případě, že dialogové okno bylo vytvořeno se zapnutým příznakem OFN_EXPLORER. Další informace o oznámení naleznete v [tématu CDN_SELCHANGE](/windows/win32/dlgbox/cdn-selchange). Informace o příznaku OFN_EXPLORER naleznete v tématech Struktura [OPENFILENAME](/windows/win32/api/commdlg/ns-commdlg-openfilenamew) [a Dialogová okna Otevřít a Uložit jako](/windows/win32/dlgbox/open-and-save-as-dialog-boxes).
 
-##  <a name="onfilenameok"></a>CFileDialog::OnFileNameOK
+## <a name="cfiledialogonfilenameok"></a><a name="onfilenameok"></a>CFileDialog::OnFileNameOK
 
-Tuto funkci popište pouze v případě, že chcete zadat vlastní ověření názvů souborů, které jsou zadány do dialogového okna společný soubor.
+Tuto funkci přepište pouze v případě, že chcete zadat vlastní ověření názvů souborů, které jsou zadány do společného dialogového okna souboru.
 
 ```
 virtual BOOL OnFileNameOK();
@@ -1197,17 +1197,17 @@ virtual BOOL OnFileNameOK();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-1, pokud název souboru není platný název souboru; v opačném případě 0.
+1 pokud název souboru není platný název souboru; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce umožňuje odmítat název souboru pro jakýkoli důvod specifický pro aplikaci. Obvykle tuto funkci nemusíte používat, protože rozhraní poskytuje výchozí ověřování názvů souborů a při zadání neplatného názvu souboru se zobrazí okno se zprávou.
+Tato funkce umožňuje odmítnout název souboru z jakéhokoli důvodu specifického pro aplikaci. Za normálních okolností není nutné používat tuto funkci, protože rozhraní framework poskytuje výchozí ověření názvů souborů a zobrazí okno se zprávou, pokud je zadán neplatný název souboru.
 
-Pokud se vrátí 1, dialogové okno se zobrazí, aby uživatel mohl zadat jiný název souboru. Procedura dialogového okna zavře dialogové okno, pokud je návratová hodnota 0. Jiné nenulové hodnoty vrácení jsou aktuálně rezervované a neměly by se používat.
+Pokud je vrácena 1, dialogové okno zůstane zobrazeno pro uživatele zadat jiný název souboru. Dialogový postup zavře dialogové okno, pokud je návrat 0. Jiné nenulové vrácené hodnoty jsou aktuálně rezervovány a neměly by být používány.
 
-##  <a name="onfolderchange"></a>CFileDialog::OnFolderChange
+## <a name="cfiledialogonfolderchange"></a><a name="onfolderchange"></a>cfiledialog::onFolderChange
 
-Přepište tuto funkci, aby se zpracovala zpráva WM_NOTIFYCDN_FOLDERCHANGE.
+Přepsat tuto funkci pro zpracování WM_NOTIFYCDN_FOLDERCHANGE zprávy.
 
 ```
 virtual void OnFolderChange();
@@ -1215,13 +1215,13 @@ virtual void OnFolderChange();
 
 ### <a name="remarks"></a>Poznámky
 
-Zpráva oznámení se pošle, když se v dialogovém okně Otevřít nebo Uložit jako otevře nová složka.
+Zpráva s oznámením je odeslána při otevření nové složky v dialogovém okně Otevřít nebo Uložit jako.
 
-Oznámení se odešle jenom v případě, že se dialogové okno vytvořilo se stylem OFN_EXPLORER. Další informace o tomto oznámení najdete v tématu [CDN_FOLDERCHANGE](/windows/win32/dlgbox/cdn-folderchange). Informace o stylu OFN_EXPLORER naleznete v dialogových oknech struktura [lpstrFile](/windows/win32/api/commdlg/ns-commdlg-openfilenamew) a [otevřít a uložit jako](/windows/win32/dlgbox/open-and-save-as-dialog-boxes).
+Oznámení je odesláno pouze v případě, že dialogové okno bylo vytvořeno s OFN_EXPLORER stylu. Další informace o oznámení naleznete v [tématu CDN_FOLDERCHANGE](/windows/win32/dlgbox/cdn-folderchange). Informace o stylu OFN_EXPLORER naleznete v tématech Struktura [OPENFILENAME](/windows/win32/api/commdlg/ns-commdlg-openfilenamew) a [Dialogová okna Otevřít a Uložit jako](/windows/win32/dlgbox/open-and-save-as-dialog-boxes).
 
-##  <a name="oninitdone"></a>CFileDialog::OnInitDone
+## <a name="cfiledialogoninitdone"></a><a name="oninitdone"></a>CFileDialog::OnInitDone
 
-Tuto funkci potlačíte, aby se zpracovala zpráva WM_NOTIFY CDN_INITDONE.
+Přepsat tuto funkci pro zpracování zprávy WM_NOTIFY CDN_INITDONE.
 
 ```
 virtual void OnInitDone();
@@ -1229,16 +1229,16 @@ virtual void OnInitDone();
 
 ### <a name="remarks"></a>Poznámky
 
-Systém pošle tuto zprávu s oznámením, když systém dokončí uspořádání ovládacích prvků v dialogovém okně **otevřít** nebo **Uložit jako** , aby uvolnil prostor pro ovládací prvky podřízeného dialogového okna.
+Systém odešle tuto zprávu s oznámením po dokončení uspořádání ovládacích prvků v dialogovém okně **Otevřít** nebo **Uložit jako,** aby se uvolnilo místo pro ovládací prvky podřízeného dialogového okna.
 
-Systém ho pošle jenom v případě, že se dialogové okno vytvořilo se stylem OFN_EXPLORER. Další informace o tomto oznámení najdete v tématu [CDN_INITDONE](/windows/win32/dlgbox/cdn-initdone). Informace o stylu OFN_EXPLORER naleznete v dialogových oknech struktura [lpstrFile](/windows/win32/api/commdlg/ns-commdlg-openfilenamew) a [otevřít a uložit jako](/windows/win32/dlgbox/open-and-save-as-dialog-boxes).
+Systém to odešle pouze v případě, že dialogové okno bylo vytvořeno s OFN_EXPLORER stylem. Další informace o oznámení naleznete v [tématu CDN_INITDONE](/windows/win32/dlgbox/cdn-initdone). Informace o stylu OFN_EXPLORER naleznete v tématech Struktura [OPENFILENAME](/windows/win32/api/commdlg/ns-commdlg-openfilenamew) a [Dialogová okna Otevřít a Uložit jako](/windows/win32/dlgbox/open-and-save-as-dialog-boxes).
 
 > [!NOTE]
-> Dialogová okna se systémem Windows Vista nebo novějším nepodporují tuto funkci. Při pokusu o použití této funkce v dialogu Windows Vista nebo novějším souboru stylu se vyvolá [CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md).
+> Dialogová okna souborů se systémem Windows Vista nebo novějším stylem tuto funkci nepodporují. Při pokusu o použití této funkce v dialogovém okně souboru se systémem Windows Vista nebo novějším stylem vyvoláte [výjimku CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md).
 
-##  <a name="onitemselected"></a>CFileDialog::OnItemSelected
+## <a name="cfiledialogonitemselected"></a><a name="onitemselected"></a>CFileDialog::OnItemSelected
 
-Volá se, když je vybraná položka kontejneru.
+Volána při výběru položky kontejneru.
 
 ```
 virtual void OnItemSelected(
@@ -1249,16 +1249,16 @@ virtual void OnItemSelected(
 ### <a name="parameters"></a>Parametry
 
 *dwIDCtl*<br/>
-ID ovládacího prvku kontejneru
+ID ovládacího prvku kontejneru.
 
-*dwIDItem*<br/>
-ID položky
+*dwIDPoložka*<br/>
+ID položky.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="onlbselchangednotify"></a>CFileDialog::OnLBSelChangedNotify
+## <a name="cfiledialogonlbselchangednotify"></a><a name="onlbselchangednotify"></a>CFileDialog::OnLBSelChangedNotify
 
-Tato funkce se volá vždycky, když se změní aktuální výběr v seznamu.
+Tato funkce je volána vždy, když se aktuální výběr v seznamu chystá změnit.
 
 ```
 virtual void OnLBSelChangedNotify(
@@ -1270,29 +1270,29 @@ virtual void OnLBSelChangedNotify(
 ### <a name="parameters"></a>Parametry
 
 *nIDBox*<br/>
-ID pole seznamu nebo pole se seznamem, ve kterém došlo k výběru.
+ID seznamu nebo pole se seznamem, ve kterém došlo k výběru.
 
 *iCurSel*<br/>
 Index aktuálního výběru.
 
-*nCode*<br/>
-Kód oznámení ovládacího prvku Tento parametr musí mít jednu z následujících hodnot:
+*nKód*<br/>
+Kód oznámení ovládacího prvku. Tento parametr musí mít jednu z následujících hodnot:
 
-- CD_LBSELCHANGE určuje, že *iCurSel* je vybraná položka v seznamu s jedním výběrem.
+- CD_LBSELCHANGE *Určuje, že iCurSel* je vybraná položka v seznamu s jedním výběrem.
 
-- CD_LBSELSUB určuje, že *iCurSel* už není vybraný v seznamu pro více výběrů.
+- CD_LBSELSUB Určuje, že *iCurSel* již není vybrán v seznamu s více násobným výběrem.
 
-- CD_LBSELADD určuje, že v seznamu více výběrů je vybráno *iCurSel* .
+- CD_LBSELADD Určuje, že *iCurSel* je vybrán v seznamu s více násobným výběrem.
 
-- CD_LBSELNOITEMS určuje, že v rozevíracím seznamu vícenásobného výběru neexistuje žádný výběr.
+- CD_LBSELNOITEMS Určuje, že v seznamu s více násobným výběrem neexistuje žádný výběr.
 
 ### <a name="remarks"></a>Poznámky
 
-Tuto funkci můžete přepsat tak, aby poskytovala vlastní zpracování změn výběru v poli se seznamem. Pomocí této funkce můžete například zobrazit přístupová práva nebo datum a čas poslední změny každého souboru, který uživatel vybere.
+Přepište tuto funkci a poskytněte vlastní zpracování změn výběru v seznamu. Pomocí této funkce můžete například zobrazit přístupová práva nebo datum poslední změny každého souboru, který uživatel vybere.
 
-##  <a name="onshareviolation"></a>CFileDialog::OnShareViolation
+## <a name="cfiledialogonshareviolation"></a><a name="onshareviolation"></a>cfiledialog::onshareviolation
 
-Přepsáním této funkce zajistíte vlastní zpracování narušení sdílení.
+Přepsat tuto funkci poskytnout vlastní zpracování narušení sdílení.
 
 ```
 virtual UINT OnShareViolation(LPCTSTR lpszPathName);
@@ -1301,27 +1301,27 @@ virtual UINT OnShareViolation(LPCTSTR lpszPathName);
 ### <a name="parameters"></a>Parametry
 
 *lpszPathName*<br/>
-Cesta k souboru, na kterém došlo k narušení sdílení.
+Cesta k souboru, na kterém došlo k narušení sdílené složky.
 
 ### <a name="return-value"></a>Návratová hodnota
 
 Jedna z následujících hodnot:
 
-- OFN_SHAREFALLTHROUGH název souboru se vrátí z dialogového okna.
+- OFN_SHAREFALLTHROUGH Název souboru je vrácen z dialogového okna.
 
-- OFN_SHARENOWARN není nutné provádět žádné další akce.
+- OFN_SHARENOWARN Není třeba podnikat žádné další kroky.
 
-- OFN_SHAREWARN uživatel obdrží standardní zprávu upozornění pro tuto chybu.
+- OFN_SHAREWARN Uživatel obdrží standardní varovnou zprávu pro tuto chybu.
 
 ### <a name="remarks"></a>Poznámky
 
-Obvykle tuto funkci nemusíte používat, protože rozhraní poskytuje výchozí kontrolu narušení sdílení a zobrazí okno se zprávou, pokud dojde k narušení sdílení.
+Za normálních okolností není nutné používat tuto funkci, protože rozhraní framework poskytuje výchozí kontrolu narušení sdílení a zobrazí okno se zprávou, pokud dojde k narušení sdílení.
 
-Chcete-li zakázat kontrolu narušení sdílení, použijte operátor OR pro kombinování příznaku OFN_SHAREAWARE s `m_ofn.Flags`.
+Chcete-li zakázat kontrolu narušení sdílení, použijte bitový operátor OR `m_ofn.Flags`ke zkombinování příznaku OFN_SHAREAWARE s .
 
-##  <a name="ontypechange"></a>CFileDialog::OnTypeChange
+## <a name="cfiledialogontypechange"></a><a name="ontypechange"></a>cfiledialog::ontypechange
 
-Přepište tuto funkci, aby se zpracovala zpráva WM_NOTIFYCDN_TYPECHANGE.
+Přepsat tuto funkci pro zpracování zprávy WM_NOTIFYCDN_TYPECHANGE.
 
 ```
 virtual void OnTypeChange();
@@ -1329,11 +1329,11 @@ virtual void OnTypeChange();
 
 ### <a name="remarks"></a>Poznámky
 
-Zpráva oznámení se odešle, když uživatel vybere nový typ souboru ze seznamu typů souborů v dialogovém okně Otevřít nebo Uložit jako.
+Zpráva s oznámením je odeslána, když uživatel vybere nový typ souboru ze seznamu typů souborů v dialogovém okně Otevřít nebo Uložit jako.
 
-Oznámení se odešle jenom v případě, že se dialogové okno vytvořilo se stylem OFN_EXPLORER. Další informace o tomto oznámení najdete v tématu [CDN_TYPECHANGE](/windows/win32/dlgbox/cdn-typechange). Informace o stylu OFN_EXPLORER naleznete v dialogových oknech struktura [lpstrFile](/windows/win32/api/commdlg/ns-commdlg-openfilenamew) a [otevřít a uložit jako](/windows/win32/dlgbox/open-and-save-as-dialog-boxes).
+Oznámení je odesláno pouze v případě, že dialogové okno bylo vytvořeno s OFN_EXPLORER stylu. Další informace o oznámení naleznete v [tématu CDN_TYPECHANGE](/windows/win32/dlgbox/cdn-typechange). Informace o stylu OFN_EXPLORER naleznete v tématech Struktura [OPENFILENAME](/windows/win32/api/commdlg/ns-commdlg-openfilenamew) a [Dialogová okna Otevřít a Uložit jako](/windows/win32/dlgbox/open-and-save-as-dialog-boxes).
 
-##  <a name="removecontrolitem"></a>CFileDialog::RemoveControlItem
+## <a name="cfiledialogremovecontrolitem"></a><a name="removecontrolitem"></a>CFileDialog::RemoveControlItem
 
 Odebere položku z ovládacího prvku kontejneru v dialogovém okně.
 
@@ -1346,16 +1346,16 @@ HRESULT RemoveControlItem(
 ### <a name="parameters"></a>Parametry
 
 *dwIDCtl*<br/>
-ID ovládacího prvku kontejneru, ze kterého se má položka odebrat
+ID ovládacího prvku kontejneru odebrat položku z.
 
-*dwIDItem*<br/>
-ID položky
+*dwIDPoložka*<br/>
+ID položky.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="setcheckbuttonstate"></a>CFileDialog::SetCheckButtonState
+## <a name="cfiledialogsetcheckbuttonstate"></a><a name="setcheckbuttonstate"></a>CFileDialog::SetCheckButtonState
 
-Nastaví aktuální stav tlačítka check (zaškrtávací políčko) v dialogovém okně.
+Nastaví aktuální stav zaškrtávacího tlačítka (zaškrtávacího políčka) v dialogovém okně.
 
 ```
 HRESULT SetCheckButtonState(
@@ -1366,16 +1366,16 @@ HRESULT SetCheckButtonState(
 ### <a name="parameters"></a>Parametry
 
 *dwIDCtl*<br/>
-ID zaškrtávacího políčka
+ID zaškrtávacího políčka.
 
-*bChecked*<br/>
-Stav zaškrtávacího políčka. Hodnota TRUE označuje zaškrtnuto; Hodnota FALSE označuje nezaškrtnuté.
+*bZaškrtnuto*<br/>
+Stav zaškrtávacího políčka. TRUE označuje zaškrtnuto; NEPRAVDA označuje Nezaškrtnuté.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="setcontrolitemstate"></a>CFileDialog::SetControlItemState
+## <a name="cfiledialogsetcontrolitemstate"></a><a name="setcontrolitemstate"></a>CFileDialog::SetControlItemState
 
-Nastaví aktuální stav položky v ovládacím prvku kontejneru, který se nachází v dialogovém okně.
+Nastaví aktuální stav položky v ovládacím prvku kontejneru nalezeném v dialogovém okně.
 
 ```
 HRESULT SetControlItemState(
@@ -1387,19 +1387,19 @@ HRESULT SetControlItemState(
 ### <a name="parameters"></a>Parametry
 
 *dwIDCtl*<br/>
-ID ovládacího prvku kontejneru
+ID ovládacího prvku kontejneru.
 
-*dwIDItem*<br/>
-ID položky
+*dwIDPoložka*<br/>
+ID položky.
 
 *dwState*<br/>
 Jedna nebo více hodnot z výčtu CDCONTROLSTATE, které označují nový stav ovládacího prvku.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="setcontrolitemtext"></a>CFileDialog::SetControlItemText
+## <a name="cfiledialogsetcontrolitemtext"></a><a name="setcontrolitemtext"></a>CFileDialog::SetControlItemText
 
-Nastaví text položky ovládacího prvku. Například text doprovázející přepínač nebo položku v nabídce.
+Nastaví text ovládací položky. Například text, který doprovází přepínací tlačítko nebo položku v nabídce.
 
 ```
 HRESULT SetControlItemText(
@@ -1411,19 +1411,19 @@ HRESULT SetControlItemText(
 ### <a name="parameters"></a>Parametry
 
 *dwIDCtl*<br/>
-ID ovládacího prvku kontejneru
+ID ovládacího prvku kontejneru.
 
-*dwIDItem*<br/>
-ID položky
+*dwIDPoložka*<br/>
+ID položky.
 
 *strLabel*<br/>
-Text položky
+Text položky.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="setcontrollabel"></a>CFileDialog::SetControlLabel
+## <a name="cfiledialogsetcontrollabel"></a><a name="setcontrollabel"></a>CFileDialog::SetControlLabel
 
-Nastaví text přidružený k ovládacímu prvku, jako je například text tlačítka nebo popisek pro textové pole.
+Nastaví text přidružený k ovládacímu prvku, například text tlačítka nebo popisek textového pole.
 
 ```
 HRESULT SetControlLabel(
@@ -1434,16 +1434,16 @@ HRESULT SetControlLabel(
 ### <a name="parameters"></a>Parametry
 
 *dwIDCtl*<br/>
-ID ovládacího prvku
+ID ovládacího prvku.
 
 *strLabel*<br/>
-Název ovládacího prvku
+Název ovládacího prvku.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="setcontrolstate"></a>CFileDialog::SetControlState
+## <a name="cfiledialogsetcontrolstate"></a><a name="setcontrolstate"></a>CFileDialog::SetControlState
 
-Nastaví aktuální viditelnost a povolený stav daného ovládacího prvku.
+Nastaví aktuální viditelnost a povolené stavy daného ovládacího prvku.
 
 ```
 HRESULT SetControlState(
@@ -1454,16 +1454,16 @@ HRESULT SetControlState(
 ### <a name="parameters"></a>Parametry
 
 *dwIDCtl*<br/>
-ID ovládacího prvku
+ID ovládacího prvku.
 
 *dwState*<br/>
 Jedna nebo více hodnot z výčtu CDCONTROLSTATE, které označují aktuální stav ovládacího prvku.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="setcontroltext"></a>CFileDialog::SetControlText
+## <a name="cfiledialogsetcontroltext"></a><a name="setcontroltext"></a>CFileDialog::SetControlText
 
-Voláním této metody nastavíte text pro určený ovládací prvek v dialogovém okně **otevřít** nebo **Uložit jako** ve stylu Průzkumníka.
+Voláním této metody nastavte text pro zadaný ovládací prvek v dialogovém okně **Otevřít** nebo **Uložit jako** ve stylu průzkumníka.
 
 ```
 void SetControlText(
@@ -1477,21 +1477,21 @@ void SetControlText(
 
 ### <a name="parameters"></a>Parametry
 
-*nID*<br/>
-pro ID ovládacího prvku, pro který chcete nastavit text
+*Nid*<br/>
+[v] ID ovládacího prvku, pro který chcete nastavit text.
 
 *lpsz*<br/>
-pro Ukazatel na řetězec obsahující text, který má být nastaven pro ovládací prvek.
+[v] Ukazatel na řetězec, který obsahuje text, který má být nastaven pro ovládací prvek.
 
 ### <a name="remarks"></a>Poznámky
 
-Obě verze této funkce jsou platné pro aplikace, které používají Unicode. Jenom verze s typem LPCSTR je ale platná pro aplikace, které používají ANSI.
+Obě verze této funkce jsou platné pro aplikace, které používají Unicode. Pouze verze s typem LPCSTR je však platná pro aplikace, které používají ANSI.
 
-Chcete-li použít tuto metodu, je nutné vytvořit dialogové okno se stylem OFN_EXPLORER. V opačném případě se funkce nezdaří s kontrolním výrazem.
+Chcete-li použít tuto metodu, musíte vytvořit dialogové okno s OFN_EXPLORER stylem. V opačném případě funkce se nezdaří s kontrolním výrazem.
 
-##  <a name="setdefext"></a>CFileDialog::SetDefExt
+## <a name="cfiledialogsetdefext"></a><a name="setdefext"></a>CFileDialog::SetDefExt
 
-Voláním této funkce nastavíte výchozí příponu názvu souboru pro dialogové okno otevřít nebo Uložit jako společné ve stylu Průzkumníka.
+Voláním této funkce nastavte výchozí příponu názvu souboru pro společné dialogové okno Otevřít nebo Uložit jako v průzkumníku.
 
 ```
 void SetDefExt(LPCSTR lpsz);
@@ -1500,15 +1500,15 @@ void SetDefExt(LPCSTR lpsz);
 ### <a name="parameters"></a>Parametry
 
 *lpsz*<br/>
-Ukazatel na řetězec obsahující výchozí příponu, která má být použita pro objekt dialogového okna. Tento řetězec nesmí obsahovat tečku (.).
+Ukazatel na řetězec obsahující výchozí příponu, který se má použít pro objekt dialogového okna. Tento řetězec nesmí obsahovat tečku (.).
 
 ### <a name="remarks"></a>Poznámky
 
-Dialogové okno se musí vytvořit se stylem OFN_EXPLORER. v opačném případě se funkce nezdaří s kontrolním výrazem.
+Dialogové okno musí být vytvořeno se stylem OFN_EXPLORER; v opačném případě funkce se nezdaří s kontrolním výrazem.
 
-##  <a name="seteditboxtext"></a>CFileDialog::SetEditBoxText
+## <a name="cfiledialogseteditboxtext"></a><a name="seteditboxtext"></a>CFileDialog::SetEditBoxText
 
-Nastaví aktuální text v ovládacím prvku textové pole.
+Nastaví aktuální text v ovládacím prvku textového pole.
 
 ```
 HRESULT SetEditBoxText(
@@ -1519,16 +1519,16 @@ HRESULT SetEditBoxText(
 ### <a name="parameters"></a>Parametry
 
 *dwIDCtl*<br/>
-ID pole pro úpravy
+ID editačního pole.
 
 *strText*<br/>
-Textová hodnota
+Hodnota textu.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="setproperties"></a>CFileDialog:: SetProperties
+## <a name="cfiledialogsetproperties"></a><a name="setproperties"></a>CFileDialog::SetProperties
 
-Poskytuje úložiště vlastností, které definuje výchozí hodnoty, které se mají použít pro položku, která se ukládá.
+Poskytuje úložiště vlastností, které definuje výchozí hodnoty, které mají být použity pro uloženou položku.
 
 ```
 BOOL SetProperties(LPCWSTR lpszPropList);
@@ -1537,13 +1537,13 @@ BOOL SetProperties(LPCWSTR lpszPropList);
 ### <a name="parameters"></a>Parametry
 
 *lpszPropList*<br/>
-Seznam předdefinovaných vlastností oddělených znakem ";". Seznam příznaků naleznete v části **Flags** v [lpstrFile](/windows/win32/api/commdlg/ns-commdlg-openfilenamew).
+Seznam předdefinovaných vlastností oddělených ";". Seznam příznaků naleznete v části **Příznaky** [openfilename](/windows/win32/api/commdlg/ns-commdlg-openfilenamew).
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="setselectedcontrolitem"></a>CFileDialog::SetSelectedControlItem
+## <a name="cfiledialogsetselectedcontrolitem"></a><a name="setselectedcontrolitem"></a>CFileDialog::SetSelectedControlItem
 
-Nastaví vybraný stav konkrétní položky ve skupině přepínačů nebo pole se seznamem, které najdete v dialogovém okně.
+Nastaví vybraný stav určité položky ve skupině přepínačů nebo v poli se seznamem, které se nachází v dialogovém okně.
 
 ```
 HRESULT SetSelectedControlItem(
@@ -1554,16 +1554,16 @@ HRESULT SetSelectedControlItem(
 ### <a name="parameters"></a>Parametry
 
 *dwIDCtl*<br/>
-ID ovládacího prvku kontejneru
+ID ovládacího prvku kontejneru.
 
-*dwIDItem*<br/>
-ID položky, kterou uživatel vybral v ovládacím prvku
+*dwIDPoložka*<br/>
+ID položky, kterou uživatel vybral v ovládacím prvku.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="settemplate"></a>CFileDialog::SetTemplate
+## <a name="cfiledialogsettemplate"></a><a name="settemplate"></a>CFileDialog::SetTemplate
 
-Nastaví šablonu dialogového okna pro objekt [CFileDialog](../../mfc/reference/cfiledialog-class.md) .
+Nastaví šablonu dialogového okna pro objekt [CFileDialog.](../../mfc/reference/cfiledialog-class.md)
 
 ```
 void SetTemplate(
@@ -1578,27 +1578,27 @@ void SetTemplate(
 ### <a name="parameters"></a>Parametry
 
 *nWin3ID*<br/>
-pro Obsahuje identifikační číslo prostředku šablony pro objekt, který není průzkumníkem `CFileDialog` . Tato šablona se používá pouze v systému Windows NT 3,51 nebo není k dispozici styl OFN_EXPLORER.
+[v] Obsahuje id prostředku šablony pro objekt bez `CFileDialog` průzkumníka. Tato šablona se používá pouze v systému Windows NT 3.51 nebo v případě, že OFN_EXPLORER styl není k dispozici.
 
 *nWin4ID*<br/>
-pro Obsahuje identifikační číslo prostředku šablony pro objekt Explorer `CFileDialog` . Tato šablona se používá pouze v systému Windows NT 4,0 a novějších verzích, Windows 95 a novějších verzích nebo v případě, že je k dispozici styl OFN_EXPLORER.
+[v] Obsahuje id prostředku šablony pro objekt `CFileDialog` Průzkumníka. Tato šablona se používá pouze v systému Windows NT 4.0 a novějších verzích, Windows 95 a novějších verzích nebo v případě, že je k dispozici OFN_EXPLORER styl.
 
 *lpWin3ID*<br/>
-pro Obsahuje název prostředku šablony pro objekt mimo Průzkumníka `CFileDialog` . Tato šablona se používá pouze v systému Windows NT 3,51 nebo není k dispozici styl OFN_EXPLORER.
+[v] Obsahuje název prostředku šablony pro objekt `CFileDialog` bez průzkumníka. Tato šablona se používá pouze v systému Windows NT 3.51 nebo v případě, že OFN_EXPLORER styl není k dispozici.
 
 *lpWin4ID*<br/>
-pro Obsahuje název prostředku šablony objektu Explorer `CFileDialog` . Tato šablona se používá pouze v systému Windows NT 4,0 a novějších verzích, Windows 95 a novějších verzích nebo v případě, že je k dispozici styl OFN_EXPLORER.
+[v] Obsahuje název prostředku šablony objektu `CFileDialog` Explorer. Tato šablona se používá pouze v systému Windows NT 4.0 a novějších verzích, Windows 95 a novějších verzích nebo v případě, že je k dispozici OFN_EXPLORER styl.
 
 ### <a name="remarks"></a>Poznámky
 
-Systém použije jenom jednu ze zadaných šablon. Systém Určuje, která šablona se má použít, na základě přítomnosti stylu OFN_EXPLORER a operačního systému, ve kterém je aplikace spuštěná. Když zadáte šablonu ve stylu non-Explorer a Průzkumník, je snadné podporovat Windows NT 3,51, Windows NT 4,0 a novější verze a Windows 95 a novější verze.
+Systém bude používat pouze jednu ze zadaných šablon. Systém určuje, která šablona se má použít na základě přítomnosti stylu OFN_EXPLORER a operačního systému, ve kterém je aplikace spuštěna. Zadáním šablony bez průzkumníka a šablony ve stylu průzkumníka je snadné podporovat verze systému Windows NT 3.51, Windows NT 4.0 a novější ch od Windows NT 4.0 a Windows 95 a novějších verzí.
 
 > [!NOTE]
-> Dialogová okna souboru se systémem Windows Vista nebo novějším nepodporují tuto funkci. Při pokusu o použití této funkce v dialogovém okně souboru ve stylu Windows Vista nebo novějším se vyvolá [CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md). Alternativou je použití přizpůsobeného dialogového okna. Další informace o použití vlastního `CFileDialog`naleznete v tématu [IFileDialogCustomize](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ifiledialogcustomize).
+> Dialogová okna souborů se systémem Windows Vista nebo novějším stylem tuto funkci nepodporují. Při pokusu o použití této funkce v dialogovém okně souboru se systémem Windows Vista nebo novějším stylem vyvoláte [výjimku CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md). Alternativou je použití přizpůsobeného dialogového okna. Další informace o použití `CFileDialog`vlastního objektu naleznete v tématu [IFileDialogCustomize](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ifiledialogcustomize).
 
-##  <a name="startvisualgroup"></a>CFileDialog::StartVisualGroup
+## <a name="cfiledialogstartvisualgroup"></a><a name="startvisualgroup"></a>CFileDialog::StartVisualGroup
 
-Deklaruje vizuální skupinu v dialogovém okně. Následná volání jakékoli metody "Add" přidají tyto prvky do této skupiny.
+Deklaruje vizuální skupinu v dialogovém okně. Následná volání jakékoli metody "add" přidávají tyto prvky do této skupiny.
 
 ```
 HRESULT StartVisualGroup(
@@ -1609,16 +1609,16 @@ HRESULT StartVisualGroup(
 ### <a name="parameters"></a>Parametry
 
 *dwIDCtl*<br/>
-ID skupiny vizuálů
+ID vizuální skupiny.
 
 *strLabel*<br/>
-Název skupiny
+Název skupiny.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="updateofnfromshelldialog"></a>CFileDialog::UpdateOFNFromShellDialog
+## <a name="cfiledialogupdateofnfromshelldialog"></a><a name="updateofnfromshelldialog"></a>CFileDialog::UpdateOFNFromShellDialog
 
-Aktualizuje strukturu dat CFileDialog na základě aktuálního stavu interního objektu. [](../../mfc/reference/cfiledialog-class.md) `m_ofn`
+Aktualizuje `m_ofn` datovou strukturu [CFileDialog](../../mfc/reference/cfiledialog-class.md) na základě aktuálního stavu vnitřního objektu.
 
 ```
 void UpdateOFNFromShellDialog();
@@ -1626,19 +1626,19 @@ void UpdateOFNFromShellDialog();
 
 ### <a name="remarks"></a>Poznámky
 
-Ve verzích Windows před Windows Vista byla struktura dat členských [lpstrFile](/previous-versions/windows/embedded/ms911906\(v=msdn.10\)) průběžně synchronizovaná se stavem `CFileDialog`. Jakékoli změny členské proměnné [m_ofn](#m_ofn) byly přímo ovlivněny stavem dialogového okna. Všechny změny stavu dialogového okna také okamžitě aktualizují členskou proměnnou m_ofn.
+Ve verzích systému Windows před systémem Windows Vista byla datová struktura `CFileDialog`člena [OPENFILENAME](/previous-versions/windows/embedded/ms911906\(v=msdn.10\)) průběžně synchronizována se stavem . Všechny změny [proměnné m_ofn](#m_ofn) členy přímo ovlivnily stav dialogového okna. Všechny změny stavu dialogového okna také okamžitě aktualizovaly proměnnou m_ofn člena.
 
-V systému Windows Vista nebo novějších `m_ofn` se datová struktura neaktualizuje automaticky. Chcete-li zaručit přesnost dat v `m_ofn` proměnné členu, měli byste `UpdateOFNFromShellDialog` zavolat funkci před přístupem k datům. Systém Windows volá tuto funkci automaticky během zpracování [IFileDialog:: OnFileOK](/windows/win32/api/shobjidl_core/nf-shobjidl_core-ifiledialogevents-onfileok).
+V systému Windows `m_ofn` Vista nebo novějším není datová struktura automaticky aktualizována. Chcete-li zaručit přesnost dat `m_ofn` v členské proměnné, `UpdateOFNFromShellDialog` měli byste volat funkci před přístupem k datům. Systém Windows volá tuto funkci automaticky během zpracování [iFileDialog::OnFileOK](/windows/win32/api/shobjidl_core/nf-shobjidl_core-ifiledialogevents-onfileok).
 
-Další informace o tom, jak použít `CFileDialog` třídu v systému Windows Vista nebo novější, naleznete v tématu [Třída CFileDialog](../../mfc/reference/cfiledialog-class.md).
+Další informace o použití `CFileDialog` třídy v systému Windows Vista nebo novějším naleznete v [tématu CFileDialog Class](../../mfc/reference/cfiledialog-class.md).
 
 ### <a name="example"></a>Příklad
 
-Tento příklad aktualizuje před `CFileDialog` tím, než se zobrazí. Před aktualizací `m_ofn` členské proměnné je potřeba ji synchronizovat s aktuálním stavem dialogového okna.
+Tento příklad `CFileDialog` aktualizuje před jeho zobrazením. Před aktualizací `m_ofn` členské proměnné ji musíme synchronizovat s aktuálním stavem dialogového okna.
 
 [!code-cpp[NVC_MFC_CFileDialog#1](../../mfc/reference/codesnippet/cpp/cfiledialog-class_7.cpp)]
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [CCommonDialog – třída](../../mfc/reference/ccommondialog-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)

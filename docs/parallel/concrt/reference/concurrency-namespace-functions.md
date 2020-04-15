@@ -33,36 +33,36 @@ f1_keywords:
 - ppltasks/concurrency::when_all
 - ppltasks/concurrency::when_any
 ms.assetid: 520a6dff-9324-4df2-990d-302e3050af6a
-ms.openlocfilehash: 4005ae888511ec987fe83ab3d616aa0fc3675a22
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 15b265744640628425502706d69fd98a1c64bda2
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79419138"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374376"
 ---
 # <a name="concurrency-namespace-functions"></a>concurrency – funkce oboru názvů
 
 ||||
 |-|-|-|
-|[Vyhrazen](#alloc)|[CreateResourceManager –](#createresourcemanager)|[DisableTracing –](#disabletracing)|
-|[EnableTracing –](#enabletracing)|[Free](#free)|[GetExecutionContextId –](#getexecutioncontextid)|
-|[GetOSVersion –](#getosversion)|[GetProcessorCount –](#getprocessorcount)|[GetProcessorNodeCount –](#getprocessornodecount)|
-|[GetSchedulerId –](#getschedulerid)|[Trace_agents_register_name](#trace_agents_register_name)|[asend](#asend)|
-|[cancel_current_task](#cancel_current_task)|[jejich](#clear)|[create_async](#create_async)|
+|[Alloc](#alloc)|[CreateResourceManager](#createresourcemanager)|[DisableTracing](#disabletracing)|
+|[EnableTracing](#enabletracing)|[Free](#free)|[GetExecutionContextId](#getexecutioncontextid)|
+|[Getosversion](#getosversion)|[GetProcessorCount](#getprocessorcount)|[GetProcessorNodeCount](#getprocessornodecount)|
+|[GetSchedulerId](#getschedulerid)|[Trace_agents_register_name](#trace_agents_register_name)|[asend](#asend)|
+|[cancel_current_task](#cancel_current_task)|[Jasné](#clear)|[create_async](#create_async)|
 |[create_task](#create_task)|[get_ambient_scheduler](#get_ambient_scheduler)|[internal_assign_iterators](#internal_assign_iterators)|
 |[interruption_point](#interruption_point)|[is_current_task_group_canceling](#is_current_task_group_canceling)|[make_choice](#make_choice)|
 |[make_greedy_join](#make_greedy_join)|[make_join](#make_join)|[make_task](#make_task)|
 |[parallel_buffered_sort](#parallel_buffered_sort)|[parallel_for](#parallel_for)|[parallel_for_each](#parallel_for_each)|
 |[parallel_invoke](#parallel_invoke)|[parallel_radixsort](#parallel_radixsort)|[parallel_reduce](#parallel_reduce)|
-|[parallel_sort](#parallel_sort)|[parallel_transform](#parallel_transform)|[získávají](#receive)|
-|[run_with_cancellation_token](#run_with_cancellation_token)|[posílají](#send)|[set_ambient_scheduler](#set_ambient_scheduler)|
-|[set_task_execution_resources](#set_task_execution_resources)|[adresu](#swap)|[task_from_exception](#task_from_exception)|
+|[parallel_sort](#parallel_sort)|[parallel_transform](#parallel_transform)|[Přijímat](#receive)|
+|[run_with_cancellation_token](#run_with_cancellation_token)|[Odeslat](#send)|[set_ambient_scheduler](#set_ambient_scheduler)|
+|[set_task_execution_resources](#set_task_execution_resources)|[Swap](#swap)|[task_from_exception](#task_from_exception)|
 |[task_from_result](#task_from_result)|[try_receive](#try_receive)|[Počkej](#wait)|
 |[when_all](#when_all)|[when_any](#when_any)|
 
-## <a name="alloc"></a>Vyhrazen
+## <a name="alloc"></a><a name="alloc"></a>Alloc
 
-Přidělí blok paměti, která je určená od Concurrency Runtimeho subalokátoru pro ukládání do mezipaměti.
+Přidělí blok paměti velikosti zadané z souběžnosti Runtime Ukládání do mezipaměti Suballocator.
 
 ```cpp
 void* __cdecl Alloc(size_t _NumBytes);
@@ -71,7 +71,7 @@ void* __cdecl Alloc(size_t _NumBytes);
 ### <a name="parameters"></a>Parametry
 
 *_NumBytes*<br/>
-Počet bajtů paměti, které mají být přiděleny.
+Počet bajtů paměti přidělit.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -79,11 +79,11 @@ Ukazatel na nově přidělenou paměť.
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace o tom, které scénáře ve vaší aplikaci můžou využít k používání subalokátoru ukládání do mezipaměti, najdete v tématu [Plánovač úloh](../../../parallel/concrt/task-scheduler-concurrency-runtime.md).
+Další informace o scénářích ve vaší aplikaci by mohly mít prospěch z použití suballocator ukládání do mezipaměti, naleznete v [tématu Plánovač úloh](../../../parallel/concrt/task-scheduler-concurrency-runtime.md).
 
-## <a name="asend"></a>asend
+## <a name="asend"></a><a name="asend"></a>asend
 
-Operace asynchronního odeslání, která Naplánuje úkol, aby rozšířil data do cílového bloku.
+Asynchronní operace odesílání, která naplánuje úlohu k šíření dat do cílového bloku.
 
 ```cpp
 template <class T>
@@ -99,36 +99,36 @@ bool asend(
 
 ### <a name="parameters"></a>Parametry
 
-*Š*<br/>
-Typ dat, která se mají odeslat
+*T*<br/>
+Typ dat, která mají být odeslána.
 
 *_Trg*<br/>
-Ukazatel nebo odkaz na cíl, na který se odesílají data.
+Ukazatel nebo odkaz na cíl, ke kterému jsou data odesílána.
 
 *_Data*<br/>
 Odkaz na data, která mají být odeslána.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**true** , pokud byla zpráva přijata před vrácenou metodou, jinak **false** .
+**true,** pokud byla zpráva přijata před vrácenou metodou, **false** jinak.
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace najdete v tématu [funkce předávání zpráv](../../../parallel/concrt/message-passing-functions.md).
+Další informace naleznete v [tématu Message Passing Functions](../../../parallel/concrt/message-passing-functions.md).
 
-## <a name="cancel_current_task"></a>cancel_current_task
+## <a name="cancel_current_task"></a><a name="cancel_current_task"></a>cancel_current_task
 
-Zruší právě prováděnou úlohu. Tato funkce může být volána z těla úkolu, aby přerušila provádění úlohy a způsobila, že vstoupí do stavu `canceled`.
+Zruší aktuálně spuštěnou úlohu. Tato funkce může být volána z těla úlohy přerušit provádění úlohy `canceled` a způsobit jeho zadání stavu.
 
-Nejedná se o podporovaný scénář pro volání této funkce, pokud nejste v těle `task`. V důsledku toho dojde k nedefinovanému chování, jako je například selhání nebo zablokování aplikace.
+Není podporovaný scénář volání této funkce, pokud nejste v `task`těle . Pokud tak učiníte, bude mít za následek nedefinované chování, jako je například selhání nebo zablokování v aplikaci.
 
 ```cpp
 inline __declspec(noreturn) void __cdecl cancel_current_task();
 ```
 
-## <a name="clear"></a>jejich
+## <a name="clear"></a><a name="clear"></a>Jasné
 
-Vymaže souběžnou frontu a zničí všechny aktuálně zařazené prvky do fronty. Tato metoda není bezpečná pro souběžnost.
+Vymaže souběžnou frontu a zničí všechny aktuálně zařazené prvky. Tato metoda není bezpečné souběžnosti.
 
 ```cpp
 template<typename T, class _Ax>
@@ -137,13 +137,13 @@ void concurrent_queue<T, _Ax>::clear();
 
 ### <a name="parameters"></a>Parametry
 
-*Š*<br/>
+*T*<br/>
 
 *_Ax*<br/>
 
-## <a name="create_async"></a>create_async
+## <a name="create_async"></a><a name="create_async"></a>create_async
 
-Vytvoří asynchronní konstrukci prostředí Windows Runtime na základě uživatelem zadaného výrazu lambda nebo objektu funkce. Návratový typ `create_async` je jedna z `IAsyncAction^`, `IAsyncActionWithProgress<TProgress>^`, `IAsyncOperation<TResult>^`nebo `IAsyncOperationWithProgress<TResult, TProgress>^` na základě signatury lambda předané metodě.
+Vytvoří asynchronní konstrukci prostředí Windows Runtime založenou na uživateli zadaném lambda nebo objektu funkce. `create_async` Návratový typ je jeden `IAsyncAction^` `IAsyncActionWithProgress<TProgress>^`z `IAsyncOperation<TResult>^`, `IAsyncOperationWithProgress<TResult, TProgress>^` , nebo na základě podpisu lambda předán metodě.
 
 ```cpp
 template<typename _Function>
@@ -154,34 +154,34 @@ __declspec(noinline) auto create_async(const _Function& _Func)
 ### <a name="parameters"></a>Parametry
 
 *_Function*<br/>
-Typ:
+Typ.
 
 *_Func*<br/>
-Výraz lambda nebo objekt funkce, ze kterého má být vytvořena prostředí Windows Runtime asynchronní konstrukce.
+Lambda nebo objekt funkce, ze kterého chcete vytvořit asynchronní konstrukci prostředí Windows Runtime.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Asynchronní konstrukce reprezentované IAsyncAction ^, IAsyncActionWithProgress\<TProgress > ^, IAsyncOperation\<TResult > ^ nebo IAsyncOperationWithProgress\<TResult, TProgress > ^. Vrácené rozhraní závisí na podpisu výrazu lambda předaného do funkce.
+Asynchronní konstrukce reprezentovaná iAsyncAction^, IAsyncActionWithProgress\<TProgress>\<^, IAsyncOperation TResult>\<^, nebo IAsyncOperationWithProgress TResult, TProgress>^. Vrácené rozhraní závisí na podpisu lambda předándo funkce.
 
 ### <a name="remarks"></a>Poznámky
 
 Návratový typ lambda určuje, zda je konstrukce akce nebo operace.
 
-Výrazy lambda, které vracejí anulování, způsobují vytváření akcí. Výrazy lambda, které vracejí výsledek typu `TResult` způsobují vytvoření operací TResult.
+Lambdas, které vracejí prázdnotu způsobit vytvoření akcí. Lambdas, které vracejí `TResult` výsledek typu způsobit vytvoření operací TResult.
 
-Lambda může také vracet `task<TResult>`, který zapouzdřuje asynchronní práci v rámci sebe nebo je pokračováním řetězce úloh reprezentujících asynchronní práci. V tomto případě je lambda sám spuštěno jako inline, protože úkoly jsou ty, které se spouštějí asynchronně, a návratový typ lambda je nezabalený, aby vytvořil asynchronní konstruktor vrácený `create_async`. To znamená, že výraz lambda, který vrací úlohu\<void > způsobí vytvoření akcí a lambda, která vrátí úlohu\<TResult > způsobí vytvoření operací TResult.
+Lambda může také `task<TResult>` vrátit, který zapouzdřuje aysnchronní práci v rámci sebe nebo je pokračování mnoství úkoly, které představují asynchronní práce. V tomto případě lambda sám je proveden vřádí, protože úkoly jsou ty, které se provádějí asynchronně a návratový typ lambda je `create_async`rozbalen k výrobě asynchronní konstrukce vrácena . To znamená, že lambda,\<který vrací> neplatné úlohy způsobí vytvoření akcí\<a lambda, který vrátí úkol TResult> způsobí vytvoření operací TResult.
 
-Lambda může mít buď nula, jeden nebo dva argumenty. Platné argumenty jsou `progress_reporter<TProgress>` a `cancellation_token`, v takovém pořadí, pokud jsou oba použity. Lambda bez argumentů způsobí vytvoření asynchronní konstrukce bez možnosti vytváření sestav průběhu. Výraz lambda, který přebírá progress_reporter\<TProgress > způsobí, že `create_async` vrátí asynchronní konstruktor, který hlásí průběh typu TProgress pokaždé, když je volána metoda `report` objektu progress_reporter. Výraz lambda, který přebírá cancellation_token může použít tento token pro kontrolu zrušení nebo ho předat úlohám, které vytvoří, aby zrušení asynchronního konstruktoru způsobilo zrušení těchto úloh.
+Lambda může trvat buď nula, jeden nebo dva argumenty. Platné argumenty `progress_reporter<TProgress>` jsou `cancellation_token`a , v tomto pořadí, pokud jsou použity obě. Lambda bez argumentů způsobí vytvoření asynchronní konstrukce bez schopnosti pro vykazování průběhu. Lambda, která trvá\<progress_reporter TProgress `create_async`> způsobí vrátit asynchronní konstrukce, která hlásí `report` průběh typu TProgress pokaždé, když je volána metoda progress_reporter objektu. Lambda, která trvá cancellation_token může použít tento token ke kontrole zrušení nebo předat úkoly, které vytvoří tak, aby zrušení asynchronní konstrukce způsobí zrušení těchto úkolů.
 
-Pokud tělo výrazu lambda nebo objektu funkce vrátí výsledek (a ne úlohu\<TResult >), Lamdba se spustí asynchronně v rámci procesu MTA v kontextu úlohy, kterou pro ni modul runtime implicitně vytvoří. Metoda `IAsyncInfo::Cancel` způsobí zrušení implicitního úkolu.
+Pokud tělo lambda nebo objekt funkce vrátí výsledek (a nikoli úlohu\<TResult>), lamdba bude spuštěna asynchronně v rámci procesu MTA v kontextu úlohy, kterou pro něj modul Runtime implicitně vytvoří. Metoda `IAsyncInfo::Cancel` způsobí zrušení implicitní úlohy.
 
-Pokud tělo lambda vrátí úlohu, provede se vložením na řádku a deklarováním výrazu lambda pro přijetí argumentu typu `cancellation_token` můžete aktivovat zrušení všech úloh, které vytvoříte v rámci výrazu lambda, předáním tohoto tokenu v okamžiku, kdy je vytvoříte. Můžete také použít metodu `register_callback` na tokenu, aby modul runtime vyvolal zpětné volání při volání `IAsyncInfo::Cancel` na asynchronní operaci nebo vytvořenou akci..
+Pokud tělo lambda vrátí úkol, lamba provede vřádí a deklarováním lambda přijmout `cancellation_token` argument typu můžete aktivovat zrušení všech úkolů, které vytvoříte v rámci lambda předáním tohoto tokenu při jejich vytvoření. Můžete také použít `register_callback` metodu na tokenu způsobit Runtime vyvolat zpětné `IAsyncInfo::Cancel` volání při volání na asynchronní operace nebo akce vyrobené..
 
 Tato funkce je k dispozici pouze pro aplikace prostředí Windows Runtime.
 
-## <a name="createresourcemanager"></a>CreateResourceManager –
+## <a name="createresourcemanager"></a><a name="createresourcemanager"></a>CreateResourceManager
 
-Vrátí rozhraní, které představuje instanci typu Singleton Správce prostředků Concurrency Runtime. Správce prostředků zodpovídá za přiřazení prostředků plánovačům, které chtějí vzájemně spolupracovat.
+Vrátí rozhraní, které představuje instanci singleton správce prostředků modulu Runtime souběžnosti. Správce prostředků je zodpovědný za přiřazení zdrojů plánovačům, kteří chtějí vzájemně spolupracovat.
 
 ```cpp
 IResourceManager* __cdecl CreateResourceManager();
@@ -189,17 +189,17 @@ IResourceManager* __cdecl CreateResourceManager();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Rozhraní `IResourceManager`.
+Rozhraní. `IResourceManager`
 
 ### <a name="remarks"></a>Poznámky
 
-Několik následných volání této metody vrátí stejnou instanci Správce prostředků. Každé volání metody zvýší počet odkazů na Správce prostředků a musí se shodovat s voláním metody [IResourceManager:: Release](iresourcemanager-structure.md) , když váš Plánovač dokončí komunikaci s správce prostředků.
+Více následných volání této metody vrátí stejnou instanci Správce prostředků. Každé volání metody se zpřísňuje počet odkazů na Správce prostředků a musí být spárováno s voláním [metody IResourceManager::Release,](iresourcemanager-structure.md) když plánovač provádí komunikaci se Správcem prostředků.
 
-[unsupported_os](unsupported-os-class.md) je vyvolána, pokud Concurrency Runtime operační systém není podporován.
+[unsupported_os](unsupported-os-class.md) je vyvolána, pokud operační systém není podporován modulrunu souběžnosti.
 
-## <a name="create_task"></a>create_task
+## <a name="create_task"></a><a name="create_task"></a>create_task
 
-Vytvoří objekt [úlohy](task-class.md) PPL. `create_task` lze použít všude, kde byste použili konstruktor úlohy. Je poskytován hlavně pro pohodlí, protože umožňuje použití klíčového slova `auto` při vytváření úloh.
+Vytvoří objekt [úlohy](task-class.md) PPL. `create_task`lze použít kdekoli, kde byste použili konstruktor úlohy. Je poskytována především pro pohodlí, protože umožňuje `auto` použití klíčového slova při vytváření úkolů.
 
 ```cpp
 template<typename T>
@@ -212,38 +212,38 @@ __declspec( noinline) task<_ReturnType> create_task(const task<_ReturnType>& _Ta
 
 ### <a name="parameters"></a>Parametry
 
-*Š*<br/>
-Typ parametru, ze kterého má být vytvořen úkol
+*T*<br/>
+Typ parametru, ze kterého má být úloha vytvořena.
 
 *_ReturnType*<br/>
-Typ:
+Typ.
 
 *_Param*<br/>
-Parametr, ze kterého má být vytvořen úkol Může to být lambda nebo objekt funkce, objekt `task_completion_event`, jiný objekt `task` nebo rozhraní Windows:: Foundation:: IAsyncInfo, pokud používáte úkoly v aplikaci UWP.
+Parametr, ze kterého má být úkol vytvořen. To může být lambda nebo `task_completion_event` objekt funkce, `task` objekt, jiný objekt nebo rozhraní Windows::Foundation::IAsyncInfo, pokud používáte úkoly v aplikaci UPW.
 
 *_TaskOptions*<br/>
-Možnosti úlohy.
+Možnosti úkolu.
 
 *_Task*<br/>
-Úkol, který se má vytvořit
+Úkol vytvořit.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nový úkol typu `T`, který je odvozený z `_Param`.
+Nový úkol typu `T`, který je `_Param`odvozen z .
 
 ### <a name="remarks"></a>Poznámky
 
-První přetížení se chová jako konstruktor úlohy, který přijímá jeden parametr.
+První přetížení se chová jako konstruktor úlohy, který přebírá jeden parametr.
 
-Druhé Přetížení přidruží token zrušení, který je součástí nově vytvořeného úkolu. Použijete-li toto přetížení, nebudete moci předat jiný objekt `task` jako první parametr.
+Druhé přetížení přidruží token zrušení poskytované s nově vytvořenou úlohou. Pokud použijete toto přetížení, není povoleno `task` předat v jiném objektu jako první parametr.
 
-Typ vrácené úlohy je odvozen z prvního parametru funkce. Pokud je `_Param` `task_completion_event<T>`, `task<T>`nebo funktor, které vrátí buď typ `T` nebo `task<T>`, je typ vytvořeného úkolu `task<T>`.
+Typ vrácené úlohy je odvozen z prvního parametru do funkce. Pokud `_Param` je `task_completion_event<T>`, `task<T>`a , nebo functor, `task<T>`který vrací buď typ `task<T>` `T` nebo , typ vytvořeného úkolu je .
 
-Pokud je v aplikaci UWP `_Param` typu Windows:: Foundation:: IAsyncOperation\<T > ^ nebo Windows:: Foundation:: IAsyncOperationWithProgress\<T, P > ^ nebo funktor, který vrací jeden z těchto typů, bude vytvořený úkol typu `task<T>`. Pokud je `_Param` typu Windows:: Foundation:: IAsyncAction ^ nebo Windows:: Foundation:: IAsyncActionWithProgress\<P > ^ nebo funktor, který vrací jeden z těchto typů, bude vytvořený úkol typu `task<void>`.
+V aplikaci `_Param` UPW, pokud je typu Windows::Foundation::IAsyncOperation\<T>^ nebo Windows::Foundation::IAsyncOperationWithProgress\<T,P>^, nebo functor, který vrátí jeden z těchto typů, bude vytvořená úloha typu `task<T>`. Pokud `_Param` je typu Windows::Foundation::IAsyncAction^ nebo Windows::Foundation::IAsyncActionWithProgress\<P>^, nebo functor, který vrátí `task<void>`jeden z těchto typů, bude mít vytvořená úloha typ .
 
-## <a name="disabletracing"></a>DisableTracing –
+## <a name="disabletracing"></a><a name="disabletracing"></a>DisableTracing
 
-Zakáže trasování v Concurrency Runtime. Tato funkce je zastaralá, protože trasování ETW je ve výchozím nastavení neregistrované.
+Zakáže trasování v době runtime souběžnosti. Tato funkce je zastaralá, protože trasování ETW je ve výchozím nastavení neregistrované.
 
 ```cpp
 __declspec(deprecated("Concurrency::DisableTracing is a deprecated function.")) _CRTIMP HRESULT __cdecl DisableTracing();
@@ -251,11 +251,11 @@ __declspec(deprecated("Concurrency::DisableTracing is a deprecated function.")) 
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud bylo trasování správně zakázané, `S_OK` se vrátí. Pokud trasování nebylo zahájeno dříve, `E_NOT_STARTED` je vráceno.
+Pokud bylo trasování `S_OK` správně zakázáno, je vráceno. Pokud trasování nebylo dříve `E_NOT_STARTED` zahájeno, je vrácena
 
-## <a name="enabletracing"></a>EnableTracing –
+## <a name="enabletracing"></a><a name="enabletracing"></a>EnableTracing
 
-Povolí trasování v Concurrency Runtime. Tato funkce je zastaralá, protože trasování ETW je teď ve výchozím nastavení zapnuté.
+Umožňuje trasování v době runtime souběžnosti. Tato funkce je zastaralá, protože trasování ETW je nyní ve výchozím nastavení zapnuto.
 
 ```cpp
 __declspec(deprecated("Concurrency::EnableTracing is a deprecated function.")) _CRTIMP HRESULT __cdecl EnableTracing();
@@ -263,11 +263,11 @@ __declspec(deprecated("Concurrency::EnableTracing is a deprecated function.")) _
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud bylo trasování správně iniciované, `S_OK` se vrátí. v opačném případě se `E_NOT_STARTED` vrátí.
+Pokud bylo trasování správně `S_OK` zahájeno, je vráceno; v `E_NOT_STARTED` opačném případě je vrácena.
 
-## <a name="free"></a>Dost
+## <a name="free"></a><a name="free"></a>Zdarma
 
-Uvolní blok paměti dříve přidělený `Alloc` metodou do meziConcurrency Runtime ukládání do mezipaměti.
+Uvolní blok paměti dříve přidělené `Alloc` metodou souběžnosti Runtime Ukládání do mezipaměti Suballocator.
 
 ```cpp
 void __cdecl Free(_Pre_maybenull_ _Post_invalid_ void* _PAllocation);
@@ -276,13 +276,13 @@ void __cdecl Free(_Pre_maybenull_ _Post_invalid_ void* _PAllocation);
 ### <a name="parameters"></a>Parametry
 
 *_PAllocation*<br/>
-Ukazatel na paměť, která byla dříve přidělena metodou `Alloc`, která má být uvolněna. Pokud je parametr `_PAllocation` nastaven na hodnotu `NULL`, tato metoda ho ignoruje a okamžitě se vrátí.
+Ukazatel na paměť dříve přidělené metodou, `Alloc` která má být uvolněna. Pokud je `_PAllocation` parametr nastaven `NULL`na hodnotu , tato metoda ji bude ignorovat a okamžitě se vrátí.
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace o tom, které scénáře ve vaší aplikaci můžou využít k používání subalokátoru ukládání do mezipaměti, najdete v tématu [Plánovač úloh](../../../parallel/concrt/task-scheduler-concurrency-runtime.md).
+Další informace o scénářích ve vaší aplikaci by mohly mít prospěch z použití suballocator ukládání do mezipaměti, naleznete v [tématu Plánovač úloh](../../../parallel/concrt/task-scheduler-concurrency-runtime.md).
 
-## <a name="get_ambient_scheduler"></a>get_ambient_scheduler
+## <a name="get_ambient_scheduler"></a><a name="get_ambient_scheduler"></a>get_ambient_scheduler
 
 ```cpp
 inline std::shared_ptr<::Concurrency::scheduler_interface> get_ambient_scheduler();
@@ -290,9 +290,9 @@ inline std::shared_ptr<::Concurrency::scheduler_interface> get_ambient_scheduler
 
 ### <a name="return-value"></a>Návratová hodnota
 
-## <a name="getexecutioncontextid"></a>GetExecutionContextId –
+## <a name="getexecutioncontextid"></a><a name="getexecutioncontextid"></a>GetExecutionContextId
 
-Vrací jedinečný identifikátor, který lze přiřadit kontextu spuštění, který implementuje rozhraní `IExecutionContext`.
+Vrátí jedinečný identifikátor, který lze přiřadit k kontextu `IExecutionContext` spuštění, který implementuje rozhraní.
 
 ```cpp
 unsigned int __cdecl GetExecutionContextId();
@@ -304,9 +304,9 @@ Jedinečný identifikátor pro kontext spuštění.
 
 ### <a name="remarks"></a>Poznámky
 
-Tuto metodu použijte, chcete-li získat identifikátor pro svůj kontext spuštění před předáním `IExecutionContext` rozhraní jako parametru kterékoli z metod, které nabízí Správce prostředků.
+Pomocí této metody můžete získat identifikátor pro kontext `IExecutionContext` spuštění před předáním rozhraní jako parametru některé z metod nabízených Správcem prostředků.
 
-## <a name="getosversion"></a>GetOSVersion –
+## <a name="getosversion"></a><a name="getosversion"></a>Getosversion
 
 Vrátí verzi operačního systému.
 
@@ -316,15 +316,15 @@ IResourceManager::OSVersion __cdecl GetOSVersion();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Výčtová hodnota představující operační systém.
+Výčet hodnoty představující operační systém.
 
 ### <a name="remarks"></a>Poznámky
 
-[unsupported_os](unsupported-os-class.md) je vyvolána, pokud Concurrency Runtime operační systém není podporován.
+[unsupported_os](unsupported-os-class.md) je vyvolána, pokud operační systém není podporován modulrunu souběžnosti.
 
-## <a name="getprocessorcount"></a>GetProcessorCount –
+## <a name="getprocessorcount"></a><a name="getprocessorcount"></a>GetProcessorCount
 
-Vrátí počet hardwarových vláken v podkladovém systému.
+Vrátí počet hardwarových vláken v základním systému.
 
 ```cpp
 unsigned int __cdecl GetProcessorCount();
@@ -336,11 +336,11 @@ Počet hardwarových vláken.
 
 ### <a name="remarks"></a>Poznámky
 
-[unsupported_os](unsupported-os-class.md) je vyvolána, pokud Concurrency Runtime operační systém není podporován.
+[unsupported_os](unsupported-os-class.md) je vyvolána, pokud operační systém není podporován modulrunu souběžnosti.
 
-## <a name="getprocessornodecount"></a>GetProcessorNodeCount –
+## <a name="getprocessornodecount"></a><a name="getprocessornodecount"></a>GetProcessorNodeCount
 
-Vrátí počet uzlů NUMA nebo balíčků procesorů v podkladovém systému.
+Vrátí počet uzlů NUMA nebo balíčků procesorů v základním systému.
 
 ```cpp
 unsigned int __cdecl GetProcessorNodeCount();
@@ -348,17 +348,17 @@ unsigned int __cdecl GetProcessorNodeCount();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Počet uzlů NUMA nebo balíčků procesorů.
+Počet uzlů NUMA nebo balíčků procesoru.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud systém obsahuje víc uzlů NUMA než balíčky procesorů, vrátí se počet uzlů NUMA, jinak se vrátí počet balíčků procesoru.
+Pokud systém obsahuje více uzlů NUMA než balíčky procesoru, je vrácen počet uzlů NUMA, jinak je vrácen počet balíčků procesoru.
 
-[unsupported_os](unsupported-os-class.md) je vyvolána, pokud Concurrency Runtime operační systém není podporován.
+[unsupported_os](unsupported-os-class.md) je vyvolána, pokud operační systém není podporován modulrunu souběžnosti.
 
-## <a name="getschedulerid"></a>GetSchedulerId –
+## <a name="getschedulerid"></a><a name="getschedulerid"></a>GetSchedulerId
 
-Vrátí jedinečný identifikátor, který lze přiřadit k plánovači, který implementuje rozhraní `IScheduler`.
+Vrátí jedinečný identifikátor, který lze přiřadit plánovači, `IScheduler` který implementuje rozhraní.
 
 ```cpp
 unsigned int __cdecl GetSchedulerId();
@@ -366,13 +366,13 @@ unsigned int __cdecl GetSchedulerId();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Jedinečný identifikátor pro Scheduler.
+Jedinečný identifikátor plánovače.
 
 ### <a name="remarks"></a>Poznámky
 
-Tuto metodu použijte, chcete-li získat identifikátor pro Plánovač před předáním `IScheduler` rozhraní jako parametru libovolné metody nabízené Správce prostředků.
+Pomocí této metody můžete získat identifikátor plánovače `IScheduler` před předáním rozhraní jako parametru některé z metod nabízených Správcem prostředků.
 
-## <a name="internal_assign_iterators"></a>internal_assign_iterators
+## <a name="internal_assign_iterators"></a><a name="internal_assign_iterators"></a>internal_assign_iterators
 
 ```cpp
 template<typename T, class _Ax>
@@ -384,19 +384,19 @@ void concurrent_vector<T, _Ax>::internal_assign_iterators(
 
 ### <a name="parameters"></a>Parametry
 
-*Š*<br/>
+*T*<br/>
 
 *_Ax*<br/>
 
 *_I*<br/>
 
-*první*<br/>
+*První*<br/>
 
-*posledního*<br/>
+*Poslední*<br/>
 
-## <a name="interruption_point"></a>interruption_point
+## <a name="interruption_point"></a><a name="interruption_point"></a>interruption_point
 
-Vytvoří bod přerušení pro zrušení. Pokud probíhá zrušení v kontextu, ve kterém je tato funkce volána, vyvolá se vnitřní výjimka, která přeruší provádění aktuálně prováděné paralelní práce. Pokud zrušení neprobíhá, funkce neprovede žádnou akci.
+Vytvoří bod přerušení pro zrušení. Pokud zrušení probíhá v kontextu, kde je volána tato funkce, to vyvolá vnitřní výjimku, která přeruší provádění aktuálně provádějící paralelní práce. Pokud zrušení neprobíhá, funkce neprovede žádné.
 
 ```cpp
 inline void interruption_point();
@@ -404,11 +404,11 @@ inline void interruption_point();
 
 ### <a name="remarks"></a>Poznámky
 
-Neměli byste zachytit vnitřní výjimku zrušení vyvolanou funkcí `interruption_point()`. Výjimka bude zachycena a zpracována modulem runtime a její zachycení může způsobit neobvyklou funkčnost programu.
+Neměli byste zachytit vnitřní zrušení výjimky `interruption_point()` vyvolána funkce. Výjimka bude zachycena a zpracována za běhu a zachycení může způsobit, že se program bude chovat abnormálně.
 
-## <a name="is_current_task_group_canceling"></a>is_current_task_group_canceling
+## <a name="is_current_task_group_canceling"></a><a name="is_current_task_group_canceling"></a>is_current_task_group_canceling
 
-Vrací údaj o tom, zda je skupina úloh, která aktuálně provádí inlineing v aktuálním kontextu, v průběhu aktivního zrušení (nebo bude brzy). Všimněte si, že pokud v aktuálním kontextu není žádná skupina úloh aktuálně prováděna s vloženým kontextem, bude vrácena `false`.
+Vrátí údaj o tom, zda je skupina úloh, která je aktuálně provádění vazby na aktuální kontext je uprostřed aktivní zrušení (nebo bude brzy). Všimněte si, že pokud neexistuje žádná skupina úloh aktuálně `false` provádění vazby na aktuální kontext, budou vráceny.
 
 ```cpp
 bool __cdecl is_current_task_group_canceling();
@@ -416,15 +416,15 @@ bool __cdecl is_current_task_group_canceling();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**true** , pokud se aktuálně prováděná skupina úloh zruší, jinak **false** .
+**true,** pokud skupina úloh, která právě provádí, je zrušení, **false** jinak.
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace naleznete v tématu [zrušení](../../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md#cancellation).
+Další informace naleznete v tématu [Zrušení](../../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md#cancellation).
 
-## <a name="make_choice"></a>make_choice
+## <a name="make_choice"></a><a name="make_choice"></a>make_choice
 
-Vytvoří `choice` blok pro zasílání zpráv z volitelného `Scheduler` nebo `ScheduleGroup` a dvou nebo více vstupních zdrojů.
+Vytvoří blok `choice` zasílání zpráv z `Scheduler` `ScheduleGroup` volitelné nebo a dva nebo více vstupních zdrojů.
 
 ```cpp
 template<typename T1, typename T2, typename... Ts>
@@ -450,14 +450,14 @@ choice<std::tuple<T1, T2, Ts...>> make_choice(
 
 ### <a name="parameters"></a>Parametry
 
-*Lince*<br/>
-Typ bloku zprávy prvního zdroje
+*T1*<br/>
+Typ bloku zprávy prvního zdroje.
 
 *T2*<br/>
 Typ bloku zprávy druhého zdroje.
 
 *_PScheduler*<br/>
-Objekt `Scheduler`, ve kterém je naplánována úloha šíření pro blok zasílání zpráv `choice`
+Objekt, `Scheduler` ve kterém je naplánováno `choice` úlohy šíření pro blok zasílání zpráv.
 
 *_Item1*<br/>
 První zdroj.
@@ -469,15 +469,15 @@ Druhý zdroj.
 Další zdroje.
 
 *_PScheduleGroup*<br/>
-Objekt `ScheduleGroup`, ve kterém je naplánována úloha šíření pro blok zasílání zpráv `choice` Použitý objekt `Scheduler` je odvozen skupinou plánu.
+Objekt, `ScheduleGroup` ve kterém je naplánováno `choice` úlohy šíření pro blok zasílání zpráv. Použitý `Scheduler` objekt je implikován skupinou plánu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`choice` blok zpráv se dvěma nebo více vstupními zdroji.
+Blok `choice` zpráv se dvěma nebo více vstupními zdroji.
 
-## <a name="make_greedy_join"></a>make_greedy_join
+## <a name="make_greedy_join"></a><a name="make_greedy_join"></a>make_greedy_join
 
-Vytvoří `greedy multitype_join` blok pro zasílání zpráv z volitelného `Scheduler` nebo `ScheduleGroup` a dvou nebo více vstupních zdrojů.
+Vytvoří blok `greedy multitype_join` zasílání zpráv z `Scheduler` `ScheduleGroup` volitelné nebo a dva nebo více vstupních zdrojů.
 
 ```cpp
 template<typename T1, typename T2, typename... Ts>
@@ -503,14 +503,14 @@ multitype_join<std::tuple<T1, T2, Ts...>, greedy> make_greedy_join(
 
 ### <a name="parameters"></a>Parametry
 
-*Lince*<br/>
-Typ bloku zprávy prvního zdroje
+*T1*<br/>
+Typ bloku zprávy prvního zdroje.
 
 *T2*<br/>
 Typ bloku zprávy druhého zdroje.
 
 *_PScheduler*<br/>
-Objekt `Scheduler`, ve kterém je naplánována úloha šíření pro blok zasílání zpráv `multitype_join`
+Objekt, `Scheduler` ve kterém je naplánováno `multitype_join` úlohy šíření pro blok zasílání zpráv.
 
 *_Item1*<br/>
 První zdroj.
@@ -522,15 +522,15 @@ Druhý zdroj.
 Další zdroje.
 
 *_PScheduleGroup*<br/>
-Objekt `ScheduleGroup`, ve kterém je naplánována úloha šíření pro blok zasílání zpráv `multitype_join` Použitý objekt `Scheduler` je odvozen skupinou plánu.
+Objekt, `ScheduleGroup` ve kterém je naplánováno `multitype_join` úlohy šíření pro blok zasílání zpráv. Použitý `Scheduler` objekt je implikován skupinou plánu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`greedy multitype_join` blok zpráv se dvěma nebo více vstupními zdroji.
+Blok `greedy multitype_join` zpráv se dvěma nebo více vstupními zdroji.
 
-## <a name="make_join"></a>make_join
+## <a name="make_join"></a><a name="make_join"></a>make_join
 
-Vytvoří `non_greedy multitype_join` blok pro zasílání zpráv z volitelného `Scheduler` nebo `ScheduleGroup` a dvou nebo více vstupních zdrojů.
+Vytvoří blok `non_greedy multitype_join` zasílání zpráv z `Scheduler` `ScheduleGroup` volitelné nebo a dva nebo více vstupních zdrojů.
 
 ```cpp
 template<typename T1, typename T2, typename... Ts>
@@ -557,14 +557,14 @@ multitype_join<std::tuple<T1, T2, Ts...>> make_join(
 
 ### <a name="parameters"></a>Parametry
 
-*Lince*<br/>
-Typ bloku zprávy prvního zdroje
+*T1*<br/>
+Typ bloku zprávy prvního zdroje.
 
 *T2*<br/>
 Typ bloku zprávy druhého zdroje.
 
 *_PScheduler*<br/>
-Objekt `Scheduler`, ve kterém je naplánována úloha šíření pro blok zasílání zpráv `multitype_join`
+Objekt, `Scheduler` ve kterém je naplánováno `multitype_join` úlohy šíření pro blok zasílání zpráv.
 
 *_Item1*<br/>
 První zdroj.
@@ -576,15 +576,15 @@ Druhý zdroj.
 Další zdroje.
 
 *_PScheduleGroup*<br/>
-Objekt `ScheduleGroup`, ve kterém je naplánována úloha šíření pro blok zasílání zpráv `multitype_join` Použitý objekt `Scheduler` je odvozen skupinou plánu.
+Objekt, `ScheduleGroup` ve kterém je naplánováno `multitype_join` úlohy šíření pro blok zasílání zpráv. Použitý `Scheduler` objekt je implikován skupinou plánu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`non_greedy multitype_join` blok zpráv se dvěma nebo více vstupními zdroji.
+Blok `non_greedy multitype_join` zpráv se dvěma nebo více vstupními zdroji.
 
-## <a name="make_task"></a>make_task
+## <a name="make_task"></a><a name="make_task"></a>make_task
 
-Výrobní metoda pro vytvoření objektu `task_handle`.
+Metoda výroby pro `task_handle` vytvoření objektu.
 
 ```cpp
 template <class _Function>
@@ -594,22 +594,22 @@ task_handle<_Function> make_task(const _Function& _Func);
 ### <a name="parameters"></a>Parametry
 
 *_Function*<br/>
-Typ objektu funkce, který bude vyvolán pro provedení práce reprezentované objektem `task_handle`.
+Typ objektu funkce, který bude vyvolán k provedení `task_handle` práce reprezentované objektem.
 
 *_Func*<br/>
-Funkce, která bude vyvolána pro provedení práce reprezentované objektem `task_handle`. Může to být lambda funktor, ukazatel na funkci nebo libovolný objekt, který podporuje verzi operátoru volání funkce s podpisem `void operator()()`.
+Funkce, která bude vyvolána k provedení `task_handle` práce reprezentované objektem. Může se jedná o lambda functor, ukazatel na funkci nebo jakýkoli objekt, který `void operator()()`podporuje verzi operátoru volání funkce s podpisem .
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Objekt `task_handle`.
+Objekt. `task_handle`
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce je užitečná v případě, že potřebujete vytvořit objekt `task_handle` s výrazem lambda, protože umožňuje vytvořit objekt bez znalosti skutečného typu funktor lambda.
+Tato funkce je užitečná, `task_handle` když potřebujete vytvořit objekt s výrazem lambda, protože umožňuje vytvořit objekt bez znalosti skutečného typu lambda functor.
 
-## <a name="parallel_buffered_sort"></a>parallel_buffered_sort
+## <a name="parallel_buffered_sort"></a><a name="parallel_buffered_sort"></a>parallel_buffered_sort
 
-Uspořádá prvky v zadaném rozsahu do nesestupného pořadí nebo podle kritéria řazení určeného binárním predikátem paralelně. Tato funkce je sémanticky podobná `std::sort` v tom, že se jedná o porovnání, nestabilní, místní řazení s výjimkou toho, že potřebuje `O(n)` dodatečné místo a vyžaduje výchozí inicializaci pro prvky, které jsou setříděny.
+Uspořádá prvky v zadaném rozsahu do nesestupného pořadí nebo podle kritéria řazení určeného binárním predikátem paralelně. Tato funkce je sémanticky podobná `std::sort` v tom, že je na základě porovnání, `O(n)` nestabilní, na místě řazení s tím rozdílem, že potřebuje další místo a vyžaduje výchozí inicializaci pro prvky, které jsou seřazeny.
 
 ```cpp
 template<typename _Random_iterator>
@@ -664,39 +664,39 @@ inline void parallel_buffered_sort(
 Typ iterátoru vstupního rozsahu.
 
 *_Allocator*<br/>
-Typ C++ standardního přidělování paměti kompatibilní knihovny.
+Typ alokátoru paměti kompatibilního se standardní knihovnou jazyka C++.
 
 *_Function*<br/>
 Typ binárního komparátoru.
 
 *_Begin*<br/>
-Iterátor náhodného přístupu, který adresuje umístění prvního prvku v rozsahu, který má být seřazen.
+Random-access iterátor adresování pozici prvníprvek v oblasti, které mají být seřazeny.
 
 *_End*<br/>
-Iterátor náhodného přístupu, který adresuje pozici jednu za posledním prvkem v rozsahu, který má být seřazen.
+Random-access iterátor adresování pozice jeden kolem poslední prvek v rozsahu, který má být seřazen.
 
 *_Alloc*<br/>
-Instance C++ standardního přidělování paměti kompatibilní knihovny.
+Instance alokátoru paměti kompatibilního se standardní knihovnou jazyka C++.
 
 *_Func*<br/>
-Objekt funkce predikátu definovaný uživatelem, který definuje kritérium porovnání, které se má splnit po sobě jdoucích prvků v řazení. Binární predikát přijímá dva argumenty a vrací **hodnotu true** , pokud je splněno, a **false** , pokud není splněna. Tato funkce komparátor musí pro páry prvků z sekvence vytvořit přísné slabé řazení.
+Uživatelem definovaný objekt predikátové funkce, který definuje kritérium porovnání, které mají být splněny po sobě jdoucími prvky v řazení. Binární predikát trvá dva argumenty a vrátí **true,** pokud je splněna a **false,** pokud není splněna. Tato funkce komparátoru musí uložit přísné slabé řazení na dvojice prvků z sekvence.
 
 *_Chunk_size*<br/>
-Velikost minimální bloku, který bude rozdělen do dvou pro paralelní spuštění.
+Velikost mimimum bloku, který bude rozdělen na dvě pro paralelní provádění.
 
 ### <a name="remarks"></a>Poznámky
 
-Všechna přetížení vyžadují `n * sizeof(T)` další místo, kde `n` je počet prvků, které mají být seřazeny, a `T` je typ prvku. Ve většině případů parallel_buffered_sort zobrazuje zlepšení výkonu při [parallel_sort](concurrency-namespace-functions.md)a je vhodné ho použít přes parallel_sort, pokud máte k dispozici dostatek paměti.
+Všechna přetížení `n * sizeof(T)` vyžadují další `n` místo, kde je počet prvků, `T` které mají být seřazeny a je typ prvku. Ve většině případů parallel_buffered_sort ukáže zlepšení výkonu oproti [parallel_sort](concurrency-namespace-functions.md)a měli byste jej použít v průběhu parallel_sort, pokud máte k dispozici paměť.
 
-Pokud nezadáte binární komparátor `std::less` slouží jako výchozí, což vyžaduje, aby typ prvku poskytoval operátor `operator<()`.
+Pokud nezadáte binární komparátor `std::less` se používá jako výchozí, který vyžaduje typ `operator<()`prvku poskytnout operátor .
 
-Pokud nezadáte typ nebo instanci přidělování, k přidělení vyrovnávací paměti C++ slouží standardní `std::allocator<T>` přidělování paměti knihovny.
+Pokud nezadáte typ alokátoru nebo instanci, alokátor paměti `std::allocator<T>` standardní knihovny jazyka C++ se používá k přidělení vyrovnávací paměti.
 
-Algoritmus rozdělí vstupní rozsah do dvou bloků dat a postupně rozděluje každý blok na dvě dílčí bloky pro spuštění paralelně. Nepovinný argument `_Chunk_size` lze použít k označení algoritmu, který by měl zpracovávat bloky velikosti < `_Chunk_size` sériové.
+Algoritmus rozdělí vstupní rozsah na dva bloky a postupně rozdělí každý blok do dvou dílčích bloků pro paralelní spuštění. Volitelný argument `_Chunk_size` lze použít k označení algoritmu, který by měl `_Chunk_size` zpracovávat bloky velikosti < sériově.
 
-## <a name="parallel_for"></a>parallel_for
+## <a name="parallel_for"></a><a name="parallel_for"></a>parallel_for
 
-`parallel_for` iterovat na určitou škálu indexů a v každé iteraci spustí uživatelsky zadanou funkci, paralelně.
+`parallel_for`iterace přes rozsah indexů a provede uživatelem dodané funkce v každé iteraci, paralelně.
 
 ```cpp
 template <typename _Index_type, typename _Function, typename _Partitioner>
@@ -749,33 +749,33 @@ void parallel_for(
 Typ indexu, který se používá pro iteraci.
 
 *_Function*<br/>
-Typ funkce, která bude provedena při každé iteraci.
+Typ funkce, která bude spuštěna při každé iteraci.
 
 *_Partitioner*<br/>
-Typ rozdělovače, který se používá k rozdělení zadaného rozsahu.
+Typ rozdělovače, který se používá k rozdělení dodané oblasti.
 
-*první*<br/>
+*První*<br/>
 První index, který má být zahrnut do iterace.
 
-*posledního*<br/>
-Index, který bude přidán do iterace za poslední index.
+*Poslední*<br/>
+Index jeden za poslední index, který má být zahrnut do iterace.
 
 *_Step*<br/>
-Hodnota, kterou se má při iteraci z `first` na `last`krokovat. Krok musí být kladný. [invalid_argument](../../../standard-library/invalid-argument-class.md) je vyvolána, pokud je krok menší než 1.
+Hodnota, kterou krok při iterace z `first` do `last`. Krok musí být pozitivní. [invalid_argument](../../../standard-library/invalid-argument-class.md) je vyvolána, pokud je krok menší než 1.
 
 *_Func*<br/>
-Funkce, která má být vykonána při každé iteraci. Může to být výraz lambda, ukazatel na funkci nebo libovolný objekt, který podporuje verzi operátoru volání funkce s podpisem `void operator()(_Index_type)`.
+Funkce, která má být spuštěna při každé iteraci. Může se jedná o výraz lambda, ukazatel funkce nebo libovolný objekt, který `void operator()(_Index_type)`podporuje verzi operátoru volání funkce s podpisem .
 
 *_Part*<br/>
-Odkaz na objekt rozdělovače. Argument může být jeden z `const`[auto_partitioner](auto-partitioner-class.md)`&`, `const`[static_partitioner](static-partitioner-class.md)`&`, `const`[simple_partitioner](simple-partitioner-class.md)`&` nebo [affinity_partitioner](affinity-partitioner-class.md)`&`, pokud se používá objekt [affinity_partitioner](affinity-partitioner-class.md) , odkaz musí být nekonstantní odkaz l-hodnoty, aby algoritmus mohl uložit stav pro budoucí smyčky pro opakované použití.
+Odkaz na objekt partitioner. Argument může být `const`jeden `const`z [auto_partitioner](auto-partitioner-class.md)`&`, [static_partitioner](static-partitioner-class.md)`&`, `const` [simple_partitioner](simple-partitioner-class.md) `&` nebo [affinity_partitioner](affinity-partitioner-class.md) `&` Pokud je použit [affinity_partitioner](affinity-partitioner-class.md) objekt, odkaz musí být odkaz na hodnotu l, aby algoritmus mohl uložit stav pro budoucí smyčky k opětovnému použití.
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace najdete v tématu [paralelní algoritmy](../../../parallel/concrt/parallel-algorithms.md).
+Další informace naleznete [v tématu Paralelní algoritmy](../../../parallel/concrt/parallel-algorithms.md).
 
-## <a name="parallel_for_each"></a>parallel_for_each
+## <a name="parallel_for_each"></a><a name="parallel_for_each"></a>parallel_for_each
 
-`parallel_for_each` aplikuje zadanou funkci na každý prvek v rozsahu paralelně. Je sémanticky ekvivalentní funkci `for_each` v oboru názvů `std`, s tím rozdílem, že iterace nad prvky je prováděna paralelně a pořadí iterace není specifikováno. Argument `_Func` musí podporovat operátor volání funkce ve formě `operator()(T)` kde parametr `T` je typ položky kontejneru, na který se provádí iterace.
+`parallel_for_each`aplikuje zadanou funkci na každý prvek v rozsahu paralelně. Je sémanticky ekvivalentní `for_each` funkci `std` v oboru názvů, s tím rozdílem, že iterace přes prvky se provádí paralelně a pořadí iterace není určeno. Argument `_Func` musí podporovat operátor volání funkce `operator()(T)` formuláře, `T` kde je parametr typ položky kontejneru je iterated nad.
 
 ```cpp
 template <typename _Iterator, typename _Function>
@@ -795,35 +795,35 @@ void parallel_for_each(
 ### <a name="parameters"></a>Parametry
 
 *_Iterator*<br/>
-Typ iterátoru, který se používá k iterování na kontejneru.
+Typ iterátoru se používá k iterazovat přes kontejner.
 
 *_Function*<br/>
-Typ funkce, která bude použita na každý prvek v rozsahu.
+Typ funkce, která bude použita pro každý prvek v rozsahu.
 
 *_Partitioner*<br/>
-*první*<br/>
-Iterátor adresující pozici prvního prvku, který má být zahrnut do paralelní iterace.
+*První*<br/>
+Iterátor adresování pozici první prvek, který mají být zahrnuty v paralelní iteraci.
 
-*posledního*<br/>
-Iterátor adresující pozici jednu za poslední prvek, který se má zahrnout do paralelní iterace.
+*Poslední*<br/>
+Iterátor adresování pozice jeden kolem poslední prvek, který má být zahrnut v paralelní iteraci.
 
 *_Func*<br/>
-Uživatelem definovaný objekt funkce, který je použit pro každý prvek v rozsahu.
+Objekt funkce definované uživatelem, který je použit pro každý prvek v rozsahu.
 
 *_Part*<br/>
-Odkaz na objekt rozdělovače. Argument může být jeden z `const`[auto_partitioner](auto-partitioner-class.md)`&`, `const`[static_partitioner](static-partitioner-class.md)`&`, `const`[simple_partitioner](simple-partitioner-class.md)`&` nebo [affinity_partitioner](affinity-partitioner-class.md)`&`, pokud se používá objekt [affinity_partitioner](affinity-partitioner-class.md) , odkaz musí být nekonstantní odkaz l-hodnoty, aby algoritmus mohl uložit stav pro budoucí smyčky pro opakované použití.
+Odkaz na objekt partitioner. Argument může být `const`jeden `const`z [auto_partitioner](auto-partitioner-class.md)`&`, [static_partitioner](static-partitioner-class.md)`&`, `const` [simple_partitioner](simple-partitioner-class.md) `&` nebo [affinity_partitioner](affinity-partitioner-class.md) `&` Pokud je použit [affinity_partitioner](affinity-partitioner-class.md) objekt, odkaz musí být odkaz na hodnotu l, aby algoritmus mohl uložit stav pro budoucí smyčky k opětovnému použití.
 
 ### <a name="remarks"></a>Poznámky
 
-[auto_partitioner](auto-partitioner-class.md) se použije pro přetížení bez explicitního dělení.
+[auto_partitioner](auto-partitioner-class.md) bude použit pro přetížení bez explicitní partitioner.
 
-Pro iterátory, které nepodporují náhodný přístup, je podporována pouze [auto_partitioner](auto-partitioner-class.md) .
+Pro iterátory, které nepodporují náhodný přístup, je podporovánpouze [auto_partitioner.](auto-partitioner-class.md)
 
-Další informace najdete v tématu [paralelní algoritmy](../../../parallel/concrt/parallel-algorithms.md).
+Další informace naleznete [v tématu Paralelní algoritmy](../../../parallel/concrt/parallel-algorithms.md).
 
-## <a name="parallel_invoke"></a>parallel_invoke
+## <a name="parallel_invoke"></a><a name="parallel_invoke"></a>parallel_invoke
 
-Spustí objekty funkce, které jsou zadány jako parametry paralelně, a zablokuje, dokud se nedokončí jejich spuštění. Každý objekt funkce může být výraz lambda, ukazatel na funkci nebo libovolný objekt, který podporuje operátor volání funkce s podpisem `void operator()()`.
+Provede objekty funkce zadané jako parametry paralelně a blokuje, dokud nedokončí provádění. Každý objekt funkce může být lambda výraz, ukazatel funkce nebo jakýkoli objekt, `void operator()()`který podporuje operátor volání funkce s podpisem .
 
 ```cpp
 template <typename _Function1, typename _Function2>
@@ -953,76 +953,76 @@ void parallel_invoke(
 ### <a name="parameters"></a>Parametry
 
 *_Function1*<br/>
-Typ prvního objektu funkce, který má být spuštěn paralelně.
+Typ prvního objektu funkce, který má být proveden paralelně.
 
 *_Function2*<br/>
-Typ druhého objektu funkce, který má být spuštěn paralelně.
+Typ druhého objektu funkce, který má být proveden paralelně.
 
 *_Function3*<br/>
-Typ třetího objektu funkce, který má být spuštěn paralelně.
+Typ třetí objekt funkce, který má být proveden paralelně.
 
 *_Function4*<br/>
-Typ čtvrtého objektu funkce, který má být spuštěn paralelně.
+Typ čtvrtého objektu funkce, který má být proveden paralelně.
 
 *_Function5*<br/>
-Typ pátého objektu funkce, který má být spuštěn paralelně.
+Typ pátého objektu funkce, který má být proveden paralelně.
 
 *_Function6*<br/>
-Typ šestého objektu funkce, který má být spuštěn paralelně.
+Typ šestého objektu funkce, který má být proveden paralelně.
 
 *_Function7*<br/>
-Typ sedmého objektu funkce, který má být spuštěn paralelně.
+Typ sedmého objektu funkce, který má být proveden paralelně.
 
 *_Function8*<br/>
-Typ osmého objektu funkce, který má být spuštěn paralelně.
+Typ osmého objektu funkce, který má být proveden paralelně.
 
 *_Function9*<br/>
-Typ devátého objektu funkce, který má být spuštěn paralelně.
+Typ devátého objektu funkce, který má být proveden paralelně.
 
 *_Function10*<br/>
-Typ desátého objektu funkce, který má být spuštěn paralelně.
+Typ desátého objektu funkce, který má být proveden paralelně.
 
 *_Func1*<br/>
-První objekt funkce, který má být spuštěn paralelně.
+První objekt funkce, který má být proveden paralelně.
 
 *_Func2*<br/>
-Druhý objekt funkce, který má být spuštěn paralelně.
+Druhý objekt funkce, který má být proveden paralelně.
 
 *_Func3*<br/>
-Třetí objekt funkce, který má být spuštěn paralelně.
+Třetí objekt funkce, který má být proveden paralelně.
 
 *_Func4*<br/>
-Čtvrtý objekt funkce, který má být spuštěn paralelně.
+Čtvrtý objekt funkce, který má být proveden paralelně.
 
 *_Func5*<br/>
-Pátý objekt funkce, který má být spuštěn paralelně.
+Pátý objekt funkce, který má být proveden paralelně.
 
 *_Func6*<br/>
-Šestý objekt funkce, který má být spuštěn paralelně.
+Šestý objekt funkce, který má být proveden paralelně.
 
 *_Func7*<br/>
-Sedmý objekt funkce, který má být spuštěn paralelně.
+Sedmý objekt funkce, který má být proveden paralelně.
 
 *_Func8*<br/>
-Osmý objekt funkce, který má být spuštěn paralelně.
+Osmý objekt funkce, který má být proveden paralelně.
 
 *_Func9*<br/>
-Devátý objekt funkce, který má být spuštěn paralelně.
+Devátý objekt funkce, který má být proveden paralelně.
 
 *_Func10*<br/>
-Desátý objekt funkce, který má být spuštěn paralelně.
+Desátý objekt funkce, který má být proveden paralelně.
 
 ### <a name="remarks"></a>Poznámky
 
-Všimněte si, že jeden nebo více objektů funkcí dodaných jako parametry může být spuštěno v kontextu volání.
+Všimněte si, že jeden nebo více objektů funkce zadané jako parametry může spustit vložit na volající kontext.
 
-Pokud jeden nebo více objektů funkcí předaných jako parametry této funkci vyvolá výjimku, modul runtime vybere jednu výjimku, kterou si zvolíte, a rozšíří ji mimo volání `parallel_invoke`.
+Pokud jeden nebo více objektů funkce předaných jako parametry této funkce vyvolá výjimku, runtime vybere jednu takovou `parallel_invoke`výjimku podle svého výběru a rozšíří ji z volání .
 
-Další informace najdete v tématu [paralelní algoritmy](../../../parallel/concrt/parallel-algorithms.md).
+Další informace naleznete [v tématu Paralelní algoritmy](../../../parallel/concrt/parallel-algorithms.md).
 
-## <a name="parallel_radixsort"></a>parallel_radixsort
+## <a name="parallel_radixsort"></a><a name="parallel_radixsort"></a>parallel_radixsort
 
-Uspořádá prvky v zadaném rozsahu do nesestupného pořadí pomocí algoritmu řazení číselné řady. Toto je stabilní funkce řazení, která vyžaduje funkci projekce, která může prvky projektu seřadit do unsigned integer klíčů jako. Pro prvky, které jsou řazeny, je vyžadována výchozí inicializace.
+Uspořádá prvky v zadaném rozsahu do nesestupového pořadí pomocí algoritmu řazení radix. Jedná se o stabilní funkci řazení, která vyžaduje funkci projekce, která může promítat prvky, které mají být seřazeny do nepodepsaných celočíselných klíčů. Pro seřazené prvky je vyžadována výchozí inicializace.
 
 ```cpp
 template<typename _Random_iterator>
@@ -1073,39 +1073,39 @@ inline void parallel_radixsort(
 Typ iterátoru vstupního rozsahu.
 
 *_Allocator*<br/>
-Typ C++ standardního přidělování paměti kompatibilní knihovny.
+Typ alokátoru paměti kompatibilního se standardní knihovnou jazyka C++.
 
 *_Function*<br/>
-Typ funkce projekce
+Typ funkce projekce.
 
 *_Begin*<br/>
-Iterátor náhodného přístupu, který adresuje umístění prvního prvku v rozsahu, který má být seřazen.
+Random-access iterátor adresování pozici prvníprvek v oblasti, které mají být seřazeny.
 
 *_End*<br/>
-Iterátor náhodného přístupu, který adresuje pozici jednu za posledním prvkem v rozsahu, který má být seřazen.
+Random-access iterátor adresování pozice jeden kolem poslední prvek v rozsahu, který má být seřazen.
 
 *_Alloc*<br/>
-Instance C++ standardního přidělování paměti kompatibilní knihovny.
+Instance alokátoru paměti kompatibilního se standardní knihovnou jazyka C++.
 
 *_Proj_func*<br/>
-Objekt funkce projekce definovaný uživatelem, který převede element na celočíselnou hodnotu.
+Objekt funkce projekce definované uživatelem, který převádí prvek na integrální hodnotu.
 
 *_Chunk_size*<br/>
-Velikost minimální bloku, který bude rozdělen do dvou pro paralelní spuštění.
+Velikost mimimum bloku, který bude rozdělen na dvě pro paralelní provádění.
 
 ### <a name="remarks"></a>Poznámky
 
-Všechna přetížení vyžadují `n * sizeof(T)` další místo, kde `n` je počet prvků, které mají být seřazeny, a `T` je typ prvku. Unární projekce funktor s podpisem `I _Proj_func(T)` je vyžadována pro vrácení klíče, je-li zadán element, kde `T` je typ prvku a `I` je typ unsigned integer.
+Všechna přetížení `n * sizeof(T)` vyžadují další `n` místo, kde je počet prvků, `T` které mají být seřazeny a je typ prvku. Unární projekce functor s `I _Proj_func(T)` podpisem je nutné vrátit klíč `T` při daný prvek, kde je typ prvku a `I` je nepodepsaný celočíselný typ.
 
-Pokud nezadáte funkci projekce, výchozí funkce projekce, která jednoduše vrátí prvek, se používá pro celočíselné typy. Funkce nebude zkompilována, pokud prvek není integrálního typu při absenci funkce projekce.
+Pokud nezadáte funkci projekce, výchozí funkce projekce, která jednoduše vrátí prvek, se používá pro integrální typy. Funkce se nezdaří zkompilovat, pokud prvek není integrální typ v nepřítomnosti funkce projekce.
 
-Pokud nezadáte typ nebo instanci přidělování, k přidělení vyrovnávací paměti C++ slouží standardní `std::allocator<T>` přidělování paměti knihovny.
+Pokud nezadáte typ alokátoru nebo instanci, alokátor paměti `std::allocator<T>` standardní knihovny jazyka C++ se používá k přidělení vyrovnávací paměti.
 
-Algoritmus rozdělí vstupní rozsah do dvou bloků dat a postupně rozděluje každý blok na dvě dílčí bloky pro spuštění paralelně. Nepovinný argument `_Chunk_size` lze použít k označení algoritmu, který by měl zpracovávat bloky velikosti < `_Chunk_size` sériové.
+Algoritmus rozdělí vstupní rozsah na dva bloky a postupně rozdělí každý blok do dvou dílčích bloků pro paralelní spuštění. Volitelný argument `_Chunk_size` lze použít k označení algoritmu, který by měl `_Chunk_size` zpracovávat bloky velikosti < sériově.
 
-## <a name="parallel_reduce"></a>parallel_reduce
+## <a name="parallel_reduce"></a><a name="parallel_reduce"></a>parallel_reduce
 
-Vypočítá součet všech prvků v zadaném rozsahu tím, že provede výpočet po sobě jdoucích částečných součtů, nebo vypočítá výsledek po sobě jdoucích částečných výsledků podobně jako u paralelního použití zadané binární operace, která je jiná než součet. `parallel_reduce` je sémanticky podobná `std::accumulate`, s tím rozdílem, že vyžaduje asociativní binární operaci a vyžaduje hodnotu identity namísto počáteční hodnoty.
+Vypočítá součet všech prvků v zadaném rozsahu výpočtem po sobě jdoucích částečných součtů nebo vypočítá výsledek po sobě jdoucích dílčích výsledků podobně získaných z použití zadané binární operace jiné než součet paralelně. `parallel_reduce`je sémanticky `std::accumulate`podobný , s tím rozdílem, že vyžaduje, aby binární operace byla asociativní a vyžaduje hodnotu identity namísto počáteční hodnoty.
 
 ```cpp
 template<typename _Forward_iterator>
@@ -1139,28 +1139,28 @@ inline _Reduce_type parallel_reduce(
 Typ iterátoru vstupního rozsahu.
 
 *_Sym_reduce_fun*<br/>
-Typ funkce symetrického snižování. Musí se jednat o typ funkce s podpisem `_Reduce_type _Sym_fun(_Reduce_type, _Reduce_type)`, kde _Reduce_type je stejná jako typ identity a výsledný typ omezení. Pro třetí přetížení by měl být konzistentní s typem výstupu `_Range_reduce_fun`.
+Typ funkce symetrické redukce. Musí se jednat o `_Reduce_type _Sym_fun(_Reduce_type, _Reduce_type)`typ funkce s podpisem , kde _Reduce_type je stejný jako typ identity a typ výsledku snížení. Pro třetí přetížení by to mělo být `_Range_reduce_fun`v souladu s výstupním typem .
 
 *_Reduce_type*<br/>
-Typ, na který se bude vstup snižovat, což může být jiné než vstupní typ elementu. Hodnota vrácená hodnota a identita bude mít tento typ.
+Typ, který bude snížit na vstup, který se může lišit od typu vstupní prvek. Vrácená hodnota a hodnota identity bude mít tento typ.
 
 *_Range_reduce_fun*<br/>
-Typ funkce pro snížení rozsahu. Musí se jednat o typ funkce s podpisem `_Reduce_type _Range_fun(_Forward_iterator, _Forward_iterator, _Reduce_type)`, _Reduce_type je stejný jako typ identity a výsledný typ omezení.
+Typ funkce redukce rozsahu. Musí se jednat o `_Reduce_type _Range_fun(_Forward_iterator, _Forward_iterator, _Reduce_type)`typ funkce s podpisem , _Reduce_type je stejný jako typ identity a typ výsledku redukce.
 
 *_Begin*<br/>
-Vstupní iterátor adresující první prvek v rozsahu, který má být snížen.
+Vstupní iterátor adresování první prvek v rozsahu, který má být snížena.
 
 *_End*<br/>
-Vstupní iterátor adresující prvek, který je o jednu pozici nad koncovým prvkem v rozsahu, který má být snížen.
+Vstupní iterátor adresování prvek, který je jedna pozice za poslední prvek v rozsahu, který má být snížena.
 
 *_Identity*<br/>
-Hodnota identity `_Identity` je stejného typu jako typ výsledku zmenšení a také `value_type` iterátoru pro první a druhé přetížení. Pro třetí přetížení musí mít hodnota identity stejný typ jako typ výsledku zmenšení, ale může se lišit od `value_type` iterátoru. Musí mít odpovídající hodnotu tak, aby operátor zmenšení rozsahu `_Range_fun`, když se aplikuje na rozsah jednoho elementu typu `value_type` a hodnota identity se chová jako přetypování typu hodnoty z typu `value_type` na typ identity.
+Hodnota `_Identity` identity je stejného typu jako výsledek typu snížení `value_type` a také iterátoru pro první a druhé přetížení. Pro třetí přetížení hodnota identity musí mít stejný typ jako výsledek typu snížení, `value_type` ale může se lišit od iterátoru. Musí mít odpovídající hodnotu tak, `_Range_fun`aby operátor snížení rozsahu , při `value_type` použití na rozsah jednoho prvku typu a hodnoty identity, se chová jako typ přetypované hodnoty z typu `value_type` na typ identity.
 
 *_Sym_fun*<br/>
-Symetrická funkce, která bude použita v druhé části zmenšení. Další informace najdete v tématu poznámky.
+Symetrická funkce, která bude použita v druhém snížení. Další informace naleznete v poznámkách.
 
 *_Range_fun*<br/>
-Funkce, která bude použita v první fázi zmenšení. Další informace najdete v tématu poznámky.
+Funkce, která bude použita v první fázi redukce. Další informace naleznete v poznámkách.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1168,17 +1168,17 @@ Výsledek snížení.
 
 ### <a name="remarks"></a>Poznámky
 
-Aby bylo možné provést paralelní snížení, funkce rozdělí rozsah na bloky na základě počtu pracovních procesů, které jsou k dispozici pro základní Plánovač. Zmenšení probíhá ve dvou fázích, první fáze provádí snížení v rámci každého bloku a druhá fáze provádí snížení částečných výsledků z každého bloku.
+Chcete-li provést paralelní redukci, funkce rozdělí rozsah na bloky na základě počtu pracovníků, které jsou k dispozici pro základní plánovač. Snížení probíhá ve dvou fázích, první fáze provádí snížení v rámci každého bloku a druhá fáze provádí snížení mezi částečné výsledky z každého bloku.
 
-První přetížení vyžaduje, aby `value_type`iterátoru, `T`, byly stejné jako typ hodnoty identity a také typ výsledku snížení. Typ elementu T musí poskytovat operátor `T T::operator + (T)` pro omezení prvků v každém bloku. Stejný operátor se používá také ve druhé fázi.
+První přetížení `value_type`vyžaduje, aby iterátor `T`, být stejný jako typ hodnoty identity, jakož i typ výsledku snížení. Typ prvku T musí `T T::operator + (T)` poskytnout operátor snížit prvky v každém bloku. Stejný operátor se používá i ve druhé fázi.
 
-Druhé přetížení také vyžaduje, aby `value_type` iterátoru byl stejný jako typ hodnoty identity a také typ výsledku snížení. Zadaný binární operátor `_Sym_fun` se používá v obou fázích redukce s hodnotou identity jako počáteční hodnotou pro první fázi.
+Druhé přetížení také vyžaduje, aby iterátor je `value_type` být stejný jako typ hodnoty identity, jakož i typ výsledku snížení. Zadaný binární `_Sym_fun` operátor se používá v obou fázích redukce, přičemž hodnota identity je počáteční hodnotou pro první fázi.
 
-Pro třetí přetížení musí být typ hodnoty identity stejný jako typ výsledku omezení, ale `value_type` iterátoru se může lišit od obou. Funkce zmenšení rozsahu `_Range_fun` se používá v první fázi s hodnotou identity jako počáteční hodnota a binární funkce `_Sym_reduce_fun` se použije k dílčím výsledkům ve druhé fázi.
+Pro třetí přetížení typ hodnoty identity musí být stejný jako typ výsledku snížení, `value_type` ale iterátor se může lišit od obou. Funkce `_Range_fun` redukce rozsahu se používá v první fázi s hodnotou identity jako počáteční hodnotou a binární funkce `_Sym_reduce_fun` je použita pro dílčí výsledky ve druhé fázi.
 
-## <a name="parallel_sort"></a>parallel_sort
+## <a name="parallel_sort"></a><a name="parallel_sort"></a>parallel_sort
 
-Uspořádá prvky v zadaném rozsahu do nesestupného pořadí nebo podle kritéria řazení určeného binárním predikátem paralelně. Tato funkce je sémanticky podobná `std::sort` v tom, že se jedná o porovnání nestabilního a místního řazení na místě.
+Uspořádá prvky v zadaném rozsahu do nesestupného pořadí nebo podle kritéria řazení určeného binárním predikátem paralelně. Tato funkce je sémanticky podobná `std::sort` v tom, že je na základě porovnání, nestabilní, na místě řazení.
 
 ```cpp
 template<typename _Random_iterator>
@@ -1200,31 +1200,31 @@ inline void parallel_sort(
 Typ iterátoru vstupního rozsahu.
 
 *_Function*<br/>
-Typ binárního porovnání funktor.
+Typ binární porovnání functor.
 
 *_Begin*<br/>
-Iterátor náhodného přístupu, který adresuje umístění prvního prvku v rozsahu, který má být seřazen.
+Random-access iterátor adresování pozici prvníprvek v oblasti, které mají být seřazeny.
 
 *_End*<br/>
-Iterátor náhodného přístupu, který adresuje pozici jednu za posledním prvkem v rozsahu, který má být seřazen.
+Random-access iterátor adresování pozice jeden kolem poslední prvek v rozsahu, který má být seřazen.
 
 *_Func*<br/>
-Objekt funkce predikátu definovaný uživatelem, který definuje kritérium porovnání, které se má splnit po sobě jdoucích prvků v řazení. Binární predikát přijímá dva argumenty a vrací **hodnotu true** , pokud je splněno, a **false** , pokud není splněna. Tato funkce komparátor musí pro páry prvků z sekvence vytvořit přísné slabé řazení.
+Uživatelem definovaný objekt predikátové funkce, který definuje kritérium porovnání, které mají být splněny po sobě jdoucími prvky v řazení. Binární predikát trvá dva argumenty a vrátí **true,** pokud je splněna a **false,** pokud není splněna. Tato funkce komparátoru musí uložit přísné slabé řazení na dvojice prvků z sekvence.
 
 *_Chunk_size*<br/>
-Minimální velikost bloku dat, který bude rozdělen do dvou pro paralelní spuštění.
+Minimální velikost bloku, který bude rozdělen na dvě pro paralelní spuštění.
 
 ### <a name="remarks"></a>Poznámky
 
 První přetížení používá binární komparátor `std::less`.
 
-Druhé přetížení používá poskytnutý binární komparátor, který by měl mít podpis `bool _Func(T, T)`, kde `T` je typ prvků ve vstupním rozsahu.
+Druhý přetížený používá zadaný binární komparátor, `bool _Func(T, T)` `T` který by měl mít podpis, kde je typ prvků ve vstupní oblasti.
 
-Algoritmus rozdělí vstupní rozsah do dvou bloků dat a postupně rozděluje každý blok na dvě dílčí bloky pro spuštění paralelně. Nepovinný argument `_Chunk_size` lze použít k označení algoritmu, který by měl zpracovávat bloky velikosti < `_Chunk_size` sériové.
+Algoritmus rozdělí vstupní rozsah na dva bloky a postupně rozdělí každý blok do dvou dílčích bloků pro paralelní spuštění. Volitelný argument `_Chunk_size` lze použít k označení algoritmu, který by měl `_Chunk_size` zpracovávat bloky velikosti < sériově.
 
-## <a name="parallel_transform"></a>parallel_transform
+## <a name="parallel_transform"></a><a name="parallel_transform"></a>parallel_transform
 
-Aplikuje zadaný objekt funkce na každý prvek ve zdrojovém rozsahu nebo na dvojici prvků ze dvou zdrojových rozsahů a kopíruje návratové hodnoty objektu Functions do cílového rozsahu paralelně. Tato funkce je sémanticky rovnocenná `std::transform`.
+Aplikuje zadaný objekt funkce na každý prvek ve zdrojové oblasti nebo na dvojici prvků ze dvou zdrojových oblastí a zkopíruje vrácené hodnoty objektu funkce do cílové oblasti paralelně. Tento funkční je sémanticky ekvivalentní `std::transform`.
 
 ```cpp
 template <typename _Input_iterator1,
@@ -1297,61 +1297,61 @@ first2,
 ### <a name="parameters"></a>Parametry
 
 *_Input_iterator1*<br/>
-Typ prvního nebo pouze vstupního iterátoru.
+Typ prvního nebo jediného vstupního iterátoru.
 
 *_Output_iterator*<br/>
 Typ výstupního iterátoru.
 
 *_Unary_operator*<br/>
-Typ unárního funktor, který má být proveden u každého prvku ve vstupním rozsahu.
+Typ unární functor, které mají být provedeny na každý prvek ve vstupní oblasti.
 
 *_Input_iterator2*<br/>
 Typ druhého vstupního iterátoru.
 
 *_Binary_operator*<br/>
-Typ binárního funktor spustil párový na elementy ze dvou zdrojových rozsahů.
+Typ binárního functoru proveden na prvky ze dvou zdrojových oblastí.
 
 *_Partitioner*<br/>
-*first1*<br/>
-Vstupní iterátor adresující pozici prvního prvku v prvním nebo pouze zdrojovém rozsahu, na kterém má být provozován.
+*první1*<br/>
+Vstupní iterátor adresující pozici prvního prvku v prvním nebo jediném zdrojovém rozsahu, na kterém má být provozován.
 
 *last1*<br/>
-Vstupní iterátor adresující pozici jednu za poslední prvek v prvním nebo pouze zdrojovém rozsahu, na kterém má být provozován.
+Vstupní iterátor adresování pozice jeden kolem poslední prvek v první nebo jediný zdroj rozsah, který má být provozován.
 
 *_Result*<br/>
-Výstupní iterátor adresující pozici prvního prvku v cílovém rozsahu.
+Výstupní iterátor adresující pozici prvního prvku v cílovéoblasti.
 
 *_Unary_op*<br/>
-Uživatelem definovaný unární objekt funkce, který je použit pro každý prvek ve zdrojovém rozsahu.
+Uživatelem definovaný objekt unární funkce, který je použit pro každý prvek ve zdrojové oblasti.
 
 *_Part*<br/>
-Odkaz na objekt rozdělovače. Argument může být jeden z `const`[auto_partitioner](auto-partitioner-class.md)`&`, `const`[static_partitioner](static-partitioner-class.md)`&`, `const`[simple_partitioner](simple-partitioner-class.md)`&` nebo [affinity_partitioner](affinity-partitioner-class.md)`&`, pokud se používá objekt [affinity_partitioner](affinity-partitioner-class.md) , odkaz musí být nekonstantní odkaz l-hodnoty, aby algoritmus mohl uložit stav pro budoucí smyčky pro opakované použití.
+Odkaz na objekt partitioner. Argument může být `const`jeden `const`z [auto_partitioner](auto-partitioner-class.md)`&`, [static_partitioner](static-partitioner-class.md)`&`, `const` [simple_partitioner](simple-partitioner-class.md) `&` nebo [affinity_partitioner](affinity-partitioner-class.md) `&` Pokud je použit [affinity_partitioner](affinity-partitioner-class.md) objekt, odkaz musí být odkaz na hodnotu l, aby algoritmus mohl uložit stav pro budoucí smyčky k opětovnému použití.
 
-*first2*<br/>
-Vstupní iterátor adresující pozici prvního prvku v druhém zdrojovém rozsahu, na kterém má být provozován.
+*první2*<br/>
+Vstupní iterátor adresující pozici prvního prvku v oblasti druhého zdroje, který má být provozován.
 
 *_Binary_op*<br/>
-Uživatelsky definovaný objekt binární funkce, který je v dopředných objednávkách použit jako párový, do dvou zdrojových rozsahů.
+Uživatelem definovaný binární objekt funkce, který je použit spárově, v pořadí dopředu, na dvě zdrojové oblasti.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Výstupní iterátor adresující pozici jednu za poslední prvek v cílovém rozsahu, který přijímá výstupní prvky transformované objektem funkce.
+Výstupní iterátor adresování pozice jeden kolem poslední prvek v cílové oblasti, která přijímá výstupní prvky transformované objektu funkce.
 
 ### <a name="remarks"></a>Poznámky
 
-[auto_partitioner](auto-partitioner-class.md) se použije pro přetížení bez argumentu explicitního dělení.
+[auto_partitioner](auto-partitioner-class.md) budou použity pro přetížení bez explicitní partitioner argument.
 
-Pro iterátory, které nepodporují náhodný přístup, je podporována pouze [auto_partitioner](auto-partitioner-class.md) .
+Pro iterátory, které nepodporují náhodný přístup, je podporovánpouze [auto_partitioner.](auto-partitioner-class.md)
 
-Přetížení, která přijímají argument `_Unary_op` transformují vstupní rozsah do výstupního rozsahu použitím unárního funktor na každý prvek ve vstupním rozsahu. `_Unary_op` musí podporovat operátor volání funkce s signaturou `operator()(T)`, kde `T` je typ hodnoty rozsahu, na který se provádí iterace.
+Přetížení, které přebírají `_Unary_op` argument, transformují vstupní rozsah do výstupního rozsahu použitím unárního functoru na každý prvek ve vstupním rozsahu. `_Unary_op`musí podporovat operátor volání `operator()(T)` funkce `T` s podpisem, kde je typ hodnoty rozsahu iterována nad.
 
-Přetížení, která přijímají argument `_Binary_op` transformují dva vstupní rozsahy do výstupního rozsahu použitím binárního funktoru na jeden prvek z prvního vstupního rozsahu a jednoho prvku z druhého vstupního rozsahu. `_Binary_op` musí podporovat operátor volání funkce s signaturou `operator()(T, U)` kde `T``U` jsou typy hodnot dvou vstupních iterátorů.
+Přetížení, které přebírají `_Binary_op` argument, transformují dva vstupní rozsahy do výstupního rozsahu použitím binárního functoru na jeden prvek z prvnívstupní oblasti a jeden prvek z druhého vstupního rozsahu. `_Binary_op`musí podporovat operátor volání `operator()(T, U)` funkce `T` `U` s podpisem, kde jsou typy hodnot dvou vstupních iterátorů.
 
-Další informace najdete v tématu [paralelní algoritmy](../../../parallel/concrt/parallel-algorithms.md).
+Další informace naleznete [v tématu Paralelní algoritmy](../../../parallel/concrt/parallel-algorithms.md).
 
-## <a name="receive"></a>získávají
+## <a name="receive"></a><a name="receive"></a>Přijímat
 
-Obecná implementace příjmu, která umožňuje kontextu počkat na data z přesně jednoho zdroje a filtrovat hodnoty, které jsou přijaty.
+Obecné přijímat implementace, umožňující kontext čekat na data z přesně jednoho zdroje a filtrovat hodnoty, které jsou přijaty.
 
 ```cpp
 template <class T>
@@ -1379,17 +1379,17 @@ T receive(
 
 ### <a name="parameters"></a>Parametry
 
-*Š*<br/>
+*T*<br/>
 Typ datové části.
 
 *_Src*<br/>
-Ukazatel nebo odkaz na zdroj, ze kterého jsou očekávána data.
+Ukazatel nebo odkaz na zdroj, ze kterého se očekávají data.
 
 *_Timeout*<br/>
 Maximální doba, po kterou by měla metoda pro data v milisekundách.
 
 *_Filter_proc*<br/>
-Funkce filtru, která určuje, zda mají být zprávy přijaty.
+Funkce filtru, která určuje, zda mají být zprávy přijímány.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -1397,11 +1397,11 @@ Hodnota ze zdroje typu datové části.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud má parametr `_Timeout` jinou hodnotu než konstanta `COOPERATIVE_TIMEOUT_INFINITE`, je vyvolána výjimka [operation_timed_out](operation-timed-out-class.md) v případě, že zadaná doba vyprší před přijetím zprávy. Pokud chcete vypršení časového limitu nulové délky, měli byste použít funkci [try_receive](concurrency-namespace-functions.md) , na rozdíl od volání `receive` s časovým limitem `0` (nula), protože je efektivnější a nevyvolává výjimky v časových limitech.
+Pokud má `_Timeout` parametr jinou hodnotu než konstantu `COOPERATIVE_TIMEOUT_INFINITE`, je vyvolána výjimka [operation_timed_out,](operation-timed-out-class.md) pokud zadaný čas vyprší před přijetím zprávy. Pokud chcete časový rozsah nulové délky, měli byste použít [funkci try_receive,](concurrency-namespace-functions.md) na rozdíl od volání `receive` s časovým časem (nula), `0` protože je efektivnější a nevyvolá výjimky na časové opony.
 
-Další informace najdete v tématu [funkce předávání zpráv](../../../parallel/concrt/message-passing-functions.md).
+Další informace naleznete v [tématu Message Passing Functions](../../../parallel/concrt/message-passing-functions.md).
 
-## <a name="run_with_cancellation_token"></a>run_with_cancellation_token
+## <a name="run_with_cancellation_token"></a><a name="run_with_cancellation_token"></a>run_with_cancellation_token
 
 Spustí objekt funkce okamžitě a synchronně v kontextu daného tokenu zrušení.
 
@@ -1418,18 +1418,18 @@ void run_with_cancellation_token(
 Typ objektu funkce, který bude vyvolán.
 
 *_Func*<br/>
-Objekt funkce, který se spustí. Tento objekt musí podporovat operátor volání funkce s signaturou void (void).
+Objekt funkce, který bude proveden. Tento objekt musí podporovat operátor volání funkce s podpisem void(void).
 
 *_Ct*<br/>
-Token zrušení, který bude řídit implicitní zrušení objektu Function. Použijte `cancellation_token::none()`, pokud chcete funkci provést bez možnosti implicitního zrušení z nadřazené skupiny úloh.
+Token zrušení, který bude řídit implicitní zrušení objektu funkce. Použijte, `cancellation_token::none()` pokud chcete, aby funkce byla spuštěna bez možnosti zrušení implicitního zrušení z nadřazené skupiny úkolů.
 
 ### <a name="remarks"></a>Poznámky
 
-Všechny body přerušení v objektu Function budou aktivovány při zrušení `cancellation_token`. Explicitní `_Ct` tokenu izoluje tento `_Func` z nadřazeného zrušení, pokud má nadřazený objekt jiný token nebo žádný token.
+Všechny body přerušení v objektu funkce `cancellation_token` budou spuštěny při zrušení. Explicitní token `_Ct` bude izolovat `_Func` od nadřazené zrušení, pokud nadřazený má jiný token nebo žádný token.
 
-## <a name="send"></a>posílají
+## <a name="send"></a><a name="send"></a>Odeslat
 
-Operace synchronního odeslání, která čeká, až cíl zprávu buď přijme, nebo odmítne.
+Synchronní operace odeslání, která čeká, dokud cíl nepřijme nebo odmítne zprávu.
 
 ```cpp
 template <class T>
@@ -1441,24 +1441,24 @@ bool send(ITarget<T>& _Trg, const T& _Data);
 
 ### <a name="parameters"></a>Parametry
 
-*Š*<br/>
+*T*<br/>
 Typ datové části.
 
 *_Trg*<br/>
-Ukazatel nebo odkaz na cíl, na který se odesílají data.
+Ukazatel nebo odkaz na cíl, ke kterému jsou data odesílána.
 
 *_Data*<br/>
 Odkaz na data, která mají být odeslána.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**true** , pokud byla zpráva přijata, jinak **false** .
+**true,** pokud byla zpráva přijata, **false** jinak.
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace najdete v tématu [funkce předávání zpráv](../../../parallel/concrt/message-passing-functions.md).
+Další informace naleznete v [tématu Message Passing Functions](../../../parallel/concrt/message-passing-functions.md).
 
-## <a name="set_ambient_scheduler"></a>set_ambient_scheduler
+## <a name="set_ambient_scheduler"></a><a name="set_ambient_scheduler"></a>set_ambient_scheduler
 
 ```cpp
 inline void set_ambient_scheduler(std::shared_ptr<::Concurrency::scheduler_interface> _Scheduler);
@@ -1467,15 +1467,15 @@ inline void set_ambient_scheduler(std::shared_ptr<::Concurrency::scheduler_inter
 ### <a name="parameters"></a>Parametry
 
 *_Scheduler*<br/>
-Ambientní Plánovač, který se má nastavit.
+Okolní plánovač nastavit.
 
-## <a name="set_task_execution_resources"></a>set_task_execution_resources
+## <a name="set_task_execution_resources"></a><a name="set_task_execution_resources"></a>set_task_execution_resources
 
-Omezí prostředky spouštění používané Concurrency Runtime interními pracovními vlákny do zadané sady vztahů.
+Omezuje prostředky spuštění používané vnitřnípracovní vlákna souběžnosti runtime na zadanou sadu spřažení.
 
-Volání této metody je platné pouze před vytvořením Správce prostředků nebo mezi dvěma životnostmi Správce prostředků. Dá se vyvolat víckrát, dokud Správce prostředků v době vyvolání neexistují. Po nastavení omezení spřažení zůstane v platnosti, dokud nebude další platné volání metody `set_task_execution_resources`.
+Je platné volat tuto metodu pouze před správce prostředků byl vytvořen, nebo mezi dvěma životnostmi Správce prostředků. Může být vyvolána vícekrát, pokud Správce prostředků neexistuje v době vyvolání. Po nastavení limitu spřažení zůstane v platnosti až do `set_task_execution_resources` dalšího platného volání metody.
 
-Zadaná maska spřažení nemusí být podmnožinou masky spřažení procesu. Spřažení procesů bude v případě potřeby aktualizováno.
+Zapředpokladu maska spřažení nemusí být podmnožinou masky spřažení procesů. Spřažení procesů bude v případě potřeby aktualizováno.
 
 ```cpp
 void __cdecl set_task_execution_resources(
@@ -1489,25 +1489,25 @@ void __cdecl set_task_execution_resources(
 ### <a name="parameters"></a>Parametry
 
 *_ProcessAffinityMask*<br/>
-Maska spřažení, na kterou mají být Concurrency Runtime pracovním vláknům omezeny. Tuto metodu použijte v systému s více než 64y hardwarových vláken pouze v případě, že chcete omezit Concurrency Runtime na podmnožinu aktuální skupiny procesorů. Obecně platí, že byste měli použít verzi metody, která přijímá pole spřažení skupin jako parametr, aby bylo možné omezit spřažení na počítačích s více než 64 hardwarovými vlákny.
+Maska spřažení, na kterou mají být omezena pracovní vlákna souběžnosti runtime. Tuto metodu použijte v systému s více než 64 hardwarových vláken pouze v případě, že chcete omezit modul Runtime souběžnosti na podmnožinu aktuální skupiny procesorů. Obecně byste měli použít verzi metody, která přijímá pole spřažení skupin jako parametr, chcete-li omezit spřažení na počítačích s více než 64 hardwarových podprocesů.
 
-*count*<br/>
-Počet položek `GROUP_AFFINITY` v poli určeném parametrem `_PGroupAffinity`.
+*Počet*<br/>
+Počet `GROUP_AFFINITY` položek v poli určeném `_PGroupAffinity`parametrem .
 
 *_PGroupAffinity*<br/>
-Pole `GROUP_AFFINITY`ch položek.
+Pole `GROUP_AFFINITY` položek.
 
 ### <a name="remarks"></a>Poznámky
 
-Metoda vyvolá výjimku [invalid_operation](invalid-operation-class.md) , pokud je v době vyvolání správce prostředků přítomna, a výjimka [invalid_argument](../../../standard-library/invalid-argument-class.md) , pokud zadaná spřažení vede k prázdné sadě prostředků.
+Metoda vyvolá [výjimku invalid_operation,](invalid-operation-class.md) pokud správce prostředků je k dispozici v době, kdy je vyvolána, a [výjimku invalid_argument,](../../../standard-library/invalid-argument-class.md) pokud zadaný spřažení má za následek prázdnou sadu prostředků.
 
-Verze metody, která přijímá pole spřažení skupin, jako parametr by měla být použita pouze v operačních systémech se systémem Windows 7 nebo vyšší verzí. V opačném případě je vyvolána výjimka [invalid_operation](invalid-operation-class.md) .
+Verze metody, která přebírá pole spřažení skupin jako parametr by měl být používán pouze v operačních systémech s verzí Windows 7 nebo vyšší. V opačném případě je vyvolána [výjimka invalid_operation.](invalid-operation-class.md)
 
-Programově se změnou spřažení procesu po vyvolání této metody nedojde k tomu, že Správce prostředků znovu vyhodnotit spřažení, které je omezené na. Všechny změny spřažení procesů by proto měly být provedeny před voláním této metody.
+Programově úprava spřažení procesů po vyvolání této metody nezpůsobí, že Správce prostředků znovu vyhodnotí spřažení, na kterou je omezen. Proto všechny změny spřažení procesů by měly být provedeny před voláním této metody.
 
-## <a name="swap"></a>adresu
+## <a name="swap"></a><a name="swap"></a>Swap
 
-Vyměňuje prvky dvou `concurrent_vector` objektů.
+Vyměňuje prvky `concurrent_vector` dvou objektů.
 
 ```cpp
 template<typename T, class _Ax>
@@ -1518,25 +1518,25 @@ inline void swap(
 
 ### <a name="parameters"></a>Parametry
 
-*Š*<br/>
+*T*<br/>
 Datový typ prvků uložených v souběžných vektorech.
 
 *_Ax*<br/>
-Typ přidělování souběžných vektorů.
+Typ alokátoru souběžných vektorů.
 
 *_A*<br/>
-Souběžný vektor, jehož prvky mají být vyměňovány pomocí souběžných vektorových `_B`.
+Souběžný vektor, jehož prvky mají být vyměněny `_B`s prvky souběžného vektoru .
 
 *_B*<br/>
-Souběžný vektor, který poskytuje prvky, které mají být měněny, nebo vektor, jehož prvky mají být vyměňovány pomocí souběžných vektorových `_A`.
+Souběžný vektor poskytující prvky, které mají být zaměněny, nebo vektor, jehož `_A`prvky mají být vyměněny s prvky souběžného vektoru .
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce šablony je algoritmus specializovaný na třídu kontejneru `concurrent_vector` ke spuštění členské funkce `_A`. [concurrent_vector:: swap](concurrent-vector-class.md#swap)(`_B`). Jedná se o instance částečného řazení šablon funkcí kompilátorem. Pokud jsou funkce šablony přetíženy takovým způsobem, že shoda šablony s voláním funkce není jedinečná, kompilátor vybere nejvíce specializované verze funkce šablony. Obecná verze funkce šablony, `template <class T> void swap(T&, T&)`, ve třídě algoritmu funguje podle přiřazení a je pomalé operace. Specializovaná verze v každém kontejneru je mnohem rychlejší, protože může pracovat s interní reprezentace třídy kontejneru.
+Funkce šablony je algoritmus specializovaný na `concurrent_vector` třídu kontejneru pro spuštění členské funkce `_A`. [concurrent_vector::swap](concurrent-vector-class.md#swap) `_B`( ). Jedná se o instance částečnéřazení šablon funkcí kompilátorem. Pokud jsou funkce šablony přetíženy takovým způsobem, že shoda šablony s voláním funkce není jedinečná, kompilátor vybere nejspecializovanější verzi funkce šablony. Obecná verze funkce šablony `template <class T> void swap(T&, T&)`, ve třídě algoritmu funguje podle přiřazení a je pomalá operace. Specializovaná verze v každém kontejneru je mnohem rychlejší, protože může pracovat s vnitřní reprezentací třídy kontejneru.
 
-Tato metoda není bezpečná pro souběžnost. Je nutné zajistit, aby při volání této metody žádné další podprocesy neprováděly operace na jednom ze současných vektorů.
+Tato metoda není bezpečné souběžnosti. Při volání této metody je nutné zajistit, aby žádná jiná vlákna neprováděla operace s žádným ze souběžných vektorů.
 
-## <a name="task_from_exception"></a>task_from_exception
+## <a name="task_from_exception"></a><a name="task_from_exception"></a>task_from_exception
 
 ```cpp
 template<typename _TaskType, typename _ExType>
@@ -1557,7 +1557,7 @@ task<_TaskType> task_from_exception(
 
 ### <a name="return-value"></a>Návratová hodnota
 
-## <a name="task_from_result"></a>task_from_result
+## <a name="task_from_result"></a><a name="task_from_result"></a>task_from_result
 
 ```cpp
 template<typename T>
@@ -1573,7 +1573,7 @@ inline task<void> task_from_result(
 
 ### <a name="parameters"></a>Parametry
 
-*Š*<br/>
+*T*<br/>
 
 *_Param*<br/>
 
@@ -1581,9 +1581,9 @@ inline task<void> task_from_result(
 
 ### <a name="return-value"></a>Návratová hodnota
 
-## <a name="trace_agents_register_name"></a>Trace_agents_register_name
+## <a name="trace_agents_register_name"></a><a name="trace_agents_register_name"></a>Trace_agents_register_name
 
-Přidruží daný název k bloku zprávy nebo agentovi v trasování ETW.
+Přidružené křestní jméno bloku zprávy nebo agent a agent v trasování ETW.
 
 ```cpp
 template <class T>
@@ -1594,8 +1594,8 @@ void Trace_agents_register_name(
 
 ### <a name="parameters"></a>Parametry
 
-*Š*<br/>
-Typ objektu. Obvykle se jedná o blok zprávy nebo agenta.
+*T*<br/>
+Typ objektu. Obvykle se jedná o blok zpráv nebo agenta.
 
 *_PObject*<br/>
 Ukazatel na blok zprávy nebo agenta, který je pojmenován v trasování.
@@ -1603,9 +1603,9 @@ Ukazatel na blok zprávy nebo agenta, který je pojmenován v trasování.
 *_Name*<br/>
 Název pro daný objekt.
 
-## <a name="try_receive"></a>try_receive
+## <a name="try_receive"></a><a name="try_receive"></a>try_receive
 
-Obecná implementace try-Receive, která umožňuje kontextu vyhledat data z přesně jednoho zdroje a filtrovat hodnoty, které jsou přijaty. Pokud data nejsou připravena, bude metoda vracet **hodnotu false**.
+Obecné try-receive implementace, povolení kontextu hledat data z přesně jednoho zdroje a filtrovat hodnoty, které jsou přijímány. Pokud data nejsou připravena, metoda vrátí **false**.
 
 ```cpp
 template <class T>
@@ -1629,29 +1629,29 @@ bool try_receive(
 
 ### <a name="parameters"></a>Parametry
 
-*Š*<br/>
+*T*<br/>
 Typ datové části
 
 *_Src*<br/>
-Ukazatel nebo odkaz na zdroj, ze kterého jsou očekávána data.
+Ukazatel nebo odkaz na zdroj, ze kterého se očekávají data.
 
 *_value*<br/>
-Odkaz na místo, kde bude umístěn výsledek.
+Odkaz na umístění, kam bude umístěn výsledek.
 
 *_Filter_proc*<br/>
-Funkce filtru, která určuje, zda mají být zprávy přijaty.
+Funkce filtru, která určuje, zda mají být zprávy přijímány.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota `bool`, která označuje, zda byla v `_value`umístěna datová část.
+Hodnota `bool` označující, zda byla datová `_value`část umístěna do .
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace najdete v tématu [funkce předávání zpráv](../../../parallel/concrt/message-passing-functions.md).
+Další informace naleznete v [tématu Message Passing Functions](../../../parallel/concrt/message-passing-functions.md).
 
-## <a name="wait"></a>Počkej
+## <a name="wait"></a><a name="wait"></a>Počkej
 
-Pozastaví aktuální kontext na určenou dobu.
+Pozastaví aktuální kontext po určitou dobu.
 
 ```cpp
 void __cdecl wait(unsigned int _Milliseconds);
@@ -1660,15 +1660,15 @@ void __cdecl wait(unsigned int _Milliseconds);
 ### <a name="parameters"></a>Parametry
 
 *_Milliseconds*<br/>
-Počet milisekund, po který má být aktuální kontext pozastaven. Pokud je parametr `_Milliseconds` nastaven na hodnotu `0`, aktuální kontext by měl před pokračováním vrátit zpracování do jiných kontextů spustitelný.
+Počet milisekund, pro které by měl být aktuální kontext pozastaven. Pokud `_Milliseconds` je parametr nastaven `0`na hodnotu , aktuální kontext by měl před pokračováním přinést spuštění jiným spustitelným kontextům.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud je tato metoda volána v kontextu Concurrency Runtime Scheduleru, Plánovač zjistí jiný kontext, který bude spuštěn na podkladovém prostředku. Vzhledem k tomu, že Scheduler má společný charakter, nemůže tento kontext pokračovat přesně po zadaném počtu milisekund. Pokud je Plánovač zaneprázdněn prováděním jiných úloh, které se do plánovače nedružstvy, čekací doba může být nekonečná.
+Pokud je tato metoda volána v kontextu plánovače souběžnosti runtime, plánovač najde jiný kontext, který se má spustit na podkladovém prostředku. Vzhledem k tomu, že plánovač je kooperativní povahy, tento kontext nelze pokračovat přesně po zadaný počet milisekund. Pokud plánovač je zaneprázdněn provádění jiných úloh, které nejsou kooperativně výnos plánovače, čekací doba může být neomezená.
 
-## <a name="when_all"></a>when_all
+## <a name="when_all"></a><a name="when_all"></a>when_all
 
-Vytvoří úkol, který se úspěšně dokončí po úspěšném dokončení všech úloh zadaných jako argumenty.
+Vytvoří úkol, který bude úspěšně dokončen po úspěšném dokončení všech úkolů zadaných jako argumenty.
 
 ```cpp
 template <typename _Iterator>
@@ -1686,29 +1686,29 @@ auto when_all(
 Typ vstupního iterátoru.
 
 *_Begin*<br/>
-Pozice prvního prvku v rozsahu prvků, které budou zkombinovány do výsledného úkolu.
+Pozice prvního prvku v rozsahu prvků, které mají být sloučeny do výsledného úkolu.
 
 *_End*<br/>
-Pozice prvního prvku mimo rozsah prvků, které budou zkombinovány do výsledného úkolu.
+Pozice prvníprvek mimo rozsah prvků, které mají být sloučeny do výsledného úkolu.
 
 *_TaskOptions*<br/>
 Objekt `task_options`
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Úkol, který se úspěšně dokončí po úspěšném dokončení všech vstupních úloh. Pokud jsou vstupní úlohy typu `T`, výstup této funkce bude `task<std::vector<T>>`. Pokud jsou vstupní úlohy typu `void` bude výstupní úloha také `task<void>`.
+Úkol, který je úspěšně dokončen po úspěšném dokončení všech vstupních úkolů. Pokud jsou vstupní úkoly typu `T`, výstup em `task<std::vector<T>>`této funkce bude . Pokud jsou vstupní úkoly typu, `void` výstupní `task<void>`úloha bude také .
 
 ### <a name="remarks"></a>Poznámky
 
-`when_all` je neblokovaná funkce, která jako svůj výsledek vytvoří `task`. Na rozdíl od [úlohy:: wait](task-class.md#wait), je bezpečné volat tuto funkci v aplikaci UWP ve vlákně ASTA (Application sta).
+`when_all`je neblokující funkce, která `task` vytváří jako jeho výsledek. Na rozdíl od [task::wait](task-class.md#wait), je bezpečné volat tuto funkci v aplikaci UPW ve vlákně ASTA (Application STA).
 
-Pokud se jedna z úloh zruší nebo vyvolá výjimku, vrácený úkol bude dokončen v počátečním stavu a výjimka, pokud k ní dojde, bude vyvolána při volání [Task:: Get](task-class.md#get) nebo `task::wait` na tomto úkolu.
+Pokud je jeden z úkolů zrušen nebo vyvolá výjimku, vrácená úloha bude dokončena dříve, v zrušeném stavu a výjimka, `task::wait` pokud k ní dojde, bude vyvolána, pokud zavoláte [task::get](task-class.md#get) nebo na tento úkol.
 
-Další informace najdete v tématu [Task paralelismus](../../../parallel/concrt/task-parallelism-concurrency-runtime.md).
+Další informace naleznete v [tématu Paralelismus úlohy](../../../parallel/concrt/task-parallelism-concurrency-runtime.md).
 
-## <a name="when_any"></a>when_any
+## <a name="when_any"></a><a name="when_any"></a>when_any
 
-Vytvoří úkol, který se úspěšně dokončí, když se kterákoli z úkolů dodaných jako argumenty úspěšně dokončí.
+Vytvoří úkol, který bude úspěšně dokončen po úspěšném dokončení některého z úkolů zadaných jako argumenty.
 
 ```cpp
 template<typename _Iterator>
@@ -1738,25 +1738,25 @@ auto when_any(
 Typ vstupního iterátoru.
 
 *_Begin*<br/>
-Pozice prvního prvku v rozsahu prvků, které budou zkombinovány do výsledného úkolu.
+Pozice prvního prvku v rozsahu prvků, které mají být sloučeny do výsledného úkolu.
 
 *_End*<br/>
-Pozice prvního prvku mimo rozsah prvků, které budou zkombinovány do výsledného úkolu.
+Pozice prvníprvek mimo rozsah prvků, které mají být sloučeny do výsledného úkolu.
 
 *_TaskOptions*<br/>
 *_CancellationToken*<br/>
-Token zrušení, který řídí zrušení vráceného úkolu. Pokud neposkytnete token zrušení, výsledná úloha obdrží token zrušení úlohy, která způsobí, že se bude dokončit.
+Token zrušení, který řídí zrušení vrácené úlohy. Pokud nezadáte token zrušení, výsledná úloha obdrží token zrušení úlohy, která způsobí jeho dokončení.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Úkol, který se úspěšně dokončí, když se jedna ze vstupních úloh úspěšně dokončí. Pokud jsou vstupní úlohy typu `T`, výstup této funkce bude `task<std::pair<T, size_t>>>`, kde první prvek dvojice je výsledkem dokončení úkolu a druhý prvek je index úkolu, který byl dokončen. Pokud jsou vstupní úlohy typu `void` výstupem je `task<size_t>`, kde výsledek je index dokončené úlohy.
+Úkol, který se úspěšně dokončí po úspěšném dokončení některého ze vstupních úkolů. Pokud vstupní úkoly `T`jsou typu , výstup této `task<std::pair<T, size_t>>>`funkce bude , kde první prvek dvojice je výsledkem dokončení úkolu a druhý prvek je index úkolu, který byl dokončen. Pokud vstupní úkoly `void` jsou typu `task<size_t>`výstup je , kde výsledkem je index dokončení úkolu.
 
 ### <a name="remarks"></a>Poznámky
 
-`when_any` je neblokovaná funkce, která jako svůj výsledek vytvoří `task`. Na rozdíl od [úlohy:: wait](task-class.md#wait), je bezpečné volat tuto funkci v aplikaci UWP ve vlákně ASTA (Application sta).
+`when_any`je neblokující funkce, která `task` vytváří jako jeho výsledek. Na rozdíl od [task::wait](task-class.md#wait), je bezpečné volat tuto funkci v aplikaci UPW ve vlákně ASTA (Application STA).
 
-Další informace najdete v tématu [Task paralelismus](../../../parallel/concrt/task-parallelism-concurrency-runtime.md).
+Další informace naleznete v [tématu Paralelismus úlohy](../../../parallel/concrt/task-parallelism-concurrency-runtime.md).
 
 ## <a name="see-also"></a>Viz také
 
-[concurrency – obor názvů](concurrency-namespace.md)
+[obor názvů souběžnosti](concurrency-namespace.md)
