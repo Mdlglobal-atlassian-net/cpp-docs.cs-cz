@@ -1,5 +1,5 @@
 ---
-title: Cmfcdesktopalertwndinfo – třída
+title: CMFCDesktopAlertWndInfo – třída
 ms.date: 10/18/2018
 f1_keywords:
 - CMFCDesktopAlertWndInfo
@@ -14,16 +14,16 @@ helpviewer_keywords:
 - CMFCDesktopAlertWndInfo [MFC], m_strText
 - CMFCDesktopAlertWndInfo [MFC], m_strURL
 ms.assetid: 5c9bb84e-6c96-4748-8e74-6951b6ae8e84
-ms.openlocfilehash: a4b3d8769b3d267c0bd3f81269dd3b8ab3cf3184
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f51c1b75e0c096a34b190e36e097aaca4109b5f8
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403643"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367589"
 ---
-# <a name="cmfcdesktopalertwndinfo-class"></a>Cmfcdesktopalertwndinfo – třída
+# <a name="cmfcdesktopalertwndinfo-class"></a>CMFCDesktopAlertWndInfo – třída
 
-`CMFCDesktopAlertWndInfo` Třída se používá s [cmfcdesktopalertwnd – třída](../../mfc/reference/cmfcdesktopalertwnd-class.md). Určuje ovládací prvky, které se zobrazí, pokud se otevře okno výstrah plochy.
+Třída `CMFCDesktopAlertWndInfo` se používá s [TŘÍDOU CMFCDesktopAlertWnd](../../mfc/reference/cmfcdesktopalertwnd-class.md). Určuje ovládací prvky, které se zobrazí, pokud se objeví okno výstrahy plochy.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -35,40 +35,40 @@ class CMFCDesktopAlertWndInfo
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
 |`CMFCDesktopAlertWndInfo::~CMFCDesktopAlertWndInfo`|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CMFCDesktopAlertWndInfo::operator=](#operator_eq)||
+|[CMFCDesktopAlertWndInfo::operátor=](#operator_eq)||
 
-### <a name="data-members"></a>Datové členy
+### <a name="data-members"></a>Členové dat
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CMFCDesktopAlertWndInfo::m_hIcon](#m_hicon)|Popisovač pro ikonu, která se zobrazí.|
-|[CMFCDesktopAlertWndInfo::m_nURLCmdID](#m_nurlcmdid)|ID příkazu, který je spojený s odkazem na okno výstrah plochy.|
-|[CMFCDesktopAlertWndInfo::m_strText](#m_strtext)|Text, který se zobrazí na okno výstrah plochy.|
-|[CMFCDesktopAlertWndInfo::m_strURL](#m_strurl)|Odkaz, který se zobrazí na okno výstrah plochy.|
+|[CMFCDesktopAlertWndInfo::m_hIcon](#m_hicon)|Úchyt k zobrazené ikoně.|
+|[CMFCDesktopAlertWndInfo::m_nURLCmdID](#m_nurlcmdid)|ID příkazu přidružené k odkazu v okně upozornění na ploše.|
+|[CMFCDesktopAlertWndInfo::m_strText](#m_strtext)|Text, který se zobrazí v okně výstrahy plochy.|
+|[CMFCDesktopAlertWndInfo::m_strURL](#m_strurl)|Odkaz, který se zobrazí v okně výstrahy plochy.|
 
 ## <a name="remarks"></a>Poznámky
 
-`CMFCDesktopAlertWndInfo` Třídy je předán [CMFCDesktopAlertWnd::Create](../../mfc/reference/cmfcdesktopalertwnd-class.md#create) metodu k určení prvků, které jsou zobrazeny v okně výchozí okno výstrah plochy. Výchozí dialogové okno může obsahovat tři položky:
+Třída `CMFCDesktopAlertWndInfo` je předána [CMFCDesktopAlertWnd::Create](../../mfc/reference/cmfcdesktopalertwnd-class.md#create) metoda určit prvky, které jsou zobrazeny na výchozí dialogové okno plochy výstražného okna. Výchozí dialogové okno může obsahovat tři položky:
 
-- Ikona, která je nastavena pomocí volání [CMFCDesktopAlertWndInfo::m_hIcon](#m_hicon).
+- Ikona, která je nastavena voláním [CMFCDesktopAlertWndInfo::m_hIcon](#m_hicon).
 
-- Popisek nebo textové zprávy, která je nastavena pomocí volání [CMFCDesktopAlertWndInfo::m_strText](#m_strtext).
+- Popisek nebo textová zpráva, která je nastavena voláním [CMFCDesktopAlertWndInfo::m_strText](#m_strtext).
 
-- Odkaz, který je nastaven voláním [CMFCDesktopAlertWndInfo::m_strURL](#m_strurl). Chcete-li nastavit příkaz, který se spouští při kliknutí na odkaz, zavolejte [CMFCDesktopAlertWndInfo::m_nURLCmdID](#m_nurlcmdid).
+- Odkaz, který je nastaven voláním [CMFCDesktopAlertWndInfo::m_strURL](#m_strurl). Chcete-li nastavit příkaz, který je proveden po klepnutí na odkaz, zavolejte [CMFCDesktopAlertWndInfo::m_nURLCmdID](#m_nurlcmdid).
 
-Pokud výchozí dialogové okno není dostatečná, můžete vytvořit vlastní dialogové okno a předejte jej [CMFCDesktopAlertWnd::Create](../../mfc/reference/cmfcdesktopalertwnd-class.md#create) metoda namísto použití této třídy. Další informace najdete v tématu [cmfcdesktopalertdialog – třída](../../mfc/reference/cmfcdesktopalertdialog-class.md).
+Pokud výchozí dialogové okno není dostačující, můžete vytvořit vlastní dialogové okno a předat jej [CMFCDesktopAlertWnd::Create](../../mfc/reference/cmfcdesktopalertwnd-class.md#create) metoda namísto použití této třídy. Další informace naleznete v tématu [CMFCDesktopAlertDialog Class](../../mfc/reference/cmfcdesktopalertdialog-class.md).
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak využívat různé členy v `CMFCDesktopAlertWndInfo` třídy. Tento příklad ukazuje, jak nastavit úchyt na ikonu, která se zobrazí text, který se zobrazuje na okno výstrah plochy, na odkaz, který se zobrazí na okno výstrah plochy a ID příkazu, který je spojen s odkazem na okno výstrah plochy. V tomto příkladu je součástí [Desktopu výstrah demonstrační ukázka](../../overview/visual-cpp-samples.md).
+Následující příklad ukazuje, jak používat různé `CMFCDesktopAlertWndInfo` členy ve třídě. Příklad ukazuje, jak nastavit popisovač na ikonu, která je zobrazena, text, který se zobrazí v okně upozornění plochy, odkaz, který se zobrazí v okně upozornění plochy a ID příkazu, který je spojen s odkazem na ploše výstražného okna. Tento příklad je součástí [ukázky ukázky upozornění na ploše](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_DesktopAlertDemo#3](../../mfc/reference/codesnippet/cpp/cmfcdesktopalertwndinfo-class_1.cpp)]
 
@@ -80,9 +80,9 @@ Následující příklad ukazuje, jak využívat různé členy v `CMFCDesktopAl
 
 **Záhlaví:** afxDesktopAlertDialog.h
 
-##  <a name="operator_eq"></a>  CMFCDesktopAlertWndInfo::operator =
+## <a name="cmfcdesktopalertwndinfooperator"></a><a name="operator_eq"></a>CMFCDesktopAlertWndInfo::operátor=
 
-Další podrobnosti najdete ve zdrojovém kódu v **VC\\atlmfc\\src\\mfc** složce instalace sady Visual Studio.
+Další podrobnosti naleznete ve zdrojovém kódu umístěném ve složce **MFC\\knihovny\\VC src\\** instalace sady Visual Studio.
 
 ```
 CMFCDesktopAlertWndInfo& operator=(CMFCDesktopAlertWndInfo& src);
@@ -90,15 +90,15 @@ CMFCDesktopAlertWndInfo& operator=(CMFCDesktopAlertWndInfo& src);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *src*<br/>
+[v] *src*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="m_hicon"></a>  CMFCDesktopAlertWndInfo::m_hIcon
+## <a name="cmfcdesktopalertwndinfom_hicon"></a><a name="m_hicon"></a>CMFCDesktopAlertWndInfo::m_hIcon
 
-Popisovač pro ikonu, která se zobrazí.
+Úchyt k zobrazené ikoně.
 
 ```
 HICON m_hIcon;
@@ -106,9 +106,9 @@ HICON m_hIcon;
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="m_nurlcmdid"></a>  CMFCDesktopAlertWndInfo::m_nURLCmdID
+## <a name="cmfcdesktopalertwndinfom_nurlcmdid"></a><a name="m_nurlcmdid"></a>CMFCDesktopAlertWndInfo::m_nURLCmdID
 
-ID příkazu, který je spojený s odkazem na okno výstrah plochy.
+ID příkazu přidružené k odkazu v okně upozornění na ploše.
 
 ```
 UINT m_nURLCmdID;
@@ -116,11 +116,11 @@ UINT m_nURLCmdID;
 
 ### <a name="remarks"></a>Poznámky
 
-ID příkazu, který se odešle vlastníkovi automaticky otevíraném okně, když uživatel klikne na odkaz určený [CMFCDesktopAlertWndInfo::m_strURL](#m_strurl).
+ID příkazu je odesláno vlastníkovi vyskakovacího okna, když uživatel klikne na odkaz určený [CMFCDesktopAlertWndInfo::m_strURL](#m_strurl).
 
-##  <a name="m_strtext"></a>  CMFCDesktopAlertWndInfo::m_strText
+## <a name="cmfcdesktopalertwndinfom_strtext"></a><a name="m_strtext"></a>CMFCDesktopAlertWndInfo::m_strText
 
-Text, který se zobrazí na okno výstrah plochy.
+Text, který se zobrazí v okně výstrahy plochy.
 
 ```
 CString m_strText;
@@ -128,9 +128,9 @@ CString m_strText;
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="m_strurl"></a>  CMFCDesktopAlertWndInfo::m_strURL
+## <a name="cmfcdesktopalertwndinfom_strurl"></a><a name="m_strurl"></a>CMFCDesktopAlertWndInfo::m_strURL
 
-Odkaz, který se zobrazí na okno výstrah plochy.
+Odkaz, který se zobrazí v okně výstrahy plochy.
 
 ```
 CString m_strURL;
@@ -138,12 +138,12 @@ CString m_strURL;
 
 ### <a name="remarks"></a>Poznámky
 
-Když uživatel klikne na odkaz, příkaz, který má [CMFCDesktopAlertWndInfo::m_nURLCmdID](#m_nurlcmdid) ID příkazu se pošle vlastníkovi v automaticky otevíraném okně.
+Když uživatel klepne na odkaz, příkaz, který má ID příkazu [CMFCDesktopAlertWndInfo::m_nURLCmdID,](#m_nurlcmdid) bude odeslán vlastníkovi rozbalovacího okna.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>
 [CMFCDesktopAlertWnd – třída](../../mfc/reference/cmfcdesktopalertwnd-class.md)<br/>
-[CMFCDesktopAlertWnd::Create](../../mfc/reference/cmfcdesktopalertwnd-class.md#create)<br/>
-[CMFCDesktopAlertDialog – třída](../../mfc/reference/cmfcdesktopalertdialog-class.md)
+[CMFCDesktopAlertWnd::Vytvořit](../../mfc/reference/cmfcdesktopalertwnd-class.md#create)<br/>
+[Třída CMFCDesktopAlertDialog](../../mfc/reference/cmfcdesktopalertdialog-class.md)

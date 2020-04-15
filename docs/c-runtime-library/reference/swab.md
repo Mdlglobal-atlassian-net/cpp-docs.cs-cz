@@ -1,9 +1,10 @@
 ---
 title: _swab
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _swab
 - stdlib/_swab
+- _o__swab
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +17,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -29,16 +31,16 @@ helpviewer_keywords:
 - swab function
 - bytes, swapping
 ms.assetid: 017142f2-050c-4f6a-8b49-6b094f58ec94
-ms.openlocfilehash: b0faba55c42023f4d66adae68de6be2c1ab009a0
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: f7fe23cd9c1b2eab52ebe50904d0bb18fe16cea6
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946290"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81362955"
 ---
 # <a name="_swab"></a>_swab
 
-Prohodí bajty.
+Swapy bajtů.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -53,31 +55,33 @@ void _swab(
 ## <a name="parameters"></a>Parametry
 
 *src*<br/>
-Data, která se mají zkopírovat a zaměnit
+Data, která mají být zkopírována a vyměněna.
 
-*propojovací*<br/>
-Umístění úložiště pro zaměněná data.
+*Dest*<br/>
+Úložiště pro zaměněná data.
 
-*n*<br/>
-Počet bajtů, které mají být zkopírovány a prohozeny.
+*N*<br/>
+Počet bajtů, které mají být zkopírovány a proměněny.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Funkce **stěr** nevrací hodnotu. Funkce nastaví **errno** na **EINVAL** , pokud buď má ukazatel *Src* nebo *cíl* hodnotu null nebo *n* je menší než nula, a je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md).
+Funkce **tamponu** nevrátí hodnotu. Funkce nastaví **errno** na **EINVAL,** pokud je ukazatel *src* nebo *dest* null nebo *n* je menší než nula a je vyvolána neplatná obslužná rutina parametru, jak je popsáno v [parametru Validation](../../c-runtime-library/parameter-validation.md).
 
-Další informace o tomto a dalších návratových kódech naleznete v tématu [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) .
+Další informace o tomto a dalších návratových kódech naleznete v [_doserrno, errno, _sys_errlist a _sys_nerr.](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)
 
 ## <a name="remarks"></a>Poznámky
 
-Pokud *n* je i, funkce **_swab** kopíruje *n* bajtů z *Src*, zahodí každou dvojici sousedících bajtů a výsledek uloží na *cíl*. Pokud *n* je lichá, **_swab** zkopíruje a zamění prvních *n*-1 bajtů *Src*a finální bajt není kopírován. Funkce **_swab** se obvykle používá k přípravě binárních dat pro přenos do počítače, který používá jiné pořadí bajtů.
+Pokud *n* je sudý, **_swab** funkce zkopíruje *n* bajtů z *src*, zamění každý pár sousedních bajtů a uloží výsledek na *dest*. Pokud *n* je lichý, **_swab** zkopíruje a zamění první *n*-1 bajty *src*a konečný bajt není zkopírován. Funkce **_swab** se obvykle používá k přípravě binárních dat pro přenos do počítače, který používá jiné pořadí bajtů.
+
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_swab**|C: \<Stdlib. h > C++: \<cstdlib > nebo \<Stdlib. h >|
+|**_swab**|C: \<stdlib.h> C++: \<cstdlib> nebo \<stdlib.h>|
 
-Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -106,6 +110,6 @@ After:  BADCFEHGJILKNMPORQTSVUXWZY
         ABCDEFGHIJKLMNOPQRSTUVWXYZ.
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Zacházení s vyrovnávací pamětí](../../c-runtime-library/buffer-manipulation.md)<br/>
+[Manipulace s vyrovnávací pamětí](../../c-runtime-library/buffer-manipulation.md)<br/>

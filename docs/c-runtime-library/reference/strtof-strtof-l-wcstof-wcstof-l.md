@@ -1,11 +1,15 @@
 ---
 title: strtof, _strtof_l, wcstof, _wcstof_l
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - _strtof_l
 - wcstof
 - strtof
 - _wcstof_l
+- _o__strtof_l
+- _o__wcstof_l
+- _o_strtof
+- _o_wcstof
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -41,16 +46,16 @@ helpviewer_keywords:
 - _tcstof_l function
 - strtof function
 ms.assetid: 52221b46-876d-4fcc-afb1-97512c17a43b
-ms.openlocfilehash: b2b2e7d230074b5a464260d36b41c28b9951d65b
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: f61aa0edeadd74a254f906dd745e18b059da7f24
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957754"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81365136"
 ---
 # <a name="strtof-_strtof_l-wcstof-_wcstof_l"></a>strtof, _strtof_l, wcstof, _wcstof_l
 
-Převede řetězce na hodnotu s jednoduchou přesností s plovoucí desetinnou čárkou.
+Převede řetězce na hodnotu s plovoucí desetinnou hodnotou s jednou přesností.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -78,53 +83,55 @@ float wcstof_l(
 ## <a name="parameters"></a>Parametry
 
 *strSource*<br/>
-Řetězec zakončený hodnotou null pro převod.
+Řetězec ukončený hodnotou null pro převod.
 
 *endptr*<br/>
-Ukazatel na znak, který zastaví skenování.
+Ukazatel na znak, který zastaví prohledávací.
 
-*jazyka*<br/>
+*Národní prostředí*<br/>
 Národní prostředí, které se má použít
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**strtof** vrací hodnotu čísla s plovoucí desetinnou čárkou, s výjimkou případů, kdy by reprezentace způsobila přetečení. v takovém případě funkce vrací hodnotu +/-**HUGE_VALF**. Znaménko **HUGE_VALF** odpovídá znaménku hodnoty, kterou nelze reprezentovat. **strtof** vrátí hodnotu 0, pokud převod nelze provést, nebo dojde k podtečení.
+**strtof** vrátí hodnotu čísla s plovoucí desetinnou desetinnou, s výjimkou případů, kdy by reprezentace způsobila přetečení, v takovém případě funkce vrátí +/-**HUGE_VALF**. Znaménko **HUGE_VALF** odpovídá znaménko hodnoty, které nelze reprezentovat. **strtof** vrátí 0, pokud nelze provést žádný převod nebo dojde k podtečení.
 
-**wcstof** vrací hodnoty obdobně **strtof**. Pro obě funkce je **errno** nastaveno na **ERANGE** , pokud dojde k přetečení nebo podtečení a je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md).
+**wcstof** vrací hodnoty analogicky **k strtof**. Pro obě funkce je **errno** nastaveno na **ERANGE,** pokud dojde k přetečení nebo podtečení a je vyvolána neplatná obslužná rutina parametru, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md).
 
-Další informace o návratových kódech naleznete v tématu [errno, _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Další informace o návratových kódech naleznete [v tématech errno, _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Poznámky
 
-Každá funkce převede vstupní řetězec *strSource* na typ **float**. Funkce **strtof** převede *strSource* na hodnotu s jednoduchou přesností. **strtof** zastaví čtení řetězce *strSource* u prvního znaku, který nelze rozpoznat jako součást čísla. Může to být ukončující znak null. **wcstof** je **strtof**verze s velkým znakem; jeho argument *strSource* je řetězec s velkým znakem. V opačném případě se tyto funkce chovají identicky.
+Každá funkce převede vstupní řetězec *strSource* na **float**. Funkce **strtof** převede *strSource* na hodnotu s jednou přesností. **strtof** zastaví čtení řetězce *strSource* na první znak, který nelze rozpoznat jako součást čísla. To může být ukončující znak null. **wcstof** je širokoznaková verze **strtof**; jeho *argument strSource* je řetězec s širokým znakem. V opačném případě se tyto funkce chovají stejně.
+
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE & _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE & _MBCS není definováno|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tcstof**|**strtof**|**strtof**|**wcstof**|
+|**_tcstof**|**strtof řekl:**|**strtof řekl:**|**wcstof řekl:**|
 |**_tcstof_l**|**_strtof_l**|**_strtof_l**|**_wcstof_l**|
 
-Nastavení kategorie **LC_NUMERIC** aktuálního národního prostředí Určuje rozpoznávání znaku základu v *strSource*; Další informace naleznete v tématu [setlocale, _wsetlocale](setlocale-wsetlocale.md). Funkce, které nemají příponu **_l** , používají aktuální národní prostředí; ty, které mají příponu, jsou stejné s tím rozdílem, že místo toho používají národní prostředí, které je předáno. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
+Nastavení **kategorie LC_NUMERIC** aktuálního národního prostředí určuje rozpoznání znaku radix v *strSource*; Další informace naleznete [v tématu setlocale, _wsetlocale](setlocale-wsetlocale.md). Funkce, které nemají **příponu _l** používají aktuální národní prostředí; ty, které mají příponu jsou identické s tím rozdílem, že používají národní prostředí, které je předáno místo. Další informace naleznete v [tématu Locale](../../c-runtime-library/locale.md).
 
-Pokud *endptr* není **null**, ukazatel na znak, který zastavil skenování, je uložen v umístění, na které ukazuje *endptr*. Pokud převod nelze provést (nebyly nalezeny žádné platné číslice nebo byla zadána neplatná základna), hodnota *strSource* je uložena v umístění, na které odkazuje *endptr*.
+Pokud *endptr* není **NULL**, ukazatel na znak, který zastavil skenování je uložen v umístění, které je odkazuje *na endptr*. Pokud nelze provést žádný převod (nebyly nalezeny žádné platné číslice nebo byla zadána neplatná základna), hodnota *strSource* je uložena v umístění, na které je odkazováno *endptr*.
 
-**strtof** očekává, že *strSource* odkazuje na řetězec v následujícím tvaru:
+**strtof** očekává *strSource* přejděte na řetězec následujícího formuláře:
 
-[*prázdné znaky*] [*Sign*] [*číslice*] [ __.__ *číslice*] [{**e** &#124; **e**} [*Sign*] *číslice*]
+[*mezery*] [*znamení*] [*číslice*] [__.__ *číslice*] [{**e** &#124; **E**} [*znak*] *číslice*]
 
-*Mezera se může skládat* z mezer a znaků tabulátoru, které jsou ignorovány; *znaménko* je buď znaménko plus ( **+** ), nebo mínus ( **-** ); a *číslice* jsou jedna nebo více desítkových číslic. Pokud se před znakem základu neobjeví žádné číslice, musí se alespoň jedna objevit za znakem základu. V desítkových číslicích může následovat exponent, který se skládá z úvodního písmene (**e** nebo **e**) a volitelně podepsaného celého čísla. Pokud se nezobrazí část exponentu ani číselný znak, předpokládá se, že za poslední číslicí v řetězci bude následovat znak základu. První znak, který se nevejde do tohoto formuláře zastaví kontrolu.
+*Prázdné znaky* se mohou skládat z mezer a znaků tabulátoru, které jsou ignorovány; *znak* je buď**+** plus (**-**) nebo mínus ( ); a *číslice* jsou jedno nebo více desetinných míst. Pokud se před znakem radix neobjeví žádné číslice, musí se za znakem radix objevit alespoň jedna. Desetinná číslice mohou být následovány exponentem, který se skládá z úvodního písmene (**e** nebo **E**) a volitelně podepsaného celého čísla. Pokud se nezobrazí exponentní díl ani znak radix, předpokládá se, že znak radix následuje za poslední číslicí v řetězci. První znak, který se nevejde do tohoto formuláře zastaví skenování.
 
-Verze UCRT těchto funkcí nepodporují konverzi exponentů pro styl FORTRAN (**d** nebo **d**). Toto nestandardní rozšíření bylo podporováno staršími verzemi CRT a může být zásadní změnou kódu.
+Verze těchto funkcí UCRT nepodporují převod exponentních písmen ve stylu Fortran (**d** nebo **D).** Toto nestandardní rozšíření bylo podporováno staršími verzemi CRT a může být narušující změnou pro váš kód.
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**strtof**, **_strtof_l**|C: \<Stdlib. h > C++: &lt;cstdlib > nebo \<Stdlib. h >|
-|**wcstof**, **_wcstof_l**|C: \<Stdlib. h > nebo \<WCHAR. h > C++: &lt;cstdlib >, \<Stdlib. h > nebo \<WCHAR. h >|
+|**strtof**, **_strtof_l**|C: \<stdlib.h> C++: &lt;cstdlib> nebo \<stdlib.h>|
+|**wcstof**, **_wcstof_l**|C: \<stdlib.h \<> nebo wchar.h &lt;> C++: \<cstdlib>, stdlib.h> nebo \<wchar.h>|
 
-Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -156,13 +163,13 @@ string = 3.14159This stopped it
    Stopped scan at: This stopped it
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Převod dat](../../c-runtime-library/data-conversion.md)<br/>
-[Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)<br/>
+[Podpora s plovoucí desetinnou tálicí](../../c-runtime-library/floating-point-support.md)<br/>
 [Výklad sekvencí vícebajtových znaků](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [Národní prostředí](../../c-runtime-library/locale.md)<br/>
-[Funkce převodu řetězců na numerické hodnoty](../../c-runtime-library/string-to-numeric-value-functions.md)<br/>
+[Funkce řetězec na číselnou hodnotu](../../c-runtime-library/string-to-numeric-value-functions.md)<br/>
 [strtod, _strtod_l, wcstod, _wcstod_l](strtod-strtod-l-wcstod-wcstod-l.md)<br/>
 [strtol, wcstol, _strtol_l, _wcstol_l](strtol-wcstol-strtol-l-wcstol-l.md)<br/>
 [strtoul, _strtoul_l, wcstoul, _wcstoul_l](strtoul-strtoul-l-wcstoul-wcstoul-l.md)<br/>

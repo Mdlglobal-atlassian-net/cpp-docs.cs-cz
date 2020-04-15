@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - C4744
 ms.assetid: f2a7d0b5-afd5-4926-abc3-cfbd367e3ff5
-ms.openlocfilehash: 9f63da4acd87ef2bb0ba80df9e8c0e3e3db4bc79
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f932b1bcdf011678d4f85e0edf1e116a954b59fe
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80185643"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367381"
 ---
 # <a name="compiler-warning-level-1-c4744"></a>Upozornění kompilátoru (úroveň 1) C4744
 
-klíčové slovo var má odlišný typ v ' Soubor1 ' a ' soubor2 ': ' typ1 ' a ' typ2 '
+'var' má jiný typ v 'file1' a 'file2': 'type1' a 'type2'
 
-Externí proměnná, na kterou se odkazuje nebo která je definovaná ve dvou souborech, má v těchto souborech různé typy.  Chcete-li je vyřešit, buď proveďte definice typu, nebo změňte název proměnné v jednom ze souborů.
+Externí proměnná odkazovaná nebo definovaná ve dvou souborech má v těchto souborech různé typy.  Chcete-li vyřešit, buď změnit definice typu stejné nebo změnit název proměnné v jednom ze souborů.
 
-C4744 se vydává jenom v případě, že jsou soubory kompilovány pomocí/GL.  Další informace naleznete v tématu [/GL (celá optimalizace programu)](../../build/reference/gl-whole-program-optimization.md).
+C4744 je emitován pouze v případě, že jsou soubory kompilovány s /GL.  Další informace naleznete v tématu [/GL (Optimalizace celého programu).](../../build/reference/gl-whole-program-optimization.md)
 
 > [!NOTE]
->  K C4744 obvykle dochází v souborech jazyka C++C (ne), C++ protože v názvu proměnné je upraveno pomocí informací o typu.  Když je ukázka (níže) zkompilována jako C++, zobrazí se chyba linkeru linkerů LNK2019.
+> C4744 se obvykle vyskytuje v souborech Jazyka C (nikoli v jazyce C++), protože v jazyce C++ je název proměnné ozdoben informacemi o typu.  Když se ukázka (níže) zkompiluje jako C++, zobrazí se chyba propojovacího programu LNK2019.
 
 ## <a name="example"></a>Příklad
 

@@ -6,43 +6,43 @@ f1_keywords:
 helpviewer_keywords:
 - ConnectionManager program
 ms.openlocfilehash: 1c6236cedba88714e9918dd2c096b5e78d2f08ce
-ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2020
+ms.lasthandoff: 04/14/2020
 ms.locfileid: "77258030"
 ---
 # <a name="connectionmanager-reference"></a>ConnectionManager – referenční dokumentace
 
 ::: moniker range="<=vs-2017"
 
-Soubor ConnectionManager. exe je k dispozici v aplikaci Visual Studio 2019 verze 16,5 a novější.
+ConnectionManager.exe je k dispozici ve Visual Studiu 2019 verze 16.5 a novější.
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-ConnectionManager. exe je nástroj příkazového řádku pro správu připojení vzdáleného vývoje mimo sadu Visual Studio. Je vhodný pro úlohy, jako je například zřízení nového vývojového počítače. Nebo ho použijte k nastavení sady Visual Studio pro průběžnou integraci. Můžete ho použít v Developer Command Promptm okně. Další informace o Developer Command Prompt najdete v tématu [použití sady nástrojů Microsoft C++ z příkazového řádku](../build/building-on-the-command-line.md).
+ConnectionManager.exe je nástroj příkazového řádku pro správu vzdálených vývojových připojení mimo aplikaci Visual Studio. Je to užitečné pro úkoly, jako je zřizování nového vývojového počítače. Nebo ji použijte k nastavení sady Visual Studio pro průběžnou integraci.Můžete ji použít v okně příkazového řádku pro vývojáře. Další informace o příkazovém řádku pro vývojáře naleznete [v tématu Použití sady nástrojů Microsoft C++ z příkazového řádku](../build/building-on-the-command-line.md).
 
-Soubor ConnectionManager. exe je k dispozici v aplikaci Visual Studio 2019 verze 16,5 a novější. Je součástí **vývoje pro Linux s C++**  úlohou v instalační program pro Visual Studio. Také se nainstaluje automaticky při výběru komponenty **Správce připojení** v instalačním programu. Instaluje se do *% VCIDEInstallDir%\\Linux\\bin\\ConnectionManagerExe\\ConnectionManager. exe*.
+ConnectionManager.exe je k dispozici ve Visual Studiu 2019 verze 16.5 a novější. Je součástí vývoje Linuxu s úlohami **C++** v Instalační službě Visual Studia. Je také nainstalován automaticky, když zvolíte součást **Programu Connection Manager** v instalačním programu. Je nainstalován v *souboru\\%VCIDEInstallDir% Linux\\\\\\bin ConnectionManagerExe ConnectionManager.exe*.
 
-Funkce nástroje ConnectionManager. exe je také k dispozici v aplikaci Visual Studio. Chcete-li spravovat připojení vzdáleného vývoje v integrovaném vývojovém prostředí, v panelu nabídek vyberte možnost **nástroje** > **Možnosti** . otevře se dialogové okno Možnosti. V dialogovém okně Možnosti vyberte pro **různé platformy** > **Správce připojení**.
+Funkce connectionmanager.exe je k dispozici také v sadě Visual Studio. Chcete-li spravovat vzdálená vývojová připojení v prostředí IDE, zvolte na řádku nabídek **možnostI** > **nástroje** a otevřete dialogové okno Možnosti. V dialogovém okně Možnosti vyberte **položku Cross Platform** > **Connection Manager**.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **ConnectionManager. exe** *příkaz* \[*argumenty*] \[*Možnosti*]
+> *Argumenty* *příkazů* \[ **ConnectionManager.exe** ] \[ *možnosti*]
 
 ### <a name="commands-and-arguments"></a>Příkazy a argumenty
 
-- **Přidat** *uživatele\@hostitele* \[ **--port portu** *]* \[ **--** heslo *heslo*] \[ **--PrivateKey** *privatekey_file*]
+- **přidání** *\@uživatelského hostitele* \[ \[ **--port** *port*] **--heslo** *heslo* \[] **--privatekey** *privatekey_file*]
 
-  Ověří a přidá nové připojení. Ve výchozím nastavení používá port 22 a ověřování hesla. (Zobrazí se výzva k zadání hesla.) Pro zadání hesla privátního klíče použijte jak **hesla** , tak i **--PrivateKey** .
+  Ověří a přidá nové připojení. Ve výchozím nastavení používá port 22 a ověřování hesla. (Budete vyzváni k zadání hesla.) K zadání hesla soukromého klíče použijte **--password** a **--privatekey.**
 
-- **odebrat** \[*connection_id* \| *uživatel\@hostitel* \[ **--** *port*portu]]
+- **odebrat** \[ *connection_id* \| *hostiteli\@* \[ **uživatele --port** *]]*
 
-  Odebere připojení. Pokud nejsou zadány žádné argumenty, budete vyzváni k zadání připojení, které chcete odebrat.
+  Odebere připojení. Pokud nejsou zadány žádné argumenty, budete vyzváni k určení, které připojení chcete odebrat.
 
-- **Odebrat – vše**
+- **odstranit vše**
 
   Odebere všechna uložená připojení.
 
@@ -52,55 +52,55 @@ Funkce nástroje ConnectionManager. exe je také k dispozici v aplikaci Visual S
 
 - **Pomoc**
 
-  Zobrazí obrazovku help.
+  Zobrazí obrazovku nápovědy.
 
-- **version**
+- **Verze**
 
   Zobrazí informace o verzi.
 
 ### <a name="options"></a>Možnosti
 
-- **-q**, **--quiet**
+- **-q**, **--ticho**
 
-  Brání výstupům `stdout` nebo `stderr`.
+  Zabraňuje výstupu `stdout` nebo `stderr`.
 
-- **--bez výzvy**
+- **--no-prompt**
 
-  V případě potřeby selže místo výzvy.
+  Pokud je to vhodné, selžte místo výzvy.
 
-- **--bez ověřování**
+- **--no-verify**
 
-  Přidání nebo úprava připojení bez ověřování.
+  Přidání nebo úprava připojení bez ověření.
 
-- **--** *filename* souboru
+- **--název** *souboru*
 
-  Načte informace o připojení ze zadaného *názvu souboru*.
+  Přečtěte si informace o připojení z poskytnutého *názvu souboru*.
 
-- **--No-telemetrie**
+- **--no-telemetrie**
 
-  Zakázat odesílání dat o využití zpět společnosti Microsoft. Data o využití se shromažďují a odesílají zpátky společnosti Microsoft, pokud není předán příznak **--No-telemetrie** .  
+  Zakažte odesílání dat o využití zpět společnosti Microsoft. Data o využití jsou shromažďována a odesílána zpět společnosti Microsoft, pokud není předán příznak **--no-telemetric.**  
 
-- **-n**, **--suchý-běh**
+- **-n**, **--běh na suchu**
 
-  Provede suché spuštění příkazu.
+  Má suchý běh příkazu.
 
 - **-p**
 
-  Stejné jako **--Password**.
+  Stejné jako **--password**.
 
-- **– i**
+- **-i**
 
-  Stejné jako **--PrivateKey**.
+  Stejné jako **--privatekey**.
 
 ## <a name="examples"></a>Příklady
 
-Tento příkaz přidá připojení uživatele s názvem "User" na localhost. Připojení používá soubor klíče pro ověřování, který se nachází v *% USERPROFILE%\.SSH \ id_rsa*.
+Tento příkaz přidá připojení pro uživatele s názvem "uživatel" na localhost. Připojení používá k ověření soubor klíče, který se nachází v *%USERPROFILE%\.ssh\id_rsa*.
 
 ```cmd
 ConnectionManager.exe add user@127.0.0.1 --privatekey "%USERPROFILE%\.ssh\id_rsa"
 ```
 
-Tento příkaz odebere ze seznamu připojení připojení, které má ID 1975957870.
+Tento příkaz odebere připojení, které má ID 1975957870 ze seznamu připojení.
 
 ```cmd
 ConnectionManager.exe remove 1975957870
@@ -108,6 +108,6 @@ ConnectionManager.exe remove 1975957870
 
 ## <a name="see-also"></a>Viz také
 
-[Připojení k cílovému systému Linux v aplikaci Visual Studio](connect-to-your-remote-linux-computer.md)
+[Připojení k cílovému systému Linux ve Visual Studiu](connect-to-your-remote-linux-computer.md)
 
 ::: moniker-end

@@ -1,6 +1,6 @@
 ---
-title: Struktura NAME_VALUE_PAIR_DATA
-description: Odkaz C++ na strukturu NAME_VALUE_PAIR_DATA Build Insights SDK
+title: NAME_VALUE_PAIR_DATA struktura
+description: C++ Build Insights SDK NAME_VALUE_PAIR_DATA odkaz na strukturu.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: f6c4f6fef11e6365bdc930d5df1f48f72186ebdb
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 4a0bf8e8ba32d94d30a56d0ef26ca4ed0c9b0711
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78333641"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81325358"
 ---
-# <a name="name_value_pair_data-structure"></a>Struktura NAME_VALUE_PAIR_DATA
+# <a name="name_value_pair_data-structure"></a>NAME_VALUE_PAIR_DATA struktura
 
 ::: moniker range="<=vs-2015"
 
-Sada C++ SDK pro Build Insights je kompatibilní se sadou Visual Studio 2017 a novější. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek selektor verzí sady Visual Studio pro tento článek na sadu Visual Studio 2017 nebo Visual Studio 2019.
+Sada C++ Build Insights SDK je kompatibilní s Visual Studio 2017 a vyšší. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek pro výběr **verze** sady Visual Studio pro tento článek na Visual Studio 2017 nebo Visual Studio 2019. Nachází se v horní části obsahu na této stránce.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Struktura `NAME_VALUE_PAIR_DATA` popisuje dvojici název a hodnota.
+Struktura `NAME_VALUE_PAIR_DATA` popisuje dvojici názvů a hodnot.
 
 ## <a name="syntax"></a>Syntaxe
 

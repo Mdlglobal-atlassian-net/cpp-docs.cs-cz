@@ -2,32 +2,32 @@
 title: Mapy příkazů DHTML pro úpravy
 ms.date: 11/04/2016
 ms.assetid: c1b49876-039e-4a26-bb24-ea98ccf254a1
-ms.openlocfilehash: 7f420619983283c225ca8fca23c5ea349def1d1b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 62b388eb178be018655ea2b2be00d7321da50335
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62323057"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81365820"
 ---
 # <a name="dhtml-editing-command-maps"></a>Mapy příkazů DHTML pro úpravy
 
-Následující makra lze použít k mapování DHTML pro úpravy příkazy v [CHtmlEditView](../../mfc/reference/chtmleditview-class.md)-odvozené třídy. Příklad použití, naleznete v tématu [HTMLEdit ukázka](../../overview/visual-cpp-samples.md).
+Následující makra lze použít k mapování příkazů pro úpravy DHTML v odvozených třídách [CHtmlEditView.](../../mfc/reference/chtmleditview-class.md) Příklad jejich použití naleznete v tématu [HTMLEdit Sample](../../overview/visual-cpp-samples.md).
 
-### <a name="dhtml-editing-command-map-macros"></a>Makra Map DHTML pro úpravy příkaz
+### <a name="dhtml-editing-command-map-macros"></a>Makra mapy mapy pro úpravy příkazů DHTML
 
 |||
 |-|-|
-|[DECLARE_DHTMLEDITING_CMDMAP](#declare_dhtmlediting_cmdmap)|Deklaruje DHTML pro úpravy příkaz mapu ve třídě.|
-|[BEGIN_DHTMLEDITING_CMDMAP](#begin_dhtmlediting_cmdmap)|Spustí definici DHTML pro úpravy příkaz mapy v rámci třídy.|
-|[END_DHTMLEDITING_CMDMAP](#end_dhtmlediting_cmdmap)|Označuje konec DHTML pro úpravy mapování příkazu.|
-|[DHTMLEDITING_CMD_ENTRY](#dhtmlediting_cmd_entry)|Mapuje ID příkazu pro příkaz pro úpravy HTML.|
-|[DHTMLEDITING_CMD_ENTRY_FUNC](#dhtmlediting_cmd_entry_func)|Mapuje ID příkazu příkazu úprav jazyka HTML a obslužné rutiny zpráv.|
-|[DHTMLEDITING_CMD_ENTRY_TYPE](#dhtmlediting_cmd_entry_type)|Mapuje ID příkazu příkazu úprav jazyka HTML a prvek uživatelského rozhraní.|
-|[DHTMLEDITING_CMD_ENTRY_FUNC_TYPE](#dhtmlediting_cmd_entry_func_type)|Mapuje ID příkazu pro příkaz, obslužné rutiny zpráv a prvek uživatelského rozhraní pro úpravy HTML.|
+|[DECLARE_DHTMLEDITING_CMDMAP](#declare_dhtmlediting_cmdmap)|Deklaruje mapu příkazů pro úpravy DHTML ve třídě.|
+|[BEGIN_DHTMLEDITING_CMDMAP](#begin_dhtmlediting_cmdmap)|Spustí definici mapy příkazů pro úpravy DHTML v rámci třídy.|
+|[END_DHTMLEDITING_CMDMAP](#end_dhtmlediting_cmdmap)|Označuje konec mapy příkazů pro úpravy DHTML.|
+|[DHTMLEDITING_CMD_ENTRY](#dhtmlediting_cmd_entry)|Mapuje ID příkazu na příkaz pro úpravy HTML.|
+|[DHTMLEDITING_CMD_ENTRY_FUNC](#dhtmlediting_cmd_entry_func)|Mapuje ID příkazu na příkaz pro úpravy HTML a obslužnou rutinu zprávy.|
+|[DHTMLEDITING_CMD_ENTRY_TYPE](#dhtmlediting_cmd_entry_type)|Mapuje ID příkazu na příkaz pro úpravy HTML a prvek uživatelského rozhraní.|
+|[DHTMLEDITING_CMD_ENTRY_FUNC_TYPE](#dhtmlediting_cmd_entry_func_type)|Mapuje ID příkazu na příkaz pro úpravy HTML, obslužnou rutinu zprávy a prvek uživatelského rozhraní.|
 
-##  <a name="declare_dhtmlediting_cmdmap"></a>  DECLARE_DHTMLEDITING_CMDMAP
+## <a name="declare_dhtmlediting_cmdmap"></a><a name="declare_dhtmlediting_cmdmap"></a>DECLARE_DHTMLEDITING_CMDMAP
 
-Deklaruje DHTML pro úpravy příkaz mapu ve třídě.
+Deklaruje mapu příkazů pro úpravy DHTML ve třídě.
 
 ```
 DECLARE_DHTMLEDITING_CMDMAP(className)
@@ -35,26 +35,26 @@ DECLARE_DHTMLEDITING_CMDMAP(className)
 
 ### <a name="parameters"></a>Parametry
 
-*className*<br/>
-Název třídy.
+*Classname*<br/>
+Název třídy
 
 ### <a name="remarks"></a>Poznámky
 
-Toto makro se má použít v definici [CHtmlEditView](../../mfc/reference/chtmleditview-class.md)-odvozené třídy.
+Toto makro má být použito v definici tříd odvozených z [CHtmlEditView.](../../mfc/reference/chtmleditview-class.md)
 
-Použití [BEGIN_DHTMLEDITING_CMDMAP](#begin_dhtmlediting_cmdmap) k implementaci na mapě.
+Pomocí [BEGIN_DHTMLEDITING_CMDMAP](#begin_dhtmlediting_cmdmap) k implementaci mapy.
 
 ### <a name="example"></a>Příklad
 
-Zobrazit [HTMLEdit ukázka](../../overview/visual-cpp-samples.md).
+Viz [HTMLEdit ukázka](../../overview/visual-cpp-samples.md).
 
 ### <a name="requirements"></a>Požadavky
 
-  **Header** afxhtml.h
+  **Záhlaví** afxhtml.h
 
-##  <a name="begin_dhtmlediting_cmdmap"></a>  BEGIN_DHTMLEDITING_CMDMAP
+## <a name="begin_dhtmlediting_cmdmap"></a><a name="begin_dhtmlediting_cmdmap"></a>BEGIN_DHTMLEDITING_CMDMAP
 
-Spustí definici DHTML pro úpravy příkaz mapy v rámci třídy.
+Spustí definici mapy příkazů pro úpravy DHTML v rámci třídy.
 
 ```
 BEGIN_DHTMLEDITING_CMDMAP(className)
@@ -62,22 +62,22 @@ BEGIN_DHTMLEDITING_CMDMAP(className)
 
 ### <a name="parameters"></a>Parametry
 
-*className*<br/>
-Název třídy obsahující mapování DHTML pro úpravy příkazu. Tato třída musí být odvozený přímo nebo nepřímo z: [CHtmlEditView](../../mfc/reference/chtmleditview-class.md) a zahrnout [DECLARE_DHTMLEDITING_CMDMAP](#declare_dhtmlediting_cmdmap) – makro v rámci dané definice třídy.
+*Classname*<br/>
+Název třídy obsahující mapu příkazů pro úpravy DHTML. Tato třída by měla být odvozena přímo nebo nepřímo z [CHtmlEditView](../../mfc/reference/chtmleditview-class.md) a zahrnout [makro DECLARE_DHTMLEDITING_CMDMAP](#declare_dhtmlediting_cmdmap) v rámci definice třídy.
 
 ### <a name="remarks"></a>Poznámky
 
-Přidáte mapu DHTML pro úpravy příkaz do vaší třídy k mapování příkazů uživatelského rozhraní pro příkazy pro úpravy HTML.
+Přidejte do třídy mapu příkazů pro úpravy DHTML a mapujte příkazy uživatelského rozhraní na příkazy pro úpravy HTML.
 
-Umístit BEGIN_DHTMLEDITING_CMDMAP – makro v souboru implementace (.cpp) třídy následovaný [DHTMLEDITING_CMD_ENTRY](#dhtmlediting_cmd_entry) makra pro příkazy třídy je mapovat (např. z id_edit_cut – k IDM_CUT). Použití [END_DHTMLEDITING_CMDMAP](#end_dhtmlediting_cmdmap) – makro konec mapa událostí.
+Umístěte makro BEGIN_DHTMLEDITING_CMDMAP do souboru implementace třídy (.cpp) následované [makry DHTMLEDITING_CMD_ENTRY](#dhtmlediting_cmd_entry) pro příkazy, které má třída mapovat (například z ID_EDIT_CUT do IDM_CUT). Pomocí [END_DHTMLEDITING_CMDMAP](#end_dhtmlediting_cmdmap) makra označte konec mapy událostí.
 
 ### <a name="requirements"></a>Požadavky
 
-  **Header** afxhtml.h
+  **Záhlaví** afxhtml.h
 
-##  <a name="end_dhtmlediting_cmdmap"></a>  END_DHTMLEDITING_CMDMAP
+## <a name="end_dhtmlediting_cmdmap"></a><a name="end_dhtmlediting_cmdmap"></a>END_DHTMLEDITING_CMDMAP
 
-Označuje konec DHTML pro úpravy mapování příkazu.
+Označuje konec mapy příkazů pro úpravy DHTML.
 
 ```
 END_DHTMLEDITING_CMDMAP()
@@ -85,19 +85,19 @@ END_DHTMLEDITING_CMDMAP()
 
 ### <a name="remarks"></a>Poznámky
 
-Použití ve spojení s [BEGIN_DHTMLEDITING_CMDMAP](#begin_dhtmlediting_cmdmap).
+Používejte ve spojení s [BEGIN_DHTMLEDITING_CMDMAP](#begin_dhtmlediting_cmdmap).
 
 ### <a name="example"></a>Příklad
 
-Zobrazit [HTMLEdit ukázka](../../overview/visual-cpp-samples.md).
+Viz [HTMLEdit ukázka](../../overview/visual-cpp-samples.md).
 
 ### <a name="requirements"></a>Požadavky
 
-  **Header** afxhtml.h
+  **Záhlaví** afxhtml.h
 
-##  <a name="dhtmlediting_cmd_entry"></a>  DHTMLEDITING_CMD_ENTRY
+## <a name="dhtmlediting_cmd_entry"></a><a name="dhtmlediting_cmd_entry"></a>DHTMLEDITING_CMD_ENTRY
 
-Mapuje ID příkazu pro příkaz pro úpravy HTML.
+Mapuje ID příkazu na příkaz pro úpravy HTML.
 
 ```
 DHTMLEDITING_CMD_ENTRY(cmdID,  dhtmlcmdID)
@@ -106,22 +106,22 @@ DHTMLEDITING_CMD_ENTRY(cmdID,  dhtmlcmdID)
 ### <a name="parameters"></a>Parametry
 
 *cmdID*<br/>
-ID příkazu (například id_edit_copy –).
+ID příkazu (například ID_EDIT_COPY).
 
 *dhtmlcmdID*<br/>
-Příkaz, ke kterému pro úpravu kódu HTML *cmdID* mapuje (například IDM_COPY).
+Příkaz pro úpravy HTML, na který *cmdID mapuje* (například IDM_COPY).
 
 ### <a name="example"></a>Příklad
 
-Zobrazit [HTMLEdit ukázka](../../overview/visual-cpp-samples.md).
+Viz [HTMLEdit ukázka](../../overview/visual-cpp-samples.md).
 
 ### <a name="requirements"></a>Požadavky
 
-  **Header** afxhtml.h
+  **Záhlaví** afxhtml.h
 
-##  <a name="dhtmlediting_cmd_entry_func"></a>  DHTMLEDITING_CMD_ENTRY_FUNC
+## <a name="dhtmlediting_cmd_entry_func"></a><a name="dhtmlediting_cmd_entry_func"></a>DHTMLEDITING_CMD_ENTRY_FUNC
 
-Mapuje ID příkazu příkazu úprav jazyka HTML a obslužné rutiny zpráv.
+Mapuje ID příkazu na příkaz pro úpravy HTML a obslužnou rutinu zprávy.
 
 ```
 DHTMLEDITING_CMD_ENTRY_FUNC(cmdID, dhtmlcmdID,  member_func_name)
@@ -130,25 +130,25 @@ DHTMLEDITING_CMD_ENTRY_FUNC(cmdID, dhtmlcmdID,  member_func_name)
 ### <a name="parameters"></a>Parametry
 
 *cmdID*<br/>
-ID příkazu (například id_edit_copy –).
+ID příkazu (například ID_EDIT_COPY).
 
 *dhtmlcmdID*<br/>
-Příkaz, ke kterému pro úpravu kódu HTML *cmdID* mapuje (například IDM_COPY).
+Příkaz pro úpravy HTML, na který *cmdID mapuje* (například IDM_COPY).
 
 *member_func_name*<br/>
-Název funkce obslužná rutina zprávy, ke které je mapován tento příkaz.
+Název funkce obslužné rutiny zprávy, na kterou je příkaz mapován.
 
 ### <a name="example"></a>Příklad
 
-Zobrazit [HTMLEdit ukázka](../../overview/visual-cpp-samples.md).
+Viz [HTMLEdit ukázka](../../overview/visual-cpp-samples.md).
 
 ### <a name="requirements"></a>Požadavky
 
-  **Header** afxhtml.h
+  **Záhlaví** afxhtml.h
 
-##  <a name="dhtmlediting_cmd_entry_type"></a>  DHTMLEDITING_CMD_ENTRY_TYPE
+## <a name="dhtmlediting_cmd_entry_type"></a><a name="dhtmlediting_cmd_entry_type"></a>DHTMLEDITING_CMD_ENTRY_TYPE
 
-Mapuje ID příkazu příkazu úprav jazyka HTML a prvek uživatelského rozhraní.
+Mapuje ID příkazu na příkaz pro úpravy HTML a prvek uživatelského rozhraní.
 
 ```
 DHTMLEDITING_CMD_ENTRY_TYPE(cmdID  ,   dhtmlcmdID  ,    elemType)
@@ -157,25 +157,25 @@ DHTMLEDITING_CMD_ENTRY_TYPE(cmdID  ,   dhtmlcmdID  ,    elemType)
 ### <a name="parameters"></a>Parametry
 
 *cmdID*<br/>
-ID příkazu (například id_edit_copy –).
+ID příkazu (například ID_EDIT_COPY).
 
 *dhtmlcmdID*<br/>
-Příkaz, ke kterému pro úpravu kódu HTML *cmdID* mapuje (například IDM_COPY).
+Příkaz pro úpravy HTML, na který *cmdID mapuje* (například IDM_COPY).
 
-*elemType*<br/>
+*elemTyp*<br/>
 Typ prvku uživatelského rozhraní; jeden z AFX_UI_ELEMTYPE_NORMAL, AFX_UI_ELEMTYPE_CHECKBOX nebo AFX_UI_ELEMTYPE_RADIO.
 
 ### <a name="example"></a>Příklad
 
-Zobrazit [HTMLEdit ukázka](../../overview/visual-cpp-samples.md).
+Viz [HTMLEdit ukázka](../../overview/visual-cpp-samples.md).
 
 ### <a name="requirements"></a>Požadavky
 
-  **Header** afxhtml.h
+  **Záhlaví** afxhtml.h
 
-##  <a name="dhtmlediting_cmd_entry_func_type"></a>  DHTMLEDITING_CMD_ENTRY_FUNC_TYPE
+## <a name="dhtmlediting_cmd_entry_func_type"></a><a name="dhtmlediting_cmd_entry_func_type"></a>DHTMLEDITING_CMD_ENTRY_FUNC_TYPE
 
-Mapuje ID příkazu pro příkaz, obslužné rutiny zpráv a prvek uživatelského rozhraní pro úpravy HTML.
+Mapuje ID příkazu na příkaz pro úpravy HTML, obslužnou rutinu zprávy a prvek uživatelského rozhraní.
 
 ```
 DHTMLEDITING_CMD_ENTRY_FUNC_TYPE(cmdID, dhtmlcmdID, member_func_name,  elemType)
@@ -184,25 +184,25 @@ DHTMLEDITING_CMD_ENTRY_FUNC_TYPE(cmdID, dhtmlcmdID, member_func_name,  elemType)
 ### <a name="parameters"></a>Parametry
 
 *cmdID*<br/>
-ID příkazu (například id_edit_copy –).
+ID příkazu (například ID_EDIT_COPY).
 
 *dhtmlcmdID*<br/>
-Příkaz, ke kterému pro úpravu kódu HTML *cmdID* mapuje (například IDM_COPY).
+Příkaz pro úpravy HTML, na který *cmdID mapuje* (například IDM_COPY).
 
 *member_func_name*<br/>
-Název funkce obslužná rutina zprávy, ke které je mapován tento příkaz.
+Název funkce obslužné rutiny zprávy, na kterou je příkaz mapován.
 
-*elemType*<br/>
+*elemTyp*<br/>
 Typ prvku uživatelského rozhraní; jeden z AFX_UI_ELEMTYPE_NORMAL, AFX_UI_ELEMTYPE_CHECKBOX nebo AFX_UI_ELEMTYPE_RADIO.
 
 ### <a name="example"></a>Příklad
 
-Zobrazit [HTMLEdit ukázka](../../overview/visual-cpp-samples.md).
+Viz [HTMLEdit ukázka](../../overview/visual-cpp-samples.md).
 
 ### <a name="requirements"></a>Požadavky
 
-  **Header** afxhtml.h
+  **Záhlaví** afxhtml.h
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Makra a globální prvky](../../mfc/reference/mfc-macros-and-globals.md)
+[Makra a globální](../../mfc/reference/mfc-macros-and-globals.md)

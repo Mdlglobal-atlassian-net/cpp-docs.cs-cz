@@ -1,44 +1,44 @@
 ---
-title: Vytvoření nového C++ projektu pro Linux v aplikaci Visual Studio
+title: Vytvoření nového projektu C++ Linux v sadě Visual Studio
 ms.date: 10/24/2019
-description: Vytvořte nový projekt pro Linux založený na MSBuildu v aplikaci Visual Studio.
+description: Vytvořte nový projekt Linux založený na MSBuild v sadě Visual Studio.
 ms.assetid: 5d7c1d67-bc31-4f96-8622-2b4cf91372fd
-ms.openlocfilehash: 5d5fa67566d86edb2ed0389fdbe38866b47e2211
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 1e79dd50756b71aabae7ccec75e57178898e7720
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73626726"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364352"
 ---
 # <a name="create-a-new-linux-project"></a>Vytvoření nového projektu Linux
 
 ::: moniker range="vs-2015"
 
-Projekty Linux jsou k dispozici v aplikaci Visual Studio 2017 nebo novější.
+Linuxové projekty jsou dostupné ve Visual Studiu 2017 a novějším.
 
 ::: moniker-end
 
 ::: moniker range="vs-2017"
 
-Nejdřív se ujistěte, že máte nainstalovanou **úlohu vývoje pro Linux** pro Visual Studio. Další informace najdete v tématu [stažení, instalace a nastavení úlohy pro Linux](download-install-and-setup-the-linux-development-workload.md).
+Nejprve se ujistěte, že máte **nainstalovanou úlohu vývoje Linuxu** pro Visual Studio. Další informace naleznete v [tématu Stažení, instalace a nastavení úlohy Linuxu](download-install-and-setup-the-linux-development-workload.md).
 
-Pro kompilaci mezi platformami doporučujeme používat CMake. Podpora CMake je více dokončená v sadě Visual Studio 2019. Pokud CMake není možnost a máte stávající řešení Windows Visual Studio, které chcete pro kompilaci pro Linux nasadit, můžete do řešení systému Windows přidat projekt sady Visual Studio Linux společně s projektem **sdílených položek** . Vložte kód, který je sdílen mezi oběma platformami v projektu sdílené položky a přidejte odkaz na tento projekt z projektů pro Windows a Linux.
+Pro kompilaci napříč platformami doporučujeme použít CMake. Podpora CMake je v Sadě Visual Studio 2019 úplnější. Pokud CMake není možnost a máte existující řešení Windows Visual Studio, které chcete rozšířit na kompilaci pro Linux, můžete přidat projekt Visual Studio Linux do řešení systému Windows, spolu s projektem **sdílené položky.** Vložte kód, který je sdílen mezi oběma platformami v projektu sdílené položky a přidejte odkaz na tento projekt z projektů Windows a Linux.
 
-## <a name="to-create-a-new-linux-project"></a>Vytvoření nového projektu pro Linux
+## <a name="to-create-a-new-linux-project"></a>Vytvoření nového projektu Linuxu
 
-Chcete-li vytvořit nový projekt pro Linux v aplikaci Visual Studio 2017, postupujte podle následujících kroků:
+Pokud chcete vytvořit nový linuxový projekt ve Visual Studiu 2017, postupujte takto:
 
-1. Vyberte **soubor > nový projekt** v aplikaci Visual Studio nebo stiskněte klávesy **CTRL + SHIFT + N**.
-1. Vyberte uzel **Visual C++ > pro různé platformy > Linux** a potom vyberte typ projektu, který chcete vytvořit. Zadejte **název** a **umístění**a klikněte na **tlačítko OK**.
+1. Vyberte **Soubor > Nový projekt** v sadě Visual Studio nebo stiskněte **kombinaci kláves Ctrl + Shift + N**.
+1. Vyberte **Visual C++ > Cross Platform >** uzle Linux a pak vyberte typ projektu, který chcete vytvořit. Zadejte **název** a **umístění**a zvolte **OK**.
 
-   ![Nový projekt pro Linux](media/newproject.png)
+   ![Nový linuxový projekt](media/newproject.png)
 
    | Typ projektu | Popis |
    | ------------ | --- |
-   | **Blikání (Malina)**           | Projekt, který je zaměřený na zařízení malin. PI s ukázkovým kódem, který zabliká LED |
-   | **Konzolová aplikace (Linux)** | Projekt, který je zaměřený na jakýkoli počítač se systémem Linux, s ukázkovým kódem, který do konzoly vypíše text |
-   | **Prázdný projekt (Linux)**       | Projekt, který je zaměřený na jakýkoli počítač se systémem Linux bez ukázkového kódu |
-   | **Projekt makefile (Linux)**    | Projekt, který je zaměřený na jakýkoli počítač se systémem Linux, sestavený pomocí standardního systému sestavení makefile |
+   | **Blink (Malina)**           | Projekt zaměřený na zařízení Raspberry Pi se ukázkovým kódem, který bliká LED diodou |
+   | **Konzolová aplikace (Linux)** | Projekt zaměřený na libovolný počítač s Linuxem s ukázkovým kódem, který vyvádí text do konzoly |
+   | **Prázdný projekt (Linux)**       | Projekt zaměřený na jakýkoli počítač s Linuxem bez ukázkového kódu |
+   | **Projekt Makefile (Linux)**    | Projekt zaměřený na jakýkoli počítač s Linuxem, postavený pomocí standardního systému sestavení Makefile |
 
 ## <a name="next-steps"></a>Další kroky
 
@@ -48,27 +48,27 @@ Chcete-li vytvořit nový projekt pro Linux v aplikaci Visual Studio 2017, postu
 
 ::: moniker range="vs-2019"
 
-Nejdřív se ujistěte, že máte nainstalovanou **úlohu vývoje pro Linux** pro Visual Studio. Další informace najdete v tématu [stažení, instalace a nastavení úlohy Linux](download-install-and-setup-the-linux-development-workload.md).
+Nejprve se ujistěte, že máte **nainstalovanou úlohu vývoje Linuxu** pro Visual Studio. Další informace naleznete v [tématu Stažení, instalace a nastavení úlohy Linuxu](download-install-and-setup-the-linux-development-workload.md).
 
-Při vytváření nového C++ projektu pro Linux v sadě Visual Studio můžete zvolit vytvoření projektu sady Visual Studio nebo projektu cmake. Tento článek popisuje, jak vytvořit projekt sady Visual Studio. Obecně platí, že pro nové projekty, které mohou zahrnovat open source kód nebo které máte v úmyslu kompilovat pro vývoj pro různé platformy, doporučujeme používat CMake v sadě Visual Studio. Pomocí projektu CMake můžete sestavit a ladit stejný projekt v systému Windows i Linux. Další informace najdete v tématu [Vytvoření a konfigurace projektu Linux cmake](cmake-linux-project.md).
+Při vytváření nového projektu Jazyka C++ pro Linux v sadě Visual Studio můžete vytvořit projekt sady Visual Studio nebo projekt CMake. Tento článek popisuje, jak vytvořit projekt sady Visual Studio. Obecně platí pro nové projekty, které mohou zahrnovat open source kód nebo které máte v úmyslu zkompilovat pro vývoj napříč platformami, doporučujeme použít CMake s Visual Studio. S projektem CMake můžete vytvářet a ladit stejný projekt na Windows i Linux. Další informace naleznete v [tématu Vytvoření a konfigurace projektu Linux CMake Project](cmake-linux-project.md).
 
-Máte-li existující řešení sady Windows Visual Studio, které byste chtěli zkompilovat pro systém Linux, a CMake není možnost, můžete přidat projekt sady Visual Studio Linux do řešení systému Windows společně s projektem **sdílených položek** . Vložte kód, který je sdílen mezi oběma platformami v projektu sdílené položky a přidejte odkaz na tento projekt z projektů pro Windows a Linux.
+Pokud máte existující řešení Windows Visual Studio, které chcete rozšířit na kompilaci pro Linux a CMake není možnost, pak můžete přidat projekt Visual Studio Linux do řešení systému Windows, spolu s projektem **sdílené položky.** Vložte kód, který je sdílen mezi oběma platformami v projektu sdílené položky a přidejte odkaz na tento projekt z projektů Windows a Linux.
 
-## <a name="to-create-a-new-linux-project"></a>Vytvoření nového projektu pro Linux
+## <a name="to-create-a-new-linux-project"></a>Vytvoření nového projektu Linuxu
 
-Chcete-li vytvořit nový projekt pro Linux v aplikaci Visual Studio 2019, postupujte podle následujících kroků:
+Pokud chcete vytvořit nový linuxový projekt ve Visual Studiu 2019, postupujte takto:
 
-1. Vyberte **soubor > nový projekt** v aplikaci Visual Studio nebo stiskněte klávesy **CTRL + SHIFT + N**.
-1. Nastavte **jazyk** na **C++** a vyhledejte "Linux". Vyberte typ projektu, který chcete vytvořit, a klikněte na tlačítko **Další**. Zadejte **název** a **umístění**a klikněte na **vytvořit**.
+1. Vyberte **Soubor > Nový projekt** v sadě Visual Studio nebo stiskněte **kombinaci kláves Ctrl + Shift + N**.
+1. Nastavte **jazyk** na **C++** a vyhledejte "Linux". Vyberte typ projektu, který chcete vytvořit, a pak zvolte **Další**. Zadejte **název** a **umístění**a zvolte **Vytvořit**.
 
-   ![Nový projekt pro Linux](media/newproject-vs2019.png)
+   ![Nový linuxový projekt](media/newproject-vs2019.png)
 
    | Typ projektu | Popis |
    | ------------ | --- |
-   | **Blikání (Malina)**           | Projekt, který je zaměřený na zařízení malin. PI s ukázkovým kódem, který zabliká LED |
-   | **Konzolová aplikace (Linux)** | Projekt, který je zaměřený na jakýkoli počítač se systémem Linux, s ukázkovým kódem, který do konzoly vypíše text |
-   | **Prázdný projekt (Linux)**       | Projekt, který je zaměřený na jakýkoli počítač se systémem Linux bez ukázkového kódu |
-   | **Projekt makefile (Linux)**    | Projekt, který je zaměřený na jakýkoli počítač se systémem Linux, sestavený pomocí standardního systému sestavení makefile |
+   | **Blink (Malina)**           | Projekt zaměřený na zařízení Raspberry Pi se ukázkovým kódem, který bliká LED diodou |
+   | **Konzolová aplikace (Linux)** | Projekt zaměřený na libovolný počítač s Linuxem s ukázkovým kódem, který vyvádí text do konzoly |
+   | **Prázdný projekt (Linux)**       | Projekt zaměřený na jakýkoli počítač s Linuxem bez ukázkového kódu |
+   | **Projekt Makefile (Linux)**    | Projekt zaměřený na jakýkoli počítač s Linuxem, postavený pomocí standardního systému sestavení Makefile |
 
 ## <a name="next-steps"></a>Další kroky
 

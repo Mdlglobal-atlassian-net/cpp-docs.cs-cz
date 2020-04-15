@@ -23,16 +23,16 @@ helpviewer_keywords:
 - std::regex_token_iterator [C++], pointer
 - std::regex_token_iterator [C++], reference
 ms.assetid: a213ba48-8e4e-4b6b-871a-2637acf05f15
-ms.openlocfilehash: 57fac1d9d5c73c2644a679402809933290dd3fc3
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 5ada2ad69cbcac15e09968045e54095dfb2623d1
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689060"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366402"
 ---
 # <a name="regex_token_iterator-class"></a>regex_token_iterator – třída
 
-Iterátor třídy pro podshody
+Třída Iterátor pro podzápasy.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -45,20 +45,20 @@ class regex_token_iterator
 
 ## <a name="parameters"></a>Parametry
 
-@No__t_1 *BiDi*
-Typ iterátoru pro podshody.
+*BidIt*\
+Typ iterátoru pro podzápasy.
 
-*Elem* \
+*Elem*\
 Typ prvků, které se mají spárovat.
 
-*RXtraits* \
+*RXtraits*\
 Třída vlastností prvků.
 
 ## <a name="remarks"></a>Poznámky
 
-Šablona třídy popisuje objekt konstanty dopředné iterátory. V koncepčním případě obsahuje objekt `regex_iterator`, který používá pro hledání shody regulárních výrazů ve znakové sekvenci. Extrahuje objekty typu `sub_match<BidIt>` reprezentující podshody identifikované hodnotami indexu v uloženém vektorovém `subs` pro každou shodu regulárního výrazu.
+Šablona třídy popisuje objekt konstantní dopředu iterátoru. Koncepčně obsahuje `regex_iterator` objekt, který používá k hledání shody regulárních výrazů v posloupnosti znaků. Extrahuje objekty `sub_match<BidIt>` typu představující dílčí shody identifikované hodnotami indexu v uloženém vektoru `subs` pro každou shodu regulárních výrazů.
 
-Hodnota indexu-1 označuje sekvenci znaků začínající bezprostředně po konci předchozího regulárního výrazu nebo začíná na začátku sekvence znaků, pokud se neshoduje předchozí regulární výraz a rozšíření na, ale ne. včetně prvního znaku aktuálního regulárního výrazu nebo na konec sekvence znaků, pokud neexistuje žádná aktuální shoda. Jakákoli jiná hodnota indexu `idx` určí obsah skupiny zachycení uložené v `it.match[idx]`.
+Hodnota indexu -1 označuje posloupnost znaků začínající bezprostředně po skončení předchozí shody regulárních výrazů nebo počínaje začátkem sekvence znaků, pokud nebyla žádná předchozí shoda regulárních výrazů, a rozšiřuje se na první znak aktuální shody regulárních výrazů nebo na konec sekvence znaků, pokud neexistuje žádná aktuální shoda. Jakákoli jiná `idx` hodnota indexu označuje obsah skupiny `it.match[idx]`zachycení držené v .
 
 ### <a name="members"></a>Členové
 
@@ -79,25 +79,25 @@ Hodnota indexu-1 označuje sekvenci znaků začínající bezprostředně po kon
 |Název typu|Popis|
 |-|-|
 |[difference_type](#difference_type)|Typ rozdílu iterátoru.|
-|[iterator_category](#iterator_category)|Typ kategorie iterátoru|
-|[ukazatele](#pointer)|Typ ukazatele na shodu.|
-|[odkaz](#reference)|Typ odkazu na podshodu.|
+|[iterator_category](#iterator_category)|Typ kategorie iterátoru.|
+|[ukazatel](#pointer)|Typ ukazatele na shodu.|
+|[Odkaz](#reference)|Typ odkazu na dílčí shodu.|
 |[regex_type](#regex_type)|Typ regulárního výrazu, který se má shodovat.|
-|[value_type](#value_type)|Typ podshody.|
+|[value_type](#value_type)|Typ dílčí shody.|
 
 ### <a name="operators"></a>Operátory
 
 |Operátor|Popis|
 |-|-|
-|[operator!=](#op_neq)|Porovná iterátory pro nerovnost.|
-|[podnikatel](#op_star)|Přistupuje k určené podshodě.|
-|[operator + + – operátor](#op_add_add)|Zvýší iterátor.|
-|[operator = = – operátor](#op_eq_eq)|Porovná iterátory o rovnosti.|
-|[operátor->](#op_arrow)|Přistupuje k určené podshodě.|
+|[operátor!=](#op_neq)|Porovnává iterátory pro nerovnost.|
+|[operátor*](#op_star)|Přistupuje k určené dílčí shodě.|
+|[operátor++](#op_add_add)|Zintáží iterátor.|
+|[operátor==](#op_eq_eq)|Porovnává iterátory pro rovnost.|
+|[operátor->](#op_arrow)|Přistupuje k určené dílčí shodě.|
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<regex >
+**Záhlaví:** \<regex>
 
 **Obor názvů:** std
 
@@ -197,7 +197,7 @@ match == aa
 match == z
 ```
 
-## <a name="difference_type"></a>regex_token_iterator::d ifference_type
+## <a name="regex_token_iteratordifference_type"></a><a name="difference_type"></a>regex_token_iterator::difference_type
 
 Typ rozdílu iterátoru.
 
@@ -207,11 +207,11 @@ typedef std::ptrdiff_t difference_type;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ je synonymum pro `std::ptrdiff_t`.
+Typ je synonymem `std::ptrdiff_t`pro .
 
-## <a name="iterator_category"></a>regex_token_iterator::iterator_category
+## <a name="regex_token_iteratoriterator_category"></a><a name="iterator_category"></a>regex_token_iterator::iterator_category
 
-Typ kategorie iterátoru
+Typ kategorie iterátoru.
 
 ```cpp
 typedef std::forward_iterator_tag iterator_category;
@@ -219,11 +219,11 @@ typedef std::forward_iterator_tag iterator_category;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ je synonymum pro `std::forward_iterator_tag`.
+Typ je synonymem `std::forward_iterator_tag`pro .
 
-## <a name="op_neq"></a>regex_token_iterator:: operator! =
+## <a name="regex_token_iteratoroperator"></a><a name="op_neq"></a>regex_token_iterator::operátor!=
 
-Porovná iterátory pro nerovnost.
+Porovnává iterátory pro nerovnost.
 
 ```cpp
 bool operator!=(const regex_token_iterator& right);
@@ -231,16 +231,16 @@ bool operator!=(const regex_token_iterator& right);
 
 ### <a name="parameters"></a>Parametry
 
-*pravé* \
-Iterátor, pro který se má porovnat.
+*Právo*\
+Iterátor porovnat.
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrací `!(*this == right)`.
+Členská funkce `!(*this == right)`vrátí .
 
-## <a name="op_star"></a>regex_token_iterator:: operator * – operátor
+## <a name="regex_token_iteratoroperator"></a><a name="op_star"></a>regex_token_iterator::operátor*
 
-Přistupuje k určené podshodě.
+Přistupuje k určené dílčí shodě.
 
 ```cpp
 const sub_match<BidIt>& operator*();
@@ -248,11 +248,11 @@ const sub_match<BidIt>& operator*();
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí objekt `sub_match<BidIt>` reprezentující skupinu zachycení identifikovanou hodnotou indexu `subs[pos]`.
+Členská funkce `sub_match<BidIt>` vrátí objekt představující skupinu sběru `subs[pos]`identifikovaný hodnotou indexu .
 
-## <a name="op_add_add"></a>regex_token_iterator:: operator + +
+## <a name="regex_token_iteratoroperator"></a><a name="op_add_add"></a>regex_token_iterator::operátor++
 
-Zvýší iterátor.
+Zintáží iterátor.
 
 ```cpp
 regex_token_iterator& operator++();
@@ -262,13 +262,13 @@ regex_token_iterator& operator++(int);
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud je uložený iterátor `it` sekvencí end-Sequence, první operátor nastaví uloženou hodnotu `pos` na hodnotu `subs.size()` (takže vytvoří iterátor konec sekvence). Jinak operátor zvýší uloženou hodnotu `pos`; Pokud je výsledek roven hodnotě `subs.size()` nastaví uloženou hodnotu `pos` na nulu a zvýší uložený iterátor `it`. Pokud se zvýšením uloženého iterátoru ponechá, že je nerovno iterátoru koncové sekvence, operátor neprovede žádné další akce. V opačném případě, pokud byl konec předchozí shody na konci sekvence znaků, operátor nastaví uloženou hodnotu `pos` na `subs.size()`. V opačném případě operátor opakovaně zvyšuje uloženou hodnotu `pos` až do `pos == subs.size()` nebo `subs[pos] == -1` (čímž zajistíte, že další zpětný odkaz na iterátor vrátí konec sekvence znaků, pokud je jedna z hodnot indexu-1). Ve všech případech operátor vrací objekt.
+Pokud uložený iterátor `it` je end-of-sequence iterátor první operátor `pos` nastaví uloženou hodnotu na hodnotu `subs.size()` (tedy provedení end-of-sequence iterátor). V opačném případě operátor inkumuje uloženou hodnotu `pos`; pokud je výsledek roven `subs.size()` hodnotě, `pos` nastaví uloženou hodnotu na nulu `it`a zintáží uložený iterátor . Pokud zvýšení uložené iterátor uchová nerovné na konci sekvence iterátoru operátor neprovede nic dalšího. V opačném případě pokud byl konec předchozí shody na konci sekvence znaků, `pos` `subs.size()`operátor nastaví uloženou hodnotu na . V opačném případě operátor opakovaně zvýší uloženou `pos == subs.size()` `subs[pos] == -1` hodnotu `pos` do nebo (a tím zajistí, že další dereference iterátoru vrátí ocas sekvence znaků, pokud je jedna z hodnot indexu -1). Ve všech případech operátor vrátí objekt.
 
-Druhý operátor vytvoří kopii objektu, zvýší objekt a vrátí kopii.
+Druhý operátor vytvoří kopii objektu, zintáží objekt a potom vrátí kopii.
 
-## <a name="op_eq_eq"></a>regex_token_iterator:: operator = = – operátor
+## <a name="regex_token_iteratoroperator"></a><a name="op_eq_eq"></a>regex_token_iterator::operátor==
 
-Porovná iterátory o rovnosti.
+Porovnává iterátory pro rovnost.
 
 ```cpp
 bool operator==(const regex_token_iterator& right);
@@ -276,16 +276,16 @@ bool operator==(const regex_token_iterator& right);
 
 ### <a name="parameters"></a>Parametry
 
-*pravé* \
-Iterátor, pro který se má porovnat.
+*Právo*\
+Iterátor porovnat.
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrací `it == right.it && subs == right.subs && pos == right.pos`.
+Členská funkce `it == right.it && subs == right.subs && pos == right.pos`vrátí .
 
-## <a name="op_arrow"></a>regex_token_iterator:: operator-&gt;
+## <a name="regex_token_iteratoroperator-gt"></a><a name="op_arrow"></a>regex_token_iterator::operátor-&gt;
 
-Přistupuje k určené podshodě.
+Přistupuje k určené dílčí shodě.
 
 ```cpp
 const sub_match<BidIt> * operator->();
@@ -293,9 +293,9 @@ const sub_match<BidIt> * operator->();
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrací ukazatel na objekt `sub_match<BidIt>` reprezentující skupinu zachycení identifikovanou hodnotou indexu `subs[pos]`.
+Členská funkce vrátí ukazatel `sub_match<BidIt>` na objekt představující skupinu sběru identifikovanou hodnotou `subs[pos]`indexu .
 
-## <a name="pointer"></a>regex_token_iterator::p ointer
+## <a name="regex_token_iteratorpointer"></a><a name="pointer"></a>regex_token_iterator::pointer
 
 Typ ukazatele na shodu.
 
@@ -305,11 +305,11 @@ typedef sub_match<BidIt> *pointer;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ je synonymum pro `sub_match<BidIt>*`, kde `BidIt` je parametr šablony.
+Typ je synonymem `sub_match<BidIt>*`pro `BidIt` , kde je parametr šablony.
 
-## <a name="reference"></a>regex_token_iterator:: Reference
+## <a name="regex_token_iteratorreference"></a><a name="reference"></a>regex_token_iterator::odkaz
 
-Typ odkazu na podshodu.
+Typ odkazu na dílčí shodu.
 
 ```cpp
 typedef sub_match<BidIt>& reference;
@@ -317,9 +317,9 @@ typedef sub_match<BidIt>& reference;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ je synonymum pro `sub_match<BidIt>&`, kde `BidIt` je parametr šablony.
+Typ je synonymem `sub_match<BidIt>&`pro `BidIt` , kde je parametr šablony.
 
-## <a name="regex_token_iterator"></a>regex_token_iterator::regex_token_iterator
+## <a name="regex_token_iteratorregex_token_iterator"></a><a name="regex_token_iterator"></a>regex_token_iterator::regex_token_iterator
 
 Vytvoří iterátor.
 
@@ -342,29 +342,29 @@ regex_token_iterator(BidIt first, BidIt last,
 
 ### <a name="parameters"></a>Parametry
 
-*první* \
-Začátek sekvence, která se má shodovat
+*První*\
+Začátek sekvence tak, aby odpovídaly.
 
-*poslední* \
-Konec sekvence, která se má shodovat.
+*Poslední*\
+Konec sekvence tak, aby odpovídala.
 
-*znovu* \
-Regulární výraz pro shody
+*Re*\
+Regulární výraz pro shody.
 
-\ *f*
-Příznaky pro shody
+*F*\
+Příznaky pro zápasy.
 
 ### <a name="remarks"></a>Poznámky
 
-První konstruktor vytvoří iterátor konec sekvence.
+První konstruktor vytvoří iterátor na konci sekvence.
 
-Druhý konstruktor vytvoří objekt, jehož uložené iterátory `it` jsou inicializovány na `regex_iterator<BidIt, Elem, RXtraits>(first, last, re, f)`, jejichž uložený vektorový `subs` obsahuje přesně jedno celé číslo, s hodnotou `submatch` a jehož uložená hodnota `pos` je nula. Poznámka: výsledný objekt extrahuje dílčí shodu identifikovanou hodnotou indexu `submatch` pro každou úspěšnou shodu regulárního výrazu.
+Druhý konstruktor vytvoří objekt, jehož uložený `it` iterátor je inicializován na `regex_iterator<BidIt, Elem, RXtraits>(first, last, re, f)`, jehož uložený vektor `subs` obsahuje přesně jedno celé číslo s hodnotou `submatch`a jehož uložená hodnota `pos` je nulová. Poznámka: Výsledný objekt extrahuje dílčí shodu identifikovanou hodnotou `submatch` indexu pro každou úspěšnou shodu regulárních výrazů.
 
-Třetí konstruktor vytvoří objekt, jehož uložené iterátory `it` jsou inicializovány na `regex_iterator<BidIt, Elem, RXtraits>(first, last, re, f)`, jejichž uložený vektorový `subs` obsahuje kopii argumentu konstruktoru `submatches` a jehož uložená hodnota `pos` je nula.
+Třetí konstruktor vytvoří objekt, jehož uložený `it` iterátor je inicializován na `regex_iterator<BidIt, Elem, RXtraits>(first, last, re, f)`, jehož uložený vektor `subs` obsahuje kopii argumentu `submatches`konstruktoru a jehož uložená hodnota `pos` je nulová.
 
-Čtvrtý konstruktor vytvoří objekt, jehož uložené iterátory `it` jsou inicializovány na `regex_iterator<BidIt, Elem, RXtraits>(first, last, re, f)`, jejichž uložený vektorový `subs` obsahuje `N` hodnoty, na které odkazoval argument konstruktoru `submatches` a jehož uložená hodnota `pos` je nula.
+Čtvrtý konstruktor vytvoří objekt, jehož uložený iterátor `it` je inicializován na `regex_iterator<BidIt, Elem, RXtraits>(first, last, re, f)`, jehož uložený vektor `subs` obsahuje `N` hodnoty, na které je argument konstruktoru `submatches`a jehož uložená hodnota `pos` je nulová.
 
-## <a name="regex_type"></a>regex_token_iterator::regex_type
+## <a name="regex_token_iteratorregex_type"></a><a name="regex_type"></a>regex_token_iterator::regex_type
 
 Typ regulárního výrazu, který se má shodovat.
 
@@ -374,11 +374,11 @@ typedef basic_regex<Elem, RXtraits> regex_type;
 
 ### <a name="remarks"></a>Poznámky
 
-Typedef je synonymem pro `basic_regex<Elem, RXtraits>`.
+Typedef je synonymem `basic_regex<Elem, RXtraits>`pro .
 
-## <a name="value_type"></a>regex_token_iterator::value_type
+## <a name="regex_token_iteratorvalue_type"></a><a name="value_type"></a>regex_token_iterator::value_type
 
-Typ podshody.
+Typ dílčí shody.
 
 ```cpp
 typedef sub_match<BidIt> value_type;
@@ -386,15 +386,15 @@ typedef sub_match<BidIt> value_type;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ je synonymum pro `sub_match<BidIt>`, kde `BidIt` je parametr šablony.
+Typ je synonymem `sub_match<BidIt>`pro `BidIt` , kde je parametr šablony.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[\<regex >](../standard-library/regex.md) \
-\ [třídy regex_constants](../standard-library/regex-constants-class.md)
-\ [třídy regex_error](../standard-library/regex-error-class.md)
-[funkce \<regex >](../standard-library/regex-functions.md) \
-\ [třídy regex_iterator](../standard-library/regex-iterator-class.md)
-[operátory \<regex >](../standard-library/regex-operators.md) \
-\ [třídy regex_traits](../standard-library/regex-traits-class.md)
-[\<regex > definice typedef](../standard-library/regex-typedefs.md)
+[\<regulární>](../standard-library/regex.md)\
+[regex_constants třída](../standard-library/regex-constants-class.md)\
+[regex_error třída](../standard-library/regex-error-class.md)\
+[\<funkce> regulárních výrazů](../standard-library/regex-functions.md)\
+[regex_iterator třída](../standard-library/regex-iterator-class.md)\
+[\<operátory> regulárních výrazů](../standard-library/regex-operators.md)\
+[třída regex_traits](../standard-library/regex-traits-class.md)\
+[\<regulární> typedefs](../standard-library/regex-typedefs.md)

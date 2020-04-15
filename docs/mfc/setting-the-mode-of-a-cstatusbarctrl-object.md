@@ -9,23 +9,23 @@ helpviewer_keywords:
 - non-simple mode and status bar controls
 - CStatusBarCtrl class [MFC], simple and nonsimple modes
 ms.assetid: ca6076e5-1501-4e33-8d35-9308941e46c0
-ms.openlocfilehash: 79b499533196447898ce62ea9dc86c1674fc0302
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: e09a7bd274c44df2da48bbc007a95802fadd8cf0
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79446421"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81365416"
 ---
 # <a name="setting-the-mode-of-a-cstatusbarctrl-object"></a>Nastavení režimu objektu CStatusBarCtrl
 
-Existují dva režimy pro objekt `CStatusBarCtrl`: jednoduchá a nejednoduchá. Ve většině případů bude ovládací prvek stavového řádku obsahovat jednu nebo více částí, společně s textem a případně ikonu nebo ikony. Nazývá se to nejednoduchý režim. Další informace o tomto režimu naleznete v tématu [inicializace částí objektu CStatusBarCtrl](../mfc/initializing-the-parts-of-a-cstatusbarctrl-object.md).
+Existují dva režimy `CStatusBarCtrl` pro objekt: jednoduché a nonsimple. Ve většině případů bude mít ovládací prvek stavového řádku jednu nebo více částí spolu s textem a možná i ikonou nebo ikonami. Tento režim se nazývá nejednoduchý režim. Další informace o tomto režimu naleznete [v tématu Inicializace částí objektu CStatusBarCtrl](../mfc/initializing-the-parts-of-a-cstatusbarctrl-object.md).
 
-Existují však případy, kdy potřebujete pouze zobrazit pouze jeden řádek textu. V takovém případě je jednoduchý režim dostačující pro vaše potřeby. Chcete-li změnit režim objektu `CStatusBarCtrl` na jednoduché, proveďte volání členské funkce [SetSimple](../mfc/reference/cstatusbarctrl-class.md#setsimple) . Jakmile je ovládací prvek stavového řádku v jednoduchém režimu, nastavte text voláním členské funkce `SetText` a předáním 255 jako hodnoty pro parametr *nPane* .
+Existují však případy, kdy stačí zobrazit pouze jeden řádek textu. V tomto případě je jednoduchý režim je dostačující pro vaše potřeby. Chcete-li změnit `CStatusBarCtrl` režim objektu na jednoduché, proveďte volání [SetSimple](../mfc/reference/cstatusbarctrl-class.md#setsimple) členské funkce. Jakmile je ovládací prvek stavového řádku v jednoduchém režimu, nastavte text voláním `SetText` členské funkce a předejte 255 jako hodnotu parametru *nPane.*
 
-K určení, v jakém režimu je objekt `CStatusBarCtrl`, můžete použít funkci [zjednodušená](../mfc/reference/cstatusbarctrl-class.md#issimple) .
+Funkci [IsSimple](../mfc/reference/cstatusbarctrl-class.md#issimple) můžete použít k určení, v jakém režimu se `CStatusBarCtrl` objekt nachází.
 
 > [!NOTE]
->  Pokud se objekt stavového řádku mění z nejednoduchého na jednoduchý, nebo naopak, okno se ihned překreslí a v případě potřeby se automaticky obnoví i jakékoli definované části.
+> Pokud se objekt stavového řádku mění z nejednoduchého na jednoduchý nebo naopak, okno se okamžitě překreslí a případně se automaticky obnoví všechny definované součásti.
 
 ## <a name="see-also"></a>Viz také
 

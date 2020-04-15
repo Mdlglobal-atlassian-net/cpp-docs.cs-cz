@@ -46,16 +46,16 @@ helpviewer_keywords:
 - std::moneypunct [C++], positive_sign
 - std::moneypunct [C++], thousands_sep
 ms.assetid: cf2650da-3e6f-491c-95d5-23e57f582ee6
-ms.openlocfilehash: 7960ee8b5e9ce6b27494e896e38bbf6b5256fe7e
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 3a277b2f97fd53c52b705051c30eb18faf6364d0
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79419852"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366250"
 ---
 # <a name="moneypunct-class"></a>moneypunct – třída
 
-Šablona třídy popisuje objekt, který může sloužit jako omezující vlastnost národního prostředí pro popis sekvencí typu *CharType* sloužících k reprezentaci peněžního vstupního pole nebo pole s peněžním výstupem. Pokud je parametr šablony *Intl* v *hodnotě true*, jsou dodržovány mezinárodní konvence.
+Šablona třídy popisuje objekt, který může sloužit jako omezující vlastnost národního prostředí k popisu sekvencí typu *CharType,* které slouží k reprezentaci pole peněžního vstupu nebo pole peněžního výstupu. Pokud je parametr šablony *Intl* *true*, jsou dodrženy mezinárodní konvence.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -66,17 +66,17 @@ class moneypunct;
 
 ### <a name="parameters"></a>Parametry
 
-*CharType*\
+*Typ znaku*\
 Typ používaný v rámci programu ke kódování znaků.
 
-*Mezinárodní*\
+*Intl*\
 Příznak určující, zda je třeba dodržovat mezinárodní konvence.
 
 ## <a name="remarks"></a>Poznámky
 
-Stejně jako u omezující vlastnosti národního prostředí má ID statického objektu počáteční uloženou hodnotu nula. První pokus o přístup k uložené hodnotě ukládá v ID jedinečnou kladnou hodnotu **.**
+Stejně jako u omezující vlastnosti národního prostředí má ID statického objektu počáteční uloženou hodnotu nula. První pokus o přístup k jeho uložená hodnota ukládá jedinečnou kladnou hodnotu v **id.**
 
-Konstantní statický objekt v zahraničí ukládá hodnotu parametru šablony *Intl*.
+Intl objektu const static object ukládá hodnotu parametru šablony *Intl*.
 
 ### <a name="constructors"></a>Konstruktory
 
@@ -89,7 +89,7 @@ Konstantní statický objekt v zahraničí ukládá hodnotu parametru šablony *
 |Název typu|Popis|
 |-|-|
 |[char_type](#char_type)|Typ, který se používá k popisu znaku používaného národním prostředním.|
-|[string_type](#string_type)|Typ, který popisuje řetězec obsahující znaky typu `CharType`.|
+|[string_type](#string_type)|Typ, který popisuje řetězec obsahující znaky `CharType`typu .|
 
 ### <a name="member-functions"></a>Členské funkce
 
@@ -107,7 +107,7 @@ Konstantní statický objekt v zahraničí ukládá hodnotu parametru šablony *
 |[do_positive_sign](#do_positive_sign)|Chráněná virtuální členská funkce, která je volána k vrácení sekvence prvků specifických pro národní prostředí, která se použije jako symbol kladného znaménka.|
 |[do_thousands_sep](#do_thousands_sep)|Chráněná virtuální členská funkce, která je volána k vrácení sekvence prvků specifických pro národní prostředí, která se použije jako symbol oddělovače tisíců.|
 |[frac_digits](#frac_digits)|Vrátí počet číslic specifický pro národní prostředí, který se zobrazí vpravo od každé desetinné čárky.|
-|[sloučení](#grouping)|Vrátí pravidlo specifické pro národní prostředí určující způsob seskupení číslic nalevo od desetinné čárky.|
+|[Seskupení](#grouping)|Vrátí pravidlo specifické pro národní prostředí určující způsob seskupení číslic nalevo od desetinné čárky.|
 |[neg_format](#neg_format)|Vrátí pravidlo specifické pro národní prostředí pro formátování výstupů se zápornými částkami.|
 |[negative_sign](#negative_sign)|Vrátí sekvenci prvků pro specifické národní prostředí, která se použije jako symbol záporného znaménka.|
 |[pos_format](#pos_format)|Vrátí pravidlo specifické pro národní prostředí pro formátování výstupů s kladnými částkami.|
@@ -116,11 +116,11 @@ Konstantní statický objekt v zahraničí ukládá hodnotu parametru šablony *
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<národní prostředí >
+**Záhlaví:** \<> národního prostředí
 
 **Obor názvů:** std
 
-## <a name="char_type"></a>moneypunct:: char_type
+## <a name="moneypunctchar_type"></a><a name="char_type"></a>moneypunct::char_type
 
 Typ, který se používá k popisu znaku používaného národním prostředním.
 
@@ -130,9 +130,9 @@ typedef CharType char_type;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ je synonymum pro parametr šablony **CharType**.
+Typ je synonymem pro parametr šablony **CharType**.
 
-## <a name="curr_symbol"></a>moneypunct:: curr_symbol
+## <a name="moneypunctcurr_symbol"></a><a name="curr_symbol"></a>moneypunct::curr_symbol
 
 Vrátí sekvenci prvků pro specifické národní prostředí, která se použije jako symbol měny.
 
@@ -146,7 +146,7 @@ string_type curr_symbol() const;
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrací [do_curr_symbol](#do_curr_symbol).
+Členská funkce vrátí [do_curr_symbol](#do_curr_symbol).
 
 ### <a name="example"></a>Příklad
 
@@ -169,7 +169,7 @@ int main( )
 };
 ```
 
-## <a name="decimal_point"></a>moneypunct::d ecimal_point
+## <a name="moneypunctdecimal_point"></a><a name="decimal_point"></a>moneypunct::dEcimal_point
 
 Vrátí sekvenci prvků pro specifické národní prostředí, která se použije jako symbol desetinné čárky.
 
@@ -179,11 +179,11 @@ CharType decimal_point() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Sekvence prvků specifických pro národní prostředí, která se má použít jako symbol desetinné čárky.
+Posloupnost prvků specifická pro národní prostředí, která se má použít jako symbol desetinné čárky.
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrací [do_decimal_point](#do_decimal_point).
+Členská funkce vrátí [do_decimal_point](#do_decimal_point).
 
 ### <a name="example"></a>Příklad
 
@@ -215,7 +215,7 @@ German_Germany.1252 international decimal point ,
 German_Germany.1252 domestic decimal point ,
 ```
 
-## <a name="do_curr_symbol"></a>moneypunct::d o_curr_symbol
+## <a name="moneypunctdo_curr_symbol"></a><a name="do_curr_symbol"></a>moneypunct::do_curr_symbol
 
 Chráněná virtuální členská funkce, která vrátí sekvenci prvků specifickou pro národní prostředí, která se použije jako symbol měny.
 
@@ -225,15 +225,15 @@ virtual string_type do_curr_symbol() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Sekvence prvků specifických pro národní prostředí, která se má použít jako symbol desetinné čárky.
+Posloupnost prvků specifická pro národní prostředí, která se má použít jako symbol desetinné čárky.
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [curr_symbol](#curr_symbol), kde je virtuální členská funkce volána pomocí `curr_symbol`.
+Viz příklad pro [curr_symbol](#curr_symbol), kde virtuální `curr_symbol`členská funkce je volána .
 
-## <a name="do_decimal_point"></a>moneypunct::d o_decimal_point
+## <a name="moneypunctdo_decimal_point"></a><a name="do_decimal_point"></a>moneypunct::do_decimal_point
 
-Chráněná virtuální členská funkce, která vrací sekvenci prvků specifickou pro národní prostředí, která se má použít jako symbol desetinné čárky.
+Chráněná virtuální členská funkce, která vrací posloupnost prvků specifickou pro národní prostředí, která se má použít jako symbol desetinné čárky.
 
 ```cpp
 virtual CharType do_decimal_point() const;
@@ -241,15 +241,15 @@ virtual CharType do_decimal_point() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Sekvence prvků specifických pro národní prostředí, která se má použít jako symbol desetinné čárky.
+Posloupnost prvků specifická pro národní prostředí, která se má použít jako symbol desetinné čárky.
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [decimal_point](#decimal_point), kde je virtuální členská funkce volána pomocí `decimal_point`.
+Viz příklad pro [decimal_point](#decimal_point), kde je `decimal_point`virtuální členská funkce volána .
 
-## <a name="do_frac_digits"></a>moneypunct::d o_frac_digits
+## <a name="moneypunctdo_frac_digits"></a><a name="do_frac_digits"></a>moneypunct::do_frac_digits
 
-Chráněná virtuální členská funkce, která vrátí počet číslic specifický pro národní prostředí, který se zobrazí vpravo od libovolné desetinné čárky.
+Chráněná virtuální členská funkce, která vrací počet číslic specifický pro národní prostředí, který se má zobrazit vpravo od libovolné desetinné čárky.
 
 ```cpp
 virtual int do_frac_digits() const;
@@ -257,15 +257,15 @@ virtual int do_frac_digits() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Počet číslic specifických pro národní prostředí, které se zobrazí vpravo od libovolné desetinné čárky.
+Počet čísel specifických pro dané prostředí, které se mají zobrazit vpravo od jakékoli desetinné čárky.
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [frac_digits](#frac_digits), kde je virtuální členská funkce volána pomocí `frac_digits`.
+Viz příklad pro [frac_digits](#frac_digits), kde je `frac_digits`virtuální členská funkce volána .
 
-## <a name="do_grouping"></a>moneypunct::d o_grouping
+## <a name="moneypunctdo_grouping"></a><a name="do_grouping"></a>moneypunct::do_grouping
 
-Chráněná virtuální členská funkce, která vrátí pravidlo specifické pro národní prostředí pro určení způsobu seskupení číslic vlevo od desetinné čárky.
+Chráněná virtuální členská funkce, která vrací pravidlo specifické pro národní prostředí pro určení způsobu seskupení číslic nalevo od jakékoli desetinné čárky.
 
 ```cpp
 virtual string do_grouping() const;
@@ -273,13 +273,13 @@ virtual string do_grouping() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pravidlo specifické pro národní prostředí pro určení, jak jsou číslice seskupeny nalevo od libovolné desetinné čárky.
+Pravidlo specifické pro národní prostředí pro určení způsobu seskupení číslic nalevo od jakékoli desetinné čárky.
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad [seskupení](#grouping), kde je virtuální členská funkce volána pomocí `grouping`.
+Viz příklad pro [seskupení](#grouping), kde virtuální `grouping`členská funkce je volána .
 
-## <a name="do_neg_format"></a>moneypunct::d o_neg_format
+## <a name="moneypunctdo_neg_format"></a><a name="do_neg_format"></a>moneypunct::do_neg_format
 
 Chráněná virtuální členská funkce, která je volána k vrácení pravidla specifického pro národní prostředí pro formátování výstupů se zápornými částkami.
 
@@ -289,27 +289,27 @@ virtual pattern do_neg_format() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Chráněná virtuální členská funkce vrátí pravidlo specifické pro národní prostředí, které určuje, jak se má pro záporné množství vygenerovat pole s peněžním výstupem. Každý ze čtyř prvků `pattern::field` může mít hodnoty:
+Chráněná virtuální členská funkce vrátí pravidlo specifické pro národní prostředí pro určení, jak generovat pole peněžního výstupu pro zápornou částku. Každý ze čtyř `pattern::field` prvků může mít hodnoty:
 
-- `none` odpovídat žádnému nebo více mezerám nebo generovat nic.
+- `none`tak, aby odpovídaly nule nebo více mezerám nebo negenerovaly nic.
 
-- `sign`, aby odpovídaly nebo vygenerovaly kladné nebo záporné znaménko.
+- `sign`tak, aby odpovídalo nebo generovalo kladné nebo záporné znaménko.
 
-- `space` odpovídat žádnému nebo více mezerám nebo vygenerovat mezeru.
+- `space`tak, aby odpovídaly nule nebo více mezerám nebo vygenerovaly mezeru.
 
-- `symbol`, aby odpovídaly nebo vygenerovaly symbol měny.
+- `symbol`tak, aby odpovídalo nebo vygenerovalo symbol měny.
 
-- `value`, aby odpovídaly nebo vygenerovaly peněžní hodnotu.
+- `value`pro shodovat nebo generovat peněžní hodnotu.
 
-Komponenty pole s peněžním výstupem jsou generovány a komponenty peněžního vstupního pole jsou porovnány v pořadí, ve kterém jsou tyto prvky zobrazeny v `pattern::field`. Každá z hodnot `sign`, `symbol`, `value`a buď `none` nebo `space`, musí být přesně jednou. Hodnota `none` nesmí být uvedena jako první. **Prostor hodnoty se nesmí** nacházet jako první nebo poslední. Pokud má `Intl` hodnotu true, je pořadí `symbol`, `sign`, `none`a `value`.
+Jsou generovány součásti pole peněžního výstupu a součásti pole peněžního vstupu jsou spárovány v pořadí, ve kterém jsou tyto prvky zobrazeny v . `pattern::field` Každá z `sign`hodnot `symbol` `value`, , `none` `space` a buď nebo musí být zobrazena přesně jednou. Hodnota `none` se nesmí zobrazit jako první. Místo hodnoty se **nesmí** zobrazit jako první nebo poslední. Pokud `Intl` je true, `symbol`objednávka `none`je `value`, `sign`, , then .
 
-Verze šablony `moneypunct`\< **CharType**, **mezinárodní**> vrátí `{`**money_base:: symbol**, **money_base:: sign**, **money_base:: Value**, **money_base:: none**`}`.
+`moneypunct` \< Verze šablony **CharType**, **Intl**> vrátí `{` **money_base::symbol**, **money_base::sign**, **money_base::value**, **money_base::none**`}`.
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [neg_format](#neg_format), kde je virtuální členská funkce volána pomocí `neg_format`.
+Viz příklad pro [neg_format](#neg_format), kde je `neg_format`virtuální členská funkce volána .
 
-## <a name="do_negative_sign"></a>moneypunct::d o_negative_sign
+## <a name="moneypunctdo_negative_sign"></a><a name="do_negative_sign"></a>moneypunct::do_negative_sign
 
 Chráněná virtuální členská funkce, která je volána k vrácení sekvence prvků specifických pro národní prostředí, která se použije jako symbol záporného znaménka.
 
@@ -319,13 +319,13 @@ virtual string_type do_negative_sign() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Sekvence prvků specifických pro národní prostředí, která se má použít jako záporné znaménko.
+Národní prostředí specifické posloupnost prvků použít jako záporné znaménko.
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [negative_sign](#negative_sign), kde je virtuální členská funkce volána pomocí `negative_sign`.
+Viz příklad pro [negative_sign](#negative_sign), kde je `negative_sign`virtuální členská funkce volána .
 
-## <a name="do_pos_format"></a>moneypunct::d o_pos_format
+## <a name="moneypunctdo_pos_format"></a><a name="do_pos_format"></a>moneypunct::do_pos_format
 
 Chráněná virtuální členská funkce, která je volána k vrácení pravidla specifického pro národní prostředí pro formátování výstupů s kladnými částkami.
 
@@ -335,17 +335,17 @@ virtual pattern do_pos_format() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Chráněná virtuální členská funkce vrátí pravidlo specifické pro národní prostředí, které určuje, jak generovat pole peněžního výstupu pro kladnou částku. (Také určuje, jak se bude shodovat s komponentami peněžního vstupního pole.) Kódování je stejné jako u [do_neg_format](#do_neg_format).
+Chráněná virtuální členská funkce vrátí pravidlo specifické pro národní prostředí pro určení, jak generovat pole peněžního výstupu pro kladnou částku. (Určuje také, jak se mají spárovat složky pole peněžního vstupu.) Kódování je stejné jako pro [do_neg_format](#do_neg_format).
 
-Verze šablony moneypunct\< **CharType**, **Inputlterator**> vrací `{`**money_base:: symbol**, **money_base:: sign**, **money_base:: Value**, **money_base:: none**`}`.
+Verze šablony moneypunct\< **CharType**, **Inputlterator** `{`> vrátí **money_base::symbol**, **money_base::sign**, **money_base::value**, **money_base::none**`}`.
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [pos_format](#pos_format), kde je virtuální členská funkce volána pomocí `pos_format`.
+Viz příklad pro [pos_format](#pos_format), kde je `pos_format`virtuální členská funkce volána .
 
-## <a name="do_positive_sign"></a>moneypunct::d o_positive_sign
+## <a name="moneypunctdo_positive_sign"></a><a name="do_positive_sign"></a>moneypunct::do_positive_sign
 
-Chráněná virtuální členská funkce, která vrací sekvenci prvků specifickou pro národní prostředí, která se má použít jako kladné znaménko.
+Chráněná virtuální členská funkce, která vrací posloupnost prvků specifickou pro národní prostředí, která se má použít jako kladné znaménko.
 
 ```cpp
 virtual string_type do_positive_sign() const;
@@ -353,15 +353,15 @@ virtual string_type do_positive_sign() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Sekvence prvků specifických pro národní prostředí, která se má použít jako kladné znaménko.
+Národní prostředí specifické posloupnost prvků použít jako kladné znaménko.
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [positive_sign](#positive_sign), kde je virtuální členská funkce volána pomocí `positive_sign`.
+Viz příklad pro [positive_sign](#positive_sign), kde je `positive_sign`virtuální členská funkce volána .
 
-## <a name="do_thousands_sep"></a>moneypunct::d o_thousands_sep
+## <a name="moneypunctdo_thousands_sep"></a><a name="do_thousands_sep"></a>moneypunct::do_thousands_sep
 
-Chráněná virtuální členská funkce, která vrátí prvek specifický pro národní prostředí, který se použije jako oddělovač skupin nalevo od libovolné desetinné čárky.
+Chráněná virtuální členská funkce, která vrací prvek specifický pro národní prostředí, který se má použít jako oddělovač skupiny nalevo od libovolné desetinné čárky.
 
 ```cpp
 virtual CharType do_thousands_sep() const;
@@ -369,13 +369,13 @@ virtual CharType do_thousands_sep() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Prvek specifický pro národní prostředí, který se použije jako oddělovač skupin nalevo od libovolné desetinné čárky.
+Prvek specifický pro národní prostředí, který se má použít jako oddělovač skupiny nalevo od jakékoli desetinné čárky.
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [thousands_sep](#thousands_sep), kde je virtuální členská funkce volána pomocí `thousands_sep`.
+Viz příklad pro [thousands_sep](#thousands_sep), kde je `thousands_sep`virtuální členská funkce volána .
 
-## <a name="frac_digits"></a>moneypunct:: frac_digits
+## <a name="moneypunctfrac_digits"></a><a name="frac_digits"></a>moneypunct::frac_digits
 
 Vrátí počet číslic specifický pro národní prostředí, který se zobrazí vpravo od každé desetinné čárky.
 
@@ -385,11 +385,11 @@ int frac_digits() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Počet číslic specifických pro národní prostředí, které se zobrazí vpravo od libovolné desetinné čárky.
+Počet čísel specifických pro dané prostředí, které se mají zobrazit vpravo od jakékoli desetinné čárky.
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrací [do_frac_digits](#do_frac_digits).
+Členská funkce vrátí [do_frac_digits](#do_frac_digits).
 
 ### <a name="example"></a>Příklad
 
@@ -444,7 +444,7 @@ German_Germany.1252 domestic frac_digits
 to the right of the radix character: 2
 ```
 
-## <a name="grouping"></a>moneypunct:: Grouping
+## <a name="moneypunctgrouping"></a><a name="grouping"></a>moneypunct::seskupení
 
 Vrátí pravidlo specifické pro národní prostředí určující způsob seskupení číslic nalevo od desetinné čárky.
 
@@ -454,11 +454,11 @@ string grouping() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pravidlo specifické pro národní prostředí pro určení, jak jsou číslice seskupeny nalevo od libovolné desetinné čárky.
+Pravidlo specifické pro národní prostředí pro určení způsobu seskupení číslic nalevo od jakékoli desetinné čárky.
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrací [do_grouping](#do_grouping).
+Členská funkce vrátí [do_grouping](#do_grouping).
 
 ### <a name="example"></a>Příklad
 
@@ -513,7 +513,7 @@ German_Germany.1252 domestic frac_digits
 to the right of the radix character: 2
 ```
 
-## <a name="moneypunct"></a>moneypunct:: moneypunct
+## <a name="moneypunctmoneypunct"></a><a name="moneypunct"></a>moneypunct::moneypunct
 
 Konstruktor objektů typu `moneypunct`.
 
@@ -524,23 +524,23 @@ explicit moneypunct(size_t _Refs = 0);
 ### <a name="parameters"></a>Parametry
 
 *_Refs*\
-Celočíselná hodnota používaná k určení typu správy paměti pro daný objekt.
+Celá hodnota používaná k určení typu správy paměti pro objekt.
 
 ### <a name="remarks"></a>Poznámky
 
-Možné hodnoty pro parametr *_Refs* a jejich význam jsou:
+Možné hodnoty parametru *_Refs* a jejich význam jsou:
 
-- 0: životnost objektu je spravována místními objekty, které jej obsahují.
+- 0: Životnost objektu je spravována národními prostředími, které jej obsahují.
 
-- 1: životnost objektu musí být ručně spravovaná.
+- 1: Životnost objektu musí být spravována ručně.
 
-- \> 1: tyto hodnoty nejsou definovány.
+- \>1: Tyto hodnoty nejsou definovány.
 
-Nejsou možné žádné přímé příklady, protože je destruktor chráněný.
+Nejsou možné žádné přímé příklady, protože destruktor je chráněn.
 
-Konstruktor inicializuje svůj základní objekt pomocí [locale:: Face](../standard-library/locale-class.md#facet_class)(_ *ReFS*).
+Konstruktor inicializuje svůj základní objekt pomocí [národního prostředí::faset](../standard-library/locale-class.md#facet_class)(_ *Refs).*
 
-## <a name="neg_format"></a>moneypunct:: neg_format
+## <a name="moneypunctneg_format"></a><a name="neg_format"></a>moneypunct::neg_format
 
 Vrátí pravidlo specifické pro národní prostředí pro formátování výstupů se zápornými částkami.
 
@@ -554,7 +554,7 @@ Pravidlo specifické pro národní prostředí pro formátování výstupů se z
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrací [do_neg_format](#do_neg_format).
+Členská funkce vrátí [do_neg_format](#do_neg_format).
 
 ### <a name="example"></a>Příklad
 
@@ -588,7 +588,7 @@ int main( ) {
 }
 ```
 
-## <a name="negative_sign"></a>moneypunct:: negative_sign
+## <a name="moneypunctnegative_sign"></a><a name="negative_sign"></a>moneypunct::negative_sign
 
 Vrátí sekvenci prvků pro specifické národní prostředí, která se použije jako symbol záporného znaménka.
 
@@ -602,7 +602,7 @@ Vrátí sekvenci prvků pro specifické národní prostředí, která se použij
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrací [do_negative_sign](#do_negative_sign).
+Členská funkce vrátí [do_negative_sign](#do_negative_sign).
 
 ### <a name="example"></a>Příklad
 
@@ -650,7 +650,7 @@ French_France.1252 international negative sign: -
 French_France.1252 domestic negative sign: -
 ```
 
-## <a name="pos_format"></a>moneypunct::p os_format
+## <a name="moneypunctpos_format"></a><a name="pos_format"></a>moneypunct::pos_format
 
 Vrátí pravidlo specifické pro národní prostředí pro formátování výstupů s kladnými částkami.
 
@@ -664,7 +664,7 @@ Pravidlo specifické pro národní prostředí pro formátování výstupů s kl
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrací [do_pos_format](#do_pos_format).
+Členská funkce vrátí [do_pos_format](#do_pos_format).
 
 ### <a name="example"></a>Příklad
 
@@ -698,7 +698,7 @@ int main() {
 }
 ```
 
-## <a name="positive_sign"></a>moneypunct::p ositive_sign
+## <a name="moneypunctpositive_sign"></a><a name="positive_sign"></a>moneypunct::positive_sign
 
 Vrátí sekvenci prvků pro specifické národní prostředí, která se použije jako symbol kladného znaménka.
 
@@ -708,11 +708,11 @@ string_type positive_sign() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Sekvence prvků specifických pro národní prostředí, která se má použít jako symbol kladného znaménka.
+Národní prostředí specifické posloupnost prvků použít jako symbol kladné znaménko.
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrací [do_positive_sign](#do_positive_sign).
+Členská funkce vrátí [do_positive_sign](#do_positive_sign).
 
 ### <a name="example"></a>Příklad
 
@@ -760,7 +760,7 @@ French_France.1252 international positive sign:
 French_France.1252 domestic positive sign:
 ```
 
-## <a name="string_type"></a>moneypunct:: string_type
+## <a name="moneypunctstring_type"></a><a name="string_type"></a>moneypunct::string_type
 
 Typ, který popisuje řetězec obsahující znaky typu **CharType**.
 
@@ -770,9 +770,9 @@ typedef basic_string<CharType, Traits, Allocator> string_type;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ popisuje specializaci šablony třídy [basic_string](../standard-library/basic-string-class.md) jejichž objekty mohou ukládat kopie sekvencí interpunkce.
+Typ popisuje specializaci šablony třídy [basic_string](../standard-library/basic-string-class.md) jehož objekty mohou ukládat kopie interpunkčních sekvencí.
 
-## <a name="thousands_sep"></a>moneypunct:: thousands_sep
+## <a name="moneypunctthousands_sep"></a><a name="thousands_sep"></a>moneypunct::thousands_sep
 
 Vrátí sekvenci prvků pro specifické národní prostředí, která se použije jako symbol oddělovače tisíců.
 
@@ -782,11 +782,11 @@ CharType thousands_sep() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Sekvence prvků specifických pro národní prostředí, která se má použít jako oddělovač tisíců
+Posloupnost prvků specifických pro národní prostředí, která se má použít jako oddělovač tisíců
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrací [do_thousands_sep](#do_thousands_sep).
+Členská funkce vrátí [do_thousands_sep](#do_thousands_sep).
 
 ### <a name="example"></a>Příklad
 
@@ -835,5 +835,5 @@ English_Canada.1252 domestic thousands separator: ,
 
 ## <a name="see-also"></a>Viz také
 
-[\<> národního prostředí](../standard-library/locale.md)\
+[\<>národního prostředí](../standard-library/locale.md)\
 [Bezpečný přístup z více vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

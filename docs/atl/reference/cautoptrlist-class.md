@@ -1,5 +1,5 @@
 ---
-title: CAutoPtrList Class
+title: Třída CAutoPtrList
 ms.date: 11/04/2016
 f1_keywords:
 - CAutoPtrList
@@ -8,19 +8,19 @@ f1_keywords:
 helpviewer_keywords:
 - CAutoPtrList class
 ms.assetid: 11de4aca-28b0-4ff2-a74a-cb602312ffbd
-ms.openlocfilehash: 2558c522f7903e8d59363cd77d1a86027f6a7511
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 48c7ad6fe13c5f5fbbe5829c25ce1c27896841be
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62260276"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81318805"
 ---
-# <a name="cautoptrlist-class"></a>CAutoPtrList Class
+# <a name="cautoptrlist-class"></a>Třída CAutoPtrList
 
-Tato třída poskytuje metody, které jsou užitečné při vytváření seznamu inteligentní ukazatele.
+Tato třída poskytuje metody užitečné při vytváření seznamu inteligentní ukazatele.
 
 > [!IMPORTANT]
->  Tato třída a jejích členů nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.
+> Tuto třídu a její členy nelze použít v aplikacích, které se spouštějí v prostředí Windows Runtime.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -39,19 +39,19 @@ Typ ukazatele.
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
 |[CAutoPtrList::CAutoPtrList](#cautoptrlist)|Konstruktor|
 
 ## <a name="remarks"></a>Poznámky
 
-Tato třída poskytuje konstruktor a je odvozena z metody [catllist –](../../atl/reference/catllist-class.md) a [cautoptrelementtraits –](../../atl/reference/cautoptrelementtraits-class.md) pro podporu vytvoření seznamu objektů ukládání inteligentní ukazatele. Třída [cautoptrarray –](../../atl/reference/cautoptrarray-class.md) poskytuje podobné funkce pro objekt typu pole.
+Tato třída poskytuje konstruktor a odvozuje metody z [CAtlList](../../atl/reference/catllist-class.md) a [CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md) na pomoc vytvoření seznamu objektu ukládání inteligentní ukazatele. Třída [CAutoPtrArray](../../atl/reference/cautoptrarray-class.md) poskytuje podobnou funkci pro objekt pole.
 
-Další informace najdete v tématu [ATL – třídy kolekce](../../atl/atl-collection-classes.md).
+Další informace naleznete v tématu [třídy kolekce klíčů ATL](../../atl/atl-collection-classes.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[CAtlList](../../atl/reference/catllist-class.md)
+[Seznam CAtlList](../../atl/reference/catllist-class.md)
 
 `CAutoPtrList`
 
@@ -59,7 +59,7 @@ Další informace najdete v tématu [ATL – třídy kolekce](../../atl/atl-coll
 
 **Záhlaví:** atlcoll.h
 
-##  <a name="cautoptrlist"></a>  CAutoPtrList::CAutoPtrList
+## <a name="cautoptrlistcautoptrlist"></a><a name="cautoptrlist"></a>CAutoPtrList::CAutoPtrList
 
 Konstruktor
 
@@ -70,14 +70,14 @@ CAutoPtrList(UINT nBlockSize = 10) throw();
 ### <a name="parameters"></a>Parametry
 
 *nBlockSize*<br/>
-Velikost bloku, výchozí hodnota je 10.
+Velikost bloku s výchozí hodnotou 10.
 
 ### <a name="remarks"></a>Poznámky
 
-Velikost bloku je míra množství paměti přidělené, pokud je nutné použít nový prvek. Bloky o větší velikosti snížit volání rutiny přidělení paměti, ale spotřebovávají více prostředků.
+Velikost bloku je míra množství paměti přidělené při je požadováno nový prvek. Větší velikosti bloků snižují volání rutiny přidělení paměti, ale používají více prostředků.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[CAtlList – třída](../../atl/reference/catllist-class.md)<br/>
-[CAutoPtrElementTraits – třída](../../atl/reference/cautoptrelementtraits-class.md)<br/>
-[Přehled tříd](../../atl/atl-class-overview.md)
+[Třída CAtlList](../../atl/reference/catllist-class.md)<br/>
+[Třída CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md)<br/>
+[Přehled třídy](../../atl/atl-class-overview.md)

@@ -5,47 +5,47 @@ helpviewer_keywords:
 - new keyword [C++]
 - delete keyword [C++]
 ms.assetid: fa721b9e-0374-4f04-bb87-032ea775bcc8
-ms.openlocfilehash: 2fd665ce2570bbe7750684057cdf7f517f6f64f3
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: fd170c1500e2d80879fdd89f7d825930189ae942
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79445457"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367887"
 ---
 # <a name="new-and-delete-operators"></a>new a delete – operátory
 
-C++podporuje dynamické přidělování a navracení objektů pomocí operátorů [New](new-operator-cpp.md) a [Delete](delete-operator-cpp.md) . Tyto operátory přidělují paměť objektům z fondu s názvem volné úložiště. Operátor **New** volá speciální [operátor funkce New](new-operator-cpp.md)a operátor **Delete** volá speciální [operátor delete](delete-operator-cpp.md).
+C++ podporuje dynamické přidělování a amlokace objektů pomocí [nové](new-operator-cpp.md) a [odstranit](delete-operator-cpp.md) operátory. Tyto operátory přidělují paměť objektům z fondu s názvem volné úložiště. **Nový** operátor volá [operátor](new-operator-cpp.md)speciální funkce nový a **operátor delete** volá operátor speciální funkce [delete](delete-operator-cpp.md).
 
-**Nová** funkce ve C++ standardní knihovně podporuje chování zadané ve C++ standardu, což má vyvolat výjimku std:: bad_alloc, pokud se přidělení paměti nepovede. Pokud stále chcete nevyvolávánou verzi **nového**, propojte program s nothrownew. obj. Pokud však propojíte s nothrownew. obj, výchozí **operátor New** ve C++ standardní knihovně již nebude fungovat.
+**Nová** funkce ve standardní knihovně jazyka C++ podporuje chování zadané ve standardu Jazyka C++, kterým je vyvolání výjimky std::bad_alloc, pokud se přidělení paměti nezdaří. Pokud stále chcete non-házení verzi **nového**, propojit program s nothrownew.obj. Však při propojení s nothrownew.obj, výchozí **operátor nový** ve standardní knihovně C++ již funkce.
 
-Seznam souborů knihoven, které tvoří běhovou knihovnu jazyka C a C++ standardní knihovnu, naleznete v tématu [funkce knihovny CRT](../c-runtime-library/crt-library-features.md).
+Seznam souborů knihovny, které tvoří knihovnu C Runtime a standardní knihovnu jazyka C++, naleznete v [tématu Funkce knihovny CRT](../c-runtime-library/crt-library-features.md).
 
-##  <a id="new_operator"> </a> Operátor New
+## <a name="the-new-operator"></a><a id="new_operator"> </a> Nový operátor
 
-V případě, že se v programu objevil příkaz, jako je následující, se přeloží na volání **operátoru funkce New**:
+Pokud je v programu zjištěn příkaz, například následující, převede se do volání **operátoru**funkce new :
 
 ```cpp
 char *pch = new char[BUFFER_SIZE];
 ```
 
-Pokud je požadavek na nulové bajty úložiště, **operátor New** vrátí ukazatel na odlišný objekt (to znamená, že opakovaná volání **operátoru new** vrací různé ukazatele). Pokud není k dispozici dostatek paměti pro požadavek na přidělení, **operátor New** vyvolá výjimku `std::bad_alloc`, nebo vrátí **nullptr** , pokud jste propojili v neaktivačním **operátoru nová** podpora.
+Pokud je požadavek pro nula bajtů úložiště, **operátor new** vrátí ukazatel na jiný objekt (to znamená, že opakované volání **operátoru new** vrátit různé ukazatele). Pokud není dostatek paměti pro požadavek přidělení, `std::bad_alloc` operátor **new** vyvolá výjimku nebo vrátí **nullptr,** pokud jste propojili v operátoru bez vyvolání **nové** podpory.
 
-Můžete napsat rutinu, která se pokusí uvolnit paměť a opakovat přidělení. Další informace najdete v tématu [_set_new_handler](../c-runtime-library/reference/set-new-handler.md) . Další podrobnosti o schématu obnovení najdete v části zpracování nedostatku paměti v tomto tématu.
+Můžete napsat rutinu, která se pokusí uvolnit paměť a opakovat přidělení; další informace naleznete [_set_new_handler.](../c-runtime-library/reference/set-new-handler.md) Další podrobnosti o schématu obnovení naleznete zpracování nedostatek paměti části tohoto tématu.
 
-Dva obory pro **operátor New** Functions jsou popsány v následující tabulce.
+Dva obory pro nové funkce **operátoru** jsou popsány v následující tabulce.
 
-### <a name="scope-for-operator-new-functions"></a>Rozsah pro funkce operator new
+### <a name="scope-for-operator-new-functions"></a>Prostor pro nové funkce operátora
 
 |Operátor|Rozsah|
 |--------------|-----------|
-|**:: operator new**|Globální|
-|*název třídy* **:: operator new**|Třída|
+|**::operátor nový**|Globální|
+|*název třídy* **::operátor nový**|Třída|
 
-První argument **operátoru new** musí být typu `size_t` (typ definovaný v \<STDDEF. h >) a návratový typ je vždycky **void** <strong>\*</strong>.
+První argument **operátoru new** musí `size_t` být typu \<(typ definovaný v> stddef.h) a návratový typ je vždy **void** <strong>\*</strong>.
 
-Globální funkce **operator new** je volána, když je operátor **New** použit k přidělení objektů předdefinovaných typů, objektů typu třídy, které neobsahují uživatelsky definované **operátory New** functions a pole libovolného typu. Když je operátor **New** použit k přidělení objektů typu třídy, kde je definován **operátor New** , je volána **Nová operátor** této třídy.
+Globální **operátor nová** funkce je volána při **nový** operátor se používá k přidělení objekty předdefinované typy, objekty typu třídy, které neobsahují uživatelem definované **operátor nové** funkce a pole libovolného typu. Při **nové** operátor slouží k přidělení objektů typu třídy, kde je definován **operátor new,** operátor této třídy **new** se nazývá.
 
-Funkce **operator new** definovaná pro třídu je statická členská funkce (která nemůže být proto virtuální), která skrývá globální funkci **operator new** pro objekty daného typu třídy. Vezměte v úvahu případ, kdy se **Nový** používá k přidělení a nastavení paměti pro danou hodnotu:
+**Operátor nová** funkce definovaná pro třídu je statická členská funkce (která proto nemůže být virtuální), která skryje novou funkci globálního **operátoru** pro objekty tohoto typu třídy. Zvažte případ, kdy **se nový** používá k přidělení a nastavení paměti na danou hodnotu:
 
 ```cpp
 #include <malloc.h>
@@ -74,13 +74,13 @@ int main()
 }
 ```
 
-Argument dodaný v závorkách do **nového** je předán `Blanks::operator new` jako argument `chInit`. Globální funkce **operator new** je však skrytá, což způsobí, že následující kód vygeneruje chybu:
+Argument zadaný v závorce **na new** je předán `Blanks::operator new` jako `chInit` argument. Globální operátor **nová** funkce je však skrytý, což způsobuje kód, jako je například následující generovat chybu:
 
 ```cpp
 Blanks *SomeBlanks = new Blanks;
 ```
 
-Kompilátor podporuje členské pole **New** a **Delete** operátory v deklaraci třídy. Příklad:
+Kompilátor podporuje **nové** pole členů a **odstranění** operátorů v deklaraci třídy. Příklad:
 
 ```cpp
 class MyClass
@@ -102,9 +102,9 @@ int main()
 }
 ```
 
-### <a name="handling-insufficient-memory"></a>Zpracování nedostatečné paměti
+### <a name="handling-insufficient-memory"></a>Zpracování nedostatku paměti
 
-Testování přidělení neúspěšné paměti lze provést, jak je znázorněno zde:
+Testování neúspěšného přidělení paměti lze provést tak, jak je znázorněno zde:
 
 ```cpp
 #include <iostream>
@@ -119,28 +119,28 @@ int main() {
 }
 ```
 
-Existuje jiný způsob, jak zpracovat neúspěšné požadavky na přidělení paměti. Zapište vlastní rutinu obnovení pro zpracování takového selhání a pak zaregistrujte funkci voláním funkce run-time [_set_new_handler](../c-runtime-library/reference/set-new-handler.md) .
+Existuje jiný způsob, jak zpracovat neúspěšné požadavky na přidělení paměti. Napište vlastní rutinu obnovení pro zpracování takového selhání a zaregistrujte funkci voláním [funkce _set_new_handler](../c-runtime-library/reference/set-new-handler.md) run-time.
 
-##  <a id="delete_operator"> </a> Operátor delete
+## <a name="the-delete-operator"></a><a id="delete_operator"> </a> Operátor odstranění
 
-Paměť, která je dynamicky přidělena pomocí operátoru **New** , může být uvolněna pomocí operátoru **Delete** . Operátor delete volá funkci **operátoru delete** , která uvolní paměť zpátky do dostupného fondu. Použití operátoru **Delete** také způsobí, že destruktor třídy (pokud existuje), který má být volán.
+Paměť, která je dynamicky přidělena pomocí **nového** operátoru, může být uvolněna pomocí operátoru **delete.** Operátor delete volá funkci **delete operátoru,** která uvolní paměť zpět do dostupného fondu. Pomocí **delete** operátor také způsobí, že destruktor třídy (pokud existuje) má být volána.
 
-Existují globální funkce pro **odstranění operátorů** a rozsahu třídy. Pro danou třídu lze definovat pouze jednu funkci **operátoru delete** ; je-li definována, skryje funkci globální **operátor delete** . Funkce globálního **operátoru delete** je vždy volána pro pole libovolného typu.
+Existují globální a třídy **rozsahem operátor odstranit** funkce. Pro danou třídu lze definovat pouze jednu funkci **odstranění operátoru;** pokud je definována, skryje funkci **global operator delete.** Funkce odstranění globálního **operátora** je vždy volána pro pole libovolného typu.
 
-Funkce globálního **operátoru delete** Existují dva formuláře pro funkce globálního **operátoru delete** a **operátoru** člena třídy:
+Funkce **odstranění** globálního operátoru. Existují dva formuláře pro funkce odstranění globálního **operátoru** a **operátoru** člena třídy:
 
 ```cpp
 void operator delete( void * );
 void operator delete( void *, size_t );
 ```
 
-Pro danou třídu může být přítomna pouze jedna z předchozích dvou forem. První formulář přebírá jeden argument typu `void *`, který obsahuje ukazatel na objekt, který má být vrácen. Druhý formulář – určení velikosti přidělení – přebírá dva argumenty, první z nich je ukazatel na blok paměti pro uvolnění a druhý z nich je počet bajtů, které mají být navrácena. Návratový typ obou forem je **void** (**operátor delete** nemůže vracet hodnotu).
+Pouze jeden z předchozích dvou formulářů může být k dispozici pro danou třídu. První formulář má jeden argument `void *`typu , který obsahuje ukazatel na objekt navrátit. Druhý formulář – velikost deallocation – trvá dva argumenty, z nichž první je ukazatel na blok paměti navrátit a druhý z nich je počet bajtů navrátit. Návratový typ obou formulářů je **void** **(operátor delete** nemůže vrátit hodnotu).
 
-Účelem druhé formy je urychlení vyhledávání pro kategorii správné velikosti objektu, který má být odstraněn, což je často neuloženo v blízkosti samotného přidělení a pravděpodobně není uloženo do mezipaměti. Druhý formulář je užitečný v případě, že **operátor delete** funkce ze základní třídy slouží k odstranění objektu odvozené třídy.
+Záměrem druhého formuláře je urychlit hledání správné kategorie velikosti objektu, který má být odstraněn, který často není uložen v blízkosti samotného přidělení a pravděpodobně uncached. Druhý formulář je užitečné při **operátor odstranit** funkci ze základní třídy se používá k odstranění objektu odvozené třídy.
 
-Funkce **operátoru delete** je statická; Proto nemůže být virtuální. Funkce **operátoru delete** dodržuje řízení přístupu, jak je popsáno v tématu [Member-Access Control](member-access-control-cpp.md).
+Funkce **odstranění operátora** je statická; proto nemůže být virtuální. Funkce **odstranění operátoru** se řídí řízením přístupu, jak je popsáno v [ovládacím prvku Členské řízení přístupu](member-access-control-cpp.md).
 
-Následující příklad ukazuje uživatelsky definované funkce **operator new** a **operátor delete** určené k protokolování přidělení a navracení paměti:
+Následující příklad ukazuje uživatelem definované **operátor nové** a **operátor odstranit** funkce určené k protokolu přidělení a deallocations paměti:
 
 ```cpp
 #include <iostream>
@@ -188,9 +188,9 @@ int main( int argc, char *argv[] ) {
 }
 ```
 
-Předchozí kód se dá použít ke zjištění "úniku paměti", tj. paměti, která je přidělená na bezplatné úložiště, ale nikdy se neuvolňuje. Chcete-li provést toto zjištění, jsou globální operátory **New** a **Delete** předefinovány pro počítání přidělení a navracení paměti.
+Předchozí kód lze použít ke zjištění "úniku paměti" – to znamená paměti, která je přidělena na volném úložišti, ale nikdy uvolněna. Chcete-li provést toto zjišťování, globální **nové** a **odstranit** operátory jsou předefinovány počítat přidělení a amlokace paměti.
 
-Kompilátor podporuje členské pole **New** a **Delete** operátory v deklaraci třídy. Příklad:
+Kompilátor podporuje **nové** pole členů a **odstranění** operátorů v deklaraci třídy. Příklad:
 
 ```cpp
 // spec1_the_operator_delete_function2.cpp

@@ -1,9 +1,11 @@
 ---
 title: wctomb_s, _wctomb_s_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _wctomb_s_l
 - wctomb_s
+- _o__wctomb_s_l
+- _o_wctomb_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -32,16 +35,16 @@ helpviewer_keywords:
 - characters, converting
 - string conversion, multibyte character strings
 ms.assetid: 7e94a888-deed-4dbd-b5e9-d4a0455538b8
-ms.openlocfilehash: 329724ca0196e07397d4f0337a2bf0aa2db05c84
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 1ddc9a991f28c4a2ea491f3ddd04d78f6345e255
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957894"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367253"
 ---
 # <a name="wctomb_s-_wctomb_s_l"></a>wctomb_s, _wctomb_s_l
 
-Převede velký znak na odpovídající vícebajtový znak. Verze [wctomb, _wctomb_l](wctomb-wctomb-l.md) s vylepšeními zabezpečení, jak je popsáno v [části funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Převede široký znak na odpovídající vícebajtový znak. Verze [wctomb, _wctomb_l](wctomb-wctomb-l.md) s vylepšení zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -63,42 +66,44 @@ errno_t _wctomb_s_l(
 
 ### <a name="parameters"></a>Parametry
 
-*pRetValue*<br/>
-Počet bajtů nebo kód indikující výsledek.
+*hodnota pRetValue*<br/>
+Počet bajtů nebo kód označující výsledek.
 
 *mbchar*<br/>
 Adresa vícebajtového znaku.
 
 *sizeInBytes*<br/>
-Velikost *mbchar*vyrovnávací paměti.
+Velikost vyrovnávací paměti *mbchar*.
 
-*wchar*<br/>
-Velký znak.
+*Wchar*<br/>
+Široký charakter.
 
-*jazyka*<br/>
+*Národní prostředí*<br/>
 Národní prostředí, které se má použít
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Nula v případě úspěchu, chybový kód při selhání.
+Nula v případě úspěchu, kód chyby při selhání.
 
 Chybové stavy
 
-|*mbchar*|*sizeInBytes*|Návratová hodnota|*pRetValue*|
+|*mbchar*|*sizeInBytes*|Návratová hodnota|*hodnota pRetValue*|
 |--------------|-------------------|------------------|-----------------|
-|**NULL**|>0|**EINVAL**|Neupraveno|
-|Jakýmikoli|>**INT_MAX**|**EINVAL**|Neupraveno|
-|Jakýmikoli|příliš malý|**EINVAL**|Neupraveno|
+|**Null**|> 0|**EINVAL**|nezměněno|
+|jakékoli|>**INT_MAX**|**EINVAL**|nezměněno|
+|jakékoli|příliš malé|**EINVAL**|nezměněno|
 
-Pokud dojde k některé z výše uvedených chybových podmínek, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, **wctomb** vrátí **EINVAL** a nastaví **errno** na **EINVAL**.
+Pokud dojde k některéz výše uvedených chybových stavů, je vyvolána neplatná obslužná rutina parametru, jak je popsáno v [parametru Validation](../../c-runtime-library/parameter-validation.md). Pokud je provádění povoleno pokračovat, **wctomb** vrátí **EINVAL** a nastaví **errno** na **EINVAL**.
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce **wctomb_s** převede svůj argument *WCHAR* na odpovídající vícebajtový znak a výsledek uloží na *mbchar*. Funkci lze volat z libovolného bodu v jakémkoli programu.
+Funkce **wctomb_s** převede svůj argument *wchar* na odpovídající vícebajtový znak a uloží výsledek na *mbchar*. Funkci můžete volat z libovolného místa v libovolném programu.
 
-Pokud **wctomb_s** převede celý znak na vícebajtový znak, vrátí počet bajtů (který není nikdy větší než **MB_CUR_MAX**) v rámci celého znaku na celé číslo, na které odkazuje *pRetValue*. Pokud je *WCHAR* znak nulového znaku (L ' \ 0 '), **Wctomb_s** vyplní *pRetValue* hodnotou 1. Pokud cílový ukazatel *mbchar* má **hodnotu null**, **wctomb_s** vloží 0 v *pRetValue*. Pokud v aktuálním národním prostředí není převod možný, **wctomb_s** vloží-1 do *pRetValue*.
+Pokud **wctomb_s** převede široký znak na vícebajtový znak, umístí počet bajtů (který není nikdy větší než **MB_CUR_MAX**) v širokém znaku do celého čísla, na které je odkazováno *hodnotou pRetValue*. Pokud *wchar* je znak null znak široký znak (L'\0'), **wctomb_s** výplní *pRetValue* s 1. Pokud je *cílový* ukazatel mbchar **null**, **wctomb_s** vloží 0 v *pRetValue*. Pokud převod není možné v aktuálním národním prostředí, **wctomb_s** vloží -1 v *pRetValue*.
 
-**wctomb_s** používá aktuální národní prostředí pro informace závislé na národním prostředí; **_wctomb_s_l** je totožný s tím rozdílem, že místo toho používá národní prostředí. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
+**wctomb_s** používá aktuální národní prostředí pro informace závislé na národním prostředí; **_wctomb_s_l** je totožný s tím rozdílem, že místo toho používá národní prostředí předané. Další informace naleznete v [tématu Locale](../../c-runtime-library/locale.md).
+
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
@@ -107,11 +112,11 @@ Pokud **wctomb_s** převede celý znak na vícebajtový znak, vrátí počet baj
 |**wctomb_s**|\<stdlib.h>|
 |**_wctomb_s_l**|\<stdlib.h>|
 
-Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
-Tento program ilustruje chování funkce **wctomb** .
+Tento program ilustruje chování **funkce wctomb.**
 
 ```cpp
 // crt_wctomb_s.cpp
@@ -137,7 +142,7 @@ Convert a wide character:
    Multibyte character: a
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Převod dat](../../c-runtime-library/data-conversion.md)<br/>
 [Národní prostředí](../../c-runtime-library/locale.md)<br/>

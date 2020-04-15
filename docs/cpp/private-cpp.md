@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - private keyword [C++]
 ms.assetid: 94e99983-46a5-4e21-800c-28f8a7c6a8ff
-ms.openlocfilehash: 002a8ad2887bd711bc3654d8e8910e2bede889d4
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: d6dc1ca309c096a4f5e857ade3d7550749991f3f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80177557"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366209"
 ---
 # <a name="private-c"></a>private (C++)
 
@@ -25,22 +25,22 @@ private base-class
 
 ## <a name="remarks"></a>Poznámky
 
-Pokud před seznamem členů třídy, klíčové slovo **Private** určuje, že tyto členy jsou přístupné pouze z členských funkcí a přátel třídy. To platí pro všechny členy deklarované až k dalšímu specifikátoru přístupu nebo ke konci třídy.
+Při předcházejícím seznamu členů třídy **private** klíčové slovo určuje, že tyto členy jsou přístupné pouze z členských funkcí a přátel třídy. To platí pro všechny členy deklarované až do dalšího specifikátoru přístupu nebo na konci třídy.
 
-Před názvem základní třídy určuje klíčové slovo **Private** , že veřejné a chráněné členy základní třídy jsou soukromé členy odvozené třídy.
+Při předcházejícím názvu základní třídy klíčové slovo **private** určuje, že veřejní a chránění členové základní třídy jsou soukromými členy odvozené třídy.
 
-Výchozí přístup členů ve třídě je privátní. Výchozí přístup členů ve struktuře nebo sjednocení je veřejný.
+Výchozí přístup členů ve třídě je soukromý. Výchozí přístup členů ve struktuře nebo sjednocení je veřejný.
 
-Výchozí přístup základní třídy je privátní pro třídy a veřejné pro struktury. Sjednocení nemohou mít základní třídy.
+Výchozí přístup základní třídy je soukromý pro třídy a veřejné pro struktury. Sjednocení nemůže mít základní třídy.
 
-Související informace naleznete v tématech [Friend](../cpp/friend-cpp.md), [Public](../cpp/public-cpp.md), [Protected](../cpp/protected-cpp.md)a tabulka přístupu členů v tématu [řízení přístupu ke členům třídy](member-access-control-cpp.md).
+Související informace naleznete [v tématu friend](../cpp/friend-cpp.md), [public](../cpp/public-cpp.md), [protected](../cpp/protected-cpp.md)a member-access table in Controlling Access to [Class Members](member-access-control-cpp.md).
 
 ## <a name="clr-specific"></a>Specifické pro možnost /clr
 
-V typech CLR mohou C++ klíčová slova specifikátoru přístupu (**Public**, **Private**a **Protected**) ovlivnit viditelnost typů a metod s ohledem na sestavení. Další informace najdete v tématu [členské Access Control](member-access-control-cpp.md).
+V typech CLR mohou klíčová slova specifikátoru přístupu Jazyka C++ (**veřejné**, **soukromé**a **chráněné**) ovlivnit viditelnost typů a metod s ohledem na sestavení. Další informace naleznete [v tématu Členské řízení přístupu](member-access-control-cpp.md).
 
 > [!NOTE]
->  Tímto chováním nejsou ovlivněny soubory zkompilované pomocí [/ln](../build/reference/ln-create-msil-module.md) . V tomto případě budou všechny spravované třídy (veřejné nebo soukromé) viditelné.
+> Soubory zkompilované s [/LN](../build/reference/ln-create-msil-module.md) nejsou tímto chováním ovlivněny. V tomto případě budou všechny spravované třídy (veřejné nebo soukromé) viditelné.
 
 ## <a name="end-clr-specific"></a>Specifické pro možnost END /clr
 

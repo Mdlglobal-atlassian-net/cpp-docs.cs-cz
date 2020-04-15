@@ -1,5 +1,5 @@
 ---
-title: 'Načasování zpracování výjimky: Souhrn'
+title: 'Načasování zpracování výjimek: Souhrn'
 ms.date: 05/07/2019
 helpviewer_keywords:
 - sequence [C++]
@@ -11,19 +11,19 @@ helpviewer_keywords:
 - handlers [C++], order of exception
 - structured exception handling [C++], timing
 ms.assetid: 5d1da546-73fd-4673-aa1a-7ac0f776c420
-ms.openlocfilehash: 3ed2e02412bd84663674a2df2c4454d21e83575a
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 17d1c250a98afc2b86c198735602df7d80118bd4
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80188113"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81316599"
 ---
-# <a name="timing-of-exception-handling-a-summary"></a>Načasování zpracování výjimky: Souhrn
+# <a name="timing-of-exception-handling-a-summary"></a>Načasování zpracování výjimek: Souhrn
 
-Obslužná rutina ukončení je prováděna bez ohledu na to, jak je ukončený blok příkazu **__try** . Mezi příčiny patří přechod z bloku **__try** , příkaz `longjmp`, který přenáší řízení z bloku a odvíjí od zpracování výjimek.
+Obslužná rutina ukončení je spuštěna bez ohledu na to, jak je ukončen blok **příkazu __try.** Příčiny zahrnují skákání **__try** z __try `longjmp` bloku, příkaz, který přenáší řízení mimo blok a odvíjení zásobníku z důvodu zpracování výjimek.
 
 > [!NOTE]
->  Kompilátor společnosti C++ Microsoft podporuje dvě formy příkazů `setjmp` a `longjmp`. Rychlá verze obchází zpracování ukončení, ale je mnohem efektivnější. Chcete-li použít tuto verzi, zahrňte > souboru \<setjmp. h. Jiné verze podporují zpracování ukončení, jak je popsáno v předchozím odstavci. Chcete-li použít tuto verzi, zahrňte > souboru \<SETJMPEX. h. Zvýšení výkonu u rychlé verze závisí na konfiguraci hardwaru.
+> Kompilátor Microsoft C++ podporuje `setjmp` dvě `longjmp` formy příkazy a. Rychlá verze obchází zpracování ukončení, ale je mnohem efektivnější. Chcete-li použít tuto \<verzi, zahrňte soubor setjmp.h>. Jiné verze podporují zpracování ukončení, jak je popsáno v předchozím odstavci. Chcete-li použít tuto \<verzi, zahrnout soubor setjmpex.h>. Zvýšení výkonu u rychlé verze závisí na konfiguraci hardwaru.
 
 Operační systém spustí všechny obslužné rutiny ukončení ve správném pořadí, předtím než lze spustit jakýkoli jiný kód, včetně těla obslužné rutiny výjimky.
 
@@ -35,7 +35,7 @@ Je-li příčinou přerušení výjimka, systém musí před rozhodnutím, co uk
 
 1. Pokud tento filtr předá řízení (vrátí hodnotu 0), proces pokračuje, dokud není nalezen filtr, který nepředá řízení.
 
-1. Pokud tento filtr vrátí hodnotu-1, vykonání pokračuje v místě, kde byla výjimka vyvolána, a dojde k žádnému ukončení.
+1. Pokud tento filtr vrátí -1, provádění pokračuje, kde byla vyvolána výjimka a dojde k ukončení.
 
 1. Jestliže filtr vrátí hodnotu 1, dojde k následujícím událostem:
 

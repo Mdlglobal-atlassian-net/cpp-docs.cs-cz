@@ -1,5 +1,5 @@
 ---
-title: 'MFC – ovládací prvky ActiveX: Vrácení chybových kódů z metody'
+title: 'MFC –ovládací prvky ActiveX: Vrácení chybových kódů z metody'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], error codes
@@ -10,28 +10,28 @@ helpviewer_keywords:
 - SCODE, MFC ActiveX controls
 - ThrowError method [MFC]
 ms.assetid: 771fb9c9-2413-4dcc-b386-7bc4c4adeafd
-ms.openlocfilehash: 0800c1827c636dd81e2928e33c0ee2afde4c94ac
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5314545a3a903158362dbfa65c4a9a1b2143e86b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324269"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364539"
 ---
-# <a name="mfc-activex-controls-returning-error-codes-from-a-method"></a>MFC – ovládací prvky ActiveX: Vrácení chybových kódů z metody
+# <a name="mfc-activex-controls-returning-error-codes-from-a-method"></a>MFC –ovládací prvky ActiveX: Vrácení chybových kódů z metody
 
 Tento článek popisuje, jak vrátit kódy chyb z metody ovládacího prvku ActiveX.
 
-K označení, že v rámci metody došlo k chybě, byste měli použít [COleControl::ThrowError](../mfc/reference/colecontrol-class.md#throwerror) členskou funkci, která přebírá SCODE (stavový kód) jako parametr. Můžete použít předdefinované SCODE nebo definovat svůj vlastní.
+Chcete-li označit, že došlo k chybě v rámci metody, měli byste použít [COleControl::ThrowError](../mfc/reference/colecontrol-class.md#throwerror) členskou funkci, která bere SCODE (stavový kód) jako parametr. Můžete použít předdefinovaný SCODE nebo definovat jeden z vašich vlastních.
 
 > [!NOTE]
->  `ThrowError` je určen pro použití pouze jako způsob vrátit chybu z v rámci vlastnosti Get nebo Set funkce nebo metoda služby automation. Jedná se o jediný případů, kdy se obslužná rutina příslušné výjimky budou k dispozici v zásobníku.
+> `ThrowError`je určen pouze jako prostředek vrácení chyby z funkce Get nebo Set vlastnosti nebo metody automatizace. Toto jsou pouze časy, které příslušné obslužné rutiny výjimky bude k dispozici v zásobníku.
 
-Neexistuje pomocné funkce, nejběžnější předdefinované SCODEs, jako například [COleControl::SetNotSupported](../mfc/reference/colecontrol-class.md#setnotsupported), [COleControl::GetNotSupported](../mfc/reference/colecontrol-class.md#getnotsupported), a [COleControl::SetNotPermitted](../mfc/reference/colecontrol-class.md#setnotpermitted).
+Pomocné funkce existují pro nejběžnější předdefinované moduly SCONE, například [COleControl::SetNotSupported](../mfc/reference/colecontrol-class.md#setnotsupported), [COleControl::GetNotSupported](../mfc/reference/colecontrol-class.md#getnotsupported)a [COleControl::SetNotPovoleno](../mfc/reference/colecontrol-class.md#setnotpermitted).
 
-Seznam předdefinovaných SCODEs a pokyny k definování vlastní SCODEs, najdete v části [zpracování chyb v svůj ovládací prvek ActiveX](../mfc/mfc-activex-controls-advanced-topics.md) v ovládacích prvcích ActiveX: Pokročilá témata.
+Seznam předdefinovaných sconetů a pokyny k definování vlastních scones naleznete v části [Zpracování chyb v ovládacím prvku ActiveX](../mfc/mfc-activex-controls-advanced-topics.md) v ovládacích prvcích ActiveX: Rozšířená témata.
 
-Další informace o vytváření sestav výjimky v jiných oblastech, které váš kód, naleznete v tématu [COleControl::FireError](../mfc/reference/colecontrol-class.md#fireerror) a v části [zpracování chyb v svůj ovládací prvek ActiveX](../mfc/mfc-activex-controls-advanced-topics.md) v ovládacích prvcích ActiveX: Pokročilá témata.
+Další informace o vykazování výjimek v jiných oblastech kódu naleznete v [tématu COleControl::FireError](../mfc/reference/colecontrol-class.md#fireerror) a v části [Zpracování chyb v ovládacím prvku ActiveX](../mfc/mfc-activex-controls-advanced-topics.md) v ovládacích prvcích ActiveX: Rozšířená témata.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [MFC – ovládací prvky ActiveX](../mfc/mfc-activex-controls.md)

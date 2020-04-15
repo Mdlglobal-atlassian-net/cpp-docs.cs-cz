@@ -1,5 +1,5 @@
 ---
-title: CMFCShellListCtrl – Třída
+title: CMFCShellListCtrl – třída
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCShellListCtrl
@@ -42,16 +42,16 @@ helpviewer_keywords:
 - CMFCShellListCtrl [MFC], Refresh
 - CMFCShellListCtrl [MFC], SetItemTypes
 ms.assetid: ad472958-5586-4c50-aadf-1844c30bf6e7
-ms.openlocfilehash: 02d4883c6b5445515d891c5e76ccf10b6bb35bba
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: d5c987e1d7dbe053a0cff093d1a9113f762cee26
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69504925"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368783"
 ---
-# <a name="cmfcshelllistctrl-class"></a>CMFCShellListCtrl – Třída
+# <a name="cmfcshelllistctrl-class"></a>CMFCShellListCtrl – třída
 
-`CMFCShellListCtrl` Třída poskytuje funkce ovládacího prvku seznam systému Windows a rozšiřuje je zahrnutím možnosti zobrazení seznamu položek prostředí.
+Třída `CMFCShellListCtrl` poskytuje funkce řízení seznamu systému Windows a rozšiřuje ji zahrnutím možnost i zobrazit seznam položek prostředí.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -63,36 +63,36 @@ class CMFCShellListCtrl : public CMFCListCtrl
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CMFCShellListCtrl::DisplayFolder](#displayfolder)|Zobrazí seznam položek, které jsou obsaženy v zadané složce.|
-|[CMFCShellListCtrl::DisplayParentFolder](#displayparentfolder)|Zobrazí seznam položek, které jsou obsaženy ve složce, která je nadřazena aktuálně zobrazené složce.|
-|[CMFCShellListCtrl::EnableShellContextMenu](#enableshellcontextmenu)|Povoluje nebo zakazuje místní nabídku.|
+|[CMFCShellListCtrl::DisplayFolder](#displayfolder)|Zobrazí seznam položek, které jsou obsaženy v zadaný spár.|
+|[CMFCShellListCtrl::DisplayParentFolder](#displayparentfolder)|Zobrazí seznam položek, které jsou obsaženy ve složce, která je nadřazenou aktuálně zobrazenou složkou.|
+|[CMFCShellListCtrl::EnableShellContextMenu](#enableshellcontextmenu)|Povolí nebo zakáže místní nabídku.|
 |[CMFCShellListCtrl::GetCurrentFolder](#getcurrentfolder)|Načte cestu k aktuální složce.|
 |[CMFCShellListCtrl::GetCurrentFolderName](#getcurrentfoldername)|Načte název aktuální složky.|
-|[CMFCShellListCtrl::GetCurrentItemIdList](#getcurrentitemidlist)|Vrátí PIDL aktuální položky ovládacího prvku seznamu.|
+|[CMFCShellListCtrl::GetCurrentItemIdList](#getcurrentitemidlist)|Vrátí hodnotu PIDL aktuální položky ovládacího prvku seznamu.|
 |[CMFCShellListCtrl::GetCurrentShellFolder](#getcurrentshellfolder)|Vrátí ukazatel na aktuální složku prostředí.|
 |[CMFCShellListCtrl::GetItemPath](#getitempath)|Vrátí textovou cestu položky.|
-|[CMFCShellListCtrl::GetItemTypes](#getitemtypes)|Vrátí typy položek prostředí, které jsou zobrazeny v ovládacím prvku seznam.|
-|[CMFCShellListCtrl::IsDesktop](#isdesktop)|Zkontroluje, jestli je aktuálně vybraná složka složkou plocha.|
-|[CMFCShellListCtrl::OnCompareItems](#oncompareitems)|Rozhraní volá tuto metodu, když porovná dvě položky. (Overrides [CMFCListCtrl:: OnCompareItems](../../mfc/reference/cmfclistctrl-class.md#oncompareitems).)|
-|[CMFCShellListCtrl::OnFormatFileDate](#onformatfiledate)|Volá se, když rozhraní načte datum souboru zobrazené ovládacím prvkem seznam.|
-|[CMFCShellListCtrl::OnFormatFileSize](#onformatfilesize)|Volá se, když rozhraní převede velikost souboru ovládacího prvku seznam.|
-|[CMFCShellListCtrl::OnGetItemIcon](#ongetitemicon)|Volá se, když rozhraní načte ikonu položky ovládacího prvku seznamu.|
-|[CMFCShellListCtrl::OnGetItemText](#ongetitemtext)|Volá se, když rozhraní převede text položky ovládacího prvku seznamu.|
-|[CMFCShellListCtrl::OnSetColumns](#onsetcolumns)|Volá se rozhraním, když nastavuje názvy sloupců.|
-|[CMFCShellListCtrl:: Refresh](#refresh)|Aktualizuje a znovu vykreslí ovládací prvek seznam.|
-|[CMFCShellListCtrl::SetItemTypes](#setitemtypes)|Nastaví typ položek zobrazených ovládacím prvkem seznam.|
+|[CMFCShellListCtrl::GetItemTypes](#getitemtypes)|Vrátí typy položek prostředí, které jsou zobrazeny ovládacím prvkem seznamu.|
+|[CMFCShellListCtrl::isdesktop](#isdesktop)|Zkontroluje, zda je aktuálně vybranou složkou složka plochy.|
+|[CMFCShellListCtrl::OnCompareItems](#oncompareitems)|Rozhraní Framework volá tuto metodu při porovnávání dvě položky. (Přepíše [CMFCListCtrl::OnCompareItems](../../mfc/reference/cmfclistctrl-class.md#oncompareitems).)|
+|[CMFCShellListCtrl::onformatfiledate](#onformatfiledate)|Volána při načtení matného souboru data zobrazeného ovládacím prvkem seznamu.|
+|[CMFCShellListCtrl::onformatfilesize](#onformatfilesize)|Nazývá se, když rozhraní převede velikost souboru ovládacího prvku seznamu.|
+|[CMFCShellListCtrl::OnGetItemIcon](#ongetitemicon)|Volána při načtení matné ikony položky ovládacího prvku seznamu.|
+|[CMFCShellListCtrl::OnGetItemText](#ongetitemtext)|Nazývá se, když rozhraní převede text položky ovládacího prvku seznamu.|
+|[CMFCShellListCtrl::OnSetColumns](#onsetcolumns)|Volat rámci při nastaví názvy sloupců.|
+|[CMFCShellListCtrl::Aktualizovat](#refresh)|Aktualizuje a překreslí ovládací prvek seznamu.|
+|[CMFCShellListCtrl::SetItemTypes](#setitemtypes)|Nastaví typ položek zobrazených ovládacím prvkem seznamu.|
 
 ## <a name="remarks"></a>Poznámky
 
-Třída rozšiřuje funkčnost [třídy CMFCListCtrl](../../mfc/reference/cmfclistctrl-class.md) tím, že umožňuje programu vypsat položky prostředí systému Windows. `CMFCShellListCtrl` Formát zobrazení, který se používá, je podobný jako v zobrazení seznamu okna Průzkumníka.
+Třída `CMFCShellListCtrl` rozšiřuje funkce [třídy CMFCListCtrl tím,](../../mfc/reference/cmfclistctrl-class.md) že umožňuje programu uvádět položky prostředí systému Windows. Formát zobrazení, který se používá, je podobný zobrazení seznamu pro okno Průzkumníka.
 
-Objekt [CMFCShellTreeCtrl](../../mfc/reference/cmfcshelltreectrl-class.md) může být přidružen `CMFCShellListCtrl` k objektu pro vytvoření úplného okna Průzkumníka. Poté, co vyberete položku v `CMFCShellTreeCtrl` objektu, způsobí, že `CMFCShellListCtrl` objekt vypíše obsah vybrané položky.
+Objekt [CMFCShellTreeCtrl](../../mfc/reference/cmfcshelltreectrl-class.md) může být `CMFCShellListCtrl` přidružen k objektu a vytvořit tak úplné okno Průzkumníka. Potom výběrem položky `CMFCShellTreeCtrl` v objektu způsobí, že `CMFCShellListCtrl` objekt zobrazí obsah vybrané položky.
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak vytvořit objekt `CMFCShellListCtrl` třídy a jak zobrazit nadřazenou složku aktuálně zobrazené složky. Tento fragment kódu je součástí [ukázky Průzkumníka](../../overview/visual-cpp-samples.md).
+Následující příklad ukazuje, jak vytvořit objekt `CMFCShellListCtrl` třídy a jak zobrazit nadřazenou složku aktuálně zobrazené složky. Tento fragment kódu je součástí [ukázky průzkumníka](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_Explorer#1](../../mfc/reference/codesnippet/cpp/cmfcshelllistctrl-class_1.h)]
 [!code-cpp[NVC_MFC_Explorer#2](../../mfc/reference/codesnippet/cpp/cmfcshelllistctrl-class_2.cpp)]
@@ -100,11 +100,11 @@ Následující příklad ukazuje, jak vytvořit objekt `CMFCShellListCtrl` tří
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[CObject](../../mfc/reference/cobject-class.md)
+[CObjekt](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[CCmdCíl](../../mfc/reference/ccmdtarget-class.md)
 
-[CWnd](../../mfc/reference/cwnd-class.md)
+[Cwnd](../../mfc/reference/cwnd-class.md)
 
 [CListCtrl](../../mfc/reference/clistctrl-class.md)
 
@@ -114,11 +114,11 @@ Následující příklad ukazuje, jak vytvořit objekt `CMFCShellListCtrl` tří
 
 ## <a name="requirements"></a>Požadavky
 
-**Header:** afxshelllistCtrl.h
+**Záhlaví:** afxshelllistCtrl.h
 
-##  <a name="displayfolder"></a>CMFCShellListCtrl::D isplayFolder
+## <a name="cmfcshelllistctrldisplayfolder"></a><a name="displayfolder"></a>CMFCShellListCtrl::DisplayFolder
 
-Zobrazí seznam položek, které jsou obsaženy v zadané složce.
+Zobrazí seznam položek, které jsou obsaženy v zaané složce.
 
 ```
 virtual HRESULT DisplayFolder(LPCTSTR lpszPath);
@@ -128,18 +128,18 @@ virtual HRESULT DisplayFolder(LPAFX_SHELLITEMINFO lpItemInfo);
 ### <a name="parameters"></a>Parametry
 
 *lpszPath*<br/>
-pro Řetězec, který obsahuje cestu ke složce.
+[v] Řetězec, který obsahuje cestu ke složce.
 
 *lpItemInfo*<br/>
-pro Ukazatel na `LPAFX_SHELLITEMINFO` strukturu, která popisuje složku, která se má zobrazit.
+[v] Ukazatel na `LPAFX_SHELLITEMINFO` strukturu, která popisuje složku, která se má zobrazit.
 
 ### <a name="return-value"></a>Návratová hodnota
 
 S_OK v případě úspěchu; E_FAIL jinak.
 
-##  <a name="displayparentfolder"></a>  CMFCShellListCtrl::DisplayParentFolder
+## <a name="cmfcshelllistctrldisplayparentfolder"></a><a name="displayparentfolder"></a>CMFCShellListCtrl::DisplayParentFolder
 
-Aktualizuje objekt [CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md) tak, aby zobrazoval nadřazenou složku aktuálně zobrazené složky.
+Aktualizuje objekt [CMFCShellListCtrl,](../../mfc/reference/cmfcshelllistctrl-class.md) aby zobrazil nadřazenou složku aktuálně zobrazené složky.
 
 ```
 virtual HRESULT DisplayParentFolder();
@@ -149,7 +149,7 @@ virtual HRESULT DisplayParentFolder();
 
 S_OK v případě úspěchu; E_FAIL jinak.
 
-##  <a name="enableshellcontextmenu"></a>CMFCShellListCtrl::EnableShellContextMenu
+## <a name="cmfcshelllistctrlenableshellcontextmenu"></a><a name="enableshellcontextmenu"></a>CMFCShellListCtrl::EnableShellContextMenu
 
 Povolí místní nabídku.
 
@@ -160,11 +160,11 @@ void EnableShellContextMenu(BOOL bEnable = TRUE);
 ### <a name="parameters"></a>Parametry
 
 *bEnable*<br/>
-pro Logická hodnota, která určuje, zda rozhraní povoluje místní nabídku.
+[v] Logická hodnota, která určuje, zda rozhraní umožňuje místní nabídku.
 
-##  <a name="getcurrentfolder"></a>  CMFCShellListCtrl::GetCurrentFolder
+## <a name="cmfcshelllistctrlgetcurrentfolder"></a><a name="getcurrentfolder"></a>CMFCShellListCtrl::GetCurrentFolder
 
-Načte cestu aktuálně vybrané složky v objektu [CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md) .
+Načte cestu k aktuálně vybrané složce v objektu [CMFCShellListCtrl.](../../mfc/reference/cmfcshelllistctrl-class.md)
 
 ```
 BOOL GetCurrentFolder(CString& strPath) const;
@@ -173,19 +173,19 @@ BOOL GetCurrentFolder(CString& strPath) const;
 ### <a name="parameters"></a>Parametry
 
 *strPath*<br/>
-mimo Odkaz na parametr řetězce, kde Metoda zapisuje cestu.
+[out] Odkaz na parametr řetězce, kde metoda zapíše cestu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud bylo úspěšné; 0, jinak.
+Nenulová, pokud je úspěšná; 0 jinak.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda se nezdařila, pokud v `CMFCShellListCtrl`nástroji není vybrána žádná složka.
+Tato metoda se nezdaří, pokud `CMFCShellListCtrl`není v souboru nebyla vybrána žádná složka.
 
-##  <a name="getcurrentfoldername"></a>  CMFCShellListCtrl::GetCurrentFolderName
+## <a name="cmfcshelllistctrlgetcurrentfoldername"></a><a name="getcurrentfoldername"></a>CMFCShellListCtrl::GetCurrentFolderName
 
-Načte název aktuálně vybrané složky v objektu [CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md) .
+Načte název aktuálně vybrané složky v objektu [CMFCShellListCtrl.](../../mfc/reference/cmfcshelllistctrl-class.md)
 
 ```
 BOOL GetCurrentFolderName(CString& strName) const;
@@ -194,19 +194,19 @@ BOOL GetCurrentFolderName(CString& strName) const;
 ### <a name="parameters"></a>Parametry
 
 *strName*<br/>
-mimo Odkaz na řetězcový parametr, kde Metoda zapisuje název.
+[out] Odkaz na parametr řetězce, kde metoda zapíše název.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud bylo úspěšné; 0, jinak.
+Nenulová, pokud je úspěšná; 0 jinak.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda se nezdařila, pokud v `CMFCShellListCtrl`nástroji není vybrána žádná složka.
+Tato metoda se nezdaří, pokud `CMFCShellListCtrl`není v souboru nebyla vybrána žádná složka.
 
-##  <a name="getcurrentitemidlist"></a>CMFCShellListCtrl::GetCurrentItemIdList
+## <a name="cmfcshelllistctrlgetcurrentitemidlist"></a><a name="getcurrentitemidlist"></a>CMFCShellListCtrl::GetCurrentItemIdList
 
-Vrátí PIDL aktuálně vybrané položky.
+Vrátí hodnotu PIDL aktuálně vybrané položky.
 
 ```
 LPITEMIDLIST GetCurrentItemIdList() const;
@@ -214,11 +214,11 @@ LPITEMIDLIST GetCurrentItemIdList() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-PIDL aktuální položky
+PIDL aktuální položky.
 
-##  <a name="getcurrentshellfolder"></a>  CMFCShellListCtrl::GetCurrentShellFolder
+## <a name="cmfcshelllistctrlgetcurrentshellfolder"></a><a name="getcurrentshellfolder"></a>CMFCShellListCtrl::GetCurrentShellFolder
 
-Získá ukazatel na aktuálně vybranou položku v objektu [CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md) .
+Získá ukazatel na aktuálně vybranou položku v objektu [CMFCShellListCtrl.](../../mfc/reference/cmfcshelllistctrl-class.md)
 
 ```
 const IShellFolder* GetCurrentShellFolder() const;
@@ -232,7 +232,7 @@ Ukazatel na [rozhraní IShellFolder](/windows/win32/api/shobjidl_core/nn-shobjid
 
 Tato metoda vrátí hodnotu NULL, pokud není aktuálně vybrán žádný objekt.
 
-##  <a name="getitempath"></a>CMFCShellListCtrl::GetItemPath
+## <a name="cmfcshelllistctrlgetitempath"></a><a name="getitempath"></a>CMFCShellListCtrl::GetItemPath
 
 Načte cestu pro položku.
 
@@ -245,22 +245,22 @@ BOOL GetItemPath(
 ### <a name="parameters"></a>Parametry
 
 *strPath*<br/>
-mimo Odkaz na řetězec, který obdrží cestu.
+[out] Odkaz na řetězec, který přijímá cestu.
 
-*iItem*<br/>
-pro Index položky seznamu
+*iPoložka*<br/>
+[v] Index položky seznamu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-TRUE v případě úspěchu; V opačném případě NEPRAVDA.
+PRAVDA v případě úspěchu; FALSE jinak.
 
 ### <a name="remarks"></a>Poznámky
 
-Index dodaný pomocí *iItem* je založen na položkách aktuálně zobrazených objektem [třídy CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md) .
+Index poskytnutý *iItem* je založen na položkách aktuálně zobrazených objektem [třídy CMFCShellListCtrl.](../../mfc/reference/cmfcshelllistctrl-class.md)
 
-##  <a name="getitemtypes"></a>CMFCShellListCtrl:: getitemtypes
+## <a name="cmfcshelllistctrlgetitemtypes"></a><a name="getitemtypes"></a>CMFCShellListCtrl::GetItemTypes
 
-Vrátí typ položek zobrazených objektem [CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md) .
+Vrátí typ položek zobrazených objektem [CMFCShellListCtrl.](../../mfc/reference/cmfcshelllistctrl-class.md)
 
 ```
 SHCONTF GetItemTypes() const;
@@ -268,15 +268,15 @@ SHCONTF GetItemTypes() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota [SHCONTF](/windows/win32/api/shobjidl_core/ne-shobjidl_core-_shcontf) , která obsahuje typ položek uvedených v `CMFCShellListCtrl`.
+Hodnota [SHCONTF,](/windows/win32/api/shobjidl_core/ne-shobjidl_core-_shcontf) která obsahuje typ položek `CMFCShellListCtrl`uvedených v .
 
 ### <a name="remarks"></a>Poznámky
 
-Chcete-li nastavit typ položek `CMFCShellListCtrl`, které jsou uvedeny v, zavolejte [CMFCShellListCtrl:: SetItemTypes](#setitemtypes).
+Chcete-li nastavit typ položek `CMFCShellListCtrl`uvedených v a , zavolejte [CMFCShellListCtrl::SetItemTypes](#setitemtypes).
 
-##  <a name="isdesktop"></a>CMFCShellListCtrl:: plochý
+## <a name="cmfcshelllistctrlisdesktop"></a><a name="isdesktop"></a>CMFCShellListCtrl::isdesktop
 
-Určuje, zda složka zobrazená v objektu [CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md) je složkou plocha.
+Určuje, zda je složka zobrazená v objektu [CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md) složka plochy.
 
 ```
 BOOL IsDesktop() const;
@@ -284,11 +284,11 @@ BOOL IsDesktop() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-TRUE, pokud je zobrazovaná složka složkou plocha; V opačném případě NEPRAVDA.
+TRUE, pokud je zobrazená složka složka plochy; FALSE jinak.
 
-##  <a name="oncompareitems"></a>CMFCShellListCtrl::OnCompareItems
+## <a name="cmfcshelllistctrloncompareitems"></a><a name="oncompareitems"></a>CMFCShellListCtrl::OnCompareItems
 
-Další podrobnosti najdete ve zdrojovém kódu ve složce **VC\\atlmfc\\src\\MFC** v instalaci sady Visual Studio.
+Další podrobnosti naleznete ve zdrojovém kódu umístěném ve složce **MFC\\knihovny\\VC src\\** instalace sady Visual Studio.
 
 ```
 virtual int OnCompareItems(
@@ -299,17 +299,17 @@ virtual int OnCompareItems(
 
 ### <a name="parameters"></a>Parametry
 
-pro *lParam1*<br/>
-pro *lParam2*<br/>
-pro *iColumn*<br/>
+[v] *lParam1*<br/>
+[v] *lParam2*<br/>
+[v] *iColumn*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="onformatfiledate"></a>  CMFCShellListCtrl::OnFormatFileDate
+## <a name="cmfcshelllistctrlonformatfiledate"></a><a name="onformatfiledate"></a>CMFCShellListCtrl::onformatfiledate
 
-Rozhraní volá tuto metodu, když musí převést datum přidružené k objektu na řetězec.
+Rozhraní Framework volá tuto metodu, když musí převést datum přidružené k objektu do řetězce.
 
 ```
 virtual void OnFormatFileDate(
@@ -319,19 +319,19 @@ virtual void OnFormatFileDate(
 
 ### <a name="parameters"></a>Parametry
 
-*tmFile*<br/>
-pro Datum přidružené k souboru
+*soubor tm*<br/>
+[v] Datum přidružené k souboru.
 
-*str*<br/>
-mimo Řetězec, který obsahuje datum formátovaného souboru.
+*Str*<br/>
+[out] Řetězec, který obsahuje datum formátovaného souboru.
 
 ### <a name="remarks"></a>Poznámky
 
-Když objekt [třídy CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md) zobrazí datum přidružené k souboru, musí toto datum převést na formát řetězce. `CMFCShellListCtrl` Používá tuto metodu k provedení tohoto převodu. Ve výchozím nastavení tato metoda používá aktuální národní prostředí k formátování data na řetězec.
+Když objekt [třídy CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md) zobrazí datum přidružené k souboru, musí toto datum převést na formát řetězce. Používá `CMFCShellListCtrl` tuto metodu k tomu, aby tento převod. Ve výchozím nastavení tato metoda používá aktuální národní prostředí k formátování data do řetězce.
 
-##  <a name="onformatfilesize"></a>CMFCShellListCtrl::OnFormatFileSize
+## <a name="cmfcshelllistctrlonformatfilesize"></a><a name="onformatfilesize"></a>CMFCShellListCtrl::onformatfilesize
 
-Rozhraní volá tuto metodu, když převede velikost objektu na řetězec.
+Framework volá tuto metodu při převedení velikosti objektu na řetězec.
 
 ```
 virtual void OnFormatFileSize(
@@ -341,19 +341,19 @@ virtual void OnFormatFileSize(
 
 ### <a name="parameters"></a>Parametry
 
-*lFileSize*<br/>
-pro Velikost souboru, který se zobrazí v rozhraní
+*lVelikost souboru*<br/>
+[v] Velikost souboru, který se zobrazí v rámci.
 
-*str*<br/>
-mimo Řetězec, který obsahuje velikost formátovaného souboru.
+*Str*<br/>
+[out] Řetězec, který obsahuje formátovaný soubor velikost.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud objekt [třídy CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md) potřebuje zobrazit velikost souboru, je nutné převést velikost souboru na formát řetězce. `CMFCShellListCtrl` Používá tuto metodu k provedení tohoto převodu. Ve výchozím nastavení tato metoda převede velikost souboru z bajtů na kilobajty a pak pomocí aktuálního národního prostředí naformátuje velikost na řetězec.
+Když objekt [třídy CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md) potřebuje zobrazit velikost souboru, musí převést velikost souboru do formátu řetězce. Používá `CMFCShellListCtrl` tuto metodu k tomu, aby tento převod. Ve výchozím nastavení tato metoda převede velikost souboru z bajtů na kilobajty a potom použije aktuální národní prostředí pro formátování velikosti do řetězce.
 
-##  <a name="ongetitemicon"></a>CMFCShellListCtrl::OnGetItemIcon
+## <a name="cmfcshelllistctrlongetitemicon"></a><a name="ongetitemicon"></a>CMFCShellListCtrl::OnGetItemIcon
 
-Rozhraní volá tuto metodu, aby načetla ikonu přidruženou k položce seznamu prostředí.
+Rozhraní Framework volá tuto metodu k načtení ikony přidružené k položce seznamu prostředí.
 
 ```
 virtual int OnGetItemIcon(
@@ -363,25 +363,25 @@ virtual int OnGetItemIcon(
 
 ### <a name="parameters"></a>Parametry
 
-*iItem*<br/>
-pro Index položky
+*iPoložka*<br/>
+[v] Index položky.
 
-*pItem*<br/>
-pro Parametr LPAFX_SHELLITEMINFO, který popisuje položku.
+*pPoložka*<br/>
+[v] Parametr LPAFX_SHELLITEMINFO, který popisuje položku.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Index obrázku ikony v případě úspěchu; -1, pokud se funkce nezdařila.
+Index obrázku ikony v případě úspěchu; -1, pokud funkce selže.
 
 ### <a name="remarks"></a>Poznámky
 
-Index obrázku ikony je založen na seznamu systémových imagí.
+Index obrázku ikony je založen na seznamu bitových obrázků systému.
 
-Ve výchozím nastavení tato metoda spoléhá na parametr *pItem* . Hodnota *iItem* se ve výchozí implementaci nepoužívá. *IItem* můžete použít k implementaci vlastního chování.
+Ve výchozím nastavení tato metoda závisí na parametru *pItem.* Hodnota *iItem* se nepoužívá ve výchozí implementaci. Můžete použít *iItem* k implementaci vlastní chování.
 
-##  <a name="ongetitemtext"></a>  CMFCShellListCtrl::OnGetItemText
+## <a name="cmfcshelllistctrlongetitemtext"></a><a name="ongetitemtext"></a>CMFCShellListCtrl::OnGetItemText
 
-Rozhraní volá tuto metodu, když musí načíst text položky prostředí.
+Rozhraní Framework volá tuto metodu, když musí načíst text položky prostředí.
 
 ```
 virtual CString OnGetItemText(
@@ -392,28 +392,28 @@ virtual CString OnGetItemText(
 
 ### <a name="parameters"></a>Parametry
 
-*iItem*<br/>
-pro Index položky
+*iPoložka*<br/>
+[v] Index položky.
 
 *iColumn*<br/>
-pro Sloupec zájmu
+[v] Sloupec zájmu.
 
-*pItem*<br/>
-pro Parametr LPAFX_SHELLITEMINFO, který popisuje položku.
+*pPoložka*<br/>
+[v] Parametr LPAFX_SHELLITEMINFO, který popisuje položku.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`CString` Obsahující text přidružený k položce.
+A, `CString` který obsahuje text přidružený k položce.
 
 ### <a name="remarks"></a>Poznámky
 
-Každá položka v `CMFCShellListCtrl` objektu může mít text v jednom nebo více sloupcích. Když rozhraní volá tuto metodu, určí sloupec, na který má zájem. Pokud tuto funkci zavoláte ručně, musíte zadat také sloupec, který vás zajímá.
+Každá položka `CMFCShellListCtrl` v objektu může mít text v jednom nebo více sloupcích. Když framework volá tuto metodu, určuje sloupec, který má zájem. Pokud tuto funkci zavoláte ručně, musíte také zadat sloupec, který vás zajímá.
 
-Ve výchozím nastavení tato metoda spoléhá na parametr *pItem* , který určuje, která položka má být zpracována. Hodnota *iItem* se ve výchozí implementaci nepoužívá.
+Ve výchozím nastavení tato metoda závisí na *parametru pItem* k určení, která položka má být zpracována. Hodnota *iItem* se nepoužívá ve výchozí implementaci.
 
-##  <a name="onsetcolumns"></a>CMFCShellListCtrl::OnSetColumns
+## <a name="cmfcshelllistctrlonsetcolumns"></a><a name="onsetcolumns"></a>CMFCShellListCtrl::OnSetColumns
 
-Rozhraní volá tuto metodu, když nastaví názvy sloupců.
+Rozhraní Framework volá tuto metodu při nastaví názvy sloupců.
 
 ```
 virtual void OnSetColumns();
@@ -421,11 +421,11 @@ virtual void OnSetColumns();
 
 ### <a name="remarks"></a>Poznámky
 
-Ve výchozím nastavení rozhraní vytvoří čtyři sloupce v `CMFCShellListCtrl` objektu. Názvy těchto sloupců jsou **název**, **Velikost**, **typ**a upraveno. Tuto metodu můžete přepsat pro přizpůsobení počtu sloupců a jejich názvů.
+Ve výchozím nastavení rozhraní vytvoří `CMFCShellListCtrl` čtyři sloupce v objektu. Názvy těchto sloupců jsou **Název**, **Velikost**, **Typ**a **Změněno**. Tuto metodu můžete přepsat a přizpůsobit počet sloupců a jejich názvy.
 
-##  <a name="refresh"></a>CMFCShellListCtrl:: Refresh
+## <a name="cmfcshelllistctrlrefresh"></a><a name="refresh"></a>CMFCShellListCtrl::Aktualizovat
 
-Aktualizuje a znovu vykreslí objekt [CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md) .
+Aktualizuje a překreslí objekt [CMFCShellListCtrl.](../../mfc/reference/cmfcshelllistctrl-class.md)
 
 ```
 virtual HRESULT Refresh();
@@ -433,15 +433,15 @@ virtual HRESULT Refresh();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`S_OK`v případě úspěchu; v opačném případě se jedná o chybovou hodnotu.
+`S_OK`v případě úspěchu; jinak chybová hodnota.
 
 ### <a name="remarks"></a>Poznámky
 
-Voláním této metody aktualizujete seznam položek zobrazených `CMFCShellListCtrl` objektem.
+Volánítéto metody aktualizovat seznam položek zobrazených `CMFCShellListCtrl` objektem.
 
-##  <a name="setitemtypes"></a>CMFCShellListCtrl::SetItemTypes
+## <a name="cmfcshelllistctrlsetitemtypes"></a><a name="setitemtypes"></a>CMFCShellListCtrl::SetItemTypes
 
-Nastaví typ položek, které jsou uvedeny v objektu [CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md) .
+Nastaví typ položek, které jsou uvedeny v objektu [CMFCShellListCtrl.](../../mfc/reference/cmfcshelllistctrl-class.md)
 
 ```
 void SetItemTypes(SHCONTF nTypes);
@@ -449,14 +449,14 @@ void SetItemTypes(SHCONTF nTypes);
 
 ### <a name="parameters"></a>Parametry
 
-*nTypes*<br/>
-pro Seznam typů položek, které `CMFCShellListCtrl` objekt podporuje.
+*nTypy*<br/>
+[v] Seznam typů položek, `CMFCShellListCtrl` které objekt podporuje.
 
 ### <a name="remarks"></a>Poznámky
 
 Další informace o seznamu typů položek naleznete v tématu [SHCONTF](/windows/win32/api/shobjidl_core/ne-shobjidl_core-_shcontf).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>

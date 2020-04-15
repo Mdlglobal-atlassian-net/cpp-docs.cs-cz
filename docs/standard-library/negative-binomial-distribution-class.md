@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::negative_binomial_distribution [C++], param_type
 - std::negative_binomial_distribution [C++], param_type
 ms.assetid: 7f5f0967-7fdd-4578-99d4-88f292b4fe9c
-ms.openlocfilehash: d8e71b351d88a1c4dee61f88c18aec513d776cd3
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 940ea790e724ffacdefe2cefb256a3314ba244e3
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689259"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367969"
 ---
 # <a name="negative_binomial_distribution-class"></a>negative_binomial_distribution – třída
 
@@ -71,31 +71,31 @@ public:
 
 ### <a name="parameters"></a>Parametry
 
-*IntType* \
-Celočíselný typ výsledku, výchozí hodnota je **int**. Možné typy najdete v tématu [\<random >](../standard-library/random.md).
+*IntType*\
+Typ výsledku celé číslo, výchozí **int**. Možné typy naleznete v [ \<tématu náhodné>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Poznámky
 
-Šablona třídy popisuje distribuci, která vytváří hodnoty celočíselného typu zadaného uživatelem, nebo typ **int** , pokud není k dispozici, distribuované podle funkce rozdělení negativní binomické distribuce. Následující tabulka obsahuje odkazy na články týkající se jednotlivých členů.
+Šablona třídy popisuje rozdělení, které vytváří hodnoty uživatelem zadaného integrálního typu, nebo typ **int,** pokud není k dispozici žádný, distribuovaný podle funkce diskrétní pravděpodobnosti negativního binomické distribuce. Následující tabulka odkazuje na články o jednotlivých členech.
 
 ||||
 |-|-|-|
 |[negative_binomial_distribution](#negative_binomial_distribution)|`negative_binomial_distribution::k`|`negative_binomial_distribution::param`|
 |`negative_binomial_distribution::operator()`|`negative_binomial_distribution::p`|[param_type](#param_type)|
 
-Členy vlastnosti `k()` a `p()` vrátí aktuálně uložené hodnoty distribučních parametrů *k* a *p* v uvedeném pořadí.
+Členové `k()` vlastnosti `p()` a vrátit aktuálně uložené hodnoty distribučních parametrů *k* a *p* v uvedeném pořadí.
 
-Člen vlastnosti `param()` nastaví nebo vrátí `param_type` uložený balíček parametrů distribuce.
+Člen `param()` vlastnosti nastaví `param_type` nebo vrátí balíček parametrů uložené distribuce.
 
-Členské funkce `min()` a `max()` vracejí nejmenší možný výsledek a největší možný výsledek.
+A `min()` `max()` členské funkce vrátí nejmenší možný výsledek a největší možný výsledek.
 
-Členská funkce `reset()` zahodí všechny hodnoty uložené v mezipaměti, takže výsledek dalšího volání `operator()` nezávisí na hodnotách získaných z modulu před voláním.
+Členská `reset()` funkce zahodí všechny hodnoty uložené v mezipaměti, `operator()` takže výsledek dalšího volání nezávisí na žádné hodnoty získané z motoru před voláním.
 
-Členské funkce `operator()` vrátí další vygenerovanou hodnotu založenou na modulu URNG, buď z aktuálního balíčku parametrů, nebo pomocí zadaného balíčku parametrů.
+Členské `operator()` funkce vrátí další vygenerovanou hodnotu na základě modulu URNG, buď z aktuálního balíčku parametrů, nebo ze zadaného balíčku parametrů.
 
-Další informace o třídách distribuce a jejich členech naleznete v tématu [\<random >](../standard-library/random.md).
+Další informace o distribučních třídách a jejich členech naleznete [ \<v tématu Random>](../standard-library/random.md).
 
-Podrobné informace o funkci rozdělení negativní binomické distribuce, která je samostatnou pravděpodobností, najdete v článku Wolfram MathWorld [negativně binomické rozdělení](https://go.microsoft.com/fwlink/p/?linkid=400516).
+Podrobné informace o funkci diskrétní pravděpodobnosti negativního binomálního rozdělení naleznete v článku Wolfram MathWorld [Negative Binomal Distribution](https://go.microsoft.com/fwlink/p/?linkid=400516).
 
 ## <a name="example"></a>Příklad
 
@@ -217,13 +217,13 @@ Histogram for 100 samples:
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<random >
+**Záhlaví:** \<náhodné>
 
 **Obor názvů:** std
 
-## <a name="negative_binomial_distribution"></a>negative_binomial_distribution::negative_binomial_distribution
+## <a name="negative_binomial_distributionnegative_binomial_distribution"></a><a name="negative_binomial_distribution"></a>negative_binomial_distribution::negative_binomial_distribution
 
-Sestaví rozdělení.
+Vytvoří rozdělení.
 
 ```cpp
 explicit negative_binomial_distribution(result_type k = 1, double p = 0.5);
@@ -232,48 +232,48 @@ explicit negative_binomial_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parametry
 
-*k* \
-Parametr distribuce `k`.
+*K*\
+Parametr `k` distribuce.
 
-*p* \
-Parametr distribuce `p`.
+*P*\
+Parametr `p` distribuce.
 
-*parametr* \
-Struktura parametrů používaná k sestavení distribuce.
+*parm*\
+Struktura parametrů slouží k vytvoření distribuce.
 
 ### <a name="remarks"></a>Poznámky
 
-**Předběžná podmínka:** `0.0 < k` a `0.0 < p ≤ 1.0`
+**Předpokladem:** `0.0 < k` a`0.0 < p ≤ 1.0`
 
-První konstruktor vytvoří objekt, jehož uložená `p` Value obsahuje hodnotu *p* a jejíž uložená `k` hodnota obsahuje hodnotu *k*.
+První konstruktor zkonstruoval objekt, jehož `p` uložená hodnota obsahuje hodnotu *p* a jehož uložená `k` hodnota obsahuje hodnotu *k*.
 
-Druhý konstruktor vytvoří objekt, jehož uložené parametry jsou inicializovány z *parametr*. Můžete získat a nastavit aktuální parametry pro existující distribuci voláním členské funkce `param()`.
+Druhý konstruktor vytvoří objekt, jehož uložené parametry jsou inicializovány z *parm*. Aktuální parametry existující distribuce můžete získat a nastavit `param()` voláním členské funkce.
 
-## <a name="param_type"></a>negative_binomial_distribution::p aram_type
+## <a name="negative_binomial_distributionparam_type"></a><a name="param_type"></a>negative_binomial_distribution::param_type
 
 Ukládá parametry distribuce.
 
-struct param_type {typedef negative_binomial_distribution `<`result_type > distribution_type; param_type (result_type k = 1, Double p = 0,5); result_type k () const; Double p () const;
+struktura param_type { typedef negative_binomial_distribution`<`result_type> distribution_type; param_type(result_type k = 1, double p = 0,5); result_type k() const; double p() const;
 
-   bool – operátor = = (const param_type & Right) const; bool – operátor! = (const param_type & Right) const; };
+   bool operator==(const param_type& right) const; bool operátor!=(const param_type& vpravo) const; };
 
 ### <a name="parameters"></a>Parametry
 
-*k* \
-Parametr distribuce `k`.
+*K*\
+Parametr `k` distribuce.
 
-*p* \
-Parametr distribuce `p`.
+*P*\
+Parametr `p` distribuce.
 
-*pravé* \
-Struktura `param_type` používaná k porovnání
+*Právo*\
+Struktura `param_type` použitá k porovnání.
 
 ### <a name="remarks"></a>Poznámky
 
-**Předběžná podmínka:** `0.0 < k` a `0.0 < p ≤ 1.0`
+**Předpokladem:** `0.0 < k` a`0.0 < p ≤ 1.0`
 
-Tato struktura může být předána konstruktoru třídy distribuce při vytváření instance, do `param()` členské funkce pro nastavení uložených parametrů stávající distribuce a `operator()` k použití namísto uložených parametrů.
+Tato struktura může být předána konstruktoru třídy distribuce `param()` při vytváření instancí, členské funkci pro `operator()` nastavení uložených parametrů existující distribuce a k použití namísto uložených parametrů.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[\<random >](../standard-library/random.md)
+[\<náhodné>](../standard-library/random.md)

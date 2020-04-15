@@ -1,5 +1,5 @@
 ---
-title: 'Platform::Collections:: vectorviewiterator – třída'
+title: Platforma::Kolekce::Třída VectorViewIterator
 ms.date: 03/27/2019
 ms.topic: reference
 f1_keywords:
@@ -7,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - VectorViewIterator Class
 ms.assetid: be3aa1ae-e6ba-4a06-8d6b-86d8128026f7
-ms.openlocfilehash: 0de4ffb8e72c21490f07ae164aa23ffcd524c2b8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 01ae4286e996db9819cb697360f6de9c344edd21
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62161404"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81363700"
 ---
-# <a name="platformcollectionsvectorviewiterator-class"></a>Platform::Collections:: vectorviewiterator – třída
+# <a name="platformcollectionsvectorviewiterator-class"></a>Platforma::Kolekce::Třída VectorViewIterator
 
-Poskytuje standardní knihovny šablon iterátor pro objekty, které jsou odvozeny z modulu Windows Runtime`IVectorView` rozhraní.
+Poskytuje iterátor standardní knihovny šablon pro objekty`IVectorView` odvozené z rozhraní prostředí Windows Runtime.
 
-`ViewVectorIterator` je proxy iterátor, který ukládá prvky typu `VectorProxy<T>`. Objekt proxy je však téměř nikdy viditelné pro uživatelský kód. Další informace najdete v tématu [kolekce (C++/CX)](../cppcx/collections-c-cx.md).
+`ViewVectorIterator`je proxy iterátor, který ukládá `VectorProxy<T>`prvky typu . Objekt proxy je však téměř nikdy viditelné pro uživatelský kód. Další informace naleznete v [tématu Kolekce (C++/CX)](../cppcx/collections-c-cx.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -30,45 +30,45 @@ class VectorViewIterator;
 #### <a name="parameters"></a>Parametry
 
 *T*<br/>
-Vlastnost typename třídy VectorViewIterator šablony.
+Název typu třídy šablony VectorViewIterator.
 
 ### <a name="members"></a>Členové
 
-### <a name="public-typedefs"></a>Veřejné definice TypeDef
+### <a name="public-typedefs"></a>Veřejné typedefs
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|`difference_type`|Rozdíl ukazatelů (ptrdiff_t).|
-|`iterator_category`|Kategorie iterátor náhodného přístupu (:: std::random_access_iterator_tag).|
-|`pointer`|Ukazatel na vnitřní typ, který se vyžaduje k provedení VectorViewIterator.|
-|`reference`|Odkaz na vnitřní typ, který se vyžaduje k provedení VectorViewIterator.|
-|`value_type`|`T` Typename.|
+|`difference_type`|Rozdíl ukazatele (ptrdiff_t).|
+|`iterator_category`|Kategorie iterátoru náhodného přístupu (::std::random_access_iterator_tag).|
+|`pointer`|Ukazatel na vnitřní typ, který je vyžadován pro implementaci VectorViewIterator.|
+|`reference`|Odkaz na vnitřní typ, který je vyžadován pro implementaci VectorViewIterator.|
+|`value_type`|Název `T` typu.|
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[VectorViewIterator::VectorViewIterator](#ctor)|Inicializuje novou instanci třídy VectorViewIterator.|
+|[VektorViewIterator::VectorViewIterator](#ctor)|Inicializuje novou instanci třídy VectorViewIterator.|
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[VectorViewIterator::operator-– operátor](#operator-minus)|Odečte buď zadaný počet prvků z aktuální iterace, což má za následek nové iterátor nebo iterátor zadané z aktuální iterace, což má za následek počet prvků mezi iterátory.|
-|[VectorViewIterator::operator-- Operator](#operator-decrement)|Sníží aktuální VectorViewIterator.|
-|[VectorViewIterator::operator!= Operator](#operator-inequality)|Určuje, zda aktuální VectorViewIterator není roven zadané VectorViewIterator.|
-|[VectorViewIterator::operator * – operátor](#operator-dereference)|Získá odkaz na prvek určeném aktuálním VectorViewIterator.|
-|[VectorViewIterator::operator\[\]](#operator-at)|Získá odkaz na prvek, který je zadaný posun z aktuální VectorViewIterator.|
-|[VectorViewIterator::operator + – operátor](#operator-plus)|Vrátí VectorViewIterator, odkazující na prvek na zadané posunutí ze zadaného VectorViewIterator.|
-|[VectorViewIterator::operator ++ – operátor](#operator-increment)|Aktuální VectorViewIterator zvýší.|
-|[VectorViewIterator::operator+= Operator](#operator-plus-equals)|Zvětší aktuální VectorViewIterator podle zadaného posunu.|
-|[VectorViewIterator::operator < – operátor](#operator-less-than)|Označuje, zda aktuální VectorViewIterator je nižší než zadané VectorViewIterator.|
-|[VectorViewIterator::operator\<= Operator](#operator-less-than-or-equals)|Označuje, zda aktuální VectorViewIterator je menší než nebo rovna hodnotě zadané VectorViewIterator.|
-|[VectorViewIterator::operator-= Operator](#operator-minus-assign)|Sníží aktuální VectorViewIterator podle zadaného posunu.|
-|[VectorViewIterator::operator== Operator](#operator-equality)|Určuje, zda aktuální VectorViewIterator rovná zadané VectorViewIterator.|
-|[VectorViewIterator::operator> Operator](#operator-greater-than)|Označuje, zda je aktuální VectorViewIterator větší než zadaný VectorViewIterator.|
-|[VectorViewIterator::operator-> Operator](#operator-arrow)|Načte adresu elementu, který odkazuje aktuální VectorViewIterator.|
-|[VectorViewIterator::operator>= Operator](#operator-greater-than-or-equals)|Určuje, zda aktuální VectorViewIterator je větší než nebo rovna hodnotě zadané VectorViewIterator.|
+|[VectorViewIterator::operátor- Operátor](#operator-minus)|Odečte buď zadaný počet prvků z aktuálního iterátoru, který poskytuje nový iterátor, nebo zadaný iterátor z aktuálního iterátoru, který dává počet prvků mezi iterátory.|
+|[VectorViewIterator::operátor-- Operátor](#operator-decrement)|Sníží aktuální VectorViewIterator.|
+|[VectorViewIterator::operátor!= Operátor](#operator-inequality)|Označuje, zda aktuální VectorViewIterator se nerovná zadanému VectorViewIterator.|
+|[VectorViewIterator::operátor* Operátor](#operator-dereference)|Načte odkaz na prvek určený aktuální VectorViewIterator.|
+|[VectorViewIterator::operátor\[\]](#operator-at)|Načte odkaz na prvek, který je zadaný posunutí z aktuálníHo VectorViewIterator.|
+|[VectorViewIterator::operátor+ Operátor](#operator-plus)|Vrátí VectorViewIterator, který odkazuje na prvek při zadaném posunutí ze zadaného VectorViewIterator.|
+|[VectorViewIterator::operátor++ Operátor](#operator-increment)|Zintáží aktuální VectorViewIterator.|
+|[VectorViewIterator::operátor+= Operátor](#operator-plus-equals)|Zintáží aktuální VectorViewIterator o zadané posunutí.|
+|[VectorViewIterator::operátor< Operátor](#operator-less-than)|Označuje, zda aktuální VectorViewIterator je menší než zadaný VectorViewIterator.|
+|[VectorViewIterator::operátor\<= Operátor](#operator-less-than-or-equals)|Označuje, zda aktuální VectorViewIterator je menší nebo rovna zadané Mu.|
+|[VectorViewIterator::operátor-= Operátor](#operator-minus-assign)|Sníží aktuální VectorViewIterator o zadané posunutí.|
+|[VectorViewIterator::operator== Operátor](#operator-equality)|Označuje, zda aktuální VectorViewIterator se rovná zadané MuVectorViewIterator.|
+|[VectorViewIterator::operátor> Operátor](#operator-greater-than)|Označuje, zda aktuální VectorViewIterator je větší než zadaný VectorViewIterator.|
+|[VectorViewIterator::operátor-> Operátor](#operator-arrow)|Načte adresu prvku, na který odkazuje aktuální VectorViewIterator.|
+|[VectorViewIterator::operátor>= Operátor](#operator-greater-than-or-equals)|Označuje, zda aktuální VectorViewIterator je větší nebo rovna zadané Mu.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -78,11 +78,11 @@ Vlastnost typename třídy VectorViewIterator šablony.
 
 **Záhlaví:** collection.h
 
-**Namespace:** Platform::Collections –
+**Obor názvů:** Platforma::Kolekce
 
-## <a name="operator-arrow"></a>  VectorViewIterator::operator -&gt; – operátor
+## <a name="vectorviewiteratoroperator-gt-operator"></a><a name="operator-arrow"></a>VectorViewIterator::operátor-&gt; Operátor
 
-Načte adresu elementu, který odkazuje aktuální VectorViewIterator.
+Načte adresu prvku, na který odkazuje aktuální VectorViewIterator.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -92,11 +92,11 @@ Detail::ArrowProxy<T> operator->() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota elementu, který se odkazuje aktuální VectorViewIterator.
+Hodnota prvku, který je odkazován aktuální VectorViewIterator.
 
-Typ vrácené hodnoty je neurčená vnitřní typ, který se vyžaduje k provedení tohoto operátoru.
+Typ vrácené hodnoty je nespecifikovaný vnitřní typ, který je vyžadován pro implementaci tohoto operátoru.
 
-## <a name="operator-decrement"></a>  VectorViewIterator::operator--– operátor
+## <a name="vectorviewiteratoroperator---operator"></a><a name="operator-decrement"></a>VectorViewIterator::operátor-- Operátor
 
 Sníží aktuální VectorViewIterator.
 
@@ -109,17 +109,17 @@ VectorViewIterator operator--(int);
 
 ### <a name="return-value"></a>Návratová hodnota
 
-První syntaxe sníží a poté vrátí aktuální VectorViewIterator. Druhá syntaxe vrátí kopii aktuální VectorViewIterator a sníží aktuální VectorViewIterator.
+První syntaxe sníží a potom vrátí aktuální VectorViewIterator. Druhá syntaxe vrátí kopii aktuálního VectorViewIterator a pak sníží aktuální VectorViewIterator.
 
 ### <a name="remarks"></a>Poznámky
 
-První syntaxe VectorViewIterator předem decrements aktuální VectorViewIterator.
+První Syntaxe VectorViewIterator pre-dekrements aktuální VectorViewIterator.
 
-Druhá syntaxe po decrements aktuální VectorViewIterator. `int` v druhé syntaxi označuje operaci po snížení, není skutečný celočíselný operand.
+Druhá syntaxe post-dekrements aktuální VectorViewIterator. Typ `int` v druhé syntaxi označuje operaci po snížení, nikoli skutečný celočíselný operand.
 
-## <a name="operator-dereference"></a>  VectorViewIterator::operator\* – operátor
+## <a name="vectorviewiteratoroperator-operator"></a><a name="operator-dereference"></a>VectorViewIterator::Operátor\* operátora
 
-Získá odkaz na prvek určeném aktuálním VectorViewIterator.
+Načte odkaz na prvek určený aktuální VectorViewIterator.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -129,11 +129,11 @@ reference operator*() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Element určeném aktuálním VectorViewIterator.
+Prvek určený aktuální VectorViewIterator.
 
-## <a name="operator-equality"></a>  VectorViewIterator::operator == – operátor
+## <a name="vectorviewiteratoroperator-operator"></a><a name="operator-equality"></a>VectorViewIterator::operator== Operátor
 
-Určuje, zda aktuální VectorViewIterator rovná zadané VectorViewIterator.
+Označuje, zda aktuální VectorViewIterator se rovná zadané MuVectorViewIterator.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -143,16 +143,16 @@ bool operator==(const VectorViewIterator& other) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Ostatní*<br/>
-Jiné VectorViewIterator.
+*Další*<br/>
+Další VectorViewIterator.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** Pokud aktuální `VectorViewIterator` rovná *jiných*; v opačném případě **false**.
+**true,** pokud `VectorViewIterator` je proud roven *ostatním*; jinak **false**.
 
-## <a name="operator-greater-than"></a>  VectorViewIterator::operator&gt; – operátor
+## <a name="vectorviewiteratoroperatorgt-operator"></a><a name="operator-greater-than"></a>VectorViewIterator::Operátor&gt; operátora
 
-Označuje, zda je aktuální VectorViewIterator větší než zadaný VectorViewIterator.
+Označuje, zda aktuální VectorViewIterator je větší než zadaný VectorViewIterator.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -163,16 +163,16 @@ bool operator>(const VectorViewIterator& other) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Ostatní*<br/>
-Jiné VectorViewIterator.
+*Další*<br/>
+Další VectorViewIterator.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** Pokud je větší než aktuální VectorViewIterator *jiných*; v opačném případě **false**.
+**true,** pokud aktuální VectorViewIterator je větší než *ostatní*; jinak **false**.
 
-## <a name="operator-greater-than-or-equals"></a>  VectorViewIterator::operator&gt;= – operátor
+## <a name="vectorviewiteratoroperatorgt-operator"></a><a name="operator-greater-than-or-equals"></a>VectorViewIterator::operátor&gt;= Operátor
 
-Určuje, zda aktuální `VectorViewIterator` je větší než nebo rovna hodnotě zadané `VectorViewIterator`.
+Označuje, zda `VectorViewIterator` je proud větší nebo `VectorViewIterator`roven zadanému .
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -183,16 +183,16 @@ bool operator>=(const VectorViewIterator& other) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Ostatní*<br/>
-Jiné VectorViewIterator.
+*Další*<br/>
+Další VectorViewIterator.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** Pokud aktuální `VectorViewIterator` je větší než nebo rovna hodnotě *jiných*; v opačném případě **false**.
+**true,** pokud `VectorViewIterator` je proud větší nebo roven *ostatním*; jinak **false**.
 
-## <a name="operator-increment"></a>  VectorViewIterator::operator ++ – operátor
+## <a name="vectorviewiteratoroperator-operator"></a><a name="operator-increment"></a>VectorViewIterator::operátor++ Operátor
 
-Aktuální VectorViewIterator zvýší.
+Zintáží aktuální VectorViewIterator.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -204,17 +204,17 @@ VectorViewIterator operator++(int);
 
 ### <a name="return-value"></a>Návratová hodnota
 
-První syntaxe zvýší hodnotu a vrátí aktuální VectorViewIterator. Druhá syntaxe vrátí kopii objektu aktuální VectorViewIterator a potom zvýší aktuální VectorViewIterator.
+První syntaxe přírůstky a potom vrátí aktuální VectorViewIterator. Druhá syntaxe vrátí kopii aktuálního VectorViewIterator a potom se zpříne aktuální VectorViewIterator.
 
 ### <a name="remarks"></a>Poznámky
 
-První syntaxe VectorViewIterator předem zvýší aktuální VectorViewIterator.
+První Syntaxe VectorViewIterator pre-přírůstky aktuální VectorViewIterator.
 
-Druhá syntaxe po zvýší aktuální VectorViewIterator. `int` v druhé syntaxi označuje operaci po přírůstku není skutečný celočíselný operand.
+Druhá syntaxe post-přírůstky aktuální VectorViewIterator. Typ `int` v druhé syntaxi označuje operaci po přírůstku, nikoli skutečný celočíselný operand.
 
-## <a name="operator-inequality"></a>  VectorViewIterator::operator! = – operátor
+## <a name="vectorviewiteratoroperator-operator"></a><a name="operator-inequality"></a>VectorViewIterator::operátor!= Operátor
 
-Určuje, zda aktuální VectorViewIterator není roven zadané VectorViewIterator.
+Označuje, zda aktuální VectorViewIterator se nerovná zadanému VectorViewIterator.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -224,16 +224,16 @@ bool operator!=(const VectorViewIterator& other) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Ostatní*<br/>
-Jiné VectorViewIterator.
+*Další*<br/>
+Další VectorViewIterator.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**true** Pokud aktuální `VectorViewIterator` není roven *jiných*; v opačném případě **false**.
+**true,** pokud `VectorViewIterator` se proud nerovná *ostatním*; jinak **false**.
 
-## <a name="operator-less-than"></a>  VectorViewIterator::operator&lt; – operátor
+## <a name="vectorviewiteratoroperatorlt-operator"></a><a name="operator-less-than"></a>VectorViewIterator::Operátor&lt; operátora
 
-Označuje, zda aktuální VectorIterator je nižší než zadané VectorIterator.
+Označuje, zda aktuální VectorIterator je menší než zadaný VectorIterator.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -243,16 +243,16 @@ bool operator<(const VectorViewIterator& other) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Ostatní*<br/>
-Jiné `VectorIterator`.
+*Další*<br/>
+Další `VectorIterator`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** Pokud aktuální `VectorIterator` je menší než *jiných*; v opačném případě **false**.
+**true,** pokud `VectorIterator` je proud menší než *jiný*; jinak **false**.
 
-## <a name="operator-less-than-or-equals"></a>  VectorViewIterator::operator&lt;= – operátor
+## <a name="vectorviewiteratoroperatorlt-operator"></a><a name="operator-less-than-or-equals"></a>VectorViewIterator::operátor&lt;= Operátor
 
-Určuje, zda aktuální `VectorIterator` je menší než nebo rovna zadané `VectorIterator`.
+Označuje, zda `VectorIterator` je proud menší nebo `VectorIterator`roven zadanému .
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -263,16 +263,16 @@ bool operator<=(const VectorViewIterator& other) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Ostatní*<br/>
-Jiné `VectorIterator`.
+*Další*<br/>
+Další `VectorIterator`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** Pokud aktuální `VectorIterator` je menší než nebo rovna hodnotě *jiných*; v opačném případě **false**.
+**true,** pokud `VectorIterator` je proud menší nebo roven *ostatním*; jinak **false**.
 
-## <a name="operator-minus"></a>  VectorViewIterator::operator-– operátor
+## <a name="vectorviewiteratoroperator--operator"></a><a name="operator-minus"></a>VectorViewIterator::operátor- Operátor
 
-Odečte buď zadaný počet prvků z aktuální iterace, což má za následek nové iterátor nebo iterátor zadané z aktuální iterace, což má za následek počet prvků mezi iterátory.
+Odečte buď zadaný počet prvků z aktuálního iterátoru, který poskytuje nový iterátor, nebo zadaný iterátor z aktuálního iterátoru, který dává počet prvků mezi iterátory.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -285,19 +285,19 @@ difference_type operator-(const VectorViewIterator& other) const;
 
 ### <a name="parameters"></a>Parametry
 
-*n*<br/>
+*N*<br/>
 Počet prvků.
 
-*Ostatní*<br/>
-Jiné VectorViewIterator.
+*Další*<br/>
+Další VectorViewIterator.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Syntaxe první operátor vrací objekt VectorViewIterator, který je `n` prvky menší než aktuální VectorViewIterator. Syntaxe druhý operátor vrátí počet prvků mezi aktuálním a `other` VectorViewIterator.
+První operátor syntaxe vrátí VectorViewIterator `n` objekt, který je prvky menší než aktuální VectorViewIterator. Druhá syntaxe operátoru vrátí počet prvků `other` mezi aktuální a VectorViewIterator.
 
-## <a name="operator-plus-equals"></a>  VectorViewIterator::operator += – operátor
+## <a name="vectorviewiteratoroperator-operator"></a><a name="operator-plus-equals"></a>VectorViewIterator::operátor+= Operátor
 
-Zvětší aktuální VectorViewIterator podle zadaného posunu.
+Zintáží aktuální VectorViewIterator o zadané posunutí.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -307,16 +307,16 @@ VectorViewIterator& operator+=(difference_type n);
 
 ### <a name="parameters"></a>Parametry
 
-*n*<br/>
-Posunutí celé číslo.
+*N*<br/>
+Celé číslo posunutí.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Aktualizované VectorViewIterator.
+Aktualizovaný VectorViewIterator.
 
-## <a name="operator-plus"></a>  VectorViewIterator::operator + – operátor
+## <a name="vectorviewiteratoroperator-operator"></a><a name="operator-plus"></a>VectorViewIterator::operátor+ Operátor
 
-Vrátí VectorViewIterator, odkazující na prvek na zadané posunutí ze zadaného VectorViewIterator.
+Vrátí VectorViewIterator, který odkazuje na prvek při zadaném posunutí ze zadaného VectorViewIterator.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -333,23 +333,23 @@ inline VectorViewIterator<T> operator+
 ### <a name="parameters"></a>Parametry
 
 *T*<br/>
-V druhém syntaxi typename VectorViewIterator.
+V druhé syntaxi název typu VectorViewIterator.
 
-*n*<br/>
-Posunutí celé číslo.
+*N*<br/>
+Celé číslo posunutí.
 
-*i*<br/>
-V druhém syntaxi VectorViewIterator.
+*I*<br/>
+V druhé syntaxi VectorViewIterator.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-V první syntaxe VectorViewIterator, který odkazuje na element na zadaný posun z aktuální VectorViewIterator.
+V první syntaxi VectorViewIterator, který odkazuje na prvek na zadané posunutí z aktuálního VectorViewIterator.
 
-V druhém syntaxi VectorViewIterator, který odkazuje na element na zadaný posun od začátku parametru `i`.
+V druhé syntaxi VectorViewIterator, který odkazuje na prvek na zadané `i`posunutí od začátku parametru .
 
-## <a name="operator-minus-assign"></a>  VectorViewIterator::operator-= Operator
+## <a name="vectorviewiteratoroperator--operator"></a><a name="operator-minus-assign"></a>VectorViewIterator::operátor-= Operátor
 
-Sníží aktuální VectorIterator podle zadaného posunu.
+Sníží aktuální VektorIterátor o zadané posunutí.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -359,16 +359,16 @@ VectorViewIterator& operator-=(difference_type n);
 
 ### <a name="parameters"></a>Parametry
 
-*n*<br/>
-Posunutí celé číslo.
+*N*<br/>
+Celé číslo posunutí.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Aktualizované VectorIterator.
+Aktualizovaný VectorIterator.
 
-## <a name="operator-at"></a>  VectorViewIterator::operator\[\]
+## <a name="vectorviewiteratoroperator"></a><a name="operator-at"></a>VectorViewIterator::operátor\[\]
 
-Získá odkaz na prvek, který je zadaný posun z aktuální VectorViewIterator.
+Načte odkaz na prvek, který je zadaný posunutí z aktuálníHo VectorViewIterator.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -378,14 +378,14 @@ reference operator[](difference_type n) const;
 
 ### <a name="parameters"></a>Parametry
 
-*n*<br/>
-Posunutí celé číslo.
+*N*<br/>
+Celé číslo posunutí.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Prvek, který je posunout o `n` prvky z aktuální VectorViewIterator.
+Prvek, který je `n` posunuty prvky z aktuálního VectorViewIterator.
 
-## <a name="ctor"></a>  VectorViewIterator::VectorViewIterator konstruktor
+## <a name="vectorviewiteratorvectorviewiterator-constructor"></a><a name="ctor"></a>VectorViewIterator::Konstruktor VectorViewIterátor
 
 Inicializuje novou instanci třídy VectorViewIterator.
 
@@ -402,13 +402,13 @@ explicit VectorViewIterator(
 
 ### <a name="parameters"></a>Parametry
 
-*v*<br/>
-IVectorView\<T > objektu.
+*V*<br/>
+Objekt>\<IVectorView T.
 
 ### <a name="remarks"></a>Poznámky
 
-První příklad syntaxe je výchozí konstruktor. Druhý příklad syntaxe je explicitní konstruktor, který se používá ke konstrukci VectorViewIterator ze IVectorView\<T > objektu.
+První syntaktický příklad je výchozí konstruktor. Druhý syntaktický příklad je explicitní konstruktor, který se používá k vytvoření\<VectorViewIterator z> objektu IVectorView T.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Platforma Namespace](platform-namespace-c-cx.md)
+[Obor názvů platformy](platform-namespace-c-cx.md)

@@ -1,138 +1,138 @@
 ---
 title: Přehled vývoje v jazyce C++ v sadě Visual Studio
-description: Rozhraní IDE sady Visual Studio C++ podporuje vývoj v systémech Windows, Linux, Android a iOS pomocí editoru kódu, ladicího programu, testovacích architektur, statických analyzátorů a dalších programovacích nástrojů.
+description: Visual Studio IDE podporuje vývoj Jazyka C++ v systémech Windows, Linux, Android a iOS s editorem kódu, ladicím programem, testovacími rámci, statickými analyzátory a dalšími programovacími nástroji.
 ms.date: 12/02/2019
 helpviewer_keywords:
 - Visual C++, development tools
 author: corob-msft
 ms.author: corob
 ms.openlocfilehash: 4e04e189b44fe61759a9422139d856ab8a09f201
-ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/17/2020
+ms.lasthandoff: 04/14/2020
 ms.locfileid: "77415714"
 ---
 # <a name="overview-of-c-development-in-visual-studio"></a>Přehled vývoje v jazyce C++ v sadě Visual Studio
 
-V rámci integrovaného vývojového prostředí (IDE) sady Visual Studio sdílí C++ Microsoft (MSVC) mnoho oken a nástrojů, které jsou společné pro jiné jazyky. Mnohé z těchto prvků, včetně **Průzkumník řešení**, editoru kódu a ladicího programu, jsou zdokumentovány v rámci sady [Visual Studio IDE](/visualstudio/get-started/visual-studio-ide). Sdílený nástroj nebo okno má často mírně odlišnou sadu funkcí C++ než pro jiné jazyky. Několik oken nebo nástrojů je k dispozici pouze v edicích Visual Studio Professional nebo Visual Studio Enterprise.
+Jako součást integrovaného vývojového prostředí sady Visual Studio (IDE) sdílí microsoft c++ (MSVC) mnoho oken a nástrojů společně s jinými jazyky. Mnoho z nich, včetně **Průzkumníka řešení**, editoru kódu a ladicího programu, jsou dokumentovány v rámci [rozhraní IDE sady Visual Studio](/visualstudio/get-started/visual-studio-ide). Sdílený nástroj nebo okno má často mírně odlišnou sadu funkcí pro jazyk C++ než pro jiné jazyky. Několik oken nebo nástrojů je k dispozici pouze v edicích Visual Studio Professional nebo Visual Studio Enterprise.
 
-Kromě sdílených nástrojů v integrovaném vývojovém prostředí sady Visual Studio má MSVC několik nástrojů konkrétně pro vývoj nativních kódu. Tyto nástroje jsou také uvedeny v tomto článku. Seznam nástrojů, které jsou k dispozici v jednotlivých edicích aplikace Visual Studio, naleznete v tématu [ C++ nástroje a funkce v edicích sady Visual Studio](visual-cpp-tools-and-features-in-visual-studio-editions.md).
+Kromě sdílených nástrojů v IDE sady Visual Studio má MSVC několik nástrojů speciálně pro vývoj nativního kódu. Tyto nástroje jsou také uvedeny v tomto článku. Seznam nástrojů, které jsou k dispozici v každé edici sady Visual Studio, najdete [v tématu Nástroje a funkce jazyka C++ v edicích Visual Studio](visual-cpp-tools-and-features-in-visual-studio-editions.md).
 
 ## <a name="create-projects"></a>Vytváření projektů
 
-*Projekt* je v podstatě sada souborů zdrojového kódu a prostředků, jako jsou obrázky nebo datové soubory, které jsou integrovány do spustitelného programu nebo knihovny.
+*Projekt* je v podstatě sada souborů zdrojového kódu a zdrojů, jako jsou obrázky nebo datové soubory, které jsou integrovány do spustitelného programu nebo knihovny.
 
-Visual Studio poskytuje podporu pro všechny projektové systémy nebo nástroje pro vlastní sestavení, které chcete použít, a plnou podporu pro technologii IntelliSense, procházení a ladění:
+Visual Studio poskytuje podporu pro všechny projektové systémové nebo vlastní nástroje sestavení, které chcete použít, s plnou podporou pro IntelliSense, procházení a ladění:
 
-- **MSBuild** je nativní projektový systém pro Visual Studio. Když vyberete **soubor** > **Nový** > **projekt** z hlavní nabídky, uvidíte spoustu druhů *šablon projektů* MSBuild, které vám pomohou začít rychle vyvíjet různé druhy C++ aplikací.
+- **MSBuild** je nativní projektový systém pro Visual Studio. Když vyberete **Soubor** > **nový** > **projekt** z hlavní nabídky, uvidíte mnoho druhů šablon *projektu* MSBuild, které vám pomohou začít rychle vyvíjet různé druhy aplikací jazyka C++.
 
    ::: moniker range="vs-2019"
 
-   ![Nové šablony projektů](../build/media/mathclient-project-name-2019.png "Visual Studio 2019 – dialog nového projektu")
+   ![Nové šablony projektů](../build/media/mathclient-project-name-2019.png "Visual Studio 2019 Nový dialog projektu")
 
    ::: moniker-end
 
    ::: moniker range="<=vs-2017"
 
-   ![Šablony projektů](media/vs2017-new-project.png "Visual Studio 2017 – dialog nového projektu")
+   ![Šablony projektů](media/vs2017-new-project.png "Visual Studio 2017 Nový dialog projektu")
 
    ::: moniker-end
 
-   Obecně platí, že byste měli použít tyto šablony pro nové projekty, pokud nepoužíváte existující projekty CMake nebo používáte jiný systém projektu. Další informace najdete v tématu [vytváření a správa projektů založených na msbuildu](../build/creating-and-managing-visual-cpp-projects.md).
+   Obecně byste měli použít tyto šablony pro nové projekty, pokud nepoužíváte existující projekty CMake nebo nepoužíváte jiný systém projektu. Další informace naleznete v [tématu Vytváření a správa projektů založených na msbuild](../build/creating-and-managing-visual-cpp-projects.md).
 
-- **Cmake** je systém sestavení pro různé platformy, který je integrovaný do integrovaného vývojového prostředí sady Visual Studio, když instalujete C++ desktopový vývoj s využitím úlohy. Šablonu projektu CMake můžete použít pro nové projekty nebo jednoduše otevřít složku se souborem CMakeLists. txt. Další informace najdete v tématu [projekty cmake v sadě Visual Studio](../build/cmake-projects-in-visual-studio.md).
+- **CMake** je systém sestavení napříč platformami, který je integrován do integrovaného prostředí Visual Studio při instalaci vývoje plochy s úlohami jazyka C++. Šablonu projektu CMake můžete použít pro nové projekty nebo jednoduše otevřít složku se souborem CMakeLists.txt. Další informace naleznete [v tématu CMake projekty v sadě Visual Studio](../build/cmake-projects-in-visual-studio.md).
 
-- Všechny ostatní C++ systémy sestavení, včetně volné kolekce souborů, jsou podporovány prostřednictvím funkce **Otevřít složku** . Vytvoříte jednoduché soubory JSON pro vyvolání programu sestavení a nakonfigurujete relace ladění. Další informace naleznete v tématu [Otevřít složku projekty pro C++ ](../build/open-folder-projects-cpp.md).
+- Všechny ostatní c++ sestavení systému, včetně volné kolekce souborů, je podporován prostřednictvím **funkce Otevřít složku.** Vytvoření jednoduchých souborů JSON pro vyvolání programu sestavení a konfiguraci relací ladění. Další informace naleznete v tématu [Open Folder projects for C++](../build/open-folder-projects-cpp.md).
 
 ## <a name="add-to-source-control"></a>Přidat do správy zdrojového kódu
 
-Správa zdrojového kódu umožňuje koordinovat práci mezi několika vývojáři, izolovat probíhající práci z produkčního kódu a zálohovat zdrojový kód. Visual Studio podporuje Git a [Správa verzí Team Foundation \(TFVC\)](/azure/devops/repos/tfvc/) prostřednictvím svého **Team Explorer** okna.
+Správa zdrojového kódu umožňuje koordinovat práci mezi více vývojáři, izolovat probíhající práci z produkčního kódu a zálohovat zdrojový kód. Visual Studio podporuje Git a [Team Foundation Version Control \(TFVC\) ](/azure/devops/repos/tfvc/) prostřednictvím okna **Průzkumníka týmu.**
 
 ::: moniker range="vs-2019"
 
-![Team Explorer](media/vs2019-team-explorer.png "Visual Studio 2017 Team Explorer")
+![Team Explorer](media/vs2019-team-explorer.png "Průzkumník týmu Visual Studio 2017")
 
 ::: moniker-end
 
 ::: moniker range="<=vs-2017"
 
-![Team Explorer](media/vs2017-team-explorer.png "Visual Studio 2017 Team Explorer")
+![Team Explorer](media/vs2017-team-explorer.png "Průzkumník týmu Visual Studio 2017")
 
 ::: moniker-end
 
-Další informace o integraci Git s úložištěmi v Azure najdete v tématu [sdílení kódu pomocí sady Visual Studio 2017 a Azure Repos Gitu](/azure/devops/repos/git/share-your-code-in-git-vs-2017). Informace o integraci Git s GitHubem najdete v tématu [rozšíření GitHub pro Visual Studio](https://visualstudio.github.com/).
+Další informace o integraci Gitu s úložišti v Azure najdete v [tématu Sdílení kódu s Visual Studio 2017 a Azure Repos Git](/azure/devops/repos/git/share-your-code-in-git-vs-2017). Informace o integraci Gitu s GitHubem najdete v tématu [GitHub Extension for Visual Studio](https://visualstudio.github.com/).
 
 ## <a name="obtain-libraries"></a>Získat knihovny
 
-Pomocí Správce balíčků [vcpkg](../build/vcpkg.md) můžete získat a nainstalovat knihovny třetích stran. Přes 900 open source knihovny jsou aktuálně k dispozici v katalogu.
+Pomocí správce balíčků [vcpkg](../build/vcpkg.md) získáte a nainstalujte knihovny třetích stran. V katalogu je aktuálně k dispozici více než 900 knihoven s otevřeným zdrojovým kódem.
 
-## <a name="create-user-interfaces-with-designers"></a>Vytváření uživatelských rozhraní pomocí návrhářů
+## <a name="create-user-interfaces-with-designers"></a>Vytváření uživatelských rozhraní s návrháři
 
-Pokud má program uživatelské rozhraní, můžete použít návrháře k jeho rychlému naplnění ovládacími prvky, jako jsou tlačítka, seznamy a tak dále. Když přetáhnete ovládací prvek z okna panelu nástrojů a umístíte ho na návrhovou plochu, Visual Studio vygeneruje prostředky a kód potřebný k tomu, aby všechno fungovalo. Potom napíšete kód pro přizpůsobení vzhledu a chování.
+Pokud má váš program uživatelské rozhraní, můžete pomocí návrháře rychle naplnit ovládací prvky, jako jsou tlačítka, seznamy a tak dále. Když přetáhnete ovládací prvek z okna panelu nástrojů a přetáhněte jej na plochu návrhu, Visual Studio generuje prostředky a kód potřebný k tomu, aby vše fungovalo. Potom napište kód přizpůsobit vzhled a chování.
 
-![Návrhář a sada nástrojů](media/vs2017-toolbox-designer.png "Sada nástrojů a Návrhář sady Visual Studio 2017")
+![Návrhář a sada nástrojů](media/vs2017-toolbox-designer.png "Sada nástrojů a návrhář visual studia 2017")
 
-Další informace o návrhu uživatelského rozhraní pro aplikaci Univerzální platforma Windows najdete v tématu [design a UI](https://developer.microsoft.com/windows/design).
+Další informace o návrhu uživatelského rozhraní pro aplikaci univerzální platformy Windows naleznete v [tématu Návrh a uživatelské rozhraní](https://developer.microsoft.com/windows/design).
 
-Další informace o vytvoření uživatelského rozhraní pro aplikaci knihovny MFC naleznete v tématu [MFC Desktop Applications](../mfc/mfc-desktop-applications.md). Informace o programech Win32 systému Windows najdete v tématu [desktopové aplikace systému Windows](../windows/windows-desktop-applications-cpp.md).
+Další informace o vytvoření uživatelského rozhraní pro aplikaci knihovny MFC naleznete v [tématu MFC Desktop Applications](../mfc/mfc-desktop-applications.md). Informace o programech systému Windows systému Win32 naleznete v [tématu Windows Desktop Applications](../windows/windows-desktop-applications-cpp.md).
 
 ## <a name="write-code"></a>Psaní kódu
 
-Po vytvoření projektu jsou všechny soubory projektu zobrazeny v okně **Průzkumník řešení** . ( *Řešení* je logický kontejner pro jeden nebo více souvisejících projektů.) Když kliknete na soubor. h nebo. cpp v **Průzkumník řešení**, soubor se otevře v editoru kódu.
+Po vytvoření projektu se všechny soubory projektu zobrazí v okně **Průzkumník řešení.** (Řešení *solution* je logický kontejner pro jeden nebo více souvisejících projektů.) Když kliknete na soubor .h nebo CPP v **Průzkumníku řešení**, soubor se otevře v editoru kódu.
 
-![Průzkumník řešení a Editor kódu](media/vs2017-solution-explorer-code-editor.png "Visual Studio 2017 Průzkumník řešení a Editor kódu")
+![Průzkumník řešení a editor kódu](media/vs2017-solution-explorer-code-editor.png "Průzkumník řešení Visual Studia 2017 a editor kódu")
 
-Editor kódu je specializovaný textový procesor pro C++ zdrojový kód. Barevná klíčová slova jazyka, metody a názvy proměnných a další prvky kódu, aby byl kód čitelnější a snazší pochopit. Poskytuje také nástroje pro refaktoring kódu, navigaci mezi různými soubory a porozumění způsobu strukturování kódu. Další informace najdete v tématu [zápis a refaktoring kódu](../ide/writing-and-refactoring-code-cpp.md).
+Editor kódu je specializovaný textový procesor pro zdrojový kód jazyka C++. Je barva-kódy jazyk klíčová slova, metody a názvy proměnných, a další prvky kódu, aby se kód čitelnější a srozumitelnější. Poskytuje také nástroje pro refaktoring kódu, navigaci mezi různými soubory a pochopení struktury kódu. Další informace naleznete v [tématu Psaní a refaktoring kódu](../ide/writing-and-refactoring-code-cpp.md).
 
-## <a name="add-and-edit-resources"></a>Přidání a úprava prostředků
+## <a name="add-and-edit-resources"></a>Přidání a úprava zdrojů
 
-Program nebo knihovna DLL systému Windows obvykle zahrnuje některé *prostředky*, jako jsou dialogy, ikony, obrázky, lokalizovatelné řetězce, úvodní obrazovky, databázové připojovací řetězce nebo libovolná data. Visual Studio obsahuje nástroje pro přidávání a úpravu prostředků. Další informace najdete v tématu [práce se soubory prostředků](../windows/working-with-resource-files.md).
+Program systému Windows nebo dll obvykle obsahuje některé *prostředky*, například dialogová okna, ikony, obrázky, lokalizovatelné řetězce, úvodní obrazovky, připojovací řetězce databáze nebo libovolná data. Visual Studio obsahuje nástroje pro přidávání a úpravy prostředků. Další informace naleznete v [tématu Práce se soubory prostředků](../windows/working-with-resource-files.md).
 
 ## <a name="build-compile-and-link"></a>Sestavení (kompilace a propojení)
 
-Na panelu nabídek vyberte **sestavení** **řešení** sestavení > nebo zadejte kombinaci kláves **CTRL + SHIFT + B** pro zkompilování a propojení projektu. Chyby a varování sestavení jsou hlášeny v Seznam chyb (**CTRL +\\, E**). Okno **výstup** (**ALT + 2**) zobrazuje informace o procesu sestavení.
+Na řádku nabídek zvolte **Sestavit** > **řešení sestavení** nebo zadejte kombinaci kláves **Ctrl+Shift+B** pro kompilaci a propojení projektu. Chyby sestavení a upozornění jsou hlášeny v seznamu chyb (**Ctrl+\\, E**). **Okno Výstup** (**Alt+2**) zobrazuje informace o procesu sestavení.
 
-![okno Výstup a Seznam chyb](media/vs2017-output-error-list.png "Okno výstupu sady Visual Studio 2017 a Seznam chyb")
+![Okno výstupu a seznam chyb](media/vs2017-output-error-list.png "Okno Výstupu visual studia 2017 a seznam chyb")
 
-Další informace o konfiguraci sestavení naleznete v tématu [práce s vlastnostmi projektu](../build/working-with-project-properties.md) a [projekty a systémy sestavení](../build/projects-and-build-systems-cpp.md).
+Další informace o konfiguraci sestavení naleznete v [tématu Práce s vlastnostmi a](../build/working-with-project-properties.md) projekty projektu [a sestavovacími systémy](../build/projects-and-build-systems-cpp.md).
 
-Můžete také použít kompilátor (CL. exe) a mnoho dalších samostatných nástrojů souvisejících s sestavením, jako je například NMAKE a LIB přímo z příkazového řádku. Další informace naleznete v tématu [sestavováníC++ c/Code na příkazovém řádku a v](../build/building-on-the-command-line.md) tématu [C/C++ Building reference](../build/reference/c-cpp-building-reference.md).
+Kompilátor (cl.exe) a mnoho dalších samostatných nástrojů souvisejících s sestavením, jako je NMAKE a LIB, můžete také použít přímo z příkazového řádku. Další informace naleznete v [tématu Sestavení kódu C/C++ na příkazovém řádku](../build/building-on-the-command-line.md) a [c/c++ odkaz na budovu](../build/reference/c-cpp-building-reference.md).
 
-## <a name="debug"></a>Ladění
+## <a name="debug"></a>Ladit
 
-Ladění můžete spustit stisknutím klávesy **F5**. Spuštění se pozastaví u všech zarážek, které jste nastavili (stisknutím klávesy **F9**). Můžete také krokovat kód jedním řádkem v čase (**F10**), zobrazit hodnoty proměnných nebo registrů a dokonce i v některých případech provádět změny v kódu a pokračovat v ladění bez nutnosti opětovné kompilace. Následující ilustrace znázorňuje relaci ladění, ve které je spuštění zastaveno na zarážce. Hodnoty členů struktury dat jsou viditelné v **okně kukátko**.
+Ladění můžete spustit stisknutím **klávesy F5**. Spuštění se pozastaví u všech nastavených zarážek (stisknutím **klávesy F9).** Můžete také krokovat kód po jednom řádku **(F10**), zobrazit hodnoty proměnných nebo registrů a dokonce i v některých případech provádět změny v kódu a pokračovat v ladění bez opětovné kompilace. Následující obrázek znázorňuje relaci ladění, ve které je zastaveno provádění na zarážky. Hodnoty členů datové struktury jsou viditelné v **okně kukátka**.
 
 ![Relace ladění](media/vs2017-debug-watch.png "Relace ladění sady Visual Studio 2017")
 
-Další informace naleznete v tématu [ladění v aplikaci Visual Studio](/visualstudio/debugger/debugging-in-visual-studio).
+Další informace naleznete [v tématu Ladění v sadě Visual Studio](/visualstudio/debugger/debugging-in-visual-studio).
 
 ## <a name="test"></a>Test
 
-Sada Visual Studio obsahuje rozhraní pro testování částí společnosti C++Microsoft pro a také podporu pro zvýšení. Test, Google test a CTest. Spusťte testy z okna **Průzkumníka testů** :
+Visual Studio obsahuje Microsoft Unit Test Framework pro C++, stejně jako podporu boost.test, Google Test a CTest. Spuštění testů z okna **Průzkumníka testů:**
 
-![Průzkumník testů](media/cpp-test-explorer-passed.png "Průzkumník testů sady Visual Studio 2017")
+![Průzkumník testů](media/cpp-test-explorer-passed.png "Průzkumník testů visual studia 2017")
 
-Další informace naleznete v tématu [ověřování kódu pomocí testů jednotek](/visualstudio/test/unit-test-your-code) a [zápis testů jednotek pro C/C++ v aplikaci Visual Studio](/visualstudio/test/writing-unit-tests-for-c-cpp).
+Další informace naleznete [v tématu Ověření kódu pomocí testů částí](/visualstudio/test/unit-test-your-code) a testování [jednotek zápisu pro C/C++ v sadě Visual Studio](/visualstudio/test/writing-unit-tests-for-c-cpp).
 
 ## <a name="analyze"></a>Analýza
 
-Visual Studio obsahuje nástroje pro analýzu statického kódu, které mohou detekovat potenciální problémy ve zdrojovém kódu. Tyto nástroje zahrnují implementaci kontrol [ C++ základních pravidel pokynů](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md) . Další informace naleznete v tématu [Analýza kódu pro C/C++ Overview](/cpp/code-quality/code-analysis-for-c-cpp-overview).
+Visual Studio obsahuje nástroje pro analýzu statického kódu, které mohou zjistit potenciální problémy ve zdrojovém kódu. Tyto nástroje zahrnují implementaci kontrolorů základních [pravidel jazyka C++.](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md) Další informace naleznete v [tématu Analýza kódu pro přehled C/C++](/cpp/code-quality/code-analysis-for-c-cpp-overview).
 
 ## <a name="deploy-completed-applications"></a>Nasazení dokončených aplikací
 
-Pomocí Microsoft Store můžete do zákazníků nasadit tradiční aplikace klasické pracovní plochy i aplikace UWP. Nasazení CRT se zpracovává automaticky na pozadí. Další informace najdete v tématu [publikování aplikací a her pro Windows](/windows/uwp/publish/).
+Zákazníkům můžete nasadit tradiční desktopové aplikace i aplikace UPW prostřednictvím Microsoft Storu. Nasazení CRT je zpracována automaticky na pozadí. Další informace naleznete v [tématu Publish Windows apps and games](/windows/uwp/publish/).
 
-Nativní C++ plochu můžete nasadit i na jiný počítač. Další informace najdete v tématu [nasazení desktopových aplikací](../windows/deploying-native-desktop-applications-visual-cpp.md).
+Můžete také nasadit nativní pracovní plochu jazyka C++ do jiného počítače. Další informace naleznete v [tématu Nasazení desktopových aplikací](../windows/deploying-native-desktop-applications-visual-cpp.md).
 
-Další informace o nasazování programu C++/CLI najdete v tématu [Průvodce nasazením pro vývojáře](/dotnet/framework/deployment/deployment-guide-for-developers).
+Další informace o nasazení programu C++/CLI naleznete v [Příručce pro nasazení pro vývojáře](/dotnet/framework/deployment/deployment-guide-for-developers),
 
 ## <a name="next-steps"></a>Další kroky
 
-Prozkoumejte další Visual Studio na základě společně s některou z těchto úvodní články:
+Prozkoumejte visual studio dále podle následujících spolu s jedním z těchto úvodních článků:
 
 > [!div class="nextstepaction"]
-> [Naučte se používat editor kódu.](/visualstudio/get-started/tutorial-editor)
+> [Naučte se používat editor kódu](/visualstudio/get-started/tutorial-editor)
 
 > [!div class="nextstepaction"]
 > [Další informace o projektech a řešeních](/visualstudio/get-started/tutorial-projects-solutions)

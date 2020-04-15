@@ -1,6 +1,6 @@
 ---
 title: MatchEventStackInMemberFunction
-description: Reference C++ k funkci MatchEventStackInMemberFunction sady SDK pro Build Insights
+description: C++ Build Insights SDK MatchEventStackInMemberFunction odkaz na funkci.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 2a966ea5209a25a62c08cb0873d0565299a15d27
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 28842a02e7edc2e00266d8c7941798f4ce714ded
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78332787"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81323886"
 ---
 # <a name="matcheventstackinmemberfunction"></a>MatchEventStackInMemberFunction
 
 ::: moniker range="<=vs-2015"
 
-Sada C++ SDK pro Build Insights je kompatibilní se sadou Visual Studio 2017 a novější. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek selektor verzí sady Visual Studio pro tento článek na sadu Visual Studio 2017 nebo Visual Studio 2019.
+Sada C++ Build Insights SDK je kompatibilní s Visual Studio 2017 a vyšší. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek pro výběr **verze** sady Visual Studio pro tento článek na Visual Studio 2017 nebo Visual Studio 2019. Nachází se v horní části obsahu na této stránce.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Funkce `MatchEventStackInMemberFunction` se používá ke spárování zásobníku událostí proti konkrétní hierarchii událostí, která je popsána v seznamu parametrů členské funkce. Odpovídající hierarchie jsou předávány členské funkci pro další zpracování. Další informace o událostech, zásobníkech událostí a hierarchiích najdete v tématu [tabulka událostí](../event-table.md).
+Funkce `MatchEventStackInMemberFunction` se používá k porovnání zásobníku událostí s konkrétní hierarchií událostí, která je popsána seznamem parametrů členské funkce. Odpovídající hierarchie jsou předány členské funkci pro další zpracování. Další informace o událostech, hromádkách událostí a hierarchiích najdete v [tabulce událostí](../event-table.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -81,42 +81,42 @@ bool MatchEventStackInMemberFunction(
 
 ### <a name="parameters"></a>Parametry
 
-*TInterface*\
-Typ, který obsahuje členskou funkci.
+*Rozhraní T*\
+Typ, který obsahuje členská funkce.
 
-*TReturn*\
-Návratový typ členské funkce
+*TNávrat*\
+Návratový typ členské funkce.
 
-*T1*,..., *T10*\
-Typy popisující hierarchii události, které se mají porovnat.
+*T1*, ..., *T10*\
+Typy popisující hierarchii událostí tak, aby odpovídala.
 
 *TExtraParams*\
-Typy dodatečných parametrů přijímaných členskou funkcí a typy hierarchie událostí.
+Typy dalšíparametry přijaté členská funkce a typy hierarchie událostí.
 
 *TExtraArgs*\
-Typy dalších argumentů, které byly předány `MatchEventStackInMemberFunction`.
+Typy další argumenty, které byly `MatchEventStackInMemberFunction`předány .
 
 *eventStack*\
-Zásobník událostí, který se má shodovat s hierarchií typu události popsanou *T1* prostřednictvím *T10*.
+Zásobník událostí tak, aby odpovídal hierarchii typů událostí popsaných *T1* až *T10*.
 
 *objectPtr*\
-Ukazatel na objekt, na kterém je volána metoda *memberFunc* .
+Ukazatel na objekt, na kterém *memberFunc* je volána.
 
-*memberFunc*\
-Členská funkce, která popisuje hierarchii typu události, aby odpovídala.
+*členFunc*\
+Členská funkce, která popisuje hierarchii typu události tak, aby odpovídala.
 
 *extraArgs*\
-Argumenty, které se dodávají dokonalému přeposílány na *memberFunc* spolu s parametry hierarchie typu události.
+Argumenty, které získat perfektní *předány memberFunc* spolu s parametry hierarchie typu události.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota **bool** , která má **hodnotu true** , pokud bylo spárování úspěšné, nebo v opačném případě **false** .
+**Bool** hodnota, která je **true,** pokud odpovídající byl úspěšný, nebo **false** jinak.
 
 ## <a name="remarks"></a>Poznámky
 
-Poslední událost v *eventStack* se vždycky spáruje s poslední položkou v hierarchii typu události, aby se shodovala. Všechny ostatní typy v hierarchii typu události se můžou shodovat s libovolným umístěním v *eventStack* s výjimkou posledního, pokud se nachází ve stejném pořadí.
+Poslední událost v *eventStack* je vždy porovnána s poslední položkou v hierarchii typu události tak, aby odpovídala. Všechny ostatní typy v hierarchii typu události může odpovídat libovolné pozici v *eventStack* s výjimkou poslední, za předpokladu, že jsou ve stejném pořadí.
 
-Typy událostí, které se mají použít pro parametry *T1* až *T10* , se vyberou ze seznamu *tříd zachycení*. Seznam událostí a třídy zachycení, které můžete použít k přiřazení, najdete v tématu [tabulka událostí](../event-table.md).
+Typy událostí, které se mají použít pro parametry *T1* až *T10,* jsou vybrány ze seznamu *tříd zachycení*. Seznam událostí a tříd zachycení, které můžete použít k jejich sladění, naleznete v [tabulce událostí](../event-table.md).
 
 ## <a name="example"></a>Příklad
 

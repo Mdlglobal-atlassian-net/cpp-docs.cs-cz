@@ -1,5 +1,5 @@
 ---
-title: CStringArray – třída
+title: Třída CStringArray
 ms.date: 11/04/2016
 f1_keywords:
 - CStringArray
@@ -42,16 +42,16 @@ helpviewer_keywords:
 - CStringArray [MFC], SetAtGrow
 - CStringArray [MFC], SetSize
 ms.assetid: 6c637e06-bba8-4c08-b0fc-cf8cb067ce34
-ms.openlocfilehash: f5be5f44e86e3e24bc51dc014ca3c837bf5cf07d
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 96a272cbbb76b399ed7a3db6848ab3f74a615a38
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79445122"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81365992"
 ---
-# <a name="cstringarray-class"></a>CStringArray – třída
+# <a name="cstringarray-class"></a>Třída CStringArray
 
-Podporuje pole objektů [CString](../../atl-mfc-shared/using-cstring.md) .
+Podporuje pole [CString](../../atl-mfc-shared/using-cstring.md) objektů.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -61,11 +61,11 @@ class CStringArray : public CObject
 
 ## <a name="members"></a>Členové
 
-Členské funkce `CStringArray` jsou podobné členským funkcím třídy [CObArray](../../mfc/reference/cobarray-class.md). Z důvodu této podobnosti můžete použít referenční dokumentaci `CObArray` pro konkrétní členské funkce. Všude, kde vidíte `CObject` ukazatel jako návratovou hodnotu, nahraďte objekt [CString](../../atl-mfc-shared/using-cstring.md) (nejedná se o ukazatel [CString](../../atl-mfc-shared/using-cstring.md) ). Všude, kde vidíte `CObject` ukazatel jako parametr funkce, nahraďte `LPCTSTR`.
+Členské funkce `CStringArray` jsou podobné členské funkce třídy [CObArray](../../mfc/reference/cobarray-class.md). Z důvodu této podobnosti můžete `CObArray` použít referenční dokumentaci pro specifika členské funkce. Všude tam, kde se zobrazí `CObject` ukazatel jako vrácená hodnota, nahraďte [cstring](../../atl-mfc-shared/using-cstring.md) objekt (ne ukazatel [CString).](../../atl-mfc-shared/using-cstring.md) Všude tam, kde se `CObject` ukazatel `LPCTSTR`zobrazí jako parametr funkce, nahraďte .
 
 `CObject* CObArray::GetAt( int <nIndex> ) const;`
 
-například se přeloží na
+například znamená, že
 
 `CString CStringArray::GetAt( int <nIndex> ) const;`
 
@@ -73,66 +73,66 @@ a
 
 `void SetAt( int <nIndex>, CObject* <newElement> )`
 
-překládá se
+překládá do
 
 `void SetAt( int <nIndex>, LPCTSTR <newElement> )`
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
 |[CStringArray::CStringArray](../../mfc/reference/cobarray-class.md#cobarray)|Vytvoří prázdné pole.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CStringArray:: Add](../../mfc/reference/cobarray-class.md#add)|Přidá prvek na konec pole; v případě potřeby zvětší pole.|
-|[CStringArray:: Append](../../mfc/reference/cobarray-class.md#append)|Připojí další pole k poli. v případě potřeby zvětší pole.|
-|[CStringArray:: Copy](../../mfc/reference/cobarray-class.md#copy)|Zkopíruje do pole jiné pole; v případě potřeby zvětší pole.|
-|[CStringArray::ElementAt](../../mfc/reference/cobarray-class.md#elementat)|Vrátí dočasný odkaz na ukazatel elementu v rámci pole.|
-|[CStringArray::FreeExtra](../../mfc/reference/cobarray-class.md#freeextra)|Uvolní veškerou nevyužitou paměť nad rámec aktuální horní meze.|
-|[CStringArray::GetAt](../../mfc/reference/cobarray-class.md#getat)|Vrátí hodnotu v daném indexu.|
-|[CStringArray:: GetCount](../../mfc/reference/cobarray-class.md#getcount)|Získá počet prvků v tomto poli.|
-|[CStringArray:: GetData](../../mfc/reference/cobarray-class.md#getdata)|Umožňuje přístup k prvkům v poli. Může mít **hodnotu null**.|
-|[CStringArray:: GetSize](../../mfc/reference/cobarray-class.md#getsize)|Získá počet prvků v tomto poli.|
+|[CStringArray::Přidat](../../mfc/reference/cobarray-class.md#add)|Přidá prvek na konec pole; v případě potřeby pole zvětší.|
+|[CStringArray::Připojit](../../mfc/reference/cobarray-class.md#append)|Připojí k poli jiné pole; v případě potřeby pole zvětší.|
+|[CStringArray::Kopírovat](../../mfc/reference/cobarray-class.md#copy)|Zkopíruje do pole jiné pole. v případě potřeby pole zvětší.|
+|[CStringArray::Elementat](../../mfc/reference/cobarray-class.md#elementat)|Vrátí dočasný odkaz na ukazatel prvku v rámci pole.|
+|[CStringArray::FreeExtra](../../mfc/reference/cobarray-class.md#freeextra)|Uvolní veškerou nepoužitou paměť nad aktuální horní mez.|
+|[CStringArray::Getat](../../mfc/reference/cobarray-class.md#getat)|Vrátí hodnotu v daném indexu.|
+|[CStringArray::GetCount](../../mfc/reference/cobarray-class.md#getcount)|Získá počet prvků v tomto poli.|
+|[CStringArray::GetData](../../mfc/reference/cobarray-class.md#getdata)|Umožňuje přístup k prvkům v poli. Může být **NULL**.|
+|[CStringArray::GetSize](../../mfc/reference/cobarray-class.md#getsize)|Získá počet prvků v tomto poli.|
 |[CStringArray::GetUpperBound](../../mfc/reference/cobarray-class.md#getupperbound)|Vrátí největší platný index.|
-|[CStringArray::InsertAt](../../mfc/reference/cobarray-class.md#insertat)|Vloží prvek (nebo všechny prvky v jiném poli) do zadaného indexu.|
-|[CStringArray::-Empty](../../mfc/reference/cobarray-class.md#isempty)|Určuje, zda je pole prázdné.|
+|[CStringArray::InsertAt](../../mfc/reference/cobarray-class.md#insertat)|Vloží prvek (nebo všechny prvky v jiném poli) v zadaném indexu.|
+|[CStringArray::Jeprázdný](../../mfc/reference/cobarray-class.md#isempty)|Určuje, zda je pole prázdné.|
 |[CStringArray::RemoveAll](../../mfc/reference/cobarray-class.md#removeall)|Odebere všechny prvky z tohoto pole.|
-|[CStringArray:: funkce RemoveAt](../../mfc/reference/cobarray-class.md#removeat)|Odebere prvek v konkrétním indexu.|
-|[CStringArray::SetAt](../../mfc/reference/cobarray-class.md#setat)|Nastaví hodnotu pro daný index. pole není povoleno zvětšit.|
-|[CStringArray::SetAtGrow](../../mfc/reference/cobarray-class.md#setatgrow)|Nastaví hodnotu pro daný index. v případě potřeby zvětší pole.|
-|[CStringArray:: SetSize](../../mfc/reference/cobarray-class.md#setsize)|Nastaví počet prvků, které mají být obsaženy v tomto poli.|
+|[cstringarray::Removeat](../../mfc/reference/cobarray-class.md#removeat)|Odebere prvek v určitém indexu.|
+|[CStringArray::Setat](../../mfc/reference/cobarray-class.md#setat)|Nastaví hodnotu pro daný index; pole nesmí růst.|
+|[CStringArray::Setatgrow](../../mfc/reference/cobarray-class.md#setatgrow)|Nastaví hodnotu pro daný index; v případě potřeby pole zvětší.|
+|[CStringArray::SetSize](../../mfc/reference/cobarray-class.md#setsize)|Nastaví počet prvků, které mají být obsaženy v tomto poli.|
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CStringArray:: operator \[ \]](../../mfc/reference/cobarray-class.md#operator_at)|Nastaví nebo Získá prvek na zadaném indexu.|
+|[CStringArray::operátor \[\]](../../mfc/reference/cobarray-class.md#operator_at)|Nastaví nebo získá prvek na zadaný index.|
 
 ## <a name="remarks"></a>Poznámky
 
-`CStringArray` zahrnuje makro IMPLEMENT_SERIAL pro podporu serializace a dumpingu jeho prvků. Pokud je pole objektů `CString` uloženo do archivu, buď pomocí přetíženého operátoru vložení nebo pomocí `Serialize` členské funkce, každý prvek je serializován.
+`CStringArray`obsahuje makro IMPLEMENT_SERIAL pro podporu serializace a dumpingu jeho prvků. Pokud pole `CString` objektů je uložen do archivu, buď s přetížené `Serialize` vložení operátor nebo s členovou funkcí, každý prvek je serializován a zase.
 
 > [!NOTE]
->  Před použitím pole použijte `SetSize` k určení jeho velikosti a přidělení paměti pro něj. Pokud nepoužíváte `SetSize`, přidání prvků do pole způsobí, že bude často znovu přiděleno a zkopírováno. Časté přerozdělování a kopírování je neefektivní a může fragmentovat paměť.
+> Před použitím pole `SetSize` použijte k vytvoření jeho velikosti a přidělení paměti pro něj. Pokud nepoužijete `SetSize`, přidání prvků do pole způsobí, že často přerozděleny a zkopírovány. Časté přerozdělení a kopírování jsou neefektivní a může fragmentovat paměť.
 
-Pokud potřebujete výpis z jednotlivých prvků řetězce v poli, je nutné nastavit hloubku kontextu výpisu na hodnotu 1 nebo vyšší.
+Pokud potřebujete výpis jednotlivých řetězcových prvků v poli, musíte nastavit hloubku kontextu výpisu na 1 nebo vyšší.
 
-Když je odstraněno pole `CString` nebo když jsou jeho prvky odebrány, je paměť řetězců uvolněna podle potřeby.
+Při `CString` odstranění pole nebo při odebrání jeho prvky, řetězec paměti je uvolněna podle potřeby.
 
-Další informace o používání `CStringArray`najdete v článku [kolekce](../../mfc/collections.md)článků.
+Další informace o `CStringArray`použití naleznete v článku [Kolekce](../../mfc/collections.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[CObject](../../mfc/reference/cobject-class.md)
+[CObjekt](../../mfc/reference/cobject-class.md)
 
 `CStringArray`
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxcoll. h
+**Záhlaví:** afxcoll.h
 
 ## <a name="see-also"></a>Viz také
 

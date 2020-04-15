@@ -23,16 +23,16 @@ helpviewer_keywords:
 - std::chi_squared_distribution [C++], param_type
 - std::chi_squared_distribution [C++], param_type
 ms.assetid: 9b603fbe-cafd-4a92-b8c5-a434d60b8122
-ms.openlocfilehash: f7f6f038c0e8bc922874388065ce06d76854bc1b
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 6d85e9b10831bc964706ef94d715b7a5d4ab4c50
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688307"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366349"
 ---
 # <a name="chi_squared_distribution-class"></a>chi_squared_distribution – třída
 
-Vygeneruje rozdělení chí-kvadrát.
+Generuje chí-kvadrát rozdělení.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -66,34 +66,34 @@ public:
 
 ### <a name="parameters"></a>Parametry
 
-*RealType* \
-Typ výsledku s plovoucí desetinnou čárkou, výchozí hodnota je **Double**. Možné typy najdete v tématu [\<random >](../standard-library/random.md).
+*Skutečný typ*\
+Typ výsledku s plovoucí desetinnou tázkem, výchozí hodnota **je double**. Možné typy naleznete v [ \<tématu náhodné>](../standard-library/random.md).
 
-*URNG* \
-Jednotný modul generátoru náhodných čísel. Možné typy najdete v tématu [\<random >](../standard-library/random.md).
+*URNG*\
+Jednotný generátor náhodných čísel. Možné typy naleznete v [ \<tématu náhodné>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Poznámky
 
-Šablona třídy popisuje distribuci, která vytváří hodnoty typu s plovoucí desetinnou čárkou, nebo typ **Double** , pokud není k dispozici, distribuované podle rozdělení chí-kvadrát. Následující tabulka obsahuje odkazy na články týkající se jednotlivých členů.
+Šablona třídy popisuje rozdělení, které vytváří hodnoty uživatelem určeného typu s plovoucí desetinnou čárkou, nebo zadejte **double,** pokud není k dispozici žádná, distribuovaná podle distribuce Chi-Squared. Následující tabulka odkazuje na články o jednotlivých členech.
 
 ||||
 |-|-|-|
 |[chi_squared_distribution](../standard-library/chi-squared-distribution-class.md)|`chi_squared_distribution::n`|`chi_squared_distribution::param`|
 |`chi_squared_distribution::operator()`||[param_type](#param_type)|
 
-Funkce Property `n()` vrací hodnotu pro uložený parametr distribuce `n`.
+Funkce `n()` vlastnosti vrátí hodnotu parametru uloženého rozdělení `n`.
 
-Člen vlastnosti `param()` nastaví nebo vrátí `param_type` uložený balíček parametrů distribuce.
+Člen `param()` vlastnosti nastaví `param_type` nebo vrátí balíček parametrů uložené distribuce.
 
-Členské funkce `min()` a `max()` vracejí nejmenší možný výsledek a největší možný výsledek.
+A `min()` `max()` členské funkce vrátí nejmenší možný výsledek a největší možný výsledek.
 
-Členská funkce `reset()` zahodí všechny hodnoty uložené v mezipaměti, takže výsledek dalšího volání `operator()` nezávisí na hodnotách získaných z modulu před voláním.
+Členská `reset()` funkce zahodí všechny hodnoty uložené v mezipaměti, `operator()` takže výsledek dalšího volání nezávisí na žádné hodnoty získané z motoru před voláním.
 
-Členské funkce `operator()` vrátí další vygenerovanou hodnotu založenou na modulu URNG, buď z aktuálního balíčku parametrů, nebo pomocí zadaného balíčku parametrů.
+Členské `operator()` funkce vrátí další vygenerovanou hodnotu na základě modulu URNG, buď z aktuálního balíčku parametrů, nebo ze zadaného balíčku parametrů.
 
-Další informace o třídách distribuce a jejich členech naleznete v tématu [\<random >](../standard-library/random.md).
+Další informace o distribučních třídách a jejich členech naleznete [ \<v tématu Random>](../standard-library/random.md).
 
-Podrobné informace o rozdělení chí-kvadrát naleznete v článku Wolfram MathWorld article [chí-kvadráted Distribution](https://go.microsoft.com/fwlink/p/?linkid=400528).
+Podrobné informace o distribuci chí-squared naleznete v článku Wolfram MathWorld [Chi-Squared Distribution](https://go.microsoft.com/fwlink/p/?linkid=400528).
 
 ## <a name="example"></a>Příklad
 
@@ -220,13 +220,13 @@ Distribution for 10 samples:
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<random >
+**Záhlaví:** \<náhodné>
 
 **Obor názvů:** std
 
-## <a name="chi_squared_distribution"></a>chi_squared_distribution::chi_squared_distribution
+## <a name="chi_squared_distributionchi_squared_distribution"></a><a name="chi_squared_distribution"></a>chi_squared_distribution::chi_squared_distribution
 
-Sestaví rozdělení.
+Vytvoří rozdělení.
 
 ```cpp
 explicit chi_squared_distribution(result_type n = 1.0);
@@ -235,21 +235,21 @@ explicit chi_squared_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parametry
 
-*n* \
-Parametr distribuce `n`.
+*N*\
+Parametr `n` distribuce.
 
-*parametr* \
-Struktura parametrů používaná k sestavení distribuce.
+*parm*\
+Struktura parametrů slouží k vytvoření distribuce.
 
 ### <a name="remarks"></a>Poznámky
 
-**Předběžná podmínka:** `0.0 < n`
+**Předpokladem:**`0.0 < n`
 
-První konstruktor vytvoří objekt, jehož uložená `n` hodnota obsahuje hodnotu *n*.
+První konstruktor vytvoří objekt, `n` jehož uložená hodnota obsahuje hodnotu *n*.
 
-Druhý konstruktor vytvoří objekt, jehož uložené parametry jsou inicializovány z *parametr*. Můžete získat a nastavit aktuální parametry pro existující distribuci voláním členské funkce `param()`.
+Druhý konstruktor vytvoří objekt, jehož uložené parametry jsou inicializovány z *parm*. Aktuální parametry existující distribuce můžete získat a nastavit `param()` voláním členské funkce.
 
-## <a name="param_type"></a>chi_squared_distribution::p aram_type
+## <a name="chi_squared_distributionparam_type"></a><a name="param_type"></a>chi_squared_distribution::param_type
 
 Ukládá parametry distribuce.
 
@@ -266,18 +266,18 @@ struct param_type {
 
 ### <a name="parameters"></a>Parametry
 
-*n* \
-Parametr distribuce `n`.
+*N*\
+Parametr `n` distribuce.
 
-*pravé* \
-Objekt `param_type`, který se má porovnat.
+*Právo*\
+Objekt `param_type` porovnat s tímto.
 
 ### <a name="remarks"></a>Poznámky
 
-**Předběžná podmínka:** `0.0 < n`
+**Předpokladem:**`0.0 < n`
 
-Tato struktura může být předána konstruktoru třídy distribuce při vytváření instance, do `param()` členské funkce pro nastavení uložených parametrů stávající distribuce a `operator()` k použití namísto uložených parametrů.
+Tato struktura může být předána konstruktoru třídy distribuce `param()` při vytváření instancí, členské funkci pro `operator()` nastavení uložených parametrů existující distribuce a k použití namísto uložených parametrů.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[\<random >](../standard-library/random.md)
+[\<náhodné>](../standard-library/random.md)

@@ -1,5 +1,5 @@
 ---
-title: CShellManager – třída
+title: Třída CShellManager
 ms.date: 11/04/2016
 f1_keywords:
 - CShellManager
@@ -28,14 +28,14 @@ helpviewer_keywords:
 - CShellManager [MFC], GetParentItem
 - CShellManager [MFC], ItemFromPath
 ms.assetid: f15c4c1a-6fae-487d-9913-9b7369b33da0
-ms.openlocfilehash: 8151550dafdd1bdf8593d555008af387cf548bc8
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: cc8aa9216fd0d4dcc169830fb745134ceb5c65fa
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69502625"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81318416"
 ---
-# <a name="cshellmanager-class"></a>CShellManager – třída
+# <a name="cshellmanager-class"></a>Třída CShellManager
 
 Implementuje několik metod, které umožňují pracovat s ukazateli na seznamy identifikátorů (PIDLs).
 
@@ -49,44 +49,44 @@ class CShellManager : public CObject
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CShellManager::CShellManager](#cshellmanager)|`CShellManager` Vytvoří objekt.|
+|[CShellManager::CShellManager](#cshellmanager)|Vytvoří `CShellManager` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CShellManager::BrowseForFolder](#browseforfolder)|Zobrazí dialogové okno, které uživateli umožňuje vybrat složku prostředí.|
-|[CShellManager::ConcatenateItem](#concatenateitem)|Zřetězí dva PIDLsy.|
+|[CShellManager::Procházetprosložku](#browseforfolder)|Zobrazí dialogové okno, které umožňuje uživateli vybrat složku prostředí.|
+|[CShellManager::Zřetězitpoložku](#concatenateitem)|Zřetězí dva PIDL.|
 |[CShellManager::CopyItem](#copyitem)|Vytvoří nový PIDL a zkopíruje dodaný PIDL.|
-|[CShellManager::CreateItem](#createitem)|Vytvoří nový PIDL zadané velikosti.|
-|[CShellManager::FreeItem](#freeitem)|Odstraní zadaný PIDL.|
-|[CShellManager::GetItemCount](#getitemcount)|Vrátí počet položek v zadaném PIDL.|
-|[CShellManager::GetItemSize](#getitemsize)|Vrátí velikost zadaného PIDL.|
-|[CShellManager::GetNextItem](#getnextitem)|Vrátí další položku z PIDL.|
+|[CShellManager::Vytvořitpoložku](#createitem)|Vytvoří nový PIDL zadané velikosti.|
+|[CShellManager::FreeItem](#freeitem)|Odstraní dodaný PIDL.|
+|[CShellManager::GetItemCount](#getitemcount)|Vrátí počet položek v zadaném pidl.|
+|[CShellManager::GetItemSize](#getitemsize)|Vrátí velikost dodaného pidl.|
+|[CShellManager::GetNextItem](#getnextitem)|Vrátí další položku z pidl.|
 |[CShellManager::GetParentItem](#getparentitem)|Načte nadřazenou položku zadané položky.|
 |[CShellManager::ItemFromPath](#itemfrompath)|Načte PIDL pro položku identifikovanou zadanou cestou.|
 
 ## <a name="remarks"></a>Poznámky
 
-Metody `CShellManager` třídy se zaměří s PIDLs. PIDL je jedinečný identifikátor objektu Shell.
+Metody třídy `CShellManager` se zabývají PIDL. PIDL je jedinečný identifikátor objektu prostředí.
 
-`CShellManager` Objekt byste neměli vytvářet ručně. Vytvoří se automaticky architekturou vaší aplikace. Během procesu inicializace vaší aplikace byste však měli zavolat metodu [CWinAppEx:: InitShellManager](../../mfc/reference/cwinappex-class.md#initshellmanager) . Chcete-li získat ukazatel na správce prostředí pro vaši aplikaci, zavolejte [CWinAppEx:: GetShellManager](../../mfc/reference/cwinappex-class.md#getshellmanager).
+Objekt byste neměli vytvářet `CShellManager` ručně. Bude vytvořen automaticky v rámci vaší aplikace. Měli byste však volat [CWinAppEx::InitShellManager](../../mfc/reference/cwinappex-class.md#initshellmanager) během procesu inicializace vaší aplikace. Chcete-li získat ukazatel na správce prostředí pro vaši aplikaci, volejte [CWinAppEx::GetShellManager](../../mfc/reference/cwinappex-class.md#getshellmanager).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[CObject](../../mfc/reference/cobject-class.md)
+[CObjekt](../../mfc/reference/cobject-class.md)
 
-[CShellManager](../../mfc/reference/cshellmanager-class.md)
+[Správce cshellů](../../mfc/reference/cshellmanager-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxshellmanager. h
+**Záhlaví:** afxshellmanager.h
 
-##  <a name="browseforfolder"></a>CShellManager::BrowseForFolder
+## <a name="cshellmanagerbrowseforfolder"></a><a name="browseforfolder"></a>CShellManager::Procházetprosložku
 
-Zobrazí dialogové okno, které uživateli umožňuje vybrat složku prostředí.
+Zobrazí dialogové okno, které umožňuje uživateli vybrat složku prostředí.
 
 ```
 BOOL BrowseForFolder(
@@ -101,40 +101,40 @@ BOOL BrowseForFolder(
 ### <a name="parameters"></a>Parametry
 
 *strOutFolder*<br/>
-mimo Řetězec použitý metodou k uložení cesty vybrané složky.
+[out] Řetězec používaný metodou k uložení cesty k vybrané složce.
 
 *pWndParent*<br/>
-pro Ukazatel na nadřazené okno.
+[v] Ukazatel na nadřazené okno.
 
-*lplszInitialFolder*<br/>
-pro Řetězec obsahující složku, která je ve výchozím nastavení vybrána při zobrazení dialogového okna.
+*LplszInitialFolder*<br/>
+[v] Řetězec obsahující složku, která je vybrána ve výchozím nastavení při zobrazení dialogového okna.
 
-*lpszTitle*<br/>
-pro Název dialogového okna
+*lpszNázev*<br/>
+[v] Název dialogového okna.
 
-*ulFlags*<br/>
-pro Příznaky určující možnosti dialogového okna. Podrobný popis najdete v tématu [BROWSEINFO](/windows/win32/api/shlobj_core/ns-shlobj_core-browseinfow) .
+*ulPříznaky*<br/>
+[v] Příznaky určující volby pro dialogové okno. Podrobný popis naleznete v [části BROWSEINFO.](/windows/win32/api/shlobj_core/ns-shlobj_core-browseinfow)
 
 *piFolderImage*<br/>
-mimo Ukazatel na celočíselnou hodnotu, kde Metoda zapisuje index obrázku vybrané složky.
+[out] Ukazatel na hodnotu celéčíslo, kde metoda zapíše index obrazu vybrané složky.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud uživatel vybere složku z dialogového okna; v opačném případě 0.
+Nenulová, pokud uživatel vybere složku z dialogového okna; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Když zavoláte tuto metodu, aplikace vytvoří a zobrazí dialogové okno, které uživateli umožňuje vybrat složku. Metoda zapíše cestu ke složce do parametru *strOutFolder* .
+Při volání této metody aplikace vytvoří a zobrazí dialogové okno, které umožňuje uživateli vybrat složku. Metoda zapíše cestu složky do parametru *strOutFolder.*
 
 ### <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak načíst odkaz na `CShellManager` objekt `CWinAppEx::GetShellManager` pomocí metody `BrowseForFolder` a způsobu použití metody. Tento fragment kódu je součástí [ukázky Průzkumníka](../../overview/visual-cpp-samples.md).
+Následující příklad ukazuje, jak načíst `CShellManager` odkaz na `CWinAppEx::GetShellManager` objekt pomocí metody `BrowseForFolder` a jak použít metodu. Tento fragment kódu je součástí [ukázky průzkumníka](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_Explorer#6](../../mfc/reference/codesnippet/cpp/cshellmanager-class_1.cpp)]
 
-##  <a name="concatenateitem"></a>CShellManager::ConcatenateItem
+## <a name="cshellmanagerconcatenateitem"></a><a name="concatenateitem"></a>CShellManager::Zřetězitpoložku
 
-Vytvoří nový seznam, který obsahuje dvě PIDLs.
+Vytvoří nový seznam obsahující dva pidl.
 
 ```
 LPITEMIDLIST ConcatenateItem(
@@ -145,20 +145,20 @@ LPITEMIDLIST ConcatenateItem(
 ### <a name="parameters"></a>Parametry
 
 *pidl1*<br/>
-pro První položka.
+[v] První položka.
 
 *pidl2*<br/>
-pro Druhá položka.
+[v] Druhá položka.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na seznam nové položky, pokud je funkce úspěšná, jinak NULL.
+Ukazatel na nový seznam položek, pokud je funkce úspěšná, jinak NULL.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda vytvoří nový [ITEMIDLIST](/windows/win32/api/shtypes/ns-shtypes-itemidlist) , který je dostatečně velký pro zahrnutí *pidl1* a *pidl2*. Pak zkopíruje *pidl1* a *pidl2* do nového seznamu.
+Tato metoda vytvoří nový [ITEMIDLIST](/windows/win32/api/shtypes/ns-shtypes-itemidlist) dostatečně velký, aby obsahoval *pidl1* a *pidl2*. Potom zkopíruje *pidl1* a *pidl2* do nového seznamu.
 
-##  <a name="copyitem"></a>CShellManager::CopyItem
+## <a name="cshellmanagercopyitem"></a><a name="copyitem"></a>CShellManager::CopyItem
 
 Zkopíruje seznam položek.
 
@@ -168,18 +168,18 @@ LPITEMIDLIST CopyItem(LPCITEMIDLIST pidlSource);
 
 ### <a name="parameters"></a>Parametry
 
-*pidlSource*<br/>
-pro Původní seznam položek.
+*pidlZdroj*<br/>
+[v] Původní seznam položek.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-V případě úspěchu ukazatel na nově vytvořený seznam položek; jinak NULL.
+Ukazatel na nově vytvořený seznam položek, pokud je úspěšný; jinak NULL.
 
 ### <a name="remarks"></a>Poznámky
 
 Nově vytvořený seznam položek má stejnou velikost jako seznam zdrojových položek.
 
-##  <a name="createitem"></a>CShellManager:: CreateItem –
+## <a name="cshellmanagercreateitem"></a><a name="createitem"></a>CShellManager::Vytvořitpoložku
 
 Vytvoří nový PIDL.
 
@@ -189,16 +189,16 @@ LPITEMIDLIST CreateItem(UINT cbSize);
 
 ### <a name="parameters"></a>Parametry
 
-*cbSize*<br/>
-pro Velikost seznamu položek
+*cbVelikost*<br/>
+[v] Velikost seznamu položek.
 
 ### <a name="return-value"></a>Návratová hodnota
 
 Ukazatel na seznam vytvořených položek, pokud je úspěšný; jinak NULL.
 
-##  <a name="cshellmanager"></a>CShellManager::CShellManager
+## <a name="cshellmanagercshellmanager"></a><a name="cshellmanager"></a>CShellManager::CShellManager
 
-`CShellManager` Vytvoří objekt.
+Vytvoří `CShellManager` objekt.
 
 ```
 CShellManager();
@@ -206,9 +206,9 @@ CShellManager();
 
 ### <a name="remarks"></a>Poznámky
 
-Ve většině případů nemusíte vytvářet `CShellManager` přímo. Ve výchozím nastavení vytvoří rozhraní jednu za vás. Chcete-li získat ukazatel na `CShellManager`, zavolejte [CWinAppEx:: GetShellManager](../../mfc/reference/cwinappex-class.md#getshellmanager). Pokud vytvoříte `CShellManager` ručně, je nutné ji inicializovat pomocí metody [CWinAppEx:: InitShellManager](../../mfc/reference/cwinappex-class.md#initshellmanager).
+Ve většině případů není třeba vytvořit `CShellManager` přímo. Ve výchozím nastavení rozhraní vytvoří jeden pro vás. Chcete-li získat `CShellManager`ukazatel na , volejte [CWinAppEx::GetShellManager](../../mfc/reference/cwinappex-class.md#getshellmanager). Pokud vytvoříte `CShellManager` ručně, musíte jej inicializovat metodou [CWinAppEx::InitShellManager](../../mfc/reference/cwinappex-class.md#initshellmanager).
 
-##  <a name="freeitem"></a>CShellManager::FreeItem
+## <a name="cshellmanagerfreeitem"></a><a name="freeitem"></a>CShellManager::FreeItem
 
 Odstraní seznam položek.
 
@@ -219,9 +219,9 @@ void FreeItem(LPITEMIDLIST pidl);
 ### <a name="parameters"></a>Parametry
 
 *pidl*<br/>
-pro Seznam položek, které se mají odstranit
+[v] Seznam položek, který chcete odstranit.
 
-##  <a name="getitemcount"></a>CShellManager::GetItemCount
+## <a name="cshellmanagergetitemcount"></a><a name="getitemcount"></a>CShellManager::GetItemCount
 
 Vrátí počet položek v seznamu položek.
 
@@ -232,13 +232,13 @@ UINT GetItemCount(LPCITEMIDLIST pidl);
 ### <a name="parameters"></a>Parametry
 
 *pidl*<br/>
-pro Ukazatel na seznam položek.
+[v] Ukazatel na seznam položek.
 
 ### <a name="return-value"></a>Návratová hodnota
 
 Počet položek v seznamu položek.
 
-##  <a name="getitemsize"></a>CShellManager::GetItemSize
+## <a name="cshellmanagergetitemsize"></a><a name="getitemsize"></a>CShellManager::GetItemSize
 
 Vrátí velikost seznamu položek.
 
@@ -249,15 +249,15 @@ UINT GetItemSize(LPCITEMIDLIST pidl);
 ### <a name="parameters"></a>Parametry
 
 *pidl*<br/>
-pro Ukazatel na seznam položek.
+[v] Ukazatel na seznam položek.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Velikost seznamu položek
+Velikost seznamu položek.
 
-##  <a name="getnextitem"></a>CShellManager::GetNextItem
+## <a name="cshellmanagergetnextitem"></a><a name="getnextitem"></a>CShellManager::GetNextItem
 
-Načte další položku z ukazatele na seznam identifikátorů položek (PIDL).
+Načte další položku z ukazatele do seznamu identifikátorů položky (PIDL).
 
 ```
 LPITEMIDLIST GetNextItem(LPCITEMIDLIST pidl);
@@ -266,7 +266,7 @@ LPITEMIDLIST GetNextItem(LPCITEMIDLIST pidl);
 ### <a name="parameters"></a>Parametry
 
 *pidl*<br/>
-pro Seznam položek, které se mají iterovat
+[v] Seznam položek k iterovat.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -274,11 +274,11 @@ Ukazatel na další položku v seznamu.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud v seznamu nejsou žádné další položky, vrátí tato metoda hodnotu NULL.
+Pokud nejsou žádné další položky v seznamu, tato metoda vrátí NULL.
 
-##  <a name="getparentitem"></a>CShellManager::GetParentItem
+## <a name="cshellmanagergetparentitem"></a><a name="getparentitem"></a>CShellManager::GetParentItem
 
-Načte nadřazený prvek ukazatele na seznam identifikátorů položek (PIDL).
+Načte nadřazený ukazatel do seznamu identifikátorů položek (PIDL).
 
 ```
 int GetParentItem(
@@ -289,22 +289,22 @@ int GetParentItem(
 ### <a name="parameters"></a>Parametry
 
 *lpidl*<br/>
-pro PIDL, jehož nadřazená položka bude načtena.
+[v] PIDL, jehož nadřazený bude načten.
 
 *lpidlParent*<br/>
-mimo Odkaz na PIDL, kde metoda uloží výsledek.
+[out] Odkaz na PIDL, kde metoda bude ukládat výsledek.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Úroveň nadřazeného PIDLu
+Úroveň nadřazené pidl.
 
 ### <a name="remarks"></a>Poznámky
 
-Úroveň PIDL je relativní vzhledem k ploše. Plocha PIDL se považuje za úroveň 0.
+Úroveň PIDL je relativní vzhledem k ploše. Desktop PIDL je považován za úroveň 0.
 
-##  <a name="itemfrompath"></a>  CShellManager::ItemFromPath
+## <a name="cshellmanageritemfrompath"></a><a name="itemfrompath"></a>CShellManager::ItemFromPath
 
-Načte ukazatel na seznam identifikátorů položek (PIDL) z položky identifikované cestou k řetězci.
+Načte ukazatel do seznamu identifikátorů položky (PIDL) z položky identifikované řetězcovou cestou.
 
 ```
 HRESULT ItemFromPath(
@@ -315,16 +315,16 @@ HRESULT ItemFromPath(
 ### <a name="parameters"></a>Parametry
 
 *lpszPath*<br/>
-pro Řetězec, který určuje cestu pro položku.
+[v] Řetězec, který určuje cestu pro položku.
 
 *pidl*<br/>
-mimo Odkaz na PIDL. Metoda používá tento PIDL k uložení ukazatele na jeho návratovou hodnotu.
+[out] Odkaz na PIDL. Metoda používá tento PIDL k uložení ukazatele na jeho vrácenou hodnotu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-V případě úspěchu vrátí chybu. Hodnota chyby definovaná v technologii OLE.
+Vrátí funkce NOERROR, pokud je úspěšná. chybová hodnota definovaná ole.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)

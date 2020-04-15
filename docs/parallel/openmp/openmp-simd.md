@@ -5,27 +5,27 @@ helpviewer_keywords:
 - SIMD
 - OpenMP in Visual C++, new features
 - explicit parallelization, new features
-ms.openlocfilehash: 52402aa553c6d68d3073aba26ecac7b784522ee9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0a7f1142a3a432628795341f4885b76a5c144990
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62363268"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366456"
 ---
 # <a name="simd-extension"></a>Rozšíření SIMD
 
-Vizuální C++ však Visual Studio 2019 nyní také nabízí funkce SIMD v současné době podporuje standard OpenMP 2.0.
+Visual C++ v současné době podporuje standard OpenMP 2.0, ale Visual Studio 2019 také nyní nabízí funkce SIMD.
 
 > [!NOTE]
-> Pokud chcete použít SIMD, proveďte kompilaci s `-openmp:experimental` přepínač, který povolí další funkce OpenMP není k dispozici při použití `-openmp` přepnout.
+> Chcete-li používat SIMD, kompilujte s přepínačem, `-openmp:experimental` `-openmp` který umožňuje další funkce OpenMP, které nejsou k dispozici při použití přepínače.
 >
-> `-openmp:experimental` Přepínač zahrnuje `-openmp`, to znamená všechny OpenMP 2.0 funkce jsou zahrnuté v jeho použití.
+> Přepínač `-openmp:experimental` subsumes `-openmp`, což znamená, že všechny OpenMP 2.0 funkce jsou zahrnuty v jeho použití.
 
-Další informace najdete v tématu [rozšíření SIMD C++ OpenMP ve Visual Studiu](https://devblogs.microsoft.com/cppblog/simd-extension-to-c-openmp-in-visual-studio/).
+Další informace najdete v tématu [ROZŠÍŘENÍ SIMD pro C++ OpenMP v sadě Visual Studio](https://devblogs.microsoft.com/cppblog/simd-extension-to-c-openmp-in-visual-studio/).
 
-## <a name="openmp-simd-in-visual-c"></a>OpenMP – SIMD ve VizuáluC++
+## <a name="openmp-simd-in-visual-c"></a>OpenMP SIMD ve Visual C++
 
-OpenMP – SIMD, počínaje OpenMP 4.0 standard, provádění smyčky vektoru vhodných cílů. S použitím `simd` direktiv před smyčku, kompilátor může ignorovat závislosti vektorů, proveďte smyčky jako vektor přívětivá nejrychleji a dodržovat uživatelů v úmyslu mít současné vykonávání více iterací smyčky.
+OpenMP SIMD, představený ve standardu OpenMP 4.0, se zaměřuje na vytváření vektorově přívětivých smyček. Pomocí `simd` směrnice před smyčky kompilátor usměrníte můžete ignorovat vektorové závislosti, aby smyčka jako vektorpřátelské jak je to možné, a respektovat záměr uživatelů mít více opakování smyčky spustit současně.
 
 ```c
     #pragma omp simd
@@ -37,15 +37,15 @@ OpenMP – SIMD, počínaje OpenMP 4.0 standard, provádění smyčky vektoru vh
     }
 ```
 
-Vizuální C++ poskytuje podobné pragma smyčky-OpenMP – například `#pragma vector` a `#pragma ivdep`, ale s OpenMP SIMD, může kompilátor zavést další, jako jsou:
+Visual C++ poskytuje podobné non-OpenMP `#pragma vector` smyčky `#pragma ivdep`pragmas jako a , nicméně s OpenMP SIMD, kompilátor může udělat víc, jako:
 
-- Ignorovat k dispozici závislosti vektorů je vždycky povolená.
-- `/fp:fast` je povolen v rámci smyčky.
-- Vnější smyčky a smyčky pomocí volání funkce jsou přívětivá vektoru.
-- Vnořené smyčky může sloučené do jedné smyčky a provedené přívětivá vektoru.
-- Akcelerace hybridní s `#pragma omp for simd` umožňující hrubých ukryta a podrobné vektorů.  
+- Vždy povoleno ignorovat současné vektorové závislosti.
+- `/fp:fast`je v rámci smyčky povolena.
+- Vnější smyčky a smyčky s voláním funkcí jsou šetrné k vektorům.
+- Vnořené smyčky mohou být splynou do jedné smyčky a provedeny vektorově přívětivé.
+- Hybridní akcelerace s `#pragma omp for simd` umožňují hrubozrnné vícevláknové a jemnozrnné vektory.  
 
-Vektor přívětivá smyček for zůstává kompilátor tiché Pokud nepoužijete přepínač protokolu vektorové podpory:
+Pro vektorové smyčky kompilátor zůstane tichý, pokud nepoužijete přepínač protokolu podporující vektor:
 
 ```cmd
     cl -O2 -openmp:experimental -Qvec-report:2 mycode.cpp
@@ -57,7 +57,7 @@ Vektor přívětivá smyček for zůstává kompilátor tiché Pokud nepoužijet
     mycode.cpp(96) : info C5001: Omp simd loop vectorized
 ```
 
-Vektor vhodných smyček for kompilátor vyvolá každá zpráva:
+U smyček, které nejsou vhodné pro vektory, kompilátor vydá každému zprávu:
 
 ```cmd
     cl -O2 -openmp:experimental mycode.cpp
@@ -70,23 +70,23 @@ Vektor vhodných smyček for kompilátor vyvolá každá zpráva:
 
 ### <a name="clauses"></a>Klauzule
 
-Direktiva OpenMP SIMD můžete taky využít následující klauzule k vylepšení vektorové podpory:
+Směrnice OpenMP SIMD může také přijmout následující klauzule pro zvýšení podpory vektorů:
 
-|– Direktiva|Popis|
+|Směrnice|Popis|
 |---|---|
-|`simdlen(length)`|Zadejte počet procesu vektoru.|
-|`safelen(length)`|Určete vzdálenost závislost vektoru.|
-|`linear(list[ : linear-step]`)|Lineární mapování indukční proměnná smyčky do předplatného pole.|
-|`aligned(list[ : alignment])`|Zarovnání dat|
-|`private(list)`|Zadejte privatizace data.|
-|`lastprivate(list)`|Zadejte data privatizace s konečnou hodnotu od poslední iterace.|
-|`reduction(reduction-identifier:list)`|Zadejte vlastní redukční operace.|
-|`collapse(n)`|Sloučení vnoření smyčky.|
+|`simdlen(length)`|Zadejte počet vektorových pruhů.|
+|`safelen(length)`|Zadejte vzdálenost závislosti vektoru.|
+|`linear(list[ : linear-step]`)|Lineární mapování z indukční proměnné smyčky na odběr pole.|
+|`aligned(list[ : alignment])`|Zarovnání dat.|
+|`private(list)`|Zadejte privatizaci dat.|
+|`lastprivate(list)`|Zadejte privatizaci dat s konečnou hodnotou z poslední iterace.|
+|`reduction(reduction-identifier:list)`|Zadejte operace přizpůsobené redukce.|
+|`collapse(n)`|Hnízdo smyčkové smyčky.|
 
 > [!NOTE]
-> Klauzule SIMD non-effective jsou analyzovány a ignorováno kompilátory s upozorněním.
+> Neefektivní klauzule SIMD jsou analyzovány a ignorovány kompilátorem s upozorněním.
 >
-> Například použijte následující kód problémů upozornění:
+> Například použití následujícího kódu vydá upozornění:
 >
 > ```c
 >    #pragma omp simd simdlen(8)
@@ -104,9 +104,9 @@ Direktiva OpenMP SIMD můžete taky využít následující klauzule k vylepšen
 
 ### <a name="example"></a>Příklad
   
-Direktiva OpenMP SIMD poskytuje uživatelům způsob, jak určovat smyčky zkontrolujte kompilátoru vector – popisný. Anotací smyčky pomocí direktivy OpenMP SIMD, uživatelé v úmyslu mít současné vykonávání více iterací smyčky.
+OpenMP SIMD směrnice poskytuje uživatelům způsob, jak diktovat kompilátor, aby smyčky vektorově přívětivé. Anotací smyčky se směrnicí OpenMP SIMD mají uživatelé v úmyslu provést více iterací smyčky současně.
 
-Například následující zacyklení, je opatřen poznámkou OpenMP SIMD – direktiva. Protože zpětné závislost z [i] [i-1], ale z důvodu směrnice SIMD, které kompilátor přesto je umožněno pack po sobě následujících iterací první příkaz do jedné instrukce vektoru a spusťte neexistuje žádné ideální paralelismu mezi průchod cyklem je paralelně.
+Například následující smyčka je anotována direktivou OpenMP SIMD. Neexistuje žádný dokonalý paralelismus mezi iterací smyčky, protože existuje zpětná závislost z [i] na [i-1], ale z důvodu směrnice SIMD je kompilátor stále povoleno zabalit po sobě jdoucí iterace prvního příkazu do jedné vektorové instrukce a spustit je paralelně.
 
 ```c
     #pragma omp simd
@@ -118,7 +118,7 @@ Například následující zacyklení, je opatřen poznámkou OpenMP SIMD – di
     }
 ```
 
-Proto je následující formulář transformovaný vektoru smyčky **právní** vzhledem k tomu, že kompilátor udržuje sekvenční chování každého původní průchodu cyklem. Jinými slovy `a[i]` se spustí až po `a[-1]`, `b[i]` po `a[i]` a volání `bar` se stane poslední.
+Proto následující transformované vektorové formě smyčky je **legální,** protože kompilátor udržuje sekvenční chování každé původní opakování smyčky. Jinými `a[i]` slovy, je `a[-1]`proveden `b[i]` po `a[i]` , je `bar` po a volání se stane poslední.
 
 ```c
     for (i = 0; i < count; i+=4)
@@ -132,7 +132,7 @@ Proto je následující formulář transformovaný vektoru smyčky **právní** 
     }
 ```
 
-Má **právní** přesunout odkaz na paměť `*c` ze smyčky, pokud může alias s `a[i]` nebo `b[i]`. Také není platný mění pořadí příkazů uvnitř jedné iterace původní, pokud to naruší sekvenční závislostí. Například následující transformovaný smyčky není platný:
+Není **legální** přesunout odkaz `*c` na paměť ze smyčky, pokud `a[i]` `b[i]`může alias s nebo . Je také není legální přeuspořádat příkazy uvnitř jedné původní iterace, pokud přeruší sekvenční závislost. Například následující transformovaná smyčka není legální:
 
 ```c
     c = b;
@@ -148,6 +148,6 @@ Má **právní** přesunout odkaz na paměť `*c` ze smyčky, pokud může alias
     }
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[/openmp (povolení podpory OpenMP 2.0)](../../build/reference/openmp-enable-openmp-2-0-support.md)<br/>
+[/openmp (Povolit podporu OpenMP 2.0)](../../build/reference/openmp-enable-openmp-2-0-support.md)<br/>

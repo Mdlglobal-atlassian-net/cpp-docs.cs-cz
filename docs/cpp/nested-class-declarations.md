@@ -9,12 +9,12 @@ helpviewer_keywords:
 - declaring classes [C++]
 - declarations, nested classes
 ms.assetid: c02e471d-b7f9-41b8-8ef6-2323f006dbd5
-ms.openlocfilehash: a1464ce9ca8349550160c768265c1c4eada93209
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 8ace21e3c8ced72b34898a716eae882a3750c8ef
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80161160"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367894"
 ---
 # <a name="nested-class-declarations"></a>Vnořené deklarace tříd
 
@@ -54,14 +54,14 @@ int main()
 }
 ```
 
-`BufferedIO::BufferedInput` a `BufferedIO::BufferedOutput` jsou deklarovány v rámci `BufferedIO`. Tyto názvy tříd nejsou viditelné mimo obor třídy `BufferedIO`. Objekt typu `BufferedIO` však neobsahuje žádné objekty typu `BufferedInput` ani `BufferedOutput`.
+`BufferedIO::BufferedInput`a `BufferedIO::BufferedOutput` jsou `BufferedIO`deklarovány v rámci . Tyto názvy tříd nejsou viditelné mimo obor třídy `BufferedIO`. Objekt typu `BufferedIO` však neobsahuje žádné objekty typu `BufferedInput` ani `BufferedOutput`.
 
 Vnořené třídy mohou přímo použít názvy, názvy typů, názvy statických členů a enumerátory pouze z nadřazené třídy. Pro použití názvů ostatních členů třídy je nutné použít ukazatele, odkazy nebo názvy objektů.
 
 V předchozím příkladu `BufferedIO` lze k enumerátoru `IOError` přistupovat přímo pomocí členských funkcí vnořených tříd `BufferedIO::BufferedInput` nebo `BufferedIO::BufferedOutput`, jak je uvedeno ve funkci `good`.
 
 > [!NOTE]
->  Vnořené třídy deklarují pouze typy v rámci oboru třídy. Nezpůsobují vytvoření obsažených objektů vnořené třídy. Předchozí příklad deklaruje dvě vnořené třídy, ale nedeklaruje žádné objekty těchto typů tříd.
+> Vnořené třídy deklarují pouze typy v rámci oboru třídy. Nezpůsobují vytvoření obsažených objektů vnořené třídy. Předchozí příklad deklaruje dvě vnořené třídy, ale nedeklaruje žádné objekty těchto typů tříd.
 
 Výjimka deklarace viditelnosti oboru vnořené třídy se objeví, je-li název typu deklarován spolu s dopřednou deklarací.  Název třídy, která je deklarována dopřednou deklarací, je v tomto případě viditelný mimo ohraničující třídu, kde je její obor působnosti nejmenším ohraničujícím netřídním oborem.  Příklad:
 
@@ -90,7 +90,7 @@ int main()
 }
 ```
 
-## <a name="access-privilege-in-nested-classes"></a>Přístupové oprávnění ve vnořených třídách
+## <a name="access-privilege-in-nested-classes"></a>Oprávnění přístupu ve vnořených třídách
 
 Vnoření třídy v rámci jiné třídy nedává zvláštní oprávnění k přístupu členským funkcím vnořené třídy. Podobně členské funkce ohraničující třídy nemají zvláštní přístup ke členům vnořené třídy.
 
@@ -134,13 +134,13 @@ int main()
 }
 ```
 
-V předchozím příkladu je k deklaraci názvu funkce použita syntaxe *kvalifikovaného typu názvu* . Deklarace:
+V předchozím příkladu se k deklarování názvu funkce používá syntaxe *typu kvalifikovaného typu.* Deklarace:
 
 ```cpp
 BufferedIO::BufferedInput::read()
 ```
 
-znamená „funkce `read`, která je členem třídy `BufferedInput`, jež se nachází v oboru třídy `BufferedIO`“. Vzhledem k tomu, že tato deklarace používá syntaxi *kvalifikovaného typu* , jsou možné konstrukce následujícího formuláře:
+znamená „funkce `read`, která je členem třídy `BufferedInput`, jež se nachází v oboru třídy `BufferedIO`“. Vzhledem k tomu, že tato deklarace používá syntaxi *názvu kvalifikovaného typu,* jsou možné konstrukce následujícího formuláře:
 
 ```cpp
 typedef BufferedIO::BufferedInput BIO_INPUT;
@@ -148,9 +148,9 @@ typedef BufferedIO::BufferedInput BIO_INPUT;
 int BIO_INPUT::read()
 ```
 
-Předchozí deklarace je ekvivalentní předchozí deklaraci, ale používá namísto názvů tříd název **typedef** .
+Předchozí deklarace je ekvivalentní předchozí, ale používá **typedef** název místo názvů tříd.
 
-## <a name="friend-functions-in-nested-classes"></a>Funkce Friend ve vnořených třídách
+## <a name="friend-functions-in-nested-classes"></a>Přátelské funkce ve vnořených třídách
 
 Spřátelené funkce deklarované ve vnořené třídě jsou považovány za funkce v rozsahu vnořené třídy, nikoli nadřazené třídy. Proto spřátelené funkce nezískají žádná zvláštní přístupová oprávnění ke členům nebo členským funkcím nadřazené třídy. Pokud chcete použít název, který je deklarován ve vnořené třídě ve spřátelené funkci, a tato spřátelená funkce je v rozsahu souboru, použijte kvalifikované názvy typů takto:
 

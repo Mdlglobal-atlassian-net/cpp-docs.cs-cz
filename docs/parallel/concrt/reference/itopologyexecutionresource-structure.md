@@ -9,16 +9,16 @@ f1_keywords:
 helpviewer_keywords:
 - ITopologyExecutionResource structure
 ms.assetid: e36756f7-4cd9-4fa6-ba60-23fea58ef2bf
-ms.openlocfilehash: 82193a9b592cded96f3726cbabd6cf646eaa27c8
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 2c9221cab1ac2d48bd099a769188e4bee797823c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77140071"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368151"
 ---
 # <a name="itopologyexecutionresource-structure"></a>ITopologyExecutionResource – struktura
 
-Rozhraní k prostředku spuštění, jak je definováno Správce prostředků.
+Rozhraní k prostředku spuštění, jak je definováno Správcem prostředků.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -30,14 +30,14 @@ struct ITopologyExecutionResource;
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[Itopologyexecutionresource –:: getId –](#getid)|Vrátí jedinečný identifikátor Správce prostředků pro tento prostředek spuštění.|
-|[Itopologyexecutionresource –:: GetNext](#getnext)|Vrátí rozhraní k dalšímu prostředku spuštění v pořadí výčtu.|
+|[ITopologyExecutionResource::GetId](#getid)|Vrátí jedinečný identifikátor správce prostředků pro tento prostředek spuštění.|
+|[ITopologyExecutionResource::GetNext](#getnext)|Vrátí rozhraní další prostředek spuštění v pořadí výčtu.|
 
 ## <a name="remarks"></a>Poznámky
 
-Toto rozhraní se obvykle používá k procházení topologie systému, jak je zjištěno Správce prostředků.
+Toto rozhraní se obvykle používá k procházce topologie systému, jak je pozorováno správce prostředků.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -45,13 +45,13 @@ Toto rozhraní se obvykle používá k procházení topologie systému, jak je z
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** concrtrm. h
+**Záhlaví:** concrtrm.h
 
 **Obor názvů:** souběžnost
 
-## <a name="getid"></a>Itopologyexecutionresource –:: getId – – metoda
+## <a name="itopologyexecutionresourcegetid-method"></a><a name="getid"></a>ITopologyExecutionResource::Metoda GetId
 
-Vrátí jedinečný identifikátor Správce prostředků pro tento prostředek spuštění.
+Vrátí jedinečný identifikátor správce prostředků pro tento prostředek spuštění.
 
 ```cpp
 virtual unsigned int GetId() const = 0;
@@ -59,11 +59,11 @@ virtual unsigned int GetId() const = 0;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Jedinečný identifikátor Správce prostředků pro tento prostředek spuštění.
+Jedinečný identifikátor správce prostředků pro tento prostředek spuštění.
 
-## <a name="getnext"></a>Itopologyexecutionresource –:: GetNext – metoda
+## <a name="itopologyexecutionresourcegetnext-method"></a><a name="getnext"></a>ITopologyExecutionResource::GetNext Metoda
 
-Vrátí rozhraní k dalšímu prostředku spuštění v pořadí výčtu.
+Vrátí rozhraní další prostředek spuštění v pořadí výčtu.
 
 ```cpp
 virtual ITopologyExecutionResource *GetNext() const = 0;
@@ -71,8 +71,8 @@ virtual ITopologyExecutionResource *GetNext() const = 0;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Rozhraní k dalšímu prostředku spuštění v pořadí výčtu. Pokud neexistují žádné další uzly v pořadí výčtu uzlu, ke kterému patří tento prostředek spuštění, vrátí tato metoda hodnotu `NULL`.
+Rozhraní k dalšímu prostředku spuštění v pořadí výčtu. Pokud neexistují žádné další uzly v pořadí výčtu uzlu, do kterého patří `NULL`tento prostředek spuštění, tato metoda vrátí hodnotu .
 
 ## <a name="see-also"></a>Viz také
 
-[concurrency – obor názvů](concurrency-namespace.md)
+[obor názvů souběžnosti](concurrency-namespace.md)

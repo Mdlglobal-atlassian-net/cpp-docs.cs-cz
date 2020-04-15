@@ -1,45 +1,45 @@
 ---
-title: Připojení k cílovému systému Linux v aplikaci Visual Studio
-description: Jak se připojit ke vzdálenému počítači se systémem Linux nebo k subsystému Windows pro Linux z projektu C++ v rámci sady Visual Studio.
+title: Připojení k cílovému systému Linux ve Visual Studiu
+description: Jak se připojit ke vzdálenému počítači s Linuxem nebo windows subsystém pro Linux z evnitř projektu Visual Studio C++.
 ms.date: 01/17/2020
-ms.openlocfilehash: d0065b63d7a81d3ae3d68b26184c88aca77f601c
-ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
+ms.openlocfilehash: 624dce6bb05e4f4a961628e0c6f455e11c14dff8
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76518215"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364365"
 ---
-# <a name="connect-to-your-target-linux-system-in-visual-studio"></a>Připojení k cílovému systému Linux v aplikaci Visual Studio
+# <a name="connect-to-your-target-linux-system-in-visual-studio"></a>Připojení k cílovému systému Linux ve Visual Studiu
 
 ::: moniker range="vs-2015"
 
-Podpora pro Linux je k dispozici v systému Visual Studio 2017 nebo novějším.
+Podpora Linuxu je dostupná ve Visual Studiu 2017 a novějším.
 
 ::: moniker-end
 
 ::: moniker range="vs-2017"
 
-Projekt se systémem Linux můžete nakonfigurovat tak, aby se zacílen na vzdálený počítač nebo podsystém Windows pro Linux (WSL). Pro vzdálené počítače i pro WSL musíte nastavit vzdálené připojení v sadě Visual Studio 2017.
+Projekt Linuxu můžete nakonfigurovat tak, aby cílil na vzdálený počítač nebo na podsystém Windows pro Linux (WSL). Pro vzdálené počítače i pro WSL je třeba nastavit vzdálené připojení v sadě Visual Studio 2017.
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-Projekt se systémem Linux můžete nakonfigurovat tak, aby se zacílen na vzdálený počítač nebo podsystém Windows pro Linux (WSL). Pro vzdálený počítač je potřeba nastavit vzdálené připojení v sadě Visual Studio. Pokud se chcete připojit k WSL, přeskočte k části [připojit k WSL](#connect-to-wsl) .
+Projekt Linuxu můžete nakonfigurovat tak, aby cílil na vzdálený počítač nebo na podsystém Windows pro Linux (WSL). Pro vzdálený počítač je třeba nastavit vzdálené připojení v sadě Visual Studio. Chcete-li se připojit k wsl, přeskočte dopředu na část [Připojit k WSL.](#connect-to-wsl)
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2017"
 
-Při použití vzdáleného připojení aplikace Visual Studio vytváří C++ na vzdáleném počítači projekty Linux. Nezáleží na tom, jestli se jedná o fyzický počítač, virtuální počítač v cloudu nebo WSL.
-Pro sestavení projektu Visual Studio zkopíruje zdrojový kód do vzdáleného počítače se systémem Linux. Pak se kód zkompiluje na základě nastavení aplikace Visual Studio.
+Při použití vzdáleného připojení, Visual Studio staví C++ Linux projekty na vzdáleném počítači. Nezáleží na tom, jestli je to fyzický počítač, virtuální počítač v cloudu nebo WSL.
+Chcete-li vytvořit projekt, Visual Studio zkopíruje zdrojový kód do vzdáleného počítače Linux. Potom kód zkompiluje na základě nastavení sady Visual Studio.
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
 > [!NOTE]
-> Visual Studio 2019 verze 16,5 a novější podporuje také zabezpečená kryptografická připojení standardu FIPS (Federal Information Processing Standard 140-2), která vyhovují systémům Linux pro vzdálené vývoj. Chcete-li použít připojení kompatibilní se standardem FIPS, použijte místo toho postup v části [Nastavení bezpečného vzdáleného nasazení systému Linux kompatibilního se standardem FIPS](set-up-fips-compliant-secure-remote-linux-development.md) .
+> Visual Studio 2019 verze 16.5 a novější také podporuje zabezpečené, Federal Information Processing Standard (FIPS) 140-2 kompatibilní kryptografická připojení k linuxovým systémům pro vzdálený vývoj. Chcete-li použít připojení kompatibilní s FIPS, postupujte podle pokynů v [části Nastavení zabezpečeného vzdáleného linuxového vývoje kompatibilního s FIPS.](set-up-fips-compliant-secure-remote-linux-development.md)
 
 ::: moniker-end
 
@@ -47,7 +47,7 @@ Pro sestavení projektu Visual Studio zkopíruje zdrojový kód do vzdáleného 
 
 ## <a name="set-up-the-ssh-server-on-the-remote-system"></a>Nastavení serveru SSH ve vzdáleném systému
 
-Pokud se SSH ještě nenastavuje a neběží v systému Linux, nainstalujte ho podle těchto kroků. Příklady v tomto článku používají Ubuntu 18,04 LTS s OpenSSH serverem verze 7,6. Nicméně pokyny by měly být stejné pro všechny distribuce s využitím středně poslední verze OpenSSH.
+Pokud ssh ještě není nastavena a spuštěna na vašem systému Linux, nainstalujte jej následujícím postupem. Příklady v tomto článku používají Ubuntu 18.04 LTS se serverem OpenSSH verze 7.6. Nicméně, pokyny by měly být stejné pro všechny distro pomocí mírně poslední verzi OpenSSH.
 
 1. V systému Linux nainstalujte a spusťte server OpenSSH:
 
@@ -56,7 +56,7 @@ Pokud se SSH ještě nenastavuje a neběží v systému Linux, nainstalujte ho p
    sudo service ssh start
    ```
 
-1. Pokud byste chtěli, aby se server SSH spouštěl automaticky při spuštění systému, povolte ho pomocí systemctl:
+1. Pokud chcete, aby se server ssh spouštěl automaticky při spuštění systému, povolte jej pomocí systemctl:
 
    ```bash
    sudo systemctl enable ssh
@@ -64,41 +64,41 @@ Pokud se SSH ještě nenastavuje a neběží v systému Linux, nainstalujte ho p
 
 ## <a name="set-up-the-remote-connection"></a>Nastavení vzdáleného připojení
 
-1. V aplikaci Visual Studio vyberte **nástroje > možnosti** na řádku nabídek a otevřete tak dialogové okno **Možnosti** . Pak vyberte pro **různé platformy > Správce připojení** a otevřete dialogové okno Správce připojení.
+1. V Sadě Visual Studio zvolte **Nástroje > Možnosti** na řádku nabídek a otevřete dialogové okno **Volby.** Pak vyberte **Cross Platform > Connection Manager** otevřete dialogové okno Connection Manager.
 
-   Pokud jste ještě před prvním sestavením projektu nevytvořili připojení v sadě Visual Studio, Visual Studio otevře pro vás dialog Správce připojení.
+   Pokud jste připojení v sadě Visual Studio ještě nenastavili, otevře visual studio při prvním sestavení projektu dialogové okno Connection Manager.
 
-1. V dialogovém okně Správce připojení kliknutím na tlačítko **Přidat** přidejte nové připojení.
+1. V dialogovém okně Správce připojení zvolte tlačítko **Přidat** a přidejte nové připojení.
 
    ![Správce připojení](media/settings_connectionmanager.png)
 
-   V obou případech se zobrazí okno **připojit ke vzdálenému systému** .
+   V obou případech se zobrazí okno **Připojit ke vzdálenému systému.**
 
-   ![Připojit ke vzdálenému systému](media/connect.png)
+   ![Připojení ke vzdálenému systému](media/connect.png)
 
 1. Zadejte následující informace:
 
-   | Entry | Popis
+   | Záznam | Popis
    | ----- | ---
    | **Název hostitele**           | Název nebo IP adresa cílového zařízení
-   | **Port**                | Port, na kterém běží služba SSH, obvykle 22
-   | **Uživatelské jméno**           | Uživatel, který se má ověřit jako
-   | **Typ ověřování** | Heslo a privátní klíč jsou podporovány současně.
+   | **Port**                | Port, na který je spuštěna služba SSH, obvykle 22
+   | **Uživatelské jméno**           | Uživatel k ověření jako
+   | **Typ ověřování** | Heslo a soukromý klíč jsou podporovány
    | **Heslo**            | Heslo pro zadané uživatelské jméno
-   | **Soubor privátního klíče**    | Soubor privátního klíče vytvořený pro připojení SSH
-   | **Hesel**          | Přístupové heslo použité s privátním klíčem vybraným výše
+   | **Soubor soukromého klíče**    | Soubor soukromého klíče vytvořený pro připojení ssh
+   | **Heslo**          | Přístupové heslo použité s výše vybraným soukromým klíčem
 
-   K ověřování můžete použít buď heslo, nebo soubor klíče a přístupové heslo. Pro mnoho scénářů vývoje je ověřování hesla dostatečné, ale soubory klíčů jsou bezpečnější. Pokud už máte pár klíčů, je možné ho znovu použít. V současné době Visual Studio podporuje jenom klíče RSA a DSA pro vzdálená připojení.
+   Pro ověřování můžete použít heslo nebo soubor klíče a přístupové heslo. Pro mnoho scénářů vývoje je ověřování hesla dostatečné, ale soubory klíčů jsou bezpečnější. Pokud již máte pár klíčů, je možné jej znovu použít. V současné době Visual Studio podporuje pouze RSA a DSA klíče pro vzdálená připojení.
 
-1. Klikněte na tlačítko **připojit** a pokuste se připojit ke vzdálenému počítači.
+1. Chcete-li se pokusit o připojení ke vzdálenému počítači, zvolte tlačítko **Připojit.**
 
-   Pokud je připojení úspěšné, Visual Studio nakonfiguruje technologii IntelliSense na používání vzdálených hlaviček. Další informace najdete v tématu [IntelliSense pro hlavičky ve vzdálených systémech](configure-a-linux-project.md#remote_intellisense).
+   Pokud je připojení úspěšné, Visual Studio nakonfiguruje intelliSense používat vzdálené záhlaví. Další informace naleznete v tématu [IntelliSense pro záhlaví ve vzdálených systémech](configure-a-linux-project.md#remote_intellisense).
 
-   Pokud se připojení nepovede, jsou vstupní pole, která je potřeba změnit, označená červeně.
+   Pokud se připojení nezdaří, jsou pole, která je třeba změnit, označena červeně.
 
    ![Chyba Správce připojení](media/settings_connectionmanagererror.png)
 
-   Pokud používáte soubory klíčů pro ověřování, ujistěte se, že je server SSH cílového počítače spuštěný a správně nakonfigurovaný.
+   Pokud používáte soubory klíčů pro ověřování, ujistěte se, že cílový počítač Je Server SSH běží a nakonfigurován správně.
 
    ::: moniker-end
 
@@ -106,17 +106,17 @@ Pokud se SSH ještě nenastavuje a neběží v systému Linux, nainstalujte ho p
 
 ## <a name="logging-for-remote-connections"></a>Protokolování pro vzdálená připojení
 
-   Můžete povolit protokolování, které vám pomůžou řešit problémy s připojením. Na panelu nabídek vyberte možnost **nástroje > možnosti**. V dialogovém okně **Možnosti** vyberte možnost **protokolování > pro různé platformy**:
+   Protokolování můžete povolit a pomoci tak vyřešit problémy s připojením. Na řádku nabídek vyberte **Nástroje > Možnosti**. V dialogovém okně **Možnosti** vyberte **Protokolování > příčná platforma**:
 
    ![Vzdálené protokolování](media/remote-logging-vs2019.png)
 
-   Protokoly zahrnují připojení, všechny příkazy odeslané do vzdáleného počítače (jejich text, ukončovací kód a čas spuštění) a veškerý výstup ze sady Visual Studio do prostředí. Protokolování funguje pro libovolný projekt CMake pro různé platformy nebo pro linuxový projekt založený na MSBuildu v sadě Visual Studio.
+   Protokoly zahrnují připojení, všechny příkazy odeslané do vzdáleného počítače (jejich text, ukončovací kód a čas spuštění) a veškerý výstup z visual studia do prostředí. Protokolování funguje pro jakýkoli projekt CMake napříč platformami nebo projekt Linux založený na MSBuild v sadě Visual Studio.
 
-   Výstup můžete nakonfigurovat tak, aby přešel do souboru nebo do podokna **protokolování pro různé platformy** v okně výstup. Pro projekty Linux založené na MSBuild nejsou příkazy MSBuild odeslané do vzdáleného počítače směrovány do **okno výstup** , protože jsou generovány mimo proces. Místo toho jsou protokolovány do souboru s předponou "msbuild_".
+   Výstup můžete nakonfigurovat tak, aby přešel do souboru nebo do **podokna Protokolování napříč platformami** v okně Výstup. Pro linuxové projekty založené na MSBuild nejsou příkazy MSBuild odeslané do vzdáleného počítače směrovány do **výstupního okna,** protože jsou vyzařovány mimo proces. Místo toho jsou zaznamenány do souboru s předponou "msbuild_".
 
 ## <a name="command-line-utility-for-the-connection-manager"></a>Nástroj příkazového řádku pro správce připojení  
 
-**Visual Studio 2019 verze 16,5 nebo novější**: ConnectionManager. exe je nástroj příkazového řádku pro správu připojení vzdáleného vývoje mimo sadu Visual Studio. Je vhodný pro úlohy, jako je například zřízení nového vývojového počítače. Nebo ho můžete použít k nastavení sady Visual Studio pro průběžnou integraci. Příklady a kompletní odkaz na příkaz ConnectionManager naleznete v tématu [ConnectionManager reference](connectionmanager-reference.md).  
+**Visual Studio 2019 verze 16.5 nebo novější**: ConnectionManager.exe je nástroj příkazového řádku pro správu vzdálených vývojových připojení mimo Visual Studio. Je to užitečné pro úkoly, jako je zřizování nového vývojového počítače. Nebo ji můžete použít k nastavení sady Visual Studio pro průběžnou integraci. Příklady a úplný odkaz na příkaz ConnectionManager naleznete v [tématu ConnectionManager reference](connectionmanager-reference.md).  
 
 ::: moniker-end
 
@@ -124,47 +124,47 @@ Pokud se SSH ještě nenastavuje a neběží v systému Linux, nainstalujte ho p
 
 ## <a name="tcp-port-forwarding"></a>Předávání portů TCP
 
-Podpora pro Linux v systému Visual Studio je závislá na předávání portů TCP. **Rsync** a **gdbserver** mají vliv na to, jestli je ve vzdáleném systému zakázané předávání portů TCP. Pokud to ovlivněno touto závislostí, můžete tento [lístek s návrhem](https://developercommunity.visualstudio.com/idea/840265/dont-rely-on-ssh-tcp-port-forwarding-for-c-remote.html) poslat na komunitu vývojářů.
+Podpora Linuxu sady Visual Studio má závislost na předávání portů TCP. **Rsync** a **gdbserver** jsou ovlivněny, pokud je předávání portů TCP ve vzdáleném systému zakázáno. Pokud jste touto závislostí ovlivněni, můžete tento [lístek návrhu](https://developercommunity.visualstudio.com/idea/840265/dont-rely-on-ssh-tcp-port-forwarding-for-c-remote.html) přehlasovat v komunitě vývojářů.
 
-rsync se používají v projektech Linux založených na MSBuildu i v projektech CMake ke [kopírování hlaviček ze vzdáleného systému do Windows pro použití v IntelliSense](configure-a-linux-project.md#remote_intellisense). Pokud nemůžete povolit předávání portů TCP, zakažte automatické stahování vzdálených hlaviček. Pokud ho chcete zakázat, použijte **nástroje > možnosti > pro různé platformy > Správce připojení > vzdálené záhlaví IntelliSense správce**. Pokud na vzdáleném systému není zapnuté předávání portů TCP, zobrazí se tato chyba, když se spustí stahování vzdálených hlaviček pro technologii IntelliSense:
+rsync je používán jak msbuild-založené linuxové projekty a CMake [projekty kopírovat záhlaví ze vzdáleného systému do systému Windows pro použití IntelliSense](configure-a-linux-project.md#remote_intellisense). Pokud nelze povolit předávání portů TCP, zakažte automatické stahování vzdálených záhlaví. Chcete-li jej zakázat, použijte **nástroje > možnosti > cross platformy > Connection Manager > vzdálené záhlaví IntelliSense Manager**. Pokud vzdálený systém nemá povoleno přesměrování portů TCP, zobrazí se tato chyba při zahájení stahování vzdálených záhlaví pro technologii IntelliSense:
 
-![Chyba hlaviček](media/port-forwarding-headers-error.png)
+![Chyba záhlaví](media/port-forwarding-headers-error.png)
 
-rsync je také používána podporou CMake sady Visual Studio ke kopírování zdrojových souborů do vzdáleného systému. Pokud nemůžete povolit předávání portů TCP, můžete jako metodu vzdálené kopie zdrojů použít SFTP. protokol SFTP je často pomalejší než rsync, ale nemá závislost na předávání portů TCP. Metodu vzdálené kopírování zdrojů můžete spravovat pomocí vlastnosti **remoteCopySourcesMethod** v [editoru nastavení cmake](../build/cmakesettings-reference.md#additional-settings-for-cmake-linux-projects). Pokud je přesměrování portu TCP na vzdáleném systému zakázané, při prvním vyvolání rsync se v okně výstupu CMake zobrazí chyba.
+rsync je také používán podporou CMake sady Visual Studio ke kopírování zdrojových souborů do vzdáleného systému. Pokud nelze povolit předávání portů TCP, můžete použít sftp jako metodu zdroje vzdálené kopie. sftp je často pomalejší než rsync, ale nemá závislost na předávání portů TCP. Metodu zdroje vzdálené kopie můžete spravovat pomocí **vlastnosti remoteCopySourcesMethod** v [Editoru nastavení CMake](../build/cmakesettings-reference.md#additional-settings-for-cmake-linux-projects). Pokud je přesměrování portů TCP ve vzdáleném systému zakázáno, zobrazí se chyba ve výstupním okně CMake při prvním vyvolání rsync.
 
 ![Chyba rsync](media/port-forwarding-copy-error.png)
 
-gdbserver se dá použít k ladění na integrovaných zařízeních. Pokud nemůžete povolit předávání portů TCP, musíte použít GDB pro všechny scénáře vzdáleného ladění. GDB se ve výchozím nastavení používá při ladění projektů ve vzdáleném systému.
+gdbserver lze použít pro ladění na vložených zařízeních. Pokud nelze povolit předávání portů TCP, musíte použít gdb pro všechny scénáře vzdáleného ladění. gdb se používá ve výchozím nastavení při ladění projektů ve vzdáleném systému.
 
-## <a name="connect-to-wsl"></a>Připojení k WSL
+## <a name="connect-to-wsl"></a>Připojení k wsl
 
 ::: moniker-end
 
 ::: moniker range="vs-2017"
 
-V aplikaci Visual Studio 2017 použijete stejný postup pro připojení k WSL při použití pro vzdálený počítač se systémem Linux. Pro **název hostitele**použijte **localhost** .
+V sadě Visual Studio 2017 používáte stejné kroky pro připojení k WSL jako pro vzdálený počítač s Linuxem. Použijte **localhost** pro **název hostitele**.
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-Visual Studio 2019 verze 16,1 přidala nativní podporu pro C++ použití s podsystémem [Windows pro Linux (WSL)](/windows/wsl/about). To znamená, že můžete vytvořit a ladit přímo na místní instalaci WSL. Už nemusíte přidávat vzdálené připojení ani konfigurovat SSH. Podrobnosti o [tom, jak nainstalovat WSL](/windows/wsl/install-win10) , najdete tady.
+Visual Studio 2019 verze 16.1 přidal nativní podporu pro použití C++ s [Windows Subsystem pro Linux (WSL)](/windows/wsl/about). To znamená, že můžete přímo vytvářet a ladit místní instalaci WSL. Již není nutné přidávat vzdálené připojení nebo konfigurovat SSH. Podrobnosti o [instalaci WSL](/windows/wsl/install-win10) naleznete zde.
 
-Chcete-li nakonfigurovat WSL instalaci pro práci se sadou Visual Studio, je třeba nainstalovat následující nástroje: RSZ, Clang, GDB, make, rsync a zip. Můžete je nainstalovat do distribuce, které používají APT, pomocí tohoto příkazu, který také nainstaluje kompilátor g + +:
+Chcete-li nakonfigurovat instalaci WSL pro práci s Visual Studio, budete potřebovat následující nástroje nainstalované: gcc nebo clang, gdb, make, ninja-build (vyžadováno pouze pro projekty CMake pomocí Visual Studio 2019 verze 16.6 nebo novější), rsync a zip. Můžete je nainstalovat na distribuce, které používají apt pomocí tohoto příkazu, který také nainstaluje kompilátor g++:
 
 ```bash
-sudo apt install g++ gdb make rsync zip
+sudo apt install g++ gdb make ninja-build rsync zip
 ```
 
-Další informace najdete v tématu [stažení, instalace a nastavení úlohy Linux](download-install-and-setup-the-linux-development-workload.md).
+Další informace naleznete v [tématu Stažení, instalace a nastavení úlohy Linuxu](download-install-and-setup-the-linux-development-workload.md).
 
-Chcete-li nakonfigurovat projekt MSBuild pro WSL, přečtěte si téma [konfigurace projektu pro Linux](configure-a-linux-project.md). Pokud chcete nakonfigurovat projekt CMake pro WSL, přečtěte si téma [konfigurace projektu Linux cmake](cmake-linux-project.md). Pokud chcete postupovat podle podrobných pokynů pro vytvoření jednoduché konzolové aplikace pomocí WSL, podívejte se na tento úvodní příspěvek na blogu v [ C++ článku Visual Studio 2019 a v subsystému Windows pro Linux (WSL)](https://devblogs.microsoft.com/cppblog/c-with-visual-studio-2019-and-windows-subsystem-for-linux-wsl/).
+Pokud chcete nakonfigurovat projekt MSBuild pro WSL, přečtěte si informace [o konfiguraci linuxového projektu](configure-a-linux-project.md). Pokud chcete nakonfigurovat projekt CMake pro WSL, přečtěte si informace [o konfiguraci projektu Linux CMake](cmake-linux-project.md). Chcete-li postupovat podle podrobných pokynů pro vytvoření jednoduché konzolové aplikace s WSL, podívejte se na tento úvodní blogový příspěvek na [C++ s Visual Studio 2019 a Podsystémem Windows pro Linux (WSL)](https://devblogs.microsoft.com/cppblog/c-with-visual-studio-2019-and-windows-subsystem-for-linux-wsl/).
 
 ::: moniker-end
 
 ## <a name="see-also"></a>Viz také
 
-[Konfigurace\ projektu pro Linux](configure-a-linux-project.md)
-[Konfigurace projektu Linux cmake](cmake-linux-project.md)\
-[Nasazení, spuštění a ladění projektu pro Linux](deploy-run-and-debug-your-linux-project.md)\
+[Konfigurace projektu Linuxu](configure-a-linux-project.md)\
+[Konfigurace projektu Linux CMake](cmake-linux-project.md)\
+[Nasazení, spuštění a ladění projektu Linuxu](deploy-run-and-debug-your-linux-project.md)\
 [Konfigurace ladicích relací CMake](../build/configure-cmake-debugging-sessions.md)

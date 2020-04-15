@@ -12,16 +12,16 @@ helpviewer_keywords:
 - std::basic_stringstream [C++], rdbuf
 - std::basic_stringstream [C++], str
 ms.assetid: 49629814-ca37-45c5-931b-4ff894e6ebd2
-ms.openlocfilehash: ebf9b87b60cf790a2ca032eb805095f277324178
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: f08689b1080837f042abfb3c4c52bb0ad558a448
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79416779"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364874"
 ---
 # <a name="basic_stringstream-class"></a>basic_stringstream – třída
 
-Popisuje objekt, který ovládá vkládání a extrakci prvků a kódovaných objektů pomocí vyrovnávací paměti datového proudu třídy [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **elem**, **TR**, `Alloc`>.
+Popisuje objekt, který řídí vkládání a extrakci prvků a kódovaných objektů pomocí vyrovnávací paměti `Alloc` datového proudu třídy [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **Elem**, **Tr**,>.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -32,18 +32,18 @@ class basic_stringstream : public basic_iostream<Elem, Tr>
 
 ### <a name="parameters"></a>Parametry
 
-\ *přidělení*
+*Alloc*\
 Třída alokátoru
 
 *Elem*\
 Typ základního prvku řetězce.
 
 *Tr*\
-Vlastnosti znaků specializované na základní prvek řetězce.
+Znakové znaky specializované na základní prvek řetězce.
 
 ## <a name="remarks"></a>Poznámky
 
-Šablona třídy popisuje objekt, který ovládá vkládání a extrakci prvků a kódovaných objektů pomocí vyrovnávací paměti datového proudu třídy [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **elem**, **TR**, `Alloc`>, s prvky typu `Elem`, jejichž znakové vlastnosti jsou určeny třídou `Tr`a jejichž prvky jsou přiděleny pomocí přidělování třídy `Alloc`. Objekt ukládá objekt třídy basic_stringbuf < **elem**, **TR**`Alloc`>.
+Šablona třídy popisuje objekt, který řídí vkládání a extrakci prvků a kódovaných objektů pomocí `Alloc` vyrovnávací paměti datového `Elem`proudu třídy [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **Elem**, **Tr**,>, s prvky `Alloc`typu , jehož znakové znaky jsou určeny třídou `Tr`a jejichž prvky jsou přiděleny alokátorem třídy . Objekt ukládá objekt třídy basic_stringbuf< **Elem**, **Tr**, `Alloc`>.
 
 ### <a name="constructors"></a>Konstruktory
 
@@ -55,30 +55,30 @@ Vlastnosti znaků specializované na základní prvek řetězce.
 
 |Název typu|Popis|
 |-|-|
-|[allocator_type](#allocator_type)|Typ je synonymum pro parametr šablony `Alloc`.|
+|[allocator_type](#allocator_type)|Typ je synonymem pro `Alloc`parametr šablony .|
 
 ### <a name="member-functions"></a>Členské funkce
 
 |Členská funkce|Popis|
 |-|-|
-|[rdbuf](#rdbuf)|Vrátí adresu vyrovnávací paměti uloženého datového proudu typu `pointer` do [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< `Elem`, `Tr``Alloc`>.|
-|[str](#str)|Nastaví nebo získá text v bufferu řetězce beze změny pozice zápisu.|
+|[rdbuf](#rdbuf)|Vrátí adresu uložené vyrovnávací paměti `pointer` datového proudu `Alloc` typu [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< `Elem`, `Tr`,>.|
+|[Str](#str)|Nastaví nebo získá text ve vyrovnávací paměti řetězce bez změny polohy zápisu.|
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<sstream >
+**Záhlaví:** \<sstream>
 
 **Obor názvů:** std
 
-## <a name="allocator_type"></a>basic_stringstream:: allocator_type
+## <a name="basic_stringstreamallocator_type"></a><a name="allocator_type"></a>basic_stringstream::allocator_type
 
-Typ je synonymum pro parametr šablony `Alloc`.
+Typ je synonymem pro `Alloc`parametr šablony .
 
 ```cpp
 typedef Alloc allocator_type;
 ```
 
-## <a name="basic_stringstream"></a>basic_stringstream:: basic_stringstream
+## <a name="basic_stringstreambasic_stringstream"></a><a name="basic_stringstream"></a>basic_stringstream::basic_stringstream
 
 Vytvoří objekt typu `basic_stringstream`.
 
@@ -91,20 +91,20 @@ explicit basic_stringstream(const basic_string<Elem, Tr, Alloc>& str, ios_base::
 ### <a name="parameters"></a>Parametry
 
 *_Mode*\
-Jeden z výčtů ve [ios_base:: openmode](../standard-library/ios-base-class.md#openmode).
+Jeden z výčtů v [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
-\ *str*
+*Str*\
 Objekt typu `basic_string`.
 
 ### <a name="remarks"></a>Poznámky
 
-První konstruktor inicializuje základní třídu voláním [basic_iostream](../standard-library/basic-iostream-class.md)( **SB**), kde `sb` je uložený objekt třídy [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **elem**, **TR**`Alloc`>. Inicializuje také `sb` voláním basic_stringbuf < **elem**, **TR**`Alloc`> (`_Mode`).
+První konstruktor inicializuje základní třídu voláním [basic_iostream](../standard-library/basic-iostream-class.md)( **sb** `sb` ), kde je uložený objekt třídy [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **Elem**, **Tr**, `Alloc`>. Inicializuje `sb` se také na basic_stringbuf< `Alloc` **Elem**, **Tr**,>( `_Mode`).
 
-Druhý konstruktor inicializuje základní třídu voláním basic_iostream ( **SB**). Inicializuje také `sb` voláním basic_stringbuf < **elem**, **TR**`Alloc`> (_ *str*, `_Mode`).
+Druhý konstruktor inicializuje základní třídu voláním basic_iostream( **sb**). Inicializuje `sb` se také na basic_stringbuf< `Alloc` **Elem**, `_Mode` **Tr**,>(_ *Str*).
 
-## <a name="rdbuf"></a>basic_stringstream:: rdbuf
+## <a name="basic_stringstreamrdbuf"></a><a name="rdbuf"></a>basic_stringstream::rdbuf
 
-Vrátí adresu vyrovnávací paměti uloženého datového proudu typu **ukazatel** na [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **elem**, **TR**`Alloc`>.
+Vrátí adresu uložené vyrovnávací paměti datového proudu **ukazatele** typu `Alloc` [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **Elem**, **Tr**,>.
 
 ```cpp
 basic_stringbuf<Elem, Tr, Alloc> *rdbuf() const;
@@ -112,15 +112,15 @@ basic_stringbuf<Elem, Tr, Alloc> *rdbuf() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Adresa vyrovnávací paměti uloženého datového proudu typu `pointer` do basic_stringbuf < **elem**, **TR**`Alloc`>.
+Adresa uložené vyrovnávací paměti `pointer` datového proudu typu basic_stringbuf< **Elem**, **Tr**, `Alloc`>.
 
 ### <a name="example"></a>Příklad
 
-Příklad, který používá `rdbuf`, naleznete v tématu [basic_filebuf:: Close](../standard-library/basic-filebuf-class.md#close) .
+Viz [basic_filebuf::close](../standard-library/basic-filebuf-class.md#close) pro příklad, který používá `rdbuf`.
 
-## <a name="str"></a>basic_stringstream:: str
+## <a name="basic_stringstreamstr"></a><a name="str"></a>basic_stringstream::str
 
-Nastaví nebo získá text v bufferu řetězce beze změny pozice zápisu.
+Nastaví nebo získá text ve vyrovnávací paměti řetězce bez změny polohy zápisu.
 
 ```cpp
 basic_string<Elem, Tr, Alloc> str() const;
@@ -136,18 +136,18 @@ Nový řetězec.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí objekt třídy [basic_string](../standard-library/basic-string-class.md)< **elem**, **TR**, `Alloc`>, jehož řízená sekvence je kopií sekvence řízené **\*m**.
+Vrátí hodnotu objektu třídy `Alloc` [basic_string](../standard-library/basic-string-class.md)< **Elem**, **Tr**,>, jehož řízená sekvence je kopií sekvence řízené ** \*touto**hodnotou .
 
 ### <a name="remarks"></a>Poznámky
 
-První členská funkce vrátí [rdbuf](#rdbuf) -> [str](../standard-library/basic-stringbuf-class.md#str). Druhá členská funkce volá `rdbuf` -> **str**(`_Newstr`).
+První členská funkce vrátí [rdbuf](#rdbuf) -> [str](../standard-library/basic-stringbuf-class.md#str). Druhá členská `rdbuf`  -> funkce `_Newstr`volá **str**( ).
 
 ### <a name="example"></a>Příklad
 
-Příklad, který používá `str`, naleznete v tématu [basic_stringbuf:: str](../standard-library/basic-stringbuf-class.md#str) .
+Viz [basic_stringbuf::str](../standard-library/basic-stringbuf-class.md#str) pro příklad, který používá `str`.
 
 ## <a name="see-also"></a>Viz také
 
-[Bezpečnost vlákna ve C++ standardní knihovně](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[iostream – programování](../standard-library/iostream-programming.md)\
-[iostreams – konvence](../standard-library/iostreams-conventions.md)
+[Bezpečnost vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[programování iostreamu](../standard-library/iostream-programming.md)\
+[iostreams úmluvy](../standard-library/iostreams-conventions.md)

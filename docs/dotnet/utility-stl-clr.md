@@ -39,16 +39,16 @@ helpviewer_keywords:
 - operator<= member [STL/CLR]
 - operator< member [STL/CLR]
 ms.assetid: fb48cb75-d5ef-47ce-b526-bf60dc86c552
-ms.openlocfilehash: a841c41c8f640dcde2a3d98841f66f6c6dc04602
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 6d025230abcff42e367a231e616a13f0f8c684f0
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80208283"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81320295"
 ---
 # <a name="utility-stlclr"></a>utility (STL/CLR)
 
-Zahrňte `<cliext/utility>` záhlaví STL/CLR pro definování `pair` třídy šablony a několika pomocných funkcí šablon.
+Zahrňte hlavičku `<cliext/utility>` STL/CLR `pair` a definujte třídu šablony a několik podpůrných funkcí šablony.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -58,33 +58,34 @@ Zahrňte `<cliext/utility>` záhlaví STL/CLR pro definování `pair` třídy š
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<cliext –/utility >
+**Záhlaví:** \<cliext/utility>
 
-**Obor názvů:** cliext –
+**Obor názvů:** cliext
 
 ## <a name="declarations"></a>Deklarace
 
 |Třída|Popis|
 |-----------|-----------------|
-|[pair (STL/CLR)](#pair)|Zabalte dvojici prvků.|
+|[pair (STL/CLR)](#pair)|Zabalte pár prvků.|
 
 |Operátor|Popis|
 |--------------|-----------------|
-|[operator== (pair) (STL/CLR)](#op_eq)|Párování rovnosti.|
-|[operator!= (pair) (STL/CLR)](#op_neq)|Dvojice není shodná s porovnáním.|
-|[operator< (pair) (STL/CLR)](#op_lt)|Dvojice je menší než porovnání.|
-|[operator\<= (párové) – operátor (STL/CLR)](#op_lteq)|Dvojice je menší nebo rovna hodnotě porovnání.|
-|[operator> (pair) (STL/CLR)](#op_gt)|Dvojice je větší než porovnání.|
-|[operator>= (pair) (STL/CLR)](#op_gteq)|Dvojice, která je větší nebo rovna porovnání|
+|[operator== (pair) (STL/CLR)](#op_eq)|Pár rovná porovnání.|
+|[operátor!= (pár) (STL/CLR)](#op_neq)|Dvojice není rovna porovnání.|
+|[operátor< (pár) (STL/CLR)](#op_lt)|Spárovat méně než porovnání.|
+|[operátor\<= (pár) (STL/CLR)](#op_lteq)|Spárovat porovnání menší než nebo rovno porovnání.|
+|[operátor> (pár) (STL/CLR)](#op_gt)|Pár větší než porovnání.|
+|[operátor>= (pár) (STL/CLR)](#op_gteq)|Spárovat porovnání větší než nebo rovno porovnání.|
 
 |Funkce|Popis|
 |--------------|-----------------|
-|[make_pair (STL/CLR)](#make_pair)|Vytvořte dvojici z páru hodnot.|
+|[make_pair (STL/CLR)](#make_pair)|Vytvořte pár z dvojice hodnot.|
 
 ## <a name="members"></a>Členové
 
-## <a name="pair-stlclr"></a><a name="pair"></a>párové (STL/CLR)
-Třída šablony popisuje objekt, který zabalí dvojici hodnot.
+## <a name="pair-stlclr"></a><a name="pair"></a>pár (STL/CLR)
+
+Třída šablony popisuje objekt, který obtéká dvojici hodnot.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -99,7 +100,7 @@ template<typename Value1,
 *Hodnota1*<br/>
 Typ první zabalené hodnoty.
 
-*Argument*<br/>
+*Hodnota2*<br/>
 Typ druhé zabalené hodnoty.
 
 ## <a name="members"></a>Členové
@@ -116,20 +117,20 @@ Typ druhé zabalené hodnoty.
 
 |Členská funkce|Popis|
 |---------------------|-----------------|
-|[pair::pair (STL/CLR)](#pair_pair)|Vytvoří dvojici objektu.|
+|[pair::pair (STL/CLR)](#pair_pair)|Vytvoří objekt dvojice.|
 |[pair::swap (STL/CLR)](#swap)|Zamění obsah dvou párů.|
 
 |Operátor|Popis|
 |--------------|-----------------|
-|[pair::operator= (STL/CLR)](#op_as)|Nahradí uložený pár hodnot.|
+|[pair::operator= (STL/CLR)](#op_as)|Nahradí uloženou dvojici hodnot.|
 
 ## <a name="remarks"></a>Poznámky
 
-Objekt ukládá dvojici hodnot. Tuto třídu šablony použijete ke kombinování dvou hodnot do jednoho objektu. Také `cliext::pair` objektu (popsané zde) ukládá pouze spravované typy; Chcete-li uložit dvojici nespravovaných typů, použijte `std::pair`deklarované v `<utility>`.
+Objekt ukládá dvojici hodnot. Tato třída šablony slouží ke sloučení dvou hodnot do jednoho objektu. Objekt `cliext::pair` (popsaný zde) také ukládá pouze spravované typy; chcete-li uložit dvojici `std::pair`nespravovaných typů použití , deklarované v `<utility>`.
 
-## <a name="pairfirst-stlclr"></a><a name="first"></a>párové:: First (STL/CLR)
+## <a name="pairfirst-stlclr"></a><a name="first"></a>pár::první (STL/CLR)
 
-První zabalená hodnota.
+První zabalené hodnoty.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -139,7 +140,7 @@ Value1 first;
 
 ### <a name="remarks"></a>Poznámky
 
-Objekt ukládá první zabalenou hodnotu.
+Objekt ukládá první zalomenou hodnotu.
 
 ### <a name="example"></a>Příklad
 
@@ -164,7 +165,7 @@ int main()
 [x, 3]
 ```
 
-## <a name="pairfirst_type-stlclr"></a><a name="first_type"></a>párové:: first_type (STL/CLR)
+## <a name="pairfirst_type-stlclr"></a><a name="first_type"></a>dvojice::first_type (STL/CLR)
 
 Typ první zabalené hodnoty.
 
@@ -176,7 +177,7 @@ typedef Value1 first_type;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ je synonymum pro parametr šablony *hodnota1*.
+Typ je synonymem pro parametr šablony *Value1*.
 
 ### <a name="example"></a>Příklad
 
@@ -201,9 +202,9 @@ int main()
 [x, 3]
 ```
 
-## <a name="pairoperator-stlclr"></a><a name="op_as"></a>párové:: operator = (STL/CLR)
+## <a name="pairoperator-stlclr"></a><a name="op_as"></a>pár::operátor= (STL/CLR)
 
-Nahradí uložený pár hodnot.
+Nahradí uloženou dvojici hodnot.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -213,12 +214,12 @@ pair<Value1, Value2>% operator=(pair<Value1, Value2>% right);
 
 #### <a name="parameters"></a>Parametry
 
-*Kliknutím*<br/>
-Pár ke zkopírování.
+*Právo*<br/>
+Spárujte ke kopírování.
 
 ### <a name="remarks"></a>Poznámky
 
-Operátor členu kopíruje *přímo* na objekt a potom vrátí `*this`. Použijete ho k nahrazení uložené dvojice hodnot pomocí kopie uložené dvojice hodnot *vpravo*.
+Operátor člena zkopíruje *právo* na `*this`objekt a pak vrátí . Slouží k nahrazení uložené dvojice hodnot kopií uložené dvojice hodnot v *pravé .*
 
 ### <a name="example"></a>Příklad
 
@@ -245,9 +246,9 @@ int main()
 [x, 3]
 ```
 
-## <a name="pairpair-stlclr"></a><a name="pair_pair"></a>párové::p Air (STL/CLR)
+## <a name="pairpair-stlclr"></a><a name="pair_pair"></a>pár::pair (STL/CLR)
 
-Vytvoří dvojici objektu.
+Vytvoří objekt dvojice.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -260,14 +261,14 @@ pair(Value1 val1, Value2 val2);
 
 #### <a name="parameters"></a>Parametry
 
-*Kliknutím*<br/>
-Pár, který se má uložit
+*Právo*<br/>
+Spárujte do uložení.
 
-*Val1*<br/>
-První hodnota, která se má uložit
+*val1*<br/>
+První hodnota k uložení.
 
-*Val2*<br/>
-Druhá hodnota, která se má uložit
+*val2*<br/>
+Druhá hodnota pro uložení.
 
 ### <a name="remarks"></a>Poznámky
 
@@ -275,23 +276,23 @@ Konstruktor:
 
 `pair();`
 
-Inicializuje uložený pár s výchozími konstruovanými hodnotami.
+inicializuje uloženou dvojici s výchozími vytvořenými hodnotami.
 
 Konstruktor:
 
 `pair(pair<Value1, Value2>% right);`
 
-Inicializuje uložený pár pomocí `right.`[dvojice:: First (STL/CLR)](../dotnet/pair-first-stl-clr.md) a `right.`[dvojice:: Second (STL/CLR)](../dotnet/pair-second-stl-clr.md).
+inicializuje uloženou `right.`dvojici s [pair::first (STL/CLR)](../dotnet/pair-first-stl-clr.md) a `right.` [pair::second (STL/CLR).](../dotnet/pair-second-stl-clr.md)
 
 `pair(pair<Value1, Value2>^ right);`
 
-Inicializuje uložený pár pomocí `right->`[dvojice:: First (STL/CLR)](../dotnet/pair-first-stl-clr.md) a `right>`[dvojice:: Second (STL/CLR)](../dotnet/pair-second-stl-clr.md).
+inicializuje uloženou `right->`dvojici s [pair::first (STL/CLR)](../dotnet/pair-first-stl-clr.md) a `right>` [pair::second (STL/CLR).](../dotnet/pair-second-stl-clr.md)
 
 Konstruktor:
 
 `pair(Value1 val1, Value2 val2);`
 
-Inicializuje uložený pár pomocí *Val1* a *Val2*.
+inicializuje uloženou dvojici s *val1* a *val2*.
 
 ### <a name="example"></a>Příklad
 
@@ -330,9 +331,9 @@ int main()
 [x, 3]
 ```
 
-## <a name="pairsecond-stlclr"></a><a name="second"></a>párové:: Second (STL/CLR)
+## <a name="pairsecond-stlclr"></a><a name="second"></a>pár::sekunda (STL/CLR)
 
-Druhá zabalená hodnota.
+Druhá zalomená hodnota.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -342,7 +343,7 @@ Value2 second;
 
 ### <a name="remarks"></a>Poznámky
 
-Objekt ukládá druhou zabalenou hodnotu.
+Objekt ukládá druhou zalomenou hodnotu.
 
 ### <a name="example"></a>Příklad
 
@@ -367,7 +368,7 @@ int main()
 [x, 3]
 ```
 
-## <a name="pairsecond_type-stlclr"></a><a name="second_type"></a>párové:: second_type (STL/CLR)
+## <a name="pairsecond_type-stlclr"></a><a name="second_type"></a>dvojice::second_type (STL/CLR)
 
 Typ druhé zabalené hodnoty.
 
@@ -379,7 +380,7 @@ typedef Value2 second_type;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ je synonymum pro parametr šablony *hodnota2*.
+Typ je synonymem pro parametr šablony *Value2*.
 
 ### <a name="example"></a>Příklad
 
@@ -404,7 +405,7 @@ int main()
 [x, 3]
 ```
 
-## <a name="pairswap-stlclr"></a><a name="swap"></a>párové:: swap (STL/CLR)
+## <a name="pairswap-stlclr"></a><a name="swap"></a>pár::swap (STL/CLR)
 
 Zamění obsah dvou párů.
 
@@ -416,12 +417,12 @@ void swap(pair<Value1, Value2>% right);
 
 #### <a name="parameters"></a>Parametry
 
-*Kliknutím*<br/>
-Dvojici, pomocí které se má obsah prohodit.
+*Právo*<br/>
+Spárujte obsah a vyměňte si obsah.
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce přemění uloženou dvojici hodnot mezi `*this` a *Right*.
+Členská funkce zamění uloženou `*this` dvojici hodnot mezi a *vpravo*.
 
 ### <a name="example"></a>Příklad
 
@@ -475,7 +476,7 @@ a b c
 
 ## <a name="make_pair-stlclr"></a><a name="make_pair"></a>make_pair (STL/CLR)
 
-Vytvoří `pair` z páru hodnot.
+Vytvořte `pair` z dvojice hodnot.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -490,18 +491,18 @@ template<typename Value1,
 *Hodnota1*<br/>
 Typ první zabalené hodnoty.
 
-*Argument*<br/>
+*Hodnota2*<br/>
 Typ druhé zabalené hodnoty.
 
-*první*<br/>
-První hodnota, která se má zabalit
+*První*<br/>
+První hodnota zalomit.
 
-*první*<br/>
-Druhá hodnota, která se má zabalit
+*Druhé*<br/>
+Druhá hodnota zalomit.
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce šablony vrací `pair<Value1, Value2>(first, second)`. Použijete ji k vytvoření objektu `pair<Value1, Value2>` z páru hodnot.
+Funkce šablony `pair<Value1, Value2>(first, second)`vrátí . Slouží k vytvoření `pair<Value1, Value2>` objektu z dvojice hodnot.
 
 ### <a name="example"></a>Příklad
 
@@ -526,9 +527,9 @@ int main()
 [y, 4]
 ```
 
-## <a name="operator-pair-stlclr"></a><a name="op_neq"></a>operator! = (Pair) – operátor (STL/CLR)
+## <a name="operator-pair-stlclr"></a><a name="op_neq"></a>operátor!= (pár) (STL/CLR)
 
-Dvojice není shodná s porovnáním.
+Dvojice není rovna porovnání.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -541,15 +542,15 @@ template<typename Value1,
 
 #### <a name="parameters"></a>Parametry
 
-*zbývá*<br/>
-Levý pár k porovnání
+*Vlevo*<br/>
+Levý pár k porovnání.
 
-*Kliknutím*<br/>
-Pravý pár, který se má porovnat.
+*Právo*<br/>
+Správný pár k porovnání.
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce operátoru vrací `!(left == right)`. Použijete ho k otestování, jestli *vlevo* není seřazené stejně jako *právo* , pokud jsou tyto dva páry porovnány s elementy podle elementu.
+Funkce operátoru `!(left == right)`vrátí . Můžete použít k testování zda *left* není objednané stejné jako *right* při porovnání element po elementu dva páry.
 
 ### <a name="example"></a>Příklad
 
@@ -580,9 +581,9 @@ int main()
 [x 3] != [x 4] is True
 ```
 
-## <a name="operatorlt-pair-stlclr"></a><a name="op_lt"></a>operator&lt; (párové) – operátor (STL/CLR)
+## <a name="operatorlt-pair-stlclr"></a><a name="op_lt"></a>operátor&lt; (pár) (STL/CLR)
 
-Dvojice je menší než porovnání.
+Spárovat méně než porovnání.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -595,15 +596,15 @@ template<typename Value1,
 
 #### <a name="parameters"></a>Parametry
 
-*zbývá*<br/>
-Levý pár k porovnání
+*Vlevo*<br/>
+Levý pár k porovnání.
 
-*Kliknutím*<br/>
-Pravý pár, který se má porovnat.
+*Právo*<br/>
+Správný pár k porovnání.
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce operator vrací `left.first <` `right.first || !(right.first <` `left.first &&` `left.second <` `right.second`. Použijete ji k otestování, zda je před porovnáním obou párů na základě prvku porovnáváno *levé* *straně.*
+Funkce operátoru `left.first <` `right.first || !(right.first <` `left.first &&` `left.second <` `right.second`vrátí . Můžete použít k testování zda *left* je objednané před *right* při porovnání element po elementu dva páry.
 
 ### <a name="example"></a>Příklad
 
@@ -634,9 +635,9 @@ int main()
 [x 3] < [x 4] is True
 ```
 
-## <a name="operatorlt-pair-stlclr"></a><a name="op_lteq"></a>operator&lt;= (párové) – operátor (STL/CLR)
+## <a name="operatorlt-pair-stlclr"></a><a name="op_lteq"></a>operátor&lt;= (pár) (STL/CLR)
 
-Dvojice je menší nebo rovna hodnotě porovnání.
+Spárovat porovnání menší než nebo rovno porovnání.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -649,15 +650,15 @@ template<typename Value1,
 
 #### <a name="parameters"></a>Parametry
 
-*zbývá*<br/>
-Levý pár k porovnání
+*Vlevo*<br/>
+Levý pár k porovnání.
 
-*Kliknutím*<br/>
-Pravý pár, který se má porovnat.
+*Právo*<br/>
+Správný pár k porovnání.
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce operátoru vrací `!(right < left)`. Použijete ho k otestování, jestli není po *pravé straně* při porovnání obou párů na základě prvku k *stranu* seřazená.
+Funkce operátoru `!(right < left)`vrátí . Můžete použít k testování zda *left* není objednané po *right* při porovnání element po elementu dva páry.
 
 ### <a name="example"></a>Příklad
 
@@ -688,9 +689,9 @@ int main()
 [x 4] <= [x 3] is False
 ```
 
-## <a name="operator-pair-stlclr"></a><a name="op_eq"></a>operator = = (Pair) – operátor (STL/CLR)
+## <a name="operator-pair-stlclr"></a><a name="op_eq"></a>operátor== (pár) (STL/CLR)
 
-Párování rovnosti.
+Pár rovná porovnání.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -703,15 +704,15 @@ template<typename Value1,
 
 #### <a name="parameters"></a>Parametry
 
-*zbývá*<br/>
-Levý pár k porovnání
+*Vlevo*<br/>
+Levý pár k porovnání.
 
-*Kliknutím*<br/>
-Pravý pár, který se má porovnat.
+*Právo*<br/>
+Správný pár k porovnání.
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce operator vrací `left.first ==` `right.first &&` `left.second ==` `right.second`. Použijete ji k otestování, zda je *levé* řazení stejné jako *pravé* , pokud jsou obě dvojice porovnány podle elementu.
+Funkce operátoru `left.first ==` `right.first &&` `left.second ==` `right.second`vrátí . Můžete použít k testování zda *left* je objednané stejné jako *right* při porovnání element po elementu dva páry.
 
 ### <a name="example"></a>Příklad
 
@@ -742,9 +743,9 @@ int main()
 [x 3] == [x 4] is False
 ```
 
-## <a name="operatorgt-pair-stlclr"></a><a name="op_gt"></a>operator&gt; (párové) – operátor (STL/CLR)
+## <a name="operatorgt-pair-stlclr"></a><a name="op_gt"></a>operátor&gt; (pár) (STL/CLR)
 
-Dvojice je větší než porovnání.
+Pár větší než porovnání.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -757,15 +758,15 @@ template<typename Value1,
 
 #### <a name="parameters"></a>Parametry
 
-*zbývá*<br/>
-Levý pár k porovnání
+*Vlevo*<br/>
+Levý pár k porovnání.
 
-*Kliknutím*<br/>
-Pravý pár, který se má porovnat.
+*Právo*<br/>
+Správný pár k porovnání.
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce operator vrací `right` `<` `left`. Použijete ji k otestování, *zda je* po *pravé* době porovnávána dvojice dvou párů elementem.
+Funkce operátoru `right` `<` `left`vrátí . Můžete použít k testování zda *left* je objednáno po *right* při porovnání element po elementu dva páry.
 
 ### <a name="example"></a>Příklad
 
@@ -796,9 +797,9 @@ int main()
 [x 4] > [x 3] is True
 ```
 
-## <a name="operatorgt-pair-stlclr"></a><a name="op_gteq"></a>operator&gt;= (párové) – operátor (STL/CLR)
+## <a name="operatorgt-pair-stlclr"></a><a name="op_gteq"></a>operátor&gt;= (pár) (STL/CLR)
 
-Dvojice, která je větší nebo rovna porovnání
+Spárovat porovnání větší než nebo rovno porovnání.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -811,15 +812,15 @@ template<typename Value1,
 
 #### <a name="parameters"></a>Parametry
 
-*zbývá*<br/>
-Levý pár k porovnání
+*Vlevo*<br/>
+Levý pár k porovnání.
 
-*Kliknutím*<br/>
-Pravý pár, který se má porovnat.
+*Právo*<br/>
+Správný pár k porovnání.
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce operátoru vrací `!(left < right)`. Použijete ji k otestování, zda je *ponecháno* před *pravou* , pokud jsou obě dvojice porovnány elementem podle elementu.
+Funkce operátoru `!(left < right)`vrátí . Můžete použít k testování zda *left* není objednané před *right* při porovnání element po elementu dva páry.
 
 ### <a name="example"></a>Příklad
 

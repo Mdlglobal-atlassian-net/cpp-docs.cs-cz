@@ -13,20 +13,20 @@ helpviewer_keywords:
 - dllexport attribute [C++]
 - dllexport attribute [C++], classes [C++]
 ms.assetid: 8d7d1303-b9e9-47ca-96cc-67bf444a08a9
-ms.openlocfilehash: 7d67660fa3b5d57c56d02d5526f0a9ea294a8eef
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: c0a2c96a37f58c956976980beafd5ecbed4d1318
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80187827"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81365122"
 ---
 # <a name="using-dllimport-and-dllexport-in-c-classes"></a>Používání příkazů dllimport a dllexport ve třídách jazyka C++
 
-**Specifické pro společnost Microsoft**
+**Specifické pro Microsoft**
 
-Můžete deklarovat C++ třídy s atributem **dllimport** nebo **dllexport** . Tyto formuláře naznačují, že je celá třída importovaná nebo exportovaná. Třídy exportované tímto způsobem se nazývají exportovatelné třídy.
+Můžete deklarovat třídy Jazyka C++ s atributem **dllimport** nebo **dllexport.** Tyto formuláře znamenají, že celá třída je importována nebo exportována. Třídy exportované tímto způsobem se nazývají exportovatelné třídy.
 
-Následující příklad definuje exportovatelné třídy. Exportují se všechny jeho členské funkce a statická data:
+Následující příklad definuje exportovatelnou třídu. Exportují se všechny členské funkce a statická data:
 
 ```cpp
 #define DllExport   __declspec( dllexport )
@@ -37,43 +37,43 @@ class DllExport C {
 };
 ```
 
-Všimněte si, že explicitní použití atributů **dllimport** a **dllexport** u členů exportovatelných tříd je zakázáno.
+Všimněte si, že explicitní použití **dllimport** a **dllexport** atributy na členy exportovatelné třídy je zakázáno.
 
-##  <a name="dllexport-classes"></a><a name="_pluslang_using_dllimport_and_dllexport_in_c2b2bdllexportclasses"></a>Třídy dllexport
+## <a name="dllexport-classes"></a><a name="_pluslang_using_dllimport_and_dllexport_in_c2b2bdllexportclasses"></a>třídy dllexportu
 
-Pokud deklarujete třídu **dllexport**, jsou exportovány všechny členské funkce a statické datové členy. Je nutné poskytnout definice všech takových členů ve stejném programu. V opačném případě je vygenerována chyba linkeru. Jedinou výjimkou z tohoto pravidla se vztahuje na čistě virtuální funkce, pro které nemusíte zadávat explicitní definice. Vzhledem k tomu, že destruktor abstraktní třídy je vždy volán destruktorem pro základní třídu, čistě virtuální destruktory musí vždy poskytnout definici. Všimněte si, že tato pravidla jsou stejná pro neexportované třídy.
+Když deklarujete **dllexport**třídy , exportují se všechny její členské funkce a statické datové členy. Je nutné zadat definice všech těchto členů ve stejném programu. V opačném případě je generována chyba propojovacího propojení. Jedinou výjimkou z tohoto pravidla platí pro čisté virtuální funkce, pro které není nutné zadat explicitní definice. Protože však destruktor pro abstraktní třídu je vždy volán destruktorem pro základní třídu, musí vždy poskytovat definici čisté virtuální destruktory. Všimněte si, že tato pravidla jsou stejné pro neexportovatelné třídy.
 
-Pokud exportujete data typu třídy nebo funkce vracející třídy, nezapomeňte exportovat třídu.
+Pokud exportujete data typu třídy nebo funkcí, které vracejí třídy, nezapomeňte exportovat třídu.
 
-##  <a name="dllimport-classes"></a><a name="_pluslang_dllexport_classesdllexportclasses"></a>Třídy dllimport
+## <a name="dllimport-classes"></a><a name="_pluslang_dllexport_classesdllexportclasses"></a>třídy dllimport
 
-Pokud deklarujete třídu **dllimport**, jsou importovány všechny členské funkce a statické datové členy. Na rozdíl od chování **dllimport** a **dllexport** u netříděných typů nemohou statické datové členy určovat definici ve stejném programu, ve kterém je definována třída **dllimport** .
+Když deklarujete **dllimport**třídy , importují se všechny její členské funkce a statické datové členy. Na rozdíl od chování **dllimport** a **dllexport** u typů netříd, statické datové členy nelze zadat definici ve stejném programu, ve kterém je definována třída **dllimport.**
 
-##  <a name="inheritance-and-exportable-classes"></a><a name="_pluslang_using_dllimport_and_dllexport_in_c2b2binheritanceandexportableclasses"></a>Dědičnost a exportovatelné třídy
+## <a name="inheritance-and-exportable-classes"></a><a name="_pluslang_using_dllimport_and_dllexport_in_c2b2binheritanceandexportableclasses"></a>Třídy dědičnosti a exportu
 
-Všechny základní třídy exportovatelné třídy musí být exportovatelné. V takovém případě se vygeneruje upozornění kompilátoru. Kromě toho musí být exportovatelné všechny přístupné členy, které jsou také třídy. Toto pravidlo povoluje, aby třída **dllexport** dědila z třídy **dllimport** a třídu **dllimport** , která dědí z třídy **dllexport** (i když se druhá nedoporučuje). Jako pravidlo, vše, co je přístupné pro klienta knihovny DLL (podle pravidel C++ přístupu), by mělo být součástí exportovatelné rozhraní. To zahrnuje soukromé datové členy, na které se odkazuje ve vložených funkcích.
+Všechny základní třídy exportovatelné třídy musí být exportovatelné. Pokud tomu tak není, je generováno upozornění kompilátoru. Kromě toho musí být všechny přístupné členy, které jsou také třídy musí být exportovatelné. Toto pravidlo umožňuje **dllexport** třídy dědit z **dllimport** třídy a **dllimport** třídy dědit z **dllexport** třídy (i když se nedoporučuje). Je pravidlem, že vše, co je přístupné klientovi knihovny DLL (podle pravidel přístupu jazyka C++) by mělo být součástí exportovatelného rozhraní. To zahrnuje soukromé datové členy odkazované v vslaných funkcích.
 
-##  <a name="selective-member-importexport"></a><a name="_pluslang_using_dllimport_and_dllexport_in_c2b2bselectivememberimportexport"></a>Import/export selektivních členů
+## <a name="selective-member-importexport"></a><a name="_pluslang_using_dllimport_and_dllexport_in_c2b2bselectivememberimportexport"></a>Selektivní import/export členů
 
-Vzhledem k tomu, že členské funkce a statická data ve třídě mají implicitně vnější propojení, můžete je deklarovat pomocí atributu **dllimport** nebo **dllexport** , pokud není exportována celá třída. Pokud je celá třída importovaná nebo exportovaná, je zakázaná explicitní deklarace členských funkcí a dat jako **dllimport** nebo **dllexport** . Pokud deklarujete statického datového členu v rámci definice třídy jako **dllexport**, musí se definice nacházet někde v rámci stejného programu (stejně jako u vnějšího propojení netřídy).
+Vzhledem k tomu, že členské funkce a statická data v rámci třídy mají implicitně externí propojení, můžete je deklarovat s atributem **dllimport** nebo **dllexport,** pokud není exportována celá třída. Pokud je importována nebo exportována celá třída, je zakázáno explicitní prohlášení členských funkcí a dat jako **dllimport** nebo **dllexport.** Pokud deklarujete statický datový člen v rámci definice třídy jako **dllexport**, musí se definice vyskytovat někde ve stejném programu (jako u externího propojení mimo třídu).
 
-Podobně můžete deklarovat členské funkce pomocí atributů **dllimport** nebo **dllexport** . V takovém případě je nutné zadat definici **dllexport** někam do stejného programu.
+Podobně můžete deklarovat členské funkce s atributy **dllimport** nebo **dllexport.** V takovém případě je nutné zadat definici **dllexport** někde ve stejném programu.
 
-Je vhodné si uvědomit několik důležitých bodů týkajících se importu a exportu z selektivního člena:
+Stojí za to poznamenat několik důležitých bodů týkajících se selektivního dovozu a vývozu členů:
 
-- Import/export selektivního člena se nejlépe používá pro poskytnutí verze exportovaného rozhraní třídy, které je více omezující. To znamená, že jeden, pro který můžete navrhnout knihovnu DLL, která zveřejňuje méně veřejných a privátních funkcí, než by jinak povolovala. Je také užitečné pro optimalizaci rozhraní, které lze exportovat: Pokud víte, že klient, podle definice, nemá přístup k některým soukromým datům, není nutné exportovat celou třídu.
+- Selektivní import/export členů se nejlépe používá k poskytnutí verze exportovaného rozhraní třídy, která je více omezující; to znamená, že jeden, pro který můžete navrhnout DLL, která zveřejňuje méně veřejných a soukromých funkcí, než by jinak jazyk povolit. Je také užitečné pro jemné doladění exportovatelné rozhraní: pokud víte, že klient, podle definice, není schopen získat přístup k některým soukromým datům, není nutné exportovat celou třídu.
 
-- Pokud exportujete jednu virtuální funkci ve třídě, je nutné exportovat všechny z nich nebo alespoň poskytnout verze, které může klient použít přímo.
+- Pokud exportujete jednu virtuální funkci ve třídě, musíte exportovat všechny nebo alespoň poskytnout verze, které může klient přímo používat.
 
-- Máte-li třídu, ve které používáte selektivní člen import/export s virtuálními funkcemi, funkce musí být v rozhraní, které lze exportovat nebo které je definováno jako vložené (viditelné pro klienta).
+- Pokud máte třídu, ve které používáte selektivní členské import/export s virtuálními funkcemi, funkce musí být v exportovatelné rozhraní nebo definované vřádku (viditelné pro klienta).
 
-- Pokud definujete člena jako **dllexport** , ale nezahrnete ho do definice třídy, je vygenerována chyba kompilátoru. Je nutné definovat člena v hlavičce třídy.
+- Pokud definujete člen jako **dllexport,** ale nezahrnete jej do definice třídy, je generována chyba kompilátoru. Je nutné definovat člena v záhlaví třídy.
 
-- I když je povolena definice členů třídy jako **dllimport** nebo **dllexport** , nelze přepsat rozhraní zadané v definici třídy.
+- Přestože je povolena definice členů třídy jako **dllimport** nebo **dllexport,** nelze přepsat rozhraní zadané v definici třídy.
 
-- Definujete-li členskou funkci na jiném místě než tělo definice třídy, ve které jste ji deklarovali, je vygenerováno upozornění, pokud je funkce definována jako **dllexport** nebo **dllimport** (Pokud se tato definice liší od, která je zadána v deklaraci třídy).
+- Pokud definujete členskou funkci na jiném místě než v těle definice třídy, ve kterém jste ji deklarovali, je generováno upozornění, pokud je funkce definována jako **dllexport** nebo **dllimport** (pokud se tato definice liší od definice uvedené v deklaraci třídy).
 
-**Specifické pro konec Microsoftu**
+**END Microsoft Specifické**
 
 ## <a name="see-also"></a>Viz také
 

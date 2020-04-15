@@ -1,9 +1,11 @@
 ---
 title: wctomb, _wctomb_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _wctomb_l
 - wctomb
+- _o__wctomb_l
+- _o_wctomb
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +19,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -32,16 +35,16 @@ helpviewer_keywords:
 - characters, converting
 - string conversion, multibyte character strings
 ms.assetid: 4a543f0e-5516-4d81-8ff2-3c5206f02ed5
-ms.openlocfilehash: 195105618c75bd2a3a493f169fca4c2d3d4ebd62
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 162585ea866b4fb26cfaae3bc94345dadaba0baa
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70945005"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367405"
 ---
 # <a name="wctomb-_wctomb_l"></a>wctomb, _wctomb_l
 
-Převést velký znak na odpovídající vícebajtový znak. K dispozici jsou bezpečnější verze těchto funkcí; viz [wctomb_s, _wctomb_s_l](wctomb-s-wctomb-s-l.md).
+Převeďte široký znak na odpovídající vícebajtový znak. K dispozici jsou bezpečnější verze těchto funkcí. viz [wctomb_s, _wctomb_s_l](wctomb-s-wctomb-s-l.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -62,18 +65,20 @@ int _wctomb_l(
 *mbchar*<br/>
 Adresa vícebajtového znaku.
 
-*wchar*<br/>
-Velký znak.
+*Wchar*<br/>
+Široký charakter.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Pokud **wctomb** převede velký znak na vícebajtový znak, vrátí počet bajtů (který není nikdy větší než **MB_CUR_MAX**) v rámci stejného znaku. Pokud je *WCHAR* znak nulového znaku (L ' \ 0 '), vrátí **wctomb** hodnotu 1. Pokud cílový ukazatel *mbchar* má **hodnotu null**, **wctomb** vrátí hodnotu 0. Pokud v aktuálním národním prostředí není převod možný, **wctomb** vrátí hodnotu-1 a **errno** je nastaven na **EILSEQ**.
+Pokud **wctomb** převede široký znak na vícebajtový znak, vrátí počet bajtů (což není nikdy větší než **MB_CUR_MAX**) v širokém znaku. Pokud *wchar* je znak null znak široký znak (L'\0'), **wctomb** vrátí 1. Pokud je cíl ukazatel *mbchar* **null**, **wctomb** vrátí 0. Pokud převod není možné v aktuálním národním prostředí, **wctomb** vrátí -1 a **errno** je nastavena na **EILSEQ**.
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce **wctomb** převede svůj argument *WCHAR* na odpovídající vícebajtový znak a výsledek uloží na *mbchar*. Funkci lze volat z libovolného bodu v jakémkoli programu. **wctomb** používá aktuální národní prostředí pro jakékoli chování závislé na národním prostředí; **_wctomb_l** je shodná s **wctomb** s tím rozdílem, že místo toho používá národní prostředí předané. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
+Funkce **wctomb** převede svůj argument *wchar* na odpovídající vícebajtový znak a uloží výsledek na *mbchar*. Funkci můžete volat z libovolného místa v libovolném programu. **wctomb** používá aktuální národní prostředí pro jakékoli chování závislé na národním prostředí; **_wctomb_l** je totožný **s wctomb** s tím rozdílem, že používá národní prostředí předané v místo. Další informace naleznete v [tématu Locale](../../c-runtime-library/locale.md).
 
-**wctomb** ověří své parametry. Pokud má Mbchar **hodnotu null**, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, **errno** je nastaven na **EINVAL** a funkce vrátí-1.
+**wctomb** ověřuje své parametry. Pokud je *nástroj MBChar* **null**, je vyvolána neplatná obslužná rutina parametru, jak je popsáno v [části Ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je spuštění povoleno pokračovat, **errno** je nastavena na **EINVAL** a funkce vrátí -1.
+
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
@@ -81,7 +86,7 @@ Funkce **wctomb** převede svůj argument *WCHAR* na odpovídající vícebajtov
 |-------------|---------------------|
 |**wctomb**|\<stdlib.h>|
 
-Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -113,7 +118,7 @@ Convert a wide character:
    Multibyte character: a
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Převod dat](../../c-runtime-library/data-conversion.md)<br/>
 [Národní prostředí](../../c-runtime-library/locale.md)<br/>

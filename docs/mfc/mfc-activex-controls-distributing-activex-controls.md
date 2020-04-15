@@ -25,60 +25,60 @@ helpviewer_keywords:
 - registering controls
 - OLEPRO32.DLL
 ms.assetid: cd70ac9b-f613-4879-9e81-6381fdfda2a1
-ms.openlocfilehash: 409ace2197396cf7adbd330cfbd891745a23cf53
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1ada1c801b2d9d62f1cc4cd5bf72a2995225b3de
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392697"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364616"
 ---
 # <a name="mfc-activex-controls-distributing-activex-controls"></a>MFC – ovládací prvky ActiveX: Distribuce ovládacích prvků ActiveX
 
-Tento článek popisuje několik problémy související s Redistribuce souborů ovládacích prvků ActiveX:
+Tento článek popisuje několik problémů souvisejících s redistribucí ovládacích prvků ActiveX:
 
-- [ANSI nebo Unicode ovládací prvek verze](#_core_ansi_or_unicode_control_versions)
+- [Verze ovládacího prvku ANSI nebo Unicode](#_core_ansi_or_unicode_control_versions)
 
-- [Instalace ovládacích prvků ActiveX a distribuovatelné knihovny DLL](#_core_installing_activex_controls_and_redistributable_dlls)
+- [Instalace ovládacích prvků ActiveX a redistribuovatelných knihoven DLL](#_core_installing_activex_controls_and_redistributable_dlls)
 
 - [Registrace ovládacích prvků](#_core_registering_controls)
 
 >[!IMPORTANT]
-> ActiveX je starší technologie, která by neměla být používána při novém vývoji. Další informace o moderních technologií, které nahrazují ActiveX naleznete v tématu [ovládací prvky ActiveX](activex-controls.md).
+> ActiveX je starší technologie, která by neměla být použita pro nový vývoj. Další informace o moderních technologiích, které nahrazují ovládací prvky ActiveX, naleznete [v tématu ActiveX Controls](activex-controls.md).
 
-##  <a name="_core_ansi_or_unicode_control_versions"></a> ANSI nebo Unicode ovládací prvek verze
+## <a name="ansi-or-unicode-control-versions"></a><a name="_core_ansi_or_unicode_control_versions"></a>Verze ovládacího prvku ANSI nebo Unicode
 
-Musíte se rozhodnout, jestli se k odeslání ANSI nebo Unicode verze ovládacího prvku, nebo obojí. Toto rozhodnutí je na základě přenositelnost faktorů vyplývajících z znakové sady ANSI a Unicode.
+Musíte se rozhodnout, zda chcete dobýt verzi ovládacího prvku ANSI nebo Unicode nebo obojí. Toto rozhodnutí je založeno na faktorech přenositelnosti, které jsou vlastní znakovým množitelským mnostvím ANSI a Unicode.
 
-Ovládací prvky ANSI, které pracují na všechny operační systémy Win32, umožňují pro zajištění maximální přenositelnosti mezi různé operační systémy Win32. Ovládací prvky Unicode fungovat pouze Windows NT (verze 3.51, aktualizace nebo novější), ale ne Windows 95 nebo Windows 98. Je-li přenositelnost je vaším hlavním zájmem příjemce ANSI ovládací prvky. Pokud své ovládací prvky se spustí pouze v systémech Windows NT, můžete zaslat Unicode ovládací prvky. Může se také rozhodnout obě dodávání a máte svou aplikaci nainstalovat verzi operačního systému uživatele nejvhodnější.
+Ovládací prvky ANSI, které fungují na všech operačních systémech Win32, umožňují maximální přenositelnost mezi různými operačními systémy Win32. Ovládací prvky Unicode fungují pouze v systému Windows NT (verze 3.51 nebo novější), nikoli však v systému Windows 95 nebo Windows 98. Pokud je přenositelnost vaším hlavním zájmem, dodejte ovládací prvky ANSI. Pokud budou ovládací prvky spuštěny pouze v systému Windows NT, můžete doručovat ovládací prvky Unicode. Můžete také zvolit odeslání obou a nechat aplikaci nainstalovat verzi nejvhodnější pro operační systém uživatele.
 
-##  <a name="_core_installing_activex_controls_and_redistributable_dlls"></a> Instalace ovládacích prvků ActiveX a distribuovatelné knihovny DLL
+## <a name="installing-activex-controls-and-redistributable-dlls"></a><a name="_core_installing_activex_controls_and_redistributable_dlls"></a>Instalace ovládacích prvků ActiveX a redistribuovatelných knihoven DLL
 
-Instalační program, který poskytnete s ovládacími prvky ActiveX byste vytvořit zvláštní podadresáře adresáře, Windows a nainstalovat ovládací prvky. OCX soubory v něm.
+Instalační program, který poskytujete s ovládacími prvky ActiveX, by měl vytvořit speciální podadresář adresáře systému Windows a nainstalovat ovládací prvky. OCX soubory v něm.
 
 > [!NOTE]
->  Použít Windows `GetWindowsDirectory` rozhraní API ve vašem instalačním programu získat název adresáře Windows. Můžete odvozovat od názvu vaši společnost nebo produkt název podadresáře.
+> Pomocí rozhraní `GetWindowsDirectory` API systému Windows v instalačním programu získáte název adresáře systému Windows. Název podadresáře můžete odvodit z názvu vaší společnosti nebo produktu.
 
-Instalační program musíte nainstalovat potřebné distribuovatelné soubory knihovny DLL v adresáři systému Windows. Pokud některé z knihoven DLL, která jsou již přítomny v počítači uživatele, instalační program by porovnání jejich verzí s verzí, kterou instalujete. Znovu nainstalujte soubor pouze v případě, že její číslo verze je vyšší než již nainstalovaného souboru.
+Instalační program musí nainstalovat potřebné redistribuovatelné soubory DLL do systémového adresáře systému Windows. Pokud některý z knihoven DLL jsou již k dispozici v počítači uživatele, instalační program by měl porovnat jejich verze s verzemi, které instalujete. Přeinstalujte soubor pouze v případě, že je číslo jeho verze vyšší než již nainstalovaný soubor.
 
-Protože – ovládací prvky ActiveX lze použít pouze v aplikacích kontejneru OLE, není nutné distribuovat úplnou sadu knihoven OLE DLL s ovládacími prvky. Můžete předpokládat, obsahující aplikaci (nebo samotného operačního systému) má standardní OLE knihovny DLL nainstalované.
+Vzhledem k tomu, že ovládací prvky ActiveX lze použít pouze v aplikacích kontejneru OLE, není nutné distribuovat úplnou sadu knihoven OLE s ovládacími prvky. Můžete předpokládat, že obsahující aplikace (nebo samotný operační systém) má nainstalovány standardní knihovny OLE.
 
-##  <a name="_core_registering_controls"></a> Registrace ovládacích prvků
+## <a name="registering-controls"></a><a name="_core_registering_controls"></a>Registrace ovládacích prvků
 
-Před použitím ovládacího prvku, musí pro něj vytvořit odpovídající položky v registrační databázi Windows. Některé – kontejnery ovládacích prvků ActiveX poskytují položku nabídky pro uživatele k registraci nové ovládací prvky, ale tato funkce nemusí být k dispozici ve všech kontejnerech. Proto můžete instalační program tak, zaregistrujte ovládací prvky, kdy se instalují.
+Před použitím ovládacího prvku je nutné pro něj vytvořit příslušné položky v registrační databázi systému Windows. Některé kontejnery ovládacích prvků ActiveX poskytují uživatelům položku nabídky k registraci nových ovládacích prvků, ale tato funkce nemusí být k dispozici ve všech kontejnerech. Proto můžete chtít instalační program zaregistrovat ovládací prvky při jejich instalaci.
 
-Pokud dáváte přednost, můžete napsat program Instalační program k registraci ovládacího prvku přímo místo.
+Pokud chcete, můžete napsat instalační program a zaregistrovat ovládací prvek přímo.
 
-Použití `LoadLibrary` rozhraní Windows API načíst knihovnu DLL ovládacího prvku. Pak pomocí `GetProcAddress` pro získání adresy funkce "DllRegisterServer". Nakonec proveďte volání `DllRegisterServer` funkce. Následující příklad kódu ukazuje jeden možný způsob, ve kterém `hLib` uloží popisovač knihovny ovládacích prvků a `lpDllEntryPoint` ukládá adresu funkce "DllRegisterServer".
+Pomocí `LoadLibrary` rozhraní API systému Windows načtěte řídicí dll. Dále použijte `GetProcAddress` k získání adresy funkce "DllRegisterServer". Nakonec zavolejte `DllRegisterServer` funkci. Následující ukázka kódu ukazuje jednu `hLib` možnou metodu, kde `lpDllEntryPoint` ukládá popisovač knihovny ovládacích prvků a ukládá adresu funkce "DllRegisterServer".
 
 [!code-cpp[NVC_MFC_AxCont#16](../mfc/codesnippet/cpp/mfc-activex-controls-distributing-activex-controls_1.cpp)]
 
-Výhodou přímo registrace ovládacího prvku je, že nepotřebujete k vyvolání a načtení samostatný proces (konkrétně REGSVR32), snižuje čas instalace. Navíc vzhledem k tomu, že registrace je interní proces, instalační program může zpracovávat chyby a nepředvídané situacích lepší než externí proces můžete.
+Výhodou registrace ovládacího prvku přímo je, že není nutné vyvolat a načíst samostatný proces (konkrétně REGSVR32), což snižuje dobu instalace. Navíc vzhledem k tomu, že registrace je interní proces, instalační program dokáže zpracovat chyby a nepředvídané situace lépe než externí proces.
 
 > [!NOTE]
->  Předtím, než instalační program nainstaluje ovládacího prvku ActiveX, měla by volat `OleInitialize`. Po dokončení instalačního programu volat `OleUnitialize`. Tím se zajistí, že OLE systémové knihovny DLL jsou ve stavu správné pro registraci ovládacího prvku ActiveX.
+> Před instalací instalačního programu ovládacího prvku `OleInitialize`ActiveX by měl volat . Po dokončení instalačního programu `OleUnitialize`volejte . Tím zajistíte, že knihovny DLL systému OLE jsou ve správném stavu pro registraci ovládacího prvku ActiveX.
 
-Byste měli zaregistrovat MFCx0.DLL.
+MFCx0.DLL byste měli zaregistrovat.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [MFC – ovládací prvky ActiveX](../mfc/mfc-activex-controls.md)

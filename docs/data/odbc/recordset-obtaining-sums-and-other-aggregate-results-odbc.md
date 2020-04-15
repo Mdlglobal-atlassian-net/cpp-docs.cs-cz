@@ -10,59 +10,59 @@ helpviewer_keywords:
 - SQL Server projects, retrieving aggregate values from recordsets
 - SQL aggregate values, retrieving from recordsets
 ms.assetid: 94500662-22a4-443e-82d7-acbe6eca447b
-ms.openlocfilehash: 1a8abc8b73ee878ac2feefa210268e87c608e938
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 9ebbe78191d0c4140baf3557637ba2103886577d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80212833"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368658"
 ---
 # <a name="recordset-obtaining-sums-and-other-aggregate-results-odbc"></a>Sada záznamů: Získávání součtů a jiných agregačních výsledků (ODBC)
 
 > [!NOTE]
-> Průvodce příjemcem knihovny MFC rozhraní ODBC není dostupný v aplikaci Visual Studio 2019 a novějším. Příjemce můžete přesto vytvořit ručně.
+> Průvodce příjemcem knihovny MFC ODBC není k dispozici v sadě Visual Studio 2019 a novějších. Stále můžete vytvořit příjemce ručně.
 
-Toto téma se vztahuje na třídy knihovny MFC rozhraní ODBC.
+Toto téma se vztahuje na třídy Knihovny MFC ODBC.
 
-V tomto tématu se dozvíte, jak získat agregované výsledky pomocí následujících klíčových slov [SQL](../../data/odbc/sql.md) :
+Toto téma vysvětluje, jak získat souhrnné výsledky pomocí následujících klíčových slov [SQL:](../../data/odbc/sql.md)
 
-- **Součet** Vypočítá celkový součet hodnot ve sloupci s číselným datovým typem.
+- **SOUČET** Vypočítá součet hodnot ve sloupci s číselným datovým typem.
 
-- **Minimální** počet Extrahuje nejmenší hodnotu ve sloupci s číselným datovým typem.
+- **MIN** Extrahuje nejmenší hodnotu ve sloupci s číselným datovým typem.
 
-- **Maximální počet** Extrahuje největší hodnotu ve sloupci s číselným datovým typem.
+- **MAX** Extrahuje největší hodnotu ve sloupci s číselným datovým typem.
 
-- **Průměrná doba** Vypočítá průměrnou hodnotu všech hodnot ve sloupci s číselným datovým typem.
+- **Avg** Vypočítá průměrnou hodnotu všech hodnot ve sloupci s číselným datovým typem.
 
-- **Počet** Spočítá počet záznamů ve sloupci libovolného datového typu.
+- **POČET** Spočítá počet záznamů ve sloupci libovolného datového typu.
 
-Tyto funkce SQL slouží k získání statistických informací o záznamech ve zdroji dat, nikoli k extrakci záznamů ze zdroje dat. Vytvořená sada záznamů se obvykle skládá z jednoho záznamu (pokud jsou všechny sloupce agregovany), který obsahuje hodnotu. (Pokud jste použili klauzuli **Group by** , může existovat více než jeden záznam.) Tato hodnota je výsledkem výpočtu nebo extrakce prováděná funkcí SQL.
+Tyto funkce SQL slouží k získání statistických informací o záznamech ve zdroji dat, nikoli k extrahování záznamů ze zdroje dat. Sada záznamů, která je vytvořena, se obvykle skládá z jednoho záznamu (pokud jsou všechny sloupce agregace), který obsahuje hodnotu. (Pokud jste použili klauzuli **GROUP BY,** může existovat více než jeden záznam.) Tato hodnota je výsledkem výpočtu nebo extrakce prováděné funkcí SQL.
 
 > [!TIP]
->  Chcete-li přidat klauzuli SQL **Group by** (a případně klauzuli **having** ) do příkazu SQL, přidejte ji na konec `m_strFilter`. Příklad:
+> Chcete-li přidat **klauzuli** SQL GROUP BY (a případně **klauzuli HAVING)** `m_strFilter`do příkazu SQL, přidejte ji na konec . Příklad:
 
 ```
 m_strFilter = "sales > 10 GROUP BY SALESPERSON_ID";
 ```
 
-Pomocí filtrování a řazení sloupců můžete omezit počet záznamů, které používáte k získání agregovaných výsledků.
+Počet záznamů, které používáte k získání souhrnných výsledků, můžete omezit filtrováním a řazením sloupců.
 
 > [!CAUTION]
->  Některé agregační operátory vracejí jiný datový typ ze sloupců, na jejichž agregaci jsou agregovány.
+> Některé operátory agregace vrátit jiný datový typ ze sloupců, přes které jsou agregace.
 
-- **Sum** a **AVG** mohou vracet další větší datový typ (například volání pomocí `int` vrátí **Long** nebo **Double**).
+- **SUMA** a **AVG** může vrátit další větší datový `int` typ (například volání s vrátí **LONG** nebo **double).**
 
-- **Počet** obvykle vrátí hodnotu **Long** bez ohledu na typ cílového sloupce.
+- **COUNT** obvykle vrátí **long** bez ohledu na typ cílového sloupce.
 
-- **Max** a **min** vrátí stejný datový typ jako vypočítané sloupce.
+- **MAX** a **MIN** vrátí stejný datový typ jako sloupce, které vypočítají.
 
-     Například Průvodce **přidáním třídy** vytvoří `long` `m_lSales` pro přizpůsobení sloupce Sales, ale je nutné jej nahradit datovým členem `double m_dblSumSales`, aby odpovídal agregovanému výsledku. Prohlédněte si následující příklad.
+     Například průvodce **přidáním třídy** vytvoří `long` `m_lSales` tak, aby vyhovoval sloupci `double m_dblSumSales` Prodej, ale je třeba jej nahradit datovým členem, aby se přizpůsobil agregovanému výsledku. Prohlédněte si následující příklad.
 
-#### <a name="to-obtain-an-aggregate-result-for-a-recordset"></a>Získání agregovaného výsledku pro sadu záznamů
+#### <a name="to-obtain-an-aggregate-result-for-a-recordset"></a>Chcete-li získat souhrnný výsledek pro sadu záznamů
 
-1. Vytvořte sadu záznamů, jak je popsáno v tématu [Přidání příjemce knihovny MFC rozhraní ODBC](../../mfc/reference/adding-an-mfc-odbc-consumer.md) obsahující sloupce, ze kterých chcete získat agregované výsledky.
+1. Vytvořte sadu záznamů, jak je popsáno v [přidání příjemce knihovny MFC ODBC](../../mfc/reference/adding-an-mfc-odbc-consumer.md) obsahující sloupce, ze kterých chcete získat souhrnné výsledky.
 
-1. Upravte funkci [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) pro sadu záznamů. Nahraďte řetězec reprezentující název sloupce (druhý argument volání funkce [RFX](../../data/odbc/record-field-exchange-using-rfx.md) ) řetězcem, který představuje agregační funkci na sloupci. Například nahraďte:
+1. Upravte funkci [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) pro sadu záznamů. Nahraďte řetězec představující název sloupce (druhý argument volání funkce [RFX)](../../data/odbc/record-field-exchange-using-rfx.md) řetězcem představujícím funkci agregace ve sloupci. Například nahraďte:
 
     ```
     RFX_Long(pFX, "Sales", m_lSales);
@@ -74,18 +74,18 @@ Pomocí filtrování a řazení sloupců můžete omezit počet záznamů, kter�
     RFX_Double(pFX, "Sum(Sales)", m_dblSumSales)
     ```
 
-1. Otevřete sadu záznamů. Výsledek operace agregace je ponechán v `m_dblSumSales`.
+1. Otevřete sadu záznamů. Výsledek operace agregace je ponechán `m_dblSumSales`v .
 
 > [!NOTE]
->  Průvodce vlastně přiřadí názvy datových členů bez maďarské předpony. Průvodce by například vytvořil `m_Sales` pro sloupec Sales místo toho, aby název `m_lSales` používal dříve pro ilustraci.
+> Průvodce ve skutečnosti přiřadí názvy datových členů bez maďarských předpon. Průvodce by například `m_Sales` vytvořil pro sloupec Prodej, `m_lSales` nikoli název použitý dříve pro ilustraci.
 
-Pokud k zobrazení dat používáte třídu [CRecordView](../../mfc/reference/crecordview-class.md) , je nutné změnit volání funkce DDX, aby se zobrazila nová hodnota datového členu. v takovém případě se změní z:
+Pokud používáte [cRecordView](../../mfc/reference/crecordview-class.md) třídy k zobrazení dat, je třeba změnit volání funkce DDX pro zobrazení nové hodnoty datového člena; v tomto případě, změna z:
 
 ```
 DDX_FieldText(pDX, IDC_SUMSALES, m_pSet->m_lSales, m_pSet);
 ```
 
-Komu:
+Do:
 
 ```
 DDX_FieldText(pDX, IDC_SUMSALES, m_pSet->m_dblSumSales, m_pSet);

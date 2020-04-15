@@ -30,55 +30,55 @@ helpviewer_keywords:
 - MFC, file operations
 - registration [MFC], shell
 ms.assetid: 0480cd01-f629-4249-b221-93432d95b431
-ms.openlocfilehash: 04c7357d67dc1a5daee4b8b8135c9a54eda8504a
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 1f5abcdab3eda1304879b122acc8072951a0e6c3
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77127826"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81363908"
 ---
 # <a name="special-cwinapp-services"></a>Speciální služby CWinApp
 
-Kromě spuštění smyčky zpráv a poskytnutí možnosti k inicializaci aplikace a vyčištění po ní [CWinApp](../mfc/reference/cwinapp-class.md) poskytuje několik dalších služeb.
+Kromě spuštění smyčky zpráv a dává vám možnost inicializovat aplikaci a vyčistit po ní, [CWinApp](../mfc/reference/cwinapp-class.md) poskytuje několik dalších služeb.
 
-##  <a name="_core_shell_registration"></a>Registrace prostředí
+## <a name="shell-registration"></a><a name="_core_shell_registration"></a>Registrace prostředí
 
-Ve výchozím nastavení Průvodce aplikací knihovny MFC umožňuje uživateli otevřít datové soubory, které vaše aplikace vytvořila dvojitým kliknutím v Průzkumníkovi souborů nebo ve Správci souborů. Pokud je vaše aplikace aplikací MDI a zadáte rozšíření pro soubory, které vaše aplikace vytvoří, Průvodce aplikací knihovny MFC přidá volání členských funkcí [RegisterShellFileTypes](../mfc/reference/cwinapp-class.md#registershellfiletypes) a [EnableShellOpen](../mfc/reference/cwinapp-class.md#enableshellopen) z [CWinApp](../mfc/reference/cwinapp-class.md) do `InitInstance` přepsání, které za vás zapisuje.
+Ve výchozím nastavení umožňuje Průvodce aplikací knihovny MFC uživateli otevřít datové soubory, které vaše aplikace vytvořila, poklepáním v Průzkumníku souborů nebo Správci souborů. Pokud je vaše aplikace aplikace MDI a zadáte příponu pro soubory, které aplikace vytvoří, Průvodce aplikací knihovny MFC přidá `InitInstance` volání [RegisterShellFileTypes](../mfc/reference/cwinapp-class.md#registershellfiletypes) a [EnableShellOpen](../mfc/reference/cwinapp-class.md#enableshellopen) členské funkce [CWinApp](../mfc/reference/cwinapp-class.md) přepsat, že zapíše za vás.
 
-`RegisterShellFileTypes` zaregistruje typy dokumentů vaší aplikace pomocí Průzkumníka souborů nebo správce souborů. Funkce přidá položky do registrační databáze, kterou systém Windows udržuje. Položky registrují jednotlivé typy dokumentů, přiřadí příponu souboru k typu souboru, určují příkazový řádek pro otevření aplikace a zadání příkazu DDE (Dynamic Data Exchange) pro otevření dokumentu tohoto typu.
+`RegisterShellFileTypes`zaregistruje typy dokumentů aplikace pomocí Průzkumníka souborů nebo Správce souborů. Funkce přidá položky do registrační databáze, kterou systém Windows udržuje. Položky registrují každý typ dokumentu, přidružují příponu souboru k typu souboru, určují příkazový řádek pro otevření aplikace a zadejte příkaz dynamické výměny dat (DDE) pro otevření dokumentu tohoto typu.
 
-`EnableShellOpen` dokončí proces tím, že aplikaci umožní přijímat příkazy DDE z Průzkumníka souborů nebo správce souborů, aby bylo možné otevřít soubor vybraný uživatelem.
+`EnableShellOpen`dokončí proces tím, že aplikace umožňuje přijímat příkazy DDE z Průzkumníka souborů nebo Správce souborů otevřít soubor zvolený uživatelem.
 
-Tato podpora automatických registrací v `CWinApp` eliminuje nutnost dodávat soubor. reg do vaší aplikace nebo provést speciální práci s instalací.
+Tato automatická podpora `CWinApp` registrace v eliminuje potřebu doložky souboru REG s vaší aplikací nebo provedení speciálních instalačních prací.
 
-Pokud chcete inicializovat rozhraní GDI+ pro aplikaci (voláním [GdiplusStartup](/windows/win32/api/gdiplusinit/nf-gdiplusinit-gdiplusstartup) ve funkci [InitInstance](../mfc/reference/cwinapp-class.md#initinstance) ), je nutné potlačit vlákno na pozadí rozhraní GDI+.
+Pokud chcete inicializovat GDI+ pro vaši aplikaci (voláním [GdiplusStartup](/windows/win32/api/gdiplusinit/nf-gdiplusinit-gdiplusstartup) ve funkci [InitInstance),](../mfc/reference/cwinapp-class.md#initinstance) musíte potlačit vlákno na pozadí GDI+.
 
-To můžete provést nastavením `SuppressBackgroundThread` člena struktury [GdiplusStartupInput](/windows/win32/api/gdiplusinit/ns-gdiplusinit-gdiplusstartupinput) na **hodnotu true**. Při potlačení vlákna na pozadí rozhraní GDI+ by se měla provést volání `NotificationHook` a `NotificationUnhook` těsně před vstupem a ukončením smyčky zpráv aplikace. Další informace o těchto voláních naleznete v tématu [GdiplusStartupOutput](/windows/win32/api/gdiplusinit/ns-gdiplusinit-gdiplusstartupoutput). Proto je vhodné místo volání `GdiplusStartup` a funkce oznámení o zapojování by byly v přepsání virtuální funkce [CWinApp:: Run](../mfc/reference/cwinapp-class.md#run), jak je znázorněno níže:
+Můžete to provést nastavením `SuppressBackgroundThread` člena [GdiplusStartupInput](/windows/win32/api/gdiplusinit/ns-gdiplusinit-gdiplusstartupinput) struktury na **TRUE**. Při potlačení podprocesu na pozadí `NotificationHook` GDI + a `NotificationUnhook` volání by měla být provedena těsně před zadáním a ukončení minstí aplikace. Další informace o těchto voláních naleznete v [tématu GdiplusStartupOutput](/windows/win32/api/gdiplusinit/ns-gdiplusinit-gdiplusstartupoutput). Proto dobré místo pro `GdiplusStartup` volání a háček oznámení funkce by se v přepsání virtuální funkce [CWinApp::Run](../mfc/reference/cwinapp-class.md#run), jak je znázorněno níže:
 
 [!code-cpp[NVC_MFCDocView#6](../mfc/codesnippet/cpp/special-cwinapp-services_1.cpp)]
 
-Pokud potlačíte vlákno rozhraní GDI+ na pozadí, lze příkazy DDE předčasně vydávat aplikaci před vytvořením jeho hlavního okna. Příkazy DDE vyvolané prostředím lze předčasně přerušit, což vede k chybovým zprávám.
+Pokud nepotlačíte vlákno GDI+ na pozadí, mohou být příkazy DDE předčasně vydány aplikaci před vytvořením hlavního okna. Příkazy DDE vydané prostředímůže být předčasně přerušena, výsledkem jsou chybové zprávy.
 
-##  <a name="_core_file_manager_drag_and_drop"></a>Správce souborů – přetažení
+## <a name="file-manager-drag-and-drop"></a><a name="_core_file_manager_drag_and_drop"></a>Přetáhnout správce souborů
 
-Soubory lze přetáhnout z okna zobrazení souboru ve Správci souborů nebo v Průzkumníku souborů do okna v aplikaci. Můžete například povolit přetažení jednoho nebo více souborů do hlavního okna aplikace MDI, kde aplikace by mohla načíst názvy souborů a otevřít podřízená okna MDI pro tyto soubory.
+Soubory lze přetáhnout z okna zobrazení souborů ve Správci souborů nebo Průzkumníku souborů do okna v aplikaci. Můžete například povolit jeden nebo více souborů, které mají být přetaženy do hlavního okna aplikace MDI, kde aplikace může načíst názvy souborů a otevřít podřízená okna MDI pro tyto soubory.
 
-Chcete-li povolit přetahování souborů v aplikaci, Průvodce aplikací knihovny MFC zapíše volání členské funkce [CWnd](../mfc/reference/cwnd-class.md) [DragAcceptFiles](../mfc/reference/cwnd-class.md#dragacceptfiles) pro hlavní okno rámce v `InitInstance`. Toto volání můžete odebrat, pokud nechcete implementovat funkci přetažení.
+Chcete-li povolit přetažení souborů v aplikaci, Průvodce aplikací knihovny MFC zapíše volání do `InitInstance`členské funkce [CWnd](../mfc/reference/cwnd-class.md) [DragAcceptFiles](../mfc/reference/cwnd-class.md#dragacceptfiles) pro okno hlavního rámce ve vašem . Toto volání můžete odebrat, pokud nechcete implementovat funkci přetažení.
 
 > [!NOTE]
->  Můžete také implementovat obecnější možnosti přetahování – přetahování dat mezi dokumenty nebo v nich – pomocí technologie OLE. Informace najdete v článku [přetažení OLE](../mfc/drag-and-drop-ole.md).
+> Můžete také implementovat obecnější možnosti přetažení – přetahování dat mezi dokumenty nebo v rámci dokumentů – s OLE. Další informace naleznete v článku [OLE přetažení .](../mfc/drag-and-drop-ole.md)
 
-##  <a name="_core_keeping_track_of_the_most_recently_used_documents"></a>Udržování přehledu o naposledy použitých dokumentech
+## <a name="keeping-track-of-the-most-recently-used-documents"></a><a name="_core_keeping_track_of_the_most_recently_used_documents"></a>Sledování naposledy použitých dokumentů
 
-Když uživatel otevře a zavře soubory, objekt aplikace udržuje přehled o čtyřech naposledy použitých souborech. Názvy těchto souborů se přidají do nabídky soubor a při změně se aktualizují. Rozhraní ukládá tyto názvy souborů buď v registru, nebo v souboru. ini se stejným názvem, jako má váš projekt, a čte je ze souboru při spuštění aplikace. `InitInstance` přepíše, že Průvodce aplikací knihovny MFC vytvoří pro vás volání členské funkce [CWinApp](../mfc/reference/cwinapp-class.md) [LoadStdProfileSettings](../mfc/reference/cwinapp-class.md#loadstdprofilesettings), která načte informace ze souboru registru nebo ini, včetně naposledy použitých názvů souborů.
+Když uživatel otevírá a zavírá soubory, objekt aplikace sleduje čtyři naposledy použité soubory. Názvy těchto souborů jsou přidány do nabídky Soubor a aktualizovány při jejich změně. Rozhraní Framework ukládá tyto názvy souborů v registru nebo v souboru INI se stejným názvem jako projekt a čte je ze souboru při spuštění aplikace. Přepsání, `InitInstance` které pro vás vytvoří Průvodce aplikací knihovny MFC, zahrnuje volání členské funkce [CWinApp](../mfc/reference/cwinapp-class.md) [LoadStdProfileSettings](../mfc/reference/cwinapp-class.md#loadstdprofilesettings), která načte informace z registru nebo souboru INI, včetně naposledy použitých názvů souborů.
 
-Tyto položky jsou uloženy následujícím způsobem:
+Tyto položky jsou uloženy takto:
 
-- V systémech Windows NT, Windows 2000 a novějších se hodnota ukládá do klíče registru.
+- V systémech Windows NT, Windows 2000 a novějších je hodnota uložena do klíče registru.
 
-- Ve Windows 3. x je hodnota uložená v souboru WIN. Soubor INI.
+- V systému Windows 3.x je hodnota uložena ve win. INI.
 
-- Ve Windows 95 a novější hodnotě se hodnota ukládá ve verzi WIN uložené v mezipaměti. Užívaný.
+- V systému Windows 95 a novějších je hodnota uložena ve verzi win uložené v mezipaměti. Ini.
 
 ## <a name="see-also"></a>Viz také
 

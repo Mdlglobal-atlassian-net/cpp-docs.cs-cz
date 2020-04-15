@@ -9,35 +9,35 @@ helpviewer_keywords:
 - projects [MFC], creating
 - DLLs [MFC], creating
 ms.assetid: 05540b93-4781-4a90-aadf-55158313f5b2
-ms.openlocfilehash: 6a1718e1f347be46b2f228479d3dbd30027b3160
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 6367b2a4b85b2c586c5a4420a8be1f80d334b2e4
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80077444"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81363965"
 ---
 # <a name="creating-an-mfc-dll-project"></a>Vytvoření projektu knihovny MFC DLL
 
-Knihovna MFC DLL je binární soubor, který funguje jako sdílená knihovna funkcí, kterou lze použít současně více aplikacemi. Nejjednodušší způsob, jak vytvořit projekt knihovny MFC DLL, je použít Průvodce knihovnou MFC DLL.
+Knihovna DLL knihovny MFC je binární soubor, který funguje jako sdílená knihovna funkcí, které lze současně používat více aplikací. Nejjednodušší způsob, jak vytvořit projekt Knihovny MFC DLL, je použít Průvodce knihovnou DLL knihovny MFC.
 
 > [!NOTE]
->  Vzhled funkcí v integrovaném vývojovém prostředí (IDE) může záviset na vašich aktivních nastaveních nebo edicích a může se lišit od těch popsaných v nápovědě. Chcete-li změnit nastavení, v nabídce **nástroje** klikněte na položku **Nastavení importu a exportu** . Další informace najdete v tématu [Přizpůsobení integrovaného vývojového prostředí (IDE) sady Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).
+> Vzhled funkcí v prostředí IDE může záviset na aktivním nastavení nebo edici a může se lišit od funkcí popsaných v nápovědě. Chcete-li změnit nastavení, zvolte **Nastavení importu a exportu** v nabídce **Nástroje.** Další informace naleznete [v tématu Přizpůsobení prostředí IDE sady Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).
 
-### <a name="to-create-an-mfc-dll-project-using-the-mfc-dll-wizard"></a>Vytvoření projektu knihovny MFC DLL pomocí Průvodce knihovnou MFC DLL
+### <a name="to-create-an-mfc-dll-project-using-the-mfc-dll-wizard"></a>Vytvoření projektu knihovny MFC DLL pomocí Průvodce knihovnou DLL knihovny MFC
 
-1. Postupujte podle pokynů v tématu nápovědy [Vytvoření aplikace MFC](creating-an-mfc-application.md) , ale zvolte **dynamickou knihovnu MFC** nebo knihovnu **MFC DLL** ze seznamu dostupných šablon.
+1. Postupujte podle pokynů v tématu nápovědy [Vytvoření aplikace knihovny MFC,](creating-an-mfc-application.md) ale ze seznamu dostupných šablon zvolte **knihovnu dynamických odkazů** knihovny MFC nebo **knihovnu DLL knihovny MFC.**
 
-1. Definujte nastavení aplikace pomocí stránky [nastavení aplikace](../../mfc/reference/application-settings-mfc-dll-wizard.md) v [Průvodci knihovny MFC DLL](../../mfc/reference/mfc-dll-wizard.md).
+1. Definujte nastavení aplikace pomocí stránky [Nastavení aplikace](../../mfc/reference/application-settings-mfc-dll-wizard.md) [průvodce knihovnou MFC DLL](../../mfc/reference/mfc-dll-wizard.md).
 
     > [!NOTE]
-    >  Tento krok přeskočte, pokud chcete zachovat výchozí nastavení průvodce.
+    >  Tento krok přeskočte, chcete-li zachovat výchozí nastavení průvodce.
 
-1. Kliknutím na tlačítko **Dokončit** zavřete průvodce a otevřete nový projekt v **Průzkumník řešení**.
+1. Klepnutím na **tlačítko Dokončit** zavřete průvodce a otevřete nový projekt v **Průzkumníku řešení**.
 
-Po vytvoření projektu můžete zobrazit soubory vytvořené v **Průzkumník řešení**. Další informace o souborech, které průvodce vytvoří pro váš projekt, naleznete v souboru Readme. txt generovaného projektem. Další informace o typech souborů naleznete v tématu [typy souborů vytvořené pro projekty aplikace Visual C++ Studio](../../build/reference/file-types-created-for-visual-cpp-projects.md).
+Po vytvoření projektu můžete zobrazit soubory vytvořené v **Průzkumníku řešení**. Další informace o souborech, které průvodce vytvoří pro váš projekt, naleznete v souboru ReadMe.txt generovaném projektem. Další informace o typech souborů naleznete v [tématu Typy souborů vytvořené pro projekty visual studio C++](../../build/reference/file-types-created-for-visual-cpp-projects.md).
 
 ## <a name="see-also"></a>Viz také
 
-[C++typy projektů v aplikaci Visual Studio](/visualstudio/debugger/debugging-preparation-visual-cpp-project-types)<br/>
+[Typy projektů Jazyka C++ v sadě Visual Studio](/visualstudio/debugger/debugging-preparation-visual-cpp-project-types)<br/>
 [Přidání funkce pomocí Průvodců kódem](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
 [Stránky vlastností](../../build/reference/property-pages-visual-cpp.md)

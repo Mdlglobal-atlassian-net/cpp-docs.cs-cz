@@ -1,17 +1,17 @@
 ---
 title: Delegování konstruktorů (C++)
-description: Použijte delegování konstruktorů v C++ k vyvolání jiných konstruktorů a zmenšení opakování kódu.
+description: Použití delegování konstruktory v jazyce C++ vyvolat jiné konstruktory a snížit opakování kódu.
 ms.date: 11/19/2019
-ms.openlocfilehash: 533cdfbeb882f3770cc554b0633611a4ffc2cfbd
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: f26a013aa3c081d900ffc3eb32649acc77505db0
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74250672"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81316676"
 ---
 # <a name="delegating-constructors"></a>Delegování konstruktorů
 
-Mnoho tříd má více konstruktorů, které se podobají podobným účelům, například ověření parametrů:
+Mnoho tříd má více konstruktorů, které dělají podobné věci – například ověřit parametry:
 
 ```cpp
 class class_c {
@@ -36,7 +36,7 @@ public:
 };
 ```
 
-Opakovaný kód můžete snížit přidáním funkce, která provádí všechna ověření, ale kód pro `class_c` by byl snazší pochopit a udržovat, pokud jeden konstruktor by mohl delegovat některé práce na jiný konstruktor. Chcete-li přidat konstruktory delegování, použijte syntaxi `constructor (. . .) : constructor (. . .)`:
+Můžete snížit opakující se kód přidáním funkce, která provádí všechny ověření, `class_c` ale kód pro by bylo snazší pochopit a udržovat, pokud jeden konstruktor mohl delegovat některé práce na jinou. Chcete-li přidat delegující konstruktory, použijte syntaxi: `constructor (. . .) : constructor (. . .)`
 
 ```cpp
 class class_c {
@@ -61,9 +61,9 @@ int main() {
 }
 ```
 
-Při procházení předchozího příkladu si všimněte, že konstruktor `class_c(int, int, int)` nejprve volá `class_c(int, int)`konstruktoru, který zase volá `class_c(int)`. Každý konstruktor provádí pouze práci, která není provedena jinými konstruktory.
+Při procházení předchozího příkladu si všimněte, že `class_c(int, int, int)` `class_c(int, int)`konstruktor nejprve `class_c(int)`volá konstruktor , který zase volá . Každý z konstruktorů provádí pouze práci, která není provedena jinými konstruktory.
 
-První konstruktor, který je volán jako inicializuje objekt tak, aby všechny jeho členy byly inicializovány v daném okamžiku. Inicializace člena nelze provést v konstruktoru, který je delegátem jiného konstruktoru, jak je znázorněno zde:
+První konstruktor, který se nazývá inicializovat objekt tak, aby všechny jeho členy jsou inicializovány v tomto okamžiku. Nelze provést inicializaci člena v konstruktoru, který deleguje na jiný konstruktor, jak je znázorněno zde:
 
 ```cpp
 class class_a {
@@ -83,7 +83,7 @@ public:
 };
 ```
 
-Následující příklad ukazuje použití nestatických inicializátorů členů dat. Všimněte si, že pokud konstruktor také inicializuje daný datový člen, inicializátor členu je přepsán:
+Následující příklad ukazuje použití nestatických inicializátorů datových členů. Všimněte si, že pokud konstruktor také inicializuje daný datový člen, inicializátor člena je přepsán:
 
 ```cpp
 class class_a {
@@ -101,7 +101,7 @@ int main() {
 }
 ```
 
-Syntaxe delegování konstruktoru nebrání nechtěnému vytvoření rekurze konstruktoru – Constructor1 volá Constructor2, která volá Constructor1 – a nejsou vyvolány žádné chyby, dokud nedojde k přetečení zásobníku. Je vaše zodpovědnost na to, abyste se vyhnuli cyklům.
+Syntaxe delegování konstruktoru nebrání náhodnému vytvoření rekurze konstruktoru – Constructor1 volá Constructor2, který volá Constructor1 – a žádné chyby jsou vyvolány, dokud není přetečení zásobníku. Je vaší zodpovědností vyhnout se cyklům.
 
 ```cpp
 class class_f{

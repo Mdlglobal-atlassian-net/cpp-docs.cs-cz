@@ -1,5 +1,5 @@
 ---
-title: CAnimationStoryboardEventHandler Class
+title: CAnimationStoryboardEventHandler – třída
 ms.date: 11/04/2016
 f1_keywords:
 - CAnimationStoryboardEventHandler
@@ -16,16 +16,16 @@ helpviewer_keywords:
 - CAnimationStoryboardEventHandler [MFC], OnStoryboardUpdated
 - CAnimationStoryboardEventHandler [MFC], SetAnimationController
 ms.assetid: 10a7e86b-c02d-4124-9a2e-61ecf8ac62fc
-ms.openlocfilehash: d12f38491cf3aafca41756ce97e1cad44deb67d5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 36b8b524591693775403d66fdc1f0754aaf67778
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62338256"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81365005"
 ---
-# <a name="canimationstoryboardeventhandler-class"></a>CAnimationStoryboardEventHandler Class
+# <a name="canimationstoryboardeventhandler-class"></a>CAnimationStoryboardEventHandler – třída
 
-Implementuje zpětné volání, které je voláno rozhraním API animace při změně stavu objektu storyboard nebo aktualizaci scénáře.
+Implementuje zpětné volání, které je voláno rozhraní min. animace při změně stavu scénáře nebo je aktualizován scénář.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -37,22 +37,22 @@ class CAnimationStoryboardEventHandler : public CUIAnimationStoryboardEventHandl
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CAnimationStoryboardEventHandler::CAnimationStoryboardEventHandler](#canimationstoryboardeventhandler)|Vytvoří `CAnimationStoryboardEventHandler` objektu.|
+|[CAnimationStoryboardEventHandler::CAnimationStoryboardEventHandler](#canimationstoryboardeventhandler)|Vytvoří `CAnimationStoryboardEventHandler` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CAnimationStoryboardEventHandler::CreateInstance](#createinstance)|Vytvoří instanci `CAnimationStoryboardEventHandler` zpětného volání.|
-|[CAnimationStoryboardEventHandler::OnStoryboardStatusChanged](#onstoryboardstatuschanged)|Zpracovává `OnStoryboardStatusChanged` události, ke kterým dochází při změně stavu objektu storyboard (přepíše `CUIAnimationStoryboardEventHandlerBase::OnStoryboardStatusChanged`.)|
-|[CAnimationStoryboardEventHandler::OnStoryboardUpdated](#onstoryboardupdated)|Zpracovává `OnStoryboardUpdated` události, ke kterým dochází, když dojde k aktualizaci scénáře (přepíše `CUIAnimationStoryboardEventHandlerBase::OnStoryboardUpdated`.)|
-|[CAnimationStoryboardEventHandler::SetAnimationController](#setanimationcontroller)|Uchovává ukazatel na řadič animace směrování událostí.|
+|[CAnimationStoryboardEventHandler::CreateInstance](#createinstance)|Vytvoří instanci zpětného `CAnimationStoryboardEventHandler` volání.|
+|[CAnimationStoryboardEventHandler::OnStoryboardStatusChanged](#onstoryboardstatuschanged)|Zpracovává `OnStoryboardStatusChanged` události, ke kterým dochází při změně stavu `CUIAnimationStoryboardEventHandlerBase::OnStoryboardStatusChanged`scénáře (Přepsání .)|
+|[CAnimationStoryboardEventHandler::OnStoryboardAktualizováno](#onstoryboardupdated)|Zpracovává `OnStoryboardUpdated` události, ke kterým dochází při aktualizaci `CUIAnimationStoryboardEventHandlerBase::OnStoryboardUpdated`scénáře (lokální změny .)|
+|[CAnimationStoryboardEventHandler::SetAnimationController](#setanimationcontroller)|Ukládá ukazatel na řadič animace pro směrování událostí.|
 
 ## <a name="remarks"></a>Poznámky
 
-Tato obslužná rutina události je vytvořen a předán `IUIAnimationStoryboard::SetStoryboardEventHandler` při volání metody `CAnimationController::EnableStoryboardEventHandler`.
+Tato obslužná `IUIAnimationStoryboard::SetStoryboardEventHandler` rutina události `CAnimationController::EnableStoryboardEventHandler`je vytvořena a předána metodě při volání .
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -66,17 +66,17 @@ Tato obslužná rutina události je vytvořen a předán `IUIAnimationStoryboard
 
 **Záhlaví:** afxanimationcontroller.h
 
-##  <a name="canimationstoryboardeventhandler"></a>  CAnimationStoryboardEventHandler::CAnimationStoryboardEventHandler
+## <a name="canimationstoryboardeventhandlercanimationstoryboardeventhandler"></a><a name="canimationstoryboardeventhandler"></a>CAnimationStoryboardEventHandler::CAnimationStoryboardEventHandler
 
-Vytvoří objekt canimationstoryboardeventhandler –.
+Vytvoří objekt CAnimationStoryboardEventHandler.
 
 ```
 CAnimationStoryboardEventHandler();
 ```
 
-##  <a name="createinstance"></a>  CAnimationStoryboardEventHandler::CreateInstance
+## <a name="canimationstoryboardeventhandlercreateinstance"></a><a name="createinstance"></a>CAnimationStoryboardEventHandler::CreateInstance
 
-Vytvoří instanci canimationstoryboardeventhandler – zpětného volání.
+Vytvoří instanci cAnimationStoryboardEventHandler zpětného volání.
 
 ```
 static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
@@ -87,17 +87,17 @@ static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
 ### <a name="parameters"></a>Parametry
 
 *pAnimationController*<br/>
-Ukazatel na řadič animace, který se zobrazí události.
+Ukazatel na ovladač animace, který bude přijímat události.
 
 *ppHandler*
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud metoda uspěje, vrátí hodnotu S_OK. V opačném případě vrátí kód chyby HRESULT.
+Pokud je metoda úspěšná, vrátí S_OK. V opačném případě vrátí kód chyby HRESULT.
 
-##  <a name="onstoryboardstatuschanged"></a>  CAnimationStoryboardEventHandler::OnStoryboardStatusChanged
+## <a name="canimationstoryboardeventhandleronstoryboardstatuschanged"></a><a name="onstoryboardstatuschanged"></a>CAnimationStoryboardEventHandler::OnStoryboardStatusChanged
 
-Zpracovává OnStoryboardStatusChanged události, ke kterým dochází, když se změní stav ve scénáři
+Zpracovává události OnStoryboardStatusChanged, ke kterým dochází při změně stavu scénáře
 
 ```
 IFACEMETHOD(OnStoryboardStatusChanged) (
@@ -108,22 +108,22 @@ IFACEMETHOD(OnStoryboardStatusChanged) (
 
 ### <a name="parameters"></a>Parametry
 
-*storyboard*<br/>
-Ukazatel na scénáře, jehož stav se změnil.
+*Scénáře*<br/>
+Ukazatel na scénář, jehož stav se změnil.
 
 *newStatus*<br/>
-Určuje stav nového scénáře.
+Určuje nový stav scénáře.
 
 *previousStatus*<br/>
 Určuje předchozí stav scénáře.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud metoda uspěje; S_OK jinak E_FAIL.
+S_OK pokud je metoda úspěšná; jinak E_FAIL.
 
-##  <a name="onstoryboardupdated"></a>  CAnimationStoryboardEventHandler::OnStoryboardUpdated
+## <a name="canimationstoryboardeventhandleronstoryboardupdated"></a><a name="onstoryboardupdated"></a>CAnimationStoryboardEventHandler::OnStoryboardAktualizováno
 
-Zpracovává OnStoryboardUpdated události, ke kterým dochází, když dojde k aktualizaci ve scénáři
+Zpracovává OnStoryboardAktualizované události, ke kterým dochází při aktualizaci scénáře
 
 ```
 IFACEMETHOD(OnStoryboardUpdated) (__in IUIAnimationStoryboard* storyboard);
@@ -131,16 +131,16 @@ IFACEMETHOD(OnStoryboardUpdated) (__in IUIAnimationStoryboard* storyboard);
 
 ### <a name="parameters"></a>Parametry
 
-*storyboard*<br/>
-Ukazatel na scénáře, který byl aktualizován.
+*Scénáře*<br/>
+Ukazatel na scénář, který byl aktualizován.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud metoda uspěje; S_OK jinak E_FAIL.
+S_OK pokud je metoda úspěšná; jinak E_FAIL.
 
-##  <a name="setanimationcontroller"></a>  CAnimationStoryboardEventHandler::SetAnimationController
+## <a name="canimationstoryboardeventhandlersetanimationcontroller"></a><a name="setanimationcontroller"></a>CAnimationStoryboardEventHandler::SetAnimationController
 
-Uchovává ukazatel na řadič animace směrování událostí.
+Ukládá ukazatel na řadič animace pro směrování událostí.
 
 ```
 void SetAnimationController(CAnimationController* pAnimationController);
@@ -149,8 +149,8 @@ void SetAnimationController(CAnimationController* pAnimationController);
 ### <a name="parameters"></a>Parametry
 
 *pAnimationController*<br/>
-Ukazatel na řadič animace, který se zobrazí události.
+Ukazatel na ovladač animace, který bude přijímat události.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Třídy](../../mfc/reference/mfc-classes.md)

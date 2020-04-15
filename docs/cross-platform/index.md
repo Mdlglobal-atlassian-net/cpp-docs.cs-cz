@@ -1,21 +1,21 @@
 ---
 layout: LandingPage
-title: Vývoj pro mobilní zařízení pomocíC++
-description: Vytvářejte nativní C++ aplikace pro zařízení s iOS, Androidem a Windows pomocí sady Visual Studio.
+title: Mobilní vývoj s C++
+description: Pomocí Sady Visual Studio můžete vytvářet nativní aplikace C++ pro zařízení se systémem iOS, Android a Windows.
 ms.date: 10/31/2018
 author: jasongroce
 ms.author: jasgro
 ms.topic: landing-page
 ms.openlocfilehash: d250a1586b4cf01dfae2a39b7d595b60c53a5123
-ms.sourcegitcommit: a673f6a54cc97e3d4cd032b10aa8dce7f0539d39
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/14/2020
 ms.locfileid: "78177441"
 ---
-# <a name="mobile-development-with-c-documentation"></a>Vývoj pro mobilní C++ zařízení pomocí dokumentace
+# <a name="mobile-development-with-c-documentation"></a>Vývoj mobilních zařízení s dokumentací jazyka C++
 
-Vytvářejte nativní C++ aplikace pro zařízení s iOS, Androidem a Windows pomocí sady Visual Studio.
+Pomocí Sady Visual Studio můžete vytvářet nativní aplikace C++ pro zařízení se systémem iOS, Android a Windows.
 
 <!-- markdownlint-disable MD033 -->
 
@@ -32,7 +32,7 @@ Vytvářejte nativní C++ aplikace pro zařízení s iOS, Androidem a Windows po
                     </div>
                     <div class="cardText">
                         <h3>Instalace pro vývoj multiplatformních mobilních řešení v jazyce C++</h3>
-                        <p>Nastavte nástroje potřebné pro vytváření mobilních aplikací pro různé platformy.</p>
+                        <p>Nastavte nástroje potřebné k vytváření mobilních aplikací pro různé platformy.</p>
                     </div>
                 </div>
             </div>
@@ -50,8 +50,8 @@ Vytvářejte nativní C++ aplikace pro zařízení s iOS, Androidem a Windows po
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Další informace o nástrojích Visual C++ Studio Tools pro vývoj mobilních aplikací pro různé platformy</h3>
-                        <p>Získejte přehled o vývoji mobilních aplikací pro různé platformy pomocí C++.</p>
+                        <h3>Další informace o nástrojích Visual Studia pro vývoj mobilních zařízení napříč platformami pro různé platformy</h3>
+                        <p>Získejte přehled o vývoji mobilních zařízení napříč platformami s C++.</p>
                     </div>
                 </div>
             </div>
@@ -70,7 +70,7 @@ Vytvářejte nativní C++ aplikace pro zařízení s iOS, Androidem a Windows po
                     </div>
                     <div class="cardText">
                         <h3>Příklady vývoje multiplatformních mobilních řešení</h3>
-                        <p>Podívejte se na ukázky, které vám pomůžou začít s vývojem mobilních řešení pro různé platformy.</p>
+                        <p>Podívejte se na ukázky, které vám pomohou začít s vývojem mobilních zařízení napříč platformami.</p>
                     </div>
                 </div>
             </div>
@@ -101,9 +101,9 @@ Vytvářejte nativní C++ aplikace pro zařízení s iOS, Androidem a Windows po
                 <div class="card">
                     <div class="cardText">
                         <h3>Platformy</h3>
-                        <p><a href="/cpp/cppcx/universal-windows-apps-cpp">Dokumentace k Univerzální platforma Windows (UWP)</a></p>
-                        <p><a href="https://developer.apple.com/reference">dokumentace k rozhraní iOS API</a></p>
-                        <p><a href="https://developer.android.com/guide/index.html">Dokumentace k rozhraní Android API</a></p>
+                        <p><a href="/cpp/cppcx/universal-windows-apps-cpp">Dokumentace k univerzální platformě Windows (UPW)</a></p>
+                        <p><a href="https://developer.apple.com/reference">Dokumentace rozhraní API pro iOS</a></p>
+                        <p><a href="https://developer.android.com/guide/index.html">Dokumentace rozhraní API pro Android</a></p>
                     </div>
                 </div>
             </div>

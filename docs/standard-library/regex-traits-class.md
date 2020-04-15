@@ -38,16 +38,16 @@ helpviewer_keywords:
 - std::regex_traits [C++], imbue
 - std::regex_traits [C++], getloc
 ms.assetid: bc5a5eed-32fc-4eb7-913d-71c42e729e81
-ms.openlocfilehash: 2a04e0f1c202717bb6d40a10f07475d78453ffd7
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 8879336c48d0fec8a20411abf1c07d570a1575e7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689031"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366394"
 ---
 # <a name="regex_traits-class"></a>regex_traits – třída
 
-Popisuje charakteristiky prvků pro porovnání.
+Popisuje vlastnosti prvků pro porovnávání.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -58,14 +58,14 @@ class regex_traits
 
 ## <a name="parameters"></a>Parametry
 
-*Elem* \
-Typ prvku znaku, který má být popsán.
+*Elem*\
+Typ prvku znaku, který chcete popsat.
 
 ## <a name="remarks"></a>Poznámky
 
-Šablona třídy popisuje různé vlastnosti regulárních výrazů pro typ *elem*. Třída šablony třídy [basic_regex](../standard-library/basic-regex-class.md) používá tyto informace k manipulaci s prvky typu *elem*.
+Šablona třídy popisuje různé znaky regulárních výrazů pro typ *Elem*. Šablona třídy [basic_regex Class](../standard-library/basic-regex-class.md) používá tyto informace k manipulaci s prvky typu *Elem*.
 
-Každý objekt `regex_traits` obsahuje objekt typu `regex_traits::locale`, který je používán některými z jeho členských funkcí. Výchozím národním prostředím je kopie `regex_traits::locale()`. Členská funkce `imbue` nahradí objekt národního prostředí a členská funkce `getloc` vrátí kopii objektu národního prostředí.
+Každý `regex_traits` objekt obsahuje objekt `regex_traits::locale` typu, který je používán některými jeho členskými funkcemi. Výchozí národní prostředí je `regex_traits::locale()`kopie aplikace . Členská `imbue` funkce nahradí objekt národního prostředí `getloc` a členská funkce vrátí kopii objektu národního prostředí.
 
 ### <a name="constructors"></a>Konstruktory
 
@@ -77,10 +77,10 @@ Každý objekt `regex_traits` obsahuje objekt typu `regex_traits::locale`, kter�
 
 |Název typu|Popis|
 |-|-|
-|[char_class_type](#char_class_type)|Typ specifikátorů třídy znaků.|
+|[char_class_type](#char_class_type)|Typ označení třídy znaků.|
 |[char_type](#char_type)|Typ prvku|
 |[locale_type](#locale_type)|Typ uloženého objektu národního prostředí.|
-|[size_type](#size_type)|Typ délky posloupnosti.|
+|[size_type](#size_type)|Typ délky sekvence.|
 |[string_type](#string_type)|Typ řetězce prvků.|
 
 ### <a name="member-functions"></a>Členské funkce
@@ -88,20 +88,20 @@ Každý objekt `regex_traits` obsahuje objekt typu `regex_traits::locale`, kter�
 |Členská funkce|Popis|
 |-|-|
 |[getloc](#getloc)|Vrátí uložený objekt národního prostředí.|
-|[imbue –](#imbue)|Změní uložený objekt národního prostředí.|
-|[isctype –](#isctype)|Testy pro členství ve třídě.|
-|[časový](#length)|Vrátí délku sekvence zakončené znakem null.|
+|[Naplnit](#imbue)|Změní uložený objekt národního prostředí.|
+|[isctype](#isctype)|Testy pro členství ve třídě.|
+|[Délka](#length)|Vrátí délku sekvence ukončené hodnotou null.|
 |[lookup_classname](#lookup_classname)|Mapuje sekvenci na třídu znaků.|
-|[lookup_collatename](#lookup_collatename)|Mapuje sekvenci na řadicí prvek.|
-|[převedení](#transform)|Převede na ekvivalentní uspořádanou sekvenci.|
-|[transform_primary](#transform_primary)|Převede na ekvivalentní řazenou sekvenci s neodpovídajícími písmeny.|
-|[posunut](#translate)|Převede na ekvivalentní odpovídající prvek.|
-|[translate_nocase](#translate_nocase)|Převede na ekvivalentní prvek odpovídající velikosti písmen.|
-|[value](#value)|Převede element na hodnotu číslice.|
+|[lookup_collatename](#lookup_collatename)|Mapuje sekvenci na kompletující prvek.|
+|[Transformace](#transform)|Převede na ekvivalentní seřazené pořadí.|
+|[transform_primary](#transform_primary)|Převede na ekvivalentní sekvenci bez případu.|
+|[Přeložit](#translate)|Převede na ekvivalentní odpovídající prvek.|
+|[translate_nocase](#translate_nocase)|Převede na ekvivalentní prvek bez případu odpovídající.|
+|[Hodnotu](#value)|Převede prvek na hodnotu číslice.|
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<regex >
+**Záhlaví:** \<regex>
 
 **Obor názvů:** std
 
@@ -175,9 +175,9 @@ class digit == d == true
 hex C == 12
 ```
 
-## <a name="char_class_type"></a>regex_traits::char_class_type
+## <a name="regex_traitschar_class_type"></a><a name="char_class_type"></a>regex_traits::char_class_type
 
-Typ specifikátorů třídy znaků.
+Typ označení třídy znaků.
 
 ```cpp
 typedef T8 char_class_type;
@@ -185,9 +185,9 @@ typedef T8 char_class_type;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ je synonymum pro nespecifikovaný typ, který určuje třídy znaků. Hodnoty tohoto typu lze kombinovat pomocí operátoru `|` k určení tříd znaků, které jsou sjednocením tříd určených operandy.
+Typ je synonymem pro nespecifikovaný typ, který označuje třídy znaků. Hodnoty tohoto typu lze kombinovat `|` pomocí operátoru k označení tříd znaků, které jsou sjednocením tříd určených operandy.
 
-## <a name="char_type"></a>regex_traits::char_type
+## <a name="regex_traitschar_type"></a><a name="char_type"></a>regex_traits::char_type
 
 Typ prvku
 
@@ -197,9 +197,9 @@ typedef Elem char_type;
 
 ### <a name="remarks"></a>Poznámky
 
-Typedef je synonymum pro argument šablony `Elem`.
+Typedef je synonymem pro `Elem`argument šablony .
 
-## <a name="getloc"></a>regex_traits:: getloc
+## <a name="regex_traitsgetloc"></a><a name="getloc"></a>regex_traits::getloc
 
 Vrátí uložený objekt národního prostředí.
 
@@ -209,9 +209,9 @@ locale_type getloc() const;
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí uložený objekt `locale`.
+Členská funkce vrátí `locale` uložený objekt.
 
-## <a name="imbue"></a>regex_traits:: imbue –
+## <a name="regex_traitsimbue"></a><a name="imbue"></a>regex_traits::imbue
 
 Změní uložený objekt národního prostředí.
 
@@ -221,14 +221,14 @@ locale_type imbue(locale_type loc);
 
 ### <a name="parameters"></a>Parametry
 
-\ *Loc*
-Objekt národního prostředí, který se má uložit
+*Loc*\
+Objekt národního prostředí, který chcete uložit.
 
 ### <a name="remarks"></a>Poznámky
 
-Členská *funkce kopíruje* umístění do uloženého `locale` objektu a vrátí kopii předchozí hodnoty uloženého objektu `locale`.
+Členská funkce *loc* zkopíruje `locale` loc do uloženého objektu a `locale` vrátí kopii předchozí hodnoty uloženého objektu.
 
-## <a name="isctype"></a>regex_traits:: isctype –
+## <a name="regex_traitsisctype"></a><a name="isctype"></a>regex_traits::isctype
 
 Testy pro členství ve třídě.
 
@@ -238,19 +238,19 @@ bool isctype(char_type ch, char_class_type cls) const;
 
 ### <a name="parameters"></a>Parametry
 
-*ch* \
-Prvek, který chcete otestovat.
+*Ch*\
+Prvek k testování.
 
-\ *CLS*
-Třídy, které se mají testovat.
+*Cls*\
+Třídy, které mají být testovány.
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí hodnotu true pouze v případě, že znak *ch* je ve třídě znaků určené *specifikací CLS*.
+Členská funkce vrátí hodnotu true pouze v případě, že znak *ch* je ve třídě znaků určené *cls*.
 
-## <a name="length"></a>regex_traits:: Length
+## <a name="regex_traitslength"></a><a name="length"></a>regex_traits::délka
 
-Vrátí délku sekvence zakončené znakem null.
+Vrátí délku sekvence ukončené hodnotou null.
 
 ```cpp
 static size_type length(const char_type *str);
@@ -258,14 +258,14 @@ static size_type length(const char_type *str);
 
 ### <a name="parameters"></a>Parametry
 
-\ *str*
-Sekvence zakončené znakem null.
+*Str*\
+Sekvence ukončená hodnotou null.
 
 ### <a name="remarks"></a>Poznámky
 
-Statická členská funkce vrací `std::char_traits<char_type>::length(str)`.
+Vrátí statickou `std::char_traits<char_type>::length(str)`členská funkce .
 
-## <a name="locale_type"></a>regex_traits::locale_type
+## <a name="regex_traitslocale_type"></a><a name="locale_type"></a>regex_traits::locale_type
 
 Typ uloženého objektu národního prostředí.
 
@@ -275,9 +275,9 @@ typedef T7 locale_type;
 
 ### <a name="remarks"></a>Poznámky
 
-Typedef je synonymum pro typ, který zapouzdřuje národní prostředí. V specializacích `regex_traits<char>` a `regex_traits<wchar_t>` je synonymem pro `std::locale`.
+Typedef je synonymum pro typ, který zapouzdřuje národní prostředí. V `regex_traits<char>` specializacích `regex_traits<wchar_t>` a je `std::locale`synonymem pro .
 
-## <a name="lookup_classname"></a>regex_traits::lookup_classname
+## <a name="regex_traitslookup_classname"></a><a name="lookup_classname"></a>regex_traits::lookup_classname
 
 Mapuje sekvenci na třídu znaků.
 
@@ -288,23 +288,23 @@ char_class_type lookup_classname(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>Parametry
 
-*první* \
-Začátek sekvence, která se má vyhledat
+*První*\
+Začátek sekvence se podívat nahoru.
 
-*poslední* \
-Konec sekvence, která se má vyhledat
+*Poslední*\
+Konec sekvence se podívat nahoru.
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí hodnotu, která označuje třídu znaků pojmenovanou sekvencí znaků, na kterou odkazuje jeho argumenty. Hodnota nezávisí na velikosti písmen v sekvenci.
+Členská funkce vrátí hodnotu, která označuje třídu znaků pojmenovanou posloupností znaků, na kterou se pozařují její argumenty. Hodnota nezávisí na případě znaků v sekvenci.
 
-Specializace `regex_traits<char>` rozpoznává názvy `"d"`, `"s"`, `"w"`, `"alnum"`, `"alpha"`, `"blank"`, `"cntrl"`, `"digit"`, `"graph"`, 0, 1, 2, 3 , 4 a 5, bez ohledu na velikost písmen.
+`regex_traits<char>` Specializace rozpozná názvy `"d"` `"s"`, `"w"` `"alnum"`, `"alpha"` `"blank"`, `"cntrl"` `"digit"`, `"graph"` `"lower"`, `"print"` `"punct"`, `"space"` `"upper"`, `"xdigit"`, , , , , , a , a , vše bez ohledu na případ.
 
-Specializace `regex_traits<wchar_t>` rozpoznává názvy `L"d"`, `L"s"`, `L"w"`, `L"alnum"`, `L"alpha"`, `L"blank"`, `L"cntrl"`, `L"digit"`, `L"graph"`, 0, 1, 2, 3 , 4 a 5, bez ohledu na velikost písmen.
+`regex_traits<wchar_t>` Specializace rozpozná názvy `L"d"` `L"s"`, `L"w"` `L"alnum"`, `L"alpha"` `L"blank"`, `L"cntrl"` `L"digit"`, `L"graph"` `L"lower"`, `L"print"` `L"punct"`, `L"space"` `L"upper"`, `L"xdigit"`, , , , , , a , a , vše bez ohledu na případ.
 
-## <a name="lookup_collatename"></a>regex_traits::lookup_collatename
+## <a name="regex_traitslookup_collatename"></a><a name="lookup_collatename"></a>regex_traits::lookup_collatename
 
-Mapuje sekvenci na řadicí prvek.
+Mapuje sekvenci na kompletující prvek.
 
 ```cpp
 template <class FwdIt>
@@ -313,17 +313,17 @@ string_type lookup_collatename(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>Parametry
 
-*první* \
-Začátek sekvence, která se má vyhledat
+*První*\
+Začátek sekvence se podívat nahoru.
 
-*poslední* \
-Konec sekvence, která se má vyhledat
+*Poslední*\
+Konec sekvence se podívat nahoru.
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí objekt String obsahující element kompletování odpovídající sekvenci `[first, last)` nebo prázdný řetězec, pokud sekvence není platným prvkem kompletování.
+Členská funkce vrátí objekt řetězce obsahující kompletační prvek `[first, last)`odpovídající sekvenci nebo prázdný řetězec, pokud sekvence není platným kompletujícím prvkem.
 
-## <a name="regex_traits"></a>regex_traits::regex_traits
+## <a name="regex_traitsregex_traits"></a><a name="regex_traits"></a>regex_traits::regex_traits
 
 Vytvoří objekt.
 
@@ -333,11 +333,11 @@ regex_traits();
 
 ### <a name="remarks"></a>Poznámky
 
-Konstruktor vytvoří objekt, jehož uložený `locale` objekt je inicializován do výchozího národního prostředí.
+Konstruktor vytvoří objekt, jehož uložený `locale` objekt je inicializován na výchozí národní prostředí.
 
-## <a name="size_type"></a>regex_traits::size_type
+## <a name="regex_traitssize_type"></a><a name="size_type"></a>regex_traits::size_type
 
-Typ délky posloupnosti.
+Typ délky sekvence.
 
 ```cpp
 typedef T6 size_type;
@@ -345,11 +345,11 @@ typedef T6 size_type;
 
 ### <a name="remarks"></a>Poznámky
 
-Typedef je synonymum pro celočíselný typ bez znaménka. V specializacích `regex_traits<char>` a `regex_traits<wchar_t>` je synonymem pro `std::size_t`.
+Typedef je synonymum pro nepodepsaný integrální typ. V `regex_traits<char>` specializacích `regex_traits<wchar_t>` a je `std::size_t`synonymem pro .
 
-Typedef je synonymem pro `std::size_t`.
+Typedef je synonymem `std::size_t`pro .
 
-## <a name="string_type"></a>regex_traits::string_type
+## <a name="regex_traitsstring_type"></a><a name="string_type"></a>regex_traits::string_type
 
 Typ řetězce prvků.
 
@@ -359,11 +359,11 @@ typedef basic_string<Elem> string_type;
 
 ### <a name="remarks"></a>Poznámky
 
-Typedef je synonymem pro `basic_string<Elem>`.
+Typedef je synonymem `basic_string<Elem>`pro .
 
-## <a name="transform"></a>regex_traits:: Transform
+## <a name="regex_traitstransform"></a><a name="transform"></a>regex_traits::transformace
 
-Převede na ekvivalentní uspořádanou sekvenci.
+Převede na ekvivalentní seřazené pořadí.
 
 ```cpp
 template <class FwdIt>
@@ -372,19 +372,19 @@ string_type transform(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>Parametry
 
-*první* \
-Začátek sekvence, která se má transformovat
+*První*\
+Začátek sekvence transformace.
 
-*poslední* \
-Konec sekvence, která se má transformovat
+*Poslední*\
+Konec sekvence transformace.
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí řetězec, který generuje pomocí pravidla transformace, které závisí na uloženém objektu `locale`. Pro dvě sekvence znaků určené rozsahy iterátoru `[first1, last1)` a `[first2, last2)`, `transform(first1, last1) < transform(first2, last2)`, pokud sekvence znaků určená rozsahem iterátoru `[first1, last1)` seřadí před sekvencí znaků určenou `[first2, last2)` rozsahu iterátoru.
+Členská funkce vrátí řetězec, který generuje pomocí pravidla transformace, `locale` který závisí na uloženém objektu. Pro dvě znakové sekvence určené rozsahy `[first1, last1)` iterátoru a `[first2, last2)`, `transform(first1, last1) < transform(first2, last2)` pokud se znaková sekvence určená rozsahem `[first1, last1)` iterátoru seřadí před posloupnost znaků určenou rozsahem iterátoru `[first2, last2)`.
 
-## <a name="transform_primary"></a>regex_traits::transform_primary
+## <a name="regex_traitstransform_primary"></a><a name="transform_primary"></a>regex_traits::transform_primary
 
-Převede na ekvivalentní řazenou sekvenci s neodpovídajícími písmeny.
+Převede na ekvivalentní sekvenci bez případu.
 
 ```cpp
 template <class FwdIt>
@@ -393,17 +393,17 @@ string_type transform_primary(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>Parametry
 
-*první* \
-Začátek sekvence, která se má transformovat
+*První*\
+Začátek sekvence transformace.
 
-*poslední* \
-Konec sekvence, která se má transformovat
+*Poslední*\
+Konec sekvence transformace.
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí řetězec, který generuje pomocí pravidla transformace, které závisí na uloženém objektu `locale`. Pro dvě sekvence znaků určené rozsahy iterátoru `[first1, last1)` a `[first2, last2)` `transform_primary(first1, last1) < transform_primary(first2, last2)`, pokud sekvence znaků určená rozsahem iterátoru `[first1, last1)` seřadí před sekvenci znaků určenou rozsahem iterátoru `[first2, last2)` bez ohledu na Case nebo akcenty.
+Členská funkce vrátí řetězec, který generuje pomocí pravidla transformace, `locale` který závisí na uloženém objektu. Pro dvě znakové sekvence určené rozsahy `[first1, last1)` iterátoru a `[first2, last2)`, `transform_primary(first1, last1) < transform_primary(first2, last2)` pokud se znaková sekvence určená rozsahem `[first1, last1)` iterátoru seřadí před posloupností znaků určenou rozsahem iterátoru `[first2, last2)` bez ohledu na případ nebo přízvuk.
 
-## <a name="translate"></a>regex_traits:: přeložit
+## <a name="regex_traitstranslate"></a><a name="translate"></a>regex_traits::přeložit
 
 Převede na ekvivalentní odpovídající prvek.
 
@@ -413,16 +413,16 @@ char_type translate(char_type ch) const;
 
 ### <a name="parameters"></a>Parametry
 
-*ch* \
-Prvek, který má být převeden.
+*Ch*\
+Prvek převést.
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí znak, který generuje pomocí pravidla transformace, které závisí na uloženém objektu `locale`. Pro dva `char_type` objekty `ch1` a `ch2` `translate(ch1) == translate(ch2)` pouze v případě, že `ch1` a `ch2` by se měla shodovat, pokud k jedné z nich dojde v definici regulárního výrazu a druhá dojde na odpovídající pozici v cílové sekvenci pro porovnávání zohledňující národní prostředí.
+Členská funkce vrátí znak, který generuje pomocí pravidla transformace, `locale` který závisí na uloženém objektu. Pro `char_type` dva `ch1` `ch2`objekty `ch1` a `ch2` , `translate(ch1) == translate(ch2)` pouze pokud a by měla odpovídat, když jeden nastane v definici regulárního výrazu a druhý nastane na odpovídající pozici v cílové sekvenci pro shodu citlivou na národní prostředí.
 
-## <a name="translate_nocase"></a>regex_traits::translate_nocase
+## <a name="regex_traitstranslate_nocase"></a><a name="translate_nocase"></a>regex_traits::translate_nocase
 
-Převede na ekvivalentní prvek odpovídající velikosti písmen.
+Převede na ekvivalentní prvek bez případu odpovídající.
 
 ```cpp
 char_type translate_nocase(char_type ch) const;
@@ -430,16 +430,16 @@ char_type translate_nocase(char_type ch) const;
 
 ### <a name="parameters"></a>Parametry
 
-*ch* \
-Prvek, který má být převeden.
+*Ch*\
+Prvek převést.
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí znak, který generuje pomocí pravidla transformace, které závisí na uloženém objektu `locale`. Pro dva `char_type` objekty `ch1` a `ch2` `translate_nocase(ch1) == translate_nocase(ch2)` pouze v případě, že `ch1` a `ch2` by se měla shodovat, pokud k jedné z nich dojde v definici regulárního výrazu a druhá dojde na odpovídající pozici v cílové sekvenci pro porovnávání bez rozlišení velkých a malých písmen.
+Členská funkce vrátí znak, který generuje pomocí pravidla transformace, `locale` který závisí na uloženém objektu. Pro `char_type` dva `ch1` `ch2`objekty `ch1` a `ch2` , `translate_nocase(ch1) == translate_nocase(ch2)` pouze pokud a by měla odpovídat, když jeden nastane v definici regulárního výrazu a druhý nastane na odpovídající pozici v cílové sekvenci pro případ nerozlišující shody.
 
-## <a name="value"></a>regex_traits:: Value
+## <a name="regex_traitsvalue"></a><a name="value"></a>regex_traits::hodnota
 
-Převede element na hodnotu číslice.
+Převede prvek na hodnotu číslice.
 
 ```cpp
 int value(Elem ch, int radix) const;
@@ -447,25 +447,25 @@ int value(Elem ch, int radix) const;
 
 ### <a name="parameters"></a>Parametry
 
-*ch* \
-Prvek, který má být převeden.
+*Ch*\
+Prvek převést.
 
-\ *základu*
-Aritmetický základ, který se má použít.
+*Radix*\
+Aritmetické základny k použití.
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrací hodnotu reprezentovanou znakem *ch* v základní *základové*hodnotě nebo-1, pokud *ch* není platná číslice v *základní základové hodnotě.* Funkce bude volána pouze s argumentem *základu* 8, 10 nebo 16.
+Členská funkce vrátí hodnotu reprezentovanou znakem *ch* v základním *radixu*nebo -1, pokud *ch* není platnou číslicí v základním *radixu*. Funkce bude volána pouze s *argumentem radix* 8, 10 nebo 16.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[\<regex >](../standard-library/regex.md) \
-\ [třídy regex_constants](../standard-library/regex-constants-class.md)
-\ [třídy regex_error](../standard-library/regex-error-class.md)
-[funkce \<regex >](../standard-library/regex-functions.md) \
-\ [třídy regex_iterator](../standard-library/regex-iterator-class.md)
-[operátory \<regex >](../standard-library/regex-operators.md) \
-\ [třídy regex_token_iterator](../standard-library/regex-token-iterator-class.md)
-[\<regex > definice typedef](../standard-library/regex-typedefs.md) \
-[regex_traits \<char > třídy](../standard-library/regex-traits-char-class.md) \
-[regex_traits \<wchar_t > – třída](../standard-library/regex-traits-wchar-t-class.md)
+[\<regulární>](../standard-library/regex.md)\
+[regex_constants třída](../standard-library/regex-constants-class.md)\
+[regex_error třída](../standard-library/regex-error-class.md)\
+[\<funkce> regulárních výrazů](../standard-library/regex-functions.md)\
+[regex_iterator třída](../standard-library/regex-iterator-class.md)\
+[\<operátory> regulárních výrazů](../standard-library/regex-operators.md)\
+[regex_token_iterator třída](../standard-library/regex-token-iterator-class.md)\
+[\<regulární> typedefs](../standard-library/regex-typedefs.md)\
+[regex_traits\<char> třídy](../standard-library/regex-traits-char-class.md)\
+[>\<wchar_t> regex_traits>](../standard-library/regex-traits-wchar-t-class.md)

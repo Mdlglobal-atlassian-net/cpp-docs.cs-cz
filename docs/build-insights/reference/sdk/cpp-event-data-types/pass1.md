@@ -1,6 +1,6 @@
 ---
-title: Pass1 – třída
-description: Referenční C++ dokumentace třídy Pass1 sady SDK pro Build Insights
+title: Třída Pass1
+description: C++ Build Insights SDK Pass1 odkaz na třídu.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: d81a933e21f6976624808be358230305459e4992
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 039c2cc92b8461009c235baa7e49484eb2a4f49f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78333088"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81324424"
 ---
-# <a name="pass1-class"></a>Pass1 – třída
+# <a name="pass1-class"></a>Třída Pass1
 
 ::: moniker range="<=vs-2015"
 
-Sada C++ SDK pro Build Insights je kompatibilní se sadou Visual Studio 2017 a novější. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek selektor verzí sady Visual Studio pro tento článek na sadu Visual Studio 2017 nebo Visual Studio 2019.
+Sada C++ Build Insights SDK je kompatibilní s Visual Studio 2017 a vyšší. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek pro výběr **verze** sady Visual Studio pro tento článek na Visual Studio 2017 nebo Visual Studio 2019. Nachází se v horní části obsahu na této stránce.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Třída `Pass1` se používá s funkcemi [MatchEvent](../functions/match-event.md), [MatchEventInMemberFunction](../functions/match-event-in-member-function.md), [MatchEventStack](../functions/match-event-stack.md)a [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md) . Použijte ho ke spárování s událostí [PASS1](../event-table.md#pass1) .
+Třída `Pass1` se používá s funkcemi [MatchEvent](../functions/match-event.md), [MatchEventInMemberFunction](../functions/match-event-in-member-function.md), [MatchEventStack](../functions/match-event-stack.md)a [MatchEventStackInMemberFunction.](../functions/match-event-stack-in-member-function.md) Použijte ji tak, aby odpovídala události [PASS1.](../event-table.md#pass1)
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -39,13 +39,13 @@ public:
 
 ## <a name="members"></a>Členové
 
-Společně s děděnými členy ze své základní třídy [LinkerPass](linker-pass.md) obsahuje Třída `Pass1` následující členy:
+Spolu s zděděnými členy z jeho `Pass1` [LinkerPass](linker-pass.md) základní třídy, třída obsahuje následující členy:
 
 ### <a name="constructors"></a>Konstruktory
 
-[Pass1](#pass1)
+[Průchod1](#pass1)
 
-## <a name="pass1"></a>Pass1
+## <a name="pass1"></a><a name="pass1"></a>Průchod1
 
 ```cpp
 Pass1(const RawEvent& event);
@@ -53,7 +53,7 @@ Pass1(const RawEvent& event);
 
 ### <a name="parameters"></a>Parametry
 
-\ *události*
-Událost [PASS1](../event-table.md#pass1)
+*Událost*\
+Událost [PASS1.](../event-table.md#pass1)
 
 ::: moniker-end

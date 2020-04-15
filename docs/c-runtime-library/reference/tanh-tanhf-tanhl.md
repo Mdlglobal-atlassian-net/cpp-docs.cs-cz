@@ -1,10 +1,11 @@
 ---
 title: tanh, tanhf, tanhl
-ms.date: 04/10/2018
+ms.date: 4/2/2020
 api_name:
 - tanh
 - tanhf
 - tanhl
+- _o_tanh
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -33,16 +35,16 @@ helpviewer_keywords:
 - tanhf function
 - trigonometric functions
 - hyperbolic functions
-ms.openlocfilehash: 0d249768ed26a55e639cced55bae6b923dbf521b
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 626252285a11ae4cbcb8bd2e5658512b85bfd3d3
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957535"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81362614"
 ---
 # <a name="tanh-tanhf-tanhl"></a>tanh, tanhf, tanhl
 
-Vypočítá hyperbolický tangens.
+Vypočítá hyperbolickou tečnu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -59,28 +61,30 @@ long double tanh( long double x );  // C++ only
 
 ### <a name="parameters"></a>Parametry
 
-*x*<br/>
+*X*<br/>
 Úhel v radiánech.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Funkce **tanh –** vrací hyperbolický tangens *x*. Nevrátila se žádná chybová zpráva.
+Funkce **tanh** vrátí hyperbolickou tečnu *x*. Neexistuje žádná chyba vrátit.
 
-|Vstup|Výjimka SEH|**Matherr** Jímka|
+|Vstup|Výjimka SEH|**Matherr (Rak.)** Výjimka|
 |-----------|-------------------|-------------------------|
-|QNAN, ZASÁHNOUT|žádná|_DOMAIN|
+|± QNAN,IND|Žádná|_DOMAIN|
 
 ## <a name="remarks"></a>Poznámky
 
-Vzhledem C++ k tomu, že umožňuje přetížení, můžete volat přetížení **tanh –** , která přijímají a vracejí hodnoty **float** nebo **Long** **Double** . V programu v jazyce C **tanh –** vždycky přebírá a vrací **Double**.
+Protože C++ umožňuje přetížení, můžete volat přetížení **tanh,** které tanh, které taa a return **float** nebo **dlouhé** **dvojité** hodnoty. V programu C **tanh** vždy bere a vrací **double**.
+
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
-|Rutina|Požadovaná hlavička (C)|Požadovaná hlavička (C)|
+|Rutina|Povinná hlavička (C)|Povinná hlavička (C)|
 |-------------|---------------------|-|
-|**tanh –** , **tanhf –** , **tanhl**|\<Math. h >|\<cmath > nebo \<Math. h >|
+|**tanh**, **tanhf**, **tanhl**|\<math.h>|\<cmath> \<nebo math.h>|
 
-Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -110,9 +114,9 @@ tan( 0.785398 ) = 1.000000
 tanh( 1.000000 ) = 0.761594
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)<br/>
+[Podpora s plovoucí desetinnou tálicí](../../c-runtime-library/floating-point-support.md)<br/>
 [acosh, acoshf, acoshl](acosh-acoshf-acoshl.md)<br/>
 [asinh, asinhf, asinhl](asinh-asinhf-asinhl.md)<br/>
 [atanh, atanhf, atanhl](atanh-atanhf-atanhl.md)<br/>

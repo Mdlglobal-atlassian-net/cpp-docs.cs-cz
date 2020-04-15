@@ -8,12 +8,12 @@ helpviewer_keywords:
 - __event keyword [C++]
 - events [C++], __event
 ms.assetid: d3019b3e-722e-48df-8536-c05878461f9e
-ms.openlocfilehash: d0d6d3570662cba36a606002263559246e22da57
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f8935408c6e9b43347d4ad6088505a461e254ae2
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80180053"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366293"
 ---
 # <a name="__event"></a>__event
 
@@ -29,26 +29,26 @@ __event member-declarator;
 
 ## <a name="remarks"></a>Poznámky
 
-Klíčové slovo **__event** lze použít pro deklaraci metody, deklaraci rozhraní nebo deklaraci datového člena. Nemůžete však použít klíčové slovo **__event** k kvalifikování člena vnořené třídy.
+Klíčové slovo **__event** lze použít pro deklaraci metody, deklaraci rozhraní nebo deklaraci datového člena. Klíčové slovo **__event** však nelze použít ke kvalifikaci člena vnořené třídy.
 
-V závislosti na tom, jestli je zdroj události a přijímač C++nativní, com nebo spravované (.NET Framework), můžete jako události použít následující konstrukce:
+V závislosti na tom, zda jsou zdroj událostí a příjemce nativní C++, COM nebo spravované (rozhraní.NET Framework), můžete jako události použít následující konstrukce:
 
-|Nativní kód C++|Model COM|Spravované (.NET Framework)|
+|Nativní C++|Model COM|Spravované (rozhraní.NET Framework)|
 |------------------|---------|--------------------------------|
-|Metoda|—|metoda|
+|Metoda|—|method|
 |—|rozhraní|—|
 |—|—|datový člen|
 
-K přidružení metody obslužné rutiny k metodě události použijte [__hook](../cpp/hook.md) v přijímači událostí. Všimněte si, že po vytvoření události s klíčovým slovem **__event** budou všechny obslužné rutiny událostí následně připojeny k této události při volání události volány.
+Pomocí [__hook](../cpp/hook.md) v příjemci událostí přidružit metodu obslužné rutiny k metodě události. Všimněte si, že po vytvoření události s klíčovým slovem **__event** budou při volání události volány všechny obslužné rutiny událostí, které jsou následně připojeny k této události.
 
-Deklarace metody **__event** nemůže mít definici. definice je implicitně vygenerována, takže metodu události lze volat, jako by to byla jakákoli obyčejná metoda.
+Deklarace metody **__event** nemůže mít definici; definice je implicitně generována, takže metodu události lze volat, jako by se jednalo o běžnou metodu.
 
 > [!NOTE]
->  Třída šablony nebo struktura nemohou obsahovat události.
+> Třída šablony nebo struktura nemohou obsahovat události.
 
 ## <a name="native-events"></a>Nativní události
 
-Nativní události jsou metody. Návratový typ je obvykle HRESULT nebo **void**, ale může to být libovolný integrální typ, včetně **výčtu**. Pokud událost používá celočíselný návratový typ, je při zpracování chybové podmínky definována výjimka, když obslužná rutina události vrátí nenulovou hodnotu. v takovém případě vyvolaná událost vyvolá jiné delegáty.
+Nativní události jsou metody. Návratový typ je obvykle HRESULT nebo **void**, ale může být libovolný integrální typ, včetně **výčtu**. Pokud událost používá integrální návratový typ, je definována chybová podmínka, když obslužná rutina události vrátí nenulovou hodnotu, v takovém případě bude událost, která je vyvolána, volat ostatní delegáty.
 
 ```cpp
 // Examples of native C++ events:
@@ -56,30 +56,30 @@ __event void OnDblClick();
 __event HRESULT OnClick(int* b, char* s);
 ```
 
-Viz [zpracování událostí v nativním C++ ](../cpp/event-handling-in-native-cpp.md) kódu pro ukázkový kód.
+Ukázkový kód najdete [v tématu Zpracování událostí v nativním jazyce C++.](../cpp/event-handling-in-native-cpp.md)
 
 ## <a name="com-events"></a>Události COM
 
-Události COM jsou rozhraní. Parametry metody ve zdrojovém rozhraní události by měly být *v* parametrech (ale toto není přísně vynutilo), protože *výstupní* parametr není užitečný při vícesměrovém vysílání. Pokud použijete *výstupní* parametr, bude vydáno upozornění úrovně 1.
+Události com jsou rozhraní. Parametry metody ve zdrojovém rozhraní událostí by měly být *v* parametrech (ale to není důsledně vynuceno), protože *out* parametr není užitečné při vícesměrovém vysílání. Pokud použijete parametr *out,* bude vydáno upozornění úrovně 1.
 
-Návratový typ je obvykle HRESULT nebo **void**, ale může to být libovolný celočíselný typ, včetně **výčtu**. Když událost používá celočíselný návratový typ a obslužná rutina události vrátí nenulovou hodnotu, jedná se o chybový stav. v takovém případě událost vyvolává přerušení volání jiných delegátů. Všimněte si, že kompilátor bude automaticky označovat zdrojové rozhraní události jako [zdroj](../windows/attributes/source-cpp.md) ve vygenerovaném IDL.
+Návratový typ je obvykle HRESULT nebo **void**, ale může být libovolný integrální typ, včetně **výčtu**. Pokud událost používá integrální návratový typ a obslužná rutina události vrátí nenulovou hodnotu, je chybový stav, v takovém případě událost, která je vyvolána, přeruší volání ostatních delegátů. Všimněte si, že kompilátor automaticky označí zdrojové rozhraní události jako [zdroj](../windows/attributes/source-cpp.md) v generovaném IDL.
 
-Klíčové slovo [__interface](../cpp/interface.md) se vždy vyžaduje po **__event** pro zdroj události com.
+Klíčové slovo [__interface](../cpp/interface.md) je vždy vyžadováno po **__event** pro zdroj událostí COM.
 
 ```cpp
 // Example of a COM event:
 __event __interface IEvent1;
 ```
 
-Vzorový kód najdete [v tématu zpracování událostí v modelu COM](../cpp/event-handling-in-com.md) .
+Ukázkový kód naleznete [v tématu Zpracování událostí v com.](../cpp/event-handling-in-com.md)
 
 ## <a name="managed-events"></a>Spravované události
 
-Informace o kódování událostí v nové syntaxi naleznete v tématu [Event](../extensions/event-cpp-component-extensions.md).
+Informace o událostech kódování v nové syntaxi naleznete v tématu [událost](../extensions/event-cpp-component-extensions.md).
 
-Spravované události jsou datové členy nebo metody. Při použití s událostí musí být návratový typ delegáta kompatibilní se specifikací CLS ( [Common Language Specification](/dotnet/standard/language-independence-and-language-independent-components)). Návratový typ obslužné rutiny události musí odpovídat návratový typ delegátu. Další informace o delegátech naleznete v tématu [Delegáti a události](../dotnet/delegates-and-events.md). Pokud je spravovaná událost datový člen, jeho typ musí být ukazatel na delegáta.
+Spravované události jsou datové členy nebo metody. Při použití s událostí musí být návratový typ delegáta kompatibilní se [specifikací společného jazyka](/dotnet/standard/language-independence-and-language-independent-components). Návratový typ obslužné rutiny události musí odpovídat návratový typ delegáta. Další informace o delegátech naleznete v tématu [Delegáti a události](../dotnet/delegates-and-events.md). Pokud je spravovaná událost datovým členem, musí být jejím typem ukazatel na delegáta.
 
-V .NET Framework můžete s datovým členem zacházet, jako by šlo o metodu (to znamená `Invoke` metoda příslušného delegáta). Musíte předdefinovat typ delegáta pro deklaraci spravovaného datového člena události. Naproti tomu spravovaná metoda události implicitně definuje odpovídající spravovaný delegát, pokud ještě není definovaný. Například můžete deklarovat hodnotu události, například `OnClick` jako událost následujícím způsobem:
+V rozhraní .NET Framework můžete zacházet s datovým členem, jako `Invoke` by se jednalo o samotnou metodu (to znamená metodu odpovídajícího delegáta). Je nutné předdefinovat typ delegáta pro deklarování datového člena spravované události. Naproti tomu metoda spravované události implicitně definuje odpovídajícího spravovaného delegáta, pokud ještě není definována. Můžete například deklarovat hodnotu události, například `OnClick` jako událost takto:
 
 ```cpp
 // Examples of managed events:
@@ -87,9 +87,9 @@ __event ClickEventHandler* OnClick;  // data member as event
 __event void OnClick(String* s);  // method as event
 ```
 
-Pokud implicitně deklarujete spravovanou událost, můžete zadat přístupové objekty Add a Remove, které budou volány při přidání nebo odebrání obslužných rutin událostí. Můžete také definovat metodu, která volá (vyvolává) událost mimo třídu.
+Při implicitně deklarování spravované události můžete zadat přistupující a odebrané přístupové akce, které budou volány při přidání nebo odebrání obslužných rutin událostí. Můžete také definovat metodu, která volá (vyvolává) událost z mimo třídu.
 
-## <a name="example-native-events"></a>Příklad: nativní události
+## <a name="example-native-events"></a>Příklad: Nativní události
 
 ```cpp
 // EventHandling_Native_Event.cpp
@@ -101,7 +101,7 @@ public:
 };
 ```
 
-## <a name="example-com-events"></a>Příklad: události COM
+## <a name="example-com-events"></a>Příklad: Události COM
 
 ```cpp
 // EventHandling_COM_Event.cpp

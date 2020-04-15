@@ -13,19 +13,19 @@ helpviewer_keywords:
 - stdext::checked_array_iterator [C++], reference
 - stdext::checked_array_iterator [C++], base
 ms.assetid: 7f07185e-d588-4ae3-9c4f-84ec4aa25a28
-ms.openlocfilehash: 68ee602c44a8515e1d41f04a4bd0fbb7edc924b7
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: f177a45e700ab15852cd9c6d947873d247cf3828
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68452299"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81363866"
 ---
-# <a name="checkedarrayiterator-class"></a>checked_array_iterator – třída
+# <a name="checked_array_iterator-class"></a>checked_array_iterator – třída
 
-`checked_array_iterator` Třída umožňuje transformovat pole nebo ukazatel na kontrolovaný iterátor. Tuto třídu můžete použít jako obálku (pomocí funkce [make_checked_array_iterator](../standard-library/iterator-functions.md#make_checked_array_iterator) ) pro nezpracované ukazatele nebo pole jako cílový způsob, jak poskytnout kontrolu a spravovat nezaškrtnutá upozornění na ukazatele namísto globálně vyměření těchto upozornění. V případě potřeby můžete použít nekontrolované verze této třídy [unchecked_array_iterator](../standard-library/unchecked-array-iterator-class.md).
+Třída `checked_array_iterator` umožňuje transformovat pole nebo ukazatel do zaškrtnuté iterátoru. Tuto třídu použijte jako obálku (pomocí [funkce make_checked_array_iterator)](../standard-library/iterator-functions.md#make_checked_array_iterator) pro nezpracované ukazatele nebo pole jako cílený způsob, jak zajistit kontrolu a spravovat nekontrolovaná upozornění ukazatele namísto globálního umlčení těchto upozornění. V případě potřeby můžete použít nekontrolovnou verzi této [třídy, unchecked_array_iterator](../standard-library/unchecked-array-iterator-class.md).
 
 > [!NOTE]
-> Tato třída je rozšířením společnosti Microsoft pro C++ standardní knihovnu. Kód implementovaný pomocí této funkce není přenosný do standardního prostředí pro sestavování v jazyce C++, která toto rozšíření společnosti Microsoft nepodporují. Jak napsat kód, který nevyžaduje použití této třídy, viz druhý příklad.
+> Tato třída je rozšíření Microsoft standardní knihovny C++. Kód implementovaný pomocí této funkce není přenosný do standardního prostředí pro sestavování v jazyce C++, která toto rozšíření společnosti Microsoft nepodporují. Jak napsat kód, který nevyžaduje použití této třídy, viz druhý příklad.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -36,9 +36,9 @@ class checked_array_iterator;
 
 ## <a name="remarks"></a>Poznámky
 
-Tato třída je definována v oboru názvů [stdext](../standard-library/stdext-namespace.md) .
+Tato třída je definována v oboru názvů [stdext.](../standard-library/stdext-namespace.md)
 
-Další informace a příklad kódu pro funkci kontrolovaného iterátoru najdete v tématu [kontrolované iterátory](../standard-library/checked-iterators.md).
+Další informace a ukázkový kód v kontrolované funkci iterátoru naleznete [v tématu Checked Iterators](../standard-library/checked-iterators.md).
 
 ## <a name="example"></a>Příklad
 
@@ -50,7 +50,7 @@ Pokud cíl není dostatečně velký pro všechny prvky, které jsou kopírován
 copy(a, a + 5, checked_array_iterator<int*>(b, 5));
 ```
 
-až
+na
 
 ```cpp
 copy(a, a + 5, checked_array_iterator<int*>(b, 4));
@@ -93,7 +93,7 @@ int main() {
 
 ## <a name="example"></a>Příklad
 
-Chcete-li se vyhnout potřebě `checked_array_iterator` třídy při použití C++ algoritmů standardní knihovny `vector` , zvažte použití namísto dynamicky přiděleného pole. Následující příklad demonstruje, jak to udělat.
+Chcete-li se `checked_array_iterator` vyhnout nutnosti třídy při použití algoritmů `vector` standardní knihovny jazyka C++, zvažte použití místo dynamicky přiděleného pole. Následující příklad demonstruje, jak to udělat.
 
 ```cpp
 // compile with: /EHsc /W4 /MTd
@@ -143,51 +143,51 @@ int main()
 
 |Konstruktor|Popis|
 |-|-|
-|[checked_array_iterator](#checked_array_iterator)|Vytvoří výchozí `checked_array_iterator` `checked_array_iterator` nebo ze základního iterátoru.|
+|[checked_array_iterator](#checked_array_iterator)|Vytvoří výchozí `checked_array_iterator` nebo `checked_array_iterator` z podkladového iterátoru.|
 
 ### <a name="typedefs"></a>Typedefs
 
 |Název typu|Popis|
 |-|-|
-|[difference_type](#difference_type)|Typ, který poskytuje rozdíl mezi dvěma `checked_array_iterator`s odkazujícími na prvky v rámci stejného kontejneru.|
-|[pointer](#pointer)|Typ, který poskytuje ukazatel na prvek řešený `checked_array_iterator`.|
-|[Referenční dokumentace](#reference)|Typ, který poskytuje odkaz na prvek řešený `checked_array_iterator`.|
+|[difference_type](#difference_type)|Typ, který poskytuje rozdíl `checked_array_iterator`mezi dvěma s odkazující na prvky v rámci stejného kontejneru.|
+|[ukazatel](#pointer)|Typ, který poskytuje ukazatel na prvek `checked_array_iterator`adresovaný .|
+|[Odkaz](#reference)|Typ, který poskytuje odkaz na prvek `checked_array_iterator`adresovaný .|
 
 ### <a name="member-functions"></a>Členské funkce
 
 |Členská funkce|Popis|
 |-|-|
-|[base](#base)|Obnoví základní iterátor z jeho `checked_array_iterator`.|
+|[base](#base)|Obnoví základní iterátor z `checked_array_iterator`jeho .|
 
 ### <a name="operators"></a>Operátory
 
 |Operátor|Popis|
 |-|-|
-|[operator==](#op_eq_eq)|Testuje dva `checked_array_iterator`s pro rovnost.|
-|[operator!=](#op_neq)|Testuje dva `checked_array_iterator`s pro nerovnost.|
-|[operátor <](#op_lt)|Testuje, `checked_array_iterator` zda je na levé straně operátoru menší `checked_array_iterator` než na pravé straně.|
-|[operátor >](#op_gt)|Testuje, `checked_array_iterator` zda je na levé straně operátoru větší `checked_array_iterator` než na pravé straně.|
-|[operátor < =](#op_lt_eq)|Testuje, `checked_array_iterator` zda je na levé straně operátoru menší než nebo rovno `checked_array_iterator` na pravé straně.|
-|[operator>=](#op_gt_eq)|Testuje, `checked_array_iterator` zda je na levé straně operátoru větší než nebo rovno `checked_array_iterator` na pravé straně.|
-|[podnikatel](#op_star)|Vrátí prvek, který obsahuje `checked_array_iterator` adresy.|
-|[operátor->](#op_arrow)|Vrátí ukazatel na prvek řešený `checked_array_iterator`.|
-|[operator + + – operátor](#op_add_add)|Přivýší `checked_array_iterator` k dalšímu prvku.|
-|[--– operátor](#operator--)|`checked_array_iterator` Sníží na předchozí prvek.|
-|[operator+=](#op_add_eq)|Přidá zadaný posun k `checked_array_iterator`.|
-|[operator + – operátor](#op_add)|Přidá posun k iterátoru a vrátí nový `checked_array_iterator` adresující vložený prvek na nové pozici posunu.|
-|[operator-=](#operator-_eq)|Sníží zadaný posun z `checked_array_iterator`.|
-|[podnikatel](#operator-)|Sníží posun z iterátoru a vrátí nový `checked_array_iterator` adresující vložený prvek na nové pozici posunu.|
-|[podnikatel&#91;&#93;](#op_at)|Vrátí odkaz na posun prvku z prvku, který adresuje `checked_array_iterator` podle zadaného počtu pozic.|
+|[operátor==](#op_eq_eq)|Testuje `checked_array_iterator`dva s pro rovnost.|
+|[operátor!=](#op_neq)|Testy `checked_array_iterator`dva s pro nerovnost.|
+|[operátor<](#op_lt)|Zkoušky, `checked_array_iterator` pokud je na levé straně operátora menší než `checked_array_iterator` na pravé straně.|
+|[operátor>](#op_gt)|Testuje, `checked_array_iterator` zda je na levé straně operátora větší než `checked_array_iterator` na pravé straně.|
+|[operátor<=](#op_lt_eq)|Zkoušky, `checked_array_iterator` pokud na levé straně operátora je menší `checked_array_iterator` nebo rovno na pravé straně.|
+|[operátor>=](#op_gt_eq)|Zkoušky, `checked_array_iterator` pokud na levé straně operátoru je větší `checked_array_iterator` nebo rovna na pravé straně.|
+|[operátor*](#op_star)|Vrátí prvek, `checked_array_iterator` který adresy.|
+|[operátor->](#op_arrow)|Vrátí ukazatel na prvek, který `checked_array_iterator`je adresován rozhraním .|
+|[operátor++](#op_add_add)|Zintáží `checked_array_iterator` na další prvek.|
+|[operátora--](#operator--)|Sníží `checked_array_iterator` na předchozí prvek.|
+|[operátor+=](#op_add_eq)|Přidá zadaný posun `checked_array_iterator`do .|
+|[operátor+](#op_add)|Přidá posun do iterátoru a `checked_array_iterator` vrátí nové adresování vloženého prvku v nové pozici odsazení.|
+|[operátor-=](#operator-_eq)|Sníží zadaný posun od `checked_array_iterator`.|
+|[operátor-](#operator-)|Sníží posun od iterátoru a vrátí nové `checked_array_iterator` adresování vloženého prvku v nové pozici odsazení.|
+|[operátor&#91;&#93;](#op_at)|Vrátí odkaz na posun prvku od prvku `checked_array_iterator` adresovaného a o zadaný počet pozic.|
 
 ## <a name="requirements"></a>Požadavky
 
-**Hlavička:** \<iterátor >
+**Záhlaví:** \<> iterátoru
 
 **Obor názvů:** stdext
 
-## <a name="base"></a>checked_array_iterator:: Base
+## <a name="checked_array_iteratorbase"></a><a name="base"></a>checked_array_iterator::základna
 
-Obnoví základní iterátor z jeho `checked_array_iterator`.
+Obnoví základní iterátor z `checked_array_iterator`jeho .
 
 ```cpp
 _Iterator base() const;
@@ -195,7 +195,7 @@ _Iterator base() const;
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace najdete v tématu [kontrolované iterátory](../standard-library/checked-iterators.md).
+Další informace naleznete [v tématu Checked Iterators](../standard-library/checked-iterators.md).
 
 ### <a name="example"></a>Příklad
 
@@ -228,9 +228,9 @@ The iterator underlying rpos is bpos & it points to: 1.
 */
 ```
 
-## <a name="checked_array_iterator"></a>checked_array_iterator::checked_array_iterator
+## <a name="checked_array_iteratorchecked_array_iterator"></a><a name="checked_array_iterator"></a>checked_array_iterator::checked_array_iterator
 
-Vytvoří výchozí `checked_array_iterator` `checked_array _iterator` nebo ze základního iterátoru.
+Vytvoří výchozí `checked_array_iterator` nebo `checked_array _iterator` z podkladového iterátoru.
 
 ```cpp
 checked_array_iterator();
@@ -243,18 +243,18 @@ checked_array_iterator(
 
 ### <a name="parameters"></a>Parametry
 
-*střed*\
+*Ptr*\
 Ukazatel na pole.
 
-*hodnota*\
+*Velikost*\
 Velikost pole.
 
-*indexovacím*\
-Volitelné Prvek v poli pro inicializaci iterátoru.  Ve výchozím nastavení je iterátor inicializován na první prvek v poli.
+*Index*\
+(Nepovinné) Prvek v poli, chcete-li inicializovat iterátor.  Ve výchozím nastavení je iterátor inicializován na první prvek v poli.
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace najdete v tématu [kontrolované iterátory](../standard-library/checked-iterators.md).
+Další informace naleznete [v tématu Checked Iterators](../standard-library/checked-iterators.md).
 
 ### <a name="example"></a>Příklad
 
@@ -292,9 +292,9 @@ int main() {
 */
 ```
 
-## <a name="difference_type"></a>checked_array_iterator::d ifference_type
+## <a name="checked_array_iteratordifference_type"></a><a name="difference_type"></a>checked_array_iterator::difference_type
 
-Typ, který poskytuje rozdíl mezi dvěma `checked_array_iterator`s odkazujícími na prvky v rámci stejného kontejneru.
+Typ, který poskytuje rozdíl `checked_array_iterator`mezi dvěma s odkazující na prvky v rámci stejného kontejneru.
 
 ```cpp
 typedef typename iterator_traits<_Iterator>::difference_type difference_type;
@@ -302,15 +302,15 @@ typedef typename iterator_traits<_Iterator>::difference_type difference_type;
 
 ### <a name="remarks"></a>Poznámky
 
-`checked_array_iterator` Rozdílový typ je stejný jako typ rozdílu iterátoru.
+Typ `checked_array_iterator` rozdílu je stejný jako typ rozdílu iterátoru.
 
-Ukázku kódu naleznete v tématu [checked_array_iterator:: operator []](#op_at) .
+Ukázku kódu naleznete [checked_array_iterator::operator[].](#op_at)
 
-Další informace najdete v tématu [kontrolované iterátory](../standard-library/checked-iterators.md).
+Další informace naleznete [v tématu Checked Iterators](../standard-library/checked-iterators.md).
 
-## <a name="op_eq_eq"></a>checked_array_iterator:: operator = = – operátor
+## <a name="checked_array_iteratoroperator"></a><a name="op_eq_eq"></a>checked_array_iterator::operátor==
 
-Testuje dva `checked_array_iterator`s pro rovnost.
+Testuje `checked_array_iterator`dva s pro rovnost.
 
 ```cpp
 bool operator==(const checked_array_iterator<_Iterator>& right) const;
@@ -318,12 +318,12 @@ bool operator==(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Kliknutím*\
-, `checked_array_iterator` U kterého se má kontrolovat rovnost.
+*Právo*\
+Proti `checked_array_iterator` kterému ke kontrole rovnosti.
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace najdete v tématu [kontrolované iterátory](../standard-library/checked-iterators.md).
+Další informace naleznete [v tématu Checked Iterators](../standard-library/checked-iterators.md).
 
 ### <a name="example"></a>Příklad
 
@@ -364,9 +364,9 @@ checked_array_iterators are not equal
 */
 ```
 
-## <a name="op_neq"></a>checked_array_iterator:: operator! =
+## <a name="checked_array_iteratoroperator"></a><a name="op_neq"></a>checked_array_iterator::operátor!=
 
-Testuje dva `checked_array_iterator`s pro nerovnost.
+Testy `checked_array_iterator`dva s pro nerovnost.
 
 ```cpp
 bool operator!=(const checked_array_iterator<_Iterator>& right) const;
@@ -374,12 +374,12 @@ bool operator!=(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Kliknutím*\
-, `checked_array_iterator` U kterého se má kontrolovat nerovnost.
+*Právo*\
+Proti `checked_array_iterator` kterému kontrolovat nerovnost.
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace najdete v tématu [kontrolované iterátory](../standard-library/checked-iterators.md).
+Další informace naleznete [v tématu Checked Iterators](../standard-library/checked-iterators.md).
 
 ### <a name="example"></a>Příklad
 
@@ -420,9 +420,9 @@ checked_array_iterators are not equal
 */
 ```
 
-## <a name="op_lt"></a>checked_array_iterator:: operator&lt;
+## <a name="checked_array_iteratoroperatorlt"></a><a name="op_lt"></a>checked_array_iterator::operátor&lt;
 
-Testuje, `checked_array_iterator` zda je na levé straně operátoru menší `checked_array_iterator` než na pravé straně.
+Zkoušky, `checked_array_iterator` pokud je na levé straně operátora menší než `checked_array_iterator` na pravé straně.
 
 ```cpp
 bool operator<(const checked_array_iterator<_Iterator>& right) const;
@@ -430,12 +430,12 @@ bool operator<(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Kliknutím*\
-, `checked_array_iterator` U kterého se má kontrolovat nerovnost.
+*Právo*\
+Proti `checked_array_iterator` kterému kontrolovat nerovnost.
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace najdete v tématu [kontrolované iterátory](../standard-library/checked-iterators.md).
+Další informace naleznete [v tématu Checked Iterators](../standard-library/checked-iterators.md).
 
 ### <a name="example"></a>Příklad
 
@@ -476,9 +476,9 @@ checked_output_iterator2 is less than checked_output_iterator
 */
 ```
 
-## <a name="op_gt"></a>checked_array_iterator:: operator&gt;
+## <a name="checked_array_iteratoroperatorgt"></a><a name="op_gt"></a>checked_array_iterator::operátor&gt;
 
-Testuje, `checked_array_iterator` zda je na levé straně operátoru větší `checked_array_iterator` než na pravé straně.
+Testuje, `checked_array_iterator` zda je na levé straně operátora větší než `checked_array_iterator` na pravé straně.
 
 ```cpp
 bool operator>(const checked_array_iterator<_Iterator>& right) const;
@@ -486,18 +486,18 @@ bool operator>(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Kliknutím*\
-`checked_array_iterator` Pro porovnání s.
+*Právo*\
+Porovnat `checked_array_iterator` proti.
 
 ### <a name="remarks"></a>Poznámky
 
-Ukázku kódu naleznete v tématu [checked_array_iterator:: operator&lt; ](#op_lt) .
+Viz [checked_array_iterator::operátor&lt; ](#op_lt) pro ukázku kódu.
 
-Další informace najdete v tématu [kontrolované iterátory](../standard-library/checked-iterators.md).
+Další informace naleznete [v tématu Checked Iterators](../standard-library/checked-iterators.md).
 
-## <a name="op_lt_eq"></a>checked_array_iterator:: operator&lt;=
+## <a name="checked_array_iteratoroperatorlt"></a><a name="op_lt_eq"></a>checked_array_iterator::operátor&lt;=
 
-Testuje, `checked_array_iterator` zda je na levé straně operátoru menší než nebo rovno `checked_array_iterator` na pravé straně.
+Zkoušky, `checked_array_iterator` pokud na levé straně operátora je menší `checked_array_iterator` nebo rovno na pravé straně.
 
 ```cpp
 bool operator<=(const checked_array_iterator<_Iterator>& right) const;
@@ -505,18 +505,18 @@ bool operator<=(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Kliknutím*\
-`checked_array_iterator` Pro porovnání s.
+*Právo*\
+Porovnat `checked_array_iterator` proti.
 
 ### <a name="remarks"></a>Poznámky
 
-Ukázku kódu naleznete v tématu [checked_array_iterator:: operator&gt; = ](#op_gt_eq) .
+Viz [checked_array_iterator::operátor&gt; ](#op_gt_eq) pro ukázku kódu.
 
-Další informace najdete v tématu [kontrolované iterátory](../standard-library/checked-iterators.md).
+Další informace naleznete [v tématu Checked Iterators](../standard-library/checked-iterators.md).
 
-## <a name="op_gt_eq"></a>checked_array_iterator:: operator&gt;=
+## <a name="checked_array_iteratoroperatorgt"></a><a name="op_gt_eq"></a>checked_array_iterator::operátor&gt;=
 
-Testuje, `checked_array_iterator` zda je na levé straně operátoru větší než nebo rovno `checked_array_iterator` na pravé straně.
+Zkoušky, `checked_array_iterator` pokud na levé straně operátoru je větší `checked_array_iterator` nebo rovna na pravé straně.
 
 ```cpp
 bool operator>=(const checked_array_iterator<_Iterator>& right) const;
@@ -524,12 +524,12 @@ bool operator>=(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Kliknutím*\
-`checked_array_iterator` Pro porovnání s.
+*Právo*\
+Porovnat `checked_array_iterator` proti.
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace najdete v tématu [kontrolované iterátory](../standard-library/checked-iterators.md).
+Další informace naleznete [v tématu Checked Iterators](../standard-library/checked-iterators.md).
 
 ### <a name="example"></a>Příklad
 
@@ -570,9 +570,9 @@ checked_output_iterator2 is less than checked_output_iterator
 */
 ```
 
-## <a name="op_star"></a>checked_array_iterator:: operator * – operátor
+## <a name="checked_array_iteratoroperator"></a><a name="op_star"></a>checked_array_iterator::operátor*
 
-Vrátí prvek, který obsahuje `checked_array_iterator` adresy.
+Vrátí prvek, `checked_array_iterator` který adresy.
 
 ```cpp
 reference operator*() const;
@@ -580,11 +580,11 @@ reference operator*() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota prvku adresovaného `checked_array_iterator`.
+Hodnota prvku, který je `checked_array_iterator`adresován .
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace najdete v tématu [kontrolované iterátory](../standard-library/checked-iterators.md).
+Další informace naleznete [v tématu Checked Iterators](../standard-library/checked-iterators.md).
 
 ### <a name="example"></a>Příklad
 
@@ -631,9 +631,9 @@ c[0].first = 10
 */
 ```
 
-## <a name="op_arrow"></a>checked_array_iterator:: operator-&gt;
+## <a name="checked_array_iteratoroperator-gt"></a><a name="op_arrow"></a>checked_array_iterator::operátor-&gt;
 
-Vrátí ukazatel na prvek řešený `checked_array_iterator`.
+Vrátí ukazatel na prvek, který `checked_array_iterator`je adresován rozhraním .
 
 ```cpp
 pointer operator->() const;
@@ -641,17 +641,17 @@ pointer operator->() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na element adresovaný `checked_array_iterator`.
+Ukazatel na prvek, který `checked_array_iterator`je adresován rozhraním .
 
 ### <a name="remarks"></a>Poznámky
 
-Ukázku kódu naleznete v tématu [checked_array_iterator::p ointer](#pointer) .
+Viz [checked_array_iterator::pointer](#pointer) pro ukázku kódu.
 
-Další informace najdete v tématu [kontrolované iterátory](../standard-library/checked-iterators.md).
+Další informace naleznete [v tématu Checked Iterators](../standard-library/checked-iterators.md).
 
-## <a name="op_add_add"></a>checked_array_iterator:: operator + +
+## <a name="checked_array_iteratoroperator"></a><a name="op_add_add"></a>checked_array_iterator::operátor++
 
-Přivýší `checked_array_iterator` k dalšímu prvku.
+Zintáží `checked_array_iterator` na další prvek.
 
 ```cpp
 checked_array_iterator& operator++();
@@ -661,11 +661,11 @@ checked_array_iterator<_Iterator> operator++(int);
 
 ### <a name="return-value"></a>Návratová hodnota
 
-První operátor vrátí předem přírůstek `checked_array_iterator` a druhý, operátor postinkrement, vrátí kopii `checked_array_iterator`zvýšení.
+První operátor vrátí preincremented `checked_array_iterator` a druhý, operátor postincrement, vrátí kopii `checked_array_iterator`přírůstku .
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace najdete v tématu [kontrolované iterátory](../standard-library/checked-iterators.md).
+Další informace naleznete [v tématu Checked Iterators](../standard-library/checked-iterators.md).
 
 ### <a name="example"></a>Příklad
 
@@ -697,9 +697,9 @@ int main() {
 */
 ```
 
-## <a name="operator--"></a>checked_array_iterator:: operator--
+## <a name="checked_array_iteratoroperator--"></a><a name="operator--"></a>checked_array_iterator::operátor--
 
-`checked_array_iterator` Sníží na předchozí prvek.
+Sníží `checked_array_iterator` na předchozí prvek.
 
 ```cpp
 checked_array_iterator<_Iterator>& operator--();
@@ -709,11 +709,11 @@ checked_array_iterator<_Iterator> operator--(int);
 
 ### <a name="return-value"></a>Návratová hodnota
 
-První operátor vrátí hodnotu předsníženo `checked_array_iterator` a druhý, postdekrement operátor vrátí kopii `checked_array_iterator`snížené hodnoty.
+První operátor vrátí predecremented `checked_array_iterator` a druhý, operátor postdecrement, vrátí kopii `checked_array_iterator`dekreed .
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace najdete v tématu [kontrolované iterátory](../standard-library/checked-iterators.md).
+Další informace naleznete [v tématu Checked Iterators](../standard-library/checked-iterators.md).
 
 ### <a name="example"></a>Příklad
 
@@ -745,9 +745,9 @@ int main() {
 */
 ```
 
-## <a name="op_add_eq"></a>checked_array_iterator:: operator + =
+## <a name="checked_array_iteratoroperator"></a><a name="op_add_eq"></a>checked_array_iterator::operátor+=
 
-Přidá zadaný posun k `checked_array_iterator`.
+Přidá zadaný posun `checked_array_iterator`do .
 
 ```cpp
 checked_array_iterator<_Iterator>& operator+=(difference_type _Off);
@@ -756,15 +756,15 @@ checked_array_iterator<_Iterator>& operator+=(difference_type _Off);
 ### <a name="parameters"></a>Parametry
 
 *_Off*\
-Posun, o který se má zvýšit iterátor
+Posun, o který chcete posít iterátor.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Odkaz na element adresovaný `checked_array_iterator`.
+Odkaz na prvek, na `checked_array_iterator`který se vztahuje rozhraní .
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace najdete v tématu [kontrolované iterátory](../standard-library/checked-iterators.md).
+Další informace naleznete [v tématu Checked Iterators](../standard-library/checked-iterators.md).
 
 ### <a name="example"></a>Příklad
 
@@ -793,9 +793,9 @@ int main() {
 */
 ```
 
-## <a name="op_add"></a>checked_array_iterator:: operator + – operátor
+## <a name="checked_array_iteratoroperator"></a><a name="op_add"></a>checked_array_iterator::operátor+
 
-Přidá posun k iterátoru a vrátí nový `checked_array_iterator` adresující vložený prvek na nové pozici posunu.
+Přidá posun do iterátoru a `checked_array_iterator` vrátí nové adresování vloženého prvku v nové pozici odsazení.
 
 ```cpp
 checked_array_iterator<_Iterator> operator+(difference_type _Off) const;
@@ -804,15 +804,15 @@ checked_array_iterator<_Iterator> operator+(difference_type _Off) const;
 ### <a name="parameters"></a>Parametry
 
 *_Off*\
-Posun, který má být přidán do `checked_array_iterator`.
+Posun, který má `checked_array_iterator`být přidán do .
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`checked_array_iterator` Adresování posunutí elementu.
+Adresování `checked_array_iterator` prvek posun.
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace najdete v tématu [kontrolované iterátory](../standard-library/checked-iterators.md).
+Další informace naleznete [v tématu Checked Iterators](../standard-library/checked-iterators.md).
 
 ### <a name="example"></a>Příklad
 
@@ -841,9 +841,9 @@ int main() {
 */
 ```
 
-## <a name="operator-_eq"></a>checked_array_iterator:: operator-=
+## <a name="checked_array_iteratoroperator-"></a><a name="operator-_eq"></a>checked_array_iterator::operátor-=
 
-Sníží zadaný posun z `checked_array_iterator`.
+Sníží zadaný posun od `checked_array_iterator`.
 
 ```cpp
 checked_array_iterator<_Iterator>& operator-=(difference_type _Off);
@@ -852,15 +852,15 @@ checked_array_iterator<_Iterator>& operator-=(difference_type _Off);
 ### <a name="parameters"></a>Parametry
 
 *_Off*\
-Posun, o který se má zvýšit iterátor
+Posun, o který chcete posít iterátor.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Odkaz na element adresovaný `checked_array_iterator`.
+Odkaz na prvek, na `checked_array_iterator`který se vztahuje rozhraní .
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace najdete v tématu [kontrolované iterátory](../standard-library/checked-iterators.md).
+Další informace naleznete [v tématu Checked Iterators](../standard-library/checked-iterators.md).
 
 ### <a name="example"></a>Příklad
 
@@ -890,9 +890,9 @@ int main() {
 */
 ```
 
-## <a name="operator-"></a>checked_array_iterator:: operator-
+## <a name="checked_array_iteratoroperator-"></a><a name="operator-"></a>checked_array_iterator::operátor-
 
-Sníží posun z iterátoru a vrátí nový `checked_array_iterator` adresující vložený prvek na nové pozici posunu.
+Sníží posun od iterátoru a vrátí nové `checked_array_iterator` adresování vloženého prvku v nové pozici odsazení.
 
 ```cpp
 checked_array_iterator<_Iterator> operator-(difference_type _Off) const;
@@ -903,19 +903,19 @@ difference_type operator-(const checked_array_iterator& right) const;
 ### <a name="parameters"></a>Parametry
 
 *_Off*\
-Posun, který má být snížen z `checked_array_iterator`.
+Posun, který má být snížen `checked_array_iterator`z .
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`checked_array_iterator` Adresování posunutí elementu.
+Adresování `checked_array_iterator` prvek posun.
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace najdete v tématu [kontrolované iterátory](../standard-library/checked-iterators.md).
+Další informace naleznete [v tématu Checked Iterators](../standard-library/checked-iterators.md).
 
-## <a name="op_at"></a>checked_array_iterator:: operator [] – operátor
+## <a name="checked_array_iteratoroperator"></a><a name="op_at"></a>checked_array_iterator::operátor[]
 
-Vrátí odkaz na posun prvku z prvku, který adresuje `checked_array_iterator` podle zadaného počtu pozic.
+Vrátí odkaz na posun prvku od prvku `checked_array_iterator` adresovaného a o zadaný počet pozic.
 
 ```cpp
 reference operator[](difference_type _Off) const;
@@ -928,11 +928,11 @@ Posun od `checked_array_iterator` adresy.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Odkaz na posunutí elementu.
+Odkaz na posun prvku.
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace najdete v tématu [kontrolované iterátory](../standard-library/checked-iterators.md).
+Další informace naleznete [v tématu Checked Iterators](../standard-library/checked-iterators.md).
 
 ### <a name="example"></a>Příklad
 
@@ -963,9 +963,9 @@ int main() {
 */
 ```
 
-## <a name="pointer"></a>checked_array_iterator::p ointer
+## <a name="checked_array_iteratorpointer"></a><a name="pointer"></a>checked_array_iterator::pointer
 
-Typ, který poskytuje ukazatel na prvek řešený `checked_array_iterator`.
+Typ, který poskytuje ukazatel na prvek `checked_array_iterator`adresovaný .
 
 ```cpp
 typedef typename iterator_traits<_Iterator>::pointer pointer;
@@ -973,13 +973,13 @@ typedef typename iterator_traits<_Iterator>::pointer pointer;
 
 ### <a name="remarks"></a>Poznámky
 
-Ukázku kódu naleznete v tématu [checked_array_iterator:: operator *](#op_star) .
+Ukázku kódu naleznete [checked_array_iterator::operator*.](#op_star)
 
-Další informace najdete v tématu [kontrolované iterátory](../standard-library/checked-iterators.md).
+Další informace naleznete [v tématu Checked Iterators](../standard-library/checked-iterators.md).
 
-## <a name="reference"></a>checked_array_iterator:: Reference
+## <a name="checked_array_iteratorreference"></a><a name="reference"></a>checked_array_iterator::odkaz
 
-Typ, který poskytuje odkaz na prvek řešený `checked_array_iterator`.
+Typ, který poskytuje odkaz na prvek `checked_array_iterator`adresovaný .
 
 ```cpp
 typedef typename iterator_traits<_Iterator>::reference reference;
@@ -987,11 +987,11 @@ typedef typename iterator_traits<_Iterator>::reference reference;
 
 ### <a name="remarks"></a>Poznámky
 
-Ukázku kódu naleznete v tématu [checked_array_iterator:: operator []](#op_at) .
+Ukázku kódu naleznete [checked_array_iterator::operator[].](#op_at)
 
-Další informace najdete v tématu [kontrolované iterátory](../standard-library/checked-iterators.md).
+Další informace naleznete [v tématu Checked Iterators](../standard-library/checked-iterators.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[\<iterátor >](../standard-library/iterator.md)\
-[Standardní knihovna C++ – referenční dokumentace](../standard-library/cpp-standard-library-reference.md)
+[\<>iterátoru](../standard-library/iterator.md)\
+[Referenční příručka standardní knihovny jazyka C++](../standard-library/cpp-standard-library-reference.md)

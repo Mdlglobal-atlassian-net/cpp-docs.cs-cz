@@ -1,5 +1,5 @@
 ---
-title: Cd2dlineargradientbrush – třída
+title: Třída CD2DLinearGradientBrush
 ms.date: 11/04/2016
 f1_keywords:
 - CD2DLinearGradientBrush
@@ -30,14 +30,14 @@ helpviewer_keywords:
 - CD2DLinearGradientBrush [MFC], m_LinearGradientBrushProperties
 - CD2DLinearGradientBrush [MFC], m_pLinearGradientBrush
 ms.assetid: d4be9ff9-0ea8-45e6-9b8d-f3bc5673cbac
-ms.openlocfilehash: d86235893d1f238f4cba9c927fad17f29060e591
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6c488d66962f26b6ca9b8c63cb387fc75191085a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348624"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81369200"
 ---
-# <a name="cd2dlineargradientbrush-class"></a>Cd2dlineargradientbrush – třída
+# <a name="cd2dlineargradientbrush-class"></a>Třída CD2DLinearGradientBrush
 
 Obálka pro ID2D1LinearGradientBrush.
 
@@ -51,43 +51,43 @@ class CD2DLinearGradientBrush : public CD2DGradientBrush;
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CD2DLinearGradientBrush::CD2DLinearGradientBrush](#cd2dlineargradientbrush)|Vytvoří objekt cd2dlineargradientbrush –.|
-|[CD2DLinearGradientBrush::~CD2DLinearGradientBrush](#_dtorcd2dlineargradientbrush)|Destruktor. Volá se, když se likviduje objektu D2D štětec lineárního přechodu.|
+|[CD2DLinearGradientBrush::CD2DLinearGradientBrush](#cd2dlineargradientbrush)|Vytvoří objekt CD2DLinearGradientBrush.|
+|[CD2DLinearGradientBrush::~CD2DLinearGradientBrush](#_dtorcd2dlineargradientbrush)|Destruktor. Nazývá se při zničení objektu stopy lineárního přechodu D2D.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CD2DLinearGradientBrush::Attach](#attach)|Bude k obrazci existujících prostředků rozhraní pro objekt|
-|[CD2DLinearGradientBrush::Create](#create)|Vytvoří cd2dlineargradientbrush –. (Přepíše [CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create).)|
-|[CD2DLinearGradientBrush::Destroy](#destroy)|Odstraní objekt cd2dlineargradientbrush –. (Přepíše [CD2DGradientBrush::Destroy](../../mfc/reference/cd2dgradientbrush-class.md#destroy).)|
-|[CD2DLinearGradientBrush::Detach](#detach)|Odpojí prostředků rozhraní z objektu|
-|[CD2DLinearGradientBrush::Get](#get)|Vrátí ID2D1LinearGradientBrush rozhraní|
-|[CD2DLinearGradientBrush::GetEndPoint](#getendpoint)|Načte poslední souřadnice lineárního přechodu|
-|[CD2DLinearGradientBrush::GetStartPoint](#getstartpoint)|Načte výchozí souřadnice lineárního přechodu|
-|[CD2DLinearGradientBrush::SetEndPoint](#setendpoint)|Nastaví souřadnice koncové v souřadnicového prostoru štětec lineárního přechodu|
-|[CD2DLinearGradientBrush::SetStartPoint](#setstartpoint)|Nastaví souřadnice počátečního v souřadnicového prostoru štětec lineárního přechodu|
+|[CD2DLinearGradientBrush::Připojit](#attach)|Připojí k objektu existující rozhraní prostředků.|
+|[CD2DLinearGradientBrush::Vytvořit](#create)|Vytvoří cd2DLinearGradientBrush. (Přepíše [CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create).)|
+|[CD2DLinearGradientBrush::Destroy](#destroy)|Zničí objekt CD2DLinearGradientBrush. (Přepíše [CD2DGradientBrush::Destroy](../../mfc/reference/cd2dgradientbrush-class.md#destroy).)|
+|[CD2DLinearGradientBrush::Detach](#detach)|Odpojí rozhraní prostředků od objektu.|
+|[CD2DLinearGradientBrush::Získat](#get)|Vrátí rozhraní ID2D1LinearGradientBrush.|
+|[CD2DLinearGradientBrush::GetendPoint](#getendpoint)|Načte koncové souřadnice lineárního přechodu.|
+|[CD2DLinearGradientBrush::GetStartPoint](#getstartpoint)|Načte počáteční souřadnice lineárního přechodu.|
+|[CD2DLinearGradientBrush::Setendpoint](#setendpoint)|Nastaví koncové souřadnice lineárního přechodu v souřadnicovém prostoru stopy.|
+|[CD2DLinearGradientBrush::SetStartPoint](#setstartpoint)|Nastaví počáteční souřadnice lineárního přechodu v souřadnicovém prostoru stopy.|
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CD2DLinearGradientBrush::Operator ID2D1LinearGradientBrush *](#operator_id2d1lineargradientbrush_star)|Vrátí ID2D1LinearGradientBrush rozhraní|
+|[CD2DLinearGradientBrush::operátor ID2D1LinearGradientBrush*](#operator_id2d1lineargradientbrush_star)|Vrátí rozhraní ID2D1LinearGradientBrush.|
 
-### <a name="protected-data-members"></a>Chránění členové dat
+### <a name="protected-data-members"></a>Členové chráněných dat
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
 |[CD2DLinearGradientBrush::m_LinearGradientBrushProperties](#m_lineargradientbrushproperties)|Počáteční a koncový bod přechodu.|
-|[CD2DLinearGradientBrush::m_pLinearGradientBrush](#m_plineargradientbrush)|Ukazatel ID2D1LinearGradientBrush.|
+|[CD2DLinearGradientBrush::m_pLinearGradientBrush](#m_plineargradientbrush)|Ukazatel na ID2D1LinearGradientBrush.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObjekt](../../mfc/reference/cobject-class.md)
 
-[CD2DResource](../../mfc/reference/cd2dresource-class.md)
+[Zdroj CD2D](../../mfc/reference/cd2dresource-class.md)
 
 [CD2DBrush](../../mfc/reference/cd2dbrush-class.md)
 
@@ -99,17 +99,17 @@ class CD2DLinearGradientBrush : public CD2DGradientBrush;
 
 **Záhlaví:** afxrendertarget.h
 
-##  <a name="_dtorcd2dlineargradientbrush"></a>  CD2DLinearGradientBrush::~CD2DLinearGradientBrush
+## <a name="cd2dlineargradientbrushcd2dlineargradientbrush"></a><a name="_dtorcd2dlineargradientbrush"></a>CD2DLinearGradientBrush::~CD2DLinearGradientBrush
 
-Destruktor. Volá se, když se likviduje objektu D2D štětec lineárního přechodu.
+Destruktor. Nazývá se při zničení objektu stopy lineárního přechodu D2D.
 
 ```
 virtual ~CD2DLinearGradientBrush();
 ```
 
-##  <a name="attach"></a>  CD2DLinearGradientBrush::Attach
+## <a name="cd2dlineargradientbrushattach"></a><a name="attach"></a>CD2DLinearGradientBrush::Připojit
 
-Bude k obrazci existujících prostředků rozhraní pro objekt
+Připojí k objektu existující rozhraní prostředků.
 
 ```
 void Attach(ID2D1LinearGradientBrush* pResource);
@@ -117,12 +117,12 @@ void Attach(ID2D1LinearGradientBrush* pResource);
 
 ### <a name="parameters"></a>Parametry
 
-*pResource*<br/>
-Rozhraní existující prostředek. Nesmí být NULL.
+*pZdroj*<br/>
+Existující rozhraní prostředků. Nelze získat hodnotu NULL.
 
-##  <a name="cd2dlineargradientbrush"></a>  CD2DLinearGradientBrush::CD2DLinearGradientBrush
+## <a name="cd2dlineargradientbrushcd2dlineargradientbrush"></a><a name="cd2dlineargradientbrush"></a>CD2DLinearGradientBrush::CD2DLinearGradientBrush
 
-Vytvoří objekt cd2dlineargradientbrush –.
+Vytvoří objekt CD2DLinearGradientBrush.
 
 ```
 CD2DLinearGradientBrush(
@@ -139,32 +139,32 @@ CD2DLinearGradientBrush(
 ### <a name="parameters"></a>Parametry
 
 *pParentTarget*<br/>
-Ukazatel na cíl vykreslování.
+Ukazatel na cíl vykreslení.
 
-*gradientStops*<br/>
+*přechodové zarážky*<br/>
 Ukazatel na pole D2D1_GRADIENT_STOP struktur.
 
 *gradientStopsCount*<br/>
-Hodnota větší než nebo rovna 1, která určuje počet Přechodové zarážky v poli gradientStops.
+Hodnota větší nebo rovna 1, která určuje počet zarážek přechodu v poli gradientStops.
 
-*LinearGradientBrushProperties*<br/>
+*Vlastnosti LinearGradientBrushProperties*<br/>
 Počáteční a koncový bod přechodu.
 
-*colorInterpolationGamma*<br/>
-Místo barvou, které se provádí interpolaci mezi Přechodové zarážky.
+*barvaInterpolaceGamma*<br/>
+Prostor, ve kterém se provádí interpolace barev mezi přechodem.
 
 *extendMode*<br/>
-Chování přechodu mimo rozsah [0,1] normalizovaná.
+Chování přechodu mimo [0,1] normalizované oblasti.
 
-*pBrushProperties*<br/>
-Ukazatel na krytí a transformace štětce.
+*pVlastnosti brushu*<br/>
+Ukazatel na krytí a transformaci stopy.
 
 *bAutoDestroy*<br/>
-Označuje, že bude objekt zničen. vlastník (pParentTarget).
+Označuje, že objekt bude zničen vlastníkem (pParentTarget).
 
-##  <a name="create"></a>  CD2DLinearGradientBrush::Create
+## <a name="cd2dlineargradientbrushcreate"></a><a name="create"></a>CD2DLinearGradientBrush::Vytvořit
 
-Vytvoří cd2dlineargradientbrush –.
+Vytvoří cd2DLinearGradientBrush.
 
 ```
 virtual HRESULT Create(CRenderTarget* pRenderTarget);
@@ -173,23 +173,23 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget);
 ### <a name="parameters"></a>Parametry
 
 *pRenderTarget*<br/>
-Ukazatel na cíl vykreslování.
+Ukazatel na cíl vykreslení.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud metoda uspěje, vrátí hodnotu S_OK. V opačném případě vrátí kód chyby HRESULT.
+Pokud je metoda úspěšná, vrátí S_OK. V opačném případě vrátí kód chyby HRESULT.
 
-##  <a name="destroy"></a>  CD2DLinearGradientBrush::Destroy
+## <a name="cd2dlineargradientbrushdestroy"></a><a name="destroy"></a>CD2DLinearGradientBrush::Destroy
 
-Odstraní objekt cd2dlineargradientbrush –.
+Zničí objekt CD2DLinearGradientBrush.
 
 ```
 virtual void Destroy();
 ```
 
-##  <a name="detach"></a>  CD2DLinearGradientBrush::Detach
+## <a name="cd2dlineargradientbrushdetach"></a><a name="detach"></a>CD2DLinearGradientBrush::Detach
 
-Odpojí prostředků rozhraní z objektu
+Odpojí rozhraní prostředků od objektu.
 
 ```
 ID2D1LinearGradientBrush* Detach();
@@ -197,11 +197,11 @@ ID2D1LinearGradientBrush* Detach();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na rozhraní odpojit prostředek.
+Ukazatel na rozhraní odpojeného prostředku.
 
-##  <a name="get"></a>  CD2DLinearGradientBrush::Get
+## <a name="cd2dlineargradientbrushget"></a><a name="get"></a>CD2DLinearGradientBrush::Získat
 
-Vrátí ID2D1LinearGradientBrush rozhraní
+Vrátí rozhraní ID2D1LinearGradientBrush.
 
 ```
 ID2D1LinearGradientBrush* Get();
@@ -209,11 +209,11 @@ ID2D1LinearGradientBrush* Get();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na rozhraní ID2D1LinearGradientBrush nebo hodnota NULL, pokud objekt ještě není inicializován.
+Ukazatel na rozhraní ID2D1LinearGradientBrush nebo NULL, pokud objekt ještě není inicializován.
 
-##  <a name="getendpoint"></a>  CD2DLinearGradientBrush::GetEndPoint
+## <a name="cd2dlineargradientbrushgetendpoint"></a><a name="getendpoint"></a>CD2DLinearGradientBrush::GetendPoint
 
-Načte poslední souřadnice lineárního přechodu
+Načte koncové souřadnice lineárního přechodu.
 
 ```
 CD2DPointF GetEndPoint() const;
@@ -221,11 +221,11 @@ CD2DPointF GetEndPoint() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Koncové dvojrozměrné souřadnice lineárního přechodu v souřadnicového prostoru štětec
+Koncové dvojrozměrné souřadnice lineárního přechodu v souřadnicovém prostoru stopy
 
-##  <a name="getstartpoint"></a>  CD2DLinearGradientBrush::GetStartPoint
+## <a name="cd2dlineargradientbrushgetstartpoint"></a><a name="getstartpoint"></a>CD2DLinearGradientBrush::GetStartPoint
 
-Načte výchozí souřadnice lineárního přechodu
+Načte počáteční souřadnice lineárního přechodu.
 
 ```
 CD2DPointF GetStartPoint() const;
@@ -233,9 +233,9 @@ CD2DPointF GetStartPoint() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Počáteční dvojrozměrné souřadnice lineárního přechodu v souřadnicového prostoru štětec
+Počáteční dvojrozměrné souřadnice lineárního gradientu v souřadnicovém prostoru stopy
 
-##  <a name="m_lineargradientbrushproperties"></a>  CD2DLinearGradientBrush::m_LinearGradientBrushProperties
+## <a name="cd2dlineargradientbrushm_lineargradientbrushproperties"></a><a name="m_lineargradientbrushproperties"></a>CD2DLinearGradientBrush::m_LinearGradientBrushProperties
 
 Počáteční a koncový bod přechodu.
 
@@ -243,17 +243,17 @@ Počáteční a koncový bod přechodu.
 D2D1_LINEAR_GRADIENT_BRUSH_PROPERTIES m_LinearGradientBrushProperties;
 ```
 
-##  <a name="m_plineargradientbrush"></a>  CD2DLinearGradientBrush::m_pLinearGradientBrush
+## <a name="cd2dlineargradientbrushm_plineargradientbrush"></a><a name="m_plineargradientbrush"></a>CD2DLinearGradientBrush::m_pLinearGradientBrush
 
-Ukazatel ID2D1LinearGradientBrush.
+Ukazatel na ID2D1LinearGradientBrush.
 
 ```
 ID2D1LinearGradientBrush* m_pLinearGradientBrush;
 ```
 
-##  <a name="operator_id2d1lineargradientbrush_star"></a>  CD2DLinearGradientBrush::Operator ID2D1LinearGradientBrush *
+## <a name="cd2dlineargradientbrushoperator-id2d1lineargradientbrush"></a><a name="operator_id2d1lineargradientbrush_star"></a>CD2DLinearGradientBrush::operátor ID2D1LinearGradientBrush*
 
-Vrátí ID2D1LinearGradientBrush rozhraní
+Vrátí rozhraní ID2D1LinearGradientBrush.
 
 ```
 operator ID2D1LinearGradientBrush*();
@@ -261,11 +261,11 @@ operator ID2D1LinearGradientBrush*();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na rozhraní ID2D1LinearGradientBrush nebo hodnota NULL, pokud objekt ještě není inicializován.
+Ukazatel na rozhraní ID2D1LinearGradientBrush nebo NULL, pokud objekt ještě není inicializován.
 
-##  <a name="setendpoint"></a>  CD2DLinearGradientBrush::SetEndPoint
+## <a name="cd2dlineargradientbrushsetendpoint"></a><a name="setendpoint"></a>CD2DLinearGradientBrush::Setendpoint
 
-Nastaví souřadnice koncové v souřadnicového prostoru štětec lineárního přechodu
+Nastaví koncové souřadnice lineárního přechodu v souřadnicovém prostoru stopy.
 
 ```
 void SetEndPoint(CD2DPointF point);
@@ -273,12 +273,12 @@ void SetEndPoint(CD2DPointF point);
 
 ### <a name="parameters"></a>Parametry
 
-*point*<br/>
-Koncové dvojrozměrné souřadnice lineárního přechodu v souřadnicového prostoru štětec
+*Bod*<br/>
+Koncové dvojrozměrné souřadnice lineárního přechodu v souřadnicovém prostoru stopy
 
-##  <a name="setstartpoint"></a>  CD2DLinearGradientBrush::SetStartPoint
+## <a name="cd2dlineargradientbrushsetstartpoint"></a><a name="setstartpoint"></a>CD2DLinearGradientBrush::SetStartPoint
 
-Nastaví souřadnice počátečního v souřadnicového prostoru štětec lineárního přechodu
+Nastaví počáteční souřadnice lineárního přechodu v souřadnicovém prostoru stopy.
 
 ```
 void SetStartPoint(CD2DPointF point);
@@ -286,9 +286,9 @@ void SetStartPoint(CD2DPointF point);
 
 ### <a name="parameters"></a>Parametry
 
-*point*<br/>
-Počáteční dvojrozměrné souřadnice lineárního přechodu v souřadnicového prostoru štětec
+*Bod*<br/>
+Počáteční dvojrozměrné souřadnice lineárního gradientu v souřadnicovém prostoru stopy
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Třídy](../../mfc/reference/mfc-classes.md)

@@ -1,20 +1,20 @@
 ---
-title: boyer_moore_searcher – třída
+title: boyer_moore_searcher třída
 ms.date: 08/03/2019
 f1_keywords:
 - functional/std::boyer_moore_searcher
 helpviewer_keywords:
 - std::boyer_moore_searcher [C++]
-ms.openlocfilehash: 3a6741a8ee9988a9842dea691a4ef01254872ed1
-ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
+ms.openlocfilehash: 54e5c4b7c9fe27d6df32f56d57eb1207fa09332c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68957120"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366771"
 ---
-# <a name="boyer_moore_searcher-class"></a>boyer_moore_searcher – třída
+# <a name="boyer_moore_searcher-class"></a>boyer_moore_searcher třída
 
-`boyer_moore_searcher` Třída je typ objektu funkce, který používá algoritmus Boyer-Moore pro hledání sekvence zadané v konstruktoru objektu. Hledání je provedeno v jiné sekvenci poskytnuté operátoru volání funkce objektu. Tato třída je předána jako parametr jednomu z přetížení [std:: Search](algorithm-functions.md#search).
+Třída `boyer_moore_searcher` je typ objektu funkce, který používá Algoritmus Boyer-Moore k hledání sekvence zadané v konstruktoru objektu. Hledání se provádí v rámci jiné sekvence poskytované operátoru volání funkce objektu. Tato třída je předána jako parametr jednomu z přetížení [std::search](algorithm-functions.md#search).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -42,14 +42,14 @@ class boyer_moore_searcher
 
 | | |
 | - | - |
-| **BeginRequestEventArgs** | |
+| **Konstruktor** | |
 |[boyer_moore_searcher](#boyer-moore-searcher-constructor)||
 | **Operátory** | |
-| [operator()](#operator-call) | |
+| [operátor()](#operator-call) | |
 
-## <a name="boyer-moore-searcher-constructor"></a>konstruktor boyer_moore_searcher
+## <a name="boyer_moore_searcher-constructor"></a><a name="boyer-moore-searcher-constructor"></a>konstruktor boyer_moore_searcher
 
-Vytvoří objekt funkce pomocí sekvence pro hledání, objektu funkce hash a predikátu rovnosti. `boyer_moore_searcher`
+Vytvoří objekt `boyer_moore_searcher` funkce pomocí sekvence k hledání, objekt funkce hash a predikát rovnosti.
 
 ```cpp
 boyer_moore_searcher(
@@ -62,26 +62,26 @@ boyer_moore_searcher(
 ### <a name="parameters"></a>Parametry
 
 *pat_first*\
-Počáteční prvek sekvence, která se má vyhledat
+Počáteční prvek sekvence hledat.
 
 *pat_last*\
-Konec sekvence, která se má vyhledat
+Konec sekvence hledat.
 
-*HF*\
-Objekt, který se používá k hashování elementů sekvence.
+*Hf*\
+Volatelný objekt, který slouží k hash sekvenční prvky.
 
-*čekání*\
-Volitelný predikát porovnání rovnosti pro elementy Sequence. Pokud není zadán typ porovnání rovnosti, je `std::equal_to`výchozí hodnota.
+*pred*\
+Volitelné porovnání rovnosti predikát pro sekvenční prvky. Pokud není zadán typ porovnání rovnosti, `std::equal_to`výchozí je .
 
 ### <a name="remarks"></a>Poznámky
 
-Vyvolá jakoukoli výjimku vyvolanou kopírovacím konstruktorem typů *BinaryPredicate*, *hash*nebo *RandomAccessIterator* nebo operátor volání třídy *BinaryPredicate* nebo *hash*.
+Vyvolá jakoukoli výjimku vyvolanou konstruktorem kopie *typů BinaryPredicate*, *Hash*nebo *RandomAccessIterator* nebo operátoru volání *BinaryPredicate* nebo *Hash*.
 
-Tato třída je v C++ 17 novinkou.
+Tato třída je nová v jazyce C++17.
 
-## <a name="operator-call"></a>operator () – operátor
+## <a name="operator"></a><a name="operator-call"></a>operátor()
 
-Operátor volání objektu Function. Vyhledá v rámci sekvence `[first, last)` argumentů sekvenci určenou konstruktoru.
+Operátor volání objektu funkce. Hledá v posloupnosti `[first, last)` argumentů posloupnost zadanou konstruktoru.
 
 ```cpp
 template <class ForwardIterator2>
@@ -92,21 +92,21 @@ pair<RandomAccessIterator2, RandomAccessIterator2> operator()(
 
 ### <a name="parameters"></a>Parametry
 
-*první*\
-Počáteční prvek sekvence, v níž se má hledat
+*První*\
+Počáteční prvek sekvence hledat v rámci.
 
-*posledního*\
-Konec sekvence, v níž se má hledat
+*Poslední*\
+Konec sekvence k prohledání uvnitř.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud je vzor `[pat_first, pat_last)` hledání prázdný, vrátí `make_pair(first, first)`. Pokud se vyhledávací vzor nenajde, vrátí `make_pair(last, last)`. V opačném případě vrátí dvojici iterátorů na začátek a konec sekvence `[first, last)` , která se `[pat_first, pat_last)` rovná podle predikátu *před*.
+Pokud je `[pat_first, pat_last)` vzorek hledání `make_pair(first, first)`prázdný, vrátí . Pokud vyhledávací vzor není nalezen, `make_pair(last, last)`vrátí . V opačném případě vrátí dvojici iterátorů na začátek `[first, last)` a konec `[pat_first, pat_last)` sekvence, která se rovná podle predikátu *pred*.
 
-Tato třída je v C++ 17 novinkou.
+Tato třída je nová v jazyce C++17.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[\<funkční >](functional.md)\
+[\<funkční>](functional.md)\
 [funkce algoritmu](algorithm-functions.md)\
-[boyer_moore_horspool_searcher – třída](boyer-moore-horspool-searcher-class.md)\
-[std:: Search](algorithm-functions.md#search)
+[boyer_moore_horspool_searcher třída](boyer-moore-horspool-searcher-class.md)\
+[std::hledat](algorithm-functions.md#search)

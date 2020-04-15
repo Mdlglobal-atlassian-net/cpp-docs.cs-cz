@@ -1,62 +1,62 @@
 ---
-title: '&lt;random &gt;'
+title: '&lt;Náhodné&gt;'
 ms.date: 08/24/2017
 f1_keywords:
 - <random>
 helpviewer_keywords:
 - random header
 ms.assetid: 60afc25c-b162-4811-97c1-1b65398d4c57
-ms.openlocfilehash: fbff6123c810251109dd48d74a5bd4632793be6f
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 540daa5bafa28b1d56c55daf33f0b5f5461c8ed6
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689094"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81320236"
 ---
-# <a name="ltrandomgt"></a>&lt;random &gt;
+# <a name="ltrandomgt"></a>&lt;Náhodné&gt;
 
 Definuje zařízení pro generování náhodných čísel, což umožňuje vytváření rovnoměrně distribuovaných náhodných čísel.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví**: \<random >
+**Záhlaví** \<: náhodné>
 
 **Obor názvů:** std
 
 > [!NOTE]
-> Knihovna \<random > používá příkaz #include < initializer_list >.
+> Knihovna \<náhodných> používá příkaz "#include <initializer_list>".
 
 ## <a name="summary"></a>Souhrn
 
-*Generátor náhodných čísel* je objekt, který vytváří sekvenci pseudo náhodných hodnot. Generátor, který vytváří hodnoty, které jsou rovnoměrně distribuovány v zadaném rozsahu, představuje *jednotný generátor náhodných čísel* (URNG). Šablona třídy navržená tak, aby fungovala jako URNG, je označována jako *modul* , pokud tato třída má určité společné vlastnosti, které jsou popsány dále v tomto článku. URNG může být – a obvykle je v kombinaci s *distribucí* předáním URNG jako argumentu `operator()` distribuce pro vytvoření hodnot, které jsou distribuovány způsobem, který je definován rozdělením.
+*Generátor náhodných čísel* je objekt, který vytváří posloupnost pseudonáhodných hodnot. Generátor, který vytváří hodnoty, které jsou rovnoměrně distribuovány v zadaném rozsahu je *jednotný generátor náhodných čísel* (URNG). Šablona třídy určené k funkci URNG se označuje jako *modul,* pokud tato třída má určité společné vlastnosti, které jsou popsány dále v tomto článku. URNG může být – a obvykle je – v kombinaci s *rozdělením* předáním URNG jako argument distribuce `operator()` k vytvoření hodnoty, které jsou distribuovány způsobem, který je definován rozdělení.
 
-Tyto odkazy odkazují na hlavní části tohoto článku:
+Tyto odkazy přejít na hlavní části tohoto článku:
 
 - [Příklady](#code)
 
 - [Zařazení do kategorií](#listing)
 
-- [Moduly a distribuce](#engdist)
+- [Motory a rozvody](#engdist)
 
-- [Mark](#comments)
+- [Poznámky](#comments)
 
 ### <a name="quick-tips"></a>Rychlé tipy
 
-Tady je několik tipů, které vám pomohou při používání \<random >:
+Zde je několik tipů, které \<je třeba mít na paměti při použití náhodných>:
 
-- Pro většinu účelů URNGs vyrábí nezpracované bity, které musí být ve tvaru podle distribucí. (Významnou výjimkou je to, že se jedná o výjimku [std:: náhodně ()](../standard-library/algorithm-functions.md#shuffle) , protože používá URNG přímo.)
+- Pro většinu účelů urngy vyrábět nezpracované bity, které musí být tvarovány distribuce. (Významná výjimka je [std::shuffle(),](../standard-library/algorithm-functions.md#shuffle) protože používá urng přímo.)
 
-- Jednu instanci URNG nebo distribuce nelze bezpečně volat souběžně, protože spuštění URNG nebo distribuce je úprava operace. Další informace najdete v tématu věnovaném [zabezpečení vlákna C++ ve standardní knihovně](../standard-library/thread-safety-in-the-cpp-standard-library.md).
+- Jeden instanci URNG nebo distribuce nelze bezpečně volat souběžně, protože spuštění URNG nebo distribuce je modifikující operace. Další informace naleznete [v tématu Bezpečnost vláken ve standardní knihovně jazyka C++](../standard-library/thread-safety-in-the-cpp-standard-library.md).
 
-- K dispozici jsou [předdefinované definice typedefy](#typedefs) několika modulů. Toto je preferovaný způsob, jak vytvořit URNG, pokud se používá modul.
+- Jsou k dispozici [předdefinované typedefs](#typedefs) několika motorů; toto je upřednostňovaný způsob, jak vytvořit URNG, pokud je používán modul.
 
-- Nejužitečnější párování pro většinu aplikací je modul `mt19937` s `uniform_int_distribution`, jak je znázorněno v [příkladu kódu](#code) dále v tomto článku.
+- Nejužitečnější párování pro většinu `mt19937` aplikací `uniform_int_distribution`je modul s , jak je znázorněno v [příkladu kódu](#code) dále v tomto článku.
 
-Existuje mnoho možností, ze kterých si můžete vybrat v hlavičce \<random > a kterákoli z nich je vhodnější pro zastaralou funkci běhového prostředí jazyka C `rand()`. Informace o tom, co je u `rand()` chybné a jakým způsobem \<random > řeší tyto nedostatky, najdete v [tomto videu](https://go.microsoft.com/fwlink/p/?linkid=397615).
+Existuje mnoho možností, z \<čeho si můžete vybrat v náhodném> záhlaví, a `rand()`některý z nich je vhodnější než zastaralé c runtime funkce . Informace o tom, co `rand()` je \<špatného a jak náhodné> řeší tyto nedostatky, naleznete v [tomto videu](https://go.microsoft.com/fwlink/p/?linkid=397615).
 
-## <a name="code"></a>4.6
+## <a name="examples"></a><a name="code"></a>Příklady
 
-Následující příklad kódu ukazuje, jak generovat náhodná čísla v tomto případě pět z nich pomocí generátoru vytvořeného pomocí nedeterministického počátečního naplnění.
+Následující příklad kódu ukazuje, jak generovat některá náhodná čísla v tomto případě pět z nich pomocí generátoru vytvořeného s nedeterministickým semenem.
 
 ```cpp
 #include <random>
@@ -83,7 +83,7 @@ int main()
 2430338871 3531691818 2723770500 3252414483 3632920437
 ```
 
-I když se jedná o velmi kvalitní náhodná čísla a při každém spuštění tohoto programu se liší, nemusí být nutně ve vhodném rozsahu. Pro řízení rozsahu použijte jednotnou distribuci, jak je znázorněno v následujícím kódu:
+I když se jedná o vysoce kvalitní náhodná čísla a liší se pokaždé, když je tento program spuštěn, nejsou nutně v užitečném rozsahu. Chcete-li řídit rozsah, použijte rovnoměrné rozložení, jak je znázorněno v následujícím kódu:
 
 ```cpp
 #include <random>
@@ -108,7 +108,7 @@ int main()
 5 1 6 1 2
 ```
 
-Následující příklad kódu ukazuje realističtější sadu případů použití s jednotně distribuovanými generátory náhodných čísel, která převádí obsah vektoru a pole.
+Další příklad kódu ukazuje realističtější sadu případů použití s jednotně distribuovanými generátory náhodných čísel, které zamíjejí obsah vektoru a pole.
 
 ```cpp
 // cl.exe /EHsc /nologo /W4 /MTd
@@ -207,57 +207,57 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
 --
 ```
 
-Tento kód ukazuje dva různé náhodné způsoby – náhodně vektor celých čísel a náhodné pole indexovaných dat – s funkcí šablony testu. První volání funkce test používá kryptografické a nedeterministické URNG `random_device`, které nelze opakovat. Druhý testovací běh používá `mersenne_twister_engine` jako URNG a deterministické 32 konstanty, což znamená, že se výsledky opakují. Třetí semena testovacího běhu `mersenne_twister_engine` s nedeterministickým výsledkem 32, který nepředstavuje výsledek z `random_device`. Čtvrtý běh testu se v této chvíli rozbalí pomocí [sekvence počáteční](../standard-library/seed-seq-class.md) hodnoty vyplněné `random_device` výsledky, což efektivně poskytne více než 32 nedeterministické náhodnost (ale pořád není kryptografické zabezpečení). Další informace najdete v článku.
+Tento kód ukazuje dvě různé randomizace – randomizujte vektor celých čísel a zamíchejte pole indexovaných dat – pomocí funkce testovací šablony. První volání testovací funkce používá krypto-secure, non-deterministické, neseedable, non-opakovatelné URNG `random_device`. Druhý test spustit `mersenne_twister_engine` používá jako URNG, s deterministický 32bitové konstantní osivo, což znamená, že výsledky jsou opakovatelné. Třetí test spustit `mersenne_twister_engine` semena s 32bitový nedeterministický výsledek z `random_device`. Čtvrtý test spustit rozšiřuje na to pomocí sekvence `random_device` [osiva](../standard-library/seed-seq-class.md) naplněné výsledky, které účinně dává více než 32bitové nedeterministické náhodnosti (ale stále není krypto-secure). Další informace naleznete v textu.
 
-## <a name="listing"></a>Zařazení do kategorií
+## <a name="categorized-listing"></a><a name="listing"></a>Zařazení do kategorií
 
-###  <a name="urngs"></a>Jednotné generátory náhodných čísel
+### <a name="uniform-random-number-generators"></a><a name="urngs"></a>Generátory jednotných náhodných čísel
 
-URNGs jsou často popsané v těchto vlastnostech:
+URNGs jsou často popsány z hlediska těchto vlastností:
 
-1. **Délka období**: kolik iterací trvá k opakování posloupnosti vygenerovaných čísel. Čím je lepší.
+1. **Délka období**: Kolik iterací je zapotřebí k opakování sekvence generovaných čísel. Čím déle, tím lépe.
 
-2. **Výkon**: jak rychle můžou být vygenerována čísla a kolik paměti bude trvat. Tím menší je lepší.
+2. **Výkon**: Jak rychle lze čísla generovat a kolik paměti je potřeba. Čím menší, tím lepší.
 
-3. **Quality (kvalita**): jak blízkonou hodnotu pravda náhodně čísluje vygenerovaná sekvence. Tato možnost se často nazývá "*náhodnost*".
+3. **Kvalita:** Jak blízko k skutečné náhodná čísla generované sekvence je. To se často nazývá "*náhodnost*".
 
-V následujících částech je uveden seznam jednotných generátorů náhodných čísel (URNGs) uvedených v hlavičce \<random >.
+V následujících částech jsou uvedeny jednotné generátory náhodných \<čísel (URNGs) uvedené v záhlaví náhodných>.
 
-####  <a name="rd"></a>Nedeterministický generátor
+#### <a name="non-deterministic-generator"></a><a name="rd"></a>Nedeterministický generátor
 
 |||
 |-|-|
-|[random_device – třída](../standard-library/random-device-class.md)|Generuje nedeterministické a kryptograficky zabezpečené náhodné sekvence pomocí externího zařízení. Obvykle se používá k osazení stroje. Nízký výkon, velmi vysoká kvalita. Další informace najdete v tématu [poznámky](#comments).|
+|[třída random_device](../standard-library/random-device-class.md)|Generuje nedeterministickou, kryptograficky zabezpečenou náhodnou sekvenci pomocí externího zařízení. Obvykle se používá k osivu motoru. Nízký výkon, velmi vysoká kvalita. Další informace naleznete v [tématu Poznámky](#comments).|
 
-####  <a name="typedefs"></a>Modul definice typedef s předdefinovanými parametry
+#### <a name="engine-typedefs-with-predefined-parameters"></a><a name="typedefs"></a>Modul typedefs s předdefinovanými parametry
 
-Pro vytváření instancí modulů a adaptérů stroje. Další informace najdete v tématu [moduly a distribuce](#engdist).
+Pro vytváření konkretizací motorů a adaptérů motoru. Další informace naleznete v [tématu Motory a distribuce](#engdist).
 
-- `default_random_engine` výchozí modul.
+- `default_random_engine`Výchozí modul.
 
     ```cpp
     typedef mt19937 default_random_engine;
     ```
 
-- `knuth_b` modul Knuth.
+- `knuth_b`Knuth motor.
 
     ```cpp
     typedef shuffle_order_engine<minstd_rand0, 256> knuth_b;
     ```
 
-- `minstd_rand0` 1988 minimální standardní stroj (Lewis, Goodman a Miller, 1969).
+- `minstd_rand0`1988 minimální standardní motor (Lewis, Goodman a Miller, 1969).
 
     ```cpp
     typedef linear_congruential_engine<unsigned int, 16807, 0, 2147483647> minstd_rand0;
     ```
 
-- `minstd_rand` aktualizovaný minimální standardní modul `minstd_rand0` (Park, Miller a Stockmeyer, 1993).
+- `minstd_rand`Byl aktualizován `minstd_rand0` minimální standardní motor (Park, Miller a Stockmeyer, 1993).
 
     ```cpp
     typedef linear_congruential_engine<unsigned int, 48271, 0, 2147483647> minstd_rand;
     ```
 
-- `mt19937` 32-bit Twister Engine (Matsumoto a Nishimura, 1998).
+- `mt19937`32-bit Mersenne twister motor (Matsumoto a Nishimura, 1998).
 
     ```cpp
     typedef mersenne_twister_engine<
@@ -269,7 +269,7 @@ Pro vytváření instancí modulů a adaptérů stroje. Další informace najdet
         18, 1812433253> mt19937;
     ```
 
-- `mt19937_64` 64-bit Twister Engine (Matsumoto a Nishimura, 2000).
+- `mt19937_64`64-bit Mersenne twister motor (Matsumoto a Nishimura, 2000).
 
     ```cpp
     typedef mersenne_twister_engine<
@@ -281,232 +281,232 @@ Pro vytváření instancí modulů a adaptérů stroje. Další informace najdet
         43, 6364136223846793005ULL> mt19937_64;
     ```
 
-- `ranlux24` RANLUX modul pro 24 bitů (Novák Lüscher a Fred James, 1994).
+- `ranlux24`24bitový motor RANLUX (Martin Lüscher a Fred James, 1994).
 
     ```cpp
     typedef discard_block_engine<ranlux24_base, 223, 23> ranlux24;
     ```
 
-- `ranlux24_base` slouží jako základ pro `ranlux24`.
+- `ranlux24_base`Používá se jako `ranlux24`základ pro .
 
     ```cpp
     typedef subtract_with_carry_engine<unsigned int, 24, 10, 24> ranlux24_base;
     ```
 
-- `ranlux48` 48-bit RANLUX Engine (Martin Lüscher a Fred James, 1994).
+- `ranlux48`48bitový motor RANLUX (Martin Lüscher a Fred James, 1994).
 
     ```cpp
     typedef discard_block_engine<ranlux48_base, 389, 11> ranlux48;
     ```
 
-- `ranlux48_base` slouží jako základ pro `ranlux48`.
+- `ranlux48_base`Používá se jako `ranlux48`základ pro .
 
     ```cpp
     typedef subtract_with_carry_engine<unsigned long long, 48, 5, 12> ranlux48_base;
     ```
 
-####  <a name="eng"></a>Šablony modulu
+#### <a name="engine-templates"></a><a name="eng"></a>Šablony motorů
 
-Šablony stroje se používají jako samostatné URNGs nebo jako základní moduly předané [adaptérům modulu](#engadapt). Obvykle jsou vytvořeny instance pomocí [předdefinované definice typu modulu](#typedefs) a předány do [distribuce](#distributions). Další informace najdete v části [moduly a distribuce](#engdist) .
-
-|||
-|-|-|
-|[linear_congruential_engine – třída](../standard-library/linear-congruential-engine-class.md)|Generuje náhodnou posloupnost pomocí lineárního algoritmu algoritmu congruential. Nejvíce zjednodušený a nejnižší kvalita.|
-|[mersenne_twister_engine – třída](../standard-library/mersenne-twister-engine-class.md)|Vygeneruje náhodnou posloupnost pomocí algoritmu Twister Mersenne. Nejsložitější a je nejvyšší kvalita s výjimkou třídy random_device. Velmi rychlý výkon.|
-|[subtract_with_carry_engine – třída](../standard-library/subtract-with-carry-engine-class.md)|Vygeneruje náhodnou sekvenci pomocí algoritmu odečíst od-po přenosu. Zlepšení `linear_congruential_engine`, ale mnohem nižší kvality a výkonu než `mersenne_twister_engine`.|
-
-####  <a name="engadapt"></a>Šablony adaptérů pro moduly
-
-Adaptéry pro modul jsou šablony, které přizpůsobují jiné (základní) moduly. Obvykle jsou vytvořeny instance pomocí [předdefinované definice typu modulu](#typedefs) a předány do [distribuce](#distributions). Další informace najdete v části [moduly a distribuce](#engdist) .
+Šablony motorů se používají jako samostatné urngy nebo jako základní motory předávané [adaptérům motoru](#engadapt). Obvykle jsou konsitovány s [předdefinovaným typem motoru](#typedefs) a předány [do distribuce](#distributions). Další informace naleznete v části [Motory a distribuce.](#engdist)
 
 |||
 |-|-|
-|[discard_block_engine – třída](../standard-library/discard-block-engine-class.md)|Vygeneruje náhodnou sekvenci vyhozením hodnot vrácených základním modulem.|
-|[independent_bits_engine – třída](../standard-library/independent-bits-engine-class.md)|Vygeneruje náhodnou sekvenci se zadaným počtem bitů pomocí opětovného sbalení bitů z hodnot vrácených jeho základním modulem.|
-|[shuffle_order_engine – třída](../standard-library/shuffle-order-engine-class.md)|Vygeneruje náhodnou sekvenci změnou pořadí hodnot vrácených z jeho základního modulu.|
+|[linear_congruential_engine – třída](../standard-library/linear-congruential-engine-class.md)|Generuje náhodnou sekvenci pomocí lineárního shodného algoritmu. Nejvíce zjednodušující a nejnižší kvality.|
+|[mersenne_twister_engine – třída](../standard-library/mersenne-twister-engine-class.md)|Generuje náhodnou sekvenci pomocí mersennetwister algoritmus. Nejsložitější, a je nejvyšší kvalita s výjimkou random_device třídy. Velmi rychlý výkon.|
+|[subtract_with_carry_engine třída](../standard-library/subtract-with-carry-engine-class.md)|Generuje náhodné sekvence pomocí algoritmu odečíst s nést. Zlepšení na `linear_congruential_engine`, ale mnohem nižší `mersenne_twister_engine`kvalitu a výkon než .|
 
-[[Šablony stroje](#eng)]
+#### <a name="engine-adaptor-templates"></a><a name="engadapt"></a>Šablony adaptéru motoru
 
-###  <a name="distributions"></a>Distribuce náhodných čísel
-
-V následujících částech jsou uvedena distribuce uvedená v hlavičce \<random >. Distribuce představují mechanismus následného zpracování, obvykle používá výstup URNG jako vstup a distribuuje výstup pomocí definované statistické funkce hustoty pravděpodobnosti. Další informace najdete v části [moduly a distribuce](#engdist) .
-
-#### <a name="uniform-distributions"></a>Rovnoměrné distribuce
+Adaptéry motoru jsou šablony, které přizpůsobují jiné (základní) motory. Obvykle jsou konsitovány s [předdefinovaným typem motoru](#typedefs) a předány [do distribuce](#distributions). Další informace naleznete v části [Motory a distribuce.](#engdist)
 
 |||
 |-|-|
-|[uniform_int_distribution – třída](../standard-library/uniform-int-distribution-class.md)|Vytvoří jednotnou celočíselnou hodnotu rozdělení v rámci rozsahu v uzavřeném intervalu \[a, b] (včetně včetně).|
-|[uniform_real_distribution – třída](../standard-library/uniform-real-distribution-class.md)|Vytvoří jednotnou hodnotu reálného (plovoucího)ho rozdělení v rozsahu v polovičním otevřeném intervalu [a, b) (včetně exkluzivních).|
-|[generate_canonical](../standard-library/random-functions.md#generate_canonical)|Vytvoří rovnoměrné rozložení reálných hodnot (plovoucí desetinné čárky) dané přesnosti napříč [0, 1) (včetně exkluzivních).|
+|[třída discard_block_engine](../standard-library/discard-block-engine-class.md)|Generuje náhodnou sekvenci zahozením hodnot vrácených jeho základním motorem.|
+|[independent_bits_engine třída](../standard-library/independent-bits-engine-class.md)|Generuje náhodnou sekvenci se zadaným počtem bitů přebalením bitů z hodnot vrácených jeho základním motorem.|
+|[shuffle_order_engine – třída](../standard-library/shuffle-order-engine-class.md)|Generuje náhodné sekvence změnou pořadí hodnoty vrácené z jeho základní motor.|
 
-[[Distribuce náhodného čísla](#distributions)]
+[[Šablony motorů](#eng)]
 
-#### <a name="bernoulli-distributions"></a>Bernoulliho distribuce
+### <a name="random-number-distributions"></a><a name="distributions"></a>Distribuce náhodných čísel
+
+V následujících částech jsou uvedeny \<distribuce uvedené v záhlaví náhodné>. Distribuce jsou mechanismus následného zpracování, obvykle používající výstup URNG jako vstup a distribuci výstupu definovanou statistickou hustotou pravděpodobnosti funkce. Další informace naleznete v části [Motory a distribuce.](#engdist)
+
+#### <a name="uniform-distributions"></a>Jednotné rozdělení
 
 |||
 |-|-|
-|[bernoulli_distribution – třída](../standard-library/bernoulli-distribution-class.md)|Vytvoří Bernoulliho rozdělení hodnot **bool** .|
-|[binomial_distribution – třída](../standard-library/binomial-distribution-class.md)|Vytvoří binomické rozdělení celočíselných hodnot.|
-|[geometric_distribution – třída](../standard-library/geometric-distribution-class.md)|Vytvoří geometrickou distribuci celočíselných hodnot.|
-|[negative_binomial_distribution – třída](../standard-library/negative-binomial-distribution-class.md)|Vytvoří negativní binomické rozdělení celočíselných hodnot.|
+|[uniform_int_distribution třída](../standard-library/uniform-int-distribution-class.md)|Vytvoří jednotné celočíselné rozdělení hodnoty v rozsahu \[v uzavřeném intervalu a, b] (včetně včetně).|
+|[uniform_real_distribution třída](../standard-library/uniform-real-distribution-class.md)|Vytvoří jednotné rozdělení skutečné hodnoty (s plovoucí desetinnou desetinnou hodnotou) v rozsahu v intervalu polovičního otevření [a, b) (včetně výhradní).|
+|[generate_canonical](../standard-library/random-functions.md#generate_canonical)|Vytváří rovnoměrné rozdělení reálných (plovoucí bod) hodnoty dané přesnosti napříč [0, 1) (včetně výhradní).|
 
-[[Distribuce náhodného čísla](#distributions)]
+[[Distribuce náhodných čísel](#distributions)]
+
+#### <a name="bernoulli-distributions"></a>Bernoulli distribuce
+
+|||
+|-|-|
+|[bernoulli_distribution – třída](../standard-library/bernoulli-distribution-class.md)|Vytváří Bernoulliho rozdělení **bool** hodnot.|
+|[binomial_distribution – třída](../standard-library/binomial-distribution-class.md)|Vytvoří binomické rozdělení celé hodnoty.|
+|[geometric_distribution – třída](../standard-library/geometric-distribution-class.md)|Vytvoří geometrické rozdělení celé hodnoty.|
+|[negative_binomial_distribution třída](../standard-library/negative-binomial-distribution-class.md)|Vytvoří záporné binomické rozdělení hodnot celého čísla.|
+
+[[Distribuce náhodných čísel](#distributions)]
 
 #### <a name="normal-distributions"></a>Normální distribuce
 
 |||
 |-|-|
-|[cauchy_distribution – třída](../standard-library/cauchy-distribution-class.md)|Vytvoří Cauchy distribuci reálných hodnot (s plovoucí desetinnou čárkou).|
-|[chi_squared_distribution – třída](../standard-library/chi-squared-distribution-class.md)|Vytvoří rozdělení hodnot reálného (plovoucího bodu) na více než čtverce.|
-|[fisher_f_distribution – třída](../standard-library/fisher-f-distribution-class.md)|Vytvoří F-Distribution (označuje se také jako distribuce v Snedecor F nebo Snedecor distribuce) reálného (plovoucího bodu).|
-|[lognormal_distribution – třída](../standard-library/lognormal-distribution-class.md)|Vytvoří normální distribuci reálných hodnot (plovoucí desetinná čárka) protokolu.|
-|[normal_distribution – třída](../standard-library/normal-distribution-class.md)|Vytvoří normální (Gaussovské) distribuci reálných hodnot (s plovoucí desetinnou čárkou).|
-|[student_t_distribution – třída](../standard-library/student-t-distribution-class.md)|Vytvoří Studentova *t*-rozdělení reálných hodnot (s plovoucí desetinnou čárkou).|
+|[cauchy_distribution – třída](../standard-library/cauchy-distribution-class.md)|Vytvoří Cauchyrozdělení reálných (plovoucí desetinná hodnota) hodnoty.|
+|[třída chi_squared_distribution](../standard-library/chi-squared-distribution-class.md)|Vytvoří chí-kvadrát rozdělení reálných (plovoucí bod) hodnoty.|
+|[fisher_f_distribution – třída](../standard-library/fisher-f-distribution-class.md)|Vytváří F-rozdělení (také známý jako Snedecor f rozdělení nebo Fisher-Snedecor distribuce) reálných (plovoucí bod) hodnoty.|
+|[lognormal_distribution – třída](../standard-library/lognormal-distribution-class.md)|Vytvoří normální rozdělení normálního log u reálných hodnot (s plovoucí desetinnou tázkou).|
+|[normal_distribution – třída](../standard-library/normal-distribution-class.md)|Vytvoří normální (Gaussovy) rozdělení reálných (plovoucí chodů) hodnot.|
+|[student_t_distribution – třída](../standard-library/student-t-distribution-class.md)|Vytvoří studenta *t-rozdělení*reálných (plovoucí bod) hodnoty.|
 
-[[Distribuce náhodného čísla](#distributions)]
+[[Distribuce náhodných čísel](#distributions)]
 
-#### <a name="poisson-distributions"></a>Poissonova distribuce
+#### <a name="poisson-distributions"></a>Poissonovo rozdělení
 
 |||
 |-|-|
-|[exponential_distribution – třída](../standard-library/exponential-distribution-class.md)|Vytvoří exponenciální distribuci reálných hodnot (s plovoucí desetinnou čárkou).|
-|[extreme_value_distribution – třída](../standard-library/extreme-value-distribution-class.md)|Vytvoří hodnotu distribuce reálných hodnot reálného (plovoucího bodu).|
-|[gamma_distribution – třída](../standard-library/gamma-distribution-class.md)|Vytvoří gama distribuci reálných hodnot (s plovoucí desetinnou čárkou).|
-|[poisson_distribution – třída](../standard-library/poisson-distribution-class.md)|Vytvoří Poissonova rozdělení celočíselných hodnot.|
-|[weibull_distribution – třída](../standard-library/weibull-distribution-class.md)|Vytvoří distribuci hodnoty WEIBULL reálných hodnot (s plovoucí desetinnou čárkou).|
+|[exponential_distribution – třída](../standard-library/exponential-distribution-class.md)|Vytvoří exponenciální rozdělení reálných hodnot (s plovoucí desetinnou tázkou).|
+|[extreme_value_distribution – třída](../standard-library/extreme-value-distribution-class.md)|Vytvoří extrémní rozložení hodnoty reálných hodnot (s plovoucí desetinnou tázkou).|
+|[gamma_distribution – třída](../standard-library/gamma-distribution-class.md)|Vytvoří gama rozdělení reálných hodnot (s plovoucí desetinnou tázkou).|
+|[poisson_distribution – třída](../standard-library/poisson-distribution-class.md)|Vytvoří Poissonovo rozdělení hodnot celého čísla.|
+|[weibull_distribution – třída](../standard-library/weibull-distribution-class.md)|Vytvoří Weibullovu distribuci reálných hodnot (s plovoucí desetinnou tálicí).|
 
-[[Distribuce náhodného čísla](#distributions)]
+[[Distribuce náhodných čísel](#distributions)]
 
 #### <a name="sampling-distributions"></a>Distribuce vzorkování
 
 |||
 |-|-|
-|[discrete_distribution – třída](../standard-library/discrete-distribution-class.md)|Vytvoří diskrétní rozdělení celého čísla.|
-|[piecewise_constant_distribution – třída](../standard-library/piecewise-constant-distribution-class.md)|Vytvoří konstantní konstantní distribuci reálných hodnot (s plovoucí desetinnou čárkou).|
-|[piecewise_linear_distribution – třída](../standard-library/piecewise-linear-distribution-class.md)|Vytvoří konstantní lineární distribuci hodnot reálného (plovoucího bodu).|
+|[discrete_distribution třída](../standard-library/discrete-distribution-class.md)|Vytvoří diskrétní rozložení celého čísla.|
+|[piecewise_constant_distribution – třída](../standard-library/piecewise-constant-distribution-class.md)|Vytvoří postupné konstantní rozdělení reálných hodnot (s plovoucí desetinnou tázkou).|
+|[piecewise_linear_distribution třída](../standard-library/piecewise-linear-distribution-class.md)|Vytvoří postupné lineární rozdělení reálných hodnot (s plovoucí desetinnou čárkou).|
 
-[[Distribuce náhodného čísla](#distributions)]
+[[Distribuce náhodných čísel](#distributions)]
 
-### <a name="utility-functions"></a>Funkce nástrojů
+### <a name="utility-functions"></a>Užitné funkce
 
-V této části jsou uvedeny obecné funkce nástrojů, které jsou k dispozici v hlavičce \<random >.
+V této části jsou uvedeny \<obecné funkce nástrojů uvedené v záhlaví náhodné>.
 
 |||
 |-|-|
-|[seed_seq – třída](../standard-library/seed-seq-class.md)|Generuje neposunutou kódovaný počáteční sekvenci. Používá se k tomu, aby se zabránilo replikaci náhodných proudů variate. Užitečné v případě, že je z modulů vytvořena instance řady URNGs.|
+|[seed_seq třída](../standard-library/seed-seq-class.md)|Generuje nezkreslenou sekvenci míchaných semen. Používá se k zabránění replikaci náhodných variačních proudů. Užitečné, když mnoho URNGs jsou konsitovány z motorů.|
 
 ### <a name="operators"></a>Operátory
 
-V této části jsou uvedeny operátory poskytované v hlavičce \<random >.
+V této části jsou uvedeny operátory uvedené v \<záhlaví náhodné>.
 
 |||
 |-|-|
-|`operator==`|Testuje, zda je URNG na levé straně operátoru roven modulu na pravé straně.|
-|`operator!=`|Testuje, zda je URNG na levé straně operátoru nerovno stroji na pravé straně.|
+|`operator==`|Testuje, zda urng na levé straně operátoru se rovná motoru na pravé straně.|
+|`operator!=`|Testuje, zda urng na levé straně operátoru není rovna motoru na pravé straně.|
 |`operator<<`|Zapisuje informace o stavu do datového proudu.|
 |`operator>>`|Extrahuje informace o stavu z datového proudu.|
 
-## <a name="engdist"></a>Moduly a distribuce
+## <a name="engines-and-distributions"></a><a name="engdist"></a>Motory a rozvody
 
-Informace o jednotlivých kategoriích šablon třídy definovaných v \<random > naleznete v následujících oddílech. Obě tyto kategorie šablony třídy přebírají typ jako argument a používají názvy parametrů sdílené šablony k popisu vlastností typu, které jsou povoleny jako skutečný typ argumentu, následovně:
+Informace o jednotlivých kategoriích šablon tříd definovaných \<v náhodných> naleznete v následujících částech. Obě tyto kategorie šablony třídy přebírají typ jako argument a používají názvy parametrů sdílené šablony k popisu vlastností typu, které jsou povoleny jako skutečný typ argumentu, a to následovně:
 
-- `IntType` označuje **krátké**, **celé číslo**, **dlouhé,** **dlouhé dlouhé**, nepodepsané **krátké**, **unsigned int**, **unsigned long**nebo **unsigned long long**.
+- `IntType`označuje **krátký**, **int**, **dlouhý**, **dlouhý**, **nepodepsaný krátký**, **nepodepsaný int**, **nepodepsaný dlouhý**nebo **nepodepsaný dlouhý**.
 
-- `UIntType` označuje **nepodepsané krátké** **číslo, unsigned int**, **unsigned long**nebo **unsigned long long**.
+- `UIntType`označuje **neznaménkem krátký**, **nepodepsaný int**, **neznatídlouhý**nebo **neznatit dlouhý**.
 
-- `RealType` označuje typ **float**, **Double**nebo **Long Double**.
+- `RealType`označuje **plovoucí**, **dvojité**nebo **dlouhé dvojité**.
 
-### <a name="engines"></a>Motoru
+### <a name="engines"></a>Motory
 
-[Šablony a](#eng) [šablony adaptérů stroje](#engadapt) jsou šablony, jejichž parametry přizpůsobují vytvořený generátor.
+[Šablony motorů](#eng) a [Šablony adaptéru motoru](#engadapt) jsou šablony, jejichž parametry přizpůsobit generátor vytvořil.
 
-*Modul* je šablona třídy nebo třídy, jejíž instance (generátory) fungují jako zdroj náhodných čísel rovnoměrně distribuovaných mezi minimální a maximální hodnotou. *Adaptér s modulem* poskytuje sekvenci hodnot, které mají různé vlastnosti náhodnosti, a to prostřednictvím hodnot vyprodukovaných nějakým jiným modulem náhodného čísla a aplikováním algoritmu určitého typu na tyto hodnoty.
+*Motor* je šablona třídy nebo třídy, jejíž instance (generátory) fungují jako zdroj náhodných čísel rovnoměrně rozdělených mezi minimální a maximální hodnotu. *Adaptér motoru* poskytuje posloupnost hodnot, které mají různé vlastnosti náhodnosti tím, že hodnoty vyrobené některé jiné náhodné číslo motoru a použití algoritmu nějakého druhu na tyto hodnoty.
 
-Každý modul a adaptér motoru má následující členy:
+Každý motor a adaptér motoru má následující členy:
 
-- `typedef` `numeric-type` `result_type` je typ, který je vrácen `operator()` generátoru. @No__t_0 je předán jako parametr šablony při vytváření instance.
+- `typedef`je typ, který je vrácen generátoru `operator()` `numeric-type` `result_type` Je `numeric-type` předán jako parametr šablony při vytváření instancí.
 
-- `result_type operator()` vrátí hodnoty, které jsou rovnoměrně rozloženy mezi `min()` a `max()`.
+- `result_type operator()`vrátí hodnoty, které jsou `min()` `max()`rovnoměrně rozděleny mezi a .
 
-- `result_type min()` vrátí minimální hodnotu, která je vrácena `operator()` generátoru. Adaptéry pro jádro využívají `min()` výsledek základního modulu.
+- `result_type min()`vrátí minimální hodnotu vrácenou hodnotou `operator()`generátoru . Adaptéry motoru používají výsledek `min()` základního motoru.
 
-- `result_type max()` vrátí maximální hodnotu vrácenou `operator()` generátoru. Když `result_type` je celočíselný typ (s celočíselnou hodnotou), `max()` je maximální hodnota, kterou lze skutečně vrátit (včetně); Když `result_type` je typ s plovoucí desetinnou čárkou (s hodnotou reálné hodnoty), `max()` je nejmenší hodnota větší než všechny hodnoty, které lze vrátit (nezahrnuté). Adaptéry pro jádro využívají `max()` výsledek základního modulu.
+- `result_type max()`vrátí maximální hodnotu vrácenou hodnotou `operator()`generátoru . Když `result_type` je integrální (celočíselné `max()` hodnoty) typ, je maximální hodnota, která může být skutečně vrácena (včetně); když `result_type` je typ s plovoucí desetinnou `max()` desetinnou a skutečnou hodnotou je nejmenší hodnota větší než všechny hodnoty, které lze vrátit (bez zahrnutí). Adaptéry motoru používají výsledek `max()` základního motoru.
 
-- `void seed(result_type s)` semen generátor s hodnotou počáteční hodnoty `s`. U modulů je podpis `void seed(result_type s = default_seed)` pro podporu výchozích parametrů (adaptéry modulu definují samostatné `void seed()`, viz další pododdíl).
+- `void seed(result_type s)`osivo generátoru `s`s hodnotou osiva . U motorů je `void seed(result_type s = default_seed)` podpis určen pro podporu výchozích parametrů `void seed()`(adaptéry motoru definují samostatný , viz další pododdíl).
 
-- `template <class Seq> void seed(Seq& q)` semena generátoru pomocí `Seq` [seed_seq](../standard-library/seed-seq-class.md) .
+- `template <class Seq> void seed(Seq& q)`generátor pomocí [seed_seq](../standard-library/seed-seq-class.md)`Seq`.
 
-- Explicitní konstruktor s argumentem `result_type x`, který vytvoří generátor, který je osazen jako if voláním `seed(x)`.
+- Explicitní konstruktor s `result_type x` argumentem, který vytvoří generátor `seed(x)`osiva jako by voláním .
 
-- Explicitní konstruktor s argumentem `seed_seq& seq`, který vytvoří generátor, který je osazen jako if voláním `seed(seq)`.
+- Explicitní konstruktor s `seed_seq& seq` argumentem, který vytvoří generátor `seed(seq)`osiva jako by voláním .
 
-- `void discard(unsigned long long count)` efektivně volá `operator()` `count` časů a zahodí každou hodnotu.
+- `void discard(unsigned long long count)`efektivně volá `operator()` `count` časy a zahodí každou hodnotu.
 
-**Adaptéry adaptérů** dále podporují tyto členy (`Engine` je první parametr šablony adaptéru modulu, který určí typ základního motoru):
+**Adaptéry motoru** navíc podporují`Engine` tyto členy ( je prvním parametrem šablony adaptéru motoru, který označí typ základního motoru):
 
-- Výchozí konstruktor pro inicializaci generátoru, jako by byl ze výchozího konstruktoru základního modulu.
+- Výchozí konstruktor pro inicializaci generátoru, jako by z výchozího konstruktoru základního motoru.
 
-- Explicitní konstruktor s argumentem `const Engine& eng`. To je podpora konstrukce kopírování pomocí základního modulu.
+- Explicitní konstruktor s `const Engine& eng`argumentem . To to je na podporu kopírování konstrukce pomocí základního motoru.
 
-- Explicitní konstruktor s argumentem `Engine&& eng`. Tato možnost podporuje konstrukci přesunutí pomocí základního modulu.
+- Explicitní konstruktor s `Engine&& eng`argumentem . To je na podporu přesunout konstrukci pomocí základního motoru.
 
-- `void seed()` inicializuje generátor se výchozí hodnotou počáteční hodnoty základního modulu.
+- `void seed()`který inicializuje generátor s výchozí hodnotou osiva základního motoru.
 
-- funkce vlastnosti `const Engine& base()`, která vrací základní modul, který byl použit k vytvoření generátoru.
+- `const Engine& base()`vlastnost, která vrací základní motor, který byl použit k vytvoření generátoru.
 
-Každý modul udržuje *stav* , který určuje sekvenci hodnot, které budou vygenerovány následnými voláními `operator()`. Stavy dvou generátorů vytvořených z motorů stejného typu lze porovnat pomocí `operator==` a `operator!=`. Pokud se dva stavy porovnají se stejnou hodnotou, vygenerují stejnou sekvenci hodnot. Stav objektu lze uložit do datového proudu jako sekvenci 32 hodnot bez znaménka pomocí `operator<<` generátoru. Stav se nemění tím, že ho uložíte. Uložený stav lze číst do generátoru vytvořeného z modulu stejného typu pomocí `operator>>`.
+Každý modul udržuje *stav,* který určuje pořadí hodnot, které budou `operator()`generovány následnými voláními . Stavy dvou generátorů, které byly konsitovány z motorů `operator==` `operator!=`stejného typu, lze porovnat pomocí a . Pokud se oba stavy porovnávají jako rovné, vygenerují stejnou posloupnost hodnot. Stav objektu lze uložit do datového proudu jako posloupnost 32bitových `operator<<` nepodepsaných hodnot pomocí generátoru. Uložením se stav nezmění. Uložený stav lze číst do generátoru instancizovat z `operator>>`motoru stejného typu pomocí .
 
 ### <a name="distributions"></a>Distribuce
 
-[Náhodné počty distribucí](#distributions) jsou třídy nebo šablony třídy, jejichž instance transformují proud rovnoměrně distribuovaných náhodných čísel získaných z modulu do datového proudu náhodných čísel, která mají určitou distribuci. Každá distribuce má následující členy:
+[Distribuce náhodných čísel](#distributions) je šablona třídy nebo třídy, jejíž instance transformují proud rovnoměrně distribuovaných náhodných čísel získaných z motoru na proud náhodných čísel, které mají určité rozdělení. Každá distribuce má následující členy:
 
-- `typedef` `numeric-type` `result_type` je typ, který je vrácen `operator()` distribuce. @No__t_0 je předán jako parametr šablony při vytváření instance.
+- `typedef`je typ, který je vrácen a distribuce `operator()` `numeric-type` `result_type` Je `numeric-type` předán jako parametr šablony při vytváření instancí.
 
-- `template <class URNG> result_type operator()(URNG& gen)` vrátí hodnoty, které jsou distribuovány podle definice distribuce, pomocí `gen` jako zdroje rovnoměrně distribuovaných náhodných hodnot a uložených *parametrů distribuce*.
+- `template <class URNG> result_type operator()(URNG& gen)`vrátí hodnoty, které jsou distribuovány podle definice `gen` distribuce, pomocí jako zdroj rovnoměrně distribuovaných *náhodných*hodnot a uložených parametrů distribuce .
 
-- `template <class URNG> result_type operator()(URNG& gen, param_type p)` vrací hodnoty distribuované v souladu s definicí distribuce, pomocí `gen` jako zdroje rovnoměrně distribuovaných náhodných hodnot a struktury Parameters `p`.
+- `template <class URNG> result_type operator()(URNG& gen, param_type p)`vrátí hodnoty distribuované v souladu `gen` s definicí distribuce, které se používají `p`jako zdroj jednotně distribuovaných náhodných hodnot a struktury parametrů .
 
-- `typedef` `unspecified-type` `param_type` je balíček parametrů volitelně předaných `operator()` a slouží místo uložených parametrů k vygenerování návratové hodnoty.
+- `typedef`je balíček parametrů volitelně `operator()` předán a používá se místo uložených parametrů ke generování jeho návratové hodnoty. `unspecified-type` `param_type`
 
 - Konstruktor `const param&` inicializuje uložené parametry z jeho argumentu.
 
-- `param_type param() const` získá uložené parametry.
+- `param_type param() const`získá uložené parametry.
 
-- `void param(const param_type&)` nastaví uložené parametry z jejího argumentu.
+- `void param(const param_type&)`nastaví uložené parametry z jeho argumentu.
 
-- `result_type min()` vrátí minimální hodnotu, která je vrácena `operator()` distribuce.
+- `result_type min()`vrátí minimální hodnotu vrácenou hodnotou `operator()`distribuce .
 
-- `result_type max()` vrátí maximální hodnotu vrácenou `operator()` distribuce. Když `result_type` je celočíselný typ (s celočíselnou hodnotou), `max()` je maximální hodnota, kterou lze skutečně vrátit (včetně); Když `result_type` je typ s plovoucí desetinnou čárkou (s hodnotou reálné hodnoty), `max()` je nejmenší hodnota větší než všechny hodnoty, které lze vrátit (nezahrnuté).
+- `result_type max()`vrátí maximální hodnotu vrácenou hodnotou `operator()`distribuce . Když `result_type` je integrální (celočíselné `max()` hodnoty) typ, je maximální hodnota, která může být skutečně vrácena (včetně); když `result_type` je typ s plovoucí desetinnou `max()` desetinnou a skutečnou hodnotou je nejmenší hodnota větší než všechny hodnoty, které lze vrátit (bez zahrnutí).
 
-- `void reset()` zahodí všechny hodnoty uložené v mezipaměti, takže výsledek dalšího volání `operator()` nezávisí na hodnotách získaných z modulu před voláním.
+- `void reset()`zahodí všechny hodnoty uložené v mezipaměti, takže `operator()` výsledek dalšího volání nezávisí na žádné hodnoty získané z motoru před voláním.
 
-Struktura parametru je objekt, který ukládá všechny parametry potřebné pro distribuci. Obsahuje:
+Struktura parametrů je objekt, který ukládá všechny parametry potřebné pro distribuci. Obsahuje následující:
 
-- `typedef` `distribution-type` `distribution_type`, což je typ jeho distribuce.
+- `typedef``distribution-type` , což je typ jeho `distribution_type`distribuce.
 
-- Jeden nebo více konstruktorů, které přijímají stejné seznamy parametrů jako konstruktory distribuce.
+- Jeden nebo více konstruktorů, které mají stejné seznamy parametrů jako konstruktory distribuce.
 
-- Stejné funkce přístupu k parametrům jako distribuce.
+- Stejné funkce přístupu k parametru jako distribuce.
 
 - Operátory porovnání rovnosti a nerovnosti.
 
-Další informace najdete v části referenční témata pod tímto článkem, která jsou propojená dříve v tomto článku.
+Další informace naleznete v referenčních dílčích tématech pod tímto tématem, které byly propojeny dříve v tomto článku.
 
-## <a name="comments"></a>Mark
+## <a name="remarks"></a><a name="comments"></a>Poznámky
 
-V aplikaci Visual Studio jsou dva vysoce užitečné URNGs – `mt19937` a `random_device` – jak je znázorněno v této tabulce pro porovnání:
+Existují dva velmi užitečné URNGs`mt19937` v `random_device`sadě Visual Studio – a – jak je znázorněno v této tabulce porovnání:
 
-|URNG|Světl|Kryptografie – Secure|S vyplněnými daty|Deterministický|
+|URNG|Rychle|Krypto-bezpečné|Seedable|Deterministická|
 |----------|-----------|---------------------|---------------|--------------------|
-|`mt19937`|Ano|Ne|Ano|Ano<sup> *</sup>|
+|`mt19937`|Ano|Ne|Ano|Ano<sup>*</sup>|
 |`random_device`|Ne|Ano|Ne|Ne|
 
-<sup>* Pokud je k dispozici se známým osivem.</sup>
+<sup>* Je-li opatřeno známým semenem.</sup>
 
-I když standard C++ ISO nevyžaduje `random_device` pro kryptografické zabezpečení, v aplikaci Visual Studio je implementováno kryptograficky zabezpečené. (Pojem "kryptograficky zabezpečený" nezahrnuje záruky, ale odkazuje na minimální úroveň entropie, a proto úroveň předvídatelnosti, která poskytuje daný algoritmus náhodnosti. Další informace najdete v článku Wikipedii [Generátor pseudonáhodných čísel kryptograficky zabezpečený](https://go.microsoft.com/fwlink/p/?linkid=398017).) Vzhledem k tomu C++ , že standard ISO to nevyžaduje, můžou jiné platformy implementovat `random_device` jako jednoduchý generátor náhodných čísel (není kryptograficky zabezpečený) a může být vhodný jenom jako zdroj počátečních hodnot pro jiný generátor. Pokud používáte `random_device` v kódu pro různé platformy, Projděte si dokumentaci pro tyto platformy.
+Přestože norma ISO C++ `random_device` nevyžaduje kryptograficky zabezpečené, v sadě Visual Studio je implementována tak, aby byla kryptograficky zabezpečená. (Termín "kryptograficky bezpečné" neznamená záruky, ale odkazuje na minimální úroveň entropie - a proto úroveň předvídatelnosti - daný randomizační algoritmus poskytuje. Další informace naleznete v článku Wikipedie [Cryptographically secure pseudorandom number generator](https://go.microsoft.com/fwlink/p/?linkid=398017).) Vzhledem k tomu, že norma ISO C++ to nevyžaduje, mohou jiné platformy implementovat `random_device` jako jednoduchý generátor pseudonáhodných čísel (není kryptograficky zabezpečený) a mohou být vhodné pouze jako zdroj osiva pro jiný generátor. Při použití `random_device` v kódu pro různé platformy naleznete dokumentaci pro tyto platformy.
 
-Podle definice `random_device` výsledky nejsou reprodukovatelné a vedlejším účinkem je, že může běžet výrazně pomalejší než jiné URNGs. Většina aplikací, které nejsou nutné pro kryptograficky zabezpečené použití `mt19937` nebo podobný modul, i když je vhodné je naplnit voláním `random_device`, jak je znázorněno v [příkladu kódu](#code).
+Podle definice `random_device` výsledky nejsou reprodukovatelné a vedlejším účinkem je, že může běžet výrazně pomaleji než ostatní URNGs. Většina aplikací, které nemusí být kryptograficky zabezpečené použití `mt19937` nebo podobný modul, i `random_device`když můžete chtít osiva s voláním , jak je znázorněno v [příkladu kódu](#code).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Odkazy na hlavičkové soubory](../standard-library/cpp-standard-library-header-files.md)
+[Odkaz na soubory záhlaví](../standard-library/cpp-standard-library-header-files.md)

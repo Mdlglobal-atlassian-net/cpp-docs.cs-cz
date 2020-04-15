@@ -1,5 +1,5 @@
 ---
-title: DATE – typ
+title: Typ DATE
 ms.date: 11/04/2016
 f1_keywords:
 - DATE
@@ -11,60 +11,60 @@ helpviewer_keywords:
 - MFC, date and time
 - hour values representation
 ms.assetid: 695853ed-b614-4575-b793-b8c287372038
-ms.openlocfilehash: bd63b400cad6efc3b3899c17a3bf835596b4008c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6fd9fde83474ff4f439c0dd3989d4dc35fe1241a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62235619"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81317923"
 ---
-# <a name="date-type"></a>DATE – typ
+# <a name="date-type"></a>Typ DATE
 
-DATOVÝ typ je implementována pomocí čísla s plovoucí desetinnou čárkou 8 bajtů. Dny jsou reprezentovány přírůstky celé číslo počínaje 30. prosince 1899, půlnoci jako čase nula. Hodnoty hodin jsou vyjádřeny jako absolutní hodnotu desetinnou část čísla. Následující tabulka ukazuje několik dat spolu s jejich číselný ekvivalent typu datum:
-
-|Datum a čas|Reprezentace|
-|-------------------|--------------------|
-|30. prosince 1899, půlnoci|0.00|
-|1. ledna 1900 půlnoci|2.00|
-|4. ledna 1900 půlnoci|5.00|
-|4. ledna 1900, 6: 00|5.25|
-|4. ledna 1900 poledne|5.50|
-|4. ledna 1900, 9 do 21 hodin|5.875|
-
-Datový typ datum, jakož i `COleDateTime` třídy, představuje data a času jako klasický číslo řádku. `COleDateTime` Třída obsahuje několik metod pro práci s hodnotami data, včetně převodu do a z jiné běžné formáty kalendářního data.
-
-Při práci s tyto formáty data a času ve službě Automation potřeba poznamenat následující body:
-
-- Data jsou určené v místním čase; synchronizace je nutné provést ručně při práci s daty v různých časových pásmech.
-
-- Typy datum není účtu údržby pro letní čas.
-
-- Časová osa datum stane jednorázová pro hodnoty data menší než 0. (před 1899 30. prosince). Důvodem je, že část celé číslo hodnoty date je považován za podepsaný, zatímco je zpracováván zlomkové části bez znaménka. Jinými slovy celé číslo části hodnoty date pravděpodobně kladné nebo záporné, zatímco zlomkovou část hodnoty date je vždy přidán k datu Celková logická. Následující tabulka ukazuje několik příkladů:
+Typ DATE je implementován pomocí osmibajtového čísla s plovoucí desetinnou desetinnou desetinnou desetinnou. Dny jsou reprezentovány přírůstky celého čísla počínaje 30. Hodinové hodnoty jsou vyjádřeny jako absolutní hodnota zlomkové části čísla. Následující tabulka ilustruje několik dat spolu s jejich číselným ekvivalentem typu DATE:
 
 |Datum a čas|Reprezentace|
 |-------------------|--------------------|
-|27. prosince 1899, půlnoci|-3.00|
-|28. dne 1899 poledne|-2.50|
-|28. dne 1899, půlnoci|-2.00|
-|29. prosince 1899, půlnoci|-1.00|
-|30. prosince 1899, 18: 00|-0.75|
-|30. prosince 1899 poledne|-0.50|
-|30. prosince 1899, 6: 00|-0.25|
-|30. prosince 1899, půlnoci|0.00|
-|30. prosince 1899, 6: 00|0.25|
-|30. prosince 1899 poledne|0.50|
-|30. prosince 1899, 18: 00|0.75|
-|31. prosince 1899, půlnoci|1.00|
-|1. ledna 1900 půlnoci|2.00|
-|1. ledna 1900 poledne|2.50|
-|2. ledna 1900 půlnoci|3.00|
+|30. prosince 1899, půlnoc|0,00|
+|1. ledna 1900, půlnoc|2,00|
+|4. ledna 1900, půlnoc|5.00|
+|4. ledna 1900, 6:00|5.25|
+|4. ledna 1900, poledne|5.50|
+|4. ledna 1900, 21.00 hod.|5.875|
+
+Typ data data data a `COleDateTime` třída představují data a časy jako klasický číselný řádek. Třída `COleDateTime` obsahuje několik metod pro manipulaci s hodnotami DATE, včetně převodu do a z jiných běžných formátů kalendářních dat.
+
+Při práci s těmito formáty data a času v automatizaci je třeba poznamenat následující body:
+
+- Data jsou určena v místním čase; synchronizace musí být provedena ručně při práci s daty v různých časových pásmech.
+
+- Typy dat neúčtují letní čas.
+
+- Časová osa data se stane nespojitou pro hodnoty kalendářních dat menší než 0 (před 30. prosince 1899). Důvodem je, že celá část data hodnoty je považována za podepsanou, zatímco zlomková část je považována za nepodepsanou. Jinými slovy, celá část hodnoty data může být kladná nebo záporná, zatímco zlomková část hodnoty data je vždy přidána k celkovému logickému datu. Následující tabulka ilustruje několik příkladů:
+
+|Datum a čas|Reprezentace|
+|-------------------|--------------------|
+|27. prosince 1899, půlnoc|-3.00|
+|28. prosince 1899, poledne|-2.50|
+|28. prosince 1899, půlnoc|-2.00|
+|29. prosince 1899, půlnoc|-1.00|
+|30. prosince 1899, 18:00|-0.75|
+|30. prosince 1899, poledne|-0.50|
+|30. prosince 1899, 6:00|-0.25|
+|30. prosince 1899, půlnoc|0,00|
+|30. prosince 1899, 6:00|0,25|
+|30. prosince 1899, poledne|0,50|
+|30. prosince 1899, 18:00|0.75|
+|31. prosince 1899, půlnoc|1,00|
+|1. ledna 1900, půlnoc|2,00|
+|1. ledna 1900, poledne|2.50|
+|2. ledna 1900, půlnoc|3,00|
 
 > [!CAUTION]
->  Upozorňujeme, že 6:00:00 je vždy označena desetinná hodnota 0,25 bez ohledu na to, zda je kladné celé číslo představující den (po 30. prosince 1899) nebo záporná (před 30. prosince 1899), jednoduché plovoucího bodu porovnání by chybně řazení DATA představující 6:00 RÁNO dne starší než 12/30/1899 jako *později* datu představující 7:00 hodin v daný den stejné.
+> Všimněte si, že vzhledem k tomu, že 6:00 AM je vždy reprezentován zlomkové hodnoty 0,25 bez ohledu na to, zda celé číslo představující den je pozitivní (po 30. prosince, 1899) nebo negativní (před 30. prosince1899), jednoduché srovnání s plovoucí desetinnou desetinnou desetinnou desetinnou desetinnou desetinnou hodnotou by chybně řadit jakékoli DATUM představující 6:00 AM o den dříve než 12/30/1899 jako *pozdější* než DATUM představující 7:00 AM téhož dne.
 
-Další informace o problémy související s datem a `COleDateTime` typy najdete v části [COleDateTime – třída](../atl-mfc-shared/reference/coledatetime-class.md) a [datum a čas: Podpora automatizace](../atl-mfc-shared/date-and-time-automation-support.md).
+Další informace o problémech `COleDateTime` týkajících se data a typů naleznete v části [COleDateTime Class](../atl-mfc-shared/reference/coledatetime-class.md) a [Date and Time: Automation Support](../atl-mfc-shared/date-and-time-automation-support.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Datum a čas](../atl-mfc-shared/date-and-time.md)<br/>
 [COleDateTime – třída](../atl-mfc-shared/reference/coledatetime-class.md)

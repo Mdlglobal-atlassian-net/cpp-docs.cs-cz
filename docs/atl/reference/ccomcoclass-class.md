@@ -1,5 +1,5 @@
 ---
-title: CComCoClass – třída
+title: Třída CComCoClass
 ms.date: 11/04/2016
 f1_keywords:
 - CComCoClass
@@ -12,16 +12,16 @@ helpviewer_keywords:
 - CComCoClass class
 - aggregation [C++], aggregation models
 ms.assetid: 67cfefa4-8df9-47fa-ad58-2d1a1ae25762
-ms.openlocfilehash: 5b4e39fa4d93893d288bb8de03d8a71b671be087
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 11e724a982f3a2f404473dbdd34d848842cc8e14
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79417941"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81320827"
 ---
-# <a name="ccomcoclass-class"></a>CComCoClass – třída
+# <a name="ccomcoclass-class"></a>Třída CComCoClass
 
-Tato třída poskytuje metody pro vytváření instancí třídy a získání jejích vlastností.
+Tato třída poskytuje metody pro vytváření instancí třídy a získání jeho vlastností.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -32,44 +32,44 @@ class CComCoClass
 
 #### <a name="parameters"></a>Parametry
 
-*Š*<br/>
-Vaše třída odvozená od `CComCoClass`.
+*T*<br/>
+Vaše třída, odvozená z `CComCoClass`.
 
-*pclsid*<br/>
+*pclsid (pclsid)*<br/>
 Ukazatel na CLSID objektu.
 
 ## <a name="members"></a>Členové
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CComCoClass:: CreateInstance](#createinstance)|Tras Vytvoří instanci třídy a dotazy pro rozhraní.|
-|[CComCoClass:: Error](#error)|Tras Vrátí klientovi informace s bohatou chybou.|
-|[CComCoClass:: GetObjectCLSID](#getobjectclsid)|Tras Vrátí identifikátor třídy objektu.|
-|[CComCoClass:: GetObjectDescription](#getobjectdescription)|Tras Přepsáním vrátíte popis objektu.|
+|[CcomcoClass::CreateInstance](#createinstance)|(Statické) Vytvoří instanci třídy a dotazuje se na rozhraní.|
+|[CcomcoClass::Chyba](#error)|(Statické) Vrátí rozšířené informace o chybě klientovi.|
+|[CcomcoClass::GetObjectCLSID](#getobjectclsid)|(Statické) Vrátí identifikátor třídy objektu.|
+|[CcomcoClass::Popis getobjectdescription](#getobjectdescription)|(Statické) Přepsáním vrátíte popis objektu.|
 
 ## <a name="remarks"></a>Poznámky
 
-`CComCoClass` poskytuje metody pro načítání identifikátoru CLSID objektu, nastavení informací o chybách a vytváření instancí třídy. Jakákoliv třída registrovaná v mapě objektu by měla být odvozena od `CComCoClass`.
+`CComCoClass`poskytuje metody pro načítání identifikátoru CLSID objektu, nastavení informací o chybách a vytváření instancí třídy. Všechny třídy registrované v mapě objektu by měly být odvozeny z `CComCoClass`.
 
-`CComCoClass` také definuje výchozí objekt pro vytváření tříd a agregaci pro váš objekt. `CComCoClass` používá následující dvě makra:
+`CComCoClass`také definuje výchozí třídy factory a agregace modelu pro váš objekt. `CComCoClass`používá následující dvě makra:
 
-- [DECLARE_CLASSFACTORY](aggregation-and-class-factory-macros.md#declare_classfactory) Deklaruje objekt pro vytváření tříd, který bude [CComClassFactory](../../atl/reference/ccomclassfactory-class.md).
+- [DECLARE_CLASSFACTORY](aggregation-and-class-factory-macros.md#declare_classfactory) Deklaruje factory třídy [ccomclassfactory](../../atl/reference/ccomclassfactory-class.md).
 
-- [DECLARE_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_aggregatable) Deklaruje, že objekt může být agregován.
+- [DECLARE_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_aggregatable) Deklaruje, že váš objekt lze agregovat.
 
-Jedno z těchto výchozích hodnot lze přepsat zadáním jiného makra v definici třídy. Pokud například chcete použít [CComClassFactory2](../../atl/reference/ccomclassfactory2-class.md) místo `CComClassFactory`, zadejte [DECLARE_CLASSFACTORY2](aggregation-and-class-factory-macros.md#declare_classfactory2) makro:
+Některou z těchto výchozích hodnot můžete přepsat zadáním jiného makra v definici třídy. Chcete-li například použít [CComClassFactory2](../../atl/reference/ccomclassfactory2-class.md) místo `CComClassFactory`, zadejte [DECLARE_CLASSFACTORY2](aggregation-and-class-factory-macros.md#declare_classfactory2) makro:
 
 [!code-cpp[NVC_ATL_COM#2](../../atl/codesnippet/cpp/ccomcoclass-class_1.h)]
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlcom. h
+**Záhlaví:** atlcom.h
 
-##  <a name="createinstance"></a>CComCoClass:: CreateInstance
+## <a name="ccomcoclasscreateinstance"></a><a name="createinstance"></a>CcomcoClass::CreateInstance
 
-Tyto funkce `CreateInstance` slouží k vytvoření instance objektu COM a načtení ukazatele rozhraní bez použití rozhraní API modelu COM.
+Tyto `CreateInstance` funkce slouží k vytvoření instance objektu COM a načtení ukazatele rozhraní bez použití rozhraní COM API.
 
 ```
 template <class  Q>
@@ -81,38 +81,38 @@ static HRESULT CreateInstance(IUnknown* punkOuter, Q** pp);
 
 ### <a name="parameters"></a>Parametry
 
-*Č*<br/>
-Rozhraní COM, které má být vráceno pomocí *PP*.
+*Q*<br/>
+Rozhraní COM, které by měly být vráceny prostřednictvím *pp*.
 
-*punkOuter*<br/>
-pro Vnější neznámý nebo řídící neznámý druh agregace.
+*punkVnější*<br/>
+[v] Vnější neznámý nebo ovládající neznámý agregátu.
 
-*str*<br/>
-mimo Adresa proměnné ukazatele, která obdrží požadovaný ukazatel rozhraní, pokud je vytváření úspěšné.
+*Stran*<br/>
+[out] Adresa proměnné ukazatele, která obdrží požadovaný ukazatel rozhraní, pokud je vytvoření úspěšné.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Standardní hodnota HRESULT. Popis možných vrácených hodnot naleznete v tématu [CoCreateInstance](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance) v Windows SDK.
+Standardní hodnota HRESULT. Popis možných vrácených hodnot naleznete v části [CoCreateInstance](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance) v sadě Windows SDK.
 
 ### <a name="remarks"></a>Poznámky
 
-Pro typické vytvoření objektu použijte první přetížení této funkce; druhé přetížení použijte v případě, že potřebujete agregovat vytvářený objekt.
+První přetížení této funkce použijte pro vytvoření typického objektu; použijte druhé přetížení, když potřebujete agregovat vytvářený objekt.
 
-Třída ATL implementující požadovaný objekt modelu COM (to znamená, že třída použitá jako první parametr šablony pro [CComCoClass](../../atl/reference/ccomcoclass-class.md)) musí být ve stejném projektu jako volající kód. Vytvoření objektu COM je prováděno objektem pro vytváření tříd zaregistrovaným pro tuto třídu ATL.
+Třída ATL implementující požadovaný objekt COM (to znamená třídu použitou jako první parametr šablony [ccomcoclass](../../atl/reference/ccomcoclass-class.md)) musí být ve stejném projektu jako volající kód. Vytvoření objektu COM provádí továrna třídy registrovaná pro tuto třídu KNIHOVNY ATL.
 
-Tyto funkce jsou užitečné pro vytváření objektů, u kterých se vám zabránilo externě vytvořitelné pomocí makra [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](object-map-macros.md#object_entry_non_createable_ex_auto) . Jsou také užitečné v situacích, kdy chcete zabránit rozhraní API modelu COM z důvodů efektivity.
+Tyto funkce jsou užitečné pro vytváření objektů, které jste zabránili externě creatable pomocí [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](object-map-macros.md#object_entry_non_createable_ex_auto) makro. Jsou také užitečné v situacích, kdy se chcete vyhnout rozhraní COM API z důvodu efektivity.
 
-Všimněte si, že k rozhraní *Q* musí být přidružen identifikátor IID, který lze načíst pomocí operátoru [__uuidof](../../cpp/uuidof-operator.md) .
+Všimněte si, že rozhraní *Q* musí mít IID s ním spojené, které lze načíst pomocí [operátoru __uuidof.](../../cpp/uuidof-operator.md)
 
 ### <a name="example"></a>Příklad
 
-V následujícím příkladu je `CDocument` třída ATL generovaná průvodcem odvozenou z `CComCoClass`, která implementuje rozhraní `IDocument`. Třída je registrována v mapě objektů pomocí makra OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO, takže klienti nemohou vytvářet instance dokumentu pomocí funkce [CoCreateInstance](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance). `CApplication` je třída typu coclass, která poskytuje metodu na jednom z vlastních rozhraní COM k vytvoření instancí třídy dokumentu. Následující kód ukazuje, jak snadné je vytvořit instance třídy dokumentu pomocí `CreateInstance` člena zděděného ze `CComCoClass` základní třídy.
+V následujícím příkladu `CDocument` je průvodcegenem generované ATL `CComCoClass` třídy `IDocument` odvozené z, který implementuje rozhraní. Třída je registrována v mapě objektů s OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO makra, takže klienti nemohou vytvářet instance dokumentu pomocí [CoCreateInstance](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance). `CApplication`je CoClass, který poskytuje metodu na jednom z vlastních rozhraní COM k vytvoření instancí třídy dokumentu. Níže uvedený kód ukazuje, jak snadné je vytvořit `CreateInstance` instance třídy `CComCoClass` dokumentu pomocí člena zděděného ze základní třídy.
 
 [!code-cpp[NVC_ATL_COM#11](../../atl/codesnippet/cpp/ccomcoclass-class_2.cpp)]
 
-##  <a name="error"></a>CComCoClass:: Error
+## <a name="ccomcoclasserror"></a><a name="error"></a>CcomcoClass::Chyba
 
-Tato statická funkce nastaví rozhraní `IErrorInfo` pro poskytování informací o chybách klientovi.
+Tato statická funkce `IErrorInfo` nastaví rozhraní tak, aby klientovi poskytovalo informace o chybě.
 
 ```
 static HRESULT WINAPI Error(
@@ -157,37 +157,37 @@ static HRESULT Error(
 ### <a name="parameters"></a>Parametry
 
 *lpszDesc*<br/>
-pro Řetězec popisující chybu. Verze Unicode `Error` určuje, že *lpszDesc* je typu LPCOLESTR; verze ANSI určuje typ LPCSTR.
+[v] Řetězec popisující chybu. Unicode verze `Error` určuje, že *lpszDesc* je typu LPCOLESTR; verze ANSI určuje typ LPCSTR.
 
-*identifikátor*<br/>
-pro Identifikátor IID rozhraní definující chybu nebo GUID_NULL (výchozí hodnota), pokud je Chyba definovaná operačním systémem.
+*Iid*<br/>
+[v] IID rozhraní definující chybu nebo GUID_NULL (výchozí hodnota), pokud je chyba definována operačním systémem.
 
 *hRes*<br/>
-pro Hodnota HRESULT, kterou chcete vrátit volajícímu. Výchozí hodnota je 0. Další podrobnosti o *hRes*najdete v tématu poznámky.
+[v] HRESULT, které chcete vrátit volajícímu. Výchozí hodnota je 0. Další podrobnosti o *hRes*naleznete v tématu Poznámky.
 
-*nID*<br/>
-pro Identifikátor prostředku, kde je uložen řetězec s popisem chyby. Tato hodnota by se měla nacházet mezi 0x0200 a 0xFFFF (včetně). V sestavení ladění bude výsledek **vyhodnocení** v případě, že *NID* neindexuje platný řetězec. V sestavení vydaných verzí se řetězec popisu chyby nastaví na "Neznámá chyba".
+*Nid*<br/>
+[v] Identifikátor prostředku, kde je uložen řetězec popisu chyby. Tato hodnota by měla ležet mezi 0x0200 a 0xFFFF, včetně. V sestavení chodu dojde k výsledku **ASSERT,** pokud *nID* neindexuje platný řetězec. V sestaveních verzí bude řetězec popisu chyby nastaven na "Neznámá chyba".
 
 *dwHelpID*<br/>
-pro Identifikátor kontextu nápovědu pro chybu.
+[v] Identifikátor kontextu nápovědy pro chybu.
 
-*lpszHelpFile*<br/>
-pro Cesta a název souboru Help popisujícího chybu.
+*soubor lpszHelpFile*<br/>
+[v] Cesta a název souboru nápovědy popisující chybu.
 
 *hInst*<br/>
-pro Popisovač prostředku. Ve výchozím nastavení je tento parametr `_AtlModule::GetResourceInstance`, kde `_AtlModule` je globální instancí třídy [CAtlModule](../../atl/reference/catlmodule-class.md).
+[v] Popisovač prostředku. Ve výchozím nastavení `_AtlModule::GetResourceInstance`je `_AtlModule` tento parametr , kde je globální instance [CAtlModule](../../atl/reference/catlmodule-class.md).
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Standardní hodnota HRESULT. Podrobnosti najdete v tématu poznámky.
+Standardní hodnota HRESULT. Podrobnosti naleznete v tématu Poznámky.
 
 ### <a name="remarks"></a>Poznámky
 
-Chcete-li volat `Error`, objekt musí implementovat rozhraní `ISupportErrorInfo Interface`.
+Chcete-li volat `Error`, `ISupportErrorInfo Interface` musí objekt implementovat rozhraní.
 
-Pokud je parametr *hRes* nenulový, pak `Error` vrátí hodnotu *hRes*. Pokud má *hRes* hodnotu nula, pak DISP_E_EXCEPTION první čtyři verze `Error` vrátit. Poslední dvě verze vrátí výsledek makra **MAKE_HRESULT (1, FACILITY_ITF,** *NID* **)** .
+Pokud je parametr *hRes* nenulový, vrátí `Error` hodnotu *hRes*. Pokud *hRes* je nula, pak `Error` první čtyři verze vrácení DISP_E_EXCEPTION. Poslední dvě verze vrátí výsledek makro **MAKE_HRESULT( 1, FACILITY_ITF,** *nID* **)**.
 
-##  <a name="getobjectclsid"></a>CComCoClass:: GetObjectCLSID
+## <a name="ccomcoclassgetobjectclsid"></a><a name="getobjectclsid"></a>CcomcoClass::GetObjectCLSID
 
 Poskytuje konzistentní způsob načítání identifikátoru CLSID objektu.
 
@@ -199,7 +199,7 @@ static const CLSID& WINAPI GetObjectCLSID();
 
 Identifikátor třídy objektu.
 
-##  <a name="getobjectdescription"></a>CComCoClass:: GetObjectDescription
+## <a name="ccomcoclassgetobjectdescription"></a><a name="getobjectdescription"></a>CcomcoClass::Popis getobjectdescription
 
 Tato statická funkce načte textový popis objektu třídy.
 
@@ -213,13 +213,13 @@ Popis objektu třídy.
 
 ### <a name="remarks"></a>Poznámky
 
-Výchozí implementace vrací hodnotu NULL. Tuto metodu můžete přepsat pomocí makra [DECLARE_OBJECT_DESCRIPTION](object-map-macros.md#declare_object_description) . Příklad:
+Výchozí implementace vrátí hodnotu NULL. Tuto metodu můžete přepsat [DECLARE_OBJECT_DESCRIPTION](object-map-macros.md#declare_object_description) makry. Příklad:
 
 [!code-cpp[NVC_ATL_COM#12](../../atl/codesnippet/cpp/ccomcoclass-class_3.h)]
 
-`GetObjectDescription` je volána `IComponentRegistrar::GetComponents`. `IComponentRegistrar` je automatizační rozhraní, které umožňuje registrovat a odregistrovat jednotlivé komponenty v knihovně DLL. Když vytvoříte objekt registrátora komponent pomocí Průvodce projektem ATL, průvodce automaticky implementuje rozhraní `IComponentRegistrar`. `IComponentRegistrar` obvykle používá Microsoft Transaction Server.
+`GetObjectDescription`je volána společností `IComponentRegistrar::GetComponents`. `IComponentRegistrar`je rozhraní automatizace, které umožňuje registrovat a odregistrovat jednotlivé součásti v knihovně DLL. Když vytvoříte objekt registrátora součástí pomocí Průvodce projektem knihovny ATL, průvodce automaticky implementuje `IComponentRegistrar` rozhraní. `IComponentRegistrar`obvykle používá Microsoft Transaction Server.
 
-Další informace o Průvodci projektem ATL naleznete v článku [Vytvoření projektu ATL](../../atl/reference/creating-an-atl-project.md).
+Další informace o Průvodci projektem atl naleznete v článku [Vytvoření projektu atl](../../atl/reference/creating-an-atl-project.md).
 
 ## <a name="see-also"></a>Viz také
 

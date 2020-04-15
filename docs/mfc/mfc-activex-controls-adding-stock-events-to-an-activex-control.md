@@ -42,70 +42,70 @@ helpviewer_keywords:
 - EVENT_STOCK_READYSTATECHANGE event
 - EVENT_STOCK_KEYPRESS event
 ms.assetid: 3eeadc67-4b3d-4444-8caa-53054073988a
-ms.openlocfilehash: 9f6f3c63f0436296791df428c704bce96eca3ec0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 79cd4fc572e55c67cc5a2cfe3a00e04f2a4a7850
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392723"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364691"
 ---
 # <a name="mfc-activex-controls-adding-stock-events-to-an-activex-control"></a>MFC – ovládací prvky ActiveX: Přidání uložených událostí do ovládacího prvku ActiveX
 
-Uložených událostí se liší od vlastních událostí, v tom, že automaticky při vyvolání třídou [COleControl](../mfc/reference/colecontrol-class.md). `COleControl` obsahuje předdefinované členské funkce, které se aktivují událostí vyplývající z běžné akce. Některé běžné akce implementované `COleControl` zahrnují single - a double - clicks ovládacího prvku, události klávesnice a změny ve stavu tlačítka myši. Položky populace, které události jsou vždy předchází event_stock – předpona mapování události.
+Události zásob se liší od vlastních událostí v tom, že jsou automaticky aktivovány třídou [COleControl](../mfc/reference/colecontrol-class.md). `COleControl`obsahuje předdefinované členské funkce, které vypalují události vyplývající z běžných akcí. Některé běžné akce `COleControl` implementované pomocí zahrnují jedno kliknutí a poklepání na ovládací prvek, události klávesnice a změny stavu tlačítek myši. Položkám mapy událostí pro skladové události vždy předchází předpona EVENT_STOCK.
 
-##  <a name="_core_stock_events_supported_by_classwizard"></a> Stock podporuje události Průvodce přidáním události
+## <a name="stock-events-supported-by-the-add-event-wizard"></a><a name="_core_stock_events_supported_by_classwizard"></a>Události na skladě podporované Průvodcem přidáním události
 
-`COleControl` Třída poskytuje deset uložených událostí, uvedené v následující tabulce. Můžete zadat událostí, které chcete v pomocí ovládacího prvku [Průvodce přidáním události](../ide/add-event-wizard.md).
+Třída `COleControl` poskytuje deset skladových událostí uvedených v následující tabulce. Chcete-li zadat události, které chcete mít v ovládacím prvku, pomocí [Průvodce přidáním události](../ide/add-event-wizard.md).
 
-### <a name="stock-events"></a>Uložených událostí
+### <a name="stock-events"></a>Akciové akce
 
-|Událost|Ohlásí – funkce|Komentáře|
+|Událost|Funkce vypalování|Komentáře|
 |-----------|---------------------|--------------|
-|Klikněte na...|**void (fireclick –)**|Aktivována, když ovládací prvek zachytí myš, všechny **BUTTONUP** přijetí zprávy (levý, střední nebo pravou) a na tlačítko se uvolní nad ovládací prvek. MouseDown akcie a události MouseUp dojít před touto událostí.<br /><br /> Položka mapy událostí: **EVENT_STOCK_CLICK( )**|
-|DblClick|**void FireDblClick( )**|Podobně jako to Click ale aktivována, pokud **BUTTONDBLCLK** doručení zprávy.<br /><br /> Položka mapy událostí: **EVENT_STOCK_DBLCLICK( )**|
-|Chyba|**fireerror – void (SCODE** *scode* **, LPCSTR** `lpszDescription` **, UINT**`nHelpID` **= 0)**|Je aktivována při výskytu chyby v rámci ovládacího prvku ActiveX mimo rozsah přístup metody volání nebo vlastnost.<br /><br /> Položka mapy událostí: **EVENT_STOCK_ERROREVENT –)**|
-|KeyDown|**firekeydown – void (krátký** `nChar` **krátká**`nShiftState` **)**|Aktivováno, když `WM_SYSKEYDOWN` nebo `WM_KEYDOWN` doručení zprávy.<br /><br /> Položka mapy událostí: **EVENT_STOCK_KEYDOWN( )**|
-|KeyPress|**firekeypress – void (krátký** <strong>\*</strong> `pnChar` **)**|Aktivováno, když `WM_CHAR` doručení zprávy.<br /><br /> Položka mapy událostí: **EVENT_STOCK_KEYPRESS( )**|
-|KeyUp|**firekeyup – void (krátký** `nChar` **krátká**`nShiftState` **)**|Aktivováno, když `WM_SYSKEYUP` nebo `WM_KEYUP` doručení zprávy.<br /><br /> Položka mapy událostí: **EVENT_STOCK_KEYUP( )**|
-|MouseDown|**firemousedown – void (krátký** `nButton` **krátká** `nShiftState` **, float** *x* **, float** *y* **)**|Odesláno, pokud žádné **STISKNUTITLACITKA** přijetí (doleva, střední nebo doprava). Ukazatel myši je zachycena, bezprostředně před Tato událost se aktivuje.<br /><br /> Položka mapy událostí: **EVENT_STOCK_MOUSEDOWN( )**|
-|MouseMove|**firemousemove – void (krátký** `nButton` **krátká** `nShiftState` **, float** *x* **, float** *y* **)**|Je aktivována při doručení zprávy do wm_mousemove a.<br /><br /> Položka mapy událostí: **EVENT_STOCK_MOUSEMOVE( )**|
-|MouseUp|**firemouseup – void (krátký** `nButton` **krátká** `nShiftState` **, float** *x* **, float** *y* **)**|Odesláno, pokud žádné **BUTTONUP** přijetí (doleva, střední nebo doprava). Zachycení myši je uvolněn předtím, než se tato událost se aktivuje.<br /><br /> Položka mapy událostí: **EVENT_STOCK_MOUSEUP( )**|
-|ReadyStateChange|**void FireReadyStateChange( )**|Je aktivována při řízení přejde na další připravena kvůli množství dat přijatých.<br /><br /> Položka mapy událostí: **EVENT_STOCK_READYSTATECHANGE –)**|
+|Klikněte na|**void FireClick( )**|Aktivována při ovládacíprvek zachytí myš, všechny **BUTTONUP** (vlevo, uprostřed nebo vpravo) zpráva je přijata a tlačítko je uvolněna nad ovládacím prvkem. Stock MouseDown a MouseUp události dojít před touto událostí.<br /><br /> Záznam mapy událostí: **EVENT_STOCK_CLICK( )**|
+|Tlačítko DblClick|**void FireDblClick( )**|Podobně jako Click, ale aktivována při přijetí zprávy **BUTTONDBLCLK.**<br /><br /> Záznam mapy událostí: **EVENT_STOCK_DBLCLICK( )**|
+|Chyba|**void FireError( SCODE***scode* **, LPCSTR** `lpszDescription` , **UINT**`nHelpID`**= 0 )**        |Aktivuje se, když dojde k chybě v ovládacím prvku ActiveX mimo rozsah volání metody nebo přístupu k vlastnostem.<br /><br /> Záznam mapy událostí: **EVENT_STOCK_ERROREVENT( )**|
+|Keydown|**void FireKeyDown( krátké** `nChar` **, krátké**`nShiftState`**)**      |Aktivováno `WM_SYSKEYDOWN` při `WM_KEYDOWN` přijetí zprávy nebo.<br /><br /> Záznam mapy událostí: **EVENT_STOCK_KEYDOWN( )**|
+|Keypress|**void FireKeyPress( krátký** <strong>\*</strong> `pnChar` **)**    |Aktivováno `WM_CHAR` při přijetí zprávy.<br /><br /> Záznam mapy událostí: **EVENT_STOCK_KEYPRESS( )**|
+|Keyup|**void FireKeyUp( krátké,** `nChar` **krátké**`nShiftState`**)**      |Aktivováno `WM_SYSKEYUP` při `WM_KEYUP` přijetí zprávy nebo.<br /><br /> Záznam mapy událostí: **EVENT_STOCK_KEYUP( )**|
+|Mousedown|**void FireMouseDown(** `nButton` **krátké, krátké,** `nShiftState` **plovák***x* , **float***y***)**          |Aktivováno, pokud je přijata některá **BUTTONDOWN** (vlevo, uprostřed nebo vpravo). Myš je zachycena bezprostředně před tuto událost je aktivována.<br /><br /> Záznam mapy událostí: **EVENT_STOCK_MOUSEDOWN( )**|
+|Mousemove|**void FireMouseMove(** `nButton` **krátké, krátké,** `nShiftState` **plovák***x* , **plovák***y***)**          |Aktivováno při přijetí WM_MOUSEMOVE zprávy.<br /><br /> Záznam mapy událostí: **EVENT_STOCK_MOUSEMOVE( )**|
+|Mouseup|**void FireMouseUp(** `nButton` **krátké, krátké,** `nShiftState` **plovák***x* , **float***y***)**          |Je aktivována, pokud je přijata některá **BUTTONUP** (vlevo, uprostřed nebo vpravo). Zachycení myši je uvolněna před tuto událost je aktivována.<br /><br /> Záznam mapy událostí: **EVENT_STOCK_MOUSEUP( )**|
+|ReadyStateChange|**void FireReadyStateChange( )**|Aktivováno při přechodu ovládacího prvku do dalšího stavu připravenosti z důvodu množství přijatých dat.<br /><br /> Záznam mapy událostí: **EVENT_STOCK_READYSTATECHANGE( )**|
 
-##  <a name="_core_adding_a_stock_event_using_classwizard"></a> Přidání uložených událostí pomocí Průvodce přidáním události
+## <a name="adding-a-stock-event-using-the-add-event-wizard"></a><a name="_core_adding_a_stock_event_using_classwizard"></a>Přidání burzovní události pomocí Průvodce přidáním události
 
-Přidání uložených událostí vyžaduje méně práce než přidání vlastních událostí, protože jeho spuštění skutečné události je automaticky zpracována třídou base `COleControl`. Následující procedura přidá uložených událostí do ovládacího prvku, která byla vyvinutá pomocí [Průvodce ovládacím prvkem MFC ActiveX](../mfc/reference/mfc-activex-control-wizard.md). Události, volá KeyPress, aktivuje se v případě stisknutí klávesy a ovládací prvek není aktivní. Tento postup lze také přidat další uložených událostí. Nahraďte název vybrané základní událost KeyPress.
+Přidání burzovních událostí vyžaduje méně práce než přidání vlastních událostí, `COleControl`protože vypalování skutečné události je automaticky zpracováno základní třídou . Následující postup přidá akciovou událost do ovládacího prvku, který byl vyvinut pomocí [Průvodce řízením ActiveX knihovny MFC](../mfc/reference/mfc-activex-control-wizard.md). Událost, nazývaná KeyPress, se aktivuje, když je stisknuta klávesa a ovládací prvek je aktivní. Tento postup lze také přidat další události zásob. Nahraďte vybraný název akciové události klávesou KeyPress.
 
-#### <a name="to-add-the-keypress-stock-event-using-the-add-event-wizard"></a>Chcete-li přidat základní událost KeyPress pomocí Průvodce přidáním události
+#### <a name="to-add-the-keypress-stock-event-using-the-add-event-wizard"></a>Přidání akciové události KeyPress pomocí Průvodce přidáním události
 
-1. Načtení projektu ovládacího prvku.
+1. Načtěte projekt ovládacího prvku.
 
-1. V zobrazení tříd klikněte pravým tlačítkem na třídy vašeho ovládacího prvku ActiveX otevřete místní nabídku.
+1. V zobrazení třídy otevřete místní nabídku kliknutím pravým tlačítkem myši na třídu ovládacího prvku ActiveX.
 
-1. V místní nabídce klikněte na tlačítko **přidat** a potom klikněte na tlačítko **přidat událost**.
+1. V místní nabídce klikněte na **Přidat** a potom na **Přidat událost**.
 
    Otevře se Průvodce přidáním události.
 
-1. V **název události** rozevíracího seznamu vyberte `KeyPress`.
+1. V rozevíracím seznamu **Název** `KeyPress`události vyberte položku .
 
-1. Klikněte na tlačítko **Dokončit**.
+1. Klikněte na **Finish** (Dokončit).
 
-##  <a name="_core_classwizard_changes_for_stock_events"></a> Přidejte změny událostí, které průvodce pro uložených událostí
+## <a name="add-event-wizard-changes-for-stock-events"></a><a name="_core_classwizard_changes_for_stock_events"></a>Přidat změny Průvodce událostmi pro události na skladě
 
-Protože uložených událostí jsou zpracovány základní třídy ovládacího prvku, Průvodce přidáním události deklaraci vaší třídy nijak nezmění. Přidá událost do mapy ovládacího prvku událost a vytvoří záznam v jeho. Soubor IDL. Následující řádek je přidán do mapování události ovládacího prvku, v implementaci třídy ovládacího prvku (. Soubor CPP):
+Vzhledem k tomu, že události zásob jsou zpracovány základní třídou ovládacího prvku, Průvodce přidáním události žádným způsobem nezmění deklaraci třídy. Přidá událost do mapy událostí ovládacího prvku a provede položku v jeho . IDL. Následující řádek je přidán do mapy událostí ovládacího prvku, který se nachází v implementaci třídy řízení (. CPP) soubor:
 
 [!code-cpp[NVC_MFC_AxUI#5](../mfc/codesnippet/cpp/mfc-activex-controls-adding-stock-events-to-an-activex-control_1.cpp)]
 
-Přidání tohoto kódu aktivuje události KeyPress. když se zpráva WM_CHAR a ovládací prvek je aktivní. Je tato událost může být aktivována v jinou dobu voláním funkce jeho spuštění (například `FireKeyPress`) z kódu ovládacího prvku.
+Přidání tohoto kódu vyvolá událost KeyPress, když je přijata WM_CHAR zpráva a ovládací prvek je aktivní. KeyPress událost může být aktivována jindy voláním jeho `FireKeyPress`funkce vypalování (například) z v rámci řídicího kódu.
 
-Průvodce přidáním události přidá následující řádek kódu do ovládacího prvku. Soubor IDL:
+Průvodce přidáním události přidá následující řádek kódu ovládacího prvku . IDL soubor:
 
 [!code-cpp[NVC_MFC_AxUI#6](../mfc/codesnippet/cpp/mfc-activex-controls-adding-stock-events-to-an-activex-control_2.idl)]
 
-Tento řádek přidruží události KeyPress standard dispatch ID a umožňuje kontejneru předvídat události KeyPress.
+Tento řádek přidruží událost KeyPress k jeho standardníi id odeslání a umožňuje kontejneru předvídat keypress události.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [MFC – ovládací prvky ActiveX](../mfc/mfc-activex-controls.md)<br/>
 [MFC – ovládací prvky ActiveX: Metody](../mfc/mfc-activex-controls-methods.md)<br/>
-[COleControl – třída](../mfc/reference/colecontrol-class.md)
+[Třída COleControl](../mfc/reference/colecontrol-class.md)

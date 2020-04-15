@@ -1,5 +1,5 @@
 ---
-title: Cresourceexception – třída
+title: CResourceException – třída
 ms.date: 11/04/2016
 f1_keywords:
 - CResourceException
@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CResourceException [MFC], CResourceException
 ms.assetid: af6ae043-d124-4bfd-b35e-7bb0db67d289
-ms.openlocfilehash: b29112b4901a1fecac37aa7ae61496e874959370
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 557bfe1cc41c3dda65bd95d7d687820c0b9862b7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62372191"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368332"
 ---
-# <a name="cresourceexception-class"></a>Cresourceexception – třída
+# <a name="cresourceexception-class"></a>CResourceException – třída
 
-Vygeneruje, když Windows nemůže najít nebo přidělit požadovaný prostředek.
+Generováno v případě, že systém Windows nemůže najít nebo přidělit požadovaný prostředek.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -29,21 +29,21 @@ class CResourceException : public CSimpleException
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CResourceException::CResourceException](#cresourceexception)|Vytvoří `CResourceException` objektu.|
+|[CResourceException::CResourceException](#cresourceexception)|Vytvoří `CResourceException` objekt.|
 
 ## <a name="remarks"></a>Poznámky
 
-Žádné další kvalifikace je nezbytné nebo je to možné.
+Žádná další kvalifikace není nutná ani možná.
 
-Další informace o používání `CResourceException`, najdete v článku [zpracování výjimek (MFC)](../../mfc/exception-handling-in-mfc.md).
+Další informace o `CResourceException`použití naleznete v článku [Zpracování výjimek (MFC).](../../mfc/exception-handling-in-mfc.md)
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObjekt](../../mfc/reference/cobject-class.md)
 
-[Cexception –](../../mfc/reference/cexception-class.md)
+[CException](../../mfc/reference/cexception-class.md)
 
 [CSimpleException](../../mfc/reference/csimpleexception-class.md)
 
@@ -53,9 +53,9 @@ Další informace o používání `CResourceException`, najdete v článku [zpra
 
 **Záhlaví:** afxwin.h
 
-##  <a name="cresourceexception"></a>  CResourceException::CResourceException
+## <a name="cresourceexceptioncresourceexception"></a><a name="cresourceexception"></a>CResourceException::CResourceException
 
-Vytvoří `CResourceException` objektu.
+Vytvoří `CResourceException` objekt.
 
 ```
 CResourceException();
@@ -63,9 +63,9 @@ CResourceException();
 
 ### <a name="remarks"></a>Poznámky
 
-Nepoužívejte tento konstruktor přímo, ale místo toho volat funkci globální [afxthrowresourceexception –](exception-processing.md#afxthrowresourceexception). Další informace o výjimkách, najdete v článku [zpracování výjimek v prostředí MFC](../exception-handling-in-mfc.md).
+Nepoužívejte tento konstruktor přímo, ale spíše volat globální funkce [AfxThrowResourceException](exception-processing.md#afxthrowresourceexception). Další informace o výjimkách naleznete v článku [Zpracování výjimek v knihovně MFC](../exception-handling-in-mfc.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [CException – třída](cexception-class.md)<br/>
 [Graf hierarchie](../hierarchy-chart.md)

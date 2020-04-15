@@ -8,18 +8,18 @@ f1_keywords:
 helpviewer_keywords:
 - __assume keyword [C++]
 ms.assetid: d8565123-b132-44b1-8235-5a8c8bff85a7
-ms.openlocfilehash: f3f847b5268605bdc5df90a8bbc6a88c78431864
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 06189405703a7cc34f3bd807ec79612394ee899f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70216960"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368202"
 ---
 # <a name="__assume"></a>__assume
 
-**Specifické pro společnost Microsoft**
+**Specifické pro Microsoft**
 
-Předá do Optimalizátoru nápovědu.
+Předává nápovědu optimalizátoru.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -31,29 +31,29 @@ __assume(
 
 ### <a name="parameters"></a>Parametry
 
-*vyjádření*\
-Libovolný výraz, který se předpokládá pro vyhodnocení na hodnotu true.
+*Výraz*\
+Libovolný výraz, který se předpokládá, že vyhodnotit true.
 
 ## <a name="remarks"></a>Poznámky
 
-Optimalizátor předpokládá, že podmínka reprezentovaná `expression` je pravdivá v místě, kde se klíčové slovo zobrazí a zůstává true, dokud `expression` není změněno (například přiřazením proměnné). Selektivní použití pomocných parametrů předaných Optimalizátoru `__assume` může zlepšit optimalizaci.
+Optimalizátor předpokládá, že `expression` podmínka reprezentovaná je true v `expression` místě, kde se zobrazí klíčové slovo a zůstává true, dokud je změněn (například přiřazení k proměnné). Selektivní použití rad předávaných `__assume` optimalizátoru pomocí může zlepšit optimalizaci.
 
-Pokud je `__assume(0)`příkaz zapsán jako odpor (výraz, který vždy vyhodnocuje jako NEPRAVDA), je vždy považován za. `__assume` Pokud se kód nechová podle očekávání, ujistěte se, že `expression` jste definovali platné a pravdivé, jak je popsáno výše. Další informace o očekávaném `__assume(0)` chování najdete v pozdějších komentářích.
+Pokud `__assume` je prohlášení napsáno jako rozpor (výraz, který je vždy vyhodnocen jako false), je vždy považován za `__assume(0)`. Pokud se váš kód nechová podle očekávání, `expression` ujistěte se, že jste definovali je platný a pravdivý, jak je popsáno výše. Další informace o `__assume(0)` očekávaném chování naleznete v pozdějších poznámkách.
 
 > [!WARNING]
->  Program nesmí obsahovat neplatný `__assume` příkaz pro dosažitelnou cestu. Pokud kompilátor může dosáhnout neplatného `__assume` příkazu, program může způsobit nepředvídatelné a potenciálně nebezpečné chování.
+> Program nesmí obsahovat `__assume` neplatný příkaz na dosažitelné cestě. Pokud kompilátor může `__assume` dosáhnout neplatný příkaz, program může způsobit nepředvídatelné a potenciálně nebezpečné chování.
 
-`__assume`není originálním vnitřním. Nemusí být deklarován jako funkce a nelze jej použít v `#pragma intrinsic` direktivě. I když není generován žádný kód, je ovlivněn kód vygenerovaný optimalizátorem.
+`__assume`není skutečnou vnitřní. Nemusí být deklarována jako funkce a nemůže `#pragma intrinsic` být použita ve směrnici. Přestože není generován žádný kód, je ovlivněn kód generovaný optimalizátorem.
 
-Použijte `__assume` v [Assert](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) pouze v případě, že je kontrolní výraz neobnovitelný. Nepoužívejte `__assume` v kontrolním výrazu, pro který máte následný kód pro obnovení chyb, protože kompilátor může optimalizovat kód pro zpracování chyb.
+Použití `__assume` v [ASSERT](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) pouze v případě, že assert není obnovitelná. Nepoužívejte `__assume` v assert, pro které máte následné chyby pro obnovení kódu, protože kompilátor může optimalizovat pryč kód pro zpracování chyb.
 
-`__assume(0)` Příkaz je zvláštní případ. Použijte `__assume(0)` k označení cesty kódu, ke které nelze získat přístup. Následující příklad ukazuje, jak použít `__assume(0)` k označení toho, že výchozí případ příkazu switch není dostupný. To ukazuje Nejběžnější použití `__assume(0)`.
+Toto `__assume(0)` prohlášení je zvláštní případ. Slouží `__assume(0)` k označení cesty kódu, která není k zastižení. Následující příklad ukazuje, `__assume(0)` jak použít k označení, že nelze dosáhnout výchozího případu příkazu switch. To ukazuje nejtypičtější `__assume(0)`použití .
 
-Z důvodu kompatibility s předchozími verzemi je **_assume** synonymem pro **__assume** , pokud je zadána možnost kompilátoru [/za \(Disable Language Extensions)](../build/reference/za-ze-disable-language-extensions.md) .
+Pro kompatibilitu s předchozími verzemi **je _assume** synonymem pro **__assume** pokud není zadána možnost kompilátoru [/Za \(Zakázat rozšíření jazyka).](../build/reference/za-ze-disable-language-extensions.md)
 
 ## <a name="requirements"></a>Požadavky
 
-|Vnitřním|Architektura|
+|Vnitřní|Architektura|
 |---------------|------------------|
 |`__assume`|x86, ARM, x64, ARM64|
 
@@ -91,17 +91,17 @@ int main(int p)
 }
 ```
 
-Použití `__assume(0)` nástroje oznamuje Optimalizátoru, že výchozí velikost písmen není dostupná. Příklad ukazuje, že programátor ví, že jediné možné vstupy pro `p` budou 1 nebo 2. Pokud je předána jiná hodnota pro `p`, program bude neplatný a způsobí nepředvídatelné chování.
+Použití `__assume(0)` říká optimalizátoru, že výchozí případ nelze dosáhnout. Příklad ukazuje, že programátor ví, že pouze `p` možné vstupy pro bude 1 nebo 2. Pokud je předána `p`jiná hodnota pro , program se stane neplatným a způsobí nepředvídatelné chování.
 
-V důsledku `__assume(0)` příkazu Kompilátor negeneruje kód pro testování, zda `p` má hodnotu, která není reprezentovaná v příkazu case. Aby to fungovalo, `__assume(0)` musí být příkaz prvním příkazem v těle výchozího případu.
+V důsledku příkazu `__assume(0)` kompilátor negeneruje kód k `p` testování, zda má hodnotu, která není reprezentována v příkazu case. Aby to fungovalo, `__assume(0)` musí být příkaz prvním příkazem v těle výchozího případu.
 
-Vzhledem k tomu, že kompilátor generuje `__assume`kód založený na, tento kód nemusí fungovat správně, pokud je `__assume` výraz uvnitř příkazu v době běhu false. Pokud si nejste jistí, že výraz bude vždy true v době běhu, můžete použít `assert` funkci k ochraně kódu.
+Vzhledem k tomu, že `__assume`kompilátor generuje kód založený na `__assume` aplikaci , nemusí tento kód pracovat správně, pokud je výraz uvnitř příkazu za běhu nepravdivý. Pokud si nejste jisti, že výraz bude vždy true `assert` za běhu, můžete použít funkci k ochraně kódu.
 
 ```C
 #define ASSERT(e)    ( ((e) || assert(__FILE__, __LINE__)), __assume(e) )
 ```
 
-Toto použití `assert` bohužel brání kompilátoru v provedení optimalizace s výchozími případy, které byly popsány dříve v tomto dokumentu. Alternativně můžete použít samostatné makro, a to následujícím způsobem.
+Bohužel toto `assert` použití zabrání kompilátoru z provádění výchozí případ optimalizace, která byla popsána dříve v tomto dokumentu. Jako alternativu můžete použít samostatné makro následujícím způsobem.
 
 ```C
 #ifdef DEBUG
@@ -114,9 +114,9 @@ Toto použití `assert` bohužel brání kompilátoru v provedení optimalizace 
       NODEFAULT;
 ```
 
-**Specifické pro konec Microsoftu**
+**END Microsoft Specifické**
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Vnitřní objekty kompilátoru](../intrinsics/compiler-intrinsics.md)\
 [Klíčová slova](../cpp/keywords-cpp.md)

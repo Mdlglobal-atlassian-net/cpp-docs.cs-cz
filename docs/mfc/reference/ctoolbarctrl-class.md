@@ -1,5 +1,5 @@
 ---
-title: CToolBarCtrl – třída
+title: Třída CToolBarctrl
 ms.date: 11/04/2016
 f1_keywords:
 - CToolBarCtrl
@@ -182,16 +182,16 @@ helpviewer_keywords:
 - CToolBarCtrl [MFC], SetToolTips
 - CToolBarCtrl [MFC], SetWindowTheme
 ms.assetid: 8f2f8ad2-05d7-4975-8715-3f2eed795248
-ms.openlocfilehash: 6f15280943fce39bae4eebfb537f9a61d256d2e8
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: c8968e7a516b7ed699517f6557f7ccd4bcb20505
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79420916"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81365096"
 ---
-# <a name="ctoolbarctrl-class"></a>CToolBarCtrl – třída
+# <a name="ctoolbarctrl-class"></a>Třída CToolBarctrl
 
-Poskytuje funkce pro běžný ovládací prvek panelu nástrojů systému Windows.
+Poskytuje funkce společného ovládacího prvku panelu nástrojů systému Windows.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -203,159 +203,159 @@ class CToolBarCtrl : public CWnd
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CToolBarCtrl:: CToolBarCtrl](#ctoolbarctrl)|Vytvoří objekt `CToolBarCtrl`.|
+|[CtoolBarctrl::CToolBarCtrl](#ctoolbarctrl)|Vytvoří `CToolBarCtrl` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CToolBarCtrl:: AddBitmap](#addbitmap)|Přidá jeden nebo více rastrových obrázků tlačítek do seznamu obrázků tlačítek dostupných pro ovládací prvek panelu nástrojů.|
-|[CToolBarCtrl:: AddButtons](#addbuttons)|Přidá jednu nebo více tlačítek do ovládacího prvku ToolBar.|
-|[CToolBarCtrl:: AddString](#addstring)|Přidá nový řetězec předaný jako ID prostředku do interního seznamu řetězců panelu nástrojů.|
-|[CToolBarCtrl:: AddStrings](#addstrings)|Přidá nový řetězec nebo řetězce předaný jako ukazatel na vyrovnávací paměť řetězců oddělených hodnotou null na vnitřní seznam řetězců panelu nástrojů.|
-|[CToolBarCtrl:: AutoSize](#autosize)|Změní velikost ovládacího prvku ToolBar.|
-|[CToolBarCtrl:: ChangeBitmap](#changebitmap)|Změní rastrový obrázek tlačítka v aktuálním ovládacím prvku ToolBar.|
-|[CToolBarCtrl:: CheckButton](#checkbutton)|Zkontroluje nebo smaže dané tlačítko v ovládacím prvku ToolBar.|
-|[CToolBarCtrl:: CommandToIndex](#commandtoindex)|Načte index založený na nule pro tlačítko přidružené k zadanému identifikátoru příkazu.|
-|[CToolBarCtrl:: Create](#create)|Vytvoří ovládací prvek panelu nástrojů a připojí ho k objektu `CToolBarCtrl`.|
-|[CToolBarCtrl:: CreateEx](#createex)|Vytvoří ovládací prvek Toolbar se zadanými rozšířenými styly Windows a připojí ho k objektu `CToolBarCtrl`.|
-|[CToolBarCtrl:: Customize](#customize)|Zobrazí dialogové okno Přizpůsobit panel nástrojů.|
-|[CToolBarCtrl::D eleteButton](#deletebutton)|Odstraní tlačítko z ovládacího prvku ToolBar.|
-|[CToolBarCtrl:: EnableButton](#enablebutton)|Povolí nebo zakáže zadané tlačítko v ovládacím prvku ToolBar.|
-|[CToolBarCtrl:: GetAnchorHighlight](#getanchorhighlight)|Načte nastavení zvýraznění kotvy pro panel nástrojů.|
-|[CToolBarCtrl:: getbitmapa](#getbitmap)|Načte index rastrového obrázku, který je přidružený k tlačítku na panelu nástrojů.|
-|[CToolBarCtrl:: GetBitmapFlags](#getbitmapflags)|Získá příznaky přidružené k rastrovému obrázku na panelu nástrojů.|
-|[CToolBarCtrl:: Get– tlačítko](#getbutton)|Načte informace o určeném tlačítku v ovládacím prvku ToolBar.|
-|[CToolBarCtrl:: GetButtonCount](#getbuttoncount)|Načte počet tlačítek aktuálně v ovládacím prvku ToolBar.|
-|[CToolBarCtrl:: GetButtonInfo](#getbuttoninfo)|Načte informace o tlačítku na panelu nástrojů.|
-|[CToolBarCtrl:: GetButtonSize](#getbuttonsize)|Načte aktuální šířku a výšku tlačítek panelu nástrojů v pixelech.|
-|[CToolBarCtrl:: GetColorScheme](#getcolorscheme)|Načte barevné schéma aktuálního ovládacího prvku panelu nástrojů.|
-|[CToolBarCtrl:: GetDisabledImageList](#getdisabledimagelist)|Načte seznam obrázků, který ovládací prvek Toolbar používá k zobrazení zakázaných tlačítek.|
-|[CToolBarCtrl:: GetDropTarget](#getdroptarget)|Načte rozhraní [IDropTarget](/windows/win32/api/oleidl/nn-oleidl-idroptarget) pro ovládací prvek panelu nástrojů.|
-|[CToolBarCtrl:: GetExtendedStyle](#getextendedstyle)|Načte rozšířené styly pro ovládací prvek panelu nástrojů.|
-|[CToolBarCtrl:: GetHotImageList](#gethotimagelist)|Načte seznam obrázků, který ovládací prvek Toolbar používá k zobrazení "horkého" tlačítka. Když je ukazatel myši nad ním, zobrazí se aktivní tlačítko zvýrazněné.|
-|[CToolBarCtrl:: GetHotItem](#gethotitem)|Načte index aktivní položky na panelu nástrojů.|
-|[CToolBarCtrl:: GetImageList](#getimagelist)|Načte seznam obrázků, který ovládací prvek Toolbar používá k zobrazení tlačítek ve výchozím stavu.|
-|[CToolBarCtrl:: GetInsertMark](#getinsertmark)|Načte aktuální značku vložení panelu nástrojů.|
-|[CToolBarCtrl:: GetInsertMarkColor](#getinsertmarkcolor)|Načte barvu použitou k vykreslení značky vložení pro panel nástrojů.|
-|[CToolBarCtrl:: GetItemRect](#getitemrect)|Načte ohraničující obdélník tlačítka v ovládacím prvku ToolBar.|
-|[CToolBarCtrl:: getmaxsize](#getmaxsize)|Načte celkovou velikost všech viditelných tlačítek a oddělovačů na panelu nástrojů.|
-|[CToolBarCtrl:: GetMaxTextRows](#getmaxtextrows)|Načte maximální počet textových řádků zobrazených na tlačítku panelu nástrojů.|
-|[CToolBarCtrl:: getmetriky](#getmetrics)|Načte metriku ovládacího prvku ToolBar.|
-|[CToolBarCtrl:: getvýplň](#getpadding)|Načte vodorovné a svislé odsazení aktuálního ovládacího prvku ToolBar.|
-|[CToolBarCtrl:: GetPressedImageList](#getpressedimagelist)|Načte seznam obrázků, který aktuální ovládací prvek Toolbar používá pro reprezentaci tlačítek ve stisknutém stavu.|
-|[CToolBarCtrl:: GetRect](#getrect)|Načte ohraničující obdélník pro konkrétní tlačítko panelu nástrojů.|
-|[CToolBarCtrl:: GetRows](#getrows)|Načte počet řádků tlačítek aktuálně zobrazených na panelu nástrojů.|
-|[CToolBarCtrl:: GetState](#getstate)|Načte informace o stavu zadaného tlačítka v ovládacím prvku panel nástrojů, například zda je povoleno, stisknuto nebo zaškrtnuto.|
-|[CToolBarCtrl:: GetString](#getstring)|Načte řetězec panelu nástrojů.|
-|[CToolBarCtrl:: GetStyle](#getstyle)|Načte styly, které se aktuálně používají pro ovládací prvek Toolbar.|
-|[CToolBarCtrl:: GetToolTips](#gettooltips)|Načte popisovač ovládacího prvku popisu tlačítka, pokud existuje, přidružený k ovládacímu prvku ToolBar.|
-|[CToolBarCtrl:: HideButton](#hidebutton)|Skryje nebo zobrazí zadané tlačítko v ovládacím prvku ToolBar.|
-|[CToolBarCtrl:: HitTest](#hittest)|Určuje, kde bod leží v ovládacím prvku ToolBar.|
-|[CToolBarCtrl:: neurčité](#indeterminate)|Nastaví nebo zruší neurčitý (šedý) stav tlačítka určeného v ovládacím prvku ToolBar.|
-|[CToolBarCtrl:: InsertButton](#insertbutton)|Vloží tlačítko do ovládacího prvku ToolBar.|
-|[CToolBarCtrl:: InsertMarkHitTest](#insertmarkhittest)|Načte informace o značce vložení pro bod na panelu nástrojů.|
-|[CToolBarCtrl:: IsButtonChecked](#isbuttonchecked)|Určuje, zda je zaškrtnuto určené tlačítko v ovládacím prvku ToolBar.|
-|[CToolBarCtrl:: IsButtonEnabled](#isbuttonenabled)|Určuje, zda je povoleno vybrané tlačítko v ovládacím prvku ToolBar.|
-|[CToolBarCtrl:: IsButtonHidden](#isbuttonhidden)|Určuje, zda je zadané tlačítko v ovládacím prvku panel nástrojů skryté.|
-|[CToolBarCtrl:: IsButtonHighlighted](#isbuttonhighlighted)|Kontroluje stav zvýraznění tlačítka panelu nástrojů.|
-|[CToolBarCtrl:: IsButtonIndeterminate](#isbuttonindeterminate)|Určuje, zda je stav zadaného tlačítka v ovládacím prvku panel nástrojů neurčitý (šedý).|
-|[CToolBarCtrl:: IsButtonPressed](#isbuttonpressed)|Určuje, zda je stisknuto určené tlačítko v ovládacím prvku ToolBar.|
-|[CToolBarCtrl:: LoadImages](#loadimages)|Načte rastry do seznamu obrázků ovládacího prvku panelu nástrojů.|
-|[CToolBarCtrl:: MapAccelerator](#mapaccelerator)|Mapuje znak akcelerátoru na tlačítko panelu nástrojů.|
-|[CToolBarCtrl:: MarkButton](#markbutton)|Nastaví stav zvýraznění daného tlačítka v ovládacím prvku ToolBar.|
-|[CToolBarCtrl:: MoveButton](#movebutton)|Přesune tlačítko z jednoho indexu do druhého.|
-|[CToolBarCtrl::P ressButton](#pressbutton)|Stiskne nebo uvolní zadané tlačítko v ovládacím prvku ToolBar.|
-|[CToolBarCtrl:: ReplaceBitmap](#replacebitmap)|Nahradí existující rastrový obrázek v aktuálním ovládacím prvku panelu nástrojů novou rastrovou obrázkem.|
-|[CToolBarCtrl:: RestoreState](#restorestate)|Obnoví stav ovládacího prvku ToolBar.|
-|[CToolBarCtrl:: SaveState](#savestate)|Uloží stav ovládacího prvku ToolBar.|
-|[CToolBarCtrl:: SetAnchorHighlight](#setanchorhighlight)|Nastaví nastavení zvýraznění ukotvení panelu nástrojů.|
-|[CToolBarCtrl:: SetBitmapSize](#setbitmapsize)|Nastaví velikost rastrových obrázků, které mají být přidány do ovládacího prvku ToolBar.|
-|[CToolBarCtrl:: SetButtonInfo](#setbuttoninfo)|Nastaví informace pro existující tlačítko na panelu nástrojů.|
-|[CToolBarCtrl:: SetButtonSize](#setbuttonsize)|Nastaví velikost tlačítek, která mají být přidána do ovládacího prvku ToolBar.|
-|[CToolBarCtrl:: SetButtonStructSize](#setbuttonstructsize)|Určuje velikost `TBBUTTON` struktury.|
-|[CToolBarCtrl:: SetButtonWidth](#setbuttonwidth)|Nastaví šířku tlačítek na minimum a maximum v ovládacím prvku ToolBar.|
-|[CToolBarCtrl:: SetCmdID](#setcmdid)|Nastaví identifikátor příkazu, který má být odeslán do okna vlastníka při stisknutí zadaného tlačítka.|
-|[CToolBarCtrl:: SetColorScheme](#setcolorscheme)|Nastaví barevné schéma aktuálního ovládacího prvku panelu nástrojů.|
-|[CToolBarCtrl:: SetDisabledImageList](#setdisabledimagelist)|Nastaví seznam obrázků, který ovládací prvek Toolbar použije k zobrazení zakázaných tlačítek.|
-|[CToolBarCtrl:: SetDrawTextFlags](#setdrawtextflags)|Nastaví příznaky v Win32 Function [DrawText](/windows/win32/api/winuser/nf-winuser-drawtext), který se používá k vykreslení textu v zadaném obdélníku formátovaného podle způsobu, jakým jsou příznaky nastaveny.|
-|[CToolBarCtrl:: SetExtendedStyle](#setextendedstyle)|Nastaví rozšířené styly pro ovládací prvek panelu nástrojů.|
-|[CToolBarCtrl:: SetHotImageList](#sethotimagelist)|Nastaví seznam obrázků, který ovládací prvek Toolbar použije k zobrazení "horkého" tlačítka.|
-|[CToolBarCtrl:: SetHotItem](#sethotitem)|Nastaví aktivní položku na panelu nástrojů.|
-|[CToolBarCtrl:: SetImageList](#setimagelist)|Nastaví seznam obrázků, který bude panel nástrojů používat k zobrazení tlačítek, která jsou ve výchozím stavu.|
-|[CToolBarCtrl:: SetIndent](#setindent)|Nastaví odsazení prvního tlačítka v ovládacím prvku ToolBar.|
-|[CToolBarCtrl:: SetInsertMark](#setinsertmark)|Nastaví aktuální značku vložení panelu nástrojů.|
-|[CToolBarCtrl:: SetInsertMarkColor](#setinsertmarkcolor)|Nastaví barvu použitou k vykreslení značky vložení panelu nástrojů.|
-|[CToolBarCtrl:: SetMaxTextRows](#setmaxtextrows)|Nastaví maximální počet textových řádků zobrazených na tlačítku panelu nástrojů.|
-|[CToolBarCtrl:: SetMetrics](#setmetrics)|Nastaví metriku ovládacího prvku ToolBar.|
-|[CToolBarCtrl:: SetOwner](#setowner)|Nastaví okno na příjem zpráv s oznámením z ovládacího prvku ToolBar.|
-|[CToolBarCtrl:: SetPadding](#setpadding)|Nastaví vodorovné a svislé odsazení aktuálního ovládacího prvku panelu nástrojů.|
-|[CToolBarCtrl:: SetPressedImageList](#setpressedimagelist)|Nastaví seznam obrázků, který aktuální ovládací prvek Toolbar používá pro reprezentaci tlačítek ve stisknutém stavu.|
-|[CToolBarCtrl:: SetRows](#setrows)|Nastaví počet řádků tlačítek zobrazených na panelu nástrojů.|
-|[CToolBarCtrl:: SetState](#setstate)|Nastaví stav pro zadané tlačítko v ovládacím prvku ToolBar.|
-|[CToolBarCtrl:: SetStyle](#setstyle)|Nastaví styly ovládacího prvku ToolBar.|
-|[CToolBarCtrl:: SetToolTips](#settooltips)|Přidruží ovládací prvek popis tlačítka k ovládacímu prvku ToolBar.|
-|[CToolBarCtrl:: SetWindowTheme](#setwindowtheme)|Nastaví vizuální styl ovládacího prvku ToolBar.|
+|[CToolBarCtrl::AddBitmap](#addbitmap)|Přidá jeden nebo více bitmapových obrázků tlačítka do seznamu obrazů tlačítek dostupných pro ovládací prvek panelu nástrojů.|
+|[CtoolBarctrl::Přidat tlačítka](#addbuttons)|Přidá jedno nebo více tlačítek do ovládacího prvku panelu nástrojů.|
+|[CtoolBarctrl::Přidat řetězec](#addstring)|Přidá nový řetězec předaný jako ID prostředku do interního seznamu řetězců panelu nástrojů.|
+|[CToolBarCtrl::Doplňky](#addstrings)|Přidá nový řetězec nebo řetězce předané jako ukazatel do vyrovnávací paměti řetězců s nulovými hodnotami do interního seznamu řetězců panelu nástrojů.|
+|[CtoolBarCtrl::Automatická velikost](#autosize)|Změní velikost ovládacího prvku panelu nástrojů.|
+|[CToolBarCtrl::ChangeBitmap](#changebitmap)|Změní bitmapu tlačítka v aktuálním ovládacím prvku panelu nástrojů.|
+|[CtoolBarCtrl::CheckButton](#checkbutton)|Zkontroluje nebo vymaže dané tlačítko v ovládacím prvku panelu nástrojů.|
+|[CtoolBarctrl::CommandToIndex](#commandtoindex)|Načte index založený na nule pro tlačítko přidružené k zadanému identifikátoru příkazu.|
+|[CToolBarctrl::Vytvořit](#create)|Vytvoří ovládací prvek panelu nástrojů `CToolBarCtrl` a připojí jej k objektu.|
+|[CtoolBarctrl::CreateEx](#createex)|Vytvoří ovládací prvek panelu nástrojů se zadanými `CToolBarCtrl` rozšířenými styly systému Windows a připojí jej k objektu.|
+|[CtoolBarctrl::Přizpůsobit](#customize)|Zobrazí dialogové okno Přizpůsobit panel nástrojů.|
+|[CToolBarCtrl::DeleteButton](#deletebutton)|Odstraní tlačítko z ovládacího prvku panelu nástrojů.|
+|[CtoolBarCtrl::EnableButton](#enablebutton)|Povolí nebo zakáže zadané tlačítko v ovládacím prvku panelu nástrojů.|
+|[CtoolBarctrl::GetAnchorHighlight](#getanchorhighlight)|Načte nastavení zvýraznění kotvy pro panel nástrojů.|
+|[CToolBarCtrl::GetBitmap](#getbitmap)|Načte index rastrového mapu přidruženého k tlačítku na panelu nástrojů.|
+|[CToolBarCtrl::GetBitmapFlags](#getbitmapflags)|Získá příznaky přidružené k bitmapy panelu nástrojů.|
+|[CtoolBarCtrl::Tlačítko GetButton](#getbutton)|Načte informace o zadaném tlačítku v ovládacím prvku panelu nástrojů.|
+|[CtoolBarctrl::GetButtonCount](#getbuttoncount)|Načte počet tlačítek, která jsou aktuálně v ovládacím prvku panelu nástrojů.|
+|[CtoolBarctrl::GetButtonInfo](#getbuttoninfo)|Načte informace o tlačítku na panelu nástrojů.|
+|[CtoolBarctrl::GetButtonSize](#getbuttonsize)|Načte aktuální šířku a výšku tlačítek panelu nástrojů v obrazových bodech.|
+|[CtoolBarctrl::GetColorScheme](#getcolorscheme)|Načte barevné schéma aktuálního ovládacího prvku panelu nástrojů.|
+|[CtoolBarctrl::GetDisabledImageList](#getdisabledimagelist)|Načte seznam obrázků, který ovládací prvek panelu nástrojů používá k zobrazení zakázaných tlačítek.|
+|[CtoolBarctrl::GetDropTarget](#getdroptarget)|Načte rozhraní [IDropTarget](/windows/win32/api/oleidl/nn-oleidl-idroptarget) pro ovládací prvek panelu nástrojů.|
+|[CtoolBarctrl::GetExtendedStyle](#getextendedstyle)|Načte rozšířené styly pro ovládací prvek panelu nástrojů.|
+|[CtoolBarctrl::GethotImageList](#gethotimagelist)|Načte seznam obrázků, který ovládací prvek panelu nástrojů používá k zobrazení "horkých" tlačítek. Když je nad ním ukazatel myši, zobrazí se horké tlačítko zvýrazněné.|
+|[CtoolBarCtrl::GethotItem](#gethotitem)|Načte index aktivní položky v panelu nástrojů.|
+|[CtoolBarctrl::GetImageList](#getimagelist)|Načte seznam obrázků, který ovládací prvek panelu nástrojů používá k zobrazení tlačítek v jejich výchozím stavu.|
+|[CtoolBarctrl::GetInsertMark](#getinsertmark)|Načte aktuální značku vložení pro panel nástrojů.|
+|[CtoolBarctrl::GetInsertMarkColor](#getinsertmarkcolor)|Načte barvu použitou k nakreslení značky vložení pro panel nástrojů.|
+|[CToolBarCtrl::GetItemRect](#getitemrect)|Načte ohraničovací obdélník tlačítka v ovládacím prvku panelu nástrojů.|
+|[CtoolBarctrl::GetMaxSize](#getmaxsize)|Načte celkovou velikost všech viditelných tlačítek a oddělovačů v panelu nástrojů.|
+|[CtoolBarctrl::GetMaxTextRows](#getmaxtextrows)|Načte maximální počet řádků textu zobrazených na tlačítku panelu nástrojů.|
+|[CToolBarCtrl::GetMetrics](#getmetrics)|Načte metriky ovládacího prvku panelu nástrojů.|
+|[CToolBarCtrl::GetPadding](#getpadding)|Načte vodorovné a svislé odsazení aktuálního ovládacího prvku panelu nástrojů.|
+|[CtoolBarctrl::GetpressedImageList](#getpressedimagelist)|Načte seznam obrázků, který aktuální ovládací prvek panelu nástrojů používá k reprezentaci tlačítek v stisknutém stavu.|
+|[CToolBarCtrl::GetRect](#getrect)|Načte ohraničovací obdélník pro zadané tlačítko panelu nástrojů.|
+|[CtoolBarCtrl::GetRows](#getrows)|Načte počet řádků tlačítek aktuálně zobrazených na panelu nástrojů.|
+|[CtoolBarCtrl::GetState](#getstate)|Načte informace o stavu zadaného tlačítka v ovládacím prvku panelu nástrojů, například zda je povoleno, stisknuto nebo zaškrtnuto.|
+|[CtoolBarctrl::GetString](#getstring)|Načte řetězec panelu nástrojů.|
+|[CtoolBarctrl::GetStyle](#getstyle)|Načte styly, které se právě používají pro ovládací prvek panelu nástrojů.|
+|[CtoolBarctrl::Tipy gettool](#gettooltips)|Načte popisovač ovládacího prvku špičky nástroje, pokud existuje, přidružený k ovládacímu prvku panelu nástrojů.|
+|[CtoolBarCtrl::HideButton](#hidebutton)|Skryje nebo zobrazí zadané tlačítko v ovládacím prvku panelu nástrojů.|
+|[CtoolBarctrl::HitTest](#hittest)|Určuje, kde bod leží v ovládacím prvku panelu nástrojů.|
+|[CToolBarCtrl::Neurčitý](#indeterminate)|Nastaví nebo vymaže neurčitý (šedý) stav zadaného tlačítka v ovládacím prvku panelu nástrojů.|
+|[CtoolBarctrl::InsertButton](#insertbutton)|Vloží tlačítko do ovládacího prvku panelu nástrojů.|
+|[CtoolBarctrl::InsertmarkHitTest](#insertmarkhittest)|Načte informace o značce vložení bodu na panelu nástrojů.|
+|[CToolBarCtrl::IsButtonChecked](#isbuttonchecked)|Určuje, zda je zaškrtnuto zadané tlačítko v ovládacím prvku panelu nástrojů.|
+|[CtoolBarCtrl::IsButtonEnabled](#isbuttonenabled)|Určuje, zda je zadané tlačítko v ovládacím prvku panelu nástrojů povoleno.|
+|[CtoolBarCtrl::IsButtonHidden](#isbuttonhidden)|Určuje, zda je zadané tlačítko v ovládacím prvku panelu nástrojů skryto.|
+|[CToolBarCtrl::Zvýrazněný isbutton](#isbuttonhighlighted)|Zkontroluje stav zvýraznění tlačítka panelu nástrojů.|
+|[CToolBarCtrl::IsButtonIndeterminate](#isbuttonindeterminate)|Určuje, zda je stav zadaného tlačítka v ovládacím prvku panelu nástrojů neurčitý (šedý).|
+|[CtoolBarCtrl::IsButtonPressed](#isbuttonpressed)|Určuje, zda je stisknuto zadané tlačítko v ovládacím prvku panelu nástrojů.|
+|[CtoolBarCtrl::načtení obrázků](#loadimages)|Načte bitmapy do seznamu obrázků ovládacího prvku panelu nástrojů.|
+|[CToolBarCtrl::MapAccelerator](#mapaccelerator)|Mapuje znak akcelerátoru na tlačítko panelu nástrojů.|
+|[CtoolBarctrl::MarkButton](#markbutton)|Nastaví stav zvýraznění daného tlačítka v ovládacím prvku panelu nástrojů.|
+|[CtoolBarctrl::MoveButton](#movebutton)|Přesune tlačítko z jednoho indexu do druhého.|
+|[CToolBarCtrl::PressButton](#pressbutton)|Stiskne nebo uvolní zadané tlačítko v ovládacím prvku panelu nástrojů.|
+|[CToolBarCtrl::ReplaceBitmap](#replacebitmap)|Nahradí existující bitmapu v aktuálním ovládacím prvku panelu nástrojů novou bitmapou.|
+|[CToolBarCtrl::Obnovitstav](#restorestate)|Obnoví stav ovládacího prvku panelu nástrojů.|
+|[CToolBarCtrl::SaveState](#savestate)|Uloží stav ovládacího prvku panelu nástrojů.|
+|[CToolBarctrl::SetAnchorHighlight](#setanchorhighlight)|Nastaví nastavení zvýraznění kotvy pro panel nástrojů.|
+|[CToolBarCtrl::SetBitmapSize](#setbitmapsize)|Nastaví velikost bitmapovaných obrazů, které mají být přidány do ovládacího prvku panelu nástrojů.|
+|[CtoolBarctrl::SetButtonInfo](#setbuttoninfo)|Nastaví informace o existujícím tlačítku na panelu nástrojů.|
+|[CtoolBarctrl::SetButtonSize](#setbuttonsize)|Nastaví velikost tlačítek, která mají být přidána do ovládacího prvku panelu nástrojů.|
+|[CToolBarCtrl::SetButtonStructSize](#setbuttonstructsize)|Určuje velikost `TBBUTTON` struktury.|
+|[CtoolBarctrl::SetButtonWidth](#setbuttonwidth)|Nastaví minimální a maximální šířku tlačítek v ovládacím prvku panelu nástrojů.|
+|[CToolBarCtrl::SetCmdID](#setcmdid)|Nastaví identifikátor příkazu, který má být odeslán do okna vlastníka při stisknutí zadaného tlačítka.|
+|[CtoolBarctrl::SetColorScheme](#setcolorscheme)|Nastaví barevné schéma aktuálního ovládacího prvku panelu nástrojů.|
+|[CtoolBarctrl::SetDisabledImageList](#setdisabledimagelist)|Nastaví seznam obrázků, který bude ovládací prvek panelu nástrojů používat k zobrazení zakázaných tlačítek.|
+|[CToolBarCtrl::SetDrawTextFlags](#setdrawtextflags)|Nastaví příznaky ve funkci [DrawText](/windows/win32/api/winuser/nf-winuser-drawtext)win32 , která slouží k nakreslení textu v zadaném obdélníku, formátované podle způsobu nastavení příznaků.|
+|[CtoolBarctrl::SetExtendedStyle](#setextendedstyle)|Nastaví rozšířené styly ovládacího prvku panelu nástrojů.|
+|[CtoolBarctrl::SethotImageList](#sethotimagelist)|Nastaví seznam obrázků, který ovládací prvek panelu nástrojů použije k zobrazení "horkých" tlačítek.|
+|[CToolBarCtrl::SetHotItem](#sethotitem)|Nastaví aktivní položku v panelu nástrojů.|
+|[CtoolBarctrl::SetImageList](#setimagelist)|Nastaví seznam obrázků, který bude panel nástrojů používat k zobrazení tlačítek, která jsou ve výchozím stavu.|
+|[CToolBarCtrl::SetIndent](#setindent)|Nastaví odsazení prvního tlačítka v ovládacím prvku panelu nástrojů.|
+|[CtoolBarctrl::SetInsertMark](#setinsertmark)|Nastaví značku aktuálního vložení pro panel nástrojů.|
+|[CtoolBarctrl::SetInsertmarkColor](#setinsertmarkcolor)|Nastaví barvu použitou k nakreslení značky vložení pro panel nástrojů.|
+|[CtoolBarctrl::SetMaxTextRows](#setmaxtextrows)|Nastaví maximální počet řádků textu zobrazených na tlačítku panelu nástrojů.|
+|[CToolBarCtrl::SetMetrics](#setmetrics)|Nastaví metriky ovládacího prvku panelu nástrojů.|
+|[CtoolBarCtrl::SetOwner](#setowner)|Nastaví okno tak, aby přijímali oznámení z ovládacího prvku panelu nástrojů.|
+|[CToolBarCtrl::SetPadding](#setpadding)|Nastaví vodorovné a svislé odsazení aktuálního ovládacího prvku panelu nástrojů.|
+|[CtoolBarctrl::SetpressedImageList](#setpressedimagelist)|Nastaví seznam obrázků, který aktuální ovládací prvek panelu nástrojů používá k reprezentaci tlačítek v stisknutém stavu.|
+|[CtoolBarCtrl::SetRows](#setrows)|Nastaví počet řádků tlačítek zobrazených na panelu nástrojů.|
+|[CToolBarCtrl::SetState](#setstate)|Nastaví stav zadaného tlačítka v ovládacím prvku panelu nástrojů.|
+|[CtoolBarCtrl::SetStyle](#setstyle)|Nastaví styly ovládacího prvku panelu nástrojů.|
+|[CtoolBarctrl::SettoolTips](#settooltips)|Přidruží ovládací prvek špičky nástroje k ovládacímu prvku panelu nástrojů.|
+|[CToolBarCtrl::SetWindowTheme](#setwindowtheme)|Nastaví vizuální styl ovládacího prvku panelu nástrojů.|
 
 ## <a name="remarks"></a>Poznámky
 
-Tento ovládací prvek (a proto třída `CToolBarCtrl`) je k dispozici pouze pro programy, které jsou spuštěny v systémech Windows 95/98 a Windows NT verze 3,51 a novější.
+Tento ovládací prvek `CToolBarCtrl` (a tedy třída) je k dispozici pouze pro programy spuštěné v systémech Windows 95/98 a Windows NT verze 3.51 a novějších.
 
-Běžný ovládací prvek panelu nástrojů systému Windows je obdélníkové podřízené okno, které obsahuje jeden nebo více tlačítek. Tato tlačítka mohou zobrazit rastrový obrázek, řetězec nebo obojí. Když uživatel klikne na tlačítko, pošle se do okna vlastníka panelu nástrojů zpráva příkazu. Obvykle tlačítka na panelu nástrojů odpovídají položkám v nabídce aplikace. poskytují uživateli přímější způsob, jak získat přístup k příkazům aplikace.
+Společný ovládací prvek panelu nástrojů systému Windows je obdélníkové podřízené okno, které obsahuje jedno nebo více tlačítek. Tato tlačítka mohou zobrazit bitmapový obraz, řetězec nebo obojí. Když uživatel vybere tlačítko, odešle příkazovou zprávu do okna vlastníka panelu nástrojů. Tlačítka v panelu nástrojů obvykle odpovídají položkám v nabídce aplikace; poskytují přímější způsob, jak pro uživatele přístup k příkazům aplikace.
 
-objekty `CToolBarCtrl` obsahují několik důležitých vnitřních datových struktur: Seznam rastrových obrázků tlačítek nebo seznam obrázků, seznam řetězců popisků tlačítek a seznam `TBBUTTON`ch struktur, které přiřadí obrázek nebo řetězec k pozici, stylu, stavu a ID příkazu tlačítka. Na každý z prvků těchto datových struktur se odkazuje index založený na nule. Než budete moci použít objekt `CToolBarCtrl`, je nutné nastavit tyto datové struktury. Seznam řetězců lze použít pouze pro popisky tlačítek; z panelu nástrojů nelze načíst řetězce.
+`CToolBarCtrl`objekty obsahují několik důležitých interních datových struktur: seznam bitmap obrázků tlačítek nebo seznam obrázků, seznam řetězců popisků tlačítek a seznam `TBBUTTON` struktur, které přidružují obraz nebo řetězec k poloze, stylu, stavu a ID příkazu tlačítka. Každý z prvků těchto datových struktur je odkazován indexem založeným na nule. Před použitím objektu `CToolBarCtrl` je nutné nastavit tyto datové struktury. Seznam řetězců lze použít pouze pro popisky tlačítek; z panelu nástrojů nelze načíst řetězce.
 
-Chcete-li použít objekt `CToolBarCtrl`, obvykle se řiďte těmito kroky:
+Chcete-li `CToolBarCtrl` použít objekt, budete obvykle postupujte takto:
 
-1. Sestavte objekt `CToolBarCtrl`.
+1. Vytvořte `CToolBarCtrl` objekt.
 
-1. Voláním [Create](#create) Vytvořte běžný ovládací prvek panelu nástrojů systému Windows a připojte jej k objektu `CToolBarCtrl`. Určete styl panelu nástrojů pomocí stylů, jako je například TBSTYLE_TRANSPARENT pro průhledný panel nástrojů nebo TBSTYLE_DROPDOWN pro panel nástrojů, který podporuje tlačítka pro styl rozevíracího seznamu.
+1. Volání [Vytvořit](#create) vytvořte společný ovládací prvek panelu `CToolBarCtrl` nástrojů systému Windows a připojte jej k objektu. Označte styl panelu nástrojů pomocí stylů, například TBSTYLE_TRANSPARENT průhledného panelu nástrojů nebo TBSTYLE_DROPDOWN pro panel nástrojů, který podporuje tlačítka stylů rozevíracího souboru.
 
-1. Určete, jak chcete, aby se tlačítka na panelu nástrojů zobrazovala:
+1. Určete, jak mají být tlačítka na panelu nástrojů zobrazena:
 
-   - Chcete-li použít rastrové obrázky pro tlačítka, přidejte rastrové obrázky tlačítka na panel nástrojů voláním [AddBitmap](#addbitmap).
+   - Chcete-li pro tlačítka použít bitmapové obrazy, přidejte bitmapy tlačítek na panel nástrojů voláním [AddBitmap](#addbitmap).
 
-   - Chcete-li použít obrázky zobrazené ze seznamu obrázků pro tlačítka, určete seznam obrázků voláním [SetImageList](#setimagelist), [SetHotImageList](#sethotimagelist)nebo [SetDisabledImageList](#setdisabledimagelist).
+   - Chcete-li použít obrázky zobrazené ze seznamu obrázků pro tlačítka, zadejte seznam obrázků voláním [SetImageList](#setimagelist), [SetHotImageList](#sethotimagelist)nebo [SetDisabledImageList](#setdisabledimagelist).
 
-   - Chcete-li použít popisky řetězců pro tlačítka, přidejte řetězce na panel nástrojů voláním [AddString](#addstring) a/nebo [AddStrings](#addstrings).
+   - Chcete-li pro tlačítka použít popisky řetězců, přidejte řetězce na panel nástrojů voláním [AddString](#addstring) a/nebo [AddStrings](#addstrings).
 
-1. Přidejte do panelu nástrojů struktury tlačítek voláním [AddButtons](#addbuttons).
+1. Přidejte struktury tlačítek na panel nástrojů voláním [AddButtons](#addbuttons).
 
-1. Pokud chcete tipy k tlačítkům na panelu nástrojů v nadřazeném okně, které není `CFrameWnd`, je třeba zpracovat zprávy TTN_NEEDTEXT v okně vlastníka panelu nástrojů, jak je popsáno v tématu [zpracování oznámení s popisem](../../mfc/handling-tool-tip-notifications.md)nástrojů. Pokud je nadřazené okno panelu nástrojů odvozeno z `CFrameWnd`, zobrazí se popisy tlačítek bez dalšího úsilí, protože `CFrameWnd` poskytuje výchozí obslužnou rutinu.
+1. Pokud chcete tipy nástrojů pro tlačítko panelu nástrojů v `CFrameWnd`okně vlastníka, které není , je třeba zpracovat TTN_NEEDTEXT zprávy v okně vlastníka panelu nástrojů, jak je popsáno v [části Zpracování oznámení tipu nástroje](../../mfc/handling-tool-tip-notifications.md). Pokud je nadřazené okno `CFrameWnd`panelu nástrojů odvozeno z aplikace , `CFrameWnd` zobrazí se tipy nástrojů bez jakéhokoli vynačkání, protože poskytuje výchozí obslužnou rutinu.
 
-1. Pokud chcete, aby uživatel mohl přizpůsobit panel nástrojů, zpracujte zprávy s oznámením o přizpůsobení v okně vlastník, jak je popsáno v [tématu zpracování oznámení přizpůsobení](../../mfc/handling-customization-notifications.md).
+1. Pokud chcete, aby uživatel mohl přizpůsobit panel nástrojů, zpracovávejte zprávy oznámení o vlastním nastavení v okně vlastníka, jak je popsáno v [části Zpracování oznámení o vlastním nastavení](../../mfc/handling-customization-notifications.md).
 
-Pomocí [SaveState](#savestate) můžete uložit aktuální stav ovládacího prvku panelu nástrojů v registru a [RestoreState](#restorestate) obnovit stav na základě dříve uložených informací v registru. Kromě uložení stavu panelu nástrojů mezi použitím aplikace obvykle aplikace ukládá stav předtím, než uživatel začne přizpůsobovat panel nástrojů pro případ, že uživatel později chce obnovit panel nástrojů do původního stavu.
+Pomocí [funkce SaveState](#savestate) můžete uložit aktuální stav ovládacího prvku panelu nástrojů v registru a [obnovit](#restorestate) stav na základě informací dříve uložených v registru. Kromě uložení stavu panelu nástrojů mezi použití aplikace aplikace aplikace obvykle ukládají stav před tím, než uživatel začne přizpůsobovat panel nástrojů v případě, že uživatel později chce obnovit původní stav panelu nástrojů.
 
-## <a name="support-for-internet-explorer-version-40-and-later"></a>Podpora pro Internet Explorer verze 4,0 a novější
+## <a name="support-for-internet-explorer-version-40-and-later"></a>Podpora pro aplikaci Internet Explorer verze 4.0 a novější
 
-Pro podporu funkcí zavedených v aplikaci Internet Explorer verze 4,0 a novější poskytuje knihovna MFC podporu seznamu obrázků a transparentní a ploché styly pro ovládací prvky panelu nástrojů.
+Pro podporu funkcí zavedených v aplikaci Internet Explorer verze 4.0 a novějších poskytuje knihovna MFC podporu seznamu obrázků a transparentní a ploché styly pro ovládací prvky panelu nástrojů.
 
-Transparentní panel nástrojů umožňuje klientovi v rámci panelu nástrojů zobrazit. Chcete-li vytvořit průhledný panel nástrojů, použijte styly TBSTYLE_FLAT i TBSTYLE_TRANSPARENT. Funkce transparentního panelu nástrojů pro sledování v provozu; To znamená, že když se ukazatel myši pohybuje přes aktivní tlačítko na panelu nástrojů, změní se vzhled tlačítka. Panely nástrojů vytvořené s pouze stylem TBSTYLE_FLAT budou obsahovat tlačítka, která nejsou průhledná.
+Průhledný panel nástrojů umožňuje klientovi pod panelem nástrojů zobrazit. Chcete-li vytvořit průhledný panel nástrojů, použijte styly TBSTYLE_FLAT i TBSTYLE_TRANSPARENT. Průhledné panely nástrojů mají sledování za tepla; to znamená, že když se ukazatel myši přesune přes horké tlačítko na panelu nástrojů, změní se vzhled tlačítka. Panely nástrojů vytvořené pouze stylem TBSTYLE_FLAT budou obsahovat tlačítka, která nejsou průhledná.
 
-Podpora seznamu obrázků umožňuje ovládacímu prvku větší flexibilitu pro výchozí chování, aktivní image a zakázané obrázky. Použijte [GetImageList](#getimagelist), [GetHotImageList](#gethotimagelist)a [GetDisabledImageList](#getdisabledimagelist) s transparentním panelem nástrojů k manipulaci s imagí podle jejich stavu:
+Podpora seznamu obrázků umožňuje ovládacímu prvku větší flexibilitu pro výchozí chování, horké obrázky a zakázané obrázky. Pomocí [polí GetImageList](#getimagelist), [GetHotImageList](#gethotimagelist)a [GetDisabledImageList](#getdisabledimagelist) s průhledným panelem nástrojů můžete s obrazem manipulovat podle jeho stavu:
 
-Další informace o použití `CToolBarCtrl`naleznete v tématu [Controls](../../mfc/controls-mfc.md) and [using CToolBarCtrl](../../mfc/using-ctoolbarctrl.md).
+Další informace o `CToolBarCtrl`použití naleznete v [tématech Ovládací prvky](../../mfc/controls-mfc.md) a [Použití kláves CToolBarCtrl](../../mfc/using-ctoolbarctrl.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[CObject](../../mfc/reference/cobject-class.md)
+[CObjekt](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[CCmdCíl](../../mfc/reference/ccmdtarget-class.md)
 
-[CWnd](../../mfc/reference/cwnd-class.md)
+[Cwnd](../../mfc/reference/cwnd-class.md)
 
 `CToolBarCtrl`
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxcmn. h
+**Záhlaví:** afxcmn.h
 
-##  <a name="addbitmap"></a>CToolBarCtrl:: AddBitmap
+## <a name="ctoolbarctrladdbitmap"></a><a name="addbitmap"></a>CToolBarCtrl::AddBitmap
 
-Přidá jednu nebo více obrázků tlačítek do seznamu obrázků tlačítek uložených v ovládacím prvku ToolBar.
+Přidá jeden nebo více obrázků tlačítek do seznamu obrázků tlačítek uložených v ovládacím prvku panelu nástrojů.
 
 ```
 int AddBitmap(
@@ -370,25 +370,25 @@ int AddBitmap(
 ### <a name="parameters"></a>Parametry
 
 *nNumButtons*<br/>
-Počet obrázků tlačítek v rastrovém obrázku
+Počet obrázků tlačítek v bitmapě.
 
 *nBitmapID*<br/>
-Identifikátor prostředku rastrového obrázku, který obsahuje obrázek tlačítka nebo obrázky, které mají být přidány.
+Identifikátor prostředku bitmapy, která obsahuje obrázek tlačítka nebo obrázky, které chcete přidat.
 
 *pBitmap*<br/>
-Ukazatel na objekt `CBitmap`, který obsahuje obrázek tlačítka nebo obrázky, které chcete přidat.
+Ukazatel na `CBitmap` objekt, který obsahuje obrázek tlačítka nebo obrázky, které chcete přidat.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Index založený na nule prvního nového obrázku, pokud je úspěšný; v opačném případě-1.
+Nulový index prvního nového obrázku, pokud je úspěšný; jinak - 1.
 
 ### <a name="remarks"></a>Poznámky
 
-K namapování barev před přidáním rastrového obrázku na panel nástrojů můžete použít rozhraní API systému Windows [CreateMappedBitmap](/windows/win32/api/commctrl/nf-commctrl-createmappedbitmap) . Pokud předáte ukazatel na objekt `CBitMap`, je nutné zajistit, aby se rastrový obrázek nezničil až po zničení panelu nástrojů.
+Před přidáním bitmapy na panel nástrojů můžete použít rozhraní API systému Windows [CreateMappedBitmap](/windows/win32/api/commctrl/nf-commctrl-createmappedbitmap) k mapování barev. Pokud předáte ukazatel `CBitMap` na objekt, musíte zajistit, že bitmapa není zničena až po zničení panelu nástrojů.
 
-##  <a name="addbuttons"></a>CToolBarCtrl:: AddButtons
+## <a name="ctoolbarctrladdbuttons"></a><a name="addbuttons"></a>CtoolBarctrl::Přidat tlačítka
 
-Přidá jednu nebo více tlačítek do ovládacího prvku ToolBar.
+Přidá jedno nebo více tlačítek do ovládacího prvku panelu nástrojů.
 
 ```
 BOOL AddButtons(
@@ -399,18 +399,18 @@ BOOL AddButtons(
 ### <a name="parameters"></a>Parametry
 
 *nNumButtons*<br/>
-Počet tlačítek, která se mají přidat
+Počet tlačítek, která chcete přidat.
 
-*lpButtons*<br/>
-Adresa pole `TBBUTTON` struktury, které obsahují informace o tlačítkách pro přidání. V poli musí být stejný počet prvků jako tlačítka určená parametrem *nNumButtons*.
+*lpTlačítka*<br/>
+Adresa pole `TBBUTTON` struktur, které obsahuje informace o tlačítka přidat. V poli musí být stejný počet prvků jako tlačítka určená *parametrem nNumButtons*.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud bylo úspěšné; jinak nula.
+Nenulová, pokud je úspěšná; jinak nula.
 
 ### <a name="remarks"></a>Poznámky
 
-Ukazatel *lpButtons* odkazuje na pole `TBBUTTON` struktury. Každá struktura `TBBUTTON` přidružuje tlačítko přidávané k stylu, obrázku a/nebo řetězci tlačítka, ID příkazu, stavu a uživatelem definovaná data:
+*LpButtons* ukazatel odkazuje na `TBBUTTON` pole struktur. Každá `TBBUTTON` struktura přidruží přidávané tlačítko ke stylu, obrázku a/nebo řetězci, ID příkazu, stavu a uživatelem definovaným datům:
 
 ```cpp
 typedef struct _TBBUTTON {
@@ -423,57 +423,57 @@ typedef struct _TBBUTTON {
 } TBBUTTON;
 ```
 
-Členy jsou následující:
+Členové jsou následující:
 
 - `iBitmap`
 
-   Index obrázku tlačítka založeného na nule,-1, pokud pro toto tlačítko není k dispozici žádný obrázek
+   Nulový index obrázku tlačítka, -1, pokud pro toto tlačítko není žádný obrázek.
 
 - `idCommand`
 
-   Identifikátor příkazu přidružený k tlačítku Tento identifikátor je odeslán ve zprávě WM_COMMAND, když je vybráno tlačítko. Pokud má člen `fsStyle` TBSTYLE_SEP hodnotu, musí být tento člen nula.
+   Identifikátor příkazu přidružený k tlačítku. Tento identifikátor je odeslán ve WM_COMMAND zprávě při výběru tlačítka. Pokud `fsStyle` má člen hodnotu TBSTYLE_SEP, musí být tento člen nulový.
 
 - `fsState`
 
-   Příznaky stavu tlačítka Může se jednat o kombinaci hodnot uvedených níže:
+   Příznaky stavu tlačítka. Může to být kombinace níže uvedených hodnot:
 
-   - TBSTATE_CHECKED tlačítko má styl TBSTYLE_CHECKED a je stisknuto.
+  - TBSTATE_CHECKED Tlačítko má TBSTYLE_CHECKED styl a je stisknuto.
 
-   - TBSTATE_ENABLED tlačítko akceptuje vstup uživatele. Tlačítko, které nemá tento stav, nepřijímá vstup uživatele a je šedě.
+  - TBSTATE_ENABLED Tlačítko přijímá vstup uživatele. Tlačítko, které nemá tento stav nepřijímá vstup uživatele a je šedě.
 
-   - TBSTATE_HIDDEN tlačítko není viditelné a nemůže přijmout uživatelský vstup.
+  - TBSTATE_HIDDEN Tlačítko není viditelné a nemůže přijímat vstup uživatele.
 
-   - TBSTATE_INDETERMINATE tlačítko je šedé.
+  - TBSTATE_INDETERMINATE Tlačítko je šedé.
 
-   - TBSTATE_PRESSED tlačítko se stiskne.
+  - TBSTATE_PRESSED Stisknete tlačítko.
 
-   - TBSTATE_WRAP zalomení řádku za tlačítkem. Tlačítko musí mít také stav TBSTATE_ENABLED.
+  - TBSTATE_WRAP Za tlačítkem následuje zalomení řádku. Tlačítko musí mít také TBSTATE_ENABLED stavu.
 
 - `fsStyle`
 
-   Styl tlačítka Může se jednat o kombinaci hodnot uvedených níže:
+   Styl tlačítka. Může to být kombinace níže uvedených hodnot:
 
-   - TBSTYLE_BUTTON vytvoří standardní tlačítko pro vložení.
+  - TBSTYLE_BUTTON Vytvoří standardní tlačítko.
 
-   - TBSTYLE_CHECK vytvoří tlačítko, které přepíná mezi stisknutým a nestisknutým stavem pokaždé, když na něj uživatel klikne. Tlačítko má jinou barvu pozadí, když je ve stisknutém stavu.
+  - TBSTYLE_CHECK Vytvoří tlačítko, které přepíná mezi stisknuté a nestisknuté stavy pokaždé, když uživatel klepne na něj. Tlačítko má jinou barvu pozadí, když je v stisknutém stavu.
 
-   - TBSTYLE_CHECKGROUP vytvoří tlačítko pro kontrolu, které zůstane stisknuté, dokud se nestiskne jiné tlačítko ve skupině.
+  - TBSTYLE_CHECKGROUP Vytvoří kontrolní tlačítko, které zůstane stisknuto, dokud nestisknete jiné tlačítko ve skupině.
 
-   - TBSTYLE_GROUP vytvoří tlačítko, které zůstane stisknuté, dokud se nestiskne jiné tlačítko ve skupině.
+  - TBSTYLE_GROUP Vytvoří tlačítko, které zůstane stisknuto, dokud nestisknete jiné tlačítko ve skupině.
 
-   - TBSTYLE_SEP vytvoří oddělovač, který zadává malou mezeru mezi skupinami tlačítek. Tlačítko, které má tento styl, nepřijímá vstup uživatele.
+  - TBSTYLE_SEP Vytvoří oddělovač, který poskytuje malou mezeru mezi skupinami tlačítek. Tlačítko, které má tento styl neobdrží vstup uživatele.
 
 - `dwData`
 
-   Data definovaná uživatelem.
+   Uživatelem definovaná data.
 
 - `iString`
 
-   Index založený na nule řetězce, který se použije jako popisek tlačítka,-1, pokud pro toto tlačítko není řetězec.
+   Nulový index řetězce, který se má použít jako popisek tlačítka, -1, pokud pro toto tlačítko neexistuje žádný řetězec.
 
-Obrázek nebo řetězec, jehož index, který zadáte, musí být dřív přidaný do seznamu ovládacích prvků panelu nástrojů pomocí [AddBitmap](#addbitmap), [AddString](#addstring)a/nebo [AddStrings](#addstrings).
+Obrázek nebo řetězec, jehož index zadáte, musí být dříve přidány do seznamu ovládacího prvku panelu nástrojů pomocí [funkce AddBitmap](#addbitmap), [AddString](#addstring)nebo [AddStrings](#addstrings).
 
-##  <a name="addstring"></a>CToolBarCtrl:: AddString
+## <a name="ctoolbarctrladdstring"></a><a name="addstring"></a>CtoolBarctrl::Přidat řetězec
 
 Přidá nový řetězec předaný jako ID prostředku do interního seznamu řetězců panelu nástrojů.
 
@@ -484,15 +484,15 @@ int AddString(UINT nStringID);
 ### <a name="parameters"></a>Parametry
 
 *nStringID*<br/>
-Identifikátor prostředku řetězcového prostředku, který má být přidán do seznamu řetězců ovládacího prvku ToolBar.
+Identifikátor prostředku řetězce, který chcete přidat do seznamu řetězců ovládacího prvku panelu nástrojů.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Index založený na nule prvního nového řetězce přidaný v případě úspěchu; v opačném případě-1.
+Index založený na nule první nový řetězec přidán v případě úspěchu; jinak -1.
 
-##  <a name="addstrings"></a>CToolBarCtrl:: AddStrings
+## <a name="ctoolbarctrladdstrings"></a><a name="addstrings"></a>CToolBarCtrl::Doplňky
 
-Přidá nový řetězec nebo řetězce do seznamu řetězců, které jsou k dispozici pro ovládací prvek Toolbar.
+Přidá nový řetězec nebo řetězce do seznamu řetězců, které jsou k dispozici pro ovládací prvek panelu nástrojů.
 
 ```
 int AddStrings(LPCTSTR lpszStrings);
@@ -501,15 +501,15 @@ int AddStrings(LPCTSTR lpszStrings);
 ### <a name="parameters"></a>Parametry
 
 *lpszStrings*<br/>
-Adresa vyrovnávací paměti, která obsahuje jeden nebo více řetězců ukončených hodnotou null, které mají být přidány do seznamu řetězců panelu nástrojů. Poslední řetězec musí být ukončen dvěma znaky null.
+Adresa vyrovnávací paměti, která obsahuje jeden nebo více řetězců ukončených hodnotou null, které chcete přidat do seznamu řetězců panelu nástrojů. Poslední řetězec musí být ukončen dvěma prázdnými znaky.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Index založený na nule prvního nového řetězce přidaný v případě úspěchu; v opačném případě-1.
+Index založený na nule první nový řetězec přidán v případě úspěchu; jinak -1.
 
 ### <a name="remarks"></a>Poznámky
 
-Řetězce ve vyrovnávací paměti musí být odděleny znakem null. Je nutné zajistit, aby poslední řetězec měl dva zakončení s hodnotou null. Pro správné formátování konstantního řetězce je možné ho napsat jako:
+Řetězce ve vyrovnávací paměti musí být odděleny znakem null. Je nutné zajistit, že poslední řetězec má dvě null zakončení. Chcete-li správně formátovat konstantní řetězec, můžete jej napsat jako:
 
 [!code-cpp[NVC_MFCControlLadenDialog#72](../../mfc/codesnippet/cpp/ctoolbarctrl-class_1.cpp)]
 
@@ -517,9 +517,9 @@ nebo:
 
 [!code-cpp[NVC_MFCControlLadenDialog#73](../../mfc/codesnippet/cpp/ctoolbarctrl-class_2.cpp)]
 
-K této funkci byste neměli předávat objekt `CString`, protože není možné mít v `CString`více než jeden znak null.
+Neměli byste `CString` předat objekt této funkci, protože není možné mít více `CString`než jeden znak null v .
 
-##  <a name="autosize"></a>CToolBarCtrl:: AutoSize
+## <a name="ctoolbarctrlautosize"></a><a name="autosize"></a>CtoolBarCtrl::Automatická velikost
 
 Změní velikost celého ovládacího prvku panelu nástrojů.
 
@@ -529,11 +529,11 @@ void AutoSize();
 
 ### <a name="remarks"></a>Poznámky
 
-Tuto funkci byste měli zavolat, když se změní velikost nadřazeného okna nebo když se změní velikost panelu nástrojů (například když nastavíte velikost tlačítka nebo rastrového obrázku nebo přidáte řetězce).
+Tuto funkci byste měli volat při změně velikosti nadřazeného okna nebo při změně velikosti panelu nástrojů (například při nastavení velikosti tlačítka nebo bitmapy nebo při přidání řetězců).
 
-##  <a name="changebitmap"></a>CToolBarCtrl:: ChangeBitmap
+## <a name="ctoolbarctrlchangebitmap"></a><a name="changebitmap"></a>CToolBarCtrl::ChangeBitmap
 
-Změní rastrový obrázek tlačítka v aktuálním ovládacím prvku ToolBar.
+Změní bitmapu tlačítka v aktuálním ovládacím prvku panelu nástrojů.
 
 ```
 BOOL ChangeBitmap(
@@ -545,28 +545,28 @@ BOOL ChangeBitmap(
 
 |Parametr|Popis|
 |---------------|-----------------|
-|*idButton*|pro Identifikátor příkazu pro tlačítko, které se má dostat do nového rastrového obrázku|
-|*iBitmap*|pro Index obrázku založený na nule v seznamu obrázků aktuálního ovládacího prvku panelu nástrojů|
+|*idButton*|[v] Identifikátor příkazu tlačítka, které má obdržet novou bitmapu.|
+|*iBitmap*|[v] Nulový index obrazu v seznamu obrázků aktuálního ovládacího prvku panelu nástrojů.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
-TRUE, pokud je tato metoda úspěšná; v opačném případě FALSE.
+TRUE, pokud je tato metoda úspěšná; jinak NEPRAVDA.
 
 ### <a name="remarks"></a>Poznámky
 
 Pokud je tato metoda úspěšná, systém zobrazí zadaný obrázek v zadaném tlačítku.
 
-Tato metoda pošle zprávu [TB_CHANGEBITMAP](/windows/win32/Controls/tb-changebitmap) , která je popsána v Windows SDK.
+Tato metoda odešle [zprávu TB_CHANGEBITMAP,](/windows/win32/Controls/tb-changebitmap) která je popsána v sadě Windows SDK.
 
 ### <a name="example"></a>Příklad
 
-Následující příklad kódu změní rastrový obrázek pro tlačítko **Uložit** do rastrového obrázku **pro tlačítko pro** .
+Následující příklad kódu změní bitmapu pro tlačítko **Uložit soubor** na bitmapu pro tlačítko **O.**
 
 [!code-cpp[NVC_MFC_CToolBarCtrl_s1#1](../../mfc/reference/codesnippet/cpp/ctoolbarctrl-class_3.cpp)]
 
-##  <a name="checkbutton"></a>CToolBarCtrl:: CheckButton
+## <a name="ctoolbarctrlcheckbutton"></a><a name="checkbutton"></a>CtoolBarCtrl::CheckButton
 
-Zkontroluje nebo smaže dané tlačítko v ovládacím prvku ToolBar.
+Zkontroluje nebo vymaže dané tlačítko v ovládacím prvku panelu nástrojů.
 
 ```
 BOOL CheckButton(
@@ -576,21 +576,21 @@ BOOL CheckButton(
 
 ### <a name="parameters"></a>Parametry
 
-*nID*<br/>
-Identifikátor příkazu tlačítka, který se má zaškrtnout nebo vymazat
+*Nid*<br/>
+Identifikátor příkazu tlačítka pro kontrolu nebo vymazání.
 
-*bCheck*<br/>
-TRUE pro zaškrtnutí tlačítka, FALSE pro jeho vymazání.
+*bKontrola*<br/>
+TRUE pro kontrolu tlačítka, FALSE vymazat.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud bylo úspěšné; jinak nula.
+Nenulová, pokud je úspěšná; jinak nula.
 
 ### <a name="remarks"></a>Poznámky
 
-Je-li vybráno tlačítko, bylo pravděpodobně stisknuto. Pokud chcete změnit více než jeden stav tlačítka, zvažte místo toho volání [setstate](#setstate) .
+Pokud bylo tlačítko zaškrtnuto, zdá se, že bylo stisknuto. Pokud chcete změnit více než jeden stav tlačítka, zvažte volání [SetState](#setstate) místo.
 
-##  <a name="commandtoindex"></a>CToolBarCtrl:: CommandToIndex
+## <a name="ctoolbarctrlcommandtoindex"></a><a name="commandtoindex"></a>CtoolBarctrl::CommandToIndex
 
 Načte index založený na nule pro tlačítko přidružené k zadanému identifikátoru příkazu.
 
@@ -600,18 +600,18 @@ UINT CommandToIndex(UINT nID) const;
 
 ### <a name="parameters"></a>Parametry
 
-*nID*<br/>
-ID příkazu, jehož index tlačítka chcete najít.
+*Nid*<br/>
+ID příkazu, jehož index tlačítek chcete najít.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Index založený na nule pro tlačítko přidružené k ID příkazu
+Index založený na nule pro tlačítko přidružené k ID příkazu.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="create"></a>CToolBarCtrl:: Create
+## <a name="ctoolbarctrlcreate"></a><a name="create"></a>CToolBarctrl::Vytvořit
 
-Vytvoří ovládací prvek panelu nástrojů a připojí ho k objektu `CToolBarCtrl`.
+Vytvoří ovládací prvek panelu nástrojů `CToolBarCtrl` a připojí jej k objektu.
 
 ```
 virtual BOOL Create(
@@ -623,45 +623,45 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>Parametry
 
-*dwStyle*<br/>
-Určuje styl ovládacího prvku panelu nástrojů. Panely nástrojů musí mít vždy styl WS_CHILD. Kromě toho můžete určit libovolnou kombinaci stylů panelů nástrojů a oken, jak je popsáno v části **poznámky**.
+*dwStyl*<br/>
+Určuje styl ovládacího prvku panelu nástrojů. Panely nástrojů musí mít vždy WS_CHILD styl. Kromě toho můžete určit libovolnou kombinaci stylů panelů nástrojů a stylů oken, jak je popsáno v části **Poznámky**.
 
-*OBD*<br/>
-Volitelně určuje velikost a polohu ovládacího prvku panelu nástrojů. Může to být buď objekt [CRect](../../atl-mfc-shared/reference/crect-class.md) , nebo struktura [Rect](/previous-versions/dd162897\(v=vs.85\)) .
+*Rect*<br/>
+Volitelně určuje velikost a umístění ovládacího prvku panelu nástrojů. Může to být buď [CRect](../../atl-mfc-shared/reference/crect-class.md) objekt nebo [RECT](/previous-versions/dd162897\(v=vs.85\)) struktury.
 
 *pParentWnd*<br/>
-Určuje nadřazené okno ovládacího prvku ToolBar. Nesmí mít hodnotu NULL.
+Určuje nadřazené okno ovládacího prvku panelu nástrojů. Nesmí být null.
 
-*nID*<br/>
+*Nid*<br/>
 Určuje ID ovládacího prvku panelu nástrojů.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud bylo úspěšné; jinak nula.
+Nenulová, pokud je úspěšná; jinak nula.
 
 ### <a name="remarks"></a>Poznámky
 
-Sestavíte `CToolBarCtrl` ve dvou krocích. Nejprve volejte konstruktor a potom zavolejte `Create`, čímž se vytvoří ovládací prvek Toolbar a připojí se k objektu `CToolBarCtrl`. Použijte následující styly okna pro ovládací prvek panelu nástrojů.
+Můžete vytvořit `CToolBarCtrl` ve dvou krocích. Nejprve zavolejte konstruktoru `Create`a potom volání , který vytvoří ovládací `CToolBarCtrl` prvek panelu nástrojů a připojí jej k objektu. Použijte následující styly oken na ovládací prvek panelu nástrojů.
 
-- WS_CHILD vždycky
+- WS_CHILD vždy
 
-- WS_VISIBLE obvykle
+- WS_VISIBLE Obvykle
 
-- WS_DISABLED zřídka
+- WS_DISABLED Zřídka
 
-Popis stylů oken najdete v části [CreateWindow](/windows/win32/api/winuser/nf-winuser-createwindoww) v Windows SDK.
+Popis stylů oken najdete v tématu [CreateWindow](/windows/win32/api/winuser/nf-winuser-createwindoww) v sadě Windows SDK.
 
-Volitelně můžete použít kombinaci [běžných stylů ovládacích prvků](/windows/win32/Controls/common-control-styles), jak je popsáno v Windows SDK.
+Volitelně můžete použít kombinaci [běžných stylů ovládacích prvků](/windows/win32/Controls/common-control-styles), jak je popsáno v sadě Windows SDK.
 
-Použijte kombinaci stylů panelů nástrojů k ovládacímu prvku nebo tlačítkům. Styly jsou popsány v tématu [ovládací prvky panelu nástrojů a styly tlačítek](/windows/win32/Controls/toolbar-control-and-button-styles) v Windows SDK.
+Použijte kombinaci stylů panelu nástrojů na ovládací prvek nebo na samotná tlačítka. Styly jsou popsány v tématu [Nástroje ovládací prvek a tlačítka styly](/windows/win32/Controls/toolbar-control-and-button-styles) v sadě Windows SDK.
 
-Chcete-li použít rozšířené styly panelů nástrojů, zavolejte [SetExtendedStyle](#setextendedstyle) po volání `Create`. Chcete-li vytvořit panel nástrojů s rozšířenými styly oken, zavolejte [CToolBarCtrl:: CreateEx](#createex) namísto `Create`.
+Chcete-li použít rozšířené styly panelu `Create`nástrojů, zavolejte po volání [setextendedstyle](#setextendedstyle) . Chcete-li vytvořit panel nástrojů s rozšířenými styly oken, `Create`zavolejte [CToolBarCtrl::CreateEx](#createex) místo .
 
-Ovládací prvek Toolbar automaticky nastaví velikost a polohu okna panelu nástrojů. Výška je založena na výšce tlačítek na panelu nástrojů. Šířka je stejná jako šířka klientské oblasti nadřazeného okna. Styly CCS_TOP a CCS_BOTTOM určují, zda je panel nástrojů umístěn podél horní nebo dolní části klientské oblasti. Ve výchozím nastavení má panel nástrojů CCS_TOP styl.
+Ovládací prvek panelu nástrojů automaticky nastaví velikost a umístění okna panelu nástrojů. Výška je založena na výšce tlačítek v panelu nástrojů. Šířka je stejná jako šířka klientské oblasti nadřazeného okna. Styly CCS_TOP a CCS_BOTTOM určují, zda je panel nástrojů umístěn podél horní nebo dolní části klientské oblasti. Ve výchozím nastavení má panel nástrojů CCS_TOP styl.
 
-##  <a name="createex"></a>CToolBarCtrl:: CreateEx
+## <a name="ctoolbarctrlcreateex"></a><a name="createex"></a>CtoolBarctrl::CreateEx
 
-Vytvoří ovládací prvek (podřízené okno) a přidruží ho k objektu `CToolBarCtrl`.
+Vytvoří ovládací prvek (podřízené okno) a `CToolBarCtrl` přidruží jej k objektu.
 
 ```
 virtual BOOL CreateEx(
@@ -674,32 +674,32 @@ virtual BOOL CreateEx(
 
 ### <a name="parameters"></a>Parametry
 
-*dwExStyle*<br/>
-Určuje rozšířený styl ovládacího prvku, který se vytváří. Seznam rozšířených stylů Windows naleznete v parametru *dwExStyle* pro [CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw) v Windows SDK.
+*dwExStyl*<br/>
+Určuje rozšířený styl vytvářeného ovládacího prvku. Seznam rozšířených stylů systému Windows naleznete v parametru *dwExStyle* pro [createwindowex](/windows/win32/api/winuser/nf-winuser-createwindowexw) v sadě Windows SDK.
 
-*dwStyle*<br/>
-Určuje styl ovládacího prvku panelu nástrojů. Panely nástrojů musí mít vždy styl WS_CHILD. Kromě toho můžete zadat libovolnou kombinaci stylů panelů nástrojů a oken, jak je popsáno v oddílu **poznámky** v tématu [Vytvoření](#create).
+*dwStyl*<br/>
+Určuje styl ovládacího prvku panelu nástrojů. Panely nástrojů musí mít vždy WS_CHILD styl. Kromě toho můžete určit libovolnou kombinaci stylů panelů nástrojů a stylů oken, jak je popsáno v části **Poznámky** v části [Vytvořit](#create).
 
-*OBD*<br/>
-Odkaz na strukturu [Rect](/previous-versions/dd162897\(v=vs.85\)) popisující velikost a umístění okna, které má být vytvořeno, v souřadnicích klienta *pParentWnd*.
+*Rect*<br/>
+Odkaz na [rect](/previous-versions/dd162897\(v=vs.85\)) strukturu popisující velikost a umístění okna, které mají být vytvořeny, v klientských souřadnicích *pParentWnd*.
 
 *pParentWnd*<br/>
-Ukazatel na okno, které je nadřazený ovládacímu prvku.
+Ukazatel na okno, které je nadřazený ovládací prvek.
 
-*nID*<br/>
-ID podřízeného okna ovládacího prvku
+*Nid*<br/>
+ID podřízeného okna ovládacího prvku.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud bylo úspěšné; v opačném případě 0.
+Nenulová, pokud je úspěšná; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Použijte `CreateEx` namísto [Create](#create) k použití rozšířených stylů Windows, které jsou určené **WS_EX_m**ve stylu rozšířených stylů Windows. `CreateEx` vytvoří ovládací prvek s rozšířenými styly Windows specifikovanými pomocí *dwExStyle*. Nastavte rozšířené styly specifické pro ovládací prvek pomocí [SetExtendedStyle](#setextendedstyle). Například použijte `CreateEx` k nastavení stylů jako WS_EX_CONTEXTHELP, ale použijte `SetExtendedStyle` k nastavení stylů jako TBSTYLE_EX_DRAWDDARROWS. Další informace najdete v tématu styly popsané v části [panely nástrojů rozšířené styly](/windows/win32/Controls/toolbar-extended-styles) v Windows SDK.
+Místo `CreateEx` funkce [Vytvořit](#create) použijte použití rozšířených stylů systému Windows určených **předmluvou**rozšířeného stylu systému Windows WS_EX_ . `CreateEx`vytvoří ovládací prvek s rozšířenými styly systému Windows určenými *dwExStyle*. Nastavte rozšířené styly specifické pro ovládací prvek pomocí [SetExtendedStyle](#setextendedstyle). Použijte `CreateEx` například k nastavení takových stylů, `SetExtendedStyle` jako je WS_EX_CONTEXTHELP, ale slouží k nastavení takových stylů, jako je TBSTYLE_EX_DRAWDDARROWS. Další informace naleznete v části Styly popsané v [sadě Rozšířené styly panelu nástrojů](/windows/win32/Controls/toolbar-extended-styles) v sadě Windows SDK.
 
-##  <a name="ctoolbarctrl"></a>CToolBarCtrl:: CToolBarCtrl
+## <a name="ctoolbarctrlctoolbarctrl"></a><a name="ctoolbarctrl"></a>CtoolBarctrl::CToolBarCtrl
 
-Vytvoří objekt `CToolBarCtrl`.
+Vytvoří `CToolBarCtrl` objekt.
 
 ```
 CToolBarCtrl();
@@ -707,9 +707,9 @@ CToolBarCtrl();
 
 ### <a name="remarks"></a>Poznámky
 
-Aby bylo možné panel nástrojů používat, je nutné zavolat metodu [Create](#create) .
+Chcete-li vytvořit panel nástrojů, je nutné volat [Create.](#create)
 
-##  <a name="customize"></a>CToolBarCtrl:: Customize
+## <a name="ctoolbarctrlcustomize"></a><a name="customize"></a>CtoolBarctrl::Přizpůsobit
 
 Zobrazí dialogové okno Přizpůsobit panel nástrojů.
 
@@ -719,11 +719,11 @@ void Customize();
 
 ### <a name="remarks"></a>Poznámky
 
-Toto dialogové okno umožňuje uživateli přizpůsobit panel nástrojů přidáním a odstraněním tlačítek. Pro podporu přizpůsobení musí nadřazené okno panelu nástrojů zpracovávat zprávy s oznámením o přizpůsobení, jak je popsáno v [tématu zpracování oznámení o přizpůsobení](../../mfc/handling-customization-notifications.md). Panel nástrojů musí být také vytvořen se stylem CCS_ADJUSTABLE, jak je popsáno v tématu [CToolBarCtrl:: Create](#create).
+Toto dialogové okno umožňuje uživateli přizpůsobit panel nástrojů přidáním a odstraněním tlačítek. Pro podporu vlastního nastavení musí nadřazené okno panelu nástrojů zpracovávat zprávy s oznámením o vlastním nastavení, jak je popsáno v [části Zpracování oznámení o vlastním nastavení](../../mfc/handling-customization-notifications.md). Panel nástrojů musí být také vytvořen s CCS_ADJUSTABLE stylem, jak je popsáno v [ctoolbarctrl::Create](#create).
 
-##  <a name="deletebutton"></a>CToolBarCtrl::D eleteButton
+## <a name="ctoolbarctrldeletebutton"></a><a name="deletebutton"></a>CToolBarCtrl::DeleteButton
 
-Odstraní tlačítko z ovládacího prvku ToolBar.
+Odstraní tlačítko z ovládacího prvku panelu nástrojů.
 
 ```
 BOOL DeleteButton(int nIndex);
@@ -732,17 +732,17 @@ BOOL DeleteButton(int nIndex);
 ### <a name="parameters"></a>Parametry
 
 *nIndex*<br/>
-Index tlačítka, který se má odstranit od nuly
+Nulový index tlačítka, které chcete odstranit.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud bylo úspěšné; jinak nula.
+Nenulová, pokud je úspěšná; jinak nula.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="enablebutton"></a>CToolBarCtrl:: EnableButton
+## <a name="ctoolbarctrlenablebutton"></a><a name="enablebutton"></a>CtoolBarCtrl::EnableButton
 
-Povolí nebo zakáže zadané tlačítko v ovládacím prvku ToolBar.
+Povolí nebo zakáže zadané tlačítko v ovládacím prvku panelu nástrojů.
 
 ```
 BOOL EnableButton(
@@ -752,21 +752,21 @@ BOOL EnableButton(
 
 ### <a name="parameters"></a>Parametry
 
-*nID*<br/>
-Identifikátor příkazu tlačítka, který se má povolit nebo zakázat
+*Nid*<br/>
+Identifikátor příkazu tlačítka pro povolení nebo zakázání.
 
 *bEnable*<br/>
-TRUE pro povolení tlačítka; Hodnota FALSE pro zakázání tlačítka
+TRUE pro povolení tlačítka; Nepravda pro zakázání tlačítka.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud bylo úspěšné; jinak nula.
+Nenulová, pokud je úspěšná; jinak nula.
 
 ### <a name="remarks"></a>Poznámky
 
-Když je tlačítko povolené, dá se stisknout a zkontrolovat. Pokud chcete změnit více než jeden stav tlačítka, zvažte místo toho volání [setstate](#setstate) .
+Pokud je tlačítko povoleno, lze jej stisknout a zkontrolovat. Pokud chcete změnit více než jeden stav tlačítka, zvažte volání [SetState](#setstate) místo.
 
-##  <a name="getanchorhighlight"></a>CToolBarCtrl:: GetAnchorHighlight
+## <a name="ctoolbarctrlgetanchorhighlight"></a><a name="getanchorhighlight"></a>CtoolBarctrl::GetAnchorHighlight
 
 Načte nastavení zvýraznění kotvy pro panel nástrojů.
 
@@ -776,15 +776,15 @@ BOOL GetAnchorHighlight() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud není nula, zvýraznění kotvy je povoleno. Pokud je nula, zvýraznění kotvy je zakázané.
+Pokud je nenulová, zvýraznění kotvy je povoleno. Pokud je nula, zvýraznění kotvy je zakázáno.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce implementuje chování zprávy Win32 [TB_GETANCHORHIGHLIGHT](/windows/win32/Controls/tb-getanchorhighlight), jak je popsáno v Windows SDK.
+Tato členská funkce implementuje chování [zprávy](/windows/win32/Controls/tb-getanchorhighlight)Win32 TB_GETANCHORHIGHLIGHT , jak je popsáno v sadě Windows SDK.
 
-##  <a name="getbitmap"></a>CToolBarCtrl:: getbitmapa
+## <a name="ctoolbarctrlgetbitmap"></a><a name="getbitmap"></a>CToolBarCtrl::GetBitmap
 
-Načte index rastrového obrázku, který je přidružený k tlačítku na panelu nástrojů.
+Načte index rastrového mapu přidruženého k tlačítku na panelu nástrojů.
 
 ```
 int GetBitmap(int nID) const;
@@ -792,20 +792,20 @@ int GetBitmap(int nID) const;
 
 ### <a name="parameters"></a>Parametry
 
-*nID*<br/>
-Identifikátor příkazu tlačítka, jehož index rastrového obrázku má být načten.
+*Nid*<br/>
+Identifikátor příkazu tlačítka, jehož bitmapový index má být načten.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí index rastrového obrázku v případě úspěchu nebo v opačném případě nula.
+Vrátí index bitmapy, pokud je úspěšná, jinak nula.
 
 ### <a name="remarks"></a>Poznámky
 
-Implementuje funkce [TB_GETBITMAP](/windows/win32/Controls/tb-getbitmap) v Windows SDK.
+Implementuje funkce [TB_GETBITMAP](/windows/win32/Controls/tb-getbitmap) v sadě Windows SDK.
 
-##  <a name="getbitmapflags"></a>CToolBarCtrl:: GetBitmapFlags
+## <a name="ctoolbarctrlgetbitmapflags"></a><a name="getbitmapflags"></a>CToolBarCtrl::GetBitmapFlags
 
-Načte příznaky rastrového obrázku z panelu nástrojů.
+Načte rastrové příznaky z panelu nástrojů.
 
 ```
 UINT GetBitmapFlags() const;
@@ -813,15 +813,15 @@ UINT GetBitmapFlags() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-UINT, který má příznak TBBF_LARGE nastaven, pokud displej podporuje velké rastrové obrázky panelu nástrojů, Nemazat jinak.
+UINT, který má nastaven příznak TBBF_LARGE, pokud zobrazení může podporovat velké bitmapy panelu nástrojů, jinak zrušte jinak.
 
 ### <a name="remarks"></a>Poznámky
 
-Tuto funkci byste měli zavolat po vytvoření panelu nástrojů, ale před přidáním rastrových obrázků na panel nástrojů. Vrácená hodnota označuje, zda zobrazení podporuje velké rastrové obrázky, nebo ne. Pokud zobrazení podporuje velké rastrové obrázky a pokud se rozhodnete je použít, zavolejte [SetBitmapSize](#setbitmapsize) a [SetButtonSize](#setbuttonsize) před přidáním velkého rastrového obrázku pomocí [AddBitmap](#addbitmap).
+Měli byste jej zavolat po vytvoření panelu nástrojů, ale před přidáním bitmap na panel nástrojů. Vrácená hodnota označuje, zda zobrazení podporuje velké bitmapy nebo ne. Pokud zobrazení podporuje velké bitmapy a pokud se rozhodnete je použít, zavolejte [SetBitmapSize](#setbitmapsize) a [SetButtonSize](#setbuttonsize) před přidáním velké bitmapy pomocí [AddBitmap](#addbitmap).
 
-##  <a name="getbutton"></a>CToolBarCtrl:: Get– tlačítko
+## <a name="ctoolbarctrlgetbutton"></a><a name="getbutton"></a>CtoolBarCtrl::Tlačítko GetButton
 
-Načte informace o určeném tlačítku v ovládacím prvku ToolBar.
+Načte informace o zadaném tlačítku v ovládacím prvku panelu nástrojů.
 
 ```
 BOOL GetButton(
@@ -832,18 +832,18 @@ BOOL GetButton(
 ### <a name="parameters"></a>Parametry
 
 *nIndex*<br/>
-Index vycházející z tlačítka, pro které se mají načíst informace
+Nulový index tlačítka, pro které chcete načíst informace.
 
 *lpButton*<br/>
-Adresa `TBBUTTON` struktury, ve které se má získat kopie informací o tlačítku Informace o struktuře `TBBUTTON` naleznete v tématu [CToolBarCtrl:: AddButtons](#addbuttons) .
+Adresa `TBBUTTON` struktury, která má obdržet kopii informace o tlačítku. Informace o struktuře naleznete v tématu `TBBUTTON` [CToolBarCtrl::AddButtons.](#addbuttons)
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud bylo úspěšné; jinak nula.
+Nenulová, pokud je úspěšná; jinak nula.
 
-##  <a name="getbuttoncount"></a>CToolBarCtrl:: GetButtonCount
+## <a name="ctoolbarctrlgetbuttoncount"></a><a name="getbuttoncount"></a>CtoolBarctrl::GetButtonCount
 
-Načte počet tlačítek aktuálně v ovládacím prvku ToolBar.
+Načte počet tlačítek, která jsou aktuálně v ovládacím prvku panelu nástrojů.
 
 ```
 int GetButtonCount() const;
@@ -851,9 +851,9 @@ int GetButtonCount() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Počet tlačítek
+Počet tlačítek.
 
-##  <a name="getbuttoninfo"></a>CToolBarCtrl:: GetButtonInfo
+## <a name="ctoolbarctrlgetbuttoninfo"></a><a name="getbuttoninfo"></a>CtoolBarctrl::GetButtonInfo
 
 Načte informace o tlačítku na panelu nástrojů.
 
@@ -865,21 +865,21 @@ int GetButtonInfo(
 
 ### <a name="parameters"></a>Parametry
 
-*nID*<br/>
-Identifikátor tlačítka
+*Nid*<br/>
+Identifikátor tlačítka.
 
 *ptbbi*<br/>
-Ukazatel na strukturu [TBBUTTONINFO](/windows/win32/api/commctrl/ns-commctrl-tbbuttoninfow) , která obdrží informace o tlačítku.
+Ukazatel na [tbBUTTONINFO](/windows/win32/api/commctrl/ns-commctrl-tbbuttoninfow) strukturu, která přijímá informace o tlačítku.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Index tlačítka založený na nule, pokud bylo úspěšné; v opačném případě-1.
+Index na základě nuly tlačítka, pokud je úspěšný; jinak -1.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce implementuje chování zprávy Win32 [TB_GETBUTTONINFO](/windows/win32/Controls/tb-getbuttoninfo), jak je popsáno v Windows SDK.
+Tato členská funkce implementuje chování [zprávy](/windows/win32/Controls/tb-getbuttoninfo)Win32 TB_GETBUTTONINFO , jak je popsáno v sadě Windows SDK.
 
-##  <a name="getbuttonsize"></a>CToolBarCtrl:: GetButtonSize
+## <a name="ctoolbarctrlgetbuttonsize"></a><a name="getbuttonsize"></a>CtoolBarctrl::GetButtonSize
 
 Získá velikost tlačítka panelu nástrojů.
 
@@ -889,11 +889,11 @@ DWORD GetButtonSize() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota DWORD, která obsahuje hodnoty Width a Height v LOWORD a HIWORD, v uvedeném pořadí.
+Hodnota DWORD, která obsahuje hodnoty šířky a výšky v LOWORD a HIWORD, v uvedeném pořadí.
 
-##  <a name="getbuttontext"></a>CToolBarCtrl:: GetButtonText
+## <a name="ctoolbarctrlgetbuttontext"></a><a name="getbuttontext"></a>CtoolBarctrl::GetButtonText
 
-Načte zobrazený text zadaného tlačítka na aktuálním ovládacím prvku ToolBar.
+Načte zobrazený text zadaného tlačítka na aktuálním ovládacím prvku panelu nástrojů.
 
 ```
 CString GetButtonText(int idButton) const;
@@ -903,17 +903,17 @@ CString GetButtonText(int idButton) const;
 
 |Parametr|Popis|
 |---------------|-----------------|
-|*idButton*|pro Identifikátor tlačítka, jehož zobrazený text je načten.|
+|*idButton*|[v] Identifikátor tlačítka, jehož zobrazený text je načten.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
-[CString](../../atl-mfc-shared/using-cstring.md) , který obsahuje zobrazený text zadaného tlačítka.
+[CString,](../../atl-mfc-shared/using-cstring.md) který obsahuje text zobrazení zadaného tlačítka.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda pošle zprávu [TB_GETBUTTONTEXT](/windows/win32/Controls/tb-getbuttontext) , která je popsána v Windows SDK.
+Tato metoda odešle [zprávu TB_GETBUTTONTEXT,](/windows/win32/Controls/tb-getbuttontext) která je popsána v sadě Windows SDK.
 
-##  <a name="getcolorscheme"></a>CToolBarCtrl:: GetColorScheme
+## <a name="ctoolbarctrlgetcolorscheme"></a><a name="getcolorscheme"></a>CtoolBarctrl::GetColorScheme
 
 Načte barevné schéma aktuálního ovládacího prvku panelu nástrojů.
 
@@ -925,19 +925,19 @@ BOOL GetColorScheme(COLORSCHEME* lpColorScheme) const;
 
 |Parametr|Popis|
 |---------------|-----------------|
-|*lpColorScheme*|mimo Ukazatel na strukturu [COLORSCHEME](/windows/win32/api/commctrl/ns-commctrl-colorscheme) , která obdrží informace o barevném schématu. Když tato metoda vrátí, struktura popisuje barvu zvýraznění a barvu stínu ovládacího prvku ToolBar.|
+|*lpColorScheme*|[out] Ukazatel na strukturu [COLORSCHEME,](/windows/win32/api/commctrl/ns-commctrl-colorscheme) která přijímá informace o barevném schématu. Když se tato metoda vrátí, struktura popisuje barvu zvýraznění a barvu stínu ovládacího prvku panelu nástrojů.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
-TRUE, pokud je tato metoda úspěšná; v opačném případě FALSE.
+TRUE, pokud je tato metoda úspěšná; jinak NEPRAVDA.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda pošle zprávu [TB_GETCOLORSCHEME](/windows/win32/Controls/tb-getcolorscheme) , která je popsána v Windows SDK.
+Tato metoda odešle [zprávu TB_GETCOLORSCHEME,](/windows/win32/Controls/tb-getcolorscheme) která je popsána v sadě Windows SDK.
 
-##  <a name="getdisabledimagelist"></a>CToolBarCtrl:: GetDisabledImageList
+## <a name="ctoolbarctrlgetdisabledimagelist"></a><a name="getdisabledimagelist"></a>CtoolBarctrl::GetDisabledImageList
 
-Načte seznam obrázků, který ovládací prvek Toolbar používá k zobrazení zakázaných tlačítek.
+Načte seznam obrázků, který ovládací prvek panelu nástrojů používá k zobrazení zakázaných tlačítek.
 
 ```
 CImageList* GetDisabledImageList() const;
@@ -945,13 +945,13 @@ CImageList* GetDisabledImageList() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na objekt [atributu CImageList](../../mfc/reference/cimagelist-class.md) nebo hodnotu null, pokud není nastaven žádný zakázaný seznam obrázků.
+Ukazatel na objekt [CImageList](../../mfc/reference/cimagelist-class.md) nebo NULL, pokud není nastaven žádný seznam zakázaných obrázků.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce implementuje chování zprávy Win32 [TB_GETDISABLEDIMAGELIST](/windows/win32/Controls/tb-getdisabledimagelist), jak je popsáno v Windows SDK. Implementace knihovny MFC `GetDisabledImageList` používá objekt `CImageList`, který obsahuje obrázky tlačítek ovládacího prvku panelu nástrojů, nikoli popisovač do seznamu obrázků.
+Tato členská funkce implementuje chování [zprávy](/windows/win32/Controls/tb-getdisabledimagelist)Win32 TB_GETDISABLEDIMAGELIST , jak je popsáno v sadě Windows SDK. MFC implementace `GetDisabledImageList` používá `CImageList` objekt obsahující panelu nástrojů ovládacího prvku obrázky tlačítek, spíše než popisovač do seznamu obrázků.
 
-##  <a name="getdroptarget"></a>CToolBarCtrl:: GetDropTarget
+## <a name="ctoolbarctrlgetdroptarget"></a><a name="getdroptarget"></a>CtoolBarctrl::GetDropTarget
 
 Načte rozhraní [IDropTarget](/windows/win32/api/oleidl/nn-oleidl-idroptarget) pro ovládací prvek panelu nástrojů.
 
@@ -962,17 +962,17 @@ HRESULT GetDropTarget(IDropTarget** ppDropTarget) const;
 ### <a name="parameters"></a>Parametry
 
 *ppDropTarget*<br/>
-Ukazatel na ukazatel rozhraní [IDropTarget](/windows/win32/api/oleidl/nn-oleidl-idroptarget) . Pokud dojde k chybě, ukazatel s hodnotou NULL se umístí do této adresy.
+Ukazatel na ukazatel rozhraní [IDropTarget.](/windows/win32/api/oleidl/nn-oleidl-idroptarget) Pokud dojde k chybě, je na tuto adresu umístěn ukazatel NULL.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrací hodnotu HRESULT označující úspěch nebo neúspěch operace.
+Vrátí hodnotu HRESULT označující úspěch nebo neúspěch operace.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce implementuje chování zprávy Win32 [TB_GETOBJECT](/windows/win32/Controls/tb-getobject), jak je popsáno v Windows SDK.
+Tato členská funkce implementuje chování [TB_GETOBJECT](/windows/win32/Controls/tb-getobject)zprávy Win32 , jak je popsáno v sadě Windows SDK.
 
-##  <a name="getextendedstyle"></a>CToolBarCtrl:: GetExtendedStyle
+## <a name="ctoolbarctrlgetextendedstyle"></a><a name="getextendedstyle"></a>CtoolBarctrl::GetExtendedStyle
 
 Načte rozšířené styly pro ovládací prvek panelu nástrojů.
 
@@ -982,15 +982,15 @@ DWORD GetExtendedStyle() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota DWORD, která představuje rozšířené styly, které se aktuálně používají pro ovládací prvek Toolbar. Seznam stylů naleznete v části [panely nástrojů rozšířené styly](/windows/win32/Controls/toolbar-extended-styles)v Windows SDK.
+DWORD, který představuje rozšířené styly aktuálně používán pro ovládací prvek panelu nástrojů. Seznam stylů naleznete v tématu [Extended Styles panelu nástrojů](/windows/win32/Controls/toolbar-extended-styles)v sadě Windows SDK.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce implementuje chování zprávy Win32 [TB_GETEXTENDEDSTYLE](/windows/win32/Controls/tb-getextendedstyle), jak je popsáno v Windows SDK.
+Tato členská funkce implementuje chování [zprávy](/windows/win32/Controls/tb-getextendedstyle)Win32 TB_GETEXTENDEDSTYLE , jak je popsáno v sadě Windows SDK.
 
-##  <a name="gethotimagelist"></a>CToolBarCtrl:: GetHotImageList
+## <a name="ctoolbarctrlgethotimagelist"></a><a name="gethotimagelist"></a>CtoolBarctrl::GethotImageList
 
-Načte seznam obrázků, který ovládací prvek Toolbar používá k zobrazení "horkého" tlačítka. Když je ukazatel myši nad ním, zobrazí se aktivní tlačítko zvýrazněné.
+Načte seznam obrázků, který ovládací prvek panelu nástrojů používá k zobrazení "horkých" tlačítek. Když je nad ním ukazatel myši, zobrazí se horké tlačítko zvýrazněné.
 
 ```
 CImageList* GetHotImageList() const;
@@ -998,15 +998,15 @@ CImageList* GetHotImageList() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na objekt [atributu CImageList](../../mfc/reference/cimagelist-class.md) nebo hodnotu null, pokud není nastaven žádný zakázaný seznam obrázků.
+Ukazatel na objekt [CImageList](../../mfc/reference/cimagelist-class.md) nebo NULL, pokud není nastaven žádný seznam zakázaných obrázků.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce implementuje chování zprávy Win32 [TB_GETHOTIMAGELIST](/windows/win32/Controls/tb-gethotimagelist), jak je popsáno v Windows SDK. Když je ukazatel myši nad ním, zobrazí se aktivní tlačítko zvýrazněné.
+Tato členská funkce implementuje chování [TB_GETHOTIMAGELIST](/windows/win32/Controls/tb-gethotimagelist)zprávy Win32 , jak je popsáno v sadě Windows SDK. Když je nad ním ukazatel myši, zobrazí se horké tlačítko zvýrazněné.
 
-##  <a name="gethotitem"></a>CToolBarCtrl:: GetHotItem
+## <a name="ctoolbarctrlgethotitem"></a><a name="gethotitem"></a>CtoolBarCtrl::GethotItem
 
-Načte index aktivní položky na panelu nástrojů.
+Načte index aktivní položky v panelu nástrojů.
 
 ```
 int GetHotItem() const;
@@ -1014,15 +1014,15 @@ int GetHotItem() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Index vycházející z aktivní položky na panelu nástrojů od nuly.
+Nulový index aktivní položky v panelu nástrojů.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce implementuje chování zprávy Win32 [TB_GETHOTITEM](/windows/win32/Controls/tb-gethotitem), jak je popsáno v Windows SDK.
+Tato členská funkce implementuje chování [zprávy](/windows/win32/Controls/tb-gethotitem)Win32 TB_GETHOTITEM , jak je popsáno v sadě Windows SDK.
 
-##  <a name="getimagelist"></a>CToolBarCtrl:: GetImageList
+## <a name="ctoolbarctrlgetimagelist"></a><a name="getimagelist"></a>CtoolBarctrl::GetImageList
 
-Načte seznam obrázků, který ovládací prvek Toolbar používá k zobrazení tlačítek ve výchozím stavu.
+Načte seznam obrázků, který ovládací prvek panelu nástrojů používá k zobrazení tlačítek v jejich výchozím stavu.
 
 ```
 CImageList* GetImageList() const;
@@ -1030,15 +1030,15 @@ CImageList* GetImageList() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na objekt [atributu CImageList](../../mfc/reference/cimagelist-class.md) nebo hodnotu null, pokud není nastaven žádný seznam obrázků.
+Ukazatel na objekt [CImageList](../../mfc/reference/cimagelist-class.md) nebo NULL, pokud není nastaven žádný seznam obrázků.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce implementuje chování zprávy Win32 [TB_GETIMAGELIST](/windows/win32/Controls/tb-getimagelist), jak je popsáno v Windows SDK.
+Tato členská funkce implementuje chování [zprávy](/windows/win32/Controls/tb-getimagelist)Win32 TB_GETIMAGELIST , jak je popsáno v sadě Windows SDK.
 
-##  <a name="getinsertmark"></a>CToolBarCtrl:: GetInsertMark
+## <a name="ctoolbarctrlgetinsertmark"></a><a name="getinsertmark"></a>CtoolBarctrl::GetInsertMark
 
-Načte aktuální značku vložení panelu nástrojů.
+Načte aktuální značku vložení pro panel nástrojů.
 
 ```
 void GetInsertMark(TBINSERTMARK* ptbim) const;
@@ -1047,15 +1047,15 @@ void GetInsertMark(TBINSERTMARK* ptbim) const;
 ### <a name="parameters"></a>Parametry
 
 *ptbim*<br/>
-Ukazatel na strukturu [TBINSERTMARK](/windows/win32/api/commctrl/ns-commctrl-tbinsertmark) , která přijímá značku vložení.
+Ukazatel na strukturu [TBINSERTMARK,](/windows/win32/api/commctrl/ns-commctrl-tbinsertmark) která obdrží značku vložení.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce implementuje chování zprávy Win32 [TB_GETINSERTMARK](/windows/win32/Controls/tb-getinsertmark), jak je popsáno v Windows SDK.
+Tato členská funkce implementuje chování [TB_GETINSERTMARK](/windows/win32/Controls/tb-getinsertmark)zprávy Win32 , jak je popsáno v sadě Windows SDK.
 
-##  <a name="getinsertmarkcolor"></a>CToolBarCtrl:: GetInsertMarkColor
+## <a name="ctoolbarctrlgetinsertmarkcolor"></a><a name="getinsertmarkcolor"></a>CtoolBarctrl::GetInsertMarkColor
 
-Načte barvu použitou k vykreslení značky vložení pro panel nástrojů.
+Načte barvu použitou k nakreslení značky vložení pro panel nástrojů.
 
 ```
 COLORREF GetInsertMarkColor() const;
@@ -1067,11 +1067,11 @@ Hodnota COLORREF, která obsahuje aktuální barvu značky vložení.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce implementuje chování zprávy Win32 [TB_GETINSERTMARKCOLOR](/windows/win32/Controls/tb-getinsertmarkcolor), jak je popsáno v Windows SDK.
+Tato členská funkce implementuje chování [zprávy](/windows/win32/Controls/tb-getinsertmarkcolor)Win32 TB_GETINSERTMARKCOLOR , jak je popsáno v sadě Windows SDK.
 
-##  <a name="getitemrect"></a>CToolBarCtrl:: GetItemRect
+## <a name="ctoolbarctrlgetitemrect"></a><a name="getitemrect"></a>CToolBarCtrl::GetItemRect
 
-Načte ohraničující obdélník tlačítka v ovládacím prvku ToolBar.
+Načte ohraničovací obdélník tlačítka v ovládacím prvku panelu nástrojů.
 
 ```
 BOOL GetItemRect(
@@ -1082,22 +1082,22 @@ BOOL GetItemRect(
 ### <a name="parameters"></a>Parametry
 
 *nIndex*<br/>
-Index vycházející z tlačítka, pro které se mají načíst informace
+Nulový index tlačítka, pro které chcete načíst informace.
 
 *lpRect*<br/>
-Adresa struktury [Rect](/previous-versions/dd162897\(v=vs.85\)) nebo objekt [CRect](../../atl-mfc-shared/reference/crect-class.md) , který přijímá souřadnice ohraničujícího obdélníku.
+Adresa [rect](/previous-versions/dd162897\(v=vs.85\)) struktury nebo [CRect](../../atl-mfc-shared/reference/crect-class.md) objekt, který přijímá souřadnice ohraničující obdélník.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud bylo úspěšné; jinak nula.
+Nenulová, pokud je úspěšná; jinak nula.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce nenačítá ohraničující obdélník pro tlačítka, jejichž stav je nastaven na TBSTATE_HIDDEN.
+Tato funkce nenačte ohraničovací obdélník pro tlačítka, jejichž stav je nastaven na TBSTATE_HIDDEN.
 
-##  <a name="getmaxsize"></a>CToolBarCtrl:: getmaxsize
+## <a name="ctoolbarctrlgetmaxsize"></a><a name="getmaxsize"></a>CtoolBarctrl::GetMaxSize
 
-Načte celkovou velikost všech viditelných tlačítek a oddělovačů na panelu nástrojů.
+Načte celkovou velikost všech viditelných tlačítek a oddělovačů v panelu nástrojů.
 
 ```
 BOOL GetMaxSize(LPSIZE pSize) const;
@@ -1105,20 +1105,20 @@ BOOL GetMaxSize(LPSIZE pSize) const;
 
 ### <a name="parameters"></a>Parametry
 
-*pSize*<br/>
-Ukazatel na [Velikost](/windows/win32/api/windef/ns-windef-size) struktury, která přijímá velikost položek.
+*pVelikost*<br/>
+Ukazatel na [size](/windows/win32/api/windef/ns-windef-size) strukturu, která obdrží velikost položek.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud bylo úspěšné; v opačném případě 0.
+Nenulová, pokud je úspěšná; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce implementuje chování zprávy Win32 [TB_GETMAXSIZE](/windows/win32/Controls/tb-getmaxsize), jak je popsáno v Windows SDK.
+Tato členská funkce implementuje chování [TB_GETMAXSIZE](/windows/win32/Controls/tb-getmaxsize)zprávy Win32 , jak je popsáno v sadě Windows SDK.
 
-##  <a name="getmaxtextrows"></a>CToolBarCtrl:: GetMaxTextRows
+## <a name="ctoolbarctrlgetmaxtextrows"></a><a name="getmaxtextrows"></a>CtoolBarctrl::GetMaxTextRows
 
-Načte maximální počet textových řádků zobrazených na tlačítku panelu nástrojů.
+Načte maximální počet řádků textu zobrazených na tlačítku panelu nástrojů.
 
 ```
 int GetMaxTextRows() const;
@@ -1126,11 +1126,11 @@ int GetMaxTextRows() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Maximální počet textových řádků zobrazených na tlačítku panelu nástrojů
+Maximální počet řádků textu zobrazených na tlačítku panelu nástrojů.
 
-##  <a name="getmetrics"></a>CToolBarCtrl:: getmetriky
+## <a name="ctoolbarctrlgetmetrics"></a><a name="getmetrics"></a>CToolBarCtrl::GetMetrics
 
-Načte metriku objektu `CToolBarCtrl`.
+Načte metriky objektu. `CToolBarCtrl`
 
 ```
 void GetMetrics(LPTBMETRICS ptbm) const;
@@ -1139,15 +1139,15 @@ void GetMetrics(LPTBMETRICS ptbm) const;
 ### <a name="parameters"></a>Parametry
 
 *ptbm*<br/>
-Ukazatel na strukturu [TBMETRICS](/windows/win32/api/commctrl/ns-commctrl-tbmetrics) objektu `CToolBarCtrl`.
+Ukazatel na [tbmetrics](/windows/win32/api/commctrl/ns-commctrl-tbmetrics) strukturu `CToolBarCtrl` objektu.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce emuluje funkce [TB_GETMETRICS](/windows/win32/Controls/tb-getmetrics) zprávy, jak je popsáno v Windows SDK.
+Tato členská funkce emuluje funkce [zprávy TB_GETMETRICS,](/windows/win32/Controls/tb-getmetrics) jak je popsáno v sadě Windows SDK.
 
-##  <a name="getpadding"></a>CToolBarCtrl:: getvýplň
+## <a name="ctoolbarctrlgetpadding"></a><a name="getpadding"></a>CToolBarCtrl::GetPadding
 
-Načte vodorovné a svislé odsazení aktuálního ovládacího prvku ToolBar.
+Načte vodorovné a svislé odsazení aktuálního ovládacího prvku panelu nástrojů.
 
 ```
 BOOL GetPadding(
@@ -1159,20 +1159,20 @@ BOOL GetPadding(
 
 |Parametr|Popis|
 |---------------|-----------------|
-|*pnHorzPadding*|mimo Celé číslo, které přijímá vodorovné odsazení ovládacího prvku panelu nástrojů (v pixelech).|
-|*pnVertPadding*|mimo Celé číslo, které obdrží svislé odsazení ovládacího prvku panelu nástrojů (v pixelech).|
+|*pnHorzPadding*|[out] Celé číslo, které přijímá vodorovné odsazení ovládacího prvku panelu nástrojů v obrazových bodech.|
+|*pnVertPadding*|[out] Celé číslo, které přijímá svislé odsazení ovládacího prvku panelu nástrojů v obrazových bodech.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
-TRUE, pokud je tato metoda úspěšná; v opačném případě FALSE.
+TRUE, pokud je tato metoda úspěšná; jinak NEPRAVDA.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda pošle zprávu [TB_GETPADDING](/windows/win32/Controls/tb-getpadding) , která je popsána v Windows SDK.
+Tato metoda odešle [zprávu TB_GETPADDING,](/windows/win32/Controls/tb-getpadding) která je popsána v sadě Windows SDK.
 
-##  <a name="getpressedimagelist"></a>CToolBarCtrl:: GetPressedImageList
+## <a name="ctoolbarctrlgetpressedimagelist"></a><a name="getpressedimagelist"></a>CtoolBarctrl::GetpressedImageList
 
-Načte seznam obrázků, který aktuální ovládací prvek Toolbar používá pro reprezentaci tlačítek ve stisknutém stavu.
+Načte seznam obrázků, který aktuální ovládací prvek panelu nástrojů používá k reprezentaci tlačítek v stisknutém stavu.
 
 ```
 CImageList* GetPressedImageList();
@@ -1180,15 +1180,15 @@ CImageList* GetPressedImageList();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na [atributu CImageList](../../mfc/reference/cimagelist-class.md) , který obsahuje seznam obrázků pro aktuální ovládací prvek, nebo hodnotu null, pokud takový seznam obrázků není nastaven.
+Ukazatel na [CImageList,](../../mfc/reference/cimagelist-class.md) který obsahuje seznam obrázků pro aktuální ovládací prvek nebo NULL, pokud není nastaven žádný takový seznam obrázků.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda pošle zprávu [TB_GETPRESSEDIMAGELIST](/windows/win32/Controls/tb-getpressedimagelist) , která je popsána v Windows SDK.
+Tato metoda odešle [zprávu TB_GETPRESSEDIMAGELIST,](/windows/win32/Controls/tb-getpressedimagelist) která je popsána v sadě Windows SDK.
 
-##  <a name="getrect"></a>CToolBarCtrl:: GetRect
+## <a name="ctoolbarctrlgetrect"></a><a name="getrect"></a>CToolBarCtrl::GetRect
 
-Načte ohraničující obdélník pro konkrétní tlačítko panelu nástrojů.
+Načte ohraničovací obdélník pro zadané tlačítko panelu nástrojů.
 
 ```
 BOOL GetRect(
@@ -1198,23 +1198,23 @@ BOOL GetRect(
 
 ### <a name="parameters"></a>Parametry
 
-*nID*<br/>
-Identifikátor tlačítka
+*Nid*<br/>
+Identifikátor tlačítka.
 
 *lpRect*<br/>
-Ukazatel na strukturu [Rect](/previous-versions/dd162897\(v=vs.85\)) pro příjem informací o ohraničujícím obdélníku.
+Ukazatel na [rect](/previous-versions/dd162897\(v=vs.85\)) struktury přijímat informace ohraničující obdélník.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-TRUE v případě úspěchu; v opačném případě FALSE.
+PRAVDA v případě úspěchu; jinak FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce implementuje chování zprávy Win32 [TB_GETRECT](/windows/win32/Controls/tb-getrect), jak je popsáno v Windows SDK.
+Tato členská funkce implementuje chování [TB_GETRECT](/windows/win32/Controls/tb-getrect)zprávy Win32 , jak je popsáno v sadě Windows SDK.
 
-##  <a name="getrows"></a>CToolBarCtrl:: GetRows
+## <a name="ctoolbarctrlgetrows"></a><a name="getrows"></a>CtoolBarCtrl::GetRows
 
-Načte počet řádků tlačítek aktuálně zobrazených ovládacím prvkem Toolbar.
+Načte počet řádků tlačítek aktuálně zobrazených ovládacím prvkem panelu nástrojů.
 
 ```
 int GetRows() const;
@@ -1222,15 +1222,15 @@ int GetRows() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Počet řádků tlačítek aktuálně zobrazených na panelu nástrojů.
+Počet řádků tlačítek, která jsou aktuálně zobrazena na panelu nástrojů.
 
 ### <a name="remarks"></a>Poznámky
 
-Všimněte si, že počet řádků bude vždycky jedna, pokud se nevytvoří panel nástrojů se stylem TBSTYLE_WRAPABLE.
+Všimněte si, že počet řádků bude vždy jeden, pokud panel nástrojů byl vytvořen s TBSTYLE_WRAPABLE stylu.
 
-##  <a name="getstate"></a>CToolBarCtrl:: GetState
+## <a name="ctoolbarctrlgetstate"></a><a name="getstate"></a>CtoolBarCtrl::GetState
 
-Načte informace o stavu zadaného tlačítka v ovládacím prvku panel nástrojů, například zda je povoleno, stisknuto nebo zaškrtnuto.
+Načte informace o stavu zadaného tlačítka v ovládacím prvku panelu nástrojů, například zda je povoleno, stisknuto nebo zaškrtnuto.
 
 ```
 int GetState(int nID) const;
@@ -1238,18 +1238,18 @@ int GetState(int nID) const;
 
 ### <a name="parameters"></a>Parametry
 
-*nID*<br/>
-Identifikátor příkazu tlačítka, pro které se mají načíst informace
+*Nid*<br/>
+Identifikátor příkazu tlačítka, pro které chcete načíst informace.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Informace o stavu tlačítka v případě úspěchu nebo-1 v opačném případě. Informace o stavu tlačítka mohou být kombinací hodnot uvedených v [CToolBarCtrl:: AddButtons](#addbuttons).
+Informace o stavu tlačítka, pokud je úspěšná nebo - 1 jinak. Informace o stavu tlačítka mohou být kombinací hodnot uvedených v [ctoolbarctrl::AddButtons](#addbuttons).
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce je užitečná hlavně v případě, že chcete načíst více než jeden stav tlačítka. Chcete-li pouze načíst jeden stav, použijte jednu z následujících funkcí členů: [IsButtonEnabled](#isbuttonenabled), [IsButtonChecked](#isbuttonchecked), [IsButtonPressed](#isbuttonpressed), [IsButtonHidden](#isbuttonhidden)nebo [IsButtonIndeterminate](#isbuttonindeterminate). Nicméně členská funkce `GetState` je jediným způsobem, jak zjistit stav tlačítka TBSTATE_WRAP.
+Tato funkce je obzvláště užitečná, pokud chcete načíst více než jeden stav tlačítka. Chcete-li načíst pouze jeden stav, použijte jednu z následujících členských funkcí: [IsButtonEnabled](#isbuttonenabled), [IsButtonChecked](#isbuttonchecked), [IsButtonPressed](#isbuttonpressed), [IsButtonHidden](#isbuttonhidden)nebo [IsButtonIndeterminate](#isbuttonindeterminate). Členská `GetState` funkce je však jediný způsob, jak zjistit stav tlačítka TBSTATE_WRAP.
 
-##  <a name="getstring"></a>CToolBarCtrl:: GetString
+## <a name="ctoolbarctrlgetstring"></a><a name="getstring"></a>CtoolBarctrl::GetString
 
 Načte řetězec panelu nástrojů.
 
@@ -1266,29 +1266,29 @@ int GetString(
 
 ### <a name="parameters"></a>Parametry
 
-*Nřetězce*<br/>
-Index řetězce
+*nŘetězec*<br/>
+Index řetězce.
 
 *lpstrString*<br/>
-Ukazatel na vyrovnávací paměť, která se používá k vrácení řetězce.
+Ukazatel na vyrovnávací paměť, která slouží k vrácení řetězce.
 
 *cchMaxLen*<br/>
-Délka vyrovnávací paměti v bajtech.
+Délka vyrovnávací paměti v bajtů.
 
-*str*<br/>
+*Str*<br/>
 Řetězec
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Délka řetězce v případě úspěchu,-1, pokud není.
+Délka řetězce v případě úspěchu, -1, pokud ne.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce implementuje chování zprávy Win32 [TB_GETSTRING](/windows/win32/Controls/tb-getstring), jak je popsáno v Windows SDK.
+Tato členská funkce implementuje chování [zprávy](/windows/win32/Controls/tb-getstring)Win32 TB_GETSTRING , jak je popsáno v sadě Windows SDK.
 
-##  <a name="getstyle"></a>CToolBarCtrl:: GetStyle
+## <a name="ctoolbarctrlgetstyle"></a><a name="getstyle"></a>CtoolBarctrl::GetStyle
 
-Získá styly aktuálně použité pro ovládací prvek panelu nástrojů.
+Získá styly aktuálně použity na ovládací prvek panelu nástrojů.
 
 ```
 DWORD GetStyle() const;
@@ -1296,11 +1296,11 @@ DWORD GetStyle() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota DWORD obsahující kombinaci [stylů ovládacího prvku ToolBar](/windows/win32/Controls/toolbar-control-and-button-styles), jak je popsáno v Windows SDK.
+DWORD obsahující kombinaci [stylů ovládacího prvku panelu nástrojů](/windows/win32/Controls/toolbar-control-and-button-styles), jak je popsáno v sadě Windows SDK.
 
-##  <a name="gettooltips"></a>CToolBarCtrl:: GetToolTips
+## <a name="ctoolbarctrlgettooltips"></a><a name="gettooltips"></a>CtoolBarctrl::Tipy gettool
 
-Načte popisovač ovládacího prvku popisu tlačítka, pokud existuje, přidružený k ovládacímu prvku ToolBar.
+Načte popisovač ovládacího prvku špičky nástroje, pokud existuje, přidružený k ovládacímu prvku panelu nástrojů.
 
 ```
 CToolTipCtrl* GetToolTips() const;
@@ -1308,15 +1308,15 @@ CToolTipCtrl* GetToolTips() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na objekt [CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) přidružený k tomuto panelu nástrojů nebo hodnotu null, pokud panel nástrojů nemá žádný přidružený ovládací prvek s popisem tlačítka.
+Ukazatel na objekt [CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) přidružený k tomuto panelu nástrojů nebo null, pokud panel nástrojů nemá žádný přidružený ovládací prvek špičky nástroje.
 
 ### <a name="remarks"></a>Poznámky
 
-Vzhledem k tomu, že ovládací prvek Toolbar obvykle vytváří a udržuje vlastní ovládací prvek popisu tlačítka, většina programů tyto funkce nemusí volat.
+Vzhledem k tomu, že ovládací prvek panelu nástrojů obvykle vytváří a udržuje vlastní ovládací prvek špičky nástroje, většina programů nemusí tuto funkci volat.
 
-##  <a name="hittest"></a>CToolBarCtrl:: HitTest
+## <a name="ctoolbarctrlhittest"></a><a name="hittest"></a>CtoolBarctrl::HitTest
 
-Určuje, kde bod leží v ovládacím prvku ToolBar.
+Určuje, kde bod leží v ovládacím prvku panelu nástrojů.
 
 ```
 int HitTest(LPPOINT ppt) const;
@@ -1324,22 +1324,22 @@ int HitTest(LPPOINT ppt) const;
 
 ### <a name="parameters"></a>Parametry
 
-*PowerPoint*<br/>
-Ukazatel na strukturu [bodu](/previous-versions/dd162805\(v=vs.85\)) , která obsahuje souřadnici x testu přístupů v `x` členu a souřadnici y testu volání v členu `y`. Souřadnice jsou relativní vzhledem k oblasti klienta na panelu nástrojů.
+*Ppt*<br/>
+Ukazatel na [point](/previous-versions/dd162805\(v=vs.85\)) strukturu, která obsahuje x souřadnice testu přístupů v `x` členu `y` a y souřadnice testu přístupů v členu. Souřadnice jsou relativní vzhledem k oblasti klienta panelu nástrojů.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Celočíselná hodnota označující umístění bodu na panelu nástrojů. Pokud je hodnota nulová nebo kladná hodnota, tato návratová hodnota je index založený na nule neoddělovacích položek, ve kterém leží bod.
+Celá hodnota označující umístění bodu na panelu nástrojů. Pokud je hodnota nulová nebo kladná, je tato vrácená hodnota nulovým indexem položky bez oddělovače, ve které bod leží.
 
-Pokud je vrácená hodnota záporná, neleží v rámci tlačítka. Absolutní hodnota návratové hodnoty je index položky oddělovače nebo nejbližší neoddělovací položky.
+Pokud je vrácená hodnota záporná, bod neleží v tlačítku. Absolutní hodnota vrácené hodnoty je index položky oddělovače nebo nejbližší položky neoddělovače.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce implementuje chování zprávy Win32 [TB_HITTEST](/windows/win32/Controls/tb-hittest), jak je popsáno v Windows SDK.
+Tato členská funkce implementuje chování [TB_HITTEST](/windows/win32/Controls/tb-hittest)zprávy Win32 , jak je popsáno v sadě Windows SDK.
 
-##  <a name="hidebutton"></a>CToolBarCtrl:: HideButton
+## <a name="ctoolbarctrlhidebutton"></a><a name="hidebutton"></a>CtoolBarCtrl::HideButton
 
-Skryje nebo zobrazí zadané tlačítko v ovládacím prvku ToolBar.
+Skryje nebo zobrazí zadané tlačítko v ovládacím prvku panelu nástrojů.
 
 ```
 BOOL HideButton(
@@ -1349,23 +1349,23 @@ BOOL HideButton(
 
 ### <a name="parameters"></a>Parametry
 
-*nID*<br/>
-Identifikátor příkazu tlačítka, který se má skrýt nebo zobrazit
+*Nid*<br/>
+Identifikátor příkazu tlačítka pro skrytí nebo zobrazení.
 
-*bHide*<br/>
-TRUE pro skrytí tlačítka, FALSE pro zobrazení.
+*bSkrýt*<br/>
+TRUE skrýt tlačítko, FALSE ukázat.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud bylo úspěšné; jinak nula.
+Nenulová, pokud je úspěšná; jinak nula.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud chcete změnit více než jeden stav tlačítka, zvažte místo toho volání [setstate](#setstate) .
+Pokud chcete změnit více než jeden stav tlačítka, zvažte volání [SetState](#setstate) místo.
 
-##  <a name="indeterminate"></a>CToolBarCtrl:: neurčité
+## <a name="ctoolbarctrlindeterminate"></a><a name="indeterminate"></a>CToolBarCtrl::Neurčitý
 
-Nastaví nebo zruší neurčitý stav zadaného tlačítka v ovládacím prvku ToolBar.
+Nastaví nebo vymaže neurčitý stav zadaného tlačítka v ovládacím prvku panelu nástrojů.
 
 ```
 BOOL Indeterminate(
@@ -1375,23 +1375,23 @@ BOOL Indeterminate(
 
 ### <a name="parameters"></a>Parametry
 
-*nID*<br/>
+*Nid*<br/>
 Identifikátor příkazu tlačítka, jehož neurčitý stav má být nastaven nebo vymazán.
 
-*bIndeterminate*<br/>
-TRUE pro nastavení neurčitého stavu pro zadané tlačítko, hodnota FALSE pro vymazání.
+*bNeterminate*<br/>
+TRUE pro nastavení neurčitého stavu pro zadané tlačítko, FALSE vymazat.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud bylo úspěšné; jinak nula.
+Nenulová, pokud je úspěšná; jinak nula.
 
 ### <a name="remarks"></a>Poznámky
 
-Neurčitá tlačítka jsou zobrazena šedě, například způsob, jakým tlačítko tučného tlačítka na panelu nástrojů v textovém procesoru by vypadalo, když vybraný text obsahuje tučné i regulární znaky. Pokud chcete změnit více než jeden stav tlačítka, zvažte místo toho volání [setstate](#setstate) .
+Neurčitá tlačítka jsou zobrazena šedě, například způsob, jakým by tučné tlačítko na panelu nástrojů textového procesoru vypadalo, když vybraný text obsahuje tučné i běžné znaky. Pokud chcete změnit více než jeden stav tlačítka, zvažte volání [SetState](#setstate) místo.
 
-##  <a name="insertbutton"></a>CToolBarCtrl:: InsertButton
+## <a name="ctoolbarctrlinsertbutton"></a><a name="insertbutton"></a>CtoolBarctrl::InsertButton
 
-Vloží tlačítko do ovládacího prvku ToolBar.
+Vloží tlačítko do ovládacího prvku panelu nástrojů.
 
 ```
 BOOL InsertButton(
@@ -1402,22 +1402,22 @@ BOOL InsertButton(
 ### <a name="parameters"></a>Parametry
 
 *nIndex*<br/>
-Index tlačítka založený na nule. Tato funkce vloží tlačítko Nový nalevo od tohoto tlačítka.
+Nulový index tlačítka. Tato funkce vloží nové tlačítko nalevo od tohoto tlačítka.
 
 *lpButton*<br/>
-Adresa `TBBUTTON` struktury obsahující informace o tlačítku pro vložení. Popis `TBBUTTON` struktury naleznete v tématu [CToolBarCtrl:: AddButtons](#addbuttons) .
+Adresa `TBBUTTON` struktury obsahující informace o tlačítku, které chcete vložit. Popis struktury naleznete v tématu `TBBUTTON` [CToolBarCtrl::AddButtons.](#addbuttons)
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud bylo úspěšné; jinak nula.
+Nenulová, pokud je úspěšná; jinak nula.
 
 ### <a name="remarks"></a>Poznámky
 
-Obrázek nebo řetězec, jehož index, který zadáte, musí být dřív přidaný do seznamu ovládacích prvků panelu nástrojů pomocí [AddBitmap](#addbitmap), [AddString](#addstring)a/nebo [AddStrings](#addstrings).
+Obrázek nebo řetězec, jehož index zadáte, musí být dříve přidány do seznamu ovládacího prvku panelu nástrojů pomocí [funkce AddBitmap](#addbitmap), [AddString](#addstring)nebo [AddStrings](#addstrings).
 
-##  <a name="insertmarkhittest"></a>CToolBarCtrl:: InsertMarkHitTest
+## <a name="ctoolbarctrlinsertmarkhittest"></a><a name="insertmarkhittest"></a>CtoolBarctrl::InsertmarkHitTest
 
-Načte informace o značce vložení pro bod na panelu nástrojů.
+Načte informace o značce vložení bodu na panelu nástrojů.
 
 ```
 BOOL InsertMarkHitTest(
@@ -1427,23 +1427,23 @@ BOOL InsertMarkHitTest(
 
 ### <a name="parameters"></a>Parametry
 
-*PowerPoint*<br/>
-Ukazatel na strukturu [bodu](/previous-versions/dd162805\(v=vs.85\)) , která obsahuje souřadnice testu přístupů vzhledem k oblasti klienta panelu nástrojů.
+*Ppt*<br/>
+Ukazatel na [point](/previous-versions/dd162805\(v=vs.85\)) strukturu, která obsahuje souřadnice testu přístupů vzhledem k oblasti klienta panelu nástrojů.
 
 *ptbim*<br/>
-Ukazatel na strukturu [TBINSERTMARK](/windows/win32/api/commctrl/ns-commctrl-tbinsertmark) , která přijímá informace o značce vložení.
+Ukazatel na strukturu [TBINSERTMARK,](/windows/win32/api/commctrl/ns-commctrl-tbinsertmark) která obdrží informace o značce vložení.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud bylo úspěšné; jinak nula.
+Nenulová, pokud je úspěšná; jinak nula.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce implementuje chování zprávy Win32 [TB_INSERTMARKHITTEST](/windows/win32/Controls/tb-insertmarkhittest), jak je popsáno v Windows SDK.
+Tato členská funkce implementuje chování [zprávy](/windows/win32/Controls/tb-insertmarkhittest)Win32 TB_INSERTMARKHITTEST , jak je popsáno v sadě Windows SDK.
 
-##  <a name="isbuttonchecked"></a>CToolBarCtrl:: IsButtonChecked
+## <a name="ctoolbarctrlisbuttonchecked"></a><a name="isbuttonchecked"></a>CToolBarCtrl::IsButtonChecked
 
-Určuje, zda je zaškrtnuto určené tlačítko v ovládacím prvku ToolBar.
+Určuje, zda je zaškrtnuto zadané tlačítko v ovládacím prvku panelu nástrojů.
 
 ```
 BOOL IsButtonChecked(int nID) const;
@@ -1451,20 +1451,20 @@ BOOL IsButtonChecked(int nID) const;
 
 ### <a name="parameters"></a>Parametry
 
-*nID*<br/>
+*Nid*<br/>
 Identifikátor příkazu tlačítka na panelu nástrojů
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je zaškrtnuto tlačítko; jinak nula.
+Nenulová, pokud je tlačítko zaškrtnuto; jinak nula.
 
 ### <a name="remarks"></a>Poznámky
 
-Zvažte volání metody [GetState](#getstate) , pokud chcete načíst více než jeden stav tlačítka.
+Zvažte volání [GetState,](#getstate) pokud chcete načíst více než jeden stav tlačítka.
 
-##  <a name="isbuttonenabled"></a>CToolBarCtrl:: IsButtonEnabled
+## <a name="ctoolbarctrlisbuttonenabled"></a><a name="isbuttonenabled"></a>CtoolBarCtrl::IsButtonEnabled
 
-Určuje, zda je určené tlačítko v ovládacím prvku ToolBar povoleno.
+Určuje, zda je zadané tlačítko v ovládacím prvku panelu nástrojů povoleno.
 
 ```
 BOOL IsButtonEnabled(int nID) const;
@@ -1472,20 +1472,20 @@ BOOL IsButtonEnabled(int nID) const;
 
 ### <a name="parameters"></a>Parametry
 
-*nID*<br/>
+*Nid*<br/>
 Identifikátor příkazu tlačítka na panelu nástrojů
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je tlačítko povolené; jinak nula.
+Nenulová, pokud je tlačítko povoleno; jinak nula.
 
 ### <a name="remarks"></a>Poznámky
 
-Zvažte volání metody [GetState](#getstate) , pokud chcete načíst více než jeden stav tlačítka.
+Zvažte volání [GetState,](#getstate) pokud chcete načíst více než jeden stav tlačítka.
 
-##  <a name="isbuttonhidden"></a>CToolBarCtrl:: IsButtonHidden
+## <a name="ctoolbarctrlisbuttonhidden"></a><a name="isbuttonhidden"></a>CtoolBarCtrl::IsButtonHidden
 
-Určuje, zda je zadané tlačítko v ovládacím prvku panel nástrojů skryté.
+Určuje, zda je zadané tlačítko v ovládacím prvku panelu nástrojů skryto.
 
 ```
 BOOL IsButtonHidden(int nID) const;
@@ -1493,20 +1493,20 @@ BOOL IsButtonHidden(int nID) const;
 
 ### <a name="parameters"></a>Parametry
 
-*nID*<br/>
+*Nid*<br/>
 Identifikátor příkazu tlačítka na panelu nástrojů
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je tlačítko skryté; jinak nula.
+Nenulová, pokud je tlačítko skryté; jinak nula.
 
 ### <a name="remarks"></a>Poznámky
 
-Zvažte volání metody [GetState](#getstate) , pokud chcete načíst více než jeden stav tlačítka.
+Zvažte volání [GetState,](#getstate) pokud chcete načíst více než jeden stav tlačítka.
 
-##  <a name="isbuttonhighlighted"></a>CToolBarCtrl:: IsButtonHighlighted
+## <a name="ctoolbarctrlisbuttonhighlighted"></a><a name="isbuttonhighlighted"></a>CToolBarCtrl::Zvýrazněný isbutton
 
-Kontroluje stav zvýraznění tlačítka panelu nástrojů.
+Zkontroluje stav zvýraznění tlačítka panelu nástrojů.
 
 ```
 BOOL IsButtonHighlighted(int nID) const;
@@ -1514,16 +1514,16 @@ BOOL IsButtonHighlighted(int nID) const;
 
 ### <a name="parameters"></a>Parametry
 
-*nID*<br/>
-pro ID příkazu pro tlačítko panelu nástrojů
+*Nid*<br/>
+[v] ID příkazu tlačítka panelu nástrojů.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Kladné celé číslo, pokud je tlačítko zvýrazněno, 0, pokud není zvýrazněno tlačítko, nebo-1, pokud dojde k chybě.
+Kladné celé číslo, pokud je tlačítko zvýrazněno, 0, pokud není zvýrazněno, nebo -1, pokud dojde k chybě.
 
-##  <a name="isbuttonindeterminate"></a>CToolBarCtrl:: IsButtonIndeterminate
+## <a name="ctoolbarctrlisbuttonindeterminate"></a><a name="isbuttonindeterminate"></a>CToolBarCtrl::IsButtonIndeterminate
 
-Určuje, zda je zadané tlačítko v ovládacím prvku ToolBar neurčitelné.
+Určuje, zda je zadané tlačítko v ovládacím prvku panelu nástrojů neurčité.
 
 ```
 BOOL IsButtonIndeterminate(int nID) const;
@@ -1531,20 +1531,20 @@ BOOL IsButtonIndeterminate(int nID) const;
 
 ### <a name="parameters"></a>Parametry
 
-*nID*<br/>
-pro Identifikátor příkazu tlačítka na panelu nástrojů
+*Nid*<br/>
+[v] Identifikátor příkazu tlačítka na panelu nástrojů
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Kladné celé číslo, pokud je tlačítko neurčité, nula, pokud tlačítko není neurčité, nebo-1, pokud dojde k chybě.
+Kladné celé číslo, pokud je tlačítko neurčité, nula, pokud tlačítko není neurčité, nebo -1, pokud dojde k chybě.
 
 ### <a name="remarks"></a>Poznámky
 
-Neurčitá tlačítka jsou zobrazena šedě, například způsob, jakým tlačítko tučného písma na panelu nástrojů v textovém procesoru vyhledává, když vybraný text obsahuje tučné i regulární znaky. Zvažte volání metody [GetState](#getstate) , pokud chcete načíst více než jeden stav tlačítka.
+Neurčitá tlačítka jsou zobrazena šedě, například způsob, jakým tučné tlačítko na panelu nástrojů textového procesoru vypadá, když vybraný text obsahuje tučné i běžné znaky. Zvažte volání [GetState,](#getstate) pokud chcete načíst více než jeden stav tlačítka.
 
-##  <a name="isbuttonpressed"></a>CToolBarCtrl:: IsButtonPressed
+## <a name="ctoolbarctrlisbuttonpressed"></a><a name="isbuttonpressed"></a>CtoolBarCtrl::IsButtonPressed
 
-Určuje, zda je stisknuto určené tlačítko v ovládacím prvku ToolBar.
+Určuje, zda je stisknuto zadané tlačítko v ovládacím prvku panelu nástrojů.
 
 ```
 BOOL IsButtonPressed(int nID) const;
@@ -1552,20 +1552,20 @@ BOOL IsButtonPressed(int nID) const;
 
 ### <a name="parameters"></a>Parametry
 
-*nID*<br/>
+*Nid*<br/>
 Identifikátor příkazu tlačítka na panelu nástrojů
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je tlačítko stisknuto, jinak nula.
+Nenulová, pokud je stisknuto tlačítko, jinak nula.
 
 ### <a name="remarks"></a>Poznámky
 
-Zvažte volání metody [GetState](#getstate) , pokud chcete načíst více než jeden stav tlačítka.
+Zvažte volání [GetState,](#getstate) pokud chcete načíst více než jeden stav tlačítka.
 
-##  <a name="loadimages"></a>CToolBarCtrl:: LoadImages
+## <a name="ctoolbarctrlloadimages"></a><a name="loadimages"></a>CtoolBarCtrl::načtení obrázků
 
-Načte rastry do seznamu obrázků ovládacího prvku panelu nástrojů.
+Načte bitmapy do seznamu obrázků ovládacího prvku panelu nástrojů.
 
 ```
 void LoadImages(
@@ -1576,25 +1576,25 @@ void LoadImages(
 ### <a name="parameters"></a>Parametry
 
 *iBitmapID*<br/>
-ID rastrového obrázku, který obsahuje obrázky, které mají být načteny. Chcete-li určit vlastní prostředek rastrového obrázku, nastavte tento parametr na ID rastrového obrázku a nastavte *hInst* na hodnotu null. Váš prostředek rastrového obrázku se přidá do seznamu obrázků jako jeden obrázek. Můžete přidat standardní, systémem definované rastrové obrázky nastavením *hInst* na HINST_COMMCTRL a nastavením tohoto parametru na jedno z následujících ID:
+ID rastrového obrázku, který obsahuje obrazy, které mají být načteny. Chcete-li zadat vlastní bitmapový prostředek, nastavte tento parametr na ID bitmapového prostředku a nastavte *hodnotu hInst* na HODNOTU NULL. Rastrový prostředek bude přidán do seznamu obrázků jako jeden obrázek. Můžete přidat standardní, systémem definované bitmapy nastavením *hinst* pro HINST_COMMCTRL a nastavením tohoto parametru na jedno z následujících ID:
 
-|ID rastrového obrázku|Popis|
+|ID bitmapy|Popis|
 |---------------|-----------------|
-|IDB_HIST_LARGE_COLOR|Rastrové obrázky v Průzkumníkovi velké velikosti|
-|IDB_HIST_SMALL_COLOR|Rastrové obrázky v Průzkumníkovi v malé velikosti|
-|IDB_STD_LARGE_COLOR|Standardní rastrové obrázky ve velké velikosti|
-|IDB_STD_SMALL_COLOR|Standardní rastrové obrázky v malé velikosti|
-|IDB_VIEW_LARGE_COLOR|Zobrazit bitmapy ve velké velikosti|
-|IDB_VIEW_SMALL_COLOR|Zobrazit rastrové obrázky v malé velikosti|
+|IDB_HIST_LARGE_COLOR|Rastrové obrázky průzkumníka ve velkých velikostech|
+|IDB_HIST_SMALL_COLOR|Rastrové obrázky průzkumníka v malých velikostech|
+|IDB_STD_LARGE_COLOR|Standardní bitmapy ve velkých velikostech|
+|IDB_STD_SMALL_COLOR|Standardní bitmapy v malých velikostech|
+|IDB_VIEW_LARGE_COLOR|Zobrazení bitmap ve velkých velikostech|
+|IDB_VIEW_SMALL_COLOR|Zobrazení bitmap v malých velikostech|
 
 *hinst*<br/>
-Popisovač instance programu do volající aplikace. Tento parametr může být HINST_COMMCTRL načíst standardní seznam obrázků.
+Popisovač instance programu pro volající aplikaci. Tento parametr lze HINST_COMMCTRL načíst standardní seznam obrázků.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce implementuje chování zprávy Win32 [TB_LOADIMAGES](/windows/win32/Controls/tb-loadimages), jak je popsáno v Windows SDK.
+Tato členská funkce implementuje chování [TB_LOADIMAGES](/windows/win32/Controls/tb-loadimages)zprávy Win32 , jak je popsáno v sadě Windows SDK.
 
-##  <a name="mapaccelerator"></a>CToolBarCtrl:: MapAccelerator
+## <a name="ctoolbarctrlmapaccelerator"></a><a name="mapaccelerator"></a>CToolBarCtrl::MapAccelerator
 
 Mapuje znak akcelerátoru na tlačítko panelu nástrojů.
 
@@ -1607,22 +1607,22 @@ BOOL MapAccelerator(
 ### <a name="parameters"></a>Parametry
 
 *chAccel*<br/>
-Znak akcelerátoru, který se má namapovat Tento znak je stejný znak, který je podtržený v textu tlačítka.
+Znak akcelerátoru, který má být mapován. Tento znak je stejný znak, který je podtrženv textu tlačítka.
 
 *pIDBtn*<br/>
-Ukazatel na objekt UINT, který přijímá identifikátor příkazu tlačítka, který odpovídá akcelerátoru zadanému v *chAccel*.
+Ukazatel na UINT, který obdrží identifikátor příkazu tlačítka, který odpovídá akcelerátoru zadanému v *chAccel*.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud bylo úspěšné; jinak nula.
+Nenulová, pokud je úspěšná; jinak nula.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce implementuje chování zprávy Win32 [TB_MAPACCELERATOR](/windows/win32/Controls/tb-mapaccelerator), jak je popsáno v Windows SDK.
+Tato členská funkce implementuje chování [TB_MAPACCELERATOR](/windows/win32/Controls/tb-mapaccelerator)zprávy Win32 , jak je popsáno v sadě Windows SDK.
 
-##  <a name="markbutton"></a>CToolBarCtrl:: MarkButton
+## <a name="ctoolbarctrlmarkbutton"></a><a name="markbutton"></a>CtoolBarctrl::MarkButton
 
-Nastaví stav zvýraznění daného tlačítka v ovládacím prvku ToolBar.
+Nastaví stav zvýraznění daného tlačítka v ovládacím prvku panelu nástrojů.
 
 ```
 BOOL MarkButton(
@@ -1632,21 +1632,21 @@ BOOL MarkButton(
 
 ### <a name="parameters"></a>Parametry
 
-*nID*<br/>
-Identifikátor tlačítka
+*Nid*<br/>
+Identifikátor tlačítka.
 
-*fHighlight*<br/>
-Určuje stav zvýraznění, který má být nastaven. Ve výchozím nastavení má hodnotu TRUE. Pokud je nastaveno na hodnotu FALSE, je tlačítko nastaveno na výchozí stav.
+*fZvýraznění*<br/>
+Určuje stav zvýraznění, který má být nastaven. Ve výchozím nastavení true. Pokud je nastavena na hodnotu FALSE, je tlačítko nastaveno na výchozí stav.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud bylo úspěšné; v opačném případě 0.
+Nenulová, pokud je úspěšná; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce implementuje chování zprávy Win32 [TB_MARKBUTTON](/windows/win32/Controls/tb-markbutton), jak je popsáno v Windows SDK.
+Tato členská funkce implementuje chování [zprávy](/windows/win32/Controls/tb-markbutton)Win32 TB_MARKBUTTON , jak je popsáno v sadě Windows SDK.
 
-##  <a name="movebutton"></a>CToolBarCtrl:: MoveButton
+## <a name="ctoolbarctrlmovebutton"></a><a name="movebutton"></a>CtoolBarctrl::MoveButton
 
 Přesune tlačítko z jednoho indexu do druhého.
 
@@ -1659,22 +1659,22 @@ BOOL MoveButton(
 ### <a name="parameters"></a>Parametry
 
 *nOldPos*<br/>
-Index tlačítka, který má být přesunut na základě nuly.
+Nula na základě indexu tlačítka, které mají být přesunuty.
 
 *nNewPos*<br/>
-Index v cíli tlačítka založený na nule.
+Nulový index cíle tlačítka.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud bylo úspěšné; v opačném případě 0.
+Nenulová, pokud je úspěšná; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce implementuje chování zprávy Win32 [TB_MOVEBUTTON](/windows/win32/Controls/tb-movebutton), jak je popsáno v Windows SDK.
+Tato členská funkce implementuje chování [zprávy](/windows/win32/Controls/tb-movebutton)Win32 TB_MOVEBUTTON , jak je popsáno v sadě Windows SDK.
 
-##  <a name="pressbutton"></a>CToolBarCtrl::P ressButton
+## <a name="ctoolbarctrlpressbutton"></a><a name="pressbutton"></a>CToolBarCtrl::PressButton
 
-Stiskne nebo uvolní zadané tlačítko v ovládacím prvku ToolBar.
+Stiskne nebo uvolní zadané tlačítko v ovládacím prvku panelu nástrojů.
 
 ```
 BOOL PressButton(int nID, BOOL bPress = TRUE);
@@ -1682,25 +1682,25 @@ BOOL PressButton(int nID, BOOL bPress = TRUE);
 
 ### <a name="parameters"></a>Parametry
 
-*nID*<br/>
-pro Identifikátor příkazu tlačítka, který se má stisknout nebo uvolnit
+*Nid*<br/>
+[v] Identifikátor příkazu tlačítka pro stisknutí nebo uvolnění.
 
-*bPress*<br/>
-pro TRUE pro stisknutí zadaného tlačítka; FALSE pro uvolnění zadaného tlačítka Výchozí hodnota je TRUE (pravda).
+*bStiskněte tlačítko*<br/>
+[v] TRUE pro stisknutí zadaného tlačítka; NEPRAVDA pro uvolnění zadaného tlačítka. Výchozí hodnota je TRUE.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-TRUE, pokud je metoda úspěšná; v opačném případě FALSE.
+TRUE, pokud je metoda úspěšná; jinak NEPRAVDA.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud chcete změnit více než jeden stav tlačítka, zvažte místo toho volání [setstate](#setstate) .
+Pokud chcete změnit více než jeden stav tlačítka, zvažte volání [SetState](#setstate) místo.
 
-Tato metoda pošle zprávu [TB_PRESSBUTTON](/windows/win32/Controls/tb-pressbutton) , která je popsána v Windows SDK.
+Tato metoda odešle [zprávu TB_PRESSBUTTON,](/windows/win32/Controls/tb-pressbutton) která je popsána v sadě Windows SDK.
 
-##  <a name="replacebitmap"></a>CToolBarCtrl:: ReplaceBitmap
+## <a name="ctoolbarctrlreplacebitmap"></a><a name="replacebitmap"></a>CToolBarCtrl::ReplaceBitmap
 
-Nahradí existující rastrový obrázek v aktuálním ovládacím prvku panelu nástrojů novou rastrovou obrázkem.
+Nahradí existující bitmapu v aktuálním ovládacím prvku panelu nástrojů novou bitmapou.
 
 ```
 BOOL ReplaceBitmap(LPTBREPLACEBITMAP pReplaceBitmap);
@@ -1710,25 +1710,25 @@ BOOL ReplaceBitmap(LPTBREPLACEBITMAP pReplaceBitmap);
 
 |Parametr|Popis|
 |---------------|-----------------|
-|*pReplaceBitmap*|pro Ukazatel na strukturu [TBREPLACEBITMAP](/windows/win32/api/commctrl/ns-commctrl-tbreplacebitmap) , která popisuje nahrazení rastrového obrázku a nového rastrového obrázku.|
+|*pReplaceBitmap*|[v] Ukazatel na strukturu [TBREPLACEBITMAP,](/windows/win32/api/commctrl/ns-commctrl-tbreplacebitmap) která popisuje bitmapu, která má být nahrazena, a novou bitmapu.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
-TRUE, pokud je tato metoda úspěšná; v opačném případě FALSE.
+TRUE, pokud je tato metoda úspěšná; jinak NEPRAVDA.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda pošle zprávu [TB_REPLACEBITMAP](/windows/win32/Controls/tb-replacebitmap) , která je popsána v Windows SDK.
+Tato metoda odešle [zprávu TB_REPLACEBITMAP,](/windows/win32/Controls/tb-replacebitmap) která je popsána v sadě Windows SDK.
 
 ### <a name="example"></a>Příklad
 
-Následující příklad kódu nahrazuje rastrový obrázek pro standardní panel nástrojů s jinou bitmapou.
+Následující příklad kódu nahradí bitmapu pro standardní panel nástrojů jinou bitmapou.
 
 [!code-cpp[NVC_MFC_CToolBarCtrl_s1#2](../../mfc/reference/codesnippet/cpp/ctoolbarctrl-class_4.cpp)]
 
-##  <a name="restorestate"></a>CToolBarCtrl:: RestoreState
+## <a name="ctoolbarctrlrestorestate"></a><a name="restorestate"></a>CToolBarCtrl::Obnovitstav
 
-Obnoví stav ovládacího prvku panelu nástrojů z umístění v registru určeného parametry.
+Obnoví stav ovládacího prvku panelu nástrojů z umístění v registru určeném parametry.
 
 ```
 void RestoreState(
@@ -1739,26 +1739,26 @@ void RestoreState(
 
 ### <a name="parameters"></a>Parametry
 
-*hKeyRoot*<br/>
-Identifikuje aktuálně otevřený klíč v registru nebo některé z následujících předdefinovaných hodnot rezervovaného popisovače:
+*hKořenklíče*<br/>
+Identifikuje aktuálně otevřený klíč v registru nebo některou z následujících předdefinovaných hodnot vyhrazeného popisovače:
 
-- HKEY_CLASSES_ROOT
+- Hkey_classes_root
 
 - HKEY_CURRENT_USER
 
-- HKEY_LOCAL_MACHINE
+- Hkey_local_machine
 
-- HKEY_USERS
+- Hkey_users
 
 *lpszSubKey*<br/>
-Odkazuje na řetězec zakončený hodnotou null obsahující název podklíče, ke kterému je přiřazena hodnota. Tento parametr může být null nebo ukazatel na prázdný řetězec. Pokud má parametr hodnotu NULL, bude hodnota přidána do klíče identifikovaného parametrem *hKeyRoot* .
+Odkazuje na řetězec s ukončeným hodnotou null obsahující název podklíče, ke kterému je přidružena hodnota. Tento parametr může být null nebo ukazatel na prázdný řetězec. Pokud je parametr NULL, hodnota bude přidána ke klíči identifikovanému parametrem *hKeyRoot.*
 
 *lpszValueName*<br/>
-Odkazuje na řetězec obsahující název hodnoty, která se má načíst. Pokud hodnota s tímto názvem již v klíči neexistuje, funkce ji přidá do klíče.
+Odkazuje na řetězec obsahující název hodnoty, kterou chcete načíst. Pokud hodnota s tímto názvem již není v klíči k dispozici, funkce ji přidá ke klíči.
 
-##  <a name="savestate"></a>CToolBarCtrl:: SaveState
+## <a name="ctoolbarctrlsavestate"></a><a name="savestate"></a>CToolBarCtrl::SaveState
 
-Uloží stav ovládacího prvku ToolBar do umístění v registru určeném parametry.
+Uloží stav ovládacího prvku panelu nástrojů v umístění v registru určeném parametry.
 
 ```
 void SaveState(
@@ -1769,26 +1769,26 @@ void SaveState(
 
 ### <a name="parameters"></a>Parametry
 
-*hKeyRoot*<br/>
-Identifikuje aktuálně otevřený klíč v registru nebo některé z následujících předdefinovaných hodnot rezervovaného popisovače:
+*hKořenklíče*<br/>
+Identifikuje aktuálně otevřený klíč v registru nebo některou z následujících předdefinovaných hodnot vyhrazeného popisovače:
 
-- HKEY_CLASSES_ROOT
+- Hkey_classes_root
 
 - HKEY_CURRENT_USER
 
-- HKEY_LOCAL_MACHINE
+- Hkey_local_machine
 
-- HKEY_USERS
+- Hkey_users
 
 *lpszSubKey*<br/>
-Odkazuje na řetězec zakončený hodnotou null obsahující název podklíče, ke kterému je přiřazena hodnota. Tento parametr může být null nebo ukazatel na prázdný řetězec. Pokud má parametr hodnotu NULL, bude hodnota přidána do klíče identifikovaného parametrem *hKeyRoot* .
+Odkazuje na řetězec s ukončeným hodnotou null obsahující název podklíče, ke kterému je přidružena hodnota. Tento parametr může být null nebo ukazatel na prázdný řetězec. Pokud je parametr NULL, hodnota bude přidána ke klíči identifikovanému parametrem *hKeyRoot.*
 
 *lpszValueName*<br/>
-Odkazuje na řetězec obsahující název hodnoty, kterou chcete nastavit. Pokud hodnota s tímto názvem již v klíči neexistuje, funkce ji přidá do klíče.
+Odkazuje na řetězec obsahující název nastavené hodnoty. Pokud hodnota s tímto názvem již není v klíči k dispozici, funkce ji přidá ke klíči.
 
-##  <a name="setanchorhighlight"></a>CToolBarCtrl:: SetAnchorHighlight
+## <a name="ctoolbarctrlsetanchorhighlight"></a><a name="setanchorhighlight"></a>CToolBarctrl::SetAnchorHighlight
 
-Nastaví nastavení zvýraznění ukotvení panelu nástrojů.
+Nastaví nastavení zvýraznění kotvy pro panel nástrojů.
 
 ```
 BOOL SetAnchorHighlight(BOOL fAnchor = TRUE);
@@ -1796,20 +1796,20 @@ BOOL SetAnchorHighlight(BOOL fAnchor = TRUE);
 
 ### <a name="parameters"></a>Parametry
 
-*fAnchor*<br/>
-pro Určuje, zda je povoleno nebo zakázáno zvýrazňování kotv. Pokud je tato hodnota nenulová, bude zapnuto zvýraznění kotvy. Pokud je tato hodnota nula, zvýrazňování kotvy bude zakázáno.
+*fKotva*<br/>
+[v] Určuje, zda je zvýraznění kotvy povoleno nebo zakázáno. Pokud je tato hodnota nenulová, bude povoleno zvýraznění ukotvení. Pokud je tato hodnota nulová, zvýraznění ukotvení bude zakázáno.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Předchozí nastavení kotvy. Pokud bylo zdůraznění povoleno, je tato hodnota nenulová. Pokud zvýraznění nebylo povoleno, je tato hodnota nulová.
+Předchozí nastavení ukotvení. Pokud bylo zvýraznění povoleno, je tato hodnota nenulová. Pokud zvýraznění nebylo povoleno, tato hodnota je nula.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda implementuje chování zprávy Win32 [TB_SETANCHORHIGHLIGHT](/windows/win32/Controls/tb-setanchorhighlight), jak je popsáno v Windows SDK.
+Tato metoda implementuje chování zprávy Win32 [TB_SETANCHORHIGHLIGHT](/windows/win32/Controls/tb-setanchorhighlight), jak je popsáno v sadě Windows SDK.
 
-##  <a name="setbitmapsize"></a>CToolBarCtrl:: SetBitmapSize
+## <a name="ctoolbarctrlsetbitmapsize"></a><a name="setbitmapsize"></a>CToolBarCtrl::SetBitmapSize
 
-Nastaví velikost skutečných rastrových obrázků, které mají být přidány do ovládacího prvku ToolBar.
+Nastaví velikost skutečných bitmapovaných obrazů, které mají být přidány do ovládacího prvku panelu nástrojů.
 
 ```
 BOOL SetBitmapSize(CSize size);
@@ -1817,20 +1817,20 @@ BOOL SetBitmapSize(CSize size);
 
 ### <a name="parameters"></a>Parametry
 
-*hodnota*<br/>
-Šířka a výška obrázků bitmapy (v pixelech).
+*Velikost*<br/>
+Šířka a výška bitových obrazů v obrazových bodech.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud bylo úspěšné; jinak nula.
+Nenulová, pokud je úspěšná; jinak nula.
 
 ### <a name="remarks"></a>Poznámky
 
-Tuto funkci je třeba volat pouze před přidáním rastrových obrázků na panel nástrojů. Pokud aplikace nemá explicitně nastavenou velikost rastrového obrázku, použije se výchozí hodnota 16 o 15 pixelů.
+Tato funkce musí být volána pouze před přidáním rastry na panel nástrojů. Pokud aplikace explicitně nenastaví velikost bitmapy, bude výchozí hodnota 16 x 15 pixelů.
 
-##  <a name="setbuttoninfo"></a>CToolBarCtrl:: SetButtonInfo
+## <a name="ctoolbarctrlsetbuttoninfo"></a><a name="setbuttoninfo"></a>CtoolBarctrl::SetButtonInfo
 
-Nastaví informace pro existující tlačítko na panelu nástrojů.
+Nastaví informace o existujícím tlačítku na panelu nástrojů.
 
 ```
 BOOL SetButtonInfo(
@@ -1840,23 +1840,23 @@ BOOL SetButtonInfo(
 
 ### <a name="parameters"></a>Parametry
 
-*nID*<br/>
-Identifikátor tlačítka
+*Nid*<br/>
+Identifikátor tlačítka.
 
 *ptbbi*<br/>
-Ukazatel na strukturu [TBBUTTONINFO](/windows/win32/api/commctrl/ns-commctrl-tbbuttoninfow) , která obdrží informace o tlačítku.
+Ukazatel na [tbBUTTONINFO](/windows/win32/api/commctrl/ns-commctrl-tbbuttoninfow) strukturu, která přijímá informace o tlačítku.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud bylo úspěšné; v opačném případě 0.
+Nenulová, pokud je úspěšná; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce implementuje chování zprávy Win32 [TB_SETBUTTONINFO](/windows/win32/Controls/tb-setbuttoninfo), jak je popsáno v Windows SDK.
+Členská funkce implementuje chování zprávy Win32 [TB_SETBUTTONINFO](/windows/win32/Controls/tb-setbuttoninfo), jak je popsáno v sadě Windows SDK.
 
-##  <a name="setbuttonsize"></a>CToolBarCtrl:: SetButtonSize
+## <a name="ctoolbarctrlsetbuttonsize"></a><a name="setbuttonsize"></a>CtoolBarctrl::SetButtonSize
 
-Nastaví velikost tlačítek v ovládacím prvku panel nástrojů.
+Nastaví velikost tlačítek v ovládacím prvku panelu nástrojů.
 
 ```
 BOOL SetButtonSize(CSize size);
@@ -1864,22 +1864,22 @@ BOOL SetButtonSize(CSize size);
 
 ### <a name="parameters"></a>Parametry
 
-*hodnota*<br/>
-Šířka a výška tlačítek (v pixelech)
+*Velikost*<br/>
+Šířka a výška tlačítek v pixelech.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud bylo úspěšné; jinak nula.
+Nenulová, pokud je úspěšná; jinak nula.
 
 ### <a name="remarks"></a>Poznámky
 
-Velikost tlačítka musí být vždy alespoň stejně velká jako velikost rastrového obrázku, kterou obklopuje. Tuto funkci je třeba volat pouze před přidáním rastrových obrázků na panel nástrojů. Pokud aplikace nenastaví velikost tlačítka explicitně, použije se výchozí hodnota 24 o 22 pixelů.
+Velikost tlačítka musí být vždy alespoň tak velká jako velikost bitmapy, kterou uzavírá. Tato funkce musí být volána pouze před přidáním rastry na panel nástrojů. Pokud aplikace explicitně nenastaví velikost tlačítka, bude ve výchozím nastavení nastavena na 24 x 22 pixelů.
 
 ### <a name="example"></a>Příklad
 
-  Podívejte se na příklad pro [CToolBar –:: GetToolBarCtrl](../../mfc/reference/ctoolbar-class.md#gettoolbarctrl).
+  Viz příklad [ctoolbar::GetToolBarCtrl](../../mfc/reference/ctoolbar-class.md#gettoolbarctrl).
 
-##  <a name="setbuttonstructsize"></a>CToolBarCtrl:: SetButtonStructSize
+## <a name="ctoolbarctrlsetbuttonstructsize"></a><a name="setbuttonstructsize"></a>CToolBarCtrl::SetButtonStructSize
 
 Určuje velikost `TBBUTTON` struktury.
 
@@ -1889,18 +1889,18 @@ void SetButtonStructSize(int nSize);
 
 ### <a name="parameters"></a>Parametry
 
-*nSize*<br/>
-Velikost `TBBUTTON` struktury v bajtech
+*nVelikost*<br/>
+Velikost `TBBUTTON` struktury v bajtech.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud jste chtěli uložit další data ve struktuře `TBBUTTON`, mohli byste buď odvodit novou strukturu z `TBBUTTON`, přidat potřebné členy nebo vytvořit novou strukturu, která obsahuje strukturu `TBBUTTON` jako její první člen. Pak zavolejte tuto funkci, aby ovládací prvek Toolbar informoval o velikosti nové struktury.
+Pokud chcete uložit další data `TBBUTTON` do struktury, můžete buď `TBBUTTON`odvodit novou strukturu z , přidání `TBBUTTON` členů, které potřebujete, nebo vytvořit novou strukturu, která obsahuje strukturu jako první člen. Potom volání této funkce sdělit panelu nástrojů řídit velikost nové struktury.
 
-Další informace o struktuře `TBBUTTON` naleznete v tématu [CToolBarCtrl:: AddButtons](#addbuttons) .
+Další informace o struktuře naleznete v tématu `TBBUTTON` [CToolBarCtrl::AddButtons.](#addbuttons)
 
-##  <a name="setbuttonwidth"></a>CToolBarCtrl:: SetButtonWidth
+## <a name="ctoolbarctrlsetbuttonwidth"></a><a name="setbuttonwidth"></a>CtoolBarctrl::SetButtonWidth
 
-Nastaví šířku tlačítek na minimum a maximum v ovládacím prvku ToolBar.
+Nastaví minimální a maximální šířku tlačítek v ovládacím prvku panelu nástrojů.
 
 ```
 BOOL SetButtonWidth(
@@ -1911,22 +1911,22 @@ BOOL SetButtonWidth(
 ### <a name="parameters"></a>Parametry
 
 *cxMin*<br/>
-Minimální šířka tlačítka (v pixelech) Tlačítka panelu nástrojů nebudou nikdy zúžena než tato hodnota.
+Minimální šířka tlačítka v pixelech. Tlačítka panelu nástrojů nikdy nebudou užší než tato hodnota.
 
 *cxMax*<br/>
-Maximální šířka tlačítka (v pixelech) Pokud je text tlačítka příliš velký, ovládací prvek ho zobrazí s body tří teček.
+Maximální šířka tlačítka v obrazových bodech. Pokud je text tlačítka příliš široký, ovládací prvek jej zobrazí se třemi tečkami.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud bylo úspěšné; v opačném případě 0.
+Nenulová, pokud je úspěšná; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce implementuje chování zprávy Win32 [TB_SETBUTTONWIDTH](/windows/win32/Controls/tb-setbuttonwidth), jak je popsáno v Windows SDK.
+Tato členská funkce implementuje chování [zprávy](/windows/win32/Controls/tb-setbuttonwidth)Win32 TB_SETBUTTONWIDTH , jak je popsáno v sadě Windows SDK.
 
-##  <a name="setcmdid"></a>CToolBarCtrl:: SetCmdID
+## <a name="ctoolbarctrlsetcmdid"></a><a name="setcmdid"></a>CToolBarCtrl::SetCmdID
 
-Nastaví identifikátor příkazu, který bude odeslán do okna vlastníka při stisknutí zadaného tlačítka.
+Nastaví identifikátor příkazu, který bude odeslán do okna vlastníka po stisknutí zadaného tlačítka.
 
 ```
 BOOL SetCmdID(
@@ -1937,16 +1937,16 @@ BOOL SetCmdID(
 ### <a name="parameters"></a>Parametry
 
 *nIndex*<br/>
-Index tlačítka, jehož ID příkazu má být nastaveno na nulu.
+Nulový index tlačítka, jehož ID příkazu má být nastaveno.
 
-*nID*<br/>
-ID příkazu pro nastavení vybraného tlačítka na.
+*Nid*<br/>
+ID příkazu pro nastavení vybraného tlačítka.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí nenulovou hodnotu, pokud bylo úspěšné. jinak nula.
+Vrátí nenulovou hodnotu, pokud je úspěšná. jinak nula.
 
-##  <a name="setcolorscheme"></a>CToolBarCtrl:: SetColorScheme
+## <a name="ctoolbarctrlsetcolorscheme"></a><a name="setcolorscheme"></a>CtoolBarctrl::SetColorScheme
 
 Nastaví barevné schéma aktuálního ovládacího prvku panelu nástrojů.
 
@@ -1958,23 +1958,23 @@ void SetColorScheme(const COLORSCHEME* lpColorScheme);
 
 |Parametr|Popis|
 |---------------|-----------------|
-|*lpColorScheme*|pro Ukazatel na strukturu [COLORSCHEME](/windows/win32/api/commctrl/ns-commctrl-colorscheme) , která popisuje barvu zvýraznění a barvu stínu ovládacího prvku ToolBar.|
+|*lpColorScheme*|[v] Ukazatel na strukturu [COLORSCHEME,](/windows/win32/api/commctrl/ns-commctrl-colorscheme) která popisuje barvu zvýraznění a barvu stínu ovládacího prvku panelu nástrojů.|
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda nemá žádný vliv, pokud je nastaven vizuální motiv Windows Vista.
+Tato metoda nemá žádný vliv, pokud je nastaven vizuální motiv systému Windows Vista.
 
-Tato metoda pošle zprávu [TB_SETCOLORSCHEME](/windows/win32/Controls/tb-setcolorscheme) , která je popsána v Windows SDK.
+Tato metoda odešle [zprávu TB_SETCOLORSCHEME,](/windows/win32/Controls/tb-setcolorscheme) která je popsána v sadě Windows SDK.
 
 ### <a name="example"></a>Příklad
 
-Následující příklad kódu nastaví barevné schéma pro aktuální ovládací prvek panelu nástrojů. Příklad kódu vytvoří levý a horní okraj každého tlačítka nástroje červeně a pravým a dolním okrajem modrou. Když uživatel stiskne tlačítko, červené hrany tlačítka se změní na modrou a jeho modré hrany se změní na červenou.
+Následující příklad kódu nastaví barevné schéma pro aktuální ovládací prvek panelu nástrojů. Příklad kódu zmodrá levý a horní okraj každého tlačítka nástroje a pravý a dolní okraj. Když uživatel stiskne tlačítko, červené okraje tlačítka se změní na modrou a jeho modré okraje zčervenají.
 
 [!code-cpp[NVC_MFC_CToolBarCtrl_s1#3](../../mfc/reference/codesnippet/cpp/ctoolbarctrl-class_5.cpp)]
 
-##  <a name="setdisabledimagelist"></a>CToolBarCtrl:: SetDisabledImageList
+## <a name="ctoolbarctrlsetdisabledimagelist"></a><a name="setdisabledimagelist"></a>CtoolBarctrl::SetDisabledImageList
 
-Nastaví seznam obrázků, který ovládací prvek Toolbar použije k zobrazení zakázaných tlačítek.
+Nastaví seznam obrázků, který bude ovládací prvek panelu nástrojů používat k zobrazení zakázaných tlačítek.
 
 ```
 CImageList* SetDisabledImageList(CImageList* pImageList);
@@ -1982,20 +1982,20 @@ CImageList* SetDisabledImageList(CImageList* pImageList);
 
 ### <a name="parameters"></a>Parametry
 
-*pImageList*<br/>
-Ukazatel na objekt `CImageList` obsahující obrázky, které mají být použity ovládacím prvkem panelu nástrojů k zobrazení zakázaných obrázků tlačítek.
+*seznam obrázků pImage*<br/>
+Ukazatel na `CImageList` objekt obsahující obrazy, které mají být použity ovládacím prvkem panelu nástrojů k zobrazení zakázaných obrázků tlačítek.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na objekt [atributu CImageList](../../mfc/reference/cimagelist-class.md) , který byl dříve použit ovládacím prvkem panelu nástrojů k zobrazení zakázaných obrázků tlačítek.
+Ukazatel na objekt [CImageList,](../../mfc/reference/cimagelist-class.md) který byl dříve používán ovládacím prvkem panelu nástrojů k zobrazení zakázaných obrázků tlačítek.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce implementuje chování zprávy Win32 [TB_SETDISABLEDIMAGELIST](/windows/win32/Controls/tb-setdisabledimagelist), jak je popsáno v Windows SDK. Implementace knihovny MFC `SetDisabledImageList` používá objekt `CImageList` obsahující obrázky zakázaného tlačítka ovládacího prvku panelu nástrojů namísto popisovače do seznamu obrázků.
+Tato členská funkce implementuje chování [zprávy](/windows/win32/Controls/tb-setdisabledimagelist)Win32 TB_SETDISABLEDIMAGELIST , jak je popsáno v sadě Windows SDK. MFC implementace `SetDisabledImageList` používá `CImageList` objekt obsahující panelu nástrojů je zakázáno obrázky tlačítek, spíše než popisovač seznamu obrázků.
 
-##  <a name="setdrawtextflags"></a>CToolBarCtrl:: SetDrawTextFlags
+## <a name="ctoolbarctrlsetdrawtextflags"></a><a name="setdrawtextflags"></a>CToolBarCtrl::SetDrawTextFlags
 
-Nastaví příznaky v Win32 Function [DrawText](/windows/win32/api/winuser/nf-winuser-drawtext), který se používá k vykreslení textu v zadaném obdélníku formátovaného podle způsobu, jakým jsou příznaky nastaveny.
+Nastaví příznaky ve funkci [DrawText](/windows/win32/api/winuser/nf-winuser-drawtext)win32 , která slouží k nakreslení textu v zadaném obdélníku, formátované podle způsobu nastavení příznaků.
 
 ```
 DWORD SetDrawTextFlags(
@@ -2006,22 +2006,22 @@ DWORD SetDrawTextFlags(
 ### <a name="parameters"></a>Parametry
 
 *dwMask*<br/>
-Kombinace jednoho nebo více příznaků DT_ určených v rozhraní Win32 funkce [DrawText](/windows/win32/api/winuser/nf-winuser-drawtext), které určuje, které bity v *dwDTFlags* budou použity při vykreslování textu.
+Kombinace jednoho nebo více příznaků DT_ zadaná ve funkci [DrawText](/windows/win32/api/winuser/nf-winuser-drawtext)systému Win32 , která označuje, které bity v *dwDTFlags* budou použity při kreslení textu.
 
 *dwDTFlags*<br/>
-Kombinace jednoho nebo více příznaků DT_ určených v `DrawText`funkce Win32, které určují, jak bude vykreslen text tlačítka. Tato hodnota se předává `DrawText`, když se vykreslí text tlačítka.
+Kombinace jednoho nebo více příznaků DT_ zadaná ve `DrawText`funkci Win32 , která označuje způsob vykreslení textu tlačítka. Tato hodnota je `DrawText` předána při vykreslení textu tlačítka.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota DWORD obsahující předchozí příznaky kreslení textu.
+DWORD obsahující předchozí textové příznaky výkresu.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce implementuje chování zprávy Win32 [TB_SETDRAWTEXTFLAGS](/windows/win32/Controls/tb-setdrawtextflags), jak je popsáno v Windows SDK. Tato členská funkce nastavuje příznaky ve funkci Win32 `DrawText`, která kreslí text v zadaném obdélníku formátovaného podle toho, jak jsou příznaky nastaveny.
+Tato členská funkce implementuje chování [TB_SETDRAWTEXTFLAGS](/windows/win32/Controls/tb-setdrawtextflags)zprávy Win32 , jak je popsáno v sadě Windows SDK. Tato členská funkce nastaví příznaky `DrawText`ve funkci Win32 , která kreslí text v zadaném obdélníku, formátovaný podle způsobu nastavení příznaků.
 
-##  <a name="setextendedstyle"></a>CToolBarCtrl:: SetExtendedStyle
+## <a name="ctoolbarctrlsetextendedstyle"></a><a name="setextendedstyle"></a>CtoolBarctrl::SetExtendedStyle
 
-Nastaví rozšířené styly pro ovládací prvek panelu nástrojů.
+Nastaví rozšířené styly ovládacího prvku panelu nástrojů.
 
 ```
 DWORD SetExtendedStyle(DWORD dwExStyle);
@@ -2029,20 +2029,20 @@ DWORD SetExtendedStyle(DWORD dwExStyle);
 
 ### <a name="parameters"></a>Parametry
 
-*dwExStyle*<br/>
-Hodnota, která určuje nové rozšířené styly. Tento parametr může být kombinací rozšířených stylů panelu nástrojů.
+*dwExStyl*<br/>
+Hodnota určující nové rozšířené styly. Tento parametr může být kombinací rozšířených stylů panelu nástrojů.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota DWORD, která představuje předchozí rozšířené styly. Seznam stylů naleznete v části [panely nástrojů rozšířené styly](/windows/win32/Controls/toolbar-extended-styles)v Windows SDK.
+DWORD, který představuje předchozí rozšířené styly. Seznam stylů naleznete v tématu [Extended Styles panelu nástrojů](/windows/win32/Controls/toolbar-extended-styles)v sadě Windows SDK.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce implementuje chování zprávy Win32 [TB_SETEXTENDEDSTYLE](/windows/win32/Controls/tb-setextendedstyle), jak je popsáno v Windows SDK.
+Tato členská funkce implementuje chování [TB_SETEXTENDEDSTYLE](/windows/win32/Controls/tb-setextendedstyle)zprávy Win32 , jak je popsáno v sadě Windows SDK.
 
-##  <a name="sethotimagelist"></a>CToolBarCtrl:: SetHotImageList
+## <a name="ctoolbarctrlsethotimagelist"></a><a name="sethotimagelist"></a>CtoolBarctrl::SethotImageList
 
-Nastaví seznam obrázků, který ovládací prvek Toolbar použije k zobrazení "horkého" tlačítka.
+Nastaví seznam obrázků, který ovládací prvek panelu nástrojů použije k zobrazení "horkých" tlačítek.
 
 ```
 CImageList* SetHotImageList(CImageList* pImageList);
@@ -2050,22 +2050,22 @@ CImageList* SetHotImageList(CImageList* pImageList);
 
 ### <a name="parameters"></a>Parametry
 
-*pImageList*<br/>
-Ukazatel na objekt `CImageList` obsahující obrázky používané ovládacím prvkem panel nástrojů k zobrazení obrázků tlačítek na aktivním tlačítku.
+*seznam obrázků pImage*<br/>
+Ukazatel na `CImageList` objekt obsahující obrazy, které mají být použity ovládacím prvkem panelu nástrojů k zobrazení obrázků horkých tlačítek.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na objekt [atributu CImageList](../../mfc/reference/cimagelist-class.md) , který byl dříve použit ovládacím prvkem panelu nástrojů k zobrazení obrázků tlačítek na aktivním tlačítku.
+Ukazatel na objekt [CImageList,](../../mfc/reference/cimagelist-class.md) který byl dříve používán ovládacím prvkem panelu nástrojů k zobrazení obrázků horkých tlačítek.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce implementuje chování zprávy Win32 [TB_SETHOTIMAGELIST](/windows/win32/Controls/tb-sethotimagelist), jak je popsáno v Windows SDK.
+Tato členská funkce implementuje chování [TB_SETHOTIMAGELIST](/windows/win32/Controls/tb-sethotimagelist)zprávy Win32 , jak je popsáno v sadě Windows SDK.
 
-Implementace knihovny MFC `SetHotImageList` používá objekt `CImageList`, který obsahuje obrázky tlačítek aktivního ovládacího prvku panelu nástrojů, nikoli popisovač do seznamu obrázků. Tlačítko aktivní se zobrazí jako zvýrazněné, když je ukazatel nad ním.
+MFC implementace `SetHotImageList` používá `CImageList` objekt obsahující panelu nástrojů je horké tlačítko obrázky, spíše než popisovač seznamu obrázků. Horké tlačítko se zobrazí zvýrazněné, když je ukazatel nad ním.
 
-##  <a name="sethotitem"></a>CToolBarCtrl:: SetHotItem
+## <a name="ctoolbarctrlsethotitem"></a><a name="sethotitem"></a>CToolBarCtrl::SetHotItem
 
-Nastaví aktivní položku na panelu nástrojů.
+Nastaví aktivní položku v panelu nástrojů.
 
 ```
 int SetHotItem(int nHot);
@@ -2074,17 +2074,17 @@ int SetHotItem(int nHot);
 ### <a name="parameters"></a>Parametry
 
 *nHot*<br/>
-Číslo indexu vycházející z nuly položky, která bude vyřízena jako horká. Pokud je tato hodnota-1, žádná z položek nebude horká.
+Číslo indexu založené na nule položky, která bude provedena hot. Pokud je tato hodnota -1, žádná z položek nebude horká.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Index předchozí aktivní položky nebo-1, pokud nebyla žádná aktivní položka.
+Index předchozí aktivní položky nebo -1, pokud nebyla žádná aktivní položka.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce implementuje chování zprávy Win32 [TB_SETHOTITEM](/windows/win32/Controls/tb-sethotitem), jak je popsáno v Windows SDK.
+Tato členská funkce implementuje chování zprávy Win32 [TB_SETHOTITEM](/windows/win32/Controls/tb-sethotitem), jak je popsáno v sadě Windows SDK.
 
-##  <a name="setimagelist"></a>CToolBarCtrl:: SetImageList
+## <a name="ctoolbarctrlsetimagelist"></a><a name="setimagelist"></a>CtoolBarctrl::SetImageList
 
 Nastaví seznam obrázků, který bude panel nástrojů používat k zobrazení tlačítek, která jsou ve výchozím stavu.
 
@@ -2094,22 +2094,22 @@ CImageList* SetImageList(CImageList* pImageList);
 
 ### <a name="parameters"></a>Parametry
 
-*pImageList*<br/>
-Ukazatel na objekt `CImageList` obsahující obrázky, které mají být použity ovládacím prvkem panelu nástrojů k zobrazení obrázků tlačítek ve výchozím stavu.
+*seznam obrázků pImage*<br/>
+Ukazatel na `CImageList` objekt obsahující obrazy, které má ovládací prvek panelu nástrojů použít k zobrazení obrázků tlačítek v jejich výchozím stavu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na objekt [atributu CImageList](../../mfc/reference/cimagelist-class.md) , který byl dříve použit ovládacím prvkem panelu nástrojů k zobrazení obrázků tlačítek ve výchozím stavu.
+Ukazatel na objekt [CImageList,](../../mfc/reference/cimagelist-class.md) který byl dříve používán ovládacím prvkem panelu nástrojů k zobrazení obrázků tlačítek v jejich výchozím stavu.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce implementuje chování zprávy Win32 [TB_SETIMAGELIST](/windows/win32/Controls/tb-setimagelist), jak je popsáno v Windows SDK.
+Tato členská funkce implementuje chování [zprávy](/windows/win32/Controls/tb-setimagelist)Win32 TB_SETIMAGELIST , jak je popsáno v sadě Windows SDK.
 
-Implementace knihovny MFC `SetImageList` používá objekt `CImageList`, který obsahuje obrázky tlačítek ovládacího prvku panelu nástrojů, nikoli popisovač do seznamu obrázků.
+MFC implementace `SetImageList` používá `CImageList` objekt obsahující panelu nástrojů ovládacího prvku obrázky tlačítek, spíše než popisovač do seznamu obrázků.
 
-##  <a name="setindent"></a>CToolBarCtrl:: SetIndent
+## <a name="ctoolbarctrlsetindent"></a><a name="setindent"></a>CToolBarCtrl::SetIndent
 
-Nastaví odsazení prvního tlačítka v ovládacím prvku ToolBar.
+Nastaví odsazení prvního tlačítka v ovládacím prvku panelu nástrojů.
 
 ```
 BOOL SetIndent(int iIndent);
@@ -2117,16 +2117,16 @@ BOOL SetIndent(int iIndent);
 
 ### <a name="parameters"></a>Parametry
 
-*iIndent*<br/>
-Hodnota určující odsazení v pixelech
+*iOdsač*<br/>
+Hodnota určující odsazení v obrazových bodech.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud bylo úspěšné; jinak nula.
+Nenulová, pokud je úspěšná; jinak nula.
 
-##  <a name="setinsertmark"></a>CToolBarCtrl:: SetInsertMark
+## <a name="ctoolbarctrlsetinsertmark"></a><a name="setinsertmark"></a>CtoolBarctrl::SetInsertMark
 
-Nastaví aktuální značku vložení panelu nástrojů.
+Nastaví značku aktuálního vložení pro panel nástrojů.
 
 ```
 void SetInsertMark(TBINSERTMARK* ptbim);
@@ -2135,15 +2135,15 @@ void SetInsertMark(TBINSERTMARK* ptbim);
 ### <a name="parameters"></a>Parametry
 
 *ptbim*<br/>
-Ukazatel na strukturu [TBINSERTMARK](/windows/win32/api/commctrl/ns-commctrl-tbinsertmark) , která obsahuje značku vložení.
+Ukazatel na strukturu [TBINSERTMARK,](/windows/win32/api/commctrl/ns-commctrl-tbinsertmark) která obsahuje značku vložení.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce implementuje chování zprávy Win32 [TB_SETINSERTMARK](/windows/win32/Controls/tb-setinsertmark), jak je popsáno v Windows SDK.
+Tato členská funkce implementuje chování [zprávy](/windows/win32/Controls/tb-setinsertmark)Win32 TB_SETINSERTMARK , jak je popsáno v sadě Windows SDK.
 
-##  <a name="setinsertmarkcolor"></a>CToolBarCtrl:: SetInsertMarkColor
+## <a name="ctoolbarctrlsetinsertmarkcolor"></a><a name="setinsertmarkcolor"></a>CtoolBarctrl::SetInsertmarkColor
 
-Nastaví barvu použitou k vykreslení značky vložení panelu nástrojů.
+Nastaví barvu použitou k nakreslení značky vložení pro panel nástrojů.
 
 ```
 COLORREF SetInsertMarkColor(COLORREF clrNew);
@@ -2151,20 +2151,20 @@ COLORREF SetInsertMarkColor(COLORREF clrNew);
 
 ### <a name="parameters"></a>Parametry
 
-*clrNew*<br/>
-Hodnota COLORREF, která obsahuje novou barvu značky vložení.
+*clrNové*<br/>
+Hodnota COLORREF, která obsahuje barvu nové značky vložení.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota COLORREF obsahující předchozí barvu značky vložení.
+Hodnota COLORREF, která obsahuje barvu předchozí značky vložení.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce implementuje chování zprávy Win32 [TB_SETINSERTMARKCOLOR](/windows/win32/Controls/tb-setinsertmarkcolor), jak je popsáno v Windows SDK.
+Tato členská funkce implementuje chování [TB_SETINSERTMARKCOLOR](/windows/win32/Controls/tb-setinsertmarkcolor)zprávy Win32 , jak je popsáno v sadě Windows SDK.
 
-##  <a name="setmaxtextrows"></a>CToolBarCtrl:: SetMaxTextRows
+## <a name="ctoolbarctrlsetmaxtextrows"></a><a name="setmaxtextrows"></a>CtoolBarctrl::SetMaxTextRows
 
-Nastaví maximální počet textových řádků zobrazených na tlačítku panelu nástrojů.
+Nastaví maximální počet řádků textu zobrazených na tlačítku panelu nástrojů.
 
 ```
 BOOL SetMaxTextRows(int iMaxRows);
@@ -2177,11 +2177,11 @@ Maximální počet řádků, které mají být nastaveny.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud bylo úspěšné; jinak nula.
+Nenulová, pokud je úspěšná; jinak nula.
 
-##  <a name="setmetrics"></a>CToolBarCtrl:: SetMetrics
+## <a name="ctoolbarctrlsetmetrics"></a><a name="setmetrics"></a>CToolBarCtrl::SetMetrics
 
-Nastaví metriky objektu `CToolBarCtrl`.
+Nastaví metriky `CToolBarCtrl` objektu.
 
 ```
 void SetMetrics(LPTBMETRICS ptbm);
@@ -2190,15 +2190,15 @@ void SetMetrics(LPTBMETRICS ptbm);
 ### <a name="parameters"></a>Parametry
 
 *ptbm*<br/>
-Ukazatel na strukturu [TBMETRICS](/windows/win32/api/commctrl/ns-commctrl-tbmetrics) objektu `CToolBarCtrl`.
+Ukazatel na [tbmetrics](/windows/win32/api/commctrl/ns-commctrl-tbmetrics) strukturu `CToolBarCtrl` objektu.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce emuluje funkce [TB_SETMETRICS](/windows/win32/Controls/tb-setmetrics) zprávy, jak je popsáno v Windows SDK.
+Tato členská funkce emuluje funkce [zprávy TB_SETMETRICS,](/windows/win32/Controls/tb-setmetrics) jak je popsáno v sadě Windows SDK.
 
-##  <a name="setowner"></a>CToolBarCtrl:: SetOwner
+## <a name="ctoolbarctrlsetowner"></a><a name="setowner"></a>CtoolBarCtrl::SetOwner
 
-Nastaví vlastníka okna pro ovládací prvek Toolbar.
+Nastaví okno vlastníka ovládacího prvku panelu nástrojů.
 
 ```
 void SetOwner(CWnd* pWnd);
@@ -2207,13 +2207,13 @@ void SetOwner(CWnd* pWnd);
 ### <a name="parameters"></a>Parametry
 
 *pWnd*<br/>
-Ukazatel na objekt odvozený od `CWnd` nebo `CWnd`, který bude novým vlastníkem okna pro ovládací prvek Toolbar.
+Ukazatel na `CWnd` `CWnd`nebo -derived objekt, který bude nové okno vlastníka pro ovládací prvek panelu nástrojů.
 
 ### <a name="remarks"></a>Poznámky
 
 Okno vlastníka je okno, které přijímá oznámení z panelu nástrojů.
 
-##  <a name="setpadding"></a>CToolBarCtrl:: SetPadding
+## <a name="ctoolbarctrlsetpadding"></a><a name="setpadding"></a>CToolBarCtrl::SetPadding
 
 Nastaví vodorovné a svislé odsazení aktuálního ovládacího prvku panelu nástrojů.
 
@@ -2227,26 +2227,26 @@ DWORD SetPadding(
 
 |Parametr|Popis|
 |---------------|-----------------|
-|*nHorzPadding*|pro Určuje vodorovné odsazení ovládacího prvku panelu nástrojů (v pixelech).|
-|*nVertPadding*|pro Určuje svislé odsazení ovládacího prvku panelu nástrojů (v pixelech).|
+|*nHorzPadding*|[v] Určuje vodorovné odsazení ovládacího prvku panelu nástrojů v obrazových bodech.|
+|*nVertpaze*|[v] Určuje svislé odsazení ovládacího prvku panelu nástrojů v obrazových bodech.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota DWORD, jejíž nízká hodnota slova obsahuje předchozí hodnotu horizontálního odsazení a jejíž horní slovo obsahuje předchozí svislou hodnotu odsazení. Hodnoty odsazení se měří v pixelech.
+DWORD, jehož nízké slovo obsahuje předchozí hodnotu vodorovné odsazení a jehož vysoké slovo obsahuje předchozí hodnotu svislého odsazení. Hodnoty odsazení se měří v obrazových bodech.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda pošle zprávu [TB_SETPADDING](/windows/win32/Controls/tb-setpadding) , která je popsána v Windows SDK.
+Tato metoda odešle [zprávu TB_SETPADDING,](/windows/win32/Controls/tb-setpadding) která je popsána v sadě Windows SDK.
 
 ### <a name="example"></a>Příklad
 
-Následující příklad kódu nastaví vodorovné a svislé odsazení aktuálního ovládacího prvku panelu nástrojů na 20 pixelů.
+Následující příklad kódu nastaví vodorovné a svislé odsazení aktuálního ovládacího prvku panelu nástrojů na 20 obrazových bodů.
 
 [!code-cpp[NVC_MFC_CToolBarCtrl_s1#4](../../mfc/reference/codesnippet/cpp/ctoolbarctrl-class_6.cpp)]
 
-##  <a name="setpressedimagelist"></a>CToolBarCtrl:: SetPressedImageList
+## <a name="ctoolbarctrlsetpressedimagelist"></a><a name="setpressedimagelist"></a>CtoolBarctrl::SetpressedImageList
 
-Nastaví seznam obrázků, který aktuální ovládací prvek Toolbar používá pro reprezentaci tlačítek ve stisknutém stavu.
+Nastaví seznam obrázků, který aktuální ovládací prvek panelu nástrojů používá k reprezentaci tlačítek v stisknutém stavu.
 
 ```
 CImagelist* SetPressedImageList(
@@ -2258,26 +2258,26 @@ CImagelist* SetPressedImageList(
 
 |Parametr|Popis|
 |---------------|-----------------|
-|*iImageID*|pro Index založený na nule seznamu obrázků. Nastavte tento parametr na hodnotu nula, pokud použijete pouze jeden seznam obrázků.|
-|*pImageList*|pro Ukazatel na [atributu CImageList](../../mfc/reference/cimagelist-class.md) , který obsahuje nový seznam obrázků.|
+|*iImageID*|[v] Nulový index seznamu obrázků. Pokud použijete pouze jeden seznam obrázků, nastavte tento parametr na nulu.|
+|*seznam obrázků pImage*|[v] Ukazatel na [CImageList,](../../mfc/reference/cimagelist-class.md) který obsahuje seznam nových obrázků.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na [atributu CImageList](../../mfc/reference/cimagelist-class.md) , který obsahuje předchozí seznam obrázků pro aktuální ovládací prvek, nebo hodnotu null, pokud takový seznam obrázků nebyl nastaven.
+Ukazatel na [CImageList,](../../mfc/reference/cimagelist-class.md) který obsahuje předchozí seznam obrázků pro aktuální ovládací prvek nebo NULL, pokud nebyl nastaven žádný takový seznam obrázků.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda pošle zprávu [TB_SETPRESSEDIMAGELIST](/windows/win32/Controls/tb-setpressedimagelist) , která je popsána v Windows SDK.
+Tato metoda odešle [zprávu TB_SETPRESSEDIMAGELIST,](/windows/win32/Controls/tb-setpressedimagelist) která je popsána v sadě Windows SDK.
 
 ### <a name="example"></a>Příklad
 
-Následující příklad kódu nastaví stisknutý seznam obrázků tak, aby byl stejný jako výchozí seznam obrázků.
+Následující příklad kódu nastaví, aby byl seznam stisknutého obrázku stejný jako výchozí seznam obrázků.
 
 [!code-cpp[NVC_MFC_CToolBarCtrl_s1#5](../../mfc/reference/codesnippet/cpp/ctoolbarctrl-class_7.cpp)]
 
-##  <a name="setrows"></a>CToolBarCtrl:: SetRows
+## <a name="ctoolbarctrlsetrows"></a><a name="setrows"></a>CtoolBarCtrl::SetRows
 
-Požádá ovládací prvek Panel nástrojů o změnu velikosti na požadovaný počet řádků.
+Požádá ovládací prvek panelu nástrojů o velikost na požadovaný počet řádků.
 
 ```
 void SetRows(
@@ -2288,32 +2288,32 @@ void SetRows(
 
 ### <a name="parameters"></a>Parametry
 
-*Hodnota nRows*<br/>
+*nŘádky*<br/>
 Požadovaný počet řádků.
 
-*bLarger*<br/>
-Určuje, zda se má použít více řádků nebo méně řádků, pokud nelze změnit velikost panelu nástrojů na požadovaný počet řádků.
+*bVětší*<br/>
+Určuje, zda má být používáno více řádků nebo méně řádků, pokud nelze velikost panelu nástrojů na požadovaný počet řádků.
 
 *lpRect*<br/>
-Odkazuje na objekt [CRect](../../atl-mfc-shared/reference/crect-class.md) nebo strukturu [Rect](/previous-versions/dd162897\(v=vs.85\)) , která dostane nový ohraničující obdélník panelu nástrojů.
+Odkazuje na [CRect](../../atl-mfc-shared/reference/crect-class.md) objekt nebo [RECT](/previous-versions/dd162897\(v=vs.85\)) struktury, která obdrží nový ohraničovací obdélník panelu nástrojů.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud panel nástrojů nemůže změnit velikost na požadované číslo nebo řádky, změní se sám na nejbližší větší nebo nejbližší menší platnou velikost v závislosti na hodnotě *bLarger*. Pokud má *bLarger* hodnotu true, nový počet řádků bude větší než požadovaný počet. Pokud má *bLarger* hodnotu false, bude nový počet řádků menší než požadovaný počet.
+Pokud panel nástrojů nelze změnit velikost sám na požadované číslo nebo řádky, změní velikost sám na další větší nebo další menší platnou velikost, v závislosti na hodnotě *bLarger*. Pokud *bLarger* je TRUE, nový počet řádků bude větší než požadované číslo. Pokud *bLarger* je FALSE, nový počet řádků bude menší než požadované číslo.
 
-Daný počet řádků je platný pro panel nástrojů, pokud lze tlačítka uspořádat tak, aby všechny řádky měly stejný počet tlačítek (kromě možná posledního řádku). Například panel nástrojů, který obsahuje čtyři tlačítka, nemůže mít velikost na tři řádky, protože poslední dva řádky by musely být kratší. Pokud jste se pokusili velikost změnit na tři řádky, získáte čtyři řádky, pokud byla *BLARGER* pravdivá, a dva řádky, pokud by *bLarger* bylo false.
+Daný počet řádků je platný pro panel nástrojů, pokud tlačítka mohou být uspořádány tak, aby všechny řádky mají stejný počet tlačítek (s výjimkou možná poslední řádek). Například panel nástrojů, který obsahuje čtyři tlačítka nelze velikost na tři řádky, protože poslední dva řádky by musely být kratší. Pokud jste se pokusili velikost na tři řádky, by se dostanete čtyři řádky, pokud *bLarger* byla PRAVDA a dva řádky, pokud *bLarger* byl FALSE.
 
-Pokud jsou na panelu nástrojů oddělovače, pravidla pro dobu, kdy je zadaný počet řádků platný, jsou složitější. Rozložení je vypočítáno tak, že se skupiny tlačítek (tlačítka s oddělovači před první a poslední tlačítko ve skupině) nikdy nerozdělí na několik řádků, pokud se skupina nemůže vejít na jeden řádek.
+Pokud jsou v panelu nástrojů oddělovače, pravidla pro, když je platný daný počet řádků jsou složitější. Rozložení je vypočítáno tak, že skupiny tlačítek (tlačítka s oddělovačem před prvním a posledním tlačítkem ve skupině) se nikdy nerozdělí na několika řádcích, pokud se skupina nevejde na jeden řádek.
 
-Pokud se skupina nevejde na jeden řádek, další skupina se spustí na dalším řádku, a to i v případě, že by se vešla na řádek, kde byla velká skupina ukončena. Účelem tohoto pravidla je, aby bylo oddělení velkých skupin více patrné. Výsledné svislé oddělovače se počítají jako řádky.
+Pokud se skupina nevejde do jednoho řádku, další skupina začne na dalším řádku, i když se vejde na řádek, kde skončila velká skupina. Účelem tohoto pravidla je, aby oddělení mezi velkými skupinami výraznější. Výsledné svislé oddělovače se počítají jako řádky.
 
-Všimněte si také, že členská funkce `SetRows` vždycky vybere rozložení, které má za následek nejmenší velikost panelu nástrojů. Vytvoření panelu nástrojů se stylem TBSTYLE_WRAPABLE a následně Změna velikosti ovládacího prvku bude jednoduše používat metodu podanou výše v rámci dané šířky ovládacího prvku.
+Všimněte si `SetRows` také, že členská funkce bude vždy zvolit rozložení, které má za následek nejmenší velikost panelu nástrojů. Vytvoření panelu nástrojů s TBSTYLE_WRAPABLE stylu a potom změna velikosti ovládacího prvku jednoduše použije metodu uvedenou výše vzhledem k šířce ovládacího prvku.
 
-Tuto funkci lze volat pouze pro panely nástrojů, které byly vytvořeny pomocí stylu TBSTYLE_WRAPABLE.
+Tuto funkci lze volat pouze pro panely nástrojů, které byly vytvořeny s TBSTYLE_WRAPABLE stylu.
 
-##  <a name="setstate"></a>CToolBarCtrl:: SetState
+## <a name="ctoolbarctrlsetstate"></a><a name="setstate"></a>CToolBarCtrl::SetState
 
-Nastaví stav pro zadané tlačítko v ovládacím prvku ToolBar.
+Nastaví stav zadaného tlačítka v ovládacím prvku panelu nástrojů.
 
 ```
 BOOL SetState(
@@ -2323,23 +2323,23 @@ BOOL SetState(
 
 ### <a name="parameters"></a>Parametry
 
-*nID*<br/>
-Identifikátor příkazu tlačítka
+*Nid*<br/>
+Identifikátor příkazu tlačítka.
 
-*nInformace*<br/>
-Příznaky stavu. Může se jednat o kombinaci hodnot uvedených pro stavy tlačítek v [CToolBarCtrl:: AddButtons](#addbuttons).
+*nStát*<br/>
+Státní vlajky. Může se jedná o kombinaci hodnot uvedených pro stavy tlačítek v [ctoolbarctrl::AddButtons](#addbuttons).
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud bylo úspěšné; jinak nula.
+Nenulová, pokud je úspěšná; jinak nula.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce je užitečná hlavně v případě, že chcete nastavit více než jeden stav tlačítka. Chcete-li pouze nastavit jeden stav, použijte jednu z následujících funkcí členů: [EnableButton](#enablebutton), [CheckButton](#checkbutton), [HideButton](#hidebutton), [neurčitý](#indeterminate)nebo [PressButton](#pressbutton).
+Tato funkce je obzvláště užitečná, pokud chcete nastavit více než jeden stav tlačítka. Chcete-li nastavit pouze jeden stav, použijte jednu z následujících členských funkcí: [EnableButton](#enablebutton), [CheckButton](#checkbutton), [HideButton](#hidebutton), [Indeterminate](#indeterminate)nebo [PressButton](#pressbutton).
 
-##  <a name="setstyle"></a>CToolBarCtrl:: SetStyle
+## <a name="ctoolbarctrlsetstyle"></a><a name="setstyle"></a>CtoolBarCtrl::SetStyle
 
-Nastaví styly ovládacího prvku ToolBar.
+Nastaví styly ovládacího prvku panelu nástrojů.
 
 ```
 void SetStyle(DWORD dwStyle);
@@ -2347,12 +2347,12 @@ void SetStyle(DWORD dwStyle);
 
 ### <a name="parameters"></a>Parametry
 
-*dwStyle*<br/>
-Hodnota DWORD obsahující kombinaci [stylů ovládacího prvku ToolBar](/windows/win32/Controls/toolbar-control-and-button-styles), jak je popsáno v Windows SDK.
+*dwStyl*<br/>
+DWORD obsahující kombinaci [stylů ovládacího prvku panelu nástrojů](/windows/win32/Controls/toolbar-control-and-button-styles), jak je popsáno v sadě Windows SDK.
 
-##  <a name="settooltips"></a>CToolBarCtrl:: SetToolTips
+## <a name="ctoolbarctrlsettooltips"></a><a name="settooltips"></a>CtoolBarctrl::SettoolTips
 
-Přidruží ovládací prvek popisu tlačítka k ovládacímu prvku ToolBar.
+Přidruží ovládací prvek špičky nástroje k ovládacímu prvku panelu nástrojů.
 
 ```
 void SetToolTips(CToolTipCtrl* pTip);
@@ -2361,11 +2361,11 @@ void SetToolTips(CToolTipCtrl* pTip);
 ### <a name="parameters"></a>Parametry
 
 *pTip*<br/>
-Ukazatel na objekt [CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) .
+Ukazatel na objekt [CToolTipCtrl.](../../mfc/reference/ctooltipctrl-class.md)
 
-##  <a name="setwindowtheme"></a>CToolBarCtrl:: SetWindowTheme
+## <a name="ctoolbarctrlsetwindowtheme"></a><a name="setwindowtheme"></a>CToolBarCtrl::SetWindowTheme
 
-Nastaví styl vizuálu objektu `CToolBarCtrl`.
+Nastaví vizuální styl `CToolBarCtrl` objektu.
 
 ```
 HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
@@ -2374,20 +2374,20 @@ HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
 ### <a name="parameters"></a>Parametry
 
 *pszSubAppName*<br/>
-Ukazatel na řetězec v kódování Unicode, který obsahuje vizuální styl panelu nástrojů k nastavení.
+Ukazatel na řetězec Unicode, který obsahuje vizuální styl panelu nástrojů, který chcete nastavit.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Návratová hodnota se nepoužívá.
+Vrácená hodnota se nepoužívá.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce emuluje funkce [TB_SETWINDOWTHEME](/windows/win32/Controls/tb-setwindowtheme) zprávy, jak je popsáno v Windows SDK.
+Tato členská funkce emuluje funkce [zprávy TB_SETWINDOWTHEME,](/windows/win32/Controls/tb-setwindowtheme) jak je popsáno v sadě Windows SDK.
 
 ## <a name="see-also"></a>Viz také
 
-[CMNCTRL1 Sample MFC](../../overview/visual-cpp-samples.md)<br/>
-[MFCIE Sample MFC](../../overview/visual-cpp-samples.md)<br/>
+[Ukázka knihovny MFC CMNCTRL1](../../overview/visual-cpp-samples.md)<br/>
+[MFC ukázka MFCIE](../../overview/visual-cpp-samples.md)<br/>
 [CWnd – třída](../../mfc/reference/cwnd-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [CToolBar – třída](../../mfc/reference/ctoolbar-class.md)

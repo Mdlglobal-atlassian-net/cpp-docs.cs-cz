@@ -28,17 +28,18 @@ helpviewer_keywords:
 - CMFCReBar [MFC], OnUpdateCmdUI
 - CMFCReBar [MFC], SetPaneAlignment
 ms.assetid: 02a60e29-6224-49c1-9e74-e0a7d9f8d023
-ms.openlocfilehash: d348cf7aac57ce213e4d3f602501d12cee8e20d8
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: a07f30fb00dd00e7a6315b8935731ccfc7500843
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69505446"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81361703"
 ---
 # <a name="cmfcrebar-class"></a>CMFCReBar – třída
 
-`CMFCReBar` Objekt je ovládací panel, který poskytuje informace o rozložení, persistenci a stavu pro ovládací prvky matrice.
-Další podrobnosti najdete ve zdrojovém kódu ve složce **VC\\atlmfc\\src\\MFC** v instalaci sady Visual Studio.
+Objekt `CMFCReBar` je ovládací panel, který poskytuje informace o rozložení, trvalosti a stavu ovládacích prvků výztuže.
+Další podrobnosti naleznete ve zdrojovém kódu umístěném ve složce **MFC\\knihovny\\VC src\\** instalace sady Visual Studio.
+
 ## <a name="syntax"></a>Syntaxe
 
 ```
@@ -49,49 +50,49 @@ class CMFCReBar : public CPane
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CMFCReBar::AddBar](#addbar)|Přidá do matrice pásmo.|
-|[CMFCReBar::CalcFixedLayout](#calcfixedlayout)|(Overrides [CBasePane:: CalcFixedLayout](../../mfc/reference/cbasepane-class.md#calcfixedlayout).)|
-|[CMFCReBar::CanFloat](#canfloat)|(Overrides [CBasePane:: CanFloat](../../mfc/reference/cbasepane-class.md#canfloat).)|
-|[CMFCReBar:: Create](#create)|Vytvoří ovládací prvek matrice a připojí ho k `CMFCReBar` objektu.|
-|[CMFCReBar::EnableDocking](#enabledocking)|(Overrides [CBasePane:: EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking).)|
-|[CMFCReBar::GetReBarBandInfoSize](#getrebarbandinfosize)||
-|[CMFCReBar::GetReBarCtrl](#getrebarctrl)|Poskytuje přímý přístup k základnímu [atributu CReBarCtrl](../../mfc/reference/crebarctrl-class.md) běžnému řízení.|
-|[CMFCReBar::OnShowControlBarMenu](#onshowcontrolbarmenu)|(Overrides [CPane:: OnShowControlBarMenu](../../mfc/reference/cpane-class.md#onshowcontrolbarmenu).)|
-|[CMFCReBar::OnToolHitTest](#ontoolhittest)|(Potlačení [CWnd:: OnToolHitTest](../../mfc/reference/cwnd-class.md#ontoolhittest).)|
-|[CMFCReBar::OnUpdateCmdUI](#onupdatecmdui)|(Overrides [CBasePane:: OnUpdateCmdUI](cbasepane-class.md).)|
-|[CMFCReBar::SetPaneAlignment](#setpanealignment)|(Overrides [CBasePane:: SetPaneAlignment](../../mfc/reference/cbasepane-class.md#setpanealignment).)|
+|[CMFCRebar::Addbar](#addbar)|Přidá k výztuze pruh.|
+|[CMFCReBar::CalcFixedLayout](#calcfixedlayout)|(Přepíše [CBasePane::CalcFixedLayout](../../mfc/reference/cbasepane-class.md#calcfixedlayout).)|
+|[CMFCRebar::Canfloat](#canfloat)|(Přepíše [CBasePane::CanFloat](../../mfc/reference/cbasepane-class.md#canfloat).)|
+|[CMFCRebar::Vytvořit](#create)|Vytvoří ovládací prvek výztuže `CMFCReBar` a připojí jej k objektu.|
+|[CMFCReBar::EnableDocking](#enabledocking)|(Přepíše [CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking).)|
+|[CMFCRebar::GetRebarBandInfoSize](#getrebarbandinfosize)||
+|[CMFCRebar::GetRebarctrl](#getrebarctrl)|Poskytuje přímý přístup k základní [CReBarCtrl](../../mfc/reference/crebarctrl-class.md) společný ovládací prvek.|
+|[CMFCRebar::OnShowControlBarMenu](#onshowcontrolbarmenu)|(Přepíše [CPane::OnShowControlBarMenu](../../mfc/reference/cpane-class.md#onshowcontrolbarmenu).)|
+|[CMFCRebar::OnToolHitTest](#ontoolhittest)|(Přepíše [CWnd::OnToolHitTest](../../mfc/reference/cwnd-class.md#ontoolhittest).)|
+|[CMFCReBar::OnUpdateCmdUI](#onupdatecmdui)|(Přepíše [CBasePane::OnUpdateCmdUI](cbasepane-class.md).)|
+|[CMFCRebar::Setpanealignment](#setpanealignment)|(Přepíše [CBasePane::SetPaneAlignment](../../mfc/reference/cbasepane-class.md#setpanealignment).)|
 
 ## <a name="remarks"></a>Poznámky
 
-`CMFCReBar` Objekt může obsahovat různé podřízené okna. To zahrnuje pole pro úpravy, panely nástrojů a seznamy. Můžete změnit velikost matrice programově nebo uživatel může ručně změnit velikost matrice přetažením jeho pruhového panelu. Pozadí objektu matrice můžete také nastavit na rastr podle vašeho výběru.
+Objekt `CMFCReBar` může obsahovat různé podřízené okna. To zahrnuje editační pole, panely nástrojů a seznamy. Můžete změnit velikost výztuže programově nebo uživatel může ručně změnit velikost výztuže přetažením úchytu. Můžete také nastavit pozadí objektu výztuže na rastrovou mapu podle vašeho výběru.
 
-Objekt matrice se chová podobně jako objekt Toolbar. Ovládací prvek matrice může obsahovat jeden nebo více pásem a každý pruh může obsahovat ovládací panel, rastrový obrázek, textový popisek a podřízené okno.
+Objekt výztuže se chová podobně jako objekt panelu nástrojů. Ovládací prvek výztuže může obsahovat jedno nebo více pásů a každé pásmo může obsahovat úchyt, bitmapu, textový popisek a podřízené okno.
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak použít různé metody ve `CMFCReBar` třídě. Příklad ukazuje, jak vytvořit ovládací prvek matrice a přidat do něj pásmo. Funkce Band funguje jako vnitřní panel nástrojů. Tento fragment kódu je součástí [ukázky testu matrice](../../overview/visual-cpp-samples.md).
+Následující příklad ukazuje, jak používat různé `CMFCReBar` metody ve třídě. Příklad ukazuje, jak vytvořit ovládací prvek výztuže a přidat do něj pásmo. Pásmo funguje jako vnitřní panel nástrojů. Tento fragment kódu je součástí [ukázky testu výztuže](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_RebarTest#1](../../mfc/reference/codesnippet/cpp/cmfcrebar-class_1.h)]
 [!code-cpp[NVC_MFC_RebarTest#2](../../mfc/reference/codesnippet/cpp/cmfcrebar-class_2.cpp)]
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[CObject](../../mfc/reference/cobject-class.md)\
-└&nbsp;[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;└&nbsp;[CWnd](../../mfc/reference/cwnd-class.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└&nbsp;[CBasePane](../../mfc/reference/cbasepane-class.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└&nbsp;[CPane](../../mfc/reference/cpane-class.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└&nbsp;[CMFCReBar](../../mfc/reference/cmfcrebar-class.md)
+[CObjekt](../../mfc/reference/cobject-class.md)\
+啦&nbsp;[CCmdCíl](../../mfc/reference/ccmdtarget-class.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;啦&nbsp;[CWnd](../../mfc/reference/cwnd-class.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;啦&nbsp;[CBasePane](../../mfc/reference/cbasepane-class.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;啦&nbsp;[CPane](../../mfc/reference/cpane-class.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;啦&nbsp;[CMFCRebar](../../mfc/reference/cmfcrebar-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxRebar. h
+**Záhlaví:** afxRebar.h
 
-##  <a name="addbar"></a>CMFCReBar::AddBar
+## <a name="cmfcrebaraddbar"></a><a name="addbar"></a>CMFCRebar::Addbar
 
-Přidá do matrice pásmo.
+Přidá k výztuze pruh.
 
 ```
 BOOL AddBar(
@@ -111,30 +112,30 @@ BOOL AddBar(
 ### <a name="parameters"></a>Parametry
 
 *pBar*<br/>
-[in, out] Ukazatel na podřízené okno, které má být vloženo do matrice. Odkazovaný objekt musí mít styl okna **WS_CHILD** .
+[dovnitř, ven] Ukazatel na podřízené okno, které má být vloženo do výztuže. Odkazovaný objekt musí mít **styl WS_CHILD** okna.
 
 *pszText*<br/>
-pro Určuje text, který se má zobrazit na matrice. Text není součástí podřízeného okna. Místo toho se zobrazí na samotném matrice.
+[v] Určuje text, který se má zobrazit na výztuze. Text není součástí podřízeného okna. Spíše se zobrazí na samotné výztuze.
 
 *pbmp*<br/>
-[in, out] Určuje rastrový obrázek, který se má zobrazit na pozadí matrice.
+[dovnitř, ven] Určuje bitmapu, která má být zobrazena na pozadí výztuže.
 
-*dwStyle*<br/>
-pro Obsahuje styl, který se má použít pro pásmo. Úplný seznam stylů pásem naleznete v popisu `fStyle` ve struktuře [REBARBANDINFO](/windows/win32/api/commctrl/ns-commctrl-rebarbandinfow) v dokumentaci k Windows SDK.
+*dwStyl*<br/>
+[v] Obsahuje styl, který se má použít pro pásmo. Úplný seznam stylů pásma naleznete v `fStyle` popisu ve struktuře [REBARBANDINFO](/windows/win32/api/commctrl/ns-commctrl-rebarbandinfow) v dokumentaci k sada Windows SDK.
 
 *clrFore*<br/>
-pro Představuje barvu popředí matrice.
+[v] Představuje barvu popředí výztuže.
 
-*clrBack*<br/>
-pro Představuje barvu pozadí matrice.
+*zpět*<br/>
+[v] Představuje barvu pozadí výztuže.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-TRUE, pokud byl panel úspěšně přidán do matrice; v opačném případě FALSE.
+PRAVDA, pokud bylo pásmo úspěšně přidáno do výztuže; jinak NEPRAVDA.
 
-##  <a name="create"></a>CMFCReBar:: Create
+## <a name="cmfcrebarcreate"></a><a name="create"></a>CMFCRebar::Vytvořit
 
-Vytvoří ovládací prvek matrice a připojí ho k objektu [CMFCReBar](../../mfc/reference/cmfcrebar-class.md) .
+Vytvoří ovládací prvek výztuže a připojí jej k objektu [CMFCReBar.](../../mfc/reference/cmfcrebar-class.md)
 
 ```
 BOOL Create(
@@ -147,26 +148,26 @@ BOOL Create(
 ### <a name="parameters"></a>Parametry
 
 *pParentWnd*<br/>
-[in, out] Ukazatel na nadřazené okno tohoto ovládacího prvku matrice.
+[dovnitř, ven] Ukazatel na nadřazené okno tohoto ovládacího prvku výztuže.
 
-*dwCtrlStyle*<br/>
-pro Určuje styl ovládacího prvku matrice. Výchozí hodnota Style je **RBS_BANDBORDERS**, která zobrazuje úzké řádky pro oddělit sousední pásma na ovládacím prvku matrice. Seznam platných stylů naleznete v tématu [styly ovládacího prvku matrice](/windows/win32/Controls/rebar-control-styles) v dokumentaci Windows SDK.
+*dwCtrlStyl*<br/>
+[v] Určuje styl ovládacího prvku výztuže. Výchozí hodnota stylu je **RBS_BANDBORDERS**, která zobrazuje úzké čáry pro oddělení sousedních pásem v ovládacím prvku výztuže. Seznam platných stylů naleznete v [tématu Styly ovládacích prvků výztuže](/windows/win32/Controls/rebar-control-styles) v dokumentaci k sada Windows SDK.
 
-*dwStyle*<br/>
-pro Styl okna ovládacího prvku matrice Seznam platných stylů naleznete v tématu [styly oken](../../mfc/reference/styles-used-by-mfc.md#window-styles).
+*dwStyl*<br/>
+[v] Styl okna ovládacího prvku výztuže. Seznam platných stylů naleznete v [tématu Styly oken](../../mfc/reference/styles-used-by-mfc.md#window-styles).
 
-*nID*<br/>
-pro ID podřízeného okna matrice
+*Nid*<br/>
+[v] Id podřízeného okna výztuže.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-TRUE, pokud byl matrice úspěšně vytvořen; v opačném případě FALSE.
+PRAVDA, pokud byla výztuž vytvořena úspěšně; jinak NEPRAVDA.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="getrebarctrl"></a>CMFCReBar::GetReBarCtrl
+## <a name="cmfcrebargetrebarctrl"></a><a name="getrebarctrl"></a>CMFCRebar::GetRebarctrl
 
-Poskytuje přímý přístup k `CReBarCtrl` základnímu společnému ovládacímu prvku pro `CMFCReBar` objekty.
+Poskytuje přímý `CReBarCtrl` přístup k základní `CMFCReBar` společný ovládací prvek pro objekty.
 
 ```
 CReBarCtrl& GetReBarCtrl() const;
@@ -174,13 +175,13 @@ CReBarCtrl& GetReBarCtrl() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Odkaz na podkladový `CReBarCtrl` objekt.
+Odkaz na základní `CReBarCtrl` objekt.
 
 ### <a name="remarks"></a>Poznámky
 
-Voláním této metody můžete využít výhod běžných funkcí ovládacího prvku Windows matrice při přizpůsobování matrice.
+Volání této metody využít funkce windows výztuže společné řízení při přizpůsobení výztuže.
 
-##  <a name="calcfixedlayout"></a>CMFCReBar::CalcFixedLayout
+## <a name="cmfcrebarcalcfixedlayout"></a><a name="calcfixedlayout"></a>CMFCReBar::CalcFixedLayout
 
 ```
 virtual CSize CalcFixedLayout(
@@ -190,14 +191,14 @@ virtual CSize CalcFixedLayout(
 
 ### <a name="parameters"></a>Parametry
 
-pro *bStretch*<br/>
-[in] *bHorz*<br/>
+[v] *bÚsek*<br/>
+[v] *bHorz*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="canfloat"></a>CMFCReBar::CanFloat
+## <a name="cmfcrebarcanfloat"></a><a name="canfloat"></a>CMFCRebar::Canfloat
 
 ```
 virtual BOOL CanFloat() const;
@@ -207,7 +208,7 @@ virtual BOOL CanFloat() const;
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="enabledocking"></a>CMFCReBar::EnableDocking
+## <a name="cmfcrebarenabledocking"></a><a name="enabledocking"></a>CMFCReBar::EnableDocking
 
 ```
 void EnableDocking(DWORD dwDockStyle);
@@ -215,11 +216,11 @@ void EnableDocking(DWORD dwDockStyle);
 
 ### <a name="parameters"></a>Parametry
 
-[in] *dwDockStyle*<br/>
+[v] *dwDockStyl*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="getrebarbandinfosize"></a>CMFCReBar::GetReBarBandInfoSize
+## <a name="cmfcrebargetrebarbandinfosize"></a><a name="getrebarbandinfosize"></a>CMFCRebar::GetRebarBandInfoSize
 
 ```
 UINT GetReBarBandInfoSize() const;
@@ -229,7 +230,7 @@ UINT GetReBarBandInfoSize() const;
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="onshowcontrolbarmenu"></a>CMFCReBar::OnShowControlBarMenu
+## <a name="cmfcrebaronshowcontrolbarmenu"></a><a name="onshowcontrolbarmenu"></a>CMFCRebar::OnShowControlBarMenu
 
 ```
 virtual BOOL OnShowControlBarMenu(CPoint);
@@ -237,13 +238,13 @@ virtual BOOL OnShowControlBarMenu(CPoint);
 
 ### <a name="parameters"></a>Parametry
 
-pro *CPoint*<br/>
+[v] *CPoint*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="ontoolhittest"></a>CMFCReBar::OnToolHitTest
+## <a name="cmfcrebarontoolhittest"></a><a name="ontoolhittest"></a>CMFCRebar::OnToolHitTest
 
 ```
 virtual INT_PTR OnToolHitTest(
@@ -253,14 +254,14 @@ virtual INT_PTR OnToolHitTest(
 
 ### <a name="parameters"></a>Parametry
 
-pro *bod*<br/>
-pro *PTI*<br/>
+[v] *bod*<br/>
+[v] *pTI*<br/>
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="onupdatecmdui"></a>CMFCReBar::OnUpdateCmdUI
+## <a name="cmfcrebaronupdatecmdui"></a><a name="onupdatecmdui"></a>CMFCReBar::OnUpdateCmdUI
 
 ```
 virtual void OnUpdateCmdUI(
@@ -270,12 +271,12 @@ virtual void OnUpdateCmdUI(
 
 ### <a name="parameters"></a>Parametry
 
-pro *pTarget*<br/>
-pro *bDisableIfNoHndler*<br/>
+[v] *pCíl*<br/>
+[v] *bDisableIfNoHndler*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="setpanealignment"></a>CMFCReBar::SetPaneAlignment
+## <a name="cmfcrebarsetpanealignment"></a><a name="setpanealignment"></a>CMFCRebar::Setpanealignment
 
 ```
 virtual void SetPaneAlignment(DWORD dwAlignment);
@@ -283,13 +284,13 @@ virtual void SetPaneAlignment(DWORD dwAlignment);
 
 ### <a name="parameters"></a>Parametry
 
-pro *dwAlignment*<br/>
+[v] *dwAlignment*<br/>
 
 ### <a name="remarks"></a>Poznámky
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>
-[CReBarCtrl – třída](../../mfc/reference/crebarctrl-class.md)<br/>
+[Třída CRebarctrl](../../mfc/reference/crebarctrl-class.md)<br/>
 [CPane – třída](../../mfc/reference/cpane-class.md)

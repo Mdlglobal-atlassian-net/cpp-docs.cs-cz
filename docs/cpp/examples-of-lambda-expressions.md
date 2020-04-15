@@ -4,24 +4,24 @@ ms.date: 05/07/2019
 helpviewer_keywords:
 - lambda expressions [C++], examples
 ms.assetid: 52506b15-0771-4190-a966-2f302049ca86
-ms.openlocfilehash: 07c0f6b12c3c6a5dd0c3273acccbaacbc0db08a5
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 106417519d00da1363f214492af9657712487088
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80189036"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81320343"
 ---
 # <a name="examples-of-lambda-expressions"></a>Příklady výrazů lambda
 
-Tento článek ukazuje, jak můžete použít výrazy lambda v programech. Přehled výrazů lambda naleznete v tématu [lambda Expressions](../cpp/lambda-expressions-in-cpp.md). Další informace o struktuře výrazu lambda naleznete v tématu [syntaxe výrazu lambda](../cpp/lambda-expression-syntax.md).
+Tento článek ukazuje, jak můžete použít výrazy lambda v programech. Přehled lambda výrazů, viz [Lambda výrazy](../cpp/lambda-expressions-in-cpp.md). Další informace o struktuře výrazu lambda naleznete v tématu [Syntaxe výrazu Lambda](../cpp/lambda-expression-syntax.md).
 
-##  <a name="declaring-lambda-expressions"></a><a name="declaringLambdaExpressions"></a>Deklarování výrazů lambda
+## <a name="declaring-lambda-expressions"></a><a name="declaringLambdaExpressions"></a>Deklarování výrazů Lambda
 
 ### <a name="example-1"></a>Příklad 1
 
-Vzhledem k tomu, že je zadán výraz lambda, lze jej přiřadit k **Automatické** proměnné nebo objektu [funkce](../standard-library/function-class.md) , jak je znázorněno zde:
+Vzhledem k tomu, že je zadán výraz lambda, můžete jej přiřadit **k automatické** proměnné nebo objektu [funkce,](../standard-library/function-class.md) jak je znázorněno zde:
 
-### <a name="code"></a>Kód
+### <a name="code"></a>kód
 
 ```cpp
 // declaring_lambda_expressions1.cpp
@@ -55,15 +55,15 @@ int main()
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace najdete v tématu [Automatická](../cpp/auto-cpp.md), [Třída Function](../standard-library/function-class.md)a [volání funkce](../cpp/function-call-cpp.md).
+Další informace naleznete [v tématu auto](../cpp/auto-cpp.md), function [Class](../standard-library/function-class.md)a Function [Call](../cpp/function-call-cpp.md).
 
-Přestože lambda výrazy jsou často deklarovány v těle funkce, můžete je deklarovat kdekoli, kde lze inicializovat proměnnou.
+Přestože lambda výrazy jsou nejčastěji deklarovány v těle funkce, můžete deklarovat kdekoli, že můžete inicializovat proměnnou.
 
 ### <a name="example-2"></a>Příklad 2
 
-Kompilátor společnosti C++ Microsoft váže výraz lambda ke svým zachyceným proměnným, pokud je výraz deklarován místo toho, je-li výraz volán. Následující příklad ukazuje výraz lambda, který zachycuje místní proměnnou `i` podle hodnoty a místní proměnnou `j` odkazem. Vzhledem k tomu, že výraz lambda zachytí `i` podle hodnoty, přeřazení `i` později v programu neovlivní výsledek výrazu. Protože však lambda výraz zachytí `j` odkazem, přeřazení `j` má vliv na výsledek výrazu.
+Kompilátor Microsoft C++ váže výraz lambda na zachycené proměnné, když je výraz deklarován namísto při volání výrazu. Následující příklad ukazuje lambda výraz, který `i` zachycuje místní proměnnou `j` podle hodnoty a místní proměnnou odkazem. Vzhledem k tomu, `i` že výraz lambda `i` zachycuje podle hodnoty, opětovné přiřazení později v programu nemá vliv na výsledek výrazu. Protože však výraz lambda `j` zachytí odkazem, `j` přeřazení výrazu ovlivní výsledek výrazu.
 
-### <a name="code"></a>Kód
+### <a name="code"></a>kód
 
 ```cpp
 // declaring_lambda_expressions2.cpp
@@ -99,15 +99,15 @@ int main()
 
 [[V tomto článku](#top)]
 
-##  <a name="calling-lambda-expressions"></a><a name="callingLambdaExpressions"></a>Volání výrazů lambda
+## <a name="calling-lambda-expressions"></a><a name="callingLambdaExpressions"></a>Volání lambda výrazů
 
-Výraz lambda můžete volat ihned, jak je znázorněno v následujícím fragmentu kódu. Druhý fragment kódu ukazuje, jak předat lambda jako argument pro C++ standardní algoritmy knihovny, jako je například `find_if`.
+Výraz lambda můžete volat ihned, jak je znázorněno v následujícím fragmentu kódu. Druhý úryvek ukazuje, jak předat lambda jako argument algoritmům standardní `find_if`knihovny jazyka C++, například .
 
 ### <a name="example-1"></a>Příklad 1
 
-Tento příklad deklaruje výraz lambda, který vrací součet dvou celých čísel, a okamžitě volá výraz s argumenty `5` a `4`:
+Tento příklad deklaruje výraz lambda, který vrací součet dvou celých `5` `4`čísel a okamžitě volá výraz s argumenty a :
 
-### <a name="code"></a>Kód
+### <a name="code"></a>kód
 
 ```cpp
 // calling_lambda_expressions1.cpp
@@ -130,9 +130,9 @@ int main()
 
 ### <a name="example-2"></a>Příklad 2
 
-Tento příklad předá výraz lambda jako argument funkci `find_if`. Výraz lambda vrátí **hodnotu true** , pokud je jeho parametr sudé číslo.
+Tento příklad předá výraz lambda `find_if` jako argument funkci. Výraz lambda vrátí **hodnotu true,** pokud je jeho parametrsudem sudé číslo.
 
-### <a name="code"></a>Kód
+### <a name="code"></a>kód
 
 ```cpp
 // calling_lambda_expressions2.cpp
@@ -175,17 +175,17 @@ The first even number in the list is 42.
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace o funkci `find_if` naleznete v tématu [find_if](../standard-library/algorithm-functions.md#find_if). Další informace o C++ standardních funkcích knihoven, které provádějí běžné algoritmy, naleznete v tématu [\<Algorithm >](../standard-library/algorithm.md).
+Další informace o `find_if` funkci naleznete v [tématu find_if](../standard-library/algorithm-functions.md#find_if). Další informace o funkcích standardní knihovny jazyka C++, které provádějí běžné algoritmy, naleznete [ \<v tématu algoritmus>](../standard-library/algorithm.md).
 
 [[V tomto článku](#top)]
 
-##  <a name="nesting-lambda-expressions"></a><a name="nestingLambdaExpressions"></a>Vnořování výrazů lambda
+## <a name="nesting-lambda-expressions"></a><a name="nestingLambdaExpressions"></a>Vnoření lambda výrazů
 
 ### <a name="example"></a>Příklad
 
 Výraz lambda můžete vnořit do jiného tak, jak je ukázáno v následujícím příkladu. Vnitřní výraz lambda vynásobí svůj argument 2 a vrátí výsledek. Vnější výraz lambda volá vnitřní výraz lambda s argumentem a k výsledku přičte 3.
 
-### <a name="code"></a>Kód
+### <a name="code"></a>kód
 
 ```cpp
 // nesting_lambda_expressions.cpp
@@ -213,17 +213,17 @@ int main()
 
 ### <a name="remarks"></a>Poznámky
 
-V tomto příkladu je `[](int y) { return y * 2; }` vnořený výraz lambda.
+V tomto `[](int y) { return y * 2; }` příkladu je vnořený lambda výraz.
 
 [[V tomto článku](#top)]
 
-##  <a name="higher-order-lambda-functions"></a><a name="higherOrderLambdaExpressions"></a>Funkce lambda s vyšším pořadím
+## <a name="higher-order-lambda-functions"></a><a name="higherOrderLambdaExpressions"></a>Funkce Lambda vyššího řádu
 
 ### <a name="example"></a>Příklad
 
-Mnoho programovacích jazyků podporuje koncept *funkce vyššího řádu.* Funkce vyššího řádu je výraz lambda, který bere další výraz lambda jako svůj argument nebo který vrací výraz lambda. Můžete použít třídu [Function](../standard-library/function-class.md) k povolení chování výrazu C++ lambda jako funkce vyššího řádu. Následující příklad ukazuje výraz lambda, který vrací objekt `function` a výraz lambda, který přebírá objekt `function` jako argument.
+Mnoho programovacích jazyků podporuje koncept *funkce vyššího řádu.* Funkce vyššího řádu je výraz lambda, který bere další výraz lambda jako svůj argument nebo který vrací výraz lambda. Třídu [funkce](../standard-library/function-class.md) můžete použít k povolení výrazu lambda jazyka C++, který se má chovat jako funkce vyššího řádu. Následující příklad ukazuje lambda výraz, `function` který vrací objekt a lambda výraz, který bere `function` objekt jako jeho argument.
 
-### <a name="code"></a>Kód
+### <a name="code"></a>kód
 
 ```cpp
 // higher_order_lambda_expression.cpp
@@ -266,14 +266,14 @@ int main()
 
 [[V tomto článku](#top)]
 
-##  <a name="using-a-lambda-expression-in-a-function"></a><a name="methodLambdaExpressions"></a>Použití výrazu lambda ve funkci
+## <a name="using-a-lambda-expression-in-a-function"></a><a name="methodLambdaExpressions"></a>Použití výrazu Lambda ve funkci
 
 ### <a name="example"></a>Příklad
 
-Můžete použít výrazy lambda v těle funkce. Výraz lambda má přístup k libovolné funkci nebo datovému členu, ke kterému má vnější funkce přístup. **Tento** ukazatel můžete explicitně nebo implicitně zachytit pro poskytnutí přístupu k funkcím a datovým členům ohraničující třídy.
-**Visual Studio 2017 verze 15,3 a novější** (k dispozici v [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)): Zachyťte **tuto** hodnotu (`[*this]`), pokud se lambda použije v asynchronních nebo paralelních operacích, kde se může kód provést poté, co původní objekt přejde mimo rozsah.
+Výrazy lambda můžete použít v těle funkce. Výraz lambda může přistupovat k libovolné funkci nebo datovému členu, ke kterému má přístup ohraničující funkce. Můžete explicitně nebo implicitně zachytit **tento** ukazatel poskytnout přístup k funkcím a datovým členům ohraničující třídy.
+**Visual Studio 2017 verze 15.3 a novější** (k dispozici s [/std:c++17):](../build/reference/std-specify-language-standard-version.md)Zachyťte **to** podle hodnoty (`[*this]`), kdy lambda bude použita v asynchronní nebo paralelní operace, kde se může spustit kód po původní objekt přejde mimo rozsah.
 
-**Tento** ukazatel můžete použít explicitně ve funkci, jak je znázorněno zde:
+Tento **ukazatel** můžete použít explicitně ve funkci, jak je znázorněno zde:
 
 ```cpp
 // capture "this" by reference
@@ -291,7 +291,7 @@ void ApplyScale2(const vector<int>& v) const
 }
 ```
 
-**Tento** ukazatel můžete také zachytit implicitně:
+Tento **ukazatel** můžete také implicitně zachytit:
 
 ```cpp
 void ApplyScale(const vector<int>& v) const
@@ -301,7 +301,7 @@ void ApplyScale(const vector<int>& v) const
 }
 ```
 
-Následující příklad ukazuje třídu `Scale`, která zapouzdřuje hodnotu měřítka.
+Následující příklad ukazuje `Scale` třídu, která zapouzdřuje hodnotu měřítka.
 
 ```cpp
 // function_lambda_expression.cpp
@@ -355,17 +355,17 @@ int main()
 
 ### <a name="remarks"></a>Poznámky
 
-Funkce `ApplyScale` používá výraz lambda k vytištění součinu hodnoty škálování a každého prvku v objektu `vector`. Výraz lambda implicitně zachycuje **Tento** , aby mohl přistupovat k `_scale`mu členu.
+Funkce `ApplyScale` používá výraz lambda k tisku součin hodnoty měřítka a každého prvku v objektu. `vector` Výraz lambda implicitně zachytí **to** tak, `_scale` aby přístup k členu.
 
 [[V tomto článku](#top)]
 
-##  <a name="using-lambda-expressions-with-templates"></a><a name="templateLambdaExpressions"></a>Použití výrazů lambda se šablonami
+## <a name="using-lambda-expressions-with-templates"></a><a name="templateLambdaExpressions"></a>Použití výrazů Lambda se šablonami
 
 ### <a name="example"></a>Příklad
 
-Protože výrazy lambda mají typ, můžete je použít s šablonami jazyka C++. Následující příklad ukazuje funkce `negate_all` a `print_all`. Funkce `negate_all` používá unární **operátor –** pro každý prvek v objektu `vector`. Funkce `print_all` vytiskne všechny prvky v objektu `vector` do konzoly.
+Protože výrazy lambda mají typ, můžete je použít s šablonami jazyka C++. Následující příklad ukazuje `negate_all` `print_all` funkce a. Funkce `negate_all` použije unární **operátor-** pro každý `vector` prvek v objektu. Funkce `print_all` vytiskne každý `vector` prvek v objektu do konzoly.
 
-### <a name="code"></a>Kód
+### <a name="code"></a>kód
 
 ```cpp
 // template_lambda_expression.cpp
@@ -419,17 +419,17 @@ After negate_all():
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace o C++ šablonách najdete v tématu [šablony](../cpp/templates-cpp.md).
+Další informace o šablonách jazyka C++ naleznete v [tématu Templates](../cpp/templates-cpp.md).
 
 [[V tomto článku](#top)]
 
-##  <a name="handling-exceptions"></a><a name="ehLambdaExpressions"></a>Zpracování výjimek
+## <a name="handling-exceptions"></a><a name="ehLambdaExpressions"></a>Zpracování výjimek
 
 ### <a name="example"></a>Příklad
 
-Tělo výrazu lambda je v souladu s pravidly pro strukturované zpracování výjimek (SEH) i zpracování výjimek jazyka C++. V těle výrazu lambda můžete zpracovat vyvolanou výjimku nebo pozdržet zpracování výjimek pro nadřazený obor. V následujícím příkladu je použita funkce **for_each** a výraz lambda pro vyplnění objektu `vector` hodnotou jiného. Používá blok **try**/**catch** pro zpracování neplatného přístupu k prvnímu vektoru.
+Tělo výrazu lambda je v souladu s pravidly pro strukturované zpracování výjimek (SEH) i zpracování výjimek jazyka C++. V těle výrazu lambda můžete zpracovat vyvolanou výjimku nebo pozdržet zpracování výjimek pro nadřazený obor. Následující příklad používá **funkci for_each** a výraz lambda k vyplnění objektu `vector` hodnotami jiného. Používá **try**/**catch** bloku pro zpracování neplatný přístup k prvnímu vektoru.
 
-### <a name="code"></a>Kód
+### <a name="code"></a>kód
 
 ```cpp
 // eh_lambda_expression.cpp
@@ -475,17 +475,17 @@ Caught 'invalid vector<T> subscript'.
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace o zpracování výjimek naleznete v tématu [zpracování výjimek](../cpp/exception-handling-in-visual-cpp.md).
+Další informace o zpracování výjimek naleznete v [tématu Zpracování výjimek](../cpp/exception-handling-in-visual-cpp.md).
 
 [[V tomto článku](#top)]
 
-##  <a name="using-lambda-expressions-with-managed-types-ccli"></a><a name="managedLambdaExpressions"></a>Použití výrazů lambda se spravovanými typyC++(/CLI)
+## <a name="using-lambda-expressions-with-managed-types-ccli"></a><a name="managedLambdaExpressions"></a>Použití výrazů Lambda se spravovanými typy (C++/CLI)
 
 ### <a name="example"></a>Příklad
 
-Klauzule zachycení výrazu lambda nemůže obsahovat proměnnou se spravovaným typem. Můžete však předat argument se spravovaným typem do seznamu parametrů výrazu lambda. Následující příklad obsahuje výraz lambda, který zachytává místní nespravovanou proměnnou `ch` podle hodnoty a přebírá objekt <xref:System.String?displayProperty=fullName> jako svůj parametr.
+Klauzule zachycení výrazu lambda nemůže obsahovat proměnnou se spravovaným typem. Můžete však předat argument se spravovaným typem do seznamu parametrů výrazu lambda. Následující příklad obsahuje výraz lambda, který zachycuje `ch` místní nespravovanou proměnnou podle hodnoty a bere <xref:System.String?displayProperty=fullName> objekt jako svůj parametr.
 
-### <a name="code"></a>Kód
+### <a name="code"></a>kód
 
 ```cpp
 // managed_lambda_expression.cpp
@@ -512,22 +512,22 @@ Hello!
 
 ### <a name="remarks"></a>Poznámky
 
-Výrazy lambda můžete použít také s knihovnou STL/CLR. Další informace naleznete v tématu [Referenční dokumentace knihovny STL/CLR](../dotnet/stl-clr-library-reference.md).
+Výrazy lambda můžete použít také s knihovnou STL/CLR. Další informace naleznete v tématu [STL/CLR Library Reference](../dotnet/stl-clr-library-reference.md).
 
 > [!IMPORTANT]
->  Výrazy lambda nejsou podporovány v těchto spravovaných entitách modulu CLR (Common Language Runtime): **ref class**, **ref struct**, **Value Class**a **struct Value**.
+> Lambdas nejsou podporovány v těchto spravovaných entitách modulu CLR (COMMON Language runtime): **ref class**, **ref struct**, **value class**a **value struct**.
 
 [[V tomto článku](#top)]
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Výrazy lambda](../cpp/lambda-expressions-in-cpp.md)<br/>
-[Syntaxe výrazů lambda](../cpp/lambda-expression-syntax.md)<br/>
+[Lambda výrazy](../cpp/lambda-expressions-in-cpp.md)<br/>
+[Syntaxe výrazu Lambda](../cpp/lambda-expression-syntax.md)<br/>
 [auto](../cpp/auto-cpp.md)<br/>
-[function – třída](../standard-library/function-class.md)<br/>
+[třída funkce](../standard-library/function-class.md)<br/>
 [find_if](../standard-library/algorithm-functions.md#find_if)<br/>
-[algoritmus \<>](../standard-library/algorithm.md)<br/>
-[Volání funkcí](../cpp/function-call-cpp.md)<br/>
+[\<algoritmus>](../standard-library/algorithm.md)<br/>
+[Volání funkce](../cpp/function-call-cpp.md)<br/>
 [Šablony](../cpp/templates-cpp.md)<br/>
 [Zpracování výjimek](../cpp/exception-handling-in-visual-cpp.md)<br/>
 [Referenční dokumentace knihoven STL/CLR](../dotnet/stl-clr-library-reference.md)

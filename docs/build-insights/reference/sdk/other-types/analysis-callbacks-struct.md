@@ -1,6 +1,6 @@
 ---
-title: Struktura ANALYSIS_CALLBACKS
-description: Odkaz C++ na strukturu ANALYSIS_CALLBACKS Build Insights SDK
+title: ANALYSIS_CALLBACKS struktura
+description: C++ Build Insights SDK ANALYSIS_CALLBACKS odkaz na strukturu.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 8c35e740d97488969a6b69467d54412297e49227
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 3c6de999b19657f999f884075ee53e21a4d2f2b5
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78332528"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81323510"
 ---
-# <a name="analysis_callbacks-structure"></a>Struktura ANALYSIS_CALLBACKS
+# <a name="analysis_callbacks-structure"></a>ANALYSIS_CALLBACKS struktura
 
 ::: moniker range="<=vs-2015"
 
-Sada C++ SDK pro Build Insights je kompatibilní se sadou Visual Studio 2017 a novější. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek selektor verzí sady Visual Studio pro tento článek na sadu Visual Studio 2017 nebo Visual Studio 2019.
+Sada C++ Build Insights SDK je kompatibilní s Visual Studio 2017 a vyšší. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek pro výběr **verze** sady Visual Studio pro tento článek na Visual Studio 2017 nebo Visual Studio 2019. Nachází se v horní části obsahu na této stránce.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Struktura `ANALYSIS_CALLBACKS` se používá při inicializaci objektu [ANALYSIS_DESCRIPTOR](analysis-descriptor-struct.md) nebo [RELOG_DESCRIPTOR](relog-descriptor-struct.md) . Určuje funkce, které mají být volány během analýzy nebo znovu protokolovány trasování událostí pro Windows (ETW).
+Struktura `ANALYSIS_CALLBACKS` se používá při inicializaci [ANALYSIS_DESCRIPTOR](analysis-descriptor-struct.md) nebo [RELOG_DESCRIPTOR](relog-descriptor-struct.md) objektu. Určuje, které funkce se mají volat během analýzy nebo opětovného protokolování trasování trasování událostí pro Windows (ETW).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -47,21 +47,21 @@ typedef struct ANALYSIS_CALLBACKS_TAG
 
 |  |  |
 |--|--|
-| `OnStartActivity` | Volá se, aby se zpracovala událost zahájení aktivity. |
-| `OnStopActivity` | Volá se, aby se zpracovala událost zastavení aktivity. |
-| `OnSimpleEvent` | Volá se, aby se zpracovala jednoduchá událost. |
-| `OnTraceInfo` | Pro relace analýzy, které se nazývají na začátku každého analytického průchodu. Pro relace opětovného protokolování, které se nazývají na začátku každé analýzy, a znovu na začátku opakovaného protokolování. Tato funkce se volá jenom po volání OnBeginAnalysisPass. |
-| `OnBeginAnalysis` | Pro relace analýzy, které byly volány před zahájením všech analytických průchodů. Pro relace znovu nahlašování, které se před začátkem analýzy vyvolaly dvakrát: jednou pro oznámení začátku relace znovu protokolování a další informace, které oznamuje začátek fáze analýzy. |
-| `OnEndAnalysis` | Pro relace analýzy je tato funkce volána po ukončení všech průchodů analýzou. V případě relací znovu protokolovaných funkcí se tato funkce volá, když všechny analýzy projde fází analýzy. Pak se znovu volá po dokončení opětovného přihlášení. |
-| `OnBeginAnalysisPass` | Volá se, když se před zpracováním jakékoli události projde nebo znovu přihlásí. |
-| `OnEndAnalysisPass` | Volá se, když se dokončí analýza, nebo se po zpracování všech událostí znovu projde. |
+| `OnStartActivity` | Nazývá se zpracování události zahájení aktivity. |
+| `OnStopActivity` | Nazývá se zpracování události zastavení aktivity. |
+| `OnSimpleEvent` | Volána ke zpracování jednoduché události. |
+| `OnTraceInfo` | Pro relace analýzy, volané na začátku každého průchodu analýzy. Pro opětovné seknutí relací, volané na začátku každého průchodu analýzy a znovu na začátku průchodu opětovným protokolováním. Tato funkce je volána pouze po OnBeginAnalysisPass byla volána. |
+| `OnBeginAnalysis` | Pro relace analýzy, volané před zahájením průchodu analýzy. Pro opětovné seknutí relací, volal dvakrát před fáze analýzy začala: jednou oznámit zahájení relace opětovného přihlášení a ještě jednou oznámit začátek fáze analýzy. |
+| `OnEndAnalysis` | Pro relace analýzy je tato funkce volána po ukončení všech průchodů analýzy. Pro opětovné seknutí relací je tato funkce volána po ukončení všech průchodů analýzy fáze analýzy. Poté se znovu zavolá po ukončení průchodu pro opětovné přihlášení. |
+| `OnBeginAnalysisPass` | Volána při zahájení průchodu analýzy nebo opakování průchodu před zpracováním jakékoli události. |
+| `OnEndAnalysisPass` | Volána při ukončení průchodu analýzy nebo opakování průchodu po zpracování všech událostí. |
 
 ## <a name="remarks"></a>Poznámky
 
-Fáze analýzy relace opakovaného protokolování je považována za součást relace opakovaného protokolování a může obsahovat více průchodů analýz. Z tohoto důvodu se `OnBeginAnalysis` volá dvakrát v řádku na začátku relace opětovného protokolování. `OnEndAnalysis` se volá na konci fáze analýzy, než se spustí fáze opětovného protokolování, a teprve potom znovu na konci fáze opětovného protokolování. Fáze reprotokolovacího nástroje vždy obsahuje jedno přeprotokolovací průchod.
+Fáze analýzy relace opětovného přihlášení je považována za součást relace opětovného sloggingu a může obsahovat více průchodů analýzy. Z tohoto `OnBeginAnalysis` důvodu se volá dvakrát za sebou na začátku relace opětovného přihlášení. `OnEndAnalysis`na konci fáze analýzy, před zahájením fáze opětovného přihlášení a opět na konci fáze opětovného přihlášení. Fáze opětovného přihlášení vždy obsahuje jeden průchod opětovného přihlášení.
 
-Je možné, že analyzátory budou součástí analýzy i fáze znovu protokolovací relace. Tyto analyzátory mohou určit, která fáze aktuálně probíhá, díky udržování přehledu o OnBeginAnalysis a `OnEndAnalysis` páry volání. Dvě `OnBeginAnalysis` volání bez jakéhokoli volání `OnEndAnalysis` znamená, že fáze analýzy pokračuje. Dvě `OnBeginAnalysis` volání a jedno `OnEndAnalysis` volání znamená, že probíhá fáze nového protokolování. Dvě OnBeginAnalysis a dvě volání `OnEndAnalysis` znamená, že obě fáze byly ukončeny.
+Je možné, že analyzátory budou součástí fáze analýzy i opětovného přihlášení relace opětovného přihlášení. Tyto analyzátory můžete určit, která fáze právě probíhá `OnEndAnalysis` udržováním sledování OnBeginAnalysis a dvojice volání. Dva `OnBeginAnalysis` hovory `OnEndAnalysis` bez jakéhokoli volání znamená, že fáze analýzy probíhá. Dva `OnBeginAnalysis` hovory `OnEndAnalysis` a jeden hovor znamená, že fáze opětovného přihlášení probíhá. Dvě OnBeginAnalysis `OnEndAnalysis` a dvě volání znamená, že obě fáze byly ukončeny.
 
-Všichni členové `ANALYSIS_CALLBACKS` struktury musí ukazovat na platnou funkci. Další informace o přijatých podpisech funkcí naleznete v tématech [OnAnalysisEventFunc](on-analysis-event-func-typedef.md), [OnTraceInfoFunc](on-trace-info-func-typedef.md)a [OnBeginEndPassFunc](on-begin-end-pass-func-typedef.md).
+Všichni členové `ANALYSIS_CALLBACKS` struktury musí ukazovat na platnou funkci. Další informace o podpisech přijatých funkcí naleznete v [tématech OnAnalysisEventFunc](on-analysis-event-func-typedef.md), [OnTraceInfoFunc](on-trace-info-func-typedef.md)a [OnBeginEndPassFunc](on-begin-end-pass-func-typedef.md).
 
 ::: moniker-end

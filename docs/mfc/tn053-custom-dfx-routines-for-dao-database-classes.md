@@ -11,42 +11,42 @@ helpviewer_keywords:
 - DFX (DAO record field exchange) [MFC]
 - custom DFX routines [MFC]
 ms.assetid: fdcf3c51-4fa8-4517-9222-58aaa4f25cac
-ms.openlocfilehash: 6dde96520d9472726da86f8da295770cccc5d42c
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: f7ad854f4dbb4e90c09e886c69260e4e2eea3be2
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74303432"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81365264"
 ---
 # <a name="tn053-custom-dfx-routines-for-dao-database-classes"></a>TN053: Vlastní rutiny DFX pro databázové třídy DAO
 
 > [!NOTE]
->  Rozhraní DAO se používá s databázemi Access a je podporované prostřednictvím sady Office 2013. Rozhraní DAO 3,6 je finální verze a je považována za zastaralou. Vizuální C++ prostředí a Průvodci nepodporují rozhraní DAO (i když třídy rozhraní DAO jsou zahrnuty a je možné je nadále používat). Společnost Microsoft doporučuje, abyste pro nové projekty používali [šablony OLE DB](../data/oledb/ole-db-templates.md) nebo [rozhraní ODBC a knihovnu MFC](../data/odbc/odbc-and-mfc.md) . V údržbě stávajících aplikací byste měli používat jenom rozhraní DAO.
+> DAO se používá s databázemi Accessu a je podporován prostřednictvím Office 2013. DAO 3.6 je konečná verze, a to je považováno za zastaralé. Prostředí Visual C++ a průvodci nepodporují DAO (i když jsou zahrnuty třídy DAO a můžete je stále používat). Společnost Microsoft doporučuje používat [šablony OLE DB](../data/oledb/ole-db-templates.md) nebo rozhraní [ODBC a knihovnu MFC](../data/odbc/odbc-and-mfc.md) pro nové projekty. DAO byste měli používat pouze při údržbě existujících aplikací.
 
-Tato technická Poznámka popisuje mechanismus výměny pole záznamu (DFX) DAO. Aby bylo možné pochopit, co se děje v rutinách DFX, funkce `DFX_Text` bude podrobně vysvětlena jako příklad. Jako další zdroj informací k této technické poznámce si můžete prohlédnout kód pro ostatní jednotlivé funkce DFX. Pravděpodobně nebudete potřebovat vlastní rutinu DFX, jak často budete potřebovat vlastní rutinu RFX (používá se u databázových tříd ODBC).
+Tato technická poznámka popisuje mechanismus výměny pole záznamu DAO (DFX). Chcete-li pomoci pochopit, co se děje `DFX_Text` v rutiny DFX, funkce bude podrobně vysvětlena jako příklad. Jako další zdroj informací k této technické poznámce můžete prozkoumat kód pro ostatní funkce DFX. Pravděpodobně nebudete potřebovat vlastní rutinu DFX tak často, jak budete potřebovat vlastní rutinu RFX (používanou s třídami databáze ROZHRANÍ ODBC).
 
-Tato technická Poznámka obsahuje:
+Tato technická poznámka obsahuje:
 
 - Přehled DFX
 
-- [Příklady](#_mfcnotes_tn053_examples) použití výměny pole záznamu rozhraní DAO a dynamické vazby
+- [Příklady](#_mfcnotes_tn053_examples) použití výměny polí záznamů DAO a dynamické vazby
 
 - [Jak funguje DFX](#_mfcnotes_tn053_how_dfx_works)
 
-- [Co dělá vlastní rutina DFX](#_mfcnotes_tn053_what_your_custom_dfx_routine_does)
+- [Co vaše vlastní DFX rutina dělá](#_mfcnotes_tn053_what_your_custom_dfx_routine_does)
 
 - [Podrobnosti o DFX_Text](#_mfcnotes_tn053_details_of_dfx_text)
 
 **Přehled DFX**
 
-Mechanismus výměny pole záznamu DAO (DFX) se používá ke zjednodušení postupu načítání a aktualizace dat při použití třídy `CDaoRecordset`. Proces je zjednodušený pomocí datových členů třídy `CDaoRecordset`. Odvozením z `CDaoRecordset`můžete přidat datové členy do odvozené třídy reprezentující každé pole v tabulce nebo dotazu. Tento mechanismus statické vazby je jednoduchý, ale nemusí se jednat o metodu pro načtení nebo aktualizaci dat, kterou si můžete vybrat pro všechny aplikace. DFX načte každé vázané pole pokaždé, když se změní aktuální záznam. Pokud vyvíjíte aplikaci citlivou na výkon, která nevyžaduje načítání každého pole při změně měny, může být "dynamická vazba" prostřednictvím `CDaoRecordset::GetFieldValue` a `CDaoRecordset::SetFieldValue` může být metoda přístupu k datům podle volby.
+Mechanismus výměny pole záznamu DAO (DFX) se používá ke zjednodušení `CDaoRecordset` postupu načítání a aktualizace dat při použití třídy. Proces je zjednodušen pomocí datových členů třídy. `CDaoRecordset` Odvozením z `CDaoRecordset`aplikace můžete přidat datové členy do odvozené třídy představující každé pole v tabulce nebo dotazu. Tento mechanismus "statické vazby" je jednoduchý, ale nemusí to být metoda načítání nebo aktualizace dat pro všechny aplikace. DFX načte každé vázané pole při každé změně aktuálního záznamu. Pokud vyvíjíte aplikaci citlivou na výkon, která nevyžaduje načítání každé pole při `CDaoRecordset::GetFieldValue` `CDaoRecordset::SetFieldValue` změně měny, "dynamická vazba" přes a může být metoda přístupu k datům volby.
 
 > [!NOTE]
->  DFX a dynamická vazba se vzájemně nevylučují, takže je možné použít hybridní použití statické a dynamické vazby.
+> DFX a dynamické vazby se vzájemně nevylučují, takže lze použít hybridní použití statické a dynamické vazby.
 
-## <a name="_mfcnotes_tn053_examples"></a>Příklad 1 – použití pouze výměny pole záznamu DAO
+## <a name="example-1--use-of-dao-record-field-exchange-only"></a><a name="_mfcnotes_tn053_examples"></a>Příklad 1 – Použití pouze výměny polí záznamů DAO
 
-(předpokládá `CDaoRecordset` – odvozená třída `CMySet` už je otevřená)
+(předpokládá `CDaoRecordset` – odvozená `CMySet` třída je již otevřená)
 
 ```
 // Add a new record to the customers table
@@ -59,9 +59,9 @@ myset.m_strCustName = _T("Microsoft");
 myset.Update();
 ```
 
-**Příklad 2 – použití pouze dynamické vazby**
+**Příklad 2 – Použití pouze dynamické vazby**
 
-(předpokládá použití třídy `CDaoRecordset` `rs`a je už otevřená)
+(předpokládá použití `CDaoRecordset` třídy , `rs`a je již otevřena)
 
 ```
 // Add a new record to the customers table
@@ -84,9 +84,9 @@ rs.SetFieldValue(_T("Customer_Name"),
 rs.Update();
 ```
 
-**Příklad 3 – použití výměny pole záznamu DAO a dynamické vazby**
+**Příklad 3 – Použití výměny pole záznamu DAO a dynamické vazby**
 
-(předpokládá procházení dat zaměstnanců pomocí `emp`třídy odvozené od `CDaoRecordset`)
+(předpokládá procházení dat `CDaoRecordset`zaměstnanců s `emp`odvozenou třídou)
 
 ```
 // Get the employee's data so that it can be displayed
@@ -105,94 +105,94 @@ PopUpEmployeeData(emp.m_strFirstName,
     varPhoto);
 ```
 
-## <a name="_mfcnotes_tn053_how_dfx_works"></a>Jak funguje DFX
+## <a name="how-dfx-works"></a><a name="_mfcnotes_tn053_how_dfx_works"></a>Jak funguje DFX
 
-Mechanismus DFX funguje podobným způsobem jako mechanismus výměny pole záznamu (RFX) používaný třídami MFC rozhraní ODBC. Principy DFX a RFX jsou stejné, ale existuje mnoho interních rozdílů. Návrh funkcí DFX byl takový, že prakticky všechen kód sdílí jednotlivé rutiny DFX. Na nejvyšší úrovni DFX jenom pár věcí.
+Mechanismus DFX funguje podobným způsobem jako mechanismus výměny pole záznamu (RFX), který používají třídy Rozhraní MFC ODBC. Principy DFX a RFX jsou stejné, ale existují četné vnitřní rozdíly. Návrh funkcí DFX byl takový, že prakticky veškerý kód je sdílen jednotlivými rutinami DFX. Na nejvyšší úrovni DFX dělá jen pár věcí.
 
-- DFX vytvoří klauzuli **Select** jazyka SQL a klauzuli **Parameters parametrů** SQL, pokud je to nutné.
+- DFX vytvoří klauzuli SQL **SELECT** a klauzuli SQL **PARAMETERS** v případě potřeby.
 
-- DFX vytvoří strukturu vazeb, kterou používá funkce `GetRows` DAO (Další informace najdete později).
+- DFX vytvoří strukturu vazby používanou `GetRows` funkcí DAO (více o tom později).
 
-- DFX spravuje vyrovnávací paměť, která se používá ke zjišťování nezměněných polí (Pokud se používá dvojité ukládání do vyrovnávací paměti).
+- DFX spravuje vyrovnávací paměť dat používanou ke zjišťování nečistých polí (pokud se používá dvojité ukládání do vyrovnávací paměti)
 
-- DFX spravuje pole **null** a **Dirty** stav a v případě potřeby nastavuje hodnoty v případě nutnosti aktualizace.
+- DFX spravuje **pole** stavu NULL a **DIRTY** a v případě potřeby nastaví hodnoty pro aktualizace.
 
-Na srdci mechanismu DFX je `CDaoRecordset` funkce odvozené třídy `DoFieldExchange`. Tato funkce odesílá volání jednotlivých funkcí DFX pro příslušný typ operace. Před voláním `DoFieldExchange` interní MFC funkce nastavily typ operace. V následujícím seznamu jsou uvedeny různé typy operací a stručný popis.
+Jádrem mechanismu DFX je `CDaoRecordset` `DoFieldExchange` funkce odvozené třídy. Tato funkce odešle volání jednotlivých funkcí DFX vhodného typu operace. Před `DoFieldExchange` voláním interních funkcí knihovny MFC nastavte typ operace. V následujícím seznamu jsou uvedeny různé typy operací a stručný popis.
 
 |Operace|Popis|
 |---------------|-----------------|
-|`AddToParameterList`|Klauzule Build PARAMETERS|
-|`AddToSelectList`|Build – klauzule SELECT|
-|`BindField`|Nastaví strukturu vazby.|
-|`BindParam`|Nastaví hodnoty parametrů|
-|`Fixup`|Nastaví stav NULL.|
-|`AllocCache`|Přiděluje mezipaměť pro kontrolu nečistých|
+|`AddToParameterList`|Sestavení klauzule PARAMETERS|
+|`AddToSelectList`|Vytvoří klauzuli SELECT|
+|`BindField`|Nastaví strukturu vazby|
+|`BindParam`|Nastaví hodnoty parametrů.|
+|`Fixup`|Nastaví stav NULL|
+|`AllocCache`|Přidělí mezipaměť pro nečisté kontroly|
 |`StoreField`|Uloží aktuální záznam do mezipaměti.|
-|`LoadField`|Obnoví hodnoty do mezipaměti členů.|
-|`FreeCache`|Volná mezipaměť|
-|`SetFieldNull`|Nastaví hodnotu & stav pole na hodnotu NULL.|
-|`MarkForAddNew`|Označí nezměněná pole, pokud není PSEUDO NULL.|
-|`MarkForEdit`|Označí nezměněná pole, pokud neodpovídají mezipaměti.|
+|`LoadField`|Obnoví mezipaměť na členské hodnoty.|
+|`FreeCache`|Uvolní mezipaměť|
+|`SetFieldNull`|Nastaví hodnotu & pole na hodnotu NULL.|
+|`MarkForAddNew`|Označí pole neznečištěná, pokud ne PSEUDO NULL.|
+|`MarkForEdit`|Označí znečištěná pole, pokud se neshodují s mezipamětí.|
 |`SetDirtyField`|Nastaví hodnoty polí označené jako nečisté.|
 
-V další části jsou jednotlivé operace vysvětleny podrobněji pro `DFX_Text`.
+V další části bude každá operace podrobněji `DFX_Text`vysvětlena pro .
 
-Nejdůležitější funkce pro pochopení procesu výměny pole záznamu rozhraní DAO je, že používá funkci `GetRows` objektu `CDaoRecordset`. Funkce `GetRows` DAO může pracovat několika způsoby. Tato technická Poznámka bude stručně popsat `GetRows`, protože je mimo rámec této technické poznámky.
-`GetRows` DAO může pracovat několika způsoby.
+Nejdůležitější funkcí, kterou je třeba porozumět procesu výměny pole `GetRows` záznamů `CDaoRecordset` DAO, je, že používá funkci objektu. Funkce DAO `GetRows` může pracovat několika způsoby. Tato technická poznámka `GetRows` bude pouze stručně popsána, protože je mimo rozsah této technické poznámky.
+DAO `GetRows` může pracovat několika způsoby.
 
-- Může najednou načíst několik záznamů a více polí dat. To umožňuje rychlejší přístup k datům s komplikací při práci s velkou datovou strukturou a příslušnými posuny pro každé pole a pro každý záznam dat ve struktuře. Knihovna MFC nevyužívá tento mechanismus načítání více záznamů.
+- Může načíst více záznamů a více datových polí najednou. To umožňuje rychlejší přístup k datům s komplikací zpracování velké datové struktury a příslušné posuny pro každé pole a pro každý záznam dat ve struktuře. Knihovna MFC nevyužívá tento mechanismus načítání více záznamů.
 
-- Další způsob, jak `GetRows` může pracovat, je poskytnout programátorům možnost zadat adresy vazeb pro načtená data každého pole pro jeden záznam dat.
+- Dalším `GetRows` způsobem, jak může fungovat, je umožnit programátorům zadat adresy vazby pro načtená data každého pole pro jeden záznam dat.
 
-- Rozhraní DAO také "volat zpět" do volajícího pro sloupce proměnné délky, aby volajícímu umožnil přidělit paměť. Tato druhá funkce má na paměti minimalizaci počtu kopií dat a umožňuje přímé ukládání dat do členů třídy (`CDaoRecordset` odvozené třídy). Tento druhý mechanismus je metoda, kterou knihovna MFC používá pro vytvoření vazby k datovým členům v `CDaoRecordset` odvozených třídách.
+- DAO bude také "volat zpět" do volajícího pro sloupce proměnné délky, aby volající mohl přidělit paměť. Tato druhá funkce má tu výhodu, že minimalizuje počet kopií dat a umožňuje přímé ukládání `CDaoRecordset` dat do členů třídy (odvozené třídy). Tento druhý mechanismus je metoda MFC používá `CDaoRecordset` k vazbě na datové členy v odvozených třídách.
 
-##  <a name="_mfcnotes_tn053_what_your_custom_dfx_routine_does"></a>Co dělá vlastní rutina DFX
+## <a name="what-your-custom-dfx-routine-does"></a><a name="_mfcnotes_tn053_what_your_custom_dfx_routine_does"></a>Co vaše vlastní DFX rutina dělá
 
-Z této diskuze je zřejmé, že nejdůležitější operace implementovaná v jakékoli funkci DFX musí být schopnost nastavit požadované datové struktury k úspěšnému volání `GetRows`. K dispozici je řada dalších operací, které musí funkce DFX podporovat, ale nejsou žádné jako důležité nebo složité jako správné připravení `GetRows` volání.
+Z této diskuse je zřejmé, že nejdůležitější operací implementovanou v libovolné funkci DFX musí být `GetRows`schopnost nastavit požadované datové struktury pro úspěšné volání . Existuje řada dalších operací, které musí podporovat funkci DFX, ale žádná tak `GetRows` důležitá nebo složitá jako správná příprava na volání.
 
-Použití DFX je popsané v online dokumentaci. V podstatě existují dva požadavky. Nejdříve je nutné přidat členy do odvozené třídy `CDaoRecordset` pro každé vázané pole a parametr. Následující `CDaoRecordset::DoFieldExchange` by se měly přepsat. Všimněte si, že datový typ členu je důležitý. Měl by odpovídat datům z pole v databázi nebo aspoň převést na tento typ. Například číselné pole v databázi, jako je dlouhé celé číslo, může být vždy převedeno na text a svázáno s `CString`m členem, ale textové pole v databázi nemusí být nutně převedeno na číselnou reprezentaci, jako je dlouhé celé číslo a svázáno s datovým členem Long Integer. Rozhraní DAO a databázový stroj Microsoft Jet jsou zodpovědné za převod (nikoli MFC).
+Použití DFX je popsáno v online dokumentaci. V podstatě existují dva požadavky. Nejprve musí být členové `CDaoRecordset` přidáni do odvozené třídy pro každé vázané pole a parametr. Po `CDaoRecordset::DoFieldExchange` tomto by měla být přepsána. Všimněte si, že datový typ člena je důležité. Měla by odpovídat datům z pole v databázi nebo by měla být alespoň konvertibilní s tímto typem. Například číselné pole v databázi, například dlouhé celé číslo, lze vždy `CString` převést na text a svázané s členem, ale textové pole v databázi nemusí být nutně převedeno na číselnou reprezentaci, například dlouhé celé číslo a vázané na dlouhý celý člen. DAO a databázový stroj Microsoft Jet jsou zodpovědní za převod (spíše než Knihovna MFC).
 
-##  <a name="_mfcnotes_tn053_details_of_dfx_text"></a>Podrobnosti o DFX_Text
+## <a name="details-of-dfx_text"></a><a name="_mfcnotes_tn053_details_of_dfx_text"></a>Podrobnosti o DFX_Text
 
-Jak bylo zmíněno dříve, nejlepším způsobem, jak vysvětlit fungování DFX, je využít příklad. Pro účely tohoto účelu by interní `DFX_Text` měla fungovat poměrně dobře, aby bylo možné zajistit nejméně základní porozumění DFX.
+Jak již bylo zmíněno dříve, nejlepší způsob, jak vysvětlit, jak Funguje DFX je pracovat prostřednictvím příkladu. Pro tento účel prochází vnitřní `DFX_Text` by měl fungovat docela dobře pomoci poskytnout alespoň základní pochopení DFX.
 
 - `AddToParameterList`
 
-   Tato operace sestaví klauzuli **Parameters** SQL (`Parameters <param name>, <param type> ... ;`), kterou vyžaduje stroj Jet. Každý parametr má název a je typu (jak je uvedeno v volání RFX). Pokud chcete zobrazit názvy jednotlivých typů, podívejte se na funkci `CDaoFieldExchange::AppendParamType` funkce. V případě `DFX_Text`se používá typ **text**.
+   Tato operace vytvoří klauzuli SQL`Parameters <param name>, <param type> ... ;` **PARAMETERS** (" ") vyžadožoto jet. Každý parametr je pojmenován a zadán (jak je uvedeno ve volání RFX). Chcete-li `CDaoFieldExchange::AppendParamType` zobrazit názvy jednotlivých typů, podívejte se na funkci funkce. V případě `DFX_Text`, je použitým typem **text**.
 
 - `AddToSelectList`
 
-   Vytvoří klauzuli **Select** jazyka SQL. Tato možnost je poměrně přímá, protože název sloupce určený voláním DFX je jednoduše připojen ("`SELECT <column name>, ...`").
+   Vytvoří klauzuli SQL **SELECT.** To je docela přímočaré, protože název sloupce určený voláním`SELECT <column name>, ...`DFX je jednoduše připojen (" ").
 
 - `BindField`
 
-   Nejsložitější operace. Jak už bylo zmíněno dříve, kde je nastavená struktura vazby rozhraní DAO používaná `GetRows`. Jak vidíte z kódu v `DFX_Text` typy informací ve struktuře zahrnují použit typ DAO (**DAO_CHAR** nebo **DAO_WCHAR** v případě `DFX_Text`). Kromě toho je také nastaven typ použité vazby. V dřívější části `GetRows` bylo popsáno pouze krátce, ale bylo dostačující pro vysvětlení, že typ vazby používaný knihovnou MFC je vždy přímá vazba adres (**DAOBINDING_DIRECT**). Kromě pro vazbu sloupce s proměnlivou délkou (například `DFX_Text`) se používá vazba zpětného volání, aby mohla knihovna MFC řídit přidělování paměti a zadat adresu správné délky. To znamená, že knihovna MFC může vždy sdělit rozhraní DAO "Where" pro vložení dat, čímž umožňuje vazbu přímo na členské proměnné. Zbytek struktury vazby je vyplněn s akcemi, jako je adresa funkce zpětného volání přidělení paměti a typ vazby sloupce (vazba podle názvu sloupce).
+   Nejsložitější operace. Jak již bylo zmíněno dříve, je zde `GetRows` nastavena struktura vazby DAO používaná. Jak můžete vidět z `DFX_Text` kódu v typech informací ve struktuře patří typ DAO `DFX_Text`použité (**DAO_CHAR** nebo **DAO_WCHAR** v případě ). Kromě toho je také nastaven typ použité vazby. V dřívější `GetRows` části byla popsána pouze krátce, ale stačilo vysvětlit, že typ vazby používané MFC je vždy přímá adresa vazby (**DAOBINDING_DIRECT**). Kromě toho pro vazby sloupce `DFX_Text`proměnné délky (jako) vazba zpětného volání se používá tak, aby knihovna MFC můžete řídit přidělení paměti a zadat adresu správné délky. To znamená, že knihovna MFC může vždy říct DAO "kam" umístit data, což umožňuje vazbu přímo na členské proměnné. Zbytek struktury vazby je vyplněn a další mise jako adresa funkce zpětného volání přidělení paměti a typ vazby sloupce (vazba podle názvu sloupce).
 
 - `BindParam`
 
-   Toto je jednoduchá operace, která volá `SetParamValue` s hodnotou parametru zadanou v parametru member.
+   Jedná se o jednoduchou operaci, která volá `SetParamValue` s hodnotou parametru zadanou v členu parametru.
 
 - `Fixup`
 
-   Vyplní stav **null** pro každé pole.
+   Vyplní stav **NULL** pro každé pole.
 
 - `SetFieldNull`
 
-   Tato operace označí pouze všechny stavy pole jako **null** a nastaví hodnotu členské proměnné na **PSEUDO_NULL**.
+   Tato operace pouze označí stav každého pole jako **hodnotu NULL** a nastaví hodnotu členské proměnné na **PSEUDO_NULL**.
 
 - `SetDirtyField`
 
-   Volá `SetFieldValue` pro každé pole s označením undirty.
+   Volání `SetFieldValue` pro každé pole označené špinavé.
 
-Všechny zbývající operace se týkají pouze používání mezipaměti dat. Mezipaměť dat je dodatečná vyrovnávací paměť dat v aktuálním záznamu, která se používá k jednoduššímu provádění určitých věcí. Například pole "dirty" mohou být automaticky rozpoznána. Jak je popsáno v online dokumentaci, může být úplně vypnutá nebo na úrovni pole. Implementace vyrovnávací paměti využívá mapu. Tato mapa se používá ke spárování dynamicky přidělených kopií dat s adresou "vázaného" pole (nebo `CDaoRecordset` odvozeného datového členu).
+Všechny zbývající operace se zabývají pouze pomocí mezipaměti dat. Mezipaměť dat je další vyrovnávací paměť dat v aktuálním záznamu, která se používá k zjednodušení určitých věcí. Například "špinavá" pole mohou být automaticky detekována. Jak je popsáno v online dokumentaci, lze jej zcela vypnout nebo na úrovni pole. Implementace vyrovnávací paměti využívá mapu. Tato mapa se používá k přizpůsobení dynamicky přidělených kopií dat s adresou `CDaoRecordset` pole "vázané" (nebo odvozeného datového člena).
 
 - `AllocCache`
 
-   Dynamicky přidělí hodnotu pole v mezipaměti a přidá ji do mapy.
+   Dynamicky přiděluje hodnotu pole uložené v mezipaměti a přidává ji do mapy.
 
 - `FreeCache`
 
-   Odstraní hodnotu pole v mezipaměti a odebere ji z mapy.
+   Odstraní hodnotu pole uložené v mezipaměti a odebere ji z mapy.
 
 - `StoreField`
 
@@ -200,20 +200,20 @@ Všechny zbývající operace se týkají pouze používání mezipaměti dat. M
 
 - `LoadField`
 
-   Zkopíruje hodnotu uloženou v mezipaměti do členu pole.
+   Zkopíruje hodnotu uloženou v mezipaměti do člena pole.
 
 - `MarkForAddNew`
 
-   Zkontroluje, jestli je hodnota aktuálního pole**nenulová** a v případě potřeby ji označí jako nezměněnou.
+   Zkontroluje, zda aktuální hodnota pole není**null** a v případě potřeby ji označí znečištěnou.
 
 - `MarkForEdit`
 
-   Porovná hodnotu aktuálního pole s mezipamětí dat a v případě potřeby označí nečisté.
+   Porovná aktuální hodnotu pole s mezipamětí dat a v případě potřeby označí znečištěné.
 
 > [!TIP]
 > Modelujte vlastní rutiny DFX na stávajících rutinách DFX pro standardní datové typy.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Technické poznámky podle čísel](../mfc/technical-notes-by-number.md)<br/>
 [Technické poznámky podle kategorií](../mfc/technical-notes-by-category.md)

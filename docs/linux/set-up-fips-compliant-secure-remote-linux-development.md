@@ -1,33 +1,33 @@
 ---
-title: Nastavení zabezpečeného vzdáleného nasazení systému Linux kompatibilního se standardem FIPS
-description: Jak nastavit kryptografické připojení kompatibilní se standardem FIPS mezi sadou Visual Studio a počítačem se systémem Linux pro vzdálené vývoj.
+title: Nastavení zabezpečeného vzdáleného vývoje pro Linux kompatibilního se standardem FIPS
+description: Jak nastavit kryptografické připojení kompatibilní s FIPS mezi Visual Studio a linuxovým počítačem pro vzdálený vývoj.
 ms.date: 01/17/2020
 ms.openlocfilehash: 9a0e87f4ddf69bf489b52d4f83934d3279f2d085
-ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/22/2020
+ms.lasthandoff: 04/14/2020
 ms.locfileid: "76520891"
 ---
-# <a name="set-up-fips-compliant-secure-remote-linux-development"></a>Nastavení zabezpečeného vzdáleného nasazení systému Linux kompatibilního se standardem FIPS
+# <a name="set-up-fips-compliant-secure-remote-linux-development"></a>Nastavení zabezpečeného vzdáleného vývoje pro Linux kompatibilního se standardem FIPS
 
 ::: moniker range="<=vs-2017"
 
-Podpora pro Linux je k dispozici v systému Visual Studio 2017 nebo novějším. Zabezpečený vzdálený vývoj pro Linux se standardem FIPS je k dispozici v systému Visual Studio 2019 verze 16,5 a novější.
+Podpora Linuxu je dostupná ve Visual Studiu 2017 a novějším. Vývoj zabezpečeného vzdáleného Linuxu kompatibilnímu s FIPS je k dispozici ve Visual Studiu 2019 verze 16.5 a novějších.
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-Publikace standardu FIPS (Federal Information Processing Standard) 140-2 je standard státní správy USA pro kryptografické moduly. Implementace standardu jsou ověřovány pomocí NIST. Systém Windows [ověřil podporu pro kryptografické moduly kompatibilní se standardem FIPS](/windows/security/threat-protection/fips-140-validation). V aplikaci Visual Studio 2019 verze 16,5 a novější můžete pro vzdálené vývoj použít zabezpečené kryptografické připojení kompatibilní se standardem FIPS pro systém Linux.
+Federal Information Processing Standard (FIPS) Publication 140-2 je standard vlády USA pro kryptografické moduly. Implementace standardu jsou validovány NIST. Systém Windows [ověřil podporu kryptografických modulů kompatibilních s FIPS](/windows/security/threat-protection/fips-140-validation). Ve Visual Studiu 2019 verze 16.5 a novějších můžete pro vzdálený vývoj použít zabezpečené kryptografické připojení kompatibilní s FIPS se systémem Linux.
 
-Tady je postup nastavení zabezpečeného připojení kompatibilního se standardem FIPS mezi sadou Visual Studio a vzdáleným systémem Linux. Tato příručka se vztahuje při sestavování projektů CMake nebo MSBuild Linux v sadě Visual Studio. Tento článek je verzí pokynů pro připojení kompatibilní se standardem FIPS v tématu [připojení ke vzdálenému počítači se systémem Linux](connect-to-your-remote-linux-computer.md).
+Tady je postup, jak nastavit zabezpečené připojení kompatibilní s FIPS mezi Visual Studio a vzdáleným systémem Linux. Tato příručka je použitelná při vytváření projektů CMake nebo MSBuild Linux v sadě Visual Studio. Tento článek je kompatibilní s fips verzí pokynů pro připojení v [části Připojit ke vzdálenému počítači s Linuxem](connect-to-your-remote-linux-computer.md).
 
-## <a name="prepare-a-fips-compliant-connection"></a>Příprava připojení kompatibilního se standardem FIPS
+## <a name="prepare-a-fips-compliant-connection"></a>Příprava připojení vyhovujícího FIPS
 
-Některá příprava je nutná k použití kryptograficky zabezpečeného připojení SSH kompatibilního se standardem FIPS mezi Visual Studio a vaším vzdáleným systémem Linux. V případě dodržování předpisů FIPS-140-2 podporuje Visual Studio pouze klíče RSA.
+Některé přípravy je nutné použít FIPS kompatibilní, kryptograficky zabezpečené ssh připojení mezi Visual Studio a vzdálený systém Linux. Pro dodržování předpisů FIPS-140-2 Visual Studio podporuje pouze rsa klíče.
 
-Příklady v tomto článku používají Ubuntu 18,04 LTS s OpenSSH serverem verze 7,6. Nicméně pokyny by měly být stejné pro všechny distribuce s využitím středně poslední verze OpenSSH.
+Příklady v tomto článku používají Ubuntu 18.04 LTS se serverem OpenSSH verze 7.6. Nicméně, pokyny by měly být stejné pro všechny distro pomocí mírně poslední verzi OpenSSH.
 
 ### <a name="to-set-up-the-ssh-server-on-the-remote-system"></a>Nastavení serveru SSH ve vzdáleném systému
 
@@ -38,13 +38,13 @@ Příklady v tomto článku používají Ubuntu 18,04 LTS s OpenSSH serverem ver
    sudo service ssh start
    ```
 
-1. Pokud byste chtěli, aby se server SSH spouštěl automaticky při spuštění systému, povolte ho pomocí systemctl:
+1. Pokud chcete, aby se server ssh spouštěl automaticky při spuštění systému, povolte jej pomocí systemctl:
 
    ```bash
    sudo systemctl enable ssh
    ```
 
-1. Otevřete */etc/ssh/sshd_config* jako kořen. Upravit (nebo přidat, pokud neexistují) následující řádky:
+1. Otevřít */etc/ssh/sshd_config* jako kořen. Upravte (nebo přidejte, pokud neexistují) následující řádky:
 
    ```config
    Ciphers aes256-cbc,aes192-cbc,aes128-cbc,3des-cbc
@@ -54,29 +54,29 @@ Příklady v tomto článku používají Ubuntu 18,04 LTS s OpenSSH serverem ver
    ```
 
    > [!NOTE]
-   > SSH-RSA je jediným algoritmem klíče hostitele kompatibilního se standardem FIPS VS podporuje. Algoritmy AES\*-centra jsou také kompatibilní se standardem FIPS, ale implementace v aplikaci Visual Studio není schválená. Algoritmy výměny klíčů\* ECDH jsou kompatibilní se standardem FIPS, ale Visual Studio je nepodporuje.
+   > ssh-rsa je jediný algoritmus klíče hostitele kompatibilní s FIPS, který VS podporuje. Aes\*-ctr algoritmy jsou také kompatibilní fips, ale implementace v sadě Visual Studio není schválen. Algoritmy výměny klíčů ecdh-\* jsou kompatibilní s FIPS, ale Visual Studio je nepodporuje.
 
-   Nejste omezeni na tyto možnosti. SSH můžete nakonfigurovat tak, aby používala další šifry, algoritmy klíčů hostitele atd. Některé další důležité možnosti zabezpečení, které je vhodné zvážit, jsou `PermitRootLogin`, `PasswordAuthentication`a `PermitEmptyPasswords`. Další informace najdete na stránce muž pro sshd_config nebo v článku [Konfigurace serveru SSH](https://www.ssh.com/ssh/sshd_config).
+   Nejste omezeni na tyto možnosti. Ssh můžete nakonfigurovat tak, aby používal další šifry, algoritmy klíče hostitele a tak dále. Některé další relevantní možnosti zabezpečení, `PermitRootLogin` `PasswordAuthentication`které `PermitEmptyPasswords`můžete zvážit, jsou , a . Další informace naleznete na stránce man pro sshd_config nebo v článku [Konfigurace serveru SSH](https://www.ssh.com/ssh/sshd_config).
 
-1. Po uložení a zavření sshd_config restartujte server SSH, aby se nová konfigurace projevila:
+1. Po uložení a zavření sshd_config restartujte server ssh a použijte novou konfiguraci:
 
    ```bash
    sudo service ssh restart
    ```
 
-V dalším kroku vytvoříte pár klíčů RSA na počítači s Windows. Pak zkopírujete veřejný klíč do vzdáleného systému Linux, který bude používat SSH.
+Dále vytvoříte pár klíčů RSA v počítači se systémem Windows. Pak zkopírujete veřejný klíč do vzdáleného systému Linux pro použití ssh.
 
 ### <a name="to-create-and-use-an-rsa-key-file"></a>Vytvoření a použití souboru klíče RSA
 
-1. Na počítači s Windows vygenerujte dvojici veřejného a privátního klíče RSA pomocí tohoto příkazu:
+1. V počítači se systémem Windows vygenerujte dvojici klíčů RSA veřejné ho a soukromé pomocí tohoto příkazu:
 
    ```cmd
    ssh-keygen -t rsa -b 4096
    ```
 
-   Příkaz vytvoří veřejný klíč a privátní klíč. Ve výchozím nastavení se klíče ukládají do *% USERPROFILE%\\. ssh\\id_rsa* a *% USERPROFILE%\\. ssh\\id_rsa. pub*. (V PowerShellu použijte `$env:USERPROFILE` místo `%USERPROFILE%`makra cmd). Pokud změníte název klíče, použijte změněný název v následujících krocích.  Pro zvýšení zabezpečení doporučujeme použít přístupové heslo.
+   Příkaz vytvoří veřejný klíč a soukromý klíč. Ve výchozím nastavení jsou klíče uloženy do *\\%USERPROFILE%\\.ssh id_rsa* a *%USERPROFILE%\\.ssh\\id_rsa.pub*. (V powershellu `$env:USERPROFILE` použijte místo makra `%USERPROFILE%`cmd) Pokud změníte název klíče, použijte změněný název v následujících krocích.  Pro zvýšení zabezpečení doporučujeme použít přístupové heslo.
 
-1. Z Windows zkopírujte veřejný klíč do počítače se systémem Linux:
+1. Z Windows zkopírujte veřejný klíč do počítače s Linuxem:
 
    ```cmd
    scp %USERPROFILE%\.ssh\id_rsa.pub user@hostname:
@@ -89,88 +89,88 @@ V dalším kroku vytvoříte pár klíčů RSA na počítači s Windows. Pak zko
    chmod 600 ~/.ssh/authorized_keys
    ```
 
-1. Nyní můžete otestovat a zjistit, zda nový klíč funguje v SSH. Použijte ho pro přihlášení z Windows:
+1. Nyní můžete vyzkoušet, zda nový klíč funguje v ssh. Použijte ho k přihlášení z Windows:
 
     ```cmd
     ssh -i %USERPROFILE%\.ssh\id_rsa user@hostname
     ```
 
-Úspěšně jste nastavili SSH, vytvořili a nasadili šifrovací klíče a otestovali jste připojení. Teď jste připraveni nastavit připojení sady Visual Studio.
+Úspěšně jste nastavili šifrovací klíče ssh, vytvořili a nasadili a otestovali připojení. Nyní jste připraveni nastavit připojení sady Visual Studio.
 
-## <a name="connect-to-the-remote-system-in-visual-studio"></a>Připojení ke vzdálenému systému v aplikaci Visual Studio
+## <a name="connect-to-the-remote-system-in-visual-studio"></a>Připojení ke vzdálenému systému v sadě Visual Studio
 
-1. V aplikaci Visual Studio vyberte **nástroje > možnosti** na řádku nabídek a otevřete tak dialogové okno **Možnosti** . Pak vyberte pro **různé platformy > Správce připojení** a otevřete dialogové okno Správce připojení.
+1. V Sadě Visual Studio zvolte **Nástroje > Možnosti** na řádku nabídek a otevřete dialogové okno **Volby.** Pak vyberte **Cross Platform > Connection Manager** otevřete dialogové okno Connection Manager.
 
-   Pokud jste ještě před prvním sestavením projektu nevytvořili připojení v sadě Visual Studio, Visual Studio otevře pro vás dialog Správce připojení.
+   Pokud jste připojení v sadě Visual Studio ještě nenastavili, otevře visual studio při prvním sestavení projektu dialogové okno Connection Manager.
 
-1. V dialogovém okně Správce připojení kliknutím na tlačítko **Přidat** přidejte nové připojení.
+1. V dialogovém okně Správce připojení zvolte tlačítko **Přidat** a přidejte nové připojení.
 
    ![Správce připojení](media/settings_connectionmanager.png)
 
-   Zobrazí se okno **připojit ke vzdálenému systému** .
+   Zobrazí se okno **Připojit ke vzdálenému systému.**
 
-   ![Připojit ke vzdálenému systému](media/connect.png)
+   ![Připojení ke vzdálenému systému](media/connect.png)
 
-1. V dialogovém okně **připojit ke vzdálenému systému** zadejte podrobnosti o připojení ke vzdálenému počítači.
+1. V dialogovém okně **Připojit ke vzdálenému systému** zadejte podrobnosti o připojení vzdáleného počítače.
 
-   | Entry | Popis
+   | Záznam | Popis
    | ----- | ---
    | **Název hostitele**           | Název nebo IP adresa cílového zařízení
-   | **Port**                | Port, na kterém běží služba SSH, obvykle 22
-   | **Uživatelské jméno**           | Uživatel, který se má ověřit jako
-   | **Typ ověřování** | Zvolit privátní klíč pro připojení kompatibilní se standardem FIPS
-   | **Soubor privátního klíče**    | Soubor privátního klíče vytvořený pro připojení SSH
-   | **Hesel**          | Přístupové heslo použité s privátním klíčem vybraným výše
+   | **Port**                | Port, na který je spuštěna služba SSH, obvykle 22
+   | **Uživatelské jméno**           | Uživatel k ověření jako
+   | **Typ ověřování** | Zvolte soukromý klíč pro připojení kompatibilní s FIPS.
+   | **Soubor soukromého klíče**    | Soubor soukromého klíče vytvořený pro připojení ssh
+   | **Heslo**          | Přístupové heslo použité s výše vybraným soukromým klíčem
 
-   Změňte typ ověřování na **privátní klíč**. Do pole **soubor privátního klíče** zadejte cestu k privátnímu klíči. Pomocí tlačítka **Procházet** můžete místo toho přejít k souboru privátního klíče. Pak zadejte heslo používané k zašifrování souboru privátního klíče v poli **heslo** .
+   Změňte typ ověřování na **soukromý klíč**. Do pole **Soubor soukromého klíče** zadejte cestu k soukromému klíči. Místo toho můžete pomocí tlačítka **Procházet** přejít do souboru soukromého klíče. Poté zadejte přístupové heslo použité k zašifrování souboru soukromého klíče do pole **Přístupové heslo.**
 
-1. Klikněte na tlačítko **připojit** a pokuste se připojit ke vzdálenému počítači.
+1. Chcete-li se pokusit o připojení ke vzdálenému počítači, zvolte tlačítko **Připojit.**
 
-   Pokud je připojení úspěšné, Visual Studio nakonfiguruje technologii IntelliSense na používání vzdálených hlaviček. Další informace najdete v tématu [IntelliSense pro hlavičky ve vzdálených systémech](configure-a-linux-project.md#remote_intellisense).
+   Pokud je připojení úspěšné, Visual Studio nakonfiguruje intelliSense používat vzdálené záhlaví. Další informace naleznete v tématu [IntelliSense pro záhlaví ve vzdálených systémech](configure-a-linux-project.md#remote_intellisense).
 
-   Pokud se připojení nepovede, jsou vstupní pole, která je potřeba změnit, označená červeně.
+   Pokud se připojení nezdaří, jsou pole, která je třeba změnit, označena červeně.
 
    ![Chyba Správce připojení](media/settings_connectionmanagererror.png)
 
-   Další informace o řešení potíží s připojením najdete v tématu [připojení ke vzdálenému počítači se systémem Linux](connect-to-your-remote-linux-computer.md).
+   Další informace o řešení potíží s připojením naleznete v tématu [Připojení ke vzdálenému počítači s Linuxem](connect-to-your-remote-linux-computer.md).
 
 ## <a name="command-line-utility-for-the-connection-manager"></a>Nástroj příkazového řádku pro správce připojení  
 
-**Visual Studio 2019 verze 16,5 nebo novější**: ConnectionManager. exe je nástroj příkazového řádku pro správu připojení vzdáleného vývoje mimo sadu Visual Studio. Je vhodný pro úlohy, jako je například zřízení nového vývojového počítače. Nebo ho můžete použít k nastavení sady Visual Studio pro průběžnou integraci. Příklady a kompletní odkaz na příkaz ConnectionManager naleznete v tématu [ConnectionManager reference](connectionmanager-reference.md).  
+**Visual Studio 2019 verze 16.5 nebo novější**: ConnectionManager.exe je nástroj příkazového řádku pro správu vzdálených vývojových připojení mimo Visual Studio. Je to užitečné pro úkoly, jako je zřizování nového vývojového počítače. Nebo ji můžete použít k nastavení sady Visual Studio pro průběžnou integraci. Příklady a úplný odkaz na příkaz ConnectionManager naleznete v [tématu ConnectionManager reference](connectionmanager-reference.md).  
 
-## <a name="optional-enable-or-disable-fips-mode"></a>Volitelné: povolí nebo zakáže režim FIPS.
+## <a name="optional-enable-or-disable-fips-mode"></a>Volitelné: Povolení nebo zakázání režimu FIPS
 
-V systému Windows je možné povolit režim FIPS globálně.
+Režim FIPS je možné povolit globálně v systému Windows.
 
-1. Pokud chcete povolit režim FIPS, otevřete dialogové okno spustit stisknutím **Windows + R** a pak spusťte gpedit. msc.
+1. Chcete-li režim FIPS povolit, otevřete stisknutím **kláves Windows+R** dialogové okno Spustit a spusťte soubor gpedit.msc.
 
-1. Rozbalte položku **místní počítač zásada > konfigurace počítače > nastavení systému Windows > nastavení zabezpečení > místní zásady** a vyberte **Možnosti zabezpečení**.
+1. Rozbalte **položku Místní zásady > Konfigurace počítače > Nastavení systému Windows > Nastavení zabezpečení > místních zásad** a vyberte **možnosti zabezpečení**.
 
-1. V části **zásady**vyberte **Kryptografie systému: pro šifrování, algoritmus hash a podepisování použijte algoritmy kompatibilní se standardem FIPS**a potom stiskněte **ENTER** . otevře se dialogové okno.
+1. V části **Zásady**vyberte **Možnost Systémová kryptografie: Pomocí algoritmů kompatibilních s FIPS pro šifrování, algoritmus hash a podepisování**a stisknutím **klávesy Enter** otevřete jeho dialogové okno.
 
-1. Na kartě **místní nastavení zabezpečení** vyberte možnost **povoleno** nebo **zakázáno**a pak kliknutím na **tlačítko OK** uložte změny.
+1. Na kartě **Nastavení místního zabezpečení** vyberte **Možnost Povoleno** nebo **Zakázáno**a pak zvolte **OK,** chcete-li změny uložit.
 
 > [!WARNING]
-> Povolení režimu FIPS může způsobit, že některé aplikace přeruší nebo se chovají neočekávaně. Další informace najdete v blogovém příspěvku, [Proč už nedoporučujeme "režim FIPS"](https://techcommunity.microsoft.com/t5/microsoft-security-baselines/why-we-8217-re-not-recommending-8220-fips-mode-8221-anymore/ba-p/701037).
+> Povolení režimu FIPS může způsobit, že některé aplikace přerušit nebo se chovat neočekávaně. Další informace naleznete v příspěvku na blogu [Why We're Not Doporučování "režim FIPS" Anymore](https://techcommunity.microsoft.com/t5/microsoft-security-baselines/why-we-8217-re-not-recommending-8220-fips-mode-8221-anymore/ba-p/701037).
 
-## <a name="additional-resources"></a>Další materiály a zdroje informací
+## <a name="additional-resources"></a>Další zdroje
 
-[Dokumentace Microsoftu k ověřování FIPS 140](/windows/security/threat-protection/fips-140-validation)
+[Dokumentace společnosti Microsoft k ověření FIPS 140](/windows/security/threat-protection/fips-140-validation)
 
-[FIPS 140-2: požadavky na zabezpečení pro kryptografické moduly](https://csrc.nist.gov/publications/detail/fips/140/2/final) (z NIST)
+[FIPS 140-2: Bezpečnostní požadavky pro kryptografické moduly](https://csrc.nist.gov/publications/detail/fips/140/2/final) (od NIST)
 
-[Ověřovací program kryptografického algoritmu: poznámky k ověření](https://csrc.nist.gov/projects/cryptographic-algorithm-validation-program/Validation-Notes) (z NIST)
+[Program ověřování kryptografických algoritmů: Ověřovací poznámky](https://csrc.nist.gov/projects/cryptographic-algorithm-validation-program/Validation-Notes) (od NIST)
 
-Blogový příspěvek Microsoftu s tím, [že už nedoporučujeme používat režim FIPS](https://techcommunity.microsoft.com/t5/microsoft-security-baselines/why-we-8217-re-not-recommending-8220-fips-mode-8221-anymore/ba-p/701037)
+Microsoft blog post na [Proč nejsme nedoporučujeme "FIPS režim" Anymore](https://techcommunity.microsoft.com/t5/microsoft-security-baselines/why-we-8217-re-not-recommending-8220-fips-mode-8221-anymore/ba-p/701037)
 
 [Konfigurace serveru SSH](https://www.ssh.com/ssh/sshd_config)
 
 ## <a name="see-also"></a>Viz také
 
-[Konfigurace\ projektu pro Linux](configure-a-linux-project.md)
-[Konfigurace projektu Linux cmake](cmake-linux-project.md)\
-[Připojte se ke vzdálenému počítači se systémem Linux](connect-to-your-remote-linux-computer.md)\
-[Nasazení, spuštění a ladění projektu pro Linux](deploy-run-and-debug-your-linux-project.md)\
+[Konfigurace projektu Linuxu](configure-a-linux-project.md)\
+[Konfigurace projektu Linux CMake](cmake-linux-project.md)\
+[Připojení ke vzdálenému počítači s Linuxem](connect-to-your-remote-linux-computer.md)\
+[Nasazení, spuštění a ladění projektu Linuxu](deploy-run-and-debug-your-linux-project.md)\
 [Konfigurace ladicích relací CMake](../build/configure-cmake-debugging-sessions.md)
 
 ::: moniker-end

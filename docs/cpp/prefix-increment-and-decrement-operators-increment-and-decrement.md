@@ -13,12 +13,12 @@ helpviewer_keywords:
 - decrement operators [C++], syntax
 - decrement operators [C++]
 ms.assetid: 45ea7fc7-f279-4be9-a216-1d9a0ef9eb7b
-ms.openlocfilehash: 32c210961c4966bb7b2cbcc597bd3c99f0d6ed24
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: ce066a3349d56b278739f586fe851b020da78885
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80177661"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366225"
 ---
 # <a name="prefix-increment-and-decrement-operators--and---"></a>Operátory přírůstku a snížení předpony: ++ a --
 
@@ -31,13 +31,13 @@ ms.locfileid: "80177661"
 
 ## <a name="remarks"></a>Poznámky
 
-Operátor přírůstku předpony ( **++** ) přidá jeden k jeho operandu; Tato zvýšená hodnota je výsledkem výrazu. Operand musí být l-hodnota, která není typu **const**. Výsledkem je l-hodnota stejného typu jako operand.
+Operátor přírůstku předpony**++**( ) přidá jeden do svého operandu; tato přírůstající hodnota je výsledkem výrazu. Operand musí být hodnota l, která není typu **const**. Výsledkem je hodnota l stejného typu jako operand.
 
-Operátor snížení předpony ( **--** ) je podobný operátoru příznaku přírůstku s tím rozdílem, že operand je snížen o jednu a výsledkem je tato snížená hodnota.
+Operátor snížení předpony (**--**) je analogický operátoru přírůstek předpony, s tím rozdílem, že operand je snížen o jeden a výsledkem je tato snížená hodnota.
 
-**Visual Studio 2017 verze 15,3 a novější** (k dispozici v [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)): Operand operátoru Increment nebo snížení nesmí být typu **bool**.
+**Visual Studio 2017 verze 15.3 a novější** (k dispozici s [/std:c++17):](../build/reference/std-specify-language-standard-version.md)Operand operátor u přírůstek nebo snížení nemusí být typu **bool**.
 
-Operátory i modifikátor přípona i přípona mají vliv na jejich operandy. Klíčový rozdíl mezi nimi je pořadí, ve kterém dojde k přírůstku nebo snížení v vyhodnocení výrazu. (Další informace naleznete v tématu [operátory přírůstku a snížení přípon](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md).) Ve formuláři předpony se zvyšuje nebo snižuje počet před tím, než se hodnota použije při vyhodnocování výrazu, takže hodnota výrazu se liší od hodnoty operandu. Ve formuláři přípona probíhá přírůstek nebo snížení po použití hodnoty ve vyhodnocení výrazu, takže hodnota výrazu je stejná jako hodnota operandu. Například následující program vytiskne "`++i = 6`":
+Operátory přírůstek předpony i přípony a snížení ovlivňují jejich operandy. Klíčovým rozdílem mezi nimi je pořadí, ve kterém se při hodnocení výrazu uskutečňuje přírůstek nebo úbytek. (Další informace naleznete v tématu [Postfix Přírůstek a Dekrement operátory](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md).) Ve formuláři předpony dojde k přírůstku nebo snížení před použitím hodnoty v vyhodnocení výrazu, takže hodnota výrazu se liší od hodnoty operandu. Ve formuláři přípony dojde k přírůstku nebo snížení po použití hodnoty v vyhodnocení výrazu, takže hodnota výrazu je stejná jako hodnota operandu. Například následující program vytiskne "`++i = 6`":
 
 ```cpp
 // expre_Increment_and_Decrement_Operators.cpp
@@ -52,9 +52,9 @@ int main() {
 }
 ```
 
-Operand integrálního nebo plovoucího typu se zvýší nebo sníží o celočíselnou hodnotu 1. Typ výsledku je stejný jako typ operandu. Operand typu ukazatele je zvětšen nebo snížen o velikost objektu, na který odkazuje. Zvýšený ukazatel ukazuje na další objekt; Snížený ukazatel ukazuje na předchozí objekt.
+Operand integrálního nebo plovoucího typu se zintáží nebo sníží o celou hodnotu 1. Typ výsledku je stejný jako typ operandu. Operand typu ukazatele je zvětšován nebo snížen velikostí objektu, který řeší. Zpřísněný ukazatel odkazuje na další objekt; dekreed ukazatel odkazuje na předchozí objekt.
 
-Vzhledem k tomu, že operátory přírůstku a snížení mají vedlejší účinky, mohou být pomocí výrazů s operátory zvýšení nebo snížení v [makru preprocesoru](../preprocessor/macros-c-cpp.md) nežádoucí výsledky. Vezměte v úvahu tento příklad:
+Vzhledem k tomu, že operátory přírůstek a snížení mají vedlejší účinky, může mít použití výrazů s operátory přírůstek nebo snížení v [makru preprocesoru](../preprocessor/macros-c-cpp.md) nežádoucí výsledky. Vezměme si tento příklad:
 
 ```cpp
 // expre_Increment_and_Decrement_Operators2.cpp
@@ -67,16 +67,16 @@ int main()
 }
 ```
 
-Makro se rozbalí do:
+Makro se rozbalí na:
 
 ```cpp
 k = ((++i)<(j))?(j):(++i);
 ```
 
-Pokud je `i` větší nebo rovna `j` nebo menší než `j` hodnotou 1, bude zvýšena dvakrát.
+Pokud `i` je větší nebo `j` rovno `j` nebo menší než 1, bude se zvýší dvakrát.
 
 > [!NOTE]
->  C++vložené funkce jsou vhodnější pro makra v mnoha případech, protože odstraňují vedlejší účinky, jako jsou zde popsané, a umožňují jazyku provádět úplnější kontrolu typu.
+> Vslaných funkcí jazyka C++ jsou v mnoha případech vhodnější než makra, protože eliminují vedlejší účinky, jako jsou zde popsané, a umožňují jazyku provádět úplnější kontrolu typu.
 
 ## <a name="see-also"></a>Viz také
 

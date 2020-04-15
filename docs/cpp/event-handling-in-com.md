@@ -16,35 +16,35 @@ helpviewer_keywords:
 - declaring events, in COM
 - declaring events, event handling in COM
 ms.assetid: 6b4617d4-a58e-440c-a8a6-1ad1c715b2bb
-ms.openlocfilehash: d54470bdf4b2555b01993582a74f65505858f94b
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 756fb6f17aa02fda9a19d501395c39a0b1f602f6
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80189231"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366307"
 ---
 # <a name="event-handling-in-com"></a>Zpracování událostí v modelu COM
 
-V rámci zpracování událostí modelu COM nastavíte zdroj události a přijímač událostí pomocí atributů [event_source](../windows/attributes/event-source.md) a [event_receiver](../windows/attributes/event-receiver.md) , v uvedeném pořadí, a určíte `type`=`com`. Tyto atributy vloží příslušný kód pro vlastní, odeslání a duální rozhraní umožňující třídám, na které se vztahují, vyvolat a zpracovat události prostřednictvím přípojných bodů modelu COM.
+Při zpracování událostí com nastavit zdroj událostí a příjemce událostí pomocí [atributů event_source](../windows/attributes/event-source.md) `type` = `com`a [event_receiver,](../windows/attributes/event-receiver.md) v uvedeném pořadí, určení . Tyto atributy vloží příslušný kód pro vlastní, odeslání a duální rozhraní umožňující třídám, na které se vztahují, vyvolat a zpracovat události prostřednictvím přípojných bodů modelu COM.
 
 ## <a name="declaring-events"></a>Deklarace událostí
 
-Ve třídě zdroje události použijte klíčové slovo [__event](../cpp/event.md) v deklaraci rozhraní k deklaraci metod rozhraní jako událostí. Události tohoto rozhraní jsou aktivovány, pokud je zavoláte jako metody rozhraní. Metody v rozhraních událostí mohou mít nula nebo více parametrů (které by měly být všechny *v* parametrech). Návratový typ může být typ void nebo libovolný celočíselný typ.
+Ve třídě zdroje událostí použijte klíčové slovo [__event](../cpp/event.md) v deklaraci rozhraní k deklarování metod tohoto rozhraní jako událostí. Události tohoto rozhraní jsou aktivovány, pokud je zavoláte jako metody rozhraní. Metody na rozhraní událostí může mít nula nebo více parametrů (které by měly být *všechny v* parametrech). Návratový typ může být typ void nebo libovolný celočíselný typ.
 
 ## <a name="defining-event-handlers"></a>Definice obslužných rutin událostí
 
-V třídě příjemce události definujte obslužné rutiny událostí, což jsou metody s podpisy (návratové typy, úmluvy volání a argumenty) odpovídajícími události, kterou budou zpracovávat. Pro události COM nemusíte konvence volání odpovídat. Podrobnosti viz níže uvedené [události modelu COM závislé na rozložení](#vcconeventhandlingincomanchorlayoutdependentcomevents) .
+V třídě příjemce události definujte obslužné rutiny událostí, což jsou metody s podpisy (návratové typy, úmluvy volání a argumenty) odpovídajícími události, kterou budou zpracovávat. U událostí com nemusí odpovídat konvence volání; Podrobnosti naleznete níže v části [Události com závislé na rozložení.](#vcconeventhandlingincomanchorlayoutdependentcomevents)
 
 ## <a name="hooking-event-handlers-to-events"></a>Připojení obslužných rutin událostí k událostem
 
-Také v třídě přijímače událostí použijete vnitřní funkci [__hook](../cpp/hook.md) k přidružení událostí k obslužným rutinám událostí a [__unhook](../cpp/unhook.md) k oddálení událostí z obslužných rutin událostí. Lze připojit několik událostí k obslužné rutině události nebo několik obslužných rutin událostí k události.
+Také ve třídě příjemce událostí použít vnitřní funkce [__hook](../cpp/hook.md) k přidružení událostí s obslužnými rutinami událostí a [__unhook](../cpp/unhook.md) k odlučování událostí od obslužných rutin událostí. Lze připojit několik událostí k obslužné rutině události nebo několik obslužných rutin událostí k události.
 
 > [!NOTE]
->  Obvykle jsou k dispozici dvě techniky umožňující příjemci události modelu COM přistupovat k definicím rozhraní zdroje událostí. Prvním, jak je uvedeno níže, je sdílet společný soubor hlaviček. Druhým je použití [#import](../preprocessor/hash-import-directive-cpp.md) s kvalifikátorem `embedded_idl` importu, aby se knihovna typů zdrojového kódu zapsala do souboru. tlh s zachovaným kódem generovaným atributem.
+> Obvykle jsou k dispozici dvě techniky umožňující příjemci události modelu COM přistupovat k definicím rozhraní zdroje událostí. Prvním, jak je uvedeno níže, je sdílet společný soubor hlaviček. Druhým je použití [#import](../preprocessor/hash-import-directive-cpp.md) `embedded_idl` s kvalifikátorem importu, aby byla knihovna typu zdroje událostí zapsána do souboru TLH se zachovaným kódem generovaným atributem.
 
 ## <a name="firing-events"></a>Vyvolání událostí
 
-Chcete-li vyvolat událost, jednoduše zavolejte metodu v rozhraní deklarovaném pomocí klíčového slova **__event** ve třídě zdroje událostí. Pokud byly obslužné rutiny připojeny k této události, budou tyto obslužné rutiny zavolány.
+Chcete-li vyvolat událost, jednoduše zavolejte metodu v rozhraní deklarovaném s klíčovým slovem **__event** ve třídě zdroje událostí. Pokud byly obslužné rutiny připojeny k této události, budou tyto obslužné rutiny zavolány.
 
 ### <a name="com-event-code"></a>Kód události COM
 
@@ -157,13 +157,13 @@ MyHandler1 was called with value 123.
 MyHandler2 was called with value 123.
 ```
 
-##  <a name="layout-dependent-com-events"></a><a name="vcconeventhandlingincomanchorlayoutdependentcomevents"></a>Události modelu COM závislé na rozložení
+## <a name="layout-dependent-com-events"></a><a name="vcconeventhandlingincomanchorlayoutdependentcomevents"></a>Události COM závislé na rozložení
 
 Závislost na rozložení se týká pouze programování v modelu COM. Při zpracování nativních a spravovaných událostí musí podpisy (návratový typ, konvence volání a argumenty) obslužných rutin odpovídat jejich událostem, ale názvy obslužných rutin nemusí odpovídat jejich událostem.
 
-Nicméně při zpracování událostí modelu COM, pokud nastavíte parametr *layout_dependent* `event_receiver` na **hodnotu true**, je vynutilo porovnání názvu a podpisu. To znamená, že názvy a podpisy obslužných rutin v příjemci události musí přesně odpovídat názvům a podpisům událostí, ke kterým jsou připojeny.
+Při zpracování událostí com při nastavení *parametru* `event_receiver` layout_dependent na **hodnotu true**je však vynuceno párování názvů a podpisů. To znamená, že názvy a podpisy obslužných rutin v příjemci události musí přesně odpovídat názvům a podpisům událostí, ke kterým jsou připojeny.
 
-Je-li *layout_dependent* nastavena na **hodnotu NEPRAVDA**, konvence volání a třída úložiště (Virtual, static atd.) lze kombinovat a porovnat mezi metodou události pálení a metodami (delegáty). Je poněkud efektivnější, aby *layout_dependent*=**true**.
+Pokud *je layout_dependent* nastavena na **hodnotu false**, může být třída konvence volání a úložiště (virtuální, statická a tak dále) smíchána a spárována mezi metodou události vypalování a metodami hákování (jeho delegáti). Je o něco efektivnější mít *layout_dependent*=**pravda**.
 
 Předpokládejme například, že je definováno rozhraní `IEventSource` s následujícími metodami:
 

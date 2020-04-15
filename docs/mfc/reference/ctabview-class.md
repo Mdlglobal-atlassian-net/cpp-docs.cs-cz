@@ -1,5 +1,5 @@
 ---
-title: Ctabview – třída
+title: Třída CtabView
 ms.date: 11/04/2016
 f1_keywords:
 - CTabView
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - CTabView [MFC], IsScrollBar
 - CTabView [MFC], OnActivateView
 ms.assetid: 8e6ecd9d-d28d-432b-8ec8-0446f0204d52
-ms.openlocfilehash: 56640edbd0d2e74a1cc00dad5441350ad3d35725
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: ad30cbbf5de195708d2d357a76c38b661d095c2f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64346242"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81365925"
 ---
-# <a name="ctabview-class"></a>Ctabview – třída
+# <a name="ctabview-class"></a>Třída CtabView
 
-`CTabView` Třída zjednodušuje použití třídy ovládacího prvku karta ( [cmfctabctrl –](../../mfc/reference/ctabview-class.md)) v aplikacích, které používají architekturu document/view knihovny MFC.
+Třída `CTabView` zjednodušuje použití třídy ovládacího prvku tabulátoru ( [CMFCTabCtrl](../../mfc/reference/ctabview-class.md)) v aplikacích, které používají architekturu dokumentu/zobrazení knihovny MFC.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -43,33 +43,33 @@ class CTabbedView : public CView
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CTabView::AddView](#addview)|Přidá nové zobrazení pro ovládací prvek karty.|
-|[CTabView::FindTab](#findtab)|Vrátí index zadané zobrazení v ovládacím prvku karty.|
-|[CTabView::GetActiveView](#getactiveview)|Vrací ukazatel k aktuálně aktivnímu zobrazení.|
-|[CTabView::GetTabControl](#gettabcontrol)|Vrátí odkaz na ovládací prvek karty, které jsou přidružené k zobrazení.|
-|[CTabView::RemoveView](#removeview)|Odstraní zobrazení z ovládacího prvku karta.|
+|[CTabView::Přidatzobrazení](#addview)|Přidá nové zobrazení do ovládacího prvku karta.|
+|[CTabView::FindTab](#findtab)|Vrátí index zadaného zobrazení v ovládacím prvku karta.|
+|[CTabView::GetActiveView](#getactiveview)|Vrátí ukazatel na aktuálně aktivní zobrazení.|
+|[CTabView::Ovládací prvek GetTabControl](#gettabcontrol)|Vrátí odkaz na ovládací prvek tabulátoru přidružený k zobrazení.|
+|[CTabView::RemoveView](#removeview)|Odebere zobrazení z ovládacího prvku karta.|
 |[CTabView::SetActiveView](#setactiveview)|Aktivuje zobrazení.|
 
 ### <a name="protected-methods"></a>Chráněné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CTabView::IsScrollBar](#isscrollbar)|Volá se rozhraním při vytváření zobrazení karta slouží k určení, zda má kartě se zobrazením sdílené vodorovný posuvník.|
-|[CTabView::OnActivateView](#onactivateview)|Volá se rozhraním, když se kartě se zobrazením je aktivní nebo neaktivní.|
+|[CtabView::IsScrollBar](#isscrollbar)|Volat rámci při vytváření zobrazení tabulátoru k určení, zda zobrazení tabulátoru má sdílený vodorovný posuvník.|
+|[Ctabview::OnActivateView](#onactivateview)|Volat rámci při zobrazení tabulátoru je aktivní nebo neaktivní.|
 
 ## <a name="remarks"></a>Poznámky
 
-Tato třída umožňuje snadno převést zobrazení se záložkami do dokumentů/zobrazení aplikace. `CTabView` je `CView`-odvozené třídy, která obsahuje vložený `CMFCTabCtrl` objektu. `CTabView` zpracovává všechny zprávy, které jsou potřeba pro podporu `CMFCTabCtrl` objektu. Jednoduše odvodit třídu z `CTabView` a zařadit ho do své aplikace a pak přidejte `CView`-odvozené třídy pomocí `AddView` metody. Ovládací prvek karty zobrazí jako karty těchto zobrazení.
+Tato třída usnadňuje vložení zobrazení s kartami do aplikace dokumentu nebo zobrazení. `CTabView`je `CView`odvozená třída, která obsahuje `CMFCTabCtrl` vložený objekt. `CTabView`zpracovává všechny zprávy potřebné `CMFCTabCtrl` pro podporu objektu. Jednoduše odvodit třídu z `CTabView` a `CView`připojte ji do aplikace `AddView` a potom přidejte odvozené třídy pomocí metody. Ovládací prvek karta zobrazí tato zobrazení jako karty.
 
-Například může mít dokument, který může být reprezentována různými způsoby: jako tabulky, graf, Upravitelný formulář a tak dále. Můžete vytvořit jednotlivé zobrazení vykreslování data podle potřeby, vložte je do vašeho `CTabView`-odvozenému objektu a potom kliknul na záložkách bez jakékoli další kódování.
+Můžete mít například dokument, který může být reprezentován různými způsoby: jako tabulka, graf, upravitelný formulář a tak dále. Můžete vytvořit jednotlivé pohledy kreslení dat podle `CTabView`potřeby, vložte je do -odvozený objekt a mít je záložkou bez dalšího kódování.
 
-[Ukázka TabbedView: Zobrazení aplikace s kartami knihovny MFC](../../overview/visual-cpp-samples.md) ukazuje využití `CTabView`.
+[TabbedView Ukázka: Aplikace zobrazení s kartami knihovny MFC](../../overview/visual-cpp-samples.md) ilustruje použití `CTabView`aplikace .
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje jak `CTabView` se používá v ukázce TabbedView.
+Následující příklad ukazuje, jak `CTabView` se používá v TabbedView vzorku.
 
 [!code-cpp[NVC_MFC_TabbedView#1](../../mfc/reference/codesnippet/cpp/ctabview-class_1.h)]
 
@@ -77,9 +77,9 @@ Následující příklad ukazuje jak `CTabView` se používá v ukázce TabbedVi
 
 **Záhlaví:** afxTabView.h
 
-##  <a name="addview"></a>  CTabView::AddView
+## <a name="ctabviewaddview"></a><a name="addview"></a>CTabView::Přidatzobrazení
 
-Přidá do ovládacího prvku Karta zobrazení.
+Přidá zobrazení do ovládacího prvku karta.
 
 ```
 int AddView(
@@ -92,28 +92,28 @@ int AddView(
 ### <a name="parameters"></a>Parametry
 
 *pViewClass*<br/>
-[in] Ukazatel na třídu runtime vložená zobrazení.
+[v] Ukazatel na třídu runtime vloženého zobrazení.
 
 *strViewLabel*<br/>
-[in] Určuje text, na kartě.
+[v] Určuje text karty.
 
 *iIndex*<br/>
-[in] Určí založený na nule pozici, na kterém se má vložit zobrazení. Pokud na pozici, je -1 je vložen novou kartu na konci.
+[v] Určuje pozici založenou na nule, do které má být pohled vložen. Pokud je pozice -1, nová karta je vložena na konci.
 
-*pContext*<br/>
-[in] Ukazatel `CCreateContext` zobrazení.
+*pKontext*<br/>
+[v] Ukazatel na `CCreateContext` zobrazení.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Index zobrazení, pokud tato metoda bude úspěšná. Jinak -1.
+Index zobrazení, pokud je tato metoda úspěšná. Jinak -1.
 
 ### <a name="remarks"></a>Poznámky
 
-Voláním této funkce Přidat zobrazení do ovládacího prvku karta, který je vložený v objektu frame.
+Voláním této funkce přidáte zobrazení do ovládacího prvku tabulátoru, který je vložen ý do rámečku.
 
-##  <a name="findtab"></a>  CTabView::FindTab
+## <a name="ctabviewfindtab"></a><a name="findtab"></a>CTabView::FindTab
 
-Vrátí index zadané zobrazení v ovládacím prvku karty.
+Vrátí index zadaného zobrazení v ovládacím prvku karta.
 
 ```
 int FindTab(HWND hWndView) const;
@@ -122,7 +122,7 @@ int FindTab(HWND hWndView) const;
 ### <a name="parameters"></a>Parametry
 
 *hWndView*<br/>
-[in] Popisovač zobrazení.
+[v] Úchyt zobrazení.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -130,11 +130,11 @@ Index zobrazení, pokud je nalezen; jinak -1.
 
 ### <a name="remarks"></a>Poznámky
 
-Volání této funkce načtete index zobrazení, který má Zadaný popisovač.
+Volání této funkce načíst index zobrazení, který má zadaný popisovač.
 
-##  <a name="getactiveview"></a>  CTabView::GetActiveView
+## <a name="ctabviewgetactiveview"></a><a name="getactiveview"></a>CTabView::GetActiveView
 
-Vrací ukazatel na aktuálně aktivní zobrazení.
+Vrátí ukazatel na aktuálně aktivní zobrazení.
 
 ```
 CView* GetActiveView() const;
@@ -142,13 +142,13 @@ CView* GetActiveView() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Platný ukazatel na aktivní zobrazení, nebo hodnota NULL, pokud neexistuje žádná aktivní zobrazení.
+Platný ukazatel na aktivní zobrazení nebo NULL, pokud neexistuje žádné aktivní zobrazení.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="gettabcontrol"></a>  CTabView::GetTabControl
+## <a name="ctabviewgettabcontrol"></a><a name="gettabcontrol"></a>CTabView::Ovládací prvek GetTabControl
 
-Vrátí odkaz na ovládací prvek karty, které jsou přidružené k zobrazení.
+Vrátí odkaz na ovládací prvek tabulátoru přidružený k zobrazení.
 
 ```
 DECLARE_DYNCREATE CMFCTabCtrl& GetTabControl();
@@ -156,11 +156,11 @@ DECLARE_DYNCREATE CMFCTabCtrl& GetTabControl();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Odkaz na ovládací prvek karty, které jsou přidružené k zobrazení.
+Odkaz na ovládací prvek tabulátoru přidružený k zobrazení.
 
-##  <a name="isscrollbar"></a>  CTabView::IsScrollBar
+## <a name="ctabviewisscrollbar"></a><a name="isscrollbar"></a>CtabView::IsScrollBar
 
-Volá se rozhraním při vytváření zobrazení karta slouží k určení, zda má kartě se zobrazením sdílené vodorovný posuvník.
+Volat rámci při vytváření zobrazení tabulátoru k určení, zda zobrazení tabulátoru má sdílený vodorovný posuvník.
 
 ```
 virtual BOOL IsScrollBar() const;
@@ -168,17 +168,17 @@ virtual BOOL IsScrollBar() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-TRUE, pokud kartě se zobrazením by měl být vytvořen spolu s sdílené posuvníku. V opačném případě hodnota FALSE.
+TRUE, pokud má být zobrazení tabulátoru vytvořeno společně se sdíleným posuvníkem. V opačném případě NEPRAVDA.
 
 ### <a name="remarks"></a>Poznámky
 
-Rozhraní volá tuto metodu při *ctabview –* objekt se vytváří.
+Rozhraní Framework volá tuto metodu při vytváření objektu *CTabView.*
 
-Přepsat *IsScrollBar* metoda *ctabview –*-odvozené třídy a vrací TRUE, pokud chcete vytvořit zobrazení, který má sdílené vodorovný posuvník.
+Přepsat *IsScrollBar* metoda v *CTabView*-odvozené třídy a vrátit TRUE, pokud chcete vytvořit zobrazení, které má sdílený vodorovný posuvník.
 
-##  <a name="onactivateview"></a>  CTabView::OnActivateView
+## <a name="ctabviewonactivateview"></a><a name="onactivateview"></a>Ctabview::OnActivateView
 
-Volá se rozhraním, když se kartě se zobrazením je aktivní nebo neaktivní.
+Volat rámci při zobrazení tabulátoru je aktivní nebo neaktivní.
 
 ```
 virtual void OnActivateView(CView* view);
@@ -186,16 +186,16 @@ virtual void OnActivateView(CView* view);
 
 ### <a name="parameters"></a>Parametry
 
-*Zobrazení*<br/>
-[in] Ukazatel na zobrazení.
+*Prohlédni*<br/>
+[v] Ukazatel na zobrazení.
 
 ### <a name="remarks"></a>Poznámky
 
-Výchozí implementace nemá žádný účinek. Potlačí tuto metodu v `CTabView`-odvozené třídy pro zpracování tohoto oznámení.
+Výchozí implementace neprovede žádné provádění. Přepsat tuto metodu `CTabView`v odvozené třídy zpracovat toto oznámení.
 
-##  <a name="removeview"></a>  CTabView::RemoveView
+## <a name="ctabviewremoveview"></a><a name="removeview"></a>CTabView::RemoveView
 
-Odstraní zobrazení z ovládacího prvku karta.
+Odebere zobrazení z ovládacího prvku karta.
 
 ```
 BOOL RemoveView(int iTabNum);
@@ -204,15 +204,15 @@ BOOL RemoveView(int iTabNum);
 ### <a name="parameters"></a>Parametry
 
 *iTabNum*<br/>
-[in] Index zobrazení odebrat.
+[v] Index zobrazení odebrat.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Index zobrazení odebrané, pokud tato metoda bude úspěšná. V opačném případě hodnota-1.
+Index odebráného zobrazení, pokud je tato metoda úspěšná. Jinak -1.
 
 ### <a name="remarks"></a>Poznámky
 
-##  <a name="setactiveview"></a>  CTabView::SetActiveView
+## <a name="ctabviewsetactiveview"></a><a name="setactiveview"></a>CTabView::SetActiveView
 
 Aktivuje zobrazení.
 
@@ -223,19 +223,19 @@ BOOL SetActiveView(int iTabNum);
 ### <a name="parameters"></a>Parametry
 
 *iTabNum*<br/>
-[in] Index založený na nule kartě se zobrazením.
+[v] Index na základě nuly zobrazení tabulátoru.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-TRUE, pokud zadané zobrazení se provádí aktivní, FALSE v případě zobrazení indexu je neplatný.
+PRAVDA, pokud bylo zadané zobrazení aktivní, NEPRAVDA, pokud je index zobrazení neplatný.
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace najdete v části [CMFCTabCtrl::SetActiveTab](../../mfc/reference/cmfctabctrl-class.md#setactivetab).
+Další informace naleznete v tématu [CMFCTabCtrl::SetActiveTab](../../mfc/reference/cmfctabctrl-class.md#setactivetab).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>
 [CMFCTabCtrl](../../mfc/reference/ctabview-class.md)<br/>
-[CView – třída](../../mfc/reference/cview-class.md)
+[Třída CView](../../mfc/reference/cview-class.md)

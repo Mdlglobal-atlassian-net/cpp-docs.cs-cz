@@ -1,5 +1,5 @@
 ---
-title: Inline Assembler
+title: Vložený assembler
 ms.date: 08/30/2018
 helpviewer_keywords:
 - assembler [C++]
@@ -8,23 +8,23 @@ helpviewer_keywords:
 - inline assembler [C++]
 - inline assembly [C++]
 ms.assetid: 7e13f18f-3628-4306-8b81-4a6d09c043fe
-ms.openlocfilehash: d36c4d83a1fbf5d7ad718a7caf1dccb8f6745676
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 2050f59601755a93c73b743debacbf52ba9cec05
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80169368"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81318077"
 ---
-# <a name="inline-assembler"></a>Inline Assembler
+# <a name="inline-assembler"></a>Vložený assembler
 
-**Specifické pro společnost Microsoft**
+**Specifické pro Microsoft**
 
 Jazyk sestavení slouží různým účelům, například zvýšení rychlosti programu, snížení požadavků na paměť a ovládání hardwaru. Inline assembler můžete použít pro vložení instrukcí sestavení jazyka přímo do zdrojových programů v jazyce C a C++ bez nutnosti dodatečných kroků sestavení a propojení. Inline assembler je integrován v kompilátoru, takže nepotřebujete používat samostatný kompilátor, jako například Microsoft Macro Assembler (MASM).
 
 > [!NOTE]
->  Programy s kódem inline assembleru nejsou plně přenosné na jiné hardwarové platformy. Pokud navrhujete s ohledem na přenositelnost, vyhněte se použití inline assembleru.
+> Programy s kódem inline assembleru nejsou plně přenosné na jiné hardwarové platformy. Pokud navrhujete s ohledem na přenositelnost, vyhněte se použití inline assembleru.
 
-Vložené sestavení není podporováno v procesorech ARM a x64.  Následující témata popisují způsob použití inline assembleru Visual C/C++ u procesorů x86:
+Vložená sestava není podporována na procesorech ARM a x64.  Následující témata popisují způsob použití inline assembleru Visual C/C++ u procesorů x86:
 
 - [Přehled inline assembleru](../../assembler/inline/inline-assembler-overview.md)
 
@@ -32,7 +32,7 @@ Vložené sestavení není podporováno v procesorech ARM a x64.  Následující
 
 - [__asm](../../assembler/inline/asm.md)
 
-- [Použití assembleru v blocích __asm](../../assembler/inline/using-assembly-language-in-asm-blocks.md)
+- [Použití jazyka sestavení v blocích __asm](../../assembler/inline/using-assembly-language-in-asm-blocks.md)
 
 - [Použití jazyka C nebo C++ v blocích __asm](../../assembler/inline/using-c-or-cpp-in-asm-blocks.md)
 
@@ -40,7 +40,7 @@ Vložené sestavení není podporováno v procesorech ARM a x64.  Následující
 
 - [Přechod na popisky ve vloženém sestavení](../../assembler/inline/jumping-to-labels-in-inline-assembly.md)
 
-- [Volání funkcí jazyka C ve vloženém sestavení](../../assembler/inline/calling-c-functions-in-inline-assembly.md)
+- [Volání funkcí C v inline sestavení](../../assembler/inline/calling-c-functions-in-inline-assembly.md)
 
 - [Volání funkcí jazyka C++ ve vloženém sestavení](../../assembler/inline/calling-cpp-functions-in-inline-assembly.md)
 
@@ -48,9 +48,9 @@ Vložené sestavení není podporováno v procesorech ARM a x64.  Následující
 
 - [Optimalizace vloženého sestavení](../../assembler/inline/optimizing-inline-assembly.md)
 
-**Specifické pro konec Microsoftu**
+**END Microsoft Specifické**
 
 ## <a name="see-also"></a>Viz také
 
 [Vnitřní prvky kompilátoru a jazyk sestavení](../../intrinsics/compiler-intrinsics-and-assembly-language.md)<br/>
-[Referenční dokumentace jazyka C++](../../cpp/cpp-language-reference.md)<br/>
+[Referenční příručka jazyka C++](../../cpp/cpp-language-reference.md)<br/>

@@ -22,33 +22,33 @@ helpviewer_keywords:
 - SAFEARRAY, marshaling
 - ADO.NET [C++], marshaling SAFEARRAY types
 ms.assetid: b0cd987d-1ea7-4f76-ba01-cbd52503d06d
-ms.openlocfilehash: b258e574b912b1c32e5ffae7ba29cfc5f9903685
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 35633449c4c01f5c103dcd54b81c0d6aa7c08cdc
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209089"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364415"
 ---
 # <a name="data-access-using-adonet-ccli"></a>Přístup k datům s použitím technologie ADO.NET (C++/CLI)
 
-ADO.NET je rozhraní API pro .NET Framework pro přístup k datům a zajišťuje výkon a snadnost použití bezkonkurenční pomocí předchozích řešení přístupu k data. Tato část popisuje některé z problémů týkajících se technologie ADO.NET, které jsou jedinečné pro uživatele jazyka Visual C++, jako je například zařazování nativní typy.
+ADO.NET je rozhraní .NET Framework API pro přístup k datům a poskytuje napájení a snadné použití neodpovídající předchozím řešením pro přístup k datům. Tato část popisuje některé problémy týkající se ADO.NET, které jsou jedinečné pro uživatele visual c++, jako je například zařazování nativních typů.
 
-ADO.NET běží v části Common Language Runtime (CLR). Proto každou aplikaci, která komunikuje pomocí ADO.NET musí také cílit na modulu CLR. Ale to neznamená, že nemůžete použít nativních aplikací ADO.NET. Tyto příklady ukazují, jak pracovat s databází technologie ADO.NET z nativního kódu.
+ADO.NET běží pod společným jazykem Runtime (CLR). Proto všechny aplikace, která spolupracuje s ADO.NET musí také cílit clr. To však neznamená, že nativní aplikace nelze použít ADO.NET. Tyto příklady ukazují, jak pracovat s ADO.NET databáze z nativního kódu.
 
-## <a name="marshal_ansi"></a> Zařazování řetězců ANSI pro technologii ADO.NET
+## <a name="marshal-ansi-strings-for-adonet"></a><a name="marshal_ansi"></a>Maršál ANSI řetězce pro ADO.NET
 
-Ukazuje, jak přidat nativní řetězec (`char *`) k databázi a způsobu zařazení <xref:System.String?displayProperty=fullName> z databáze nativní řetězec.
+Ukazuje, jak přidat nativní`char *`řetězec ( ) do <xref:System.String?displayProperty=fullName> databáze a jak zařadit z databáze do nativního řetězce.
 
 ### <a name="example"></a>Příklad
 
-V tomto příkladu je třída DatabaseClass vytvořena pro interakci s technologie ADO.NET <xref:System.Data.DataTable> objektu. Všimněte si, že tato třída je nativní kód C++ `class` (ve srovnání s `ref class` nebo `value class`). To je nezbytné, protože chceme použít tuto třídu z nativního kódu a spravovanými typy nelze používat v nativním kódu. Tato třída se zkompiluje do cílové CLR, jak je uvedeno ve `#pragma managed` směrnice předchozí deklaraci třídy. Další informace o této směrnice, naleznete v tématu [spravované, nespravované](../preprocessor/managed-unmanaged.md).
+V tomto příkladu je třída DatabaseClass vytvořena <xref:System.Data.DataTable> pro interakci s objektem ADO.NET. Všimněte si, že tato `class` třída je nativní `ref class` `value class`C++ (ve srovnání s nebo). To je nezbytné, protože chceme použít tuto třídu z nativního kódu a spravované typy nelze použít v nativním kódu. Tato třída bude zkompilován cíl clr, jak `#pragma managed` je uvedeno ve směrnici předcházející deklaraci třídy. Další informace o této směrnici naleznete v tématu [spravované, nespravované](../preprocessor/managed-unmanaged.md).
 
-Všimněte si soukromému členu třídy DatabaseClass: `gcroot<DataTable ^> table`. Protože nativní typy nemůžou obsahovat spravované typy `gcroot` – klíčové slovo je nezbytné. Další informace o `gcroot`, naleznete v tématu [jak: Deklarace obslužných rutin v nativních typech](../dotnet/how-to-declare-handles-in-native-types.md).
+Všimněte si, že soukromý `gcroot<DataTable ^> table`člen třídy DatabaseClass: . Vzhledem k tomu, že `gcroot` nativní typy nemohou obsahovat spravované typy, klíčové slovo je nezbytné. Další informace `gcroot`o tématu naleznete v [tématu How to: Declare handles in Native Types](../dotnet/how-to-declare-handles-in-native-types.md).
 
-Zbytek kódu v tomto příkladu je nativní kód C++, jako je indikován `#pragma unmanaged` předchází `main`. V tomto příkladu jsme se vytváří novou instanci třídy DatabaseClass a volání metody k vytvoření tabulky a naplňte několik řádků v tabulce. Všimněte si, že nativní C++ řetězce jsou předávány jako hodnoty pro sloupec databáze StringCol. Uvnitř DatabaseClass, tyto řetězce jsou zařazeny do spravované řetězce pomocí zařazování funkcemi produktu <xref:System.Runtime.InteropServices?displayProperty=fullName> oboru názvů. Konkrétně metoda <xref:System.Runtime.InteropServices.Marshal.PtrToStringAnsi%2A> použitý k zařazování `char *` k <xref:System.String>a metodu <xref:System.Runtime.InteropServices.Marshal.StringToHGlobalAnsi%2A> použitý k zařazování <xref:System.String> k `char *`.
+Zbytek kódu v tomto příkladu je nativní kód jazyka `#pragma unmanaged` C++, jak je uvedeno v předchozí směrnici `main`. V tomto příkladu vytváříme novou instanci DatabaseClass a voláme její metody k vytvoření tabulky a naplnění některých řádků v tabulce. Všimněte si, že nativní řetězce Jazyka C++ jsou předávány jako hodnoty pro sloupec databáze StringCol. Uvnitř DatabaseClass jsou tyto řetězce zařazeny do spravovaných řetězců <xref:System.Runtime.InteropServices?displayProperty=fullName> pomocí funkce zařazování nalezené v oboru názvů. <xref:System.Runtime.InteropServices.Marshal.PtrToStringAnsi%2A> Konkrétně metoda se používá k `char *` zařazování a do , <xref:System.String>a metoda <xref:System.Runtime.InteropServices.Marshal.StringToHGlobalAnsi%2A> se používá k zařazování a <xref:System.String> do . `char *`
 
 > [!NOTE]
->  Přidělená paměť <xref:System.Runtime.InteropServices.Marshal.StringToHGlobalAnsi%2A> musí uvolnit voláním buď <xref:System.Runtime.InteropServices.Marshal.FreeHGlobal%2A> nebo `GlobalFree`.
+> Paměť přidělená <xref:System.Runtime.InteropServices.Marshal.StringToHGlobalAnsi%2A> podle musí být vyrovnány voláním buď <xref:System.Runtime.InteropServices.Marshal.FreeHGlobal%2A> nebo `GlobalFree`.
 
 ```cpp
 // adonet_marshal_string_native.cpp
@@ -155,26 +155,26 @@ StringCol: This is string 2.
 
 ### <a name="compiling-the-code"></a>Probíhá kompilace kódu
 
-- Ke kompilaci kódu z příkazového řádku, uložit do souboru s názvem adonet_marshal_string_native.cpp příklad kódu a zadejte následující příkaz:
+- Chcete-li zkompilovat kód z příkazového řádku, uložte příklad kódu do souboru s názvem adonet_marshal_string_native.cpp a zadejte následující příkaz:
 
     ```
     cl /clr /FU System.dll /FU System.Data.dll /FU System.Xml.dll adonet_marshal_string_native.cpp
     ```
 
-## <a name="marshal_bstr"></a> Marshal BSTR Strings for ADO.NET
+## <a name="marshal-bstr-strings-for-adonet"></a><a name="marshal_bstr"></a>Maršál BSTR řetězce pro ADO.NET
 
-Ukazuje, jak přidat řetězec modelu COM (`BSTR`) k databázi a způsobu zařazení <xref:System.String?displayProperty=fullName> z databáze `BSTR`.
+Ukazuje, jak přidat řetězec`BSTR`COM ( ) do databáze <xref:System.String?displayProperty=fullName> a jak `BSTR`zařadit z databáze do .
 
 ### <a name="example"></a>Příklad
 
-V tomto příkladu je třída DatabaseClass vytvořena pro interakci s technologie ADO.NET <xref:System.Data.DataTable> objektu. Všimněte si, že tato třída je nativní kód C++ `class` (ve srovnání s `ref class` nebo `value class`). To je nezbytné, protože chceme použít tuto třídu z nativního kódu a spravovanými typy nelze používat v nativním kódu. Tato třída se zkompiluje do cílové CLR, jak je uvedeno ve `#pragma managed` směrnice předchozí deklaraci třídy. Další informace o této směrnice, naleznete v tématu [spravované, nespravované](../preprocessor/managed-unmanaged.md).
+V tomto příkladu je třída DatabaseClass vytvořena <xref:System.Data.DataTable> pro interakci s objektem ADO.NET. Všimněte si, že tato `class` třída je nativní `ref class` `value class`C++ (ve srovnání s nebo). To je nezbytné, protože chceme použít tuto třídu z nativního kódu a spravované typy nelze použít v nativním kódu. Tato třída bude zkompilován cíl clr, jak `#pragma managed` je uvedeno ve směrnici předcházející deklaraci třídy. Další informace o této směrnici naleznete v tématu [spravované, nespravované](../preprocessor/managed-unmanaged.md).
 
-Všimněte si soukromému členu třídy DatabaseClass: `gcroot<DataTable ^> table`. Protože nativní typy nemůžou obsahovat spravované typy `gcroot` – klíčové slovo je nezbytné. Další informace o `gcroot`, naleznete v tématu [jak: Deklarace obslužných rutin v nativních typech](../dotnet/how-to-declare-handles-in-native-types.md).
+Všimněte si, že soukromý `gcroot<DataTable ^> table`člen třídy DatabaseClass: . Vzhledem k tomu, že `gcroot` nativní typy nemohou obsahovat spravované typy, klíčové slovo je nezbytné. Další informace `gcroot`o tématu naleznete v [tématu How to: Declare handles in Native Types](../dotnet/how-to-declare-handles-in-native-types.md).
 
-Zbytek kódu v tomto příkladu je nativní kód C++, jako je indikován `#pragma unmanaged` předchází `main`. V tomto příkladu jsme se vytváří novou instanci třídy DatabaseClass a volání metody k vytvoření tabulky a naplňte několik řádků v tabulce. Všimněte si, že řetězců modelu COM jsou předávány jako hodnoty pro sloupec databáze StringCol. Uvnitř DatabaseClass, tyto řetězce jsou zařazeny do spravované řetězce pomocí zařazování funkcemi produktu <xref:System.Runtime.InteropServices?displayProperty=fullName> oboru názvů. Konkrétně metoda <xref:System.Runtime.InteropServices.Marshal.PtrToStringBSTR%2A> použitý k zařazování `BSTR` k <xref:System.String>a metodu <xref:System.Runtime.InteropServices.Marshal.StringToBSTR%2A> použitý k zařazování <xref:System.String> k `BSTR`.
+Zbytek kódu v tomto příkladu je nativní kód jazyka `#pragma unmanaged` C++, jak je uvedeno v předchozí směrnici `main`. V tomto příkladu vytváříme novou instanci DatabaseClass a voláme její metody k vytvoření tabulky a naplnění některých řádků v tabulce. Všimněte si, že řetězce COM jsou předávány jako hodnoty pro sloupec databáze StringCol. Uvnitř DatabaseClass jsou tyto řetězce zařazeny do spravovaných řetězců <xref:System.Runtime.InteropServices?displayProperty=fullName> pomocí funkce zařazování nalezené v oboru názvů. <xref:System.Runtime.InteropServices.Marshal.PtrToStringBSTR%2A> Konkrétně metoda se používá k `BSTR` zařazování a do , <xref:System.String>a metoda <xref:System.Runtime.InteropServices.Marshal.StringToBSTR%2A> se používá k zařazování a <xref:System.String> do . `BSTR`
 
 > [!NOTE]
->  Přidělená paměť <xref:System.Runtime.InteropServices.Marshal.StringToBSTR%2A> musí uvolnit voláním buď <xref:System.Runtime.InteropServices.Marshal.FreeBSTR%2A> nebo `SysFreeString`.
+> Paměť přidělená <xref:System.Runtime.InteropServices.Marshal.StringToBSTR%2A> podle musí být vyrovnány voláním buď <xref:System.Runtime.InteropServices.Marshal.FreeBSTR%2A> nebo `SysFreeString`.
 
 ``` cpp
 // adonet_marshal_string_bstr.cpp
@@ -289,26 +289,26 @@ StringCol: This is string 2.
 
 ### <a name="compiling-the-code"></a>Probíhá kompilace kódu
 
-- Ke kompilaci kódu z příkazového řádku, uložit do souboru s názvem adonet_marshal_string_native.cpp příklad kódu a zadejte následující příkaz:
+- Chcete-li zkompilovat kód z příkazového řádku, uložte příklad kódu do souboru s názvem adonet_marshal_string_native.cpp a zadejte následující příkaz:
 
     ```
     cl /clr /FU System.dll /FU System.Data.dll /FU System.Xml.dll adonet_marshal_string_native.cpp
     ```
 
-## <a name="marshal_unicode"></a> Zařazování řetězců kódování Unicode pro technologii ADO.NET
+## <a name="marshal-unicode-strings-for-adonet"></a><a name="marshal_unicode"></a>Maršál Unicode řetězce pro ADO.NET
 
-Ukazuje, jak přidat nativní řetězec znaků Unicode (`wchar_t *`) k databázi a způsobu zařazení <xref:System.String?displayProperty=fullName> z databáze nativní řetězec znaků Unicode.
+Ukazuje, jak přidat nativní řetězec`wchar_t *`Unicode ( ) do <xref:System.String?displayProperty=fullName> databáze a jak zařadit a z databáze do nativního řetězce Unicode.
 
 ### <a name="example"></a>Příklad
 
-V tomto příkladu je třída DatabaseClass vytvořena pro interakci s technologie ADO.NET <xref:System.Data.DataTable> objektu. Všimněte si, že tato třída je nativní kód C++ `class` (ve srovnání s `ref class` nebo `value class`). To je nezbytné, protože chceme použít tuto třídu z nativního kódu a spravovanými typy nelze používat v nativním kódu. Tato třída se zkompiluje do cílové CLR, jak je uvedeno ve `#pragma managed` směrnice předchozí deklaraci třídy. Další informace o této směrnice, naleznete v tématu [spravované, nespravované](../preprocessor/managed-unmanaged.md).
+V tomto příkladu je třída DatabaseClass vytvořena <xref:System.Data.DataTable> pro interakci s objektem ADO.NET. Všimněte si, že tato `class` třída je nativní `ref class` `value class`C++ (ve srovnání s nebo). To je nezbytné, protože chceme použít tuto třídu z nativního kódu a spravované typy nelze použít v nativním kódu. Tato třída bude zkompilován cíl clr, jak `#pragma managed` je uvedeno ve směrnici předcházející deklaraci třídy. Další informace o této směrnici naleznete v tématu [spravované, nespravované](../preprocessor/managed-unmanaged.md).
 
-Všimněte si soukromému členu třídy DatabaseClass: `gcroot<DataTable ^> table`. Protože nativní typy nemůžou obsahovat spravované typy `gcroot` – klíčové slovo je nezbytné. Další informace o `gcroot`, naleznete v tématu [jak: Deklarace obslužných rutin v nativních typech](../dotnet/how-to-declare-handles-in-native-types.md).
+Všimněte si, že soukromý `gcroot<DataTable ^> table`člen třídy DatabaseClass: . Vzhledem k tomu, že `gcroot` nativní typy nemohou obsahovat spravované typy, klíčové slovo je nezbytné. Další informace `gcroot`o tématu naleznete v [tématu How to: Declare handles in Native Types](../dotnet/how-to-declare-handles-in-native-types.md).
 
-Zbytek kódu v tomto příkladu je nativní kód C++, jako je indikován `#pragma unmanaged` předchází `main`. V tomto příkladu jsme se vytváří novou instanci třídy DatabaseClass a volání metody k vytvoření tabulky a naplňte několik řádků v tabulce. Všimněte si, že řetězce Unicode C++ jsou předávány jako hodnoty pro sloupec databáze StringCol. Uvnitř DatabaseClass, tyto řetězce jsou zařazeny do spravované řetězce pomocí zařazování funkcemi produktu <xref:System.Runtime.InteropServices?displayProperty=fullName> oboru názvů. Konkrétně metoda <xref:System.Runtime.InteropServices.Marshal.PtrToStringUni%2A> použitý k zařazování `wchar_t *` k <xref:System.String>a metodu <xref:System.Runtime.InteropServices.Marshal.StringToHGlobalUni%2A> použitý k zařazování <xref:System.String> k `wchar_t *`.
+Zbytek kódu v tomto příkladu je nativní kód jazyka `#pragma unmanaged` C++, jak je uvedeno v předchozí směrnici `main`. V tomto příkladu vytváříme novou instanci DatabaseClass a voláme její metody k vytvoření tabulky a naplnění některých řádků v tabulce. Všimněte si, že unicode C++ řetězce jsou předávány jako hodnoty pro sloupec databáze StringCol. Uvnitř DatabaseClass jsou tyto řetězce zařazeny do spravovaných řetězců <xref:System.Runtime.InteropServices?displayProperty=fullName> pomocí funkce zařazování nalezené v oboru názvů. <xref:System.Runtime.InteropServices.Marshal.PtrToStringUni%2A> Konkrétně metoda se používá k `wchar_t *` zařazování a do , <xref:System.String>a metoda <xref:System.Runtime.InteropServices.Marshal.StringToHGlobalUni%2A> se používá k zařazování a <xref:System.String> do . `wchar_t *`
 
 > [!NOTE]
->  Přidělená paměť <xref:System.Runtime.InteropServices.Marshal.StringToHGlobalUni%2A> musí uvolnit voláním buď <xref:System.Runtime.InteropServices.Marshal.FreeHGlobal%2A> nebo `GlobalFree`.
+> Paměť přidělená <xref:System.Runtime.InteropServices.Marshal.StringToHGlobalUni%2A> podle musí být vyrovnány voláním buď <xref:System.Runtime.InteropServices.Marshal.FreeHGlobal%2A> nebo `GlobalFree`.
 
 ```cpp
 // adonet_marshal_string_wide.cpp
@@ -415,23 +415,23 @@ StringCol: This is string 2.
 
 ### <a name="compiling-the-code"></a>Probíhá kompilace kódu
 
-- Ke kompilaci kódu z příkazového řádku, uložit do souboru s názvem adonet_marshal_string_wide.cpp příklad kódu a zadejte následující příkaz:
+- Chcete-li zkompilovat kód z příkazového řádku, uložte příklad kódu do souboru s názvem adonet_marshal_string_wide.cpp a zadejte následující příkaz:
 
     ```
     cl /clr /FU System.dll /FU System.Data.dll /FU System.Xml.dll adonet_marshal_string_wide.cpp
     ```
 
-## <a name="marshal_variant"></a> Zařazování VARIANTPRO technologii ADO.NET
+## <a name="marshal-a-variant-for-adonet"></a><a name="marshal_variant"></a>Zařazuji variantu pro ADO.NET
 
-Ukazuje, jak přidat nativní `VARIANT` k databázi a způsobu zařazení <xref:System.Object?displayProperty=fullName> z databáze na nativní `VARIANT`.
+Ukazuje, jak přidat `VARIANT` nativní do databáze a <xref:System.Object?displayProperty=fullName> jak zařazovat z databáze nativní `VARIANT`.
 
 ### <a name="example"></a>Příklad
 
-V tomto příkladu je třída DatabaseClass vytvořena pro interakci s technologie ADO.NET <xref:System.Data.DataTable> objektu. Všimněte si, že tato třída je nativní kód C++ `class` (ve srovnání s `ref class` nebo `value class`). To je nezbytné, protože chceme použít tuto třídu z nativního kódu a spravovanými typy nelze používat v nativním kódu. Tato třída se zkompiluje do cílové CLR, jak je uvedeno ve `#pragma managed` směrnice předchozí deklaraci třídy. Další informace o této směrnice, naleznete v tématu [spravované, nespravované](../preprocessor/managed-unmanaged.md).
+V tomto příkladu je třída DatabaseClass vytvořena <xref:System.Data.DataTable> pro interakci s objektem ADO.NET. Všimněte si, že tato `class` třída je nativní `ref class` `value class`C++ (ve srovnání s nebo). To je nezbytné, protože chceme použít tuto třídu z nativního kódu a spravované typy nelze použít v nativním kódu. Tato třída bude zkompilován cíl clr, jak `#pragma managed` je uvedeno ve směrnici předcházející deklaraci třídy. Další informace o této směrnici naleznete v tématu [spravované, nespravované](../preprocessor/managed-unmanaged.md).
 
-Všimněte si soukromému členu třídy DatabaseClass: `gcroot<DataTable ^> table`. Protože nativní typy nemůžou obsahovat spravované typy `gcroot` – klíčové slovo je nezbytné. Další informace o `gcroot`, naleznete v tématu [jak: Deklarace obslužných rutin v nativních typech](../dotnet/how-to-declare-handles-in-native-types.md).
+Všimněte si, že soukromý `gcroot<DataTable ^> table`člen třídy DatabaseClass: . Vzhledem k tomu, že `gcroot` nativní typy nemohou obsahovat spravované typy, klíčové slovo je nezbytné. Další informace `gcroot`o tématu naleznete v [tématu How to: Declare handles in Native Types](../dotnet/how-to-declare-handles-in-native-types.md).
 
-Zbytek kódu v tomto příkladu je nativní kód C++, jako je indikován `#pragma unmanaged` předchází `main`. V tomto příkladu jsme se vytváří novou instanci třídy DatabaseClass a volání metody k vytvoření tabulky a naplňte několik řádků v tabulce. Všimněte si, že nativní `VARIANT` typy jsou předávány jako hodnoty pro sloupec databáze ObjectCol. Uvnitř DatabaseClass tyto `VARIANT` typy, které jsou zařazeny do spravované objekty zařazování funkce součástí <xref:System.Runtime.InteropServices?displayProperty=fullName> oboru názvů. Konkrétně metoda <xref:System.Runtime.InteropServices.Marshal.GetObjectForNativeVariant%2A> použitý k zařazování `VARIANT` k <xref:System.Object>a metodu <xref:System.Runtime.InteropServices.Marshal.GetNativeVariantForObject%2A> použitý k zařazování <xref:System.Object> k `VARIANT`.
+Zbytek kódu v tomto příkladu je nativní kód jazyka `#pragma unmanaged` C++, jak je uvedeno v předchozí směrnici `main`. V tomto příkladu vytváříme novou instanci DatabaseClass a voláme její metody k vytvoření tabulky a naplnění některých řádků v tabulce. Všimněte `VARIANT` si, že nativní typy jsou předávány jako hodnoty pro sloupec databáze ObjectCol. Uvnitř DatabaseClass `VARIANT` tyto typy jsou zařazeny do spravovaných <xref:System.Runtime.InteropServices?displayProperty=fullName> objektů pomocí zařazování funkce nalezené v oboru názvů. Konkrétně <xref:System.Runtime.InteropServices.Marshal.GetObjectForNativeVariant%2A> metoda se používá k `VARIANT` zařazování <xref:System.Runtime.InteropServices.Marshal.GetNativeVariantForObject%2A> a na <xref:System.Object> <xref:System.Object>, `VARIANT`a metoda se používá k zařazování do .
 
 ```cpp
 // adonet_marshal_variant.cpp
@@ -556,23 +556,23 @@ ObjectCol: 42
 
 ### <a name="compiling-the-code"></a>Probíhá kompilace kódu
 
-- Ke kompilaci kódu z příkazového řádku, uložit do souboru s názvem adonet_marshal_variant.cpp příklad kódu a zadejte následující příkaz:
+- Chcete-li zkompilovat kód z příkazového řádku, uložte příklad kódu do souboru s názvem adonet_marshal_variant.cpp a zadejte následující příkaz:
 
     ```
     cl /clr /FU System.dll /FU System.Data.dll /FU System.Xml.dll adonet_marshal_variant.cpp
     ```
 
-## <a name="marshal_safearray"></a> Zařazování SAFEARRAY pro technologii ADO.NET
+## <a name="marshal-a-safearray-for-adonet"></a><a name="marshal_safearray"></a>Maršál SAFEARRAY pro ADO.NET
 
-Ukazuje, jak přidat nativní `SAFEARRAY` k databázi a způsobu zařazení spravovaného pole z databáze na nativní `SAFEARRAY`.
+Ukazuje, jak přidat `SAFEARRAY` nativní do databáze a jak zařazovat `SAFEARRAY`spravované pole z databáze do nativní .
 
 ### <a name="example"></a>Příklad
 
-V tomto příkladu je třída DatabaseClass vytvořena pro interakci s technologie ADO.NET <xref:System.Data.DataTable> objektu. Všimněte si, že tato třída je nativní kód C++ `class` (ve srovnání s `ref class` nebo `value class`). To je nezbytné, protože chceme použít tuto třídu z nativního kódu a spravovanými typy nelze používat v nativním kódu. Tato třída se zkompiluje do cílové CLR, jak je uvedeno ve `#pragma managed` směrnice předchozí deklaraci třídy. Další informace o této směrnice, naleznete v tématu [spravované, nespravované](../preprocessor/managed-unmanaged.md).
+V tomto příkladu je třída DatabaseClass vytvořena <xref:System.Data.DataTable> pro interakci s objektem ADO.NET. Všimněte si, že tato `class` třída je nativní `ref class` `value class`C++ (ve srovnání s nebo). To je nezbytné, protože chceme použít tuto třídu z nativního kódu a spravované typy nelze použít v nativním kódu. Tato třída bude zkompilován cíl clr, jak `#pragma managed` je uvedeno ve směrnici předcházející deklaraci třídy. Další informace o této směrnici naleznete v tématu [spravované, nespravované](../preprocessor/managed-unmanaged.md).
 
-Všimněte si soukromému členu třídy DatabaseClass: `gcroot<DataTable ^> table`. Protože nativní typy nemůžou obsahovat spravované typy `gcroot` – klíčové slovo je nezbytné. Další informace o `gcroot`, naleznete v tématu [jak: Deklarace obslužných rutin v nativních typech](../dotnet/how-to-declare-handles-in-native-types.md).
+Všimněte si, že soukromý `gcroot<DataTable ^> table`člen třídy DatabaseClass: . Vzhledem k tomu, že `gcroot` nativní typy nemohou obsahovat spravované typy, klíčové slovo je nezbytné. Další informace `gcroot`o tématu naleznete v [tématu How to: Declare handles in Native Types](../dotnet/how-to-declare-handles-in-native-types.md).
 
-Zbytek kódu v tomto příkladu je nativní kód C++, jako je indikován `#pragma unmanaged` předchází `main`. V tomto příkladu jsme se vytváří novou instanci třídy DatabaseClass a volání metody k vytvoření tabulky a naplňte několik řádků v tabulce. Všimněte si, že nativní `SAFEARRAY` typy jsou předávány jako hodnoty pro sloupec databáze ArrayIntsCol. Uvnitř DatabaseClass tyto `SAFEARRAY` typy, které jsou zařazeny do spravované objekty zařazování funkce součástí <xref:System.Runtime.InteropServices?displayProperty=fullName> oboru názvů. Konkrétně metoda <xref:System.Runtime.InteropServices.Marshal.Copy%2A> použitý k zařazování `SAFEARRAY` spravované pole celých čísel a metodu <xref:System.Runtime.InteropServices.Marshal.Copy%2A> použitý k zařazování spravovaného pole celých čísel na `SAFEARRAY`.
+Zbytek kódu v tomto příkladu je nativní kód jazyka `#pragma unmanaged` C++, jak je uvedeno v předchozí směrnici `main`. V tomto příkladu vytváříme novou instanci DatabaseClass a voláme její metody k vytvoření tabulky a naplnění některých řádků v tabulce. Všimněte `SAFEARRAY` si, že nativní typy jsou předávány jako hodnoty pro sloupec databáze ArrayIntsCol. Uvnitř DatabaseClass `SAFEARRAY` tyto typy jsou zařazeny do spravovaných <xref:System.Runtime.InteropServices?displayProperty=fullName> objektů pomocí zařazování funkce nalezené v oboru názvů. Konkrétně <xref:System.Runtime.InteropServices.Marshal.Copy%2A> metoda se používá k `SAFEARRAY` zařazování a do spravovaného <xref:System.Runtime.InteropServices.Marshal.Copy%2A> pole celáčísla a metoda se používá `SAFEARRAY`k zařazování spravované pole celáčísla na .
 
 ```cpp
 // adonet_marshal_safearray.cpp
@@ -709,7 +709,7 @@ int main()
 
 ### <a name="compiling-the-code"></a>Probíhá kompilace kódu
 
-- Ke kompilaci kódu z příkazového řádku, uložit do souboru s názvem adonet_marshal_safearray.cpp příklad kódu a zadejte následující příkaz:
+- Chcete-li zkompilovat kód z příkazového řádku, uložte příklad kódu do souboru s názvem adonet_marshal_safearray.cpp a zadejte následující příkaz:
 
     ```
     cl /clr /FU System.dll /FU System.Data.dll /FU System.Xml.dll adonet_marshal_safearray.cpp
@@ -717,15 +717,15 @@ int main()
 
 ## <a name="net-framework-security"></a>Zabezpečení rozhraní .NET Framework
 
-Informace týkající se zabezpečení zahrnující ADO.NET naleznete v tématu [zabezpečení aplikací ADO.NET](/dotnet/framework/data/adonet/securing-ado-net-applications).
+Informace o problémech se zabezpečením týkajícími se ADO.NET naleznete v [tématu Zabezpečení ADO.NET aplikací](/dotnet/framework/data/adonet/securing-ado-net-applications).
 
 ## <a name="related-sections"></a>Související oddíly
 
 |Sekce|Popis|
 |-------------|-----------------|
-|[ADO.NET](/dotnet/framework/data/adonet/index)|Poskytuje přehled ADO.NET, sadu tříd, které zprostředkovávají služby data access services pro programátora rozhraní .NET.|
+|[ADO.NET](/dotnet/framework/data/adonet/index)|Poskytuje přehled ADO.NET, sada tříd, které zveřejňují služby přístupu k datům programátoru .NET.|
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Programování pro .NET v jazyce C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
 

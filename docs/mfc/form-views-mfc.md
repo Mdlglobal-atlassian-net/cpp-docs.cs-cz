@@ -8,60 +8,60 @@ helpviewer_keywords:
 - forms-based applications [MFC]
 - forms [MFC], adding to applications
 ms.assetid: efbe73c1-4ca4-4613-aac2-30d916e92c0e
-ms.openlocfilehash: f93f65e949c18ddb1ad5dba859ba8c4832abac8f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5e8912c9013175fe254b2f4a4a968a67fd071f39
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392827"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81365302"
 ---
 # <a name="form-views-mfc"></a>Zobrazení formulářů (MFC)
 
-Formuláře můžete přidat do jakékoli aplikace Visual C++, který podporuje knihovnu MFC, včetně [aplikace založené na formulářích](../mfc/reference/creating-a-forms-based-mfc-application.md) (jeden jejichž zobrazení třídy je odvozen z `CFormView`). Pokud jste původně nevytvořili aplikace pro potřeby podpory formulářů, bude Visual C++ přidání této podpory za vás při vložení nového formuláře. V aplikaci SDI nebo MDI, která implementuje výchozí [document/view – architektura](../mfc/document-view-architecture.md), když uživatel vybere **nový** příkaz (ve výchozím nastavení, na **souboru** nabídek), Visual C++ vyzve uživatele k vyberte z dostupných formulářů.
+Formuláře můžete přidat do libovolné aplikace visual c++, která podporuje knihovny knihovny Knihovny MFC, včetně [aplikace založené na formulářích](../mfc/reference/creating-a-forms-based-mfc-application.md) (z aplikace, jejíž třída zobrazení je odvozena z). `CFormView` Pokud jste původně nevytvořili aplikaci pro podporu formulářů, visual c++ přidá tuto podporu při vložení nového formuláře. V aplikaci SDI nebo MDI, která implementuje výchozí [architekturu dokumentu nebo zobrazení](../mfc/document-view-architecture.md), když uživatel zvolí příkaz **Nový** (ve výchozím nastavení v nabídce **Soubor),** visual c++ vyzve uživatele k výběru z dostupných formulářů.
 
-Pomocí aplikace SDI, když uživatel vybere **nový** příkaz aktuální instance formuláře nadále běží, ale pokud je vytvořena nová instance aplikace na vybraný formulář. V aplikaci MDI aktuální instance formuláře nadále spouštět, když uživatel klikne **nový** příkazu.
+S aplikací SDI, když uživatel zvolí příkaz **Nový,** aktuální instance formuláře pokračuje v běhu, ale pokud není nalezena, vytvoří se nová instance aplikace s vybraným formulářem. V aplikaci MDI aktuální instance formuláře nadále běžet, když uživatel zvolí **nový** příkaz.
 
 > [!NOTE]
->  Formulář můžete vložit do aplikace založené na dialogu (jeden jehož třídy dialogového okna je založený na `CDialog` a jeden v žádné zobrazení, které je implementované třídy). Ale bez architekturu document/view Visual C++ neimplementuje automaticky **souboru**&#124;**nový** funkce. Je nutné vytvořit způsob, jak si chcete zobrazit další způsoby, například implementací dialogového okna s kartami s použitím různých stránek vlastností uživatele.
+> Formulář můžete vložit do aplikace založené na dialogu (aplikace, `CDialog` na jejíž třídě dialogů je založena, a do aplikace, ve které není implementována žádná třída zobrazení). Však bez architektury dokumentu/zobrazení Visual C++ neimplementuje automaticky **soubor**&#124;**nové** funkce. Je nutné vytvořit způsob, jakým může uživatel zobrazit další formuláře, například implementací dialogového okna s kartami s různými stránkami vlastností.
 
-Při vložení nového formuláře do aplikace Visual C++ provede následující akce:
+Když do aplikace vložíte nový formulář, visual c++ udělá následující:
 
-- Vytvoří třídu na základě jedné třídy stylu formuláře, které zvolíte (`CFormView`, `CRecordView`, `CDaoRecordView`, nebo `CDialog`).
+- Vytvoří třídu založenou na jedné z tříd`CFormView`ve `CRecordView` `CDaoRecordView`stylu `CDialog`formuláře, které zvolíte ( , , , nebo ).
 
-- Vytvoří prostředek dialogového okna s odpovídající styly (nebo můžete použít existující prostředek dialogu, který ještě nebyl přidružen Class).
+- Vytvoří prostředek dialogu s příslušnými styly (nebo můžete použít existující prostředek dialogového okna, který ještě nebyl přidružen ke třídě).
 
-   Pokud zvolíte existující prostředek dialogového okna, budete muset nastavit tyto styly pomocí stránky vlastností pro dialogové okno. Styly pro dialogové okno, musí obsahovat:
+   Pokud zvolíte existující prostředek dialogu, bude pravděpodobně nutné nastavit tyto styly pomocí stránky Vlastnosti dialogového okna. Styly pro dialogové okno musí obsahovat:
 
-     **WS_CHILD**=On
+     **WS_CHILD**=Zapnuto
 
-     **WS_BORDER**=Off
+     **WS_BORDER**=Vypnuto
 
-     **WS_VISIBLE**=Off
+     **WS_VISIBLE**=Vypnuto
 
-     **WS_CAPTION**= vypnuto
+     **WS_CAPTION**=Vypnuto
 
-Pro aplikace založené na architektuře document/view **nový formulář** příkazu (klikněte pravým tlačítkem v zobrazení tříd) také:
+U aplikací založených na architektuře dokumentu/zobrazení také příkaz **Nový formulář** (kliknutí pravým tlačítkem myši v zobrazení třídy):
 
-- Vytvoří `CDocument`– na základě třídy
+- Vytvoří `CDocument`třídu založenou na
 
-   Namísto toho, aby vytvořili novou třídu, můžete použít všechny existující `CDocument`– na základě třídu ve vašem projektu.
+   Místo vytvoření nové třídy můžete v `CDocument`projektu použít libovolnou existující třídu založenou na.
 
-- Vygeneruje šablonu dokumentu (odvozený od `CDocument`) s prostředky řetězce, nabídky a ikony.
+- Generuje šablonu dokumentu (odvozenou z) `CDocument`s řetězci, nabídkami a prostředky ikon.
 
-   Můžete také vytvořit novou třídu, na kterém chcete založit šabloně.
+   Můžete také vytvořit novou třídu, na které založit šablonu.
 
-- Přidá volání `AddDocumentTemplate` ve vaší aplikaci `InitInstance` kódu.
+- Přidá volání `AddDocumentTemplate` v `InitInstance` kódu aplikace.
 
-   Visual C++ přidá tento kód pro každý nový formulář vytvoříte, který přidá do seznamu dostupných formulářů formuláře, když uživatel vybere **nový** příkazu. Tento kód obsahuje ID přidružený prostředek formuláře a názvy přidružený dokument, zobrazení a snímků tříd, které společně tvoří nový objekt formuláře.
+   Visual C++ přidá tento kód pro každý nový formulář, který vytvoříte, který přidá formulář do seznamu dostupných formulářů, když uživatel zvolí příkaz **Nový.** Tento kód obsahuje přidružené ID prostředku formuláře a názvy přidružených tříd dokumentu, zobrazení a rámce, které společně tvoří nový objekt formuláře.
 
-   Šablony dokumentů slouží jako propojení mezi dokumenty, oken s rámečkem a zobrazení. Pro jednotlivý dokument můžete vytvořit mnoho šablon.
+   Šablony dokumentů slouží jako spojení mezi dokumenty, okny rámců a zobrazeními. Pro jeden dokument můžete vytvořit mnoho šablon.
 
-Další informace naleznete v tématu:
+Další informace naleznete v tématu:
 
 - [Vytvoření aplikace založené na formulářích](../mfc/reference/creating-a-forms-based-mfc-application.md)
 
 - [Vložení formuláře do projektu](../mfc/inserting-a-form-into-a-project.md)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Prvky uživatelského rozhraní](../mfc/user-interface-elements-mfc.md)

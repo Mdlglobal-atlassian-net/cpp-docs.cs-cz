@@ -1,5 +1,5 @@
 ---
-title: CMFCImageEditorDialog Class
+title: CMFCImageEditorDialog – třída
 ms.date: 11/19/2018
 f1_keywords:
 - CMFCImageEditorDialog
@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCImageEditorDialog [MFC], CMFCImageEditorDialog
 ms.assetid: 6a7d08f3-1ec2-4062-9b79-a0c2776b58d1
-ms.openlocfilehash: 97f16fa00b2e90fd9c43bf9b6792b4eafe7d7b88
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 23c2a919428689fe107b82041bd87b758ede2bc9
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394527"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367470"
 ---
-# <a name="cmfcimageeditordialog-class"></a>CMFCImageEditorDialog Class
+# <a name="cmfcimageeditordialog-class"></a>CMFCImageEditorDialog – třída
 
-`CMFCImageEditorDialog` Třída podporuje dialogové okno editor s bitové kopie.
+Třída `CMFCImageEditorDialog` podporuje dialogové okno editoru obrázků.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -29,49 +29,49 @@ class CMFCImageEditorDialog : public CDialogEx
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CMFCImageEditorDialog::CMFCImageEditorDialog](#cmfcimageeditordialog)|Vytvoří `CMFCImageEditorDialog` objektu.|
+|[CMFCImageEditorDialog::CMFCImageEditorDialog](#cmfcimageeditordialog)|Vytvoří `CMFCImageEditorDialog` objekt.|
 
 ## <a name="remarks"></a>Poznámky
 
-`CMFCImageEditorDialog` Třída poskytuje dialogové okno, které obsahuje:
+Třída `CMFCImageEditorDialog` poskytuje dialogové okno, které obsahuje:
 
-- Oblast obrázku, který můžete použít ke změně jednotlivých pixelech ve bitovou kopii.
+- Oblast obrázku, kterou použijete k úpravě jednotlivých obrazových bodů v obraze.
 
-- Kreslicí nástroje k úpravě pixelů v oblasti obrázku.
+- Kreslicí nástroje pro úpravu obrazových bodů v oblasti obrázku.
 
-- Palety barev pro určení barvy, který používá nástroje pro kreslení.
+- Paleta barev pro určení barvy, kterou používají kreslicí nástroje.
 
-- Náhled zobrazující efekt úprav.
+- Oblast náhledu, která zobrazuje efekt úprav.
 
-Následující obrázek znázorňuje dialogové okno editoru obrázků.
+Na následujícím obrázku je zobrazeno dialogové okno editoru obrázků.
 
-![Dialogové okno CMFCImageEditorDialog](../../mfc/reference/media/imageedit.png "CMFCImageEditorDialog – dialogové okno")
+![Dialogové okno CMFCImageEditorDialog](../../mfc/reference/media/imageedit.png "Dialogové okno CMFCImageEditorDialog")
 
-Jeden ze způsobů použití `CMFCImageEditorDialog` objekt je komunikace `CBitmap` obrázek, který se upravovat. Nevytvářejte velký obrázek, protože image oblast úprav má omezenou velikost a velikost logických pixel je upravit podle oblasti. Volání `DoModal` metoda spuštění modální dialogové okno.
+Jedním ze způsobů `CMFCImageEditorDialog` použití objektu `CBitmap` je předat mu obrázek, který má být upraven. Nevytvářejte velký obraz, protože oblast úprav obrazu má omezenou velikost a velikost logického obrazového bodu je upravena tak, aby odpovídala oblasti. Volání `DoModal` metody pro spuštění modálního dialogového okna.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObjekt](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[CCmdCíl](../../mfc/reference/ccmdtarget-class.md)
 
-[CWnd](../../mfc/reference/cwnd-class.md)
+[Cwnd](../../mfc/reference/cwnd-class.md)
 
-[CDialog](../../mfc/reference/cdialog-class.md)
+[Cdialog](../../mfc/reference/cdialog-class.md)
 
 [CDialogEx](../../mfc/reference/cdialogex-class.md)
 
-[CMFCImageEditorDialog](../../mfc/reference/cmfcimageeditordialog-class.md)
+[CmFCImageEditorDialog](../../mfc/reference/cmfcimageeditordialog-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
 **Záhlaví:** afximageeditordialog.h
 
-##  <a name="cmfcimageeditordialog"></a>  CMFCImageEditorDialog::CMFCImageEditorDialog
+## <a name="cmfcimageeditordialogcmfcimageeditordialog"></a><a name="cmfcimageeditordialog"></a>CMFCImageEditorDialog::CMFCImageEditorDialog
 
-Vytvoří `CMFCImageEditorDialog` objektu.
+Vytvoří `CMFCImageEditorDialog` objekt.
 
 ```
 CMFCImageEditorDialog(
@@ -83,28 +83,28 @@ CMFCImageEditorDialog(
 ### <a name="parameters"></a>Parametry
 
 *pBitmap*<br/>
-Ukazatel na bitovou kopii.
+Ukazatel na obrázek.
 
 *pParent*<br/>
-Ukazatel do nadřazeného okna aktuální dialogového okna editoru obrázků.
+Ukazatel na nadřazené okno aktuálního dialogového okna editoru obrázků.
 
 *nBitsPixel*<br/>
-Počet bitů se používá k reprezentování barvu jednoho obrazového bodu, který se také označuje jako barevnou hloubku.  Pokud *nBitsPixel* -1 je parametr, barevnou hloubku je odvozen z image určené *pBitmap* parametru. Výchozí hodnota je -1.
+Počet bitů použitých k reprezentaci barvy jednoho obrazového bodu, který se také označuje jako barevná hloubka.  Pokud je parametr *nBitsPixel* -1, hloubka barev je odvozena od obrazu určeného parametrem *pBitmap.* Výchozí hodnota je -1.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Chcete-li upravit obrázek, předejte ukazatel image na `CMFCImageEditorDialog` konstruktoru. Zavolejte `DoModal` metodu otevření modální dialogové okno. Když `DoModal` metoda vrací výsledek, rastrového obrázku obsahuje novou bitovou kopii.
+Chcete-li upravit obrázek, předaďte konstruktoru ukazatel obrázku. `CMFCImageEditorDialog` Potom voláním `DoModal` metody otevřete modální dialogové okno. Když `DoModal` se metoda vrátí, bitmapa obsahuje nový obraz.
 
 ### <a name="remarks"></a>Poznámky
 
 ### <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak vytvořit objekt `CMFCImageEditorDialog` třídy. V tomto příkladu je součástí [nové ovládací prvky ukázka](../../overview/visual-cpp-samples.md).
+Následující příklad ukazuje, jak vytvořit objekt `CMFCImageEditorDialog` třídy. Tento příklad je součástí [ukázky Nové ovládací prvky](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#8](../../mfc/reference/codesnippet/cpp/cmfcimageeditordialog-class_1.cpp)]
 [!code-cpp[NVC_MFC_NewControls#40](../../mfc/reference/codesnippet/cpp/cmfcimageeditordialog-class_2.cpp)]
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>

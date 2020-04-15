@@ -55,16 +55,16 @@ helpviewer_keywords:
 - std::basic_ios [C++], tie
 - std::basic_ios [C++], widen
 ms.assetid: 4fdcd8e1-62d2-4611-8a70-1e4f58434007
-ms.openlocfilehash: 614e26b2329edeec2cccb32c7ba18b23e9d5320d
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: c8f883dd4f946c03aaa22dffcf5a3164a539d041
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79416989"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364922"
 ---
 # <a name="basic_ios-class"></a>basic_ios – třída
 
-Šablona třídy popisuje funkce úložiště a členů společné pro vstupní datové proudy (šablony třídy [basic_istream](../standard-library/basic-istream-class.md)) a výstupní proudy (z [basic_ostream](../standard-library/basic-ostream-class.md)šablony třídy), které závisejí na parametrech šablony. (Třída [ios_base](../standard-library/ios-base-class.md) popisuje, co je běžné a není závislé na parametrech šablony.) Objekt třídy **basic_ios\<třídy elem, vlastnosti třídy >** pomáhá řídit datový proud pomocí prvků typu `Elem`, jejichž vlastnosti znaků jsou určeny třídou `Traits`.
+Šablona třídy popisuje funkce úložiště a členské funkce společné jak vstupním datovým proudům (šablony třídy [basic_istream),](../standard-library/basic-istream-class.md)tak výstupním datovým proudům (šablony třídy [basic_ostream),](../standard-library/basic-ostream-class.md)které závisí na parametrech šablony. (Třída [ios_base](../standard-library/ios-base-class.md) popisuje, co je běžné a není závislé na parametrech šablony.) Objekt třídy **\<basic_ios třídy Elem, vlastnosti třídy**>`Elem`pomáhá řídit datový proud s prvky typu , jehož znakové znaky jsou určeny třídou `Traits`.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -79,20 +79,20 @@ class basic_ios : public ios_base
 *Elem*\
 Typ.
 
-\ *vlastností*
+*Vlastnosti*\
 Proměnná typu `char_traits`.
 
 ## <a name="remarks"></a>Poznámky
 
-Objekt třídy **basic_ios\<třídy elem, vlastnosti třídy >** obchody:
+Objekt třídy **\<basic_ios třídy Elem, třídy Vlastnosti>** ukládá:
 
-- Odkaz na objekt typu [basic_istream](../standard-library/basic-istream-class.md) **\<Elem, vlastnosti >** .
+- Ukazatel kravaty k objektu typu [basic_istream](../standard-library/basic-istream-class.md)**\<Elem, Vlastnosti>**.
 
-- Ukazatel vyrovnávací paměti datového proudu pro objekt typu [basic_streambuf](../standard-library/basic-streambuf-class.md) **\<Elem, vlastnosti >** .
+- Ukazatel vyrovnávací paměti datového proudu na objekt typu [basic_streambuf](../standard-library/basic-streambuf-class.md)**\<Elem, Vlastnosti >**.
 
 - [Informace o formátování](../standard-library/ios-base-class.md).
 
-- [Informace o stavu datového proudu](../standard-library/ios-base-class.md) v základním objektu typu [ios_base](../standard-library/ios-base-class.md).
+- [Streamovat informace o stavu](../standard-library/ios-base-class.md) v základním objektu typu [ios_base](../standard-library/ios-base-class.md).
 
 - Znak výplně v objektu typu `char_type`.
 
@@ -100,57 +100,57 @@ Objekt třídy **basic_ios\<třídy elem, vlastnosti třídy >** obchody:
 
 |Konstruktor|Popis|
 |-|-|
-|[basic_ios](#basic_ios)|Sestaví třídu `basic_ios`.|
+|[basic_ios](#basic_ios)|Vytvoří třídu. `basic_ios`|
 
 ### <a name="typedefs"></a>Typedefs
 
 |Název typu|Popis|
 |-|-|
-|[char_type](#char_type)|Synonymum pro parametr šablony `Elem`.|
-|[int_type](#int_type)|Synonymum pro `Traits::int_type`.|
-|[off_type](#off_type)|Synonymum pro `Traits::off_type`.|
-|[pos_type](#pos_type)|Synonymum pro `Traits::pos_type`.|
-|[traits_type](#traits_type)|Synonymum pro parametr šablony `Traits`.|
+|[char_type](#char_type)|Synonymum pro `Elem`parametr šablony .|
+|[int_type](#int_type)|Synonymum `Traits::int_type`pro .|
+|[off_type](#off_type)|Synonymum `Traits::off_type`pro .|
+|[pos_type](#pos_type)|Synonymum `Traits::pos_type`pro .|
+|[traits_type](#traits_type)|Synonymum pro `Traits`parametr šablony .|
 
 ### <a name="member-functions"></a>Členské funkce
 
 |Členská funkce|Popis|
 |-|-|
 |[Špatné](#bad)|Označuje ztrátu integrity vyrovnávací paměti datového proudu.|
-|[jejich](#clear)|Vymaže všechny chybové příznaky.|
-|[copyfmt](#copyfmt)|Zkopíruje příznaky z jednoho datového proudu do druhého.|
-|[eof](#eof)|Určuje, zda byl dosažen konec datového proudu.|
-|[výjimek](#exceptions)|Označuje, které výjimky bude vyvoláno datovým proudem.|
-|[proběhne](#fail)|Označuje selhání extrakce platného pole z datového proudu.|
-|[vyplnění](#fill)|Určuje nebo vrátí znak, který se použije, když text není jako datový proud stejně velký.|
-|[Dobré](#good)|Indikuje, že datový proud je v dobrém stavu.|
-|[imbue –](#imbue)|Změní národní prostředí.|
-|[init](#init)|Volá se `basic_ios` konstruktory.|
-|[Pøesunout](#move)|Přesune všechny hodnoty kromě ukazatele do vyrovnávací paměti datového proudu z parametru na aktuální objekt.|
-|[dále](#narrow)|Vyhledá ekvivalentní znak pro daný `char_type`.|
-|[rdbuf](#rdbuf)|Směruje datový proud do zadané vyrovnávací paměti.|
+|[Jasné](#clear)|Vymaže všechny příznaky chyb.|
+|[copyfmt](#copyfmt)|Kopíruje příznaky z jednoho datového proudu do druhého.|
+|[eof](#eof)|Označuje, zda bylo dosaženo konce datového proudu.|
+|[Výjimky](#exceptions)|Označuje, které výjimky budou vyvolány datovým proudem.|
+|[Selhání](#fail)|Označuje selhání extrahování platného pole z datového proudu.|
+|[fill](#fill)|Určuje nebo vrací znak, který bude použit, pokud text není tak široký jako datový proud.|
+|[Dobré](#good)|Označuje, že datový proud je v dobrém stavu.|
+|[Naplnit](#imbue)|Změní národní prostředí.|
+|[init](#init)|Volána `basic_ios` konstruktory.|
+|[Přesunout](#move)|Přesune všechny hodnoty kromě ukazatele do vyrovnávací paměti datového proudu z parametru na aktuální objekt.|
+|[Úzké](#narrow)|Najde ekvivalentní char k `char_type`dané .|
+|[rdbuf](#rdbuf)|Trasy datového proudu do zadané vyrovnávací paměti.|
 |[rdstate](#rdstate)|Přečte stav bitů pro příznaky.|
-|[set_rdbuf](#set_rdbuf)|Přiřadí vyrovnávací paměť datového proudu jako vyrovnávací paměť pro čtení tohoto objektu streamu.|
+|[set_rdbuf](#set_rdbuf)|Přiřadí vyrovnávací paměť datového proudu jako vyrovnávací paměť pro čtení pro tento objekt datového proudu.|
 |[setstate](#setstate)|Nastaví další příznaky.|
-|[adresu](#swap)|Vyměňuje hodnoty v tomto `basic_ios` objektu pro objekty jiného `basic_ios` objektu. Ukazatele na vyrovnávací paměti datového proudu nejsou prohozeny.|
-|[propojují](#tie)|Zajišťuje, aby byl jeden datový proud zpracován před jiným datovým proudem.|
-|[rozšiřuje](#widen)|Najde ekvivalentní `char_type` k danému znaku.|
+|[Swap](#swap)|Vymění hodnoty `basic_ios` v tomto objektu za hodnoty jiného `basic_ios` objektu. Ukazatele na vyrovnávací paměti datového proudu nejsou prohozeny.|
+|[Kravatu](#tie)|Zajišťuje, že jeden datový proud je zpracován před jiným datovým proudem.|
+|[Rozšířit](#widen)|Najde ekvivalent `char_type` dané char.|
 
 ### <a name="operators"></a>Operátory
 
 |Operátor|Popis|
 |-|-|
-|[explicitní operátor bool](#op_bool)|Umožňuje použití objektu `basic_ios` jako **bool**. Automatický převod typu je zakázán, aby nedocházelo k běžným, nezamýšleným vedlejším účinkům.|
-|[operátor void *](#op_void_star)|Určuje, zda je datový proud stále dobrý.|
-|[podnikatel!](#op_not)|Určuje, zda datový proud není chybný.|
+|[explicitní operátor bool](#op_bool)|Umožňuje použití `basic_ios` objektu jako **bool**. Automatický převod typu je zakázán, aby se zabránilo běžným, nezamýšleným vedlejším účinkům.|
+|[operátor void *](#op_void_star)|Označuje, zda je datový proud stále dobrý.|
+|[Operátor!](#op_not)|Označuje, zda datový proud není špatný.|
 
 ## <a name="requirements"></a>Požadavky
 
-**Hlavička:** \<iOS >
+**Záhlaví:** \<ios>
 
 **Obor názvů:** std
 
-## <a name="bad"></a>basic_ios:: Bad
+## <a name="basic_iosbad"></a><a name="bad"></a>basic_ios::špatné
 
 Označuje ztrátu integrity vyrovnávací paměti datového proudu.
 
@@ -160,9 +160,9 @@ bool bad() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**true** , pokud je `rdstate & badbit` nenulové; v opačném případě **false**.
+**true,** pokud `rdstate & badbit` je nenulová; jinak **false**.
 
-Další informace o `badbit`najdete v článku [ios_base:: iostate](../standard-library/ios-base-class.md#iostate).
+Další informace `badbit`naleznete v [tématu ios_base::iostate](../standard-library/ios-base-class.md#iostate).
 
 ### <a name="example"></a>Příklad
 
@@ -183,9 +183,9 @@ int main( void )
 }
 ```
 
-## <a name="basic_ios"></a>basic_ios:: basic_ios
+## <a name="basic_iosbasic_ios"></a><a name="basic_ios"></a>basic_ios::basic_ios
 
-Sestaví třídu basic_ios.
+Vytvoří basic_ios třídy.
 
 ```cpp
 explicit basic_ios(basic_streambuf<Elem,  Traits>* sb);
@@ -194,24 +194,24 @@ basic_ios();
 
 ### <a name="parameters"></a>Parametry
 
-\ *SB*
-Standardní vyrovnávací paměť pro ukládání vstupních nebo výstupních prvků.
+*Sb*\
+Standardní vyrovnávací paměť pro uložení vstupních nebo výstupních prvků.
 
 ### <a name="remarks"></a>Poznámky
 
-První konstruktor inicializuje své členské objekty voláním metody [init](#init)(_ *SB*). Druhý (chráněný) konstruktor opustí své členské objekty jako neinicializované. Pozdější volání `init` musí objekt inicializovat před tím, než může být bezpečně zničeno.
+První konstruktor inicializuje své členské objekty voláním [init](#init)(_ *Sb).* Druhý (chráněný) konstruktor ponechá své členské objekty bez inicializovány. Pozdější volání `init` musí inicializovat objekt před jej lze bezpečně zničit.
 
-## <a name="char_type"></a>basic_ios:: char_type
+## <a name="basic_ioschar_type"></a><a name="char_type"></a>basic_ios::char_type
 
-Synonymum pro parametr šablony `Elem`.
+Synonymum pro `Elem`parametr šablony .
 
 ```cpp
 typedef Elem char_type;
 ```
 
-## <a name="clear"></a>basic_ios:: Clear
+## <a name="basic_iosclear"></a><a name="clear"></a>basic_ios::vymazat
 
-Vymaže všechny chybové příznaky.
+Vymaže všechny příznaky chyb.
 
 ```cpp
 void clear(iostate state = goodbit, bool reraise = false);
@@ -220,29 +220,29 @@ void clear(io_state state);
 
 ### <a name="parameters"></a>Parametry
 
-\ *stavu*
-Volitelné Příznaky, které chcete nastavit po vymazání všech příznaků. Výchozí hodnota je `goodbit`.
+*Státu*\
+(Nepovinné) Příznaky, které chcete nastavit po vymazání všech příznaků. Výchozí hodnota `goodbit`je na .
 
-znovu *vyvolávat*\
-Volitelné Určuje, zda má být výjimka znovu vyvolána. Výchozí **hodnota je false** (výjimka nebude znovu vyvolána).
+*reraise*\
+(Nepovinné) Určuje, zda má být výjimka znovu vyvolána. Výchozí hodnota **je nepravdivá** (výjimku znovu nevyvolá).
 
 ### <a name="remarks"></a>Poznámky
 
-Příznaky jsou `goodbit`, `failbit`, `eofbit`a `badbit`. Testování těchto příznaků pomocí [dobrého](#good), [chybného](#bad), [konce](#eof)souboru a [selhání](#fail)
+Příznaky jsou `goodbit` `failbit`, `eofbit`, `badbit`, a . Test pro tyto příznaky s [dobrou](#good), [špatné](#bad), [eof](#eof), a [selhání](#fail)
 
-Členská funkce nahradí informace o stavu uloženého datového proudu pomocí:
+Členská funkce nahradí informace o stavu uloženého datového proudu:
 
-`state` &#124; `(`[rdbuf](#rdbuf) ! = 0 **goodbit** : **badbit**)
+`state`&#124; `(` [rdbuf](#rdbuf) != 0 **goodbit** : **badbit**)
 
-Pokud je `state` **&** [výjimky](#exceptions) nenulové, vyvolá objekt [selhání](../standard-library/ios-base-class.md#failure)třídy.
+Pokud `state` **&** [výjimky](#exceptions) je nenulová, pak vyvolá objekt [selhání](../standard-library/ios-base-class.md#failure)třídy .
 
 ### <a name="example"></a>Příklad
 
-Příklady použití `clear`naleznete v tématu [rdstate](#rdstate) a [getline](../standard-library/string-functions.md#getline) .
+Viz [rdstate](#rdstate) a [getline](../standard-library/string-functions.md#getline) `clear`pro příklady pomocí .
 
-## <a name="copyfmt"></a>basic_ios:: copyfmt
+## <a name="basic_ioscopyfmt"></a><a name="copyfmt"></a>basic_ios::copyfmt
 
-Zkopíruje příznaky z jednoho datového proudu do druhého.
+Kopíruje příznaky z jednoho datového proudu do druhého.
 
 ```cpp
 basic_ios<Elem, Traits>& copyfmt(
@@ -251,16 +251,16 @@ const basic_ios<Elem, Traits>& right);
 
 ### <a name="parameters"></a>Parametry
 
-*pravé*\
+*Právo*\
 Datový proud, jehož příznaky chcete kopírovat.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Tento** objekt pro datový proud, do kterého chcete příznaky kopírovat.
+**Tento** objekt pro datový proud, do kterého kopírujete příznaky.
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce hlásí událost zpětného volání **mazání události\_** . Pak kopíruje z *pravé části* do **\*tento** znak výplně, ukazatel na vazbu a informace o formátování. Před změnou masky výjimky ohlásí `copyfmt_event`událost zpětného volání. Pokud po dokončení kopírování je **stav &** [výjimky](#exceptions) nenulové, funkce [efektivně volá](#clear) [rdstate](#rdstate)argumentem. Vrátí **\*** .
+Členská funkce hlásí **událost vymazání\_** události zpětného volání . Potom zkopíruje *zpravé* do ** \*tohoto** výplně znak, ukazatel kravaty a informace o formátování. Před změnou masky výjimky hlásí `copyfmt_event`událost zpětného volání . Pokud po dokončení kopírování **stav &** [výjimky](#exceptions) je nenulová, funkce efektivně volá [clear](#clear) s argumentem [rdstate](#rdstate). Vrátí ** \*toto**.
 
 ### <a name="example"></a>Příklad
 
@@ -283,9 +283,9 @@ int main( )
 }
 ```
 
-## <a name="eof"></a>basic_ios:: EOF
+## <a name="basic_ioseof"></a><a name="eof"></a>basic_ios::eof
 
-Určuje, zda byl dosažen konec datového proudu.
+Označuje, zda bylo dosaženo konce datového proudu.
 
 ```cpp
 bool eof() const;
@@ -293,11 +293,11 @@ bool eof() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**true** , pokud byl dosažen konec datového proudu, jinak **false** .
+**true,** pokud bylo dosaženo konce datového proudu, **false** jinak.
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí **hodnotu true** , pokud [rdstate](#rdstate) `& eofbit` je nenulová. Další informace o `eofbit`najdete v článku [ios_base:: iostate](../standard-library/ios-base-class.md#iostate).
+Členská funkce vrátí **hodnotu true,** pokud je [stav rdstate](#rdstate) `& eofbit` nenulový. Další informace `eofbit`naleznete v [tématu ios_base::iostate](../standard-library/ios-base-class.md#iostate).
 
 ### <a name="example"></a>Příklad
 
@@ -321,9 +321,9 @@ int main( int argc, char* argv[] )
 }
 ```
 
-## <a name="exceptions"></a>basic_ios:: Exceptions
+## <a name="basic_iosexceptions"></a><a name="exceptions"></a>basic_ios::výjimky
 
-Označuje, které výjimky bude vyvoláno datovým proudem.
+Označuje, které výjimky budou vyvolány datovým proudem.
 
 ```cpp
 iostate exceptions() const;
@@ -333,16 +333,16 @@ void exceptions(io_state Newexcept);
 
 ### <a name="parameters"></a>Parametry
 
-*Newexcept*\
-Příznaky, které mají vyvolat výjimku.
+*Nové kromě*\
+Příznaky, které chcete vyvolat výjimku.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Příznaky, které jsou aktuálně určeny k vyvolání výjimky pro datový proud.
+Příznaky, které jsou aktuálně zadány vyvolat výjimku pro datový proud.
 
 ### <a name="remarks"></a>Poznámky
 
-První členská funkce vrátí uloženou masku výjimky. Druhá členská funkce ukládá *_Except* v masce výjimky a vrátí její předchozí uloženou hodnotu. Všimněte si, že uložení nové masky výjimky může vyvolat výjimku stejně jako volání [clear](#clear)( [rdstate](#rdstate) ).
+První členská funkce vrátí masku uložené výjimky. Druhá členská funkce ukládá *_Except* v masce výjimky a vrací jeho předchozí uloženou hodnotu. Všimněte si, že ukládání nové masky výjimky může vyvolat výjimku stejně jako volání [clear](#clear)( [rdstate](#rdstate) ).
 
 ### <a name="example"></a>Příklad
 
@@ -380,9 +380,9 @@ Exception class: class std::ios_base::failure
 Exception description: ios_base::eofbit set
 ```
 
-## <a name="fail"></a>basic_ios:: selhání
+## <a name="basic_iosfail"></a><a name="fail"></a>basic_ios::selhání
 
-Označuje selhání extrakce platného pole z datového proudu.
+Označuje selhání extrahování platného pole z datového proudu.
 
 ```cpp
 bool fail() const;
@@ -390,9 +390,9 @@ bool fail() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**true** , pokud `& (badbit|failbit)` [rdstate](#rdstate) není nula, jinak **false**.
+**true** pokud [rdstate](#rdstate) `& (badbit|failbit)` je nenulová, jinak **false**.
 
-Další informace o `failbit`najdete v článku [ios_base:: iostate](../standard-library/ios-base-class.md#iostate).
+Další informace `failbit`naleznete v [tématu ios_base::iostate](../standard-library/ios-base-class.md#iostate).
 
 ### <a name="example"></a>Příklad
 
@@ -410,9 +410,9 @@ int main( void )
 }
 ```
 
-## <a name="fill"></a>basic_ios:: Fill
+## <a name="basic_iosfill"></a><a name="fill"></a>basic_ios::výplň
 
-Určuje nebo vrátí znak, který se použije, když text není jako datový proud stejně velký.
+Určuje nebo vrací znak, který bude použit, pokud text není tak široký jako datový proud.
 
 ```cpp
 char_type fill() const;
@@ -421,8 +421,8 @@ char_type fill(char_type Char);
 
 ### <a name="parameters"></a>Parametry
 
-*Znak*\
-Znak, který chcete vyplnit jako znak výplně.
+*Char*\
+Znak, který chcete jako znak výplně.
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -430,7 +430,7 @@ Aktuální znak výplně.
 
 ### <a name="remarks"></a>Poznámky
 
-První členská funkce vrátí uložený znak výplně. Druhá členská *funkce ukládá znak* do výplně znaku a vrátí jeho předchozí uloženou hodnotu.
+První členská funkce vrátí uložený znak výplně. Druhá členská funkce uloží *Char* ve znaku výplně a vrátí jeho předchozí uloženou hodnotu.
 
 ### <a name="example"></a>Příklad
 
@@ -457,9 +457,9 @@ xxxxa
 x
 ```
 
-## <a name="good"></a>basic_ios:: dobrý
+## <a name="basic_iosgood"></a><a name="good"></a>basic_ios::dobrý
 
-Indikuje, že datový proud je v dobrém stavu.
+Označuje, že datový proud je v dobrém stavu.
 
 ```cpp
 bool good() const;
@@ -467,15 +467,15 @@ bool good() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**true** , pokud [rdstate](#rdstate) `== goodbit` (nejsou nastaveny žádné příznaky stavu), jinak **false**.
+**true** pokud [rdstate](#rdstate) `== goodbit` (nejsou nastaveny žádné příznaky stavu), jinak **false**.
 
-Další informace o `goodbit`najdete v článku [ios_base:: iostate](../standard-library/ios-base-class.md#iostate).
+Další informace `goodbit`naleznete v [tématu ios_base::iostate](../standard-library/ios-base-class.md#iostate).
 
 ### <a name="example"></a>Příklad
 
-Příklad použití `good`naleznete v tématu [basic_ios:: Bad](#bad) .
+Viz [basic_ios::bad](#bad) pro příklad `good`použití .
 
-## <a name="imbue"></a>basic_ios:: imbue –
+## <a name="basic_iosimbue"></a><a name="imbue"></a>basic_ios::imbue
 
 Změní národní prostředí.
 
@@ -485,7 +485,7 @@ locale imbue(const locale& Loc);
 
 ### <a name="parameters"></a>Parametry
 
-\ *Loc*
+*Loc*\
 Řetězec národního prostředí.
 
 ### <a name="return-value"></a>Návratová hodnota
@@ -494,11 +494,11 @@ Předchozí národní prostředí.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud [rdbuf](#rdbuf) není ukazatel s hodnotou null, členská funkce volá
+Pokud [rdbuf](#rdbuf) není nulový ukazatel, členská funkce volá
 
 `rdbuf`-> [pubimbue](../standard-library/basic-streambuf-class.md#pubimbue)(_ *Loc*)
 
-V každém případě vrátí [ios_base:: imbue –](../standard-library/ios-base-class.md#imbue)(_ *Loc*).
+V každém případě vrátí [ios_base::imbue](../standard-library/ios-base-class.md#imbue)(_ *Loc*).
 
 ### <a name="example"></a>Příklad
 
@@ -518,9 +518,9 @@ int main( )
 }
 ```
 
-## <a name="init"></a>basic_ios:: init
+## <a name="basic_iosinit"></a><a name="init"></a>basic_ios::init
 
-Volá se basic_ios konstruktory.
+Volána basic_ios konstruktory.
 
 ```cpp
 void init(basic_streambuf<Elem,Traits>* _Sb, bool _Isstd = false);
@@ -529,44 +529,44 @@ void init(basic_streambuf<Elem,Traits>* _Sb, bool _Isstd = false);
 ### <a name="parameters"></a>Parametry
 
 *_Sb*\
-Standardní vyrovnávací paměť pro ukládání vstupních nebo výstupních prvků.
+Standardní vyrovnávací paměť pro uložení vstupních nebo výstupních prvků.
 
 *_Isstd*\
 Určuje, zda se jedná o standardní datový proud.
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce ukládá hodnoty ve všech členských objektech, takže:
+Členská funkce ukládá hodnoty ve všech členských objektech tak, aby:
 
-- [rdbuf](#rdbuf) vrací *_Sb.*
+- [rdbuf](#rdbuf) se *vrací _Sb.*
 
-- funkce [kravat](#tie) vrátí ukazatel s hodnotou null.
+- [tie](#tie) vrátí ukazatel null.
 
-- [rdstate](#rdstate) vrátí [goodbit](../standard-library/ios-base-class.md#iostate) , pokud *_Sb* není nula; v opačném případě vrátí [badbit](../standard-library/ios-base-class.md#iostate).
+- [rdstate](#rdstate) vrátí [goodbit,](../standard-library/ios-base-class.md#iostate) pokud *je _Sb* nenulová; v opačném případě vrátí [badbit](../standard-library/ios-base-class.md#iostate).
 
-- [výjimky](#exceptions) vrací `goodbit`.
+- [výjimky](#exceptions) `goodbit`vrátí .
 
-- [příznaky](../standard-library/ios-base-class.md#flags) vrací [skipws](../standard-library/ios-base-class.md#fmtflags) &#124; [prosinec](../standard-library/ios-base-class.md#fmtflags).
+- [příznaky](../standard-library/ios-base-class.md#flags) vrátí [skipws](../standard-library/ios-base-class.md#fmtflags) &#124; [dec](../standard-library/ios-base-class.md#fmtflags).
 
-- [Šířka](../standard-library/ios-base-class.md#width) vrátí hodnotu 0.
+- [šířka](../standard-library/ios-base-class.md#width) vrátí 0.
 
 - [přesnost](../standard-library/ios-base-class.md#precision) vrátí 6.
 
-- funkce [Fill](#fill) vrátí znak mezery.
+- [fill](#fill) vrátí znak mezery.
 
-- [getloc](../standard-library/ios-base-class.md#getloc) vrací `locale::classic`.
+- [getloc](../standard-library/ios-base-class.md#getloc) `locale::classic`vrátí .
 
-- [iword](../standard-library/ios-base-class.md#iword) vrací hodnotu nula a [pword](../standard-library/ios-base-class.md#pword) vrátí nulový ukazatel pro všechny hodnoty argumentů.
+- [iword](../standard-library/ios-base-class.md#iword) vrátí nulu a [formula vrátí](../standard-library/ios-base-class.md#pword) nulový ukazatel pro všechny hodnoty argumentů.
 
-## <a name="int_type"></a>basic_ios:: int_type
+## <a name="basic_iosint_type"></a><a name="int_type"></a>basic_ios::int_type
 
-Synonymum pro `traits_type::int_type`.
+Synonymum `traits_type::int_type`pro .
 
 ```cpp
 typedef typename traits_type::int_type int_type;
 ```
 
-## <a name="move"></a>basic_ios:: Move
+## <a name="basic_iosmove"></a><a name="move"></a>basic_ios::přesunout
 
 Přesune všechny hodnoty kromě ukazatele do vyrovnávací paměti datového proudu z parametru na aktuální objekt.
 
@@ -576,16 +576,16 @@ void move(basic_ios&& right);
 
 ### <a name="parameters"></a>Parametry
 
-*pravé*\
-Objekt `ios_base` k přesunutí hodnot z.
+*Právo*\
+Objekt, `ios_base` ze který chcete přesunout hodnoty.
 
 ### <a name="remarks"></a>Poznámky
 
-Chráněná členská funkce přesune všechny hodnoty uložené *přímo* na `*this` s výjimkou uloženého `stream buffer pointer`, který se nemění *napravo* a je nastaven na ukazatel s hodnotou null v `*this`. Uložený `tie pointer` je na *pravé straně*nastavený na ukazatel s hodnotou null.
+Chráněná členská funkce přesune všechny `*this` hodnoty uložené `stream buffer pointer`v *pravo* na s výjimkou uložené , `*this`která je nezměněna v *pravo* a nastavena na nulový ukazatel v . Uloženo `tie pointer` je nastavena na ukazatel null v *pravém*.
 
-## <a name="narrow"></a>basic_ios:: Narrow
+## <a name="basic_iosnarrow"></a><a name="narrow"></a>basic_ios::úzké
 
-Vyhledá ekvivalentní znak pro daný `char_type`.
+Najde ekvivalentní char k `char_type`dané .
 
 ```cpp
 char narrow(char_type Char, char Default = '\0') const;
@@ -593,19 +593,19 @@ char narrow(char_type Char, char Default = '\0') const;
 
 ### <a name="parameters"></a>Parametry
 
-*Znak*\
-**Znak** , který se má převést.
+*Char*\
+**Znak** převést.
 
 *Výchozí*\
-**Znak** , který se má vrátit, pokud se nenajde žádný ekvivalent.
+**Char,** který chcete vrácena, pokud není nalezen žádný ekvivalent.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ekvivalentní **znak** typu pro daný `char_type`.
+Ekvivalentní **znak** k `char_type`danému .
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí [use_facet](../standard-library/basic-filebuf-class.md#open)\<CType\<E > > ( [getloc](../standard-library/ios-base-class.md#getloc)()).`narrow`(`Char`, `Default`).
+Členská funkce [use_facet](../standard-library/basic-filebuf-class.md#open)\<vrátí\<use_facet ctype E> >( [getloc](../standard-library/ios-base-class.md#getloc)( ) ). `narrow`( `Char`, `Default`).
 
 ### <a name="example"></a>Příklad
 
@@ -628,17 +628,17 @@ int main( )
 }
 ```
 
-## <a name="off_type"></a>basic_ios:: off_type
+## <a name="basic_iosoff_type"></a><a name="off_type"></a>basic_ios::off_type
 
-Synonymum pro `traits_type::off_type`.
+Synonymum `traits_type::off_type`pro .
 
 ```cpp
 typedef typename traits_type::off_type off_type;
 ```
 
-## <a name="op_void_star"></a>basic_ios:: operator void *
+## <a name="basic_iosoperator-void-"></a><a name="op_void_star"></a>basic_ios::operátor void *
 
-Určuje, zda je datový proud stále dobrý.
+Označuje, zda je datový proud stále dobrý.
 
 ```cpp
 operator void *() const;
@@ -646,7 +646,7 @@ operator void *() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Operátor vrací ukazatel s hodnotou null pouze v případě [selhání](#fail).
+Operátor vrátí ukazatel null pouze v případě [selhání](#fail).
 
 ### <a name="example"></a>Příklad
 
@@ -666,9 +666,9 @@ int main( )
 1
 ```
 
-## <a name="op_not"></a>basic_ios:: operator!
+## <a name="basic_iosoperator"></a><a name="op_not"></a>basic_ios::operátor!
 
-Určuje, zda datový proud není chybný.
+Označuje, zda datový proud není špatný.
 
 ```cpp
 bool operator!() const;
@@ -676,7 +676,7 @@ bool operator!() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí [chybu](#fail).
+Vrátí [se nezdaří](#fail).
 
 ### <a name="example"></a>Příklad
 
@@ -696,9 +696,9 @@ int main( )
 0
 ```
 
-## <a name="op_bool"></a>basic_ios:: operator bool
+## <a name="basic_iosoperator-bool"></a><a name="op_bool"></a>basic_ios::obsluha bool
 
-Umožňuje použití objektu `basic_ios` jako **bool**. Automatický převod typu je zakázán, aby nedocházelo k běžným, nezamýšleným vedlejším účinkům.
+Umožňuje použití `basic_ios` objektu jako **bool**. Automatický převod typu je zakázán, aby se zabránilo běžným, nezamýšleným vedlejším účinkům.
 
 ```cpp
 explicit operator bool() const;
@@ -706,19 +706,19 @@ explicit operator bool() const;
 
 ### <a name="remarks"></a>Poznámky
 
-Operátor vrátí hodnotu převoditelnou na **hodnotu false** pouze v případě, že je `fail()`. Návratový typ je převoditelný pouze na **bool**, nikoli na `void *` nebo jiný známý skalární typ.
+Operátor vrátí hodnotu **false** převoditelné `fail()`na false pouze v případě , Návratový typ je konvertibilní pouze na **bool**, nikoli nebo `void *` jiný známý skalární typ.
 
-## <a name="pos_type"></a>basic_ios::p os_type
+## <a name="basic_iospos_type"></a><a name="pos_type"></a>basic_ios::pos_type
 
-Synonymum pro `traits_type::pos_type`.
+Synonymum `traits_type::pos_type`pro .
 
 ```cpp
 typedef typename traits_type::pos_type pos_type;
 ```
 
-## <a name="rdbuf"></a>basic_ios:: rdbuf
+## <a name="basic_iosrdbuf"></a><a name="rdbuf"></a>basic_ios::rdbuf
 
-Směruje datový proud do zadané vyrovnávací paměti.
+Trasy datového proudu do zadané vyrovnávací paměti.
 
 ```cpp
 basic_streambuf<Elem, Traits> *rdbuf() const;
@@ -729,13 +729,13 @@ basic_streambuf<Elem, Traits>* _Sb);
 ### <a name="parameters"></a>Parametry
 
 *_Sb*\
-Datový proud.
+Potok.
 
 ### <a name="remarks"></a>Poznámky
 
 První členská funkce vrátí ukazatel vyrovnávací paměti uloženého datového proudu.
 
-Druhá členská funkce ukládá *_Sb* v ukazateli vyrovnávací paměti uloženého datového proudu a vrátí dříve uloženou hodnotu.
+Druhá členská funkce ukládá *_Sb* v ukazateli vyrovnávací paměti uloženého datového proudu a vrací dříve uloženou hodnotu.
 
 ### <a name="example"></a>Příklad
 
@@ -761,7 +761,7 @@ int main( )
 test2
 ```
 
-## <a name="rdstate"></a>basic_ios:: rdstate
+## <a name="basic_iosrdstate"></a><a name="rdstate"></a>basic_ios::rdstate
 
 Přečte stav bitů pro příznaky.
 
@@ -771,7 +771,7 @@ iostate rdstate() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Informace o stavu uloženého datového proudu.
+Uložené informace o stavu datového proudu.
 
 ### <a name="example"></a>Příklad
 
@@ -810,7 +810,7 @@ int main( )
 1
 ```
 
-## <a name="setstate"></a>basic_ios:: setstate
+## <a name="basic_iossetstate"></a><a name="setstate"></a>basic_ios::setstate
 
 Nastaví další příznaky.
 
@@ -821,11 +821,11 @@ void setstate(iostate _State);
 ### <a name="parameters"></a>Parametry
 
 *_State*\
-Další příznaky k nastavení.
+Další příznaky nastavit.
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce efektivně volá [clear](#clear)(_ *State* &#124; [rdstate](#rdstate)).
+Členská funkce účinně volá [clear](#clear)(_ *State* &#124; [rdstate](#rdstate)).
 
 ### <a name="example"></a>Příklad
 
@@ -859,9 +859,9 @@ int main( )
 1
 ```
 
-## <a name="set_rdbuf"></a>basic_ios:: set_rdbuf
+## <a name="basic_iosset_rdbuf"></a><a name="set_rdbuf"></a>basic_ios::set_rdbuf
 
-Přiřadí vyrovnávací paměť datového proudu jako vyrovnávací paměť pro čtení tohoto objektu streamu.
+Přiřadí vyrovnávací paměť datového proudu jako vyrovnávací paměť pro čtení pro tento objekt datového proudu.
 
 ```cpp
 void set_rdbuf(
@@ -870,16 +870,16 @@ basic_streambuf<Elem, Tr>* strbuf)
 
 ### <a name="parameters"></a>Parametry
 
-*strbuf*\
-Vyrovnávací paměť streamu, která se má stát vyrovnávací pamětí pro čtení.
+*strbuf (Strbuf)*\
+Vyrovnávací paměť datového proudu, která se stane vyrovnávací pamětí pro čtení.
 
 ### <a name="remarks"></a>Poznámky
 
-Chráněná členská funkce ukládá *strbuf* do `stream buffer pointer`. Nevolá `clear`.
+Chráněná členská funkce ukládá `stream buffer pointer` *strbuf* v . Nevolá `clear`.
 
-## <a name="tie"></a>basic_ios:: kravata
+## <a name="basic_iostie"></a><a name="tie"></a>basic_ios::kravata
 
-Zajišťuje, aby byl jeden datový proud zpracován před jiným datovým proudem.
+Zajišťuje, že jeden datový proud je zpracován před jiným datovým proudem.
 
 ```cpp
 basic_ostream<Elem, Traits> *tie() const;
@@ -889,20 +889,20 @@ basic_ostream<Elem, Traits>* str);
 
 ### <a name="parameters"></a>Parametry
 
-\ *str*
-Datový proud.
+*Str*\
+Potok.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-První členská funkce vrátí uložený ukazatel na vazbu. Druhá členská funkce ukládá *str* do ukazatele na propojení a vrátí jeho předchozí uloženou hodnotu.
+První členská funkce vrátí uložený ukazatel kravaty. Druhá členská funkce ukládá *str* v ukazatel kravatu a vrátí jeho předchozí uloženou hodnotu.
 
 ### <a name="remarks"></a>Poznámky
 
-`tie` způsobí synchronizaci dvou datových proudů, což znamená, že operace s jedním datovým proudem dojde po dokončení operací v jiném datovém proudu.
+`tie`způsobí, že dva datové proudy, které mají být synchronizovány, tak, aby operace na jeden datový proud dojít po dokončení operací na druhý datový proud.
 
 ### <a name="example"></a>Příklad
 
-V tomto příkladu, při vázání CIN na cout, je zaručeno, že řetězec "zadat číslo:" přejde do konzoly před extrahováním samotného čísla z CIN. Tím se eliminuje možnost, že řetězec "zadat číslo:" je ve vyrovnávací paměti stále uložený, když je číslo čteno, takže jsme si jisti, že uživatel má ve skutečnosti, že na odpověď odkazuje. Ve výchozím nastavení jsou CIN a cout svázané.
+V tomto příkladu vázaným odkazem cin na cout je zaručeno, že řetězec "Enter a number:" přejde do konzoly před extrahováním samotného čísla z cin. Tím se eliminuje možnost, že řetězec "Zadejte číslo:" je stále sedí ve vyrovnávací paměti při čtení čísla, takže jsme si jisti, že uživatel skutečně má nějakou výzvu k odpovědi. Ve výchozím nastavení jsou cin a cout svázané.
 
 ```cpp
 #include <ios>
@@ -918,17 +918,17 @@ int main( )
 }
 ```
 
-## <a name="traits_type"></a>basic_ios:: traits_type
+## <a name="basic_iostraits_type"></a><a name="traits_type"></a>basic_ios::traits_type
 
-Synonymum pro parametr šablony `Traits`.
+Synonymum pro `Traits`parametr šablony .
 
 ```cpp
 typedef Traits traits_type;
 ```
 
-## <a name="widen"></a>basic_ios:: rozšířit
+## <a name="basic_ioswiden"></a><a name="widen"></a>basic_ios::rozšířit
 
-Najde ekvivalentní `char_type` k danému **znaku**.
+Najde ekvivalent `char_type` daného **znaku**.
 
 ```cpp
 char_type widen(char Char) const;
@@ -936,16 +936,16 @@ char_type widen(char Char) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Znak*\
-Znak, který má být převeden.
+*Char*\
+Znak převést.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Najde ekvivalentní `char_type` k danému **znaku**.
+Najde ekvivalent `char_type` daného **znaku**.
 
 ### <a name="remarks"></a>Poznámky
 
-Členská funkce vrátí [use_facet](../standard-library/basic-filebuf-class.md#open)< **ctype**\< **E**> > ( [getloc](../standard-library/ios-base-class.md#getloc)). `widen`(`Char`).
+Členská funkce vrátí [use_facet](../standard-library/basic-filebuf-class.md#open)< **ctype** \< **E**> >( [getloc](../standard-library/ios-base-class.md#getloc)). `widen`( `Char`).
 
 ### <a name="example"></a>Příklad
 
@@ -967,9 +967,9 @@ int main( )
 }
 ```
 
-## <a name="swap"></a>basic_ios:: swap
+## <a name="basic_iosswap"></a><a name="swap"></a>basic_ios::swap
 
-Vyměňuje hodnoty v tomto `basic_ios` objektu pro objekty jiného `basic_ios` objektu. Odkazy na vyrovnávací paměti datového proudu však nebudou prohozeny.
+Vymění hodnoty `basic_ios` v tomto objektu za hodnoty jiného `basic_ios` objektu. Ukazatele na vyrovnávací paměti datového proudu však nejsou prohozeny.
 
 ```cpp
 void swap(basic_ios&& right);
@@ -977,15 +977,15 @@ void swap(basic_ios&& right);
 
 ### <a name="parameters"></a>Parametry
 
-*pravé*\
-Objekt `basic_ios`, který se používá k výměně hodnot.
+*Právo*\
+Objekt, `basic_ios` který se používá k výměně hodnot.
 
 ### <a name="remarks"></a>Poznámky
 
-Chráněná členská funkce vyměňuje všechny hodnoty uložené *přímo* s `*this` s výjimkou uloženého `stream buffer pointer`.
+Chráněná členská funkce vyměňuje všechny `*this` hodnoty `stream buffer pointer`uložené v *právu* s výjimkou uložené .
 
 ## <a name="see-also"></a>Viz také
 
-[Bezpečnost vlákna ve C++ standardní knihovně](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[iostream – programování](../standard-library/iostream-programming.md)\
-[iostreams – konvence](../standard-library/iostreams-conventions.md)
+[Bezpečnost vláken ve standardní knihovně C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[programování iostreamu](../standard-library/iostream-programming.md)\
+[iostreams úmluvy](../standard-library/iostreams-conventions.md)

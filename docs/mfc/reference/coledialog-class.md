@@ -1,5 +1,5 @@
 ---
-title: Coledialog – třída
+title: COleDialog – třída
 ms.date: 11/04/2016
 f1_keywords:
 - COleDialog
@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - COleDialog [MFC], GetLastError
 ms.assetid: b1ed0aca-3914-4b00-af34-4a4fb491aec7
-ms.openlocfilehash: 353e2ed312fa7dbb9ef7bdfabc2b174abf8e1e1d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6a1983d426e97dd8063aee2857dc36557aa20677
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375714"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366085"
 ---
-# <a name="coledialog-class"></a>Coledialog – třída
+# <a name="coledialog-class"></a>COleDialog – třída
 
-Poskytuje funkce, které jsou společné pro dialogová okna pro OLE.
+Poskytuje funkce společné pro dialogová okna pro OLE.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -29,13 +29,13 @@ class COleDialog : public CCommonDialog
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[COleDialog::GetLastError](#getlasterror)|Získá kód chyby vrácený dialogových oken.|
+|[COleDialog::GetLastError](#getlasterror)|Získá kód chyby vrácené dialogovéokno.|
 
 ## <a name="remarks"></a>Poznámky
 
-Knihovny Microsoft Foundation Class poskytuje několik tříd odvozených z `COleDialog`:
+Knihovna tříd Microsoft Foundation poskytuje `COleDialog`několik tříd odvozených z :
 
 - [COleInsertDialog](../../mfc/reference/coleinsertdialog-class.md)
 
@@ -55,17 +55,17 @@ Knihovny Microsoft Foundation Class poskytuje několik tříd odvozených z `COl
 
 - [COleChangeSourceDialog](../../mfc/reference/colechangesourcedialog-class.md)
 
-Další informace o dialogových oknech OLE konkrétní, najdete v článku [dialogová okna v prostředí OLE](../../mfc/dialog-boxes-in-ole.md).
+Další informace o dialogových oknech specifických pro OLE naleznete v článku [Dialogová okna v ole](../../mfc/dialog-boxes-in-ole.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObjekt](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[CCmdCíl](../../mfc/reference/ccmdtarget-class.md)
 
-[CWnd](../../mfc/reference/cwnd-class.md)
+[Cwnd](../../mfc/reference/cwnd-class.md)
 
-[CDialog](../../mfc/reference/cdialog-class.md)
+[Cdialog](../../mfc/reference/cdialog-class.md)
 
 [CCommonDialog](../../mfc/reference/ccommondialog-class.md)
 
@@ -75,9 +75,9 @@ Další informace o dialogových oknech OLE konkrétní, najdete v článku [dia
 
 **Záhlaví:** afxodlgs.h
 
-##  <a name="getlasterror"></a>  COleDialog::GetLastError
+## <a name="coledialoggetlasterror"></a><a name="getlasterror"></a>COleDialog::GetLastError
 
-Volání `GetLastError` členská funkce, chcete-li získat další informace o chybě při `DoModal` vrátí IDABORT.
+Volání `GetLastError` členské funkce získat další `DoModal` informace o chybě při vrátí IDABORT.
 
 ```
 UINT GetLastError() const;
@@ -85,13 +85,13 @@ UINT GetLastError() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Kódů chyb vrácených nástrojem `GetLastError` závisí na konkrétní dialogu zobrazí.
+Kódy chyb `GetLastError` vrácené závisí na konkrétním zobrazeném dialogovém okně.
 
 ### <a name="remarks"></a>Poznámky
 
-Zobrazit `DoModal` členské funkce v odvozených třídách informace o určité chybové zprávy.
+Informace `DoModal` o konkrétních chybových zprávách naleznete v členské funkci v odvozených třídách.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [CCommonDialog – třída](../../mfc/reference/ccommondialog-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)

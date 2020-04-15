@@ -1,18 +1,18 @@
 ---
 layout: LandingPage
-title: Vývoj pro Linux C++ s využitím dokumentace
-description: Vytváření a ladění aplikací běžících na Linux.
+title: Vývoj Linuxu s dokumentací c++
+description: Vytvářejte a ladíte aplikace spuštěné na Linuxu.
 ms.topic: landing-page
-ms.openlocfilehash: 9c09e9bd590ece013a2ee7d85017b3e046394232
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: d7e3622c3c390bdf4a594e36706d937ff7ef3909
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79441519"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364327"
 ---
-# <a name="linux-development-with-c-documentation"></a>Vývoj pro Linux C++ s využitím dokumentace
+# <a name="linux-development-with-c-documentation"></a>Vývoj Linuxu s dokumentací c++
 
-K vytváření a ladění aplikací běžících na vzdálených počítačích se systémem Linux nebo v subsystému Windows pro Linux použijte Visual Studio 2017 a novější.
+Pomocí Visual Studia 2017 a novějších můžete vytvářet a ladit aplikace spuštěné na vzdálených počítačích s Linuxem nebo v podsystému Windows pro Linux.
 
 <!-- markdownlint-disable MD033 -->
 
@@ -28,8 +28,8 @@ K vytváření a ladění aplikací běžících na vzdálených počítačích 
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Instalace a konfigurace úlohy Linux</h3>
-                        <p>Naučte se, jak nastavit Visual Studio 2017 a novější pro vytváření aplikací C++pro Linux v nástroji.</p>
+                        <h3>Instalace a konfigurace úlohy Linuxu</h3>
+                        <p>Přečtěte si, jak nastavit Visual Studio 2017 a novější k vytváření linuxových aplikací v Jazyce C++.</p>
                     </div>
                 </div>
             </div>
@@ -47,8 +47,8 @@ K vytváření a ladění aplikací běžících na vzdálených počítačích 
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>C++Blog týmu</h3>
-                        <p>Zajistěte si aktuálnost všech nejnovějších C++ funkcí v aplikaci Visual Studio.</p>
+                        <h3>Blog týmu C++</h3>
+                        <p>Udržujte si aktuální informace o všech nejnovějších funkcích jazyka C++ ve Visual Studiu.</p>
                     </div>
                 </div>
             </div>

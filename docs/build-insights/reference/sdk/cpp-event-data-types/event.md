@@ -1,6 +1,6 @@
 ---
-title: Event – třída
-description: Odkaz C++ na třídu události Build Insights SDK
+title: Třída události
+description: Odkaz na třídu SDK s c++ sestavení ms.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 205a4e0ca9dd9449933f38f02d4ceafd5df8ead2
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 25d58f642a1c314e48ddff62553394bcc65e4717
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78333396"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81324966"
 ---
-# <a name="event-class"></a>Event – třída
+# <a name="event-class"></a>Třída události
 
 ::: moniker range="<=vs-2015"
 
-Sada C++ SDK pro Build Insights je kompatibilní se sadou Visual Studio 2017 a novější. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek selektor verzí sady Visual Studio pro tento článek na sadu Visual Studio 2017 nebo Visual Studio 2019.
+Sada C++ Build Insights SDK je kompatibilní s Visual Studio 2017 a vyšší. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek pro výběr **verze** sady Visual Studio pro tento článek na Visual Studio 2017 nebo Visual Studio 2019. Nachází se v horní části obsahu na této stránce.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Třída `Event` se používá s funkcemi [MatchEvent](../functions/match-event.md), [MatchEventInMemberFunction](../functions/match-event-in-member-function.md), [MatchEventStack](../functions/match-event-stack.md)a [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md) . Použijte ho ke spárování libovolné události.
+Třída `Event` se používá s funkcemi [MatchEvent](../functions/match-event.md), [MatchEventInMemberFunction](../functions/match-event-in-member-function.md), [MatchEventStack](../functions/match-event-stack.md)a [MatchEventStackInMemberFunction.](../functions/match-event-stack-in-member-function.md) Použijte ji tak, aby odpovídala jakékoli události.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -51,22 +51,22 @@ public:
 
 ### <a name="constructors"></a>Konstruktory
 
-[Události](#entity)
+[Událost](#entity)
 
 ### <a name="functions"></a>Functions
 
-[Data](#data)
-[ID události](#event-id)\
-[EventInstanceId](#event-instance-id)\
-[EventName](#event-name)\
-[EventWideName](#event-wide-name)\
-[Id_procesu](#process-id)\
-[ProcessorIndex](#processor-index)\
-[Idvlákna](#thread-id)\
-[TickFrequency](#tick-frequency)\
+[Id](#data)
+[události dat](#event-id)\
+[Id instance události](#event-instance-id)\
+[Eventname](#event-name)\
+[Název_události](#event-wide-name)\
+[Processid](#process-id)\
+[Index procesoru](#processor-index)\
+[ThreadId](#thread-id)\
+[Frekvence zaškrtnutí](#tick-frequency)\
 [Časové razítko](#timestamp)
 
-## <a name="entity"></a>Událostí
+## <a name="event"></a><a name="entity"></a>Událost
 
 ```cpp
 Event(const RawEvent& event);
@@ -74,10 +74,10 @@ Event(const RawEvent& event);
 
 ### <a name="parameters"></a>Parametry
 
-\ *události*
-Jakákoli událost.
+*Událost*\
+V každém případě.
 
-## <a name="data"></a>Údajů
+## <a name="data"></a><a name="data"></a>Dat
 
 ```cpp
 const void* Data() const;
@@ -85,9 +85,9 @@ const void* Data() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na další data obsažená v této události. Další informace o tom, jak interpretovat toto pole, naleznete v tématu [EVENT_DATA](../c-event-data-types/event-data-struct.md).
+Ukazatel na další data obsažená v této události. Další informace o interpretaci tohoto pole naleznete v [tématu EVENT_DATA](../c-event-data-types/event-data-struct.md).
 
-## <a name="event-id"></a>ID události
+## <a name="eventid"></a><a name="event-id"></a>Eventid
 
 ```cpp
 const unsigned short& EventId() const;
@@ -95,9 +95,9 @@ const unsigned short& EventId() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Číslo, které identifikuje typ události. Seznam identifikátorů událostí najdete v tématu [EVENT_ID](../c-event-data-types/event-id-enum.md).
+Číslo, které identifikuje typ události. Seznam identifikátorů událostí naleznete [v tématu EVENT_ID](../c-event-data-types/event-id-enum.md).
 
-## <a name="event-instance-id"></a>EventInstanceId
+## <a name="eventinstanceid"></a><a name="event-instance-id"></a>Id instance události
 
 ```cpp
 const unsigned long long& EventInstanceId() const;
@@ -105,9 +105,9 @@ const unsigned long long& EventInstanceId() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Číslo, které jedinečně identifikuje událost uvnitř trasování. Tato hodnota se při analýze nebo opakovaném protokolování stejného trasování několikrát nemění. Tuto hodnotu použijte k identifikaci stejné události při vícenásobné analýze nebo při opakovaném protokolování přes stejné trasování.
+Číslo, které jednoznačně identifikuje událost uvnitř trasování. Tato hodnota se nezmění při analýze nebo opětovném přihlášení stejné trasování vícekrát. Tuto hodnotu použijte k identifikaci stejné události ve více analýzách nebo opětovném zaprotokolování průchodů přes stejné trasování.
 
-## <a name="event-name"></a>EventName
+## <a name="eventname"></a><a name="event-name"></a>Eventname
 
 ```cpp
 const char* EventName() const;
@@ -115,9 +115,9 @@ const char* EventName() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Řetězec ANSI obsahující název typu události identifikovaný [ID události](#event-id).
+Řetězec ANSI obsahující název typu události identifikovaného [eventid](#event-id).
 
-## <a name="event-wide-name"></a>EventWideName
+## <a name="eventwidename"></a><a name="event-wide-name"></a>Název_události
 
 ```cpp
 const wchar_t* EventWideName() const;
@@ -125,9 +125,9 @@ const wchar_t* EventWideName() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Velký řetězec obsahující název události identifikovaný [ID události](#event-id).
+Široký řetězec obsahující název události identifikované [EventId](#event-id).
 
-## <a name="process-id"></a>ID
+## <a name="processid"></a><a name="process-id"></a>Processid
 
 ```cpp
 const unsigned long& ProcessId() const;
@@ -135,9 +135,9 @@ const unsigned long& ProcessId() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Identifikátor procesu, ve kterém došlo k události.
+Identifikátor pro proces, ve kterém došlo k události.
 
-## <a name="processor-index"></a>ProcessorIndex
+## <a name="processorindex"></a><a name="processor-index"></a>Index procesoru
 
 ```cpp
 const unsigned short& ProcessorIndex() const;
@@ -147,7 +147,7 @@ const unsigned short& ProcessorIndex() const;
 
 Index založený na nule pro logický procesor, na kterém došlo k události.
 
-## <a name="thread-id"></a>IDvlákna
+## <a name="threadid"></a><a name="thread-id"></a>ThreadId
 
 ```cpp
 const unsigned long& ThreadId() const;
@@ -157,7 +157,7 @@ const unsigned long& ThreadId() const;
 
 Identifikátor vlákna, ve kterém došlo k události.
 
-## <a name="tick-frequency"></a>TickFrequency
+## <a name="tickfrequency"></a><a name="tick-frequency"></a>Frekvence zaškrtnutí
 
 ```cpp
 const long long& TickFrequency() const;
@@ -165,9 +165,9 @@ const long long& TickFrequency() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Počet taktů za sekundu, které se použijí při vyhodnocování doby trvání měřené v taktech pro tuto událost.
+Počet značek za sekundu použít při hodnocení trvání měřeno v značek pro tuto událost.
 
-## <a name="timestamp"></a>Časové razítko
+## <a name="timestamp"></a><a name="timestamp"></a>Časové razítko
 
 ```cpp
 const long long& Timestamp() const;
@@ -175,6 +175,6 @@ const long long& Timestamp() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud je událost aktivitou, tato funkce vrátí hodnotu Tick zachycenou v době spuštění aktivity. Pro jednoduchou událost Tato funkce vrací hodnotu Tick zachycenou v době, kdy došlo k události.
+Pokud je událost aktivitou, vrátí tato funkce hodnotu značky zachycenou v době zahájení aktivity. Pro jednoduchou událost vrátí tato funkce hodnotu značky zachycenou v době, kdy k události došlo.
 
 ::: moniker-end

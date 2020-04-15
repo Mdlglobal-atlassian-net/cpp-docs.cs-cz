@@ -1,10 +1,12 @@
 ---
 title: timespec_get, _timespec32_get, _timespec64_get1
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - timespec_get
 - _timespec32_get
 - _timespec64_get
+- _o__timespec32_get
+- _o__timespec64_get
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -36,16 +39,16 @@ helpviewer_keywords:
 - _timespec32_get function
 - _timespec64_get function
 ms.assetid: ed757258-b4f2-4c1d-a91b-22ea6ffce4ab
-ms.openlocfilehash: c0517c974bf58d502133ccd9868149bd178790d6
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: fc6d91b076f2dd2e25c55d9cf7062e81c3fab11a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957622"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81362488"
 ---
 # <a name="timespec_get-_timespec32_get-_timespec64_get"></a>timespec_get, _timespec32_get, _timespec64_get
 
-Nastaví interval, na který odkazuje první argument na aktuální časový čas v kalendáři na základě zadané časové základny.
+Nastaví interval, na který první argument ukazuje, na aktuální čas kalendáře na základě zadaného časového základu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -67,36 +70,38 @@ int _timespec64_get(
 ### <a name="parameters"></a>Parametry
 
 *time_spec*<br/>
-Ukazatel na strukturu, která je nastavená na čas v sekundách a nanosekundách od začátku epochau.
+Ukazatel na strukturu, která je nastavena na čas v sekundách a nanosekundách od začátku epochy.
 
 *base*<br/>
-Nenulová hodnota specifická pro specifickou implementaci, která určuje časovou základnu.
+Nenulová hodnota specifická pro implementaci, která určuje časovou základnu.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Hodnota *Base* v případě úspěchu, jinak vrátí hodnotu nula.
+Hodnota *base,* pokud je úspěšná, jinak vrátí nulu.
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce **timespec_get** nastaví aktuální čas ve struktuře, na kterou ukazuje argument *time_spec* . Všechny verze této struktury mají dva členy, **tv_sec** a **tv_nsec**. Hodnota **tv_sec** je nastavená na celý počet sekund a **tv_nsec** na celočíselný počet nanosekund, který se zaokrouhluje na rozlišení systémových hodin od začátku epocha určeného *základem*.
+Funkce **timespec_get** nastavují aktuální čas ve struktuře, na kterou je odkazováno *argumentem time_spec.* Všechny verze této struktury mají dva členy, **tv_sec** a **tv_nsec**. Hodnota **tv_sec** je nastavena na celý počet sekund a **tv_nsec** na integrální počet nanosekund, zaokrouhlený na rozlišení systémových hodin, od začátku epochy určené *bázou*.
 
-**Specifické pro společnost Microsoft**
+**Specifické pro Microsoft**
 
-Tyto funkce podporují pouze **TIME_UTC** jako *základní* hodnotu. Tím se hodnota *time_spec* nastaví na počet sekund a nanosekund od spuštění epocha, půlnoc, 1. ledna 1970, koordinovaný světový čas (UTC). V _timespec32 **struktury**je **tv_sec** hodnota **__time32_t** . V _timespec64 **struktury**je **tv_sec** hodnota **__time64_t** . V timespec **struktury**je **tv_sec** typ **time_t** , což je 32 bitů nebo 64 bitů v závislosti na tom, zda je definován makro preprocesoru _USE_32BIT_TIME_T. Funkce **timespec_get** je vložená funkce, která volá **_timespec32_get** , pokud je definována _USE_32BIT_TIME_T; v opačném případě volá **_timespec64_get**.
+Tyto funkce podporují pouze **TIME_UTC** jako *základní* hodnotu. Tím se nastaví *hodnota time_spec* na počet sekund a nanosekund od zahájení epochy, půlnoc, leden 1, 1970, koordinovaný světový čas (UTC). Ve **_timespec32 struktury** **_timespec32** **je tv_sec** **__time32_t** hodnota. Ve **_timespec64 struktury** **_timespec64**je **tv_sec** **__time64_t** hodnota. V **časové specifikace struktury** **je tv_sec** **typ time_t,** který je 32 bitů nebo 64 bitů v závislosti na **tom,** zda je definována makro preprocesorová makro _USE_32BIT_TIME_T. Funkce **timespec_get** je vsazená funkce, která volá **_timespec32_get,** pokud je definován_USE_32BIT_TIME_T jinak volá **_timespec64_get**.
 
-**Specifické pro konec Microsoftu**
+**Ukončit microsoft specifické**
+
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**timespec_get**, **_timespec32_get**, **_timespec64_get**|C: \<Time. h >, C++: \<CTime – > nebo \<Time. h >|
+|**timespec_get** **_timespec32_get** **_timespec64_get**|C: \<time.h>, C++: \< \<ctime> nebo time.h>|
 
-Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Správa času](../../c-runtime-library/time-management.md)<br/>
+[Časová správa](../../c-runtime-library/time-management.md)<br/>
 [asctime, _wasctime](asctime-wasctime.md)<br/>
 [asctime_s, _wasctime_s](asctime-s-wasctime-s.md)<br/>
 [_ftime, _ftime32, _ftime64](ftime-ftime32-ftime64.md)<br/>

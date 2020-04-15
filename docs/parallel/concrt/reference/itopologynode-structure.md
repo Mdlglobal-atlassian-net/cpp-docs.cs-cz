@@ -12,16 +12,16 @@ f1_keywords:
 helpviewer_keywords:
 - ITopologyNode structure
 ms.assetid: 92e7e032-04f6-4c7c-be36-8f9a35fc4734
-ms.openlocfilehash: 1b4cb6a856d6da7b8eee7f9cba1ad51e375c024d
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 7cb815c4f7dc5ad09e8d352abc3f3375b8d9e205
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77140062"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368108"
 ---
 # <a name="itopologynode-structure"></a>ITopologyNode – struktura
 
-Rozhraní k uzlu topologie, jak je definováno Správce prostředků. Uzel obsahuje jeden nebo více prostředků spuštění.
+Rozhraní k toplogickému uzlu definovanému Správcem prostředků. Uzel obsahuje jeden nebo více prostředků spuštění.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,17 +33,17 @@ struct ITopologyNode;
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[ITopologyNode:: Getexecutionresourcecount –](#getexecutionresourcecount)|Vrátí počet prostředků spuštění seskupených do tohoto uzlu dohromady.|
-|[ITopologyNode:: Getfirstexecutionresource –](#getfirstexecutionresource)|Vrátí první prostředek spuštění seskupený pod tímto uzlem v pořadí výčtu.|
-|[ITopologyNode:: getId –](#getid)|Vrátí jedinečný identifikátor Správce prostředků pro tento uzel.|
-|[ITopologyNode:: GetNext](#getnext)|Vrátí rozhraní k dalšímu uzlu topologie v pořadí výčtu.|
-|[ITopologyNode:: Getnumanode –](#getnumanode)|Vrátí číslo uzlu NUMA přiřazené systémem Windows, ke kterému patří tento uzel Správce prostředku.|
+|[ITopologyNode::GetExecutionResourceCount](#getexecutionresourcecount)|Vrátí počet prostředků spuštění seskupených v rámci tohoto uzlu.|
+|[ITopologyNode::GetFirstExecutionResource](#getfirstexecutionresource)|Vrátí první prostředek spuštění seskupený pod tímto uzlem v pořadí výčtu.|
+|[ITopologyNode::GetId](#getid)|Vrátí jedinečný identifikátor správce prostředků pro tento uzel.|
+|[ITopologyNode::GetNext](#getnext)|Vrátí rozhraní do dalšího uzlu topologie v pořadí výčtu.|
+|[ITopologyNode::GetNumaNode](#getnumanode)|Vrátí číslo uzlu NUMA přiřazeného systémem Windows, ke kterému tento uzel Maanger prostředků patří.|
 
 ## <a name="remarks"></a>Poznámky
 
-Toto rozhraní se obvykle používá k procházení topologie systému, jak je zjištěno Správce prostředků.
+Toto rozhraní se obvykle používá k procházce topologie systému, jak je pozorováno správce prostředků.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -51,13 +51,13 @@ Toto rozhraní se obvykle používá k procházení topologie systému, jak je z
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** concrtrm. h
+**Záhlaví:** concrtrm.h
 
 **Obor názvů:** souběžnost
 
-## <a name="getexecutionresourcecount"></a>ITopologyNode:: Getexecutionresourcecount – – metoda
+## <a name="itopologynodegetexecutionresourcecount-method"></a><a name="getexecutionresourcecount"></a>ITopologyNode::Metoda GetExecutionResourceCount
 
-Vrátí počet prostředků spuštění seskupených do tohoto uzlu dohromady.
+Vrátí počet prostředků spuštění seskupených v rámci tohoto uzlu.
 
 ```cpp
 virtual unsigned int GetExecutionResourceCount() const = 0;
@@ -65,9 +65,9 @@ virtual unsigned int GetExecutionResourceCount() const = 0;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Počet prostředků spuštění seskupených do tohoto uzlu dohromady.
+Počet prostředků spuštění seskupených pod tímto uzlem.
 
-## <a name="getfirstexecutionresource"></a>ITopologyNode:: Getfirstexecutionresource – – metoda
+## <a name="itopologynodegetfirstexecutionresource-method"></a><a name="getfirstexecutionresource"></a>ITopologyNode::Metoda GetFirstExecutionResource
 
 Vrátí první prostředek spuštění seskupený pod tímto uzlem v pořadí výčtu.
 
@@ -79,9 +79,9 @@ virtual ITopologyExecutionResource *GetFirstExecutionResource() const = 0;
 
 První prostředek spuštění seskupený pod tímto uzlem v pořadí výčtu.
 
-## <a name="getid"></a>ITopologyNode:: getId – – metoda
+## <a name="itopologynodegetid-method"></a><a name="getid"></a>ITopologyNode::GetId Metoda
 
-Vrátí jedinečný identifikátor Správce prostředků pro tento uzel.
+Vrátí jedinečný identifikátor správce prostředků pro tento uzel.
 
 ```cpp
 virtual unsigned int GetId() const = 0;
@@ -89,17 +89,17 @@ virtual unsigned int GetId() const = 0;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Jedinečný identifikátor Správce prostředků pro tento uzel.
+Jedinečný identifikátor správce prostředků pro tento uzel.
 
 ### <a name="remarks"></a>Poznámky
 
-Concurrency Runtime představuje hardwarová vlákna v systému v rámci skupin uzlů procesorů. Uzly jsou obvykle odvozeny od hardwarové topologie systému. Například všechny procesory určitého soketu nebo konkrétního uzlu NUMA mohou patřit do stejného uzlu procesoru. Správce prostředků přiřadí těmto uzlům jedinečné identifikátory počínaje `0` až do `nodeCount - 1`, kde `nodeCount` představuje celkový počet uzlů procesoru v systému.
+Modul Souběžnost Runtime představuje hardwarová vlákna v systému ve skupinách uzlů procesoru. Uzly jsou obvykle odvozeny z hardwarové topologie systému. Například všechny procesory na určitém soketu nebo konkrétní uzel NUMA může patřit do stejného uzlu procesoru. Správce prostředků přiřazuje těmto uzlům jedinečné identifikátory počínaje `0` až do a včetně `nodeCount - 1`, kde `nodeCount` představuje celkový počet uzlů procesoru v systému.
 
-Počet uzlů lze získat z [GetProcessorNodeCount –](concurrency-namespace-functions.md)funkce.
+Počet uzlů lze získat z funkce [GetProcessorNodeCount](concurrency-namespace-functions.md).
 
-## <a name="getnext"></a>ITopologyNode:: GetNext – metoda
+## <a name="itopologynodegetnext-method"></a><a name="getnext"></a>ITopologyNode::GetNext Metoda
 
-Vrátí rozhraní k dalšímu uzlu topologie v pořadí výčtu.
+Vrátí rozhraní do dalšího uzlu topologie v pořadí výčtu.
 
 ```cpp
 virtual ITopologyNode *GetNext() const = 0;
@@ -107,11 +107,11 @@ virtual ITopologyNode *GetNext() const = 0;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Rozhraní k dalšímu uzlu v pořadí výčtu. Pokud v pořadí výčtu systémové topologie nejsou žádné další uzly, vrátí tato metoda hodnotu `NULL`.
+Rozhraní k dalšímu uzlu v pořadí výčtu. Pokud nejsou žádné další uzly v pořadí výčtu topologie systému, tato metoda vrátí hodnotu `NULL`.
 
-## <a name="getnumanode"></a>ITopologyNode:: Getnumanode – – metoda
+## <a name="itopologynodegetnumanode-method"></a><a name="getnumanode"></a>ITopologyNode::Metoda GetNumaNode
 
-Vrátí číslo uzlu NUMA přiřazené systémem Windows, ke kterému patří tento uzel Správce prostředku.
+Vrátí číslo uzlu NUMA přiřazeného systémem Windows, ke kterému tento uzel Maanger prostředků patří.
 
 ```cpp
 virtual unsigned long GetNumaNode() const = 0;
@@ -119,12 +119,12 @@ virtual unsigned long GetNumaNode() const = 0;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Číslo uzlu NUMA přiřazené systémem Windows, ke kterému patří tento uzel Správce prostředků.
+Číslo uzlu NUMA přiřazené systémem Windows, ke kterému tento uzel Správce prostředků patří.
 
 ### <a name="remarks"></a>Poznámky
 
-Proxy vlákna běžící v kořenovém adresáři virtuálního procesoru patřícím do tohoto uzlu bude mít spřažení na úrovni uzlu NUMA pro uzel NUMA vrácený touto metodou.
+Proxy podproces spuštěný na kořenovém adresáři virtuálního procesoru, který patří k tomuto uzlu, bude mít spřažení alespoň s úrovní uzlu NUMA pro uzel NUMA vrácený touto metodou.
 
 ## <a name="see-also"></a>Viz také
 
-[concurrency – obor názvů](concurrency-namespace.md)
+[obor názvů souběžnosti](concurrency-namespace.md)

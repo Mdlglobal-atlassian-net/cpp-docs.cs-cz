@@ -1,5 +1,5 @@
 ---
-title: Třídy zásady kopírování ATL
+title: Třídy zásad kopírování atl
 ms.date: 11/04/2016
 helpviewer_keywords:
 - data [C++], ATL
@@ -8,30 +8,30 @@ helpviewer_keywords:
 - _Copy class
 - _CopyInterface class
 ms.assetid: 06704b68-d318-4c5d-a65b-71457fe9d00d
-ms.openlocfilehash: 73bec31b4ae140797c85a06ee7c5023c9e0c4446
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f40f31124d4547076249a7459ac4b63cc25305d1
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62252214"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81317384"
 ---
-# <a name="atl-copy-policy-classes"></a>Třídy zásady kopírování ATL
+# <a name="atl-copy-policy-classes"></a>Třídy zásad kopírování atl
 
-Třídy zásady kopírování jsou [užitkové třídy](../atl/utility-classes.md) použitý k inicializaci, kopírování a odstranit data. Třídy zásady kopírování umožňují definovat sémantiku kopírování pro jakýkoli typ dat a definujte převody mezi různými datovými typy.
+Třídy zásad kopírování jsou [třídy nástrojů](../atl/utility-classes.md) používané k inicializaci, kopírování a odstraňování dat. Kopírovat třídy zásad umožňují definovat sémantiku kopírování pro libovolný typ dat a definovat převody mezi různými datovými typy.
 
-Použití třídy zásady kopírování ATL v jeho implementace z následujících šablon:
+Knihovna ATL používá třídy zásad kopírování ve svých implementacích následujících šablon:
 
 - [CComEnumImpl](../atl/reference/ccomenumimpl-class.md)
 
 - [IEnumOnSTLImpl](../atl/reference/ienumonstlimpl-class.md)
 
-- [ICollectionOnSTLImpl](../atl/reference/icollectiononstlimpl-class.md)
+- [ICollectionOnSTLimpl](../atl/reference/icollectiononstlimpl-class.md)
 
-Zapouzdřením informací potřebných ke kopírování nebo převést data v, který lze předat jako argument šablony třídy zásady kopírování ATL vývojáři zadali pro extrémní opětovné použití těchto tříd. Například pokud potřebujete implementovat kolekce pomocí libovolného libovolného datového typu, vše, co je potřeba zadat jsou kopie příslušné zásady; si už nikdy nemusíte dotýkat kódu, který implementuje kolekci.
+Zapouzdřením informací potřebných ke kopírování nebo převodu dat ve třídě zásad kopírování, které mohou být předány jako argument šablony, vývojáři knihovny ATL poskytli extrémní opětovné použití těchto tříd. Například pokud potřebujete implementovat kolekci pomocí libovolného datového typu, vše, co potřebujete poskytnout, je příslušná zásada kopírování; nikdy nebudete muset dotknout kódu, který implementuje kolekci.
 
 ## <a name="definition"></a>Definice
 
-Podle definice je třída, která poskytuje následující funkce statické třídy zásady kopírování:
+Podle definice je třída, která poskytuje následující statické funkce, třídou zásad kopírování:
 
 `static void init(` `DestinationType` `* p);`
 
@@ -39,46 +39,46 @@ Podle definice je třída, která poskytuje následující funkce statické tř�
 
 `static void destroy(` `DestinationType` `* p);`
 
-Můžete nahradit typy `DestinationType` a *SourceType* s typy libovolná data pro jednotlivé zásady kopírování.
+Typy `DestinationType` a *SourceType* můžete nahradit libovolnými datovými typy pro každou zásadu kopírování.
 
 > [!NOTE]
->  Přestože můžete definovat třídy zásady kopírování pro všechny typy libovolná data, použijte třídy v kódu ATL měli omezit typy, které dávají smysl. Například při použití zásad kopírování třídy s shromažďování ATL nebo enumerátoru implementace `DestinationType` musí být typ, který může sloužit jako parametr v metodě rozhraní modelu COM.
+> I když můžete definovat třídy zásad kopírování pro libovolné datové typy, použití tříd v kódu ATL by mělo omezit typy, které dávají smysl. Například při použití třídy zásad kopírování s implementací kolekce nebo `DestinationType` čítače protokolu ATL musí být typ, který lze použít jako parametr v metodě rozhraní COM.
 
-Použití **init** inicializace dat, **kopírování** ke kopírování dat, a **zničit** uvolnit data. Přesné význam inicializace, kopírování a zničení doménou třídy zásady kopírování a se bude lišit podle používané datové typy.
+Pomocí **inicializace** dat, **kopírování** zkopírovat data a **zničit,** aby se data uvolnila. Přesný význam inicializace, kopírování a zničení jsou doménou třídy zásad kopírování a budou se lišit v závislosti na souvisejících datových typech.
 
-Existují dva požadavky na použití a implementaci třídy zásady kopírování:
+Existují dva požadavky na použití a implementaci třídy zásad kopírování:
 
-- První parametr **kopírování** musí přijmout jenom ukazatel na data, která jste dříve inicializován pomocí **init**.
+- První parametr, který chcete **zkopírovat,** musí obdržet pouze ukazatel na data, která jste dříve inicializovali pomocí **init**.
 
-- **zničit** musí vždy jen přijímat ukazatel na data, která jste dříve inicializován pomocí **init** nebo zkopírované přes **kopírování**.
+- **destroy** musí vždy obdržet pouze ukazatel na data, která jste dříve inicializovali pomocí **initunebo** zkopírovali pomocí **kopie**.
 
 ## <a name="standard-implementations"></a>Standardní implementace
 
-Knihovna ATL poskytuje dvě třídy zásady kopírování ve formě `_Copy` a `_CopyInterface` tříd šablon:
+Knihovna ATL poskytuje dvě třídy `_Copy` `_CopyInterface` zásad kopírování ve formě tříd a šablony:
 
-- `_Copy` Třída umožňuje homogenní pouze kopírování (ne převodu mezi datovými typy) od nabízí jenom zadat současně parametr jednou šablonou `DestinationType` a *SourceType*. Obecnou implementaci Tato šablona neobsahuje žádný kód inicializace nebo zničení a používá `memcpy` kopírovat data. Knihovna ATL poskytuje také specializace `_Copy` pro VARIANTU, LPOLESTR, OLEVERB a CONNECTDATA datové typy.
+- Třída `_Copy` umožňuje pouze homogenní kopírování (nikoli převod mezi datovými typy), protože nabízí `DestinationType` pouze jeden parametr šablony pro určení obou a *SourceType*. Obecná implementace této šablony neobsahuje žádný kód `memcpy` inicializace nebo zničení a používá ke kopírování dat. ATL také poskytuje specializace `_Copy` pro datové typy VARIANT, LPOLESTR, OLEVERB a CONNECTDATA.
 
-- `_CopyInterface` Třída poskytuje implementaci pro kopírování standardních pravidel COM ukazatele rozhraní. Ještě jednou Tato třída umožňuje pouze homogenní kopírování, aby používalo jednoduché přiřazení a volání `AddRef` ke kopírování.
+- Třída `_CopyInterface` poskytuje implementaci pro kopírování ukazatelů rozhraní podle standardních pravidel COM. Opět tato třída umožňuje pouze homogenní kopírování, takže používá jednoduché `AddRef` přiřazení a volání k provedení kopie.
 
 ## <a name="custom-implementations"></a>Vlastní implementace
 
-Obvykle budete potřebovat k definování vlastních tříd zásad kopírování pro heterogenní kopírování (to znamená, převodu mezi datovými typy). Některé příklady užitečných vlastních tříd zásad kopírování, podívejte se na soubory VCUE_Copy.h a VCUE_CopyString.h v [ATLCollections](../overview/visual-cpp-samples.md) vzorku. Tyto soubory obsahují dvě třídy zásady kopírování šablony `GenericCopy` a `MapCopy`, plus počet specializace `GenericCopy` pro různé datové typy.
+Obvykle budete muset definovat vlastní třídy zásad kopírování pro heterogenní kopírování (to znamená převod mezi datovými typy). Některé příklady vlastních tříd zásad kopírování nahlédnou na soubory VCUE_Copy.h a VCUE_CopyString.h v ukázkovém souboru [ATLCollections.](../overview/visual-cpp-samples.md) Tyto soubory obsahují dvě třídy zásad kopírování šablony `GenericCopy` a `MapCopy` `GenericCopy` navíc řadu specializací pro různé datové typy.
 
 ### <a name="genericcopy"></a>GenericCopy
 
-`GenericCopy` můžete zadat *SourceType* a `DestinationType` jako argumenty šablony. Tady je nejobecnější formu `GenericCopy` třídy z VCUE_Copy.h:
+`GenericCopy`umožňuje zadat *SourceType* a `DestinationType` jako argumenty šablony. Zde je nejobecnější forma `GenericCopy` třídy z VCUE_Copy.h:
 
 [!code-cpp[NVC_ATL_COM#30](../atl/codesnippet/cpp/atl-copy-policy-classes_1.h)]
 
-VCUE_Copy.h také obsahuje následující specializace této třídy: `GenericCopy<BSTR>`, `GenericCopy<VARIANT, BSTR>`, `GenericCopy<BSTR, VARIANT>`. VCUE_CopyString.h obsahuje specializace pro kopírování z **std::string**s: `GenericCopy<std::string>`, `GenericCopy<VARIANT, std::string>`, a `GenericCopy<BSTR, std::string>`. Může vylepšit `GenericCopy` tím, že poskytuje další specializace vlastní.
+VCUE_Copy.h obsahuje také následující specializace této `GenericCopy<BSTR>` `GenericCopy<VARIANT, BSTR>`třídy: , , `GenericCopy<BSTR, VARIANT>`. VCUE_CopyString.h obsahuje specializace pro kopírování z **std::string**s: `GenericCopy<std::string>`, `GenericCopy<VARIANT, std::string>`a `GenericCopy<BSTR, std::string>`. Dalo by `GenericCopy` se zvýšit tím, že další specializace své vlastní.
 
-### <a name="mapcopy"></a>MapCopy
+### <a name="mapcopy"></a>Mapcopy
 
-`MapCopy` předpokládá, že data kopírovaná je uložen do mapy stylu knihovny C++ Standard, takže ho můžete zadat typ mapy, ve kterém jsou data uložená a zadejte cíl. Implementace třídy používá funkce typedefs poskytnutých *MapType* třídu k určení typu zdroje dat a volat odpovídající `GenericCopy` třídy. Nejsou potřeba žádné specializace této třídy.
+`MapCopy`předpokládá, že kopírovaná data jsou uložena do mapy ve stylu standardní knihovny jazyka C++, takže umožňuje určit typ mapy, ve které jsou data uložena, a cílový typ. Implementace třídy pouze používá typedefs dodané *MapType* třídy k určení typu zdrojových `GenericCopy` dat a volání příslušné třídy. Nejsou potřeba žádné specializace této třídy.
 
 [!code-cpp[NVC_ATL_COM#31](../atl/codesnippet/cpp/atl-copy-policy-classes_2.h)]
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Implementace kolekce založené na standardní knihovně C++](../atl/implementing-an-stl-based-collection.md)<br/>
-[Ukázka ATLCollections](../overview/visual-cpp-samples.md)
+[Implementace kolekce založené na standardní knihovně c++](../atl/implementing-an-stl-based-collection.md)<br/>
+[Ukázka atlcollections](../overview/visual-cpp-samples.md)

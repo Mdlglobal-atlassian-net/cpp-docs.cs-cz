@@ -14,16 +14,16 @@ helpviewer_keywords:
 - CSyncObject [MFC], Unlock
 - CSyncObject [MFC], m_hObject
 ms.assetid: c62ea6eb-a17b-4e01-aed4-321fc435a5f4
-ms.openlocfilehash: 842ff5f98f05425fbbb511d112ae3e4fd65ff076
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ebfbc185cdca2effc96ce2e6d96d05f997c52bf7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324867"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81365974"
 ---
 # <a name="csyncobject-class"></a>CSyncObject – třída
 
-Čistě virtuální třída, která poskytuje funkčnost běžnou pro synchronizaci objektů v systému Win32.
+Čistá virtuální třída, která poskytuje funkce společné pro objekty synchronizace v win32.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -35,38 +35,38 @@ class CSyncObject : public CObject
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CSyncObject::CSyncObject](#csyncobject)|Vytvoří `CSyncObject` objektu.|
+|[CSyncObject::CSyncObject](#csyncobject)|Vytvoří `CSyncObject` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CSyncObject::Lock](#lock)|Získáte přístup k synchronizační objekt.|
-|[CSyncObject::Unlock](#unlock)|Získáte přístup k synchronizační objekt.|
+|[CSyncObject::Zamknout](#lock)|Získá přístup k objektu synchronizace.|
+|[CSyncObject::Odemknout](#unlock)|Získá přístup k objektu synchronizace.|
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CSyncObject::operator POPISOVAČ](#operator_handle)|Poskytuje přístup k objektu synchronizace.|
+|[CSyncObject::POPISOVAČ operátora](#operator_handle)|Poskytuje přístup k objektu synchronizace.|
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CSyncObject::m_hObject](#m_hobject)|Popisovač na základní objekt synchronizace.|
+|[CSyncObject::m_hObject](#m_hobject)|Popisovač základního objektu synchronizace.|
 
 ## <a name="remarks"></a>Poznámky
 
-Knihovny Microsoft Foundation Class poskytuje několik tříd odvozených z `CSyncObject`. Jedná se o [CEvent](../../mfc/reference/cevent-class.md), [CMutex](../../mfc/reference/cmutex-class.md), [CCriticalSection](../../mfc/reference/ccriticalsection-class.md), a [CSemaphore](../../mfc/reference/csemaphore-class.md).
+Knihovna tříd Microsoft Foundation poskytuje `CSyncObject`několik tříd odvozených z aplikace . Jedná se [o CEvent](../../mfc/reference/cevent-class.md), [CMutex](../../mfc/reference/cmutex-class.md), [CCriticalSection](../../mfc/reference/ccriticalsection-class.md)a [CSemaphore](../../mfc/reference/csemaphore-class.md).
 
-Informace o tom, jak používat objekty synchronizace, najdete v článku [Multithreading: Jak používat synchronizační třídy](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).
+Informace o použití objektů synchronizace naleznete v článku [Multithreading: How to Use the Synchronizační třídy](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObjekt](../../mfc/reference/cobject-class.md)
 
 `CSyncObject`
 
@@ -74,9 +74,9 @@ Informace o tom, jak používat objekty synchronizace, najdete v článku [Multi
 
 **Záhlaví:** afxmt.h
 
-##  <a name="csyncobject"></a>  CSyncObject::CSyncObject
+## <a name="csyncobjectcsyncobject"></a><a name="csyncobject"></a>CSyncObject::CSyncObject
 
-Vytvoří objekt synchronizace se zadaným názvem.
+Vytvoří objekt synchronizace s zadaným názvem.
 
 ```
 explicit CSyncObject(LPCTSTR pstrName);
@@ -85,12 +85,12 @@ virtual ~CSyncObject();
 
 ### <a name="parameters"></a>Parametry
 
-*pstrName*<br/>
-Název objektu. Pokud má hodnotu NULL, *pstrName* bude mít hodnotu null.
+*název pstr*<br/>
+Název objektu. Pokud null, *pstrName* bude null.
 
-##  <a name="lock"></a>  CSyncObject::Lock
+## <a name="csyncobjectlock"></a><a name="lock"></a>CSyncObject::Zamknout
 
-Voláním této funkce získáte přístup k prostředku řídí synchronizační objekt.
+Volání této funkce získat přístup k prostředku řízeného objektu synchronizace.
 
 ```
 virtual BOOL Lock(DWORD dwTimeout = INFINITE);
@@ -99,27 +99,27 @@ virtual BOOL Lock(DWORD dwTimeout = INFINITE);
 ### <a name="parameters"></a>Parametry
 
 *dwTimeout*<br/>
-Určuje dobu v milisekundách pro čekání synchronizační objekt k dispozici (signalizován). Pokud je NEKONEČNÉ, `Lock` budou čekat na objekt je signál, před vrácením.
+Určuje dobu v milisekundách, po kterou má být k dispozici objekt synchronizace (signalizován). Pokud INFINITE, bude čekat, `Lock` dokud objekt je signalizován před návratem.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud funkce byla úspěšná. jinak 0.
+Nenulová, pokud byla funkce úspěšná; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud je synchronizační objekt signalizována, `Lock` úspěšně vrátí a vlákno je nyní vlastníkem objektu. Pokud se objekt synchronizace nonsignaled (není k dispozici), `Lock` počká na synchronizační objekt na signálování až číslo zadané v milisekundách *dwTimeOut* parametru. Pokud je synchronizační objekt stát nesignalizováno ve stanoveném čase, `Lock` vrátí chybu.
+Pokud je signalizován objekt `Lock` synchronizace, úspěšně se vrátí a vlákno nyní vlastní objekt. Pokud je objekt synchronizace nesignalizován `Lock` (není k dispozici), bude čekat, až bude objekt synchronizace signalizován až do počtu milisekund zadaný v parametru *dwTimeOut.* Pokud objekt synchronizace nebyl signalizován v zadaném `Lock` čase, vrátí selhání.
 
-##  <a name="m_hobject"></a>  CSyncObject::m_hObject
+## <a name="csyncobjectm_hobject"></a><a name="m_hobject"></a>CSyncObject::m_hObject
 
-Popisovač na základní objekt synchronizace.
+Popisovač základního objektu synchronizace.
 
 ```
 HANDLE m_hObject;
 ```
 
-##  <a name="operator_handle"></a>  CSyncObject::operator POPISOVAČ
+## <a name="csyncobjectoperator-handle"></a><a name="operator_handle"></a>CSyncObject::POPISOVAČ operátora
 
-Tento operátor se získat popisovač `CSyncObject` objektu.
+Pomocí tohoto operátoru získat `CSyncObject` popisovač objektu.
 
 ```
 operator HANDLE() const;
@@ -127,15 +127,15 @@ operator HANDLE() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-V případě úspěchu popisovač objekt synchronizace. v opačném případě hodnota NULL.
+Pokud je úspěšná, popisovač objektu synchronizace; jinak NULL.
 
 ### <a name="remarks"></a>Poznámky
 
-Popisovač můžete použít pro volání rozhraní API Windows přímo.
+Pomocí popisovače můžete volat přímo windows api.
 
-##  <a name="unlock"></a>  CSyncObject::Unlock
+## <a name="csyncobjectunlock"></a><a name="unlock"></a>CSyncObject::Odemknout
 
-Deklarace `Unlock` bez parametrů je čistě virtuální funkce a musí se přepsat všechny třídy odvozené od `CSyncObject`.
+Deklarace `Unlock` bez parametrů je čistě virtuální funkce a musí být přepsána všemi třídami odvozenými z aplikace `CSyncObject`.
 
 ```
 virtual BOOL Unlock() = 0; virtual BOOL Unlock(
@@ -145,21 +145,21 @@ virtual BOOL Unlock() = 0; virtual BOOL Unlock(
 
 ### <a name="parameters"></a>Parametry
 
-*lCount*<br/>
-Výchozí implementace není používána.
+*lPočet*<br/>
+Ve výchozím provádění se nepoužívá.
 
 *lpPrevCount*<br/>
-Výchozí implementace není používána.
+Ve výchozím provádění se nepoužívá.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Výchozí implementace vždy vrátí hodnotu TRUE.
+Výchozí implementace vždy vrátí hodnotu PRAVDA.
 
 ### <a name="remarks"></a>Poznámky
 
-Výchozí implementace deklarace se dvěma parametry vždy vrátí hodnotu TRUE. Tato funkce je volána k uvolnění přístup k synchronizační objekt ve vlastnictví volajícího vlákna. Druhý deklarace se poskytuje pro synchronizaci objektů například semafory, která umožňují více než jeden přístup řízené prostředku.
+Výchozí implementace deklarace se dvěma parametry vždy vrátí hodnotu TRUE. Tato funkce je volána k uvolnění přístupu k objektu synchronizace vlastněného volajícím vláknem. Druhá deklarace je k dispozici pro synchronizační objekty, jako jsou semafory, které umožňují více než jeden přístup řízeného prostředku.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [CObject – třída](../../mfc/reference/cobject-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)

@@ -1,10 +1,11 @@
 ---
 title: tan, tanf, tanl
-ms.date: 04/10/2018
+ms.date: 4/2/2020
 api_name:
 - tan
 - tanf
 - tanl
+- _o_tan
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -35,16 +37,16 @@ helpviewer_keywords:
 - tanf function
 - trigonometric functions
 ms.assetid: 36cc0ce8-9c80-4653-b354-ddb3b378b6bd
-ms.openlocfilehash: 9fc1a75bdc6fddb5134b9db17961ba3c4550bc79
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 73a519614f17b6a8f8b26b5eae2172c87ea7f817
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80168704"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81362632"
 ---
 # <a name="tan-tanf-tanl"></a>tan, tanf, tanl
 
-Vypočítá tangens.
+Vypočítá tečnu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -61,29 +63,31 @@ long double tan( long double x );  // C++ only
 
 ### <a name="parameters"></a>Parametry
 
-*znak*<br/>
+*X*<br/>
 Úhel v radiánech.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Funkce **tan** vrací tangens *x*. Pokud *x* je větší nebo rovno 263 nebo menší než nebo rovno-263, dojde ke ztrátě významnosti ve výsledku.
+Funkce **oznamovat** vrátí tečnu *x*. Pokud *x* je větší nebo rovno 263 nebo menší nebo rovno -263, dojde ke ztrátě významnosti ve výsledku.
 
-|Vstup|Výjimka SEH|**Matherr** Jímka|
+|Vstup|Výjimka SEH|**Matherr (Rak.)** Výjimka|
 |-----------|-------------------|-------------------------|
-|QNAN, ZASÁHNOUT|Žádná|_DOMAIN|
-|± INF|**NENÍ**|_DOMAIN|
+|± QNAN,IND|Žádná|_DOMAIN|
+|± INF|**Neplatný**|_DOMAIN|
 
 ## <a name="remarks"></a>Poznámky
 
-Vzhledem C++ k tomu, že umožňuje přetížení, můžete volat **přetížení, která** přijímají a vracejí hodnoty **float** nebo **Long** **Double** . V programu v jazyce C provede funkce **tan** vždycky a vrátí hodnotu **Double**.
+Vzhledem k tomu, že C++ umožňuje přetížení, můžete volat přetížení **tan,** které trvat a vrátit **float** nebo **dlouhé** **dvojité** hodnoty. V programu C **opalovat** vždy trvá a vrací **double**.
+
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
-|Rutina|Požadovaná hlavička (C)|Požadovaná hlavička (C++)|
+|Rutina|Povinná hlavička (C)|Povinné záhlaví (C++)|
 |-------------|---------------------|-|
-|**tan**, **tanf –** , **tanl**|\<Math. h >|\<cmath > nebo \<Math. h >|
+|**tan**, **tanf**, **tanl**|\<math.h>|\<cmath> \<nebo math.h>|
 
-Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -111,7 +115,7 @@ tan( 0.785398 ) = 1.000000
 
 ## <a name="see-also"></a>Viz také
 
-[Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)<br/>
+[Podpora s plovoucí desetinnou tálicí](../../c-runtime-library/floating-point-support.md)<br/>
 [acos, acosf, acosl](acos-acosf-acosl.md)<br/>
 [asin, asinf, asinl](asin-asinf-asinl.md)<br/>
 [atan, atanf, atanl, atan2, atan2f, atan2l](atan-atanf-atanl-atan2-atan2f-atan2l.md)<br/>

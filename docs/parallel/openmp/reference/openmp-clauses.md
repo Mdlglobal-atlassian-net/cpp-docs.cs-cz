@@ -32,45 +32,45 @@ helpviewer_keywords:
 - schedule OpenMP clause
 - shared OpenMP clause
 ms.assetid: 806e7d8f-b204-4e4c-a12c-273ab540a7ca
-ms.openlocfilehash: 37f86eeb172c5f8b496ed724142af002f5db8d41
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 1c4c7961a173eb47394d03e9aabdd14574e62b08
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79446338"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81363897"
 ---
 # <a name="openmp-clauses"></a>OpenMP – klauzule
 
-Obsahuje odkazy na klauzule používané v rozhraní OpenMP API.
+Obsahuje odkazy na klauzule používané v rozhraní OPENMP API.
 
-Vizuál C++ podporuje následující klauzule OpenMP.
+Visual C++ podporuje následující klauzule OpenMP.
 
 Pro obecné atributy:
 
 |Klauzule|Popis|
 |------|-----------|
-|[Přestože](#if-openmp)|Určuje, zda má být smyčka provedena paralelně nebo v sériovém tvaru.|
+|[if](#if-openmp)|Určuje, zda má být smyčka spuštěna paralelně nebo sériově.|
 |[num_threads](#num-threads)|Nastaví počet vláken v týmu vláken.|
-|[objednávek](#ordered-openmp-clauses)|Vyžaduje se u paralelního příkazu [for](openmp-directives.md#for-openmp) , pokud se ve smyčce má použít [seřazená](openmp-directives.md#ordered-openmp-directives) direktiva.|
-|[schedule](#schedule)|Platí pro direktivu [for](openmp-directives.md#for-openmp) .|
-|[nowait](#nowait)|Přepisuje v direktivě implicitní překážku.|
+|[Objednal](#ordered-openmp-clauses)|Požadováno na paralelní [pro](openmp-directives.md#for-openmp) příkaz, pokud [objednané](openmp-directives.md#ordered-openmp-directives) směrnice má být použit ve smyčce.|
+|[Plán](#schedule)|Platí pro směrnici [for.](openmp-directives.md#for-openmp)|
+|[nowait](#nowait)|Přepíše bariéru implicitní ve směrnici.|
 
-Pro atributy pro sdílení dat:
+Pro atributy sdílení dat:
 
 |Klauzule|Popis|
 |------|-----------|
 |[private](#private-openmp)|Určuje, že každé vlákno by mělo mít vlastní instanci proměnné.|
-|[firstprivate](#firstprivate)|Určuje, že každé vlákno má mít vlastní instanci proměnné a že proměnná by měla být inicializována s hodnotou proměnné, protože existuje před paralelní konstrukcí.|
-|[lastprivate](#lastprivate)|Určuje, že verze ohraničujícího kontextu proměnné je nastavena na hodnotu, která je stejná jako soukromá verze libovolného vlákna, spustí konečnou iteraci (konstrukci smyčky) nebo poslední oddíl (#pragma oddíly).|
-|[sdíleného](#shared-openmp)|Určuje, že nejmíň jedna proměnná by měla být sdílená mezi všemi vlákny.|
+|[firstprivate](#firstprivate)|Určuje, že každé vlákno by mělo mít vlastní instanci proměnné a že proměnná by měla být inicializována s hodnotou proměnné, protože existuje před paralelní konstrukcí.|
+|[lastprivate](#lastprivate)|Určuje, že ohraničující kontext verze proměnné je nastavena rovna soukromé verzi podle toho, které vlákno provede konečnou iteraci (pro-loop konstrukce) nebo poslední část (#pragma oddíly).|
+|[Sdílené](#shared-openmp)|Určuje, že jedna nebo více proměnných by měla být sdílena mezi všemi vlákny.|
 |[default](#default-openmp)|Určuje chování proměnných bez oboru v paralelní oblasti.|
-|[reduction](#reduction)|Určuje, že jedna nebo více proměnných, které jsou soukromé pro každé vlákno, jsou předmětem operace snížení na konci paralelní oblasti.|
-|[copyin](#copyin)|Umožňuje vláknům přístup k hodnotě hlavního vlákna pro proměnnou [threadprivate](openmp-directives.md#threadprivate) .|
-|[copyprivate](#copyprivate)|Určuje, že nejmíň jedna proměnná by měla být sdílená mezi všemi vlákny.|
+|[reduction](#reduction)|Určuje, že jedna nebo více proměnných, které jsou soukromé pro každé vlákno, jsou předmětem operace redukce na konci paralelní oblasti.|
+|[copyin](#copyin)|Umožňuje vláknům přístup k hodnotě hlavního vlákna pro proměnnou [threadprivate.](openmp-directives.md#threadprivate)|
+|[copyprivate](#copyprivate)|Určuje, že jedna nebo více proměnných by měla být sdílena mezi všemi vlákny.|
 
-## <a name="copyin"></a>copyin
+## <a name="copyin"></a><a name="copyin"></a>copyin
 
-Umožňuje vláknům přístup k hodnotě hlavního vlákna pro proměnnou [threadprivate](openmp-directives.md#threadprivate) .
+Umožňuje vláknům přístup k hodnotě hlavního vlákna pro proměnnou [threadprivate.](openmp-directives.md#threadprivate)
 
 ```cpp
 copyin(var)
@@ -79,25 +79,25 @@ copyin(var)
 ### <a name="parameters"></a>Parametry
 
 *var*<br/>
-Proměnná `threadprivate`, která bude inicializována hodnotou proměnné v hlavním vlákně, jak existuje před paralelní konstrukcí.
+Proměnná, `threadprivate` která bude inicializována s hodnotou proměnné v hlavním vlákně, protože existuje před paralelní konstrukcí.
 
 ### <a name="remarks"></a>Poznámky
 
-`copyin` platí pro následující direktivy:
+`copyin`se vztahuje na tyto směrnice:
 
 - [parallel](openmp-directives.md#parallel)
-- [for](openmp-directives.md#for-openmp)
-- [řezů](openmp-directives.md#sections-openmp)
+- [pro](openmp-directives.md#for-openmp)
+- [Oddíly](openmp-directives.md#sections-openmp)
 
-Další informace najdete v tématu [2.7.2.7 copyin](../../../parallel/openmp/2-7-2-7-copyin.md).
+Další informace naleznete v tématu [2.7.2.7 copyin](../../../parallel/openmp/2-7-2-7-copyin.md).
 
 ### <a name="example"></a>Příklad
 
-Příklad použití `copyin`naleznete v tématu [threadprivate](openmp-directives.md#threadprivate) .
+Viz [threadprivate](openmp-directives.md#threadprivate) příklad použití `copyin`.
 
-## <a name="copyprivate"></a>copyprivate
+## <a name="copyprivate"></a><a name="copyprivate"></a>copyprivate
 
-Určuje, že nejmíň jedna proměnná by měla být sdílená mezi všemi vlákny.
+Určuje, že jedna nebo více proměnných by měla být sdílena mezi všemi vlákny.
 
 ```cpp
 copyprivate(var)
@@ -106,13 +106,13 @@ copyprivate(var)
 ### <a name="parameters"></a>Parametry
 
 *var*<br/>
-Jedna nebo více proměnných ke sdílení. Je-li zadána více než jedna proměnná, oddělte názvy proměnných čárkami.
+Jedna nebo více proměnných ke sdílení. Pokud je zadáno více než jedna proměnná, samostatné názvy proměnných čárkou.
 
 ### <a name="remarks"></a>Poznámky
 
-`copyprivate` platí pro [jednu](openmp-directives.md#single) direktivu.
+`copyprivate`se vztahuje na [jednotnou](openmp-directives.md#single) směrnici.
 
-Další informace najdete v tématu [2.7.2.8 copyprivate](../../../parallel/openmp/2-7-2-8-copyprivate.md).
+Další informace naleznete v [tématu 2.7.2.8 copyprivate](../../../parallel/openmp/2-7-2-8-copyprivate.md).
 
 ### <a name="example"></a>Příklad
 
@@ -180,7 +180,7 @@ Value = 1.008000, thread = 0
 Value = 1.008000, thread = 1
 ```
 
-## <a name="default-openmp"></a>výchozí
+## <a name="default"></a><a name="default-openmp"></a>Výchozí
 
 Určuje chování proměnných bez oboru v paralelní oblasti.
 
@@ -190,23 +190,23 @@ default(shared | none)
 
 ### <a name="remarks"></a>Poznámky
 
-`shared`, který je platný, pokud není zadána klauzule `default`, znamená, že jakákoli proměnná v paralelní oblasti bude považována za zadanou se [sdílenou](#shared-openmp) klauzulí. `none` znamená, že jakékoli proměnné, které se používají v paralelní oblasti, které nejsou vymezeny s klauzulí [Private](#private-openmp), [Shared](#shared-openmp), [redukční](#reduction), [firstprivate](#firstprivate)nebo [lastprivate](#lastprivate) , způsobí chybu kompilátoru.
+`shared`, což je v `default` platnosti, pokud klauzule není specifikována, znamená, že všechny proměnné v paralelní oblasti budou považovány za, jako by byly zadány s [shared](#shared-openmp) klauzule. `none`znamená, že všechny proměnné používané v paralelní oblasti, které nejsou vymezeny s [private](#private-openmp), [sdílené](#shared-openmp), [snížení](#reduction), [firstprivate](#firstprivate)nebo [lastprivate](#lastprivate) klauzule způsobí chybu kompilátoru.
 
-`default` platí pro následující direktivy:
+`default`se vztahuje na tyto směrnice:
 
 - [parallel](openmp-directives.md#parallel)
-- [for](openmp-directives.md#for-openmp)
-- [řezů](openmp-directives.md#sections-openmp)
+- [pro](openmp-directives.md#for-openmp)
+- [Oddíly](openmp-directives.md#sections-openmp)
 
-Další informace najdete v tématu [2.7.2.5 default](../../../parallel/openmp/2-7-2-5-default.md).
+Další informace naleznete v tématu [2.7.2.5 default](../../../parallel/openmp/2-7-2-5-default.md).
 
 ### <a name="example"></a>Příklad
 
-Příklad použití `default`naleznete v části [Private](#private-openmp) .
+Viz [soukromé](#private-openmp) příklad použití `default`.
 
-## <a name="firstprivate"></a>firstprivate
+## <a name="firstprivate"></a><a name="firstprivate"></a>první soukromé
 
-Určuje, že každé vlákno má mít vlastní instanci proměnné a že proměnná by měla být inicializována s hodnotou proměnné, protože existuje před paralelní konstrukcí.
+Určuje, že každé vlákno by mělo mít vlastní instanci proměnné a že proměnná by měla být inicializována s hodnotou proměnné, protože existuje před paralelní konstrukcí.
 
 ```cpp
 firstprivate(var)
@@ -215,26 +215,26 @@ firstprivate(var)
 ### <a name="parameters"></a>Parametry
 
 *var*<br/>
-Proměnná, která má mít instance v každém vlákně a která bude inicializována s hodnotou proměnné, protože existuje před paralelní konstrukcí. Je-li zadána více než jedna proměnná, oddělte názvy proměnných čárkami.
+Proměnná mít instance v každém vlákně a které budou inicializovány s hodnotou proměnné, protože existuje před paralelní konstrukce. Pokud je zadáno více než jedna proměnná, samostatné názvy proměnných čárkou.
 
 ### <a name="remarks"></a>Poznámky
 
-`firstprivate` platí pro následující direktivy:
+`firstprivate`se vztahuje na tyto směrnice:
 
-- [for](openmp-directives.md#for-openmp)
+- [pro](openmp-directives.md#for-openmp)
 - [parallel](openmp-directives.md#parallel)
-- [řezů](openmp-directives.md#sections-openmp)
-- [single](openmp-directives.md#single)
+- [Oddíly](openmp-directives.md#sections-openmp)
+- [Jednoho](openmp-directives.md#single)
 
-Další informace najdete v tématu [2.7.2.2 firstprivate](../../../parallel/openmp/2-7-2-2-firstprivate.md).
+Další informace naleznete v [tématu 2.7.2.2 firstprivate](../../../parallel/openmp/2-7-2-2-firstprivate.md).
 
 ### <a name="example"></a>Příklad
 
-Příklad použití `firstprivate`naleznete v příkladu v [Private](#private-openmp).
+Příklad použití `firstprivate`naleznete v příkladu v [soukromí](#private-openmp).
 
-## <a name="if-openmp"></a>if (OpenMP)
+## <a name="if-openmp"></a><a name="if-openmp"></a>pokud (OpenMP)
 
-Určuje, zda má být smyčka provedena paralelně nebo v sériovém tvaru.
+Určuje, zda má být smyčka spuštěna paralelně nebo sériově.
 
 ```cpp
 if(expression)
@@ -242,18 +242,18 @@ if(expression)
 
 ### <a name="parameters"></a>Parametry
 
-*vyjádření*<br/>
-Celočíselný výraz, který Pokud je vyhodnocen jako true (nenulový), způsobí, že se kód v paralelní oblasti spustí paralelně. Pokud se výraz vyhodnotí jako false (nula), paralelní oblast se spustí v sériové (podle jednoho vlákna).
+*Výraz*<br/>
+Integrální výraz, který, pokud je vyhodnocena jako true (nenulová), způsobí, že kód v paralelní oblasti spustit paralelně. Pokud výraz vyhodnotí false (nula), paralelní oblast je spuštěna v sériovém (jedním podprocesem).
 
 ### <a name="remarks"></a>Poznámky
 
-`if` platí pro následující direktivy:
+`if`se vztahuje na tyto směrnice:
 
 - [parallel](openmp-directives.md#parallel)
-- [for](openmp-directives.md#for-openmp)
-- [řezů](openmp-directives.md#sections-openmp)
+- [pro](openmp-directives.md#for-openmp)
+- [Oddíly](openmp-directives.md#sections-openmp)
 
-Další informace najdete v tématu [2,3 paralelní konstrukce](../../../parallel/openmp/2-3-parallel-construct.md).
+Další informace naleznete v tématu [2.3 paralelní konstrukce](../../../parallel/openmp/2-3-parallel-construct.md).
 
 ### <a name="example"></a>Příklad
 
@@ -291,9 +291,9 @@ val = 0, serialized
 val = 2, parallelized with 2 threads
 ```
 
-## <a name="lastprivate"></a>lastprivate
+## <a name="lastprivate"></a><a name="lastprivate"></a>lastprivate
 
-Určuje, že verze ohraničujícího kontextu proměnné je nastavena na hodnotu, která je stejná jako soukromá verze libovolného vlákna, spustí konečnou iteraci (konstrukci smyčky) nebo poslední oddíl (#pragma oddíly).
+Určuje, že ohraničující kontext verze proměnné je nastavena rovna soukromé verzi podle toho, které vlákno provede konečnou iteraci (pro-loop konstrukce) nebo poslední část (#pragma oddíly).
 
 ```cpp
 lastprivate(var)
@@ -302,24 +302,24 @@ lastprivate(var)
 ### <a name="parameters"></a>Parametry
 
 *var*<br/>
-Proměnná, která je nastavena na hodnotu Private, jakékoli vlákno spustí konečnou iteraci (konstrukci smyčky) nebo poslední oddíl (#pragma oddíly).
+Proměnná, která je nastavena na soukromou verzi podle toho, které vlákno provede konečnou iteraci (pro-loop konstrukce) nebo poslední část (#pragma oddíly).
 
 ### <a name="remarks"></a>Poznámky
 
-`lastprivate` platí pro následující direktivy:
+`lastprivate`se vztahuje na tyto směrnice:
 
-- [for](openmp-directives.md#for-openmp)
-- [řezů](openmp-directives.md#sections-openmp)
+- [pro](openmp-directives.md#for-openmp)
+- [Oddíly](openmp-directives.md#sections-openmp)
 
-Další informace najdete v tématu [2.7.2.3 lastprivate](../../../parallel/openmp/2-7-2-3-lastprivate.md).
+Další informace naleznete v [tématu 2.7.2.3 lastprivate](../../../parallel/openmp/2-7-2-3-lastprivate.md).
 
 ### <a name="example"></a>Příklad
 
-Příklad použití klauzule `lastprivate` naleznete v části [Schedule](#schedule) .
+Viz [plán](#schedule) příklad použití `lastprivate` klauzule.
 
-## <a name="nowait"></a>nowait
+## <a name="nowait"></a><a name="nowait"></a>Nowait
 
-Přepisuje v direktivě implicitní překážku.
+Přepíše bariéru implicitní ve směrnici.
 
 ```cpp
 nowait
@@ -327,13 +327,13 @@ nowait
 
 ### <a name="remarks"></a>Poznámky
 
-`nowait` platí pro následující direktivy:
+`nowait`se vztahuje na tyto směrnice:
 
-- [for](openmp-directives.md#for-openmp)
-- [řezů](openmp-directives.md#sections-openmp)
-- [single](openmp-directives.md#single)
+- [pro](openmp-directives.md#for-openmp)
+- [Oddíly](openmp-directives.md#sections-openmp)
+- [Jednoho](openmp-directives.md#single)
 
-Další informace naleznete v tématu [2.4.1 for konstrukt](../../../parallel/openmp/2-4-1-for-construct.md), [2.4.2 sections CONSTRUCT](../../../parallel/openmp/2-4-2-sections-construct.md)a [2.4.3 Single konstrukt](../../../parallel/openmp/2-4-3-single-construct.md).
+Další informace naleznete v [tématu 2.4.1 pro konstrukci](../../../parallel/openmp/2-4-1-for-construct.md), [2.4.2 úseky konstrukce](../../../parallel/openmp/2-4-2-sections-construct.md)a [2.4.3 jeden konstrukt](../../../parallel/openmp/2-4-3-single-construct.md).
 
 ### <a name="example"></a>Příklad
 
@@ -382,7 +382,7 @@ int main( )
 4, 16, 2
 ```
 
-## <a name="num-threads"></a>num_threads
+## <a name="num_threads"></a><a name="num-threads"></a>num_threads
 
 Nastaví počet vláken v týmu vláken.
 
@@ -392,28 +392,28 @@ num_threads(num)
 
 ### <a name="parameters"></a>Parametry
 
-*počet*<br/>
+*num*<br/>
 Počet vláken
 
 ### <a name="remarks"></a>Poznámky
 
-Klauzule `num_threads` má stejné funkce jako funkce [omp_set_num_threads](openmp-functions.md#omp-set-num-threads) .
+Klauzule `num_threads` má stejné funkce jako [omp_set_num_threads](openmp-functions.md#omp-set-num-threads) funkce.
 
-`num_threads` platí pro následující direktivy:
+`num_threads`se vztahuje na tyto směrnice:
 
 - [parallel](openmp-directives.md#parallel)
-- [for](openmp-directives.md#for-openmp)
-- [řezů](openmp-directives.md#sections-openmp)
+- [pro](openmp-directives.md#for-openmp)
+- [Oddíly](openmp-directives.md#sections-openmp)
 
-Další informace najdete v tématu [2,3 paralelní konstrukce](../../../parallel/openmp/2-3-parallel-construct.md).
+Další informace naleznete v tématu [2.3 paralelní konstrukce](../../../parallel/openmp/2-3-parallel-construct.md).
 
 ### <a name="example"></a>Příklad
 
-Příklad použití klauzule `num_threads` naleznete v tématu [Parallel](openmp-directives.md#parallel) .
+Viz [paralelní](openmp-directives.md#parallel) příklad použití `num_threads` klauzule.
 
-## <a name="ordered-openmp-clauses"></a>objednávek
+## <a name="ordered"></a><a name="ordered-openmp-clauses"></a>Objednal
 
-Vyžaduje se u paralelního příkazu [for](openmp-directives.md#for-openmp) , pokud se ve smyčce má použít [seřazená](openmp-directives.md#ordered-openmp-directives) direktiva.
+Požadováno na paralelní [pro](openmp-directives.md#for-openmp) příkaz, pokud [objednané](openmp-directives.md#ordered-openmp-directives) směrnice má být použit ve smyčce.
 
 ```cpp
 ordered
@@ -421,15 +421,15 @@ ordered
 
 ### <a name="remarks"></a>Poznámky
 
-`ordered` se vztahuje na direktivu [for](openmp-directives.md#for-openmp) .
+`ordered`vztahuje na směrnici [o náhradě.](openmp-directives.md#for-openmp)
 
 Další informace naleznete v tématu [2.4.1 pro konstrukci](../../../parallel/openmp/2-4-1-for-construct.md).
 
 ### <a name="example"></a>Příklad
 
-Příklad použití klauzule `ordered` naleznete v [objednávce](openmp-directives.md#ordered-openmp-directives) .
+Viz [objednané](openmp-directives.md#ordered-openmp-directives) příklad `ordered` použití klauzule.
 
-## <a name="private-openmp"></a>hlášen
+## <a name="private"></a><a name="private-openmp"></a>Soukromé
 
 Určuje, že každé vlákno by mělo mít vlastní instanci proměnné.
 
@@ -440,18 +440,18 @@ private(var)
 ### <a name="parameters"></a>Parametry
 
 *var*<br/>
-Proměnná, která má mít instance v každém vlákně.
+Proměnná mít instance v každém vlákně.
 
 ### <a name="remarks"></a>Poznámky
 
-`private` platí pro následující direktivy:
+`private`se vztahuje na tyto směrnice:
 
-- [for](openmp-directives.md#for-openmp)
+- [pro](openmp-directives.md#for-openmp)
 - [parallel](openmp-directives.md#parallel)
-- [řezů](openmp-directives.md#sections-openmp)
-- [single](openmp-directives.md#single)
+- [Oddíly](openmp-directives.md#sections-openmp)
+- [Jednoho](openmp-directives.md#single)
 
-Další informace najdete v tématu [2.7.2.1 Private](../../../parallel/openmp/2-7-2-1-private.md).
+Další informace naleznete v [tématu 2.7.2.1 private](../../../parallel/openmp/2-7-2-1-private.md).
 
 ### <a name="example"></a>Příklad
 
@@ -631,9 +631,9 @@ nFirstPrivate = 4 (The value prior to entering parallel region)
        nShared = 1 (The value assigned, from the delayed thread, 1)
 ```
 
-## <a name="reduction"></a>roztříštěn
+## <a name="reduction"></a><a name="reduction"></a>Snížení
 
-Určuje, že jedna nebo více proměnných, které jsou soukromé pro každé vlákno, jsou předmětem operace snížení na konci paralelní oblasti.
+Určuje, že jedna nebo více proměnných, které jsou soukromé pro každé vlákno, jsou předmětem operace redukce na konci paralelní oblasti.
 
 ```cpp
 reduction(operation:var)
@@ -641,21 +641,21 @@ reduction(operation:var)
 
 ### <a name="parameters"></a>Parametry
 
-*NázevOperace*<br/>
-Operátor pro operaci, který se má provést na proměnných *var* na konci paralelní oblasti.
+*Operace*<br/>
+Operátor pro operaci provést na proměnné *var* na konci paralelní oblasti.
 
 *var*<br/>
-Jedna nebo více proměnných, na kterých se má provést skalární zmenšení. Je-li zadána více než jedna proměnná, oddělte názvy proměnných čárkami.
+Jedna nebo více proměnných, na kterých chcete provést skalární redukci. Pokud je zadáno více než jedna proměnná, samostatné názvy proměnných čárkou.
 
 ### <a name="remarks"></a>Poznámky
 
-`reduction` platí pro následující direktivy:
+`reduction`se vztahuje na tyto směrnice:
 
 - [parallel](openmp-directives.md#parallel)
-- [for](openmp-directives.md#for-openmp)
-- [řezů](openmp-directives.md#sections-openmp)
+- [pro](openmp-directives.md#for-openmp)
+- [Oddíly](openmp-directives.md#sections-openmp)
 
-Další informace najdete v tématu věnovaném [omezení 2.7.2.6](../../../parallel/openmp/2-7-2-6-reduction.md).
+Další informace naleznete v tématu [2.7.2.6 redukce](../../../parallel/openmp/2-7-2-6-reduction.md).
 
 ### <a name="example"></a>Příklad
 
@@ -770,9 +770,9 @@ The sum of the consecutive integers from 1 to 10, is 55
 All of the functions, func1 through func5 succeeded!
 ```
 
-## <a name="schedule"></a>CXL
+## <a name="schedule"></a><a name="schedule"></a>Plán
 
-Platí pro direktivu [for](openmp-directives.md#for-openmp) .
+Platí pro směrnici [for.](openmp-directives.md#for-openmp)
 
 ```cpp
 schedule(type[,size])
@@ -780,11 +780,11 @@ schedule(type[,size])
 
 ### <a name="parameters"></a>Parametry
 
-*type*<br/>
-Typ plánování, buď `dynamic`, `guided`, `runtime`nebo `static`.
+*Typ*<br/>
+Druh `dynamic`plánování , , `guided` `runtime`, `static`nebo .
 
-*hodnota*<br/>
-Volitelné Určuje velikost iterací. *Velikost* musí být celé číslo. Neplatný, pokud je *typ* `runtime`.
+*Velikost*<br/>
+(Nepovinné) Určuje velikost iterací. *velikost* musí být celé číslo. Neplatí, *type* pokud `runtime`je typ .
 
 ### <a name="remarks"></a>Poznámky
 
@@ -904,9 +904,9 @@ int main( )
 ------------------------------------------------
 ```
 
-## <a name="shared-openmp"></a>sdíleného
+## <a name="shared"></a><a name="shared-openmp"></a>Sdílené
 
-Určuje, že nejmíň jedna proměnná by měla být sdílená mezi všemi vlákny.
+Určuje, že jedna nebo více proměnných by měla být sdílena mezi všemi vlákny.
 
 ```cpp
 shared(var)
@@ -915,20 +915,20 @@ shared(var)
 ### <a name="parameters"></a>Parametry
 
 *var*<br/>
-Jedna nebo více proměnných ke sdílení. Je-li zadána více než jedna proměnná, oddělte názvy proměnných čárkami.
+Jedna nebo více proměnných ke sdílení. Pokud je zadáno více než jedna proměnná, samostatné názvy proměnných čárkou.
 
 ### <a name="remarks"></a>Poznámky
 
-Jiný způsob, jak sdílet proměnné mezi vlákny, je klauzule [copyprivate](#copyprivate) .
+Dalším způsobem, jak sdílet proměnné mezi vlákny je s [copyprivate](#copyprivate) klauzule.
 
-`shared` platí pro následující direktivy:
+`shared`se vztahuje na tyto směrnice:
 
 - [parallel](openmp-directives.md#parallel)
-- [for](openmp-directives.md#for-openmp)
-- [řezů](openmp-directives.md#sections-openmp)
+- [pro](openmp-directives.md#for-openmp)
+- [Oddíly](openmp-directives.md#sections-openmp)
 
-Další informace najdete v tématu [2.7.2.4 Shared](../../../parallel/openmp/2-7-2-4-shared.md).
+Další informace naleznete v tématu [2.7.2.4 shared](../../../parallel/openmp/2-7-2-4-shared.md).
 
 ### <a name="example"></a>Příklad
 
-Příklad použití `shared`naleznete v části [Private](#private-openmp) .
+Viz [soukromé](#private-openmp) příklad použití `shared`.

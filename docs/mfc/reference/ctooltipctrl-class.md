@@ -1,5 +1,5 @@
 ---
-title: CToolTipCtrl – třída
+title: Třída CToolTipCtrl
 ms.date: 11/04/2016
 f1_keywords:
 - CToolTipCtrl
@@ -72,16 +72,16 @@ helpviewer_keywords:
 - CToolTipCtrl [MFC], Update
 - CToolTipCtrl [MFC], UpdateTipText
 ms.assetid: 8973f70c-b73a-46c7-908d-758f364b9a97
-ms.openlocfilehash: bf32671eb3535de1bf072e24bc642145e87c84ee
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: fdf91549fd1b911de3af82bb940b92fe5e220b92
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79420902"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81365107"
 ---
-# <a name="ctooltipctrl-class"></a>CToolTipCtrl – třída
+# <a name="ctooltipctrl-class"></a>Třída CToolTipCtrl
 
-Zapouzdřuje funkce "ovládacího prvku popis tlačítka", což je malé automaticky otevírané okno, které zobrazuje jeden řádek textu popisujícího účel nástroje v aplikaci.
+Zapouzdřuje funkce "ovládacího prvku špičky nástroje", malé rozbalovací okno, které zobrazuje jeden řádek textu popisující účel nástroje v aplikaci.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -93,76 +93,76 @@ class CToolTipCtrl : public CWnd
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CToolTipCtrl:: CToolTipCtrl](#ctooltipctrl)|Vytvoří objekt `CToolTipCtrl`.|
+|[CToolTipCtrl::CToolTipCtrl](#ctooltipctrl)|Vytvoří `CToolTipCtrl` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CToolTipCtrl:: Activate](#activate)|Aktivuje a deaktivuje ovládací prvek popis tlačítka.|
-|[CToolTipCtrl:: AddTool](#addtool)|Registruje nástroj s ovládacím prvkem popis tlačítka.|
-|[CToolTipCtrl:: AdjustRect](#adjustrect)|Převede mezi obdélníkem zobrazení textu ovládacího prvku Tip nástroje a jeho obdélníkem okna.|
-|[CToolTipCtrl:: Create](#create)|Vytvoří ovládací prvek popis tlačítka a připojí ho k objektu `CToolTipCtrl`.|
-|[CToolTipCtrl:: CreateEx](#createex)|Vytvoří ovládací prvek popis tlačítka se zadanými rozšířenými styly Windows a připojí ho k objektu `CToolTipCtrl`.|
-|[CToolTipCtrl::D elTool](#deltool)|Odebere nástroj z ovládacího prvku popisek nástroje.|
-|[CToolTipCtrl:: GetBubbleSize](#getbubblesize)|Načte velikost popisu tlačítka.|
-|[CToolTipCtrl:: GetCurrentTool](#getcurrenttool)|Načte informace, jako je například velikost, pozice a text okna s popisem tlačítka, které zobrazuje aktuální ovládací prvek ToolTip.|
-|[CToolTipCtrl:: GetDelayTime](#getdelaytime)|Načte počáteční, místní a znovu zobrazované doby trvání, které jsou aktuálně nastaveny pro ovládací prvek popis tlačítka.|
-|[CToolTipCtrl:: getmarže](#getmargin)|Načte horní, levý, dolní a pravý okraj, který je nastaven pro okno s popisem tlačítka.|
-|[CToolTipCtrl:: GetMaxTipWidth](#getmaxtipwidth)|Načte maximální šířku okna s popisem tlačítka.|
-|[CToolTipCtrl:: GetText](#gettext)|Načte text, který ovládací prvek popisu tlačítka udržuje pro nástroj.|
-|[CToolTipCtrl:: GetTipBkColor](#gettipbkcolor)|Načte barvu pozadí v okně popisu tlačítka.|
-|[CToolTipCtrl:: GetTipTextColor](#gettiptextcolor)|Načte barvu textu v okně popisu tlačítka.|
-|[CToolTipCtrl:: getTitle](#gettitle)|Načte název aktuálního ovládacího prvku ToolTip.|
-|[CToolTipCtrl:: GetToolCount](#gettoolcount)|Načte počet nástrojů udržovaných ovládacím prvkem popis tlačítka.|
-|[CToolTipCtrl:: GetToolInfo](#gettoolinfo)|Načte informace, které ovládací prvek popisu tlačítka udržuje o nástroji.|
-|[CToolTipCtrl:: HitTest](#hittest)|Testuje bod, aby určil, zda se nachází uvnitř ohraničujícího obdélníku daného nástroje. Pokud ano, načte informace o nástroji.|
-|[CToolTipCtrl::P op](#pop)|Odebere zobrazený okno s popisem tlačítka ze zobrazení.|
-|[CToolTipCtrl::P opup](#popup)|Způsobí, že aktuální ovládací prvek ToolTip se zobrazí na souřadnicích poslední zprávy myši.|
-|[CToolTipCtrl:: RelayEvent](#relayevent)|Předá zprávu myši ovládacímu prvku popisu tlačítka ke zpracování.|
-|[CToolTipCtrl:: SetDelayTime](#setdelaytime)|Nastaví počáteční, místní a znovu zobrazované doby trvání pro ovládací prvek popis tlačítka.|
-|[CToolTipCtrl:: SetMargin](#setmargin)|Nastaví horní, levý, dolní a pravý okraj okna s popisem tlačítka.|
-|[CToolTipCtrl:: SetMaxTipWidth](#setmaxtipwidth)|Nastaví maximální šířku okna s popisem tlačítka.|
-|[CToolTipCtrl:: SetTipBkColor](#settipbkcolor)|Nastaví barvu pozadí v okně popisu tlačítka.|
-|[CToolTipCtrl:: SetTipTextColor](#settiptextcolor)|Nastaví barvu textu v okně popisu tlačítka.|
-|[CToolTipCtrl:: SetTitle](#settitle)|Přidá standardní ikonu a řetězec názvu k popisu tlačítka.|
-|[CToolTipCtrl:: SetToolInfo](#settoolinfo)|Nastaví informace, které Popis nástroje udržuje pro nástroj.|
-|[CToolTipCtrl:: SetToolRect](#settoolrect)|Nastaví nový ohraničující obdélník pro nástroj.|
-|[CToolTipCtrl:: SetWindowTheme](#setwindowtheme)|Nastaví styl vizuálu okna s popisem tlačítka.|
-|[CToolTipCtrl:: Update](#update)|Vynutí překreslení aktuálního nástroje.|
-|[CToolTipCtrl:: UpdateTipText](#updatetiptext)|Nastaví text tipu nástroje pro nástroj.|
+|[CToolTipCtrl::Aktivovat](#activate)|Aktivuje a deaktivuje ovládání špičky nástroje.|
+|[CToolTipCtrl::AddTool](#addtool)|Zaregistruje nástroj s ovládáním špičky nástroje.|
+|[CToolTipCtrl::AdjustRect](#adjustrect)|Převede mezi obdélníkzobrazení textu ovládacího prvku špičky nástroje a jeho obdélník okna.|
+|[CToolTipCtrl::Vytvořit](#create)|Vytvoří ovládací prvek špičky nástroje `CToolTipCtrl` a připojí jej k objektu.|
+|[CToolTipCtrl::CreateEx](#createex)|Vytvoří ovládací prvek špičky nástroje se zadanými `CToolTipCtrl` rozšířenými styly systému Windows a připojí jej k objektu.|
+|[CToolTipCtrl::DelTool](#deltool)|Odstraní nástroj z ovládacího prvku špičky nástroje.|
+|[CToolTipCtrl::GetBubbleSize](#getbubblesize)|Načte velikost špičky nástroje.|
+|[CToolTipCtrl::GetCurrentTool](#getcurrenttool)|Načte informace, například velikost, umístění a text okna popisku, které zobrazuje aktuální ovládací prvek popisku.|
+|[CToolTipCtrl::GetDelayTime](#getdelaytime)|Načte počáteční, automaticky otevírané a reshow doby trvání, které jsou aktuálně nastaveny pro ovládací prvek špičky nástroje.|
+|[CToolTipCtrl::GetMargin](#getmargin)|Načte horní, levý, dolní a pravý okraj, které jsou nastaveny pro okno tip nástroje.|
+|[CToolTipCtrl::GetMaxTipWidth](#getmaxtipwidth)|Načte maximální šířku okna tipnástroje.|
+|[CToolTipCtrl::GetText](#gettext)|Načte text, který ovládací prvek špičky nástroje udržuje pro nástroj.|
+|[CToolTipCtrl::GetTipBkColor](#gettipbkcolor)|Načte barvu pozadí v okně tipu nástroje.|
+|[CToolTipCtrl::GetTipTextColor](#gettiptextcolor)|Načte barvu textu v okně tipu nástroje.|
+|[CToolTipCtrl::GetTitle](#gettitle)|Načte název aktuálního ovládacího prvku popisku.|
+|[CToolTipCtrl::GetToolCount](#gettoolcount)|Načte počet nástrojů udržovaných ovládacím prvkem špičky nástroje.|
+|[CToolTipCtrl::GetToolInfo](#gettoolinfo)|Načte informace, které ovládací prvek špičky nástroje udržuje o nástroji.|
+|[CToolTipCtrl::HitTest](#hittest)|Testuje bod k určení, zda je v ohraničující obdélník daného nástroje. Pokud ano, načte informace o nástroji.|
+|[CToolTipCtrl::Pop](#pop)|Odstraní zobrazené okno tipu nástroje ze zobrazení.|
+|[CToolTipCtrl::Popup](#popup)|Způsobí, že aktuální ovládací prvek popisek se zobrazí na souřadnicích poslední zprávy myši.|
+|[CToolTipCtrl::Událost relayeventu](#relayevent)|Předá zprávu myši ovládacímu prvku tip nástroje pro zpracování.|
+|[CToolTipCtrl::SetDelayTime](#setdelaytime)|Nastaví počáteční, automaticky otevírané a re-show doby trvání ovládacího prvku špičky nástroje.|
+|[CToolTipCtrl::SetMargin](#setmargin)|Nastaví horní, levý, dolní a pravý okraj okna tipu nástroje.|
+|[CToolTipCtrl::SetMaxTipWidth](#setmaxtipwidth)|Nastaví maximální šířku okna tipu nástroje.|
+|[CToolTipCtrl::SetTipBkColor](#settipbkcolor)|Nastaví barvu pozadí v okně tipu nástroje.|
+|[CToolTipCtrl::SetTipTextColor](#settiptextcolor)|Nastaví barvu textu v okně tipu nástroje.|
+|[CToolTipCtrl::SetTitle](#settitle)|Přidá standardní ikonu a název řetězce do tipu nástroje.|
+|[CToolTipCtrl::SetToolInfo](#settoolinfo)|Nastaví informace, které pro nástroj udržuje špička nástroje.|
+|[CToolTipCtrl::SetToolRect](#settoolrect)|Nastaví nový ohraničovací obdélník pro nástroj.|
+|[CToolTipCtrl::SetWindowTheme](#setwindowtheme)|Nastaví vizuální styl okna tipu nástroje.|
+|[CToolTipCtrl::Aktualizovat](#update)|Vynutí překreslit aktuální nástroj.|
+|[CToolTipCtrl::UpdateTipText](#updatetiptext)|Nastaví text tipu nástroje.|
 
 ## <a name="remarks"></a>Poznámky
 
-"Nástroj" je buď okno, například podřízené okno nebo ovládací prvek, nebo obdélníkově definovaná aplikace v rámci klientské oblasti okna. Popis tlačítka je v tuto chvíli skrytý a zobrazuje se jenom v případě, že uživatel přesune kurzor na nástroj a ponechá ho na přibližně jednu polovinu sekundy. Pokud uživatel klikne na tlačítko myši nebo přesune kurzor mimo nástroj, zobrazí se popis tlačítka v blízkosti kurzoru a zmizí.
+"Nástroj" je buď okno, například podřízené okno nebo ovládací prvek, nebo obdélníková oblast definovaná aplikací v klientské oblasti okna. Tip nástroje je většinou skrytý a zobrazuje se pouze v případě, že uživatel umístí kurzor na nástroj a ponechá jej tam přibližně na půl sekundy. Tip nástroje se zobrazí v blízkosti kurzoru a zmizí, když uživatel klepne na tlačítko myši nebo přesune kurzor mimo nástroj.
 
-`CToolTipCtrl` poskytuje funkce pro řízení počátečního času a doby trvání popisu tlačítka, šířky okraje obklopující text popisu tlačítka, šířku samotného okna s popisem tlačítka a pozadí a barvu textu popisu tlačítka. Jeden ovládací prvek popis tlačítka může poskytovat informace pro více než jeden nástroj.
+`CToolTipCtrl`poskytuje funkce pro řízení počátečního času a doby trvání špičky nástroje, šířky okrajů obklopujících text tipu nástroje, šířku samotného okna špičky nástroje a barvu pozadí a textu špičky nástroje. Jeden ovládací prvek špičky nástroje může poskytnout informace pro více než jeden nástroj.
 
-Třída `CToolTipCtrl` poskytuje funkce pro Common Windows Control Tip. Tento ovládací prvek (a proto třída `CToolTipCtrl`) je k dispozici pouze pro programy, které jsou spuštěny v systémech Windows 95/98 a Windows NT verze 3,51 a novější.
+Třída `CToolTipCtrl` poskytuje funkce ovládacího prvku windows společné ho nástroje tip. Tento ovládací prvek `CToolTipCtrl` (a tedy třída) je k dispozici pouze pro programy spuštěné v systémech Windows 95/98 a Windows NT verze 3.51 a novější.
 
-Další informace o povolení tipů nástrojů naleznete v tématu [tipy nástrojů v systému Windows nejsou odvozeny od CFrameWnd](../../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md).
+Další informace o povolení tipů nástrojů naleznete [v tématu Tipy nástrojů v systému Windows, které nejsou odvozeny z CFrameWnd](../../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md).
 
-Další informace o použití `CToolTipCtrl`naleznete v tématu [Controls](../../mfc/controls-mfc.md) and [using CToolTipCtrl](../../mfc/using-ctooltipctrl.md).
+Další informace o `CToolTipCtrl`použití naleznete v [tématech Ovládací prvky](../../mfc/controls-mfc.md) a [Použití kláves CToolTipCtrl](../../mfc/using-ctooltipctrl.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[CObject](../../mfc/reference/cobject-class.md)
+[CObjekt](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[CCmdCíl](../../mfc/reference/ccmdtarget-class.md)
 
-[CWnd](../../mfc/reference/cwnd-class.md)
+[Cwnd](../../mfc/reference/cwnd-class.md)
 
 `CToolTipCtrl`
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxcmn. h
+**Záhlaví:** afxcmn.h
 
-##  <a name="activate"></a>CToolTipCtrl:: Activate
+## <a name="ctooltipctrlactivate"></a><a name="activate"></a>CToolTipCtrl::Aktivovat
 
-Voláním této funkce aktivujete nebo deaktivujete ovládací prvek popis tlačítka.
+Voláním této funkce aktivujte nebo deaktivujte ovládací prvek špičky nástroje.
 
 ```
 void Activate(BOOL bActivate);
@@ -170,22 +170,22 @@ void Activate(BOOL bActivate);
 
 ### <a name="parameters"></a>Parametry
 
-*bActivate*<br/>
-Určuje, zda má být ovládací prvek popis tlačítka aktivován nebo dezaktivován.
+*bAktivovat*<br/>
+Určuje, zda má být ovládací prvek špičky nástroje aktivován nebo deaktivován.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud má *bActivate* hodnotu true, je aktivován ovládací prvek; Pokud je hodnota FALSE, deaktivuje se.
+Pokud *je funkce bActivate* TRUE, ovládací prvek se aktivuje. pokud false, je deaktivován.
 
-Když je ovládací prvek popis tlačítka aktivní, informace o popisu tlačítka se zobrazí, když se ukazatel myši nachází na nástroji, který je zaregistrován s ovládacím prvkem. Pokud je neaktivní, informace o popisu tlačítka se nezobrazí, ani když se ukazatel myši nachází na nástroji.
+Když je ovládací prvek špičky nástroje aktivní, zobrazí se informace o tipu nástroje, když je kurzor na nástroji, který je registrován u ovládacího prvku; pokud je neaktivní, informace o tipu nástroje se nezobrazí, i když je kurzor na nástroji.
 
 ### <a name="example"></a>Příklad
 
-  Podívejte se na příklad pro [CPropertySheet –:: GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol).
+  Viz příklad [cpropertysheet::GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol).
 
-##  <a name="addtool"></a>CToolTipCtrl:: AddTool
+## <a name="ctooltipctrladdtool"></a><a name="addtool"></a>CToolTipCtrl::AddTool
 
-Registruje nástroj s ovládacím prvkem popis tlačítka.
+Zaregistruje nástroj s ovládáním špičky nástroje.
 
 ```
 BOOL AddTool(
@@ -207,37 +207,37 @@ BOOL AddTool(
 Ukazatel na okno, které obsahuje nástroj.
 
 *nIDText*<br/>
-ID řetězcového prostředku, který obsahuje text pro nástroj.
+ID prostředku řetězce, který obsahuje text nástroje.
 
 *lpRectTool*<br/>
-Ukazatel na strukturu [Rect](/previous-versions/dd162897\(v=vs.85\)) obsahující souřadnice ohraničujícího obdélníku nástroje. Souřadnice jsou relativní vzhledem k levému hornímu rohu klientské oblasti okna identifikovaného pomocí *pWnd*.
+Ukazatel na strukturu [RECT](/previous-versions/dd162897\(v=vs.85\)) obsahující souřadnice ohraničujícího obdélníku nástroje. Souřadnice jsou relativní k levému hornímu rohu klientské oblasti okna identifikovaného *pomocí pWnd*.
 
 *nIDTool*<br/>
-ID nástroje
+ID nástroje.
 
 *lpszText*<br/>
-Ukazatel na text pro nástroj. Pokud tento parametr obsahuje hodnotu LPSTR_TEXTCALLBACK, TTN_NEEDTEXT oznamovacích zpráv přejde na nadřazený prvek okna, na které odkazuje *pWnd* .
+Ukazatel na text nástroje. Pokud tento parametr obsahuje hodnotu LPSTR_TEXTCALLBACK, TTN_NEEDTEXT oznámení přejděte na nadřazené okno, které *pWnd* odkazuje na.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud bylo úspěšné; v opačném případě 0.
+Nenulová, pokud je úspěšná; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Parametry *lpRectTool* a *nIDTool* musí být platné, nebo pokud má *lpRectTool* hodnotu null, *nIDTool* musí být 0.
+Parametry *lpRectTool* a *nIDTool* musí být platné, nebo pokud je *lpRectTool* NULL, *nIDTool* musí být 0.
 
-Ovládací prvek popisu tlačítka může být přidružen k více než jednomu nástroji. Voláním této funkce zaregistrujete nástroj s ovládacím prvkem popis tlačítka, aby se informace uložené v popisku nástroje zobrazily, když je ukazatel myši na nástroji.
+Ovládací prvek špičky nástroje může být přidružen k více než jednomu nástroji. Voláním této funkce zaregistrujte nástroj pomocí ovládacího prvku špičky nástroje, aby se informace uložené v tipu nástroje zobrazily, když je kurzor na nástroji.
 
 > [!NOTE]
->  Pomocí `AddTool`nelze nastavit popis tlačítka na statický ovládací prvek.
+> Špičku nástroje nelze nastavit na `AddTool`statický ovládací prvek pomocí aplikace .
 
 ### <a name="example"></a>Příklad
 
-  Podívejte se na příklad pro [CPropertySheet –:: GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol).
+  Viz příklad [cpropertysheet::GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol).
 
-##  <a name="adjustrect"></a>CToolTipCtrl:: AdjustRect
+## <a name="ctooltipctrladjustrect"></a><a name="adjustrect"></a>CToolTipCtrl::AdjustRect
 
-Převede mezi obdélníkem zobrazení textu ovládacího prvku ToolTip a jeho obdélníkem okna.
+Převede mezi obdélník zobrazení textu ovládacího prvku popisku a obdélník okna.
 
 ```
 BOOL AdjustRect(
@@ -248,24 +248,24 @@ BOOL AdjustRect(
 ### <a name="parameters"></a>Parametry
 
 *lprc*<br/>
-Ukazatel na strukturu [Rect](/previous-versions/dd162897\(v=vs.85\)) , která obsahuje obdélník okna s popisem tlačítka nebo obdélník pro zobrazení textu.
+Ukazatel na [rect](/previous-versions/dd162897\(v=vs.85\)) strukturu, která obsahuje obdélník okna tip nástroje nebo obdélník zobrazení textu.
 
-*bLarger*<br/>
-Při hodnotě TRUE se k určení obdélníku zobrazení textu použije *lprc* a dostane odpovídající rámeček okna. Pokud je nastaveno na hodnotu FALSE, *lprc* se použije k určení obdélníku okna a obdrží odpovídající obdélník zobrazení textu.
+*bVětší*<br/>
+Pokud TRUE, *lprc* se používá k určení obdélníku zobrazení textu a obdrží odpovídající obdélník okna. Pokud FALSE, *lprc* se používá k určení obdélníku okna a obdrží odpovídající obdélník zobrazení textu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je obdélník úspěšně upravován; v opačném případě 0.
+Nenulová, pokud je obdélník úspěšně upraven; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce vypočítá obdélník zobrazení textu ovládacího prvku s popisem tlačítka z jeho rámečku okna nebo obdélník okna s popisem tlačítka, který je potřeba k zobrazení zadaného obdélníku zobrazení textu.
+Tato členská funkce vypočítá obdélník zobrazení textu ovládacího prvku špičky nástroje z obdélníku okna nebo obdélníkokna tipu nástroje potřebný k zobrazení zadaného obdélníku zobrazení textu.
 
-Tato členská funkce implementuje chování zprávy Win32 [TTM_ADJUSTRECT](/windows/win32/Controls/ttm-adjustrect), jak je popsáno v Windows SDK.
+Tato členská funkce implementuje chování [zprávy](/windows/win32/Controls/ttm-adjustrect)Win32 TTM_ADJUSTRECT , jak je popsáno v sadě Windows SDK.
 
-##  <a name="create"></a>CToolTipCtrl:: Create
+## <a name="ctooltipctrlcreate"></a><a name="create"></a>CToolTipCtrl::Vytvořit
 
-Vytvoří ovládací prvek popis tlačítka a připojí ho k objektu `CToolTipCtrl`.
+Vytvoří ovládací prvek špičky nástroje `CToolTipCtrl` a připojí jej k objektu.
 
 ```
 virtual BOOL Create(CWnd* pParentWnd, DWORD dwStyle = 0);
@@ -274,37 +274,37 @@ virtual BOOL Create(CWnd* pParentWnd, DWORD dwStyle = 0);
 ### <a name="parameters"></a>Parametry
 
 *pParentWnd*<br/>
-Určuje nadřazené okno ovládacího prvku Tip nástroje, obvykle `CDialog`. Nesmí mít hodnotu NULL.
+Určuje nadřazené okno ovládacího `CDialog`prvku špičky nástroje, obvykle . Nesmí být null.
 
-*dwStyle*<br/>
-Určuje styl ovládacího prvku Tip nástroje. Další informace najdete v části **poznámky** .
+*dwStyl*<br/>
+Určuje styl ovládacího prvku špičky nástroje. Další informace naleznete v části **Poznámky.**
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je objekt `CToolTipCtrl` úspěšně vytvořen; v opačném případě 0.
+Nenulová, `CToolTipCtrl` pokud je objekt úspěšně vytvořen; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Sestavíte `CToolTipCtrl` ve dvou krocích. Nejprve zavolejte konstruktor pro vytvoření objektu `CToolTipCtrl` a potom zavolejte `Create` k vytvoření ovládacího prvku popisu tlačítka a jeho připojení k objektu `CToolTipCtrl`.
+Můžete vytvořit `CToolTipCtrl` ve dvou krocích. Nejprve zavolejte konstruktoru `CToolTipCtrl` k vytvoření `Create` objektu a potom voláním vytvořte ovládací prvek špičky nástroje a připojte jej k objektu. `CToolTipCtrl`
 
-Parametr *dwStyle* může být libovolná kombinace [stylů oken](../../mfc/reference/styles-used-by-mfc.md#window-styles). Kromě toho ovládací prvek popis tlačítka má dva styly specifické pro třídu: TTS_ALWAYSTIP a TTS_NOPREFIX.
+Parametr *dwStyle* může být libovolná kombinace [stylů oken](../../mfc/reference/styles-used-by-mfc.md#window-styles). Kromě toho má ovládací prvek špičky nástroje dva styly specifické pro třídu: TTS_ALWAYSTIP a TTS_NOPREFIX.
 
 |Styl|Význam|
 |-----------|-------------|
-|TTS_ALWAYSTIP|Určuje, že se má popis tlačítka zobrazovat, když se ukazatel myši nachází na nástroji, bez ohledu na to, jestli je aktivní nebo neaktivní okno vlastníka ovládacího prvku Popis nástroje. Bez tohoto stylu se ovládací prvek popis tlačítka zobrazí, když je okno vlastníka nástroje aktivní, ale ne, pokud je neaktivní.|
-|TTS_NOPREFIX|Tento styl brání systému v odložení znaku ampersandu (&) z řetězce. Pokud ovládací prvek popis tlačítka nemá styl TTS_NOPREFIX, systém automaticky odliští znaky ampersandu, což umožňuje aplikaci použít stejný řetězec jako položku nabídky a jako text v ovládacím prvku popis tlačítka.|
+|TTS_ALWAYSTIP|Určuje, že tip nástroje se zobrazí, když je kurzor na nástroji, bez ohledu na to, zda je okno vlastníka ovládacího prvku špičky nástroje aktivní nebo neaktivní. Bez tohoto stylu se ovládací prvek špičky nástroje zobrazí, když je aktivní okno vlastníka nástroje, ale ne, když je neaktivní.|
+|TTS_NOPREFIX|Tento styl zabraňuje systému odizolování znaku ampersand (&) z řetězce. Pokud ovládací prvek špičky nástroje nemá TTS_NOPREFIX stylu, systém automaticky proužkuje znaky ampersandu, což aplikaci umožňuje používat stejný řetězec jako položka nabídky i jako text v ovládacím prvku tip nástroje.|
 
-Ovládací prvek popis tlačítka má WS_POPUP a WS_EX_TOOLWINDOW styly oken bez ohledu na to, zda je při vytváření ovládacího prvku zadáno.
+Ovládací prvek tip nástroje má WS_POPUP a WS_EX_TOOLWINDOW styly oken, bez ohledu na to, zda je zadáte při vytváření ovládacího prvku.
 
-Chcete-li vytvořit ovládací prvek popis tlačítka pomocí rozšířených stylů Windows, zavolejte [CToolTipCtrl:: CreateEx](#createex) namísto `Create`.
+Chcete-li vytvořit ovládací prvek tip nástroje s rozšířenými styly `Create`oken, zavolejte [CToolTipCtrl::CreateEx](#createex) místo .
 
 ### <a name="example"></a>Příklad
 
-  Podívejte se na příklad pro [CPropertySheet –:: GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol).
+  Viz příklad [cpropertysheet::GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol).
 
-##  <a name="createex"></a>CToolTipCtrl:: CreateEx
+## <a name="ctooltipctrlcreateex"></a><a name="createex"></a>CToolTipCtrl::CreateEx
 
-Vytvoří ovládací prvek (podřízené okno) a přidruží ho k objektu `CToolTipCtrl`.
+Vytvoří ovládací prvek (podřízené okno) `CToolTipCtrl` a přidruží jej k objektu.
 
 ```
 virtual BOOL CreateEx(
@@ -316,25 +316,25 @@ virtual BOOL CreateEx(
 ### <a name="parameters"></a>Parametry
 
 *pParentWnd*<br/>
-Ukazatel na okno, které je nadřazený ovládacímu prvku.
+Ukazatel na okno, které je nadřazený ovládací prvek.
 
-*dwStyle*<br/>
-Určuje styl ovládacího prvku Tip nástroje. Další informace najdete v části s **poznámkami** v tématu [Vytvoření](#create) .
+*dwStyl*<br/>
+Určuje styl ovládacího prvku špičky nástroje. Další informace naleznete v části **Poznámky** v části [Vytvořit.](#create)
 
 *dwStyleEx*<br/>
-Určuje rozšířený styl ovládacího prvku, který se vytváří. Seznam rozšířených stylů Windows naleznete v parametru *dwExStyle* pro [CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw) v Windows SDK.
+Určuje rozšířený styl vytvářeného ovládacího prvku. Seznam rozšířených stylů systému Windows naleznete v parametru *dwExStyle* pro [createwindowex](/windows/win32/api/winuser/nf-winuser-createwindowexw) v sadě Windows SDK.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud bylo úspěšné v opačném případě 0.
+Nenulová, pokud je úspěšná jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Použijte `CreateEx` místo `Create` pro použití rozšířených stylů Windows, které jsou určené **WS_EX_m**rozšířeným stylem pro Windows.
+Místo `CreateEx` toho `Create` použijte rozšířené styly systému Windows určené **předmluvou**rozšířeného stylu systému Windows WS_EX_ .
 
-##  <a name="ctooltipctrl"></a>CToolTipCtrl:: CToolTipCtrl
+## <a name="ctooltipctrlctooltipctrl"></a><a name="ctooltipctrl"></a>CToolTipCtrl::CToolTipCtrl
 
-Vytvoří objekt `CToolTipCtrl`.
+Vytvoří `CToolTipCtrl` objekt.
 
 ```
 CToolTipCtrl();
@@ -342,15 +342,15 @@ CToolTipCtrl();
 
 ### <a name="remarks"></a>Poznámky
 
-Po sestavení objektu je třeba volat `Create`.
+Musíte volat `Create` po vytvoření objektu.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCControlLadenDialog#74](../../mfc/codesnippet/cpp/ctooltipctrl-class_1.h)]
 
-##  <a name="deltool"></a>CToolTipCtrl::D elTool
+## <a name="ctooltipctrldeltool"></a><a name="deltool"></a>CToolTipCtrl::DelTool
 
-Odebere nástroj určený pomocí *pWnd* a *nIDTool* z kolekce nástrojů podporovaných ovládacím prvkem popis tlačítka.
+Odstraní nástroj určený *pWnd* a *nIDTool* z kolekce nástrojů podporovaných ovládáním hrotu nástroje.
 
 ```
 void DelTool(
@@ -364,11 +364,11 @@ void DelTool(
 Ukazatel na okno, které obsahuje nástroj.
 
 *nIDTool*<br/>
-ID nástroje
+ID nástroje.
 
-##  <a name="getbubblesize"></a>CToolTipCtrl:: GetBubbleSize
+## <a name="ctooltipctrlgetbubblesize"></a><a name="getbubblesize"></a>CToolTipCtrl::GetBubbleSize
 
-Načte velikost popisu tlačítka.
+Načte velikost špičky nástroje.
 
 ```
 CSize GetBubbleSize(LPTOOLINFO lpToolInfo) const;
@@ -377,19 +377,19 @@ CSize GetBubbleSize(LPTOOLINFO lpToolInfo) const;
 ### <a name="parameters"></a>Parametry
 
 *lpToolInfo*<br/>
-Ukazatel na strukturu [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa) popisu nástroje.
+Ukazatel na strukturu [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa) tipu nástroje.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Velikost popisu tlačítka
+Velikost hrotu nástroje.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce implementuje chování zprávy Win32 [TTM_GETBUBBLESIZE](/windows/win32/Controls/ttm-getbubblesize), jak je popsáno v Windows SDK.
+Tato členská funkce implementuje chování [zprávy](/windows/win32/Controls/ttm-getbubblesize)Win32 TTM_GETBUBBLESIZE , jak je popsáno v sadě Windows SDK.
 
-##  <a name="getcurrenttool"></a>CToolTipCtrl:: GetCurrentTool
+## <a name="ctooltipctrlgetcurrenttool"></a><a name="getcurrenttool"></a>CToolTipCtrl::GetCurrentTool
 
-Načte informace, například velikost, umístění a text, okna s popisem tlačítka zobrazeného aktuálním ovládacím prvkem ToolTip.
+Načte informace, například velikost, umístění a text okna popisku zobrazeného aktuálním ovládacím prvkem popisku.
 
 ```
 BOOL GetCurrentTool(LPTOOLINFO lpToolInfo) const;
@@ -399,25 +399,25 @@ BOOL GetCurrentTool(LPTOOLINFO lpToolInfo) const;
 
 |Parametr|Popis|
 |---------------|-----------------|
-|*lpToolInfo*|mimo Ukazatel na strukturu [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa) , která přijímá informace o aktuálním okně s popisem.|
+|*lpToolInfo*|[out] Ukazatel na strukturu [TOOLINFO,](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa) která přijímá informace o aktuálním okně popisku.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
-TRUE, pokud se informace úspěšně načítají; v opačném případě FALSE.
+PRAVDA, pokud jsou informace načteny úspěšně; jinak NEPRAVDA.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda pošle zprávu [TTM_GETCURRENTTOOL](/windows/win32/Controls/ttm-getcurrenttool) , která je popsána v Windows SDK.
+Tato metoda odešle [zprávu TTM_GETCURRENTTOOL,](/windows/win32/Controls/ttm-getcurrenttool) která je popsána v sadě Windows SDK.
 
 ### <a name="example"></a>Příklad
 
-Následující příklad kódu načte informace o aktuálním okně s popisem tlačítka.
+Následující příklad kódu načte informace o aktuálním okně popisku.
 
 [!code-cpp[NVC_MFC_CToolBarCtrl_s1#6](../../mfc/reference/codesnippet/cpp/ctooltipctrl-class_2.cpp)]
 
-##  <a name="getdelaytime"></a>CToolTipCtrl:: GetDelayTime
+## <a name="ctooltipctrlgetdelaytime"></a><a name="getdelaytime"></a>CToolTipCtrl::GetDelayTime
 
-Načte počáteční, místní a znovu zobrazované doby trvání nastavené pro ovládací prvek popis tlačítka.
+Načte počáteční, automaticky otevírané a reshow doby trvání aktuálně nastavené pro ovládací prvek špičky nástroje.
 
 ```
 int GetDelayTime(DWORD dwDuration) const;
@@ -426,25 +426,25 @@ int GetDelayTime(DWORD dwDuration) const;
 ### <a name="parameters"></a>Parametry
 
 *dwDuration*<br/>
-Příznak, který určuje, která hodnota trvání bude načtena. Tento parametr může být jedna z následujících hodnot:
+Příznak, který určuje, která hodnota doby trvání bude načtena. Tento parametr může být jedna z následujících hodnot:
 
-- TTDT_AUTOPOP načíst dobu, po kterou zůstane okno s popisem tlačítka viditelné, pokud je ukazatel v ohraničujícím obdélníku nástroje nehybný.
+- TTDT_AUTOPOP Načíst dobu, po kterou zůstane okno tipu nástroje viditelné, pokud je ukazatel v ohraničovacím obdélníku nástroje nehybný.
 
-- TTDT_INITIAL načíst dobu, po kterou musí ukazatel v ohraničujícím obdélníku nástroje zůstat, než se zobrazí okno s popisem tlačítka.
+- TTDT_INITIAL Načíst dobu, po kterou musí ukazatel zůstat nehybný v ohraničovacím obdélníku nástroje, než se zobrazí okno tipu nástroje.
 
-- TTDT_RESHOW načíst dobu potřebnou k zobrazení dalších oken s popisem tlačítka, když se ukazatel myši přesune z jednoho nástroje na jiný.
+- TTDT_RESHOW Načtěte dobu, po kterou se při pohybu ukazatele z jednoho nástroje do druhého zobrazí následující okna s tipem nástroje.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Zadaný čas zpoždění v milisekundách
+Zadaná doba zpoždění v milisekundách
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce implementuje chování zprávy Win32 [TTM_GETDELAYTIME](/windows/win32/Controls/ttm-getdelaytime), jak je popsáno v Windows SDK.
+Tato členská funkce implementuje chování [zprávy](/windows/win32/Controls/ttm-getdelaytime)Win32 TTM_GETDELAYTIME , jak je popsáno v sadě Windows SDK.
 
-##  <a name="getmargin"></a>CToolTipCtrl:: getmarže
+## <a name="ctooltipctrlgetmargin"></a><a name="getmargin"></a>CToolTipCtrl::GetMargin
 
-Načte horní, levý, dolní a pravý okraj sady nástrojů pro okno s popisem tlačítka.
+Načte horní, levý, dolní a pravý okraj nastavený pro okno tipu nástroje.
 
 ```
 void GetMargin(LPRECT lprc) const;
@@ -453,22 +453,22 @@ void GetMargin(LPRECT lprc) const;
 ### <a name="parameters"></a>Parametry
 
 *lprc*<br/>
-Adresa `RECT` struktury, která obdrží informace o okraji. Členové struktury [Rect](/previous-versions/dd162897\(v=vs.85\)) nedefinují ohraničující obdélník. Pro účely této zprávy jsou členy struktury interpretovány takto:
+Adresa `RECT` struktury, která obdrží informace o marži. Členy [rect](/previous-versions/dd162897\(v=vs.85\)) struktury nedefinují ohraničující obdélník. Pro účely této zprávy jsou členové struktury interpretováni takto:
 
-|Člen|Obrázek|
+|Člen|Reprezentace|
 |------------|--------------------|
-|`top`|Vzdálenost mezi horním ohraničením a horním textem tipu nástroje v pixelech|
-|`left`|Vzdálenost mezi levým ohraničením a levým koncem textu tipu v pixelech|
-|`bottom`|Vzdálenost mezi dolním ohraničením a dolním okrajem textu tipu (v pixelech)|
-|`right`|Vzdálenost mezi pravým okrajem a pravým koncem textu tipu v pixelech|
+|`top`|Vzdálenost mezi horním okrajem a horním textem špičky nástroje v obrazových bodech.|
+|`left`|Vzdálenost mezi levým okrajem a levým koncem textu špičky v obrazových bodech.|
+|`bottom`|Vzdálenost mezi dolním okrajem a dolním okrajem textu špičky v obrazových bodech.|
+|`right`|Vzdálenost mezi pravým okrajem a pravým koncem textu špičky v obrazových bodech.|
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce implementuje chování zprávy Win32 [TTM_GETMARGIN](/windows/win32/Controls/ttm-getmargin), jak je popsáno v Windows SDK.
+Tato členská funkce implementuje chování [zprávy](/windows/win32/Controls/ttm-getmargin)Win32 TTM_GETMARGIN , jak je popsáno v sadě Windows SDK.
 
-##  <a name="getmaxtipwidth"></a>CToolTipCtrl:: GetMaxTipWidth
+## <a name="ctooltipctrlgetmaxtipwidth"></a><a name="getmaxtipwidth"></a>CToolTipCtrl::GetMaxTipWidth
 
-Načte maximální šířku okna s popisem tlačítka.
+Načte maximální šířku okna tipnástroje.
 
 ```
 int GetMaxTipWidth() const;
@@ -476,15 +476,15 @@ int GetMaxTipWidth() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Maximální šířka okna s popisem tlačítka
+Maximální šířka okna tipnástroje.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce implementuje chování zprávy Win32 [TTM_GETMAXTIPWIDTH](/windows/win32/Controls/ttm-getmaxtipwidth), jak je popsáno v Windows SDK.
+Tato členská funkce implementuje chování [TTM_GETMAXTIPWIDTH](/windows/win32/Controls/ttm-getmaxtipwidth)zprávy Win32 , jak je popsáno v sadě Windows SDK.
 
-##  <a name="gettext"></a>CToolTipCtrl:: GetText
+## <a name="ctooltipctrlgettext"></a><a name="gettext"></a>CToolTipCtrl::GetText
 
-Načte text, který ovládací prvek popisu tlačítka udržuje pro nástroj.
+Načte text, který ovládací prvek špičky nástroje udržuje pro nástroj.
 
 ```
 void GetText(
@@ -495,22 +495,22 @@ void GetText(
 
 ### <a name="parameters"></a>Parametry
 
-*str*<br/>
-Odkaz na objekt `CString`, který obdrží text nástroje.
+*Str*<br/>
+Odkaz na `CString` objekt, který přijímá text nástroje.
 
 *pWnd*<br/>
 Ukazatel na okno, které obsahuje nástroj.
 
 *nIDTool*<br/>
-ID nástroje
+ID nástroje.
 
 ### <a name="remarks"></a>Poznámky
 
-Parametry *pWnd* a *nIDTool* identifikují nástroj. Pokud byl tento nástroj dříve zaregistrován pomocí ovládacího prvku popis tlačítka pomocí předchozího volání `CToolTipCtrl::AddTool`, je objekt, na který je odkazován parametrem *str* , přiřazený text nástroje.
+Parametry *pWnd* a *nIDTool* identifikují nástroj. Pokud byl tento nástroj dříve zaregistrován u ovládacího `CToolTipCtrl::AddTool`prvku špičky nástroje prostřednictvím předchozího volání , je objektu, na který odkazuje parametr *str,* přiřazen text nástroje.
 
-##  <a name="gettipbkcolor"></a>CToolTipCtrl:: GetTipBkColor
+## <a name="ctooltipctrlgettipbkcolor"></a><a name="gettipbkcolor"></a>CToolTipCtrl::GetTipBkColor
 
-Načte barvu pozadí v okně popisu tlačítka.
+Načte barvu pozadí v okně tipu nástroje.
 
 ```
 COLORREF GetTipBkColor() const;
@@ -518,15 +518,15 @@ COLORREF GetTipBkColor() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota [COLORREF](/windows/win32/gdi/colorref) , která představuje barvu pozadí.
+[Colorref](/windows/win32/gdi/colorref) hodnota, která představuje barvu pozadí.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce implementuje chování zprávy Win32 [TTM_GETTIPBKCOLOR](/windows/win32/Controls/ttm-gettipbkcolor), jak je popsáno v Windows SDK.
+Tato členská funkce implementuje chování [zprávy](/windows/win32/Controls/ttm-gettipbkcolor)Win32 TTM_GETTIPBKCOLOR , jak je popsáno v sadě Windows SDK.
 
-##  <a name="gettiptextcolor"></a>CToolTipCtrl:: GetTipTextColor
+## <a name="ctooltipctrlgettiptextcolor"></a><a name="gettiptextcolor"></a>CToolTipCtrl::GetTipTextColor
 
-Načte barvu textu v okně popisu tlačítka.
+Načte barvu textu v okně tipu nástroje.
 
 ```
 COLORREF GetTipTextColor() const;
@@ -534,15 +534,15 @@ COLORREF GetTipTextColor() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota [COLORREF](/windows/win32/gdi/colorref) , která představuje barvu textu.
+[Colorref](/windows/win32/gdi/colorref) hodnota, která představuje barvu textu.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce implementuje chování zprávy Win32 [TTM_GETTIPTEXTCOLOR](/windows/win32/Controls/ttm-gettiptextcolor), jak je popsáno v Windows SDK.
+Tato členská funkce implementuje chování [zprávy](/windows/win32/Controls/ttm-gettiptextcolor)Win32 TTM_GETTIPTEXTCOLOR , jak je popsáno v sadě Windows SDK.
 
-##  <a name="gettitle"></a>CToolTipCtrl:: getTitle
+## <a name="ctooltipctrlgettitle"></a><a name="gettitle"></a>CToolTipCtrl::GetTitle
 
-Načte název aktuálního ovládacího prvku ToolTip.
+Načte název aktuálního ovládacího prvku popisku.
 
 ```
 void GetTitle(PTTGETTITLE pttgt) const;
@@ -552,15 +552,15 @@ void GetTitle(PTTGETTITLE pttgt) const;
 
 |Parametr|Popis|
 |---------------|-----------------|
-|*pttgt*|mimo Ukazatel na strukturu [TTGETTITLE](/windows/win32/api/commctrl/ns-commctrl-ttgettitle) , která obsahuje informace o ovládacím prvku ToolTip. Když tato metoda vrátí hodnotu, člen *pszTitle* struktury [TTGETTITLE](/windows/win32/api/commctrl/ns-commctrl-ttgettitle) odkazuje na text nadpisu.|
+|*pttgt*|[out] Ukazatel na strukturu [TTGETTITLE,](/windows/win32/api/commctrl/ns-commctrl-ttgettitle) která obsahuje informace o ovládacím prvku popis. Když tato metoda vrátí, *pszTitle* člen [TTGETTITLE](/windows/win32/api/commctrl/ns-commctrl-ttgettitle) struktury odkazuje na text titulu.|
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda pošle zprávu [TTM_GETTITLE](/windows/win32/Controls/ttm-gettitle) , která je popsána v Windows SDK.
+Tato metoda odešle [zprávu TTM_GETTITLE,](/windows/win32/Controls/ttm-gettitle) která je popsána v sadě Windows SDK.
 
-##  <a name="gettoolcount"></a>CToolTipCtrl:: GetToolCount
+## <a name="ctooltipctrlgettoolcount"></a><a name="gettoolcount"></a>CToolTipCtrl::GetToolCount
 
-Načte počet nástrojů zaregistrovaných pomocí ovládacího prvku tip k nástroji.
+Načte počet nástrojů registrovaných pomocí ovládacího prvku špičky nástroje.
 
 ```
 int GetToolCount() const;
@@ -568,11 +568,11 @@ int GetToolCount() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Počet nástrojů zaregistrovaných pomocí ovládacího prvku Tip nástroje.
+Počet nástrojů registrovaných pomocí ovládacího prvku špičky nástroje.
 
-##  <a name="gettoolinfo"></a>CToolTipCtrl:: GetToolInfo
+## <a name="ctooltipctrlgettoolinfo"></a><a name="gettoolinfo"></a>CToolTipCtrl::GetToolInfo
 
-Načte informace, které ovládací prvek popisu tlačítka udržuje o nástroji.
+Načte informace, které ovládací prvek špičky nástroje udržuje o nástroji.
 
 ```
 BOOL GetToolInfo(
@@ -583,26 +583,26 @@ BOOL GetToolInfo(
 
 ### <a name="parameters"></a>Parametry
 
-*ToolInfo*<br/>
-Odkaz na objekt `TOOLINFO`, který obdrží text nástroje.
+*Informace o nástroji*<br/>
+Odkaz na `TOOLINFO` objekt, který přijímá text nástroje.
 
 *pWnd*<br/>
 Ukazatel na okno, které obsahuje nástroj.
 
 *nIDTool*<br/>
-ID nástroje
+ID nástroje.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud bylo úspěšné; v opačném případě 0.
+Nenulová, pokud je úspěšná; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-`hwnd` a `uId` členy struktury [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa) , na které odkazuje *CToolInfo* , identifikují nástroj. Pokud byl tento nástroj zaregistrován pomocí ovládacího prvku popis tlačítka pomocí předchozího volání `AddTool`, je struktura `TOOLINFO` vyplněna informacemi o nástroji.
+A `hwnd` `uId` členové [toolinfo](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa) struktury odkazuje *CToolInfo* identifikovat nástroj. Pokud byl tento nástroj zaregistrován u ovládacího `AddTool`prvku `TOOLINFO` špičky nástroje prostřednictvím předchozího volání , je struktura vyplněna informacemi o nástroji.
 
-##  <a name="hittest"></a>CToolTipCtrl:: HitTest
+## <a name="ctooltipctrlhittest"></a><a name="hittest"></a>CToolTipCtrl::HitTest
 
-Testuje bod, aby zjistil, zda se nachází uvnitř ohraničujícího obdélníku daného nástroje, a pokud ano, načtěte informace o nástroji.
+Testuje bod k určení, zda je v ohraničujícíobdélník daného nástroje a pokud ano, načíst informace o nástroji.
 
 ```
 BOOL HitTest(
@@ -616,19 +616,19 @@ BOOL HitTest(
 *pWnd*<br/>
 Ukazatel na okno, které obsahuje nástroj.
 
-*bodů*<br/>
-Ukazatel na objekt `CPoint` obsahující souřadnice bodu, který má být testován.
+*Pt*<br/>
+Ukazatel na `CPoint` objekt obsahující souřadnice bodu, který má být testován.
 
 *lpToolInfo*<br/>
-Ukazatel na strukturu [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa) , která obsahuje informace o nástroji.
+Ukazatel na [toolinfo](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa) strukturu, která obsahuje informace o nástroji.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je bod určený informacemi o testu v rámci ohraničujícího obdélníku nástroje; v opačném případě 0.
+Nenulová, pokud je bod určený informacemi o testu přístupů v ohraničujícím obdélníku nástroje; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud tato funkce vrací nenulovou hodnotu, struktura, na kterou se odkazuje pomocí *lpToolInfo* , je vyplněna informacemi o nástroji v rámci místa, kde leží bod v jeho obdélníku.
+Pokud tato funkce vrátí nenulovou hodnotu, struktura, na kterou odkazová *hodnota LpToolInfo* ukazuje, je vyplněna informacemi o nástroji, v jehož obdélníku leží bod.
 
 Struktura `TTHITTESTINFO` je definována takto:
 
@@ -642,19 +642,19 @@ typedef struct _TT_HITTESTINFO { // tthti
 
 - `hwnd`
 
-   Určuje popisovač nástroje.
+   Určuje úchyt nástroje.
 
 - `pt`
 
-   Určuje souřadnice bodu, pokud je bod v ohraničujícím obdélníku nástroje.
+   Určuje souřadnice bodu, pokud je bod v ohraničovacím obdélníku nástroje.
 
 - `ti`
 
-   Informace o nástroji. Další informace o struktuře `TOOLINFO` naleznete v tématu [CToolTipCtrl:: GetToolInfo](#gettoolinfo).
+   Informace o nástroji. Další informace o `TOOLINFO` struktuře naleznete v tématu [CToolTipCtrl::GetToolInfo](#gettoolinfo).
 
-##  <a name="pop"></a>CToolTipCtrl::P op
+## <a name="ctooltipctrlpop"></a><a name="pop"></a>CToolTipCtrl::Pop
 
-Odebere ze zobrazení zobrazené okno s popisem nástroje.
+Odebere ze zobrazení zobrazené okno tipu nástroje.
 
 ```
 void Pop();
@@ -662,11 +662,11 @@ void Pop();
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce implementuje chování zprávy Win32 [TTM_POP](/windows/win32/Controls/ttm-pop), jak je popsáno v Windows SDK.
+Tato členská funkce implementuje chování [TTM_POP](/windows/win32/Controls/ttm-pop)zprávy Win32 , jak je popsáno v sadě Windows SDK.
 
-##  <a name="popup"></a>CToolTipCtrl::P opup
+## <a name="ctooltipctrlpopup"></a><a name="popup"></a>CToolTipCtrl::Popup
 
-Způsobí, že aktuální ovládací prvek ToolTip se zobrazí na souřadnicích poslední zprávy myši.
+Způsobí, že aktuální ovládací prvek popisek se zobrazí na souřadnicích poslední zprávy myši.
 
 ```
 void Popup();
@@ -674,17 +674,17 @@ void Popup();
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda pošle zprávu [TTM_POPUP](/windows/win32/Controls/ttm-popup) , která je popsána v Windows SDK.
+Tato metoda odešle [zprávu TTM_POPUP,](/windows/win32/Controls/ttm-popup) která je popsána v sadě Windows SDK.
 
 ### <a name="example"></a>Příklad
 
-Následující příklad kódu zobrazí okno s popisem tlačítka.
+Následující příklad kódu zobrazí okno s popisem.
 
 [!code-cpp[NVC_MFC_CToolBarCtrl_s1#7](../../mfc/reference/codesnippet/cpp/ctooltipctrl-class_3.cpp)]
 
-##  <a name="relayevent"></a>CToolTipCtrl:: RelayEvent
+## <a name="ctooltipctrlrelayevent"></a><a name="relayevent"></a>CToolTipCtrl::Událost relayeventu
 
-Předá zprávu myši ovládacímu prvku popisu tlačítka ke zpracování.
+Předá zprávu myši ovládacímu prvku tip nástroje pro zpracování.
 
 ```
 void RelayEvent(LPMSG lpMsg);
@@ -693,11 +693,11 @@ void RelayEvent(LPMSG lpMsg);
 ### <a name="parameters"></a>Parametry
 
 *lpMsg*<br/>
-Ukazatel [na strukturu zprávy](/windows/win32/api/winuser/ns-winuser-msg) , která obsahuje zprávu pro předání.
+Ukazatel na strukturu [MSG,](/windows/win32/api/winuser/ns-winuser-msg) která obsahuje zprávu k přenosu.
 
 ### <a name="remarks"></a>Poznámky
 
-Ovládací prvek popis tlačítka zpracovává pouze následující zprávy, které jsou do něj odesílány `RelayEvent`:
+Ovládací prvek tip nástroje zpracovává pouze následující zprávy, `RelayEvent`které jsou do něj odesílány :
 
 |WM_LBUTTONDOWN|WM_MOUSEMOVE|
 |---------------------|-------------------|
@@ -707,11 +707,11 @@ Ovládací prvek popis tlačítka zpracovává pouze následující zprávy, kte
 
 ### <a name="example"></a>Příklad
 
-  Podívejte se na příklad pro [CPropertySheet –:: GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol).
+  Viz příklad [cpropertysheet::GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol).
 
-##  <a name="setdelaytime"></a>CToolTipCtrl:: SetDelayTime
+## <a name="ctooltipctrlsetdelaytime"></a><a name="setdelaytime"></a>CToolTipCtrl::SetDelayTime
 
-Nastaví dobu zpoždění pro ovládací prvek popis tlačítka.
+Nastaví dobu zpoždění pro ovládání špičky nástroje.
 
 ```
 void SetDelayTime(UINT nDelay);
@@ -723,22 +723,22 @@ void SetDelayTime(
 
 ### <a name="parameters"></a>Parametry
 
-*nDelay*<br/>
-Určuje novou dobu zpoždění (v milisekundách).
+*nZpoždění*<br/>
+Určuje novou dobu zpoždění v milisekundách.
 
 *dwDuration*<br/>
-Příznak, který určuje, která hodnota trvání bude načtena. Popis platných hodnot naleznete v tématu [CToolTipCtrl:: GetDelayTime](#getdelaytime) .
+Příznak, který určuje, která hodnota doby trvání bude načtena. Viz [CToolTipCtrl::GetDelayTime](#getdelaytime) popis platných hodnot.
 
 *iTime*<br/>
-Zadaný čas zpoždění v milisekundách.
+Zadaná doba zpoždění v milisekundách.
 
 ### <a name="remarks"></a>Poznámky
 
-Doba zpoždění je doba, po kterou musí kurzor zůstat na nástroji, aby se zobrazilo okno s popisem tlačítka. Výchozí doba zpoždění je 500 milisekund.
+Doba zpoždění je doba, po kterou musí kurzor zůstat na nástroji, než se zobrazí okno tipu nástroje. Výchozí doba zpoždění je 500 milisekund.
 
-##  <a name="setmargin"></a>CToolTipCtrl:: SetMargin
+## <a name="ctooltipctrlsetmargin"></a><a name="setmargin"></a>CToolTipCtrl::SetMargin
 
-Nastaví horní, levý, dolní a pravý okraj okna s popisem tlačítka.
+Nastaví horní, levý, dolní a pravý okraj okna tipu nástroje.
 
 ```
 void SetMargin(LPRECT lprc);
@@ -747,15 +747,15 @@ void SetMargin(LPRECT lprc);
 ### <a name="parameters"></a>Parametry
 
 *lprc*<br/>
-Adresa `RECT` struktury obsahující informace o okraji, které mají být nastaveny. Členové struktury `RECT` nedefinují ohraničující obdélník. Popis informací o okrajích naleznete v tématu [CToolTipCtrl:: Getmarže](#getmargin) .
+Adresa `RECT` struktury, která obsahuje informace o okraji, které mají být nastaveny. Členy `RECT` struktury nedefinují ohraničující obdélník. Viz [CToolTipCtrl::GetMargin](#getmargin) popis informací o okraji.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce implementuje chování zprávy Win32 [TTM_SETMARGIN](/windows/win32/Controls/ttm-setmargin), jak je popsáno v Windows SDK.
+Tato členská funkce implementuje chování [TTM_SETMARGIN](/windows/win32/Controls/ttm-setmargin)zprávy Win32 , jak je popsáno v sadě Windows SDK.
 
-##  <a name="setmaxtipwidth"></a>CToolTipCtrl:: SetMaxTipWidth
+## <a name="ctooltipctrlsetmaxtipwidth"></a><a name="setmaxtipwidth"></a>CToolTipCtrl::SetMaxTipWidth
 
-Nastaví maximální šířku okna s popisem tlačítka.
+Nastaví maximální šířku okna tipu nástroje.
 
 ```
 int SetMaxTipWidth(int iWidth);
@@ -763,20 +763,20 @@ int SetMaxTipWidth(int iWidth);
 
 ### <a name="parameters"></a>Parametry
 
-*iWidth*<br/>
-Hodnota maximální šířky okna pro popis tlačítka
+*iŠířka*<br/>
+Maximální šířka okna tipu nástroje, která má být nastavena.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Předchozí maximální šířka tipu.
+Předchozí maximální šířka špičky.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce implementuje chování zprávy Win32 [TTM_SETMAXTIPWIDTH](/windows/win32/Controls/ttm-setmaxtipwidth), jak je popsáno v Windows SDK.
+Tato členská funkce implementuje chování [zprávy](/windows/win32/Controls/ttm-setmaxtipwidth)Win32 TTM_SETMAXTIPWIDTH , jak je popsáno v sadě Windows SDK.
 
-##  <a name="settipbkcolor"></a>CToolTipCtrl:: SetTipBkColor
+## <a name="ctooltipctrlsettipbkcolor"></a><a name="settipbkcolor"></a>CToolTipCtrl::SetTipBkColor
 
-Nastaví barvu pozadí v okně popisu tlačítka.
+Nastaví barvu pozadí v okně tipu nástroje.
 
 ```
 void SetTipBkColor(COLORREF clr);
@@ -784,16 +784,16 @@ void SetTipBkColor(COLORREF clr);
 
 ### <a name="parameters"></a>Parametry
 
-*CLR*<br/>
+*Clr*<br/>
 Nová barva pozadí.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce implementuje chování zprávy Win32 [TTM_SETTIPBKCOLOR](/windows/win32/Controls/ttm-settipbkcolor), jak je popsáno v Windows SDK.
+Tato členská funkce implementuje chování [TTM_SETTIPBKCOLOR](/windows/win32/Controls/ttm-settipbkcolor)zprávy Win32 , jak je popsáno v sadě Windows SDK.
 
-##  <a name="settiptextcolor"></a>CToolTipCtrl:: SetTipTextColor
+## <a name="ctooltipctrlsettiptextcolor"></a><a name="settiptextcolor"></a>CToolTipCtrl::SetTipTextColor
 
-Nastaví barvu textu v okně popisu tlačítka.
+Nastaví barvu textu v okně tipu nástroje.
 
 ```
 void SetTipTextColor(COLORREF clr);
@@ -801,16 +801,16 @@ void SetTipTextColor(COLORREF clr);
 
 ### <a name="parameters"></a>Parametry
 
-*CLR*<br/>
+*Clr*<br/>
 Nová barva textu.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce implementuje chování zprávy Win32 [TTM_SETTIPTEXTCOLOR](/windows/win32/Controls/ttm-settiptextcolor), jak je popsáno v Windows SDK.
+Tato členská funkce implementuje chování [zprávy](/windows/win32/Controls/ttm-settiptextcolor)Win32 TTM_SETTIPTEXTCOLOR , jak je popsáno v sadě Windows SDK.
 
-##  <a name="settitle"></a>CToolTipCtrl:: SetTitle
+## <a name="ctooltipctrlsettitle"></a><a name="settitle"></a>CToolTipCtrl::SetTitle
 
-Přidá standardní ikonu a řetězec názvu k popisu tlačítka.
+Přidá standardní ikonu a název řetězce do tipu nástroje.
 
 ```
 BOOL SetTitle(
@@ -820,23 +820,23 @@ BOOL SetTitle(
 
 ### <a name="parameters"></a>Parametry
 
-*uIcon*<br/>
-Viz *ikona* v [TTM_SETTITLE](/windows/win32/Controls/ttm-settitle) Windows SDK.
+*uIkona*<br/>
+Viz *ikona* v [TTM_SETTITLE](/windows/win32/Controls/ttm-settitle) v sadě Windows SDK.
 
 *lpstrTitle*<br/>
-Ukazatel na řetězec názvu.
+Ukazatel na řetězec nadpisu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud bylo úspěšné; v opačném případě 0.
+Nenulová, pokud je úspěšná; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce implementuje chování zprávy Win32 [TTM_SETTITLE](/windows/win32/Controls/ttm-settitle), jak je popsáno v Windows SDK.
+Tato členská funkce implementuje chování [zprávy](/windows/win32/Controls/ttm-settitle)Win32 TTM_SETTITLE , jak je popsáno v sadě Windows SDK.
 
-##  <a name="settoolinfo"></a>CToolTipCtrl:: SetToolInfo
+## <a name="ctooltipctrlsettoolinfo"></a><a name="settoolinfo"></a>CToolTipCtrl::SetToolInfo
 
-Nastaví informace, které Popis nástroje udržuje pro nástroj.
+Nastaví informace, které pro nástroj udržuje špička nástroje.
 
 ```
 void SetToolInfo(LPTOOLINFO lpToolInfo);
@@ -845,11 +845,11 @@ void SetToolInfo(LPTOOLINFO lpToolInfo);
 ### <a name="parameters"></a>Parametry
 
 *lpToolInfo*<br/>
-Ukazatel na strukturu [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa) , která určuje informace, které mají být nastaveny.
+Ukazatel na strukturu [TOOLINFO,](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa) která určuje informace, které mají být nastaveny.
 
-##  <a name="settoolrect"></a>CToolTipCtrl:: SetToolRect
+## <a name="ctooltipctrlsettoolrect"></a><a name="settoolrect"></a>CToolTipCtrl::SetToolRect
 
-Nastaví nový ohraničující obdélník pro nástroj.
+Nastaví nový ohraničovací obdélník pro nástroj.
 
 ```
 void SetToolRect(
@@ -864,14 +864,14 @@ void SetToolRect(
 Ukazatel na okno, které obsahuje nástroj.
 
 *nIDTool*<br/>
-ID nástroje
+ID nástroje.
 
 *lpRect*<br/>
-Ukazatel na strukturu [Rect](/previous-versions/dd162897\(v=vs.85\)) určující nový ohraničovací obdélník.
+Ukazatel na [rect](/previous-versions/dd162897\(v=vs.85\)) strukturu určující nový ohraničující obdélník.
 
-##  <a name="setwindowtheme"></a>CToolTipCtrl:: SetWindowTheme
+## <a name="ctooltipctrlsetwindowtheme"></a><a name="setwindowtheme"></a>CToolTipCtrl::SetWindowTheme
 
-Nastaví styl vizuálu okna s popisem tlačítka.
+Nastaví vizuální styl okna tipu nástroje.
 
 ```
 HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
@@ -880,25 +880,25 @@ HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
 ### <a name="parameters"></a>Parametry
 
 *pszSubAppName*<br/>
-Ukazatel na řetězec v kódování Unicode, který obsahuje vizuální styl, který se má nastavit.
+Ukazatel na řetězec Unicode, který obsahuje vizuální styl, který chcete nastavit.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Návratová hodnota se nepoužívá.
+Vrácená hodnota se nepoužívá.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato členská funkce emuluje funkce [TTM_SETWINDOWTHEME](/windows/win32/Controls/ttm-setwindowtheme) zprávy, jak je popsáno v Windows SDK.
+Tato členská funkce emuluje funkce [zprávy TTM_SETWINDOWTHEME,](/windows/win32/Controls/ttm-setwindowtheme) jak je popsáno v sadě Windows SDK.
 
-##  <a name="update"></a>CToolTipCtrl:: Update
+## <a name="ctooltipctrlupdate"></a><a name="update"></a>CToolTipCtrl::Aktualizovat
 
-Vynutí překreslení aktuálního nástroje.
+Vynutí překreslit aktuální nástroj.
 
 ```
 void Update();
 ```
 
-##  <a name="updatetiptext"></a>CToolTipCtrl:: UpdateTipText
+## <a name="ctooltipctrlupdatetiptext"></a><a name="updatetiptext"></a>CToolTipCtrl::UpdateTipText
 
 Aktualizuje text tipu nástroje pro nástroje tohoto ovládacího prvku.
 
@@ -917,16 +917,16 @@ void UpdateTipText(
 ### <a name="parameters"></a>Parametry
 
 *lpszText*<br/>
-Ukazatel na text pro nástroj.
+Ukazatel na text nástroje.
 
 *pWnd*<br/>
 Ukazatel na okno, které obsahuje nástroj.
 
 *nIDTool*<br/>
-ID nástroje
+ID nástroje.
 
 *nIDText*<br/>
-ID řetězcového prostředku, který obsahuje text pro nástroj.
+ID prostředku řetězce, který obsahuje text nástroje.
 
 ## <a name="see-also"></a>Viz také
 

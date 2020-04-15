@@ -1,8 +1,9 @@
 ---
 title: _write
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _write
+- _o__write
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -26,12 +28,12 @@ helpviewer_keywords:
 - write function
 - files [C++], writing to
 ms.assetid: 7b868c33-766f-4e1a-95a7-e8d25f0604c4
-ms.openlocfilehash: 5eaee64c1bf6ad4b4d59c3a7b1a1434741e74454
-ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.openlocfilehash: a616df570d266c335337d897da59a2a0ec69b40e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821789"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367397"
 ---
 # <a name="_write"></a>_write
 
@@ -49,30 +51,32 @@ int _write(
 
 ### <a name="parameters"></a>Parametry
 
-*fd*<br/>
-Popisovač souboru, do kterého se zapisují data
+*Fd*<br/>
+Popisovač souboru, do kterého jsou data zapsána.
 
-*vyrovnávací paměti*<br/>
+*Vyrovnávací paměti*<br/>
 Data, která mají být zapsána.
 
-*výpočtu*<br/>
-Počet bajtů
+*Počet*<br/>
+Počet bajtů.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-V případě úspěchu **_Write** vrátí počet zapsaných bajtů. Pokud je aktuální místo na disku menší než velikost vyrovnávací paměti, kterou se funkce pokouší zapsat na disk, **_Write** selžou a neuvolní žádný obsah vyrovnávací paměti na disk. Návratová hodnota-1 označuje chybu. Pokud jsou předány neplatné parametry, tato funkce vyvolá obslužnou rutinu neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, funkce vrátí hodnotu-1 a **errno** je nastavena na jednu ze tří hodnot: **EBADF**, což znamená, že popisovač souboru je neplatný nebo soubor není otevřen pro zápis. **ENOSPC**, což znamená, že na zařízení není k dispozici dostatek místa pro operaci; nebo **EINVAL**, což znamená, že *vyrovnávací paměť* byla ukazatel s hodnotou null nebo byl před zápisem do souboru v režimu Unicode předán lichý *počet* bajtů.
+Pokud je úspěšná, **vrátí _write** počet zapsaných bajtů. Pokud skutečné místo zbývající na disku je menší než velikost vyrovnávací paměti funkce se pokouší zapsat na disk, **_write** selže a nevyprázdní žádný obsah vyrovnávací paměti na disk. Vrácená hodnota -1 označuje chybu. Pokud jsou předány neplatné parametry, tato funkce vyvolá obslužnou rutinu neplatného parametru, jak je popsáno v [parametru Validation](../../c-runtime-library/parameter-validation.md). Pokud je spuštění povoleno pokračovat, funkce vrátí -1 a **errno** je nastavena na jednu ze tří hodnot: **EBADF**, což znamená, že popisovač souboru je neplatný nebo soubor není otevřen pro zápis; **ENOSPC**, což znamená, že na zařízení není dostatek místa pro provoz; nebo **EINVAL**, což znamená, že *vyrovnávací paměť* byla nulovým ukazatelem nebo že byl předán lichý *počet* bajtů, které mají být zapsány do souboru v režimu Unicode.
 
-Další informace o těchto a dalších návratových kódech naleznete v tématu [errno, _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Další informace o těchto a dalších návratových kódech naleznete [v tématech errno, _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-Pokud je soubor otevřen v textovém režimu, je každý znak kanálu řádku nahrazen dvojicí kanálu návratového řádku ve výstupu. Náhrada nemá vliv na vrácenou hodnotu.
+Pokud je soubor otevřen v textovém režimu, každý znak podavače řádků je nahrazen dvojicí zpětného podávacího kanálu vozíku ve výstupu. Nahrazení nemá vliv na vrácenou hodnotu.
 
-Když je soubor otevřen v režimu překladu Unicode – například je-li *FD* otevřen pomocí **_open** nebo **_sopen** a parametr režimu, který zahrnuje **_O_WTEXT**, **_O_U16TEXT**nebo **_O_U8TEXT**, nebo pokud je otevřen pomocí **FOPEN** a parametr režimu, který obsahuje **CCS = Unicode**, **CCS = UTF-16LE**nebo **CCS = UTF-8**nebo pokud je režim změněn na režim překladu Unicode pomocí **_setmode**–*vyrovnávací paměť* je interpretována jako ukazatel na pole **wchar_t** obsahující data **UTF-16** . Pokus o zápis lichého počtu bajtů v tomto režimu způsobí chybu ověření parametru.
+Když je soubor otevřen v režimu překladu Unicode – například Pokud *fd* je otevřen pomocí **_open** nebo **_sopen** a parametr režimu, který zahrnuje **_O_WTEXT**, **_O_U16TEXT**nebo **_O_U8TEXT**, nebo pokud je otevřen pomocí **fopen** a parametr režimu, který zahrnuje **ccs = UNICODE**, **ccs = UTF-16LE**, nebo **ccs = UTF-8**, nebo pokud je režim změněn na režim překladu Unicode pomocí **_setmode**—*vyrovnávací paměť* je interpretován jako ukazatel na pole **wchar_t,** který obsahuje **UTF-16** data. Pokus o zápis lichého počtu bajtů v tomto režimu způsobí chybu ověření parametru.
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce **_Write** zapisuje *počet* bajtů z *vyrovnávací paměti* do souboru přidruženého ke *FD*. Operace zápisu začíná na aktuální pozici ukazatele souboru (pokud existuje) přidruženého k danému souboru. Pokud je soubor otevřen pro připojení, operace začíná na aktuálním konci souboru. Po operaci zápisu se ukazatel na soubor zvýší o počet zapsaných bajtů.
+Funkce **_write** zapisuje *počet* *bajtů* z vyrovnávací paměti do souboru přidruženého k *fd*. Operace zápisu začíná na aktuální pozici ukazatele souboru (pokud existuje) přidružené k danému souboru. Pokud je soubor otevřen pro připojení, operace začíná na aktuálním konci souboru. Po operaci zápisu se ukazatel souboru zvýší o počet zapsaných bajtů.
 
-Při zápisu do souborů otevřených v textovém režimu **_Write** považovat znak CTRL + Z za logický konec souboru. Při zápisu do zařízení **_Write** považovat znak CTRL + Z ve vyrovnávací paměti jako ukončovací výstup.
+Při zápisu do souborů otevřených v textovém režimu **_write** považuje znak CTRL+Z za logický konec souboru. Při zápisu do zařízení **_write** zachází se znakem CTRL+Z ve vyrovnávací paměti jako s zakončením výstupu.
+
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
@@ -80,7 +84,7 @@ Při zápisu do souborů otevřených v textovém režimu **_Write** považovat 
 |-------------|---------------------|
 |**_write**|\<io.h>|
 
-Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -140,9 +144,9 @@ int main( void )
 Wrote 36 bytes to file.
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[I/O nízké úrovně](../../c-runtime-library/low-level-i-o.md)<br/>
+[Vstupně-nosné(v" nízké úrovně](../../c-runtime-library/low-level-i-o.md)<br/>
 [fwrite](fwrite.md)<br/>
 [_open, _wopen](open-wopen.md)<br/>
 [_read](read.md)<br/>

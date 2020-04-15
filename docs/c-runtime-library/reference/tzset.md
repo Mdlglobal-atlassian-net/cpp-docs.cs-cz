@@ -1,8 +1,9 @@
 ---
 title: _tzset
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _tzset
+- _o__tzset
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -26,19 +28,19 @@ helpviewer_keywords:
 - time environment variables
 - environment variables, setting time
 ms.assetid: 3f6ed537-b414-444d-b272-5dd377481930
-ms.openlocfilehash: e9ea454ede370a20779b5852b426b418db81757c
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: b2537a3bbfd2b5cec6bdf149c520aac7e3344b1e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957552"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81362189"
 ---
 # <a name="_tzset"></a>_tzset
 
-Nastaví proměnné prostředí času.
+Nastaví proměnné časového prostředí.
 
 > [!IMPORTANT]
-> Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime. Další informace najdete v tématu [funkce CRT nejsou v aplikacích Univerzální platforma Windows podporovány](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Toto rozhraní API nelze použít v aplikacích, které se spouštějí v prostředí Windows Runtime. Další informace naleznete v tématu [funkce CRT, které nejsou podporovány v aplikacích univerzální platformy Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -48,39 +50,41 @@ void _tzset( void );
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce **_tzset** používá aktuální nastavení proměnné prostředí **TZ** k přiřazení hodnot třem globálním proměnným: **_daylight**, **_timezone**a **_tzname**. Tyto proměnné jsou používány funkcemi [_ftime](ftime-ftime32-ftime64.md) a [localtime](localtime-localtime32-localtime64.md) k provádění oprav z koordinovaného univerzálního času (UTC) po místní čas a podle [časové](time-time32-time64.md) funkce pro výpočet času UTC ze systémového času. Pomocí následující syntaxe nastavte proměnnou prostředí **TZ** :
+Funkce **_tzset** používá aktuální nastavení proměnné prostředí **TZ** k přiřazení hodnot třem globálním proměnným: **_daylight**, **_timezone**a **_tzname**. Tyto proměnné jsou používány [_ftime](ftime-ftime32-ftime64.md) a [místních](localtime-localtime32-localtime64.md) funkcí k provádění oprav z koordinovaného univerzálního času (UTC) na místní čas a [podle časové](time-time32-time64.md) funkce pro výpočet Času UTC ze systémového času. K nastavení proměnné prostředí **TZ** použijte následující syntaxi:
 
-> **nastavit TZ =** _tzn_ &#124;]HH\[:mm\[: SS]] [dzn] \[ **+** **-**
+> **set TZ=**_tzn_ \[ **+**&#124;**-**]*hh*\[**:**_mm_\[**:**_ss_] ][*dzn*]
 
 |Parametr|Popis|
 |-|-|
-| *tzn* | Tři dopisy: název časové zóny, například PST. Je nutné zadat správný posun z místního času na čas UTC. |
-| *hh* | Rozdíl v hodinách mezi časem UTC a místním časem. Znaménko (+) volitelné pro kladné hodnoty. |
-| *mm* | Minuty. Oddělené od *HH* dvojtečkou ( **:** ). |
-| *ss* | Second. Oddělené od *mm* dvojtečkou ( **:** ). |
-| *dzn* | Tři písmena při letním čase, například PDT. Pokud se letní čas v tomto případě nikdy neprojeví v rámečku, nastavte hodnotu **TZ** bez hodnoty pro *dzn*. Knihovna run-time jazyka C předpokládá pravidla USA pro implementaci výpočtu letního času (DST). |
+| *tzn* | Název časového pásma se třemi písmeny, například PST. Je nutné zadat správný posun od místního času k času UTC. |
+| *hh* | Rozdíl v hodinách mezi UTC a místním časem. Znaménko (+) volitelné pro kladné hodnoty. |
+| *Mm* | Minut. Odděleny od *hh* tlustého střeva (**:**). |
+| *Ss* | Sekund. Od *mm* odděleno dvojtečkou (**: .** |
+| *dzn* | Třípísmenné časové pásmo pro úsporu letního času, například PDT. Pokud letní čas není nikdy v platnosti v lokalitě, nastavte **TZ** bez hodnoty pro *dzn*. C run-time knihovna předpokládá pravidla Spojených států pro implementaci výpočtu letního času (DST). |
 
 > [!NOTE]
-> Při výpočtu časového rozdílu se ujistěte, že se liší. Vzhledem k tomu, že časový rozdíl je posun od místního času k času UTC (místo opačného), jeho znaménko může být opakem toho, co byste mohli intuitivní očekávat. Pro časová pásma před časem UTC je časový rozdíl záporný. u těch za časem UTC je rozdíl kladný.
+> Dávejte pozor při výpočtu znamení časového rozdílu. Vzhledem k tomu, že časový rozdíl je posun od místního času k UTC (spíše než naopak), jeho znaménko může být opakem toho, co můžete intuitivně očekávat. U časových pásem před časovou hodnotou UTC je časový rozdíl záporný. pro ty, kteří stojí za UTC, je rozdíl pozitivní.
 
-Chcete-li například nastavit proměnnou prostředí **TZ** tak, aby odpovídala aktuálnímu časovému pásmu v Německu, zadejte na příkazovém řádku následující příkaz:
+Chcete-li například nastavit proměnnou prostředí **TZ** tak, aby odpovídala aktuálnímu časovému pásmu v Německu, zadejte na příkazovém řádku následující:
 
-> **set TZ=GST-1GDT**
+> **sada TZ=GST-1GDT**
 
-Tento příkaz používá daň GST k označení německého standardního času, předpokládá, že UTC je jedna hodina za Německem (nebo jinými slovy, že Německo je jedna hodina před časem UTC) a předpokládá, že Německo sleduje letní čas.
+Tento příkaz používá GST k označení německého standardního času, předpokládá, že Čas UTC je jednu hodinu za Německem (nebo jinými slovy, že Německo je o hodinu před UTC) a předpokládá, že Německo dodržuje letní čas.
 
-Pokud není nastavená hodnota **TZ** , **_tzset** se pokusí použít informace o časovém pásmu určené operačním systémem. V operačním systému Windows jsou tyto informace uvedeny v aplikaci datum/čas v Ovládacích panelech. Pokud **_tzset** nemůže získat tyto informace, použije PST8PDT ve výchozím nastavení, což znamená časové pásmo tichomořského.
+Pokud hodnota **TZ** není nastavena, **_tzset** pokusí použít informace o časovém pásmu určené operačním systémem. V operačním systému Windows jsou tyto informace určeny v ovládacím panelu Datum a čas. Pokud **_tzset** nemůže získat tyto informace, používá PST8PDT ve výchozím nastavení, což znamená tichomořské časové pásmo.
 
-Na základě hodnoty proměnné prostředí **TZ** jsou k globálním proměnným **_daylight**, **_timezone**a **_tzname** při volání **_tzset** přiřazeny následující hodnoty:
+Na základě hodnoty proměnné prostředí **TZ** jsou globálním proměnným přiřazeny **následující hodnoty, _daylight**, **_timezone**a **_tzname** při **volání _tzset:**
 
 |Globální proměnná|Popis|Výchozí hodnota|
 |---------------------|-----------------|-------------------|
-|**_daylight**|Nenulová hodnota, pokud je v nastavení **TZ** zadáno časové pásmo letního času; v opačném případě 0.|1|
-|**_timezone**|Rozdíl v sekundách mezi místním časem a UTC.|28800 (28800 sekund se rovná 8 hodin)|
-|**_tzname** 0,8|Řetězcová hodnota názvu časového pásma z části **TZ** prostředí – proměnná; prázdné, pokud nebylo nastaveno na hodnotu **TZ** .|VYTVOŘENÉ|
-|**_tzname**[1]|Hodnota řetězce v časovém pásmu letního času; prázdné, pokud je v časovém pásmu **TZ** z pohyblivé proměnné prostředí vynecháno letní čas.|PDT|
+|**_daylight**|Nenulová hodnota, pokud je v nastavení **TZ** zadáno časové pásmo pro úsporu letního času; jinak 0.|1|
+|**_timezone**|Rozdíl v sekundách mezi místním časem a časem UTC.|28800 (28800 sekund se rovná 8 hodin)|
+|**_tzname**[0]|Řetězcová hodnota názvu časového pásma z proměnné prostředí **TZ;** prázdné, pokud **tz** nebyla nastavena.|Pst|
+|**_tzname**[1]|Řetězcová hodnota časového pásma pro úsporu letního času; prázdné, pokud je z proměnné prostředí **TZ** vynecháno letní časové pásmo.|Pdt|
 
-Výchozí hodnoty uvedené v předchozí tabulce pro **_daylight** a pole **_TZNAME** odpovídají "PST8PDT." Pokud je zóna letního času vynechána z proměnné prostředí **TZ** , hodnota **_daylight** je 0 a funkce [_ftime](ftime-ftime32-ftime64.md), [gmtime](gmtime-gmtime32-gmtime64.md)a [localtime](localtime-localtime32-localtime64.md) vrátí hodnotu 0 pro své příznaky letního času.
+Výchozí hodnoty zobrazené v předchozí tabulce pro **_daylight** a **_tzname** pole odpovídají "PST8PDT." Pokud je zóna letního času vynechána z proměnné prostředí **TZ,** hodnota **_daylight** je 0 a [_ftime](ftime-ftime32-ftime64.md), [gmtime](gmtime-gmtime32-gmtime64.md)a [localtime](localtime-localtime32-localtime64.md) funkce vrátí 0 pro jejich dst příznaky.
+
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
@@ -88,7 +92,7 @@ Výchozí hodnoty uvedené v předchozí tabulce pro **_daylight** a pole **_TZN
 |-------------|---------------------|
 |**_tzset**|\<time.h>|
 
-Funkce **_tzset** je specifická pro společnost Microsoft. Další informace najdete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
+Funkce **_tzset** je specifické pro společnost Microsoft. Další informace naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -125,9 +129,9 @@ _timezone = 28800
 _tzname[0] = Pacific Standard Time
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Správa času](../../c-runtime-library/time-management.md)<br/>
+[Časová správa](../../c-runtime-library/time-management.md)<br/>
 [asctime, _wasctime](asctime-wasctime.md)<br/>
 [_ftime, _ftime32, _ftime64](ftime-ftime32-ftime64.md)<br/>
 [gmtime, _gmtime32, _gmtime64](gmtime-gmtime32-gmtime64.md)<br/>

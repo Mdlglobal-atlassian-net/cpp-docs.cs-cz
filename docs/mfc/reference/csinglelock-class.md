@@ -1,5 +1,5 @@
 ---
-title: CSingleLock – třída
+title: Třída CSinglelock
 ms.date: 11/04/2016
 f1_keywords:
 - CSingleLock
@@ -14,16 +14,16 @@ helpviewer_keywords:
 - CSingleLock [MFC], Lock
 - CSingleLock [MFC], Unlock
 ms.assetid: 7dae7288-8066-4a3e-85e0-78d28bfc6bc8
-ms.openlocfilehash: 31bd43f7f7a6fbccd4680db013ac5c654123061e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 231397228d94e58665602453b5d377571e24a967
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324100"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81318275"
 ---
-# <a name="csinglelock-class"></a>CSingleLock – třída
+# <a name="csinglelock-class"></a>Třída CSinglelock
 
-Představuje mechanismus řízení přístupu, který se používá při řízení přístupu k prostředku v programu s více vlákny.
+Představuje mechanismus řízení přístupu používaný při řízení přístupu k prostředku v programu s více vlákny.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -35,27 +35,27 @@ class CSingleLock
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CSingleLock::CSingleLock](#csinglelock)|Vytvoří `CSingleLock` objektu.|
+|[CSingleLock::CSingleLock](#csinglelock)|Vytvoří `CSingleLock` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CSingleLock::IsLocked](#islocked)|Určuje, pokud je objekt uzamčen.|
-|[CSingleLock::Lock](#lock)|Čekání na synchronizační objekt.|
-|[CSingleLock::Unlock](#unlock)|Uvolní objekt synchronizace.|
+|[CSingleLock::Zamkne](#islocked)|Určuje, zda je objekt uzamčen.|
+|[CSingleLock::Zámek](#lock)|Čeká na objekt synchronizace.|
+|[CSingleLock::Odemknout](#unlock)|Uvolní objekt synchronizace.|
 
 ## <a name="remarks"></a>Poznámky
 
-`CSingleLock` nemá základní třídu.
+`CSingleLock`nemá základní třídu.
 
-Chcete-li použít synchronizační třídy [CSemaphore](../../mfc/reference/csemaphore-class.md), [CMutex](../../mfc/reference/cmutex-class.md), [CCriticalSection](../../mfc/reference/ccriticalsection-class.md), a [CEvent](../../mfc/reference/cevent-class.md), je nutné vytvořit buď `CSingleLock` nebo [CMultiLock](../../mfc/reference/cmultilock-class.md) objektu pro čekání na a uvolnění objektu synchronizace. Použití `CSingleLock` kdy je potřeba jenom čekat na jeden objekt v čase. Použít `CMultiLock` pokud existuje více objektů, které můžete použít v určitou dobu.
+Chcete-li použít třídy synchronizace [CSemaphore](../../mfc/reference/csemaphore-class.md), [CMutex](../../mfc/reference/cmutex-class.md), [CCriticalSection](../../mfc/reference/ccriticalsection-class.md)a `CSingleLock` [CEvent](../../mfc/reference/cevent-class.md), musíte vytvořit objekt a nebo [CMultiLock,](../../mfc/reference/cmultilock-class.md) na který chcete počkat a uvolnit objekt synchronizace. Použijte, `CSingleLock` když potřebujete čekat pouze na jeden objekt najednou. Použijte, `CMultiLock` pokud existuje více objektů, které můžete použít v určitém čase.
 
-Použití `CSingleLock` objektu, volání konstruktoru uvnitř členské funkce ve třídě řízené prostředků. Zavolejte [uzamčeno](#islocked) členskou funkci k určení, jestli je prostředek k dispozici. Pokud se jedná, pokračujte zbytek členskou funkci. Pokud prostředek není k dispozici, počkejte určenou dobu pro prostředek, který má být všeobecně dostupné nebo vrátí hodnotu neúspěch. Po dokončení použití zdroje buď volat [odemknout](#unlock) fungovat, pokud `CSingleLock` je znovu použít, nebo povolíte `CSingleLock` objekt, který se má zničit.
+Chcete-li `CSingleLock` použít objekt, volání jeho konstruktoru uvnitř členské funkce ve třídě řízeného prostředku. Potom volání [islocked](#islocked) členské funkce k určení, zda je k dispozici prostředek. Pokud ano, pokračujte se zbytkem členské funkce. Pokud prostředek není k dispozici, počkejte na zadané množství času pro prostředek, který má být uvolněn, nebo vrátit selhání. Po dokončení použití prostředku, volání [Unlock](#unlock) funkce, `CSingleLock` pokud má být objekt znovu `CSingleLock` použit, nebo povolit zničení objektu.
 
-`CSingleLock` objekty vyžadují existenci objektu odvozeného od [CSyncObject](../../mfc/reference/csyncobject-class.md). To je obvykle datový člen třídy řízené prostředků. Další informace o tom, jak používat `CSingleLock` objekty, najdete v článku [Multithreading: Jak používat synchronizační třídy](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).
+`CSingleLock`objekty vyžadují přítomnost objektu odvozeného z [CSyncObject](../../mfc/reference/csyncobject-class.md). Obvykle se jedná o datový člen třídy řízeného prostředku. Další informace o použití `CSingleLock` objektů naleznete v článku [Vícevláken: Jak používat třídy synchronizace](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -65,9 +65,9 @@ Použití `CSingleLock` objektu, volání konstruktoru uvnitř členské funkce 
 
 **Záhlaví:** afxmt.h
 
-##  <a name="csinglelock"></a>  CSingleLock::CSingleLock
+## <a name="csinglelockcsinglelock"></a><a name="csinglelock"></a>CSingleLock::CSingleLock
 
-Vytvoří `CSingleLock` objektu.
+Vytvoří `CSingleLock` objekt.
 
 ```
 explicit CSingleLock(
@@ -77,23 +77,23 @@ explicit CSingleLock(
 
 ### <a name="parameters"></a>Parametry
 
-*pObject*<br/>
-Odkazuje na objekt synchronizace přístup. Nemůže mít hodnotu NULL.
+*pObjekt*<br/>
+Odkazuje na objekt synchronizace, ke který má být přístupná. Nemůže být null.
 
 *bInitialLock*<br/>
-Určuje, zda počáteční pokus o přístup k zadaného objektu.
+Určuje, zda se má nejprve pokusit o přístup k zadanému objektu.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce je obvykle volat v rámci členská funkce přístupu řízeného prostředku.
+Tato funkce je obecně volána z funkce přístupového člena řízeného prostředku.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFC_Utilities#19](../../mfc/codesnippet/cpp/csinglelock-class_1.h)]
 
-##  <a name="islocked"></a>  CSingleLock::IsLocked
+## <a name="csinglelockislocked"></a><a name="islocked"></a>CSingleLock::Zamkne
 
-Určuje, pokud objekt přidružený `CSingleLock` objekt je nonsignaled (není k dispozici).
+Určuje, zda je objekt `CSingleLock` přidružený k objektu nesignalizován (není k dispozici).
 
 ```
 BOOL IsLocked();
@@ -101,15 +101,15 @@ BOOL IsLocked();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je objekt uzamčen; jinak 0.
+Nenulová, pokud je objekt uzamčen; jinak 0.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFC_Utilities#20](../../mfc/codesnippet/cpp/csinglelock-class_2.h)]
 
-##  <a name="lock"></a>  CSingleLock::Lock
+## <a name="csinglelocklock"></a><a name="lock"></a>CSingleLock::Zámek
 
-Voláním této funkce získáte přístup k prostředku řídí synchronizace objekt zadaný do `CSingleLock` konstruktoru.
+Volání této funkce získat přístup k prostředku řízeného objektu synchronizace dodané konstruktoru. `CSingleLock`
 
 ```
 BOOL Lock(DWORD dwTimeOut = INFINITE);
@@ -118,23 +118,23 @@ BOOL Lock(DWORD dwTimeOut = INFINITE);
 ### <a name="parameters"></a>Parametry
 
 *dwTimeOut*<br/>
-Určuje dobu čekání na synchronizační objekt k dispozici (signalizován). Pokud je NEKONEČNÉ, `Lock` budou čekat na objekt je signál, před vrácením.
+Určuje dobu čekání na dostupnost objektu synchronizace (signalizováno). Pokud INFINITE, bude čekat, `Lock` dokud objekt je signalizován před návratem.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud funkce byla úspěšná. jinak 0.
+Nenulová, pokud byla funkce úspěšná; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud je synchronizační objekt signalizována, `Lock` úspěšně vrátí a vlákno je nyní vlastníkem objektu. Pokud se objekt synchronizace nonsignaled (není k dispozici), `Lock` počká na synchronizační objekt na signálování až číslo zadané v milisekundách *dwTimeOut* parametru. Pokud je synchronizační objekt stát nesignalizováno ve stanoveném čase, `Lock` vrátí chybu.
+Pokud je signalizován objekt `Lock` synchronizace, úspěšně se vrátí a vlákno nyní vlastní objekt. Pokud je objekt synchronizace nesignalizován `Lock` (není k dispozici), bude čekat, až bude objekt synchronizace signalizován až do počtu milisekund zadaný v parametru *dwTimeOut.* Pokud objekt synchronizace nebyl signalizován v zadaném `Lock` čase, vrátí selhání.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFC_Utilities#21](../../mfc/codesnippet/cpp/csinglelock-class_3.h)]
 
-##  <a name="unlock"></a>  CSingleLock::Unlock
+## <a name="csinglelockunlock"></a><a name="unlock"></a>CSingleLock::Odemknout
 
-Uvolní objekt synchronizace vlastněné `CSingleLock`.
+Uvolní objekt synchronizace vlastněný `CSingleLock`společností .
 
 ```
 BOOL Unlock();
@@ -146,27 +146,27 @@ BOOL Unlock(
 
 ### <a name="parameters"></a>Parametry
 
-*lCount*<br/>
-Počet přístupů k uvolnění. Musí být větší než 0. Pokud zadané by způsobila objektu počet překročí maximální, hodnota tohoto čítače se nemění a funkce vrátí FALSE.
+*lPočet*<br/>
+Počet přístupů k uvolnění. Musí být větší než 0. Pokud by zadaná částka způsobila, že počet objektů překročí jeho maximum, počet se nezmění a funkce vrátí hodnotu NEPRAVDA.
 
 *lPrevCount*<br/>
-Odkazuje na proměnnou, která předchozí počet synchronizační objekt přijetí. Pokud má hodnotu NULL, nevrátí se předchozího počtu.
+Odkazuje na proměnnou, která získá předchozí počet objektu synchronizace. Pokud null, předchozí počet není vrácena.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud funkce byla úspěšná. jinak 0.
+Nenulová, pokud byla funkce úspěšná; jinak 0.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce je volána `CSingleLock`jeho destruktor.
+Tato funkce je `CSingleLock`volána destruktorem společnosti.
 
-Pokud potřebujete více než jeden přístup počet semafor verzi, použijte tedy o druhou podobu `Unlock` a určit počet přístupů k uvolnění.
+Pokud potřebujete uvolnit více než jeden počet přístupu semaforu, použijte druhý formulář `Unlock` a zadejte počet přístupů k uvolnění.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFC_Utilities#21](../../mfc/codesnippet/cpp/csinglelock-class_3.h)]
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
-[CMultiLock – třída](../../mfc/reference/cmultilock-class.md)
+[Třída CMultiLock](../../mfc/reference/cmultilock-class.md)

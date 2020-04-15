@@ -9,48 +9,48 @@ helpviewer_keywords:
 - catch blocks [MFC], catching and deleting exceptions
 - execution [MFC], returns from within catch block
 ms.assetid: 7c233ff0-89de-4de0-a68a-9e9cdb164311
-ms.openlocfilehash: 0142ffddfb391ae8da878d9e5fe34629cf16cb52
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: 74022c8bc6af1d2cdf74fa452d4e0483637e542e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74246695"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81365518"
 ---
 # <a name="exceptions-catching-and-deleting-exceptions"></a>Výjimky: Zachytávání a mazání
 
-Následující pokyny a příklady vám ukážou, jak zachytit a odstranit výjimky. Další informace o klíčových slovech **Try**, **catch**a **throw** naleznete v tématu [moderní C++ osvědčené postupy pro výjimky a zpracování chyb](../cpp/errors-and-exception-handling-modern-cpp.md).
+Následující pokyny a příklady ukazují, jak zachytit a odstranit výjimky. Další informace o klíčových slovech **try**, **catch**a **throw** naleznete v [tématu Modern C++ best practices for exceptions and error handling](../cpp/errors-and-exception-handling-modern-cpp.md).
 
-Obslužné rutiny výjimek musí odstranit objekty výjimek, které zpracovávají, protože chyba při odstranění výjimky způsobí nevracení paměti vždy, když kód zachytí výjimku.
+Obslužné rutiny výjimek musí odstranit objekty výjimek, které zpracovávají, protože selhání odstranění výjimky způsobí nevracení paměti vždy, když tento kód zachytí výjimku.
 
-Blok **catch** musí odstranit výjimku, když:
+Blok **catch** musí odstranit výjimku, pokud:
 
-- Blok **catch** vyvolá novou výjimku.
+- Catch **catch** bloku vyvolá novou výjimku.
 
-   Proto nesmíte výjimku odstranit, pokud znovu vyvoláte stejnou výjimku:
+   Samozřejmě nesmíte odstranit výjimku, pokud znovu vyvoláte stejnou výjimku:
 
    [!code-cpp[NVC_MFCExceptions#3](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_1.cpp)]
 
-- Spuštění se vrátí z bloku **catch** .
+- Spuštění vrátí z v rámci bloku **catch.**
 
 > [!NOTE]
->  Při odstraňování `CException`lze výjimku odstranit pomocí členské funkce `Delete`. Nepoužívejte klíčové slovo **Delete** , protože může selhat, pokud výjimka není na haldě.
+> Při odstraňování `CException`, použijte `Delete` členská funkce k odstranění výjimky. Nepoužívejte **odstranit** klíčové slovo, protože může selhat, pokud výjimka není na haldě.
 
 #### <a name="to-catch-and-delete-exceptions"></a>Zachycení a odstranění výjimek
 
-1. K nastavení **testovaného** bloku použijte klíčové slovo **Try** . Spusťte všechny příkazy programu, které mohou vyvolat výjimku v rámci bloku **Try** .
+1. Pomocí klíčového slova **try** nastavte blok **try.** Spusťte všechny příkazy programu, které mohou vyvolat výjimku v rámci **bloku try.**
 
-   Pomocí klíčového slova **catch** nastavte blok **catch** . Do bloku **catch** umístěte kód pro zpracování výjimek. Kód v bloku **catch** je proveden pouze v případě, že kód v bloku **Try** vyvolá výjimku typu určeného v příkazu **catch** .
+   Pomocí klíčového slova **catch** nastavte blok **catch.** Umístěte kód zpracování výjimek do bloku **catch.** Kód v bloku **catch** je spuštěn pouze v případě, že kód v rámci bloku **try** vyvolá výjimku typu zadaného v příkazu **catch.**
 
-   Následující kostra ukazuje, jak jsou bloky **Try** a **catch** normálně uspořádány:
+   Následující kostra ukazuje, jak se běžně **uspořádány** bloky try a **catch:**
 
    [!code-cpp[NVC_MFCExceptions#4](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_2.cpp)]
 
-   Je-li vyvolána výjimka, řízení předá do prvního bloku **catch** , jehož deklarace výjimky odpovídá typu výjimky. Můžete selektivně zpracovat různé typy výjimek pomocí sekvenčních bloků **catch** , jak je uvedeno níže:
+   Při vyvolání výjimky, ovládací prvek předá první **catch** bloku, jehož deklarace výjimky odpovídá typu výjimky. Můžete selektivně zpracovávat různé typy výjimek se sekvenčními bloky **catch,** jak je uvedeno níže:
 
    [!code-cpp[NVC_MFCExceptions#5](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_3.cpp)]
 
-Další informace naleznete v tématu [výjimky: převod z makra výjimek knihovny MFC](../mfc/exceptions-converting-from-mfc-exception-macros.md).
+Další informace naleznete v [tématu Exceptions: Converting from Makra výjimek knihovny MFC](../mfc/exceptions-converting-from-mfc-exception-macros.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Zpracování výjimek](../mfc/exception-handling-in-mfc.md)

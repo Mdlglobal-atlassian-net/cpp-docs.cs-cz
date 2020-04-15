@@ -1,5 +1,5 @@
 ---
-title: Coledatetimespan – třída
+title: COleDateTimeSpan – třída
 ms.date: 03/27/2019
 f1_keywords:
 - COleDateTimeSpan
@@ -26,16 +26,16 @@ helpviewer_keywords:
 - Date data type, MFC encapsulation of
 - COleDateTimeSpan class
 ms.assetid: 7441526d-a30a-4019-8fb3-3fee6f897cbe
-ms.openlocfilehash: b68a984488f37326f3b0c1249a5f17a3eb76548b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7173fa0b6261ea718a02d399d944a1b5bb98b9f6
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62198197"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81317730"
 ---
-# <a name="coledatetimespan-class"></a>Coledatetimespan – třída
+# <a name="coledatetimespan-class"></a>COleDateTimeSpan – třída
 
-Představuje relativní časové rozpětí času.
+Představuje relativní čas, časové rozpětí.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -47,59 +47,59 @@ class COleDateTimeSpan
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[COleDateTimeSpan::COleDateTimeSpan](#coledatetimespan)|Vytvoří `COleDateTimeSpan` objektu.|
+|[COleDateTimeSpan::COleDateTimeSpan](#coledatetimespan)|Vytvoří `COleDateTimeSpan` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[COleDateTimeSpan::Format](#format)|Generuje formátovaný řetězec představující `COleDateTimeSpan` objektu.|
-|[COleDateTimeSpan::GetDays](#getdays)|Vrátí část pro den rozpětí to `COleDateTimeSpan` objekt představuje.|
-|[COleDateTimeSpan::GetHours](#gethours)|Vrátí část pro hodinu rozpětí to `COleDateTimeSpan` objekt představuje.|
-|[COleDateTimeSpan::GetMinutes](#getminutes)|Vrátí část pro minuty rozpětí to `COleDateTimeSpan` objekt představuje.|
-|[COleDateTimeSpan::GetSeconds](#getseconds)|Vrátí část pro sekundy rozpětí to `COleDateTimeSpan` objekt představuje.|
-|[COleDateTimeSpan::GetStatus](#getstatus)|Získá stav (platnosti) to `COleDateTimeSpan` objektu.|
-|[COleDateTimeSpan::GetTotalDays](#gettotaldays)|Vrátí počet dní, to `COleDateTimeSpan` objekt představuje.|
-|[COleDateTimeSpan::GetTotalHours](#gettotalhours)|Vrátí počet hodin, to `COleDateTimeSpan` objekt představuje.|
-|[COleDateTimeSpan::GetTotalMinutes](#gettotalminutes)|Vrátí počet minut, to `COleDateTimeSpan` objekt představuje.|
-|[COleDateTimeSpan::GetTotalSeconds](#gettotalseconds)|Vrátí počet sekund, to `COleDateTimeSpan` objekt představuje.|
-|[COleDateTimeSpan::SetDateTimeSpan](#setdatetimespan)|Nastaví hodnotu tohoto `COleDateTimeSpan` objektu.|
-|[COleDateTimeSpan::SetStatus](#setstatus)|Nastaví stav (platnosti) to `COleDateTimeSpan` objektu.|
+|[COleDateTimeSpan::Formát](#format)|Generuje formátovaný řetězec reprezentace `COleDateTimeSpan` objektu.|
+|[COleDateTimeSpan::GetDays](#getdays)|Vrátí denní část rozsahu, `COleDateTimeSpan` který tento objekt představuje.|
+|[COleDateTimeSpan::GetHours](#gethours)|Vrátí hodinovou část rozsahu, `COleDateTimeSpan` který tento objekt představuje.|
+|[COleDateTimeSpan::GetMinutes](#getminutes)|Vrátí minutovou část rozsahu, `COleDateTimeSpan` který tento objekt představuje.|
+|[COleDateTimeSpan::GetSeconds](#getseconds)|Vrátí druhou část rozsahu, `COleDateTimeSpan` který tento objekt představuje.|
+|[COleDateTimeSpan::GetStatus](#getstatus)|Získá stav (platnost) tohoto `COleDateTimeSpan` objektu.|
+|[COleDateTimeSpan::GetTotalDays](#gettotaldays)|Vrátí počet dní, `COleDateTimeSpan` které tento objekt představuje.|
+|[COleDateTimeSpan::GetTotalHours](#gettotalhours)|Vrátí počet hodin, `COleDateTimeSpan` které tento objekt představuje.|
+|[COleDateTimeSpan::GetTotalMinutes](#gettotalminutes)|Vrátí počet minut, `COleDateTimeSpan` které tento objekt představuje.|
+|[COleDateTimeSpan::GetTotalSeconds](#gettotalseconds)|Vrátí počet sekund, `COleDateTimeSpan` které tento objekt představuje.|
+|[COleDateTimeSpan::SetDateTimeSpan](#setdatetimespan)|Nastaví hodnotu `COleDateTimeSpan` tohoto objektu.|
+|[COleDateTimeSpan::SetStatus](#setstatus)|Nastaví stav (platnost) `COleDateTimeSpan` tohoto objektu.|
 
 ### <a name="public-operators"></a>Veřejné operátory
 
 |||
 |-|-|
-|[operátor +, -](#operator_add_-)|Přidat odečíst a změnit zaregistrujte `COleDateTimeSpan` hodnoty.|
-|[Operator +=-=](#operator_add_eq_-_eq)|Sčítání a odečítání `COleDateTimeSpan` hodnotu z této `COleDateTimeSpan` hodnotu.|
+|[operátor +, -](#operator_add_-)|Sečtením, odečtením `COleDateTimeSpan` a změnou znaménku pro hodnoty|
+|[operátor +=, -=](#operator_add_eq_-_eq)|Sečtěte a `COleDateTimeSpan` odečtěte hodnotu z této `COleDateTimeSpan` hodnoty.|
 |[operátor =](#operator_eq)|Zkopíruje `COleDateTimeSpan` hodnotu.|
-|[operátor ==, <, < =](#coledatetimespan_relational_operators)|Porovnat dva `COleDateTimeSpan` hodnoty.|
-|[operátor double](#operator_double)|Převede `COleDateTimeSpan` hodnota, která se **double**.|
+|[operátor ==, <, <=](#coledatetimespan_relational_operators)|Porovnejte dvě `COleDateTimeSpan` hodnoty.|
+|[operátor double](#operator_double)|Převede `COleDateTimeSpan` tuto hodnotu na **dvojitou**.|
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[COleDateTimeSpan::m_span](#m_span)|Obsahuje základní **double** to `COleDateTimeSpan` objektu.|
+|[COleDateTimeSpan::m_span](#m_span)|Obsahuje základní **double** `COleDateTimeSpan` pro tento objekt.|
 |[COleDateTimeSpan::m_status](#m_status)|Obsahuje stav tohoto `COleDateTimeSpan` objektu.|
 
 ## <a name="remarks"></a>Poznámky
 
-`COleDateTimeSpan` nemá základní třídu.
+`COleDateTimeSpan`nemá základní třídu.
 
-A `COleDateTimeSpan` udržuje času ve dnech.
+Udržuje `COleDateTimeSpan` čas ve dnech.
 
-`COleDateTimeSpan` se používá s jeho třídě doprovodných prvků [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md). `COleDateTime` zapouzdřuje `DATE` datovým typem automatizace OLE. `COleDateTime` představuje absolutní časové hodnoty. Všechny `COleDateTime` výpočty zahrnují `COleDateTimeSpan` hodnoty. Vztah mezi tyto třídy je podobná té mezi [CTime](../../atl-mfc-shared/reference/ctime-class.md) a [ctimespan –](../../atl-mfc-shared/reference/ctimespan-class.md).
+`COleDateTimeSpan`používá se s doprovodnou třídou [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md). `COleDateTime`zapouzdřuje `DATE` datový typ automatizace OLE. `COleDateTime`představuje absolutní časové hodnoty. Všechny `COleDateTime` výpočty `COleDateTimeSpan` zahrnují hodnoty. Vztah mezi těmito třídami je obdobou vztahu mezi [CTime](../../atl-mfc-shared/reference/ctime-class.md) a [CTimeSpan](../../atl-mfc-shared/reference/ctimespan-class.md).
 
-Další informace o `COleDateTime` a `COleDateTimeSpan` třídy, najdete v článku [datum a čas: Podpora automatizace](../../atl-mfc-shared/date-and-time-automation-support.md).
+Další informace o `COleDateTime` `COleDateTimeSpan` a třídy naleznete v článku [Datum a čas: Podpora automatizace](../../atl-mfc-shared/date-and-time-automation-support.md).
 
 ## <a name="requirements"></a>Požadavky
 
 **Záhlaví:** ATLComTime.h
 
-##  <a name="coledatetimespan_relational_operators"></a>  Coledatetimespan – relační operátory
+## <a name="coledatetimespan-relational-operators"></a><a name="coledatetimespan_relational_operators"></a>Relační operátory COleDateTimeSpan
 
 Operátory porovnání.
 
@@ -115,16 +115,16 @@ bool operator>=(const COleDateTimeSpan& dateSpan) const throw();
 ### <a name="parameters"></a>Parametry
 
 *dateSpan*<br/>
-`COleDateTimeSpan` k porovnání.
+Porovnat. `COleDateTimeSpan`
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Tyto operátory porovnávají dvě hodnoty Datum/čas rozpětí a vrátí hodnotu, pokud je podmínka true. v opačném případě FALSE.
+Tyto operátory porovnávají dvě hodnoty data a časového rozpětí a vrátí hodnotu TRUE, pokud je podmínka splněna; jinak FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
 > [!NOTE]
->  ATLASSERT dojde, pokud jeden z operandů je neplatný.
+> AtLASSERT dojde, pokud je neplatný operand.
 
 ### <a name="example"></a>Příklad
 
@@ -132,9 +132,9 @@ Tyto operátory porovnávají dvě hodnoty Datum/čas rozpětí a vrátí hodnot
 
 [!code-cpp[NVC_ATLMFC_Utilities#26](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_2.cpp)]
 
-##  <a name="coledatetimespan"></a>  COleDateTimeSpan::COleDateTimeSpan
+## <a name="coledatetimespancoledatetimespan"></a><a name="coledatetimespan"></a>COleDateTimeSpan::COleDateTimeSpan
 
-Vytvoří `COleDateTimeSpan` objektu.
+Vytvoří `COleDateTimeSpan` objekt.
 
 ```
 COleDateTimeSpan() throw();
@@ -145,32 +145,32 @@ COleDateTimeSpan(LONG lDays, int nHours, int nMins, int nSecs) throw();
 ### <a name="parameters"></a>Parametry
 
 *dblSpanSrc*<br/>
-Počet dní, které se mají zkopírovat do nové `COleDateTimeSpan` objektu.
+Počet dní, které mají být `COleDateTimeSpan` zkopírovány do nového objektu.
 
-*lDays*, *nHours*, *nMins*, *nSecs*<br/>
-Označení dne a času hodnot, které se mají zkopírovat do nové `COleDateTimeSpan` objektu.
+*lDny*, *nHodiny*, *nMins*, *nSecs*<br/>
+Označte denní a časové hodnoty, `COleDateTimeSpan` které mají být zkopírovány do nového objektu.
 
 ### <a name="remarks"></a>Poznámky
 
-Všechny tyto konstruktory vytvořit nový `COleDateTimeSpan` objekty inicializovány na zadanou hodnotu. Následuje stručný popis každého z těchto konstruktorů:
+Všechny tyto konstruktory `COleDateTimeSpan` vytvořit nové objekty inicializovány na zadanou hodnotu. Stručný popis každého z těchto konstruktorů je následující:
 
-- **() Coledatetimespan –** sestaví `COleDateTimeSpan` objekt je inicializován na hodnotu 0.
+- **COleDateTimeSpan( )** Vytvoří `COleDateTimeSpan` objekt inicializovaný na 0.
 
-- **Coledatetimespan – (** `dblSpanSrc` **)** sestaví `COleDateTimeSpan` objekt z hodnoty s plovoucí desetinnou čárkou.
+- **COleDateTimeSpan(** `dblSpanSrc` **)** Vytvoří `COleDateTimeSpan` objekt z hodnoty s plovoucí desetinnou tácem.
 
-- **Coledatetimespan – (** `lDays` **,** `nHours` **,** `nMins` **,** `nSecs` **)**  Vytvoří `COleDateTimeSpan` objekt je inicializován na zadané číselné hodnoty.
+- **COleDateTimeSpan(** `lDays` **,** `nHours` **,** `nMins` **,** `nSecs` **)** Vytvoří `COleDateTimeSpan` objekt inicializovaný na zadané číselné hodnoty.
 
-Stav nového `COleDateTimeSpan` objekt je nastaven na platný.
+Stav nového `COleDateTimeSpan` objektu je nastaven na platný.
 
-Další informace o hranice pro `COleDateTimeSpan` hodnoty, najdete v článku [datum a čas: Podpora automatizace](../../atl-mfc-shared/date-and-time-automation-support.md).
+Další informace o mezích `COleDateTimeSpan` pro hodnoty naleznete v článku [Datum a čas: Podpora automatizace](../../atl-mfc-shared/date-and-time-automation-support.md).
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_ATLMFC_Utilities#14](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_3.cpp)]
 
-##  <a name="format"></a>  COleDateTimeSpan::Format
+## <a name="coledatetimespanformat"></a><a name="format"></a>COleDateTimeSpan::Formát
 
-Generuje formátovaný řetězec představující `COleDateTimeSpan` objektu.
+Generuje formátovaný řetězec reprezentace `COleDateTimeSpan` objektu.
 
 ```
 CString Format(LPCTSTR pFormat) const;
@@ -179,47 +179,47 @@ CString Format(UINT nID) const;
 
 ### <a name="parameters"></a>Parametry
 
-*pFormat*<br/>
-Formátování řetězců podobně jako `printf` formátovací řetězec. Formátování kódů předchází procento (`%`) podepsat, jsou nahrazeny odpovídajícím `COleDateTimeSpan` komponenty. Jiné znaky v řetězci formátování se zkopírují do vráceném řetězci beze změny. Hodnota a význam kódů formátování pro `Format` jsou uvedeny níže:
+*pFormát*<br/>
+Formátovací řetězec podobný řetězci `printf` formátování. Kódy formátování, před nimiž`%`je podepsáno procento ( `COleDateTimeSpan` ) , jsou nahrazeny odpovídající komponentou. Ostatní znaky ve formátovacím řetězci jsou zkopírovány beze změny do vráceného řetězce. Hodnota a význam formátovacích kódů pro jsou uvedeny `Format` níže:
 
-- **%H** hodin aktuálního dne
+- **%H** Hodiny v aktuálním dni
 
-- **%M** minut do aktuální hodiny
+- **%M** Minuty v aktuální hodině
 
-- **%S** sekund do aktuální minuty
+- **%S** Sekundy v aktuální minutě
 
-- **%%** Znak procent
+- **%%** Znak procenta
 
-Čtyři kódy výše uvedené jsou pouze kódy, které bude přijímat formátu.
+Čtyři formátkódy uvedené výše jsou pouze kódy, které formát bude akceptovat.
 
 -
 
-*nID*<br/>
+*Nid*<br/>
 ID prostředku pro řetězec řízení formátu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-A `CString` obsahující formátovanou hodnotu data/času rozpětí.
+A, `CString` který obsahuje formátovanou hodnotu data a časového rozpětí.
 
 ### <a name="remarks"></a>Poznámky
 
-Volání těchto funkcí k vytvoření formátovaného reprezentace hodnoty časové období. Pokud se stav tohoto `COleDateTimeSpan` objekt má hodnotu null, vrácená hodnota je prázdný řetězec. Pokud je neplatný stav, vrácený řetězec je určená IDS_INVALID_DATETIMESPAN prostředek řetězce.
+Volání těchto funkcí k vytvoření formátované reprezentace hodnoty časového rozpětí. Pokud je stav `COleDateTimeSpan` tohoto objektu null, vrácená hodnota je prázdný řetězec. Pokud je stav neplatný, je návratový řetězec určen IDS_INVALID_DATETIMESPAN prostředků řetězce.
 
-Následuje stručný popis formulářů pro tuto funkci:
+Stručný popis formulářů pro tuto funkci je následující:
 
-**Format(** *pFormat* **)**<br/>
-Tento formulář naformátuje hodnotu pomocí řetězce formátu, který obsahuje speciální formátovacích kódech, které jsou uvozená znakem procent (%), stejně jako v `printf`. Formátovací řetězec je předat jako parametr funkce.
+**Formát(** *pFormat* **)**<br/>
+Tento formulář formátuje hodnotu pomocí formátovacího řetězce, který obsahuje speciální formátovací kódy, před nimiž je znaménko procenta (%), jako v `printf`. Formátovací řetězec je předán jako parametr funkce.
 
-**Formát (** *nID* **)**<br/>
-Tento formulář naformátuje hodnotu pomocí řetězce formátu, který obsahuje speciální formátovacích kódech, které jsou uvozená znakem procent (%), stejně jako v `printf`. Formátovací řetězec je prostředek. ID prostředku tento řetězec je předán jako parametr.
+**Formát(** *nID* **)**<br/>
+Tento formulář formátuje hodnotu pomocí formátovacího řetězce, který obsahuje speciální formátovací kódy, před nimiž je znaménko procenta (%), jako v `printf`. Formátovací řetězec je prostředek. ID tohoto řetězce prostředku je předán jako parametr.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_ATLMFC_Utilities#15](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_4.cpp)]
 
-##  <a name="getdays"></a>  COleDateTimeSpan::GetDays
+## <a name="coledatetimespangetdays"></a><a name="getdays"></a>COleDateTimeSpan::GetDays
 
-Načte část pro den z této hodnoty Datum/čas rozpětí.
+Načte denní část této hodnoty data a časového rozpětí.
 
 ```
 LONG GetDays() const throw();
@@ -227,17 +227,17 @@ LONG GetDays() const throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Část dne z této hodnoty Datum/čas rozpětí.
+Denní část této hodnoty data a časového rozpětí.
 
 ### <a name="remarks"></a>Poznámky
 
-Vrácení hodnoty z této funkce rozsahu přibližně - 3,615,000 a 3,615,000.
+Vrácené hodnoty z této funkce rozsahu mezi přibližně - 3,615,000 a 3,615,000.
 
-Pro další funkce, které se dotazují hodnotu `COleDateTimeSpan` objektu, najdete v následujících členské funkce:
+Další funkce, které dotaz `COleDateTimeSpan` hodnotu objektu, naleznete v následujících členských funkcí:
 
-- [Gethours –](#gethours)
+- [GetHours](#gethours)
 
-- [Getminutes –](#getminutes)
+- [GetMinutes](#getminutes)
 
 - [GetSeconds](#getseconds)
 
@@ -253,9 +253,9 @@ Pro další funkce, které se dotazují hodnotu `COleDateTimeSpan` objektu, najd
 
 [!code-cpp[NVC_ATLMFC_Utilities#16](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_5.cpp)]
 
-##  <a name="gethours"></a>  COleDateTimeSpan::GetHours
+## <a name="coledatetimespangethours"></a><a name="gethours"></a>COleDateTimeSpan::GetHours
 
-Načte část pro hodinu z této hodnoty Datum/čas rozpětí.
+Načte hodinovou část této hodnoty data a časového rozpětí.
 
 ```
 LONG GetHours() const throw();
@@ -263,17 +263,17 @@ LONG GetHours() const throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Části hodin této hodnoty Datum/čas rozpětí.
+Část hodin této hodnoty data a časového rozpětí.
 
 ### <a name="remarks"></a>Poznámky
 
-Návratové hodnoty z tohoto rozsahu funkce, mezi - 23 a 23.
+Vrácené hodnoty z této funkce rozsahu mezi - 23 a 23.
 
-Pro další funkce, které se dotazují hodnotu `COleDateTimeSpan` objektu, najdete v následujících členské funkce:
+Další funkce, které dotaz `COleDateTimeSpan` hodnotu objektu, naleznete v následujících členských funkcí:
 
 - [GetDays](#getdays)
 
-- [Getminutes –](#getminutes)
+- [GetMinutes](#getminutes)
 
 - [GetSeconds](#getseconds)
 
@@ -289,9 +289,9 @@ Pro další funkce, které se dotazují hodnotu `COleDateTimeSpan` objektu, najd
 
 [!code-cpp[NVC_ATLMFC_Utilities#17](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_6.cpp)]
 
-##  <a name="getminutes"></a>  COleDateTimeSpan::GetMinutes
+## <a name="coledatetimespangetminutes"></a><a name="getminutes"></a>COleDateTimeSpan::GetMinutes
 
-Načte část pro minuty z této hodnoty Datum/čas rozpětí.
+Načte minutovou část této hodnoty data a časového rozpětí.
 
 ```
 LONG GetMinutes() const throw();
@@ -299,17 +299,17 @@ LONG GetMinutes() const throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Část minut této hodnoty Datum/čas rozpětí.
+Minutová část této hodnoty data a časového rozpětí.
 
 ### <a name="remarks"></a>Poznámky
 
-Návratové hodnoty z tohoto rozsahu funkce, mezi - 59 a 59.
+Vrácené hodnoty z této funkce rozsahu mezi - 59 a 59.
 
-Pro další funkce, které se dotazují hodnotu `COleDateTimeSpan` objektu, najdete v následujících členské funkce:
+Další funkce, které dotaz `COleDateTimeSpan` hodnotu objektu, naleznete v následujících členských funkcí:
 
 - [GetDays](#getdays)
 
-- [Gethours –](#gethours)
+- [GetHours](#gethours)
 
 - [GetSeconds](#getseconds)
 
@@ -325,9 +325,9 @@ Pro další funkce, které se dotazují hodnotu `COleDateTimeSpan` objektu, najd
 
 [!code-cpp[NVC_ATLMFC_Utilities#18](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_7.cpp)]
 
-##  <a name="getseconds"></a>  COleDateTimeSpan::GetSeconds
+## <a name="coledatetimespangetseconds"></a><a name="getseconds"></a>COleDateTimeSpan::GetSeconds
 
-Načte část pro sekundy z této hodnoty Datum/čas rozpětí.
+Načte druhou část této hodnoty data a časového rozpětí.
 
 ```
 LONG GetSeconds() const throw();
@@ -335,19 +335,19 @@ LONG GetSeconds() const throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Část sekund této hodnoty Datum/čas rozpětí.
+Část sekund této hodnoty data a časového rozpětí.
 
 ### <a name="remarks"></a>Poznámky
 
-Návratové hodnoty z tohoto rozsahu funkce, mezi - 59 a 59.
+Vrácené hodnoty z této funkce rozsahu mezi - 59 a 59.
 
-Pro další funkce, které se dotazují hodnotu `COleDateTimeSpan` objektu, najdete v následujících členské funkce:
+Další funkce, které dotaz `COleDateTimeSpan` hodnotu objektu, naleznete v následujících členských funkcí:
 
 - [GetDays](#getdays)
 
-- [Gethours –](#gethours)
+- [GetHours](#gethours)
 
-- [Getminutes –](#getminutes)
+- [GetMinutes](#getminutes)
 
 - [GetTotalDays](#gettotaldays)
 
@@ -361,9 +361,9 @@ Pro další funkce, které se dotazují hodnotu `COleDateTimeSpan` objektu, najd
 
 [!code-cpp[NVC_ATLMFC_Utilities#19](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_8.cpp)]
 
-##  <a name="getstatus"></a>  COleDateTimeSpan::GetStatus
+## <a name="coledatetimespangetstatus"></a><a name="getstatus"></a>COleDateTimeSpan::GetStatus
 
-Získá stav (platnosti) to `COleDateTimeSpan` objektu.
+Získá stav (platnost) tohoto `COleDateTimeSpan` objektu.
 
 ```
 DateTimeSpanStatus GetStatus() const throw();
@@ -371,11 +371,11 @@ DateTimeSpanStatus GetStatus() const throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Stav této `COleDateTimeSpan` hodnotu.
+Stav této `COleDateTimeSpan` hodnoty.
 
 ### <a name="remarks"></a>Poznámky
 
-Návratová hodnota je definována `DateTimeSpanStatus` Výčtový typ, který je definován v rámci `COleDateTimeSpan` třídy.
+Vrácená hodnota je `DateTimeSpanStatus` definována ve výčtu typu, `COleDateTimeSpan` který je definován v rámci třídy.
 
 ```
 enum DateTimeSpanStatus{
@@ -385,29 +385,29 @@ enum DateTimeSpanStatus{
 };
 ```
 
-Stručný popis tyto hodnoty stavu najdete v následujícím seznamu:
+Stručný popis těchto hodnot stavu naleznete v následujícím seznamu:
 
-- `COleDateTimeSpan::valid` Označuje, že tento `COleDateTimeSpan` objektu je neplatný.
+- `COleDateTimeSpan::valid`Označuje, `COleDateTimeSpan` že tento objekt je platný.
 
-- `COleDateTimeSpan::invalid` Označuje, že tento `COleDateTimeSpan` objekt je neplatný; to znamená, jeho hodnota může být nesprávný.
+- `COleDateTimeSpan::invalid`Označuje, `COleDateTimeSpan` že tento objekt je neplatný; to znamená, že jeho hodnota může být nesprávná.
 
-- `COleDateTimeSpan::null` Označuje, že tento `COleDateTimeSpan` objekt má hodnotu null, to znamená, že byla zadána žádná hodnota pro tento objekt. (To je v tom smyslu databáze "mít žádnou hodnotu" na rozdíl od C++ NULL "null".)
+- `COleDateTimeSpan::null`Označuje, `COleDateTimeSpan` že tento objekt je null, to znamená, že pro tento objekt nebyla zadána žádná hodnota. (Toto je "null" ve smyslu databáze "s žádnou hodnotu," na rozdíl od C++ NULL.)
 
-Stav `COleDateTimeSpan` objekt není platný v následujících případech:
+Stav objektu `COleDateTimeSpan` je neplatný v následujících případech:
 
-- Pokud tento objekt došlo přetečení nebo podtečení během přiřazení aritmetické operace, jmenovitě `+=` nebo `-=`.
+- Pokud tento objekt došlo k přetečení nebo podtečení během operace `+=` `-=`aritmetické přiřazení, a to nebo .
 
-- Pokud na tento objekt byl přiřazen neplatnou hodnotu.
+- Pokud byla tomuto objektu přiřazena neplatná hodnota.
 
-- Pokud se stav tohoto objektu explicitně nastavit na neplatné použití `SetStatus`.
+- Pokud byl stav tohoto objektu explicitně nastaven na neplatný pomocí `SetStatus`.
 
-Další informace o operacích, které může nastavit stav na neplatný najdete v tématu [COleDateTimeSpan::operator +, -](../../atl-mfc-shared/reference/coledatetime-class.md#operator_add_-) a [COleDateTimeSpan::operator +=,-=](../../atl-mfc-shared/reference/coledatetime-class.md#operator_add_eq_-_eq).
+Další informace o operacích, které mohou nastavit stav na neplatný, naleznete v [tématu COleDateTimeSpan::operator +, -](../../atl-mfc-shared/reference/coledatetime-class.md#operator_add_-) a [COleDateTimeSpan::operator ==, -=](../../atl-mfc-shared/reference/coledatetime-class.md#operator_add_eq_-_eq).
 
-Další informace o hranice pro `COleDateTimeSpan` hodnoty, najdete v článku [datum a čas: Podpora automatizace](../../atl-mfc-shared/date-and-time-automation-support.md).
+Další informace o mezích `COleDateTimeSpan` pro hodnoty naleznete v článku [Datum a čas: Podpora automatizace](../../atl-mfc-shared/date-and-time-automation-support.md).
 
-##  <a name="gettotaldays"></a>  COleDateTimeSpan::GetTotalDays
+## <a name="coledatetimespangettotaldays"></a><a name="gettotaldays"></a>COleDateTimeSpan::GetTotalDays
 
-Tato hodnota datum/čas rozpětí dní vyjádřeny načte.
+Načte tuto hodnotu data a časového rozpětí vyjádřenou ve dnech.
 
 ```
 double GetTotalDays() const throw();
@@ -415,19 +415,19 @@ double GetTotalDays() const throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Tato hodnota datum/čas – značka span, dní vyjádřeny. I když je tato funkce prototypem vrátí typ double, vždy vrátí celočíselnou hodnotu.
+Tato hodnota data a časového rozpětí vyjádřená ve dnech. Přestože tato funkce je prototypován vrátit double, vždy vrátí hodnotu celé číslo.
 
 ### <a name="remarks"></a>Poznámky
 
-Návratové hodnoty z této funkce rozsahu přibližně - 3.65e6 a 3.65e6.
+Vrácené hodnoty z této funkce rozsahu mezi přibližně - 3.65e6 a 3.65e6.
 
-Pro další funkce, které se dotazují hodnotu `COleDateTimeSpan` objektu, najdete v následujících členské funkce:
+Další funkce, které dotaz `COleDateTimeSpan` hodnotu objektu, naleznete v následujících členských funkcí:
 
 - [GetDays](#getdays)
 
-- [Gethours –](#gethours)
+- [GetHours](#gethours)
 
-- [Getminutes –](#getminutes)
+- [GetMinutes](#getminutes)
 
 - [GetSeconds](#getseconds)
 
@@ -441,9 +441,9 @@ Pro další funkce, které se dotazují hodnotu `COleDateTimeSpan` objektu, najd
 
 [!code-cpp[NVC_ATLMFC_Utilities#20](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_9.cpp)]
 
-##  <a name="gettotalhours"></a>  COleDateTimeSpan::GetTotalHours
+## <a name="coledatetimespangettotalhours"></a><a name="gettotalhours"></a>COleDateTimeSpan::GetTotalHours
 
-Načte tato hodnota datum/čas rozpětí vyjádřené v hodinách.
+Načte tuto hodnotu data a časového rozpětí vyjádřenou v hodinách.
 
 ```
 double GetTotalHours() const throw();
@@ -451,19 +451,19 @@ double GetTotalHours() const throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Tato hodnota datum/čas – značka span, vyjádřené v hodinách. I když je tato funkce prototypem vrátí typ double, vždy vrátí celočíselnou hodnotu.
+Tato hodnota data a časového rozpětí vyjádřená v hodinách. Přestože tato funkce je prototypován vrátit double, vždy vrátí hodnotu celé číslo.
 
 ### <a name="remarks"></a>Poznámky
 
-Návratové hodnoty z této funkce rozsahu přibližně - 8.77e7 a 8.77e7.
+Vrácené hodnoty z této funkce rozsahu mezi přibližně - 8.77e7 a 8.77e7.
 
-Pro další funkce, které se dotazují hodnotu `COleDateTimeSpan` objektu, najdete v následujících členské funkce:
+Další funkce, které dotaz `COleDateTimeSpan` hodnotu objektu, naleznete v následujících členských funkcí:
 
 - [GetDays](#getdays)
 
-- [Gethours –](#gethours)
+- [GetHours](#gethours)
 
-- [Getminutes –](#getminutes)
+- [GetMinutes](#getminutes)
 
 - [GetSeconds](#getseconds)
 
@@ -475,11 +475,11 @@ Pro další funkce, které se dotazují hodnotu `COleDateTimeSpan` objektu, najd
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [GetTotalDays](#gettotaldays).
+Viz příklad [gettotaldays](#gettotaldays).
 
-##  <a name="gettotalminutes"></a>  COleDateTimeSpan::GetTotalMinutes
+## <a name="coledatetimespangettotalminutes"></a><a name="gettotalminutes"></a>COleDateTimeSpan::GetTotalMinutes
 
-Načte tato hodnota datum/čas rozpětí vyjádřené v minutách.
+Načte tuto hodnotu data a časového rozpětí vyjádřenou v minutách.
 
 ```
 double GetTotalMinutes() const throw();
@@ -487,19 +487,19 @@ double GetTotalMinutes() const throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Tato hodnota datum/čas – značka span, vyjádřené v minutách. I když je tato funkce prototypem vrátí typ double, vždy vrátí celočíselnou hodnotu.
+Tato hodnota data a časového rozpětí vyjádřená v minutách. Přestože tato funkce je prototypován vrátit double, vždy vrátí hodnotu celé číslo.
 
 ### <a name="remarks"></a>Poznámky
 
-Návratové hodnoty z této funkce rozsahu přibližně - 5.26e9 a 5.26e9.
+Vrácené hodnoty z této funkce rozsahu mezi přibližně - 5.26e9 a 5.26e9.
 
-Pro další funkce, které se dotazují hodnotu `COleDateTimeSpan` objektu, najdete v následujících členské funkce:
+Další funkce, které dotaz `COleDateTimeSpan` hodnotu objektu, naleznete v následujících členských funkcí:
 
 - [GetDays](#getdays)
 
-- [Gethours –](#gethours)
+- [GetHours](#gethours)
 
-- [Getminutes –](#getminutes)
+- [GetMinutes](#getminutes)
 
 - [GetSeconds](#getseconds)
 
@@ -511,11 +511,11 @@ Pro další funkce, které se dotazují hodnotu `COleDateTimeSpan` objektu, najd
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [GetTotalDays](#gettotaldays).
+Viz příklad [gettotaldays](#gettotaldays).
 
-##  <a name="gettotalseconds"></a>  COleDateTimeSpan::GetTotalSeconds
+## <a name="coledatetimespangettotalseconds"></a><a name="gettotalseconds"></a>COleDateTimeSpan::GetTotalSeconds
 
-Načte tato hodnota datum/čas – interval v sekundách.
+Načte tuto hodnotu data a časového rozpětí vyjádřenou v sekundách.
 
 ```
 double GetTotalSeconds() const throw();
@@ -523,19 +523,19 @@ double GetTotalSeconds() const throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Tato hodnota datum/čas – značka span, v sekundách. I když je tato funkce prototypem vrátí typ double, vždy vrátí celočíselnou hodnotu.
+Tato hodnota data a časového rozpětí vyjádřená v sekundách. Přestože tato funkce je prototypován vrátit double, vždy vrátí hodnotu celé číslo.
 
 ### <a name="remarks"></a>Poznámky
 
-Návratové hodnoty z této funkce v rozsahu mezi přibližně – 3.16e11 k 3.16e11.
+Vrácené hodnoty z této funkce rozsahu mezi přibližně - 3.16e11 do 3.16e11.
 
-Pro další funkce, které se dotazují hodnotu `COleDateTimeSpan` objektu, najdete v následujících členské funkce:
+Další funkce, které dotaz `COleDateTimeSpan` hodnotu objektu, naleznete v následujících členských funkcí:
 
 - [GetDays](#getdays)
 
-- [Gethours –](#gethours)
+- [GetHours](#gethours)
 
-- [Getminutes –](#getminutes)
+- [GetMinutes](#getminutes)
 
 - [GetSeconds](#getseconds)
 
@@ -547,11 +547,11 @@ Pro další funkce, které se dotazují hodnotu `COleDateTimeSpan` objektu, najd
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [GetTotalDays](#gettotaldays).
+Viz příklad [gettotaldays](#gettotaldays).
 
-##  <a name="m_span"></a>  COleDateTimeSpan::m_span
+## <a name="coledatetimespanm_span"></a><a name="m_span"></a>COleDateTimeSpan::m_span
 
-Základní **double** hodnota `COleDateTime` objektu.
+Základní **dvojitá** hodnota `COleDateTime` pro tento objekt.
 
 ```
 double m_span;
@@ -559,14 +559,14 @@ double m_span;
 
 ### <a name="remarks"></a>Poznámky
 
-Tato hodnota představuje datum nebo období ve dnech.
+Tato hodnota vyjadřuje datum a časové rozpětí ve dnech.
 
 > [!CAUTION]
->  Změna hodnoty v **double** datový člen se změní hodnota tohoto `COleDateTimeSpan` objektu. Nezmění stav této `COleDateTimeSpan` objektu.
+> Změna hodnoty v **dvojitém** datovém členu `COleDateTimeSpan` změní hodnotu tohoto objektu. Nezmění stav tohoto `COleDateTimeSpan` objektu.
 
-##  <a name="m_status"></a>  COleDateTimeSpan::m_status
+## <a name="coledatetimespanm_status"></a><a name="m_status"></a>COleDateTimeSpan::m_status
 
-Typ pro tento datový člen je výčtového typu `DateTimeSpanStatus`, který je definován v rámci `COleDateTimeSpan` třídy.
+Typ pro tento datový člen je výčtový typ `DateTimeSpanStatus`, `COleDateTimeSpan` který je definován v rámci třídy.
 
 ```
 DateTimeSpanStatus m_status;
@@ -582,30 +582,30 @@ enum DateTimeSpanStatus{
    };
 ```
 
-Stručný popis tyto hodnoty stavu najdete v následujícím seznamu:
+Stručný popis těchto hodnot stavu naleznete v následujícím seznamu:
 
-- `COleDateTimeSpan::valid` Označuje, že tento `COleDateTimeSpan` objektu je neplatný.
+- `COleDateTimeSpan::valid`Označuje, `COleDateTimeSpan` že tento objekt je platný.
 
-- `COleDateTimeSpan::invalid` Označuje, že tento `COleDateTimeSpan` objekt je neplatný; to znamená, jeho hodnota může být nesprávný.
+- `COleDateTimeSpan::invalid`Označuje, `COleDateTimeSpan` že tento objekt je neplatný; to znamená, že jeho hodnota může být nesprávná.
 
-- `COleDateTimeSpan::null` Označuje, že tento `COleDateTimeSpan` objekt má hodnotu null, to znamená, že byla zadána žádná hodnota pro tento objekt. (To je v tom smyslu databáze "mít žádnou hodnotu" na rozdíl od C++ NULL "null".)
+- `COleDateTimeSpan::null`Označuje, `COleDateTimeSpan` že tento objekt je null, to znamená, že pro tento objekt nebyla zadána žádná hodnota. (Toto je "null" ve smyslu databáze "s žádnou hodnotu," na rozdíl od C++ NULL.)
 
-Stav `COleDateTimeSpan` objekt není platný v následujících případech:
+Stav objektu `COleDateTimeSpan` je neplatný v následujících případech:
 
-- Pokud tento objekt došlo přetečení nebo podtečení během přiřazení aritmetické operace, jmenovitě `+=` nebo `-=`.
+- Pokud tento objekt došlo k přetečení nebo podtečení během operace `+=` `-=`aritmetické přiřazení, a to nebo .
 
-- Pokud na tento objekt byl přiřazen neplatnou hodnotu.
+- Pokud byla tomuto objektu přiřazena neplatná hodnota.
 
-- Pokud se stav tohoto objektu explicitně nastavit na neplatné použití [SetStatus](#setstatus).
+- Pokud byl stav tohoto objektu explicitně nastaven na neplatný pomocí [funkce SetStatus](#setstatus).
 
-Další informace o operacích, které může nastavit stav na neplatný najdete v tématu [COleDateTimeSpan::operator +, -](../../atl-mfc-shared/reference/coledatetime-class.md#operator_add_-) a [COleDateTimeSpan::operator +=,-=](../../atl-mfc-shared/reference/coledatetime-class.md#operator_add_eq_-_eq).
+Další informace o operacích, které mohou nastavit stav na neplatný, naleznete v [tématu COleDateTimeSpan::operator +, -](../../atl-mfc-shared/reference/coledatetime-class.md#operator_add_-) a [COleDateTimeSpan::operator ==, -=](../../atl-mfc-shared/reference/coledatetime-class.md#operator_add_eq_-_eq).
 
 > [!CAUTION]
->  Pro pokročilé situacích programování je tomuto datovému členu. Používejte vložené členské funkce [GetStatus](#getstatus) a [SetStatus](#setstatus). Zobrazit `SetStatus` pro další upozornění týkající se explicitním nastavením tomuto datovému členu.
+> Tento datový člen je určen pro pokročilé programovací situace. Měli byste použít včleněné členské funkce [GetStatus](#getstatus) a [SetStatus](#setstatus). Viz `SetStatus` další upozornění týkající se explicitní nastavení tohoto datového člena.
 
-Další informace o hranice pro `COleDateTimeSpan` hodnoty, najdete v článku [datum a čas: Podpora automatizace](../../atl-mfc-shared/date-and-time-automation-support.md).
+Další informace o mezích `COleDateTimeSpan` pro hodnoty naleznete v článku [Datum a čas: Podpora automatizace](../../atl-mfc-shared/date-and-time-automation-support.md).
 
-##  <a name="operator_eq"></a>  COleDateTimeSpan::operator =
+## <a name="coledatetimespanoperator-"></a><a name="operator_eq"></a>COleDateTimeSpan::operátor =
 
 Zkopíruje `COleDateTimeSpan` hodnotu.
 
@@ -615,11 +615,11 @@ COleDateTimeSpan& operator=(double dblSpanSrc) throw();
 
 ### <a name="remarks"></a>Poznámky
 
-Operátoru přiřazení. přetížení zkopíruje zdrojová hodnota datum/čas rozpětí do této `COleDateTimeSpan` objektu.
+Tento operátor přetíženého přiřazení zkopíruje zdrojovou hodnotu `COleDateTimeSpan` data a časového rozpětí do tohoto objektu.
 
-##  <a name="operator_add_-"></a>  COleDateTimeSpan::operator +, -
+## <a name="coledatetimespanoperator---"></a><a name="operator_add_-"></a>COleDateTimeSpan::operátor +, -
 
-Přidat odečíst a změnit zaregistrujte `COleDateTimeSpan` hodnoty.
+Sečtením, odečtením `COleDateTimeSpan` a změnou znaménku pro hodnoty
 
 ```
 COleDateTimeSpan operator+(const COleDateTimeSpan& dateSpan) const throw();
@@ -629,21 +629,21 @@ COleDateTimeSpan operator-() const throw();
 
 ### <a name="remarks"></a>Poznámky
 
-První dva operátory umožňují operátorů sčítání a odečítání hodnoty Datum/čas rozpětí. Třetí umožňuje změnit na znaménko hodnoty Datum/čas rozpětí.
+První dva operátory umožňují přidat a odečíst hodnoty data a časového rozpětí. Třetí umožňuje změnit znaménko hodnoty data a časového rozpětí.
 
-Pokud platí některá z operandů s hodnotou null, výsledný stav `COleDateTimeSpan` hodnotu null.
+Pokud některý z operandů je null, stav `COleDateTimeSpan` výsledné hodnoty je null.
 
-Pokud jeden z operandů je neplatný a druhá nemá hodnotu null, výsledný stav `COleDateTimeSpan` hodnota není platná.
+Pokud je některý z operandů neplatný a druhý není null, je stav výsledné `COleDateTimeSpan` hodnoty neplatný.
 
-Další informace o stavu platný, neplatné a null hodnoty, najdete v článku [m_status](#m_status) členské proměnné.
+Další informace o platných, neplatných a nulových hodnotách stavu naleznete v [proměnné m_status](#m_status) člena.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_ATLMFC_Utilities#23](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_10.cpp)]
 
-##  <a name="operator_add_eq_-_eq"></a>  COleDateTimeSpan::operator +=-=
+## <a name="coledatetimespanoperator---"></a><a name="operator_add_eq_-_eq"></a>COleDateTimeSpan::operátor +=, -=
 
-Sčítání a odečítání `COleDateTimeSpan` hodnotu z této `COleDateTimeSpan` hodnotu.
+Sečtěte a `COleDateTimeSpan` odečtěte hodnotu z této `COleDateTimeSpan` hodnoty.
 
 ```
 COleDateTimeSpan& operator+=(const COleDateTimeSpan dateSpan) throw();
@@ -652,19 +652,19 @@ COleDateTimeSpan& operator-=(const COleDateTimeSpan dateSpan) throw();
 
 ### <a name="remarks"></a>Poznámky
 
-Tyto operátory umožňují operátorů sčítání a odečítání hodnoty Datum/čas rozpětí z tohoto `COleDateTimeSpan` objektu. Pokud platí některá z operandů s hodnotou null, výsledný stav `COleDateTimeSpan` hodnotu null.
+Tyto operátory umožňují přidat a odečíst hodnoty data `COleDateTimeSpan` a časového rozpětí z tohoto objektu. Pokud některý z operandů je null, stav `COleDateTimeSpan` výsledné hodnoty je null.
 
-Pokud jeden z operandů je neplatný a druhá nemá hodnotu null, výsledný stav `COleDateTimeSpan` hodnota není platná.
+Pokud je některý z operandů neplatný a druhý není null, je stav výsledné `COleDateTimeSpan` hodnoty neplatný.
 
-Další informace o stavu platný, neplatné a null hodnoty, najdete v článku [m_status](#m_status) členské proměnné.
+Další informace o platných, neplatných a nulových hodnotách stavu naleznete v [proměnné m_status](#m_status) člena.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_ATLMFC_Utilities#24](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_11.cpp)]
 
-##  <a name="operator_double"></a>  COleDateTimeSpan::operator double
+## <a name="coledatetimespanoperator-double"></a><a name="operator_double"></a>COleDateTimeSpan::operátor double
 
-Převede `COleDateTimeSpan` hodnota, která se **double**.
+Převede `COleDateTimeSpan` tuto hodnotu na **dvojitou**.
 
 ```
 operator double() const throw();
@@ -672,11 +672,11 @@ operator double() const throw();
 
 ### <a name="remarks"></a>Poznámky
 
-Tento operátor vrátí hodnotu tohoto `COleDateTimeSpan` hodnotu jako číslo s plovoucí desetinnou čárkou dnů.
+Tento operátor vrátí hodnotu této `COleDateTimeSpan` hodnoty jako počet dní s plovoucí desetinnou desetinnou.
 
-##  <a name="setdatetimespan"></a>  COleDateTimeSpan::SetDateTimeSpan
+## <a name="coledatetimespansetdatetimespan"></a><a name="setdatetimespan"></a>COleDateTimeSpan::SetDateTimeSpan
 
-Nastaví hodnotu z této hodnoty Datum/čas rozpětí.
+Nastaví hodnotu této hodnoty data a časového rozpětí.
 
 ```
 void SetDateTimeSpan(LONG lDays, int nHours, int nMins, int nSecs) throw();
@@ -684,18 +684,18 @@ void SetDateTimeSpan(LONG lDays, int nHours, int nMins, int nSecs) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*lDays*, *nHours*, *nMins*, *nSecs*<br/>
-Označení rozsahu data a časový rozsah hodnot, které se mají zkopírovat do tohoto `COleDateTimeSpan` objektu.
+*lDny*, *nHodiny*, *nMins*, *nSecs*<br/>
+Označte hodnoty data a časového rozpětí, které mají `COleDateTimeSpan` být zkopírovány do tohoto objektu.
 
 ### <a name="remarks"></a>Poznámky
 
-Pro funkce, které se dotazují hodnotu `COleDateTimeSpan` objektu, najdete v následujících členské funkce:
+Funkce, které dotaz hodnotu objektu, `COleDateTimeSpan` naleznete v následujících členských funkcí:
 
 - [GetDays](#getdays)
 
-- [Gethours –](#gethours)
+- [GetHours](#gethours)
 
-- [Getminutes –](#getminutes)
+- [GetMinutes](#getminutes)
 
 - [GetSeconds](#getseconds)
 
@@ -711,9 +711,9 @@ Pro funkce, které se dotazují hodnotu `COleDateTimeSpan` objektu, najdete v n�
 
 [!code-cpp[NVC_ATLMFC_Utilities#21](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_12.cpp)]
 
-##  <a name="setstatus"></a>  COleDateTimeSpan::SetStatus
+## <a name="coledatetimespansetstatus"></a><a name="setstatus"></a>COleDateTimeSpan::SetStatus
 
-Nastaví stav (platnosti) to `COleDateTimeSpan` objektu.
+Nastaví stav (platnost) `COleDateTimeSpan` tohoto objektu.
 
 ```
 void SetStatus(DateTimeSpanStatus status) throw();
@@ -721,12 +721,12 @@ void SetStatus(DateTimeSpanStatus status) throw();
 
 ### <a name="parameters"></a>Parametry
 
-*status*<br/>
-Nová hodnota pro tento stav `COleDateTimeSpan` objektu.
+*Stav*<br/>
+Nová hodnota stavu `COleDateTimeSpan` pro tento objekt.
 
 ### <a name="remarks"></a>Poznámky
 
-*Stav* hodnota parametru je definována `DateTimeSpanStatus` Výčtový typ, který je definován v rámci `COleDateTimeSpan` třídy.
+Hodnota parametru *Stav* je `DateTimeSpanStatus` definována ve výčtu typu, který je definován v rámci třídy. `COleDateTimeSpan`
 
 ```
 enum DateTimeSpanStatus{
@@ -736,25 +736,25 @@ enum DateTimeSpanStatus{
    };
 ```
 
-Stručný popis tyto hodnoty stavu najdete v následujícím seznamu:
+Stručný popis těchto hodnot stavu naleznete v následujícím seznamu:
 
-- `COleDateTimeSpan::valid` Označuje, že tento `COleDateTimeSpan` objektu je neplatný.
+- `COleDateTimeSpan::valid`Označuje, `COleDateTimeSpan` že tento objekt je platný.
 
-- `COleDateTimeSpan::invalid` Označuje, že tento `COleDateTimeSpan` objekt je neplatný; to znamená, jeho hodnota může být nesprávný.
+- `COleDateTimeSpan::invalid`Označuje, `COleDateTimeSpan` že tento objekt je neplatný; to znamená, že jeho hodnota může být nesprávná.
 
-- `COleDateTimeSpan::null` Označuje, že tento `COleDateTimeSpan` objekt má hodnotu null, to znamená, že byla zadána žádná hodnota pro tento objekt. (To je v tom smyslu databáze "mít žádnou hodnotu" na rozdíl od C++ NULL "null".)
+- `COleDateTimeSpan::null`Označuje, `COleDateTimeSpan` že tento objekt je null, to znamená, že pro tento objekt nebyla zadána žádná hodnota. (Toto je "null" ve smyslu databáze "s žádnou hodnotu," na rozdíl od C++ NULL.)
 
    > [!CAUTION]
-   > Tato funkce je pro pokročilé situacích programování. Tato funkce nezmění data v tomto objektu. Nejčastěji se používají se nastavit stav na **null** nebo **neplatný**. Všimněte si, že operátor přiřazení ([operátoru =](#operator_eq)) a [SetDateTimeSpan](#setdatetimespan) nastavit stav objektu podle hodnoty, které zdroj.
+   > Tato funkce je určena pro pokročilé programovací situace. Tato funkce nemění data v tomto objektu. Nejčastěji se používá k nastavení stavu **na hodnotu null** nebo **neplatné**. Všimněte si, že operátor přiřazení ([operátor =](#operator_eq)) a [SetDateTimeSpan](#setdatetimespan) nastavit stav objektu na základě zdrojové hodnoty.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_ATLMFC_Utilities#22](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_13.cpp)]
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [COleDateTime – třída](../../atl-mfc-shared/reference/coledatetime-class.md)<br/>
 [CTime – třída](../../atl-mfc-shared/reference/ctime-class.md)<br/>
 [CTimeSpan – třída](../../atl-mfc-shared/reference/ctimespan-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
-[Sdílené třídy ATL/MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)
+[Sdílené třídy KNIHOVNY ATL/Knihovny MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)

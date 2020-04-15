@@ -1,5 +1,5 @@
 ---
-title: 'Nabídky a prostředky: Slučováním nabídek'
+title: 'Nabídky a prostředky: Sloučení nabídky'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - status bars [MFC], OLE document applications
@@ -10,49 +10,49 @@ helpviewer_keywords:
 - merging toolbar and status bar [MFC]
 - menus [MFC], OLE document applications
 ms.assetid: 80b6bb17-d830-4122-83f0-651fc112d4d1
-ms.openlocfilehash: 1f7af7007e72cb8e01022c81a244fc70ba52a5cc
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: 149af83bd53b7a97fd264bd6b18701fc9f64ea1f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66504827"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364759"
 ---
-# <a name="menus-and-resources-menu-merging"></a>Nabídky a prostředky: Slučováním nabídek
+# <a name="menus-and-resources-menu-merging"></a>Nabídky a prostředky: Sloučení nabídky
 
-Tento článek podrobně popisuje kroky potřebné pro OLE – aplikace dokumentů zpracování vizuální úpravy a aktivace na místě správně. Aktivace na místě představuje výzvu pro kontejner a server aplikace (součást). Uživatel zůstane v okně rámce (v rámci dokumentu kontejneru), ale je ve skutečnosti spuštěna jiná aplikace (server). To vyžaduje koordinaci mezi prostředky kontejneru a serverové aplikace.
+Tento článek podrobně popisuje kroky nezbytné pro aplikace dokumentu OLE správně zpracovat vizuální úpravy a aktivace na místě. Aktivace na místě představuje výzvu pro aplikace kontejneru i serveru (komponenty). Uživatel zůstane ve stejném okně rámce (v kontextu dokumentu kontejneru), ale ve skutečnosti běží jinou aplikaci (server). To vyžaduje koordinaci mezi prostředky kontejneru a serverových aplikací.
 
-V tomto článku probíraná témata zahrnují:
+Témata uvedená v tomto článku zahrnují:
 
 - [Rozložení nabídek](#_core_menu_layouts)
 
-- [Panely nástrojů a stavové řádky](#_core_toolbars_and_status_bars)
+- [Panely nástrojů a stavové panely](#_core_toolbars_and_status_bars)
 
-##  <a name="_core_menu_layouts"></a> Rozložení nabídek
+## <a name="menu-layouts"></a><a name="_core_menu_layouts"></a>Rozložení nabídek
 
-Prvním krokem je koordinace rozložení nabídek. Aplikace typu kontejner by měl vytvořit novou nabídku pro použití pouze v případě, že vložené položky se aktivují v místě. Minimálně by měla tato nabídka skládá z těchto možností v uvedeném pořadí:
+Prvním krokem je koordinace rozložení nabídek. Kontejnerové aplikace by měly vytvořit novou nabídku, která se použije pouze při aktivaci vložených položek na místě. Toto menu by se mělo přinejmenším skládat z následujících, v uvedeném pořadí:
 
-1. Nabídka Soubor je stejný jako ten, který používá, když jsou otevřené soubory. (Obvykle žádné jiné položky nabídky jsou umístěny před na další položku.)
+1. Nabídka souborů je shodná s nabídkou používanou při otevření souborů. (Obvykle nejsou před další položkou umístěny žádné jiné položky nabídky.)
 
-1. Dvě po sobě jdoucích oddělovače.
+1. Dva po sobě jdoucí oddělovače.
 
-1. Nabídka okna stejný jako ten, který používá, když jsou otevřené soubory (pouze tehdy, pokud aplikace typu kontejner v aplikaci MDI). Některé aplikace mohou mít jiné nabídky, jako je například nabídka možností, které patří do této skupiny, která zůstává v nabídce při aktivaci vloženou položku na místě.
+1. Nabídka okna shodná s nabídkou používanou při otevření souborů (pouze v případě, že aplikace kontejneru v aplikaci MDI). Některé aplikace mohou mít jiné nabídky, například nabídky Možnosti, které patří do této skupiny, která zůstává v nabídce, když je aktivována vložená položka na místě.
 
     > [!NOTE]
-    >  Můžou existovat jiných nabídek, které ovlivňují zobrazení dokumentu kontejneru, jako je například přiblížení. Tyto nabídky kontejner se zobrazí mezi dvěma oddělovači v této nabídce prostředků.
+    >  Mohou existovat další nabídky, které ovlivňují zobrazení dokumentu kontejneru, například Lupa. Tyto nabídky kontejneru se zobrazí mezi dvěma oddělovači v této nabídce prostředku.
 
-Aplikace serveru (součásti) by měl také vytvořit novou nabídku speciálně pro aktivace na místě. Měla by být stejně jako nabídka používá, když jsou otevřené soubory, ale bez položky nabídky, jako je například soubor a okna, který manipulovat s dokumentu na serveru, ne data. Tato nabídka obvykle se skládá z následujících akcí:
+Serverové (komponentní) aplikace by také měly vytvořit novou nabídku speciálně pro aktivaci na místě. Mělo by to být jako nabídka používaná při otevření souborů, ale bez položek nabídky, jako je například Soubor a okno, které manipulují s dokumentem serveru namísto dat. Obvykle se tato nabídka skládá z následujících:
 
-1. Upravte nabídku stejný jako ten, který používá, když jsou otevřené soubory.
+1. Upravit nabídku shodnou s nabídkou použitou při otevření souborů.
 
 1. Oddělovač.
 
-1. Upravování nabídky, jako je například nabídka pera v ukázkové aplikaci Scribble objektu.
+1. Nabídky pro úpravy objektů, například nabídka Pero v ukázkové aplikaci Klikyháky.
 
 1. Oddělovač.
 
 1. Nabídka Nápověda.
 
-Příklad podívejte se na rozložení některé ukázkové místní nabídky pro kontejner a serverem. Aby byl srozumitelnější příklad jsme odebrali podrobnosti o každé položky nabídky. V místní nabídce kontejneru obsahuje následující položky:
+Například se podívejte na rozložení některých ukázkových místních nabídek pro kontejner a server. Podrobnosti o každé položce nabídky byly odebrány, aby byl příklad jasnější. Nabídka kontejneru na místě má následující položky:
 
 ```
 IDR_CONTAINERTYPE_CNTR_IP MENU PRELOAD DISCARDABLE
@@ -66,7 +66,7 @@ BEGIN
 END
 ```
 
-Po sobě jdoucích oddělovače označují, kam by měly patřit první část nabídky na server. Nyní se podívejte na serveru místní nabídky:
+Po sobě jdoucí oddělovače označují, kam by měla být uvedena první část nabídky serveru. Nyní se podívejte na menu serveru na místě:
 
 ```
 IDR_SERVERTYPE_SRVR_IP MENU PRELOAD DISCARDABLE
@@ -79,7 +79,7 @@ BEGIN
 END
 ```
 
-Oddělovače tady označují, kam by měly patřit druhé skupině položky nabídky kontejner. Výsledný struktura nabídky při aktivaci objektu z tohoto serveru na místě uvnitř tohoto kontejneru vypadá takto:
+Oddělovače zde označují, kde by měla jít druhá skupina položek nabídky kontejneru. Výsledná struktura nabídky, když je objekt z tohoto serveru aktivován na místě uvnitř tohoto kontejneru, vypadá takto:
 
 ```
 BEGIN
@@ -93,21 +93,21 @@ BEGIN
 END
 ```
 
-Jak je vidět, oddělovače se nahradily pro různé skupiny nabídek každou aplikaci.
+Jak můžete vidět, oddělovače byly nahrazeny různými skupinami nabídky každé aplikace.
 
-Serverové aplikace by měl být rovněž dodán tabulek akcelerátorů spojený s místní nabídkou. Kontejner je začlenit do vlastní tabulky akcelerátoru.
+Akcelerátortabulky spojené s místní nabídkou by měly být také dodávány serverovou aplikací. Kontejner je začlení do svých vlastních tabulek akcelerátorů.
 
-Při aktivaci vloženou položku na místě rozhraní načte v místní nabídce. Pak vyzve k zadání místní aktivace server žádosti o nabídku a vloží ho ve kterém jsou oddělovače. To je, jak zkombinovat nabídky. Získejte nabídky z kontejneru pro provozování na umístění souboru a okno a získat nabídky ze serveru pro položku.
+Když je aktivována vložená položka na místě, rozhraní načte místní nabídku. Poté požádá serverovou aplikaci o nabídku pro aktivaci na místě a vloží ji tam, kde jsou oddělovače. Takto se menu kombinují. Získáte nabídky z kontejneru pro provoz na soubor a umístění okna a dostanete nabídky ze serveru pro provoz na položku.
 
-##  <a name="_core_toolbars_and_status_bars"></a> Panely nástrojů a stavové řádky
+## <a name="toolbars-and-status-bars"></a><a name="_core_toolbars_and_status_bars"></a>Panely nástrojů a stavové panely
 
-Serverové aplikace by měl vytvořit nový panel nástrojů a uložte jeho rastrového obrázku v samostatném souboru. Aplikace vygenerované průvodcem aplikací uložte soubor s názvem ITOOLBAR tento rastrový obrázek. BMP. Nový panel nástrojů nahradí nástrojů aplikace typu kontejner položku pro váš server se aktivuje v místě, by měl obsahovat stejné položky jako normální nástrojů, ale odebrání ikony reprezentující překročení položek v nabídkách souboru a okno.
+Serverové aplikace by měly vytvořit nový panel nástrojů a uložit jeho bitmapu do samostatného souboru. Aplikace generované průvodcem ukládají tuto bitmapu do souboru s názvem ITOOLBAR. Bmp. Nový panel nástrojů nahradí panel nástrojů aplikace kontejneru, když je položka serveru aktivována na místě, a měl by obsahovat stejné položky jako běžný panel nástrojů, ale odebrat ikony představující položky v nabídkách Soubor a Okno.
 
-Tento panel nástrojů je načten do vaší `COleIPFrameWnd`-odvozené třídy za vás vytvoří služba Průvodce aplikací. Aplikace typu kontejner zpracovává stavový řádek. Další informace o implementace oken s rámečkem na místě, naleznete v tématu [serverů: Implementace serveru](../mfc/servers-implementing-a-server.md).
+Tento panel nástrojů je `COleIPFrameWnd`načten do vaší odvozené třídy, kterou pro vás vytvořil průvodce aplikací. Stavový řádek je zpracován aplikací kontejneru. Další informace o implementaci oken rámce na místě naleznete v tématu [Servery: Implementace serveru](../mfc/servers-implementing-a-server.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Nabídky a prostředky (OLE)](../mfc/menus-and-resources-ole.md)<br/>
 [Aktivace](../mfc/activation-cpp.md)<br/>
 [Servery](../mfc/servers.md)<br/>
-[Kontejnery](../mfc/containers.md)
+[Containers](../mfc/containers.md)

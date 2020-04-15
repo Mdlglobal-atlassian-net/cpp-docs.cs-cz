@@ -7,12 +7,12 @@ helpviewer_keywords:
 - protected keyword [C++], member access
 - protected keyword [C++]
 ms.assetid: 863d299f-fc0d-45d5-a1a7-bd24b7778a93
-ms.openlocfilehash: 29f57eac7201ac0647275c70c539f9b2f28eb81b
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 79ca081726c1f26a251763e2533ade730f075e2f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80179247"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81317267"
 ---
 # <a name="protected-c"></a>protected (C++)
 
@@ -26,7 +26,7 @@ protected base-class
 
 ## <a name="remarks"></a>Poznámky
 
-Klíčové slovo **Protected** určuje přístup ke členům třídy v *seznamu Member-list* až k dalšímu specifikátoru přístupu (**veřejné** nebo **privátní**) nebo konci definice třídy. Členy třídy deklarované jako **chráněné** lze použít pouze následujícím způsobem:
+Klíčové slovo **protected** určuje přístup ke členům třídy v *seznamu členů* až k dalšímu specifikátoru přístupu (**veřejné** mu nebo **soukromému)** nebo ke konci definice třídy. Členy třídy deklarované jako **chráněné** mohou používat pouze následující:
 
 - členskými funkcemi třídy, která původně deklarovala tyto členy,
 
@@ -36,20 +36,20 @@ Klíčové slovo **Protected** určuje přístup ke členům třídy v *seznamu 
 
 - přímými soukromě odvozenými třídami, které mají také soukromý přístup k chráněným členům.
 
-Před názvem základní třídy určuje klíčové slovo **Protected** , že veřejné a chráněné členy základní třídy jsou chráněni členy svých odvozených tříd.
+Při předcházejícím názvu základní třídy **chráněné** klíčové slovo určuje, že veřejné a chráněné členy základní třídy jsou chráněni členy jeho odvozené třídy.
 
-Chránění členové **nejsou jako privátní členy,** které jsou přístupné pouze pro členy třídy, ve které jsou deklarovány, ale nejsou veřejné jako **veřejné** členy, které jsou přístupné v jakékoli funkci.
+Chráněné členy nejsou tak soukromé jako **soukromé** členy, které jsou přístupné pouze pro členy třídy, ve kterém jsou deklarovány, ale nejsou tak veřejné jako **veřejné** členy, které jsou přístupné v libovolné funkci.
 
-Chráněné členy, které jsou také deklarovány jako **static** , jsou přístupné všem přátelům nebo členským funkcím odvozené třídy. Chráněné členy, které nejsou deklarovány jako **static** , jsou přístupné pro přátele a členské funkce v odvozené třídě pouze prostřednictvím ukazatele na, odkaz na nebo objekt odvozené třídy.
+Chráněné členy, které jsou také deklarovány jako **statické** jsou přístupné pro všechny přítele nebo členské funkce odvozené třídy. Chráněné členy, které nejsou deklarovány jako **statické,** jsou přístupné přátelům a členským funkcím v odvozené třídě pouze pomocí ukazatele, odkazu nebo objektu odvozené třídy.
 
-Související informace naleznete v tématech [Friend](../cpp/friend-cpp.md), [Public](../cpp/public-cpp.md), [Private](../cpp/private-cpp.md)a tabulka přístupu členů v tématu [řízení přístupu ke členům třídy](member-access-control-cpp.md).
+Související informace naleznete [v tématu friend](../cpp/friend-cpp.md), [public](../cpp/public-cpp.md), [private](../cpp/private-cpp.md)a member-access table in Controlling Access to [Class Members](member-access-control-cpp.md).
 
 ## <a name="clr-specific"></a>Specifické pro možnost /clr
 
-V typech CLR mohou C++ klíčová slova specifikátoru přístupu (**Public**, **Private**a **Protected**) ovlivnit viditelnost typů a metod s ohledem na sestavení. Další informace najdete v tématu [členské Access Control](member-access-control-cpp.md).
+V typech CLR mohou klíčová slova specifikátoru přístupu Jazyka C++ (**veřejné**, **soukromé**a **chráněné**) ovlivnit viditelnost typů a metod s ohledem na sestavení. Další informace naleznete [v tématu Členské řízení přístupu](member-access-control-cpp.md).
 
 > [!NOTE]
->  Tímto chováním nejsou ovlivněny soubory zkompilované pomocí [/ln](../build/reference/ln-create-msil-module.md) . V tomto případě budou všechny spravované třídy (veřejné nebo soukromé) viditelné.
+> Soubory zkompilované s [/LN](../build/reference/ln-create-msil-module.md) nejsou tímto chováním ovlivněny. V tomto případě budou všechny spravované třídy (veřejné nebo soukromé) viditelné.
 
 ## <a name="end-clr-specific"></a>Specifické pro možnost END /clr
 

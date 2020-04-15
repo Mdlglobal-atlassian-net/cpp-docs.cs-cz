@@ -1,30 +1,30 @@
 ---
-title: operátory &lt;hash_set&gt;
+title: '&lt;hash_set&gt; operátory'
 ms.date: 03/27/2019
 f1_keywords:
 - hash_set/std::operator!=
 - hash_set/std::operator==
 ms.assetid: 403d8e4e-0b3f-43fb-bc5a-8100c4f331c5
-ms.openlocfilehash: 3900e9c6e4fb7f5a163279165a51b440d138a8e5
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 5830c9e459c0d778e85c5ab5900d39c3190df178
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79418998"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368575"
 ---
-# <a name="lthash_setgt-operators"></a>operátory &lt;hash_set&gt;
+# <a name="lthash_setgt-operators"></a>&lt;hash_set&gt; operátory
 
 ||||
 |-|-|-|
-|[operator!=](#op_neq)|[operator! = (hash_multiset) – operátor](#op_neq_hash_multiset)|[operator = = – operátor](#op_eq_eq)|
-|[operator = = (hash_multiset) – operátor](#op_eq_eq_hash_multiset)|
+|[operátor!=](#op_neq)|[operátor!= (hash_multiset)](#op_neq_hash_multiset)|[operátor==](#op_eq_eq)|
+|[operátor== (hash_multiset)](#op_eq_eq_hash_multiset)|
 
-## <a name="op_neq"></a>! = – operátor
+## <a name="operator"></a><a name="op_neq"></a>operátor!=
 
 > [!NOTE]
-> Toto rozhraní API je zastaralé. Alternativa je [Unordered_set třídy](../standard-library/unordered-set-class.md).
+> Toto rozhraní API je zastaralé. Alternativou je [unordered_set class](../standard-library/unordered-set-class.md).
 
-Testuje, zda hash_set objekt na levé straně operátoru není roven objektu hash_set na pravé straně.
+Testuje, zda hash_set objekt na levé straně operátoru není rovna hash_set objektu na pravé straně.
 
 ```cpp
 bool operator!=(const hash_set <Key, Traits, Allocator>& left, const hash_set <Key, Traits, Allocator>& right);
@@ -32,21 +32,21 @@ bool operator!=(const hash_set <Key, Traits, Allocator>& left, const hash_set <K
 
 ### <a name="parameters"></a>Parametry
 
-*levý*\
+*Vlevo*\
 Objekt typu `hash_set`.
 
-*pravé*\
+*Právo*\
 Objekt typu `hash_set`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**true** , pokud hash_sets nejsou stejné; **false** , pokud je hash_sets rovna.
+**true,** pokud hash_sets nejsou stejné; **false,** pokud hash_sets jsou stejné.
 
 ### <a name="remarks"></a>Poznámky
 
-Porovnání mezi objekty hash_set je založeno na porovnávacím porovnání mezi jejich prvky. Dva hash_sets jsou stejné, pokud mají stejný počet prvků a jejich příslušné prvky mají stejné hodnoty. V opačném případě jsou nerovné.
+Porovnání mezi hash_set objekty je založena na párové porovnání mezi jejich prvky. Dva hash_sets jsou stejné, pokud mají stejný počet prvků a jejich příslušné prvky mají stejné hodnoty. V opačném případě jsou nerovné.
 
-V [oboru názvů stdext](../standard-library/stdext-namespace.md)jsou členové [< hash_map >](../standard-library/hash-map.md) a < soubory hlaviček [hash_set >](../standard-library/hash-set.md) .
+Členové [<hash_map>](../standard-library/hash-map.md) a<hash_set [>](../standard-library/hash-set.md) hlavičkových souborů jsou v oboru [názvů stdext](../standard-library/stdext-namespace.md).
 
 ### <a name="example"></a>Příklad
 
@@ -87,12 +87,12 @@ The hash_sets hs1 and hs2 are not equal.
 The hash_sets hs1 and hs3 are equal.
 ```
 
-## <a name="op_eq_eq"></a>operator = = – operátor
+## <a name="operator"></a><a name="op_eq_eq"></a>operátor==
 
 > [!NOTE]
-> Toto rozhraní API je zastaralé. Alternativa je [Unordered_set třídy](../standard-library/unordered-set-class.md).
+> Toto rozhraní API je zastaralé. Alternativou je [unordered_set class](../standard-library/unordered-set-class.md).
 
-Testuje, zda je objekt hash_set na levé straně operátoru roven objektu hash_set na pravé straně.
+Testy, pokud hash_set objekt na levé straně operátoru se rovná hash_set objektu na pravé straně.
 
 ```cpp
 bool operator!==(const hash_set <Key, Traits, Allocator>& left, const hash_set <Key, Traits, Allocator>& right);
@@ -100,19 +100,19 @@ bool operator!==(const hash_set <Key, Traits, Allocator>& left, const hash_set <
 
 ### <a name="parameters"></a>Parametry
 
-*levý*\
+*Vlevo*\
 Objekt typu `hash_set`.
 
-*pravé*\
+*Právo*\
 Objekt typu `hash_set`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**true** , pokud je hash_set na levé straně operátoru rovno hash_set na pravé straně operátoru; v opačném případě **false**.
+**true,** pokud hash_set na levé straně obsluhy se rovná hash_set na pravé straně obsluhy; jinak **false**.
 
 ### <a name="remarks"></a>Poznámky
 
-Porovnání mezi hash_set objekty je založeno na porovnávacím porovnání jejich prvků. Dva hash_sets jsou stejné, pokud mají stejný počet prvků a jejich příslušné prvky mají stejné hodnoty. V opačném případě jsou nerovné.
+Porovnání mezi hash_set objekty je založena na párové porovnání jejich prvků. Dva hash_sets jsou stejné, pokud mají stejný počet prvků a jejich příslušné prvky mají stejné hodnoty. V opačném případě jsou nerovné.
 
 ### <a name="example"></a>Příklad
 
@@ -153,12 +153,12 @@ The hash_sets s1 and s2 are not equal.
 The hash_sets s1 and s3 are equal.
 ```
 
-## <a name="op_neq_hash_multiset"></a>operator! = (hash_multiset) – operátor
+## <a name="operator-hash_multiset"></a><a name="op_neq_hash_multiset"></a>operátor!= (hash_multiset)
 
 > [!NOTE]
-> Toto rozhraní API je zastaralé. Alternativa je [Unordered_set třídy](../standard-library/unordered-set-class.md).
+> Toto rozhraní API je zastaralé. Alternativou je [unordered_set class](../standard-library/unordered-set-class.md).
 
-Testuje, zda hash_multiset objekt na levé straně operátoru není roven objektu hash_multiset na pravé straně.
+Testy, pokud hash_multiset objekt na levé straně operátoru se nerovná hash_multiset objektu na pravé straně.
 
 ```cpp
 bool operator!=(const hash_multiset <Key, Traits, Allocator>& left, const hash_multiset <Key, Traits, Allocator>& right);
@@ -166,19 +166,19 @@ bool operator!=(const hash_multiset <Key, Traits, Allocator>& left, const hash_m
 
 ### <a name="parameters"></a>Parametry
 
-*levý*\
+*Vlevo*\
 Objekt typu `hash_multiset`.
 
-*pravé*\
+*Právo*\
 Objekt typu `hash_multiset`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**true** , Pokud hash_multisets nejsou stejné; **false** , pokud je hash_multisets rovna.
+**true,** pokud hash_multisets nejsou stejné; **false,** pokud hash_multisets jsou stejné.
 
 ### <a name="remarks"></a>Poznámky
 
-Porovnání mezi objekty hash_multiset je založeno na porovnávacím porovnání mezi jejich prvky. Dva hash_multisets jsou stejné, pokud mají stejný počet prvků a jejich příslušné prvky mají stejné hodnoty. V opačném případě jsou nerovné.
+Porovnání mezi hash_multiset objekty je založena na párové porovnání mezi jejich prvky. Dva hash_multisets jsou stejné, pokud mají stejný počet prvků a jejich příslušné prvky mají stejné hodnoty. V opačném případě jsou nerovné.
 
 ### <a name="example"></a>Příklad
 
@@ -219,12 +219,12 @@ The hash_multisets hs1 and hs2 are not equal.
 The hash_multisets hs1 and hs3 are equal.
 ```
 
-## <a name="op_eq_eq_hash_multiset"></a>operator = = (hash_multiset) – operátor
+## <a name="operator-hash_multiset"></a><a name="op_eq_eq_hash_multiset"></a>operátor== (hash_multiset)
 
 > [!NOTE]
-> Toto rozhraní API je zastaralé. Alternativa je [Unordered_set třídy](../standard-library/unordered-set-class.md).
+> Toto rozhraní API je zastaralé. Alternativou je [unordered_set class](../standard-library/unordered-set-class.md).
 
-Testuje, zda je objekt hash_multiset na levé straně operátoru roven objektu hash_multiset na pravé straně.
+Testy, pokud hash_multiset objekt na levé straně operátoru se rovná hash_multiset objektu na pravé straně.
 
 ```cpp
 bool operator!==(const hash_multiset <Key, Traits, Allocator>& left, const hash_multiset <Key, Traits, Allocator>& right);
@@ -232,19 +232,19 @@ bool operator!==(const hash_multiset <Key, Traits, Allocator>& left, const hash_
 
 ### <a name="parameters"></a>Parametry
 
-*levý*\
+*Vlevo*\
 Objekt typu `hash_multiset`.
 
-*pravé*\
+*Právo*\
 Objekt typu `hash_multiset`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**true** , pokud je hash_multiset na levé straně operátoru rovno hash_multiset na pravé straně operátoru; v opačném případě **false**.
+**true,** pokud hash_multiset na levé straně obsluhy se rovná hash_multiset na pravé straně obsluhy; jinak **false**.
 
 ### <a name="remarks"></a>Poznámky
 
-Porovnání mezi hash_multiset objekty je založeno na porovnávacím porovnání jejich prvků. Dva hash_multisets jsou stejné, pokud mají stejný počet prvků a jejich příslušné prvky mají stejné hodnoty. V opačném případě jsou nerovné.
+Porovnání mezi hash_multiset objekty je založena na párové porovnání jejich prvků. Dva hash_multisets jsou stejné, pokud mají stejný počet prvků a jejich příslušné prvky mají stejné hodnoty. V opačném případě jsou nerovné.
 
 ### <a name="example"></a>Příklad
 

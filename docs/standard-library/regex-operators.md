@@ -1,5 +1,5 @@
 ---
-title: operátory &lt;regex &gt;
+title: '&lt;obsluha&gt; regulárních regulí'
 ms.date: 11/04/2016
 f1_keywords:
 - regex/std::operator!=
@@ -10,24 +10,24 @@ f1_keywords:
 - regex/std::operator==
 - regex/std::operator<<
 ms.assetid: ec623e65-c186-491f-aa18-6b12b47e1127
-ms.openlocfilehash: 8795d0f1c387fb87c44f2d68c45aa27d1edbfb79
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: ebed98daaea895fa88dc654189fb3c3068d2b508
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689077"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366422"
 ---
-# <a name="ltregexgt-operators"></a>operátory &lt;regex &gt;
+# <a name="ltregexgt-operators"></a>&lt;obsluha&gt; regulárních regulí
 
 ||||
 |-|-|-|
-|[operator!=](#op_neq)|[operátor &gt;](#op_gt)|[operátor &gt; =](#op_gt_eq)|
-|[operátor &lt;](#op_lt)|[operátor &lt; &lt;](#op_lt_lt)|[operátor &lt; =](#op_lt_eq)|
-|[operator = = – operátor](#op_eq_eq)|
+|[operátor!=](#op_neq)|[Operátor&gt;](#op_gt)|[Operátor&gt;=](#op_gt_eq)|
+|[Operátor&lt;](#op_lt)|[Operátor&lt;&lt;](#op_lt_lt)|[Operátor&lt;=](#op_lt_eq)|
+|[operátor==](#op_eq_eq)|
 
-## <a name="op_neq"></a>! = – operátor
+## <a name="operator"></a><a name="op_neq"></a>operátor!=
 
-Nerovná se porovnávání pro různé objekty.
+Není stejné porovnání pro různé objekty.
 
 ```cpp
 template <class BidIt>
@@ -66,24 +66,24 @@ bool operator!=(const match_results<BidIt, Alloc>& left,
 
 ### <a name="parameters"></a>Parametry
 
-@No__t_1 *BiDi*
+*BidIt*\
 Typ iterátoru.
 
-*IOtraits* \
-Třída řetězcových vlastností.
+*IOtraits*\
+Třída vlastností řetězce.
 
-@No__t_1 *přidělení*
+*Alloc*\
 Třída alokátoru
 
-*levý* \
-Levý objekt, který chcete porovnat.
+*Vlevo*\
+Levý objekt porovnat.
 
-*pravé* \
-Pravý objekt, který se má porovnat.
+*Právo*\
+Správný objekt porovnat.
 
 ### <a name="remarks"></a>Poznámky
 
-Každý operátor šablony vrací `!(left == right)`.
+Každý operátor `!(left == right)`šablony vrátí .
 
 ### <a name="example"></a>Příklad
 
@@ -144,9 +144,9 @@ sub != "aab" == true
 sub != 'a' == true
 ```
 
-## <a name="op_lt"></a>operátor &lt;
+## <a name="operatorlt"></a><a name="op_lt"></a>Operátor&lt;
 
-Méně než porovnání pro různé objekty.
+Menší než porovnání pro různé objekty.
 
 ```cpp
 template <class BidIt>
@@ -181,24 +181,24 @@ bool operator<(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>Parametry
 
-@No__t_1 *BiDi*
+*BidIt*\
 Typ iterátoru.
 
-*IOtraits* \
-Třída řetězcových vlastností.
+*IOtraits*\
+Třída vlastností řetězce.
 
-@No__t_1 *přidělení*
+*Alloc*\
 Třída alokátoru
 
-*levý* \
-Levý objekt, který chcete porovnat.
+*Vlevo*\
+Levý objekt porovnat.
 
-*pravé* \
-Pravý objekt, který se má porovnat.
+*Právo*\
+Správný objekt porovnat.
 
 ### <a name="remarks"></a>Poznámky
 
-Každý operátor šablony převede své argumenty na typ řetězce a vrátí hodnotu true pouze v případě, že převedená hodnota *Left* porovnává méně než převedená hodnota *Right*.
+Každý operátor šablony převede své argumenty na typ řetězce a vrátí hodnotu true pouze v případě, že převedená hodnota *vlevo* porovná méně než převedená hodnota *right*.
 
 ### <a name="example"></a>Příklad
 
@@ -254,7 +254,7 @@ sub < "aab" == true
 sub < 'a' == false
 ```
 
-## <a name="op_lt_lt"></a>operátor &lt; &lt;
+## <a name="operatorltlt"></a><a name="op_lt_lt"></a>Operátor&lt;&lt;
 
 Vloží sub_match do datového proudu.
 
@@ -266,27 +266,27 @@ basic_ostream<Elem, IOtraits>& operator<<(basic_ostream<Elem, IOtraits>& os,
 
 ### <a name="parameters"></a>Parametry
 
-*Elem* \
-Typ elementu.
+*Elem*\
+Typ prvku.
 
-*IOtraits* \
-Třída řetězcových vlastností.
+*IOtraits*\
+Třída vlastností řetězce.
 
-@No__t_1 *přidělení*
+*Alloc*\
 Třída alokátoru
 
-@No__t_1 *BiDi*
+*BidIt*\
 Typ iterátoru.
 
-\ *operačního systému*
+*Os*\
 Výstupní datový proud
 
-*pravé* \
-Objekt, který má být vložen.
+*Právo*\
+Objekt, který se má vložit.
 
 ### <a name="remarks"></a>Poznámky
 
-Operátor šablony vrací `os << right.str()`.
+Operátor šablony `os << right.str()`vrátí .
 
 ### <a name="example"></a>Příklad
 
@@ -314,9 +314,9 @@ int main()
 whole match: caaa
 ```
 
-## <a name="op_lt_eq"></a>operátor &lt; =
+## <a name="operatorlt"></a><a name="op_lt_eq"></a>Operátor&lt;=
 
-Menší nebo rovno porovnání pro různé objekty.
+Menší než nebo rovno porovnání pro různé objekty.
 
 ```cpp
 template <class BidIt>
@@ -351,24 +351,24 @@ bool operator<=(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>Parametry
 
-@No__t_1 *BiDi*
+*BidIt*\
 Typ iterátoru.
 
-*IOtraits* \
-Třída řetězcových vlastností.
+*IOtraits*\
+Třída vlastností řetězce.
 
-@No__t_1 *přidělení*
+*Alloc*\
 Třída alokátoru
 
-*levý* \
-Levý objekt, který chcete porovnat.
+*Vlevo*\
+Levý objekt porovnat.
 
-*pravé* \
-Pravý objekt, který se má porovnat.
+*Právo*\
+Správný objekt porovnat.
 
 ### <a name="remarks"></a>Poznámky
 
-Každý operátor šablony vrací `!(right < left)`.
+Každý operátor `!(right < left)`šablony vrátí .
 
 ### <a name="example"></a>Příklad
 
@@ -424,7 +424,7 @@ sub <= "aab" == true
 sub <= 'a' == false
 ```
 
-## <a name="op_eq_eq"></a>operator = = – operátor
+## <a name="operator"></a><a name="op_eq_eq"></a>operátor==
 
 Stejné porovnání pro různé objekty.
 
@@ -465,32 +465,32 @@ bool operator==(const match_results<BidIt, Alloc>& left,
 
 ### <a name="parameters"></a>Parametry
 
-@No__t_1 *BiDi*
+*BidIt*\
 Typ iterátoru.
 
-*IOtraits* \
-Třída řetězcových vlastností.
+*IOtraits*\
+Třída vlastností řetězce.
 
-@No__t_1 *přidělení*
+*Alloc*\
 Třída alokátoru
 
-*levý* \
-Levý objekt, který chcete porovnat.
+*Vlevo*\
+Levý objekt porovnat.
 
-*pravé* \
-Pravý objekt, který se má porovnat.
+*Právo*\
+Správný objekt porovnat.
 
 ### <a name="remarks"></a>Poznámky
 
-Každý operátor šablony převede každý z jejích argumentů na typ String a vrátí výsledek porovnání převedených objektů o rovnosti.
+Každý operátor šablony převede každý z jeho argumentů na typ řetězce a vrátí výsledek porovnání převedených objektů pro rovnost.
 
-Když operátor šablony převede své argumenty na typ řetězce, používá první z následujících transformací, které platí:
+Když operátor šablony převede své argumenty na typ řetězce, použije první z následujících transformací, která se použije:
 
-argumenty, jejichž typy jsou specializací šablony třídy `match_results` nebo `sub_match` jsou převedené voláním členské funkce `str`;
+argumenty, jejichž typy jsou specializací šablony `match_results` třídy nebo `sub_match` jsou převedeny voláním `str` členské funkce;
 
-argumenty, jejichž typy jsou specializací šablony třídy `basic_string` jsou beze změny;
+argumenty, jejichž typy jsou specializací šablony `basic_string` třídy, se nezmění.
 
-všechny ostatní typy argumentů jsou převedeny předáním hodnoty argumentu konstruktoru pro příslušnou specializaci šablony třídy `basic_string`.
+všechny ostatní typy argumentů jsou převedeny předáním hodnoty argumentu konstruktoru `basic_string`pro příslušnou specializaci šablony třídy .
 
 ### <a name="example"></a>Příklad
 
@@ -551,7 +551,7 @@ sub == "aab" == false
 sub == 'a' == false
 ```
 
-## <a name="op_gt"></a>operátor &gt;
+## <a name="operatorgt"></a><a name="op_gt"></a>Operátor&gt;
 
 Větší než porovnání pro různé objekty.
 
@@ -588,24 +588,24 @@ bool operator>(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>Parametry
 
-@No__t_1 *BiDi*
+*BidIt*\
 Typ iterátoru.
 
-*IOtraits* \
-Třída řetězcových vlastností.
+*IOtraits*\
+Třída vlastností řetězce.
 
-@No__t_1 *přidělení*
+*Alloc*\
 Třída alokátoru
 
-*levý* \
-Levý objekt, který chcete porovnat.
+*Vlevo*\
+Levý objekt porovnat.
 
-*pravé* \
-Pravý objekt, který se má porovnat.
+*Právo*\
+Správný objekt porovnat.
 
 ### <a name="remarks"></a>Poznámky
 
-Každý operátor šablony vrací `right < left`.
+Každý operátor `right < left`šablony vrátí .
 
 ### <a name="example"></a>Příklad
 
@@ -661,9 +661,9 @@ sub > "aab" == false
 sub > 'a' == true
 ```
 
-## <a name="op_gt_eq"></a>operátor &gt; =
+## <a name="operatorgt"></a><a name="op_gt_eq"></a>Operátor&gt;=
 
-Větší nebo rovno porovnání pro různé objekty.
+Větší než nebo rovno porovnání pro různé objekty.
 
 ```cpp
 template <class BidIt>
@@ -698,24 +698,24 @@ bool operator>=(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>Parametry
 
-@No__t_1 *BiDi*
+*BidIt*\
 Typ iterátoru.
 
-*IOtraits* \
-Třída řetězcových vlastností.
+*IOtraits*\
+Třída vlastností řetězce.
 
-@No__t_1 *přidělení*
+*Alloc*\
 Třída alokátoru
 
-*levý* \
-Levý objekt, který chcete porovnat.
+*Vlevo*\
+Levý objekt porovnat.
 
-*pravé* \
-Pravý objekt, který se má porovnat.
+*Právo*\
+Správný objekt porovnat.
 
 ### <a name="remarks"></a>Poznámky
 
-Každý operátor šablony vrací `!(left < right)`.
+Každý operátor `!(left < right)`šablony vrátí .
 
 ### <a name="example"></a>Příklad
 
@@ -771,13 +771,13 @@ sub >= "aab" == false
 sub >= 'a' == true
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[\<regex >](../standard-library/regex.md) \
-\ [třídy regex_constants](../standard-library/regex-constants-class.md)
-\ [třídy regex_error](../standard-library/regex-error-class.md)
-[funkce \<regex >](../standard-library/regex-functions.md) \
-\ [třídy regex_iterator](../standard-library/regex-iterator-class.md)
-\ [třídy regex_token_iterator](../standard-library/regex-token-iterator-class.md)
-\ [třídy regex_traits](../standard-library/regex-traits-class.md)
-[\<regex > definice typedef](../standard-library/regex-typedefs.md)
+[\<regulární>](../standard-library/regex.md)\
+[regex_constants třída](../standard-library/regex-constants-class.md)\
+[regex_error třída](../standard-library/regex-error-class.md)\
+[\<funkce> regulárních výrazů](../standard-library/regex-functions.md)\
+[regex_iterator třída](../standard-library/regex-iterator-class.md)\
+[regex_token_iterator třída](../standard-library/regex-token-iterator-class.md)\
+[třída regex_traits](../standard-library/regex-traits-class.md)\
+[\<regulární> typedefs](../standard-library/regex-typedefs.md)

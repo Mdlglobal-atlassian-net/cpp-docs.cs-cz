@@ -1,88 +1,88 @@
 ---
 title: Konfigurace linuxových projektů pro použití sanitizéru adres
-description: Popisuje, jak nakonfigurovat C++ projekty pro Linux v aplikaci Visual Studio na používání programu pro úpravu adres.
+description: Popisuje, jak nakonfigurovat projekty C++ Linux v sadě Visual Studio pro použití dezizátoru adresy.
 ms.date: 06/07/2019
-ms.openlocfilehash: da7197981a431becfc1231dae96f7542062de675
-ms.sourcegitcommit: b3d19b5f59f3a5d90c24f9f16c73bad4c5eb6944
+ms.openlocfilehash: 80e9ab46c948f2062391ae723c3425c435bd4507
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71195855"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364309"
 ---
 # <a name="configure-linux-projects-to-use-address-sanitizer"></a>Konfigurace linuxových projektů pro použití sanitizéru adres
 
-V aplikaci Visual Studio 2019 verze 16,1 je podpora AddressSanitizer (ASan) integrovaná do projektů Linux. ASan můžete povolit pro projekty Linux založené na MSBuild i pro projekty CMake. Funguje na vzdálených systémech Linux a v subsystému Windows pro Linux (WSL).
+Ve Visual Studiu 2019 verze 16.1 je podpora AddressSanitizer (ASan) integrovaná do linuxových projektů. ASan můžete povolit pro projekty Linux založené na MSBuild i Projekty CMake. Funguje na vzdálených systémech Linux a na Windows Subsystem pro Linux (WSL).
 
-## <a name="about-asan"></a>O ASan
+## <a name="about-asan"></a>O společnosti ASan
 
-ASan je detektor chyb běhové paměti pro C/C++ , který zachycuje následující chyby:
+ASan je runtime detektor chyb paměti pro C/C++, který zachycuje následující chyby:
 
-- Použít po uvolnění (odkaz na ukazatel dangling)
+- Použít po volném (visící odkaz na ukazatel)
 - Přetečení vyrovnávací paměti haldy
 - Přetečení vyrovnávací paměti zásobníku
 - Použít po návratu
 - Použít po oboru
-- Chyby pořadí inicializace
+- Chyby inicializačního příkazu
 
-Když ASan detekuje chybu, zastaví se okamžitě. Pokud v ladicím programu spustíte program s podporou ASan, zobrazí se zpráva, která popisuje typ chyby, adresu paměti a umístění ve zdrojovém souboru, kde došlo k chybě:
+Když ASan zjistí chybu, okamžitě zastaví provádění. Pokud v ladicím programu spustíte program s podporou asan, zobrazí se zpráva popisující typ chyby, adresu paměti a umístění ve zdrojovém souboru, kde k chybě došlo:
 
    ![Chybová zpráva ASan](media/asan-error.png)
 
-Můžete také zobrazit úplný výstup ASan (včetně místa, kde byla poškozená paměť přidělena nebo vrácena) v podokně ladění okna výstup.
+Můžete také zobrazit celý výstup ASan (včetně místa, kde byla přidělena nebo opravena poškozená paměť) v podokně ladění výstupního okna.
 
-## <a name="enable-asan-for-msbuild-based-linux-projects"></a>Povolit ASan pro projekty Linux založené na MSBuildu
+## <a name="enable-asan-for-msbuild-based-linux-projects"></a>Povolení as pro linuxové projekty založené na MSBuild
 
 > [!NOTE]
-> Od verze Visual Studio 2019 verze 16,4 jsou AddressSanitizer pro projekty pro Linux povolené prostřednictvím **vlastností** > konfigurace**C/C++**  > **Povolit úpravu adres**.
+> Počínaje Visual Studio 2019 verze 16.4, AddressSanitizer pro linuxové projekty je povolena prostřednictvím **konfigurace vlastnosti** > **C/C++** > **Povolit dezinfekci adres**.
 
-Pokud chcete povolit ASan pro projekty Linux založené na MSBuild, klikněte pravým tlačítkem na projekt v **Průzkumník řešení** a vyberte **vlastnosti**. Potom přejděte do **vlastností** > konfigurace**C/C++**  > oddálení. ASan je povoleno prostřednictvím příznaků kompilátoru a linkeru a vyžaduje, aby byl projekt znovu zkompilován, aby fungoval.
+Chcete-li povolit as pro linuxové projekty založené na msbuildu, klikněte pravým tlačítkem myši na projekt v **Průzkumníku řešení** a vyberte **vlastnosti**. Dále přejděte na **vlastnosti** > konfigurace**C/C++** > **Sanitizers**. ASan je povolena prostřednictvím kompilátoru a propojovacího zařízení příznaky a vyžaduje, aby váš projekt překompilován do práce.
 
-![Povolení ASan pro projekt MSBuild](media/msbuild-asan-prop-page.png)
+![Povolení as pro projekt MSBuild](media/msbuild-asan-prop-page.png)
 
-Volitelné příznaky modulu runtime ASan můžete předat tak, že přejdete na **vlastnosti** > konfigurace**ladění** > **příznaků modulu runtime AddressSanitizer**. Kliknutím na šipku dolů přidejte nebo odeberte příznaky.
+Volitelné příznaky runtime ASan můžete předat tak, že přejdete na název Konfigurace **Vlastnosti** > **ladění** > **addresssanitizer runtime příznaky**. Kliknutím na šipku dolů přidáte nebo odeberete příznaky.
 
-![Konfigurace příznaků modulu runtime ASan](media/msbuild-asan-runtime-flags.png)
+![Konfigurace příznaků runtime služby ASan](media/msbuild-asan-runtime-flags.png)
 
-## <a name="enable-asan-for-visual-studio-cmake-projects"></a>Povolit ASan pro projekty sady Visual Studio CMake
+## <a name="enable-asan-for-visual-studio-cmake-projects"></a>Povolení projektů ASan pro visual studio CMake
 
-Pokud chcete povolit ASan pro CMake, klikněte pravým tlačítkem myši na soubor CMakeLists. txt v **Průzkumník řešení** a vyberte **Nastavení cmake pro projekt**.
+Chcete-li povolit službu ASan pro cmake, klepněte pravým tlačítkem myši na soubor CMakeLists.txt v **Průzkumníku řešení** a zvolte **Nastavení CMake pro Project**.
 
-Ujistěte se, že v levém podokně dialogového okna máte zvolenou konfiguraci pro Linux (například **Linux-Debug**):
+Ujistěte se, že máte v levém podokně dialogového okna vybranou konfiguraci Linuxu (například **Linux-Debug):**
 
-![Konfigurace ladění pro Linux](media/linux-debug-configuration.png)
+![Konfigurace ladění Linuxu](media/linux-debug-configuration.png)
 
-Možnosti ASan jsou **obecně**. Zadejte příznaky modulu runtime ASan ve formátu "příznak = hodnota", které jsou odděleny středníky.
+Možnosti ASan jsou v části **Obecné**. Zadejte příznaky runtime ASan ve formátu "flag=value", odděleného středníky.
 
-![Konfigurace ladění pro Linux](media/cmake-settings-asan-options.png)
+![Konfigurace ladění Linuxu](media/cmake-settings-asan-options.png)
 
-## <a name="install-the-asan-debug-symbols"></a>Nainstalovat symboly ladění ASan
+## <a name="install-the-asan-debug-symbols"></a>Instalace ladicích symbolů ASan
 
-Pokud chcete povolit diagnostiku ASan, musíte na svém vzdáleném počítači se systémem Linux nebo instalaci WSL nainstalovat symboly pro ladění (libasan-DBG). Verze libasan-DBG, kterou načtete, závisí na verzi aplikace RSZ nainstalované na počítači se systémem Linux:
+Chcete-li povolit diagnostiku ASan, musíte nainstalovat jeho ladicí symboly (libasan-dbg) na vzdáleném počítači s Linuxem nebo instalaci WSL. Verze libasan-dbg, kterou načtete, závisí na verzi GCC nainstalované na vašem počítači s Linuxem:
 
-|**Verze ASan**|**Verze RSZ**|
+|**Verze ASan**|**Verze GCC**|
 | --- | --- |
-|libasan0|RSZ – 4,8|
+|libasan0 řekl:|gcc-4,8|
 |libasan2|gcc-5|
 |libasan3|gcc-6|
 |libasan4|gcc-7|
 |libasan5|gcc-8|
 
-Pomocí tohoto příkazu můžete určit, kterou verzi RSZ máte:
+Pomocí tohoto příkazu můžete určit, kterou verzi GCC máte:
 
 ```bash
 gcc --version
 ```
 
-Chcete-li zobrazit verzi libasan-DBG, kterou potřebujete, spusťte program a podívejte se na podokno **ladění** v okně **výstup** . Nahraná verze ASan odpovídá verzi libasan-DBG potřebné na počítači se systémem Linux. Pomocí **kombinace kláves CTRL + F** můžete v okně Vyhledat text "libasan". Pokud jste libasan4 například, zobrazí se řádek podobný tomuto:
+Chcete-li zobrazit verzi libasan-dbg, kterou potřebujete, spusťte program a pak se podívejte na podokno **Ladění** okna **Výstup.** Verze ASan, která je načtena, odpovídá verzi libasan-dbg potřebné na vašem počítači s Linuxem. **Pomocí kláves Ctrl + F** můžete vyhledat "libasan" v okně. Pokud máte například libasan4, zobrazí se řádek jako tento:
 
 ```Output
 Loaded '/usr/lib/x86_64-linux-gnu/libasan.so.4'. Symbols loaded.
 ```
 
-ASan ladění můžete nainstalovat na Linux distribuce, které používají APT, pomocí následujícího příkazu. Tento příkaz nainstaluje verzi 4:
+Můžete nainstalovat asan ladicí bity na distribucích Linuxu, které používají apt s následujícím příkazem. Tento příkaz nainstaluje verzi 4:
 
 ```bash
 sudo apt-get install libasan4-dbg
 ```
 
-Pokud je povolený ASan, Visual Studio vás vyzve v horní části podokna **ladění** okna **výstup** , aby se nainstalovaly symboly ladění ASan.
+Pokud je povolena služba ASan, visual studio vás vyzve v horní části podokna **ladění** **okna Výstup** k instalaci symbolů ladění ASan.

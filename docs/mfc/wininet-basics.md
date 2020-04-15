@@ -6,64 +6,64 @@ helpviewer_keywords:
 - WinInet classes [MFC], displaying progress
 - WinInet classes [MFC], about WinInet classes
 ms.assetid: 665de5ac-e80d-427d-8d91-2ae466885940
-ms.openlocfilehash: 79ec102aa27440c64f03c6e22b9f2fe959cac6b9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b989e5c3df63ee7b5129d01468a0f869772ed286
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399548"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367327"
 ---
 # <a name="wininet-basics"></a>WinInet – základy
 
-Wininet – slouží k přidání podpory protokolu FTP ke stažení a nahrání souborů z v rámci vaší aplikace. Můžete přepsat [onstatuscallback –](../mfc/reference/cinternetsession-class.md#onstatuscallback) a použít *dwContext* parametr můžete uživatelům poskytnout informace o průběhu, jak vyhledat a stáhnout soubory.
+Pomocí wininet můžete přidat podporu FTP ke stažení a nahrávání souborů z vaší aplikace. Můžete přepsat [OnStatusCallback](../mfc/reference/cinternetsession-class.md#onstatuscallback) a použít *parametr dwContext* k poskytování informací o průběhu uživatelům při hledání a stahování souborů.
 
 Tento článek obsahuje následující témata:
 
-- [Vytvořit velmi jednoduchý prohlížeč](#_core_create_a_very_simple_browser)
+- [Vytvoření velmi jednoduchého prohlížeče](#_core_create_a_very_simple_browser)
 
-- [Stáhněte si na webové stránce](#_core_download_a_web_page)
+- [Stažení webové stránky](#_core_download_a_web_page)
 
-- [Soubor protokolu FTP](#_core_ftp_a_file)
+- [FTP soubor](#_core_ftp_a_file)
 
-- [Načtení adresáře Gopher](#_core_retrieve_a_gopher_directory)
+- [Načtení gopherský adresář](#_core_retrieve_a_gopher_directory)
 
 - [Zobrazení informací o průběhu při přenosu souborů](#_core_display_progress_information_while_transferring_files)
 
-Ukázky kódu níže ukazují, jak vytvořit jednoduchý prohlížeč, stáhněte si na webové stránce, FTP souboru a vyhledejte soubor gopher. Nejsou určeny jako kompletní příklady a ne všechny obsahují zpracování výjimek.
+Níže uvedené výňatky kódu ukazují, jak vytvořit jednoduchý prohlížeč, stáhnout webovou stránku, FTP soubor a vyhledat soubor gopher. Nejsou určeny jako úplné příklady a ne všechny obsahují zpracování výjimek.
 
-Další informace o rozhraní WinInet, naleznete v tématu [Win32 – internetová rozšíření (WinInet)](../mfc/win32-internet-extensions-wininet.md).
+Další informace o wininet, naleznete [v tématu Win32 Internet Extensions (WinInet)](../mfc/win32-internet-extensions-wininet.md).
 
-##  <a name="_core_create_a_very_simple_browser"></a> Vytvořit velmi jednoduchý prohlížeč
+## <a name="create-a-very-simple-browser"></a><a name="_core_create_a_very_simple_browser"></a>Vytvoření velmi jednoduchého prohlížeče
 
 [!code-cpp[NVC_MFCWinInet#1](../mfc/codesnippet/cpp/wininet-basics_1.cpp)]
 
-##  <a name="_core_download_a_web_page"></a> Stáhněte si na webové stránce
+## <a name="download-a-web-page"></a><a name="_core_download_a_web_page"></a>Stažení webové stránky
 
 [!code-cpp[NVC_MFCWinInet#2](../mfc/codesnippet/cpp/wininet-basics_2.cpp)]
 
-##  <a name="_core_ftp_a_file"></a> Soubor protokolu FTP
+## <a name="ftp-a-file"></a><a name="_core_ftp_a_file"></a>FTP soubor
 
 [!code-cpp[NVC_MFCWinInet#3](../mfc/codesnippet/cpp/wininet-basics_3.cpp)]
 
-##  <a name="_core_retrieve_a_gopher_directory"></a> Načtení adresáře Gopher
+## <a name="retrieve-a-gopher-directory"></a><a name="_core_retrieve_a_gopher_directory"></a>Načtení gopherský adresář
 
 [!code-cpp[NVC_MFCWinInet#4](../mfc/codesnippet/cpp/wininet-basics_4.cpp)]
 
-## <a name="use-onstatuscallback"></a>Onstatuscallback – použití
+## <a name="use-onstatuscallback"></a>Použít OnStatusCallback
 
-Když pomocí tříd WinInet, můžete [onstatuscallback –](../mfc/reference/cinternetsession-class.md#onstatuscallback) členem vaší aplikace [cinternetsession –](../mfc/reference/cinternetsession-class.md) objektu k načtení informací o stavu. Pokud odvozujete vlastní `CInternetSession` objektu, přepsat `OnStatusCallback`a povolit stav zpětná volání, knihovny MFC bude volat vaše `OnStatusCallback` funkce s informací o průběhu o všech aktivitách v této relaci Internet.
+Při použití tříd WinInet můžete k načtení informací o stavu použít člen [OnStatusCallback](../mfc/reference/cinternetsession-class.md#onstatuscallback) objektu [CInternetSession](../mfc/reference/cinternetsession-class.md) vaší aplikace. Pokud odvodíte `CInternetSession` vlastní `OnStatusCallback`objekt, přepíšete a povolíte `OnStatusCallback` zpětná volání stavu, knihovna MFC zavolá vaši funkci s informacemi o průběhu všech aktivit v této relaci Internetu.
 
-Protože jedné relace může podporovat několik připojení (a které průběhu své životnosti, může provést několika různých operací distinct) `OnStatusCallback` potřebuje mechanismus pro identifikaci každou změnu stavu připojení nebo transakce. Tento mechanismus je poskytována kontextový parametr ID k mnoha členských funkcí v třídách WinInet podpory. Tento parametr je vždy typu **DWORD** a je vždy pojmenováno *dwContext*.
+Vzhledem k tomu, že jedna relace může podporovat několik připojení `OnStatusCallback` (které během své životnosti mohou provádět mnoho různých odlišných operací), potřebuje mechanismus k identifikaci každé změny stavu s určitým připojením nebo transakcí. Tento mechanismus je poskytován parametrem ID kontextu, který je dán mnoha členským funkcím ve třídách podpory WinInet. Tento parametr je vždy typu **DWORD** a je vždy pojmenován *dwContext*.
 
-Kontext přiřazené k určitému objektu Internet slouží pouze k identifikaci aktivity způsobí, že objekt v `OnStatusCallback` člena `CInternetSession` objektu. Volání `OnStatusCallback` přijímá několik parametrů; tyto parametry společně oznámit aplikaci, jaký pokrok pro připojení a transakce.
+Kontext přiřazený určitému objektu Sítě Internet slouží pouze k `OnStatusCallback` identifikaci `CInternetSession` aktivity, kterou objekt způsobuje v členu objektu. Volání přijímá `OnStatusCallback` několik parametrů; Tyto parametry společně sdělit aplikaci, jaký pokrok bylo dosaženo pro které transakce a připojení.
 
-Když vytvoříte `CInternetSession` objektu, můžete zadat *dwContext* parametr konstruktoru. `CInternetSession` samotný nepoužívá ID kontextu; Místo toho předává ID kontextu k libovolné **InternetConnection**-odvozené objekty, které nejsou explicitně získat ID kontextu své vlastní. Následně bude ty `CInternetConnection` objekty předá ID kontextu podél k `CInternetFile` objekty vytvářejí, pokud není explicitně zadejte ID jiného kontextu. Pokud na druhé straně nezadáte vlastní ID konkrétní kontext, objektu a veškerou práci se bude spojená s ID tohoto kontextu. Kontext ID můžete použít k určení, jaké informace o stavu se dostane ve vaší `OnStatusCallback` funkce.
+Při vytváření `CInternetSession` objektu můžete zadat parametr *dwContext* konstruktoru. `CInternetSession`sám nepoužívá ID kontextu; místo toho předá ID kontextu na všechny objekty odvozené **InternetConnection,** které explicitně získat vlastní ID kontextu. Na druhé `CInternetConnection` straně tyto objekty předá `CInternetFile` ID kontextu spolu s objekty, které vytvoří, pokud není explicitně zadat jiné ID kontextu. Pokud na druhé straně zadáte vlastní konkrétní ID kontextu, objekt a jakákoli práce, kterou provede, budou přidruženy k tomuto ID kontextu. ID kontextu můžete použít k určení, jaké informace o `OnStatusCallback` stavu jsou uvedeny ve vaší funkci.
 
-##  <a name="_core_display_progress_information_while_transferring_files"></a> Zobrazení informací o průběhu při přenosu souborů
+## <a name="display-progress-information-while-transferring-files"></a><a name="_core_display_progress_information_while_transferring_files"></a>Zobrazení informací o průběhu při přenosu souborů
 
-Například, když zapíšete aplikaci, která vytvoří připojení k serveru FTP ke čtení souboru a také připojuje k serveru HTTP se získat na webové stránce, budete mít `CInternetSession` objektu, dvěma `CInternetConnection` objekty (jeden by `CFtpSession` a druhá bude `CHttpSession`) a dvě `CInternetFile` objekty (jeden pro každé připojení). Pokud jste použili výchozí hodnoty pro *dwContext* parametry, nebude možné rozlišit `OnStatusCallback` volání, které označují průběh připojení FTP a volání, které označují průběh Připojení HTTP. Pokud zadáte *dwContext* ID, které můžete později otestovat pro `OnStatusCallback`, budete vědět, jaké operace vytvořila zpětného volání.
+Pokud například napíšete aplikaci, která vytvoří připojení k serveru FTP ke čtení souboru a také se připojí `CInternetSession` k `CInternetConnection` serveru HTTP, abyste `CFtpSession` získali webovou `CHttpSession`stránku, budete mít objekt, dva objekty (jeden by byl a druhý a ) a dva `CInternetFile` objekty (jeden pro každé připojení). Pokud jste použili výchozí hodnoty pro parametry *dwContext,* nebude `OnStatusCallback` možné rozlišovat mezi vyvolání, které označují průběh připojení FTP a vyvolání, které označují průběh připojení HTTP. Pokud zadáte *dwContext* ID, které můžete později otestovat v aplikaci `OnStatusCallback`, budete vědět, která operace vygenerovala zpětné volání.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Základy internetového programování v prostředí MFC](../mfc/mfc-internet-programming-basics.md)<br/>
 [Win32 – internetová rozšíření (WinInet)](../mfc/win32-internet-extensions-wininet.md)

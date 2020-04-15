@@ -1,5 +1,5 @@
 ---
-title: 'TN048: Zápis nastavení rozhraní ODBC a programy pro správu pro databázové aplikace MFC'
+title: 'TN048: Psaní programů pro nastavení a správu rozhraní ODBC pro databázové aplikace MFC'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - installing ODBC
@@ -9,49 +9,49 @@ helpviewer_keywords:
 - ODBC, and MFC
 - MFC, database applications
 ms.assetid: d456cdd4-0513-4a51-80c0-9132b66115ce
-ms.openlocfilehash: ec74b75ff34c98a9231582b3db411fda90c5a9ff
-ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
+ms.openlocfilehash: d25520c4ffc805701dfe6b51192f8078e2fa300f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65612131"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81365483"
 ---
-# <a name="tn048-writing-odbc-setup-and-administration-programs-for-mfc-database-applications"></a>TN048: Zápis nastavení rozhraní ODBC a programy pro správu pro databázové aplikace MFC
+# <a name="tn048-writing-odbc-setup-and-administration-programs-for-mfc-database-applications"></a>TN048: Psaní programů pro nastavení a správu rozhraní ODBC pro databázové aplikace MFC
 
 > [!NOTE]
->  Následující Technická poznámka nebyla aktualizována, protože byla poprvé zahrnuta v online dokumentaci. V důsledku toho některé postupy a témata mohou být nesprávné nebo zastaralé. Nejnovější informace se doporučuje vyhledat téma zájmu v dokumentaci online index.
+> Následující technická poznámka nebyla aktualizována od doby, kdy byla poprvé zahrnuta do online dokumentace. V důsledku toho mohou být některé postupy a témata zastaralé nebo nesprávné. Chcete-li získat nejnovější informace, doporučujeme vyhledat téma zájmu v online indexu dokumentace.
 
-Použití databázových tříd MFC aplikace potřebovat instalační program, který nainstaluje součástí rozhraní ODBC. Také potřebovat program pro správu rozhraní ODBC, který načte informace o dostupných ovladačů, můžete určit výchozí ovladačů a nakonfigurovat datové zdroje. Tato poznámka popisuje použití rozhraní API ODBC instalačního programu k zápisu těchto programů.
+Aplikace používající třídy databáze knihovny MFC budou potřebovat instalační program, který nainstaluje součásti ROZHRANÍ ODBC. Mohou také potřebovat program pro správu ODBC, který bude načítat informace o dostupných ovladačích, určit výchozí ovladače a konfigurovat zdroje dat. Tato poznámka popisuje použití rozhraní API instalačního programu ROZHRANÍ ODBC k zápisu těchto programů.
 
-##  <a name="_mfcnotes_writing_an_odbc_setup_program"></a> Zápis instalační Program rozhraní ODBC
+## <a name="writing-an-odbc-setup-program"></a><a name="_mfcnotes_writing_an_odbc_setup_program"></a>Zápis instalačního programu ODBC
 
-Správce ovladačů ODBC (rozhraní ODBC vyžaduje databázových aplikacích MFC. Knihovny DLL) a být schopní dostat k zdroje dat ODBC – ovladače. Mnoho ovladačů ODBC také vyžadovat další sítě a komunikačních knihoven DLL. Většina ovladače rozhraní ODBC jsou dodávány s instalační program, který bude instalace požadovaných součástí rozhraní ODBC. Použití databázových tříd MFC vývojářům aplikací umožňuje:
+Databázová aplikace knihovny MFC vyžaduje správce ovladačů ROZHRANÍ ODBC (ODBC. DLL) a ovladače ODBC, aby se mohli dostat ke zdrojům dat. Mnoho ovladačů ODBC také vyžaduje další síťové a komunikační knihovny DLL. Většina ovladačů ROZHRANÍ ODBC je dodávána s instalačním programem, který nainstaluje požadované součásti ROZHRANÍ ODBC. Vývojáři aplikací používající třídy databáze knihovny MFC mohou:
 
-- Spolehněte se na specifický ovladač instalační programy pro instalaci součástí rozhraní ODBC. To bude vyžadovat žádná další práce na část pro vývojáře – stačí znovu distribuovat ovladače instalační program.
+- Při instalaci součástí ROZHRANÍ ODBC se můžete spolehnout na instalační programy specifické pro daný ovladač. To nebude vyžadovat žádnou další práci na straně vývojáře - stačí redistribuovat instalační program ovladače.
 
-- Alternativně můžete napsat vlastní instalační program, který bude instalaci správce ovladačů a ovladače.
+- Případně můžete napsat vlastní instalační program, který nainstaluje správce ovladačů a ovladač.
 
-Instalační program rozhraní API ODBC je možné zapsat specifické pro aplikaci instalační programy. Funkce v instalačním programu API jsou implementované pomocí Instalační služby rozhraní ODBC knihovny DLL – ODBCINST. Knihovna DLL na Windows 16 bitů a ODBCCP32. Knihovny DLL v systému Win32. Aplikace může volat `SQLInstallODBC` v instalačním programu knihovny DLL, který bude instalaci správce ovladačů ODBC, ovladače rozhraní ODBC a všechny požadované překladače. V ODBCINST pak zaznamenává nainstalovaných ovladačů a překladatele. Soubor INI (nebo registru, NT). `SQLInstallODBC` vyžaduje úplnou cestu k rozhraní ODBC. Soubor INF, který obsahuje seznam instalaci ovladačů a popisuje soubory, které tvoří každou ovladače. Také obsahuje podobné informace o správce ovladačů a překladatele. ROZHRANÍ ODBC. Soubory INF jsou obvykle dodávány vývojáři ovladačů.
+Rozhraní API instalačního programu ROZHRANÍ ODBC lze použít k zápisu instalačních programů specifických pro aplikaci. Funkce v rozhraní API instalačního programu jsou implementovány knihovnou DLL instalačního programu ODBC – ODBCINST. Knihovna DLL v 16bitovém systému Windows a rozhraní ODBCCP32. DLL na Win32. Aplikace může `SQLInstallODBC` volat knihovnu DLL instalačního programu, která nainstaluje správce ovladačů ODBC, ovladače ODBC a všechny požadované překladače. Poté zaznamená nainstalované ovladače a překladatele v ODBCINST. INI (nebo registr, na NT). `SQLInstallODBC`vyžaduje úplnou cestu k rozhraní ODBC. SOUBOR INF, který obsahuje seznam ovladačů, které mají být nainstalovány a popisuje soubory, které tvoří každý ovladač. Obsahuje také podobné informace o správci řidičů a překladatelích. Odbc. Soubory INF jsou obvykle dodávány vývojáři ovladačů.
 
-Program můžete také nainstalovat jednotlivých součástí rozhraní ODBC. K instalaci správce ovladačů, program nejprve zavolá `SQLInstallDriverManager` v instalačním programu knihovnu DLL k získání cílový adresář pro správce ovladačů. Obvykle se jedná o adresář, ve kterém jsou umístěny Windows knihovny DLL. Program použije informace v části [správce ovladačů ODBC] rozhraní ODBC. Soubor INF zkopírovat správce ovladačů a související soubory z instalačního disku do tohoto adresáře. Pro instalaci jednotlivých ovladačů, program nejprve zavolá `SQLInstallDriver` v instalačním programu přidat specifikaci ovladač ODBCINST knihovny DLL. Soubor INI (nebo registru, NT). `SQLInstallDriver` Vrátí ovladače cílový adresář – obvykle na adresář, ve kterém jsou umístěny Windows knihovny DLL. Program použije informace v části ovladače rozhraní ODBC. Soubor INF zkopírujte ovladač knihovny DLL a související soubory z instalačního disku do tohoto adresáře.
+Program může také nainstalovat jednotlivé součásti ROZHRANÍ ODBC. Chcete-li nainstalovat Správce ovladačů, program nejprve zavolá `SQLInstallDriverManager` do instalační služby DLL, aby získal cílový adresář správce ovladačů. Obvykle se jedná o adresář, ve kterém se nacházejí knihovny DLL systému Windows. Program pak použije informace v části [SPRÁVCE OVLADAČŮ ODBC] rozhraní ODBC. soubor INF pro kopírování Správce ovladačů a souvisejících souborů z instalačního disku do tohoto adresáře. Chcete-li nainstalovat jednotlivé ovladače, `SQLInstallDriver` program nejprve volá v knihovně DLL instalačního programu a přidá specifikaci ovladače do rozhraní ODBCINST. INI (nebo registr, na NT). `SQLInstallDriver`vrátí cílový adresář ovladače – obvykle adresář, ve kterém jsou umístěny knihovny DLL systému Windows. Program pak použije informace v části ovladače ODBC. soubor INF pro kopírování dll ovladače a souvisejících souborů z instalačního disku do tohoto adresáře.
 
-Další informace o rozhraní ODBC. INF, ODBCINST. INI a pomocí instalačního programu rozhraní API, najdete v části sada SDK rozhraní ODBC *referenční informace pro programátory* kapitole 19, instalace softwaru ODBC.
+Další informace o rozhraní ODBC. INF, ODBCINST. INI a pomocí rozhraní API instalačního programu naleznete *v tématu Odkaz na programátora* ODBC SDK, kapitola 19, Instalace softwaru ODBC.
 
-##  <a name="_mfcnotes_writing_an_odbc_administrator"></a> Zápis správce rozhraní ODBC
+## <a name="writing-an-odbc-administrator"></a><a name="_mfcnotes_writing_an_odbc_administrator"></a>Zápis správce odhlašování ODBC
 
-Databázové aplikace MFC lze nastavení a konfigurace zdroje dat ODBC v jedné ze dvou způsobů, následujícím způsobem:
+Databázová aplikace knihovny MFC může nastavit a nakonfigurovat zdroje dat ROZHRANÍ ODBC jedním ze dvou způsobů následujícím způsobem:
 
-- Pomocí Správce rozhraní ODBC (k dispozici jako program nebo v Ovládacích panelech).
+- Použijte správce rozhraní ODBC (k dispozici jako program nebo jako položku ovládacího panelu).
 
-- Vytvořte vlastní program k nakonfigurovat datové zdroje.
+- Vytvořte si vlastní program pro konfiguraci zdrojů dat.
 
-Program, který konfiguruje zdroje dat, provede volání funkce do instalačního programu knihovny DLL. Instalační program knihovnu DLL zavolá instalace knihovny DLL pro zdroj dat nakonfigurovat. Existuje jedna instalace knihovny DLL pro každý ovladač; může být ovladač samotná knihovna DLL nebo samostatné knihovny DLL. Instalace knihovny DLL vyzve uživatele k informace, které ovladače potřebuje pro připojení ke zdroji dat a výchozí překladač, pokud se podporuje. Poté zavolá knihovny DLL a rozhraní API Windows zaznamenávat tyto informace v rozhraní ODBC Instalační služby. Soubor INI (nebo registru).
+Program, který konfiguruje zdroje dat, provádí volání funkce do dll instalačního programu. Instalační dll volá instalační dll pro konfiguraci zdroje dat. Pro každý ovladač existuje jedna instalační dll. může se jedná o samotnou dll ovladače nebo samostatnou dll. Instalační dll vyzve uživatele k zadání informací, které ovladač potřebuje připojit ke zdroji dat a výchozí překladač, pokud je podporován. Potom volá knihovnu DLL instalačního programu a rozhraní API systému Windows k zaznamenání těchto informací v rozhraní ODBC. INI (nebo registr).
 
-Chcete-li zobrazit dialogové okno, pomocí kterého můžete uživatele přidat, upravit a odstranit zdroje dat, program zavolá `SQLManageDataSources` v instalačním programu knihovny DLL. Tato funkce je vyvolán při instalační program knihovny DLL volání z ovládacích panelů. K přidání, úprava nebo odstranění zdroje dat, `SQLManageDataSources` volání `ConfigDSN` v rámci instalace knihovny DLL ovladače přidružené k danému zdroji dat. Přímo přidat, upravit nebo odstranit data zdroje, program zavolá `SQLConfigDataSource` v instalačním programu knihovny DLL. Program předává název zdroje dat a možnost, která určuje akce má být provedena. `SQLConfigDataSource` volání `ConfigDSN` v nastavení knihovny DLL a předává je argumenty z `SQLConfigDataSource`.
+Chcete-li zobrazit dialogové okno, pomocí kterého může uživatel přidávat, `SQLManageDataSources` upravovat a odstraňovat zdroje dat, program volá v dll instalačního programu. Tato funkce je vyvolána, když je instalační dll volána z Ovládacích panelů. Chcete-li přidat, upravit nebo `SQLManageDataSources` odstranit `ConfigDSN` zdroj dat, volání v instalační dll pro ovladač přidružený k tomuto zdroji dat. Chcete-li přímo přidávat, upravovat nebo odstraňovat zdroje dat, program volá `SQLConfigDataSource` v instalační dll. Program předá název zdroje dat a možnost, která určuje akci, která má být vykonat. `SQLConfigDataSource`volá `ConfigDSN` v instalační dll a předá `SQLConfigDataSource`argumenty z .
 
-Další informace najdete v tématu rozhraní ODBC SDK *referenční informace pro programátory* kapitoly 23, instalační program referenční dokumentace funkcí knihovny DLL a kapitoly 24, instalační program referenční dokumentace funkcí knihovny DLL.
+Další informace naleznete v *tématu Odkaz na programátora sady* ODBC SDK, kapitola 23, Odkaz na funkci instalační knihovny DLL a kapitola 24, Reference funkce knihovny DLL instalačního programu.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Technické poznámky podle čísel](../mfc/technical-notes-by-number.md)<br/>
 [Technické poznámky podle kategorií](../mfc/technical-notes-by-category.md)

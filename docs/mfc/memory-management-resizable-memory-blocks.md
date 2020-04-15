@@ -1,5 +1,5 @@
 ---
-title: 'Správa paměti: Bloky paměti umožňující změnu velikosti'
+title: 'Správa paměti: Paměťové bloky umožňující změnu velikosti'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - memory blocks [MFC], resizable
@@ -9,20 +9,20 @@ helpviewer_keywords:
 - blocks [MFC], memory allocation
 - resizable memory blocks [MFC]
 ms.assetid: f0efe6f4-a3ed-4541-9195-51ec1291967a
-ms.openlocfilehash: 124a2599e1523d5393fcf6255c88de0fd8cd72cd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b048b60a5512ecc54750cb980ca67e2373e2c837
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62219139"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364779"
 ---
-# <a name="memory-management-resizable-memory-blocks"></a>Správa paměti: Bloky paměti umožňující změnu velikosti
+# <a name="memory-management-resizable-memory-blocks"></a>Správa paměti: Paměťové bloky umožňující změnu velikosti
 
-**Nové** a **odstranit** operátory popsané v článku [Správa paměti: Příklady](../mfc/memory-management-examples.md), jsou vhodné pro přidělování a rušení přidělení bloků paměti pevné velikosti a objekty. Vaše aplikace může v některých případech nutné bloky paměti umožňující změnu velikosti. Je nutné použít standardní funkce knihovny run-time jazyka C [malloc](../c-runtime-library/reference/malloc.md), [realloc](../c-runtime-library/reference/realloc.md), a [bezplatné](../c-runtime-library/reference/free.md) ke správě bloky paměti umožňující změnu velikosti na haldě.
+**Nové** a **odstranit** operátory, popsané v článku [Správa paměti: Příklady](../mfc/memory-management-examples.md), jsou vhodné pro přidělování a amlokaci bloky paměti pevné velikosti a objekty. V některých případě aplikace může potřebovat bloky paměti s nastavitelnou velikost. Je nutné použít standardní C run-time knihovny funkce [malloc](../c-runtime-library/reference/malloc.md), [realloc](../c-runtime-library/reference/realloc.md)a [zdarma](../c-runtime-library/reference/free.md) pro správu bloků paměti s nastavitelnou velikostí na haldě.
 
 > [!IMPORTANT]
->  Kombinování **nové** a **odstranit** operátory s využitím functions přidělení paměti umožňující změnu velikosti ve stejném bloku paměti způsobí poškozená paměti v ladicí verzi knihovny MFC. Neměli byste používat **realloc** na blok paměti přidělené s **nové**. Podobně by neměl přidělení bloku paměti s **nové** operátor a odstraňte ho pomocí **bezplatné**, nebo použijte **odstranit** operátor na blok paměti s **malloc**.
+> Smíchání **mandatorních** a **odstraňovacích** operátorů s funkcemi přidělení paměti s nastavitelnou platností na stejném bloku paměti bude mít za následek poškozenou paměť v ladicí verzi knihovny MFC. Neměli byste používat **realloc** na bloku paměti přidělené **s new**. Stejně tak byste neměli přidělit blok paměti s **novým** operátorem a odstranit jej s **free**, nebo použít operátor **delete** na bloku paměti přidělené **malloc**.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Správa paměti: Přidělení haldy](../mfc/memory-management-heap-allocation.md)

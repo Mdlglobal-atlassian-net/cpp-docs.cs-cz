@@ -7,16 +7,16 @@ helpviewer_keywords:
 - __declspec keyword (C++), safebuffers
 - safebuffers __declspec keyword
 ms.assetid: 0b0dce14-4523-44d2-8070-5dd0fdabc618
-ms.openlocfilehash: 705d3eca67f87e505a147af4984496d3af43dd53
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: bc4736ce233ce026ecab9ef38ac8379466b5a0bc
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80178909"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81365588"
 ---
 # <a name="safebuffers"></a>safebuffers
 
-**Specifické pro společnost Microsoft**
+**Specifické pro Microsoft**
 
 Přikáže kompilátoru nevkládat pro funkci kontroly zabezpečení přetečení vyrovnávací paměti.
 
@@ -28,26 +28,26 @@ __declspec( safebuffers )
 
 ## <a name="remarks"></a>Poznámky
 
-Možnost kompilátoru **/GS** způsobí, že kompilátor testuje přetečení vyrovnávací paměti tím, že do zásobníku vloží kontroly zabezpečení. Typy datových struktur, které mají nárok na kontroly zabezpečení, jsou popsány v tématu [/GS (kontrola zabezpečení vyrovnávací paměti)](../build/reference/gs-buffer-security-check.md). Další informace o detekci přetečení vyrovnávací paměti najdete v tématu [funkce zabezpečení v MSVC](https://blogs.msdn.microsoft.com/vcblog/2017/06/28/security-features-in-microsoft-visual-c/).
+Možnost kompilátoru **/GS** způsobí, že kompilátor otestuje přetečení vyrovnávací paměti vložením kontrol zabezpečení do zásobníku. Typy datových struktur, které jsou způsobilé pro kontroly zabezpečení, jsou popsány v [/GS (Buffer Security Check)](../build/reference/gs-buffer-security-check.md). Další informace o zjišťování přetečení vyrovnávací paměti naleznete [v tématu Funkce zabezpečení v msvc](https://blogs.msdn.microsoft.com/vcblog/2017/06/28/security-features-in-microsoft-visual-c/).
 
-Zabezpečení funkce před přetečením vyrovnávací paměti může být určeno expertní ruční revizí kódu nebo externí analýzou. V takovém případě můžete potlačit kontroly zabezpečení pro funkci použitím klíčového slova **__declspec (safebuffers)** pro deklaraci funkce.
+Zabezpečení funkce před přetečením vyrovnávací paměti může být určeno expertní ruční revizí kódu nebo externí analýzou. V takovém případě můžete potlačit kontroly zabezpečení funkce použitím klíčového slova **__declspec (safebuffers)** na deklaraci funkce.
 
 > [!CAUTION]
->  Kontroly zabezpečení vyrovnávací paměti poskytují důležitou ochranu zabezpečení a mají zanedbatelný vliv na výkon. Proto je doporučeno je nepotlačovat vyjma vzácných případů, kdy je výkon funkce kriticky důležitý a funkce je známa jako bezpečná.
+> Kontroly zabezpečení vyrovnávací paměti poskytují důležitou ochranu zabezpečení a mají zanedbatelný vliv na výkon. Proto je doporučeno je nepotlačovat vyjma vzácných případů, kdy je výkon funkce kriticky důležitý a funkce je známa jako bezpečná.
 
 ## <a name="inline-functions"></a>Vložené funkce
 
-*Primární funkce* [může k vložení](inline-functions-cpp.md) kopie *sekundární funkce*použít klíčové slovo. Pokud je klíčové slovo **__declspec (safebuffers)** použito pro funkci, rozpoznávání přetečení vyrovnávací paměti je pro tuto funkci potlačeno. Vkládání však má vliv na klíčová slova **__declspec (safebuffers)** následujícími způsoby.
+*Primární funkce* může použít klíčové slovo [vkládání](inline-functions-cpp.md) k vložení kopie *sekundární funkce*. Pokud je na funkci použito klíčové slovo **__declspec (safebuffers),** je pro tuto funkci potlačena detekce přetečení vyrovnávací paměti. Vkládání však ovlivňuje klíčové slovo **__declspec (safebuffers)** následujícími způsoby.
 
-Předpokládejme, že je pro obě funkce zadaná možnost kompilátoru **/GS** , ale primární funkce určuje klíčové slovo **__declspec (safebuffers)** . Datové struktury v sekundární funkci umožňují její kontroly zabezpečení a funkce tyto kontroly nepotlačuje. V tomto případě:
+Předpokládejme, že možnost kompilátoru **/GS** je určena pro obě funkce, ale primární funkce určuje klíčové slovo **__declspec(safebuffers).** Datové struktury v sekundární funkci umožňují její kontroly zabezpečení a funkce tyto kontroly nepotlačuje. V tomto případě:
 
-- Zadejte klíčové slovo [__forceinline](inline-functions-cpp.md) pro sekundární funkci, aby kompilátor vynutil vložení této funkce bez ohledu na optimalizace kompilátoru.
+- Zadejte klíčové slovo [__forceinline](inline-functions-cpp.md) v sekundární funkci, chcete-li kompilátor vložit tuto funkci bez ohledu na optimalizaci kompilátoru.
 
-- Vzhledem k tomu, že sekundární funkce má nárok na kontroly zabezpečení, jsou kontroly zabezpečení také aplikovány na primární funkci i v případě, že Určuje klíčové slovo **__declspec (safebuffers)** .
+- Vzhledem k tomu, že sekundární funkce je způsobilá pro kontroly zabezpečení, jsou kontroly zabezpečení použity také pro primární funkci, i když určuje klíčové slovo **__declspec (safebuffers).**
 
 ## <a name="example"></a>Příklad
 
-Následující kód ukazuje použití klíčového slova **__declspec (safebuffers)** .
+Následující kód ukazuje, jak používat klíčové slovo **__declspec(safebuffers).**
 
 ```cpp
 // compile with: /c /GS
@@ -72,11 +72,11 @@ int wmain() {
 }
 ```
 
-**Specifické pro konec Microsoftu**
+**END Microsoft Specifické**
 
 ## <a name="see-also"></a>Viz také
 
 [__declspec](../cpp/declspec.md)<br/>
 [Klíčová slova](../cpp/keywords-cpp.md)<br/>
-[inline, __inline \__forceinline](inline-functions-cpp.md)<br/>
+[inline, __inline, \__forceinline](inline-functions-cpp.md)<br/>
 [strict_gs_check](../preprocessor/strict-gs-check.md)

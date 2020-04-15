@@ -1,6 +1,6 @@
 ---
 title: StopAndRelogTracingSession
-description: Reference C++ k funkci StopAndRelogTracingSession sady SDK pro Build Insights
+description: C++ Build Insights SDK StopAndRelogTracingSession odkaz na funkci.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: e99568f9b509b89ccd0f0711433dec9d96d904bc
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 1f6f5af63d25504226707d977791430463374328
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78332591"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81323658"
 ---
 # <a name="stopandrelogtracingsession"></a>StopAndRelogTracingSession
 
 ::: moniker range="<=vs-2015"
 
-Sada C++ SDK pro Build Insights je kompatibilní se sadou Visual Studio 2017 a novější. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek selektor verzí sady Visual Studio pro tento článek na sadu Visual Studio 2017 nebo Visual Studio 2019.
+Sada C++ Build Insights SDK je kompatibilní s Visual Studio 2017 a vyšší. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek pro výběr **verze** sady Visual Studio pro tento článek na Visual Studio 2017 nebo Visual Studio 2019. Nachází se v horní části obsahu na této stránce.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Funkce `StopAndRelogTracingSession` zastaví probíhající relaci trasování a uloží výsledné trasování do dočasného souboru. Relace, která se znovu zaznamená, pak okamžitě začne používat dočasný soubor jako vstup. Konečné přeprotokolované trasování vytvořené relací znovu protokolování je uloženo v souboru určeném volajícím. Spustitelné soubory volající tuto funkci musí mít oprávnění správce.
+Funkce `StopAndRelogTracingSession` zastaví probíhající relaci trasování a uloží výsledné trasování do dočasného souboru. Relace opětovného přihlášení je pak okamžitě začít používat dočasný soubor jako vstup. Konečné relogged trasování vytvořené relogging relace je uložen v souboru určeném volajícím. Spustitelné soubory volající tuto funkci musí mít oprávnění správce.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -57,26 +57,26 @@ RESULT_CODE StopAndRelogTracingSession(
 
 ### <a name="parameters"></a>Parametry
 
-*název_relace*\
-Název relace trasování, která se má zastavit. Použijte stejný název relace jako ten předaný do [StartTracingSession](start-tracing-session.md), [StartTracingSessionA](start-tracing-session-a.md)nebo [StartTracingSessionW](start-tracing-session-w.md).
+*Název_relace*\
+Název relace trasování zastavit. Použijte stejný název relace jako název předané [StartTracingSession](start-tracing-session.md), [StartTracingSessionA](start-tracing-session-a.md)nebo [StartTracingSessionW](start-tracing-session-w.md).
 
 *outputLogFile*\
-Soubor, ve kterém se má zapsat přeprotokolované trasování vytvořené relací znovu protokolování.
+Soubor, ve kterém chcete zapsat relogged trasování vytvořené relogging relace.
 
-\ *statistiky*
-Ukazatel na objekt [TRACING_SESSION_STATISTICS](../other-types/tracing-session-statistics-struct.md) . před vrácením `StopAndRelogTracingSession` zapisuje statistiky shromažďování trasování v tomto objektu.
+*Statistiky*\
+Ukazatel na [TRACING_SESSION_STATISTICS](../other-types/tracing-session-statistics-struct.md) objekt. `StopAndRelogTracingSession`zapíše statistiky shromažďování trasování v tomto objektu před vrácením.
 
 *numberOfAnalysisPasses*\
-Počet průchodů analýzy, které mají být spuštěny na daném trasování. Trasování se předává na základě zadané skupiny analyzátoru jednou za analýzu.
+Počet analýzy předá ke spuštění na trasování. Trasování získá průchod za předpokladu, analyzer skupiny jednou za průchod analýzy.
 
 *systemEventsRetentionFlags*\
-[RELOG_RETENTION_SYSTEM_EVENT_FLAGS](../other-types/relog-retention-system-event-flags-constants.md) Bitová maska, která určuje, které systémové události ETW budou v přeprotokolovaných trasováních zachovány.
+Bitová maska [RELOG_RETENTION_SYSTEM_EVENT_FLAGS,](../other-types/relog-retention-system-event-flags-constants.md) která určuje, které systémové události ETW mají být v relogged trace.
 
-\a *analyzátoru*
-Skupina analyzátoru, která se používá pro fázi analýzy relace přeprotokolování. Zavolejte [MakeStaticAnalyzerGroup](make-static-analyzer-group.md) a vytvořte skupinu analyzátoru. Pokud chcete použít dynamickou skupinu analýz získanou z [MakeDynamicAnalyzerGroup](make-dynamic-analyzer-group.md), nejdřív ji zapouzdřete do statické skupiny analyzátoru předáním adresy do `MakeStaticAnalyzerGroup`.
+*skupina analyzátorů*\
+Skupina analyzátoru použitá pro fázi analýzy relace opětovného přihlášení. Volání [MakeStaticAnalyzerGroup](make-static-analyzer-group.md) vytvořit skupinu analyzátoru. Pokud chcete použít skupinu dynamických analyzátorů získanou z [makedynamicanalyzerGroup](make-dynamic-analyzer-group.md), nejprve `MakeStaticAnalyzerGroup`ji zapouzdřte do skupiny statických analyzátorů předáním její adresy společnosti .
 
-\ opětovného *naprotokolovacího* nástroje
-Skupina reprotokolovacích nástrojů, která znovu zapisuje události do trasovacího souboru zadaného v *outputLogFile*. Zavolejte [MakeStaticReloggerGroup](make-static-relogger-group.md) k vytvoření skupiny přeprotokolovacích souborů. Pokud chcete použít dynamickou skupinu přeprotokolovacích souborů získanou z [MakeDynamicReloggerGroup](make-dynamic-relogger-group.md), nejprve ji zapouzdřete do skupiny statických přeprotokolovacích souborů předáním její adresy do `MakeStaticReloggerGroup`.
+*skupina relogger*\
+Skupina relogger, která reloguje události do trasovacího souboru zadaného v *outputLogFile*. Volání [MakeStaticReloggerGroup](make-static-relogger-group.md) vytvořit skupinu relogger. Pokud chcete použít dynamickou skupinu reloggeru získanou z [MakeDynamicReloggerGroup](make-dynamic-relogger-group.md), nejprve `MakeStaticReloggerGroup`jej zapouzdřte do statické skupiny reloggeru předáním jeho adresy na adresu .
 
 ### <a name="return-value"></a>Návratová hodnota
 
@@ -84,8 +84,8 @@ Kód výsledku z [RESULT_CODE](../other-types/result-code-enum.md) výčtu.
 
 ### <a name="remarks"></a>Poznámky
 
-Vstupní trasování se předává přes skupinu analyzátoru *numberOfAnalysisPasses* časy. K dispozici není žádná podobná možnost pro přehlašování. Trasování je předáno pouze jednou pro skupinu reprotokolovacích souborů po dokončení všech průchodů analýz.
+Vstupní trasování je předána prostřednictvím analyzátoru skupiny *numberOfAnalysisPasses* časy. Neexistuje žádná podobná možnost pro opětovné přihlášení průchodů. Trasování je předánka koryto skupiny relogger pouze jednou, po dokončení všech průchodů analýzy.
 
-Opětovné protokolování systémových událostí, jako jsou vzorky procesoru v rámci třídy reprotokolovacího nástroje, není podporováno. Pomocí parametru *systemEventsRetentionFlags* určete, které systémové události se mají zachovat ve výstupním trasování.
+Opětovné uhlazení systémových událostí, jako jsou ukázky procesoru z třídy reloggeru, není podporováno. Pomocí parametru *systemEventsRetentionFlags* můžete rozhodnout, které systémové události mají být ve výstupním trasování uchovány.
 
 ::: moniker-end

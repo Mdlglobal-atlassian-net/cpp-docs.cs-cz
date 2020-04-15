@@ -13,16 +13,16 @@ f1_keywords:
 helpviewer_keywords:
 - ISchedulerProxy structure
 ms.assetid: af416973-7a1c-4c30-aa3b-4161c2aaea54
-ms.openlocfilehash: 776f70f9b93eb2e38151ceb5e84b4664420cf954
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: f4a9e79c2da56406610ad6da08fb438e2f92923d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79419145"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368159"
 ---
 # <a name="ischedulerproxy-structure"></a>ISchedulerProxy – struktura
 
-Rozhraní, podle kterého budou schedulery komunikovat s Správce prostředků Concurrency Runtime k vyjednání přidělení prostředků.
+Rozhraní, pomocí kterého plánovači komunikují se Správcem prostředků modulu Resourcetime souběžnosti za účelem vyjednání přidělení prostředků.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -34,18 +34,18 @@ struct ISchedulerProxy;
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[ISchedulerProxy:: Bindcontext –](#bindcontext)|Přidruží kontext spuštění k proxy vláknu, pokud ještě není přidružen k jednomu.|
-|[ISchedulerProxy:: CreateOversubscriber –](#createoversubscriber)|Vytvoří nový kořen virtuálního procesoru v hardwarovém vlákně přidruženém k existujícímu prostředku spuštění.|
-|[ISchedulerProxy:: RequestInitialVirtualProcessors –](#requestinitialvirtualprocessors)|Vyžádá počáteční přidělení kořenových adresářů virtuálních procesorů. Každý kořen virtuálního procesoru představuje možnost spuštění jednoho vlákna, které může pro Plánovač provádět práci.|
-|[ISchedulerProxy:: Shutdown](#shutdown)|Oznamuje Správce prostředků, že se Plánovač vypíná. Tato akce způsobí, že Správce prostředků okamžitě uvolní všechny prostředky udělené plánovači.|
-|[ISchedulerProxy:: SubscribeCurrentThread –](#subscribecurrentthread)|Zaregistruje aktuální vlákno do Správce prostředků a přidruží ho k tomuto plánovači.|
-|[ISchedulerProxy:: UnbindContext](#unbindcontext)|Zruší přidružení proxy vlákna z kontextu spuštění určeného parametrem `pContext` a vrátí ho do bezplatného fondu objektů proxy vlákna. Tato metoda může být volána pouze v kontextu spuštění, který byl svázán prostřednictvím metody [ISchedulerProxy:: bindcontext –](#bindcontext) a ještě nebyla spuštěna, pomocí parametru `pContext` volání metody [IThreadProxy:: SwitchTo –](ithreadproxy-structure.md#switchto) .|
+|[ISchedulerProxy::BindContext](#bindcontext)|Přidruží kontext spuštění k proxy vlákna, pokud již není přidružen k jednomu.|
+|[ISchedulerProxy::CreateOversubscriber](#createoversubscriber)|Vytvoří nový kořen virtuálního procesoru v hardwarovém vlákně přidruženém k existujícímu prostředku spuštění.|
+|[ISchedulerProxy::RequestInitialVirtualProcessors](#requestinitialvirtualprocessors)|Požaduje počáteční přidělení kořenů virtuálního procesoru. Každý kořen virtuálního procesoru představuje schopnost spustit jedno vlákno, které může provádět práci pro plánovače.|
+|[ISchedulerProxy::Vypnutí](#shutdown)|Upozorní Správce prostředků, že plánovač se vypíná. To způsobí, že Správce prostředků okamžitě znovu získat všechny prostředky poskytnuté plánovači.|
+|[ISchedulerProxy::SubscribeCurrentThread](#subscribecurrentthread)|Zaregistruje aktuální vlákno se Správceprostředků a přissokuje jej k tomuto plánovači.|
+|[ISchedulerProxy::UnbindContext](#unbindcontext)|Odpojí proxy vlákna z kontextu spuštění `pContext` určeného parametrem a vrátí jej do volného fondu proxy vlákna. Tato metoda může být volána pouze v kontextu spuštění, který byl vázán prostřednictvím metody [ISchedulerProxy::BindContext](#bindcontext) a ještě nebyla spuštěna prostřednictvím parametru `pContext` volání metody [IThreadProxy::SwitchTo.](ithreadproxy-structure.md#switchto)|
 
 ## <a name="remarks"></a>Poznámky
 
-Správce prostředků do každého plánovače, který se registruje pomocí metody [IResourceManager:: registerscheduler –](iresourcemanager-structure.md#registerscheduler) , zavolá `ISchedulerProxy` rozhraní.
+Správce prostředků předá `ISchedulerProxy` rozhraní každému plánovači, který se s ním zaregistruje pomocí metody [IResourceManager::RegisterScheduler.](iresourcemanager-structure.md#registerscheduler)
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -53,13 +53,13 @@ Správce prostředků do každého plánovače, který se registruje pomocí met
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** concrtrm. h
+**Záhlaví:** concrtrm.h
 
 **Obor názvů:** souběžnost
 
-## <a name="bindcontext"></a>ISchedulerProxy:: Bindcontext – – metoda
+## <a name="ischedulerproxybindcontext-method"></a><a name="bindcontext"></a>ISchedulerProxy::Metoda BindContext
 
-Přidruží kontext spuštění k proxy vláknu, pokud ještě není přidružen k jednomu.
+Přidruží kontext spuštění k proxy vlákna, pokud již není přidružen k jednomu.
 
 ```cpp
 virtual void BindContext(_Inout_ IExecutionContext* pContext) = 0;
@@ -67,16 +67,16 @@ virtual void BindContext(_Inout_ IExecutionContext* pContext) = 0;
 
 ### <a name="parameters"></a>Parametry
 
-*pContext*<br/>
-Rozhraní pro kontext spuštění, které se přidruží k proxy vlákna.
+*pKontext*<br/>
+Rozhraní kontextu spuštění přidružit k proxy podprocesu.
 
 ### <a name="remarks"></a>Poznámky
 
-V normálním případě metoda [IThreadProxy:: SwitchTo –](ithreadproxy-structure.md#switchto) vytvoří vazby proxy vlákna k kontextu spuštění na vyžádání. Existují však situace, kdy je nutné svázat kontext předem, aby se zajistilo, že se `SwitchTo` metoda přepíná na již vázaný kontext. Jedná se o případ v kontextu plánování UMS, protože nemůže volat metody, které přidělují paměť, a vazba proxy vlákna může zahrnovat přidělení paměti, pokud proxy vlákna není k dispozici v bezplatném fondu objektu pro vytváření proxy vláken.
+Metoda [IThreadProxy::SwitchTo](ithreadproxy-structure.md#switchto) obvykle sváže proxy vlákna s kontextem spuštění na vyžádání. Existují však okolnosti, kdy je nutné předem svázat kontext, aby bylo zajištěno, že `SwitchTo` metoda přepne na již vázaný kontext. To je případ v kontextu plánování UMS, protože nemůže volat metody, které přidělují paměť, a vazba proxy vlákna může zahrnovat přidělení paměti, pokud proxy vlákna není snadno dostupná ve volném fondu továrně proxy vlákna.
 
-`invalid_argument` je vyvolána, pokud `pContext` parametru má hodnotu `NULL`.
+`invalid_argument`je vyvolána, `pContext` pokud má `NULL`parametr hodnotu .
 
-## <a name="createoversubscriber"></a>ISchedulerProxy:: CreateOversubscriber – – metoda
+## <a name="ischedulerproxycreateoversubscriber-method"></a><a name="createoversubscriber"></a>ISchedulerProxy::Metoda CreateOversubscriber
 
 Vytvoří nový kořen virtuálního procesoru v hardwarovém vlákně přidruženém k existujícímu prostředku spuštění.
 
@@ -87,21 +87,21 @@ virtual IVirtualProcessorRoot* CreateOversubscriber(_Inout_ IExecutionResource* 
 ### <a name="parameters"></a>Parametry
 
 *pExecutionResource*<br/>
-Rozhraní `IExecutionResource`, které představuje hardwarové vlákno, pro které chcete přehlásit odběr.
+Rozhraní, `IExecutionResource` které představuje hardwarové vlákno, které chcete přepsat.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Rozhraní `IVirtualProcessorRoot`.
+Rozhraní. `IVirtualProcessorRoot`
 
 ### <a name="remarks"></a>Poznámky
 
-Tuto metodu použijte v případě, že váš Plánovač chce po omezené době vymezit předplatné konkrétního hardwarového vlákna. Až budete s kořenovým adresářem virtuálního procesoru hotovi, měli byste ho vrátit do Správce prostředků voláním metody [Remove](iexecutionresource-structure.md#remove) v rozhraní `IVirtualProcessorRoot`.
+Tuto metodu použijte, pokud plánovač chce přepsat určité hardwarové vlákno po omezenou dobu. Jakmile budete hotovi s kořenem virtuálního procesoru, měli [Remove](iexecutionresource-structure.md#remove) byste jej `IVirtualProcessorRoot` vrátit do správce prostředků voláním Remove metoda na rozhraní.
 
-Můžete dokonce přeodebírat stávající kořen virtuálního procesoru, protože rozhraní `IVirtualProcessorRoot` dědí z rozhraní `IExecutionResource`.
+Můžete dokonce oversubscribe existující kořen virtuálního `IVirtualProcessorRoot` procesoru, `IExecutionResource` protože rozhraní dědí z rozhraní.
 
-## <a name="requestinitialvirtualprocessors"></a>ISchedulerProxy:: RequestInitialVirtualProcessors – – metoda
+## <a name="ischedulerproxyrequestinitialvirtualprocessors-method"></a><a name="requestinitialvirtualprocessors"></a>ISchedulerProxy::RequestInitialVirtualProcessors Method
 
-Vyžádá počáteční přidělení kořenových adresářů virtuálních procesorů. Každý kořen virtuálního procesoru představuje možnost spuštění jednoho vlákna, které může pro Plánovač provádět práci.
+Požaduje počáteční přidělení kořenů virtuálního procesoru. Každý kořen virtuálního procesoru představuje schopnost spustit jedno vlákno, které může provádět práci pro plánovače.
 
 ```cpp
 virtual IExecutionResource* RequestInitialVirtualProcessors(bool doSubscribeCurrentThread) = 0;
@@ -110,27 +110,27 @@ virtual IExecutionResource* RequestInitialVirtualProcessors(bool doSubscribeCurr
 ### <a name="parameters"></a>Parametry
 
 *doSubscribeCurrentThread*<br/>
-Zda se má přihlásit k odběru aktuálního vlákna a účtu během přidělování prostředků.
+Určuje, zda se má přihlásit k odběru aktuálního vlákna a účet pro něj během přidělení prostředků.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Rozhraní `IExecutionResource` pro aktuální vlákno, pokud parametr `doSubscribeCurrentThread` má hodnotu **true**. Pokud je hodnota **false**, vrátí metoda hodnotu null.
+Rozhraní `IExecutionResource` pro aktuální vlákno, pokud `doSubscribeCurrentThread` má parametr hodnotu **true**. Pokud je hodnota **false**, metoda vrátí NULL.
 
 ### <a name="remarks"></a>Poznámky
 
-Předtím, než Scheduler spustí veškerou práci, by měl tuto metodu použít k vyžádání kořenových adresářů virtuálních procesorů z Správce prostředků. Správce prostředků k zásadám plánovače přistupuje pomocí [IScheduler:: GetPolicy](ischeduler-structure.md#getpolicy) a pomocí hodnot klíčů zásad `MinConcurrency`, `MaxConcurrency` a `TargetOversubscriptionFactor` k určení, kolik hardwarových vláken se má nejdřív přiřadit plánovači, a kolik kořenových virtuálních procesorů se má vytvořit pro každé vlákno hardwaru. Další informace o tom, jak se používají zásady plánovače k určení počátečního přidělení plánovače, najdete v tématu [PolicyElementKey –](concurrency-namespace-enums.md).
+Před plánovač provede jakoukoli práci, měl by použít tuto metodu k vyžádání kořeny virtuální procesor z Resource Manager. Správce prostředků bude přistupovat k zásadám plánovače pomocí [IScheduler::GetPolicy](ischeduler-structure.md#getpolicy) `MinConcurrency`a `MaxConcurrency` `TargetOversubscriptionFactor` použije hodnoty pro klíče zásad a určí, kolik hardwarových podprocesů má být nejprve přiřazeno plánovači a kolik kořenů virtuálního procesoru má být vytvořit pro každé hardwarové vlákno. Další informace o tom, jak se zásady plánovače používají k určení počátečního přidělení plánovače, naleznete v [tématu PolicyElementKey](concurrency-namespace-enums.md).
 
-Správce prostředků přidělí prostředky plánovači voláním metody [IScheduler:: AddVirtualProcessors –](ischeduler-structure.md#addvirtualprocessors) se seznamem kořenových adresářů virtuálních procesorů. Metoda je vyvolána jako zpětné volání do Scheduleru před tím, než tato metoda vrátí.
+Správce prostředků uděluje prostředky plánovači voláním metody [IScheduler::AddVirtualProcessors](ischeduler-structure.md#addvirtualprocessors) se seznamem kořenů virtuálního procesoru. Metoda je vyvolána jako zpětné volání do plánovače před tato metoda vrátí.
 
-Pokud Plánovač požadoval odběr pro aktuální vlákno nastavením parametru `doSubscribeCurrentThread` na **hodnotu true**, metoda vrátí rozhraní `IExecutionResource`. Předplatné je nutné ukončit později v pozdějším bodě pomocí metody [IExecutionResource:: Remove](iexecutionresource-structure.md#remove) .
+Pokud plánovač požadované odběr pro aktuální vlákno `doSubscribeCurrentThread` nastavením parametru **true**, metoda vrátí `IExecutionResource` rozhraní. Odběr musí být ukončen později pomocí [metody IExecutionResource::Remove.](iexecutionresource-structure.md#remove)
 
-Při určování, které hardwarové podprocesy jsou vybrány, se Správce prostředků pokusí o optimalizaci pro spřažení uzlů procesoru. Pokud je pro aktuální vlákno požadováno předplatné, je známa, že aktuální vlákno je v úmyslu zúčastnit se práce přiřazené tomuto plánovači. V takovém případě se přidělené kořenové virtuální procesory nacházejí v uzlu procesoru, na kterém je spuštěno aktuální vlákno, pokud je to možné.
+Při určování, které hardwarové podprocesy jsou vybrány, správce prostředků se pokusí optimalizovat pro spřažení uzlů procesoru. Pokud odběr je požadováno pro aktuální vlákno, je údaj, že aktuální vlákno má v úmyslu účastnit se práce přiřazené k tomuto plánovači. V takovém případě přidělené kořeny virtuálních procesorů jsou umístěny v uzlu procesoru aktuální vlákno je spuštěna na, pokud je to možné.
 
-Přihlášení k odběru vlákna zvyšuje úroveň předplatného podkladového vlákna hardwaru o jednu. Úroveň předplatného se po ukončení předplatného zmenší o jednu. Další informace o úrovních předplatného najdete v tématu [IExecutionResource:: CurrentSubscriptionLevel –](iexecutionresource-structure.md#currentsubscriptionlevel).
+Akt přihlášení podprocesu zvyšuje úroveň předplatného základní ho hardwarové vlákno o jednu. Úroveň předplatného se sníží o jednu při ukončení předplatného. Další informace o úrovních předplatného naleznete v [tématu IExecutionResource::CurrentSubscriptionLevel](iexecutionresource-structure.md#currentsubscriptionlevel).
 
-## <a name="shutdown"></a>ISchedulerProxy:: Shutdown – metoda
+## <a name="ischedulerproxyshutdown-method"></a><a name="shutdown"></a>ISchedulerProxy::Metoda vypnutí
 
-Oznamuje Správce prostředků, že se Plánovač vypíná. Tato akce způsobí, že Správce prostředků okamžitě uvolní všechny prostředky udělené plánovači.
+Upozorní Správce prostředků, že plánovač se vypíná. To způsobí, že Správce prostředků okamžitě znovu získat všechny prostředky poskytnuté plánovači.
 
 ```cpp
 virtual void Shutdown() = 0;
@@ -138,15 +138,15 @@ virtual void Shutdown() = 0;
 
 ### <a name="remarks"></a>Poznámky
 
-Všechna `IExecutionContext` rozhraní, která Scheduler přijal jako výsledek odběru externího vlákna pomocí metod `ISchedulerProxy::RequestInitialVirtualProcessors` nebo `ISchedulerProxy::SubscribeCurrentThread` musí být vrácen do Správce prostředků pomocí `IExecutionResource::Remove` předtím, než se Plánovač vypíná.
+Všechna `IExecutionContext` rozhraní plánovače přijaté v důsledku přihlášení externí vlákno pomocí `ISchedulerProxy::RequestInitialVirtualProcessors` metod `ISchedulerProxy::SubscribeCurrentThread` nebo musí být vrácena správce prostředků pomocí `IExecutionResource::Remove` před plánovač vypne sám.
 
-Pokud má váš Plánovač nějaké deaktivované kořenové adresáře virtuálních procesorů, musíte je aktivovat pomocí [IVirtualProcessorRoot:: Activate](ivirtualprocessorroot-structure.md#activate)a nechat spuštěné proxy vlákna. ponechají metodu `Dispatch` kontextů provádění, které odesílají, než `Shutdown` vyvoláte na proxy serveru Scheduleru.
+Pokud váš plánovač měl deaktivované kořeny virtuálního procesoru, musíte je aktivovat pomocí [IVirtualProcessorRoot::Activate](ivirtualprocessorroot-structure.md#activate)a nechat proxy vlákna, které jsou na nich spuštěny, ponechat `Dispatch` metodu kontextů spuštění, které odesílávají, před vyvoláním `Shutdown` na proxy plánovači.
 
-Služba Scheduler není nutná k tomu, aby mohl jednotlivě vracet všechny kořenové adresáře virtuálních procesorů, které jim Správce prostředků uděleny prostřednictvím volání metody `Remove`, protože všechny kořeny virtuálních procesorů se vrátí do Správce prostředků při vypnutí.
+Není nutné, aby plánovač jednotlivě vrátil všechny kořeny virtuálního procesoru, které `Remove` mu Správce prostředků udělil prostřednictvím volání metody, protože všechny kořeny virtuálních procesorů budou při vypnutí vráceny správci prostředků.
 
-## <a name="subscribecurrentthread"></a>ISchedulerProxy:: SubscribeCurrentThread – – metoda
+## <a name="ischedulerproxysubscribecurrentthread-method"></a><a name="subscribecurrentthread"></a>ISchedulerProxy::Metoda SubscribeCurrentThread
 
-Zaregistruje aktuální vlákno do Správce prostředků a přidruží ho k tomuto plánovači.
+Zaregistruje aktuální vlákno se Správceprostředků a přissokuje jej k tomuto plánovači.
 
 ```cpp
 virtual IExecutionResource* SubscribeCurrentThread() = 0;
@@ -154,19 +154,19 @@ virtual IExecutionResource* SubscribeCurrentThread() = 0;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`IExecutionResource`, která představuje aktuální vlákno v modulu runtime.
+Propojení `IExecutionResource` představující aktuální vlákno v době běhu.
 
 ### <a name="remarks"></a>Poznámky
 
-Tuto metodu použijte, pokud chcete, aby Správce prostředků účet pro aktuální vlákno při přidělování prostředků plánovači a dalším plánovačům. To je užitečné hlavně v případě, že se plány vláken účastní práce zařazené do fronty plánovače spolu s kořeny virtuálního procesoru, které Plánovač obdrží z Správce prostředků. Správce prostředků používá informace k tomu, aby nedocházelo k zbytečnému nadměrnému navýšení hardwarových vláken v systému.
+Tuto metodu použijte, pokud chcete, aby Správce prostředků účet pro aktuální vlákno při přidělování prostředků plánovače a další plánovače. To je užitečné zejména v případě, že vlákno plánuje účastnit se práce ve frontě na plánovače, spolu s kořeny virtuální procesor plánovač obdrží od Správce prostředků. Správce prostředků používá informace k zabránění zbytečnému přeodběru hardwarových vláken v systému.
 
-Prostředek spuštění přijatý prostřednictvím této metody by měl být vrácen do Správce prostředků pomocí metody [IExecutionResource:: Remove](iexecutionresource-structure.md#remove) . Vlákno, které volá metodu `Remove` musí být stejné jako vlákno, které dříve volalo metodu `SubscribeCurrentThread`.
+Prostředek spuštění přijatý touto metodou by měl být vrácen Správci prostředků pomocí metody [IExecutionResource::Remove.](iexecutionresource-structure.md#remove) Podproces, který `Remove` volá metodu musí být `SubscribeCurrentThread` stejné vlákno, které dříve volal metodu.
 
-Přihlášení k odběru vlákna zvyšuje úroveň předplatného podkladového vlákna hardwaru o jednu. Úroveň předplatného se po ukončení předplatného zmenší o jednu. Další informace o úrovních předplatného najdete v tématu [IExecutionResource:: CurrentSubscriptionLevel –](iexecutionresource-structure.md#currentsubscriptionlevel).
+Akt přihlášení podprocesu zvyšuje úroveň předplatného základní ho hardwarové vlákno o jednu. Úroveň předplatného se sníží o jednu při ukončení předplatného. Další informace o úrovních předplatného naleznete v [tématu IExecutionResource::CurrentSubscriptionLevel](iexecutionresource-structure.md#currentsubscriptionlevel).
 
-## <a name="unbindcontext"></a>ISchedulerProxy:: UnbindContext – metoda
+## <a name="ischedulerproxyunbindcontext-method"></a><a name="unbindcontext"></a>ISchedulerProxy::Metoda UnbindContext
 
-Zruší přidružení proxy vlákna z kontextu spuštění určeného parametrem `pContext` a vrátí ho do bezplatného fondu objektů proxy vlákna. Tato metoda může být volána pouze v kontextu spuštění, který byl svázán prostřednictvím metody [ISchedulerProxy:: bindcontext –](#bindcontext) a ještě nebyla spuštěna, pomocí parametru `pContext` volání metody [IThreadProxy:: SwitchTo –](ithreadproxy-structure.md#switchto) .
+Odpojí proxy vlákna z kontextu spuštění `pContext` určeného parametrem a vrátí jej do volného fondu proxy vlákna. Tato metoda může být volána pouze v kontextu spuštění, který byl vázán prostřednictvím metody [ISchedulerProxy::BindContext](#bindcontext) a ještě nebyla spuštěna prostřednictvím parametru `pContext` volání metody [IThreadProxy::SwitchTo.](ithreadproxy-structure.md#switchto)
 
 ```cpp
 virtual void UnbindContext(_Inout_ IExecutionContext* pContext) = 0;
@@ -174,12 +174,12 @@ virtual void UnbindContext(_Inout_ IExecutionContext* pContext) = 0;
 
 ### <a name="parameters"></a>Parametry
 
-*pContext*<br/>
-Kontext spuštění, který se má zrušit přidružení k proxy vlákna.
+*pKontext*<br/>
+Kontext spuštění zrušit přidružení od jeho proxy vlákna.
 
 ## <a name="see-also"></a>Viz také
 
-[concurrency – obor názvů](concurrency-namespace.md)<br/>
+[obor názvů souběžnosti](concurrency-namespace.md)<br/>
 [IScheduler – struktura](ischeduler-structure.md)<br/>
 [IThreadProxy – struktura](ithreadproxy-structure.md)<br/>
 [IVirtualProcessorRoot – struktura](ivirtualprocessorroot-structure.md)<br/>

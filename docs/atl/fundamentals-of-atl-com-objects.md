@@ -7,72 +7,72 @@ helpviewer_keywords:
 - ATL COM objects
 - COM objects, ATL
 ms.assetid: 0f9c9d98-cc28-45da-89ac-dc94cee422fe
-ms.openlocfilehash: ec83539b2d7101c534bbc1df33577df422e76152
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 651413534ed44143e2a0fdaf00bdabd6e5d57010
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69492371"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81319559"
 ---
 # <a name="fundamentals-of-atl-com-objects"></a>Základy objektů ATL COM
 
-Následující ilustrace znázorňuje vztah mezi třídami a rozhraními, které se používají k definování objektu ATL modelu COM.
+Následující obrázek znázorňuje vztah mezi třídami a rozhraními, které se používají k definování objektu KNIHOVNY KNIHOVNY ATL COM.
 
-![ATL – struktura](../atl/media/vc307y1.gif "ATL – struktura")
+![Struktura ATL](../atl/media/vc307y1.gif "Struktura ATL")
 
 > [!NOTE]
->  Tento diagram ukazuje, `CComObject` že je odvozen `CYourClass` `CComAggObject` z daného `CComPolyObject` a `CYourClass` zahrnutí jako členské proměnné.
+> Tento diagram `CComObject` ukazuje, že `CYourClass` je `CComAggObject` `CComPolyObject` odvozen `CYourClass` od vzhledem k tomu a zahrnout jako členské proměnné.
 
-Existují tři způsoby, jak definovat objekt modelu COM ATL. Standardní možnost je použít `CComObject` třídu, která je odvozena z. `CYourClass` Druhou možností je vytvořit agregovaný objekt pomocí `CComAggObject` třídy. Třetí možností je použít `CComPolyObject` třídu. `CComPolyObject`funguje jako hybridní: může fungovat jako `CComObject` třída nebo `CComAggObject` jako třída, v závislosti na tom, jak je poprvé vytvořen. Další informace o použití `CComPolyObject` třídy naleznete v tématu [Třída CComPolyObject](../atl/reference/ccompolyobject-class.md).
+Objekt KNIHOVNY ATL COM lze definovat třemi způsoby. Standardní možností je použít `CComObject` třídu, která `CYourClass`je odvozena od . Druhou možností je vytvořit agregovaný objekt `CComAggObject` pomocí třídy. Třetí možností je použít `CComPolyObject` třídu. `CComPolyObject`funguje jako hybrid: může fungovat `CComObject` jako třída `CComAggObject` nebo jako třída, v závislosti na tom, jak je nejprve vytvořen. Další informace o použití `CComPolyObject` třídy naleznete v tématu [CComPolyObject Class](../atl/reference/ccompolyobject-class.md).
 
-Použijete-li standardní ATL COM, použijete dva objekty: vnější objekt a vnitřní objekt. Externí klienti přistupují k funkcím vnitřního objektu prostřednictvím funkcí obálky, které jsou definovány v vnějším objektu. Vnější objekt je typu `CComObject`.
+Při použití standardního knihovny ATL COM použijete dva objekty: vnější objekt a vnitřní objekt. Externí klienti přistupují k funkcím vnitřního objektu prostřednictvím funkcí obálky, které jsou definovány ve vnějším objektu. Vnější objekt je `CComObject`typu .
 
-Použijete-li agregovaný objekt, vnější objekt neposkytuje obálky pro fungování vnitřního objektu. Místo toho vnější objekt poskytuje ukazatel, ke kterému má přímý pøístup externí klienti. V tomto scénáři je vnější objekt typu `CComAggObject`. Vnitřní objekt je členskou proměnnou vnějšího objektu a je typu `CYourClass`.
+Při použití agregovaného objektu vnější objekt neposkytuje obálky pro funkce vnitřního objektu. Místo toho vnější objekt poskytuje ukazatel, který je přímo přístupný externím klientům. V tomto scénáři vnější objekt `CComAggObject`je typu . Vnitřní objekt je členská proměnná vnějšího objektu `CYourClass`a je typu .
 
-Vzhledem k tomu, že klient nemusí projít vnějším objektem pro interakci s vnitřním objektem, jsou agregované objekty obvykle efektivnější. Kromě toho vnější objekt nemusí znát funkčnost agregovaného objektu vzhledem k tom, že rozhraní agregovaného objektu je přímo k dispozici klientovi. Ne všechny objekty ale mohou být agregovány. Pro objekt, který se má agregovat, musí být navržený s ohledem na agregaci.
+Vzhledem k tomu, že klient nemusí procházet vnější objekt pro interakci s vnitřním objektem, agregované objekty jsou obvykle efektivnější. Vnější objekt také nemusí znát funkce agregovaného objektu vzhledem k tomu, že rozhraní agregovaného objektu je přímo k dispozici klientovi. Však ne všechny objekty lze agregovat. Pro objekt, který má být agregován, musí být navržen s ohledem na agregaci.
 
 ATL implementuje [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) ve dvou fázích:
 
 - [CComObject](../atl/reference/ccomobject-class.md), [CComAggObject](../atl/reference/ccomaggobject-class.md)nebo [CComPolyObject](../atl/reference/ccompolyobject-class.md) implementuje `IUnknown` metody.
 
-- [Třídy CComObjectRoot](../atl/reference/ccomobjectroot-class.md) nebo [CComObjectRootEx](../atl/reference/ccomobjectrootex-class.md) spravuje počet odkazů a vnější `IUnknown`ukazatele.
+- [CComObjectRoot](../atl/reference/ccomobjectroot-class.md) nebo [CComObjectRootEx](../atl/reference/ccomobjectrootex-class.md) spravuje počet odkazů a `IUnknown`vnější ukazatele .
 
-Další aspekty objektu ATL COM jsou zpracovávány jinými třídami:
+Další aspekty objektu KNIHOVNY ATL COM jsou zpracovány jinými třídami:
 
-- [CComCoClass](../atl/reference/ccomcoclass-class.md) definuje výchozí objekt pro vytváření tříd a agregaci objektu.
+- [CComCoClass](../atl/reference/ccomcoclass-class.md) definuje objekt u výchozí třídy factory a agregační model.
 
-- [IDispatchImpl](../atl/reference/idispatchimpl-class.md) poskytuje výchozí implementaci `IDispatch Interface` části všech duálních rozhraní objektu.
+- [IDispatchImpl](../atl/reference/idispatchimpl-class.md) poskytuje výchozí implementaci `IDispatch Interface` části všech duálních rozhraní na objektu.
 
-- [ISupportErrorInfoImpl](../atl/reference/isupporterrorinfoimpl-class.md) implementuje `ISupportErrorInfo` rozhraní, které zajišťuje informace o chybách, lze správně rozšířit řetězcem volání.
+- [ISupportErrorInfoImpl](../atl/reference/isupporterrorinfoimpl-class.md) implementuje `ISupportErrorInfo` rozhraní, které zajišťuje, že informace o chybách mohou být správně rozšířeny do řetězce volání.
 
 ## <a name="in-this-section"></a>V tomto oddílu
 
 [Implementace CComObjectRootEx](../atl/implementing-ccomobjectrootex.md)<br/>
-Zobrazit ukázkové položky mapování modelu COM pro `CComObjectRootEx`implementaci.
+Zobrazit ukázkové položky `CComObjectRootEx`mapy COM pro implementaci .
 
 [Implementace CComObject, CComAggObject a CComPolyObject](../atl/implementing-ccomobject-ccomaggobject-and-ccompolyobject.md)<br/>
-Popisuje, jak **makra\*DECLARE_ _AGGREGATABLE** `CComObject`ovlivňují použití, `CComAggObject`a `CComPolyObject`.
+Popisuje, jak **\*DECLARE_ _AGGREGATABLE** makra `CComObject` `CComAggObject`ovlivňují `CComPolyObject`použití písmen a, b) a .
 
 [Podpora IDispatch a IErrorInfo](../atl/supporting-idispatch-and-ierrorinfo.md)<br/>
-Seznam tříd implementace knihovny ATL, které se mají použít `IDispatch` pro `IErrorInfo` podporu rozhraní a.
+Uvádí třídy implementace knihovny ATL, které mají být používány pro podporu rozhraní `IDispatch` a. `IErrorInfo`
 
 [Podpora IDispEventImpl](../atl/supporting-idispeventimpl.md)<br/>
-Popisuje kroky pro implementaci bodu připojení pro vaši třídu.
+Popisuje kroky k implementaci spojovacího bodu pro vaši třídu.
 
-[Změna výchozího objektu pro vytváření tříd a agregačního modelu](../atl/changing-the-default-class-factory-and-aggregation-model.md)<br/>
-Zobrazit, jaká makra se mají použít ke změně výchozího modelu pro vytváření a agregaci tříd.
+[Změna výchozího modelu výroby tříd a modelu agregace](../atl/changing-the-default-class-factory-and-aggregation-model.md)<br/>
+Ukažte, jaká makra se mají použít ke změně výchozího modelu výroby tříd a agregace.
 
 [Vytvoření agregovaného objektu](../atl/creating-an-aggregated-object.md)<br/>
-Obsahuje seznam kroků pro vytvoření agregovaného objektu.
+Uvádí postup vytvoření agregovaného objektu.
 
 ## <a name="related-sections"></a>Související oddíly
 
 [Vytvoření projektu ATL](../atl/reference/creating-an-atl-project.md)<br/>
-Poskytuje informace o vytvoření objektu COM ATL.
+Obsahuje informace o vytvoření objektu KNIHOVNY ATL COM.
 
 [ATL](../atl/active-template-library-atl-concepts.md)<br/>
-Obsahuje odkazy na koncepční témata o tom, jak programovat pomocí knihovny Active Template Library.
+Obsahuje odkazy na koncepční témata týkající se programování pomocí knihovny aktivních šablon.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Charakteristiky](../atl/active-template-library-atl-concepts.md)
+[Koncepty](../atl/active-template-library-atl-concepts.md)

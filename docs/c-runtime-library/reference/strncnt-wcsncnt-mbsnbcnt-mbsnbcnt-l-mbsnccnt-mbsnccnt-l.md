@@ -1,6 +1,6 @@
 ---
 title: _strncnt, _wcsncnt, _mbsnbcnt, _mbsnbcnt_l, _mbsnccnt, _mbsnccnt_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbsnbcnt_l
 - _mbsnccnt
@@ -8,6 +8,10 @@ api_name:
 - _strncnt
 - _mbsnccnt_l
 - _mbsnbcnt
+- _o__mbsnbcnt
+- _o__mbsnbcnt_l
+- _o__mbsnccnt
+- _o__mbsnccnt_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,6 +24,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -53,19 +58,19 @@ helpviewer_keywords:
 - _mbsnccnt function
 - _wcsncnt function
 ms.assetid: 2a022e9e-a307-4acb-a66b-e56e5357f848
-ms.openlocfilehash: 4c00ae3ff845dfbc3daf4a3ea6ce5c34c43e475f
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: bfd339a38dd5df30ece72059525860603ee10748
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70947300"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364174"
 ---
 # <a name="_strncnt-_wcsncnt-_mbsnbcnt-_mbsnbcnt_l-_mbsnccnt-_mbsnccnt_l"></a>_strncnt, _wcsncnt, _mbsnbcnt, _mbsnbcnt_l, _mbsnccnt, _mbsnccnt_l
 
-Vrátí počet znaků nebo bajtů v zadaném počtu.
+Vrátí počet znaků nebo bajtů v rámci zadaného počtu.
 
 > [!IMPORTANT]
-> **_mbsnbcnt**, **_mbsnbcnt_l**, **_mbsnccnt**a **_mbsnccnt_l** nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime. Další informace najdete v tématu [funkce CRT nejsou v aplikacích Univerzální platforma Windows podporovány](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsnbcnt**, **_mbsnbcnt_l**, **_mbsnccnt**a **_mbsnccnt_l** nelze použít v aplikacích, které se spouštějí v prostředí Windows Runtime. Další informace naleznete v tématu [funkce CRT, které nejsou podporovány v aplikacích univerzální platformy Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -100,53 +105,55 @@ size_t _mbsnccnt_l(
 
 ### <a name="parameters"></a>Parametry
 
-*str*<br/>
-Řetězec, který se má prozkoumat
+*Str*<br/>
+Řetězec, který má být zkoumán.
 
-*výpočtu*<br/>
-Počet znaků nebo bajtů, které se mají prozkoumat v *str*.
+*Počet*<br/>
+Počet znaků nebo bajtů, které mají být zkontrolovány v *str*.
 
-*jazyka*<br/>
-Národní prostředí, které se má použít.
+*Národní prostředí*<br/>
+Národní prostředí použít.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**_mbsnbcnt** a **_mbsnbcnt_l** vrátí počet bajtů nalezených v prvním *počtu* vícebajtových znaků *str*. **_mbsnccnt** a **_mbsnccnt_l** vrátí počet znaků nalezených v prvním *počtu* bajtů *str*. Pokud se před dokončením vyhodnocení *str* objevil znak null, vrátí počet bajtů nebo znaků nalezených před znakem null. Pokud se *str* skládá z menšího počtu znaků nebo bajtů, vrátí *počet znaků nebo* bajtů v řetězci. Pokud je *počet* menší než nula, vrátí 0. V předchozích verzích měly tyto funkce vrácenou hodnotu typu **int** , nikoli **size_t**.
+**_mbsnbcnt** a **_mbsnbcnt_l** vrátí počet bajtů nalezených v prvním *počtu* vícebajtových znaků *str*. **_mbsnccnt** a **_mbsnccnt_l** vrátí počet znaků nalezených v prvním *počtu* bajtů *str*. Pokud je před dokončením kontroly *str* zjištěn znak null, vrátí počet bajtů nebo znaků nalezených před znakem null. Pokud *str* se skládá z méně než *počet* znaků nebo bajtů, vrátí počet znaků nebo bajtů v řetězci. Pokud *počet* je menší než nula, vrátí 0. V předchozích verzích měly tyto funkce vrácenou hodnotu typu **int** spíše než **size_t**.
 
-**_strncnt** vrátí počet znaků v prvním *počtu* bajtů *str*řetězce s jedním bajtem. **_wcsncnt** vrací počet znaků v první řadě znaků *v řetězci řetězce*s velkým *počtem* znaků.
+**_strncnt** vrátí počet znaků v prvním *počtu* bajtů jednobajtového řetězce *str*. **_wcsncnt** vrátí počet znaků v prvním *počtu* široké znaky široký znak řetězce *str*.
 
 ## <a name="remarks"></a>Poznámky
 
-**_mbsnbcnt** a **_mbsnbcnt_l** počítají počet bajtů nalezených v prvním *počtu* vícebajtových znaků *str*. **_mbsnbcnt** a **_mbsnbcnt_l** nahrazují **mtob** a měly by se používat místo **mtob**.
+**_mbsnbcnt** a **_mbsnbcnt_l** spočítat počet bajtů nalezených v prvním *počtu* vícebajtových znaků *str*. **_mbsnbcnt** a **_mbsnbcnt_l** nahradit **mtob** a měl by být použit místo **mtob**.
 
-**_mbsnccnt** a **_mbsnccnt_l** počítají počet znaků nalezených v prvním *počtu* bajtů *str*. Pokud **_mbsnccnt** a **_mbsnccnt_l** v druhém bajtu dvoubajtového znaku narazí na znak null, první bajt je také považován za null a není zahrnut do hodnoty vráceného počtu. **_mbsnccnt** a **_mbsnccnt_l** nahrazují **Btom** a měly by se používat místo **Btom**.
+**_mbsnccnt** a **_mbsnccnt_l** spočítat počet znaků nalezených v prvním *počtu* bajtů *str*. Pokud **_mbsnccnt** a **_mbsnccnt_l** setkat s prázdným znakem v druhém bajtu dvoubajtového znaku, první bajt je také považován za nulu a není zahrnut v hodnotě vráceného počtu. **_mbsnccnt** a **_mbsnccnt_l** nahradit **btom** a měl by být použit místo **btom**.
 
-Pokud *je str* ukazatel **s hodnotou null** nebo je *počet* 0, tyto funkce vyvolají obslužnou rutinu neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md), **errno** je nastaveno na **EINVAL**a funkce vrátí 0.
+Pokud *str* je **ukazatel NULL** nebo je *počet* je 0, tyto funkce vyvolat neplatný parametr obslužné rutiny, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md), **errno** je nastavena na **EINVAL**a funkce vrátí 0.
 
-Výstupní hodnota je ovlivněna nastavením kategorie **LC_CTYPE** národního prostředí; Další informace naleznete v tématu [setlocale](setlocale-wsetlocale.md) . Verze těchto funkcí bez přípony **_l** používají aktuální národní prostředí pro toto chování závislé na národním prostředí; verze s příponou **_l** jsou stejné s tím rozdílem, že místo toho používají předaný parametr národního prostředí. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
+Výstupní hodnota je ovlivněna nastavením nastavení **LC_CTYPE** kategorie národního prostředí; další informace naleznete [v tématu setlocale.](setlocale-wsetlocale.md) Verze těchto funkcí bez **přípony _l** pro toto chování závislé na národním prostředí používají aktuální národní prostředí. verze s **příponou _l** jsou identické s tím rozdílem, že místo toho používají parametr národního prostředí. Další informace naleznete v [tématu Locale](../../c-runtime-library/locale.md).
+
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
 |Rutina|_UNICODE a _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
 |-------------|--------------------------------------|--------------------|-----------------------|
 |**_tcsnbcnt**|**_strncnt**|**_mbsnbcnt**|**_wcsncnt**|
-|**_tcsnccnt**|**_strncnt**|**_mbsnbcnt**|není k dispozici|
-|**_wcsncnt**|není k dispozici|není k dispozici|**_mbsnbcnt**|
-|**_wcsncnt**|není k dispozici|není k dispozici|**_mbsnccnt**|
-|není k dispozici|není k dispozici|**_mbsnbcnt_l**|**_mbsnccnt_l**|
+|**_tcsnccnt**|**_strncnt**|**_mbsnbcnt**|neuvedeno|
+|**_wcsncnt**|neuvedeno|neuvedeno|**_mbsnbcnt**|
+|**_wcsncnt**|neuvedeno|neuvedeno|**_mbsnccnt**|
+|neuvedeno|neuvedeno|**_mbsnbcnt_l**|**_mbsnccnt_l**|
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_mbsnbcnt**|\<Mbstring. h >|
-|**_mbsnbcnt_l**|\<Mbstring. h >|
-|**_mbsnccnt**|\<Mbstring. h >|
-|**_mbsnccnt_l**|\<Mbstring. h >|
+|**_mbsnbcnt**|\<mbstring.h>|
+|**_mbsnbcnt_l**|\<mbstring.h>|
+|**_mbsnccnt**|\<mbstring.h>|
+|**_mbsnccnt_l**|\<mbstring.h>|
 |**_strncnt**|\<tchar.h>|
 |**_wcsncnt**|\<tchar.h>|
 
-Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -175,9 +182,9 @@ int main( void )
 The first 10 characters are single-byte.
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Manipulace s řetězci](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Zacházení s řetězci](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [Národní prostředí](../../c-runtime-library/locale.md)<br/>
 [Výklad sekvencí vícebajtových znaků](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbsnbcat, _mbsnbcat_l](mbsnbcat-mbsnbcat-l.md)<br/>

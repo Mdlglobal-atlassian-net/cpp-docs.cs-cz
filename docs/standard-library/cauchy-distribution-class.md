@@ -26,16 +26,16 @@ helpviewer_keywords:
 - std::cauchy_distribution [C++], param_type
 - std::cauchy_distribution [C++], param_type
 ms.assetid: 21522351-f2f1-46d9-97f0-d358c932356c
-ms.openlocfilehash: 6a2bbdc9cc5ef8b633842bca3d94e0d8073c9abb
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: ea75395c14c0babf5a047e7ae8f937e2a237b445
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688338"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81317126"
 ---
 # <a name="cauchy_distribution-class"></a>cauchy_distribution – třída
 
-Vygeneruje Cauchy distribuci.
+Generuje Cauchyho rozdělení.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -70,34 +70,34 @@ public:
 
 ### <a name="parameters"></a>Parametry
 
-*RealType* \
-Typ výsledku s plovoucí desetinnou čárkou, výchozí hodnota je **Double**. Možné typy najdete v tématu [\<random >](../standard-library/random.md).
+*Skutečný typ*\
+Typ výsledku s plovoucí desetinnou tázkem, výchozí hodnota **je double**. Možné typy naleznete v [ \<tématu náhodné>](../standard-library/random.md).
 
-*URNG* \
-Jednotný modul generátoru náhodných čísel. Možné typy najdete v tématu [\<random >](../standard-library/random.md).
+*URNG*\
+Jednotný generátor náhodných čísel. Možné typy naleznete v [ \<tématu náhodné>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Poznámky
 
-Šablona třídy popisuje distribuci, která vytváří hodnoty typu s plovoucí desetinnou čárkou, nebo typ **Double** , pokud není k dispozici, distribuované podle distribuce Cauchy. Následující tabulka obsahuje odkazy na články týkající se jednotlivých členů.
+Šablona třídy popisuje rozdělení, které vytváří hodnoty uživatelem určeného typu s plovoucí desetinnou čárkou, nebo zadejte **double,** pokud není k dispozici žádná, distribuovaná podle Cauchyho distribuce. Následující tabulka odkazuje na články o jednotlivých členech.
 
 ||||
 |-|-|-|
 |[cauchy_distribution](#cauchy_distribution)|`cauchy_distribution::a`|`cauchy_distribution::param`|
 |`cauchy_distribution::operator()`|`cauchy_distribution::b`|[param_type](#param_type)|
 
-Funkce vlastností `a()` a `b()` vrátí jejich příslušné hodnoty pro uložené distribuční parametry `a` a `b`.
+Vlastnost funguje `a()` `b()` a vrátí jejich příslušné hodnoty `a` `b`pro parametry uložené distribuce a .
 
-Člen vlastnosti `param()` nastaví nebo vrátí `param_type` uložený balíček parametrů distribuce.
+Člen `param()` vlastnosti nastaví `param_type` nebo vrátí balíček parametrů uložené distribuce.
 
-Členské funkce `min()` a `max()` vracejí nejmenší možný výsledek a největší možný výsledek.
+A `min()` `max()` členské funkce vrátí nejmenší možný výsledek a největší možný výsledek.
 
-Členská funkce `reset()` zahodí všechny hodnoty uložené v mezipaměti, takže výsledek dalšího volání `operator()` nezávisí na hodnotách získaných z modulu před voláním.
+Členská `reset()` funkce zahodí všechny hodnoty uložené v mezipaměti, `operator()` takže výsledek dalšího volání nezávisí na žádné hodnoty získané z motoru před voláním.
 
-Členské funkce `operator()` vrátí další vygenerovanou hodnotu založenou na modulu URNG, buď z aktuálního balíčku parametrů, nebo pomocí zadaného balíčku parametrů.
+Členské `operator()` funkce vrátí další vygenerovanou hodnotu na základě modulu URNG, buď z aktuálního balíčku parametrů, nebo ze zadaného balíčku parametrů.
 
-Další informace o třídách distribuce a jejich členech naleznete v tématu [\<random >](../standard-library/random.md).
+Další informace o distribučních třídách a jejich členech naleznete [ \<v tématu Random>](../standard-library/random.md).
 
-Podrobné informace o Cauchy distribuci najdete v článku o Wolfram MathWorld v tématu [distribuce Cauchy](https://go.microsoft.com/fwlink/p/?linkid=400523).
+Podrobné informace o cauchy distribuce, viz Wolfram MathWorld článek [Cauchy Distribuce](https://go.microsoft.com/fwlink/p/?linkid=400523).
 
 ## <a name="example"></a>Příklad
 
@@ -236,13 +236,13 @@ Distribution for 10 samples:
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<random >
+**Záhlaví:** \<náhodné>
 
 **Obor názvů:** std
 
-## <a name="cauchy_distribution"></a>cauchy_distribution::cauchy_distribution
+## <a name="cauchy_distributioncauchy_distribution"></a><a name="cauchy_distribution"></a>cauchy_distribution::cauchy_distribution
 
-Sestaví rozdělení.
+Vytvoří rozdělení.
 
 ```cpp
 explicit cauchy_distribution(result_type a = 0.0, result_type b = 1.0);
@@ -251,24 +251,24 @@ explicit cauchy_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parametry
 
-*\*
-Parametr distribuce `a`.
+*A*\
+Parametr `a` distribuce.
 
-*b* \
-Parametr distribuce `b`.
+*B*\
+Parametr `b` distribuce.
 
-*parametr* \
-Struktura `param_type` používaná k sestavení distribuce.
+*parm*\
+Struktura `param_type` slouží k vytvoření distribuce.
 
 ### <a name="remarks"></a>Poznámky
 
-**Předběžná podmínka:** `0.0 < b`
+**Předpokladem:**`0.0 < b`
 
-První konstruktor vytvoří objekt, jehož uložená `a` hodnota obsahuje hodnotu *a a jehož* uložená `b` hodnota obsahuje hodnotu *b*.
+První konstruktor zkonstruoval objekt, jehož `a` uložená hodnota obsahuje hodnotu *a* jejíž uložená `b` hodnota obsahuje hodnotu *b*.
 
-Druhý konstruktor vytvoří objekt, jehož uložené parametry jsou inicializovány z *parametr*. Můžete získat a nastavit aktuální parametry pro existující distribuci voláním členské funkce `param()`.
+Druhý konstruktor vytvoří objekt, jehož uložené parametry jsou inicializovány z *parm*. Aktuální parametry existující distribuce můžete získat a nastavit `param()` voláním členské funkce.
 
-## <a name="param_type"></a>cauchy_distribution::p aram_type
+## <a name="cauchy_distributionparam_type"></a><a name="param_type"></a>cauchy_distribution::param_type
 
 Ukládá všechny parametry distribuce.
 
@@ -286,21 +286,21 @@ struct param_type {
 
 ### <a name="parameters"></a>Parametry
 
-*\*
-Parametr distribuce `a`.
+*A*\
+Parametr `a` distribuce.
 
-*b* \
-Parametr distribuce `b`.
+*B*\
+Parametr `b` distribuce.
 
-*pravé* \
-Objekt `param_type`, který se má porovnat.
+*Právo*\
+Objekt `param_type` porovnat s tímto.
 
 ### <a name="remarks"></a>Poznámky
 
-**Předběžná podmínka:** `0.0 < b`
+**Předpokladem:**`0.0 < b`
 
-Tato struktura může být předána konstruktoru třídy distribuce při vytváření instance, do `param()` členské funkce pro nastavení uložených parametrů stávající distribuce a `operator()` k použití namísto uložených parametrů.
+Tato struktura může být předána konstruktoru třídy distribuce `param()` při vytváření instancí, členské funkci pro `operator()` nastavení uložených parametrů existující distribuce a k použití namísto uložených parametrů.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[\<random >](../standard-library/random.md)
+[\<náhodné>](../standard-library/random.md)
