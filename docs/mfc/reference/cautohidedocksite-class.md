@@ -1,5 +1,5 @@
 ---
-title: CAutoHideDockSite Class
+title: CAutoHideDockSite – třída
 ms.date: 11/04/2016
 f1_keywords:
 - CAutoHideDockSite
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - CAutoHideDockSite [MFC], UnSetAutoHideMode
 - CAutoHideDockSite [MFC], m_nExtraSpace
 ms.assetid: 2a0f6bec-c369-4ab7-977d-564e7946ebad
-ms.openlocfilehash: f24827e2dc1f4d1131f5b63aebeb0e2b09bc2281
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3a4593ac17f0af26517144edb7b01a9ca4203b1a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388472"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81352971"
 ---
-# <a name="cautohidedocksite-class"></a>CAutoHideDockSite Class
+# <a name="cautohidedocksite-class"></a>CAutoHideDockSite – třída
 
-`CAutoHideDockSite` Rozšiřuje [cdocksite – třída](../../mfc/reference/cdocksite-class.md) k implementaci automatického schovávání panelu ukotvení.
+Rozšiřuje `CAutoHideDockSite` [CDockSite třídy](../../mfc/reference/cdocksite-class.md) implementovat automaticky skrýt ukotvení podokna.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -45,44 +45,44 @@ class CAutoHideDockSite : public CDockSite
 
 |||
 |-|-|
-|Název|Popis|
-|`CAutoHideDockSite::CAutoHideDockSite`|Vytvoří `CAutoHideDockSite` objektu.|
+|Name (Název)|Popis|
+|`CAutoHideDockSite::CAutoHideDockSite`|Vytvoří `CAutoHideDockSite` objekt.|
 |`CAutoHideDockSite::~CAutoHideDockSite`|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
 |||
 |-|-|
-|Název|Popis|
-|`CAutoHideDockSite::AllowShowOnPaneMenu`|Určuje, zda `CAutoHideDockSite` se zobrazí v nabídce podokna.|
-|[CAutoHideDockSite::CanAcceptPane](#canacceptpane)|Určuje, zda podokno základní objekt je odvozen z [cmfcautohidebar – třída](../../mfc/reference/cmfcautohidebar-class.md).|
-|[CAutoHideDockSite::DockPane](#dockpane)|Ukotvené podokno této `CAuotHideDockSite` objektu.|
-|[CAutoHideDockSite::GetAlignRect](#getalignrect)|Získá velikost dokovacím místě v souřadnicovém systému obrazovky.|
-|[CAutoHideDockSite::RepositionPanes](#repositionpanes)|V podokně překreslí na `CAutoHideDockSite` s globální okraje a mezera na tlačítku.|
-|[CAutoHideDockSite::SetOffsetLeft](#setoffsetleft)|Nastaví okraj na levé straně dokovací panel.|
-|[CAutoHideDockSite::SetOffsetRight](#setoffsetright)|Nastaví okraj na pravé straně panelu ukotvení.|
-|[CAutoHideDockSite::UnSetAutoHideMode](#unsetautohidemode)|Volání [CMFCAutoHideBar::UnSetAutoHideMode](../../mfc/reference/cmfcautohidebar-class.md#unsetautohidemode) pro objekty na `CAutoHideDockSite`.|
+|Name (Název)|Popis|
+|`CAutoHideDockSite::AllowShowOnPaneMenu`|Označuje, `CAutoHideDockSite` zda je zobrazen v nabídce podokna.|
+|[CAutoHideDockSite::CanAcceptPane](#canacceptpane)|Určuje, zda je objekt základního podokna odvozen od [třídy CMFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md).|
+|[CAutoHideDockSite::DockPane](#dockpane)|Ukotví podokno `CAuotHideDockSite` k tomuto objektu.|
+|[CAutoHideDockSite::GetAlignRect](#getalignrect)|Načte velikost dokovací sítě v souřadnicích obrazovky.|
+|[CAutoHideDockSite::RepositionPanes](#repositionpanes)|Překreslí podokno `CAutoHideDockSite` na globálním okraji a mezerách mezi tlačítky.|
+|[CAutoHideDockSite::SetOffsetLeft](#setoffsetleft)|Nastaví okraj na levé straně dokovacílište.|
+|[CAutoHideDockSite::SetOffsetRight](#setoffsetright)|Nastaví okraj na pravé straně dokovací lišty.|
+|[CAutoHideDockSite::UnSetAutoHideMode](#unsetautohidemode)|Volá [CMFCAutoHideBar::UnSetAutoHideMode](../../mfc/reference/cmfcautohidebar-class.md#unsetautohidemode) pro `CAutoHideDockSite`objekty na .|
 
-### <a name="data-members"></a>Datové členy
+### <a name="data-members"></a>Členové dat
 
 |||
 |-|-|
-|Název|Popis|
-|[CAutoHideDockSite::m_nExtraSpace](#m_nextraspace)|Definuje velikost místa mezi panely nástrojů a okraj ukotvení panelu. Tento prostor se měří z okraji levého nebo horního okraje, v závislosti na zarovnání místa ukotvení.|
+|Name (Název)|Popis|
+|[CAutoHideDockSite::m_nExtraSpace](#m_nextraspace)|Definuje velikost mezery mezi panely nástrojů a okrajem dokovacílište. Tento prostor se měří buď od levého okraje, nebo od horníhrany v závislosti na zarovnání prostoru doku.|
 
 ## <a name="remarks"></a>Poznámky
 
-Při volání [CFrameWndEx::EnableAutoHidePanes](../../mfc/reference/cframewndex-class.md#enableautohidepanes), rozhraní automaticky vytvoří `CAutoHideDockSite` objektu. Ve většině případů by neměl muset vytvořit instanci nebo přímo pomocí této třídy.
+Při volání [CFrameWndEx::EnableAutoHidePanes](../../mfc/reference/cframewndex-class.md#enableautohidepanes), rozhraní `CAutoHideDockSite` automaticky vytvoří objekt. Ve většině případů byste neměli být k oni konkretizovat nebo používat tuto třídu přímo.
 
-Panel ukotvení je mezera mezi levou stranu podokně docku a na levé straně [cmfcautohidebutton – třída](../../mfc/reference/cmfcautohidebutton-class.md).
+Dokovací lišta je mezera mezi levou stranou dokovacího podokna a levou stranou [třídy CMFCAutoHideButton](../../mfc/reference/cmfcautohidebutton-class.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObjekt](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[CCmdCíl](../../mfc/reference/ccmdtarget-class.md)
 
-[CWnd](../../mfc/reference/cwnd-class.md)
+[Cwnd](../../mfc/reference/cwnd-class.md)
 
 [CBasePane](../../mfc/reference/cbasepane-class.md)
 
@@ -90,7 +90,7 @@ Panel ukotvení je mezera mezi levou stranu podokně docku a na levé straně [c
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak načíst `CAutoHideDockSite` objektu z `CMFCAutoHideBar` objekt a jak nastavit levý a pravý okraj dokovací panel.
+Následující příklad ukazuje, jak `CAutoHideDockSite` načíst `CMFCAutoHideBar` objekt z objektu a jak nastavit levý a pravý okraj ukotvení.
 
 [!code-cpp[NVC_MFC_RibbonApp#29](../../mfc/reference/codesnippet/cpp/cautohidedocksite-class_1.cpp)]
 
@@ -98,9 +98,9 @@ Následující příklad ukazuje, jak načíst `CAutoHideDockSite` objektu z `CM
 
 **Záhlaví:** afxautohidedocksite.h
 
-##  <a name="canacceptpane"></a>  CAutoHideDockSite::CanAcceptPane
+## <a name="cautohidedocksitecanacceptpane"></a><a name="canacceptpane"></a>CAutoHideDockSite::CanAcceptPane
 
-Určuje, zda je základní podokno [cmfcautohidebar –](../../mfc/reference/cmfcautohidebar-class.md) objektu nebo odvozený od `CMFCAutoHideBar`.
+Určuje, zda je základní podokno objektem [CMFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md) nebo odvozeným od aplikace `CMFCAutoHideBar`.
 
 ```
 virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
@@ -111,19 +111,19 @@ virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
 |||
 |-|-|
 |Parametr|Popis|
-|*pBar*|[in] Základní panel, který testuje rozhraní framework.|
+|*pBar*|[v] Základní podokno, které testuje rozhraní framework.|
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE v případě *pBar* je odvozen z `CMFCAutoHideBar`; FALSE v opačném případě.
+TRUE, pokud *pBar* `CMFCAutoHideBar`je odvozen od ; FALSE jinak.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud podokno základní objekt je odvozen z `CMFCAutoHideBar`, může obsahovat `CAutoHideDockSite`.
+Pokud je objekt základního `CMFCAutoHideBar`podokna odvozen `CAutoHideDockSite`z , může obsahovat .
 
-##  <a name="dockpane"></a>  CAutoHideDockSite::DockPane
+## <a name="cautohidedocksitedockpane"></a><a name="dockpane"></a>CAutoHideDockSite::DockPane
 
-Ukotvené podokno této [cautohidedocksite –](../../mfc/reference/cautohidedocksite-class.md) objektu.
+Ukotví podokno k tomuto objektu [CAutoHideDockSite.](../../mfc/reference/cautohidedocksite-class.md)
 
 ```
 virtual void DockPane(
@@ -137,19 +137,19 @@ virtual void DockPane(
 |||
 |-|-|
 |Parametr|Popis|
-|*pWnd*|[in] Podokno, které ukotvené rozhraní framework.|
-|*dockMethod*|[in] Možnosti pro podokno ukotvení.|
-|*lpRect*|[in] Obdélník, který určuje hranice pro ukotvené podokno.|
+|*pWnd*|[v] Podokno, které rozhraní dotáže.|
+|*dockMethod*|[v] Možnosti ukotvení podokna.|
+|*lpRect*|[v] Obdélník, který určuje hranice ukotveného podokna.|
 
 ### <a name="remarks"></a>Poznámky
 
 Výchozí implementace nepoužívá parametr *dockMethod*, který je k dispozici pro budoucí použití.
 
-Pokud *lprect –* má hodnotu NULL, rozhraní umístí v podokně výchozí umístění na dokovacím místě. Při vodorovné dokovacím místě výchozí umístění je na levém okraji dokovacího webu. V opačném případě výchozí umístění je v horní části dokovacího webu.
+Pokud *lpRect* je NULL, rozhraní framework umístí podokno ve výchozím umístění na webu dock. Pokud je lokalita ukotvení vodorovná, výchozí umístění je zcela vlevo od doku. V opačném případě je výchozí umístění v horní části lokality docku.
 
-##  <a name="getalignrect"></a>  CAutoHideDockSite::GetAlignRect
+## <a name="cautohidedocksitegetalignrect"></a><a name="getalignrect"></a>CAutoHideDockSite::GetAlignRect
 
-Získá velikost dokovacím místě v souřadnicovém systému obrazovky.
+Načte velikost dokovací sítě v souřadnicích obrazovky.
 
 ```
 void GetAlignRect(CRect& rect) const;
@@ -160,15 +160,15 @@ void GetAlignRect(CRect& rect) const;
 |||
 |-|-|
 |Parametr|Popis|
-|*Rect*|[in] Odkaz na obdélníku. Metoda ukládá velikost dokovacím místě v obdélníku.|
+|*Rect*|[v] Odkaz na obdélník. Metoda ukládá velikost úložiště v tomto obdélníku.|
 
 ### <a name="remarks"></a>Poznámky
 
-Obdélníku je přizpůsobené pro posun okrajů tak, aby nebyly zahrnuty.
+Obdélník je upraven pro posun okraje tak, aby nebyly zahrnuty.
 
-##  <a name="m_nextraspace"></a>  CAutoHideDockSite::m_nExtraSpace
+## <a name="cautohidedocksitem_nextraspace"></a><a name="m_nextraspace"></a>CAutoHideDockSite::m_nExtraSpace
 
-Velikost místa mezi okraji [cautohidedocksite – třída](../../mfc/reference/cautohidedocksite-class.md) a [cmfcautohidebar – třída](../../mfc/reference/cmfcautohidebar-class.md) objekty.
+Velikost mezery mezi okraji [cautohidedocksite třídy](../../mfc/reference/cautohidedocksite-class.md) a [CMFCAutoHideBar třídy](../../mfc/reference/cmfcautohidebar-class.md) objektů.
 
 ```
 static int m_nExtraSpace;
@@ -176,11 +176,11 @@ static int m_nExtraSpace;
 
 ### <a name="remarks"></a>Poznámky
 
-Při `CMFCAutoHideBar` je ukotven na `CAutoHideDockSite`, to by neměla zabírat celé dokovacího webu. Tato globální proměnná řídí mezery mezi levého nebo horního ohraničení `CMFCAutoHideBar` a odpovídající `CAutoHideDockSite` hrany. Určuje, zda se používá nebo horního okraje závisí na aktuální zarovnání.
+Pokud `CMFCAutoHideBar` je ukotven a `CAutoHideDockSite`, neměl by zabírat celý dokovací web. Tato globální proměnná řídí mezeru mezi levým nebo horním okrajem `CMFCAutoHideBar` a odpovídající `CAutoHideDockSite` hranou. To, zda se použije horní nebo levý okraj, závisí na aktuálním zarovnání.
 
-##  <a name="setoffsetleft"></a>  CAutoHideDockSite::SetOffsetLeft
+## <a name="cautohidedocksitesetoffsetleft"></a><a name="setoffsetleft"></a>CAutoHideDockSite::SetOffsetLeft
 
-Nastaví okraj na levé straně dokovací panel.
+Nastaví okraj na levé straně dokovacílište.
 
 ```
 void SetOffsetLeft(int nOffset);
@@ -189,15 +189,15 @@ void SetOffsetLeft(int nOffset);
 ### <a name="parameters"></a>Parametry
 
 *nOffset*<br/>
-[in] Nové posun.
+[v] Nový posun.
 
 ### <a name="remarks"></a>Poznámky
 
-[Cmfcautohidebar –](../../mfc/reference/cmfcautohidebar-class.md) objekty jsou umístěny na staticky `CAutoHideDockSite` objektu. To znamená, že uživatel nemůže ručně změnit umístění `CMFCAutoHideBar` objekty. `SetOffsetLeft` Metodu ovládá mezery mezi nalevo od nejvíce vlevo `CMFCAutoHideBar` a na levé straně `CAutoHideDockSite`.
+[CmFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md) objekty jsou umístěny staticky na objekt. `CAutoHideDockSite` To znamená, že uživatel nemůže ručně `CMFCAutoHideBar` změnit umístění objektů. Metoda `SetOffsetLeft` řídí mezery mezi levou stranou na levostranné `CMFCAutoHideBar` a `CAutoHideDockSite`levé straně rozhraní .
 
-##  <a name="setoffsetright"></a>  CAutoHideDockSite::SetOffsetRight
+## <a name="cautohidedocksitesetoffsetright"></a><a name="setoffsetright"></a>CAutoHideDockSite::SetOffsetRight
 
-Nastaví okraj na pravé straně panelu ukotvení.
+Nastaví okraj na pravé straně dokovací lišty.
 
 ```
 void SetOffsetRight(int nOffset);
@@ -206,15 +206,15 @@ void SetOffsetRight(int nOffset);
 ### <a name="parameters"></a>Parametry
 
 *nOffset*<br/>
-[in] Nové posun.
+[v] Nový posun.
 
 ### <a name="remarks"></a>Poznámky
 
-[Cmfcautohidebar –](../../mfc/reference/cmfcautohidebar-class.md) objekty jsou umístěny na staticky `CAutoHideDockSite` objektu. To znamená, že uživatel nemůže ručně změnit umístění `CMFCAutoHideBar` objekty. `SetOffsetRight` Metody určuje mezery mezi úplně vpravo pravé straně `CMFCAutoHideBar` a pravé straně `CAutoHideDockSite`.
+[CmFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md) objekty jsou umístěny staticky na objekt. `CAutoHideDockSite` To znamená, že uživatel nemůže ručně `CMFCAutoHideBar` změnit umístění objektů. Metoda `SetOffsetRight` určuje mezery mezi pravou stranou vpravo `CMFCAutoHideBar` a pravou stranou `CAutoHideDockSite`rozhraní .
 
-##  <a name="repositionpanes"></a>  CAutoHideDockSite::RepositionPanes
+## <a name="cautohidedocksiterepositionpanes"></a><a name="repositionpanes"></a>CAutoHideDockSite::RepositionPanes
 
-Překreslí podokna na [cautohidedocksite –](../../mfc/reference/cautohidedocksite-class.md).
+Překreslí podokna na [cautohidedocksite](../../mfc/reference/cautohidedocksite-class.md).
 
 ```
 virtual void RepositionPanes(CRect& rectNewClientArea);
@@ -225,15 +225,15 @@ virtual void RepositionPanes(CRect& rectNewClientArea);
 |||
 |-|-|
 |Parametr|Popis|
-|*rectNewClientArea*|[in] Rezervovanou hodnotu.|
+|*rectNewClientArea*|[v] Rezervovaná hodnota.|
 
 ### <a name="remarks"></a>Poznámky
 
-Výchozí implementace nepoužívá *rectNewClientArea*. Ho překreslí podoken s globální nástrojů okraje a mezera na tlačítku.
+Výchozí implementace nepoužívá *rectNewClientArea*. Překreslí podokna s globálními okraji panelu nástrojů a mezerami mezi tlačítky.
 
-##  <a name="unsetautohidemode"></a>  CAutoHideDockSite::UnSetAutoHideMode
+## <a name="cautohidedocksiteunsetautohidemode"></a><a name="unsetautohidemode"></a>CAutoHideDockSite::UnSetAutoHideMode
 
-Volání [CMFCAutoHideBar::UnSetAutoHideMode](../../mfc/reference/cmfcautohidebar-class.md#unsetautohidemode) objektů na dokovacím místě.
+Volá [CMFCAutoHideBar::UnSetAutoHideMode](../../mfc/reference/cmfcautohidebar-class.md#unsetautohidemode) pro objekty v dokovací síti.
 
 ```
 void UnSetAutoHideMode(CMFCAutoHideBar* pAutoHideToolbar);
@@ -244,14 +244,14 @@ void UnSetAutoHideMode(CMFCAutoHideBar* pAutoHideToolbar);
 |||
 |-|-|
 |Parametr|Popis|
-|*pAutoHideToolbar*|[in] Ukazatel [cmfcautohidebar –](../../mfc/reference/cmfcautohidebar-class.md) objektů – podokno umístěn na `CAutoHideDockSite`.|
+|*pAutoHideToolbar*|[v] Ukazatel na podokno objektů [CMFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md) umístěné na panelu `CAutoHideDockSite`.|
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda vyhledává řádek, který obsahuje *pAutoHideToolbar*. Volá `CMFCAutoHideBar.UnSetAutoHideMode` pro všechny `CMFCAutoHideBar` objekty na daném řádku. Pokud *pAutoHideToolbar* nebyl nalezen nebo má hodnotu NULL, tato metoda volá `CMFCAutoHideBar.UnSetAutoHideMode` pro všechny `CMFCAutoHideBar` objektů `CAutoHideDockSite`.
+Tato metoda vyhledá řádek, který obsahuje *pAutoHideToolbar*. Volá `CMFCAutoHideBar.UnSetAutoHideMode` všechny objekty v `CMFCAutoHideBar` tomto řádku. Pokud *pAutoHideToolbar* nebyl nalezen nebo je null, tato `CMFCAutoHideBar` metoda `CAutoHideDockSite`volá `CMFCAutoHideBar.UnSetAutoHideMode` pro všechny objekty na .
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>
-[CDockSite – třída](../../mfc/reference/cdocksite-class.md)
+[Třída CDocksite](../../mfc/reference/cdocksite-class.md)

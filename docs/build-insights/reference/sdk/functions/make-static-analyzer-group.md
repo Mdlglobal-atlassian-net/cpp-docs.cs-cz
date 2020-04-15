@@ -1,6 +1,6 @@
 ---
-title: MakeStaticAnalyzerGroup
-description: Reference C++ k funkci MakeStaticAnalyzerGroup sady SDK pro Build Insights
+title: Skupina MakeStaticAnalyzerGroup
+description: C++ Build Insights SDK MakeStaticAnalyzerGroup odkaz na funkci.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 5eabb0fcbb0a0bb0eea0f4e6bbf27b8e4c53c3ab
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 72f7f5d7a408436902394451a52dd66efe1d93f5
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78332815"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81323933"
 ---
-# <a name="makestaticanalyzergroup"></a>MakeStaticAnalyzerGroup
+# <a name="makestaticanalyzergroup"></a>Skupina MakeStaticAnalyzerGroup
 
 ::: moniker range="<=vs-2015"
 
-Sada C++ SDK pro Build Insights je kompatibilní se sadou Visual Studio 2017 a novější. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek selektor verzí sady Visual Studio pro tento článek na sadu Visual Studio 2017 nebo Visual Studio 2019.
+Sada C++ Build Insights SDK je kompatibilní s Visual Studio 2017 a vyšší. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek pro výběr **verze** sady Visual Studio pro tento článek na Visual Studio 2017 nebo Visual Studio 2019. Nachází se v horní části obsahu na této stránce.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Funkce `MakeStaticAnalyzerGroup` slouží k vytvoření skupiny statických analýz, které lze předat funkcím, jako je například [Analýza](analyze.md) nebo [relog](relog.md). Členové skupiny analyzátoru obdrží události jednu od zleva doprava, dokud nebudou analyzovány všechny události v trasování.
+Funkce `MakeStaticAnalyzerGroup` se používá k vytvoření statické skupiny analyzátorů, která může být předána funkcím, jako je [Analyzovat](analyze.md) nebo [Vyvolat](relog.md). Členové skupiny analyzátorů přijímají události jeden po druhém zleva doprava, dokud nebudou analyzovány všechny události v trasování.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -37,17 +37,17 @@ auto MakeStaticAnalyzerGroup(TAnalyzerPtrs... analyzers);
 ### <a name="parameters"></a>Parametry
 
 *TAnalyzerPtrs*\
-Tento parametr je vždy odvozený.
+Tento parametr je vždy odvodit.
 
-\ *analyzátorů*
-Sada parametrů [IAnalyzer](../other-types/ianalyzer-class.md) ukazatelů obsažená ve skupině statických analýz Tyto ukazatele můžou být nezpracované, `std::unique_ptr`nebo `std::shared_ptr`.
+*Analyzátory*\
+Balíček parametrů ukazatelů [IAnalyzer](../other-types/ianalyzer-class.md) zahrnutých ve skupině statických analyzátorů. Tyto ukazatele mohou být `std::unique_ptr`nezpracované nebo `std::shared_ptr`.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Statická skupina analyzátoru. K zachycení návratové hodnoty použijte klíčové slovo **auto** .
+Skupina statických analyzátorů. Pomocí **klíčového** slova auto zachyťte vrácenou hodnotu.
 
 ## <a name="remarks"></a>Poznámky
 
-Na rozdíl od dynamických skupin analyzátoru musí být členy statické skupiny analyzátoru známy v době kompilace. Kromě toho skupina statických analýz obsahuje ukazatele [IAnalyzer](../other-types/ianalyzer-class.md) , které nemají polymorfní chování. Při použití statické skupiny analyzátoru k analýze trasování událostí pro Windows (ETW) se volání rozhraní `IAnalyzer` vždy přeloží na objekt přímo odkazoval na člen skupiny analyzátoru. Tato ztráta flexibility je dodávána s možností rychlejšího zpracování událostí. Pokud členy skupiny analyzátorů nelze znát v době kompilace, nebo pokud vyžadujete na ukazatelích `IAnalyzer` polymorfní chování, zvažte použití dynamické skupiny analyzátoru. Chcete-li použít dynamickou skupinu analyzátoru, zavolejte místo toho [MakeDynamicAnalyzerGroup](make-static-analyzer-group.md) .
+Na rozdíl od skupin dynamických analyzátorů musí být členové skupiny statických analyzátorů známi v době kompilace. Skupina statického analyzátoru navíc obsahuje ukazatele [IAnalyzer,](../other-types/ianalyzer-class.md) které nemají polymorfní chování. Při použití statické analyzátor skupiny k analýze trasování trasování událostí pro `IAnalyzer` Windows (ETW), volání rozhraní vždy vyřešit objekt přímo ukázal člen skupiny analyzátoru. Tato ztráta flexibility přichází s možností rychlejšího zpracování událostí. Pokud členové skupiny analyzátoru nelze znát v době kompilace nebo pokud požadujete `IAnalyzer` polymorfní chování na ukazatelích, zvažte použití skupiny dynamického analyzátoru. Chcete-li použít skupinu dynamických analyzátorů, zavolejte místo toho [makedynamicanalyzergroup.](make-static-analyzer-group.md)
 
 ::: moniker-end

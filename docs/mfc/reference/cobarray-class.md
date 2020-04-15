@@ -1,5 +1,5 @@
 ---
-title: Cobarray – třída
+title: Třída CObArray
 ms.date: 11/04/2016
 f1_keywords:
 - CObArray
@@ -42,16 +42,16 @@ helpviewer_keywords:
 - CObArray [MFC], SetAtGrow
 - CObArray [MFC], SetSize
 ms.assetid: 27894efd-2370-4776-9ed9-24a98492af17
-ms.openlocfilehash: 78d736b53a2febe4f4a026e3aaf9db14dd7f9c0b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7b923fd9231d3652d8d2f1750a8024d15287811e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392489"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81360450"
 ---
-# <a name="cobarray-class"></a>Cobarray – třída
+# <a name="cobarray-class"></a>Třída CObArray
 
-Podporuje pole `CObject` ukazatele.
+Podporuje pole `CObject` ukazatelů.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -63,65 +63,65 @@ class CObArray : public CObject
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CObArray::CObArray](#cobarray)|Vytvoří prázdné pole `CObject` ukazatele.|
+|[CobArray::CObArray](#cobarray)|Vytvoří prázdné pole `CObject` pro ukazatele.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CObArray::Add](#add)|Přidá prvek na konec pole. v případě potřeby se zvětší pole.|
-|[CObArray::Append](#append)|Připojí další pole k poli; v případě potřeby se zvětší pole.|
-|[CObArray::Copy](#copy)|Zkopíruje jiného objektu array do pole. v případě potřeby se zvětší pole.|
-|[CObArray::ElementAt](#elementat)|Vrátí dočasný odkaz na ukazatel na prvek v poli.|
-|[CObArray::FreeExtra](#freeextra)|Uvolní všechny nevyužité paměti nad aktuální horní mez.|
-|[CObArray::GetAt](#getat)|Vrátí hodnotu na daném indexu.|
-|[CObArray::GetCount](#getcount)|Získá počet elementů v tomto poli.|
-|[CObArray::GetData](#getdata)|Umožňuje přístup k prvkům v poli. Může mít hodnotu NULL.|
-|[CObArray::GetSize](#getsize)|Získá počet elementů v tomto poli.|
-|[CObArray::GetUpperBound](#getupperbound)|Vrátí největší platný index.|
-|[CObArray::InsertAt](#insertat)|Vloží zadaný index elementu (nebo všechny prvky v jiného objektu array).|
-|[CObArray::IsEmpty](#isempty)|Určuje, zda je pole prázdné.|
-|[CObArray::RemoveAll](#removeall)|Odebere všechny prvky z tohoto pole.|
-|[CObArray::RemoveAt](#removeat)|Odebere element na konkrétní indexu.|
-|[CObArray::SetAt](#setat)|Nastaví hodnotu pro daný index; pole nesmí růst.|
-|[CObArray::SetAtGrow](#setatgrow)|Nastaví hodnotu pro daný index; v případě potřeby se zvětší pole.|
-|[CObArray::SetSize](#setsize)|Nastaví počet prvků, které mají být obsažena v tomto poli.|
+|[CobArray::Přidat](#add)|Přidá prvek na konec pole; v případě potřeby pole zvětší.|
+|[CObArray::Připojit](#append)|Připojí k poli jiné pole; v případě potřeby pole zvětší.|
+|[CobArray::Kopírovat](#copy)|Zkopíruje do pole jiné pole. v případě potřeby pole zvětší.|
+|[CobArray::Elementat](#elementat)|Vrátí dočasný odkaz na ukazatel prvku v rámci pole.|
+|[CobArray::FreeExtra](#freeextra)|Uvolní veškerou nepoužitou paměť nad aktuální horní mez.|
+|[CobArray::Získat](#getat)|Vrátí hodnotu v daném indexu.|
+|[CobArray::GetCount](#getcount)|Získá počet prvků v tomto poli.|
+|[CobArray::GetData](#getdata)|Umožňuje přístup k prvkům v poli. Může být NULL.|
+|[CobArray::GetSize](#getsize)|Získá počet prvků v tomto poli.|
+|[CobArray::GetupperBound](#getupperbound)|Vrátí největší platný index.|
+|[CobArray::InsertAt](#insertat)|Vloží prvek (nebo všechny prvky v jiném poli) v zadaném indexu.|
+|[CobArray::Jeprázdný](#isempty)|Určuje, zda je pole prázdné.|
+|[CobArray::RemoveAll](#removeall)|Odebere všechny prvky z tohoto pole.|
+|[CobArray::Removeat](#removeat)|Odebere prvek v určitém indexu.|
+|[CobArray::Setat](#setat)|Nastaví hodnotu pro daný index; pole nesmí růst.|
+|[CobArray::Setatgrow](#setatgrow)|Nastaví hodnotu pro daný index; v případě potřeby pole zvětší.|
+|[CobArray::SetSize](#setsize)|Nastaví počet prvků, které mají být obsaženy v tomto poli.|
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CObArray::operator \[ \]](#operator_at)|Nastaví nebo získá prvek na zadaném indexu.|
+|[CObArray::operátor \[\]](#operator_at)|Nastaví nebo získá prvek na zadaný index.|
 
 ## <a name="remarks"></a>Poznámky
 
-Tato pole objektu se podobají polím jazyka C, ale můžete dynamicky zmenšit nebo zvětšit podle potřeby.
+Tato pole objektů jsou podobná polím C, ale mohou se dynamicky zmenšovat a podle potřeby zvětšovat.
 
-Indexy pole vždy spustit na pozici 0. Můžete rozhodnout, jestli se má opravit horní mez nebo povolit pole, které chcete rozbalit přidat prvky za aktuální mez. Paměť je přidělena souvisle horní mez, i když některé prvky jsou null.
+Indexy pole vždy začínají na pozici 0. Můžete se rozhodnout, zda chcete opravit horní mez nebo povolit pole rozbalit při přidání prvků za aktuální vazbu. Paměť je přidělena souvisle k horní mez, i v případě, že některé prvky jsou null.
 
-V části Win32, velikost `CObArray` objektu je omezená jenom na dostupné paměti.
+V části Win32 je `CObArray` velikost objektu omezena pouze na dostupnou paměť.
 
-Stejně jako u pole jazyka C, čas přístupu `CObArray` indexovaný prvek je konstantní a je nezávislý na velikost pole.
+Stejně jako u pole C `CObArray` je přístupová doba pro indexovaný prvek konstantní a je nezávislá na velikosti pole.
 
-`CObArray` zahrnuje IMPLEMENT_SERIAL – makro na podporu serializace a výpis z jeho prvků. Pokud pole `CObject` ukazatele je uložit do archivu, s operátorem vložení přetížené nebo se `Serialize` členské funkce se každý `CObject` elementu, pak serializován spolu s jeho index pole.
+`CObArray`obsahuje makro IMPLEMENT_SERIAL pro podporu serializace a dumpingu jeho prvků. Pokud pole `CObject` ukazatelů je uložen do archivu, buď s přetížené vložení `Serialize` operátor nebo `CObject` s členovou funkcí, každý prvek je zase serializován spolu s jeho index pole.
 
-Pokud potřebujete s výpisem paměti jednotlivých `CObject` prvky v poli, je nutné nastavit hloubka `CDumpContext` objektu na hodnotu 1 nebo větší.
+Pokud potřebujete výpis jednotlivých `CObject` prvků v poli, musíte nastavit `CDumpContext` hloubku objektu na 1 nebo vyšší.
 
-Když `CObArray` odstranění objektu nebo při jeho prvky jsou odebrány, pouze `CObject` ukazatele jsou odebrány, nikoliv objekty, které odkazují.
-
-> [!NOTE]
->  Před použitím pole, použijte `SetSize` vytvoření jeho velikost a přidělit paměť pro něj. Pokud nepoužijete `SetSize`, přidání prvků pole způsobí, že ho bude často nevyčerpané a zkopírovat. Časté realokace a kopírování jsou neefektivní a může fragmentovat paměti.
-
-Odvození třídy pole je podobné seznamu odvození. Podrobnosti o odvození třídy seznamu zvláštní účely, najdete v článku [kolekce](../../mfc/collections.md).
+Při `CObArray` odstranění objektu nebo při odebrání jeho `CObject` prvků jsou odebrány pouze ukazatele, nikoli objekty, na které odkazují.
 
 > [!NOTE]
->  Pokud chcete serializovat pole, je nutné použít IMPLEMENT_SERIAL – makro v implementaci odvozené třídy.
+> Před použitím pole `SetSize` použijte k vytvoření jeho velikosti a přidělení paměti pro něj. Pokud nepoužijete `SetSize`, přidání prvků do pole způsobí, že často přerozděleny a zkopírovány. Časté přerozdělení a kopírování jsou neefektivní a může fragmentovat paměť.
+
+Odvození třídy pole je podobné odvození seznamu. Podrobnosti o odvození třídy seznamu pro zvláštní účely naleznete v článku [Sbírky](../../mfc/collections.md).
+
+> [!NOTE]
+> Pokud chcete pole serializovat, musíte při implementaci odvozené třídy použít makro IMPLEMENT_SERIAL.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObjekt](../../mfc/reference/cobject-class.md)
 
 `CObArray`
 
@@ -129,9 +129,9 @@ Odvození třídy pole je podobné seznamu odvození. Podrobnosti o odvození t�
 
 **Záhlaví:** afxcoll.h
 
-##  <a name="add"></a>  CObArray::Add
+## <a name="cobarrayadd"></a><a name="add"></a>CobArray::Přidat
 
-Přidá nový prvek na konec pole, stále se rozšiřující pole o 1.
+Přidá nový prvek na konec pole, rostoucí pole o 1.
 
 ```
 INT_PTR Add(CObject* newElement);
@@ -140,34 +140,34 @@ INT_PTR Add(CObject* newElement);
 ### <a name="parameters"></a>Parametry
 
 *newElement*<br/>
-`CObject` Ukazatel přidávané do tohoto pole.
+Ukazatel, `CObject` který má být přidán do tohoto pole.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Index elementu přidal.
+Index přidaného prvku.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud [SetSize](#setsize) se používá se *nGrowBy* hodnotu větší než 1, pak paměť navíc mohou být přiděleny. Horní mez, ale zvýší pouze 1.
+Pokud [SetSize](#setsize) byl použit s *nGrowBy* hodnota větší než 1, pak může být přidělena další paměť. Horní mez se však zvýší pouze o 1.
 
-Následující tabulka uvádí další členské funkce, které jsou podobné `CObArray::Add`.
+V následující tabulce jsou uvedeny `CObArray::Add`další členské funkce, které jsou podobné .
 
 |Třída|Členská funkce|
 |-----------|---------------------|
-|[CByteArray](../../mfc/reference/cbytearray-class.md)|**INT_PTR Add( BYTE** `newElement` **);**<br /><br /> **throw (cmemoryexception –\* );**|
-|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**Přidat INT_PTR (DWORD** `newElement` **);**<br /><br /> **throw (cmemoryexception –\* );**|
-|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**Přidat INT_PTR (void** <strong>\*</strong> `newElement` **);**<br /><br /> **throw (cmemoryexception –\* );**|
-|[CStringArray](../../mfc/reference/cstringarray-class.md)|**Přidat INT_PTR (LPCTSTR** `newElement` **); throw (cmemoryexception –\* );**<br /><br /> **INT_PTR Add(const CString&** `newElement` **);**|
-|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**INT_PTR Add( UINT** `newElement` **);**<br /><br /> **throw (cmemoryexception –\* );**|
-|[CWordArray](../../mfc/reference/cwordarray-class.md)|**Přidat INT_PTR (slovo** `newElement` **);**<br /><br /> **throw (cmemoryexception –\* );**|
+|[Cbytearray](../../mfc/reference/cbytearray-class.md)|**INT_PTR Přidat( BYTE** `newElement` **);**<br /><br /> **throw( CMemoryException\* );**|
+|[Pole CDWordArray](../../mfc/reference/cdwordarray-class.md)|**INT_PTR Přidat( DWORD** `newElement` **);**<br /><br /> **throw( CMemoryException\* );**|
+|[Pole CPtrArray](../../mfc/reference/cptrarray-class.md)|**INT_PTR Přidat( void** <strong>\*</strong> `newElement` **);**<br /><br /> **throw( CMemoryException\* );**|
+|[Pole CStringArray](../../mfc/reference/cstringarray-class.md)|**INT_PTR Add( LPCTSTR);** `newElement` **throw(\* CMemoryException );**<br /><br /> **INT_PTR Add (const CString&** `newElement` **);**|
+|[Pole CUIntArray](../../mfc/reference/cuintarray-class.md)|**INT_PTR Přidat( UINT** `newElement` **);**<br /><br /> **throw( CMemoryException\* );**|
+|[Pole CWordArray](../../mfc/reference/cwordarray-class.md)|**INT_PTR Přidat( WORD** `newElement` **);**<br /><br /> **throw( CMemoryException\* );**|
 
 ### <a name="example"></a>Příklad
 
-  Zobrazit [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) seznam `CAge` Třída použitá ve všech příkladech kolekce.
+  Viz [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) pro výpis `CAge` třídy používané ve všech příkladech kolekce.
 
 [!code-cpp[NVC_MFCCollections#75](../../mfc/codesnippet/cpp/cobarray-class_1.cpp)]
 
-Výsledky z této aplikace jsou následující:
+Výsledky tohoto programu jsou následující:
 
 ```Output
 Add example: A CObArray with 2 elements
@@ -175,9 +175,9 @@ Add example: A CObArray with 2 elements
 [1] = a CAge at $4468 40
 ```
 
-##  <a name="append"></a>  CObArray::Append
+## <a name="cobarrayappend"></a><a name="append"></a>CObArray::Připojit
 
-Voláním této členské funkce přidat obsah jiného objektu array do konce daného pole.
+Volání této členské funkce přidat obsah jiného pole na konec daného pole.
 
 ```
 INT_PTR Append(const CObArray& src);
@@ -186,38 +186,38 @@ INT_PTR Append(const CObArray& src);
 ### <a name="parameters"></a>Parametry
 
 *src*<br/>
-Zdrojové elementy, které se mají připojit k poli.
+Zdroj prvků, které mají být připojeny k poli.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Index první připojený prvek.
+Index první ho připojit prvek.
 
 ### <a name="remarks"></a>Poznámky
 
 Pole musí být stejného typu.
 
-V případě potřeby `Append` může přidělit extra paměť pro plnění prvky k poli.
+V případě `Append` potřeby může přidělit další paměť pro prvky připojené k poli.
 
-Následující tabulka uvádí další členské funkce, které jsou podobné `CObArray::Append`.
+V následující tabulce jsou uvedeny `CObArray::Append`další členské funkce, které jsou podobné .
 
 |Třída|Členská funkce|
 |-----------|---------------------|
-|[CByteArray](../../mfc/reference/cbytearray-class.md)|**Připojit INT_PTR (const CByteArray &** *src* **);**|
-|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**Připojit INT_PTR (const cdwordarray – &** *src* **);**|
-|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**Připojit INT_PTR (const cptrarray – &** *src* **);**|
-|[CStringArray](../../mfc/reference/cstringarray-class.md)|**Připojit INT_PTR (const cstringarray – &** *src* **);**|
-|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**Připojit INT_PTR (const cuintarray – &** *src* **);**|
-|[CWordArray](../../mfc/reference/cwordarray-class.md)|**Připojit INT_PTR (const cwordarray – &** *src* **);**|
+|[Cbytearray](../../mfc/reference/cbytearray-class.md)|**INT_PTR Append( const CByteArray&** *src* **);**|
+|[Pole CDWordArray](../../mfc/reference/cdwordarray-class.md)|**INT_PTR Append( const CDWordArray&** *src* **);**|
+|[Pole CPtrArray](../../mfc/reference/cptrarray-class.md)|**INT_PTR Append( const CPtrArray&** *src* **);**|
+|[Pole CStringArray](../../mfc/reference/cstringarray-class.md)|**INT_PTR Append( const CStringArray&** *src* **);**|
+|[Pole CUIntArray](../../mfc/reference/cuintarray-class.md)|**INT_PTR Append( const CUIntArray&** *src* **);**|
+|[Pole CWordArray](../../mfc/reference/cwordarray-class.md)|**INT_PTR Append( const CWordArray&** *src* **);**|
 
 ### <a name="example"></a>Příklad
 
-Zobrazit [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) seznam `CAge` Třída použitá ve všech příkladech kolekce.
+Viz [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) pro výpis `CAge` třídy používané ve všech příkladech kolekce.
 
 [!code-cpp[NVC_MFCCollections#76](../../mfc/codesnippet/cpp/cobarray-class_2.cpp)]
 
-##  <a name="copy"></a>  CObArray::Copy
+## <a name="cobarraycopy"></a><a name="copy"></a>CobArray::Kopírovat
 
-Voláním této členské funkce přepsat prvky daného pole prvků jiného pole stejného typu.
+Volání této členské funkce přepsat prvky daného pole s prvky jiného pole stejného typu.
 
 ```
 void Copy(const CObArray& src);
@@ -226,32 +226,32 @@ void Copy(const CObArray& src);
 ### <a name="parameters"></a>Parametry
 
 *src*<br/>
-Zdrojové elementy, které se mají zkopírovat do pole.
+Zdroj prvků, které mají být zkopírovány do pole.
 
 ### <a name="remarks"></a>Poznámky
 
-`Copy` Nelze uvolnit paměť; Nicméně, v případě potřeby `Copy` může přidělit extra paměť pro plnění elementů zkopírovaných k poli.
+`Copy`neuvolňuje paměť; však v `Copy` případě potřeby může přidělit další paměť pro prvky zkopírované do pole.
 
-Následující tabulka uvádí další členské funkce, které jsou podobné `CObArray::Copy`.
+V následující tabulce jsou uvedeny `CObArray::Copy`další členské funkce, které jsou podobné .
 
 |Třída|Členská funkce|
 |-----------|---------------------|
-|[CByteArray](../../mfc/reference/cbytearray-class.md)|**void kopírování (const CByteArray &** *src* **);**|
-|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**void kopírování (const cdwordarray – &** *src* **);**|
-|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**void kopírování (const cptrarray – &** *src* **);**|
-|[CStringArray](../../mfc/reference/cstringarray-class.md)|**void kopírování (const cstringarray – &** *src* **);**|
-|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**void kopírování (const cuintarray – &** *src* **);**|
-|[CWordArray](../../mfc/reference/cwordarray-class.md)|**void kopírování (const cwordarray – &** *src* **);**|
+|[Cbytearray](../../mfc/reference/cbytearray-class.md)|**void Copy( const CByteArray&** *src* **);**|
+|[Pole CDWordArray](../../mfc/reference/cdwordarray-class.md)|**void Copy( const CDWordArray&** *src* **);**|
+|[Pole CPtrArray](../../mfc/reference/cptrarray-class.md)|**void Copy( const CPtrArray&** *src* **);**|
+|[Pole CStringArray](../../mfc/reference/cstringarray-class.md)|**void Copy( const CStringArray&** *src* **);**|
+|[Pole CUIntArray](../../mfc/reference/cuintarray-class.md)|**void Copy( const CUIntArray&** *src);* **);**|
+|[Pole CWordArray](../../mfc/reference/cwordarray-class.md)|**void Copy( const CWordArray&** *src* **);**|
 
 ### <a name="example"></a>Příklad
 
-Zobrazit [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) seznam `CAge` Třída použitá ve všech příkladech kolekce.
+Viz [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) pro výpis `CAge` třídy používané ve všech příkladech kolekce.
 
 [!code-cpp[NVC_MFCCollections#77](../../mfc/codesnippet/cpp/cobarray-class_3.cpp)]
 
-##  <a name="cobarray"></a>  CObArray::CObArray
+## <a name="cobarraycobarray"></a><a name="cobarray"></a>CobArray::CObArray
 
-Vytvoří prázdnou `CObject` ukazatel pole.
+Vytvoří pole `CObject` prázdné horečné.
 
 ```
 CObArray();
@@ -259,26 +259,26 @@ CObArray();
 
 ### <a name="remarks"></a>Poznámky
 
-Pole roste současně jeden element.
+Pole zvětšuje jeden prvek najednou.
 
-V následující tabulce jsou uvedeny další konstruktory, které jsou podobné `CObArray::CObArray`.
+V následující tabulce jsou uvedeny další `CObArray::CObArray`konstruktory, které jsou podobné .
 
 |Třída|Konstruktor|
 |-----------|-----------------|
-|[CByteArray](../../mfc/reference/cbytearray-class.md)|**CByteArray( );**|
-|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**CDWordArray( );**|
-|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**CPtrArray( );**|
-|[CStringArray](../../mfc/reference/cstringarray-class.md)|**CStringArray( );**|
-|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**CUIntArray( );**|
-|[CWordArray](../../mfc/reference/cwordarray-class.md)|**CWordArray( );**|
+|[Cbytearray](../../mfc/reference/cbytearray-class.md)|**CByteArray( );**|
+|[Pole CDWordArray](../../mfc/reference/cdwordarray-class.md)|**CDWordArray( );**|
+|[Pole CPtrArray](../../mfc/reference/cptrarray-class.md)|**CPtrArray( );**|
+|[Pole CStringArray](../../mfc/reference/cstringarray-class.md)|**CStringArray( );**|
+|[Pole CUIntArray](../../mfc/reference/cuintarray-class.md)|**CUIntArray( );**|
+|[Pole CWordArray](../../mfc/reference/cwordarray-class.md)|**CWordArray( );**|
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_MFCCollections#78](../../mfc/codesnippet/cpp/cobarray-class_4.cpp)]
 
-##  <a name="elementat"></a>  CObArray::ElementAt
+## <a name="cobarrayelementat"></a><a name="elementat"></a>CobArray::Elementat
 
-Vrátí dočasný odkaz na ukazatel na prvek v poli.
+Vrátí dočasný odkaz na ukazatel prvku v rámci pole.
 
 ```
 CObject*& ElementAt(INT_PTR nIndex);
@@ -287,34 +287,34 @@ CObject*& ElementAt(INT_PTR nIndex);
 ### <a name="parameters"></a>Parametry
 
 *nIndex*<br/>
-Celočíselný index, který je větší než nebo rovna 0 a menší nebo rovna hodnotě vrácené `GetUpperBound`.
+Index celéčíslo, který je větší nebo roven 0 a menší `GetUpperBound`než nebo rovno hodnotě vrácené .
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Odkaz na `CObject` ukazatele.
+Odkaz na `CObject` ukazatel.
 
 ### <a name="remarks"></a>Poznámky
 
-Používá se k implementaci levé straně operátoru pro pole. Všimněte si, že se jedná o pokročilé funkce, která by měla sloužit pouze k implementaci operátory zvláštní pole.
+Používá se k implementaci operátoru přiřazení na levé straně pro pole. Všimněte si, že se jedná o pokročilou funkci, která by měla být použita pouze k implementaci operátorů speciální pole.
 
-Následující tabulka uvádí další členské funkce, které jsou podobné `CObArray::ElementAt`.
+V následující tabulce jsou uvedeny `CObArray::ElementAt`další členské funkce, které jsou podobné .
 
 |Třída|Členská funkce|
 |-----------|---------------------|
-|[CByteArray](../../mfc/reference/cbytearray-class.md)|**BYTE& ElementAt( INT_PTR** `nIndex` **);**|
-|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**DWORD & ElementAt (INT_PTR** `nIndex` **);**|
-|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**void\*& ElementAt( INT_PTR** `nIndex` **);**|
-|[CStringArray](../../mfc/reference/cstringarray-class.md)|**CString – & ElementAt (INT_PTR** `nIndex` **);**|
-|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**UINT& ElementAt( INT_PTR** `nIndex` **);**|
-|[CWordArray](../../mfc/reference/cwordarray-class.md)|**WORD & ElementAt (INT_PTR** `nIndex` **);**|
+|[Cbytearray](../../mfc/reference/cbytearray-class.md)|**BYTE& ElementAt( INT_PTR** `nIndex` **);**|
+|[Pole CDWordArray](../../mfc/reference/cdwordarray-class.md)|**DWORD& ElementAt( INT_PTR** `nIndex` **);**|
+|[Pole CPtrArray](../../mfc/reference/cptrarray-class.md)|**neplatné\*& ElementAt( INT_PTR** `nIndex` **);**|
+|[Pole CStringArray](../../mfc/reference/cstringarray-class.md)|**CString& ElementAt( INT_PTR** `nIndex` **);**|
+|[Pole CUIntArray](../../mfc/reference/cuintarray-class.md)|**UINT& ElementAt( INT_PTR** `nIndex` **);**|
+|[Pole CWordArray](../../mfc/reference/cwordarray-class.md)|**WORD& ElementAt( INT_PTR** `nIndex` **);**|
 
 ### <a name="example"></a>Příklad
 
-  Podívejte se na příklad pro [CObArray::GetSize](#getsize).
+  Viz příklad [cobarray::GetSize](#getsize).
 
-##  <a name="freeextra"></a>  CObArray::FreeExtra
+## <a name="cobarrayfreeextra"></a><a name="freeextra"></a>CobArray::FreeExtra
 
-Uvolní všechny další paměť, která byla přidělena, zatímco se zvětšil na velikost pole.
+Uvolní všechny další paměti, která byla přidělena, zatímco pole bylo pěstováno.
 
 ```
 void FreeExtra();
@@ -322,24 +322,24 @@ void FreeExtra();
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce nemá žádný vliv na velikost nebo horní hranice pole.
+Tato funkce nemá žádný vliv na velikost nebo horní mez pole.
 
-Následující tabulka uvádí další členské funkce, které jsou podobné `CObArray::FreeExtra`.
+V následující tabulce jsou uvedeny `CObArray::FreeExtra`další členské funkce, které jsou podobné .
 
 |Třída|Členská funkce|
 |-----------|---------------------|
-|[CByteArray](../../mfc/reference/cbytearray-class.md)|**void FreeExtra( );**|
-|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**void FreeExtra( );**|
-|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**void FreeExtra( );**|
-|[CStringArray](../../mfc/reference/cstringarray-class.md)|**void FreeExtra( );**|
-|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**void FreeExtra( );**|
-|[CWordArray](../../mfc/reference/cwordarray-class.md)|**void FreeExtra( );**|
+|[Cbytearray](../../mfc/reference/cbytearray-class.md)|**void FreeExtra( );**|
+|[Pole CDWordArray](../../mfc/reference/cdwordarray-class.md)|**void FreeExtra( );**|
+|[Pole CPtrArray](../../mfc/reference/cptrarray-class.md)|**void FreeExtra( );**|
+|[Pole CStringArray](../../mfc/reference/cstringarray-class.md)|**void FreeExtra( );**|
+|[Pole CUIntArray](../../mfc/reference/cuintarray-class.md)|**void FreeExtra( );**|
+|[Pole CWordArray](../../mfc/reference/cwordarray-class.md)|**void FreeExtra( );**|
 
 ### <a name="example"></a>Příklad
 
-  Podívejte se na příklad pro [CObArray::GetData](#getdata).
+  Viz příklad [cobarray::GetData](#getdata).
 
-##  <a name="getat"></a>  CObArray::GetAt
+## <a name="cobarraygetat"></a><a name="getat"></a>CobArray::Získat
 
 Vrátí prvek pole v zadaném indexu.
 
@@ -350,35 +350,35 @@ CObject* GetAt(INT_PTR nIndex) const;
 ### <a name="parameters"></a>Parametry
 
 *nIndex*<br/>
-Celočíselný index, který je větší než nebo rovna 0 a menší nebo rovna hodnotě vrácené `GetUpperBound`.
+Index celéčíslo, který je větší nebo roven 0 a menší `GetUpperBound`než nebo rovno hodnotě vrácené .
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`CObject` Ukazatel element, momentálně na tomto indexu.
+Prvek `CObject` ukazatele aktuálně v tomto indexu.
 
 ### <a name="remarks"></a>Poznámky
 
 > [!NOTE]
->  Předání zápornou hodnotu nebo hodnotu větší než hodnota vrácená `GetUpperBound` způsobí neplatnost kontrolního výrazu.
+> Předání záporné hodnoty nebo hodnoty větší `GetUpperBound` než hodnota vrácená hodnotou bude mít za následek neúspěšnou kontrolní výraz.
 
-Následující tabulka uvádí další členské funkce, které jsou podobné `CObArray::GetAt`.
+V následující tabulce jsou uvedeny `CObArray::GetAt`další členské funkce, které jsou podobné .
 
 |Třída|Členská funkce|
 |-----------|---------------------|
-|[CByteArray](../../mfc/reference/cbytearray-class.md)|**GetAt BAJTŮ (INT_PTR** `nIndex` **) const;**|
-|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**DWORD GetAt (INT_PTR** `nIndex` **) const;**|
-|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**void\* GetAt (INT_PTR** `nIndex` **) const;**|
-|[CStringArray](../../mfc/reference/cstringarray-class.md)|**CString – GetAt (INT_PTR** `nIndex` **) const;**|
-|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**UINT GetAt (INT_PTR** `nIndex` **) const;**|
-|[CWordArray](../../mfc/reference/cwordarray-class.md)|**WORD GetAt (INT_PTR** `nIndex` **) const;**|
+|[Cbytearray](../../mfc/reference/cbytearray-class.md)|**BYTE GetAt( INT_PTR** `nIndex` **) const;**|
+|[Pole CDWordArray](../../mfc/reference/cdwordarray-class.md)|**DWORD GetAt( INT_PTR** `nIndex` **) const;**|
+|[Pole CPtrArray](../../mfc/reference/cptrarray-class.md)|**void\* GetAt( INT_PTR** `nIndex` **) const;**|
+|[Pole CStringArray](../../mfc/reference/cstringarray-class.md)|**CString GetAt( INT_PTR** `nIndex` **) const;**|
+|[Pole CUIntArray](../../mfc/reference/cuintarray-class.md)|**UINT GetAt( INT_PTR** `nIndex` **) const;**|
+|[Pole CWordArray](../../mfc/reference/cwordarray-class.md)|**WORD GetAt( INT_PTR** `nIndex` **) const;**|
 
 ### <a name="example"></a>Příklad
 
-Zobrazit [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) seznam `CAge` Třída použitá ve všech příkladech kolekce.
+Viz [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) pro výpis `CAge` třídy používané ve všech příkladech kolekce.
 
 [!code-cpp[NVC_MFCCollections#79](../../mfc/codesnippet/cpp/cobarray-class_5.cpp)]
 
-##  <a name="getcount"></a>  CObArray::GetCount
+## <a name="cobarraygetcount"></a><a name="getcount"></a>CobArray::GetCount
 
 Vrátí počet prvků pole.
 
@@ -388,32 +388,32 @@ INT_PTR GetCount() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Počet položek v tomto poli.
+Počet položek v poli.
 
 ### <a name="remarks"></a>Poznámky
 
-Voláním této metody lze načíst počet prvků v poli. Vzhledem k tomu, že indexy jsou počítány od nuly, velikost je větší než nejvyšší index 1.
+Volání této metody načíst počet prvků v poli. Vzhledem k tomu, že indexy jsou založeny na nule, velikost je 1 větší než největší index.
 
-Následující tabulka uvádí další členské funkce, které jsou podobné `CObArray::GetCount`.
+V následující tabulce jsou uvedeny `CObArray::GetCount`další členské funkce, které jsou podobné .
 
 |Třída|Členská funkce|
 |-----------|---------------------|
-|[CByteArray](../../mfc/reference/cbytearray-class.md)|**INT_PTR GetCount (const;)**|
-|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**INT_PTR GetCount (const;)**|
-|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**INT_PTR GetCount (const;)**|
-|[CStringArray](../../mfc/reference/cstringarray-class.md)|**INT_PTR GetCount (const;)**|
-|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**INT_PTR GetCount (const;)**|
-|[CWordArray](../../mfc/reference/cwordarray-class.md)|**INT_PTR GetCount (const;)**|
+|[Cbytearray](../../mfc/reference/cbytearray-class.md)|**INT_PTR GetCount( ) const;**|
+|[Pole CDWordArray](../../mfc/reference/cdwordarray-class.md)|**INT_PTR GetCount( ) const;**|
+|[Pole CPtrArray](../../mfc/reference/cptrarray-class.md)|**INT_PTR GetCount( ) const;**|
+|[Pole CStringArray](../../mfc/reference/cstringarray-class.md)|**INT_PTR GetCount( ) const;**|
+|[Pole CUIntArray](../../mfc/reference/cuintarray-class.md)|**INT_PTR GetCount( ) const;**|
+|[Pole CWordArray](../../mfc/reference/cwordarray-class.md)|**INT_PTR GetCount( ) const;**|
 
 ### <a name="example"></a>Příklad
 
-Zobrazit [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) seznam `CAge` Třída použitá ve všech příkladech kolekce.
+Viz [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) pro výpis `CAge` třídy používané ve všech příkladech kolekce.
 
 [!code-cpp[NVC_MFCCollections#80](../../mfc/codesnippet/cpp/cobarray-class_6.cpp)]
 
-##  <a name="getdata"></a>  CObArray::GetData
+## <a name="cobarraygetdata"></a><a name="getdata"></a>CobArray::GetData
 
-Tuto funkci člena můžete použijte k získání přímý přístup k prvkům v poli.
+Pomocí této členské funkce získat přímý přístup k prvkům v poli.
 
 ```
 const CObject** GetData() const;
@@ -423,32 +423,32 @@ CObject** GetData();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na pole `CObject` ukazatele.
+Ukazatel na pole `CObject` ukazatelů.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud nejsou k dispozici, žádné elementy `GetData` vrátí hodnotu null.
+Pokud nejsou k `GetData` dispozici žádné prvky, vrátí hodnotu null.
 
-Zatímco přímý přístup k prvkům pole můžete pracovat rychleji, buďte opatrní při volání metody `GetData`; všechny chyby, můžete provést přímo vliv na elementy vaše pole.
+Zatímco přímý přístup k prvkům pole vám může pomoci pracovat `GetData`rychleji, buďte opatrní při volání ; všechny chyby, které provedete, přímo ovlivňují prvky pole.
 
-Následující tabulka uvádí další členské funkce, které jsou podobné `CObArray::GetData`.
+V následující tabulce jsou uvedeny `CObArray::GetData`další členské funkce, které jsou podobné .
 
 |Třída|Členská funkce|
 |-----------|---------------------|
-|[CByteArray](../../mfc/reference/cbytearray-class.md)|**Const BAJTŮ\* const; () GetData BAJTŮ\* GetData ();**|
-|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**Const DWORD\* GetData const (); DWORD\* GetData ();**|
-|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**Const void\* \* (GetData) const; void\* \* GetData ();**|
-|[CStringArray](../../mfc/reference/cstringarray-class.md)|**Const CString\* const; () GetData CString –\* GetData ();**|
-|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**Const UINT\* const; () GetData UINT\* GetData ();**|
-|[CWordArray](../../mfc/reference/cwordarray-class.md)|**argument WORD\* const; () GetData WORD\* GetData ();**|
+|[Cbytearray](../../mfc/reference/cbytearray-class.md)|**const BYTE\* GetData( ) const; BYTE\* GetData( );**|
+|[Pole CDWordArray](../../mfc/reference/cdwordarray-class.md)|**const DWORD\* GetData( ) const;DWORD\* GetData( );**|
+|[Pole CPtrArray](../../mfc/reference/cptrarray-class.md)|**const\* \* void GetData( )\* \* const;void GetData( );**|
+|[Pole CStringArray](../../mfc/reference/cstringarray-class.md)|**const CString\* GetData( ) const; CString\* GetData( );**|
+|[Pole CUIntArray](../../mfc/reference/cuintarray-class.md)|**const UINT\* GetData( ) const; UINT\* GetData( );**|
+|[Pole CWordArray](../../mfc/reference/cwordarray-class.md)|**const\* WORD GetData( ) const; WORD\* GetData( );**|
 
 ### <a name="example"></a>Příklad
 
-Zobrazit [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) seznam `CAge` Třída použitá ve všech příkladech kolekce.
+Viz [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) pro výpis `CAge` třídy používané ve všech příkladech kolekce.
 
 [!code-cpp[NVC_MFCCollections#81](../../mfc/codesnippet/cpp/cobarray-class_7.cpp)]
 
-##  <a name="getsize"></a>  CObArray::GetSize
+## <a name="cobarraygetsize"></a><a name="getsize"></a>CobArray::GetSize
 
 Vrátí velikost pole.
 
@@ -458,26 +458,26 @@ INT_PTR GetSize() const;
 
 ### <a name="remarks"></a>Poznámky
 
-Vzhledem k tomu, že indexy jsou počítány od nuly, velikost je větší než nejvyšší index 1.
+Vzhledem k tomu, že indexy jsou založeny na nule, velikost je 1 větší než největší index.
 
-Následující tabulka uvádí další členské funkce, které jsou podobné `CObArray::GetSize`.
+V následující tabulce jsou uvedeny `CObArray::GetSize`další členské funkce, které jsou podobné .
 
 |Třída|Členská funkce|
 |-----------|---------------------|
-|[CByteArray](../../mfc/reference/cbytearray-class.md)|**INT_PTR getsize – (const;)**|
-|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**INT_PTR getsize – (const;)**|
-|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**INT_PTR getsize – (const;)**|
-|[CStringArray](../../mfc/reference/cstringarray-class.md)|**INT_PTR getsize – (const;)**|
-|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**INT_PTR getsize – (const;)**|
-|[CWordArray](../../mfc/reference/cwordarray-class.md)|**INT_PTR getsize – (const;)**|
+|[Cbytearray](../../mfc/reference/cbytearray-class.md)|**INT_PTR GetSize( ) const;**|
+|[Pole CDWordArray](../../mfc/reference/cdwordarray-class.md)|**INT_PTR GetSize( ) const;**|
+|[Pole CPtrArray](../../mfc/reference/cptrarray-class.md)|**INT_PTR GetSize( ) const;**|
+|[Pole CStringArray](../../mfc/reference/cstringarray-class.md)|**INT_PTR GetSize( ) const;**|
+|[Pole CUIntArray](../../mfc/reference/cuintarray-class.md)|**INT_PTR GetSize( ) const;**|
+|[Pole CWordArray](../../mfc/reference/cwordarray-class.md)|**INT_PTR GetSize( ) const;**|
 
 ### <a name="example"></a>Příklad
 
-Zobrazit [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) seznam `CAge` Třída použitá ve všech příkladech kolekce.
+Viz [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) pro výpis `CAge` třídy používané ve všech příkladech kolekce.
 
 [!code-cpp[NVC_MFCCollections#82](../../mfc/codesnippet/cpp/cobarray-class_8.cpp)]
 
-##  <a name="getupperbound"></a>  CObArray::GetUpperBound
+## <a name="cobarraygetupperbound"></a><a name="getupperbound"></a>CobArray::GetupperBound
 
 Vrátí aktuální horní mez tohoto pole.
 
@@ -487,34 +487,34 @@ INT_PTR GetUpperBound() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Index (založený na nule) horní mez.
+Index horní mez (na základě nuly).
 
 ### <a name="remarks"></a>Poznámky
 
-Protože pole indexy jsou počítány od nuly, tato funkce vrátí hodnotu 1 menší než `GetSize`.
+Vzhledem k tomu, že indexy pole jsou `GetSize`od nuly, vrátí tato funkce hodnotu 1 menší než .
 
-Podmínka `GetUpperBound( )` = -1 znamená, že pole neobsahuje žádné elementy.
+Podmínka `GetUpperBound( )` = -1 označuje, že pole neobsahuje žádné prvky.
 
-Následující tabulka uvádí další členské funkce, které jsou podobné `CObArray::GetUpperBound`.
+V následující tabulce jsou uvedeny `CObArray::GetUpperBound`další členské funkce, které jsou podobné .
 
 |Třída|Členská funkce|
 |-----------|---------------------|
-|[CByteArray](../../mfc/reference/cbytearray-class.md)|**INT_PTR GetUpperBound (const;)**|
-|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**INT_PTR GetUpperBound (const;)**|
-|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**INT_PTR GetUpperBound (const;)**|
-|[CStringArray](../../mfc/reference/cstringarray-class.md)|**INT_PTR GetUpperBound (const;)**|
-|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**INT_PTR GetUpperBound (const;)**|
-|[CWordArray](../../mfc/reference/cwordarray-class.md)|**INT_PTR GetUpperBound (const;)**|
+|[Cbytearray](../../mfc/reference/cbytearray-class.md)|**INT_PTR GetUpperBound( ) const;**|
+|[Pole CDWordArray](../../mfc/reference/cdwordarray-class.md)|**INT_PTR GetUpperBound( ) const;**|
+|[Pole CPtrArray](../../mfc/reference/cptrarray-class.md)|**INT_PTR GetUpperBound( ) const;**|
+|[Pole CStringArray](../../mfc/reference/cstringarray-class.md)|**INT_PTR GetUpperBound( ) const;**|
+|[Pole CUIntArray](../../mfc/reference/cuintarray-class.md)|**INT_PTR GetUpperBound( ) const;**|
+|[Pole CWordArray](../../mfc/reference/cwordarray-class.md)|**INT_PTR GetUpperBound( ) const;**|
 
 ### <a name="example"></a>Příklad
 
-Zobrazit [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) seznam `CAge` Třída použitá ve všech příkladech kolekce.
+Viz [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) pro výpis `CAge` třídy používané ve všech příkladech kolekce.
 
 [!code-cpp[NVC_MFCCollections#83](../../mfc/codesnippet/cpp/cobarray-class_9.cpp)]
 
-##  <a name="insertat"></a>  CObArray::InsertAt
+## <a name="cobarrayinsertat"></a><a name="insertat"></a>CobArray::InsertAt
 
-Vloží zadaný index elementu (nebo všechny prvky v jiného objektu array).
+Vloží prvek (nebo všechny prvky v jiném poli) v zadaném indexu.
 
 ```
 void InsertAt(
@@ -530,46 +530,46 @@ void InsertAt(
 ### <a name="parameters"></a>Parametry
 
 *nIndex*<br/>
-Celočíselný index, který může být větší než hodnota vrácená `GetUpperBound`.
+Index celého čísla, který může být `GetUpperBound`větší než hodnota vrácená .
 
 *newElement*<br/>
-`CObject` Ukazatel na umístit do tohoto pole. A *newElement* hodnoty NULL povolené.
+Ukazatel, `CObject` který má být umístěn v tomto poli. *NewElement* hodnoty NULL je povolena.
 
 *nCount*<br/>
-Počet pokusů, které tento prvek by měl být vložen (výchozí nastavení: 1).
+Počet, kolikrát by měl být tento prvek vložen (výchozí hodnota je 1).
 
 *nStartIndex*<br/>
-Celočíselný index, který může být větší než hodnota vrácená `GetUpperBound`.
+Index celého čísla, který může být `GetUpperBound`větší než hodnota vrácená .
 
 *pNewArray*<br/>
-Další pole obsahující prvky, které mají být přidány do tohoto pole.
+Jiné pole, které obsahuje prvky, které mají být přidány do tohoto pole.
 
 ### <a name="remarks"></a>Poznámky
 
-První verze `InsertAt` vloží jeden prvek (nebo více kopií prvku) na zadaný index v poli. Probíhající, posune (zvýšením index) existující element v indexu a posune všech prvků nad ním.
+První verze `InsertAt` vloží jeden prvek (nebo více kopií prvku) na zadaný index v poli. V procesu posune nahoru (zvýšením indexu) existující prvek v tomto indexu a posune všechny prvky nad ním.
 
-Druhá verze vloží všechny prvky z jiného `CObArray` kolekce počínaje *nStartIndex* pozici.
+Druhá verze vloží všechny prvky `CObArray` z jiné kolekce, počínaje pozici *nStartIndex.*
 
-`SetAt` Funkce naproti tomu nahradí jeden prvek určeného pole a nepřesune žádné prvky.
+Funkce `SetAt` naopak nahradí jeden zadaný prvek pole a neposune žádné prvky.
 
-Následující tabulka uvádí další členské funkce, které jsou podobné `CObArray::InsertAt`.
+V následující tabulce jsou uvedeny `CObArray::InsertAt`další členské funkce, které jsou podobné .
 
 |Třída|Členská funkce|
 |-----------|---------------------|
-|[CByteArray](../../mfc/reference/cbytearray-class.md)|**void InsertAt (INT_PTR** `nIndex` **, BYTE** `newElement` **, int** `nCount` **= 1);**<br /><br /> **throw (cmemoryexception –\* );**<br /><br /> **void InsertAt( INT_PTR** `nStartIndex` **, CByteArray** <strong>\*</strong> `pNewArray` **);**<br /><br /> **throw (cmemoryexception –\* );**|
-|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**void InsertAt (INT_PTR** `nIndex` **, DWORD** `newElement` **, int** `nCount` **= 1);**<br /><br /> **throw (cmemoryexception –\* );**<br /><br /> **void InsertAt( INT_PTR** `nStartIndex` **, CDWordArray** <strong>\*</strong> `pNewArray` **);**<br /><br /> **throw (cmemoryexception –\* );**|
-|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**void InsertAt (INT_PTR** `nIndex` **, void** <strong>\*</strong> `newElement` **, int** `nCount` **= 1);**<br /><br /> **throw (cmemoryexception –\* );**<br /><br /> **void InsertAt( INT_PTR** `nStartIndex` **, CPtrArray** <strong>\*</strong> `pNewArray` **);**<br /><br /> **throw (cmemoryexception –\* );**|
-|[CStringArray](../../mfc/reference/cstringarray-class.md)|**void InsertAt (INT_PTR** `nIndex` **, LPCTSTR** `newElement` **, int** `nCount` **= 1);**<br /><br /> **throw (cmemoryexception –\* );**<br /><br /> **void InsertAt (INT_PTR** `nStartIndex` **, cstringarray –** <strong>\*</strong> `pNewArray` **);**<br /><br /> **throw (cmemoryexception –\* );**|
-|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**void InsertAt (INT_PTR** `nIndex` **, UINT** `newElement` **, int** `nCount` **= 1);**<br /><br /> **throw (cmemoryexception –\* );**<br /><br /> **void InsertAt (INT_PTR** `nStartIndex` **, cuintarray –** <strong>\*</strong> `pNewArray` **);**<br /><br /> **throw (cmemoryexception –\* );**|
-|[CWordArray](../../mfc/reference/cwordarray-class.md)|**void InsertAt (INT_PTR** `nIndex` **, WORD** `newElement` **, int** `nCount` **= 1);**<br /><br /> **throw (cmemoryexception –\* );**<br /><br /> **void InsertAt( INT_PTR** `nStartIndex` **, CWordArray** <strong>\*</strong> `pNewArray` **);**<br /><br /> **throw (cmemoryexception –\* );**|
+|[Cbytearray](../../mfc/reference/cbytearray-class.md)|**void InsertAt( INT_PTR** `nIndex` **, BYTE** `newElement` **, int** `nCount` **= 1 );**<br /><br /> **throw( CMemoryException\* );**<br /><br /> **void InsertAt( INT_PTR** `nStartIndex` **, CByteArray** <strong>\*</strong> `pNewArray` **);**<br /><br /> **throw( CMemoryException\* );**|
+|[Pole CDWordArray](../../mfc/reference/cdwordarray-class.md)|**void InsertAt( INT_PTR** `nIndex` **, DWORD** `newElement` **, int** `nCount` **= 1 );**<br /><br /> **throw( CMemoryException\* );**<br /><br /> **void InsertAt( INT_PTR** `nStartIndex` **, CDWordArray** <strong>\*</strong> `pNewArray` **);**<br /><br /> **throw( CMemoryException\* );**|
+|[Pole CPtrArray](../../mfc/reference/cptrarray-class.md)|**void InsertAt( INT_PTR** `nIndex` **, void** <strong>\*</strong> `newElement` **, int** `nCount` **= 1 );**<br /><br /> **throw( CMemoryException\* );**<br /><br /> **void InsertAt( INT_PTR** `nStartIndex` **, CPtrArray** <strong>\*</strong> `pNewArray` **);**<br /><br /> **throw( CMemoryException\* );**|
+|[Pole CStringArray](../../mfc/reference/cstringarray-class.md)|**void InsertAt( INT_PTR** `nIndex` **, LPCTSTR** `newElement` **, int** `nCount` **= 1 );**<br /><br /> **throw( CMemoryException\* );**<br /><br /> **void InsertAt( INT_PTR** `nStartIndex` **, CStringArray** <strong>\*</strong> `pNewArray` **);**<br /><br /> **throw( CMemoryException\* );**|
+|[Pole CUIntArray](../../mfc/reference/cuintarray-class.md)|**void InsertAt( INT_PTR** `nIndex` **, UINT** `newElement` , **int** `nCount` **= 1 );**<br /><br /> **throw( CMemoryException\* );**<br /><br /> **void InsertAt( INT_PTR** `nStartIndex` **, CUIntArray** <strong>\*</strong> `pNewArray` **);**<br /><br /> **throw( CMemoryException\* );**|
+|[Pole CWordArray](../../mfc/reference/cwordarray-class.md)|**void InsertAt( INT_PTR** `nIndex` **, WORD** `newElement` **, int** `nCount` **= 1 );**<br /><br /> **throw( CMemoryException\* );**<br /><br /> **void InsertAt( INT_PTR** `nStartIndex` **, CWordArray** <strong>\*</strong> `pNewArray` **);**<br /><br /> **throw( CMemoryException\* );**|
 
 ### <a name="example"></a>Příklad
 
-  Zobrazit [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) seznam `CAge` Třída použitá ve všech příkladech kolekce.
+  Viz [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) pro výpis `CAge` třídy používané ve všech příkladech kolekce.
 
 [!code-cpp[NVC_MFCCollections#84](../../mfc/codesnippet/cpp/cobarray-class_10.cpp)]
 
-Výsledky z této aplikace jsou následující:
+Výsledky tohoto programu jsou následující:
 
 ```Output
 InsertAt example: A CObArray with 3 elements
@@ -578,7 +578,7 @@ InsertAt example: A CObArray with 3 elements
 [2] = a CAge at $4606 40
 ```
 
-##  <a name="isempty"></a>  CObArray::IsEmpty
+## <a name="cobarrayisempty"></a><a name="isempty"></a>CobArray::Jeprázdný
 
 Určuje, zda je pole prázdné.
 
@@ -588,11 +588,11 @@ BOOL IsEmpty() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je pole prázdné; jinak 0.
+Nenulová, pokud je pole prázdné; jinak 0.
 
-##  <a name="operator_at"></a>  [] Č. CObArray::operator
+## <a name="cobarrayoperator--"></a><a name="operator_at"></a>CObArray::operátor [ ]
 
-Tyto operátoru dolního indexu jsou vhodné náhradou za `SetAt` a `GetAt` funkce.
+Tyto dolní index operátory jsou `SetAt` `GetAt` vhodnou náhradou za a funkce.
 
 ```
 CObject*& operator[](int_ptr nindex);
@@ -601,30 +601,30 @@ CObject* operator[](int_ptr nindex) const;
 
 ### <a name="remarks"></a>Poznámky
 
-Volá se, první operátor pro pole, která nejsou **const**, může být použita na pravé straně (r) nebo (l hodnota) levé straně příkazu přiřazení. Druhý, volá se pro **const** pole, může být použita pouze na pravé straně.
+První operátor, volaný pro pole, která nejsou **const**, mohou být použity na pravé (r-hodnota) nebo vlevo (l-hodnota) příkazu přiřazení. Druhý, volal pro **const** pole, lze použít pouze na pravé straně.
 
-Ladicí verze knihovny vyhodnotí, pokud hodnota argumentu subscript (buď v levé nebo pravé straně příkazu přiřazení) je mimo rozsah.
+Ladicí verze knihovny uplatňuje, pokud je dolní index (na levé nebo pravé straně příkazu přiřazení) mimo hranice.
 
-V následující tabulce jsou uvedeny ostatní operátory, které jsou podobné `CObArray::operator []`.
+V následující tabulce jsou uvedeny `CObArray::operator []`další operátory, které jsou podobné .
 
 |Třída|Operátor|
 |-----------|--------------|
-|[CByteArray](../../mfc/reference/cbytearray-class.md)|**Operátor & BYTE [] (int_ptr** `nindex`  **\);**<br /><br /> **BYTE [] – operátor (int_ptr** `nindex`  **\) const;**|
-|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**DWORD & – operátor [] (int_ptr** `nindex`  **\);**<br /><br /> **DWORD – operátor [] (int_ptr** `nindex`  **\) const;**|
-|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**void\*& operator [](int_ptr** `nindex` **\);**<br /><br /> **void\* operator [] (int_ptr** `nindex`  **\) const;**|
-|[CStringArray](../../mfc/reference/cstringarray-class.md)|**CString& operator [](int_ptr** `nindex` **\);**<br /><br /> **CString – operator [] (int_ptr** `nindex`  **\) const;**|
-|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**UINT& operator [](int_ptr** `nindex` **\);**<br /><br /> **UINT operator [] (int_ptr** `nindex`  **\) const;**|
-|[CWordArray](../../mfc/reference/cwordarray-class.md)|**WORD & – operátor [] (int_ptr** `nindex`  **\);**<br /><br /> **SLOVO operator [] (int_ptr** `nindex`  **\) const;**|
+|[Cbytearray](../../mfc/reference/cbytearray-class.md)|**provozovatel& BYTE [](int_ptr** `nindex` ** \);**<br /><br /> **OPERÁTOR BYTE [](int_ptr** `nindex` ** \) const;**|
+|[Pole CDWordArray](../../mfc/reference/cdwordarray-class.md)|**Operátor& DWORD [](int_ptr** `nindex` ** \);**<br /><br /> **DWORD operátor [](int_ptr** `nindex` ** \) const;**|
+|[Pole CPtrArray](../../mfc/reference/cptrarray-class.md)|**provozovatel\*& nuly [](int_ptr** `nindex` ** \);**<br /><br /> **void\* operátor [](int_ptr** `nindex` ** \) const;**|
+|[Pole CStringArray](../../mfc/reference/cstringarray-class.md)|**CString& operátor [](int_ptr** `nindex` ** \);**<br /><br /> **CString operátor [](int_ptr** `nindex` ** \) const;**|
+|[Pole CUIntArray](../../mfc/reference/cuintarray-class.md)|**UINT& operátor [](int_ptr** `nindex` ** \);**<br /><br /> **UINT operátor [](int_ptr** `nindex` ** \) const;**|
+|[Pole CWordArray](../../mfc/reference/cwordarray-class.md)|**WORD& operátor [](int_ptr** `nindex` ** \);**<br /><br /> **WORD operátor [](int_ptr** `nindex` ** \) const;**|
 
 ### <a name="example"></a>Příklad
 
-Zobrazit [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) seznam `CAge` Třída použitá ve všech příkladech kolekce.
+Viz [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) pro výpis `CAge` třídy používané ve všech příkladech kolekce.
 
 [!code-cpp[NVC_MFCCollections#88](../../mfc/codesnippet/cpp/cobarray-class_11.cpp)]
 
-##  <a name="removeall"></a>  CObArray::RemoveAll
+## <a name="cobarrayremoveall"></a><a name="removeall"></a>CobArray::RemoveAll
 
-Odebere všechny ukazatele z tohoto pole, ale nedojde k odstranění ve skutečnosti `CObject` objekty.
+Odebere všechny ukazatele z tohoto pole, ale `CObject` ve skutečnosti objekty neodstraní.
 
 ```
 void RemoveAll();
@@ -632,30 +632,30 @@ void RemoveAll();
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud už je pole prázdné, tato funkce stále pracuje.
+Pokud je pole již prázdné, funkce stále funguje.
 
-`RemoveAll` Funkce uvolní všechny paměti používané pro úložiště ukazatele.
+Funkce `RemoveAll` uvolní všechny paměti používané pro úložiště ukazatele.
 
-Následující tabulka uvádí další členské funkce, které jsou podobné `CObArray::RemoveAll`.
+V následující tabulce jsou uvedeny `CObArray::RemoveAll`další členské funkce, které jsou podobné .
 
 |Třída|Členská funkce|
 |-----------|---------------------|
-|[CByteArray](../../mfc/reference/cbytearray-class.md)|**void (RemoveAll);**|
-|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**void (RemoveAll);**|
-|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**void (RemoveAll);**|
-|[CStringArray](../../mfc/reference/cstringarray-class.md)|**void (RemoveAll);**|
-|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**void (RemoveAll);**|
-|[CWordArray](../../mfc/reference/cwordarray-class.md)|**void (RemoveAll);**|
+|[Cbytearray](../../mfc/reference/cbytearray-class.md)|**void RemoveAll( );**|
+|[Pole CDWordArray](../../mfc/reference/cdwordarray-class.md)|**void RemoveAll( );**|
+|[Pole CPtrArray](../../mfc/reference/cptrarray-class.md)|**void RemoveAll( );**|
+|[Pole CStringArray](../../mfc/reference/cstringarray-class.md)|**void RemoveAll( );**|
+|[Pole CUIntArray](../../mfc/reference/cuintarray-class.md)|**void RemoveAll( );**|
+|[Pole CWordArray](../../mfc/reference/cwordarray-class.md)|**void RemoveAll( );**|
 
 ### <a name="example"></a>Příklad
 
-Zobrazit [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) seznam `CAge` Třída použitá ve všech příkladech kolekce.
+Viz [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) pro výpis `CAge` třídy používané ve všech příkladech kolekce.
 
 [!code-cpp[NVC_MFCCollections#85](../../mfc/codesnippet/cpp/cobarray-class_12.cpp)]
 
-##  <a name="removeat"></a>  CObArray::RemoveAt
+## <a name="cobarrayremoveat"></a><a name="removeat"></a>CobArray::Removeat
 
-Odebere jeden nebo více prvků počínaje zadaným indexem v poli.
+Odebere jeden nebo více prvků začínajících na zadaný index v poli.
 
 ```
 void RemoveAt(
@@ -666,46 +666,46 @@ void RemoveAt(
 ### <a name="parameters"></a>Parametry
 
 *nIndex*<br/>
-Celočíselný index, který je větší než nebo rovna 0 a menší nebo rovna hodnotě vrácené `GetUpperBound`.
+Index celéčíslo, který je větší nebo roven 0 a menší `GetUpperBound`než nebo rovno hodnotě vrácené .
 
 *nCount*<br/>
-Počet prvků, které mají odebrat.
+Počet prvků odebrat.
 
 ### <a name="remarks"></a>Poznámky
 
-Probíhající Posune dolů všechny prvky nad odebrání těchto elementů. To sníží horní mez pole, ale ne uvolnění paměti.
+V procesu posune dolů všechny prvky nad odstraněné prvky. Sníží horní mez pole, ale neuvolní paměť.
 
-Pokud se pokusíte odebrat více elementů než jsou obsaženy v poli výše odebrání bodu, pak vyhodnotí ladicí verze knihovny.
+Pokud se pokusíte odebrat více prvků, než jsou obsaženy v poli nad bodem odebrání, pak ladicí verze knihovny tvrdí.
 
-`RemoveAt` Funkce odebere `CObject` ukazatel z pole, ale nedojde k odstranění samotného objektu.
+Funkce `RemoveAt` odebere `CObject` ukazatel z pole, ale neodstraní samotný objekt.
 
-Následující tabulka uvádí další členské funkce, které jsou podobné `CObArray::RemoveAt`.
+V následující tabulce jsou uvedeny `CObArray::RemoveAt`další členské funkce, které jsou podobné .
 
 |Třída|Členská funkce|
 |-----------|---------------------|
-|[CByteArray](../../mfc/reference/cbytearray-class.md)|**void RemoveAt( INT_PTR** `nIndex` **, INT_PTR** `nCount` **= 1 );**|
-|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**void RemoveAt( INT_PTR** `nIndex` **, INT_PTR** `nCount` **= 1 );**|
-|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**void RemoveAt( INT_PTR** `nIndex` **, INT_PTR** `nCount` **= 1 );**|
-|[CStringArray](../../mfc/reference/cstringarray-class.md)|**void RemoveAt( INT_PTR** `nIndex` **, INT_PTR** `nCount` **= 1 );**|
-|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**void RemoveAt( INT_PTR** `nIndex` **, INT_PTR** `nCount` **= 1 );**|
-|[CWordArray](../../mfc/reference/cwordarray-class.md)|**void RemoveAt( INT_PTR** `nIndex` **, INT_PTR** *nCount* **= 1 );**|
+|[Cbytearray](../../mfc/reference/cbytearray-class.md)|**void Removeat( INT_PTR** `nIndex` **, INT_PTR** `nCount` **= 1 );**|
+|[Pole CDWordArray](../../mfc/reference/cdwordarray-class.md)|**void Removeat( INT_PTR** `nIndex` **, INT_PTR** `nCount` **= 1 );**|
+|[Pole CPtrArray](../../mfc/reference/cptrarray-class.md)|**void Removeat( INT_PTR** `nIndex` **, INT_PTR** `nCount` **= 1 );**|
+|[Pole CStringArray](../../mfc/reference/cstringarray-class.md)|**void Removeat( INT_PTR** `nIndex` **, INT_PTR** `nCount` **= 1 );**|
+|[Pole CUIntArray](../../mfc/reference/cuintarray-class.md)|**void Removeat( INT_PTR** `nIndex` **, INT_PTR** `nCount` **= 1 );**|
+|[Pole CWordArray](../../mfc/reference/cwordarray-class.md)|**void RemoveAt( INT_PTR** `nIndex` **, INT_PTR** *nCount* **= 1 );**|
 
 ### <a name="example"></a>Příklad
 
-  Zobrazit [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) seznam `CAge` Třída použitá ve všech příkladech kolekce.
+  Viz [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) pro výpis `CAge` třídy používané ve všech příkladech kolekce.
 
 [!code-cpp[NVC_MFCCollections#112](../../mfc/codesnippet/cpp/cobarray-class_13.cpp)]
 
-Výsledky z této aplikace jsou následující:
+Výsledky tohoto programu jsou následující:
 
 ```Output
 RemoveAt example: A CObArray with 1 elements
 [0] = a CAge at $4606 40
 ```
 
-##  <a name="setat"></a>  CObArray::SetAt
+## <a name="cobarraysetat"></a><a name="setat"></a>CobArray::Setat
 
-Nastaví prvek pole v zadaném indexu.
+Nastaví prvek pole na zadaný index.
 
 ```
 void SetAt(
@@ -716,35 +716,35 @@ void SetAt(
 ### <a name="parameters"></a>Parametry
 
 *nIndex*<br/>
-Celočíselný index, který je větší než nebo rovna 0 a menší nebo rovna hodnotě vrácené `GetUpperBound`.
+Index celéčíslo, který je větší nebo roven 0 a menší `GetUpperBound`než nebo rovno hodnotě vrácené .
 
 *newElement*<br/>
-Ukazatel objektu, který má být vložen do tohoto pole. Je povolena hodnota NULL.
+Ukazatel objektu, který má být vložen do tohoto pole. Hodnota NULL je povolena.
 
 ### <a name="remarks"></a>Poznámky
 
-`SetAt` nezpůsobí pole, které chcete zvětšit. Použití `SetAtGrow` Pokud chcete, aby pole, které chcete automaticky zvětšovat.
+`SetAt`nezpůsobí, že pole zvětšovat. Použijte, `SetAtGrow` pokud chcete, aby pole automaticky rostlo.
 
-Ujistěte se, že představuje hodnotu indexu platná pozice v poli. Pokud je mimo rozsah, pak vyhodnotí ladicí verze knihovny.
+Je nutné zajistit, aby hodnota indexu představuje platnou pozici v poli. Pokud je mimo hranice, pak debug verze knihovny tvrdí.
 
-Následující tabulka uvádí další členské funkce, které jsou podobné `CObArray::SetAt`.
+V následující tabulce jsou uvedeny `CObArray::SetAt`další členské funkce, které jsou podobné .
 
 |Třída|Členská funkce|
 |-----------|---------------------|
-|[CByteArray](../../mfc/reference/cbytearray-class.md)|**void SetAt (INT_PTR** `nIndex` **, BYTE** `newElement` **);**|
-|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**void SetAt( INT_PTR** `nIndex` **, DWORD** `newElement` **);**|
-|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**void SetAt (INT_PTR** `nIndex` **, void** <strong>\*</strong> `newElement` **);**|
-|[CStringArray](../../mfc/reference/cstringarray-class.md)|**void SetAt( INT_PTR** `nIndex` **, LPCTSTR** `newElement` **);**|
-|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**void SetAt( INT_PTR** `nIndex` **, UINT** `newElement` **);**|
-|[CWordArray](../../mfc/reference/cwordarray-class.md)|**void SetAt (INT_PTR** `nIndex` **, WORD** `newElement` **);**|
+|[Cbytearray](../../mfc/reference/cbytearray-class.md)|**void SetAt( INT_PTR** `nIndex` **, BYTE** `newElement` **);**|
+|[Pole CDWordArray](../../mfc/reference/cdwordarray-class.md)|**void SetAt( INT_PTR** `nIndex` **, DWORD** `newElement` **);**|
+|[Pole CPtrArray](../../mfc/reference/cptrarray-class.md)|**void Setat( INT_PTR** `nIndex` **, void** <strong>\*</strong> `newElement` **);**|
+|[Pole CStringArray](../../mfc/reference/cstringarray-class.md)|**void SetAt( INT_PTR** `nIndex` **, LPCTSTR** `newElement` **);**|
+|[Pole CUIntArray](../../mfc/reference/cuintarray-class.md)|**void Setat( INT_PTR** `nIndex` **, UINT** `newElement` **);**|
+|[Pole CWordArray](../../mfc/reference/cwordarray-class.md)|**void SetAt( INT_PTR** `nIndex` **, WORD** `newElement` **);**|
 
 ### <a name="example"></a>Příklad
 
-  Zobrazit [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) seznam `CAge` Třída použitá ve všech příkladech kolekce.
+  Viz [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) pro výpis `CAge` třídy používané ve všech příkladech kolekce.
 
 [!code-cpp[NVC_MFCCollections#86](../../mfc/codesnippet/cpp/cobarray-class_14.cpp)]
 
-Výsledky z této aplikace jsou následující:
+Výsledky tohoto programu jsou následující:
 
 ```Output
 SetAt example: A CObArray with 2 elements
@@ -752,9 +752,9 @@ SetAt example: A CObArray with 2 elements
 [1] = a CAge at $47A0 40
 ```
 
-##  <a name="setatgrow"></a>  CObArray::SetAtGrow
+## <a name="cobarraysetatgrow"></a><a name="setatgrow"></a>CobArray::Setatgrow
 
-Nastaví prvek pole v zadaném indexu.
+Nastaví prvek pole na zadaný index.
 
 ```
 void SetAtGrow(
@@ -765,33 +765,33 @@ void SetAtGrow(
 ### <a name="parameters"></a>Parametry
 
 *nIndex*<br/>
-Celočíselný index, který je větší než nebo rovna 0.
+Index celého čísla, který je větší nebo roven 0.
 
 *newElement*<br/>
-Ukazatel objektu, který chcete přidat do tohoto pole. Je povolena hodnota NULL.
+Ukazatel objektu, který má být přidán do tohoto pole. Hodnota NULL je povolena.
 
 ### <a name="remarks"></a>Poznámky
 
-Pole se automaticky zvětší v případě potřeby (to znamená, horní mez objektů je upravena podle nového prvku posouvají).
+Pole se v případě potřeby automaticky zvětší (to znamená, že horní mez je upravena tak, aby vyhovovala novému prvku).
 
-Následující tabulka uvádí další členské funkce, které jsou podobné `CObArray::SetAtGrow`.
+V následující tabulce jsou uvedeny `CObArray::SetAtGrow`další členské funkce, které jsou podobné .
 
 |Třída|Členská funkce|
 |-----------|---------------------|
-|[CByteArray](../../mfc/reference/cbytearray-class.md)|**void SetAtGrow( INT_PTR** `nIndex` **, BYTE** `newElement` **);**<br /><br /> **throw (cmemoryexception –\* );**|
-|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**void SetAtGrow( INT_PTR** `nIndex` **, DWORD** `newElement` **);**<br /><br /> **throw (cmemoryexception –\* );**|
-|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**void SetAtGrow (INT_PTR** `nIndex` **, void** <strong>\*</strong> `newElement` **);**<br /><br /> **throw (cmemoryexception –\* );**|
-|[CStringArray](../../mfc/reference/cstringarray-class.md)|**void SetAtGrow( INT_PTR** `nIndex` **, LPCTSTR** `newElement` **);**<br /><br /> **throw (cmemoryexception –\* );**|
-|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**void SetAtGrow( INT_PTR** `nIndex` **, UINT** `newElement` **);**<br /><br /> **throw (cmemoryexception –\* );**|
-|[CWordArray](../../mfc/reference/cwordarray-class.md)|**void SetAtGrow( INT_PTR** `nIndex` **, WORD** `newElement` **);**<br /><br /> **throw (cmemoryexception –\* );**|
+|[Cbytearray](../../mfc/reference/cbytearray-class.md)|**void SetAtGrow( INT_PTR** `nIndex` **, BYTE** `newElement` **);**<br /><br /> **throw( CMemoryException\* );**|
+|[Pole CDWordArray](../../mfc/reference/cdwordarray-class.md)|**void Setatgrow( INT_PTR** `nIndex` **, DWORD** `newElement` **);**<br /><br /> **throw( CMemoryException\* );**|
+|[Pole CPtrArray](../../mfc/reference/cptrarray-class.md)|**void Setatgrow( INT_PTR** `nIndex` **, void** <strong>\*</strong> `newElement` **);**<br /><br /> **throw( CMemoryException\* );**|
+|[Pole CStringArray](../../mfc/reference/cstringarray-class.md)|**void Setatgrow( INT_PTR** `nIndex` **, LPCTSTR** `newElement` **);**<br /><br /> **throw( CMemoryException\* );**|
+|[Pole CUIntArray](../../mfc/reference/cuintarray-class.md)|**void SetAtGrow( INT_PTR** `nIndex` **, UINT);** `newElement` **);**<br /><br /> **throw( CMemoryException\* );**|
+|[Pole CWordArray](../../mfc/reference/cwordarray-class.md)|**void SetAtGrow( INT_PTR** `nIndex` **, WORD** `newElement` **);**<br /><br /> **throw( CMemoryException\* );**|
 
 ### <a name="example"></a>Příklad
 
-  Zobrazit [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) seznam `CAge` Třída použitá ve všech příkladech kolekce.
+  Viz [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) pro výpis `CAge` třídy používané ve všech příkladech kolekce.
 
 [!code-cpp[NVC_MFCCollections#87](../../mfc/codesnippet/cpp/cobarray-class_15.cpp)]
 
-Výsledky z této aplikace jsou následující:
+Výsledky tohoto programu jsou následující:
 
 ```Output
 SetAtGrow example: A CObArray with 4 elements
@@ -801,9 +801,9 @@ SetAtGrow example: A CObArray with 4 elements
 [3] = a CAge at $4840 65
 ```
 
-##  <a name="setsize"></a>  CObArray::SetSize
+## <a name="cobarraysetsize"></a><a name="setsize"></a>CobArray::SetSize
 
-Vytvoří velikost existující nebo prázdné pole. přidělí paměť v případě potřeby.
+Vytvoří velikost prázdného nebo existujícího pole; v případě potřeby přidělí paměť.
 
 ```
 void SetSize(
@@ -813,41 +813,41 @@ void SetSize(
 
 ### <a name="parameters"></a>Parametry
 
-*nNewSize*<br/>
-Nová velikost pole (počet prvků). Musí být větší než nebo rovna 0.
+*nNová velikost*<br/>
+Nová velikost pole (počet prvků). Musí být větší než nebo rovno 0.
 
 *nGrowBy*<br/>
-Minimální počet slotů element přidělit, pokud je nutné zvýšit velikost.
+Minimální počet slotů element udělit, pokud je nutné zvýšení velikosti.
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud nová velikost je menší než původní velikost, pole jsou oříznuté a všechny nevyužité paměti se uvolní. Z důvodu efektivity volání `SetSize` k nastavení velikosti pole před jeho použitím. Díky tomu potřeba přidělit jinému uživateli a zkopírujte pole pokaždé, když se přidá položka.
+Pokud je nová velikost menší než stará velikost, pole je zkráceno a uvolněna je všechna nevyužitá paměť. Z důvodu `SetSize` efektivity volejte nastavení velikosti pole před jeho použitím. Tím se zabrání nutnosti přerozdělit a zkopírovat pole při každém přidání položky.
 
-*NGrowBy* parametr ovlivňuje přidělení vnitřní paměti, zatímco roste pole. Jeho použití nikdy ovlivňuje velikost pole, jak je hlásí `GetSize` a `GetUpperBound`.
+Parametr *nGrowBy* ovlivňuje přidělení vnitřní paměti, zatímco pole roste. Jeho použití nikdy neovlivní velikost `GetSize` `GetUpperBound`pole podle a .
 
-Pokud se zvětšil velikost pole, přiděleny všechny nově **CObject** <strong>\*</strong> ukazatele jsou nastaveny na hodnotu NULL.
+Pokud velikost pole vzrostla, všechny nově přidělené ukazatele **CObject** <strong>\*</strong> jsou nastaveny na hodnotu NULL.
 
-Následující tabulka uvádí další členské funkce, které jsou podobné `CObArray::SetSize`.
+V následující tabulce jsou uvedeny `CObArray::SetSize`další členské funkce, které jsou podobné .
 
 |Třída|Členská funkce|
 |-----------|---------------------|
-|[CByteArray](../../mfc/reference/cbytearray-class.md)|**void SetSize (INT_PTR** `nNewSize` **, int** `nGrowBy` **= -1);**<br /><br /> **throw (cmemoryexception –\* );**|
-|[CDWordArray](../../mfc/reference/cdwordarray-class.md)|**void SetSize (INT_PTR** `nNewSize` **, int** `nGrowBy` **= -1);**<br /><br /> **throw (cmemoryexception –\* );**|
-|[CPtrArray](../../mfc/reference/cptrarray-class.md)|**void SetSize (INT_PTR** `nNewSize` **, int** `nGrowBy` **= -1);**<br /><br /> **throw (cmemoryexception –\* );**|
-|[CStringArray](../../mfc/reference/cstringarray-class.md)|**void SetSize (INT_PTR** `nNewSize` **, int** `nGrowBy` **= -1);**<br /><br /> **throw (cmemoryexception –\* );**|
-|[CUIntArray](../../mfc/reference/cuintarray-class.md)|**void SetSize (INT_PTR** `nNewSize` **, int** `nGrowBy` **= -1);**<br /><br /> **throw (cmemoryexception –\* );**|
-|[CWordArray](../../mfc/reference/cwordarray-class.md)|**void SetSize (INT_PTR** `nNewSize` **, int** `nGrowBy` **= -1);**<br /><br /> **throw (cmemoryexception –\* );**|
+|[Cbytearray](../../mfc/reference/cbytearray-class.md)|**void SetSize( INT_PTR** `nNewSize` **, int** `nGrowBy` **= -1);**<br /><br /> **throw( CMemoryException\* );**|
+|[Pole CDWordArray](../../mfc/reference/cdwordarray-class.md)|**void SetSize( INT_PTR** `nNewSize` **, int** `nGrowBy` **= -1);**<br /><br /> **throw( CMemoryException\* );**|
+|[Pole CPtrArray](../../mfc/reference/cptrarray-class.md)|**void SetSize( INT_PTR** `nNewSize` **, int** `nGrowBy` **= -1);**<br /><br /> **throw( CMemoryException\* );**|
+|[Pole CStringArray](../../mfc/reference/cstringarray-class.md)|**void SetSize( INT_PTR** `nNewSize` **, int** `nGrowBy` **= -1);**<br /><br /> **throw( CMemoryException\* );**|
+|[Pole CUIntArray](../../mfc/reference/cuintarray-class.md)|**void SetSize( INT_PTR** `nNewSize` **, int** `nGrowBy` **= -1);**<br /><br /> **throw( CMemoryException\* );**|
+|[Pole CWordArray](../../mfc/reference/cwordarray-class.md)|**void SetSize( INT_PTR** `nNewSize` **, int** `nGrowBy` **= -1);**<br /><br /> **throw( CMemoryException\* );**|
 
 ### <a name="example"></a>Příklad
 
-  Podívejte se na příklad pro [CObArray::GetData](#getdata).
+  Viz příklad [cobarray::GetData](#getdata).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [CObject – třída](../../mfc/reference/cobject-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
-[CStringArray – třída](../../mfc/reference/cstringarray-class.md)<br/>
-[CPtrArray – třída](../../mfc/reference/cptrarray-class.md)<br/>
-[CByteArray – třída](../../mfc/reference/cbytearray-class.md)<br/>
+[Třída CStringArray](../../mfc/reference/cstringarray-class.md)<br/>
+[Třída CPtrArray](../../mfc/reference/cptrarray-class.md)<br/>
+[Třída CByteArray](../../mfc/reference/cbytearray-class.md)<br/>
 [CWordArray – třída](../../mfc/reference/cwordarray-class.md)<br/>
-[CDWordArray – třída](../../mfc/reference/cdwordarray-class.md)
+[Třída CDWordArray](../../mfc/reference/cdwordarray-class.md)

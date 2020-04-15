@@ -1,6 +1,6 @@
 ---
-title: ImpLibOutput – třída
-description: Referenční C++ dokumentace třídy ImpLibOutput sady SDK pro Build Insights
+title: Třída ImpLibOutput
+description: C++ Build Insights SDK ImpLibOutput odkaz na třídu.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 068415250f2981724ad4efd14de9eaf67c546c96
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 98905dfe75484e98e14a0fa575e75fe3ab284559
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78333249"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81324705"
 ---
-# <a name="impliboutput-class"></a>ImpLibOutput – třída
+# <a name="impliboutput-class"></a>Třída ImpLibOutput
 
 ::: moniker range="<=vs-2015"
 
-Sada C++ SDK pro Build Insights je kompatibilní se sadou Visual Studio 2017 a novější. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek selektor verzí sady Visual Studio pro tento článek na sadu Visual Studio 2017 nebo Visual Studio 2019.
+Sada C++ Build Insights SDK je kompatibilní s Visual Studio 2017 a vyšší. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek pro výběr **verze** sady Visual Studio pro tento článek na Visual Studio 2017 nebo Visual Studio 2019. Nachází se v horní části obsahu na této stránce.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Třída `ImpLibOutput` se používá s funkcemi [MatchEvent](../functions/match-event.md), [MatchEventInMemberFunction](../functions/match-event-in-member-function.md), [MatchEventStack](../functions/match-event-stack.md)a [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md) . Použijte ho ke spárování [IMP_LIB_OUTPUT](../event-table.md#imp-lib-output) události.
+Třída `ImpLibOutput` se používá s funkcemi [MatchEvent](../functions/match-event.md), [MatchEventInMemberFunction](../functions/match-event-in-member-function.md), [MatchEventStack](../functions/match-event-stack.md)a [MatchEventStackInMemberFunction.](../functions/match-event-stack-in-member-function.md) Použijte ji tak, aby odpovídala [události IMP_LIB_OUTPUT.](../event-table.md#imp-lib-output)
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -39,13 +39,13 @@ public:
 
 ## <a name="members"></a>Členové
 
-Spolu se zděděnými členy ze základní třídy typu " [výstup](file-output.md) " třídy `ImpLibOutput` obsahuje následující členy:
+Spolu s zděděnými členy ze základní `ImpLibOutput` třídy [FileOutput](file-output.md) obsahuje třída následující členy:
 
 ### <a name="constructors"></a>Konstruktory
 
-[ImpLibOutput](#imp-lib-output)
+[ImpLibVýstup](#imp-lib-output)
 
-## <a name="imp-lib-output"></a>ImpLibOutput
+## <a name="impliboutput"></a><a name="imp-lib-output"></a>ImpLibVýstup
 
 ```cpp
 ImpLibOutput(const RawEvent& event);
@@ -53,7 +53,7 @@ ImpLibOutput(const RawEvent& event);
 
 ### <a name="parameters"></a>Parametry
 
-\ *události*
-Událost [IMP_LIB_OUTPUT](../event-table.md#imp-lib-output) .
+*Událost*\
+[Událost IMP_LIB_OUTPUT.](../event-table.md#imp-lib-output)
 
 ::: moniker-end

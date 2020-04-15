@@ -1,5 +1,5 @@
 ---
-title: Ccomfakecriticalsection – třída
+title: CcomfakeCriticalSekce třídy
 ms.date: 11/04/2016
 f1_keywords:
 - CComFakeCriticalSection
@@ -11,16 +11,16 @@ f1_keywords:
 helpviewer_keywords:
 - CComFakeCriticalSection class
 ms.assetid: a4811b97-96bb-493b-ab9f-62822aeddb10
-ms.openlocfilehash: 39a9859380eba1b72768234eb8f43d80fca0143f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4a5b9ba3551397a9c3d59a343e9c6b55b1c1207e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62259154"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81327844"
 ---
-# <a name="ccomfakecriticalsection-class"></a>Ccomfakecriticalsection – třída
+# <a name="ccomfakecriticalsection-class"></a>CcomfakeCriticalSekce třídy
 
-Tato třída poskytuje metody stejný jako [ccomautocriticalsection –](../../atl/reference/ccomcriticalsection-class.md) ale neposkytuje kritický oddíl.
+Tato třída poskytuje stejné metody jako [CComCriticalSection,](../../atl/reference/ccomcriticalsection-class.md) ale neposkytuje kritický oddíl.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -32,26 +32,26 @@ class CComFakeCriticalSection
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CComFakeCriticalSection::Init](#init)|Nemá žádný účinek, protože neexistuje žádný kritický oddíl.|
-|[CComFakeCriticalSection::Lock](#lock)|Nemá žádný účinek, protože neexistuje žádný kritický oddíl.|
-|[CComFakeCriticalSection::Term](#term)|Nemá žádný účinek, protože neexistuje žádný kritický oddíl.|
-|[CComFakeCriticalSection::Unlock](#unlock)|Nemá žádný účinek, protože neexistuje žádný kritický oddíl.|
+|[CComFakeCriticalSekce::Init](#init)|Neprovede žádnou akci, protože neexistuje žádná kritická část.|
+|[CcomfakeCriticalSection::Zámek](#lock)|Neprovede žádnou akci, protože neexistuje žádná kritická část.|
+|[CcomfakeCriticalSekce::Termín](#term)|Neprovede žádnou akci, protože neexistuje žádná kritická část.|
+|[CcomfakeCriticalSection::Odemknout](#unlock)|Neprovede žádnou akci, protože neexistuje žádná kritická část.|
 
 ## <a name="remarks"></a>Poznámky
 
-`CComFakeCriticalSection` Zrcadlí metody v [ccomautocriticalsection –](../../atl/reference/ccomcriticalsection-class.md). Ale `CComFakeCriticalSection` neposkytuje kritický oddíl; proto její metody Neprovádět žádnou akci.
+`CComFakeCriticalSection`zrcadlí metody nalezené v [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md). Nicméně, `CComFakeCriticalSection` neposkytuje kritický oddíl; proto jeho metody nedělají nic.
 
-Obvykle použijete `CComFakeCriticalSection` prostřednictvím `typedef` název buď `AutoCriticalSection` nebo `CriticalSection`. Při použití [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md) nebo [ccommultithreadmodelnocs –](../../atl/reference/ccommultithreadmodelnocs-class.md), obě tyto `typedef` názvy odkaz `CComFakeCriticalSection`. Při použití [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md), které odkazují [ccomautocriticalsection –](../../atl/reference/ccomautocriticalsection-class.md) a `CComCriticalSection`v uvedeném pořadí.
+Obvykle se používá `CComFakeCriticalSection` prostřednictvím `typedef` názvu, `CriticalSection`nebo `AutoCriticalSection` . Při použití [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md) nebo [CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md), oba tyto `typedef` názvy odkaz `CComFakeCriticalSection`. Při použití [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md), které odkazují `CComCriticalSection` [CComAutoCriticalSection](../../atl/reference/ccomautocriticalsection-class.md) a , příslušně.
 
 ## <a name="requirements"></a>Požadavky
 
 **Záhlaví:** atlcore.h
 
-##  <a name="init"></a>  CComFakeCriticalSection::Init
+## <a name="ccomfakecriticalsectioninit"></a><a name="init"></a>CComFakeCriticalSekce::Init
 
-Nemá žádný účinek, protože neexistuje žádný kritický oddíl.
+Neprovede žádnou akci, protože neexistuje žádná kritická část.
 
 ```
 HRESULT Init() throw();
@@ -59,11 +59,11 @@ HRESULT Init() throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu S_OK.
+Vrátí S_OK.
 
-##  <a name="lock"></a>  CComFakeCriticalSection::Lock
+## <a name="ccomfakecriticalsectionlock"></a><a name="lock"></a>CcomfakeCriticalSection::Zámek
 
-Nemá žádný účinek, protože neexistuje žádný kritický oddíl.
+Neprovede žádnou akci, protože neexistuje žádná kritická část.
 
 ```
 HRESULT Lock() throw();
@@ -71,11 +71,11 @@ HRESULT Lock() throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu S_OK.
+Vrátí S_OK.
 
-##  <a name="term"></a>  CComFakeCriticalSection::Term
+## <a name="ccomfakecriticalsectionterm"></a><a name="term"></a>CcomfakeCriticalSekce::Termín
 
-Nemá žádný účinek, protože neexistuje žádný kritický oddíl.
+Neprovede žádnou akci, protože neexistuje žádná kritická část.
 
 ```
 HRESULT Term() throw();
@@ -83,11 +83,11 @@ HRESULT Term() throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu S_OK.
+Vrátí S_OK.
 
-##  <a name="unlock"></a>  CComFakeCriticalSection::Unlock
+## <a name="ccomfakecriticalsectionunlock"></a><a name="unlock"></a>CcomfakeCriticalSection::Odemknout
 
-Nemá žádný účinek, protože neexistuje žádný kritický oddíl.
+Neprovede žádnou akci, protože neexistuje žádná kritická část.
 
 ```
 HRESULT Unlock() throw();
@@ -95,8 +95,8 @@ HRESULT Unlock() throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu S_OK.
+Vrátí S_OK.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Přehled tříd](../../atl/atl-class-overview.md)
+[Přehled třídy](../../atl/atl-class-overview.md)

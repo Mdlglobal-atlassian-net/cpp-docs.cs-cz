@@ -1,5 +1,5 @@
 ---
-title: CCustomInterpolator Class
+title: CCustomInterpolator – třída
 ms.date: 11/04/2016
 f1_keywords:
 - CCustomInterpolator
@@ -36,16 +36,16 @@ helpviewer_keywords:
 - CCustomInterpolator [MFC], m_initialValue
 - CCustomInterpolator [MFC], m_initialVelocity
 ms.assetid: 28d85595-989a-40a3-b003-e0e38437a94d
-ms.openlocfilehash: 8d3f2ed95cfb9e7e885713252171c98834ae5c0a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2342432c7651fc1bd1eda23b3e56fa9306eadf09
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62164134"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81359272"
 ---
-# <a name="ccustominterpolator-class"></a>CCustomInterpolator Class
+# <a name="ccustominterpolator-class"></a>CCustomInterpolator – třída
 
-Implementuje základní interpolator.
+Implementuje základní interpolátor.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -57,37 +57,37 @@ class CCustomInterpolator;
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CCustomInterpolator::CCustomInterpolator](#ccustominterpolator)|Přetíženo. Vytvoří objekt vlastní interpolator a inicializuje doba trvání a rychlost pro zadané hodnoty.|
+|[CCustomInterpolator::CCustomInterpolator](#ccustominterpolator)|Přetíženo. Vytvoří vlastní objekt interpolátoru a inicializuje dobu trvání a rychlost na zadané hodnoty.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CCustomInterpolator::GetDependencies](#getdependencies)|Získá závislosti interpolator.|
-|[CCustomInterpolator::GetDuration](#getduration)|Získá dobu trvání interpolator.|
-|[CCustomInterpolator::GetFinalValue](#getfinalvalue)|Získá konečnou hodnotu, na který vede interpolator.|
-|[CCustomInterpolator::Init](#init)|Inicializuje dobu trvání a konečná hodnota.|
-|[CCustomInterpolator::InterpolateValue](#interpolatevalue)|Argument interpolaci hodnotu na dané pozici.|
-|[CCustomInterpolator::InterpolateVelocity](#interpolatevelocity)|Argument interpolaci rychlosti na dané pozici|
-|[CCustomInterpolator::SetDuration](#setduration)|Nastaví dobu trvání interpolator.|
-|[CCustomInterpolator::SetInitialValueAndVelocity](#setinitialvalueandvelocity)|Nastaví počáteční hodnotu interpolator a rychlost.|
+|[CCustomInterpolator::GetDependencies](#getdependencies)|Získá závislosti interpolátoru.|
+|[CCustomInterpolator::GetDuration](#getduration)|Získá dobu trvání interpolátoru.|
+|[CCustomInterpolator::GetFinalValue](#getfinalvalue)|Získá konečnou hodnotu, na kterou interpolátor vede.|
+|[CCustomInterpolator::Init](#init)|Inicializuje dobu trvání a konečnou hodnotu.|
+|[CCustomInterpolator::InterpolateValue](#interpolatevalue)|Interpoluje hodnotu v daném posunu.|
+|[CCustomInterpolator::InterpolateVelocity](#interpolatevelocity)|Interpoluje rychlost při daném posunu|
+|[CCustomInterpolator::SetDuration](#setduration)|Nastaví dobu trvání interpolátoru.|
+|[CCustomInterpolator::SetInitialValueAndVelocity](#setinitialvalueandvelocity)|Nastaví počáteční hodnotu a rychlost interpolátoru.|
 
-### <a name="protected-data-members"></a>Chránění členové dat
+### <a name="protected-data-members"></a>Členové chráněných dat
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CCustomInterpolator::m_currentValue](#m_currentvalue)|Interpolované hodnotu.|
-|[CCustomInterpolator::m_currentVelocity](#m_currentvelocity)|Interpolované rychlosti.|
+|[CCustomInterpolator::m_currentValue](#m_currentvalue)|Interpolovaná hodnota.|
+|[CCustomInterpolator::m_currentVelocity](#m_currentvelocity)|Interpolovaná rychlost.|
 |[CCustomInterpolator::m_duration](#m_duration)|Doba trvání přechodu.|
 |[CCustomInterpolator::m_finalValue](#m_finalvalue)|Konečná hodnota proměnné na konci přechodu.|
-|[CCustomInterpolator::m_initialValue](#m_initialvalue)|Hodnota proměnné na začátku přechod.|
-|[CCustomInterpolator::m_initialVelocity](#m_initialvelocity)|Rychlost proměnnou na začátku přechod.|
+|[CCustomInterpolator::m_initialValue](#m_initialvalue)|Hodnota proměnné na začátku přechodu.|
+|[CCustomInterpolator::m_initialVelocity](#m_initialvelocity)|Rychlost proměnné na začátku přechodu.|
 
 ## <a name="remarks"></a>Poznámky
 
-Odvodit třídu z ccustominterpolator – a aby bylo možné implementovat vlastní interpolace algoritmus přepsat všechny nezbytné metody. Ukazatel na tato třída by měla předat jako parametr ccustomtransition –.
+Odvodit třídu z CCustomInterpolator a přepsat všechny nezbytné metody k implementaci vlastní interpolační algoritmus. Ukazatel na tuto třídu by měl být předán jako parametr CCustomTransition.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -97,9 +97,9 @@ Odvodit třídu z ccustominterpolator – a aby bylo možné implementovat vlast
 
 **Záhlaví:** afxanimationcontroller.h
 
-##  <a name="ccustominterpolator"></a>  CCustomInterpolator::CCustomInterpolator
+## <a name="ccustominterpolatorccustominterpolator"></a><a name="ccustominterpolator"></a>CCustomInterpolator::CCustomInterpolator
 
-Vytvoří vlastní interpolator objekt a nastaví všechny hodnoty na výchozí hodnotu 0.
+Vytvoří vlastní objekt interpolátoru a nastaví všechny hodnoty na výchozí hodnotu 0.
 
 ```
 CCustomInterpolator();
@@ -118,11 +118,11 @@ Doba trvání přechodu.
 
 ### <a name="remarks"></a>Poznámky
 
-Použijte CCustomInterpolator::Init k inicializaci trvání a konečná hodnota později v kódu.
+Použijte CCustomInterpolator::Init k inicializaci doby trvání a konečné hodnoty později v kódu.
 
-##  <a name="getdependencies"></a>  CCustomInterpolator::GetDependencies
+## <a name="ccustominterpolatorgetdependencies"></a><a name="getdependencies"></a>CCustomInterpolator::GetDependencies
 
-Získá závislosti interpolator.
+Získá závislosti interpolátoru.
 
 ```
 virtual BOOL GetDependencies(
@@ -134,21 +134,21 @@ virtual BOOL GetDependencies(
 ### <a name="parameters"></a>Parametry
 
 *initialValueDependencies*<br/>
-Výstup. Aspekty interpolator, které jsou závislé na počáteční hodnota předána SetInitialValueAndVelocity.
+Výstup. Aspekty interpolátoru, které závisí na počáteční hodnotě předané SetInitialValueAndVelocity.
 
 *initialVelocityDependencies*<br/>
-Výstup. Aspekty interpolator, které jsou závislé na počáteční předán SetInitialValueAndVelocity.
+Výstup. Aspekty interpolátoru, které závisí na počáteční rychlost předána SetInitialValueAndVelocity.
 
 *durationDependencies*<br/>
-Výstup. Aspekty interpolator, které jsou závislé na době trvání předán SetDuration.
+Výstup. Aspekty interpolátoru, které závisí na trvání předána SetDuration.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Základní implementaci vždy vrátí hodnotu TRUE. Vrátí FALSE od přepsané implementace, pokud chcete selhání události.
+Základní implementace vždy vrátí hodnotu PRAVDA. Vrátí false z přepsané implementace, pokud chcete selhání události.
 
-##  <a name="getduration"></a>  CCustomInterpolator::GetDuration
+## <a name="ccustominterpolatorgetduration"></a><a name="getduration"></a>CCustomInterpolator::GetDuration
 
-Získá dobu trvání interpolator.
+Získá dobu trvání interpolátoru.
 
 ```
 virtual BOOL GetDuration(UI_ANIMATION_SECONDS* duration);
@@ -157,15 +157,15 @@ virtual BOOL GetDuration(UI_ANIMATION_SECONDS* duration);
 ### <a name="parameters"></a>Parametry
 
 *Doba trvání*<br/>
-Výstup. Doba trvání přechodu během několika sekund.
+Výstup. Doba trvání přechodu v sekundách.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Základní implementaci vždy vrátí hodnotu TRUE. Vrátí FALSE od přepsané implementace, pokud chcete selhání události.
+Základní implementace vždy vrátí hodnotu PRAVDA. Vrátí false z přepsané implementace, pokud chcete selhání události.
 
-##  <a name="getfinalvalue"></a>  CCustomInterpolator::GetFinalValue
+## <a name="ccustominterpolatorgetfinalvalue"></a><a name="getfinalvalue"></a>CCustomInterpolator::GetFinalValue
 
-Získá konečnou hodnotu, na který vede interpolator.
+Získá konečnou hodnotu, na kterou interpolátor vede.
 
 ```
 virtual BOOL GetFinalValue(DOUBLE* value);
@@ -173,16 +173,16 @@ virtual BOOL GetFinalValue(DOUBLE* value);
 
 ### <a name="parameters"></a>Parametry
 
-*value*<br/>
+*Hodnotu*<br/>
 Výstup. Konečná hodnota proměnné na konci přechodu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Základní implementaci vždy vrátí hodnotu TRUE. Vrátí FALSE od přepsané implementace, pokud chcete selhání události.
+Základní implementace vždy vrátí hodnotu PRAVDA. Vrátí false z přepsané implementace, pokud chcete selhání události.
 
-##  <a name="init"></a>  CCustomInterpolator::Init
+## <a name="ccustominterpolatorinit"></a><a name="init"></a>CCustomInterpolator::Init
 
-Inicializuje dobu trvání a konečná hodnota.
+Inicializuje dobu trvání a konečnou hodnotu.
 
 ```
 void Init(
@@ -198,9 +198,9 @@ Doba trvání přechodu.
 *finalValue*<br/>
 Konečná hodnota proměnné na konci přechodu.
 
-##  <a name="interpolatevalue"></a>  CCustomInterpolator::InterpolateValue
+## <a name="ccustominterpolatorinterpolatevalue"></a><a name="interpolatevalue"></a>CCustomInterpolator::InterpolateValue
 
-Argument interpolaci hodnotu na dané pozici.
+Interpoluje hodnotu v daném posunu.
 
 ```
 virtual BOOL InterpolateValue(
@@ -210,16 +210,16 @@ virtual BOOL InterpolateValue(
 
 ### <a name="parameters"></a>Parametry
 
-*value*<br/>
-Výstup. Interpolované hodnotu.
+*Hodnotu*<br/>
+Výstup. Interpolovaná hodnota.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Základní implementaci vždy vrátí hodnotu TRUE. Vrátí FALSE od přepsané implementace, pokud chcete selhání události.
+Základní implementace vždy vrátí hodnotu PRAVDA. Vrátí false z přepsané implementace, pokud chcete selhání události.
 
-##  <a name="interpolatevelocity"></a>  CCustomInterpolator::InterpolateVelocity
+## <a name="ccustominterpolatorinterpolatevelocity"></a><a name="interpolatevelocity"></a>CCustomInterpolator::InterpolateVelocity
 
-Argument interpolaci rychlosti na dané pozici
+Interpoluje rychlost při daném posunu
 
 ```
 virtual BOOL InterpolateVelocity(
@@ -229,30 +229,30 @@ virtual BOOL InterpolateVelocity(
 
 ### <a name="parameters"></a>Parametry
 
-*velocity*<br/>
-Výstup. Rychlost proměnnou na posunu.
+*Rychlost*<br/>
+Výstup. Rychlost proměnné na posun.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Základní implementaci vždy vrátí hodnotu TRUE. Vrátí FALSE od přepsané implementace, pokud chcete selhání události.
+Základní implementace vždy vrátí hodnotu PRAVDA. Vrátí false z přepsané implementace, pokud chcete selhání události.
 
-##  <a name="m_currentvalue"></a>  CCustomInterpolator::m_currentValue
+## <a name="ccustominterpolatorm_currentvalue"></a><a name="m_currentvalue"></a>CCustomInterpolator::m_currentValue
 
-Interpolované hodnotu.
+Interpolovaná hodnota.
 
 ```
 DOUBLE m_currentValue;
 ```
 
-##  <a name="m_currentvelocity"></a>  CCustomInterpolator::m_currentVelocity
+## <a name="ccustominterpolatorm_currentvelocity"></a><a name="m_currentvelocity"></a>CCustomInterpolator::m_currentVelocity
 
-Interpolované rychlosti.
+Interpolovaná rychlost.
 
 ```
 DOUBLE m_currentVelocity;
 ```
 
-##  <a name="m_duration"></a>  CCustomInterpolator::m_duration
+## <a name="ccustominterpolatorm_duration"></a><a name="m_duration"></a>CCustomInterpolator::m_duration
 
 Doba trvání přechodu.
 
@@ -260,7 +260,7 @@ Doba trvání přechodu.
 UI_ANIMATION_SECONDS m_duration;
 ```
 
-##  <a name="m_finalvalue"></a>  CCustomInterpolator::m_finalValue
+## <a name="ccustominterpolatorm_finalvalue"></a><a name="m_finalvalue"></a>CCustomInterpolator::m_finalValue
 
 Konečná hodnota proměnné na konci přechodu.
 
@@ -268,25 +268,25 @@ Konečná hodnota proměnné na konci přechodu.
 DOUBLE m_finalValue;
 ```
 
-##  <a name="m_initialvalue"></a>  CCustomInterpolator::m_initialValue
+## <a name="ccustominterpolatorm_initialvalue"></a><a name="m_initialvalue"></a>CCustomInterpolator::m_initialValue
 
-Hodnota proměnné na začátku přechod.
+Hodnota proměnné na začátku přechodu.
 
 ```
 DOUBLE m_initialValue;
 ```
 
-##  <a name="m_initialvelocity"></a>  CCustomInterpolator::m_initialVelocity
+## <a name="ccustominterpolatorm_initialvelocity"></a><a name="m_initialvelocity"></a>CCustomInterpolator::m_initialVelocity
 
-Rychlost proměnnou na začátku přechod.
+Rychlost proměnné na začátku přechodu.
 
 ```
 DOUBLE m_initialVelocity;
 ```
 
-##  <a name="setduration"></a>  CCustomInterpolator::SetDuration
+## <a name="ccustominterpolatorsetduration"></a><a name="setduration"></a>CCustomInterpolator::SetDuration
 
-Nastaví dobu trvání interpolator.
+Nastaví dobu trvání interpolátoru.
 
 ```
 virtual BOOL SetDuration(UI_ANIMATION_SECONDS duration);
@@ -299,11 +299,11 @@ Doba trvání přechodu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Základní implementaci vždy vrátí hodnotu TRUE. Vrátí FALSE od přepsané implementace, pokud chcete selhání události.
+Základní implementace vždy vrátí hodnotu PRAVDA. Vrátí false z přepsané implementace, pokud chcete selhání události.
 
-##  <a name="setinitialvalueandvelocity"></a>  CCustomInterpolator::SetInitialValueAndVelocity
+## <a name="ccustominterpolatorsetinitialvalueandvelocity"></a><a name="setinitialvalueandvelocity"></a>CCustomInterpolator::SetInitialValueAndVelocity
 
-Nastaví počáteční hodnotu interpolator a rychlost.
+Nastaví počáteční hodnotu a rychlost interpolátoru.
 
 ```
 virtual BOOL SetInitialValueAndVelocity(
@@ -313,16 +313,16 @@ virtual BOOL SetInitialValueAndVelocity(
 
 ### <a name="parameters"></a>Parametry
 
-*initialValue*<br/>
-Hodnota proměnné na začátku přechod.
+*Initialvalue*<br/>
+Hodnota proměnné na začátku přechodu.
 
-*initialVelocity*<br/>
-Rychlost proměnnou na začátku přechod.
+*počáteční rychlost*<br/>
+Rychlost proměnné na začátku přechodu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Základní implementaci vždy vrátí hodnotu TRUE. Vrátí FALSE od přepsané implementace, pokud chcete selhání události.
+Základní implementace vždy vrátí hodnotu TRUE. Vrátí false z přepsané implementace, pokud chcete selhání události.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Třídy](../../mfc/reference/mfc-classes.md)

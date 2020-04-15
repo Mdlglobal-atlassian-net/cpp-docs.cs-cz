@@ -1,9 +1,11 @@
 ---
 title: _memicmp, _memicmp_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _memicmp_l
 - _memicmp
+- _o__memicmp
+- _o__memicmp_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -30,16 +33,16 @@ helpviewer_keywords:
 - memicmp_l function
 - _memicmp_l function
 ms.assetid: 0a6eb945-4077-4f84-935d-1aaebe8db8cb
-ms.openlocfilehash: a463b9c79a76879311bb811b38e4aabcfd6e7226
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 5ad22f2107695b14d4a8361d4532d6e250b5af6f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951840"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81333226"
 ---
 # <a name="_memicmp-_memicmp_l"></a>_memicmp, _memicmp_l
 
-Porovná znaky ve dvou bufferech (bez rozlišení velkých a malých písmen).
+Porovná znaky ve dvou vyrovnávacích pamětnicích (bez malých a velkých písmen).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -59,45 +62,47 @@ int _memicmp_l(
 
 ### <a name="parameters"></a>Parametry
 
-*buffer1*<br/>
+*vyrovnávací paměť1*<br/>
 První vyrovnávací paměť.
 
-*buffer2*<br/>
+*vyrovnávací paměť2*<br/>
 Druhá vyrovnávací paměť.
 
-*výpočtu*<br/>
+*Počet*<br/>
 Počet znaků.
 
-*jazyka*<br/>
-Národní prostředí, které se má použít.
+*Národní prostředí*<br/>
+Národní prostředí použít.
 
 ## <a name="return-value"></a>Návratová hodnota
 
 Návratová hodnota označuje vztah mezi vyrovnávacími pamětmi.
 
-|Návratová hodnota|Relace prvních počtů bajtů buf1 a buf2|
+|Návratová hodnota|Vztah prvního počtu bajtů buf1 a buf2|
 |------------------|--------------------------------------------------------|
 |< 0|*buffer1* menší než *buffer2*.|
-|0|*buffer1* se shodují s *buffer2*.|
+|0|*vyrovnávací paměť1* shodná s *vyrovnávací pamětí2*.|
 |> 0|*buffer1* větší než *buffer2*.|
 |**_NLSCMPERROR**|Došlo k chybě.|
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce **_memicmp** porovná první *počet* znaků dvou vyrovnávacích pamětí *buffer1* a *buffer2* bajt po bajtu. Porovnávání nerozlišuje velká a malá písmena.
+Funkce **_memicmp** porovná znaky prvního *počtu* dvou vyrovnávacích pamětí *buffer1* a *buffer2* bajt byte. Porovnání není malá a velká písmena.
 
-Pokud je *buffer1* nebo *buffer2* ukazatel s hodnotou null, tato funkce vyvolá obslužnou rutinu neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, funkce vrátí **_NLSCMPERROR** a nastaví **errno** na **EINVAL**.
+Pokud *je buď buffer1* nebo *buffer2* ukazatel null, tato funkce vyvolá neplatný obslužnou rutinu parametru, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je spuštění povoleno pokračovat, funkce vrátí **_NLSCMPERROR** a nastaví **errno** na **EINVAL**.
 
-**_memicmp** používá aktuální národní prostředí pro chování závislé na národním prostředí; **_memicmp_l** je totožný s tím rozdílem, že místo toho používá národní prostředí. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
+**_memicmp** používá aktuální národní prostředí pro chování závislé na národním prostředí; **_memicmp_l** je totožný s tím rozdílem, že místo toho používá národní prostředí předané. Další informace naleznete v [tématu Locale](../../c-runtime-library/locale.md).
+
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_memicmp**|\<Memory. h > nebo \<String. h >|
-|**_memicmp_l**|\<Memory. h > nebo \<String. h >|
+|**_memicmp**|\<memory.h> \<nebo string.h>|
+|**_memicmp_l**|\<memory.h> \<nebo string.h>|
 
-Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -134,9 +139,9 @@ Compare 'Those Who Will Not Learn from' to 'THOSE WHO WILL NOT LEARN FROM'
 First is equal to second.
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Zacházení s vyrovnávací pamětí](../../c-runtime-library/buffer-manipulation.md)<br/>
+[Manipulace s vyrovnávací pamětí](../../c-runtime-library/buffer-manipulation.md)<br/>
 [_memccpy](memccpy.md)<br/>
 [memchr, wmemchr](memchr-wmemchr.md)<br/>
 [memcmp, wmemcmp](memcmp-wmemcmp.md)<br/>

@@ -1,6 +1,6 @@
 ---
-title: Linker – třída
-description: Referenční C++ dokumentace třídy linkeru Build Insights SDK
+title: Třída LinkerGroup
+description: C++ Build Insights SDK LinkerGroup odkaz na třídu.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 95b0dcc3a771ec07ee60185a79a5ddbc29434b5d
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: c59d62938e5bd7b839ad12a321a03510e708e0fd
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78333207"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81324648"
 ---
-# <a name="linkergroup-class"></a>Linker – třída
+# <a name="linkergroup-class"></a>Třída LinkerGroup
 
 ::: moniker range="<=vs-2015"
 
-Sada C++ SDK pro Build Insights je kompatibilní se sadou Visual Studio 2017 a novější. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek selektor verzí sady Visual Studio pro tento článek na sadu Visual Studio 2017 nebo Visual Studio 2019.
+Sada C++ Build Insights SDK je kompatibilní s Visual Studio 2017 a vyšší. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek pro výběr **verze** sady Visual Studio pro tento článek na Visual Studio 2017 nebo Visual Studio 2019. Nachází se v horní části obsahu na této stránce.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Třída `LinkerGroup` se používá s funkcemi [MatchEventStack](../functions/match-event-stack.md) a [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md) . Použijte ji pro spárování skupin událostí [linkeru](../event-table.md#linker) .
+Třída `LinkerGroup` se používá s [funkcemi MatchEventStack](../functions/match-event-stack.md) a [MatchEventStackInMemberFunction.](../functions/match-event-stack-in-member-function.md) Slouží k přizpůsobení skupin událostí [LINKER.](../event-table.md#linker)
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -39,13 +39,13 @@ public:
 
 ## <a name="members"></a>Členové
 
-Společně se zděděnými členy ze své třídy [event\<\>základní třídy linkeru](event-group.md) obsahuje Třída `LinkerGroup` následující členy:
+Spolu s zděděnými členy ze základní třídy [EventGroup\<Linker\> ](event-group.md) obsahuje `LinkerGroup` třída následující členy:
 
 ### <a name="constructors"></a>Konstruktory
 
-[Propojovacího programu](#linker-group)
+[Skupina linkerů](#linker-group)
 
-## <a name="linker-group"></a>Propojovacího programu
+## <a name="linkergroup"></a><a name="linker-group"></a>Skupina linkerů
 
 ```cpp
 LinkerGroup(std::deque<Linker>&& group);
@@ -53,7 +53,7 @@ LinkerGroup(std::deque<Linker>&& group);
 
 ### <a name="parameters"></a>Parametry
 
-\ *skupiny*
-Skupina událostí [linkeru](../event-table.md#linker) .
+*Skupiny*\
+Skupina událostí [LINKER.](../event-table.md#linker)
 
 ::: moniker-end

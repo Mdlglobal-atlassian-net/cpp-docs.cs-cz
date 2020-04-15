@@ -1,5 +1,5 @@
 ---
-title: CObList – třída
+title: Třída CObList
 ms.date: 11/04/2016
 f1_keywords:
 - CObList
@@ -50,16 +50,16 @@ helpviewer_keywords:
 - CObList [MFC], RemoveTail
 - CObList [MFC], SetAt
 ms.assetid: 80699c93-33d8-4f8b-b8cf-7b58aeab64ca
-ms.openlocfilehash: 2fc3a3643c675394de555f1411030e278bcee775
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: cccd45bf5a97ae7dcc8369015e0a431b3a9e960f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79416870"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81360376"
 ---
-# <a name="coblist-class"></a>CObList – třída
+# <a name="coblist-class"></a>Třída CObList
 
-fSupports seřazené seznamy nejedinečných ukazatelů `CObject` přístupných postupně nebo podle hodnoty ukazatele.
+fPodporuje seřazené seřazené seznamy nejedinečných `CObject` ukazatelů přístupných postupně nebo podle hodnoty ukazatele.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -71,70 +71,70 @@ class CObList : public CObject
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CObList::CObList](#coblist)|Vytvoří prázdný seznam pro ukazatele `CObject`.|
+|[CobList::CobList](#coblist)|Vytvoří prázdný seznam `CObject` pro ukazatele.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CObList::AddHead](#addhead)|Přidá prvek (nebo všechny prvky v jiném seznamu) do záhlaví seznamu (vytvoří novou hlavu).|
-|[CObList:: AddTail –](#addtail)|Přidá prvek (nebo všechny prvky v jiném seznamu) na konec seznamu (vytvoří nový konec).|
-|[CObList:: Find](#find)|Získá pozici prvku určeného hodnotou ukazatele.|
-|[CObList:: FindIndex –](#findindex)|Získá pozici prvku určeného indexem založeným na nule.|
-|[CObList::GetAt](#getat)|Získá prvek na dané pozici.|
-|[CObList:: GetCount](#getcount)|Vrátí počet prvků v tomto seznamu.|
-|[CObList:: GetHead](#gethead)|Vrátí element head seznamu (nemůže být prázdný).|
-|[CObList::GetHeadPosition](#getheadposition)|Vrátí pozici elementu Head v seznamu.|
-|[CObList:: GetNext](#getnext)|Získá další prvek pro iteraci.|
-|[CObList:: getpředchozí](#getprev)|Získá předchozí prvek pro iteraci.|
-|[CObList:: GetSize](#getsize)|Vrátí počet prvků v tomto seznamu.|
-|[CObList:: GetTail](#gettail)|Vrátí element Tail seznamu (nemůže být prázdný).|
-|[CObList::GetTailPosition](#gettailposition)|Vrátí pozici koncového prvku seznamu.|
-|[CObList::InsertAfter](#insertafter)|Vloží nový prvek za danou pozici.|
-|[CObList::InsertBefore](#insertbefore)|Vloží nový prvek před danou pozici.|
-|[CObList::-Empty](#isempty)|Testuje podmínku prázdného seznamu (žádné elementy).|
-|[CObList::RemoveAll](#removeall)|Odebere všechny prvky z tohoto seznamu.|
-|[CObList:: funkce RemoveAt](#removeat)|Odebere prvek z tohoto seznamu, který je určen pozicí.|
-|[CObList::RemoveHead](#removehead)|Odebere prvek ze záhlaví seznamu.|
-|[CObList::RemoveTail](#removetail)|Odebere prvek ze strany seznamu.|
-|[CObList::SetAt](#setat)|Nastaví prvek na dané pozici.|
+|[CobList::Hlavička](#addhead)|Přidá prvek (nebo všechny prvky v jiném seznamu) do hlavy seznamu (vytvoří novou hlavu).|
+|[CobList::Addtail](#addtail)|Přidá prvek (nebo všechny prvky v jiném seznamu) na konci seznamu (vytvoří nový ocas).|
+|[CobList::Najít](#find)|Získá pozici prvku určeného hodnotou ukazatele.|
+|[CobList::FindIndex](#findindex)|Získá pozici prvku určeného index emitované nula.|
+|[Coblist::Getat](#getat)|Získá prvek na dané pozici.|
+|[CobList::GetCount](#getcount)|Vrátí počet prvků v tomto seznamu.|
+|[CobList::Gethead](#gethead)|Vrátí prvek hlavy seznamu (nemůže být prázdný).|
+|[CobList::GetheadPozice](#getheadposition)|Vrátí pozici prvku hlavy seznamu.|
+|[CobList::GetNext](#getnext)|Získá další prvek pro iterace.|
+|[CObList::GetPrev](#getprev)|Získá předchozí prvek pro iterace.|
+|[CobList::GetSize](#getsize)|Vrátí počet prvků v tomto seznamu.|
+|[CobList::GetTail](#gettail)|Vrátí ocasní prvek seznamu (nemůže být prázdný).|
+|[CobList::GettailPozice](#gettailposition)|Vrátí pozici koncového prvku seznamu.|
+|[CobList::InsertAfter](#insertafter)|Vloží nový prvek za danou pozici.|
+|[Coblist::Insertbefore](#insertbefore)|Vloží nový prvek před danou pozici.|
+|[Coblist::JePrázdný](#isempty)|Testy podmínky prázdného seznamu (žádné prvky).|
+|[CobList::RemoveAll](#removeall)|Odebere všechny prvky z tohoto seznamu.|
+|[coblist::Removeat](#removeat)|Odebere prvek z tohoto seznamu, určený podle pozice.|
+|[CobList::RemoveHead](#removehead)|Odebere prvek z hlavy seznamu.|
+|[CobList::RemoveTail](#removetail)|Odebere prvek z ocasu seznamu.|
+|[Coblist::Setat](#setat)|Nastaví prvek na dané pozici.|
 
 ## <a name="remarks"></a>Poznámky
 
-seznam `CObList` se chová jako seznamy s obousměrným odkazem.
+`CObList`seznamy se chovají jako dvojnásob propojené seznamy.
 
-Proměnná pozice typu je klíč pro seznam. Proměnnou pozice lze použít jak jako iterátor, aby se seznam přesměroval postupně a jako záložka pro uložení místa. Pozice však není stejná jako index, ale.
+Proměnná typu POSITION je klíčem k seznamu. Proměnnou POSITION můžete použít jako iterátor k postupnému procházení seznamu a jako záložku pro uložení místa. Pozice však není stejná jako index.
 
-Vložení elementu je velmi rychlé v hlavičce seznamu, na konci a na známém místě. Sekvenční hledání je nezbytné pro vyhledání prvku podle hodnoty nebo indexu. Toto hledání může být pomalé, pokud je seznam dlouhý.
+Vložení prvku je velmi rychlé v hlavě seznamu, na ocasu a ve známé poloze. Sekvenční vyhledávání je nutné vyhledat prvek podle hodnoty nebo indexu. Toto hledání může být pomalé, pokud je seznam dlouhý.
 
-`CObList` zahrnuje makro IMPLEMENT_SERIAL pro podporu serializace a dumpingu jeho prvků. Pokud je seznam ukazatelů `CObject` uložen do archivu, buď pomocí přetíženého operátoru vložení nebo pomocí `Serialize` členské funkce, je každý prvek `CObject` serializován.
+`CObList`obsahuje makro IMPLEMENT_SERIAL pro podporu serializace a dumpingu jeho prvků. Pokud je `CObject` seznam ukazatelů uložen do archivu, buď s přetíženým operátorem vložení nebo s členovou `Serialize` funkcí, každý `CObject` prvek je serializován podle pořadí.
 
-Pokud potřebujete výpis z jednotlivých prvků `CObject` v seznamu, je nutné nastavit hloubku kontextu výpisu na hodnotu 1 nebo vyšší.
+Pokud potřebujete výpis jednotlivých `CObject` prvků v seznamu, je nutné nastavit hloubku kontextu výpisu na 1 nebo vyšší.
 
-Když je odstraněn objekt `CObList` nebo když jsou jeho prvky odebrány, jsou odebrány pouze ukazatele `CObject`, nikoli objekty, na které odkazují.
+Při `CObList` odstranění objektu nebo při odebrání jeho `CObject` prvků jsou odebrány pouze ukazatele, nikoli objekty, na které odkazují.
 
-Z `CObList`můžete odvodit vlastní třídy. Vaše nová třída seznamu navržená tak, aby obsahovala ukazatele na objekty odvozené od `CObject`, přidává nové datové členy a nové členské funkce. Všimněte si, že výsledný seznam není striktně typově bezpečný, protože umožňuje vložení libovolného `CObject` ukazatele.
+Vlastní třídy můžete `CObList`odvodit z aplikace . Nová třída seznamu, navržená tak, aby `CObject`uchovávala ukazatele na objekty odvozené z aplikace , přidává nové datové členy a nové členské funkce. Všimněte si, že výsledný seznam není přísně typ bezpečné, `CObject` protože umožňuje vložení libovolného ukazatele.
 
 > [!NOTE]
->  V případě, že máte v úmyslu seznam serializovat, je nutné použít makro [IMPLEMENT_SERIAL](run-time-object-model-services.md#implement_serial) v implementaci odvozené třídy.
+> Pokud chcete seznam serializovat, musíte použít [IMPLEMENT_SERIAL](run-time-object-model-services.md#implement_serial) makro při implementaci odvozené třídy.
 
-Další informace o používání `CObList`najdete v článku [kolekce](../../mfc/collections.md)článků.
+Další informace o `CObList`použití naleznete v článku [Kolekce](../../mfc/collections.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[CObject](../../mfc/reference/cobject-class.md)
+[CObjekt](../../mfc/reference/cobject-class.md)
 
 `CObList`
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxcoll. h
+**Záhlaví:** afxcoll.h
 
-##  <a name="addhead"></a>CObList::AddHead
+## <a name="coblistaddhead"></a><a name="addhead"></a>CobList::Hlavička
 
-Přidá nový prvek nebo seznam prvků na záhlaví tohoto seznamu.
+Přidá nový prvek nebo seznam prvků do hlavy tohoto seznamu.
 
 ```
 POSITION AddHead(CObject* newElement);
@@ -144,21 +144,21 @@ void AddHead(CObList* pNewList);
 ### <a name="parameters"></a>Parametry
 
 *newElement*<br/>
-`CObject` ukazatel, který se má přidat do tohoto seznamu.
+Ukazatel, `CObject` který má být přidán do tohoto seznamu.
 
 *pNewList*<br/>
-Ukazatel na jiný seznam `CObList`. Prvky v *pNewList* budou přidány do tohoto seznamu.
+Ukazatel na `CObList` jiný seznam. Prvky v *pNewList* budou přidány do tohoto seznamu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-První verze vrátí hodnotu pozice nově vloženého prvku.
+První verze vrátí hodnotu POSITION nově vloženého prvku.
 
-V následující tabulce jsou uvedeny jiné členské funkce, které jsou podobné `CObList::AddHead`.
+V následující tabulce jsou uvedeny `CObList::AddHead`další členské funkce, které jsou podobné .
 
 |Třída|Členská funkce|
 |-----------|---------------------|
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**Pozice AddHead (void** <strong>\*</strong> `newElement` **);**<br /><br /> **void AddHead (CPtrList** <strong>\*</strong> `pNewList` **);**|
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**AddHead pozice (const CString &** `newElement` **);**<br /><br /> **Pozice AddHead (LPCTSTR** `newElement` **);**<br /><br /> **void AddHead (CStringList** <strong>\*</strong> `pNewList` **);**|
+|[Seznam CPtrList](../../mfc/reference/cptrlist-class.md)|**POZICE AddHead( void** <strong>\*</strong> `newElement` **);**<br /><br /> **void AddHead( CPtrList** <strong>\*</strong> `pNewList` **);**|
+|[Seznam cstring](../../mfc/reference/cstringlist-class.md)|**POZICE AddHead (const CString** `newElement` **&);**<br /><br /> **POZICE Addhead (LPCTSTR);** `newElement` **);**<br /><br /> **void AddHead(CStringList);** <strong>\*</strong> `pNewList` **);**|
 
 ### <a name="remarks"></a>Poznámky
 
@@ -166,11 +166,11 @@ Seznam může být před operací prázdný.
 
 ### <a name="example"></a>Příklad
 
-  Seznam `CAge` třídy naleznete v tématu [CObList:: CObList](#coblist) .
+  Viz [CObList::CObList](#coblist) pro výpis `CAge` třídy.
 
 [!code-cpp[NVC_MFCCollections#89](../../mfc/codesnippet/cpp/coblist-class_1.cpp)]
 
-Výsledky z tohoto programu jsou následující:
+Výsledky tohoto programu jsou následující:
 
 ```Output
 AddHead example: A CObList with 2 elements
@@ -178,9 +178,9 @@ a CAge at $44A8 40
 a CAge at $442A 21
 ```
 
-##  <a name="addtail"></a>CObList:: AddTail –
+## <a name="coblistaddtail"></a><a name="addtail"></a>CobList::Addtail
 
-Přidá nový prvek nebo seznam prvků na konec seznamu.
+Přidá nový prvek nebo seznam prvků na konci tohoto seznamu.
 
 ```
 POSITION AddTail(CObject* newElement);
@@ -190,33 +190,33 @@ void AddTail(CObList* pNewList);
 ### <a name="parameters"></a>Parametry
 
 *newElement*<br/>
-`CObject` ukazatel, který se má přidat do tohoto seznamu.
+Ukazatel, `CObject` který má být přidán do tohoto seznamu.
 
 *pNewList*<br/>
-Ukazatel na jiný seznam `CObList`. Prvky v *pNewList* budou přidány do tohoto seznamu.
+Ukazatel na `CObList` jiný seznam. Prvky v *pNewList* budou přidány do tohoto seznamu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-První verze vrátí hodnotu pozice nově vloženého prvku.
+První verze vrátí hodnotu POSITION nově vloženého prvku.
 
 ### <a name="remarks"></a>Poznámky
 
 Seznam může být před operací prázdný.
 
-V následující tabulce jsou uvedeny jiné členské funkce, které jsou podobné `CObList::AddTail`.
+V následující tabulce jsou uvedeny `CObList::AddTail`další členské funkce, které jsou podobné .
 
 |Třída|Členská funkce|
 |-----------|---------------------|
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**Pozice AddTail – (void** <strong>\*</strong> `newElement` **);**<br /><br /> **void AddTail – (CPtrList** <strong>\*</strong> `pNewList` **);**|
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**AddTail – pozice (const CString &** `newElement` **);**<br /><br /> **Pozice AddTail – (LPCTSTR** `newElement` **);**<br /><br /> **void AddTail – (CStringList** <strong>\*</strong> `pNewList` **);**|
+|[Seznam CPtrList](../../mfc/reference/cptrlist-class.md)|**POZICE AddTail(** <strong>\*</strong> `newElement` **void);**<br /><br /> **void AddTail( CPtrList** <strong>\*</strong> `pNewList` **);**|
+|[Seznam cstring](../../mfc/reference/cstringlist-class.md)|**POZICE AddTail( const CString&** `newElement` **);**<br /><br /> **POZICE AddTail( LPCTSTR** `newElement` **);**<br /><br /> **void AddTail( CStringList** <strong>\*</strong> `pNewList` **);**|
 
 ### <a name="example"></a>Příklad
 
-  Seznam `CAge` třídy naleznete v tématu [CObList:: CObList](#coblist) .
+  Viz [CObList::CObList](#coblist) pro výpis `CAge` třídy.
 
 [!code-cpp[NVC_MFCCollections#90](../../mfc/codesnippet/cpp/coblist-class_2.cpp)]
 
-Výsledky z tohoto programu jsou následující:
+Výsledky tohoto programu jsou následující:
 
 ```Output
 AddTail example: A CObList with 2 elements
@@ -224,9 +224,9 @@ a CAge at $444A 21
 a CAge at $4526 40
 ```
 
-##  <a name="coblist"></a>CObList::CObList
+## <a name="coblistcoblist"></a><a name="coblist"></a>CobList::CobList
 
-Vytvoří prázdný seznam ukazatelů `CObject`.
+Vytvoří prázdný `CObject` seznam ukazatelů.
 
 ```
 CObList(INT_PTR nBlockSize = 10);
@@ -235,32 +235,32 @@ CObList(INT_PTR nBlockSize = 10);
 ### <a name="parameters"></a>Parametry
 
 *nBlockSize*<br/>
-Členitost přidělení paměti pro rozšíření seznamu.
+Rozlišovací schopnost přidělení paměti pro rozšíření seznamu.
 
 ### <a name="remarks"></a>Poznámky
 
-Jak se seznam zvětšuje, paměť se přiděluje v jednotkách *nBlockSizech* položek. Pokud není přidělení paměti úspěšné, je vyvolána `CMemoryException`.
+Jak seznam roste, paměť je přidělena v jednotkách *nBlockSize* položek. Pokud přidělení paměti selže, `CMemoryException` je vyvolána.
 
-V následující tabulce jsou uvedeny jiné členské funkce, které jsou podobné `CObList::CObList`.
+V následující tabulce jsou uvedeny `CObList::CObList`další členské funkce, které jsou podobné .
 
 |Třída|Členská funkce|
 |-----------|---------------------|
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**CPtrList (INT_PTR** `nBlockSize` **= 10);**|
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**CStringList (INT_PTR** `nBlockSize` **= 10);**|
+|[Seznam CPtrList](../../mfc/reference/cptrlist-class.md)|**CPtrList( INT_PTR** `nBlockSize` **= 10 );**|
+|[Seznam cstring](../../mfc/reference/cstringlist-class.md)|**CStringList( INT_PTR** `nBlockSize` **= 10 );**|
 
 ### <a name="example"></a>Příklad
 
-  Níže je uveden seznam `CAge` třídy odvozené od `CObject`, která se používá ve všech příkladech kolekce:
+  Níže je uveden `CObject`seznam -odvozené třídy `CAge` použité ve všech příkladech kolekce:
 
 [!code-cpp[NVC_MFCCollections#91](../../mfc/codesnippet/cpp/coblist-class_3.h)]
 
-Níže je uveden příklad použití konstruktoru `CObList`:
+Níže je uveden `CObList` příklad využití konstruktoru:
 
 [!code-cpp[NVC_MFCCollections#92](../../mfc/codesnippet/cpp/coblist-class_4.cpp)]
 
-##  <a name="find"></a>CObList:: Find
+## <a name="coblistfind"></a><a name="find"></a>CobList::Najít
 
-Vyhledá v seznamu postupně, aby se našel první `CObject` ukazatel, který odpovídá zadanému ukazateli `CObject`.
+Postupně vyhledá v seznamu první `CObject` ukazatel odpovídající `CObject` zadanému ukazateli.
 
 ```
 POSITION Find(
@@ -270,36 +270,36 @@ POSITION Find(
 
 ### <a name="parameters"></a>Parametry
 
-*searchValue*<br/>
-Ukazatel na objekt, který se má najít v tomto seznamu.
+*funkce searchValue*<br/>
+Ukazatel objektu, který se nachází v tomto seznamu.
 
 *startAfter*<br/>
 Počáteční pozice pro hledání.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota pozice, která se dá použít pro načtení ukazatele iterace nebo objektu; Hodnota NULL, pokud objekt nebyl nalezen.
+Hodnota POSITION, kterou lze použít pro iteraci nebo načtení ukazatele objektu; Null, pokud objekt nebyl nalezen.
 
 ### <a name="remarks"></a>Poznámky
 
-Všimněte si, že hodnoty ukazatelů jsou porovnávány, nikoli obsah objektů.
+Všimněte si, že jsou porovnány hodnoty ukazatele, nikoli obsah objektů.
 
-V následující tabulce jsou uvedeny jiné členské funkce, které jsou podobné `CObList::Find`.
+V následující tabulce jsou uvedeny `CObList::Find`další členské funkce, které jsou podobné .
 
 |Třída|Členská funkce|
 |-----------|---------------------|
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**Pozice Find (void** <strong>\*</strong> `searchValue` **, pozice** `startAfter` **= null) const;**|
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**Pozice Find (LPCTSTR** `searchValue` **, pozice** `startAfter` **= null) const;**|
+|[Seznam CPtrList](../../mfc/reference/cptrlist-class.md)|**POZICE Najít( void** <strong>\*</strong> `searchValue` **, POSITION** `startAfter` **= NULL ) const;**|
+|[Seznam cstring](../../mfc/reference/cstringlist-class.md)|**POZICE Najít( LPCTSTR** `searchValue` **, POZICE** `startAfter` **= NULL ) const;**|
 
 ### <a name="example"></a>Příklad
 
-Seznam `CAge` třídy naleznete v tématu [CObList:: CObList](#coblist) .
+Viz [CObList::CObList](#coblist) pro výpis `CAge` třídy.
 
 [!code-cpp[NVC_MFCCollections#93](../../mfc/codesnippet/cpp/coblist-class_5.cpp)]
 
-##  <a name="findindex"></a>CObList:: FindIndex –
+## <a name="coblistfindindex"></a><a name="findindex"></a>CobList::FindIndex
 
-Použije hodnotu *nIndex* jako index do seznamu.
+Používá hodnotu *nIndex* jako index do seznamu.
 
 ```
 POSITION FindIndex(INT_PTR nIndex) const;
@@ -308,32 +308,32 @@ POSITION FindIndex(INT_PTR nIndex) const;
 ### <a name="parameters"></a>Parametry
 
 *nIndex*<br/>
-Index založený na nule prvku seznamu, který se má najít
+Nula na základě indexu list prvek, který má být nalezen.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota pozice, která se dá použít pro načtení ukazatele iterace nebo objektu; Hodnota NULL, pokud je *nIndex* příliš velká. (Rozhraní generuje kontrolní výraz, pokud je *nIndex* záporné.)
+Hodnota POSITION, kterou lze použít pro iteraci nebo načtení ukazatele objektu; NULL, pokud *nIndex* je příliš velký. (Rozhraní framework generuje kontrolní výraz, pokud *nIndex* je negativní.)
 
 ### <a name="remarks"></a>Poznámky
 
-Spustí sekvenční prohledávání z hlavičky seznamu a zastavuje se na *n*-tý prvek.
+Spustí sekvenční skenování z hlavy seznamu, zastavení na *n*th element.
 
-V následující tabulce jsou uvedeny jiné členské funkce, které jsou podobné `CObList::FindIndex`.
+V následující tabulce jsou uvedeny `CObList::FindIndex`další členské funkce, které jsou podobné .
 
 |Třída|Členská funkce|
 |-----------|---------------------|
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**Pozice FindIndex – (INT_PTR** `nIndex` **) const;**|
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**Pozice FindIndex – (INT_PTR** `nIndex` **) const;**|
+|[Seznam CPtrList](../../mfc/reference/cptrlist-class.md)|**POZICE FindIndex( INT_PTR** `nIndex` **) const;**|
+|[Seznam cstring](../../mfc/reference/cstringlist-class.md)|**POZICE FindIndex( INT_PTR** `nIndex` **) const;**|
 
 ### <a name="example"></a>Příklad
 
-Seznam `CAge` třídy naleznete v tématu [CObList:: CObList](#coblist) .
+Viz [CObList::CObList](#coblist) pro výpis `CAge` třídy.
 
 [!code-cpp[NVC_MFCCollections#94](../../mfc/codesnippet/cpp/coblist-class_6.cpp)]
 
-##  <a name="getat"></a>CObList::GetAt
+## <a name="coblistgetat"></a><a name="getat"></a>Coblist::Getat
 
-Proměnná pozice typu je klíč pro seznam.
+Proměnná typu POSITION je klíčem k seznamu.
 
 ```
 CObject*& GetAt(POSITION position);
@@ -342,31 +342,31 @@ const CObject*& GetAt(POSITION position) const;
 
 ### <a name="parameters"></a>Parametry
 
-*poziční*<br/>
-Hodnota pozice vrácená předchozím `GetHeadPosition` nebo `Find` volání členské funkce.
+*Pozici*<br/>
+Hodnota POSITION vrácená `GetHeadPosition` voláním předchozí nebo `Find` členské funkce.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Podívejte se na popis návratové hodnoty pro [GetHead](#gethead).
+Viz popis vrácené hodnoty pro [GetHead](#gethead).
 
 ### <a name="remarks"></a>Poznámky
 
-Není stejný jako index a nemůžete pracovat s hodnotou pozice sami. `GetAt` načte ukazatel `CObject` přidružený k dané pozici.
+Není to stejné jako index a nelze pracovat na position hodnotu sami. `GetAt`načte `CObject` ukazatel přidružený k dané pozici.
 
-Je nutné zajistit, aby hodnota pozice představovala platné umístění v seznamu. Pokud je neplatný, ladicí verze knihovna Microsoft Foundation Class výrazy.
+Je nutné zajistit, aby hodnota POZICE představovala platnou pozici v seznamu. Pokud je neplatný, pak ladicí verze Knihovny tříd Microsoft Foundation uplatňuje.
 
-V následující tabulce jsou uvedeny jiné členské funkce, které jsou podobné `CObList::GetAt`.
+V následující tabulce jsou uvedeny `CObList::GetAt`další členské funkce, které jsou podobné .
 
 |Třída|Členská funkce|
 |-----------|---------------------|
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**const void\*& GetAt (** *pozice* pozice **) const;**<br /><br /> **void\*& GetAt (** *pozice* pozice **);**|
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**const CString & GetAt (** *pozice* pozice **) const;**<br /><br /> **CString & GetAt (pozice pozice** **);**|
+|[Seznam CPtrList](../../mfc/reference/cptrlist-class.md)|**const\* void& GetAt( POZICE** *POZICE* **) const;**<br /><br /> **void\*& GetAt( pozice** *polohy* **);**|
+|[Seznam cstring](../../mfc/reference/cstringlist-class.md)|**const CString& GetAt( POZICE** *POZICE* **) const;**<br /><br /> **CString& Getat( pozice** *polohy* **);**|
 
 ### <a name="example"></a>Příklad
 
-  Podívejte se na příklad pro [FindIndex –](#findindex).
+  Viz příklad pro [FindIndex](#findindex).
 
-##  <a name="getcount"></a>CObList:: GetCount
+## <a name="coblistgetcount"></a><a name="getcount"></a>CobList::GetCount
 
 Získá počet prvků v tomto seznamu.
 
@@ -376,24 +376,24 @@ INT_PTR GetCount() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Celočíselná hodnota obsahující počet prvků.
+Celá hodnota obsahující počet prvků.
 
-V následující tabulce jsou uvedeny jiné členské funkce, které jsou podobné `CObList::GetCount`.
+V následující tabulce jsou uvedeny `CObList::GetCount`další členské funkce, které jsou podobné .
 
 |Třída|Členská funkce|
 |-----------|---------------------|
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**INT_PTR GetCount () const;**|
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**INT_PTR GetCount () const;**|
+|[Seznam CPtrList](../../mfc/reference/cptrlist-class.md)|**INT_PTR GetCount( ) const;**|
+|[Seznam cstring](../../mfc/reference/cstringlist-class.md)|**INT_PTR GetCount( ) const;**|
 
 ### <a name="example"></a>Příklad
 
-Seznam `CAge` třídy naleznete v tématu [CObList:: CObList](#coblist) .
+Viz [CObList::CObList](#coblist) pro výpis `CAge` třídy.
 
 [!code-cpp[NVC_MFCCollections#95](../../mfc/codesnippet/cpp/coblist-class_7.cpp)]
 
-##  <a name="gethead"></a>CObList:: GetHead
+## <a name="coblistgethead"></a><a name="gethead"></a>CobList::Gethead
 
-Získá ukazatel `CObject`, který představuje element head tohoto seznamu.
+Získá `CObject` ukazatel, který představuje head element tohoto seznamu.
 
 ```
 CObject*& GetHead();
@@ -402,32 +402,32 @@ const CObject*& GetHead() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud je seznam k dispozici prostřednictvím ukazatele na `const CObList`, pak `GetHead` vrátí `CObject` ukazatel. To umožňuje použití funkce pouze na pravé straně příkazu přiřazení, čímž se seznam chrání před úpravami.
+Pokud je seznam přístupný prostřednictvím `const CObList`ukazatele `GetHead` na `CObject` , vrátí ukazatel. To umožňuje funkci použít pouze na pravé straně příkazu přiřazení a tím chrání seznam před úpravou.
 
-Pokud je seznam k dispozici přímo nebo prostřednictvím ukazatele na `CObList`, pak `GetHead` vrátí odkaz na `CObject` ukazatel. To umožňuje použití funkce na obou stranách příkazu přiřazení, což umožňuje upravovat položky seznamu.
+Pokud je seznam přístupný přímo nebo prostřednictvím ukazatele na `CObList`, vrátí `GetHead` odkaz na `CObject` ukazatel. To umožňuje funkci, která má být použita na obou stranách příkazu přiřazení a tím umožňuje položky seznamu, které mají být změněny.
 
 ### <a name="remarks"></a>Poznámky
 
-Před voláním `GetHead`je nutné zajistit, aby seznam nebyl prázdný. Pokud je seznam prázdný, ladicí verze knihovna Microsoft Foundation Class Assert. Chcete-li ověřit, zda seznam obsahuje prvky, použijte pole [neprázdné](#isempty) .
+Před voláním `GetHead`je nutné zajistit, aby seznam nebyl prázdný. Pokud je seznam prázdný, bude uplatněna ladicí verze knihovny tříd Microsoft Foundation. Pomocí [isempty](#isempty) ověřte, zda seznam obsahuje prvky.
 
-V následující tabulce jsou uvedeny jiné členské funkce, které jsou podobné `CObList::GetHead`.
+V následující tabulce jsou uvedeny `CObList::GetHead`další členské funkce, které jsou podobné .
 
 |Třída|Členská funkce|
 |-----------|---------------------|
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**const void\*& GetHead () const; void\*& GetHead ();**|
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**const CString & GetHead () const; CString & GetHead ();**|
+|[Seznam CPtrList](../../mfc/reference/cptrlist-class.md)|**const\* void& GetHead( ) const; neplatné\*& GetHead( );**|
+|[Seznam cstring](../../mfc/reference/cstringlist-class.md)|**const CString& GetHead( ) const; CString& GetHead( );**|
 
 ### <a name="example"></a>Příklad
 
-Seznam `CAge` třídy naleznete v tématu [CObList:: CObList](#coblist) .
+Viz [CObList::CObList](#coblist) pro výpis `CAge` třídy.
 
-Následující příklad ilustruje použití `GetHead` na levé straně příkazu přiřazení.
+Následující příklad ilustruje použití `GetHead` příkazu přiřazení na levé straně.
 
 [!code-cpp[NVC_MFCCollections#96](../../mfc/codesnippet/cpp/coblist-class_8.cpp)]
 
-##  <a name="getheadposition"></a>CObList::GetHeadPosition
+## <a name="coblistgetheadposition"></a><a name="getheadposition"></a>CobList::GetheadPozice
 
-Získá pozici elementu Head v tomto seznamu.
+Získá pozici head prvek tohoto seznamu.
 
 ```
 POSITION GetHeadPosition() const;
@@ -435,24 +435,24 @@ POSITION GetHeadPosition() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota pozice, která se dá použít pro načtení ukazatele iterace nebo objektu; Hodnota NULL, pokud je seznam prázdný.
+Hodnota POSITION, kterou lze použít pro iteraci nebo načtení ukazatele objektu; Null, pokud je seznam prázdný.
 
-V následující tabulce jsou uvedeny jiné členské funkce, které jsou podobné `CObList::GetHeadPosition`.
+V následující tabulce jsou uvedeny `CObList::GetHeadPosition`další členské funkce, které jsou podobné .
 
 |Třída|Členská funkce|
 |-----------|---------------------|
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**POZICE GetHeadPosition () const;**|
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**POZICE GetHeadPosition () const;**|
+|[Seznam CPtrList](../../mfc/reference/cptrlist-class.md)|**POZICE GetHeadPosition( ) const;**|
+|[Seznam cstring](../../mfc/reference/cstringlist-class.md)|**POZICE GetHeadPosition( ) const;**|
 
 ### <a name="example"></a>Příklad
 
-Seznam `CAge` třídy naleznete v tématu [CObList:: CObList](#coblist) .
+Viz [CObList::CObList](#coblist) pro výpis `CAge` třídy.
 
 [!code-cpp[NVC_MFCCollections#97](../../mfc/codesnippet/cpp/coblist-class_9.cpp)]
 
-##  <a name="getnext"></a>CObList:: GetNext
+## <a name="coblistgetnext"></a><a name="getnext"></a>CobList::GetNext
 
-Získá element seznamu identifikovaný *rPosition.* a pak nastaví *rposition.* na hodnotu `POSITION` další položky v seznamu.
+Získá list element identifikován *rPosition*, pak `POSITION` nastaví *rPosition* na hodnotu další položky v seznamu.
 
 ```
 CObject*& GetNext(POSITION& rPosition);
@@ -461,49 +461,49 @@ const CObject* GetNext(POSITION& rPosition) const;
 
 ### <a name="parameters"></a>Parametry
 
-*rPosition.*<br/>
-Odkaz na hodnotu pozice vrácenou předchozí `GetNext`, `GetHeadPosition`nebo jiné volání členské funkce.
+*rPozice*<br/>
+Odkaz na hodnotu POSITION vrácenou předchozím `GetNext`voláním `GetHeadPosition`členské funkce nebo jiným voláním členské funkce.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Podívejte se na popis návratové hodnoty pro [GetHead](#gethead).
+Viz popis vrácené hodnoty pro [GetHead](#gethead).
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud vytvoříte počáteční pozici s voláním `GetHeadPosition` nebo `Find`, můžete použít `GetNext` ve smyčce dopředné iteraci.
+Můžete použít `GetNext` ve smyčce dopředné iterace, `GetHeadPosition` pokud `Find`navážete počáteční pozici s voláním nebo .
 
-Je nutné zajistit, aby hodnota pozice představovala platné umístění v seznamu. Pokud je neplatný, ladicí verze knihovna Microsoft Foundation Class výrazy.
+Je nutné zajistit, aby hodnota POZICE představovala platnou pozici v seznamu. Pokud je neplatný, pak ladicí verze Knihovny tříd Microsoft Foundation uplatňuje.
 
-Pokud je načtený prvek poslední v seznamu, pak je nová hodnota *rPosition.* nastavena na hodnotu null.
+Pokud načtený prvek je poslední v seznamu, pak je nová hodnota *rPosition* nastavena na hodnotu NULL.
 
-Je možné odebrat prvek během iterace. Podívejte se na příklad pro [funkce RemoveAt](#removeat).
+Je možné odebrat prvek během iterace. Viz příklad [removeat](#removeat).
 
 > [!NOTE]
->  Počínaje verzí MFC 8,0 se verze const této metody změnila tak, aby vracela `const CObject*` místo `const CObject*&`.  Tato změna byla provedena k tomu, aby kompilátor byl v souladu se C++ standardem.
+> Od knihovny MFC 8.0 const verze této `const CObject*` metody `const CObject*&`se změnil na návrat namísto .  Tato změna byla provedena, aby kompilátor do shody s c++ standard.
 
-V následující tabulce jsou uvedeny jiné členské funkce, které jsou podobné `CObList::GetNext`.
+V následující tabulce jsou uvedeny `CObList::GetNext`další členské funkce, které jsou podobné .
 
 |Třída|Členská funkce|
 |-----------|---------------------|
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|`void*& GetNext( POSITION&` `rPosition` `);`<br /><br /> `const void* GetNext( POSITION&` `rPosition` `) const;`|
-|[CStringList](../../mfc/reference/cstringlist-class.md)|`CString& GetNext( POSITION&` `rPosition` `);`<br /><br /> `const CString& GetNext( POSITION&` `rPosition` `) const;`|
+|[Seznam CPtrList](../../mfc/reference/cptrlist-class.md)|`void*& GetNext( POSITION&` `rPosition` `);`<br /><br /> `const void* GetNext( POSITION&` `rPosition` `) const;`|
+|[Seznam cstring](../../mfc/reference/cstringlist-class.md)|`CString& GetNext( POSITION&` `rPosition` `);`<br /><br /> `const CString& GetNext( POSITION&` `rPosition` `) const;`|
 
 ### <a name="example"></a>Příklad
 
-  Seznam `CAge` třídy naleznete v tématu [CObList:: CObList](#coblist) .
+  Viz [CObList::CObList](#coblist) pro výpis `CAge` třídy.
 
 [!code-cpp[NVC_MFCCollections#98](../../mfc/codesnippet/cpp/coblist-class_10.cpp)]
 
-Výsledky z tohoto programu jsou následující:
+Výsledky tohoto programu jsou následující:
 
 ```Output
 a CAge at $479C 40
 a CAge at $46C0 21
 ```
 
-##  <a name="getprev"></a>CObList:: getpředchozí
+## <a name="coblistgetprev"></a><a name="getprev"></a>CObList::GetPrev
 
-Získá element seznamu identifikovaný *rPosition.* a pak nastaví *RPOSITION.* na hodnotu pozice předchozí položky v seznamu.
+Získá prvek seznamu identifikovaný *rPosition*, pak nastaví *rPosition* na hodnotu POSITION předchozí položky v seznamu.
 
 ```
 CObject*& GetPrev(POSITION& rPosition);
@@ -512,45 +512,45 @@ const CObject* GetPrev(POSITION& rPosition) const;
 
 ### <a name="parameters"></a>Parametry
 
-*rPosition.*<br/>
-Odkaz na hodnotu pozice vrácenou předchozí `GetPrev` nebo jiným voláním členské funkce.
+*rPozice*<br/>
+Odkaz na hodnotu POSITION vrácenou předchozím `GetPrev` nebo jiným voláním členské funkce.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Podívejte se na popis návratové hodnoty pro [GetHead](#gethead).
+Viz popis vrácené hodnoty pro [GetHead](#gethead).
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud vytvoříte počáteční pozici s voláním `GetTailPosition` nebo `Find`, můžete použít `GetPrev` ve smyčce reverzní iterace.
+Můžete použít `GetPrev` ve smyčce zpětné iterace, pokud `GetTailPosition` navážete počáteční pozici s voláním nebo `Find`.
 
-Je nutné zajistit, aby hodnota pozice představovala platné umístění v seznamu. Pokud je neplatný, ladicí verze knihovna Microsoft Foundation Class výrazy.
+Je nutné zajistit, aby hodnota POZICE představovala platnou pozici v seznamu. Pokud je neplatný, pak ladicí verze Knihovny tříd Microsoft Foundation uplatňuje.
 
-Pokud je načtený element v seznamu první, pak je nová hodnota *rPosition.* nastavena na hodnotu null.
+Pokud načtený prvek je první v seznamu, pak je nová hodnota *rPosition* nastavena na hodnotu NULL.
 
 > [!NOTE]
->  Počínaje verzí MFC 8,0 se verze const této metody změnila tak, aby vracela `const CObject*` místo `const CObject*&`.  Tato změna byla provedena k tomu, aby kompilátor byl v souladu se C++ standardem.
+> Od knihovny MFC 8.0 const verze této `const CObject*` metody `const CObject*&`se změnil na návrat namísto .  Tato změna byla provedena, aby kompilátor do shody s c++ standard.
 
-V následující tabulce jsou uvedeny jiné členské funkce, které jsou podobné `CObList::GetPrev`.
+V následující tabulce jsou uvedeny `CObList::GetPrev`další členské funkce, které jsou podobné .
 
 |Třída|Členská funkce|
 |-----------|---------------------|
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|`void*& GetPrev( POSITION&` `rPosition` `);`<br /><br /> `const void* GetPrev( POSITION&` `rPosition` `) const;`|
-|[CStringList](../../mfc/reference/cstringlist-class.md)|`CString& GetPrev( POSITION&` `rPosition` `);`<br /><br /> `const CString& GetPrev( POSITION&` `rPosition` `) const;`|
+|[Seznam CPtrList](../../mfc/reference/cptrlist-class.md)|`void*& GetPrev( POSITION&` `rPosition` `);`<br /><br /> `const void* GetPrev( POSITION&` `rPosition` `) const;`|
+|[Seznam cstring](../../mfc/reference/cstringlist-class.md)|`CString& GetPrev( POSITION&` `rPosition` `);`<br /><br /> `const CString& GetPrev( POSITION&` `rPosition` `) const;`|
 
 ### <a name="example"></a>Příklad
 
-  Seznam `CAge` třídy naleznete v tématu [CObList:: CObList](#coblist) .
+  Viz [CObList::CObList](#coblist) pro výpis `CAge` třídy.
 
 [!code-cpp[NVC_MFCCollections#99](../../mfc/codesnippet/cpp/coblist-class_11.cpp)]
 
-Výsledky z tohoto programu jsou následující:
+Výsledky tohoto programu jsou následující:
 
 ```Output
 a CAge at $421C 21
 a CAge at $421C 40
 ```
 
-##  <a name="getsize"></a>CObList:: GetSize
+## <a name="coblistgetsize"></a><a name="getsize"></a>CobList::GetSize
 
 Vrátí počet prvků seznamu.
 
@@ -560,28 +560,28 @@ INT_PTR GetSize() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Počet položek v seznamu.
+Počet položek v seznamu
 
 ### <a name="remarks"></a>Poznámky
 
-Voláním této metody načtete počet prvků v seznamu.
+Volání této metody načíst počet prvků v seznamu.
 
-V následující tabulce jsou uvedeny jiné členské funkce, které jsou podobné `CObList::GetSize`.
+V následující tabulce jsou uvedeny `CObList::GetSize`další členské funkce, které jsou podobné .
 
 |Třída|Členská funkce|
 |-----------|---------------------|
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**INT_PTR GetSize () const;**|
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**INT_PTR GetSize () const;**|
+|[Seznam CPtrList](../../mfc/reference/cptrlist-class.md)|**INT_PTR GetSize( ) const;**|
+|[Seznam cstring](../../mfc/reference/cstringlist-class.md)|**INT_PTR GetSize( ) const;**|
 
 ### <a name="example"></a>Příklad
 
-Seznam `CAge` třídy naleznete v tématu [CObList:: CObList](#coblist) .
+Viz [CObList::CObList](#coblist) pro výpis `CAge` třídy.
 
 [!code-cpp[NVC_MFCCollections#100](../../mfc/codesnippet/cpp/coblist-class_12.cpp)]
 
-##  <a name="gettail"></a>CObList:: GetTail
+## <a name="coblistgettail"></a><a name="gettail"></a>CobList::GetTail
 
-Získá ukazatel `CObject`, který představuje element Tail tohoto seznamu.
+Získá `CObject` ukazatel, který představuje ocas prvek tohoto seznamu.
 
 ```
 CObject*& GetTail();
@@ -590,28 +590,28 @@ const CObject*& GetTail() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Podívejte se na popis návratové hodnoty pro [GetHead](#gethead).
+Viz popis vrácené hodnoty pro [GetHead](#gethead).
 
 ### <a name="remarks"></a>Poznámky
 
-Před voláním `GetTail`je nutné zajistit, aby seznam nebyl prázdný. Pokud je seznam prázdný, ladicí verze knihovna Microsoft Foundation Class Assert. Chcete-li ověřit, zda seznam obsahuje prvky, použijte pole [neprázdné](#isempty) .
+Před voláním `GetTail`je nutné zajistit, aby seznam nebyl prázdný. Pokud je seznam prázdný, bude uplatněna ladicí verze knihovny tříd Microsoft Foundation. Pomocí [isempty](#isempty) ověřte, zda seznam obsahuje prvky.
 
-V následující tabulce jsou uvedeny jiné členské funkce, které jsou podobné `CObList::GetTail`.
+V následující tabulce jsou uvedeny `CObList::GetTail`další členské funkce, které jsou podobné .
 
 |Třída|Členská funkce|
 |-----------|---------------------|
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**const void\*& GetTail () const; void\*& GetTail ();**|
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**const CString & GetTail () const; CString & GetTail ();**|
+|[Seznam CPtrList](../../mfc/reference/cptrlist-class.md)|**const\* void& GetTail( ) const; neplatné\*& GetTail( );**|
+|[Seznam cstring](../../mfc/reference/cstringlist-class.md)|**const CString& GetTail( ) const; CString& GetTail( );**|
 
 ### <a name="example"></a>Příklad
 
-Seznam `CAge` třídy naleznete v tématu [CObList:: CObList](#coblist) .
+Viz [CObList::CObList](#coblist) pro výpis `CAge` třídy.
 
 [!code-cpp[NVC_MFCCollections#101](../../mfc/codesnippet/cpp/coblist-class_13.cpp)]
 
-##  <a name="gettailposition"></a>CObList::GetTailPosition
+## <a name="coblistgettailposition"></a><a name="gettailposition"></a>CobList::GettailPozice
 
-Získá pozici koncového elementu tohoto seznamu; **Hodnota null** , pokud je seznam prázdný.
+Získá pozici ocasprvek tohoto seznamu; **Null,** pokud je seznam prázdný.
 
 ```
 POSITION GetTailPosition() const;
@@ -619,24 +619,24 @@ POSITION GetTailPosition() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota pozice, která se dá použít pro načtení ukazatele iterace nebo objektu; Hodnota NULL, pokud je seznam prázdný.
+Hodnota POSITION, kterou lze použít pro iteraci nebo načtení ukazatele objektu; Null, pokud je seznam prázdný.
 
-V následující tabulce jsou uvedeny jiné členské funkce, které jsou podobné `CObList::GetTailPosition`.
+V následující tabulce jsou uvedeny `CObList::GetTailPosition`další členské funkce, které jsou podobné .
 
 |Třída|Členská funkce|
 |-----------|---------------------|
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**POZICE GetTailPosition () const;**|
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**POZICE GetTailPosition () const;**|
+|[Seznam CPtrList](../../mfc/reference/cptrlist-class.md)|**POZICE GetTailPosition( ) const;**|
+|[Seznam cstring](../../mfc/reference/cstringlist-class.md)|**POZICE GetTailPosition( ) const;**|
 
 ### <a name="example"></a>Příklad
 
-Seznam `CAge` třídy naleznete v tématu [CObList:: CObList](#coblist) .
+Viz [CObList::CObList](#coblist) pro výpis `CAge` třídy.
 
 [!code-cpp[NVC_MFCCollections#102](../../mfc/codesnippet/cpp/coblist-class_14.cpp)]
 
-##  <a name="insertafter"></a>CObList::InsertAfter
+## <a name="coblistinsertafter"></a><a name="insertafter"></a>CobList::InsertAfter
 
-Přidá prvek do tohoto seznamu za element na zadané pozici.
+Přidá prvek do tohoto seznamu za prvek na zadané pozici.
 
 ```
 POSITION InsertAfter(
@@ -646,30 +646,30 @@ POSITION InsertAfter(
 
 ### <a name="parameters"></a>Parametry
 
-*poziční*<br/>
-Hodnotu pozice vrácenou předchozí `GetNext`, `GetPrev`nebo `Find` volání členské funkce.
+*Pozici*<br/>
+Hodnota POSITION vrácená `GetNext`předchozím `GetPrev`voláním , nebo `Find` členské funkce.
 
 *newElement*<br/>
 Ukazatel objektu, který má být přidán do tohoto seznamu.
 
-V následující tabulce jsou uvedeny jiné členské funkce, které jsou podobné `CObList::InsertAfter`.
+V následující tabulce jsou uvedeny `CObList::InsertAfter`další členské funkce, které jsou podobné .
 
 |Třída|Členská funkce|
 |-----------|---------------------|
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**InsertAfter pozice (pozice pozice** **, void** <strong>\*</strong> `newElement` **);**|
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**InsertAfter pozice (pozice pozice** **, const CString &** `newElement` **);**<br /><br /> **InsertAfter pozice (** *pozice* **, LPCTSTR** `newElement` **);**|
+|[Seznam CPtrList](../../mfc/reference/cptrlist-class.md)|**POZICE InsertAfter( pozice pozice** *position* **, void** <strong>\*</strong> `newElement` **);**|
+|[Seznam cstring](../../mfc/reference/cstringlist-class.md)|**POZICE InsertAfter( pozice pozice pozice** *position* **, const CString** `newElement` **&);**<br /><br /> **POZICE InsertAfter( pozice** *polohy* **, LPCTSTR** `newElement` **);**|
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota pozice, která je stejná jako parametr *pozice* .
+Hodnota POSITION, která je stejná jako parametr *pozice.*
 
 ### <a name="example"></a>Příklad
 
-  Seznam `CAge` třídy naleznete v tématu [CObList:: CObList](#coblist) .
+  Viz [CObList::CObList](#coblist) pro výpis `CAge` třídy.
 
 [!code-cpp[NVC_MFCCollections#103](../../mfc/codesnippet/cpp/coblist-class_15.cpp)]
 
-Výsledky z tohoto programu jsou následující:
+Výsledky tohoto programu jsou následující:
 
 ```Output
 InsertAfter example: A CObList with 3 elements
@@ -678,9 +678,9 @@ a CAge at $4A64 65
 a CAge at $4968 21
 ```
 
-##  <a name="insertbefore"></a>CObList::InsertBefore
+## <a name="coblistinsertbefore"></a><a name="insertbefore"></a>Coblist::Insertbefore
 
-Přidá prvek do tohoto seznamu před element na zadané pozici.
+Přidá prvek do tohoto seznamu před prvek na zadané pozici.
 
 ```
 POSITION InsertBefore(
@@ -690,30 +690,30 @@ POSITION InsertBefore(
 
 ### <a name="parameters"></a>Parametry
 
-*poziční*<br/>
-Hodnotu pozice vrácenou předchozí `GetNext`, `GetPrev`nebo `Find` volání členské funkce.
+*Pozici*<br/>
+Hodnota POSITION vrácená `GetNext`předchozím `GetPrev`voláním , nebo `Find` členské funkce.
 
 *newElement*<br/>
 Ukazatel objektu, který má být přidán do tohoto seznamu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota pozice, která se dá použít pro načtení ukazatele iterace nebo objektu; Hodnota NULL, pokud je seznam prázdný.
+Hodnota POSITION, kterou lze použít pro iteraci nebo načtení ukazatele objektu; Null, pokud je seznam prázdný.
 
-V následující tabulce jsou uvedeny jiné členské funkce, které jsou podobné `CObList::InsertBefore`.
+V následující tabulce jsou uvedeny `CObList::InsertBefore`další členské funkce, které jsou podobné .
 
 |Třída|Členská funkce|
 |-----------|---------------------|
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**InsertBefore pozice (pozice pozice** **, void** <strong>\*</strong> `newElement` **);**|
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**InsertBefore pozice (pozice pozice** **, const CString &** `newElement` **);**<br /><br /> **InsertBefore pozice (** *pozice* **, LPCTSTR** `newElement` **);**|
+|[Seznam CPtrList](../../mfc/reference/cptrlist-class.md)|**Pozice InsertBefore( pozice pozice** *position* **, void** <strong>\*</strong> `newElement` **);**|
+|[Seznam cstring](../../mfc/reference/cstringlist-class.md)|**POZICE InsertBefore( pozice pozice pozice** *position* **, const CString** `newElement` **&);**<br /><br /> **POZICE InsertBefore( Pozice** *pozice* **, LPCTSTR** `newElement` **);**|
 
 ### <a name="example"></a>Příklad
 
-  Seznam `CAge` třídy naleznete v tématu [CObList:: CObList](#coblist) .
+  Viz [CObList::CObList](#coblist) pro výpis `CAge` třídy.
 
 [!code-cpp[NVC_MFCCollections#104](../../mfc/codesnippet/cpp/coblist-class_16.cpp)]
 
-Výsledky z tohoto programu jsou následující:
+Výsledky tohoto programu jsou následující:
 
 ```Output
 InsertBefore example: A CObList with 3 elements
@@ -722,9 +722,9 @@ a CAge at $4B02 65
 a CAge at $49E6 21
 ```
 
-##  <a name="isempty"></a>CObList::-Empty
+## <a name="coblistisempty"></a><a name="isempty"></a>Coblist::JePrázdný
 
-Určuje, zda tento seznam neobsahuje žádné prvky.
+Označuje, zda tento seznam neobsahuje žádné prvky.
 
 ```
 BOOL IsEmpty() const;
@@ -732,22 +732,22 @@ BOOL IsEmpty() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud je tento seznam prázdný; v opačném případě 0.
+Nenulová, pokud je tento seznam prázdný; jinak 0.
 
-V následující tabulce jsou uvedeny jiné členské funkce, které jsou podobné `CObList::IsEmpty`.
+V následující tabulce jsou uvedeny `CObList::IsEmpty`další členské funkce, které jsou podobné .
 
 |Třída|Členská funkce|
 |-----------|---------------------|
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**BOOL = Empty () const;**|
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**BOOL = Empty () const;**|
+|[Seznam CPtrList](../../mfc/reference/cptrlist-class.md)|**BOOL IsEmpty( ) const;**|
+|[Seznam cstring](../../mfc/reference/cstringlist-class.md)|**BOOL IsEmpty( ) const;**|
 
 ### <a name="example"></a>Příklad
 
-  Podívejte se na příklad pro [RemoveAll](#removeall).
+  Viz příklad pro [RemoveAll](#removeall).
 
-##  <a name="removeall"></a>CObList::RemoveAll
+## <a name="coblistremoveall"></a><a name="removeall"></a>CobList::RemoveAll
 
-Odebere všechny prvky z tohoto seznamu a uvolní přidruženou `CObList` paměť.
+Odebere všechny prvky z tohoto seznamu `CObList` a uvolní přidružené paměti.
 
 ```
 void RemoveAll();
@@ -755,24 +755,24 @@ void RemoveAll();
 
 ### <a name="remarks"></a>Poznámky
 
-Pokud je seznam již prázdný, není vygenerována žádná chyba.
+Pokud je seznam již prázdný, není generována žádná chyba.
 
-Když odeberete prvky z `CObList`, odeberete ukazatelé na objekty ze seznamu. Je vaší zodpovědností odstranit samotné objekty.
+Při odebrání prvků `CObList`z aplikace a odeberete ukazatele objektu ze seznamu. Je vaší odpovědností odstranit samotné objekty.
 
-V následující tabulce jsou uvedeny jiné členské funkce, které jsou podobné `CObList::RemoveAll`.
+V následující tabulce jsou uvedeny `CObList::RemoveAll`další členské funkce, které jsou podobné .
 
 |Třída|Členská funkce|
 |-----------|---------------------|
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**void RemoveAll ();**|
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**void RemoveAll ();**|
+|[Seznam CPtrList](../../mfc/reference/cptrlist-class.md)|**void RemoveAll( );**|
+|[Seznam cstring](../../mfc/reference/cstringlist-class.md)|**void RemoveAll( );**|
 
 ### <a name="example"></a>Příklad
 
-Seznam `CAge` třídy naleznete v tématu [CObList:: CObList](#coblist) .
+Viz [CObList::CObList](#coblist) pro výpis `CAge` třídy.
 
 [!code-cpp[NVC_MFCCollections#105](../../mfc/codesnippet/cpp/coblist-class_17.cpp)]
 
-##  <a name="removeat"></a>CObList:: funkce RemoveAt
+## <a name="coblistremoveat"></a><a name="removeat"></a>coblist::Removeat
 
 Odebere zadaný prvek z tohoto seznamu.
 
@@ -782,31 +782,31 @@ void RemoveAt(POSITION position);
 
 ### <a name="parameters"></a>Parametry
 
-*poziční*<br/>
-Pozice prvku, který má být odebrán ze seznamu.
+*Pozici*<br/>
+Umístění prvku, který má být odebrán ze seznamu.
 
 ### <a name="remarks"></a>Poznámky
 
-Když odeberete prvek z `CObList`, odeberete ukazatel objektu ze seznamu. Je vaší zodpovědností odstranit samotné objekty.
+Když odeberete prvek `CObList`z a , odeberete ukazatel objektu ze seznamu. Je vaší odpovědností odstranit samotné objekty.
 
-Je nutné zajistit, aby hodnota pozice představovala platné umístění v seznamu. Pokud je neplatný, ladicí verze knihovna Microsoft Foundation Class výrazy.
+Je nutné zajistit, aby hodnota POZICE představovala platnou pozici v seznamu. Pokud je neplatný, pak ladicí verze Knihovny tříd Microsoft Foundation uplatňuje.
 
-V následující tabulce jsou uvedeny jiné členské funkce, které jsou podobné `CObList::RemoveAt`.
+V následující tabulce jsou uvedeny `CObList::RemoveAt`další členské funkce, které jsou podobné .
 
 |Třída|Členská funkce|
 |-----------|---------------------|
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**void funkce RemoveAt (pozice pozice** **);**|
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**void funkce RemoveAt (pozice pozice** **);**|
+|[Seznam CPtrList](../../mfc/reference/cptrlist-class.md)|**void Removeat( pozice** *polohy* **);**|
+|[Seznam cstring](../../mfc/reference/cstringlist-class.md)|**void Removeat( pozice** *polohy* **);**|
 
 ### <a name="example"></a>Příklad
 
-  Buďte opatrní při odebírání elementu během iterace seznamu. Následující příklad ukazuje techniku odebrání, která garantuje platnou hodnotu **pozice** pro [GetNext](#getnext).
+  Buďte opatrní při odebírání prvku během iterace seznamu. Následující příklad ukazuje techniku odebrání, která zaručuje platnou hodnotu **POSITION** pro [GetNext](#getnext).
 
-Seznam `CAge` třídy naleznete v tématu [CObList:: CObList](#coblist) .
+Viz [CObList::CObList](#coblist) pro výpis `CAge` třídy.
 
 [!code-cpp[NVC_MFCCollections#106](../../mfc/codesnippet/cpp/coblist-class_18.cpp)]
 
-Výsledky z tohoto programu jsou následující:
+Výsledky tohoto programu jsou následující:
 
 `RemoveAt example: A CObList with 2 elements`
 
@@ -814,9 +814,9 @@ Výsledky z tohoto programu jsou následující:
 
 `a CAge at $4B22 21`
 
-##  <a name="removehead"></a>CObList::RemoveHead
+## <a name="coblistremovehead"></a><a name="removehead"></a>CobList::RemoveHead
 
-Odebere prvek z hlavičky seznamu a vrátí na něj ukazatel.
+Odebere prvek z hlavy seznamu a vrátí na něj ukazatel.
 
 ```
 CObject* RemoveHead();
@@ -824,28 +824,28 @@ CObject* RemoveHead();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel `CObject` dříve v záhlaví seznamu.
+Ukazatel `CObject` dříve v čele seznamu.
 
 ### <a name="remarks"></a>Poznámky
 
-Před voláním `RemoveHead`je nutné zajistit, aby seznam nebyl prázdný. Pokud je seznam prázdný, ladicí verze knihovna Microsoft Foundation Class Assert. Chcete-li ověřit, zda seznam obsahuje prvky, použijte pole [neprázdné](#isempty) .
+Před voláním `RemoveHead`je nutné zajistit, aby seznam nebyl prázdný. Pokud je seznam prázdný, bude uplatněna ladicí verze knihovny tříd Microsoft Foundation. Pomocí [isempty](#isempty) ověřte, zda seznam obsahuje prvky.
 
-V následující tabulce jsou uvedeny jiné členské funkce, které jsou podobné `CObList::RemoveHead`.
+V následující tabulce jsou uvedeny `CObList::RemoveHead`další členské funkce, které jsou podobné .
 
 |Třída|Členská funkce|
 |-----------|---------------------|
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**void\* RemoveHead ();**|
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**CString RemoveHead ();**|
+|[Seznam CPtrList](../../mfc/reference/cptrlist-class.md)|**void\* RemoveHead( );**|
+|[Seznam cstring](../../mfc/reference/cstringlist-class.md)|**CString Removehead( );**|
 
 ### <a name="example"></a>Příklad
 
-Seznam `CAge` třídy naleznete v tématu [CObList:: CObList](#coblist) .
+Viz [CObList::CObList](#coblist) pro výpis `CAge` třídy.
 
 [!code-cpp[NVC_MFCCollections#107](../../mfc/codesnippet/cpp/coblist-class_19.cpp)]
 
-##  <a name="removetail"></a>CObList::RemoveTail
+## <a name="coblistremovetail"></a><a name="removetail"></a>CobList::RemoveTail
 
-Odstraní prvek ze strany seznamu a vrátí ukazatel na něj.
+Odebere prvek z ocasu seznamu a vrátí na něj ukazatel.
 
 ```
 CObject* RemoveTail();
@@ -857,22 +857,22 @@ Ukazatel na objekt, který byl na konci seznamu.
 
 ### <a name="remarks"></a>Poznámky
 
-Před voláním `RemoveTail`je nutné zajistit, aby seznam nebyl prázdný. Pokud je seznam prázdný, ladicí verze knihovna Microsoft Foundation Class Assert. Chcete-li ověřit, zda seznam obsahuje prvky, použijte pole [neprázdné](#isempty) .
+Před voláním `RemoveTail`je nutné zajistit, aby seznam nebyl prázdný. Pokud je seznam prázdný, bude uplatněna ladicí verze knihovny tříd Microsoft Foundation. Pomocí [isempty](#isempty) ověřte, zda seznam obsahuje prvky.
 
-V následující tabulce jsou uvedeny jiné členské funkce, které jsou podobné `CObList::RemoveTail`.
+V následující tabulce jsou uvedeny `CObList::RemoveTail`další členské funkce, které jsou podobné .
 
 |Třída|Členská funkce|
 |-----------|---------------------|
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**void\* RemoveTail ();**|
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**CString RemoveTail ();**|
+|[Seznam CPtrList](../../mfc/reference/cptrlist-class.md)|**void\* RemoveTail( );**|
+|[Seznam cstring](../../mfc/reference/cstringlist-class.md)|**CString Removetail( );**|
 
 ### <a name="example"></a>Příklad
 
-Seznam `CAge` třídy naleznete v tématu [CObList:: CObList](#coblist) .
+Viz [CObList::CObList](#coblist) pro výpis `CAge` třídy.
 
 [!code-cpp[NVC_MFCCollections#108](../../mfc/codesnippet/cpp/coblist-class_20.cpp)]
 
-##  <a name="setat"></a>CObList::SetAt
+## <a name="coblistsetat"></a><a name="setat"></a>Coblist::Setat
 
 Nastaví prvek na dané pozici.
 
@@ -884,32 +884,32 @@ void SetAt(
 
 ### <a name="parameters"></a>Parametry
 
-*POS*<br/>
+*Pos*<br/>
 POZICE prvku, který má být nastaven.
 
 *newElement*<br/>
-`CObject` ukazatel, který se má zapsat do seznamu.
+Ukazatel, `CObject` který má být zapsán do seznamu.
 
 ### <a name="remarks"></a>Poznámky
 
-Proměnná pozice typu je klíč pro seznam. Není stejný jako index a nemůžete pracovat s hodnotou pozice sami. `SetAt` zapisuje ukazatel `CObject` na určenou pozici v seznamu.
+Proměnná typu POSITION je klíčem k seznamu. Není to stejné jako index a nelze pracovat na position hodnotu sami. `SetAt`zapíše `CObject` ukazatel na zadanou pozici v seznamu.
 
-Je nutné zajistit, aby hodnota pozice představovala platné umístění v seznamu. Pokud je neplatný, ladicí verze knihovna Microsoft Foundation Class výrazy.
+Je nutné zajistit, aby hodnota POZICE představovala platnou pozici v seznamu. Pokud je neplatný, pak ladicí verze Knihovny tříd Microsoft Foundation uplatňuje.
 
-V následující tabulce jsou uvedeny jiné členské funkce, které jsou podobné `CObList::SetAt`.
+V následující tabulce jsou uvedeny `CObList::SetAt`další členské funkce, které jsou podobné .
 
 |Třída|Členská funkce|
 |-----------|---------------------|
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**void SetAt (pozice** `pos` **, const CString &** `newElement` **);**|
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**void SetAt (pozice** `pos` **, LPCTSTR** `newElement` **);**|
+|[Seznam CPtrList](../../mfc/reference/cptrlist-class.md)|**void SetAt( POZICE** `pos` **, const CString&** `newElement` **);**|
+|[Seznam cstring](../../mfc/reference/cstringlist-class.md)|**void Setat( POZICE** `pos` **, LPCTSTR** `newElement` **);**|
 
 ### <a name="example"></a>Příklad
 
-  Seznam `CAge` třídy naleznete v tématu [CObList:: CObList](#coblist) .
+  Viz [CObList::CObList](#coblist) pro výpis `CAge` třídy.
 
 [!code-cpp[NVC_MFCCollections#109](../../mfc/codesnippet/cpp/coblist-class_21.cpp)]
 
-Výsledky z tohoto programu jsou následující:
+Výsledky tohoto programu jsou následující:
 
 ```Output
 SetAt example: A CObList with 2 elements
@@ -922,4 +922,4 @@ a CAge at $4DB8 65
 [CObject – třída](../../mfc/reference/cobject-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [CStringList – třída](../../mfc/reference/cstringlist-class.md)<br/>
-[CPtrList – třída](../../mfc/reference/cptrlist-class.md)
+[Třída CPtrList](../../mfc/reference/cptrlist-class.md)

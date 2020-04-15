@@ -7,37 +7,37 @@ helpviewer_keywords:
 - messages [MFC], Windows
 - MFC, messages
 ms.assetid: 3f9855e4-9d7d-4b64-8f3f-a19ea3cf79ba
-ms.openlocfilehash: 4305d9b1db297eebcb189d2fad98b8c634ed1133
-ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
+ms.openlocfilehash: 8080becf1a1a153322bfd03cbd7006eaf2ce4e13
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70908044"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81356577"
 ---
 # <a name="message-maps-mfc"></a>Mapy zpráv (MFC)
 
-V této části najdete seznam všech [maker s mapováním zpráv](../../mfc/reference/message-map-macros-mfc.md) a všechny položky mapování zpráv [CWnd](../../mfc/reference/cwnd-class.md) spolu s odpovídajícími prototypy členských funkcí:
+V této části odkazu jsou uvedena všechna [makra mapování zpráv](../../mfc/reference/message-map-macros-mfc.md) a všechny položky mapy zpráv [CWnd](../../mfc/reference/cwnd-class.md) spolu s odpovídajícími prototypy členských funkcí:
 
 |Kategorie|Popis|
 |--------------|-----------------|
-|Obslužná rutina zprávy příkazu\_|Zpracovává `WM_COMMAND` zprávy vygenerované výběry nabídky uživatele nebo přístupové klíče nabídky.|
-|[Obslužné rutiny oznamovacích zpráv v podřízených oknech](../../mfc/reference/child-window-notification-message-handlers.md)|Zpracování zpráv s oznámením z podřízených oken.|
-|[Obslužné rutiny zpráv WM_](../../mfc/reference/handlers-for-wm-messages.md)|Zpracování `WM_` zpráv, jako je `WM_PAINT`například.|
-|[Obslužné rutiny zpráv definované uživatelem](../../mfc/reference/user-defined-handlers.md)|Zpracování zpráv definovaných uživatelem.|
+|Obslužná rutina zprávy PŘÍKAZ\_U PŘÍKAZU|Zpracovává `WM_COMMAND` zprávy generované výběry nabídek uživatele nebo přístupovými klávesami nabídky.|
+|[Obslužné rutiny oznamovacích zpráv v podřízených oknech](../../mfc/reference/child-window-notification-message-handlers.md)|Zpracování oznámení z podřízených oken.|
+|[obslužné rutiny zpráv WM_](../../mfc/reference/handlers-for-wm-messages.md)|Zpracování `WM_` zpráv, `WM_PAINT`například .|
+|[Uživatelem definované obslužné rutiny zpráv](../../mfc/reference/user-defined-handlers.md)|Zpracování zpráv definovaných uživatelem.|
 
-(Vysvětlení terminologie a konvence použité v tomto odkazu najdete v tématu [Jak používat křížové odkazy na mapu zpráv](../../mfc/reference/how-to-use-the-message-map-cross-reference.md).)
+(Vysvětlení terminologie a konvencí použitých v tomto odkazu naleznete v [tématu Použití křížového odkazu na mapu zpráv](../../mfc/reference/how-to-use-the-message-map-cross-reference.md).)
 
-Vzhledem k tomu, že Windows je operační systém orientovaný na zprávy, zahrnuje velkou část programování pro prostředí systému Windows zpracování zpráv. Pokaždé, když dojde k události, jako je klávesová zkratka nebo kliknutí myší, se do aplikace pošle zpráva, která musí tuto událost zpracovat.
+Vzhledem k tomu, že systém Windows je operační systém orientovaný na zprávy, velká část programování pro prostředí systému Windows zahrnuje zpracování zpráv. Pokaždé, když dojde k události, jako je stisknutí klávesy nebo klepnutí myší, je do aplikace odeslána zpráva, která pak musí událost zpracovat.
 
-Knihovna Microsoft Foundation Class nabízí programovací model optimalizovaný pro programování na základě zpráv. V tomto modelu se používají mapy zpráv k určení, které funkce budou zpracovávat různé zprávy pro určitou třídu. Mapy zpráv obsahují jedno nebo více maker, která určují, které zprávy bude zpracováno funkcemi. Například mapa zpráv obsahující `ON_COMMAND` makro může vypadat přibližně takto:
+Knihovna tříd Microsoft Foundation nabízí programovací model optimalizovaný pro programování založené na textech. V tomto modelu "mapy zpráv" se používají k určení, které funkce budou zpracovávat různé zprávy pro konkrétní třídu. Mapy zpráv obsahují jedno nebo více maker, které určují, které zprávy budou zpracovány pomocí kterých funkcí. Mapa zpráv obsahující `ON_COMMAND` makro může například vypadat přibližně takto:
 
 [!code-cpp[NVC_MFCMessageMaps#16](../../mfc/reference/codesnippet/cpp/message-maps-mfc_1.cpp)]
 
-`ON_COMMAND` Makro se používá ke zpracování zpráv příkazů generovaných nabídkami, tlačítky a klávesami akcelerátorů. K dispozici jsou [makra](../../mfc/reference/message-map-macros-mfc.md) pro mapování následujících:
+Makro `ON_COMMAND` se používá ke zpracování zpráv příkazů generovaných nabídkami, tlačítky a klávesami akcelerátoru. [Makra](../../mfc/reference/message-map-macros-mfc.md) jsou k dispozici pro mapování následujících položek:
 
 ## <a name="windows-messages"></a>Zprávy systému Windows
 
-- Oznámení řízení
+- Kontrolní oznámení
 
 - Uživatelem definované zprávy
 
@@ -45,7 +45,7 @@ Knihovna Microsoft Foundation Class nabízí programovací model optimalizovaný
 
 - Registrované uživatelem definované zprávy
 
-- Zprávy o aktualizacích uživatelského rozhraní
+- Aktualizační zprávy uživatelského rozhraní
 
 ## <a name="ranges-of-messages"></a>Rozsahy zpráv
 
@@ -53,15 +53,15 @@ Knihovna Microsoft Foundation Class nabízí programovací model optimalizovaný
 
 - Aktualizovat zprávy obslužné rutiny
 
-- Oznámení řízení
+- Kontrolní oznámení
 
-I když jsou makra map zpráv důležitá, obecně je nemusíte používat přímo. Důvodem je, že [Průvodce třídou](mfc-class-wizard.md) automaticky vytvoří položky mapování zpráv ve zdrojových souborech, když je použijete k přidružení funkcí pro zpracování zpráv se zprávami. Kdykoli budete chtít upravit nebo přidat položku mapování zpráv, můžete použít Průvodce třídami.
+Přestože makra mapy zpráv jsou důležitá, obvykle je nebudete muset používat přímo. Je to proto, [že Průvodce třídou](mfc-class-wizard.md) automaticky vytvoří položky mapy zpráv ve zdrojových souborech při přidružování funkcí zpracování zpráv se zprávami. Kdykoli budete chtít upravit nebo přidat položku mapy zpráv, můžete použít Průvodce třídou.
 
 > [!NOTE]
->  Průvodce třídami nepodporuje rozsahy mapování zpráv. Tyto položky mapování zpráv musíte zapsat sami.
+> Průvodce třídou nepodporuje rozsahy map zpráv. Tyto položky mapy zpráv je nutné napsat sami.
 
-Mapy zpráv jsou ale důležitou součástí knihovna Microsoft Foundation Class. Měli byste porozumět tomu, co dělají, a dokumentace je k dispozici.
+Mapy zpráv jsou však důležitou součástí knihovny tříd microsoft foundation. Měli byste pochopit, co dělají, a dokumentace je k dispozici pro ně.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Struktury, styly, zpětná volání a mapy zpráv](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)

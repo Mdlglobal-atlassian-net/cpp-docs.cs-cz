@@ -1,49 +1,49 @@
 ---
 title: Začínáme s C++ Build Insights
-description: Podrobný přehled C++ buildu Insights.
+description: Přehled sestavení na vysoké úrovni pro C++ .
 ms.date: 11/03/2019
 helpviewer_keywords:
 - C++ Build Insights
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 2a5799fecc885b96f4278e0f5077662ce5fd7c8f
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 3a75dfe3bf1263cce53d70b764607cad4eec86d5
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78332004"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81325718"
 ---
 # <a name="get-started-with-c-build-insights"></a>Začínáme s C++ Build Insights
 
 ::: moniker range="<=vs-2017"
 
-Nástroje C++ pro tvorbu sestav jsou k dispozici v aplikaci Visual Studio 2019. Chcete-li zobrazit dokumentaci k této verzi, nastavte ovládací prvek selektor verzí sady Visual Studio pro tento článek na sadu Visual Studio 2019.
+Nástroje Přehledy sestavení C++ jsou dostupné ve Visual Studiu 2019. Chcete-li zobrazit dokumentaci pro tuto verzi, nastavte ovládací prvek pro výběr **verze** sady Visual Studio pro tento článek na Visual Studio 2019. Nachází se v horní části obsahu na této stránce.
 
 ::: moniker-end
 ::: moniker range="vs-2019"
 
-C++Přehledy buildu jsou kolekce nástrojů, které poskytují lepší přehled o řetězcích C++ nástrojů Microsoft Visual (MSVC). Nástroje shromažďují data o vašich C++ sestaveních a prezentují je ve formátu, který vám může přispět k zodpovězení běžných otázek, třeba:
+C++ Build Insights je kolekce nástrojů, které poskytuje lepší přehled o řetězci nástrojů Microsoft Visual C++ (MSVC). Nástroje shromažďují data o sestaveních c++ a prezentují je ve formátu, který vám pomůže odpovědět na běžné otázky, například:
 
-- Jsou moje buildy dostatečně paralelismuované?
+- Jsou moje sestavy dostatečně paralelizované?
 - Co mám zahrnout do předkompilované hlavičky (PCH)?
-- Je k dispozici konkrétní kritická místa, která by se měla soustředit na zvýšení rychlosti sestavení?
+- Existuje konkrétní překážka, na které bych se měl zaměřit, abych zvýšil rychlost sestavení?
 
-Hlavními komponentami této technologie jsou:
+Hlavními složkami této technologie jsou:
 
-- *vcperf. exe*, nástroj příkazového řádku, který můžete použít ke shromáždění trasování pro sestavení,
-- rozšíření Windows Performance Analyzer (WPA), které umožňuje zobrazit trasování sestavení v WPA a
-- Sada C++ SDK pro Build Insights, sada Software Development Kit pro vytváření vlastních nástrojů využívajících C++ data Build Insights.
+- *vcperf.exe*, nástroj příkazového řádku, který můžete použít ke shromažďování tras pro vaše sestavení,
+- rozšíření Nástroje pro analýzu výkonu systému Windows (WPA), které umožňuje zobrazit trasování sestavení v síti WPA, a
+- C++ Build Insights SDK, sada pro vývoj softwaru pro vytváření vlastních nástrojů, které spotřebovávají data C++ Build Insights.
 
-Pokud chcete rychle začít s těmito součástmi, klikněte na odkazy níže:
+Klikněte na níže uvedené odkazy a rychle začít s těmito komponentami:
 
-[Kurz: vcperf and Windows Performance Analyzer](tutorials/vcperf-and-wpa.md)\
-Naučte se shromažďovat trasování sestavení pro vaše C++ projekty a jak je zobrazit v WPA.
+[Kurz: vcperf a Windows Performance Analyzer](tutorials/vcperf-and-wpa.md)\
+Zjistěte, jak shromažďovat trasování sestavení pro vaše projekty jazyka C++ a jak je zobrazit v WPA.
 
-[Kurz: Základy výkonu Windows](tutorials/wpa-basics.md)\
-Seznamte se s užitečnými tipy WPA pro analýzu trasování sestavení.
+[Výuka: Základy výkonu systému Windows](tutorials/wpa-basics.md)\
+Objevte užitečné tipy WPA pro analýzu trasování sestavení.
 
-\ Build Insights SDK [ C++ ](reference/sdk/overview.md)
-Přehled sady SDK pro C++ Build Insights
+[C++ Přehledy sestavení SDK](reference/sdk/overview.md)\
+Přehled sady C++ Build Insights SDK.
 
 ::: moniker-end

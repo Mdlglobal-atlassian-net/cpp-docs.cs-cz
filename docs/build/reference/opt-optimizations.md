@@ -17,12 +17,12 @@ helpviewer_keywords:
 - optimization, linker
 - /OPT linker option
 ms.assetid: 8f229863-5f53-48a8-9478-243a647093ac
-ms.openlocfilehash: fb59b861bc46c93a3f5fa1b6c6b8d1b73ddefc66
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b25db4d6c260c3c6751de293aa2a82df8aa05e7e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62320243"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81336225"
 ---
 # <a name="opt-optimizations"></a>/OPT (optimalizace)
 
@@ -30,60 +30,60 @@ ms.locfileid: "62320243"
 
 ## <a name="syntax"></a>Syntaxe
 
-> **/ OPT:**{**REF** | **NOREF**}<br/>
-> **/OPT:**{**ICF**[**=**_iterations_] | **NOICF**}<br/>
+> **/OPT:**{**REF** | **NOREF**}<br/>
+> **/OPT:**{**ICF**[**=**_iterací_] | **NOICF**}<br/>
 > **/OPT:**{**LBR** | **NOLBR**}
 
-## <a name="arguments"></a>Arguments
+## <a name="arguments"></a>Argumenty
 
-**REF** &AMP;#124; **NOREF**
+**REF** &#124; **NOREF**
 
-**OPT** odstraní funkce a data, která nejsou nikdy odkazována; **Noref** zachová data, která nejsou nikdy odkazována.
+**/OPT:REF** eliminuje funkce a data, na které se nikdy neodkazuje; **/OPT:NOREF** uchovává funkce a data, na které se nikdy neodkazuje.
 
-Pokud je povoleno OPT, REF odebere program LINK neodkazované zabalené funkce a data, označované jako *sekvence Comdat*. Tato optimalizace se označuje jako přechodné odstranění sekvence COMDAT. **OPT** také zakáže přírůstkové propojení.
+Pokud je povolen parametr /OPT:REF, link odebere neodkazované sbalené funkce a data, známé jako *COMDATs*. Tato optimalizace se označuje jako přechodné odstranění sekvence COMDAT. Možnost **/OPT:REF** také zakáže přírůstkové propojení.
 
-Vložené funkce a členské funkce definované uvnitř deklarace třídy jsou vždy sekvence Comdat. Všechny funkce v souboru objektu probíhají do sekvencí Comdat, pokud je zkompilován s použitím [/Gy](gy-enable-function-level-linking.md) možnost. Umístit **const** data do sekvencí Comdat, musíte ji deklarovat s použitím `__declspec(selectany)`. Informace o tom, jak zadat data pro odebrání nebo skládání naleznete v tématu [selectany](../../cpp/selectany.md).
+Vložené funkce a členské funkce definované uvnitř deklarace třídy jsou vždy COMDATs. Všechny funkce v souboru objektu jsou provedeny do COMDATs, pokud je kompilován pomocí [/Gy](gy-enable-function-level-linking.md) možnost. Chcete-li umístit data **const** do comdats, `__declspec(selectany)`musíte deklarovat pomocí . Informace o určení dat pro odebrání nebo skládání naleznete v [tématu selectany](../../cpp/selectany.md).
 
-Ve výchozím nastavení **OPT** je povoleno pomocí linkeru, není-li **noref** nebo [/DEBUG](debug-generate-debug-info.md) je zadán. Chcete-li přepsat toto výchozí nastavení a ponechat v programu neodkazované sekvence Comdat, zadejte **noref**. Můžete použít [/INCLUDE](include-force-symbol-references.md) lze přepsat odebrání určitého symbolu.
+Ve výchozím nastavení **/OPT:REF** je povoleno propojovacím sítí, pokud **/OPT:NOREF** nebo [/DEBUG](debug-generate-debug-info.md) je zadán. Chcete-li přepsat toto výchozí nastavení a zachovat v programu neodkazované hodnoty COMDAT, zadejte **parametr /OPT:NOREF**. Možnost [/INCLUDE](include-force-symbol-references.md) můžete použít k přepsání odebrání určitého symbolu.
 
-Pokud [/DEBUG](debug-generate-debug-info.md) není zadán, výchozí hodnota pro **/OPT** je **NOREF**, a všechny funkce jsou zachovány v obraze. Chcete-li přepsat toto výchozí nastavení a optimalizovat sestavení pro ladění, zadejte **OPT**. To může snížit velikost spustitelný soubor a může být užitečné optimalizace i v ladění sestavení. Doporučujeme vám, že zadáváte **noicf** pro zachování identických funkcí v ladění sestavení. Usnadníte tím čtení trasování zásobníku a nastavení zarážek ve funkcích, které by jinak byly složeny dohromady.
+Pokud je zadán [/DEBUG,](debug-generate-debug-info.md) výchozí pro **/OPT** je **NOREF**a všechny funkce jsou zachovány v obraze. Chcete-li přepsat toto výchozí nastavení a optimalizovat sestavení ladění, zadejte **/OPT:REF**. To může zmenšit velikost spustitelného souboru a může být užitečná optimalizace i v sestavení ladění. Doporučujeme také zadat **/OPT:NOICF** zachovat identické funkce v sestavení ladění. Usnadníte tím čtení trasování zásobníku a nastavení zarážek ve funkcích, které by jinak byly složeny dohromady.
 
-**Brána**\[**=**_iterací_] &#124; **NOICF**
+**ICF**\[**=**_Iterace_iCF ] &#124; **NOICF**
 
-Použití **ICF**\[**=**_iterací_] k provedení IDENTICKÉHO skládání comdat. Redundantní sekvence COMDAT lze odebrat z výstupu linkeru. Volitelný *iterací* parametr určuje počet, kolikrát procházet duplicity v symbolech. Výchozí počet iterací je 1. Při dalších iteracích se mohou najít další duplicity, které se odhalí skládáním při předchozí iteraci.
+Pomocí_iterací_ **icf**\[**=**] proveďte identické skládání comdat. Redundantní sekvence COMDAT lze odebrat z výstupu linkeru. Parametr volitelné *iterace* určuje počet procházení symbolů pro duplikáty. Výchozí počet iterací je 1. Při dalších iteracích se mohou najít další duplicity, které se odhalí skládáním při předchozí iteraci.
 
-Ve výchozím nastavení **/OPT:ICF** je povoleno pomocí linkeru, není-li **noicf** nebo [/DEBUG](debug-generate-debug-info.md) je zadán. Chcete-li přepsat toto výchozí nastavení a zabránit sekvence Comdat se přeloží do programu, zadejte **noicf**.
+Ve výchozím nastavení **/OPT:ICF** je povoleno propojovacím programů, pokud **/OPT:NOICF** nebo [/DEBUG](debug-generate-debug-info.md) je zadán. Chcete-li přepsat toto výchozí nastavení a zabránit skládání comdat v programu, zadejte **/OPT:NOICF**.
 
-V sestavení pro ladění, je nutné explicitně zadat **/OPT:ICF** Povolit skládání sekvencí COMDAT. Ale protože **/OPT:ICF** může sloučit identická data nebo funkce, můžete změnit názvy funkcí, které se zobrazují v trasování zásobníku. Můžete také znemožnit nastavit zarážky v určitých funkcích nebo prozkoumat některá data v ladicím programu a může trvat neočekávané funkce po vás krokování kódu. Chování kódu jsou identické, ale prezentace ladicí program může být velmi matoucí. Proto nedoporučujeme používat **/OPT:ICF** v laděných sestaveních, pokud výhody menšího kódu nepřeváží tyto nevýhody.
+V sestavení ladění je nutné explicitně zadat **/OPT:ICF,** abyste povolili skládání comdat. Protože však **/OPT:ICF** může sloučit identická data nebo funkce, může změnit názvy funkcí, které se zobrazují v trasování zásobníku. Může také znemožnit nastavení zarážek v určitých funkcích nebo prozkoumat některá data v ladicím programu a může vás převést do neočekávaných funkcí při vytvoření kódu jedním krokem. Chování kódu je identické, ale ladicí program prezentace může být velmi matoucí. Proto nedoporučujeme používat **/OPT:ICF** v sestavení ladění, pokud výhody menší kód převažují nad těmito nevýhodami.
 
 > [!NOTE]
-> Protože **/OPT:ICF** můžou způsobit stejné adresa přiřadí různým funkcím nebo jen pro čtení datové členy (to znamená **const** proměnné při kompilaci pomocí **/Gy**), může to přerušit program, který závisí na jedinečných adresách funkcí nebo členů dat jen pro čtení. Další informace najdete v tématu [/Gy (povolení funkce propojení na úrovni)](gy-enable-function-level-linking.md).
+> Protože **/OPT:ICF** může způsobit, že stejnou adresu přiřadit k různým funkcím nebo jen pro čtení datových členů (to znamená **const** proměnné při kompilaci pomocí **/Gy**), může přerušit program, který závisí na jedinečné adresy pro funkce nebo jen pro čtení datových členů. Další informace naleznete v tématu [/Gy (Enable Function-Level Linking)](gy-enable-function-level-linking.md).
 
 **LBR** &#124; **NOLBR**
 
-**/OPT:LBR** a **/OPT:NOLBR** platí pouze pro binární soubory ARM. Protože některé větvicí instrukce procesoru ARM mají omezený rozsah, pokud linker zjistí skok na adresu mimo rozsah, nahradí cílovou adresu této větvicí instrukce adresou „ostrůvku“ kódu, jenž obsahuje větvicí instrukci, která míří na skutečné místo určení. Můžete použít **/OPT:LBR** optimalizovat detekci dlouhých větvicích instrukcí a umístění ostrůvků zprostředkujícího kódu k minimalizaci celkové velikosti kódu. **/OPT:NOLBR** přikáže linkeru generovat ostrůvky kódu pro rozvětvené pokyny v průběhu jejich výskytu, bez optimalizace.
+Možnosti **/OPT:LBR** a **/OPT:NOLBR** platí pouze pro binární soubory ARM. Vzhledem k tomu, že některé pokyny větve procesoru ARM mají omezený rozsah, pokud propojovací program zjistí skok na adresu mimo rozsah, nahradí cílovou adresu instrukce větve adresou adresou kódu "ostrov", který obsahuje instrukce větve, která se zaměřuje na skutečný cíl. Můžete použít **/OPT:LBR** optimalizovat detekci dlouhé větve pokyny a umístění zprostředkující kód ostrovů minimalizovat celkovou velikost kódu. **/OPT:NOLBR** instruuje propojovací program ke generování kódových ostrovů pro dlouhé instrukce větve, jakmile se vyskytnou, bez optimalizace.
 
-Ve výchozím nastavení **/OPT:LBR** možnost je nastavena, když není zapnuto přírůstkové propojení. Pokud chcete nepřírůstkové propojení, ale ne dlouhé větve optimalizací, určete **/OPT:NOLBR**. **/OPT:LBR** zakáže přírůstkové propojení.
+Ve výchozím nastavení je možnost **/OPT:LBR** nastavena, pokud není povoleno přírůstkové propojení. Pokud chcete nepřírůstkové propojení, ale ne dlouhé optimalizace větví, zadejte **/OPT:NOLBR**. Možnost **/OPT:LBR** zakáže přírůstkové propojení.
 
 ## <a name="remarks"></a>Poznámky
 
-Při použití příkazového řádku linkeru výchozí **OPT: ICF, LBR**. Pokud **/DEBUG** není zadán, výchozí hodnota je **noref, NOICF, NOLBR**.
+Při použití na příkazovém řádku je propojovací systém výchozí parametr **/OPT:REF,ICF,LBR**. Pokud je zadán **parametr /DEBUG,** je výchozí hodnota **/OPT:NOREF,NOICF,NOLBR**.
 
-**/OPT** optimalizace obecně zmenšit velikost bitové kopie a zvyšují rychlost aplikace. Tato vylepšení může být významné v větších programů, což je důvod, proč je povoleno standardně pro prodejní buildy.
+Optimalizace **/OPT** obecně zmenšují velikost obrázku a zvyšují rychlost programu. Tato vylepšení mohou být podstatná ve větších programech, což je důvod, proč jsou ve výchozím nastavení povolena pro maloobchodní sestavení.
 
-Optimalizace linkeru ještě před zahájením trvat delší dobu, ale optimalizovaný kód také šetří čas, kdy linkeru má méně přemístění se opravit a vytvoří menší finální image a uloží ještě víc času, kdy má méně ladících informací ke zpracování a zápis do PDB. Pokud je povolena optimalizace, může vést rychlejší propojování celkově jako malý poplatek analýzy může být více než v době, kdy úspory v linkeru přetahovaného menší binární soubory.
+Optimalizace linkeru trvá více času dopředu, ale optimalizovaný kód také šetří čas, když propojovací program má méně přemisťování opravit a vytvoří menší konečný obraz a šetří ještě více času, když má méně ladicí informace pro zpracování a zápis do PDB. Pokud je optimalizace povolena, může celkově vést k rychlejšímu prodloužení doby propojení, protože malé dodatečné náklady na analýzu mohou být více než kompenzovány časovými úsporami v propojovacím programu přes menší binární soubory.
 
-**/OPT** argumenty může zadat současně, oddělené čárkami. Například namísto z **OPT: noicf**, můžete zadat **OPT, NOICF**.
+**/OPT** argumenty mohou být určeny společně, oddělené čárkami. Například místo **/OPT:REF /OPT:NOICF**můžete zadat **/OPT:REF,NOICF**.
 
-Můžete použít [/VERBOSE](verbose-print-progress-messages.md) – možnost linkeru můžete zobrazit funkce, které jsou odebrány parametrem **OPT** a funkce, které jsou složeny parametrem **/OPT:ICF**.
+Pomocí možnosti propojovacího systému [/VERBOSE](verbose-print-progress-messages.md) můžete zobrazit funkce, které jsou odebrány **parametrem /OPT:REF,** a funkce, které jsou přeloženy **parametrem /OPT:ICF**.
 
-**/OPT** argumenty jsou často nastaveny pro projekty vytvořené pomocí **nový projekt** dialogového okna v sadě Visual Studio IDE, a obvykle mají různé hodnoty pro ladění a verze konfigurace. Pokud tyto možnosti linkeru v projektu pro není nastavena žádná hodnota, se může zobrazit výchozí vlastnosti projektu, které může lišit od výchozí hodnoty pro propojovací program na příkazovém řádku.
+**/OPT** argumenty jsou často nastaveny pro projekty vytvořené pomocí **dialogového** okna Nový projekt v IDE sady Visual Studio a obvykle mají různé hodnoty pro ladění a uvolnění konfigurace. Pokud žádná hodnota je nastavena pro tyto možnosti propojovacího systému v projektu, pak může získat výchozí hodnoty projektu, které se mohou lišit od výchozí hodnoty používané propojovacího systému na příkazovém řádku.
 
 ### <a name="to-set-the-opticf-or-optref-linker-option-in-the-visual-studio-development-environment"></a>Nastavení parametru linkeru OPT:ICF nebo OPT:REF ve vývojovém prostředí sady Visual Studio
 
-1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
+1. Otevřete dialogové okno **Stránky vlastností** projektu. Podrobnosti naleznete v [tématu Nastavení kompilátoru jazyka C++ a vlastnosti sestavení v sadě Visual Studio](../working-with-project-properties.md).
 
-1. Vyberte **vlastnosti konfigurace** > **Linkeru** > **optimalizace** stránku vlastností.
+1. Vyberte stránku**vlastností Optimalizace**  > **linkeru** >  **vlastností vlastností vlastností vlastností vlastností vlastností vlastností konfigurace.**
 
 1. Změňte některou z těchto vlastností:
 
@@ -93,19 +93,19 @@ Můžete použít [/VERBOSE](verbose-print-progress-messages.md) – možnost li
 
 ### <a name="to-set-the-optlbr-linker-option-in-the-visual-studio-development-environment"></a>Nastavení parametru linkeru OPT:LBR ve vývojovém prostředí sady Visual Studio
 
-1. Otevřete v projektu **stránky vlastností** dialogové okno. Podrobnosti najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
+1. Otevřete dialogové okno **Stránky vlastností** projektu. Podrobnosti naleznete v [tématu Nastavení kompilátoru jazyka C++ a vlastnosti sestavení v sadě Visual Studio](../working-with-project-properties.md).
 
-1. Vyberte **vlastnosti konfigurace** > **Linkeru** > **příkazového řádku** stránku vlastností.
+1. Vyberte stránku vlastností**příkazového řádku** **propojovacího** > programu **Vlastnosti** > konfigurace.
 
-1. Zadejte parametr do **další možnosti**:
+1. Zadejte možnost v **dalších možnostech**:
 
-   `/opt:lbr` Nebo `/opt:nolbr`
+   `/opt:lbr` nebo `/opt:nolbr`
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Programové nastavení tohoto parametru linkeru
 
-- Zobrazit <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.EnableCOMDATFolding%2A> a <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.OptimizeReferences%2A> vlastnosti.
+- Viz <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.EnableCOMDATFolding%2A> <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.OptimizeReferences%2A> a vlastnosti.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 - [Referenční zdroje k linkeru MSVC](linking.md)
-- [Možnosti linkeru MSVC](linker-options.md)
+- [Možnosti propojovacího zařízení MSVC](linker-options.md)

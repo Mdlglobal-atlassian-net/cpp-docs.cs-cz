@@ -1,190 +1,190 @@
 ---
-title: Úpravy a refaktorace C++ kódu v aplikaci Visual Studio
-description: Pomocí editoru C++ kódu v aplikaci Visual Studio můžete formátovat, Procházet, pochopit a Refaktorovat kód.
+title: Úprava a refaktoring kódu Jazyka C++ v sadě Visual Studio
+description: Pomocí editoru kódu Jazyka C++ ve Visual Studiu můžete formátovat, procházet, chápat a refaktorovat kód.
 ms.date: 05/31/2019
 ms.assetid: 56ffb9e9-514f-41f4-a3cf-fd9ce2daf3b6
 ms.topic: overview
-ms.openlocfilehash: 6d920ec302e8385d900d74152ee5ad17851fdaac
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 070c79e02f6e05adeda5f17a0dde02afdf22703b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80077850"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81353747"
 ---
-# <a name="edit-and-refactor-c-code-in-visual-studio"></a>Úpravy a refaktorace C++ kódu v aplikaci Visual Studio
+# <a name="edit-and-refactor-c-code-in-visual-studio"></a>Úprava a refaktoring kódu Jazyka C++ v sadě Visual Studio
 
-Visual Studio poskytuje několik nástrojů, které vám pomůžou psát, upravovat a Refaktorovat kód.
+Visual Studio poskytuje několik nástrojů, které vám pomohou psát, upravovat a refaktorovat váš kód.
 
-##  <a name="intellisense"></a>IntelliSense
+## <a name="intellisense"></a>IntelliSense
 
-IntelliSense je výkonný nástroj pro dokončování kódu, který navrhuje symboly a fragmenty kódu při psaní. C++Technologie IntelliSense v aplikaci Visual Studio běží v reálném čase a analyzuje základ kódu při jejich aktualizaci a poskytování doporučení. Při psaní více znaků se seznam doporučených výsledků zúží dolů.
+IntelliSense je výkonný nástroj pro dokončování kódu, který při psaní navrhuje symboly a fragmenty kódu. C++ IntelliSense v sadě Visual Studio běží v reálném čase, analyzuje váš základ kódu při jeho aktualizaci a poskytuje doporučení. Při psaní více znaků se seznam doporučených výsledků zužuje.
 
-![Rozevírací&#43; &#43; seznam členů C](../ide/media/cpp-statement-completion.png)
+![Rozevírací seznam C&#43;&#43; členy](../ide/media/cpp-statement-completion.png)
 
-Některé symboly jsou automaticky vynechány, aby lépe omezily výsledky. Například při přístupu ke členům objektu třídy z vnějšku třídy nebudete moci zobrazit soukromé členy ve výchozím nastavení nebo chráněných členů (Pokud nejste v kontextu podřízené třídy). Filtrování můžete upravit pomocí tlačítek v dolní části.
+Některé symboly jsou automaticky vynechány, aby pomohly zúžit výsledky. Například při přístupu k členům objektu třídy mimo třídu nebudete moci zobrazit soukromé členy ve výchozím nastavení nebo chráněné členy (pokud nejste v kontextu podřízené třídy). Filtrování můžete upravit pomocí tlačítek v dolní části.
 
-Když v rozevíracím seznamu vyberete symbol, můžete ho automaticky zadat pomocí **tabulátoru**, **zadáním**nebo jednoho z dalších znaků potvrzení (ve výchozím nastavení: `{ } [ ] ( ) . , : ; + - * / % & | ^ ! = ? @ # \`). Chcete-li přidat nebo odebrat znaky z tohoto seznamu, vyhledejte "IntelliSense" v **panelu snadného spuštění** (CTRL + Q) a vyberte **textový editor >C++ možnosti upřesnit v jazyce C/>** . Možnost v **seznamu členů seznam znaků potvrzení** vám umožní přizpůsobit seznam požadovanými změnami.
+Po výběru symbolu z rozevíracího seznamu jej můžete automaticky doplnit **tabulátorem**, `{ } [ ] ( ) . , : ; + - * / % & | ^ ! = ? @ # \` **Enternebo**jedním z dalších znaků potvrzení (ve výchozím nastavení: ). Chcete-li přidat nebo odebrat znaky z tohoto seznamu, vyhledejte v **doplňku Snadné spuštění** (Ctrl + Q) položku "IntelliSense" a zvolte možnost **Textový editor > C/C++ > Upřesnit.** Možnost **Znaky potvrzení seznamu členů** umožňuje přizpůsobit seznam požadovanými změnami.
 
-Možnost **režim filtrování seznamu členů** určuje, jaké druhy návrhů automatického dokončování IntelliSense vidíte. Ve výchozím nastavení je nastavená na **fuzzy**. Pokud máte symbol nazvaný *MyAwesomeClass*, můžete při hledání přibližně zadat "Mac" a najít třídu v návrzích automatického dokončování. Nepřibližný algoritmus nastaví minimální prahovou hodnotu, kterou symboly musí splňovat, aby se v seznamu zobrazily. **Inteligentní** filtrování zobrazí všechny symboly obsahující podřetězce, které odpovídají zadaným hodnotám. Filtrování **předpon** vyhledá řetězce, které začínají zadaným textem.
+Možnost **Režim filtru seznamu členů** určuje, jaké typy návrhů automatického dokončování technologie IntelliSense se zobrazují. Ve výchozím nastavení je nastavena na **přibližné**. V fuzzy vyhledávání, pokud máte symbol s názvem *MyAwesomeClass*, můžete zadat "MAC" a najít třídu v návrhy automatického dokončování. Fuzzy algoritmus nastaví minimální prahovou hodnotu, kterou musí symboly splňovat, aby se v seznamu zobrazovalo. **Inteligentní** filtrování zobrazí všechny symboly obsahující podřetězce, které odpovídají zadanému textu. **Filtrování předpon** hledá řetězce, které začínají tím, co jste zadali.
 
-Další informace o C++ technologii IntelliSense naleznete v tématu [Visual C++ IntelliSense](/visualstudio/ide/visual-cpp-intellisense) a [konfigurace C++ projektu pro technologii IntelliSense](/visualstudio/ide/visual-cpp-intellisense-configuration).
+Další informace o technologie C++ IntelliSense naleznete v [tématech Visual C++ IntelliSense](/visualstudio/ide/visual-cpp-intellisense) a [Configure a C++ project for IntelliSense](/visualstudio/ide/visual-cpp-intellisense-configuration).
 
 ## <a name="intellicode"></a>IntelliCode
 
-IntelliCode je technologie IntelliSense s asistencí AI. Nejpravděpodobnější kandidát v horní části seznamu dokončení. Doporučení IntelliCode jsou založená na tisících open source projektů na GitHubu s více než 100 hvězdičkami. V kombinaci s kontextem kódu je seznam pro doplňování přizpůsobený pro podporu běžných postupů.
+IntelliCode je technologie IntelliSense s asistencí umělé aumělé žene. To staví nejpravděpodobnější kandidát na začátek seznamu dokončení. Doporučení IntelliCode jsou založena na tisících open source projektů na GitHubu s více než 100 hvězdičkami. V kombinaci s kontextem vašeho kódu je seznam dokončení přizpůsoben tak, aby podporoval běžné postupy.
 
-Při psaní C++bude IntelliCode pomáhat při používání oblíbených knihoven, jako je C++ standardní knihovna. Kontext kódu slouží jako první k poskytnutí nejužitečnější doporučení. V následujícím příkladu se členská funkce `size` obvykle používá s funkcí `sort`, takže je umístěná v horní části seznamu výsledků.
+Při psaní Jazyka C++ bude IntelliCode pomáhat při používání oblíbených knihoven, jako je například standardní knihovna Jazyka C++. Kontext kódu se používá k poskytnutí nejužitečnější doporučení jako první. V následujícím příkladu `size` se členské funkce běžně `sort` používá s funkcí, takže se zobrazí na začátek seznamu výsledků.
 
-![IntelliCode&#43; &#43; jazyka C](../ide/media/intellicode-cpp.png "C++IntelliCode")
+![C&#43;&#43; IntelliCode](../ide/media/intellicode-cpp.png "C++ IntelliCode")
 
 ::: moniker range="vs-2019"
 
-V aplikaci Visual Studio 2019 je IntelliCode k dispozici jako volitelná komponenta v úloze  **C++ vývoj desktopových** aplikací. Pokud se chcete ujistit, že je IntelliCode C++aktivní pro, vyhledejte v **nabídce nástroje** > **Možnosti** > **IntelliCode** > **Obecné** a nastavte  **C++ základní model** na **povoleno**.
+Ve Visual Studiu 2019 je IntelliCode k dispozici jako volitelná součást v zatížení **vývoje plochy jazyka C++.** Chcete-li se ujistit, že je intelliCode aktivní pro C++, přejděte na **Nástroje** > **Možnosti** > **IntelliCode** > **General** a nastavte základní model **C++** na **Povoleno**.
 
 ::: moniker-end
 
 ::: moniker range="vs-2017"
 
-V aplikaci Visual Studio 2017 je IntelliCode k dispozici jako rozšíření v Visual Studio Marketplace.
+V Sadě Visual Studio 2017 je IntelliCode k dispozici jako rozšíření na webu Visual Studio Marketplace.
 
 ::: moniker-end
 
 ## <a name="predictive-intellisense-experimental"></a>Prediktivní technologie IntelliSense (experimentální)
 
-**Prediktivní technologie IntelliSense** je experimentální funkce, která používá kontextové povědomí k omezení počtu výsledků zobrazených v rozevíracím seznamu technologie IntelliSense. Algoritmus používá porovnávání typů, takže zobrazuje pouze výsledky, které odpovídají očekávanému typu. V nejjednodušším případě, pokud zadáte `int x =` a vyvoláte rozevírací nabídku technologie IntelliSense, uvidíte pouze celá čísla nebo funkce vracející celá čísla. Tato funkce je ve výchozím nastavení vypnutá, protože stále probíhá vývoj. Funguje nejlépe s globálními symboly; Členské funkce ještě nejsou podporované. Můžete ji zapnout zadáním "prediktivního" na **panelu snadného spuštění** nebo tak, že přejdete na **nástroje** > **Možnosti** > **textový editor** > **C/C++**  > **experimentální** > **Povolit prediktivní IntelliSense**.
+**Predictive IntelliSense** je experimentální funkce, která využívá kontextové povědomí k omezení počtu výsledků zobrazených v rozevíracím seznamu Technologie IntelliSense. Algoritmus použije odpovídající typ tak, aby se zobrazí pouze ty výsledky, které odpovídají očekávanému typu. V nejjednodušším případě pokud `int x =` zadáte a vyvoláte rozevírací soubor IntelliSense, zobrazí se pouze celá čísla nebo funkce vracející celá čísla. Tato funkce je ve výchozím nastavení vypnutá, protože je stále ve vývoji. Funguje nejlépe s globálními symboly; členské funkce ještě nejsou podporovány. Můžete ji zapnout zadáním "Prediktivní" v **rychlém spuštění** nebo přejdete na **Tools** > **nástroje Možnosti** > **Textový editor** > **C / C ++** > **Experimentální** > **Povolit prediktivní IntelliSense**.
 
-Chcete-li přepsat **prediktivní technologii IntelliSense** a zobrazit seznam delší, stiskněte klávesovou **zkratku CTRL + J**. Pokud je **prediktivní technologie IntelliSense** zapnutá, volání **CTRL + J** odebere prediktivní filtr. Stisknutím **kombinace kláves CTRL + J** znovu odeberete filtr dostupnosti z výsledků seznamu členů, kde to bude relevantní. Tlačítko ([+]) v rozevíracím seznamu IntelliSense má stejný úkol jako **CTRL + J**. Když najedete myší na tlačítko, zobrazí se informace o tom, co se zobrazuje.
+Chcete-li přepsat **prediktivní technologie IntelliSense** a zobrazit delší seznam, stiskněte **kombinaci kláves Ctrl + J**. Pokud je **zapnutá funkce Predictive IntelliSense,** vyvoláte **ctrl + j** filtr Prediktivní. Stisknutím **kláves Ctrl + J** znovu odeberete filtr usnadnění přístupu z výsledků seznamu členů, kde je to relevantní. Tlačítko ([+]) v rozevíracím seznamu Technologie IntelliSense dělá totéž jako **ctrl + j**. Najeďte nad tlačítkem a zobrazte popisek informací o tom, co se zobrazuje.
 
-![Prediktivní&#43; &#43; IntelliSense v jazyce C](../ide/media/predictive-intellisense-cpp.png "Prediktivní technologie IntelliSense")
+![C&#43;&#43; Prediktivní technologie IntelliSense](../ide/media/predictive-intellisense-cpp.png "Prediktivní technologie IntelliSense")
 
-Předchozí snímek obrazovky ukazuje několik tlačítek pod rozevíracím seznamem. Tyto funkce umožňují filtry IntelliSense pro různé druhy výsledků:
+Předchozí snímek obrazovky zobrazuje několik tlačítek v rozevíracím seznamu. Tyto umožňují filtry IntelliSense pro různé druhy výsledků:
 
 - Proměnné a konstanty
 - Functions
 - Typy
 - Makra
 - Výčty
-- Obory názvů
+- Jmenné prostory
 
-Tlačítko se zobrazí pouze v případě, že je relevantní pro vaši aktuální relaci technologie IntelliSense. Obvykle se všechna tlačítka nezobrazí současně.
+Tlačítko se zobrazí pouze v případě, že je relevantní pro aktuální relaci Technologie IntelliSense. Obvykle nevidíte všechna tlačítka současně.
 
-## <a name="template-intellisense"></a>IntelliSense šablony
+## <a name="template-intellisense"></a>Šablona IntelliSense
 
-Když je kurzor uvnitř definice šablony, zobrazí se **panel šablony** , který umožňuje poskytnout ukázkové argumenty šablony pro technologii IntelliSense.
+Pokud je stříška uvnitř definice šablony, zobrazí se **panel šablony,** který umožňuje zadat argumenty ukázkové šablony pro technologie IntelliSense.
 
-![IntelliSense&#43; &#43; – šablona jazyka C – zobrazit existující instance](../ide/media/template-intellisense-cpp-1.png "Šablona IntelliSense – zobrazit existující instance")
+![C&#43;&#43; Šablona IntelliSense Zobrazit existující koniace](../ide/media/template-intellisense-cpp-1.png "Šablona IntelliSense zobrazit existující koniace")
 
-Kliknutím na ikonu **\<t >** rozbalíte nebo sbalíte **panel šablon**. Kliknutím na ikonu tužky nebo dvojitým kliknutím na **panel šablon** otevřete okno **Upravit** .
+Klepnutím ** \<** na ikonu T>rozbalte nebo sbalte **panel šablon**. Kliknutím na ikonu tužky nebo poklepáním na **panel šablony** otevřete okno **Úpravy.**
 
-![IntelliSense&#43; &#43; – šablona jazyka C](../ide/media/template-intellisense-cpp-3.png "IntelliSense šablony")
+![C&#43;&#43; šablona IntelliSense](../ide/media/template-intellisense-cpp-3.png "Šablona IntelliSense")
 
-Úpravy, které provedete v okně, se aplikují přímo na zdrojový kód, abyste viděli účinky v reálném čase.
+Úpravy, které provedete v okně, se použijí přímo na zdrojový kód, takže můžete vidět efekty v reálném čase.
 
-Panel šablon může automaticky naplnit kandidáty na základě vytváření instancí v kódu. Kliknutím na **Přidat všechny existující instance** zobrazíte seznam všech konkrétních argumentů, které byly použity k vytvoření instance šablony v rámci vašeho základu kódu.
+Panel šablon může automaticky vyplňovat kandidáty na základě instancí ve vašem kódu. Kliknutím na **Přidat všechny existující instance zobrazíte** seznam všech konkrétních argumentů, které byly použity k vytvoření instance šablony v celém základu kódu.
 
-![Seznam&#43; &#43; výsledků technologie IntelliSense pro šablony jazyka C](../ide/media/template-intellisense-cpp-2.png "Seznam výsledků šablony IntelliSense")
+![C&#43;&#43; Šablona Seznam výsledků Technologie ATelliSense](../ide/media/template-intellisense-cpp-2.png "Seznam výsledků šablony Technologie AtelliSense")
 
-Okno v dolní části editoru ukazuje, kde byla nalezena každá instance a jaké argumenty byly.
+Okno v dolní části editoru ukazuje, kde byla nalezena každá instance a jaké byly jeho argumenty.
 
-![Mapa&#43; &#43; vytváření instancí IntelliSense v šabloně jazyka C](../ide/media/template-intellisense-cpp-4.png "Mapa vytváření instancí pro šablonu IntelliSense")
+![C&#43;&#43; šablona IntelliSense Iniace Mapa](../ide/media/template-intellisense-cpp-4.png "Mapa infiace intelliSense šablony")
 
-Informace na **panelu šablon** se považují za specifické pro uživatele. Je uložen ve složce. vs a není svěřen do správy zdrojových kódů.
+**Informace o panelu šablony** jsou považovány za specifické pro uživatele. Je uložen ve složce .vs a není potvrzena správy zdrojového kódu.
 
-##  <a name="error-squiggles-and-quick-fixes"></a>Chyby vlnovkou a rychlé opravy
+## <a name="error-squiggles-and-quick-fixes"></a>Chybové vlnovky a rychlé opravy
 
-Pokud editor detekuje problémy s vaším kódem, přidá se v rámci problému barevné vlnovky. Červené vlnovky označují kód, který se nebude kompilovat. Zelené vlnovky označují jiné druhy problémů, které mohou být stále závažné. Chcete-li získat další informace o problémech, můžete otevřít okno **Seznam chyb** .
+Pokud editor zjistí problémy s kódem, přidá barevné vlnovky pod problémem. Červené vlnovky označují kód, který se nezkompiluje. Zelené vlnovky označují jiné druhy problémů, které mohou být stále potenciálně závažné. Chcete-li získat další informace o problémech, můžete otevřít okno **Seznam chyb.**
 
-V případě některých druhů chyb a také běžných vzorů kódování bude editor nabízet **rychlou opravu** ve formě žárovky, která se zobrazí, když najedete myší na vlnovku. Kliknutím na šipku dolů zobrazíte návrhy.
+U některých druhů chyb, stejně jako běžných kódovacích vzorů, nabídne editor **rychlou opravu** ve formě žárovky, která se zobrazí, když najedete nad vlnovkou. Kliknutím na šipku dolů zobrazíte návrhy.
 
-V následujícím příkladu byla deklarována `vector`, ale nebyla nalezena žádná definice, takže Editor nabízí zahrnutí potřebného hlavičkového souboru:
+V následujícím příkladu `vector` byla deklarována a, ale nebyla nalezena žádná definice, takže editor nabízí zahrnutí potřebného souboru záhlaví:
 
-![Rychlá&#43; &#43; oprava jazyka C](../ide/media/quick-fix-for-header-cpp.png "C++Rychlá oprava")
+![C&#43;&#43; rychlá oprava](../ide/media/quick-fix-for-header-cpp.png "Rychlá oprava jazyka C++")
 
-Editor také nabízí rychlé opravy pro některé příležitosti refaktoringu. Například pokud deklarujete třídu v hlavičkovém souboru, Visual Studio nabídne vytvoření definice v samostatném souboru. cpp.
+Editor také nabízí rychlé opravy pro některé možnosti refaktoringu. Pokud například deklarujete třídu v souboru záhlaví, visual studio nabídne vytvoření definice pro ni v samostatném souboru CPP.
 
-![Rychlá&#43; &#43; oprava jazyka C](../ide/media/quick-fix.png "C++Rychlá oprava")
+![C&#43;&#43; rychlá oprava](../ide/media/quick-fix.png "Rychlá oprava jazyka C++")
 
 ## <a name="change-tracking"></a>Sledování změn
 
-Pokaždé, když provedete změnu souboru, zobrazí se na levé straně žlutý pruh, který indikuje, že byly provedeny neuložené změny. Po uložení souboru se změní pruh na zelenou. Zelené a žluté pruhy jsou zachovány, dokud je dokument otevřen v editoru. Představují změny, které byly provedeny od posledního otevření dokumentu.
+Při každé změně souboru se vlevo zobrazí žlutý pruh označující, že byly provedeny neuložené změny. Když soubor uložíte, pruh se změní na zelený. Zelené a žluté pruhy jsou zachovány tak dlouho, dokud je dokument otevřen v editoru. Představují změny, které byly provedeny od posledního otevření dokumentu.
 
-![Sledování&#43; &#43; změn v jazyce C](../ide/media/change-tracking-cpp.png "Sledování změn")
+![C&#43;&#43; sledování změn](../ide/media/change-tracking-cpp.png "Sledování změn")
 
 ## <a name="move-code"></a>Přesunout kód
 
-Řádky kódu můžete přesunout nahoru a dolů tak, že je vyberete, podržíte klávesu Alt a stisknete klávesy se šipkami **nahoru/dolů** .
+Řádky kódu můžete přesouvat nahoru a dolů tak, že je vyberete, podržíte klávesu Alt a stisknete klávesy **se šipkami nahoru/dolů.**
 
-##  <a name="insert-snippets"></a>Vložit fragmenty
+## <a name="insert-snippets"></a>Vložení výstřižků
 
-Fragment kódu je předdefinovaná část zdrojového kódu. Kliknutím pravým tlačítkem myši na jeden nebo vybraný text buď vložte fragment nebo Obklopte vybraný text pomocí fragmentu. Následující ilustrace znázorňuje tři kroky pro obklopení vybraného příkazu pomocí smyčky for. Žluté světla v konečném obrázku jsou upravitelná pole, ke kterým přistupujete pomocí klávesy TAB. Další informace naleznete v tématu [fragmenty kódu](/visualstudio/ide/code-snippets).
+Úryvek je předdefinovaná část zdrojového kódu. Kliknutím pravým tlačítkem myši na jeden bod nebo na vybraný text vložíte úryvek nebo vybraný text obklopíte úryvkem. Následující obrázek znázorňuje tři kroky k obklopit vybraný příkaz s for smyčky. Žlutá zvýraznění v konečném obrázku jsou upravitelná pole, ke kterým přistupujete pomocí klávesy tabulátoru. Další informace naleznete v [tématu Fragmenty kódu](/visualstudio/ide/code-snippets).
 
-![C&#43; &#43; vložit rozevírací seznam&#45;fragmentů](../ide/media/vs2015_cpp_surround_with.png "vs2015_cpp_surround_with")
+![C&#43;&#43; Vložit fragment&#45;dolů](../ide/media/vs2015_cpp_surround_with.png "vs2015_cpp_surround_with")
 
-##  <a name="add-class"></a>Přidat třídu
+## <a name="add-class"></a>Přidat třídu
 
-Přidejte novou třídu z nabídky **projekt** nebo z kontextové nabídky v **Průzkumník řešení**:
+Přidání nové třídy z nabídky **Projekt** nebo z kontextové nabídky v **Průzkumníku řešení**:
 
-![Přidat novou třídu v jazyce C&#43;&#43;](../ide/media/vs2017-add-class.png "vs2015_cpp_add_class")
+![Přidat novou třídu v&#43;&#43;C](../ide/media/vs2017-add-class.png "vs2015_cpp_add_class")
 
-Můžete také použít Průvodce třídou pro úpravu nebo přezkoumání existující třídy.
+Pomocí Průvodce třídou můžete také upravit nebo zkontrolovat existující třídu.
 
-![Průvodce&#43; &#43; třídami jazyka C](../ide/media/vs2017-class-wizard.png)
+![Průvodce třídou C&#43;&#43; ](../ide/media/vs2017-class-wizard.png)
 
-Další informace najdete v tématu [Přidání funkcionality pomocí průvodcůC++kódem ()](../ide/adding-functionality-with-code-wizards-cpp.md).
+Další informace naleznete [v tématu Přidání funkcí pomocí Průvodců kódem (C++).](../ide/adding-functionality-with-code-wizards-cpp.md)
 
-##  <a name="refactoring"></a>Refaktoring
+## <a name="refactoring"></a>Refaktoring
 
-Refaktoring je k dispozici v místní nabídce rychlá akce nebo kliknutím [na žárovku v editoru](/visualstudio/ide/perform-quick-actions-with-light-bulbs) .  Některé jsou také k dispozici v nabídce **upravit > refaktoring** .  Mezi tyto funkce patří:
+Refaktoringy jsou k dispozici v kontextové nabídce Rychlá akce nebo kliknutím na [žárovku](/visualstudio/ide/perform-quick-actions-with-light-bulbs) v editoru.  Některé se také nacházejí v nabídce **Upravit > refaktoru.**  Mezi tyto funkce patří:
 
-* [Přejmenovat](refactoring/rename.md)
-* [Extrahovat funkci](refactoring/extract-function.md)
-* [Implementovat čistě virtuální](refactoring/implement-pure-virtuals.md)
-* [Vytvořit deklaraci/definici](refactoring/create-declaration-definition.md)
-* [Přesunout – definice funkce](refactoring/move-definition-location.md)
-* [Převod na nezpracovaný řetězcový literál](refactoring/convert-to-raw-string-literal.md)
-* [Změnit signaturu](refactoring/change-signature.md)
+- [Přejmenovat](refactoring/rename.md)
+- [Extrahovat funkci](refactoring/extract-function.md)
+- [Implementovat čistě virtuální](refactoring/implement-pure-virtuals.md)
+- [Vytvořit deklaraci/definici](refactoring/create-declaration-definition.md)
+- [Přesunout – definice funkce](refactoring/move-definition-location.md)
+- [Převod na nezpracovaný řetězcový literál](refactoring/convert-to-raw-string-literal.md)
+- [Změnit signaturu](refactoring/change-signature.md)
 
-## <a name="code-style-enforcement-with-clangformat-and-editorconfig"></a>Vynucování stylu kódu pomocí ClangFormat a EditorConfig
+## <a name="code-style-enforcement-with-clangformat-and-editorconfig"></a>Vynucení stylu kódu pomocí ClangFormat a EditorConfig
 
-Visual Studio 2017 a novější přináší integrovanou podporu pro [ClangFormat](https://clang.llvm.org/docs/ClangFormat.html), oblíbený nástroj pro formátování kódu pro C++ založen na Clang/LLVM. Zadejte "ClangFormat" do [snadného spuštění](/visualstudio/ide/reference/quick-launch-environment-options-dialog-box) a nastavte ho tak, aby používal jeden z těchto běžných formátů:
+Visual Studio 2017 a novější přichází s integrovanou podporou [clangformatu](https://clang.llvm.org/docs/ClangFormat.html), oblíbeného nástroje pro formátování kódu pro C++ založeného na Clang/LLVM. Chcete-li do [panelu Snadné spuštění](/visualstudio/ide/reference/quick-launch-environment-options-dialog-box) nastavit funkci "ClangFormat", nastavte ji tak, aby používala jeden z těchto běžných formátů:
 
 - LLVM
 - Google
-- Chróm
+- Chrom
 - Mozilla
-- WebKit
+- Webkit
 - Visual Studio
 
-Můžete také zadat vlastní soubor. Clang-Format nebo _clang-Format pro použití vlastních pravidel pro všechny soubory kódu na stejné nebo nižší úrovni.
+Můžete také zadat vlastní soubor ve formátu .clang nebo _clang formátu, který použije vlastní pravidla pro všechny soubory kódu na stejné úrovni nebo nižší.
 
-Soubory je možné snadno sdílet přes správu zdrojového kódu, takže můžete vymáhat konvence pro kódování v celém vývojovém týmu.
+Soubory lze snadno sdílet prostřednictvím správy zdrojového kódu, takže můžete vynutit konvence kódování v celém vývojovém týmu.
 
-![Formát&#43; &#43; C Clang](../ide/media/clang-format-cpp.png "Formát Clang")
+![Formát clang&#43;&#43; ](../ide/media/clang-format-cpp.png "Formát Clang")
 
-Sada Visual Studio 2017 a novější také podporuje [EditorConfig](https://editorconfig.org/), která funguje podobným způsobem. ClangFormat má ale více možností stylu než EditorConfig, včetně pravidel, která jsou specifická pro C++. Pomocí **EditorConfig**vytvoříte soubory **. EditorConfig** a umístíte je do různých složek vašeho základu kódu, abyste určili styly kódu pro tyto složky a jejich podsložky. Soubor **. editorconfig** nahrazuje jakékoli jiné soubory **. editorconfig** v nadřazených složkách a přepíše všechna nastavení formátování konfigurovaná prostřednictvím **nástrojů** > **možností**. Můžete nastavit pravidla pro tabulátory a mezery, velikost odsazení a další. Další informace najdete v tématu [Vytvoření přenosného a vlastního nastavení editoru pomocí EditorConfig](/visualstudio/ide/create-portable-custom-editor-options).
+Visual Studio 2017 a novější také podporuje [EditorConfig](https://editorconfig.org/), který funguje podobným způsobem. ClangFormat má však více možností stylu než EditorConfig, včetně pravidel, která jsou specifická pro C++. Pomocí **editorconfig**vytvoříte soubory **.editorconfig** a umístíte je do různých složek základu kódu, abyste určili styly kódu pro tyto složky a jejich podsložky. Soubor **.editorconfig** nahrazuje všechny ostatní soubory **.editorconfig** v nadřazených složkách a přepíše všechna nastavení formátování nakonfigurovaná pomocí**možností** **nástrojů** > . Můžete nastavit pravidla pro karty vs. mezery, velikost odsazení a další. Další informace naleznete v [tématu Vytvoření nastavení přenosného vlastního editoru pomocí editoru EditorConfig](/visualstudio/ide/create-portable-custom-editor-options).
 
 ## <a name="other-formatting-options"></a>Další možnosti formátování
 
-**Rychlé spuštění** vyhledávacího pole poskytuje nejrychlejší způsob, jak najít nastavení nebo nástroj. Je umístěn v hlavní nabídce. Stačí začít psát a seznam automatického dokončování bude filtrovat výsledky.
+Vyhledávací pole **Snadné spuštění** poskytuje nejrychlejší způsob, jak najít nastavení nebo nástroj. Nachází se v hlavním menu. Stačí začít psát a auto-dokončení seznamu bude filtrovat výsledky.
 
 ![Snadné spuštění sady Visual Studio](../ide/media/vs2015_cpp_quick_launch.png "Snadné spuštění")
 
-Chcete-li nastavit možnosti formátování, jako jsou odsazení, dokončování závorek a zabarveníC++ , zadejte text "formátování" do okna **Snadné spuštění** .
+Chcete-li nastavit možnosti formátování, například odsazení, dokončení složených závorek a vybarvení, zadejte do okna **Snadné spuštění** text Formátování Jazyka C++.
 
-![C++možnosti formátování](media/cpp-formatting-options.png)
+![Možnosti formátování jazyka C++](media/cpp-formatting-options.png)
 
-Další možnosti formátování najdete v části **upravit** > **Upřesnit** v hlavní nabídce.
+Další možnosti formátování najdete v části **Upravit** > **upřesnit** v hlavní nabídce.
 
-![C++Rozšířené možnosti úprav](media/edit-advanced-cpp.png)
+![Rozšířené možnosti úprav jazyka C++](media/edit-advanced-cpp.png)
 
-Možnosti pro povolení a konfiguraci C++specifických funkcí pro úpravy jsou k dispozici v části **nástroje** > **Možnosti** > **textový editor** > **C/C++** . Po výběru možnosti, kterou chcete nastavit, můžete získat další pomoc stisknutím **klávesy F1** , když je dialog aktivní. Pro obecné možnosti formátování kódu zadejte `Editor C++` do panelu snadného **spuštění**.
+Možnosti povolení a konfigurace funkcí úprav specifických pro C++jsou **umístěny** > v části Tools**Options** > **Text Editor** > **C/C++**. Po výběru možnosti, kterou chcete nastavit, můžete získat další nápovědu stisknutím **klávesy F1,** když je dialog zaostřený. Možnosti formátování obecného kódu `Editor C++` napište do **panelu Snadné spuštění**.
 
-![Možnosti > Visual Studio Tools](../ide/media/tools-options.png "Možnosti editoru")
+![Nástroje sady Visual Studio > možnosti](../ide/media/tools-options.png "Možnosti editoru")
 
-Experimentální funkce, které mohou nebo nemusí být zahrnuty v budoucí verzi sady Visual Studio, najdete v dialogovém okně [experimentální textový editor C++ ](/visualstudio/ide/reference/options-text-editor-c-cpp-experimental) . V aplikaci Visual Studio 2017 a novější můžete v tomto dialogovém okně Povolit **prediktivní IntelliSense** .
+Experimentální funkce, které mohou nebo nemusí být zahrnuty v budoucí verzi sady Visual Studio, se nacházejí v dialogovém okně [Experimentovat s textovým editorem C++.](/visualstudio/ide/reference/options-text-editor-c-cpp-experimental) V sadě Visual Studio 2017 a novějších můžete v tomto dialogovém okně povolit **prediktivní technologie IntelliSense.**
 
 ## <a name="see-also"></a>Viz také
 
-[Čtení a pochopení C++ kódu](read-and-understand-code-cpp.md)</br>
-[Procházení základu C++ kódu v aplikaci Visual Studio](navigate-code-cpp.md)</br>
-[Spolupráce s Live Share proC++](live-share-cpp.md)
+[Čtení a pochopení kódu C++](read-and-understand-code-cpp.md)</br>
+[Navigace v základu kódu Jazyka C++ v sadě Visual Studio](navigate-code-cpp.md)</br>
+[Spolupráce s live share pro C++](live-share-cpp.md)

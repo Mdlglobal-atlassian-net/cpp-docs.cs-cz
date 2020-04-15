@@ -1,48 +1,49 @@
 ---
-title: / SOURCELINK (Sourcelink zahrnout soubor PDB)
-ms.date: 08/20/2018
+title: /SOURCELINK (zahrnutí souboru Sourcelink do souboru PDB)
+description: Referenční příručka k možnosti propojovacího programu /SOURCELINK v jazyce Microsoft C++.
+ms.date: 03/31/2020
 f1_keywords:
 - /sourcelink
 helpviewer_keywords:
 - /SOURCELINK linker option
 - /SOURCELINK
-ms.openlocfilehash: 1643727d8f556a905eccbfa9626d1aaa8ea63cbf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bde55c401e17f7b3c84ffcdad29dda2badcc260b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62317949"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81336072"
 ---
-# <a name="sourcelink-include-source-link-file-in-pdb"></a>/ SOURCELINK (zahrnout odkaz na zdroj souboru PDB)
+# <a name="sourcelink-include-source-link-file-in-pdb"></a>/SOURCELINK (Zahrnout zdrojový odkaz do PDB)
 
-Určuje konfigurační soubor zdrojového odkazu pro zahrnutí souboru PDB vygenerován linkerem.
+Určuje konfigurační soubor zdrojového propojení, který má být zahrnut do souboru PDB generovaného propojovacím programem.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **/ SOURCELINK:**_název souboru_
+> **`/SOURCELINK:`**_`filename`_
 
-## <a name="arguments"></a>Arguments
+## <a name="arguments"></a>Argumenty
 
-*Název souboru*<br/>
-Určuje konfiguraci ve formátu JSON soubor, který obsahuje jednoduché mapování místní cesty souborů na adresy URL ve kterém se dá načíst zdrojový soubor pro zobrazení ladicím programem. Další informace o formátu tohoto souboru najdete v tématu [schématu JSON odkaz zdroje](https://github.com/dotnet/designs/blob/master/accepted/diagnostics/source-link.md#source-link-json-schema).
+*Název_souboru*<br/>
+Určuje konfigurační soubor ve formátu JSON, který obsahuje jednoduché mapování cest místních souborů na adresy URL pro zdrojové soubory, které se mají zobrazit v ladicím programu. Další informace o formátu tohoto souboru naleznete v tématu [Source Link JSON Schema](https://github.com/dotnet/designs/blob/master/accepted/2020/diagnostics/source-link.md#source-link-json-schema).
 
 ## <a name="remarks"></a>Poznámky
 
-Odkaz na zdroj je jazyk a zdrojového nezávislá systém pro poskytování ladění zdrojového kód pro binární soubory. Zdrojový odkaz se podporuje pro nativní binární soubory C++ v sadě Visual Studio 2017 verze 15.8 spuštění. Přehled odkazu na zdroj, naleznete v tématu [odkazu na zdroj](https://github.com/dotnet/designs/blob/master/accepted/diagnostics/source-link.md). Informace o tom, jak používat odkaz na zdroj ve vašich projektech a jak vygenerovat soubor SourceLink jako součást projektu, naleznete v tématu [pomocí zdrojového odkazu](https://github.com/dotnet/sourcelink#using-source-link-in-c-projects).
+Zdrojový odkaz je jazyk- a zdroj řízení agnostik systém pro poskytování ladění zdroje pro binární soubory. Zdrojový odkaz je podporován pro nativní binární soubory C++ začínající ve Visual Studiu 2017 verze 15.8. Přehled zdrojového odkazu naleznete v tématu [Zdrojový odkaz](https://github.com/dotnet/designs/blob/master/accepted/2020/diagnostics/source-link.md). Informace o použití zdrojového odkazu v projektech a o tom, jak vygenerovat soubor SourceLink jako součást projektu, naleznete [v tématu Použití zdrojového odkazu](https://github.com/dotnet/sourcelink#using-source-link-in-c-projects).
 
-### <a name="to-set-the-sourcelink-linker-option-in-visual-studio"></a>Nastavení parametru linkeru/sourcelink v sadě Visual Studio
+### <a name="to-set-the-sourcelink-linker-option-in-visual-studio"></a>Nastavení možnosti propojovacího zařízení /SOURCELINK v sadě Visual Studio
 
-1. Otevřít **stránky vlastností** dialogové okno pro projekt. Další informace najdete v tématu [vlastnosti kompilátoru a sestavení nastavte C++ v sadě Visual Studio](../working-with-project-properties.md).
+1. Otevřete dialogové okno **Stránky vlastností** pro projekt. Další informace naleznete [v tématu Nastavení kompilátoru c++ a vlastnosti sestavení v sadě Visual Studio](../working-with-project-properties.md).
 
-1. Vyberte **vlastnosti konfigurace** > **Linkeru** > **příkazového řádku** stránku vlastností.
+1. Vyberte stránku vlastností**příkazového řádku** **propojovacího** > programu **Vlastnosti** > konfigurace.
 
-1. V **další možnosti** přidejte **/sourcelink:**_filename_ a klikněte na tlačítko **OK** nebo **použít**uložte provedené změny.
+1. V poli **Další možnosti** **`/SOURCELINK:`** _`filename`_ přidejte a pak zvolte **OK** nebo **Použít,** chcete-li změny uložit.
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Programové nastavení tohoto parametru linkeru
 
 - Tato možnost nemá programový ekvivalent.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Referenční zdroje k linkeru MSVC](linking.md)<br/>
-[Možnosti linkeru MSVC](linker-options.md)
+[Možnosti propojovacího zařízení MSVC](linker-options.md)

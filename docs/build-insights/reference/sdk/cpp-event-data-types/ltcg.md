@@ -1,6 +1,6 @@
 ---
-title: LTCG – třída
-description: Referenční C++ dokumentace třídy LTCG sady SDK pro Build Insights
+title: Třída LTCG
+description: C++ Build Insights SDK LTCG odkaz na třídu.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 8e75795e46d64752fd4d1a643585cf6f131cb096
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 47faaeb8428a28feab2eb27342e6a68d052d2dd4
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78333144"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81324591"
 ---
-# <a name="ltcg-class"></a>LTCG – třída
+# <a name="ltcg-class"></a>Třída LTCG
 
 ::: moniker range="<=vs-2015"
 
-Sada C++ SDK pro Build Insights je kompatibilní se sadou Visual Studio 2017 a novější. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek selektor verzí sady Visual Studio pro tento článek na sadu Visual Studio 2017 nebo Visual Studio 2019.
+Sada C++ Build Insights SDK je kompatibilní s Visual Studio 2017 a vyšší. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek pro výběr **verze** sady Visual Studio pro tento článek na Visual Studio 2017 nebo Visual Studio 2019. Nachází se v horní části obsahu na této stránce.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Třída `LTCG` se používá s funkcemi [MatchEvent](../functions/match-event.md), [MatchEventInMemberFunction](../functions/match-event-in-member-function.md), [MatchEventStack](../functions/match-event-stack.md)a [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md) . Použijte ho ke spárování s událostí [LTCG](../event-table.md#ltcg) .
+Třída `LTCG` se používá s funkcemi [MatchEvent](../functions/match-event.md), [MatchEventInMemberFunction](../functions/match-event-in-member-function.md), [MatchEventStack](../functions/match-event-stack.md)a [MatchEventStackInMemberFunction.](../functions/match-event-stack-in-member-function.md) Použijte ji tak, aby odpovídala události [LTCG.](../event-table.md#ltcg)
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -39,13 +39,13 @@ public:
 
 ## <a name="members"></a>Členové
 
-Spolu se zděděnými členy ze své základní třídy [aktivity](activity.md) obsahuje Třída `LTCG` následující členy:
+Spolu s zděděnými členy ze `LTCG` základní třídy [Aktivita](activity.md) obsahuje třída následující členy:
 
 ### <a name="constructors"></a>Konstruktory
 
 [LTCG](#ltcg)
 
-## <a name="ltcg"></a>LTCG
+## <a name="ltcg"></a><a name="ltcg"></a>LTCG
 
 ```cpp
 LTCG(const RawEvent& event);
@@ -53,7 +53,7 @@ LTCG(const RawEvent& event);
 
 ### <a name="parameters"></a>Parametry
 
-\ *události*
-Událost [LTCG](../event-table.md#ltcg)
+*Událost*\
+Událost [LTCG.](../event-table.md#ltcg)
 
 ::: moniker-end

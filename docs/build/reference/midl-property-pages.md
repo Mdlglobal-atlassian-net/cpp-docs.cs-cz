@@ -47,48 +47,48 @@ f1_keywords:
 - VC.Project.VCMidlTool.RedirectOutputAndErrors
 - VC.Project.VCMidlTool.MinimumTargetSystem
 - vc.project.AdditionalOptionsPage
-ms.openlocfilehash: 260936d01a611f061b0b4fa9a5c087ff38cc66a3
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: d6833230baca892836c187799df7f0658aa16772
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80076134"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81336242"
 ---
 # <a name="midl-property-pages"></a>MIDL – stránky vlastností
 
-Stránky vlastností MIDL jsou k dispozici jako vlastnost položky v. Soubor IDL v C++ projektu, který používá com. Použijte je ke konfiguraci [kompilátoru MIDL](/windows/win32/midl/using-the-midl-compiler-2). Informace o tom, jak programově přistupovat k možnostem C++ MIDL pro projekty, naleznete v tématu <xref:Microsoft.VisualStudio.VCProjectEngine.VCMidlTool> Object. Viz také [Obecná syntaxe příkazového řádku MIDL](/windows/win32/midl/general-midl-command-line-syntax).
+Stránky vlastností MIDL jsou k dispozici jako vlastnost položky na . IDL soubor v projektu C++, který používá COM. Použijte je ke konfiguraci [kompilátoru MIDL](/windows/win32/midl/using-the-midl-compiler-2). Informace o tom, jak programově přistupovat k možnostem <xref:Microsoft.VisualStudio.VCProjectEngine.VCMidlTool> MIDL pro projekty jazyka C++, naleznete v tématu objekt. Viz také [Obecná syntaxe příkazového řádku MIDL](/windows/win32/midl/general-midl-command-line-syntax).
 
-## <a name="general-property-page"></a>Obecná stránka vlastností
+## <a name="general-property-page"></a>Stránka obecné vlastnosti
 
 ### <a name="preprocessor-definitions"></a>Definice preprocesoru
 
-Určuje jednu nebo více definic, včetně maker MIDL ([/d](/windows/win32/midl/-d))\[maker\]).
+Určuje jednu nebo více definic, včetně maker\]MIDL ([/D](/windows/win32/midl/-d)).\[
 
-### <a name="additional-include-directories"></a>Další adresáře k zahrnutí
+### <a name="additional-include-directories"></a>Další zahrnutí adresářů
 
-Určuje jeden nebo více adresářů, které mají být přidány do cesty include ([/i](/windows/win32/midl/-i)\[cesta\]).
+Určuje jeden nebo více adresářů, které chcete přidat\]do cesty zahrnutí ([/I](/windows/win32/midl/-i)\[cesta ).
 
 ### <a name="additional-metadata-directories"></a>Další adresáře metadat
 
-Zadejte adresář obsahující soubor Windows. Foundation. WinMD ([/metadata_dir](/windows/win32/midl/-metadata-dir) \[cesta\]).
+Zadejte adresář obsahující soubor Windows.Foundation.WinMD (\][/metadata_dir](/windows/win32/midl/-metadata-dir) \[cesta ).
 
-### <a name="enable-windows-runtime"></a>Povolit prostředí Windows Runtime
+### <a name="enable-windows-runtime"></a>Povolení prostředí Windows Runtime
 
-Povolit sémantiku prostředí Windows Runtime k vytvoření souboru metadat systému Windows ([/WinRT](/windows/win32/midl/-winrt)).
+Povolte sémantiku prostředí Windows Runtime k vytvoření souboru metadat systému Windows ([/winrt](/windows/win32/midl/-winrt)).
 
 ### <a name="ignore-standard-include-path"></a>Ignorovat standardní cestu zahrnutí
 
-Ignorujte aktuální a adresáře INCLUDE ([/no_def_idir](/windows/win32/midl/-no-def-idir)).
+Ignorujte aktuální adresáře a adresáře INCLUDE ([/no_def_idir](/windows/win32/midl/-no-def-idir)).
 
 ### <a name="mktyplib-compatible"></a>Kompatibilní s MkTypLib
 
-Vynutí kompatibilitu s MkTypLib. exe verze 2,03 ([/mktyplib203](/windows/win32/midl/-mktyplib203)).
+Vynutí kompatibilitu s mktyplib.exe verze 2.03 ([/mktyplib203](/windows/win32/midl/-mktyplib203)).
 
 ### <a name="warning-level"></a>Úroveň upozornění
 
-Vybere striktní chyby kódu MIDL ([/w](/windows/win32/midl/-w)).
+Vybere přísnost chyb kódu MIDL ([/W](/windows/win32/midl/-w)).
 
-**Vlastnit**
+**Choices**
 
 - **1**
 - **1**
@@ -96,40 +96,40 @@ Vybere striktní chyby kódu MIDL ([/w](/windows/win32/midl/-w)).
 - **3**
 - **4**
 
-### <a name="treat-warnings-as-errors"></a>Zpracovávat upozornění jako chyby
+### <a name="treat-warnings-as-errors"></a>Považovat upozornění za chyby
 
 Umožňuje MIDL považovat všechna upozornění za chyby ([/WX](/windows/win32/midl/-wx)).
 
-### <a name="suppress-startup-banner"></a>Potlačit úvodní nápis
+### <a name="suppress-startup-banner"></a>Potlačit spouštěcí banner
 
-Potlačí zobrazení úvodního nápisu a informační zprávy ([/nologo](/windows/win32/midl/-nologo)).
+Potlačit zobrazení spouštěcího banneru a informační zprávy ([/nologo](/windows/win32/midl/-nologo)).
 
-### <a name="c-compiler-char-type"></a>Typ znaku kompilátoru jazyka C
+### <a name="c-compiler-char-type"></a>C Typ znaku kompilátoru
 
-Určuje výchozí znakový typ kompilátoru jazyka C, který bude použit ke kompilaci generovaného kódu. (podpis[/char](/windows/win32/midl/-char) | unsigned | ascii7).
+Určuje výchozí typ znaku kompilátoru Jazyka C, který bude použit ke kompilaci generovaného kódu. ([/char](/windows/win32/midl/-char) signed|unsigned|ascii7).
 
-**Vlastnit**
+**Choices**
 
-- Podepsaný **podpisem**
-- **Unsigned** – bez znaménka
-- **ASCII** – ASCII
+- **Podepsáno** - podepsáno
+- **Nepodepsáno** - nepodepsané
+- **Ascii** - Ascii
 
 ### <a name="target-environment"></a>Cílové prostředí
 
-Určuje, které prostředí se má cílit ([/ENV](/windows/win32/midl/-env) arm32 | Win32 | ia64 | x64).
+Určuje, na které prostředí se má cílit ([/env](/windows/win32/midl/-env) arm32|win32|ia64|x64).
 
-**Vlastnit**
+**Choices**
 
-- **Nenastaveno** -Win32
-- **Microsoft Windows 32 – bit** – Win32
-- **Microsoft Windows 64 – bit v Itanium** -ia64
+- **Není nastaveno** - Win32
+- **Microsoft Windows 32-bit** - Win32
+- **Microsoft Windows 64-bit na Itanium** - IA64
 - **Microsoft Windows ARM** – ARM
-- **Microsoft Windows ARM64** – ARM64
-- **Microsoft Windows 64 – bit na platformě x64** – x64
+- **Microsoft Windows ARM64** - ARM64
+- **Microsoft Windows 64-bit na x64** - X64
 
-### <a name="generate-stubless-proxies"></a>Generovat proxy bez zástupných procedur
+### <a name="generate-stubless-proxies"></a>Generovat proxy servery bez útržku
 
-Vygenerujte plně interpretované zástupné procedury s rozšířeními a proxy servery bez zástupných procedur pro rozhraní objektů ([/oicf](/windows/win32/midl/-oi), [/OIF](/windows/win32/midl/-oi) ).
+Generovat plně interpretované zástupné procedury s rozšířeními a proxy servery bez útržku pro rozhraní objektů ([/Oicf](/windows/win32/midl/-oi), [/Oif](/windows/win32/midl/-oi) ).
 
 ### <a name="suppress-compiler-warnings"></a>Potlačení upozornění kompilátoru
 
@@ -137,149 +137,149 @@ Potlačit varovné zprávy kompilátoru ([/no_warn](/windows/win32/midl/-no-warn
 
 ### <a name="application-configuration-mode"></a>Režim konfigurace aplikace
 
-Povolí vybrané atributy ACF v souboru IDL ([/app_config](/windows/win32/midl/-app-config)).
+Povolit vybrané atributy ACF v souboru IDL ([/app_config](/windows/win32/midl/-app-config)).
 
 ### <a name="locale-id"></a>ID národního prostředí
 
-Určuje LCID pro vstupní soubory, názvy souborů a cesty adresáře ([/LCID](/windows/win32/midl/-lcid) Decimal).
+Určuje soubor LCID pro vstupní soubory, názvy souborů a cesty adresářů ([/lcid](/windows/win32/midl/-lcid) DECIMAL).
 
-### <a name="multi-processor-compilation"></a>Kompilace s využitím více procesorů
+### <a name="multi-processor-compilation"></a>Kompilace s více procesory
 
-Spouštějte více instancí současně.
+Spusťte více instancí současně.
 
-## <a name="output-property-page"></a>Výstupní stránka vlastností
+## <a name="output-property-page"></a>Stránka výstupní vlastnosti
 
 ### <a name="output-directory"></a>Výstupní adresář
 
-Určuje výstupní adresář ([/out](/windows/win32/midl/-out) [adresář]).
+Určuje výstupní adresář ([/out](/windows/win32/midl/-out) [directory]).
 
 ### <a name="metadata-file"></a>Soubor metadat
 
-Určuje název generovaného souboru metadat ([/winmd](/windows/win32/midl/-winmd) filename).
+Určuje název generovaného souboru metadat ([/winmd](/windows/win32/midl/-winmd) název souboru).
 
-### <a name="header-file"></a>Hlavičkový soubor
+### <a name="header-file"></a>Soubor záhlaví
 
-Určuje název vygenerovaného souboru hlaviček ([/h](/windows/win32/midl/-h) filename).
+Určuje název generovaného souboru záhlaví ([/h](/windows/win32/midl/-h) název souboru).
 
 ### <a name="dlldata-file"></a>Soubor DllData
 
-Určuje název souboru DLLDATA ([/dlldata](/windows/win32/midl/-dlldata) filename).
+Určuje název souboru DLLDATA ( název souboru[/dlldata).](/windows/win32/midl/-dlldata)
 
-### <a name="iid-file"></a>IID – soubor
+### <a name="iid-file"></a>IID soubor
 
-Určuje název souboru identifikátoru rozhraní ([/IID](/windows/win32/midl/-iid) filename).
+Určuje název souboru identifikátoru rozhraní ([/iid](/windows/win32/midl/-iid) název souboru).
 
 ### <a name="proxy-file"></a>Soubor proxy
 
-Určuje název souboru proxy ([/proxy](/windows/win32/midl/-proxy) filename).
+Určuje název souboru proxy ([/proxy](/windows/win32/midl/-proxy) název souboru).
 
 ### <a name="generate-type-library"></a>Generovat knihovnu typů
 
-Určete, že se nemá generovat knihovna typů ([/notlb] pro ne).
+Zadejte, chcete-li nevygenerovat knihovnu typů ([/notlb] pro ne).
 
 ### <a name="type-library"></a>Knihovna typů
 
-Určuje název souboru knihovny typů ([/TLB](/windows/win32/midl/-tlb) filename).
+Určuje název souboru knihovny typů ([/tlb](/windows/win32/midl/-tlb) název souboru).
 
-### <a name="generate-client-stub-files"></a>Vygenerovat soubory zástupných procedur klienta
+### <a name="generate-client-stub-files"></a>Generovat soubory se zakázaným inzerováním klienta
 
-Vygenerujte pouze zástupný soubor klienta ([/Client](/windows/win32/midl/-client) [zástupné soubory | None]).
+Generovat pouze soubor se zakázaným inzerováním klienta ([/client](/windows/win32/midl/-client) [stub|none]).
 
-**Vlastnit**
+**Choices**
 
-- **Stub** – zástupná procedura
-- **Žádné** – žádné
+- **Pahýl** - Pahýl
+- **Žádné** - Žádné
 
-### <a name="generate-server-stub-files"></a>Generovat soubory zástupných procedur serveru
+### <a name="generate-server-stub-files"></a>Generovat soubory se zakázaným inzerováním serveru
 
-Vygenerujte jenom soubor stub serveru ([/Server](/windows/win32/midl/-server) [zástupné procedury | None]).
+Generovat pouze soubor se zakázaným inzerováním serveru ([/server](/windows/win32/midl/-server) [stub|none]).
 
-**Vlastnit**
+**Choices**
 
-- **Stub** – zástupná procedura
-- **Žádné** – žádné
+- **Pahýl** - Pahýl
+- **Žádné** - Žádné
 
-### <a name="client-stub-file"></a>Soubor stub klienta
+### <a name="client-stub-file"></a>Soubor se zakázaným inzerováním klienta
 
-Zadejte soubor stub klienta ([/cstub](/windows/win32/midl/-cstub) [soubor]).
+Zadejte soubor se zakázaným inzerováním klienta ([/cstub](/windows/win32/midl/-cstub) [file]).
 
-### <a name="server-stub-file"></a>Soubor se zástupnými procedurami serveru
+### <a name="server-stub-file"></a>Soubor se zakázaným inzerováním serveru
 
-Zadejte soubor zástupných procedur serveru ([/sstub](/windows/win32/midl/-sstub) [soubor]).
+Zadejte soubor se zakázaným inzerováním serveru ([/sstub](/windows/win32/midl/-sstub) [file]).
 
 ### <a name="type-library-format"></a>Formát knihovny typů
 
-Určuje formát souboru knihovny typů ([/oldtlb |/newtlb]).
+Určuje formát souboru knihovny typů ([/oldtlb|/newtlb]).
 
-**Vlastnit**
+**Choices**
 
-- **NewFormat** – nový formát
-- **OldFormat** – starý formát
+- **NewFormat** - Nový formát
+- **OldFormat** - starý formát
 
-## <a name="advanced-property-page"></a>Upřesnit stránku vlastností
+## <a name="advanced-property-page"></a>Stránka rozšířené vlastnosti
 
-### <a name="c-preprocess-options"></a>Možnosti předzpracování jazyka C
+### <a name="c-preprocess-options"></a>C Možnosti předběžného zpracování
 
-Určuje přepínače předané preprocesoru kompilátoru jazyka C ([/cpp_optm](/windows/win32/midl/-cpp-opt) přepínačům).
+Určuje přepínače, které mají být předávány přepínacímu procesoru C ([/cpp_opt](/windows/win32/midl/-cpp-opt) přepínače).
 
-### <a name="undefine-preprocessor-definitions"></a>Zrušit Definice preprocesoru
+### <a name="undefine-preprocessor-definitions"></a>Nedefinovat definice preprocesoru
 
-Určuje jednu nebo více undefined, včetně maker MIDL ([/u](/windows/win32/midl/-U) [makra]).
+Určuje jednu nebo více nedefinovate, včetně maker MIDL ([/U](/windows/win32/midl/-U) [makra]).
 
 ### <a name="enable-error-checking"></a>Povolit kontrolu chyb
 
-Vyberte možnost kontroly chyb ([/Error All | None]).
+Vyberte možnost kontroly chyb ([/error all|none]).
 
-**Vlastnit**
+**Choices**
 
-- **EnableCustom** – vše
-- **Vše** – vše
-- **Žádné** – žádné
+- **EnableCustom** - vše
+- **Vše** - Vše
+- **Žádné** - Žádné
 
-### <a name="check-allocations"></a>Kontrolovat přidělení
+### <a name="check-allocations"></a>Zkontrolovat přidělení
 
-Podívejte se na chyby z důvodu nedostatku paměti ([/Error](/windows/win32/midl/-error) Allocation).
+Zkontrolujte chyby nedostatku paměti ([/error](/windows/win32/midl/-error) allocation).
 
-### <a name="check-bounds"></a>Kontrolovat meze
+### <a name="check-bounds"></a>Zkontrolovat hranice
 
-Kontrolní velikost vs specifikace přenosové délky ([/error](/windows/win32/midl/-error) bounds_check).
+Zkontrolujte velikost vs specifikace délky přenosu[(/error](/windows/win32/midl/-error) bounds_check).
 
-### <a name="check-enum-range"></a>Kontrolovat rozsah výčtu
+### <a name="check-enum-range"></a>Zkontrolovat rozsah výčtu
 
-Ověřte, jestli hodnoty výčtu mají být v povoleném rozsahu ([/Error](/windows/win32/midl/-error) Enum).
+Zkontrolujte, zda výčet hodnoty mají být v povoleném rozsahu ([/error](/windows/win32/midl/-error) výčet).
 
-### <a name="check-reference-pointers"></a>Kontrolovat referenční ukazatele
+### <a name="check-reference-pointers"></a>Kontrola ukazatelů odkazů
 
-Kontroluje, zda odkazují ukazatele na hodnotu nenulového typu ([/Error](/windows/win32/midl/-error) ref).
+Zkontrolujte ukazatele ref, které mají být non-null ([/error](/windows/win32/midl/-error) ref).
 
-### <a name="check-stub-data"></a>Kontrolovat data zástupných procedur
+### <a name="check-stub-data"></a>Kontrola dat se zakázaným inzerováním
 
-Vygeneruje další kontrolu platnosti dat zástupných procedur na straně serveru ([/error](/windows/win32/midl/-error) stub_data).
+Vyzařují další kontrolu platnosti dat se zakázaným inzerováním na straně serveru ([/error](/windows/win32/midl/-error) stub_data).
 
-### <a name="prepend-with-abi-namespace"></a>Předřadit obor názvů ABI
+### <a name="prepend-with-abi-namespace"></a>Předřadit s oborem názvů ABI
 
-Předřaďte obor názvů ABI všem typům.  ([/ns_prefix](/windows/win32/midl/-ns-prefix)).
+Předřadit obor názvů ABI na všechny typy.  ([/ns_prefix](/windows/win32/midl/-ns-prefix)).
 
 ### <a name="validate-parameters"></a>Ověřit parametry
 
-Vygenerujte Další informace pro ověřování parametrů ([/robust](/windows/win32/midl/-robust) | [/no_robust](/windows/win32/midl/-no-robust)).
+Vygenerujte další informace pro ověření parametrů ([/robust](/windows/win32/midl/-robust) | [/no_robust](/windows/win32/midl/-no-robust)).
 
 ### <a name="struct-member-alignment"></a>Zarovnání členů struktury
 
-Určuje úroveň balení struktur v cílovém systému (/ZpN).
+Určuje úroveň balení konstrukcí v cílovém systému (/ZpN).
 
-**Vlastnit**
+**Choices**
 
-- **Nenastavené** – nenastavené
-- **1 bajt** – Zp1
-- **2 bajt** – Zp2
-- **4 bajt** – Zp4
-- **8 bajtů** – ZP8
+- **Není nastaveno** - není nastaveno
+- **1 Bajt** - Zp1
+- **2 Bajt** - Zp2
+- **4 Bajt** - Zp4
+- **8 Bajt** - Zp8
 
-### <a name="redirect-output"></a>Přesměrovat výstup
+### <a name="redirect-output"></a>Výstup přesměrování
 
-Přesměruje výstup z obrazovky do souboru ([/o](/windows/win32/midl/-o) File).
+Přesměruje výstup z obrazovky na soubor ([/o.](/windows/win32/midl/-o)
 
 ### <a name="minimum-target-system"></a>Minimální cílový systém
 
-Nastavte minimální cílový systém ([/target](/windows/win32/midl/-target) řetězec).
+Nastavte minimální cílový systém ([/target](/windows/win32/midl/-target) STRING).

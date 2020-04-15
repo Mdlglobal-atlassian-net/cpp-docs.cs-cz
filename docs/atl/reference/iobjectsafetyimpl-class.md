@@ -1,5 +1,5 @@
 ---
-title: Iobjectsafetyimpl – třída
+title: Třída IObjectSafetyImpl
 ms.date: 11/04/2016
 f1_keywords:
 - IObjectSafetyImpl
@@ -13,19 +13,19 @@ helpviewer_keywords:
 - IObjectSafety, ATL implementation
 - IObjectSafetyImpl class
 ms.assetid: 64e32082-d910-4a8a-a5bf-ebed9145359d
-ms.openlocfilehash: 17a1b362f2cfe40be99c10298a780a6bf4f6419f
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: 6eee7585bc3c5587e106ab6b0cefb4b7129df59f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66503129"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81329654"
 ---
-# <a name="iobjectsafetyimpl-class"></a>Iobjectsafetyimpl – třída
+# <a name="iobjectsafetyimpl-class"></a>Třída IObjectSafetyImpl
 
-Tato třída poskytuje výchozí implementaci třídy `IObjectSafety` rozhraní umožňující klientská načíst a nastavit úrovně zabezpečení objektu.
+Tato třída poskytuje výchozí `IObjectSafety` implementaci rozhraní, která umožňuje klientovi načíst a nastavit úrovně bezpečnosti objektu.
 
 > [!IMPORTANT]
->  Tato třída a jejích členů nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime.
+> Tuto třídu a její členy nelze použít v aplikacích, které se spouštějí v prostředí Windows Runtime.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -37,37 +37,37 @@ class IObjectSafetyImpl
 #### <a name="parameters"></a>Parametry
 
 *T*<br/>
-Vaše třída odvozena od `IObjectSafetyImpl`.
+Vaše třída, odvozená z `IObjectSafetyImpl`.
 
 *dwSupportedSafety*<br/>
-Určuje možnosti podporované zabezpečení pro ovládací prvek. Může být jedna z následujících hodnot:
+Určuje podporované možnosti zabezpečení ovládacího prvku. Může se na nich vyvěšovat jedna z následujících hodnot:
 
-- INTERFACESAFE_FOR_UNTRUSTED_CALLER rozhraní identifikován [SetInterfaceSafetyOptions](#setinterfacesafetyoptions) parametr `riid` třeba bezpečné pro skriptování.
+- INTERFACESAFE_FOR_UNTRUSTED_CALLER Rozhraní identifikované parametrem `riid` [SetInterfaceSafetyOptions](#setinterfacesafetyoptions) by mělo být bezpečné pro skriptování.
 
-- INTERFACESAFE_FOR_UNTRUSTED_DATA rozhraní identifikován `SetInterfaceSafetyOptions` parametr `riid` by měl být zabezpečeny pro nedůvěryhodná data během inicializace.
+- INTERFACESAFE_FOR_UNTRUSTED_DATA Rozhraní identifikované `SetInterfaceSafetyOptions` `riid` parametrem by mělo být bezpečné pro nedůvěryhodná data během inicializace.
 
 ## <a name="members"></a>Členové
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[IObjectSafetyImpl::GetInterfaceSafetyOptions](#getinterfacesafetyoptions)|Načte bezpečnostní možnosti podporované v objektu, jakož i možnosti zabezpečení pro objekt aktuálně nastaven.|
-|[IObjectSafetyImpl::SetInterfaceSafetyOptions](#setinterfacesafetyoptions)|Vytvoří objekt bezpečné inicializace nebo pomocí skriptů.|
+|[iObjectSafetyImpl::GetInterfaceSafetyOptions](#getinterfacesafetyoptions)|Načte možnosti zabezpečení podporované objektem a také možnosti zabezpečení, které jsou aktuálně nastaveny pro objekt.|
+|[IObjectSafetyImpl::SetInterfaceSafetyOptions](#setinterfacesafetyoptions)|Umožňuje objekt bezpečné pro inicializaci nebo skriptování.|
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Name|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[IObjectSafetyImpl::m_dwCurrentSafety](#m_dwcurrentsafety)|Uloží aktuální úroveň zabezpečení daného objektu.|
+|[IObjectSafetyImpl::m_dwCurrentSafety](#m_dwcurrentsafety)|Ukládá aktuální úroveň bezpečnosti objektu.|
 
 ## <a name="remarks"></a>Poznámky
 
-Třída `IObjectSafetyImpl` poskytuje výchozí implementaci třídy `IObjectSafety`. `IObjectSafety` Rozhraní umožňuje klientovi načíst a nastavit úrovně zabezpečení objektu. Například můžete volat webový prohlížeč `IObjectSafety::SetInterfaceSafetyOptions` aby ovládací prvek bezpečný pro inicializaci nebo bezpečné pro skriptování.
+Třída `IObjectSafetyImpl` poskytuje výchozí `IObjectSafety`implementaci aplikace . Rozhraní `IObjectSafety` umožňuje klientovi načíst a nastavit úrovně bezpečnosti objektu. Webový prohlížeč může například `IObjectSafety::SetInterfaceSafetyOptions` volat, aby byl ovládací prvek bezpečný pro inicializaci nebo bezpečný pro skriptování.
 
-Všimněte si, že při použití [IMPLEMENTED_CATEGORY](category-macros.md#implemented_category) – makro s kategoriemi komponenty CATID_SafeForScripting a CATID_SafeForInitializing poskytuje alternativní způsob určení, že komponenta je bezpečné.
+Všimněte si, že použití [IMPLEMENTED_CATEGORY](category-macros.md#implemented_category) makra s kategoriemi CATID_SafeForScripting a CATID_SafeForInitializing součástí poskytuje alternativní způsob určení, že součást je bezpečná.
 
-**Související články** [ATL – tutoriál](../../atl/active-template-library-atl-tutorial.md), [vytvoření projektu ATL](../../atl/reference/creating-an-atl-project.md)
+**Související články** [ATL Výuka](../../atl/active-template-library-atl-tutorial.md), [Vytvoření projektu ATL](../../atl/reference/creating-an-atl-project.md)
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -79,9 +79,9 @@ Všimněte si, že při použití [IMPLEMENTED_CATEGORY](category-macros.md#impl
 
 **Záhlaví:** atlctl.h
 
-##  <a name="getinterfacesafetyoptions"></a>  IObjectSafetyImpl::GetInterfaceSafetyOptions
+## <a name="iobjectsafetyimplgetinterfacesafetyoptions"></a><a name="getinterfacesafetyoptions"></a>iObjectSafetyImpl::GetInterfaceSafetyOptions
 
-Načte bezpečnostní možnosti podporované v objektu, jakož i možnosti zabezpečení pro objekt aktuálně nastaven.
+Načte možnosti zabezpečení podporované objektem a také možnosti zabezpečení, které jsou aktuálně nastaveny pro objekt.
 
 ```
 HRESULT GetInterfaceSafetyOptions(
@@ -92,24 +92,24 @@ HRESULT GetInterfaceSafetyOptions(
 
 ### <a name="remarks"></a>Poznámky
 
-Implementace vrátí příslušné hodnoty pro každé rozhraní, které podporuje implementaci objektu `IUnknown::QueryInterface`.
+Implementace vrátí příslušné hodnoty pro všechny rozhraní podporované implementací objektu `IUnknown::QueryInterface`.
 
 > [!IMPORTANT]
->  Libovolný objekt, který podporuje `IObjectSafety` je zodpovědná za své vlastní zabezpečení a libovolný objekt, který deleguje. Programátor musí přijímat do účtu problémy vzniklé spouštěním kódu v kontextu uživatele, skriptování napříč weby a provádí kontrolu vhodný zóny.
+> Každý objekt, `IObjectSafety` který podporuje je zodpovědný za své vlastní zabezpečení a že libovolný objekt, který deleguje. Programátor musí vzít v úvahu problémy vyplývající ze spuštění kódu v kontextu uživatele, skriptování mezi weby a provádění vhodné kontroly zóny.
 
-Zobrazit [IObjectSafety::GetInterfaceSafetyOptions](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768223\(v=vs.85\)) ve Windows SDK.
+Viz [IObjectSafety::GetInterfaceSafetyOptions](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768223\(v=vs.85\)) v sadě Windows SDK.
 
-##  <a name="m_dwcurrentsafety"></a>  IObjectSafetyImpl::m_dwCurrentSafety
+## <a name="iobjectsafetyimplm_dwcurrentsafety"></a><a name="m_dwcurrentsafety"></a>IObjectSafetyImpl::m_dwCurrentSafety
 
-Uloží aktuální úroveň zabezpečení daného objektu.
+Ukládá aktuální úroveň bezpečnosti objektu.
 
 ```
 DWORD m_dwCurrentSafety;
 ```
 
-##  <a name="setinterfacesafetyoptions"></a>  IObjectSafetyImpl::SetInterfaceSafetyOptions
+## <a name="iobjectsafetyimplsetinterfacesafetyoptions"></a><a name="setinterfacesafetyoptions"></a>IObjectSafetyImpl::SetInterfaceSafetyOptions
 
-Vytvoří objekt bezpečné inicializace nebo skriptování nastavením [m_dwCurrentSafety](#m_dwcurrentsafety) člena na odpovídající hodnotu.
+Změní objekt na inicializaci nebo skriptování nastavením [m_dwCurrentSafety](#m_dwcurrentsafety) člena na příslušnou hodnotu.
 
 ```
 HRESULT SetInterfaceSafetyOptions(
@@ -120,14 +120,14 @@ HRESULT SetInterfaceSafetyOptions(
 
 ### <a name="remarks"></a>Poznámky
 
-Implementace vrátí E_NOINTERFACE pro libovolné rozhraní nepodporuje implementace objektu `IUnknown::QueryInterface`.
+Implementace vrátí E_NOINTERFACE pro jakékoli rozhraní, které není `IUnknown::QueryInterface`podporováno implementací objektu .
 
 > [!IMPORTANT]
->  Libovolný objekt, který podporuje `IObjectSafety` je zodpovědná za své vlastní zabezpečení a libovolný objekt, který deleguje. Programátor musí přijímat do účtu problémy vzniklé spouštěním kódu v kontextu uživatele, skriptování napříč weby a provádí kontrolu vhodný zóny.
+> Každý objekt, `IObjectSafety` který podporuje je zodpovědný za své vlastní zabezpečení a že libovolný objekt, který deleguje. Programátor musí vzít v úvahu problémy vyplývající ze spuštění kódu v kontextu uživatele, skriptování mezi weby a provádění vhodné kontroly zóny.
 
-Zobrazit [IObjectSafety::SetInterfaceSafetyOptions](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768225\(v=vs.85\)) ve Windows SDK.
+Viz [IObjectSafety::SetInterfaceSafetyOptions](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768225\(v=vs.85\)) v sadě Windows SDK.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[IObjectSafety rozhraní](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768224\(v=vs.85\))<br/>
-[Přehled tříd](../../atl/atl-class-overview.md)
+[IObjectSafety Interface](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768224\(v=vs.85\))<br/>
+[Přehled třídy](../../atl/atl-class-overview.md)

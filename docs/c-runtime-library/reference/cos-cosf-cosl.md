@@ -1,10 +1,11 @@
 ---
 title: cos, cosf, cosl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - cos
 - cosf
 - cosl
+- _o_cos
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +36,12 @@ helpviewer_keywords:
 - trigonometric functions
 - cosines, calculating
 ms.assetid: ae90435e-6b68-4a47-a81f-be87d5c08f16
-ms.openlocfilehash: 9ec612aa9f8c6eaf1731d62b654d45841cdfa159
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 536d9a235ef0d4b2bb68362645b5b4e03d8f37a7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80170252"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81348467"
 ---
 # <a name="cos-cosf-cosl"></a>cos, cosf, cosl
 
@@ -60,37 +62,39 @@ long double cos( long double x );  // C++ only
 
 ### <a name="parameters"></a>Parametry
 
-*znak*<br/>
+*X*<br/>
 Úhel v radiánech.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Kosinus hodnoty *x*. Pokud *x* je větší nebo rovno 263 nebo menší než nebo rovno-263, dojde ke ztrátě významnosti ve výsledku.
+Kosinus *x*. Pokud *x* je větší nebo rovno 263 nebo menší nebo rovno -263, dojde ke ztrátě významnosti ve výsledku.
 
-|Vstup|Výjimka SEH|Výjimka matherr|
+|Vstup|Výjimka SEH|Výjimka Matherr|
 |-----------|-------------------|-----------------------|
-|QNAN, ZASÁHNOUT|Žádná|**_DOMAIN**|
-|± INF|**NENÍ**|**_DOMAIN**|
+|± QNAN, IND|Žádná|**_DOMAIN**|
+|± INF|**Neplatný**|**_DOMAIN**|
 
 ## <a name="remarks"></a>Poznámky
 
-Vzhledem C++ k tomu, že umožňuje přetížení, můžete volat přetížení ovládacího programu **cos** , který přijímá a vrací hodnoty **typu float** nebo **Long** **Double** . V programu v jazyce C provede funkce **cos** vždycky a vrátí hodnotu **Double**.
+Protože C++ umožňuje přetížení, můžete volat přetížení **cos,** které take a return **float** nebo **dlouhé** **dvojité** hodnoty. V programu C, **protože vždy** trvá a vrací **double**.
+
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
-|Rutina|Povinné záhlaví jazyka C|Požadovaná C++ hlavička|
+|Rutina|Povinná hlavička C|Povinná hlavička jazyka C++|
 |-------------|---------------------|-|
-|**cos**, **cosh –** , **cosf –**|\<Math. h >|\<cmath > nebo \<Math. h >|
+|**cos**, **cosh**, **cosf**|\<math.h>|\<cmath> \<nebo math.h>|
 
-Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
-Podívejte se na příklad ve [Sin, sinf –, Sinl](sin-sinf-sinl.md).
+Viz příklad v [hříchu, sinf, sinl](sin-sinf-sinl.md).
 
 ## <a name="see-also"></a>Viz také
 
-[Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)<br/>
+[Podpora s plovoucí desetinnou tálicí](../../c-runtime-library/floating-point-support.md)<br/>
 [acos, acosf, acosl](acos-acosf-acosl.md)<br/>
 [asin, asinf, asinl](asin-asinf-asinl.md)<br/>
 [atan, atanf, atanl, atan2, atan2f, atan2l](atan-atanf-atanl-atan2-atan2f-atan2l.md)<br/>

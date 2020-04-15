@@ -1,9 +1,11 @@
 ---
 title: _get_dstbias
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _get_dstbias
 - __dstbias
+- _o___dstbias
+- _o__get_dstbias
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -30,16 +33,16 @@ helpviewer_keywords:
 - get_dstbias function
 - _get_dstbias function
 ms.assetid: e751358c-1ecc-411b-ae2c-81b2ec54ea45
-ms.openlocfilehash: a48cc4fe35a1bbd18342750571214ed0977cf3ee
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 969b6d2dfd83a1a136fdfb3d17f8f843337b792c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70955940"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81345233"
 ---
 # <a name="_get_dstbias"></a>_get_dstbias
 
-Načte časový posun letního času v sekundách.
+Načte posun letního času v sekundách.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -49,20 +52,22 @@ error_t _get_dstbias( int* seconds );
 
 ### <a name="parameters"></a>Parametry
 
-*Second*<br/>
+*Sekund*<br/>
 Posun v sekundách letního času.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Nula v případě úspěchu nebo **errno** hodnoty, pokud dojde k chybě.
+Nula, pokud je úspěšná, nebo hodnota **errno,** pokud dojde k chybě.
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce **_get_dstbias** načítá počet sekund v letním čase jako celé číslo. Pokud je aktivní letní čas, je výchozí posun 3600 sekund, což je počet sekund v jedné hodině (i když pár oblastí sleduje posun o dvě hodiny).
+Funkce **_get_dstbias** načte počet sekund v letním čase jako celé číslo. Pokud letní čas je v platnosti, výchozí posun je 3600 sekund, což je počet sekund v jedné hodině (i když několik oblastí sledovat dvouhodinový posun).
 
-Pokud má sekundy **hodnotu null**, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, tato funkce nastaví **errno** na **EINVAL** a vrátí **EINVAL**.
+Pokud je *hodnota 000 000* **000**000 , je vyvolána neplatná obslužná rutina parametru, jak je popsáno v části [Ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je spuštění povoleno pokračovat, tato funkce nastaví **errno** na **EINVAL** a vrátí **Funkce EINVAL**.
 
-Doporučujeme použít tuto funkci namísto makra **_dstbias** nebo zastaralé funkce **__dstbias**.
+Doporučujeme použít tuto funkci namísto **_dstbias** maker nebo zastaralé funkce **__dstbias**.
+
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
@@ -70,11 +75,11 @@ Doporučujeme použít tuto funkci namísto makra **_dstbias** nebo zastaralé f
 |-------------|---------------------|
 |**_get_dstbias**|\<time.h>|
 
-Další informace najdete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Správa času](../../c-runtime-library/time-management.md)<br/>
+[Časová správa](../../c-runtime-library/time-management.md)<br/>
 [errno, _doserrno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)<br/>
 [_get_daylight](get-daylight.md)<br/>
 [_get_timezone](get-timezone.md)<br/>

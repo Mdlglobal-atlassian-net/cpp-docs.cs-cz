@@ -1,6 +1,6 @@
 ---
-title: Třída Output
-description: Odkaz C++ na třídu výstupu sady SDK pro Build Insights
+title: Třída FileOutput
+description: C++ Build Insights SDK FileOutput odkaz na třídu.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 1c4053d0378ddb9d5dd061bbc9889c454dc9b52c
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 37823da8a4aaac0ce4094583b8aee8ac1eb04aaa
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78333340"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81324806"
 ---
-# <a name="fileoutput-class"></a>Třída Output
+# <a name="fileoutput-class"></a>Třída FileOutput
 
 ::: moniker range="<=vs-2015"
 
-Sada C++ SDK pro Build Insights je kompatibilní se sadou Visual Studio 2017 a novější. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek selektor verzí sady Visual Studio pro tento článek na sadu Visual Studio 2017 nebo Visual Studio 2019.
+Sada C++ Build Insights SDK je kompatibilní s Visual Studio 2017 a vyšší. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek pro výběr **verze** sady Visual Studio pro tento článek na Visual Studio 2017 nebo Visual Studio 2019. Nachází se v horní části obsahu na této stránce.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Třída `FileOutput` se používá s funkcemi [MatchEvent](../functions/match-event.md), [MatchEventInMemberFunction](../functions/match-event-in-member-function.md), [MatchEventStack](../functions/match-event-stack.md)a [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md) . Použijte ji ke spárování [EXECUTABLE_IMAGE_OUTPUT](../event-table.md#executable-image-output)události [EXP_OUTPUT](../event-table.md#exp-output), [IMP_LIB_OUTPUT](../event-table.md#imp-lib-output), [LIB_OUTPUT](../event-table.md#lib-output)nebo [OBJ_OUTPUT](../event-table.md#obj-output) .
+Třída `FileOutput` se používá s funkcemi [MatchEvent](../functions/match-event.md), [MatchEventInMemberFunction](../functions/match-event-in-member-function.md), [MatchEventStack](../functions/match-event-stack.md)a [MatchEventStackInMemberFunction.](../functions/match-event-stack-in-member-function.md) Slouží k tomu, aby odpovídala události [EXECUTABLE_IMAGE_OUTPUT](../event-table.md#executable-image-output), [EXP_OUTPUT](../event-table.md#exp-output), [IMP_LIB_OUTPUT](../event-table.md#imp-lib-output), [LIB_OUTPUT](../event-table.md#lib-output)nebo [OBJ_OUTPUT.](../event-table.md#obj-output)
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -52,18 +52,18 @@ public:
 
 ## <a name="members"></a>Členové
 
-Společně s děděnými členy ze své základní třídy [SimpleEvent](simple-event.md) obsahuje Třída `FileOutput` následující členy:
+Spolu s zděděnými členy ze základní `FileOutput` třídy [SimpleEvent](simple-event.md) obsahuje třída následující členy:
 
 ### <a name="constructors"></a>Konstruktory
 
-[Výstup](#file-output)
+[Výstup souboru](#file-output)
 
 ### <a name="functions"></a>Functions
 
-[Typ](#type)
-[cesty](#path)
+[Path](#path)
+[Typ](#type) cesty
 
-## <a name="file-output"></a>Výstup
+## <a name="fileoutput"></a><a name="file-output"></a>Výstup souboru
 
 ```cpp
 FileOutput(const RawEvent& event);
@@ -71,10 +71,10 @@ FileOutput(const RawEvent& event);
 
 ### <a name="parameters"></a>Parametry
 
-\ *události*
-Událost [EXECUTABLE_IMAGE_OUTPUT](../event-table.md#executable-image-output), [EXP_OUTPUT](../event-table.md#exp-output), [IMP_LIB_OUTPUT](../event-table.md#imp-lib-output), [LIB_OUTPUT](../event-table.md#lib-output)nebo [OBJ_OUTPUT](../event-table.md#obj-output) .
+*Událost*\
+Událost [EXECUTABLE_IMAGE_OUTPUT](../event-table.md#executable-image-output), [EXP_OUTPUT](../event-table.md#exp-output), [IMP_LIB_OUTPUT](../event-table.md#imp-lib-output), [LIB_OUTPUT](../event-table.md#lib-output)nebo [OBJ_OUTPUT.](../event-table.md#obj-output)
 
-## <a name="path"></a>Dílčí
+## <a name="path"></a><a name="path"></a>Cestu
 
 ```cpp
 const wchar_t Path() const;
@@ -84,7 +84,7 @@ const wchar_t Path() const;
 
 Absolutní cesta k výstupnímu souboru.
 
-## <a name="type"></a>Textový
+## <a name="type"></a><a name="type"></a>Typ
 
 ```cpp
 Type Type() const;

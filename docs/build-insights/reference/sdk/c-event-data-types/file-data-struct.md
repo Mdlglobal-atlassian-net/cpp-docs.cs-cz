@@ -1,6 +1,6 @@
 ---
-title: Struktura FILE_DATA
-description: Odkaz C++ na strukturu FILE_DATA Build Insights SDK
+title: FILE_DATA struktura
+description: C++ Build Insights SDK FILE_DATA odkaz na strukturu.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,18 +9,18 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 72cae8c8eb81bdb8d94897c46c5af90c89e92ab4
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 6b7b0129c54fa4b1d5285bafb38761da45bab4e5
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78333753"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81325593"
 ---
-# <a name="file_data-structure"></a>Struktura FILE_DATA
+# <a name="file_data-structure"></a>FILE_DATA struktura
 
 ::: moniker range="<=vs-2015"
 
-Sada C++ SDK pro Build Insights je kompatibilní se sadou Visual Studio 2017 a novější. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek selektor verzí sady Visual Studio pro tento článek na sadu Visual Studio 2017 nebo Visual Studio 2019.
+Sada C++ Build Insights SDK je kompatibilní s Visual Studio 2017 a vyšší. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek pro výběr **verze** sady Visual Studio pro tento článek na Visual Studio 2017 nebo Visual Studio 2019. Nachází se v horní části obsahu na této stránce.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
@@ -42,7 +42,7 @@ typedef struct FILE_DATA_TAG
 
 |  |  |
 |--|--|
-| `Path` | Absolutní cesta k souboru |
-| `TypeCode` | Kód popisující typ souboru. Další informace najdete v tématu [FILE_TYPE_CODE](file-type-code-enum.md). |
+| `Path` | Absolutní cesta souboru |
+| `TypeCode` | Kód popisující typ souboru. Další informace naleznete [v tématu FILE_TYPE_CODE](file-type-code-enum.md). |
 
 ::: moniker-end

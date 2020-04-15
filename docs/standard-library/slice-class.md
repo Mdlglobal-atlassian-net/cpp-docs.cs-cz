@@ -12,54 +12,54 @@ helpviewer_keywords:
 - std::slice [C++], start
 - std::slice [C++], stride
 ms.assetid: 00f0b03d-d657-4b81-ba53-5a9034bb2bf2
-ms.openlocfilehash: 830e345eb7522cef44dbf6e727a976fb79c1e081
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 05f87cbb6061e205f9731d2a903ce52a2482b214
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/11/2020
-ms.locfileid: "79094841"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81336717"
 ---
 # <a name="slice-class"></a>slice – třída
 
-Třída nástrojů pro valarray, která se používá k definování jednorozměrné podmnožiny nadřazeného valarray. Pokud je valarray považována za dvourozměrnou matici se všemi prvky v poli, pak řez z dvojrozměrného pole vyextrahuje vektor v jednom rozměru.
+Třída nástroje valarray, která se používá k definování jednorozměrných podmnožiny nadřazené valarray. Pokud je valarray považován za dvojrozměrnou matici se všemi prvky v poli, pak řez extrahuje vektor v jedné dimenzi z dvojrozměrného pole.
 
 ## <a name="remarks"></a>Poznámky
 
-Třída ukládá parametry, které charakterizují objekt typu [slice_array](../standard-library/slice-array-class.md) podmnožina valarray je nepřímo vytvořena, když se objekt řezu zobrazí jako argument pro objekt třídy [valarray](../standard-library/valarray-class.md#op_at) **\<typu >** . Uložené hodnoty, které určují podmnožinu vybrané z nadřazené valarray, zahrnují:
+Třída ukládá parametry, které charakterizují objekt typu [slice_array](../standard-library/slice-array-class.md) Podmnožina valarray je nepřímo vytvořena, když se objekt řezu třídy zobrazí jako argument pro objekt třídy [valarray](../standard-library/valarray-class.md#op_at)**\<Type>**. Uložené hodnoty, které určují podmnožinu vybranou z nadřazeného pole valarray, zahrnují:
 
-- Počáteční index v valarray.
+- Počáteční index v poli valarray.
 
 - Celková délka nebo počet prvků v řezu.
 
-- Rozteč nebo vzdálenost mezi následnými indexy prvků v valarray.
+- Krok nebo vzdálenost mezi následnými indexy prvků v poli valarray.
 
-Je-li sada definovaná v řezu podmnožinou konstantního valarray, pak je řez novou valarray. Je-li sada definovaná v řezu podmnožinou nekonstantního valarray, pak má řez referenční sémantiku původní valarray. Mechanismus vyhodnocení pro nekonstantní valarrays šetří čas a paměť.
+Pokud je sada definovaná řezem podmnožinou konstantního valarrayu, pak je řez novým valarrayem. Pokud je sada definovaná řezem podmnožinou nestálého pole valarray, pak má řez referenční sémantiku na původní valarray. Mechanismus vyhodnocení pro nekonstantní valarrays šetří čas a paměť.
 
-Operace na valarrays jsou zaručeny pouze v případě, že zdrojové a cílové podmnožiny, které jsou definovány řezy, jsou jedinečné a všechny indexy jsou platné.
+Operace na valarrays jsou zaručeny pouze v případě, že zdrojové a cílové podmnožiny definované řezy jsou odlišné a všechny indexy jsou platné.
 
 ### <a name="constructors"></a>Konstruktory
 
 |Konstruktor|Popis|
 |-|-|
-|[průřez](#slice)|Definuje podmnožinu `valarray`, která se skládá z několika prvků, které jsou rovny stejné vzdálenosti a které začínají specifikovaným elementem.|
+|[Plátek](#slice)|Definuje podmnožinu, `valarray` která se skládá z několika prvků, které jsou od sebe vzdáleny ve stejné vzdálenosti a které začínají určeným prvkem.|
 
 ### <a name="member-functions"></a>Členské funkce
 
 |Členská funkce|Popis|
 |-|-|
-|[hodnota](#size)|Najde počet prvků v řezu `valarray`.|
-|[start](#start)|Najde počáteční index řezu `valarray`.|
-|[mezer](#stride)|Najde vzdálenost mezi prvky v řezu `valarray`.|
+|[Velikost](#size)|Vyhledá počet prvků v řezu `valarray`.|
+|[Spustit](#start)|Najde počáteční index řezu `valarray`.|
+|[Krok](#stride)|Vyhledá vzdálenost mezi prvky v `valarray`řezu .|
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<valarray >
+**Záhlaví:** \<valarray>
 
 **Obor názvů:** std
 
-## <a name="size"></a>řez:: velikost
+## <a name="slicesize"></a><a name="size"></a>řez:velikost
 
-Najde počet prvků v řezu valarray.
+Vyhledá počet prvků v řezu valarray.
 
 ```cpp
 size_t size() const;
@@ -67,7 +67,7 @@ size_t size() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Počet elementů v řezu valarray.
+Počet prvků v řezu valarray.
 
 ### <a name="example"></a>Příklad
 
@@ -121,9 +121,9 @@ The slice of valarray va is vaResult = va[slice( 3, 6, 3)] =
 The size of slice vaSlice is: 6.
 ```
 
-## <a name="slice"></a>řez:: Slice
+## <a name="sliceslice"></a><a name="slice"></a>řez::řez
 
-Definuje podmnožinu valarray, která se skládá z několika prvků, které jsou rovny stejné vzdálenosti a které začínají specifikovaným elementem.
+Definuje podmnožinu valarray, který se skládá z počtu prvků, které jsou stejné vzdálenosti od sebe a které začínají na zadaný prvek.
 
 ```cpp
 slice();
@@ -137,21 +137,21 @@ slice(
 ### <a name="parameters"></a>Parametry
 
 *_StartIndex*\
-Index valarray prvního prvku v podmnožině.
+Index valarray prvního prvku v podsadě.
 
 *_Len*\
-Počet prvků v podmnožině.
+Počet prvků v podsadě.
 
-\ *mezer*
-Vzdálenost mezi prvky v podmnožině.
+*Krok*\
+Vzdálenost mezi prvky v podsadě.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Výchozí konstruktor ukládá nuly pro počáteční index, celkovou délku a rozteč. Druhý konstruktor ukládá *_StartIndex* pro počáteční index, *_LEN* pro celkovou délku a *Rozteč* pro rozteč.
+Výchozí konstruktor ukládá nuly pro počáteční index, celkovou délku a krok. Druhý konstruktor ukládá *_StartIndex* pro počáteční index, *_Len* pro celkovou délku a *krok* pro krok.
 
 ### <a name="remarks"></a>Poznámky
 
-Rozteč může být záporná.
+Krok může být negativní.
 
 ### <a name="example"></a>Příklad
 
@@ -194,7 +194,7 @@ The slice of valarray va is vaResult:
 va[slice( 1, 7, 3)] = ( 4 10 16 22 28 34 40 ).
 ```
 
-## <a name="start"></a>řez:: Start
+## <a name="slicestart"></a><a name="start"></a>řez:začátek
 
 Najde počáteční index řezu valarray.
 
@@ -204,7 +204,7 @@ size_t start() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Počáteční index řezu valarray
+Počáteční index řezu valarray.
 
 ### <a name="example"></a>Příklad
 
@@ -252,7 +252,7 @@ The slice of valarray va is vaResult = va[slice( 3, 6, 3)] =
 The start index of slice vaSlice is: 3.
 ```
 
-## <a name="stride"></a>Slice:: rozteč
+## <a name="slicestride"></a><a name="stride"></a>řez::krok
 
 Najde vzdálenost mezi prvky v řezu valarray.
 
