@@ -1,9 +1,11 @@
 ---
 title: gets, _getws
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _getws
 - gets
+- _o__getws
+- _o_gets
 api_location:
 - msvcr80.dll
 - msvcr90.dll
@@ -13,6 +15,7 @@ api_location:
 - msvcrt.dll
 - msvcr100.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -31,22 +34,22 @@ helpviewer_keywords:
 - gets function
 - standard input, reading from
 ms.assetid: 1ec2dd4b-f801-48ea-97c2-892590f16024
-ms.openlocfilehash: f4e052f91dd2b4adfd5fd7e1ad7c81e0e5b07a11
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: a1fd3218f75079554d049d4ef4c3691a2fbdd542
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75300271"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81349324"
 ---
 # <a name="gets-_getws"></a>gets, _getws
 
-Získá řádek z datového proudu `stdin`. K dispozici jsou bezpečnější verze těchto funkcí; viz [gets_s, _getws_s](../c-runtime-library/reference/gets-s-getws-s.md).
+Získá řádek z `stdin` datového proudu. K dispozici jsou bezpečnější verze těchto funkcí. viz [gets_s, _getws_s](../c-runtime-library/reference/gets-s-getws-s.md).
 
 > [!IMPORTANT]
->  Tyto funkce jsou zastaralé. Počínaje verzí Visual Studio 2015 nejsou k dispozici v CRT. Zabezpečené verze těchto funkcí, gets_s a _getws_s, jsou stále k dispozici. Informace o těchto alternativních funkcích naleznete v tématu [gets_s, _getws_s](../c-runtime-library/reference/gets-s-getws-s.md).
+> Tyto funkce jsou zastaralé. Počínaje Visual Studio 2015, nejsou k dispozici v CRT. Zabezpečené verze těchto funkcí, gets_s a _getws_s, jsou stále k dispozici. Informace o těchto alternativních funkcích naleznete [v tématu gets_s, _getws_s](../c-runtime-library/reference/gets-s-getws-s.md).
 
 > [!IMPORTANT]
->  Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime. Další informace najdete v tématu [funkce CRT nejsou v aplikacích Univerzální platforma Windows podporovány](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Toto rozhraní API nelze použít v aplikacích, které se spouštějí v prostředí Windows Runtime. Další informace naleznete v tématu [funkce CRT, které nejsou podporovány v aplikacích univerzální platformy Windows](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -69,25 +72,27 @@ wchar_t *_getws(
 
 #### <a name="parameters"></a>Parametry
 
-*vyrovnávací paměti*<br/>
+*Vyrovnávací paměti*<br/>
 Umístění úložiště pro vstupní řetězec.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Vrátí svůj argument, pokud byl úspěšný. Ukazatel s **hodnotou null** indikuje stav chyby nebo konce souboru. K určení, která z nich se stala, použijte [trajekt](../c-runtime-library/reference/ferror.md) nebo [feof](../c-runtime-library/reference/feof.md) . Pokud je `buffer` **null**, tyto funkce vyvolají obslužnou rutinu neplatného parametru, jak je popsáno v tématu [ověřování parametru](../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, vrátí tyto funkce **hodnotu null** a nastaví errno na `EINVAL`.
+Vrátí svůj argument, pokud je úspěšný. Ukazatel **NULL** označuje chybu nebo podmínku konce souboru. K určení, který z nich se stal, použijte [ferror](../c-runtime-library/reference/ferror.md) nebo [feof.](../c-runtime-library/reference/feof.md) Pokud `buffer` je **NULL**, tyto funkce vyvolat neplatný obslužnou rutinu parametru, jak je popsáno v [ověření parametru](../c-runtime-library/parameter-validation.md). Pokud je spuštění povoleno pokračovat, tyto funkce vrátí `EINVAL` **hodnotu NULL** a nastaví hodnotu errno na .
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce `gets` čte řádek ze standardního vstupního streamu `stdin` a ukládá ho do `buffer`. Řádek se skládá ze všech znaků až do a včetně prvního znaku nového řádku (' \n '). před vrácením řádku `gets` pak nahradí znak nového řádku znakem null (' \ 0 '). Naproti tomu funkce `fgets` zachová znak nového řádku. `_getws` je verze `gets`s velkým znakem; jeho argument a návratová hodnota jsou řetězce s velkým znakem.
+Funkce `gets` přečte řádek ze standardního vstupního datového proudu `stdin` a uloží jej do `buffer`aplikace . Řádek se skládá ze všech znaků až do prvního znaku nového řádku (\n'). `gets`před vrácením řádku nahradí znak nového řádku znakem null (\0). Naproti tomu `fgets` funkce zachová znak nového řádku. `_getws`je širokoznaková verze `gets`aplikace ; jeho argument a vrácená hodnota jsou řetězce širokých znaků.
 
 > [!IMPORTANT]
->  Vzhledem k tomu, že neexistuje žádný způsob, jak omezit počet čtených znaků načtený, nedůvěryhodný vstup může snadno způsobit přetečení vyrovnávací paměti. Místo nich se používá `fgets`.
+> Vzhledem k tomu, že neexistuje žádný způsob, jak omezit počet znaků čtených získá, nedůvěryhodný vstup může snadno způsobit přetečení vyrovnávací paměti. Místo toho použijte `fgets`.
 
-V C++nástroji mají tyto funkce přetížení šablony, které vyvolávají novější a zabezpečené protějšky těchto funkcí. Další informace najdete v tématu [přetížení zabezpečení šablon](../c-runtime-library/secure-template-overloads.md).
+V jazyce C++ mají tyto funkce přetížení šablony, které vyvolávají novější, zabezpečené protějšky těchto funkcí. Další informace naleznete [v tématu Secure Template Overloads](../c-runtime-library/secure-template-overloads.md).
+
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE & _MBCS není definováno.|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE & _MBCS není definováno|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |`_getts`|`gets`|`gets`|`_getws`|
 
@@ -96,9 +101,9 @@ V C++nástroji mají tyto funkce přetížení šablony, které vyvolávají nov
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
 |`gets`|\<stdio.h>|
-|`_getws`|\<stdio. h > nebo \<WCHAR. h >|
+|`_getws`|\<stdio.h> \<nebo wchar.h>|
 
-Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -118,16 +123,16 @@ int main( void )
 }
 ```
 
-Všimněte si, že vstup delší než 20 znaků způsobí přetečení řádkové vyrovnávací paměti a téměř jistě způsobí, že se program zhroutí.
+Všimněte si, že vstup delší než 20 znaků přeteče vyrovnávací paměť řádku a téměř jistě způsobí selhání programu.
 
 ```Output
 
 Hello there!The line entered was: Hello there!
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Vstup/výstup datového proudu](../c-runtime-library/stream-i-o.md)<br/>
+[I/O proudu](../c-runtime-library/stream-i-o.md)<br/>
 [fgets, fgetws](../c-runtime-library/reference/fgets-fgetws.md)<br/>
 [fputs, fputws](../c-runtime-library/reference/fputs-fputws.md)<br/>
 [puts, _putws](../c-runtime-library/reference/puts-putws.md)

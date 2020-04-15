@@ -1,5 +1,5 @@
 ---
-title: Chwndrendertarget – třída
+title: CHwndRenderTarget – třída
 ms.date: 11/04/2016
 f1_keywords:
 - CHwndRenderTarget
@@ -26,14 +26,14 @@ helpviewer_keywords:
 - CHwndRenderTarget [MFC], Resize
 - CHwndRenderTarget [MFC], m_pHwndRenderTarget
 ms.assetid: aa65b69f-7202-46ea-af81-ef325da0b840
-ms.openlocfilehash: bf446cdf1ea064943ff92d66ac89b0e4177e6910
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 24cf4127c2f429f66143af3a0f49625f23a4e6ee
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62345783"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372455"
 ---
-# <a name="chwndrendertarget-class"></a>Chwndrendertarget – třída
+# <a name="chwndrendertarget-class"></a>CHwndRenderTarget – třída
 
 Obálka pro ID2D1HwndRenderTarget.
 
@@ -47,40 +47,40 @@ class CHwndRenderTarget : public CRenderTarget;
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CHwndRenderTarget::CHwndRenderTarget](#chwndrendertarget)|Vytvoří objekt chwndrendertarget – od HWND.|
+|[CHwndRenderTarget::CHwndRenderTarget](#chwndrendertarget)|Vytvoří objekt CHwndRenderTarget z HWND.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CHwndRenderTarget::Attach](#attach)|Bude k obrazci existující vykreslení rozhraní cílového objektu|
-|[CHwndRenderTarget::CheckWindowState](#checkwindowstate)|Určuje, zda je occluded HWND přidružené k tento cíl vykreslování.|
-|[CHwndRenderTarget::Create](#create)|Vytvoří přidružený k oknu cíl vykreslování|
-|[CHwndRenderTarget::Detach](#detach)|Odpojí vykreslování cílového rozhraní z objektu|
-|[CHwndRenderTarget::GetHwnd](#gethwnd)|Vrací HWND přidružený k tomuto cíl vykreslování.|
-|[CHwndRenderTarget::GetHwndRenderTarget](#gethwndrendertarget)|Vrátí ID2D1HwndRenderTarget rozhraní.|
-|[CHwndRenderTarget::ReCreate](#recreate)|Znovu vytvoří cíl vykreslování přidružený k oknu|
-|[CHwndRenderTarget::Resize](#resize)|Změní velikost cíle vykreslování na velikost zadané pixelů|
+|[CHwndRenderTarget::Připojit](#attach)|Připojí k objektu existující cílové rozhraní vykreslení.|
+|[CHwndRenderTarget::CheckWindowState](#checkwindowstate)|Označuje, zda hwnd spojené s tímto cílem vykreslení je uzavřen.|
+|[CHwndRenderTarget::Vytvořit](#create)|Vytvoří cíl vykreslení přidružený k oknu.|
+|[CHwndRenderTarget::Detach](#detach)|Odpojení vykreslení cílového rozhraní od objektu|
+|[CHwndRenderTarget::GetHwnd](#gethwnd)|Vrátí HWND přidružené k tomuto cíli vykreslení.|
+|[CHwndRenderTarget::GetHwndRenderTarget](#gethwndrendertarget)|Vrátí rozhraní ID2D1HwndRenderTarget.|
+|[CHwndRenderTarget::Znovu vytvořit](#recreate)|Znovu vytvoří cíl vykreslení přidružený k oknu.|
+|[CHwndRenderTarget::Změna velikosti](#resize)|Změní velikost cíle vykreslení na zadanou velikost obrazového bodu.|
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CHwndRenderTarget::operator ID2D1HwndRenderTarget*](#operator_id2d1hwndrendertarget_star)|Vrátí ID2D1HwndRenderTarget rozhraní.|
+|[CHwndRenderTarget::operátor ID2D1HwndRenderTarget*](#operator_id2d1hwndrendertarget_star)|Vrátí rozhraní ID2D1HwndRenderTarget.|
 
-### <a name="protected-data-members"></a>Chránění členové dat
+### <a name="protected-data-members"></a>Členové chráněných dat
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
 |[CHwndRenderTarget::m_pHwndRenderTarget](#m_phwndrendertarget)|Ukazatel na objekt ID2D1HwndRenderTarget.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObjekt](../../mfc/reference/cobject-class.md)
 
-[CRenderTarget](../../mfc/reference/crendertarget-class.md)
+[Cíl CRender](../../mfc/reference/crendertarget-class.md)
 
 [CHwndRenderTarget](../../mfc/reference/chwndrendertarget-class.md)
 
@@ -88,9 +88,9 @@ class CHwndRenderTarget : public CRenderTarget;
 
 **Záhlaví:** afxrendertarget.h
 
-##  <a name="attach"></a>  CHwndRenderTarget::Attach
+## <a name="chwndrendertargetattach"></a><a name="attach"></a>CHwndRenderTarget::Připojit
 
-Bude k obrazci existující vykreslení rozhraní cílového objektu
+Připojí k objektu existující cílové rozhraní vykreslení.
 
 ```
 void Attach(ID2D1HwndRenderTarget* pTarget);
@@ -98,12 +98,12 @@ void Attach(ID2D1HwndRenderTarget* pTarget);
 
 ### <a name="parameters"></a>Parametry
 
-*pTarget*<br/>
-Existující rozhraní cíl vykreslování. Nesmí být NULL.
+*pCíl*<br/>
+Existující rozhraní cíle vykreslení. Nelze získat hodnotu NULL.
 
-##  <a name="checkwindowstate"></a>  CHwndRenderTarget::CheckWindowState
+## <a name="chwndrendertargetcheckwindowstate"></a><a name="checkwindowstate"></a>CHwndRenderTarget::CheckWindowState
 
-Určuje, zda je occluded HWND přidružené k tento cíl vykreslování.
+Označuje, zda hwnd spojené s tímto cílem vykreslení je uzavřen.
 
 ```
 D2D1_WINDOW_STATE CheckWindowState() const;
@@ -111,11 +111,11 @@ D2D1_WINDOW_STATE CheckWindowState() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Je occluded hodnotu určující, zda HWND přidružený k tomuto cíl vykreslování.
+Hodnota, která označuje, zda hwnd spojené s tímto cílem vykreslení je uzavřen.
 
-##  <a name="chwndrendertarget"></a>  CHwndRenderTarget::CHwndRenderTarget
+## <a name="chwndrendertargetchwndrendertarget"></a><a name="chwndrendertarget"></a>CHwndRenderTarget::CHwndRenderTarget
 
-Vytvoří objekt chwndrendertarget – od HWND.
+Vytvoří objekt CHwndRenderTarget z HWND.
 
 ```
 CHwndRenderTarget(HWND hwnd = NULL);
@@ -123,12 +123,12 @@ CHwndRenderTarget(HWND hwnd = NULL);
 
 ### <a name="parameters"></a>Parametry
 
-*hWnd*<br/>
-HWND přidružený k tomuto cíl vykreslování
+*Hwnd*<br/>
+HWND přidružená k tomuto cíli vykreslení
 
-##  <a name="create"></a>  CHwndRenderTarget::Create
+## <a name="chwndrendertargetcreate"></a><a name="create"></a>CHwndRenderTarget::Vytvořit
 
-Vytvoří přidružený k oknu cíl vykreslování
+Vytvoří cíl vykreslení přidružený k oknu.
 
 ```
 BOOL Create(HWND hWnd);
@@ -136,16 +136,16 @@ BOOL Create(HWND hWnd);
 
 ### <a name="parameters"></a>Parametry
 
-*hWnd*<br/>
-HWND přidružený k tomuto cíl vykreslování
+*Hwnd*<br/>
+HWND přidružená k tomuto cíli vykreslení
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud metoda uspěje, vrátí hodnotu TRUE. V opačném případě vrací FALSE
+Pokud je metoda úspěšná, vrátí hodnotu TRUE. V opačném případě vrátí hodnotu NEPRAVDA.
 
-##  <a name="detach"></a>  CHwndRenderTarget::Detach
+## <a name="chwndrendertargetdetach"></a><a name="detach"></a>CHwndRenderTarget::Detach
 
-Odpojí vykreslování cílového rozhraní z objektu
+Odpojení vykreslení cílového rozhraní od objektu
 
 ```
 ID2D1HwndRenderTarget* Detach();
@@ -153,11 +153,11 @@ ID2D1HwndRenderTarget* Detach();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na odpojeném vykreslení cílové rozhraní.
+Ukazatel na odpojené rozhraní cíle vykreslení.
 
-##  <a name="gethwnd"></a>  CHwndRenderTarget::GetHwnd
+## <a name="chwndrendertargetgethwnd"></a><a name="gethwnd"></a>CHwndRenderTarget::GetHwnd
 
-Vrací HWND přidružený k tomuto cíl vykreslování.
+Vrátí HWND přidružené k tomuto cíli vykreslení.
 
 ```
 HWND GetHwnd() const;
@@ -165,11 +165,11 @@ HWND GetHwnd() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-HWND přidružený k tomuto cíl vykreslování.
+HWND přidružené k tomuto cíli vykreslení.
 
-##  <a name="gethwndrendertarget"></a>  CHwndRenderTarget::GetHwndRenderTarget
+## <a name="chwndrendertargetgethwndrendertarget"></a><a name="gethwndrendertarget"></a>CHwndRenderTarget::GetHwndRenderTarget
 
-Vrátí ID2D1HwndRenderTarget rozhraní.
+Vrátí rozhraní ID2D1HwndRenderTarget.
 
 ```
 ID2D1HwndRenderTarget* GetHwndRenderTarget();
@@ -177,9 +177,9 @@ ID2D1HwndRenderTarget* GetHwndRenderTarget();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na rozhraní ID2D1HwndRenderTarget nebo hodnota NULL, pokud objekt ještě není inicializován.
+Ukazatel na rozhraní ID2D1HwndRenderTarget nebo NULL, pokud objekt ještě není inicializován.
 
-##  <a name="m_phwndrendertarget"></a>  CHwndRenderTarget::m_pHwndRenderTarget
+## <a name="chwndrendertargetm_phwndrendertarget"></a><a name="m_phwndrendertarget"></a>CHwndRenderTarget::m_pHwndRenderTarget
 
 Ukazatel na objekt ID2D1HwndRenderTarget.
 
@@ -187,9 +187,9 @@ Ukazatel na objekt ID2D1HwndRenderTarget.
 ID2D1HwndRenderTarget* m_pHwndRenderTarget;
 ```
 
-##  <a name="operator_id2d1hwndrendertarget_star"></a>  CHwndRenderTarget::operator ID2D1HwndRenderTarget *
+## <a name="chwndrendertargetoperator-id2d1hwndrendertarget"></a><a name="operator_id2d1hwndrendertarget_star"></a>CHwndRenderTarget::operátor ID2D1HwndRenderTarget*
 
-Vrátí ID2D1HwndRenderTarget rozhraní.
+Vrátí rozhraní ID2D1HwndRenderTarget.
 
 ```
 operator ID2D1HwndRenderTarget*();
@@ -197,11 +197,11 @@ operator ID2D1HwndRenderTarget*();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na rozhraní ID2D1HwndRenderTarget nebo hodnota NULL, pokud objekt ještě není inicializován.
+Ukazatel na rozhraní ID2D1HwndRenderTarget nebo NULL, pokud objekt ještě není inicializován.
 
-##  <a name="recreate"></a>  CHwndRenderTarget::ReCreate
+## <a name="chwndrendertargetrecreate"></a><a name="recreate"></a>CHwndRenderTarget::Znovu vytvořit
 
-Znovu vytvoří cíl vykreslování přidružený k oknu
+Znovu vytvoří cíl vykreslení přidružený k oknu.
 
 ```
 BOOL ReCreate(HWND hWnd);
@@ -209,16 +209,16 @@ BOOL ReCreate(HWND hWnd);
 
 ### <a name="parameters"></a>Parametry
 
-*hWnd*<br/>
-HWND přidružený k tomuto cíl vykreslování
+*Hwnd*<br/>
+HWND přidružená k tomuto cíli vykreslení
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud metoda uspěje, vrátí hodnotu TRUE. V opačném případě vrátí hodnotu FALSE.
+Pokud je metoda úspěšná, vrátí hodnotu TRUE. V opačném případě vrátí hodnotu NEPRAVDA.
 
-##  <a name="resize"></a>  CHwndRenderTarget::Resize
+## <a name="chwndrendertargetresize"></a><a name="resize"></a>CHwndRenderTarget::Změna velikosti
 
-Změní velikost cíle vykreslování na velikost zadané pixelů
+Změní velikost cíle vykreslení na zadanou velikost obrazového bodu.
 
 ```
 BOOL Resize(const CD2DSizeU& size);
@@ -227,12 +227,12 @@ BOOL Resize(const CD2DSizeU& size);
 ### <a name="parameters"></a>Parametry
 
 *Velikost*<br/>
-Nová velikost cíle vykreslování v pixelech zařízení
+Nová velikost cíle vykreslení v pixelech zařízení
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Pokud metoda uspěje, vrátí hodnotu TRUE. V opačném případě vrátí hodnotu FALSE.
+Pokud je metoda úspěšná, vrátí hodnotu TRUE. V opačném případě vrátí hodnotu NEPRAVDA.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Třídy](../../mfc/reference/mfc-classes.md)

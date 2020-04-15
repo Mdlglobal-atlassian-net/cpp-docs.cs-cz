@@ -1,5 +1,5 @@
 ---
-title: Rozhraní ICommandUI
+title: ICommandUI – rozhraní
 ms.date: 09/07/2019
 f1_keywords:
 - ICommandUI
@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - ICommandUI interface [MFC]
 ms.assetid: 134afe8d-dcdf-47ca-857a-a166a6b665dd
-ms.openlocfilehash: 0740ad024e0ca7fd56ecf9178ca57b22dc66b79e
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 335deefc04a80f47151c5d5e71486e30f9918abd
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79445690"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81356633"
 ---
-# <a name="icommandui-interface"></a>Rozhraní ICommandUI
+# <a name="icommandui-interface"></a>ICommandUI – rozhraní
 
 Spravuje příkazy uživatelského rozhraní.
 
@@ -35,31 +35,31 @@ interface class ICommandUI
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[icommandui__Check](#check)|Nastaví položku uživatelského rozhraní pro tento příkaz na příslušný stav kontroly.|
-|[ICommandUI::ContinueRouting](#continuerouting)|Oznamuje mechanismu směrování příkazů, aby pokračoval v směrování aktuální zprávy o řetězu obslužných rutin.|
-|[ICommandUI:: Enabled](#enabled)|Povoluje nebo zakazuje položku uživatelského rozhraní pro tento příkaz.|
-|[ICommandUI:: ID](#id)|Získá ID objektu uživatelského rozhraní reprezentovaného objektem `ICommandUI`.|
-|[ICommandUI:: index](#index)|Získá index objektu uživatelského rozhraní reprezentovaného objektem `ICommandUI`.|
-|[ICommandUI:: Radio](#radio)|Nastaví položku uživatelského rozhraní pro tento příkaz na příslušný stav kontroly.|
-|[ICommandUI:: text](#text)|Nastaví text položky uživatelského rozhraní pro tento příkaz.|
+|[icommandui__Check](#check)|Nastaví položku uživatelského rozhraní pro tento příkaz do příslušného kontrolního stavu.|
+|[iCommandUI::ContinueRouting](#continuerouting)|Sděluje mechanismus směrování příkazů, aby pokračoval v směrování aktuální zprávy v řetězci obslužných rutin.|
+|[ICommandUI::Povoleno](#enabled)|Povolí nebo zakáže položku uživatelského rozhraní pro tento příkaz.|
+|[ICommandUI::ID](#id)|Získá ID objektu uživatelského rozhraní `ICommandUI` reprezentovaného objektem.|
+|[iCommandUI::Index](#index)|Získá index objektu uživatelského rozhraní `ICommandUI` reprezentované ho objektem.|
+|[ICommandUI::Rádio](#radio)|Nastaví položku uživatelského rozhraní pro tento příkaz do příslušného kontrolního stavu.|
+|[icommandui::Text](#text)|Nastaví text položky uživatelského rozhraní pro tento příkaz.|
 
 ## <a name="remarks"></a>Poznámky
 
-Toto rozhraní poskytuje metody a vlastnosti, které spravují příkazy uživatelského rozhraní. `ICommandUI` je podobná [třídě CCmdUI –](../../mfc/reference/ccmdui-class.md), s tím rozdílem, že `ICommandUI` se používá pro aplikace MFC, které spolupracují s komponentami .NET.
+Toto rozhraní poskytuje metody a vlastnosti, které spravují příkazy uživatelského rozhraní. `ICommandUI`je podobná [třídě CCmdUI](../../mfc/reference/ccmdui-class.md) `ICommandUI` , s výjimkou, která se používá pro aplikace knihovny MFC, které spolupracují s komponentami .NET.
 
-`ICommandUI` se používá v obslužné rutině ON_UPDATE_COMMAND_UI v odvozené třídě [ICommandTarget](../../mfc/reference/icommandtarget-interface.md). Když se uživatel aplikace aktivuje (vybere nebo klikne) na nabídku, zobrazí se každá položka nabídky jako povolená nebo zakázaná. Cíl jednotlivých příkazů nabídky poskytuje tyto informace implementací obslužné rutiny ON_UPDATE_COMMAND_UI. Pro každý z objektů uživatelského rozhraní příkazu v aplikaci použijte [Průvodce třídami](mfc-class-wizard.md) k vytvoření položky mapování zpráv a prototypu funkce pro každou obslužnou rutinu.
+`ICommandUI`se používá v rámci obslužné rutiny ON_UPDATE_COMMAND_UI v odvozené třídě [ICommandTarget.](../../mfc/reference/icommandtarget-interface.md) Když uživatel aplikace aktivuje (vybere nebo klikne) nabídku, každá položka nabídky se zobrazí jako povolená nebo zakázaná. Cíl každého příkazu nabídky poskytuje tyto informace implementací obslužné rutiny ON_UPDATE_COMMAND_UI. Pro každý z objektů uživatelského rozhraní příkazu v aplikaci vytvořte pomocí [Průvodce třídou](mfc-class-wizard.md) pro každou obslužnou rutinu prototyp položky mapy zpráv a funkce.
 
-Další informace o tom, jak se `ICommandUI` rozhraní používá při směrování příkazu, naleznete v tématu [How to: Add Routing and Command to the model Windows Forms Control](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md).
+Další informace o `ICommandUI` tom, jak je rozhraní používáno v příkazu směrování, naleznete v [tématu Postup: Přidání směrování příkazů do ovládacího prvku Formuláře systému Windows](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md).
 
-Další informace o použití model Windows Forms naleznete v tématu [použití uživatelského ovládacího prvku Windows Form v knihovně MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
+Další informace o používání formulářů Systému Windows naleznete [v tématu Použití ovládacího prvku uživatele formuláře systému Windows v knihovně MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
 
-Další informace o tom, jak jsou příkazy uživatelského rozhraní spravovány v knihovně MFC, naleznete v tématu [Třída CCmdUI –](../../mfc/reference/ccmdui-class.md).
+Další informace o správě příkazů uživatelského rozhraní v knihovně MFC naleznete v [tématu CCmdUI Class](../../mfc/reference/ccmdui-class.md).
 
-## <a name="check"></a>ICommandUI:: check
+## <a name="icommanduicheck"></a><a name="check"></a>ICommandUI::Kontrola
 
-Nastaví položku uživatelského rozhraní pro tento příkaz na příslušný stav kontroly.
+Nastaví položku uživatelského rozhraní pro tento příkaz do příslušného kontrolního stavu.
 
 ```
 property UICheckState Check;
@@ -67,14 +67,15 @@ property UICheckState Check;
 
 ## <a name="remarks"></a>Poznámky
 
-Tato vlastnost nastaví položku uživatelského rozhraní pro tento příkaz na příslušný stav kontroly. Nastavte kontrolu na následující hodnoty:
-- 0 zrušit kontrolu
-- 1 check
-- 2 nastavit neurčitelné
+Tato vlastnost nastaví položku uživatelského rozhraní pro tento příkaz do příslušného kontrolního stavu. Nastavte zkontrolovat na následující hodnoty:
 
-## <a name="continuerouting"></a>ICommandUI::ContinueRouting
+- 0 Zrušit zaškrtnutí
+- 1 Kontrola
+- 2 Nastavit neurčitý
 
-Oznamuje mechanismu směrování příkazů, aby pokračoval v směrování aktuální zprávy o řetězu obslužných rutin.
+## <a name="icommanduicontinuerouting"></a><a name="continuerouting"></a>iCommandUI::ContinueRouting
+
+Sděluje mechanismus směrování příkazů, aby pokračoval v směrování aktuální zprávy v řetězci obslužných rutin.
 
 ```
 void ContinueRouting();
@@ -82,11 +83,11 @@ void ContinueRouting();
 
 ## <a name="remarks"></a>Poznámky
 
-Toto je pokročilá členská funkce, která by se měla používat ve spojení s obslužnou rutinou ON_COMMAND_EX, která vrací hodnotu FALSE. Další informace najdete v tématu technická Poznámka TN006: mapy zpráv.
+Toto je pokročilá členská funkce, která by měla být použita ve spojení s obslužnou rutinou ON_COMMAND_EX, která vrací hodnotu FALSE. Další informace naleznete v tématu Technická poznámka TN006: Mapy zpráv.
 
-## <a name="enabled"></a>ICommandUI:: Enabled
+## <a name="icommanduienabled"></a><a name="enabled"></a>ICommandUI::Povoleno
 
-Povoluje nebo zakazuje položku uživatelského rozhraní pro tento příkaz.
+Povolí nebo zakáže položku uživatelského rozhraní pro tento příkaz.
 
 ```
 property bool Enabled;
@@ -94,11 +95,11 @@ property bool Enabled;
 
 ## <a name="remarks"></a>Poznámky
 
-Tato vlastnost povoluje nebo zakazuje položku uživatelského rozhraní pro tento příkaz. Nastavte na hodnotu TRUE, chcete-li povolit položku, FALSE a zakažte ji.
+Tato vlastnost povolí nebo zakáže položku uživatelského rozhraní pro tento příkaz. Nastavte možnost Povoleno na hodnotu TRUE, chcete-li položku povolit, neplatí ji NEPRAVDA.
 
-## <a name="id"></a>ICommandUI:: ID
+## <a name="icommanduiid"></a><a name="id"></a>ICommandUI::ID
 
-Získá ID objektu uživatelského rozhraní reprezentovaného objektem ICommandUI.
+Získá ID objektu uživatelského rozhraní reprezentované ho objektem ICommandUI.
 
 ```
 property unsigned int ID;
@@ -108,9 +109,9 @@ property unsigned int ID;
 
 Tato vlastnost získá ID (popisovač) položky nabídky, tlačítka panelu nástrojů nebo jiného objektu uživatelského rozhraní reprezentovaného objektem ICommandUI.
 
-## <a name="index"></a>ICommandUI:: index
+## <a name="icommanduiindex"></a><a name="index"></a>iCommandUI::Index
 
-Získá index objektu uživatelského rozhraní reprezentovaného objektem ICommandUI.
+Získá index objektu uživatelského rozhraní reprezentované objektu ICommandUI.
 
 ```
 property unsigned int Index;
@@ -118,11 +119,11 @@ property unsigned int Index;
 
 ## <a name="remarks"></a>Poznámky
 
-Tato vlastnost získá index (popisovač) položky nabídky, tlačítko panelu nástrojů nebo jiný objekt uživatelského rozhraní reprezentovaný objektem ICommandUI.
+Tato vlastnost získá index (popisovač) položky nabídky, tlačítka panelu nástrojů nebo jiného objektu uživatelského rozhraní reprezentovaného objektem ICommandUI.
 
-## <a name="radio"></a>ICommandUI:: Radio
+## <a name="icommanduiradio"></a><a name="radio"></a>ICommandUI::Rádio
 
-Nastaví položku uživatelského rozhraní pro tento příkaz na příslušný stav kontroly.
+Nastaví položku uživatelského rozhraní pro tento příkaz do příslušného kontrolního stavu.
 
 ```
 property bool Radio;
@@ -130,9 +131,9 @@ property bool Radio;
 
 ## <a name="remarks"></a>Poznámky
 
-Tato vlastnost nastaví položku uživatelského rozhraní pro tento příkaz na příslušný stav kontroly. Nastavte přepínač na hodnotu TRUE, chcete-li položku Povolit. v opačném případě FALSE.
+Tato vlastnost nastaví položku uživatelského rozhraní pro tento příkaz do příslušného kontrolního stavu. Chcete-li položku povolit, nastavte rádio na hodnotu TRUE; jinak FALSE.
 
-## <a name="text"></a>ICommandUI:: text
+## <a name="icommanduitext"></a><a name="text"></a>icommandui::Text
 
 Nastaví text položky uživatelského rozhraní pro tento příkaz.
 
@@ -142,11 +143,11 @@ property String^ Text;
 
 ## <a name="remarks"></a>Poznámky
 
-Tato vlastnost nastavuje text položky uživatelského rozhraní pro tento příkaz. Nastavte text na popisovač textového řetězce.
+Tato vlastnost nastaví text položky uživatelského rozhraní pro tento příkaz. Nastavte text na popisovač textového řetězce.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxwinforms. h (definováno v sestavení atlmfc\lib\mfcmifc80.dll)
+**Záhlaví:** afxwinforms.h (definováno v sestavení atlmfc\lib\mfcmifc80.dll)
 
 ## <a name="see-also"></a>Viz také
 

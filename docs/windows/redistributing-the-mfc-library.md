@@ -5,46 +5,46 @@ helpviewer_keywords:
 - MFC, redistributing
 - redistributing MFC library
 ms.assetid: 72714ce1-385e-4c1c-afa5-96b03e873866
-ms.openlocfilehash: 7b38299bc39ce282769e40e915847b2220ec28ca
-ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
+ms.openlocfilehash: e1434bee6d134d4c02b2c06125d340a68a6c305d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73965612"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81359907"
 ---
 # <a name="redistributing-the-mfc-library"></a>Redistribuce knihovny MFC
 
-Pokud dynamicky propojíte aplikaci s knihovnou MFC, je nutné znovu distribuovat vyhovující knihovny MFC DLL. Například pokud je vaše aplikace MFC sestavena pomocí verze knihovny MFC, která je dodávána se sadou Visual Studio 2015, je nutné znovu distribuovat mfc140. dll nebo mfc140u. dll v závislosti na tom, zda je aplikace kompilována s úzkými znaky nebo podporou kódování Unicode.
+Pokud dynamicky propojíte aplikaci s knihovnou knihovny MFC, je nutné znovu distribuovat odpovídající knihovnu DLL knihovny MFC. Pokud je například aplikace knihovny MFC vytvořena pomocí verze knihovny MFC, která je dodávána s Visual Studio 2015, musíte znovu distribuovat mfc140.dll nebo mfc140u.dll v závislosti na tom, jestli je vaše aplikace kompilovaná pro úzké znaky nebo podporu Unicode.
 
 > [!NOTE]
->  Soubory mfc140. dll byly vynechány v adresáři redistribuovatelných souborů v aplikaci Visual Studio 2015 RTM. Místo toho můžete použít verze nainstalované v rámci sady Visual Studio 2015 v adresářích Windows\System32 a Windows\syswow64.
+> Soubory mfc140.dll byly vynechány z adresáře redistribuovatelných souborů v sadě Visual Studio 2015 RTM. Místo toho můžete použít verze nainstalované visual studio 2015 v adresářích Windows\system32 a Windows\syswow64.
 
-Vzhledem k tomu, že všechny knihovny MFC DLL používají sdílenou verzi běhové knihovny jazyka C (CRT), může být také nutné znovu distribuovat CRT. Verze knihovny MFC, která je dodávána se sadou Visual Studio 2015, používá univerzální knihovnu CRT, která je distribuována jako součást systému Windows 10. Chcete-li spustit aplikaci knihovny MFC sestavenou pomocí sady Visual Studio 2015 v dřívějších verzích systému Windows, je nutné znovu distribuovat Universal CRT. Informace o tom, jak redistribuovat Universal CRT jako součást operačního systému nebo pomocí místního nasazení, najdete v tématu [Představujeme Universal CRT](https://devblogs.microsoft.com/cppblog/introducing-the-universal-crt/). Pokud si chcete stáhnout Universal CRT pro centrální nasazení v podporovaných verzích Windows, přečtěte si téma [Windows 10 Universal C Runtime](https://www.microsoft.com/download/details.aspx?id=48234). Verze ucrtbase. dll pro místní nasazení, které jsou specifické pro architekturu, najdete v Windows SDK. Ve výchozím nastavení Visual Studio nainstaluje tyto soubory v adresáři C:\Program Files (x86) \Windows Kits\10\Redist\ucrt\DLLs\ do podadresáře specifického pro architekturu.
+Vzhledem k tomu, že všechny knihovny DLL knihovny MFC používají sdílenou verzi knihovny runtime C (CRT), může být také nutné znovu distribuovat CRT. Verze knihovny MFC, která je dodávána s Visual Studio 2015 používá univerzální knihovnu CRT, která je distribuována jako součást Windows 10. Chcete-li spustit aplikaci knihovny MFC vytvořenou pomocí sady Visual Studio 2015 v dřívějších verzích systému Windows, je nutné znovu distribuovat univerzální CRT. Informace o tom, jak redistribuovat univerzální CRT jako součást operačního systému nebo pomocí místního nasazení, naleznete [v tématu Zavedení univerzální crt](https://devblogs.microsoft.com/cppblog/introducing-the-universal-crt/). Informace o stažení univerzálního crt pro centrální nasazení v podporovaných verzích systému Windows najdete v článku [Windows 10 Universal C Runtime](https://www.microsoft.com/download/details.aspx?id=48234). Redistribuovatelné verze souboru ucrtbase.dll pro místní nasazení jsou k dispozici v sadě Windows SDK. Ve výchozím nastavení je sada Visual Studio instaluje do c:\programových souborů (x86)\sady Windows Kit\10\Redist\ucrt\DLL\ v podadresáři specifickém pro architekturu.
 
-Pokud je vaše aplikace sestavena pomocí starší verze knihovny MFC, je nutné znovu distribuovat vyhovující knihovny CRT DLL z adresáře redistribuovatelných souborů. Například pokud je vaše aplikace MFC sestavena pomocí sady nástrojů Visual Studio 2013 (vc120), je nutné znovu distribuovat msvcr120. dll. Také je nutné znovu distribuovat vyhovující knihovny MFC`<version>`u. dll nebo knihovny MFC`<version>`. dll.
+Pokud je vaše aplikace vytvořená pomocí starší verze knihovny knihovny MFC, musíte znovu distribuovat odpovídající knihovnu CRT DLL z adresáře redistribuovatelných souborů. Pokud je například aplikace knihovny MFC vytvořena pomocí sady nástrojů Visual Studio 2013 (vc120), je nutné knihovnu msvcr120.dll znovu distribuovat. Musíte také přerozdělit odpovídající mfc`<version>`u.dll`<version>`nebo mfc .dll.
 
-Pokud staticky propojíte aplikaci s knihovnou MFC (tj. Pokud zadáte **použít knihovnu MFC ve statické knihovně** na kartě **Obecné** v dialogovém okně **stránky vlastností** ), nemusíte znovu distribuovat knihovnu MFC DLL. I když statické propojení může fungovat pro testování a interní nasazení aplikací, doporučujeme, abyste ho nepoužívali k redistribuci knihovny MFC. Další informace o doporučených strategiích pro nasazení vizuálních C++ knihoven najdete v tématu [Volba metody nasazení](choosing-a-deployment-method.md).
+Pokud staticky propojíte aplikaci s knihovnou MFC (to znamená, že zadáte **použít knihovnu MFC ve statické knihovně** na kartě **Obecné** v dialogovém okně **Stránky vlastností),** není nutné znovu distribuovat knihovnu DLL knihovny MFC. I když statické propojení může fungovat pro testování a interní nasazení aplikací, doporučujeme nepoužívat k redistribuci knihovny MFC. Další informace o doporučených strategiích pro nasazení knihoven Visual C++ naleznete [v tématu Výběr metody nasazení](choosing-a-deployment-method.md).
 
-Pokud vaše aplikace používá třídy MFC, které implementují ovládací prvek WebBrowser (například třída [CHtmlView –](../mfc/reference/chtmlview-class.md) nebo [CHtmlEditView](../mfc/reference/chtmleditview-class.md)), doporučujeme také nainstalovat nejaktuálnější verzi aplikace Microsoft Internet Explorer, aby cílový počítač měl nejaktuálnější soubory běžných ovládacích prvků. (Vyžaduje se minimálně Internet Explorer 4,0.) Informace o tom, jak nainstalovat součásti aplikace Internet Explorer, jsou k dispozici v článku 185375: jak vytvořit instalaci aplikace Internet Explorer s jedním EXE na webu podpora Microsoftu.
+Pokud vaše aplikace používá třídy knihovny MFC, které implementují ovládací prvek WebBrowser (například [CHtmlView Class](../mfc/reference/chtmlview-class.md) nebo [CHtmlEditView Class](../mfc/reference/chtmleditview-class.md)), doporučujeme také nainstalovat nejnovější verzi aplikace Microsoft Internet Explorer tak, aby cílový počítač měl nejaktuálnější běžné řídicí soubory. (Je vyžadována minimálně aplikace Internet Explorer 4.0.) Informace o instalaci součástí aplikace Internet Explorer jsou k dispozici v článku 185375: Jak vytvořit jednu instalaci aplikace Internet Explorer exe na webu podpory společnosti Microsoft.
 
-Pokud vaše aplikace používá databázové třídy knihovny MFC (například třída [CRecordset](../mfc/reference/crecordset-class.md) a [Třída CRecordView](../mfc/reference/crecordview-class.md)), je nutné znovu distribuovat rozhraní ODBC a všechny ovladače rozhraní ODBC, které vaše aplikace používá.
+Pokud vaše aplikace používá třídy databáze knihovny MFC (například [CRecordset Class](../mfc/reference/crecordset-class.md) a [CRecordView Class](../mfc/reference/crecordview-class.md)), je nutné znovu distribuovat rozhraní ODBC a všechny ovladače ODBC, které aplikace používá.
 
-Pokud vaše aplikace MFC používá ovládací prvky model Windows Forms, je nutné znovu distribuovat mfcmifc80. dll s vaší aplikací. Tato knihovna DLL je podepsané sestavení .NET se silným názvem, které lze distribuovat pomocí aplikace v místní složce aplikace nebo jejich nasazením do globální mezipaměti sestavení (GAC) pomocí nástroje [Gacutil. exe (nástroj Global Assembly Cache Tool)](/dotnet/framework/tools/gacutil-exe-gac-tool).
+Pokud aplikace Knihovny MFC používá ovládací prvky Windows Forms, je nutné redistribuovat soubor mfcmifc80.dll s vaší aplikací. Tato dll je sestavení .NET podepsané silným názvem, které lze znovu distribuovat s aplikací v místní složce aplikace nebo jejím nasazením do globální mezipaměti sestavení (GAC) pomocí [nástroje Gacutil.exe (Global Assembly Cache Tool).](/dotnet/framework/tools/gacutil-exe-gac-tool)
 
-Pokud redistribuujete knihovnu MFC DLL, nezapomeňte znovu distribuovat prodejní verzi, a ne ladicí verzi. Ladicí verze knihoven DLL nejsou distribuovatelné. Názvy ladicích verzí knihoven MFC DLL končí znakem "d", například Mfc140d. dll.
+Pokud redistribuujete knihovnu DLL knihovny MFC, ujistěte se, že redistribuujete maloobchodní verzi a ne ladicí verzi. Ladicí verze knihoven DLL nelze znovu distribuovat. Názvy ladicích verzí knihovny DLL knihovny MFC končí knihovnou DLL "d", například Mfc140d.dll.
 
-Knihovnu MFC lze znovu distribuovat pomocí VCRedist_*architektury*. exe, slučovacích modulů, které jsou nainstalovány se sadou Visual Studio, nebo nasazením knihovny MFC DLL do stejné složky jako vaše aplikace. Další informace o redistribuci knihovny MFC naleznete v tématu [Redistribuce vizuálních C++ souborů](redistributing-visual-cpp-files.md).
+Knihovny MFC můžete dále distribuovat pomocí VCRedist_*architektury*.exe, slučovacích modulů nainstalovaných v sadě Visual Studio nebo nasazením knihovny MFC DLL do stejné složky jako aplikace. Další informace o tom, jak znovu distribuovat knihovnu MFC, naleznete [v tématu Redistributing Visual C++ Files](redistributing-visual-cpp-files.md).
 
-## <a name="installation-of-localized-mfc-components"></a>Instalace lokalizovaných komponent knihovny MFC
+## <a name="installation-of-localized-mfc-components"></a>Instalace lokalizovaných součástí knihovny MFC
 
-Pokud se rozhodnete lokalizovat aplikaci instalací knihovny DLL lokalizace knihovny MFC, je nutné použít redistribuovatelné soubory sloučení (. msm). Například pokud chcete, aby aplikace byla lokalizována v počítači x86, je nutné sloučit Microsoft_VC`<version>`_MFCLOC_x86. msm do instalačního balíčku pro počítač s architekturou x86.
+Pokud se rozhodnete lokalizovat aplikaci instalací knihovny DLL lokalizace knihovny MFC, musíte použít redistribuovatelné soubory sloučení (.msm). Chcete-li například lokalizovat aplikaci v počítači x86,`<version>`je nutné sloučit Microsoft_VC _MFCLOC_x86.msm do instalačního balíčku pro počítač x86.
 
-Redistribuovatelné soubory. msm obsahují knihovny DLL, které se používají k lokalizaci. Pro každý podporovaný jazyk existuje jedna knihovna DLL. Proces instalace nainstaluje tyto knihovny DLL do složky%windir%\system32\ v cílovém počítači.
+Redistribuovatelné soubory MSM obsahují knihovny DLL, které se používají pro lokalizaci. Pro každý podporovaný jazyk existuje jedna dll. Instalační proces nainstaluje tyto knihovny DLL do složky %windir%\system32\ v cílovém počítači.
 
-Další informace o lokalizaci aplikací knihovny MFC naleznete v tématu [TN057: LOCALIZATION MFC Components](../mfc/tn057-localization-of-mfc-components.md).
+Další informace o lokalizaci aplikací knihovny MFC naleznete v [tématu TN057: Lokalizace součástí knihovny MFC](../mfc/tn057-localization-of-mfc-components.md).
 
-Knihovny DLL lokalizace knihovny MFC můžete znovu distribuovat nasazením knihovny MFC DLL do místní složky aplikace. Další informace o tom, jak znovu distribuovat vizuální C++ knihovny, naleznete v tématu [Redistribuce vizuálních C++ souborů](redistributing-visual-cpp-files.md).
+Knihovny DLL lozitizace knihovny MFC můžete dále distribuovat nasazením knihovny DLL knihovny MFC v místní složce aplikace. Další informace o tom, jak redistribuovat knihovny visual c++, naleznete [v tématu Redistribuce souborů Visual C++](redistributing-visual-cpp-files.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Redistribuce souborů Visual C++](redistributing-visual-cpp-files.md)

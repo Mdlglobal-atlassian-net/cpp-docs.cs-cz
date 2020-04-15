@@ -19,138 +19,138 @@ helpviewer_keywords:
 - SelectStockFont method [MFC]
 - fonts [MFC], ActiveX controls
 ms.assetid: 7c51d602-3f5a-481d-84d1-a5d8a3a71761
-ms.openlocfilehash: ce1e913bb3bd1c3b74db43dc02d9d360b9cfd00c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c336ec6c29b5478655ca8f19f71378a2b446ac64
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62239494"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81358262"
 ---
 # <a name="mfc-activex-controls-using-fonts"></a>MFC – ovládací prvky ActiveX: Použití písem
 
-Pokud ovládací prvek ActiveX zobrazí text, můžete povolit uživateli změnit vzhled textu změnou vlastnosti font. Vlastnosti písma jsou implementovány jako objekty písma a může být jeden ze dvou typů: výchozí nebo vlastní. Uložené vlastnosti písma jsou vlastnosti preimplemented písma, které můžete přidat pomocí Průvodce přidáním vlastnosti. Vlastní vlastnosti písma nejsou preimplemented a developer ovládací prvek určuje chování vlastnosti a využití.
+Pokud ovládací prvek ActiveX zobrazuje text, můžete uživateli ovládacího prvku povolit změnu vzhledu textu změnou vlastnosti písma. Vlastnosti písma jsou implementovány jako objekty písma a mohou být jedním ze dvou typů: stock nebo custom. Vlastnosti písma stock jsou předem implementované vlastnosti písma, které můžete přidat pomocí Průvodce přidáním vlastností. Vlastní Font vlastnosti nejsou předem implementovány a vývojář ovládacího prvku určuje chování a použití vlastnosti.
 
-Tento článek obsahuje následující témata:
+Tento článek popisuje následující témata:
 
-- [Použití Stock Font – vlastnost](#_core_using_the_stock_font_property)
+- [Použití vlastnosti Stock Font](#_core_using_the_stock_font_property)
 
-- [Pomocí vlastností vlastní písma v ovládacím prvku](#_core_implementing_a_custom_font_property)
+- [Použití vlastních vlastností písma v ovládacím prvku](#_core_implementing_a_custom_font_property)
 
-##  <a name="_core_using_the_stock_font_property"></a> Pomocí vlastností uložených písma
+## <a name="using-the-stock-font-property"></a><a name="_core_using_the_stock_font_property"></a>Použití vlastnosti Skladové písmo
 
-Uložené vlastnosti písma jsou preimplemented třídou [COleControl](../mfc/reference/colecontrol-class.md). Kromě toho je standardní stránek vlastností písma také k dispozici, které uživateli umožňují měnit různé atributy písma objektu, například jeho název, velikost a stylu.
+Vlastnosti stock font jsou předem implementovány třídou [COleControl](../mfc/reference/colecontrol-class.md). Kromě toho je k dispozici také standardní stránka vlastností Písmo, která uživateli umožňuje změnit různé atributy objektu písma, například jeho název, velikost a styl.
 
-Přístup k objektu písma prostřednictvím [getfont –](../mfc/reference/colecontrol-class.md#getfont), [setfont –](../mfc/reference/colecontrol-class.md#setfont), a [InternalGetFont](../mfc/reference/colecontrol-class.md#internalgetfont) funkce `COleControl`. Ovládací prvek uživatele bude přístup k objektu písma prostřednictvím `GetFont` a `SetFont` funkce stejně jako jakoukoli jinou vlastnosti Get/Set. Při přístupu k objektu písma je zapotřebí ve směru z v rámci ovládacího prvku, použijte `InternalGetFont` funkce.
+Přístup k objektu písma prostřednictvím [GetFont](../mfc/reference/colecontrol-class.md#getfont), `COleControl` [SetFont](../mfc/reference/colecontrol-class.md#setfont)a [InternalGetFont](../mfc/reference/colecontrol-class.md#internalgetfont) funkce . Uživatel ovládacího prvku bude přistupovat k objektu písma `GetFont` prostřednictvím `SetFont` a funguje stejným způsobem jako všechny ostatní Get/Set vlastnost. Pokud je vyžadován přístup k objektu písma `InternalGetFont` z ovládacího prvku, použijte funkci.
 
-Jak je popsáno v [knihovny MFC – ovládací prvky ActiveX: Vlastnosti](../mfc/mfc-activex-controls-properties.md), přidání uložených vlastností je snadné se [Průvodce přidáním vlastnosti](../ide/names-add-property-wizard.md). Zvolte vlastnost písma a Průvodce přidáním vlastnosti automaticky vloží uložených písma položku do mapy odbavení ovládacího prvku.
+Jak je popsáno v [ovládacích prvcích activexu knihovny MFC: Vlastnosti](../mfc/mfc-activex-controls-properties.md), přidání vlastností zásob je snadné pomocí [Průvodce přidáním vlastností](../ide/names-add-property-wizard.md). Zvolíte vlastnost Font a Průvodce přidáním vlastností automaticky vloží položku základního písma do mapy odeslání ovládacího prvku.
 
-#### <a name="to-add-the-stock-font-property-using-the-add-property-wizard"></a>Chcete-li přidat vlastnost běžného písma pomocí Průvodce přidáním vlastnosti
+#### <a name="to-add-the-stock-font-property-using-the-add-property-wizard"></a>Přidání vlastnosti Písmo stock pomocí Průvodce přidáním vlastností
 
-1. Načtení projektu ovládacího prvku.
+1. Načtěte projekt ovládacího prvku.
 
 1. V zobrazení tříd rozbalte uzel knihovny ovládacího prvku.
 
-1. Klikněte pravým tlačítkem na uzel rozhraní pro ovládací prvek (druhý uzel uzlu knihovny) otevřete místní nabídku.
+1. Klepnutím pravým tlačítkem myši na uzel rozhraní ovládacího prvku (druhý uzel uzlu knihovny) otevřete místní nabídku.
 
-1. V místní nabídce klikněte na tlačítko **přidat** a potom klikněte na tlačítko **přidat vlastnost**.
+1. V místní nabídce klikněte na **Přidat** a potom na **Přidat vlastnost**.
 
-   Otevře se Průvodce přidáním vlastnosti.
+   Tím se otevře Průvodce přidáním vlastností.
 
-1. V **název vlastnosti** klikněte **písmo**.
+1. V poli **Název vlastnosti** klepněte na **položku Písmo**.
 
-1. Klikněte na tlačítko **Dokončit**.
+1. Klikněte na **Finish** (Dokončit).
 
-Průvodce přidáním vlastnosti přidá následující řádek do ovládacího prvku mapy odeslání, umístěný v souboru implementace třídy ovládacího prvku:
+Průvodce přidáním vlastností přidá následující řádek do mapy odeslání ovládacího prvku, který se nachází v souboru implementace třídy ovládacího prvku:
 
 [!code-cpp[NVC_MFC_AxFont#1](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_1.cpp)]
 
-Kromě toho Průvodce přidáním vlastnosti přidá následující řádek do ovládacího prvku. Soubor IDL:
+Průvodce přidáním vlastností navíc přidá do ovládacího prvku následující řádek . IDL soubor:
 
 [!code-cpp[NVC_MFC_AxFont#2](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_2.idl)]
 
-Uložené vlastnosti titulku je příkladem text vlastnost, která může vykreslit pomocí informací uložených vlastností písma. Přidání zásob titulek vlastnosti do ovládacího prvku pomocí kroků, které jsou podobné těm, jež používají pro stock Font – vlastnost.
+Vlastnost Caption na skladě je příkladem vlastnosti text, kterou lze nakreslit pomocí informací o vlastnostech písma na skladě. Přidání vlastnosti Caption na skladě do ovládacího prvku používá kroky podobné těm, které se používají pro vlastnost Stock Font.
 
-#### <a name="to-add-the-stock-caption-property-using-the-add-property-wizard"></a>Přidání uložených vlastností titulek, pomocí Průvodce přidáním vlastnosti
+#### <a name="to-add-the-stock-caption-property-using-the-add-property-wizard"></a>Přidání vlastnosti Titulek na skladě pomocí Průvodce přidáním vlastností
 
-1. Načtení projektu ovládacího prvku.
+1. Načtěte projekt ovládacího prvku.
 
 1. V zobrazení tříd rozbalte uzel knihovny ovládacího prvku.
 
-1. Klikněte pravým tlačítkem na uzel rozhraní pro ovládací prvek (druhý uzel uzlu knihovny) otevřete místní nabídku.
+1. Klepnutím pravým tlačítkem myši na uzel rozhraní ovládacího prvku (druhý uzel uzlu knihovny) otevřete místní nabídku.
 
-1. V místní nabídce klikněte na tlačítko **přidat** a potom klikněte na tlačítko **přidat vlastnost**.
+1. V místní nabídce klikněte na **Přidat** a potom na **Přidat vlastnost**.
 
-   Otevře se Průvodce přidáním vlastnosti.
+   Tím se otevře Průvodce přidáním vlastností.
 
-1. V **název vlastnosti** klikněte **titulek**.
+1. V poli **Název vlastnosti** klikněte na **Titulek**.
 
-1. Klikněte na tlačítko **Dokončit**.
+1. Klikněte na **Finish** (Dokončit).
 
-Průvodce přidáním vlastnosti přidá následující řádek do ovládacího prvku mapy odeslání, umístěný v souboru implementace třídy ovládacího prvku:
+Průvodce přidáním vlastností přidá následující řádek do mapy odeslání ovládacího prvku, který se nachází v souboru implementace třídy ovládacího prvku:
 
 [!code-cpp[NVC_MFC_AxFont#3](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_3.cpp)]
 
-##  <a name="_core_modifying_the_ondraw_function"></a> Úprava OnDraw – funkce
+## <a name="modifying-the-ondraw-function"></a><a name="_core_modifying_the_ondraw_function"></a>Úprava funkce OnDraw
 
-Výchozí implementace `OnDraw` používá písmo systému Windows pro všechny text zobrazený v ovládacím prvku. To znamená, že je třeba upravit `OnDraw` kód tak, že vyberete objekt písmo do kontextu zařízení. Chcete-li to provést, zavolejte [COleControl::SelectStockFont](../mfc/reference/colecontrol-class.md#selectstockfont) a předat kontext zařízení ovládacího prvku, jak je znázorněno v následujícím příkladu:
+Výchozí implementace `OnDraw` používá systémové písmo systému Windows pro veškerý text zobrazený v ovládacím prvku. To znamená, že `OnDraw` je nutné upravit kód výběrem objektu písma do kontextu zařízení. Chcete-li to provést, zavolejte [COleControl::SelectStockFont](../mfc/reference/colecontrol-class.md#selectstockfont) a předejte kontext zařízení ovládacího prvku, jak je znázorněno v následujícím příkladu:
 
 [!code-cpp[NVC_MFC_AxFont#4](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_4.cpp)]
 
-Po `OnDraw` byla změněna funkce použití objektu písma, zobrazí se text v ovládacím prvku pomocí vlastnosti z ovládacího prvku vlastnost běžného písma.
+Po `OnDraw` úpravě funkce pro použití objektu písma se zobrazí libovolný text v ovládacím prvku s vlastnostmi z vlastnosti Font ovládacího prvku.
 
-##  <a name="_core_using_custom_font_properties_in_your_control"></a> Pomocí vlastností vlastní písma v ovládacím prvku
+## <a name="using-custom-font-properties-in-your-control"></a><a name="_core_using_custom_font_properties_in_your_control"></a>Použití vlastních vlastností písma v ovládacím prvku
 
-Kromě vlastnost běžného písma může mít ovládací prvek ActiveX vlastních vlastností písma. Přidání vlastního písma vlastnosti musíte mít:
+Kromě vlastnosti Stock Font může mít ovládací prvek ActiveX vlastní vlastnosti Písma. Chcete-li přidat vlastní vlastnost písma, musíte:
 
-- Pomocí Průvodce přidáním vlastnosti k implementaci vlastních vlastností písma.
+- Pomocí Průvodce přidáním vlastností implementujte vlastní vlastnost Font.
 
-- [Zpracování oznámení písmo](#_core_processing_font_notifications).
+- [Zpracování oznámení písem](#_core_processing_font_notifications).
 
-- [Implementace nové rozhraní oznámení písmo](#_core_implementing_a_new_font_notification_interface).
+- [Implementace nového rozhraní pro oznámení písem](#_core_implementing_a_new_font_notification_interface).
 
-###  <a name="_core_implementing_a_custom_font_property"></a> Implementace vlastnosti vlastní písma
+### <a name="implementing-a-custom-font-property"></a><a name="_core_implementing_a_custom_font_property"></a>Implementace vlastní vlastnosti písma
 
-K implementaci vlastních vlastností písma, použijte Průvodce přidáním vlastnosti přidat vlastnosti a pak proveďte určité změny pro kód. Následující části popisují, jak přidat vlastní `HeadingFont` vlastnost Ukázka ovládacího prvku.
+Chcete-li implementovat vlastní vlastnost Font, použijte Průvodce přidáním vlastnosti k přidání vlastnosti a potom proveďte některé změny kódu. Následující části popisují, jak `HeadingFont` přidat vlastní vlastnost do ukázkového ovládacího prvku.
 
-##### <a name="to-add-the-custom-font-property-using-the-add-property-wizard"></a>Chcete-li přidat vlastní vlastnost písma pomocí Průvodce přidáním vlastnosti
+##### <a name="to-add-the-custom-font-property-using-the-add-property-wizard"></a>Přidání vlastní vlastnosti Písmo pomocí Průvodce přidáním vlastností
 
-1. Načtení projektu ovládacího prvku.
+1. Načtěte projekt ovládacího prvku.
 
 1. V zobrazení tříd rozbalte uzel knihovny ovládacího prvku.
 
-1. Klikněte pravým tlačítkem na uzel rozhraní pro ovládací prvek (druhý uzel uzlu knihovny) otevřete místní nabídku.
+1. Klepnutím pravým tlačítkem myši na uzel rozhraní ovládacího prvku (druhý uzel uzlu knihovny) otevřete místní nabídku.
 
-1. V místní nabídce klikněte na tlačítko **přidat** a potom klikněte na tlačítko **přidat vlastnost**.
+1. V místní nabídce klikněte na **Přidat** a potom na **Přidat vlastnost**.
 
-   Otevře se Průvodce přidáním vlastnosti.
+   Tím se otevře Průvodce přidáním vlastností.
 
-1. V **název vlastnosti** zadejte název pro vlastnost. V tomto příkladu použijte **HeadingFont**.
+1. Do pole **Název vlastnosti** zadejte název vlastnosti. V tomto příkladu použijte **HeadingFont**.
 
-1. Pro **typ implementace**, klikněte na tlačítko **metody Get/Set**.
+1. V **souboru Typ implementace**klepněte na tlačítko Získat nebo nastavit **metody**.
 
-1. V **typ vlastnosti** vyberte **IDispatch** <strong>\*</strong> pro vlastnosti typu.
+1. V poli **Typ vlastnosti** vyberte pro typ vlastnosti položku **IDispatch.** <strong>\*</strong>
 
-1. Klikněte na tlačítko **Dokončit**.
+1. Klikněte na **Finish** (Dokončit).
 
-Průvodce přidáním vlastnosti vytvoří kód pro přidání `HeadingFont` vlastní vlastnost `CSampleCtrl` třídy a UKÁZKY. Soubor IDL. Protože `HeadingFont` je typ vlastnosti Get/Set, Průvodce přidáním vlastnosti změní `CSampleCtrl` mapa odeslání třídy mají zahrnout DISP_PROPERTY_EX_ID[DISP_PROPERTY_EX](../mfc/reference/dispatch-maps.md#disp_property_ex) – makro položky:
+Průvodce přidáním vlastností vytvoří `HeadingFont` kód pro `CSampleCtrl` přidání vlastní vlastnosti do třídy a vzorku. IDL. Protože `HeadingFont` je typem vlastnosti Get/Set, Průvodce přidáním vlastností upraví mapu odeslání `CSampleCtrl` třídy tak, aby zahrnovala DISP_PROPERTY_EX_ID[DISP_PROPERTY_EX](../mfc/reference/dispatch-maps.md#disp_property_ex) položku makra:
 
 [!code-cpp[NVC_MFC_AxFont#5](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_5.cpp)]
 
-DISP_PROPERTY_EX – makro přidruží `HeadingFont` název vlastnosti k odpovídajícímu `CSampleCtrl` třídy Get a Set metod, `GetHeadingFont` a `SetHeadingFont`. Rovněž je zadán typ vlastnosti; v tomto případě VT_FONT.
+Makro DISP_PROPERTY_EX `HeadingFont` přidruží název `CSampleCtrl` vlastnosti k odpovídající `GetHeadingFont` `SetHeadingFont`metodě Get and Set a . Je také zadán typ hodnoty vlastnosti; v tomto případě VT_FONT.
 
-Průvodce přidáním vlastnosti také přidá deklaraci v souboru záhlaví ovládacího prvku (. H) pro `GetHeadingFont` a `SetHeadingFont` funkcí a přidává své šablony funkce v souboru implementace ovládacího prvku (. CPP):
+Průvodce přidáním vlastností také přidá deklaraci do souboru záhlaví ovládacího prvku (. H) pro `GetHeadingFont` `SetHeadingFont` a funkce a přidá jejich funkce šablony v souboru implementace ovládacího prvku (. CPP):
 
 [!code-cpp[NVC_MFC_AxFont#6](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_6.cpp)]
 
-A konečně Průvodce přidáním vlastnosti upraví ovládacího prvku. Soubor IDL to přidáním položky pro `HeadingFont` vlastnost:
+Nakonec Průvodce přidáním vlastností upraví ovládací prvek . IDL přidáním položky `HeadingFont` pro vlastnost:
 
 [!code-cpp[NVC_MFC_AxFont#7](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_7.idl)]
 
-### <a name="modifications-to-the-control-code"></a>Změny kódu ovládacího prvku
+### <a name="modifications-to-the-control-code"></a>Změny kontrolního kódu
 
-Teď, když jste přidali `HeadingFont` vlastnosti do ovládacího prvku, je třeba provést některé změny na soubory, které plně podporují novou vlastnost záhlaví a implementace ovládacího prvku.
+Nyní, když jste `HeadingFont` přidali vlastnost do ovládacího prvku, musíte provést některé změny záhlaví ovládacího prvku a implementační soubory plně podporovat novou vlastnost.
 
-V souboru záhlaví ovládacího prvku (. H), přidejte následující deklarace proměnné chráněný člen:
+V souboru záhlaví ovládacího prvku (. H), přidejte následující deklaraci chráněné členské proměnné:
 
 [!code-cpp[NVC_MFC_AxFont#8](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_8.h)]
 
@@ -160,81 +160,81 @@ V souboru implementace ovládacího prvku (. CPP), postupujte takto:
 
    [!code-cpp[NVC_MFC_AxFont#9](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_9.cpp)]
 
-- Deklarujte statickou FONTDESC strukturu obsahující výchozí atributy písma.
+- Deklarujte statickou strukturu FONTDESC obsahující výchozí atributy písma.
 
    [!code-cpp[NVC_MFC_AxFont#10](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_10.cpp)]
 
-- V ovládacím prvku `DoPropExchange` členské funkci, přidejte volání `PX_Font` funkce. Tímto způsobem, inicializace a trvalosti pro vaši vlastní vlastnost písma.
+- V funkci `DoPropExchange` ovládacího člena přidejte `PX_Font` volání funkce. To poskytuje inicializaci a trvalost pro vlastní Font vlastnost.
 
    [!code-cpp[NVC_MFC_AxFont#11](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_11.cpp)]
 
-- Dokončení implementace ovládacího prvku `GetHeadingFont` členskou funkci.
+- Dokončete `GetHeadingFont` implementaci funkce člena ovládacího prvku.
 
    [!code-cpp[NVC_MFC_AxFont#12](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_12.cpp)]
 
-- Dokončení implementace ovládacího prvku `SetHeadingFont` členskou funkci.
+- Dokončete `SetHeadingFont` implementaci funkce člena ovládacího prvku.
 
    [!code-cpp[NVC_MFC_AxFont#13](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_13.cpp)]
 
-- Upravit ovládací prvek `OnDraw` členské funkce definovat proměnnou pro uchování dříve vybraného písma.
+- Upravte `OnDraw` členská funkci ovládacího prvku tak, aby definovala proměnnou pro uložení dříve vybraného písma.
 
    [!code-cpp[NVC_MFC_AxFont#14](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_14.cpp)]
 
-- Upravit ovládací prvek `OnDraw` členskou funkci k výběru vlastního písma do kontextu zařízení tak, že přidáte následující řádek bez ohledu na to je písmo, který se má použít.
+- Upravte `OnDraw` členská funkci ovládacího prvku tak, aby vyberte vlastní písmo do kontextu zařízení přidáním následujícího řádku všude tam, kde má být písmo použito.
 
    [!code-cpp[NVC_MFC_AxFont#15](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_15.cpp)]
 
-- Upravit ovládací prvek `OnDraw` členské funkce vyberte předchozí písmo zpět do kontextu zařízení tak, že přidáte následující řádek po písma se používá.
+- Upravte `OnDraw` funkci člena ovládacího prvku a vyberte předchozí písmo zpět do kontextu zařízení přidáním následujícího řádku po použití písma.
 
    [!code-cpp[NVC_MFC_AxFont#16](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_16.cpp)]
 
-Poté, co byl implementován vlastních vlastností písma, standardní stránek vlastností písma by měla být implementována, umožnit uživatelům ovládacího prvku, chcete-li změnit písmo ovládacího prvku. Chcete-li přidat ID stránky vlastností pro standardní stránek vlastností písma, vložte následující řádek po BEGIN_PROPPAGEIDS – makro:
+Po implementaci vlastní vlastnosti Font by měla být implementována stránka vlastnosti standardní písmo, což uživatelům ovládacího prvku umožňuje změnit aktuální písmo ovládacího prvku. Chcete-li přidat ID stránky vlastností pro stránku vlastností standardní písmo, vložte za makro BEGIN_PROPPAGEIDS následující řádek:
 
 [!code-cpp[NVC_MFC_AxFont#17](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_17.cpp)]
 
-Jednou, musíte zvýšit počet parametr vaše BEGIN_PROPPAGEIDS – makro. To ukazuje následující řádek:
+Je také nutné povýšit parametr počtu BEGIN_PROPPAGEIDS makra o jednu. Následující řádek ilustruje toto:
 
 [!code-cpp[NVC_MFC_AxFont#18](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_18.cpp)]
 
-Po provedení těchto změn znovu sestavte celý projekt začlenit další funkce.
+Po provedené tyto změny, znovu sestavit celý projekt začlenit další funkce.
 
-###  <a name="_core_processing_font_notifications"></a> Zpracování oznámení písma
+### <a name="processing-font-notifications"></a><a name="_core_processing_font_notifications"></a>Zpracování oznámení písem
 
-Ve většině případů je potřeba vědět, kdy byly upraveny vlastnosti objektu písma ovládacího prvku. Každý objekt písma je schopný poskytnout oznámení při změně voláním členské funkce typu `IFontNotification` rozhraní implementované `COleControl`.
+Ve většině případů ovládací prvek potřebuje vědět, kdy byly změněny vlastnosti objektu písma. Každý objekt písma je schopen poskytovat oznámení při změně `IFontNotification` voláním členské `COleControl`funkce rozhraní implementované ho .
 
-Pokud ovládací prvek používá vlastnost běžného písma, jsou zpracovávány jeho oznámení `OnFontChanged` členskou funkci `COleControl`. Při přidání vlastního písma vlastnosti budete moci používat stejné implementaci. V příkladu v předchozí části se toho dosáhlo tím, že předáte &*m_xFontNotification* při inicializaci *m_fontHeading* členské proměnné.
+Pokud ovládací prvek používá vlastnost stock Font, jeho `OnFontChanged` oznámení `COleControl`jsou zpracována členovou funkcí . Když přidáte vlastní vlastnosti písma, můžete je nechat používat stejnou implementaci. V příkladu v předchozí části to bylo provedeno předáním &*m_xFontNotification* při inicializaci m_fontHeading *členské* proměnné.
 
-![Implementace rozhraní více objektů písma](../mfc/media/vc373q1.gif "implementovat více rozhraní objektu písma") <br/>
-Implementace rozhraní více objektů písma
+![Implementace více rozhraní objektů písma](../mfc/media/vc373q1.gif "Implementace více rozhraní objektů písma") <br/>
+Implementace rozhraní s více objekty písem
 
-Zobrazit čáry na obrázku výše, že oba objekty písmo budou používat stejné provádění `IFontNotification`. To může způsobit problémy, kdybyste chtěli změnit písmo rozlišení.
+Plné čáry na obrázku výše ukazují, že oba `IFontNotification`objekty písma používají stejnou implementaci aplikace . To by mohlo způsobit problémy, pokud chcete rozlišit, které písmo se změnilo.
 
-Jedním ze způsobů k rozlišení mezi oznámení objektu font ovládacího prvku je vytvořit samostatné implementace `IFontNotification` rozhraní pro každý objekt písma v ovládacím prvku. Tato technika vám umožní optimalizovat kód výkresu aktualizací pouze řetězec, nebo řetězce, které používají naposledy upravené písma. Následující části ukazují postup potřebný k implementaci rozhraní samostatné oznámení pro druhý vlastnosti Font. Druhou vlastností písma se předpokládá se, že `HeadingFont` vlastnost, která byla přidána v předchozí části.
+Jedním ze způsobů, jak rozlišovat mezi oznámení mise objektu `IFontNotification` písma ovládacího prvku je vytvořit samostatnou implementaci rozhraní pro každý objekt písma v ovládacím prvku. Tato technika umožňuje optimalizovat kód výkresu aktualizací pouze řetězce nebo řetězce, které používají nedávno upravené písmo. Následující části ukazují kroky nezbytné k implementaci samostatné oznámení rozhraní pro druhou Font vlastnost. Druhá vlastnost písma je `HeadingFont` považována za vlastnost, která byla přidána v předchozí části.
 
-###  <a name="_core_implementing_a_new_font_notification_interface"></a> Implementace nové rozhraní oznámení písma
+### <a name="implementing-a-new-font-notification-interface"></a><a name="_core_implementing_a_new_font_notification_interface"></a>Implementace nového rozhraní pro oznámení písem
 
-K rozlišení mezi oznámení dvě nebo více písem, je nutné implementovat nové rozhraní oznámení pro každou písmo použité v ovládacím prvku. Následující části popisují, jak implementovat nové rozhraní oznámení písma úpravou souborů záhlaví a implementaci ovládacího prvku.
+Chcete-li rozlišovat mezi oznámení midvě nebo více písem, musí být implementována nové rozhraní oznámení pro každé písmo použité v ovládacím prvku. Následující části popisují, jak implementovat nové rozhraní oznámení písma úpravou záhlaví ovládacího prvku a soubory implementace.
 
-### <a name="additions-to-the-header-file"></a>Přidání do souboru hlaviček
+### <a name="additions-to-the-header-file"></a>Dodatky k souboru záhlaví
 
-V souboru záhlaví ovládacího prvku (. H), přidejte následující řádky do deklarace třídy:
+V souboru záhlaví ovládacího prvku (. H), přidejte do deklarace třídy následující řádky:
 
 [!code-cpp[NVC_MFC_AxFont#19](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_19.h)]
 
-Tím se vytvoří implementace `IPropertyNotifySink` rozhraní s názvem `HeadingFontNotify`. Toto nové rozhraní obsahuje metodu nazvanou `OnChanged`.
+Tím se vytvoří `IPropertyNotifySink` implementace `HeadingFontNotify`rozhraní s názvem . Toto nové rozhraní `OnChanged`obsahuje metodu nazvanou .
 
-### <a name="additions-to-the-implementation-file"></a>Dodatky k implementační soubor
+### <a name="additions-to-the-implementation-file"></a>Dodatky k prováděcímu souboru
 
-V kódu, který inicializuje písmo záhlaví (v konstruktoru ovládací prvek), změňte &*m_xFontNotification* k &*m_xHeadingFontNotify*. Přidejte následující kód:
+V kódu, který inicializuje písmo nadpisu (v konstruktoru ovládacího prvku), změňte &*m_xFontNotification* na &*m_xHeadingFontNotify*. Pak přidejte následující kód:
 
 [!code-cpp[NVC_MFC_AxFont#20](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_20.cpp)]
 
-`AddRef` a `Release` metody v `IPropertyNotifySink` rozhraní udržovat přehled o počet odkazů pro objekt ovládacího prvku ActiveX. Když ovládací prvek získá přístup k ukazatel rozhraní, ovládací prvek volá `AddRef` se zvýší počet odkazů. Po dokončení se ovládací prvek s ukazatelem, volá `Release`, v skoro stejné způsobu, jakým `GlobalFree` může volat pro uvolnění bloku globální paměti. Když pro toto rozhraní počet odkazů dosáhne nuly, lze jej uvolnit implementace rozhraní. V tomto příkladu `QueryInterface` funkce vrátí ukazatel `IPropertyNotifySink` rozhraní pro daný objekt. Tato funkce umožňuje ovládacího prvku ActiveX k dotazování objektu určit, co je rozhraní podporuje.
+Metody `AddRef` `Release` a v `IPropertyNotifySink` rozhraní sledují počet odkazů pro řídicí objekt ActiveX. Když ovládací prvek získá přístup k ukazatel `AddRef` rozhraní, ovládací prvek volá zvýšení počtu odkazů. Po dokončení ovládacího prvku s ukazatelem volání `Release`, v `GlobalFree` podstatě stejným způsobem, který může být volána k uvolnění bloku globální paměti. Při počet odkazů pro toto rozhraní přejde na nulu, implementace rozhraní může být uvolněna. V tomto příkladu `QueryInterface` funkce vrátí `IPropertyNotifySink` ukazatel na rozhraní na konkrétní objekt. Tato funkce umožňuje ovládacímu prvku ActiveX dotazovat objekt k určení rozhraní, která podporuje.
 
-Po provedení těchto změn do vašeho projektu, sestavte projekt znovu a použít kontejner testování pro testování rozhraní. Zobrazit [testování vlastností a událostí pomocí testování kontejneru](../mfc/testing-properties-and-events-with-test-container.md) informace o tom, jak získat přístup ke kontejneru testů.
+Po tyto změny byly provedeny v projektu, znovu sestavit projekt a pomocí testovacího kontejneru k testování rozhraní. Informace o tom, jak získat přístup k testovacímu kontejneru, najdete v tématu [Testování vlastností a událostí s testovacím kontejnerem.](../mfc/testing-properties-and-events-with-test-container.md)
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [MFC – ovládací prvky ActiveX](../mfc/mfc-activex-controls.md)<br/>
-[MFC – ovládací prvky ActiveX: Použití obrázků v ovládacím prvku ActiveX](../mfc/mfc-activex-controls-using-pictures-in-an-activex-control.md)<br/>
+[MFC – ovládací prvky ActiveX: Použití obrázků v ovládacím prvku ActiveX](../mfc/mfc-activex-controls-using-pictures-in-an-activex-control.md)<br/>
 [MFC – ovládací prvky ActiveX: Použití stránek uložených vlastností](../mfc/mfc-activex-controls-using-stock-property-pages.md)

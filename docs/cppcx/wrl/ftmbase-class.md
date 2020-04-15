@@ -25,16 +25,16 @@ helpviewer_keywords:
 - Microsoft::WRL::FtmBase::ReleaseMarshalData method
 - Microsoft::WRL::FtmBase::UnmarshalInterface method
 ms.assetid: 275f3b71-2975-4f92-89e7-d351e96496df
-ms.openlocfilehash: fb7f103d8ea647f554d9bbf26c2e218d34f6b1ff
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d37cdddda8cf8894016ed80b9055fe106b1600f7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398443"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371516"
 ---
 # <a name="ftmbase-class"></a>FtmBase – třída
 
-Představuje objekt s volným zařazováním vláken.
+Představuje objekt zařazovače volných vláken.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -48,33 +48,33 @@ class FtmBase :
 
 ## <a name="remarks"></a>Poznámky
 
-Další informace najdete v tématu [runtimeclass – třída](runtimeclass-class.md).
+Další informace naleznete v tématu [RuntimeClass Class Class](runtimeclass-class.md).
 
 ## <a name="members"></a>Členové
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-| Název                         | Popis                                        |
+| Name (Název)                         | Popis                                        |
 | ---------------------------- | -------------------------------------------------- |
-| [FtmBase::FtmBase](#ftmbase) | Inicializuje novou instanci třídy `FtmBase` třídy. |
+| [FtmBase::FtmBase](#ftmbase) | Inicializuje novou instanci třídy. `FtmBase` |
 
 ### <a name="public-methods"></a>Veřejné metody
 
-| Název                                                               | Popis                                                                                                                                                          |
+| Name (Název)                                                               | Popis                                                                                                                                                          |
 | ------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [FtmBase::CreateGlobalInterfaceTable](#createglobalinterfacetable) | Vytvoří globální tabulku rozhraní (GIT).                                                                                                                              |
-| [Ftmbase::disconnectobject –](#disconnectobject)                     | Nuceně uvolní všechny externí připojení k objektu. Server objektu zavolá objektu implementace této metody před vypíná.                |
-| [Ftmbase::getmarshalsizemax –](#getmarshalsizemax)                   | Získejte horní mez počtu bajtů potřebných k zařazování zadaný ukazatel rozhraní na zadaný objekt.                                                |
-| [Ftmbase::getunmarshalclass –](#getunmarshalclass)                   | Získá identifikátor CLSID, který COM používá k nalezení knihovny DLL obsahující kód pro odpovídající server proxy. COM načte tuto knihovnu DLL vytvořit neinicializované instance serveru proxy. |
-| [FtmBase::MarshalInterface](#marshalinterface)                     | Zapíše do datového proudu data potřebná k inicializaci objektu proxy v nějaký proces klienta.                                                                          |
-| [FtmBase::ReleaseMarshalData](#releasemarshaldata)                 | Zničí zařazené datový paket.                                                                                                                                    |
-| [FtmBase::UnmarshalInterface](#unmarshalinterface)                 | Inicializuje nově vytvořeného serveru proxy a vrátí ukazatel rozhraní na tento server proxy.                                                                                    |
+| [FtmBase::CreateGlobalInterfaceTable](#createglobalinterfacetable) | Vytvoří tabulku globálního rozhraní (GIT).                                                                                                                              |
+| [FtmBase::DisconnectObject](#disconnectobject)                     | Násilně uvolní všechna externí připojení k objektu. Server objektu volá implementaci objektu této metody před vypnutím.                |
+| [FtmBase::GetMarshalSizeMax](#getmarshalsizemax)                   | Získejte horní mez na počet bajtů potřebných k zařazovací ukazatel zadané ho rozhraní na zadaný objekt.                                                |
+| [FtmBase::GetUnmarshalClass](#getunmarshalclass)                   | Získá CLSID, který com používá k vyhledání DLL obsahující kód pro odpovídající proxy server. Com načte tuto dll vytvořit neinicializované instance proxy serveru. |
+| [FtmBase::MarshalInterface](#marshalinterface)                     | Zapíše do datového proudu data potřebná k inicializaci proxy objektu v některém procesu klienta.                                                                          |
+| [FtmBase::ReleaseMarshalData](#releasemarshaldata)                 | Zničí zařazovaný datový paket.                                                                                                                                    |
+| [FtmBase::UnmarshalInterface](#unmarshalinterface)                 | Inicializuje nově vytvořený proxy server a vrátí ukazatel rozhraní na tento proxy server.                                                                                    |
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-| Název                                | Popis                                       |
+| Name (Název)                                | Popis                                       |
 | ----------------------------------- | ------------------------------------------------- |
-| [Ftmbase::marshaller_ –](#marshaller) | Obsahuje odkaz na volné zařazování vláken. |
+| [FtmBase::marshaller_](#marshaller) | Obsahuje odkaz na volné podprocesové zařazování. |
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -84,11 +84,11 @@ Další informace najdete v tématu [runtimeclass – třída](runtimeclass-clas
 
 **Záhlaví:** ftm.h
 
-**Namespace:** Microsoft::WRL
+**Obor názvů:** Microsoft::WRL
 
-## <a name="createglobalinterfacetable"></a>FtmBase::CreateGlobalInterfaceTable
+## <a name="ftmbasecreateglobalinterfacetable"></a><a name="createglobalinterfacetable"></a>FtmBase::CreateGlobalInterfaceTable
 
-Vytvoří globální tabulku rozhraní (GIT).
+Vytvoří tabulku globálního rozhraní (GIT).
 
 ```cpp
 static HRESULT CreateGlobalInterfaceTable(
@@ -98,20 +98,20 @@ static HRESULT CreateGlobalInterfaceTable(
 
 ### <a name="parameters"></a>Parametry
 
-*git*<br/>
-Když tato operace dokončí, ukazatel na globální tabulku rozhraní.
+*Git*<br/>
+Po dokončení této operace ukazatel na tabulku globálního rozhraní.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-S_OK v případě úspěchu; v opačném případě HRESULT, která označuje chybu.
+S_OK v případě úspěchu; jinak HRESULT, který označuje chybu.
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace najdete v tématu `IGlobalInterfaceTable` tématu `COM Interfaces` Tematická z `COM Reference` v knihovně MSDN.
+Další informace naleznete `IGlobalInterfaceTable` v tématu v `COM Interfaces` `COM Reference` dílčím tématu tématu v knihovně MSDN.
 
-## <a name="disconnectobject"></a>Ftmbase::disconnectobject –
+## <a name="ftmbasedisconnectobject"></a><a name="disconnectobject"></a>FtmBase::DisconnectObject
 
-Nuceně uvolní všechny externí připojení k objektu. Server objektu zavolá objektu implementace této metody před vypíná.
+Násilně uvolní všechna externí připojení k objektu. Server objektu volá implementaci objektu této metody před vypnutím.
 
 ```cpp
 STDMETHODIMP DisconnectObject(
@@ -121,24 +121,24 @@ STDMETHODIMP DisconnectObject(
 
 ### <a name="parameters"></a>Parametry
 
-*dwReserved*<br/>
+*dwVyhrazeno*<br/>
 Vyhrazeno pro budoucí použití; musí být nula.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-S_OK v případě úspěchu; v opačném případě HRESULT, která označuje chybu.
+S_OK v případě úspěchu; jinak HRESULT, který označuje chybu.
 
-## <a name="ftmbase"></a>FtmBase::FtmBase
+## <a name="ftmbaseftmbase"></a><a name="ftmbase"></a>FtmBase::FtmBase
 
-Inicializuje novou instanci třídy `FtmBase` třídy.
+Inicializuje novou instanci třídy. `FtmBase`
 
 ```cpp
 FtmBase();
 ```
 
-## <a name="getmarshalsizemax"></a>Ftmbase::getmarshalsizemax –
+## <a name="ftmbasegetmarshalsizemax"></a><a name="getmarshalsizemax"></a>FtmBase::GetMarshalSizeMax
 
-Získejte horní mez počtu bajtů potřebných k zařazování zadaný ukazatel rozhraní na zadaný objekt.
+Získejte horní mez na počet bajtů potřebných k zařazovací ukazatel zadané ho rozhraní na zadaný objekt.
 
 ```cpp
 STDMETHODIMP GetMarshalSizeMax(
@@ -153,35 +153,35 @@ STDMETHODIMP GetMarshalSizeMax(
 
 ### <a name="parameters"></a>Parametry
 
-*riid*<br/>
-Odkaz na identifikátor rozhraní zařadit.
+*riid řekl:*<br/>
+Odkaz na identifikátor rozhraní, které má být zařazeno.
 
-*pv*<br/>
-Ukazatel rozhraní na zařadit; může mít hodnotu NULL.
+*Pv*<br/>
+Ukazatel rozhraní, který má být zařazen; může být null.
 
-*dwDestContext*<br/>
-Cílový kontext, kde má být sdružení daného rozhraní.
+*dwDestKontext*<br/>
+Cílový kontext, kde má být zadané rozhraní unmarshaled.
 
 Zadejte jednu nebo více hodnot výčtu MSHCTX.
 
-V současné době unmarshaling situace může nastat v jiném objektu apartment aktuálního procesu (MSHCTX_INPROC) nebo v jiném procesu ve stejném počítači jako aktuální proces (MSHCTX_LOCAL).
+V současné době unmarshaling může dojít buď v jiném apartment aktuálního procesu (MSHCTX_INPROC) nebo v jiném procesu ve stejném počítači jako aktuální proces (MSHCTX_LOCAL).
 
 *pvDestContext*<br/>
-Vyhrazeno pro budoucí použití; musí mít hodnotu NULL.
+Vyhrazeno pro budoucí použití; musí být null.
 
 *mshlflags*<br/>
-Příznak označující, zda je data, která mají být zařazen do dají přenést zpátky do klienta procesu – typické případy – nebo zapisují do globální tabulky, kde se dá načíst pomocí více klientů. Zadejte jednu nebo více hodnot výčtu MSHLFLAGS.
+Příznak označující, zda data, která mají být zařazena má být předána zpět do procesu klienta – typický případ – nebo zapsány do globální tabulky, kde mohou být načteny více klientů. Zadejte jednu nebo více hodnot výčtu MSHLFLAGS.
 
-*pSize*<br/>
-Když tato operace dokončena, ukazatel na horní mez na množství dat k zápisu do streamu zařazování.
+*pVelikost*<br/>
+Po dokončení této operace, ukazatel na horní mez na množství dat, která mají být zapsány do zařazování proudu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-S_OK v případě úspěchu; nebo jinak E_NOINTERFACE E_FAIL.
+S_OK v případě úspěchu; v opačném případě E_FAIL nebo E_NOINTERFACE.
 
-## <a name="getunmarshalclass"></a>Ftmbase::getunmarshalclass –
+## <a name="ftmbasegetunmarshalclass"></a><a name="getunmarshalclass"></a>FtmBase::GetUnmarshalClass
 
-Získá identifikátor CLSID, který COM používá k nalezení knihovny DLL obsahující kód pro odpovídající server proxy. COM načte tuto knihovnu DLL vytvořit neinicializované instance serveru proxy.
+Získá CLSID, který com používá k vyhledání DLL obsahující kód pro odpovídající proxy server. Com načte tuto dll vytvořit neinicializované instance proxy serveru.
 
 ```cpp
 STDMETHODIMP GetUnmarshalClass(
@@ -196,34 +196,34 @@ STDMETHODIMP GetUnmarshalClass(
 
 ### <a name="parameters"></a>Parametry
 
-*riid*<br/>
-Odkaz na identifikátor rozhraní zařadit.
+*riid řekl:*<br/>
+Odkaz na identifikátor rozhraní, které má být zařazeno.
 
-*pv*<br/>
-Ukazatel rozhraní k zařadit; může mít hodnotu NULL, pokud volající nemá ukazatel na požadované rozhraní.
+*Pv*<br/>
+Ukazatel na rozhraní, které má být zařazeno; může být NULL, pokud volající nemá ukazatel na požadované rozhraní.
 
-*dwDestContext*<br/>
-Cílový kontext, kde má být sdružení daného rozhraní.
+*dwDestKontext*<br/>
+Cílový kontext, kde má být zadané rozhraní unmarshaled.
 
 Zadejte jednu nebo více hodnot výčtu MSHCTX.
 
-Unmarshaling situace může nastat v jiném objektu apartment aktuálního procesu (MSHCTX_INPROC) nebo v jiném procesu ve stejném počítači jako aktuální proces (MSHCTX_LOCAL).
+Unmarshaling může dojít buď v jiném apartment aktuálního procesu (MSHCTX_INPROC) nebo v jiném procesu ve stejném počítači jako aktuální proces (MSHCTX_LOCAL).
 
 *pvDestContext*<br/>
-Vyhrazeno pro budoucí použití; musí mít hodnotu NULL.
+Vyhrazeno pro budoucí použití; musí být null.
 
 *mshlflags*<br/>
-Pokud tato operace dokončena, ukazatel na identifikátor CLSID se použije k vytvoření proxy serveru v procesu klienta.
+Po dokončení této operace, ukazatel na CLSID, které mají být použity k vytvoření proxy v procesu klienta.
 
 *pCid*
 
 ### <a name="return-value"></a>Návratová hodnota
 
-S_OK v případě úspěchu; v opačném případě S_FALSE.
+S_OK v případě úspěchu; jinak S_FALSE.
 
-## <a name="marshalinterface"></a>FtmBase::MarshalInterface
+## <a name="ftmbasemarshalinterface"></a><a name="marshalinterface"></a>FtmBase::MarshalInterface
 
-Zapíše do datového proudu data potřebná k inicializaci objektu proxy v nějaký proces klienta.
+Zapíše do datového proudu data potřebná k inicializaci proxy objektu v některém procesu klienta.
 
 ```cpp
 STDMETHODIMP MarshalInterface(
@@ -239,48 +239,48 @@ STDMETHODIMP MarshalInterface(
 ### <a name="parameters"></a>Parametry
 
 *pStm*<br/>
-Ukazatel na datový proud, které se použijí při zařazování.
+Ukazatel na datový proud, který má být použit během zařazování.
 
-*riid*<br/>
-Odkaz na identifikátor rozhraní zařadit. Toto rozhraní musí být odvozen od `IUnknown` rozhraní.
+*riid řekl:*<br/>
+Odkaz na identifikátor rozhraní, které má být zařazeno. Toto rozhraní musí být `IUnknown` odvozeno z rozhraní.
 
-*pv*<br/>
-Ukazatel na ukazatel rozhraní k zařadit; může mít hodnotu NULL, pokud volající nemá ukazatel na požadované rozhraní.
+*Pv*<br/>
+Ukazatel na ukazatel rozhraní, který má být zařazen; může být NULL, pokud volající nemá ukazatel na požadované rozhraní.
 
-*dwDestContext*<br/>
-Cílový kontext, kde má být sdružení daného rozhraní.
+*dwDestKontext*<br/>
+Cílový kontext, kde má být zadané rozhraní unmarshaled.
 
 Zadejte jednu nebo více hodnot výčtu MSHCTX.
 
-Unmarshaling situace může nastat v jiném objektu apartment aktuálního procesu (MSHCTX_INPROC) nebo v jiném procesu ve stejném počítači jako aktuální proces (MSHCTX_LOCAL).
+Unmarshaling může dojít v jiném apartment aktuálního procesu (MSHCTX_INPROC) nebo v jiném procesu ve stejném počítači jako aktuální proces (MSHCTX_LOCAL).
 
 *pvDestContext*<br/>
 Vyhrazeno pro budoucí použití; musí být nula.
 
 *mshlflags*<br/>
-Určuje, zda data, která mají být zařazen do dají přenést zpátky do klienta procesu – typické případy – nebo zapisují do globální tabulky, kde se dá načíst pomocí více klientů.
+Určuje, zda mají být data, která mají být zařazena, odeslána zpět do klientského procesu – typického případu – nebo zapsána do globální tabulky, kde je může načíst více klientů.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Úspěšně byl zařazen S_OK ukazatel rozhraní.
+S_OK Ukazatel rozhraní byl úspěšně zařazen.
 
-E_NOINTERFACE zadané rozhraní není podporováno.
+E_NOINTERFACE Zadané rozhraní není podporováno.
 
-STG_E_MEDIUMFULL datový proud je plná.
+STG_E_MEDIUMFULL Datový proud je plný.
 
-E_FAIL operace se nezdařila.
+E_FAIL Operace se nezdařila.
 
-## <a name="marshaller"></a>Ftmbase::marshaller_ –
+## <a name="ftmbasemarshaller_"></a><a name="marshaller"></a>FtmBase::marshaller_
 
-Obsahuje odkaz na volné zařazování vláken.
+Obsahuje odkaz na volné podprocesové zařazování.
 
 ```cpp
 Microsoft::WRL::ComPtr<IMarshal> marshaller_; ;
 ```
 
-## <a name="releasemarshaldata"></a>FtmBase::ReleaseMarshalData
+## <a name="ftmbasereleasemarshaldata"></a><a name="releasemarshaldata"></a>FtmBase::ReleaseMarshalData
 
-Zničí zařazené datový paket.
+Zničí zařazovaný datový paket.
 
 ```cpp
 STDMETHODIMP ReleaseMarshalData(
@@ -291,15 +291,15 @@ STDMETHODIMP ReleaseMarshalData(
 ### <a name="parameters"></a>Parametry
 
 *pStm*<br/>
-Ukazatel na datový proud, který obsahuje datový paket, který se má zničit.
+Ukazatel na datový proud, který obsahuje datový paket, který má být zničen.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-S_OK v případě úspěchu; v opačném případě HRESULT, která označuje chybu.
+S_OK v případě úspěchu; jinak HRESULT, který označuje chybu.
 
-## <a name="unmarshalinterface"></a>FtmBase::UnmarshalInterface
+## <a name="ftmbaseunmarshalinterface"></a><a name="unmarshalinterface"></a>FtmBase::UnmarshalInterface
 
-Inicializuje nově vytvořeného serveru proxy a vrátí ukazatel rozhraní na tento server proxy.
+Inicializuje nově vytvořený proxy server a vrátí ukazatel rozhraní na tento proxy server.
 
 ```cpp
 STDMETHODIMP UnmarshalInterface(
@@ -312,14 +312,14 @@ STDMETHODIMP UnmarshalInterface(
 ### <a name="parameters"></a>Parametry
 
 *pStm*<br/>
-Ukazatel na datový proud, ze kterého má být zrušeno ukazatel rozhraní.
+Ukazatel na datový proud, ze kterého má být nezařazen.
 
-*riid*<br/>
-Odkaz na identifikátor rozhraní bude zrušeno.
+*riid řekl:*<br/>
+Odkaz na identifikátor rozhraní, které má být unmarshaled.
 
-*ppv*<br/>
-Když tato operace dokončí, adresu proměnné ukazatele, která přijímá ukazatel rozhraní požadovaný v *riid*. Pokud je tato operace úspěšná, **ppv* obsahuje požadované rozhraní ukazatel rozhraní, bude zrušeno.
+*Ppv*<br/>
+Po dokončení této operace, adresa ukazatele proměnné, která obdrží ukazatel rozhraní požadované v *riid*. Pokud je tato operace úspěšná, **ppv* obsahuje požadovaný ukazatel rozhraní rozhraní, které má být unmarshaled.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-S_OK v případě úspěchu; jinak E_NOINTERFACE nebo E_FAIL.
+S_OK v případě úspěchu; v opačném případě E_NOINTERFACE nebo E_FAIL.

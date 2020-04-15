@@ -4,48 +4,48 @@ ms.date: 12/13/2019
 helpviewer_keywords:
 - modules [C++]
 - modules [C++], overview
-description: Moduly v C++ 20 poskytují moderní alternativu hlavičkových souborů.
-ms.openlocfilehash: 286d2ec8a26dbd0a85e8f8721ad6fd7f12f45a31
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+description: Moduly v jazyce C++20 poskytují moderní alternativu k souborům hlaviček.
+ms.openlocfilehash: cd45be1dee888c8caeb65b7ff002ac8fee1ecbe1
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80078045"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81370762"
 ---
 # <a name="overview-of-modules-in-c"></a>Přehled modulů v C++
 
-C++ 20 zavádí *moduly*, moderní řešení pro součásti C++ knihoven a programů. Modul je sada souborů zdrojového kódu, které jsou kompilovány nezávisle na [jednotkách překladu](https://wikipedia.org/wiki/Translation_unit_(programming)) , které je importují. Moduly eliminují nebo významně snižují mnohé problémy spojené s používáním hlavičkových souborů a také potenciálně omezují dobu kompilace. Makra, direktivy preprocesoru a neexportované názvy deklarované v modulu nejsou viditelné, takže nemají žádný vliv na kompilaci jednotky překladu, která modul importuje. Moduly můžete importovat v libovolném pořadí bez obav o předefinování maker. Deklarace v importované jednotce překladu se nepodílejí na řešení přetížení ani při vyhledávání názvů v importovaném modulu. Jakmile je modul zkompilován jednou, výsledky jsou uloženy v binárním souboru, který popisuje všechny exportované typy, funkce a šablony. Tento soubor může být zpracován mnohem rychleji než hlavičkový soubor a může být znovu použit kompilátorem každé místo, kde je modul importován v projektu.
+C++20 představuje *moduly*, moderní řešení pro komponentizaci c++ knihoven a programů. Modul je sada souborů zdrojového kódu, které jsou kompilovány nezávisle na [jednotkách překladu,](https://wikipedia.org/wiki/Translation_unit_(programming)) které je importují. Moduly eliminují nebo výrazně snižují mnoho problémů spojených s používáním souborů hlaviček a také potenciálně zkracují dobu kompilace. Makra, direktivy preprocesoru a neexportované názvy deklarované v modulu nejsou viditelné, a proto nemají žádný vliv na kompilaci jednotky překladu, která modul importuje. Moduly můžete importovat v libovolném pořadí bez obav o redefinice maker. Deklarace v jednotce importu překladu se neúčastní přenastavení přetížení nebo vyhledávání názvů v importovaném modulu. Po zkompilování modulu jednou jsou výsledky uloženy v binárním souboru, který popisuje všechny exportované typy, funkce a šablony. Tento soubor může být zpracován mnohem rychleji než soubor záhlaví a může být znovu použit kompilátorem na každém místě, kde je modul importován v projektu.
 
-Moduly lze použít vedle sebe se soubory hlaviček. C++ Zdrojový soubor může importovat moduly a také #include hlavičkových souborů. V některých případech je možné soubor hlaviček importovat jako modul, nikoli text #included preprocesorem. Doporučujeme, aby nové projekty používaly spíše moduly než soubory hlaviček, které jsou co nejvíc. Pro větší existující projekty v rámci aktivního vývoje doporučujeme experimentovat s převodem starších hlaviček do modulů, abyste zjistili, jestli získáte smysluplné snížení doby kompilace.
+Moduly lze používat vedle sebe se soubory hlaviček. Zdrojový soubor jazyka C++ může importovat moduly a také #include soubory hlaviček. V některých případech lze soubor záhlaví importovat jako modul, nikoli textově #included preprocesorem. Doporučujeme, aby nové projekty používaly moduly, nikoli soubory hlaviček, jak je to možné. Pro větší existující projekty v rámci aktivního vývoje doporučujeme experimentovat s převodem starších záhlaví na moduly, abyste zjistili, zda se zobrazí smysluplné snížení doby kompilace.
 
-## <a name="enable-modules-in-the-microsoft-c-compiler"></a>Povolení modulů v kompilátoru Microsoftu C++
+## <a name="enable-modules-in-the-microsoft-c-compiler"></a>Povolení modulů v kompilátoru Microsoft C++
 
-Od verze Visual Studio 2019 verze 16,2 nejsou moduly v kompilátoru Microsoftu C++ plně implementované. Pomocí funkce moduly můžete vytvořit moduly s jedním oddílem a importovat standardní moduly knihovny poskytované společností Microsoft. Pokud chcete povolit podporu pro moduly, zkompilujte s [/Experimental: Module](../build/reference/experimental-module.md) a [/std: c + + nejnovější](../build/reference/std-specify-language-standard-version.md). V projektu sady Visual Studio klikněte pravým tlačítkem myši na uzel projektu v **Průzkumník řešení** a vyberte **vlastnosti**. Nastavte rozevírací seznam **Konfigurace** na **všechny konfigurace**a potom zvolte **Vlastnosti konfigurace** > **jazyka** **C/C++**  >  >  **C++ povolit moduly (experimentální)** .
+Od Visual Studio 2019 verze 16.2 moduly nejsou plně implementovány v kompilátoru Microsoft C++. Funkci moduly můžete použít k vytvoření modulů s jedním oddílem a k importu modulů standardní knihovny poskytovaných společností Microsoft. Chcete-li povolit podporu modulů, kompilujte s [/experimental:module](../build/reference/experimental-module.md) a [/std:c++latest](../build/reference/std-specify-language-standard-version.md). V projektu sady Visual Studio klepněte pravým tlačítkem myši na uzel projektu v **Průzkumníku řešení** a zvolte **vlastnosti**. Nastavte rozevírací **seznam Konfigurace** na **Všechny konfigurace**a pak zvolte **Vlastnosti** > konfigurace**C/C++** > **Jazyk** > **Povolit moduly C++ (experimentální).**
 
-Modul a kód, který ho využívá, musí být kompilovány se stejnými možnostmi kompilátoru.
+Modul a kód, který spotřebovává musí být zkompilován se stejnými možnostmi kompilátoru.
 
-## <a name="consume-the-c-standard-library-as-modules"></a>Spotřebovat C++ standardní knihovnu jako moduly
+## <a name="consume-the-c-standard-library-as-modules"></a>Využití standardní knihovny jazyka C++ jako modulů
 
-I když není určeno standardem C++ 20, společnost Microsoft umožňuje, aby byla C++ vaše implementace standardní knihovny importována jako moduly. Importováním C++ standardní knihovny jako modulů místo jejich #including skrze soubory hlaviček můžete potenciálně zrychlit dobu kompilace v závislosti na velikosti projektu. Knihovna je součástí do následujících modulů:
+Ačkoli není zadán standardem C++ 20, společnost Microsoft umožňuje importovat jako moduly její implementaci standardní knihovny jazyka C++. Importem standardní knihovny jazyka C++ jako modulů, nikoli #including prostřednictvím souborů hlaviček, můžete potenciálně urychlit dobu kompilace v závislosti na velikosti projektu. Knihovna je komponentována do následujících modulů:
 
-- STD. Regex poskytuje obsah záhlaví \<regulárního výrazu >
-- STD. FileSystem poskytuje obsah hlaviček \<systému souborů >
-- STD. Memory poskytuje obsah záhlaví \<paměti >
-- STD. Threading poskytuje obsah hlaviček \<atomická >, \<condition_variable >, \<budoucích >, \<mutex >, \<shared_mutex > a \<ch vláken >
-- STD. Core poskytuje vše ostatní ve C++ standardní knihovně.
+- std.regex poskytuje obsah \<hlavičkového regulárního>
+- std.filesystem poskytuje obsah \<souborového systému záhlaví>
+- std.memory poskytuje obsah \<paměti záhlaví>
+- std.threading poskytuje obsah záhlaví \< \<atomické>, condition_variable>, \< \<budoucí>, \< \<mutex>, shared_mutex> a> podprocesů
+- std.core poskytuje vše ostatní ve standardní knihovně C++
 
-Chcete-li tyto moduly využívat, stačí přidat deklaraci importu na začátek souboru zdrojového kódu. Příklad:
+Chcete-li tyto moduly využívat, stačí přidat prohlášení importu do horní části souboru zdrojového kódu. Příklad:
 
 ```cpp
 import std.core;
 import std.regex;
 ```
 
-Chcete-li využívat modul Microsoft Standard Library, zkompilujte program s možnostmi [/EHsc](../build/reference/eh-exception-handling-model.md) a [/MD](../build/reference/md-mt-ld-use-run-time-library.md) .
+Chcete-li využívat modul Microsoft Standard Library, zkompilujte program s [možnostmi /EHsc](../build/reference/eh-exception-handling-model.md) a [/MD.](../build/reference/md-mt-ld-use-run-time-library.md)
 
 ## <a name="basic-example"></a>Základní příklad
 
-Následující příklad ukazuje definici jednoduchého modulu ve zdrojovém souboru s názvem **foo. IXX**. Pro soubory rozhraní modulů v aplikaci Visual Studio je vyžadováno rozšíření **. IXX** . V tomto příkladu soubor rozhraní obsahuje definici funkce i deklaraci. Nicméně definice lze také umístit do jednoho nebo více samostatných souborů (jak je znázorněno v pozdějším příkladu). Příkaz **exportovat modul foo** označuje, že tento soubor je primárním rozhraním pro modul s názvem `Foo`. Modifikátor **exportu** u `f()` označuje, že tato funkce bude viditelná, když `Foo` importuje jiný program nebo modul. Všimněte si, že modul odkazuje na obor názvů `Bar`.
+Následující příklad ukazuje jednoduchou definici modulu ve zdrojovém souboru s názvem **Foo.ixx**. Přípona **.ixx** je vyžadována pro soubory rozhraní modulu v sadě Visual Studio. V tomto příkladu obsahuje soubor rozhraní definici funkce, stejně jako deklarace. Definice však mohou být také umístěny v jednom nebo více samostatných souborech (jak je znázorněno v pozdějším příkladu). Exportmodul **Foo** prohlášení označuje, že tento soubor je `Foo`primární rozhraní pro modul s názvem . Modifikátor `f()` **exportu** na označuje, `Foo` že tato funkce bude viditelná při importu jiným programem nebo modulem. Všimněte si, že modul `Bar`odkazuje na obor názvů .
 
 ```cpp
 export module Foo;
@@ -64,7 +64,7 @@ namespace Bar
 }
 ```
 
-Soubor **MyProgram. cpp** používá deklaraci **Import** pro přístup k názvu, který je exportován pomocí `Foo`. Všimněte si, že název `Bar` je viditelný, ale ne všechny jeho členy. Všimněte si také, že `ANSWER` makra není vidět.
+Soubor **MyProgram.cpp** používá **prohlášení importu** pro přístup k `Foo`názvu, který je exportován programem . Všimněte si, že název `Bar` je viditelný zde, ale ne všechny jeho členy. Všimněte si `ANSWER` také, že makro není viditelné.
 
 ```cpp
 
@@ -82,26 +82,26 @@ int main()
 
 ```
 
-Deklarace importu se může vyskytovat jenom v globálním oboru.
+Prohlášení o importu se může zobrazit pouze v globálním oboru.
 
-## <a name="implementing-modules"></a>Implementace modulů
+## <a name="implementing-modules"></a>Implementační moduly
 
-Můžete vytvořit modul se souborem jediného rozhraní (. IXX), který exportuje názvy a zahrnuje implementace všech funkcí a typů. Implementace můžete také vložit do jednoho nebo více samostatných implementačních souborů, podobně jako se používají soubory. h a. cpp. Klíčové slovo **Export** se používá pouze v souboru rozhraní. Implementační soubor může **importovat** jiný modul, ale nemůže **exportovat** žádné názvy. Implementační soubory mohou být pojmenovány s libovolným rozšířením. Soubor rozhraní a sada implementačních souborů, které jsou v něm umístěny, se považují za speciální druh jednotky překladu označované jako *jednotka modulu*. Název, který je deklarován v jakémkoli implementačním souboru, je automaticky viditelný ve všech ostatních souborech v rámci stejné jednotky modulu.
+Můžete vytvořit modul s jedním souborem rozhraní (.ixx), který exportuje názvy a zahrnuje implementace všech funkcí a typů. Můžete také umístit implementace do jednoho nebo více samostatných souborů implementace, podobně jako se používají soubory .h a CPP. Klíčové slovo **exportu** se používá pouze v souboru rozhraní. Soubor implementace můžete **importovat** jiný modul, ale nelze **exportovat** žádné názvy. Soubory implementace mohou být pojmenovány s libovolnou příponou. Soubor rozhraní a sada implementačních souborů, které jej zpět jsou považovány za speciální druh překladu jednotky zvané *modul jednotky*. Název, který je deklarován v libovolném souboru implementace, je automaticky viditelný ve všech ostatních souborech v rámci stejné jednotky modulu.
 
-U větších modulů můžete modul rozdělit do více jednotek modulu s názvem *oddíly*. Každý oddíl obsahuje soubor rozhraní zálohovaný jedním nebo více Implementačními soubory. (Počínaje verzí Visual Studio 2019 verze 16,2, oddíly ještě nejsou plně implementované.)
+U větších modulů můžete modul rozdělit na více modulových jednotek *nazývaných oddíly*. Každý oddíl se skládá ze souboru rozhraní podporovaného jedním nebo více implementačními soubory. (Od Visual Studio 2019 verze 16.2 oddíly ještě nejsou plně implementovány.)
 
 ## <a name="modules-namespaces-and-argument-dependent-lookup"></a>Moduly, obory názvů a vyhledávání závislé na argumentech
 
-Pravidla pro obory názvů v modulech jsou stejná jako v jakémkoli jiném kódu. Pokud je exportována deklarace v rámci oboru názvů, je nadřazený obor názvů (kromě neexportovaných členů) také implicitně exportován. Pokud je obor názvů explicitně exportován, jsou exportovány všechny deklarace v rámci této definice oboru názvů.
+Pravidla pro obory názvů v modulech jsou stejná jako v jakémkoli jiném kódu. Pokud je exportováno prohlášení v oboru názvů, je implicitně exportován také ohraničující obor názvů (s výjimkou neexportovaných členů). Pokud je obor názvů explicitně exportován, exportují se všechna prohlášení v rámci této definice oboru názvů.
 
-Při provádění vyhledávání závislého na argumentu pro rozlišení přetížení v rámci importu jednotky překladu Kompilátor považuje funkce, které jsou deklarovány ve stejné jednotce překladu (včetně rozhraní modulů), jako je typ argumentů funkce. jsou definovány.
+Při provádění vyhledávání v závislosti na argumentu pro řešení přetížení v jednotce importu překladu kompilátor považuje funkce, které jsou deklarovány ve stejné jednotce překladu (včetně rozhraní modulu), jako kde jsou definovány argumenty funkce.
 
 ### <a name="module-partitions"></a>Oddíly modulů
 
 > [!NOTE]
-> Tato část je k dispozici pro úplnost. Oddíly ještě nejsou implementované v kompilátoru Microsoftu C++ .
+> Tato část je k dispozici pro úplnost. Oddíly ještě nejsou implementovány v kompilátoru Microsoft C++.
 
-Modul může být součástí do *oddílů*, z nichž každý obsahuje soubor rozhraní a nula nebo více implementačních souborů. Oddíl modulu je podobný modulu, s tím rozdílem, že sdílí vlastnictví všech deklarací v celém modulu. Všechny názvy, které jsou exportovány soubory rozhraní oddílu, jsou importovány a exportovány souborem primárního rozhraní. Název oddílu musí začínat názvem modulu následovaným dvojtečkou. Deklarace v libovolném z oddílů jsou viditelné v celém modulu. Není potřeba žádná zvláštní opatření, aby se předešlo chybám ODR (One-definition-Rule). Můžete deklarovat název (funkci, třídu atd.) v jednom oddílu a definovat jej v jiném. Soubor implementace oddílu začíná takto:
+Modul lze komponentovat do *oddílů*, z nichž každý se skládá ze souboru rozhraní a nula nebo více implementačních souborů. Oddíl modulu je podobný modulu, s tím rozdílem, že sdílí vlastnictví všech deklarací v celém modulu. Všechny názvy, které jsou exportovány soubory rozhraní oddílu jsou importovány a znovu exportovány primárním souborem rozhraní. Název oddílu musí začínat názvem modulu následovaným dvojtečkou. Deklarace v některém z oddílů jsou viditelné v rámci celého modulu. Nejsou nutná žádná zvláštní opatření, aby se zabránilo chybám pravidla jedné definice (ODR). Můžete deklarovat název (funkce, třída, atd.) v jednom oddílu a definovat jej v jiném. Soubor implementace oddílu začíná takto:
 
 ```cpp
 module Foo:part1
@@ -113,14 +113,14 @@ a soubor rozhraní oddílu začíná takto:
 export module Foo:part1
 ```
 
-Chcete-li získat přístup k deklaracím v jiném oddílu, oddíl musí importovat, ale může použít pouze název oddílu, nikoli název modulu:
+Chcete-li získat přístup k deklaracím v jiném oddílu, musí jej oddíl importovat, ale může používat pouze název oddílu, nikoli název modulu:
 
 ```cpp
 module Foo:part2;
 import :part1;
 ```
 
-Jednotka primárního rozhraní musí naimportovat a znovu exportovat všechny soubory oddílů rozhraní modulu, jako je:
+Jednotka primárního rozhraní musí importovat a znovu exportovat všechny soubory oddílů rozhraní modulu takto:
 
 ```cpp
 export import :part1
@@ -128,11 +128,11 @@ export import :part2
 ...
 ```
 
-Jednotka primárního rozhraní může importovat soubory implementace oddílu, ale nemůže je exportovat, protože tyto soubory nemají povolený export jakýchkoli názvů. Díky tomu může modul uchovávat podrobnosti o implementaci pro daný modul interní.
+Primární jednotka rozhraní může importovat soubory implementace oddílu, ale nemůže je exportovat, protože tyto soubory nemohou exportovat žádné názvy. To umožňuje modulu zachovat podrobnosti implementace interní modulu.
 
-## <a name="modules-and-header-files"></a>Moduly a hlavičkové soubory
+## <a name="modules-and-header-files"></a>Moduly a soubory hlaviček
 
-Soubory hlaviček můžete zahrnout do zdrojového souboru modulu vložením direktivy `#include` před deklaraci modulu. Tyto soubory se považují za *fragment globálního modulu*. V modulu se můžou zobrazit jenom názvy v *fragmentu globálních modulů* , které jsou v hlavičkách, které explicitně obsahují. Fragment globálních modulů obsahuje pouze symboly, které jsou skutečně použity.
+Soubory hlaviček můžete zahrnout do zdrojového souboru modulu `#include` umístěním směrnice před deklaraci modulu. Tyto soubory jsou považovány za v *fragmentu globálního modulu*. Modul může zobrazit pouze názvy v *fragmentu globálního modulu,* které jsou v záhlaví, které explicitně obsahuje. Fragment globálního modulu obsahuje pouze symboly, které jsou skutečně použity.
 
 ```cpp
 // MyModuleA.cpp
@@ -146,7 +146,7 @@ import MyModuleB;
 //... rest of file
 ```
 
-K řízení, které moduly se importují, můžete použít tradiční hlavičkový soubor:
+K řízení importovaných modulů můžete použít tradiční soubor záhlaví:
 
 ```cpp
 // MyProgram.h
@@ -156,12 +156,12 @@ import std.filesystem;
 #endif
 ```
 
-### <a name="imported-header-files"></a>Importované hlavičkové soubory
+### <a name="imported-header-files"></a>Importované soubory hlaviček
 
 > [!NOTE]
-> Tato část je jenom informativní. Starší verze importů ještě nejsou implementované v kompilátoru C++ Microsoftu.
+> Tato část je pouze informační. Starší importy ještě nejsou implementovány v kompilátoru Microsoft C++.
 
-Některá záhlaví jsou dostatečně samostatná, aby bylo možné je uvést pomocí klíčového slova **Import** . Hlavním rozdílem mezi importovanou hlavičkou a importovaným modulem je, že všechny definice preprocesoru v hlavičce jsou viditelné v programu importu ihned po příkazu import. (Definice preprocesoru v žádném ze souborů obsažených v této hlavičce nejsou *viditelné.* )
+Některá záhlaví jsou dostatečně samostatná, aby mohla být uvedena pomocí klíčového slova **import.** Hlavní rozdíl mezi importovou hlavičkou a importovaným modulem spoáži, že všechny definice preprocesoru v hlavičce jsou viditelné v importujícím programu bezprostředně po příkazu importu. (Definice preprocesoru ve všech souborech zahrnutých v této hlavičce *nejsou* viditelné.)
 
 ```cpp
 import <vector>

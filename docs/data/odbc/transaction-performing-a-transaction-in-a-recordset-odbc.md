@@ -4,29 +4,29 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - transactions, updating recordsets
 ms.assetid: cf1d6b48-7fb8-4903-84f7-a1822054534d
-ms.openlocfilehash: 94177a27a1f99a8c9c37b7fce3f697fd0088b7c6
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 45ae414c318376b2c4d787498e9a288a0037af83
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80212586"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81358098"
 ---
 # <a name="transaction-performing-a-transaction-in-a-recordset-odbc"></a>Transakce: Provádění transakcí v sadě záznamů (ODBC)
 
 Toto téma vysvětluje, jak provést transakci v sadě záznamů.
 
 > [!NOTE]
->  Je podporována pouze jedna úroveň transakcí; Nemůžete vnořovat transakce.
+> Je podporována pouze jedna úroveň transakcí; nelze vnořit transakce.
 
 #### <a name="to-perform-a-transaction-in-a-recordset"></a>Provedení transakce v sadě záznamů
 
-1. Zavolejte členskou funkci objektu `CDatabase` `BeginTrans`.
+1. Volání `CDatabase` `BeginTrans` členské funkce objektu.
 
-1. Pokud jste neimplementovali hromadné načítání řádků, zavolejte `AddNew/Update`, `Edit/Update`a `Delete` členské funkce jednoho nebo více objektů sady záznamů ve stejné databázi, kolikrát je potřeba. Další informace naleznete v tématu [Sada záznamů: Přidání, aktualizace a odstranění záznamů (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md). Pokud jste implementovali hromadné načítání řádků, musíte napsat vlastní funkce pro aktualizaci zdroje dat.
+1. Pokud jste neimplementovali hromadné načítání `AddNew/Update`řádků, volejte , `Edit/Update`a `Delete` členské funkce jednoho nebo více objektů sady záznamů stejné databáze tolikrát, kolikrát je potřeba. Další informace naleznete v [tématu Recordset: Přidání, aktualizace a odstranění záznamů (ODBC).](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md) Pokud jste implementovali hromadné načítání řádků, musíte napsat vlastní funkce pro aktualizaci zdroje dat.
 
-1. Nakonec zavolejte členskou funkci `CommitTrans` objektu `CDatabase`. Pokud dojde k chybě v jedné z aktualizací nebo se rozhodnete změny zrušit, zavolejte její členskou funkci `Rollback`.
+1. Nakonec volání `CDatabase` `CommitTrans` členské funkce objektu. Pokud dojde k chybě v jedné z aktualizací nebo se `Rollback` rozhodnete zrušit změny, zavolejte její členské funkce.
 
-Následující příklad používá dvě sady záznamů k odstranění registrace studenta z registrační databáze školy a odebírá studenta ze všech tříd, ve kterých je student zaregistrovaný. Protože volání `Delete` v obou sadách záznamů musí být úspěšné, je požadována transakce. Příklad předpokládá existenci `m_dbStudentReg`, členská proměnná typu `CDatabase` již připojená ke zdroji dat a třídy sady záznamů `CEnrollmentSet` a `CStudentSet`. Proměnná `strStudentID` obsahuje hodnotu získanou od uživatele.
+Následující příklad používá dvě sady záznamů k odstranění zápisu studenta z databáze školní registrace a odebrání studenta ze všech tříd, ve kterých je student zapsán. Vzhledem `Delete` k tomu, že volání v obou sadách záznamů musí být úspěšné, je vyžadována transakce. Příklad `m_dbStudentReg`předpokládá existenci , členské proměnné typu, `CDatabase` který je již připojen ke `CEnrollmentSet` zdroji `CStudentSet`dat, a tříd sady záznamů a . Proměnná `strStudentID` obsahuje hodnotu získanou od uživatele.
 
 ```
 BOOL CEnrollDoc::RemoveStudent( CString strStudentID )
@@ -79,7 +79,7 @@ BOOL CEnrollDoc::RemoveStudent( CString strStudentID )
 ```
 
 > [!NOTE]
->  Volání `BeginTrans` bez volání `CommitTrans` nebo `Rollback` je chyba.
+> Volání `BeginTrans` znovu `CommitTrans` bez `Rollback` volání nebo je chyba.
 
 ## <a name="see-also"></a>Viz také
 

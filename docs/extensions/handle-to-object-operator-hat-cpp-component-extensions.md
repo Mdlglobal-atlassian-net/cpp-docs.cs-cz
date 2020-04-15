@@ -1,48 +1,48 @@
 ---
-title: Operátor popisovače objektu (^) (C++vyhodnocovací a C++/CX)
+title: Operátor popisovače objektu (^) (C++/CLI a C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
 - ^ handle to object [C++]
 ms.assetid: 70c411e6-be57-4468-a944-6ea7be89f392
-ms.openlocfilehash: bdf19b6b472cd4d224d749f59c75ca77d11c34f8
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 3d08b2294da1599282feeb1739331c31d64a9e59
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344315"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81358334"
 ---
-# <a name="handle-to-object-operator---ccli-and-ccx"></a>Operátor popisovače objektu (^) (C++vyhodnocovací a C++/CX)
+# <a name="handle-to-object-operator---ccli-and-ccx"></a>Operátor popisovače objektu (^) (C++/CLI a C++/CX)
 
-*Deklarátor popisovače* (`^`, výslovnost "stříška"), změní typ [specifikátor](../cpp/overview-of-declarators.md) znamenat, že deklarovaný objekt má být automaticky odstraněn, když systém zjistí, že objekt je už nebude přístupný.
+*Deklarátor popisovače* (`^`, vyslovuje "hat"), upraví [specifikátor](../cpp/overview-of-declarators.md) typu tak, že deklarovaný objekt by měl být automaticky odstraněn, když systém určí, že objekt již není přístupný.
 
 ## <a name="accessing-the-declared-object"></a>Přístup k deklarovanému objektu
 
-Proměnná, která je deklarována pomocí deklarátoru popisovače se chová jako ukazatel na objekt. Ale proměnná odkazuje na celý objekt a nemůže odkazovat na člena objektu a nepodporuje aritmetiku ukazatele. Použití operátoru dereference (`*`) pro přístup k objektu a šipku operátora přístupu členů (`->`) pro přístup ke členu objektu.
+Proměnná, která je deklarována s deklarátorem popisovače, se chová jako ukazatel na objekt. Proměnná však odkazuje na celý objekt, nemůže ukázat na člen objektu a nepodporuje aritmetiku ukazatele. Pomocí operátoru dereference (`*`) pro přístup k objektu`->`a operátor přístupu člena šipky ( ) pro přístup k členu objektu.
 
 ## <a name="windows-runtime"></a>prostředí Windows Runtime
 
-Kompilátor používá COM *počítání odkazů* mechanismus pro určení, zda objekt se už nepoužívá a je možné odstranit. To je možné, protože objekt, který je odvozen z rozhraní Windows Runtime je ve skutečnosti objekt modelu COM. Počet odkazů je zvýšen, pokud je objekt vytvořený nebo zkopírován a snížen, když je objekt nastaven na hodnotu null nebo přejde mimo obor. Pokud počet odkazů dosáhne nuly, objekt je automaticky a okamžitě odstraněn.
+Kompilátor používá mechanismus *počítání odkazů* COM k určení, zda se objekt již nepoužívá a může být odstraněn. To je možné, protože objekt, který je odvozen z rozhraní prostředí Windows Runtime je ve skutečnosti objekt COM. Počet odkazů se zvětší při vytvoření nebo zkopírování objektu a sníží, když je objekt nastaven na hodnotu null nebo přejde mimo rozsah. Pokud počet odkazů přejde na nulu, objekt je automaticky a okamžitě odstraněn.
 
-Výhodou deklarátoru popisovač je, že v COM musíte explicitně spravovat počet odkazů pro objekt, což je únavné a snadno dojde k chybám proces. To znamená a zvýší počet odkazů musí volat metody zvýšit a Release() objektu. Nicméně pokud deklarujete objekt s deklarátorem popisovače, kompilátor generuje kód, který automaticky přizpůsobí počet odkazů.
+Výhodou deklarátoru popisovače je, že v com musíte explicitně spravovat počet odkazů pro objekt, což je zdlouhavý proces náchylný k chybám. To znamená zvýšit a zmenšit počet odkazů, musíte volat metody AddRef() a Release() objektu. Pokud však deklarujete objekt s deklarátorem popisovače, kompilátor vygeneruje kód, který automaticky upraví počet odkazů.
 
-Informace o tom, jak vytvořit instanci objektu naleznete v tématu [ref nové](ref-new-gcnew-cpp-component-extensions.md).
+Informace o vytvoření instance objektu naleznete v [tématu ref new](ref-new-gcnew-cpp-component-extensions.md).
 
 ## <a name="requirements"></a>Požadavky
 
-– Možnost kompilátoru: `/ZW`
+Možnost kompilátoru:`/ZW`
 
 ## <a name="common-language-runtime"></a>CLR (Common Language Runtime)
 
-Systém používá modul CLR *systému uvolňování paměti* mechanismus pro určení, zda objekt se už nepoužívá a je možné odstranit. Modul common language runtime udržuje haldu, na které se přidělují objekty a používá spravované odkazy (proměnné) ve svém programu označení umístění objektů na haldě. Pokud objekt už nebude používat, je uvolněna paměť, která je obsazena na haldě. Pravidelně systému uvolňování paměti zkomprimuje hladu k lepšímu využití uvolněné paměti. Komprimací haldy můžete přesunout objekty do haldy, čímž zrušíte platnost umístění uváděná spravovanými odkazy uvedené. Ale systému uvolňování paměti zná umístění všech spravovaných odkazů a automaticky je aktualizuje pro označení aktuálního umístění objektů na haldě.
+Systém používá clr *mechanismus uvolňování paměti* k určení, pokud objekt již používá a lze odstranit. Běžný jazyk runtime udržuje haldu, na které přiděluje objekty a používá spravované odkazy (proměnné) v programu označují umístění objektů na haldě. Pokud objekt již není používán, je uvolněna paměť, kterou obsazuje na haldě. Pravidelně uvolňování zhutní haldy lépe využít uvolněnou paměť. Komprimace haldy můžete přesunout objekty na haldě, která zruší platnost umístění odkazuje spravované odkazy. Systém uvolňování paměti si však uvědomuje umístění všech spravovaných odkazů a automaticky je aktualizuje, aby označil aktuální umístění objektů na haldě.
 
-Protože nativní ukazatelé C++ (`*`) a odkazy (`&`) nejsou spravované odkazy, uvolňování nemůže automaticky aktualizovat adresy, které ukazují na. Pokud chcete tento problém vyřešit, použijte deklarátor popisovače k určení proměnné, které systému uvolňování paměti je vědět a lze ji automaticky aktualizovat.
+Vzhledem k tomu,`*`že nativní`&`ukazatele jazyka C++ ( ) a odkazy ( ) nejsou spravované odkazy, systém uvolňování paměti nemůže automaticky aktualizovat adresy, na které odkazují. Chcete-li tento problém vyřešit, použijte deklarátor popisovače k určení proměnné, která systém uvolňování paměti je vědoma a může aktualizovat automaticky.
 
-Další informace najdete v tématu [jak: Deklarace obslužných rutin v nativních typech](../dotnet/how-to-declare-handles-in-native-types.md).
+Další informace naleznete v [tématu How to: Declare handles in Native Types](../dotnet/how-to-declare-handles-in-native-types.md).
 
 ### <a name="examples"></a>Příklady
 
-Tento příklad ukazuje, jak vytvořit instanci typu odkazu na spravované haldě.  Tento příklad také ukazuje, že inicializace jednoho popisovače jiným vytvoří dva odkazy na stejný objekt na spravované, uvolnění paměti haldy. Všimněte si, že přiřazení [nullptr](nullptr-cpp-component-extensions.md) k popisovači neoznačí objekt pro uvolňování paměti.
+Tato ukázka ukazuje, jak vytvořit instanci typu odkazu na spravované haldy.  Tato ukázka také ukazuje, že můžete inicializovat jeden popisovač s jiným, výsledkem jsou dva odkazy na stejný objekt na spravované haldě s uvolňováním paměti. Všimněte si, že přiřazení [nullptr](nullptr-cpp-component-extensions.md) jednomu popisovači neoznačuje objekt pro uvolnění paměti.
 
 ```cpp
 // mcppv2_handle.cpp
@@ -74,7 +74,7 @@ int main() {
 2
 ```
 
-Následující příklad ukazuje, jak deklarovat popisovač pro objekt na spravované haldě, kde typ objektu je zabalený typ hodnoty. Ukázka také ukazuje, jak získat typ hodnoty ze zabaleného objektu.
+Následující ukázka ukazuje, jak deklarovat popisovač objektu na spravované haldě, kde typ objektu je zabalený typ hodnoty. Ukázka také ukazuje, jak získat typ hodnoty z krabicového objektu.
 
 ```cpp
 // mcppv2_handle_2.cpp
@@ -104,7 +104,7 @@ Not a boxed int
 100
 ```
 
-Tento příklad ukazuje, že běžný idiom C++ používání `void*` ukazatel na libovolný objekt je nahrazen `Object^`, který může obsahovat popisovač na referenční třídu. Profil také ukazuje, že všechny typy, jako jsou pole a delegáty, mohou být převedeny na popisovač objektu.
+Tato ukázka ukazuje, že společný idiom `void*` jazyka C++ použití ukazatele pro `Object^`odkaz na libovolný objekt je nahrazen o , který může obsahovat popisovač pro libovolnou referenční třídu. Také ukazuje, že všechny typy, jako jsou pole a delegáti, lze převést na popisovač objektu.
 
 ```cpp
 // mcppv2_handle_3.cpp
@@ -149,7 +149,7 @@ Type is System.Int32
 Type is MyDel
 ```
 
-Tento příklad ukazuje, že popisovač může být dereferencován a že člen je přístupný pomocí dereferencovaného popisovače.
+Tato ukázka ukazuje, že popisovač může být odkazováno a že člen lze přistupovat prostřednictvím popisovač dereferenced.
 
 ```cpp
 // mcppv2_handle_4.cpp
@@ -195,7 +195,7 @@ Array value: 7
 Cannot access array element 11, size is 10
 ```
 
-Tento příklad ukazuje, že nativní odkaz (`&`) nelze vytvořit vazbu **int** člen spravovaného typu, jako **int** můžou být uložená v haldě uvolňování paměti a nativní odkazy nesledují pohyb objektu ve spravované haldě. Opravou je použití místní proměnné nebo změna `&` k `%`, takže odkazem sledování.
+Tato ukázka ukazuje,`&`že nativní odkaz ( ) nelze vázat **na int** člen spravovaného typu, jako **int** může být uloženv haldě uvolněné a nativní odkazy nesledují pohyb objektu ve spravované haldy. Oprava je použití místní proměnné nebo `&` změnit `%`na , takže je odkaz na sledování.
 
 ```cpp
 // mcppv2_handle_5.cpp
@@ -219,9 +219,9 @@ int main() {
 
 ### <a name="requirements"></a>Požadavky
 
-– Možnost kompilátoru: `/clr`
+Možnost kompilátoru:`/clr`
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Přípony komponent pro .NET a UPW](component-extensions-for-runtime-platforms.md)<br/>
 [Operátor sledovacího odkazu](tracking-reference-operator-cpp-component-extensions.md)

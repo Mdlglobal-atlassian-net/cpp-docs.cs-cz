@@ -26,16 +26,16 @@ helpviewer_keywords:
 - std::lognormal_distribution [C++], param_type
 - std::lognormal_distribution [C++], param_type
 ms.assetid: f2d6a431-6c3a-4370-b12e-4adb4ddf6cc4
-ms.openlocfilehash: bcf587c5029fdf0b61da45dbd4ee9250f4c3a43b
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: ae13505da411b9a9cc445560907d053afa4bf81d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72687790"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81351708"
 ---
 # <a name="lognormal_distribution-class"></a>lognormal_distribution – třída
 
-Generuje normální distribuci protokolu.
+Generuje normální rozdělení protokolu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -68,31 +68,31 @@ public:
 
 ### <a name="parameters"></a>Parametry
 
-*RealType* \
-Typ výsledku s plovoucí desetinnou čárkou, výchozí hodnota je **Double**. Možné typy najdete v tématu [\<random >](../standard-library/random.md).
+*Skutečný typ*\
+Typ výsledku s plovoucí desetinnou tázkem, výchozí hodnota **je double**. Možné typy naleznete v [ \<tématu náhodné>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Poznámky
 
-Šablona třídy popisuje distribuci, která vytváří hodnoty celočíselného typu zadaného uživatelem, nebo typ **Double** , pokud není k dispozici, distribuované podle normální distribuce protokolu. Následující tabulka obsahuje odkazy na články týkající se jednotlivých členů.
+Šablona třídy popisuje rozdělení, které vytváří hodnoty uživatelem zadaného integrálního typu, nebo zadejte **double,** pokud není k dispozici žádný, distribuovaný podle normální distribuce protokolu. Následující tabulka odkazuje na články o jednotlivých členech.
 
 ||||
 |-|-|-|
 |[lognormal_distribution](#lognormal_distribution)|`lognormal_distribution::m`|`lognormal_distribution::param`|
 |`lognormal_distribution::operator()`|`lognormal_distribution::s`|[param_type](#param_type)|
 
-Funkce vlastností `m()` a `s()` vrací hodnoty pro uložené parametry distribuce *m* a *s*v uvedeném pořadí.
+Vlastnost funguje `m()` `s()` a vrátí hodnoty pro uložené distribuční parametry *m* a *s*, v uvedeném pořadí.
 
-Člen vlastnosti `param()` nastaví nebo vrátí `param_type` uložený balíček parametrů distribuce.
+Člen `param()` vlastnosti nastaví `param_type` nebo vrátí balíček parametrů uložené distribuce.
 
-Členské funkce `min()` a `max()` vracejí nejmenší možný výsledek a největší možný výsledek.
+A `min()` `max()` členské funkce vrátí nejmenší možný výsledek a největší možný výsledek.
 
-Členská funkce `reset()` zahodí všechny hodnoty uložené v mezipaměti, takže výsledek dalšího volání `operator()` nezávisí na hodnotách získaných z modulu před voláním.
+Členská `reset()` funkce zahodí všechny hodnoty uložené v mezipaměti, `operator()` takže výsledek dalšího volání nezávisí na žádné hodnoty získané z motoru před voláním.
 
-Členské funkce `operator()` vrátí další vygenerovanou hodnotu založenou na modulu URNG, buď z aktuálního balíčku parametrů, nebo pomocí zadaného balíčku parametrů.
+Členské `operator()` funkce vrátí další vygenerovanou hodnotu na základě modulu URNG, buď z aktuálního balíčku parametrů, nebo ze zadaného balíčku parametrů.
 
-Další informace o třídách distribuce a jejich členech naleznete v tématu [\<random >](../standard-library/random.md).
+Další informace o distribučních třídách a jejich členech naleznete [ \<v tématu Random>](../standard-library/random.md).
 
-Podrobné informace o rozdělení do normálního zobrazení najdete v článku Wolfram MathWorld – [distribuce normálního](https://go.microsoft.com/fwlink/p/?linkid=400917)rozdělení.
+Podrobné informace o distribuci LogNormal naleznete v článku Wolfram MathWorld [LogNormal Distribution](https://go.microsoft.com/fwlink/p/?linkid=400917).
 
 ## <a name="example"></a>Příklad
 
@@ -180,13 +180,13 @@ Distribution for 10 samples:
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** \<random >
+**Záhlaví:** \<náhodné>
 
 **Obor názvů:** std
 
-## <a name="lognormal_distribution"></a>lognormal_distribution::lognormal_distribution
+## <a name="lognormal_distributionlognormal_distribution"></a><a name="lognormal_distribution"></a>lognormal_distribution::lognormal_distribution
 
-Sestaví rozdělení.
+Vytvoří rozdělení.
 
 ```cpp
 explicit lognormal_distribution(RealType m = 0.0, RealType s = 1.0);
@@ -195,24 +195,24 @@ explicit lognormal_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parametry
 
-*m* \
-Parametr distribuce `m`.
+*M*\
+Parametr `m` distribuce.
 
-*s* \
-Parametr distribuce `s`.
+*S*\
+Parametr `s` distribuce.
 
-*parametr* \
-Struktura `param_type` používaná k sestavení distribuce.
+*parm*\
+Struktura `param_type` slouží k vytvoření distribuce.
 
 ### <a name="remarks"></a>Poznámky
 
-**Předběžná podmínka:** `0.0 < s`
+**Předpokladem:**`0.0 < s`
 
-První konstruktor vytvoří objekt, jehož uložená `m` hodnota obsahuje hodnotu *m* a jejíž uložená `s` hodnota obsahuje hodnotu *s*.
+První konstruktor zkonstruoval objekt, jehož `m` uložená hodnota obsahuje hodnotu *m* a jehož uložená `s` hodnota obsahuje hodnotu *s*.
 
-Druhý konstruktor vytvoří objekt, jehož uložené parametry jsou inicializovány z *parametr*. Můžete získat a nastavit aktuální parametry pro existující distribuci voláním členské funkce `param()`.
+Druhý konstruktor vytvoří objekt, jehož uložené parametry jsou inicializovány z *parm*. Aktuální parametry existující distribuce můžete získat a nastavit `param()` voláním členské funkce.
 
-## <a name="param_type"></a>lognormal_distribution::p aram_type
+## <a name="lognormal_distributionparam_type"></a><a name="param_type"></a>lognormal_distribution::param_type
 
 Ukládá parametry distribuce.
 
@@ -230,21 +230,21 @@ struct param_type {
 
 ### <a name="parameters"></a>Parametry
 
-*m* \
-Parametr distribuce `m`.
+*M*\
+Parametr `m` distribuce.
 
-*s* \
-Parametr distribuce `s`.
+*S*\
+Parametr `s` distribuce.
 
-*pravé* \
-Struktura `param_type` používaná k porovnání
+*Právo*\
+Struktura `param_type` použitá k porovnání.
 
 ### <a name="remarks"></a>Poznámky
 
-**Předběžná podmínka:** `0.0 < s`
+**Předpokladem:**`0.0 < s`
 
-Tato struktura může být předána konstruktoru třídy distribuce při vytváření instance, do `param()` členské funkce pro nastavení uložených parametrů stávající distribuce a `operator()` k použití namísto uložených parametrů.
+Tato struktura může být předána konstruktoru třídy distribuce `param()` při vytváření instancí, členské funkci pro `operator()` nastavení uložených parametrů existující distribuce a k použití namísto uložených parametrů.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[\<random >](../standard-library/random.md)
+[\<náhodné>](../standard-library/random.md)

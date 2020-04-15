@@ -4,45 +4,45 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - standard dialog, data validation routines
 ms.assetid: 44dbc222-a897-4949-925e-7660e8964ccd
-ms.openlocfilehash: 77b08945c99b9e9e2652a40e5710d8c4e89846b7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 83e3e215ec8d66321bbac5a4a308b04ef69dc68c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62309990"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372906"
 ---
 # <a name="standard-dialog-data-validation-routines"></a>Rutiny ověřování dat standardního dialogového okna
 
-Toto téma uvádí rutiny ověřování (DDV) dat standardního dialogového okna pro běžné ovládací prvky dialogového okna knihovny MFC.
+Toto téma obsahuje seznam rutin ověřování standardních dialogových dat (DDV) používaných pro běžné ovládací prvky dialogového okna knihovny MFC.
 
 > [!NOTE]
->  Rutiny výměny dat standardního dialogového okna jsou definovány v souboru afxdd_.h záhlaví. Ale aplikace by měla obsahovat afxwin.h.
+> Standardní rutiny výměny dialogových dat jsou definovány v souboru záhlaví afxdd_.h. Aplikace by však měly obsahovat afxwin.h.
 
 ### <a name="ddv-functions"></a>Funkce DDV
 
 |||
 |-|-|
-|[DDV_MaxChars](#ddv_maxchars)|Ověřuje, že počet znaků v hodnotě daný ovládací prvek není delší než daný maximum.|
-|[DDV_MinMaxByte](#ddv_minmaxbyte)|Ověří nepřekročí hodnotu daného ovládacího prvku daný **BAJTŮ** rozsahu.|
-|[DDV_MinMaxDateTime](#ddv_minmaxdatetime)|Ověřuje, že daný ovládací prvek hodnotu nepřekročí za dané časové období.|
-|[DDV_MinMaxDouble](#ddv_minmaxdouble)|Ověří nepřekročí hodnotu daného ovládacího prvku daný **double** rozsahu.|
-|[DDV_MinMaxDWord](#ddv_minmaxdword)|Ověří nepřekročí hodnotu daný ovládací prvek daného **DWORD** rozsahu.|
-|[DDV_MinMaxFloat](#ddv_minmaxfloat)|Ověří nepřekročí hodnotu daného ovládacího prvku daný **float** rozsahu.|
-|[DDV_MinMaxInt](#ddv_minmaxint)|Ověří nepřekročí hodnotu daný ovládací prvek daného **int** rozsahu.|
-|[DDV_MinMaxLong](#ddv_minmaxlong)|Ověří nepřekročí hodnotu daného ovládacího prvku daný **dlouhé** rozsahu.|
-|[DDV_MinMaxLongLong](#ddv_minmaxlonglong)|Ověří nepřekročí hodnotu daný ovládací prvek daného **LONGLONG** rozsahu.|
-|[DDV_MinMaxMonth](#ddv_minmaxmonth)|Ověřuje, že hodnota daný ovládací prvek není delší než daný rozsah.|
-|[DDV_MinMaxShort](#ddv_minmaxshort)|Ověří nepřekročí hodnotu daného ovládacího prvku daný **krátký** rozsahu.|
-|[DDV_MinMaxSlider](#ddv_minmaxslider)|Ověřuje, že hodnota ovládacího prvku posuvník dané spadá do daného rozsahu.|
-|[DDV_MinMaxUInt](#ddv_minmaxuint)|Ověří nepřekročí hodnotu daný ovládací prvek daného **UINT** rozsahu.|
-|[DDV_MinMaxUnsigned](#ddv_minmaxuint)|Ověřuje, že hodnota daný ovládací prvek leží mezi dvěma zadanými hodnotami.|
-|[DDV_MinMaxULongLong](#ddv_minmaxulonglong)|Ověří nepřekročí hodnotu daný ovládací prvek daného **ULONGLONG** rozsahu.|
+|[DDV_MaxChars](#ddv_maxchars)|Ověří počet znaků v dané hodnotě ovládacího prvku nepřekročí dané maximum.|
+|[DDV_MinMaxByte](#ddv_minmaxbyte)|Ověří, že daná hodnota ovládacího prvku nepřekročí daný rozsah **BYTE.**|
+|[DDV_MinMaxDateTime](#ddv_minmaxdatetime)|Ověří danou hodnotu ovládacího prvku nepřekročí daný časový rozsah.|
+|[DDV_MinMaxDouble](#ddv_minmaxdouble)|Ověří danou hodnotu ovládacího prvku nepřekročí daný **dvojitý** rozsah.|
+|[DDV_MinMaxDWord](#ddv_minmaxdword)|Ověří danou hodnotu ovládacího prvku nepřekročí daný rozsah **DWORD.**|
+|[DDV_MinMaxFloat](#ddv_minmaxfloat)|Ověří danou hodnotu ovládacího prvku nepřekročí daný **rozsah plovoucí.**|
+|[DDV_MinMaxInt](#ddv_minmaxint)|Ověří danou hodnotu ovládacího prvku nepřekročí daný **rozsah int.**|
+|[DDV_MinMaxLong](#ddv_minmaxlong)|Ověří danou hodnotu ovládacího prvku nepřekročí daný **dlouhý** rozsah.|
+|[DDV_MinMaxLongLong](#ddv_minmaxlonglong)|Ověří danou řídicí hodnotu nepřekročí daný rozsah **LONGLONG.**|
+|[DDV_MinMaxMonth](#ddv_minmaxmonth)|Ověří, že daná hodnota ovládacího prvku nepřesáhne dané časové období.|
+|[DDV_MinMaxShort](#ddv_minmaxshort)|Ověří danou řídicí hodnotu nepřesáhne daný **krátký** rozsah.|
+|[DDV_MinMaxSlider](#ddv_minmaxslider)|Ověří danou hodnotu ovládacího prvku posuvníku, která spadá do daného rozsahu.|
+|[DDV_MinMaxUInt](#ddv_minmaxuint)|Ověří danou hodnotu ovládacího prvku nepřekročí daný rozsah **UINT.**|
+|[DDV_MinMaxUnsigned](#ddv_minmaxuint)|Ověří, že daná řídicí hodnota spadá mezi dvě zadané hodnoty.|
+|[DDV_MinMaxULongLong](#ddv_minmaxulonglong)|Ověří danou hodnotu ovládacího prvku nepřekročí daný rozsah **ULONGLONG.**|
 
-##  <a name="ddv_maxchars"></a>  DDV_MaxChars
+## <a name="ddv_maxchars"></a><a name="ddv_maxchars"></a>DDV_MaxChars
 
-Volání `DDV_MaxChars` k ověření, že počet znaků v ovládacím prvku přidružené *hodnotu* nepřekročí *nChars*.
+Volání `DDV_MaxChars` ověřit, že množství znaků v ovládacím prvku přidružené *k hodnotě* nepřesahuje *nChars*.
 
-```
+```cpp
 void AFXAPI DDV_MaxChars(
     CDataExchange* pDX,
     CString const& value,
@@ -51,28 +51,28 @@ void AFXAPI DDV_MaxChars(
 
 ### <a name="parameters"></a>Parametry
 
-*pDX*<br/>
-Ukazatel `CDataExchange` objektu. Architektura dodává tento objekt k vytvoření kontextu výměny dat, včetně jeho směr.
+*Pdx*<br/>
+Ukazatel na `CDataExchange` objekt. Rámec poskytuje tento objekt k vytvoření kontextu výměny dat, včetně jeho směru.
 
-*value*<br/>
-Odkaz na proměnnou člena dialogové okno, zobrazení formuláře nebo objekt zobrazení ovládacího prvku, pomocí kterého se data ověřena.
+*Hodnotu*<br/>
+Odkaz na člennou proměnnou dialogového okna, zobrazení formuláře nebo objekt zobrazení ovládacího prvku, pomocí kterého jsou data ověřena.
 
 *nChars*<br/>
 Maximální povolený počet znaků.
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace o DDV najdete v tématu [výměna dat dialogových oken a ověření](../../mfc/dialog-data-exchange-and-validation.md).
+Další informace o ddv naleznete [v tématu Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Požadavky
 
-  **Header** afxdd_.h
+  **Záhlaví** afxdd_.h
 
-##  <a name="ddv_minmaxbyte"></a>  DDV_MinMaxByte
+## <a name="ddv_minmaxbyte"></a><a name="ddv_minmaxbyte"></a>DDV_MinMaxByte
 
-Volání `DDV_MinMaxByte` k ověření, že hodnota v ovládacím prvku přidružené *hodnotu* leží mezi *minVal* a *maxVal*.
+Volání `DDV_MinMaxByte` k ověření, že hodnota v ovládacím prvku přidružené k *hodnotě* spadá mezi *minVal* a *maxVal*.
 
-```
+```cpp
 void AFXAPI DDV_MinMaxByte(
     CDataExchange* pDX,
     BYTE value,
@@ -82,31 +82,31 @@ void AFXAPI DDV_MinMaxByte(
 
 ### <a name="parameters"></a>Parametry
 
-*pDX*<br/>
-Ukazatel `CDataExchange` objektu. Architektura dodává tento objekt k vytvoření kontextu výměny dat, včetně jeho směr.
+*Pdx*<br/>
+Ukazatel na `CDataExchange` objekt. Rámec poskytuje tento objekt k vytvoření kontextu výměny dat, včetně jeho směru.
 
-*value*<br/>
-Odkaz na proměnnou člena dialogové okno, zobrazení formuláře nebo objekt zobrazení ovládacího prvku, pomocí kterého se data ověřena.
+*Hodnotu*<br/>
+Odkaz na člennou proměnnou dialogového okna, zobrazení formuláře nebo objekt zobrazení ovládacího prvku, pomocí kterého jsou data ověřena.
 
 *minVal*<br/>
-Minimální hodnotu (typu BYTE) povoleny.
+Minimální povolená hodnota (typu BYTE).
 
 *maxVal*<br/>
-Maximální hodnotu (typu BYTE) povoleny.
+Maximální povolená hodnota (typu BYTE).
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace o DDV najdete v tématu [výměna dat dialogových oken a ověření](../../mfc/dialog-data-exchange-and-validation.md).
+Další informace o ddv naleznete [v tématu Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Požadavky
 
-  **Header** afxdd_.h
+  **Záhlaví** afxdd_.h
 
-##  <a name="ddv_minmaxdatetime"></a>  DDV_MinMaxDateTime
+## <a name="ddv_minmaxdatetime"></a><a name="ddv_minmaxdatetime"></a>DDV_MinMaxDateTime
 
-Volání `DDV_MinMaxDateTime` k ověření, že ovládací prvek hodnotu času a data v výběr data a času ( [atributu CDateTimeCtrl](../../mfc/reference/cdatetimectrl-class.md)) přidružené k *refValue* leží mezi *refMinRange*a *refMaxRange*.
+Volání `DDV_MinMaxDateTime` k ověření, že hodnota čas a datum v ovládacím prvku pro výběr data a času [(CDateTimeCtrl](../../mfc/reference/cdatetimectrl-class.md)) přidruženého k *refValue* spadá mezi *refMinRange* a *refMaxRange*.
 
-```
+```cpp
 void AFXAPI DDV_MinMaxDateTime(
     CDataExchange* pDX,
     CTime& refValue,
@@ -122,31 +122,31 @@ void AFXAPI DDV_MinMaxDateTime(
 
 ### <a name="parameters"></a>Parametry
 
-*pDX*<br/>
-Ukazatel [CDataExchange](../../mfc/reference/cdataexchange-class.md) objektu. Architektura dodává tento objekt k vytvoření kontextu výměny dat, včetně jeho směr. Není nutné odstranit tento objekt.
+*Pdx*<br/>
+Ukazatel na objekt [CDataExchange.](../../mfc/reference/cdataexchange-class.md) Rámec poskytuje tento objekt k vytvoření kontextu výměny dat, včetně jeho směru. Tento objekt není nutné odstraňovat.
 
 *refValue*<br/>
-Odkaz na [CTime](../../atl-mfc-shared/reference/ctime-class.md) nebo [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) objekt přidružený k proměnné člena dialogové okno, zobrazení formuláře nebo ovládací prvek zobrazení objektu. Tento objekt obsahuje data, která mají být ověřen.
+Odkaz na objekt [CTime](../../atl-mfc-shared/reference/ctime-class.md) nebo [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) přidružený k členské proměnné dialogového okna, zobrazení formuláře nebo objektu zobrazení ovládacího prvku. Tento objekt obsahuje data, která mají být ověřena.
 
 *refMinRange*<br/>
 Minimální povolená hodnota data a času.
 
 *refMaxRange*<br/>
-Povolená hodnota maximální datum a čas.
+Maximální povolená hodnota data a času.
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace o DDV najdete v tématu [výměna dat dialogových oken a ověření](../../mfc/dialog-data-exchange-and-validation.md).
+Další informace o ddv naleznete [v tématu Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Požadavky
 
-  **Header** afxdd_.h
+  **Záhlaví** afxdd_.h
 
-##  <a name="ddv_minmaxdouble"></a>  DDV_MinMaxDouble
+## <a name="ddv_minmaxdouble"></a><a name="ddv_minmaxdouble"></a>DDV_MinMaxDouble
 
-Volání `DDV_MinMaxDouble` k ověření, že hodnota v ovládacím prvku přidružené *hodnotu* leží mezi *minVal* a *maxVal*.
+Volání `DDV_MinMaxDouble` k ověření, že hodnota v ovládacím prvku přidružené k *hodnotě* spadá mezi *minVal* a *maxVal*.
 
-```
+```cpp
 void AFXAPI DDV_MinMaxDouble(
     CDataExchange* pDX,
     double const& value,
@@ -156,31 +156,31 @@ void AFXAPI DDV_MinMaxDouble(
 
 ### <a name="parameters"></a>Parametry
 
-*pDX*<br/>
-Ukazatel `CDataExchange` objektu. Architektura dodává tento objekt k vytvoření kontextu výměny dat, včetně jeho směr.
+*Pdx*<br/>
+Ukazatel na `CDataExchange` objekt. Rámec poskytuje tento objekt k vytvoření kontextu výměny dat, včetně jeho směru.
 
-*value*<br/>
-Odkaz na proměnnou člena dialogové okno, zobrazení formuláře nebo objekt zobrazení ovládacího prvku, pomocí kterého se data ověřena.
+*Hodnotu*<br/>
+Odkaz na člennou proměnnou dialogového okna, zobrazení formuláře nebo objekt zobrazení ovládacího prvku, pomocí kterého jsou data ověřena.
 
 *minVal*<br/>
-Minimální hodnotu (typu **double**) povoleny.
+Minimální hodnota (typu **double)** povolena.
 
 *maxVal*<br/>
-Maximální hodnotu (typu **double**) povoleny.
+Maximální povolená hodnota (typu **double).**
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace o DDV najdete v tématu [výměna dat dialogových oken a ověření](../../mfc/dialog-data-exchange-and-validation.md).
+Další informace o ddv naleznete [v tématu Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Požadavky
 
-  **Header** afxdd_.h
+  **Záhlaví** afxdd_.h
 
-##  <a name="ddv_minmaxdword"></a>  DDV_MinMaxDWord
+## <a name="ddv_minmaxdword"></a><a name="ddv_minmaxdword"></a>DDV_MinMaxDWord
 
-Volání `DDV_MinMaxDWord` k ověření, že hodnota v ovládacím prvku přidružené *hodnotu* leží mezi *minVal* a *maxVal*.
+Volání `DDV_MinMaxDWord` k ověření, že hodnota v ovládacím prvku přidružené k *hodnotě* spadá mezi *minVal* a *maxVal*.
 
-```
+```cpp
 void AFXAPI DDV_MinMaxDWord(
     CDataExchange* pDX,
     DWORD const& value,
@@ -190,31 +190,31 @@ void AFXAPI DDV_MinMaxDWord(
 
 ### <a name="parameters"></a>Parametry
 
-*pDX*<br/>
-Ukazatel `CDataExchange` objektu. Architektura dodává tento objekt k vytvoření kontextu výměny dat, včetně jeho směr.
+*Pdx*<br/>
+Ukazatel na `CDataExchange` objekt. Rámec poskytuje tento objekt k vytvoření kontextu výměny dat, včetně jeho směru.
 
-*value*<br/>
-Odkaz na proměnnou člena dialogové okno, zobrazení formuláře nebo objekt zobrazení ovládacího prvku, pomocí kterého se data ověřena.
+*Hodnotu*<br/>
+Odkaz na člennou proměnnou dialogového okna, zobrazení formuláře nebo objekt zobrazení ovládacího prvku, pomocí kterého jsou data ověřena.
 
 *minVal*<br/>
-Minimální hodnotu (typu DWORD) povoleny.
+Minimální hodnota (typu DWORD) povolena.
 
 *maxVal*<br/>
-Maximální hodnotu (typu DWORD) povoleny.
+Maximální povolená hodnota (typu DWORD).
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace o DDV najdete v tématu [výměna dat dialogových oken a ověření](../../mfc/dialog-data-exchange-and-validation.md).
+Další informace o ddv naleznete [v tématu Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Požadavky
 
-  **Header** afxdd_.h
+  **Záhlaví** afxdd_.h
 
-##  <a name="ddv_minmaxfloat"></a>  Ddv_minmaxfloat –
+## <a name="ddv_minmaxfloat"></a><a name="ddv_minmaxfloat"></a>DDV_MinMaxFloat
 
-Volání `DDV_MinMaxFloat` k ověření, že hodnota v ovládacím prvku přidružené *hodnotu* leží mezi *minVal* a *maxVal*.
+Volání `DDV_MinMaxFloat` k ověření, že hodnota v ovládacím prvku přidružené k *hodnotě* spadá mezi *minVal* a *maxVal*.
 
-```
+```cpp
 void AFXAPI DDV_MinMaxFloat(
     CDataExchange* pDX,
     float value,
@@ -224,31 +224,31 @@ void AFXAPI DDV_MinMaxFloat(
 
 ### <a name="parameters"></a>Parametry
 
-*pDX*<br/>
-Ukazatel `CDataExchange` objektu. Architektura dodává tento objekt k vytvoření kontextu výměny dat, včetně jeho směr.
+*Pdx*<br/>
+Ukazatel na `CDataExchange` objekt. Rámec poskytuje tento objekt k vytvoření kontextu výměny dat, včetně jeho směru.
 
-*value*<br/>
-Odkaz na proměnnou člena dialogové okno, zobrazení formuláře nebo objekt zobrazení ovládacího prvku, pomocí kterého se data ověřena.
+*Hodnotu*<br/>
+Odkaz na člennou proměnnou dialogového okna, zobrazení formuláře nebo objekt zobrazení ovládacího prvku, pomocí kterého jsou data ověřena.
 
 *minVal*<br/>
-Minimální hodnotu (typu **float**) povoleny.
+Minimální povolená hodnota (typu **float).**
 
 *maxVal*<br/>
-Maximální hodnotu (typu **float**) povoleny.
+Maximální povolená hodnota (typu **float).**
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace o DDV najdete v tématu [výměna dat dialogových oken a ověření](../../mfc/dialog-data-exchange-and-validation.md).
+Další informace o ddv naleznete [v tématu Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Požadavky
 
-  **Header** afxdd_.h
+  **Záhlaví** afxdd_.h
 
-##  <a name="ddv_minmaxint"></a>  DDV_MinMaxInt
+## <a name="ddv_minmaxint"></a><a name="ddv_minmaxint"></a>DDV_MinMaxInt
 
-Volání `DDV_MinMaxInt` k ověření, že hodnota v ovládacím prvku přidružené *hodnotu* leží mezi *minVal* a *maxVal*.
+Volání `DDV_MinMaxInt` k ověření, že hodnota v ovládacím prvku přidružené k *hodnotě* spadá mezi *minVal* a *maxVal*.
 
-```
+```cpp
 void AFXAPI DDV_MinMaxInt(
     CDataExchange* pDX,
     int value,
@@ -258,31 +258,31 @@ void AFXAPI DDV_MinMaxInt(
 
 ### <a name="parameters"></a>Parametry
 
-*pDX*<br/>
-Ukazatel `CDataExchange` objektu. Architektura dodává tento objekt k vytvoření kontextu výměny dat, včetně jeho směr.
+*Pdx*<br/>
+Ukazatel na `CDataExchange` objekt. Rámec poskytuje tento objekt k vytvoření kontextu výměny dat, včetně jeho směru.
 
-*value*<br/>
-Odkaz na proměnnou člena dialogové okno, zobrazení formuláře nebo objekt zobrazení ovládacího prvku, pomocí kterého se data ověřena.
+*Hodnotu*<br/>
+Odkaz na člennou proměnnou dialogového okna, zobrazení formuláře nebo objekt zobrazení ovládacího prvku, pomocí kterého jsou data ověřena.
 
 *minVal*<br/>
-Minimální hodnotu (typu **int**) povoleny.
+Minimální hodnota (typu **int**) povolena.
 
 *maxVal*<br/>
-Maximální hodnotu (typu **int**) povoleny.
+Maximální povolená hodnota (typu **int).**
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace o DDV najdete v tématu [výměna dat dialogových oken a ověření](../../mfc/dialog-data-exchange-and-validation.md).
+Další informace o ddv naleznete [v tématu Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Požadavky
 
-  **Header** afxdd_.h
+  **Záhlaví** afxdd_.h
 
-##  <a name="ddv_minmaxlong"></a>  DDV_MinMaxLong
+## <a name="ddv_minmaxlong"></a><a name="ddv_minmaxlong"></a>DDV_MinMaxLong
 
-Volání `DDV_MinMaxLong` k ověření, že hodnota v ovládacím prvku přidružené *hodnotu* leží mezi *minVal* a *maxVal*.
+Volání `DDV_MinMaxLong` k ověření, že hodnota v ovládacím prvku přidružené k *hodnotě* spadá mezi *minVal* a *maxVal*.
 
-```
+```cpp
 void AFXAPI DDV_MinMaxLong(
     CDataExchange* pDX,
     long value,
@@ -292,31 +292,31 @@ void AFXAPI DDV_MinMaxLong(
 
 ### <a name="parameters"></a>Parametry
 
-*pDX*<br/>
-Ukazatel `CDataExchange` objektu. Architektura dodává tento objekt k vytvoření kontextu výměny dat, včetně jeho směr.
+*Pdx*<br/>
+Ukazatel na `CDataExchange` objekt. Rámec poskytuje tento objekt k vytvoření kontextu výměny dat, včetně jeho směru.
 
-*value*<br/>
-Odkaz na proměnnou člena dialogové okno, zobrazení formuláře nebo objekt zobrazení ovládacího prvku, pomocí kterého se data ověřena.
+*Hodnotu*<br/>
+Odkaz na člennou proměnnou dialogového okna, zobrazení formuláře nebo objekt zobrazení ovládacího prvku, pomocí kterého jsou data ověřena.
 
 *minVal*<br/>
-Minimální hodnotu (typu **dlouhé**) povoleny.
+Minimální povolená hodnota **(typu long).**
 
 *maxVal*<br/>
-Maximální hodnotu (typu **dlouhé**) povoleny.
+Maximální povolená maximální hodnota **(typu long).**
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace o DDV najdete v tématu [výměna dat dialogových oken a ověření](../../mfc/dialog-data-exchange-and-validation.md).
+Další informace o ddv naleznete [v tématu Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Požadavky
 
-  **Header** afxdd_.h
+  **Záhlaví** afxdd_.h
 
-##  <a name="ddv_minmaxlonglong"></a>  DDV_MinMaxLongLong
+## <a name="ddv_minmaxlonglong"></a><a name="ddv_minmaxlonglong"></a>DDV_MinMaxLongLong
 
-Volání `DDV_MinMaxLongLong` k ověření, že hodnota v ovládacím prvku přidružené *hodnotu* leží mezi *minVal* a *maxVal*.
+Volání `DDV_MinMaxLongLong` k ověření, že hodnota v ovládacím prvku přidružené k *hodnotě* spadá mezi *minVal* a *maxVal*.
 
-```
+```cpp
 void AFXAPI DDV_MinMaxLongLong(
     CDataExchange* pDX,
     LONGLONG value,
@@ -326,31 +326,31 @@ void AFXAPI DDV_MinMaxLongLong(
 
 ### <a name="parameters"></a>Parametry
 
-*pDX*<br/>
-Ukazatel `CDataExchange` objektu. Architektura dodává tento objekt k vytvoření kontextu výměny dat, včetně jeho směr.
+*Pdx*<br/>
+Ukazatel na `CDataExchange` objekt. Rámec poskytuje tento objekt k vytvoření kontextu výměny dat, včetně jeho směru.
 
-*value*<br/>
-Odkaz na proměnnou člena dialogové okno, zobrazení formuláře nebo objekt zobrazení ovládacího prvku, pomocí kterého se data ověřena.
+*Hodnotu*<br/>
+Odkaz na člennou proměnnou dialogového okna, zobrazení formuláře nebo objekt zobrazení ovládacího prvku, pomocí kterého jsou data ověřena.
 
 *minVal*<br/>
-Minimální hodnotu (typu LONGLONG) povoleny.
+Minimální hodnota (typu LONGLONG) povolena.
 
 *maxVal*<br/>
-Maximální hodnotu (typu LONGLONG) povoleny.
+Maximální povolená hodnota (typu LONGLONG).
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace o DDV najdete v tématu [výměna dat dialogových oken a ověření](../../mfc/dialog-data-exchange-and-validation.md).
+Další informace o ddv naleznete [v tématu Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Požadavky
 
-  **Header** afxdd_.h
+  **Záhlaví** afxdd_.h
 
-##  <a name="ddv_minmaxmonth"></a>  DDV_MinMaxMonth
+## <a name="ddv_minmaxmonth"></a><a name="ddv_minmaxmonth"></a>DDV_MinMaxMonth
 
-Volání `DDV_MinMaxMonth` k ověření, že hodnota času a data v měsíčním kalendáři ovládací prvek ( [atributu CMonthCalCtrl](../../mfc/reference/cmonthcalctrl-class.md)) přidružené k *refValue* leží mezi *refMinRange* a *refMaxRange*.
+Volání `DDV_MinMaxMonth` k ověření, že hodnota time/date v ovládacím prvku kalendáře měsíce ( [CMonthCalCtrl](../../mfc/reference/cmonthcalctrl-class.md)) spojená s *refValue* spadá mezi *refMinRange* a *refMaxRange*.
 
-```
+```cpp
 void AFXAPI DDV_MinMaxMonth(
     CDataExchange* pDX,
     CTime& refValue,
@@ -366,31 +366,31 @@ void AFXAPI DDV_MinMaxMonth(
 
 ### <a name="parameters"></a>Parametry
 
-*pDX*<br/>
-Ukazatel [CDataExchange](../../mfc/reference/cdataexchange-class.md) objektu. Architektura dodává tento objekt k vytvoření kontextu výměny dat, včetně jeho směr.
+*Pdx*<br/>
+Ukazatel na objekt [CDataExchange.](../../mfc/reference/cdataexchange-class.md) Rámec poskytuje tento objekt k vytvoření kontextu výměny dat, včetně jeho směru.
 
 *refValue*<br/>
-Odkaz na objekt typu `CTime` nebo `COleDateTime` přidružený k členské proměnné dialogového okna, zobrazení formuláře nebo ovládací prvek zobrazení objektu. Tento objekt obsahuje data, která mají být ověřen. Předá MFC to odkazovat při `DDV_MinMaxMonth` je volána.
+Odkaz na objekt typu `CTime` `COleDateTime` nebo přidružený k členské proměnné objektu dialogového okna, zobrazení formuláře nebo objektu zobrazení ovládacího prvku. Tento objekt obsahuje data, která mají být ověřena. Knihovna MFC `DDV_MinMaxMonth` předá tento odkaz, když je volána.
 
 *refMinRange*<br/>
 Minimální povolená hodnota data a času.
 
 *refMaxRange*<br/>
-Povolená hodnota maximální datum a čas.
+Maximální povolená hodnota data a času.
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace o DDV najdete v tématu [výměna dat dialogových oken a ověření](../../mfc/dialog-data-exchange-and-validation.md).
+Další informace o ddv naleznete [v tématu Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Požadavky
 
-  **Header** afxdd_.h
+  **Záhlaví** afxdd_.h
 
-##  <a name="ddv_minmaxshort"></a>  DDV_MinMaxShort
+## <a name="ddv_minmaxshort"></a><a name="ddv_minmaxshort"></a>DDV_MinMaxShort
 
-Volání `DDV_MinMaxShort` k ověření, že hodnota v ovládacím prvku přidružené *hodnotu* leží mezi *minVal* a *maxVal*.
+Volání `DDV_MinMaxShort` k ověření, že hodnota v ovládacím prvku přidružené k *hodnotě* spadá mezi *minVal* a *maxVal*.
 
-```
+```cpp
 void AFXAPI DDV_MinMaxShort(
     CDataExchange* pDX,
     short value,
@@ -400,31 +400,31 @@ void AFXAPI DDV_MinMaxShort(
 
 ### <a name="parameters"></a>Parametry
 
-*pDX*<br/>
-Ukazatel `CDataExchange` objektu. Architektura dodává tento objekt k vytvoření kontextu výměny dat, včetně jeho směr.
+*Pdx*<br/>
+Ukazatel na `CDataExchange` objekt. Rámec poskytuje tento objekt k vytvoření kontextu výměny dat, včetně jeho směru.
 
-*value*<br/>
-Odkaz na proměnnou člena dialogové okno, zobrazení formuláře nebo objekt zobrazení ovládacího prvku, pomocí kterého se data ověřena.
+*Hodnotu*<br/>
+Odkaz na člennou proměnnou dialogového okna, zobrazení formuláře nebo objekt zobrazení ovládacího prvku, pomocí kterého jsou data ověřena.
 
 *minVal*<br/>
-Minimální hodnotu (typu **krátký**) povoleny.
+Minimální povolená hodnota **(typu krátká).**
 
 *maxVal*<br/>
-Maximální hodnotu (typu **krátký**) povoleny.
+Maximální povolená maximální hodnota **(typu krátká).**
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace o DDV najdete v tématu [výměna dat dialogových oken a ověření](../../mfc/dialog-data-exchange-and-validation.md).
+Další informace o ddv naleznete [v tématu Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Požadavky
 
-  **Header** afxdd_.h
+  **Záhlaví** afxdd_.h
 
-##  <a name="ddv_minmaxslider"></a>  DDV_MinMaxSlider
+## <a name="ddv_minmaxslider"></a><a name="ddv_minmaxslider"></a>DDV_MinMaxSlider
 
-Volání `DDV_MinMaxSlider` k ověření, že hodnota v ovládacím prvku přidružené *hodnotu* leží mezi *minVal* a *maxVal*.
+Volání `DDV_MinMaxSlider` k ověření, že hodnota v ovládacím prvku přidružené k *hodnotě* spadá mezi *minVal* a *maxVal*.
 
-```
+```cpp
 void AFXAPI DDV_MinMaxSlider(
     CDataExchange* pDX,
     DWORD value,
@@ -434,11 +434,11 @@ void AFXAPI DDV_MinMaxSlider(
 
 ### <a name="parameters"></a>Parametry
 
-*pDX*<br/>
-Ukazatel [CDataExchange](../../mfc/reference/cdataexchange-class.md) objektu. Architektura dodává tento objekt k vytvoření kontextu výměny dat, včetně jeho směr.
+*Pdx*<br/>
+Ukazatel na objekt [CDataExchange.](../../mfc/reference/cdataexchange-class.md) Rámec poskytuje tento objekt k vytvoření kontextu výměny dat, včetně jeho směru.
 
-*value*<br/>
-Odkaz na hodnotu, která má být ověřen. Tento parametr obsahuje nebo nastaví aktuální pozici thumb ovládacího prvku posuvník.
+*Hodnotu*<br/>
+Odkaz na hodnotu, která má být ověřena. Tento parametr uchovává nebo nastavuje aktuální pozici palce ovládacího prvku posuvníku.
 
 *minVal*<br/>
 Minimální povolená hodnota.
@@ -448,17 +448,17 @@ Maximální povolená hodnota.
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace o DDV najdete v tématu [výměna dat dialogových oken a ověření](../../mfc/dialog-data-exchange-and-validation.md). Informace o ovládacích prvcích posuvníku, naleznete v tématu [používání atributu CSliderCtrl](../../mfc/using-csliderctrl.md).
+Další informace o ddv naleznete [v tématu Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md). Informace o ovládacích prvcích jezdce naleznete [v tématu Použití kláves CSliderCtrl](../../mfc/using-csliderctrl.md).
 
 ### <a name="requirements"></a>Požadavky
 
-  **Header** afxdd_.h
+  **Záhlaví** afxdd_.h
 
-##  <a name="ddv_minmaxuint"></a>  DDV_MinMaxUInt
+## <a name="ddv_minmaxuint"></a><a name="ddv_minmaxuint"></a>DDV_MinMaxUInt
 
-Volání `DDV_MinMaxUInt` k ověření, že hodnota v ovládacím prvku přidružené *hodnotu* leží mezi *minVal* a *maxVal*.
+Volání `DDV_MinMaxUInt` k ověření, že hodnota v ovládacím prvku přidružené k *hodnotě* spadá mezi *minVal* a *maxVal*.
 
-```
+```cpp
 void AFXAPI DDV_MinMaxUInt(
     CDataExchange* pDX,
     UINT value,
@@ -468,31 +468,31 @@ void AFXAPI DDV_MinMaxUInt(
 
 ### <a name="parameters"></a>Parametry
 
-*pDX*<br/>
-Ukazatel `CDataExchange` objektu. Architektura dodává tento objekt k vytvoření kontextu výměny dat, včetně jeho směr.
+*Pdx*<br/>
+Ukazatel na `CDataExchange` objekt. Rámec poskytuje tento objekt k vytvoření kontextu výměny dat, včetně jeho směru.
 
-*value*<br/>
-Odkaz na proměnnou člena dialogové okno, zobrazení formuláře nebo objekt zobrazení ovládacího prvku, pomocí kterého se data ověřena.
+*Hodnotu*<br/>
+Odkaz na člennou proměnnou dialogového okna, zobrazení formuláře nebo objekt zobrazení ovládacího prvku, pomocí kterého jsou data ověřena.
 
 *minVal*<br/>
-Minimální hodnotu (typu UINT) povoleny.
+Minimální povolená hodnota (typu UINT).
 
 *maxVal*<br/>
-Maximální hodnotu (typu UINT) povoleny.
+Maximální povolená hodnota (typu UINT).
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace o DDV najdete v tématu [výměna dat dialogových oken a ověření](../../mfc/dialog-data-exchange-and-validation.md).
+Další informace o ddv naleznete [v tématu Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Požadavky
 
-  **Header** afxdd_.h
+  **Záhlaví** afxdd_.h
 
-##  <a name="ddv_minmaxulonglong"></a>  DDV_MinMaxULongLong
+## <a name="ddv_minmaxulonglong"></a><a name="ddv_minmaxulonglong"></a>DDV_MinMaxULongLong
 
-Volání `DDV_MinMaxULongLong` k ověření, že hodnota v ovládacím prvku přidružené *hodnotu* leží mezi *minVal* a *maxVal*.
+Volání `DDV_MinMaxULongLong` k ověření, že hodnota v ovládacím prvku přidružené k *hodnotě* spadá mezi *minVal* a *maxVal*.
 
-```
+```cpp
 void AFXAPI DDV_MinMaxULongLong(
     CDataExchange* pDX,
     ULONGLONG value,
@@ -502,33 +502,33 @@ void AFXAPI DDV_MinMaxULongLong(
 
 ### <a name="parameters"></a>Parametry
 
-*pDX*<br/>
-Ukazatel `CDataExchange` objektu. Architektura dodává tento objekt k vytvoření kontextu výměny dat, včetně jeho směr.
+*Pdx*<br/>
+Ukazatel na `CDataExchange` objekt. Rámec poskytuje tento objekt k vytvoření kontextu výměny dat, včetně jeho směru.
 
-*value*<br/>
-Odkaz na proměnnou člena dialogové okno, zobrazení formuláře nebo objekt zobrazení ovládacího prvku, pomocí kterého se data ověřena.
+*Hodnotu*<br/>
+Odkaz na člennou proměnnou dialogového okna, zobrazení formuláře nebo objekt zobrazení ovládacího prvku, pomocí kterého jsou data ověřena.
 
 *minVal*<br/>
-Minimální hodnotu (typu ULONGLONG) povoleny.
+Minimální hodnota (typu ULONGLONG) povolena.
 
 *maxVal*<br/>
-Maximální hodnotu (typu ULONGLONG) povoleny.
+Maximální povolená hodnota (typu ULONGLONG).
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace o DDV najdete v tématu [výměna dat dialogových oken a ověření](../../mfc/dialog-data-exchange-and-validation.md).
+Další informace o ddv naleznete [v tématu Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Požadavky
 
-  **Header** afxdd_.h
+  **Záhlaví** afxdd_.h
 
-## <a name="ddvminmaxunsigned"></a>DDV_MinMaxUnsigned
+## <a name="ddv_minmaxunsigned"></a>DDV_MinMaxUnsigned
 
-Volání `DDV_MinMaxUnsigned` k ověření, že hodnota v ovládacím prvku přidružené *hodnotu* leží mezi *minVal* a *maxVal*.
+Volání `DDV_MinMaxUnsigned` k ověření, že hodnota v ovládacím prvku přidružené k *hodnotě* spadá mezi *minVal* a *maxVal*.
 
 ### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
    void AFXAPI DDV_MinMaxUnsigned(
        CDataExchange* pDX,
        unsigned value,
@@ -538,29 +538,29 @@ Volání `DDV_MinMaxUnsigned` k ověření, že hodnota v ovládacím prvku při
 
 ### <a name="parameters"></a>Parametry
 
-*pDX*<br/>
-Ukazatel `CDataExchange` objektu. Architektura dodává tento objekt k vytvoření kontextu výměny dat, včetně jeho směr.
+*Pdx*<br/>
+Ukazatel na `CDataExchange` objekt. Rámec poskytuje tento objekt k vytvoření kontextu výměny dat, včetně jeho směru.
 
-*value*<br/>
-Odkaz na proměnnou člena dialogové okno, zobrazení formuláře nebo objekt zobrazení ovládacího prvku, pomocí kterého se data ověřena.
+*Hodnotu*<br/>
+Odkaz na člennou proměnnou dialogového okna, zobrazení formuláře nebo objekt zobrazení ovládacího prvku, pomocí kterého jsou data ověřena.
 
 *minVal*<br/>
-Minimální hodnotu (typu **bez znaménka** ) povoleny.
+Minimální hodnota (typu **neznaménka)** povolena.
 
 *maxVal*<br/>
-Maximální hodnotu (typu **bez znaménka** ) povoleny.
+Maximální povolená maximální hodnota (typu **neznaménka).**
 
 ### <a name="remarks"></a>Poznámky
 
-Další informace o DDV najdete v tématu [výměna dat dialogových oken a ověření](../dialog-data-exchange-and-validation.md).
+Další informace o ddv naleznete [v tématu Dialog Data Exchange and Validation](../dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Požadavky
 
 **Záhlaví:** afxdd_.h
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Rutiny výměny dat standardního dialogového okna](standard-dialog-data-exchange-routines.md)<br/>
-[Makra a globální prvky](mfc-macros-and-globals.md)<br/>
+[Makra a globální](mfc-macros-and-globals.md)<br/>
 [DDX_Slider](standard-dialog-data-exchange-routines.md#ddx_slider)<br/>
 [DDX_FieldSlider](dialog-data-exchange-functions-for-crecordview-and-cdaorecordview.md#ddx_fieldslider)

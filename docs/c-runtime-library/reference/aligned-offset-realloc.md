@@ -1,8 +1,9 @@
 ---
 title: _aligned_offset_realloc
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _aligned_offset_realloc
+- _o__aligned_offset_realloc
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -26,16 +28,16 @@ helpviewer_keywords:
 - aligned_offset_realloc function
 - _aligned_offset_realloc function
 ms.assetid: e0263533-991e-41b0-acc9-1b8a51ab9ecd
-ms.openlocfilehash: a24aef5c7d96cb8308ecfec424d0d59b48447f7b
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: b27f5000a48ec3aafe37c6bd59e9b9acddd5bec5
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70943837"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81350568"
 ---
 # <a name="_aligned_offset_realloc"></a>_aligned_offset_realloc
 
-Změní velikost bloku paměti, který byl přidělen pomocí [_aligned_malloc](aligned-malloc.md) nebo [_aligned_offset_malloc](aligned-offset-malloc.md).
+Změní velikost bloku paměti, který byl přidělen s [_aligned_malloc](aligned-malloc.md) nebo [_aligned_offset_malloc](aligned-offset-malloc.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -50,42 +52,44 @@ void * _aligned_offset_realloc(
 
 ### <a name="parameters"></a>Parametry
 
-*memblock*<br/>
+*memblok*<br/>
 Aktuální ukazatel bloku paměti.
 
-*hodnota*<br/>
-Velikost přidělené paměti.
+*Velikost*<br/>
+Velikost přidělení paměti.
 
-*bod*<br/>
-Hodnota zarovnání, která musí být celočíselnou mocninou 2.
+*Zarovnání*<br/>
+Hodnota zarovnání, která musí být celá mocnina 2.
 
-*polohy*<br/>
-Posun k přidělení paměti pro vynucení zarovnání.
+*Posun*<br/>
+Posun do přidělení paměti vynutit zarovnání.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**_aligned_offset_realloc** vrátí ukazatel void na blok paměti realokováno (a případně přesunuto). Návratová hodnota má **hodnotu null** , pokud je velikost nulová a argument buffer nemá **hodnotu null**, nebo pokud není k dispozici dostatek paměti pro rozšíření bloku na danou velikost. V prvním případě je původní blok uvolněn. V druhém případě se původní blok nezměnil. Vrácená hodnota odkazuje na prostor úložiště, který je zaručen vhodným způsobem pro uložení libovolného typu objektu. Chcete-li získat ukazatel na jiný typ než void, použijte přetypování typu u vrácené hodnoty.
+**_aligned_offset_realloc** vrátí ukazatel void na přerozdělenou (a případně přesunutou) paměťový blok. Vrácená hodnota je **NULL,** pokud je velikost nulová a argument vyrovnávací paměti není **NULL**, nebo pokud není k dispozici dostatek paměti pro rozšíření bloku na danou velikost. V prvním případě je uvolněn původní blok. V druhém případě je původní blok beze změny. Vrácená hodnota odkazuje na úložný prostor, který je zaručeně vhodně zarovnán pro uložení libovolného typu objektu. Chcete-li získat ukazatel na jiný typ než void, použijte typ přetypované na vrácenou hodnotu.
 
-**_aligned_offset_realloc** je označena `__declspec(restrict)`jako `__declspec(noalias)` , což znamená, že funkce zaručuje, že nemění globální proměnné a že ukazatel, který vrátil, nemá alias. Další informace najdete [v tématech a](../../cpp/noalias.md) [omezení](../../cpp/restrict.md).
+**_aligned_offset_realloc** je `__declspec(noalias)` `__declspec(restrict)`označena a , což znamená, že je zaručeno, že funkce nebude měnit globální proměnné a že vrácený ukazatel není aliasován. Další informace naleznete v [tématu noalias](../../cpp/noalias.md) a [restrict](../../cpp/restrict.md).
 
 ## <a name="remarks"></a>Poznámky
 
-Podobně jako [_aligned_offset_malloc](aligned-offset-malloc.md), **_aligned_offset_realloc** umožňuje, aby byla struktura zarovnána na posunu v rámci struktury.
+Stejně jako [_aligned_offset_malloc](aligned-offset-malloc.md) **umožňuje _aligned_offset_realloc** zarovnání struktury v odsazení uvnitř struktury.
 
-_aligned_offset_realloc je založen na **za** . Další informace o použití **_aligned_offset_malloc**najdete [v tématu.](malloc.md) Pokud má Memblock **hodnotu null**, funkce volá **_aligned_offset_malloc** interně.
+**_aligned_offset_realloc** je založen na **malloc**. Další informace o používání **_aligned_offset_malloc**naleznete v [tématu malloc](malloc.md). Pokud *memblock* je **NULL**, funkce volá **_aligned_offset_malloc** interně.
 
-Tato funkce nastaví **errno** na **ENOMEM** , pokud se přidělení paměti nepovedlo nebo pokud je požadovaná velikost větší než **_HEAP_MAXREQ**. Další informace o **errno**najdete v tématu [errno, _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). **_Aligned_offset_realloc** také ověří své parametry. Pokud *Zarovnání* není mocninou 2 nebo pokud je *posun* větší nebo roven *velikosti* a nenulové hodnotě, tato funkce vyvolá obslužnou rutinu neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, tato funkce vrátí **hodnotu null** a nastaví **errno** na **EINVAL**.
+Tato funkce nastaví **errno** na **ENOMEM,** pokud se přidělení paměti nezdařilo nebo pokud byla požadovaná velikost větší než **_HEAP_MAXREQ**. Další informace o **errno**naleznete [v tématu errno, _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Také **_aligned_offset_realloc** ověřuje jeho parametry. Pokud *trasování* není mocninu 2 nebo pokud *je posun* větší nebo roven *velikosti* a nenulová, tato funkce vyvolá neplatnou obslužnou rutinu parametru, jak je popsáno v [parametru Validation](../../c-runtime-library/parameter-validation.md). Pokud je spuštění povoleno pokračovat, vrátí tato funkce **hodnotu NULL** a nastaví **errno** na **EINVAL**.
+
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_aligned_offset_realloc**|\<. h >|
+|**_aligned_offset_realloc**|\<malloc.h>|
 
 ## <a name="example"></a>Příklad
 
-Další informace najdete v tématu [_aligned_malloc](aligned-malloc.md).
+Další informace naleznete [v tématu _aligned_malloc](aligned-malloc.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Zarovnání dat](../../c-runtime-library/data-alignment.md)<br/>

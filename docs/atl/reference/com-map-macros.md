@@ -1,5 +1,5 @@
 ---
-title: Makra map COM
+title: Makra mapy COM
 ms.date: 11/04/2016
 f1_keywords:
 - atlcom/ATL::BEGIN_COM_MAP
@@ -7,29 +7,29 @@ f1_keywords:
 helpviewer_keywords:
 - COM interfaces, COM map macros
 ms.assetid: 0f33656d-321f-4996-90cc-9a7f21ab73c3
-ms.openlocfilehash: 3159a53b5a500aa61b85cf2bc5a97d321ed6ebb5
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 191a0ba0aeda6ad18cdac7ba14f7ab5f3b2282f7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79417850"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81326606"
 ---
-# <a name="com-map-macros"></a>Makra map COM
+# <a name="com-map-macros"></a>Makra mapy COM
 
-Tato makra definují mapy rozhraní modelu COM.
+Tato makra definují mapy rozhraní COM.
 
 |||
 |-|-|
-|[BEGIN_COM_MAP](#begin_com_map)|Označuje začátek položek mapování rozhraní modelu COM.|
-|[END_COM_MAP](#end_com_map)|Označuje konec položek mapování rozhraní modelu COM.|
+|[BEGIN_COM_MAP](#begin_com_map)|Označuje začátek položek mapy rozhraní COM.|
+|[END_COM_MAP](#end_com_map)|Označuje konec položek mapy rozhraní COM.|
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlcom. h
+**Záhlaví:** atlcom.h
 
-##  <a name="begin_com_map"></a>BEGIN_COM_MAP
+## <a name="begin_com_map"></a><a name="begin_com_map"></a>BEGIN_COM_MAP
 
-Mapa modelu COM je mechanismus, který zpřístupňuje rozhraní objektu klientovi prostřednictvím `QueryInterface`.
+Mapa COM je mechanismus, který zpřístupňuje rozhraní `QueryInterface`na objekt u klienta prostřednictvím .
 
 ```
 BEGIN_COM_MAP(x)
@@ -37,22 +37,22 @@ BEGIN_COM_MAP(x)
 
 ### <a name="parameters"></a>Parametry
 
-*znak*<br/>
-pro Název objektu třídy, na kterém zveřejňujete rozhraní.
+*X*<br/>
+[v] Název objektu třídy, na který vystavujete rozhraní.
 
 ### <a name="remarks"></a>Poznámky
 
-[CComObjectRootEx:: InternalQueryInterface](ccomobjectrootex-class.md#internalqueryinterface) vrátí ukazatele pro rozhraní v mapě com. Spusťte mapu rozhraní pomocí makra BEGIN_COM_MAP, přidejte položky pro každé z vašich rozhraní pomocí makra [COM_INTERFACE_ENTRY](com-interface-entry-macros.md#com_interface_entry) nebo jednu z jeho variant a dokončete mapu pomocí makra [END_COM_MAP](#end_com_map) .
+[CComObjectRootEx::InternalQueryInterface](ccomobjectrootex-class.md#internalqueryinterface) vrací pouze ukazatele pro rozhraní v mapě COM. Spusťte mapu rozhraní s BEGIN_COM_MAP makra, přidejte položky pro každé z vašich rozhraní s [COM_INTERFACE_ENTRY](com-interface-entry-macros.md#com_interface_entry) makra nebo některou z jeho variant a dokončete mapu [END_COM_MAP](#end_com_map) makry.
 
 ### <a name="example"></a>Příklad
 
-Z ukázky pro [pípnutí](../../overview/visual-cpp-samples.md) v knihovně ATL:
+Ze vzorku ATL [BEEPER:](../../overview/visual-cpp-samples.md)
 
 [!code-cpp[NVC_ATL_COM#1](../../atl/codesnippet/cpp/com-map-macros_1.h)]
 
-##  <a name="end_com_map"></a>END_COM_MAP
+## <a name="end_com_map"></a><a name="end_com_map"></a>END_COM_MAP
 
-Ukončí definici mapy rozhraní modelu COM.
+Ukončí definici mapy rozhraní COM.
 
 ```
 END_COM_MAP()
@@ -60,5 +60,5 @@ END_COM_MAP()
 
 ## <a name="see-also"></a>Viz také
 
-[Makr](../../atl/reference/atl-macros.md)<br/>
-[Globální funkce mapy modelu COM](../../atl/reference/com-map-global-functions.md)
+[Makra](../../atl/reference/atl-macros.md)<br/>
+[Globální funkce mapy COM](../../atl/reference/com-map-global-functions.md)

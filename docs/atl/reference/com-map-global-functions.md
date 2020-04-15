@@ -1,5 +1,5 @@
 ---
-title: Globální funkce mapy modelu COM.
+title: Globální funkce mapy COM
 ms.date: 11/04/2016
 f1_keywords:
 - atlbase/ATL::AtlInternalQueryInterface
@@ -7,27 +7,27 @@ f1_keywords:
 helpviewer_keywords:
 - COM interfaces, COM map global functions
 ms.assetid: b9612d30-eb23-46ef-8093-d56f237d3cf1
-ms.openlocfilehash: 75d081674fa4b63e66f1296834d3de305665ab9a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c4ce7c7a68c0744ad65ef4914088fa12d3340628
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62258413"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81326699"
 ---
-# <a name="com-map-global-functions"></a>Globální funkce mapy modelu COM.
+# <a name="com-map-global-functions"></a>Globální funkce mapy COM
 
-Tyto funkce poskytuje podporu pro mapy modelu COM. `IUnknown` implementace.
+Tyto funkce poskytují podporu `IUnknown` pro implementace mapy COM.
 
 |||
 |-|-|
-|[AtlInternalQueryInterface](#atlinternalqueryinterface)|Deleguje se do `IUnknown` neagregovaná objektu.|
-|[InlineIsEqualIUnknown](#inlineisequaliunknown)|Generuje kód efektivní pro porovnání rozhraní proti `IUnknown`.|
+|[AtlInternalQueryInterface](#atlinternalqueryinterface)|Delegáti `IUnknown` neagregované objektu.|
+|[InlineIsEqualIUnknown](#inlineisequaliunknown)|Generuje efektivní kód pro porovnání `IUnknown`rozhraní proti .|
 
 ## <a name="requirements"></a>Požadavky
 
 **Záhlaví:** atlbase.h
 
-##  <a name="atlinternalqueryinterface"></a>  AtlInternalQueryInterface
+## <a name="atlinternalqueryinterface"></a><a name="atlinternalqueryinterface"></a>AtlInternalQueryInterface
 
 Načte ukazatel na požadované rozhraní.
 
@@ -41,33 +41,33 @@ HRESULT AtlInternalQueryInterface(
 
 ### <a name="parameters"></a>Parametry
 
-*pThis*<br/>
-[in] Ukazatel na objekt, který obsahuje mapování modelu COM rozhraní vystavena `QueryInterface`.
+*pToto*<br/>
+[v] Ukazatel na objekt, který obsahuje mapu COM `QueryInterface`rozhraní vystavených .
 
-*pEntries*<br/>
-[in] Pole `_ATL_INTMAP_ENTRY` struktury, které přistupují k mapě dostupné rozhraní.
+*pPoložky*<br/>
+[v] Pole `_ATL_INTMAP_ENTRY` struktur, které přístup k mapě dostupných rozhraní.
 
-*iid*<br/>
-[in] Identifikátor GUID se požadované rozhraní.
+*Iid*<br/>
+[v] Identifikátor GUID požadovaného rozhraní.
 
-*ppvObject*<br/>
-[out] Ukazatel na ukazatel rozhraní zadané v *iid*, nebo hodnota NULL, pokud se nenajde rozhraní.
+*ppvObjekt*<br/>
+[out] Ukazatel na ukazatel rozhraní zadaný v *iid*nebo NULL, pokud rozhraní nebylo nalezeno.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Jeden standardní hodnoty HRESULT.
+Jedna ze standardních hodnot HRESULT.
 
 ### <a name="remarks"></a>Poznámky
 
-`AtlInternalQueryInterface` zpracovává pouze v tabulce mapy modelu COM rozhraní. Pokud objekt je agregován, `AtlInternalQueryInterface` není delegovat na vnější neznámá. Rozhraní můžete zadat do tabulky mapování modelu COM s makro [COM_INTERFACE_ENTRY](com-interface-entry-macros.md#com_interface_entry) nebo jeden z jeho variant.
+`AtlInternalQueryInterface`zpracovává pouze rozhraní v tabulce mapy COM. Pokud je objekt agregován, `AtlInternalQueryInterface` nedeleguje na vnější neznámé. Rozhraní můžete zadat do tabulky mapy COM pomocí [COM_INTERFACE_ENTRY](com-interface-entry-macros.md#com_interface_entry) maker nebo jedné z jeho variant.
 
 ### <a name="example"></a>Příklad
 
 [!code-cpp[NVC_ATL_Windowing#94](../../atl/codesnippet/cpp/com-map-global-functions_1.cpp)]
 
-##  <a name="inlineisequaliunknown"></a>  InlineIsEqualIUnknown
+## <a name="inlineisequaliunknown"></a><a name="inlineisequaliunknown"></a>InlineIsEqualIUnknown
 
-Tato funkce se volá pro speciální případ testování hodnoty `IUnknown`.
+Volání této funkce, pro zvláštní `IUnknown`případ testování pro .
 
 ```
 BOOL InlineIsEqualUnknown(REFGUID rguid1);
@@ -76,9 +76,9 @@ BOOL InlineIsEqualUnknown(REFGUID rguid1);
 ### <a name="parameters"></a>Parametry
 
 *rguid1*<br/>
-[in] Identifikátor GUID, který má být porovnán s `IID_IUnknown`.
+[v] Identifikátor GUID pro `IID_IUnknown`porovnání s .
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Funkce](../../atl/reference/atl-functions.md)<br/>
-[Makra map COM](../../atl/reference/com-map-macros.md)
+[Functions](../../atl/reference/atl-functions.md)<br/>
+[Makra mapy COM](../../atl/reference/com-map-macros.md)

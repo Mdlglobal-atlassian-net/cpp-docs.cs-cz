@@ -7,79 +7,79 @@ helpviewer_keywords:
 - MFC Application Wizard
 - executable files, creating
 ms.assetid: 227ac090-921d-4b2f-be0a-66a5f4cab0d4
-ms.openlocfilehash: e97c7a29dd56a69fad99e85c206ca2104fa71798
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: 6949f136890e8274f225a49496b2eb1b8f78b6fc
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65708197"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81351837"
 ---
 # <a name="mfc-application-wizard"></a>MFC – průvodce aplikací
 
-Průvodce aplikací knihovny MFC generuje aplikaci, která při kompilaci, implementuje základní funkce spustitelný soubor (.exe) aplikace Windows. Startovní aplikace knihovny MFC zahrnuje C++ (CPP) zdrojové soubory, soubory prostředků (.rc), soubory hlaviček (.h) a soubor projektu (.vcxproj). Kód, který je vygenerován v těchto souborech starter je založena na knihovně MFC.
+Průvodce aplikací knihovny MFC generuje aplikaci, která při kompilaci implementuje základní funkce spustitelné aplikace systému Windows (.exe). Počáteční aplikace knihovny MFC obsahuje soubory zdroje C++(.cpp), soubory prostředků (.rc), soubory záhlaví (.h) a soubor projektu (.vcxproj). Kód, který je generován v těchto počátečních souborech je založen na knihovně MFC.
 
 > [!NOTE]
->  V závislosti na možnostech, které jste vybrali Průvodce vytvoří další soubory v projektu. Pokud vyberete třeba **kontextové nápovědy** na [rozšířené funkce](../../mfc/reference/advanced-features-mfc-application-wizard.md) stránce průvodce vytvoří soubory, které jsou nezbytné pro kompilaci soubory nápovědy projektu. Další informace o souborech vytvořených průvodcem najdete v tématu [typy souborů vytvořené pro Visual Studio C++ projekty](../../build/reference/file-types-created-for-visual-cpp-projects.md)a najdete v souboru Readme.txt v projektu.
+> V závislosti na vybraných možnostech průvodce vytvoří další soubory v projektu. Pokud například vyberete **kontextovou nápovědu** na stránce [Rozšířené funkce,](../../mfc/reference/advanced-features-mfc-application-wizard.md) průvodce vytvoří soubory, které jsou nezbytné pro kompilaci souborů nápovědy projektu. Další informace o souborech, které průvodce vytvoří, naleznete [v tématu Typy souborů vytvořené pro projekty visual ateliéru C++](../../build/reference/file-types-created-for-visual-cpp-projects.md)a v souboru Readme.txt v projektu.
 
 ## <a name="overview"></a>Přehled
 
-Tato stránka průvodce popisuje aktuální nastavení aplikace pro aplikaci knihovny MFC, kterou vytváříte. Ve výchozím nastavení Průvodce vytvoří projekt následujícím způsobem:
+Tato stránka průvodce popisuje aktuální nastavení aplikace pro vytvářenou aplikaci knihovny MFC. Ve výchozím nastavení průvodce vytvoří projekt následujícím způsobem:
 
 - [Typ aplikace, Průvodce aplikací knihovny MFC](../../mfc/reference/application-type-mfc-application-wizard.md)
 
-   - Projekt je vytvořen s podporou rozhraní s kartami více dokumentů (MDI). Další informace najdete v tématu [SDI a knihovna MDI](../../mfc/sdi-and-mdi.md).
+  - Projekt je vytvořen s podporou rozhraní MDI (s kartami). Další informace naleznete v [tématech SDI a MDI](../../mfc/sdi-and-mdi.md).
 
-   - Projekt používá [architekturu Document/View](../../mfc/document-view-architecture.md).
+  - Projekt používá [architekturu dokumentu/zobrazení](../../mfc/document-view-architecture.md).
 
-   - Projekt používá kódování Unicode knihovny.
+  - Projekt používá knihovny Unicode.
 
-   - Projekt je vytvořený pomocí sady Visual Studio styl projektu a umožňuje přepínání vizuálního stylu.
+  - Projekt je vytvořen pomocí stylu projektu sady Visual Studio a umožňuje přepínání vizuálních stylů.
 
-   - Projekt nepoužívá knihovnu MFC ve sdílené knihovně DLL. Další informace najdete v tématu [vytvořit C /C++ knihovny DLL v sadě Visual Studio](../../build/dlls-in-visual-cpp.md).
+  - Projekt používá knihovnu MFC ve sdílené knihovně DLL. Další informace naleznete v [tématu Vytvoření knihoven DLL c/C++ v sadě Visual Studio](../../build/dlls-in-visual-cpp.md).
 
 - [Podpora složených dokumentů, Průvodce aplikací MFC](../../mfc/reference/compound-document-support-mfc-application-wizard.md)
 
-   - Projekt nepodporuje složených dokumentů.
+  - Projekt neposkytuje žádnou podporu pro složené dokumenty.
 
 - [Řetězce šablon dokumentů, Průvodce aplikací MFC](../../mfc/reference/document-template-strings-mfc-application-wizard.md)
 
-   - Projekt používá název projektu pro výchozí řetězce šablony dokumentu.
+  - Projekt používá název projektu pro výchozí řetězce šablony dokumentu.
 
-- [Podpora databáze, Průvodce aplikací MFC](../../mfc/reference/database-support-mfc-application-wizard.md)
+- [Podpora databáze, Průvodce aplikací knihovny MFC](../../mfc/reference/database-support-mfc-application-wizard.md)
 
-   - Projekt nepodporuje databází.
+  - Projekt neposkytuje žádnou podporu pro databáze.
 
 - [Funkce uživatelského rozhraní, Průvodce aplikací MFC](../../mfc/reference/user-interface-features-mfc-application-wizard.md)
 
-   - Projekt implementuje standardní uživatelské rozhraní funkce, jako jsou systémové nabídky stavového řádku, maximalizovat a minimalizovat polí Windows **o** pole, standardní nabídek a ukotvení panelu nástrojů a podřízených rámců.
+  - Projekt implementuje standardní funkce uživatelského rozhraní systému Windows, jako je například systémová nabídka, stavový řádek, maximalizace a minimalizace polí, pole **O,** standardní panel nabídek a ukotvení panelu nástrojů a podřízené rámce.
 
 - [Pokročilé funkce, Průvodce aplikací MFC](../../mfc/reference/advanced-features-mfc-application-wizard.md)
 
-   - Projekt podporuje tisku a tiskového náhledu.
+  - Projekt podporuje tisk a náhled.
 
-   - Projekt podporuje ovládací prvky ActiveX. Další informace najdete v tématu [pořadí operací při vytváření ovládacích prvků ActiveX](../../mfc/sequence-of-operations-for-creating-activex-controls.md).
+  - Projekt podporuje ovládací prvky ActiveX. Další informace naleznete [v tématu Sequence of Operations for Creating ActiveX Controls](../../mfc/sequence-of-operations-for-creating-activex-controls.md).
 
-   - Projekt nepodporuje [automatizace](../../mfc/automation.md), [MAPI](../../mfc/mapi-support-in-mfc.md), [rozhraní Windows Sockets](../../mfc/windows-sockets-in-mfc.md), nebo Active Accessibility.
+  - Projekt neposkytuje žádnou podporu pro [automatizaci](../../mfc/automation.md), [MAPI](../../mfc/mapi-support-in-mfc.md), [Windows Sockets](../../mfc/windows-sockets-in-mfc.md)nebo Aktivní přístupnost.
 
-   - Projekt podporuje **Explorer** ukotvené podokno, **výstup** ukotvené podokno a **vlastnosti** ukotvené podokno.
+  - Projekt podporuje dokovací podokno **Průzkumníka,** **dokovací** podokno Výstup a dokovací podokno **Vlastnosti.**
 
 - [Generované třídy, Průvodce aplikací MFC](../../mfc/reference/generated-classes-mfc-application-wizard.md)
 
-   - Zobrazit třídu v projektu je odvozen z [CView Class](../../mfc/reference/cview-class.md).
+  - Třída zobrazení projektu je odvozena z [třídy CView](../../mfc/reference/cview-class.md).
 
-   - Třídy v projektu aplikace pochází z [CWinAppEx – třída](../../mfc/reference/cwinappex-class.md).
+  - Třída aplikace projektu je odvozena z [třídy CWinAppEx](../../mfc/reference/cwinappex-class.md).
 
-   - Třída dokumentu projektu je odvozen z [CDocument – třída](../../mfc/reference/cdocument-class.md).
+  - Třída dokumentu projektu je odvozena z [třídy CDocument](../../mfc/reference/cdocument-class.md).
 
-   - V projektu hlavního rámce třídy je odvozen z [CMDIFrameWndEx – třída](../../mfc/reference/cmdiframewndex-class.md).
+  - Třída hlavního rámce projektu je odvozena z [třídy CMDIFrameWndEx](../../mfc/reference/cmdiframewndex-class.md).
 
-   - Třída podřízeného rámce projektu je odvozen z [CMDIChildWndEx – třída](../../mfc/reference/cmdichildwndex-class.md).
+  - Třída podřízeného rámce projektu je odvozena z [třídy CMDIChildWndEx](../../mfc/reference/cmdichildwndex-class.md).
 
-Chcete-li změnit toto výchozí nastavení, klikněte na název příslušnou kartu v levém sloupci průvodce a proveďte změny na stránce, která se zobrazí.
+Chcete-li tato výchozí nastavení změnit, klepněte na příslušný název karty v levém sloupci průvodce a proveďte změny na stránce, která se zobrazí.
 
-Po vytvoření projektu aplikace knihovny MFC lze přidat objekty nebo ovládací prvky k projektu Visual C++ pomocí [průvodců kódu](../../ide/adding-functionality-with-code-wizards-cpp.md).
+Po vytvoření projektu aplikace knihovny MFC můžete do projektu přidat objekty nebo ovládací prvky pomocí [průvodců kódem](../../ide/adding-functionality-with-code-wizards-cpp.md)jazyka Visual C++ .
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Vytvoření aplikace MFC](../../mfc/reference/creating-an-mfc-application.md)<br/>
 [Desktopové aplikace knihovny MFC](../../mfc/mfc-desktop-applications.md)<br/>

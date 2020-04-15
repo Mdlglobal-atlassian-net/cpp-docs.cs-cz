@@ -1,121 +1,121 @@
 ---
-title: 'Návod: vytvoření tradiční desktopové aplikace systému WindowsC++()'
-description: Jak vytvořit minimální, tradiční desktopovou aplikaci pro Windows pomocí sady Visual Studio C++, a Win32 API
+title: 'Návod: Vytvoření tradiční aplikace Pro Plochu systému Windows (C++)'
+description: Jak vytvořit minimální, tradiční windows desktopové aplikace pomocí Sady Visual Studio, C++ a Win32 API
 ms.custom: get-started-article
 ms.date: 11/03/2019
 helpviewer_keywords:
 - Windows applications [C++], Win32
 - Windows Desktop applications [C++]
 - Windows API [C++]
-ms.openlocfilehash: cebc748f207cb1283add4b494b422a13bdc17f8c
-ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
+ms.openlocfilehash: da74778e79a08dd3ed2b5be0675981425264bdc0
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77416135"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81351841"
 ---
-# <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>Návod: vytvoření tradiční desktopové aplikace systému WindowsC++()
+# <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>Návod: Vytvoření tradiční aplikace Pro Plochu systému Windows (C++)
 
-Tento návod ukazuje, jak vytvořit tradiční desktopovou aplikaci pro Windows v aplikaci Visual Studio. Ukázková aplikace, kterou vytvoříte, používá rozhraní Windows API k zobrazení "Hello, Windows Desktop!" v okně. Kód, který vyvíjíte v tomto návodu, můžete použít jako vzor pro vytváření dalších aplikací pro stolní počítače se systémem Windows.
+Tento návod ukazuje, jak vytvořit tradiční desktopovou aplikaci systému Windows v sadě Visual Studio. Ukázková aplikace, kterou vytvoříte, používá rozhraní API systému Windows k zobrazení "Hello, Windows desktop!" v okně. Kód, který vyvíjíte v tomto návodu, můžete použít jako vzorek k vytvoření jiných aplikací pro stolní počítače systému Windows.
 
-Rozhraní API systému Windows (označované také jako Win32 API, rozhraní Windows Desktop API a Windows Classic API) je architektura založená na jazyce C pro vytváření aplikací pro Windows. Vzhledem k tomu, že se 1980s a byl použit k vytváření aplikací pro Windows po dobu dekád, byl už existence. Na rozhraní API systému Windows byly postaveny pokročilejší a snazší architektury programování. Například MFC, ATL, rozhraní .NET Framework. I nejaktuálnější kód prostředí Windows Runtime pro UWP a aplikace ze Storu napsané v C++/WinRT používá rozhraní Windows API pod. Další informace o rozhraní API systému Windows najdete v tématu [index rozhraní API pro Windows](/windows/win32/apiindex/windows-api-list). Existuje mnoho způsobů, jak vytvářet aplikace pro systém Windows, ale výše uvedený postup byl první.
+Rozhraní API systému Windows (označované také jako rozhraní API Win32, rozhraní API pro stolní počítače windows a rozhraní Windows Classic API) je rozhraní založené na jazyce C pro vytváření aplikací systému Windows. To bylo v existenci od roku 1980 a byl použit k vytváření aplikací systému Windows po celá desetiletí. Pokročilejší a snadněji programované architektury byly postaveny na rozhraní API systému Windows. Například MFC, ATL, rozhraní .NET. Dokonce i nejmodernější kód prostředí Windows Runtime pro aplikace UPW a Store napsaný v jazyce C++/WinRT používá rozhraní API systému Windows pod ním. Další informace o rozhraní API systému Windows naleznete v [tématu Windows API Index](/windows/win32/apiindex/windows-api-list). Existuje mnoho způsobů, jak vytvářet aplikace systému Windows, ale výše uvedený proces byl první.
 
 > [!IMPORTANT]
-> V zájmu zkrácení jsou v textu vynechány některé příkazy kódu. Část [sestavení kódu](#build-the-code) na konci tohoto dokumentu zobrazuje kompletní kód.
+> Z důvodu stručnosti jsou některé příkazy kódu vynechány v textu. [Sestavení kódu](#build-the-code) části na konci tohoto dokumentu zobrazuje úplný kód.
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
 
-- Počítač se systémem Microsoft Windows 7 nebo novější verzí. Pro nejlepší vývojové prostředí doporučujeme Windows 10.
+- Počítač se systémem Microsoft Windows 7 nebo novějšími verzemi. Doporučujeme Windows 10 pro nejlepší vývojové prostředí.
 
-- Kopie sady Visual Studio. Informace o tom, jak stáhnout a nainstalovat Visual Studio, najdete v tématu [instalace sady Visual Studio](/visualstudio/install/install-visual-studio). Když spustíte instalační program, ujistěte se, že je zaškrtnuté políčko **vývoj pro stolní počítače pomocí C++**  úlohy. Nedělejte si starosti, pokud jste při instalaci sady Visual Studio nenainstalovali tuto úlohu. Instalační program můžete spustit znovu a nainstalovat hned.
+- Kopie sady Visual Studio. Informace o stažení a instalaci sady Visual Studio naleznete v [tématu Instalace sady Visual Studio](/visualstudio/install/install-visual-studio). Při spuštění instalačního programu zkontrolujte, zda je kontrolován vývoj plochy s úlohami **jazyka C++.** Nebojte se, pokud jste nenainstalovali tuto úlohu při instalaci Sady Visual Studio. Instalační program můžete spustit znovu a nainstalovat jej nyní.
 
-   ![Vývoj desktopových aplikací pomocíC++](../build/media/desktop-development-with-cpp.png "Vývoj desktopových aplikací pomocí C++")
+   ![Vývoj plochy s C++](../build/media/desktop-development-with-cpp.png "Vývoj desktopových aplikací pomocí C++")
 
-- Porozumění základům používání integrovaného vývojového prostředí (IDE) sady Visual Studio Pokud jste už používali desktopové aplikace pro Windows, můžete si je nechat. Úvod najdete v tématu [prohlídka funkcí rozhraní IDE sady Visual Studio](/visualstudio/ide/visual-studio-ide).
+- Pochopení základy použití ide sady Visual Studio. Pokud jste aplikace klasické pracovní plochy pro Windows používali už dříve, můžete pravděpodobně držet krok. Úvod najdete v tématu [Visual Studio IDE prohlídka funkce](/visualstudio/ide/visual-studio-ide).
 
-- Seznamte se s dostatečným základem C++ jazyka, který se má sledovat. Nedělejte si starosti, nemůžeme nic složitě.
+- Pochopení dostatek základů jazyka C++ sledovat. Nebojte se, neděláme nic moc komplikovaného.
 
-## <a name="create-a-windows-desktop-project"></a>Vytvořit desktopový projekt pro Windows
+## <a name="create-a-windows-desktop-project"></a>Vytvoření projektu plochy Windows
 
-Při vytváření prvního desktopového projektu ve Windows postupujte podle těchto kroků. Jak budete pokračovat, zadáte kód pro fungující desktopovou aplikaci systému Windows. V levém horním rohu této stránky je selektor verzí. Ujistěte se, že je nastavená na verzi sady Visual Studio, kterou používáte.
+Podle těchto kroků vytvořte svůj první projekt plochy systému Windows. Jak budete pokračovat, zadáte kód pro pracovní desktopovou aplikaci windows. Chcete-li zobrazit dokumentaci k upřednostňované verzi sady Visual Studio, použijte ovládací prvek pro výběr **verze.** Nachází se v horní části obsahu na této stránce.
 
 ::: moniker range="vs-2019"
 
-### <a name="to-create-a-windows-desktop-project-in-visual-studio-2019"></a>Vytvoření desktopového projektu Windows v aplikaci Visual Studio 2019
+### <a name="to-create-a-windows-desktop-project-in-visual-studio-2019"></a>Vytvoření projektu plochy Windows v Sadě Visual Studio 2019
 
-1. V hlavní nabídce vyberte možnost **soubor** > **Nový** > **projekt** . otevře se dialogové okno **vytvořit nový projekt** .
+1. V hlavní nabídce zvolte **Soubor** > **nového** > **projektu** a otevřete dialogové okno Vytvořit **nový projekt.**
 
-1. V horní části dialogového okna nastavte **jazyk** na **C++** , nastavte **platformu** na **Windows**a jako **typ projektu** nastavte na **Desktop**.
+1. V horní části dialogového okna nastavte **jazyk** na **C++**, nastavte **platformu** na **Windows**a typ **projektu** na **plochu**.
 
-1. Z filtrovaného seznamu typů projektů zvolte možnost **Průvodce desktopovým systémem Windows** a pak zvolte možnost **Další**. Na další stránce zadejte název projektu, například *DesktopApp*.
+1. Z filtrovaného seznamu typů projektů zvolte **Průvodce plochu systému Windows** a pak zvolte **Další**. Na další stránce zadejte název projektu, například *DesktopApp*.
 
-1. Kliknutím na tlačítko **vytvořit** vytvořte projekt.
+1. Chcete-li vytvořit projekt, zvolte tlačítko **Vytvořit.**
 
-1. Zobrazí se dialogové okno **projekt pro stolní počítače se systémem Windows** . V části **Typ aplikace**vyberte **desktopová aplikace (. exe)** . V části **Další možnosti**vyberte **prázdný projekt**. Kliknutím na **tlačítko OK** vytvořte projekt.
+1. Nyní se zobrazí dialogové okno **Projekt plochy systému Windows.** V části **Typ aplikace**vyberte **Možnost Desktopová aplikace (.exe)**. V části **Další možnosti**vyberte **Možnost Prázdný projekt**. Chcete-li vytvořit projekt, zvolte **OK.**
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na projekt **DesktopApp** , zvolte možnost **Přidat**a pak zvolte možnost **Nová položka**.
+1. V **Průzkumníku řešení**klikněte pravým tlačítkem myši na projekt **DesktopApp,** zvolte **Přidat**a pak zvolte **Nová položka**.
 
-   ![Přidat novou položku do projektu DesktopApp](../build/media/desktop-app-project-add-new-item-153.gif "Přidat novou položku do projektu DesktopApp")
+   ![Přidání nové položky do projektu DesktopApp](../build/media/desktop-app-project-add-new-item-153.gif "Přidání nové položky do projektu DesktopApp")
 
-1. V dialogovém okně **Přidat novou položku** vyberte  **C++ soubor (. cpp)** . Do pole **název** zadejte název souboru, například *HelloWindowsDesktop. cpp*. Klikněte na tlačítko **Přidat**.
+1. V dialogovém okně **Přidat novou položku** vyberte **soubor C++ (.cpp)**. Do pole **Název** zadejte název souboru, například *HelloWindowsDesktop.cpp*. Zvolte **Přidat**.
 
-   ![Přidat soubor. cpp do projektu DesktopApp](../build/media/desktop-app-add-cpp-file-153.png "Přidat soubor. cpp do projektu DesktopApp")
+   ![Přidání souboru CPP do aplikace DesktopApp Project](../build/media/desktop-app-add-cpp-file-153.png "Přidání souboru CPP do aplikace DesktopApp Project")
 
-Projekt je nyní vytvořen a zdrojový soubor je otevřen v editoru. Chcete-li pokračovat, přeskočte dopředu a [vytvořte kód](#create-the-code).
+Projekt je nyní vytvořen a zdrojový soubor je otevřen v editoru. Chcete-li pokračovat, přeskočte dopředu na [vytvoření kódu](#create-the-code).
 
 ::: moniker-end
 
 ::: moniker range="vs-2017"
 
-### <a name="to-create-a-windows-desktop-project-in-visual-studio-2017"></a>Vytvoření desktopového projektu Windows v aplikaci Visual Studio 2017
+### <a name="to-create-a-windows-desktop-project-in-visual-studio-2017"></a>Vytvoření projektu plochy Windows ve Visual Studiu 2017
 
-1. V nabídce **soubor** klikněte na příkaz **Nový** a pak zvolte možnost **projekt**.
+1. V nabídce **Soubor** zvolte **Nový** a pak zvolte **Project**.
 
-1. V dialogovém okně **Nový projekt** rozbalte v levém podokně položku **nainstalované** > **vizuál C++** a pak vyberte možnost **desktopová plocha systému Windows**. V prostředním podokně vyberte možnost **Průvodce desktopovou plochou systému Windows**.
+1. V dialogovém okně **Nový projekt** v levém podokně rozbalte **položku Nainstalovaný** > **visual c++** a vyberte **možnost Plocha systému Windows**. V prostředním podokně vyberte **Průvodce plochu systému Windows**.
 
-   Do pole **název** zadejte název projektu, například *DesktopApp*. Zvolte **OK**.
+   Do pole **Název** zadejte název projektu, například *DesktopApp*. Vyberte **OK**.
 
    ![Pojmenování projektu DesktopApp](../build/media/desktop-app-new-project-name-153.png "Pojmenování projektu DesktopApp")
 
-1. V dialogovém okně **pracovní projekt Windows** v části **Typ aplikace**vyberte možnost **aplikace systému Windows (. exe)** . V části **Další možnosti**vyberte **prázdný projekt**. Ujistěte se, že není vybraná **Předkompilovaná hlavička** . Kliknutím na **tlačítko OK** vytvořte projekt.
+1. V dialogovém okně **Projekt plochy systému Windows** vyberte v části Typ **aplikace** **aplikaci systému Windows (.exe)**. V části **Další možnosti**vyberte **Možnost Prázdný projekt**. Ujistěte se, že není vybraná možnost **Předkompilované záhlaví.** Chcete-li vytvořit projekt, zvolte **OK.**
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na projekt **DesktopApp** , zvolte možnost **Přidat**a pak zvolte možnost **Nová položka**.
+1. V **Průzkumníku řešení**klikněte pravým tlačítkem myši na projekt **DesktopApp,** zvolte **Přidat**a pak zvolte **Nová položka**.
 
-   ![Přidat novou položku do projektu DesktopApp](../build/media/desktop-app-project-add-new-item-153.gif "Přidat novou položku do projektu DesktopApp")
+   ![Přidání nové položky do projektu DesktopApp](../build/media/desktop-app-project-add-new-item-153.gif "Přidání nové položky do projektu DesktopApp")
 
-1. V dialogovém okně **Přidat novou položku** vyberte  **C++ soubor (. cpp)** . Do pole **název** zadejte název souboru, například *HelloWindowsDesktop. cpp*. Klikněte na tlačítko **Přidat**.
+1. V dialogovém okně **Přidat novou položku** vyberte **soubor C++ (.cpp)**. Do pole **Název** zadejte název souboru, například *HelloWindowsDesktop.cpp*. Zvolte **Přidat**.
 
-   ![Přidat soubor. cpp do projektu DesktopApp](../build/media/desktop-app-add-cpp-file-153.png "Přidat soubor. cpp do projektu DesktopApp")
+   ![Přidání souboru CPP do aplikace DesktopApp Project](../build/media/desktop-app-add-cpp-file-153.png "Přidání souboru CPP do aplikace DesktopApp Project")
 
-Projekt je nyní vytvořen a zdrojový soubor je otevřen v editoru. Chcete-li pokračovat, přeskočte dopředu a [vytvořte kód](#create-the-code).
+Projekt je nyní vytvořen a zdrojový soubor je otevřen v editoru. Chcete-li pokračovat, přeskočte dopředu na [vytvoření kódu](#create-the-code).
 
 ::: moniker-end
 
 ::: moniker range="vs-2015"
 
-### <a name="to-create-a-windows-desktop-project-in-visual-studio-2015"></a>Vytvoření desktopového projektu Windows v aplikaci Visual Studio 2015
+### <a name="to-create-a-windows-desktop-project-in-visual-studio-2015"></a>Vytvoření projektu plochy Windows ve Visual Studiu 2015
 
-1. V nabídce **soubor** klikněte na příkaz **Nový** a pak zvolte možnost **projekt**.
+1. V nabídce **Soubor** zvolte **Nový** a pak zvolte **Project**.
 
-1. V dialogovém okně **Nový projekt** rozbalte v levém podokně položku **nainstalované** > **šablony** > **vizuál C++** a pak vyberte **Win32**. V prostředním podokně vyberte **projekt Win32**.
+1. V dialogovém okně **Nový projekt** rozbalte v levém podokně**položku** >  **Nainstalované** > šablony**Visual C++** a vyberte **win32**. V prostředním podokně vyberte **Projekt Win32**.
 
-   Do pole **název** zadejte název projektu, například *DesktopApp*. Zvolte **OK**.
+   Do pole **Název** zadejte název projektu, například *DesktopApp*. Vyberte **OK**.
 
    ![Pojmenování projektu DesktopApp](../build/media/desktop-app-new-project-name-150.png "Pojmenování projektu DesktopApp")
 
-1. Na stránce **Přehled** v **Průvodci aplikací Win32**klikněte na tlačítko **Další**.
+1. Na stránce **Přehled** **Průvodce aplikací win32**zvolte **Další**.
 
-   ![Přehled Průvodce vytvořením DesktopApp v aplikaci Win32](../build/media/desktop-app-win32-wizard-overview-150.png "Přehled Průvodce vytvořením DesktopApp v aplikaci Win32")
+   ![Vytvořit DesktopApp v Průvodci aplikací Win32 Přehled](../build/media/desktop-app-win32-wizard-overview-150.png "Vytvořit DesktopApp v Průvodci aplikací Win32 Přehled")
 
-1. Na stránce **nastavení aplikace** klikněte v části **Typ aplikace**na položku **aplikace systému Windows**. V části **Další možnosti**zrušte zaškrtnutí políčka **Předkompilovaná hlavička**a pak vyberte **prázdný projekt**. Kliknutím na tlačítko **Dokončit** vytvořte projekt.
+1. Na stránce **Nastavení aplikace** vyberte v části **Typ aplikace** **aplikaci systému Windows**. V části **Další možnosti**zrušte **zaškrtnutí políčka Předkompilované záhlaví**a vyberte **možnost Vyprázdnit projekt**. Chcete-li vytvořit projekt, zvolte **Dokončit.**
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na projekt DesktopApp, zvolte možnost **Přidat**a pak zvolte možnost **Nová položka**.
+1. V **Průzkumníku řešení**klikněte pravým tlačítkem myši na projekt DesktopApp, zvolte **Přidat**a pak zvolte **Nová položka**.
 
-   ![Přidat novou položku do projektu DesktopApp](../build/media/desktop-app-project-add-new-item-150.gif "Přidat novou položku do projektu DesktopApp")
+   ![Přidání nové položky do projektu DesktopApp](../build/media/desktop-app-project-add-new-item-150.gif "Přidání nové položky do projektu DesktopApp")
 
-1. V dialogovém okně **Přidat novou položku** vyberte  **C++ soubor (. cpp)** . Do pole **název** zadejte název souboru, například *HelloWindowsDesktop. cpp*. Klikněte na tlačítko **Přidat**.
+1. V dialogovém okně **Přidat novou položku** vyberte **soubor C++ (.cpp)**. Do pole **Název** zadejte název souboru, například *HelloWindowsDesktop.cpp*. Zvolte **Přidat**.
 
-   ![Přidat soubor. cpp do projektu DesktopApp](../build/media/desktop-app-add-cpp-file-150.png "Přidat soubor. cpp do projektu DesktopApp")
+   ![Přidání souboru CPP do aplikace DesktopApp Project](../build/media/desktop-app-add-cpp-file-150.png "Přidání souboru CPP do aplikace DesktopApp Project")
 
 Projekt je nyní vytvořen a zdrojový soubor je otevřen v editoru.
 
@@ -123,11 +123,11 @@ Projekt je nyní vytvořen a zdrojový soubor je otevřen v editoru.
 
 ## <a name="create-the-code"></a>Vytvoření kódu
 
-V dalším kroku se dozvíte, jak vytvořit kód pro desktopovou aplikaci systému Windows v aplikaci Visual Studio.
+Dále se dozvíte, jak vytvořit kód pro desktopovou aplikaci pro Windows v sadě Visual Studio.
 
-### <a name="to-start-a-windows-desktop-application"></a>Spuštění aplikace klasické pracovní plochy systému Windows
+### <a name="to-start-a-windows-desktop-application"></a>Spuštění desktopové aplikace systému Windows
 
-1. Stejně jako v případě, že C++ každá aplikace a aplikace jazyka C musí mít jako výchozí bod funkci `main`, musí mít každá desktopová aplikace systému Windows funkci `WinMain`. `WinMain` má následující syntaxi.
+1. Stejně jako každá aplikace jazyka C `main` a aplikace jazyka C++ musí mít `WinMain` funkci jako výchozí bod, musí mít každá desktopová aplikace systému Windows funkci. `WinMain`má následující syntaxi.
 
    ```cpp
    int CALLBACK WinMain(
@@ -138,19 +138,19 @@ V dalším kroku se dozvíte, jak vytvořit kód pro desktopovou aplikaci systé
    );
    ```
 
-   Informace o parametrech a návratové hodnotě této funkce naleznete v tématu [WinMain Entry Point](/windows/win32/api/winbase/nf-winbase-winmain).
+   Informace o parametrech a návratové hodnotě této funkce naleznete v tématu [Vstupní bod WinMain](/windows/win32/api/winbase/nf-winbase-winmain).
 
    > [!NOTE]
-   > Jaká jsou všechna další slova, například `CALLBACK`nebo `HINSTANCE`nebo `_In_`? Tradiční rozhraní API systému Windows používá rozsáhly definice typedef a makra preprocesoru pro abstrakci některých podrobností o typech a kódu specifického pro platformu, jako jsou konvence volání, **__declspec** deklarace a direktivy kompilátoru kompilátoru. V aplikaci Visual Studio můžete pomocí funkce [rychlá informace](/visualstudio/ide/using-intellisense#quick-info) technologie IntelliSense zobrazit, co tyto definice typedef a makra definují. Najeďte myší na slovo, které vás zajímá, nebo ho vyberte a stiskněte **ctrl**+**K**, **CTRL**+**I** pro malé automaticky otevírané okno, které obsahuje definici. Další informace najdete v tématu [použití technologie IntelliSense](/visualstudio/ide/using-intellisense). Parametry a návratové typy často používají *poznámky SAL* , které vám pomůžou zachytit programové chyby. Další informace najdete v tématu [Použití poznámek SAL ke snížení vad CC++ /kódu](/cpp/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects).
+   > Jaké jsou všechny ty extra `CALLBACK`slova, jako je , nebo `HINSTANCE`, nebo `_In_`? Tradiční rozhraní API systému Windows používá typedefs a preprocesorm makra značně abstraktní pryč některé podrobnosti typů a kódu specifické pro platformu, jako jsou konvence volání, **__declspec** deklarace a kompilátor pragmas. V sadě Visual Studio můžete pomocí funkce IntelliSense [Quick Info](/visualstudio/ide/using-intellisense#quick-info) zjistit, co tyto typedefs a makra definují. Najeďte myší na slovo zájmu, nebo jej vyberte a stiskněte **Ctrl**+**K**, **Ctrl**+**I** pro malé vyskakovací okno, které obsahuje definici. Další informace naleznete [v tématu Using IntelliSense](/visualstudio/ide/using-intellisense). Parametry a návratové typy často používají *poznámky SAL,* které vám pomohou zachytit chyby programování. Další informace naleznete [v tématu Použití sal poznámky ke snížení C/C++ chybkódu](/cpp/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects).
 
-1. Desktopové programy Windows vyžadují &lt;Windows. h >. &lt;TCHAR. h > definuje makro `TCHAR`, které se nakonec překládá na **wchar_t** , pokud je v projektu definován symbol Unicode, v opačném případě se překládá na **char**.  Pokud vždy sestavíte s povoleným kódováním UNICODE, nepotřebujete TCHAR a můžete použít **wchar_t** přímo.
+1. Desktopové programy &lt;windows vyžadují> windows.h. &lt;tchar.h> definuje `TCHAR` makro, které se nakonec rozhodne **wchar_t** pokud je v projektu definován symbol UNICODE, jinak se překládá na **char**.  Pokud vždy sestavujete s povoleným UNICODE, nepotřebujete TCHAR a můžete použít **pouze wchar_t** přímo.
 
    ```cpp
    #include <windows.h>
    #include <tchar.h>
    ```
 
-1. Spolu s funkcí `WinMain` musí mít každá desktopová aplikace systému Windows také funkci Window-Procedure. Tato funkce se obvykle nazývá `WndProc`, ale můžete ji pojmenovat libovolně. `WndProc` má následující syntaxi.
+1. Spolu s `WinMain` funkcí musí mít každá desktopová aplikace systému Windows také funkci procedury okna. Tato funkce je `WndProc`obvykle pojmenována , ale můžete ji pojmenovat, jak se vám líbí. `WndProc`má následující syntaxi.
 
    ```cpp
    LRESULT CALLBACK WndProc(
@@ -161,13 +161,13 @@ V dalším kroku se dozvíte, jak vytvořit kód pro desktopovou aplikaci systé
    );
    ```
 
-   V této funkci napíšete kód, který bude zpracovávat *zprávy* , které aplikace obdrží ze systému Windows, když dojde k *události* . Například pokud uživatel ve vaší aplikaci zvolí tlačítko OK, Windows vám pošle zprávu a vy budete moct psát kód v rámci `WndProc` funkce, která funguje podle potřeby. Nazývá se *zpracování* události. Zpracujete pouze události, které jsou relevantní pro vaši aplikaci.
+   V této funkci napíšete kód pro zpracování *zpráv,* které aplikace obdrží ze systému Windows, když dojde k *událostem.* Pokud například uživatel ve vaší aplikaci zvolí tlačítko OK, systém Windows vám pošle `WndProc` zprávu a můžete do své funkce napsat kód, který provede jakoukoli vhodnou práci. Říká se tomu *vyřizování* události. Zpracováváte pouze události, které jsou relevantní pro vaši aplikaci.
 
-   Další informace naleznete v tématu [procedury okna](/windows/win32/winmsg/window-procedures).
+   Další informace naleznete [v tématu Procedury okna](/windows/win32/winmsg/window-procedures).
 
 ### <a name="to-add-functionality-to-the-winmain-function"></a>Přidání funkcí do funkce WinMain
 
-1. Ve funkci `WinMain` naplníte strukturu typu [WNDCLASSEX](/windows/win32/api/winuser/ns-winuser-wndclassexw). Struktura obsahuje informace o okně: ikona aplikace, barva pozadí okna, název, který se zobrazí v záhlaví, mimo jiné. Důležité je, že v proceduře okna obsahuje ukazatel na funkci. Následující příklad ukazuje typickou strukturu `WNDCLASSEX`.
+1. Ve `WinMain` funkci naplníte strukturu typu [WNDCLASSEX](/windows/win32/api/winuser/ns-winuser-wndclassexw). Struktura obsahuje informace o okně: ikona aplikace, barva pozadí okna, název, který se má zobrazit v záhlaví, mimo jiné. Důležité je, že obsahuje ukazatel funkce na proceduru okna. Následující příklad ukazuje `WNDCLASSEX` typickou strukturu.
 
    ```cpp
    WNDCLASSEX wcex;
@@ -186,9 +186,9 @@ V dalším kroku se dozvíte, jak vytvořit kód pro desktopovou aplikaci systé
    wcex.hIconSm        = LoadIcon(wcex.hInstance, IDI_APPLICATION);
    ```
 
-   Informace o polích struktury výše najdete v tématu [WNDCLASSEX](/windows/win32/api/winuser/ns-winuser-wndclassexw).
+   Informace o polích výše uvedené struktury naleznete v tématu [WNDCLASSEX](/windows/win32/api/winuser/ns-winuser-wndclassexw).
 
-1. Zaregistrujte `WNDCLASSEX` v systému Windows, aby ví o vašem okně a bylo možné do něj odesílat zprávy. Použijte funkci [RegisterClassEx](/windows/win32/api/winuser/nf-winuser-registerclassexw) a předejte strukturu třídy okna jako argument. Makro `_T` se používá, protože používáme typ `TCHAR`.
+1. Zaregistrujte `WNDCLASSEX` systém Windows, aby věděl o vašem okně a o tom, jak do něj odesílat zprávy. Použijte funkci [RegisterClassEx](/windows/win32/api/winuser/nf-winuser-registerclassexw) a předajte jako argument strukturu třídy okna. Makro `_T` se používá, protože `TCHAR` používáme typ.
 
    ```cpp
    if (!RegisterClassEx(&wcex))
@@ -202,7 +202,7 @@ V dalším kroku se dozvíte, jak vytvořit kód pro desktopovou aplikaci systé
    }
    ```
 
-1. Nyní můžete vytvořit okno. Použijte funkci [CreateWindow](/windows/win32/api/winuser/nf-winuser-createwindoww) .
+1. Nyní můžete vytvořit okno. Použijte [funkci CreateWindow.](/windows/win32/api/winuser/nf-winuser-createwindoww)
 
    ```cpp
    static TCHAR szWindowClass[] = _T("DesktopApp");
@@ -240,9 +240,9 @@ V dalším kroku se dozvíte, jak vytvořit kód pro desktopovou aplikaci systé
    }
    ```
 
-   Tato funkce vrací `HWND`, což je popisovač okna. Popisovač je trochu podobný jako ukazatel, který systém Windows používá ke sledování otevřených oken. Další informace najdete v tématu [datové typy Windows](/windows/win32/WinProg/windows-data-types).
+   Tato funkce `HWND`vrátí , což je popisovač okna. Popisovač je poněkud podobný ukazatel, který systém Windows používá ke sledování otevřených oken. Další informace naleznete v tématu [Datové typy systému Windows](/windows/win32/WinProg/windows-data-types).
 
-1. V tomto okamžiku bylo okno vytvořeno, ale stále je potřeba sdělit Windows, aby se zobrazilo. To je to, co tento kód dělá:
+1. V tomto okamžiku bylo okno vytvořeno, ale stále potřebujeme sdělit systému Windows, aby byl viditelný. To je to, co tento kód dělá:
 
    ```cpp
    // The parameters to ShowWindow explained:
@@ -253,9 +253,9 @@ V dalším kroku se dozvíte, jak vytvořit kód pro desktopovou aplikaci systé
    UpdateWindow(hWnd);
    ```
 
-   Zobrazené okno nemá mnohem obsah, protože jste ještě neimplementovali funkci `WndProc`. Jinými slovy aplikace ještě nezpracovává zprávy, na které Windows právě odesílá.
+   Zobrazené okno nemá mnoho obsahu, protože jste ještě `WndProc` neimplementovali funkci. Jinými slovy, aplikace ještě nezpracovává zprávy, které jí systém Windows nyní odesílá.
 
-1. Aby bylo možné zprávy zpracovat, nejprve přidáme smyčku zpráv, která bude naslouchat zprávám, které Windows odesílá. Když aplikace obdrží zprávu, tato smyčka ji odešle do vaší funkce `WndProc`, která se má zpracovat. Smyčka zpráv se podobá následujícímu kódu.
+1. Chcete-li zpracovat zprávy, nejprve přidáme smyčku zpráv, abychom naslouchali zprávám, které systém Windows odesílá. Když aplikace obdrží zprávu, tato smyčka odešle `WndProc` do funkce, která má být zpracována. Smyčka zpráv se podobá následujícímu kódu.
 
    ```cpp
    MSG msg;
@@ -268,9 +268,9 @@ V dalším kroku se dozvíte, jak vytvořit kód pro desktopovou aplikaci systé
    return (int) msg.wParam;
    ```
 
-   Další informace o strukturách a funkcích ve smyčce zpráv naleznete v tématu [MSG](/windows/win32/api/winuser/ns-winuser-msg), [GetMessage](/windows/win32/api/winuser/nf-winuser-getmessage), [TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage)a [DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage).
+   Další informace o strukturách a funkcích ve smyčce zpráv naleznete v tématech [MSG](/windows/win32/api/winuser/ns-winuser-msg), [GetMessage](/windows/win32/api/winuser/nf-winuser-getmessage), [TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage)a [DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage).
 
-   V tomto okamžiku by měla funkce `WinMain` vypadat podobně jako následující kód.
+   V tomto okamžiku `WinMain` by se funkce měla podobat následujícímu kódu.
 
    ```cpp
    int WINAPI WinMain(HINSTANCE hInstance,
@@ -357,13 +357,13 @@ V dalším kroku se dozvíte, jak vytvořit kód pro desktopovou aplikaci systé
    }
    ```
 
-### <a name="to-add-functionality-to-the-wndproc-function"></a>Přidání funkce do funkce WndProc
+### <a name="to-add-functionality-to-the-wndproc-function"></a>Přidání funkcí do funkce WndProc
 
-1. Chcete-li povolit funkci `WndProc` pro zpracování zpráv, které aplikace obdrží, implementujte příkaz switch.
+1. Chcete-li `WndProc` povolit funkci pro zpracování zpráv, které aplikace obdrží, implementujte příkaz switch.
 
-   Jednu důležitou zprávu, která se má zpracovat, je [WM_PAINT](/windows/win32/gdi/wm-paint) zpráva. Aplikace obdrží zprávu `WM_PAINT`, když se část zobrazeného okna musí aktualizovat. K události může dojít, když uživatel přesune okno před okno a pak ho znovu přesune. Vaše aplikace neví, kdy dojde k těmto událostem. Jenom systém Windows ví, takže vaši aplikaci upozorní na `WM_PAINT`ou zprávu. Po prvním zobrazení okna se musí aktualizovat všechny.
+   Jednou z důležitých zpráv, které je třeba zpracovat, je [zpráva WM_PAINT.](/windows/win32/gdi/wm-paint) Aplikace obdrží zprávu, `WM_PAINT` když musí být aktualizována část zobrazeného okna. K události může dojít, když uživatel přesune okno před okno a potom jej znovu přesune. Vaše aplikace neví, kdy k těmto událostem dojde. Ví to jenom Windows, takže `WM_PAINT` upozorní vaši aplikaci zprávou. Při prvním zobrazení okna musí být aktualizováno vše.
 
-   Chcete-li zpracovat zprávu `WM_PAINT`, nejdříve zavolejte [BeginPaint](/windows/win32/api/winuser/nf-winuser-beginpaint)a potom zpracujte veškerou logiku pro rozložení textu, tlačítek a dalších ovládacích prvků v okně a pak zavolejte [EndPaint](/windows/win32/api/winuser/nf-winuser-endpaint). Pro aplikaci logika mezi počátečním voláním a koncovým voláním je zobrazení řetězce "Hello, Windows Desktop!" v okně. V následujícím kódu si všimněte, že funkce [text](/windows/win32/api/wingdi/nf-wingdi-textoutw) je použita k zobrazení řetězce.
+   Chcete-li `WM_PAINT` zpracovat zprávu, nejprve zavolejte [BeginPaint](/windows/win32/api/winuser/nf-winuser-beginpaint), pak zpracovat všechny logiky rozložení textu, tlačítek a dalších ovládacích prvků v okně a potom volání [EndPaint](/windows/win32/api/winuser/nf-winuser-endpaint). Pro aplikaci je logikou mezi počátečním a koncovým voláním zobrazení řetězce "Hello, Windows desktop!" v okně. V následujícím kódu si všimněte, že [textout](/windows/win32/api/wingdi/nf-wingdi-textoutw) funkce se používá k zobrazení řetězce.
 
    ```cpp
    PAINTSTRUCT ps;
@@ -388,9 +388,9 @@ V dalším kroku se dozvíte, jak vytvořit kód pro desktopovou aplikaci systé
    }
    ```
 
-   `HDC` v kódu je popisovačem kontextu zařízení, což je datová struktura, kterou systém Windows používá k tomu, aby aplikace mohla komunikovat s grafickým subsystémem. Funkce `BeginPaint` a `EndPaint` zajistí, že se vaše aplikace chová jako dobrá občan a nepoužívá kontext zařízení déle, než je potřeba. Funkce pomůžou zajistit, aby byl podsystém grafiky k dispozici pro použití v jiných aplikacích.
+   `HDC`v kódu je popisovač kontextu zařízení, což je datová struktura, kterou systém Windows používá k tomu, aby aplikace mohla komunikovat s grafickým subsystémem. Funkce `BeginPaint` `EndPaint` a vaše aplikace se chovají jako dobrý občan a nepoužívá kontext zařízení déle, než je potřeba. Funkce pomáhají zpřístupnit grafický podsystém pro použití jinými aplikacemi.
 
-1. Aplikace obvykle zpracovává mnoho dalších zpráv. Například [WM_CREATE](/windows/win32/winmsg/wm-create) při prvním vytvoření okna a [WM_DESTROY](/windows/win32/winmsg/wm-destroy) při zavření okna. Následující kód ukazuje základní, ale úplnou funkci `WndProc`.
+1. Aplikace obvykle zpracovává mnoho dalších zpráv. Například [WM_CREATE](/windows/win32/winmsg/wm-create) při prvním vytvoření okna a [WM_DESTROY](/windows/win32/winmsg/wm-destroy) při zavření okna. Následující kód ukazuje základní, `WndProc` ale úplnou funkci.
 
    ```cpp
    LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
@@ -428,11 +428,11 @@ V dalším kroku se dozvíte, jak vytvořit kód pro desktopovou aplikaci systé
 
 ## <a name="build-the-code"></a>Sestavení kódu
 
-Jak jste slíbili, tady je kompletní kód pro funkční aplikaci.
+Jak jsem slíbil, tady je kompletní kód pro pracovní aplikace.
 
-### <a name="to-build-this-example"></a>Sestavení tohoto příkladu
+### <a name="to-build-this-example"></a>Chcete-li vytvořit tento příklad
 
-1. Odstraňte veškerý kód, který jste zadali v *HelloWindowsDesktop. cpp* v editoru. Zkopírujte tento ukázkový kód a vložte jej do *HelloWindowsDesktop. cpp*:
+1. Odstraňte veškerý kód, který jste zadali v *hellowindowsdesktop.cpp* v editoru. Zkopírujte tento ukázkový kód a vložte jej do *souboru HelloWindowsDesktop.cpp*:
 
    ```cpp
    // HelloWindowsDesktop.cpp
@@ -580,16 +580,16 @@ Jak jste slíbili, tady je kompletní kód pro funkční aplikaci.
    }
    ```
 
-1. V nabídce **sestavení** klikněte na příkaz **Sestavit řešení**. Výsledky kompilace by se měly zobrazit v okně **výstup** v aplikaci Visual Studio.
+1. V nabídce **Build** zvolte **Build Solution**. Výsledky kompilace by se měly objevit v okně **Výstup** v sadě Visual Studio.
 
    ![Sestavení projektu DesktopApp](../build/media/desktop-app-project-build-150.gif "Sestavení projektu DesktopApp")
 
-1. Chcete-li spustit aplikaci, stiskněte klávesu **F5**. Okno, které obsahuje text "Hello, Windows Desktop!" měl by se zobrazit v levém horním rohu zobrazení.
+1. Chcete-li aplikaci spustit, stiskněte **klávesu F5**. Okno, které obsahuje text "Hello, Windows desktop!" v levém horním rohu displeje.
 
    ![Spuštění projektu DesktopApp](../build/media/desktop-app-project-run-157.PNG "Spuštění projektu DesktopApp")
 
-Blahopřejeme! Dokončili jste tento návod a vytvořili tradiční desktopovou aplikaci pro Windows.
+Blahopřejeme! Dokončili jste tento návod a vytvořili tradiční desktopovou aplikaci windows.
 
 ## <a name="see-also"></a>Viz také
 
-[Desktopové aplikace pro Windows](../windows/windows-desktop-applications-cpp.md)
+[Aplikace klasické pracovní plochy systému Windows](../windows/windows-desktop-applications-cpp.md)

@@ -1,38 +1,38 @@
 ---
-title: Analýza adres URL pro Internet a globální a pomocníky
+title: InternetOVÁ analýza adres URL Globals and Helpers
 ms.date: 04/03/2017
 helpviewer_keywords:
 - parsing, URLs
 - URLs, parsing
 ms.assetid: 46c6384f-e4a6-4dbd-9196-219c19040ec5
-ms.openlocfilehash: 310e4ffb3fc207d874e97ba1fac65f6f8cb41a31
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 742b381ecb55c433d0f384174b7612fcc21e9716
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79421301"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81356611"
 ---
-# <a name="internet-url-parsing-globals-and-helpers"></a>Analýza adres URL pro Internet a globální a pomocníky
+# <a name="internet-url-parsing-globals-and-helpers"></a>InternetOVÁ analýza adres URL Globals and Helpers
 
-Když klient pošle dotaz na internetový server, můžete k extrakci informací o klientovi použít jednu z adres URL pro analýzu globálních informací. Pomocné funkce poskytují další funkce Internetu.
+Když klient odešle dotaz na internetový server, můžete k extrahování informací o klientovi použít jednu z globálních analýz adresy URL. Pomocné funkce poskytují další funkce internetu.
 
 ## <a name="internet-url-parsing-globals"></a>Globální funkce pro analýzu internetových adres URL
 
 |||
 |-|-|
 |[AfxParseURL](#afxparseurl)|Analyzuje řetězec adresy URL a vrátí typ služby a její součásti.|
-|[AfxParseURLEx](#afxparseurlex)|Analyzuje řetězec adresy URL a vrátí typ služby a její součásti a také zadání uživatelského jména a hesla.|
+|[AfxParseURLEx](#afxparseurlex)|Analyzuje řetězec adresy URL a vrátí typ služby a její součásti a také zadá uživatelské jméno a heslo.|
 
-## <a name="other-internet-helpers"></a>Další pomocníky Internetu
+## <a name="other-internet-helpers"></a>Další internetoví pomocníci
 
 |||
 |-|-|
-|[AfxThrowInternetException](#afxthrowinternetexception)|Vyvolá výjimku související s připojením k Internetu.|
-|[AfxGetInternetHandleType](#afxgetinternethandletype)|Určuje typ internetového popisovače.|
+|[AfxThrowInternetException](#afxthrowinternetexception)|Vyvolá výjimku související s připojením k internetu.|
+|[AfxGetInternetHandleTyp](#afxgetinternethandletype)|Určuje typ popisovače Sítě Internet.|
 
-##  <a name="afxparseurl"></a>AfxParseURL
+## <a name="afxparseurl"></a><a name="afxparseurl"></a>AfxParseURL
 
-Tato globální aplikace se používá v [CInternetSession:: OpenURL](../../mfc/reference/cinternetsession-class.md#openurl).
+Tento globální se používá v [CInternetSession::OpenURL](../../mfc/reference/cinternetsession-class.md#openurl).
 
 ```
 BOOL AFXAPI AfxParseURL(
@@ -48,8 +48,8 @@ BOOL AFXAPI AfxParseURL(
 *pstrURL*<br/>
 Ukazatel na řetězec obsahující adresu URL, která má být analyzována.
 
-*dwServiceType*<br/>
-Určuje typ služby sítě Internet. Možné hodnoty jsou následující:
+*dwServiceTyp*<br/>
+Označuje typ internetové služby. Možné hodnoty jsou následující:
 
 - AFX_INET_SERVICE_FTP
 
@@ -82,42 +82,42 @@ Určuje typ služby sítě Internet. Možné hodnoty jsou následující:
 - AFX_INET_SERVICE_UNK
 
 *strServer*<br/>
-První segment adresy URL následující po typu služby.
+První segment adresy URL následující za typem služby.
 
-*strObject*<br/>
-Objekt, na který adresa URL odkazuje (může být prázdná).
+*strObjekt*<br/>
+Objekt, na který odkazuje adresa URL (může být prázdný).
 
 *nPort*<br/>
-Určeno z částí adresy URL serveru nebo objektu, pokud buď existují.
+Určeno ze serverových nebo objektových částí adresy URL, pokud existuje.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud se adresa URL úspěšně analyzovala; v opačném případě 0, pokud je prázdný nebo neobsahuje známý typ internetové služby.
+Nenulová, pokud byla adresa URL úspěšně analyzována; v opačném případě 0, pokud je prázdný nebo neobsahuje známý typ služby Sítě Internet.
 
 ### <a name="remarks"></a>Poznámky
 
 Analyzuje řetězec adresy URL a vrátí typ služby a její součásti.
 
-Například `AfxParseURL` analyzuje adresy URL formuláře *Service://server/Dir/dir/Object.ext:port* a vrátí jeho komponenty uložené následujícím způsobem:
+Například `AfxParseURL` analyzuje adresy URL formuláře *service://server/dir/dir/object.ext:port* a vrátí jeho součásti uložené následujícím způsobem:
 
-*strServer* = = "Server"
+*strServer* == "server"
 
-*strObject* = = "/dir/dir/Object/Object.ext"
+*strObject* == "/dir/dir/object/object.ext"
 
-*NPort* = = #port
+*nPort* == #port
 
-*dwServiceType* = = #service
+*dwServiceType* == #service
 
 > [!NOTE]
->  Pro volání této funkce musí projekt zahrnovat AFXINET. Y.
+> Chcete-li volat tuto funkci, váš projekt musí obsahovat AFXINET. H.
 
 ### <a name="requirements"></a>Požadavky
 
-  **Header** afxinet. h
+  **Záhlaví** afxinet.h
 
-##  <a name="afxparseurlex"></a>AfxParseURLEx
+## <a name="afxparseurlex"></a><a name="afxparseurlex"></a>AfxParseURLEx
 
-Tato globální funkce je rozšířená verze [AfxParseURL](#afxparseurl) a používá se v [CInternetSession:: OpenURL](../../mfc/reference/cinternetsession-class.md#openurl).
+Tato globální funkce je rozšířená verze [AfxParseURL](#afxparseurl) a používá se v [CInternetSession::OpenURL](../../mfc/reference/cinternetsession-class.md#openurl).
 
 ```
 BOOL AFXAPI AfxParseURLEx(
@@ -136,8 +136,8 @@ BOOL AFXAPI AfxParseURLEx(
 *pstrURL*<br/>
 Ukazatel na řetězec obsahující adresu URL, která má být analyzována.
 
-*dwServiceType*<br/>
-Určuje typ služby sítě Internet. Možné hodnoty jsou následující:
+*dwServiceTyp*<br/>
+Označuje typ internetové služby. Možné hodnoty jsou následující:
 
 - AFX_INET_SERVICE_FTP
 
@@ -170,51 +170,51 @@ Určuje typ služby sítě Internet. Možné hodnoty jsou následující:
 - AFX_INET_SERVICE_UNK
 
 *strServer*<br/>
-První segment adresy URL následující po typu služby.
+První segment adresy URL následující za typem služby.
 
-*strObject*<br/>
-Objekt, na který adresa URL odkazuje (může být prázdná).
+*strObjekt*<br/>
+Objekt, na který odkazuje adresa URL (může být prázdný).
 
 *nPort*<br/>
-Určeno z částí adresy URL serveru nebo objektu, pokud buď existují.
+Určeno ze serverových nebo objektových částí adresy URL, pokud existuje.
 
-*strUsername*<br/>
-Odkaz na objekt `CString` obsahující jméno uživatele.
+*StrUsername*<br/>
+Odkaz na `CString` objekt obsahující jméno uživatele.
 
 *strPassword*<br/>
-Odkaz na objekt `CString`, který obsahuje heslo uživatele.
+Odkaz na `CString` objekt obsahující heslo uživatele.
 
 *dwFlags*<br/>
 Příznaky, které řídí, jak analyzovat adresu URL. Může být kombinací následujících hodnot:
 
 |Hodnota|Význam|
 |-----------|-------------|
-|ICU_DECODE|Převede% XX řídicí sekvence na znaky.|
-|ICU_NO_ENCODE|Neprovádějte převod nebezpečných znaků na řídicí sekvenci.|
-|ICU_NO_META|Neodstraňujte meta sekvence (například "\." a "\..") z adresy URL.|
-|ICU_ENCODE_SPACES_ONLY|Zakódovat pouze mezery.|
-|ICU_BROWSER_MODE|Nekódovat ani dekódovat znaky za znakem "#" nebo "" a neodstraňujte koncové prázdné znaky po ' '. Pokud tato hodnota není zadaná, celá adresa URL se zakóduje a na konci se odeberou prázdné znaky.|
+|ICU_DECODE|Převeďte %XX řídicích sekvencí na znaky.|
+|ICU_NO_ENCODE|Nepřevádí nebezpečné znaky escape sekvence.|
+|ICU_NO_META|Neodstraňujte metasekvence (například "\" . a "\ ..") z adresy URL.|
+|ICU_ENCODE_SPACES_ONLY|Zakódujte pouze mezery.|
+|ICU_BROWSER_MODE|Nekódujte ani nedekódujte znaky za '#' nebo '' a neodstraňujte koncové prázdné místo po ''. Pokud tato hodnota není zadána, je zakódována celá adresa URL a je odebráno koncové prázdné místo.|
 
-Použijete-li výchozí knihovnu MFC, což není žádný příznak, funkce převede všechny nezabezpečené znaky a meta sekvence (například \\., \.. a \\...) na řídicí sekvence.
+Pokud použijete výchozí knihovnu MFC, což není žádné příznaky, funkce převede \\všechny nebezpečné znaky \\a metasekvence (například .,\ .., a ...) na únikové sekvence.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nenulové, pokud se adresa URL úspěšně analyzovala; v opačném případě 0, pokud je prázdný nebo neobsahuje známý typ internetové služby.
+Nenulová, pokud byla adresa URL úspěšně analyzována; v opačném případě 0, pokud je prázdný nebo neobsahuje známý typ služby Sítě Internet.
 
 ### <a name="remarks"></a>Poznámky
 
-Analyzuje řetězec adresy URL a vrací typ služby a její součásti a poskytuje uživatelské jméno a heslo. Příznaky označují, jak jsou zpracovávány nebezpečné znaky.
+Analyzuje řetězec adresy URL a vrátí typ služby a její součásti a také zadá jméno a heslo uživatele. Příznaky označují, jak jsou zpracovány nebezpečné znaky.
 
 > [!NOTE]
->  Pro volání této funkce musí projekt zahrnovat AFXINET. Y.
+> Chcete-li volat tuto funkci, váš projekt musí obsahovat AFXINET. H.
 
 ### <a name="requirements"></a>Požadavky
 
-  **Header** afxinet. h
+  **Záhlaví** afxinet.h
 
-## <a name="afxgetinternethandletype"></a>AfxGetInternetHandleType
+## <a name="afxgetinternethandletype"></a><a name="afxgetinternethandletype"></a>AfxGetInternetHandleTyp
 
-Tuto globální funkci použijte k určení typu internetového popisovače.
+Tato globální funkce slouží k určení typu popisovače Sítě Internet.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -224,16 +224,16 @@ DWORD AFXAPI AfxGetInternetHandleType(  HINTERNET hQuery );
 
 ### <a name="parameters"></a>Parametry
 
-*hQuery*<br/>
-Popisovač pro dotaz na Internet.
+*hDotaz*<br/>
+Popisovač internetového dotazu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Libovolný typ služby pro Internet definovaný v rozhraní WININET. Y. Seznam těchto služeb sítě Internet najdete v části s poznámkami. Pokud má popisovač hodnotu NULL nebo není rozpoznán, funkce vrátí AFX_INET_SERVICE_UNK.
+Všechny typy internetových služeb definované sítí WININET. H. Seznam těchto internetových služeb naleznete v části Poznámky. Pokud je popisovač null nebo není rozpoznán, funkce vrátí AFX_INET_SERVICE_UNK.
 
 ### <a name="remarks"></a>Poznámky
 
-Následující seznam obsahuje možné typy Internetu vrácené `AfxGetInternetHandleType`.
+Následující seznam obsahuje možné typy `AfxGetInternetHandleType`Internetu vrácené aplikací .
 
 - INTERNET_HANDLE_TYPE_INTERNET
 
@@ -262,15 +262,15 @@ Následující seznam obsahuje možné typy Internetu vrácené `AfxGetInternetH
 - INTERNET_HANDLE_TYPE_HTTP_REQUEST
 
 > [!NOTE]
->  Aby bylo možné zavolat tuto funkci, projekt musí zahrnovat AFXINET. Y.
+> Chcete-li volat tuto funkci, váš projekt musí obsahovat AFXINET. H.
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxinet. h
+**Záhlaví:** afxinet.h
 
-## <a name="afxthrowinternetexception"></a>AfxThrowInternetException
+## <a name="afxthrowinternetexception"></a><a name="afxthrowinternetexception"></a>AfxThrowInternetException
 
-Vyvolá výjimku z Internetu.
+Vyvolá výjimku internetu.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -280,25 +280,25 @@ Vyvolá výjimku z Internetu.
 
 ### <a name="parameters"></a>Parametry
 
-*dwContext*<br/>
-Identifikátor kontextu operace, která způsobila chybu. Výchozí hodnota *dwContext* je určena původně v [CInternetSession](cinternetsession-class.md) a je předávána třídám odvozeným od [CInternetConnection](cinternetconnection-class.md)-a [CInternetFile](cinternetfile-class.md). Pro konkrétní operace prováděné s připojením nebo souborem obvykle potlačíte výchozí *dwContext* . Tato hodnota se pak vrátí do [CInternetSession:: OnStatusCallback](cinternetsession-class.md#onstatuscallback) a určí stav konkrétní operace.
+*dwKontext*<br/>
+Identifikátor kontextu pro operaci, která způsobila chybu. Výchozí hodnota *dwContext* je původně zadána v [CInternetSession](cinternetsession-class.md) a je předána třídám [CInternetConnection](cinternetconnection-class.md)- a [CInternetFile](cinternetfile-class.md)-derived. Pro konkrétní operace prováděné na připojení nebo souboru obvykle přepsat výchozí *s dwContext* vlastní. Tato hodnota je pak vrácena [CInternetSession::OnStatusCallback](cinternetsession-class.md#onstatuscallback) k identifikaci stavu konkrétní operace.
 
-*dwError*<br/>
-Chyba, která výjimku způsobila.
+*chyba dwError*<br/>
+Chyba, která způsobila výjimku.
 
 ### <a name="remarks"></a>Poznámky
 
-Zodpovídáte za zjištění příčiny na základě kódu chyby operačního systému.
+Jste zodpovědní za určení příčiny na základě kódu chyby operačního systému.
 
 > [!NOTE]
->  Pro volání této funkce musí projekt zahrnovat AFXINET. Y.
+> Chcete-li volat tuto funkci, váš projekt musí obsahovat AFXINET. H.
 
 ### <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxinet. h
+**Záhlaví:** afxinet.h
 
 ## <a name="see-also"></a>Viz také
 
-[Makra a globální prvky](mfc-macros-and-globals.md)<br/>
-[CInternetException – třída](cinternetexception-class.md)<br/>
+[Makra a globální](mfc-macros-and-globals.md)<br/>
+[Třída CInternetException](cinternetexception-class.md)<br/>
 [AfxParseURL](internet-url-parsing-globals.md#afxparseurl)

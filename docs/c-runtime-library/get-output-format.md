@@ -23,19 +23,19 @@ helpviewer_keywords:
 - get_output_format function
 - _get_output_format function
 ms.assetid: 0ce42f3b-3479-41c4-bcbf-1d21f7ee37e7
-ms.openlocfilehash: 20afa988bc4fdf3bc3a6ff073a48a1cc00ff84c5
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 682ab9796942e52ed036193887158ea22b738189
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944357"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81349337"
 ---
 # <a name="_get_output_format"></a>_get_output_format
 
 Získá aktuální hodnotu příznaku výstupního formátu.
 
 > [!IMPORTANT]
->  Tato funkce je zastaralá. Počínaje verzí Visual Studio 2015 není k dispozici v CRT.
+> Tato funkce je zastaralá. Počínaje Visual Studio 2015, není k dispozici v CRT.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -49,7 +49,7 @@ Aktuální hodnota příznaku výstupního formátu.
 
 ## <a name="remarks"></a>Poznámky
 
-Příznak výstupní formát ovládá funkce formátovaného vstupu a výstupu. Příznak má v současnosti dvě možné hodnoty: 0 a `_TWO_DIGIT_EXPONENT`. Je `_TWO_DIGIT_EXPONENT` -li nastavena hodnota, čísla s plovoucí desetinnou čárkou budou vytištěna pouze pomocí dvou číslic ve exponentu, pokud velikost exponentu nepožaduje třetí číslice. Pokud je příznak nula, zobrazí výstup plovoucí desetinné čárky tři číslice exponentu, pokud je to nutné k vyplnění hodnoty třemi číslicemi.
+Příznak výstupního formátu řídí funkce formátovaných vstupně-výstupních výstupů. V současné době má příznak dvě `_TWO_DIGIT_EXPONENT`možné hodnoty: 0 a . Pokud `_TWO_DIGIT_EXPONENT` je nastavena, čísla s plovoucí desetinnou desetinnou desetinnou třídou jsou vytištěna pouze se dvěma číslicemi v exponentu, pokud není třetí číslice vyžadována velikostí exponentu. Pokud je příznak nula, výstup s plovoucí desetinnou desetinnou desetinnou desetinnou tištěnou se zobrazí tři číslice exponentu, v případě potřeby pomocí nul, aby se hodnota vyložce nepoužívala na tři číslice.
 
 ## <a name="requirements"></a>Požadavky
 
@@ -57,11 +57,11 @@ Příznak výstupní formát ovládá funkce formátovaného vstupu a výstupu. 
 |-------------|---------------------|
 |`_get_output_format`|\<stdio.h>|
 
-Další informace o kompatibilitě naleznete v úvodu v tématu [Kompatibilita](../c-runtime-library/compatibility.md) .
+Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../c-runtime-library/compatibility.md) v úvodu.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Syntaxe specifikace formátu: funkce printf a wprintf](../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)<br/>
+[Syntaxe specifikace formátu: printf a wprintf Functions](../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)<br/>
 [printf, _printf_l, wprintf, _wprintf_l](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)<br/>
 [printf_s, _printf_s_l, wprintf_s, _wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)<br/>
 [_set_output_format](../c-runtime-library/set-output-format.md)

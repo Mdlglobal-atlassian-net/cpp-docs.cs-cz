@@ -1,5 +1,5 @@
 ---
-title: CHtmlEditDoc Class
+title: Třída CHtmlEditDoc
 ms.date: 11/04/2016
 f1_keywords:
 - CHtmlEditDoc
@@ -14,16 +14,16 @@ helpviewer_keywords:
 - CHtmlEditDoc [MFC], IsModified
 - CHtmlEditDoc [MFC], OpenURL
 ms.assetid: b2cca61f-e5d6-4099-b0d1-46bf85f0bd64
-ms.openlocfilehash: c2a00b2501647f6101fed8ed1d4cd23dad7ab209
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 8b500f651da1a73040fdb0469f2f023babe25e85
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64346176"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81352164"
 ---
-# <a name="chtmleditdoc-class"></a>CHtmlEditDoc Class
+# <a name="chtmleditdoc-class"></a>Třída CHtmlEditDoc
 
-S [CHtmlEditView](../../mfc/reference/chtmleditview-class.md), poskytuje funkce úprav platformy WebBrowser v rámci kontextu architektury zobrazení dokumentu MFC.
+S [CHtmlEditView](../../mfc/reference/chtmleditview-class.md), poskytuje funkce platformy pro úpravy WebBrowser v kontextu architektury zobrazení dokumentu knihovny MFC.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -35,43 +35,43 @@ class AFX_NOVTABLE CHtmlEditDoc : public CDocument
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CHtmlEditDoc::CHtmlEditDoc](#chtmleditdoc)|Vytvoří `CHtmlEditDoc` objektu.|
+|[CHtmlEditDoc::CHtmlEditDoc](#chtmleditdoc)|Vytvoří `CHtmlEditDoc` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CHtmlEditDoc::GetView](#getview)|Načte `CHtmlEditView` objekt připojené k tomuto dokumentu.|
-|[CHtmlEditDoc::IsModified](#ismodified)|Vrátí, zda ovládací prvek WebBrowser přidružené zobrazení obsahuje dokument, který byl změněn uživatelem.|
+|[CHtmlEditDoc::GetView](#getview)|Načte `CHtmlEditView` objekt připojený k tomuto dokumentu.|
+|[ChtmlEditDoc::IsModified](#ismodified)|Vrátí, zda ovládací prvek WebBrowser přidruženého zobrazení obsahuje dokument, který byl změněn uživatelem.|
 |[CHtmlEditDoc::OpenURL](#openurl)|Otevře adresu URL.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObjekt](../../mfc/reference/cobject-class.md)
 
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+[CCmdCíl](../../mfc/reference/ccmdtarget-class.md)
 
-[CDocument](../../mfc/reference/cdocument-class.md)
+[CDokument](../../mfc/reference/cdocument-class.md)
 
 `CHtmlEditDoc`
 
 ## <a name="requirements"></a>Požadavky
 
-**Header:** afxhtml.h
+**Záhlaví:** afxhtml.h
 
-##  <a name="chtmleditdoc"></a>  CHtmlEditDoc::CHtmlEditDoc
+## <a name="chtmleditdocchtmleditdoc"></a><a name="chtmleditdoc"></a>CHtmlEditDoc::CHtmlEditDoc
 
-Vytvoří `CHtmlEditDoc` objektu.
+Vytvoří `CHtmlEditDoc` objekt.
 
 ```
 CHtmlEditDoc();
 ```
 
-##  <a name="getview"></a>  CHtmlEditDoc::GetView
+## <a name="chtmleditdocgetview"></a><a name="getview"></a>CHtmlEditDoc::GetView
 
-Načte [CHtmlEditView](../../mfc/reference/chtmleditview-class.md) objekt připojené k tomuto dokumentu.
+Načte objekt [CHtmlEditView](../../mfc/reference/chtmleditview-class.md) připojený k tomuto dokumentu.
 
 ```
 virtual CHtmlEditView* GetView() const;
@@ -79,17 +79,17 @@ virtual CHtmlEditView* GetView() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrací ukazatel na dokument `CHtmlEditView` objektu.
+Vrátí ukazatel na `CHtmlEditView` objekt dokumentu.
 
-##  <a name="ismodified"></a>  CHtmlEditDoc::IsModified
+## <a name="chtmleditdocismodified"></a><a name="ismodified"></a>ChtmlEditDoc::IsModified
 
-Vrátí, zda ovládací prvek WebBrowser přidružené zobrazení obsahuje dokument, který byl změněn uživatelem.
+Vrátí, zda ovládací prvek WebBrowser přidruženého zobrazení obsahuje dokument, který byl změněn uživatelem.
 
 ```
 virtual BOOL IsModified();
 ```
 
-##  <a name="openurl"></a>  CHtmlEditDoc::OpenURL
+## <a name="chtmleditdocopenurl"></a><a name="openurl"></a>CHtmlEditDoc::OpenURL
 
 Otevře adresu URL.
 
@@ -100,13 +100,13 @@ virtual BOOL OpenURL(LPCTSTR lpszURL);
 ### <a name="parameters"></a>Parametry
 
 *lpszURL*<br/>
-Chcete-li otevřít adresu URL.
+Adresa URL, kterou chcete otevřít.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu TRUE v případě úspěchu; při neúspěchu hodnotu FALSE.
+Vrátí hodnotu PRAVDA při úspěchu, nepravda při neúspěchu.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Ukázka HTMLEdit](../../overview/visual-cpp-samples.md)<br/>
+[HtmlEdit ukázka](../../overview/visual-cpp-samples.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)

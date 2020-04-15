@@ -66,16 +66,16 @@ helpviewer_keywords:
 - operator =, bookmarks
 - operator=, bookmarks
 ms.assetid: bc942f95-6f93-41d9-bb6e-bcdae4ae0b7a
-ms.openlocfilehash: e15be3342b32b432c438b65ec57765cb135f5316
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: d3d82ea09b7ed2c1cbaf325906b4f9b480e1eb4e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80212235"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81359325"
 ---
 # <a name="cbookmark-class"></a>CBookmark – třída
 
-Obsahuje hodnotu záložky ve své vyrovnávací paměti.
+Obsahuje hodnotu záložky v jeho vyrovnávací paměti.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -89,12 +89,12 @@ class CBookmark< 0 > : public CBookmarkBase
 
 ### <a name="parameters"></a>Parametry
 
-*nSize*<br/>
-Velikost vyrovnávací paměti pro záložky v bajtech Pokud je *nSize* nula, vyrovnávací paměť záložky se dynamicky vytvoří v době běhu.
+*nVelikost*<br/>
+Velikost vyrovnávací paměti záložky v bajtech. Když *nSize* je nula, vyrovnávací paměť záložky bude dynamicky vytvořena v době běhu.
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atldbcli. h
+**Záhlaví:** atldbcli.h
 
 ## <a name="members"></a>Členové
 
@@ -103,21 +103,21 @@ Velikost vyrovnávací paměti pro záložky v bajtech Pokud je *nSize* nula, vy
 |||
 |-|-|
 |[CBookmark](#cbookmark)|Konstruktor|
-|[GetBuffer](#getbuffer)|Načte ukazatel na vyrovnávací paměť.|
-|[GetSize](#getsize)|Načte velikost vyrovnávací paměti v bajtech.|
-|[SetBookmark](#setbookmark)|Nastaví hodnotu záložky.|
+|[Getbuffer](#getbuffer)|Načte ukazatel do vyrovnávací paměti.|
+|[GetSize](#getsize)|Načte velikost vyrovnávací paměti v bajtů.|
+|[Značka SetBookmark](#setbookmark)|Nastaví hodnotu záložky.|
 
 ### <a name="operators"></a>Operátory
 
 |||
 |-|-|
-|[operátor =](#operator)|Přiřadí jednu třídu `CBookmark` k druhé.|
+|[operátor =](#operator)|Přiřadí `CBookmark` jednu třídu do jiné třídy.|
 
 ## <a name="remarks"></a>Poznámky
 
-`CBookmark<0>` je specializace šablony `CBookmark`; jeho vyrovnávací paměť je dynamicky vytvořena v době běhu.
+`CBookmark<0>`je šablona specializace `CBookmark`; jeho vyrovnávací paměť je dynamicky vytvořena za běhu.
 
-## <a name="cbookmarkcbookmark"></a><a name="cbookmark"></a>CBookmark:: CBookmark
+## <a name="cbookmarkcbookmark"></a><a name="cbookmark"></a>CBookmark::CBookmark
 
 Konstruktor
 
@@ -130,19 +130,19 @@ CBookmark(DBLENGTH nSize);
 
 #### <a name="parameters"></a>Parametry
 
-*nSize*<br/>
-pro Velikost vyrovnávací paměti pro záložky v bajtech
+*nVelikost*<br/>
+[v] Velikost vyrovnávací paměti záložky v bajtech.
 
 ### <a name="remarks"></a>Poznámky
 
-První funkce nastaví vyrovnávací paměť na NULL a velikost vyrovnávací paměti na 0. Druhá funkce nastaví velikost vyrovnávací paměti na *nSize*a vyrovnávací paměť na bajtové pole *nSize* bajtů.
+První funkce nastaví vyrovnávací paměť na hodnotu NULL a velikost vyrovnávací paměti na hodnotu 0. Druhá funkce nastaví velikost vyrovnávací paměti na *nSize*a vyrovnávací paměť na bajtou pole *bajtů nSize.*
 
 > [!NOTE]
->  Tato funkce je k dispozici pouze v `CBookmark<0>`.
+> Tato funkce je `CBookmark<0>`k dispozici pouze v aplikaci .
 
-## <a name="cbookmarkgetbuffer"></a><a name="getbuffer"></a>CBookmark:: GetBuffer
+## <a name="cbookmarkgetbuffer"></a><a name="getbuffer"></a>CBookmark::GetBuffer
 
-Načte ukazatel na vyrovnávací paměť záložky.
+Načte ukazatel do vyrovnávací paměti záložky.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -154,7 +154,7 @@ virtual BYTE* GetBuffer() const throw();
 
 Ukazatel na vyrovnávací paměť záložky.
 
-## <a name="cbookmarkgetsize"></a><a name="getsize"></a>CBookmark:: GetSize
+## <a name="cbookmarkgetsize"></a><a name="getsize"></a>CBookmark::GetSize
 
 Načte velikost vyrovnávací paměti záložky.
 
@@ -166,11 +166,11 @@ virtual DBLENGTH GetSize() const throw();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Velikost vyrovnávací paměti v bajtech.
+Velikost vyrovnávací paměti v bajtů.
 
-## <a name="cbookmarksetbookmark"></a><a name="setbookmark"></a>CBookmark:: SetBookmark
+## <a name="cbookmarksetbookmark"></a><a name="setbookmark"></a>CBookmark:SetBookmark
 
-Zkopíruje hodnotu záložky, na kterou odkazuje *pBuffer* , do vyrovnávací paměti `CBookmark` a nastaví velikost vyrovnávací paměti na *nSize*.
+Zkopíruje hodnotu záložky, na `CBookmark` kterou *pBuffer* odkazuje, do vyrovnávací paměti a nastaví velikost vyrovnávací paměti na *nSize*.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -180,23 +180,23 @@ HRESULT SetBookmark(DBLENGTH nSize, BYTE* pBuffer) throw();
 
 #### <a name="parameters"></a>Parametry
 
-*nSize*<br/>
-pro Velikost vyrovnávací paměti záložky
+*nVelikost*<br/>
+[v] Velikost vyrovnávací paměti záložky.
 
-*pBuffer*<br/>
-pro Ukazatel na pole bajtů obsahující hodnotu záložky.
+*pVyrovnávací paměť*<br/>
+[v] Ukazatel na bajtové pole obsahující hodnotu záložky.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Standardní hodnota HRESULT.
+Standardní HRESULT.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce je k dispozici pouze v `CBookmark<0>`.
+Tato funkce je `CBookmark<0>`k dispozici pouze v aplikaci .
 
-## <a name="cbookmarkoperator-"></a><a name="operator"></a>CBookmark:: operator =
+## <a name="cbookmarkoperator-"></a><a name="operator"></a>CBookmark::operátor =
 
-Přiřadí objekt `CBookmark` k druhému.
+Přiřadí `CBookmark` objekt jinému objektu.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -206,9 +206,9 @@ CBookmark& operator =(const CBookmark& bookmark) throw();
 
 ### <a name="remarks"></a>Poznámky
 
-Tento operátor je vyžadován pouze v `CBookmark<0>`.
+Tento operátor je `CBookmark<0>`potřeba pouze v .
 
 ## <a name="see-also"></a>Viz také
 
-[Šablony OLE DB příjemců](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Referenční dokumentace k šablonám příjemců OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)
+[Šablony spotřebitelů OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Odkaz na šablony příjemce technologie OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

@@ -9,26 +9,26 @@ helpviewer_keywords:
 - ODBC connections, configuring
 - configuring ODBC data sources
 ms.assetid: b8cabe9b-9e12-4d73-ae36-7cb12dee3213
-ms.openlocfilehash: 38f0f383256a05c983fb7e7d7a498e16881c7b78
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: ba0224d166795b34d636ace610265e115209e49c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79446953"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81358864"
 ---
 # <a name="data-source-programmatically-configuring-an-odbc-data-source"></a>Zdroj dat: Programové nakonfigurování zdroje dat ODBC
 
-Toto téma vysvětluje, jak můžete programově nakonfigurovat názvy zdrojů dat rozhraní ODBC (Open Database Connectivity). Díky tomu získáte flexibilitu při přístupu k datům bez vynucení explicitního použití Správce rozhraní ODBC nebo jiných programů k určení názvů zdrojů dat.
+Toto téma vysvětluje, jak můžete programově konfigurovat názvy zdrojů dat připojení k otevřené databázi (ODBC). To poskytuje flexibilitu při přístupu k datům bez vynucení uživatele explicitně použít správce ODBC nebo jiné programy k určení názvů zdrojů dat.
 
-Uživatel obvykle spouští správce rozhraní ODBC, aby vytvořil zdroj dat, pokud příslušný systém správy databáze (DBMS) tuto operaci podporuje.
+Uživatel obvykle spustí správce rozhraní ODBC a vytvoří zdroj dat, pokud přidružený systém správy databáze (DBMS) tuto operaci podporuje.
 
-Při vytváření zdroje dat ODBC Microsoft Access přes Správce rozhraní ODBC máte dvě možnosti: můžete vybrat existující soubor. mdb nebo můžete vytvořit nový soubor. mdb. Neexistuje žádný programový způsob vytvoření souboru. mdb z aplikace MFC ODBC. Proto pokud vaše aplikace vyžaduje, abyste umístili data do zdroje dat Microsoft Access (soubor. mdb), pravděpodobně budete chtít mít prázdný soubor. mdb, který můžete použít nebo zkopírovat vždy, když ho potřebujete.
+Při vytváření zdroje dat ODBC aplikace Microsoft Access prostřednictvím správce rozhraní ODBC máte dvě možnosti: můžete vybrat existující soubor MDB nebo vytvořit nový soubor MDB. Neexistuje žádný programový způsob vytváření souboru MDB z aplikace MFC ODBC. Pokud tedy aplikace vyžaduje umístění dat do zdroje dat aplikace Microsoft Access (soubor MDB), budete s největší pravděpodobností chtít mít prázdný soubor MDB, který můžete použít nebo zkopírovat, kdykoli jej budete potřebovat.
 
-Mnoho systémů DBMS však umožňuje programové vytvoření zdroje dat. Některé zdroje dat udržují specifikace adresáře pro databáze. To znamená, že adresář je zdroj dat a každá tabulka v rámci zdroje dat je uložena v samostatném souboru (v případě programu dBASE je každá tabulka soubor. dbf). Ovladače pro jiné databáze ODBC, jako je například Microsoft Access a SQL Server, vyžadují, aby před vytvořením zdroje dat byla splněna některá konkrétní kritéria. Například při použití ovladače SQL Server ODBC musíte navázat SQL Server počítač.
+Mnoho DBMS však umožňuje vytváření programových zdrojů dat. Některé zdroje dat udržují specifikaci adresáře pro databáze. To znamená, že adresář je zdroj dat a každá tabulka v rámci zdroje dat je uložena v samostatném souboru (v případě dBASE je každá tabulka souborem .dbf). Ovladače pro jiné databáze ODBC, jako je například Microsoft Access a SQL Server, vyžadují, aby byla před vytvořením zdroje dat splněna některá konkrétní kritéria. Například při použití ovladače SQL Server ODBC, musíte mít vytvořený počítač SQL Server.
 
-##  <a name="_core_sqlconfigdatasource_example"></a>Příklad SQLConfigDataSource
+## <a name="sqlconfigdatasource-example"></a><a name="_core_sqlconfigdatasource_example"></a>Příklad zdroje SQLConfigDataSource
 
-Následující příklad používá funkci `::SQLConfigDataSource` rozhraní ODBC API k vytvoření nového zdroje dat aplikace Excel s názvem nový zdroj dat aplikace Excel:
+Následující příklad používá `::SQLConfigDataSource` funkci ROZHRANÍ API ROZHRANÍ ODBC k vytvoření nového zdroje dat aplikace Excel nazvaného Nový zdroj dat aplikace Excel:
 
 ```
 SQLConfigDataSource(NULL,ODBC_ADD_DSN, "Excel Files (*.xls)",
@@ -39,23 +39,23 @@ SQLConfigDataSource(NULL,ODBC_ADD_DSN, "Excel Files (*.xls)",
                    "MaxScanRows=20\0");
 ```
 
-Všimněte si, že zdroj dat je ve skutečnosti adresář (C:\EXCELDIR); Tento adresář musí existovat. Ovladač aplikace Excel používá adresáře jako své zdroje dat a soubory jako jednotlivé tabulky (jedna tabulka na soubor. xls).
+Všimněte si, že zdroj dat je ve skutečnosti adresář (C:\EXCELDIR); tento adresář musí existovat. Ovladač aplikace Excel používá adresáře jako zdroje dat a soubory jako jednotlivé tabulky (jedna tabulka na soubor XLS).
 
-Další informace o vytváření tabulek najdete v tématu [zdroj dat: Programové vytvoření tabulky ve zdroji dat ODBC](../../data/odbc/data-source-programmatically-creating-a-table-in-an-odbc-data-source.md).
+Další informace o vytváření tabulek naleznete v [tématu Zdroj dat: Programově vytvoření tabulky ve zdroji dat ODBC](../../data/odbc/data-source-programmatically-creating-a-table-in-an-odbc-data-source.md).
 
-Následující informace popisuje parametry, které je třeba předat `::SQLConfigDataSource` funkci rozhraní API ODBC. Chcete-li použít `::SQLConfigDataSource`, je nutné zahrnout hlavičkový soubor Odbcinst. h a použít knihovnu importu Odbcinst. lib. Kromě toho musí být Odbccp32. dll v cestě v době běhu (nebo Odbcinst. dll pro 16 bitů).
+Následující informace popisují parametry, které je třeba `::SQLConfigDataSource` předat funkci ROZHRANÍ API ROZHRANÍ ODBC. Chcete-li použít `::SQLConfigDataSource`, musíte zahrnout soubor záhlaví Odbcinst.h a použít knihovnu importu Odbcinst.lib. Také Odbccp32.dll musí být v cestě za běhu (nebo Odbcinst.dll pro 16 bit).
 
-Název zdroje dat ODBC můžete vytvořit pomocí Správce rozhraní ODBC nebo podobného nástroje. Někdy je však žádoucí vytvořit název zdroje dat přímo z vaší aplikace a získat tak přístup, aniž by uživatel musel spustit samostatný nástroj.
+Název zdroje dat ODBC můžete vytvořit pomocí správce rozhraní ODBC nebo podobného nástroje. Někdy je však žádoucí vytvořit název zdroje dat přímo z vaší aplikace získat přístup bez nutnosti uživatele spustit samostatný nástroj.
 
-Správce rozhraní ODBC (obvykle nainstalovaný v Ovládacích panelech) vytvoří nový zdroj dat vložením položek do registru systému Windows (nebo pro 16 bitů v souboru ODBC. ini). Správce ovladačů rozhraní ODBC dotazuje tento soubor, aby získal požadované informace o zdroji dat. Je důležité zjistit, jaké informace musí být umístěny v registru, protože je třeba ji dodat voláním `::SQLConfigDataSource`.
+Správce rozhraní ODBC (obvykle nainstalovaný v Ovládacích panelech) vytvoří nový zdroj dat vložením položek do registru systému Windows (nebo u 16 bitů do souboru Odbc.ini). Správce ovladačů ROZHRANÍ ODBC dotazuje tento soubor, aby získal požadované informace o zdroji dat. Je důležité vědět, jaké informace je třeba umístit do registru, protože `::SQLConfigDataSource`je třeba zadat volání .
 
-I když tyto informace mohou být zapsány přímo do registru bez použití `::SQLConfigDataSource`, bude se žádná aplikace, která to dělá, spoléhat na aktuální techniku, kterou správce ovladačů používá k údržbě svých dat. Pokud pozdější revize správce ovladačů ODBC implementuje uchovávání záznamů o datových zdrojích jiným způsobem, všechny aplikace používající tuto techniku jsou poškozené. Je obecně vhodné použít funkci rozhraní API, pokud je k dispozici. Například váš kód je přenosný z 16 bitů na 32 bit, pokud použijete funkci `::SQLConfigDataSource`, protože funkce správně zapisuje do souboru ODBC. ini nebo do registru.
+Přestože tyto informace mohou být zapsány přímo do registru bez použití `::SQLConfigDataSource`, všechny aplikace, které tak činí, se spoléhá na aktuální techniku, kterou Správce ovladačů používá k udržování svých dat. Pokud pozdější revize Správce ovladačů ODBC implementuje vedení záznamů o zdrojích dat jiným způsobem, jakákoli aplikace, která používá tuto techniku, je přerušena. Obecně je vhodné použít funkci rozhraní API, pokud je k dispozici. Například váš kód je přenosný od 16 bitů `::SQLConfigDataSource` do 32 bitů, pokud používáte funkci, protože funkce správně zapíše do souboru Odbc.ini nebo do registru.
 
-##  <a name="_core_sqlconfigdatasource_parameters"></a>Parametry SQLConfigDataSource
+## <a name="sqlconfigdatasource-parameters"></a><a name="_core_sqlconfigdatasource_parameters"></a>Parametry SQLConfigDataSource
 
-V následující části jsou vysvětleny parametry funkce `::SQLConfigDataSource`. Většina těchto informací je poskytována z *odkazu programátora* rozhraní ODBC dodaných v C++ jazyce Visual verze 1,5 a novějším.
+Následující vysvětluje parametry `::SQLConfigDataSource` funkce. Velká část informací je převzata z *odkazu programátora ROZHRANÍ* API ROZHRANÍ ODBC, který je dodáván s visual c++ verze 1.5 a novější.
 
-###  <a name="_core_function_prototype"></a>Prototyp funkce
+### <a name="function-prototype"></a><a name="_core_function_prototype"></a>Prototyp funkce
 
 ```
 BOOL SQLConfigDataSource(HWND hwndParent,UINT fRequest, LPCSTR lpszDriver, LPCSTR lpszAttributes);
@@ -63,48 +63,48 @@ BOOL SQLConfigDataSource(HWND hwndParent,UINT fRequest, LPCSTR lpszDriver, LPCST
 
 ### <a name="remarks"></a>Poznámky
 
-####  <a name="_core_parameters_and_usage"></a>Parametry a použití
+#### <a name="parameters-and-usage"></a><a name="_core_parameters_and_usage"></a>Parametry a použití
 
 *hwndParent*<br/>
-Okno zadané jako vlastník všech dialogových oken, které buď vytvoří Správce ovladačů ODBC, nebo konkrétní ovladač ODBC, aby od uživatele získal další informace o novém zdroji dat. Pokud parametr *lpszAttributes* neposkytuje dostatek informací, zobrazí se dialogové okno. Parametr *hwndParent* může mít hodnotu null.
+Okno určené jako vlastník všech dialogových oken, které vytvoří Správce ovladačů ROZHRANÍ ODBC nebo konkrétní ovladač ODBC, aby získaly od uživatele další informace o novém zdroji dat. Pokud parametr *lpszAttributes* neposkytuje dostatek informací, zobrazí se dialogové okno. Parametr *hwndParent* může být NULL.
 
 *lpszDriver*<br/>
-Popis ovladače. Toto je název, který se zobrazí uživatelům, nikoli fyzickému názvu ovladače (knihovny DLL).
+Popis ovladače. Toto je název prezentovaný uživatelům spíše než název fyzického ovladače (DLL).
 
-*lpszAttributes*<br/>
-Seznam atributů ve formátu "KeyName = hodnota". Tyto řetězce jsou odděleny prázdným znakem null se dvěma po sobě jdoucími nulami zakončenými na konci seznamu. Tyto atributy jsou primárně výchozími položkami konkrétního ovladače, které přejdou do registru nového zdroje dat. Jeden důležitý klíč, který není uveden v referenčních informacích k rozhraní ODBC API pro tuto funkci, je "DSN" ("název zdroje dat"), který určuje název nového zdroje dat. Zbývající položky jsou specifické pro ovladač nového zdroje dat. Často není nutné zadávat všechny položky, protože ovladač může vyzvat uživatele k zadání nových hodnot do dialogových oken. (Nastavte *hwndParent* na null, aby to způsobilo.) Je možné, že budete chtít explicitně poskytovat výchozí hodnoty, aby se uživateli nezobrazovala výzva.
+*lpszAtributy*<br/>
+Seznam atributů ve tvaru "keyname=value". Tyto řetězce jsou odděleny null zakončení se dvěma po sobě jdoucími zakončeními null na konci seznamu. Tyto atributy jsou především výchozí položky specifické pro ovladač, které přejdou do registru pro nový zdroj dat. Jeden důležitý klíč, který není uveden v odkazu rozhraní API ROZHRANÍ ODBC pro tuto funkci je "DSN" ("název zdroje dat"), který určuje název nového zdroje dat. Zbývající položky jsou specifické pro ovladač pro nový zdroj dat. Často není nutné zadat všechny položky, protože ovladač může vyzvat uživatele s dialogovými okny pro nové hodnoty. (Nastavte *hwndParent* na HODNOTU NULL, která to způsobí.) Můžete chtít explicitně zadat výchozí hodnoty, aby uživatel nebyl vyzván.
 
-#### <a name="to-determine-the-description-of-a-driver-for-the-lpszdriver-parameter-using-odbc-administrator"></a>Určení popisu ovladače pro parametr lpszDriver pomocí Správce rozhraní ODBC
+#### <a name="to-determine-the-description-of-a-driver-for-the-lpszdriver-parameter-using-odbc-administrator"></a>Určení popisu ovladače parametru lpszDriver pomocí správce rozhraní ODBC
 
-1. Spusťte Správce rozhraní ODBC.
+1. Spusťte správce rozhraní ODBC.
 
 1. Klikněte na **Přidat**.
 
-Získáte tak seznam nainstalovaných ovladačů a jejich popisů. Jako parametr *lpszDriver* použijte tento popis. Všimněte si, že používáte celý popis, jako je například "Souborů aplikace Excel (*.XLS)", včetně příponu názvu souboru a kulaté závorky, pokud existují v popisu.
+Získáte tak seznam nainstalovaných ovladačů a jejich popisy. Tento popis použijte jako parametr *lpszDriver.* Všimněte si, že používáte celý popis, například "Soubory aplikace Excel (*.xls)", včetně přípony názvu souboru a závorek, pokud existují v popisu.
 
-Alternativně můžete ověřit registr (nebo pro 16 bitů soubor Odbcinst. ini), který obsahuje seznam všech záznamů a popisů ovladačů pod klíčem registru "ovladače ODBC" (nebo oddíl [ovladače ODBC] v souboru Odbcinst. ini).
+Alternativně můžete zkontrolovat registr (nebo pro 16 bit, soubor Odbcinst.ini), který obsahuje seznam všech položek ovladače a popisy pod klíčem registru "OVLADAČE ODBC" (nebo část [OVLADAČE ODBC] v Odbcinst.ini).
 
-Jedním ze způsobů, jak najít názvy a hodnoty pro parametr *lpszAttributes* , je prozkoumávat soubor ODBC. ini pro již nakonfigurovaný zdroj dat (třeba ten, který byl nakonfigurován správcem rozhraní ODBC).
+Jedním ze způsobů, jak najít názvy klíčů a hodnoty parametru *lpszAttributes,* je zkontrolovat soubor Odbc.ini pro již nakonfigurovaný zdroj dat (možná ten, který byl nakonfigurován správcem ODBC).
 
-#### <a name="to-find-keynames-and-values-for-the-lpszattributes-parameter"></a>Vyhledání názvů a hodnot a hodnot pro parametr lpszAttributes
+#### <a name="to-find-keynames-and-values-for-the-lpszattributes-parameter"></a>Vyhledání názvů klíčů a hodnot parametru lpszAttributes
 
-1. Spusťte Editor registru systému Windows (nebo pro 16 bitů otevřete soubor ODBC. ini).
+1. Spusťte editor registru systému Windows (nebo u 16 bitů otevřete soubor Odbc.ini).
 
-1. Vyhledejte informace o zdrojích dat ODBC pomocí jednoho z následujících postupů:
+1. Informace o zdrojích dat rozhraní ODBC naleznete pomocí jedné z následujících možností:
 
-   - Pro 32 bit najděte klíč **HKEY_CURRENT_USER \software\odbc\odbc. INI\ODBC zdroje dat** v levém podokně.
+   - Pro 32 bitů vyhledejte klíč **HKEY_CURRENT_USER\Software\ODBC\ODBC. Zdroje dat INI\ODBC** v levém podokně.
 
-      V pravém podokně jsou uvedeny položky formuláře: "pub: REG_SZ: *\<název zdroje dat >* ", kde *\<název zdroje dat >* je zdroj dat, který již byl nakonfigurován s požadovaným nastavením ovladače, který chcete použít. Vyberte zdroj dat, který chcete, například SQL Server. Položky, které následují za řetězcem "pub:", jsou v pořadí, hodnoty KeyName a Value, které mají být použity v parametru *lpszAttributes* .
+      V pravém podokně jsou uvedeny položky*\< *formuláře: "pub: REG_SZ: název zdroje dat>", kde * \<název zdroje dat>* je zdroj dat, který již byl nakonfigurován s požadovaným nastavením ovladače, který chcete použít. Vyberte požadovaný zdroj dat, například SQL Server. Položky následující za řetězcem "pub:" jsou v pořadí název klíče a hodnota, která má být v parametru *lpszAttributes.*
 
-   - U 16 bitů najděte část v souboru ODBC. ini označený jako [ *\<název zdroje dat >* ].
+   - Pro 16 bitů vyhledejte oddíl v souboru Odbc.ini označeným*\<[název zdroje dat>*].
 
-      Řádky následující po tomto řádku jsou ve formátu "KeyName = hodnota". Toto jsou přesně ty položky, které se mají použít ve vašem parametru *lpszAttributes* .
+      Řádky za tímto řádkem jsou ve tvaru "keyname=value". Jedná se přesně o položky, které mají být v parametru *lpszAttributes používány.*
 
-Můžete také prostudovat dokumentaci pro konkrétní ovladač, který budete používat. Užitečné informace najdete v online nápovědě k ovladači, ke kterému máte přístup spuštěním Správce rozhraní ODBC. Tyto soubory jsou obvykle umístěny v adresáři WINDOWS\SYSTEM pro systémy Windows NT, Windows 3,1 nebo Windows 95.
+Můžete také zkontrolovat dokumentaci pro konkrétní ovladač, který budete používat. Užitečné informace naleznete v nápovědě k ovladači online, ke které máte přístup spuštěním správce rozhraní ODBC. Tyto soubory nápovědy jsou obvykle umístěny v adresáři WINDOWS\SYSTEM pro systémy Windows NT, Windows 3.1 nebo Windows 95.
 
-#### <a name="to-obtain-online-help-for-your-odbc-driver"></a>Získání online nápovědu pro ovladač ODBC
+#### <a name="to-obtain-online-help-for-your-odbc-driver"></a>Získání online nápovědy k ovladači ROZHRANÍ ODBC
 
-1. Spusťte Správce rozhraní ODBC.
+1. Spusťte správce rozhraní ODBC.
 
 1. Klikněte na **Přidat**.
 
@@ -112,7 +112,7 @@ Můžete také prostudovat dokumentaci pro konkrétní ovladač, který budete p
 
 1. Klikněte na tlačítko **OK**.
 
-Když správce rozhraní ODBC zobrazí informace pro vytvoření nového zdroje dat pro tento konkrétní ovladač, klikněte na tlačítko **help**. Tím se otevře soubor s nápovědu pro tento konkrétní ovladač, který obecně obsahuje důležité informace týkající se použití ovladače.
+Pokud správce rozhraní ODBC zobrazí informace o vytvoření nového zdroje dat pro daný ovladač, klepněte na tlačítko **Nápověda**. Tím se otevře soubor nápovědy pro daný ovladač, který obvykle obsahuje důležité informace týkající se použití ovladače.
 
 ## <a name="see-also"></a>Viz také
 

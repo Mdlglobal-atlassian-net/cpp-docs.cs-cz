@@ -1,8 +1,9 @@
 ---
 title: _aligned_malloc
-ms.date: 12/11/2019
+ms.date: 4/2/2020
 api_name:
 - _aligned_malloc
+- _o__aligned_malloc
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -26,16 +28,16 @@ helpviewer_keywords:
 - aligned_malloc function
 - _aligned_malloc function
 ms.assetid: fb788d40-ee94-4039-aa4d-97d73dab1ca0
-ms.openlocfilehash: c06c822ae4e7584a172c260a5c06e25019a1ce5e
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: b7d7f29f50b28ff713de94cc3304014e96d45b70
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75300128"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81350607"
 ---
 # <a name="_aligned_malloc"></a>_aligned_malloc
 
-Přidělí paměť na zadané hranici zarovnání.
+Přidělí paměť na zadanou hranici trasy.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -48,31 +50,33 @@ void * _aligned_malloc(
 
 ### <a name="parameters"></a>Parametry
 
-*hodnota*<br/>
-Velikost požadované alokace paměti
+*Velikost*<br/>
+Velikost požadované přidělení paměti.
 
-*bod*<br/>
-Hodnota zarovnání, která musí být celočíselnou mocninou 2.
+*Zarovnání*<br/>
+Hodnota zarovnání, která musí být celá mocnina 2.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Ukazatel na blok paměti, který byl přidělen nebo NULL v případě, že operace se nezdařila. Ukazatel je násobek *Zarovnání*.
+Ukazatel na blok paměti, který byl přidělen nebo null, pokud se operace nezdařila. Ukazatel je násobkem *zarovnání*.
 
 ## <a name="remarks"></a>Poznámky
 
-**_aligned_malloc** je založena na [systému.](malloc.md)
+**_aligned_malloc** je založen na [malloc](malloc.md).
 
-**_aligned_malloc** je označen `__declspec(noalias)` a `__declspec(restrict)`, což znamená, že funkce je zaručena, že nemění globální proměnné a že ukazatel, který vrátil, nemá alias. Další informace najdete [v tématech a](../../cpp/noalias.md) [omezení](../../cpp/restrict.md).
+**_aligned_malloc** je `__declspec(noalias)` `__declspec(restrict)`označena a , což znamená, že je zaručeno, že funkce nebude měnit globální proměnné a že vrácený ukazatel není aliasován. Další informace naleznete v [tématu noalias](../../cpp/noalias.md) a [restrict](../../cpp/restrict.md).
 
-Tato funkce nastaví `errno`, aby `ENOMEM`, pokud se nezdařilo přidělení paměti nebo byla požadovaná velikost větší než `_HEAP_MAXREQ`. Další informace o `errno`najdete v tématu [errno, _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). **_Aligned_malloc** také ověřuje jeho parametry. Pokud *Zarovnání* není mocninou 2 nebo *Velikost* je nula, tato funkce vyvolá obslužnou rutinu neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, tato funkce vrátí hodnotu NULL a nastaví `errno` na `EINVAL`.
+Tato funkce `errno` `ENOMEM` nastaví, pokud se nezdařilo přidělení `_HEAP_MAXREQ`paměti nebo pokud požadovaná velikost byla větší než . Další informace `errno`o tématech [naleznete v tématech errno, _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Také **_aligned_malloc** ověřuje jeho parametry. Pokud *trasování* není mocninu 2 nebo *velikost* je nula, tato funkce vyvolá neplatný obslužnou rutinu parametru, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je spuštění povoleno pokračovat, vrátí `errno` tato `EINVAL`funkce hodnotu NULL a nastaví na .
 
-Pomocí [_aligned_free](aligned-free.md) navrátit paměť získanou **_aligned_malloc** a `_aligned_offset_malloc`. Nepoužívejte `free`, který nevrací správně zarovnané paměti a může vést k chybám.
+Pomocí [_aligned_free](aligned-free.md) můžete navrátit paměť `_aligned_offset_malloc`získanou **_aligned_malloc** i . Nepoužívejte `free`, který nerekultivuje zarovnané paměti správně a může vést k těžko diagnostikovat chyby.
+
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_aligned_malloc**|\<. h >|
+|**_aligned_malloc**|\<malloc.h>|
 
 ## <a name="example"></a>Příklad
 
@@ -156,6 +160,6 @@ This pointer, 3280891, is offset by 5 on alignment of 16
 This pointer, 3280891, is offset by 5 on alignment of 16
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Zarovnání dat](../../c-runtime-library/data-alignment.md)

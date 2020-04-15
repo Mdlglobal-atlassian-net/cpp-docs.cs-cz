@@ -18,32 +18,32 @@ helpviewer_keywords:
 - activation [MFC], embedded OLE items
 - OLE activation [MFC]
 ms.assetid: ed8357d9-e487-4aaa-aa6b-2edc4de25dfa
-ms.openlocfilehash: a6009e5209ce71c6eed28faff2f55792a64de408
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9f3fba71002a19a0be0e3429a0faeeefb7c65197
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392931"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81354171"
 ---
 # <a name="activation-c"></a>Aktivace (C++)
 
-Tento článek vysvětluje roli aktivovat vizuální úpravy položky OLE. Poté, co uživatel má vložené položky OLE v dokumentu kontejneru, bude pravděpodobně nutné použít. K tomuto účelu uživatel dvakrát klikne na položku, která se aktivuje danou položku. Nejčastěji se vyskytujících aktivity pro aktivaci upravuje. Mnoho aktuální položky OLE, když se aktivuje pro úpravy, způsobit nabídek a panelů nástrojů v aktuální okno rámce, chcete-li změnit tak, aby odrážely těch, které patří do serverové aplikace, která vytvořila tuto položku. Toto chování, známé jako aktivace na místě, umožňuje uživateli upravovat libovolnou položku vložený ve složeném dokumentu bez opuštění okna dokumentu kontejneru.
+Tento článek vysvětluje roli aktivace ve vizuální úpravy položek OLE. Poté, co uživatel vložil položku OLE do dokumentu kontejneru, může být nutné ji použít. Chcete-li to provést, uživatel poklepe na položku, která tuto položku aktivuje. Nejčastější aktivitou aktivace jsou úpravy. Mnoho aktuálních položek OLE při aktivaci pro úpravy způsobí, že nabídky a panely nástrojů v aktuálním okně rámce se změní tak, aby odrážely ty, které patří do serverové aplikace, která položku vytvořila. Toto chování, známé jako aktivace na místě, umožňuje uživateli upravit libovolnou vloženou položku ve složeném dokumentu, aniž by opustil okno dokumentu kontejneru.
 
-Je také možné upravit vložené položky OLE v samostatném okně. To se stane, pokud aplikace kontejneru nebo server nepodporuje aktivace na místě. V takovém případě při poklepání vložená položka. serverová aplikace spuštěna v samostatném okně a vložená položka je zobrazena jako svůj vlastní dokument. Uživatel upravuje položky v tomto okně. Po dokončení úprav uživatel serverové aplikace se zavře a vrátí do aplikace typu kontejner.
+Je také možné upravit vložené položky OLE v samostatném okně. K tomu dojde, pokud kontejner nebo serverová aplikace nepodporuje aktivaci na místě. V tomto případě, když uživatel poklepe na vloženou položku, serverová aplikace se spustí v samostatném okně a vložená položka se zobrazí jako vlastní dokument. Uživatel uúpravy položky v tomto okně. Po dokončení úprav uživatel zavře serverovou aplikaci a vrátí se do aplikace kontejneru.
 
-Jako alternativu, uživatel může zvolit "Otevřít úpravy" s  **\<objektu > Otevřete** příkaz **upravit** nabídky. Objekt se otevře v samostatném okně.
+Jako alternativu může uživatel zvolit "otevřít úpravy" pomocí ** \<příkazu objektu> Otevřít** v nabídce **Úpravy.** Tím se objekt otevře v samostatném okně.
 
 > [!NOTE]
->  Úpravy vložené položky v samostatném okně se standardní chování ve verzi 1 OLE a některé OLE – aplikace může podporovat jenom tento styl úprav.
+> Úpravy vložených položek v samostatném okně bylo standardní chování ve verzi 1 OLE a některé aplikace OLE může podporovat pouze tento styl úprav.
 
-Aktivace na místě podporuje zaměřené na dokument přístup k vytváření dokumentů. Uživatel může považovat za složeného dokumentu jedna entita, na něm pracovat bez nutnosti přepínat mezi aplikacemi. Aktivace na místě se ale používá pouze pro vložené položky, ne pro propojené položky: je nutné upravit v samostatném okně. Je to proto, že propojená položka je uložená ve skutečnosti na jiném místě. Úpravy propojená položka se provádí v rámci skutečné kontextu dat, to znamená, kde jsou data uložená. Úpravy propojená položka v samostatném okně upozorní uživatele, který data patří do jiného dokumentu.
+Aktivace na místě podporuje přístup k vytváření dokumentů zaměřený na dokumenty. Uživatel může považovat složený dokument za jednu entitu a pracovat na něm bez přepínání mezi aplikacemi. Aktivace na místě se však používá pouze pro vložené položky, nikoli pro propojené položky: musí být upraveny v samostatném okně. Důvodem je, že propojená položka je ve skutečnosti uložena na jiném místě. Úpravy propojené položky probíhá v rámci skutečného kontextu dat, tj. Úprava propojené položky v samostatném okně připomene uživateli, že data patří do jiného dokumentu.
 
-MFC nepodporuje vnořené místní aktivace. Pokud vytvoříte aplikaci typu server/kontejner a, server/kontejner je vložen do jiného kontejneru a aktivaci, se nemůže místní aktivace objektů vložen dovnitř.
+Knihovna MFC nepodporuje vnořenou aktivaci na místě. Pokud vytvoříte aplikaci kontejneru nebo serveru a tento kontejner/server je vložen do jiného kontejneru a aktivován na místě, nemůže na místě aktivovat objekty vložené uvnitř něj.
 
-Co se stane vloženou položku, když uživatel poklepe to závisí na příkazy, které jsou definovány pro položku. Informace najdete v tématu [aktivace: Příkazy](../mfc/activation-verbs.md).
+Co se stane s vloženou položkou, když uživatel poklepe na ji závisí na slovesa definovaná pro položku. Další informace naleznete [v tématu Aktivace: Slovesa](../mfc/activation-verbs.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [OLE](../mfc/ole-in-mfc.md)<br/>
-[Kontejnery](../mfc/containers.md)<br/>
+[Containers](../mfc/containers.md)<br/>
 [Servery](../mfc/servers.md)

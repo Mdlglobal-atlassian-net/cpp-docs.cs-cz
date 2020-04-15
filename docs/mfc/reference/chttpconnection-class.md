@@ -1,5 +1,5 @@
 ---
-title: CHttpConnection – třída
+title: Třída Připojení Chttp
 ms.date: 03/27/2019
 f1_keywords:
 - CHttpConnection
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - CHttpConnection [MFC], CHttpConnection
 - CHttpConnection [MFC], OpenRequest
 ms.assetid: a402b662-c445-4988-800d-c8278551babe
-ms.openlocfilehash: 1941af1e16a897235dd90db509d6ed29c2d9a875
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: af402b532b3aba28bdfefea5afa67331765db4c5
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79420398"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81351819"
 ---
-# <a name="chttpconnection-class"></a>CHttpConnection – třída
+# <a name="chttpconnection-class"></a>Třída Připojení Chttp
 
 Spravuje připojení k serveru HTTP.
 
@@ -31,29 +31,29 @@ class CHttpConnection : public CInternetConnection
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CHttpConnection::CHttpConnection](#chttpconnection)|Vytvoří objekt `CHttpConnection`.|
+|[ChttpConnection::Připojení Chttp](#chttpconnection)|Vytvoří `CHttpConnection` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CHttpConnection::OpenRequest](#openrequest)|Otevře požadavek HTTP.|
+|[ChttpConnection::OpenRequest](#openrequest)|Otevře požadavek HTTP.|
 
 ## <a name="remarks"></a>Poznámky
 
-HTTP je jedním ze tří internetových serverových protokolů implementovaných třídami WinInet knihovny MFC.
+HTTP je jedním ze tří protokolů serveru Sítě Internet implementovaných třídami WinInet knihovny MFC.
 
-Třída `CHttpConnection` obsahuje konstruktor a jednu členskou funkci [OpenRequest](#openrequest), která spravuje připojení k serveru s protokolem HTTP.
+Třída `CHttpConnection` obsahuje konstruktor a jednu členovou funkci [OpenRequest](#openrequest), která spravuje připojení k serveru s protokolem HTTP.
 
-Aby bylo možné komunikovat se serverem HTTP, je nutné nejprve vytvořit instanci třídy [CInternetSession](../../mfc/reference/cinternetsession-class.md)a pak vytvořit objekt [CHttpConnection](#chttpconnection) . Nikdy nevytvoříte objekt `CHttpConnection` přímo; místo toho zavolejte [CInternetSession:: GetHttpConnection](../../mfc/reference/cinternetsession-class.md#gethttpconnection), které vytvoří objekt `CHttpConnection` a vrátí ukazatel na něj.
+Chcete-li komunikovat se serverem HTTP, musíte nejprve vytvořit instanci [CInternetSession](../../mfc/reference/cinternetsession-class.md)a potom vytvořit objekt [CHttpConnection.](#chttpconnection) Nikdy nevytváříte `CHttpConnection` objekt přímo; místo toho volání [CInternetSession::GetHttpConnection](../../mfc/reference/cinternetsession-class.md#gethttpconnection) `CHttpConnection` , který vytvoří objekt a vrátí mu ukazatel.
 
-Další informace o tom, jak `CHttpConnection` pracuje s dalšími internetovými třídami knihovny MFC, najdete v článku [internetové programování s](../../mfc/win32-internet-extensions-wininet.md)rozhraním Wininet. Další informace o připojení k serverům pomocí dalších dvou podporovaných protokolů sítě Internet, gopher a FTP naleznete v tématu třídy [CGopherConnection](../../mfc/reference/cgopherconnection-class.md) a [CFtpConnection](../../mfc/reference/cftpconnection-class.md).
+Další informace o `CHttpConnection` práci s ostatními třídami MFC Internet naleznete v článku [Internetové programování pomocí rozhraní WinInet](../../mfc/win32-internet-extensions-wininet.md). Další informace o připojení k serverům pomocí dalších dvou podporovaných internetových protokolů, gopher a FTP, naleznete v třídách [CGopherConnection](../../mfc/reference/cgopherconnection-class.md) a [CFtpConnection](../../mfc/reference/cftpconnection-class.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[CObject](../../mfc/reference/cobject-class.md)
+[CObjekt](../../mfc/reference/cobject-class.md)
 
 [CInternetConnection](../../mfc/reference/cinternetconnection-class.md)
 
@@ -61,11 +61,11 @@ Další informace o tom, jak `CHttpConnection` pracuje s dalšími internetovým
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxinet. h
+**Záhlaví:** afxinet.h
 
-##  <a name="chttpconnection"></a>CHttpConnection::CHttpConnection
+## <a name="chttpconnectionchttpconnection"></a><a name="chttpconnection"></a>ChttpConnection::Připojení Chttp
 
-Tato členská funkce je volána k vytvoření objektu `CHttpConnection`.
+Tato členská funkce je `CHttpConnection` volána k vytvoření objektu.
 
 ```
 CHttpConnection(
@@ -94,44 +94,44 @@ CHttpConnection(
 
 ### <a name="parameters"></a>Parametry
 
-*pSession*<br/>
-Ukazatel na objekt [CInternetSession](../../mfc/reference/cinternetsession-class.md) .
+*pRelace*<br/>
+Ukazatel na objekt [CInternetSession.](../../mfc/reference/cinternetsession-class.md)
 
-*hConnected*<br/>
+*hPřipojeno*<br/>
 Popisovač připojení k Internetu.
 
-*pstrServer*<br/>
+*server pstrServer*<br/>
 Ukazatel na řetězec obsahující název serveru.
 
-*dwContext*<br/>
-Identifikátor kontextu pro objekt `CInternetConnection`. Další informace o *dwContext*naleznete v části **poznámky** .
+*dwKontext*<br/>
+Identifikátor kontextu pro `CInternetConnection` objekt. Další informace o *dwContext*naleznete v části **Poznámky.**
 
 *nPort*<br/>
-Číslo identifikující Internetový port pro toto připojení.
+Číslo, které identifikuje internetový port pro toto připojení.
 
 *pstrUserName*<br/>
-Ukazatel na řetězec zakončený hodnotou null, který určuje jméno uživatele, který se má přihlásit. Pokud má hodnotu NULL, je výchozí hodnota anonymní.
+Ukazatel na řetězec s ukončeným hodnotou null, který určuje jméno uživatele, který se má přihlásit. Pokud null, výchozí hodnota je anonymní.
 
 *pstrPassword*<br/>
-Ukazatel na řetězec zakončený hodnotou null, který určuje heslo, které se má použít pro přihlášení. Pokud mají hodnoty *pstrPassword* i *pstrUserName* hodnotu null, výchozím anonymním heslem je e-mailová adresa uživatele. Pokud má *pstrPassword* hodnotu null nebo prázdný řetězec, ale *pstrUserName* není null, použije se prázdné heslo. Následující tabulka popisuje chování pro čtyři možná nastavení *pstrUserName* a *pstrPassword*:
+Ukazatel na řetězec s nulovým ukončením, který určuje heslo, které se má použít k přihlášení. Pokud jsou *hodnota pstrPassword* i *pstrUserName* null, je výchozím anonymním heslem e-mailové jméno uživatele. Pokud *pstrPassword* je NULL nebo prázdný řetězec, ale *pstrUserName* není NULL, je použito prázdné heslo. Následující tabulka popisuje chování pro čtyři možná nastavení *pstrUserName* a *pstrPassword*:
 
-|*pstrUserName*|*pstrPassword*|Uživatelské jméno odeslané na server FTP|Heslo odeslané na server FTP|
+|*pstrUserName*|*pstrPassword*|Uživatelské jméno odeslané serveru FTP|Heslo odeslané na server FTP|
 |--------------------|--------------------|---------------------------------|---------------------------------|
-|NULL nebo ""|NULL nebo ""|Anonymous|E-mailová adresa uživatele|
-|Řetězec, který není NULL|NULL nebo ""|*pstrUserName*|" "|
-|NULL |Řetězec, který není NULL|CHYBA|CHYBA|
-|Řetězec, který není NULL|Řetězec, který není NULL|*pstrUserName*|*pstrPassword*|
+|Null nebo " "|Null nebo " "|"anonymní"|E-mailová značka uživatele|
+|Řetězec bez hodnoty NULL|Null nebo " "|*pstrUserName*|" "|
+|NULL |Řetězec bez hodnoty NULL|ERROR|ERROR|
+|Řetězec bez hodnoty NULL|Řetězec bez hodnoty NULL|*pstrUserName*|*pstrPassword*|
 
 *dwFlags*<br/>
-Libovolná kombinace příznaků `INTERNET_FLAG_*`. Popis hodnot *dwFlags* najdete v tabulce v části **poznámky** v tématu [CHttpConnection:: OpenRequest](#openrequest) .
+Jakákoliv kombinace `INTERNET_FLAG_*` vlajek. Popis hodnot *dwFlags* naleznete v tabulce v části **Poznámky** [v chttpconnection::OpenRequest.](#openrequest)
 
 ### <a name="remarks"></a>Poznámky
 
-Nikdy nevytvoříte `CHttpConnection` přímo. Místo toho vytvoříte objekt voláním [CInternetSession:: GetHttpConnection](../../mfc/reference/cinternetsession-class.md#gethttpconnection).
+Nikdy nevytváříte `CHttpConnection` přímo. Místo toho vytvoříte objekt voláním [CInternetSession::GetHttpConnection](../../mfc/reference/cinternetsession-class.md#gethttpconnection).
 
-##  <a name="openrequest"></a>CHttpConnection::OpenRequest
+## <a name="chttpconnectionopenrequest"></a><a name="openrequest"></a>ChttpConnection::OpenRequest
 
-Zavolejte tuto členskou funkci pro otevření připojení HTTP.
+Volání této členské funkce otevřete připojení HTTP.
 
 ```
 CHttpFile* OpenRequest(
@@ -156,30 +156,30 @@ CHttpFile* OpenRequest(
 ### <a name="parameters"></a>Parametry
 
 *pstrVerb*<br/>
-Ukazatel na řetězec obsahující příkaz, který má být použit v požadavku. Pokud má hodnotu NULL, použije se "GET".
+Ukazatel na řetězec obsahující sloveso, které má být v požadavku použít. Pokud null, "GET" se používá.
 
 *pstrObjectName*<br/>
-Ukazatel na řetězec obsahující cílový objekt zadaného příkazu. Tento řetězec je obecně název souboru, spustitelný modul nebo specifikátor hledání.
+Ukazatel na řetězec obsahující cílový objekt zadaného slovesa. Tento řetězec je obecně název souboru, spustitelný modul nebo specifikátor hledání.
 
 *pstrReferer*<br/>
-Ukazatel na řetězec, který určuje adresu (URL) dokumentu, ze kterého byla získána adresa URL v žádosti (*pstrObjectName*). Pokud má hodnotu NULL, není zadána hlavička HTTP.
+Ukazatel na řetězec, který určuje adresu (URL) dokumentu, ze kterého byla získána adresa URL v požadavku *(pstrObjectName).* Pokud null, není zadána žádná hlavička HTTP.
 
-*dwContext*<br/>
-Identifikátor kontextu pro operaci `OpenRequest`. Další informace o *dwContext*naleznete v části poznámky.
+*dwKontext*<br/>
+Identifikátor kontextu pro `OpenRequest` operaci. Další informace o *dwContext*naleznete v části Poznámky.
 
 *ppstrAcceptTypes*<br/>
-Ukazatel na pole zakončené znakem null u ukazatelů LPCTSTR na řetězce indikující typy obsahu, které klient přijal. Pokud má *ppstrAcceptTypes* hodnotu null, servery interpretují, že klient přijímá pouze dokumenty typu "text/*" (tj. pouze textové dokumenty, ne obrázky nebo jiné binární soubory). Typ obsahu je ekvivalentní proměnné CONTENT_TYPE rozhraní CGI, která identifikuje typ dat pro dotazy, které mají připojené informace, například HTTP POST a PUT.
+Ukazatel na pole lPCTSTR ukončené s nulou na řetězce označující typy obsahu přijaté klientem. Pokud *ppstrAcceptTypes* je NULL, servery interpretovat, že klient přijímá pouze dokumenty typu "text/*" (to znamená, že pouze textové dokumenty a ne obrázky nebo jiné binární soubory). Typ obsahu je ekvivalentní proměnné CGI CONTENT_TYPE, která identifikuje typ dat pro dotazy, které mají připojené informace, jako je například HTTP POST a PUT.
 
 *pstrVersion*<br/>
-Ukazatel na řetězec definující verzi protokolu HTTP. Pokud má hodnotu NULL, použije se HTTP/1.0.
+Ukazatel na řetězec definující verzi HTTP. Pokud null, "HTTP/1.0" se používá.
 
 *dwFlags*<br/>
-Libovolná kombinace příznaků INTERNET_ FLAG_ *. Popis možných hodnot *dwFlags* naleznete v části poznámky.
+Libovolná kombinace příznaků INTERNET_ FLAG_*. Popis možných hodnot *dwFlags* naleznete v části Poznámky.
 
-*nVerb*<br/>
-Číslo přidružené k typu požadavku HTTP Může být jedna z následujících akcí:
+*nSVNože*<br/>
+Číslo přidružené k typu požadavku HTTP. Může to být jedna z následujících možností:
 
-|Typ požadavku HTTP|hodnota *nVerb*|
+|Typ požadavku HTTP|*nSLovečná* hodnota|
 |-----------------------|-------------------|
 |HTTP_VERB_POST|0|
 |HTTP_VERB_GET|1|
@@ -191,27 +191,27 @@ Libovolná kombinace příznaků INTERNET_ FLAG_ *. Popis možných hodnot *dwFl
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Byl požadován ukazatel na požadovaný objekt [CHttpFile](../../mfc/reference/chttpfile-class.md) .
+Ukazatel na požadovaný objekt [CHttpFile.](../../mfc/reference/chttpfile-class.md)
 
 ### <a name="remarks"></a>Poznámky
 
-*dwFlags* může být jedna z následujících:
+*dwFlags* může být jedna z následujících možností:
 
-|Příznak Internetu|Popis|
+|Internetový příznak|Popis|
 |-------------------|-----------------|
-|INTERNET_FLAG_RELOAD|Vynutí stažení požadovaného souboru, objektu nebo seznamu adresářů ze zdrojového serveru, nikoli z mezipaměti.|
+|INTERNET_FLAG_RELOAD|Vynutí stažení požadovaného souboru, objektu nebo výpisu adresáře ze zdrojového serveru, nikoli z mezipaměti.|
 |INTERNET_FLAG_DONT_CACHE|Nepřidá vrácenou entitu do mezipaměti.|
-|INTERNET_FLAG_MAKE_PERSISTENT|Přidá vrácenou entitu do mezipaměti jako trvalou entitu. Znamená to, že standardní vyčištění mezipaměti, kontrola konzistence nebo uvolňování paměti nemůže odebrat tuto položku z mezipaměti.|
-|INTERNET_FLAG_SECURE|Používá sémantiku zabezpečené transakce. Překládá se na použití protokolu SSL/PCT a je smysluplné pouze v případě požadavků HTTP.|
-|INTERNET_FLAG_NO_AUTO_REDIRECT|Používá se pouze s protokolem HTTP, určuje, že přesměry by neměly být zpracovány automaticky v [CHttpFile:: SendRequest](../../mfc/reference/chttpfile-class.md#sendrequest).|
+|INTERNET_FLAG_MAKE_PERSISTENT|Přidá vrácenou entitu do mezipaměti jako trvalou entitu. To znamená, že standardní vyčištění mezipaměti, kontrola konzistence nebo uvolňování paměti nelze odebrat tuto položku z mezipaměti.|
+|INTERNET_FLAG_SECURE|Používá zabezpečenou sémantiku transakcí. To se promítá do použití SSL/PCT a je pouze smysluplné v požadavcích HTTP|
+|INTERNET_FLAG_NO_AUTO_REDIRECT|Používá se pouze s protokolem HTTP, určuje, že přesměrování by neměla být zpracována automaticky v [CHttpFile::SendRequest](../../mfc/reference/chttpfile-class.md#sendrequest).|
 
-Přepsáním `dwContext` výchozí nastavte identifikátor kontextu na hodnotu, kterou zvolíte. Identifikátor kontextu je přidružen k této konkrétní operaci objektu `CHttpConnection` vytvořeného jeho objektem [CInternetSession](../../mfc/reference/cinternetsession-class.md) . Hodnota se vrátí do [CInternetSession:: OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) , která poskytne stav operace, se kterou je identifikovaný. Další informace o identifikátoru kontextu najdete v článku [Internet First Steps: WinInet](../../mfc/wininet-basics.md) .
+Přepište `dwContext` výchozí nastavení identifikátoru kontextu na hodnotu podle vašeho výběru. Identifikátor kontextu je spojen s touto `CHttpConnection` konkrétní operací objektu vytvořeného jeho objektem [CInternetSession.](../../mfc/reference/cinternetsession-class.md) Hodnota je vrácena [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) poskytnout stav operace, s níž je identifikován. Další informace o identifikátoru kontextu naleznete v článku [První kroky Internetu: WinInet.](../../mfc/wininet-basics.md)
 
-Pomocí této funkce mohou být vyvolány výjimky.
+S touto funkcí mohou být vyvolány výjimky.
 
 ## <a name="see-also"></a>Viz také
 
-[CInternetConnection – třída](../../mfc/reference/cinternetconnection-class.md)<br/>
+[Třída CInternetConnection](../../mfc/reference/cinternetconnection-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
-[CInternetConnection – třída](../../mfc/reference/cinternetconnection-class.md)<br/>
+[Třída CInternetConnection](../../mfc/reference/cinternetconnection-class.md)<br/>
 [CHttpFile – třída](../../mfc/reference/chttpfile-class.md)

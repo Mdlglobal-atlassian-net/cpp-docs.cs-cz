@@ -5,16 +5,16 @@ ms.topic: reference
 f1_keywords:
 - collection/Platform::Collections::UnorderedMap
 ms.assetid: dc84f261-b13c-4c0a-9b57-30dcb9e3065e
-ms.openlocfilehash: 7790b363ef3f30b0ad0602568190ab443a2c1401
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c6f702850f5bf84b8b1bc857c9d0a744728d0cbd
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62161729"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81354418"
 ---
 # <a name="platformcollectionsunorderedmap-class"></a>Platform::Collections::UnorderedMap – třída
 
-Představuje Neseřazený *mapy*, což je kolekce párů klíč hodnota.
+Představuje neuspořádané *mapy*, což je kolekce párů klíč hodnota.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -36,7 +36,7 @@ Typ klíče v páru klíč hodnota.
 Typ hodnoty v páru klíč hodnota.
 
 *C*<br/>
-Typ poskytující objekt funkce, který může porovnat dvě hodnoty prvků pro určení jejich relativního pořadí v objektu Map. Ve výchozím nastavení [std::equal_to\<K >](../standard-library/equal-to-struct.md).
+Typ, který poskytuje objekt funkce, který může porovnat dva hodnoty elementu jako klíče řazení k určení jejich relativní pořadí v mapě. Ve výchozím nastavení [\<std::equal_to K>](../standard-library/equal-to-struct.md).
 
 ### <a name="remarks"></a>Poznámky
 
@@ -44,45 +44,45 @@ Povolené typy jsou:
 
 - celá čísla
 
-- Třída rozhraní ^
+- třída rozhraní^
 
-- Třída Public ref class ^
+- veřejné ref třídy^
 
-- Hodnota – struktura
+- hodnota struktura
 
-- Veřejný výčet tříd
+- třída veřejného výčtu
 
-**UnorderedMap** je v podstatě obálka pro [std::unordered_map](../standard-library/unordered-map-class.md) , který podporuje úložiště typy Windows Runtime. Je konkrétní implementaci [Windows::Foundation::Collections::IMap](/uwp/api/Windows.Foundation.Collections.IMap_K_V_) a [IObservableMap](/uwp/api/Windows.Foundation.Collections.IObservableMap_K_V_) typy, které jsou předány přes veřejné rozhraní Windows Runtime. Pokud se pokusíte použít `Platform::Collections::UnorderedMap` zadejte veřejné návratová hodnota nebo parametr, je vyvolána C3986 Chyba kompilátoru. Chybu můžete vyřešit změnou typu parametr nebo návratovou hodnotu pro [Windows::Foundation::Collections::IMap](/uwp/api/Windows.Foundation.Collections.IMap_K_V_).
+**UnorderedMap** je v podstatě obálka pro [std::unordered_map,](../standard-library/unordered-map-class.md) která podporuje ukládání typů prostředí Windows Runtime. Jedná se o konkrétní implementaci [Windows::Foundation::Collections::IMap](/uwp/api/Windows.Foundation.Collections.IMap_K_V_) a [IObservableMap](/uwp/api/Windows.Foundation.Collections.IObservableMap_K_V_) typy, které jsou předávány přes veřejné rozhraní prostředí Windows Runtime. Pokud se pokusíte `Platform::Collections::UnorderedMap` použít typ ve veřejné vrácené hodnotě nebo parametru, je vyvolána chyba kompilátoru C3986. Chybu můžete opravit změnou typu parametru nebo vrácené hodnoty [systému Windows::Foundation::Collections::IMap](/uwp/api/Windows.Foundation.Collections.IMap_K_V_).
 
-Další informace najdete v tématu [kolekce](../cppcx/collections-c-cx.md).
+Další informace naleznete v [tématu Collections](../cppcx/collections-c-cx.md).
 
 ### <a name="members"></a>Členové
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
 |[UnorderedMap::UnorderedMap](#ctor)|Inicializuje novou instanci třídy Map.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[UnorderedMap::Clear](#clear)|Odebere všechny páry klíč hodnota z aktuálního objektu Map.|
-|[Unorderedmap::First –](#first)|Vrátí iterátor, který určuje první prvek v objektu map.|
-|[UnorderedMap::GetView](#getview)|Vrátí zobrazení jen pro čtení do aktuální mapování To znamená, Platform::Collections:: unorderedmapview – třída.|
+|[UnorderedMap::Vymazat](#clear)|Odebere všechny dvojice klíč-hodnota z aktuálního objektu Map.|
+|[UnorderedMap::První](#first)|Vrátí iterátor, který určuje první prvek v mapě.|
+|[UnorderedMap::GetView](#getview)|Vrátí zobrazení aktuální mapy jen pro čtení. to znamená Platform::Collections::UnorderedMapView Class.|
 |[UnorderedMap::HasKey](#haskey)|Určuje, zda aktuální mapa obsahuje zadaný klíč.|
-|[UnorderedMap::Insert](#insert)|Přidá zadanou dvojici klíč hodnota do aktuálního objektu Map.|
-|[UnorderedMap::Lookup](#lookup)|Získá prvek na zadaný klíč v aktuálním objektu Map.|
-|[Unorderedmap::Remove –](#remove)|Odstraní zadanou dvojici klíč hodnota z aktuálního objektu Map.|
-|[Unorderedmap::size –](#size)|Vrátí počet prvků v aktuálním objektu Map.|
+|[UnorderedMap::Vložit](#insert)|Přidá zadaný pár klíč-hodnota k aktuálnímu objektu Map.|
+|[UnorderedMap::Vyhledávání](#lookup)|Načte prvek na zadaný klíč v aktuální mapový objekt.|
+|[UnorderedMap::Odebrat](#remove)|Odstraní zadaný pár klíč-hodnota z aktuálního objektu Map.|
+|[UnorderedMap::Velikost](#size)|Vrátí počet prvků v aktuálním objektu Map.|
 
 ### <a name="events"></a>Události
 
 |||
 |-|-|
-|Název|Popis|
-|[Map::mapchanged –](#mapchanged) událostí|Nastane, pokud se změní na mapě.|
+|Name (Název)|Popis|
+|[Mapa::Událost MapChanged](#mapchanged)|Vyvolá se při změně mapy.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -92,11 +92,11 @@ Další informace najdete v tématu [kolekce](../cppcx/collections-c-cx.md).
 
 **Záhlaví:** collection.h
 
-**Namespace:** Platform::Collections –
+**Obor názvů:** Platforma::Kolekce
 
-## <a name="clear"></a>  Unorderedmap::clear – metoda
+## <a name="unorderedmapclear-method"></a><a name="clear"></a>UnorderedMap::Vymazat metodu
 
-Odebere všechny páry klíč hodnota z aktuálního objektu UnorderedMap.
+Odebere všechny dvojice klíč-hodnota z aktuálního objektu UnorderedMap.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -104,9 +104,9 @@ Odebere všechny páry klíč hodnota z aktuálního objektu UnorderedMap.
 virtual void Clear();
 ```
 
-## <a name="first"></a>  Unorderedmap::First – metoda
+## <a name="unorderedmapfirst-method"></a><a name="first"></a>UnorderedMap::První metoda
 
-Vrátí iterátor, který určuje první [Windows::Foundation::Collections::IKeyValuePair\<K, V >](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_) prvek neuspořádanou mapu.
+Vrátí iterátor, který určuje první [prvek Windows::Foundation::Collections::IKeyValuePair\<K,V>](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_) prvek v neuspořádané mapě.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -118,15 +118,15 @@ virtual Windows::Foundation::Collections::IIterator<
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Iterátor, který určuje první prvek v objektu map.
+Iterátor, který určuje první prvek v mapě.
 
 ### <a name="remarks"></a>Poznámky
 
-Praktický způsob uložení iterátorů vrácené First() je přiřadit návratovou hodnotu proměnné, která je deklarována s **automaticky** klíčovým slovem odvození typu. Například, `auto x = myUnorderedMap->First();`.
+Pohodlný způsob, jak podržet iterátor vrácený First() je přiřadit vrácenou hodnotu proměnné, která je deklarována s klíčovým slovem **automatického** odpočtu typu. Například, `auto x = myUnorderedMap->First();`.
 
-## <a name="getview"></a>  Unorderedmap::getview – metoda
+## <a name="unorderedmapgetview-method"></a><a name="getview"></a>UnorderedMap::Metoda GetView
 
-Vrátí aktuální UnorderedMap; zobrazení jen pro čtení To znamená [Platform::Collections:: unorderedmapview – třída](../cppcx/platform-collections-unorderedmapview-class.md) , který implementuje [Windows::Foundation::Collections::IMapView::IMapView]/uwp/api/Windows.Foundation.Collections.IMapView_K_V_) rozhraní.
+Vrátí zobrazení pro čtení aktuální hodu Neuspořádané mapy. to znamená [platforma::Collections::UnorderedMapView Class,](../cppcx/platform-collections-unorderedmapview-class.md) která implementuje rozhraní [Windows::Foundation::Collections::IMapView]/uwp/api/Windows.Foundation.Collections.IMapView_K_V_).
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -136,9 +136,9 @@ Windows::Foundation::Collections::IMapView<K, V>^ GetView();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-`UnorderedMapView` Objektu.
+Objekt `UnorderedMapView`.
 
-## <a name="haskey"></a>  Unorderedmap::haskey – metoda
+## <a name="unorderedmaphaskey-method"></a><a name="haskey"></a>UnorderedMap::Metoda HasKey
 
 Určuje, zda aktuální UnorderedMap obsahuje zadaný klíč.
 
@@ -153,15 +153,15 @@ bool HasKey(
 ### <a name="parameters"></a>Parametry
 
 *key*<br/>
-Klíč používaná k nalezení UnorderedMap elementu. Typ *klíč* je typename *K*.
+Klíč slouží k vyhledání UnorderedMap element. Typ *klíče* je typename *K*.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** Pokud je klíč nalezen, jinak **false**.
+**true,** pokud je nalezen klíč; jinak **false**.
 
-## <a name="insert"></a>  Unorderedmap::Insert – metoda
+## <a name="unorderedmapinsert-method"></a><a name="insert"></a>UnorderedMap::Metoda vložení
 
-Přidá zadanou dvojici klíč hodnota s aktuálním objektem UnorderedMap.
+Přidá zadaný pár klíč-hodnota k aktuálnímu objektu UnorderedMap.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -175,18 +175,18 @@ virtual bool Insert(
 ### <a name="parameters"></a>Parametry
 
 *key*<br/>
-Část klíče dvojice klíč hodnota. Typ *klíč* je typename *K*.
+Klíččást dvojice klíč hodnota. Typ *klíče* je typename *K*.
 
-*value*<br/>
-Hodnota část páru klíč hodnota. Typ *hodnotu* je typename *V*.
+*Hodnotu*<br/>
+Část hodnoty dvojice klíč hodnota. Typ *hodnoty* je typename *V*.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** Pokud klíč existujícího prvku v aktuální mapování odpovídá *klíč* a hodnota část tohoto prvku je nastavená na *hodnota*. **false** žádné stávající elementy v aktuálním Map *klíč* a *klíč* a *hodnotu* parametry jsou provedeny v páru klíč hodnota a pak přidá do aktuální UnorderedMap.
+**true** pokud klíč existujícího prvku v aktuální mapě odpovídá *klíči* a hodnota části tohoto prvku je nastavena na *hodnotu*. **false,** pokud žádný existující prvek v aktuální mapě odpovídá *klíč* a *parametry klíč* a *hodnota* jsou provedeny do dvojice klíč-hodnota a pak přidány do aktuální UnorderedMap.
 
-## <a name="lookup"></a>  Unorderedmap::Lookup – metoda
+## <a name="unorderedmaplookup-method"></a><a name="lookup"></a>UnorderedMap::Metoda vyhledávání
 
-Načte hodnotu typu V, který je přidružený k zadanému klíči typ K.
+Načte hodnotu typu V, která je přidružena k zadanému klíči typu K.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -199,15 +199,15 @@ V Lookup(
 ### <a name="parameters"></a>Parametry
 
 *key*<br/>
-Klíč používaná k nalezení prvku v UnorderedMap. Typ *klíč* je typename *K*.
+Klíč slouží k vyhledání prvku v UnorderedMap. Typ *klíče* je typename *K*.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota, která se páruje s oblastí *klíč*. Typ vrácené hodnoty je typename *V*.
+Hodnota, která je spárována s *klíčem*. Typ vrácené hodnoty je typename *V*.
 
-## <a name="mapchanged"></a>  UnorderedMap::MapChanged
+## <a name="unorderedmapmapchanged"></a><a name="mapchanged"></a>UnorderedMap::MapaZměněná
 
-Vyvoláno, když je položka vložena do nebo odebrány z mapy.
+Je aktivována, když je položka vložena do mapy nebo odebrána z mapy.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -217,15 +217,15 @@ event Windows::Foundation::Collections::MapChangedEventHandler<K,V>^ MapChanged;
 
 ### <a name="property-valuereturn-value"></a>Hodnota vlastnosti / návratová hodnota
 
-A [MapChangedEventHandler\<K, V >](/uwp/api/windows.foundation.collections.mapchangedeventhandler) , který obsahuje informace o objektu, který vyvolal událost a druh změn, ke které došlo. Viz také [IMapChangedEventArgs\<K >](/uwp/api/Windows.Foundation.Collections.IMapChangedEventArgs_K_) a [CollectionChange výčet](/uwp/api/windows.foundation.collections.collectionchange).
+[A MapChangedEventHandler\<K,V>,](/uwp/api/windows.foundation.collections.mapchangedeventhandler) který obsahuje informace o objektu, který vyvolal událost a druh změny, ke které došlo. Viz také [\<IMapChangedEventArgs K>](/uwp/api/Windows.Foundation.Collections.IMapChangedEventArgs_K_) a [CollectionChange Výčet](/uwp/api/windows.foundation.collections.collectionchange).
 
 ## <a name="net-framework-equivalent"></a>Ekvivalent v rozhraní .NET Framework
 
-Aplikace Windows Runtime, že nám C# nebo Visual Basic projektu IMap\<K, V > jako IDictionary\<K, V >.
+Aplikace prostředí Windows Runtime, které nám\<c# nebo visual basic\<projektu IMap K,V> jako IDictionary K,V>.
 
-## <a name="remove"></a>  Unorderedmap::Remove – metoda
+## <a name="unorderedmapremove-method"></a><a name="remove"></a>UnorderedMap::Odebrat metodu
 
-Odstraní zadanou dvojici klíč hodnota z objektu UnorderedMap.
+Odstraní zadaný pár klíč-hodnota z objektu UnorderedMap.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -237,11 +237,11 @@ virtual void Remove(
 ### <a name="parameters"></a>Parametry
 
 *key*<br/>
-Část klíče dvojice klíč hodnota. Typ *klíč* je typename *K*.
+Klíččást dvojice klíč hodnota. Typ *klíče* je typename *K*.
 
-## <a name="size"></a>  Unorderedmap::size – metoda
+## <a name="unorderedmapsize-method"></a><a name="size"></a>UnorderedMap::Metoda velikosti
 
-Vrátí počet [Windows::Foundation::Collections::IKeyValuePair\<K, V >](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_) prvky UnorderedMap.
+Vrátí počet [windows::foundation::collections::iKeyValuePair\<K,V>](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_) prvky v UnorderedMap.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -251,11 +251,11 @@ virtual property unsigned int Size;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Počet prvků v Neuspořádanou mapu.
+Počet prvků v neuspořádané mapě.
 
-## <a name="ctor"></a>  Unorderedmap::unorderedmap – konstruktor
+## <a name="unorderedmapunorderedmap-constructor"></a><a name="ctor"></a>UnorderedMap::Konstruktor UnorderedMap
 
-Inicializuje novou instanci třídy UnorderedMap.
+Inicializuje novou instanci unorderedmap třídy.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -340,32 +340,32 @@ UnorderedMap(
 
 ### <a name="parameters"></a>Parametry
 
-*Inicializace*<br/>
-Typename aktuální UnorderedMap.
+*Init*<br/>
+Název typu aktuální UnorderedMap.
 
 *P*<br/>
-Objekt funkce, který může porovnat dva klíče pro určení, jestli jsou shodné. Výchozí hodnota tohoto parametru [std::equal_to\<K >](../standard-library/equal-to-struct.md).
+Objekt funkce, který můžete porovnat dva klíče k určení, zda jsou stejné. Tento parametr je výchozí [pro\<std::equal_to K>](../standard-library/equal-to-struct.md).
 
 *H*<br/>
-Objekt funkce, který vytvoří hodnotu hash klíčů. Výchozí hodnota tohoto parametru [hash třídy 1](../standard-library/hash-class.md) pro klíč typy, které podporuje třídu.
+Objekt funkce, který vytváří hodnotu hash pro klíče. Tento parametr je výchozí [pro hash Class 1](../standard-library/hash-class.md) pro typy klíčů, které třída podporuje.
 
-*m*<br/>
-Odkaz nebo [hodnoty lvalue a rvalue](../cpp/lvalues-and-rvalues-visual-cpp.md) k [std::unordered_map](../standard-library/unordered-map-class.md) , který slouží k inicializaci aktuální UnorderedMap.
+*M*<br/>
+Odkaz nebo [Lvalues a Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md) na [std::unordered_map,](../standard-library/unordered-map-class.md) který se používá k inicializaci aktuální UnorderedMap.
 
-*il*<br/>
-A [std::initializer_list](../standard-library/initializer-list-class.md) z [std::pair](../standard-library/pair-structure.md) objekty, které slouží k inicializaci mapy.
+*Il*<br/>
+[Std::initializer_list](../standard-library/initializer-list-class.md) [std::pair](../standard-library/pair-structure.md) objekty, které slouží k inicializaci mapy.
 
-*první*<br/>
-Vstupní iterátor první prvek v rozsahu prvků, které slouží k inicializaci aktuální UnorderedMap.
+*První*<br/>
+Vstupní iterátor prvního prvku v rozsahu prvků použitých k inicializaci aktuální unorderedMap.
 
-*last*<br/>
-Vstupní iterátor první prvek po celou řadu prvků, které slouží k inicializaci aktuální UnorderedMap.
+*Poslední*<br/>
+Vstupní iterátor prvního prvku po rozsahu prvků použitých k inicializaci aktuální unorderedMap.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Platforma Namespace](platform-namespace-c-cx.md)<br/>
-[Platform::Collections – obor názvů](../cppcx/platform-collections-namespace.md)<br/>
+[Obor názvů platformy](platform-namespace-c-cx.md)<br/>
+[Platforma::Obor názvů kolekcí](../cppcx/platform-collections-namespace.md)<br/>
 [Platform::Collections::Map – třída](../cppcx/platform-collections-map-class.md)<br/>
 [Platform::Collections::UnorderedMapView – třída](../cppcx/platform-collections-unorderedmapview-class.md)<br/>
 [Kolekce](../cppcx/collections-c-cx.md)<br/>
-[Vytváření komponent Windows Runtime v jazyce C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)
+[Vytváření součástí prostředí Windows Runtime v jazyce C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)

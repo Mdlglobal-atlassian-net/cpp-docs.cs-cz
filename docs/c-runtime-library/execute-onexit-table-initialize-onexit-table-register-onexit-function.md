@@ -1,12 +1,16 @@
 ---
 title: _execute_onexit_table, _initialize_onexit_table, _register_onexit_function
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _execute_onexit_table
 - _initialize_onexit_table
 - _register_onexit_function
+- _o__execute_onexit_table
+- _o__initialize_onexit_table
+- _o__register_onexit_function
 api_location:
 - api-ms-win-crt-runtime-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -23,12 +27,12 @@ helpviewer_keywords:
 - _initialize_onexit_table function
 - _register_onexit_function function
 ms.assetid: ad9e4149-d4ad-4fdf-aaaf-cf786fcb4473
-ms.openlocfilehash: 573be497bafbe5372186f31b3ea60d9a5ef7fac1
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: a1e35d9e86a43e48849373a1cf1aa07febcd0e33
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74856979"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81351646"
 ---
 # <a name="_execute_onexit_table-_initialize_onexit_table-_register_onexit_function"></a>_execute_onexit_table, _initialize_onexit_table, _register_onexit_function
 
@@ -53,35 +57,37 @@ int _execute_onexit_table(
 
 #### <a name="parameters"></a>Parametry
 
-*stolní*<br/>
-[in, out] Ukazatel na tabulku funkcí při ukončení.
+*Tabulka*<br/>
+[dovnitř, ven] Ukazatel na tabulku funkcí onexit.
 
-*slouží*<br/>
-pro Ukazatel na funkci, která se má přidat do tabulky funkcí k ukončení.
+*Funkce*<br/>
+[v] Ukazatel na funkci, kterou chcete přidat do tabulky funkcí onexit.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-V případě úspěchu vrátí hodnotu 0. V opačném případě vrátí zápornou hodnotu.
+Pokud je úspěšná, vrátí hodnotu 0. V opačném případě vrátí zápornou hodnotu.
 
 ## <a name="remarks"></a>Poznámky
 
-Tyto funkce jsou podrobnosti implementace infrastruktury používané k podpoře modulu runtime jazyka C a neměly by být volány přímo z vašeho kódu. Modul runtime jazyka C používá *tabulku funkcí* pro zastupuje sekvenci funkcí zaregistrovaných voláním do `atexit`, `at_quick_exit`a `_onexit`. Struktura dat tabulky funkce při ukončení je neprůhledná podrobnosti implementace modulu runtime jazyka C. pořadí a význam jeho datových členů se může změnit. Neměly by být kontrolovány externím kódem.
+Tyto funkce jsou podrobnosti implementace infrastruktury slouží k podpoře běhu C a by neměly být volány přímo z vašeho kódu. Runtime C používá *tabulku funkcí onexit* k reprezentaci `atexit`posloupnosti funkcí registrovaných voláním , `at_quick_exit`, a `_onexit`. Struktura dat tabulky funkce onexit je neprůhledný detail implementace periodtime C; pořadí a význam jeho datových členů se může změnit. Neměly by být kontrolovány externím kódem.
 
-Funkce `_initialize_onexit_table` inicializuje počáteční hodnotu v tabulce funkcí Exit.  Tato funkce musí být volána před předáním tabulky funkce Exit do `_register_onexit_function` nebo `_execute_onexit_table`.
+Funkce `_initialize_onexit_table` inicializuje tabulku funkce onexit na počáteční hodnotu.  Tato funkce musí být volána před onexit `_register_onexit_function` `_execute_onexit_table`funkce tabulka je předán a to buď nebo .
 
-Funkce `_register_onexit_function` připojí funkci na konec tabulky funkcí při ukončení.
+Funkce `_register_onexit_function` připojí funkci na konec tabulky funkce onexit.
 
-Funkce `_execute_onexit_table` spustí všechny funkce v tabulce funkce při ukončení, vymaže tabulku a pak vrátí. Po volání `_execute_onexit_table`je tabulka v neplatném stavu; je nutné jej znovu inicializovat voláním `_initialize_onexit_table` předtím, než se znovu použije.
+Funkce `_execute_onexit_table` provede všechny funkce v tabulce funkce onexit, vymaže tabulku a potom vrátí. Po volání `_execute_onexit_table`na , tabulka je v neplatném stavu; musí být znovu inicializována voláním, aby byla `_initialize_onexit_table` znovu použita.
+
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|`_initialize_onexit_table function`, `_register_onexit_function`, `_execute_onexit_table`|C, C++: \<Process. h >|
+|`_initialize_onexit_table function`, `_register_onexit_function`, `_execute_onexit_table`|C, C++: \<process.h>|
 
-Funkce `_initialize_onexit_table`, `_register_onexit_function`a `_execute_onexit_table` jsou specifické pro společnost Microsoft. Informace o kompatibilitě najdete v tématu [Kompatibilita](../c-runtime-library/compatibility.md).
+Funkce `_initialize_onexit_table` `_register_onexit_function`, `_execute_onexit_table` a jsou specifické pro společnost Microsoft. Informace o kompatibilitě naleznete v [tématu Kompatibilita](../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [atexit](../c-runtime-library/reference/atexit.md)<br/>
 [exit, _Exit, _exit](../c-runtime-library/reference/exit-exit-exit.md)<br/>

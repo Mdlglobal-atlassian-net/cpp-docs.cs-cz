@@ -7,49 +7,49 @@ helpviewer_keywords:
 - __finally keyword [C]
 - structured exception handling, try-finally
 ms.assetid: 514400c1-c322-4bf3-9e48-3047240b8a82
-ms.openlocfilehash: 82cc5ffa3f50196fc5f518b8bb5b2080ff14fd8d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 61a6a9edd9faaf8afb06bb7bfdc619cddde3e6fc
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62345301"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81349603"
 ---
 # <a name="try-finally-statement-c"></a>try-finally – příkaz (C)
 
-**Microsoft Specific**
+**Specifické pro Microsoft**
 
-`try-finally` Příkaz je rozšířením společnosti Microsoft pro jazyk C, která umožňuje aplikacím zaručit spuštění kódu čištění, když dojde k přerušení vykonání bloku kódu. Čištění se skládá z úlohy, jako jsou rušení přidělení paměti, zavírání souborů a uvolněním popisovačů souborů. `try-finally` Příkaz je užitečné hlavně pro rutiny, které mají několika místech, kde se provede kontrola pro chybu, která by mohla způsobit předčasné vrátit z rutiny.
+Příkaz `try-finally` je rozšíření společnosti Microsoft k jazyku C, který umožňuje aplikacím zaručit spuštění kódu vyčištění při přerušení provádění bloku kódu. Vyčištění se skládá z takových úkolů, jako je zrušení přidělení paměti, zavření souborů a uvolnění popisovačů souborů. Příkaz `try-finally` je zvláště užitečné pro rutiny, které mají několik míst, kde je provedena kontrola pro chybu, která by mohla způsobit předčasný návrat z rutiny.
 
-*try-finally-statement*: **__try**  *compound-statement* 
+*try-finally-statement*: **__try**  *složený příkaz*
 
-**__finally**  *compound-statement* 
+**__finally**  *složený příkaz*
 
-Složený příkaz za `__try` klauzule je chráněná část. Složený příkaz za `__finally` klauzule je obslužná rutina ukončení. Obslužná rutina udává sadu akcí, které jsou spuštěny při chráněná část je byl ukončen, zda je chráněná část ukončil výjimku (abnormální ukončení) nebo standardní fall prostřednictvím (normální ukončení).
+Složený příkaz za `__try` klauzulí je střežené části. Složený příkaz po `__finally` klauzuli je obslužná rutina ukončení. Obslužná rutina určuje sadu akcí, které se provádějí při ukončení střežené části, zda je chráněná část ukončena výjimkou (abnormální ukončení) nebo standardním propadnením (normální ukončení).
 
-Ovládací prvek dosáhne `__try` prohlášení jednoduchý sekvenční provádění (fall prostřednictvím). Když přejde do ovládacího prvku `__try` prohlášení, jeho přidružená obslužná rutina stane aktivním. Spuštění probíhá následujícím způsobem:
+Ovládací prvek `__try` dosáhne příkazu jednoduchým sekvenčním prováděním (propadne). Když ovládací prvek `__try` zadá příkaz, jeho přidružená obslužná rutina se stane aktivní. Exekuce probíhá takto:
 
 1. Chráněná část je spuštěna.
 
-1. Je vyvolána obslužná rutina ukončení.
+1. Obslužná rutina ukončení je vyvolána.
 
-1. Po dokončení obslužné rutiny ukončení provádění pokračuje `__finally` příkazu. Bez ohledu na to, jak chráněné části zakončení (například prostřednictvím `goto` příkazu mimo chráněné text nebo prostřednictvím `return` příkaz), obslužné rutiny ukončení je spuštěn před tok řízení přesune mimo chráněnou část.
+1. Po dokončení obslužné rutiny ukončení, provádění pokračuje po příkazu. `__finally` Bez ohledu na to, jak chráněná část `goto` končí (například prostřednictvím `return` příkazu z hlísty z hlísty nebo prostřednictvím příkazu), je obslužná rutina ukončení provedena před tím, než se tok řízení přesune z hlídané části.
 
-`__leave` – Klíčové slovo je platný v rámci `try-finally` blok příkazů. Účinek `__leave` je přechod na konci `try-finally` bloku. Obslužná rutina ukončení se okamžitě spustí. I když `goto` příkaz můžete použít k dosažení stejného výsledku `goto` příkaz způsobí, že odvíjení zásobníku. `__leave` Příkaz je mnohem efektivnější, protože nezahrnuje odvíjení zásobníku.
+Klíčové `__leave` slovo je `try-finally` platné v rámci bloku příkazu. Efekt `__leave` je skočit na konec `try-finally` bloku. Obslužná rutina ukončení je okamžitě spuštěna. Přestože `goto` příkaz lze použít k dosažení `goto` stejného výsledku, příkaz způsobí, že unwinding zásobníku. Příkaz `__leave` je efektivnější, protože nezahrnuje odvíjení zásobníku.
 
-Ukončení `try-finally` pomocí příkazu `return` příkazu nebo `longjmp` funkci run-time je považován za abnormální ukončení. Není povoleno přejít do `__try` příkazu, ale právní přejít mimo něj. Všechny `__finally` příkazy, které jsou aktivní mezi bodem odeslání a cíl musí být spuštěn. To se označuje jako "místní uvolnění."
+Ukončení příkazu `try-finally` pomocí `return` příkazu `longjmp` nebo funkce run-time je považováno za abnormální ukončení. Je nezákonné skočit do `__try` prohlášení, ale legální skočit z jednoho. Všechny `__finally` příkazy, které jsou aktivní mezi výchozím bodem a cílem, musí být spuštěny. Tomu se říká "místní odpočinek".
 
-Obslužné rutiny ukončení není volána, pokud proces je ukončen při provádění `try-finally` příkazu.
-
-> [!NOTE]
->  Strukturované zpracování výjimek funguje se zdrojovými soubory C a C++. Pro jazyk C++ však není výslovně navrženo. Větší přenositelnost kódu lze zajistit použitím zpracování výjimek jazyka C++. Mechanismus zpracování výjimek jazyka C++ je také mnohem více flexibilní, jelikož dokáže zpracovat výjimky libovolného typu.
+Obslužná rutina ukončení není volána, pokud je proces zabit při provádění příkazu. `try-finally`
 
 > [!NOTE]
->  Pro programy v jazyce C++ je třeba použít zpracování výjimek jazyka C++ místo strukturované zpracování výjimek. Další informace najdete v tématu [zpracování výjimek](../cpp/exception-handling-in-visual-cpp.md) v *referenční dokumentace jazyka C++*.
+> Strukturované zpracování výjimek funguje se zdrojovými soubory C a C++. Pro jazyk C++ však není výslovně navrženo. Větší přenositelnost kódu lze zajistit použitím zpracování výjimek jazyka C++. Také mechanismus zpracování výjimek Jazyka C++ je mnohem flexibilnější v tom, že může zpracovávat výjimky libovolného typu.
 
-Podívejte se na příklad pro [zkuste-except – příkaz](../c-language/try-except-statement-c.md) zobrazíte jak `try-finally` příkaz funguje.
+> [!NOTE]
+> Pro programy jazyka C++ by mělo být místo strukturovaného zpracování výjimek použito zpracování výjimek jazyka C++. For more information, see [Exception Handling](../cpp/exception-handling-in-visual-cpp.md) in the *C++ Language Reference*.
 
-**Specifické pro END Microsoft**
+Podívejte se na příklad pro [try-except prohlášení](../c-language/try-except-statement-c.md) zobrazíte, `try-finally` jak příkaz funguje.
 
-## <a name="see-also"></a>Viz také:
+**END Microsoft Specifické**
 
-[try-finally – příkaz](../cpp/try-finally-statement.md)
+## <a name="see-also"></a>Viz také
+
+[try-finally prohlášení](../cpp/try-finally-statement.md)

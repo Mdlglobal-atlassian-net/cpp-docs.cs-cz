@@ -9,16 +9,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::IsBaseOfStrict structure
 - Microsoft::WRL::Details::IsBaseOfStrict::value constant
 ms.assetid: 6fed7366-c8d4-4991-b4fb-43ed93f8e1bf
-ms.openlocfilehash: 85aeb71ceaa162cc6366836dd286f2f9983d34e2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 71db5a1b52a7d7d5471c15591fb34d954b465d07
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386015"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371357"
 ---
 # <a name="isbaseofstrict-structure"></a>IsBaseOfStrict – struktura
 
-Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.
+Podporuje infrastrukturu WRL a není určen pro použití přímo z vašeho kódu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -32,25 +32,25 @@ struct IsBaseOfStrict<Base, Base>;
 
 ### <a name="parameters"></a>Parametry
 
-*základ*<br/>
+*Základní*<br/>
 Základní typ.
 
 *Odvozené*<br/>
-Odvozeného typu.
+Odvozený typ.
 
 ## <a name="remarks"></a>Poznámky
 
-Ověřuje, zda je jeden typ základ jiného.
+Testuje, zda jeden typ je základem jiného.
 
-První šablona testuje, jestli typ je odvozen od základního typu, který může přinést **true** nebo **false**. Druhá šablona testuje, jestli je typ odvozený od sebe sama, který vždy dává **false**.
+První šablona testuje, zda je typ odvozen ze základního typu, který může přinést **hodnotu true** nebo **false**. Druhá šablona testuje, zda je typ odvozen od sebe sama, což vždy dává **false**.
 
 ## <a name="members"></a>Členové
 
 ### <a name="public-constants"></a>Veřejné konstanty
 
-Název                            | Popis
+Name (Název)                            | Popis
 ------------------------------- | --------------------------------------------------
-[IsBaseOfStrict::value](#value) | Označuje, zda je jeden typ základ jiného.
+[IsBaseOfStrict::hodnota](#value) | Označuje, zda jeden typ je základem jiného.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -60,11 +60,11 @@ Název                            | Popis
 
 **Záhlaví:** internal.h
 
-**Namespace:** Microsoft::WRL::Details
+**Obor názvů:** Microsoft::WRL::Details
 
-## <a name="value"></a>IsBaseOfStrict::value
+## <a name="isbaseofstrictvalue"></a><a name="value"></a>IsBaseOfStrict::hodnota
 
-Podporuje knihovny WRL infrastrukturu a není určena pro použití přímo v kódu.
+Podporuje infrastrukturu WRL a není určen pro použití přímo z vašeho kódu.
 
 ```cpp
 static const bool value = __is_base_of(Base, Derived);
@@ -72,6 +72,6 @@ static const bool value = __is_base_of(Base, Derived);
 
 ### <a name="remarks"></a>Poznámky
 
-Označuje, zda je jeden typ základ jiného.
+Označuje, zda jeden typ je základem jiného.
 
-`value` je **true** Pokud typ `Base` je základní třídu typu `Derived`, v opačném případě je **false**.
+`value`**true,** pokud `Base` je typ základní `Derived`třídou typu , jinak je **false**.

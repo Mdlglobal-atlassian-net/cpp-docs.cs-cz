@@ -1,5 +1,5 @@
 ---
-title: Cbasetransition – třída
+title: CBaseTransition – třída
 ms.date: 03/27/2019
 f1_keywords:
 - CBaseTransition
@@ -44,14 +44,14 @@ helpviewer_keywords:
 - CBaseTransition [MFC], m_transition
 - CBaseTransition [MFC], m_type
 ms.assetid: dfe84007-bbc5-43b7-b5b8-fae9145573bf
-ms.openlocfilehash: 37bf536403d0edfc16b098929a4758a6c6958cf1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8339785fd10fa3dcef1c0fb573310762dc2d2405
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62164147"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81352836"
 ---
-# <a name="cbasetransition-class"></a>Cbasetransition – třída
+# <a name="cbasetransition-class"></a>CBaseTransition – třída
 
 Představuje základní přechod.
 
@@ -65,52 +65,52 @@ class CBaseTransition : public CObject;
 
 ### <a name="public-enumerations"></a>Veřejné výčty
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[Výčet CBaseTransition::TRANSITION_TYPE](#transition_type_enumeration)|Definuje typy přechod aktuálně podporováno implementací MFC rozhraní Windows API animace.|
+|[CBaseTransition::TRANSITION_TYPE Výčet](#transition_type_enumeration)|Definuje typy přechodů, které aktuálně podporuje implementace knihovny MFC rozhraní API pro animaci systému Windows.|
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CBaseTransition::CBaseTransition](#cbasetransition)|Vytvoří objekt základní přechod.|
-|[CBaseTransition::~CBaseTransition](#_dtorcbasetransition)|Destruktor. Volá se při přechodu objekt je zničen.|
+|[CBaseTransition::CBaseTransition](#cbasetransition)|Vytvoří základní přechodový objekt.|
+|[CBaseTransition::~CBaseTransition](#_dtorcbasetransition)|Destruktor. Nazývá se při zničení objektu přechodu.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
 |[CBaseTransition::AddToStoryboard](#addtostoryboard)|Přidá přechod do scénáře.|
 |[CBaseTransition::AddToStoryboardAtKeyframes](#addtostoryboardatkeyframes)|Přidá přechod do scénáře.|
-|[CBaseTransition::Clear](#clear)|Verze zapouzdřený objekt modelu COM IUIAnimationTransition.|
-|[CBaseTransition::Create](#create)|Vytvoří COM přechod.|
-|[CBaseTransition::GetEndKeyframe](#getendkeyframe)|Vrátí start klíčový snímek.|
-|[CBaseTransition::GetRelatedVariable](#getrelatedvariable)|Vrací ukazatel na související proměnné.|
-|[CBaseTransition::GetStartKeyframe](#getstartkeyframe)|Vrátí start klíčový snímek.|
-|[CBaseTransition::GetTransition](#gettransition)|Přetíženo. Vrací ukazatel na základní objekt modelu COM přechodu.|
+|[CBaseTransition::Vymazat](#clear)|Uvolňuje zapouzdřený objekt Com IUIAnimationTransition.|
+|[CBaseTransition::Vytvořit](#create)|Vytvoří přechod com.|
+|[CBaseTransition::GetEndKeyframe](#getendkeyframe)|Vrátí počáteční klíčový snímek.|
+|[CBaseTransition::GetRelatedVariable](#getrelatedvariable)|Vrátí ukazatel na související proměnnou.|
+|[CBaseTransition::GetStartKeyframe](#getstartkeyframe)|Vrátí počáteční klíčový snímek.|
+|[CBaseTransition::GetTransition](#gettransition)|Přetíženo. Vrátí ukazatel na základní objekt přechodu COM.|
 |[CBaseTransition::GetType](#gettype)|Vrátí typ přechodu.|
-|[CBaseTransition::IsAdded](#isadded)|Informuje, zda přechodu je přidaný do scénáře.|
+|[CBaseTransition::Jepřidán](#isadded)|Určuje, zda byl přechod přidán do scénáře.|
 |[CBaseTransition::SetKeyframes](#setkeyframes)|Nastaví klíčové snímky pro přechod.|
-|[CBaseTransition::SetRelatedVariable](#setrelatedvariable)|Vytvoří vztah mezi proměnné animace a přechod.|
+|[CBaseTransition::SetRelatedVariable](#setrelatedvariable)|Vytvoří vztah mezi proměnnou animace a přechodem.|
 
-### <a name="protected-data-members"></a>Chránění členové dat
+### <a name="protected-data-members"></a>Členové chráněných dat
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CBaseTransition::m_bAdded](#m_badded)|Určuje, zda přechodu je přidaný do scénáře.|
-|[CBaseTransition::m_pEndKeyframe](#m_pendkeyframe)|Uchovává ukazatel na klíčový snímek, který určuje konci přechodu.|
-|[CBaseTransition::m_pRelatedVariable](#m_prelatedvariable)|Ukazatel na proměnnou animace, který je animovaný přechodu uložené v m_transition.|
-|[CBaseTransition::m_pStartKeyframe](#m_pstartkeyframe)|Uchovává ukazatel na klíčový snímek, který určuje začátek přechodu.|
-|[CBaseTransition::m_transition](#m_transition)|Uchovává ukazatel na IUIAnimationTransition. Hodnota NULL, pokud nebyl vytvořen objekt modelu COM přechodu.|
+|[CBaseTransition::m_bAdded](#m_badded)|Určuje, zda byl přechod přidán do scénáře.|
+|[CBaseTransition::m_pEndKeyframe](#m_pendkeyframe)|Uloží ukazatel na klíčový snímek, který určuje konec přechodu.|
+|[CBaseTransition::m_pRelatedVariable](#m_prelatedvariable)|Ukazatel na proměnnou animace, která je animována s přechodem uloženým v m_transition.|
+|[CBaseTransition::m_pStartKeyframe](#m_pstartkeyframe)|Uloží ukazatel na klíčový snímek, který určuje začátek přechodu.|
+|[CBaseTransition::m_transition](#m_transition)|Ukládá ukazatel na IUIAnimationTransition. Null, pokud objekt přechodu COM nebyl vytvořen.|
 |[CBaseTransition::m_type](#m_type)|Ukládá typ přechodu.|
 
 ## <a name="remarks"></a>Poznámky
 
-Tato třída zapouzdří IUIAnimationTransition rozhraní a slouží jako základní třída pro všechny přechody.
+Tato třída zapouzdřuje rozhraní IUIAnimationTransition a slouží jako základní třída pro všechny přechody.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObjekt](../../mfc/reference/cobject-class.md)
 
 `CBaseTransition`
 
@@ -118,15 +118,15 @@ Tato třída zapouzdří IUIAnimationTransition rozhraní a slouží jako zákla
 
 **Záhlaví:** afxanimationcontroller.h
 
-##  <a name="_dtorcbasetransition"></a>  CBaseTransition::~CBaseTransition
+## <a name="cbasetransitioncbasetransition"></a><a name="_dtorcbasetransition"></a>CBaseTransition::~CBaseTransition
 
-Destruktor. Volá se při přechodu objekt je zničen.
+Destruktor. Nazývá se při zničení objektu přechodu.
 
 ```
 virtual ~CBaseTransition();
 ```
 
-##  <a name="addtostoryboard"></a>  CBaseTransition::AddToStoryboard
+## <a name="cbasetransitionaddtostoryboard"></a><a name="addtostoryboard"></a>CBaseTransition::AddToStoryboard
 
 Přidá přechod do scénáře.
 
@@ -137,17 +137,17 @@ BOOL AddToStoryboard(IUIAnimationStoryboard* pStoryboard);
 ### <a name="parameters"></a>Parametry
 
 *pStoryboard*<br/>
-Ukazatel na scénáře, které budou související proměnné animace.
+Ukazatel na scénář, který animuje související proměnnou.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE, pokud přechodu se úspěšně přidal do scénáře.
+PRAVDA, pokud přechod byl úspěšně přidán do scénáře.
 
 ### <a name="remarks"></a>Poznámky
 
-Přechod platí pro proměnnou související ve scénáři. Pokud je toto první přechod u této proměnné v tomto scénáři, přechod začne na začátku scénáři. V opačném případě přechodu se připojí k přechodu naposledy přidána do proměnné.
+Aplikuje přechod na související proměnnou ve scénáři. Pokud se jedná o první přechod použitý na tuto proměnnou v tomto scénáři, přechod začíná na začátku scénáře. V opačném případě je přechod připojen k přechodu, který byl naposledy přidán do proměnné.
 
-##  <a name="addtostoryboardatkeyframes"></a>  CBaseTransition::AddToStoryboardAtKeyframes
+## <a name="cbasetransitionaddtostoryboardatkeyframes"></a><a name="addtostoryboardatkeyframes"></a>CBaseTransition::AddToStoryboardAtKeyframes
 
 Přidá přechod do scénáře.
 
@@ -158,27 +158,27 @@ BOOL AddToStoryboardAtKeyframes(IUIAnimationStoryboard* pStoryboard);
 ### <a name="parameters"></a>Parametry
 
 *pStoryboard*<br/>
-Ukazatel na scénáře, které budou související proměnné animace.
+Ukazatel na scénář, který animuje související proměnnou.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE, pokud přechodu se úspěšně přidal do scénáře.
+PRAVDA, pokud přechod byl úspěšně přidán do scénáře.
 
 ### <a name="remarks"></a>Poznámky
 
-Přechod platí pro proměnnou související ve scénáři. Pokud nebyla zadána start klíčový snímek, přechod začíná u tohoto klíčového snímku. Pokud nebyla zadána end klíčový snímek, přechod začíná na klíčový snímek počáteční a end klíčového snímku se zastaví. Pokud přechod byl vytvořen s doba trvání parametr zadán, je tento čas přepsána doba mezi klíčovými snímky počáteční a koncové. Pokud nebyla zadána žádná klíčový snímek, přechodu se připojí k přechodu naposledy přidána do proměnné.
+Aplikuje přechod na související proměnnou ve scénáři. Pokud byl zadán počáteční klíčový snímek, přechod začíná v tomto klíčovém snímku. Pokud byl zadán koncový klíčový snímek, přechod začíná na počátečním klíčovém snímku a zastaví se na koncovém klíčovém snímku. Pokud byl přechod vytvořen se zadaným parametrem doby trvání, je tato doba trvání přepsána dobou mezi počátečním a koncovým klíčovým snímky. Pokud nebyl zadán žádný klíčový snímek, je přechod připojen k přechodu, který byl naposledy přidán do proměnné.
 
-##  <a name="cbasetransition"></a>  CBaseTransition::CBaseTransition
+## <a name="cbasetransitioncbasetransition"></a><a name="cbasetransition"></a>CBaseTransition::CBaseTransition
 
-Vytvoří objekt základní přechod.
+Vytvoří základní přechodový objekt.
 
 ```
 CBaseTransition();
 ```
 
-##  <a name="clear"></a>  CBaseTransition::Clear
+## <a name="cbasetransitionclear"></a><a name="clear"></a>CBaseTransition::Vymazat
 
-Verze zapouzdřený objekt modelu COM IUIAnimationTransition.
+Uvolňuje zapouzdřený objekt Com IUIAnimationTransition.
 
 ```
 void Clear();
@@ -186,11 +186,11 @@ void Clear();
 
 ### <a name="remarks"></a>Poznámky
 
-Tuto metodu lze volat z odvozenou třídu vytvořit metody aby se zabránilo nevrácení IUITransition rozhraní.
+Tato metoda by měla být volána z metody Create odvozené třídy, aby se zabránilo nevracení rozhraní IUITransition.
 
-##  <a name="create"></a>  CBaseTransition::Create
+## <a name="cbasetransitioncreate"></a><a name="create"></a>CBaseTransition::Vytvořit
 
-Vytvoří COM přechod.
+Vytvoří přechod com.
 
 ```
 virtual BOOL Create(
@@ -200,23 +200,23 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>Parametry
 
-*pLibrary*<br/>
-Ukazatel na přechod knihovny, která vytvoří standardní přechodů. To může mít hodnotu NULL pro vlastní přechody.
+*pKnihovna*<br/>
+Ukazatel na knihovnu přechodů, která vytváří standardní přechody. Může být NULL pro vlastní přechody.
 
 *pFactory*<br/>
-Ukazatel na přechod factory, který vytvoří vlastní přechodů. To může mít hodnotu NULL pro standardní přechody.
+Ukazatel na továrnu přechodu, která vytváří vlastní přechody. Může být NULL pro standardní přechody.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Hodnota TRUE v případě přechodu objekt COM byl úspěšně vytvořen; v opačném případě FALSE.
+PRAVDA, pokud byl objekt com přechodu úspěšně vytvořen; jinak FALSE.
 
 ### <a name="remarks"></a>Poznámky
 
-To se čistě virtuální funkci, která se musí přepsat v odvozené třídě. Volá se rozhraním, k vytvoření instance základní přechod objekt modelu COM.
+Toto je čistě virtuální funkce, která musí být přepsána v odvozené třídě. Je volána rámci k vytvoření instance základní objekt přechodu COM.
 
-##  <a name="getendkeyframe"></a>  CBaseTransition::GetEndKeyframe
+## <a name="cbasetransitiongetendkeyframe"></a><a name="getendkeyframe"></a>CBaseTransition::GetEndKeyframe
 
-Vrátí start klíčový snímek.
+Vrátí počáteční klíčový snímek.
 
 ```
 CBaseKeyFrame* GetEndKeyframe();
@@ -224,15 +224,15 @@ CBaseKeyFrame* GetEndKeyframe();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Platný ukazatel klíčový snímek, nebo hodnota NULL, pokud by neměla být vložen přechod mezi klíčovými snímky.
+Platný ukazatel na klíčový snímek nebo null, pokud přechod by neměl být vložen mezi klíčové snímky.
 
 ### <a name="remarks"></a>Poznámky
 
-Tuto metodu lze použít pro přístup k objektu klíčový snímek, který byl dříve nastavil SetKeyframes. Je volána službou nejvyšší úrovně kódu při přechody se přidávají do scénáře.
+Tuto metodu lze použít pro přístup k objektu klíčového snímku, který byl dříve nastaven SetKeyframes. Je volána kódnejvyšší úrovně při přechody jsou přidávány do scénáře.
 
-##  <a name="getrelatedvariable"></a>  CBaseTransition::GetRelatedVariable
+## <a name="cbasetransitiongetrelatedvariable"></a><a name="getrelatedvariable"></a>CBaseTransition::GetRelatedVariable
 
-Vrací ukazatel na související proměnné.
+Vrátí ukazatel na související proměnnou.
 
 ```
 CAnimationVariable* GetRelatedVariable();
@@ -240,15 +240,15 @@ CAnimationVariable* GetRelatedVariable();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Platný ukazatel na proměnnou animace, nebo hodnota NULL, pokud nebyla nastavena podle SetRelatedVariable proměnnou animace.
+Platný ukazatel na proměnnou animace nebo NULL, pokud proměnná animace nebyla nastavena hodnotou SetRelatedVariable.
 
 ### <a name="remarks"></a>Poznámky
 
-Toto je přístupový objekt proměnné související animace.
+Toto je přistupující objekt k související proměnné animace.
 
-##  <a name="getstartkeyframe"></a>  CBaseTransition::GetStartKeyframe
+## <a name="cbasetransitiongetstartkeyframe"></a><a name="getstartkeyframe"></a>CBaseTransition::GetStartKeyframe
 
-Vrátí start klíčový snímek.
+Vrátí počáteční klíčový snímek.
 
 ```
 CBaseKeyFrame* GetStartKeyframe();
@@ -256,15 +256,15 @@ CBaseKeyFrame* GetStartKeyframe();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Platný ukazatel klíčový snímek, nebo hodnota NULL, pokud přechod nesmí začínat po klíčového snímku.
+Platný ukazatel na klíčový snímek nebo NULL, pokud přechod by neměl začít po klíčový snímek.
 
 ### <a name="remarks"></a>Poznámky
 
-Tuto metodu lze použít pro přístup k objektu klíčový snímek, který byl dříve nastavil SetKeyframes. Je volána službou nejvyšší úrovně kódu při přechody se přidávají do scénáře.
+Tuto metodu lze použít pro přístup k objektu klíčového snímku, který byl dříve nastaven SetKeyframes. Je volána kódnejvyšší úrovně při přechody jsou přidávány do scénáře.
 
-##  <a name="gettransition"></a>  CBaseTransition::GetTransition
+## <a name="cbasetransitiongettransition"></a><a name="gettransition"></a>CBaseTransition::GetTransition
 
-Vrací ukazatel na základní objekt modelu COM přechodu.
+Vrátí ukazatel na základní objekt přechodu COM.
 
 ```
 IUIAnimationTransition* GetTransition(
@@ -276,21 +276,21 @@ IUIAnimationTransition* GetTransition();
 
 ### <a name="parameters"></a>Parametry
 
-*pLibrary*<br/>
-Ukazatel na přechod knihovny, která vytvoří standardní přechodů. To může mít hodnotu NULL pro vlastní přechody.
+*pKnihovna*<br/>
+Ukazatel na knihovnu přechodů, která vytváří standardní přechody. Může být NULL pro vlastní přechody.
 
 *pFactory*<br/>
-Ukazatel na přechod factory, který vytvoří vlastní přechodů. To může mít hodnotu NULL pro standardní přechody.
+Ukazatel na továrnu přechodu, která vytváří vlastní přechody. Může být NULL pro standardní přechody.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Nejde vytvořit platný ukazatel na IUIAnimationTransition nebo hodnota NULL, pokud základní přechod.
+Platný ukazatel na IUIAnimationTransition nebo NULL, pokud základní přechod nelze vytvořit.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda vrací ukazatel na základní objekt modelu COM přechodu a v případě potřeby ji vytvoří.
+Tato metoda vrátí ukazatel na základní objekt přechodu COM a v případě potřeby jej vytvoří.
 
-##  <a name="gettype"></a>  CBaseTransition::GetType
+## <a name="cbasetransitiongettype"></a><a name="gettype"></a>CBaseTransition::GetType
 
 Vrátí typ přechodu.
 
@@ -300,15 +300,15 @@ TRANSITION_TYPE GetType() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Jeden z TRANSITION_TYPE hodnot výčtu.
+Jedna z TRANSITION_TYPE vyčíslených hodnot.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda slouží k identifikaci přechodu objektu podle jeho typu. Je typ nastaven v konstruktoru odvozené třídy.
+Tuto metodu lze použít k identifikaci objektu přechodu podle jeho typu. Typ je nastaven v konstruktoru v odvozené třídě.
 
-##  <a name="isadded"></a>  CBaseTransition::IsAdded
+## <a name="cbasetransitionisadded"></a><a name="isadded"></a>CBaseTransition::Jepřidán
 
-Informuje, zda přechodu je přidaný do scénáře.
+Určuje, zda byl přechod přidán do scénáře.
 
 ```
 BOOL IsAdded();
@@ -316,53 +316,53 @@ BOOL IsAdded();
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrátí hodnotu TRUE, pokud byl přidán přechod do scénáře, jinak hodnota FALSE.
+Vrátí hodnotu PRAVDA, pokud byl do scénáře přidán přechod, jinak NEPRAVDA.
 
 ### <a name="remarks"></a>Poznámky
 
-Nejvyšší úrovně kódu přidá přechody do scénáře je interně nastavený tento příznak.
+Tento příznak je nastaven interně při kódu nejvyšší úrovně přidá přechody do scénáře.
 
-##  <a name="m_badded"></a>  CBaseTransition::m_bAdded
+## <a name="cbasetransitionm_badded"></a><a name="m_badded"></a>CBaseTransition::m_bAdded
 
-Určuje, zda přechodu je přidaný do scénáře.
+Určuje, zda byl přechod přidán do scénáře.
 
 ```
 BOOL m_bAdded;
 ```
 
-##  <a name="m_pendkeyframe"></a>  CBaseTransition::m_pEndKeyframe
+## <a name="cbasetransitionm_pendkeyframe"></a><a name="m_pendkeyframe"></a>CBaseTransition::m_pEndKeyframe
 
-Uchovává ukazatel na klíčový snímek, který určuje konci přechodu.
+Uloží ukazatel na klíčový snímek, který určuje konec přechodu.
 
 ```
 CBaseKeyFrame* m_pEndKeyframe;
 ```
 
-##  <a name="m_prelatedvariable"></a>  CBaseTransition::m_pRelatedVariable
+## <a name="cbasetransitionm_prelatedvariable"></a><a name="m_prelatedvariable"></a>CBaseTransition::m_pRelatedVariable
 
-Ukazatel na proměnnou animace, který je animovaný přechodu uložené v m_transition.
+Ukazatel na proměnnou animace, která je animována s přechodem uloženým v m_transition.
 
 ```
 CAnimationVariable* m_pRelatedVariable;
 ```
 
-##  <a name="m_pstartkeyframe"></a>  CBaseTransition::m_pStartKeyframe
+## <a name="cbasetransitionm_pstartkeyframe"></a><a name="m_pstartkeyframe"></a>CBaseTransition::m_pStartKeyframe
 
-Uchovává ukazatel na klíčový snímek, který určuje začátek přechodu.
+Uloží ukazatel na klíčový snímek, který určuje začátek přechodu.
 
 ```
 CBaseKeyFrame* m_pStartKeyframe;
 ```
 
-##  <a name="m_transition"></a>  CBaseTransition::m_transition
+## <a name="cbasetransitionm_transition"></a><a name="m_transition"></a>CBaseTransition::m_transition
 
-Uchovává ukazatel na IUIAnimationTransition. Hodnota NULL, pokud nebyl vytvořen objekt modelu COM přechodu.
+Ukládá ukazatel na IUIAnimationTransition. Null, pokud objekt přechodu COM nebyl vytvořen.
 
 ```
 ATL::CComPtr<IUIAnimationTransition> m_transition;
 ```
 
-##  <a name="m_type"></a>  CBaseTransition::m_type
+## <a name="cbasetransitionm_type"></a><a name="m_type"></a>CBaseTransition::m_type
 
 Ukládá typ přechodu.
 
@@ -370,7 +370,7 @@ Ukládá typ přechodu.
 TRANSITION_TYPE m_type;
 ```
 
-##  <a name="setkeyframes"></a>  CBaseTransition::SetKeyframes
+## <a name="cbasetransitionsetkeyframes"></a><a name="setkeyframes"></a>CBaseTransition::SetKeyframes
 
 Nastaví klíčové snímky pro přechod.
 
@@ -386,15 +386,15 @@ void SetKeyframes(
 Klíčový snímek, který určuje začátek přechodu.
 
 *pEnd*<br/>
-Klíčový snímek, který určuje konci přechodu.
+Klíčový snímek, který určuje konec přechodu.
 
 ### <a name="remarks"></a>Poznámky
 
-Tato metoda říká přechodem na spustit po zadanou klíčový snímek a volitelně, pokud čekání nemá hodnotu NULL, ukončit před zadaným klíčový snímek. Pokud přechod byl vytvořen s doba trvání parametr zadán, je tento čas přepsána doba mezi klíčovými snímky počáteční a koncové.
+Tato metoda říká přechod začít po zadaném klíčovém snímku a volitelně, pokud pEnd není NULL, konec před zadaný klíčový snímek. Pokud byl přechod vytvořen se zadaným parametrem doby trvání, je tato doba trvání přepsána dobou mezi počátečním a koncovým klíčovým snímky.
 
-##  <a name="setrelatedvariable"></a>  CBaseTransition::SetRelatedVariable
+## <a name="cbasetransitionsetrelatedvariable"></a><a name="setrelatedvariable"></a>CBaseTransition::SetRelatedVariable
 
-Vytvoří vztah mezi proměnné animace a přechod.
+Vytvoří vztah mezi proměnnou animace a přechodem.
 
 ```
 void SetRelatedVariable(CAnimationVariable* pVariable);
@@ -402,16 +402,16 @@ void SetRelatedVariable(CAnimationVariable* pVariable);
 
 ### <a name="parameters"></a>Parametry
 
-*pVariable*<br/>
-Ukazatel na proměnnou související animace.
+*pProměnná proměnná*<br/>
+Ukazatel na související proměnnou animace.
 
 ### <a name="remarks"></a>Poznámky
 
-Vytvoří vztah mezi proměnné animace a přechod. Přechod lze použít pouze pro jednu proměnnou.
+Vytvoří vztah mezi proměnnou animace a přechodem. Přechod lze použít pouze na jednu proměnnou.
 
-##  <a name="transition_type_enumeration"></a>  Výčet CBaseTransition::TRANSITION_TYPE
+## <a name="cbasetransitiontransition_type-enumeration"></a><a name="transition_type_enumeration"></a>CBaseTransition::TRANSITION_TYPE Výčet
 
-Definuje typy přechod aktuálně podporováno implementací MFC rozhraní Windows API animace.
+Definuje typy přechodů, které aktuálně podporuje implementace knihovny MFC rozhraní API pro animaci systému Windows.
 
 ```
 enum TRANSITION_TYPE;
@@ -419,8 +419,8 @@ enum TRANSITION_TYPE;
 
 ### <a name="remarks"></a>Poznámky
 
-Typ přechodu je nastavena v konstruktoru konkrétní přechod. Csinusoidaltransitionfromrange – například nastaví jeho typ SINUSOIDAL_FROM_RANGE.
+Typ přechodu je nastaven v konstruktoru konkrétního přechodu. Například CSinusoidalTransitionFromRange nastaví jeho typ na SINUSOIDAL_FROM_RANGE.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Třídy](../../mfc/reference/mfc-classes.md)

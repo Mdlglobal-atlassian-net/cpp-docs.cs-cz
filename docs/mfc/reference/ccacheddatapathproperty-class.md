@@ -1,5 +1,5 @@
 ---
-title: CCachedDataPathProperty Class
+title: CCachedDataPathProperty – třída
 ms.date: 11/04/2016
 f1_keywords:
 - CCachedDataPathProperty
@@ -10,16 +10,16 @@ helpviewer_keywords:
 - CCachedDataPathProperty [MFC], CCachedDataPathProperty
 - CCachedDataPathProperty [MFC], m_Cache
 ms.assetid: 0d81356b-4fe5-43f6-aed2-2eb5a5485706
-ms.openlocfilehash: e7394250c93bcc718d50f2ea9b3522256df7c820
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ebab34433f23b119e3444b3eaa8b0ad6313555af
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62206779"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81352367"
 ---
-# <a name="ccacheddatapathproperty-class"></a>CCachedDataPathProperty Class
+# <a name="ccacheddatapathproperty-class"></a>CCachedDataPathProperty – třída
 
-Implementuje ovládacího prvku OLE asynchronně převedený a uložili do mezipaměti v paměti souboru vlastnost.
+Implementuje vlastnost ovládacího prvku OLE přenesenou asynchronně a uloženou do mezipaměti v paměťovém souboru.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -31,43 +31,43 @@ class CCachedDataPathProperty : public CDataPathProperty
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CCachedDataPathProperty::CCachedDataPathProperty](#ccacheddatapathproperty)|Vytvoří `CCachedDataPathProperty` objektu.|
+|[CCachedDataPathProperty::CCachedDataPathProperty](#ccacheddatapathproperty)|Vytvoří `CCachedDataPathProperty` objekt.|
 
 ### <a name="public-data-members"></a>Veřejné datové členy
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CCachedDataPathProperty::m_Cache](#m_cache)|`CMemFile` objekt ve kterém ukládání dat do mezipaměti.|
+|[CCachedDataPathProperty::m_Cache](#m_cache)|`CMemFile`objekt, do kterého chcete ukládat data do mezipaměti.|
 
 ## <a name="remarks"></a>Poznámky
 
-Paměťového souboru je uložené v paměti RAM, nikoli na disk a je užitečné pro rychlé dočasné přenosy.
+Paměťový soubor je uložen v paměti RAM, nikoli na disku a je užitečný pro rychlé dočasné přenosy.
 
-Spolu s `CAysncMonikerFile` a `CDataPathProperty`, `CCachedDataPathProperty` poskytuje funkce pro používání asynchronních zástupných názvů v ovládacích prvků OLE. S `CCachedDataPathProperty` objekty, budete moct asynchronně přenášet data ze zdroje adresu URL nebo soubor a uložte ho do souboru paměti prostřednictvím `m_Cache` veřejné proměnné. Všechna data uložená v souboru paměti a není nutné přepsat [OnDataAvailable](../../mfc/reference/casyncmonikerfile-class.md#ondataavailable) Pokud nechcete, podívejte se na oznámení a reagovat. Například pokud přenášíte velké. Soubor ve formátu GIF a chcete sdělit svůj ovládací prvek, že dorazila více dat a jeho by měl překreslit, přepsat `OnDataAvailable` aby oznámení.
+Spolu `CAysncMonikerFile` s `CDataPathProperty` `CCachedDataPathProperty` a , poskytuje funkce pro použití asynchronních zástupných názvů v ovládacích prvcích OLE. S `CCachedDataPathProperty` objekty můžete přenášet data asynchronně z adresy URL nebo zdroje souboru `m_Cache` a ukládat je do paměťového souboru prostřednictvím veřejné proměnné. Všechna data jsou uložena v paměťovém souboru a není nutné přepsat [OnDataAvailable,](../../mfc/reference/casyncmonikerfile-class.md#ondataavailable) pokud chcete sledovat oznámení a reagovat. Například pokud přenášíte velké . GIF soubor a chcete upozornit svůj ovládací prvek, že dorazilo `OnDataAvailable` více dat a mělo by se překreslit, přepsat, aby se oznámení.
 
-Třída `CCachedDataPathProperty` je odvozen z `CDataPathProperty`.
+Třída `CCachedDataPathProperty` je odvozena `CDataPathProperty`od .
 
-Další informace o tom, jak použít asynchronní monikery a ovládací prvky ActiveX v internetových aplikací naleznete v následujících tématech:
+Další informace o použití asynchronních zástupných názvů a ovládacích prvků ActiveX v internetových aplikacích naleznete v následujících tématech:
 
 - [První kroky Internetu: Ovládací prvky ActiveX](../../mfc/activex-controls-on-the-internet.md)
 
-- [První kroky Internetu: Asynchronní Monikery](../../mfc/asynchronous-monikers-on-the-internet.md)
+- [První kroky internetu: Asynchronní přezdívky](../../mfc/asynchronous-monikers-on-the-internet.md)
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[Třídy CObject](../../mfc/reference/cobject-class.md)
+[CObjekt](../../mfc/reference/cobject-class.md)
 
-[CFile](../../mfc/reference/cfile-class.md)
+[Soubor C](../../mfc/reference/cfile-class.md)
 
-[COleStreamFile](../../mfc/reference/colestreamfile-class.md)
+[Soubor COleStreamFile](../../mfc/reference/colestreamfile-class.md)
 
-[CMonikerFile](../../mfc/reference/cmonikerfile-class.md)
+[Soubor CMoniker](../../mfc/reference/cmonikerfile-class.md)
 
-[CAsyncMonikerFile](../../mfc/reference/casyncmonikerfile-class.md)
+[Soubor CAsyncMonikerFile](../../mfc/reference/casyncmonikerfile-class.md)
 
-[CDataPathProperty](../../mfc/reference/cdatapathproperty-class.md)
+[CDataPathVlastnost](../../mfc/reference/cdatapathproperty-class.md)
 
 `CCachedDataPathProperty`
 
@@ -75,9 +75,9 @@ Další informace o tom, jak použít asynchronní monikery a ovládací prvky A
 
 **Záhlaví:** afxctl.h
 
-##  <a name="ccacheddatapathproperty"></a>  CCachedDataPathProperty::CCachedDataPathProperty
+## <a name="ccacheddatapathpropertyccacheddatapathproperty"></a><a name="ccacheddatapathproperty"></a>CCachedDataPathProperty::CCachedDataPathProperty
 
-Vytvoří `CCachedDataPathProperty` objektu.
+Vytvoří `CCachedDataPathProperty` objekt.
 
 ```
 CCachedDataPathProperty(COleControl* pControl = NULL);
@@ -89,19 +89,19 @@ CCachedDataPathProperty(
 
 ### <a name="parameters"></a>Parametry
 
-*pControl*<br/>
-Ukazatel na objekt ovládacího prvku ActiveX, který se má přidružit to `CCachedDataPathProperty` objektu.
+*pOvládací prvek*<br/>
+Ukazatel na objekt ovládacího prvku ActiveX, který má být přidružen k tomuto `CCachedDataPathProperty` objektu.
 
 *lpszPath*<br/>
-Cesty, která může být absolutní nebo relativní, je použít k vytvoření asynchronní monikeru, který odkazuje na aktuální absolutní umístění vlastnost. `CCachedDataPathProperty` pomocí adresy URL, ne názvy souborů. Pokud chcete, aby `CCachedDataPathProperty` objektu pro soubor, předřaďte file:// k cestě.
+Cesta, která může být absolutní nebo relativní, slouží k vytvoření asynchronní zástupný název, který odkazuje na skutečné absolutní umístění vlastnosti. `CCachedDataPathProperty`používá adresy URL, nikoli názvy souborů. Pokud chcete `CCachedDataPathProperty` objekt pro soubor, předřadit file:// na cestu.
 
 ### <a name="remarks"></a>Poznámky
 
-`COleControl` Objekt, který odkazuje *pControl* používá [otevřít](../../mfc/reference/cdatapathproperty-class.md#open) a načíst z odvozených tříd. Pokud *pControl* má hodnotu NULL, ovládací prvek použitý s `Open` by měla být nastavena s [SetControl](../../mfc/reference/cdatapathproperty-class.md#setcontrol). Pokud *lpszPath* má hodnotu NULL, můžete předat cestu prostřednictvím `Open` nebo ji nastavte [SetPath](../../mfc/reference/cdatapathproperty-class.md#setpath).
+Objekt, `COleControl` na který *pControl* [poukazuje,](../../mfc/reference/cdatapathproperty-class.md#open) je používán otevřenou a načtenodvozenou odvozenými třídami. Pokud *pControl* je NULL, `Open` ovládací prvek používaný s by měl být nastaven s [SetControl](../../mfc/reference/cdatapathproperty-class.md#setcontrol). Pokud *lpszPath* je NULL, můžete předat `Open` cestu přes nebo nastavit pomocí [SetPath](../../mfc/reference/cdatapathproperty-class.md#setpath).
 
-##  <a name="m_cache"></a>  CCachedDataPathProperty::m_Cache
+## <a name="ccacheddatapathpropertym_cache"></a><a name="m_cache"></a>CCachedDataPathProperty::m_Cache
 
-Obsahuje název třídy paměti souboru, do kterého se data uložená v mezipaměti.
+Obsahuje název třídy paměťového souboru, do kterého jsou data ukládána do mezipaměti.
 
 ```
 CMemFile m_Cache;
@@ -109,9 +109,9 @@ CMemFile m_Cache;
 
 ### <a name="remarks"></a>Poznámky
 
-Paměťového souboru je uložené v paměti RAM, nikoli na disku.
+Paměťový soubor je uložen v paměti RAM, nikoli na disku.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [CDataPathProperty – třída](../../mfc/reference/cdatapathproperty-class.md)<br/>
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>

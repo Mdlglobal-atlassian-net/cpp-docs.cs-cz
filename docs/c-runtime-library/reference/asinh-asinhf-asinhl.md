@@ -1,10 +1,13 @@
 ---
 title: asinh, asinhf, asinhl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - asinh
 - asinhf
 - asinhl
+- _o_asinh
+- _o_asinhf
+- _o_asinhl
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +34,12 @@ helpviewer_keywords:
 - asinhl function
 - asinhf function
 ms.assetid: 4488babe-1a7e-44ca-8b7b-c2db0a70084f
-ms.openlocfilehash: f4d93f121c0124293a5bdff9041d0adfaab5d83c
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 299ee0ff3014dcfd2f6ab712d01766119fab5894
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939644"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81350464"
 ---
 # <a name="asinh-asinhf-asinhl"></a>asinh, asinhf, asinhl
 
@@ -56,28 +60,30 @@ long double asinh( long double x );  // C++ only
 
 ### <a name="parameters"></a>Parametry
 
-*x*<br/>
-Hodnota s plovoucí desetinnou čárkou.
+*X*<br/>
+Hodnota s plovoucí desetinnou táceckou.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Funkce **asinh –** vrátí inverzní sinus arkustangens (oblouk hyperbolický sinus) *x*. Tato funkce je platná v doméně s plovoucí desetinnou čárkou. Pokud *x* je tiché NaN, nekonečný nebo nekonečno, je vrácena stejná hodnota.
+**Asinh** funkce vrátit inverzní hyberbolický sinus (oblouk hyperbolický sinus) *x*. Tato funkce je platná přes doménu s plovoucí desetinnou tázkem. Pokud *x* je tichý NaN, neurčitý nebo nekonečno, je vrácena stejná hodnota.
 
-|Vstup|Výjimka SEH|**_matherr** Jímka|
+|Vstup|Výjimka SEH|**_matherr** Výjimka|
 |-----------|-------------------|--------------------------|
-|QNAN, ZASÁHNOUT, INF|žádná|žádná|
+|± QNAN, IND, INF|Žádná|Žádná|
 
 ## <a name="remarks"></a>Poznámky
 
-C++Při použití můžete volat přetížení **asinh –** , která přebírají a vracejí hodnoty **float** nebo **Long** **Double** . V programu v jazyce C **asinh –** vždycky přebírá a vrací **Double**.
+Při použití Jazyka C++, můžete volat přetížení **asinh,** které trvat a vrátit **float** nebo **dlouhé** **dvojité** hodnoty. V programu C **asinh** vždy bere a vrací **double**.
+
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
-|Funkce|Povinné záhlaví jazyka C|Požadovaná C++ hlavička|
+|Funkce|Povinná hlavička C|Povinná hlavička jazyka C++|
 |--------------|--------------|------------------|
-|**asinh –** , **asinhf –** , **asinhl**|\<Math. h >|\<cmath > nebo \<Math. h <|
+|**asinh**, **asinhf**, **asinhl**|\<math.h>|\<cmath> \<nebo math.h<|
 
-Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -107,9 +113,9 @@ sinh( 0.785398 ) = 0.868671
 asinh( 0.868671 ) = 0.785398
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)<br/>
+[Podpora s plovoucí desetinnou tálicí](../../c-runtime-library/floating-point-support.md)<br/>
 [acosh, acoshf, acoshl](acosh-acoshf-acoshl.md)<br/>
 [atanh, atanhf, atanhl](atanh-atanhf-atanhl.md)<br/>
 [cosh, coshf, coshl](cosh-coshf-coshl.md)<br/>

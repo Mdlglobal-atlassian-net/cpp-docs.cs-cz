@@ -11,19 +11,19 @@ helpviewer_keywords:
 - SafeIntException class
 - SafeIntException, constructor
 ms.assetid: 88bef958-1f48-4d55-ad4f-d1f9581a293a
-ms.openlocfilehash: 2998bbb83fd568d7ff627d6598c32fb5b17c1e40
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e118d7e3cce47ebb93cef16319a8fc45aab1118b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179326"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81349944"
 ---
 # <a name="safeintexception-class"></a>SafeIntException – třída
 
-`SafeInt` Třídy používá `SafeIntException` identifikovat důvod, proč matematické operaci nejde dokončit.
+Třída `SafeInt` používá `SafeIntException` k identifikaci, proč nelze dokončit matematickou operaci.
 
 > [!NOTE]
-> Nejnovější verzi této knihovny se nachází v [ https://github.com/dcleblanc/SafeInt ](https://github.com/dcleblanc/SafeInt).
+> Nejnovější verze této knihovny [https://github.com/dcleblanc/SafeInt](https://github.com/dcleblanc/SafeInt)je umístěna na adrese .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -35,13 +35,13 @@ class SafeIntException;
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-Název                                                    | Popis
+Name (Název)                                                    | Popis
 ------------------------------------------------------- | ------------------------------------
-[SafeIntException::SafeIntException](#safeintexception) | Vytvoří `SafeIntException` objektu.
+[SafeIntException::SafeIntException](#safeintexception) | Vytvoří `SafeIntException` objekt.
 
 ## <a name="remarks"></a>Poznámky
 
-[SafeInt – třída](../safeint/safeint-class.md) je jediná třída, která používá `SafeIntException` třídy.
+Třída [SafeInt](../safeint/safeint-class.md) je jediná třída, `SafeIntException` která používá třídu.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -51,11 +51,11 @@ Název                                                    | Popis
 
 **Záhlaví:** safeint.h
 
-**Namespace:** msl::utilities
+**Obor názvů:** msl::nástroje
 
-## <a name="safeintexception"></a>SafeIntException::SafeIntException
+## <a name="safeintexceptionsafeintexception"></a><a name="safeintexception"></a>Výjimka SafeIntException::SafeIntException
 
-Vytvoří `SafeIntException` objektu.
+Vytvoří `SafeIntException` objekt.
 
 ```cpp
 SafeIntException();
@@ -67,12 +67,12 @@ SafeIntException(
 
 ### <a name="parameters"></a>Parametry
 
-*code*<br/>
-[in] Hodnota výčtu dat, popisující chybu, ke které došlo.
+*Kód*<br/>
+[v] Výčet datové hodnoty, která popisuje chybu, ke které došlo.
 
 ### <a name="remarks"></a>Poznámky
 
-Možné hodnoty parametru *kód* jsou definovány v souboru Safeint.h. Pro usnadnění práce možné hodnoty jsou také uvedeny zde.
+Možné hodnoty *kódu* jsou definovány v souboru Safeint.h. Pro větší pohodlí jsou zde uvedeny také možné hodnoty.
 
 - `SafeIntNoError`
 - `SafeIntArithmeticOverflow`

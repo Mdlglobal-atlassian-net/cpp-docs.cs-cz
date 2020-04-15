@@ -1,5 +1,5 @@
 ---
-title: 'Platform::Collections:: inputiterator – třída'
+title: Platform::Collections::InputIterator – třída
 ms.date: 03/27/2019
 ms.topic: reference
 f1_keywords:
@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - InputIterator Class
 ms.assetid: ef72eea4-32a9-42b9-8119-ce87dbdcd3be
-ms.openlocfilehash: 49b131b01fe3d9cad5f8366fd4cc0c110b5d060c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 92f9b15f474a5aa3d063f0ccfb663f56baf8de31
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62161794"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81354564"
 ---
-# <a name="platformcollectionsinputiterator-class"></a>Platform::Collections:: inputiterator – třída
+# <a name="platformcollectionsinputiterator-class"></a>Platform::Collections::InputIterator – třída
 
-Poskytuje standardní knihovny InputIterator šablony pro kolekce odvozené z modulu Windows Runtime.
+Poskytuje vstupní informační službu standardní šablony pro kolekce odvozené z prostředí Windows Runtime.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -27,36 +27,36 @@ class InputIterator;
 
 #### <a name="parameters"></a>Parametry
 
-*X*<br/>
-Vlastnost typename třídy InputIterator šablony.
+*×*<br/>
+Název typu inputiterator šablony třídy.
 
 ### <a name="members"></a>Členové
 
-### <a name="public-typedefs"></a>Veřejné definice TypeDef
+### <a name="public-typedefs"></a>Veřejné typedefs
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|`difference_type`|Rozdíl ukazatelů (ptrdiff_t).|
-|`iterator_category`|Kategorie vstupní iterátor (:: std::input_iterator_tag).|
-|`pointer`|Ukazatel `const X`|
-|`reference`|Odkaz na `const X`|
-|`value_type`|`X` Typename.|
+|`difference_type`|Rozdíl ukazatele (ptrdiff_t).|
+|`iterator_category`|Kategorie vstupního iterátoru (::std::input_iterator_tag).|
+|`pointer`|Ukazatel na`const X`|
+|`reference`|Odkaz na`const X`|
+|`value_type`|Název `X` typu.|
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[InputIterator::InputIterator](#ctor)|Inicializuje novou instanci třídy InputIterator.|
+|[InputIterator::Vstupníiterátor](#ctor)|Inicializuje novou instanci inputiterator třídy.|
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-|Název|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[InputIterator::operator! = – operátor](#operator-inequality)|Určuje, zda aktuální InputIterator není roven zadané InputIterator.|
-|[InputIterator::operator * – operátor](#operator-dereference)|Získá odkaz na prvek určeném aktuálním InputIterator.|
-|[InputIterator::operator ++ – operátor](#operator-increment)|Aktuální InputIterator zvýší.|
-|[InputIterator::operator == – operátor](#operator-equality)|Určuje, zda aktuální InputIterator rovná zadané InputIterator.|
-|[InputIterator::operator-> Operator](#operator-arrow)|Načte adresu elementu, který odkazuje aktuální InputIterator.|
+|[Vstupní Iterátor::operátor!= Operátor](#operator-inequality)|Označuje, zda aktuální InputIterator není rovna zadané InputIterator.|
+|[Vstupní Iterátor::operátor* Operátor](#operator-dereference)|Načte odkaz na prvek určený aktuálníinputIterator.|
+|[Vstupní Iterátor::operátor++ Operátor](#operator-increment)|Zintáží aktuální InputIterator.|
+|[VstupníIterátor::operátor== Operátor](#operator-equality)|Označuje, zda aktuální InputIterator se rovná zadané InputIterator.|
+|[InputIterator::operátor-> Operátor](#operator-arrow)|Načte adresu prvku odkazuje aktuální InputIterator.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -66,11 +66,11 @@ Vlastnost typename třídy InputIterator šablony.
 
 **Záhlaví:** collection.h
 
-**Namespace:** Platform::Collections –
+**Obor názvů:** Platforma::Kolekce
 
-## <a name="ctor"></a>  InputIterator::InputIterator konstruktor
+## <a name="inputiteratorinputiterator-constructor"></a><a name="ctor"></a>InputIterator::Konstruktor vstupního iviterátoru
 
-Inicializuje novou instanci třídy InputIterator.
+Inicializuje novou instanci inputiterator třídy.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -81,12 +81,12 @@ explicit InputIterator(Windows::Foundation::Collections<X>^ iterator);
 
 ### <a name="parameters"></a>Parametry
 
-*iterator*<br/>
+*Iterace*<br/>
 Objekt iterátoru.
 
-## <a name="operator-arrow"></a>  InputIterator::operator -&gt; – operátor
+## <a name="inputiteratoroperator-gt-operator"></a><a name="operator-arrow"></a>VstupIterátor::operátor-&gt; Operátor
 
-Načte adresu určeném aktuálním InputIterator elementu.
+Načte adresu prvku určeného aktuálníinputIterator.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -96,11 +96,11 @@ pointer operator->() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Adresa prvku určeném aktuálním InputIterator.
+Adresa prvku určeného aktuální inputiterator.
 
-## <a name="operator-dereference"></a>  InputIterator::operator\* – operátor
+## <a name="inputiteratoroperator-operator"></a><a name="operator-dereference"></a>Vstupní Iterátor::operátor\* operátor
 
-Získá odkaz na prvek určeném aktuálním InputIterator.
+Načte odkaz na prvek určený aktuálníinputIterator.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -110,11 +110,11 @@ reference operator*() const;
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Element určeném aktuálním InputIterator.
+Prvek určený aktuální InputIterator.
 
-## <a name="operator-equality"></a>  InputIterator::operator == – operátor
+## <a name="inputiteratoroperator-operator"></a><a name="operator-equality"></a>VstupníIterátor::operátor== Operátor
 
-Určuje, zda aktuální InputIterator rovná zadané InputIterator.
+Označuje, zda aktuální InputIterator se rovná zadané InputIterator.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -124,16 +124,16 @@ bool operator== (const InputIterator& other) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Ostatní*<br/>
-Jiné InputIterator.
+*Další*<br/>
+Další vstupní iterátor.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**Hodnota TRUE** Pokud rovná aktuální InputIterator *jiných*; v opačném případě **false**.
+**true,** pokud je aktuální VstupníIterátor roven *ostatním*; jinak **false**.
 
-## <a name="operator-increment"></a>  InputIterator::operator ++ – operátor
+## <a name="inputiteratoroperator-operator"></a><a name="operator-increment"></a>Vstupní Iterátor::operátor++ Operátor
 
-Aktuální InputIterator zvýší.
+Zintáží aktuální InputIterator.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -144,17 +144,17 @@ InputIterator operator++(int);
 
 ### <a name="return-value"></a>Návratová hodnota
 
-První syntaxe zvýší hodnotu a vrátí aktuální InputIterator. Druhá syntaxe vrátí kopii objektu aktuální InputIterator a potom zvýší aktuální InputIterator.
+První syntaxe přírůstky a potom vrátí aktuální InputIterator. Druhá syntaxe vrátí kopii aktuálnívstupní InIterator a potom increments aktuální InputIterator.
 
 ### <a name="remarks"></a>Poznámky
 
-První syntaxe InputIterator předem zvýší aktuální InputIterator.
+První InputIterator syntaxe pre-přírůstky aktuální InputIterator.
 
-Druhá syntaxe po zvýší aktuální InputIterator. `int` v druhé syntaxi označuje operaci po přírůstku není skutečný celočíselný operand.
+Druhá syntaxe post-přírůstky aktuální InputIterator. Typ `int` v druhé syntaxi označuje operaci po přírůstku, nikoli skutečný celočíselný operand.
 
-## <a name="operator-inequality"></a>  InputIterator::operator! = – operátor
+## <a name="inputiteratoroperator-operator"></a><a name="operator-inequality"></a>Vstupní Iterátor::operátor!= Operátor
 
-Určuje, zda aktuální InputIterator není roven zadané InputIterator.
+Označuje, zda aktuální InputIterator není rovna zadané InputIterator.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -164,13 +164,13 @@ bool operator!=(const InputIterator& other) const;
 
 ### <a name="parameters"></a>Parametry
 
-*Ostatní*<br/>
-Jiné InputIterator.
+*Další*<br/>
+Další vstupní iterátor.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-**true** Pokud aktuální InputIterator není roven *jiných*; v opačném případě **false**.
+**true,** pokud se aktuální vstupní iterátor nerovná *ostatním*; jinak **false**.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Platforma Namespace](platform-namespace-c-cx.md)
+[Obor názvů platformy](platform-namespace-c-cx.md)

@@ -24,70 +24,70 @@ helpviewer_keywords:
 - CRT, security enhancements
 - parameters [C++], validation
 ms.assetid: d9568b08-9514-49cd-b3dc-2454ded195a3
-ms.openlocfilehash: cf8bee39d6ec0f41049586d3861dcf450b7b2aaa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1b42c766a7b75cb3f4d5c20d715968905d529d04
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62268782"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81361012"
 ---
 # <a name="security-features-in-the-crt"></a>Funkce zabezpečení v CRT
 
-Mnoho stará funkce CRT mají novějšími, bezpečnějšími verze. Pokud zabezpečené funkce existuje, starší, méně bezpečné verze je označené jako zastaralé a nová verze nemá `_s` příponu ("bezpečné").
+Mnoho starých funkcí CRT má novější, bezpečnější verze. Pokud existuje zabezpečená funkce, starší, méně zabezpečená verze je označena `_s` jako zastaralá a nová verze má příponu ("secure").
 
-V tomto kontextu "zastaralé" pouze znamená, že se nedoporučuje použití funkce; neznamená, že funkce je naplánováno odeberou z CRT.
+V tomto kontextu "zastaralé" znamená pouze, že použití funkce se nedoporučuje; neznamená, že je naplánováno odebrání funkce z CRT.
 
-Zabezpečené funkce, zabránit nebo opravte chyby v zabezpečení; Místo toho se zachytávat chyby, které se objeví. Provádějí další kontroly pro chybové podmínky, a v případě chyby, vyvolají obslužnou rutinu chyby (viz [Parameter Validation](../c-runtime-library/parameter-validation.md)).
+Zabezpečené funkce nezabraňují chybám zabezpečení ani je neopravují. místo toho zachycují chyby, když k nim dojde. Provádějí další kontroly chybových stavů a v případě chyby vyvolávají obslužnou rutinu chyby (viz [Ověření parametru).](../c-runtime-library/parameter-validation.md)
 
-Například `strcpy` funkce nemá možnost nijak sdělit, pokud je řetězec, který kopíruje pro jeho cílová vyrovnávací paměť příliš velký. Ale jeho zabezpečené protějšky `strcpy_s`, velikost vyrovnávací paměti jako parametr přijímá, takže ho můžete zjistit, zda přetečení vyrovnávací paměti dojde. Pokud používáte `strcpy_s` kopírování jedenáct znaků do vyrovnávací paměti deset znaků, který chybu z vaší strany; `strcpy_s` nelze opravit chybu, ale můžete zjistit chyby a poznáte tak, že vyvolá obslužnou rutinu neplatného parametru.
+Například `strcpy` funkce nemá žádný způsob, jak říct, pokud řetězec, který je kopírování je příliš velký pro jeho cílové vyrovnávací paměti. Jeho zabezpečený `strcpy_s`protějšek , však bere velikost vyrovnávací paměti jako parametr, takže může určit, pokud dojde k přetečení vyrovnávací paměti. Pokud používáte `strcpy_s` ke kopírování jedenáct znaků do vyrovnávací paměti deseti znaků, je to chyba z vaší strany; `strcpy_s` nemůže opravit chybu, ale může zjistit vaši chybu a informovat vás vyvoláním neplatné obslužné rutiny parametru.
 
-## <a name="eliminating-deprecation-warnings"></a>Odstranění upozornění na zastaralost
+## <a name="eliminating-deprecation-warnings"></a>Eliminace varování před vyřazením
 
-Chcete-li odstranit upozornění na zastaralost pro starší, méně zabezpečené funkce několika způsoby. Nejjednodušší je jednoduše definovat `_CRT_SECURE_NO_WARNINGS` nebo použijte [upozornění](../preprocessor/warning.md) direktivy pragma. Buď zakáže upozornění na zastaralost, ale samozřejmě stále existují problémy se zabezpečením, které způsobily upozornění. Je mnohem lepší ponechte vyřazení upozornění povolená a mohli využívat nové funkce zabezpečení CRT.
+Existuje několik způsobů, jak eliminovat upozornění na vyřazení starších, méně zabezpečených funkcí. Nejjednodušší je jednoduše definovat `_CRT_SECURE_NO_WARNINGS` nebo použít [varování](../preprocessor/warning.md) pragma. Buď zakáže upozornění na vyřazení, ale samozřejmě stále existují problémy se zabezpečením, které způsobily varování. Je mnohem lepší ponechat upozornění na vyřazení povolena a využít výhod nových funkcí zabezpečení CRT.
 
-V jazyce C++, je nejjednodušší způsob, jak to udělat pomocí [přetížení zabezpečení šablony](../c-runtime-library/secure-template-overloads.md), což je v mnoha případech dojde k odstranění upozornění na zastaralost nahrazením volání zastaralé funkce volání nové bezpečné verze těchto funkcí. Zvažte například toto volání zastaralé `strcpy`:
+V jazyce C++ je nejjednodušší způsob, jak to provést, použít [přetížení zabezpečené šablony](../c-runtime-library/secure-template-overloads.md), což v mnoha případech eliminuje upozornění na vyřazení nahrazením volání zastaralých funkcí voláním nových zabezpečených verzí těchto funkcí. Zvažte například toto zastaralé `strcpy`volání na :
 
 ```
 char szBuf[10];
 strcpy(szBuf, "test"); // warning: deprecated
 ```
 
-Definování `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` jako 1 eliminuje upozornění tak, že změníte `strcpy` volání `strcpy_s`, což zabraňuje přetečení vyrovnávací paměti. Další informace najdete v tématu [přetížení zabezpečení šablony](../c-runtime-library/secure-template-overloads.md).
+Definování `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` jako 1 eliminuje upozornění změnou `strcpy` `strcpy_s`volání , který zabraňuje přetečení vyrovnávací paměti. Další informace naleznete [v tématu Secure Template Overloads](../c-runtime-library/secure-template-overloads.md).
 
-Pro tyto zastaralé funkce bez přetížení zabezpečení šablony byste měli jednoznačně zvážit ruční aktualizace kód Refaktorovat pro použití bezpečné verze.
+Pro tyto zastaralé funkce bez přetížení zabezpečené šablony byste měli určitě zvážit ruční aktualizaci kódu tak, aby používal zabezpečené verze.
 
-Dalším zdrojem tohoto upozornění na zastaralost, nesouvisející se zabezpečením, je funkce POSIX. Nahraďte názvy funkcí POSIX ekvivalenty standardní (například změnit [přístup](../c-runtime-library/reference/access-crt.md) k [_přístupový](../c-runtime-library/reference/access-waccess.md)), nebo zakáže upozornění na zastaralost týkající se specifikace POSIX definováním `_CRT_NONSTDC_NO_WARNINGS`. Další informace najdete v tématu [kompatibility](compatibility.md).
+Dalším zdrojem varování vyřazení, které nesouvisí se zabezpečením, jsou funkce POSIX. Nahraďte názvy funkcí POSIX standardními ekvivalenty (například změňte [přístup](../c-runtime-library/reference/access-crt.md) k [_access](../c-runtime-library/reference/access-waccess.md)) `_CRT_NONSTDC_NO_WARNINGS`nebo definujte upozornění týkající se funkce POSIX . Další informace naleznete v [tématu Kompatibilita](compatibility.md).
 
 ## <a name="additional-security-features"></a>Další funkce zabezpečení
 
 Některé funkce zabezpečení zahrnují následující:
 
-- `Parameter Validation`. Parametry předané do funkce CRT se ověřují v obou zabezpečené funkce a v předchozích verzích funkce. Tyto ověření patří:
+- `Parameter Validation`. Parametry předávané funkcím CRT jsou ověřeny jak v zabezpečených funkcích, tak v mnoha již existujících verzích funkcí. Mezi tato ověření patří:
 
-   - Kontrola **NULL** hodnoty předané funkcím.
+  - Kontrola hodnot **NULL** předaná funkcím.
 
-   - Kontroluje se platnost výčtové hodnoty.
+  - Kontrola výčtu hodnot pro platnost.
 
-   - Kontroluje se, že integrální hodnoty jsou platné rozsahy.
+  - Kontrola, zda jsou integrální hodnoty v platných rozsahech.
 
-- Další informace najdete v tématu [Parameter Validation](../c-runtime-library/parameter-validation.md).
+- Další informace naleznete v [tématu Ověření parametru](../c-runtime-library/parameter-validation.md).
 
-- Obslužná rutina neplatné parametry je také přístupné pro vývojáře. Při zjištění neplatného parametru, nikoli potvrzující a ukončení aplikace, CRT poskytuje způsob, jak tyto problémy s zkontrolujte [_set_invalid_parameter_handler – _set_thread_local_invalid_parameter_handler](../c-runtime-library/reference/set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md)funkce.
+- Obslužná rutina pro neplatné parametry je také přístupná vývojáři. Při výskytu neplatný parametr, namísto uplatnění a ukončení aplikace CRT poskytuje způsob, jak zkontrolovat tyto problémy s [_set_invalid_parameter_handler, _set_thread_local_invalid_parameter_handler](../c-runtime-library/reference/set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md) funkce.
 
-- `Sized Buffers`. Zabezpečené funkce vyžadují velikost vyrovnávací paměti být předán všechny funkce, které se zapíše do vyrovnávací paměti. Bezpečné verze ověřit, že vyrovnávací paměť je příliš velká před zápisem do ní, pomáhá zabránit chybám přetečení nebezpečné vyrovnávací paměti, které by mohlo spuštění škodlivého kódu. Obvykle vrátí tyto funkce `errno` zadejte kód chyby a vyvolat obslužnou rutinu neplatného parametru, je-li velikost vyrovnávací paměti je příliš malá. Funkce, které čtou z vstupní vyrovnávací paměti, jako například `gets`, mají bezpečné verze, které vyžadují, abyste zadat maximální velikost.
+- `Sized Buffers`. Zabezpečené funkce vyžadují, aby velikost vyrovnávací paměti byla předána libovolné funkci, která zapisuje do vyrovnávací paměti. Zabezpečené verze ověřují, zda je vyrovnávací paměť dostatečně velká před zápisem do ní, což pomáhá zabránit nebezpečným chybám přetečení vyrovnávací paměti, které by mohly umožnit spuštění škodlivého kódu. Tyto funkce obvykle `errno` vrátí typ kódu chyby a vyvolat obslužnou rutinu neplatného parametru, pokud je velikost vyrovnávací paměti příliš malá. Funkce, které čtou ze `gets`vstupních vyrovnávacích pamětí, například , mají zabezpečené verze, které vyžadují zadání maximální velikosti.
 
-- `Null termination`. Některé funkce, které zbývá potenciálně mimo řetězec zakončený mají bezpečné verze, které zajišťují, že jsou řetězce správně zakončený hodnotou null.
+- `Null termination`. Některé funkce, které ponechaly potenciálně neukončené řetězce, mají zabezpečené verze, které zajišťují, že řetězce jsou správně ukončeny s nulou.
 
-- `Enhanced error reporting`. Zabezpečené funkce návratové kódy chyb s další informace o chybě, než bylo k dispozici s dříve existující funkce. Zabezpečené funkce a mnoho z předchozích funkcí teď nastavte `errno` a často vrátit `errno` kódu typu, k poskytování lepšího zasílání zpráv o chybách.
+- `Enhanced error reporting`. Zabezpečené funkce vracejí kódy chyb s více informacemi o chybách, než bylo k dispozici u již existujících funkcí. Zabezpečené funkce a mnoho již existujících `errno` funkcí nyní `errno` nastaveny a často vrátit typ kódu také poskytnout lepší zasílání zpráv o chybách.
 
-- `Filesystem security`. Zabezpečený přístup k podpoře zabezpečené souboru vstupně-výstupní operace rozhraní API ve výchozím nastavení soubor.
+- `Filesystem security`. Vstupně-nosová úložiště souborů podporuje zabezpečený přístup k souborům ve výchozím případě.
 
-- `Windows security`. Zabezpečení procesu rozhraní API vynutit zásady zabezpečení a umožňují seznamy ACL zadat.
+- `Windows security`. Úložiště API zabezpečeného procesu vynucují zásady zabezpečení a umožňují zadat počet přístupových kont.
 
-- `Format string syntax checking`. Neplatné řetězce jsou zjištěny, například pomocí nesprávného typu pole znaků `printf` řetězce formátu.
+- `Format string syntax checking`. Neplatné řetězce jsou zjištěny, například pomocí `printf` nesprávných znaků pole typu ve formátovacích řetězcích.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Ověřování parametrů](../c-runtime-library/parameter-validation.md)<br/>
-[Přetížení zabezpečení šablony](../c-runtime-library/secure-template-overloads.md)<br/>
+[Ověření parametru](../c-runtime-library/parameter-validation.md)<br/>
+[Zabezpečené přetížení šablony](../c-runtime-library/secure-template-overloads.md)<br/>
 [Funkce knihovny CRT](../c-runtime-library/crt-library-features.md)

@@ -7,20 +7,20 @@ helpviewer_keywords:
 - logical_and class
 - logical_and struct
 ms.assetid: 1a375cc2-0592-4d57-a553-78009c7ad610
-ms.openlocfilehash: cc75c93d5173ceb7fa12b9722a797499b4225a53
-ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.openlocfilehash: 7036ebf9fed3877a395e44d8383776002b9afcae
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821613"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81351693"
 ---
 # <a name="logical_and-struct"></a>logical_and – struktura
 
-Předdefinovaný objekt funkce, který provádí operaci logického spojení (`operator&&`) na svých argumentech.
+Předdefinovaný objekt funkce, který provádí`operator&&`operaci logického spojení ( ) na svých argumentech.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 template <class Type = void>
 struct logical_and : public binary_function<Type, Type, bool>
 {
@@ -39,22 +39,22 @@ struct logical_and<void>
 
 ### <a name="parameters"></a>Parametry
 
-*Type*, *T*, *U*\
-Jakýkoli typ, který podporuje `operator&&`, které přebírají operandy zadaných nebo odvozených typů.
+*Typ*, *T*, *U*\
+Libovolný typ, `operator&&` který podporuje, který přebírá operandy zadaných nebo odvozených typů.
 
-*Levý*\
-Levý operand operace logického spojení. Nespecializovaná šablona přebírá argument odkazu *lvalue typu typ.* Specializovaná šablona provede dokonalé přesměrování na lvalue a odkazy rvalue na odvozený typ *T*.
+*Vlevo*\
+Levý operand logické ho spojení operace. Nespecializovaná šablona přebírá referenční argument lvalue typu *Type*. Specializovaná šablona provádí dokonalé předávání argumentů lvalue a rvalue reference odvozeného typu *T*.
 
-*Pravé*\
-Pravý operand operace logického spojení. Nespecializovaná šablona přebírá argument odkazu *lvalue typu typ.* Specializovaná šablona provede dokonalé přesměrování na lvalue a odkazy rvalue na odvozený typ *U*.
+*Právo*\
+Pravý operand operace logické ho spojení. Nespecializovaná šablona přebírá referenční argument lvalue typu *Type*. Specializovaná šablona provádí dokonalé předávání argumentů lvalue a rvalue reference odvozeného typu *U*.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Výsledek `Left && Right`. Specializovaná šablona provede dokonalé přesměrování výsledku, který má typ vrácený `operator&&`.
+Výsledek `Left && Right`. Specializovaná šablona provádí dokonalé předávání výsledku, který má typ, který je vrácen . `operator&&`
 
 ## <a name="remarks"></a>Poznámky
 
-Pro uživatelsky definované typy neexistuje žádné krátkodobé okruhy vyhodnocení operandů. Oba argumenty jsou vyhodnocovány `operator&&`.
+U uživatelem definovaných typů neexistuje žádné zkratování vyhodnocení operandu. Oba argumenty jsou `operator&&`vyhodnoceny .
 
 ## <a name="example"></a>Příklad
 

@@ -43,22 +43,22 @@ helpviewer_keywords:
 - registry, writing to
 - Visual C++, writing to Windows Registry
 ms.assetid: b9a75cb4-0589-4d5b-92cb-5e8be42b4ac0
-ms.openlocfilehash: 413ccc3b66d76f8779861d4d65eb262ee8640725
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 99fce804ad30e01bdbaa99b1636a5238ff535f8b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384371"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371776"
 ---
 # <a name="windows-operations-ccli"></a>Operace systému Windows (C++/CLI)
 
-Ukazuje různé úlohy specifické pro Windows pomocí sady Windows SDK.
+Ukazuje různé úlohy specifické pro systém Windows pomocí sady Windows SDK.
 
-Následující témata ukazují různé Windows operace prováděné s Windows SDK pomocí jazyka Visual C++.
+Následující témata ukazují různé operace systému Windows prováděné se sadou Windows SDK pomocí sady Visual C++.
 
-## <a name="determine_shutdown"></a> Určení, zda bylo zahájeno vypínání
+## <a name="determine-if-shutdown-has-started"></a><a name="determine_shutdown"></a>Zjištění, zda bylo spuštěno vypnutí
 
-Následující příklad kódu ukazuje, jak určit, zda je aktuálně ukončení aplikace nebo rozhraní .NET Framework. To je užitečné pro přístup k statických elementů v rozhraní .NET Framework, protože během vypínání tyto konstrukce jsou dokončeny v systému a není možné spolehlivě použít. Kontrolou <xref:System.Environment.HasShutdownStarted%2A> vlastnost poprvé, můžete se vyhnout potenciálních selhání přístupu k těmto prvkům.
+Následující příklad kódu ukazuje, jak zjistit, zda je aktuálně ukončována aplikace nebo rozhraní .NET Framework. To je užitečné pro přístup ke statickým prvkům v rozhraní .NET Framework, protože během vypnutí jsou tyto konstrukce dokončeny systémem a nelze je spolehlivě použít. Kontrolou vlastnosti <xref:System.Environment.HasShutdownStarted%2A> jako první, můžete se vyhnout potenciální selhání tím, že přístup k těmto prvkům.
 
 ### <a name="example"></a>Příklad
 
@@ -76,9 +76,9 @@ int main()
 }
 ```
 
-## <a name="determine_user"></a> Určení interaktivního uživatelského stavu
+## <a name="determine-the-user-interactive-state"></a><a name="determine_user"></a>Určení interaktivního stavu uživatele
 
-Následující příklad kódu ukazuje, jak určit, zda kód je spuštěn v kontextu interaktivního uživatele. Pokud <xref:System.Environment.UserInteractive%2A> má hodnotu false, pak je kód spuštěn jako proces služeb nebo z webové aplikace, v takovém případě byste se neměli pokoušet k interakci s uživatelem.
+Následující příklad kódu ukazuje, jak zjistit, zda je kód spuštěn v kontextu interaktivní uživatele. Pokud <xref:System.Environment.UserInteractive%2A> je false, pak je kód spuštěn jako proces služby nebo z evnitř webové aplikace, v takovém případě byste se neměli pokoušet o interakci s uživatelem.
 
 ### <a name="example"></a>Příklad
 
@@ -97,9 +97,9 @@ int main()
 }
 ```
 
-## <a name="read_registry"></a> Čtení dat z registru Windows
+## <a name="read-data-from-the-windows-registry"></a><a name="read_registry"></a>Čtení dat z registru systému Windows
 
-Následující příklad kódu používá <xref:Microsoft.Win32.Registry.CurrentUser> klíče pro čtení dat z registru Windows. Nejprve podklíčů uvedených pomocí <xref:Microsoft.Win32.RegistryKey.GetSubKeyNames%2A> metody a poté podklíč identity je otevřen pomocí <xref:Microsoft.Win32.RegistryKey.OpenSubKey%2A> metoda. Podobně jako kořenového klíče, je reprezentována podklíč <xref:Microsoft.Win32.RegistryKey> třídy. Nakonec novou <xref:Microsoft.Win32.RegistryKey> objektu se používá k vytvoření výčtu páry klíč/hodnota.
+Následující příklad kódu <xref:Microsoft.Win32.Registry.CurrentUser> používá klíč ke čtení dat z registru systému Windows. Nejprve jsou podklíče uvedeny pomocí <xref:Microsoft.Win32.RegistryKey.GetSubKeyNames%2A> metody a potom je pomocí <xref:Microsoft.Win32.RegistryKey.OpenSubKey%2A> metody otevřen podklíč Identities. Stejně jako kořenové klíče je <xref:Microsoft.Win32.RegistryKey> každý podklíč reprezentován třídou. Nakonec nový <xref:Microsoft.Win32.RegistryKey> objekt se používá k výčet dvojice klíč/hodnota.
 
 ### <a name="example"></a>Příklad
 
@@ -142,20 +142,20 @@ int main( )
 
 ### <a name="remarks"></a>Poznámky
 
-<xref:Microsoft.Win32.Registry> Třídy slouží pouze jako kontejner pro statické instance <xref:Microsoft.Win32.RegistryKey>. Každá instance představuje kořenový uzel registru. Instance jsou <xref:Microsoft.Win32.Registry.ClassesRoot>, <xref:Microsoft.Win32.Registry.CurrentConfig>, <xref:Microsoft.Win32.Registry.CurrentUser>, <xref:Microsoft.Win32.Registry.LocalMachine>, a <xref:Microsoft.Win32.Registry.Users>.
+Třída <xref:Microsoft.Win32.Registry> je pouze kontejner pro statické <xref:Microsoft.Win32.RegistryKey>instance . Každá instance představuje kořenový uzel registru. Instance <xref:Microsoft.Win32.Registry.ClassesRoot>jsou , <xref:Microsoft.Win32.Registry.CurrentConfig> <xref:Microsoft.Win32.Registry.CurrentUser>, <xref:Microsoft.Win32.Registry.LocalMachine>, <xref:Microsoft.Win32.Registry.Users>, a .
 
-Navíc se statické, objekty v rámci <xref:Microsoft.Win32.Registry> třídy jsou jen pro čtení. Kromě toho instance z <xref:Microsoft.Win32.RegistryKey> třídu, která se vytváří za účelem přístupu k obsahu registru objekty a jsou jen pro čtení. Příklad toho, jak toto chování přepsat, naleznete v tématu [jak: Zápis dat do registru Windows (C++vyhodnocovací)](../dotnet/how-to-write-data-to-the-windows-registry-cpp-cli.md).
+Kromě statické, objekty v <xref:Microsoft.Win32.Registry> rámci třídy jsou jen pro čtení. Kromě toho instance <xref:Microsoft.Win32.RegistryKey> třídy, které jsou vytvořeny pro přístup k obsahu objektů registru jsou také jen pro čtení. Příklad, jak přepsat toto chování, naleznete v [tématu How to: Write Data to the Windows Registry (C++/CLI)](../dotnet/how-to-write-data-to-the-windows-registry-cpp-cli.md).
 
-Ve třídě <xref:Microsoft.Win32.Registry> existují dva další objekty: <xref:Microsoft.Win32.Registry.DynData> a <xref:Microsoft.Win32.Registry.PerformanceData>. Jsou obě instance <xref:Microsoft.Win32.RegistryKey> třídy. <xref:Microsoft.Win32.Registry.DynData> Obsahuje informace o dynamické registru, který je podporován pouze ve Windows 98 a Windows Me. <xref:Microsoft.Win32.Registry.PerformanceData> Objekt lze použít pro přístup k informacím čítače výkonu pro aplikace, které používají systém sledování výkonu Windows. <xref:Microsoft.Win32.Registry.PerformanceData> Informace, které nejsou ve skutečnosti uložené v registru a proto nemůže zobrazit pomocí Regedit.exe představuje uzel.
+Ve třídě <xref:Microsoft.Win32.Registry> existují dva další objekty: <xref:Microsoft.Win32.Registry.DynData> a <xref:Microsoft.Win32.Registry.PerformanceData>. Oba jsou instance <xref:Microsoft.Win32.RegistryKey> třídy. Objekt <xref:Microsoft.Win32.Registry.DynData> obsahuje informace o dynamickém registru, které jsou podporovány pouze v systémech Windows 98 a Windows ME. Objekt <xref:Microsoft.Win32.Registry.PerformanceData> lze použít pro přístup k informacím čítače výkonu pro aplikace, které používají systém sledování výkonu systému Windows. Uzel <xref:Microsoft.Win32.Registry.PerformanceData> představuje informace, které nejsou ve skutečnosti uloženy v registru a proto nelze zobrazit pomocí Regedit.exe.
 
-## <a name="read_performance"></a> Čtení čítačů výkonu Windows
+## <a name="read-windows-performance-counters"></a><a name="read_performance"></a>Čtení čítačů výkonu systému Windows
 
-Některé aplikace a subsystémy Windows vystavit údaje o výkonu prostřednictvím výkonu systému Windows. Tyto čítače jsou přístupné pomocí <xref:System.Diagnostics.PerformanceCounterCategory> a <xref:System.Diagnostics.PerformanceCounter> třídy, které jsou umístěny v <xref:System.Diagnostics?displayProperty=fullName> oboru názvů.
+Některé aplikace a podsystémy systému Windows zveřejňují údaje o výkonu prostřednictvím systému výkonu systému Windows. Tyto čítače lze <xref:System.Diagnostics.PerformanceCounterCategory> přistupovat pomocí a <xref:System.Diagnostics.PerformanceCounter> třídy, které jsou umístěny <xref:System.Diagnostics?displayProperty=fullName> v oboru názvů.
 
-Následující příklad kódu používá tyto třídy k načtení a zobrazení čítač, který se aktualizuje pomocí Windows k označení zadaného procenta času procesoru je zaneprázdněný.
+Následující příklad kódu používá tyto třídy k načtení a zobrazení čítače, který je aktualizován systémem Windows k označení procenta času, který je procesor zaneprázdněn.
 
 > [!NOTE]
->  Tento příklad vyžaduje oprávnění správce pro spuštění v systému Windows Vista.
+> Tento příklad vyžaduje oprávnění správce ke spuštění v systému Windows Vista.
 
 ### <a name="example"></a>Příklad
 
@@ -246,9 +246,9 @@ int main()
 }
 ```
 
-## <a name="retrieve_text"></a> Načtení textu ze schránky
+## <a name="retrieve-text-from-the-clipboard"></a><a name="retrieve_text"></a>Načtení textu ze schránky
 
-Následující příklad kódu používá <xref:System.Windows.Forms.Clipboard.GetDataObject%2A> a vrátí ukazatel na členskou funkci <xref:System.Windows.Forms.IDataObject> rozhraní. Toto rozhraní pak jde dotazovat pro formát data a používá se k načtení skutečná data.
+Následující příklad kódu <xref:System.Windows.Forms.Clipboard.GetDataObject%2A> používá členská funkce k <xref:System.Windows.Forms.IDataObject> vrácení ukazatele do rozhraní. Toto rozhraní pak může být dotazován na formát dat a slouží k načtení skutečných dat.
 
 ### <a name="example"></a>Příklad
 
@@ -286,9 +286,9 @@ using namespace System::Windows::Forms;
 }
 ```
 
-## <a name="retrieve_current"></a> Načtení aktuálního jména uživatele
+## <a name="retrieve-the-current-username"></a><a name="retrieve_current"></a>Načíst aktuální uživatelské jméno
 
-Následující příklad kódu ukazuje načítání aktuální uživatelské jméno (název uživatel přihlášený Windows). Název je uložen v <xref:System.Environment.UserName%2A> řetězec, který je definován v <xref:System.Environment> oboru názvů.
+Následující příklad kódu ukazuje načtení aktuálního uživatelského jména (jméno uživatele přihlášeného k systému Windows). Název je uložen <xref:System.Environment.UserName%2A> v řetězci, který <xref:System.Environment> je definován v oboru názvů.
 
 ### <a name="example"></a>Příklad
 
@@ -304,9 +304,9 @@ int main()
 }
 ```
 
-## <a name="retrieve_dotnet"></a> Načtení verze rozhraní .NET Framework
+## <a name="retrieve-the-net-framework-version"></a><a name="retrieve_dotnet"></a>Načíst verzi rozhraní .NET Framework
 
-Následující příklad kódu ukazuje, jak určit verzi aktuálně nainstalované rozhraní .NET Framework s <xref:System.Environment.Version%2A> vlastnost, která je ukazatel na <xref:System.Version> objekt, který obsahuje informace o verzi.
+Následující příklad kódu ukazuje, jak určit verzi aktuálně nainstalované rozhraní <xref:System.Environment.Version%2A> .NET Framework s <xref:System.Version> vlastností, což je ukazatel na objekt, který obsahuje informace o verzi.
 
 ### <a name="example"></a>Příklad
 
@@ -331,9 +331,9 @@ int main()
 }
 ```
 
-## <a name="retrieve_local"></a> Načtení názvu místního počítače
+## <a name="retrieve-the-local-machine-name"></a><a name="retrieve_local"></a>Načíst název místního počítače
 
-Následující příklad kódu ukazuje načtení názvu místního počítače (název počítače, protože se zobrazí v síti). Můžete to provést tím, že získáme <xref:System.Environment.MachineName%2A> řetězec, který je definován v <xref:System.Environment> oboru názvů.
+Následující příklad kódu ukazuje načtení názvu místního počítače (název počítače tak, jak je zobrazen v síti). Toho lze dosáhnout získáním <xref:System.Environment.MachineName%2A> řetězce, který <xref:System.Environment> je definován v oboru názvů.
 
 ### <a name="example"></a>Příklad
 
@@ -349,9 +349,9 @@ int main()
 }
 ```
 
-## <a name="retrieve_version"></a> Načtení verze rozhraní Windows
+## <a name="retrieve-the-windows-version"></a><a name="retrieve_version"></a>Načtení verze systému Windows
 
-Následující příklad kódu ukazuje, jak načíst informace o aktuální operační systém platformy a verzi. Tyto informace jsou uloženy v <xref:System.Environment.OSVersion%2A?displayProperty=fullName> vlastnost a skládá se z výčtu, který popisuje verzi Windows v různé podmínky a <xref:System.Environment.Version%2A> objekt, který obsahuje přesně sestavení operačního systému.
+Následující příklad kódu ukazuje, jak načíst informace o platformě a verzi aktuálního operačního systému. Tyto informace jsou <xref:System.Environment.OSVersion%2A?displayProperty=fullName> uloženy ve vlastnosti a skládá se z výčtu, <xref:System.Environment.Version%2A> který popisuje verzi systému Windows v širokém slova smyslu a objekt, který obsahuje přesné sestavení operačního systému.
 
 ### <a name="example"></a>Příklad
 
@@ -391,9 +391,9 @@ int main()
 }
 ```
 
-## <a name="retrieve_time"></a> Načtení doby uplynulé od spuštění
+## <a name="retrieve-time-elapsed-since-startup"></a><a name="retrieve_time"></a>Načíst čas uplynulý od spuštění
 
-Následující příklad kódu ukazuje, jak určit počet impulsů nebo počet milisekund uplynulých od Windows spustil. Tato hodnota bude uložena v <xref:System.Environment.TickCount%2A?displayProperty=fullName> člena a protože je to hodnota 32-bit, resetuje na nulu přibližně každých 24.9 dnů.
+Následující příklad kódu ukazuje, jak určit počet značek nebo počet milisekund, které uplynuly od spuštění systému Windows. Tato hodnota je <xref:System.Environment.TickCount%2A?displayProperty=fullName> uložena v členu a protože se jedná o 32bitovou hodnotu, obnoví se přibližně každých 24,9 dne na nulu.
 
 ### <a name="example"></a>Příklad
 
@@ -420,9 +420,9 @@ int main( )
 }
 ```
 
-## <a name="store_text"></a> Store textu do schránky
+## <a name="store-text-in-the-clipboard"></a><a name="store_text"></a>Uložení textu do schránky
 
-Následující příklad kódu používá <xref:System.Windows.Forms.Clipboard> definované v objektu <xref:System.Windows.Forms> obor názvů pro uložení řetězce. Tento objekt obsahuje dva členské funkce: <xref:System.Windows.Forms.Clipboard.SetDataObject%2A> a <xref:System.Windows.Forms.Clipboard.GetDataObject%2A>. Data jsou uložena ve schránce odesláním jakéhokoli objektu odvozeného od <xref:System.Object> k <xref:System.Windows.Forms.Clipboard.SetDataObject%2A>.
+Následující příklad kódu <xref:System.Windows.Forms.Clipboard> používá objekt <xref:System.Windows.Forms> definovaný v oboru názvů k uložení řetězce. Tento objekt poskytuje dvě <xref:System.Windows.Forms.Clipboard.SetDataObject%2A> <xref:System.Windows.Forms.Clipboard.GetDataObject%2A>členské funkce: a . Data jsou uložena ve schránce odesláním <xref:System.Object> <xref:System.Windows.Forms.Clipboard.SetDataObject%2A>libovolného objektu odvozeného do aplikace .
 
 ### <a name="example"></a>Příklad
 
@@ -451,9 +451,9 @@ using namespace System::Windows::Forms;
 }
 ```
 
-## <a name="write_data"></a> Zápis dat do registru Windows
+## <a name="write-data-to-the-windows-registry"></a><a name="write_data"></a>Zápis dat do registru systému Windows
 
-Následující příklad kódu používá <xref:Microsoft.Win32.Registry.CurrentUser> klávesy vytvořte instanci zapisovat <xref:Microsoft.Win32.RegistryKey> třída odpovídající **softwaru** klíč. <xref:Microsoft.Win32.RegistryKey.CreateSubKey%2A> Metody se pak použije k vytvoření nového klíče a přidejte do dvojic klíč/hodnota.
+Následující příklad kódu <xref:Microsoft.Win32.Registry.CurrentUser> používá klíč k vytvoření zapisovatelné instance <xref:Microsoft.Win32.RegistryKey> třídy odpovídající klíči **Software.** Metoda <xref:Microsoft.Win32.RegistryKey.CreateSubKey%2A> se pak používá k vytvoření nového klíče a přidání do párů klíč/hodnota.
 
 ### <a name="example"></a>Příklad
 
@@ -503,12 +503,12 @@ int main()
 
 ### <a name="remarks"></a>Poznámky
 
-Můžete použít pro přístup k registru pomocí rozhraní .NET Framework <xref:Microsoft.Win32.Registry> a <xref:Microsoft.Win32.RegistryKey> třídy, které jsou definovány v <xref:Microsoft.Win32> oboru názvů. **Registru** třídy je kontejner pro statické instance <xref:Microsoft.Win32.RegistryKey> třídy. Každá instance představuje kořenový uzel registru. Instance jsou <xref:Microsoft.Win32.Registry.ClassesRoot>, <xref:Microsoft.Win32.Registry.CurrentConfig>, <xref:Microsoft.Win32.Registry.CurrentUser>, <xref:Microsoft.Win32.Registry.LocalMachine>, a <xref:Microsoft.Win32.Registry.Users>.
+Rozhraní .NET Framework můžete použít pro <xref:Microsoft.Win32.Registry> přístup <xref:Microsoft.Win32.RegistryKey> k registru s třídami a, které jsou definovány <xref:Microsoft.Win32> v oboru názvů. Třída **Registry** je kontejner pro statické <xref:Microsoft.Win32.RegistryKey> instance třídy. Každá instance představuje kořenový uzel registru. Instance <xref:Microsoft.Win32.Registry.ClassesRoot>jsou , <xref:Microsoft.Win32.Registry.CurrentConfig> <xref:Microsoft.Win32.Registry.CurrentUser>, <xref:Microsoft.Win32.Registry.LocalMachine>, <xref:Microsoft.Win32.Registry.Users>, a .
 
 ## <a name="related-sections"></a>Související oddíly
 
 <xref:System.Environment>
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Programování pro .NET v jazyce C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
