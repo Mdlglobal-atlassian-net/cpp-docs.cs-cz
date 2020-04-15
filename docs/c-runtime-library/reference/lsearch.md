@@ -1,8 +1,9 @@
 ---
 title: _lsearch
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _lsearch
+- _o__lsearch
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -30,16 +32,16 @@ helpviewer_keywords:
 - searching, linear
 - lsearch function
 ms.assetid: 8200f608-159a-46f0-923b-1a37ee1af7e0
-ms.openlocfilehash: 6dc610c4ab120d81bfb2b3b5e64a54a104bea97f
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: a6ef3d86ffe8f03da34d4a374bddda1452815672
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79438141"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81341638"
 ---
 # <a name="_lsearch"></a>_lsearch
 
-Provede lineární hledání hodnoty. Pokud se nenajde, přidá se na konec seznamu. K dispozici je bezpečnější verze této funkce; viz [_lsearch_s](lsearch-s.md).
+Provádí lineární hledání hodnoty; přidá na konec seznamu, pokud není nalezen. K dispozici je bezpečnější verze této funkce. viz [_lsearch_s](lsearch-s.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -59,36 +61,38 @@ void *_lsearch(
 Objekt, který chcete vyhledat.
 
 *base*<br/>
-Ukazatel na základ pole, které má být prohledáno.
+Ukazatel na základnu pole, které mají být prohledány.
 
-*Automatické*<br/>
-Počet elementů.
+*Číslo*<br/>
+Počet prvků.
 
-*Délk*<br/>
-Šířka každého elementu pole.
+*Šířka*<br/>
+Šířka každého prvku pole.
 
-*porovnán*<br/>
-Ukazatel na srovnávací rutinu. První parametr je ukazatel na klíč pro hledání. Druhý parametr je ukazatel na prvek pole, který má být porovnán s klíčem.
+*Porovnat*<br/>
+Ukazatel na rutinu porovnání. První parametr je ukazatel na klíč pro vyhledávání. Druhý parametr je ukazatel na prvek pole, který má být porovnán s klíčem.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Pokud je klíč nalezen, **_lsearch** vrátí ukazatel na prvek pole na *bázi Base* , který odpovídá *klíči*. Pokud klíč nebyl nalezen, **_lsearch** vrátí ukazatel na nově přidanou položku na konci pole.
+Pokud je klíč nalezen, **_lsearch** vrátí ukazatel na prvek pole na *základně,* který odpovídá *klíči*. Pokud klíč nebyl nalezen, **_lsearch** vrátí ukazatel na nově přidanou položku na konci pole.
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce **_lsearch** provede lineární hledání *klíč* hodnoty v poli *číselných* prvků, přičemž každý z nich má *šířku* . Na rozdíl od **bSearch**nevyžaduje **_lsearch** pole k řazení. Pokud se *klíč* nenajde, **_lsearch** ho přidá na konec pole a zvýší *číslo*.
+Funkce **_lsearch** provádí lineární hledání *klíče* hodnoty v poli *číselných* prvků, každý z *šířky* bajtů. Na rozdíl od **bsearch** **_lsearch** nevyžaduje řazení pole. Pokud *klíč* nebyl nalezen, **_lsearch** jej přidá na konec pole a přírůstky *číslo*.
 
-Argument *Compare* je ukazatel na uživatelsky zadanou rutinu, která porovná dva prvky pole a vrátí hodnotu určující jejich relaci. **_lsearch** volá rutinu *porovnání* jednou nebo vícekrát během hledání a předá ukazatel na dva prvky pole při každém volání. *porovnání* musí porovnat prvky a vracet buď nenulovou hodnotu (což znamená, že prvky jsou rozdílné) nebo 0 (což znamená, že prvky jsou identicky).
+Argument *porovnání* je ukazatel na rutinu dodanou uživatelem, která porovnává dva prvky pole a vrací hodnotu určující jejich vztah. **_lsearch** volá *porovnání* rutiny jednou nebo vícekrát během hledání, předávání ukazatelů na dva prvky pole na každé volání. *porovnat* musí porovnat prvky a vrátit buď nenulovou (což znamená, že prvky jsou různé) nebo 0 (což znamená, že prvky jsou identické).
 
-Tato funkce ověří své parametry. Pokud je **hodnota** *Compare*, *klíč* nebo *číslo* null nebo pokud je hodnota *Base* **null** a *číslo* je nenulové, nebo pokud je *Šířka* menší než nula, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, **errno** je nastaven na **EINVAL** a funkce vrátí **hodnotu null**.
+Tato funkce ověřuje její parametry. Pokud *je hodnota porovnání*, *klíč* nebo *číslo* **null**nebo pokud je *hodnota* **NULL** a *číslo* je nenulová nebo pokud je *šířka* menší než nula, je vyvolána neplatná obslužná rutina parametru, jak je popsáno v [parametru Validation](../../c-runtime-library/parameter-validation.md). Pokud je spuštění povoleno pokračovat, **je chybné číslo** nastaveno na **hodnotu EINVAL** a funkce vrátí **hodnotu NULL**.
+
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_lsearch**|\<Search. h >|
+|**_lsearch**|\<search.h>|
 
-Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -134,7 +138,7 @@ wordlist after _lsearch: hello thanks bye extra
 
 ## <a name="see-also"></a>Viz také
 
-[Vyhledávání a třídění](../../c-runtime-library/searching-and-sorting.md)<br/>
+[Vyhledávání a řazení](../../c-runtime-library/searching-and-sorting.md)<br/>
 [bsearch](bsearch.md)<br/>
 [_lfind](lfind.md)<br/>
 [_lsearch_s](lsearch-s.md)<br/>

@@ -7,32 +7,32 @@ helpviewer_keywords:
 - /Zc:ternary
 - Zc:ternary
 - -Zc:ternary
-ms.openlocfilehash: 5c38a09b92b4173ca962412a413abc283db590ff
-ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.openlocfilehash: 7c95f061e195ccf7fef8a6a21d193b257baa5f39
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70927496"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81335679"
 ---
 # <a name="zcternary-enforce-conditional-operator-rules"></a>/Zc:ternary (vynucení pravidel podmiňovacího operátoru)
 
-Povolte vynucování C++ standardních pravidel pro typy a typ const nebo volatile (CV) pro druhý a třetí operandy ve výrazu podmíněného operátoru.
+Povolit vynucení c++ standardní pravidla pro typy a const nebo volatile (cv) kvalifikace druhého a třetího operandů ve výrazu podmíněného operátoru.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **/Zc:ternary**[ **-** ]
+> **/Zc:ternární****-**[ ]
 
 ## <a name="remarks"></a>Poznámky
 
-Počínaje verzí Visual Studio 2017 kompilátor podporuje C++ chování standardního *podmíněného operátoru* ( **?:** ). Je také označován jako *Ternární operátor*. Standard C++ vyžaduje, aby Ternární operand splňoval jednu ze tří podmínek: Operandy musí být stejného typu a **const** nebo **volatile** (kvalifikace-CV), nebo pouze jeden operand musí být jednoznačně převeden na stejný typ a kvalifikace CV jako druhý. Nebo jeden nebo oba operandy musí být výrazem throw. Ve verzích před Visual Studio 2017 verze 15,5 kompilátor povolil převody, které jsou považovány za dvojznačné standardem.
+Počínaje Visual Studio 2017 kompilátor podporuje c++ standardní *podmíněný operátor* (**?:**) chování. To je také známé jako *ternární operátor*. C++ Standard vyžaduje ternární operandy splňují jednu ze tří podmínek: operandy musí být stejného typu a **const** nebo **těkavé** kvalifikace (cv-kvalifikace), nebo pouze jeden operand musí být jednoznačně převoditelný na stejný typ a cv-kvalifikace jako ostatní. Nebo jeden nebo oba operandy musí být throw výraz. Ve verzích před Visual Studio 2017 verze 15.5 kompilátor povolené převody, které jsou považovány za nejednoznačné standardem.
 
-Je-li zadána možnost **/Zc: Ternární** , kompilátor odpovídá standardu. Odmítne kód, který nesplňuje pravidla pro odpovídající typy a kvalifikaci CV druhého a třetího operandu.
+Pokud je zadána možnost **/Zc:ternary,** kompilátor odpovídá standardu. Odmítne kód, který nesplňuje pravidla pro odpovídající typy a cv-kvalifikace druhého a třetího operandů.
 
-Možnost **/Zc: Ternární** je ve výchozím nastavení v aplikaci Visual Studio 2017 vypnutá. Použijte parametr **/Zc: Ternární** pro povolení vyhovujícího chování, nebo **/Zc: Ternární-** pro explicitní určení předchozího nevyhovujícího chování kompilátoru. Možnost [/Permissive-](permissive-standards-conformance.md) implicitně povoluje tuto možnost, ale je možné ji přepsat pomocí příkazu **/Zc: Ternární-** .
+Možnost **/Zc:ternary** je ve výchozím nastavení vypnutá v sadě Visual Studio 2017. Pomocí **/Zc:ternary** povolte chování přizpůsobení nebo **/Zc:ternary-** explicitně určit předchozí chování kompilátoru nevyhovující. [Možnost /tolerantní-](permissive-standards-conformance.md) implicitně umožňuje tuto možnost, ale může být přepsána pomocí **/Zc:ternary-**.
 
 ### <a name="examples"></a>Příklady
 
-Tento příklad ukazuje, jak třída, která poskytuje neexplicitní inicializaci z typu a převod na typ, může vést k nejednoznačným převodům. Tento kód je ve výchozím nastavení přijat kompilátorem, ale odmítnut, pokud je zadán parametr **/Zc: Ternární** nebo **/Permissive-** .
+Tato ukázka ukazuje, jak může třída, která poskytuje neexplicitní inicializaci z typu, tak převod na typ vést k nejednoznačným převodům. Tento kód je ve výchozím nastavení přijat kompilátorem, ale odmítnut, když je zadán **/Zc:ternary** nebo **/tolerantní-** .
 
 ```cpp
 // zcternary1.cpp
@@ -56,9 +56,9 @@ int main()
 }
 ```
 
-Chcete-li tento kód opravit, proveďte explicitní přetypování na preferovaný běžný typ nebo Zabraňte jednomu směru převodu typu. Můžete zachovat, aby kompilátor shodoval s převodem typu, a to tak, že převod bude explicitní.
+Chcete-li tento kód opravit, vytvořte explicitní přetypování na upřednostňovaný běžný typ nebo zabraňte jednomu směru převodu typu. Kompilátor může zabránit v porovnání převodu typu tím, že převod explicitní.
 
-Důležitou výjimkou z tohoto obecného vzoru je, že typ operandů je jedním z typů řetězců zakončených hodnotou null, například `const char*`, `const char16_t*`a tak dále. Můžete také reprodukování efektu s typy polí a typy ukazatelů, na které se Decay. Chování, když `?:` je skutečný druhý nebo třetí operand řetězcovým literálem odpovídajícího typu, závisí na použitém jazykovém standardu. C++ 17 změnil sémantiku tohoto případu z C++ 14. V důsledku toho kompilátor akceptuje kód v následujícím příkladu v rámci výchozího **/std: c++ 14**, ale při zadání **/std: c++ 17**se ho odmítne.
+Důležitou výjimkou z tohoto společného vzoru je, pokud je typ operandů jedním `const char*`z `const char16_t*`typů řetězců ukončených null, například , a tak dále. Můžete také reprodukovat efekt s typy polí a typy ukazatelů, které se rozkládají. Chování, když skutečný druhý nebo `?:` třetí operand do je řetězec literál odpovídající typ závisí na použité matné normy jazyka. C++17 změnil sémantiku pro tento případ z C++14. V důsledku toho kompilátor přijme kód v následujícím příkladu pod výchozí **/std:c++14**, ale odmítne jej při zadání **/std:c++ 17**.
 
 ```cpp
 // zcternary2.cpp
@@ -80,7 +80,7 @@ int main()
 
 Chcete-li tento kód opravit, přetypujte jeden z operandů explicitně.
 
-V sekci **/Zc: Ternární**kompilátor odmítne podmíněné operátory, kde jeden z argumentů je typu **void**a druhý není výrazem throw. Běžné použití tohoto vzoru je v makrech podobných výrazu:
+Pod **/Zc:ternary**kompilátor odmítne podmíněné operátory, kde jeden z argumentů je typu **void**a druhý není výraz throw. Běžné použití tohoto vzoru je v ASSERT-jako makra:
 
 ```cpp
 // zcternary3.cpp
@@ -97,9 +97,9 @@ int main()
 }
 ```
 
-Typickým řešením je nahradit argument, který není void, pomocí `void()`.
+Typickým řešením je nahradit neprázdný `void()`argument .
 
-Tento příklad ukazuje kód, který generuje chybu v rámci parametru **/Zc: Ternární** a **/Zc: Ternární-** :
+Tato ukázka zobrazuje kód, který generuje chybu pod **/Zc:ternary** a **/Zc:ternary-**:
 
 ```cpp
 // zcternary4.cpp
@@ -114,14 +114,14 @@ int main() {
 }
 ```
 
-Tento kód dříve poskytl tuto chybu:
+Tento kód dříve dal tuto chybu:
 
 ```Output
 error C2446: ':': no conversion from 'foo::<lambda_f6cd18702c42f6cd636bfee362b37033>' to 'foo::<lambda_717fca3fc65510deea10bc47e2b06be4>'
 note: No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
 ```
 
-Pomocí parametru **/Zc: Ternární**se důvod selhání zruší. K vygenerování každého výrazu lambda lze použít kteroukoli z několika konvencí volání definovaných implementací. Kompilátor ale nemá žádné pravidlo předvolby, které by bylo možné rozlišit možné signatury lambda. Nový výstup vypadá takto:
+S **/Zc:ternary**, důvod selhání se stává jasnější. Ke generování každého lambda lze použít libovolný z několika konvencí volání definovaných implementací. Kompilátor však nemá žádné pravidlo preference, které by rozluštou možné lambda podpisy. Nový výstup vypadá takto:
 
 ```Output
 error C2593: 'operator ?' is ambiguous
@@ -132,7 +132,7 @@ note: or       'built-in C++ operator?(bool (__vectorcall *)(int,int), bool (__v
 note: while trying to match the argument list '(foo::<lambda_717fca3fc65510deea10bc47e2b06be4>, foo::<lambda_f6cd18702c42f6cd636bfee362b37033>)'
 ```
 
-Společný zdroj problémů nalezený pomocí **/Zc: Ternární** pochází z podmíněných operátorů používaných v meta programování šablon. Některé typy výsledků se mění v rámci tohoto přepínače. Následující příklad ukazuje dva případy, kde **/Zc: Ternární** mění typ výsledku podmíněného výrazu v nemeta-programovacím kontextu:
+Běžný medailon problémy nalezené **parametrem /Zc:ternary** pochází z podmíněných operátorů používaných v metaprogramování šablony. Některé typy výsledků se v rámci tohoto přepínače mění. Následující příklad ukazuje dva případy, kdy **/Zc:ternary** změní typ výsledku podmíněného výrazu v kontextu bez metaprogramování:
 
 ```cpp
 // zcternary5.cpp
@@ -147,18 +147,18 @@ int main(int argc, char**) {
 }
 ```
 
-Typickou opravou je použití `std::remove_reference` vlastnosti u typu výsledku, kde je to potřeba k zachování starého chování.
+Typická oprava je `std::remove_reference` použít vlastnost na typ výsledku, kde je potřeba zachovat staré chování.
 
-Další informace o problémech s kompatibilitou ve vizuálu C++najdete v tématu [nestandardní chování](../../cpp/nonstandard-behavior.md).
+Další informace o problémech s kondenzací v jazyce Visual C++ naleznete [v tématu Nestandardní chování](../../cpp/nonstandard-behavior.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Nastavení tohoto parametru kompilátoru ve vývojovém prostředí Visual Studio
 
-1. Otevřete dialogové okno **stránky vlastností** projektu. Podrobnosti najdete v tématu [nastavení C++ vlastností kompilátoru a sestavení v sadě Visual Studio](../working-with-project-properties.md).
+1. Otevřete dialogové okno **Stránky vlastností** projektu. Podrobnosti naleznete v [tématu Nastavení kompilátoru jazyka C++ a vlastnosti sestavení v sadě Visual Studio](../working-with-project-properties.md).
 
-1. Vyberte stránku vlastností **Konfigurace** > **C/C++**  > **příkazový řádek** .
+1. Vyberte stránku **vlastností Vlastnosti** > konfigurace**C/C++** > **.**
 
-1. Upravte vlastnost **Další možnosti** tak, aby zahrnovala **/Zc: Ternární** nebo **/Zc: Ternární-** a pak klikněte na **tlačítko OK**.
+1. Upravte vlastnost **Další možnosti** tak, aby **zahrnovala parametr /Zc:ternary** nebo **/Zc:ternary-** a pak zvolte **OK**.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [/Zc (shoda)](zc-conformance.md)

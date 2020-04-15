@@ -1,5 +1,5 @@
 ---
-title: IOleInPlaceActiveObjectImpl Class
+title: Třída IOleInPlaceActiveObjectImpl
 ms.date: 11/04/2016
 f1_keywords:
 - IOleInPlaceActiveObjectImpl
@@ -16,19 +16,19 @@ helpviewer_keywords:
 - ActiveX controls [C++], communication between container and control
 - IOleInPlaceActiveObject, ATL implementation
 ms.assetid: 44e6cc6d-a2dc-4187-98e3-73cf0320dea9
-ms.openlocfilehash: f52638c8a28652cc958ebb3d774319ab37a3c46d
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: b39ba2845a5483444dac53d1616654e902969c77
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69495763"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81326590"
 ---
-# <a name="ioleinplaceactiveobjectimpl-class"></a>IOleInPlaceActiveObjectImpl Class
+# <a name="ioleinplaceactiveobjectimpl-class"></a>Třída IOleInPlaceActiveObjectImpl
 
-Tato třída poskytuje metody pro pomoc s komunikací mezi místně umístěným ovládacím prvkem a jeho kontejnerem.
+Tato třída poskytuje metody pro usnadnění komunikace mezi místním ovládacím prvkem a jeho kontejnerem.
 
 > [!IMPORTANT]
->  Tato třída a její členové nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime.
+> Tuto třídu a její členy nelze použít v aplikacích, které se spouštějí v prostředí Windows Runtime.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -40,27 +40,27 @@ class IOleInPlaceActiveObjectImpl
 #### <a name="parameters"></a>Parametry
 
 *T*<br/>
-Vaše třída, která je `IOleInPlaceActiveObjectImpl`odvozena z.
+Vaše třída, odvozená z `IOleInPlaceActiveObjectImpl`.
 
 ## <a name="members"></a>Členové
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[IOleInPlaceActiveObjectImpl::ContextSensitiveHelp](#contextsensitivehelp)|Povolí kontextovou Nápověda. Implementace ATL Vrátí E_NOTIMPL.|
-|[IOleInPlaceActiveObjectImpl::EnableModeless](#enablemodeless)|Umožňuje používat nemodální dialogová okna. Implementace ATL vrací S_OK.|
-|[IOleInPlaceActiveObjectImpl::GetWindow](#getwindow)|Získá popisovač okna.|
-|[IOleInPlaceActiveObjectImpl::OnDocWindowActivate](#ondocwindowactivate)|Upozorní ovládací prvek, když se aktivuje nebo deaktivuje okno dokumentu kontejneru. Implementace ATL vrací S_OK.|
-|[IOleInPlaceActiveObjectImpl::OnFrameWindowActivate](#onframewindowactivate)|Upozorní ovládací prvek, když se aktivuje nebo deaktivuje okno rámce nejvyšší úrovně kontejneru. Implementace ATL vrátí|
-|[IOleInPlaceActiveObjectImpl::ResizeBorder](#resizeborder)|Informuje ovládací prvek, který potřebuje pro změnu velikosti ohraničení. Implementace ATL vrací S_OK.|
-|[IOleInPlaceActiveObjectImpl::TranslateAccelerator](#translateaccelerator)|Procesy – klíčové zprávy z kontejneru v nabídce procesy Implementace ATL Vrátí E_NOTIMPL.|
+|[iOleInPlaceActiveObjectImpl::kontextová nápověda](#contextsensitivehelp)|Umožňuje kontextovou nápovědu. Implementace ATL vrátí E_NOTIMPL.|
+|[IOleInPlaceActiveObjectImpl::EnableModeless](#enablemodeless)|Povolí nemodální dialogová okna. Implementace ATL vrátí S_OK.|
+|[iOleInplaceActiveObjectImpl::GetWindow](#getwindow)|Získá popisovač okna.|
+|[iOleInPlaceActiveObjectImpl::OndocWindowActivate](#ondocwindowactivate)|Upozorní ovládací prvek, když je okno dokumentu kontejneru aktivováno nebo deaktivováno. Implementace ATL vrátí S_OK.|
+|[iOleInPlaceActiveObjectImpl::OnFrameWindowActivate](#onframewindowactivate)|Upozorní ovládací prvek, když je aktivováno nebo deaktivováno okno rámce nejvyšší úrovně kontejneru. Implementace ATL vrací|
+|[IOleInPlaceActiveObjectImpl::Změna velikostiOhraničení](#resizeborder)|Informuje ovládací prvek, který potřebuje ke změně velikosti svých hranic. Implementace ATL vrátí S_OK.|
+|[IOleInPlaceActiveObjectImpl::TranslateAccelerator](#translateaccelerator)|Zpracuje zprávy s klíčem akcelerátoru nabídky z kontejneru. Implementace ATL vrátí E_NOTIMPL.|
 
 ## <a name="remarks"></a>Poznámky
 
-Rozhraní [IOleInPlaceActiveObject](/windows/win32/api/oleidl/nn-oleidl-ioleinplaceactiveobject) pomáhá komunikovat mezi místně umístěným ovládacím prvkem a jeho kontejnerem. například komunikace s aktivním stavem ovládacího prvku a kontejneru a informování ovládacího prvku, který potřebuje změnit velikost samotného. Třída `IOleInPlaceActiveObjectImpl` poskytuje výchozí `IOleInPlaceActiveObject` implementaci a podporuje `IUnknown` odesláním informací do zařízení výpisu paměti v sestaveních pro ladění.
+[Rozhraní IOleInPlaceActiveObject](/windows/win32/api/oleidl/nn-oleidl-ioleinplaceactiveobject) pomáhá komunikaci mezi ovládacím prvkem na místě a jeho kontejnerem; například komunikace aktivnístav ovládacího prvku a kontejneru a informování ovládacího prvku, který potřebuje změnit velikost sám. Třída `IOleInPlaceActiveObjectImpl` poskytuje výchozí `IOleInPlaceActiveObject` implementaci `IUnknown` a podporuje odesíláním informací do zařízení s výpisem stavu paměti v sestaveníladění.
 
-**Související články** [Kurz ATL](../../atl/active-template-library-atl-tutorial.md), [Vytvoření projektu ATL](../../atl/reference/creating-an-atl-project.md)
+**Související články** [ATL Výuka](../../atl/active-template-library-atl-tutorial.md), [Vytvoření projektu ATL](../../atl/reference/creating-an-atl-project.md)
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -70,11 +70,11 @@ Rozhraní [IOleInPlaceActiveObject](/windows/win32/api/oleidl/nn-oleidl-ioleinpl
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** atlctl. h
+**Záhlaví:** atlctl.h
 
-##  <a name="contextsensitivehelp"></a>  IOleInPlaceActiveObjectImpl::ContextSensitiveHelp
+## <a name="ioleinplaceactiveobjectimplcontextsensitivehelp"></a><a name="contextsensitivehelp"></a>iOleInPlaceActiveObjectImpl::kontextová nápověda
 
-Povolí kontextovou Nápověda.
+Umožňuje kontextovou nápovědu.
 
 ```
 HRESULT ContextSensitiveHelp(BOOL fEnterMode);
@@ -86,11 +86,11 @@ Vrátí E_NOTIMPL.
 
 ### <a name="remarks"></a>Poznámky
 
-Viz [IOleWindow:: ContextSensitiveHelp](/windows/win32/api/oleidl/nf-oleidl-iolewindow-contextsensitivehelp) v Windows SDK.
+Viz [IOleWindow::ContextSensitiveHelp](/windows/win32/api/oleidl/nf-oleidl-iolewindow-contextsensitivehelp) v sadě Windows SDK.
 
-##  <a name="enablemodeless"></a>  IOleInPlaceActiveObjectImpl::EnableModeless
+## <a name="ioleinplaceactiveobjectimplenablemodeless"></a><a name="enablemodeless"></a>IOleInPlaceActiveObjectImpl::EnableModeless
 
-Umožňuje používat nemodální dialogová okna.
+Povolí nemodální dialogová okna.
 
 ```
 HRESULT EnableModeless(BOOL fEnable);
@@ -98,15 +98,15 @@ HRESULT EnableModeless(BOOL fEnable);
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrací hodnotu S_OK.
+Vrátí S_OK.
 
 ### <a name="remarks"></a>Poznámky
 
-Viz [IOleInPlaceActiveObject:: EnableModeless](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceactiveobject-enablemodeless) v Windows SDK.
+Viz [IOleInPlaceActiveObject::EnableModeless](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceactiveobject-enablemodeless) v sadě Windows SDK.
 
-##  <a name="getwindow"></a>  IOleInPlaceActiveObjectImpl::GetWindow
+## <a name="ioleinplaceactiveobjectimplgetwindow"></a><a name="getwindow"></a>iOleInplaceActiveObjectImpl::GetWindow
 
-Kontejner volá tuto funkci, aby získala popisovač okna ovládacího prvku.
+Kontejner volá tuto funkci získat popisovač okna ovládacího prvku.
 
 ```
 HRESULT GetWindow(HWND* phwnd);
@@ -114,13 +114,13 @@ HRESULT GetWindow(HWND* phwnd);
 
 ### <a name="remarks"></a>Poznámky
 
-Některé kontejnery nebudou fungovat s ovládacím prvkem, který byl bez okna, i v případě, že je aktuálně okna. V případě implementace knihovny ATL, pokud `CComControl::m_bWasOnceWindowless` je datový člen pravdivý, vrátí funkce E_FAIL. V opačném \* případě, pokud *phwnd* není `GetWindow` null, přiřadí *phwnd* datovému členu `m_hWnd` třídy ovládacího prvku a vrátí hodnotu S_OK.
+Některé kontejnery nebudou fungovat s ovládacím prvkem, který byl bez oken, i v případě, že je aktuálně windowed. V implementaci ATL, pokud `CComControl::m_bWasOnceWindowless` je datový člen TRUE, funkce vrátí E_FAIL. V opačném \* případě pokud *fwnd* není NULL, `GetWindow` přiřadí *fwnd* do datového člena `m_hWnd` třídy ovládacího prvku a vrátí S_OK.
 
-Viz [IOleWindow:: GetWindow](/windows/win32/api/oleidl/nf-oleidl-iolewindow-getwindow) v Windows SDK.
+Viz [IOleWindow::GetWindow](/windows/win32/api/oleidl/nf-oleidl-iolewindow-getwindow) v sadě Windows SDK.
 
-##  <a name="ondocwindowactivate"></a>  IOleInPlaceActiveObjectImpl::OnDocWindowActivate
+## <a name="ioleinplaceactiveobjectimplondocwindowactivate"></a><a name="ondocwindowactivate"></a>iOleInPlaceActiveObjectImpl::OndocWindowActivate
 
-Upozorní ovládací prvek, když se aktivuje nebo deaktivuje okno dokumentu kontejneru.
+Upozorní ovládací prvek, když je okno dokumentu kontejneru aktivováno nebo deaktivováno.
 
 ```
 HRESULT OnDocWindowActivate(BOOL fActivate);
@@ -128,15 +128,15 @@ HRESULT OnDocWindowActivate(BOOL fActivate);
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrací hodnotu S_OK.
+Vrátí S_OK.
 
 ### <a name="remarks"></a>Poznámky
 
-Viz [IOleInPlaceActiveObject:: OnDocWindowActivate](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceactiveobject-ondocwindowactivate) v Windows SDK.
+Viz [IOleInPlaceActiveObject::OnDocWindowActivate](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceactiveobject-ondocwindowactivate) v sadě Windows SDK.
 
-##  <a name="onframewindowactivate"></a>  IOleInPlaceActiveObjectImpl::OnFrameWindowActivate
+## <a name="ioleinplaceactiveobjectimplonframewindowactivate"></a><a name="onframewindowactivate"></a>iOleInPlaceActiveObjectImpl::OnFrameWindowActivate
 
-Upozorní ovládací prvek, když se aktivuje nebo deaktivuje okno rámce nejvyšší úrovně kontejneru.
+Upozorní ovládací prvek, když je aktivováno nebo deaktivováno okno rámce nejvyšší úrovně kontejneru.
 
 ```
 HRESULT OnFrameWindowActivate(BOOL fActivate);
@@ -144,15 +144,15 @@ HRESULT OnFrameWindowActivate(BOOL fActivate);
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrací hodnotu S_OK.
+Vrátí S_OK.
 
 ### <a name="remarks"></a>Poznámky
 
-Viz [IOleInPlaceActiveObject:: OnFrameWindowActivate](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceactiveobject-onframewindowactivate) v Windows SDK.
+Viz [IOleInPlaceActiveObject::OnFrameWindowActivate](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceactiveobject-onframewindowactivate) v sadě Windows SDK.
 
-##  <a name="resizeborder"></a>IOleInPlaceActiveObjectImpl::ResizeBorder
+## <a name="ioleinplaceactiveobjectimplresizeborder"></a><a name="resizeborder"></a>IOleInPlaceActiveObjectImpl::Změna velikostiOhraničení
 
-Informuje ovládací prvek, který potřebuje pro změnu velikosti ohraničení.
+Informuje ovládací prvek, který potřebuje ke změně velikosti svých hranic.
 
 ```
 HRESULT ResizeBorder(
@@ -163,15 +163,15 @@ HRESULT ResizeBorder(
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Vrací hodnotu S_OK.
+Vrátí S_OK.
 
 ### <a name="remarks"></a>Poznámky
 
-Viz [IOleInPlaceActiveObject:: ResizeBorder](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceactiveobject-resizeborder) v Windows SDK.
+Viz [IOleInPlaceActiveObject::ResizeBorder](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceactiveobject-resizeborder) v sadě Windows SDK.
 
-##  <a name="translateaccelerator"></a>  IOleInPlaceActiveObjectImpl::TranslateAccelerator
+## <a name="ioleinplaceactiveobjectimpltranslateaccelerator"></a><a name="translateaccelerator"></a>IOleInPlaceActiveObjectImpl::TranslateAccelerator
 
-Procesy – klíčové zprávy z kontejneru v nabídce procesy
+Zpracuje zprávy s klíčem akcelerátoru nabídky z kontejneru.
 
 ```
 HRESULT TranslateAccelerator(LPMSG lpmsg);
@@ -179,18 +179,18 @@ HRESULT TranslateAccelerator(LPMSG lpmsg);
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Tato metoda podporuje následující návratové hodnoty:
+Tato metoda podporuje následující vrácené hodnoty:
 
-S_OK, pokud byla zpráva přeložena úspěšně
+S_OK, pokud byla zpráva úspěšně přeložena.
 
-S_FALSE, pokud nebyla zpráva přeložena.
+S_FALSE, pokud zpráva nebyla přeložena.
 
 ### <a name="remarks"></a>Poznámky
 
-Viz [IOleInPlaceActiveObject:: TranslateAccelerator](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceactiveobject-translateaccelerator) v Windows SDK.
+Viz [IOleInPlaceActiveObject::TranslateAccelerator](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceactiveobject-translateaccelerator) v sadě Windows SDK.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[CComControl – třída](../../atl/reference/ccomcontrol-class.md)<br/>
+[Třída CComControl](../../atl/reference/ccomcontrol-class.md)<br/>
 [Rozhraní ovládacích prvků ActiveX](/windows/win32/com/activex-controls-interfaces)<br/>
 [Přehled třídy](../../atl/atl-class-overview.md)

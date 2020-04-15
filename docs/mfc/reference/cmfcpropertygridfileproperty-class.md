@@ -1,5 +1,5 @@
 ---
-title: CMFCPropertyGridFileProperty Class
+title: CMFCPropertyGridFileProperty – třída
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCPropertyGridFileProperty
@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCPropertyGridFileProperty [MFC], CMFCPropertyGridFileProperty
 ms.assetid: 2bb8b8b4-47fc-4798-bd5e-dc8ea0b4cd9d
-ms.openlocfilehash: 4b64d18a67ea499c202b81481684227200846483
-ms.sourcegitcommit: c3bf94210bdb73be80527166264d49e33784152c
+ms.openlocfilehash: 0ce3321968f0c29ce3b946f6127e4435b531c422
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68821278"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81360585"
 ---
-# <a name="cmfcpropertygridfileproperty-class"></a>CMFCPropertyGridFileProperty Class
+# <a name="cmfcpropertygridfileproperty-class"></a>CMFCPropertyGridFileProperty – třída
 
-`CMFCPropertyGridFileProperty` Třída podporuje položku ovládacího prvku seznamu vlastností, která otevře dialogové okno Výběr souboru.
+Třída `CMFCPropertyGridFileProperty` podporuje položku ovládacího prvku seznamu vlastností, která otevře dialogové okno pro výběr souboru.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -29,35 +29,35 @@ class CMFCPropertyGridFileProperty : public CMFCPropertyGridProperty
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-|Name|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|[CMFCPropertyGridFileProperty::CMFCPropertyGridFileProperty](#cmfcpropertygridfileproperty)|`CMFCPropertyGridFileProperty` Vytvoří objekt.|
+|[CMFCPropertyGridFileProperty::VLASTNOST CMFCPropertyGridFileProperty](#cmfcpropertygridfileproperty)|Vytvoří `CMFCPropertyGridFileProperty` objekt.|
 |`CMFCPropertyGridFileProperty::~CMFCPropertyGridFileProperty`|Destruktor.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Name|Popis|
+|Name (Název)|Popis|
 |----------|-----------------|
-|`CMFCPropertyGridFileProperty::GetThisClass`|Používá se rozhraním, aby se získal ukazatel na objekt [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) , který je přidružený k tomuto typu třídy.|
-|`CMFCPropertyGridFileProperty::OnClickButton`|(Overrides [CMFCPropertyGridProperty::OnClickButton](../../mfc/reference/cmfcpropertygridproperty-class.md#onclickbutton).)|
+|`CMFCPropertyGridFileProperty::GetThisClass`|Používá rozhraní k získání ukazatele na [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objektu, který je přidružen k tomuto typu třídy.|
+|`CMFCPropertyGridFileProperty::OnClickButton`|(Přepíše [CMFCPropertyProperty::OnClickButton](../../mfc/reference/cmfcpropertygridproperty-class.md#onclickbutton).)|
 
 ### <a name="remarks"></a>Poznámky
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
-[CObject](../../mfc/reference/cobject-class.md)
+[CObjekt](../../mfc/reference/cobject-class.md)
 
-[CMFCPropertyGridProperty](../../mfc/reference/cmfcpropertygridproperty-class.md)
+[Vlastnost CMFCPropertyGridProperty](../../mfc/reference/cmfcpropertygridproperty-class.md)
 
-[CMFCPropertyGridFileProperty](../../mfc/reference/cmfcpropertygridfileproperty-class.md)
+[Vlastnost CMFCPropertyGridFileProperty](../../mfc/reference/cmfcpropertygridfileproperty-class.md)
 
 ## <a name="requirements"></a>Požadavky
 
-**Záhlaví:** afxpropertygridctrl. h
+**Záhlaví:** afxpropertygridctrl.h
 
-##  <a name="cmfcpropertygridfileproperty"></a>CMFCPropertyGridFileProperty::CMFCPropertyGridFileProperty
+## <a name="cmfcpropertygridfilepropertycmfcpropertygridfileproperty"></a><a name="cmfcpropertygridfileproperty"></a>CMFCPropertyGridFileProperty::VLASTNOST CMFCPropertyGridFileProperty
 
-`CMFCPropertyGridFileProperty` Vytvoří objekt.
+Vytvoří `CMFCPropertyGridFileProperty` objekt.
 
 ```
 CMFCPropertyGridFileProperty(
@@ -74,44 +74,44 @@ CMFCPropertyGridFileProperty(
 ### <a name="parameters"></a>Parametry
 
 *strName*<br/>
-pro Název vlastnosti
+[v] Název vlastnosti.
 
-*bOpenFileDialog*<br/>
-pro TRUE pro otevření dialogového okna **otevřít soubor** ; FALSE pro otevření dialogového okna **Uložit soubor** .
+*bOtevřítdialog*<br/>
+[v] TRUE pro otevření dialogového okna **Otevřít soubor;** Nepravda pro otevření dialogového okna **Uložit soubor.**
 
-*strFileName*<br/>
-pro Počáteční název souboru
+*Strfilename*<br/>
+[v] Počáteční název souboru.
 
 *lpszDefExt*<br/>
-pro Řetězec jedné nebo více přípon názvů souborů. Výchozí hodnota je NULL.
+[v] Řetězec jedné nebo více přípon názvů souborů. Výchozí hodnota je NULL.
 
 *dwFlags*<br/>
-pro Příznaky dialogových oken Výchozí hodnota je bitová kombinace (nebo) hodnot OFN_HIDEREADONLY a OFN_OVERWRITEPROMPT.
+[v] Příznaky dialogového okna. Výchozí hodnota je bitová kombinace (OR) OFN_HIDEREADONLY a OFN_OVERWRITEPROMPT.
 
-*lpszFilter*<br/>
-pro Řetězec jednoho nebo více filtrů souborů. Výchozí hodnota je NULL.
+*lpszFiltr*<br/>
+[v] Řetězec jednoho nebo více filtrů souborů. Výchozí hodnota je NULL.
 
 *lpszDescr*<br/>
-pro Popis položky vlastnosti Výchozí hodnota je NULL.
+[v] Popis položky vlastnosti. Výchozí hodnota je NULL.
 
 *dwData*<br/>
-pro Data specifická pro aplikaci, která jsou přidružena k položce vlastnosti. Například celé číslo 32 nebo ukazatel na jiná data. Výchozí hodnota je 0.
+[v] Data specifická pro aplikaci, která je přidružena k položce vlastnosti. Například 32bitové celé číslo nebo ukazatel na jiná data. Výchozí hodnota je 0.
 
 ### <a name="return-value"></a>Návratová hodnota
 
 ### <a name="remarks"></a>Poznámky
 
-Úplný seznam dostupných příznaků najdete v tématu [Struktura lpstrFile](/windows/win32/api/commdlg/ns-commdlg-openfilenamew).
+Úplný seznam dostupných příznaků naleznete v tématu [OPENFILENAME structure](/windows/win32/api/commdlg/ns-commdlg-openfilenamew).
 
 ### <a name="example"></a>Příklad
 
-Následující příklad ukazuje, jak vytvořit objekt pomocí konstruktoru `CMFCPropertyGridFileProperty` třídy. Tento příklad je součástí ukázkového [vzorku sady Visual Studio](../../overview/visual-cpp-samples.md).
+Následující příklad ukazuje, jak vytvořit objekt pomocí konstruktoru třídy. `CMFCPropertyGridFileProperty` Tento příklad je součástí [ukázky visual studia](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#22](../../mfc/codesnippet/cpp/cmfcpropertygridfileproperty-class_1.cpp)]
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Graf hierarchie](../../mfc/hierarchy-chart.md)<br/>
 [Třídy](../../mfc/reference/mfc-classes.md)<br/>
-[CMFCPropertyGridCtrl – třída](../../mfc/reference/cmfcpropertygridctrl-class.md)<br/>
+[Třída CMFCPropertyGridCtrl](../../mfc/reference/cmfcpropertygridctrl-class.md)<br/>
 [CMFCPropertyGridProperty – třída](../../mfc/reference/cmfcpropertygridproperty-class.md)

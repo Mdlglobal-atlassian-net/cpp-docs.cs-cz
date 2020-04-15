@@ -10,58 +10,58 @@ helpviewer_keywords:
 - __except keyword [C], in try-except
 - try-catch keyword [C], try-except keyword [C]
 ms.assetid: f76db9d1-fc78-417f-b71f-18e545fc01c3
-ms.openlocfilehash: 9940fdf983f6141c0de207509bb800533b0f1eb8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2ca5299a5ab20b8985a520f25bb654ead0c25e2b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62345809"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81349745"
 ---
 # <a name="try-except-statement-c"></a>try-except – příkaz (C)
 
-**Microsoft Specific**
+**Specifické pro Microsoft**
 
-**Zkuste – s výjimkou** příkaz je rozšířením společnosti Microsoft pro jazyk C, která umožňuje aplikacím získat kontrolu programu, pokud dojde k událostem, které za normálních okolností ukončí provádění. Tyto události jsou nazývány výjimkami a mechanismus, který se výjimkami zabývá, se nazývá strukturované zpracování výjimek.
+Příkaz **try-except** je rozšíření společnosti Microsoft k jazyku C, které umožňuje aplikacím získat kontrolu nad programem, když dojde k událostem, které obvykle ukončí spuštění. Tyto události jsou nazývány výjimkami a mechanismus, který se výjimkami zabývá, se nazývá strukturované zpracování výjimek.
 
-Výjimky mohou být buď hardwaru nebo softwaru založené. I v případech, kdy aplikace nemohou být zotaveny z hardwarových nebo softwarových výjimek, umožňuje strukturované zpracování výjimek zobrazit informace o chybě a zachytit vnitřní stav aplikace pro diagnostiku problému. To je užitečné zejména pro občasné problémy, které nelze snadno reprodukovat.
+Výjimky mohou být založené na hardwaru nebo softwaru. I v případech, kdy aplikace nemohou být zotaveny z hardwarových nebo softwarových výjimek, umožňuje strukturované zpracování výjimek zobrazit informace o chybě a zachytit vnitřní stav aplikace pro diagnostiku problému. To je užitečné zejména pro občasné problémy, které nelze snadno reprodukovat.
 
 ## <a name="syntax"></a>Syntaxe
 
-*s výjimkou příkazu Try*: **__try**  *compound-statement* 
+*try-except-statement*: **__try**  *složený příkaz*
 
-**__except (**  *výraz*  **)**  *compound-statement*
+**__except (***výraz***)** složený*příkaz*      
 
-Složený příkaz za `__try` klauzule je chráněná část. Složený příkaz po klauzuli `__except` je obslužnou rutinou výjimky. Obslužná rutina udává sadu akcí provedených v případě je vyvolána výjimka při provádění chráněné části. Spuštění probíhá následujícím způsobem:
+Složený příkaz za `__try` klauzulí je střežené části. Složený příkaz po klauzuli `__except` je obslužnou rutinou výjimky. Obslužná rutina určuje sadu akcí, které mají být přijata, pokud je vyvolána výjimka během provádění hlídané části. Exekuce probíhá takto:
 
 1. Chráněná část je spuštěna.
 
 1. Nedojde-li za běhu chráněné části k žádné výjimce, pokračuje běh programu příkazem za klauzulí `__except`.
 
-1. Pokud dojde k výjimce za běhu chráněné části nebo v jakékoli rutině chráněná část volá, `__except` výraz je vyhodnocen a vrácená hodnota určuje, jak je výjimka ošetřena. Existují tři hodnoty:
+1. Pokud dojde k výjimce během provádění střežené části nebo v `__except` jakékoli rutině, kterou volá chráněná část, výraz je vyhodnocen a vrácená hodnota určuje způsob zpracování výjimky. Existují tři hodnoty:
 
-   `EXCEPTION_CONTINUE_SEARCH` Výjimka není rozpoznána. Pokračujte ve vyhledávání zásobníkem pro obslužnou rutinu, nejprve obsahující **zkuste – s výjimkou** příkazy, pak u obslužných rutin s druhou nejvyšší prioritou.
+   `EXCEPTION_CONTINUE_SEARCH`Výjimka není rozpoznána. Pokračujte v hledání do zásobníku pro obslužnou rutinu, nejprve pro obsahující **příkazy try-except,** pak pro obslužné rutiny s další nejvyšší prioritou.
 
-   `EXCEPTION_CONTINUE_EXECUTION` Výjimka je rozpoznána, ale vynechat. Program bude pokračovat tam, kde k výjimce došlo.
+   `EXCEPTION_CONTINUE_EXECUTION`Výjimka je rozpoznána, ale zamítnuta. Program bude pokračovat tam, kde k výjimce došlo.
 
-   `EXCEPTION_EXECUTE_HANDLER` Výjimka je rozpoznána. Řízení je převedeno na obslužnou rutinu výjimek pomocí provádí `__except` složený příkaz a potom pokračovat v provádění v místě, se vyskytla výjimka.
+   `EXCEPTION_EXECUTE_HANDLER`Výjimka je rozpoznána. Přeneste řízení na obslužnou rutinu výjimky spuštěním složeného příkazu `__except` a pokračujte v provádění v okamžiku, kdy došlo k výjimce.
 
-Vzhledem k tomu, `__except` výraz je vyhodnocen jako výraz jazyka C, je omezený na jednu hodnotu, operátor podmíněného výrazu nebo operátor čárky. Je-li požadováno rozsáhlejší zpracování, může výraz zavolat rutinu, která vrátí jednu z výše uvedených tří hodnot.
-
-> [!NOTE]
->  Strukturované zpracování výjimek funguje se zdrojovými soubory C a C++. Pro jazyk C++ však není výslovně navrženo. Větší přenositelnost kódu lze zajistit použitím zpracování výjimek jazyka C++. Mechanismus zpracování výjimek jazyka C++ je také mnohem více flexibilní, jelikož dokáže zpracovat výjimky libovolného typu.
+Vzhledem `__except` k tomu, že výraz je vyhodnocen jako výraz C, je omezen na jednu hodnotu, operátor podmíněného výrazu nebo operátor čárky. Je-li požadováno rozsáhlejší zpracování, může výraz zavolat rutinu, která vrátí jednu z výše uvedených tří hodnot.
 
 > [!NOTE]
->  Pro programy v jazyce C++ je třeba použít zpracování výjimek jazyka C++ místo strukturované zpracování výjimek. Další informace najdete v tématu [zpracování výjimek](../cpp/exception-handling-in-visual-cpp.md) v *referenční dokumentace jazyka C++*.
+> Strukturované zpracování výjimek funguje se zdrojovými soubory C a C++. Pro jazyk C++ však není výslovně navrženo. Větší přenositelnost kódu lze zajistit použitím zpracování výjimek jazyka C++. Také mechanismus zpracování výjimek Jazyka C++ je mnohem flexibilnější v tom, že může zpracovávat výjimky libovolného typu.
 
-Každá rutina v aplikaci může mít svůj vlastní obslužné rutiny výjimky. `__except` Výraz spouští v rámci `__try` textu. To znamená, že bude mít přístup k libovolné místní proměnné deklarované existuje.
+> [!NOTE]
+> Pro programy jazyka C++ by mělo být místo strukturovaného zpracování výjimek použito zpracování výjimek jazyka C++. For more information, see [Exception Handling](../cpp/exception-handling-in-visual-cpp.md) in the *C++ Language Reference*.
 
-`__leave` – Klíčové slovo je platný v rámci **zkuste – s výjimkou** blok příkazů. Účinek `__leave` je přechod na konci **zkuste – s výjimkou** bloku. Provádění pokračuje na konci obslužná rutina výjimky. I když `goto` příkaz můžete použít k dosažení stejného výsledku `goto` příkaz způsobí, že odvíjení zásobníku. `__leave` Příkaz je mnohem efektivnější, protože nezahrnuje odvíjení zásobníku.
+Každá rutina v aplikaci může mít vlastní obslužnou rutinu výjimky. Výraz `__except` se provede v rozsahu `__try` těla. To znamená, že má přístup ke všem místním proměnným, které jsou zde deklarovány.
 
-Ukončení **zkuste – s výjimkou** pomocí příkazu `longjmp` funkci run-time je považován za abnormální ukončení. Není povoleno přejít do `__try` příkazu, ale právní přejít mimo něj. Obslužná rutina výjimky není volána, pokud proces je ukončen průběhu provádění příkazu **zkuste – s výjimkou** příkazu.
+Klíčové `__leave` slovo je platné v rámci **try-except** bloku příkazu. Efekt `__leave` je přejít na konec **try-except** bloku. Spuštění pokračuje po ukončení obslužné rutiny výjimky. Přestože `goto` příkaz lze použít k dosažení `goto` stejného výsledku, příkaz způsobí, že unwinding zásobníku. Příkaz `__leave` je efektivnější, protože nezahrnuje odvíjení zásobníku.
+
+Ukončení **příkazu try-except** `longjmp` pomocí funkce run-time je považováno za abnormální ukončení. Je nezákonné skočit do `__try` prohlášení, ale legální skočit z jednoho. Obslužná rutina výjimky není volána, pokud je proces usmrcený uprostřed provádění příkazu **try-except.**
 
 ## <a name="example"></a>Příklad
 
-Tady je příklad obslužné rutiny výjimek a obslužné rutiny ukončení. Zobrazit [příkaz try-finally](../c-language/try-finally-statement-c.md) Další informace o obslužné rutiny ukončení.
+Následuje příklad obslužné rutiny výjimky a obslužné rutiny ukončení. Další informace o obslužných rutinách ukončení naleznete [v příkazu try-finally.](../c-language/try-finally-statement-c.md)
 
 ```
 .
@@ -82,7 +82,7 @@ __try{
 puts("world");
 ```
 
-Toto je výstup z příkladu, s komentářem přidán na pravé straně:
+Toto je výstup z příkladu s komentářem přidaným vpravo:
 
 ```
 hello
@@ -94,8 +94,8 @@ in except           /* transfer control to selected handler */
 world               /* flow out of handler                  */
 ```
 
-**Specifické pro END Microsoft**
+**END Microsoft Specifické**
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[try-except – příkaz](../cpp/try-except-statement.md)
+[try-except Příkaz](../cpp/try-except-statement.md)

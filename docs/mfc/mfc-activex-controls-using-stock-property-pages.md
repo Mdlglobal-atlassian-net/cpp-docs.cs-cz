@@ -15,43 +15,43 @@ helpviewer_keywords:
 - CLSID_CPicturePropPage [MFC]
 - MFC ActiveX controls [MFC], property pages
 ms.assetid: 22638d86-ff3e-4124-933e-54b7c2a25968
-ms.openlocfilehash: b73a027422cfe9cbf03afece400c1b513cace151
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 13a0edb72657c9ffad00dcb909019bdfe4b87e11
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62239332"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81358204"
 ---
 # <a name="mfc-activex-controls-using-stock-property-pages"></a>MFC – ovládací prvky ActiveX: Použití stránek uložených vlastností
 
-Tento článek popisuje, k dispozici pro ovládací prvky ActiveX a způsob jejich použití stránek uložených vlastností.
+Tento článek popisuje stránky vlastností zásob, které jsou k dispozici pro ovládací prvky ActiveX, a jejich použití.
 
 >[!IMPORTANT]
-> ActiveX je starší technologie, která by neměla být používána při novém vývoji. Další informace o moderních technologií, které nahrazují ActiveX naleznete v tématu [ovládací prvky ActiveX](activex-controls.md).
+> ActiveX je starší technologie, která by neměla být použita pro nový vývoj. Další informace o moderních technologiích, které nahrazují ovládací prvky ActiveX, naleznete [v tématu ActiveX Controls](activex-controls.md).
 
-Další informace o použití stránek vlastností v ovládacím prvku ActiveX najdete v následujících článcích:
+Další informace o použití stránek vlastností v ovládacím prvku ActiveX naleznete v následujících článcích:
 
 - [MFC – ovládací prvky ActiveX: Stránky vlastností](../mfc/mfc-activex-controls-property-pages.md)
 
 - [MFC – ovládací prvky ActiveX: Přidání další stránky přizpůsobených vlastností](../mfc/mfc-activex-controls-adding-another-custom-property-page.md)
 
-Knihovna MFC poskytuje tři stránky uložených vlastností pro použití s ovládacími prvky ActiveX: `CLSID_CColorPropPage`, `CLSID_CFontPropPage`, a `CLSID_CPicturePropPage`. Tyto stránky zobrazují uživatelské rozhraní pro základní barvy, písma a vlastnosti obrázku, v uvedeném pořadí.
+Knihovna MFC poskytuje tři stránky vlastností `CLSID_CColorPropPage` `CLSID_CFontPropPage`zásob `CLSID_CPicturePropPage`pro použití s ovládacími prvky ActiveX: , a . Tyto stránky zobrazují uživatelské rozhraní pro základní barvy, písma a vlastnosti obrázku.
 
-Zahrnout tyto stránky vlastností do ovládacího prvku, přidejte svoje ID kódu, který inicializuje ovládacího prvku pole ID stránek vlastností. V následujícím příkladu, tento kód umístěný v souboru implementace ovládacího prvku (. CPP), inicializuje pole tak, aby obsahovala všechny tři stránky uložených vlastností a výchozí stránky vlastností (s názvem `CMyPropPage` v tomto příkladu):
+Chcete-li tyto stránky vlastností začlenit do ovládacího prvku, přidejte jejich ID do kódu, který inicializuje id stránky vlastností ovládacího prvku. V následujícím příkladu tento kód, který se nachází v souboru implementace ovládacího prvku (. CPP), inicializuje pole tak, aby obsahovalo všechny tři `CMyPropPage` stránky vlastností akcií a výchozí stránku vlastností (pojmenovanou v tomto příkladu):
 
 [!code-cpp[NVC_MFC_AxOpt#21](../mfc/codesnippet/cpp/mfc-activex-controls-using-stock-property-pages_1.cpp)]
 
-Všimněte si, že počet stránek vlastností v BEGIN_PROPPAGEIDS – makro je 4. To představuje počet stránek vlastností podporuje ovládací prvek ActiveX.
+Všimněte si, že počet stránek vlastností v makru BEGIN_PROPPAGEIDS je 4. To představuje počet stránek vlastností podporovaných ovládacím prvkem ActiveX.
 
-Po provedení těchto změn znovu sestavte projekt. Ovládací prvek má teď stránek vlastností písma, obrázku a vlastností barev.
+Po provedené mši znovu vytvořte projekt. Ovládací prvek má nyní stránky vlastností pro vlastnosti písma, obrázku a barvy.
 
 > [!NOTE]
->  Pokud stránky uložených vlastností ovládacího prvku nelze získat přístup, může být vzhledem k tomu, že knihovna MFC DLL (MFCxx.DLL) nebyl registrován správně s aktuálním operačním systémem. Tato situace obvykle vzniká v instalaci Visual C++ v části operační systém jiný než ten, který aktuálně běží.
+> Pokud nelze získat přístup ke stránkám vlastností kontrolního skladu, může to být způsobeno tím, že knihovna MFC DLL (MFCxx.DLL) nebyla správně zaregistrována u aktuálního operačního systému. To obvykle vyplývá z instalace visual c++ v operačním systému, který se liší od aktuálně spuštěného operačního systému.
 
 > [!TIP]
->  Pokud vaše stránky uložených vlastností nejsou viditelné (viz předchozí poznámce), zaregistruje knihovnu DLL spuštěním RegSvr32.exe z příkazového řádku pomocí úplný název cesty k souboru DLL.
+> Pokud vaše stránky vlastností stock nejsou viditelné (viz předchozí poznámka), zaregistrujte dll spuštěním RegSvr32.exe z příkazového řádku s úplným názvem cesty k dll.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [MFC – ovládací prvky ActiveX](../mfc/mfc-activex-controls.md)<br/>
 [MFC – ovládací prvky ActiveX: Přidání uložených vlastností](../mfc/mfc-activex-controls-adding-stock-properties.md)

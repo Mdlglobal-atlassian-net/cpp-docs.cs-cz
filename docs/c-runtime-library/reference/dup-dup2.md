@@ -1,9 +1,11 @@
 ---
 title: _dup, _dup2
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _dup
 - _dup2
+- _o__dup
+- _o__dup2
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -31,16 +34,16 @@ helpviewer_keywords:
 - dup2 function
 - _dup function
 ms.assetid: 4d07e92c-0d76-4832-a770-dfec0e7a0cfa
-ms.openlocfilehash: da47d6f040b62906d30107f9036ffa2a3ea05a1c
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 239f857bb40c9609cb6f7ff373295a7a1f8523a9
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70937791"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81348117"
 ---
 # <a name="_dup-_dup2"></a>_dup, _dup2
 
-Vytvoří druhý popisovač souboru pro otevřený soubor ( **_dup**) nebo znovu přiřadí popisovač souboru ( **_dup2**).
+Vytvoří druhý popisovač souboru pro otevřený soubor (**_dup**) nebo znovu přiřadí popisovač souboru (**_dup2**).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -55,23 +58,25 @@ int _dup2( int fd1, int fd2 );
 Popisovače souborů odkazující na otevřený soubor.
 
 *fd2*<br/>
-Jakýkoli popisovač souboru.
+Libovolný popisovač souboru.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**_dup** vrací nový popisovač souboru. **_dup2** vrátí 0 pro indikaci úspěchu. Pokud dojde k chybě, každá funkce vrátí hodnotu-1 a nastaví **errno** na **EBADF** , pokud je popisovač souboru neplatný nebo **EMFILE** , pokud nejsou k dispozici žádné další popisovače souboru. V případě neplatného popisovače souboru funkce také vyvolá obslužnou rutinu neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md).
+**_dup** vrátí nový popisovač souboru. **_dup2** vrátí hodnotu 0, což označuje úspěch. Pokud dojde k chybě, každá funkce vrátí -1 a nastaví **errno** na **EBADF,** pokud je popisovač souboru neplatný, nebo **na EMFILE,** pokud nejsou k dispozici žádné další popisovače souborů. V případě neplatného popisovače souboru funkce také vyvolá obslužnou rutinu neplatného parametru, jak je popsáno v [části Ověření parametru](../../c-runtime-library/parameter-validation.md).
 
-Další informace o těchto a dalších návratových kódech naleznete v tématu [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Další informace o těchto a dalších návratových kódech naleznete [v tématech _doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce **_dup** a **_dup2** přiřadí druhý popisovač souboru s aktuálně otevřeným souborem. Tyto funkce lze použít k přidružení předdefinovaného popisovače souboru, například pro **stdout**, s jiným souborem. Operace se souborem lze provádět pomocí popisovače souboru. Typ přístupu povolený pro soubor není ovlivněn vytvořením nového deskriptoru. **_dup** vrací další dostupný popisovač souboru pro daný soubor. **_dup2** vynutí, aby *fd2* odkazovaly na stejný soubor jako *FD1*. Pokud je *fd2* přidružen k otevřenému souboru v době volání, je tento soubor uzavřen.
+Funkce **_dup** a **_dup2** přidruží popisovač druhého souboru k aktuálně otevřenému souboru. Tyto funkce lze použít k přidružení předdefinovaného popisovače souboru, například popisovače **stdout**, k jinému souboru. Operace se souborem lze provádět pomocí obou popisovačů souborů. Typ přístupu povolený pro soubor není ovlivněn vytvořením nového popisovače. **_dup** vrátí další dostupný popisovač souboru pro daný soubor. **_dup2** *vynutí, aby fd2* odkazoval na stejný soubor jako *fd1*. Pokud *fd2* je přidružen a otevřený soubor v době volání, tento soubor je uzavřen.
 
-**_Dup** i **_dup2** přijímají popisovače souboru jako parametry. Chcete-li předat datový`FILE *`proud () některé z těchto funkcí, použijte [_fileno](fileno.md). Rutina **fileno** vrátí popisovač souboru, který je aktuálně přidružený k danému datovému proudu. Následující příklad ukazuje, jak přidružit **stderr** (definované jako `FILE *` v stdio. h) s popisovačem souboru:
+**_dup** i **_dup2** přijímají popisovače souborů jako parametry. Chcete-li datový`FILE *`proud ( ) předat jedné z těchto funkcí, použijte [_fileno](fileno.md). Rutina **fileno** vrátí popisovač souboru, který je aktuálně přidružen k danému datovému proudu. Následující příklad ukazuje, jak přidružit `FILE *` **stderr** (definované jako v Stdio.h) s popisovačsouboru:
 
 ```C
 int cstderr = _dup( _fileno( stderr ));
 ```
+
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
@@ -80,7 +85,7 @@ int cstderr = _dup( _fileno( stderr ));
 |**_dup**|\<io.h>|
 |**_dup2**|\<io.h>|
 
-Konzola není v aplikacích Univerzální platforma Windows (UWP) podporována. Standardní popisovače streamů, které jsou spojeny s konzolou, **stdin**, **stdout**a **stderr**, musí být přesměrované před tím, než je funkce modulu runtime jazyka C můžou použít v aplikacích pro UWP. Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
+Konzola není podporována v aplikacích univerzální platformy Windows (UPW). Standardní popisovače datového proudu, které jsou přidruženy ke **konzole, stdin**, **stdout**a **stderr**, musí být přesměrovány před c run-time funkce je možné použít v aplikacích UPW. Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -143,9 +148,9 @@ The file 'data' contains:
 This goes to file 'data'
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[I/O nízké úrovně](../../c-runtime-library/low-level-i-o.md)<br/>
+[Vstupně-nosné(v" nízké úrovně](../../c-runtime-library/low-level-i-o.md)<br/>
 [_close](close.md)<br/>
 [_creat, _wcreat](creat-wcreat.md)<br/>
 [_open, _wopen](open-wopen.md)<br/>

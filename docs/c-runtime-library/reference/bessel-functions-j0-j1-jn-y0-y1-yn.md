@@ -1,6 +1,6 @@
 ---
-title: 'Besselovy funkce: _j0, _j1, _jn, _y0, _y1, _yn'
-ms.date: 04/05/2018
+title: 'Funkce: _j0, _j1, _jn, _y0, _y1, _yn'
+ms.date: 4/2/2020
 api_name:
 - _j0
 - _j1
@@ -8,6 +8,12 @@ api_name:
 - _y0
 - _y1
 - _yn
+- _o__j0
+- _o__j1
+- _o__jn
+- _o__y0
+- _o__y1
+- _o__yn
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,6 +26,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -41,16 +48,16 @@ helpviewer_keywords:
 - _y1 function
 - _yn function
 ms.assetid: a21a8bf1-df9d-4ba0-a8c2-e7ef71921d96
-ms.openlocfilehash: 5420b34846998cdbcb4814d8319274f1a3516d91
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: cdf722c9c6f6055ac918d1bede59345a9ef8d90d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939463"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81348665"
 ---
-# <a name="bessel-functions-_j0-_j1-_jn-_y0-_y1-_yn"></a>Besselovy funkce: _j0, _j1, _jn, _y0, _y1, _yn
+# <a name="bessel-functions-_j0-_j1-_jn-_y0-_y1-_yn"></a>Funkce: _j0, _j1, _jn, _y0, _y1, _yn
 
-Vypočítá Besselovu funkci prvního nebo druhého druhu objednávky 0, 1 nebo n. Besselova funkce se běžně používají v matematickém kosinus elektromagnetických vln.
+Vypočítá Besselovu funkci prvního nebo druhého druhu, řádů 0, 1 nebo n. Besselovy funkce se běžně používají v matematice teorie elektromagnetických vln.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -79,39 +86,41 @@ double _yn(
 
 ### <a name="parameters"></a>Parametry
 
-*x*<br/>
-Hodnota s plovoucí desetinnou čárkou.
+*X*<br/>
+Hodnota s plovoucí desetinnou táceckou.
 
-*n*<br/>
-Celočíselné pořadí Besselova funkce.
+*N*<br/>
+Celé číslo pořadí Bessel funkce.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Každá z těchto rutin Vrátí Besselovu funkci *x*. Pokud je *x* záporné ve funkcích **_y0**, **_y1**nebo **_Yn** , rutina nastaví **errno** na **EDOM**, vytiskne chybovou zprávu **_DOMAIN** na **stderr**a vrátí **_HUGE_VAL**. Zpracování chyb můžete upravit pomocí **_matherr**.
+Každá z těchto rutin vrátí Besselovu funkci *x*. Pokud *x* je negativní v **_y0**, **_y1**nebo **_yn** funkce, rutina nastaví **errno** **edom**, vytiskne **_DOMAIN** chybovou zprávu **stderr**a vrátí **_HUGE_VAL**. Zpracování chyb můžete upravit pomocí **_matherr**.
 
 ## <a name="remarks"></a>Poznámky
 
-Rutiny **_j0**, **_j1**a **_jn** vrací Besselova funkce prvního druhu: Orders 0, 1 a n v uvedeném pořadí.
+**Rutiny _j0**, **_j1**a **_jn** vrátí Besselovy funkce prvního druhu: objednávky 0, 1 a n.
 
-|Vstup|Výjimka SEH|Výjimka matherr|
+|Vstup|Výjimka SEH|Výjimka Matherr|
 |-----------|-------------------|-----------------------|
-|± **QNAN**, **IND**|**NENÍ**|**_DOMAIN**|
+|± **QNAN**, **IND**|**Neplatný**|**_DOMAIN**|
 
-Rutiny **_y0**, **_y1**a **_yn** vracejí Besselova funkce druhého druhu: Orders 0, 1 a n v uvedeném pořadí.
+**Rutiny _y0**, **_y1**a **_yn** vrátí Besselovy funkce druhého druhu: objednávky 0, 1 a n.
 
-|Vstup|Výjimka SEH|Výjimka matherr|
+|Vstup|Výjimka SEH|Výjimka Matherr|
 |-----------|-------------------|-----------------------|
-|± **QNAN**, **IND**|**NENÍ**|**_DOMAIN**|
-|± 0|**ZERODIVIDE**|**_SING**|
-|&#124;x&#124; < 0,0|**NENÍ**|**_DOMAIN**|
+|± **QNAN**, **IND**|**Neplatný**|**_DOMAIN**|
+|± 0|**NULAROZDĚLIT**|**_SING**|
+|&#124;x&#124; < 0,0|**Neplatný**|**_DOMAIN**|
+
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_j0**, **_j1**, **_jn**, **_y0**, **_y1**, **_yn**|\<cmath > (C++), \<Math. h > (C, C++)|
+|**_j0**, **_j1**, **_jn**, **_y0 _y1**, **_yn** **_yn**|\<cmath> (C++), \<math.h> (C, C++)|
 
-Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -154,7 +163,7 @@ Bessel functions for x = 2.387000:
    Second 4      _yn( 4, x )  -1.626833
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)<br/>
+[Podpora s plovoucí desetinnou tálicí](../../c-runtime-library/floating-point-support.md)<br/>
 [_matherr](matherr.md)<br/>

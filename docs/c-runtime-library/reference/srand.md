@@ -1,8 +1,9 @@
 ---
 title: srand
-ms.date: 01/02/2018
+ms.date: 4/2/2020
 api_name:
 - srand
+- _o_srand
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +17,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -32,16 +34,16 @@ helpviewer_keywords:
 - pseudorandom numbers
 - starting points, setting random
 - starting points
-ms.openlocfilehash: 03e2b87a37d1b520b6e2b32c2f756fea625eb9a2
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a8d018d429b2a484f88b7c1e0679f1f799983910
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70958001"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81355490"
 ---
 # <a name="srand"></a>srand
 
-Nastaví počáteční počáteční hodnotu generátoru pseudonáhodných čísel používaného funkcí **Rand** .
+Nastaví počáteční hodnotu osiva pro generátor pseudonáhodných čísel používaný funkcí **rand.**
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -53,12 +55,14 @@ void srand(
 
 ### <a name="parameters"></a>Parametry
 
-*sazení*<br/>
+*Osiva*<br/>
 Počáteční hodnota pro generování pseudonáhodných čísel
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce **srand** nastaví počáteční bod pro generování řady celých čísel pseudonáhodných v aktuálním vlákně. Chcete-li znovu inicializovat generátor, aby vytvořil stejnou sekvenci výsledků, zavolejte funkci **srand** a použijte stejný argument *počáteční* hodnoty. Jakákoli jiná hodnota pro *počáteční* hodnotu nastaví generátor na jiný výchozí bod v pseudonáhodných sekvenci. **Rand** načítá pseudonáhodných čísla, která jsou generována. Volání **Rand** před jakýmkoli voláním **srand** generuje stejnou sekvenci jako volání **srand** s *osivem* předanou jako 1.
+Funkce **srand** nastavuje počáteční bod pro generování řady pseudonáhodných celá čísla v aktuálním vlákně. Chcete-li znovu inicializovat generátor a vytvořit stejnou sekvenci výsledků, zavolejte funkci **srand** a znovu použijte stejný argument *počátečního napětí.* Jakákoli jiná hodnota pro *osivo* nastaví generátor na jiný výchozí bod v pseudonáhodné sekvenci. **rand** načte pseudonáhodná čísla, která jsou generována. Volání **rand** před volání **srand** generuje stejnou sekvenci jako volání **srand** s *osivem* předán jako 1.
+
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
@@ -66,13 +70,13 @@ Funkce **srand** nastaví počáteční bod pro generování řady celých čís
 |-------------|---------------------|
 |**srand**|\<stdlib.h>|
 
-Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
-Podívejte se na příklad pro [Rand](rand.md).
+Viz příklad pro [rand](rand.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)<br/>
-[rand](rand.md)<br/>
+[Podpora s plovoucí desetinnou tálicí](../../c-runtime-library/floating-point-support.md)<br/>
+[Rand](rand.md)<br/>

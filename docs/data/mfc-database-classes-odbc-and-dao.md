@@ -5,27 +5,27 @@ helpviewer_keywords:
 - ODBC, ODBC classes
 - MFC, database applications
 ms.assetid: 88aabe65-84e3-4122-b636-5d334a5fe570
-ms.openlocfilehash: 06bd82819aa566eaaa3ab538bf2a5d78d53e9ae0
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 380000deef40cdfaf18bde4bf9e5cc626c518007
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80213366"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81336823"
 ---
-# <a name="mfc-database-classes"></a>MFC – databázové třídy
+# <a name="mfc-database-classes"></a>Třídy databáze knihovny MFC
 
 > [!NOTE]
->  Microsoft doporučuje používat rozhraní ODBC přes ovladač Microsoft ODBC Driver 13 (nebo novější) pro SQL Server pro nové projekty. Objekt DAO již není podporován.
+> Společnost Microsoft doporučuje používat rozhraní ODBC prostřednictvím ovladače Microsoft ODBC Driver 13 (nebo novějšího) pro SQL Server pro nové projekty. DAO již není podporováno.
 
 Další informace najdete v následujících tématech:
 
-- [Historie ovladačů pro Microsoft SQL Server](/sql/connect/connect-history)
+- [Historie ovladačů pro microsoft SQL Server](/sql/connect/connect-history)
 
-- [Ovladač ODBC 13,1 pro SQL Server vydaný](https://blogs.technet.microsoft.com/dataplatforminsider/2016/08/03/odbc-driver-13-1-for-sql-server-released/) Ovladač Microsoft ODBC Driver 13 pro SQL Server by měl sloužit k vytváření nových aplikací nebo vylepšení stávajících aplikací, které potřebují využívat nové funkce SQL Server 2016.
+- [Ovladač ODBC 13.1 pro SQL Server byl vydán](https://blogs.technet.microsoft.com/dataplatforminsider/2016/08/03/odbc-driver-13-1-for-sql-server-released/) Ovladač Microsoft ODBC 13 for SQL Server by měl být použit k vytváření nových aplikací nebo vylepšování stávajících aplikací, které je třeba využít nové funkce serveru SQL Server 2016.
 
 - [Rozhraní ODBC a knihovna MFC](../data/odbc/odbc-and-mfc.md)
 
-- [Použití databázových tříd s dokumenty a zobrazeními](../data/mfc-using-database-classes-with-documents-and-views.md)
+- [Použití tříd databáze s dokumenty a zobrazeními](../data/mfc-using-database-classes-with-documents-and-views.md)
 
 - [Použití databázových tříd bez dokumentů a zobrazení](../data/mfc-using-database-classes-without-documents-and-views.md)
 

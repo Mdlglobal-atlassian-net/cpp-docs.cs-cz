@@ -1,9 +1,11 @@
 ---
 title: _mbsnbcpy_s, _mbsnbcpy_s_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbsnbcpy_s_l
 - _mbsnbcpy_s
+- _o__mbsnbcpy_s
+- _o__mbsnbcpy_s_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -35,19 +38,19 @@ helpviewer_keywords:
 - _mbsnbcpy_s_l function
 - _tcsncpy_s function
 ms.assetid: dfff64ab-fe6f-49c4-99ba-75014e2b0cd6
-ms.openlocfilehash: fbbdbeb671f501974ceee9565b8d668e8281f92e
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: d3c4a07ffb5ed4040a4bb99ee354e01f0d62f42a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73624310"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81340683"
 ---
 # <a name="_mbsnbcpy_s-_mbsnbcpy_s_l"></a>_mbsnbcpy_s, _mbsnbcpy_s_l
 
-Zkopíruje **n** bajtů řetězce do cílového řetězce. Tyto verze [_mbsnbcpy, _mbsnbcpy_l](mbsnbcpy-mbsnbcpy-l.md) mají vylepšení zabezpečení, jak je popsáno v [části funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Zkopíruje **n** bajtů řetězce do cílového řetězce. Tyto verze [_mbsnbcpy, _mbsnbcpy_l](mbsnbcpy-mbsnbcpy-l.md) mají vylepšení zabezpečení, jak je popsáno v [funkce zabezpečení v CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 > [!IMPORTANT]
-> Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime. Další informace najdete v tématu [funkce CRT nejsou v aplikacích Univerzální platforma Windows podporovány](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Toto rozhraní API nelze použít v aplikacích, které se spouštějí v prostředí Windows Runtime. Další informace naleznete v tématu [funkce CRT, které nejsou podporovány v aplikacích univerzální platformy Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -83,36 +86,38 @@ errno_t _mbsnbcpy_s_l(
 ### <a name="parameters"></a>Parametry
 
 *strDest*<br/>
-Cíl pro textový řetězec, který se má zkopírovat
+Cíl pro řetězec znaků, který má být zkopírován.
 
 *sizeInBytes*<br/>
-Velikost cílové vyrovnávací paměti.
+Cílová velikost vyrovnávací paměti.
 
 *strSource*<br/>
-Řetězec znaků, který se má zkopírovat
+Řetězec znaků, který má být zkopírován.
 
-*výpočtu*<br/>
+*Počet*<br/>
 Počet bajtů, které mají být zkopírovány.
 
-*jazyka*<br/>
-Národní prostředí, které se má použít.
+*Národní prostředí*<br/>
+Národní prostředí použít.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Nula v případě úspěchu; **EINVAL** , pokud byl předán chybný parametr.
+Nula v případě úspěchu; **EINVAL,** pokud byl předán chybný parametr.
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce **_mbsnbcpy_s** kopíruje *počet* bajtů z *strSource* do *strDest*. Pokud *počet* překročí velikost *strDest*, jedno ze vstupních řetězců je ukazatel s hodnotou null, nebo *sizeInBytes* nebo *Count* je 0, funkce vyvolá neplatnou obslužnou rutinu parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md) . Pokud provádění může pokračovat, funkce vrátí **EINVAL**. Pokud se zdrojový a cílový řetězec překrývají, chování **_mbsnbcpy_s** není definováno.
+Funkce **_mbsnbcpy_s** zkopíruje *počet* bajtů z *strSource* do *strDest*. Pokud *počet* překročí velikost *strDest*, buď ze vstupních řetězců je nulový ukazatel nebo *sizeInBytes* nebo *count* je 0, funkce vyvolá neplatný parametr obslužné rutiny, jak je popsáno v [parametru Validation](../../c-runtime-library/parameter-validation.md) . Pokud je spuštění povoleno pokračovat, funkce vrátí **EINVAL**. Pokud se zdrojové a cílové řetězce překrývají, chování **_mbsnbcpy_s** není definováno.
 
-Výstupní hodnota je ovlivněna nastavením kategorie **LC_CTYPE** národního prostředí; Další informace naleznete v tématu [setlocale](setlocale-wsetlocale.md) . Verze těchto funkcí bez přípony **_l** používají aktuální národní prostředí pro toto chování závislé na národním prostředí; verze s příponou **_l** jsou stejné s tím rozdílem, že místo toho používají předaný parametr národního prostředí. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
+Výstupní hodnota je ovlivněna nastavením nastavení **LC_CTYPE** kategorie národního prostředí; další informace naleznete [v tématu setlocale.](setlocale-wsetlocale.md) Verze těchto funkcí bez **přípony _l** pro toto chování závislé na národním prostředí používají aktuální národní prostředí. verze s **příponou _l** jsou identické s tím rozdílem, že místo toho používají parametr národního prostředí. Další informace naleznete v [tématu Locale](../../c-runtime-library/locale.md).
 
 > [!NOTE]
-> Na rozdíl od nezabezpečené verze této funkce **_mbsnbcpy_s** neprovede žádné odsazení null a vždy hodnota null ukončí řetězec.
+> Na rozdíl od nezabezpečené verze této funkce **_mbsnbcpy_s** neprovádí žádné odsazení null a vždy null ukončí řetězec.
 
-V C++systému je použití těchto funkcí zjednodušeno díky přetížení šablon; přetížení můžou odvodit délku vyrovnávací paměti automaticky (eliminují nutnost zadat argument velikosti) a můžou automaticky nahradit starší nezabezpečené funkce jejich novějšími, zabezpečenými protějšky. Další informace najdete v tématu [přetížení zabezpečení šablon](../../c-runtime-library/secure-template-overloads.md).
+V jazyce C++ je použití těchto funkcí zjednodušeno přetížením šablony; přetížení lze odvodit délku vyrovnávací paměti automaticky (eliminuje potřebu zadat argument velikosti) a mohou automaticky nahradit starší, nezabezpečené funkce s jejich novější, bezpečné protějšky. Další informace naleznete [v tématu Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
-Verze knihovny ladění těchto funkcí nejprve naplní vyrovnávací paměť pomocí 0xFE. Pokud chcete toto chování zakázat, použijte [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+Ladicí verze knihovny těchto funkcí nejprve vyplní vyrovnávací paměť 0xFE. Chcete-li toto chování zakázat, použijte [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
@@ -125,14 +130,14 @@ Verze knihovny ladění těchto funkcí nejprve naplní vyrovnávací paměť po
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_mbsnbcpy_s**|\<Mbstring. h >|
-|**_mbsnbcpy_s_l**|\<Mbstring. h >|
+|**_mbsnbcpy_s**|\<mbstring.h>|
+|**_mbsnbcpy_s_l**|\<mbstring.h>|
 
-Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Manipulace s řetězci](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Zacházení s řetězci](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [_mbsnbcat, _mbsnbcat_l](mbsnbcat-mbsnbcat-l.md)<br/>
 [_mbsnbcmp, _mbsnbcmp_l](mbsnbcmp-mbsnbcmp-l.md)<br/>
 [_strncnt, _wcsncnt, _mbsnbcnt, _mbsnbcnt_l, _mbsnccnt, _mbsnccnt_l](strncnt-wcsncnt-mbsnbcnt-mbsnbcnt-l-mbsnccnt-mbsnccnt-l.md)<br/>

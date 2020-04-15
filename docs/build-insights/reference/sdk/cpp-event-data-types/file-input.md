@@ -1,6 +1,6 @@
 ---
-title: Třída Input
-description: Odkaz C++ na třídu vstupu sady SDK pro Build Insights
+title: Třída FileInput
+description: C++ Build Insights SDK FileInput odkaz na třídu.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: bea2cf72ca2a83a9cd630f8a9ccefb87dd4b7ff1
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 642236d3e67465ed38508cb24c8cd698ae880065
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78333347"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81324799"
 ---
-# <a name="fileinput-class"></a>Třída Input
+# <a name="fileinput-class"></a>Třída FileInput
 
 ::: moniker range="<=vs-2015"
 
-Sada C++ SDK pro Build Insights je kompatibilní se sadou Visual Studio 2017 a novější. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek selektor verzí sady Visual Studio pro tento článek na sadu Visual Studio 2017 nebo Visual Studio 2019.
+Sada C++ Build Insights SDK je kompatibilní s Visual Studio 2017 a vyšší. Chcete-li zobrazit dokumentaci pro tyto verze, nastavte ovládací prvek pro výběr **verze** sady Visual Studio pro tento článek na Visual Studio 2017 nebo Visual Studio 2019. Nachází se v horní části obsahu na této stránce.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Třída `FileInput` se používá s funkcemi [MatchEvent](../functions/match-event.md), [MatchEventInMemberFunction](../functions/match-event-in-member-function.md), [MatchEventStack](../functions/match-event-stack.md)a [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md) . Použijte ho ke spárování [FILE_INPUT](../event-table.md#file-input) události.
+Třída `FileInput` se používá s funkcemi [MatchEvent](../functions/match-event.md), [MatchEventInMemberFunction](../functions/match-event-in-member-function.md), [MatchEventStack](../functions/match-event-stack.md)a [MatchEventStackInMemberFunction.](../functions/match-event-stack-in-member-function.md) Použijte ji tak, aby odpovídala [události FILE_INPUT.](../event-table.md#file-input)
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -52,18 +52,18 @@ public:
 
 ## <a name="members"></a>Členové
 
-Společně s děděnými členy ze své základní třídy [SimpleEvent](simple-event.md) obsahuje Třída `FileInput` následující členy:
+Spolu s zděděnými členy ze základní `FileInput` třídy [SimpleEvent](simple-event.md) obsahuje třída následující členy:
 
 ### <a name="constructors"></a>Konstruktory
 
-[Vstup vstupu](#file-input)
+[FileInput](#file-input)
 
 ### <a name="functions"></a>Functions
 
-[Typ](#type)
-[cesty](#path)
+[Path](#path)
+[Typ](#type) cesty
 
-## <a name="file-input"></a>Vstup vstupu
+## <a name="fileinput"></a><a name="file-input"></a>FileInput
 
 ```cpp
 FileInput(const RawEvent& event);
@@ -71,10 +71,10 @@ FileInput(const RawEvent& event);
 
 ### <a name="parameters"></a>Parametry
 
-\ *události*
-Událost [FILE_INPUT](../event-table.md#file-input) .
+*Událost*\
+[Událost FILE_INPUT.](../event-table.md#file-input)
 
-## <a name="path"></a>Dílčí
+## <a name="path"></a><a name="path"></a>Cestu
 
 ```cpp
 const wchar_t Path() const;
@@ -84,7 +84,7 @@ const wchar_t Path() const;
 
 Absolutní cesta ke vstupnímu souboru.
 
-## <a name="type"></a>Textový
+## <a name="type"></a><a name="type"></a>Typ
 
 ```cpp
 Type Type() const;

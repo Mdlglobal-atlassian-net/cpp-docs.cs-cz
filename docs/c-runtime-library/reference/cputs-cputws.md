@@ -1,9 +1,11 @@
 ---
 title: _cputs, _cputws
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _cputws
 - _cputs
+- _o__cputs
+- _o__cputws
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -33,19 +36,19 @@ helpviewer_keywords:
 - console, sending strings to
 - cputws function
 ms.assetid: ec418484-0f8d-43ec-8d8b-198a556c659e
-ms.openlocfilehash: 46fce16078b9ce289d45ee4e62bb4076eaf5795a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 3b8f49fc7fbe90d4069a5dfeef9bbba3a7f05335
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70942634"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81348374"
 ---
 # <a name="_cputs-_cputws"></a>_cputs, _cputws
 
 Vloží řetězec do konzoly.
 
 > [!IMPORTANT]
-> Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime. Další informace najdete v tématu [funkce CRT nejsou v aplikacích Univerzální platforma Windows podporovány](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Toto rozhraní API nelze použít v aplikacích, které se spouštějí v prostředí Windows Runtime. Další informace naleznete v tématu [funkce CRT, které nejsou podporovány v aplikacích univerzální platformy Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -60,18 +63,20 @@ int _cputws(
 
 ### <a name="parameters"></a>Parametry
 
-*str*<br/>
+*Str*<br/>
 Výstupní řetězec.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-V případě úspěchu vrátí **_cputs** 0. Pokud funkce dojde k chybě, vrátí nenulovou hodnotu.
+Pokud je úspěšná, **vrátí _cputs** 0. Pokud funkce selže, vrátí nenulovou hodnotu.
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce **_cputs** zapisuje řetězec zakončený hodnotou null, na který ukazuje *str* přímo do konzoly. Kombinace návratového kanálu návratového řádku (CR-LF) není automaticky připojena k řetězci.
+Funkce **_cputs** zapíše řetězec s ukončeným hodnotou null, na který str ukazuje *přímo* do konzoly. Kombinace zpětného kanálu řádku vozíku (CR-LF) není automaticky připojena k řetězci.
 
-Tato funkce ověří svůj parametr. Pokud je parametr *str* **null**, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, **errno** je nastaven na **EINVAL** a vrátí-1.
+Tato funkce ověřuje jeho parametr. Pokud *str* je **NULL**, je vyvolána neplatná obslužná rutina parametru, jak je popsáno v [parametru Validation](../../c-runtime-library/parameter-validation.md). Pokud je povoleno provádění pokračovat, **errno** je nastavena na **EINVAL** a -1 je vrácena.
+
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
@@ -81,16 +86,16 @@ Tato funkce ověří svůj parametr. Pokud je parametr *str* **null**, je vyvol�
 
 ## <a name="requirements"></a>Požadavky
 
-|Rutina|Požadovaný hlavičkový soubor|Volitelné záhlaví|
+|Rutina|Požadovaný hlavičkový soubor|Volitelná hlavička|
 |-------------|---------------------|---------------------|
-|**_cputs**|\<CONIO. h >|\<errno.h>|
-|**_cputws**|\<CONIO. h >|\<errno.h>|
+|**_cputs**|\<conio.h>|\<errno.h>|
+|**_cputws**|\<conio.h>|\<errno.h>|
 
-Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Knihovny
 
-Všechny verze [knihoven run-time jazyka C](../../c-runtime-library/crt-library-features.md).
+Všechny verze [knihoven c run-time](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Příklad
 
@@ -149,7 +154,7 @@ Hello world (courtesy of _cputs)!
 Hello world (courtesy of _cputws)!
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [I/O konzoly a portu](../../c-runtime-library/console-and-port-i-o.md)<br/>
 [_putch, _putwch](putch-putwch.md)<br/>

@@ -1,6 +1,6 @@
 ---
 title: lrint, lrintf, lrintl, llrint, llrintf, llrintl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - lrint
 - lrintl
@@ -8,6 +8,12 @@ api_name:
 - llrint
 - llrintf
 - llrintl
+- _o_llrint
+- _o_llrintf
+- _o_llrintl
+- _o_lrint
+- _o_lrintf
+- _o_lrintl
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,6 +26,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -45,16 +52,16 @@ helpviewer_keywords:
 - llrintf function
 - llrintl function
 ms.assetid: 28ccd5b3-5e6f-434f-997d-a21d51b8ce7f
-ms.openlocfilehash: c7831842eb4d3c1eef9c4c9e83bbddb557cec0e3
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 6283cffaa094af4484d48781b5bb92d0339d38d1
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857746"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81341671"
 ---
 # <a name="lrint-lrintf-lrintl-llrint-llrintf-llrintl"></a>lrint, lrintf, lrintl, llrint, llrintf, llrintl
 
-Zaokrouhlí zadanou hodnotu s plovoucí desetinnou čárkou na nejbližší celočíselnou hodnotu pomocí současného režimu zaokrouhlení a směru.
+Zaokrouhlí zadanou hodnotu s plovoucí desetinnou hodnotou na nejbližší integrální hodnotu pomocí aktuálního režimu a směru zaokrouhlení.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -102,33 +109,35 @@ long long int llrintl(
 
 ### <a name="parameters"></a>Parametry
 
-*x*<br/>
-Hodnota, která má být zaokrouhlena.
+*X*<br/>
+hodnotu, kterou chcete zaokrouhlit.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-V případě úspěchu vrátí zaokrouhlenou celočíselnou hodnotu *x*.
+Pokud je úspěšná, vrátí zaoblenou integrální hodnotu *x*.
 
-|Problém|Výsledek|
+|Problém|Vrátit|
 |-----------|------------|
-|*x* je mimo rozsah návratového typu.<br /><br /> *x* = ± ∞<br /><br /> *x* = NaN|Vyvolává **FE_INVALID** a vrací nulu (0).|
+|*x* je mimo rozsah návratového typu<br /><br /> *x* = ±∞<br /><br /> *x* = NaN|Zvýší **FE_INVALID** a vrátí nulu (0).|
 
 ## <a name="remarks"></a>Poznámky
 
-Vzhledem C++ k tomu, že umožňuje přetížení, můžete volat přetížení **lrint** a **llrint** , které přebírají **float** a **Long** **Double** Types. V programu v jazyce C **lrint** a **llrint** vždycky pobírají **dvojitou**hodnotu.
+Protože C++ umožňuje přetížení, můžete volat přetížení **lrint** a **llrint,** které trvat **float** a **dlouhé** **dvojité** typy. V programu C, **lrint** a **llrint** vždy vzít **double**.
 
-Pokud *x* nepředstavuje ekvivalent plovoucí desetinné čárky integrální hodnoty, tyto funkce vyvolají **FE_INEXACT**.
+Pokud *x* nepředstavuje ekvivalent s plovoucí desetinnou stranou integrální hodnoty, tyto funkce zvýšit **FE_INEXACT**.
 
-**Specifické pro společnost Microsoft**: Pokud je výsledek mimo rozsah návratového typu nebo pokud je parametr NaN nebo Infinite, vrácená hodnota je definovaná implementací. Kompilátor Microsoft vrátí hodnotu nula (0).
+**Microsoft specifické**: Pokud je výsledek mimo rozsah návratového typu nebo pokud je parametr NaN nebo nekonečno, je definována vrácená hodnota. Kompilátor společnosti Microsoft vrátí nulovou (0) hodnotu.
+
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
-|Funkce|Hlavička jazyka C|C++hlaviček|
+|Funkce|Hlavička C|Hlavička C++|
 |--------------|--------------|------------------|
-|**lrint**, **lrintf**, **lrintl**, **llrint**, **llrintf**, **llrintl**|\<Math. h >|\<cmath >|
+|**lrint**, **lrintf**, **lrintl**, **llrint**, **llrintf**, **llrintl**|\<math.h>|\<cmath>|
 
-Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Abecední seznam odkazů na funkce](crt-alphabetical-function-reference.md)<br/>

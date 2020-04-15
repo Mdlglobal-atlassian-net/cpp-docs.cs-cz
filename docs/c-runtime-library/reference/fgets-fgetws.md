@@ -1,9 +1,11 @@
 ---
 title: fgets, fgetws
-ms.date: 07/11/2018
+ms.date: 4/2/2020
 api_name:
 - fgets
 - fgetws
+- _o_fgets
+- _o_fgetws
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -32,16 +35,16 @@ helpviewer_keywords:
 - fgetws function
 - fgetts function
 ms.assetid: ad549bb5-df98-4ccd-a53f-95114e60c4fc
-ms.openlocfilehash: 3f68bee181ebb20eb7a0a2eaca02a72c4dc03616
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a1120529157801aac5cf1c4fd61f844fde443bed
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957403"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81346870"
 ---
 # <a name="fgets-fgetws"></a>fgets, fgetws
 
-Získá řetězec z datového proudu.
+Získat řetězec z datového proudu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -60,32 +63,34 @@ wchar_t *fgetws(
 
 ### <a name="parameters"></a>Parametry
 
-*str*<br/>
-Umístění úložiště pro data
+*Str*<br/>
+Umístění úložiště pro data.
 
 *numChars*<br/>
-Maximální počet znaků, které mají být čteny.
+Maximální počet znaků ke čtení.
 
-*stream*<br/>
-Ukazatel na strukturu **souborů** .
+*Proudu*<br/>
+Ukazatel na **strukturu FILE.**
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Každá z těchto funkcí vrací *str*. K označení chyby nebo stavu konce souboru je vrácena **hodnota null** . K určení, zda došlo k chybě, použijte **feof** nebo **trajekt** . Pokud *str* nebo *Stream* je ukazatel s hodnotou null, nebo je *numChars* menší nebo rovno nule, tato funkce vyvolá obslužnou rutinu neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, **errno** je nastaven na **EINVAL** a funkce vrátí **hodnotu null**.
+Každá z těchto funkcí vrátí *str*. **Hodnota NULL** je vrácena k označení chyby nebo podmínky konce souboru. Použijte **feof** nebo **ferror** k určení, zda došlo k chybě. Pokud *str* nebo *stream* je nula ukazatel nebo *numChars* je menší nebo rovno nule, tato funkce vyvolá neplatný parametr obslužné rutiny, jak je popsáno v [ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je spuštění povoleno pokračovat, **je chybné číslo** nastaveno na **hodnotu EINVAL** a funkce vrátí **hodnotu NULL**.
 
-Další informace o těchto a dalších chybových kódech naleznete v tématech [_doserrno, errno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) .
+Další informace o těchto a dalších kódech chyb naleznete v [_doserrno, errno, _sys_errlist a _sys_nerr.](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce **fgets** čte řetězec z argumentu vstupního *datového proudu* a ukládá ho do *str*. **fgets** čte znaky z aktuálního datového proudu do a včetně prvního znaku nového řádku, na konec proudu, nebo dokud se počet čtených znaků nerovná hodnotě *numChars* -1, podle toho, co nastane dřív. Výsledek uložený v *str* je připojen s znakem null. Znak nového řádku, je-li načten, je zahrnut do řetězce.
+Funkce **fgets** přečte řetězec z argumentu vstupního *datového proudu* a uloží jej do *str*. **fgets** čte znaky z aktuální pozice datového proudu do a včetně prvního znaku nového řádku, na konec datového proudu, nebo dokud se počet přečtených znaků nerovná *numChars* - 1, podle toho, co nastane dříve. Výsledek uložený v *str* je připojen s nulovým znakem. Znak nového řádku, pokud je přečten, je součástí řetězce.
 
-**fgetws** je verze **fgets**s velkým znakem.
+**fgetws** je širokoznaková verze **fgets**.
 
-**fgetws** přečte argument pro velký znak *str* jako řetězec vícebajtových znaků nebo řetězec s velkým znakem v závislosti na tom, zda je *datový proud* otevřen v textovém režimu nebo v binárním režimu v uvedeném pořadí. Další informace o používání textových a binárních režimů v kódování Unicode a vícebajtových vstupně-výstupních operacích naleznete v tématu [text a v binárním režimu vstupně](../../c-runtime-library/text-and-binary-mode-file-i-o.md) -výstupních operací a [datových proudů Unicode v textových a binárních režimech](../../c-runtime-library/unicode-stream-i-o-in-text-and-binary-modes.md).
+**fgetws** přečte argument široký znak *str* jako řetězec vícebajtových znaků nebo řetězec s širokým znakem podle toho, zda je *datový proud* otevřen v textovém nebo binárním režimu. Další informace o používání režimů textu a binárních režimů v režimech Unicode a vícebajtových datových proudech vi/v naleznete v [tématu Text a binární režim V/O souboru](../../c-runtime-library/text-and-binary-mode-file-i-o.md) a [V. a V. v režimu Text a Binární režimy](../../c-runtime-library/unicode-stream-i-o-in-text-and-binary-modes.md).
+
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapování rutin obecného textu
 
-|Rutina TCHAR.H|_UNICODE & _MBCS nejsou definovány.|_MBCS definováno|_UNICODE definováno|
+|Rutina TCHAR.H|_UNICODE & _MBCS není definováno|_MBCS definováno|_UNICODE definováno|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_fgetts**|**fgets**|**fgets**|**fgetws**|
 
@@ -94,9 +99,9 @@ Funkce **fgets** čte řetězec z argumentu vstupního *datového proudu* a ukl�
 |Funkce|Požadovaný hlavičkový soubor|
 |--------------|---------------------|
 |**fgets**|\<stdio.h>|
-|**fgetws**|\<stdio. h > nebo \<WCHAR. h >|
+|**fgetws**|\<stdio.h> \<nebo wchar.h>|
 
-Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -123,7 +128,7 @@ int main( void )
 }
 ```
 
-### <a name="input-crt_fgetstxt"></a>Vstup: crt_fgets. txt
+### <a name="input-crt_fgetstxt"></a>Vstup: crt_fgets.txt
 
 ```Input
 Line one.
@@ -136,9 +141,9 @@ Line two.
 Line one.
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Vstup/výstup datového proudu](../../c-runtime-library/stream-i-o.md)<br/>
+[I/O proudu](../../c-runtime-library/stream-i-o.md)<br/>
 [fputs, fputws](fputs-fputws.md)<br/>
 [gets, _getws](../../c-runtime-library/gets-getws.md)<br/>
 [puts, _putws](puts-putws.md)<br/>

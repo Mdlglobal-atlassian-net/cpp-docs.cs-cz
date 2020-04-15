@@ -13,16 +13,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::Semaphore::operator= operator
 - Microsoft::WRL::Wrappers::Semaphore::Semaphore, constructor
 ms.assetid: ded53526-17b4-4381-9c60-ea5e77363db6
-ms.openlocfilehash: 10357bb1cd46a33a8d4090c1ccc30050584d1816
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e017b1b6316c4b6d49563d9a543950ab28961d90
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403127"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81359361"
 ---
 # <a name="semaphore-class"></a>Semaphore – třída
 
-Představuje objekt synchronizace, který řídí sdíleného prostředku, který podporuje omezený počet uživatelů.
+Představuje objekt synchronizace, který řídí sdílený prostředek, který může podporovat omezený počet uživatelů.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -32,29 +32,29 @@ class Semaphore : public HandleT<HandleTraits::SemaphoreTraits>;
 
 ## <a name="members"></a>Členové
 
-### <a name="public-typedefs"></a>Veřejné definice TypeDef
+### <a name="public-typedefs"></a>Veřejné typedefs
 
-Název       | Popis
+Name (Název)       | Popis
 ---------- | ------------------------------------------------------
 `SyncLock` | Synonymum pro třídu, která podporuje synchronní zámky.
 
 ### <a name="public-constructors"></a>Veřejné konstruktory
 
-Název                               | Popis
+Name (Název)                               | Popis
 ---------------------------------- | ----------------------------------------------------
-[Semaphore::Semaphore –](#semaphore) | Inicializuje novou instanci třídy `Semaphore` třídy.
+[Semafor::Semafor](#semaphore) | Inicializuje novou instanci třídy. `Semaphore`
 
 ### <a name="public-methods"></a>Veřejné metody
 
-Název                     | Popis
+Name (Název)                     | Popis
 ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------
-[Semaphore::LOCK –](#lock) | Počká, dokud aktuální objekt nebo objekt přidružený k zadanému popisovači, je do signalizovaného stavu nebo zadaný časový limit uplynul.
+[Semafor::Zamknout](#lock) | Čeká, dokud aktuální objekt nebo objekt přidružený k zadanému popisovači, je v signalizovaném stavu nebo zadaný časový limit uplynul.
 
 ### <a name="public-operators"></a>Veřejné operátory
 
-Název                                     | Popis
+Name (Název)                                     | Popis
 ---------------------------------------- | ---------------------------------------------------------------------------------------
-[Semaphore::Operator =](#operator-assign) | Posune Zadaný popisovač z `Semaphore` objektů na aktuální `Semaphore` objektu.
+[Semafor::operátor=](#operator-assign) | Přesune zadaný popisovač z `Semaphore` `Semaphore` objektu na aktuální objekt.
 
 ## <a name="inheritance-hierarchy"></a>Hierarchie dědičnosti
 
@@ -64,11 +64,11 @@ Název                                     | Popis
 
 **Záhlaví:** corewrappers.h
 
-**Namespace:** Microsoft::WRL::Wrappers
+**Obor názvů:** Microsoft::WRL::Obálky
 
-## <a name="lock"></a>Semaphore::LOCK –
+## <a name="semaphorelock"></a><a name="lock"></a>Semafor::Zamknout
 
-Počká, až do aktuálního objektu nebo `Semaphore` objekt přidružený k je zadaný popisovač do signalizovaného stavu nebo zadaný časový limit uplynul.
+Čeká, dokud aktuální objekt `Semaphore` nebo objekt přidružený k zadanému popisovači, je v signalizovaném stavu nebo zadaný časový limit uplynul.
 
 ```cpp
 SyncLock Lock(
@@ -83,19 +83,19 @@ static SyncLock Lock(
 
 ### <a name="parameters"></a>Parametry
 
-*Milisekundy*<br/>
-Interval časového limitu v milisekundách. Výchozí hodnota je NEKONEČNO, který čekat po neomezenou dobu.
+*milisekundy*<br/>
+Časový interval v milisekundách. Výchozí hodnota je INFINITE, která čeká neomezeně dlouho.
 
-*h*<br/>
-Popisovač `Semaphore` objektu.
+*H*<br/>
+Úchyt `Semaphore` k objektu.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-A `Details::SyncLockWithStatusT<HandleTraits::SemaphoreTraits>`
+Položka `Details::SyncLockWithStatusT<HandleTraits::SemaphoreTraits>`.
 
-## <a name="operator-assign"></a>Semaphore::Operator =
+## <a name="semaphoreoperator"></a><a name="operator-assign"></a>Semafor::operátor=
 
-Posune Zadaný popisovač z `Semaphore` objektů na aktuální `Semaphore` objektu.
+Přesune zadaný popisovač z `Semaphore` `Semaphore` objektu na aktuální objekt.
 
 ```cpp
 Semaphore& operator=(
@@ -105,16 +105,16 @@ Semaphore& operator=(
 
 ### <a name="parameters"></a>Parametry
 
-*h*<br/>
-Odkaz rvalue na `Semaphore` objektu.
+*H*<br/>
+Rvalue-odkaz na `Semaphore` objekt.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Odkaz na aktuální `Semaphore` objektu.
+Odkaz na aktuální `Semaphore` objekt.
 
-## <a name="semaphore"></a>Semaphore::Semaphore –
+## <a name="semaphoresemaphore"></a><a name="semaphore"></a>Semafor::Semafor
 
-Inicializuje novou instanci třídy `Semaphore` třídy.
+Inicializuje novou instanci třídy. `Semaphore`
 
 ```cpp
 explicit Semaphore(
@@ -128,5 +128,5 @@ WRL_NOTHROW Semaphore(
 
 ### <a name="parameters"></a>Parametry
 
-*h*<br/>
-Popisovač nebo odkaz rvalue na `Semaphore` objektu.
+*H*<br/>
+Popisovač nebo rvalue odkaz `Semaphore` na objekt.

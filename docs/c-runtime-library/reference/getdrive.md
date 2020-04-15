@@ -1,8 +1,9 @@
 ---
 title: _getdrive
-ms.date: 09/19/2019
+ms.date: 4/2/2020
 api_name:
 - _getdrive
+- _o__getdrive
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -28,19 +30,19 @@ helpviewer_keywords:
 - disk drives
 - _getdrive function
 ms.assetid: e40631a0-8f1a-4897-90ac-e1037ff30bca
-ms.openlocfilehash: 94d6c15270827cf61ec6086de8fa11251b435e2c
-ms.sourcegitcommit: f907b15f50a6b945d0b87c03af0050946157d701
+ms.openlocfilehash: 239bad8ef492396d713d81611e8d4c00da1697af
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71158755"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81344334"
 ---
 # <a name="_getdrive"></a>_getdrive
 
-Načte aktuální diskovou jednotku.
+Získá aktuální diskovou jednotku.
 
 > [!IMPORTANT]
-> Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime. Další informace najdete v tématu [funkce CRT nejsou v aplikacích Univerzální platforma Windows podporovány](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Toto rozhraní API nelze použít v aplikacích, které se spouštějí v prostředí Windows Runtime. Další informace naleznete v tématu [funkce CRT, které nejsou podporovány v aplikacích univerzální platformy Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -50,15 +52,19 @@ int _getdrive( void );
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Vrátí aktuální (výchozí) jednotku (1 = A, 2 = B a tak dále). Návratová hodnota nula znamená, že aktuální cesta nezačíná písmenem s názvem jednotky, například cestou UNC. Nebo to znamená, že vnitřní přidělení vyrovnávací paměti se nezdařilo. Pokud interní přidělení neproběhne úspěšně `errno` , je nastaveno na ENOMEM.
+Vrátí aktuální (výchozí) jednotku (1=A, 2=B a tak dále). Vrácená hodnota nula znamená, že aktuální cesta nezačíná názvem jednotky s písmeny, například cestou UNC. Nebo to znamená, že přidělení vnitřní vyrovnávací paměti se nezdařilo. Pokud se interní `errno` přidělení nezdaří, je nastavena na ENOMEM.
+
+## <a name="remarks"></a>Poznámky
+
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**_getdrive**|\<Direct. h >|
+|**_getdrive**|\<direct.h>|
 
-Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -110,9 +116,9 @@ F: (Current directory is F:\)
 G: (Current directory is G:\)
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Ovládací prvek adresáře](../../c-runtime-library/directory-control.md)<br/>
+[Řízení adresářů](../../c-runtime-library/directory-control.md)<br/>
 [_chdrive](chdrive.md)<br/>
 [_getcwd, _wgetcwd](getcwd-wgetcwd.md)<br/>
 [_getdcwd, _wgetdcwd](getdcwd-wgetdcwd.md)<br/>

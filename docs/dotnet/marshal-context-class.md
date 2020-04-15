@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - msclr::marshal_context class [C++]
 ms.assetid: 241b0cf6-4ca4-4812-aaee-d671c11dc034
-ms.openlocfilehash: 146a0f7a7cc1402f7c28e6bf09fead1914c7c6be
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 110fe4abf7eb90b05e7feef563efa4882bed0fc6
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80208514"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81332016"
 ---
 # <a name="marshal_context-class"></a>marshal_context – třída
 
@@ -27,34 +27,34 @@ class marshal_context
 
 ## <a name="remarks"></a>Poznámky
 
-Použijte třídu `marshal_context` pro převody dat, které vyžadují kontext. Další informace o tom, které převody vyžadují kontext a který soubor zařazování musí být zahrnut, najdete [v tématu Přehled zařazování v C++ ](../dotnet/overview-of-marshaling-in-cpp.md). Výsledek zařazování při použití kontextu je platný pouze v případě, že je objekt `marshal_context` zničen. Chcete-li zachovat výsledek, je nutné zkopírovat data.
+Třídu `marshal_context` použijte pro převody dat, které vyžadují kontext. Další informace o tom, které převody vyžadují kontext a který zařazovací soubor musí být zahrnut, naleznete [v tématu Přehled zařazování v jazyce C++](../dotnet/overview-of-marshaling-in-cpp.md). Výsledek zařazování při použití kontextu je `marshal_context` platný pouze do zničení objektu. Chcete-li zachovat výsledek, je nutné zkopírovat data.
 
-Stejný `marshal_context` lze použít pro velký počet převodů dat. Použití kontextu tímto způsobem nebude mít vliv na výsledky z předchozích zařazování volání.
+Totéž `marshal_context` lze použít pro mnoho převodů dat. Opětovné použití kontextu tímto způsobem nebude mít vliv na výsledky z předchozích volání zařazování.
 
 ## <a name="members"></a>Členové
 
-### <a name="public-constructors"></a>Veřejné konstruktory
+### <a name="public-constructors"></a>Veřejní konstruktéři
 
-|Název|Popis|
+|Name (Název)|Popis|
 |---------|-----------|
-|[marshal_context::marshal_context](#marshal-context)|Vytvoří objekt `marshal_context`, který se má použít pro převod dat mezi spravovanými a nativními datovými typy.|
-|[marshal_context::~marshal_context](#tilde-marshal-context)|Odstraní objekt `marshal_context`.|
+|[marshal_context::marshal_context](#marshal-context)|Vytvoří objekt, `marshal_context` který se použije pro převod dat mezi spravovanými a nativními datovými typy.|
+|[marshal_context::~marshal_context](#tilde-marshal-context)|Zničí `marshal_context` objekt.|
 
 ### <a name="public-methods"></a>Veřejné metody
 
-|Název|Popis|
+|Name (Název)|Popis|
 |---------|-----------|
-|[marshal_context::marshal_as](#marshal-as)|Provede zařazování na konkrétní datový objekt pro převod mezi spravovaným a nativním datovým typem.|
+|[marshal_context::marshal_as](#marshal-as)|Provádí zařazování na konkrétní datový objekt převést mezi spravované a nativní datový typ.|
 
 ## <a name="requirements"></a>Požadavky
 
-**Hlavičkový soubor:** \<msclr\marshal.h >, \<msclr – \ marshal_windows. h >, \<msclr – \ marshal_cppstd. h > nebo \<msclr – \ marshal_atl. h >
+**Soubor záhlaví:** \<msclr\marshal.h \<>, msclr\marshal_windows.h>, \<msclr\marshal_cppstd.h> nebo \<msclr\marshal_atl.h>
 
-**Obor názvů:** msclr –:: Interop
+**Obor názvů:** msclr::interop
 
-## <a name="marshal_contextmarshal_context"></a><a name="marshal-context"></a>marshal_context:: marshal_context
+## <a name="marshal_contextmarshal_context"></a><a name="marshal-context"></a>marshal_context::marshal_context
 
-Vytvoří objekt `marshal_context`, který se má použít pro převod dat mezi spravovanými a nativními datovými typy.
+Vytvoří objekt, `marshal_context` který se použije pro převod dat mezi spravovanými a nativními datovými typy.
 
 ```cpp
 marshal_context();
@@ -62,15 +62,15 @@ marshal_context();
 
 ### <a name="remarks"></a>Poznámky
 
-Některé převody dat vyžadují zařazovací kontext. Další informace o tom, které překlady vyžadují kontext a který soubor zařazování musíte zahrnout do vaší aplikace, najdete v tématu [Přehled zařazování v C++ ](../dotnet/overview-of-marshaling-in-cpp.md).
+Některé převody dat vyžadují kontext marshal. Další informace o tom, které překlady vyžadují kontext a který zařazovací soubor je třeba zahrnout do aplikace, naleznete v [tématu Přehled zařazování v jazyce C++](../dotnet/overview-of-marshaling-in-cpp.md).
 
 ### <a name="example"></a>Příklad
 
-Podívejte se na příklad [marshal_context:: marshal_as](../dotnet/marshal-context-marshal-as.md).
+Viz příklad pro [marshal_context::marshal_as](../dotnet/marshal-context-marshal-as.md).
 
-## <a name="marshal_contextmarshal_context"></a><a name="tilde-marshal-context"></a>marshal_context:: ~ marshal_context
+## <a name="marshal_contextmarshal_context"></a><a name="tilde-marshal-context"></a>marshal_context::~marshal_context
 
-Odstraní objekt `marshal_context`.
+Zničí `marshal_context` objekt.
 
 ```cpp
 ~marshal_context();
@@ -78,13 +78,13 @@ Odstraní objekt `marshal_context`.
 
 ### <a name="remarks"></a>Poznámky
 
-Některé převody dat vyžadují zařazovací kontext. Další informace o tom, které překlady vyžadují kontext a který musí být zahrnut do vaší aplikace, najdete v tématu [Přehled zařazování C++ ](../dotnet/overview-of-marshaling-in-cpp.md) .
+Některé převody dat vyžadují kontext marshal. Další informace o tom, které překlady vyžadují kontext a který zařazovací soubor musí být zahrnut do aplikace, naleznete [v tématu Přehled zařazování v jazyce C++.](../dotnet/overview-of-marshaling-in-cpp.md)
 
-Odstraněním objektu `marshal_context` dojde k neplatnosti dat převedených kontextem. Chcete-li zachovat data po zničení objektu `marshal_context`, je nutné ručně zkopírovat data do proměnné, která bude zachována.
+Odstraněníobjektu `marshal_context` zruší platnost dat převedených tímto kontextem. Pokud chcete zachovat data po `marshal_context` zničení objektu, je nutné ručně zkopírovat data do proměnné, která bude přetrvávat.
 
-## <a name="marshal_contextmarshal_as"></a><a name="marshal-as"></a>marshal_context:: marshal_as
+## <a name="marshal_contextmarshal_as"></a><a name="marshal-as"></a>marshal_context::marshal_as
 
-Provede zařazování na konkrétní datový objekt pro převod mezi spravovaným a nativním datovým typem.
+Provádí zařazování na konkrétní datový objekt převést mezi spravované a nativní datový typ.
 
 ```cpp
 To_Type marshal_as<To_Type>(
@@ -94,24 +94,24 @@ To_Type marshal_as<To_Type>(
 
 ### <a name="parameters"></a>Parametry
 
-*vstup*<br/>
-pro Hodnota, kterou chcete zařadit do proměnné `To_Type`.
+*Vstupní*<br/>
+[v] Hodnota, kterou chcete zařadit do `To_Type` proměnné.
 
 ### <a name="return-value"></a>Návratová hodnota
 
-Proměnná typu `To_Type`, která je převedená hodnota `input`.
+Proměnná typu, `To_Type` která je převedenou `input`hodnotou .
 
 ### <a name="remarks"></a>Poznámky
 
-Tato funkce provádí zařazování na konkrétním datovém objektu. Tuto funkci použijte pouze s převody uvedenými v tabulce v článku [Přehled zařazování v C++ ](../dotnet/overview-of-marshaling-in-cpp.md).
+Tato funkce provádí zařazování na konkrétní datový objekt. Tuto funkci používejte pouze s převody označenými v tabulce v [přehledu zařazování v jazyce C++](../dotnet/overview-of-marshaling-in-cpp.md).
 
-Pokud se pokusíte o zařazení páru datových typů, které nejsou podporovány, `marshal_as` vygeneruje chybu [C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md) v době kompilace. Další informace si můžete přečíst v této chybové zprávě. Chyba `C4996` může být vygenerována pro více než jenom nepoužívané funkce. Dvě podmínky, které generují tuto chybu, se pokoušejí zařadit dvojici datových typů, které nejsou podporované a snaží se použít `marshal_as` pro převod, který vyžaduje kontext.
+Pokud se pokusíte zařadit dvojici datových `marshal_as` typů, které nejsou podporovány, vygeneruje chybu [C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md) v době kompilace. Další informace naleznete ve zprávě dodané s touto chybou. Chyba `C4996` může být generována pro více než jen zastaralé funkce. Dvě podmínky, které generují tuto chybu se snaží zařadit dvojici datových typů, které nejsou podporovány a pokusu o použití `marshal_as` pro převod, který vyžaduje kontext.
 
-Zařazování knihovny se skládá z několika hlavičkových souborů. Jakýkoli převod vyžaduje pouze jeden soubor, ale pokud potřebujete pro jiné převody, můžete zahrnout další soubory. Tabulka v `Marshaling Overview in C++` určuje, který soubor k zařazování by měl být zahrnut pro každý převod.
+Zařazovací knihovna se skládá z několika souborů hlaviček. Jakýkoli převod vyžaduje pouze jeden soubor, ale v případě potřeby můžete zahrnout další soubory pro jiné převody. Tabulka v `Marshaling Overview in C++` označuje, který zařazovací soubor by měl být zahrnut pro každý převod.
 
 ### <a name="example"></a>Příklad
 
-Tento příklad vytvoří kontext pro zařazování z `System::String` do typu proměnné `const char *`. Převedená data budou platná za řádkem, který odstraní kontext.
+Tento příklad vytvoří kontext pro `System::String` zařazování z `const char *` typu proměnné. Převedená data nebudou platná po řádku, který odstraní kontext.
 
 ```cpp
 // marshal_context_test.cpp

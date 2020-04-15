@@ -1,49 +1,49 @@
 ---
-title: Použití nahraditelných parametrů (Registrátor ATL)
+title: Použití nahraditelných parametrů (registrátor ATL)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - '%MODULE%'
 ms.assetid: 0b376994-84a6-4967-8d97-8c01dfc94efe
-ms.openlocfilehash: 1c772c0493b351d8452400a4fb1e3949ab6f28f2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2474db2de384baa9113ed39aef4d3d9c9048903d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62274141"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81329231"
 ---
-# <a name="using-replaceable-parameters-the-registrar39s-preprocessor"></a>Použití nahraditelných parametrů (doménový Registrátor&#39;s preprocesoru)
+# <a name="using-replaceable-parameters-the-registrar39s-preprocessor"></a>Použití vyměnitelných parametrů (preprocesor registrátora&#39;)
 
-Nahraditelné parametry umožňují klienta vašeho registrátora zadání dat za běhu. K tomuto účelu udržuje doménový Registrátor nahrazení mapování, do kterého se zadá hodnoty přidružené k nahraditelné parametry ve skriptu. Doménový Registrátor provede tyto položky v době běhu.
+Nahraditelné parametry umožňují klientovi registrátora určit data za běhu. Za tímto účelem registrátor udržuje náhradní mapu, do které zadá hodnoty spojené s nahraditelnými parametry ve skriptu. Registrátor provádí tyto položky za běhu.
 
-##  <a name="_atl_using_.25.module.25"></a> Pomocí modulu %
+## <a name="using-module"></a><a name="_atl_using_.25.module.25"></a>Použití %MODULE%
 
-[Průvodce ovládacími prvky ATL](../atl/reference/atl-control-wizard.md) automaticky generuje skript, který používá `%MODULE%`. ATL – používá tuto proměnnou pro skutečné umístění souboru EXE nebo knihovny DLL váš server.
+[Průvodce řízením atl](../atl/reference/atl-control-wizard.md) automaticky generuje `%MODULE%`skript, který používá . Služba ATL používá tento nahraditelný parametr pro skutečné umístění dll nebo exe serveru.
 
-## <a name="concatenating-run-time-data-with-script-data"></a>Zřetězení dat za běhu pomocí Data skriptu
+## <a name="concatenating-run-time-data-with-script-data"></a>Zřetězení dat za běhu s daty skriptu
 
-Další možností použití preprocesoru je zřetězit data za běhu s daty skriptu. Předpokládejme například, že položka je potřeba, který obsahuje úplnou cestu k modulu s řetězcem "`, 1`" přidán na konec. Nejprve definujte následující rozšíření:
+Dalším použitím preprocesoru je zřetězení dat za běhu s daty skriptu. Předpokládejme například, že je potřeba položka, která obsahuje`, 1`úplnou cestu k modulu s řetězcem " " připojeným na konci. Nejprve definujte následující rozšíření:
 
 ```
 'MySampleKey' = s '%MODULE%, 1'
 ```
 
-Potom jeden skript zpracování metody uvedené v před voláním [vyvolání skriptů](../atl/invoking-scripts.md), přidejte můžou nahradit aktuální soubor do mapy:
+Potom před voláním jedné z metod zpracování skriptů uvedených [v invoking skripty](../atl/invoking-scripts.md), přidejte náhradu do mapy:
 
 [!code-cpp[NVC_ATL_Utilities#113](../atl/codesnippet/cpp/using-replaceable-parameters-the-registrar-s-preprocessor_1.cpp)]
 
-Při analýze souboru, který rozbalí doménový Registrátor `'%MODULE%, 1'` k `c:\mycode\mydll.dll, 1`.
+Během analýzy skriptu se registrátor `'%MODULE%, 1'` rozbalí `c:\mycode\mydll.dll, 1`na .
 
 > [!NOTE]
->  Ve skriptu registrátoru je 4 kB maximální velikost tokenu. (Token je libovolný prvek rozpoznat v syntaxi). To zahrnuje tokeny, které byly vytvořeny nebo analyzována pomocí preprocesoru.
+> Ve skriptu registrátora je maximální velikost tokenu 4K. (Token je libovolný rozpoznatelný prvek v syntaxi.) To zahrnuje tokeny, které byly vytvořeny nebo rozbaleny preprocesorem.
 
 > [!NOTE]
->  Nahradit nahrazujícími hodnotami v době běhu, odeberte volání ve skriptu na [DECLARE_REGISTRY_RESOURCE](../atl/reference/registry-macros.md#declare_registry_resource) nebo [DECLARE_REGISTRY_RESOURCEID](../atl/reference/registry-macros.md#declare_registry_resourceid) – makro. Místo toho, nahraďte ho vlastním `UpdateRegistry` metodu, která volá [CAtlModule::UpdateRegistryFromResourceD](../atl/reference/catlmodule-class.md#updateregistryfromresourced) nebo [CAtlModule::UpdateRegistryFromResourceS](../atl/reference/catlmodule-class.md#updateregistryfromresources)a předat vaše pole _ATL_REGMAP_ Položka struktury. Vaše pole _ATL_REGMAP_ENTRY musí mít alespoň jednu položku, která je nastavena na {NULL, NULL} a tato položka by měla být vždy poslední položky. V opačném případě chybu narušení přístupu bude generována v případě `UpdateRegistryFromResource` je volána.
+> Chcete-li nahradit náhradní hodnoty za běhu, odeberte volání ve skriptu do [DECLARE_REGISTRY_RESOURCE](../atl/reference/registry-macros.md#declare_registry_resource) nebo [DECLARE_REGISTRY_RESOURCEID](../atl/reference/registry-macros.md#declare_registry_resourceid) makru. Místo toho jej nahraďte vlastní `UpdateRegistry` metodou, která volá [CAtlModule::UpdateRegistryFromResourceD](../atl/reference/catlmodule-class.md#updateregistryfromresourced) nebo [CAtlModule::UpdateRegistryFromResourceS](../atl/reference/catlmodule-class.md#updateregistryfromresources)a předejte pole _ATL_REGMAP_ENTRY struktur. Pole _ATL_REGMAP_ENTRY musí mít alespoň jednu položku, která je nastavena na {NULL, NULL}, a tato položka by měla být vždy poslední položkou. V opačném případě bude při volání `UpdateRegistryFromResource` generována chyba narušení přístupu.
 
 > [!NOTE]
->  Při sestavování projektu, jejichž výstupem jsou spustitelný soubor, ATL automaticky přidá uvozovky kolem názvu cesty vytvořen v době běhu s **modulu %** parametr skriptu doménový Registrátor. Pokud nechcete, aby se název cesty do uvozovek, pomocí nové **MODULE_RAW %** parametr místo.
+> Při vytváření projektu, který vytváří spustitelný soubor, přidá společnost ATL automaticky uvozovky kolem názvu cesty vytvořeného za běhu s parametrem skriptu registrátora **%MODULE%.** Pokud nechcete, aby název cesty obsahoval uvozovky, použijte místo toho nový parametr **%MODULE_RAW%.**
 >
->  Při sestavování projektu, jejichž výstupem jsou knihovny DLL, ATL nebude přidávat uvozovky název cesty, pokud **modulu %** nebo **MODULE_RAW %** se používá.
+> Při vytváření projektu, který vydělá dll, nebude společnost ATL přidávat k názvu cesty uvozovky, pokud je použit **%MODULE%** nebo **%MODULE_RAW%.**
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Vytváření skriptů registrátoru](../atl/creating-registrar-scripts.md)
+[Vytváření skriptů registrátora](../atl/creating-registrar-scripts.md)

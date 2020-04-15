@@ -1,10 +1,12 @@
 ---
 title: _futime, _futime32, _futime64
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _futime64
 - _futime32
 - _futime
+- _o__futime32
+- _o__futime64
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -35,16 +38,16 @@ helpviewer_keywords:
 - futime function
 - _futime32 function
 ms.assetid: b942ce8f-5cc7-4fa8-ab47-de5965eded53
-ms.openlocfilehash: 3de638f08882e2aae4743311730afcd888c43a60
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 1f60bb3b366c48e3d53368f81ebc2528694794f3
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70956234"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81345507"
 ---
 # <a name="_futime-_futime32-_futime64"></a>_futime, _futime32, _futime64
 
-Nastaví čas změny otevřeného souboru.
+Nastaví čas změny v otevřeném souboru.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -65,31 +68,33 @@ int _futime64(
 
 ### <a name="parameters"></a>Parametry
 
-*fd*<br/>
-Popisovač souboru do otevřeného souboru
+*Fd*<br/>
+Popisovač souboru do otevřeného souboru.
 
-*FILETIME –*<br/>
-Ukazatel na strukturu obsahující nové datum úpravy.
+*soubor*<br/>
+Ukazatel na strukturu obsahující nové datum změny.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-V případě úspěchu vrátí hodnotu 0. Pokud dojde k chybě, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, funkce vrátí hodnotu-1 a **errno** je nastavena na **EBADF**, což značí neplatný popisovač souboru nebo **EINVAL**, což značí neplatný parametr.
+Vrátit 0 v případě úspěchu. Pokud dojde k chybě, je vyvolána neplatná obslužná rutina parametru, jak je popsáno v [parametru Validation](../../c-runtime-library/parameter-validation.md). Pokud je spuštění povoleno pokračovat, funkce vrátí -1 a **errno** je nastavena na **EBADF**, označující neplatný popisovač souboru nebo **EINVAL**, označující neplatný parametr.
 
 ## <a name="remarks"></a>Poznámky
 
-Rutina **_futime** nastaví datum úpravy a dobu přístupu k otevřenému souboru přidruženému ke *FD*. **_futime** je identická s [_utime](utime-utime32-utime64-wutime-wutime32-wutime64.md), s tím rozdílem, že jeho argument je popisovačem souboru otevřeného souboru, nikoli název souboru nebo cesta k souboru. Struktura **_utimbuf** obsahuje pole pro nové datum změny a čas přístupu. Obě pole musí obsahovat platné hodnoty. **_utimbuf32** a **_utimbuf64** jsou stejné jako **_utimbuf** s výjimkou použití typů s 32 a 64 bitových časů, v uvedeném pořadí. **_futime** a **_utimbuf** používají typ času 64 a **_futime** je identické v chování pro **_futime64**. Pokud potřebujete vynutit staré chování, definujte **_USE_32BIT_TIME_T**. To způsobí, že **_futime** bude identické v chování pro **_futime32** a způsobí, že struktura **_utimbuf** používá typ času 32-bit, takže je ekvivalentem **__utimbuf32**.
+Rutina **_futime** nastaví datum změny a čas přístupu na otevřený soubor přidružený k *fd*. **_futime** je totožný s [_utime](utime-utime32-utime64-wutime-wutime32-wutime64.md), s tím rozdílem, že jeho argumentem je popisovač souboru otevřeného souboru, nikoli název souboru nebo cesty k souboru. Struktura **_utimbuf** obsahuje pole pro nové datum změny a přístupový čas. Obě pole musí obsahovat platné hodnoty. **_utimbuf32** a **_utimbuf64** jsou shodné s **_utimbuf** s výjimkou použití 32bitových a 64bitových časových typů. **_futime** a **_utimbuf** použít 64bitový typ času a **_futime** je v chování shodné s **_futime64**. Pokud potřebujete vynutit staré chování, definujte **_USE_32BIT_TIME_T**. To **způsobí, že _futime** být identické chování **_futime32** a **způsobí,** že struktura _utimbuf použít 32bitový časový typ, takže je ekvivalentní **__utimbuf32**.
 
-**_futime64**, která používá strukturu **__utimbuf64** , může číst a upravovat data souborů až 23:59:59, 31. prosince 3000, UTC; vzhledem k tomu, že volání **_futime32** selžou, pokud je datum souboru pozdější než 23:59:59. ledna 2038, UTC. Půlnoc, 1. ledna 1970, je dolní mez rozsahu kalendářních dat pro tyto funkce.
+**_futime64**, který používá **__utimbuf64** strukturu, může číst a upravovat data souborů přes 23:59:59, prosinec 31, 3000, UTC; vzhledem k tomu, že volání **_futime32** se nezdaří, pokud je datum v souboru pozdější než 23:59:59 Leden 18, 2038, UTC. Půlnoc 1.
+
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
-|Funkce|Požadovaný hlavičkový soubor|Volitelné záhlaví|
+|Funkce|Požadovaný hlavičkový soubor|Volitelná hlavička|
 |--------------|---------------------|---------------------|
-|**_futime**|\<sys/UTIME. h >|\<errno.h>|
-|**_futime32**|\<sys/UTIME. h >|\<errno.h>|
-|**_futime64**|\<sys/UTIME. h >|\<errno.h>|
+|**_futime**|\<sys/utime.h>|\<errno.h>|
+|**_futime32**|\<sys/utime.h>|\<errno.h>|
+|**_futime64**|\<sys/utime.h>|\<errno.h>|
 
-Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -127,7 +132,7 @@ int main( void )
 }
 ```
 
-### <a name="input-crt_futimec_input"></a>Vstup: crt_futime. c_input
+### <a name="input-crt_futimec_input"></a>Vstup: crt_futime.c_input
 
 ```Input
 Arbitrary file contents.
@@ -155,6 +160,6 @@ Directory of Z:\crt
 File time modified
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Správa času](../../c-runtime-library/time-management.md)<br/>
+[Časová správa](../../c-runtime-library/time-management.md)<br/>

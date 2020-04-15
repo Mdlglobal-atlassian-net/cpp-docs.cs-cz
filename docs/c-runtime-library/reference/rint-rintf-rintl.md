@@ -1,10 +1,13 @@
 ---
 title: rint, rintf, rintl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - rintf
 - rintl
 - rint
+- _o_rint
+- _o_rintf
+- _o_rintl
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -30,16 +34,16 @@ helpviewer_keywords:
 - rint function
 - rintl function
 ms.assetid: 312ae3e6-278c-459a-9393-11b8f87d9184
-ms.openlocfilehash: ac9db3ee5a50bb334754a8a1191638a319829b97
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 6489b7ebed5246738fb660dffd07a0b8f8ed9743
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80170888"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81332764"
 ---
 # <a name="rint-rintf-rintl"></a>rint, rintf, rintl
 
-Zaokrouhlí hodnotu s plovoucí desetinnou čárkou na nejbližší celé číslo ve formátu s plovoucí desetinnou čárkou.
+Zaokrouhlí hodnotu s plovoucí desetinnou desetinnou hodnotou na nejbližší celé číslo ve formátu s plovoucí desetinnou desetinnou desetinnou desetinnou táslužbou.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -56,29 +60,31 @@ long double rint( long double x );  // C++ only
 
 ### <a name="parameters"></a>Parametry
 
-*znak*<br/>
-Hodnota s plovoucí desetinnou čárkou, která má být zaokrouhlena.
+*X*<br/>
+Hodnota s plovoucí desetinnou tácem k zaokrouhlení.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Funkce **isknout** vrací hodnotu s plovoucí desetinnou čárkou, která představuje nejbližší celé číslo na *ose x*. Hodnoty uprostřed jsou zaokrouhleny podle aktuálního nastavení režimu zaokrouhlení s plovoucí desetinnou čárkou, stejné jako funkce **nearbyint –** . Na rozdíl od funkcí **nearbyint –** mohou funkce **isknout** vyvolat výjimku **FE_INEXACT** s plovoucí desetinnou čárkou, pokud se výsledek liší od hodnoty argumentu. Nevrátila se žádná chybová zpráva.
+Funkce **rint** vrátí hodnotu s plovoucí desetinnou hodnotou, která představuje nejbližší celé číslo na *x*. Hodnoty do poloviny jsou zaokrouhleny podle aktuálního nastavení režimu zaokrouhlení s plovoucí desetinnou čárkou, stejně jako funkce **nearint.** Na rozdíl od **funkcí nearint** funkce **rint** funkce může vyvolat **výjimku FE_INEXACT** plovoucí desetinnou desetinnou, pokud výsledek se liší v hodnotě od argumentu. Neexistuje žádná chyba vrátit.
 
-|Vstup|Výjimka SEH|**_matherr** Jímka|
+|Vstup|Výjimka SEH|**_matherr** Výjimka|
 |-----------|-------------------|--------------------------|
-|∞, QNAN, ZASÁHNOUT|Žádná|Žádná|
-|Denormalizované|EXCEPTION_FLT_UNDERFLOW|Žádná|
+|± ∞, QNAN, IND|Žádná|Žádná|
+|Denormální jevy|EXCEPTION_FLT_UNDERFLOW|Žádná|
 
 ## <a name="remarks"></a>Poznámky
 
-Vzhledem C++ k tomu, že umožňuje přetížení, můžete volat přetížení **isknout** , která přijímají a vracejí hodnoty **float** a **Long** **Double** . V programu v jazyce C **isknout** vždycky přebírá a vrací **Double**.
+Vzhledem k tomu, že C++ umožňuje přetížení, můžete volat přetížení **rint,** které trvat a vrátit **float** a **dlouhé** **dvojité** hodnoty. V programu C **rint** vždy trvá a vrací **double**.
+
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
-|Funkce|Hlavička jazyka C|C++hlaviček|
+|Funkce|Hlavička C|Hlavička C++|
 |--------------|--------------|------------------|
-|**isknout**, **rintf**, **rintl**|\<Math. h >|\<cmath >|
+|**rint**, **rintf**, **rintl**|\<math.h>|\<cmath>|
 
-Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -118,11 +124,11 @@ rintl(-2.500000) is -3
 
 ## <a name="see-also"></a>Viz také
 
-[Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)<br/>
+[Podpora s plovoucí desetinnou tálicí](../../c-runtime-library/floating-point-support.md)<br/>
 [ceil, ceilf, ceill](ceil-ceilf-ceill.md)<br/>
 [floor, floorf, floorl](floor-floorf-floorl.md)<br/>
 [fmod, fmodf](fmod-fmodf.md)<br/>
 [lrint, lrintf, lrintl, llrint, llrintf, llrintl](lrint-lrintf-lrintl-llrint-llrintf-llrintl.md)<br/>
 [lround, lroundf, lroundl, llround, llroundf, llroundl](lround-lroundf-lroundl-llround-llroundf-llroundl.md)<br/>
 [nearbyint, nearbyintf, nearbyintl](nearbyint-nearbyintf-nearbyintl1.md)<br/>
-[isknout](rint-rintf-rintl.md)<br/>
+[rint](rint-rintf-rintl.md)<br/>

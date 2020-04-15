@@ -1,8 +1,9 @@
 ---
 title: realloc
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - realloc
+- _o_realloc
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -35,16 +37,16 @@ helpviewer_keywords:
 - _frealloc function
 - reallocate memory blocks
 ms.assetid: 2b2239de-810b-4b11-9438-32ab0a244185
-ms.openlocfilehash: 6197b7bca3ec9f416696e1ded8ea5ca813392616
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 964c465a95d44de9d8a4d399f23ec43f8a3a6692
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949502"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81332936"
 ---
 # <a name="realloc"></a>realloc
 
-Znovu přidělit bloky paměti.
+Přerozdělit bloky paměti.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -57,49 +59,51 @@ void *realloc(
 
 ### <a name="parameters"></a>Parametry
 
-*memblock*<br/>
+*memblok*<br/>
 Ukazatel na dříve přidělený blok paměti.
 
-*hodnota*<br/>
-Nová velikost v bajtech
+*Velikost*<br/>
+Nová velikost v bajtů.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**realokace** vrátí ukazatel **void** na blok paměti realokace (a případně přesunuto).
+**funkce přerozdělovací položky** vrátí ukazatel **void** na přerozdělený (a případně přesunutý) blok paměti.
 
-Pokud není dostatek dostupné paměti pro rozšíření bloku na danou velikost, původní blok zůstane beze změny a vrátí **hodnotu null** .
+Pokud není k dispozici dostatek paměti pro rozšíření bloku na danou velikost, původní blok zůstane beze změny **a** null je vrácena.
 
-Pokud je *Velikost* nulová, pak je uvolněn blok, na který odkazuje *memblock* ; Vrácená hodnota je **null**a *memblock* vlevo odkazuje na uvolněný blok.
+Pokud je *velikost* nulová, je blok, na který ukazuje *memblock,* uvolněn; vrácená hodnota je **NULL**a *memblock* je ponechán a směřující na uvolněný blok.
 
-Vrácená hodnota odkazuje na prostor úložiště, který je zaručen vhodným způsobem pro uložení libovolného typu objektu. Chcete-li získat ukazatel na jiný typ než **void**, použijte přetypování typu u vrácené hodnoty.
+Vrácená hodnota odkazuje na úložný prostor, který je zaručeně vhodně zarovnán pro uložení libovolného typu objektu. Chcete-li získat ukazatel na jiný typ než **void**, použijte typ přetypované na vrácenou hodnotu.
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce **realokace** změní velikost přiděleného bloku paměti. Argument *memblock* odkazuje na začátek bloku paměti. Pokud má Memblock **hodnotu null**, **realokace** se chová stejným **způsobem jako \** a přidělí nový blok *velikosti* bajtů. Pokud *memblock* není **null**, mělo by se jednat o ukazatel vrácený předchozím voláním metody **calloc** **, pro**nebo **realokace**.
+Funkce **reloc** změní velikost přiděleného bloku paměti. Argument *memblock* odkazuje na začátek bloku paměti. Pokud *memblock* je **NULL**, **realloc** chová stejným způsobem jako **malloc** a přiděluje nový blok *velikosti* bajtů. Pokud *memblock* není **NULL**, by měl být ukazatel vrácena předchozí volání **calloc**, **malloc**, nebo **reloc**.
 
-Argument *Size* poskytuje novou velikost bloku v bajtech. Obsah bloku se nezměnil do kratšího z nových a starých velikostí, i když nový blok může být v jiném umístění. Vzhledem k tomu, že nový blok může být v novém umístění v paměti, ukazatel vrácený funkcí **realokace** není zaručen jako ukazatel předaný pomocí argumentu *memblock* . **realokace** nemá v případě růstu vyrovnávací paměti nula nově přidělené paměti.
+Argument *velikost* i dává novou velikost bloku v bajtů. Obsah bloku se nemění až na kratší nové a staré velikosti, i když nový blok může být v jiném umístění. Vzhledem k tomu, že nový blok může být v novém umístění paměti, ukazatel vrácený **realloc** není zaručeno, že ukazatel prošel *memblock* argument. **přerozdělované** není nula nově přidělené paměti v případě růstu vyrovnávací paměti.
 
-**realokace** nastaví **errno** na **ENOMEM** , pokud se přidělení paměti nepovede nebo pokud je velikost požadované paměti větší než **_HEAP_MAXREQ**. Informace o tomto a dalších chybových kódech naleznete v tématu [errno, _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+**přecenění** nastaví **errno** na **ENOMEM,** pokud se nezdaří přidělení paměti nebo pokud požadované množství paměti překročí **_HEAP_MAXREQ**. Informace o tomto a dalších kódech chyb naleznete [v tématu errno, _doserrno, _sys_errlist a _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-**realokace** volá **hodnotu** _set_new_mode, aby bylo možné C++ použít funkci [](set-new-mode.md) k nastavení nového režimu obslužné rutiny. Nový režim obslužné rutiny **označuje, zda je při** selhání zavolána nová rutina obslužné rutiny nastavenou na [_set_new_handler](set-new-handler.md). Ve výchozím nastavení nevolá hodnota \ nevolá novou rutinu obslužné rutiny při selhání přidělení paměti. Toto výchozí chování můžete přepsat tak, **aby při opětovném přidělení paměti** nebylo volání nové obslužné rutiny nové rutiny obslužné rutiny stejným způsobem jako operátor **New** **, když** dojde k chybě ze stejného důvodu. Chcete-li přepsat výchozí hodnotu, zavolejte
+**funkce realloc** volá **malloc,** aby bylo možné použít funkci [c++ _set_new_mode](set-new-mode.md) k nastavení nového režimu obslužné rutiny. Nový režim obslužné rutiny označuje, zda při selhání **malloc** volá novou rutinu obslužné rutiny nastavenou [_set_new_handler](set-new-handler.md). Ve výchozím nastavení **malloc** nevolá novou rutinu obslužné rutiny při selhání přidělení paměti. Můžete přepsat toto výchozí chování tak, že při **realloc** se nezdaří přidělit paměť, **malloc** volá rutiny nové obslužné rutiny stejným způsobem, že **nový** operátor dělá, když se nezdaří ze stejného důvodu. Chcete-li přepsat výchozí,
 
 ```C
 _set_new_mode(1);
 ```
 
-nejdříve v programu nebo se připojte pomocí NEWMODE. OBJ (viz [možnosti propojení](../../c-runtime-library/link-options.md)).
+brzy v nich programu, nebo odkaz s NEWMODE. OBJ (viz [Možnosti odkazu](../../c-runtime-library/link-options.md)).
 
-Pokud je aplikace propojena s ladicí verzí knihoven jazyka C Runtime, **realokace** se přeloží na [_realloc_dbg](realloc-dbg.md). Další informace o tom, jak je halda spravována během procesu ladění, naleznete v [haldě ladění CRT](/visualstudio/debugger/crt-debug-heap-details).
+Pokud je aplikace propojena s ladicí verzí knihoven c run-time, **překládá funkce realloc** na [_realloc_dbg](realloc-dbg.md). Další informace o tom, jak haldy je spravována během procesu ladění, naleznete [v tématu HALDA ladění CRT](/visualstudio/debugger/crt-debug-heap-details).
 
-**realokace** je označena `__declspec(restrict)`jako `__declspec(noalias)` , což znamená, že funkce zaručuje, že nemění globální proměnné a že ukazatel, který vrátil, nemá alias. Další informace najdete [v tématech a](../../cpp/noalias.md) [omezení](../../cpp/restrict.md).
+**přerozdělování** `__declspec(noalias)` je `__declspec(restrict)`označeno a , což znamená, že je zaručeno, že funkce nebude měnit globální proměnné a že vrácený ukazatel není aliasován. Další informace naleznete v [tématu noalias](../../cpp/noalias.md) a [restrict](../../cpp/restrict.md).
+
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
 |Rutina|Požadovaný hlavičkový soubor|
 |-------------|---------------------|
-|**realloc**|\<Stdlib. h > a \<. h >|
+|**realloc**|\<stdlib.h> \<a malloc.h>|
 
-Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Příklad
 
@@ -148,9 +152,9 @@ Size of block after malloc of 1000 longs: 4000
 Size of block after realloc of 1000 more longs: 8000
 ```
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Přidělení paměti](../../c-runtime-library/memory-allocation.md)<br/>
 [calloc](calloc.md)<br/>
-[free](free.md)<br/>
+[Zdarma](free.md)<br/>
 [malloc](malloc.md)<br/>

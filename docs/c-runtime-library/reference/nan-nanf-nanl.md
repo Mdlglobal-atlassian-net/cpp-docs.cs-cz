@@ -1,10 +1,13 @@
 ---
 title: nan, nanf, nanl
-ms.date: 01/31/2019
+ms.date: 4/2/2020
 api_name:
 - nanf
 - nan
 - nanl
+- _o_nan
+- _o_nanf
+- _o_nanl
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -30,16 +34,16 @@ helpviewer_keywords:
 - nanf function
 - nanl function
 ms.assetid: 790e9158-80ab-43e0-8f5a-096198553fd9
-ms.openlocfilehash: 9574eb0382f3bb7fc3c51d504aba9e29d0692c09
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: d8f0db5020f274de27f7f1bbf3a76659eae568e4
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951422"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81338646"
 ---
 # <a name="nan-nanf-nanl"></a>nan, nanf, nanl
 
-Vrací hodnotu tichého NaN.
+Vrátí tichou hodnotu NaN.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -51,26 +55,28 @@ long double nanl( const char* input );
 
 ### <a name="parameters"></a>Parametry
 
-*vstup*<br/>
-Řetězcová hodnota.
+*Vstupní*<br/>
+Hodnota řetězce.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-Funkce **NaN** vrací tichou hodnotu NaN.
+**Nan** funkce vrátí tichou hodnotu NaN.
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce **NaN** vrací hodnotu s plovoucí desetinnou čárkou, která odpovídá tichému (bez signalizaci) NaN. *Vstupní* hodnota je ignorována. Informace o způsobu reprezentace NaN pro výstup naleznete v tématu [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md).
+**Nan** funkce vrátí hodnotu s plovoucí desetinnou hodnotou, která odpovídá tiché (nesignalizační) NaN. *Vstupní* hodnota je ignorována. Informace o tom, jak je NaN reprezentovánpro výstup, naleznete [v tématu printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md).
+
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
-|Funkce|Hlavička jazyka C|C++hlaviček|
+|Funkce|Hlavička C|Hlavička C++|
 |--------------|--------------|------------------|
-|**NaN**, **nanf –** , **nanl**|\<Math. h >|\<cmath > nebo \<Math. h >|
+|**nan**, **nanf**, **nanl**|\<math.h>|\<cmath> \<nebo math.h>|
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
-[Podpora plovoucí desetinné čárky](../../c-runtime-library/floating-point-support.md)<br/>
+[Podpora s plovoucí desetinnou tálicí](../../c-runtime-library/floating-point-support.md)<br/>
 [fpclassify](fpclassify.md)<br/>
 [_fpclass, _fpclassf](fpclass-fpclassf.md)<br/>
 [isfinite, _finite, _finitef](finite-finitef.md)<br/>

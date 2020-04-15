@@ -1,8 +1,9 @@
 ---
 title: __p__fmode
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - __p__fmode
+- _o___p__fmode
 api_location:
 - msvcr80.dll
 - msvcr120.dll
@@ -12,6 +13,7 @@ api_location:
 - msvcr110_clr0400.dll
 - msvcr100.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -21,16 +23,16 @@ f1_keywords:
 helpviewer_keywords:
 - __p__fmode
 ms.assetid: 1daa1394-81eb-43aa-a71b-4cc6acf3207b
-ms.openlocfilehash: 2364a22d52c5bc418e4499a4a639c8e06559063a
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: aecba640099719f90db8bbd5dbe386ea99aae45d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80171447"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81349251"
 ---
 # <a name="__p__fmode"></a>__p__fmode
 
-Odkazuje na `_fmode` globální proměnná, která určuje výchozí *režim překladu souborů* pro vstupně-výstupní operace se soubory.
+Odkazuje na `_fmode` globální proměnnou, která určuje výchozí *režim překladu souborů* pro operace vstupně-videa souborů.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -45,9 +47,11 @@ Ukazatel na `_fmode` globální proměnnou.
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce `__p__fmode` je určena pouze pro interní použití a neměla by být volána z uživatelského kódu.
+Funkce `__p__fmode` je pouze pro interní použití a neměla by být volána z uživatelského kódu.
 
-Režim překladu souborů Určuje buď `binary` nebo `text` překlad pro [_open](../c-runtime-library/reference/open-wopen.md) a [_Pipe](../c-runtime-library/reference/pipe.md) vstupně-výstupních operací. Další informace najdete v tématu [_fmode](../c-runtime-library/fmode.md).
+Režim překladu souborů `binary` `text` určuje buď překlad [pro _open](../c-runtime-library/reference/open-wopen.md) a [_pipe](../c-runtime-library/reference/pipe.md) vstupně-va operace. Další informace naleznete [v tématu _fmode](../c-runtime-library/fmode.md).
+
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 

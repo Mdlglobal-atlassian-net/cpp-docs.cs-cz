@@ -1,9 +1,11 @@
 ---
 title: _mbsbtype, _mbsbtype_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbsbtype_l
 - _mbsbtype
+- _o__mbsbtype
+- _o__mbsbtype_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -31,19 +34,19 @@ helpviewer_keywords:
 - _mbsbtype_l function
 - mbsbtype_l function
 ms.assetid: 0d5dd91a-d32d-4f98-ac57-98dfc9e98eac
-ms.openlocfilehash: c474cad9027b7914a08816346e38e954a7200bb5
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: d71a061d9af5028c9bc6b4008f9904606a233592
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952397"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81340875"
 ---
 # <a name="_mbsbtype-_mbsbtype_l"></a>_mbsbtype, _mbsbtype_l
 
-Vrátí typ bajtu v rámci řetězce.
+Vrátí typ bajtu v řetězci.
 
 > [!IMPORTANT]
-> Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v prostředí Windows Runtime. Další informace najdete v tématu [funkce CRT nejsou v aplikacích Univerzální platforma Windows podporovány](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Toto rozhraní API nelze použít v aplikacích, které se spouštějí v prostředí Windows Runtime. Další informace naleznete v tématu [funkce CRT, které nejsou podporovány v aplikacích univerzální platformy Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -64,42 +67,44 @@ int _mbsbtype_l(
 *mbstr*<br/>
 Adresa posloupnosti vícebajtových znaků.
 
-*výpočtu*<br/>
-Posun bajtů od hlavičky řetězce
+*Počet*<br/>
+Posun bajtu od hlavy řetězce.
 
-*jazyka*<br/>
-Národní prostředí, které se má použít.
+*Národní prostředí*<br/>
+Národní prostředí použít.
 
 ## <a name="return-value"></a>Návratová hodnota
 
-**_mbsbtype** a **_mbsbtype_l** vrací celočíselnou hodnotu označující výsledek testu na zadaném bajtu. Konstanty manifestu v následující tabulce jsou definovány v Mbctype. h.
+**_mbsbtype** a **_mbsbtype_l** vrátí hodnotu celé číslo označující výsledek testu na určeném bajtu. Konstanty manifestu v následující tabulce jsou definovány v souboru Mbctype.h.
 
 |Návratová hodnota|Typ bajtu|
 |------------------|---------------|
-|**_MBC_SINGLE** (0)|Jednobajtové znak. Například v kódové stránce 932 vrátí **_mbsbtype** hodnotu 0, pokud je zadaný bajt v rozsahu 0X20-0X7e nebo 0XA1-0xDF.|
-|**_MBC_LEAD** (1)|Vedoucí bajt vícebajtového znaku. Například v kódové stránce 932 vrátí **_mbsbtype** hodnotu 1, pokud je zadaný bajt v rozsahu 0X81-0X9f nebo 0XE0-0xFC.|
-|**_MBC_TRAIL** (2)|Koncový bajt vícebajtového znaku. Například v kódové stránce 932 vrátí **_mbsbtype** hodnotu 2, pokud je zadaný bajt v rozsahu 0X40-0x7E nebo 0X80-0xFC.|
-|**_MBC_ILLEGAL** (-1)|Před bajtem *na posunu* v *mbstr*byl nalezen řetězec s **hodnotou null** , neplatný znak nebo bajt s hodnotou null.|
+|**_MBC_SINGLE** (0)|Jednobajtový znak. Například v znakové stránce 932 **_mbsbtype** vrátí 0, pokud je zadaný bajt v rozsahu 0x20 - 0x7E nebo 0xA1 - 0xDF.|
+|**_MBC_LEAD** (1)|Úvodní bajt vícebajtového znaku. Například v znakové stránce 932 **vrátí _mbsbtype** 1, pokud je zadaný bajt v rozsahu 0x81 - 0x9F nebo 0xE0 - 0xFC.|
+|**_MBC_TRAIL** (2)|Koncový bajt vícebajtového znaku. Například v znakové stránce 932 **vrátí _mbsbtype** 2, pokud je zadaný bajt v rozsahu 0x40 - 0x7E nebo 0x80 - 0xFC.|
+|**_MBC_ILLEGAL** (-1)|**Null** řetězec, neplatný znak nebo nulový bajt nalezen před bajtem při *počtu posunů* v *mbstr*.|
 
 ## <a name="remarks"></a>Poznámky
 
-Funkce **_mbsbtype** určuje typ bajtu v vícebajtovém řetězci znaků. Funkce kontroluje pouze bajt v *počtu* posunu v *mbstr*a ignoruje neplatné znaky před zadaným bajtem.
+Funkce **_mbsbtype** určuje typ bajtu v vícebajtovém znakovém řetězci. Funkce zkoumá pouze bajt při *počtu posunů* v *mbstr*a ignoruje neplatné znaky před určeným bajtem.
 
-Výstupní hodnota je ovlivněna nastavením kategorie **LC_CTYPE** národního prostředí; Další informace naleznete v tématu [setlocale](setlocale-wsetlocale.md) . Verze této funkce bez přípony **_l** používá aktuální národní prostředí pro toto chování závislé na národním prostředí; verze s příponou **_l** je shodná s tím rozdílem, že místo toho používá parametr národního prostředí. Další informace najdete v tématu [národní prostředí](../../c-runtime-library/locale.md).
+Výstupní hodnota je ovlivněna nastavením nastavení **LC_CTYPE** kategorie národního prostředí; další informace naleznete [v tématu setlocale.](setlocale-wsetlocale.md) Verze této funkce bez **_l** přípony používá aktuální národní prostředí pro toto chování závislé na národním prostředí; verze s **příponou _l** je identická s tím rozdílem, že místo toho používá parametr národního prostředí. Další informace naleznete v [tématu Locale](../../c-runtime-library/locale.md).
 
-Pokud je vstupní řetězec **null**, je vyvolána obslužná rutina neplatného parametru, jak je popsáno v tématu [ověřování parametru](../../c-runtime-library/parameter-validation.md). Pokud provádění může pokračovat, **errno** je nastaven na **EINVAL** a funkce vrátí **_MBC_ILLEGAL**.
+Pokud je vstupní řetězec **NULL**, je vyvolána neplatná obslužná rutina parametru, jak je popsáno v [části Ověření parametru](../../c-runtime-library/parameter-validation.md). Pokud je spuštění povoleno pokračovat, **errno** je nastavena na **EINVAL** a funkce vrátí **_MBC_ILLEGAL**.
+
+Ve výchozím nastavení je globální stav této funkce vymezen na aplikaci. Chcete-li to změnit, naleznete [v tématu Globální stav v CRT](../global-state.md).
 
 ## <a name="requirements"></a>Požadavky
 
-|Rutina|Požadovaný hlavičkový soubor|Volitelné záhlaví|
+|Rutina|Požadovaný hlavičkový soubor|Volitelná hlavička|
 |-------------|---------------------|---------------------|
-|**_mbsbtype**|\<Mbstring. h >|\<Mbctype. h > *|
-|**_mbsbtype_l**|\<Mbstring. h >|\<Mbctype. h > *|
+|**_mbsbtype**|\<mbstring.h>|\<mbctype.h>*|
+|**_mbsbtype_l**|\<mbstring.h>|\<mbctype.h>*|
 
-\*Pro konstanty manifestu použité jako návratové hodnoty.
+\*Pro konstanty manifestu používané jako vrácené hodnoty.
 
-Další informace o kompatibilitě naleznete v tématu [Kompatibilita](../../c-runtime-library/compatibility.md).
+Další informace o kompatibilitě naleznete v [tématu Kompatibilita](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Klasifikace bajtů](../../c-runtime-library/byte-classification.md)<br/>

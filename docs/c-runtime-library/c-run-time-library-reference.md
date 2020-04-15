@@ -8,52 +8,55 @@ helpviewer_keywords:
 - run-time libraries
 - CRT, reference
 ms.assetid: a503e11c-8dca-4846-84fb-025a826c32b8
-ms.openlocfilehash: 4e45194e5dc5fcd3dc9e13ec3da4cd1c76980c2f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9193e5c38c01f9dddcf0a8cd324d07f5dd90cb5e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62290453"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81334422"
 ---
 # <a name="c-run-time-library-reference"></a>Referenční dokumentace běhové knihovny jazyka C
 
-Běhové knihovny Microsoft poskytuje rutiny pro programování pro operační systém Microsoft Windows. Tyto rutiny automatizují mnoho běžných programovacích úloh, které nejsou součástí jazyků C a C++.
+Knihovna za běhu společnosti Microsoft poskytuje rutiny pro programování operačního systému Microsoft Windows. Tyto rutiny automatizují mnoho běžných programovacích úloh, které nejsou poskytovány jazyky C a C++.
 
-Ukázkové aplikace jsou zahrnuté v jednotlivých referenční témata pro většinu rutin v knihovně.
+Ukázkové programy jsou zahrnuty v jednotlivých referenčních tématech pro většinu rutin v knihovně.
 
 ## <a name="in-this-section"></a>V tomto oddílu
 
-[Knihovny Run-Time jazyka C](../c-runtime-library/crt-library-features.md)<br/>
-Tento článek popisuje soubory .lib, které tvoří knihovny jazyka C za běhu.
+[C Knihovny run-time](../c-runtime-library/crt-library-features.md)<br/>
+Popisuje soubory LIB, které tvoří knihovny run-time C.
 
 [Rutiny UCRT (Universal C runtime) podle kategorie](../c-runtime-library/run-time-routines-by-category.md)<br/>
-Obsahuje odkazy na knihovny run-time podle kategorie.
+Obsahuje odkazy na knihovnu za běhu podle kategorií.
 
 [Globální proměnné a standardní typy](../c-runtime-library/global-variables-and-standard-types.md)<br/>
-Obsahuje odkazy na globální proměnné a standardní typy poskytované knihovny run-time.
+Obsahuje odkazy na globální proměnné a standardní typy poskytované knihovnou za běhu.
 
 [Globální konstanty](../c-runtime-library/global-constants.md)<br/>
-Obsahuje odkazy na globální konstanty definované pomocí knihovny run-time.
+Obsahuje odkazy na globální konstanty definované knihovnou za běhu.
+
+[Globální stav](../c-runtime-library/global-state.md)<br/>
+Popisuje rozsah globálního stavu v knihovně za běhu C.
 
 [Abecední seznam odkazů na funkce](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
-Poskytuje obsah vstupní bod do abecední seznam všech funkcí běhové knihovny jazyka C.
+Poskytuje vstupní bod obsahu do abecedního seznamu všech funkcí knihovny c run-time.
 
 [Mapování obecného textu](../c-runtime-library/generic-text-mappings.md)<br/>
-Obsahuje odkazy na mapování obecného textu, které jsou definovány v souboru Tchar.h.
+Obsahuje odkazy na mapování obecného textu definované v souboru Tchar.h.
 
-[Jazyka a země/Region Strings](../c-runtime-library/locale-names-languages-and-country-region-strings.md)<br/>
-Popisuje způsob použití `setlocale` funkce pro nastavení jazyka a země/Region strings.
+[Řetězce jazyka a země/oblasti](../c-runtime-library/locale-names-languages-and-country-region-strings.md)<br/>
+Popisuje, jak pomocí `setlocale` funkce nastavit jazyk a řetězec země/oblast.
 
 ## <a name="related-sections"></a>Související oddíly
 
-[Rutiny ladění](../c-runtime-library/debug-routines.md)<br/>
-Obsahuje odkazy na ladicí verze knihovny run-time rutiny.
+[Ladicí rutiny](../c-runtime-library/debug-routines.md)<br/>
+Obsahuje odkazy na ladicí verze rutiny knihovny za běhu.
 
 [Kontrola chyb za běhu](../c-runtime-library/run-time-error-checking.md)<br/>
 Obsahuje odkazy na funkce, které podporují kontroly chyb za běhu.
 
 [Knihovny DLL a chování běhové knihovny v jazyce Visual C++](../build/run-time-library-behavior.md)<br/>
-Tento článek popisuje vstupní bod a při spuštění kód použitý pro knihovnu DLL.
+Popisuje vstupní bod a spouštěcí kód používaný pro dll.
 
 [Ladění](/visualstudio/debugger/debugging-in-visual-studio)<br/>
-Poskytuje odkazy na popis využití ladicího programu sady Visual Studio k opravě logických chyb v aplikaci nebo uložených procedur.
+Obsahuje odkazy na použití ladicího programu sady Visual Studio k opravě chyb logiky v aplikaci nebo uložených procedurách.

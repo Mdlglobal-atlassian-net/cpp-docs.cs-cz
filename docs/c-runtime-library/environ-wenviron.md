@@ -13,19 +13,19 @@ helpviewer_keywords:
 - process environment
 - wenviron function
 ms.assetid: 7e639962-6536-47cd-8095-0cbe44a56e03
-ms.openlocfilehash: 56f6f1d06d834ccab68daf859fac065cf215582c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8d67947c93d1387bfdc38c3bae5b3f978024a725
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62344327"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81349371"
 ---
-# <a name="environ-wenviron"></a>_environ, _wenviron
+# <a name="_environ-_wenviron"></a>_environ, _wenviron
 
-`_environ` Proměnná je ukazatel na pole ukazatelů na vícebajtové znakové řetězce, které tvoří prostředí procesu. Tato globální proměnná se už nepoužívá pro bezpečnější funkční verze [getenv_s – _wgetenv_s –](../c-runtime-library/reference/getenv-s-wgetenv-s.md) a [_putenv_s _wputenv_s –](../c-runtime-library/reference/putenv-s-wputenv-s.md), který by měl být zastoupen globální proměnnou. `_environ` je deklarován v Stdlib.h.
+Proměnná `_environ` je ukazatel na pole ukazatelů na vícebajtové řetězce znaků, které tvoří prostředí procesu. Tato globální proměnná byla zastaralá pro bezpečnější funkční verze [getenv_s, _wgetenv_s](../c-runtime-library/reference/getenv-s-wgetenv-s.md) a [_putenv_s, _wputenv_s](../c-runtime-library/reference/putenv-s-wputenv-s.md), které by měly být použity místo globální proměnné. `_environ`je deklarována v Stdlib.h.
 
 > [!IMPORTANT]
->  Toto rozhraní API nelze použít v aplikacích, které jsou spouštěny v modulu Windows Runtime. Další informace najdete v tématu [CRT funkce nejsou podporovány v aplikacích pro univerzální platformu Windows](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Toto rozhraní API nelze použít v aplikacích, které se spouštějí v prostředí Windows Runtime. Další informace naleznete v tématu [funkce CRT, které nejsou podporovány v aplikacích univerzální platformy Windows](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -35,32 +35,32 @@ extern char **_environ;
 
 ## <a name="remarks"></a>Poznámky
 
-V programu v jazyce, který používá `main` funkci `_environ` je inicializován při spuštění programu podle nastavení z prostředí operačního systému. Prostředí se skládá z jedné nebo více položek ve formuláři
+V programu, který `main` používá `_environ` funkci, je inicializován při spuštění programu podle nastavení převzatých z prostředí operačního systému. Životní prostředí se skládá z jedné nebo více položek formuláře
 
-`ENVVARNAME``=string`
+`ENVVARNAME` `=string`
 
-`getenv_s` a `putenv_s` použít `_environ` proměnné pro přístup a úpravy v tabulce prostředí. Když `_putenv` je volána k přidání nebo odstranění nastavení prostředí v tabulce prostředí změní velikost. Jeho umístění v paměti se může změnit v závislosti na požadavcích paměti programu. Hodnota `_environ` je automaticky upravována odpovídajícím způsobem.
+`getenv_s`a `putenv_s` použít `_environ` proměnnou pro přístup a úpravu tabulky prostředí. Když `_putenv` je volána přidat nebo odstranit nastavení prostředí, tabulka prostředí změní velikost. Jeho umístění v paměti se může také změnit v závislosti na požadavcích programu na paměť. Hodnota `_environ` je automaticky upravena odpovídajícím způsobem.
 
-`_wenviron` Proměnné deklarované v knihovně Stdlib.h jako:
+Proměnná `_wenviron` deklarovaná v Stdlib.h jako:
 
 ```
 extern wchar_t **_wenviron;
 ```
 
-je širokoznaká verze `_environ`. V programu v jazyce, který používá `wmain` funkci `_wenviron` je inicializován při spuštění programu podle nastavení z prostředí operačního systému.
+je širokoznaková verze `_environ`aplikace . V programu, který `wmain` používá `_wenviron` funkci, je inicializován při spuštění programu podle nastavení převzatých z prostředí operačního systému.
 
-V programu v jazyce, který používá `main`, `_wenviron` je zpočátku **NULL** protože prostředí se skládá z vícebajtové znakové řetězce. Při prvním volání `_wgetenv` nebo `_wputenv`, odpovídající prostředí řetězce širokého znaku se vytvoří a ukazuje `_wenviron`.
+V programu, `main`který `_wenviron` používá , je zpočátku **NULL,** protože prostředí se skládá z vícebajtových řetězců znaků. Při prvním volání `_wgetenv` `_wputenv`nebo je vytvořeno odpovídající prostředí řetězce s širokými znaky, na které je odkazováno . `_wenviron`
 
-Podobně, v programu v jazyce, který používá `wmain`, `_environ` je zpočátku **NULL** protože prostředí se skládá z řetězce širokého znaku. Při prvním volání `_getenv` nebo `_putenv`, odpovídající prostředí řetězce vícebajtových znaků se vytvoří a ukazuje `_environ`.
+Podobně v programu, který `wmain` `_environ` používá , je zpočátku **NULL,** protože prostředí se skládá z řetězců širokých znaků. Při prvním volání `_getenv` `_putenv`nebo je vytvořeno odpovídající vícebajtové prostředí řetězce `_environ`a je odkazováno .
 
-Pokud dvě kopie prostředí (znaková sada MBCS a Unicode) existují současně v programu v jazyce, za běhu systému, musíte mít obě kopie, což vede k času provádění. Například pokaždé, když voláte `_putenv`, volání `_wputenv` také provádí automaticky, takže odpovídají řetězce dvě prostředí.
+Pokud v programu existují současně dvě kopie prostředí (MBCS a Unicode), musí systém za běhu udržovat obě kopie, což má za následek pomalejší dobu provádění. Například při každém `_putenv`volání , `_wputenv` volání je také automaticky spuštěna tak, aby dva řetězce prostředí odpovídají.
 
 > [!CAUTION]
->  Ve výjimečných případech při údržbě systému za běhu Unicode verze a vícebajtová verze prostředí, tyto dvě prostředí verze nemusí odpovídat přesně. Důvodem je, že i když jakýkoli jedinečný řetězec vícebajtového znaku zakončeného mapuje na jedinečné řetězec znaků Unicode, mapování z jedinečný řetězec znaků Unicode na řetězec vícebajtového znaku není nutně jedinečné. Proto dva odlišné řetězce Unicode mohou být mapovány na stejné vícebajtový řetězec.
+> Ve výjimečných případech, kdy systém run-time udržuje verzi Unicode i vícebajtovou verzi prostředí, nemusí tyto dvě verze prostředí přesně odpovídat. Je to proto, že i když každý jedinečný vícebajtový řetězec se mapuje na jedinečný řetězec Unicode, mapování z jedinečného řetězce Unicode na vícebajtový řetězec není nutně jedinečné. Proto dva odlišné řetězce Unicode může mapovat na stejný vícebajtový řetězec.
 
-Dotazování `_environ` v Unicode je kontext význam při [/MD](../build/reference/md-mt-ld-use-run-time-library.md) nebo `/MDd` propojení se používá. Pro knihovnu DLL CRT typ (celou nebo vícebajtový) programu neznámý. Pouze typ vícebajtového je vytvořit, protože to je nejpravděpodobnější scénář.
+Dotazování `_environ` v kontextu Unicode je bezvýznamné `/MDd` při použití [/MD](../build/reference/md-mt-ld-use-run-time-library.md) nebo propojení. Pro crt dll typ (široký nebo vícebajtový) programu není znám. Je vytvořen pouze vícebajtový typ, protože to je nejpravděpodobnější scénář.
 
-Pseudo následující kód ukazuje, jak k tomu může dojít.
+Následující pseudo-kód ukazuje, jak k tomu může dojít.
 
 ```
 int i, j;
@@ -70,11 +70,11 @@ j = _wputenv( "env_var_y=string2" );  // also results in implicit call:
                                       // putenv("env_var_z=string2")
 ```
 
-V notaci používané v tomto příkladu znakové řetězce nejsou textové literály jazyka C; Namísto toho jsou zástupné symboly, které představují řetězcové literály Unicode prostředí v `_wputenv` prostředí volání a vícebajtové řetězce v `putenv` volání. Zástupné symboly znaku`x`"a"`y`' ve dvou různých Unicode řetězců prostředí nemapovaly jednoznačně znaků v aktuální znakové sady MBCS. Místo toho obě namapovány na některé znaky znakové sady MBCS "`z`", který je výchozí výsledek pokusu o převedení řetězce.
+V zápisu použitém pro tento příklad nejsou řetězce znaků literály řetězce C; spíše jsou zástupné symboly, které představují literály řetězce prostředí Unicode `_wputenv` ve `putenv` volání a vícebajtové řetězce prostředí ve volání. Zástupné symboly`x`znaků`y`" " a ' ve dvou odlišných řetězcích prostředí Unicode nejsou jednoznačně mapovány na znaky v aktuální mbcs. Místo toho obě mapovat na`z`některé znak MBCS ' to je výchozí výsledek pokusu o převod řetězců.
 
-Proto ve vícebajtové prostředí hodnotu "`env_var_z`" po prvním volání implicitní `putenv` by "`string1`", ale v druhé implicitní volání přepíše se tato hodnota `putenv`, když hodnota "`env_var_z`" je Nastavte na "`string2`". Prostředí kódování Unicode (v `_wenviron`) a vícebajtové prostředí (v `_environ`) by proto se liší podle této sérii volání.
+Proto v vícebajtovém prostředí hodnota`env_var_z`" " po `putenv` prvním implicitním volání by byla`string1`" ", ale `putenv`tato hodnota by`env_var_z`byla přepsána`string2`při druhém implicitním volání do , když je hodnota " " nastavena na " ". Prostředí Unicode (v `_wenviron`) a vícebajtové prostředí (v `_environ`) by se proto lišit po této sérii volání.
 
-## <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také
 
 [Globální proměnné](../c-runtime-library/global-variables.md)<br/>
 [getenv, _wgetenv](../c-runtime-library/reference/getenv-wgetenv.md)<br/>
